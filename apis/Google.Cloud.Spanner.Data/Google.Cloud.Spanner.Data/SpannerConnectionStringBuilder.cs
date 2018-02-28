@@ -36,6 +36,7 @@ namespace Google.Cloud.Spanner.Data
     {
         private const string CredentialFileKeyword = "CredentialFile";
         private const string DataSourceKeyword = "Data Source";
+        private const string UseClrDefaultForNullKeyword = "UseClrDefaultForNull";
         private InstanceName _instanceName;
         private DatabaseName _databaseName;
 
@@ -86,6 +87,36 @@ namespace Google.Cloud.Spanner.Data
         {
             get => GetValueOrDefault(CredentialFileKeyword);
             set => this[CredentialFileKeyword] = value;
+        }
+
+        /// <summary>
+        /// Option to change between the default handling of null database values (return <see cref="DBNull.Value">DBNull.Value</see>) or
+        /// the non-standard handling (return the default value for whatever type is requested).
+        /// </summary>
+        /// <remarks>
+        /// <para>
+        /// If this is <c>false</c> (the default), requesting a value from a <see cref="SpannerDataReader"/> that is null
+        /// in the database will return <see cref="DBNull.Value">DBNull.Value</see>, which may cause an <see cref="InvalidCastException"/> if
+        /// the requested type is not compatible with that value.
+        /// </para>
+        /// <para>
+        /// If this is <c>true</c>, requesting a value from a <see cref="SpannerDataReader"/> that is null in the
+        /// database will return the default value of the requested type (e.g. 0 or a null reference). This is the
+        /// behavior from release 1.0 of this package.
+        /// </para>
+        /// <para>
+        /// This property only sets the behavior for top-level values. For arrays and structs, null references and default values
+        /// are still used if the array or struct field value is null; this provides a better general experience, allowing
+        /// conversions to specific array types for example.
+        /// </para>
+        /// <para>
+        /// This property corresponds with the value of the "UseClrDefaultForNull" part of the connection string.
+        /// </para>
+        /// </remarks>
+        public bool UseClrDefaultForNull
+        {
+            get => GetValueOrDefault(UseClrDefaultForNullKeyword).Equals("True", StringComparison.OrdinalIgnoreCase);
+            set => this[UseClrDefaultForNullKeyword] = value.ToString(); // Always "True" or "False", regardless of culture.
         }
 
         /// <summary>

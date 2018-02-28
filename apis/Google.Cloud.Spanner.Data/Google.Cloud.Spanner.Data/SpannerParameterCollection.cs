@@ -220,9 +220,10 @@ namespace Google.Cloud.Spanner.Data
 
         internal void FillSpannerInternalValues(
             MapField<string, Value> valueDictionary,
-            MapField<string, V1.Type> requestParamTypes)
+            MapField<string, V1.Type> requestParamTypes,
+            SpannerConversionOptions options)
         {
-            FillSpannerInternalValues(valueDictionary);
+            FillSpannerInternalValues(valueDictionary, options);
             FillSpannerInternalTypes(requestParamTypes);
         }
 
@@ -233,12 +234,12 @@ namespace Google.Cloud.Spanner.Data
         private string GetCorrectedParameterName(string parameterName) 
             => parameterName?.StartsWith("@") ?? false ? parameterName.Substring(1) : parameterName;
 
-        private void FillSpannerInternalValues(MapField<string, Value> valueDictionary)
+        private void FillSpannerInternalValues(MapField<string, Value> valueDictionary, SpannerConversionOptions options)
         {
             foreach (var parameter in _innerList)
             {
                 valueDictionary[GetCorrectedParameterName(parameter.ParameterName)]
-                    = parameter.SpannerDbType.ToProtobufValue(parameter.GetValidatedValue());
+                    = parameter.SpannerDbType.ToProtobufValue(parameter.GetValidatedValue(), options);
             }
         }
 

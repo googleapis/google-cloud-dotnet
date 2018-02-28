@@ -145,7 +145,8 @@ namespace Google.Cloud.Spanner.Data.IntegrationTests
                                 new SpannerParameterCollection {{"k", SpannerDbType.String, _key}}))
                         {
                             cmd.Transaction = transaction;
-                            current = await cmd.ExecuteScalarAsync<long>().ConfigureAwait(false);
+                            var fetched = await cmd.ExecuteScalarAsync().ConfigureAwait(false);
+                            current = fetched is DBNull ? 0L : (long) fetched;
                         }
 
                         using (var cmd = connection.CreateUpdateCommand(
@@ -201,13 +202,13 @@ namespace Google.Cloud.Spanner.Data.IntegrationTests
                     await tx.CommitAsync();
                 }
 
-                // The value should never have been incremented (and should still be zero)
+                // The value should not be present in the table.
                 using (var cmd =
                         connection.CreateSelectCommand(
                             "SELECT Int64Value FROM TX WHERE K=@k",
                             new SpannerParameterCollection { { "k", SpannerDbType.String, _key } }))
                 {
-                    Assert.Equal(0, await cmd.ExecuteScalarAsync<long>().ConfigureAwait(false));
+                    Assert.Equal(DBNull.Value, await cmd.ExecuteScalarAsync().ConfigureAwait(false));
                 }
             }
         }

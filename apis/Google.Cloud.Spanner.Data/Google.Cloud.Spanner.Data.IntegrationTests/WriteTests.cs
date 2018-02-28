@@ -410,19 +410,19 @@ namespace Google.Cloud.Spanner.Data.IntegrationTests
                     }));
             using (var reader = await GetLastRowAsync())
             {
-                Assert.Null(reader.GetValue(reader.GetOrdinal("BoolValue")));
-                Assert.Null(reader.GetValue(reader.GetOrdinal("Int64Value")));
-                Assert.Null(reader.GetValue(reader.GetOrdinal("Float64Value")));
-                Assert.Null(reader.GetValue(reader.GetOrdinal("StringValue")));
-                Assert.Null(reader.GetValue(reader.GetOrdinal("TimestampValue")));
-                Assert.Null(reader.GetValue(reader.GetOrdinal("DateValue")));
-                Assert.Null(reader.GetValue(reader.GetOrdinal("BoolArrayValue")));
-                Assert.Null(reader.GetValue(reader.GetOrdinal("Int64ArrayValue")));
-                Assert.Null(reader.GetValue(reader.GetOrdinal("Float64ArrayValue")));
-                Assert.Null(reader.GetValue(reader.GetOrdinal("StringArrayValue")));
-                Assert.Null(reader.GetValue(reader.GetOrdinal("BytesArrayValue")));
-                Assert.Null(reader.GetValue(reader.GetOrdinal("TimestampArrayValue")));
-                Assert.Null(reader.GetValue(reader.GetOrdinal("DateArrayValue")));
+                Assert.True(reader.IsDBNull(reader.GetOrdinal("BoolValue")));
+                Assert.True(reader.IsDBNull(reader.GetOrdinal("Int64Value")));
+                Assert.True(reader.IsDBNull(reader.GetOrdinal("Float64Value")));
+                Assert.True(reader.IsDBNull(reader.GetOrdinal("StringValue")));
+                Assert.True(reader.IsDBNull(reader.GetOrdinal("TimestampValue")));
+                Assert.True(reader.IsDBNull(reader.GetOrdinal("DateValue")));
+                Assert.True(reader.IsDBNull(reader.GetOrdinal("BoolArrayValue")));
+                Assert.True(reader.IsDBNull(reader.GetOrdinal("Int64ArrayValue")));
+                Assert.True(reader.IsDBNull(reader.GetOrdinal("Float64ArrayValue")));
+                Assert.True(reader.IsDBNull(reader.GetOrdinal("StringArrayValue")));
+                Assert.True(reader.IsDBNull(reader.GetOrdinal("BytesArrayValue")));
+                Assert.True(reader.IsDBNull(reader.GetOrdinal("TimestampArrayValue")));
+                Assert.True(reader.IsDBNull(reader.GetOrdinal("DateArrayValue")));
             }
         }
 

@@ -158,7 +158,7 @@ namespace Google.Cloud.Spanner.Data.Tests
             yield return new object[] {(ushort) 1, SpannerDbType.Float64, "1"};
             yield return new object[] {"1", SpannerDbType.Float64, "1"};
             yield return new object[] {"1.5", SpannerDbType.Float64, "1.5"};
-            yield return new object[] {null, SpannerDbType.Float64, "null"};
+            yield return new object[] {DBNull.Value, SpannerDbType.Float64, "null"};
 
             //Spanner type = Int64 tests.
             yield return new object[] {true, SpannerDbType.Int64, Quote("1")};
@@ -439,7 +439,7 @@ namespace Google.Cloud.Spanner.Data.Tests
                 try
                 {
                     string expected = expectedJsonValue;
-                    var jsonValue = spannerDbType.ToProtobufValue(clrValue);
+                    var jsonValue = spannerDbType.ToProtobufValue(clrValue, options: null);
                     string actual = jsonValue.ToString();
                     if (expected != actual)
                     {
@@ -483,7 +483,7 @@ namespace Google.Cloud.Spanner.Data.Tests
                 {
                     var wireValue = JsonParser.Default.Parse<Value>(inputJson);
                     var targetClrType = expected?.GetType() ?? typeof(object);
-                    var actual = spannerDbType.ConvertToClrType(wireValue, targetClrType);
+                    var actual = spannerDbType.ConvertToClrType(wireValue, targetClrType, SpannerConversionOptions.Default, topLevel: true);
                     Assert.Equal(expected, actual);
                 }
                 catch (Exception e)
@@ -492,6 +492,87 @@ namespace Google.Cloud.Spanner.Data.Tests
                     throw;
                 }
             });
+        }
+
+        // Note: Value.Parse fails for list values containing null, hence the separate tests
+        [Fact]
+        public void SerializeStringArrayContainingNull()
+        {
+            var input = new[] { "x", null, "y" };
+            var expected = new Value { ListValue = new ListValue { Values = { Value.ForString("x"), Value.ForNull(), Value.ForString("y") } } };
+            var options = SpannerConversionOptions.Default;
+            Assert.Equal(expected, SpannerDbType.ArrayOf(SpannerDbType.String).ToProtobufValue(input, options));
+        }
+
+        [Fact]
+        public void DeserializeStringArrayContainingNull()
+        {
+            var protobuf = new Value { ListValue = new ListValue { Values = { Value.ForString("x"), Value.ForNull(), Value.ForString("y") } } };
+            var options = SpannerConversionOptions.Default;
+            var expected = new[] { "x", null, "y" };
+            Assert.Equal(expected, SpannerDbType.ArrayOf(SpannerDbType.String).ConvertToClrType<string[]>(protobuf, options));
+        }
+
+        [Fact]
+        public void SerializeNullableDoubleArrayContainingNull()
+        {
+            var input = new double?[] { 5.5, null, 10.5 };
+            var expected = new Value { ListValue = new ListValue { Values = { Value.ForNumber(5.5), Value.ForNull(), Value.ForNumber(10.5) } } };
+            var options = SpannerConversionOptions.Default;
+            Assert.Equal(expected, SpannerDbType.ArrayOf(SpannerDbType.Float64).ToProtobufValue(input, options));
+        }
+
+        [Fact]
+        public void DeserializeNullableDoubleArrayContainingNull()
+        {
+            var protobuf = new Value { ListValue = new ListValue { Values = { Value.ForNumber(5.5), Value.ForNull(), Value.ForNumber(10.5) } } };
+            var options = SpannerConversionOptions.Default;
+            var expected = new double?[] { 5.5, null, 10.5 };
+            Assert.Equal(expected, SpannerDbType.ArrayOf(SpannerDbType.Float64).ConvertToClrType<double?[]>(protobuf, options));
+        }
+
+        [Fact]
+        public void DeserializeDoubleArrayContainingNull()
+        {
+            var protobuf = new Value { ListValue = new ListValue { Values = { Value.ForNumber(5.5), Value.ForNull(), Value.ForNumber(10.5) } } };
+            var options = SpannerConversionOptions.Default;
+
+            // The null value is converted into 0
+            var expected = new[] { 5.5, 0.0, 10.5 };
+            Assert.Equal(expected, SpannerDbType.ArrayOf(SpannerDbType.Float64).ConvertToClrType<double[]>(protobuf, options));
+        }
+
+        public static TheoryData<object, SpannerDbType, System.Type> UseClrDefaultForNulls { get; } = new TheoryData<object, SpannerDbType, System.Type>
+        {
+            { null, SpannerDbType.Int64, typeof(int?) },
+            { 0, SpannerDbType.Int64, typeof(int) },
+            { 0L, SpannerDbType.Int64, typeof(long) },
+            { null, SpannerDbType.String, typeof(string) }
+        };
+
+        [Theory]
+        [MemberData(nameof(UseClrDefaultForNulls))]
+        public void TestNullConversion_LegacyNullHandling(object expectedValue, SpannerDbType dbType, System.Type targetClrType)
+        {
+            var builder = new SpannerConnectionStringBuilder("UseClrDefaultForNull = true");
+            var options = SpannerConversionOptions.ForConnectionStringBuilder(builder);
+            var input = Value.ForNull();
+            var actual = dbType.ConvertToClrType(input, targetClrType, options, topLevel: true);
+            Assert.Equal(expectedValue, actual);
+        }
+
+        [Fact]
+        public void TestNullConversion_DefaultHandling()
+        {
+            var input = Value.ForNull();
+            var options = SpannerConversionOptions.Default;
+            Assert.Throws<InvalidCastException>(() => SpannerDbType.String.ConvertToClrType<string>(input, options));
+            Assert.Throws<InvalidCastException>(() => SpannerDbType.Int64.ConvertToClrType<int>(input, options));
+            Assert.Equal(DBNull.Value, SpannerDbType.String.ConvertToClrType<object>(input, options));
+#if !NETCOREAPP1_0
+            Assert.Equal(DBNull.Value, SpannerDbType.String.ConvertToClrType<IConvertible>(input, options));
+            Assert.Equal(DBNull.Value, SpannerDbType.String.ConvertToClrType<System.Runtime.Serialization.ISerializable>(input, options));
+#endif
         }
 
         [Theory]
@@ -510,7 +591,7 @@ namespace Google.Cloud.Spanner.Data.Tests
             var exceptionCaught = false;
             try
             {
-                type.ToProtobufValue(value);
+                type.ToProtobufValue(value, options: null);
             }
             catch (Exception e) when (e is OverflowException || e is InvalidCastException || e is FormatException)
             {

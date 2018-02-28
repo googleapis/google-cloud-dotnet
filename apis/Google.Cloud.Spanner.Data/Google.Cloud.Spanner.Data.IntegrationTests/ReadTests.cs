@@ -332,15 +332,16 @@ namespace Google.Cloud.Spanner.Data.IntegrationTests
         }
 
         [Fact]
-        public async Task ReadyEmpty()
+        public async Task ReadEmpty()
         {
             // ReSharper disable once RedundantAssignment
             int rowsRead = -1;
 
             using (var connection = await _testFixture.GetTestDatabaseConnectionAsync())
             {
+                // All our keys start with "k" so there shouldn't be anything starting with "l"
                 var cmd = connection.CreateSelectCommand(
-                    $"SELECT * FROM {_testFixture.TestTable} WHERE Key >= 'k99'");
+                    $"SELECT * FROM {_testFixture.TestTable} WHERE Key >= 'l'");
                 using (var reader = await cmd.ExecuteReaderAsync())
                 {
                     rowsRead = 0;
@@ -376,6 +377,52 @@ namespace Google.Cloud.Spanner.Data.IntegrationTests
             s1 = result[1] as IDictionary;
             Assert.Equal("b", (string) s1["C1"]);
             Assert.Equal(2, (long) s1["C2"]);
+        }
+
+        [Fact]
+        public async Task ReadNullValue_Legacy()
+        {
+            await _testFixture.EnsureTestDatabaseAsync();
+            using (var connection = new SpannerConnection($"{_testFixture.ConnectionString};UseClrDefaultForNull=true"))
+            {
+                var cmd = connection.CreateSelectCommand(
+                    $"SELECT Key, StringValue FROM {_testFixture.TestTable} WHERE Key = 'kNull'");
+                using (var reader = await cmd.ExecuteReaderAsync())
+                {
+                    Assert.True(await reader.ReadAsync());
+                    Assert.Equal("kNull", reader.GetString(0));
+                    Assert.Null(reader.GetString(1));
+                    Assert.Null(reader[1]);
+                    Assert.Null(reader["StringValue"]);
+                    Assert.True(reader.IsDBNull(1));
+
+                    // No more rows
+                    Assert.False(await reader.ReadAsync());
+                }
+            }
+        }
+
+        [Fact]
+        public async Task ReadNullValue_DBNull()
+        {
+            await _testFixture.EnsureTestDatabaseAsync();
+            using (var connection = new SpannerConnection(_testFixture.ConnectionString))
+            {
+                var cmd = connection.CreateSelectCommand(
+                    $"SELECT Key, StringValue FROM {_testFixture.TestTable} WHERE Key = 'kNull'");
+                using (var reader = await cmd.ExecuteReaderAsync())
+                {
+                    Assert.True(await reader.ReadAsync());
+                    Assert.Equal("kNull", reader.GetString(0));
+                    Assert.Throws<InvalidCastException>(() => reader.GetString(1));
+                    Assert.Equal(DBNull.Value, reader[1]);
+                    Assert.Equal(DBNull.Value, reader["StringValue"]);
+                    Assert.True(reader.IsDBNull(1));
+
+                    // No more rows
+                    Assert.False(await reader.ReadAsync());
+                }
+            }
         }
 
         [Fact]

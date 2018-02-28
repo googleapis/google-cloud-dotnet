@@ -43,13 +43,15 @@ namespace Google.Cloud.Spanner.Data
         private readonly SpannerConnection _connectionToClose;
         private readonly List<Value> _innerList = new List<Value>();
         private readonly ReliableStreamReader _resultSet;
-        private ConcurrentDictionary<string, int> _fieldIndex = new ConcurrentDictionary<string, int>();
+        private readonly ConcurrentDictionary<string, int> _fieldIndex = new ConcurrentDictionary<string, int>();
         private ResultSetMetadata _metadata;
         private readonly SingleUseTransaction _txToClose;
+        private readonly SpannerConversionOptions _conversionOptions;
 
         internal SpannerDataReader(
             Logger logger,
             ReliableStreamReader resultSet,
+            SpannerConversionOptions conversionOptions,
             SpannerConnection connectionToClose = null,
             SingleUseTransaction singleUseTransaction = null)
         {
@@ -61,6 +63,7 @@ namespace Google.Cloud.Spanner.Data
             _resultSet = resultSet;
             _connectionToClose = connectionToClose;
             _txToClose = singleUseTransaction;
+            _conversionOptions = conversionOptions;
         }
 
         private Logger Logger { get; }
@@ -80,7 +83,7 @@ namespace Google.Cloud.Spanner.Data
         public override bool IsClosed => _resultSet.IsClosed;
 
         /// <inheritdoc />
-        public override object this[int i] => GetSpannerFieldType(i).ConvertToClrType(_innerList[i]);
+        public override object this[int i] => GetSpannerFieldType(i).ConvertToClrType(_innerList[i], _conversionOptions);
 
         /// <inheritdoc />
         public override object this[string name] => this[
@@ -90,17 +93,17 @@ namespace Google.Cloud.Spanner.Data
         public override int RecordsAffected => -1;
 
         /// <inheritdoc />
-        public override bool GetBoolean(int i) => GetSpannerFieldType(i).ConvertToClrType<bool>(_innerList[i]);
+        public override bool GetBoolean(int i) => GetSpannerFieldType(i).ConvertToClrType<bool>(_innerList[i], _conversionOptions);
 
         /// <inheritdoc />
-        public override byte GetByte(int i) => GetSpannerFieldType(i).ConvertToClrType<byte>(_innerList[i]);
+        public override byte GetByte(int i) => GetSpannerFieldType(i).ConvertToClrType<byte>(_innerList[i], _conversionOptions);
 
         /// <inheritdoc />
         public override long GetBytes(int i, long fieldOffset, byte[] buffer, int bufferoffset, int length) => throw
             new NotSupportedException("Spanner does not support conversion to byte arrays.");
 
         /// <inheritdoc />
-        public override char GetChar(int i) => GetSpannerFieldType(i).ConvertToClrType<char>(_innerList[i]);
+        public override char GetChar(int i) => GetSpannerFieldType(i).ConvertToClrType<char>(_innerList[i], _conversionOptions);
 
         /// <inheritdoc />
         public override long GetChars(int i, long fieldoffset, char[] buffer, int bufferoffset, int length) => throw
@@ -110,13 +113,13 @@ namespace Google.Cloud.Spanner.Data
         public override string GetDataTypeName(int i) => GetSpannerFieldType(i).ToString();
 
         /// <inheritdoc />
-        public override DateTime GetDateTime(int i) => GetSpannerFieldType(i).ConvertToClrType<DateTime>(_innerList[i]);
+        public override DateTime GetDateTime(int i) => GetSpannerFieldType(i).ConvertToClrType<DateTime>(_innerList[i], _conversionOptions);
 
         /// <inheritdoc />
-        public override decimal GetDecimal(int i) => GetSpannerFieldType(i).ConvertToClrType<decimal>(_innerList[i]);
+        public override decimal GetDecimal(int i) => GetSpannerFieldType(i).ConvertToClrType<decimal>(_innerList[i], _conversionOptions);
 
         /// <inheritdoc />
-        public override double GetDouble(int i) => GetSpannerFieldType(i).ConvertToClrType<double>(_innerList[i]);
+        public override double GetDouble(int i) => GetSpannerFieldType(i).ConvertToClrType<double>(_innerList[i], _conversionOptions);
 
         /// <inheritdoc />
         public override IEnumerator GetEnumerator()
@@ -137,8 +140,8 @@ namespace Google.Cloud.Spanner.Data
         }
 
         /// <inheritdoc />
-        public override T GetFieldValue<T>(int ordinal) => (T)GetSpannerFieldType(ordinal).ConvertToClrType(
-            _innerList[ordinal], typeof(T));
+        public override T GetFieldValue<T>(int ordinal) =>
+            GetSpannerFieldType(ordinal).ConvertToClrType<T>(_innerList[ordinal], _conversionOptions);
 
         /// <summary>
         /// Gets the value of the specified column as type T.
@@ -158,23 +161,23 @@ namespace Google.Cloud.Spanner.Data
             {
                 throw new ArgumentException($"{columnName} is not a valid column", nameof(columnName));
             }
-            return (T)GetSpannerFieldType(ordinal).ConvertToClrType(_innerList[ordinal], typeof(T));
+            return GetSpannerFieldType(ordinal).ConvertToClrType<T>(_innerList[ordinal], _conversionOptions);
         }
 
         /// <inheritdoc />
-        public override float GetFloat(int i) => GetSpannerFieldType(i).ConvertToClrType<float>(_innerList[i]);
+        public override float GetFloat(int i) => GetSpannerFieldType(i).ConvertToClrType<float>(_innerList[i], _conversionOptions);
 
         /// <inheritdoc />
-        public override Guid GetGuid(int i) => GetSpannerFieldType(i).ConvertToClrType<Guid>(_innerList[i]);
+        public override Guid GetGuid(int i) => GetSpannerFieldType(i).ConvertToClrType<Guid>(_innerList[i], _conversionOptions);
 
         /// <inheritdoc />
-        public override short GetInt16(int i) => GetSpannerFieldType(i).ConvertToClrType<short>(_innerList[i]);
+        public override short GetInt16(int i) => GetSpannerFieldType(i).ConvertToClrType<short>(_innerList[i], _conversionOptions);
 
         /// <inheritdoc />
-        public override int GetInt32(int i) => GetSpannerFieldType(i).ConvertToClrType<int>(_innerList[i]);
+        public override int GetInt32(int i) => GetSpannerFieldType(i).ConvertToClrType<int>(_innerList[i], _conversionOptions);
 
         /// <inheritdoc />
-        public override long GetInt64(int i) => GetSpannerFieldType(i).ConvertToClrType<long>(_innerList[i]);
+        public override long GetInt64(int i) => GetSpannerFieldType(i).ConvertToClrType<long>(_innerList[i], _conversionOptions);
 
         /// <summary>
         /// Gets the value of the specified column as a pure Protobuf type.
@@ -193,14 +196,14 @@ namespace Google.Cloud.Spanner.Data
             => GetFieldIndexAsync(name, CancellationToken.None).ResultWithUnwrappedExceptions();
 
         /// <inheritdoc />
-        public override string GetString(int i) => GetSpannerFieldType(i).ConvertToClrType<string>(_innerList[i]);
+        public override string GetString(int i) => GetSpannerFieldType(i).ConvertToClrType<string>(_innerList[i], _conversionOptions);
 
         /// <summary>
         /// Gets the value of the specified column as type <see cref="Timestamp"/>.
         /// </summary>
         /// <param name="i">The index of the column to retrieve.</param>
         /// <returns>The value converted to a <see cref="Timestamp"/>.</returns>
-        public Timestamp GetTimestamp(int i) => GetSpannerFieldType(i).ConvertToClrType<Timestamp>(_innerList[i]);
+        public Timestamp GetTimestamp(int i) => GetSpannerFieldType(i).ConvertToClrType<Timestamp>(_innerList[i], _conversionOptions);
 
         /// <inheritdoc />
         public override object GetValue(int i) => this[i];

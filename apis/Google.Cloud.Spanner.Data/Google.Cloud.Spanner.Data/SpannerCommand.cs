@@ -222,7 +222,6 @@ namespace Google.Cloud.Spanner.Data
         /// <inheritdoc />
         protected override DbConnection DbConnection
         {
-            //TODO(benwu): update to use newer lambda forms for get/set. ditto for other places.
             get => SpannerConnection;
             set => SpannerConnection = (SpannerConnection) value;
         }
@@ -465,6 +464,19 @@ namespace Google.Cloud.Spanner.Data
 
         private List<Mutation> GetMutations()
         {
+            // Currently, ToProtobufValue doesn't use the options it's provided. They're only
+            // required to prevent us from accidentally adding call sites that wouldn't be able to obtain
+            // valid options. For efficiency, we just pass in null for now. If we ever need real options
+            // from the connection string, uncomment the following line to initialize the options from the connection.
+            // SpannerConversionOptions options = SpannerConversionOptions.ForConnection(SpannerConnection);
+            SpannerConversionOptions conversionOptions = null;
+
+            // Whatever we do with the parameters, we'll need them in a ListValue.
+            var listValue = new ListValue
+            {
+                Values = { Parameters.Select(x => x.SpannerDbType.ToProtobufValue(x.GetValidatedValue(), conversionOptions)) }
+            };
+
             var mutations = new List<Mutation>();
             if (SpannerCommandTextBuilder.SpannerCommandType != SpannerCommandType.Delete)
             {
@@ -472,16 +484,7 @@ namespace Google.Cloud.Spanner.Data
                 {
                     Table = SpannerCommandTextBuilder.TargetTable,
                     Columns = {Parameters.Select(x => x.SourceColumn ?? x.ParameterName)},
-                    Values =
-                    {
-                        new ListValue
-                        {
-                            Values =
-                            {
-                                Parameters.Select(x => x.SpannerDbType.ToProtobufValue(x.GetValidatedValue()))
-                            }
-                        }
-                    }
+                    Values = { listValue }
                 };
                 switch (SpannerCommandTextBuilder.SpannerCommandType)
                 {
@@ -503,21 +506,7 @@ namespace Google.Cloud.Spanner.Data
                 var w = new Mutation.Types.Delete
                 {
                     Table = SpannerCommandTextBuilder.TargetTable,
-                    KeySet =
-                        new KeySet
-                        {
-                            Keys =
-                            {
-                                new ListValue
-                                {
-                                    Values =
-                                    {
-                                        Parameters.Select(
-                                            x => x.SpannerDbType.ToProtobufValue(x.GetValidatedValue()))
-                                    }
-                                }
-                            }
-                        }
+                    KeySet = new KeySet { Keys = { listValue } }
                 };
                 mutations.Add(new Mutation {Delete = w});
             }
@@ -756,13 +745,14 @@ namespace Google.Cloud.Spanner.Data
             // Execute the command.
             var resultSet = await tx.ExecuteQueryAsync(request, cancellationToken, commandTimeout)
                 .ConfigureAwait(false);
+            var conversionOptions = SpannerConversionOptions.ForConnection(spannerConnection);
 
             if ((behavior & CommandBehavior.CloseConnection) == CommandBehavior.CloseConnection)
             {
-                return new SpannerDataReader(logger, resultSet, spannerConnection);
+                return new SpannerDataReader(logger, resultSet, conversionOptions, spannerConnection);
             }
 
-            return new SpannerDataReader(logger, resultSet, null, singleUseTransaction);
+            return new SpannerDataReader(logger, resultSet, conversionOptions, null, singleUseTransaction);
         }
 
         private ExecuteSqlRequest GetExecuteSqlRequest()
@@ -785,7 +775,9 @@ namespace Google.Cloud.Spanner.Data
             if (Parameters?.Count > 0)
             {
                 request.Params = new Struct();
-                Parameters.FillSpannerInternalValues(request.Params.Fields, request.ParamTypes);
+                // See comment at the start of GetMutations.
+                SpannerConversionOptions options = null;
+                Parameters.FillSpannerInternalValues(request.Params.Fields, request.ParamTypes, options);
             }
 
             return request;
