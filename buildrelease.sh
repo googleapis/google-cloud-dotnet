@@ -57,8 +57,7 @@ do
   mv ../docs/output/assembled/$project ./docs
 done
 
-rm ./docs/index.html
-mv ../docs/output/assembled/index.html ./docs/
+mv -f ../docs/output/assembled/index.html ./docs/
 
 echo "Release build and docs complete for the following projects:"
 for project in $projects
