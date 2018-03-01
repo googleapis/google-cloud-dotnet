@@ -1,11 +1,11 @@
 ﻿// Copyright 2016 Google Inc. All Rights Reserved.
-// 
+//
 // Licensed under the Apache License, Version 2.0 (the "License");
 // you may not use this file except in compliance with the License.
 // You may obtain a copy of the License at
-// 
+//
 //     http://www.apache.org/licenses/LICENSE-2.0
-// 
+//
 // Unless required by applicable law or agreed to in writing, software
 // distributed under the License is distributed on an "AS IS" BASIS,
 // WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
@@ -19,6 +19,7 @@ using Google.Cloud.Diagnostics.Common;
 using Google.Cloud.Logging.V2;
 using Google.Protobuf.WellKnownTypes;
 using Microsoft.AspNetCore.Http;
+using Microsoft.Extensions.DependencyInjection;
 using Microsoft.Extensions.Logging;
 using Moq;
 using System;
@@ -178,6 +179,63 @@ namespace Google.Cloud.Diagnostics.AspNetCore.Tests
             var logger = GetLogger(mockConsumer.Object, LogLevel.Information, accessor: mockAccessor.Object);
             logger.Log(LogLevel.Error, 0, _logMessage, s_exception, Formatter);
             mockConsumer.VerifyAll();
+        }
+
+        [Fact]
+        public void Log_Trace_WithLogEntryLabelProvider()
+        {
+            string traceId = "105445aa7843bc8bf206b12000100f01";
+            string fullTraceName = TraceTarget.ForProject(_projectId).GetFullTraceName(traceId);
+
+            Predicate<IEnumerable<LogEntry>> matcher = logEntries =>
+            {
+                LogEntry entry = logEntries.Single();
+                return entry.LogName == new LogName(_projectId, _logName).ToString() &&
+                    entry.Trace == fullTraceName;
+            };
+
+            var tracerContext = TraceHeaderContext.Create(traceId, 81237124, null);
+            HeaderDictionary dict = new HeaderDictionary();
+            dict[TraceHeaderContext.TraceHeader] = tracerContext.ToString();
+
+            var services = new ServiceCollection();
+            services.AddScoped<ILogEntryLabelProvider, FooLogEntryLabelProvider>();
+            services.AddScoped<ILogEntryLabelProvider, BarLogEntryLabelProvider>();
+            var serviceProvider = services.BuildServiceProvider();
+            var scopedServiceProvider = serviceProvider.GetRequiredService<IServiceScopeFactory>().CreateScope().ServiceProvider;
+
+            var mockAccessor = new Mock<IHttpContextAccessor>();
+            var mockContext = new Mock<HttpContext>();
+            var mockRequest = new Mock<HttpRequest>();
+
+            mockAccessor.Setup(a => a.HttpContext).Returns(mockContext.Object);
+            mockContext.Setup(c => c.Request).Returns(mockRequest.Object);
+            mockContext.Setup(c => c.RequestServices).Returns(serviceProvider);
+            mockRequest.Setup(r => r.Headers).Returns(dict);
+
+            var mockConsumer = new Mock<IConsumer<LogEntry>>();
+            mockConsumer.Setup(c => c.Receive(Match.Create(matcher)));
+            var logger = GetLogger(mockConsumer.Object, LogLevel.Information, accessor: mockAccessor.Object);
+            logger.Log(LogLevel.Error, 0, _logMessage, s_exception, Formatter);
+            mockConsumer.VerifyAll();
+        }
+    }
+
+    public class FooLogEntryLabelProvider : ILogEntryLabelProvider
+    {
+        public void Invoke(Dictionary<string, string> labels)
+        {
+            Console.WriteLine(nameof(FooLogEntryLabelProvider));
+            labels["Foo"] = "Hello";
+        }
+    }
+
+    public class BarLogEntryLabelProvider : ILogEntryLabelProvider
+    {
+        public void Invoke(Dictionary<string, string> labels)
+        {
+            Console.WriteLine(nameof(BarLogEntryLabelProvider));
+            labels["Bar"] = "World";
         }
     }
 }
