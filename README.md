@@ -24,8 +24,9 @@ The following libraries are available at a [GA](#versioning) quality level:
 * [Google Cloud Translation](https://cloud.google.com/translate/) - [API docs](http://googlecloudplatform.github.io/google-cloud-dotnet/docs/Google.Cloud.Translation.V2/) (GA)
 * [Google Cloud Video Intelligence](https://cloud.google.com/video-intelligence/) - [API docs](https://googlecloudplatform.github.io/google-cloud-dotnet/docs/Google.Cloud.VideoIntelligence.V1/) (GA)
 * [Google Cloud Vision](https://cloud.google.com/vision/) - [API docs](http://googlecloudplatform.github.io/google-cloud-dotnet/docs/Google.Cloud.Vision.V1/) (GA)
-  * Additionally, a [Google.Cloud.Vision.V1P1Beta1](http://googlecloudplatform.github.io/google-cloud-dotnet/docs/Google.Cloud.Vision.V1P1Beta1/)
-    library is available for access to beta API functionality.
+  * Additionally, the following libraries are available for access to beta API functionality:
+    * [Google.Cloud.Vision.V1P1Beta1](http://googlecloudplatform.github.io/google-cloud-dotnet/docs/Google.Cloud.Vision.V1P1Beta1/)
+    * [Google.Cloud.Vision.V1P2Beta1](http://googlecloudplatform.github.io/google-cloud-dotnet/docs/Google.Cloud.Vision.V1P2Beta1/)
 * [Google Cloud Spanner](https://cloud.google.com/spanner/): four packages are available, all GA:
   * [Google.Cloud.Spanner.Data](http://googlecloudplatform.github.io/google-cloud-dotnet/docs/Google.Cloud.Spanner.Data/): ADO.NET provider for Google Cloud Spanner (recommended)
   * [Google.Cloud.Spanner.V1](http://googlecloudplatform.github.io/google-cloud-dotnet/docs/Google.Cloud.Spanner.V1/): Low-level access to Spanner API
