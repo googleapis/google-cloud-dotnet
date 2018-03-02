@@ -125,10 +125,8 @@ namespace Google.Cloud.Spanner.V1 {
                 {
                     ThrowIfCancellationRequested(cancellationToken);
 
-                    //This calls a simple movenext on purpose.  If we get an error here, we'll fail out.
-                    //TODO(benwu): Fix cancel on MoveNext in a subsequent change targeting spanner GA
                     _isReading = await WithTiming(
-                            _currentCall.ResponseStream.MoveNext(CancellationToken.None)
+                            _currentCall.ResponseStream.MoveNext(cancellationToken)
                                 .WithSessionChecking(() => _session),
                             "ResponseStream.MoveNext")
                         .ConfigureAwait(false);
@@ -166,7 +164,7 @@ namespace Google.Cloud.Spanner.V1 {
         private async Task<bool> ReliableMoveNextAsync(CancellationToken cancellationToken) {
             try {
                 Logger.LogPerformanceCounterFn("StreamReader.MoveNextCount", x => x + 1);
-                _isReading = await _currentCall.ResponseStream.MoveNext(CancellationToken.None)
+                _isReading = await _currentCall.ResponseStream.MoveNext(cancellationToken)
                     .WithSessionChecking(() => _session).ConfigureAwait(false);
 
                 //we only increment our skip count after we know the MoveNext has succeeded
@@ -204,7 +202,7 @@ namespace Google.Cloud.Spanner.V1 {
                 // so we bail if the recovery isn't successful in moving to the next item.
                 try
                 {
-                    _isReading = await _currentCall.ResponseStream.MoveNext(CancellationToken.None)
+                    _isReading = await _currentCall.ResponseStream.MoveNext(cancellationToken)
                         .WithSessionChecking(() => _session).ConfigureAwait(false);
                     _resumeSkipCount++;
                 }

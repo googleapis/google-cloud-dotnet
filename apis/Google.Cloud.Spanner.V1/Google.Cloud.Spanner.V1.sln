@@ -1,6 +1,6 @@
 Microsoft Visual Studio Solution File, Format Version 12.00
 # Visual Studio 15
-VisualStudioVersion = 15.0.26430.14
+VisualStudioVersion = 15.0.27130.2036
 MinimumVisualStudioVersion = 10.0.40219.1
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Google.Cloud.Spanner.V1", "Google.Cloud.Spanner.V1\Google.Cloud.Spanner.V1.csproj", "{B0AB7A94-E1EF-4498-AF94-A865765131CC}"
 EndProject
@@ -13,7 +13,7 @@ Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Solution Items", "Solution 
 EndProject
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Google.Cloud.Spanner.V1.Tests", "Google.Cloud.Spanner.V1.Tests\Google.Cloud.Spanner.V1.Tests.csproj", "{BEBCD645-F262-4D5C-9D42-ED4A2831BA64}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Google.Cloud.ClientTesting", "..\..\tools\Google.Cloud.ClientTesting\Google.Cloud.ClientTesting.csproj", "{65CDA7BA-D484-4B0F-B1F6-8FD8EFF5168F}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Google.Cloud.ClientTesting", "..\..\tools\Google.Cloud.ClientTesting\Google.Cloud.ClientTesting.csproj", "{65CDA7BA-D484-4B0F-B1F6-8FD8EFF5168F}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -63,21 +63,22 @@ Global
 		{BEBCD645-F262-4D5C-9D42-ED4A2831BA64}.Release|x86.Build.0 = Release|Any CPU
 		{65CDA7BA-D484-4B0F-B1F6-8FD8EFF5168F}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
 		{65CDA7BA-D484-4B0F-B1F6-8FD8EFF5168F}.Debug|Any CPU.Build.0 = Debug|Any CPU
-		{65CDA7BA-D484-4B0F-B1F6-8FD8EFF5168F}.Debug|x64.ActiveCfg = Debug|x64
-		{65CDA7BA-D484-4B0F-B1F6-8FD8EFF5168F}.Debug|x64.Build.0 = Debug|x64
-		{65CDA7BA-D484-4B0F-B1F6-8FD8EFF5168F}.Debug|x86.ActiveCfg = Debug|x86
-		{65CDA7BA-D484-4B0F-B1F6-8FD8EFF5168F}.Debug|x86.Build.0 = Debug|x86
+		{65CDA7BA-D484-4B0F-B1F6-8FD8EFF5168F}.Debug|x64.ActiveCfg = Debug|Any CPU
+		{65CDA7BA-D484-4B0F-B1F6-8FD8EFF5168F}.Debug|x64.Build.0 = Debug|Any CPU
+		{65CDA7BA-D484-4B0F-B1F6-8FD8EFF5168F}.Debug|x86.ActiveCfg = Debug|Any CPU
+		{65CDA7BA-D484-4B0F-B1F6-8FD8EFF5168F}.Debug|x86.Build.0 = Debug|Any CPU
 		{65CDA7BA-D484-4B0F-B1F6-8FD8EFF5168F}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{65CDA7BA-D484-4B0F-B1F6-8FD8EFF5168F}.Release|Any CPU.Build.0 = Release|Any CPU
-		{65CDA7BA-D484-4B0F-B1F6-8FD8EFF5168F}.Release|x64.ActiveCfg = Release|x64
-		{65CDA7BA-D484-4B0F-B1F6-8FD8EFF5168F}.Release|x64.Build.0 = Release|x64
-		{65CDA7BA-D484-4B0F-B1F6-8FD8EFF5168F}.Release|x86.ActiveCfg = Release|x86
-		{65CDA7BA-D484-4B0F-B1F6-8FD8EFF5168F}.Release|x86.Build.0 = Release|x86
+		{65CDA7BA-D484-4B0F-B1F6-8FD8EFF5168F}.Release|x64.ActiveCfg = Release|Any CPU
+		{65CDA7BA-D484-4B0F-B1F6-8FD8EFF5168F}.Release|x64.Build.0 = Release|Any CPU
+		{65CDA7BA-D484-4B0F-B1F6-8FD8EFF5168F}.Release|x86.ActiveCfg = Release|Any CPU
+		{65CDA7BA-D484-4B0F-B1F6-8FD8EFF5168F}.Release|x86.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
 	EndGlobalSection
 	GlobalSection(ExtensibilityGlobals) = postSolution
 		EnterpriseLibraryConfigurationToolBinariesPathV6 = packages\EnterpriseLibrary.TransientFaultHandling.6.0.1304.0\lib\portable-net45+win+wp8
+		SolutionGuid = {0D2E0AA8-1DE4-4330-A1A0-2A5AB886F23C}
 	EndGlobalSection
 EndGlobal
