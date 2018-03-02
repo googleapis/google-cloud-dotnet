@@ -35,8 +35,9 @@ GA:
 - [Google.Cloud.Translation.V2](Google.Cloud.Translation.V2/index.html)
 - [Google.Cloud.VideoIntelligence.V1](Google.Cloud.VideoIntelligence.V1/index.html)
 - [Google.Cloud.Vision.V1](Google.Cloud.Vision.V1/index.html)
-  - Additionally, a [Google.Cloud.Vision.V1P1Beta1](Google.Cloud.Vision.V1P1Beta1/index.html)
-    library is available for access to beta API functionality.
+  - Additionally, the following libraries are available for access to beta API functionality:
+    - [Google.Cloud.Vision.V1P1Beta1](Google.Cloud.Vision.V1P1Beta1/index.html)
+    - [Google.Cloud.Vision.V1P2Beta1](Google.Cloud.Vision.V1P2Beta1/index.html)
 
 Beta:
 
