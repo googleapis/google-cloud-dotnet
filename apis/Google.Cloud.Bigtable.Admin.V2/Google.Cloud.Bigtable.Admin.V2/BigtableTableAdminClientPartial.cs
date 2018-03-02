@@ -38,6 +38,27 @@ namespace Google.Cloud.Bigtable.Admin.V2
         partial void Modify_DropRowRangeRequest(ref DropRowRangeRequest request, ref CallSettings settings) =>
             ApplyResourcePrefixHeader(ref settings, request.Name);
 
+        partial void Modify_CheckConsistencyRequest(ref CheckConsistencyRequest request, ref CallSettings settings) =>
+            ApplyResourcePrefixHeader(ref settings, request.Name);
+
+        partial void Modify_CreateTableFromSnapshotRequest(ref CreateTableFromSnapshotRequest request, ref CallSettings settings) =>
+            ApplyResourcePrefixHeader(ref settings, request.Parent);
+
+        partial void Modify_DeleteSnapshotRequest(ref DeleteSnapshotRequest request, ref CallSettings settings) =>
+            ApplyResourcePrefixHeader(ref settings, request.Name);
+
+        partial void Modify_GenerateConsistencyTokenRequest(ref GenerateConsistencyTokenRequest request, ref CallSettings settings) =>
+            ApplyResourcePrefixHeader(ref settings, request.Name);
+
+        partial void Modify_GetSnapshotRequest(ref GetSnapshotRequest request, ref CallSettings settings) =>
+            ApplyResourcePrefixHeader(ref settings, request.Name);
+
+        partial void Modify_ListSnapshotsRequest(ref ListSnapshotsRequest request, ref CallSettings settings) =>
+            ApplyResourcePrefixHeader(ref settings, request.Parent);
+
+        partial void Modify_SnapshotTableRequest(ref SnapshotTableRequest request, ref CallSettings settings) =>
+            ApplyResourcePrefixHeader(ref settings, request.Name);
+
         private static void ApplyResourcePrefixHeader(ref CallSettings settings, string resource)
         {
             settings = settings.WithHeader(ResourcePrefixHeader, resource);
