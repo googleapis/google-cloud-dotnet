@@ -23,7 +23,7 @@ namespace Google.Cloud.Firestore
     /// <summary>
     /// Immutable class representing options for Set operations.
     /// </summary>
-    public sealed class SetOptions : IEquatable<SetOptions>
+    public sealed class SetOptions
     {
         /// <summary>
         /// Returns an instance that overwrites the target object. This is the default when no
@@ -81,21 +81,5 @@ namespace Google.Cloud.Firestore
         /// all fields will be merged or overwritten.
         /// </summary>
         public IReadOnlyList<FieldPath> FieldMask { get; }
-
-        /// <summary>
-        /// Compares this set-options with another for equality.
-        /// </summary>
-        /// <param name="other">The set options to compare this one with</param>
-        /// <returns><c>true</c> if this value is equal to <paramref name="other"/>; <c>false</c> otherwise.</returns>
-        public bool Equals(SetOptions other) =>
-            other != null &&
-            Merge == other.Merge &&
-            EqualityHelpers.ListsEqual(FieldMask, other.FieldMask);
-
-        /// <inheritdoc />
-        public override bool Equals(object obj) => Equals(obj as SetOptions);
-
-        /// <inheritdoc />
-        public override int GetHashCode() => EqualityHelpers.CombineHashCodes(Merge ? 1 : 2, EqualityHelpers.GetListHashCode(FieldMask));
     }
 }

@@ -54,33 +54,6 @@ namespace Google.Cloud.Firestore.Tests
             Assert.Null(precondition.Exists);
             Assert.Equal(timestamp, precondition.LastUpdateTime);
             Assert.Equal(new V1Beta1.Precondition { UpdateTime = CreateProtoTimestamp(1, 5) }, precondition.Proto);
-        }
-
-        [Fact]
-        public void Equality()
-        {
-            // Note: timestamp choice can give false test failures, due to proto hash code computation.
-            var timestamp1 = new Timestamp(10, 0);
-            var timestamp2 = new Timestamp(10, 1);
-            EqualityTester.AssertEqual(Precondition.None,
-                equal: new[] { Precondition.None },
-                unequal: new[] { Precondition.MustExist, Precondition.MustNotExist, Precondition.LastUpdated(timestamp1) }
-                );
-
-            EqualityTester.AssertEqual(Precondition.MustExist,
-                equal: new[] { Precondition.MustExist },
-                unequal: new[] { Precondition.MustNotExist, Precondition.LastUpdated(timestamp1) }
-                );
-
-            EqualityTester.AssertEqual(Precondition.MustNotExist,
-                equal: new[] { Precondition.MustNotExist },
-                unequal: new[] { Precondition.LastUpdated(timestamp1) }
-                );
-
-            EqualityTester.AssertEqual(Precondition.LastUpdated(timestamp1),
-                equal: new[] { Precondition.LastUpdated(timestamp1) },
-                unequal: new[] { Precondition.LastUpdated(timestamp2) }
-                );
-        }
+        }        
     }
 }
