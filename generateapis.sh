@@ -216,6 +216,7 @@ generate_api Google.Cloud.Trace.V2 google/devtools/cloudtrace/v2 cloudtrace_v2.y
 generate_api Google.Cloud.VideoIntelligence.V1 google/cloud/videointelligence/v1 videointelligence_v1.yaml
 generate_api Google.Cloud.Vision.V1 google/cloud/vision/v1 vision_v1.yaml
 generate_api Google.Cloud.Vision.V1P1Beta1 google/cloud/vision/v1p1beta1 vision_v1p1beta1.yaml
+generate_api Google.Cloud.Vision.V1P2Beta1 google/cloud/vision/v1p2beta1 vision_v1p2beta1.yaml
 
 dotnet run -f net461 -p apis/Google.Cloud.Bigtable.V2/Google.Cloud.Bigtable.V2.GenerateClient \
  apis/Google.Cloud.Bigtable.V2/Google.Cloud.Bigtable.V2/Google.Cloud.Bigtable.V2.csproj \
