@@ -20,7 +20,7 @@ namespace Google.Cloud.Firestore
     /// <summary>
     /// Immutable class representing a precondition for an update operation.
     /// </summary>
-    public sealed class Precondition : IEquatable<Precondition>
+    public sealed class Precondition
     {
         /// <summary>
         /// No precondition.
@@ -66,20 +66,5 @@ namespace Google.Cloud.Firestore
 
         // Only used by tests
         internal static Precondition FromProto(V1Beta1.Precondition proto) => proto == null ? null : new Precondition(proto);
-
-        /// <summary>
-        /// Compares this precondition with another for equality.
-        /// </summary>
-        /// <param name="other">The precondition to compare this one with</param>
-        /// <returns><c>true</c> if this precondition is equal to <paramref name="other"/>; <c>false</c> otherwise.</returns>
-        public bool Equals(Precondition other) => other != null && Equals(Proto, other.Proto);
-
-        /// <inheritdoc />
-        public override bool Equals(object obj) => Equals(obj as Precondition);
-
-        // The value returned when Proto is null is chosen to avoid conflicting with either
-        // MustExist or MustNotExist.
-        /// <inheritdoc />
-        public override int GetHashCode() => Proto?.GetHashCode() ?? 5172;
     }
 }

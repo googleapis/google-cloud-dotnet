@@ -20,7 +20,7 @@ namespace Google.Cloud.Firestore
     /// <summary>
     /// Immutable class representing options for executing transactions.
     /// </summary>
-    public sealed class TransactionOptions : IEquatable<TransactionOptions>
+    public sealed class TransactionOptions
     {
         /// <summary>
         /// The transaction options that are used if nothing is specified by the caller.
@@ -47,19 +47,5 @@ namespace Google.Cloud.Firestore
             GaxPreconditions.CheckArgumentRange(maxAttempts, nameof(maxAttempts), 1, int.MaxValue);
             return new TransactionOptions(maxAttempts);
         }
-
-        /// <summary>
-        /// Compares this value with another for equality.
-        /// </summary>
-        /// <param name="other">The transaction options to compare this with</param>
-        /// <returns><c>true</c> if this value is equal to <paramref name="other"/>; <c>false</c> otherwise.</returns>
-        public bool Equals(TransactionOptions other) => other != null && MaxAttempts == other.MaxAttempts;
-
-        /// <inheritdoc />
-        public override bool Equals(object obj) => Equals(obj as TransactionOptions);
-
-        /// <inheritdoc />
-        public override int GetHashCode() => MaxAttempts;
-
     }
 }
