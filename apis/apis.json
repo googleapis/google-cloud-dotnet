@@ -635,7 +635,10 @@
     "version": "1.0.0-beta01",
     "type": "grpc",
     "description": "Google client library to access the Google Cloud Vision API version v1p2beta1 with upcoming features.",
-    "tags": [ "Vision" ]
+    "tags": [ "Vision" ],
+    "dependencies": {
+      "Google.LongRunning": "1.0.0"
+    }
   },
 
   {
