@@ -1022,13 +1022,10 @@ namespace Google.Cloud.Bigtable.V2
             CallSettings callSettings,
             BigtableServiceApiClient.MutateRowsStream result)
         {
-            var defaultCallSettings = (UnderlyingClientSettings ?? new BigtableServiceApiSettings()).MutateRowSettings;
-            var effectiveCallSettings = defaultCallSettings.MergedWith(callSettings);
-            var retrySettings = effectiveCallSettings?.Timing?.Retry;
-            if (retrySettings != null)
-            {
-                effectiveCallSettings = effectiveCallSettings.WithCallTiming(CallTiming.FromExpiration(retrySettings.TotalExpiration));
-            }
+            var defaultSettings = UnderlyingClientSettings ?? new BigtableServiceApiSettings();
+            var effectiveCallSettings = defaultSettings.MutateRowsSettings.MergedWith(callSettings);
+            // TODO(mdour): Do we want to try to support per-call retry settings?
+            var effectiveRetrySettings = defaultSettings.MutateRowsRetrySettings;
 
             // TODO: Should the request manager be using the retry filter? We would need to fabricate RpcExceptions
             StatusCode[] retryStatuses = { StatusCode.DeadlineExceeded, StatusCode.Unavailable };
@@ -1036,7 +1033,7 @@ namespace Google.Cloud.Bigtable.V2
 
             var currentStream = result;
             var status = await ProcessCurrentStream().ConfigureAwait(false);
-            if (retrySettings != null && status == ProcessingStatus.Retryable)
+            if (effectiveRetrySettings != null && status == ProcessingStatus.Retryable)
             {
                 await ApiCallRetryExtensions.RetryOperationUntilCompleted(
                     async () =>
@@ -1048,7 +1045,7 @@ namespace Google.Cloud.Bigtable.V2
                     SystemClock.Instance,
                     SystemScheduler.Instance,
                     effectiveCallSettings,
-                    retrySettings).ConfigureAwait(false);
+                    effectiveRetrySettings).ConfigureAwait(false);
             }
             return requestManager.BuildResponse();
 
