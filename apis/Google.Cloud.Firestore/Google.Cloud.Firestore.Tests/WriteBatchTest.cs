@@ -135,6 +135,53 @@ namespace Google.Cloud.Firestore.Tests
             AssertWrites(batch, (expectedWrite, true));
         }
 
+        [Fact]
+        public void Update_StringKeyedDictionary_WithPrecondition()
+        {
+            var db = FirestoreDb.Create("project", "db", new FakeFirestoreClient());
+            var batch = db.StartBatch();
+            var doc = db.Document("col/doc");
+            var updates = new Dictionary<string, object>
+            {
+                { "x", "y" }
+            };
+
+            batch.Update(doc, updates, Precondition.LastUpdated(new Timestamp(1, 2)));
+
+            var expectedWrite = new Write
+            {
+                CurrentDocument = new V1Beta1.Precondition { UpdateTime = CreateProtoTimestamp(1, 2) },
+                Update = new Document
+                {
+                    Name = doc.Path,
+                    Fields = { { "x", CreateValue("y") } }
+                },
+                UpdateMask = new DocumentMask { FieldPaths = { "x" } }
+            };
+            AssertWrites(batch, (expectedWrite, true));
+        }
+
+        [Fact]
+        public void Update_Single_Field_WithPrecondition()
+        {
+            var db = FirestoreDb.Create("project", "db", new FakeFirestoreClient());
+            var batch = db.StartBatch();
+            var doc = db.Document("col/doc");
+            batch.Update(doc, "x", "y", Precondition.LastUpdated(new Timestamp(1, 2)));
+
+            var expectedWrite = new Write
+            {
+                CurrentDocument = new V1Beta1.Precondition { UpdateTime = CreateProtoTimestamp(1, 2) },
+                Update = new Document
+                {
+                    Name = doc.Path,
+                    Fields = { { "x", CreateValue("y") } }
+                },
+                UpdateMask = new DocumentMask { FieldPaths = { "x" } }
+            };
+            AssertWrites(batch, (expectedWrite, true));
+        }
+
         [Theory]
         [InlineData(false)]
         [InlineData(true)]

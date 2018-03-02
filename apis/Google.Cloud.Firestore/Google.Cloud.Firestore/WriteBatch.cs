@@ -90,6 +90,33 @@ namespace Google.Cloud.Firestore
         /// Adds an update operation that updates just the specified fields paths in the document, with the corresponding values.
         /// </summary>
         /// <param name="documentReference">A document reference indicating the path of the document to update. Must not be null.</param>
+        /// <param name="updates">The updates to perform on the document, keyed by the dot-separated field path to update. Fields not present in this dictionary are not updated. Must not be null or empty.</param>
+        /// <param name="precondition">Optional precondition for updating the document. May be null, which is equivalent to <see cref="Precondition.MustExist"/>.</param>
+        /// <returns>This batch, for the purposes of method chaining.</returns>
+        public WriteBatch Update(DocumentReference documentReference, IDictionary<string, object> updates, Precondition precondition = null)
+        {
+            GaxPreconditions.CheckNotNull(updates, nameof(updates));
+            return Update(documentReference, updates.ToDictionary(pair => FieldPath.FromDotSeparatedString(pair.Key), pair => pair.Value), precondition);
+        }
+
+        /// <summary>
+        /// Adds an update operation that updates just the specified field in the document, with the corresponding values.
+        /// </summary>
+        /// <param name="documentReference">A document reference indicating the path of the document to update. Must not be null.</param>
+        /// <param name="field">The dot-separated name of the field to update. Must not be null.</param>
+        /// <param name="value">The new value for the field. May be null.</param>
+        /// <param name="precondition">Optional precondition for updating the document. May be null, which is equivalent to <see cref="Precondition.MustExist"/>.</param>
+        /// <returns>This batch, for the purposes of method chaining.</returns>
+        public WriteBatch Update(DocumentReference documentReference, string field, object value, Precondition precondition = null)
+        {
+            GaxPreconditions.CheckNotNull(field, nameof(field));
+            return Update(documentReference, new Dictionary<string, object> { { field, value } }, precondition);
+        }
+
+        /// <summary>
+        /// Adds an update operation that updates just the specified fields paths in the document, with the corresponding values.
+        /// </summary>
+        /// <param name="documentReference">A document reference indicating the path of the document to update. Must not be null.</param>
         /// <param name="updates">The updates to perform on the document, keyed by the field path to update. Fields not present in this dictionary are not updated. Must not be null or empty.</param>
         /// <param name="precondition">Optional precondition for updating the document. May be null, which is equivalent to <see cref="Precondition.MustExist"/>.</param>
         /// <returns>This batch, for the purposes of method chaining.</returns>

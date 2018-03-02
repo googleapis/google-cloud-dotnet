@@ -18,6 +18,7 @@ using Google.Api.Gax.Grpc;
 using Google.Cloud.Firestore.V1Beta1;
 using Google.Protobuf;
 using System.Collections.Generic;
+using System.Linq;
 using System.Threading;
 using System.Threading.Tasks;
 using static Google.Cloud.Firestore.V1Beta1.TransactionOptions.Types;
@@ -138,10 +139,35 @@ namespace Google.Cloud.Firestore
         /// <summary>
         /// Adds an operation to update a document's data in this transaction.
         /// </summary>
+        /// <param name="documentReference">A document reference indicating the path of the document to update. Must not be null.</param>
+        /// <param name="updates">The updates to perform on the document, keyed by the dot-separated field path to update. Fields not present in this dictionary are not updated. Must not be null or empty.</param>
+        /// <param name="precondition">Optional precondition for updating the document. May be null, which is equivalent to <see cref="Precondition.MustExist"/>.</param>
+        public void Update(DocumentReference documentReference, IDictionary<string, object> updates, Precondition precondition = null)
+        {
+            GaxPreconditions.CheckNotNull(updates, nameof(updates));
+            Update(documentReference, updates.ToDictionary(pair => FieldPath.FromDotSeparatedString(pair.Key), pair => pair.Value), precondition);
+        }
+
+        /// <summary>
+        /// Adds an operation to update a document's data in this transaction.
+        /// </summary>
+        /// <param name="documentReference">A document reference indicating the path of the document to update. Must not be null.</param>
+        /// <param name="field">The dot-separated name of the field to update. Must not be null.</param>
+        /// <param name="value">The new value for the field. May be null.</param>
+        /// <param name="precondition">Optional precondition for updating the document. May be null, which is equivalent to <see cref="Precondition.MustExist"/>.</param>
+        public void Update(DocumentReference documentReference, string field, object value, Precondition precondition = null)
+        {
+            GaxPreconditions.CheckNotNull(field, nameof(field));
+            Update(documentReference, new Dictionary<string, object> { { field, value } }, precondition);
+        }
+        
+        /// <summary>
+        /// Adds an operation to update a document's data in this transaction.
+        /// </summary>
         /// <param name="documentReference">The document to update. Must not be null.</param>
         /// <param name="updates">The updates to perform on the document, keyed by the field path to update. Fields not present in this dictionary are not updated. Must not be null or empty.</param>
         /// <param name="precondition">Optional precondition for updating the document. May be null, which is equivalent to <see cref="Precondition.MustExist"/>.</param>
-        public void Update(DocumentReference documentReference, Dictionary<FieldPath, object> updates, Precondition precondition = null)
+        public void Update(DocumentReference documentReference, IDictionary<FieldPath, object> updates, Precondition precondition = null)
         {
             // Preconditions are validated by WriteBatch.
             _writes.Update(documentReference, updates, precondition);
