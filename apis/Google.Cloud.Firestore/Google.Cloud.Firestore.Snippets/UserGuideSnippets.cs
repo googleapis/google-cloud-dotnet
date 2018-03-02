@@ -225,51 +225,7 @@ namespace Google.Cloud.Firestore.Snippets
         }
 
         [Fact]
-        public async Task TransactionSyncCallbackNoResult()
-        {
-            // Start from clean...
-            var tmp = _fixture.FirestoreDb.Collection("counters");
-            await tmp.Document("current").DeleteAsync();
-            await tmp.Document("daily").DeleteAsync();
-
-            string projectId = _fixture.ProjectId;
-
-            // Sample: TransactionSyncCallbackNoResult
-            FirestoreDb db = FirestoreDb.Create(projectId);
-            CollectionReference collection = db.Collection("counters");
-            DocumentReference currentCounter = collection.Document("current");
-            DocumentReference dailyCounter = collection.Document("daily");
-
-            await db.RunTransactionAsync(transaction =>
-            {
-                transaction.Create(currentCounter, new { Counter = 0 });
-                transaction.Create(dailyCounter, new { Counter = 0 });
-            });
-            // End sample
-        }
-
-        [Fact]
-        public async Task TransactionSyncCallbackWithResult()
-        {
-            string projectId = _fixture.ProjectId;
-
-            // Sample: TransactionSyncCallbackWithResult
-            FirestoreDb db = FirestoreDb.Create(projectId);
-            CollectionReference collection = db.Collection("counters");
-
-            string result = await db.RunTransactionAsync(transaction =>
-            {
-                string prefix = DateTime.UtcNow.ToString("yyyyMMddHHmmsssfffffff", CultureInfo.InvariantCulture);
-                transaction.Create(collection.Document(prefix + "-current"), new { Counter = 0 });
-                transaction.Create(collection.Document(prefix + "-daily"), new { Counter = 0 });
-                return prefix;
-            });
-            Console.WriteLine(result); // The prefix we generated
-            // End sample
-        }
-
-        [Fact]
-        public async Task TransactionAsyncCallbackNoResult()
+        public async Task TransactionCallbackNoResult()
         {
             // Start from clean, but with counters present
             var tmp = _fixture.FirestoreDb.Collection("counters");
@@ -294,7 +250,7 @@ namespace Google.Cloud.Firestore.Snippets
         }
 
         [Fact]
-        public async Task TransactionAsyncCallbackWithResult()
+        public async Task TransactionCallbackWithResult()
         {
             // Start from clean, but with counters present
             var tmp = _fixture.FirestoreDb.Collection("counters");

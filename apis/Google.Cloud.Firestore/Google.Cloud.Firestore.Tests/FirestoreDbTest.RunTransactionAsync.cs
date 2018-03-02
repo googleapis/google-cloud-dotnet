@@ -27,21 +27,7 @@ namespace Google.Cloud.Firestore.Tests
     {
         // Just check the basics of each overload...
         [Fact]
-        public async Task RunTransactionAsync_CommitSuccess_Sync_NoResult()
-        {
-            var client = new TransactionTestingClient();
-            var db = FirestoreDb.Create("proj", "db", client);
-            await db.RunTransactionAsync(transaction =>
-            {
-                transaction.Create(db.Document("col/doc1"), new { Name = "Test" });
-                transaction.Delete(db.Document("col/doc2"));
-            });
-            Assert.Equal(new[] { CreateCommitRequest("transaction 1") }, client.CommitRequests);
-            Assert.Empty(client.RollbackRequests);
-        }
-
-        [Fact]
-        public async Task RunTransactionAsync_CommitSuccess_Async_NoResult()
+        public async Task RunTransactionAsync_CommitSuccess_NoResult()
         {
             var client = new TransactionTestingClient();
             var db = FirestoreDb.Create("proj", "db", client);
@@ -56,23 +42,7 @@ namespace Google.Cloud.Firestore.Tests
         }
 
         [Fact]
-        public async Task RunTransactionAsync_CommitSuccess_Sync_WithResult()
-        {
-            var client = new TransactionTestingClient();
-            var db = FirestoreDb.Create("proj", "db", client);
-            var result = await db.RunTransactionAsync(transaction =>
-            {
-                transaction.Create(db.Document("col/doc1"), new { Name = "Test" });
-                transaction.Delete(db.Document("col/doc2"));
-                return "test";
-            });
-            Assert.Equal("test", result);
-            Assert.Equal(new[] { CreateCommitRequest("transaction 1") }, client.CommitRequests);
-            Assert.Empty(client.RollbackRequests);
-        }
-
-        [Fact]
-        public async Task RunTransactionAsync_CommitSuccess_Async_WithResult()
+        public async Task RunTransactionAsync_CommitSuccess_WithResult()
         {
             var client = new TransactionTestingClient();
             var db = FirestoreDb.Create("proj", "db", client);

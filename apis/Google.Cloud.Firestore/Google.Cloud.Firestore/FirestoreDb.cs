@@ -252,42 +252,6 @@ namespace Google.Cloud.Firestore
         // TODO: Collect up all the exceptions we've retried?
         // TODO: Is it nice to have all these overloads?
 
-        // Note: the overloads accepting synchronous callbacks run those callbacks synchronously, so any exceptions will be thrown synchronously.
-        // That's okay, as we'd just be awaiting the task anyway.
-
-        /// <summary>
-        /// Runs a transaction asynchronously, with a synchronous callback that returns a value.
-        /// The specified callback is executed for a newly-created transaction. If committing the transaction
-        /// fails, the whole operation is retried based on <see cref="TransactionOptions.MaxAttempts"/>.
-        /// </summary>
-        /// <typeparam name="T">The result type of the callback.</typeparam>
-        /// <param name="callback">The callback to execute. Must not be null.</param>
-        /// <param name="options">The options for the transaction. May be null, in which case default options will be used.</param>
-        /// <param name="cancellationToken">A cancellation token for the operation. This is exposed to the callback through <see cref="Transaction.CancellationToken"/>
-        /// and applied to all RPCs to begin, rollback or commit the transaction.</param>
-        /// <returns>A task which completes when the transaction has committed. The result of the task then contains the result of the callback.</returns>
-        public Task<T> RunTransactionAsync<T>(Func<Transaction, T> callback, TransactionOptions options = null, CancellationToken cancellationToken = default)
-        {
-            GaxPreconditions.CheckNotNull(callback, nameof(callback));
-            return RunTransactionAsync(transaction => Task.FromResult(callback(transaction)), options, cancellationToken);
-        }
-
-        /// <summary>
-        /// Runs a transaction asynchronously, with a synchronous callback that doesn't return a value.
-        /// The specified callback is executed for a newly-created transaction. If committing the transaction
-        /// fails, the whole operation is retried based on <see cref="TransactionOptions.MaxAttempts"/>.
-        /// </summary>
-        /// <param name="callback">The callback to execute. Must not be null.</param>
-        /// <param name="options">The options for the transaction. May be null, in which case default options will be used.</param>
-        /// <param name="cancellationToken">A cancellation token for the operation. This is exposed to the callback through <see cref="Transaction.CancellationToken"/>
-        /// and applied to all RPCs to begin, rollback or commit the transaction.</param>
-        /// <returns>A task which completes when the transaction has committed.</returns>
-        public Task RunTransactionAsync(Action<Transaction> callback, TransactionOptions options = null, CancellationToken cancellationToken = default)
-        {
-            GaxPreconditions.CheckNotNull(callback, nameof(callback));
-            return RunTransactionAsync(transaction => { callback(transaction); return Task.FromResult(0); }, options, cancellationToken);
-        }
-
         /// <summary>
         /// Runs a transaction asynchronously, with an asynchronous callback that doesn't return a value.
         /// The specified callback is executed for a newly-created transaction. If committing the transaction
