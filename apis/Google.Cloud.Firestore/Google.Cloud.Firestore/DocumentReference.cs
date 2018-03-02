@@ -134,7 +134,7 @@ namespace Google.Cloud.Firestore
         }
 
         /// <summary>
-        /// Asynchronously performs a set of updates on the document referred to by this path, with an optional precondition.
+        /// Asynchronously performs a single field update on the document referred to by this path, with an optional precondition.
         /// </summary>
         /// <param name="field">The dot-separated name of the field to update. Must not be null.</param>
         /// <param name="value">The new value for the field. May be null.</param>
