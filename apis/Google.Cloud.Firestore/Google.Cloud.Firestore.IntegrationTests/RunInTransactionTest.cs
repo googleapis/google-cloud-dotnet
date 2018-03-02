@@ -35,8 +35,12 @@ namespace Google.Cloud.Firestore.IntegrationTests
             var doc1 = _fixture.NonQueryCollection.Document();
             var doc2 = _fixture.NonQueryCollection.Document();
 
-            await db.RunTransactionAsync(transaction =>
+            // The callback here doesn't really need to be in a transaction. We could use a write batch instead.
+            // However, it's fine for testing.
+            await db.RunTransactionAsync(async transaction =>
             {
+                // Simple way of making it a "true" async lambda expression
+                await Task.Yield();
                 transaction.Create(doc1, new { Name = "test1" });
                 transaction.Create(doc2, new { Name = "test2" });
             });
