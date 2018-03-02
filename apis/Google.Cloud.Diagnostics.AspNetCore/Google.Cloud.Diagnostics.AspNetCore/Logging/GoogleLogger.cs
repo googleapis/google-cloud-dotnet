@@ -1,31 +1,33 @@
 ﻿// Copyright 2016 Google Inc. All Rights Reserved.
-// 
+//
 // Licensed under the Apache License, Version 2.0 (the "License");
 // you may not use this file except in compliance with the License.
 // You may obtain a copy of the License at
-// 
+//
 //     http://www.apache.org/licenses/LICENSE-2.0
-// 
+//
 // Unless required by applicable law or agreed to in writing, software
 // distributed under the License is distributed on an "AS IS" BASIS,
 // WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
 // See the License for the specific language governing permissions and
 // limitations under the License.
 
-using Google.Cloud.Logging.V2;
-using Google.Cloud.Diagnostics.Common;
-using Google.Protobuf.WellKnownTypes;
-using Google.Api.Gax;
-using Microsoft.Extensions.Logging;
 using System;
+using System.Collections.Generic;
+using System.Linq;
+using Google.Api.Gax;
+using Google.Cloud.Diagnostics.Common;
+using Google.Cloud.Logging.V2;
+using Google.Protobuf.WellKnownTypes;
 using Microsoft.AspNetCore.Http;
+using Microsoft.Extensions.Logging;
 
 namespace Google.Cloud.Diagnostics.AspNetCore
 {
     /// <summary>
     /// <see cref="ILogger"/> for Google Stackdriver Logging.
     /// </summary>
-    /// 
+    ///
     /// <example>
     /// <code>
     /// public void Configure(ILoggerFactory loggerFactory)
@@ -36,7 +38,7 @@ namespace Google.Cloud.Diagnostics.AspNetCore
     /// }
     /// </code>
     /// </example>
-    /// 
+    ///
     /// <remarks>
     /// Logs to Google Stackdriver Cloud Logging.
     /// Docs: https://cloud.google.com/logging/docs/
@@ -62,7 +64,7 @@ namespace Google.Cloud.Diagnostics.AspNetCore
         /// <summary>An accessor to get the current <see cref="HttpContext"/>.</summary>
         private readonly IHttpContextAccessor _accessor;
 
-        internal GoogleLogger(IConsumer<LogEntry> consumer, LogTarget logTarget, LoggerOptions loggerOptions, 
+        internal GoogleLogger(IConsumer<LogEntry> consumer, LogTarget logTarget, LoggerOptions loggerOptions,
             string logName, IClock clock = null, IHttpContextAccessor accessor = null)
         {
             GaxPreconditions.CheckNotNull(logTarget, nameof(logTarget));
@@ -70,7 +72,7 @@ namespace Google.Cloud.Diagnostics.AspNetCore
             _traceTarget = logTarget.Kind == LogTargetKind.Project ?
                 TraceTarget.ForProject(logTarget.ProjectId) : null;
             _consumer = GaxPreconditions.CheckNotNull(consumer, nameof(consumer));
-            _loggerOptions = GaxPreconditions.CheckNotNull(loggerOptions, nameof(loggerOptions)); ;
+            _loggerOptions = GaxPreconditions.CheckNotNull(loggerOptions, nameof(loggerOptions));
             _logName = logTarget.GetFullLogName(logName);
             _accessor = accessor;
             _clock = clock ?? SystemClock.Instance;
@@ -98,6 +100,22 @@ namespace Google.Cloud.Diagnostics.AspNetCore
                 return;
             }
 
+            Dictionary<string, string> labels;
+            var labelProviders = GetLabelProviders();
+            if (labelProviders != null)
+            {
+                // Create a copy of the labels from the options and invoke each provider
+                labels = _loggerOptions.Labels.ToDictionary(kvp => kvp.Key, kvp => kvp.Value);
+                foreach (var provider in labelProviders)
+                {
+                    provider.Invoke(labels);
+                }
+            }
+            else
+            {
+                labels = _loggerOptions.Labels;
+            }
+
             LogEntry entry = new LogEntry
             {
                 Resource = _loggerOptions.MonitoredResource,
@@ -105,7 +123,7 @@ namespace Google.Cloud.Diagnostics.AspNetCore
                 Severity = logLevel.ToLogSeverity(),
                 Timestamp = Timestamp.FromDateTime(_clock.GetCurrentDateTimeUtc()),
                 TextPayload = string.Concat(GoogleLoggerScope.Current, message),
-                Labels = { _loggerOptions.Labels },
+                Labels = { labels },
                 Trace = GetTraceName() ?? "",
             };
 
@@ -128,6 +146,17 @@ namespace Google.Cloud.Diagnostics.AspNetCore
             string header = _accessor.HttpContext?.Request?.Headers[TraceHeaderContext.TraceHeader];
             var traceContext = TraceHeaderContext.FromHeader(header);
             return traceContext.TraceId == null ? null : _traceTarget.GetFullTraceName(traceContext.TraceId);
+        }
+
+        internal IEnumerable<ILogEntryLabelProvider> GetLabelProviders()
+        {
+            var serviceProvider = _accessor?.HttpContext?.RequestServices;
+            if (serviceProvider == null)
+            {
+                return null;
+            }
+
+            return (IEnumerable<ILogEntryLabelProvider>)serviceProvider.GetService(typeof(IEnumerable<ILogEntryLabelProvider>));
         }
     }
 }
