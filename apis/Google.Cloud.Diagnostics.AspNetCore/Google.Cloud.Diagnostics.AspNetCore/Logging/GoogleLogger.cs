@@ -17,6 +17,7 @@ using Google.Cloud.Diagnostics.Common;
 using Google.Cloud.Logging.V2;
 using Google.Protobuf.WellKnownTypes;
 using Microsoft.AspNetCore.Http;
+using Microsoft.Extensions.DependencyInjection;
 using Microsoft.Extensions.Logging;
 using System;
 using System.Collections.Generic;
@@ -64,20 +65,20 @@ namespace Google.Cloud.Diagnostics.AspNetCore
         /// <summary>A clock for getting the current timestamp.</summary>
         private readonly IClock _clock;
 
-        /// <summary>An accessor to get the current <see cref="HttpContext"/>.</summary>
-        private readonly IHttpContextAccessor _accessor;
+        /// <summary>The service provider to resolve additional services from.</summary>
+        private readonly IServiceProvider _serviceProvider;
 
-        internal GoogleLogger(IConsumer<LogEntry> consumer, LogTarget logTarget, LoggerOptions loggerOptions, 
-            string logName, IClock clock = null, IHttpContextAccessor accessor = null)
+        internal GoogleLogger(IConsumer<LogEntry> consumer, LogTarget logTarget, LoggerOptions loggerOptions,
+            string logName, IClock clock = null, IServiceProvider serviceProvider = null)
         {
             GaxPreconditions.CheckNotNull(logTarget, nameof(logTarget));
             _traceTarget = logTarget.Kind == LogTargetKind.Project ?
                 TraceTarget.ForProject(logTarget.ProjectId) : null;
             _consumer = GaxPreconditions.CheckNotNull(consumer, nameof(consumer));
-            _loggerOptions = GaxPreconditions.CheckNotNull(loggerOptions, nameof(loggerOptions));
-            _logName = GaxPreconditions.CheckNotNullOrEmpty(logName, nameof(logName)); ;
+            _loggerOptions = GaxPreconditions.CheckNotNull(loggerOptions, nameof(loggerOptions)); ;
+            _logName = logTarget.GetFullLogName(logName);
             _fullLogName = logTarget.GetFullLogName(_loggerOptions.LogName);
-            _accessor = accessor;
+            _serviceProvider = serviceProvider;
             _clock = clock ?? SystemClock.Instance;
         }
 
@@ -165,12 +166,13 @@ namespace Google.Cloud.Diagnostics.AspNetCore
         /// </summary>
         internal string GetTraceName()
         {
-            if (_traceTarget == null || _accessor == null)
+            var httpContext = _serviceProvider?.GetService<IHttpContextAccessor>()?.HttpContext;
+            if (_traceTarget == null || httpContext == null)
             {
                 return null;
             }
 
-            string header = _accessor.HttpContext?.Request?.Headers[TraceHeaderContext.TraceHeader];
+            string header = httpContext.Request?.Headers[TraceHeaderContext.TraceHeader];
             var traceContext = TraceHeaderContext.FromHeader(header);
             return traceContext.TraceId == null ? null : _traceTarget.GetFullTraceName(traceContext.TraceId);
         }

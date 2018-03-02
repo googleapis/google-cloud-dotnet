@@ -18,6 +18,7 @@ using Google.Cloud.Trace.V1;
 using Microsoft.AspNetCore.Builder;
 using Microsoft.AspNetCore.Http;
 using Microsoft.Extensions.DependencyInjection;
+using Microsoft.Extensions.DependencyInjection.Extensions;
 using System;
 
 using TraceProto = Google.Cloud.Trace.V1.Trace;
@@ -30,7 +31,7 @@ namespace Google.Cloud.Diagnostics.AspNetCore
     ///  and metadata will be sent to the Stackdriver Trace API.  Also allows for more
     ///  finely grained manual tracing.
     /// </summary>
-    /// 
+    ///  
     /// <example>
     /// <code>
     /// public void ConfigureServices(IServiceCollection services)
@@ -82,9 +83,7 @@ namespace Google.Cloud.Diagnostics.AspNetCore
         public static IApplicationBuilder UseGoogleTrace(this IApplicationBuilder app)
         {
             GaxPreconditions.CheckNotNull(app, nameof(app));
-            app.UseMiddleware<CloudTraceMiddleware>();
-            HttpContextAccessorWrapper.Accessor = app.ApplicationServices.GetService<IHttpContextAccessor>();
-            return app;
+            return app.UseMiddleware<CloudTraceMiddleware>();
         }
 
         /// <summary>
@@ -117,9 +116,11 @@ namespace Google.Cloud.Diagnostics.AspNetCore
             var tracerFactory = ManagedTracer.CreateTracerFactory(projectId, consumer, options);
 
             services.AddScoped(CreateTraceHeaderContext);
-            
+
             services.AddSingleton<Func<TraceHeaderContext, IManagedTracer>>(tracerFactory);
-            services.AddSingleton<IHttpContextAccessor, HttpContextAccessor>();
+            
+            // Only add the HttpContextAccessor if it's not already added.
+            services.TryAddSingleton<IHttpContextAccessor, HttpContextAccessor>();
 
             services.AddSingleton(CreateManagedTracer);
             services.AddSingleton(CreateTraceHeaderPropagatingHandler);

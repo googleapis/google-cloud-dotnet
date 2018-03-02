@@ -81,10 +81,10 @@ namespace Google.Cloud.Diagnostics.AspNetCore.Snippets
         // End sample
 
         // Sample: RegisterGoogleLogger
-        public void Configure(ILoggerFactory loggerFactory)
+        public void Configure(IApplicationBuilder app, ILoggerFactory loggerFactory)
         {
             string projectId = "[Google Cloud Platform project ID]";
-            loggerFactory.AddGoogle(projectId);
+            loggerFactory.AddGoogle(app.ApplicationServices, projectId);
         }
         // End sample
 
@@ -96,7 +96,7 @@ namespace Google.Cloud.Diagnostics.AspNetCore.Snippets
             string projectId = "[Google Cloud Platform project ID]";
             var webHost = new WebHostBuilder()
                 .ConfigureLogging((hostingContext, logging) =>
-                    logging.AddProvider(GoogleLoggerProvider.Create(projectId)))
+                    logging.AddProvider(GoogleLoggerProvider.Create(null, projectId: projectId)))
                 .UseStartup<Startup>()
                 .Build();
             // End sample
