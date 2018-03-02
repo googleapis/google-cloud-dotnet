@@ -56,9 +56,9 @@ namespace Google.Cloud.Firestore
         // Parent path of this query
         internal string ParentPath => Collection.Parent?.Path ?? Database.DocumentsPath;
 
-        // This would be protected, but that would allow subclasses from other assemblies. The intention is that the only concrete
-        // subclass of Query is CollectionReference. If "private protected" ever ends up in C#, this constructor can be changed.
-        internal Query()
+        // private protected = only visible to subclasses within the same assembly.
+        // In reality, *only* CollectionReference will ever derive from Query.
+        private protected Query()
         {
             Collection = this as CollectionReference;
             GaxPreconditions.CheckState(Collection != null, "Internal Query constructor should only be used from CollectionReference");
