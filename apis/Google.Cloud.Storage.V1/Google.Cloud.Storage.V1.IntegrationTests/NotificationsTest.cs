@@ -39,6 +39,11 @@ namespace Google.Cloud.Storage.V1.IntegrationTests
         {
             var projectId = _fixture.ProjectId;
             var email = _fixture.Client.GetStorageServiceAccountEmail(projectId);
+            int orgSeparatorIndex = projectId.IndexOf(':');
+            if (orgSeparatorIndex >= 0)
+            {
+                projectId = projectId.Substring(orgSeparatorIndex + 1);
+            }
             Assert.Equal($"{projectId}@gs-project-accounts.iam.gserviceaccount.com", email);
         }
 
