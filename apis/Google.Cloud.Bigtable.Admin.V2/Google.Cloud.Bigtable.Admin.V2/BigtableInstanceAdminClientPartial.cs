@@ -13,6 +13,7 @@
 // limitations under the License.
 
 using Google.Api.Gax.Grpc;
+using Google.Cloud.Iam.V1;
 
 namespace Google.Cloud.Bigtable.Admin.V2
 {
@@ -49,6 +50,33 @@ namespace Google.Cloud.Bigtable.Admin.V2
 
         partial void Modify_DeleteClusterRequest(ref DeleteClusterRequest request, ref CallSettings settings) =>
             ApplyResourcePrefixHeader(ref settings, request.Name);
+
+        partial void Modify_CreateAppProfileRequest(ref CreateAppProfileRequest request, ref CallSettings settings) =>
+            ApplyResourcePrefixHeader(ref settings, request.Parent);
+
+        partial void Modify_DeleteAppProfileRequest(ref DeleteAppProfileRequest request, ref CallSettings settings) =>
+            ApplyResourcePrefixHeader(ref settings, request.Name);
+
+        partial void Modify_GetAppProfileRequest(ref GetAppProfileRequest request, ref CallSettings settings) =>
+            ApplyResourcePrefixHeader(ref settings, request.Name);
+
+        partial void Modify_GetIamPolicyRequest(ref GetIamPolicyRequest request, ref CallSettings settings) =>
+            ApplyResourcePrefixHeader(ref settings, request.Resource);
+
+        partial void Modify_ListAppProfilesRequest(ref ListAppProfilesRequest request, ref CallSettings settings) =>
+            ApplyResourcePrefixHeader(ref settings, request.Parent);
+
+        partial void Modify_PartialUpdateInstanceRequest(ref PartialUpdateInstanceRequest request, ref CallSettings settings) =>
+            ApplyResourcePrefixHeader(ref settings, request.Instance.Name);
+
+        partial void Modify_SetIamPolicyRequest(ref SetIamPolicyRequest request, ref CallSettings settings) =>
+            ApplyResourcePrefixHeader(ref settings, request.Resource);
+
+        partial void Modify_TestIamPermissionsRequest(ref TestIamPermissionsRequest request, ref CallSettings settings) =>
+            ApplyResourcePrefixHeader(ref settings, request.Resource);
+
+        partial void Modify_UpdateAppProfileRequest(ref UpdateAppProfileRequest request, ref CallSettings settings) =>
+            ApplyResourcePrefixHeader(ref settings, request.AppProfile.Name);
 
         private static void ApplyResourcePrefixHeader(ref CallSettings settings, string resource)
         {
