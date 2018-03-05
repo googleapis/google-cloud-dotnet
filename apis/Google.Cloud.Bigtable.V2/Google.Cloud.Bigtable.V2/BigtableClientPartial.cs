@@ -1002,14 +1002,30 @@ namespace Google.Cloud.Bigtable.V2
                 },
                 callSettings);
 
-        private BigtableServiceApiSettings UnderlyingClientSettings { get; set; }
+        private protected BigtableServiceApiSettings UnderlyingClientSettings { get; private set; }
+    }
 
-        /// <summary>
-        /// Gets an underlying API client that can be used to make requests.
-        /// </summary>
-        protected abstract BigtableServiceApiClient GetUnderlyingClient();
+    public partial class BigtableClientImpl
+    {
+        private readonly string _appProfileId;
+        private readonly BigtableServiceApiClient _client;
 
-        internal ReadRowsStream ConvertResult(
+        // TODO: Add a public constructor after multi-channel support?
+        internal BigtableClientImpl(BigtableServiceApiClient client, string appProfileId)
+        {
+            _client = client;
+            _appProfileId = appProfileId;
+        }
+
+        // TODO: Add Multi-channel support
+        /// <inheritdoc/>
+        private BigtableServiceApiClient GetUnderlyingClient() => _client;
+
+        /// <inheritdoc/>
+        public override BigtableClient WithAppProfileId(string appProfileId) =>
+            new BigtableClientImpl(_client, appProfileId);
+
+        private ReadRowsStream ConvertResult(
             ReadRowsRequest request,
             CallSettings callSettings,
             BigtableServiceApiClient.ReadRowsStream result)
@@ -1017,7 +1033,7 @@ namespace Google.Cloud.Bigtable.V2
             return new ReadRowsStream(result);
         }
 
-        internal async Task<MutateRowsResponse> ConvertResult(
+        private async Task<MutateRowsResponse> ConvertResult(
             MutateRowsRequest request,
             CallSettings callSettings,
             BigtableServiceApiClient.MutateRowsStream result)
@@ -1060,26 +1076,5 @@ namespace Google.Cloud.Bigtable.V2
                 return requestManager.OnOk();
             }
         }
-    }
-
-    public partial class BigtableClientImpl
-    {
-        private readonly string _appProfileId;
-        private readonly BigtableServiceApiClient _client;
-
-        // TODO: Add a public constructor after multi-channel support?
-        internal BigtableClientImpl(BigtableServiceApiClient client, string appProfileId)
-        {
-            _client = client;
-            _appProfileId = appProfileId;
-        }
-
-        // TODO: Add Multi-channel support
-        /// <inheritdoc/>
-        protected override BigtableServiceApiClient GetUnderlyingClient() => _client;
-
-        /// <inheritdoc/>
-        public override BigtableClient WithAppProfileId(string appProfileId) =>
-            new BigtableClientImpl(_client, appProfileId);
     }
 }

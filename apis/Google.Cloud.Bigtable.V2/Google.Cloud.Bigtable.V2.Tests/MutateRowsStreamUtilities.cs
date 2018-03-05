@@ -12,7 +12,11 @@
 // See the License for the specific language governing permissions and
 // limitations under the License.
 
+using Google.Api.Gax.Grpc;
 using Google.Rpc;
+using Moq;
+using System.Collections.Generic;
+using System.Linq;
 
 namespace Google.Cloud.Bigtable.V2.Tests
 {
@@ -25,22 +29,27 @@ namespace Google.Cloud.Bigtable.V2.Tests
             new MutateRowsResponse.Types.Entry { Index = index, Status = status };
 
         public static BigtableClient CreateClientForMutateRowsRetries(
+            MutateRowsRequest initialRequest,
             MutateRowsResponse.Types.Entry[] entriesForInitialResponse,
             MutateRowsResponse.Types.Entry[][] entriesForRetryResponses)
         {
-            // Initialize the client that will be used for retries and populate it with the retry responses.
-            var client = new MockBigtableClient();
+            var mock = new Mock<BigtableServiceApiClient>();
 
-            client.AddMutateRowsStream(new MockMutateRowsStream(new MutateRowsResponse { Entries = { entriesForInitialResponse } }));
             if (entriesForRetryResponses != null)
             {
-                foreach (var entries in entriesForRetryResponses)
-                {
-                    client.AddMutateRowsStream(new MockMutateRowsStream(new MutateRowsResponse { Entries = { entries } }));
-                }
+                var retryResponses = new Queue<MockMutateRowsStream>(entriesForRetryResponses.Select(StreamFromEntries));
+                mock.Setup(c => c.MutateRows(It.IsAny<MutateRowsRequest>(), It.IsAny<CallSettings>()))
+                    .Returns(retryResponses.Dequeue);
             }
 
-            return client;
+            // Setup the initial response last so the catch-all setup doesn't overwrite it.
+            mock.Setup(c => c.MutateRows(initialRequest, It.IsAny<CallSettings>()))
+                .Returns(StreamFromEntries(entriesForInitialResponse));
+
+            return new BigtableClientImpl(mock.Object, appProfileId: null);
+
+            MockMutateRowsStream StreamFromEntries(MutateRowsResponse.Types.Entry[] entries) =>
+                new MockMutateRowsStream(new MutateRowsResponse { Entries = { entries } });
         }
     }
 }

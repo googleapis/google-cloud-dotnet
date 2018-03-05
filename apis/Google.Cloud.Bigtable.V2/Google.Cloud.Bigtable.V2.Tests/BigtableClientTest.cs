@@ -29,7 +29,7 @@ namespace Google.Cloud.Bigtable.V2.Tests
         {
             var tableName = new TableName("project", "instance", "table");
 
-            await CheckAndMutateRow_ValidateArguments<RequestMadeException>(
+            await CheckAndMutateRow_ValidateArguments<NotImplementedException>(
                 tableName,
                 "abc",
                 RowFilters.PassAllFilter(),
@@ -129,7 +129,7 @@ namespace Google.Cloud.Bigtable.V2.Tests
         {
             var tableName = new TableName("project", "instance", "table");
 
-            await MutateRow_ValidateArguments<RequestMadeException>(tableName, "abc", new[] { Mutations.DeleteFromRow() });
+            await MutateRow_ValidateArguments<NotImplementedException>(tableName, "abc", new[] { Mutations.DeleteFromRow() });
         }
 
         [Fact]
@@ -176,7 +176,7 @@ namespace Google.Cloud.Bigtable.V2.Tests
         public async Task MutateRows_Valid_Request()
         {
             var tableName = new TableName("project", "instance", "table");
-            await MutateRows_ValidateArguments<RequestMadeException>(
+            await MutateRows_ValidateArguments<NotImplementedException>(
                 tableName,
                 new[] { Mutations.CreateEntry("abc", Mutations.DeleteFromRow()) });
         }
@@ -214,7 +214,7 @@ namespace Google.Cloud.Bigtable.V2.Tests
         public async Task ReadModifyWriteRow_Valid_Request()
         {
             var tableName = new TableName("project", "instance", "table");
-            await ReadModifyWriteRow_ValidateArguments<RequestMadeException>(
+            await ReadModifyWriteRow_ValidateArguments<NotImplementedException>(
                 tableName, "abc", new[] { ReadModifyWriteRules.Append("a", "b", "c") });
         }
 
@@ -264,8 +264,8 @@ namespace Google.Cloud.Bigtable.V2.Tests
         public async Task ReadRow_Valid_Request()
         {
             var tableName = new TableName("project", "instance", "table");
-            await ReadRow_ValidateArguments<RequestMadeException>(tableName, "abc", null);
-            await ReadRow_ValidateArguments<RequestMadeException>(tableName, "abc", RowFilters.CellsPerColumnLimit(1));
+            await ReadRow_ValidateArguments<NotImplementedException>(tableName, "abc", null);
+            await ReadRow_ValidateArguments<NotImplementedException>(tableName, "abc", RowFilters.CellsPerColumnLimit(1));
         }
 
         [Fact]
@@ -371,13 +371,13 @@ namespace Google.Cloud.Bigtable.V2.Tests
         {
             var tableName = new TableName("project", "instance", "table");
 
-            ReadRows_ValidateArguments<RequestMadeException>(tableName, null, null, null);
-            ReadRows_ValidateArguments<RequestMadeException>(
+            ReadRows_ValidateArguments<NotImplementedException>(tableName, null, null, null);
+            ReadRows_ValidateArguments<NotImplementedException>(
                 tableName,
                 RowSet.FromRowKey("abc"),
                 RowFilters.BlockAllFilter(),
                 0);
-            ReadRows_ValidateArguments<RequestMadeException>(
+            ReadRows_ValidateArguments<NotImplementedException>(
                 tableName,
                 RowSet.FromRowRanges(RowRange.ClosedOpen("", "z")),
                 RowFilters.CellsPerRowLimit(1),
@@ -416,7 +416,7 @@ namespace Google.Cloud.Bigtable.V2.Tests
         {
             var client = new MockBigtableClient();
             var tableName = new TableName("project", "instance", "table");
-            Assert.Throws<RequestMadeException>(() => client.SampleRowKeys(tableName));
+            Assert.Throws<NotImplementedException>(() => client.SampleRowKeys(tableName));
         }
 
         [Fact]

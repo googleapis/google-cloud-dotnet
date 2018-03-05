@@ -47,6 +47,7 @@ namespace Google.Cloud.Bigtable.V2.Tests
                 }
             };
             var client = MutateRowsStreamUtilities.CreateClientForMutateRowsRetries(
+                request,
                 entriesForInitialResponse: new[]
                 {
                     MutateRowsStreamUtilities.CreateEntry(0, Code.Ok),
@@ -90,6 +91,7 @@ namespace Google.Cloud.Bigtable.V2.Tests
                 }
             };
             var client = MutateRowsStreamUtilities.CreateClientForMutateRowsRetries(
+                request,
                 entriesForInitialResponse: new[]
                 {
                     MutateRowsStreamUtilities.CreateEntry(0, Code.Ok),
@@ -155,6 +157,7 @@ namespace Google.Cloud.Bigtable.V2.Tests
                 }
             };
             var client = MutateRowsStreamUtilities.CreateClientForMutateRowsRetries(
+                request,
                 entriesForInitialResponse: new[]
                 {
                     MutateRowsStreamUtilities.CreateEntry(0, Code.Ok),
