@@ -247,6 +247,63 @@ namespace Google.Cloud.Bigtable.V2
     }
 
     /// <summary>
+    /// Settings for creating <see cref="BigtableServiceApiClient"/>s.
+    /// </summary>
+    public sealed class ClientCreationSettings
+    {
+        /// <summary>
+        /// Instantiate with the specified settings.
+        /// </summary>
+        /// <param name="clientCount">Optional.
+        /// The number of <see cref="BigtableServiceApiClient"/>s to create and use within a <see cref="BigtableClient"/> instance.</param>
+        /// <param name="bigtableServiceApiSettings">Optional. The settings to use when creating <see cref="BigtableServiceApiClient"/> instances.</param>
+        /// <param name="credentials">Optional. Credentials to use when creating <see cref="BigtableServiceApiClient"/> instances.</param>
+        /// <param name="serviceEndpoint">Optional.
+        /// The <see cref="ServiceEndpoint"/> to use when creating <see cref="BigtableServiceApiClient"/> instances.</param>
+        public ClientCreationSettings(
+            int? clientCount = null,
+            BigtableServiceApiSettings bigtableServiceApiSettings = null,
+            ChannelCredentials credentials = null,
+            ServiceEndpoint serviceEndpoint = null)
+        {
+            ClientCount = clientCount;
+            BigtableServiceApiSettings = bigtableServiceApiSettings;
+            Credentials = credentials;
+            ServiceEndpoint = serviceEndpoint;
+        }
+
+        /// <summary>
+        /// The number of <see cref="BigtableServiceApiClient"/>s to create and use within a <see cref="BigtableClient"/> instance.
+        /// If <c>null</c>, defaults to the CPU count on the machine this is being executed on.
+        /// </summary>
+        public int? ClientCount { get; }
+
+        /// <summary>
+        /// The settings to use when creating <see cref="BigtableServiceApiClient"/> instances.
+        /// If <c>null</c>, defaults to <see2 cref="BigtableServiceApiSettings.GetDefault"/>.
+        /// </summary>
+        public BigtableServiceApiSettings BigtableServiceApiSettings { get; }
+
+        /// <summary>
+        /// Credentials to use when creating <see cref="BigtableServiceApiClient"/> instances.
+        /// If <c>null</c>, defaults to using the default credentials.
+        /// </summary>
+        public ChannelCredentials Credentials { get; }
+
+        /// <summary>
+        /// The <see cref="ServiceEndpoint"/> to use when creating <see cref="BigtableServiceApiClient"/> instances.
+        /// If <c>null</c>, defaults to <see cref="BigtableServiceApiClient.DefaultEndpoint"/>.
+        /// </summary>
+        public ServiceEndpoint ServiceEndpoint { get; }
+
+        internal void Validate()
+        {
+            // Fairly arbitrary upper limit.
+            GaxPreconditions.CheckArgumentRange(ClientCount ?? 1, nameof(ClientCount), 1, 256);
+        }
+    }
+
+    /// <summary>
     /// Bigtable client wrapper, for convenient use.
     /// </summary>
     public sealed partial class BigtableClientImpl : BigtableClient
