@@ -12,12 +12,17 @@
 // See the License for the specific language governing permissions and
 // limitations under the License.
 
-using log4net;
-using log4net.Config;
 using Google.Cloud.ClientTesting;
+using Google.Cloud.Logging.V2;
+using log4net;
+using log4net.Appender;
+using log4net.Config;
+using System;
 using System.IO;
-using Xunit;
+using System.Linq;
 using System.Reflection;
+using System.Threading;
+using Xunit;
 
 namespace Google.Cloud.Logging.Log4Net.Snippets
 {
@@ -40,7 +45,7 @@ namespace Google.Cloud.Logging.Log4Net.Snippets
         public void Overview()
         {
             string projectId = _fixture.ProjectId;
-            string logId = _fixture.LogId;
+            string logId = _fixture.LogId + $"-{Guid.NewGuid()}";
             string fileName = "log4net.xml";
             string resourceName = typeof(GoogleStackdriverAppenderSnippets).Namespace + ".log4net-template.xml";
 
@@ -68,16 +73,37 @@ namespace Google.Cloud.Logging.Log4Net.Snippets
                 ILog log = LogManager.GetLogger(typeof(Program));
                 // Log some information. This log entry will be sent to Google Stackdriver Logging.
                 log.Info("An exciting log entry!");
+
+                // Flush buffered log entries before program exit.
+                // This is required because log entries are buffered locally before being sent to StackDriver.
+                // LogManager.Flush() only works in the full .NET framework (not in .NET Core):
+                bool flushCompleted = LogManager.Flush(10_000);
+                // On .NET Core, the specific repository needs to be flushed:
+                bool repositoryFlushCompleted = ((IFlushable)LogManager.GetRepository(GetType().GetTypeInfo().Assembly)).Flush(10_000);
                 // End sample
+
+                Assert.True(repositoryFlushCompleted);
+
+                var logClient = LoggingServiceV2Client.Create();
+                var logName = new LogName(projectId, logId);
+                // Wait up to 30 seconds for the log entry to appear in StackDriver.
+                for (int i = 0; i < 30; i += 1)
+                {
+                    var logEntry = logClient.ListLogEntries(new[] { $"projects/{projectId}" },
+                        $"logName=\"{logName}\" AND \"An exciting log entry!\"", "timestamp desc").FirstOrDefault();
+                    if (logEntry != null)
+                    {
+                        Assert.Contains("An exciting log entry!", logEntry.TextPayload);
+                        return;
+                    }
+                    Thread.Sleep(1_000);
+                }
+                Assert.False(true, "Log entry failed to appear in StackDriver.");
             }
             finally
             {
                 File.Delete(fileName);
             }
-
-            // We can't assert anything here because:
-            // * Log entries don't appear in the log instantly.
-            // * Uploads happen in the background, so we can't check RPC repsonses.
         }
 
 #pragma warning disable xUnit1013 // Public method should be marked as test

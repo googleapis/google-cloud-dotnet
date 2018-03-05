@@ -517,6 +517,13 @@ namespace Google.Cloud.Logging.Log4Net
         }
 
         /// <summary>
+        /// Flush locally buffered log entries to the server.
+        /// </summary>
+        /// <param name="millisecondsTimeout">The maxmimum time in milliseconds to spend waiting for the flush to complete.</param>
+        /// <returns>Whether the flush completed within the timeout.</returns>
+        public override bool Flush(int millisecondsTimeout) => Flush(TimeSpan.FromMilliseconds(millisecondsTimeout), default);
+
+        /// <summary>
         /// Dispose of this appender, by flushing locally buffer entries then closing the appender.
         /// </summary>
         /// <remarks>
