@@ -45,10 +45,7 @@ namespace Google.Cloud.Bigtable.V2
         /// <summary>
         /// Constructs a new <see cref="BigtableServiceApiSettings"/> object with default settings.
         /// </summary>
-        public BigtableServiceApiSettings()
-        {
-            OnConstruction();
-        }
+        public BigtableServiceApiSettings() { }
 
         private BigtableServiceApiSettings(BigtableServiceApiSettings existing) : base(existing)
         {
@@ -61,8 +58,7 @@ namespace Google.Cloud.Bigtable.V2
             ReadModifyWriteRowSettings = existing.ReadModifyWriteRowSettings;
             OnCopy(existing);
         }
-
-        partial void OnConstruction();
+        
         partial void OnCopy(BigtableServiceApiSettings existing);
 
         /// <summary>
