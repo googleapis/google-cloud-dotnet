@@ -18,29 +18,7 @@ using System.Threading.Tasks;
 
 namespace Google.Cloud.Bigtable.V2.Tests
 {
-    public class RequestMadeException : Exception { }
-
     public class MockBigtableClient : BigtableClient
     {
-        public override CheckAndMutateRowResponse CheckAndMutateRow(CheckAndMutateRowRequest request, CallSettings callSettings = null) =>
-            throw new RequestMadeException();
-        public override Task<CheckAndMutateRowResponse> CheckAndMutateRowAsync(CheckAndMutateRowRequest request, CallSettings callSettings = null) =>
-            throw new RequestMadeException();
-        public override MutateRowResponse MutateRow(MutateRowRequest request, CallSettings callSettings = null) =>
-            throw new RequestMadeException();
-        public override Task<MutateRowResponse> MutateRowAsync(MutateRowRequest request, CallSettings callSettings = null) =>
-            throw new RequestMadeException();
-        public override MutateRowsResponse MutateRows(MutateRowsRequest request, CallSettings callSettings = null) =>
-            throw new RequestMadeException();
-        public override Task<MutateRowsResponse> MutateRowsAsync(MutateRowsRequest request, CallSettings callSettings = null) =>
-            throw new RequestMadeException();
-        public override ReadModifyWriteRowResponse ReadModifyWriteRow(ReadModifyWriteRowRequest request, CallSettings callSettings = null) =>
-            throw new RequestMadeException();
-        public override Task<ReadModifyWriteRowResponse> ReadModifyWriteRowAsync(ReadModifyWriteRowRequest request, CallSettings callSettings = null) =>
-            throw new RequestMadeException();
-        public override ReadRowsStream ReadRows(ReadRowsRequest request, CallSettings callSettings = null) =>
-            throw new RequestMadeException();
-        public override BigtableServiceApiClient.SampleRowKeysStream SampleRowKeys(SampleRowKeysRequest request, CallSettings callSettings = null) =>
-            throw new RequestMadeException();
     }
 }
