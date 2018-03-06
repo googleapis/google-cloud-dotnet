@@ -300,7 +300,7 @@
 
   {
     "id": "Google.Cloud.Logging.Log4Net",
-    "version": "2.2.0",
+    "version": "2.2.1",
     "type": "other",
     "targetFrameworks": "netstandard1.5;net45",
     "testTargetFrameworks": "netcoreapp1.0;net452",
