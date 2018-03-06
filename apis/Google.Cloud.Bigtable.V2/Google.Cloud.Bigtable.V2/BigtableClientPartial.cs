@@ -20,7 +20,8 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Threading;
 using System.Threading.Tasks;
-
+using Google.Apis.Auth.OAuth2;
+using Grpc.Auth;
 using static Google.Cloud.Bigtable.V2.BigtableMutateRowsRequestManager;
 
 namespace Google.Cloud.Bigtable.V2
@@ -34,8 +35,9 @@ namespace Google.Cloud.Bigtable.V2
         /// and creating a channel connecting to the given endpoint with application default credentials where
         /// necessary.
         /// </summary>
-        /// <param name="endpoint">Optional <see cref="ServiceEndpoint"/>.</param>
         /// <param name="settings">Optional <see cref="BigtableServiceApiSettings"/>.</param>
+        /// <param name="clientCreationSettings">Optional. <see cref="ClientCreationSettings"/> specifying how to create
+        /// <see cref="BigtableServiceApiClient"/>s.</param>
         /// <param name="appProfileId">
         /// This is a private alpha release of Cloud Bigtable replication. This feature
         /// is not currently available to most Cloud Bigtable customers. This feature
@@ -46,10 +48,35 @@ namespace Google.Cloud.Bigtable.V2
         /// "default" application profile will be used.
         /// </param>
         /// <returns>The task representing the created <see cref="BigtableClient"/>.</returns>
-        public static async Task<BigtableClient> CreateAsync(ServiceEndpoint endpoint = null, BigtableServiceApiSettings settings = null, string appProfileId = null)
+        public static async Task<BigtableClient> CreateAsync(BigtableServiceApiSettings settings = null, ClientCreationSettings clientCreationSettings = null, string appProfileId = null)
         {
-            var client = await BigtableServiceApiClient.CreateAsync(endpoint, settings).ConfigureAwait(false);
-            return new BigtableClientImpl(client, appProfileId) { UnderlyingClientSettings = settings };
+            clientCreationSettings?.Validate();
+            var channelCredentials = clientCreationSettings?.Credentials;
+            // Use default credentials if none given.
+            if (channelCredentials == null)
+            {
+                var credentials = await GoogleCredential.GetApplicationDefaultAsync().ConfigureAwait(false);
+                if (credentials.IsCreateScopedRequired)
+                {
+                    credentials = credentials.CreateScoped(BigtableServiceApiClient.DefaultScopes);
+                }
+                channelCredentials = credentials.ToChannelCredentials();
+            }
+            var clientCount = clientCreationSettings?.ClientCount ?? Environment.ProcessorCount;
+
+            var endpoint = clientCreationSettings?.ServiceEndpoint ?? BigtableServiceApiClient.DefaultEndpoint;
+            var clients = new BigtableServiceApiClient[clientCount];
+            var shutdowns = new Func<Task>[clientCount];
+            // Fill clients[] with BigtableServiceApiClient instances, each with specific channel
+            for (int i = 0; i < clientCount; i++)
+            {
+                var channel = new Channel(endpoint.Host, endpoint.Port, channelCredentials);
+                clients[i] = BigtableServiceApiClient.Create(channel, clientCreationSettings?.BigtableServiceApiSettings);
+                shutdowns[i] = channel.ShutdownAsync;
+            }
+            Func<Task> shutdown = () => Task.WhenAll(shutdowns.Select(x => x()));
+
+            return new BigtableClientImpl(appProfileId, clients) { UnderlyingClientSettings = settings };
         }
 
         /// <summary>
@@ -57,8 +84,9 @@ namespace Google.Cloud.Bigtable.V2
         /// and creating a channel connecting to the given endpoint with application default credentials where
         /// necessary.
         /// </summary>
-        /// <param name="endpoint">Optional <see cref="ServiceEndpoint"/>.</param>
         /// <param name="settings">Optional <see cref="BigtableServiceApiSettings"/>.</param>
+        /// <param name="clientCreationSettings">Optional. <see cref="ClientCreationSettings"/> specifying how to create
+        /// <see cref="BigtableServiceApiClient"/>s.</param>
         /// <param name="appProfileId">
         /// This is a private alpha release of Cloud Bigtable replication. This feature
         /// is not currently available to most Cloud Bigtable customers. This feature
@@ -69,10 +97,36 @@ namespace Google.Cloud.Bigtable.V2
         /// "default" application profile will be used.
         /// </param>
         /// <returns>The created <see cref="BigtableClient"/>.</returns>
-        public static BigtableClient Create(ServiceEndpoint endpoint = null, BigtableServiceApiSettings settings = null, string appProfileId = null)
+        public static BigtableClient Create(BigtableServiceApiSettings settings = null, ClientCreationSettings clientCreationSettings = null, string appProfileId = null)
         {
-            var client = BigtableServiceApiClient.Create(endpoint, settings);
-            return new BigtableClientImpl(client, appProfileId) { UnderlyingClientSettings = settings };
+            clientCreationSettings?.Validate();
+            var channelCredentials = clientCreationSettings?.Credentials;
+
+            // Use default credentials if none given.
+            if (channelCredentials == null)
+            {
+                var credentials = GoogleCredential.GetApplicationDefault();
+                if (credentials.IsCreateScopedRequired)
+                {
+                    credentials = credentials.CreateScoped(BigtableServiceApiClient.DefaultScopes);
+                }
+                channelCredentials = credentials.ToChannelCredentials();
+            }
+            var clientCount = clientCreationSettings?.ClientCount ?? Environment.ProcessorCount;
+
+            var endpoint = clientCreationSettings?.ServiceEndpoint ?? BigtableServiceApiClient.DefaultEndpoint;
+            var clients = new BigtableServiceApiClient[clientCount];
+            var shutdowns = new Func<Task>[clientCount];
+            // Fill clients[] with BigtableServiceApiClient instances, each with specific channel
+            for (int i = 0; i < clientCount; i++)
+            {
+                var channel = new Channel(endpoint.Host, endpoint.Port, channelCredentials);
+                clients[i] = BigtableServiceApiClient.Create(channel, clientCreationSettings?.BigtableServiceApiSettings);
+                shutdowns[i] = channel.ShutdownAsync;
+            }
+            Func<Task> shutdown = () => Task.WhenAll(shutdowns.Select(x => x()));
+
+            return new BigtableClientImpl(appProfileId, clients) { UnderlyingClientSettings = settings };
         }
 
         /// <summary>
@@ -93,7 +147,7 @@ namespace Google.Cloud.Bigtable.V2
         public static BigtableClient Create(Channel channel, BigtableServiceApiSettings settings = null, string appProfileId = null)
         {
             var client = BigtableServiceApiClient.Create(channel, settings);
-            return new BigtableClientImpl(client, appProfileId) { UnderlyingClientSettings = settings };
+            return new BigtableClientImpl(appProfileId, client) { UnderlyingClientSettings = settings };
         }
 
         /// <summary>
@@ -1009,6 +1063,9 @@ namespace Google.Cloud.Bigtable.V2
     {
         private readonly string _appProfileId;
         private readonly BigtableServiceApiClient _client;
+        private readonly BigtableServiceApiClient[] _clients;
+        private int _clientNumber = 0;
+
 
         // TODO: Add a public constructor after multi-channel support?
         internal BigtableClientImpl(BigtableServiceApiClient client, string appProfileId)
@@ -1017,13 +1074,25 @@ namespace Google.Cloud.Bigtable.V2
             _appProfileId = appProfileId;
         }
 
+        // TODO: Add a public constructor after multi-channel support?
+        internal BigtableClientImpl(string appProfileId, params BigtableServiceApiClient[] clients)
+        {
+            _clients = clients;
+            _appProfileId = appProfileId;
+        }
+
         // TODO: Add Multi-channel support
         /// <inheritdoc/>
-        private BigtableServiceApiClient GetUnderlyingClient() => _client;
+        private BigtableServiceApiClient GetUnderlyingClient() => _clients.Length > 1 ? _clients[GetClientIndex()] : _clients[0];
+
+        private int GetClientIndex()
+        {
+            return (Interlocked.Increment(ref _clientNumber) - 1) % _clients.Length;
+        }
 
         /// <inheritdoc/>
         public override BigtableClient WithAppProfileId(string appProfileId) =>
-            new BigtableClientImpl(_client, appProfileId);
+            new BigtableClientImpl(appProfileId, _clients);
 
         private ReadRowsStream ConvertResult(
             ReadRowsRequest request,
