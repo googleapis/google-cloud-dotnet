@@ -16,6 +16,7 @@
 
 using System;
 using System.Collections;
+using System.Collections.Generic;
 using System.Diagnostics;
 using System.Threading;
 using System.Threading.Tasks;
@@ -495,5 +496,54 @@ namespace Google.Cloud.Spanner.Data.IntegrationTests
                 SpannerOptions.Instance.Timeout = oldTimeout;
             }
         }
+
+#if !NETCOREAPP1_0
+        [Fact]
+        public async Task GetSchemaTable_Default_ReturnsNull()
+        {
+            await _testFixture.EnsureTestDatabaseAsync();
+            using (var connection = new SpannerConnection(_testFixture.ConnectionString))
+            {
+                var command = connection.CreateSelectCommand($"SELECT Int64Value, BytesArrayValue FROM T");
+                using (var reader = await command.ExecuteReaderAsync())
+                {
+                    Assert.Null(reader.GetSchemaTable());
+                }
+            }
+        }
+
+        [Fact]
+        public async Task GetSchemaTable_WithFlagEnabled_ReturnsNull()
+        {
+            await _testFixture.EnsureTestDatabaseAsync();
+            using (var connection = new SpannerConnection($"{_testFixture.ConnectionString};EnableGetSchemaTable=true"))
+            {
+                var command = connection.CreateSelectCommand($"SELECT Int64Value, BytesArrayValue FROM T");
+                using (var reader = await command.ExecuteReaderAsync())
+                {
+                    var table = reader.GetSchemaTable();
+                    Assert.Equal(2, table.Rows.Count);
+
+                    var int64ValueRow = table.Rows[0];
+                    Assert.Equal("Int64Value", (string) int64ValueRow["ColumnName"]);
+                    Assert.Equal(0, (int) int64ValueRow["ColumnOrdinal"]);
+                    Assert.Equal(typeof(long), (System.Type) int64ValueRow["DataType"]);
+                    Assert.Equal(SpannerDbType.Int64, (SpannerDbType) int64ValueRow["ProviderType"]);
+                    Assert.True(int64ValueRow.IsNull("ColumnSize"));
+                    Assert.True(int64ValueRow.IsNull("NumericPrecision"));
+                    Assert.True(int64ValueRow.IsNull("NumericScale"));
+
+                    var bytesArrayValueRow = table.Rows[1];
+                    Assert.Equal("BytesArrayValue", (string) bytesArrayValueRow["ColumnName"]);
+                    Assert.Equal(1, (int) bytesArrayValueRow["ColumnOrdinal"]);
+                    Assert.Equal(typeof(List<byte[]>), (System.Type) bytesArrayValueRow["DataType"]);
+                    Assert.Equal(SpannerDbType.ArrayOf(SpannerDbType.Bytes), (SpannerDbType) bytesArrayValueRow["ProviderType"]);
+                    Assert.True(bytesArrayValueRow.IsNull("ColumnSize"));
+                    Assert.True(bytesArrayValueRow.IsNull("NumericPrecision"));
+                    Assert.True(bytesArrayValueRow.IsNull("NumericScale"));
+                }
+            }
+        }
+#endif
     }
 }
