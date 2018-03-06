@@ -87,7 +87,7 @@ namespace Google.Cloud.Logging.Log4Net.Snippets
                 var logClient = LoggingServiceV2Client.Create();
                 var logName = new LogName(projectId, logId);
                 // Wait up to 30 seconds for the log entry to appear in StackDriver.
-                for (int i = 0; i < 30; i += 1)
+                for (int i = 0; i < 30; i++)
                 {
                     var logEntry = logClient.ListLogEntries(new[] { $"projects/{projectId}" },
                         $"logName=\"{logName}\" AND \"An exciting log entry!\"", "timestamp desc").FirstOrDefault();
