@@ -47,13 +47,15 @@ namespace Google.Cloud.Spanner.Data
         private ResultSetMetadata _metadata;
         private readonly SingleUseTransaction _txToClose;
         private readonly SpannerConversionOptions _conversionOptions;
+        private readonly bool _provideSchemaTable;
 
         internal SpannerDataReader(
             Logger logger,
             ReliableStreamReader resultSet,
             SpannerConversionOptions conversionOptions,
-            SpannerConnection connectionToClose = null,
-            SingleUseTransaction singleUseTransaction = null)
+            SpannerConnection connectionToClose,
+            SingleUseTransaction singleUseTransaction,
+            bool provideSchemaTable)
         {
             GaxPreconditions.CheckNotNull(resultSet, nameof(resultSet));
             Logger = logger;
@@ -64,6 +66,7 @@ namespace Google.Cloud.Spanner.Data
             _connectionToClose = connectionToClose;
             _txToClose = singleUseTransaction;
             _conversionOptions = conversionOptions;
+            _provideSchemaTable = provideSchemaTable;
         }
 
         private Logger Logger { get; }
@@ -329,44 +332,88 @@ namespace Google.Cloud.Spanner.Data
             _connectionToClose?.Close();
         }
 
-        /// <inheritdoc />
+        /// <summary>
+        /// When enabled, returns the schema of the query as a <see cref="DataTable"/>. This feature needs
+        /// to be enabled in the connection string via the <see cref="SpannerConnectionStringBuilder.EnableGetSchemaTable"/> property.
+        /// </summary>
+        /// <remarks>
+        /// <para>
+        /// <see cref="DbDataAdapter"/> will use this method automatically, but there is not enough information
+        /// available for it to do so to reliably manage data sets. This method returns <c>null</c> by default to
+        /// avoid this causing problems.
+        /// </para>
+        /// <para>
+        /// When the <c>EnableGetSchemaTable</c> property in the connection string is set to <c>true</c>, a
+        /// <c>DataTable</c> is returned with the following columns populated:
+        /// <list type="bullet">
+        /// <item><description>ColumnName (String): The name of the column</description></item>
+        /// <item><description>ColumnOrdinal (Int32): The ordinal value of the column</description></item>
+        /// <item><description>DataType (Type): The default CLR type of the column</description></item>
+        /// <item><description>ProviderType (SpannerDbType): The Spanner-specific data type of the column</description></item>
+        /// </list>
+        /// The following additional columns are present in the table, but not currently populated:
+        /// <list type="bullet">
+        /// <item><description>ColumnSize</description></item>
+        /// <item><description>NumericPrecision</description></item>
+        /// <item><description>NumericScale</description></item>
+        /// </list>
+        /// Future releases may expand the set of columns, or populate more of the existing columns.
+        /// </para>
+        /// </remarks>
+        /// <returns>A <c>DataTable</c> with schema information about the query, or <c>null</c> if the feature
+        /// is not enabled in the connection string.</returns>
         public override DataTable GetSchemaTable()
         {
-            //Spanner does not provide enough information for a schema table.
-            //DbDataAdapter will adjust and fill the dataset with information from
-            //this datareader (such as field type and name).
-            return null;
-//            var resultSet = GetMetadataAsync(CancellationToken.None).Result;
-//            if (resultSet?.RowType?.Fields?.Count == 0) // No resultset
-//                return null;
-//
-//            var table = new DataTable("SchemaTable");
-//
-//            table.Columns.Add("ColumnName", typeof(string));
-//            table.Columns.Add("ColumnOrdinal", typeof(int));
-//            table.Columns.Add("DataType", typeof(System.Type));
-//            table.Columns.Add("NumericPrecision", typeof(int));
-//            table.Columns.Add("ProviderType", typeof(SpannerDbType));
-//
-//            Debug.Assert(resultSet != null, "resultSet != null");
-//            Debug.Assert(resultSet.RowType != null, "resultSet.RowType != null");
-//            Debug.Assert(resultSet.RowType.Fields != null, "resultSet.RowType.Fields != null");
-//
-//            int ordinal = 0;
-//            foreach (var field in resultSet.RowType.Fields)
-//            {
-//                var row = table.NewRow();
-//
-//                row["ColumnName"] = field.Name;
-//                row["ColumnOrdinal"] = ordinal;
-//                row["DataType"] = field.Type.Code.GetDefaultClrTypeFromSpannerType();
-//                row["ProviderType"] = field.Type.Code.GetSpannerDbType();
-//                table.Rows.Add(row);
-//
-//                ordinal++;
-//            }
-//
-//            return table;
+            // Spanner does not provide enough information for a schema table.
+            // DbDataAdapter will adjust and fill the dataset with information from
+            // this datareader (such as field type and name). By default, we just
+            // return null. The feature needs to be explicitly enabled in the connection string.
+
+            if (!_provideSchemaTable)
+            {
+                return null;
+            }
+            var resultSet = PopulateMetadataAsync(CancellationToken.None).ResultWithUnwrappedExceptions();
+
+            // If the metadata couldn't be loaded, or there were no fields, just return null to indicate
+            // that the schema isn't available.
+            if ((resultSet?.RowType?.Fields?.Count ?? 0) == 0)
+            {
+                return null;
+            }
+
+            var table = new DataTable("SchemaTable")
+            {
+                Columns =
+                {
+                    { "ColumnName", typeof(string) },
+                    { "ColumnOrdinal", typeof(int) },
+                    { "DataType", typeof(System.Type) },
+                    { "ProviderType", typeof(SpannerDbType) },
+
+                    // Additional columns that are never populated.
+                    { "ColumnSize", typeof(int) },
+                    { "NumericPrecision", typeof(int) },
+                    { "NumericScale", typeof(int) }
+                }
+            };
+
+            int ordinal = 0;
+            foreach (var field in resultSet.RowType.Fields)
+            {
+                var row = table.NewRow();
+                SpannerDbType dbType = SpannerDbType.FromProtobufType(field.Type);
+
+                row["ColumnName"] = field.Name;
+                row["ColumnOrdinal"] = ordinal;
+                row["DataType"] = dbType.DefaultClrType;
+                row["ProviderType"] = dbType;
+                table.Rows.Add(row);
+
+                ordinal++;
+            }
+
+            return table;
         }
 #endif
     }

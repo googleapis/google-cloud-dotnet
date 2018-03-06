@@ -746,13 +746,16 @@ namespace Google.Cloud.Spanner.Data
             var resultSet = await tx.ExecuteQueryAsync(request, cancellationToken, commandTimeout)
                 .ConfigureAwait(false);
             var conversionOptions = SpannerConversionOptions.ForConnection(spannerConnection);
+            var enableGetSchemaTable = spannerConnection.SpannerConnectionStringBuilder?.EnableGetSchemaTable ?? false;
 
+            // TODO: Unify this; the spannerConnection or singleUseTransaction are only used in SpannerDataReader as "something to dispose".
+            // Let's change it to a single parameter, and pick what we pass in.
             if ((behavior & CommandBehavior.CloseConnection) == CommandBehavior.CloseConnection)
             {
-                return new SpannerDataReader(logger, resultSet, conversionOptions, spannerConnection);
+                return new SpannerDataReader(logger, resultSet, conversionOptions, spannerConnection, null, enableGetSchemaTable);
             }
 
-            return new SpannerDataReader(logger, resultSet, conversionOptions, null, singleUseTransaction);
+            return new SpannerDataReader(logger, resultSet, conversionOptions, null, singleUseTransaction, enableGetSchemaTable);
         }
 
         private ExecuteSqlRequest GetExecuteSqlRequest()

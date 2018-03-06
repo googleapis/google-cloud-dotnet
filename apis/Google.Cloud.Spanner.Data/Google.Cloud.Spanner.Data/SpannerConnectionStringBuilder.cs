@@ -37,6 +37,7 @@ namespace Google.Cloud.Spanner.Data
         private const string CredentialFileKeyword = "CredentialFile";
         private const string DataSourceKeyword = "Data Source";
         private const string UseClrDefaultForNullKeyword = "UseClrDefaultForNull";
+        private const string EnableGetSchemaTableKeyword = "EnableGetSchemaTable";
         private InstanceName _instanceName;
         private DatabaseName _databaseName;
 
@@ -118,6 +119,19 @@ namespace Google.Cloud.Spanner.Data
         {
             get => GetValueOrDefault(UseClrDefaultForNullKeyword).Equals("True", StringComparison.OrdinalIgnoreCase);
             set => this[UseClrDefaultForNullKeyword] = value.ToString(); // Always "True" or "False", regardless of culture.
+        }
+
+        // Note: GetSchemaTable can't be a link as it wouldn't build on netstandard1.0.
+
+        /// <summary>
+        /// Option to allow <see cref="SpannerDataReader"/> to return a schema from <c>GetSchemaTable</c>, on supported platforms.
+        /// Only partial information is available, and when this option is enabled, <c>DbDataAdapter</c> may be overly eager to
+        /// use the information to create and manage datasets.
+        /// </summary>
+        public bool EnableGetSchemaTable
+        {
+            get => GetValueOrDefault(EnableGetSchemaTableKeyword).Equals("True", StringComparison.OrdinalIgnoreCase);
+            set => this[EnableGetSchemaTableKeyword] = value.ToString(); // Always "True" or "False", regardless of culture.
         }
 
         /// <summary>
