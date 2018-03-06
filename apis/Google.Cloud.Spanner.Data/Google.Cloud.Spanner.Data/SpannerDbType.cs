@@ -183,9 +183,7 @@ namespace Google.Cloud.Spanner.Data
                     case TypeCode.Array:
                         return typeof(List<>).MakeGenericType(ArrayElementType.DefaultClrType);
                     case TypeCode.Struct:
-#pragma warning disable DE0006
-                        return typeof(Hashtable);
-#pragma warning restore DE0006
+                        return typeof(Dictionary<string, object>);
                     default:
                         //if we don't recognize it (or its a struct), we use the google native wellknown type.
                         return typeof(Value);
@@ -261,7 +259,7 @@ namespace Google.Cloud.Spanner.Data
         /// The ToString method will be called on each key of the IDictionary to generate each field name.
         /// Each field value's type is determined by the given argument <paramref name="structMembers"/>.
         /// When calling <see cref="SpannerDataReader.GetFieldValue(string)"/> the default type
-        /// is <see cref="Hashtable"/>. You may, however, specify any type that implements IDictionary which
+        /// is <see cref="Dictionary{String, Object}"/>. You may, however, specify any type that implements IDictionary which
         /// has a default constructor.
         /// </summary>
         /// <param name="structMembers">A dictionary containing the field names and types of each member of the struct.</param>
