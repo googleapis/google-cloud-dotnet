@@ -323,9 +323,9 @@ namespace Google.Cloud.Firestore.Tests.Proto
                     var number = value.NumberValue;
                     return Math.Round(number) == number ? (object) (long) number : (object) number;
                 case wkt::Value.KindOneofCase.StringValue:
-                    return value.StringValue == "ServerTimestamp" ? (object) SentinelValue.ServerTimestamp
-                        : value.StringValue == "Delete" ? (object) SentinelValue.Delete
-                        : (object) value.StringValue;
+                    return value.StringValue == "ServerTimestamp" ? FieldValue.ServerTimestamp
+                        : value.StringValue == "Delete" ? FieldValue.Delete
+                        : value.StringValue;
                 case wkt::Value.KindOneofCase.StructValue:
                     return value.StructValue.Fields.ToDictionary(pair => pair.Key, pair => ConvertValue(pair.Value));
                 default:

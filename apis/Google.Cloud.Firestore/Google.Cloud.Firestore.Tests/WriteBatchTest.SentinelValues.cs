@@ -31,26 +31,26 @@ namespace Google.Cloud.Firestore.Tests
         {
             // Single check that ServerTimestamp counts as a sentinel value. For the rest of the
             // test data, we'll just use Delete
-            new { Values = new[] { SentinelValue.ServerTimestamp } },
+            new { Values = new[] { FieldValue.ServerTimestamp } },
 
             // Directly in an array
-            new { Values = new[] { SentinelValue.Delete } },
+            new { Values = new[] { FieldValue.Delete } },
 
             // In a field in an array
-            new { Values = new[] { new { DeleteMe = SentinelValue.Delete } } },
+            new { Values = new[] { new { DeleteMe = FieldValue.Delete } } },
 
             // In a nested array
-            new { Values = new[] { new { DeleteMe = new[] { SentinelValue.Delete } } } },
+            new { Values = new[] { new { DeleteMe = new[] { FieldValue.Delete } } } },
 
             // An array within a map
-            new { Foo = new { Score = 10, Values = new[] { SentinelValue.Delete } } }
+            new { Foo = new { Score = 10, Values = new[] { FieldValue.Delete } } }
         };
 
         public static TheoryData<object> NoSentinelValuesInArraysData { get; } = new TheoryData<object>
         {
             // Each object has a sentinel value in a valid position.
-            new { Values = new[] { 1, 2 }, DeleteMe = SentinelValue.Delete },
-            new { Values = new[] { new { Fields = new { NestedArray = new[] { 1, 2 }, Text = "Foo" } } }, DeleteMe = SentinelValue.Delete }
+            new { Values = new[] { 1, 2 }, DeleteMe = FieldValue.Delete },
+            new { Values = new[] { new { Fields = new { NestedArray = new[] { 1, 2 }, Text = "Foo" } } }, DeleteMe = FieldValue.Delete }
         };
 
         /// <summary>
@@ -84,7 +84,7 @@ namespace Google.Cloud.Firestore.Tests
             var db = FirestoreDb.Create("project", "db", new FakeFirestoreClient());
             var batch = db.StartBatch();
             var doc = db.Document("col/doc");
-            var data = new { Name = "Test", DeleteMe = SentinelValue.Delete, Timestamp = SentinelValue.ServerTimestamp };
+            var data = new { Name = "Test", DeleteMe = FieldValue.Delete, Timestamp = FieldValue.ServerTimestamp };
             batch.Set(doc, data, SetOptions.MergeAll);
 
             var expectedUpdate = new Write
@@ -115,8 +115,8 @@ namespace Google.Cloud.Firestore.Tests
             var doc = db.Document("col/doc");
             var data = new
             {
-                ValueA = new { Name = "Test", TimestampA = SentinelValue.ServerTimestamp, DeleteMeA = SentinelValue.Delete },
-                ValueB = new { TimestampB = SentinelValue.ServerTimestamp, DeleteMeB = SentinelValue.Delete },
+                ValueA = new { Name = "Test", TimestampA = FieldValue.ServerTimestamp, DeleteMeA = FieldValue.Delete },
+                ValueB = new { TimestampB = FieldValue.ServerTimestamp, DeleteMeB = FieldValue.Delete },
             };
             batch.Set(doc, data, SetOptions.MergeAll);
 
@@ -149,7 +149,7 @@ namespace Google.Cloud.Firestore.Tests
             var db = FirestoreDb.Create("project", "db", new FakeFirestoreClient());
             var batch = db.StartBatch();
             var doc = db.Document("col/doc");
-            var data = new { Timestamp = SentinelValue.ServerTimestamp };
+            var data = new { Timestamp = FieldValue.ServerTimestamp };
             batch.Set(doc, data, SetOptions.MergeAll);
             // No Update.
             var expectedTransform = new Write

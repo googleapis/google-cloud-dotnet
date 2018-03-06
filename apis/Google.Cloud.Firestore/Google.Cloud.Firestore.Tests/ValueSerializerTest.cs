@@ -37,10 +37,10 @@ namespace Google.Cloud.Firestore.Tests
                 new Value { MapValue = new MapValue { Fields = { { "name", new Value { StringValue = "Jon" } }, { "score", new Value { IntegerValue = 10L } } } } } },
 
             // Sentinel values
-            { new { name = "Jon", lastUpdate = SentinelValue.ServerTimestamp, score = SentinelValue.Delete },
-                new Value { MapValue = new MapValue { Fields = { { "name", new Value { StringValue = "Jon" } }, { "lastUpdate", SentinelValues.ServerTimestampSentinel }, { "score", SentinelValues.DeleteSentinel } } } } },
+            { new { name = "Jon", lastUpdate = FieldValue.ServerTimestamp, score = FieldValue.Delete },
+                new Value { MapValue = new MapValue { Fields = { { "name", new Value { StringValue = "Jon" } }, { "lastUpdate", SentinelValue.ServerTimestamp.ToProtoValue() }, { "score", SentinelValue.Delete.ToProtoValue() } } } } },
             { new SentinelModel { Name = "Jon", LastUpdate = new Timestamp(99, 99), Score = 10 },
-                new Value { MapValue = new MapValue { Fields = { { "name", new Value { StringValue = "Jon" } }, { "lastUpdate", SentinelValues.ServerTimestampSentinel }, { "score", SentinelValues.DeleteSentinel } } } } },
+                new Value { MapValue = new MapValue { Fields = { { "name", new Value { StringValue = "Jon" } }, { "lastUpdate", SentinelValue.ServerTimestamp.ToProtoValue() }, { "score", SentinelValue.Delete.ToProtoValue() } } } } },
         };
 
         public static IEnumerable<object[]> SerializeMapTestData { get; } = new List<object[]>
@@ -58,10 +58,10 @@ namespace Google.Cloud.Firestore.Tests
                 new Dictionary<string, Value> { { "name", new Value { StringValue = "Jon" } }, { "score", new Value { IntegerValue = 10L } } } },
 
             // Sentinel values
-            { new { name = "Jon", lastUpdate = SentinelValue.ServerTimestamp, score = SentinelValue.Delete },
-                new Dictionary<string, Value> { { "name", new Value { StringValue = "Jon" } }, { "lastUpdate", SentinelValues.ServerTimestampSentinel }, { "score", SentinelValues.DeleteSentinel } } },
+            { new { name = "Jon", lastUpdate = FieldValue.ServerTimestamp, score = FieldValue.Delete },
+                new Dictionary<string, Value> { { "name", new Value { StringValue = "Jon" } }, { "lastUpdate", SentinelValue.ServerTimestamp.ToProtoValue() }, { "score", SentinelValue.Delete.ToProtoValue() } } },
             { new SentinelModel { Name = "Jon", LastUpdate = new Timestamp(99, 99), Score = 10 },
-                new Dictionary<string, Value> { { "name", new Value { StringValue = "Jon" } }, { "lastUpdate", SentinelValues.ServerTimestampSentinel }, { "score", SentinelValues.DeleteSentinel } } },
+                new Dictionary<string, Value> { { "name", new Value { StringValue = "Jon" } }, { "lastUpdate", SentinelValue.ServerTimestamp.ToProtoValue() }, { "score", SentinelValue.Delete.ToProtoValue() } } },
         };
 
         [Theory]
@@ -134,25 +134,12 @@ namespace Google.Cloud.Firestore.Tests
         }
 
         [Fact]
-        public void BadSentinelValueInAttribute()
-        {
-            var broken = new BadSentinelModel();
-            Assert.Throws<ArgumentException>(() => ValueSerializer.Serialize(broken));
-        }
-
-        [Fact]
         public void ArrayInArray()
         {
             var badArray = new[] { new int[10] };
             Assert.Throws<ArgumentException>(() => ValueSerializer.Serialize(badArray));
         }
         
-        [FirestoreData]
-        private class BadSentinelModel
-        {
-            [FirestoreProperty("broken", SentinelValue = (SentinelValue) int.MaxValue)]
-            public string Name { get; set; }
-        }
 
         [FirestoreData]
         private class SentinelModel
@@ -160,10 +147,10 @@ namespace Google.Cloud.Firestore.Tests
             [FirestoreProperty("name")]
             public string Name { get; set; }
 
-            [FirestoreProperty("lastUpdate", SentinelValue = SentinelValue.ServerTimestamp)]
+            [FirestoreProperty("lastUpdate"), ServerTimestamp]
             public Timestamp LastUpdate { get; set; }
 
-            [FirestoreProperty("score", SentinelValue = SentinelValue.Delete)]
+            [FirestoreProperty("score"), DeletedField]
             public int Score { get; set; }
         }
     }

@@ -73,8 +73,8 @@ namespace Google.Cloud.Firestore.IntegrationTests
             // Delete the DeleteMe field, add a field with a server timestamp
             await doc.UpdateAsync(new Dictionary<FieldPath, object>
             {
-                { new FieldPath("DeleteMe"), SentinelValue.Delete },
-                { new FieldPath("Timestamp"), SentinelValue.ServerTimestamp }
+                { new FieldPath("DeleteMe"), FieldValue.Delete },
+                { new FieldPath("Timestamp"), FieldValue.ServerTimestamp }
             });
             var snapshot = await doc.GetSnapshotAsync();
             Assert.Equal("Original", snapshot.GetValue<string>("Name"));

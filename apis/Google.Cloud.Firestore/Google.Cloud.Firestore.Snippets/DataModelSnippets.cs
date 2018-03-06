@@ -139,7 +139,7 @@ namespace Google.Cloud.Firestore.Snippets
             [FirestoreProperty]
             public string Name { get; set; }
 
-            [FirestoreProperty(SentinelValue = SentinelValue.ServerTimestamp)]
+            [FirestoreProperty, ServerTimestamp]
             public Timestamp LastUpdated { get; set; }
         }
         // End sample
@@ -156,7 +156,7 @@ namespace Google.Cloud.Firestore.Snippets
 
             // Sample: AnonymousTypeSentinel
             await document.SetAsync(
-                new { Score = 20, LastUpdated = SentinelValue.ServerTimestamp },
+                new { Score = 20, LastUpdated = FieldValue.ServerTimestamp },
                 SetOptions.MergeAll);
             // End sample
         }

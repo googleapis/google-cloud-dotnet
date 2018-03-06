@@ -295,11 +295,12 @@ namespace Google.Cloud.Firestore
             {
                 Value value = pair.Value;
                 string key = pair.Key;
-                if (value.IsServerTimestampSentinel())
+                SentinelValue.SentinelKind sentinelKind = SentinelValue.GetKind(value);
+                if (sentinelKind == SentinelValue.SentinelKind.ServerTimestamp)
                 {
                     serverTimestamps.Add(parentPath.Append(key));
                 }
-                else if (value.IsDeleteSentinel())
+                else if (sentinelKind == SentinelValue.SentinelKind.Delete)
                 {
                     deletes.Add(parentPath.Append(key));
                 }
@@ -317,7 +318,7 @@ namespace Google.Cloud.Firestore
             {
                 foreach (var value in values)
                 {
-                    if (value.IsServerTimestampSentinel() || value.IsDeleteSentinel())
+                    if (SentinelValue.GetKind(value) != SentinelValue.SentinelKind.None)
                     {
                         // We don't know what parameter name to use here
                         throw new ArgumentException("Sentinel values must not appear directly or indirectly within array values");
