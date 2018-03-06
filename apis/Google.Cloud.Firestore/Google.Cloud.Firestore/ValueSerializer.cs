@@ -165,8 +165,8 @@ namespace Google.Cloud.Firestore
                 var attribute = property.GetCustomAttribute<FirestorePropertyAttribute>();
                 if (attribute != null)
                 {
-                    var sentinel = attribute.SentinelValue;
-                    Value protoValue = sentinel == SentinelValue.None ? Serialize(property.GetValue(value)) : sentinel.ToProtoValue();
+                    var sentinel = SentinelValue.FromPropertyAttributes(property);
+                    Value protoValue = sentinel == null ? Serialize(property.GetValue(value)) : sentinel.ToProtoValue();
                     ret[attribute.Name ?? property.Name] = protoValue;
                 }
             }

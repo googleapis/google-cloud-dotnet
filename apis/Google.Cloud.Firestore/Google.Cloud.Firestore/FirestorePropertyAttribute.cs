@@ -29,12 +29,6 @@ namespace Google.Cloud.Firestore
         public string Name { get; set; }
 
         /// <summary>
-        /// The sentinel value for this property, defaulting to <see cref="SentinelValue.None"/>
-        /// indicating a regular value to be serialized.
-        /// </summary>
-        public SentinelValue SentinelValue { get; set; }
-
-        /// <summary>
         /// Creates an instance with no specified name.
         /// </summary>
         public FirestorePropertyAttribute()
@@ -49,7 +43,5 @@ namespace Google.Cloud.Firestore
         {
             Name = name;
         }
-
-        // TODO: Constructor overloads with SentinelValue?
     }
 }
