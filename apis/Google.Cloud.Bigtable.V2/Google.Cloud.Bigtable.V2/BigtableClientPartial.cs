@@ -72,7 +72,7 @@ namespace Google.Cloud.Bigtable.V2
             for (int i = 0; i < clientCount; i++)
             {
                 var channel = new Channel(endpoint.Host, endpoint.Port, channelCredentials);
-                clients[i] = BigtableServiceApiClient.Create(channel, clientCreationSettings?.BigtableServiceApiSettings);
+                clients[i] = BigtableServiceApiClient.Create(channel, settings);
                 shutdowns[i] = channel.ShutdownAsync;
             }
             Func<Task> shutdown = () => Task.WhenAll(shutdowns.Select(x => x()));
@@ -101,11 +101,10 @@ namespace Google.Cloud.Bigtable.V2
             Task.Run(() => CreateAsync(clientCreationSettings, appProfileId)).ResultWithUnwrappedExceptions();
 
         /// <summary>
-        /// Synchronously creates a <see cref="BigtableClient"/>, applying defaults for all unspecified settings,
-        /// and creating a channel connecting to the given endpoint with application default credentials where
-        /// necessary.
+        /// Synchronously creates a <see cref="BigtableClient"/>, applying default settings.
         /// </summary>
-        /// <param name="clients">The <see cref="BigtableServiceApiClient"/>s to use in a <see cref="BigtableClient"/>.</param>
+        /// <param name="clients">The <see cref="BigtableServiceApiClient"/>s to use in a <see cref="BigtableClient"/> 
+        /// Must not be null.</param>
         /// <param name="appProfileId">
         /// This is a private alpha release of Cloud Bigtable replication. This feature
         /// is not currently available to most Cloud Bigtable customers. This feature
@@ -115,8 +114,8 @@ namespace Google.Cloud.Bigtable.V2
         /// "default" application profile will be used.
         /// </param>
         /// <returns>The created <see cref="BigtableClient"/>.</returns>
-        public static BigtableClient Create(BigtableServiceApiClient[] clients, string appProfileId = null) => 
-            new BigtableClientImpl(clients, appProfileId);
+        public static BigtableClient Create(IEnumerable<BigtableServiceApiClient> clients, string appProfileId = null) => 
+            new BigtableClientImpl(GaxPreconditions.CheckNotNull(clients, nameof(clients)).ToArray(), appProfileId);
 
         /// <summary>
         /// Gets a <see cref="BigtableClient"/> matching this one but with the specified <paramref name="appProfileId"/>.

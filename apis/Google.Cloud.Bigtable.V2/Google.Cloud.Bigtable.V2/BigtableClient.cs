@@ -297,13 +297,12 @@ namespace Google.Cloud.Bigtable.V2
 
             /// <summary>
             /// Creates <see cref="ClientCreationSettings"/> to be used in creation of <see cref="BigtableClient"/> for use with Emulator.
-            /// <param name="environmentVariable"> is the environment variable that holds host endpoint values.</param>
+            /// <param name="target"> Service enpoint target in the yourhost:yourport form.</param>
             /// </summary>
-            public ClientCreationSettings FromEnvironmentVariable(string environmentVariable)
+            internal static ClientCreationSettings FromEndpointTarget(string target)
             {
-                string endpointString = Environment.GetEnvironmentVariable(environmentVariable);
-                string[] endpointValues = endpointString?.Split(':');
-                return new ClientCreationSettings(null, null, ChannelCredentials.Insecure, new ServiceEndpoint(endpointValues?[0], Convert.ToInt32(endpointValues?[1])));
+                string[] endpointValues = target.Split(':');
+                return new ClientCreationSettings(null, null, ChannelCredentials.Insecure, new ServiceEndpoint(endpointValues[0], Convert.ToInt32(endpointValues[1])));
             }
 
             internal void Validate()
