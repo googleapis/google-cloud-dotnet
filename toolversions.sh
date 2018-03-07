@@ -49,6 +49,9 @@ install_reportgenerator() {
 
 install_protoc() {
   $NUGET install -Verbosity quiet -OutputDirectory $TOOL_PACKAGES -Version $PROTOC_VERSION Google.Protobuf.Tools
+  
+  # Temporary fix for a broken proto in the protobuf tools package
+  sed -i 's/--)/-- )/g' $PROTOBUF_TOOLS_ROOT/tools/google/protobuf/timestamp.proto
 }
 
 install_grpc() {
