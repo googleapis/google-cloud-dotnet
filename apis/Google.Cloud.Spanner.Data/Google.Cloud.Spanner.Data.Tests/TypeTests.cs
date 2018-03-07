@@ -537,9 +537,9 @@ namespace Google.Cloud.Spanner.Data.Tests
             var protobuf = new Value { ListValue = new ListValue { Values = { Value.ForNumber(5.5), Value.ForNull(), Value.ForNumber(10.5) } } };
             var options = SpannerConversionOptions.Default;
 
-            // The null value is converted into 0
-            var expected = new[] { 5.5, 0.0, 10.5 };
-            Assert.Equal(expected, SpannerDbType.ArrayOf(SpannerDbType.Float64).ConvertToClrType<double[]>(protobuf, options));
+            // The null value causes an InvalidCastException.
+            var dbType = SpannerDbType.ArrayOf(SpannerDbType.Float64);
+            Assert.Throws<InvalidCastException>(() => dbType.ConvertToClrType<double[]>(protobuf, options));
         }
 
         public static TheoryData<object, SpannerDbType, System.Type> UseClrDefaultForNulls { get; } = new TheoryData<object, SpannerDbType, System.Type>

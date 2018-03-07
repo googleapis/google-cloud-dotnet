@@ -97,17 +97,18 @@ namespace Google.Cloud.Spanner.Data
         /// <para>
         /// If this is <c>false</c> (the default), requesting a value from a <see cref="SpannerDataReader"/> that is null
         /// in the database will return <see cref="DBNull.Value">DBNull.Value</see>, which may cause an <see cref="InvalidCastException"/> if
-        /// the requested type is not compatible with that value.
+        /// the requested type is not compatible with that value. For arrays and structs, the behavior is slightly different.
+        /// A null value is used for an array or struct value where the target type permits such a value. Attempting to convert
+        /// an array value that contains a null element into a .NET array type with a non-nullable element type will
+        /// cause an <see cref="InvalidCastException"/> to be thrown. To avoid this, where array elements may be null for value types, 
+        /// use an array with a nullable element type. This allows code to distinguish between a null element in the original
+        /// data and a value of 0, false etc.
         /// </para>
         /// <para>
         /// If this is <c>true</c>, requesting a value from a <see cref="SpannerDataReader"/> that is null in the
-        /// database will return the default value of the requested type (e.g. 0 or a null reference). This is the
-        /// behavior from release 1.0 of this package.
-        /// </para>
-        /// <para>
-        /// This property only sets the behavior for top-level values. For arrays and structs, null references and default values
-        /// are still used if the array or struct field value is null; this provides a better general experience, allowing
-        /// conversions to specific array types for example.
+        /// database will return the default value of the requested type (e.g. 0 or a null reference). That conversion is also used for
+        /// array elements. For example, converting a Spanner array consisting of 1, null, and 2 into an <c>Int32</c> array will result in
+        /// an array containing 1, 0 and 2. This is the behavior from release 1.0 of this package.
         /// </para>
         /// <para>
         /// This property corresponds with the value of the "UseClrDefaultForNull" part of the connection string.
