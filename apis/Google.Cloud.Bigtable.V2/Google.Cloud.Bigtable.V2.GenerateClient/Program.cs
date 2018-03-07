@@ -124,6 +124,12 @@ namespace Google.Cloud.Bigtable.V2.GenerateClient
             if (symbols.Count != 1)
             {
                 Console.WriteLine($"Could not find type {apiClientName}");
+
+                var errors = compilation.GetDiagnostics().Where(d => d.Severity == DiagnosticSeverity.Error).ToList();
+                if (errors.Count != 0)
+                {
+                    Console.WriteLine($"Errors: {errors.Count}, first error: {errors[0]}");
+                }
                 return 2;
             }
 
