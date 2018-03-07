@@ -58,7 +58,7 @@ namespace Google.Cloud.Bigtable.V2
             ReadModifyWriteRowSettings = existing.ReadModifyWriteRowSettings;
             OnCopy(existing);
         }
-        
+
         partial void OnCopy(BigtableServiceApiSettings existing);
 
         /// <summary>
