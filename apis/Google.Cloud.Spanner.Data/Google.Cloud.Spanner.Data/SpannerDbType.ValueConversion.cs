@@ -37,19 +37,32 @@ namespace Google.Cloud.Spanner.Data
         {
             if (protobufValue.KindCase == Value.KindOneofCase.NullValue)
             {
-                // DBNull is only used for top-level values, not arrays or structs.
-                if (options.UseDBNull && topLevel)
+                bool targetIsNonNullableValueType =
+                    targetClrType.GetTypeInfo().IsValueType && Nullable.GetUnderlyingType(targetClrType) == null;
+
+                // Default behavior:
+                // - Use DBNull.Value for top-level values
+                // - Use null for array/struct elements where feasible
+                // - Throw an exception when trying to convert a null array/struct element to a non-nullable value type
+                if (options.UseDBNull)
                 {
                     // No check for the target type. This matches the behavior of SqlDbDataReader etc,
                     // where calling GetString (etc) for a null value will throw an InvalidCastException.
-                    return DBNull.Value;
+                    if (topLevel)
+                    {
+                        return DBNull.Value;
+                    }
+                    if (targetIsNonNullableValueType)
+                    {
+                        throw new InvalidCastException($"Unable to convert null value to {targetClrType.Name}");
+                    }
+                    return null;
                 }
-                if (targetClrType.GetTypeInfo().IsValueType)
-                {
-                    //Returns default(T) for targetClrType
-                    return Activator.CreateInstance(targetClrType);
-                }
-                return null;
+
+                // 1.0 behavior: always just use the default value for the type, which is null for any reference
+                // type or nullable value type, and the result of calling the parameterless constructor for
+                // non-nullable value types.
+                return targetIsNonNullableValueType ? Activator.CreateInstance(targetClrType) : null;
             }
             if (targetClrType == typeof(object))
             {
