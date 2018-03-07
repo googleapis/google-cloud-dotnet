@@ -198,6 +198,98 @@ namespace Google.Cloud.BigQuery.DataTransfer.V1
     }
 
     /// <summary>
+    /// Resource name for the 'project_data_source' resource.
+    /// </summary>
+    public sealed partial class ProjectDataSourceName : IResourceName, IEquatable<ProjectDataSourceName>
+    {
+        private static readonly PathTemplate s_template = new PathTemplate("projects/{project}/dataSources/{data_source}");
+
+        /// <summary>
+        /// Parses the given project_data_source resource name in string form into a new
+        /// <see cref="ProjectDataSourceName"/> instance.
+        /// </summary>
+        /// <param name="projectDataSourceName">The project_data_source resource name in string form. Must not be <c>null</c>.</param>
+        /// <returns>The parsed <see cref="ProjectDataSourceName"/> if successful.</returns>
+        public static ProjectDataSourceName Parse(string projectDataSourceName)
+        {
+            GaxPreconditions.CheckNotNull(projectDataSourceName, nameof(projectDataSourceName));
+            TemplatedResourceName resourceName = s_template.ParseName(projectDataSourceName);
+            return new ProjectDataSourceName(resourceName[0], resourceName[1]);
+        }
+
+        /// <summary>
+        /// Tries to parse the given project_data_source resource name in string form into a new
+        /// <see cref="ProjectDataSourceName"/> instance.
+        /// </summary>
+        /// <remarks>
+        /// This method still throws <see cref="ArgumentNullException"/> if <paramref name="projectDataSourceName"/> is null,
+        /// as this would usually indicate a programming error rather than a data error.
+        /// </remarks>
+        /// <param name="projectDataSourceName">The project_data_source resource name in string form. Must not be <c>null</c>.</param>
+        /// <param name="result">When this method returns, the parsed <see cref="ProjectDataSourceName"/>,
+        /// or <c>null</c> if parsing fails.</param>
+        /// <returns><c>true</c> if the name was parsed succssfully; <c>false</c> otherwise.</returns>
+        public static bool TryParse(string projectDataSourceName, out ProjectDataSourceName result)
+        {
+            GaxPreconditions.CheckNotNull(projectDataSourceName, nameof(projectDataSourceName));
+            TemplatedResourceName resourceName;
+            if (s_template.TryParseName(projectDataSourceName, out resourceName))
+            {
+                result = new ProjectDataSourceName(resourceName[0], resourceName[1]);
+                return true;
+            }
+            else
+            {
+                result = null;
+                return false;
+            }
+        }
+
+        /// <summary>
+        /// Constructs a new instance of the <see cref="ProjectDataSourceName"/> resource name class
+        /// from its component parts.
+        /// </summary>
+        /// <param name="projectId">The project ID. Must not be <c>null</c>.</param>
+        /// <param name="dataSourceId">The dataSource ID. Must not be <c>null</c>.</param>
+        public ProjectDataSourceName(string projectId, string dataSourceId)
+        {
+            ProjectId = GaxPreconditions.CheckNotNull(projectId, nameof(projectId));
+            DataSourceId = GaxPreconditions.CheckNotNull(dataSourceId, nameof(dataSourceId));
+        }
+
+        /// <summary>
+        /// The project ID. Never <c>null</c>.
+        /// </summary>
+        public string ProjectId { get; }
+
+        /// <summary>
+        /// The dataSource ID. Never <c>null</c>.
+        /// </summary>
+        public string DataSourceId { get; }
+
+        /// <inheritdoc />
+        public ResourceNameKind Kind => ResourceNameKind.Simple;
+
+        /// <inheritdoc />
+        public override string ToString() => s_template.Expand(ProjectId, DataSourceId);
+
+        /// <inheritdoc />
+        public override int GetHashCode() => ToString().GetHashCode();
+
+        /// <inheritdoc />
+        public override bool Equals(object obj) => Equals(obj as ProjectDataSourceName);
+
+        /// <inheritdoc />
+        public bool Equals(ProjectDataSourceName other) => ToString() == other?.ToString();
+
+        /// <inheritdoc />
+        public static bool operator ==(ProjectDataSourceName a, ProjectDataSourceName b) => ReferenceEquals(a, b) || (a?.Equals(b) ?? false);
+
+        /// <inheritdoc />
+        public static bool operator !=(ProjectDataSourceName a, ProjectDataSourceName b) => !(a == b);
+    }
+
+    /// <summary>
     /// Resource name for the 'location_data_source' resource.
     /// </summary>
     public sealed partial class LocationDataSourceName : IResourceName, IEquatable<LocationDataSourceName>
@@ -297,6 +389,98 @@ namespace Google.Cloud.BigQuery.DataTransfer.V1
     }
 
     /// <summary>
+    /// Resource name for the 'project_transfer_config' resource.
+    /// </summary>
+    public sealed partial class ProjectTransferConfigName : IResourceName, IEquatable<ProjectTransferConfigName>
+    {
+        private static readonly PathTemplate s_template = new PathTemplate("projects/{project}/transferConfigs/{transfer_config}");
+
+        /// <summary>
+        /// Parses the given project_transfer_config resource name in string form into a new
+        /// <see cref="ProjectTransferConfigName"/> instance.
+        /// </summary>
+        /// <param name="projectTransferConfigName">The project_transfer_config resource name in string form. Must not be <c>null</c>.</param>
+        /// <returns>The parsed <see cref="ProjectTransferConfigName"/> if successful.</returns>
+        public static ProjectTransferConfigName Parse(string projectTransferConfigName)
+        {
+            GaxPreconditions.CheckNotNull(projectTransferConfigName, nameof(projectTransferConfigName));
+            TemplatedResourceName resourceName = s_template.ParseName(projectTransferConfigName);
+            return new ProjectTransferConfigName(resourceName[0], resourceName[1]);
+        }
+
+        /// <summary>
+        /// Tries to parse the given project_transfer_config resource name in string form into a new
+        /// <see cref="ProjectTransferConfigName"/> instance.
+        /// </summary>
+        /// <remarks>
+        /// This method still throws <see cref="ArgumentNullException"/> if <paramref name="projectTransferConfigName"/> is null,
+        /// as this would usually indicate a programming error rather than a data error.
+        /// </remarks>
+        /// <param name="projectTransferConfigName">The project_transfer_config resource name in string form. Must not be <c>null</c>.</param>
+        /// <param name="result">When this method returns, the parsed <see cref="ProjectTransferConfigName"/>,
+        /// or <c>null</c> if parsing fails.</param>
+        /// <returns><c>true</c> if the name was parsed succssfully; <c>false</c> otherwise.</returns>
+        public static bool TryParse(string projectTransferConfigName, out ProjectTransferConfigName result)
+        {
+            GaxPreconditions.CheckNotNull(projectTransferConfigName, nameof(projectTransferConfigName));
+            TemplatedResourceName resourceName;
+            if (s_template.TryParseName(projectTransferConfigName, out resourceName))
+            {
+                result = new ProjectTransferConfigName(resourceName[0], resourceName[1]);
+                return true;
+            }
+            else
+            {
+                result = null;
+                return false;
+            }
+        }
+
+        /// <summary>
+        /// Constructs a new instance of the <see cref="ProjectTransferConfigName"/> resource name class
+        /// from its component parts.
+        /// </summary>
+        /// <param name="projectId">The project ID. Must not be <c>null</c>.</param>
+        /// <param name="transferConfigId">The transferConfig ID. Must not be <c>null</c>.</param>
+        public ProjectTransferConfigName(string projectId, string transferConfigId)
+        {
+            ProjectId = GaxPreconditions.CheckNotNull(projectId, nameof(projectId));
+            TransferConfigId = GaxPreconditions.CheckNotNull(transferConfigId, nameof(transferConfigId));
+        }
+
+        /// <summary>
+        /// The project ID. Never <c>null</c>.
+        /// </summary>
+        public string ProjectId { get; }
+
+        /// <summary>
+        /// The transferConfig ID. Never <c>null</c>.
+        /// </summary>
+        public string TransferConfigId { get; }
+
+        /// <inheritdoc />
+        public ResourceNameKind Kind => ResourceNameKind.Simple;
+
+        /// <inheritdoc />
+        public override string ToString() => s_template.Expand(ProjectId, TransferConfigId);
+
+        /// <inheritdoc />
+        public override int GetHashCode() => ToString().GetHashCode();
+
+        /// <inheritdoc />
+        public override bool Equals(object obj) => Equals(obj as ProjectTransferConfigName);
+
+        /// <inheritdoc />
+        public bool Equals(ProjectTransferConfigName other) => ToString() == other?.ToString();
+
+        /// <inheritdoc />
+        public static bool operator ==(ProjectTransferConfigName a, ProjectTransferConfigName b) => ReferenceEquals(a, b) || (a?.Equals(b) ?? false);
+
+        /// <inheritdoc />
+        public static bool operator !=(ProjectTransferConfigName a, ProjectTransferConfigName b) => !(a == b);
+    }
+
+    /// <summary>
     /// Resource name for the 'location_transfer_config' resource.
     /// </summary>
     public sealed partial class LocationTransferConfigName : IResourceName, IEquatable<LocationTransferConfigName>
@@ -393,6 +577,105 @@ namespace Google.Cloud.BigQuery.DataTransfer.V1
 
         /// <inheritdoc />
         public static bool operator !=(LocationTransferConfigName a, LocationTransferConfigName b) => !(a == b);
+    }
+
+    /// <summary>
+    /// Resource name for the 'project_run' resource.
+    /// </summary>
+    public sealed partial class ProjectRunName : IResourceName, IEquatable<ProjectRunName>
+    {
+        private static readonly PathTemplate s_template = new PathTemplate("projects/{project}/transferConfigs/{transfer_config}/runs/{run}");
+
+        /// <summary>
+        /// Parses the given project_run resource name in string form into a new
+        /// <see cref="ProjectRunName"/> instance.
+        /// </summary>
+        /// <param name="projectRunName">The project_run resource name in string form. Must not be <c>null</c>.</param>
+        /// <returns>The parsed <see cref="ProjectRunName"/> if successful.</returns>
+        public static ProjectRunName Parse(string projectRunName)
+        {
+            GaxPreconditions.CheckNotNull(projectRunName, nameof(projectRunName));
+            TemplatedResourceName resourceName = s_template.ParseName(projectRunName);
+            return new ProjectRunName(resourceName[0], resourceName[1], resourceName[2]);
+        }
+
+        /// <summary>
+        /// Tries to parse the given project_run resource name in string form into a new
+        /// <see cref="ProjectRunName"/> instance.
+        /// </summary>
+        /// <remarks>
+        /// This method still throws <see cref="ArgumentNullException"/> if <paramref name="projectRunName"/> is null,
+        /// as this would usually indicate a programming error rather than a data error.
+        /// </remarks>
+        /// <param name="projectRunName">The project_run resource name in string form. Must not be <c>null</c>.</param>
+        /// <param name="result">When this method returns, the parsed <see cref="ProjectRunName"/>,
+        /// or <c>null</c> if parsing fails.</param>
+        /// <returns><c>true</c> if the name was parsed succssfully; <c>false</c> otherwise.</returns>
+        public static bool TryParse(string projectRunName, out ProjectRunName result)
+        {
+            GaxPreconditions.CheckNotNull(projectRunName, nameof(projectRunName));
+            TemplatedResourceName resourceName;
+            if (s_template.TryParseName(projectRunName, out resourceName))
+            {
+                result = new ProjectRunName(resourceName[0], resourceName[1], resourceName[2]);
+                return true;
+            }
+            else
+            {
+                result = null;
+                return false;
+            }
+        }
+
+        /// <summary>
+        /// Constructs a new instance of the <see cref="ProjectRunName"/> resource name class
+        /// from its component parts.
+        /// </summary>
+        /// <param name="projectId">The project ID. Must not be <c>null</c>.</param>
+        /// <param name="transferConfigId">The transferConfig ID. Must not be <c>null</c>.</param>
+        /// <param name="runId">The run ID. Must not be <c>null</c>.</param>
+        public ProjectRunName(string projectId, string transferConfigId, string runId)
+        {
+            ProjectId = GaxPreconditions.CheckNotNull(projectId, nameof(projectId));
+            TransferConfigId = GaxPreconditions.CheckNotNull(transferConfigId, nameof(transferConfigId));
+            RunId = GaxPreconditions.CheckNotNull(runId, nameof(runId));
+        }
+
+        /// <summary>
+        /// The project ID. Never <c>null</c>.
+        /// </summary>
+        public string ProjectId { get; }
+
+        /// <summary>
+        /// The transferConfig ID. Never <c>null</c>.
+        /// </summary>
+        public string TransferConfigId { get; }
+
+        /// <summary>
+        /// The run ID. Never <c>null</c>.
+        /// </summary>
+        public string RunId { get; }
+
+        /// <inheritdoc />
+        public ResourceNameKind Kind => ResourceNameKind.Simple;
+
+        /// <inheritdoc />
+        public override string ToString() => s_template.Expand(ProjectId, TransferConfigId, RunId);
+
+        /// <inheritdoc />
+        public override int GetHashCode() => ToString().GetHashCode();
+
+        /// <inheritdoc />
+        public override bool Equals(object obj) => Equals(obj as ProjectRunName);
+
+        /// <inheritdoc />
+        public bool Equals(ProjectRunName other) => ToString() == other?.ToString();
+
+        /// <inheritdoc />
+        public static bool operator ==(ProjectRunName a, ProjectRunName b) => ReferenceEquals(a, b) || (a?.Equals(b) ?? false);
+
+        /// <inheritdoc />
+        public static bool operator !=(ProjectRunName a, ProjectRunName b) => !(a == b);
     }
 
     /// <summary>
@@ -502,296 +785,13 @@ namespace Google.Cloud.BigQuery.DataTransfer.V1
     }
 
     /// <summary>
-    /// Resource name for the 'data_source' resource.
-    /// </summary>
-    public sealed partial class DataSourceName : IResourceName, IEquatable<DataSourceName>
-    {
-        private static readonly PathTemplate s_template = new PathTemplate("projects/{project}/dataSources/{data_source}");
-
-        /// <summary>
-        /// Parses the given data_source resource name in string form into a new
-        /// <see cref="DataSourceName"/> instance.
-        /// </summary>
-        /// <param name="dataSourceName">The data_source resource name in string form. Must not be <c>null</c>.</param>
-        /// <returns>The parsed <see cref="DataSourceName"/> if successful.</returns>
-        public static DataSourceName Parse(string dataSourceName)
-        {
-            GaxPreconditions.CheckNotNull(dataSourceName, nameof(dataSourceName));
-            TemplatedResourceName resourceName = s_template.ParseName(dataSourceName);
-            return new DataSourceName(resourceName[0], resourceName[1]);
-        }
-
-        /// <summary>
-        /// Tries to parse the given data_source resource name in string form into a new
-        /// <see cref="DataSourceName"/> instance.
-        /// </summary>
-        /// <remarks>
-        /// This method still throws <see cref="ArgumentNullException"/> if <paramref name="dataSourceName"/> is null,
-        /// as this would usually indicate a programming error rather than a data error.
-        /// </remarks>
-        /// <param name="dataSourceName">The data_source resource name in string form. Must not be <c>null</c>.</param>
-        /// <param name="result">When this method returns, the parsed <see cref="DataSourceName"/>,
-        /// or <c>null</c> if parsing fails.</param>
-        /// <returns><c>true</c> if the name was parsed succssfully; <c>false</c> otherwise.</returns>
-        public static bool TryParse(string dataSourceName, out DataSourceName result)
-        {
-            GaxPreconditions.CheckNotNull(dataSourceName, nameof(dataSourceName));
-            TemplatedResourceName resourceName;
-            if (s_template.TryParseName(dataSourceName, out resourceName))
-            {
-                result = new DataSourceName(resourceName[0], resourceName[1]);
-                return true;
-            }
-            else
-            {
-                result = null;
-                return false;
-            }
-        }
-
-        /// <summary>
-        /// Constructs a new instance of the <see cref="DataSourceName"/> resource name class
-        /// from its component parts.
-        /// </summary>
-        /// <param name="projectId">The project ID. Must not be <c>null</c>.</param>
-        /// <param name="dataSourceId">The dataSource ID. Must not be <c>null</c>.</param>
-        public DataSourceName(string projectId, string dataSourceId)
-        {
-            ProjectId = GaxPreconditions.CheckNotNull(projectId, nameof(projectId));
-            DataSourceId = GaxPreconditions.CheckNotNull(dataSourceId, nameof(dataSourceId));
-        }
-
-        /// <summary>
-        /// The project ID. Never <c>null</c>.
-        /// </summary>
-        public string ProjectId { get; }
-
-        /// <summary>
-        /// The dataSource ID. Never <c>null</c>.
-        /// </summary>
-        public string DataSourceId { get; }
-
-        /// <inheritdoc />
-        public ResourceNameKind Kind => ResourceNameKind.Simple;
-
-        /// <inheritdoc />
-        public override string ToString() => s_template.Expand(ProjectId, DataSourceId);
-
-        /// <inheritdoc />
-        public override int GetHashCode() => ToString().GetHashCode();
-
-        /// <inheritdoc />
-        public override bool Equals(object obj) => Equals(obj as DataSourceName);
-
-        /// <inheritdoc />
-        public bool Equals(DataSourceName other) => ToString() == other?.ToString();
-
-        /// <inheritdoc />
-        public static bool operator ==(DataSourceName a, DataSourceName b) => ReferenceEquals(a, b) || (a?.Equals(b) ?? false);
-
-        /// <inheritdoc />
-        public static bool operator !=(DataSourceName a, DataSourceName b) => !(a == b);
-    }
-
-    /// <summary>
-    /// Resource name for the 'transfer_config' resource.
-    /// </summary>
-    public sealed partial class TransferConfigName : IResourceName, IEquatable<TransferConfigName>
-    {
-        private static readonly PathTemplate s_template = new PathTemplate("projects/{project}/transferConfigs/{transfer_config}");
-
-        /// <summary>
-        /// Parses the given transfer_config resource name in string form into a new
-        /// <see cref="TransferConfigName"/> instance.
-        /// </summary>
-        /// <param name="transferConfigName">The transfer_config resource name in string form. Must not be <c>null</c>.</param>
-        /// <returns>The parsed <see cref="TransferConfigName"/> if successful.</returns>
-        public static TransferConfigName Parse(string transferConfigName)
-        {
-            GaxPreconditions.CheckNotNull(transferConfigName, nameof(transferConfigName));
-            TemplatedResourceName resourceName = s_template.ParseName(transferConfigName);
-            return new TransferConfigName(resourceName[0], resourceName[1]);
-        }
-
-        /// <summary>
-        /// Tries to parse the given transfer_config resource name in string form into a new
-        /// <see cref="TransferConfigName"/> instance.
-        /// </summary>
-        /// <remarks>
-        /// This method still throws <see cref="ArgumentNullException"/> if <paramref name="transferConfigName"/> is null,
-        /// as this would usually indicate a programming error rather than a data error.
-        /// </remarks>
-        /// <param name="transferConfigName">The transfer_config resource name in string form. Must not be <c>null</c>.</param>
-        /// <param name="result">When this method returns, the parsed <see cref="TransferConfigName"/>,
-        /// or <c>null</c> if parsing fails.</param>
-        /// <returns><c>true</c> if the name was parsed succssfully; <c>false</c> otherwise.</returns>
-        public static bool TryParse(string transferConfigName, out TransferConfigName result)
-        {
-            GaxPreconditions.CheckNotNull(transferConfigName, nameof(transferConfigName));
-            TemplatedResourceName resourceName;
-            if (s_template.TryParseName(transferConfigName, out resourceName))
-            {
-                result = new TransferConfigName(resourceName[0], resourceName[1]);
-                return true;
-            }
-            else
-            {
-                result = null;
-                return false;
-            }
-        }
-
-        /// <summary>
-        /// Constructs a new instance of the <see cref="TransferConfigName"/> resource name class
-        /// from its component parts.
-        /// </summary>
-        /// <param name="projectId">The project ID. Must not be <c>null</c>.</param>
-        /// <param name="transferConfigId">The transferConfig ID. Must not be <c>null</c>.</param>
-        public TransferConfigName(string projectId, string transferConfigId)
-        {
-            ProjectId = GaxPreconditions.CheckNotNull(projectId, nameof(projectId));
-            TransferConfigId = GaxPreconditions.CheckNotNull(transferConfigId, nameof(transferConfigId));
-        }
-
-        /// <summary>
-        /// The project ID. Never <c>null</c>.
-        /// </summary>
-        public string ProjectId { get; }
-
-        /// <summary>
-        /// The transferConfig ID. Never <c>null</c>.
-        /// </summary>
-        public string TransferConfigId { get; }
-
-        /// <inheritdoc />
-        public ResourceNameKind Kind => ResourceNameKind.Simple;
-
-        /// <inheritdoc />
-        public override string ToString() => s_template.Expand(ProjectId, TransferConfigId);
-
-        /// <inheritdoc />
-        public override int GetHashCode() => ToString().GetHashCode();
-
-        /// <inheritdoc />
-        public override bool Equals(object obj) => Equals(obj as TransferConfigName);
-
-        /// <inheritdoc />
-        public bool Equals(TransferConfigName other) => ToString() == other?.ToString();
-
-        /// <inheritdoc />
-        public static bool operator ==(TransferConfigName a, TransferConfigName b) => ReferenceEquals(a, b) || (a?.Equals(b) ?? false);
-
-        /// <inheritdoc />
-        public static bool operator !=(TransferConfigName a, TransferConfigName b) => !(a == b);
-    }
-
-    /// <summary>
-    /// Resource name for the 'run' resource.
-    /// </summary>
-    public sealed partial class RunName : IResourceName, IEquatable<RunName>
-    {
-        private static readonly PathTemplate s_template = new PathTemplate("projects/{project}/transferConfigs/{transfer_config}/runs/{run}");
-
-        /// <summary>
-        /// Parses the given run resource name in string form into a new
-        /// <see cref="RunName"/> instance.
-        /// </summary>
-        /// <param name="runName">The run resource name in string form. Must not be <c>null</c>.</param>
-        /// <returns>The parsed <see cref="RunName"/> if successful.</returns>
-        public static RunName Parse(string runName)
-        {
-            GaxPreconditions.CheckNotNull(runName, nameof(runName));
-            TemplatedResourceName resourceName = s_template.ParseName(runName);
-            return new RunName(resourceName[0], resourceName[1], resourceName[2]);
-        }
-
-        /// <summary>
-        /// Tries to parse the given run resource name in string form into a new
-        /// <see cref="RunName"/> instance.
-        /// </summary>
-        /// <remarks>
-        /// This method still throws <see cref="ArgumentNullException"/> if <paramref name="runName"/> is null,
-        /// as this would usually indicate a programming error rather than a data error.
-        /// </remarks>
-        /// <param name="runName">The run resource name in string form. Must not be <c>null</c>.</param>
-        /// <param name="result">When this method returns, the parsed <see cref="RunName"/>,
-        /// or <c>null</c> if parsing fails.</param>
-        /// <returns><c>true</c> if the name was parsed succssfully; <c>false</c> otherwise.</returns>
-        public static bool TryParse(string runName, out RunName result)
-        {
-            GaxPreconditions.CheckNotNull(runName, nameof(runName));
-            TemplatedResourceName resourceName;
-            if (s_template.TryParseName(runName, out resourceName))
-            {
-                result = new RunName(resourceName[0], resourceName[1], resourceName[2]);
-                return true;
-            }
-            else
-            {
-                result = null;
-                return false;
-            }
-        }
-
-        /// <summary>
-        /// Constructs a new instance of the <see cref="RunName"/> resource name class
-        /// from its component parts.
-        /// </summary>
-        /// <param name="projectId">The project ID. Must not be <c>null</c>.</param>
-        /// <param name="transferConfigId">The transferConfig ID. Must not be <c>null</c>.</param>
-        /// <param name="runId">The run ID. Must not be <c>null</c>.</param>
-        public RunName(string projectId, string transferConfigId, string runId)
-        {
-            ProjectId = GaxPreconditions.CheckNotNull(projectId, nameof(projectId));
-            TransferConfigId = GaxPreconditions.CheckNotNull(transferConfigId, nameof(transferConfigId));
-            RunId = GaxPreconditions.CheckNotNull(runId, nameof(runId));
-        }
-
-        /// <summary>
-        /// The project ID. Never <c>null</c>.
-        /// </summary>
-        public string ProjectId { get; }
-
-        /// <summary>
-        /// The transferConfig ID. Never <c>null</c>.
-        /// </summary>
-        public string TransferConfigId { get; }
-
-        /// <summary>
-        /// The run ID. Never <c>null</c>.
-        /// </summary>
-        public string RunId { get; }
-
-        /// <inheritdoc />
-        public ResourceNameKind Kind => ResourceNameKind.Simple;
-
-        /// <inheritdoc />
-        public override string ToString() => s_template.Expand(ProjectId, TransferConfigId, RunId);
-
-        /// <inheritdoc />
-        public override int GetHashCode() => ToString().GetHashCode();
-
-        /// <inheritdoc />
-        public override bool Equals(object obj) => Equals(obj as RunName);
-
-        /// <inheritdoc />
-        public bool Equals(RunName other) => ToString() == other?.ToString();
-
-        /// <inheritdoc />
-        public static bool operator ==(RunName a, RunName b) => ReferenceEquals(a, b) || (a?.Equals(b) ?? false);
-
-        /// <inheritdoc />
-        public static bool operator !=(RunName a, RunName b) => !(a == b);
-    }
-
-    /// <summary>
     /// Resource name which will contain one of a choice of resource names.
     /// </summary>
     /// <remarks>
     /// This resource name will contain one of the following:
     /// <list type="bullet">
-    /// <item><description>LocationName: A resource of type 'location'.</description></item>
     /// <item><description>ProjectName: A resource of type 'project'.</description></item>
+    /// <item><description>LocationName: A resource of type 'location'.</description></item>
     /// </list>
     /// </remarks>
     public sealed partial class ParentNameOneof : IResourceName, IEquatable<ParentNameOneof>
@@ -807,14 +807,14 @@ namespace Google.Cloud.BigQuery.DataTransfer.V1
             Unknown = 0,
 
             /// <summary>
-            /// A resource of type 'location'.
-            /// </summary>
-            LocationName = 1,
-
-            /// <summary>
             /// A resource of type 'project'.
             /// </summary>
-            ProjectName = 2,
+            ProjectName = 1,
+
+            /// <summary>
+            /// A resource of type 'location'.
+            /// </summary>
+            LocationName = 2,
         }
 
         /// <summary>
@@ -823,8 +823,8 @@ namespace Google.Cloud.BigQuery.DataTransfer.V1
         /// <remarks>
         /// To parse successfully the resource name must be one of the following:
         /// <list type="bullet">
-        /// <item><description>LocationName: A resource of type 'location'.</description></item>
         /// <item><description>ProjectName: A resource of type 'project'.</description></item>
+        /// <item><description>LocationName: A resource of type 'location'.</description></item>
         /// </list>
         /// Or an <see cref="UnknownResourceName"/> if <paramref name="allowUnknown"/> is <c>true</c>.
         /// </remarks>
@@ -849,8 +849,8 @@ namespace Google.Cloud.BigQuery.DataTransfer.V1
         /// <remarks>
         /// To parse successfully the resource name must be one of the following:
         /// <list type="bullet">
-        /// <item><description>LocationName: A resource of type 'location'.</description></item>
         /// <item><description>ProjectName: A resource of type 'project'.</description></item>
+        /// <item><description>LocationName: A resource of type 'location'.</description></item>
         /// </list>
         /// Or an <see cref="UnknownResourceName"/> if <paramref name="allowUnknown"/> is <c>true</c>.
         /// </remarks>
@@ -863,16 +863,16 @@ namespace Google.Cloud.BigQuery.DataTransfer.V1
         public static bool TryParse(string name, bool allowUnknown, out ParentNameOneof result)
         {
             GaxPreconditions.CheckNotNull(name, nameof(name));
-            LocationName locationName;
-            if (LocationName.TryParse(name, out locationName))
-            {
-                result = new ParentNameOneof(OneofType.LocationName, locationName);
-                return true;
-            }
             ProjectName projectName;
             if (ProjectName.TryParse(name, out projectName))
             {
                 result = new ParentNameOneof(OneofType.ProjectName, projectName);
+                return true;
+            }
+            LocationName locationName;
+            if (LocationName.TryParse(name, out locationName))
+            {
+                result = new ParentNameOneof(OneofType.LocationName, locationName);
                 return true;
             }
             if (allowUnknown)
@@ -889,14 +889,6 @@ namespace Google.Cloud.BigQuery.DataTransfer.V1
         }
 
         /// <summary>
-        /// Construct a new instance of <see cref="ParentNameOneof"/> from the provided <see cref="LocationName"/>
-        /// </summary>
-        /// <param name="locationName">The <see cref="LocationName"/> to be contained within
-        /// the returned <see cref="ParentNameOneof"/>. Must not be <c>null</c>.</param>
-        /// <returns>A new <see cref="ParentNameOneof"/>, containing <paramref name="locationName"/>.</returns>
-        public static ParentNameOneof From(LocationName locationName) => new ParentNameOneof(OneofType.LocationName, locationName);
-
-        /// <summary>
         /// Construct a new instance of <see cref="ParentNameOneof"/> from the provided <see cref="ProjectName"/>
         /// </summary>
         /// <param name="projectName">The <see cref="ProjectName"/> to be contained within
@@ -904,13 +896,21 @@ namespace Google.Cloud.BigQuery.DataTransfer.V1
         /// <returns>A new <see cref="ParentNameOneof"/>, containing <paramref name="projectName"/>.</returns>
         public static ParentNameOneof From(ProjectName projectName) => new ParentNameOneof(OneofType.ProjectName, projectName);
 
+        /// <summary>
+        /// Construct a new instance of <see cref="ParentNameOneof"/> from the provided <see cref="LocationName"/>
+        /// </summary>
+        /// <param name="locationName">The <see cref="LocationName"/> to be contained within
+        /// the returned <see cref="ParentNameOneof"/>. Must not be <c>null</c>.</param>
+        /// <returns>A new <see cref="ParentNameOneof"/>, containing <paramref name="locationName"/>.</returns>
+        public static ParentNameOneof From(LocationName locationName) => new ParentNameOneof(OneofType.LocationName, locationName);
+
         private static bool IsValid(OneofType type, IResourceName name)
         {
             switch (type)
             {
                 case OneofType.Unknown: return true; // Anything goes with Unknown.
-                case OneofType.LocationName: return name is LocationName;
                 case OneofType.ProjectName: return name is ProjectName;
+                case OneofType.LocationName: return name is LocationName;
                 default: return false;
             }
         }
@@ -949,15 +949,6 @@ namespace Google.Cloud.BigQuery.DataTransfer.V1
         }
 
         /// <summary>
-        /// Get the contained <see cref="IResourceName"/> as <see cref="LocationName"/>.
-        /// </summary>
-        /// <remarks>
-        /// An <see cref="InvalidOperationException"/> will be thrown if this does not
-        /// contain an instance of <see cref="LocationName"/>.
-        /// </remarks>
-        public LocationName LocationName => CheckAndReturn<LocationName>(OneofType.LocationName);
-
-        /// <summary>
         /// Get the contained <see cref="IResourceName"/> as <see cref="ProjectName"/>.
         /// </summary>
         /// <remarks>
@@ -965,6 +956,15 @@ namespace Google.Cloud.BigQuery.DataTransfer.V1
         /// contain an instance of <see cref="ProjectName"/>.
         /// </remarks>
         public ProjectName ProjectName => CheckAndReturn<ProjectName>(OneofType.ProjectName);
+
+        /// <summary>
+        /// Get the contained <see cref="IResourceName"/> as <see cref="LocationName"/>.
+        /// </summary>
+        /// <remarks>
+        /// An <see cref="InvalidOperationException"/> will be thrown if this does not
+        /// contain an instance of <see cref="LocationName"/>.
+        /// </remarks>
+        public LocationName LocationName => CheckAndReturn<LocationName>(OneofType.LocationName);
 
         /// <inheritdoc />
         public ResourceNameKind Kind => ResourceNameKind.Oneof;
@@ -994,8 +994,8 @@ namespace Google.Cloud.BigQuery.DataTransfer.V1
     /// <remarks>
     /// This resource name will contain one of the following:
     /// <list type="bullet">
+    /// <item><description>ProjectDataSourceName: A resource of type 'project_data_source'.</description></item>
     /// <item><description>LocationDataSourceName: A resource of type 'location_data_source'.</description></item>
-    /// <item><description>DataSourceName: A resource of type 'data_source'.</description></item>
     /// </list>
     /// </remarks>
     public sealed partial class DataSourceNameOneof : IResourceName, IEquatable<DataSourceNameOneof>
@@ -1011,14 +1011,14 @@ namespace Google.Cloud.BigQuery.DataTransfer.V1
             Unknown = 0,
 
             /// <summary>
-            /// A resource of type 'location_data_source'.
+            /// A resource of type 'project_data_source'.
             /// </summary>
-            LocationDataSourceName = 1,
+            ProjectDataSourceName = 1,
 
             /// <summary>
-            /// A resource of type 'data_source'.
+            /// A resource of type 'location_data_source'.
             /// </summary>
-            DataSourceName = 2,
+            LocationDataSourceName = 2,
         }
 
         /// <summary>
@@ -1027,8 +1027,8 @@ namespace Google.Cloud.BigQuery.DataTransfer.V1
         /// <remarks>
         /// To parse successfully the resource name must be one of the following:
         /// <list type="bullet">
+        /// <item><description>ProjectDataSourceName: A resource of type 'project_data_source'.</description></item>
         /// <item><description>LocationDataSourceName: A resource of type 'location_data_source'.</description></item>
-        /// <item><description>DataSourceName: A resource of type 'data_source'.</description></item>
         /// </list>
         /// Or an <see cref="UnknownResourceName"/> if <paramref name="allowUnknown"/> is <c>true</c>.
         /// </remarks>
@@ -1053,8 +1053,8 @@ namespace Google.Cloud.BigQuery.DataTransfer.V1
         /// <remarks>
         /// To parse successfully the resource name must be one of the following:
         /// <list type="bullet">
+        /// <item><description>ProjectDataSourceName: A resource of type 'project_data_source'.</description></item>
         /// <item><description>LocationDataSourceName: A resource of type 'location_data_source'.</description></item>
-        /// <item><description>DataSourceName: A resource of type 'data_source'.</description></item>
         /// </list>
         /// Or an <see cref="UnknownResourceName"/> if <paramref name="allowUnknown"/> is <c>true</c>.
         /// </remarks>
@@ -1067,16 +1067,16 @@ namespace Google.Cloud.BigQuery.DataTransfer.V1
         public static bool TryParse(string name, bool allowUnknown, out DataSourceNameOneof result)
         {
             GaxPreconditions.CheckNotNull(name, nameof(name));
+            ProjectDataSourceName projectDataSourceName;
+            if (ProjectDataSourceName.TryParse(name, out projectDataSourceName))
+            {
+                result = new DataSourceNameOneof(OneofType.ProjectDataSourceName, projectDataSourceName);
+                return true;
+            }
             LocationDataSourceName locationDataSourceName;
             if (LocationDataSourceName.TryParse(name, out locationDataSourceName))
             {
                 result = new DataSourceNameOneof(OneofType.LocationDataSourceName, locationDataSourceName);
-                return true;
-            }
-            DataSourceName dataSourceName;
-            if (DataSourceName.TryParse(name, out dataSourceName))
-            {
-                result = new DataSourceNameOneof(OneofType.DataSourceName, dataSourceName);
                 return true;
             }
             if (allowUnknown)
@@ -1093,6 +1093,14 @@ namespace Google.Cloud.BigQuery.DataTransfer.V1
         }
 
         /// <summary>
+        /// Construct a new instance of <see cref="DataSourceNameOneof"/> from the provided <see cref="ProjectDataSourceName"/>
+        /// </summary>
+        /// <param name="projectDataSourceName">The <see cref="ProjectDataSourceName"/> to be contained within
+        /// the returned <see cref="DataSourceNameOneof"/>. Must not be <c>null</c>.</param>
+        /// <returns>A new <see cref="DataSourceNameOneof"/>, containing <paramref name="projectDataSourceName"/>.</returns>
+        public static DataSourceNameOneof From(ProjectDataSourceName projectDataSourceName) => new DataSourceNameOneof(OneofType.ProjectDataSourceName, projectDataSourceName);
+
+        /// <summary>
         /// Construct a new instance of <see cref="DataSourceNameOneof"/> from the provided <see cref="LocationDataSourceName"/>
         /// </summary>
         /// <param name="locationDataSourceName">The <see cref="LocationDataSourceName"/> to be contained within
@@ -1100,21 +1108,13 @@ namespace Google.Cloud.BigQuery.DataTransfer.V1
         /// <returns>A new <see cref="DataSourceNameOneof"/>, containing <paramref name="locationDataSourceName"/>.</returns>
         public static DataSourceNameOneof From(LocationDataSourceName locationDataSourceName) => new DataSourceNameOneof(OneofType.LocationDataSourceName, locationDataSourceName);
 
-        /// <summary>
-        /// Construct a new instance of <see cref="DataSourceNameOneof"/> from the provided <see cref="DataSourceName"/>
-        /// </summary>
-        /// <param name="dataSourceName">The <see cref="DataSourceName"/> to be contained within
-        /// the returned <see cref="DataSourceNameOneof"/>. Must not be <c>null</c>.</param>
-        /// <returns>A new <see cref="DataSourceNameOneof"/>, containing <paramref name="dataSourceName"/>.</returns>
-        public static DataSourceNameOneof From(DataSourceName dataSourceName) => new DataSourceNameOneof(OneofType.DataSourceName, dataSourceName);
-
         private static bool IsValid(OneofType type, IResourceName name)
         {
             switch (type)
             {
                 case OneofType.Unknown: return true; // Anything goes with Unknown.
+                case OneofType.ProjectDataSourceName: return name is ProjectDataSourceName;
                 case OneofType.LocationDataSourceName: return name is LocationDataSourceName;
-                case OneofType.DataSourceName: return name is DataSourceName;
                 default: return false;
             }
         }
@@ -1153,6 +1153,15 @@ namespace Google.Cloud.BigQuery.DataTransfer.V1
         }
 
         /// <summary>
+        /// Get the contained <see cref="IResourceName"/> as <see cref="ProjectDataSourceName"/>.
+        /// </summary>
+        /// <remarks>
+        /// An <see cref="InvalidOperationException"/> will be thrown if this does not
+        /// contain an instance of <see cref="ProjectDataSourceName"/>.
+        /// </remarks>
+        public ProjectDataSourceName ProjectDataSourceName => CheckAndReturn<ProjectDataSourceName>(OneofType.ProjectDataSourceName);
+
+        /// <summary>
         /// Get the contained <see cref="IResourceName"/> as <see cref="LocationDataSourceName"/>.
         /// </summary>
         /// <remarks>
@@ -1160,15 +1169,6 @@ namespace Google.Cloud.BigQuery.DataTransfer.V1
         /// contain an instance of <see cref="LocationDataSourceName"/>.
         /// </remarks>
         public LocationDataSourceName LocationDataSourceName => CheckAndReturn<LocationDataSourceName>(OneofType.LocationDataSourceName);
-
-        /// <summary>
-        /// Get the contained <see cref="IResourceName"/> as <see cref="DataSourceName"/>.
-        /// </summary>
-        /// <remarks>
-        /// An <see cref="InvalidOperationException"/> will be thrown if this does not
-        /// contain an instance of <see cref="DataSourceName"/>.
-        /// </remarks>
-        public DataSourceName DataSourceName => CheckAndReturn<DataSourceName>(OneofType.DataSourceName);
 
         /// <inheritdoc />
         public ResourceNameKind Kind => ResourceNameKind.Oneof;
@@ -1198,8 +1198,8 @@ namespace Google.Cloud.BigQuery.DataTransfer.V1
     /// <remarks>
     /// This resource name will contain one of the following:
     /// <list type="bullet">
+    /// <item><description>ProjectTransferConfigName: A resource of type 'project_transfer_config'.</description></item>
     /// <item><description>LocationTransferConfigName: A resource of type 'location_transfer_config'.</description></item>
-    /// <item><description>TransferConfigName: A resource of type 'transfer_config'.</description></item>
     /// </list>
     /// </remarks>
     public sealed partial class TransferConfigNameOneof : IResourceName, IEquatable<TransferConfigNameOneof>
@@ -1215,14 +1215,14 @@ namespace Google.Cloud.BigQuery.DataTransfer.V1
             Unknown = 0,
 
             /// <summary>
-            /// A resource of type 'location_transfer_config'.
+            /// A resource of type 'project_transfer_config'.
             /// </summary>
-            LocationTransferConfigName = 1,
+            ProjectTransferConfigName = 1,
 
             /// <summary>
-            /// A resource of type 'transfer_config'.
+            /// A resource of type 'location_transfer_config'.
             /// </summary>
-            TransferConfigName = 2,
+            LocationTransferConfigName = 2,
         }
 
         /// <summary>
@@ -1231,8 +1231,8 @@ namespace Google.Cloud.BigQuery.DataTransfer.V1
         /// <remarks>
         /// To parse successfully the resource name must be one of the following:
         /// <list type="bullet">
+        /// <item><description>ProjectTransferConfigName: A resource of type 'project_transfer_config'.</description></item>
         /// <item><description>LocationTransferConfigName: A resource of type 'location_transfer_config'.</description></item>
-        /// <item><description>TransferConfigName: A resource of type 'transfer_config'.</description></item>
         /// </list>
         /// Or an <see cref="UnknownResourceName"/> if <paramref name="allowUnknown"/> is <c>true</c>.
         /// </remarks>
@@ -1257,8 +1257,8 @@ namespace Google.Cloud.BigQuery.DataTransfer.V1
         /// <remarks>
         /// To parse successfully the resource name must be one of the following:
         /// <list type="bullet">
+        /// <item><description>ProjectTransferConfigName: A resource of type 'project_transfer_config'.</description></item>
         /// <item><description>LocationTransferConfigName: A resource of type 'location_transfer_config'.</description></item>
-        /// <item><description>TransferConfigName: A resource of type 'transfer_config'.</description></item>
         /// </list>
         /// Or an <see cref="UnknownResourceName"/> if <paramref name="allowUnknown"/> is <c>true</c>.
         /// </remarks>
@@ -1271,16 +1271,16 @@ namespace Google.Cloud.BigQuery.DataTransfer.V1
         public static bool TryParse(string name, bool allowUnknown, out TransferConfigNameOneof result)
         {
             GaxPreconditions.CheckNotNull(name, nameof(name));
+            ProjectTransferConfigName projectTransferConfigName;
+            if (ProjectTransferConfigName.TryParse(name, out projectTransferConfigName))
+            {
+                result = new TransferConfigNameOneof(OneofType.ProjectTransferConfigName, projectTransferConfigName);
+                return true;
+            }
             LocationTransferConfigName locationTransferConfigName;
             if (LocationTransferConfigName.TryParse(name, out locationTransferConfigName))
             {
                 result = new TransferConfigNameOneof(OneofType.LocationTransferConfigName, locationTransferConfigName);
-                return true;
-            }
-            TransferConfigName transferConfigName;
-            if (TransferConfigName.TryParse(name, out transferConfigName))
-            {
-                result = new TransferConfigNameOneof(OneofType.TransferConfigName, transferConfigName);
                 return true;
             }
             if (allowUnknown)
@@ -1297,6 +1297,14 @@ namespace Google.Cloud.BigQuery.DataTransfer.V1
         }
 
         /// <summary>
+        /// Construct a new instance of <see cref="TransferConfigNameOneof"/> from the provided <see cref="ProjectTransferConfigName"/>
+        /// </summary>
+        /// <param name="projectTransferConfigName">The <see cref="ProjectTransferConfigName"/> to be contained within
+        /// the returned <see cref="TransferConfigNameOneof"/>. Must not be <c>null</c>.</param>
+        /// <returns>A new <see cref="TransferConfigNameOneof"/>, containing <paramref name="projectTransferConfigName"/>.</returns>
+        public static TransferConfigNameOneof From(ProjectTransferConfigName projectTransferConfigName) => new TransferConfigNameOneof(OneofType.ProjectTransferConfigName, projectTransferConfigName);
+
+        /// <summary>
         /// Construct a new instance of <see cref="TransferConfigNameOneof"/> from the provided <see cref="LocationTransferConfigName"/>
         /// </summary>
         /// <param name="locationTransferConfigName">The <see cref="LocationTransferConfigName"/> to be contained within
@@ -1304,21 +1312,13 @@ namespace Google.Cloud.BigQuery.DataTransfer.V1
         /// <returns>A new <see cref="TransferConfigNameOneof"/>, containing <paramref name="locationTransferConfigName"/>.</returns>
         public static TransferConfigNameOneof From(LocationTransferConfigName locationTransferConfigName) => new TransferConfigNameOneof(OneofType.LocationTransferConfigName, locationTransferConfigName);
 
-        /// <summary>
-        /// Construct a new instance of <see cref="TransferConfigNameOneof"/> from the provided <see cref="TransferConfigName"/>
-        /// </summary>
-        /// <param name="transferConfigName">The <see cref="TransferConfigName"/> to be contained within
-        /// the returned <see cref="TransferConfigNameOneof"/>. Must not be <c>null</c>.</param>
-        /// <returns>A new <see cref="TransferConfigNameOneof"/>, containing <paramref name="transferConfigName"/>.</returns>
-        public static TransferConfigNameOneof From(TransferConfigName transferConfigName) => new TransferConfigNameOneof(OneofType.TransferConfigName, transferConfigName);
-
         private static bool IsValid(OneofType type, IResourceName name)
         {
             switch (type)
             {
                 case OneofType.Unknown: return true; // Anything goes with Unknown.
+                case OneofType.ProjectTransferConfigName: return name is ProjectTransferConfigName;
                 case OneofType.LocationTransferConfigName: return name is LocationTransferConfigName;
-                case OneofType.TransferConfigName: return name is TransferConfigName;
                 default: return false;
             }
         }
@@ -1357,6 +1357,15 @@ namespace Google.Cloud.BigQuery.DataTransfer.V1
         }
 
         /// <summary>
+        /// Get the contained <see cref="IResourceName"/> as <see cref="ProjectTransferConfigName"/>.
+        /// </summary>
+        /// <remarks>
+        /// An <see cref="InvalidOperationException"/> will be thrown if this does not
+        /// contain an instance of <see cref="ProjectTransferConfigName"/>.
+        /// </remarks>
+        public ProjectTransferConfigName ProjectTransferConfigName => CheckAndReturn<ProjectTransferConfigName>(OneofType.ProjectTransferConfigName);
+
+        /// <summary>
         /// Get the contained <see cref="IResourceName"/> as <see cref="LocationTransferConfigName"/>.
         /// </summary>
         /// <remarks>
@@ -1364,15 +1373,6 @@ namespace Google.Cloud.BigQuery.DataTransfer.V1
         /// contain an instance of <see cref="LocationTransferConfigName"/>.
         /// </remarks>
         public LocationTransferConfigName LocationTransferConfigName => CheckAndReturn<LocationTransferConfigName>(OneofType.LocationTransferConfigName);
-
-        /// <summary>
-        /// Get the contained <see cref="IResourceName"/> as <see cref="TransferConfigName"/>.
-        /// </summary>
-        /// <remarks>
-        /// An <see cref="InvalidOperationException"/> will be thrown if this does not
-        /// contain an instance of <see cref="TransferConfigName"/>.
-        /// </remarks>
-        public TransferConfigName TransferConfigName => CheckAndReturn<TransferConfigName>(OneofType.TransferConfigName);
 
         /// <inheritdoc />
         public ResourceNameKind Kind => ResourceNameKind.Oneof;
@@ -1402,8 +1402,8 @@ namespace Google.Cloud.BigQuery.DataTransfer.V1
     /// <remarks>
     /// This resource name will contain one of the following:
     /// <list type="bullet">
+    /// <item><description>ProjectRunName: A resource of type 'project_run'.</description></item>
     /// <item><description>LocationRunName: A resource of type 'location_run'.</description></item>
-    /// <item><description>RunName: A resource of type 'run'.</description></item>
     /// </list>
     /// </remarks>
     public sealed partial class RunNameOneof : IResourceName, IEquatable<RunNameOneof>
@@ -1419,14 +1419,14 @@ namespace Google.Cloud.BigQuery.DataTransfer.V1
             Unknown = 0,
 
             /// <summary>
-            /// A resource of type 'location_run'.
+            /// A resource of type 'project_run'.
             /// </summary>
-            LocationRunName = 1,
+            ProjectRunName = 1,
 
             /// <summary>
-            /// A resource of type 'run'.
+            /// A resource of type 'location_run'.
             /// </summary>
-            RunName = 2,
+            LocationRunName = 2,
         }
 
         /// <summary>
@@ -1435,8 +1435,8 @@ namespace Google.Cloud.BigQuery.DataTransfer.V1
         /// <remarks>
         /// To parse successfully the resource name must be one of the following:
         /// <list type="bullet">
+        /// <item><description>ProjectRunName: A resource of type 'project_run'.</description></item>
         /// <item><description>LocationRunName: A resource of type 'location_run'.</description></item>
-        /// <item><description>RunName: A resource of type 'run'.</description></item>
         /// </list>
         /// Or an <see cref="UnknownResourceName"/> if <paramref name="allowUnknown"/> is <c>true</c>.
         /// </remarks>
@@ -1461,8 +1461,8 @@ namespace Google.Cloud.BigQuery.DataTransfer.V1
         /// <remarks>
         /// To parse successfully the resource name must be one of the following:
         /// <list type="bullet">
+        /// <item><description>ProjectRunName: A resource of type 'project_run'.</description></item>
         /// <item><description>LocationRunName: A resource of type 'location_run'.</description></item>
-        /// <item><description>RunName: A resource of type 'run'.</description></item>
         /// </list>
         /// Or an <see cref="UnknownResourceName"/> if <paramref name="allowUnknown"/> is <c>true</c>.
         /// </remarks>
@@ -1475,16 +1475,16 @@ namespace Google.Cloud.BigQuery.DataTransfer.V1
         public static bool TryParse(string name, bool allowUnknown, out RunNameOneof result)
         {
             GaxPreconditions.CheckNotNull(name, nameof(name));
+            ProjectRunName projectRunName;
+            if (ProjectRunName.TryParse(name, out projectRunName))
+            {
+                result = new RunNameOneof(OneofType.ProjectRunName, projectRunName);
+                return true;
+            }
             LocationRunName locationRunName;
             if (LocationRunName.TryParse(name, out locationRunName))
             {
                 result = new RunNameOneof(OneofType.LocationRunName, locationRunName);
-                return true;
-            }
-            RunName runName;
-            if (RunName.TryParse(name, out runName))
-            {
-                result = new RunNameOneof(OneofType.RunName, runName);
                 return true;
             }
             if (allowUnknown)
@@ -1501,6 +1501,14 @@ namespace Google.Cloud.BigQuery.DataTransfer.V1
         }
 
         /// <summary>
+        /// Construct a new instance of <see cref="RunNameOneof"/> from the provided <see cref="ProjectRunName"/>
+        /// </summary>
+        /// <param name="projectRunName">The <see cref="ProjectRunName"/> to be contained within
+        /// the returned <see cref="RunNameOneof"/>. Must not be <c>null</c>.</param>
+        /// <returns>A new <see cref="RunNameOneof"/>, containing <paramref name="projectRunName"/>.</returns>
+        public static RunNameOneof From(ProjectRunName projectRunName) => new RunNameOneof(OneofType.ProjectRunName, projectRunName);
+
+        /// <summary>
         /// Construct a new instance of <see cref="RunNameOneof"/> from the provided <see cref="LocationRunName"/>
         /// </summary>
         /// <param name="locationRunName">The <see cref="LocationRunName"/> to be contained within
@@ -1508,21 +1516,13 @@ namespace Google.Cloud.BigQuery.DataTransfer.V1
         /// <returns>A new <see cref="RunNameOneof"/>, containing <paramref name="locationRunName"/>.</returns>
         public static RunNameOneof From(LocationRunName locationRunName) => new RunNameOneof(OneofType.LocationRunName, locationRunName);
 
-        /// <summary>
-        /// Construct a new instance of <see cref="RunNameOneof"/> from the provided <see cref="RunName"/>
-        /// </summary>
-        /// <param name="runName">The <see cref="RunName"/> to be contained within
-        /// the returned <see cref="RunNameOneof"/>. Must not be <c>null</c>.</param>
-        /// <returns>A new <see cref="RunNameOneof"/>, containing <paramref name="runName"/>.</returns>
-        public static RunNameOneof From(RunName runName) => new RunNameOneof(OneofType.RunName, runName);
-
         private static bool IsValid(OneofType type, IResourceName name)
         {
             switch (type)
             {
                 case OneofType.Unknown: return true; // Anything goes with Unknown.
+                case OneofType.ProjectRunName: return name is ProjectRunName;
                 case OneofType.LocationRunName: return name is LocationRunName;
-                case OneofType.RunName: return name is RunName;
                 default: return false;
             }
         }
@@ -1561,6 +1561,15 @@ namespace Google.Cloud.BigQuery.DataTransfer.V1
         }
 
         /// <summary>
+        /// Get the contained <see cref="IResourceName"/> as <see cref="ProjectRunName"/>.
+        /// </summary>
+        /// <remarks>
+        /// An <see cref="InvalidOperationException"/> will be thrown if this does not
+        /// contain an instance of <see cref="ProjectRunName"/>.
+        /// </remarks>
+        public ProjectRunName ProjectRunName => CheckAndReturn<ProjectRunName>(OneofType.ProjectRunName);
+
+        /// <summary>
         /// Get the contained <see cref="IResourceName"/> as <see cref="LocationRunName"/>.
         /// </summary>
         /// <remarks>
@@ -1568,15 +1577,6 @@ namespace Google.Cloud.BigQuery.DataTransfer.V1
         /// contain an instance of <see cref="LocationRunName"/>.
         /// </remarks>
         public LocationRunName LocationRunName => CheckAndReturn<LocationRunName>(OneofType.LocationRunName);
-
-        /// <summary>
-        /// Get the contained <see cref="IResourceName"/> as <see cref="RunName"/>.
-        /// </summary>
-        /// <remarks>
-        /// An <see cref="InvalidOperationException"/> will be thrown if this does not
-        /// contain an instance of <see cref="RunName"/>.
-        /// </remarks>
-        public RunName RunName => CheckAndReturn<RunName>(OneofType.RunName);
 
         /// <inheritdoc />
         public ResourceNameKind Kind => ResourceNameKind.Oneof;
