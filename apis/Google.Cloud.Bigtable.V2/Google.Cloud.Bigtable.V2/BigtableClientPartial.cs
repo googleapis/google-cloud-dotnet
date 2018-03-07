@@ -101,7 +101,7 @@ namespace Google.Cloud.Bigtable.V2
             Task.Run(() => CreateAsync(clientCreationSettings, appProfileId)).ResultWithUnwrappedExceptions();
 
         /// <summary>
-        /// Synchronously creates a <see cref="BigtableClient"/>, applying default settings.
+        /// Synchronously creates a <see cref="BigtableClient"/> from a set of pre-existing clients.
         /// </summary>
         /// <param name="clients">The <see cref="BigtableServiceApiClient"/>s to use in a <see cref="BigtableClient"/> 
         /// Must not be null.</param>

@@ -253,7 +253,7 @@ namespace Google.Cloud.Bigtable.V2
             /// <summary>
             /// Instantiate with the specified settings.
             /// </summary>
-            /// <param name="clientCount">Optional.
+            /// <param name="clientCount">Optional. If not set will default to number of processors.
             /// The number of <see cref="BigtableServiceApiClient"/>s to create and use within a <see cref="BigtableClient"/> instance.</param>
             /// <param name="bigtableServiceApiSettings">Optional. The settings to use when creating <see cref="BigtableServiceApiClient"/> instances.</param>
             /// <param name="credentials">Optional. Credentials to use when creating <see cref="BigtableServiceApiClient"/> instances.</param>
