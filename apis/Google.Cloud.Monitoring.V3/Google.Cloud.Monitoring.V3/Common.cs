@@ -23,41 +23,49 @@ namespace Google.Cloud.Monitoring.V3 {
       byte[] descriptorData = global::System.Convert.FromBase64String(
           string.Concat(
             "CiFnb29nbGUvbW9uaXRvcmluZy92My9jb21tb24ucHJvdG8SFGdvb2dsZS5t",
-            "b25pdG9yaW5nLnYzGh1nb29nbGUvYXBpL2Rpc3RyaWJ1dGlvbi5wcm90bxoe",
-            "Z29vZ2xlL3Byb3RvYnVmL2R1cmF0aW9uLnByb3RvGh9nb29nbGUvcHJvdG9i",
-            "dWYvdGltZXN0YW1wLnByb3RvIqoBCgpUeXBlZFZhbHVlEhQKCmJvb2xfdmFs",
-            "dWUYASABKAhIABIVCgtpbnQ2NF92YWx1ZRgCIAEoA0gAEhYKDGRvdWJsZV92",
-            "YWx1ZRgDIAEoAUgAEhYKDHN0cmluZ192YWx1ZRgEIAEoCUgAEjYKEmRpc3Ry",
-            "aWJ1dGlvbl92YWx1ZRgFIAEoCzIYLmdvb2dsZS5hcGkuRGlzdHJpYnV0aW9u",
-            "SABCBwoFdmFsdWUibAoMVGltZUludGVydmFsEiwKCGVuZF90aW1lGAIgASgL",
-            "MhouZ29vZ2xlLnByb3RvYnVmLlRpbWVzdGFtcBIuCgpzdGFydF90aW1lGAEg",
-            "ASgLMhouZ29vZ2xlLnByb3RvYnVmLlRpbWVzdGFtcCLkBgoLQWdncmVnYXRp",
-            "b24SMwoQYWxpZ25tZW50X3BlcmlvZBgBIAEoCzIZLmdvb2dsZS5wcm90b2J1",
-            "Zi5EdXJhdGlvbhJFChJwZXJfc2VyaWVzX2FsaWduZXIYAiABKA4yKS5nb29n",
-            "bGUubW9uaXRvcmluZy52My5BZ2dyZWdhdGlvbi5BbGlnbmVyEkcKFGNyb3Nz",
-            "X3Nlcmllc19yZWR1Y2VyGAQgASgOMikuZ29vZ2xlLm1vbml0b3JpbmcudjMu",
-            "QWdncmVnYXRpb24uUmVkdWNlchIXCg9ncm91cF9ieV9maWVsZHMYBSADKAki",
-            "2gIKB0FsaWduZXISDgoKQUxJR05fTk9ORRAAEg8KC0FMSUdOX0RFTFRBEAES",
-            "DgoKQUxJR05fUkFURRACEhUKEUFMSUdOX0lOVEVSUE9MQVRFEAMSFAoQQUxJ",
-            "R05fTkVYVF9PTERFUhAEEg0KCUFMSUdOX01JThAKEg0KCUFMSUdOX01BWBAL",
-            "Eg4KCkFMSUdOX01FQU4QDBIPCgtBTElHTl9DT1VOVBANEg0KCUFMSUdOX1NV",
-            "TRAOEhAKDEFMSUdOX1NURERFVhAPEhQKEEFMSUdOX0NPVU5UX1RSVUUQEBIX",
-            "ChNBTElHTl9GUkFDVElPTl9UUlVFEBESFwoTQUxJR05fUEVSQ0VOVElMRV85",
-            "ORASEhcKE0FMSUdOX1BFUkNFTlRJTEVfOTUQExIXChNBTElHTl9QRVJDRU5U",
-            "SUxFXzUwEBQSFwoTQUxJR05fUEVSQ0VOVElMRV8wNRAVIpkCCgdSZWR1Y2Vy",
-            "Eg8KC1JFRFVDRV9OT05FEAASDwoLUkVEVUNFX01FQU4QARIOCgpSRURVQ0Vf",
-            "TUlOEAISDgoKUkVEVUNFX01BWBADEg4KClJFRFVDRV9TVU0QBBIRCg1SRURV",
-            "Q0VfU1REREVWEAUSEAoMUkVEVUNFX0NPVU5UEAYSFQoRUkVEVUNFX0NPVU5U",
-            "X1RSVUUQBxIYChRSRURVQ0VfRlJBQ1RJT05fVFJVRRAIEhgKFFJFRFVDRV9Q",
-            "RVJDRU5USUxFXzk5EAkSGAoUUkVEVUNFX1BFUkNFTlRJTEVfOTUQChIYChRS",
-            "RURVQ0VfUEVSQ0VOVElMRV81MBALEhgKFFJFRFVDRV9QRVJDRU5USUxFXzA1",
-            "EAxCowEKGGNvbS5nb29nbGUubW9uaXRvcmluZy52M0ILQ29tbW9uUHJvdG9Q",
-            "AVo+Z29vZ2xlLmdvbGFuZy5vcmcvZ2VucHJvdG8vZ29vZ2xlYXBpcy9tb25p",
-            "dG9yaW5nL3YzO21vbml0b3JpbmeqAhpHb29nbGUuQ2xvdWQuTW9uaXRvcmlu",
-            "Zy5WM8oCGkdvb2dsZVxDbG91ZFxNb25pdG9yaW5nXFYzYgZwcm90bzM="));
+            "b25pdG9yaW5nLnYzGhxnb29nbGUvYXBpL2Fubm90YXRpb25zLnByb3RvGh1n",
+            "b29nbGUvYXBpL2Rpc3RyaWJ1dGlvbi5wcm90bxoeZ29vZ2xlL3Byb3RvYnVm",
+            "L2R1cmF0aW9uLnByb3RvGh9nb29nbGUvcHJvdG9idWYvdGltZXN0YW1wLnBy",
+            "b3RvIqoBCgpUeXBlZFZhbHVlEhQKCmJvb2xfdmFsdWUYASABKAhIABIVCgtp",
+            "bnQ2NF92YWx1ZRgCIAEoA0gAEhYKDGRvdWJsZV92YWx1ZRgDIAEoAUgAEhYK",
+            "DHN0cmluZ192YWx1ZRgEIAEoCUgAEjYKEmRpc3RyaWJ1dGlvbl92YWx1ZRgF",
+            "IAEoCzIYLmdvb2dsZS5hcGkuRGlzdHJpYnV0aW9uSABCBwoFdmFsdWUibAoM",
+            "VGltZUludGVydmFsEiwKCGVuZF90aW1lGAIgASgLMhouZ29vZ2xlLnByb3Rv",
+            "YnVmLlRpbWVzdGFtcBIuCgpzdGFydF90aW1lGAEgASgLMhouZ29vZ2xlLnBy",
+            "b3RvYnVmLlRpbWVzdGFtcCKtBwoLQWdncmVnYXRpb24SMwoQYWxpZ25tZW50",
+            "X3BlcmlvZBgBIAEoCzIZLmdvb2dsZS5wcm90b2J1Zi5EdXJhdGlvbhJFChJw",
+            "ZXJfc2VyaWVzX2FsaWduZXIYAiABKA4yKS5nb29nbGUubW9uaXRvcmluZy52",
+            "My5BZ2dyZWdhdGlvbi5BbGlnbmVyEkcKFGNyb3NzX3Nlcmllc19yZWR1Y2Vy",
+            "GAQgASgOMikuZ29vZ2xlLm1vbml0b3JpbmcudjMuQWdncmVnYXRpb24uUmVk",
+            "dWNlchIXCg9ncm91cF9ieV9maWVsZHMYBSADKAkiiwMKB0FsaWduZXISDgoK",
+            "QUxJR05fTk9ORRAAEg8KC0FMSUdOX0RFTFRBEAESDgoKQUxJR05fUkFURRAC",
+            "EhUKEUFMSUdOX0lOVEVSUE9MQVRFEAMSFAoQQUxJR05fTkVYVF9PTERFUhAE",
+            "Eg0KCUFMSUdOX01JThAKEg0KCUFMSUdOX01BWBALEg4KCkFMSUdOX01FQU4Q",
+            "DBIPCgtBTElHTl9DT1VOVBANEg0KCUFMSUdOX1NVTRAOEhAKDEFMSUdOX1NU",
+            "RERFVhAPEhQKEEFMSUdOX0NPVU5UX1RSVUUQEBIVChFBTElHTl9DT1VOVF9G",
+            "QUxTRRAYEhcKE0FMSUdOX0ZSQUNUSU9OX1RSVUUQERIXChNBTElHTl9QRVJD",
+            "RU5USUxFXzk5EBISFwoTQUxJR05fUEVSQ0VOVElMRV85NRATEhcKE0FMSUdO",
+            "X1BFUkNFTlRJTEVfNTAQFBIXChNBTElHTl9QRVJDRU5USUxFXzA1EBUSGAoU",
+            "QUxJR05fUEVSQ0VOVF9DSEFOR0UQFyKxAgoHUmVkdWNlchIPCgtSRURVQ0Vf",
+            "Tk9ORRAAEg8KC1JFRFVDRV9NRUFOEAESDgoKUkVEVUNFX01JThACEg4KClJF",
+            "RFVDRV9NQVgQAxIOCgpSRURVQ0VfU1VNEAQSEQoNUkVEVUNFX1NURERFVhAF",
+            "EhAKDFJFRFVDRV9DT1VOVBAGEhUKEVJFRFVDRV9DT1VOVF9UUlVFEAcSFgoS",
+            "UkVEVUNFX0NPVU5UX0ZBTFNFEA8SGAoUUkVEVUNFX0ZSQUNUSU9OX1RSVUUQ",
+            "CBIYChRSRURVQ0VfUEVSQ0VOVElMRV85ORAJEhgKFFJFRFVDRV9QRVJDRU5U",
+            "SUxFXzk1EAoSGAoUUkVEVUNFX1BFUkNFTlRJTEVfNTAQCxIYChRSRURVQ0Vf",
+            "UEVSQ0VOVElMRV8wNRAMKp4BCg5Db21wYXJpc29uVHlwZRIaChZDT01QQVJJ",
+            "U09OX1VOU1BFQ0lGSUVEEAASEQoNQ09NUEFSSVNPTl9HVBABEhEKDUNPTVBB",
+            "UklTT05fR0UQAhIRCg1DT01QQVJJU09OX0xUEAMSEQoNQ09NUEFSSVNPTl9M",
+            "RRAEEhEKDUNPTVBBUklTT05fRVEQBRIRCg1DT01QQVJJU09OX05FEAYqXQoL",
+            "U2VydmljZVRpZXISHAoYU0VSVklDRV9USUVSX1VOU1BFQ0lGSUVEEAASFgoS",
+            "U0VSVklDRV9USUVSX0JBU0lDEAESGAoUU0VSVklDRV9USUVSX1BSRU1JVU0Q",
+            "AkKjAQoYY29tLmdvb2dsZS5tb25pdG9yaW5nLnYzQgtDb21tb25Qcm90b1AB",
+            "Wj5nb29nbGUuZ29sYW5nLm9yZy9nZW5wcm90by9nb29nbGVhcGlzL21vbml0",
+            "b3JpbmcvdjM7bW9uaXRvcmluZ6oCGkdvb2dsZS5DbG91ZC5Nb25pdG9yaW5n",
+            "LlYzygIaR29vZ2xlXENsb3VkXE1vbml0b3JpbmdcVjNiBnByb3RvMw=="));
       descriptor = pbr::FileDescriptor.FromGeneratedCode(descriptorData,
-          new pbr::FileDescriptor[] { global::Google.Api.DistributionReflection.Descriptor, global::Google.Protobuf.WellKnownTypes.DurationReflection.Descriptor, global::Google.Protobuf.WellKnownTypes.TimestampReflection.Descriptor, },
-          new pbr::GeneratedClrTypeInfo(null, new pbr::GeneratedClrTypeInfo[] {
+          new pbr::FileDescriptor[] { global::Google.Api.AnnotationsReflection.Descriptor, global::Google.Api.DistributionReflection.Descriptor, global::Google.Protobuf.WellKnownTypes.DurationReflection.Descriptor, global::Google.Protobuf.WellKnownTypes.TimestampReflection.Descriptor, },
+          new pbr::GeneratedClrTypeInfo(new[] {typeof(global::Google.Cloud.Monitoring.V3.ComparisonType), typeof(global::Google.Cloud.Monitoring.V3.ServiceTier), }, new pbr::GeneratedClrTypeInfo[] {
             new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.Monitoring.V3.TypedValue), global::Google.Cloud.Monitoring.V3.TypedValue.Parser, new[]{ "BoolValue", "Int64Value", "DoubleValue", "StringValue", "DistributionValue" }, new[]{ "Value" }, null, null),
             new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.Monitoring.V3.TimeInterval), global::Google.Cloud.Monitoring.V3.TimeInterval.Parser, new[]{ "EndTime", "StartTime" }, null, null, null),
             new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.Monitoring.V3.Aggregation), global::Google.Cloud.Monitoring.V3.Aggregation.Parser, new[]{ "AlignmentPeriod", "PerSeriesAligner", "CrossSeriesReducer", "GroupByFields" }, null, new[]{ typeof(global::Google.Cloud.Monitoring.V3.Aggregation.Types.Aligner), typeof(global::Google.Cloud.Monitoring.V3.Aggregation.Types.Reducer) }, null)
@@ -66,6 +74,71 @@ namespace Google.Cloud.Monitoring.V3 {
     #endregion
 
   }
+  #region Enums
+  /// <summary>
+  /// Specifies an ordering relationship on two arguments, here called left and
+  /// right.
+  /// </summary>
+  public enum ComparisonType {
+    /// <summary>
+    /// No ordering relationship is specified.
+    /// </summary>
+    [pbr::OriginalName("COMPARISON_UNSPECIFIED")] ComparisonUnspecified = 0,
+    /// <summary>
+    /// The left argument is greater than the right argument.
+    /// </summary>
+    [pbr::OriginalName("COMPARISON_GT")] ComparisonGt = 1,
+    /// <summary>
+    /// The left argument is greater than or equal to the right argument.
+    /// </summary>
+    [pbr::OriginalName("COMPARISON_GE")] ComparisonGe = 2,
+    /// <summary>
+    /// The left argument is less than the right argument.
+    /// </summary>
+    [pbr::OriginalName("COMPARISON_LT")] ComparisonLt = 3,
+    /// <summary>
+    /// The left argument is less than or equal to the right argument.
+    /// </summary>
+    [pbr::OriginalName("COMPARISON_LE")] ComparisonLe = 4,
+    /// <summary>
+    /// The left argument is equal to the right argument.
+    /// </summary>
+    [pbr::OriginalName("COMPARISON_EQ")] ComparisonEq = 5,
+    /// <summary>
+    /// The left argument is not equal to the right argument.
+    /// </summary>
+    [pbr::OriginalName("COMPARISON_NE")] ComparisonNe = 6,
+  }
+
+  /// <summary>
+  /// The tier of service for a Stackdriver account. Please see the
+  /// [service tiers documentation](https://cloud.google.com/monitoring/accounts/tiers)
+  /// for more details.
+  /// </summary>
+  public enum ServiceTier {
+    /// <summary>
+    /// An invalid sentinel value, used to indicate that a tier has not
+    /// been provided explicitly.
+    /// </summary>
+    [pbr::OriginalName("SERVICE_TIER_UNSPECIFIED")] Unspecified = 0,
+    /// <summary>
+    /// The Stackdriver Basic tier, a free tier of service that provides basic
+    /// features, a moderate allotment of logs, and access to built-in metrics.
+    /// A number of features are not available in this tier. For more details,
+    /// see [the service tiers documentation](https://cloud.google.com/monitoring/accounts/tiers).
+    /// </summary>
+    [pbr::OriginalName("SERVICE_TIER_BASIC")] Basic = 1,
+    /// <summary>
+    /// The Stackdriver Premium tier, a higher, more expensive tier of service
+    /// that provides access to all Stackdriver features, lets you use Stackdriver
+    /// with AWS accounts, and has a larger allotments for logs and metrics. For
+    /// more details, see [the service tiers documentation](https://cloud.google.com/monitoring/accounts/tiers).
+    /// </summary>
+    [pbr::OriginalName("SERVICE_TIER_PREMIUM")] Premium = 2,
+  }
+
+  #endregion
+
   #region Messages
   /// <summary>
   /// A single strongly-typed value.
@@ -534,8 +607,9 @@ namespace Google.Cloud.Monitoring.V3 {
   /// <summary>
   /// Describes how to combine multiple time series to provide different views of
   /// the data.  Aggregation consists of an alignment step on individual time
-  /// series (`per_series_aligner`) followed by an optional reduction of the data
-  /// across different time series (`cross_series_reducer`).  For more details, see
+  /// series (`alignment_period` and `per_series_aligner`) followed by an optional
+  /// reduction step of the data across the aligned time series
+  /// (`cross_series_reducer` and `group_by_fields`).  For more details, see
   /// [Aggregation](/monitoring/api/learn_more#aggregation).
   /// </summary>
   public sealed partial class Aggregation : pb::IMessage<Aggregation> {
@@ -808,6 +882,9 @@ namespace Google.Cloud.Monitoring.V3 {
         /// delta metric to a delta metric requires that the alignment
         /// period be increased. The value type of the result is the same
         /// as the value type of the input.
+        ///
+        /// One can think of this aligner as a rate but without time units; that
+        /// is, the output is conceptually (second_point - first_point).
         /// </summary>
         [pbr::OriginalName("ALIGN_DELTA")] AlignDelta = 1,
         /// <summary>
@@ -815,6 +892,14 @@ namespace Google.Cloud.Monitoring.V3 {
         /// cumulative metrics and delta metrics with numeric values. The output is a
         /// gauge metric with value type
         /// [DOUBLE][google.api.MetricDescriptor.ValueType.DOUBLE].
+        ///
+        /// One can think of this aligner as conceptually providing the slope of
+        /// the line that passes through the value at the start and end of the
+        /// window. In other words, this is conceptually ((y1 - y0)/(t1 - t0)),
+        /// and the output unit is one that has a "/time" dimension.
+        ///
+        /// If, by rate, you are looking for percentage change, see the
+        /// `ALIGN_PERCENT_CHANGE` aligner option.
         /// </summary>
         [pbr::OriginalName("ALIGN_RATE")] AlignRate = 2,
         /// <summary>
@@ -889,6 +974,14 @@ namespace Google.Cloud.Monitoring.V3 {
         [pbr::OriginalName("ALIGN_COUNT_TRUE")] AlignCountTrue = 16,
         /// <summary>
         /// Align time series via aggregation. The resulting data point in
+        /// the alignment period is the count of False-valued data points in the
+        /// period. This alignment is valid for gauge metrics with
+        /// Boolean values. The value type of the output is
+        /// [INT64][google.api.MetricDescriptor.ValueType.INT64].
+        /// </summary>
+        [pbr::OriginalName("ALIGN_COUNT_FALSE")] AlignCountFalse = 24,
+        /// <summary>
+        /// Align time series via aggregation. The resulting data point in
         /// the alignment period is the fraction of True-valued data points in the
         /// period. This alignment is valid for gauge metrics with Boolean values.
         /// The output value is in the range [0, 1] and has value type
@@ -927,6 +1020,24 @@ namespace Google.Cloud.Monitoring.V3 {
         /// [DOUBLE][google.api.MetricDescriptor.ValueType.DOUBLE].
         /// </summary>
         [pbr::OriginalName("ALIGN_PERCENTILE_05")] AlignPercentile05 = 21,
+        /// <summary>
+        /// Align and convert to a percentage change. This alignment is valid for
+        /// gauge and delta metrics with numeric values. This alignment conceptually
+        /// computes the equivalent of "((current - previous)/previous)*100"
+        /// where previous value is determined based on the alignmentPeriod.
+        /// In the event that previous is 0 the calculated value is infinity with the
+        /// exception that if both (current - previous) and previous are 0 the
+        /// calculated value is 0.
+        /// A 10 minute moving mean is computed at each point of the time window
+        /// prior to the above calculation to smooth the metric and prevent false
+        /// positives from very short lived spikes.
+        /// Only applicable for data that is >= 0. Any values &lt; 0 are treated as
+        /// no data. While delta metrics are accepted by this alignment special care
+        /// should be taken that the values for the metric will always be positive.
+        /// The output is a gauge metric with value type
+        /// [DOUBLE][google.api.MetricDescriptor.ValueType.DOUBLE].
+        /// </summary>
+        [pbr::OriginalName("ALIGN_PERCENT_CHANGE")] AlignPercentChange = 23,
       }
 
       /// <summary>
@@ -989,6 +1100,13 @@ namespace Google.Cloud.Monitoring.V3 {
         /// the output is [INT64][google.api.MetricDescriptor.ValueType.INT64].
         /// </summary>
         [pbr::OriginalName("REDUCE_COUNT_TRUE")] ReduceCountTrue = 7,
+        /// <summary>
+        /// Reduce by computing the count of False-valued data points across time
+        /// series for each alignment period. This reducer is valid for delta
+        /// and gauge metrics of Boolean value type. The value type of
+        /// the output is [INT64][google.api.MetricDescriptor.ValueType.INT64].
+        /// </summary>
+        [pbr::OriginalName("REDUCE_COUNT_FALSE")] ReduceCountFalse = 15,
         /// <summary>
         /// Reduce by computing the fraction of True-valued data points across time
         /// series for each alignment period. This reducer is valid for delta
