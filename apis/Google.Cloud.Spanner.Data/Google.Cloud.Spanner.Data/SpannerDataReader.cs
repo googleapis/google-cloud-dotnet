@@ -49,6 +49,10 @@ namespace Google.Cloud.Spanner.Data
         private readonly SpannerConversionOptions _conversionOptions;
         private readonly bool _provideSchemaTable;
 
+        // Lock for _closed; could possibly be removed and just used Interlocked, but this is simple.
+        private readonly object _lock = new object();
+        private bool _closed;
+
         internal SpannerDataReader(
             Logger logger,
             ReliableStreamReader resultSet,
@@ -275,13 +279,7 @@ namespace Google.Cloud.Spanner.Data
         /// <inheritdoc />
         protected override void Dispose(bool disposing)
         {
-            Logger.LogPerformanceCounter(
-                "SpannerDataReader.ActiveCount",
-                () => Interlocked.Decrement(ref s_readerCount));
-
-            _resultSet?.Dispose();
-            _connectionToClose?.Close();
-            _txToClose?.Dispose();
+            CloseImpl();
             base.Dispose(disposing);
         }
 
@@ -323,13 +321,36 @@ namespace Google.Cloud.Spanner.Data
             return SpannerDbType.FromProtobufType(fieldMetadata.Type);
         }
 
+        /// <summary>
+        /// Common code used by both Dispose and Close. Dispose can't call Close, as it's not
+        /// present in .NET Standard 1.5; Close can't call dispose as we don't want to call into
+        /// the base Dispose method.
+        /// </summary>
+        private void CloseImpl()
+        {
+            lock (_lock)
+            {
+                if (_closed)
+                {
+                    return;
+                }
+                _closed = true;
+                Logger.LogPerformanceCounter(
+                    "SpannerDataReader.ActiveCount",
+                    () => Interlocked.Decrement(ref s_readerCount));
+
+                _resultSet?.Dispose();
+                _connectionToClose?.Close();
+                _txToClose?.Dispose();
+            }
+        }
+
 #if !NETSTANDARD1_5
 
         /// <inheritdoc />
         public override void Close()
         {
-            _resultSet?.Close();
-            _connectionToClose?.Close();
+            CloseImpl();
         }
 
         /// <summary>
