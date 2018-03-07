@@ -507,7 +507,7 @@
     "id": "Google.Cloud.Spanner.V1",
     "productName": "Google Cloud Spanner",
     "productUrl": "https://cloud.google.com/spanner/",
-    "version": "1.1.0-beta02",
+    "version": "1.1.0-beta01",
     "type": "grpc",
     "targetFrameworks": "netstandard1.5;netstandard2.0;net45",
     "testTargetFrameworks": "netcoreapp1.0;netcoreapp2.0;net452",
