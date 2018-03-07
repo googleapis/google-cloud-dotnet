@@ -460,7 +460,7 @@
 
   {
     "id": "Google.Cloud.Spanner.Data",
-    "version": "1.1.0-beta01",
+    "version": "2.0.0-beta00",
     "type": "other",
     "targetFrameworks": "netstandard1.5;netstandard2.0;net45",
     "testTargetFrameworks": "netcoreapp1.0;netcoreapp2.0;net452",
