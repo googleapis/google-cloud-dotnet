@@ -9,8 +9,8 @@ declare -r TOOL_PACKAGES=$REPO_ROOT/packages
 declare -r DOCFX_VERSION=2.28.2
 declare -r DOTCOVER_VERSION=2017.1.20170613.162720 
 declare -r REPORTGENERATOR_VERSION=2.4.5.0
-declare -r PROTOC_VERSION=3.4.0
-declare -r GRPC_VERSION=1.7.0
+declare -r PROTOC_VERSION=3.5.1
+declare -r GRPC_VERSION=1.10.0
 
 # Variables to use to invoke the tools themselves
 
