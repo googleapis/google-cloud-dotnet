@@ -70,17 +70,7 @@ namespace Google.Cloud.Firestore.Tests
         public void Serialize(object input, Value expectedOutput)
         {
             var actual = ValueSerializer.Serialize(input);
-            // Protobuf doesn't compare double.NaN values as equal. See
-            // https://github.com/google/protobuf/issues/3725
-            // Use an explicit test for this for the moment.
-            if (double.IsNaN(expectedOutput.DoubleValue))
-            {
-                Assert.True(double.IsNaN(actual.DoubleValue));
-            }
-            else
-            {
-                Assert.Equal(expectedOutput, actual);
-            }
+            Assert.Equal(expectedOutput, actual);
         }
 
         [Theory]
