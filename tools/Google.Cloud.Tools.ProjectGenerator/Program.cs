@@ -305,7 +305,7 @@ namespace Google.Cloud.Tools.ProjectGenerator
                 new XElement("Copyright", "Copyright 2017 Google Inc."),
                 new XElement("Authors", "Google Inc."),
                 new XElement("PackageIconUrl", "https://cloud.google.com/images/gcp-icon-64x64.png"),
-                new XElement("PackageLicenseUrl", "http://www.apache.org/licenses/LICENSE-2.0"),
+                new XElement("PackageLicenseUrl", "https://www.apache.org/licenses/LICENSE-2.0"),
                 new XElement("PackageProjectUrl", "https://github.com/GoogleCloudPlatform/google-cloud-dotnet"),
                 new XElement("RepositoryType", "git"),
                 new XElement("RepositoryUrl", "https://github.com/GoogleCloudPlatform/google-cloud-dotnet")
