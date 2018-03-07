@@ -40,12 +40,11 @@ namespace Google.Cloud.Spanner.Data
     public sealed class SpannerDataReader : DbDataReader
     {
         private static long s_readerCount;
-        private readonly SpannerConnection _connectionToClose;
         private readonly List<Value> _innerList = new List<Value>();
         private readonly ReliableStreamReader _resultSet;
         private readonly ConcurrentDictionary<string, int> _fieldIndex = new ConcurrentDictionary<string, int>();
         private ResultSetMetadata _metadata;
-        private readonly SingleUseTransaction _txToClose;
+        private readonly IDisposable _resourceToClose;
         private readonly SpannerConversionOptions _conversionOptions;
         private readonly bool _provideSchemaTable;
 
@@ -56,9 +55,8 @@ namespace Google.Cloud.Spanner.Data
         internal SpannerDataReader(
             Logger logger,
             ReliableStreamReader resultSet,
+            IDisposable resourceToClose,
             SpannerConversionOptions conversionOptions,
-            SpannerConnection connectionToClose,
-            SingleUseTransaction singleUseTransaction,
             bool provideSchemaTable)
         {
             GaxPreconditions.CheckNotNull(resultSet, nameof(resultSet));
@@ -67,8 +65,7 @@ namespace Google.Cloud.Spanner.Data
                 "SpannerDataReader.ActiveCount",
                 () => Interlocked.Increment(ref s_readerCount));
             _resultSet = resultSet;
-            _connectionToClose = connectionToClose;
-            _txToClose = singleUseTransaction;
+            _resourceToClose = resourceToClose;
             _conversionOptions = conversionOptions;
             _provideSchemaTable = provideSchemaTable;
         }
@@ -340,8 +337,7 @@ namespace Google.Cloud.Spanner.Data
                     () => Interlocked.Decrement(ref s_readerCount));
 
                 _resultSet?.Dispose();
-                _connectionToClose?.Close();
-                _txToClose?.Dispose();
+                _resourceToClose?.Dispose();
             }
         }
 
