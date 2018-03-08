@@ -77,7 +77,7 @@ namespace Google.Cloud.Bigtable.V2
             // Fill clients[] with BigtableServiceApiClient instances, each with specific channel
             for (int i = 0; i < clientCount; i++)
             {
-                var channel = new Channel(endpoint.Host, endpoint.Port, channelCredentials,channelOptions);
+                var channel = new Channel(endpoint.Host, endpoint.Port, channelCredentials, channelOptions);
                 clients[i] = BigtableServiceApiClient.Create(channel, settings);
                 shutdowns[i] = channel.ShutdownAsync;
             }
