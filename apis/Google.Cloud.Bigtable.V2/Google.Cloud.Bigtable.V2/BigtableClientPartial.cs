@@ -68,10 +68,16 @@ namespace Google.Cloud.Bigtable.V2
             var endpoint = clientCreationSettings?.ServiceEndpoint ?? BigtableServiceApiClient.DefaultEndpoint;
             var clients = new BigtableServiceApiClient[clientCount];
             var shutdowns = new Func<Task>[clientCount];
+            // Set channel send/recv message size to unlimited.
+            var channelOptions = new[]
+            {
+                new ChannelOption(ChannelOptions.MaxSendMessageLength, -1),
+                new ChannelOption(ChannelOptions.MaxReceiveMessageLength, -1)
+            };
             // Fill clients[] with BigtableServiceApiClient instances, each with specific channel
             for (int i = 0; i < clientCount; i++)
             {
-                var channel = new Channel(endpoint.Host, endpoint.Port, channelCredentials);
+                var channel = new Channel(endpoint.Host, endpoint.Port, channelCredentials,channelOptions);
                 clients[i] = BigtableServiceApiClient.Create(channel, settings);
                 shutdowns[i] = channel.ShutdownAsync;
             }
