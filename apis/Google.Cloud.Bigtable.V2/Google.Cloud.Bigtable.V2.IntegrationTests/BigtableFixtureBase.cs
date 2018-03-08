@@ -110,7 +110,7 @@ namespace Google.Cloud.Bigtable.V2.IntegrationTests
             else
             {
                 TableAdminClient = BigtableTableAdminClient.Create(EmulatorChannel);
-                TableClient = BigtableClient.Create(EmulatorChannel);
+                TableClient = BigtableClient.Create(BigtableClient.ClientCreationSettings.FromEndpointTarget(EmulatorChannel.Target));
             }
 
             TableName = await CreateTable();

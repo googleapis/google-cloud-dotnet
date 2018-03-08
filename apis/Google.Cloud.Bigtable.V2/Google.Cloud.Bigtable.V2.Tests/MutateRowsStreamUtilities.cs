@@ -46,7 +46,7 @@ namespace Google.Cloud.Bigtable.V2.Tests
             mock.Setup(c => c.MutateRows(initialRequest, It.IsAny<CallSettings>()))
                 .Returns(StreamFromEntries(entriesForInitialResponse));
 
-            return new BigtableClientImpl(mock.Object, appProfileId: null);
+            return new BigtableClientImpl(new[] { mock.Object }, appProfileId: null);
 
             MockMutateRowsStream StreamFromEntries(MutateRowsResponse.Types.Entry[] entries) =>
                 new MockMutateRowsStream(new MutateRowsResponse { Entries = { entries } });
