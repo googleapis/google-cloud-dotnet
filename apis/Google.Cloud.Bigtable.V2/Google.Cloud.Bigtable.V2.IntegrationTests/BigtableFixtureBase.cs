@@ -12,6 +12,7 @@
 // See the License for the specific language governing permissions and
 // limitations under the License.
 
+using Google.Api.Gax.Grpc;
 using Google.Cloud.Bigtable.Admin.V2;
 using Google.Cloud.ClientTesting;
 using Google.Rpc;
@@ -92,11 +93,12 @@ namespace Google.Cloud.Bigtable.V2.IntegrationTests
 
         private async Task InitBigtableInstanceAndTable()
         {
+            ChannelCredentials channelCredentials = null;
+            ServiceEndpoint serviceEndpoint = null;
             if (EmulatorChannel == null)
             {
                 InstanceAdminClient = BigtableInstanceAdminClient.Create();
                 TableAdminClient = BigtableTableAdminClient.Create();
-                TableClient = BigtableClient.Create();
 
                 try
                 {
@@ -110,9 +112,17 @@ namespace Google.Cloud.Bigtable.V2.IntegrationTests
             else
             {
                 TableAdminClient = BigtableTableAdminClient.Create(EmulatorChannel);
-                TableClient = BigtableClient.Create(BigtableClient.ClientCreationSettings.FromEndpointTarget(EmulatorChannel.Target));
+
+                channelCredentials = ChannelCredentials.Insecure;
+                string[] endpointValues = EmulatorChannel.Target.Split(':');
+                serviceEndpoint = new ServiceEndpoint(endpointValues[0], Convert.ToInt32(endpointValues[1]));
             }
 
+            // Cap the underlying client count to 2. We want to exercise using different underlying clients,
+            // but on higher end machines that have many cores, we don't want so many that the overhead of
+            // opening each separate gRPC channel slows down the test runs.
+            TableClient = BigtableClient.Create(
+                new BigtableClient.ClientCreationSettings(clientCount: 2, null, channelCredentials, serviceEndpoint));
             TableName = await CreateTable();
         }
 
