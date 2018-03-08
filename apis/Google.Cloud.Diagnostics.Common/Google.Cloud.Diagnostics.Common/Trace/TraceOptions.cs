@@ -23,7 +23,7 @@ namespace Google.Cloud.Diagnostics.Common
     {
         internal const double DefaultQpsSampleRate = 1.0;
 
-        /// <summary>Gets the QPS sample rate.</summary>
+        /// <summary>Gets the number of queries traced per second.</summary>
         public double QpsSampleRate { get; }
 
         /// <summary>The buffer options for the tracer.</summary>
@@ -44,7 +44,7 @@ namespace Google.Cloud.Diagnostics.Common
         /// <summary>
         /// Creates a <see cref="TraceOptions"/>.
         /// </summary>
-        /// <param name="qpsSampleRate">Optional, the qps sample rate.  The sample rate determines
+        /// <param name="qpsSampleRate">Optional, the number of queries traced per second.  The sample rate determines
         ///     how often requests are automatically traced. Defaults to <see cref="DefaultQpsSampleRate"/>.
         /// </param>
         /// <param name="bufferOptions">Optional, the buffer options.  Defaults to a <see cref="BufferType.Timed"/>.</param>
