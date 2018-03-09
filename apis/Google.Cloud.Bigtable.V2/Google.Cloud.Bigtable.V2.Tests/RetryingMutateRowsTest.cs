@@ -46,15 +46,15 @@ namespace Google.Cloud.Bigtable.V2.Tests
                     Mutations.CreateEntry("c", Mutations.DeleteFromRow())
                 }
             };
-            var client = Utilities.CreateClientForMutateRowsRetries(
+            var client = Utilities.CreateMutateRowsMockClient(
                 request,
-                entriesForInitialResponse: new[]
+                entriesForInitialStream: new[]
                 {
                     Utilities.CreateMutateRowsResponseEntry(0, Code.Ok),
                     Utilities.CreateMutateRowsResponseEntry(1, Code.DeadlineExceeded),
                     Utilities.CreateMutateRowsResponseEntry(2, Code.Ok)
                 },
-                entriesForRetryResponses: new[]
+                entriesForRetryStreams: new[]
                 {
                     // 1st retry response entries
                     new[] { Utilities.CreateMutateRowsResponseEntry(0, Code.Ok) }
@@ -90,9 +90,9 @@ namespace Google.Cloud.Bigtable.V2.Tests
                     Mutations.CreateEntry("e", Mutations.DeleteFromRow())
                 }
             };
-            var client = Utilities.CreateClientForMutateRowsRetries(
+            var client = Utilities.CreateMutateRowsMockClient(
                 request,
-                entriesForInitialResponse: new[]
+                entriesForInitialStream: new[]
                 {
                     Utilities.CreateMutateRowsResponseEntry(0, Code.Ok),
                     Utilities.CreateMutateRowsResponseEntry(1, Code.DeadlineExceeded),
@@ -100,7 +100,7 @@ namespace Google.Cloud.Bigtable.V2.Tests
                     Utilities.CreateMutateRowsResponseEntry(3, Code.DeadlineExceeded),
                     Utilities.CreateMutateRowsResponseEntry(4, Code.DeadlineExceeded)
                 },
-                entriesForRetryResponses: new[]
+                entriesForRetryStreams: new[]
                 {
                     // 1st retry response entries
                     new[]
@@ -156,15 +156,15 @@ namespace Google.Cloud.Bigtable.V2.Tests
                     Mutations.CreateEntry("c", Mutations.DeleteFromRow())
                 }
             };
-            var client = Utilities.CreateClientForMutateRowsRetries(
+            var client = Utilities.CreateMutateRowsMockClient(
                 request,
-                entriesForInitialResponse: new[]
+                entriesForInitialStream: new[]
                 {
                     Utilities.CreateMutateRowsResponseEntry(0, Code.Ok),
                     Utilities.CreateMutateRowsResponseEntry(1, Code.FailedPrecondition),
                     Utilities.CreateMutateRowsResponseEntry(2, Code.DeadlineExceeded)
                 },
-                entriesForRetryResponses: null // No retries should be made
+                entriesForRetryStreams: null // No retries should be made
                 );
 
             var entries = (await client.MutateRowsAsync(request)).Entries.OrderBy(e => e.Index).ToList();

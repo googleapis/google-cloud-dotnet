@@ -20,10 +20,16 @@ namespace Google.Cloud.Bigtable.V2.Tests
 {
     public class MockMutateRowsStream : BigtableServiceApiClient.MutateRowsStream
     {
+        private readonly MutateRowsResponse[] _responses;
         private IAsyncEnumerator<MutateRowsResponse> _responseStream;
 
-        public MockMutateRowsStream(params MutateRowsResponse[] responses) =>
+        public MockMutateRowsStream(params MutateRowsResponse[] responses)
+        {
+            _responses = responses;
             _responseStream = responses.ToAsyncEnumerable().GetEnumerator();
+        }
+
+        public IEnumerable<MutateRowsResponse> Responses => _responses;
 
         public override AsyncServerStreamingCall<MutateRowsResponse> GrpcCall => null;
         public override IAsyncEnumerator<MutateRowsResponse> ResponseStream => _responseStream;
