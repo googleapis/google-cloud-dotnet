@@ -24,11 +24,8 @@ namespace Google.Cloud.Bigtable.V2
     /// </summary>
     internal class BigtableReadRowsRequestManager
     {
-        // Member variables from the constructor.
         private readonly ReadRowsRequest _originalRequest;
-
-        // The number of rows read so far.
-        internal long RowCount { get; private set; }
+        private long _rowsReadSoFar;
 
         /// <summary>
         /// Constructor for <see cref="BigtableReadRowsRequestManager"/>.
@@ -43,10 +40,7 @@ namespace Google.Cloud.Bigtable.V2
         /// </summary>
         internal BigtableByteString LastFoundKey { get; set; }
 
-        /// <summary>
-        /// Update amount of rows read so far
-        /// </summary>
-        internal void IncrementRowCount(int count) => RowCount += count;
+        internal void IncrementRowsReadSoFar(int count = 1) => _rowsReadSoFar += count;
 
         /// <summary>
         /// Builds and returns updated subrequest that excludes all rowKeys that have already been found.
@@ -55,10 +49,10 @@ namespace Google.Cloud.Bigtable.V2
         {
             ReadRowsRequest newReadRowsRequest = new ReadRowsRequest
             {
-                // Transfer TableName
-                TableNameAsTableName = _originalRequest.TableNameAsTableName,
-                // Transfer RowFilter.
+                TableName = _originalRequest.TableName,
                 Filter = _originalRequest.Filter,
+                AppProfileId = _originalRequest.AppProfileId,
+
                 // Remove received rowKeys form Rows.
                 Rows = FilterRows()
             };
@@ -66,7 +60,7 @@ namespace Google.Cloud.Bigtable.V2
             // If the row limit is set, update it.
             if (_originalRequest.RowsLimit != 0)
             {
-                long rowsRemaining = _originalRequest.RowsLimit - RowCount;
+                long rowsRemaining = _originalRequest.RowsLimit - _rowsReadSoFar;
                 Debug.Assert(rowsRemaining > 0, "The remaining number of rows must be greater than 0.");
                 newReadRowsRequest.RowsLimit = Math.Max(1, rowsRemaining);
             }
@@ -82,7 +76,7 @@ namespace Google.Cloud.Bigtable.V2
         private RowSet FilterRows()
         {
             RowSet originalRows = _originalRequest.Rows;
-            
+
             if (LastFoundKey.Value.IsEmpty)
             {
                 return originalRows;
@@ -90,7 +84,7 @@ namespace Google.Cloud.Bigtable.V2
 
             RowSet newRowSet = new RowSet
             {
-                RowKeys = {originalRows.RowKeys.Where(key => !StartKeyIsAlreadyRead(key))}
+                RowKeys = { originalRows.RowKeys.Where(key => !StartKeyIsAlreadyRead(key)) }
             };
 
             foreach (RowRange rowRange in originalRows.RowRanges)
@@ -103,7 +97,7 @@ namespace Google.Cloud.Bigtable.V2
                 {
                     continue;
                 }
-                
+
                 RowRange.StartKeyOneofCase startKeyOneofCase = rowRange.StartKeyCase;
                 RowRange newRange = rowRange;
                 if (startKeyOneofCase == RowRange.StartKeyOneofCase.StartKeyClosed &&
@@ -120,11 +114,11 @@ namespace Google.Cloud.Bigtable.V2
 
             return newRowSet;
         }
-        
+
         private bool StartKeyIsAlreadyRead(BigtableByteString startKey) =>
             !LastFoundKey.Value.IsEmpty && (startKey.Value.IsEmpty || startKey <= LastFoundKey);
 
-        private bool EndKeyIsAlreadyRead(BigtableByteString endKey) => 
+        private bool EndKeyIsAlreadyRead(BigtableByteString endKey) =>
             !LastFoundKey.Value.IsEmpty && (!endKey.Value.IsEmpty && endKey <= LastFoundKey);
     }
 }
