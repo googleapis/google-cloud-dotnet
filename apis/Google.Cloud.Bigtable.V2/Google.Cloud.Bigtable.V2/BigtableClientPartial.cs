@@ -1057,12 +1057,25 @@ namespace Google.Cloud.Bigtable.V2
         public override BigtableClient WithAppProfileId(string appProfileId) =>
             new BigtableClientImpl(_clients, appProfileId);
 
+        internal IClock Clock => UnderlyingClientSettings?.Clock ?? SystemClock.Instance;
+        internal IScheduler Scheduler => UnderlyingClientSettings?.Scheduler ?? SystemScheduler.Instance;
+
+        internal BigtableServiceApiClient.ReadRowsStream ReadRowsInternal(ReadRowsRequest request, CallSettings callSettings) =>
+            GetUnderlyingClient().ReadRows(request, callSettings);
+
+        // TODO: These retry approaches don't retry if the initial request fails. We should probably handle these cases as well.
+
         private ReadRowsStream ConvertResult(
             ReadRowsRequest request,
             CallSettings callSettings,
             BigtableServiceApiClient.ReadRowsStream result)
         {
-            return new ReadRowsStream(result);
+            var defaultSettings = UnderlyingClientSettings ?? new BigtableServiceApiSettings();
+            var effectiveCallSettings = defaultSettings.ReadRowsSettings.MergedWith(callSettings);
+            // TODO(mdour): Do we want to try to support per-call retry settings?
+            var effectiveRetrySettings = defaultSettings.ReadRowsRetrySettings;
+
+            return new ReadRowsStream(this, request, effectiveCallSettings, effectiveRetrySettings, result);
         }
 
         private async Task<MutateRowsResponse> ConvertResult(
@@ -1089,9 +1102,8 @@ namespace Google.Cloud.Bigtable.V2
                         currentStream = GetUnderlyingClient().MutateRows(requestManager.RetryRequest, callSettings);
                         return await ProcessCurrentStream().ConfigureAwait(false) != ProcessingStatus.Retryable;
                     },
-                    // TODO: Do we want to get these from the underlying stream somehow? The underlying stream may change with each retry though.
-                    SystemClock.Instance,
-                    SystemScheduler.Instance,
+                    Clock,
+                    Scheduler,
                     effectiveCallSettings,
                     effectiveRetrySettings).ConfigureAwait(false);
             }
