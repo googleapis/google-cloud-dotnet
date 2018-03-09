@@ -6,7 +6,7 @@
 declare -r REPO_ROOT=$(realpath $(dirname ${BASH_SOURCE}))
 declare -r TOOL_PACKAGES=$REPO_ROOT/packages
 
-declare -r DOCFX_VERSION=2.28.2
+declare -r DOCFX_VERSION=2.32.1
 declare -r DOTCOVER_VERSION=2017.1.20170613.162720 
 declare -r REPORTGENERATOR_VERSION=2.4.5.0
 declare -r PROTOC_VERSION=3.5.1
@@ -61,6 +61,14 @@ install_grpc() {
 install_docfx() {
   if [[ ! -f $DOCFX ]]
   then
+    # Not ideal, but only part of the temporary fix later...
+    if [[ "$VSINSTALLDIR" == "" ]]
+    then
+      echo "Unable to detect VS installation directory when installing docfx."
+      echo "Rerun from git bash launched from a VS 2017 command prompt, just once!"
+      exit 1
+    fi
+
     (echo "Fetching docfx v${DOCFX_VERSION}";
      mkdir -p $TOOL_PACKAGES;
      cd $TOOL_PACKAGES;
@@ -68,6 +76,9 @@ install_docfx() {
      cd docfx.$DOCFX_VERSION;
      curl -sSL https://github.com/dotnet/docfx/releases/download/v${DOCFX_VERSION}/docfx.zip -o tmp.zip;
      unzip -q tmp.zip;
-     rm tmp.zip)
-  fi
+     rm tmp.zip;
+     # Temporary fix for https://github.com/GoogleCloudPlatform/google-cloud-dotnet/issues/1969
+     cp -f "$VSINSTALLDIR"/MSBuild/15.0/Bin/Microsoft.Build*.dll .
+     )
+  fi  
 }
