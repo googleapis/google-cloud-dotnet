@@ -22,7 +22,6 @@ using System.IO;
 using System.Net.Http;
 using System.Threading.Tasks;
 using Microsoft.AspNetCore.Mvc;
-using Microsoft.AspNetCore.Hosting;
 using Microsoft.AspNetCore.Http;
 
 namespace Google.Cloud.Diagnostics.AspNetCore.Snippets
@@ -49,6 +48,15 @@ namespace Google.Cloud.Diagnostics.AspNetCore.Snippets
         {
             // Use before handling any requests to ensure all unhandled exceptions are reported.
             app.UseGoogleExceptionLogging();
+
+            app.UseStaticFiles();
+
+            app.UseMvc(routes =>
+            {
+                routes.MapRoute(
+                    name: "default",
+                    template: "{controller=Home}/{action=Index}/{id?}");
+            });
         }
         // End sample
 
@@ -120,6 +128,15 @@ namespace Google.Cloud.Diagnostics.AspNetCore.Snippets
                 // Use at the start of the request pipeline to ensure the entire
                 // request is traced.
                 app.UseGoogleTrace();
+
+                app.UseStaticFiles();
+
+                app.UseMvc(routes =>
+                {
+                    routes.MapRoute(
+                        name: "default",
+                        template: "{controller=Home}/{action=Index}/{id?}");
+                });
             }
             // End sample
 
