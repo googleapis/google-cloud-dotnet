@@ -20,12 +20,12 @@ using System.Linq;
 
 namespace Google.Cloud.Bigtable.V2.Tests
 {
-    public static class MutateRowsStreamUtilities
+    public static class Utilities
     {
-        public static MutateRowsResponse.Types.Entry CreateEntry(int index, Code code) =>
-            CreateEntry(index, new Status { Code = (int)code });
+        public static MutateRowsResponse.Types.Entry CreateMutateRowsResponseEntry(int index, Code code) =>
+            CreateMutateRowsResponseEntry(index, new Status { Code = (int)code });
 
-        public static MutateRowsResponse.Types.Entry CreateEntry(int index, Status status) =>
+        public static MutateRowsResponse.Types.Entry CreateMutateRowsResponseEntry(int index, Status status) =>
             new MutateRowsResponse.Types.Entry { Index = index, Status = status };
 
         public static BigtableClient CreateClientForMutateRowsRetries(

@@ -86,7 +86,7 @@ namespace Google.Cloud.Bigtable.V2.Tests
         private static MutateRowsResponse CreateResponse(params Rpc.Status[] statuses) =>
             new MutateRowsResponse
             {
-                Entries = { statuses.Select((status, i) => MutateRowsStreamUtilities.CreateEntry(i, status)) }
+                Entries = { statuses.Select((status, i) => Utilities.CreateMutateRowsResponseEntry(i, status)) }
             };
 
         /// <summary>
