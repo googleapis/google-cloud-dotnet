@@ -77,10 +77,9 @@ namespace Google.Cloud.Firestore
             {
                 return ServerTimestamp;
             }
-            if (property.GetCustomAttribute<DeletedFieldAttribute>() != null)
-            {
-                return Delete;
-            }
+            // (No attribute for deleted fields)
+
+            // No attribute detected.
             return null;
         }
 

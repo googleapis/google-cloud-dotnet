@@ -39,8 +39,9 @@ namespace Google.Cloud.Firestore.Tests
             // Sentinel values
             { new { name = "Jon", lastUpdate = FieldValue.ServerTimestamp, score = FieldValue.Delete },
                 new Value { MapValue = new MapValue { Fields = { { "name", new Value { StringValue = "Jon" } }, { "lastUpdate", SentinelValue.ServerTimestamp.ToProtoValue() }, { "score", SentinelValue.Delete.ToProtoValue() } } } } },
+            // There's no attribute for deleted fields, so the score is just propagated.
             { new SentinelModel { Name = "Jon", LastUpdate = new Timestamp(99, 99), Score = 10 },
-                new Value { MapValue = new MapValue { Fields = { { "name", new Value { StringValue = "Jon" } }, { "lastUpdate", SentinelValue.ServerTimestamp.ToProtoValue() }, { "score", SentinelValue.Delete.ToProtoValue() } } } } },
+                new Value { MapValue = new MapValue { Fields = { { "name", new Value { StringValue = "Jon" } }, { "lastUpdate", SentinelValue.ServerTimestamp.ToProtoValue() }, { "score", new Value { IntegerValue = 10L } } } } } },
         };
 
         public static IEnumerable<object[]> SerializeMapTestData { get; } = new List<object[]>
@@ -60,8 +61,9 @@ namespace Google.Cloud.Firestore.Tests
             // Sentinel values
             { new { name = "Jon", lastUpdate = FieldValue.ServerTimestamp, score = FieldValue.Delete },
                 new Dictionary<string, Value> { { "name", new Value { StringValue = "Jon" } }, { "lastUpdate", SentinelValue.ServerTimestamp.ToProtoValue() }, { "score", SentinelValue.Delete.ToProtoValue() } } },
+            // There's no attribute for deleted fields, so the score is just propagated.
             { new SentinelModel { Name = "Jon", LastUpdate = new Timestamp(99, 99), Score = 10 },
-                new Dictionary<string, Value> { { "name", new Value { StringValue = "Jon" } }, { "lastUpdate", SentinelValue.ServerTimestamp.ToProtoValue() }, { "score", SentinelValue.Delete.ToProtoValue() } } },
+                new Dictionary<string, Value> { { "name", new Value { StringValue = "Jon" } }, { "lastUpdate", SentinelValue.ServerTimestamp.ToProtoValue() }, { "score", new Value { IntegerValue = 10L } } } },
         };
 
         [Theory]
@@ -140,7 +142,7 @@ namespace Google.Cloud.Firestore.Tests
             [FirestoreProperty("lastUpdate"), ServerTimestamp]
             public Timestamp LastUpdate { get; set; }
 
-            [FirestoreProperty("score"), DeletedField]
+            [FirestoreProperty("score")]
             public int Score { get; set; }
         }
     }
