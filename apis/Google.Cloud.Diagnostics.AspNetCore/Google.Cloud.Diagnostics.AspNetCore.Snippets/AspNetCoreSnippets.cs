@@ -49,6 +49,15 @@ namespace Google.Cloud.Diagnostics.AspNetCore.Snippets
         {
             // Use before handling any requests to ensure all unhandled exceptions are reported.
             app.UseGoogleExceptionLogging();
+
+            app.UseStaticFiles();
+
+            app.UseMvc(routes =>
+            {
+                routes.MapRoute(
+                    name: "default",
+                    template: "{controller=Home}/{action=Index}/{id?}");
+            });
         }
         // End sample
 
@@ -120,6 +129,15 @@ namespace Google.Cloud.Diagnostics.AspNetCore.Snippets
                 // Use at the start of the request pipeline to ensure the entire
                 // request is traced.
                 app.UseGoogleTrace();
+
+                app.UseStaticFiles();
+
+                app.UseMvc(routes =>
+                {
+                    routes.MapRoute(
+                        name: "default",
+                        template: "{controller=Home}/{action=Index}/{id?}");
+                });
             }
             // End sample
 
