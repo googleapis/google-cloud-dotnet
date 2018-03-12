@@ -56,3 +56,8 @@ the request and want to put work into it.
 - Issue: [#110](https://github.com/GoogleCloudPlatform/google-cloud-dotnet/issues/110)
 - Status: Ideally, protoc should do this. Massive work item, no
   funding right now.
+
+## Better handling of compressed Storage objects when compression is disabled
+
+- Issue: [#1784](https://github.com/GoogleCloudPlatform/google-cloud-dotnet/issues/1784)
+- Status: Both proposed options need server changes in some form or other.
