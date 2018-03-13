@@ -1,0 +1,174 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="4.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProjectGuid>{A55D799F-D607-4355-973B-1E7032903E98}</ProjectGuid>
+    <OutputType>Library</OutputType>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <RootNamespace>BreakingChangesDetector.UnitTests</RootNamespace>
+    <AssemblyName>BreakingChangesDetector.UnitTests</AssemblyName>
+    <TargetFrameworkVersion>v4.5</TargetFrameworkVersion>
+    <FileAlignment>512</FileAlignment>
+    <ProjectTypeGuids>{3AC096D0-A1C2-E12C-1390-A8335801FDAB};{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}</ProjectTypeGuids>
+    <VisualStudioVersion Condition="'$(VisualStudioVersion)' == ''">10.0</VisualStudioVersion>
+    <VSToolsPath Condition="'$(VSToolsPath)' == ''">$(MSBuildExtensionsPath32)\Microsoft\VisualStudio\v$(VisualStudioVersion)</VSToolsPath>
+    <ReferencePath>$(ProgramFiles)\Common Files\microsoft shared\VSTT\$(VisualStudioVersion)\UITestExtensionPackages</ReferencePath>
+    <IsCodedUITest>False</IsCodedUITest>
+    <TestProjectType>UnitTest</TestProjectType>
+    <SccProjectName>SAK</SccProjectName>
+    <SccLocalPath>SAK</SccLocalPath>
+    <SccAuxPath>SAK</SccAuxPath>
+    <SccProvider>SAK</SccProvider>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+    <AllowUnsafeBlocks>true</AllowUnsafeBlocks>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+    <AllowUnsafeBlocks>true</AllowUnsafeBlocks>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="System" />
+  </ItemGroup>
+  <Choose>
+    <When Condition="('$(VisualStudioVersion)' == '10.0' or '$(VisualStudioVersion)' == '') and '$(TargetFrameworkVersion)' == 'v3.5'">
+      <ItemGroup>
+        <Reference Include="Microsoft.VisualStudio.QualityTools.UnitTestFramework, Version=10.1.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a, processorArchitecture=MSIL" />
+      </ItemGroup>
+    </When>
+    <Otherwise>
+      <ItemGroup>
+        <Reference Include="Microsoft.VisualStudio.QualityTools.UnitTestFramework" />
+      </ItemGroup>
+    </Otherwise>
+  </Choose>
+  <ItemGroup>
+    <Compile Include="BreakingChangesTests\AddedAbstractMemberTests.cs" />
+    <Compile Include="BreakingChangesTests\AddedBaseInterfaceTests.cs" />
+    <Compile Include="BreakingChangesTests\ChangedAccessibilityFromPublicToProtectedTests.cs" />
+    <Compile Include="BreakingChangesTests\ChangedMemberToAbstractTests.cs" />
+    <Compile Include="BreakingChangesTests\ChangedMemberToNonVirtualTests.cs" />
+    <Compile Include="BreakingChangesTests\RemovedImplementedInterfaceTests.cs" />
+    <Compile Include="BreakingChangesTests\RemovedMemberTests.cs" />
+    <Compile Include="BreakingChangesTests\RemovedPropertyAccessorsTests.cs" />
+    <Compile Include="BreakingChangesTests\TestTypes.cs" />
+    <Compile Include="BreakingChangesTests\RemovedRootTypeTests.cs" />
+    <Compile Include="BreakingChangesTests\IncompatibleClassHierarchyTests.cs" />
+    <Compile Include="BreakingChangesTests\SealedClassTests.cs" />
+    <Compile Include="BreakingChangesTests\ChangedGenericTypeParameterConstraintsTests.cs" />
+    <Compile Include="BreakingChangesTests\ChangedGenericTypeParameterVarianceTests.cs" />
+    <Compile Include="BreakingChangesTests\AddedInterfaceMemberTests.cs" />
+    <Compile Include="BreakingChangesTests\ChangedParameterCountTests.cs" />
+    <Compile Include="BreakingChangesTests\ChangedParameterTypeTests.cs" />
+    <Compile Include="BreakingChangesTests\ChangedParameterNameTests.cs" />
+    <Compile Include="BreakingChangesTests\ChangedParameterModifierTests.cs" />
+    <Compile Include="BreakingChangesTests\ChangedMemberTypeTests.cs" />
+    <Compile Include="BreakingChangesTests\ChangedStaticOrInstanceStatusTests.cs" />
+    <Compile Include="BreakingChangesTests\ChangedFieldToReadOnlyTests.cs" />
+    <Compile Include="BreakingChangesTests\SealedMemberTests.cs" />
+    <Compile Include="BreakingChangesTests\ChangedClassToAbstractTests.cs" />
+    <Compile Include="BreakingChangesTests\RemovedOverrideOfAbstractMemberTests.cs" />
+    <Compile Include="BreakingChangesTests\RemovedExtensionMethodModifierTests.cs" />
+    <Compile Include="BreakingChangesTests\ChangedClassToStaticTests.cs" />
+    <Compile Include="BreakingChangesTests\ChangedParameterDefaultValueTests.cs" />
+    <Compile Include="BreakingChangesTests\MiscellaneousTests.cs" />
+    <Compile Include="MetadataTypesTests\TestTypes.cs" />
+    <Compile Include="MetadataTypesTests\ParameterCollectionTests.cs" />
+    <Compile Include="MetadataTypesTests\DefaultValueInfoTests.cs" />
+    <Compile Include="MetadataTypesTests\AssignabilityTests.cs" />
+    <Compile Include="MetadataTypesTests\TypeDisplayNameTests.cs" />
+    <Compile Include="MetadataTypesTests\ConstructedGenericTypeDataTests.cs" />
+    <Compile Include="MetadataTypesTests\ArrayTypeDataTests.cs" />
+    <Compile Include="SerializationTests\BinarySerializationV1Tests.cs" />
+    <Compile Include="TestUtilities.cs" />
+    <Compile Include="MetadataTypesTests\TypeDefinitionDataTests.cs" />
+    <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="MetadataTypesTests\ConstructorDataTests.cs" />
+    <Compile Include="MetadataTypesTests\ConstantDataTests.cs" />
+    <Compile Include="MetadataTypesTests\EventDataTests.cs" />
+    <Compile Include="MetadataTypesTests\FieldDataTests.cs" />
+    <Compile Include="MetadataTypesTests\GenericTypeParameterDataTests.cs" />
+    <Compile Include="MetadataTypesTests\IndexerDataTests.cs" />
+    <Compile Include="MetadataTypesTests\PropertyDataTests.cs" />
+    <Compile Include="MetadataTypesTests\MethodDataTests.cs" />
+    <Compile Include="MetadataTypesTests\OperatorDataTests.cs" />
+    <Compile Include="MetadataTypesTests\ParameterDataTests.cs" />
+  </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\BreakingChangesDetector\BreakingChangesDetector.csproj">
+      <Project>{b8342ec8-5427-4b4e-a4b8-378e9789c9e1}</Project>
+      <Name>BreakingChangesDetector</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\Mono.Cecil\Mono.Cecil.csproj">
+      <Project>{d68133bd-1e63-496e-9ede-4fbdbf77b486}</Project>
+      <Name>Mono.Cecil</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\Mono.Cecil\rocks\Mono.Cecil.Rocks.csproj">
+      <Project>{fbc6dd59-d09d-499c-b03c-99c1c78ff2ac}</Project>
+      <Name>Mono.Cecil.Rocks</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\UnitTestComparisonProjects\NamespaceRenamedAttributeNew\NamespaceRenamedAttributeNew.csproj">
+      <Project>{3b45399e-5e0b-4978-97ab-b8d86a3acf9c}</Project>
+      <Name>NamespaceRenamedAttributeNew</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\UnitTestComparisonProjects\NamespaceRenamedAttributeOld\NamespaceRenamedAttributeOld.csproj">
+      <Project>{36adda7a-a1d4-47d6-b866-3bf9c85ea63c}</Project>
+      <Name>NamespaceRenamedAttributeOld</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\UnitTestComparisonProjects\TypeForwardingNew1\TypeForwardingNew1.csproj">
+      <Project>{5f087f60-66b6-4289-a1e7-7fa17b628b78}</Project>
+      <Name>TypeForwardingNew1</Name>
+      <Aliases>global,newer</Aliases>
+    </ProjectReference>
+    <ProjectReference Include="..\UnitTestComparisonProjects\TypeForwardingNew2\TypeForwardingNew2.csproj">
+      <Project>{427730fe-a063-4143-9305-b98aa211014f}</Project>
+      <Name>TypeForwardingNew2</Name>
+      <Aliases>global,newer</Aliases>
+    </ProjectReference>
+    <ProjectReference Include="..\UnitTestComparisonProjects\TypeForwardingOld\TypeForwardingOld.csproj">
+      <Project>{6c4f5848-8d12-4c46-a22d-006dd1a49265}</Project>
+      <Name>TypeForwardingOld</Name>
+      <Aliases>global,older</Aliases>
+    </ProjectReference>
+  </ItemGroup>
+  <Choose>
+    <When Condition="'$(VisualStudioVersion)' == '10.0' And '$(IsCodedUITest)' == 'True'">
+      <ItemGroup>
+        <Reference Include="Microsoft.VisualStudio.QualityTools.CodedUITestFramework, Version=10.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a, processorArchitecture=MSIL">
+          <Private>False</Private>
+        </Reference>
+        <Reference Include="Microsoft.VisualStudio.TestTools.UITest.Common, Version=10.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a, processorArchitecture=MSIL">
+          <Private>False</Private>
+        </Reference>
+        <Reference Include="Microsoft.VisualStudio.TestTools.UITest.Extension, Version=10.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a, processorArchitecture=MSIL">
+          <Private>False</Private>
+        </Reference>
+        <Reference Include="Microsoft.VisualStudio.TestTools.UITesting, Version=10.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a, processorArchitecture=MSIL">
+          <Private>False</Private>
+        </Reference>
+      </ItemGroup>
+    </When>
+  </Choose>
+  <Import Project="$(VSToolsPath)\TeamTest\Microsoft.TestTools.targets" Condition="Exists('$(VSToolsPath)\TeamTest\Microsoft.TestTools.targets')" />
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+  <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
+       Other similar extension points exist, see Microsoft.Common.targets.
+  <Target Name="BeforeBuild">
+  </Target>
+  <Target Name="AfterBuild">
+  </Target>
+  -->
+</Project>
