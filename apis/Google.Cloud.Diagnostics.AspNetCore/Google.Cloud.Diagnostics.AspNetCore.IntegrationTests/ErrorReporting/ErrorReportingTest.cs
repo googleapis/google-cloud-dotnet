@@ -168,20 +168,19 @@ namespace Google.Cloud.Diagnostics.AspNetCore.IntegrationTests
                     options.ProjectId = ProjectId;
                     options.ServiceName = Service;
                     options.Version = Version;
-                });
-                services.AddMvc();
+                })
+                .AddMvc();
             }
 
             public void Configure(IApplicationBuilder app)
             {
-                app.UseGoogleExceptionLogging();
-
-                app.UseMvc(routes =>
-                {
-                    routes.MapRoute(
-                        name: "default",
-                        template: "{controller=ErrorReporting}/{action=Index}/{id}");
-                });
+                app.UseGoogleExceptionLogging()
+                    .UseMvc(routes =>
+                    {
+                        routes.MapRoute(
+                            name: "default",
+                            template: "{controller=ErrorReporting}/{action=Index}/{id}");
+                    });
             }
         }
     }

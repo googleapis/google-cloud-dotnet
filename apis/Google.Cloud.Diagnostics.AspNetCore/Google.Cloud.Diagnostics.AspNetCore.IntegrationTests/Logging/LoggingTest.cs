@@ -246,24 +246,24 @@ namespace Google.Cloud.Diagnostics.AspNetCore.IntegrationTests
         public void ConfigureServices(IServiceCollection services)
         {
             services.TryAddSingleton<IHttpContextAccessor, HttpContextAccessor>();
-            services.AddMvc();
             services.AddGoogleTrace(options => 
             {
                 options.ProjectId = ProjectId;
                 // Don't actually trace anything.
                 options.Options = TraceOptions.Create(qpsSampleRate: 0.00000001);
             });
+            services.AddMvc();
         }
 
         public void SetupRoutes(IApplicationBuilder app)
         {
-            app.UseGoogleTrace();
-            app.UseMvc(routes =>
-            {
-                routes.MapRoute(
-                    name: "default",
-                    template: "{controller=Main}/{action=Index}/{id}");
-            });
+            app.UseGoogleTrace()
+                .UseMvc(routes =>
+                {
+                    routes.MapRoute(
+                        name: "default",
+                        template: "{controller=Main}/{action=Index}/{id}");
+                });
         }
     }
 

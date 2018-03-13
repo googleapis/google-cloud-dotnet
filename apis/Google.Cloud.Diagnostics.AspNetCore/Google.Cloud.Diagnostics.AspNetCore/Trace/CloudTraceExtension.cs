@@ -79,11 +79,12 @@ namespace Google.Cloud.Diagnostics.AspNetCore
         /// The time taken and metadata will be sent to the Stackdriver Trace API. To be
         /// used with <see cref="AddGoogleTrace"/>,
         /// </summary>
-        public static void UseGoogleTrace(this IApplicationBuilder app)
+        public static IApplicationBuilder UseGoogleTrace(this IApplicationBuilder app)
         {
             GaxPreconditions.CheckNotNull(app, nameof(app));
             app.UseMiddleware<CloudTraceMiddleware>();
             HttpContextAccessorWrapper.Accessor = app.ApplicationServices.GetService<IHttpContextAccessor>();
+            return app;
         }
 
         /// <summary>
@@ -98,7 +99,7 @@ namespace Google.Cloud.Diagnostics.AspNetCore
         /// with both exceptions will be thrown.  Otherwise only the exception from the <see cref="RequestDelegate"/>
         /// will be thrown.
         /// </remarks>
-        public static void AddGoogleTrace(
+        public static IServiceCollection AddGoogleTrace(
             this IServiceCollection services, Action<TraceServiceOptions> setupAction)
         {
             GaxPreconditions.CheckNotNull(services, nameof(services));
@@ -122,7 +123,7 @@ namespace Google.Cloud.Diagnostics.AspNetCore
 
             services.AddSingleton(CreateManagedTracer);
             services.AddSingleton(CreateTraceHeaderPropagatingHandler);
-            services.AddSingleton(traceFallbackPredicate);
+            return services.AddSingleton(traceFallbackPredicate);
         }
 
         /// <summary>
