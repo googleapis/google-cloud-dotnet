@@ -36,26 +36,6 @@
     <WarningLevel>4</WarningLevel>
   </PropertyGroup>
   <ItemGroup>
-    <Reference Include="InfragisticsWPF4.Documents.Core.v13.2, Version=13.2.0.9000, Culture=neutral, PublicKeyToken=7dd5c3163f2cd0cb, processorArchitecture=MSIL">
-      <SpecificVersion>False</SpecificVersion>
-      <HintPath>..\..\..\2013.2\Source\Build\InfragisticsWPF4.Documents.Core.v13.2.dll</HintPath>
-    </Reference>
-    <Reference Include="InfragisticsWPF4.Documents.RichTextDocument.v13.2, Version=13.2.0.9000, Culture=neutral, PublicKeyToken=7dd5c3163f2cd0cb, processorArchitecture=MSIL">
-      <SpecificVersion>False</SpecificVersion>
-      <HintPath>..\..\..\2013.2\Source\Build\InfragisticsWPF4.Documents.RichTextDocument.v13.2.dll</HintPath>
-    </Reference>
-    <Reference Include="InfragisticsWPF4.Documents.RichTextDocument.Word.v13.2, Version=13.2.0.9000, Culture=neutral, PublicKeyToken=7dd5c3163f2cd0cb, processorArchitecture=MSIL">
-      <SpecificVersion>False</SpecificVersion>
-      <HintPath>..\..\..\2013.2\Source\Build\InfragisticsWPF4.Documents.RichTextDocument.Word.v13.2.dll</HintPath>
-    </Reference>
-    <Reference Include="InfragisticsWPF4.Undo.v13.2, Version=13.2.0.9000, Culture=neutral, PublicKeyToken=7dd5c3163f2cd0cb, processorArchitecture=MSIL">
-      <SpecificVersion>False</SpecificVersion>
-      <HintPath>..\..\..\2013.2\Source\Build\InfragisticsWPF4.Undo.v13.2.dll</HintPath>
-    </Reference>
-    <Reference Include="InfragisticsWPF4.v13.2, Version=13.2.0.9000, Culture=neutral, PublicKeyToken=7dd5c3163f2cd0cb, processorArchitecture=MSIL">
-      <SpecificVersion>False</SpecificVersion>
-      <HintPath>..\..\..\2013.2\Source\Build\InfragisticsWPF4.v13.2.dll</HintPath>
-    </Reference>
     <Reference Include="System" />
     <Reference Include="System.Core" />
     <Reference Include="System.Xml.Linq" />
@@ -71,7 +51,6 @@
     <Compile Include="Attributes\VersionComparisonNameAttribute.cs" />
     <Compile Include="BreakingChanges\BreakingChange.cs" />
     <Compile Include="BreakingChanges\CompareItemsContext.cs" />
-    <Compile Include="BreakingChanges\Formatting\BreakingChangeRichTextDocumentFormatter.cs" />
     <Compile Include="BreakingChanges\Definitions\AddedBaseInterfaceDefinition.cs" />
     <Compile Include="BreakingChanges\Definitions\BreakingChangeDefinitionBase.cs" />
     <Compile Include="BreakingChanges\Definitions\ChangedAccessibilityFromPublicToProtectedDefinition.cs" />
