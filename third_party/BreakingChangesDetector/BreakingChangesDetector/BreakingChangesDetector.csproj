@@ -1,0 +1,162 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="4.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <Import Project="$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props" Condition="Exists('$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props')" />
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProjectGuid>{B8342EC8-5427-4B4E-A4B8-378E9789C9E1}</ProjectGuid>
+    <OutputType>Library</OutputType>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <RootNamespace>BreakingChangesDetector</RootNamespace>
+    <AssemblyName>BreakingChangesDetector</AssemblyName>
+    <TargetFrameworkVersion>v4.5</TargetFrameworkVersion>
+    <FileAlignment>512</FileAlignment>
+    <SccProjectName>SAK</SccProjectName>
+    <SccLocalPath>SAK</SccLocalPath>
+    <SccAuxPath>SAK</SccAuxPath>
+    <SccProvider>SAK</SccProvider>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+    <CodeAnalysisRuleSet>BasicDesignGuidelineRules.ruleset</CodeAnalysisRuleSet>
+    <DocumentationFile>bin\Debug\BreakingChangesDetector.XML</DocumentationFile>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="InfragisticsWPF4.Documents.Core.v13.2, Version=13.2.0.9000, Culture=neutral, PublicKeyToken=7dd5c3163f2cd0cb, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\..\..\2013.2\Source\Build\InfragisticsWPF4.Documents.Core.v13.2.dll</HintPath>
+    </Reference>
+    <Reference Include="InfragisticsWPF4.Documents.RichTextDocument.v13.2, Version=13.2.0.9000, Culture=neutral, PublicKeyToken=7dd5c3163f2cd0cb, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\..\..\2013.2\Source\Build\InfragisticsWPF4.Documents.RichTextDocument.v13.2.dll</HintPath>
+    </Reference>
+    <Reference Include="InfragisticsWPF4.Documents.RichTextDocument.Word.v13.2, Version=13.2.0.9000, Culture=neutral, PublicKeyToken=7dd5c3163f2cd0cb, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\..\..\2013.2\Source\Build\InfragisticsWPF4.Documents.RichTextDocument.Word.v13.2.dll</HintPath>
+    </Reference>
+    <Reference Include="InfragisticsWPF4.Undo.v13.2, Version=13.2.0.9000, Culture=neutral, PublicKeyToken=7dd5c3163f2cd0cb, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\..\..\2013.2\Source\Build\InfragisticsWPF4.Undo.v13.2.dll</HintPath>
+    </Reference>
+    <Reference Include="InfragisticsWPF4.v13.2, Version=13.2.0.9000, Culture=neutral, PublicKeyToken=7dd5c3163f2cd0cb, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\..\..\2013.2\Source\Build\InfragisticsWPF4.v13.2.dll</HintPath>
+    </Reference>
+    <Reference Include="System" />
+    <Reference Include="System.Core" />
+    <Reference Include="System.Xml.Linq" />
+    <Reference Include="System.Data.DataSetExtensions" />
+    <Reference Include="Microsoft.CSharp" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Xml" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="AssemblyDefinitionEqualityComparer.cs" />
+    <Compile Include="Attributes\NamespaceRenamedAttribute.cs" />
+    <Compile Include="Attributes\TypeRenamedAttribute.cs" />
+    <Compile Include="Attributes\VersionComparisonNameAttribute.cs" />
+    <Compile Include="BreakingChanges\BreakingChange.cs" />
+    <Compile Include="BreakingChanges\CompareItemsContext.cs" />
+    <Compile Include="BreakingChanges\Formatting\BreakingChangeRichTextDocumentFormatter.cs" />
+    <Compile Include="BreakingChanges\Definitions\AddedBaseInterfaceDefinition.cs" />
+    <Compile Include="BreakingChanges\Definitions\BreakingChangeDefinitionBase.cs" />
+    <Compile Include="BreakingChanges\Definitions\ChangedAccessibilityFromPublicToProtectedDefinition.cs" />
+    <Compile Include="BreakingChanges\Definitions\ChangedClassToAbstractDefinition.cs" />
+    <Compile Include="BreakingChanges\Definitions\ChangedClassToStaticDefinition.cs" />
+    <Compile Include="BreakingChanges\Definitions\ChangedFieldToReadOnlyDefinition.cs" />
+    <Compile Include="BreakingChanges\Definitions\ChangedGenericTypeParameterConstraintsDefinition.cs" />
+    <Compile Include="BreakingChanges\Definitions\ChangedGenericTypeParameterVarianceDefinition.cs" />
+    <Compile Include="BreakingChanges\Definitions\ChangedMemberToAbstractDefinition.cs" />
+    <Compile Include="BreakingChanges\Definitions\ChangedMemberToNonVirtualDefinition.cs" />
+    <Compile Include="BreakingChanges\Definitions\ChangedParameterDefaultValueDefinition.cs" />
+    <Compile Include="BreakingChanges\Definitions\ChangedParameterCountDefinition.cs" />
+    <Compile Include="BreakingChanges\Definitions\ChangedParameterModifierDefinition.cs" />
+    <Compile Include="BreakingChanges\Definitions\ChangedParameterNameDefinition.cs" />
+    <Compile Include="BreakingChanges\Definitions\ChangedParameterTypeDefinition.cs" />
+    <Compile Include="BreakingChanges\Definitions\ChangedMemberTypeDefinition.cs" />
+    <Compile Include="BreakingChanges\Definitions\ChangedStaticOrInstanceStatusDefinition.cs" />
+    <Compile Include="BreakingChanges\Definitions\IncompatibleClassHierarchyDefinition.cs" />
+    <Compile Include="BreakingChanges\Definitions\RemovedExtensionMethodModifierDefinition.cs" />
+    <Compile Include="BreakingChanges\Definitions\RemovedImplementedInterfaceDefinition.cs" />
+    <Compile Include="BreakingChanges\Definitions\RemovedPropertyAccessorsDefinition.cs" />
+    <Compile Include="BreakingChanges\Definitions\SealedClassDefinition.cs" />
+    <Compile Include="BreakingChanges\Formatting\BreakingChangeStringFormatter.cs" />
+    <Compile Include="BreakingChanges\Formatting\FormatItem.cs" />
+    <Compile Include="BreakingChanges\MetadataComparer.cs" />
+    <Compile Include="BreakingChanges\Enums.cs" />
+    <Compile Include="BreakingChanges\Formatting\IBreakingChangeFormatter.cs" />
+    <Compile Include="MetadataItems\AssemblyData.cs" />
+    <Compile Include="MetadataItems\AssemblyFamily.cs" />
+    <Compile Include="MetadataItems\GenericTypeArgumentCollection.cs" />
+    <Compile Include="MetadataItems\GenericTypeParameterCollection.cs" />
+    <Compile Include="MetadataItems\ImplementedInterfacesCollection.cs" />
+    <Compile Include="MetadataItems\IsAssignableFromContext.cs" />
+    <Compile Include="MetadataItems\Members\ConstructorData.cs" />
+    <Compile Include="MetadataItems\Members\ConstantData.cs" />
+    <Compile Include="MetadataItems\Enums.cs" />
+    <Compile Include="MetadataItems\Members\EventData.cs" />
+    <Compile Include="MetadataItems\Members\FieldData.cs" />
+    <Compile Include="MetadataItems\MethodSignature.cs" />
+    <Compile Include="MetadataItems\Types\ArrayTypeData.cs" />
+    <Compile Include="MetadataItems\Types\ConstructedGenericTypeData.cs" />
+    <Compile Include="MetadataItems\Types\DeclaringTypeData.cs" />
+    <Compile Include="MetadataItems\Types\GenericTypeParameterData.cs" />
+    <Compile Include="MetadataItems\IGenericItem.cs" />
+    <Compile Include="MetadataItems\Members\IndexerData.cs" />
+    <Compile Include="MetadataItems\IParameterizedItem.cs" />
+    <Compile Include="MetadataItems\ITypedItem.cs" />
+    <Compile Include="MetadataItems\Members\MemberDataBase.cs" />
+    <Compile Include="MetadataItems\MetadataItemBase.cs" />
+    <Compile Include="MetadataItems\MetadataItemVisitor.cs" />
+    <Compile Include="MetadataItems\Members\MethodData.cs" />
+    <Compile Include="MetadataItems\Members\MethodDataBase.cs" />
+    <Compile Include="MetadataItems\Members\OperatorData.cs" />
+    <Compile Include="MetadataItems\ParameterCollection.cs" />
+    <Compile Include="MetadataItems\ParameterData.cs" />
+    <Compile Include="MetadataItems\Members\PropertyData.cs" />
+    <Compile Include="MetadataItems\Types\PointerTypeData.cs" />
+    <Compile Include="MetadataItems\Types\TypeDataSequence.cs" />
+    <Compile Include="MetadataItems\Types\TypeDefinitionData.cs" />
+    <Compile Include="MetadataItems\Types\TypeData.cs" />
+    <Compile Include="MetadataItems\Members\TypedMemberDataBase.cs" />
+    <Compile Include="MetadataItems\Types\TypeWithElementData.cs" />
+    <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="Serialization\BinaryItemDeserializerV1.cs" />
+    <Compile Include="Serialization\BinaryItemSerializerV1.cs" />
+    <Compile Include="Serialization\SerializationUtilities.cs" />
+    <Compile Include="TypeReferenceEqualityComparer.cs" />
+    <Compile Include="Utilities.cs" />
+  </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\Mono.Cecil\Mono.Cecil.csproj">
+      <Project>{d68133bd-1e63-496e-9ede-4fbdbf77b486}</Project>
+      <Name>Mono.Cecil</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\Mono.Cecil\rocks\Mono.Cecil.Rocks.csproj">
+      <Project>{fbc6dd59-d09d-499c-b03c-99c1c78ff2ac}</Project>
+      <Name>Mono.Cecil.Rocks</Name>
+    </ProjectReference>
+  </ItemGroup>
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+  <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
+       Other similar extension points exist, see Microsoft.Common.targets.
+  <Target Name="BeforeBuild">
+  </Target>
+  <Target Name="AfterBuild">
+  </Target>
+  -->
+</Project>
