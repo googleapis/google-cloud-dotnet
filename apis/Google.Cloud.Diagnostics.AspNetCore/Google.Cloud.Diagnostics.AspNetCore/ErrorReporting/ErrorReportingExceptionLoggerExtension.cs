@@ -62,10 +62,10 @@ namespace Google.Cloud.Diagnostics.AspNetCore
         /// Error Reporting API.
         /// </summary>
         /// <param name="app">The application builder. Cannot be null.</param>   
-        public static void UseGoogleExceptionLogging(this IApplicationBuilder app)
+        public static IApplicationBuilder UseGoogleExceptionLogging(this IApplicationBuilder app)
         {
             GaxPreconditions.CheckNotNull(app, nameof(app));
-            app.UseMiddleware<ErrorReportingExceptionLoggerMiddleware>();
+            return app.UseMiddleware<ErrorReportingExceptionLoggerMiddleware>();
         }
 
         /// <summary>
@@ -86,7 +86,7 @@ namespace Google.Cloud.Diagnostics.AspNetCore
         /// with both exceptions will be thrown.  Otherwise only the exception from the <see cref="RequestDelegate"/>
         /// will be thrown.
         /// </remarks>
-        public static void AddGoogleExceptionLogging(
+        public static IServiceCollection AddGoogleExceptionLogging(
             this IServiceCollection services, Action<ErrorReportingServiceOptions> setupAction)
         {
             GaxPreconditions.CheckNotNull(services, nameof(services));
@@ -100,7 +100,7 @@ namespace Google.Cloud.Diagnostics.AspNetCore
             services.AddSingleton<IHttpContextAccessor, HttpContextAccessor>();
             services.AddSingleton(ContextExceptionLogger.Create(
                 serviceOptions.ProjectId, serviceName, version, serviceOptions.Options));
-            services.AddSingleton(CreateExceptionLogger);
+            return services.AddSingleton(CreateExceptionLogger);
         }
 
 
