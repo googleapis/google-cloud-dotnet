@@ -57,7 +57,7 @@ namespace Google.Cloud.Bigtable.V2
 
         /// <summary>
         /// <see cref="RetrySettings"/> for calls to <c>BigtableClient.ReadRows</c> when the stream
-        /// of results is prematurely ended.
+        /// of results ends prematurely.
         /// </summary>
         /// <remarks>
         /// The default <c>BigtableClient.ReadRows</c> <see cref="RetrySettings"/> are:

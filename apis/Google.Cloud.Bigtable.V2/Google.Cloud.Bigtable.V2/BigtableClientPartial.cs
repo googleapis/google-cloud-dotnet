@@ -83,7 +83,7 @@ namespace Google.Cloud.Bigtable.V2
             }
             Func<Task> shutdown = () => Task.WhenAll(shutdowns.Select(x => x()));
 
-            return new BigtableClientImpl(clients, appProfileId) { UnderlyingClientSettings = settings };
+            return new BigtableClientImpl(clients, appProfileId, settings);
         }
 
         /// <summary>
@@ -121,7 +121,10 @@ namespace Google.Cloud.Bigtable.V2
         /// </param>
         /// <returns>The created <see cref="BigtableClient"/>.</returns>
         public static BigtableClient Create(IEnumerable<BigtableServiceApiClient> clients, string appProfileId = null) => 
-            new BigtableClientImpl(GaxPreconditions.CheckNotNull(clients, nameof(clients)).ToArray(), appProfileId);
+            new BigtableClientImpl(
+                GaxPreconditions.CheckNotNull(clients, nameof(clients)).ToArray(),
+                appProfileId,
+                underlyingClientSettings: null);
 
         /// <summary>
         /// Gets a <see cref="BigtableClient"/> matching this one but with the specified <paramref name="appProfileId"/>.
@@ -1029,7 +1032,7 @@ namespace Google.Cloud.Bigtable.V2
                 },
                 callSettings);
 
-        private protected BigtableServiceApiSettings UnderlyingClientSettings { get; private set; }
+        private protected BigtableServiceApiSettings UnderlyingClientSettings { get; set; }
     }
 
     public partial class BigtableClientImpl
@@ -1039,10 +1042,17 @@ namespace Google.Cloud.Bigtable.V2
         private int _clientNumber = -1;
 
         // TODO: Add a public constructor after multi-channel support?
-        internal BigtableClientImpl(BigtableServiceApiClient[] clients, string appProfileId)
+        internal BigtableClientImpl(
+            BigtableServiceApiClient[] clients,
+            string appProfileId,
+            BigtableServiceApiSettings underlyingClientSettings)
         {
             _clients = clients;
             _appProfileId = appProfileId;
+
+            Clock = underlyingClientSettings?.Clock ?? SystemClock.Instance;
+            Scheduler = underlyingClientSettings?.Scheduler ?? SystemScheduler.Instance;
+            UnderlyingClientSettings = underlyingClientSettings;
         }
 
         /// <inheritdoc/>
@@ -1055,10 +1065,10 @@ namespace Google.Cloud.Bigtable.V2
 
         /// <inheritdoc/>
         public override BigtableClient WithAppProfileId(string appProfileId) =>
-            new BigtableClientImpl(_clients, appProfileId);
+            new BigtableClientImpl(_clients, appProfileId, UnderlyingClientSettings);
 
-        internal IClock Clock => UnderlyingClientSettings?.Clock ?? SystemClock.Instance;
-        internal IScheduler Scheduler => UnderlyingClientSettings?.Scheduler ?? SystemScheduler.Instance;
+        internal IClock Clock { get; }
+        internal IScheduler Scheduler { get; }
 
         internal BigtableServiceApiClient.ReadRowsStream ReadRowsInternal(ReadRowsRequest request, CallSettings callSettings) =>
             GetUnderlyingClient().ReadRows(request, callSettings);

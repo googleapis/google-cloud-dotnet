@@ -141,16 +141,16 @@ namespace Google.Cloud.Bigtable.V2
                 if (previouslyProcessedKey != _lastCompletedRowKey)
                 {
                     // There was a full row found in the response.
-                    UpdateLastFoundKey(_lastCompletedRowKey);
+                    TryUpdateLastFoundKey(_lastCompletedRowKey);
                 }
                 else
                 {
-                    // The service indicates that it processed rows that did not match the filter, and will not
-                    // need to be reprocessed.
-                    UpdateLastFoundKey(response.LastScannedRowKey);
+                    // Otherwise, the service may have indicated that it processed rows that did not match the filter,
+                    // and will not need to be reprocessed.
+                    TryUpdateLastFoundKey(response.LastScannedRowKey);
                 }
 
-                void UpdateLastFoundKey(ByteString lastProcessedKey)
+                void TryUpdateLastFoundKey(ByteString lastProcessedKey)
                 {
                     if (lastProcessedKey != null && !lastProcessedKey.IsEmpty)
                     {
