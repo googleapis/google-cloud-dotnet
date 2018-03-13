@@ -12,10 +12,10 @@
 // See the License for the specific language governing permissions and
 // limitations under the License.
 
+using Google.Api.Gax.Grpc;
 using Grpc.Core;
 using System;
 using System.Collections.Generic;
-using System.Text;
 using System.Threading;
 
 namespace Google.Cloud.Bigtable.V2
@@ -25,11 +25,26 @@ namespace Google.Cloud.Bigtable.V2
     /// </summary>
     public class ReadRowsStream : IAsyncEnumerable<Row>
     {
+        private readonly CallSettings _callSettings;
+        private readonly BigtableClientImpl _client;
         private int _enumeratorCount;
-        private BigtableServiceApiClient.ReadRowsStream _underlyingStream;
+        private readonly ReadRowsRequest _originalRequest;
+        private readonly RetrySettings _retrySettings;
+        private readonly BigtableServiceApiClient.ReadRowsStream _underlyingStream;
 
-        internal ReadRowsStream(BigtableServiceApiClient.ReadRowsStream underlyingStream) =>
+        internal ReadRowsStream(
+            BigtableClientImpl client,
+            ReadRowsRequest originalRequest,
+            CallSettings callSettings,
+            RetrySettings retrySettings,
+            BigtableServiceApiClient.ReadRowsStream underlyingStream)
+        {
+            _client = client;
+            _originalRequest = originalRequest;
+            _callSettings = callSettings;
+            _retrySettings = retrySettings;
             _underlyingStream = underlyingStream;
+        }
 
         /// <summary>
         /// The underlying gRPC duplex streaming call.
@@ -44,7 +59,7 @@ namespace Google.Cloud.Bigtable.V2
                 throw new InvalidOperationException($"The {nameof(ReadRowsStream)} can only be iterated once");
             }
 
-            return new RowAsyncEnumerator(_underlyingStream);
+            return new RowAsyncEnumerator(_client, _originalRequest, _callSettings, _retrySettings, _underlyingStream);
         }
     }
 }

@@ -15,23 +15,63 @@
 using Grpc.Core;
 using System.Collections.Generic;
 using System.Linq;
+using System.Threading;
+using System.Threading.Tasks;
 
 namespace Google.Cloud.Bigtable.V2.Tests
 {
-    public class MockReadRowsStream : ReadRowsStream
+    public class MockReadRowsStream : BigtableServiceApiClient.ReadRowsStream
     {
+        private readonly ReadRowsResponse[] _responses;
+        private IAsyncEnumerator<ReadRowsResponse> _responseStream;
+
         public MockReadRowsStream(params ReadRowsResponse[] responses)
-            : base(new UnderlyingReadRowsStream(responses)) { }
-
-        private class UnderlyingReadRowsStream : BigtableServiceApiClient.ReadRowsStream
         {
-            private IAsyncEnumerator<ReadRowsResponse> _responseStream;
+            _responses = responses;
+            _responseStream = new Enumerator(this, responses.ToAsyncEnumerable().GetEnumerator());
+        }
 
-            public UnderlyingReadRowsStream(params ReadRowsResponse[] responses) =>
-                _responseStream = responses.ToAsyncEnumerable().GetEnumerator();
+        public IEnumerable<ReadRowsResponse> Responses => _responses;
 
-            public override AsyncServerStreamingCall<ReadRowsResponse> GrpcCall => null;
-            public override IAsyncEnumerator<ReadRowsResponse> ResponseStream => _responseStream;
+        /// <summary>
+        /// Indicates whether the <see cref="ResponseStream"/> should throw an Unavailable
+        /// <see cref="RpcException"/> after providing all responses, as opposed to finishing normally.
+        /// </summary>
+        public bool ShouldErrorAtEnd { get; set; }
+
+        public override AsyncServerStreamingCall<ReadRowsResponse> GrpcCall => null;
+        public override IAsyncEnumerator<ReadRowsResponse> ResponseStream => _responseStream;
+
+        private class Enumerator : IAsyncEnumerator<ReadRowsResponse>
+        {
+            private readonly MockReadRowsStream _owner;
+            private IAsyncEnumerator<ReadRowsResponse> _underlyingStream;
+
+            public Enumerator(MockReadRowsStream owner, IAsyncEnumerator<ReadRowsResponse> underlyingStream)
+            {
+                _owner = owner;
+                _underlyingStream = underlyingStream;
+            }
+
+            public ReadRowsResponse Current { get; set; }
+
+            public void Dispose() => _underlyingStream.Dispose();
+
+            public async Task<bool> MoveNext(CancellationToken cancellationToken)
+            {
+                if (await _underlyingStream.MoveNext(cancellationToken))
+                {
+                    Current = _underlyingStream.Current;
+                    return true;
+                }
+
+                if (_owner.ShouldErrorAtEnd)
+                {
+                    throw new RpcException(new Status(StatusCode.Unavailable, "Unavailable"));
+                }
+
+                return false;
+            }
         }
     }
 }

@@ -83,7 +83,7 @@ namespace Google.Cloud.Bigtable.V2
             }
             Func<Task> shutdown = () => Task.WhenAll(shutdowns.Select(x => x()));
 
-            return new BigtableClientImpl(clients, appProfileId) { UnderlyingClientSettings = settings };
+            return new BigtableClientImpl(clients, appProfileId, settings);
         }
 
         /// <summary>
@@ -121,7 +121,10 @@ namespace Google.Cloud.Bigtable.V2
         /// </param>
         /// <returns>The created <see cref="BigtableClient"/>.</returns>
         public static BigtableClient Create(IEnumerable<BigtableServiceApiClient> clients, string appProfileId = null) => 
-            new BigtableClientImpl(GaxPreconditions.CheckNotNull(clients, nameof(clients)).ToArray(), appProfileId);
+            new BigtableClientImpl(
+                GaxPreconditions.CheckNotNull(clients, nameof(clients)).ToArray(),
+                appProfileId,
+                underlyingClientSettings: null);
 
         /// <summary>
         /// Gets a <see cref="BigtableClient"/> matching this one but with the specified <paramref name="appProfileId"/>.
@@ -1029,7 +1032,7 @@ namespace Google.Cloud.Bigtable.V2
                 },
                 callSettings);
 
-        private protected BigtableServiceApiSettings UnderlyingClientSettings { get; private set; }
+        private protected BigtableServiceApiSettings UnderlyingClientSettings { get; set; }
     }
 
     public partial class BigtableClientImpl
@@ -1039,10 +1042,17 @@ namespace Google.Cloud.Bigtable.V2
         private int _clientNumber = -1;
 
         // TODO: Add a public constructor after multi-channel support?
-        internal BigtableClientImpl(BigtableServiceApiClient[] clients, string appProfileId)
+        internal BigtableClientImpl(
+            BigtableServiceApiClient[] clients,
+            string appProfileId,
+            BigtableServiceApiSettings underlyingClientSettings)
         {
             _clients = clients;
             _appProfileId = appProfileId;
+
+            Clock = underlyingClientSettings?.Clock ?? SystemClock.Instance;
+            Scheduler = underlyingClientSettings?.Scheduler ?? SystemScheduler.Instance;
+            UnderlyingClientSettings = underlyingClientSettings?.Clone();
         }
 
         /// <inheritdoc/>
@@ -1055,14 +1065,27 @@ namespace Google.Cloud.Bigtable.V2
 
         /// <inheritdoc/>
         public override BigtableClient WithAppProfileId(string appProfileId) =>
-            new BigtableClientImpl(_clients, appProfileId);
+            new BigtableClientImpl(_clients, appProfileId, UnderlyingClientSettings);
+
+        internal IClock Clock { get; }
+        internal IScheduler Scheduler { get; }
+
+        internal BigtableServiceApiClient.ReadRowsStream ReadRowsInternal(ReadRowsRequest request, CallSettings callSettings) =>
+            GetUnderlyingClient().ReadRows(request, callSettings);
+
+        // TODO: These retry approaches don't retry if the initial request fails. We should probably handle these cases as well.
 
         private ReadRowsStream ConvertResult(
             ReadRowsRequest request,
             CallSettings callSettings,
             BigtableServiceApiClient.ReadRowsStream result)
         {
-            return new ReadRowsStream(result);
+            var defaultSettings = UnderlyingClientSettings ?? new BigtableServiceApiSettings();
+            var effectiveCallSettings = defaultSettings.ReadRowsSettings.MergedWith(callSettings);
+            // TODO(mdour): Do we want to try to support per-call retry settings?
+            var effectiveRetrySettings = defaultSettings.ReadRowsRetrySettings;
+
+            return new ReadRowsStream(this, request, effectiveCallSettings, effectiveRetrySettings, result);
         }
 
         private async Task<MutateRowsResponse> ConvertResult(
@@ -1089,9 +1112,8 @@ namespace Google.Cloud.Bigtable.V2
                         currentStream = GetUnderlyingClient().MutateRows(requestManager.RetryRequest, callSettings);
                         return await ProcessCurrentStream().ConfigureAwait(false) != ProcessingStatus.Retryable;
                     },
-                    // TODO: Do we want to get these from the underlying stream somehow? The underlying stream may change with each retry though.
-                    SystemClock.Instance,
-                    SystemScheduler.Instance,
+                    Clock,
+                    Scheduler,
                     effectiveCallSettings,
                     effectiveRetrySettings).ConfigureAwait(false);
             }

@@ -48,11 +48,20 @@ namespace Google.Cloud.Bigtable.V2.Tests
         [MemberData(nameof(AcceptanceTestCases))]
         public async Task Test(ChunkTestCase testCase)
         {
-            var stream = new MockReadRowsStream(
-                new ReadRowsResponse
+            var request = new ReadRowsRequest
+            {
+                Rows = RowSet.FromRowRanges(RowRange.Closed("", null))
+            };
+            var client = Utilities.CreateReadRowsMockClient(
+                request,
+                initialStreamResponse: new[]
                 {
-                    Chunks = { testCase.Chunks.Select(json => CellChunk.Parser.ParseJson(json)) }
+                    new ReadRowsResponse
+                    {
+                        Chunks = { testCase.Chunks.Select(json => CellChunk.Parser.ParseJson(json)) }
+                    }
                 });
+            var stream = client.ReadRows(request);
 
             List<Row> responses;
             if (testCase.ExpectsError)

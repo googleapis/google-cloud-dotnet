@@ -232,7 +232,7 @@ namespace Google.Cloud.Bigtable.V2.Tests
             Assert.Equal(originalRequest, underTest.BuildUpdatedRequest());
 
             underTest.LastFoundKey = lastFoundKey;
-            underTest.IncrementRowCount(75);
+            underTest.IncrementRowsReadSoFar(75);
             Assert.Equal(updatedRequest, underTest.BuildUpdatedRequest());
         }
 

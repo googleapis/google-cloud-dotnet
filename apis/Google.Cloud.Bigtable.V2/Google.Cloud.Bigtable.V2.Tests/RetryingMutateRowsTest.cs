@@ -46,18 +46,18 @@ namespace Google.Cloud.Bigtable.V2.Tests
                     Mutations.CreateEntry("c", Mutations.DeleteFromRow())
                 }
             };
-            var client = MutateRowsStreamUtilities.CreateClientForMutateRowsRetries(
+            var client = Utilities.CreateMutateRowsMockClient(
                 request,
-                entriesForInitialResponse: new[]
+                entriesForInitialStream: new[]
                 {
-                    MutateRowsStreamUtilities.CreateEntry(0, Code.Ok),
-                    MutateRowsStreamUtilities.CreateEntry(1, Code.DeadlineExceeded),
-                    MutateRowsStreamUtilities.CreateEntry(2, Code.Ok)
+                    Utilities.CreateMutateRowsResponseEntry(0, Code.Ok),
+                    Utilities.CreateMutateRowsResponseEntry(1, Code.DeadlineExceeded),
+                    Utilities.CreateMutateRowsResponseEntry(2, Code.Ok)
                 },
-                entriesForRetryResponses: new[]
+                entriesForRetryStreams: new[]
                 {
                     // 1st retry response entries
-                    new[] { MutateRowsStreamUtilities.CreateEntry(0, Code.Ok) }
+                    new[] { Utilities.CreateMutateRowsResponseEntry(0, Code.Ok) }
                 });
 
             var entries = (await client.MutateRowsAsync(request)).Entries.OrderBy(e => e.Index).ToList();
@@ -90,33 +90,33 @@ namespace Google.Cloud.Bigtable.V2.Tests
                     Mutations.CreateEntry("e", Mutations.DeleteFromRow())
                 }
             };
-            var client = MutateRowsStreamUtilities.CreateClientForMutateRowsRetries(
+            var client = Utilities.CreateMutateRowsMockClient(
                 request,
-                entriesForInitialResponse: new[]
+                entriesForInitialStream: new[]
                 {
-                    MutateRowsStreamUtilities.CreateEntry(0, Code.Ok),
-                    MutateRowsStreamUtilities.CreateEntry(1, Code.DeadlineExceeded),
-                    MutateRowsStreamUtilities.CreateEntry(2, Code.Ok),
-                    MutateRowsStreamUtilities.CreateEntry(3, Code.DeadlineExceeded),
-                    MutateRowsStreamUtilities.CreateEntry(4, Code.DeadlineExceeded)
+                    Utilities.CreateMutateRowsResponseEntry(0, Code.Ok),
+                    Utilities.CreateMutateRowsResponseEntry(1, Code.DeadlineExceeded),
+                    Utilities.CreateMutateRowsResponseEntry(2, Code.Ok),
+                    Utilities.CreateMutateRowsResponseEntry(3, Code.DeadlineExceeded),
+                    Utilities.CreateMutateRowsResponseEntry(4, Code.DeadlineExceeded)
                 },
-                entriesForRetryResponses: new[]
+                entriesForRetryStreams: new[]
                 {
                     // 1st retry response entries
                     new[]
                     {
                         // Original entry 1
-                        MutateRowsStreamUtilities.CreateEntry(0, Code.Ok),
+                        Utilities.CreateMutateRowsResponseEntry(0, Code.Ok),
                         // Original entry 3
-                        MutateRowsStreamUtilities.CreateEntry(1, Code.DeadlineExceeded),
+                        Utilities.CreateMutateRowsResponseEntry(1, Code.DeadlineExceeded),
                         // Original entry 4
-                        MutateRowsStreamUtilities.CreateEntry(2, Code.Ok)
+                        Utilities.CreateMutateRowsResponseEntry(2, Code.Ok)
                     },
                     // 2nd retry response entries
                     new[]
                     {
                         // Original entry 3
-                        MutateRowsStreamUtilities.CreateEntry(0, Code.FailedPrecondition)
+                        Utilities.CreateMutateRowsResponseEntry(0, Code.FailedPrecondition)
                     }
                 });
 
@@ -156,15 +156,15 @@ namespace Google.Cloud.Bigtable.V2.Tests
                     Mutations.CreateEntry("c", Mutations.DeleteFromRow())
                 }
             };
-            var client = MutateRowsStreamUtilities.CreateClientForMutateRowsRetries(
+            var client = Utilities.CreateMutateRowsMockClient(
                 request,
-                entriesForInitialResponse: new[]
+                entriesForInitialStream: new[]
                 {
-                    MutateRowsStreamUtilities.CreateEntry(0, Code.Ok),
-                    MutateRowsStreamUtilities.CreateEntry(1, Code.FailedPrecondition),
-                    MutateRowsStreamUtilities.CreateEntry(2, Code.DeadlineExceeded)
+                    Utilities.CreateMutateRowsResponseEntry(0, Code.Ok),
+                    Utilities.CreateMutateRowsResponseEntry(1, Code.FailedPrecondition),
+                    Utilities.CreateMutateRowsResponseEntry(2, Code.DeadlineExceeded)
                 },
-                entriesForRetryResponses: null // No retries should be made
+                entriesForRetryStreams: null // No retries should be made
                 );
 
             var entries = (await client.MutateRowsAsync(request)).Entries.OrderBy(e => e.Index).ToList();

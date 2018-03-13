@@ -25,13 +25,12 @@ namespace Google.Cloud.Bigtable.V2
     public partial class BigtableServiceApiSettings
     {
         /// <summary>
-        /// <see cref="RetrySettings"/> for synchronous and asynchronous calls to
-        /// <c>BigtableServiceApiClient.MutateRows</c> and <c>BigtableServiceApiClient.MutateRowsAsync</c>
-        /// when some of the mutations fail for certain reasons.
+        /// <see cref="RetrySettings"/> for calls to <c>BigtableClient.MutateRows</c> and
+        /// <c>BigtableClient.MutateRowsAsync</c> when some of the mutations fail for certain reasons.
         /// </summary>
         /// <remarks>
-        /// The default <c>BigtableServiceApiClient.MutateRows</c> and
-        /// <c>BigtableServiceApiClient.MutateRowsAsync</c> <see cref="RetrySettings"/> are:
+        /// The default <c>BigtableClient.MutateRows</c> and <c>BigtableClient.MutateRowsAsync</c>
+        /// <see cref="RetrySettings"/> are:
         /// <list type="bullet">
         /// <item><description>Initial retry delay: 100 milliseconds</description></item>
         /// <item><description>Retry delay multiplier: 1.3</description></item>
@@ -55,6 +54,42 @@ namespace Google.Cloud.Bigtable.V2
                 totalExpiration: Expiration.FromTimeout(TimeSpan.FromMilliseconds(600000)),
                 retryFilter: IdempotentRetryFilter
             );
+
+        /// <summary>
+        /// <see cref="RetrySettings"/> for calls to <c>BigtableClient.ReadRows</c> when the stream
+        /// of results ends prematurely.
+        /// </summary>
+        /// <remarks>
+        /// The default <c>BigtableClient.ReadRows</c> <see cref="RetrySettings"/> are:
+        /// <list type="bullet">
+        /// <item><description>Initial retry delay: 100 milliseconds</description></item>
+        /// <item><description>Retry delay multiplier: 1.3</description></item>
+        /// <item><description>Retry maximum delay: 60000 milliseconds</description></item>
+        /// <item><description>Initial timeout: 20000 milliseconds</description></item>
+        /// <item><description>Timeout multiplier: 1.0</description></item>
+        /// <item><description>Timeout maximum delay: 20000 milliseconds</description></item>
+        /// </list>
+        /// Retry will be attempted on the following response status codes on individual mutations:
+        /// <list>
+        /// <item><description><see cref="StatusCode.DeadlineExceeded"/></description></item>
+        /// <item><description><see cref="StatusCode.Unavailable"/></description></item>
+        /// </list>
+        /// Default RPC expiration is 600000 milliseconds.
+        /// </remarks>
+        /// <seealso cref="ReadRowsSettings"/>
+        public RetrySettings ReadRowsRetrySettings { get; set; } =
+            new RetrySettings(
+                retryBackoff: GetDefaultRetryBackoff(),
+                timeoutBackoff: GetDefaultTimeoutBackoff(),
+                totalExpiration: Expiration.FromTimeout(TimeSpan.FromMilliseconds(600000)),
+                retryFilter: IdempotentRetryFilter
+            );
+
+        partial void OnCopy(BigtableServiceApiSettings existing)
+        {
+            MutateRowsRetrySettings = existing.MutateRowsRetrySettings;
+            ReadRowsRetrySettings = existing.ReadRowsRetrySettings;
+        }
     }
 
     public partial class BigtableServiceApiClient

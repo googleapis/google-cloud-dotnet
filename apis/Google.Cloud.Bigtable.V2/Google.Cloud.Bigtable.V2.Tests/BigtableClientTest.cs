@@ -298,48 +298,57 @@ namespace Google.Cloud.Bigtable.V2.Tests
         [Fact]
         public async Task ReadRows_Family_Order()
         {
-            var stream = new MockReadRowsStream(
-                new ReadRowsResponse
+            var request = new ReadRowsRequest
+            {
+                Rows = RowSet.FromRowRanges(RowRange.Closed("a", "z"))
+            };
+            var client = Utilities.CreateReadRowsMockClient(
+                request,
+                initialStreamResponse: new[]
                 {
-                    Chunks =
+                    new ReadRowsResponse
                     {
-                        new ReadRowsResponse.Types.CellChunk
+                        Chunks =
                         {
-                            RowKey = ByteString.CopyFromUtf8("abc"),
-                            FamilyName = "z",
-                            Qualifier = ByteString.CopyFromUtf8("column1"),
-                            Value = ByteString.CopyFromUtf8("value1")
-                        },
-                        new ReadRowsResponse.Types.CellChunk
-                        {
-                            RowKey = ByteString.CopyFromUtf8("abc"),
-                            FamilyName = "A",
-                            Qualifier = ByteString.CopyFromUtf8("column2"),
-                            Value = ByteString.CopyFromUtf8("value2")
+                            new ReadRowsResponse.Types.CellChunk
+                            {
+                                RowKey = ByteString.CopyFromUtf8("abc"),
+                                FamilyName = "z",
+                                Qualifier = ByteString.CopyFromUtf8("column1"),
+                                Value = ByteString.CopyFromUtf8("value1")
+                            },
+                            new ReadRowsResponse.Types.CellChunk
+                            {
+                                RowKey = ByteString.CopyFromUtf8("abc"),
+                                FamilyName = "A",
+                                Qualifier = ByteString.CopyFromUtf8("column2"),
+                                Value = ByteString.CopyFromUtf8("value2")
+                            }
                         }
-                    }
-                },
-                new ReadRowsResponse
-                {
-                    Chunks =
+                    },
+                    new ReadRowsResponse
                     {
-                        new ReadRowsResponse.Types.CellChunk
+                        Chunks =
                         {
-                            RowKey = ByteString.CopyFromUtf8("abc"),
-                            FamilyName = "a",
-                            Qualifier = ByteString.CopyFromUtf8("column3"),
-                            Value = ByteString.CopyFromUtf8("value3")
-                        },
-                        new ReadRowsResponse.Types.CellChunk
-                        {
-                            RowKey = ByteString.CopyFromUtf8("abc"),
-                            FamilyName = "Z",
-                            Qualifier = ByteString.CopyFromUtf8("column4"),
-                            Value = ByteString.CopyFromUtf8("value4"),
-                            CommitRow = true
+                            new ReadRowsResponse.Types.CellChunk
+                            {
+                                RowKey = ByteString.CopyFromUtf8("abc"),
+                                FamilyName = "a",
+                                Qualifier = ByteString.CopyFromUtf8("column3"),
+                                Value = ByteString.CopyFromUtf8("value3")
+                            },
+                            new ReadRowsResponse.Types.CellChunk
+                            {
+                                RowKey = ByteString.CopyFromUtf8("abc"),
+                                FamilyName = "Z",
+                                Qualifier = ByteString.CopyFromUtf8("column4"),
+                                Value = ByteString.CopyFromUtf8("value4"),
+                                CommitRow = true
+                            }
                         }
                     }
                 });
+            var stream = client.ReadRows(request);
 
             int rowCount = 0;
             await stream.ForEachAsync(row =>

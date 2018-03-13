@@ -12,12 +12,12 @@
 // See the License for the specific language governing permissions and
 // limitations under the License.
 
+using Google.Api.Gax.Grpc;
 using Google.Protobuf;
 using Grpc.Core;
 using System;
 using System.Collections.Generic;
 using System.Diagnostics;
-using System.Linq;
 using System.Threading;
 using System.Threading.Tasks;
 
@@ -31,15 +31,30 @@ namespace Google.Cloud.Bigtable.V2
     /// </summary>
     internal sealed class RowAsyncEnumerator : IAsyncEnumerator<Row>
     {
+        private readonly CallSettings _callSettings;
+        private readonly BigtableClientImpl _client;
         private CellInfo _currentCell;
         private readonly SortedList<string, Family> _currentFamilies = new SortedList<string, Family>(StringComparer.Ordinal);
+        private ByteString _lastCompletedRowKey;
+        private readonly BigtableReadRowsRequestManager _requestManager;
+        private readonly RetrySettings _retrySettings;
         private RowMergeState _rowMergeState = NewRow.Instance;
         private IEnumerator<Row> _singleResponseRowEnumerator;
-        private readonly BigtableServiceApiClient.ReadRowsStream _stream;
+        private BigtableServiceApiClient.ReadRowsStream _stream;
 
-        public RowAsyncEnumerator(BigtableServiceApiClient.ReadRowsStream stream)
+        public RowAsyncEnumerator(
+            BigtableClientImpl client,
+            ReadRowsRequest originalRequest,
+            CallSettings callSettings,
+            RetrySettings retrySettings,
+            BigtableServiceApiClient.ReadRowsStream stream)
         {
+            _client = client;
+            _callSettings = callSettings;
+            _retrySettings = retrySettings;
             _stream = stream;
+
+            _requestManager = new BigtableReadRowsRequestManager(originalRequest);
         }
 
         public Row Current { get; private set; }
@@ -56,18 +71,37 @@ namespace Google.Cloud.Bigtable.V2
             // Try to walk to the next row for the current response being processed.
             while (_singleResponseRowEnumerator?.MoveNext() != true)
             {
-                // If not possible, dispose the old enumerator and create a new one from the
-                // next response, if any.
-                _singleResponseRowEnumerator?.Dispose();
-                if (await _stream.ResponseStream.MoveNext(cancellationToken).ConfigureAwait(false))
+                try
                 {
-                    cancellationToken.ThrowIfCancellationRequested();
-                    _singleResponseRowEnumerator = MergeResponseChunks(_stream.ResponseStream.Current);
-                }
-                else
-                {
+                    // If not possible, dispose the old enumerator and create a new one from the
+                    // next response, if any.
+                    _singleResponseRowEnumerator?.Dispose();
                     _singleResponseRowEnumerator = null;
-                    break;
+
+                    if (await _stream.ResponseStream.MoveNext(cancellationToken).ConfigureAwait(false))
+                    {
+                        cancellationToken.ThrowIfCancellationRequested();
+                        _singleResponseRowEnumerator = MergeResponseChunks(_stream.ResponseStream.Current);
+                    }
+                    else
+                    {
+                        break;
+                    }
+                }
+                catch (RpcException e) when (_retrySettings.RetryFilter(e))
+                {
+                    // Reset the merging and re-connect to a new stream.
+                    Reset();
+                    await ApiCallRetryExtensions.RetryOperationUntilCompleted(
+                        () =>
+                        {
+                            _stream = _client.ReadRowsInternal(_requestManager.BuildUpdatedRequest(), _callSettings);
+                            return Task.FromResult(true);
+                        },
+                        _client.Clock,
+                        _client.Scheduler,
+                        _callSettings,
+                        _retrySettings).ConfigureAwait(false);
                 }
             }
 
@@ -90,6 +124,7 @@ namespace Google.Cloud.Bigtable.V2
 
             IEnumerator<Row> MergeResponseChunks(ReadRowsResponse response)
             {
+                ByteString previouslyProcessedKey = _lastCompletedRowKey;
                 foreach (var chunk in response.Chunks)
                 {
                     _rowMergeState = _rowMergeState.HandleChunk(this, chunk);
@@ -97,9 +132,29 @@ namespace Google.Cloud.Bigtable.V2
                     if (chunk.CommitRow)
                     {
                         _rowMergeState = _rowMergeState.CommitRow(this);
-
-                        // TODO: Capture response.LastScannedRowKey here for smart retries
+                        _lastCompletedRowKey = _currentCell.Row.Key;
+                        _requestManager.IncrementRowsReadSoFar();
                         yield return _currentCell.Row;
+                    }
+                }
+
+                if (previouslyProcessedKey != _lastCompletedRowKey)
+                {
+                    // There was a full row found in the response.
+                    TryUpdateLastFoundKey(_lastCompletedRowKey);
+                }
+                else
+                {
+                    // Otherwise, the service may have indicated that it processed rows that did not match the filter,
+                    // and will not need to be reprocessed.
+                    TryUpdateLastFoundKey(response.LastScannedRowKey);
+                }
+
+                void TryUpdateLastFoundKey(ByteString lastProcessedKey)
+                {
+                    if (lastProcessedKey != null && !lastProcessedKey.IsEmpty)
+                    {
+                        _requestManager.LastFoundKey = lastProcessedKey;
                     }
                 }
             }
