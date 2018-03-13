@@ -296,16 +296,6 @@ namespace Google.Cloud.Bigtable.V2
             /// </summary>
             public ServiceEndpoint ServiceEndpoint { get; }
 
-            /// <summary>
-            /// Creates <see cref="ClientCreationSettings"/> to be used in creation of <see cref="BigtableClient"/> for use with Emulator.
-            /// <param name="target"> Service enpoint target in the yourhost:yourport form.</param>
-            /// </summary>
-            internal static ClientCreationSettings FromEndpointTarget(string target)
-            {
-                string[] endpointValues = target.Split(':');
-                return new ClientCreationSettings(null, null, ChannelCredentials.Insecure, new ServiceEndpoint(endpointValues[0], Convert.ToInt32(endpointValues[1])));
-            }
-
             internal void Validate()
             {
                 // Fairly arbitrary upper limit.
