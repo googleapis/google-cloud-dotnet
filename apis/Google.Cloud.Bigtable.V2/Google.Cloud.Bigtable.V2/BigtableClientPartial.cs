@@ -83,7 +83,7 @@ namespace Google.Cloud.Bigtable.V2
             }
             Func<Task> shutdown = () => Task.WhenAll(shutdowns.Select(x => x()));
 
-            return new BigtableClientImpl(clients, appProfileId) { UnderlyingClientSettings = settings };
+            return new BigtableClientImpl(clients, appProfileId, shutdown) { UnderlyingClientSettings = settings };
         }
 
         /// <summary>
@@ -121,7 +121,7 @@ namespace Google.Cloud.Bigtable.V2
         /// </param>
         /// <returns>The created <see cref="BigtableClient"/>.</returns>
         public static BigtableClient Create(IEnumerable<BigtableServiceApiClient> clients, string appProfileId = null) => 
-            new BigtableClientImpl(GaxPreconditions.CheckNotNull(clients, nameof(clients)).ToArray(), appProfileId);
+            new BigtableClientImpl(GaxPreconditions.CheckNotNull(clients, nameof(clients)).ToArray(), appProfileId, null);
 
         /// <summary>
         /// Gets a <see cref="BigtableClient"/> matching this one but with the specified <paramref name="appProfileId"/>.
@@ -1036,13 +1036,15 @@ namespace Google.Cloud.Bigtable.V2
     {
         private readonly string _appProfileId;
         private readonly BigtableServiceApiClient[] _clients;
+        private readonly Func<Task> _shutdown;
         private int _clientNumber = -1;
 
         // TODO: Add a public constructor after multi-channel support?
-        internal BigtableClientImpl(BigtableServiceApiClient[] clients, string appProfileId)
+        internal BigtableClientImpl(BigtableServiceApiClient[] clients, string appProfileId, Func<Task> shutdown)
         {
             _clients = clients;
             _appProfileId = appProfileId;
+            _shutdown = shutdown;
         }
 
         /// <inheritdoc/>
@@ -1055,7 +1057,7 @@ namespace Google.Cloud.Bigtable.V2
 
         /// <inheritdoc/>
         public override BigtableClient WithAppProfileId(string appProfileId) =>
-            new BigtableClientImpl(_clients, appProfileId);
+            new BigtableClientImpl(_clients, appProfileId, _shutdown);
 
         private ReadRowsStream ConvertResult(
             ReadRowsRequest request,
