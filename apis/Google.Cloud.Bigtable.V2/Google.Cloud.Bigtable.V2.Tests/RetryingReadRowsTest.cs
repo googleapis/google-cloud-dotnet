@@ -55,31 +55,20 @@ namespace Google.Cloud.Bigtable.V2.Tests
                     }
                 });
 
-            var stream = client.ReadRows(request);
+            var rows = await client.ReadRows(request).ToList();
+            Assert.Equal(2, rows.Count);
 
-            int rowCount = 0;
-            await stream.ForEachAsync(row =>
-            {
-                var family = row.Families[0];
-                switch (rowCount)
-                {
-                    case 0:
-                        Assert.Equal("a", row.Key.ToStringUtf8());
-                        Assert.Equal("cf1", family.Name);
-                        Assert.Equal("column1", family.Columns[0].Qualifier.ToStringUtf8());
-                        Assert.Equal("value1", family.Columns[0].Cells[0].Value.ToStringUtf8());
-                        break;
+            var row = rows[0];
+            Assert.Equal("a", row.Key.ToStringUtf8());
+            Assert.Equal("cf1", row.Families[0].Name);
+            Assert.Equal("column1", row.Families[0].Columns[0].Qualifier.ToStringUtf8());
+            Assert.Equal("value1", row.Families[0].Columns[0].Cells[0].Value.ToStringUtf8());
 
-                    case 1:
-                        Assert.Equal("b", row.Key.ToStringUtf8());
-                        Assert.Equal("cf1", family.Name);
-                        Assert.Equal("column2", family.Columns[0].Qualifier.ToStringUtf8());
-                        Assert.Equal("value2", family.Columns[0].Cells[0].Value.ToStringUtf8());
-                        break;
-                }
-                rowCount++;
-            });
-            Assert.Equal(2, rowCount);
+            row = rows[1];
+            Assert.Equal("b", row.Key.ToStringUtf8());
+            Assert.Equal("cf1", row.Families[0].Name);
+            Assert.Equal("column2", row.Families[0].Columns[0].Qualifier.ToStringUtf8());
+            Assert.Equal("value2", row.Families[0].Columns[0].Cells[0].Value.ToStringUtf8());
         }
 
         [Fact]
@@ -115,31 +104,20 @@ namespace Google.Cloud.Bigtable.V2.Tests
                     }
                 });
 
-            var stream = client.ReadRows(request);
+            var rows = await client.ReadRows(request).ToList();
+            Assert.Equal(2, rows.Count);
 
-            int rowCount = 0;
-            await stream.ForEachAsync(row =>
-            {
-                var family = row.Families[0];
-                switch (rowCount)
-                {
-                    case 0:
-                        Assert.Equal("a", row.Key.ToStringUtf8());
-                        Assert.Equal("cf1", family.Name);
-                        Assert.Equal("column1", family.Columns[0].Qualifier.ToStringUtf8());
-                        Assert.Equal("value1", family.Columns[0].Cells[0].Value.ToStringUtf8());
-                        break;
+            var row = rows[0];
+            Assert.Equal("a", row.Key.ToStringUtf8());
+            Assert.Equal("cf1", row.Families[0].Name);
+            Assert.Equal("column1", row.Families[0].Columns[0].Qualifier.ToStringUtf8());
+            Assert.Equal("value1", row.Families[0].Columns[0].Cells[0].Value.ToStringUtf8());
 
-                    case 1:
-                        Assert.Equal("b", row.Key.ToStringUtf8());
-                        Assert.Equal("cf1", family.Name);
-                        Assert.Equal("column2", family.Columns[0].Qualifier.ToStringUtf8());
-                        Assert.Equal("value2", family.Columns[0].Cells[0].Value.ToStringUtf8());
-                        break;
-                }
-                rowCount++;
-            });
-            Assert.Equal(2, rowCount);
+            row = rows[1];
+            Assert.Equal("b", row.Key.ToStringUtf8());
+            Assert.Equal("cf1", row.Families[0].Name);
+            Assert.Equal("column2", row.Families[0].Columns[0].Qualifier.ToStringUtf8());
+            Assert.Equal("value2", row.Families[0].Columns[0].Cells[0].Value.ToStringUtf8());
         }
 
         [Fact]
@@ -179,31 +157,20 @@ namespace Google.Cloud.Bigtable.V2.Tests
                     }
                 });
 
-            var stream = client.ReadRows(request);
+            var rows = await client.ReadRows(request).ToList();
+            Assert.Equal(2, rows.Count);
 
-            int rowCount = 0;
-            await stream.ForEachAsync(row =>
-            {
-                var family = row.Families[0];
-                switch (rowCount)
-                {
-                    case 0:
-                        Assert.Equal("a", row.Key.ToStringUtf8());
-                        Assert.Equal("cf1", family.Name);
-                        Assert.Equal("column1", family.Columns[0].Qualifier.ToStringUtf8());
-                        Assert.Equal("value1", family.Columns[0].Cells[0].Value.ToStringUtf8());
-                        break;
+            var row = rows[0];
+            Assert.Equal("a", row.Key.ToStringUtf8());
+            Assert.Equal("cf1", row.Families[0].Name);
+            Assert.Equal("column1", row.Families[0].Columns[0].Qualifier.ToStringUtf8());
+            Assert.Equal("value1", row.Families[0].Columns[0].Cells[0].Value.ToStringUtf8());
 
-                    case 1:
-                        Assert.Equal("w", row.Key.ToStringUtf8());
-                        Assert.Equal("cf1", family.Name);
-                        Assert.Equal("column2", family.Columns[0].Qualifier.ToStringUtf8());
-                        Assert.Equal("value2", family.Columns[0].Cells[0].Value.ToStringUtf8());
-                        break;
-                }
-                rowCount++;
-            });
-            Assert.Equal(2, rowCount);
+            row = rows[1];
+            Assert.Equal("w", row.Key.ToStringUtf8());
+            Assert.Equal("cf1", row.Families[0].Name);
+            Assert.Equal("column2", row.Families[0].Columns[0].Qualifier.ToStringUtf8());
+            Assert.Equal("value2", row.Families[0].Columns[0].Cells[0].Value.ToStringUtf8());
         }
 
         [Fact]
@@ -287,23 +254,16 @@ namespace Google.Cloud.Bigtable.V2.Tests
                     }
                 });
 
-            var stream = client.ReadRows(request);
+            var rows = await client.ReadRows(request).ToList();
+            Assert.Equal(1, rows.Count);
 
-            int rowCount = 0;
-            await stream.ForEachAsync(row =>
-            {
-                rowCount++;
-
-                Assert.Equal("a", row.Key.ToStringUtf8());
-
-                var family = row.Families[0];
-                Assert.Equal("cf1", family.Name);
-                Assert.Equal("column1", family.Columns[0].Qualifier.ToStringUtf8());
-                Assert.Equal("value1", family.Columns[0].Cells[0].Value.ToStringUtf8());
-                Assert.Equal("column2", family.Columns[1].Qualifier.ToStringUtf8());
-                Assert.Equal("value2", family.Columns[1].Cells[0].Value.ToStringUtf8());
-            });
-            Assert.Equal(1, rowCount);
+            var row = rows[0];
+            Assert.Equal("a", row.Key.ToStringUtf8());
+            Assert.Equal("cf1", row.Families[0].Name);
+            Assert.Equal("column1", row.Families[0].Columns[0].Qualifier.ToStringUtf8());
+            Assert.Equal("value1", row.Families[0].Columns[0].Cells[0].Value.ToStringUtf8());
+            Assert.Equal("column2", row.Families[0].Columns[1].Qualifier.ToStringUtf8());
+            Assert.Equal("value2", row.Families[0].Columns[1].Cells[0].Value.ToStringUtf8());
         }
 
         [Fact]
@@ -340,23 +300,16 @@ namespace Google.Cloud.Bigtable.V2.Tests
                     }
                 });
 
-            var stream = client.ReadRows(request);
+            var rows = await client.ReadRows(request).ToList();
+            Assert.Equal(1, rows.Count);
 
-            int rowCount = 0;
-            await stream.ForEachAsync(row =>
-            {
-                rowCount++;
-
-                Assert.Equal("a", row.Key.ToStringUtf8());
-
-                var family = row.Families[0];
-                Assert.Equal("cf1", family.Name);
-                Assert.Equal("column1", family.Columns[0].Qualifier.ToStringUtf8());
-                Assert.Equal("value3", family.Columns[0].Cells[0].Value.ToStringUtf8());
-                Assert.Equal("column2", family.Columns[1].Qualifier.ToStringUtf8());
-                Assert.Equal("value2", family.Columns[1].Cells[0].Value.ToStringUtf8());
-            });
-            Assert.Equal(1, rowCount);
+            var row = rows[0];
+            Assert.Equal("a", row.Key.ToStringUtf8());
+            Assert.Equal("cf1", row.Families[0].Name);
+            Assert.Equal("column1", row.Families[0].Columns[0].Qualifier.ToStringUtf8());
+            Assert.Equal("value3", row.Families[0].Columns[0].Cells[0].Value.ToStringUtf8());
+            Assert.Equal("column2", row.Families[0].Columns[1].Qualifier.ToStringUtf8());
+            Assert.Equal("value2", row.Families[0].Columns[1].Cells[0].Value.ToStringUtf8());
         }
 
         [Fact]
@@ -394,33 +347,22 @@ namespace Google.Cloud.Bigtable.V2.Tests
                     }
                 });
 
-            var stream = client.ReadRows(request);
+            var rows = await client.ReadRows(request).ToList();
+            Assert.Equal(2, rows.Count);
 
-            int rowCount = 0;
-            await stream.ForEachAsync(row =>
-            {
-                var family = row.Families[0];
-                switch (rowCount)
-                {
-                    case 0:
-                        Assert.Equal("a", row.Key.ToStringUtf8());
-                        Assert.Equal("cf1", family.Name);
-                        Assert.Equal("column1", family.Columns[0].Qualifier.ToStringUtf8());
-                        Assert.Equal("value1", family.Columns[0].Cells[0].Value.ToStringUtf8());
-                        break;
+            var row = rows[0];
+            Assert.Equal("a", row.Key.ToStringUtf8());
+            Assert.Equal("cf1", row.Families[0].Name);
+            Assert.Equal("column1", row.Families[0].Columns[0].Qualifier.ToStringUtf8());
+            Assert.Equal("value1", row.Families[0].Columns[0].Cells[0].Value.ToStringUtf8());
 
-                    case 1:
-                        Assert.Equal("b", row.Key.ToStringUtf8());
-                        Assert.Equal("cf1", family.Name);
-                        Assert.Equal("column2", family.Columns[0].Qualifier.ToStringUtf8());
-                        Assert.Equal("value2", family.Columns[0].Cells[0].Value.ToStringUtf8());
-                        Assert.Equal("column3", family.Columns[1].Qualifier.ToStringUtf8());
-                        Assert.Equal("value3", family.Columns[1].Cells[0].Value.ToStringUtf8());
-                        break;
-                }
-                rowCount++;
-            });
-            Assert.Equal(2, rowCount);
+            row = rows[1];
+            Assert.Equal("b", row.Key.ToStringUtf8());
+            Assert.Equal("cf1", row.Families[0].Name);
+            Assert.Equal("column2", row.Families[0].Columns[0].Qualifier.ToStringUtf8());
+            Assert.Equal("value2", row.Families[0].Columns[0].Cells[0].Value.ToStringUtf8());
+            Assert.Equal("column3", row.Families[0].Columns[1].Qualifier.ToStringUtf8());
+            Assert.Equal("value3", row.Families[0].Columns[1].Cells[0].Value.ToStringUtf8());
         }
 
         [Fact]
@@ -457,21 +399,14 @@ namespace Google.Cloud.Bigtable.V2.Tests
                     }
                 });
 
-            var stream = client.ReadRows(request);
+            var rows = await client.ReadRows(request).ToList();
+            Assert.Equal(1, rows.Count);
 
-            int rowCount = 0;
-            await stream.ForEachAsync(row =>
-            {
-                rowCount++;
-
-                Assert.Equal("a", row.Key.ToStringUtf8());
-
-                var family = row.Families[0];
-                Assert.Equal("cf1", family.Name);
-                Assert.Equal("column1", family.Columns[0].Qualifier.ToStringUtf8());
-                Assert.Equal("value1", family.Columns[0].Cells[0].Value.ToStringUtf8());
-            });
-            Assert.Equal(1, rowCount);
+            var row = rows[0];
+            Assert.Equal("a", row.Key.ToStringUtf8());
+            Assert.Equal("cf1", row.Families[0].Name);
+            Assert.Equal("column1", row.Families[0].Columns[0].Qualifier.ToStringUtf8());
+            Assert.Equal("value1", row.Families[0].Columns[0].Cells[0].Value.ToStringUtf8());
         }
 
         // TODO: Test with a mock IClock to make sure we don't go over the total timeout when retrying

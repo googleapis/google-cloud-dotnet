@@ -1052,7 +1052,7 @@ namespace Google.Cloud.Bigtable.V2
 
             Clock = underlyingClientSettings?.Clock ?? SystemClock.Instance;
             Scheduler = underlyingClientSettings?.Scheduler ?? SystemScheduler.Instance;
-            UnderlyingClientSettings = underlyingClientSettings;
+            UnderlyingClientSettings = underlyingClientSettings?.Clone();
         }
 
         /// <inheritdoc/>
