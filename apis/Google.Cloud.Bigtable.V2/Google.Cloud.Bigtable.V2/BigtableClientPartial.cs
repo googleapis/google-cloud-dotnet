@@ -1033,7 +1033,7 @@ namespace Google.Cloud.Bigtable.V2
                 callSettings);
 
         private protected BigtableServiceApiSettings UnderlyingClientSettings { get; set; }
-        
+
         /// <summary>
         /// Settings for creating <see cref="BigtableServiceApiClient"/>s.
         /// </summary>
