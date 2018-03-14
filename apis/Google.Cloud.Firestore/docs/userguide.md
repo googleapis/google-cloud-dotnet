@@ -85,11 +85,6 @@ or with filtering, projections, ordering etc.
 Transactions accept a callback of user code, which is then passed a `Transaction` object
 to work with.
 
-Transactions always run asynchronously, but may be given a synchronous callback;
-as modification operations (`Create`, `Update` etc) are specified synchronously and batched locally,
-transactions often won't need any asynchronous code. However, the operations to fetch document or
-query snapshots within a transaction do require asynchrony.
-
 The callback can return optionally a value.
 
 The callback will be executed multiple times if the transaction needs to be retried due to conflicting
@@ -98,21 +93,6 @@ modifications.
 In this section, we'll deal with a simple document that just has a single counter. We want to keep an up-to-date counter,
 and periodically (once per day, for example) we'll update another counter to match the current value. For more
 details of counters, see the [main Firestore user guide](https://firebase.google.com/docs/firestore/solutions/counters).
-
-### Creating multiple documents atomically
-
-If we only have a single current counter and a single daily counter, we could 
-
-[!code-cs[](obj/snippets/Google.Cloud.Firestore.UserGuide.txt#TransactionSyncCallbackNoResult)]
-
-### Creating multiple documents atomically and returning a value
-
-If we want to keep multiple counters, we might want to generate a "probably unique" ID using the current client time,
-and then use that as a prefix for both document names, returning the generated prefix from the transaction.
-
-(Note: I'm not sure this is a good example.)
-
-[!code-cs[](obj/snippets/Google.Cloud.Firestore.UserGuide.txt#TransactionSyncCallbackWithResult)]
 
 ### Updating the daily counter from the current one
 
