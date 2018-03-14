@@ -86,7 +86,7 @@ namespace Google.Cloud.Tools.GenerateDocfxSources
                     continue;
                 }
                 XElement project = XElement.Load(csproj);
-                if (project.Descendants("Version").Any())
+                if (project.Descendants("PropertyGroup").Elements("Version").Any())
                 {
                     yield return new Project(Path.GetFileName(candidate), project);
                 }

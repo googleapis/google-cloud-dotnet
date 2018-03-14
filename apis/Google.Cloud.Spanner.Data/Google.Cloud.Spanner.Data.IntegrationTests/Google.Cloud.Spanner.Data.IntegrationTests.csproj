@@ -28,9 +28,7 @@
     <Service Include="{82a7f48d-3b50-4b1e-b82e-3ada8210c358}" />
   </ItemGroup>
   <ItemGroup Condition="'$(TargetFramework)' == 'net452'">
-    <PackageReference Include="MySql.ConnectorNET.Data">
-      <Version>6.8.3.2</Version>
-    </PackageReference>
+    <PackageReference Include="MySql.ConnectorNET.Data" Version="6.8.3.2" />
     <Reference Include="System.Transactions" />
   </ItemGroup>
 </Project>
