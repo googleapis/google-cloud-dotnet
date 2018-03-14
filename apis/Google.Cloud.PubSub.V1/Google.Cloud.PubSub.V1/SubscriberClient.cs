@@ -292,7 +292,7 @@ namespace Google.Cloud.PubSub.V1
         /// to ACKnowledge this message (implying it won't be received again); or return <see cref="Reply.Nack"/> to Not
         /// ACKnowledge this message (implying it will be received again). If this function throws any Exception, then
         /// it behaves as if it returned <see cref="Reply.Nack"/>.</param>
-        /// <returns>A <see cref="Task"/> that completes when the subscriber is stopped, or if an unrecoverble error occurs.</returns>
+        /// <returns>A <see cref="Task"/> that completes when the subscriber is stopped, or if an unrecoverable error occurs.</returns>
         public virtual Task StartAsync(Func<PubsubMessage, CancellationToken, Task<Reply>> handlerAsync) => throw new NotImplementedException();
 
         /// <summary>
