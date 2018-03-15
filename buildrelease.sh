@@ -48,7 +48,7 @@ done
 (cd docs && ./builddocs.sh root $projects)
 
 rm -rf releasedocs
-git clone https://github.com/GoogleCloudPlatform/google-cloud-dotnet.git releasedocs -b gh-pages --depth 1 -c core.autocrlf=input
+git clone git@github.com:GoogleCloudPlatform/google-cloud-dotnet.git releasedocs -b gh-pages --depth 1 -c core.autocrlf=input
 cd releasedocs
 
 for project in $projects
