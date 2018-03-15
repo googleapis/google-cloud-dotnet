@@ -27,8 +27,22 @@ namespace Google.Cloud.Bigtable.V2.Tests
         private static ReadRowsRequest CreateRowKeysRequest(params BigtableByteString[] keys) =>
             new ReadRowsRequest { Rows = RowSet.FromRowKeys(keys) };
 
-        private static ReadRowsRequest CreateRowFilterRequest(RowFilter rowFilter) =>
-            new ReadRowsRequest { Filter = rowFilter };
+        /// <summary>
+        /// Test AppProfileId appears in the <see cref="BigtableReadRowsRequestManager.BuildUpdatedRequest()"/>
+        /// </summary>
+        [Fact]
+        public void TestAppProfileId()
+        {
+            var originalRequest = new ReadRowsRequest
+            {
+                Rows = RowSet.FromRowKey("a"),
+                AppProfileId = "xyz"
+            };
+
+            BigtableReadRowsRequestManager underTest = new BigtableReadRowsRequestManager(originalRequest);
+
+            Assert.Equal(originalRequest, underTest.BuildUpdatedRequest());
+        }
 
         /// <summary>
         /// Test rowfilter appears in the <see cref="BigtableReadRowsRequestManager.BuildUpdatedRequest()"/>
@@ -41,7 +55,11 @@ namespace Google.Cloud.Bigtable.V2.Tests
                 RowFilters.CellsPerRowOffset(2),
                 RowFilters.CellsPerRowLimit(10));
 
-            ReadRowsRequest originalRequest = CreateRowFilterRequest(rowFilter);
+            var originalRequest = new ReadRowsRequest
+            {
+                Rows = RowSet.FromRowKey("a"),
+                Filter = rowFilter
+            };
 
             BigtableReadRowsRequestManager underTest = new BigtableReadRowsRequestManager(originalRequest);
 

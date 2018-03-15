@@ -43,18 +43,29 @@ namespace Google.Cloud.Bigtable.V2
         internal void IncrementRowsReadSoFar(int count = 1) => _rowsReadSoFar += count;
 
         /// <summary>
-        /// Builds and returns updated subrequest that excludes all rowKeys that have already been found.
+        /// Builds and returns updated subrequest that excludes all rowKeys that have already been found,
+        /// or null if all rows have already been found.
         /// </summary>
         internal ReadRowsRequest BuildUpdatedRequest()
         {
-            ReadRowsRequest newReadRowsRequest = new ReadRowsRequest
+            // Remove received rowKeys form Rows.
+            var rows = FilterRows();
+
+            // If we removed all row keys/ranges, we don't want to retry anything: all rows have
+            // actually been received.
+            if (rows != _originalRequest.Rows &&
+                rows.RowKeys.Count == 0 &&
+                rows.RowRanges.Count == 0)
+            {
+                return null;
+            }
+
+            var newReadRowsRequest = new ReadRowsRequest
             {
                 TableName = _originalRequest.TableName,
                 Filter = _originalRequest.Filter,
                 AppProfileId = _originalRequest.AppProfileId,
-
-                // Remove received rowKeys form Rows.
-                Rows = FilterRows()
+                Rows = rows
             };
 
             // If the row limit is set, update it.

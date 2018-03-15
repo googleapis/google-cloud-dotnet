@@ -409,6 +409,37 @@ namespace Google.Cloud.Bigtable.V2.Tests
             Assert.Equal("value1", row.Families[0].Columns[0].Cells[0].Value.ToStringUtf8());
         }
 
+        [Fact]
+        public async Task ErrorAtVeryEndDoesntCauseRetry()
+        {
+            var request = new ReadRowsRequest
+            {
+                Rows = RowSet.FromRowKeys("a")
+            };
+            var client = Utilities.CreateReadRowsMockClient(
+                request,
+                initialStreamResponse: new[]
+                {
+                    new ReadRowsResponse
+                    {
+                        Chunks =
+                        {
+                            CreateChunk("a", "cf1", "column1", "value1", commitRow: true)
+                        }
+                    }
+                },
+                errorAtEndOfLastStream: true);
+
+            var rows = await client.ReadRows(request).ToList();
+            Assert.Equal(1, rows.Count);
+
+            var row = rows[0];
+            Assert.Equal("a", row.Key.ToStringUtf8());
+            Assert.Equal("cf1", row.Families[0].Name);
+            Assert.Equal("column1", row.Families[0].Columns[0].Qualifier.ToStringUtf8());
+            Assert.Equal("value1", row.Families[0].Columns[0].Cells[0].Value.ToStringUtf8());
+        }
+
         // TODO: Test with a mock IClock to make sure we don't go over the total timeout when retrying
 
         private static ReadRowsResponse.Types.CellChunk CreateChunk(
