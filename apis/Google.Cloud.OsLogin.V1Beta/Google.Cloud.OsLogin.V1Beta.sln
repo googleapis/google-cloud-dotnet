@@ -12,6 +12,8 @@ Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Google.Cloud.OsLogin.Common
 EndProject
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Google.Cloud.OsLogin.V1Beta.SmokeTests", "Google.Cloud.OsLogin.V1Beta.SmokeTests\Google.Cloud.OsLogin.V1Beta.SmokeTests.csproj", "{2BC8DD8D-B65F-4710-864C-94E0A65653BC}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Google.Cloud.OsLogin.V1Beta.Tests", "Google.Cloud.OsLogin.V1Beta.Tests\Google.Cloud.OsLogin.V1Beta.Tests.csproj", "{C06C7017-46D6-4F46-A382-C229EAA9125D}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -82,6 +84,18 @@ Global
 		{2BC8DD8D-B65F-4710-864C-94E0A65653BC}.Release|x64.Build.0 = Release|Any CPU
 		{2BC8DD8D-B65F-4710-864C-94E0A65653BC}.Release|x86.ActiveCfg = Release|Any CPU
 		{2BC8DD8D-B65F-4710-864C-94E0A65653BC}.Release|x86.Build.0 = Release|Any CPU
+		{C06C7017-46D6-4F46-A382-C229EAA9125D}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{C06C7017-46D6-4F46-A382-C229EAA9125D}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{C06C7017-46D6-4F46-A382-C229EAA9125D}.Debug|x64.ActiveCfg = Debug|x64
+		{C06C7017-46D6-4F46-A382-C229EAA9125D}.Debug|x64.Build.0 = Debug|x64
+		{C06C7017-46D6-4F46-A382-C229EAA9125D}.Debug|x86.ActiveCfg = Debug|x86
+		{C06C7017-46D6-4F46-A382-C229EAA9125D}.Debug|x86.Build.0 = Debug|x86
+		{C06C7017-46D6-4F46-A382-C229EAA9125D}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{C06C7017-46D6-4F46-A382-C229EAA9125D}.Release|Any CPU.Build.0 = Release|Any CPU
+		{C06C7017-46D6-4F46-A382-C229EAA9125D}.Release|x64.ActiveCfg = Release|x64
+		{C06C7017-46D6-4F46-A382-C229EAA9125D}.Release|x64.Build.0 = Release|x64
+		{C06C7017-46D6-4F46-A382-C229EAA9125D}.Release|x86.ActiveCfg = Release|x86
+		{C06C7017-46D6-4F46-A382-C229EAA9125D}.Release|x86.Build.0 = Release|x86
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
