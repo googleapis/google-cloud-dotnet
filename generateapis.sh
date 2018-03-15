@@ -90,10 +90,11 @@ EOF
   
   $BASH -c "java -cp toolkit/build/libs/toolkit-${TOOLKIT_VERSION}-all.jar com.google.api.codegen.CodeGeneratorTool ${args[*]}"
   
-  # We don't want to copy the snippet/prod project files,
+  # We don't want to copy the snippet/prod/tests project files,
   # but the smoke test project file is okay, as we don't
   # customize that.
   rm -f `find $API_TMP_DIR -type f -name $1.Snippets.csproj`
+  rm -f `find $API_TMP_DIR -type f -name $1.Tests.csproj`
   rm -f `find $API_TMP_DIR -type f -name $1.csproj`
   cp -r $API_TMP_DIR/$1 $API_OUT_DIR
 
