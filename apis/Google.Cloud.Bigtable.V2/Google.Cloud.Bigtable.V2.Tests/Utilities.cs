@@ -62,7 +62,7 @@ namespace Google.Cloud.Bigtable.V2.Tests
             ReadRowsResponse[][] responsesForRetryStreams = null,
             bool errorAtEndOfLastStream = false)
         {
-            var streams = new List<MockReadRowsStream>();
+            MockReadRowsStream lastStream = null;
             var result = CreateMockClientForStreamingRpc(
                 initialRequest,
                 c => c.ReadRows(
@@ -74,11 +74,7 @@ namespace Google.Cloud.Bigtable.V2.Tests
                 initialStreamResponse,
                 responsesForRetryStreams,
                 itemsToStream: entries =>
-                {
-                    var stream = new MockReadRowsStream(entries);
-                    streams.Add(stream);
-                    return stream;
-                },
+                    lastStream = new MockReadRowsStream(entries) { ShouldErrorAtEnd = true },
                 validator: (request, response) =>
                 {
                     // Make sure the request is properly formulated for the mock stream being returned.
@@ -91,15 +87,11 @@ namespace Google.Cloud.Bigtable.V2.Tests
                     }
                 });
 
-
             // All but the last stream should end with an RpcException which permits retrying with the
-            // default RetrySettings so the higher level ReadRowsStream keeps retrying. The last stream
-            // should end normally, unless errorAtEndOfLastStream is true, in which case it should end
-            // with an error as well.
-            for (int i = 0; i < streams.Count - (errorAtEndOfLastStream ? 0 : 1); i++)
-            {
-                streams[i].ShouldErrorAtEnd = true;
-            }
+            // default RetrySettings so the higher level ReadRowsStream keeps retrying
+            // (see `ShouldErrorAtEnd = true` above). The last stream should end normally, unless
+            // errorAtEndOfLastStream is true, in which case it should end with an error as well.
+            lastStream.ShouldErrorAtEnd = errorAtEndOfLastStream;
 
             return result;
 
