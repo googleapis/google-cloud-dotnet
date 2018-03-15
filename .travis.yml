@@ -1,3 +1,8 @@
+env:
+- API_REGEX='Google\.Cloud\.[A-L].*'
+- API_REGEX='Google\.Cloud\.[M-Z].*'
+# List non-Cloud APIs here
+- API_REGEX='Google\.LongRunning'
 language: csharp
 mono: none
 dotnet: 2.1.4
@@ -13,4 +18,4 @@ addons:
     - dotnet-sharedframework-microsoft.netcore.app-1.0.5
 
 script:
-  - ./build.sh --diff
+  - ./build.sh --diff --regex $API_REGEX
