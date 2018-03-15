@@ -20,6 +20,7 @@ using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Linq.Expressions;
+using Xunit;
 
 namespace Google.Cloud.Bigtable.V2.Tests
 {
@@ -58,9 +59,10 @@ namespace Google.Cloud.Bigtable.V2.Tests
         public static BigtableClient CreateReadRowsMockClient(
             ReadRowsRequest initialRequest,
             ReadRowsResponse[] initialStreamResponse,
-            ReadRowsResponse[][] responsesForRetryStreams = null)
+            ReadRowsResponse[][] responsesForRetryStreams = null,
+            bool errorAtEndOfLastStream = false)
         {
-            var streams = new List<MockReadRowsStream>();
+            MockReadRowsStream lastStream = null;
             var result = CreateMockClientForStreamingRpc(
                 initialRequest,
                 c => c.ReadRows(
@@ -72,11 +74,7 @@ namespace Google.Cloud.Bigtable.V2.Tests
                 initialStreamResponse,
                 responsesForRetryStreams,
                 itemsToStream: entries =>
-                {
-                    var stream = new MockReadRowsStream(entries);
-                    streams.Add(stream);
-                    return stream;
-                },
+                    lastStream = new MockReadRowsStream(entries) { ShouldErrorAtEnd = true },
                 validator: (request, response) =>
                 {
                     // Make sure the request is properly formulated for the mock stream being returned.
@@ -89,14 +87,11 @@ namespace Google.Cloud.Bigtable.V2.Tests
                     }
                 });
 
-
             // All but the last stream should end with an RpcException which permits retrying with the
-            // default RetrySettings so the higher level ReadRowsStream keeps retrying. The last stream
-            // should end normally.
-            for (int i = 0; i < streams.Count - 1; i++)
-            {
-                streams[i].ShouldErrorAtEnd = true;
-            }
+            // default RetrySettings so the higher level ReadRowsStream keeps retrying
+            // (see `ShouldErrorAtEnd = true` above). The last stream should end normally, unless
+            // errorAtEndOfLastStream is true, in which case it should end with an error as well.
+            lastStream.ShouldErrorAtEnd = errorAtEndOfLastStream;
 
             return result;
 
@@ -163,15 +158,17 @@ namespace Google.Cloud.Bigtable.V2.Tests
             // order matters to the caller.
             var initialResponse = itemsToStream(entriesForInitialStream);
 
-            if (entriesForRetryStreams != null)
+            var retryStreams = entriesForRetryStreams != null
+                ? new Queue<TMockStream>(entriesForRetryStreams.Select(itemsToStream))
+                : new Queue<TMockStream>();
+
+            mock.Setup(retrySetup).Returns<TRequest, CallSettings>((request, callSettings) =>
             {
-                var retryStreams = new Queue<TMockStream>(entriesForRetryStreams.Select(itemsToStream));
-                mock.Setup(retrySetup).Returns<TRequest, CallSettings>((request, callSettings) => {
-                    var respose = retryStreams.Dequeue();
-                    validator?.Invoke(request, respose);
-                    return respose;
-                });
-            }
+                Assert.NotEmpty(retryStreams);
+                var respose = retryStreams.Dequeue();
+                validator?.Invoke(request, respose);
+                return respose;
+            });
 
             // Setup the initial response last so the catch-all setup doesn't overwrite it.
             // Check for reference equality to retry requests that happen to be a duplicate of the original don't match here.

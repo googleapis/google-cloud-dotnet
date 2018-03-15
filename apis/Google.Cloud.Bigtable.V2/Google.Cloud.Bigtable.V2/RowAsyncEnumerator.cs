@@ -90,12 +90,18 @@ namespace Google.Cloud.Bigtable.V2
                 }
                 catch (RpcException e) when (_retrySettings.RetryFilter(e))
                 {
+                    var retryRequest = _requestManager.BuildUpdatedRequest();
+                    if (retryRequest == null)
+                    {
+                        break;
+                    }
+
                     // Reset the merging and re-connect to a new stream.
                     Reset();
                     await ApiCallRetryExtensions.RetryOperationUntilCompleted(
                         () =>
                         {
-                            _stream = _client.ReadRowsInternal(_requestManager.BuildUpdatedRequest(), _callSettings);
+                            _stream = _client.ReadRowsInternal(retryRequest, _callSettings);
                             return Task.FromResult(true);
                         },
                         _client.Clock,
