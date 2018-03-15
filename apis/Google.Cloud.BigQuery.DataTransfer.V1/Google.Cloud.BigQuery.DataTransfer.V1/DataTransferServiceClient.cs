@@ -1084,7 +1084,7 @@ namespace Google.Cloud.BigQuery.DataTransfer.V1
         /// If not null, applies overrides to this RPC call.
         /// </param>
         /// <returns>
-        /// A Task containing the RPC response.
+        /// A Task that completes when the RPC has completed.
         /// </returns>
         public virtual Task DeleteTransferConfigAsync(
             TransferConfigNameOneof name,
@@ -1107,7 +1107,7 @@ namespace Google.Cloud.BigQuery.DataTransfer.V1
         /// A <see cref="CancellationToken"/> to use for this RPC.
         /// </param>
         /// <returns>
-        /// A Task containing the RPC response.
+        /// A Task that completes when the RPC has completed.
         /// </returns>
         public virtual Task DeleteTransferConfigAsync(
             TransferConfigNameOneof name,
@@ -1126,9 +1126,6 @@ namespace Google.Cloud.BigQuery.DataTransfer.V1
         /// <param name="callSettings">
         /// If not null, applies overrides to this RPC call.
         /// </param>
-        /// <returns>
-        /// The RPC response.
-        /// </returns>
         public virtual void DeleteTransferConfig(
             TransferConfigNameOneof name,
             CallSettings callSettings = null) => DeleteTransferConfig(
@@ -1149,7 +1146,7 @@ namespace Google.Cloud.BigQuery.DataTransfer.V1
         /// If not null, applies overrides to this RPC call.
         /// </param>
         /// <returns>
-        /// A Task containing the RPC response.
+        /// A Task that completes when the RPC has completed.
         /// </returns>
         public virtual Task DeleteTransferConfigAsync(
             DeleteTransferConfigRequest request,
@@ -1168,9 +1165,6 @@ namespace Google.Cloud.BigQuery.DataTransfer.V1
         /// <param name="callSettings">
         /// If not null, applies overrides to this RPC call.
         /// </param>
-        /// <returns>
-        /// The RPC response.
-        /// </returns>
         public virtual void DeleteTransferConfig(
             DeleteTransferConfigRequest request,
             CallSettings callSettings = null)
@@ -1649,7 +1643,7 @@ namespace Google.Cloud.BigQuery.DataTransfer.V1
         /// If not null, applies overrides to this RPC call.
         /// </param>
         /// <returns>
-        /// A Task containing the RPC response.
+        /// A Task that completes when the RPC has completed.
         /// </returns>
         public virtual Task DeleteTransferRunAsync(
             RunNameOneof name,
@@ -1671,7 +1665,7 @@ namespace Google.Cloud.BigQuery.DataTransfer.V1
         /// A <see cref="CancellationToken"/> to use for this RPC.
         /// </param>
         /// <returns>
-        /// A Task containing the RPC response.
+        /// A Task that completes when the RPC has completed.
         /// </returns>
         public virtual Task DeleteTransferRunAsync(
             RunNameOneof name,
@@ -1689,9 +1683,6 @@ namespace Google.Cloud.BigQuery.DataTransfer.V1
         /// <param name="callSettings">
         /// If not null, applies overrides to this RPC call.
         /// </param>
-        /// <returns>
-        /// The RPC response.
-        /// </returns>
         public virtual void DeleteTransferRun(
             RunNameOneof name,
             CallSettings callSettings = null) => DeleteTransferRun(
@@ -1711,7 +1702,7 @@ namespace Google.Cloud.BigQuery.DataTransfer.V1
         /// If not null, applies overrides to this RPC call.
         /// </param>
         /// <returns>
-        /// A Task containing the RPC response.
+        /// A Task that completes when the RPC has completed.
         /// </returns>
         public virtual Task DeleteTransferRunAsync(
             DeleteTransferRunRequest request,
@@ -1729,9 +1720,6 @@ namespace Google.Cloud.BigQuery.DataTransfer.V1
         /// <param name="callSettings">
         /// If not null, applies overrides to this RPC call.
         /// </param>
-        /// <returns>
-        /// The RPC response.
-        /// </returns>
         public virtual void DeleteTransferRun(
             DeleteTransferRunRequest request,
             CallSettings callSettings = null)
@@ -2338,7 +2326,7 @@ namespace Google.Cloud.BigQuery.DataTransfer.V1
         /// If not null, applies overrides to this RPC call.
         /// </param>
         /// <returns>
-        /// A Task containing the RPC response.
+        /// A Task that completes when the RPC has completed.
         /// </returns>
         public override Task DeleteTransferConfigAsync(
             DeleteTransferConfigRequest request,
@@ -2358,9 +2346,6 @@ namespace Google.Cloud.BigQuery.DataTransfer.V1
         /// <param name="callSettings">
         /// If not null, applies overrides to this RPC call.
         /// </param>
-        /// <returns>
-        /// The RPC response.
-        /// </returns>
         public override void DeleteTransferConfig(
             DeleteTransferConfigRequest request,
             CallSettings callSettings = null)
@@ -2545,7 +2530,7 @@ namespace Google.Cloud.BigQuery.DataTransfer.V1
         /// If not null, applies overrides to this RPC call.
         /// </param>
         /// <returns>
-        /// A Task containing the RPC response.
+        /// A Task that completes when the RPC has completed.
         /// </returns>
         public override Task DeleteTransferRunAsync(
             DeleteTransferRunRequest request,
@@ -2564,9 +2549,6 @@ namespace Google.Cloud.BigQuery.DataTransfer.V1
         /// <param name="callSettings">
         /// If not null, applies overrides to this RPC call.
         /// </param>
-        /// <returns>
-        /// The RPC response.
-        /// </returns>
         public override void DeleteTransferRun(
             DeleteTransferRunRequest request,
             CallSettings callSettings = null)

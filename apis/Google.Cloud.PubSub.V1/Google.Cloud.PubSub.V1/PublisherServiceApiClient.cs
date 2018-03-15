@@ -1206,7 +1206,7 @@ namespace Google.Cloud.PubSub.V1
         /// If not null, applies overrides to this RPC call.
         /// </param>
         /// <returns>
-        /// A Task containing the RPC response.
+        /// A Task that completes when the RPC has completed.
         /// </returns>
         public virtual Task DeleteTopicAsync(
             TopicName topic,
@@ -1232,7 +1232,7 @@ namespace Google.Cloud.PubSub.V1
         /// A <see cref="CancellationToken"/> to use for this RPC.
         /// </param>
         /// <returns>
-        /// A Task containing the RPC response.
+        /// A Task that completes when the RPC has completed.
         /// </returns>
         public virtual Task DeleteTopicAsync(
             TopicName topic,
@@ -1254,9 +1254,6 @@ namespace Google.Cloud.PubSub.V1
         /// <param name="callSettings">
         /// If not null, applies overrides to this RPC call.
         /// </param>
-        /// <returns>
-        /// The RPC response.
-        /// </returns>
         public virtual void DeleteTopic(
             TopicName topic,
             CallSettings callSettings = null) => DeleteTopic(
@@ -1280,7 +1277,7 @@ namespace Google.Cloud.PubSub.V1
         /// If not null, applies overrides to this RPC call.
         /// </param>
         /// <returns>
-        /// A Task containing the RPC response.
+        /// A Task that completes when the RPC has completed.
         /// </returns>
         public virtual Task DeleteTopicAsync(
             DeleteTopicRequest request,
@@ -1302,9 +1299,6 @@ namespace Google.Cloud.PubSub.V1
         /// <param name="callSettings">
         /// If not null, applies overrides to this RPC call.
         /// </param>
-        /// <returns>
-        /// The RPC response.
-        /// </returns>
         public virtual void DeleteTopic(
             DeleteTopicRequest request,
             CallSettings callSettings = null)
@@ -2036,7 +2030,7 @@ namespace Google.Cloud.PubSub.V1
         /// If not null, applies overrides to this RPC call.
         /// </param>
         /// <returns>
-        /// A Task containing the RPC response.
+        /// A Task that completes when the RPC has completed.
         /// </returns>
         public override Task DeleteTopicAsync(
             DeleteTopicRequest request,
@@ -2059,9 +2053,6 @@ namespace Google.Cloud.PubSub.V1
         /// <param name="callSettings">
         /// If not null, applies overrides to this RPC call.
         /// </param>
-        /// <returns>
-        /// The RPC response.
-        /// </returns>
         public override void DeleteTopic(
             DeleteTopicRequest request,
             CallSettings callSettings = null)

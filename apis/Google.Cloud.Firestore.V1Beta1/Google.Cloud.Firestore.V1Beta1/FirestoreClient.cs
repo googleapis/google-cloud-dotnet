@@ -856,7 +856,7 @@ namespace Google.Cloud.Firestore.V1Beta1
         /// If not null, applies overrides to this RPC call.
         /// </param>
         /// <returns>
-        /// A Task containing the RPC response.
+        /// A Task that completes when the RPC has completed.
         /// </returns>
         public virtual Task DeleteDocumentAsync(
             string name,
@@ -878,7 +878,7 @@ namespace Google.Cloud.Firestore.V1Beta1
         /// A <see cref="CancellationToken"/> to use for this RPC.
         /// </param>
         /// <returns>
-        /// A Task containing the RPC response.
+        /// A Task that completes when the RPC has completed.
         /// </returns>
         public virtual Task DeleteDocumentAsync(
             string name,
@@ -896,9 +896,6 @@ namespace Google.Cloud.Firestore.V1Beta1
         /// <param name="callSettings">
         /// If not null, applies overrides to this RPC call.
         /// </param>
-        /// <returns>
-        /// The RPC response.
-        /// </returns>
         public virtual void DeleteDocument(
             string name,
             CallSettings callSettings = null) => DeleteDocument(
@@ -918,7 +915,7 @@ namespace Google.Cloud.Firestore.V1Beta1
         /// If not null, applies overrides to this RPC call.
         /// </param>
         /// <returns>
-        /// A Task containing the RPC response.
+        /// A Task that completes when the RPC has completed.
         /// </returns>
         public virtual Task DeleteDocumentAsync(
             DeleteDocumentRequest request,
@@ -936,9 +933,6 @@ namespace Google.Cloud.Firestore.V1Beta1
         /// <param name="callSettings">
         /// If not null, applies overrides to this RPC call.
         /// </param>
-        /// <returns>
-        /// The RPC response.
-        /// </returns>
         public virtual void DeleteDocument(
             DeleteDocumentRequest request,
             CallSettings callSettings = null)
@@ -1212,7 +1206,7 @@ namespace Google.Cloud.Firestore.V1Beta1
         /// If not null, applies overrides to this RPC call.
         /// </param>
         /// <returns>
-        /// A Task containing the RPC response.
+        /// A Task that completes when the RPC has completed.
         /// </returns>
         public virtual Task RollbackAsync(
             string database,
@@ -1239,7 +1233,7 @@ namespace Google.Cloud.Firestore.V1Beta1
         /// A <see cref="CancellationToken"/> to use for this RPC.
         /// </param>
         /// <returns>
-        /// A Task containing the RPC response.
+        /// A Task that completes when the RPC has completed.
         /// </returns>
         public virtual Task RollbackAsync(
             string database,
@@ -1262,9 +1256,6 @@ namespace Google.Cloud.Firestore.V1Beta1
         /// <param name="callSettings">
         /// If not null, applies overrides to this RPC call.
         /// </param>
-        /// <returns>
-        /// The RPC response.
-        /// </returns>
         public virtual void Rollback(
             string database,
             ByteString transaction,
@@ -1286,7 +1277,7 @@ namespace Google.Cloud.Firestore.V1Beta1
         /// If not null, applies overrides to this RPC call.
         /// </param>
         /// <returns>
-        /// A Task containing the RPC response.
+        /// A Task that completes when the RPC has completed.
         /// </returns>
         public virtual Task RollbackAsync(
             RollbackRequest request,
@@ -1304,9 +1295,6 @@ namespace Google.Cloud.Firestore.V1Beta1
         /// <param name="callSettings">
         /// If not null, applies overrides to this RPC call.
         /// </param>
-        /// <returns>
-        /// The RPC response.
-        /// </returns>
         public virtual void Rollback(
             RollbackRequest request,
             CallSettings callSettings = null)
@@ -1756,7 +1744,7 @@ namespace Google.Cloud.Firestore.V1Beta1
         /// If not null, applies overrides to this RPC call.
         /// </param>
         /// <returns>
-        /// A Task containing the RPC response.
+        /// A Task that completes when the RPC has completed.
         /// </returns>
         public override Task DeleteDocumentAsync(
             DeleteDocumentRequest request,
@@ -1775,9 +1763,6 @@ namespace Google.Cloud.Firestore.V1Beta1
         /// <param name="callSettings">
         /// If not null, applies overrides to this RPC call.
         /// </param>
-        /// <returns>
-        /// The RPC response.
-        /// </returns>
         public override void DeleteDocument(
             DeleteDocumentRequest request,
             CallSettings callSettings = null)
@@ -1917,7 +1902,7 @@ namespace Google.Cloud.Firestore.V1Beta1
         /// If not null, applies overrides to this RPC call.
         /// </param>
         /// <returns>
-        /// A Task containing the RPC response.
+        /// A Task that completes when the RPC has completed.
         /// </returns>
         public override Task RollbackAsync(
             RollbackRequest request,
@@ -1936,9 +1921,6 @@ namespace Google.Cloud.Firestore.V1Beta1
         /// <param name="callSettings">
         /// If not null, applies overrides to this RPC call.
         /// </param>
-        /// <returns>
-        /// The RPC response.
-        /// </returns>
         public override void Rollback(
             RollbackRequest request,
             CallSettings callSettings = null)

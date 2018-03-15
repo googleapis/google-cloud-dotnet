@@ -595,7 +595,7 @@ namespace Google.LongRunning
         /// If not null, applies overrides to this RPC call.
         /// </param>
         /// <returns>
-        /// A Task containing the RPC response.
+        /// A Task that completes when the RPC has completed.
         /// </returns>
         public virtual Task CancelOperationAsync(
             string name,
@@ -625,7 +625,7 @@ namespace Google.LongRunning
         /// A <see cref="CancellationToken"/> to use for this RPC.
         /// </param>
         /// <returns>
-        /// A Task containing the RPC response.
+        /// A Task that completes when the RPC has completed.
         /// </returns>
         public virtual Task CancelOperationAsync(
             string name,
@@ -651,9 +651,6 @@ namespace Google.LongRunning
         /// <param name="callSettings">
         /// If not null, applies overrides to this RPC call.
         /// </param>
-        /// <returns>
-        /// The RPC response.
-        /// </returns>
         public virtual void CancelOperation(
             string name,
             CallSettings callSettings = null) => CancelOperation(
@@ -682,7 +679,7 @@ namespace Google.LongRunning
         /// If not null, applies overrides to this RPC call.
         /// </param>
         /// <returns>
-        /// A Task containing the RPC response.
+        /// A Task that completes when the RPC has completed.
         /// </returns>
         public virtual Task CancelOperationAsync(
             CancelOperationRequest request,
@@ -709,9 +706,6 @@ namespace Google.LongRunning
         /// <param name="callSettings">
         /// If not null, applies overrides to this RPC call.
         /// </param>
-        /// <returns>
-        /// The RPC response.
-        /// </returns>
         public virtual void CancelOperation(
             CancelOperationRequest request,
             CallSettings callSettings = null)
@@ -732,7 +726,7 @@ namespace Google.LongRunning
         /// If not null, applies overrides to this RPC call.
         /// </param>
         /// <returns>
-        /// A Task containing the RPC response.
+        /// A Task that completes when the RPC has completed.
         /// </returns>
         public virtual Task DeleteOperationAsync(
             string name,
@@ -756,7 +750,7 @@ namespace Google.LongRunning
         /// A <see cref="CancellationToken"/> to use for this RPC.
         /// </param>
         /// <returns>
-        /// A Task containing the RPC response.
+        /// A Task that completes when the RPC has completed.
         /// </returns>
         public virtual Task DeleteOperationAsync(
             string name,
@@ -776,9 +770,6 @@ namespace Google.LongRunning
         /// <param name="callSettings">
         /// If not null, applies overrides to this RPC call.
         /// </param>
-        /// <returns>
-        /// The RPC response.
-        /// </returns>
         public virtual void DeleteOperation(
             string name,
             CallSettings callSettings = null) => DeleteOperation(
@@ -801,7 +792,7 @@ namespace Google.LongRunning
         /// If not null, applies overrides to this RPC call.
         /// </param>
         /// <returns>
-        /// A Task containing the RPC response.
+        /// A Task that completes when the RPC has completed.
         /// </returns>
         public virtual Task DeleteOperationAsync(
             DeleteOperationRequest request,
@@ -822,9 +813,6 @@ namespace Google.LongRunning
         /// <param name="callSettings">
         /// If not null, applies overrides to this RPC call.
         /// </param>
-        /// <returns>
-        /// The RPC response.
-        /// </returns>
         public virtual void DeleteOperation(
             DeleteOperationRequest request,
             CallSettings callSettings = null)
@@ -989,7 +977,7 @@ namespace Google.LongRunning
         /// If not null, applies overrides to this RPC call.
         /// </param>
         /// <returns>
-        /// A Task containing the RPC response.
+        /// A Task that completes when the RPC has completed.
         /// </returns>
         public override Task CancelOperationAsync(
             CancelOperationRequest request,
@@ -1017,9 +1005,6 @@ namespace Google.LongRunning
         /// <param name="callSettings">
         /// If not null, applies overrides to this RPC call.
         /// </param>
-        /// <returns>
-        /// The RPC response.
-        /// </returns>
         public override void CancelOperation(
             CancelOperationRequest request,
             CallSettings callSettings = null)
@@ -1041,7 +1026,7 @@ namespace Google.LongRunning
         /// If not null, applies overrides to this RPC call.
         /// </param>
         /// <returns>
-        /// A Task containing the RPC response.
+        /// A Task that completes when the RPC has completed.
         /// </returns>
         public override Task DeleteOperationAsync(
             DeleteOperationRequest request,
@@ -1063,9 +1048,6 @@ namespace Google.LongRunning
         /// <param name="callSettings">
         /// If not null, applies overrides to this RPC call.
         /// </param>
-        /// <returns>
-        /// The RPC response.
-        /// </returns>
         public override void DeleteOperation(
             DeleteOperationRequest request,
             CallSettings callSettings = null)

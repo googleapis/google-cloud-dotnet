@@ -1131,7 +1131,7 @@ namespace Google.Cloud.Spanner.Admin.Database.V1
         /// If not null, applies overrides to this RPC call.
         /// </param>
         /// <returns>
-        /// A Task containing the RPC response.
+        /// A Task that completes when the RPC has completed.
         /// </returns>
         public virtual Task DropDatabaseAsync(
             DatabaseName database,
@@ -1152,7 +1152,7 @@ namespace Google.Cloud.Spanner.Admin.Database.V1
         /// A <see cref="CancellationToken"/> to use for this RPC.
         /// </param>
         /// <returns>
-        /// A Task containing the RPC response.
+        /// A Task that completes when the RPC has completed.
         /// </returns>
         public virtual Task DropDatabaseAsync(
             DatabaseName database,
@@ -1169,9 +1169,6 @@ namespace Google.Cloud.Spanner.Admin.Database.V1
         /// <param name="callSettings">
         /// If not null, applies overrides to this RPC call.
         /// </param>
-        /// <returns>
-        /// The RPC response.
-        /// </returns>
         public virtual void DropDatabase(
             DatabaseName database,
             CallSettings callSettings = null) => DropDatabase(
@@ -1191,7 +1188,7 @@ namespace Google.Cloud.Spanner.Admin.Database.V1
         /// If not null, applies overrides to this RPC call.
         /// </param>
         /// <returns>
-        /// A Task containing the RPC response.
+        /// A Task that completes when the RPC has completed.
         /// </returns>
         public virtual Task DropDatabaseAsync(
             DropDatabaseRequest request,
@@ -1209,9 +1206,6 @@ namespace Google.Cloud.Spanner.Admin.Database.V1
         /// <param name="callSettings">
         /// If not null, applies overrides to this RPC call.
         /// </param>
-        /// <returns>
-        /// The RPC response.
-        /// </returns>
         public virtual void DropDatabase(
             DropDatabaseRequest request,
             CallSettings callSettings = null)
@@ -2032,7 +2026,7 @@ namespace Google.Cloud.Spanner.Admin.Database.V1
         /// If not null, applies overrides to this RPC call.
         /// </param>
         /// <returns>
-        /// A Task containing the RPC response.
+        /// A Task that completes when the RPC has completed.
         /// </returns>
         public override Task DropDatabaseAsync(
             DropDatabaseRequest request,
@@ -2051,9 +2045,6 @@ namespace Google.Cloud.Spanner.Admin.Database.V1
         /// <param name="callSettings">
         /// If not null, applies overrides to this RPC call.
         /// </param>
-        /// <returns>
-        /// The RPC response.
-        /// </returns>
         public override void DropDatabase(
             DropDatabaseRequest request,
             CallSettings callSettings = null)

@@ -1700,7 +1700,7 @@ namespace Google.Cloud.Spanner.Admin.Instance.V1
         /// If not null, applies overrides to this RPC call.
         /// </param>
         /// <returns>
-        /// A Task containing the RPC response.
+        /// A Task that completes when the RPC has completed.
         /// </returns>
         public virtual Task DeleteInstanceAsync(
             InstanceName name,
@@ -1732,7 +1732,7 @@ namespace Google.Cloud.Spanner.Admin.Instance.V1
         /// A <see cref="CancellationToken"/> to use for this RPC.
         /// </param>
         /// <returns>
-        /// A Task containing the RPC response.
+        /// A Task that completes when the RPC has completed.
         /// </returns>
         public virtual Task DeleteInstanceAsync(
             InstanceName name,
@@ -1760,9 +1760,6 @@ namespace Google.Cloud.Spanner.Admin.Instance.V1
         /// <param name="callSettings">
         /// If not null, applies overrides to this RPC call.
         /// </param>
-        /// <returns>
-        /// The RPC response.
-        /// </returns>
         public virtual void DeleteInstance(
             InstanceName name,
             CallSettings callSettings = null) => DeleteInstance(
@@ -1792,7 +1789,7 @@ namespace Google.Cloud.Spanner.Admin.Instance.V1
         /// If not null, applies overrides to this RPC call.
         /// </param>
         /// <returns>
-        /// A Task containing the RPC response.
+        /// A Task that completes when the RPC has completed.
         /// </returns>
         public virtual Task DeleteInstanceAsync(
             DeleteInstanceRequest request,
@@ -1820,9 +1817,6 @@ namespace Google.Cloud.Spanner.Admin.Instance.V1
         /// <param name="callSettings">
         /// If not null, applies overrides to this RPC call.
         /// </param>
-        /// <returns>
-        /// The RPC response.
-        /// </returns>
         public virtual void DeleteInstance(
             DeleteInstanceRequest request,
             CallSettings callSettings = null)
@@ -2747,7 +2741,7 @@ namespace Google.Cloud.Spanner.Admin.Instance.V1
         /// If not null, applies overrides to this RPC call.
         /// </param>
         /// <returns>
-        /// A Task containing the RPC response.
+        /// A Task that completes when the RPC has completed.
         /// </returns>
         public override Task DeleteInstanceAsync(
             DeleteInstanceRequest request,
@@ -2776,9 +2770,6 @@ namespace Google.Cloud.Spanner.Admin.Instance.V1
         /// <param name="callSettings">
         /// If not null, applies overrides to this RPC call.
         /// </param>
-        /// <returns>
-        /// The RPC response.
-        /// </returns>
         public override void DeleteInstance(
             DeleteInstanceRequest request,
             CallSettings callSettings = null)

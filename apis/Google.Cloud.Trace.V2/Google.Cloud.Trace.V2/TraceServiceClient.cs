@@ -295,7 +295,7 @@ namespace Google.Cloud.Trace.V2
         /// If not null, applies overrides to this RPC call.
         /// </param>
         /// <returns>
-        /// A Task containing the RPC response.
+        /// A Task that completes when the RPC has completed.
         /// </returns>
         public virtual Task BatchWriteSpansAsync(
             ProjectName name,
@@ -324,7 +324,7 @@ namespace Google.Cloud.Trace.V2
         /// A <see cref="CancellationToken"/> to use for this RPC.
         /// </param>
         /// <returns>
-        /// A Task containing the RPC response.
+        /// A Task that completes when the RPC has completed.
         /// </returns>
         public virtual Task BatchWriteSpansAsync(
             ProjectName name,
@@ -349,9 +349,6 @@ namespace Google.Cloud.Trace.V2
         /// <param name="callSettings">
         /// If not null, applies overrides to this RPC call.
         /// </param>
-        /// <returns>
-        /// The RPC response.
-        /// </returns>
         public virtual void BatchWriteSpans(
             ProjectName name,
             IEnumerable<Span> spans,
@@ -374,7 +371,7 @@ namespace Google.Cloud.Trace.V2
         /// If not null, applies overrides to this RPC call.
         /// </param>
         /// <returns>
-        /// A Task containing the RPC response.
+        /// A Task that completes when the RPC has completed.
         /// </returns>
         public virtual Task BatchWriteSpansAsync(
             BatchWriteSpansRequest request,
@@ -393,9 +390,6 @@ namespace Google.Cloud.Trace.V2
         /// <param name="callSettings">
         /// If not null, applies overrides to this RPC call.
         /// </param>
-        /// <returns>
-        /// The RPC response.
-        /// </returns>
         public virtual void BatchWriteSpans(
             BatchWriteSpansRequest request,
             CallSettings callSettings = null)
@@ -490,7 +484,7 @@ namespace Google.Cloud.Trace.V2
         /// If not null, applies overrides to this RPC call.
         /// </param>
         /// <returns>
-        /// A Task containing the RPC response.
+        /// A Task that completes when the RPC has completed.
         /// </returns>
         public override Task BatchWriteSpansAsync(
             BatchWriteSpansRequest request,
@@ -510,9 +504,6 @@ namespace Google.Cloud.Trace.V2
         /// <param name="callSettings">
         /// If not null, applies overrides to this RPC call.
         /// </param>
-        /// <returns>
-        /// The RPC response.
-        /// </returns>
         public override void BatchWriteSpans(
             BatchWriteSpansRequest request,
             CallSettings callSettings = null)

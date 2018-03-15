@@ -1042,7 +1042,7 @@ namespace Google.Cloud.Spanner.V1
         /// If not null, applies overrides to this RPC call.
         /// </param>
         /// <returns>
-        /// A Task containing the RPC response.
+        /// A Task that completes when the RPC has completed.
         /// </returns>
         public virtual Task DeleteSessionAsync(
             SessionName name,
@@ -1063,7 +1063,7 @@ namespace Google.Cloud.Spanner.V1
         /// A <see cref="CancellationToken"/> to use for this RPC.
         /// </param>
         /// <returns>
-        /// A Task containing the RPC response.
+        /// A Task that completes when the RPC has completed.
         /// </returns>
         public virtual Task DeleteSessionAsync(
             SessionName name,
@@ -1080,9 +1080,6 @@ namespace Google.Cloud.Spanner.V1
         /// <param name="callSettings">
         /// If not null, applies overrides to this RPC call.
         /// </param>
-        /// <returns>
-        /// The RPC response.
-        /// </returns>
         public virtual void DeleteSession(
             SessionName name,
             CallSettings callSettings = null) => DeleteSession(
@@ -1102,7 +1099,7 @@ namespace Google.Cloud.Spanner.V1
         /// If not null, applies overrides to this RPC call.
         /// </param>
         /// <returns>
-        /// A Task containing the RPC response.
+        /// A Task that completes when the RPC has completed.
         /// </returns>
         public virtual Task DeleteSessionAsync(
             DeleteSessionRequest request,
@@ -1120,9 +1117,6 @@ namespace Google.Cloud.Spanner.V1
         /// <param name="callSettings">
         /// If not null, applies overrides to this RPC call.
         /// </param>
-        /// <returns>
-        /// The RPC response.
-        /// </returns>
         public virtual void DeleteSession(
             DeleteSessionRequest request,
             CallSettings callSettings = null)
@@ -1768,7 +1762,7 @@ namespace Google.Cloud.Spanner.V1
         /// If not null, applies overrides to this RPC call.
         /// </param>
         /// <returns>
-        /// A Task containing the RPC response.
+        /// A Task that completes when the RPC has completed.
         /// </returns>
         public virtual Task RollbackAsync(
             SessionName session,
@@ -1801,7 +1795,7 @@ namespace Google.Cloud.Spanner.V1
         /// A <see cref="CancellationToken"/> to use for this RPC.
         /// </param>
         /// <returns>
-        /// A Task containing the RPC response.
+        /// A Task that completes when the RPC has completed.
         /// </returns>
         public virtual Task RollbackAsync(
             SessionName session,
@@ -1830,9 +1824,6 @@ namespace Google.Cloud.Spanner.V1
         /// <param name="callSettings">
         /// If not null, applies overrides to this RPC call.
         /// </param>
-        /// <returns>
-        /// The RPC response.
-        /// </returns>
         public virtual void Rollback(
             SessionName session,
             ByteString transactionId,
@@ -1861,7 +1852,7 @@ namespace Google.Cloud.Spanner.V1
         /// If not null, applies overrides to this RPC call.
         /// </param>
         /// <returns>
-        /// A Task containing the RPC response.
+        /// A Task that completes when the RPC has completed.
         /// </returns>
         public virtual Task RollbackAsync(
             RollbackRequest request,
@@ -1886,9 +1877,6 @@ namespace Google.Cloud.Spanner.V1
         /// <param name="callSettings">
         /// If not null, applies overrides to this RPC call.
         /// </param>
-        /// <returns>
-        /// The RPC response.
-        /// </returns>
         public virtual void Rollback(
             RollbackRequest request,
             CallSettings callSettings = null)
@@ -2250,7 +2238,7 @@ namespace Google.Cloud.Spanner.V1
         /// If not null, applies overrides to this RPC call.
         /// </param>
         /// <returns>
-        /// A Task containing the RPC response.
+        /// A Task that completes when the RPC has completed.
         /// </returns>
         public override Task DeleteSessionAsync(
             DeleteSessionRequest request,
@@ -2269,9 +2257,6 @@ namespace Google.Cloud.Spanner.V1
         /// <param name="callSettings">
         /// If not null, applies overrides to this RPC call.
         /// </param>
-        /// <returns>
-        /// The RPC response.
-        /// </returns>
         public override void DeleteSession(
             DeleteSessionRequest request,
             CallSettings callSettings = null)
@@ -2605,7 +2590,7 @@ namespace Google.Cloud.Spanner.V1
         /// If not null, applies overrides to this RPC call.
         /// </param>
         /// <returns>
-        /// A Task containing the RPC response.
+        /// A Task that completes when the RPC has completed.
         /// </returns>
         public override Task RollbackAsync(
             RollbackRequest request,
@@ -2631,9 +2616,6 @@ namespace Google.Cloud.Spanner.V1
         /// <param name="callSettings">
         /// If not null, applies overrides to this RPC call.
         /// </param>
-        /// <returns>
-        /// The RPC response.
-        /// </returns>
         public override void Rollback(
             RollbackRequest request,
             CallSettings callSettings = null)

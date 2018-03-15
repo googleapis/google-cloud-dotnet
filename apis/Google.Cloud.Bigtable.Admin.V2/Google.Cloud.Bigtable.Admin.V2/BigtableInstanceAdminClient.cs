@@ -1533,7 +1533,7 @@ namespace Google.Cloud.Bigtable.Admin.V2
         /// If not null, applies overrides to this RPC call.
         /// </param>
         /// <returns>
-        /// A Task containing the RPC response.
+        /// A Task that completes when the RPC has completed.
         /// </returns>
         public virtual Task DeleteInstanceAsync(
             InstanceName name,
@@ -1555,7 +1555,7 @@ namespace Google.Cloud.Bigtable.Admin.V2
         /// A <see cref="CancellationToken"/> to use for this RPC.
         /// </param>
         /// <returns>
-        /// A Task containing the RPC response.
+        /// A Task that completes when the RPC has completed.
         /// </returns>
         public virtual Task DeleteInstanceAsync(
             InstanceName name,
@@ -1573,9 +1573,6 @@ namespace Google.Cloud.Bigtable.Admin.V2
         /// <param name="callSettings">
         /// If not null, applies overrides to this RPC call.
         /// </param>
-        /// <returns>
-        /// The RPC response.
-        /// </returns>
         public virtual void DeleteInstance(
             InstanceName name,
             CallSettings callSettings = null) => DeleteInstance(
@@ -1595,7 +1592,7 @@ namespace Google.Cloud.Bigtable.Admin.V2
         /// If not null, applies overrides to this RPC call.
         /// </param>
         /// <returns>
-        /// A Task containing the RPC response.
+        /// A Task that completes when the RPC has completed.
         /// </returns>
         public virtual Task DeleteInstanceAsync(
             DeleteInstanceRequest request,
@@ -1613,9 +1610,6 @@ namespace Google.Cloud.Bigtable.Admin.V2
         /// <param name="callSettings">
         /// If not null, applies overrides to this RPC call.
         /// </param>
-        /// <returns>
-        /// The RPC response.
-        /// </returns>
         public virtual void DeleteInstance(
             DeleteInstanceRequest request,
             CallSettings callSettings = null)
@@ -2091,7 +2085,7 @@ namespace Google.Cloud.Bigtable.Admin.V2
         /// If not null, applies overrides to this RPC call.
         /// </param>
         /// <returns>
-        /// A Task containing the RPC response.
+        /// A Task that completes when the RPC has completed.
         /// </returns>
         public virtual Task DeleteClusterAsync(
             ClusterName name,
@@ -2113,7 +2107,7 @@ namespace Google.Cloud.Bigtable.Admin.V2
         /// A <see cref="CancellationToken"/> to use for this RPC.
         /// </param>
         /// <returns>
-        /// A Task containing the RPC response.
+        /// A Task that completes when the RPC has completed.
         /// </returns>
         public virtual Task DeleteClusterAsync(
             ClusterName name,
@@ -2131,9 +2125,6 @@ namespace Google.Cloud.Bigtable.Admin.V2
         /// <param name="callSettings">
         /// If not null, applies overrides to this RPC call.
         /// </param>
-        /// <returns>
-        /// The RPC response.
-        /// </returns>
         public virtual void DeleteCluster(
             ClusterName name,
             CallSettings callSettings = null) => DeleteCluster(
@@ -2153,7 +2144,7 @@ namespace Google.Cloud.Bigtable.Admin.V2
         /// If not null, applies overrides to this RPC call.
         /// </param>
         /// <returns>
-        /// A Task containing the RPC response.
+        /// A Task that completes when the RPC has completed.
         /// </returns>
         public virtual Task DeleteClusterAsync(
             DeleteClusterRequest request,
@@ -2171,9 +2162,6 @@ namespace Google.Cloud.Bigtable.Admin.V2
         /// <param name="callSettings">
         /// If not null, applies overrides to this RPC call.
         /// </param>
-        /// <returns>
-        /// The RPC response.
-        /// </returns>
         public virtual void DeleteCluster(
             DeleteClusterRequest request,
             CallSettings callSettings = null)
@@ -2794,7 +2782,7 @@ namespace Google.Cloud.Bigtable.Admin.V2
         /// If not null, applies overrides to this RPC call.
         /// </param>
         /// <returns>
-        /// A Task containing the RPC response.
+        /// A Task that completes when the RPC has completed.
         /// </returns>
         public virtual Task DeleteAppProfileAsync(
             AppProfileName name,
@@ -2821,7 +2809,7 @@ namespace Google.Cloud.Bigtable.Admin.V2
         /// A <see cref="CancellationToken"/> to use for this RPC.
         /// </param>
         /// <returns>
-        /// A Task containing the RPC response.
+        /// A Task that completes when the RPC has completed.
         /// </returns>
         public virtual Task DeleteAppProfileAsync(
             AppProfileName name,
@@ -2844,9 +2832,6 @@ namespace Google.Cloud.Bigtable.Admin.V2
         /// <param name="callSettings">
         /// If not null, applies overrides to this RPC call.
         /// </param>
-        /// <returns>
-        /// The RPC response.
-        /// </returns>
         public virtual void DeleteAppProfile(
             AppProfileName name,
             CallSettings callSettings = null) => DeleteAppProfile(
@@ -2871,7 +2856,7 @@ namespace Google.Cloud.Bigtable.Admin.V2
         /// If not null, applies overrides to this RPC call.
         /// </param>
         /// <returns>
-        /// A Task containing the RPC response.
+        /// A Task that completes when the RPC has completed.
         /// </returns>
         public virtual Task DeleteAppProfileAsync(
             DeleteAppProfileRequest request,
@@ -2894,9 +2879,6 @@ namespace Google.Cloud.Bigtable.Admin.V2
         /// <param name="callSettings">
         /// If not null, applies overrides to this RPC call.
         /// </param>
-        /// <returns>
-        /// The RPC response.
-        /// </returns>
         public virtual void DeleteAppProfile(
             DeleteAppProfileRequest request,
             CallSettings callSettings = null)
@@ -3704,7 +3686,7 @@ namespace Google.Cloud.Bigtable.Admin.V2
         /// If not null, applies overrides to this RPC call.
         /// </param>
         /// <returns>
-        /// A Task containing the RPC response.
+        /// A Task that completes when the RPC has completed.
         /// </returns>
         public override Task DeleteInstanceAsync(
             DeleteInstanceRequest request,
@@ -3723,9 +3705,6 @@ namespace Google.Cloud.Bigtable.Admin.V2
         /// <param name="callSettings">
         /// If not null, applies overrides to this RPC call.
         /// </param>
-        /// <returns>
-        /// The RPC response.
-        /// </returns>
         public override void DeleteInstance(
             DeleteInstanceRequest request,
             CallSettings callSettings = null)
@@ -3918,7 +3897,7 @@ namespace Google.Cloud.Bigtable.Admin.V2
         /// If not null, applies overrides to this RPC call.
         /// </param>
         /// <returns>
-        /// A Task containing the RPC response.
+        /// A Task that completes when the RPC has completed.
         /// </returns>
         public override Task DeleteClusterAsync(
             DeleteClusterRequest request,
@@ -3937,9 +3916,6 @@ namespace Google.Cloud.Bigtable.Admin.V2
         /// <param name="callSettings">
         /// If not null, applies overrides to this RPC call.
         /// </param>
-        /// <returns>
-        /// The RPC response.
-        /// </returns>
         public override void DeleteCluster(
             DeleteClusterRequest request,
             CallSettings callSettings = null)
@@ -4170,7 +4146,7 @@ namespace Google.Cloud.Bigtable.Admin.V2
         /// If not null, applies overrides to this RPC call.
         /// </param>
         /// <returns>
-        /// A Task containing the RPC response.
+        /// A Task that completes when the RPC has completed.
         /// </returns>
         public override Task DeleteAppProfileAsync(
             DeleteAppProfileRequest request,
@@ -4194,9 +4170,6 @@ namespace Google.Cloud.Bigtable.Admin.V2
         /// <param name="callSettings">
         /// If not null, applies overrides to this RPC call.
         /// </param>
-        /// <returns>
-        /// The RPC response.
-        /// </returns>
         public override void DeleteAppProfile(
             DeleteAppProfileRequest request,
             CallSettings callSettings = null)

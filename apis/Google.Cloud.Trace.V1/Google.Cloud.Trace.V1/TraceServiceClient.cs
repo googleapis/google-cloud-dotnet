@@ -330,7 +330,7 @@ namespace Google.Cloud.Trace.V1
         /// If not null, applies overrides to this RPC call.
         /// </param>
         /// <returns>
-        /// A Task containing the RPC response.
+        /// A Task that completes when the RPC has completed.
         /// </returns>
         public virtual Task PatchTracesAsync(
             string projectId,
@@ -360,7 +360,7 @@ namespace Google.Cloud.Trace.V1
         /// A <see cref="CancellationToken"/> to use for this RPC.
         /// </param>
         /// <returns>
-        /// A Task containing the RPC response.
+        /// A Task that completes when the RPC has completed.
         /// </returns>
         public virtual Task PatchTracesAsync(
             string projectId,
@@ -386,9 +386,6 @@ namespace Google.Cloud.Trace.V1
         /// <param name="callSettings">
         /// If not null, applies overrides to this RPC call.
         /// </param>
-        /// <returns>
-        /// The RPC response.
-        /// </returns>
         public virtual void PatchTraces(
             string projectId,
             Traces traces,
@@ -414,7 +411,7 @@ namespace Google.Cloud.Trace.V1
         /// If not null, applies overrides to this RPC call.
         /// </param>
         /// <returns>
-        /// A Task containing the RPC response.
+        /// A Task that completes when the RPC has completed.
         /// </returns>
         public virtual Task PatchTracesAsync(
             PatchTracesRequest request,
@@ -436,9 +433,6 @@ namespace Google.Cloud.Trace.V1
         /// <param name="callSettings">
         /// If not null, applies overrides to this RPC call.
         /// </param>
-        /// <returns>
-        /// The RPC response.
-        /// </returns>
         public virtual void PatchTraces(
             PatchTracesRequest request,
             CallSettings callSettings = null)
@@ -719,7 +713,7 @@ namespace Google.Cloud.Trace.V1
         /// If not null, applies overrides to this RPC call.
         /// </param>
         /// <returns>
-        /// A Task containing the RPC response.
+        /// A Task that completes when the RPC has completed.
         /// </returns>
         public override Task PatchTracesAsync(
             PatchTracesRequest request,
@@ -742,9 +736,6 @@ namespace Google.Cloud.Trace.V1
         /// <param name="callSettings">
         /// If not null, applies overrides to this RPC call.
         /// </param>
-        /// <returns>
-        /// The RPC response.
-        /// </returns>
         public override void PatchTraces(
             PatchTracesRequest request,
             CallSettings callSettings = null)

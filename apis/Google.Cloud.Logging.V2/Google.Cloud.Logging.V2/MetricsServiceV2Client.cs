@@ -864,7 +864,7 @@ namespace Google.Cloud.Logging.V2
         /// If not null, applies overrides to this RPC call.
         /// </param>
         /// <returns>
-        /// A Task containing the RPC response.
+        /// A Task that completes when the RPC has completed.
         /// </returns>
         public virtual Task DeleteLogMetricAsync(
             MetricNameOneof metricName,
@@ -887,7 +887,7 @@ namespace Google.Cloud.Logging.V2
         /// A <see cref="CancellationToken"/> to use for this RPC.
         /// </param>
         /// <returns>
-        /// A Task containing the RPC response.
+        /// A Task that completes when the RPC has completed.
         /// </returns>
         public virtual Task DeleteLogMetricAsync(
             MetricNameOneof metricName,
@@ -906,9 +906,6 @@ namespace Google.Cloud.Logging.V2
         /// <param name="callSettings">
         /// If not null, applies overrides to this RPC call.
         /// </param>
-        /// <returns>
-        /// The RPC response.
-        /// </returns>
         public virtual void DeleteLogMetric(
             MetricNameOneof metricName,
             CallSettings callSettings = null) => DeleteLogMetric(
@@ -928,7 +925,7 @@ namespace Google.Cloud.Logging.V2
         /// If not null, applies overrides to this RPC call.
         /// </param>
         /// <returns>
-        /// A Task containing the RPC response.
+        /// A Task that completes when the RPC has completed.
         /// </returns>
         public virtual Task DeleteLogMetricAsync(
             DeleteLogMetricRequest request,
@@ -946,9 +943,6 @@ namespace Google.Cloud.Logging.V2
         /// <param name="callSettings">
         /// If not null, applies overrides to this RPC call.
         /// </param>
-        /// <returns>
-        /// The RPC response.
-        /// </returns>
         public virtual void DeleteLogMetric(
             DeleteLogMetricRequest request,
             CallSettings callSettings = null)
@@ -1176,7 +1170,7 @@ namespace Google.Cloud.Logging.V2
         /// If not null, applies overrides to this RPC call.
         /// </param>
         /// <returns>
-        /// A Task containing the RPC response.
+        /// A Task that completes when the RPC has completed.
         /// </returns>
         public override Task DeleteLogMetricAsync(
             DeleteLogMetricRequest request,
@@ -1195,9 +1189,6 @@ namespace Google.Cloud.Logging.V2
         /// <param name="callSettings">
         /// If not null, applies overrides to this RPC call.
         /// </param>
-        /// <returns>
-        /// The RPC response.
-        /// </returns>
         public override void DeleteLogMetric(
             DeleteLogMetricRequest request,
             CallSettings callSettings = null)

@@ -421,7 +421,7 @@ namespace Google.Cloud.OsLogin.V1
         /// If not null, applies overrides to this RPC call.
         /// </param>
         /// <returns>
-        /// A Task containing the RPC response.
+        /// A Task that completes when the RPC has completed.
         /// </returns>
         public virtual Task DeletePosixAccountAsync(
             ProjectName name,
@@ -444,7 +444,7 @@ namespace Google.Cloud.OsLogin.V1
         /// A <see cref="CancellationToken"/> to use for this RPC.
         /// </param>
         /// <returns>
-        /// A Task containing the RPC response.
+        /// A Task that completes when the RPC has completed.
         /// </returns>
         public virtual Task DeletePosixAccountAsync(
             ProjectName name,
@@ -463,9 +463,6 @@ namespace Google.Cloud.OsLogin.V1
         /// <param name="callSettings">
         /// If not null, applies overrides to this RPC call.
         /// </param>
-        /// <returns>
-        /// The RPC response.
-        /// </returns>
         public virtual void DeletePosixAccount(
             ProjectName name,
             CallSettings callSettings = null) => DeletePosixAccount(
@@ -485,7 +482,7 @@ namespace Google.Cloud.OsLogin.V1
         /// If not null, applies overrides to this RPC call.
         /// </param>
         /// <returns>
-        /// A Task containing the RPC response.
+        /// A Task that completes when the RPC has completed.
         /// </returns>
         public virtual Task DeletePosixAccountAsync(
             DeletePosixAccountRequest request,
@@ -503,9 +500,6 @@ namespace Google.Cloud.OsLogin.V1
         /// <param name="callSettings">
         /// If not null, applies overrides to this RPC call.
         /// </param>
-        /// <returns>
-        /// The RPC response.
-        /// </returns>
         public virtual void DeletePosixAccount(
             DeletePosixAccountRequest request,
             CallSettings callSettings = null)
@@ -525,7 +519,7 @@ namespace Google.Cloud.OsLogin.V1
         /// If not null, applies overrides to this RPC call.
         /// </param>
         /// <returns>
-        /// A Task containing the RPC response.
+        /// A Task that completes when the RPC has completed.
         /// </returns>
         public virtual Task DeleteSshPublicKeyAsync(
             FingerprintName name,
@@ -548,7 +542,7 @@ namespace Google.Cloud.OsLogin.V1
         /// A <see cref="CancellationToken"/> to use for this RPC.
         /// </param>
         /// <returns>
-        /// A Task containing the RPC response.
+        /// A Task that completes when the RPC has completed.
         /// </returns>
         public virtual Task DeleteSshPublicKeyAsync(
             FingerprintName name,
@@ -567,9 +561,6 @@ namespace Google.Cloud.OsLogin.V1
         /// <param name="callSettings">
         /// If not null, applies overrides to this RPC call.
         /// </param>
-        /// <returns>
-        /// The RPC response.
-        /// </returns>
         public virtual void DeleteSshPublicKey(
             FingerprintName name,
             CallSettings callSettings = null) => DeleteSshPublicKey(
@@ -589,7 +580,7 @@ namespace Google.Cloud.OsLogin.V1
         /// If not null, applies overrides to this RPC call.
         /// </param>
         /// <returns>
-        /// A Task containing the RPC response.
+        /// A Task that completes when the RPC has completed.
         /// </returns>
         public virtual Task DeleteSshPublicKeyAsync(
             DeleteSshPublicKeyRequest request,
@@ -607,9 +598,6 @@ namespace Google.Cloud.OsLogin.V1
         /// <param name="callSettings">
         /// If not null, applies overrides to this RPC call.
         /// </param>
-        /// <returns>
-        /// The RPC response.
-        /// </returns>
         public virtual void DeleteSshPublicKey(
             DeleteSshPublicKeyRequest request,
             CallSettings callSettings = null)
@@ -1330,7 +1318,7 @@ namespace Google.Cloud.OsLogin.V1
         /// If not null, applies overrides to this RPC call.
         /// </param>
         /// <returns>
-        /// A Task containing the RPC response.
+        /// A Task that completes when the RPC has completed.
         /// </returns>
         public override Task DeletePosixAccountAsync(
             DeletePosixAccountRequest request,
@@ -1349,9 +1337,6 @@ namespace Google.Cloud.OsLogin.V1
         /// <param name="callSettings">
         /// If not null, applies overrides to this RPC call.
         /// </param>
-        /// <returns>
-        /// The RPC response.
-        /// </returns>
         public override void DeletePosixAccount(
             DeletePosixAccountRequest request,
             CallSettings callSettings = null)
@@ -1370,7 +1355,7 @@ namespace Google.Cloud.OsLogin.V1
         /// If not null, applies overrides to this RPC call.
         /// </param>
         /// <returns>
-        /// A Task containing the RPC response.
+        /// A Task that completes when the RPC has completed.
         /// </returns>
         public override Task DeleteSshPublicKeyAsync(
             DeleteSshPublicKeyRequest request,
@@ -1389,9 +1374,6 @@ namespace Google.Cloud.OsLogin.V1
         /// <param name="callSettings">
         /// If not null, applies overrides to this RPC call.
         /// </param>
-        /// <returns>
-        /// The RPC response.
-        /// </returns>
         public override void DeleteSshPublicKey(
             DeleteSshPublicKeyRequest request,
             CallSettings callSettings = null)
