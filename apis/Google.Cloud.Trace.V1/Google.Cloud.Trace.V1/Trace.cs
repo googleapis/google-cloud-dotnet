@@ -574,9 +574,11 @@ namespace Google.Cloud.Trace.V1 {
     /// *   `/http/client_region`
     /// *   `/http/host`
     /// *   `/http/method`
+    /// *   `/http/path`
     /// *   `/http/redirected_url`
     /// *   `/http/request/size`
     /// *   `/http/response/size`
+    /// *   `/http/route`
     /// *   `/http/status_code`
     /// *   `/http/url`
     /// *   `/http/user_agent`
