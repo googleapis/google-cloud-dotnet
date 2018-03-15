@@ -12,15 +12,12 @@ unset APPVEYOR_API_URL
 # match anything, e.g. when looking for tests.
 shopt -s nullglob
 
-echo "$(date +%T) Building analyzers"
-# First build the analyzers, for use in everything else.
-dotnet publish -c Release -f netstandard1.3 tools/Google.Cloud.Tools.Analyzers
-
 # Command line arguments are the APIs to build. Each argument
 # should be the name of a directory, either relative to the location
 # of this script, or under apis.
 apis=()
 runtests=true
+apiregex=
 while (( "$#" )); do
   if [[ "$1" == "--notests" ]]
   then 
@@ -29,6 +26,10 @@ while (( "$#" )); do
   elif [[ "$1" == "--diff" ]]
   then
     apis+=($(git diff master --name-only | grep apis/Google | cut -d/ -f 2 | uniq))
+  elif [[ "$1" == "--regex" ]]
+  then
+    shift
+    apiregex=$1
   else 
     apis+=($1)
   fi
@@ -38,12 +39,39 @@ done
 # Build and test the tools, but only on Windows
 [[ "$OS" == "Windows_NT" ]] && tools="tools" || tools=""
 
-if [ ${#apis[@]} -eq 0 ]
+# If no APIs were specified explicitly, build all of them (and tools on Windows)
+if [[ ${#apis[@]} -eq 0 ]]
 then
   apis=(${tools} $(echo apis/Google.* | sed 's/apis\///g'))
 fi
 
-# First build, working out the test projects as we go.
+# If we were given an API filter regex, apply it now.
+if [[ "$apiregex" != "" ]]
+then
+  filteredapis=()
+  for api in ${apis[*]}
+  do
+    if [[ "$api" =~ $apiregex ]]
+    then
+      filteredapis+=($api)
+    fi
+  done
+  unset apis
+  apis=("${filteredapis[@]}")
+  if [[ ${#apis[@]} -eq 0 ]]
+  then
+    echo "After regular expression filter, no projects left to build. Exiting."
+    exit 0
+  fi
+fi
+
+
+# First build the analyzers, for use in everything else.
+echo "$(date +%T) Building analyzers"
+
+dotnet publish -c Release -f netstandard1.3 tools/Google.Cloud.Tools.Analyzers
+
+# Then build the requested APIs, working out the test projects as we go.
 > AllTests.txt
 for api in ${apis[*]}
 do
