@@ -1247,7 +1247,7 @@ namespace Google.Cloud.Bigtable.Admin.V2
         /// If not null, applies overrides to this RPC call.
         /// </param>
         /// <returns>
-        /// A Task containing the RPC response.
+        /// A Task that completes when the RPC has completed.
         /// </returns>
         public virtual Task DeleteTableAsync(
             TableName name,
@@ -1270,7 +1270,7 @@ namespace Google.Cloud.Bigtable.Admin.V2
         /// A <see cref="CancellationToken"/> to use for this RPC.
         /// </param>
         /// <returns>
-        /// A Task containing the RPC response.
+        /// A Task that completes when the RPC has completed.
         /// </returns>
         public virtual Task DeleteTableAsync(
             TableName name,
@@ -1289,9 +1289,6 @@ namespace Google.Cloud.Bigtable.Admin.V2
         /// <param name="callSettings">
         /// If not null, applies overrides to this RPC call.
         /// </param>
-        /// <returns>
-        /// The RPC response.
-        /// </returns>
         public virtual void DeleteTable(
             TableName name,
             CallSettings callSettings = null) => DeleteTable(
@@ -1311,7 +1308,7 @@ namespace Google.Cloud.Bigtable.Admin.V2
         /// If not null, applies overrides to this RPC call.
         /// </param>
         /// <returns>
-        /// A Task containing the RPC response.
+        /// A Task that completes when the RPC has completed.
         /// </returns>
         public virtual Task DeleteTableAsync(
             DeleteTableRequest request,
@@ -1329,9 +1326,6 @@ namespace Google.Cloud.Bigtable.Admin.V2
         /// <param name="callSettings">
         /// If not null, applies overrides to this RPC call.
         /// </param>
-        /// <returns>
-        /// The RPC response.
-        /// </returns>
         public virtual void DeleteTable(
             DeleteTableRequest request,
             CallSettings callSettings = null)
@@ -1494,7 +1488,7 @@ namespace Google.Cloud.Bigtable.Admin.V2
         /// If not null, applies overrides to this RPC call.
         /// </param>
         /// <returns>
-        /// A Task containing the RPC response.
+        /// A Task that completes when the RPC has completed.
         /// </returns>
         public virtual Task DropRowRangeAsync(
             DropRowRangeRequest request,
@@ -1514,9 +1508,6 @@ namespace Google.Cloud.Bigtable.Admin.V2
         /// <param name="callSettings">
         /// If not null, applies overrides to this RPC call.
         /// </param>
-        /// <returns>
-        /// The RPC response.
-        /// </returns>
         public virtual void DropRowRange(
             DropRowRangeRequest request,
             CallSettings callSettings = null)
@@ -2184,7 +2175,7 @@ namespace Google.Cloud.Bigtable.Admin.V2
         /// If not null, applies overrides to this RPC call.
         /// </param>
         /// <returns>
-        /// A Task containing the RPC response.
+        /// A Task that completes when the RPC has completed.
         /// </returns>
         public virtual Task DeleteSnapshotAsync(
             SnapshotName name,
@@ -2212,7 +2203,7 @@ namespace Google.Cloud.Bigtable.Admin.V2
         /// A <see cref="CancellationToken"/> to use for this RPC.
         /// </param>
         /// <returns>
-        /// A Task containing the RPC response.
+        /// A Task that completes when the RPC has completed.
         /// </returns>
         public virtual Task DeleteSnapshotAsync(
             SnapshotName name,
@@ -2236,9 +2227,6 @@ namespace Google.Cloud.Bigtable.Admin.V2
         /// <param name="callSettings">
         /// If not null, applies overrides to this RPC call.
         /// </param>
-        /// <returns>
-        /// The RPC response.
-        /// </returns>
         public virtual void DeleteSnapshot(
             SnapshotName name,
             CallSettings callSettings = null) => DeleteSnapshot(
@@ -2263,7 +2251,7 @@ namespace Google.Cloud.Bigtable.Admin.V2
         /// If not null, applies overrides to this RPC call.
         /// </param>
         /// <returns>
-        /// A Task containing the RPC response.
+        /// A Task that completes when the RPC has completed.
         /// </returns>
         public virtual Task DeleteSnapshotAsync(
             DeleteSnapshotRequest request,
@@ -2286,9 +2274,6 @@ namespace Google.Cloud.Bigtable.Admin.V2
         /// <param name="callSettings">
         /// If not null, applies overrides to this RPC call.
         /// </param>
-        /// <returns>
-        /// The RPC response.
-        /// </returns>
         public virtual void DeleteSnapshot(
             DeleteSnapshotRequest request,
             CallSettings callSettings = null)
@@ -2575,7 +2560,7 @@ namespace Google.Cloud.Bigtable.Admin.V2
         /// If not null, applies overrides to this RPC call.
         /// </param>
         /// <returns>
-        /// A Task containing the RPC response.
+        /// A Task that completes when the RPC has completed.
         /// </returns>
         public override Task DeleteTableAsync(
             DeleteTableRequest request,
@@ -2594,9 +2579,6 @@ namespace Google.Cloud.Bigtable.Admin.V2
         /// <param name="callSettings">
         /// If not null, applies overrides to this RPC call.
         /// </param>
-        /// <returns>
-        /// The RPC response.
-        /// </returns>
         public override void DeleteTable(
             DeleteTableRequest request,
             CallSettings callSettings = null)
@@ -2663,7 +2645,7 @@ namespace Google.Cloud.Bigtable.Admin.V2
         /// If not null, applies overrides to this RPC call.
         /// </param>
         /// <returns>
-        /// A Task containing the RPC response.
+        /// A Task that completes when the RPC has completed.
         /// </returns>
         public override Task DropRowRangeAsync(
             DropRowRangeRequest request,
@@ -2684,9 +2666,6 @@ namespace Google.Cloud.Bigtable.Admin.V2
         /// <param name="callSettings">
         /// If not null, applies overrides to this RPC call.
         /// </param>
-        /// <returns>
-        /// The RPC response.
-        /// </returns>
         public override void DropRowRange(
             DropRowRangeRequest request,
             CallSettings callSettings = null)
@@ -2979,7 +2958,7 @@ namespace Google.Cloud.Bigtable.Admin.V2
         /// If not null, applies overrides to this RPC call.
         /// </param>
         /// <returns>
-        /// A Task containing the RPC response.
+        /// A Task that completes when the RPC has completed.
         /// </returns>
         public override Task DeleteSnapshotAsync(
             DeleteSnapshotRequest request,
@@ -3003,9 +2982,6 @@ namespace Google.Cloud.Bigtable.Admin.V2
         /// <param name="callSettings">
         /// If not null, applies overrides to this RPC call.
         /// </param>
-        /// <returns>
-        /// The RPC response.
-        /// </returns>
         public override void DeleteSnapshot(
             DeleteSnapshotRequest request,
             CallSettings callSettings = null)

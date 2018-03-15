@@ -1038,7 +1038,7 @@ namespace Google.Cloud.Monitoring.V3
         /// If not null, applies overrides to this RPC call.
         /// </param>
         /// <returns>
-        /// A Task containing the RPC response.
+        /// A Task that completes when the RPC has completed.
         /// </returns>
         public virtual Task DeleteMetricDescriptorAsync(
             MetricDescriptorName name,
@@ -1063,7 +1063,7 @@ namespace Google.Cloud.Monitoring.V3
         /// A <see cref="CancellationToken"/> to use for this RPC.
         /// </param>
         /// <returns>
-        /// A Task containing the RPC response.
+        /// A Task that completes when the RPC has completed.
         /// </returns>
         public virtual Task DeleteMetricDescriptorAsync(
             MetricDescriptorName name,
@@ -1084,9 +1084,6 @@ namespace Google.Cloud.Monitoring.V3
         /// <param name="callSettings">
         /// If not null, applies overrides to this RPC call.
         /// </param>
-        /// <returns>
-        /// The RPC response.
-        /// </returns>
         public virtual void DeleteMetricDescriptor(
             MetricDescriptorName name,
             CallSettings callSettings = null) => DeleteMetricDescriptor(
@@ -1107,7 +1104,7 @@ namespace Google.Cloud.Monitoring.V3
         /// If not null, applies overrides to this RPC call.
         /// </param>
         /// <returns>
-        /// A Task containing the RPC response.
+        /// A Task that completes when the RPC has completed.
         /// </returns>
         public virtual Task DeleteMetricDescriptorAsync(
             DeleteMetricDescriptorRequest request,
@@ -1126,9 +1123,6 @@ namespace Google.Cloud.Monitoring.V3
         /// <param name="callSettings">
         /// If not null, applies overrides to this RPC call.
         /// </param>
-        /// <returns>
-        /// The RPC response.
-        /// </returns>
         public virtual void DeleteMetricDescriptor(
             DeleteMetricDescriptorRequest request,
             CallSettings callSettings = null)
@@ -1309,7 +1303,7 @@ namespace Google.Cloud.Monitoring.V3
         /// If not null, applies overrides to this RPC call.
         /// </param>
         /// <returns>
-        /// A Task containing the RPC response.
+        /// A Task that completes when the RPC has completed.
         /// </returns>
         public virtual Task CreateTimeSeriesAsync(
             ProjectName name,
@@ -1343,7 +1337,7 @@ namespace Google.Cloud.Monitoring.V3
         /// A <see cref="CancellationToken"/> to use for this RPC.
         /// </param>
         /// <returns>
-        /// A Task containing the RPC response.
+        /// A Task that completes when the RPC has completed.
         /// </returns>
         public virtual Task CreateTimeSeriesAsync(
             ProjectName name,
@@ -1373,9 +1367,6 @@ namespace Google.Cloud.Monitoring.V3
         /// <param name="callSettings">
         /// If not null, applies overrides to this RPC call.
         /// </param>
-        /// <returns>
-        /// The RPC response.
-        /// </returns>
         public virtual void CreateTimeSeries(
             ProjectName name,
             IEnumerable<TimeSeries> timeSeries,
@@ -1400,7 +1391,7 @@ namespace Google.Cloud.Monitoring.V3
         /// If not null, applies overrides to this RPC call.
         /// </param>
         /// <returns>
-        /// A Task containing the RPC response.
+        /// A Task that completes when the RPC has completed.
         /// </returns>
         public virtual Task CreateTimeSeriesAsync(
             CreateTimeSeriesRequest request,
@@ -1421,9 +1412,6 @@ namespace Google.Cloud.Monitoring.V3
         /// <param name="callSettings">
         /// If not null, applies overrides to this RPC call.
         /// </param>
-        /// <returns>
-        /// The RPC response.
-        /// </returns>
         public virtual void CreateTimeSeries(
             CreateTimeSeriesRequest request,
             CallSettings callSettings = null)
@@ -1708,7 +1696,7 @@ namespace Google.Cloud.Monitoring.V3
         /// If not null, applies overrides to this RPC call.
         /// </param>
         /// <returns>
-        /// A Task containing the RPC response.
+        /// A Task that completes when the RPC has completed.
         /// </returns>
         public override Task DeleteMetricDescriptorAsync(
             DeleteMetricDescriptorRequest request,
@@ -1728,9 +1716,6 @@ namespace Google.Cloud.Monitoring.V3
         /// <param name="callSettings">
         /// If not null, applies overrides to this RPC call.
         /// </param>
-        /// <returns>
-        /// The RPC response.
-        /// </returns>
         public override void DeleteMetricDescriptor(
             DeleteMetricDescriptorRequest request,
             CallSettings callSettings = null)
@@ -1792,7 +1777,7 @@ namespace Google.Cloud.Monitoring.V3
         /// If not null, applies overrides to this RPC call.
         /// </param>
         /// <returns>
-        /// A Task containing the RPC response.
+        /// A Task that completes when the RPC has completed.
         /// </returns>
         public override Task CreateTimeSeriesAsync(
             CreateTimeSeriesRequest request,
@@ -1814,9 +1799,6 @@ namespace Google.Cloud.Monitoring.V3
         /// <param name="callSettings">
         /// If not null, applies overrides to this RPC call.
         /// </param>
-        /// <returns>
-        /// The RPC response.
-        /// </returns>
         public override void CreateTimeSeries(
             CreateTimeSeriesRequest request,
             CallSettings callSettings = null)

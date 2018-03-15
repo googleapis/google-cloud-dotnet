@@ -1403,7 +1403,7 @@ namespace Google.Cloud.PubSub.V1
         /// If not null, applies overrides to this RPC call.
         /// </param>
         /// <returns>
-        /// A Task containing the RPC response.
+        /// A Task that completes when the RPC has completed.
         /// </returns>
         public virtual Task DeleteSubscriptionAsync(
             SubscriptionName subscription,
@@ -1429,7 +1429,7 @@ namespace Google.Cloud.PubSub.V1
         /// A <see cref="CancellationToken"/> to use for this RPC.
         /// </param>
         /// <returns>
-        /// A Task containing the RPC response.
+        /// A Task that completes when the RPC has completed.
         /// </returns>
         public virtual Task DeleteSubscriptionAsync(
             SubscriptionName subscription,
@@ -1451,9 +1451,6 @@ namespace Google.Cloud.PubSub.V1
         /// <param name="callSettings">
         /// If not null, applies overrides to this RPC call.
         /// </param>
-        /// <returns>
-        /// The RPC response.
-        /// </returns>
         public virtual void DeleteSubscription(
             SubscriptionName subscription,
             CallSettings callSettings = null) => DeleteSubscription(
@@ -1477,7 +1474,7 @@ namespace Google.Cloud.PubSub.V1
         /// If not null, applies overrides to this RPC call.
         /// </param>
         /// <returns>
-        /// A Task containing the RPC response.
+        /// A Task that completes when the RPC has completed.
         /// </returns>
         public virtual Task DeleteSubscriptionAsync(
             DeleteSubscriptionRequest request,
@@ -1499,9 +1496,6 @@ namespace Google.Cloud.PubSub.V1
         /// <param name="callSettings">
         /// If not null, applies overrides to this RPC call.
         /// </param>
-        /// <returns>
-        /// The RPC response.
-        /// </returns>
         public virtual void DeleteSubscription(
             DeleteSubscriptionRequest request,
             CallSettings callSettings = null)
@@ -1536,7 +1530,7 @@ namespace Google.Cloud.PubSub.V1
         /// If not null, applies overrides to this RPC call.
         /// </param>
         /// <returns>
-        /// A Task containing the RPC response.
+        /// A Task that completes when the RPC has completed.
         /// </returns>
         public virtual Task ModifyAckDeadlineAsync(
             SubscriptionName subscription,
@@ -1578,7 +1572,7 @@ namespace Google.Cloud.PubSub.V1
         /// A <see cref="CancellationToken"/> to use for this RPC.
         /// </param>
         /// <returns>
-        /// A Task containing the RPC response.
+        /// A Task that completes when the RPC has completed.
         /// </returns>
         public virtual Task ModifyAckDeadlineAsync(
             SubscriptionName subscription,
@@ -1616,9 +1610,6 @@ namespace Google.Cloud.PubSub.V1
         /// <param name="callSettings">
         /// If not null, applies overrides to this RPC call.
         /// </param>
-        /// <returns>
-        /// The RPC response.
-        /// </returns>
         public virtual void ModifyAckDeadline(
             SubscriptionName subscription,
             IEnumerable<string> ackIds,
@@ -1646,7 +1637,7 @@ namespace Google.Cloud.PubSub.V1
         /// If not null, applies overrides to this RPC call.
         /// </param>
         /// <returns>
-        /// A Task containing the RPC response.
+        /// A Task that completes when the RPC has completed.
         /// </returns>
         public virtual Task ModifyAckDeadlineAsync(
             ModifyAckDeadlineRequest request,
@@ -1668,9 +1659,6 @@ namespace Google.Cloud.PubSub.V1
         /// <param name="callSettings">
         /// If not null, applies overrides to this RPC call.
         /// </param>
-        /// <returns>
-        /// The RPC response.
-        /// </returns>
         public virtual void ModifyAckDeadline(
             ModifyAckDeadlineRequest request,
             CallSettings callSettings = null)
@@ -1699,7 +1687,7 @@ namespace Google.Cloud.PubSub.V1
         /// If not null, applies overrides to this RPC call.
         /// </param>
         /// <returns>
-        /// A Task containing the RPC response.
+        /// A Task that completes when the RPC has completed.
         /// </returns>
         public virtual Task AcknowledgeAsync(
             SubscriptionName subscription,
@@ -1733,7 +1721,7 @@ namespace Google.Cloud.PubSub.V1
         /// A <see cref="CancellationToken"/> to use for this RPC.
         /// </param>
         /// <returns>
-        /// A Task containing the RPC response.
+        /// A Task that completes when the RPC has completed.
         /// </returns>
         public virtual Task AcknowledgeAsync(
             SubscriptionName subscription,
@@ -1763,9 +1751,6 @@ namespace Google.Cloud.PubSub.V1
         /// <param name="callSettings">
         /// If not null, applies overrides to this RPC call.
         /// </param>
-        /// <returns>
-        /// The RPC response.
-        /// </returns>
         public virtual void Acknowledge(
             SubscriptionName subscription,
             IEnumerable<string> ackIds,
@@ -1793,7 +1778,7 @@ namespace Google.Cloud.PubSub.V1
         /// If not null, applies overrides to this RPC call.
         /// </param>
         /// <returns>
-        /// A Task containing the RPC response.
+        /// A Task that completes when the RPC has completed.
         /// </returns>
         public virtual Task AcknowledgeAsync(
             AcknowledgeRequest request,
@@ -1817,9 +1802,6 @@ namespace Google.Cloud.PubSub.V1
         /// <param name="callSettings">
         /// If not null, applies overrides to this RPC call.
         /// </param>
-        /// <returns>
-        /// The RPC response.
-        /// </returns>
         public virtual void Acknowledge(
             AcknowledgeRequest request,
             CallSettings callSettings = null)
@@ -2052,7 +2034,7 @@ namespace Google.Cloud.PubSub.V1
         /// If not null, applies overrides to this RPC call.
         /// </param>
         /// <returns>
-        /// A Task containing the RPC response.
+        /// A Task that completes when the RPC has completed.
         /// </returns>
         public virtual Task ModifyPushConfigAsync(
             SubscriptionName subscription,
@@ -2089,7 +2071,7 @@ namespace Google.Cloud.PubSub.V1
         /// A <see cref="CancellationToken"/> to use for this RPC.
         /// </param>
         /// <returns>
-        /// A Task containing the RPC response.
+        /// A Task that completes when the RPC has completed.
         /// </returns>
         public virtual Task ModifyPushConfigAsync(
             SubscriptionName subscription,
@@ -2122,9 +2104,6 @@ namespace Google.Cloud.PubSub.V1
         /// <param name="callSettings">
         /// If not null, applies overrides to this RPC call.
         /// </param>
-        /// <returns>
-        /// The RPC response.
-        /// </returns>
         public virtual void ModifyPushConfig(
             SubscriptionName subscription,
             PushConfig pushConfig,
@@ -2151,7 +2130,7 @@ namespace Google.Cloud.PubSub.V1
         /// If not null, applies overrides to this RPC call.
         /// </param>
         /// <returns>
-        /// A Task containing the RPC response.
+        /// A Task that completes when the RPC has completed.
         /// </returns>
         public virtual Task ModifyPushConfigAsync(
             ModifyPushConfigRequest request,
@@ -2174,9 +2153,6 @@ namespace Google.Cloud.PubSub.V1
         /// <param name="callSettings">
         /// If not null, applies overrides to this RPC call.
         /// </param>
-        /// <returns>
-        /// The RPC response.
-        /// </returns>
         public virtual void ModifyPushConfig(
             ModifyPushConfigRequest request,
             CallSettings callSettings = null)
@@ -2546,7 +2522,7 @@ namespace Google.Cloud.PubSub.V1
         /// If not null, applies overrides to this RPC call.
         /// </param>
         /// <returns>
-        /// A Task containing the RPC response.
+        /// A Task that completes when the RPC has completed.
         /// </returns>
         public virtual Task DeleteSnapshotAsync(
             SnapshotName snapshot,
@@ -2571,7 +2547,7 @@ namespace Google.Cloud.PubSub.V1
         /// A <see cref="CancellationToken"/> to use for this RPC.
         /// </param>
         /// <returns>
-        /// A Task containing the RPC response.
+        /// A Task that completes when the RPC has completed.
         /// </returns>
         public virtual Task DeleteSnapshotAsync(
             SnapshotName snapshot,
@@ -2592,9 +2568,6 @@ namespace Google.Cloud.PubSub.V1
         /// <param name="callSettings">
         /// If not null, applies overrides to this RPC call.
         /// </param>
-        /// <returns>
-        /// The RPC response.
-        /// </returns>
         public virtual void DeleteSnapshot(
             SnapshotName snapshot,
             CallSettings callSettings = null) => DeleteSnapshot(
@@ -2617,7 +2590,7 @@ namespace Google.Cloud.PubSub.V1
         /// If not null, applies overrides to this RPC call.
         /// </param>
         /// <returns>
-        /// A Task containing the RPC response.
+        /// A Task that completes when the RPC has completed.
         /// </returns>
         public virtual Task DeleteSnapshotAsync(
             DeleteSnapshotRequest request,
@@ -2638,9 +2611,6 @@ namespace Google.Cloud.PubSub.V1
         /// <param name="callSettings">
         /// If not null, applies overrides to this RPC call.
         /// </param>
-        /// <returns>
-        /// The RPC response.
-        /// </returns>
         public virtual void DeleteSnapshot(
             DeleteSnapshotRequest request,
             CallSettings callSettings = null)
@@ -3379,7 +3349,7 @@ namespace Google.Cloud.PubSub.V1
         /// If not null, applies overrides to this RPC call.
         /// </param>
         /// <returns>
-        /// A Task containing the RPC response.
+        /// A Task that completes when the RPC has completed.
         /// </returns>
         public override Task DeleteSubscriptionAsync(
             DeleteSubscriptionRequest request,
@@ -3402,9 +3372,6 @@ namespace Google.Cloud.PubSub.V1
         /// <param name="callSettings">
         /// If not null, applies overrides to this RPC call.
         /// </param>
-        /// <returns>
-        /// The RPC response.
-        /// </returns>
         public override void DeleteSubscription(
             DeleteSubscriptionRequest request,
             CallSettings callSettings = null)
@@ -3427,7 +3394,7 @@ namespace Google.Cloud.PubSub.V1
         /// If not null, applies overrides to this RPC call.
         /// </param>
         /// <returns>
-        /// A Task containing the RPC response.
+        /// A Task that completes when the RPC has completed.
         /// </returns>
         public override Task ModifyAckDeadlineAsync(
             ModifyAckDeadlineRequest request,
@@ -3450,9 +3417,6 @@ namespace Google.Cloud.PubSub.V1
         /// <param name="callSettings">
         /// If not null, applies overrides to this RPC call.
         /// </param>
-        /// <returns>
-        /// The RPC response.
-        /// </returns>
         public override void ModifyAckDeadline(
             ModifyAckDeadlineRequest request,
             CallSettings callSettings = null)
@@ -3477,7 +3441,7 @@ namespace Google.Cloud.PubSub.V1
         /// If not null, applies overrides to this RPC call.
         /// </param>
         /// <returns>
-        /// A Task containing the RPC response.
+        /// A Task that completes when the RPC has completed.
         /// </returns>
         public override Task AcknowledgeAsync(
             AcknowledgeRequest request,
@@ -3502,9 +3466,6 @@ namespace Google.Cloud.PubSub.V1
         /// <param name="callSettings">
         /// If not null, applies overrides to this RPC call.
         /// </param>
-        /// <returns>
-        /// The RPC response.
-        /// </returns>
         public override void Acknowledge(
             AcknowledgeRequest request,
             CallSettings callSettings = null)
@@ -3672,7 +3633,7 @@ namespace Google.Cloud.PubSub.V1
         /// If not null, applies overrides to this RPC call.
         /// </param>
         /// <returns>
-        /// A Task containing the RPC response.
+        /// A Task that completes when the RPC has completed.
         /// </returns>
         public override Task ModifyPushConfigAsync(
             ModifyPushConfigRequest request,
@@ -3696,9 +3657,6 @@ namespace Google.Cloud.PubSub.V1
         /// <param name="callSettings">
         /// If not null, applies overrides to this RPC call.
         /// </param>
-        /// <returns>
-        /// The RPC response.
-        /// </returns>
         public override void ModifyPushConfig(
             ModifyPushConfigRequest request,
             CallSettings callSettings = null)
@@ -3868,7 +3826,7 @@ namespace Google.Cloud.PubSub.V1
         /// If not null, applies overrides to this RPC call.
         /// </param>
         /// <returns>
-        /// A Task containing the RPC response.
+        /// A Task that completes when the RPC has completed.
         /// </returns>
         public override Task DeleteSnapshotAsync(
             DeleteSnapshotRequest request,
@@ -3890,9 +3848,6 @@ namespace Google.Cloud.PubSub.V1
         /// <param name="callSettings">
         /// If not null, applies overrides to this RPC call.
         /// </param>
-        /// <returns>
-        /// The RPC response.
-        /// </returns>
         public override void DeleteSnapshot(
             DeleteSnapshotRequest request,
             CallSettings callSettings = null)

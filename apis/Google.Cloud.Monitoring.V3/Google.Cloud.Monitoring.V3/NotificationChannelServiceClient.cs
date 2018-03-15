@@ -1185,7 +1185,7 @@ namespace Google.Cloud.Monitoring.V3
         /// If not null, applies overrides to this RPC call.
         /// </param>
         /// <returns>
-        /// A Task containing the RPC response.
+        /// A Task that completes when the RPC has completed.
         /// </returns>
         public virtual Task DeleteNotificationChannelAsync(
             NotificationChannelName name,
@@ -1215,7 +1215,7 @@ namespace Google.Cloud.Monitoring.V3
         /// A <see cref="CancellationToken"/> to use for this RPC.
         /// </param>
         /// <returns>
-        /// A Task containing the RPC response.
+        /// A Task that completes when the RPC has completed.
         /// </returns>
         public virtual Task DeleteNotificationChannelAsync(
             NotificationChannelName name,
@@ -1241,9 +1241,6 @@ namespace Google.Cloud.Monitoring.V3
         /// <param name="callSettings">
         /// If not null, applies overrides to this RPC call.
         /// </param>
-        /// <returns>
-        /// The RPC response.
-        /// </returns>
         public virtual void DeleteNotificationChannel(
             NotificationChannelName name,
             bool? force,
@@ -1265,7 +1262,7 @@ namespace Google.Cloud.Monitoring.V3
         /// If not null, applies overrides to this RPC call.
         /// </param>
         /// <returns>
-        /// A Task containing the RPC response.
+        /// A Task that completes when the RPC has completed.
         /// </returns>
         public virtual Task DeleteNotificationChannelAsync(
             DeleteNotificationChannelRequest request,
@@ -1283,9 +1280,6 @@ namespace Google.Cloud.Monitoring.V3
         /// <param name="callSettings">
         /// If not null, applies overrides to this RPC call.
         /// </param>
-        /// <returns>
-        /// The RPC response.
-        /// </returns>
         public virtual void DeleteNotificationChannel(
             DeleteNotificationChannelRequest request,
             CallSettings callSettings = null)
@@ -1617,7 +1611,7 @@ namespace Google.Cloud.Monitoring.V3
         /// If not null, applies overrides to this RPC call.
         /// </param>
         /// <returns>
-        /// A Task containing the RPC response.
+        /// A Task that completes when the RPC has completed.
         /// </returns>
         public override Task DeleteNotificationChannelAsync(
             DeleteNotificationChannelRequest request,
@@ -1636,9 +1630,6 @@ namespace Google.Cloud.Monitoring.V3
         /// <param name="callSettings">
         /// If not null, applies overrides to this RPC call.
         /// </param>
-        /// <returns>
-        /// The RPC response.
-        /// </returns>
         public override void DeleteNotificationChannel(
             DeleteNotificationChannelRequest request,
             CallSettings callSettings = null)

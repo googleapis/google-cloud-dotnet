@@ -753,7 +753,7 @@ namespace Google.Cloud.Monitoring.V3
         /// If not null, applies overrides to this RPC call.
         /// </param>
         /// <returns>
-        /// A Task containing the RPC response.
+        /// A Task that completes when the RPC has completed.
         /// </returns>
         public virtual Task DeleteAlertPolicyAsync(
             AlertPolicyName name,
@@ -778,7 +778,7 @@ namespace Google.Cloud.Monitoring.V3
         /// A <see cref="CancellationToken"/> to use for this RPC.
         /// </param>
         /// <returns>
-        /// A Task containing the RPC response.
+        /// A Task that completes when the RPC has completed.
         /// </returns>
         public virtual Task DeleteAlertPolicyAsync(
             AlertPolicyName name,
@@ -799,9 +799,6 @@ namespace Google.Cloud.Monitoring.V3
         /// <param name="callSettings">
         /// If not null, applies overrides to this RPC call.
         /// </param>
-        /// <returns>
-        /// The RPC response.
-        /// </returns>
         public virtual void DeleteAlertPolicy(
             AlertPolicyName name,
             CallSettings callSettings = null) => DeleteAlertPolicy(
@@ -821,7 +818,7 @@ namespace Google.Cloud.Monitoring.V3
         /// If not null, applies overrides to this RPC call.
         /// </param>
         /// <returns>
-        /// A Task containing the RPC response.
+        /// A Task that completes when the RPC has completed.
         /// </returns>
         public virtual Task DeleteAlertPolicyAsync(
             DeleteAlertPolicyRequest request,
@@ -839,9 +836,6 @@ namespace Google.Cloud.Monitoring.V3
         /// <param name="callSettings">
         /// If not null, applies overrides to this RPC call.
         /// </param>
-        /// <returns>
-        /// The RPC response.
-        /// </returns>
         public virtual void DeleteAlertPolicy(
             DeleteAlertPolicyRequest request,
             CallSettings callSettings = null)
@@ -1226,7 +1220,7 @@ namespace Google.Cloud.Monitoring.V3
         /// If not null, applies overrides to this RPC call.
         /// </param>
         /// <returns>
-        /// A Task containing the RPC response.
+        /// A Task that completes when the RPC has completed.
         /// </returns>
         public override Task DeleteAlertPolicyAsync(
             DeleteAlertPolicyRequest request,
@@ -1245,9 +1239,6 @@ namespace Google.Cloud.Monitoring.V3
         /// <param name="callSettings">
         /// If not null, applies overrides to this RPC call.
         /// </param>
-        /// <returns>
-        /// The RPC response.
-        /// </returns>
         public override void DeleteAlertPolicy(
             DeleteAlertPolicyRequest request,
             CallSettings callSettings = null)

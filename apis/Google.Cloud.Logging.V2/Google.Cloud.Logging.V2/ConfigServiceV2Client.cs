@@ -1136,7 +1136,7 @@ namespace Google.Cloud.Logging.V2
         /// If not null, applies overrides to this RPC call.
         /// </param>
         /// <returns>
-        /// A Task containing the RPC response.
+        /// A Task that completes when the RPC has completed.
         /// </returns>
         public virtual Task DeleteSinkAsync(
             SinkNameOneof sinkName,
@@ -1166,7 +1166,7 @@ namespace Google.Cloud.Logging.V2
         /// A <see cref="CancellationToken"/> to use for this RPC.
         /// </param>
         /// <returns>
-        /// A Task containing the RPC response.
+        /// A Task that completes when the RPC has completed.
         /// </returns>
         public virtual Task DeleteSinkAsync(
             SinkNameOneof sinkName,
@@ -1192,9 +1192,6 @@ namespace Google.Cloud.Logging.V2
         /// <param name="callSettings">
         /// If not null, applies overrides to this RPC call.
         /// </param>
-        /// <returns>
-        /// The RPC response.
-        /// </returns>
         public virtual void DeleteSink(
             SinkNameOneof sinkName,
             CallSettings callSettings = null) => DeleteSink(
@@ -1215,7 +1212,7 @@ namespace Google.Cloud.Logging.V2
         /// If not null, applies overrides to this RPC call.
         /// </param>
         /// <returns>
-        /// A Task containing the RPC response.
+        /// A Task that completes when the RPC has completed.
         /// </returns>
         public virtual Task DeleteSinkAsync(
             DeleteSinkRequest request,
@@ -1234,9 +1231,6 @@ namespace Google.Cloud.Logging.V2
         /// <param name="callSettings">
         /// If not null, applies overrides to this RPC call.
         /// </param>
-        /// <returns>
-        /// The RPC response.
-        /// </returns>
         public virtual void DeleteSink(
             DeleteSinkRequest request,
             CallSettings callSettings = null)
@@ -1811,7 +1805,7 @@ namespace Google.Cloud.Logging.V2
         /// If not null, applies overrides to this RPC call.
         /// </param>
         /// <returns>
-        /// A Task containing the RPC response.
+        /// A Task that completes when the RPC has completed.
         /// </returns>
         public virtual Task DeleteExclusionAsync(
             ExclusionNameOneof name,
@@ -1839,7 +1833,7 @@ namespace Google.Cloud.Logging.V2
         /// A <see cref="CancellationToken"/> to use for this RPC.
         /// </param>
         /// <returns>
-        /// A Task containing the RPC response.
+        /// A Task that completes when the RPC has completed.
         /// </returns>
         public virtual Task DeleteExclusionAsync(
             ExclusionNameOneof name,
@@ -1863,9 +1857,6 @@ namespace Google.Cloud.Logging.V2
         /// <param name="callSettings">
         /// If not null, applies overrides to this RPC call.
         /// </param>
-        /// <returns>
-        /// The RPC response.
-        /// </returns>
         public virtual void DeleteExclusion(
             ExclusionNameOneof name,
             CallSettings callSettings = null) => DeleteExclusion(
@@ -1885,7 +1876,7 @@ namespace Google.Cloud.Logging.V2
         /// If not null, applies overrides to this RPC call.
         /// </param>
         /// <returns>
-        /// A Task containing the RPC response.
+        /// A Task that completes when the RPC has completed.
         /// </returns>
         public virtual Task DeleteExclusionAsync(
             DeleteExclusionRequest request,
@@ -1903,9 +1894,6 @@ namespace Google.Cloud.Logging.V2
         /// <param name="callSettings">
         /// If not null, applies overrides to this RPC call.
         /// </param>
-        /// <returns>
-        /// The RPC response.
-        /// </returns>
         public virtual void DeleteExclusion(
             DeleteExclusionRequest request,
             CallSettings callSettings = null)
@@ -2166,7 +2154,7 @@ namespace Google.Cloud.Logging.V2
         /// If not null, applies overrides to this RPC call.
         /// </param>
         /// <returns>
-        /// A Task containing the RPC response.
+        /// A Task that completes when the RPC has completed.
         /// </returns>
         public override Task DeleteSinkAsync(
             DeleteSinkRequest request,
@@ -2186,9 +2174,6 @@ namespace Google.Cloud.Logging.V2
         /// <param name="callSettings">
         /// If not null, applies overrides to this RPC call.
         /// </param>
-        /// <returns>
-        /// The RPC response.
-        /// </returns>
         public override void DeleteSink(
             DeleteSinkRequest request,
             CallSettings callSettings = null)
@@ -2371,7 +2356,7 @@ namespace Google.Cloud.Logging.V2
         /// If not null, applies overrides to this RPC call.
         /// </param>
         /// <returns>
-        /// A Task containing the RPC response.
+        /// A Task that completes when the RPC has completed.
         /// </returns>
         public override Task DeleteExclusionAsync(
             DeleteExclusionRequest request,
@@ -2390,9 +2375,6 @@ namespace Google.Cloud.Logging.V2
         /// <param name="callSettings">
         /// If not null, applies overrides to this RPC call.
         /// </param>
-        /// <returns>
-        /// The RPC response.
-        /// </returns>
         public override void DeleteExclusion(
             DeleteExclusionRequest request,
             CallSettings callSettings = null)

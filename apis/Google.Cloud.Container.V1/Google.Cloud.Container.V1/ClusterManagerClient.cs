@@ -3121,7 +3121,7 @@ namespace Google.Cloud.Container.V1
         /// If not null, applies overrides to this RPC call.
         /// </param>
         /// <returns>
-        /// A Task containing the RPC response.
+        /// A Task that completes when the RPC has completed.
         /// </returns>
         public virtual Task CancelOperationAsync(
             string projectId,
@@ -3154,7 +3154,7 @@ namespace Google.Cloud.Container.V1
         /// A <see cref="CancellationToken"/> to use for this RPC.
         /// </param>
         /// <returns>
-        /// A Task containing the RPC response.
+        /// A Task that completes when the RPC has completed.
         /// </returns>
         public virtual Task CancelOperationAsync(
             string projectId,
@@ -3183,9 +3183,6 @@ namespace Google.Cloud.Container.V1
         /// <param name="callSettings">
         /// If not null, applies overrides to this RPC call.
         /// </param>
-        /// <returns>
-        /// The RPC response.
-        /// </returns>
         public virtual void CancelOperation(
             string projectId,
             string zone,
@@ -3209,7 +3206,7 @@ namespace Google.Cloud.Container.V1
         /// If not null, applies overrides to this RPC call.
         /// </param>
         /// <returns>
-        /// A Task containing the RPC response.
+        /// A Task that completes when the RPC has completed.
         /// </returns>
         public virtual Task CancelOperationAsync(
             CancelOperationRequest request,
@@ -3227,9 +3224,6 @@ namespace Google.Cloud.Container.V1
         /// <param name="callSettings">
         /// If not null, applies overrides to this RPC call.
         /// </param>
-        /// <returns>
-        /// The RPC response.
-        /// </returns>
         public virtual void CancelOperation(
             CancelOperationRequest request,
             CallSettings callSettings = null)
@@ -5759,7 +5753,7 @@ namespace Google.Cloud.Container.V1
         /// If not null, applies overrides to this RPC call.
         /// </param>
         /// <returns>
-        /// A Task containing the RPC response.
+        /// A Task that completes when the RPC has completed.
         /// </returns>
         public override Task CancelOperationAsync(
             CancelOperationRequest request,
@@ -5778,9 +5772,6 @@ namespace Google.Cloud.Container.V1
         /// <param name="callSettings">
         /// If not null, applies overrides to this RPC call.
         /// </param>
-        /// <returns>
-        /// The RPC response.
-        /// </returns>
         public override void CancelOperation(
             CancelOperationRequest request,
             CallSettings callSettings = null)
