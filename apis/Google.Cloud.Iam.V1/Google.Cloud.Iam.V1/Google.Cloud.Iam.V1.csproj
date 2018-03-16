@@ -14,7 +14,7 @@
     <TreatWarningsAsErrors>true</TreatWarningsAsErrors>
     <Description>gRPC services for the Google Identity and Access Management API. This library is typically used as a dependency for other API client libraries.</Description>
     <PackageTags>IAM;Identity;Access;Google;Cloud</PackageTags>
-    <Copyright>Copyright 2017 Google Inc.</Copyright>
+    <Copyright>Copyright 2018 Google LLC</Copyright>
     <Authors>Google Inc.</Authors>
     <PackageIconUrl>https://cloud.google.com/images/gcp-icon-64x64.png</PackageIconUrl>
     <PackageLicenseUrl>https://www.apache.org/licenses/LICENSE-2.0</PackageLicenseUrl>
