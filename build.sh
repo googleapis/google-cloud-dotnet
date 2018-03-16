@@ -15,9 +15,15 @@ shopt -s nullglob
 # Command line arguments are the APIs to build. Each argument
 # should be the name of a directory, either relative to the location
 # of this script, or under apis.
+# Additional arguments:
+# --notests: Just build, don't run the tests
+# --diff: Detect which APIs to build based on a diff to the master branch
+# --regex regex: Only build APIs that match the given regex
+# --nobuild: Just list which APIs would be built; don't run the build
 apis=()
 runtests=true
 apiregex=
+nobuild=false
 while (( "$#" )); do
   if [[ "$1" == "--notests" ]]
   then 
@@ -30,7 +36,10 @@ while (( "$#" )); do
   then
     shift
     apiregex=$1
-  else 
+  elif [[ "$1" == "--nobuild" ]]
+  then
+    nobuild=true
+  else
     apis+=($1)
   fi
   shift
@@ -65,6 +74,15 @@ then
   fi
 fi
 
+if [[ "$nobuild" == "true" ]]
+then
+  echo "APIs that would be built:"
+  for api in ${apis[*]}
+  do
+    echo "$api"
+  done
+  exit 0
+fi
 
 # First build the analyzers, for use in everything else.
 echo "$(date +%T) Building analyzers"
