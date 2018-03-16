@@ -27,19 +27,23 @@ using System.Threading;
 using System.Threading.Tasks;
 using Xunit;
 
-namespace Google.Cloud.Trace.V1.UnitTests
+namespace Google.Cloud.Trace.V1.Tests
 {
     /// <summary>Generated unit tests</summary>
     public class GeneratedTraceServiceClientTest
     {
         [Fact]
-        public void PatchTracesTest()
+        public void PatchTraces()
         {
-            // TODO: Use a strict mock; need to handle getRerouteToGrpcInterface
-            Mock<TraceService.TraceServiceClient> mockGrpcClient = new Mock<TraceService.TraceServiceClient> { DefaultValue = DefaultValue.Mock };
+            Mock<TraceService.TraceServiceClient> mockGrpcClient = new Mock<TraceService.TraceServiceClient>(MockBehavior.Strict);
+            PatchTracesRequest expectedRequest = new PatchTracesRequest
+            {
+                ProjectId = "projectId-1969970175",
+                Traces = new Traces(),
+            };
             Empty expectedResponse = new Empty();
-            // TODO: Add verification of request object
-            mockGrpcClient.Setup(x => x.PatchTraces(It.IsAny<PatchTracesRequest>(), It.IsAny<CallOptions>())).Returns(expectedResponse);
+            mockGrpcClient.Setup(x => x.PatchTraces(expectedRequest, It.IsAny<CallOptions>()))
+                .Returns(expectedResponse);
             TraceServiceClient client = new TraceServiceClientImpl(mockGrpcClient.Object, null);
             string projectId = "projectId-1969970175";
             Traces traces = new Traces();
@@ -48,22 +52,147 @@ namespace Google.Cloud.Trace.V1.UnitTests
         }
 
         [Fact]
-        public void GetTraceTest()
+        public async Task PatchTracesAsync()
         {
-            // TODO: Use a strict mock; need to handle getRerouteToGrpcInterface
-            Mock<TraceService.TraceServiceClient> mockGrpcClient = new Mock<TraceService.TraceServiceClient> { DefaultValue = DefaultValue.Mock };
+            Mock<TraceService.TraceServiceClient> mockGrpcClient = new Mock<TraceService.TraceServiceClient>(MockBehavior.Strict);
+            PatchTracesRequest expectedRequest = new PatchTracesRequest
+            {
+                ProjectId = "projectId-1969970175",
+                Traces = new Traces(),
+            };
+            Empty expectedResponse = new Empty();
+            mockGrpcClient.Setup(x => x.PatchTracesAsync(expectedRequest, It.IsAny<CallOptions>()))
+                .Returns(new Grpc.Core.AsyncUnaryCall<Empty>(Task.FromResult(expectedResponse), null, null, null, null));
+            TraceServiceClient client = new TraceServiceClientImpl(mockGrpcClient.Object, null);
+            string projectId = "projectId-1969970175";
+            Traces traces = new Traces();
+            await client.PatchTracesAsync(projectId, traces);
+            mockGrpcClient.VerifyAll();
+        }
+
+        [Fact]
+        public void PatchTraces2()
+        {
+            Mock<TraceService.TraceServiceClient> mockGrpcClient = new Mock<TraceService.TraceServiceClient>(MockBehavior.Strict);
+            PatchTracesRequest request = new PatchTracesRequest
+            {
+                ProjectId = "projectId-1969970175",
+                Traces = new Traces(),
+            };
+            Empty expectedResponse = new Empty();
+            mockGrpcClient.Setup(x => x.PatchTraces(request, It.IsAny<CallOptions>()))
+                .Returns(expectedResponse);
+            TraceServiceClient client = new TraceServiceClientImpl(mockGrpcClient.Object, null);
+            client.PatchTraces(request);
+            mockGrpcClient.VerifyAll();
+        }
+
+        [Fact]
+        public async Task PatchTracesAsync2()
+        {
+            Mock<TraceService.TraceServiceClient> mockGrpcClient = new Mock<TraceService.TraceServiceClient>(MockBehavior.Strict);
+            PatchTracesRequest request = new PatchTracesRequest
+            {
+                ProjectId = "projectId-1969970175",
+                Traces = new Traces(),
+            };
+            Empty expectedResponse = new Empty();
+            mockGrpcClient.Setup(x => x.PatchTracesAsync(request, It.IsAny<CallOptions>()))
+                .Returns(new Grpc.Core.AsyncUnaryCall<Empty>(Task.FromResult(expectedResponse), null, null, null, null));
+            TraceServiceClient client = new TraceServiceClientImpl(mockGrpcClient.Object, null);
+            await client.PatchTracesAsync(request);
+            mockGrpcClient.VerifyAll();
+        }
+
+        [Fact]
+        public void GetTrace()
+        {
+            Mock<TraceService.TraceServiceClient> mockGrpcClient = new Mock<TraceService.TraceServiceClient>(MockBehavior.Strict);
+            GetTraceRequest expectedRequest = new GetTraceRequest
+            {
+                ProjectId = "projectId-1969970175",
+                TraceId = "traceId1270300245",
+            };
             Trace expectedResponse = new Trace
             {
                 ProjectId = "projectId2939242356",
                 TraceId = "traceId2987826376",
             };
-            // TODO: Add verification of request object
-            mockGrpcClient.Setup(x => x.GetTrace(It.IsAny<GetTraceRequest>(), It.IsAny<CallOptions>())).Returns(expectedResponse);
+            mockGrpcClient.Setup(x => x.GetTrace(expectedRequest, It.IsAny<CallOptions>()))
+                .Returns(expectedResponse);
             TraceServiceClient client = new TraceServiceClientImpl(mockGrpcClient.Object, null);
             string projectId = "projectId-1969970175";
             string traceId = "traceId1270300245";
             Trace response = client.GetTrace(projectId, traceId);
-            Assert.Equal(expectedResponse, response);
+            Assert.Same(expectedResponse, response);
+            mockGrpcClient.VerifyAll();
+        }
+
+        [Fact]
+        public async Task GetTraceAsync()
+        {
+            Mock<TraceService.TraceServiceClient> mockGrpcClient = new Mock<TraceService.TraceServiceClient>(MockBehavior.Strict);
+            GetTraceRequest expectedRequest = new GetTraceRequest
+            {
+                ProjectId = "projectId-1969970175",
+                TraceId = "traceId1270300245",
+            };
+            Trace expectedResponse = new Trace
+            {
+                ProjectId = "projectId2939242356",
+                TraceId = "traceId2987826376",
+            };
+            mockGrpcClient.Setup(x => x.GetTraceAsync(expectedRequest, It.IsAny<CallOptions>()))
+                .Returns(new Grpc.Core.AsyncUnaryCall<Trace>(Task.FromResult(expectedResponse), null, null, null, null));
+            TraceServiceClient client = new TraceServiceClientImpl(mockGrpcClient.Object, null);
+            string projectId = "projectId-1969970175";
+            string traceId = "traceId1270300245";
+            Trace response = await client.GetTraceAsync(projectId, traceId);
+            Assert.Same(expectedResponse, response);
+            mockGrpcClient.VerifyAll();
+        }
+
+        [Fact]
+        public void GetTrace2()
+        {
+            Mock<TraceService.TraceServiceClient> mockGrpcClient = new Mock<TraceService.TraceServiceClient>(MockBehavior.Strict);
+            GetTraceRequest request = new GetTraceRequest
+            {
+                ProjectId = "projectId-1969970175",
+                TraceId = "traceId1270300245",
+            };
+            Trace expectedResponse = new Trace
+            {
+                ProjectId = "projectId2939242356",
+                TraceId = "traceId2987826376",
+            };
+            mockGrpcClient.Setup(x => x.GetTrace(request, It.IsAny<CallOptions>()))
+                .Returns(expectedResponse);
+            TraceServiceClient client = new TraceServiceClientImpl(mockGrpcClient.Object, null);
+            Trace response = client.GetTrace(request);
+            Assert.Same(expectedResponse, response);
+            mockGrpcClient.VerifyAll();
+        }
+
+        [Fact]
+        public async Task GetTraceAsync2()
+        {
+            Mock<TraceService.TraceServiceClient> mockGrpcClient = new Mock<TraceService.TraceServiceClient>(MockBehavior.Strict);
+            GetTraceRequest request = new GetTraceRequest
+            {
+                ProjectId = "projectId-1969970175",
+                TraceId = "traceId1270300245",
+            };
+            Trace expectedResponse = new Trace
+            {
+                ProjectId = "projectId2939242356",
+                TraceId = "traceId2987826376",
+            };
+            mockGrpcClient.Setup(x => x.GetTraceAsync(request, It.IsAny<CallOptions>()))
+                .Returns(new Grpc.Core.AsyncUnaryCall<Trace>(Task.FromResult(expectedResponse), null, null, null, null));
+            TraceServiceClient client = new TraceServiceClientImpl(mockGrpcClient.Object, null);
+            Trace response = await client.GetTraceAsync(request);
+            Assert.Same(expectedResponse, response);
             mockGrpcClient.VerifyAll();
         }
 

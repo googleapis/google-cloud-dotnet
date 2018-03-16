@@ -16,6 +16,7 @@
 
 using Google.Api.Gax;
 using Google.Api.Gax.Grpc;
+using Google.LongRunning;
 using Google.Protobuf.WellKnownTypes;
 using Grpc.Core;
 using Moq;
@@ -27,7 +28,7 @@ using System.Threading;
 using System.Threading.Tasks;
 using Xunit;
 
-namespace Google.Cloud.VideoIntelligence.V1.UnitTests
+namespace Google.Cloud.VideoIntelligence.V1.Tests
 {
     /// <summary>Generated unit tests</summary>
     public class GeneratedVideoIntelligenceServiceClientTest

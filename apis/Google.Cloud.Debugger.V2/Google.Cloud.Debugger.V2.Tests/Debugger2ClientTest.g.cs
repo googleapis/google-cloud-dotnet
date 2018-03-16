@@ -27,53 +27,188 @@ using System.Threading;
 using System.Threading.Tasks;
 using Xunit;
 
-namespace Google.Cloud.Debugger.V2.UnitTests
+namespace Google.Cloud.Debugger.V2.Tests
 {
     /// <summary>Generated unit tests</summary>
     public class GeneratedDebugger2ClientTest
     {
         [Fact]
-        public void SetBreakpointTest()
+        public void SetBreakpoint()
         {
-            // TODO: Use a strict mock; need to handle getRerouteToGrpcInterface
-            Mock<Debugger2.Debugger2Client> mockGrpcClient = new Mock<Debugger2.Debugger2Client> { DefaultValue = DefaultValue.Mock };
+            Mock<Debugger2.Debugger2Client> mockGrpcClient = new Mock<Debugger2.Debugger2Client>(MockBehavior.Strict);
+            SetBreakpointRequest expectedRequest = new SetBreakpointRequest
+            {
+                DebuggeeId = "debuggeeId-997255898",
+                Breakpoint = new Breakpoint(),
+                ClientVersion = "clientVersion-1506231196",
+            };
             SetBreakpointResponse expectedResponse = new SetBreakpointResponse();
-            // TODO: Add verification of request object
-            mockGrpcClient.Setup(x => x.SetBreakpoint(It.IsAny<SetBreakpointRequest>(), It.IsAny<CallOptions>())).Returns(expectedResponse);
+            mockGrpcClient.Setup(x => x.SetBreakpoint(expectedRequest, It.IsAny<CallOptions>()))
+                .Returns(expectedResponse);
             Debugger2Client client = new Debugger2ClientImpl(mockGrpcClient.Object, null);
             string debuggeeId = "debuggeeId-997255898";
             Breakpoint breakpoint = new Breakpoint();
             string clientVersion = "clientVersion-1506231196";
             SetBreakpointResponse response = client.SetBreakpoint(debuggeeId, breakpoint, clientVersion);
-            Assert.Equal(expectedResponse, response);
+            Assert.Same(expectedResponse, response);
             mockGrpcClient.VerifyAll();
         }
 
         [Fact]
-        public void GetBreakpointTest()
+        public async Task SetBreakpointAsync()
         {
-            // TODO: Use a strict mock; need to handle getRerouteToGrpcInterface
-            Mock<Debugger2.Debugger2Client> mockGrpcClient = new Mock<Debugger2.Debugger2Client> { DefaultValue = DefaultValue.Mock };
+            Mock<Debugger2.Debugger2Client> mockGrpcClient = new Mock<Debugger2.Debugger2Client>(MockBehavior.Strict);
+            SetBreakpointRequest expectedRequest = new SetBreakpointRequest
+            {
+                DebuggeeId = "debuggeeId-997255898",
+                Breakpoint = new Breakpoint(),
+                ClientVersion = "clientVersion-1506231196",
+            };
+            SetBreakpointResponse expectedResponse = new SetBreakpointResponse();
+            mockGrpcClient.Setup(x => x.SetBreakpointAsync(expectedRequest, It.IsAny<CallOptions>()))
+                .Returns(new Grpc.Core.AsyncUnaryCall<SetBreakpointResponse>(Task.FromResult(expectedResponse), null, null, null, null));
+            Debugger2Client client = new Debugger2ClientImpl(mockGrpcClient.Object, null);
+            string debuggeeId = "debuggeeId-997255898";
+            Breakpoint breakpoint = new Breakpoint();
+            string clientVersion = "clientVersion-1506231196";
+            SetBreakpointResponse response = await client.SetBreakpointAsync(debuggeeId, breakpoint, clientVersion);
+            Assert.Same(expectedResponse, response);
+            mockGrpcClient.VerifyAll();
+        }
+
+        [Fact]
+        public void SetBreakpoint2()
+        {
+            Mock<Debugger2.Debugger2Client> mockGrpcClient = new Mock<Debugger2.Debugger2Client>(MockBehavior.Strict);
+            SetBreakpointRequest request = new SetBreakpointRequest
+            {
+                DebuggeeId = "debuggeeId-997255898",
+                Breakpoint = new Breakpoint(),
+                ClientVersion = "clientVersion-1506231196",
+            };
+            SetBreakpointResponse expectedResponse = new SetBreakpointResponse();
+            mockGrpcClient.Setup(x => x.SetBreakpoint(request, It.IsAny<CallOptions>()))
+                .Returns(expectedResponse);
+            Debugger2Client client = new Debugger2ClientImpl(mockGrpcClient.Object, null);
+            SetBreakpointResponse response = client.SetBreakpoint(request);
+            Assert.Same(expectedResponse, response);
+            mockGrpcClient.VerifyAll();
+        }
+
+        [Fact]
+        public async Task SetBreakpointAsync2()
+        {
+            Mock<Debugger2.Debugger2Client> mockGrpcClient = new Mock<Debugger2.Debugger2Client>(MockBehavior.Strict);
+            SetBreakpointRequest request = new SetBreakpointRequest
+            {
+                DebuggeeId = "debuggeeId-997255898",
+                Breakpoint = new Breakpoint(),
+                ClientVersion = "clientVersion-1506231196",
+            };
+            SetBreakpointResponse expectedResponse = new SetBreakpointResponse();
+            mockGrpcClient.Setup(x => x.SetBreakpointAsync(request, It.IsAny<CallOptions>()))
+                .Returns(new Grpc.Core.AsyncUnaryCall<SetBreakpointResponse>(Task.FromResult(expectedResponse), null, null, null, null));
+            Debugger2Client client = new Debugger2ClientImpl(mockGrpcClient.Object, null);
+            SetBreakpointResponse response = await client.SetBreakpointAsync(request);
+            Assert.Same(expectedResponse, response);
+            mockGrpcClient.VerifyAll();
+        }
+
+        [Fact]
+        public void GetBreakpoint()
+        {
+            Mock<Debugger2.Debugger2Client> mockGrpcClient = new Mock<Debugger2.Debugger2Client>(MockBehavior.Strict);
+            GetBreakpointRequest expectedRequest = new GetBreakpointRequest
+            {
+                DebuggeeId = "debuggeeId-997255898",
+                BreakpointId = "breakpointId498424873",
+                ClientVersion = "clientVersion-1506231196",
+            };
             GetBreakpointResponse expectedResponse = new GetBreakpointResponse();
-            // TODO: Add verification of request object
-            mockGrpcClient.Setup(x => x.GetBreakpoint(It.IsAny<GetBreakpointRequest>(), It.IsAny<CallOptions>())).Returns(expectedResponse);
+            mockGrpcClient.Setup(x => x.GetBreakpoint(expectedRequest, It.IsAny<CallOptions>()))
+                .Returns(expectedResponse);
             Debugger2Client client = new Debugger2ClientImpl(mockGrpcClient.Object, null);
             string debuggeeId = "debuggeeId-997255898";
             string breakpointId = "breakpointId498424873";
             string clientVersion = "clientVersion-1506231196";
             GetBreakpointResponse response = client.GetBreakpoint(debuggeeId, breakpointId, clientVersion);
-            Assert.Equal(expectedResponse, response);
+            Assert.Same(expectedResponse, response);
             mockGrpcClient.VerifyAll();
         }
 
         [Fact]
-        public void DeleteBreakpointTest()
+        public async Task GetBreakpointAsync()
         {
-            // TODO: Use a strict mock; need to handle getRerouteToGrpcInterface
-            Mock<Debugger2.Debugger2Client> mockGrpcClient = new Mock<Debugger2.Debugger2Client> { DefaultValue = DefaultValue.Mock };
+            Mock<Debugger2.Debugger2Client> mockGrpcClient = new Mock<Debugger2.Debugger2Client>(MockBehavior.Strict);
+            GetBreakpointRequest expectedRequest = new GetBreakpointRequest
+            {
+                DebuggeeId = "debuggeeId-997255898",
+                BreakpointId = "breakpointId498424873",
+                ClientVersion = "clientVersion-1506231196",
+            };
+            GetBreakpointResponse expectedResponse = new GetBreakpointResponse();
+            mockGrpcClient.Setup(x => x.GetBreakpointAsync(expectedRequest, It.IsAny<CallOptions>()))
+                .Returns(new Grpc.Core.AsyncUnaryCall<GetBreakpointResponse>(Task.FromResult(expectedResponse), null, null, null, null));
+            Debugger2Client client = new Debugger2ClientImpl(mockGrpcClient.Object, null);
+            string debuggeeId = "debuggeeId-997255898";
+            string breakpointId = "breakpointId498424873";
+            string clientVersion = "clientVersion-1506231196";
+            GetBreakpointResponse response = await client.GetBreakpointAsync(debuggeeId, breakpointId, clientVersion);
+            Assert.Same(expectedResponse, response);
+            mockGrpcClient.VerifyAll();
+        }
+
+        [Fact]
+        public void GetBreakpoint2()
+        {
+            Mock<Debugger2.Debugger2Client> mockGrpcClient = new Mock<Debugger2.Debugger2Client>(MockBehavior.Strict);
+            GetBreakpointRequest request = new GetBreakpointRequest
+            {
+                DebuggeeId = "debuggeeId-997255898",
+                BreakpointId = "breakpointId498424873",
+                ClientVersion = "clientVersion-1506231196",
+            };
+            GetBreakpointResponse expectedResponse = new GetBreakpointResponse();
+            mockGrpcClient.Setup(x => x.GetBreakpoint(request, It.IsAny<CallOptions>()))
+                .Returns(expectedResponse);
+            Debugger2Client client = new Debugger2ClientImpl(mockGrpcClient.Object, null);
+            GetBreakpointResponse response = client.GetBreakpoint(request);
+            Assert.Same(expectedResponse, response);
+            mockGrpcClient.VerifyAll();
+        }
+
+        [Fact]
+        public async Task GetBreakpointAsync2()
+        {
+            Mock<Debugger2.Debugger2Client> mockGrpcClient = new Mock<Debugger2.Debugger2Client>(MockBehavior.Strict);
+            GetBreakpointRequest request = new GetBreakpointRequest
+            {
+                DebuggeeId = "debuggeeId-997255898",
+                BreakpointId = "breakpointId498424873",
+                ClientVersion = "clientVersion-1506231196",
+            };
+            GetBreakpointResponse expectedResponse = new GetBreakpointResponse();
+            mockGrpcClient.Setup(x => x.GetBreakpointAsync(request, It.IsAny<CallOptions>()))
+                .Returns(new Grpc.Core.AsyncUnaryCall<GetBreakpointResponse>(Task.FromResult(expectedResponse), null, null, null, null));
+            Debugger2Client client = new Debugger2ClientImpl(mockGrpcClient.Object, null);
+            GetBreakpointResponse response = await client.GetBreakpointAsync(request);
+            Assert.Same(expectedResponse, response);
+            mockGrpcClient.VerifyAll();
+        }
+
+        [Fact]
+        public void DeleteBreakpoint()
+        {
+            Mock<Debugger2.Debugger2Client> mockGrpcClient = new Mock<Debugger2.Debugger2Client>(MockBehavior.Strict);
+            DeleteBreakpointRequest expectedRequest = new DeleteBreakpointRequest
+            {
+                DebuggeeId = "debuggeeId-997255898",
+                BreakpointId = "breakpointId498424873",
+                ClientVersion = "clientVersion-1506231196",
+            };
             Empty expectedResponse = new Empty();
-            // TODO: Add verification of request object
-            mockGrpcClient.Setup(x => x.DeleteBreakpoint(It.IsAny<DeleteBreakpointRequest>(), It.IsAny<CallOptions>())).Returns(expectedResponse);
+            mockGrpcClient.Setup(x => x.DeleteBreakpoint(expectedRequest, It.IsAny<CallOptions>()))
+                .Returns(expectedResponse);
             Debugger2Client client = new Debugger2ClientImpl(mockGrpcClient.Object, null);
             string debuggeeId = "debuggeeId-997255898";
             string breakpointId = "breakpointId498424873";
@@ -83,37 +218,223 @@ namespace Google.Cloud.Debugger.V2.UnitTests
         }
 
         [Fact]
-        public void ListBreakpointsTest()
+        public async Task DeleteBreakpointAsync()
         {
-            // TODO: Use a strict mock; need to handle getRerouteToGrpcInterface
-            Mock<Debugger2.Debugger2Client> mockGrpcClient = new Mock<Debugger2.Debugger2Client> { DefaultValue = DefaultValue.Mock };
-            ListBreakpointsResponse expectedResponse = new ListBreakpointsResponse
+            Mock<Debugger2.Debugger2Client> mockGrpcClient = new Mock<Debugger2.Debugger2Client>(MockBehavior.Strict);
+            DeleteBreakpointRequest expectedRequest = new DeleteBreakpointRequest
             {
-                NextWaitToken = "nextWaitToken1006864251",
+                DebuggeeId = "debuggeeId-997255898",
+                BreakpointId = "breakpointId498424873",
+                ClientVersion = "clientVersion-1506231196",
             };
-            // TODO: Add verification of request object
-            mockGrpcClient.Setup(x => x.ListBreakpoints(It.IsAny<ListBreakpointsRequest>(), It.IsAny<CallOptions>())).Returns(expectedResponse);
+            Empty expectedResponse = new Empty();
+            mockGrpcClient.Setup(x => x.DeleteBreakpointAsync(expectedRequest, It.IsAny<CallOptions>()))
+                .Returns(new Grpc.Core.AsyncUnaryCall<Empty>(Task.FromResult(expectedResponse), null, null, null, null));
             Debugger2Client client = new Debugger2ClientImpl(mockGrpcClient.Object, null);
             string debuggeeId = "debuggeeId-997255898";
+            string breakpointId = "breakpointId498424873";
             string clientVersion = "clientVersion-1506231196";
-            ListBreakpointsResponse response = client.ListBreakpoints(debuggeeId, clientVersion);
-            Assert.Equal(expectedResponse, response);
+            await client.DeleteBreakpointAsync(debuggeeId, breakpointId, clientVersion);
             mockGrpcClient.VerifyAll();
         }
 
         [Fact]
-        public void ListDebuggeesTest()
+        public void DeleteBreakpoint2()
         {
-            // TODO: Use a strict mock; need to handle getRerouteToGrpcInterface
-            Mock<Debugger2.Debugger2Client> mockGrpcClient = new Mock<Debugger2.Debugger2Client> { DefaultValue = DefaultValue.Mock };
+            Mock<Debugger2.Debugger2Client> mockGrpcClient = new Mock<Debugger2.Debugger2Client>(MockBehavior.Strict);
+            DeleteBreakpointRequest request = new DeleteBreakpointRequest
+            {
+                DebuggeeId = "debuggeeId-997255898",
+                BreakpointId = "breakpointId498424873",
+                ClientVersion = "clientVersion-1506231196",
+            };
+            Empty expectedResponse = new Empty();
+            mockGrpcClient.Setup(x => x.DeleteBreakpoint(request, It.IsAny<CallOptions>()))
+                .Returns(expectedResponse);
+            Debugger2Client client = new Debugger2ClientImpl(mockGrpcClient.Object, null);
+            client.DeleteBreakpoint(request);
+            mockGrpcClient.VerifyAll();
+        }
+
+        [Fact]
+        public async Task DeleteBreakpointAsync2()
+        {
+            Mock<Debugger2.Debugger2Client> mockGrpcClient = new Mock<Debugger2.Debugger2Client>(MockBehavior.Strict);
+            DeleteBreakpointRequest request = new DeleteBreakpointRequest
+            {
+                DebuggeeId = "debuggeeId-997255898",
+                BreakpointId = "breakpointId498424873",
+                ClientVersion = "clientVersion-1506231196",
+            };
+            Empty expectedResponse = new Empty();
+            mockGrpcClient.Setup(x => x.DeleteBreakpointAsync(request, It.IsAny<CallOptions>()))
+                .Returns(new Grpc.Core.AsyncUnaryCall<Empty>(Task.FromResult(expectedResponse), null, null, null, null));
+            Debugger2Client client = new Debugger2ClientImpl(mockGrpcClient.Object, null);
+            await client.DeleteBreakpointAsync(request);
+            mockGrpcClient.VerifyAll();
+        }
+
+        [Fact]
+        public void ListBreakpoints()
+        {
+            Mock<Debugger2.Debugger2Client> mockGrpcClient = new Mock<Debugger2.Debugger2Client>(MockBehavior.Strict);
+            ListBreakpointsRequest expectedRequest = new ListBreakpointsRequest
+            {
+                DebuggeeId = "debuggeeId-997255898",
+                ClientVersion = "clientVersion-1506231196",
+            };
+            ListBreakpointsResponse expectedResponse = new ListBreakpointsResponse
+            {
+                NextWaitToken = "nextWaitToken1006864251",
+            };
+            mockGrpcClient.Setup(x => x.ListBreakpoints(expectedRequest, It.IsAny<CallOptions>()))
+                .Returns(expectedResponse);
+            Debugger2Client client = new Debugger2ClientImpl(mockGrpcClient.Object, null);
+            string debuggeeId = "debuggeeId-997255898";
+            string clientVersion = "clientVersion-1506231196";
+            ListBreakpointsResponse response = client.ListBreakpoints(debuggeeId, clientVersion);
+            Assert.Same(expectedResponse, response);
+            mockGrpcClient.VerifyAll();
+        }
+
+        [Fact]
+        public async Task ListBreakpointsAsync()
+        {
+            Mock<Debugger2.Debugger2Client> mockGrpcClient = new Mock<Debugger2.Debugger2Client>(MockBehavior.Strict);
+            ListBreakpointsRequest expectedRequest = new ListBreakpointsRequest
+            {
+                DebuggeeId = "debuggeeId-997255898",
+                ClientVersion = "clientVersion-1506231196",
+            };
+            ListBreakpointsResponse expectedResponse = new ListBreakpointsResponse
+            {
+                NextWaitToken = "nextWaitToken1006864251",
+            };
+            mockGrpcClient.Setup(x => x.ListBreakpointsAsync(expectedRequest, It.IsAny<CallOptions>()))
+                .Returns(new Grpc.Core.AsyncUnaryCall<ListBreakpointsResponse>(Task.FromResult(expectedResponse), null, null, null, null));
+            Debugger2Client client = new Debugger2ClientImpl(mockGrpcClient.Object, null);
+            string debuggeeId = "debuggeeId-997255898";
+            string clientVersion = "clientVersion-1506231196";
+            ListBreakpointsResponse response = await client.ListBreakpointsAsync(debuggeeId, clientVersion);
+            Assert.Same(expectedResponse, response);
+            mockGrpcClient.VerifyAll();
+        }
+
+        [Fact]
+        public void ListBreakpoints2()
+        {
+            Mock<Debugger2.Debugger2Client> mockGrpcClient = new Mock<Debugger2.Debugger2Client>(MockBehavior.Strict);
+            ListBreakpointsRequest request = new ListBreakpointsRequest
+            {
+                DebuggeeId = "debuggeeId-997255898",
+                ClientVersion = "clientVersion-1506231196",
+            };
+            ListBreakpointsResponse expectedResponse = new ListBreakpointsResponse
+            {
+                NextWaitToken = "nextWaitToken1006864251",
+            };
+            mockGrpcClient.Setup(x => x.ListBreakpoints(request, It.IsAny<CallOptions>()))
+                .Returns(expectedResponse);
+            Debugger2Client client = new Debugger2ClientImpl(mockGrpcClient.Object, null);
+            ListBreakpointsResponse response = client.ListBreakpoints(request);
+            Assert.Same(expectedResponse, response);
+            mockGrpcClient.VerifyAll();
+        }
+
+        [Fact]
+        public async Task ListBreakpointsAsync2()
+        {
+            Mock<Debugger2.Debugger2Client> mockGrpcClient = new Mock<Debugger2.Debugger2Client>(MockBehavior.Strict);
+            ListBreakpointsRequest request = new ListBreakpointsRequest
+            {
+                DebuggeeId = "debuggeeId-997255898",
+                ClientVersion = "clientVersion-1506231196",
+            };
+            ListBreakpointsResponse expectedResponse = new ListBreakpointsResponse
+            {
+                NextWaitToken = "nextWaitToken1006864251",
+            };
+            mockGrpcClient.Setup(x => x.ListBreakpointsAsync(request, It.IsAny<CallOptions>()))
+                .Returns(new Grpc.Core.AsyncUnaryCall<ListBreakpointsResponse>(Task.FromResult(expectedResponse), null, null, null, null));
+            Debugger2Client client = new Debugger2ClientImpl(mockGrpcClient.Object, null);
+            ListBreakpointsResponse response = await client.ListBreakpointsAsync(request);
+            Assert.Same(expectedResponse, response);
+            mockGrpcClient.VerifyAll();
+        }
+
+        [Fact]
+        public void ListDebuggees()
+        {
+            Mock<Debugger2.Debugger2Client> mockGrpcClient = new Mock<Debugger2.Debugger2Client>(MockBehavior.Strict);
+            ListDebuggeesRequest expectedRequest = new ListDebuggeesRequest
+            {
+                Project = "project-309310695",
+                ClientVersion = "clientVersion-1506231196",
+            };
             ListDebuggeesResponse expectedResponse = new ListDebuggeesResponse();
-            // TODO: Add verification of request object
-            mockGrpcClient.Setup(x => x.ListDebuggees(It.IsAny<ListDebuggeesRequest>(), It.IsAny<CallOptions>())).Returns(expectedResponse);
+            mockGrpcClient.Setup(x => x.ListDebuggees(expectedRequest, It.IsAny<CallOptions>()))
+                .Returns(expectedResponse);
             Debugger2Client client = new Debugger2ClientImpl(mockGrpcClient.Object, null);
             string project = "project-309310695";
             string clientVersion = "clientVersion-1506231196";
             ListDebuggeesResponse response = client.ListDebuggees(project, clientVersion);
-            Assert.Equal(expectedResponse, response);
+            Assert.Same(expectedResponse, response);
+            mockGrpcClient.VerifyAll();
+        }
+
+        [Fact]
+        public async Task ListDebuggeesAsync()
+        {
+            Mock<Debugger2.Debugger2Client> mockGrpcClient = new Mock<Debugger2.Debugger2Client>(MockBehavior.Strict);
+            ListDebuggeesRequest expectedRequest = new ListDebuggeesRequest
+            {
+                Project = "project-309310695",
+                ClientVersion = "clientVersion-1506231196",
+            };
+            ListDebuggeesResponse expectedResponse = new ListDebuggeesResponse();
+            mockGrpcClient.Setup(x => x.ListDebuggeesAsync(expectedRequest, It.IsAny<CallOptions>()))
+                .Returns(new Grpc.Core.AsyncUnaryCall<ListDebuggeesResponse>(Task.FromResult(expectedResponse), null, null, null, null));
+            Debugger2Client client = new Debugger2ClientImpl(mockGrpcClient.Object, null);
+            string project = "project-309310695";
+            string clientVersion = "clientVersion-1506231196";
+            ListDebuggeesResponse response = await client.ListDebuggeesAsync(project, clientVersion);
+            Assert.Same(expectedResponse, response);
+            mockGrpcClient.VerifyAll();
+        }
+
+        [Fact]
+        public void ListDebuggees2()
+        {
+            Mock<Debugger2.Debugger2Client> mockGrpcClient = new Mock<Debugger2.Debugger2Client>(MockBehavior.Strict);
+            ListDebuggeesRequest request = new ListDebuggeesRequest
+            {
+                Project = "project-309310695",
+                ClientVersion = "clientVersion-1506231196",
+            };
+            ListDebuggeesResponse expectedResponse = new ListDebuggeesResponse();
+            mockGrpcClient.Setup(x => x.ListDebuggees(request, It.IsAny<CallOptions>()))
+                .Returns(expectedResponse);
+            Debugger2Client client = new Debugger2ClientImpl(mockGrpcClient.Object, null);
+            ListDebuggeesResponse response = client.ListDebuggees(request);
+            Assert.Same(expectedResponse, response);
+            mockGrpcClient.VerifyAll();
+        }
+
+        [Fact]
+        public async Task ListDebuggeesAsync2()
+        {
+            Mock<Debugger2.Debugger2Client> mockGrpcClient = new Mock<Debugger2.Debugger2Client>(MockBehavior.Strict);
+            ListDebuggeesRequest request = new ListDebuggeesRequest
+            {
+                Project = "project-309310695",
+                ClientVersion = "clientVersion-1506231196",
+            };
+            ListDebuggeesResponse expectedResponse = new ListDebuggeesResponse();
+            mockGrpcClient.Setup(x => x.ListDebuggeesAsync(request, It.IsAny<CallOptions>()))
+                .Returns(new Grpc.Core.AsyncUnaryCall<ListDebuggeesResponse>(Task.FromResult(expectedResponse), null, null, null, null));
+            Debugger2Client client = new Debugger2ClientImpl(mockGrpcClient.Object, null);
+            ListDebuggeesResponse response = await client.ListDebuggeesAsync(request);
+            Assert.Same(expectedResponse, response);
             mockGrpcClient.VerifyAll();
         }
 

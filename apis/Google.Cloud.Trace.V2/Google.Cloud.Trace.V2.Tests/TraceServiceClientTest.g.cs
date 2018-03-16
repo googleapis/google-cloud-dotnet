@@ -27,23 +27,80 @@ using System.Threading;
 using System.Threading.Tasks;
 using Xunit;
 
-namespace Google.Cloud.Trace.V2.UnitTests
+namespace Google.Cloud.Trace.V2.Tests
 {
     /// <summary>Generated unit tests</summary>
     public class GeneratedTraceServiceClientTest
     {
         [Fact]
-        public void BatchWriteSpansTest()
+        public void BatchWriteSpans()
         {
-            // TODO: Use a strict mock; need to handle getRerouteToGrpcInterface
-            Mock<TraceService.TraceServiceClient> mockGrpcClient = new Mock<TraceService.TraceServiceClient> { DefaultValue = DefaultValue.Mock };
+            Mock<TraceService.TraceServiceClient> mockGrpcClient = new Mock<TraceService.TraceServiceClient>(MockBehavior.Strict);
+            BatchWriteSpansRequest expectedRequest = new BatchWriteSpansRequest
+            {
+                ProjectName = new ProjectName("[PROJECT]"),
+                Spans = { },
+            };
             Empty expectedResponse = new Empty();
-            // TODO: Add verification of request object
-            mockGrpcClient.Setup(x => x.BatchWriteSpans(It.IsAny<BatchWriteSpansRequest>(), It.IsAny<CallOptions>())).Returns(expectedResponse);
+            mockGrpcClient.Setup(x => x.BatchWriteSpans(expectedRequest, It.IsAny<CallOptions>()))
+                .Returns(expectedResponse);
             TraceServiceClient client = new TraceServiceClientImpl(mockGrpcClient.Object, null);
             ProjectName name = new ProjectName("[PROJECT]");
             IEnumerable<Span> spans = new List<Span>();
             client.BatchWriteSpans(name, spans);
+            mockGrpcClient.VerifyAll();
+        }
+
+        [Fact]
+        public async Task BatchWriteSpansAsync()
+        {
+            Mock<TraceService.TraceServiceClient> mockGrpcClient = new Mock<TraceService.TraceServiceClient>(MockBehavior.Strict);
+            BatchWriteSpansRequest expectedRequest = new BatchWriteSpansRequest
+            {
+                ProjectName = new ProjectName("[PROJECT]"),
+                Spans = { },
+            };
+            Empty expectedResponse = new Empty();
+            mockGrpcClient.Setup(x => x.BatchWriteSpansAsync(expectedRequest, It.IsAny<CallOptions>()))
+                .Returns(new Grpc.Core.AsyncUnaryCall<Empty>(Task.FromResult(expectedResponse), null, null, null, null));
+            TraceServiceClient client = new TraceServiceClientImpl(mockGrpcClient.Object, null);
+            ProjectName name = new ProjectName("[PROJECT]");
+            IEnumerable<Span> spans = new List<Span>();
+            await client.BatchWriteSpansAsync(name, spans);
+            mockGrpcClient.VerifyAll();
+        }
+
+        [Fact]
+        public void BatchWriteSpans2()
+        {
+            Mock<TraceService.TraceServiceClient> mockGrpcClient = new Mock<TraceService.TraceServiceClient>(MockBehavior.Strict);
+            BatchWriteSpansRequest request = new BatchWriteSpansRequest
+            {
+                ProjectName = new ProjectName("[PROJECT]"),
+                Spans = { },
+            };
+            Empty expectedResponse = new Empty();
+            mockGrpcClient.Setup(x => x.BatchWriteSpans(request, It.IsAny<CallOptions>()))
+                .Returns(expectedResponse);
+            TraceServiceClient client = new TraceServiceClientImpl(mockGrpcClient.Object, null);
+            client.BatchWriteSpans(request);
+            mockGrpcClient.VerifyAll();
+        }
+
+        [Fact]
+        public async Task BatchWriteSpansAsync2()
+        {
+            Mock<TraceService.TraceServiceClient> mockGrpcClient = new Mock<TraceService.TraceServiceClient>(MockBehavior.Strict);
+            BatchWriteSpansRequest request = new BatchWriteSpansRequest
+            {
+                ProjectName = new ProjectName("[PROJECT]"),
+                Spans = { },
+            };
+            Empty expectedResponse = new Empty();
+            mockGrpcClient.Setup(x => x.BatchWriteSpansAsync(request, It.IsAny<CallOptions>()))
+                .Returns(new Grpc.Core.AsyncUnaryCall<Empty>(Task.FromResult(expectedResponse), null, null, null, null));
+            TraceServiceClient client = new TraceServiceClientImpl(mockGrpcClient.Object, null);
+            await client.BatchWriteSpansAsync(request);
             mockGrpcClient.VerifyAll();
         }
 
