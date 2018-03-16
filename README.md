@@ -39,7 +39,9 @@ The following libraries are available at a [beta](#versioning) quality level:
 * [Google Kubernetes Engine](https://cloud.google.com/kubernetes-engine/) - [API docs](http://googlecloudplatform.github.io/google-cloud-dotnet/docs/Google.Cloud.Container.V1) (beta)
 * [Google Cloud Dataproc](https://cloud.google.com/dataproc/) - [API docs](https://googlecloudplatform.github.io/google-cloud-dotnet/docs/Google.Cloud.Dataproc.V1/) (beta)
 * [Google Cloud Debugger](https://cloud.google.com/debugger/) - [API docs](http://googlecloudplatform.github.io/google-cloud-dotnet/docs/Google.Cloud.Debugger.V2) (beta)
-* [Google Cloud Data Loss Prevention](https://cloud.google.com/dlp/) - [API docs](https://googlecloudplatform.github.io/google-cloud-dotnet/docs/Google.Cloud.Dlp.V2Beta1/) (beta)
+* [Google Cloud Data Loss Prevention](https://cloud.google.com/dlp/)
+  * [V2 API docs](https://googlecloudplatform.github.io/google-cloud-dotnet/docs/Google.Cloud.Dlp.V2/) (beta)
+  * [V2Beta1 API docs](https://googlecloudplatform.github.io/google-cloud-dotnet/docs/Google.Cloud.Dlp.V2Beta1/) (beta)
 * [Stackdriver Error Reporting](https://cloud.google.com/error-reporting/) - [API docs](http://googlecloudplatform.github.io/google-cloud-dotnet/docs/Google.Cloud.ErrorReporting.V1Beta1/) (beta)
 * [Google Cloud Firestore](https://cloud.google.com/firestore/): two packages are available, both beta:
   * [Google.Cloud.Firestore](http://googlecloudplatform.github.io/google-cloud-dotnet/docs/Google.Cloud.Firestore/): High-level client library for Google Cloud Firestore (recommended)
