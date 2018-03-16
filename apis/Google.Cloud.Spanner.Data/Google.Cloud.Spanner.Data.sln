@@ -22,7 +22,7 @@ Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Google.Cloud.Spanner.Data.S
 EndProject
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Google.Cloud.ClientTesting", "..\..\tools\Google.Cloud.ClientTesting\Google.Cloud.ClientTesting.csproj", "{9FABF89B-6D3F-43BE-A9B5-C5D75ADBBB4D}"
 EndProject
-Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Google.Cloud.Spanner.Data.Ycsb", "Google.Cloud.Spanner.Data.YCSB\Google.Cloud.Spanner.Data.Ycsb.csproj", "{A08619C9-8766-4F71-88BE-BF0068EBCEF8}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Google.Cloud.Spanner.Data.Ycsb", "Google.Cloud.Spanner.Data.Ycsb\Google.Cloud.Spanner.Data.Ycsb.csproj", "{A08619C9-8766-4F71-88BE-BF0068EBCEF8}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
