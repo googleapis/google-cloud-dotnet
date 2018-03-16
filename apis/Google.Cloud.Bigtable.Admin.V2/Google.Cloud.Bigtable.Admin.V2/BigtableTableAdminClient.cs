@@ -2317,31 +2317,44 @@ namespace Google.Cloud.Bigtable.Admin.V2
             SnapshotTableOperationsClient = new OperationsClientImpl(
                 grpcClient.CreateOperationsClient(), effectiveSettings.SnapshotTableOperationsSettings);
             _callCreateTable = clientHelper.BuildApiCall<CreateTableRequest, Table>(
-                GrpcClient.CreateTableAsync, GrpcClient.CreateTable, effectiveSettings.CreateTableSettings);
+                GrpcClient.CreateTableAsync, GrpcClient.CreateTable, effectiveSettings.CreateTableSettings)
+                .WithCallSettingsOverlay(request => CallSettings.FromHeader("x-goog-request-params", $"parent={request.Parent}"));
             _callCreateTableFromSnapshot = clientHelper.BuildApiCall<CreateTableFromSnapshotRequest, Operation>(
-                GrpcClient.CreateTableFromSnapshotAsync, GrpcClient.CreateTableFromSnapshot, effectiveSettings.CreateTableFromSnapshotSettings);
+                GrpcClient.CreateTableFromSnapshotAsync, GrpcClient.CreateTableFromSnapshot, effectiveSettings.CreateTableFromSnapshotSettings)
+                .WithCallSettingsOverlay(request => CallSettings.FromHeader("x-goog-request-params", $"parent={request.Parent}"));
             _callListTables = clientHelper.BuildApiCall<ListTablesRequest, ListTablesResponse>(
-                GrpcClient.ListTablesAsync, GrpcClient.ListTables, effectiveSettings.ListTablesSettings);
+                GrpcClient.ListTablesAsync, GrpcClient.ListTables, effectiveSettings.ListTablesSettings)
+                .WithCallSettingsOverlay(request => CallSettings.FromHeader("x-goog-request-params", $"parent={request.Parent}"));
             _callGetTable = clientHelper.BuildApiCall<GetTableRequest, Table>(
-                GrpcClient.GetTableAsync, GrpcClient.GetTable, effectiveSettings.GetTableSettings);
+                GrpcClient.GetTableAsync, GrpcClient.GetTable, effectiveSettings.GetTableSettings)
+                .WithCallSettingsOverlay(request => CallSettings.FromHeader("x-goog-request-params", $"name={request.Name}"));
             _callDeleteTable = clientHelper.BuildApiCall<DeleteTableRequest, Empty>(
-                GrpcClient.DeleteTableAsync, GrpcClient.DeleteTable, effectiveSettings.DeleteTableSettings);
+                GrpcClient.DeleteTableAsync, GrpcClient.DeleteTable, effectiveSettings.DeleteTableSettings)
+                .WithCallSettingsOverlay(request => CallSettings.FromHeader("x-goog-request-params", $"name={request.Name}"));
             _callModifyColumnFamilies = clientHelper.BuildApiCall<ModifyColumnFamiliesRequest, Table>(
-                GrpcClient.ModifyColumnFamiliesAsync, GrpcClient.ModifyColumnFamilies, effectiveSettings.ModifyColumnFamiliesSettings);
+                GrpcClient.ModifyColumnFamiliesAsync, GrpcClient.ModifyColumnFamilies, effectiveSettings.ModifyColumnFamiliesSettings)
+                .WithCallSettingsOverlay(request => CallSettings.FromHeader("x-goog-request-params", $"name={request.Name}"));
             _callDropRowRange = clientHelper.BuildApiCall<DropRowRangeRequest, Empty>(
-                GrpcClient.DropRowRangeAsync, GrpcClient.DropRowRange, effectiveSettings.DropRowRangeSettings);
+                GrpcClient.DropRowRangeAsync, GrpcClient.DropRowRange, effectiveSettings.DropRowRangeSettings)
+                .WithCallSettingsOverlay(request => CallSettings.FromHeader("x-goog-request-params", $"name={request.Name}"));
             _callGenerateConsistencyToken = clientHelper.BuildApiCall<GenerateConsistencyTokenRequest, GenerateConsistencyTokenResponse>(
-                GrpcClient.GenerateConsistencyTokenAsync, GrpcClient.GenerateConsistencyToken, effectiveSettings.GenerateConsistencyTokenSettings);
+                GrpcClient.GenerateConsistencyTokenAsync, GrpcClient.GenerateConsistencyToken, effectiveSettings.GenerateConsistencyTokenSettings)
+                .WithCallSettingsOverlay(request => CallSettings.FromHeader("x-goog-request-params", $"name={request.Name}"));
             _callCheckConsistency = clientHelper.BuildApiCall<CheckConsistencyRequest, CheckConsistencyResponse>(
-                GrpcClient.CheckConsistencyAsync, GrpcClient.CheckConsistency, effectiveSettings.CheckConsistencySettings);
+                GrpcClient.CheckConsistencyAsync, GrpcClient.CheckConsistency, effectiveSettings.CheckConsistencySettings)
+                .WithCallSettingsOverlay(request => CallSettings.FromHeader("x-goog-request-params", $"name={request.Name}"));
             _callSnapshotTable = clientHelper.BuildApiCall<SnapshotTableRequest, Operation>(
-                GrpcClient.SnapshotTableAsync, GrpcClient.SnapshotTable, effectiveSettings.SnapshotTableSettings);
+                GrpcClient.SnapshotTableAsync, GrpcClient.SnapshotTable, effectiveSettings.SnapshotTableSettings)
+                .WithCallSettingsOverlay(request => CallSettings.FromHeader("x-goog-request-params", $"name={request.Name}"));
             _callGetSnapshot = clientHelper.BuildApiCall<GetSnapshotRequest, Snapshot>(
-                GrpcClient.GetSnapshotAsync, GrpcClient.GetSnapshot, effectiveSettings.GetSnapshotSettings);
+                GrpcClient.GetSnapshotAsync, GrpcClient.GetSnapshot, effectiveSettings.GetSnapshotSettings)
+                .WithCallSettingsOverlay(request => CallSettings.FromHeader("x-goog-request-params", $"name={request.Name}"));
             _callListSnapshots = clientHelper.BuildApiCall<ListSnapshotsRequest, ListSnapshotsResponse>(
-                GrpcClient.ListSnapshotsAsync, GrpcClient.ListSnapshots, effectiveSettings.ListSnapshotsSettings);
+                GrpcClient.ListSnapshotsAsync, GrpcClient.ListSnapshots, effectiveSettings.ListSnapshotsSettings)
+                .WithCallSettingsOverlay(request => CallSettings.FromHeader("x-goog-request-params", $"parent={request.Parent}"));
             _callDeleteSnapshot = clientHelper.BuildApiCall<DeleteSnapshotRequest, Empty>(
-                GrpcClient.DeleteSnapshotAsync, GrpcClient.DeleteSnapshot, effectiveSettings.DeleteSnapshotSettings);
+                GrpcClient.DeleteSnapshotAsync, GrpcClient.DeleteSnapshot, effectiveSettings.DeleteSnapshotSettings)
+                .WithCallSettingsOverlay(request => CallSettings.FromHeader("x-goog-request-params", $"name={request.Name}"));
             OnConstruction(grpcClient, effectiveSettings, clientHelper);
         }
 
