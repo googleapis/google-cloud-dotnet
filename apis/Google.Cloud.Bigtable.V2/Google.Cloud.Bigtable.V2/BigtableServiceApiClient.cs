@@ -969,17 +969,23 @@ namespace Google.Cloud.Bigtable.V2
             BigtableServiceApiSettings effectiveSettings = settings ?? BigtableServiceApiSettings.GetDefault();
             ClientHelper clientHelper = new ClientHelper(effectiveSettings);
             _callReadRows = clientHelper.BuildApiCall<ReadRowsRequest, ReadRowsResponse>(
-                GrpcClient.ReadRows, effectiveSettings.ReadRowsSettings);
+                GrpcClient.ReadRows, effectiveSettings.ReadRowsSettings)
+                .WithCallSettingsOverlay(request => CallSettings.FromHeader("x-goog-request-params", $"table_name={request.TableName}"));
             _callSampleRowKeys = clientHelper.BuildApiCall<SampleRowKeysRequest, SampleRowKeysResponse>(
-                GrpcClient.SampleRowKeys, effectiveSettings.SampleRowKeysSettings);
+                GrpcClient.SampleRowKeys, effectiveSettings.SampleRowKeysSettings)
+                .WithCallSettingsOverlay(request => CallSettings.FromHeader("x-goog-request-params", $"table_name={request.TableName}"));
             _callMutateRow = clientHelper.BuildApiCall<MutateRowRequest, MutateRowResponse>(
-                GrpcClient.MutateRowAsync, GrpcClient.MutateRow, effectiveSettings.MutateRowSettings);
+                GrpcClient.MutateRowAsync, GrpcClient.MutateRow, effectiveSettings.MutateRowSettings)
+                .WithCallSettingsOverlay(request => CallSettings.FromHeader("x-goog-request-params", $"table_name={request.TableName}"));
             _callMutateRows = clientHelper.BuildApiCall<MutateRowsRequest, MutateRowsResponse>(
-                GrpcClient.MutateRows, effectiveSettings.MutateRowsSettings);
+                GrpcClient.MutateRows, effectiveSettings.MutateRowsSettings)
+                .WithCallSettingsOverlay(request => CallSettings.FromHeader("x-goog-request-params", $"table_name={request.TableName}"));
             _callCheckAndMutateRow = clientHelper.BuildApiCall<CheckAndMutateRowRequest, CheckAndMutateRowResponse>(
-                GrpcClient.CheckAndMutateRowAsync, GrpcClient.CheckAndMutateRow, effectiveSettings.CheckAndMutateRowSettings);
+                GrpcClient.CheckAndMutateRowAsync, GrpcClient.CheckAndMutateRow, effectiveSettings.CheckAndMutateRowSettings)
+                .WithCallSettingsOverlay(request => CallSettings.FromHeader("x-goog-request-params", $"table_name={request.TableName}"));
             _callReadModifyWriteRow = clientHelper.BuildApiCall<ReadModifyWriteRowRequest, ReadModifyWriteRowResponse>(
-                GrpcClient.ReadModifyWriteRowAsync, GrpcClient.ReadModifyWriteRow, effectiveSettings.ReadModifyWriteRowSettings);
+                GrpcClient.ReadModifyWriteRowAsync, GrpcClient.ReadModifyWriteRow, effectiveSettings.ReadModifyWriteRowSettings)
+                .WithCallSettingsOverlay(request => CallSettings.FromHeader("x-goog-request-params", $"table_name={request.TableName}"));
             OnConstruction(grpcClient, effectiveSettings, clientHelper);
         }
 

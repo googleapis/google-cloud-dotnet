@@ -3394,43 +3394,62 @@ namespace Google.Cloud.Bigtable.Admin.V2
             UpdateAppProfileOperationsClient = new OperationsClientImpl(
                 grpcClient.CreateOperationsClient(), effectiveSettings.UpdateAppProfileOperationsSettings);
             _callCreateInstance = clientHelper.BuildApiCall<CreateInstanceRequest, Operation>(
-                GrpcClient.CreateInstanceAsync, GrpcClient.CreateInstance, effectiveSettings.CreateInstanceSettings);
+                GrpcClient.CreateInstanceAsync, GrpcClient.CreateInstance, effectiveSettings.CreateInstanceSettings)
+                .WithCallSettingsOverlay(request => CallSettings.FromHeader("x-goog-request-params", $"parent={request.Parent}"));
             _callGetInstance = clientHelper.BuildApiCall<GetInstanceRequest, Instance>(
-                GrpcClient.GetInstanceAsync, GrpcClient.GetInstance, effectiveSettings.GetInstanceSettings);
+                GrpcClient.GetInstanceAsync, GrpcClient.GetInstance, effectiveSettings.GetInstanceSettings)
+                .WithCallSettingsOverlay(request => CallSettings.FromHeader("x-goog-request-params", $"name={request.Name}"));
             _callListInstances = clientHelper.BuildApiCall<ListInstancesRequest, ListInstancesResponse>(
-                GrpcClient.ListInstancesAsync, GrpcClient.ListInstances, effectiveSettings.ListInstancesSettings);
+                GrpcClient.ListInstancesAsync, GrpcClient.ListInstances, effectiveSettings.ListInstancesSettings)
+                .WithCallSettingsOverlay(request => CallSettings.FromHeader("x-goog-request-params", $"parent={request.Parent}"));
             _callUpdateInstance = clientHelper.BuildApiCall<Instance, Instance>(
-                GrpcClient.UpdateInstanceAsync, GrpcClient.UpdateInstance, effectiveSettings.UpdateInstanceSettings);
+                GrpcClient.UpdateInstanceAsync, GrpcClient.UpdateInstance, effectiveSettings.UpdateInstanceSettings)
+                .WithCallSettingsOverlay(request => CallSettings.FromHeader("x-goog-request-params", $"name={request.Name}"));
             _callPartialUpdateInstance = clientHelper.BuildApiCall<PartialUpdateInstanceRequest, Operation>(
-                GrpcClient.PartialUpdateInstanceAsync, GrpcClient.PartialUpdateInstance, effectiveSettings.PartialUpdateInstanceSettings);
+                GrpcClient.PartialUpdateInstanceAsync, GrpcClient.PartialUpdateInstance, effectiveSettings.PartialUpdateInstanceSettings)
+                .WithCallSettingsOverlay(request => CallSettings.FromHeader("x-goog-request-params", $"instance.name={request.Instance.Name}"));
             _callDeleteInstance = clientHelper.BuildApiCall<DeleteInstanceRequest, Empty>(
-                GrpcClient.DeleteInstanceAsync, GrpcClient.DeleteInstance, effectiveSettings.DeleteInstanceSettings);
+                GrpcClient.DeleteInstanceAsync, GrpcClient.DeleteInstance, effectiveSettings.DeleteInstanceSettings)
+                .WithCallSettingsOverlay(request => CallSettings.FromHeader("x-goog-request-params", $"name={request.Name}"));
             _callCreateCluster = clientHelper.BuildApiCall<CreateClusterRequest, Operation>(
-                GrpcClient.CreateClusterAsync, GrpcClient.CreateCluster, effectiveSettings.CreateClusterSettings);
+                GrpcClient.CreateClusterAsync, GrpcClient.CreateCluster, effectiveSettings.CreateClusterSettings)
+                .WithCallSettingsOverlay(request => CallSettings.FromHeader("x-goog-request-params", $"parent={request.Parent}"));
             _callGetCluster = clientHelper.BuildApiCall<GetClusterRequest, Cluster>(
-                GrpcClient.GetClusterAsync, GrpcClient.GetCluster, effectiveSettings.GetClusterSettings);
+                GrpcClient.GetClusterAsync, GrpcClient.GetCluster, effectiveSettings.GetClusterSettings)
+                .WithCallSettingsOverlay(request => CallSettings.FromHeader("x-goog-request-params", $"name={request.Name}"));
             _callListClusters = clientHelper.BuildApiCall<ListClustersRequest, ListClustersResponse>(
-                GrpcClient.ListClustersAsync, GrpcClient.ListClusters, effectiveSettings.ListClustersSettings);
+                GrpcClient.ListClustersAsync, GrpcClient.ListClusters, effectiveSettings.ListClustersSettings)
+                .WithCallSettingsOverlay(request => CallSettings.FromHeader("x-goog-request-params", $"parent={request.Parent}"));
             _callUpdateCluster = clientHelper.BuildApiCall<Cluster, Operation>(
-                GrpcClient.UpdateClusterAsync, GrpcClient.UpdateCluster, effectiveSettings.UpdateClusterSettings);
+                GrpcClient.UpdateClusterAsync, GrpcClient.UpdateCluster, effectiveSettings.UpdateClusterSettings)
+                .WithCallSettingsOverlay(request => CallSettings.FromHeader("x-goog-request-params", $"name={request.Name}"));
             _callDeleteCluster = clientHelper.BuildApiCall<DeleteClusterRequest, Empty>(
-                GrpcClient.DeleteClusterAsync, GrpcClient.DeleteCluster, effectiveSettings.DeleteClusterSettings);
+                GrpcClient.DeleteClusterAsync, GrpcClient.DeleteCluster, effectiveSettings.DeleteClusterSettings)
+                .WithCallSettingsOverlay(request => CallSettings.FromHeader("x-goog-request-params", $"name={request.Name}"));
             _callCreateAppProfile = clientHelper.BuildApiCall<CreateAppProfileRequest, AppProfile>(
-                GrpcClient.CreateAppProfileAsync, GrpcClient.CreateAppProfile, effectiveSettings.CreateAppProfileSettings);
+                GrpcClient.CreateAppProfileAsync, GrpcClient.CreateAppProfile, effectiveSettings.CreateAppProfileSettings)
+                .WithCallSettingsOverlay(request => CallSettings.FromHeader("x-goog-request-params", $"parent={request.Parent}"));
             _callGetAppProfile = clientHelper.BuildApiCall<GetAppProfileRequest, AppProfile>(
-                GrpcClient.GetAppProfileAsync, GrpcClient.GetAppProfile, effectiveSettings.GetAppProfileSettings);
+                GrpcClient.GetAppProfileAsync, GrpcClient.GetAppProfile, effectiveSettings.GetAppProfileSettings)
+                .WithCallSettingsOverlay(request => CallSettings.FromHeader("x-goog-request-params", $"name={request.Name}"));
             _callListAppProfiles = clientHelper.BuildApiCall<ListAppProfilesRequest, ListAppProfilesResponse>(
-                GrpcClient.ListAppProfilesAsync, GrpcClient.ListAppProfiles, effectiveSettings.ListAppProfilesSettings);
+                GrpcClient.ListAppProfilesAsync, GrpcClient.ListAppProfiles, effectiveSettings.ListAppProfilesSettings)
+                .WithCallSettingsOverlay(request => CallSettings.FromHeader("x-goog-request-params", $"parent={request.Parent}"));
             _callUpdateAppProfile = clientHelper.BuildApiCall<UpdateAppProfileRequest, Operation>(
-                GrpcClient.UpdateAppProfileAsync, GrpcClient.UpdateAppProfile, effectiveSettings.UpdateAppProfileSettings);
+                GrpcClient.UpdateAppProfileAsync, GrpcClient.UpdateAppProfile, effectiveSettings.UpdateAppProfileSettings)
+                .WithCallSettingsOverlay(request => CallSettings.FromHeader("x-goog-request-params", $"app_profile.name={request.AppProfile.Name}"));
             _callDeleteAppProfile = clientHelper.BuildApiCall<DeleteAppProfileRequest, Empty>(
-                GrpcClient.DeleteAppProfileAsync, GrpcClient.DeleteAppProfile, effectiveSettings.DeleteAppProfileSettings);
+                GrpcClient.DeleteAppProfileAsync, GrpcClient.DeleteAppProfile, effectiveSettings.DeleteAppProfileSettings)
+                .WithCallSettingsOverlay(request => CallSettings.FromHeader("x-goog-request-params", $"name={request.Name}"));
             _callGetIamPolicy = clientHelper.BuildApiCall<GetIamPolicyRequest, Policy>(
-                GrpcClient.GetIamPolicyAsync, GrpcClient.GetIamPolicy, effectiveSettings.GetIamPolicySettings);
+                GrpcClient.GetIamPolicyAsync, GrpcClient.GetIamPolicy, effectiveSettings.GetIamPolicySettings)
+                .WithCallSettingsOverlay(request => CallSettings.FromHeader("x-goog-request-params", $"resource={request.Resource}"));
             _callSetIamPolicy = clientHelper.BuildApiCall<SetIamPolicyRequest, Policy>(
-                GrpcClient.SetIamPolicyAsync, GrpcClient.SetIamPolicy, effectiveSettings.SetIamPolicySettings);
+                GrpcClient.SetIamPolicyAsync, GrpcClient.SetIamPolicy, effectiveSettings.SetIamPolicySettings)
+                .WithCallSettingsOverlay(request => CallSettings.FromHeader("x-goog-request-params", $"resource={request.Resource}"));
             _callTestIamPermissions = clientHelper.BuildApiCall<TestIamPermissionsRequest, TestIamPermissionsResponse>(
-                GrpcClient.TestIamPermissionsAsync, GrpcClient.TestIamPermissions, effectiveSettings.TestIamPermissionsSettings);
+                GrpcClient.TestIamPermissionsAsync, GrpcClient.TestIamPermissions, effectiveSettings.TestIamPermissionsSettings)
+                .WithCallSettingsOverlay(request => CallSettings.FromHeader("x-goog-request-params", $"resource={request.Resource}"));
             OnConstruction(grpcClient, effectiveSettings, clientHelper);
         }
 
