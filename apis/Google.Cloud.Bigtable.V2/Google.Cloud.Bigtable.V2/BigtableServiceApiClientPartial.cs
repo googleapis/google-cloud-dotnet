@@ -123,35 +123,14 @@ namespace Google.Cloud.Bigtable.V2
     
     public partial class BigtableServiceApiClientImpl
     {
-        private const string ResourcePrefixHeader = "google-cloud-resource-prefix";
+        partial void Modify_MutateRowRequest(ref MutateRowRequest request, ref CallSettings settings) =>
+            GaxPreconditions.CheckState(
+                request.IsIdempotent(), 
+                "Non-idempotent MutateRow requests are not allowed. Specify a version with all SetCell mutations.");
 
-        partial void Modify_ReadRowsRequest(ref ReadRowsRequest request, ref CallSettings settings) =>
-            ApplyResourcePrefixHeader(ref settings, request.TableName);
-
-        partial void Modify_SampleRowKeysRequest(ref SampleRowKeysRequest request, ref CallSettings settings) =>
-            ApplyResourcePrefixHeader(ref settings, request.TableName);
-
-        partial void Modify_MutateRowRequest(ref MutateRowRequest request, ref CallSettings settings)
-        {
-            GaxPreconditions.CheckState(request.IsIdempotent(), "Non-idempotent MutateRow requests are not allowed. Specify a version with all SetCell mutations.");
-            ApplyResourcePrefixHeader(ref settings, request.TableName);
-        }
-
-        partial void Modify_MutateRowsRequest(ref MutateRowsRequest request, ref CallSettings settings)
-        {
-            GaxPreconditions.CheckState(request.IsIdempotent(), "Non-idempotent MutateRows requests are not allowed. Specify a version with all SetCell mutations.");
-            ApplyResourcePrefixHeader(ref settings, request.TableName);
-        }
-
-        partial void Modify_CheckAndMutateRowRequest(ref CheckAndMutateRowRequest request, ref CallSettings settings) =>
-            ApplyResourcePrefixHeader(ref settings, request.TableName);
-
-        partial void Modify_ReadModifyWriteRowRequest(ref ReadModifyWriteRowRequest request, ref CallSettings settings) =>
-            ApplyResourcePrefixHeader(ref settings, request.TableName);
-
-        private static void ApplyResourcePrefixHeader(ref CallSettings settings, string resource)
-        {
-            settings = settings.WithHeader(ResourcePrefixHeader, resource);
-        }
+        partial void Modify_MutateRowsRequest(ref MutateRowsRequest request, ref CallSettings settings) =>
+            GaxPreconditions.CheckState(
+                request.IsIdempotent(),
+                "Non-idempotent MutateRows requests are not allowed. Specify a version with all SetCell mutations.");
     }
 }
