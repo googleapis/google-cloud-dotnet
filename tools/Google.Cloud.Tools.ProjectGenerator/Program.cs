@@ -302,7 +302,7 @@ namespace Google.Cloud.Tools.ProjectGenerator
                 // Package-related properties
                 new XElement("Description", api.Description),
                 new XElement("PackageTags", string.Join(";", api.Tags.Concat(new[] { "Google", "Cloud" }))),
-                new XElement("Copyright", "Copyright 2017 Google Inc."),
+                new XElement("Copyright", $"Copyright {DateTime.UtcNow.Year} Google LLC"),
                 new XElement("Authors", "Google Inc."),
                 new XElement("PackageIconUrl", "https://cloud.google.com/images/gcp-icon-64x64.png"),
                 new XElement("PackageLicenseUrl", "https://www.apache.org/licenses/LICENSE-2.0"),
