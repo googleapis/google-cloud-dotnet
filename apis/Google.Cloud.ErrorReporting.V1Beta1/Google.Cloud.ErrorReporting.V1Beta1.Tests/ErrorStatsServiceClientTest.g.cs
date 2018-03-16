@@ -27,23 +27,78 @@ using System.Threading;
 using System.Threading.Tasks;
 using Xunit;
 
-namespace Google.Cloud.ErrorReporting.V1Beta1.UnitTests
+namespace Google.Cloud.ErrorReporting.V1Beta1.Tests
 {
     /// <summary>Generated unit tests</summary>
     public class GeneratedErrorStatsServiceClientTest
     {
         [Fact]
-        public void DeleteEventsTest()
+        public void DeleteEvents()
         {
-            // TODO: Use a strict mock; need to handle getRerouteToGrpcInterface
-            Mock<ErrorStatsService.ErrorStatsServiceClient> mockGrpcClient = new Mock<ErrorStatsService.ErrorStatsServiceClient> { DefaultValue = DefaultValue.Mock };
+            Mock<ErrorStatsService.ErrorStatsServiceClient> mockGrpcClient = new Mock<ErrorStatsService.ErrorStatsServiceClient>(MockBehavior.Strict);
+            DeleteEventsRequest expectedRequest = new DeleteEventsRequest
+            {
+                ProjectNameAsProjectName = new ProjectName("[PROJECT]"),
+            };
             DeleteEventsResponse expectedResponse = new DeleteEventsResponse();
-            // TODO: Add verification of request object
-            mockGrpcClient.Setup(x => x.DeleteEvents(It.IsAny<DeleteEventsRequest>(), It.IsAny<CallOptions>())).Returns(expectedResponse);
+            mockGrpcClient.Setup(x => x.DeleteEvents(expectedRequest, It.IsAny<CallOptions>()))
+                .Returns(expectedResponse);
             ErrorStatsServiceClient client = new ErrorStatsServiceClientImpl(mockGrpcClient.Object, null);
             ProjectName projectName = new ProjectName("[PROJECT]");
             DeleteEventsResponse response = client.DeleteEvents(projectName);
-            Assert.Equal(expectedResponse, response);
+            Assert.Same(expectedResponse, response);
+            mockGrpcClient.VerifyAll();
+        }
+
+        [Fact]
+        public async Task DeleteEventsAsync()
+        {
+            Mock<ErrorStatsService.ErrorStatsServiceClient> mockGrpcClient = new Mock<ErrorStatsService.ErrorStatsServiceClient>(MockBehavior.Strict);
+            DeleteEventsRequest expectedRequest = new DeleteEventsRequest
+            {
+                ProjectNameAsProjectName = new ProjectName("[PROJECT]"),
+            };
+            DeleteEventsResponse expectedResponse = new DeleteEventsResponse();
+            mockGrpcClient.Setup(x => x.DeleteEventsAsync(expectedRequest, It.IsAny<CallOptions>()))
+                .Returns(new Grpc.Core.AsyncUnaryCall<DeleteEventsResponse>(Task.FromResult(expectedResponse), null, null, null, null));
+            ErrorStatsServiceClient client = new ErrorStatsServiceClientImpl(mockGrpcClient.Object, null);
+            ProjectName projectName = new ProjectName("[PROJECT]");
+            DeleteEventsResponse response = await client.DeleteEventsAsync(projectName);
+            Assert.Same(expectedResponse, response);
+            mockGrpcClient.VerifyAll();
+        }
+
+        [Fact]
+        public void DeleteEvents2()
+        {
+            Mock<ErrorStatsService.ErrorStatsServiceClient> mockGrpcClient = new Mock<ErrorStatsService.ErrorStatsServiceClient>(MockBehavior.Strict);
+            DeleteEventsRequest request = new DeleteEventsRequest
+            {
+                ProjectNameAsProjectName = new ProjectName("[PROJECT]"),
+            };
+            DeleteEventsResponse expectedResponse = new DeleteEventsResponse();
+            mockGrpcClient.Setup(x => x.DeleteEvents(request, It.IsAny<CallOptions>()))
+                .Returns(expectedResponse);
+            ErrorStatsServiceClient client = new ErrorStatsServiceClientImpl(mockGrpcClient.Object, null);
+            DeleteEventsResponse response = client.DeleteEvents(request);
+            Assert.Same(expectedResponse, response);
+            mockGrpcClient.VerifyAll();
+        }
+
+        [Fact]
+        public async Task DeleteEventsAsync2()
+        {
+            Mock<ErrorStatsService.ErrorStatsServiceClient> mockGrpcClient = new Mock<ErrorStatsService.ErrorStatsServiceClient>(MockBehavior.Strict);
+            DeleteEventsRequest request = new DeleteEventsRequest
+            {
+                ProjectNameAsProjectName = new ProjectName("[PROJECT]"),
+            };
+            DeleteEventsResponse expectedResponse = new DeleteEventsResponse();
+            mockGrpcClient.Setup(x => x.DeleteEventsAsync(request, It.IsAny<CallOptions>()))
+                .Returns(new Grpc.Core.AsyncUnaryCall<DeleteEventsResponse>(Task.FromResult(expectedResponse), null, null, null, null));
+            ErrorStatsServiceClient client = new ErrorStatsServiceClientImpl(mockGrpcClient.Object, null);
+            DeleteEventsResponse response = await client.DeleteEventsAsync(request);
+            Assert.Same(expectedResponse, response);
             mockGrpcClient.VerifyAll();
         }
 

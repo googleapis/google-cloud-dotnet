@@ -17,6 +17,7 @@
 using Google.Api.Gax;
 using Google.Api.Gax.Grpc;
 using Google.Cloud.Iam.V1;
+using Google.LongRunning;
 using Google.Protobuf;
 using Google.Protobuf.WellKnownTypes;
 using Grpc.Core;
@@ -29,37 +30,114 @@ using System.Threading;
 using System.Threading.Tasks;
 using Xunit;
 
-namespace Google.Cloud.Spanner.Admin.Database.V1.UnitTests
+namespace Google.Cloud.Spanner.Admin.Database.V1.Tests
 {
     /// <summary>Generated unit tests</summary>
     public class GeneratedDatabaseAdminClientTest
     {
         [Fact]
-        public void GetDatabaseTest()
+        public void GetDatabase()
         {
-            // TODO: Use a strict mock; need to handle getRerouteToGrpcInterface
-            Mock<DatabaseAdmin.DatabaseAdminClient> mockGrpcClient = new Mock<DatabaseAdmin.DatabaseAdminClient> { DefaultValue = DefaultValue.Mock };
+            Mock<DatabaseAdmin.DatabaseAdminClient> mockGrpcClient = new Mock<DatabaseAdmin.DatabaseAdminClient>(MockBehavior.Strict);
+            mockGrpcClient.Setup(x => x.CreateOperationsClient())
+                .Returns(new Mock<Operations.OperationsClient>().Object);
+            GetDatabaseRequest expectedRequest = new GetDatabaseRequest
+            {
+                DatabaseName = new DatabaseName("[PROJECT]", "[INSTANCE]", "[DATABASE]"),
+            };
             Database expectedResponse = new Database
             {
                 Name = "name2-1052831874",
             };
-            // TODO: Add verification of request object
-            mockGrpcClient.Setup(x => x.GetDatabase(It.IsAny<GetDatabaseRequest>(), It.IsAny<CallOptions>())).Returns(expectedResponse);
+            mockGrpcClient.Setup(x => x.GetDatabase(expectedRequest, It.IsAny<CallOptions>()))
+                .Returns(expectedResponse);
             DatabaseAdminClient client = new DatabaseAdminClientImpl(mockGrpcClient.Object, null);
             DatabaseName name = new DatabaseName("[PROJECT]", "[INSTANCE]", "[DATABASE]");
             Database response = client.GetDatabase(name);
-            Assert.Equal(expectedResponse, response);
+            Assert.Same(expectedResponse, response);
             mockGrpcClient.VerifyAll();
         }
 
         [Fact]
-        public void DropDatabaseTest()
+        public async Task GetDatabaseAsync()
         {
-            // TODO: Use a strict mock; need to handle getRerouteToGrpcInterface
-            Mock<DatabaseAdmin.DatabaseAdminClient> mockGrpcClient = new Mock<DatabaseAdmin.DatabaseAdminClient> { DefaultValue = DefaultValue.Mock };
+            Mock<DatabaseAdmin.DatabaseAdminClient> mockGrpcClient = new Mock<DatabaseAdmin.DatabaseAdminClient>(MockBehavior.Strict);
+            mockGrpcClient.Setup(x => x.CreateOperationsClient())
+                .Returns(new Mock<Operations.OperationsClient>().Object);
+            GetDatabaseRequest expectedRequest = new GetDatabaseRequest
+            {
+                DatabaseName = new DatabaseName("[PROJECT]", "[INSTANCE]", "[DATABASE]"),
+            };
+            Database expectedResponse = new Database
+            {
+                Name = "name2-1052831874",
+            };
+            mockGrpcClient.Setup(x => x.GetDatabaseAsync(expectedRequest, It.IsAny<CallOptions>()))
+                .Returns(new Grpc.Core.AsyncUnaryCall<Database>(Task.FromResult(expectedResponse), null, null, null, null));
+            DatabaseAdminClient client = new DatabaseAdminClientImpl(mockGrpcClient.Object, null);
+            DatabaseName name = new DatabaseName("[PROJECT]", "[INSTANCE]", "[DATABASE]");
+            Database response = await client.GetDatabaseAsync(name);
+            Assert.Same(expectedResponse, response);
+            mockGrpcClient.VerifyAll();
+        }
+
+        [Fact]
+        public void GetDatabase2()
+        {
+            Mock<DatabaseAdmin.DatabaseAdminClient> mockGrpcClient = new Mock<DatabaseAdmin.DatabaseAdminClient>(MockBehavior.Strict);
+            mockGrpcClient.Setup(x => x.CreateOperationsClient())
+                .Returns(new Mock<Operations.OperationsClient>().Object);
+            GetDatabaseRequest request = new GetDatabaseRequest
+            {
+                DatabaseName = new DatabaseName("[PROJECT]", "[INSTANCE]", "[DATABASE]"),
+            };
+            Database expectedResponse = new Database
+            {
+                Name = "name2-1052831874",
+            };
+            mockGrpcClient.Setup(x => x.GetDatabase(request, It.IsAny<CallOptions>()))
+                .Returns(expectedResponse);
+            DatabaseAdminClient client = new DatabaseAdminClientImpl(mockGrpcClient.Object, null);
+            Database response = client.GetDatabase(request);
+            Assert.Same(expectedResponse, response);
+            mockGrpcClient.VerifyAll();
+        }
+
+        [Fact]
+        public async Task GetDatabaseAsync2()
+        {
+            Mock<DatabaseAdmin.DatabaseAdminClient> mockGrpcClient = new Mock<DatabaseAdmin.DatabaseAdminClient>(MockBehavior.Strict);
+            mockGrpcClient.Setup(x => x.CreateOperationsClient())
+                .Returns(new Mock<Operations.OperationsClient>().Object);
+            GetDatabaseRequest request = new GetDatabaseRequest
+            {
+                DatabaseName = new DatabaseName("[PROJECT]", "[INSTANCE]", "[DATABASE]"),
+            };
+            Database expectedResponse = new Database
+            {
+                Name = "name2-1052831874",
+            };
+            mockGrpcClient.Setup(x => x.GetDatabaseAsync(request, It.IsAny<CallOptions>()))
+                .Returns(new Grpc.Core.AsyncUnaryCall<Database>(Task.FromResult(expectedResponse), null, null, null, null));
+            DatabaseAdminClient client = new DatabaseAdminClientImpl(mockGrpcClient.Object, null);
+            Database response = await client.GetDatabaseAsync(request);
+            Assert.Same(expectedResponse, response);
+            mockGrpcClient.VerifyAll();
+        }
+
+        [Fact]
+        public void DropDatabase()
+        {
+            Mock<DatabaseAdmin.DatabaseAdminClient> mockGrpcClient = new Mock<DatabaseAdmin.DatabaseAdminClient>(MockBehavior.Strict);
+            mockGrpcClient.Setup(x => x.CreateOperationsClient())
+                .Returns(new Mock<Operations.OperationsClient>().Object);
+            DropDatabaseRequest expectedRequest = new DropDatabaseRequest
+            {
+                DatabaseAsDatabaseName = new DatabaseName("[PROJECT]", "[INSTANCE]", "[DATABASE]"),
+            };
             Empty expectedResponse = new Empty();
-            // TODO: Add verification of request object
-            mockGrpcClient.Setup(x => x.DropDatabase(It.IsAny<DropDatabaseRequest>(), It.IsAny<CallOptions>())).Returns(expectedResponse);
+            mockGrpcClient.Setup(x => x.DropDatabase(expectedRequest, It.IsAny<CallOptions>()))
+                .Returns(expectedResponse);
             DatabaseAdminClient client = new DatabaseAdminClientImpl(mockGrpcClient.Object, null);
             DatabaseName database = new DatabaseName("[PROJECT]", "[INSTANCE]", "[DATABASE]");
             client.DropDatabase(database);
@@ -67,72 +145,413 @@ namespace Google.Cloud.Spanner.Admin.Database.V1.UnitTests
         }
 
         [Fact]
-        public void GetDatabaseDdlTest()
+        public async Task DropDatabaseAsync()
         {
-            // TODO: Use a strict mock; need to handle getRerouteToGrpcInterface
-            Mock<DatabaseAdmin.DatabaseAdminClient> mockGrpcClient = new Mock<DatabaseAdmin.DatabaseAdminClient> { DefaultValue = DefaultValue.Mock };
-            GetDatabaseDdlResponse expectedResponse = new GetDatabaseDdlResponse();
-            // TODO: Add verification of request object
-            mockGrpcClient.Setup(x => x.GetDatabaseDdl(It.IsAny<GetDatabaseDdlRequest>(), It.IsAny<CallOptions>())).Returns(expectedResponse);
+            Mock<DatabaseAdmin.DatabaseAdminClient> mockGrpcClient = new Mock<DatabaseAdmin.DatabaseAdminClient>(MockBehavior.Strict);
+            mockGrpcClient.Setup(x => x.CreateOperationsClient())
+                .Returns(new Mock<Operations.OperationsClient>().Object);
+            DropDatabaseRequest expectedRequest = new DropDatabaseRequest
+            {
+                DatabaseAsDatabaseName = new DatabaseName("[PROJECT]", "[INSTANCE]", "[DATABASE]"),
+            };
+            Empty expectedResponse = new Empty();
+            mockGrpcClient.Setup(x => x.DropDatabaseAsync(expectedRequest, It.IsAny<CallOptions>()))
+                .Returns(new Grpc.Core.AsyncUnaryCall<Empty>(Task.FromResult(expectedResponse), null, null, null, null));
             DatabaseAdminClient client = new DatabaseAdminClientImpl(mockGrpcClient.Object, null);
             DatabaseName database = new DatabaseName("[PROJECT]", "[INSTANCE]", "[DATABASE]");
-            GetDatabaseDdlResponse response = client.GetDatabaseDdl(database);
-            Assert.Equal(expectedResponse, response);
+            await client.DropDatabaseAsync(database);
             mockGrpcClient.VerifyAll();
         }
 
         [Fact]
-        public void SetIamPolicyTest()
+        public void DropDatabase2()
         {
-            // TODO: Use a strict mock; need to handle getRerouteToGrpcInterface
-            Mock<DatabaseAdmin.DatabaseAdminClient> mockGrpcClient = new Mock<DatabaseAdmin.DatabaseAdminClient> { DefaultValue = DefaultValue.Mock };
+            Mock<DatabaseAdmin.DatabaseAdminClient> mockGrpcClient = new Mock<DatabaseAdmin.DatabaseAdminClient>(MockBehavior.Strict);
+            mockGrpcClient.Setup(x => x.CreateOperationsClient())
+                .Returns(new Mock<Operations.OperationsClient>().Object);
+            DropDatabaseRequest request = new DropDatabaseRequest
+            {
+                DatabaseAsDatabaseName = new DatabaseName("[PROJECT]", "[INSTANCE]", "[DATABASE]"),
+            };
+            Empty expectedResponse = new Empty();
+            mockGrpcClient.Setup(x => x.DropDatabase(request, It.IsAny<CallOptions>()))
+                .Returns(expectedResponse);
+            DatabaseAdminClient client = new DatabaseAdminClientImpl(mockGrpcClient.Object, null);
+            client.DropDatabase(request);
+            mockGrpcClient.VerifyAll();
+        }
+
+        [Fact]
+        public async Task DropDatabaseAsync2()
+        {
+            Mock<DatabaseAdmin.DatabaseAdminClient> mockGrpcClient = new Mock<DatabaseAdmin.DatabaseAdminClient>(MockBehavior.Strict);
+            mockGrpcClient.Setup(x => x.CreateOperationsClient())
+                .Returns(new Mock<Operations.OperationsClient>().Object);
+            DropDatabaseRequest request = new DropDatabaseRequest
+            {
+                DatabaseAsDatabaseName = new DatabaseName("[PROJECT]", "[INSTANCE]", "[DATABASE]"),
+            };
+            Empty expectedResponse = new Empty();
+            mockGrpcClient.Setup(x => x.DropDatabaseAsync(request, It.IsAny<CallOptions>()))
+                .Returns(new Grpc.Core.AsyncUnaryCall<Empty>(Task.FromResult(expectedResponse), null, null, null, null));
+            DatabaseAdminClient client = new DatabaseAdminClientImpl(mockGrpcClient.Object, null);
+            await client.DropDatabaseAsync(request);
+            mockGrpcClient.VerifyAll();
+        }
+
+        [Fact]
+        public void GetDatabaseDdl()
+        {
+            Mock<DatabaseAdmin.DatabaseAdminClient> mockGrpcClient = new Mock<DatabaseAdmin.DatabaseAdminClient>(MockBehavior.Strict);
+            mockGrpcClient.Setup(x => x.CreateOperationsClient())
+                .Returns(new Mock<Operations.OperationsClient>().Object);
+            GetDatabaseDdlRequest expectedRequest = new GetDatabaseDdlRequest
+            {
+                DatabaseAsDatabaseName = new DatabaseName("[PROJECT]", "[INSTANCE]", "[DATABASE]"),
+            };
+            GetDatabaseDdlResponse expectedResponse = new GetDatabaseDdlResponse();
+            mockGrpcClient.Setup(x => x.GetDatabaseDdl(expectedRequest, It.IsAny<CallOptions>()))
+                .Returns(expectedResponse);
+            DatabaseAdminClient client = new DatabaseAdminClientImpl(mockGrpcClient.Object, null);
+            DatabaseName database = new DatabaseName("[PROJECT]", "[INSTANCE]", "[DATABASE]");
+            GetDatabaseDdlResponse response = client.GetDatabaseDdl(database);
+            Assert.Same(expectedResponse, response);
+            mockGrpcClient.VerifyAll();
+        }
+
+        [Fact]
+        public async Task GetDatabaseDdlAsync()
+        {
+            Mock<DatabaseAdmin.DatabaseAdminClient> mockGrpcClient = new Mock<DatabaseAdmin.DatabaseAdminClient>(MockBehavior.Strict);
+            mockGrpcClient.Setup(x => x.CreateOperationsClient())
+                .Returns(new Mock<Operations.OperationsClient>().Object);
+            GetDatabaseDdlRequest expectedRequest = new GetDatabaseDdlRequest
+            {
+                DatabaseAsDatabaseName = new DatabaseName("[PROJECT]", "[INSTANCE]", "[DATABASE]"),
+            };
+            GetDatabaseDdlResponse expectedResponse = new GetDatabaseDdlResponse();
+            mockGrpcClient.Setup(x => x.GetDatabaseDdlAsync(expectedRequest, It.IsAny<CallOptions>()))
+                .Returns(new Grpc.Core.AsyncUnaryCall<GetDatabaseDdlResponse>(Task.FromResult(expectedResponse), null, null, null, null));
+            DatabaseAdminClient client = new DatabaseAdminClientImpl(mockGrpcClient.Object, null);
+            DatabaseName database = new DatabaseName("[PROJECT]", "[INSTANCE]", "[DATABASE]");
+            GetDatabaseDdlResponse response = await client.GetDatabaseDdlAsync(database);
+            Assert.Same(expectedResponse, response);
+            mockGrpcClient.VerifyAll();
+        }
+
+        [Fact]
+        public void GetDatabaseDdl2()
+        {
+            Mock<DatabaseAdmin.DatabaseAdminClient> mockGrpcClient = new Mock<DatabaseAdmin.DatabaseAdminClient>(MockBehavior.Strict);
+            mockGrpcClient.Setup(x => x.CreateOperationsClient())
+                .Returns(new Mock<Operations.OperationsClient>().Object);
+            GetDatabaseDdlRequest request = new GetDatabaseDdlRequest
+            {
+                DatabaseAsDatabaseName = new DatabaseName("[PROJECT]", "[INSTANCE]", "[DATABASE]"),
+            };
+            GetDatabaseDdlResponse expectedResponse = new GetDatabaseDdlResponse();
+            mockGrpcClient.Setup(x => x.GetDatabaseDdl(request, It.IsAny<CallOptions>()))
+                .Returns(expectedResponse);
+            DatabaseAdminClient client = new DatabaseAdminClientImpl(mockGrpcClient.Object, null);
+            GetDatabaseDdlResponse response = client.GetDatabaseDdl(request);
+            Assert.Same(expectedResponse, response);
+            mockGrpcClient.VerifyAll();
+        }
+
+        [Fact]
+        public async Task GetDatabaseDdlAsync2()
+        {
+            Mock<DatabaseAdmin.DatabaseAdminClient> mockGrpcClient = new Mock<DatabaseAdmin.DatabaseAdminClient>(MockBehavior.Strict);
+            mockGrpcClient.Setup(x => x.CreateOperationsClient())
+                .Returns(new Mock<Operations.OperationsClient>().Object);
+            GetDatabaseDdlRequest request = new GetDatabaseDdlRequest
+            {
+                DatabaseAsDatabaseName = new DatabaseName("[PROJECT]", "[INSTANCE]", "[DATABASE]"),
+            };
+            GetDatabaseDdlResponse expectedResponse = new GetDatabaseDdlResponse();
+            mockGrpcClient.Setup(x => x.GetDatabaseDdlAsync(request, It.IsAny<CallOptions>()))
+                .Returns(new Grpc.Core.AsyncUnaryCall<GetDatabaseDdlResponse>(Task.FromResult(expectedResponse), null, null, null, null));
+            DatabaseAdminClient client = new DatabaseAdminClientImpl(mockGrpcClient.Object, null);
+            GetDatabaseDdlResponse response = await client.GetDatabaseDdlAsync(request);
+            Assert.Same(expectedResponse, response);
+            mockGrpcClient.VerifyAll();
+        }
+
+        [Fact]
+        public void SetIamPolicy()
+        {
+            Mock<DatabaseAdmin.DatabaseAdminClient> mockGrpcClient = new Mock<DatabaseAdmin.DatabaseAdminClient>(MockBehavior.Strict);
+            mockGrpcClient.Setup(x => x.CreateOperationsClient())
+                .Returns(new Mock<Operations.OperationsClient>().Object);
+            SetIamPolicyRequest expectedRequest = new SetIamPolicyRequest
+            {
+                Resource = new DatabaseName("[PROJECT]", "[INSTANCE]", "[DATABASE]").ToString(),
+                Policy = new Policy(),
+            };
             Policy expectedResponse = new Policy
             {
                 Version = 351608024,
                 Etag = ByteString.CopyFromUtf8("21"),
             };
-            // TODO: Add verification of request object
-            mockGrpcClient.Setup(x => x.SetIamPolicy(It.IsAny<SetIamPolicyRequest>(), It.IsAny<CallOptions>())).Returns(expectedResponse);
+            mockGrpcClient.Setup(x => x.SetIamPolicy(expectedRequest, It.IsAny<CallOptions>()))
+                .Returns(expectedResponse);
             DatabaseAdminClient client = new DatabaseAdminClientImpl(mockGrpcClient.Object, null);
             string formattedResource = new DatabaseName("[PROJECT]", "[INSTANCE]", "[DATABASE]").ToString();
             Policy policy = new Policy();
             Policy response = client.SetIamPolicy(formattedResource, policy);
-            Assert.Equal(expectedResponse, response);
+            Assert.Same(expectedResponse, response);
             mockGrpcClient.VerifyAll();
         }
 
         [Fact]
-        public void GetIamPolicyTest()
+        public async Task SetIamPolicyAsync()
         {
-            // TODO: Use a strict mock; need to handle getRerouteToGrpcInterface
-            Mock<DatabaseAdmin.DatabaseAdminClient> mockGrpcClient = new Mock<DatabaseAdmin.DatabaseAdminClient> { DefaultValue = DefaultValue.Mock };
+            Mock<DatabaseAdmin.DatabaseAdminClient> mockGrpcClient = new Mock<DatabaseAdmin.DatabaseAdminClient>(MockBehavior.Strict);
+            mockGrpcClient.Setup(x => x.CreateOperationsClient())
+                .Returns(new Mock<Operations.OperationsClient>().Object);
+            SetIamPolicyRequest expectedRequest = new SetIamPolicyRequest
+            {
+                Resource = new DatabaseName("[PROJECT]", "[INSTANCE]", "[DATABASE]").ToString(),
+                Policy = new Policy(),
+            };
             Policy expectedResponse = new Policy
             {
                 Version = 351608024,
                 Etag = ByteString.CopyFromUtf8("21"),
             };
-            // TODO: Add verification of request object
-            mockGrpcClient.Setup(x => x.GetIamPolicy(It.IsAny<GetIamPolicyRequest>(), It.IsAny<CallOptions>())).Returns(expectedResponse);
+            mockGrpcClient.Setup(x => x.SetIamPolicyAsync(expectedRequest, It.IsAny<CallOptions>()))
+                .Returns(new Grpc.Core.AsyncUnaryCall<Policy>(Task.FromResult(expectedResponse), null, null, null, null));
             DatabaseAdminClient client = new DatabaseAdminClientImpl(mockGrpcClient.Object, null);
             string formattedResource = new DatabaseName("[PROJECT]", "[INSTANCE]", "[DATABASE]").ToString();
-            Policy response = client.GetIamPolicy(formattedResource);
-            Assert.Equal(expectedResponse, response);
+            Policy policy = new Policy();
+            Policy response = await client.SetIamPolicyAsync(formattedResource, policy);
+            Assert.Same(expectedResponse, response);
             mockGrpcClient.VerifyAll();
         }
 
         [Fact]
-        public void TestIamPermissionsTest()
+        public void SetIamPolicy2()
         {
-            // TODO: Use a strict mock; need to handle getRerouteToGrpcInterface
-            Mock<DatabaseAdmin.DatabaseAdminClient> mockGrpcClient = new Mock<DatabaseAdmin.DatabaseAdminClient> { DefaultValue = DefaultValue.Mock };
+            Mock<DatabaseAdmin.DatabaseAdminClient> mockGrpcClient = new Mock<DatabaseAdmin.DatabaseAdminClient>(MockBehavior.Strict);
+            mockGrpcClient.Setup(x => x.CreateOperationsClient())
+                .Returns(new Mock<Operations.OperationsClient>().Object);
+            SetIamPolicyRequest request = new SetIamPolicyRequest
+            {
+                Resource = new DatabaseName("[PROJECT]", "[INSTANCE]", "[DATABASE]").ToString(),
+                Policy = new Policy(),
+            };
+            Policy expectedResponse = new Policy
+            {
+                Version = 351608024,
+                Etag = ByteString.CopyFromUtf8("21"),
+            };
+            mockGrpcClient.Setup(x => x.SetIamPolicy(request, It.IsAny<CallOptions>()))
+                .Returns(expectedResponse);
+            DatabaseAdminClient client = new DatabaseAdminClientImpl(mockGrpcClient.Object, null);
+            Policy response = client.SetIamPolicy(request);
+            Assert.Same(expectedResponse, response);
+            mockGrpcClient.VerifyAll();
+        }
+
+        [Fact]
+        public async Task SetIamPolicyAsync2()
+        {
+            Mock<DatabaseAdmin.DatabaseAdminClient> mockGrpcClient = new Mock<DatabaseAdmin.DatabaseAdminClient>(MockBehavior.Strict);
+            mockGrpcClient.Setup(x => x.CreateOperationsClient())
+                .Returns(new Mock<Operations.OperationsClient>().Object);
+            SetIamPolicyRequest request = new SetIamPolicyRequest
+            {
+                Resource = new DatabaseName("[PROJECT]", "[INSTANCE]", "[DATABASE]").ToString(),
+                Policy = new Policy(),
+            };
+            Policy expectedResponse = new Policy
+            {
+                Version = 351608024,
+                Etag = ByteString.CopyFromUtf8("21"),
+            };
+            mockGrpcClient.Setup(x => x.SetIamPolicyAsync(request, It.IsAny<CallOptions>()))
+                .Returns(new Grpc.Core.AsyncUnaryCall<Policy>(Task.FromResult(expectedResponse), null, null, null, null));
+            DatabaseAdminClient client = new DatabaseAdminClientImpl(mockGrpcClient.Object, null);
+            Policy response = await client.SetIamPolicyAsync(request);
+            Assert.Same(expectedResponse, response);
+            mockGrpcClient.VerifyAll();
+        }
+
+        [Fact]
+        public void GetIamPolicy()
+        {
+            Mock<DatabaseAdmin.DatabaseAdminClient> mockGrpcClient = new Mock<DatabaseAdmin.DatabaseAdminClient>(MockBehavior.Strict);
+            mockGrpcClient.Setup(x => x.CreateOperationsClient())
+                .Returns(new Mock<Operations.OperationsClient>().Object);
+            GetIamPolicyRequest expectedRequest = new GetIamPolicyRequest
+            {
+                Resource = new DatabaseName("[PROJECT]", "[INSTANCE]", "[DATABASE]").ToString(),
+            };
+            Policy expectedResponse = new Policy
+            {
+                Version = 351608024,
+                Etag = ByteString.CopyFromUtf8("21"),
+            };
+            mockGrpcClient.Setup(x => x.GetIamPolicy(expectedRequest, It.IsAny<CallOptions>()))
+                .Returns(expectedResponse);
+            DatabaseAdminClient client = new DatabaseAdminClientImpl(mockGrpcClient.Object, null);
+            string formattedResource = new DatabaseName("[PROJECT]", "[INSTANCE]", "[DATABASE]").ToString();
+            Policy response = client.GetIamPolicy(formattedResource);
+            Assert.Same(expectedResponse, response);
+            mockGrpcClient.VerifyAll();
+        }
+
+        [Fact]
+        public async Task GetIamPolicyAsync()
+        {
+            Mock<DatabaseAdmin.DatabaseAdminClient> mockGrpcClient = new Mock<DatabaseAdmin.DatabaseAdminClient>(MockBehavior.Strict);
+            mockGrpcClient.Setup(x => x.CreateOperationsClient())
+                .Returns(new Mock<Operations.OperationsClient>().Object);
+            GetIamPolicyRequest expectedRequest = new GetIamPolicyRequest
+            {
+                Resource = new DatabaseName("[PROJECT]", "[INSTANCE]", "[DATABASE]").ToString(),
+            };
+            Policy expectedResponse = new Policy
+            {
+                Version = 351608024,
+                Etag = ByteString.CopyFromUtf8("21"),
+            };
+            mockGrpcClient.Setup(x => x.GetIamPolicyAsync(expectedRequest, It.IsAny<CallOptions>()))
+                .Returns(new Grpc.Core.AsyncUnaryCall<Policy>(Task.FromResult(expectedResponse), null, null, null, null));
+            DatabaseAdminClient client = new DatabaseAdminClientImpl(mockGrpcClient.Object, null);
+            string formattedResource = new DatabaseName("[PROJECT]", "[INSTANCE]", "[DATABASE]").ToString();
+            Policy response = await client.GetIamPolicyAsync(formattedResource);
+            Assert.Same(expectedResponse, response);
+            mockGrpcClient.VerifyAll();
+        }
+
+        [Fact]
+        public void GetIamPolicy2()
+        {
+            Mock<DatabaseAdmin.DatabaseAdminClient> mockGrpcClient = new Mock<DatabaseAdmin.DatabaseAdminClient>(MockBehavior.Strict);
+            mockGrpcClient.Setup(x => x.CreateOperationsClient())
+                .Returns(new Mock<Operations.OperationsClient>().Object);
+            GetIamPolicyRequest request = new GetIamPolicyRequest
+            {
+                Resource = new DatabaseName("[PROJECT]", "[INSTANCE]", "[DATABASE]").ToString(),
+            };
+            Policy expectedResponse = new Policy
+            {
+                Version = 351608024,
+                Etag = ByteString.CopyFromUtf8("21"),
+            };
+            mockGrpcClient.Setup(x => x.GetIamPolicy(request, It.IsAny<CallOptions>()))
+                .Returns(expectedResponse);
+            DatabaseAdminClient client = new DatabaseAdminClientImpl(mockGrpcClient.Object, null);
+            Policy response = client.GetIamPolicy(request);
+            Assert.Same(expectedResponse, response);
+            mockGrpcClient.VerifyAll();
+        }
+
+        [Fact]
+        public async Task GetIamPolicyAsync2()
+        {
+            Mock<DatabaseAdmin.DatabaseAdminClient> mockGrpcClient = new Mock<DatabaseAdmin.DatabaseAdminClient>(MockBehavior.Strict);
+            mockGrpcClient.Setup(x => x.CreateOperationsClient())
+                .Returns(new Mock<Operations.OperationsClient>().Object);
+            GetIamPolicyRequest request = new GetIamPolicyRequest
+            {
+                Resource = new DatabaseName("[PROJECT]", "[INSTANCE]", "[DATABASE]").ToString(),
+            };
+            Policy expectedResponse = new Policy
+            {
+                Version = 351608024,
+                Etag = ByteString.CopyFromUtf8("21"),
+            };
+            mockGrpcClient.Setup(x => x.GetIamPolicyAsync(request, It.IsAny<CallOptions>()))
+                .Returns(new Grpc.Core.AsyncUnaryCall<Policy>(Task.FromResult(expectedResponse), null, null, null, null));
+            DatabaseAdminClient client = new DatabaseAdminClientImpl(mockGrpcClient.Object, null);
+            Policy response = await client.GetIamPolicyAsync(request);
+            Assert.Same(expectedResponse, response);
+            mockGrpcClient.VerifyAll();
+        }
+
+        [Fact]
+        public void TestIamPermissions()
+        {
+            Mock<DatabaseAdmin.DatabaseAdminClient> mockGrpcClient = new Mock<DatabaseAdmin.DatabaseAdminClient>(MockBehavior.Strict);
+            mockGrpcClient.Setup(x => x.CreateOperationsClient())
+                .Returns(new Mock<Operations.OperationsClient>().Object);
+            TestIamPermissionsRequest expectedRequest = new TestIamPermissionsRequest
+            {
+                Resource = new DatabaseName("[PROJECT]", "[INSTANCE]", "[DATABASE]").ToString(),
+                Permissions = { },
+            };
             TestIamPermissionsResponse expectedResponse = new TestIamPermissionsResponse();
-            // TODO: Add verification of request object
-            mockGrpcClient.Setup(x => x.TestIamPermissions(It.IsAny<TestIamPermissionsRequest>(), It.IsAny<CallOptions>())).Returns(expectedResponse);
+            mockGrpcClient.Setup(x => x.TestIamPermissions(expectedRequest, It.IsAny<CallOptions>()))
+                .Returns(expectedResponse);
             DatabaseAdminClient client = new DatabaseAdminClientImpl(mockGrpcClient.Object, null);
             string formattedResource = new DatabaseName("[PROJECT]", "[INSTANCE]", "[DATABASE]").ToString();
             IEnumerable<string> permissions = new List<string>();
             TestIamPermissionsResponse response = client.TestIamPermissions(formattedResource, permissions);
-            Assert.Equal(expectedResponse, response);
+            Assert.Same(expectedResponse, response);
+            mockGrpcClient.VerifyAll();
+        }
+
+        [Fact]
+        public async Task TestIamPermissionsAsync()
+        {
+            Mock<DatabaseAdmin.DatabaseAdminClient> mockGrpcClient = new Mock<DatabaseAdmin.DatabaseAdminClient>(MockBehavior.Strict);
+            mockGrpcClient.Setup(x => x.CreateOperationsClient())
+                .Returns(new Mock<Operations.OperationsClient>().Object);
+            TestIamPermissionsRequest expectedRequest = new TestIamPermissionsRequest
+            {
+                Resource = new DatabaseName("[PROJECT]", "[INSTANCE]", "[DATABASE]").ToString(),
+                Permissions = { },
+            };
+            TestIamPermissionsResponse expectedResponse = new TestIamPermissionsResponse();
+            mockGrpcClient.Setup(x => x.TestIamPermissionsAsync(expectedRequest, It.IsAny<CallOptions>()))
+                .Returns(new Grpc.Core.AsyncUnaryCall<TestIamPermissionsResponse>(Task.FromResult(expectedResponse), null, null, null, null));
+            DatabaseAdminClient client = new DatabaseAdminClientImpl(mockGrpcClient.Object, null);
+            string formattedResource = new DatabaseName("[PROJECT]", "[INSTANCE]", "[DATABASE]").ToString();
+            IEnumerable<string> permissions = new List<string>();
+            TestIamPermissionsResponse response = await client.TestIamPermissionsAsync(formattedResource, permissions);
+            Assert.Same(expectedResponse, response);
+            mockGrpcClient.VerifyAll();
+        }
+
+        [Fact]
+        public void TestIamPermissions2()
+        {
+            Mock<DatabaseAdmin.DatabaseAdminClient> mockGrpcClient = new Mock<DatabaseAdmin.DatabaseAdminClient>(MockBehavior.Strict);
+            mockGrpcClient.Setup(x => x.CreateOperationsClient())
+                .Returns(new Mock<Operations.OperationsClient>().Object);
+            TestIamPermissionsRequest request = new TestIamPermissionsRequest
+            {
+                Resource = new DatabaseName("[PROJECT]", "[INSTANCE]", "[DATABASE]").ToString(),
+                Permissions = { },
+            };
+            TestIamPermissionsResponse expectedResponse = new TestIamPermissionsResponse();
+            mockGrpcClient.Setup(x => x.TestIamPermissions(request, It.IsAny<CallOptions>()))
+                .Returns(expectedResponse);
+            DatabaseAdminClient client = new DatabaseAdminClientImpl(mockGrpcClient.Object, null);
+            TestIamPermissionsResponse response = client.TestIamPermissions(request);
+            Assert.Same(expectedResponse, response);
+            mockGrpcClient.VerifyAll();
+        }
+
+        [Fact]
+        public async Task TestIamPermissionsAsync2()
+        {
+            Mock<DatabaseAdmin.DatabaseAdminClient> mockGrpcClient = new Mock<DatabaseAdmin.DatabaseAdminClient>(MockBehavior.Strict);
+            mockGrpcClient.Setup(x => x.CreateOperationsClient())
+                .Returns(new Mock<Operations.OperationsClient>().Object);
+            TestIamPermissionsRequest request = new TestIamPermissionsRequest
+            {
+                Resource = new DatabaseName("[PROJECT]", "[INSTANCE]", "[DATABASE]").ToString(),
+                Permissions = { },
+            };
+            TestIamPermissionsResponse expectedResponse = new TestIamPermissionsResponse();
+            mockGrpcClient.Setup(x => x.TestIamPermissionsAsync(request, It.IsAny<CallOptions>()))
+                .Returns(new Grpc.Core.AsyncUnaryCall<TestIamPermissionsResponse>(Task.FromResult(expectedResponse), null, null, null, null));
+            DatabaseAdminClient client = new DatabaseAdminClientImpl(mockGrpcClient.Object, null);
+            TestIamPermissionsResponse response = await client.TestIamPermissionsAsync(request);
+            Assert.Same(expectedResponse, response);
             mockGrpcClient.VerifyAll();
         }
 

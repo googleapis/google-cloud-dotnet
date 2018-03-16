@@ -27,80 +27,338 @@ using System.Threading;
 using System.Threading.Tasks;
 using Xunit;
 
-namespace Google.Cloud.Monitoring.V3.UnitTests
+namespace Google.Cloud.Monitoring.V3.Tests
 {
     /// <summary>Generated unit tests</summary>
     public class GeneratedUptimeCheckServiceClientTest
     {
         [Fact]
-        public void GetUptimeCheckConfigTest()
+        public void GetUptimeCheckConfig()
         {
-            // TODO: Use a strict mock; need to handle getRerouteToGrpcInterface
-            Mock<UptimeCheckService.UptimeCheckServiceClient> mockGrpcClient = new Mock<UptimeCheckService.UptimeCheckServiceClient> { DefaultValue = DefaultValue.Mock };
+            Mock<UptimeCheckService.UptimeCheckServiceClient> mockGrpcClient = new Mock<UptimeCheckService.UptimeCheckServiceClient>(MockBehavior.Strict);
+            GetUptimeCheckConfigRequest expectedRequest = new GetUptimeCheckConfigRequest
+            {
+                Name = new UptimeCheckConfigName("[PROJECT]", "[UPTIME_CHECK_CONFIG]").ToString(),
+            };
             UptimeCheckConfig expectedResponse = new UptimeCheckConfig
             {
                 Name = "name2-1052831874",
                 DisplayName = "displayName1615086568",
             };
-            // TODO: Add verification of request object
-            mockGrpcClient.Setup(x => x.GetUptimeCheckConfig(It.IsAny<GetUptimeCheckConfigRequest>(), It.IsAny<CallOptions>())).Returns(expectedResponse);
+            mockGrpcClient.Setup(x => x.GetUptimeCheckConfig(expectedRequest, It.IsAny<CallOptions>()))
+                .Returns(expectedResponse);
             UptimeCheckServiceClient client = new UptimeCheckServiceClientImpl(mockGrpcClient.Object, null);
             string formattedName = new UptimeCheckConfigName("[PROJECT]", "[UPTIME_CHECK_CONFIG]").ToString();
             UptimeCheckConfig response = client.GetUptimeCheckConfig(formattedName);
-            Assert.Equal(expectedResponse, response);
+            Assert.Same(expectedResponse, response);
             mockGrpcClient.VerifyAll();
         }
 
         [Fact]
-        public void CreateUptimeCheckConfigTest()
+        public async Task GetUptimeCheckConfigAsync()
         {
-            // TODO: Use a strict mock; need to handle getRerouteToGrpcInterface
-            Mock<UptimeCheckService.UptimeCheckServiceClient> mockGrpcClient = new Mock<UptimeCheckService.UptimeCheckServiceClient> { DefaultValue = DefaultValue.Mock };
+            Mock<UptimeCheckService.UptimeCheckServiceClient> mockGrpcClient = new Mock<UptimeCheckService.UptimeCheckServiceClient>(MockBehavior.Strict);
+            GetUptimeCheckConfigRequest expectedRequest = new GetUptimeCheckConfigRequest
+            {
+                Name = new UptimeCheckConfigName("[PROJECT]", "[UPTIME_CHECK_CONFIG]").ToString(),
+            };
+            UptimeCheckConfig expectedResponse = new UptimeCheckConfig
+            {
+                Name = "name2-1052831874",
+                DisplayName = "displayName1615086568",
+            };
+            mockGrpcClient.Setup(x => x.GetUptimeCheckConfigAsync(expectedRequest, It.IsAny<CallOptions>()))
+                .Returns(new Grpc.Core.AsyncUnaryCall<UptimeCheckConfig>(Task.FromResult(expectedResponse), null, null, null, null));
+            UptimeCheckServiceClient client = new UptimeCheckServiceClientImpl(mockGrpcClient.Object, null);
+            string formattedName = new UptimeCheckConfigName("[PROJECT]", "[UPTIME_CHECK_CONFIG]").ToString();
+            UptimeCheckConfig response = await client.GetUptimeCheckConfigAsync(formattedName);
+            Assert.Same(expectedResponse, response);
+            mockGrpcClient.VerifyAll();
+        }
+
+        [Fact]
+        public void GetUptimeCheckConfig2()
+        {
+            Mock<UptimeCheckService.UptimeCheckServiceClient> mockGrpcClient = new Mock<UptimeCheckService.UptimeCheckServiceClient>(MockBehavior.Strict);
+            GetUptimeCheckConfigRequest request = new GetUptimeCheckConfigRequest
+            {
+                Name = new UptimeCheckConfigName("[PROJECT]", "[UPTIME_CHECK_CONFIG]").ToString(),
+            };
+            UptimeCheckConfig expectedResponse = new UptimeCheckConfig
+            {
+                Name = "name2-1052831874",
+                DisplayName = "displayName1615086568",
+            };
+            mockGrpcClient.Setup(x => x.GetUptimeCheckConfig(request, It.IsAny<CallOptions>()))
+                .Returns(expectedResponse);
+            UptimeCheckServiceClient client = new UptimeCheckServiceClientImpl(mockGrpcClient.Object, null);
+            UptimeCheckConfig response = client.GetUptimeCheckConfig(request);
+            Assert.Same(expectedResponse, response);
+            mockGrpcClient.VerifyAll();
+        }
+
+        [Fact]
+        public async Task GetUptimeCheckConfigAsync2()
+        {
+            Mock<UptimeCheckService.UptimeCheckServiceClient> mockGrpcClient = new Mock<UptimeCheckService.UptimeCheckServiceClient>(MockBehavior.Strict);
+            GetUptimeCheckConfigRequest request = new GetUptimeCheckConfigRequest
+            {
+                Name = new UptimeCheckConfigName("[PROJECT]", "[UPTIME_CHECK_CONFIG]").ToString(),
+            };
+            UptimeCheckConfig expectedResponse = new UptimeCheckConfig
+            {
+                Name = "name2-1052831874",
+                DisplayName = "displayName1615086568",
+            };
+            mockGrpcClient.Setup(x => x.GetUptimeCheckConfigAsync(request, It.IsAny<CallOptions>()))
+                .Returns(new Grpc.Core.AsyncUnaryCall<UptimeCheckConfig>(Task.FromResult(expectedResponse), null, null, null, null));
+            UptimeCheckServiceClient client = new UptimeCheckServiceClientImpl(mockGrpcClient.Object, null);
+            UptimeCheckConfig response = await client.GetUptimeCheckConfigAsync(request);
+            Assert.Same(expectedResponse, response);
+            mockGrpcClient.VerifyAll();
+        }
+
+        [Fact]
+        public void CreateUptimeCheckConfig()
+        {
+            Mock<UptimeCheckService.UptimeCheckServiceClient> mockGrpcClient = new Mock<UptimeCheckService.UptimeCheckServiceClient>(MockBehavior.Strict);
+            CreateUptimeCheckConfigRequest expectedRequest = new CreateUptimeCheckConfigRequest
+            {
+                Parent = new ProjectName("[PROJECT]").ToString(),
+                UptimeCheckConfig = new UptimeCheckConfig(),
+            };
             UptimeCheckConfig expectedResponse = new UptimeCheckConfig
             {
                 Name = "name3373707",
                 DisplayName = "displayName1615086568",
             };
-            // TODO: Add verification of request object
-            mockGrpcClient.Setup(x => x.CreateUptimeCheckConfig(It.IsAny<CreateUptimeCheckConfigRequest>(), It.IsAny<CallOptions>())).Returns(expectedResponse);
+            mockGrpcClient.Setup(x => x.CreateUptimeCheckConfig(expectedRequest, It.IsAny<CallOptions>()))
+                .Returns(expectedResponse);
             UptimeCheckServiceClient client = new UptimeCheckServiceClientImpl(mockGrpcClient.Object, null);
             string formattedParent = new ProjectName("[PROJECT]").ToString();
             UptimeCheckConfig uptimeCheckConfig = new UptimeCheckConfig();
             UptimeCheckConfig response = client.CreateUptimeCheckConfig(formattedParent, uptimeCheckConfig);
-            Assert.Equal(expectedResponse, response);
+            Assert.Same(expectedResponse, response);
             mockGrpcClient.VerifyAll();
         }
 
         [Fact]
-        public void UpdateUptimeCheckConfigTest()
+        public async Task CreateUptimeCheckConfigAsync()
         {
-            // TODO: Use a strict mock; need to handle getRerouteToGrpcInterface
-            Mock<UptimeCheckService.UptimeCheckServiceClient> mockGrpcClient = new Mock<UptimeCheckService.UptimeCheckServiceClient> { DefaultValue = DefaultValue.Mock };
+            Mock<UptimeCheckService.UptimeCheckServiceClient> mockGrpcClient = new Mock<UptimeCheckService.UptimeCheckServiceClient>(MockBehavior.Strict);
+            CreateUptimeCheckConfigRequest expectedRequest = new CreateUptimeCheckConfigRequest
+            {
+                Parent = new ProjectName("[PROJECT]").ToString(),
+                UptimeCheckConfig = new UptimeCheckConfig(),
+            };
             UptimeCheckConfig expectedResponse = new UptimeCheckConfig
             {
                 Name = "name3373707",
                 DisplayName = "displayName1615086568",
             };
-            // TODO: Add verification of request object
-            mockGrpcClient.Setup(x => x.UpdateUptimeCheckConfig(It.IsAny<UpdateUptimeCheckConfigRequest>(), It.IsAny<CallOptions>())).Returns(expectedResponse);
+            mockGrpcClient.Setup(x => x.CreateUptimeCheckConfigAsync(expectedRequest, It.IsAny<CallOptions>()))
+                .Returns(new Grpc.Core.AsyncUnaryCall<UptimeCheckConfig>(Task.FromResult(expectedResponse), null, null, null, null));
             UptimeCheckServiceClient client = new UptimeCheckServiceClientImpl(mockGrpcClient.Object, null);
+            string formattedParent = new ProjectName("[PROJECT]").ToString();
             UptimeCheckConfig uptimeCheckConfig = new UptimeCheckConfig();
-            UptimeCheckConfig response = client.UpdateUptimeCheckConfig(uptimeCheckConfig);
-            Assert.Equal(expectedResponse, response);
+            UptimeCheckConfig response = await client.CreateUptimeCheckConfigAsync(formattedParent, uptimeCheckConfig);
+            Assert.Same(expectedResponse, response);
             mockGrpcClient.VerifyAll();
         }
 
         [Fact]
-        public void DeleteUptimeCheckConfigTest()
+        public void CreateUptimeCheckConfig2()
         {
-            // TODO: Use a strict mock; need to handle getRerouteToGrpcInterface
-            Mock<UptimeCheckService.UptimeCheckServiceClient> mockGrpcClient = new Mock<UptimeCheckService.UptimeCheckServiceClient> { DefaultValue = DefaultValue.Mock };
+            Mock<UptimeCheckService.UptimeCheckServiceClient> mockGrpcClient = new Mock<UptimeCheckService.UptimeCheckServiceClient>(MockBehavior.Strict);
+            CreateUptimeCheckConfigRequest request = new CreateUptimeCheckConfigRequest
+            {
+                Parent = new ProjectName("[PROJECT]").ToString(),
+                UptimeCheckConfig = new UptimeCheckConfig(),
+            };
+            UptimeCheckConfig expectedResponse = new UptimeCheckConfig
+            {
+                Name = "name3373707",
+                DisplayName = "displayName1615086568",
+            };
+            mockGrpcClient.Setup(x => x.CreateUptimeCheckConfig(request, It.IsAny<CallOptions>()))
+                .Returns(expectedResponse);
+            UptimeCheckServiceClient client = new UptimeCheckServiceClientImpl(mockGrpcClient.Object, null);
+            UptimeCheckConfig response = client.CreateUptimeCheckConfig(request);
+            Assert.Same(expectedResponse, response);
+            mockGrpcClient.VerifyAll();
+        }
+
+        [Fact]
+        public async Task CreateUptimeCheckConfigAsync2()
+        {
+            Mock<UptimeCheckService.UptimeCheckServiceClient> mockGrpcClient = new Mock<UptimeCheckService.UptimeCheckServiceClient>(MockBehavior.Strict);
+            CreateUptimeCheckConfigRequest request = new CreateUptimeCheckConfigRequest
+            {
+                Parent = new ProjectName("[PROJECT]").ToString(),
+                UptimeCheckConfig = new UptimeCheckConfig(),
+            };
+            UptimeCheckConfig expectedResponse = new UptimeCheckConfig
+            {
+                Name = "name3373707",
+                DisplayName = "displayName1615086568",
+            };
+            mockGrpcClient.Setup(x => x.CreateUptimeCheckConfigAsync(request, It.IsAny<CallOptions>()))
+                .Returns(new Grpc.Core.AsyncUnaryCall<UptimeCheckConfig>(Task.FromResult(expectedResponse), null, null, null, null));
+            UptimeCheckServiceClient client = new UptimeCheckServiceClientImpl(mockGrpcClient.Object, null);
+            UptimeCheckConfig response = await client.CreateUptimeCheckConfigAsync(request);
+            Assert.Same(expectedResponse, response);
+            mockGrpcClient.VerifyAll();
+        }
+
+        [Fact]
+        public void UpdateUptimeCheckConfig()
+        {
+            Mock<UptimeCheckService.UptimeCheckServiceClient> mockGrpcClient = new Mock<UptimeCheckService.UptimeCheckServiceClient>(MockBehavior.Strict);
+            UpdateUptimeCheckConfigRequest expectedRequest = new UpdateUptimeCheckConfigRequest
+            {
+                UptimeCheckConfig = new UptimeCheckConfig(),
+            };
+            UptimeCheckConfig expectedResponse = new UptimeCheckConfig
+            {
+                Name = "name3373707",
+                DisplayName = "displayName1615086568",
+            };
+            mockGrpcClient.Setup(x => x.UpdateUptimeCheckConfig(expectedRequest, It.IsAny<CallOptions>()))
+                .Returns(expectedResponse);
+            UptimeCheckServiceClient client = new UptimeCheckServiceClientImpl(mockGrpcClient.Object, null);
+            UptimeCheckConfig uptimeCheckConfig = new UptimeCheckConfig();
+            UptimeCheckConfig response = client.UpdateUptimeCheckConfig(uptimeCheckConfig);
+            Assert.Same(expectedResponse, response);
+            mockGrpcClient.VerifyAll();
+        }
+
+        [Fact]
+        public async Task UpdateUptimeCheckConfigAsync()
+        {
+            Mock<UptimeCheckService.UptimeCheckServiceClient> mockGrpcClient = new Mock<UptimeCheckService.UptimeCheckServiceClient>(MockBehavior.Strict);
+            UpdateUptimeCheckConfigRequest expectedRequest = new UpdateUptimeCheckConfigRequest
+            {
+                UptimeCheckConfig = new UptimeCheckConfig(),
+            };
+            UptimeCheckConfig expectedResponse = new UptimeCheckConfig
+            {
+                Name = "name3373707",
+                DisplayName = "displayName1615086568",
+            };
+            mockGrpcClient.Setup(x => x.UpdateUptimeCheckConfigAsync(expectedRequest, It.IsAny<CallOptions>()))
+                .Returns(new Grpc.Core.AsyncUnaryCall<UptimeCheckConfig>(Task.FromResult(expectedResponse), null, null, null, null));
+            UptimeCheckServiceClient client = new UptimeCheckServiceClientImpl(mockGrpcClient.Object, null);
+            UptimeCheckConfig uptimeCheckConfig = new UptimeCheckConfig();
+            UptimeCheckConfig response = await client.UpdateUptimeCheckConfigAsync(uptimeCheckConfig);
+            Assert.Same(expectedResponse, response);
+            mockGrpcClient.VerifyAll();
+        }
+
+        [Fact]
+        public void UpdateUptimeCheckConfig2()
+        {
+            Mock<UptimeCheckService.UptimeCheckServiceClient> mockGrpcClient = new Mock<UptimeCheckService.UptimeCheckServiceClient>(MockBehavior.Strict);
+            UpdateUptimeCheckConfigRequest request = new UpdateUptimeCheckConfigRequest
+            {
+                UptimeCheckConfig = new UptimeCheckConfig(),
+            };
+            UptimeCheckConfig expectedResponse = new UptimeCheckConfig
+            {
+                Name = "name3373707",
+                DisplayName = "displayName1615086568",
+            };
+            mockGrpcClient.Setup(x => x.UpdateUptimeCheckConfig(request, It.IsAny<CallOptions>()))
+                .Returns(expectedResponse);
+            UptimeCheckServiceClient client = new UptimeCheckServiceClientImpl(mockGrpcClient.Object, null);
+            UptimeCheckConfig response = client.UpdateUptimeCheckConfig(request);
+            Assert.Same(expectedResponse, response);
+            mockGrpcClient.VerifyAll();
+        }
+
+        [Fact]
+        public async Task UpdateUptimeCheckConfigAsync2()
+        {
+            Mock<UptimeCheckService.UptimeCheckServiceClient> mockGrpcClient = new Mock<UptimeCheckService.UptimeCheckServiceClient>(MockBehavior.Strict);
+            UpdateUptimeCheckConfigRequest request = new UpdateUptimeCheckConfigRequest
+            {
+                UptimeCheckConfig = new UptimeCheckConfig(),
+            };
+            UptimeCheckConfig expectedResponse = new UptimeCheckConfig
+            {
+                Name = "name3373707",
+                DisplayName = "displayName1615086568",
+            };
+            mockGrpcClient.Setup(x => x.UpdateUptimeCheckConfigAsync(request, It.IsAny<CallOptions>()))
+                .Returns(new Grpc.Core.AsyncUnaryCall<UptimeCheckConfig>(Task.FromResult(expectedResponse), null, null, null, null));
+            UptimeCheckServiceClient client = new UptimeCheckServiceClientImpl(mockGrpcClient.Object, null);
+            UptimeCheckConfig response = await client.UpdateUptimeCheckConfigAsync(request);
+            Assert.Same(expectedResponse, response);
+            mockGrpcClient.VerifyAll();
+        }
+
+        [Fact]
+        public void DeleteUptimeCheckConfig()
+        {
+            Mock<UptimeCheckService.UptimeCheckServiceClient> mockGrpcClient = new Mock<UptimeCheckService.UptimeCheckServiceClient>(MockBehavior.Strict);
+            DeleteUptimeCheckConfigRequest expectedRequest = new DeleteUptimeCheckConfigRequest
+            {
+                Name = new UptimeCheckConfigName("[PROJECT]", "[UPTIME_CHECK_CONFIG]").ToString(),
+            };
             Empty expectedResponse = new Empty();
-            // TODO: Add verification of request object
-            mockGrpcClient.Setup(x => x.DeleteUptimeCheckConfig(It.IsAny<DeleteUptimeCheckConfigRequest>(), It.IsAny<CallOptions>())).Returns(expectedResponse);
+            mockGrpcClient.Setup(x => x.DeleteUptimeCheckConfig(expectedRequest, It.IsAny<CallOptions>()))
+                .Returns(expectedResponse);
             UptimeCheckServiceClient client = new UptimeCheckServiceClientImpl(mockGrpcClient.Object, null);
             string formattedName = new UptimeCheckConfigName("[PROJECT]", "[UPTIME_CHECK_CONFIG]").ToString();
             client.DeleteUptimeCheckConfig(formattedName);
+            mockGrpcClient.VerifyAll();
+        }
+
+        [Fact]
+        public async Task DeleteUptimeCheckConfigAsync()
+        {
+            Mock<UptimeCheckService.UptimeCheckServiceClient> mockGrpcClient = new Mock<UptimeCheckService.UptimeCheckServiceClient>(MockBehavior.Strict);
+            DeleteUptimeCheckConfigRequest expectedRequest = new DeleteUptimeCheckConfigRequest
+            {
+                Name = new UptimeCheckConfigName("[PROJECT]", "[UPTIME_CHECK_CONFIG]").ToString(),
+            };
+            Empty expectedResponse = new Empty();
+            mockGrpcClient.Setup(x => x.DeleteUptimeCheckConfigAsync(expectedRequest, It.IsAny<CallOptions>()))
+                .Returns(new Grpc.Core.AsyncUnaryCall<Empty>(Task.FromResult(expectedResponse), null, null, null, null));
+            UptimeCheckServiceClient client = new UptimeCheckServiceClientImpl(mockGrpcClient.Object, null);
+            string formattedName = new UptimeCheckConfigName("[PROJECT]", "[UPTIME_CHECK_CONFIG]").ToString();
+            await client.DeleteUptimeCheckConfigAsync(formattedName);
+            mockGrpcClient.VerifyAll();
+        }
+
+        [Fact]
+        public void DeleteUptimeCheckConfig2()
+        {
+            Mock<UptimeCheckService.UptimeCheckServiceClient> mockGrpcClient = new Mock<UptimeCheckService.UptimeCheckServiceClient>(MockBehavior.Strict);
+            DeleteUptimeCheckConfigRequest request = new DeleteUptimeCheckConfigRequest
+            {
+                Name = new UptimeCheckConfigName("[PROJECT]", "[UPTIME_CHECK_CONFIG]").ToString(),
+            };
+            Empty expectedResponse = new Empty();
+            mockGrpcClient.Setup(x => x.DeleteUptimeCheckConfig(request, It.IsAny<CallOptions>()))
+                .Returns(expectedResponse);
+            UptimeCheckServiceClient client = new UptimeCheckServiceClientImpl(mockGrpcClient.Object, null);
+            client.DeleteUptimeCheckConfig(request);
+            mockGrpcClient.VerifyAll();
+        }
+
+        [Fact]
+        public async Task DeleteUptimeCheckConfigAsync2()
+        {
+            Mock<UptimeCheckService.UptimeCheckServiceClient> mockGrpcClient = new Mock<UptimeCheckService.UptimeCheckServiceClient>(MockBehavior.Strict);
+            DeleteUptimeCheckConfigRequest request = new DeleteUptimeCheckConfigRequest
+            {
+                Name = new UptimeCheckConfigName("[PROJECT]", "[UPTIME_CHECK_CONFIG]").ToString(),
+            };
+            Empty expectedResponse = new Empty();
+            mockGrpcClient.Setup(x => x.DeleteUptimeCheckConfigAsync(request, It.IsAny<CallOptions>()))
+                .Returns(new Grpc.Core.AsyncUnaryCall<Empty>(Task.FromResult(expectedResponse), null, null, null, null));
+            UptimeCheckServiceClient client = new UptimeCheckServiceClientImpl(mockGrpcClient.Object, null);
+            await client.DeleteUptimeCheckConfigAsync(request);
             mockGrpcClient.VerifyAll();
         }
 

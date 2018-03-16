@@ -28,55 +28,186 @@ using System.Threading;
 using System.Threading.Tasks;
 using Xunit;
 
-namespace Google.Cloud.Spanner.V1.UnitTests
+namespace Google.Cloud.Spanner.V1.Tests
 {
     /// <summary>Generated unit tests</summary>
     public class GeneratedSpannerClientTest
     {
         [Fact]
-        public void CreateSessionTest()
+        public void CreateSession()
         {
-            // TODO: Use a strict mock; need to handle getRerouteToGrpcInterface
-            Mock<Spanner.SpannerClient> mockGrpcClient = new Mock<Spanner.SpannerClient> { DefaultValue = DefaultValue.Mock };
+            Mock<Spanner.SpannerClient> mockGrpcClient = new Mock<Spanner.SpannerClient>(MockBehavior.Strict);
+            CreateSessionRequest expectedRequest = new CreateSessionRequest
+            {
+                DatabaseAsDatabaseName = new DatabaseName("[PROJECT]", "[INSTANCE]", "[DATABASE]"),
+            };
             Session expectedResponse = new Session
             {
                 SessionName = new SessionName("[PROJECT]", "[INSTANCE]", "[DATABASE]", "[SESSION]"),
             };
-            // TODO: Add verification of request object
-            mockGrpcClient.Setup(x => x.CreateSession(It.IsAny<CreateSessionRequest>(), It.IsAny<CallOptions>())).Returns(expectedResponse);
+            mockGrpcClient.Setup(x => x.CreateSession(expectedRequest, It.IsAny<CallOptions>()))
+                .Returns(expectedResponse);
             SpannerClient client = new SpannerClientImpl(mockGrpcClient.Object, null);
             DatabaseName database = new DatabaseName("[PROJECT]", "[INSTANCE]", "[DATABASE]");
             Session response = client.CreateSession(database);
-            Assert.Equal(expectedResponse, response);
+            Assert.Same(expectedResponse, response);
             mockGrpcClient.VerifyAll();
         }
 
         [Fact]
-        public void GetSessionTest()
+        public async Task CreateSessionAsync()
         {
-            // TODO: Use a strict mock; need to handle getRerouteToGrpcInterface
-            Mock<Spanner.SpannerClient> mockGrpcClient = new Mock<Spanner.SpannerClient> { DefaultValue = DefaultValue.Mock };
+            Mock<Spanner.SpannerClient> mockGrpcClient = new Mock<Spanner.SpannerClient>(MockBehavior.Strict);
+            CreateSessionRequest expectedRequest = new CreateSessionRequest
+            {
+                DatabaseAsDatabaseName = new DatabaseName("[PROJECT]", "[INSTANCE]", "[DATABASE]"),
+            };
             Session expectedResponse = new Session
             {
                 SessionName = new SessionName("[PROJECT]", "[INSTANCE]", "[DATABASE]", "[SESSION]"),
             };
-            // TODO: Add verification of request object
-            mockGrpcClient.Setup(x => x.GetSession(It.IsAny<GetSessionRequest>(), It.IsAny<CallOptions>())).Returns(expectedResponse);
+            mockGrpcClient.Setup(x => x.CreateSessionAsync(expectedRequest, It.IsAny<CallOptions>()))
+                .Returns(new Grpc.Core.AsyncUnaryCall<Session>(Task.FromResult(expectedResponse), null, null, null, null));
             SpannerClient client = new SpannerClientImpl(mockGrpcClient.Object, null);
-            SessionName name = new SessionName("[PROJECT]", "[INSTANCE]", "[DATABASE]", "[SESSION]");
-            Session response = client.GetSession(name);
-            Assert.Equal(expectedResponse, response);
+            DatabaseName database = new DatabaseName("[PROJECT]", "[INSTANCE]", "[DATABASE]");
+            Session response = await client.CreateSessionAsync(database);
+            Assert.Same(expectedResponse, response);
             mockGrpcClient.VerifyAll();
         }
 
         [Fact]
-        public void DeleteSessionTest()
+        public void CreateSession2()
         {
-            // TODO: Use a strict mock; need to handle getRerouteToGrpcInterface
-            Mock<Spanner.SpannerClient> mockGrpcClient = new Mock<Spanner.SpannerClient> { DefaultValue = DefaultValue.Mock };
+            Mock<Spanner.SpannerClient> mockGrpcClient = new Mock<Spanner.SpannerClient>(MockBehavior.Strict);
+            CreateSessionRequest request = new CreateSessionRequest
+            {
+                DatabaseAsDatabaseName = new DatabaseName("[PROJECT]", "[INSTANCE]", "[DATABASE]"),
+            };
+            Session expectedResponse = new Session
+            {
+                SessionName = new SessionName("[PROJECT]", "[INSTANCE]", "[DATABASE]", "[SESSION]"),
+            };
+            mockGrpcClient.Setup(x => x.CreateSession(request, It.IsAny<CallOptions>()))
+                .Returns(expectedResponse);
+            SpannerClient client = new SpannerClientImpl(mockGrpcClient.Object, null);
+            Session response = client.CreateSession(request);
+            Assert.Same(expectedResponse, response);
+            mockGrpcClient.VerifyAll();
+        }
+
+        [Fact]
+        public async Task CreateSessionAsync2()
+        {
+            Mock<Spanner.SpannerClient> mockGrpcClient = new Mock<Spanner.SpannerClient>(MockBehavior.Strict);
+            CreateSessionRequest request = new CreateSessionRequest
+            {
+                DatabaseAsDatabaseName = new DatabaseName("[PROJECT]", "[INSTANCE]", "[DATABASE]"),
+            };
+            Session expectedResponse = new Session
+            {
+                SessionName = new SessionName("[PROJECT]", "[INSTANCE]", "[DATABASE]", "[SESSION]"),
+            };
+            mockGrpcClient.Setup(x => x.CreateSessionAsync(request, It.IsAny<CallOptions>()))
+                .Returns(new Grpc.Core.AsyncUnaryCall<Session>(Task.FromResult(expectedResponse), null, null, null, null));
+            SpannerClient client = new SpannerClientImpl(mockGrpcClient.Object, null);
+            Session response = await client.CreateSessionAsync(request);
+            Assert.Same(expectedResponse, response);
+            mockGrpcClient.VerifyAll();
+        }
+
+        [Fact]
+        public void GetSession()
+        {
+            Mock<Spanner.SpannerClient> mockGrpcClient = new Mock<Spanner.SpannerClient>(MockBehavior.Strict);
+            GetSessionRequest expectedRequest = new GetSessionRequest
+            {
+                SessionName = new SessionName("[PROJECT]", "[INSTANCE]", "[DATABASE]", "[SESSION]"),
+            };
+            Session expectedResponse = new Session
+            {
+                SessionName = new SessionName("[PROJECT]", "[INSTANCE]", "[DATABASE]", "[SESSION]"),
+            };
+            mockGrpcClient.Setup(x => x.GetSession(expectedRequest, It.IsAny<CallOptions>()))
+                .Returns(expectedResponse);
+            SpannerClient client = new SpannerClientImpl(mockGrpcClient.Object, null);
+            SessionName name = new SessionName("[PROJECT]", "[INSTANCE]", "[DATABASE]", "[SESSION]");
+            Session response = client.GetSession(name);
+            Assert.Same(expectedResponse, response);
+            mockGrpcClient.VerifyAll();
+        }
+
+        [Fact]
+        public async Task GetSessionAsync()
+        {
+            Mock<Spanner.SpannerClient> mockGrpcClient = new Mock<Spanner.SpannerClient>(MockBehavior.Strict);
+            GetSessionRequest expectedRequest = new GetSessionRequest
+            {
+                SessionName = new SessionName("[PROJECT]", "[INSTANCE]", "[DATABASE]", "[SESSION]"),
+            };
+            Session expectedResponse = new Session
+            {
+                SessionName = new SessionName("[PROJECT]", "[INSTANCE]", "[DATABASE]", "[SESSION]"),
+            };
+            mockGrpcClient.Setup(x => x.GetSessionAsync(expectedRequest, It.IsAny<CallOptions>()))
+                .Returns(new Grpc.Core.AsyncUnaryCall<Session>(Task.FromResult(expectedResponse), null, null, null, null));
+            SpannerClient client = new SpannerClientImpl(mockGrpcClient.Object, null);
+            SessionName name = new SessionName("[PROJECT]", "[INSTANCE]", "[DATABASE]", "[SESSION]");
+            Session response = await client.GetSessionAsync(name);
+            Assert.Same(expectedResponse, response);
+            mockGrpcClient.VerifyAll();
+        }
+
+        [Fact]
+        public void GetSession2()
+        {
+            Mock<Spanner.SpannerClient> mockGrpcClient = new Mock<Spanner.SpannerClient>(MockBehavior.Strict);
+            GetSessionRequest request = new GetSessionRequest
+            {
+                SessionName = new SessionName("[PROJECT]", "[INSTANCE]", "[DATABASE]", "[SESSION]"),
+            };
+            Session expectedResponse = new Session
+            {
+                SessionName = new SessionName("[PROJECT]", "[INSTANCE]", "[DATABASE]", "[SESSION]"),
+            };
+            mockGrpcClient.Setup(x => x.GetSession(request, It.IsAny<CallOptions>()))
+                .Returns(expectedResponse);
+            SpannerClient client = new SpannerClientImpl(mockGrpcClient.Object, null);
+            Session response = client.GetSession(request);
+            Assert.Same(expectedResponse, response);
+            mockGrpcClient.VerifyAll();
+        }
+
+        [Fact]
+        public async Task GetSessionAsync2()
+        {
+            Mock<Spanner.SpannerClient> mockGrpcClient = new Mock<Spanner.SpannerClient>(MockBehavior.Strict);
+            GetSessionRequest request = new GetSessionRequest
+            {
+                SessionName = new SessionName("[PROJECT]", "[INSTANCE]", "[DATABASE]", "[SESSION]"),
+            };
+            Session expectedResponse = new Session
+            {
+                SessionName = new SessionName("[PROJECT]", "[INSTANCE]", "[DATABASE]", "[SESSION]"),
+            };
+            mockGrpcClient.Setup(x => x.GetSessionAsync(request, It.IsAny<CallOptions>()))
+                .Returns(new Grpc.Core.AsyncUnaryCall<Session>(Task.FromResult(expectedResponse), null, null, null, null));
+            SpannerClient client = new SpannerClientImpl(mockGrpcClient.Object, null);
+            Session response = await client.GetSessionAsync(request);
+            Assert.Same(expectedResponse, response);
+            mockGrpcClient.VerifyAll();
+        }
+
+        [Fact]
+        public void DeleteSession()
+        {
+            Mock<Spanner.SpannerClient> mockGrpcClient = new Mock<Spanner.SpannerClient>(MockBehavior.Strict);
+            DeleteSessionRequest expectedRequest = new DeleteSessionRequest
+            {
+                SessionName = new SessionName("[PROJECT]", "[INSTANCE]", "[DATABASE]", "[SESSION]"),
+            };
             Empty expectedResponse = new Empty();
-            // TODO: Add verification of request object
-            mockGrpcClient.Setup(x => x.DeleteSession(It.IsAny<DeleteSessionRequest>(), It.IsAny<CallOptions>())).Returns(expectedResponse);
+            mockGrpcClient.Setup(x => x.DeleteSession(expectedRequest, It.IsAny<CallOptions>()))
+                .Returns(expectedResponse);
             SpannerClient client = new SpannerClientImpl(mockGrpcClient.Object, null);
             SessionName name = new SessionName("[PROJECT]", "[INSTANCE]", "[DATABASE]", "[SESSION]");
             client.DeleteSession(name);
@@ -84,70 +215,335 @@ namespace Google.Cloud.Spanner.V1.UnitTests
         }
 
         [Fact]
-        public void BeginTransactionTest()
+        public async Task DeleteSessionAsync()
         {
-            // TODO: Use a strict mock; need to handle getRerouteToGrpcInterface
-            Mock<Spanner.SpannerClient> mockGrpcClient = new Mock<Spanner.SpannerClient> { DefaultValue = DefaultValue.Mock };
-            Transaction expectedResponse = new Transaction
+            Mock<Spanner.SpannerClient> mockGrpcClient = new Mock<Spanner.SpannerClient>(MockBehavior.Strict);
+            DeleteSessionRequest expectedRequest = new DeleteSessionRequest
             {
-                Id = ByteString.CopyFromUtf8("27"),
+                SessionName = new SessionName("[PROJECT]", "[INSTANCE]", "[DATABASE]", "[SESSION]"),
             };
-            // TODO: Add verification of request object
-            mockGrpcClient.Setup(x => x.BeginTransaction(It.IsAny<BeginTransactionRequest>(), It.IsAny<CallOptions>())).Returns(expectedResponse);
+            Empty expectedResponse = new Empty();
+            mockGrpcClient.Setup(x => x.DeleteSessionAsync(expectedRequest, It.IsAny<CallOptions>()))
+                .Returns(new Grpc.Core.AsyncUnaryCall<Empty>(Task.FromResult(expectedResponse), null, null, null, null));
             SpannerClient client = new SpannerClientImpl(mockGrpcClient.Object, null);
-            SessionName session = new SessionName("[PROJECT]", "[INSTANCE]", "[DATABASE]", "[SESSION]");
-            TransactionOptions options = new TransactionOptions();
-            Transaction response = client.BeginTransaction(session, options);
-            Assert.Equal(expectedResponse, response);
+            SessionName name = new SessionName("[PROJECT]", "[INSTANCE]", "[DATABASE]", "[SESSION]");
+            await client.DeleteSessionAsync(name);
             mockGrpcClient.VerifyAll();
         }
 
         [Fact]
-        public void CommitTest()
+        public void DeleteSession2()
         {
-            // TODO: Use a strict mock; need to handle getRerouteToGrpcInterface
-            Mock<Spanner.SpannerClient> mockGrpcClient = new Mock<Spanner.SpannerClient> { DefaultValue = DefaultValue.Mock };
+            Mock<Spanner.SpannerClient> mockGrpcClient = new Mock<Spanner.SpannerClient>(MockBehavior.Strict);
+            DeleteSessionRequest request = new DeleteSessionRequest
+            {
+                SessionName = new SessionName("[PROJECT]", "[INSTANCE]", "[DATABASE]", "[SESSION]"),
+            };
+            Empty expectedResponse = new Empty();
+            mockGrpcClient.Setup(x => x.DeleteSession(request, It.IsAny<CallOptions>()))
+                .Returns(expectedResponse);
+            SpannerClient client = new SpannerClientImpl(mockGrpcClient.Object, null);
+            client.DeleteSession(request);
+            mockGrpcClient.VerifyAll();
+        }
+
+        [Fact]
+        public async Task DeleteSessionAsync2()
+        {
+            Mock<Spanner.SpannerClient> mockGrpcClient = new Mock<Spanner.SpannerClient>(MockBehavior.Strict);
+            DeleteSessionRequest request = new DeleteSessionRequest
+            {
+                SessionName = new SessionName("[PROJECT]", "[INSTANCE]", "[DATABASE]", "[SESSION]"),
+            };
+            Empty expectedResponse = new Empty();
+            mockGrpcClient.Setup(x => x.DeleteSessionAsync(request, It.IsAny<CallOptions>()))
+                .Returns(new Grpc.Core.AsyncUnaryCall<Empty>(Task.FromResult(expectedResponse), null, null, null, null));
+            SpannerClient client = new SpannerClientImpl(mockGrpcClient.Object, null);
+            await client.DeleteSessionAsync(request);
+            mockGrpcClient.VerifyAll();
+        }
+
+        [Fact]
+        public void BeginTransaction()
+        {
+            Mock<Spanner.SpannerClient> mockGrpcClient = new Mock<Spanner.SpannerClient>(MockBehavior.Strict);
+            BeginTransactionRequest expectedRequest = new BeginTransactionRequest
+            {
+                SessionAsSessionName = new SessionName("[PROJECT]", "[INSTANCE]", "[DATABASE]", "[SESSION]"),
+                Options = new TransactionOptions(),
+            };
+            Transaction expectedResponse = new Transaction
+            {
+                Id = ByteString.CopyFromUtf8("27"),
+            };
+            mockGrpcClient.Setup(x => x.BeginTransaction(expectedRequest, It.IsAny<CallOptions>()))
+                .Returns(expectedResponse);
+            SpannerClient client = new SpannerClientImpl(mockGrpcClient.Object, null);
+            SessionName session = new SessionName("[PROJECT]", "[INSTANCE]", "[DATABASE]", "[SESSION]");
+            TransactionOptions options = new TransactionOptions();
+            Transaction response = client.BeginTransaction(session, options);
+            Assert.Same(expectedResponse, response);
+            mockGrpcClient.VerifyAll();
+        }
+
+        [Fact]
+        public async Task BeginTransactionAsync()
+        {
+            Mock<Spanner.SpannerClient> mockGrpcClient = new Mock<Spanner.SpannerClient>(MockBehavior.Strict);
+            BeginTransactionRequest expectedRequest = new BeginTransactionRequest
+            {
+                SessionAsSessionName = new SessionName("[PROJECT]", "[INSTANCE]", "[DATABASE]", "[SESSION]"),
+                Options = new TransactionOptions(),
+            };
+            Transaction expectedResponse = new Transaction
+            {
+                Id = ByteString.CopyFromUtf8("27"),
+            };
+            mockGrpcClient.Setup(x => x.BeginTransactionAsync(expectedRequest, It.IsAny<CallOptions>()))
+                .Returns(new Grpc.Core.AsyncUnaryCall<Transaction>(Task.FromResult(expectedResponse), null, null, null, null));
+            SpannerClient client = new SpannerClientImpl(mockGrpcClient.Object, null);
+            SessionName session = new SessionName("[PROJECT]", "[INSTANCE]", "[DATABASE]", "[SESSION]");
+            TransactionOptions options = new TransactionOptions();
+            Transaction response = await client.BeginTransactionAsync(session, options);
+            Assert.Same(expectedResponse, response);
+            mockGrpcClient.VerifyAll();
+        }
+
+        [Fact]
+        public void BeginTransaction2()
+        {
+            Mock<Spanner.SpannerClient> mockGrpcClient = new Mock<Spanner.SpannerClient>(MockBehavior.Strict);
+            BeginTransactionRequest request = new BeginTransactionRequest
+            {
+                SessionAsSessionName = new SessionName("[PROJECT]", "[INSTANCE]", "[DATABASE]", "[SESSION]"),
+                Options = new TransactionOptions(),
+            };
+            Transaction expectedResponse = new Transaction
+            {
+                Id = ByteString.CopyFromUtf8("27"),
+            };
+            mockGrpcClient.Setup(x => x.BeginTransaction(request, It.IsAny<CallOptions>()))
+                .Returns(expectedResponse);
+            SpannerClient client = new SpannerClientImpl(mockGrpcClient.Object, null);
+            Transaction response = client.BeginTransaction(request);
+            Assert.Same(expectedResponse, response);
+            mockGrpcClient.VerifyAll();
+        }
+
+        [Fact]
+        public async Task BeginTransactionAsync2()
+        {
+            Mock<Spanner.SpannerClient> mockGrpcClient = new Mock<Spanner.SpannerClient>(MockBehavior.Strict);
+            BeginTransactionRequest request = new BeginTransactionRequest
+            {
+                SessionAsSessionName = new SessionName("[PROJECT]", "[INSTANCE]", "[DATABASE]", "[SESSION]"),
+                Options = new TransactionOptions(),
+            };
+            Transaction expectedResponse = new Transaction
+            {
+                Id = ByteString.CopyFromUtf8("27"),
+            };
+            mockGrpcClient.Setup(x => x.BeginTransactionAsync(request, It.IsAny<CallOptions>()))
+                .Returns(new Grpc.Core.AsyncUnaryCall<Transaction>(Task.FromResult(expectedResponse), null, null, null, null));
+            SpannerClient client = new SpannerClientImpl(mockGrpcClient.Object, null);
+            Transaction response = await client.BeginTransactionAsync(request);
+            Assert.Same(expectedResponse, response);
+            mockGrpcClient.VerifyAll();
+        }
+
+        [Fact]
+        public void Commit()
+        {
+            Mock<Spanner.SpannerClient> mockGrpcClient = new Mock<Spanner.SpannerClient>(MockBehavior.Strict);
+            CommitRequest expectedRequest = new CommitRequest
+            {
+                SessionAsSessionName = new SessionName("[PROJECT]", "[INSTANCE]", "[DATABASE]", "[SESSION]"),
+                TransactionId = ByteString.CopyFromUtf8("28"),
+                Mutations = { },
+            };
             CommitResponse expectedResponse = new CommitResponse();
-            // TODO: Add verification of request object
-            mockGrpcClient.Setup(x => x.Commit(It.IsAny<CommitRequest>(), It.IsAny<CallOptions>())).Returns(expectedResponse);
+            mockGrpcClient.Setup(x => x.Commit(expectedRequest, It.IsAny<CallOptions>()))
+                .Returns(expectedResponse);
             SpannerClient client = new SpannerClientImpl(mockGrpcClient.Object, null);
             SessionName session = new SessionName("[PROJECT]", "[INSTANCE]", "[DATABASE]", "[SESSION]");
             ByteString transactionId = ByteString.CopyFromUtf8("28");
             IEnumerable<Mutation> mutations = new List<Mutation>();
             CommitResponse response = client.Commit(session, transactionId, mutations);
-            Assert.Equal(expectedResponse, response);
+            Assert.Same(expectedResponse, response);
             mockGrpcClient.VerifyAll();
         }
 
         [Fact]
-        public void CommitTest2()
+        public async Task CommitAsync()
         {
-            // TODO: Use a strict mock; need to handle getRerouteToGrpcInterface
-            Mock<Spanner.SpannerClient> mockGrpcClient = new Mock<Spanner.SpannerClient> { DefaultValue = DefaultValue.Mock };
+            Mock<Spanner.SpannerClient> mockGrpcClient = new Mock<Spanner.SpannerClient>(MockBehavior.Strict);
+            CommitRequest expectedRequest = new CommitRequest
+            {
+                SessionAsSessionName = new SessionName("[PROJECT]", "[INSTANCE]", "[DATABASE]", "[SESSION]"),
+                TransactionId = ByteString.CopyFromUtf8("28"),
+                Mutations = { },
+            };
             CommitResponse expectedResponse = new CommitResponse();
-            // TODO: Add verification of request object
-            mockGrpcClient.Setup(x => x.Commit(It.IsAny<CommitRequest>(), It.IsAny<CallOptions>())).Returns(expectedResponse);
+            mockGrpcClient.Setup(x => x.CommitAsync(expectedRequest, It.IsAny<CallOptions>()))
+                .Returns(new Grpc.Core.AsyncUnaryCall<CommitResponse>(Task.FromResult(expectedResponse), null, null, null, null));
+            SpannerClient client = new SpannerClientImpl(mockGrpcClient.Object, null);
+            SessionName session = new SessionName("[PROJECT]", "[INSTANCE]", "[DATABASE]", "[SESSION]");
+            ByteString transactionId = ByteString.CopyFromUtf8("28");
+            IEnumerable<Mutation> mutations = new List<Mutation>();
+            CommitResponse response = await client.CommitAsync(session, transactionId, mutations);
+            Assert.Same(expectedResponse, response);
+            mockGrpcClient.VerifyAll();
+        }
+
+        [Fact]
+        public void Commit2()
+        {
+            Mock<Spanner.SpannerClient> mockGrpcClient = new Mock<Spanner.SpannerClient>(MockBehavior.Strict);
+            CommitRequest expectedRequest = new CommitRequest
+            {
+                SessionAsSessionName = new SessionName("[PROJECT]", "[INSTANCE]", "[DATABASE]", "[SESSION]"),
+                SingleUseTransaction = new TransactionOptions(),
+                Mutations = { },
+            };
+            CommitResponse expectedResponse = new CommitResponse();
+            mockGrpcClient.Setup(x => x.Commit(expectedRequest, It.IsAny<CallOptions>()))
+                .Returns(expectedResponse);
             SpannerClient client = new SpannerClientImpl(mockGrpcClient.Object, null);
             SessionName session = new SessionName("[PROJECT]", "[INSTANCE]", "[DATABASE]", "[SESSION]");
             TransactionOptions singleUseTransaction = new TransactionOptions();
             IEnumerable<Mutation> mutations = new List<Mutation>();
             CommitResponse response = client.Commit(session, singleUseTransaction, mutations);
-            Assert.Equal(expectedResponse, response);
+            Assert.Same(expectedResponse, response);
             mockGrpcClient.VerifyAll();
         }
 
         [Fact]
-        public void RollbackTest()
+        public async Task CommitAsync2()
         {
-            // TODO: Use a strict mock; need to handle getRerouteToGrpcInterface
-            Mock<Spanner.SpannerClient> mockGrpcClient = new Mock<Spanner.SpannerClient> { DefaultValue = DefaultValue.Mock };
+            Mock<Spanner.SpannerClient> mockGrpcClient = new Mock<Spanner.SpannerClient>(MockBehavior.Strict);
+            CommitRequest expectedRequest = new CommitRequest
+            {
+                SessionAsSessionName = new SessionName("[PROJECT]", "[INSTANCE]", "[DATABASE]", "[SESSION]"),
+                SingleUseTransaction = new TransactionOptions(),
+                Mutations = { },
+            };
+            CommitResponse expectedResponse = new CommitResponse();
+            mockGrpcClient.Setup(x => x.CommitAsync(expectedRequest, It.IsAny<CallOptions>()))
+                .Returns(new Grpc.Core.AsyncUnaryCall<CommitResponse>(Task.FromResult(expectedResponse), null, null, null, null));
+            SpannerClient client = new SpannerClientImpl(mockGrpcClient.Object, null);
+            SessionName session = new SessionName("[PROJECT]", "[INSTANCE]", "[DATABASE]", "[SESSION]");
+            TransactionOptions singleUseTransaction = new TransactionOptions();
+            IEnumerable<Mutation> mutations = new List<Mutation>();
+            CommitResponse response = await client.CommitAsync(session, singleUseTransaction, mutations);
+            Assert.Same(expectedResponse, response);
+            mockGrpcClient.VerifyAll();
+        }
+
+        [Fact]
+        public void Commit3()
+        {
+            Mock<Spanner.SpannerClient> mockGrpcClient = new Mock<Spanner.SpannerClient>(MockBehavior.Strict);
+            CommitRequest request = new CommitRequest
+            {
+                SessionAsSessionName = new SessionName("[PROJECT]", "[INSTANCE]", "[DATABASE]", "[SESSION]"),
+                Mutations = { },
+            };
+            CommitResponse expectedResponse = new CommitResponse();
+            mockGrpcClient.Setup(x => x.Commit(request, It.IsAny<CallOptions>()))
+                .Returns(expectedResponse);
+            SpannerClient client = new SpannerClientImpl(mockGrpcClient.Object, null);
+            CommitResponse response = client.Commit(request);
+            Assert.Same(expectedResponse, response);
+            mockGrpcClient.VerifyAll();
+        }
+
+        [Fact]
+        public async Task CommitAsync3()
+        {
+            Mock<Spanner.SpannerClient> mockGrpcClient = new Mock<Spanner.SpannerClient>(MockBehavior.Strict);
+            CommitRequest request = new CommitRequest
+            {
+                SessionAsSessionName = new SessionName("[PROJECT]", "[INSTANCE]", "[DATABASE]", "[SESSION]"),
+                Mutations = { },
+            };
+            CommitResponse expectedResponse = new CommitResponse();
+            mockGrpcClient.Setup(x => x.CommitAsync(request, It.IsAny<CallOptions>()))
+                .Returns(new Grpc.Core.AsyncUnaryCall<CommitResponse>(Task.FromResult(expectedResponse), null, null, null, null));
+            SpannerClient client = new SpannerClientImpl(mockGrpcClient.Object, null);
+            CommitResponse response = await client.CommitAsync(request);
+            Assert.Same(expectedResponse, response);
+            mockGrpcClient.VerifyAll();
+        }
+
+        [Fact]
+        public void Rollback()
+        {
+            Mock<Spanner.SpannerClient> mockGrpcClient = new Mock<Spanner.SpannerClient>(MockBehavior.Strict);
+            RollbackRequest expectedRequest = new RollbackRequest
+            {
+                SessionAsSessionName = new SessionName("[PROJECT]", "[INSTANCE]", "[DATABASE]", "[SESSION]"),
+                TransactionId = ByteString.CopyFromUtf8("28"),
+            };
             Empty expectedResponse = new Empty();
-            // TODO: Add verification of request object
-            mockGrpcClient.Setup(x => x.Rollback(It.IsAny<RollbackRequest>(), It.IsAny<CallOptions>())).Returns(expectedResponse);
+            mockGrpcClient.Setup(x => x.Rollback(expectedRequest, It.IsAny<CallOptions>()))
+                .Returns(expectedResponse);
             SpannerClient client = new SpannerClientImpl(mockGrpcClient.Object, null);
             SessionName session = new SessionName("[PROJECT]", "[INSTANCE]", "[DATABASE]", "[SESSION]");
             ByteString transactionId = ByteString.CopyFromUtf8("28");
             client.Rollback(session, transactionId);
+            mockGrpcClient.VerifyAll();
+        }
+
+        [Fact]
+        public async Task RollbackAsync()
+        {
+            Mock<Spanner.SpannerClient> mockGrpcClient = new Mock<Spanner.SpannerClient>(MockBehavior.Strict);
+            RollbackRequest expectedRequest = new RollbackRequest
+            {
+                SessionAsSessionName = new SessionName("[PROJECT]", "[INSTANCE]", "[DATABASE]", "[SESSION]"),
+                TransactionId = ByteString.CopyFromUtf8("28"),
+            };
+            Empty expectedResponse = new Empty();
+            mockGrpcClient.Setup(x => x.RollbackAsync(expectedRequest, It.IsAny<CallOptions>()))
+                .Returns(new Grpc.Core.AsyncUnaryCall<Empty>(Task.FromResult(expectedResponse), null, null, null, null));
+            SpannerClient client = new SpannerClientImpl(mockGrpcClient.Object, null);
+            SessionName session = new SessionName("[PROJECT]", "[INSTANCE]", "[DATABASE]", "[SESSION]");
+            ByteString transactionId = ByteString.CopyFromUtf8("28");
+            await client.RollbackAsync(session, transactionId);
+            mockGrpcClient.VerifyAll();
+        }
+
+        [Fact]
+        public void Rollback2()
+        {
+            Mock<Spanner.SpannerClient> mockGrpcClient = new Mock<Spanner.SpannerClient>(MockBehavior.Strict);
+            RollbackRequest request = new RollbackRequest
+            {
+                SessionAsSessionName = new SessionName("[PROJECT]", "[INSTANCE]", "[DATABASE]", "[SESSION]"),
+                TransactionId = ByteString.CopyFromUtf8("28"),
+            };
+            Empty expectedResponse = new Empty();
+            mockGrpcClient.Setup(x => x.Rollback(request, It.IsAny<CallOptions>()))
+                .Returns(expectedResponse);
+            SpannerClient client = new SpannerClientImpl(mockGrpcClient.Object, null);
+            client.Rollback(request);
+            mockGrpcClient.VerifyAll();
+        }
+
+        [Fact]
+        public async Task RollbackAsync2()
+        {
+            Mock<Spanner.SpannerClient> mockGrpcClient = new Mock<Spanner.SpannerClient>(MockBehavior.Strict);
+            RollbackRequest request = new RollbackRequest
+            {
+                SessionAsSessionName = new SessionName("[PROJECT]", "[INSTANCE]", "[DATABASE]", "[SESSION]"),
+                TransactionId = ByteString.CopyFromUtf8("28"),
+            };
+            Empty expectedResponse = new Empty();
+            mockGrpcClient.Setup(x => x.RollbackAsync(request, It.IsAny<CallOptions>()))
+                .Returns(new Grpc.Core.AsyncUnaryCall<Empty>(Task.FromResult(expectedResponse), null, null, null, null));
+            SpannerClient client = new SpannerClientImpl(mockGrpcClient.Object, null);
+            await client.RollbackAsync(request);
             mockGrpcClient.VerifyAll();
         }
 

@@ -16,6 +16,7 @@
 
 using Google.Api.Gax;
 using Google.Api.Gax.Grpc;
+using Google.Cloud.Iam.V1;
 using Google.Protobuf;
 using Google.Protobuf.WellKnownTypes;
 using Grpc.Core;
@@ -28,42 +29,125 @@ using System.Threading;
 using System.Threading.Tasks;
 using Xunit;
 
-namespace Google.Cloud.PubSub.V1.UnitTests
+namespace Google.Cloud.PubSub.V1.Tests
 {
     /// <summary>Generated unit tests</summary>
     public class GeneratedPublisherServiceApiClientTest
     {
         [Fact]
-        public void CreateTopicTest()
+        public void CreateTopic()
         {
-            // TODO: Use a strict mock; need to handle getRerouteToGrpcInterface
-            Mock<Publisher.PublisherClient> mockGrpcClient = new Mock<Publisher.PublisherClient> { DefaultValue = DefaultValue.Mock };
+            Mock<Publisher.PublisherClient> mockGrpcClient = new Mock<Publisher.PublisherClient>(MockBehavior.Strict);
+            mockGrpcClient.Setup(x => x.CreateIAMPolicyClient())
+                .Returns(new Mock<IAMPolicy.IAMPolicyClient>().Object);
+            Topic expectedRequest = new Topic
+            {
+                TopicName = new TopicName("[PROJECT]", "[TOPIC]"),
+            };
             Topic expectedResponse = new Topic
             {
                 TopicName = new TopicName("[PROJECT]", "[TOPIC]"),
             };
-            // TODO: Add verification of request object
-            mockGrpcClient.Setup(x => x.CreateTopic(It.IsAny<Topic>(), It.IsAny<CallOptions>())).Returns(expectedResponse);
+            mockGrpcClient.Setup(x => x.CreateTopic(expectedRequest, It.IsAny<CallOptions>()))
+                .Returns(expectedResponse);
             PublisherServiceApiClient client = new PublisherServiceApiClientImpl(mockGrpcClient.Object, null);
             TopicName name = new TopicName("[PROJECT]", "[TOPIC]");
             Topic response = client.CreateTopic(name);
-            Assert.Equal(expectedResponse, response);
+            Assert.Same(expectedResponse, response);
             mockGrpcClient.VerifyAll();
         }
 
         [Fact]
-        public void PublishTest()
+        public async Task CreateTopicAsync()
         {
-            // TODO: Use a strict mock; need to handle getRerouteToGrpcInterface
-            Mock<Publisher.PublisherClient> mockGrpcClient = new Mock<Publisher.PublisherClient> { DefaultValue = DefaultValue.Mock };
+            Mock<Publisher.PublisherClient> mockGrpcClient = new Mock<Publisher.PublisherClient>(MockBehavior.Strict);
+            mockGrpcClient.Setup(x => x.CreateIAMPolicyClient())
+                .Returns(new Mock<IAMPolicy.IAMPolicyClient>().Object);
+            Topic expectedRequest = new Topic
+            {
+                TopicName = new TopicName("[PROJECT]", "[TOPIC]"),
+            };
+            Topic expectedResponse = new Topic
+            {
+                TopicName = new TopicName("[PROJECT]", "[TOPIC]"),
+            };
+            mockGrpcClient.Setup(x => x.CreateTopicAsync(expectedRequest, It.IsAny<CallOptions>()))
+                .Returns(new Grpc.Core.AsyncUnaryCall<Topic>(Task.FromResult(expectedResponse), null, null, null, null));
+            PublisherServiceApiClient client = new PublisherServiceApiClientImpl(mockGrpcClient.Object, null);
+            TopicName name = new TopicName("[PROJECT]", "[TOPIC]");
+            Topic response = await client.CreateTopicAsync(name);
+            Assert.Same(expectedResponse, response);
+            mockGrpcClient.VerifyAll();
+        }
+
+        [Fact]
+        public void CreateTopic2()
+        {
+            Mock<Publisher.PublisherClient> mockGrpcClient = new Mock<Publisher.PublisherClient>(MockBehavior.Strict);
+            mockGrpcClient.Setup(x => x.CreateIAMPolicyClient())
+                .Returns(new Mock<IAMPolicy.IAMPolicyClient>().Object);
+            Topic request = new Topic
+            {
+                TopicName = new TopicName("[PROJECT]", "[TOPIC]"),
+            };
+            Topic expectedResponse = new Topic
+            {
+                TopicName = new TopicName("[PROJECT]", "[TOPIC]"),
+            };
+            mockGrpcClient.Setup(x => x.CreateTopic(request, It.IsAny<CallOptions>()))
+                .Returns(expectedResponse);
+            PublisherServiceApiClient client = new PublisherServiceApiClientImpl(mockGrpcClient.Object, null);
+            Topic response = client.CreateTopic(request);
+            Assert.Same(expectedResponse, response);
+            mockGrpcClient.VerifyAll();
+        }
+
+        [Fact]
+        public async Task CreateTopicAsync2()
+        {
+            Mock<Publisher.PublisherClient> mockGrpcClient = new Mock<Publisher.PublisherClient>(MockBehavior.Strict);
+            mockGrpcClient.Setup(x => x.CreateIAMPolicyClient())
+                .Returns(new Mock<IAMPolicy.IAMPolicyClient>().Object);
+            Topic request = new Topic
+            {
+                TopicName = new TopicName("[PROJECT]", "[TOPIC]"),
+            };
+            Topic expectedResponse = new Topic
+            {
+                TopicName = new TopicName("[PROJECT]", "[TOPIC]"),
+            };
+            mockGrpcClient.Setup(x => x.CreateTopicAsync(request, It.IsAny<CallOptions>()))
+                .Returns(new Grpc.Core.AsyncUnaryCall<Topic>(Task.FromResult(expectedResponse), null, null, null, null));
+            PublisherServiceApiClient client = new PublisherServiceApiClientImpl(mockGrpcClient.Object, null);
+            Topic response = await client.CreateTopicAsync(request);
+            Assert.Same(expectedResponse, response);
+            mockGrpcClient.VerifyAll();
+        }
+
+        [Fact]
+        public void Publish()
+        {
+            Mock<Publisher.PublisherClient> mockGrpcClient = new Mock<Publisher.PublisherClient>(MockBehavior.Strict);
+            mockGrpcClient.Setup(x => x.CreateIAMPolicyClient())
+                .Returns(new Mock<IAMPolicy.IAMPolicyClient>().Object);
+            PublishRequest expectedRequest = new PublishRequest
+            {
+                TopicAsTopicName = new TopicName("[PROJECT]", "[TOPIC]"),
+                Messages = {
+                               new PubsubMessage
+                               {
+                                   Data = ByteString.CopyFromUtf8("-86"),
+                               },
+                           },
+            };
             PublishResponse expectedResponse = new PublishResponse
             {
                 MessageIds = {
                                  "messageIdsElement-744837059",
                              },
             };
-            // TODO: Add verification of request object
-            mockGrpcClient.Setup(x => x.Publish(It.IsAny<PublishRequest>(), It.IsAny<CallOptions>())).Returns(expectedResponse);
+            mockGrpcClient.Setup(x => x.Publish(expectedRequest, It.IsAny<CallOptions>()))
+                .Returns(expectedResponse);
             PublisherServiceApiClient client = new PublisherServiceApiClientImpl(mockGrpcClient.Object, null);
             TopicName topic = new TopicName("[PROJECT]", "[TOPIC]");
             IEnumerable<PubsubMessage> messages = new[]
@@ -74,39 +158,269 @@ namespace Google.Cloud.PubSub.V1.UnitTests
                 },
             };
             PublishResponse response = client.Publish(topic, messages);
-            Assert.Equal(expectedResponse, response);
+            Assert.Same(expectedResponse, response);
             mockGrpcClient.VerifyAll();
         }
 
         [Fact]
-        public void GetTopicTest()
+        public async Task PublishAsync()
         {
-            // TODO: Use a strict mock; need to handle getRerouteToGrpcInterface
-            Mock<Publisher.PublisherClient> mockGrpcClient = new Mock<Publisher.PublisherClient> { DefaultValue = DefaultValue.Mock };
+            Mock<Publisher.PublisherClient> mockGrpcClient = new Mock<Publisher.PublisherClient>(MockBehavior.Strict);
+            mockGrpcClient.Setup(x => x.CreateIAMPolicyClient())
+                .Returns(new Mock<IAMPolicy.IAMPolicyClient>().Object);
+            PublishRequest expectedRequest = new PublishRequest
+            {
+                TopicAsTopicName = new TopicName("[PROJECT]", "[TOPIC]"),
+                Messages = {
+                               new PubsubMessage
+                               {
+                                   Data = ByteString.CopyFromUtf8("-86"),
+                               },
+                           },
+            };
+            PublishResponse expectedResponse = new PublishResponse
+            {
+                MessageIds = {
+                                 "messageIdsElement-744837059",
+                             },
+            };
+            mockGrpcClient.Setup(x => x.PublishAsync(expectedRequest, It.IsAny<CallOptions>()))
+                .Returns(new Grpc.Core.AsyncUnaryCall<PublishResponse>(Task.FromResult(expectedResponse), null, null, null, null));
+            PublisherServiceApiClient client = new PublisherServiceApiClientImpl(mockGrpcClient.Object, null);
+            TopicName topic = new TopicName("[PROJECT]", "[TOPIC]");
+            IEnumerable<PubsubMessage> messages = new[]
+            {
+                new PubsubMessage
+                {
+                    Data = ByteString.CopyFromUtf8("-86"),
+                },
+            };
+            PublishResponse response = await client.PublishAsync(topic, messages);
+            Assert.Same(expectedResponse, response);
+            mockGrpcClient.VerifyAll();
+        }
+
+        [Fact]
+        public void Publish2()
+        {
+            Mock<Publisher.PublisherClient> mockGrpcClient = new Mock<Publisher.PublisherClient>(MockBehavior.Strict);
+            mockGrpcClient.Setup(x => x.CreateIAMPolicyClient())
+                .Returns(new Mock<IAMPolicy.IAMPolicyClient>().Object);
+            PublishRequest request = new PublishRequest
+            {
+                TopicAsTopicName = new TopicName("[PROJECT]", "[TOPIC]"),
+                Messages = {
+                               new PubsubMessage
+                               {
+                                   Data = ByteString.CopyFromUtf8("-86"),
+                               },
+                           },
+            };
+            PublishResponse expectedResponse = new PublishResponse
+            {
+                MessageIds = {
+                                 "messageIdsElement-744837059",
+                             },
+            };
+            mockGrpcClient.Setup(x => x.Publish(request, It.IsAny<CallOptions>()))
+                .Returns(expectedResponse);
+            PublisherServiceApiClient client = new PublisherServiceApiClientImpl(mockGrpcClient.Object, null);
+            PublishResponse response = client.Publish(request);
+            Assert.Same(expectedResponse, response);
+            mockGrpcClient.VerifyAll();
+        }
+
+        [Fact]
+        public async Task PublishAsync2()
+        {
+            Mock<Publisher.PublisherClient> mockGrpcClient = new Mock<Publisher.PublisherClient>(MockBehavior.Strict);
+            mockGrpcClient.Setup(x => x.CreateIAMPolicyClient())
+                .Returns(new Mock<IAMPolicy.IAMPolicyClient>().Object);
+            PublishRequest request = new PublishRequest
+            {
+                TopicAsTopicName = new TopicName("[PROJECT]", "[TOPIC]"),
+                Messages = {
+                               new PubsubMessage
+                               {
+                                   Data = ByteString.CopyFromUtf8("-86"),
+                               },
+                           },
+            };
+            PublishResponse expectedResponse = new PublishResponse
+            {
+                MessageIds = {
+                                 "messageIdsElement-744837059",
+                             },
+            };
+            mockGrpcClient.Setup(x => x.PublishAsync(request, It.IsAny<CallOptions>()))
+                .Returns(new Grpc.Core.AsyncUnaryCall<PublishResponse>(Task.FromResult(expectedResponse), null, null, null, null));
+            PublisherServiceApiClient client = new PublisherServiceApiClientImpl(mockGrpcClient.Object, null);
+            PublishResponse response = await client.PublishAsync(request);
+            Assert.Same(expectedResponse, response);
+            mockGrpcClient.VerifyAll();
+        }
+
+        [Fact]
+        public void GetTopic()
+        {
+            Mock<Publisher.PublisherClient> mockGrpcClient = new Mock<Publisher.PublisherClient>(MockBehavior.Strict);
+            mockGrpcClient.Setup(x => x.CreateIAMPolicyClient())
+                .Returns(new Mock<IAMPolicy.IAMPolicyClient>().Object);
+            GetTopicRequest expectedRequest = new GetTopicRequest
+            {
+                TopicAsTopicName = new TopicName("[PROJECT]", "[TOPIC]"),
+            };
             Topic expectedResponse = new Topic
             {
                 TopicName = new TopicName("[PROJECT]", "[TOPIC]"),
             };
-            // TODO: Add verification of request object
-            mockGrpcClient.Setup(x => x.GetTopic(It.IsAny<GetTopicRequest>(), It.IsAny<CallOptions>())).Returns(expectedResponse);
+            mockGrpcClient.Setup(x => x.GetTopic(expectedRequest, It.IsAny<CallOptions>()))
+                .Returns(expectedResponse);
             PublisherServiceApiClient client = new PublisherServiceApiClientImpl(mockGrpcClient.Object, null);
             TopicName topic = new TopicName("[PROJECT]", "[TOPIC]");
             Topic response = client.GetTopic(topic);
-            Assert.Equal(expectedResponse, response);
+            Assert.Same(expectedResponse, response);
             mockGrpcClient.VerifyAll();
         }
 
         [Fact]
-        public void DeleteTopicTest()
+        public async Task GetTopicAsync()
         {
-            // TODO: Use a strict mock; need to handle getRerouteToGrpcInterface
-            Mock<Publisher.PublisherClient> mockGrpcClient = new Mock<Publisher.PublisherClient> { DefaultValue = DefaultValue.Mock };
+            Mock<Publisher.PublisherClient> mockGrpcClient = new Mock<Publisher.PublisherClient>(MockBehavior.Strict);
+            mockGrpcClient.Setup(x => x.CreateIAMPolicyClient())
+                .Returns(new Mock<IAMPolicy.IAMPolicyClient>().Object);
+            GetTopicRequest expectedRequest = new GetTopicRequest
+            {
+                TopicAsTopicName = new TopicName("[PROJECT]", "[TOPIC]"),
+            };
+            Topic expectedResponse = new Topic
+            {
+                TopicName = new TopicName("[PROJECT]", "[TOPIC]"),
+            };
+            mockGrpcClient.Setup(x => x.GetTopicAsync(expectedRequest, It.IsAny<CallOptions>()))
+                .Returns(new Grpc.Core.AsyncUnaryCall<Topic>(Task.FromResult(expectedResponse), null, null, null, null));
+            PublisherServiceApiClient client = new PublisherServiceApiClientImpl(mockGrpcClient.Object, null);
+            TopicName topic = new TopicName("[PROJECT]", "[TOPIC]");
+            Topic response = await client.GetTopicAsync(topic);
+            Assert.Same(expectedResponse, response);
+            mockGrpcClient.VerifyAll();
+        }
+
+        [Fact]
+        public void GetTopic2()
+        {
+            Mock<Publisher.PublisherClient> mockGrpcClient = new Mock<Publisher.PublisherClient>(MockBehavior.Strict);
+            mockGrpcClient.Setup(x => x.CreateIAMPolicyClient())
+                .Returns(new Mock<IAMPolicy.IAMPolicyClient>().Object);
+            GetTopicRequest request = new GetTopicRequest
+            {
+                TopicAsTopicName = new TopicName("[PROJECT]", "[TOPIC]"),
+            };
+            Topic expectedResponse = new Topic
+            {
+                TopicName = new TopicName("[PROJECT]", "[TOPIC]"),
+            };
+            mockGrpcClient.Setup(x => x.GetTopic(request, It.IsAny<CallOptions>()))
+                .Returns(expectedResponse);
+            PublisherServiceApiClient client = new PublisherServiceApiClientImpl(mockGrpcClient.Object, null);
+            Topic response = client.GetTopic(request);
+            Assert.Same(expectedResponse, response);
+            mockGrpcClient.VerifyAll();
+        }
+
+        [Fact]
+        public async Task GetTopicAsync2()
+        {
+            Mock<Publisher.PublisherClient> mockGrpcClient = new Mock<Publisher.PublisherClient>(MockBehavior.Strict);
+            mockGrpcClient.Setup(x => x.CreateIAMPolicyClient())
+                .Returns(new Mock<IAMPolicy.IAMPolicyClient>().Object);
+            GetTopicRequest request = new GetTopicRequest
+            {
+                TopicAsTopicName = new TopicName("[PROJECT]", "[TOPIC]"),
+            };
+            Topic expectedResponse = new Topic
+            {
+                TopicName = new TopicName("[PROJECT]", "[TOPIC]"),
+            };
+            mockGrpcClient.Setup(x => x.GetTopicAsync(request, It.IsAny<CallOptions>()))
+                .Returns(new Grpc.Core.AsyncUnaryCall<Topic>(Task.FromResult(expectedResponse), null, null, null, null));
+            PublisherServiceApiClient client = new PublisherServiceApiClientImpl(mockGrpcClient.Object, null);
+            Topic response = await client.GetTopicAsync(request);
+            Assert.Same(expectedResponse, response);
+            mockGrpcClient.VerifyAll();
+        }
+
+        [Fact]
+        public void DeleteTopic()
+        {
+            Mock<Publisher.PublisherClient> mockGrpcClient = new Mock<Publisher.PublisherClient>(MockBehavior.Strict);
+            mockGrpcClient.Setup(x => x.CreateIAMPolicyClient())
+                .Returns(new Mock<IAMPolicy.IAMPolicyClient>().Object);
+            DeleteTopicRequest expectedRequest = new DeleteTopicRequest
+            {
+                TopicAsTopicName = new TopicName("[PROJECT]", "[TOPIC]"),
+            };
             Empty expectedResponse = new Empty();
-            // TODO: Add verification of request object
-            mockGrpcClient.Setup(x => x.DeleteTopic(It.IsAny<DeleteTopicRequest>(), It.IsAny<CallOptions>())).Returns(expectedResponse);
+            mockGrpcClient.Setup(x => x.DeleteTopic(expectedRequest, It.IsAny<CallOptions>()))
+                .Returns(expectedResponse);
             PublisherServiceApiClient client = new PublisherServiceApiClientImpl(mockGrpcClient.Object, null);
             TopicName topic = new TopicName("[PROJECT]", "[TOPIC]");
             client.DeleteTopic(topic);
+            mockGrpcClient.VerifyAll();
+        }
+
+        [Fact]
+        public async Task DeleteTopicAsync()
+        {
+            Mock<Publisher.PublisherClient> mockGrpcClient = new Mock<Publisher.PublisherClient>(MockBehavior.Strict);
+            mockGrpcClient.Setup(x => x.CreateIAMPolicyClient())
+                .Returns(new Mock<IAMPolicy.IAMPolicyClient>().Object);
+            DeleteTopicRequest expectedRequest = new DeleteTopicRequest
+            {
+                TopicAsTopicName = new TopicName("[PROJECT]", "[TOPIC]"),
+            };
+            Empty expectedResponse = new Empty();
+            mockGrpcClient.Setup(x => x.DeleteTopicAsync(expectedRequest, It.IsAny<CallOptions>()))
+                .Returns(new Grpc.Core.AsyncUnaryCall<Empty>(Task.FromResult(expectedResponse), null, null, null, null));
+            PublisherServiceApiClient client = new PublisherServiceApiClientImpl(mockGrpcClient.Object, null);
+            TopicName topic = new TopicName("[PROJECT]", "[TOPIC]");
+            await client.DeleteTopicAsync(topic);
+            mockGrpcClient.VerifyAll();
+        }
+
+        [Fact]
+        public void DeleteTopic2()
+        {
+            Mock<Publisher.PublisherClient> mockGrpcClient = new Mock<Publisher.PublisherClient>(MockBehavior.Strict);
+            mockGrpcClient.Setup(x => x.CreateIAMPolicyClient())
+                .Returns(new Mock<IAMPolicy.IAMPolicyClient>().Object);
+            DeleteTopicRequest request = new DeleteTopicRequest
+            {
+                TopicAsTopicName = new TopicName("[PROJECT]", "[TOPIC]"),
+            };
+            Empty expectedResponse = new Empty();
+            mockGrpcClient.Setup(x => x.DeleteTopic(request, It.IsAny<CallOptions>()))
+                .Returns(expectedResponse);
+            PublisherServiceApiClient client = new PublisherServiceApiClientImpl(mockGrpcClient.Object, null);
+            client.DeleteTopic(request);
+            mockGrpcClient.VerifyAll();
+        }
+
+        [Fact]
+        public async Task DeleteTopicAsync2()
+        {
+            Mock<Publisher.PublisherClient> mockGrpcClient = new Mock<Publisher.PublisherClient>(MockBehavior.Strict);
+            mockGrpcClient.Setup(x => x.CreateIAMPolicyClient())
+                .Returns(new Mock<IAMPolicy.IAMPolicyClient>().Object);
+            DeleteTopicRequest request = new DeleteTopicRequest
+            {
+                TopicAsTopicName = new TopicName("[PROJECT]", "[TOPIC]"),
+            };
+            Empty expectedResponse = new Empty();
+            mockGrpcClient.Setup(x => x.DeleteTopicAsync(request, It.IsAny<CallOptions>()))
+                .Returns(new Grpc.Core.AsyncUnaryCall<Empty>(Task.FromResult(expectedResponse), null, null, null, null));
+            PublisherServiceApiClient client = new PublisherServiceApiClientImpl(mockGrpcClient.Object, null);
+            await client.DeleteTopicAsync(request);
             mockGrpcClient.VerifyAll();
         }
 

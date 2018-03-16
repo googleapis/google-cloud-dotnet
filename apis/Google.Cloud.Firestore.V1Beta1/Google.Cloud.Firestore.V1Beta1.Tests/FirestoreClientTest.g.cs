@@ -28,38 +28,110 @@ using System.Threading;
 using System.Threading.Tasks;
 using Xunit;
 
-namespace Google.Cloud.Firestore.V1Beta1.UnitTests
+namespace Google.Cloud.Firestore.V1Beta1.Tests
 {
     /// <summary>Generated unit tests</summary>
     public class GeneratedFirestoreClientTest
     {
         [Fact]
-        public void UpdateDocumentTest()
+        public void UpdateDocument()
         {
-            // TODO: Use a strict mock; need to handle getRerouteToGrpcInterface
-            Mock<Firestore.FirestoreClient> mockGrpcClient = new Mock<Firestore.FirestoreClient> { DefaultValue = DefaultValue.Mock };
+            Mock<Firestore.FirestoreClient> mockGrpcClient = new Mock<Firestore.FirestoreClient>(MockBehavior.Strict);
+            UpdateDocumentRequest expectedRequest = new UpdateDocumentRequest
+            {
+                Document = new Document(),
+                UpdateMask = new DocumentMask(),
+            };
             Document expectedResponse = new Document
             {
                 Name = "name3373707",
             };
-            // TODO: Add verification of request object
-            mockGrpcClient.Setup(x => x.UpdateDocument(It.IsAny<UpdateDocumentRequest>(), It.IsAny<CallOptions>())).Returns(expectedResponse);
+            mockGrpcClient.Setup(x => x.UpdateDocument(expectedRequest, It.IsAny<CallOptions>()))
+                .Returns(expectedResponse);
             FirestoreClient client = new FirestoreClientImpl(mockGrpcClient.Object, null);
             Document document = new Document();
             DocumentMask updateMask = new DocumentMask();
             Document response = client.UpdateDocument(document, updateMask);
-            Assert.Equal(expectedResponse, response);
+            Assert.Same(expectedResponse, response);
             mockGrpcClient.VerifyAll();
         }
 
         [Fact]
-        public void DeleteDocumentTest()
+        public async Task UpdateDocumentAsync()
         {
-            // TODO: Use a strict mock; need to handle getRerouteToGrpcInterface
-            Mock<Firestore.FirestoreClient> mockGrpcClient = new Mock<Firestore.FirestoreClient> { DefaultValue = DefaultValue.Mock };
+            Mock<Firestore.FirestoreClient> mockGrpcClient = new Mock<Firestore.FirestoreClient>(MockBehavior.Strict);
+            UpdateDocumentRequest expectedRequest = new UpdateDocumentRequest
+            {
+                Document = new Document(),
+                UpdateMask = new DocumentMask(),
+            };
+            Document expectedResponse = new Document
+            {
+                Name = "name3373707",
+            };
+            mockGrpcClient.Setup(x => x.UpdateDocumentAsync(expectedRequest, It.IsAny<CallOptions>()))
+                .Returns(new Grpc.Core.AsyncUnaryCall<Document>(Task.FromResult(expectedResponse), null, null, null, null));
+            FirestoreClient client = new FirestoreClientImpl(mockGrpcClient.Object, null);
+            Document document = new Document();
+            DocumentMask updateMask = new DocumentMask();
+            Document response = await client.UpdateDocumentAsync(document, updateMask);
+            Assert.Same(expectedResponse, response);
+            mockGrpcClient.VerifyAll();
+        }
+
+        [Fact]
+        public void UpdateDocument2()
+        {
+            Mock<Firestore.FirestoreClient> mockGrpcClient = new Mock<Firestore.FirestoreClient>(MockBehavior.Strict);
+            UpdateDocumentRequest request = new UpdateDocumentRequest
+            {
+                Document = new Document(),
+                UpdateMask = new DocumentMask(),
+            };
+            Document expectedResponse = new Document
+            {
+                Name = "name3373707",
+            };
+            mockGrpcClient.Setup(x => x.UpdateDocument(request, It.IsAny<CallOptions>()))
+                .Returns(expectedResponse);
+            FirestoreClient client = new FirestoreClientImpl(mockGrpcClient.Object, null);
+            Document response = client.UpdateDocument(request);
+            Assert.Same(expectedResponse, response);
+            mockGrpcClient.VerifyAll();
+        }
+
+        [Fact]
+        public async Task UpdateDocumentAsync2()
+        {
+            Mock<Firestore.FirestoreClient> mockGrpcClient = new Mock<Firestore.FirestoreClient>(MockBehavior.Strict);
+            UpdateDocumentRequest request = new UpdateDocumentRequest
+            {
+                Document = new Document(),
+                UpdateMask = new DocumentMask(),
+            };
+            Document expectedResponse = new Document
+            {
+                Name = "name3373707",
+            };
+            mockGrpcClient.Setup(x => x.UpdateDocumentAsync(request, It.IsAny<CallOptions>()))
+                .Returns(new Grpc.Core.AsyncUnaryCall<Document>(Task.FromResult(expectedResponse), null, null, null, null));
+            FirestoreClient client = new FirestoreClientImpl(mockGrpcClient.Object, null);
+            Document response = await client.UpdateDocumentAsync(request);
+            Assert.Same(expectedResponse, response);
+            mockGrpcClient.VerifyAll();
+        }
+
+        [Fact]
+        public void DeleteDocument()
+        {
+            Mock<Firestore.FirestoreClient> mockGrpcClient = new Mock<Firestore.FirestoreClient>(MockBehavior.Strict);
+            DeleteDocumentRequest expectedRequest = new DeleteDocumentRequest
+            {
+                Name = new AnyPathName("[PROJECT]", "[DATABASE]", "[DOCUMENT]", "[ANY_PATH]").ToString(),
+            };
             Empty expectedResponse = new Empty();
-            // TODO: Add verification of request object
-            mockGrpcClient.Setup(x => x.DeleteDocument(It.IsAny<DeleteDocumentRequest>(), It.IsAny<CallOptions>())).Returns(expectedResponse);
+            mockGrpcClient.Setup(x => x.DeleteDocument(expectedRequest, It.IsAny<CallOptions>()))
+                .Returns(expectedResponse);
             FirestoreClient client = new FirestoreClientImpl(mockGrpcClient.Object, null);
             string formattedName = new AnyPathName("[PROJECT]", "[DATABASE]", "[DOCUMENT]", "[ANY_PATH]").ToString();
             client.DeleteDocument(formattedName);
@@ -67,51 +139,281 @@ namespace Google.Cloud.Firestore.V1Beta1.UnitTests
         }
 
         [Fact]
-        public void BeginTransactionTest()
+        public async Task DeleteDocumentAsync()
         {
-            // TODO: Use a strict mock; need to handle getRerouteToGrpcInterface
-            Mock<Firestore.FirestoreClient> mockGrpcClient = new Mock<Firestore.FirestoreClient> { DefaultValue = DefaultValue.Mock };
+            Mock<Firestore.FirestoreClient> mockGrpcClient = new Mock<Firestore.FirestoreClient>(MockBehavior.Strict);
+            DeleteDocumentRequest expectedRequest = new DeleteDocumentRequest
+            {
+                Name = new AnyPathName("[PROJECT]", "[DATABASE]", "[DOCUMENT]", "[ANY_PATH]").ToString(),
+            };
+            Empty expectedResponse = new Empty();
+            mockGrpcClient.Setup(x => x.DeleteDocumentAsync(expectedRequest, It.IsAny<CallOptions>()))
+                .Returns(new Grpc.Core.AsyncUnaryCall<Empty>(Task.FromResult(expectedResponse), null, null, null, null));
+            FirestoreClient client = new FirestoreClientImpl(mockGrpcClient.Object, null);
+            string formattedName = new AnyPathName("[PROJECT]", "[DATABASE]", "[DOCUMENT]", "[ANY_PATH]").ToString();
+            await client.DeleteDocumentAsync(formattedName);
+            mockGrpcClient.VerifyAll();
+        }
+
+        [Fact]
+        public void DeleteDocument2()
+        {
+            Mock<Firestore.FirestoreClient> mockGrpcClient = new Mock<Firestore.FirestoreClient>(MockBehavior.Strict);
+            DeleteDocumentRequest request = new DeleteDocumentRequest
+            {
+                Name = new AnyPathName("[PROJECT]", "[DATABASE]", "[DOCUMENT]", "[ANY_PATH]").ToString(),
+            };
+            Empty expectedResponse = new Empty();
+            mockGrpcClient.Setup(x => x.DeleteDocument(request, It.IsAny<CallOptions>()))
+                .Returns(expectedResponse);
+            FirestoreClient client = new FirestoreClientImpl(mockGrpcClient.Object, null);
+            client.DeleteDocument(request);
+            mockGrpcClient.VerifyAll();
+        }
+
+        [Fact]
+        public async Task DeleteDocumentAsync2()
+        {
+            Mock<Firestore.FirestoreClient> mockGrpcClient = new Mock<Firestore.FirestoreClient>(MockBehavior.Strict);
+            DeleteDocumentRequest request = new DeleteDocumentRequest
+            {
+                Name = new AnyPathName("[PROJECT]", "[DATABASE]", "[DOCUMENT]", "[ANY_PATH]").ToString(),
+            };
+            Empty expectedResponse = new Empty();
+            mockGrpcClient.Setup(x => x.DeleteDocumentAsync(request, It.IsAny<CallOptions>()))
+                .Returns(new Grpc.Core.AsyncUnaryCall<Empty>(Task.FromResult(expectedResponse), null, null, null, null));
+            FirestoreClient client = new FirestoreClientImpl(mockGrpcClient.Object, null);
+            await client.DeleteDocumentAsync(request);
+            mockGrpcClient.VerifyAll();
+        }
+
+        [Fact]
+        public void BeginTransaction()
+        {
+            Mock<Firestore.FirestoreClient> mockGrpcClient = new Mock<Firestore.FirestoreClient>(MockBehavior.Strict);
+            BeginTransactionRequest expectedRequest = new BeginTransactionRequest
+            {
+                Database = new DatabaseRootName("[PROJECT]", "[DATABASE]").ToString(),
+            };
             BeginTransactionResponse expectedResponse = new BeginTransactionResponse
             {
                 Transaction = ByteString.CopyFromUtf8("-34"),
             };
-            // TODO: Add verification of request object
-            mockGrpcClient.Setup(x => x.BeginTransaction(It.IsAny<BeginTransactionRequest>(), It.IsAny<CallOptions>())).Returns(expectedResponse);
+            mockGrpcClient.Setup(x => x.BeginTransaction(expectedRequest, It.IsAny<CallOptions>()))
+                .Returns(expectedResponse);
             FirestoreClient client = new FirestoreClientImpl(mockGrpcClient.Object, null);
             string formattedDatabase = new DatabaseRootName("[PROJECT]", "[DATABASE]").ToString();
             BeginTransactionResponse response = client.BeginTransaction(formattedDatabase);
-            Assert.Equal(expectedResponse, response);
+            Assert.Same(expectedResponse, response);
             mockGrpcClient.VerifyAll();
         }
 
         [Fact]
-        public void CommitTest()
+        public async Task BeginTransactionAsync()
         {
-            // TODO: Use a strict mock; need to handle getRerouteToGrpcInterface
-            Mock<Firestore.FirestoreClient> mockGrpcClient = new Mock<Firestore.FirestoreClient> { DefaultValue = DefaultValue.Mock };
+            Mock<Firestore.FirestoreClient> mockGrpcClient = new Mock<Firestore.FirestoreClient>(MockBehavior.Strict);
+            BeginTransactionRequest expectedRequest = new BeginTransactionRequest
+            {
+                Database = new DatabaseRootName("[PROJECT]", "[DATABASE]").ToString(),
+            };
+            BeginTransactionResponse expectedResponse = new BeginTransactionResponse
+            {
+                Transaction = ByteString.CopyFromUtf8("-34"),
+            };
+            mockGrpcClient.Setup(x => x.BeginTransactionAsync(expectedRequest, It.IsAny<CallOptions>()))
+                .Returns(new Grpc.Core.AsyncUnaryCall<BeginTransactionResponse>(Task.FromResult(expectedResponse), null, null, null, null));
+            FirestoreClient client = new FirestoreClientImpl(mockGrpcClient.Object, null);
+            string formattedDatabase = new DatabaseRootName("[PROJECT]", "[DATABASE]").ToString();
+            BeginTransactionResponse response = await client.BeginTransactionAsync(formattedDatabase);
+            Assert.Same(expectedResponse, response);
+            mockGrpcClient.VerifyAll();
+        }
+
+        [Fact]
+        public void BeginTransaction2()
+        {
+            Mock<Firestore.FirestoreClient> mockGrpcClient = new Mock<Firestore.FirestoreClient>(MockBehavior.Strict);
+            BeginTransactionRequest request = new BeginTransactionRequest
+            {
+                Database = new DatabaseRootName("[PROJECT]", "[DATABASE]").ToString(),
+            };
+            BeginTransactionResponse expectedResponse = new BeginTransactionResponse
+            {
+                Transaction = ByteString.CopyFromUtf8("-34"),
+            };
+            mockGrpcClient.Setup(x => x.BeginTransaction(request, It.IsAny<CallOptions>()))
+                .Returns(expectedResponse);
+            FirestoreClient client = new FirestoreClientImpl(mockGrpcClient.Object, null);
+            BeginTransactionResponse response = client.BeginTransaction(request);
+            Assert.Same(expectedResponse, response);
+            mockGrpcClient.VerifyAll();
+        }
+
+        [Fact]
+        public async Task BeginTransactionAsync2()
+        {
+            Mock<Firestore.FirestoreClient> mockGrpcClient = new Mock<Firestore.FirestoreClient>(MockBehavior.Strict);
+            BeginTransactionRequest request = new BeginTransactionRequest
+            {
+                Database = new DatabaseRootName("[PROJECT]", "[DATABASE]").ToString(),
+            };
+            BeginTransactionResponse expectedResponse = new BeginTransactionResponse
+            {
+                Transaction = ByteString.CopyFromUtf8("-34"),
+            };
+            mockGrpcClient.Setup(x => x.BeginTransactionAsync(request, It.IsAny<CallOptions>()))
+                .Returns(new Grpc.Core.AsyncUnaryCall<BeginTransactionResponse>(Task.FromResult(expectedResponse), null, null, null, null));
+            FirestoreClient client = new FirestoreClientImpl(mockGrpcClient.Object, null);
+            BeginTransactionResponse response = await client.BeginTransactionAsync(request);
+            Assert.Same(expectedResponse, response);
+            mockGrpcClient.VerifyAll();
+        }
+
+        [Fact]
+        public void Commit()
+        {
+            Mock<Firestore.FirestoreClient> mockGrpcClient = new Mock<Firestore.FirestoreClient>(MockBehavior.Strict);
+            CommitRequest expectedRequest = new CommitRequest
+            {
+                Database = new DatabaseRootName("[PROJECT]", "[DATABASE]").ToString(),
+                Writes = { },
+            };
             CommitResponse expectedResponse = new CommitResponse();
-            // TODO: Add verification of request object
-            mockGrpcClient.Setup(x => x.Commit(It.IsAny<CommitRequest>(), It.IsAny<CallOptions>())).Returns(expectedResponse);
+            mockGrpcClient.Setup(x => x.Commit(expectedRequest, It.IsAny<CallOptions>()))
+                .Returns(expectedResponse);
             FirestoreClient client = new FirestoreClientImpl(mockGrpcClient.Object, null);
             string formattedDatabase = new DatabaseRootName("[PROJECT]", "[DATABASE]").ToString();
             IEnumerable<Write> writes = new List<Write>();
             CommitResponse response = client.Commit(formattedDatabase, writes);
-            Assert.Equal(expectedResponse, response);
+            Assert.Same(expectedResponse, response);
             mockGrpcClient.VerifyAll();
         }
 
         [Fact]
-        public void RollbackTest()
+        public async Task CommitAsync()
         {
-            // TODO: Use a strict mock; need to handle getRerouteToGrpcInterface
-            Mock<Firestore.FirestoreClient> mockGrpcClient = new Mock<Firestore.FirestoreClient> { DefaultValue = DefaultValue.Mock };
+            Mock<Firestore.FirestoreClient> mockGrpcClient = new Mock<Firestore.FirestoreClient>(MockBehavior.Strict);
+            CommitRequest expectedRequest = new CommitRequest
+            {
+                Database = new DatabaseRootName("[PROJECT]", "[DATABASE]").ToString(),
+                Writes = { },
+            };
+            CommitResponse expectedResponse = new CommitResponse();
+            mockGrpcClient.Setup(x => x.CommitAsync(expectedRequest, It.IsAny<CallOptions>()))
+                .Returns(new Grpc.Core.AsyncUnaryCall<CommitResponse>(Task.FromResult(expectedResponse), null, null, null, null));
+            FirestoreClient client = new FirestoreClientImpl(mockGrpcClient.Object, null);
+            string formattedDatabase = new DatabaseRootName("[PROJECT]", "[DATABASE]").ToString();
+            IEnumerable<Write> writes = new List<Write>();
+            CommitResponse response = await client.CommitAsync(formattedDatabase, writes);
+            Assert.Same(expectedResponse, response);
+            mockGrpcClient.VerifyAll();
+        }
+
+        [Fact]
+        public void Commit2()
+        {
+            Mock<Firestore.FirestoreClient> mockGrpcClient = new Mock<Firestore.FirestoreClient>(MockBehavior.Strict);
+            CommitRequest request = new CommitRequest
+            {
+                Database = new DatabaseRootName("[PROJECT]", "[DATABASE]").ToString(),
+                Writes = { },
+            };
+            CommitResponse expectedResponse = new CommitResponse();
+            mockGrpcClient.Setup(x => x.Commit(request, It.IsAny<CallOptions>()))
+                .Returns(expectedResponse);
+            FirestoreClient client = new FirestoreClientImpl(mockGrpcClient.Object, null);
+            CommitResponse response = client.Commit(request);
+            Assert.Same(expectedResponse, response);
+            mockGrpcClient.VerifyAll();
+        }
+
+        [Fact]
+        public async Task CommitAsync2()
+        {
+            Mock<Firestore.FirestoreClient> mockGrpcClient = new Mock<Firestore.FirestoreClient>(MockBehavior.Strict);
+            CommitRequest request = new CommitRequest
+            {
+                Database = new DatabaseRootName("[PROJECT]", "[DATABASE]").ToString(),
+                Writes = { },
+            };
+            CommitResponse expectedResponse = new CommitResponse();
+            mockGrpcClient.Setup(x => x.CommitAsync(request, It.IsAny<CallOptions>()))
+                .Returns(new Grpc.Core.AsyncUnaryCall<CommitResponse>(Task.FromResult(expectedResponse), null, null, null, null));
+            FirestoreClient client = new FirestoreClientImpl(mockGrpcClient.Object, null);
+            CommitResponse response = await client.CommitAsync(request);
+            Assert.Same(expectedResponse, response);
+            mockGrpcClient.VerifyAll();
+        }
+
+        [Fact]
+        public void Rollback()
+        {
+            Mock<Firestore.FirestoreClient> mockGrpcClient = new Mock<Firestore.FirestoreClient>(MockBehavior.Strict);
+            RollbackRequest expectedRequest = new RollbackRequest
+            {
+                Database = new DatabaseRootName("[PROJECT]", "[DATABASE]").ToString(),
+                Transaction = ByteString.CopyFromUtf8("-34"),
+            };
             Empty expectedResponse = new Empty();
-            // TODO: Add verification of request object
-            mockGrpcClient.Setup(x => x.Rollback(It.IsAny<RollbackRequest>(), It.IsAny<CallOptions>())).Returns(expectedResponse);
+            mockGrpcClient.Setup(x => x.Rollback(expectedRequest, It.IsAny<CallOptions>()))
+                .Returns(expectedResponse);
             FirestoreClient client = new FirestoreClientImpl(mockGrpcClient.Object, null);
             string formattedDatabase = new DatabaseRootName("[PROJECT]", "[DATABASE]").ToString();
             ByteString transaction = ByteString.CopyFromUtf8("-34");
             client.Rollback(formattedDatabase, transaction);
+            mockGrpcClient.VerifyAll();
+        }
+
+        [Fact]
+        public async Task RollbackAsync()
+        {
+            Mock<Firestore.FirestoreClient> mockGrpcClient = new Mock<Firestore.FirestoreClient>(MockBehavior.Strict);
+            RollbackRequest expectedRequest = new RollbackRequest
+            {
+                Database = new DatabaseRootName("[PROJECT]", "[DATABASE]").ToString(),
+                Transaction = ByteString.CopyFromUtf8("-34"),
+            };
+            Empty expectedResponse = new Empty();
+            mockGrpcClient.Setup(x => x.RollbackAsync(expectedRequest, It.IsAny<CallOptions>()))
+                .Returns(new Grpc.Core.AsyncUnaryCall<Empty>(Task.FromResult(expectedResponse), null, null, null, null));
+            FirestoreClient client = new FirestoreClientImpl(mockGrpcClient.Object, null);
+            string formattedDatabase = new DatabaseRootName("[PROJECT]", "[DATABASE]").ToString();
+            ByteString transaction = ByteString.CopyFromUtf8("-34");
+            await client.RollbackAsync(formattedDatabase, transaction);
+            mockGrpcClient.VerifyAll();
+        }
+
+        [Fact]
+        public void Rollback2()
+        {
+            Mock<Firestore.FirestoreClient> mockGrpcClient = new Mock<Firestore.FirestoreClient>(MockBehavior.Strict);
+            RollbackRequest request = new RollbackRequest
+            {
+                Database = new DatabaseRootName("[PROJECT]", "[DATABASE]").ToString(),
+                Transaction = ByteString.CopyFromUtf8("-34"),
+            };
+            Empty expectedResponse = new Empty();
+            mockGrpcClient.Setup(x => x.Rollback(request, It.IsAny<CallOptions>()))
+                .Returns(expectedResponse);
+            FirestoreClient client = new FirestoreClientImpl(mockGrpcClient.Object, null);
+            client.Rollback(request);
+            mockGrpcClient.VerifyAll();
+        }
+
+        [Fact]
+        public async Task RollbackAsync2()
+        {
+            Mock<Firestore.FirestoreClient> mockGrpcClient = new Mock<Firestore.FirestoreClient>(MockBehavior.Strict);
+            RollbackRequest request = new RollbackRequest
+            {
+                Database = new DatabaseRootName("[PROJECT]", "[DATABASE]").ToString(),
+                Transaction = ByteString.CopyFromUtf8("-34"),
+            };
+            Empty expectedResponse = new Empty();
+            mockGrpcClient.Setup(x => x.RollbackAsync(request, It.IsAny<CallOptions>()))
+                .Returns(new Grpc.Core.AsyncUnaryCall<Empty>(Task.FromResult(expectedResponse), null, null, null, null));
+            FirestoreClient client = new FirestoreClientImpl(mockGrpcClient.Object, null);
+            await client.RollbackAsync(request);
             mockGrpcClient.VerifyAll();
         }
 

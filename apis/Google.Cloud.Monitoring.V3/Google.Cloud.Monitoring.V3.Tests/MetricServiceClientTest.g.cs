@@ -28,16 +28,19 @@ using System.Threading;
 using System.Threading.Tasks;
 using Xunit;
 
-namespace Google.Cloud.Monitoring.V3.UnitTests
+namespace Google.Cloud.Monitoring.V3.Tests
 {
     /// <summary>Generated unit tests</summary>
     public class GeneratedMetricServiceClientTest
     {
         [Fact]
-        public void GetMonitoredResourceDescriptorTest()
+        public void GetMonitoredResourceDescriptor()
         {
-            // TODO: Use a strict mock; need to handle getRerouteToGrpcInterface
-            Mock<MetricService.MetricServiceClient> mockGrpcClient = new Mock<MetricService.MetricServiceClient> { DefaultValue = DefaultValue.Mock };
+            Mock<MetricService.MetricServiceClient> mockGrpcClient = new Mock<MetricService.MetricServiceClient>(MockBehavior.Strict);
+            GetMonitoredResourceDescriptorRequest expectedRequest = new GetMonitoredResourceDescriptorRequest
+            {
+                MonitoredResourceDescriptorName = new MonitoredResourceDescriptorName("[PROJECT]", "[MONITORED_RESOURCE_DESCRIPTOR]"),
+            };
             MonitoredResourceDescriptor expectedResponse = new MonitoredResourceDescriptor
             {
                 Name = "name2-1052831874",
@@ -45,20 +48,93 @@ namespace Google.Cloud.Monitoring.V3.UnitTests
                 DisplayName = "displayName1615086568",
                 Description = "description-1724546052",
             };
-            // TODO: Add verification of request object
-            mockGrpcClient.Setup(x => x.GetMonitoredResourceDescriptor(It.IsAny<GetMonitoredResourceDescriptorRequest>(), It.IsAny<CallOptions>())).Returns(expectedResponse);
+            mockGrpcClient.Setup(x => x.GetMonitoredResourceDescriptor(expectedRequest, It.IsAny<CallOptions>()))
+                .Returns(expectedResponse);
             MetricServiceClient client = new MetricServiceClientImpl(mockGrpcClient.Object, null);
             MonitoredResourceDescriptorName name = new MonitoredResourceDescriptorName("[PROJECT]", "[MONITORED_RESOURCE_DESCRIPTOR]");
             MonitoredResourceDescriptor response = client.GetMonitoredResourceDescriptor(name);
-            Assert.Equal(expectedResponse, response);
+            Assert.Same(expectedResponse, response);
             mockGrpcClient.VerifyAll();
         }
 
         [Fact]
-        public void GetMetricDescriptorTest()
+        public async Task GetMonitoredResourceDescriptorAsync()
         {
-            // TODO: Use a strict mock; need to handle getRerouteToGrpcInterface
-            Mock<MetricService.MetricServiceClient> mockGrpcClient = new Mock<MetricService.MetricServiceClient> { DefaultValue = DefaultValue.Mock };
+            Mock<MetricService.MetricServiceClient> mockGrpcClient = new Mock<MetricService.MetricServiceClient>(MockBehavior.Strict);
+            GetMonitoredResourceDescriptorRequest expectedRequest = new GetMonitoredResourceDescriptorRequest
+            {
+                MonitoredResourceDescriptorName = new MonitoredResourceDescriptorName("[PROJECT]", "[MONITORED_RESOURCE_DESCRIPTOR]"),
+            };
+            MonitoredResourceDescriptor expectedResponse = new MonitoredResourceDescriptor
+            {
+                Name = "name2-1052831874",
+                Type = "type3575610",
+                DisplayName = "displayName1615086568",
+                Description = "description-1724546052",
+            };
+            mockGrpcClient.Setup(x => x.GetMonitoredResourceDescriptorAsync(expectedRequest, It.IsAny<CallOptions>()))
+                .Returns(new Grpc.Core.AsyncUnaryCall<MonitoredResourceDescriptor>(Task.FromResult(expectedResponse), null, null, null, null));
+            MetricServiceClient client = new MetricServiceClientImpl(mockGrpcClient.Object, null);
+            MonitoredResourceDescriptorName name = new MonitoredResourceDescriptorName("[PROJECT]", "[MONITORED_RESOURCE_DESCRIPTOR]");
+            MonitoredResourceDescriptor response = await client.GetMonitoredResourceDescriptorAsync(name);
+            Assert.Same(expectedResponse, response);
+            mockGrpcClient.VerifyAll();
+        }
+
+        [Fact]
+        public void GetMonitoredResourceDescriptor2()
+        {
+            Mock<MetricService.MetricServiceClient> mockGrpcClient = new Mock<MetricService.MetricServiceClient>(MockBehavior.Strict);
+            GetMonitoredResourceDescriptorRequest request = new GetMonitoredResourceDescriptorRequest
+            {
+                MonitoredResourceDescriptorName = new MonitoredResourceDescriptorName("[PROJECT]", "[MONITORED_RESOURCE_DESCRIPTOR]"),
+            };
+            MonitoredResourceDescriptor expectedResponse = new MonitoredResourceDescriptor
+            {
+                Name = "name2-1052831874",
+                Type = "type3575610",
+                DisplayName = "displayName1615086568",
+                Description = "description-1724546052",
+            };
+            mockGrpcClient.Setup(x => x.GetMonitoredResourceDescriptor(request, It.IsAny<CallOptions>()))
+                .Returns(expectedResponse);
+            MetricServiceClient client = new MetricServiceClientImpl(mockGrpcClient.Object, null);
+            MonitoredResourceDescriptor response = client.GetMonitoredResourceDescriptor(request);
+            Assert.Same(expectedResponse, response);
+            mockGrpcClient.VerifyAll();
+        }
+
+        [Fact]
+        public async Task GetMonitoredResourceDescriptorAsync2()
+        {
+            Mock<MetricService.MetricServiceClient> mockGrpcClient = new Mock<MetricService.MetricServiceClient>(MockBehavior.Strict);
+            GetMonitoredResourceDescriptorRequest request = new GetMonitoredResourceDescriptorRequest
+            {
+                MonitoredResourceDescriptorName = new MonitoredResourceDescriptorName("[PROJECT]", "[MONITORED_RESOURCE_DESCRIPTOR]"),
+            };
+            MonitoredResourceDescriptor expectedResponse = new MonitoredResourceDescriptor
+            {
+                Name = "name2-1052831874",
+                Type = "type3575610",
+                DisplayName = "displayName1615086568",
+                Description = "description-1724546052",
+            };
+            mockGrpcClient.Setup(x => x.GetMonitoredResourceDescriptorAsync(request, It.IsAny<CallOptions>()))
+                .Returns(new Grpc.Core.AsyncUnaryCall<MonitoredResourceDescriptor>(Task.FromResult(expectedResponse), null, null, null, null));
+            MetricServiceClient client = new MetricServiceClientImpl(mockGrpcClient.Object, null);
+            MonitoredResourceDescriptor response = await client.GetMonitoredResourceDescriptorAsync(request);
+            Assert.Same(expectedResponse, response);
+            mockGrpcClient.VerifyAll();
+        }
+
+        [Fact]
+        public void GetMetricDescriptor()
+        {
+            Mock<MetricService.MetricServiceClient> mockGrpcClient = new Mock<MetricService.MetricServiceClient>(MockBehavior.Strict);
+            GetMetricDescriptorRequest expectedRequest = new GetMetricDescriptorRequest
+            {
+                MetricDescriptorName = new MetricDescriptorName("[PROJECT]", "[METRIC_DESCRIPTOR]"),
+            };
             MetricDescriptor expectedResponse = new MetricDescriptor
             {
                 Name = "name2-1052831874",
@@ -67,20 +143,23 @@ namespace Google.Cloud.Monitoring.V3.UnitTests
                 Description = "description-1724546052",
                 DisplayName = "displayName1615086568",
             };
-            // TODO: Add verification of request object
-            mockGrpcClient.Setup(x => x.GetMetricDescriptor(It.IsAny<GetMetricDescriptorRequest>(), It.IsAny<CallOptions>())).Returns(expectedResponse);
+            mockGrpcClient.Setup(x => x.GetMetricDescriptor(expectedRequest, It.IsAny<CallOptions>()))
+                .Returns(expectedResponse);
             MetricServiceClient client = new MetricServiceClientImpl(mockGrpcClient.Object, null);
             MetricDescriptorName name = new MetricDescriptorName("[PROJECT]", "[METRIC_DESCRIPTOR]");
             MetricDescriptor response = client.GetMetricDescriptor(name);
-            Assert.Equal(expectedResponse, response);
+            Assert.Same(expectedResponse, response);
             mockGrpcClient.VerifyAll();
         }
 
         [Fact]
-        public void CreateMetricDescriptorTest()
+        public async Task GetMetricDescriptorAsync()
         {
-            // TODO: Use a strict mock; need to handle getRerouteToGrpcInterface
-            Mock<MetricService.MetricServiceClient> mockGrpcClient = new Mock<MetricService.MetricServiceClient> { DefaultValue = DefaultValue.Mock };
+            Mock<MetricService.MetricServiceClient> mockGrpcClient = new Mock<MetricService.MetricServiceClient>(MockBehavior.Strict);
+            GetMetricDescriptorRequest expectedRequest = new GetMetricDescriptorRequest
+            {
+                MetricDescriptorName = new MetricDescriptorName("[PROJECT]", "[METRIC_DESCRIPTOR]"),
+            };
             MetricDescriptor expectedResponse = new MetricDescriptor
             {
                 Name = "name2-1052831874",
@@ -89,24 +168,178 @@ namespace Google.Cloud.Monitoring.V3.UnitTests
                 Description = "description-1724546052",
                 DisplayName = "displayName1615086568",
             };
-            // TODO: Add verification of request object
-            mockGrpcClient.Setup(x => x.CreateMetricDescriptor(It.IsAny<CreateMetricDescriptorRequest>(), It.IsAny<CallOptions>())).Returns(expectedResponse);
+            mockGrpcClient.Setup(x => x.GetMetricDescriptorAsync(expectedRequest, It.IsAny<CallOptions>()))
+                .Returns(new Grpc.Core.AsyncUnaryCall<MetricDescriptor>(Task.FromResult(expectedResponse), null, null, null, null));
+            MetricServiceClient client = new MetricServiceClientImpl(mockGrpcClient.Object, null);
+            MetricDescriptorName name = new MetricDescriptorName("[PROJECT]", "[METRIC_DESCRIPTOR]");
+            MetricDescriptor response = await client.GetMetricDescriptorAsync(name);
+            Assert.Same(expectedResponse, response);
+            mockGrpcClient.VerifyAll();
+        }
+
+        [Fact]
+        public void GetMetricDescriptor2()
+        {
+            Mock<MetricService.MetricServiceClient> mockGrpcClient = new Mock<MetricService.MetricServiceClient>(MockBehavior.Strict);
+            GetMetricDescriptorRequest request = new GetMetricDescriptorRequest
+            {
+                MetricDescriptorName = new MetricDescriptorName("[PROJECT]", "[METRIC_DESCRIPTOR]"),
+            };
+            MetricDescriptor expectedResponse = new MetricDescriptor
+            {
+                Name = "name2-1052831874",
+                Type = "type3575610",
+                Unit = "unit3594628",
+                Description = "description-1724546052",
+                DisplayName = "displayName1615086568",
+            };
+            mockGrpcClient.Setup(x => x.GetMetricDescriptor(request, It.IsAny<CallOptions>()))
+                .Returns(expectedResponse);
+            MetricServiceClient client = new MetricServiceClientImpl(mockGrpcClient.Object, null);
+            MetricDescriptor response = client.GetMetricDescriptor(request);
+            Assert.Same(expectedResponse, response);
+            mockGrpcClient.VerifyAll();
+        }
+
+        [Fact]
+        public async Task GetMetricDescriptorAsync2()
+        {
+            Mock<MetricService.MetricServiceClient> mockGrpcClient = new Mock<MetricService.MetricServiceClient>(MockBehavior.Strict);
+            GetMetricDescriptorRequest request = new GetMetricDescriptorRequest
+            {
+                MetricDescriptorName = new MetricDescriptorName("[PROJECT]", "[METRIC_DESCRIPTOR]"),
+            };
+            MetricDescriptor expectedResponse = new MetricDescriptor
+            {
+                Name = "name2-1052831874",
+                Type = "type3575610",
+                Unit = "unit3594628",
+                Description = "description-1724546052",
+                DisplayName = "displayName1615086568",
+            };
+            mockGrpcClient.Setup(x => x.GetMetricDescriptorAsync(request, It.IsAny<CallOptions>()))
+                .Returns(new Grpc.Core.AsyncUnaryCall<MetricDescriptor>(Task.FromResult(expectedResponse), null, null, null, null));
+            MetricServiceClient client = new MetricServiceClientImpl(mockGrpcClient.Object, null);
+            MetricDescriptor response = await client.GetMetricDescriptorAsync(request);
+            Assert.Same(expectedResponse, response);
+            mockGrpcClient.VerifyAll();
+        }
+
+        [Fact]
+        public void CreateMetricDescriptor()
+        {
+            Mock<MetricService.MetricServiceClient> mockGrpcClient = new Mock<MetricService.MetricServiceClient>(MockBehavior.Strict);
+            CreateMetricDescriptorRequest expectedRequest = new CreateMetricDescriptorRequest
+            {
+                ProjectName = new ProjectName("[PROJECT]"),
+                MetricDescriptor = new MetricDescriptor(),
+            };
+            MetricDescriptor expectedResponse = new MetricDescriptor
+            {
+                Name = "name2-1052831874",
+                Type = "type3575610",
+                Unit = "unit3594628",
+                Description = "description-1724546052",
+                DisplayName = "displayName1615086568",
+            };
+            mockGrpcClient.Setup(x => x.CreateMetricDescriptor(expectedRequest, It.IsAny<CallOptions>()))
+                .Returns(expectedResponse);
             MetricServiceClient client = new MetricServiceClientImpl(mockGrpcClient.Object, null);
             ProjectName name = new ProjectName("[PROJECT]");
             MetricDescriptor metricDescriptor = new MetricDescriptor();
             MetricDescriptor response = client.CreateMetricDescriptor(name, metricDescriptor);
-            Assert.Equal(expectedResponse, response);
+            Assert.Same(expectedResponse, response);
             mockGrpcClient.VerifyAll();
         }
 
         [Fact]
-        public void DeleteMetricDescriptorTest()
+        public async Task CreateMetricDescriptorAsync()
         {
-            // TODO: Use a strict mock; need to handle getRerouteToGrpcInterface
-            Mock<MetricService.MetricServiceClient> mockGrpcClient = new Mock<MetricService.MetricServiceClient> { DefaultValue = DefaultValue.Mock };
+            Mock<MetricService.MetricServiceClient> mockGrpcClient = new Mock<MetricService.MetricServiceClient>(MockBehavior.Strict);
+            CreateMetricDescriptorRequest expectedRequest = new CreateMetricDescriptorRequest
+            {
+                ProjectName = new ProjectName("[PROJECT]"),
+                MetricDescriptor = new MetricDescriptor(),
+            };
+            MetricDescriptor expectedResponse = new MetricDescriptor
+            {
+                Name = "name2-1052831874",
+                Type = "type3575610",
+                Unit = "unit3594628",
+                Description = "description-1724546052",
+                DisplayName = "displayName1615086568",
+            };
+            mockGrpcClient.Setup(x => x.CreateMetricDescriptorAsync(expectedRequest, It.IsAny<CallOptions>()))
+                .Returns(new Grpc.Core.AsyncUnaryCall<MetricDescriptor>(Task.FromResult(expectedResponse), null, null, null, null));
+            MetricServiceClient client = new MetricServiceClientImpl(mockGrpcClient.Object, null);
+            ProjectName name = new ProjectName("[PROJECT]");
+            MetricDescriptor metricDescriptor = new MetricDescriptor();
+            MetricDescriptor response = await client.CreateMetricDescriptorAsync(name, metricDescriptor);
+            Assert.Same(expectedResponse, response);
+            mockGrpcClient.VerifyAll();
+        }
+
+        [Fact]
+        public void CreateMetricDescriptor2()
+        {
+            Mock<MetricService.MetricServiceClient> mockGrpcClient = new Mock<MetricService.MetricServiceClient>(MockBehavior.Strict);
+            CreateMetricDescriptorRequest request = new CreateMetricDescriptorRequest
+            {
+                ProjectName = new ProjectName("[PROJECT]"),
+                MetricDescriptor = new MetricDescriptor(),
+            };
+            MetricDescriptor expectedResponse = new MetricDescriptor
+            {
+                Name = "name2-1052831874",
+                Type = "type3575610",
+                Unit = "unit3594628",
+                Description = "description-1724546052",
+                DisplayName = "displayName1615086568",
+            };
+            mockGrpcClient.Setup(x => x.CreateMetricDescriptor(request, It.IsAny<CallOptions>()))
+                .Returns(expectedResponse);
+            MetricServiceClient client = new MetricServiceClientImpl(mockGrpcClient.Object, null);
+            MetricDescriptor response = client.CreateMetricDescriptor(request);
+            Assert.Same(expectedResponse, response);
+            mockGrpcClient.VerifyAll();
+        }
+
+        [Fact]
+        public async Task CreateMetricDescriptorAsync2()
+        {
+            Mock<MetricService.MetricServiceClient> mockGrpcClient = new Mock<MetricService.MetricServiceClient>(MockBehavior.Strict);
+            CreateMetricDescriptorRequest request = new CreateMetricDescriptorRequest
+            {
+                ProjectName = new ProjectName("[PROJECT]"),
+                MetricDescriptor = new MetricDescriptor(),
+            };
+            MetricDescriptor expectedResponse = new MetricDescriptor
+            {
+                Name = "name2-1052831874",
+                Type = "type3575610",
+                Unit = "unit3594628",
+                Description = "description-1724546052",
+                DisplayName = "displayName1615086568",
+            };
+            mockGrpcClient.Setup(x => x.CreateMetricDescriptorAsync(request, It.IsAny<CallOptions>()))
+                .Returns(new Grpc.Core.AsyncUnaryCall<MetricDescriptor>(Task.FromResult(expectedResponse), null, null, null, null));
+            MetricServiceClient client = new MetricServiceClientImpl(mockGrpcClient.Object, null);
+            MetricDescriptor response = await client.CreateMetricDescriptorAsync(request);
+            Assert.Same(expectedResponse, response);
+            mockGrpcClient.VerifyAll();
+        }
+
+        [Fact]
+        public void DeleteMetricDescriptor()
+        {
+            Mock<MetricService.MetricServiceClient> mockGrpcClient = new Mock<MetricService.MetricServiceClient>(MockBehavior.Strict);
+            DeleteMetricDescriptorRequest expectedRequest = new DeleteMetricDescriptorRequest
+            {
+                MetricDescriptorName = new MetricDescriptorName("[PROJECT]", "[METRIC_DESCRIPTOR]"),
+            };
             Empty expectedResponse = new Empty();
-            // TODO: Add verification of request object
-            mockGrpcClient.Setup(x => x.DeleteMetricDescriptor(It.IsAny<DeleteMetricDescriptorRequest>(), It.IsAny<CallOptions>())).Returns(expectedResponse);
+            mockGrpcClient.Setup(x => x.DeleteMetricDescriptor(expectedRequest, It.IsAny<CallOptions>()))
+                .Returns(expectedResponse);
             MetricServiceClient client = new MetricServiceClientImpl(mockGrpcClient.Object, null);
             MetricDescriptorName name = new MetricDescriptorName("[PROJECT]", "[METRIC_DESCRIPTOR]");
             client.DeleteMetricDescriptor(name);
@@ -114,17 +347,123 @@ namespace Google.Cloud.Monitoring.V3.UnitTests
         }
 
         [Fact]
-        public void CreateTimeSeriesTest()
+        public async Task DeleteMetricDescriptorAsync()
         {
-            // TODO: Use a strict mock; need to handle getRerouteToGrpcInterface
-            Mock<MetricService.MetricServiceClient> mockGrpcClient = new Mock<MetricService.MetricServiceClient> { DefaultValue = DefaultValue.Mock };
+            Mock<MetricService.MetricServiceClient> mockGrpcClient = new Mock<MetricService.MetricServiceClient>(MockBehavior.Strict);
+            DeleteMetricDescriptorRequest expectedRequest = new DeleteMetricDescriptorRequest
+            {
+                MetricDescriptorName = new MetricDescriptorName("[PROJECT]", "[METRIC_DESCRIPTOR]"),
+            };
             Empty expectedResponse = new Empty();
-            // TODO: Add verification of request object
-            mockGrpcClient.Setup(x => x.CreateTimeSeries(It.IsAny<CreateTimeSeriesRequest>(), It.IsAny<CallOptions>())).Returns(expectedResponse);
+            mockGrpcClient.Setup(x => x.DeleteMetricDescriptorAsync(expectedRequest, It.IsAny<CallOptions>()))
+                .Returns(new Grpc.Core.AsyncUnaryCall<Empty>(Task.FromResult(expectedResponse), null, null, null, null));
+            MetricServiceClient client = new MetricServiceClientImpl(mockGrpcClient.Object, null);
+            MetricDescriptorName name = new MetricDescriptorName("[PROJECT]", "[METRIC_DESCRIPTOR]");
+            await client.DeleteMetricDescriptorAsync(name);
+            mockGrpcClient.VerifyAll();
+        }
+
+        [Fact]
+        public void DeleteMetricDescriptor2()
+        {
+            Mock<MetricService.MetricServiceClient> mockGrpcClient = new Mock<MetricService.MetricServiceClient>(MockBehavior.Strict);
+            DeleteMetricDescriptorRequest request = new DeleteMetricDescriptorRequest
+            {
+                MetricDescriptorName = new MetricDescriptorName("[PROJECT]", "[METRIC_DESCRIPTOR]"),
+            };
+            Empty expectedResponse = new Empty();
+            mockGrpcClient.Setup(x => x.DeleteMetricDescriptor(request, It.IsAny<CallOptions>()))
+                .Returns(expectedResponse);
+            MetricServiceClient client = new MetricServiceClientImpl(mockGrpcClient.Object, null);
+            client.DeleteMetricDescriptor(request);
+            mockGrpcClient.VerifyAll();
+        }
+
+        [Fact]
+        public async Task DeleteMetricDescriptorAsync2()
+        {
+            Mock<MetricService.MetricServiceClient> mockGrpcClient = new Mock<MetricService.MetricServiceClient>(MockBehavior.Strict);
+            DeleteMetricDescriptorRequest request = new DeleteMetricDescriptorRequest
+            {
+                MetricDescriptorName = new MetricDescriptorName("[PROJECT]", "[METRIC_DESCRIPTOR]"),
+            };
+            Empty expectedResponse = new Empty();
+            mockGrpcClient.Setup(x => x.DeleteMetricDescriptorAsync(request, It.IsAny<CallOptions>()))
+                .Returns(new Grpc.Core.AsyncUnaryCall<Empty>(Task.FromResult(expectedResponse), null, null, null, null));
+            MetricServiceClient client = new MetricServiceClientImpl(mockGrpcClient.Object, null);
+            await client.DeleteMetricDescriptorAsync(request);
+            mockGrpcClient.VerifyAll();
+        }
+
+        [Fact]
+        public void CreateTimeSeries()
+        {
+            Mock<MetricService.MetricServiceClient> mockGrpcClient = new Mock<MetricService.MetricServiceClient>(MockBehavior.Strict);
+            CreateTimeSeriesRequest expectedRequest = new CreateTimeSeriesRequest
+            {
+                ProjectName = new ProjectName("[PROJECT]"),
+                TimeSeries = { },
+            };
+            Empty expectedResponse = new Empty();
+            mockGrpcClient.Setup(x => x.CreateTimeSeries(expectedRequest, It.IsAny<CallOptions>()))
+                .Returns(expectedResponse);
             MetricServiceClient client = new MetricServiceClientImpl(mockGrpcClient.Object, null);
             ProjectName name = new ProjectName("[PROJECT]");
             IEnumerable<TimeSeries> timeSeries = new List<TimeSeries>();
             client.CreateTimeSeries(name, timeSeries);
+            mockGrpcClient.VerifyAll();
+        }
+
+        [Fact]
+        public async Task CreateTimeSeriesAsync()
+        {
+            Mock<MetricService.MetricServiceClient> mockGrpcClient = new Mock<MetricService.MetricServiceClient>(MockBehavior.Strict);
+            CreateTimeSeriesRequest expectedRequest = new CreateTimeSeriesRequest
+            {
+                ProjectName = new ProjectName("[PROJECT]"),
+                TimeSeries = { },
+            };
+            Empty expectedResponse = new Empty();
+            mockGrpcClient.Setup(x => x.CreateTimeSeriesAsync(expectedRequest, It.IsAny<CallOptions>()))
+                .Returns(new Grpc.Core.AsyncUnaryCall<Empty>(Task.FromResult(expectedResponse), null, null, null, null));
+            MetricServiceClient client = new MetricServiceClientImpl(mockGrpcClient.Object, null);
+            ProjectName name = new ProjectName("[PROJECT]");
+            IEnumerable<TimeSeries> timeSeries = new List<TimeSeries>();
+            await client.CreateTimeSeriesAsync(name, timeSeries);
+            mockGrpcClient.VerifyAll();
+        }
+
+        [Fact]
+        public void CreateTimeSeries2()
+        {
+            Mock<MetricService.MetricServiceClient> mockGrpcClient = new Mock<MetricService.MetricServiceClient>(MockBehavior.Strict);
+            CreateTimeSeriesRequest request = new CreateTimeSeriesRequest
+            {
+                ProjectName = new ProjectName("[PROJECT]"),
+                TimeSeries = { },
+            };
+            Empty expectedResponse = new Empty();
+            mockGrpcClient.Setup(x => x.CreateTimeSeries(request, It.IsAny<CallOptions>()))
+                .Returns(expectedResponse);
+            MetricServiceClient client = new MetricServiceClientImpl(mockGrpcClient.Object, null);
+            client.CreateTimeSeries(request);
+            mockGrpcClient.VerifyAll();
+        }
+
+        [Fact]
+        public async Task CreateTimeSeriesAsync2()
+        {
+            Mock<MetricService.MetricServiceClient> mockGrpcClient = new Mock<MetricService.MetricServiceClient>(MockBehavior.Strict);
+            CreateTimeSeriesRequest request = new CreateTimeSeriesRequest
+            {
+                ProjectName = new ProjectName("[PROJECT]"),
+                TimeSeries = { },
+            };
+            Empty expectedResponse = new Empty();
+            mockGrpcClient.Setup(x => x.CreateTimeSeriesAsync(request, It.IsAny<CallOptions>()))
+                .Returns(new Grpc.Core.AsyncUnaryCall<Empty>(Task.FromResult(expectedResponse), null, null, null, null));
+            MetricServiceClient client = new MetricServiceClientImpl(mockGrpcClient.Object, null);
+            await client.CreateTimeSeriesAsync(request);
             mockGrpcClient.VerifyAll();
         }
 
