@@ -15,6 +15,12 @@ init:
 environment:
   COVERALLS_REPO_TOKEN:
     secure: 0F41/ccYgoYS098AEpBDGjBToFMvBsrjGLRzOW+ViyY4QrIzVIUmMlKiuNXDDeAs
+    
+  matrix:
+    - API_REGEX: 'Google\.Cloud\.[A-L].*'
+    - API_REGEX: 'Google\.Cloud\.[M-Z].*'
+    # List non-Cloud APIs here
+    - API_REGEX: 'Google\.LongRunning'
 
 # Install the pre-requisites for the build.
 install:
@@ -26,7 +32,7 @@ build_script:
   - dotnet --info
   - echo "Regenerating projects: if this fails, run generateprojects.sh and commit changes"
   - bash generateprojects.sh && git diff --exit-code
-  - bash build.sh --notests --diff
+  - bash build.sh --notests --diff --regex $API_REGEX
 
 # Scripts to run before tests
 before_test:
