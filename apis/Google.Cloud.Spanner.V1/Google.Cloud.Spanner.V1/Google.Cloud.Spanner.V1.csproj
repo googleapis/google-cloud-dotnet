@@ -14,7 +14,7 @@
     <TreatWarningsAsErrors>true</TreatWarningsAsErrors>
     <Description>Low-level Google client library to access the Google Cloud Spanner API. The ADO.NET provider (Google.Cloud.Spanner.Data) which depends on this package is generally preferred for Spanner access.</Description>
     <PackageTags>Spanner;Google;Cloud</PackageTags>
-    <Copyright>Copyright 2017 Google Inc.</Copyright>
+    <Copyright>Copyright 2018 Google LLC</Copyright>
     <Authors>Google Inc.</Authors>
     <PackageIconUrl>https://cloud.google.com/images/gcp-icon-64x64.png</PackageIconUrl>
     <PackageLicenseUrl>https://www.apache.org/licenses/LICENSE-2.0</PackageLicenseUrl>

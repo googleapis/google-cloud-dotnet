@@ -14,7 +14,7 @@
     <TreatWarningsAsErrors>true</TreatWarningsAsErrors>
     <Description>Recommended Google client library to access the Google Cloud Storage API. It wraps the Google.Apis.Storage.v1 client library, making common operations simpler in client code. Google Cloud Storage stores and retrieves potentially large, immutable data objects.</Description>
     <PackageTags>Storage;Google;Cloud</PackageTags>
-    <Copyright>Copyright 2017 Google Inc.</Copyright>
+    <Copyright>Copyright 2018 Google LLC</Copyright>
     <Authors>Google Inc.</Authors>
     <PackageIconUrl>https://cloud.google.com/images/gcp-icon-64x64.png</PackageIconUrl>
     <PackageLicenseUrl>https://www.apache.org/licenses/LICENSE-2.0</PackageLicenseUrl>
