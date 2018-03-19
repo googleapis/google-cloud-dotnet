@@ -778,6 +778,15 @@ namespace Google.Cloud.Bigtable.Admin.V2
             set { Parent = value != null ? value.ToString() : ""; }
         }
 
+        /// <summary>
+        /// <see cref="SnapshotName"/>-typed view over the <see cref="SourceSnapshot"/> resource name property.
+        /// </summary>
+        public SnapshotName SourceSnapshotAsSnapshotName
+        {
+            get { return string.IsNullOrEmpty(SourceSnapshot) ? null : Google.Cloud.Bigtable.Admin.V2.SnapshotName.Parse(SourceSnapshot); }
+            set { SourceSnapshot = value != null ? value.ToString() : ""; }
+        }
+
     }
 
     public partial class CreateTableRequest
@@ -1040,6 +1049,19 @@ namespace Google.Cloud.Bigtable.Admin.V2
 
     }
 
+    public partial class Snapshot
+    {
+        /// <summary>
+        /// <see cref="SnapshotName"/>-typed view over the <see cref="Name"/> resource name property.
+        /// </summary>
+        public SnapshotName SnapshotName
+        {
+            get { return string.IsNullOrEmpty(Name) ? null : Google.Cloud.Bigtable.Admin.V2.SnapshotName.Parse(Name); }
+            set { Name = value != null ? value.ToString() : ""; }
+        }
+
+    }
+
     public partial class SnapshotTableRequest
     {
         /// <summary>
@@ -1049,6 +1071,24 @@ namespace Google.Cloud.Bigtable.Admin.V2
         {
             get { return string.IsNullOrEmpty(Name) ? null : Google.Cloud.Bigtable.Admin.V2.TableName.Parse(Name); }
             set { Name = value != null ? value.ToString() : ""; }
+        }
+
+        /// <summary>
+        /// <see cref="ClusterName"/>-typed view over the <see cref="Cluster"/> resource name property.
+        /// </summary>
+        public ClusterName ClusterAsClusterName
+        {
+            get { return string.IsNullOrEmpty(Cluster) ? null : Google.Cloud.Bigtable.Admin.V2.ClusterName.Parse(Cluster); }
+            set { Cluster = value != null ? value.ToString() : ""; }
+        }
+
+        /// <summary>
+        /// <see cref="SnapshotName"/>-typed view over the <see cref="SnapshotId"/> resource name property.
+        /// </summary>
+        public SnapshotName SnapshotIdAsSnapshotName
+        {
+            get { return string.IsNullOrEmpty(SnapshotId) ? null : Google.Cloud.Bigtable.Admin.V2.SnapshotName.Parse(SnapshotId); }
+            set { SnapshotId = value != null ? value.ToString() : ""; }
         }
 
     }
