@@ -593,7 +593,7 @@ namespace Google.Cloud.Bigtable.Admin.V2.Tests
             };
             Snapshot expectedResponse = new Snapshot
             {
-                Name = "name2-1052831874",
+                SnapshotName = new SnapshotName("[PROJECT]", "[INSTANCE]", "[CLUSTER]", "[SNAPSHOT]"),
                 DataSizeBytes = 2110122398L,
                 Description = "description-1724546052",
             };
@@ -618,7 +618,7 @@ namespace Google.Cloud.Bigtable.Admin.V2.Tests
             };
             Snapshot expectedResponse = new Snapshot
             {
-                Name = "name2-1052831874",
+                SnapshotName = new SnapshotName("[PROJECT]", "[INSTANCE]", "[CLUSTER]", "[SNAPSHOT]"),
                 DataSizeBytes = 2110122398L,
                 Description = "description-1724546052",
             };
@@ -643,7 +643,7 @@ namespace Google.Cloud.Bigtable.Admin.V2.Tests
             };
             Snapshot expectedResponse = new Snapshot
             {
-                Name = "name2-1052831874",
+                SnapshotName = new SnapshotName("[PROJECT]", "[INSTANCE]", "[CLUSTER]", "[SNAPSHOT]"),
                 DataSizeBytes = 2110122398L,
                 Description = "description-1724546052",
             };
@@ -667,7 +667,7 @@ namespace Google.Cloud.Bigtable.Admin.V2.Tests
             };
             Snapshot expectedResponse = new Snapshot
             {
-                Name = "name2-1052831874",
+                SnapshotName = new SnapshotName("[PROJECT]", "[INSTANCE]", "[CLUSTER]", "[SNAPSHOT]"),
                 DataSizeBytes = 2110122398L,
                 Description = "description-1724546052",
             };

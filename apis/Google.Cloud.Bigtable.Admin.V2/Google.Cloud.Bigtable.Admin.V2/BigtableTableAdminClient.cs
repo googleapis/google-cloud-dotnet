@@ -850,13 +850,13 @@ namespace Google.Cloud.Bigtable.Admin.V2
         public virtual Task<Operation<Table, CreateTableFromSnapshotMetadata>> CreateTableFromSnapshotAsync(
             InstanceName parent,
             string tableId,
-            string sourceSnapshot,
+            SnapshotName sourceSnapshot,
             CallSettings callSettings = null) => CreateTableFromSnapshotAsync(
                 new CreateTableFromSnapshotRequest
                 {
                     ParentAsInstanceName = GaxPreconditions.CheckNotNull(parent, nameof(parent)),
                     TableId = GaxPreconditions.CheckNotNullOrEmpty(tableId, nameof(tableId)),
-                    SourceSnapshot = GaxPreconditions.CheckNotNullOrEmpty(sourceSnapshot, nameof(sourceSnapshot)),
+                    SourceSnapshotAsSnapshotName = GaxPreconditions.CheckNotNull(sourceSnapshot, nameof(sourceSnapshot)),
                 },
                 callSettings);
 
@@ -892,7 +892,7 @@ namespace Google.Cloud.Bigtable.Admin.V2
         public virtual Task<Operation<Table, CreateTableFromSnapshotMetadata>> CreateTableFromSnapshotAsync(
             InstanceName parent,
             string tableId,
-            string sourceSnapshot,
+            SnapshotName sourceSnapshot,
             CancellationToken cancellationToken) => CreateTableFromSnapshotAsync(
                 parent,
                 tableId,
@@ -931,13 +931,13 @@ namespace Google.Cloud.Bigtable.Admin.V2
         public virtual Operation<Table, CreateTableFromSnapshotMetadata> CreateTableFromSnapshot(
             InstanceName parent,
             string tableId,
-            string sourceSnapshot,
+            SnapshotName sourceSnapshot,
             CallSettings callSettings = null) => CreateTableFromSnapshot(
                 new CreateTableFromSnapshotRequest
                 {
                     ParentAsInstanceName = GaxPreconditions.CheckNotNull(parent, nameof(parent)),
                     TableId = GaxPreconditions.CheckNotNullOrEmpty(tableId, nameof(tableId)),
-                    SourceSnapshot = GaxPreconditions.CheckNotNullOrEmpty(sourceSnapshot, nameof(sourceSnapshot)),
+                    SourceSnapshotAsSnapshotName = GaxPreconditions.CheckNotNull(sourceSnapshot, nameof(sourceSnapshot)),
                 },
                 callSettings);
 
@@ -1812,6 +1812,150 @@ namespace Google.Cloud.Bigtable.Admin.V2
         {
             throw new NotImplementedException();
         }
+
+        /// <summary>
+        /// This is a private alpha release of Cloud Bigtable snapshots. This feature
+        /// is not currently available to most Cloud Bigtable customers. This feature
+        /// might be changed in backward-incompatible ways and is not recommended for
+        /// production use. It is not subject to any SLA or deprecation policy.
+        ///
+        /// Creates a new snapshot in the specified cluster from the specified
+        /// source table. The cluster and the table must be in the same instance.
+        /// </summary>
+        /// <param name="name">
+        /// The unique name of the table to have the snapshot taken.
+        /// Values are of the form
+        /// `projects/&lt;project&gt;/instances/&lt;instance&gt;/tables/&lt;table&gt;`.
+        /// </param>
+        /// <param name="cluster">
+        /// The name of the cluster where the snapshot will be created in.
+        /// Values are of the form
+        /// `projects/&lt;project&gt;/instances/&lt;instance&gt;/clusters/&lt;cluster&gt;`.
+        /// </param>
+        /// <param name="snapshotId">
+        /// The ID by which the new snapshot should be referred to within the parent
+        /// cluster, e.g., `mysnapshot` of the form: `[_a-zA-Z0-9][-_.a-zA-Z0-9]*`
+        /// rather than
+        /// `projects/&lt;project&gt;/instances/&lt;instance&gt;/clusters/&lt;cluster&gt;/snapshots/mysnapshot`.
+        /// </param>
+        /// <param name="description">
+        /// Description of the snapshot.
+        /// </param>
+        /// <param name="callSettings">
+        /// If not null, applies overrides to this RPC call.
+        /// </param>
+        /// <returns>
+        /// A Task containing the RPC response.
+        /// </returns>
+        public virtual Task<Operation<Snapshot, SnapshotTableMetadata>> SnapshotTableAsync(
+            TableName name,
+            ClusterName cluster,
+            SnapshotName snapshotId,
+            string description,
+            CallSettings callSettings = null) => SnapshotTableAsync(
+                new SnapshotTableRequest
+                {
+                    TableName = GaxPreconditions.CheckNotNull(name, nameof(name)),
+                    ClusterAsClusterName = GaxPreconditions.CheckNotNull(cluster, nameof(cluster)),
+                    SnapshotIdAsSnapshotName = GaxPreconditions.CheckNotNull(snapshotId, nameof(snapshotId)),
+                    Description = GaxPreconditions.CheckNotNullOrEmpty(description, nameof(description)),
+                },
+                callSettings);
+
+        /// <summary>
+        /// This is a private alpha release of Cloud Bigtable snapshots. This feature
+        /// is not currently available to most Cloud Bigtable customers. This feature
+        /// might be changed in backward-incompatible ways and is not recommended for
+        /// production use. It is not subject to any SLA or deprecation policy.
+        ///
+        /// Creates a new snapshot in the specified cluster from the specified
+        /// source table. The cluster and the table must be in the same instance.
+        /// </summary>
+        /// <param name="name">
+        /// The unique name of the table to have the snapshot taken.
+        /// Values are of the form
+        /// `projects/&lt;project&gt;/instances/&lt;instance&gt;/tables/&lt;table&gt;`.
+        /// </param>
+        /// <param name="cluster">
+        /// The name of the cluster where the snapshot will be created in.
+        /// Values are of the form
+        /// `projects/&lt;project&gt;/instances/&lt;instance&gt;/clusters/&lt;cluster&gt;`.
+        /// </param>
+        /// <param name="snapshotId">
+        /// The ID by which the new snapshot should be referred to within the parent
+        /// cluster, e.g., `mysnapshot` of the form: `[_a-zA-Z0-9][-_.a-zA-Z0-9]*`
+        /// rather than
+        /// `projects/&lt;project&gt;/instances/&lt;instance&gt;/clusters/&lt;cluster&gt;/snapshots/mysnapshot`.
+        /// </param>
+        /// <param name="description">
+        /// Description of the snapshot.
+        /// </param>
+        /// <param name="cancellationToken">
+        /// A <see cref="CancellationToken"/> to use for this RPC.
+        /// </param>
+        /// <returns>
+        /// A Task containing the RPC response.
+        /// </returns>
+        public virtual Task<Operation<Snapshot, SnapshotTableMetadata>> SnapshotTableAsync(
+            TableName name,
+            ClusterName cluster,
+            SnapshotName snapshotId,
+            string description,
+            CancellationToken cancellationToken) => SnapshotTableAsync(
+                name,
+                cluster,
+                snapshotId,
+                description,
+                CallSettings.FromCancellationToken(cancellationToken));
+
+        /// <summary>
+        /// This is a private alpha release of Cloud Bigtable snapshots. This feature
+        /// is not currently available to most Cloud Bigtable customers. This feature
+        /// might be changed in backward-incompatible ways and is not recommended for
+        /// production use. It is not subject to any SLA or deprecation policy.
+        ///
+        /// Creates a new snapshot in the specified cluster from the specified
+        /// source table. The cluster and the table must be in the same instance.
+        /// </summary>
+        /// <param name="name">
+        /// The unique name of the table to have the snapshot taken.
+        /// Values are of the form
+        /// `projects/&lt;project&gt;/instances/&lt;instance&gt;/tables/&lt;table&gt;`.
+        /// </param>
+        /// <param name="cluster">
+        /// The name of the cluster where the snapshot will be created in.
+        /// Values are of the form
+        /// `projects/&lt;project&gt;/instances/&lt;instance&gt;/clusters/&lt;cluster&gt;`.
+        /// </param>
+        /// <param name="snapshotId">
+        /// The ID by which the new snapshot should be referred to within the parent
+        /// cluster, e.g., `mysnapshot` of the form: `[_a-zA-Z0-9][-_.a-zA-Z0-9]*`
+        /// rather than
+        /// `projects/&lt;project&gt;/instances/&lt;instance&gt;/clusters/&lt;cluster&gt;/snapshots/mysnapshot`.
+        /// </param>
+        /// <param name="description">
+        /// Description of the snapshot.
+        /// </param>
+        /// <param name="callSettings">
+        /// If not null, applies overrides to this RPC call.
+        /// </param>
+        /// <returns>
+        /// The RPC response.
+        /// </returns>
+        public virtual Operation<Snapshot, SnapshotTableMetadata> SnapshotTable(
+            TableName name,
+            ClusterName cluster,
+            SnapshotName snapshotId,
+            string description,
+            CallSettings callSettings = null) => SnapshotTable(
+                new SnapshotTableRequest
+                {
+                    TableName = GaxPreconditions.CheckNotNull(name, nameof(name)),
+                    ClusterAsClusterName = GaxPreconditions.CheckNotNull(cluster, nameof(cluster)),
+                    SnapshotIdAsSnapshotName = GaxPreconditions.CheckNotNull(snapshotId, nameof(snapshotId)),
+                    Description = GaxPreconditions.CheckNotNullOrEmpty(description, nameof(description)),
+                },
+                callSettings);
 
         /// <summary>
         /// This is a private alpha release of Cloud Bigtable snapshots. This feature

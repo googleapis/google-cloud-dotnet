@@ -104,14 +104,14 @@ namespace Google.Cloud.Bigtable.Admin.V2.Snippets
         /// <summary>Snippet for CreateTableFromSnapshotAsync</summary>
         public async Task CreateTableFromSnapshotAsync()
         {
-            // Snippet: CreateTableFromSnapshotAsync(InstanceName,string,string,CallSettings)
-            // Additional: CreateTableFromSnapshotAsync(InstanceName,string,string,CancellationToken)
+            // Snippet: CreateTableFromSnapshotAsync(InstanceName,string,SnapshotName,CallSettings)
+            // Additional: CreateTableFromSnapshotAsync(InstanceName,string,SnapshotName,CancellationToken)
             // Create client
             BigtableTableAdminClient bigtableTableAdminClient = await BigtableTableAdminClient.CreateAsync();
             // Initialize request argument(s)
             InstanceName parent = new InstanceName("[PROJECT]", "[INSTANCE]");
             string tableId = "";
-            string sourceSnapshot = "";
+            SnapshotName sourceSnapshot = new SnapshotName("[PROJECT]", "[INSTANCE]", "[CLUSTER]", "[SNAPSHOT]");
             // Make the request
             Operation<Table, CreateTableFromSnapshotMetadata> response =
                 await bigtableTableAdminClient.CreateTableFromSnapshotAsync(parent, tableId, sourceSnapshot);
@@ -139,13 +139,13 @@ namespace Google.Cloud.Bigtable.Admin.V2.Snippets
         /// <summary>Snippet for CreateTableFromSnapshot</summary>
         public void CreateTableFromSnapshot()
         {
-            // Snippet: CreateTableFromSnapshot(InstanceName,string,string,CallSettings)
+            // Snippet: CreateTableFromSnapshot(InstanceName,string,SnapshotName,CallSettings)
             // Create client
             BigtableTableAdminClient bigtableTableAdminClient = BigtableTableAdminClient.Create();
             // Initialize request argument(s)
             InstanceName parent = new InstanceName("[PROJECT]", "[INSTANCE]");
             string tableId = "";
-            string sourceSnapshot = "";
+            SnapshotName sourceSnapshot = new SnapshotName("[PROJECT]", "[INSTANCE]", "[CLUSTER]", "[SNAPSHOT]");
             // Make the request
             Operation<Table, CreateTableFromSnapshotMetadata> response =
                 bigtableTableAdminClient.CreateTableFromSnapshot(parent, tableId, sourceSnapshot);
@@ -181,7 +181,7 @@ namespace Google.Cloud.Bigtable.Admin.V2.Snippets
             {
                 ParentAsInstanceName = new InstanceName("[PROJECT]", "[INSTANCE]"),
                 TableId = "",
-                SourceSnapshot = "",
+                SourceSnapshotAsSnapshotName = new SnapshotName("[PROJECT]", "[INSTANCE]", "[CLUSTER]", "[SNAPSHOT]"),
             };
             // Make the request
             Operation<Table, CreateTableFromSnapshotMetadata> response =
@@ -218,7 +218,7 @@ namespace Google.Cloud.Bigtable.Admin.V2.Snippets
             {
                 ParentAsInstanceName = new InstanceName("[PROJECT]", "[INSTANCE]"),
                 TableId = "",
-                SourceSnapshot = "",
+                SourceSnapshotAsSnapshotName = new SnapshotName("[PROJECT]", "[INSTANCE]", "[CLUSTER]", "[SNAPSHOT]"),
             };
             // Make the request
             Operation<Table, CreateTableFromSnapshotMetadata> response =
@@ -762,6 +762,77 @@ namespace Google.Cloud.Bigtable.Admin.V2.Snippets
         }
 
         /// <summary>Snippet for SnapshotTableAsync</summary>
+        public async Task SnapshotTableAsync()
+        {
+            // Snippet: SnapshotTableAsync(TableName,ClusterName,SnapshotName,string,CallSettings)
+            // Additional: SnapshotTableAsync(TableName,ClusterName,SnapshotName,string,CancellationToken)
+            // Create client
+            BigtableTableAdminClient bigtableTableAdminClient = await BigtableTableAdminClient.CreateAsync();
+            // Initialize request argument(s)
+            TableName name = new TableName("[PROJECT]", "[INSTANCE]", "[TABLE]");
+            ClusterName cluster = new ClusterName("[PROJECT]", "[INSTANCE]", "[CLUSTER]");
+            SnapshotName snapshotId = new SnapshotName("[PROJECT]", "[INSTANCE]", "[CLUSTER]", "[SNAPSHOT]");
+            string description = "";
+            // Make the request
+            Operation<Snapshot, SnapshotTableMetadata> response =
+                await bigtableTableAdminClient.SnapshotTableAsync(name, cluster, snapshotId, description);
+
+            // Poll until the returned long-running operation is complete
+            Operation<Snapshot, SnapshotTableMetadata> completedResponse =
+                await response.PollUntilCompletedAsync();
+            // Retrieve the operation result
+            Snapshot result = completedResponse.Result;
+
+            // Or get the name of the operation
+            string operationName = response.Name;
+            // This name can be stored, then the long-running operation retrieved later by name
+            Operation<Snapshot, SnapshotTableMetadata> retrievedResponse =
+                await bigtableTableAdminClient.PollOnceSnapshotTableAsync(operationName);
+            // Check if the retrieved long-running operation has completed
+            if (retrievedResponse.IsCompleted)
+            {
+                // If it has completed, then access the result
+                Snapshot retrievedResult = retrievedResponse.Result;
+            }
+            // End snippet
+        }
+
+        /// <summary>Snippet for SnapshotTable</summary>
+        public void SnapshotTable()
+        {
+            // Snippet: SnapshotTable(TableName,ClusterName,SnapshotName,string,CallSettings)
+            // Create client
+            BigtableTableAdminClient bigtableTableAdminClient = BigtableTableAdminClient.Create();
+            // Initialize request argument(s)
+            TableName name = new TableName("[PROJECT]", "[INSTANCE]", "[TABLE]");
+            ClusterName cluster = new ClusterName("[PROJECT]", "[INSTANCE]", "[CLUSTER]");
+            SnapshotName snapshotId = new SnapshotName("[PROJECT]", "[INSTANCE]", "[CLUSTER]", "[SNAPSHOT]");
+            string description = "";
+            // Make the request
+            Operation<Snapshot, SnapshotTableMetadata> response =
+                bigtableTableAdminClient.SnapshotTable(name, cluster, snapshotId, description);
+
+            // Poll until the returned long-running operation is complete
+            Operation<Snapshot, SnapshotTableMetadata> completedResponse =
+                response.PollUntilCompleted();
+            // Retrieve the operation result
+            Snapshot result = completedResponse.Result;
+
+            // Or get the name of the operation
+            string operationName = response.Name;
+            // This name can be stored, then the long-running operation retrieved later by name
+            Operation<Snapshot, SnapshotTableMetadata> retrievedResponse =
+                bigtableTableAdminClient.PollOnceSnapshotTable(operationName);
+            // Check if the retrieved long-running operation has completed
+            if (retrievedResponse.IsCompleted)
+            {
+                // If it has completed, then access the result
+                Snapshot retrievedResult = retrievedResponse.Result;
+            }
+            // End snippet
+        }
+
+        /// <summary>Snippet for SnapshotTableAsync</summary>
         public async Task SnapshotTableAsync_RequestObject()
         {
             // Snippet: SnapshotTableAsync(SnapshotTableRequest,CallSettings)
@@ -771,8 +842,8 @@ namespace Google.Cloud.Bigtable.Admin.V2.Snippets
             SnapshotTableRequest request = new SnapshotTableRequest
             {
                 TableName = new TableName("[PROJECT]", "[INSTANCE]", "[TABLE]"),
-                Cluster = "",
-                SnapshotId = "",
+                ClusterAsClusterName = new ClusterName("[PROJECT]", "[INSTANCE]", "[CLUSTER]"),
+                SnapshotIdAsSnapshotName = new SnapshotName("[PROJECT]", "[INSTANCE]", "[CLUSTER]", "[SNAPSHOT]"),
                 Description = "",
             };
             // Make the request
@@ -809,8 +880,8 @@ namespace Google.Cloud.Bigtable.Admin.V2.Snippets
             SnapshotTableRequest request = new SnapshotTableRequest
             {
                 TableName = new TableName("[PROJECT]", "[INSTANCE]", "[TABLE]"),
-                Cluster = "",
-                SnapshotId = "",
+                ClusterAsClusterName = new ClusterName("[PROJECT]", "[INSTANCE]", "[CLUSTER]"),
+                SnapshotIdAsSnapshotName = new SnapshotName("[PROJECT]", "[INSTANCE]", "[CLUSTER]", "[SNAPSHOT]"),
                 Description = "",
             };
             // Make the request
