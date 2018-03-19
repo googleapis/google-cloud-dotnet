@@ -33,15 +33,20 @@ namespace Google.Cloud.Bigtable.Admin.V2.Snippets
     {
         public async Task CheckConsistencyAsync()
         {
+            // TODO: When replication goes to beta or GA, having something cleaner available than what is below.
+
             // Snippet: CheckConsistencyAsync(TableName,string,CallSettings)
             // Additional: GenerateConsistencyTokenAsync(TableName,CallSettings)
+            BigtableTableAdminClient adminClient = await BigtableTableAdminClient.CreateAsync();
+
             BigtableTableAdminSettings settings = BigtableTableAdminSettings.GetDefault();
-            BigtableTableAdminClient bigtableTableAdminClient = await BigtableTableAdminClient.CreateAsync();
+            CallSettings generateSettings = settings.GenerateConsistencyTokenSettings;
+            CallSettings checkConsistencySettings = settings.CheckConsistencySettings;
 
             // Create a consistency token for the table.
             TableName tableName = new TableName("[PROJECT]", "[INSTANCE]", "[TABLE]");
             GenerateConsistencyTokenResponse generateResponse =
-                await bigtableTableAdminClient.GenerateConsistencyTokenAsync(tableName, settings.GenerateConsistencyTokenSettings);
+                await adminClient.GenerateConsistencyTokenAsync(tableName, generateSettings);
             string consistencyToken = generateResponse.ConsistencyToken;
 
             // Check for consistency for 60 seconds at 10 second intervals.
@@ -49,15 +54,15 @@ namespace Google.Cloud.Bigtable.Admin.V2.Snippets
             TimeSpan pollingInterval = TimeSpan.FromSeconds(10);
             CheckConsistencyResponse checkConsistencyResponse =
                 await Polling.PollRepeatedlyAsync(
-                    deadline => bigtableTableAdminClient.CheckConsistencyAsync(
+                    deadline => adminClient.CheckConsistencyAsync(
                         tableName,
                         consistencyToken,
-                        settings.CheckConsistencySettings.WithEarlierDeadline(deadline, settings.Clock)),
+                        checkConsistencySettings.WithEarlierDeadline(deadline, settings.Clock)),
                     response => response.Consistent,
                     settings.Clock,
                     settings.Scheduler,
                     new PollSettings(Expiration.FromTimeout(pollingTimeout), pollingInterval),
-                    settings.CheckConsistencySettings.CancellationToken ?? CancellationToken.None);
+                    checkConsistencySettings.CancellationToken ?? CancellationToken.None);
 
             if (checkConsistencyResponse.Consistent)
             {
