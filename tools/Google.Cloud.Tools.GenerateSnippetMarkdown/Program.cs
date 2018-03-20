@@ -89,6 +89,11 @@ namespace Google.Cloud.Tools.GenerateSnippetMarkdown
             { "long", "System.Int64" },
             { "double", "System.Double" },
         };
+        private static readonly string[] SnippetFileSuffixes =
+        {
+            "Snippets.cs",
+            "Snippets.g.cs"
+        };
 
         private static int Main(string[] args)
         {
@@ -158,6 +163,12 @@ namespace Google.Cloud.Tools.GenerateSnippetMarkdown
 
             foreach (var entry in snippets)
             {
+                if (entry.Key.EndsWith(".cs"))
+                {
+                    errors.Add($"Snippet file {entry.Key} does not end with one of the accepted snippet file suffixes: {string.Join(", ", SnippetFileSuffixes)}");
+                    continue;
+                }
+
                 string snippetFile = entry.Key + ".txt";
                 GenerateSnippetText(Path.Combine(output, snippetFile), entry);
                 MapSnippetMetadataUids(entry, memberLookup[entry.Key], errors);
@@ -264,7 +275,7 @@ namespace Google.Cloud.Tools.GenerateSnippetMarkdown
             // Experimental libraries will be in non-experimental namespaces.
             projectName = TrimSuffix(projectName, ".Experimental");
             var query = from sourceFile in Directory.GetFiles(snippetSourceDir, "*.cs")
-                        let type = projectName + "." + TrimSuffix(Path.GetFileName(sourceFile), "Snippets.cs", "Snippets.g.cs")
+                        let type = projectName + "." + TrimSuffix(Path.GetFileName(sourceFile), SnippetFileSuffixes)
                         from snippet in LoadFileSnippets(sourceFile, errors)
                         select new { Type = type, Snippet = snippet };
             return query.ToLookup(item => item.Type, item => item.Snippet);
