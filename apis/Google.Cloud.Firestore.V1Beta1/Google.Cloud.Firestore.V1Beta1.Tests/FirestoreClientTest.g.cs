@@ -34,6 +34,92 @@ namespace Google.Cloud.Firestore.V1Beta1.Tests
     public class GeneratedFirestoreClientTest
     {
         [Fact]
+        public void GetDocument()
+        {
+            Mock<Firestore.FirestoreClient> mockGrpcClient = new Mock<Firestore.FirestoreClient>(MockBehavior.Strict);
+            GetDocumentRequest request = new GetDocumentRequest
+            {
+                Name = new AnyPathName("[PROJECT]", "[DATABASE]", "[DOCUMENT]", "[ANY_PATH]").ToString(),
+            };
+            Document expectedResponse = new Document
+            {
+                Name = "name2-1052831874",
+            };
+            mockGrpcClient.Setup(x => x.GetDocument(request, It.IsAny<CallOptions>()))
+                .Returns(expectedResponse);
+            FirestoreClient client = new FirestoreClientImpl(mockGrpcClient.Object, null);
+            Document response = client.GetDocument(request);
+            Assert.Same(expectedResponse, response);
+            mockGrpcClient.VerifyAll();
+        }
+
+        [Fact]
+        public async Task GetDocumentAsync()
+        {
+            Mock<Firestore.FirestoreClient> mockGrpcClient = new Mock<Firestore.FirestoreClient>(MockBehavior.Strict);
+            GetDocumentRequest request = new GetDocumentRequest
+            {
+                Name = new AnyPathName("[PROJECT]", "[DATABASE]", "[DOCUMENT]", "[ANY_PATH]").ToString(),
+            };
+            Document expectedResponse = new Document
+            {
+                Name = "name2-1052831874",
+            };
+            mockGrpcClient.Setup(x => x.GetDocumentAsync(request, It.IsAny<CallOptions>()))
+                .Returns(new Grpc.Core.AsyncUnaryCall<Document>(Task.FromResult(expectedResponse), null, null, null, null));
+            FirestoreClient client = new FirestoreClientImpl(mockGrpcClient.Object, null);
+            Document response = await client.GetDocumentAsync(request);
+            Assert.Same(expectedResponse, response);
+            mockGrpcClient.VerifyAll();
+        }
+
+        [Fact]
+        public void CreateDocument()
+        {
+            Mock<Firestore.FirestoreClient> mockGrpcClient = new Mock<Firestore.FirestoreClient>(MockBehavior.Strict);
+            CreateDocumentRequest request = new CreateDocumentRequest
+            {
+                Parent = new AnyPathName("[PROJECT]", "[DATABASE]", "[DOCUMENT]", "[ANY_PATH]").ToString(),
+                CollectionId = "collectionId-821242276",
+                DocumentId = "documentId506676927",
+                Document = new Document(),
+            };
+            Document expectedResponse = new Document
+            {
+                Name = "name3373707",
+            };
+            mockGrpcClient.Setup(x => x.CreateDocument(request, It.IsAny<CallOptions>()))
+                .Returns(expectedResponse);
+            FirestoreClient client = new FirestoreClientImpl(mockGrpcClient.Object, null);
+            Document response = client.CreateDocument(request);
+            Assert.Same(expectedResponse, response);
+            mockGrpcClient.VerifyAll();
+        }
+
+        [Fact]
+        public async Task CreateDocumentAsync()
+        {
+            Mock<Firestore.FirestoreClient> mockGrpcClient = new Mock<Firestore.FirestoreClient>(MockBehavior.Strict);
+            CreateDocumentRequest request = new CreateDocumentRequest
+            {
+                Parent = new AnyPathName("[PROJECT]", "[DATABASE]", "[DOCUMENT]", "[ANY_PATH]").ToString(),
+                CollectionId = "collectionId-821242276",
+                DocumentId = "documentId506676927",
+                Document = new Document(),
+            };
+            Document expectedResponse = new Document
+            {
+                Name = "name3373707",
+            };
+            mockGrpcClient.Setup(x => x.CreateDocumentAsync(request, It.IsAny<CallOptions>()))
+                .Returns(new Grpc.Core.AsyncUnaryCall<Document>(Task.FromResult(expectedResponse), null, null, null, null));
+            FirestoreClient client = new FirestoreClientImpl(mockGrpcClient.Object, null);
+            Document response = await client.CreateDocumentAsync(request);
+            Assert.Same(expectedResponse, response);
+            mockGrpcClient.VerifyAll();
+        }
+
+        [Fact]
         public void UpdateDocument()
         {
             Mock<Firestore.FirestoreClient> mockGrpcClient = new Mock<Firestore.FirestoreClient>(MockBehavior.Strict);

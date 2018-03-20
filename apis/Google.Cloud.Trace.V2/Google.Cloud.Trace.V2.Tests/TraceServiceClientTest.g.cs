@@ -104,5 +104,57 @@ namespace Google.Cloud.Trace.V2.Tests
             mockGrpcClient.VerifyAll();
         }
 
+        [Fact]
+        public void CreateSpan()
+        {
+            Mock<TraceService.TraceServiceClient> mockGrpcClient = new Mock<TraceService.TraceServiceClient>(MockBehavior.Strict);
+            Span request = new Span
+            {
+                SpanName = new SpanName("[PROJECT]", "[TRACE]", "[SPAN]"),
+                SpanId = "spanId-2011840976",
+                DisplayName = new TruncatableString(),
+                StartTime = new Timestamp(),
+                EndTime = new Timestamp(),
+            };
+            Span expectedResponse = new Span
+            {
+                SpanName = new SpanName("[PROJECT]", "[TRACE]", "[SPAN]"),
+                SpanId = "spanId2-643891741",
+                ParentSpanId = "parentSpanId-1757797477",
+            };
+            mockGrpcClient.Setup(x => x.CreateSpan(request, It.IsAny<CallOptions>()))
+                .Returns(expectedResponse);
+            TraceServiceClient client = new TraceServiceClientImpl(mockGrpcClient.Object, null);
+            Span response = client.CreateSpan(request);
+            Assert.Same(expectedResponse, response);
+            mockGrpcClient.VerifyAll();
+        }
+
+        [Fact]
+        public async Task CreateSpanAsync()
+        {
+            Mock<TraceService.TraceServiceClient> mockGrpcClient = new Mock<TraceService.TraceServiceClient>(MockBehavior.Strict);
+            Span request = new Span
+            {
+                SpanName = new SpanName("[PROJECT]", "[TRACE]", "[SPAN]"),
+                SpanId = "spanId-2011840976",
+                DisplayName = new TruncatableString(),
+                StartTime = new Timestamp(),
+                EndTime = new Timestamp(),
+            };
+            Span expectedResponse = new Span
+            {
+                SpanName = new SpanName("[PROJECT]", "[TRACE]", "[SPAN]"),
+                SpanId = "spanId2-643891741",
+                ParentSpanId = "parentSpanId-1757797477",
+            };
+            mockGrpcClient.Setup(x => x.CreateSpanAsync(request, It.IsAny<CallOptions>()))
+                .Returns(new Grpc.Core.AsyncUnaryCall<Span>(Task.FromResult(expectedResponse), null, null, null, null));
+            TraceServiceClient client = new TraceServiceClientImpl(mockGrpcClient.Object, null);
+            Span response = await client.CreateSpanAsync(request);
+            Assert.Same(expectedResponse, response);
+            mockGrpcClient.VerifyAll();
+        }
+
     }
 }

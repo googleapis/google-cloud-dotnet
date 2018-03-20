@@ -220,6 +220,58 @@ namespace Google.Cloud.Bigtable.Admin.V2.Tests
         }
 
         [Fact]
+        public void UpdateInstance()
+        {
+            Mock<BigtableInstanceAdmin.BigtableInstanceAdminClient> mockGrpcClient = new Mock<BigtableInstanceAdmin.BigtableInstanceAdminClient>(MockBehavior.Strict);
+            mockGrpcClient.Setup(x => x.CreateOperationsClient())
+                .Returns(new Mock<Operations.OperationsClient>().Object);
+            Instance request = new Instance
+            {
+                InstanceName = new InstanceName("[PROJECT]", "[INSTANCE]"),
+                DisplayName = "displayName1615086568",
+                Type = Instance.Types.Type.Unspecified,
+                Labels = { },
+            };
+            Instance expectedResponse = new Instance
+            {
+                InstanceName = new InstanceName("[PROJECT]", "[INSTANCE]"),
+                DisplayName = "displayName21615000987",
+            };
+            mockGrpcClient.Setup(x => x.UpdateInstance(request, It.IsAny<CallOptions>()))
+                .Returns(expectedResponse);
+            BigtableInstanceAdminClient client = new BigtableInstanceAdminClientImpl(mockGrpcClient.Object, null);
+            Instance response = client.UpdateInstance(request);
+            Assert.Same(expectedResponse, response);
+            mockGrpcClient.VerifyAll();
+        }
+
+        [Fact]
+        public async Task UpdateInstanceAsync()
+        {
+            Mock<BigtableInstanceAdmin.BigtableInstanceAdminClient> mockGrpcClient = new Mock<BigtableInstanceAdmin.BigtableInstanceAdminClient>(MockBehavior.Strict);
+            mockGrpcClient.Setup(x => x.CreateOperationsClient())
+                .Returns(new Mock<Operations.OperationsClient>().Object);
+            Instance request = new Instance
+            {
+                InstanceName = new InstanceName("[PROJECT]", "[INSTANCE]"),
+                DisplayName = "displayName1615086568",
+                Type = Instance.Types.Type.Unspecified,
+                Labels = { },
+            };
+            Instance expectedResponse = new Instance
+            {
+                InstanceName = new InstanceName("[PROJECT]", "[INSTANCE]"),
+                DisplayName = "displayName21615000987",
+            };
+            mockGrpcClient.Setup(x => x.UpdateInstanceAsync(request, It.IsAny<CallOptions>()))
+                .Returns(new Grpc.Core.AsyncUnaryCall<Instance>(Task.FromResult(expectedResponse), null, null, null, null));
+            BigtableInstanceAdminClient client = new BigtableInstanceAdminClientImpl(mockGrpcClient.Object, null);
+            Instance response = await client.UpdateInstanceAsync(request);
+            Assert.Same(expectedResponse, response);
+            mockGrpcClient.VerifyAll();
+        }
+
+        [Fact]
         public void DeleteInstance()
         {
             Mock<BigtableInstanceAdmin.BigtableInstanceAdminClient> mockGrpcClient = new Mock<BigtableInstanceAdmin.BigtableInstanceAdminClient>(MockBehavior.Strict);

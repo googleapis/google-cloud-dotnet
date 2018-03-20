@@ -537,6 +537,132 @@ namespace Google.Cloud.Container.V1.Tests
         }
 
         [Fact]
+        public void UpdateNodePool()
+        {
+            Mock<ClusterManager.ClusterManagerClient> mockGrpcClient = new Mock<ClusterManager.ClusterManagerClient>(MockBehavior.Strict);
+            UpdateNodePoolRequest request = new UpdateNodePoolRequest
+            {
+                ProjectId = "projectId-1969970175",
+                Zone = "zone3744684",
+                ClusterId = "clusterId240280960",
+                NodePoolId = "nodePoolId1043384033",
+                NodeVersion = "nodeVersion1790136219",
+                ImageType = "imageType-1442758754",
+            };
+            Operation expectedResponse = new Operation
+            {
+                Name = "name3373707",
+                Zone = "zone2-696322977",
+                Detail = "detail-1335224239",
+                StatusMessage = "statusMessage-239442758",
+                SelfLink = "selfLink-1691268851",
+                TargetLink = "targetLink-2084812312",
+                StartTime = "startTime-1573145462",
+                EndTime = "endTime1725551537",
+            };
+            mockGrpcClient.Setup(x => x.UpdateNodePool(request, It.IsAny<CallOptions>()))
+                .Returns(expectedResponse);
+            ClusterManagerClient client = new ClusterManagerClientImpl(mockGrpcClient.Object, null);
+            Operation response = client.UpdateNodePool(request);
+            Assert.Same(expectedResponse, response);
+            mockGrpcClient.VerifyAll();
+        }
+
+        [Fact]
+        public async Task UpdateNodePoolAsync()
+        {
+            Mock<ClusterManager.ClusterManagerClient> mockGrpcClient = new Mock<ClusterManager.ClusterManagerClient>(MockBehavior.Strict);
+            UpdateNodePoolRequest request = new UpdateNodePoolRequest
+            {
+                ProjectId = "projectId-1969970175",
+                Zone = "zone3744684",
+                ClusterId = "clusterId240280960",
+                NodePoolId = "nodePoolId1043384033",
+                NodeVersion = "nodeVersion1790136219",
+                ImageType = "imageType-1442758754",
+            };
+            Operation expectedResponse = new Operation
+            {
+                Name = "name3373707",
+                Zone = "zone2-696322977",
+                Detail = "detail-1335224239",
+                StatusMessage = "statusMessage-239442758",
+                SelfLink = "selfLink-1691268851",
+                TargetLink = "targetLink-2084812312",
+                StartTime = "startTime-1573145462",
+                EndTime = "endTime1725551537",
+            };
+            mockGrpcClient.Setup(x => x.UpdateNodePoolAsync(request, It.IsAny<CallOptions>()))
+                .Returns(new Grpc.Core.AsyncUnaryCall<Operation>(Task.FromResult(expectedResponse), null, null, null, null));
+            ClusterManagerClient client = new ClusterManagerClientImpl(mockGrpcClient.Object, null);
+            Operation response = await client.UpdateNodePoolAsync(request);
+            Assert.Same(expectedResponse, response);
+            mockGrpcClient.VerifyAll();
+        }
+
+        [Fact]
+        public void SetNodePoolAutoscaling()
+        {
+            Mock<ClusterManager.ClusterManagerClient> mockGrpcClient = new Mock<ClusterManager.ClusterManagerClient>(MockBehavior.Strict);
+            SetNodePoolAutoscalingRequest request = new SetNodePoolAutoscalingRequest
+            {
+                ProjectId = "projectId-1969970175",
+                Zone = "zone3744684",
+                ClusterId = "clusterId240280960",
+                NodePoolId = "nodePoolId1043384033",
+                Autoscaling = new NodePoolAutoscaling(),
+            };
+            Operation expectedResponse = new Operation
+            {
+                Name = "name3373707",
+                Zone = "zone2-696322977",
+                Detail = "detail-1335224239",
+                StatusMessage = "statusMessage-239442758",
+                SelfLink = "selfLink-1691268851",
+                TargetLink = "targetLink-2084812312",
+                StartTime = "startTime-1573145462",
+                EndTime = "endTime1725551537",
+            };
+            mockGrpcClient.Setup(x => x.SetNodePoolAutoscaling(request, It.IsAny<CallOptions>()))
+                .Returns(expectedResponse);
+            ClusterManagerClient client = new ClusterManagerClientImpl(mockGrpcClient.Object, null);
+            Operation response = client.SetNodePoolAutoscaling(request);
+            Assert.Same(expectedResponse, response);
+            mockGrpcClient.VerifyAll();
+        }
+
+        [Fact]
+        public async Task SetNodePoolAutoscalingAsync()
+        {
+            Mock<ClusterManager.ClusterManagerClient> mockGrpcClient = new Mock<ClusterManager.ClusterManagerClient>(MockBehavior.Strict);
+            SetNodePoolAutoscalingRequest request = new SetNodePoolAutoscalingRequest
+            {
+                ProjectId = "projectId-1969970175",
+                Zone = "zone3744684",
+                ClusterId = "clusterId240280960",
+                NodePoolId = "nodePoolId1043384033",
+                Autoscaling = new NodePoolAutoscaling(),
+            };
+            Operation expectedResponse = new Operation
+            {
+                Name = "name3373707",
+                Zone = "zone2-696322977",
+                Detail = "detail-1335224239",
+                StatusMessage = "statusMessage-239442758",
+                SelfLink = "selfLink-1691268851",
+                TargetLink = "targetLink-2084812312",
+                StartTime = "startTime-1573145462",
+                EndTime = "endTime1725551537",
+            };
+            mockGrpcClient.Setup(x => x.SetNodePoolAutoscalingAsync(request, It.IsAny<CallOptions>()))
+                .Returns(new Grpc.Core.AsyncUnaryCall<Operation>(Task.FromResult(expectedResponse), null, null, null, null));
+            ClusterManagerClient client = new ClusterManagerClientImpl(mockGrpcClient.Object, null);
+            Operation response = await client.SetNodePoolAutoscalingAsync(request);
+            Assert.Same(expectedResponse, response);
+            mockGrpcClient.VerifyAll();
+        }
+
+        [Fact]
         public void SetLoggingService()
         {
             Mock<ClusterManager.ClusterManagerClient> mockGrpcClient = new Mock<ClusterManager.ClusterManagerClient>(MockBehavior.Strict);
@@ -1172,6 +1298,68 @@ namespace Google.Cloud.Container.V1.Tests
                 .Returns(new Grpc.Core.AsyncUnaryCall<Operation>(Task.FromResult(expectedResponse), null, null, null, null));
             ClusterManagerClient client = new ClusterManagerClientImpl(mockGrpcClient.Object, null);
             Operation response = await client.UpdateMasterAsync(request);
+            Assert.Same(expectedResponse, response);
+            mockGrpcClient.VerifyAll();
+        }
+
+        [Fact]
+        public void SetMasterAuth()
+        {
+            Mock<ClusterManager.ClusterManagerClient> mockGrpcClient = new Mock<ClusterManager.ClusterManagerClient>(MockBehavior.Strict);
+            SetMasterAuthRequest request = new SetMasterAuthRequest
+            {
+                ProjectId = "projectId-1969970175",
+                Zone = "zone3744684",
+                ClusterId = "clusterId240280960",
+                Action = SetMasterAuthRequest.Types.Action.Unknown,
+                Update = new MasterAuth(),
+            };
+            Operation expectedResponse = new Operation
+            {
+                Name = "name3373707",
+                Zone = "zone2-696322977",
+                Detail = "detail-1335224239",
+                StatusMessage = "statusMessage-239442758",
+                SelfLink = "selfLink-1691268851",
+                TargetLink = "targetLink-2084812312",
+                StartTime = "startTime-1573145462",
+                EndTime = "endTime1725551537",
+            };
+            mockGrpcClient.Setup(x => x.SetMasterAuth(request, It.IsAny<CallOptions>()))
+                .Returns(expectedResponse);
+            ClusterManagerClient client = new ClusterManagerClientImpl(mockGrpcClient.Object, null);
+            Operation response = client.SetMasterAuth(request);
+            Assert.Same(expectedResponse, response);
+            mockGrpcClient.VerifyAll();
+        }
+
+        [Fact]
+        public async Task SetMasterAuthAsync()
+        {
+            Mock<ClusterManager.ClusterManagerClient> mockGrpcClient = new Mock<ClusterManager.ClusterManagerClient>(MockBehavior.Strict);
+            SetMasterAuthRequest request = new SetMasterAuthRequest
+            {
+                ProjectId = "projectId-1969970175",
+                Zone = "zone3744684",
+                ClusterId = "clusterId240280960",
+                Action = SetMasterAuthRequest.Types.Action.Unknown,
+                Update = new MasterAuth(),
+            };
+            Operation expectedResponse = new Operation
+            {
+                Name = "name3373707",
+                Zone = "zone2-696322977",
+                Detail = "detail-1335224239",
+                StatusMessage = "statusMessage-239442758",
+                SelfLink = "selfLink-1691268851",
+                TargetLink = "targetLink-2084812312",
+                StartTime = "startTime-1573145462",
+                EndTime = "endTime1725551537",
+            };
+            mockGrpcClient.Setup(x => x.SetMasterAuthAsync(request, It.IsAny<CallOptions>()))
+                .Returns(new Grpc.Core.AsyncUnaryCall<Operation>(Task.FromResult(expectedResponse), null, null, null, null));
+            ClusterManagerClient client = new ClusterManagerClientImpl(mockGrpcClient.Object, null);
+            Operation response = await client.SetMasterAuthAsync(request);
             Assert.Same(expectedResponse, response);
             mockGrpcClient.VerifyAll();
         }
@@ -2249,6 +2437,130 @@ namespace Google.Cloud.Container.V1.Tests
         }
 
         [Fact]
+        public void SetNodePoolManagement()
+        {
+            Mock<ClusterManager.ClusterManagerClient> mockGrpcClient = new Mock<ClusterManager.ClusterManagerClient>(MockBehavior.Strict);
+            SetNodePoolManagementRequest request = new SetNodePoolManagementRequest
+            {
+                ProjectId = "projectId-1969970175",
+                Zone = "zone3744684",
+                ClusterId = "clusterId240280960",
+                NodePoolId = "nodePoolId1043384033",
+                Management = new NodeManagement(),
+            };
+            Operation expectedResponse = new Operation
+            {
+                Name = "name3373707",
+                Zone = "zone2-696322977",
+                Detail = "detail-1335224239",
+                StatusMessage = "statusMessage-239442758",
+                SelfLink = "selfLink-1691268851",
+                TargetLink = "targetLink-2084812312",
+                StartTime = "startTime-1573145462",
+                EndTime = "endTime1725551537",
+            };
+            mockGrpcClient.Setup(x => x.SetNodePoolManagement(request, It.IsAny<CallOptions>()))
+                .Returns(expectedResponse);
+            ClusterManagerClient client = new ClusterManagerClientImpl(mockGrpcClient.Object, null);
+            Operation response = client.SetNodePoolManagement(request);
+            Assert.Same(expectedResponse, response);
+            mockGrpcClient.VerifyAll();
+        }
+
+        [Fact]
+        public async Task SetNodePoolManagementAsync()
+        {
+            Mock<ClusterManager.ClusterManagerClient> mockGrpcClient = new Mock<ClusterManager.ClusterManagerClient>(MockBehavior.Strict);
+            SetNodePoolManagementRequest request = new SetNodePoolManagementRequest
+            {
+                ProjectId = "projectId-1969970175",
+                Zone = "zone3744684",
+                ClusterId = "clusterId240280960",
+                NodePoolId = "nodePoolId1043384033",
+                Management = new NodeManagement(),
+            };
+            Operation expectedResponse = new Operation
+            {
+                Name = "name3373707",
+                Zone = "zone2-696322977",
+                Detail = "detail-1335224239",
+                StatusMessage = "statusMessage-239442758",
+                SelfLink = "selfLink-1691268851",
+                TargetLink = "targetLink-2084812312",
+                StartTime = "startTime-1573145462",
+                EndTime = "endTime1725551537",
+            };
+            mockGrpcClient.Setup(x => x.SetNodePoolManagementAsync(request, It.IsAny<CallOptions>()))
+                .Returns(new Grpc.Core.AsyncUnaryCall<Operation>(Task.FromResult(expectedResponse), null, null, null, null));
+            ClusterManagerClient client = new ClusterManagerClientImpl(mockGrpcClient.Object, null);
+            Operation response = await client.SetNodePoolManagementAsync(request);
+            Assert.Same(expectedResponse, response);
+            mockGrpcClient.VerifyAll();
+        }
+
+        [Fact]
+        public void SetLabels()
+        {
+            Mock<ClusterManager.ClusterManagerClient> mockGrpcClient = new Mock<ClusterManager.ClusterManagerClient>(MockBehavior.Strict);
+            SetLabelsRequest request = new SetLabelsRequest
+            {
+                ProjectId = "projectId-1969970175",
+                Zone = "zone3744684",
+                ClusterId = "clusterId240280960",
+                ResourceLabels = { },
+                LabelFingerprint = "labelFingerprint714995737",
+            };
+            Operation expectedResponse = new Operation
+            {
+                Name = "name3373707",
+                Zone = "zone2-696322977",
+                Detail = "detail-1335224239",
+                StatusMessage = "statusMessage-239442758",
+                SelfLink = "selfLink-1691268851",
+                TargetLink = "targetLink-2084812312",
+                StartTime = "startTime-1573145462",
+                EndTime = "endTime1725551537",
+            };
+            mockGrpcClient.Setup(x => x.SetLabels(request, It.IsAny<CallOptions>()))
+                .Returns(expectedResponse);
+            ClusterManagerClient client = new ClusterManagerClientImpl(mockGrpcClient.Object, null);
+            Operation response = client.SetLabels(request);
+            Assert.Same(expectedResponse, response);
+            mockGrpcClient.VerifyAll();
+        }
+
+        [Fact]
+        public async Task SetLabelsAsync()
+        {
+            Mock<ClusterManager.ClusterManagerClient> mockGrpcClient = new Mock<ClusterManager.ClusterManagerClient>(MockBehavior.Strict);
+            SetLabelsRequest request = new SetLabelsRequest
+            {
+                ProjectId = "projectId-1969970175",
+                Zone = "zone3744684",
+                ClusterId = "clusterId240280960",
+                ResourceLabels = { },
+                LabelFingerprint = "labelFingerprint714995737",
+            };
+            Operation expectedResponse = new Operation
+            {
+                Name = "name3373707",
+                Zone = "zone2-696322977",
+                Detail = "detail-1335224239",
+                StatusMessage = "statusMessage-239442758",
+                SelfLink = "selfLink-1691268851",
+                TargetLink = "targetLink-2084812312",
+                StartTime = "startTime-1573145462",
+                EndTime = "endTime1725551537",
+            };
+            mockGrpcClient.Setup(x => x.SetLabelsAsync(request, It.IsAny<CallOptions>()))
+                .Returns(new Grpc.Core.AsyncUnaryCall<Operation>(Task.FromResult(expectedResponse), null, null, null, null));
+            ClusterManagerClient client = new ClusterManagerClientImpl(mockGrpcClient.Object, null);
+            Operation response = await client.SetLabelsAsync(request);
+            Assert.Same(expectedResponse, response);
+            mockGrpcClient.VerifyAll();
+        }
+
+        [Fact]
         public void SetLegacyAbac()
         {
             Mock<ClusterManager.ClusterManagerClient> mockGrpcClient = new Mock<ClusterManager.ClusterManagerClient>(MockBehavior.Strict);
@@ -2616,6 +2928,68 @@ namespace Google.Cloud.Container.V1.Tests
                 .Returns(new Grpc.Core.AsyncUnaryCall<Operation>(Task.FromResult(expectedResponse), null, null, null, null));
             ClusterManagerClient client = new ClusterManagerClientImpl(mockGrpcClient.Object, null);
             Operation response = await client.CompleteIPRotationAsync(request);
+            Assert.Same(expectedResponse, response);
+            mockGrpcClient.VerifyAll();
+        }
+
+        [Fact]
+        public void SetNodePoolSize()
+        {
+            Mock<ClusterManager.ClusterManagerClient> mockGrpcClient = new Mock<ClusterManager.ClusterManagerClient>(MockBehavior.Strict);
+            SetNodePoolSizeRequest request = new SetNodePoolSizeRequest
+            {
+                ProjectId = "projectId-1969970175",
+                Zone = "zone3744684",
+                ClusterId = "clusterId240280960",
+                NodePoolId = "nodePoolId1043384033",
+                NodeCount = 1539922066,
+            };
+            Operation expectedResponse = new Operation
+            {
+                Name = "name3373707",
+                Zone = "zone2-696322977",
+                Detail = "detail-1335224239",
+                StatusMessage = "statusMessage-239442758",
+                SelfLink = "selfLink-1691268851",
+                TargetLink = "targetLink-2084812312",
+                StartTime = "startTime-1573145462",
+                EndTime = "endTime1725551537",
+            };
+            mockGrpcClient.Setup(x => x.SetNodePoolSize(request, It.IsAny<CallOptions>()))
+                .Returns(expectedResponse);
+            ClusterManagerClient client = new ClusterManagerClientImpl(mockGrpcClient.Object, null);
+            Operation response = client.SetNodePoolSize(request);
+            Assert.Same(expectedResponse, response);
+            mockGrpcClient.VerifyAll();
+        }
+
+        [Fact]
+        public async Task SetNodePoolSizeAsync()
+        {
+            Mock<ClusterManager.ClusterManagerClient> mockGrpcClient = new Mock<ClusterManager.ClusterManagerClient>(MockBehavior.Strict);
+            SetNodePoolSizeRequest request = new SetNodePoolSizeRequest
+            {
+                ProjectId = "projectId-1969970175",
+                Zone = "zone3744684",
+                ClusterId = "clusterId240280960",
+                NodePoolId = "nodePoolId1043384033",
+                NodeCount = 1539922066,
+            };
+            Operation expectedResponse = new Operation
+            {
+                Name = "name3373707",
+                Zone = "zone2-696322977",
+                Detail = "detail-1335224239",
+                StatusMessage = "statusMessage-239442758",
+                SelfLink = "selfLink-1691268851",
+                TargetLink = "targetLink-2084812312",
+                StartTime = "startTime-1573145462",
+                EndTime = "endTime1725551537",
+            };
+            mockGrpcClient.Setup(x => x.SetNodePoolSizeAsync(request, It.IsAny<CallOptions>()))
+                .Returns(new Grpc.Core.AsyncUnaryCall<Operation>(Task.FromResult(expectedResponse), null, null, null, null));
+            ClusterManagerClient client = new ClusterManagerClientImpl(mockGrpcClient.Object, null);
+            Operation response = await client.SetNodePoolSizeAsync(request);
             Assert.Same(expectedResponse, response);
             mockGrpcClient.VerifyAll();
         }
