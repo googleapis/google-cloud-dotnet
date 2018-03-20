@@ -229,6 +229,56 @@ namespace Google.Cloud.Dataproc.V1.Tests
         }
 
         [Fact]
+        public void UpdateJob()
+        {
+            Mock<JobController.JobControllerClient> mockGrpcClient = new Mock<JobController.JobControllerClient>(MockBehavior.Strict);
+            UpdateJobRequest request = new UpdateJobRequest
+            {
+                ProjectId = "projectId-1969970175",
+                Region = "region-934795532",
+                JobId = "jobId-1154752291",
+                Job = new Job(),
+                UpdateMask = new FieldMask(),
+            };
+            Job expectedResponse = new Job
+            {
+                DriverOutputResourceUri = "driverOutputResourceUri-542229086",
+                DriverControlFilesUri = "driverControlFilesUri207057643",
+            };
+            mockGrpcClient.Setup(x => x.UpdateJob(request, It.IsAny<CallOptions>()))
+                .Returns(expectedResponse);
+            JobControllerClient client = new JobControllerClientImpl(mockGrpcClient.Object, null);
+            Job response = client.UpdateJob(request);
+            Assert.Same(expectedResponse, response);
+            mockGrpcClient.VerifyAll();
+        }
+
+        [Fact]
+        public async Task UpdateJobAsync()
+        {
+            Mock<JobController.JobControllerClient> mockGrpcClient = new Mock<JobController.JobControllerClient>(MockBehavior.Strict);
+            UpdateJobRequest request = new UpdateJobRequest
+            {
+                ProjectId = "projectId-1969970175",
+                Region = "region-934795532",
+                JobId = "jobId-1154752291",
+                Job = new Job(),
+                UpdateMask = new FieldMask(),
+            };
+            Job expectedResponse = new Job
+            {
+                DriverOutputResourceUri = "driverOutputResourceUri-542229086",
+                DriverControlFilesUri = "driverControlFilesUri207057643",
+            };
+            mockGrpcClient.Setup(x => x.UpdateJobAsync(request, It.IsAny<CallOptions>()))
+                .Returns(new Grpc.Core.AsyncUnaryCall<Job>(Task.FromResult(expectedResponse), null, null, null, null));
+            JobControllerClient client = new JobControllerClientImpl(mockGrpcClient.Object, null);
+            Job response = await client.UpdateJobAsync(request);
+            Assert.Same(expectedResponse, response);
+            mockGrpcClient.VerifyAll();
+        }
+
+        [Fact]
         public void CancelJob()
         {
             Mock<JobController.JobControllerClient> mockGrpcClient = new Mock<JobController.JobControllerClient>(MockBehavior.Strict);

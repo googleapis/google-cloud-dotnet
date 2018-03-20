@@ -114,6 +114,42 @@ namespace Google.Cloud.Datastore.V1.Tests
         }
 
         [Fact]
+        public void RunQuery()
+        {
+            Mock<Datastore.DatastoreClient> mockGrpcClient = new Mock<Datastore.DatastoreClient>(MockBehavior.Strict);
+            RunQueryRequest request = new RunQueryRequest
+            {
+                ProjectId = "projectId-1969970175",
+                PartitionId = new PartitionId(),
+            };
+            RunQueryResponse expectedResponse = new RunQueryResponse();
+            mockGrpcClient.Setup(x => x.RunQuery(request, It.IsAny<CallOptions>()))
+                .Returns(expectedResponse);
+            DatastoreClient client = new DatastoreClientImpl(mockGrpcClient.Object, null);
+            RunQueryResponse response = client.RunQuery(request);
+            Assert.Same(expectedResponse, response);
+            mockGrpcClient.VerifyAll();
+        }
+
+        [Fact]
+        public async Task RunQueryAsync()
+        {
+            Mock<Datastore.DatastoreClient> mockGrpcClient = new Mock<Datastore.DatastoreClient>(MockBehavior.Strict);
+            RunQueryRequest request = new RunQueryRequest
+            {
+                ProjectId = "projectId-1969970175",
+                PartitionId = new PartitionId(),
+            };
+            RunQueryResponse expectedResponse = new RunQueryResponse();
+            mockGrpcClient.Setup(x => x.RunQueryAsync(request, It.IsAny<CallOptions>()))
+                .Returns(new Grpc.Core.AsyncUnaryCall<RunQueryResponse>(Task.FromResult(expectedResponse), null, null, null, null));
+            DatastoreClient client = new DatastoreClientImpl(mockGrpcClient.Object, null);
+            RunQueryResponse response = await client.RunQueryAsync(request);
+            Assert.Same(expectedResponse, response);
+            mockGrpcClient.VerifyAll();
+        }
+
+        [Fact]
         public void BeginTransaction()
         {
             Mock<Datastore.DatastoreClient> mockGrpcClient = new Mock<Datastore.DatastoreClient>(MockBehavior.Strict);

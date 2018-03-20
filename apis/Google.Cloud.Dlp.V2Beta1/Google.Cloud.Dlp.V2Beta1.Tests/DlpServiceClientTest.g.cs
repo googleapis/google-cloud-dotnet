@@ -204,6 +204,94 @@ namespace Google.Cloud.Dlp.V2Beta1.Tests
         }
 
         [Fact]
+        public void RedactContent()
+        {
+            Mock<DlpService.DlpServiceClient> mockGrpcClient = new Mock<DlpService.DlpServiceClient>(MockBehavior.Strict);
+            mockGrpcClient.Setup(x => x.CreateOperationsClient())
+                .Returns(new Mock<Operations.OperationsClient>().Object);
+            RedactContentRequest request = new RedactContentRequest
+            {
+                InspectConfig = new InspectConfig
+                                {
+                                    InfoTypes = {
+                                                    new InfoType
+                                                    {
+                                                        Name = "EMAIL_ADDRESS",
+                                                    },
+                                                },
+                                },
+                Items = {
+                            new ContentItem
+                            {
+                                Type = "text/plain",
+                                Value = "My email is example@example.com.",
+                            },
+                        },
+                ReplaceConfigs = {
+                                     new RedactContentRequest.Types.ReplaceConfig
+                                     {
+                                         InfoType = new InfoType
+                                                    {
+                                                        Name = "EMAIL_ADDRESS",
+                                                    },
+                                         ReplaceWith = "REDACTED",
+                                     },
+                                 },
+            };
+            RedactContentResponse expectedResponse = new RedactContentResponse();
+            mockGrpcClient.Setup(x => x.RedactContent(request, It.IsAny<CallOptions>()))
+                .Returns(expectedResponse);
+            DlpServiceClient client = new DlpServiceClientImpl(mockGrpcClient.Object, null);
+            RedactContentResponse response = client.RedactContent(request);
+            Assert.Same(expectedResponse, response);
+            mockGrpcClient.VerifyAll();
+        }
+
+        [Fact]
+        public async Task RedactContentAsync()
+        {
+            Mock<DlpService.DlpServiceClient> mockGrpcClient = new Mock<DlpService.DlpServiceClient>(MockBehavior.Strict);
+            mockGrpcClient.Setup(x => x.CreateOperationsClient())
+                .Returns(new Mock<Operations.OperationsClient>().Object);
+            RedactContentRequest request = new RedactContentRequest
+            {
+                InspectConfig = new InspectConfig
+                                {
+                                    InfoTypes = {
+                                                    new InfoType
+                                                    {
+                                                        Name = "EMAIL_ADDRESS",
+                                                    },
+                                                },
+                                },
+                Items = {
+                            new ContentItem
+                            {
+                                Type = "text/plain",
+                                Value = "My email is example@example.com.",
+                            },
+                        },
+                ReplaceConfigs = {
+                                     new RedactContentRequest.Types.ReplaceConfig
+                                     {
+                                         InfoType = new InfoType
+                                                    {
+                                                        Name = "EMAIL_ADDRESS",
+                                                    },
+                                         ReplaceWith = "REDACTED",
+                                     },
+                                 },
+            };
+            RedactContentResponse expectedResponse = new RedactContentResponse();
+            mockGrpcClient.Setup(x => x.RedactContentAsync(request, It.IsAny<CallOptions>()))
+                .Returns(new Grpc.Core.AsyncUnaryCall<RedactContentResponse>(Task.FromResult(expectedResponse), null, null, null, null));
+            DlpServiceClient client = new DlpServiceClientImpl(mockGrpcClient.Object, null);
+            RedactContentResponse response = await client.RedactContentAsync(request);
+            Assert.Same(expectedResponse, response);
+            mockGrpcClient.VerifyAll();
+        }
+
+        [Fact]
         public void DeidentifyContent()
         {
             Mock<DlpService.DlpServiceClient> mockGrpcClient = new Mock<DlpService.DlpServiceClient>(MockBehavior.Strict);

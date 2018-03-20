@@ -125,6 +125,52 @@ namespace Google.Cloud.PubSub.V1.Tests
         }
 
         [Fact]
+        public void UpdateTopic()
+        {
+            Mock<Publisher.PublisherClient> mockGrpcClient = new Mock<Publisher.PublisherClient>(MockBehavior.Strict);
+            mockGrpcClient.Setup(x => x.CreateIAMPolicyClient())
+                .Returns(new Mock<IAMPolicy.IAMPolicyClient>().Object);
+            UpdateTopicRequest request = new UpdateTopicRequest
+            {
+                Topic = new Topic(),
+                UpdateMask = new FieldMask(),
+            };
+            Topic expectedResponse = new Topic
+            {
+                TopicName = new TopicName("[PROJECT]", "[TOPIC]"),
+            };
+            mockGrpcClient.Setup(x => x.UpdateTopic(request, It.IsAny<CallOptions>()))
+                .Returns(expectedResponse);
+            PublisherServiceApiClient client = new PublisherServiceApiClientImpl(mockGrpcClient.Object, null);
+            Topic response = client.UpdateTopic(request);
+            Assert.Same(expectedResponse, response);
+            mockGrpcClient.VerifyAll();
+        }
+
+        [Fact]
+        public async Task UpdateTopicAsync()
+        {
+            Mock<Publisher.PublisherClient> mockGrpcClient = new Mock<Publisher.PublisherClient>(MockBehavior.Strict);
+            mockGrpcClient.Setup(x => x.CreateIAMPolicyClient())
+                .Returns(new Mock<IAMPolicy.IAMPolicyClient>().Object);
+            UpdateTopicRequest request = new UpdateTopicRequest
+            {
+                Topic = new Topic(),
+                UpdateMask = new FieldMask(),
+            };
+            Topic expectedResponse = new Topic
+            {
+                TopicName = new TopicName("[PROJECT]", "[TOPIC]"),
+            };
+            mockGrpcClient.Setup(x => x.UpdateTopicAsync(request, It.IsAny<CallOptions>()))
+                .Returns(new Grpc.Core.AsyncUnaryCall<Topic>(Task.FromResult(expectedResponse), null, null, null, null));
+            PublisherServiceApiClient client = new PublisherServiceApiClientImpl(mockGrpcClient.Object, null);
+            Topic response = await client.UpdateTopicAsync(request);
+            Assert.Same(expectedResponse, response);
+            mockGrpcClient.VerifyAll();
+        }
+
+        [Fact]
         public void Publish()
         {
             Mock<Publisher.PublisherClient> mockGrpcClient = new Mock<Publisher.PublisherClient>(MockBehavior.Strict);

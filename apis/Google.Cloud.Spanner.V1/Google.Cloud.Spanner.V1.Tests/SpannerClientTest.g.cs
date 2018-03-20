@@ -264,6 +264,82 @@ namespace Google.Cloud.Spanner.V1.Tests
         }
 
         [Fact]
+        public void ExecuteSql()
+        {
+            Mock<Spanner.SpannerClient> mockGrpcClient = new Mock<Spanner.SpannerClient>(MockBehavior.Strict);
+            ExecuteSqlRequest request = new ExecuteSqlRequest
+            {
+                SessionAsSessionName = new SessionName("[PROJECT]", "[INSTANCE]", "[DATABASE]", "[SESSION]"),
+                Sql = "sql114126",
+            };
+            ResultSet expectedResponse = new ResultSet();
+            mockGrpcClient.Setup(x => x.ExecuteSql(request, It.IsAny<CallOptions>()))
+                .Returns(expectedResponse);
+            SpannerClient client = new SpannerClientImpl(mockGrpcClient.Object, null);
+            ResultSet response = client.ExecuteSql(request);
+            Assert.Same(expectedResponse, response);
+            mockGrpcClient.VerifyAll();
+        }
+
+        [Fact]
+        public async Task ExecuteSqlAsync()
+        {
+            Mock<Spanner.SpannerClient> mockGrpcClient = new Mock<Spanner.SpannerClient>(MockBehavior.Strict);
+            ExecuteSqlRequest request = new ExecuteSqlRequest
+            {
+                SessionAsSessionName = new SessionName("[PROJECT]", "[INSTANCE]", "[DATABASE]", "[SESSION]"),
+                Sql = "sql114126",
+            };
+            ResultSet expectedResponse = new ResultSet();
+            mockGrpcClient.Setup(x => x.ExecuteSqlAsync(request, It.IsAny<CallOptions>()))
+                .Returns(new Grpc.Core.AsyncUnaryCall<ResultSet>(Task.FromResult(expectedResponse), null, null, null, null));
+            SpannerClient client = new SpannerClientImpl(mockGrpcClient.Object, null);
+            ResultSet response = await client.ExecuteSqlAsync(request);
+            Assert.Same(expectedResponse, response);
+            mockGrpcClient.VerifyAll();
+        }
+
+        [Fact]
+        public void Read()
+        {
+            Mock<Spanner.SpannerClient> mockGrpcClient = new Mock<Spanner.SpannerClient>(MockBehavior.Strict);
+            ReadRequest request = new ReadRequest
+            {
+                SessionAsSessionName = new SessionName("[PROJECT]", "[INSTANCE]", "[DATABASE]", "[SESSION]"),
+                Table = "table110115790",
+                Columns = { },
+                KeySet = new KeySet(),
+            };
+            ResultSet expectedResponse = new ResultSet();
+            mockGrpcClient.Setup(x => x.Read(request, It.IsAny<CallOptions>()))
+                .Returns(expectedResponse);
+            SpannerClient client = new SpannerClientImpl(mockGrpcClient.Object, null);
+            ResultSet response = client.Read(request);
+            Assert.Same(expectedResponse, response);
+            mockGrpcClient.VerifyAll();
+        }
+
+        [Fact]
+        public async Task ReadAsync()
+        {
+            Mock<Spanner.SpannerClient> mockGrpcClient = new Mock<Spanner.SpannerClient>(MockBehavior.Strict);
+            ReadRequest request = new ReadRequest
+            {
+                SessionAsSessionName = new SessionName("[PROJECT]", "[INSTANCE]", "[DATABASE]", "[SESSION]"),
+                Table = "table110115790",
+                Columns = { },
+                KeySet = new KeySet(),
+            };
+            ResultSet expectedResponse = new ResultSet();
+            mockGrpcClient.Setup(x => x.ReadAsync(request, It.IsAny<CallOptions>()))
+                .Returns(new Grpc.Core.AsyncUnaryCall<ResultSet>(Task.FromResult(expectedResponse), null, null, null, null));
+            SpannerClient client = new SpannerClientImpl(mockGrpcClient.Object, null);
+            ResultSet response = await client.ReadAsync(request);
+            Assert.Same(expectedResponse, response);
+            mockGrpcClient.VerifyAll();
+        }
+
+        [Fact]
         public void BeginTransaction()
         {
             Mock<Spanner.SpannerClient> mockGrpcClient = new Mock<Spanner.SpannerClient>(MockBehavior.Strict);
@@ -544,6 +620,80 @@ namespace Google.Cloud.Spanner.V1.Tests
                 .Returns(new Grpc.Core.AsyncUnaryCall<Empty>(Task.FromResult(expectedResponse), null, null, null, null));
             SpannerClient client = new SpannerClientImpl(mockGrpcClient.Object, null);
             await client.RollbackAsync(request);
+            mockGrpcClient.VerifyAll();
+        }
+
+        [Fact]
+        public void PartitionQuery()
+        {
+            Mock<Spanner.SpannerClient> mockGrpcClient = new Mock<Spanner.SpannerClient>(MockBehavior.Strict);
+            PartitionQueryRequest request = new PartitionQueryRequest
+            {
+                Session = new SessionName("[PROJECT]", "[INSTANCE]", "[DATABASE]", "[SESSION]").ToString(),
+                Sql = "sql114126",
+            };
+            PartitionResponse expectedResponse = new PartitionResponse();
+            mockGrpcClient.Setup(x => x.PartitionQuery(request, It.IsAny<CallOptions>()))
+                .Returns(expectedResponse);
+            SpannerClient client = new SpannerClientImpl(mockGrpcClient.Object, null);
+            PartitionResponse response = client.PartitionQuery(request);
+            Assert.Same(expectedResponse, response);
+            mockGrpcClient.VerifyAll();
+        }
+
+        [Fact]
+        public async Task PartitionQueryAsync()
+        {
+            Mock<Spanner.SpannerClient> mockGrpcClient = new Mock<Spanner.SpannerClient>(MockBehavior.Strict);
+            PartitionQueryRequest request = new PartitionQueryRequest
+            {
+                Session = new SessionName("[PROJECT]", "[INSTANCE]", "[DATABASE]", "[SESSION]").ToString(),
+                Sql = "sql114126",
+            };
+            PartitionResponse expectedResponse = new PartitionResponse();
+            mockGrpcClient.Setup(x => x.PartitionQueryAsync(request, It.IsAny<CallOptions>()))
+                .Returns(new Grpc.Core.AsyncUnaryCall<PartitionResponse>(Task.FromResult(expectedResponse), null, null, null, null));
+            SpannerClient client = new SpannerClientImpl(mockGrpcClient.Object, null);
+            PartitionResponse response = await client.PartitionQueryAsync(request);
+            Assert.Same(expectedResponse, response);
+            mockGrpcClient.VerifyAll();
+        }
+
+        [Fact]
+        public void PartitionRead()
+        {
+            Mock<Spanner.SpannerClient> mockGrpcClient = new Mock<Spanner.SpannerClient>(MockBehavior.Strict);
+            PartitionReadRequest request = new PartitionReadRequest
+            {
+                Session = new SessionName("[PROJECT]", "[INSTANCE]", "[DATABASE]", "[SESSION]").ToString(),
+                Table = "table110115790",
+                KeySet = new KeySet(),
+            };
+            PartitionResponse expectedResponse = new PartitionResponse();
+            mockGrpcClient.Setup(x => x.PartitionRead(request, It.IsAny<CallOptions>()))
+                .Returns(expectedResponse);
+            SpannerClient client = new SpannerClientImpl(mockGrpcClient.Object, null);
+            PartitionResponse response = client.PartitionRead(request);
+            Assert.Same(expectedResponse, response);
+            mockGrpcClient.VerifyAll();
+        }
+
+        [Fact]
+        public async Task PartitionReadAsync()
+        {
+            Mock<Spanner.SpannerClient> mockGrpcClient = new Mock<Spanner.SpannerClient>(MockBehavior.Strict);
+            PartitionReadRequest request = new PartitionReadRequest
+            {
+                Session = new SessionName("[PROJECT]", "[INSTANCE]", "[DATABASE]", "[SESSION]").ToString(),
+                Table = "table110115790",
+                KeySet = new KeySet(),
+            };
+            PartitionResponse expectedResponse = new PartitionResponse();
+            mockGrpcClient.Setup(x => x.PartitionReadAsync(request, It.IsAny<CallOptions>()))
+                .Returns(new Grpc.Core.AsyncUnaryCall<PartitionResponse>(Task.FromResult(expectedResponse), null, null, null, null));
+            SpannerClient client = new SpannerClientImpl(mockGrpcClient.Object, null);
+            PartitionResponse response = await client.PartitionReadAsync(request);
+            Assert.Same(expectedResponse, response);
             mockGrpcClient.VerifyAll();
         }
 

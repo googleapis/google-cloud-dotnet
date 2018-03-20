@@ -396,6 +396,42 @@ namespace Google.Cloud.Bigtable.Admin.V2.Tests
         }
 
         [Fact]
+        public void DropRowRange()
+        {
+            Mock<BigtableTableAdmin.BigtableTableAdminClient> mockGrpcClient = new Mock<BigtableTableAdmin.BigtableTableAdminClient>(MockBehavior.Strict);
+            mockGrpcClient.Setup(x => x.CreateOperationsClient())
+                .Returns(new Mock<Operations.OperationsClient>().Object);
+            DropRowRangeRequest request = new DropRowRangeRequest
+            {
+                TableName = new TableName("[PROJECT]", "[INSTANCE]", "[TABLE]"),
+            };
+            Empty expectedResponse = new Empty();
+            mockGrpcClient.Setup(x => x.DropRowRange(request, It.IsAny<CallOptions>()))
+                .Returns(expectedResponse);
+            BigtableTableAdminClient client = new BigtableTableAdminClientImpl(mockGrpcClient.Object, null);
+            client.DropRowRange(request);
+            mockGrpcClient.VerifyAll();
+        }
+
+        [Fact]
+        public async Task DropRowRangeAsync()
+        {
+            Mock<BigtableTableAdmin.BigtableTableAdminClient> mockGrpcClient = new Mock<BigtableTableAdmin.BigtableTableAdminClient>(MockBehavior.Strict);
+            mockGrpcClient.Setup(x => x.CreateOperationsClient())
+                .Returns(new Mock<Operations.OperationsClient>().Object);
+            DropRowRangeRequest request = new DropRowRangeRequest
+            {
+                TableName = new TableName("[PROJECT]", "[INSTANCE]", "[TABLE]"),
+            };
+            Empty expectedResponse = new Empty();
+            mockGrpcClient.Setup(x => x.DropRowRangeAsync(request, It.IsAny<CallOptions>()))
+                .Returns(new Grpc.Core.AsyncUnaryCall<Empty>(Task.FromResult(expectedResponse), null, null, null, null));
+            BigtableTableAdminClient client = new BigtableTableAdminClientImpl(mockGrpcClient.Object, null);
+            await client.DropRowRangeAsync(request);
+            mockGrpcClient.VerifyAll();
+        }
+
+        [Fact]
         public void GenerateConsistencyToken()
         {
             Mock<BigtableTableAdmin.BigtableTableAdminClient> mockGrpcClient = new Mock<BigtableTableAdmin.BigtableTableAdminClient>(MockBehavior.Strict);

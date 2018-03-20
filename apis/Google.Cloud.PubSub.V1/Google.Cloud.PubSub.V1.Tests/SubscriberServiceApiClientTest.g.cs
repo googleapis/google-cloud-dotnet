@@ -252,6 +252,74 @@ namespace Google.Cloud.PubSub.V1.Tests
         }
 
         [Fact]
+        public void UpdateSubscription()
+        {
+            Mock<Subscriber.SubscriberClient> mockGrpcClient = new Mock<Subscriber.SubscriberClient>(MockBehavior.Strict);
+            mockGrpcClient.Setup(x => x.CreateIAMPolicyClient())
+                .Returns(new Mock<IAMPolicy.IAMPolicyClient>().Object);
+            UpdateSubscriptionRequest request = new UpdateSubscriptionRequest
+            {
+                Subscription = new Subscription
+                               {
+                                   AckDeadlineSeconds = 42,
+                               },
+                UpdateMask = new FieldMask
+                             {
+                                 Paths = {
+                                             "ack_deadline_seconds",
+                                         },
+                             },
+            };
+            Subscription expectedResponse = new Subscription
+            {
+                SubscriptionName = new SubscriptionName("[PROJECT]", "[SUBSCRIPTION]"),
+                TopicAsTopicNameOneof = TopicNameOneof.From(new TopicName("[PROJECT]", "[TOPIC]")),
+                AckDeadlineSeconds = 921632575,
+                RetainAckedMessages = false,
+            };
+            mockGrpcClient.Setup(x => x.UpdateSubscription(request, It.IsAny<CallOptions>()))
+                .Returns(expectedResponse);
+            SubscriberServiceApiClient client = new SubscriberServiceApiClientImpl(mockGrpcClient.Object, null);
+            Subscription response = client.UpdateSubscription(request);
+            Assert.Same(expectedResponse, response);
+            mockGrpcClient.VerifyAll();
+        }
+
+        [Fact]
+        public async Task UpdateSubscriptionAsync()
+        {
+            Mock<Subscriber.SubscriberClient> mockGrpcClient = new Mock<Subscriber.SubscriberClient>(MockBehavior.Strict);
+            mockGrpcClient.Setup(x => x.CreateIAMPolicyClient())
+                .Returns(new Mock<IAMPolicy.IAMPolicyClient>().Object);
+            UpdateSubscriptionRequest request = new UpdateSubscriptionRequest
+            {
+                Subscription = new Subscription
+                               {
+                                   AckDeadlineSeconds = 42,
+                               },
+                UpdateMask = new FieldMask
+                             {
+                                 Paths = {
+                                             "ack_deadline_seconds",
+                                         },
+                             },
+            };
+            Subscription expectedResponse = new Subscription
+            {
+                SubscriptionName = new SubscriptionName("[PROJECT]", "[SUBSCRIPTION]"),
+                TopicAsTopicNameOneof = TopicNameOneof.From(new TopicName("[PROJECT]", "[TOPIC]")),
+                AckDeadlineSeconds = 921632575,
+                RetainAckedMessages = false,
+            };
+            mockGrpcClient.Setup(x => x.UpdateSubscriptionAsync(request, It.IsAny<CallOptions>()))
+                .Returns(new Grpc.Core.AsyncUnaryCall<Subscription>(Task.FromResult(expectedResponse), null, null, null, null));
+            SubscriberServiceApiClient client = new SubscriberServiceApiClientImpl(mockGrpcClient.Object, null);
+            Subscription response = await client.UpdateSubscriptionAsync(request);
+            Assert.Same(expectedResponse, response);
+            mockGrpcClient.VerifyAll();
+        }
+
+        [Fact]
         public void DeleteSubscription()
         {
             Mock<Subscriber.SubscriberClient> mockGrpcClient = new Mock<Subscriber.SubscriberClient>(MockBehavior.Strict);
@@ -760,6 +828,76 @@ namespace Google.Cloud.PubSub.V1.Tests
         }
 
         [Fact]
+        public void UpdateSnapshot()
+        {
+            Mock<Subscriber.SubscriberClient> mockGrpcClient = new Mock<Subscriber.SubscriberClient>(MockBehavior.Strict);
+            mockGrpcClient.Setup(x => x.CreateIAMPolicyClient())
+                .Returns(new Mock<IAMPolicy.IAMPolicyClient>().Object);
+            UpdateSnapshotRequest request = new UpdateSnapshotRequest
+            {
+                Snapshot = new Snapshot
+                           {
+                               ExpireTime = new Timestamp
+                                            {
+                                                Seconds = 123456L,
+                                            },
+                           },
+                UpdateMask = new FieldMask
+                             {
+                                 Paths = {
+                                             "expire_time",
+                                         },
+                             },
+            };
+            Snapshot expectedResponse = new Snapshot
+            {
+                SnapshotName = new SnapshotName("[PROJECT]", "[SNAPSHOT]"),
+                TopicAsTopicName = new TopicName("[PROJECT]", "[TOPIC]"),
+            };
+            mockGrpcClient.Setup(x => x.UpdateSnapshot(request, It.IsAny<CallOptions>()))
+                .Returns(expectedResponse);
+            SubscriberServiceApiClient client = new SubscriberServiceApiClientImpl(mockGrpcClient.Object, null);
+            Snapshot response = client.UpdateSnapshot(request);
+            Assert.Same(expectedResponse, response);
+            mockGrpcClient.VerifyAll();
+        }
+
+        [Fact]
+        public async Task UpdateSnapshotAsync()
+        {
+            Mock<Subscriber.SubscriberClient> mockGrpcClient = new Mock<Subscriber.SubscriberClient>(MockBehavior.Strict);
+            mockGrpcClient.Setup(x => x.CreateIAMPolicyClient())
+                .Returns(new Mock<IAMPolicy.IAMPolicyClient>().Object);
+            UpdateSnapshotRequest request = new UpdateSnapshotRequest
+            {
+                Snapshot = new Snapshot
+                           {
+                               ExpireTime = new Timestamp
+                                            {
+                                                Seconds = 123456L,
+                                            },
+                           },
+                UpdateMask = new FieldMask
+                             {
+                                 Paths = {
+                                             "expire_time",
+                                         },
+                             },
+            };
+            Snapshot expectedResponse = new Snapshot
+            {
+                SnapshotName = new SnapshotName("[PROJECT]", "[SNAPSHOT]"),
+                TopicAsTopicName = new TopicName("[PROJECT]", "[TOPIC]"),
+            };
+            mockGrpcClient.Setup(x => x.UpdateSnapshotAsync(request, It.IsAny<CallOptions>()))
+                .Returns(new Grpc.Core.AsyncUnaryCall<Snapshot>(Task.FromResult(expectedResponse), null, null, null, null));
+            SubscriberServiceApiClient client = new SubscriberServiceApiClientImpl(mockGrpcClient.Object, null);
+            Snapshot response = await client.UpdateSnapshotAsync(request);
+            Assert.Same(expectedResponse, response);
+            mockGrpcClient.VerifyAll();
+        }
+
+        [Fact]
         public void DeleteSnapshot()
         {
             Mock<Subscriber.SubscriberClient> mockGrpcClient = new Mock<Subscriber.SubscriberClient>(MockBehavior.Strict);
@@ -830,6 +968,44 @@ namespace Google.Cloud.PubSub.V1.Tests
                 .Returns(new Grpc.Core.AsyncUnaryCall<Empty>(Task.FromResult(expectedResponse), null, null, null, null));
             SubscriberServiceApiClient client = new SubscriberServiceApiClientImpl(mockGrpcClient.Object, null);
             await client.DeleteSnapshotAsync(request);
+            mockGrpcClient.VerifyAll();
+        }
+
+        [Fact]
+        public void Seek()
+        {
+            Mock<Subscriber.SubscriberClient> mockGrpcClient = new Mock<Subscriber.SubscriberClient>(MockBehavior.Strict);
+            mockGrpcClient.Setup(x => x.CreateIAMPolicyClient())
+                .Returns(new Mock<IAMPolicy.IAMPolicyClient>().Object);
+            SeekRequest request = new SeekRequest
+            {
+                SubscriptionAsSubscriptionName = new SubscriptionName("[PROJECT]", "[SUBSCRIPTION]"),
+            };
+            SeekResponse expectedResponse = new SeekResponse();
+            mockGrpcClient.Setup(x => x.Seek(request, It.IsAny<CallOptions>()))
+                .Returns(expectedResponse);
+            SubscriberServiceApiClient client = new SubscriberServiceApiClientImpl(mockGrpcClient.Object, null);
+            SeekResponse response = client.Seek(request);
+            Assert.Same(expectedResponse, response);
+            mockGrpcClient.VerifyAll();
+        }
+
+        [Fact]
+        public async Task SeekAsync()
+        {
+            Mock<Subscriber.SubscriberClient> mockGrpcClient = new Mock<Subscriber.SubscriberClient>(MockBehavior.Strict);
+            mockGrpcClient.Setup(x => x.CreateIAMPolicyClient())
+                .Returns(new Mock<IAMPolicy.IAMPolicyClient>().Object);
+            SeekRequest request = new SeekRequest
+            {
+                SubscriptionAsSubscriptionName = new SubscriptionName("[PROJECT]", "[SUBSCRIPTION]"),
+            };
+            SeekResponse expectedResponse = new SeekResponse();
+            mockGrpcClient.Setup(x => x.SeekAsync(request, It.IsAny<CallOptions>()))
+                .Returns(new Grpc.Core.AsyncUnaryCall<SeekResponse>(Task.FromResult(expectedResponse), null, null, null, null));
+            SubscriberServiceApiClient client = new SubscriberServiceApiClientImpl(mockGrpcClient.Object, null);
+            SeekResponse response = await client.SeekAsync(request);
+            Assert.Same(expectedResponse, response);
             mockGrpcClient.VerifyAll();
         }
 
