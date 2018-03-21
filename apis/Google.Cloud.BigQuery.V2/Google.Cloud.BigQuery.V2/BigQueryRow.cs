@@ -75,6 +75,7 @@ namespace Google.Cloud.BigQuery.V2
         private static readonly Func<string, DateTime> DateTimeConverter = v => DateTime.ParseExact(v, "yyyy-MM-dd'T'HH:mm:ss.FFFFFF", CultureInfo.InvariantCulture);
         private static readonly Func<string, byte[]> BytesConverter = v => Convert.FromBase64String(v);
         private static readonly Func<string, bool> BooleanConverter = v => v == "true";
+        private static readonly Func<string, BigQueryNumeric> NumericConverter = BigQueryNumeric.Parse;
 
         /// <summary>
         /// Retrieves a cell value by field name.
@@ -128,6 +129,8 @@ namespace Google.Cloud.BigQuery.V2
                         return ConvertArray(array, DateTimeConverter);
                     case BigQueryDbType.Struct:
                         return ConvertRecordArray(array, field);
+                    case BigQueryDbType.Numeric:
+                        return ConvertArray(array, NumericConverter);
                     default:
                         throw new InvalidOperationException($"Unhandled field type {type} {rawValue.GetType()}");
                 }
@@ -152,6 +155,8 @@ namespace Google.Cloud.BigQuery.V2
                     return TimeConverter((string) rawValue);
                 case BigQueryDbType.DateTime:
                     return DateTimeConverter((string) rawValue);
+                case BigQueryDbType.Numeric:
+                    return NumericConverter((string) rawValue);
                 case BigQueryDbType.Struct:
                     return ConvertRecord((JObject)rawValue, field);
                 default:

@@ -213,6 +213,7 @@ namespace Google.Cloud.BigQuery.V2.IntegrationTests
                 { "single_timestamp", BigQueryDbType.Timestamp },
                 { "single_int64", BigQueryDbType.Int64 },
                 { "single_float64", BigQueryDbType.Float64 },
+                { "single_numeric", BigQueryDbType.Numeric },
                 { "single_record", recordSchema },
                 
                 // Repeated fields
@@ -225,6 +226,7 @@ namespace Google.Cloud.BigQuery.V2.IntegrationTests
                 { "array_timestamp", BigQueryDbType.Timestamp, BigQueryFieldMode.Repeated },
                 { "array_int64", BigQueryDbType.Int64, BigQueryFieldMode.Repeated },
                 { "array_float64", BigQueryDbType.Float64, BigQueryFieldMode.Repeated },
+                { "array_numeric", BigQueryDbType.Numeric, BigQueryFieldMode.Repeated },
                 { "array_record", recordSchema, BigQueryFieldMode.Repeated },                
             }.Build());
 

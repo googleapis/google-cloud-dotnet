@@ -51,6 +51,7 @@ namespace Google.Cloud.BigQuery.V2
     ///   <item><description><c>DateTime</c>: <c>System.DateTime</c>, <c>System.DateTimeOffset</c></description></item>
     ///   <item><description><c>Time</c>: <c>System.DateTime</c>, <c>System.DateTimeOffset</c>, <c>System.TimeSpan</c></description></item>
     ///   <item><description><c>Timestamp</c>: <c>System.DateTime</c>, <c>System.DateTimeOffset</c></description></item>
+    ///   <item><description><c>Numeric</c>: <c>Google.Cloud.BigQuery.V1.BigQueryNumeric</c></description></item>
     ///   <item><description><c>Array</c>: An <c>IReadOnlyList&lt;T&gt;</c> of any of the above types corresponding to the <see cref="ArrayElementType"/>,
     ///   which will be inferred from the value's element type if not otherwise specified.</description></item>
     /// </list>
@@ -84,7 +85,8 @@ namespace Google.Cloud.BigQuery.V2
             typeof(float), typeof(double),
             typeof(bool),
             typeof(string), typeof(byte[]),
-            typeof(DateTime), typeof(DateTimeOffset), typeof(TimeSpan)
+            typeof(DateTime), typeof(DateTimeOffset), typeof(TimeSpan),
+            typeof(BigQueryNumeric)
         };
 
         private static List<TypeInfo> s_validRepeatedTypes = s_validSingleTypes
@@ -110,6 +112,7 @@ namespace Google.Cloud.BigQuery.V2
             { typeof(DateTime), BigQueryDbType.DateTime },
             { typeof(DateTimeOffset), BigQueryDbType.Timestamp },
             { typeof(TimeSpan), BigQueryDbType.Time },
+            { typeof(BigQueryNumeric), BigQueryDbType.Numeric },
         };
 
         /// <summary>
@@ -264,6 +267,10 @@ namespace Google.Cloud.BigQuery.V2
                     return parameter.PopulateScalar<TimeSpan>(value, FormatTimeSpan)
                         ?? parameter.PopulateScalar<DateTimeOffset>(value, x => x.ToString("HH:mm:ss.FFFFFF", InvariantCulture))
                         ?? parameter.PopulateScalar<DateTime>(value, x => x.ToString("HH:mm:ss.FFFFFF", InvariantCulture))
+                        ?? parameter.PopulateScalar<string>(value, x => x)
+                        ?? parameter.UseNullScalarOrThrow(value);
+                case BigQueryDbType.Numeric:
+                    return parameter.PopulateScalar<BigQueryNumeric>(value, x => x.ToString())
                         ?? parameter.PopulateScalar<string>(value, x => x)
                         ?? parameter.UseNullScalarOrThrow(value);
                 case BigQueryDbType.Timestamp:
