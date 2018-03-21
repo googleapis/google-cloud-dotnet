@@ -37,6 +37,7 @@ namespace Google.Cloud.BigQuery.V2.Tests
                 { "date", BigQueryDbType.Date },
                 { "dateTime", BigQueryDbType.DateTime },
                 { "time", BigQueryDbType.Time },
+                { "numeric", BigQueryDbType.Numeric },
                 { "struct", new TableSchemaBuilder { { "x", BigQueryDbType.Int64 }, { "y", BigQueryDbType.String } } }
             }.Build();
             var rawRow = new TableRow
@@ -52,6 +53,7 @@ namespace Google.Cloud.BigQuery.V2.Tests
                     new TableCell { V = "2017-08-09" },
                     new TableCell { V = "2017-08-09T12:34:56.123" },
                     new TableCell { V = "12:34:56.123" },
+                    new TableCell { V = "1234567890123456789012345678.123456789" },
                     new TableCell { V = new JObject { ["f"] = new JArray {new JObject { ["v"] = "100" }, new JObject { ["v"] = "xyz" } } } }
                 }
             };
@@ -65,6 +67,7 @@ namespace Google.Cloud.BigQuery.V2.Tests
             Assert.Equal(new DateTime(2017, 8, 9, 0, 0, 0, DateTimeKind.Utc), (DateTime)row["date"]);
             Assert.Equal(new DateTime(2017, 8, 9, 12, 34, 56, 123, DateTimeKind.Utc), (DateTime)row["dateTime"]);
             Assert.Equal(new TimeSpan(0, 12, 34, 56, 123), (TimeSpan)row["time"]);
+            Assert.Equal(BigQueryNumeric.Parse("1234567890123456789012345678.123456789"), (BigQueryNumeric) row["numeric"]);
             Assert.Equal(new Dictionary<string, object> { { "x", 100L }, { "y", "xyz" } }, (Dictionary<string, object>)row["struct"]);
         }
 
@@ -82,6 +85,7 @@ namespace Google.Cloud.BigQuery.V2.Tests
                 { "date", BigQueryDbType.Date, BigQueryFieldMode.Repeated },
                 { "dateTime", BigQueryDbType.DateTime, BigQueryFieldMode.Repeated },
                 { "time", BigQueryDbType.Time, BigQueryFieldMode.Repeated },
+                { "numeric", BigQueryDbType.Numeric, BigQueryFieldMode.Repeated },
                 { "struct", new TableSchemaBuilder { { "x", BigQueryDbType.Int64 }, { "y", BigQueryDbType.String } }, BigQueryFieldMode.Repeated }
             }.Build();
             var rawRow = new TableRow
@@ -97,6 +101,7 @@ namespace Google.Cloud.BigQuery.V2.Tests
                     new TableCell { V = CreateArray("2017-08-09", "2017-08-10") },
                     new TableCell { V = CreateArray("2017-08-09T12:34:56.123","2017-08-09T12:34:57.123") },
                     new TableCell { V = CreateArray("12:34:56.123", "12:34:57.123") },
+                    new TableCell { V = CreateArray("1234567890123456789012345678.123456789", "0.000000001") },
                     new TableCell { V = new JArray {
                         new JObject { ["v"] = new JObject { ["f"] = new JArray { new JObject { ["v"] = "100" }, new JObject { ["v"] = "xyz" } } } },
                         new JObject { ["v"] = new JObject { ["f"] = new JArray { new JObject { ["v"] = "200" }, new JObject { ["v"] = "abc" } } } }
@@ -116,6 +121,7 @@ namespace Google.Cloud.BigQuery.V2.Tests
             Assert.Equal(new[] { new DateTime(2017, 8, 9, 12, 34, 56, 123, DateTimeKind.Utc), new DateTime(2017, 8, 9, 12, 34, 57, 123, DateTimeKind.Utc) },
                 (DateTime[])row["dateTime"]);
             Assert.Equal(new[] { new TimeSpan(0, 12, 34, 56, 123), new TimeSpan(0, 12, 34, 57, 123) }, (TimeSpan[])row["time"]);
+            Assert.Equal(new[] { BigQueryNumeric.Parse("1234567890123456789012345678.123456789"), BigQueryNumeric.Parse("0.000000001") }, (BigQueryNumeric[]) row["numeric"]);
             Assert.Equal(new[]
                 {
                     new Dictionary<string, object> { { "x", 100L }, { "y", "xyz" } },

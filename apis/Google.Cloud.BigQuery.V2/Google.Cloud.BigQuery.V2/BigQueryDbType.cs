@@ -76,7 +76,12 @@ namespace Google.Cloud.BigQuery.V2
         /// as a record in Legacy SQL data types.
         /// </summary>
         [ApiValue("RECORD")]
-        Struct
+        Struct,
+        /// <summary>
+        /// A fixed-point number with 38 digits of precision, and always
+        /// 9 decimal places.
+        /// </summary>
+        Numeric
     }
 
     internal static class BigQueryDbTypeExtensions
@@ -96,7 +101,8 @@ namespace Google.Cloud.BigQuery.V2
             { BigQueryDbType.Time, "TIME" },
             { BigQueryDbType.Timestamp, "TIMESTAMP" },
             { BigQueryDbType.Array, "ARRAY" },
-            { BigQueryDbType.Struct, "STRUCT" }
+            { BigQueryDbType.Struct, "STRUCT" },
+            { BigQueryDbType.Numeric, "NUMERIC" }
         };
 
         internal static string ToParameterApiType(this BigQueryDbType type) => s_typeToNameMapping[type];

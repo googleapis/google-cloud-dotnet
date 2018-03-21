@@ -120,6 +120,15 @@ namespace Google.Cloud.BigQuery.V2.Tests
         }
 
         [Fact]
+        public void Numeric_Json()
+        {
+            object value = BigQueryNumeric.Parse("123.456");
+            var row = new BigQueryInsertRow { { "field", value } };
+            var rowData = row.ToRowsData();
+            Assert.Equal("123.456", rowData.Json["field"]);
+        }
+
+        [Fact]
         public void DateTimeOffsetFormatting()
         {
             var row = new BigQueryInsertRow
