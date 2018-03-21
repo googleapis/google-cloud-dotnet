@@ -129,6 +129,11 @@ namespace Google.Cloud.BigQuery.V2.Tests
                 new DateTimeOffset(2016, 10, 31, 0, 0, 0, TimeSpan.FromHours(-2)), "2016-10-31 00:00:00-02:00"),
             ScalarTest("Timestamp parameter, string value", BigQueryDbType.Timestamp, "some value", "some value"),
             ScalarTest("Timestamp parameter, null value", BigQueryDbType.Timestamp, null, null),
+
+            // Numeric
+            ScalarTest("Numeric parameter", BigQueryDbType.Numeric, BigQueryNumeric.Parse("123.45"), "123.45"),
+            ScalarTest("Numeric parameter, string value", BigQueryDbType.Numeric, "string value", "string value"),
+            ScalarTest("Numeric parameter, null value", BigQueryDbType.Numeric, null, null),
         };
 
         public static IEnumerable<object[]> InvalidParameterData => new[]
@@ -153,6 +158,7 @@ namespace Google.Cloud.BigQuery.V2.Tests
             new object[] { "Single", 1.0f, BigQueryDbType.Float64 },
             new object[] { "Double", 1.0d, BigQueryDbType.Float64 },
             new object[] { "TimeSpan", TimeSpan.FromHours(1), BigQueryDbType.Time },
+            new object[] { "Numeric", BigQueryNumeric.Parse("123.45"), BigQueryDbType.Numeric },
             new object[] { "DateTime (local)", new DateTime(2016, 10, 31, 0, 0, 0, DateTimeKind.Local), BigQueryDbType.DateTime },
             new object[] { "DateTime (unspecified)", new DateTime(2016, 10, 31, 0, 0, 0, DateTimeKind.Unspecified), BigQueryDbType.DateTime },
             new object[] { "DateTime (UTC)", new DateTime(2016, 10, 31, 0, 0, 0, DateTimeKind.Utc), BigQueryDbType.DateTime },
