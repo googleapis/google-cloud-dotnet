@@ -297,7 +297,6 @@ namespace Google.Cloud.Tools.ProjectGenerator
                 new XElement("AssemblyOriginatorKeyFile", "../../GoogleApis.snk"),
                 new XElement("SignAssembly", true),
                 new XElement("Deterministic", true),
-                new XElement("PublicSign", new XAttribute("Condition", " '$(OS)' != 'Windows_NT' "), true),
                 new XElement("TreatWarningsAsErrors", true),
                 // Package-related properties
                 new XElement("Description", api.Description),
@@ -346,7 +345,6 @@ namespace Google.Cloud.Tools.ProjectGenerator
                     new XElement("IsPackable", false),
                     new XElement("AssemblyOriginatorKeyFile", "../../GoogleApis.snk"),
                     new XElement("SignAssembly", true),
-                    new XElement("PublicSign", new XAttribute("Condition", " '$(OS)' != 'Windows_NT' "), true),
                     new XElement("TreatWarningsAsErrors", true),
                     // 1701, 1702 and 1705 are disabled by default.
                     // xUnit2004 prevents Assert.Equal(true, value) etc, preferring Assert.True and Assert.False, but
