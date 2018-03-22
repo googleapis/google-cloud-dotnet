@@ -39,7 +39,7 @@ namespace Google.Cloud.Firestore.IntegrationTests
         [Fact]
         public async Task WhereGreaterThan()
         {
-            var query = _fixture.HighScoreCollection.Where("Score", QueryOperator.GreaterThan, 100);
+            var query = _fixture.HighScoreCollection.WhereGreaterThan("Score", 100);
             var snapshot = await query.GetSnapshotAsync();
             var items = snapshot.Documents.Select(doc => doc.ConvertTo<HighScore>()).ToList();
             Assert.Equal(HighScore.Data.Where(x => x.Score > 100), items.OrderBy(x => x.Name, StringComparer.Ordinal));

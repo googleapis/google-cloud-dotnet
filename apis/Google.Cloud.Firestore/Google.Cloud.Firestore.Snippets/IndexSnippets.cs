@@ -57,7 +57,7 @@ namespace Google.Cloud.Firestore.Snippets
             // See the "data model" guide for more options for data handling.
 
             // Query the collection for all documents where doc.Born < 1900.
-            Query query = collection.Where("Born", QueryOperator.LessThan, 1900);
+            Query query = collection.WhereLessThan("Born", 1900);
             QuerySnapshot querySnapshot = await query.GetSnapshotAsync();
             foreach (DocumentSnapshot queryResult in querySnapshot.Documents)
             {
