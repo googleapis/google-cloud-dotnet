@@ -10,7 +10,6 @@
     <AssemblyOriginatorKeyFile>../../GoogleApis.snk</AssemblyOriginatorKeyFile>
     <SignAssembly>true</SignAssembly>
     <Deterministic>true</Deterministic>
-    <PublicSign Condition=" '$(OS)' != 'Windows_NT' ">true</PublicSign>
     <TreatWarningsAsErrors>true</TreatWarningsAsErrors>
     <Description>Google EntityFrameworkCore Provider for Google Cloud Spanner.</Description>
     <PackageTags>Spanner;ADO;EntityFramework;Google;Cloud</PackageTags>

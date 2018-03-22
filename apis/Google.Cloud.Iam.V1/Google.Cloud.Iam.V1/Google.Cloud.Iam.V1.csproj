@@ -10,7 +10,6 @@
     <AssemblyOriginatorKeyFile>../../GoogleApis.snk</AssemblyOriginatorKeyFile>
     <SignAssembly>true</SignAssembly>
     <Deterministic>true</Deterministic>
-    <PublicSign Condition=" '$(OS)' != 'Windows_NT' ">true</PublicSign>
     <TreatWarningsAsErrors>true</TreatWarningsAsErrors>
     <Description>gRPC services for the Google Identity and Access Management API. This library is typically used as a dependency for other API client libraries.</Description>
     <PackageTags>IAM;Identity;Access;Google;Cloud</PackageTags>
