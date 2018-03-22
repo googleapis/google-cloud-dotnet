@@ -4,11 +4,8 @@
     <IsPackable>false</IsPackable>
     <TargetFrameworks>netstandard1.3;net451</TargetFrameworks>
     <TargetFrameworks Condition=" '$(OS)' != 'Windows_NT' ">netstandard1.3</TargetFrameworks>
-    <AssemblyName>Google.Cloud.ClientTesting</AssemblyName>
     <AssemblyOriginatorKeyFile>../GoogleApiTools.snk</AssemblyOriginatorKeyFile>
     <SignAssembly>true</SignAssembly>
-    <PublicSign Condition=" '$(OS)' != 'Windows_NT' ">true</PublicSign>
-    <PackageId>Google.Cloud.ClientTesting</PackageId>
     <TreatWarningsAsErrors>True</TreatWarningsAsErrors>
   </PropertyGroup>
 
