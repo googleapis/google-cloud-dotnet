@@ -135,12 +135,139 @@ namespace Google.Cloud.Firestore
             return new Query(Collection, _offset, _limit, _orderings, _filters, new List<FieldPath>(fieldPaths), _startAt, _endAt);
         }
 
-        // TODO: Choices...
-        // - Use an enum instead of strings?
-        // - Rename the "op" parameter? (operator is a keyword, but we could make it @operator maybe)
-        // - Rename "Where" to "AddFilter"?
-        // - Reimplement as individual methods, two per filter operator (accepting string or FieldPath),
-        //   e.g. WhereEqual, WhereLess than etc
+        /// <summary>
+        /// Returns a query with a filter specifying that the value in <paramref name="fieldPath"/> must be
+        /// equal to <paramref name="value"/>.
+        /// </summary>
+        /// <remarks>
+        /// This call adds additional filters to any previously-specified ones.
+        /// </remarks>
+        /// <param name="fieldPath">The dot-separated field path to filter on. Must not be null or empty.</param>
+        /// <param name="value">The value to compare in the filter.</param>
+        /// <returns>A new query based on the current one, but with the additional specified filter applied.</returns>
+        public Query WhereEqualTo(string fieldPath, object value) =>
+            Where(fieldPath, FieldOp.Equal, value);
+
+        /// <summary>
+        /// Returns a query with a filter specifying that the value in <paramref name="fieldPath"/> must be
+        /// equal to <paramref name="value"/>.
+        /// </summary>
+        /// <remarks>
+        /// This call adds additional filters to any previously-specified ones.
+        /// </remarks>
+        /// <param name="fieldPath">The field path to filter on. Must not be null.</param>
+        /// <param name="value">The value to compare in the filter.</param>
+        /// <returns>A new query based on the current one, but with the additional specified filter applied.</returns>
+        public Query WhereEqualTo(FieldPath fieldPath, object value) =>
+            Where(fieldPath, FieldOp.Equal, value);
+
+        /// <summary>
+        /// Returns a query with a filter specifying that the value in <paramref name="fieldPath"/> must be less than
+        /// <paramref name="value"/>.
+        /// </summary>
+        /// <remarks>
+        /// This call adds additional filters to any previously-specified ones.
+        /// </remarks>
+        /// <param name="fieldPath">The dot-separated field path to filter on. Must not be null or empty.</param>
+        /// <param name="value">The value to compare in the filter.</param>
+        /// <returns>A new query based on the current one, but with the additional specified filter applied.</returns>
+        public Query WhereLessThan(string fieldPath, object value) =>
+            Where(fieldPath, FieldOp.LessThan, value);
+
+        /// <summary>
+        /// Returns a query with a filter specifying that the value in <paramref name="fieldPath"/> must be less than
+        /// <paramref name="value"/>.
+        /// </summary>
+        /// <remarks>
+        /// This call adds additional filters to any previously-specified ones.
+        /// </remarks>
+        /// <param name="fieldPath">The field path to filter on. Must not be null.</param>
+        /// <param name="value">The value to compare in the filter.</param>
+        /// <returns>A new query based on the current one, but with the additional specified filter applied.</returns>
+        public Query WhereLessThan(FieldPath fieldPath, object value) =>
+            Where(fieldPath, FieldOp.LessThan, value);
+
+        /// <summary>
+        /// Returns a query with a filter specifying that the value in <paramref name="fieldPath"/> must be less than or
+        /// equal to <paramref name="value"/>.
+        /// </summary>
+        /// <remarks>
+        /// This call adds additional filters to any previously-specified ones.
+        /// </remarks>
+        /// <param name="fieldPath">The dot-separated field path to filter on. Must not be null or empty.</param>
+        /// <param name="value">The value to compare in the filter.</param>
+        /// <returns>A new query based on the current one, but with the additional specified filter applied.</returns>
+        public Query WhereLessThanOrEqualTo(string fieldPath, object value) =>
+            Where(fieldPath, FieldOp.LessThanOrEqual, value);
+
+        /// <summary>
+        /// Returns a query with a filter specifying that the value in <paramref name="fieldPath"/> must be less than or
+        /// equal to <paramref name="value"/>.
+        /// </summary>
+        /// <remarks>
+        /// This call adds additional filters to any previously-specified ones.
+        /// </remarks>
+        /// <param name="fieldPath">The field path to filter on. Must not be null.</param>
+        /// <param name="value">The value to compare in the filter.</param>
+        /// <returns>A new query based on the current one, but with the additional specified filter applied.</returns>
+        public Query WhereLessThanOrEqualTo(FieldPath fieldPath, object value) =>
+            Where(fieldPath, FieldOp.LessThanOrEqual, value);
+
+        /// <summary>
+        /// Returns a query with a filter specifying that the value in <paramref name="fieldPath"/> must be greater than
+        /// <paramref name="value"/>.
+        /// </summary>
+        /// <remarks>
+        /// This call adds additional filters to any previously-specified ones.
+        /// </remarks>
+        /// <param name="fieldPath">The dot-separated field path to filter on. Must not be null or empty.</param>
+        /// <param name="value">The value to compare in the filter.</param>
+        /// <returns>A new query based on the current one, but with the additional specified filter applied.</returns>
+        public Query WhereGreaterThan(string fieldPath, object value) =>
+            Where(fieldPath, FieldOp.GreaterThan, value);
+
+        /// <summary>
+        /// Returns a query with a filter specifying that the value in <paramref name="fieldPath"/> must be greater than
+        /// <paramref name="value"/>.
+        /// </summary>
+        /// <remarks>
+        /// This call adds additional filters to any previously-specified ones.
+        /// </remarks>
+        /// <param name="fieldPath">The field path to filter on. Must not be null.</param>
+        /// <param name="value">The value to compare in the filter.</param>
+        /// <returns>A new query based on the current one, but with the additional specified filter applied.</returns>
+        public Query WhereGreaterThan(FieldPath fieldPath, object value) =>
+            Where(fieldPath, FieldOp.GreaterThan, value);
+
+        /// <summary>
+        /// Returns a query with a filter specifying that the value in <paramref name="fieldPath"/> must be greater than or
+        /// equal to <paramref name="value"/>.
+        /// </summary>
+        /// <remarks>
+        /// This call adds additional filters to any previously-specified ones.
+        /// </remarks>
+        /// <param name="fieldPath">The dot-separated field path to filter on. Must not be null or empty.</param>
+        /// <param name="value">The value to compare in the filter.</param>
+        /// <returns>A new query based on the current one, but with the additional specified filter applied.</returns>
+        public Query WhereGreaterThanOrEqualTo(string fieldPath, object value) =>
+            Where(fieldPath, FieldOp.GreaterThanOrEqual, value);
+
+        /// <summary>
+        /// Returns a query with a filter specifying that the value in <paramref name="fieldPath"/> must be greater than or
+        /// equal to <paramref name="value"/>.
+        /// </summary>
+        /// <remarks>
+        /// This call adds additional filters to any previously-specified ones.
+        /// </remarks>
+        /// <param name="fieldPath">The field path to filter on. Must not be null.</param>
+        /// <param name="value">The value to compare in the filter.</param>
+        /// <returns>A new query based on the current one, but with the additional specified filter applied.</returns>
+        public Query WhereGreaterThanOrEqualTo(FieldPath fieldPath, object value) =>
+            Where(fieldPath, FieldOp.GreaterThanOrEqual, value);
+
+        // Note: the two general Where methods were originally public, accepting a public QueryOperator enum.
+        // If we ever want to make them public again, we should reinstate the QueryOperator enum to avoid an API
+        // dependency on the proto enum.
 
         /// <summary>
         /// Add a filter for the given field path.
@@ -152,7 +279,7 @@ namespace Google.Cloud.Firestore
         /// <param name="op">The filter operator. Must not be null.</param>
         /// <param name="value">The value to compare in the filter.</param>
         /// <returns>A new query based on the current one, but with the additional specified filter applied.</returns>
-        public Query Where(string fieldPath, QueryOperator op, object value)
+        private Query Where(string fieldPath, FieldOp op, object value)
         {
             GaxPreconditions.CheckNotNullOrEmpty(fieldPath, nameof(fieldPath));
             return Where(FieldPath.FromDotSeparatedString(fieldPath), op, value);
@@ -168,7 +295,7 @@ namespace Google.Cloud.Firestore
         /// <param name="op">The filter operator.</param>
         /// <param name="value">The value to compare in the filter. Must not be a sentinel value.</param>
         /// <returns>A new query based on the current one, but with the additional specified filter applied.</returns>
-        public Query Where(FieldPath fieldPath, QueryOperator op, object value)
+        private Query Where(FieldPath fieldPath, FieldOp op, object value)
         {
             InternalFilter filter = InternalFilter.Create(fieldPath, op, value);
             var newFilters = _filters == null ? new List<InternalFilter>() : new List<InternalFilter>(_filters);
@@ -652,14 +779,13 @@ namespace Google.Cloud.Firestore
             /// <returns></returns>
             internal bool IsEqualityFilter() => _value == null || _op == (int) FieldOp.Equal;
 
-            internal static InternalFilter Create(FieldPath fieldPath, QueryOperator op, object value)
+            internal static InternalFilter Create(FieldPath fieldPath, FieldOp op, object value)
             {
                 GaxPreconditions.CheckNotNull(fieldPath, nameof(fieldPath));
-                FieldOp queryOp = GetOperator(op);
                 var unaryOperator = GetUnaryOperator(value);
                 if (unaryOperator != UnaryOp.Unspecified)
                 {
-                    if (queryOp == FieldOp.Equal)
+                    if (op == FieldOp.Equal)
                     {
                         return new InternalFilter(fieldPath, (int) unaryOperator, null);
                     }
@@ -675,21 +801,7 @@ namespace Google.Cloud.Firestore
                     {
                         throw new ArgumentException(nameof(value), "Sentinel values cannot be specified in filters");
                     }
-                    return new InternalFilter(fieldPath, (int) queryOp, convertedValue);
-                }
-            }
-
-            private static FieldOp GetOperator(QueryOperator op)
-            {
-                switch (op)
-                {
-                    case QueryOperator.Equal: return FieldOp.Equal;
-                    case QueryOperator.LessThan: return FieldOp.LessThan;
-                    case QueryOperator.LessThanOrEqual: return FieldOp.LessThanOrEqual;
-                    case QueryOperator.GreaterThan: return FieldOp.GreaterThan;
-                    case QueryOperator.GreaterThanOrEqual: return FieldOp.GreaterThanOrEqual;
-                    default:
-                        throw new ArgumentException($"No operator for {op}", nameof(op));
+                    return new InternalFilter(fieldPath, (int) op, convertedValue);
                 }
             }
 

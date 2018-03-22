@@ -329,7 +329,7 @@ namespace Google.Cloud.Firestore.Snippets
 
             // But we can apply filters, perform ordering etc too.
             Query bigCitiesQuery = collection
-                .Where("Population", QueryOperator.GreaterThan, 3000000)
+                .WhereGreaterThan("Population", 3000000)
                 .OrderByDescending("Population");
 
             QuerySnapshot bigCities = await bigCitiesQuery.GetSnapshotAsync();

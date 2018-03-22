@@ -44,13 +44,123 @@ namespace Google.Cloud.Firestore.Tests
             Assert.Equal(expected, query.ToStructuredQuery());
         }
 
+        // Individual filter methods, for coverage and to guard against copy/paste errors
+
         [Fact]
-        public void Where_SingleFieldFilter()
+        public void Where_EqualTo_String()
         {
-            var query = GetEmptyQuery().Where("a.b", QueryOperator.LessThan, "x");
+            var query = GetEmptyQuery().WhereEqualTo("a.b", "x");
+            var expected = new StructuredQuery
+            {
+                Where = Filter(new FieldFilter { Field = Field("a.b"), Op = FieldFilter.Types.Operator.Equal, Value = CreateValue("x") }),
+                From = { new CollectionSelector { CollectionId = "col" } }
+            };
+            Assert.Equal(expected, query.ToStructuredQuery());
+        }
+
+        [Fact]
+        public void Where_EqualTo_FieldPath()
+        {
+            var query = GetEmptyQuery().WhereEqualTo(new FieldPath("a", "b"), "x");
+            var expected = new StructuredQuery
+            {
+                Where = Filter(new FieldFilter { Field = Field("a.b"), Op = FieldFilter.Types.Operator.Equal, Value = CreateValue("x") }),
+                From = { new CollectionSelector { CollectionId = "col" } }
+            };
+            Assert.Equal(expected, query.ToStructuredQuery());
+        }
+
+        [Fact]
+        public void Where_LessThan_String()
+        {
+            var query = GetEmptyQuery().WhereLessThan("a.b", "x");
             var expected = new StructuredQuery
             {
                 Where = Filter(new FieldFilter { Field = Field("a.b"), Op = FieldFilter.Types.Operator.LessThan, Value = CreateValue("x") }),
+                From = { new CollectionSelector { CollectionId = "col" } }
+            };
+            Assert.Equal(expected, query.ToStructuredQuery());
+        }
+
+        [Fact]
+        public void Where_LessThan_FieldPath()
+        {
+            var query = GetEmptyQuery().WhereLessThan(new FieldPath("a", "b"), "x");
+            var expected = new StructuredQuery
+            {
+                Where = Filter(new FieldFilter { Field = Field("a.b"), Op = FieldFilter.Types.Operator.LessThan, Value = CreateValue("x") }),
+                From = { new CollectionSelector { CollectionId = "col" } }
+            };
+            Assert.Equal(expected, query.ToStructuredQuery());
+        }
+
+        [Fact]
+        public void Where_LessThanOrEqualTo_String()
+        {
+            var query = GetEmptyQuery().WhereLessThanOrEqualTo("a.b", "x");
+            var expected = new StructuredQuery
+            {
+                Where = Filter(new FieldFilter { Field = Field("a.b"), Op = FieldFilter.Types.Operator.LessThanOrEqual, Value = CreateValue("x") }),
+                From = { new CollectionSelector { CollectionId = "col" } }
+            };
+            Assert.Equal(expected, query.ToStructuredQuery());
+        }
+
+        [Fact]
+        public void Where_LessThanOrEqualTo_FieldPath()
+        {
+            var query = GetEmptyQuery().WhereLessThanOrEqualTo(new FieldPath("a", "b"), "x");
+            var expected = new StructuredQuery
+            {
+                Where = Filter(new FieldFilter { Field = Field("a.b"), Op = FieldFilter.Types.Operator.LessThanOrEqual, Value = CreateValue("x") }),
+                From = { new CollectionSelector { CollectionId = "col" } }
+            };
+            Assert.Equal(expected, query.ToStructuredQuery());
+        }
+
+        [Fact]
+        public void Where_GreaterThan_String()
+        {
+            var query = GetEmptyQuery().WhereGreaterThan("a.b", "x");
+            var expected = new StructuredQuery
+            {
+                Where = Filter(new FieldFilter { Field = Field("a.b"), Op = FieldFilter.Types.Operator.GreaterThan, Value = CreateValue("x") }),
+                From = { new CollectionSelector { CollectionId = "col" } }
+            };
+            Assert.Equal(expected, query.ToStructuredQuery());
+        }
+
+        [Fact]
+        public void Where_GreaterThan_FieldPath()
+        {
+            var query = GetEmptyQuery().WhereGreaterThan(new FieldPath("a", "b"), "x");
+            var expected = new StructuredQuery
+            {
+                Where = Filter(new FieldFilter { Field = Field("a.b"), Op = FieldFilter.Types.Operator.GreaterThan, Value = CreateValue("x") }),
+                From = { new CollectionSelector { CollectionId = "col" } }
+            };
+            Assert.Equal(expected, query.ToStructuredQuery());
+        }
+
+        [Fact]
+        public void Where_GreaterThanOrEqualTo_String()
+        {
+            var query = GetEmptyQuery().WhereGreaterThanOrEqualTo("a.b", "x");
+            var expected = new StructuredQuery
+            {
+                Where = Filter(new FieldFilter { Field = Field("a.b"), Op = FieldFilter.Types.Operator.GreaterThanOrEqual, Value = CreateValue("x") }),
+                From = { new CollectionSelector { CollectionId = "col" } }
+            };
+            Assert.Equal(expected, query.ToStructuredQuery());
+        }
+
+        [Fact]
+        public void Where_GreaterThanOrEqualTo_FieldPath()
+        {
+            var query = GetEmptyQuery().WhereGreaterThanOrEqualTo(new FieldPath("a", "b"), "x");
+            var expected = new StructuredQuery
+            {
+                Where = Filter(new FieldFilter { Field = Field("a.b"), Op = FieldFilter.Types.Operator.GreaterThanOrEqual, Value = CreateValue("x") }),
                 From = { new CollectionSelector { CollectionId = "col" } }
             };
             Assert.Equal(expected, query.ToStructuredQuery());
@@ -61,7 +171,7 @@ namespace Google.Cloud.Firestore.Tests
         [InlineData(float.NaN)]
         public void Where_SingleNaNFilter(object value)
         {
-            var query = GetEmptyQuery().Where("a.b", QueryOperator.Equal, value);
+            var query = GetEmptyQuery().WhereEqualTo("a.b", value);
             var expected = new StructuredQuery
             {
                 Where = Filter(new UnaryFilter { Field = Field("a.b"), Op = UnaryFilter.Types.Operator.IsNan }),
@@ -73,7 +183,7 @@ namespace Google.Cloud.Firestore.Tests
         [Fact]
         public void Where_SingleNullFilter()
         {
-            var query = GetEmptyQuery().Where("a.b", QueryOperator.Equal, null);
+            var query = GetEmptyQuery().WhereEqualTo("a.b", null);
             var expected = new StructuredQuery
             {
                 Where = Filter(new UnaryFilter { Field = Field("a.b"), Op = UnaryFilter.Types.Operator.IsNull }),
@@ -86,9 +196,9 @@ namespace Google.Cloud.Firestore.Tests
         public void Where_CompositeFilter()
         {
             var query = GetEmptyQuery()
-                .Where("a", QueryOperator.GreaterThanOrEqual, "x")
-                .Where("b", QueryOperator.Equal, "y")
-                .Where("c", QueryOperator.Equal, "z");
+                .WhereGreaterThanOrEqualTo("a", "x")
+                .WhereEqualTo("b", "y")
+                .WhereEqualTo("c", "z");
             var expected = new StructuredQuery
             {
                 Where = CompositeFilter(
@@ -99,18 +209,7 @@ namespace Google.Cloud.Firestore.Tests
                 From = { new CollectionSelector { CollectionId = "col" } }
             };
             Assert.Equal(expected, query.ToStructuredQuery());
-        }
-
-        [Theory]
-        [InlineData(QueryOperator.LessThan, null)]
-        [InlineData(QueryOperator.GreaterThan, double.NaN)]
-        [InlineData(QueryOperator.LessThanOrEqual, float.NaN)]
-        [InlineData((QueryOperator) 100, 10)]
-        public void Where_Invalid(QueryOperator op, object value)
-        {
-            var query = GetEmptyQuery();
-            Assert.Throws<ArgumentException>(() => query.Where("x", op, value));
-        }
+        }        
 
         // Test for methods which replace previous values
         [Fact]
@@ -351,8 +450,8 @@ namespace Google.Cloud.Firestore.Tests
         {
             var query = GetEmptyQuery()
                 .Select("a.b", "c.d")
-                .Where("a", QueryOperator.Equal, null)
-                .Where("b", QueryOperator.GreaterThan, 10)
+                .WhereEqualTo("a", null)
+                .WhereGreaterThan("b", 10)
                 .OrderBy("foo")
                 .OrderByDescending("bar")
                 .StartAt("x", 10)
@@ -616,31 +715,31 @@ namespace Google.Cloud.Firestore.Tests
         public void Equality_Where()
         {
             var col = s_db.Collection("col");
-            var query = col.Where("field", QueryOperator.Equal, 10);
+            var query = col.WhereEqualTo("field", 10);
             EqualityTester.AssertEqual(query,
                 equal: new[] {
-                    col.Where("field", QueryOperator.Equal, 10), // Same value
-                    col.Where("field", QueryOperator.Equal, 10L), // Same value after serialization
-                    col.Where(new FieldPath("field"), QueryOperator.Equal, 10), // FieldPath instead of Field
+                    col.WhereEqualTo("field", 10), // Same value
+                    col.WhereEqualTo("field", 10L), // Same value after serialization
+                    col.WhereEqualTo(new FieldPath("field"), 10), // FieldPath instead of Field
                 },
                 unequal: new[] {
-                    query.Where("field", QueryOperator.Equal, 10), // Repeated filter doesn't replace (at the moment, anyway)
-                    col.Where("otherfield", QueryOperator.Equal, 10), // Different field
-                    col.Where("field", QueryOperator.LessThan, 10), // Different operator
-                    col.Where("field", QueryOperator.Equal, 20), // Different value
+                    query.WhereEqualTo("field", 10), // Repeated filter doesn't replace (at the moment, anyway)
+                    col.WhereEqualTo("otherfield", 10), // Different field
+                    col.WhereLessThan("field",  10), // Different operator
+                    col.WhereEqualTo("field", 20), // Different value
                 }
             );
 
-            query = col.Where("first", QueryOperator.Equal, "foo").Where("second", QueryOperator.Equal, "bar");
+            query = col.WhereEqualTo("first", "foo").WhereEqualTo("second", "bar");
             EqualityTester.AssertEqual(query,
                 equal: new[] {
-                    col.Where("first", QueryOperator.Equal, "foo").Where("second", QueryOperator.Equal, "bar")
+                    col.WhereEqualTo("first", "foo").WhereEqualTo("second", "bar")
                 },
                 unequal: new[] {
                     // Ordering of filters matters
-                    col.Where("second", QueryOperator.Equal, "bar").Where("first", QueryOperator.Equal, "foo"),
+                    col.WhereEqualTo("second", "bar").WhereEqualTo("first", "foo"),
                     // It's not just a replacement
-                    col.Where("first", QueryOperator.Equal, "foo")
+                    col.WhereEqualTo("first", "foo")
                 }
             );
         }
@@ -726,12 +825,12 @@ namespace Google.Cloud.Firestore.Tests
                 .StartAfter(20)
                 .EndBefore(30)
                 .Select("foo")
-                .Where("bar", QueryOperator.GreaterThan, 20)
+                .WhereGreaterThan("bar", 20)
                 .Limit(20)
                 .Offset(3);
             EqualityTester.AssertEqual(query,
                 equal: new[] {
-                    col.Where("bar", QueryOperator.GreaterThan, 20)
+                    col.WhereGreaterThan("bar", 20)
                         .Select("foo")
                         .Offset(3)
                         .OrderBy("foo")
@@ -741,7 +840,7 @@ namespace Google.Cloud.Firestore.Tests
                 },
                 unequal: new[] {
                     // Just one change here - the EndBefore argument
-                    col.Where("bar", QueryOperator.GreaterThan, 20)
+                    col.WhereGreaterThan("bar", 20)
                         .Select("foo")
                         .Offset(3)
                         .OrderBy("foo")

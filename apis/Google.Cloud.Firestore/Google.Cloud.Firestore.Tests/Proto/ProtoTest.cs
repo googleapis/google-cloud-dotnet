@@ -57,14 +57,15 @@ namespace Google.Cloud.Firestore.Tests.Proto
         public static IEnumerable<object[]> UpdateTests => FindTests(TestOneofCase.Update);
         public static IEnumerable<object[]> UpdatePathsTests => FindTests(TestOneofCase.UpdatePaths);
 
-        private static readonly IDictionary<string, QueryOperator> QueryOperators = new Dictionary<string, QueryOperator>
-        {
-            { "==", QueryOperator.Equal },
-            { "<", QueryOperator.LessThan },
-            { "<=", QueryOperator.LessThanOrEqual },
-            { ">", QueryOperator.GreaterThan },
-            { ">=", QueryOperator.GreaterThanOrEqual },
-        };
+        private static readonly IDictionary<string, Func<Query, Firestore.FieldPath, object, Query>> QueryOperators =
+            new Dictionary<string, Func<Query, Firestore.FieldPath, object, Query>>
+            {
+                { "==", (query, path, value) => query.WhereEqualTo(path, value) },
+                { "<", (query, path, value) => query.WhereLessThan(path, value) },
+                { "<=", (query, path, value) => query.WhereLessThanOrEqualTo(path, value) },
+                { ">", (query, path, value) => query.WhereGreaterThan(path, value) },
+                { ">=", (query, path, value) => query.WhereGreaterThanOrEqualTo(path, value) },
+            };
 
         [Fact]
         public void AllTestsKnown()
@@ -162,12 +163,12 @@ namespace Google.Cloud.Firestore.Tests.Proto
                             break;
                         case Clause.ClauseOneofCase.Where:
                             var filterPath = ConvertFieldPath(clause.Where.Path) ;
-                            if (!QueryOperators.TryGetValue(clause.Where.Op, out var op))
+                            if (!QueryOperators.TryGetValue(clause.Where.Op, out var filterProvider))
                             {
                                 throw new ArgumentException($"Invalid where operator: {clause.Where.Op}");
                             }
                             var value = DeserializeJson(clause.Where.JsonValue);
-                            query = query.Where(filterPath, op, value);
+                            query = filterProvider(query, filterPath, value);
                             break;
                         default:
                             throw new InvalidOperationException($"Unexpected clause case: {clause.ClauseCase}");
