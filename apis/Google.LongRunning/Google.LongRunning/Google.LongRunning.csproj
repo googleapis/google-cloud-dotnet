@@ -10,7 +10,6 @@
     <AssemblyOriginatorKeyFile>../../GoogleApis.snk</AssemblyOriginatorKeyFile>
     <SignAssembly>true</SignAssembly>
     <Deterministic>true</Deterministic>
-    <PublicSign Condition=" '$(OS)' != 'Windows_NT' ">true</PublicSign>
     <TreatWarningsAsErrors>true</TreatWarningsAsErrors>
     <Description>gRPC services for the Google Long Running Operations API. This library is typically used as a dependency for other API client libraries.</Description>
     <PackageTags>LongRunning;Google;Cloud</PackageTags>
