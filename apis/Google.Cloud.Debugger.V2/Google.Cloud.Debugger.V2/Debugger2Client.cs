@@ -16,6 +16,7 @@
 
 using Google.Api.Gax;
 using Google.Api.Gax.Grpc;
+using Google.Protobuf;
 using Google.Protobuf.WellKnownTypes;
 using Grpc.Core;
 using System;
@@ -1027,9 +1028,34 @@ namespace Google.Cloud.Debugger.V2
                 GrpcClient.ListBreakpointsAsync, GrpcClient.ListBreakpoints, effectiveSettings.ListBreakpointsSettings);
             _callListDebuggees = clientHelper.BuildApiCall<ListDebuggeesRequest, ListDebuggeesResponse>(
                 GrpcClient.ListDebuggeesAsync, GrpcClient.ListDebuggees, effectiveSettings.ListDebuggeesSettings);
+            Modify_ApiCall(ref _callSetBreakpoint);
+            Modify_SetBreakpointApiCall(ref _callSetBreakpoint);
+            Modify_ApiCall(ref _callGetBreakpoint);
+            Modify_GetBreakpointApiCall(ref _callGetBreakpoint);
+            Modify_ApiCall(ref _callDeleteBreakpoint);
+            Modify_DeleteBreakpointApiCall(ref _callDeleteBreakpoint);
+            Modify_ApiCall(ref _callListBreakpoints);
+            Modify_ListBreakpointsApiCall(ref _callListBreakpoints);
+            Modify_ApiCall(ref _callListDebuggees);
+            Modify_ListDebuggeesApiCall(ref _callListDebuggees);
             OnConstruction(grpcClient, effectiveSettings, clientHelper);
         }
 
+        // Partial methods are named to (mostly) ensure there cannot be conflicts with RPC method names.
+
+        // Partial methods called for every ApiCall on construction.
+        // Allows modification of all the underlying ApiCall objects.
+        partial void Modify_ApiCall<TRequest, TResponse>(ref ApiCall<TRequest, TResponse> call)
+            where TRequest : class, IMessage<TRequest>
+            where TResponse : class, IMessage<TResponse>;
+
+        // Partial methods called for each ApiCall on construction.
+        // Allows per-RPC-method modification of the underlying ApiCall object.
+        partial void Modify_SetBreakpointApiCall(ref ApiCall<SetBreakpointRequest, SetBreakpointResponse> call);
+        partial void Modify_GetBreakpointApiCall(ref ApiCall<GetBreakpointRequest, GetBreakpointResponse> call);
+        partial void Modify_DeleteBreakpointApiCall(ref ApiCall<DeleteBreakpointRequest, Empty> call);
+        partial void Modify_ListBreakpointsApiCall(ref ApiCall<ListBreakpointsRequest, ListBreakpointsResponse> call);
+        partial void Modify_ListDebuggeesApiCall(ref ApiCall<ListDebuggeesRequest, ListDebuggeesResponse> call);
         partial void OnConstruction(Debugger2.Debugger2Client grpcClient, Debugger2Settings effectiveSettings, ClientHelper clientHelper);
 
         /// <summary>
@@ -1037,7 +1063,9 @@ namespace Google.Cloud.Debugger.V2
         /// </summary>
         public override Debugger2.Debugger2Client GrpcClient { get; }
 
-        // Partial modifier methods contain '_' to ensure no name conflicts with RPC methods.
+        // Partial methods called on each request.
+        // Allows per-RPC-call modification to the request and CallSettings objects,
+        // before the underlying RPC is performed.
         partial void Modify_SetBreakpointRequest(ref SetBreakpointRequest request, ref CallSettings settings);
         partial void Modify_GetBreakpointRequest(ref GetBreakpointRequest request, ref CallSettings settings);
         partial void Modify_DeleteBreakpointRequest(ref DeleteBreakpointRequest request, ref CallSettings settings);

@@ -2045,9 +2045,61 @@ namespace Google.Cloud.Spanner.V1
                 GrpcClient.PartitionQueryAsync, GrpcClient.PartitionQuery, effectiveSettings.PartitionQuerySettings);
             _callPartitionRead = clientHelper.BuildApiCall<PartitionReadRequest, PartitionResponse>(
                 GrpcClient.PartitionReadAsync, GrpcClient.PartitionRead, effectiveSettings.PartitionReadSettings);
+            Modify_ApiCall(ref _callCreateSession);
+            Modify_CreateSessionApiCall(ref _callCreateSession);
+            Modify_ApiCall(ref _callGetSession);
+            Modify_GetSessionApiCall(ref _callGetSession);
+            Modify_ApiCall(ref _callListSessions);
+            Modify_ListSessionsApiCall(ref _callListSessions);
+            Modify_ApiCall(ref _callDeleteSession);
+            Modify_DeleteSessionApiCall(ref _callDeleteSession);
+            Modify_ApiCall(ref _callExecuteSql);
+            Modify_ExecuteSqlApiCall(ref _callExecuteSql);
+            Modify_ApiCall(ref _callExecuteStreamingSql);
+            Modify_ExecuteStreamingSqlApiCall(ref _callExecuteStreamingSql);
+            Modify_ApiCall(ref _callRead);
+            Modify_ReadApiCall(ref _callRead);
+            Modify_ApiCall(ref _callStreamingRead);
+            Modify_StreamingReadApiCall(ref _callStreamingRead);
+            Modify_ApiCall(ref _callBeginTransaction);
+            Modify_BeginTransactionApiCall(ref _callBeginTransaction);
+            Modify_ApiCall(ref _callCommit);
+            Modify_CommitApiCall(ref _callCommit);
+            Modify_ApiCall(ref _callRollback);
+            Modify_RollbackApiCall(ref _callRollback);
+            Modify_ApiCall(ref _callPartitionQuery);
+            Modify_PartitionQueryApiCall(ref _callPartitionQuery);
+            Modify_ApiCall(ref _callPartitionRead);
+            Modify_PartitionReadApiCall(ref _callPartitionRead);
             OnConstruction(grpcClient, effectiveSettings, clientHelper);
         }
 
+        // Partial methods are named to (mostly) ensure there cannot be conflicts with RPC method names.
+
+        // Partial methods called for every ApiCall on construction.
+        // Allows modification of all the underlying ApiCall objects.
+        partial void Modify_ApiCall<TRequest, TResponse>(ref ApiCall<TRequest, TResponse> call)
+            where TRequest : class, IMessage<TRequest>
+            where TResponse : class, IMessage<TResponse>;
+        partial void Modify_ApiCall<TRequest, TResponse>(ref ApiServerStreamingCall<TRequest, TResponse> call)
+            where TRequest : class, IMessage<TRequest>
+            where TResponse : class, IMessage<TResponse>;
+
+        // Partial methods called for each ApiCall on construction.
+        // Allows per-RPC-method modification of the underlying ApiCall object.
+        partial void Modify_CreateSessionApiCall(ref ApiCall<CreateSessionRequest, Session> call);
+        partial void Modify_GetSessionApiCall(ref ApiCall<GetSessionRequest, Session> call);
+        partial void Modify_ListSessionsApiCall(ref ApiCall<ListSessionsRequest, ListSessionsResponse> call);
+        partial void Modify_DeleteSessionApiCall(ref ApiCall<DeleteSessionRequest, Empty> call);
+        partial void Modify_ExecuteSqlApiCall(ref ApiCall<ExecuteSqlRequest, ResultSet> call);
+        partial void Modify_ExecuteStreamingSqlApiCall(ref ApiServerStreamingCall<ExecuteSqlRequest, PartialResultSet> call);
+        partial void Modify_ReadApiCall(ref ApiCall<ReadRequest, ResultSet> call);
+        partial void Modify_StreamingReadApiCall(ref ApiServerStreamingCall<ReadRequest, PartialResultSet> call);
+        partial void Modify_BeginTransactionApiCall(ref ApiCall<BeginTransactionRequest, Transaction> call);
+        partial void Modify_CommitApiCall(ref ApiCall<CommitRequest, CommitResponse> call);
+        partial void Modify_RollbackApiCall(ref ApiCall<RollbackRequest, Empty> call);
+        partial void Modify_PartitionQueryApiCall(ref ApiCall<PartitionQueryRequest, PartitionResponse> call);
+        partial void Modify_PartitionReadApiCall(ref ApiCall<PartitionReadRequest, PartitionResponse> call);
         partial void OnConstruction(Spanner.SpannerClient grpcClient, SpannerSettings effectiveSettings, ClientHelper clientHelper);
 
         /// <summary>
@@ -2055,7 +2107,9 @@ namespace Google.Cloud.Spanner.V1
         /// </summary>
         public override Spanner.SpannerClient GrpcClient { get; }
 
-        // Partial modifier methods contain '_' to ensure no name conflicts with RPC methods.
+        // Partial methods called on each request.
+        // Allows per-RPC-call modification to the request and CallSettings objects,
+        // before the underlying RPC is performed.
         partial void Modify_CreateSessionRequest(ref CreateSessionRequest request, ref CallSettings settings);
         partial void Modify_GetSessionRequest(ref GetSessionRequest request, ref CallSettings settings);
         partial void Modify_ListSessionsRequest(ref ListSessionsRequest request, ref CallSettings settings);

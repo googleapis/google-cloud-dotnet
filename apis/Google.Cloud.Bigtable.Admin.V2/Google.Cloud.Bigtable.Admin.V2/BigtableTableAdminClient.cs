@@ -17,6 +17,7 @@
 using Google.Api.Gax;
 using Google.Api.Gax.Grpc;
 using Google.LongRunning;
+using Google.Protobuf;
 using Google.Protobuf.WellKnownTypes;
 using Grpc.Core;
 using System;
@@ -2499,9 +2500,58 @@ namespace Google.Cloud.Bigtable.Admin.V2
             _callDeleteSnapshot = clientHelper.BuildApiCall<DeleteSnapshotRequest, Empty>(
                 GrpcClient.DeleteSnapshotAsync, GrpcClient.DeleteSnapshot, effectiveSettings.DeleteSnapshotSettings)
                 .WithCallSettingsOverlay(request => CallSettings.FromHeader("x-goog-request-params", $"name={request.Name}"));
+            Modify_ApiCall(ref _callCreateTable);
+            Modify_CreateTableApiCall(ref _callCreateTable);
+            Modify_ApiCall(ref _callCreateTableFromSnapshot);
+            Modify_CreateTableFromSnapshotApiCall(ref _callCreateTableFromSnapshot);
+            Modify_ApiCall(ref _callListTables);
+            Modify_ListTablesApiCall(ref _callListTables);
+            Modify_ApiCall(ref _callGetTable);
+            Modify_GetTableApiCall(ref _callGetTable);
+            Modify_ApiCall(ref _callDeleteTable);
+            Modify_DeleteTableApiCall(ref _callDeleteTable);
+            Modify_ApiCall(ref _callModifyColumnFamilies);
+            Modify_ModifyColumnFamiliesApiCall(ref _callModifyColumnFamilies);
+            Modify_ApiCall(ref _callDropRowRange);
+            Modify_DropRowRangeApiCall(ref _callDropRowRange);
+            Modify_ApiCall(ref _callGenerateConsistencyToken);
+            Modify_GenerateConsistencyTokenApiCall(ref _callGenerateConsistencyToken);
+            Modify_ApiCall(ref _callCheckConsistency);
+            Modify_CheckConsistencyApiCall(ref _callCheckConsistency);
+            Modify_ApiCall(ref _callSnapshotTable);
+            Modify_SnapshotTableApiCall(ref _callSnapshotTable);
+            Modify_ApiCall(ref _callGetSnapshot);
+            Modify_GetSnapshotApiCall(ref _callGetSnapshot);
+            Modify_ApiCall(ref _callListSnapshots);
+            Modify_ListSnapshotsApiCall(ref _callListSnapshots);
+            Modify_ApiCall(ref _callDeleteSnapshot);
+            Modify_DeleteSnapshotApiCall(ref _callDeleteSnapshot);
             OnConstruction(grpcClient, effectiveSettings, clientHelper);
         }
 
+        // Partial methods are named to (mostly) ensure there cannot be conflicts with RPC method names.
+
+        // Partial methods called for every ApiCall on construction.
+        // Allows modification of all the underlying ApiCall objects.
+        partial void Modify_ApiCall<TRequest, TResponse>(ref ApiCall<TRequest, TResponse> call)
+            where TRequest : class, IMessage<TRequest>
+            where TResponse : class, IMessage<TResponse>;
+
+        // Partial methods called for each ApiCall on construction.
+        // Allows per-RPC-method modification of the underlying ApiCall object.
+        partial void Modify_CreateTableApiCall(ref ApiCall<CreateTableRequest, Table> call);
+        partial void Modify_CreateTableFromSnapshotApiCall(ref ApiCall<CreateTableFromSnapshotRequest, Operation> call);
+        partial void Modify_ListTablesApiCall(ref ApiCall<ListTablesRequest, ListTablesResponse> call);
+        partial void Modify_GetTableApiCall(ref ApiCall<GetTableRequest, Table> call);
+        partial void Modify_DeleteTableApiCall(ref ApiCall<DeleteTableRequest, Empty> call);
+        partial void Modify_ModifyColumnFamiliesApiCall(ref ApiCall<ModifyColumnFamiliesRequest, Table> call);
+        partial void Modify_DropRowRangeApiCall(ref ApiCall<DropRowRangeRequest, Empty> call);
+        partial void Modify_GenerateConsistencyTokenApiCall(ref ApiCall<GenerateConsistencyTokenRequest, GenerateConsistencyTokenResponse> call);
+        partial void Modify_CheckConsistencyApiCall(ref ApiCall<CheckConsistencyRequest, CheckConsistencyResponse> call);
+        partial void Modify_SnapshotTableApiCall(ref ApiCall<SnapshotTableRequest, Operation> call);
+        partial void Modify_GetSnapshotApiCall(ref ApiCall<GetSnapshotRequest, Snapshot> call);
+        partial void Modify_ListSnapshotsApiCall(ref ApiCall<ListSnapshotsRequest, ListSnapshotsResponse> call);
+        partial void Modify_DeleteSnapshotApiCall(ref ApiCall<DeleteSnapshotRequest, Empty> call);
         partial void OnConstruction(BigtableTableAdmin.BigtableTableAdminClient grpcClient, BigtableTableAdminSettings effectiveSettings, ClientHelper clientHelper);
 
         /// <summary>
@@ -2509,7 +2559,9 @@ namespace Google.Cloud.Bigtable.Admin.V2
         /// </summary>
         public override BigtableTableAdmin.BigtableTableAdminClient GrpcClient { get; }
 
-        // Partial modifier methods contain '_' to ensure no name conflicts with RPC methods.
+        // Partial methods called on each request.
+        // Allows per-RPC-call modification to the request and CallSettings objects,
+        // before the underlying RPC is performed.
         partial void Modify_CreateTableRequest(ref CreateTableRequest request, ref CallSettings settings);
         partial void Modify_CreateTableFromSnapshotRequest(ref CreateTableFromSnapshotRequest request, ref CallSettings settings);
         partial void Modify_ListTablesRequest(ref ListTablesRequest request, ref CallSettings settings);

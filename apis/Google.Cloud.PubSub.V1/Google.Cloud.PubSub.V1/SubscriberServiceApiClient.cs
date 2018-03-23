@@ -17,6 +17,7 @@
 using Google.Api.Gax;
 using Google.Api.Gax.Grpc;
 using Google.Cloud.Iam.V1;
+using Google.Protobuf;
 using Google.Protobuf.WellKnownTypes;
 using Grpc.Core;
 using System;
@@ -3116,9 +3117,76 @@ namespace Google.Cloud.PubSub.V1
                 grpcIAMPolicyClient.GetIamPolicyAsync, grpcIAMPolicyClient.GetIamPolicy, effectiveSettings.GetIamPolicySettings);
             _callTestIamPermissions = clientHelper.BuildApiCall<TestIamPermissionsRequest, TestIamPermissionsResponse>(
                 grpcIAMPolicyClient.TestIamPermissionsAsync, grpcIAMPolicyClient.TestIamPermissions, effectiveSettings.TestIamPermissionsSettings);
+            Modify_ApiCall(ref _callCreateSubscription);
+            Modify_CreateSubscriptionApiCall(ref _callCreateSubscription);
+            Modify_ApiCall(ref _callGetSubscription);
+            Modify_GetSubscriptionApiCall(ref _callGetSubscription);
+            Modify_ApiCall(ref _callUpdateSubscription);
+            Modify_UpdateSubscriptionApiCall(ref _callUpdateSubscription);
+            Modify_ApiCall(ref _callListSubscriptions);
+            Modify_ListSubscriptionsApiCall(ref _callListSubscriptions);
+            Modify_ApiCall(ref _callDeleteSubscription);
+            Modify_DeleteSubscriptionApiCall(ref _callDeleteSubscription);
+            Modify_ApiCall(ref _callModifyAckDeadline);
+            Modify_ModifyAckDeadlineApiCall(ref _callModifyAckDeadline);
+            Modify_ApiCall(ref _callAcknowledge);
+            Modify_AcknowledgeApiCall(ref _callAcknowledge);
+            Modify_ApiCall(ref _callPull);
+            Modify_PullApiCall(ref _callPull);
+            Modify_ApiCall(ref _callStreamingPull);
+            Modify_StreamingPullApiCall(ref _callStreamingPull);
+            Modify_ApiCall(ref _callModifyPushConfig);
+            Modify_ModifyPushConfigApiCall(ref _callModifyPushConfig);
+            Modify_ApiCall(ref _callListSnapshots);
+            Modify_ListSnapshotsApiCall(ref _callListSnapshots);
+            Modify_ApiCall(ref _callCreateSnapshot);
+            Modify_CreateSnapshotApiCall(ref _callCreateSnapshot);
+            Modify_ApiCall(ref _callUpdateSnapshot);
+            Modify_UpdateSnapshotApiCall(ref _callUpdateSnapshot);
+            Modify_ApiCall(ref _callDeleteSnapshot);
+            Modify_DeleteSnapshotApiCall(ref _callDeleteSnapshot);
+            Modify_ApiCall(ref _callSeek);
+            Modify_SeekApiCall(ref _callSeek);
+            Modify_ApiCall(ref _callSetIamPolicy);
+            Modify_SetIamPolicyApiCall(ref _callSetIamPolicy);
+            Modify_ApiCall(ref _callGetIamPolicy);
+            Modify_GetIamPolicyApiCall(ref _callGetIamPolicy);
+            Modify_ApiCall(ref _callTestIamPermissions);
+            Modify_TestIamPermissionsApiCall(ref _callTestIamPermissions);
             OnConstruction(grpcClient, effectiveSettings, clientHelper);
         }
 
+        // Partial methods are named to (mostly) ensure there cannot be conflicts with RPC method names.
+
+        // Partial methods called for every ApiCall on construction.
+        // Allows modification of all the underlying ApiCall objects.
+        partial void Modify_ApiCall<TRequest, TResponse>(ref ApiCall<TRequest, TResponse> call)
+            where TRequest : class, IMessage<TRequest>
+            where TResponse : class, IMessage<TResponse>;
+        partial void Modify_ApiCall<TRequest, TResponse>(ref ApiBidirectionalStreamingCall<TRequest, TResponse> call)
+            where TRequest : class, IMessage<TRequest>
+            where TResponse : class, IMessage<TResponse>;
+
+        // Partial methods called for each ApiCall on construction.
+        // Allows per-RPC-method modification of the underlying ApiCall object.
+        partial void Modify_CreateSubscriptionApiCall(ref ApiCall<Subscription, Subscription> call);
+        partial void Modify_GetSubscriptionApiCall(ref ApiCall<GetSubscriptionRequest, Subscription> call);
+        partial void Modify_UpdateSubscriptionApiCall(ref ApiCall<UpdateSubscriptionRequest, Subscription> call);
+        partial void Modify_ListSubscriptionsApiCall(ref ApiCall<ListSubscriptionsRequest, ListSubscriptionsResponse> call);
+        partial void Modify_DeleteSubscriptionApiCall(ref ApiCall<DeleteSubscriptionRequest, Empty> call);
+        partial void Modify_ModifyAckDeadlineApiCall(ref ApiCall<ModifyAckDeadlineRequest, Empty> call);
+        partial void Modify_AcknowledgeApiCall(ref ApiCall<AcknowledgeRequest, Empty> call);
+        partial void Modify_PullApiCall(ref ApiCall<PullRequest, PullResponse> call);
+        partial void Modify_StreamingPullApiCall(ref ApiBidirectionalStreamingCall<StreamingPullRequest, StreamingPullResponse> call);
+        partial void Modify_ModifyPushConfigApiCall(ref ApiCall<ModifyPushConfigRequest, Empty> call);
+        partial void Modify_ListSnapshotsApiCall(ref ApiCall<ListSnapshotsRequest, ListSnapshotsResponse> call);
+        partial void Modify_CreateSnapshotApiCall(ref ApiCall<CreateSnapshotRequest, Snapshot> call);
+        partial void Modify_UpdateSnapshotApiCall(ref ApiCall<UpdateSnapshotRequest, Snapshot> call);
+        partial void Modify_DeleteSnapshotApiCall(ref ApiCall<DeleteSnapshotRequest, Empty> call);
+        partial void Modify_SeekApiCall(ref ApiCall<SeekRequest, SeekResponse> call);
+        partial void Modify_SetIamPolicyApiCall(ref ApiCall<SetIamPolicyRequest, Policy> call);
+        partial void Modify_GetIamPolicyApiCall(ref ApiCall<GetIamPolicyRequest, Policy> call);
+        partial void Modify_TestIamPermissionsApiCall(ref ApiCall<TestIamPermissionsRequest, TestIamPermissionsResponse> call);
         partial void OnConstruction(Subscriber.SubscriberClient grpcClient, SubscriberServiceApiSettings effectiveSettings, ClientHelper clientHelper);
 
         /// <summary>
@@ -3126,7 +3194,9 @@ namespace Google.Cloud.PubSub.V1
         /// </summary>
         public override Subscriber.SubscriberClient GrpcClient { get; }
 
-        // Partial modifier methods contain '_' to ensure no name conflicts with RPC methods.
+        // Partial methods called on each request.
+        // Allows per-RPC-call modification to the request and CallSettings objects,
+        // before the underlying RPC is performed.
         partial void Modify_Subscription(ref Subscription request, ref CallSettings settings);
         partial void Modify_GetSubscriptionRequest(ref GetSubscriptionRequest request, ref CallSettings settings);
         partial void Modify_UpdateSubscriptionRequest(ref UpdateSubscriptionRequest request, ref CallSettings settings);

@@ -16,6 +16,7 @@
 
 using Google.Api.Gax;
 using Google.Api.Gax.Grpc;
+using Google.Protobuf;
 using Google.Protobuf.WellKnownTypes;
 using Grpc.Core;
 using System;
@@ -1131,9 +1132,37 @@ namespace Google.Cloud.Language.V1
                 GrpcClient.ClassifyTextAsync, GrpcClient.ClassifyText, effectiveSettings.ClassifyTextSettings);
             _callAnnotateText = clientHelper.BuildApiCall<AnnotateTextRequest, AnnotateTextResponse>(
                 GrpcClient.AnnotateTextAsync, GrpcClient.AnnotateText, effectiveSettings.AnnotateTextSettings);
+            Modify_ApiCall(ref _callAnalyzeSentiment);
+            Modify_AnalyzeSentimentApiCall(ref _callAnalyzeSentiment);
+            Modify_ApiCall(ref _callAnalyzeEntities);
+            Modify_AnalyzeEntitiesApiCall(ref _callAnalyzeEntities);
+            Modify_ApiCall(ref _callAnalyzeEntitySentiment);
+            Modify_AnalyzeEntitySentimentApiCall(ref _callAnalyzeEntitySentiment);
+            Modify_ApiCall(ref _callAnalyzeSyntax);
+            Modify_AnalyzeSyntaxApiCall(ref _callAnalyzeSyntax);
+            Modify_ApiCall(ref _callClassifyText);
+            Modify_ClassifyTextApiCall(ref _callClassifyText);
+            Modify_ApiCall(ref _callAnnotateText);
+            Modify_AnnotateTextApiCall(ref _callAnnotateText);
             OnConstruction(grpcClient, effectiveSettings, clientHelper);
         }
 
+        // Partial methods are named to (mostly) ensure there cannot be conflicts with RPC method names.
+
+        // Partial methods called for every ApiCall on construction.
+        // Allows modification of all the underlying ApiCall objects.
+        partial void Modify_ApiCall<TRequest, TResponse>(ref ApiCall<TRequest, TResponse> call)
+            where TRequest : class, IMessage<TRequest>
+            where TResponse : class, IMessage<TResponse>;
+
+        // Partial methods called for each ApiCall on construction.
+        // Allows per-RPC-method modification of the underlying ApiCall object.
+        partial void Modify_AnalyzeSentimentApiCall(ref ApiCall<AnalyzeSentimentRequest, AnalyzeSentimentResponse> call);
+        partial void Modify_AnalyzeEntitiesApiCall(ref ApiCall<AnalyzeEntitiesRequest, AnalyzeEntitiesResponse> call);
+        partial void Modify_AnalyzeEntitySentimentApiCall(ref ApiCall<AnalyzeEntitySentimentRequest, AnalyzeEntitySentimentResponse> call);
+        partial void Modify_AnalyzeSyntaxApiCall(ref ApiCall<AnalyzeSyntaxRequest, AnalyzeSyntaxResponse> call);
+        partial void Modify_ClassifyTextApiCall(ref ApiCall<ClassifyTextRequest, ClassifyTextResponse> call);
+        partial void Modify_AnnotateTextApiCall(ref ApiCall<AnnotateTextRequest, AnnotateTextResponse> call);
         partial void OnConstruction(LanguageService.LanguageServiceClient grpcClient, LanguageServiceSettings effectiveSettings, ClientHelper clientHelper);
 
         /// <summary>
@@ -1141,7 +1170,9 @@ namespace Google.Cloud.Language.V1
         /// </summary>
         public override LanguageService.LanguageServiceClient GrpcClient { get; }
 
-        // Partial modifier methods contain '_' to ensure no name conflicts with RPC methods.
+        // Partial methods called on each request.
+        // Allows per-RPC-call modification to the request and CallSettings objects,
+        // before the underlying RPC is performed.
         partial void Modify_AnalyzeSentimentRequest(ref AnalyzeSentimentRequest request, ref CallSettings settings);
         partial void Modify_AnalyzeEntitiesRequest(ref AnalyzeEntitiesRequest request, ref CallSettings settings);
         partial void Modify_AnalyzeEntitySentimentRequest(ref AnalyzeEntitySentimentRequest request, ref CallSettings settings);

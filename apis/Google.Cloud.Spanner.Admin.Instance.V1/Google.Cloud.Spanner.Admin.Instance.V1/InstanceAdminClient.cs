@@ -18,6 +18,7 @@ using Google.Api.Gax;
 using Google.Api.Gax.Grpc;
 using Google.Cloud.Iam.V1;
 using Google.LongRunning;
+using Google.Protobuf;
 using Google.Protobuf.WellKnownTypes;
 using Grpc.Core;
 using System;
@@ -2301,9 +2302,49 @@ namespace Google.Cloud.Spanner.Admin.Instance.V1
                 GrpcClient.GetIamPolicyAsync, GrpcClient.GetIamPolicy, effectiveSettings.GetIamPolicySettings);
             _callTestIamPermissions = clientHelper.BuildApiCall<TestIamPermissionsRequest, TestIamPermissionsResponse>(
                 GrpcClient.TestIamPermissionsAsync, GrpcClient.TestIamPermissions, effectiveSettings.TestIamPermissionsSettings);
+            Modify_ApiCall(ref _callListInstanceConfigs);
+            Modify_ListInstanceConfigsApiCall(ref _callListInstanceConfigs);
+            Modify_ApiCall(ref _callGetInstanceConfig);
+            Modify_GetInstanceConfigApiCall(ref _callGetInstanceConfig);
+            Modify_ApiCall(ref _callListInstances);
+            Modify_ListInstancesApiCall(ref _callListInstances);
+            Modify_ApiCall(ref _callGetInstance);
+            Modify_GetInstanceApiCall(ref _callGetInstance);
+            Modify_ApiCall(ref _callCreateInstance);
+            Modify_CreateInstanceApiCall(ref _callCreateInstance);
+            Modify_ApiCall(ref _callUpdateInstance);
+            Modify_UpdateInstanceApiCall(ref _callUpdateInstance);
+            Modify_ApiCall(ref _callDeleteInstance);
+            Modify_DeleteInstanceApiCall(ref _callDeleteInstance);
+            Modify_ApiCall(ref _callSetIamPolicy);
+            Modify_SetIamPolicyApiCall(ref _callSetIamPolicy);
+            Modify_ApiCall(ref _callGetIamPolicy);
+            Modify_GetIamPolicyApiCall(ref _callGetIamPolicy);
+            Modify_ApiCall(ref _callTestIamPermissions);
+            Modify_TestIamPermissionsApiCall(ref _callTestIamPermissions);
             OnConstruction(grpcClient, effectiveSettings, clientHelper);
         }
 
+        // Partial methods are named to (mostly) ensure there cannot be conflicts with RPC method names.
+
+        // Partial methods called for every ApiCall on construction.
+        // Allows modification of all the underlying ApiCall objects.
+        partial void Modify_ApiCall<TRequest, TResponse>(ref ApiCall<TRequest, TResponse> call)
+            where TRequest : class, IMessage<TRequest>
+            where TResponse : class, IMessage<TResponse>;
+
+        // Partial methods called for each ApiCall on construction.
+        // Allows per-RPC-method modification of the underlying ApiCall object.
+        partial void Modify_ListInstanceConfigsApiCall(ref ApiCall<ListInstanceConfigsRequest, ListInstanceConfigsResponse> call);
+        partial void Modify_GetInstanceConfigApiCall(ref ApiCall<GetInstanceConfigRequest, InstanceConfig> call);
+        partial void Modify_ListInstancesApiCall(ref ApiCall<ListInstancesRequest, ListInstancesResponse> call);
+        partial void Modify_GetInstanceApiCall(ref ApiCall<GetInstanceRequest, Instance> call);
+        partial void Modify_CreateInstanceApiCall(ref ApiCall<CreateInstanceRequest, Operation> call);
+        partial void Modify_UpdateInstanceApiCall(ref ApiCall<UpdateInstanceRequest, Operation> call);
+        partial void Modify_DeleteInstanceApiCall(ref ApiCall<DeleteInstanceRequest, Empty> call);
+        partial void Modify_SetIamPolicyApiCall(ref ApiCall<SetIamPolicyRequest, Policy> call);
+        partial void Modify_GetIamPolicyApiCall(ref ApiCall<GetIamPolicyRequest, Policy> call);
+        partial void Modify_TestIamPermissionsApiCall(ref ApiCall<TestIamPermissionsRequest, TestIamPermissionsResponse> call);
         partial void OnConstruction(InstanceAdmin.InstanceAdminClient grpcClient, InstanceAdminSettings effectiveSettings, ClientHelper clientHelper);
 
         /// <summary>
@@ -2311,7 +2352,9 @@ namespace Google.Cloud.Spanner.Admin.Instance.V1
         /// </summary>
         public override InstanceAdmin.InstanceAdminClient GrpcClient { get; }
 
-        // Partial modifier methods contain '_' to ensure no name conflicts with RPC methods.
+        // Partial methods called on each request.
+        // Allows per-RPC-call modification to the request and CallSettings objects,
+        // before the underlying RPC is performed.
         partial void Modify_ListInstanceConfigsRequest(ref ListInstanceConfigsRequest request, ref CallSettings settings);
         partial void Modify_GetInstanceConfigRequest(ref GetInstanceConfigRequest request, ref CallSettings settings);
         partial void Modify_ListInstancesRequest(ref ListInstancesRequest request, ref CallSettings settings);

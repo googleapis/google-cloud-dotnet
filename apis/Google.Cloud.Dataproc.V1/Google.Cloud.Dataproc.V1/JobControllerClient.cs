@@ -16,6 +16,7 @@
 
 using Google.Api.Gax;
 using Google.Api.Gax.Grpc;
+using Google.Protobuf;
 using Google.Protobuf.WellKnownTypes;
 using Grpc.Core;
 using System;
@@ -1127,9 +1128,37 @@ namespace Google.Cloud.Dataproc.V1
                 GrpcClient.CancelJobAsync, GrpcClient.CancelJob, effectiveSettings.CancelJobSettings);
             _callDeleteJob = clientHelper.BuildApiCall<DeleteJobRequest, Empty>(
                 GrpcClient.DeleteJobAsync, GrpcClient.DeleteJob, effectiveSettings.DeleteJobSettings);
+            Modify_ApiCall(ref _callSubmitJob);
+            Modify_SubmitJobApiCall(ref _callSubmitJob);
+            Modify_ApiCall(ref _callGetJob);
+            Modify_GetJobApiCall(ref _callGetJob);
+            Modify_ApiCall(ref _callListJobs);
+            Modify_ListJobsApiCall(ref _callListJobs);
+            Modify_ApiCall(ref _callUpdateJob);
+            Modify_UpdateJobApiCall(ref _callUpdateJob);
+            Modify_ApiCall(ref _callCancelJob);
+            Modify_CancelJobApiCall(ref _callCancelJob);
+            Modify_ApiCall(ref _callDeleteJob);
+            Modify_DeleteJobApiCall(ref _callDeleteJob);
             OnConstruction(grpcClient, effectiveSettings, clientHelper);
         }
 
+        // Partial methods are named to (mostly) ensure there cannot be conflicts with RPC method names.
+
+        // Partial methods called for every ApiCall on construction.
+        // Allows modification of all the underlying ApiCall objects.
+        partial void Modify_ApiCall<TRequest, TResponse>(ref ApiCall<TRequest, TResponse> call)
+            where TRequest : class, IMessage<TRequest>
+            where TResponse : class, IMessage<TResponse>;
+
+        // Partial methods called for each ApiCall on construction.
+        // Allows per-RPC-method modification of the underlying ApiCall object.
+        partial void Modify_SubmitJobApiCall(ref ApiCall<SubmitJobRequest, Job> call);
+        partial void Modify_GetJobApiCall(ref ApiCall<GetJobRequest, Job> call);
+        partial void Modify_ListJobsApiCall(ref ApiCall<ListJobsRequest, ListJobsResponse> call);
+        partial void Modify_UpdateJobApiCall(ref ApiCall<UpdateJobRequest, Job> call);
+        partial void Modify_CancelJobApiCall(ref ApiCall<CancelJobRequest, Job> call);
+        partial void Modify_DeleteJobApiCall(ref ApiCall<DeleteJobRequest, Empty> call);
         partial void OnConstruction(JobController.JobControllerClient grpcClient, JobControllerSettings effectiveSettings, ClientHelper clientHelper);
 
         /// <summary>
@@ -1137,7 +1166,9 @@ namespace Google.Cloud.Dataproc.V1
         /// </summary>
         public override JobController.JobControllerClient GrpcClient { get; }
 
-        // Partial modifier methods contain '_' to ensure no name conflicts with RPC methods.
+        // Partial methods called on each request.
+        // Allows per-RPC-call modification to the request and CallSettings objects,
+        // before the underlying RPC is performed.
         partial void Modify_SubmitJobRequest(ref SubmitJobRequest request, ref CallSettings settings);
         partial void Modify_GetJobRequest(ref GetJobRequest request, ref CallSettings settings);
         partial void Modify_ListJobsRequest(ref ListJobsRequest request, ref CallSettings settings);

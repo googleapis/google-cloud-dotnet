@@ -148,51 +148,54 @@ namespace Google.Cloud.Vision.V1P2Beta1 {
             "DSABKAsyKy5nb29nbGUuY2xvdWQudmlzaW9uLnYxcDJiZXRhMS5XZWJEZXRl",
             "Y3Rpb24SIQoFZXJyb3IYCSABKAsyEi5nb29nbGUucnBjLlN0YXR1cxJGCgdj",
             "b250ZXh0GBUgASgLMjUuZ29vZ2xlLmNsb3VkLnZpc2lvbi52MXAyYmV0YTEu",
-            "SW1hZ2VBbm5vdGF0aW9uQ29udGV4dCJjChpCYXRjaEFubm90YXRlSW1hZ2Vz",
-            "UmVxdWVzdBJFCghyZXF1ZXN0cxgBIAMoCzIzLmdvb2dsZS5jbG91ZC52aXNp",
-            "b24udjFwMmJldGExLkFubm90YXRlSW1hZ2VSZXF1ZXN0ImYKG0JhdGNoQW5u",
-            "b3RhdGVJbWFnZXNSZXNwb25zZRJHCglyZXNwb25zZXMYASADKAsyNC5nb29n",
-            "bGUuY2xvdWQudmlzaW9uLnYxcDJiZXRhMS5Bbm5vdGF0ZUltYWdlUmVzcG9u",
-            "c2UingIKGEFzeW5jQW5ub3RhdGVGaWxlUmVxdWVzdBJACgxpbnB1dF9jb25m",
-            "aWcYASABKAsyKi5nb29nbGUuY2xvdWQudmlzaW9uLnYxcDJiZXRhMS5JbnB1",
-            "dENvbmZpZxI4CghmZWF0dXJlcxgCIAMoCzImLmdvb2dsZS5jbG91ZC52aXNp",
-            "b24udjFwMmJldGExLkZlYXR1cmUSQgoNaW1hZ2VfY29udGV4dBgDIAEoCzIr",
-            "Lmdvb2dsZS5jbG91ZC52aXNpb24udjFwMmJldGExLkltYWdlQ29udGV4dBJC",
-            "Cg1vdXRwdXRfY29uZmlnGAQgASgLMisuZ29vZ2xlLmNsb3VkLnZpc2lvbi52",
-            "MXAyYmV0YTEuT3V0cHV0Q29uZmlnIl8KGUFzeW5jQW5ub3RhdGVGaWxlUmVz",
-            "cG9uc2USQgoNb3V0cHV0X2NvbmZpZxgBIAEoCzIrLmdvb2dsZS5jbG91ZC52",
-            "aXNpb24udjFwMmJldGExLk91dHB1dENvbmZpZyJrCh5Bc3luY0JhdGNoQW5u",
-            "b3RhdGVGaWxlc1JlcXVlc3QSSQoIcmVxdWVzdHMYASADKAsyNy5nb29nbGUu",
-            "Y2xvdWQudmlzaW9uLnYxcDJiZXRhMS5Bc3luY0Fubm90YXRlRmlsZVJlcXVl",
-            "c3QibgofQXN5bmNCYXRjaEFubm90YXRlRmlsZXNSZXNwb25zZRJLCglyZXNw",
-            "b25zZXMYASADKAsyOC5nb29nbGUuY2xvdWQudmlzaW9uLnYxcDJiZXRhMS5B",
-            "c3luY0Fubm90YXRlRmlsZVJlc3BvbnNlIl4KC0lucHV0Q29uZmlnEjwKCmdj",
-            "c19zb3VyY2UYASABKAsyKC5nb29nbGUuY2xvdWQudmlzaW9uLnYxcDJiZXRh",
-            "MS5HY3NTb3VyY2USEQoJbWltZV90eXBlGAIgASgJImoKDE91dHB1dENvbmZp",
-            "ZxJGCg9nY3NfZGVzdGluYXRpb24YASABKAsyLS5nb29nbGUuY2xvdWQudmlz",
-            "aW9uLnYxcDJiZXRhMS5HY3NEZXN0aW5hdGlvbhISCgpiYXRjaF9zaXplGAIg",
-            "ASgFIhgKCUdjc1NvdXJjZRILCgN1cmkYASABKAkiHQoOR2NzRGVzdGluYXRp",
-            "b24SCwoDdXJpGAEgASgJIo8CChFPcGVyYXRpb25NZXRhZGF0YRJFCgVzdGF0",
-            "ZRgBIAEoDjI2Lmdvb2dsZS5jbG91ZC52aXNpb24udjFwMmJldGExLk9wZXJh",
-            "dGlvbk1ldGFkYXRhLlN0YXRlEi8KC2NyZWF0ZV90aW1lGAUgASgLMhouZ29v",
-            "Z2xlLnByb3RvYnVmLlRpbWVzdGFtcBIvCgt1cGRhdGVfdGltZRgGIAEoCzIa",
-            "Lmdvb2dsZS5wcm90b2J1Zi5UaW1lc3RhbXAiUQoFU3RhdGUSFQoRU1RBVEVf",
-            "VU5TUEVDSUZJRUQQABILCgdDUkVBVEVEEAESCwoHUlVOTklORxACEggKBERP",
-            "TkUQAxINCglDQU5DRUxMRUQQBCplCgpMaWtlbGlob29kEgsKB1VOS05PV04Q",
-            "ABIRCg1WRVJZX1VOTElLRUxZEAESDAoIVU5MSUtFTFkQAhIMCghQT1NTSUJM",
-            "RRADEgoKBkxJS0VMWRAEEg8KC1ZFUllfTElLRUxZEAUy8AIKDkltYWdlQW5u",
-            "b3RhdG9yErMBChNCYXRjaEFubm90YXRlSW1hZ2VzEjkuZ29vZ2xlLmNsb3Vk",
-            "LnZpc2lvbi52MXAyYmV0YTEuQmF0Y2hBbm5vdGF0ZUltYWdlc1JlcXVlc3Qa",
-            "Oi5nb29nbGUuY2xvdWQudmlzaW9uLnYxcDJiZXRhMS5CYXRjaEFubm90YXRl",
-            "SW1hZ2VzUmVzcG9uc2UiJYLT5JMCHyIaL3YxcDJiZXRhMS9pbWFnZXM6YW5u",
-            "b3RhdGU6ASoSpwEKF0FzeW5jQmF0Y2hBbm5vdGF0ZUZpbGVzEj0uZ29vZ2xl",
-            "LmNsb3VkLnZpc2lvbi52MXAyYmV0YTEuQXN5bmNCYXRjaEFubm90YXRlRmls",
-            "ZXNSZXF1ZXN0Gh0uZ29vZ2xlLmxvbmdydW5uaW5nLk9wZXJhdGlvbiIugtPk",
-            "kwIoIiMvdjFwMmJldGExL2ZpbGVzOmFzeW5jQmF0Y2hBbm5vdGF0ZToBKkKC",
-            "AQohY29tLmdvb2dsZS5jbG91ZC52aXNpb24udjFwMmJldGExQhNJbWFnZUFu",
-            "bm90YXRvclByb3RvUAFaQ2dvb2dsZS5nb2xhbmcub3JnL2dlbnByb3RvL2dv",
-            "b2dsZWFwaXMvY2xvdWQvdmlzaW9uL3YxcDJiZXRhMTt2aXNpb274AQFiBnBy",
-            "b3RvMw=="));
+            "SW1hZ2VBbm5vdGF0aW9uQ29udGV4dCKhAQoUQW5ub3RhdGVGaWxlUmVzcG9u",
+            "c2USQAoMaW5wdXRfY29uZmlnGAEgASgLMiouZ29vZ2xlLmNsb3VkLnZpc2lv",
+            "bi52MXAyYmV0YTEuSW5wdXRDb25maWcSRwoJcmVzcG9uc2VzGAIgAygLMjQu",
+            "Z29vZ2xlLmNsb3VkLnZpc2lvbi52MXAyYmV0YTEuQW5ub3RhdGVJbWFnZVJl",
+            "c3BvbnNlImMKGkJhdGNoQW5ub3RhdGVJbWFnZXNSZXF1ZXN0EkUKCHJlcXVl",
+            "c3RzGAEgAygLMjMuZ29vZ2xlLmNsb3VkLnZpc2lvbi52MXAyYmV0YTEuQW5u",
+            "b3RhdGVJbWFnZVJlcXVlc3QiZgobQmF0Y2hBbm5vdGF0ZUltYWdlc1Jlc3Bv",
+            "bnNlEkcKCXJlc3BvbnNlcxgBIAMoCzI0Lmdvb2dsZS5jbG91ZC52aXNpb24u",
+            "djFwMmJldGExLkFubm90YXRlSW1hZ2VSZXNwb25zZSKeAgoYQXN5bmNBbm5v",
+            "dGF0ZUZpbGVSZXF1ZXN0EkAKDGlucHV0X2NvbmZpZxgBIAEoCzIqLmdvb2ds",
+            "ZS5jbG91ZC52aXNpb24udjFwMmJldGExLklucHV0Q29uZmlnEjgKCGZlYXR1",
+            "cmVzGAIgAygLMiYuZ29vZ2xlLmNsb3VkLnZpc2lvbi52MXAyYmV0YTEuRmVh",
+            "dHVyZRJCCg1pbWFnZV9jb250ZXh0GAMgASgLMisuZ29vZ2xlLmNsb3VkLnZp",
+            "c2lvbi52MXAyYmV0YTEuSW1hZ2VDb250ZXh0EkIKDW91dHB1dF9jb25maWcY",
+            "BCABKAsyKy5nb29nbGUuY2xvdWQudmlzaW9uLnYxcDJiZXRhMS5PdXRwdXRD",
+            "b25maWciXwoZQXN5bmNBbm5vdGF0ZUZpbGVSZXNwb25zZRJCCg1vdXRwdXRf",
+            "Y29uZmlnGAEgASgLMisuZ29vZ2xlLmNsb3VkLnZpc2lvbi52MXAyYmV0YTEu",
+            "T3V0cHV0Q29uZmlnImsKHkFzeW5jQmF0Y2hBbm5vdGF0ZUZpbGVzUmVxdWVz",
+            "dBJJCghyZXF1ZXN0cxgBIAMoCzI3Lmdvb2dsZS5jbG91ZC52aXNpb24udjFw",
+            "MmJldGExLkFzeW5jQW5ub3RhdGVGaWxlUmVxdWVzdCJuCh9Bc3luY0JhdGNo",
+            "QW5ub3RhdGVGaWxlc1Jlc3BvbnNlEksKCXJlc3BvbnNlcxgBIAMoCzI4Lmdv",
+            "b2dsZS5jbG91ZC52aXNpb24udjFwMmJldGExLkFzeW5jQW5ub3RhdGVGaWxl",
+            "UmVzcG9uc2UiXgoLSW5wdXRDb25maWcSPAoKZ2NzX3NvdXJjZRgBIAEoCzIo",
+            "Lmdvb2dsZS5jbG91ZC52aXNpb24udjFwMmJldGExLkdjc1NvdXJjZRIRCglt",
+            "aW1lX3R5cGUYAiABKAkiagoMT3V0cHV0Q29uZmlnEkYKD2djc19kZXN0aW5h",
+            "dGlvbhgBIAEoCzItLmdvb2dsZS5jbG91ZC52aXNpb24udjFwMmJldGExLkdj",
+            "c0Rlc3RpbmF0aW9uEhIKCmJhdGNoX3NpemUYAiABKAUiGAoJR2NzU291cmNl",
+            "EgsKA3VyaRgBIAEoCSIdCg5HY3NEZXN0aW5hdGlvbhILCgN1cmkYASABKAki",
+            "jwIKEU9wZXJhdGlvbk1ldGFkYXRhEkUKBXN0YXRlGAEgASgOMjYuZ29vZ2xl",
+            "LmNsb3VkLnZpc2lvbi52MXAyYmV0YTEuT3BlcmF0aW9uTWV0YWRhdGEuU3Rh",
+            "dGUSLwoLY3JlYXRlX3RpbWUYBSABKAsyGi5nb29nbGUucHJvdG9idWYuVGlt",
+            "ZXN0YW1wEi8KC3VwZGF0ZV90aW1lGAYgASgLMhouZ29vZ2xlLnByb3RvYnVm",
+            "LlRpbWVzdGFtcCJRCgVTdGF0ZRIVChFTVEFURV9VTlNQRUNJRklFRBAAEgsK",
+            "B0NSRUFURUQQARILCgdSVU5OSU5HEAISCAoERE9ORRADEg0KCUNBTkNFTExF",
+            "RBAEKmUKCkxpa2VsaWhvb2QSCwoHVU5LTk9XThAAEhEKDVZFUllfVU5MSUtF",
+            "TFkQARIMCghVTkxJS0VMWRACEgwKCFBPU1NJQkxFEAMSCgoGTElLRUxZEAQS",
+            "DwoLVkVSWV9MSUtFTFkQBTLwAgoOSW1hZ2VBbm5vdGF0b3ISswEKE0JhdGNo",
+            "QW5ub3RhdGVJbWFnZXMSOS5nb29nbGUuY2xvdWQudmlzaW9uLnYxcDJiZXRh",
+            "MS5CYXRjaEFubm90YXRlSW1hZ2VzUmVxdWVzdBo6Lmdvb2dsZS5jbG91ZC52",
+            "aXNpb24udjFwMmJldGExLkJhdGNoQW5ub3RhdGVJbWFnZXNSZXNwb25zZSIl",
+            "gtPkkwIfIhovdjFwMmJldGExL2ltYWdlczphbm5vdGF0ZToBKhKnAQoXQXN5",
+            "bmNCYXRjaEFubm90YXRlRmlsZXMSPS5nb29nbGUuY2xvdWQudmlzaW9uLnYx",
+            "cDJiZXRhMS5Bc3luY0JhdGNoQW5ub3RhdGVGaWxlc1JlcXVlc3QaHS5nb29n",
+            "bGUubG9uZ3J1bm5pbmcuT3BlcmF0aW9uIi6C0+STAigiIy92MXAyYmV0YTEv",
+            "ZmlsZXM6YXN5bmNCYXRjaEFubm90YXRlOgEqQoIBCiFjb20uZ29vZ2xlLmNs",
+            "b3VkLnZpc2lvbi52MXAyYmV0YTFCE0ltYWdlQW5ub3RhdG9yUHJvdG9QAVpD",
+            "Z29vZ2xlLmdvbGFuZy5vcmcvZ2VucHJvdG8vZ29vZ2xlYXBpcy9jbG91ZC92",
+            "aXNpb24vdjFwMmJldGExO3Zpc2lvbvgBAWIGcHJvdG8z"));
       descriptor = pbr::FileDescriptor.FromGeneratedCode(descriptorData,
           new pbr::FileDescriptor[] { global::Google.Api.AnnotationsReflection.Descriptor, global::Google.Cloud.Vision.V1P2Beta1.GeometryReflection.Descriptor, global::Google.Cloud.Vision.V1P2Beta1.TextAnnotationReflection.Descriptor, global::Google.Cloud.Vision.V1P2Beta1.WebDetectionReflection.Descriptor, global::Google.LongRunning.OperationsReflection.Descriptor, global::Google.Protobuf.WellKnownTypes.TimestampReflection.Descriptor, global::Google.Rpc.StatusReflection.Descriptor, global::Google.Type.ColorReflection.Descriptor, global::Google.Type.LatlngReflection.Descriptor, },
           new pbr::GeneratedClrTypeInfo(new[] {typeof(global::Google.Cloud.Vision.V1P2Beta1.Likelihood), }, new pbr::GeneratedClrTypeInfo[] {
@@ -216,6 +219,7 @@ namespace Google.Cloud.Vision.V1P2Beta1 {
             new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.Vision.V1P2Beta1.AnnotateImageRequest), global::Google.Cloud.Vision.V1P2Beta1.AnnotateImageRequest.Parser, new[]{ "Image", "Features", "ImageContext" }, null, null, null),
             new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.Vision.V1P2Beta1.ImageAnnotationContext), global::Google.Cloud.Vision.V1P2Beta1.ImageAnnotationContext.Parser, new[]{ "Uri", "PageNumber" }, null, null, null),
             new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.Vision.V1P2Beta1.AnnotateImageResponse), global::Google.Cloud.Vision.V1P2Beta1.AnnotateImageResponse.Parser, new[]{ "FaceAnnotations", "LandmarkAnnotations", "LogoAnnotations", "LabelAnnotations", "TextAnnotations", "FullTextAnnotation", "SafeSearchAnnotation", "ImagePropertiesAnnotation", "CropHintsAnnotation", "WebDetection", "Error", "Context" }, null, null, null),
+            new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.Vision.V1P2Beta1.AnnotateFileResponse), global::Google.Cloud.Vision.V1P2Beta1.AnnotateFileResponse.Parser, new[]{ "InputConfig", "Responses" }, null, null, null),
             new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.Vision.V1P2Beta1.BatchAnnotateImagesRequest), global::Google.Cloud.Vision.V1P2Beta1.BatchAnnotateImagesRequest.Parser, new[]{ "Requests" }, null, null, null),
             new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.Vision.V1P2Beta1.BatchAnnotateImagesResponse), global::Google.Cloud.Vision.V1P2Beta1.BatchAnnotateImagesResponse.Parser, new[]{ "Responses" }, null, null, null),
             new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.Vision.V1P2Beta1.AsyncAnnotateFileRequest), global::Google.Cloud.Vision.V1P2Beta1.AsyncAnnotateFileRequest.Parser, new[]{ "InputConfig", "Features", "ImageContext", "OutputConfig" }, null, null, null),
@@ -5165,6 +5169,171 @@ namespace Google.Cloud.Vision.V1P2Beta1 {
   }
 
   /// <summary>
+  /// Response to a single file annotation request. A file may contain one or more
+  /// images, which individually have their own responses.
+  /// </summary>
+  public sealed partial class AnnotateFileResponse : pb::IMessage<AnnotateFileResponse> {
+    private static readonly pb::MessageParser<AnnotateFileResponse> _parser = new pb::MessageParser<AnnotateFileResponse>(() => new AnnotateFileResponse());
+    private pb::UnknownFieldSet _unknownFields;
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    public static pb::MessageParser<AnnotateFileResponse> Parser { get { return _parser; } }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    public static pbr::MessageDescriptor Descriptor {
+      get { return global::Google.Cloud.Vision.V1P2Beta1.ImageAnnotatorReflection.Descriptor.MessageTypes[20]; }
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    pbr::MessageDescriptor pb::IMessage.Descriptor {
+      get { return Descriptor; }
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    public AnnotateFileResponse() {
+      OnConstruction();
+    }
+
+    partial void OnConstruction();
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    public AnnotateFileResponse(AnnotateFileResponse other) : this() {
+      InputConfig = other.inputConfig_ != null ? other.InputConfig.Clone() : null;
+      responses_ = other.responses_.Clone();
+      _unknownFields = pb::UnknownFieldSet.Clone(other._unknownFields);
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    public AnnotateFileResponse Clone() {
+      return new AnnotateFileResponse(this);
+    }
+
+    /// <summary>Field number for the "input_config" field.</summary>
+    public const int InputConfigFieldNumber = 1;
+    private global::Google.Cloud.Vision.V1P2Beta1.InputConfig inputConfig_;
+    /// <summary>
+    /// Information about the file for which this response is generated.
+    /// </summary>
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    public global::Google.Cloud.Vision.V1P2Beta1.InputConfig InputConfig {
+      get { return inputConfig_; }
+      set {
+        inputConfig_ = value;
+      }
+    }
+
+    /// <summary>Field number for the "responses" field.</summary>
+    public const int ResponsesFieldNumber = 2;
+    private static readonly pb::FieldCodec<global::Google.Cloud.Vision.V1P2Beta1.AnnotateImageResponse> _repeated_responses_codec
+        = pb::FieldCodec.ForMessage(18, global::Google.Cloud.Vision.V1P2Beta1.AnnotateImageResponse.Parser);
+    private readonly pbc::RepeatedField<global::Google.Cloud.Vision.V1P2Beta1.AnnotateImageResponse> responses_ = new pbc::RepeatedField<global::Google.Cloud.Vision.V1P2Beta1.AnnotateImageResponse>();
+    /// <summary>
+    /// Individual responses to images found within the file.
+    /// </summary>
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    public pbc::RepeatedField<global::Google.Cloud.Vision.V1P2Beta1.AnnotateImageResponse> Responses {
+      get { return responses_; }
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    public override bool Equals(object other) {
+      return Equals(other as AnnotateFileResponse);
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    public bool Equals(AnnotateFileResponse other) {
+      if (ReferenceEquals(other, null)) {
+        return false;
+      }
+      if (ReferenceEquals(other, this)) {
+        return true;
+      }
+      if (!object.Equals(InputConfig, other.InputConfig)) return false;
+      if(!responses_.Equals(other.responses_)) return false;
+      return Equals(_unknownFields, other._unknownFields);
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    public override int GetHashCode() {
+      int hash = 1;
+      if (inputConfig_ != null) hash ^= InputConfig.GetHashCode();
+      hash ^= responses_.GetHashCode();
+      if (_unknownFields != null) {
+        hash ^= _unknownFields.GetHashCode();
+      }
+      return hash;
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    public override string ToString() {
+      return pb::JsonFormatter.ToDiagnosticString(this);
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    public void WriteTo(pb::CodedOutputStream output) {
+      if (inputConfig_ != null) {
+        output.WriteRawTag(10);
+        output.WriteMessage(InputConfig);
+      }
+      responses_.WriteTo(output, _repeated_responses_codec);
+      if (_unknownFields != null) {
+        _unknownFields.WriteTo(output);
+      }
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    public int CalculateSize() {
+      int size = 0;
+      if (inputConfig_ != null) {
+        size += 1 + pb::CodedOutputStream.ComputeMessageSize(InputConfig);
+      }
+      size += responses_.CalculateSize(_repeated_responses_codec);
+      if (_unknownFields != null) {
+        size += _unknownFields.CalculateSize();
+      }
+      return size;
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    public void MergeFrom(AnnotateFileResponse other) {
+      if (other == null) {
+        return;
+      }
+      if (other.inputConfig_ != null) {
+        if (inputConfig_ == null) {
+          inputConfig_ = new global::Google.Cloud.Vision.V1P2Beta1.InputConfig();
+        }
+        InputConfig.MergeFrom(other.InputConfig);
+      }
+      responses_.Add(other.responses_);
+      _unknownFields = pb::UnknownFieldSet.MergeFrom(_unknownFields, other._unknownFields);
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    public void MergeFrom(pb::CodedInputStream input) {
+      uint tag;
+      while ((tag = input.ReadTag()) != 0) {
+        switch(tag) {
+          default:
+            _unknownFields = pb::UnknownFieldSet.MergeFieldFrom(_unknownFields, input);
+            break;
+          case 10: {
+            if (inputConfig_ == null) {
+              inputConfig_ = new global::Google.Cloud.Vision.V1P2Beta1.InputConfig();
+            }
+            input.ReadMessage(inputConfig_);
+            break;
+          }
+          case 18: {
+            responses_.AddEntriesFrom(input, _repeated_responses_codec);
+            break;
+          }
+        }
+      }
+    }
+
+  }
+
+  /// <summary>
   /// Multiple image annotation requests are batched into a single service call.
   /// </summary>
   public sealed partial class BatchAnnotateImagesRequest : pb::IMessage<BatchAnnotateImagesRequest> {
@@ -5175,7 +5344,7 @@ namespace Google.Cloud.Vision.V1P2Beta1 {
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     public static pbr::MessageDescriptor Descriptor {
-      get { return global::Google.Cloud.Vision.V1P2Beta1.ImageAnnotatorReflection.Descriptor.MessageTypes[20]; }
+      get { return global::Google.Cloud.Vision.V1P2Beta1.ImageAnnotatorReflection.Descriptor.MessageTypes[21]; }
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
@@ -5302,7 +5471,7 @@ namespace Google.Cloud.Vision.V1P2Beta1 {
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     public static pbr::MessageDescriptor Descriptor {
-      get { return global::Google.Cloud.Vision.V1P2Beta1.ImageAnnotatorReflection.Descriptor.MessageTypes[21]; }
+      get { return global::Google.Cloud.Vision.V1P2Beta1.ImageAnnotatorReflection.Descriptor.MessageTypes[22]; }
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
@@ -5429,7 +5598,7 @@ namespace Google.Cloud.Vision.V1P2Beta1 {
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     public static pbr::MessageDescriptor Descriptor {
-      get { return global::Google.Cloud.Vision.V1P2Beta1.ImageAnnotatorReflection.Descriptor.MessageTypes[22]; }
+      get { return global::Google.Cloud.Vision.V1P2Beta1.ImageAnnotatorReflection.Descriptor.MessageTypes[23]; }
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
@@ -5667,7 +5836,7 @@ namespace Google.Cloud.Vision.V1P2Beta1 {
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     public static pbr::MessageDescriptor Descriptor {
-      get { return global::Google.Cloud.Vision.V1P2Beta1.ImageAnnotatorReflection.Descriptor.MessageTypes[23]; }
+      get { return global::Google.Cloud.Vision.V1P2Beta1.ImageAnnotatorReflection.Descriptor.MessageTypes[24]; }
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
@@ -5809,7 +5978,7 @@ namespace Google.Cloud.Vision.V1P2Beta1 {
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     public static pbr::MessageDescriptor Descriptor {
-      get { return global::Google.Cloud.Vision.V1P2Beta1.ImageAnnotatorReflection.Descriptor.MessageTypes[24]; }
+      get { return global::Google.Cloud.Vision.V1P2Beta1.ImageAnnotatorReflection.Descriptor.MessageTypes[25]; }
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
@@ -5936,7 +6105,7 @@ namespace Google.Cloud.Vision.V1P2Beta1 {
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     public static pbr::MessageDescriptor Descriptor {
-      get { return global::Google.Cloud.Vision.V1P2Beta1.ImageAnnotatorReflection.Descriptor.MessageTypes[25]; }
+      get { return global::Google.Cloud.Vision.V1P2Beta1.ImageAnnotatorReflection.Descriptor.MessageTypes[26]; }
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
@@ -6064,7 +6233,7 @@ namespace Google.Cloud.Vision.V1P2Beta1 {
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     public static pbr::MessageDescriptor Descriptor {
-      get { return global::Google.Cloud.Vision.V1P2Beta1.ImageAnnotatorReflection.Descriptor.MessageTypes[26]; }
+      get { return global::Google.Cloud.Vision.V1P2Beta1.ImageAnnotatorReflection.Descriptor.MessageTypes[27]; }
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
@@ -6237,7 +6406,7 @@ namespace Google.Cloud.Vision.V1P2Beta1 {
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     public static pbr::MessageDescriptor Descriptor {
-      get { return global::Google.Cloud.Vision.V1P2Beta1.ImageAnnotatorReflection.Descriptor.MessageTypes[27]; }
+      get { return global::Google.Cloud.Vision.V1P2Beta1.ImageAnnotatorReflection.Descriptor.MessageTypes[28]; }
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
@@ -6418,7 +6587,7 @@ namespace Google.Cloud.Vision.V1P2Beta1 {
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     public static pbr::MessageDescriptor Descriptor {
-      get { return global::Google.Cloud.Vision.V1P2Beta1.ImageAnnotatorReflection.Descriptor.MessageTypes[28]; }
+      get { return global::Google.Cloud.Vision.V1P2Beta1.ImageAnnotatorReflection.Descriptor.MessageTypes[29]; }
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
@@ -6554,7 +6723,7 @@ namespace Google.Cloud.Vision.V1P2Beta1 {
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     public static pbr::MessageDescriptor Descriptor {
-      get { return global::Google.Cloud.Vision.V1P2Beta1.ImageAnnotatorReflection.Descriptor.MessageTypes[29]; }
+      get { return global::Google.Cloud.Vision.V1P2Beta1.ImageAnnotatorReflection.Descriptor.MessageTypes[30]; }
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
@@ -6703,7 +6872,7 @@ namespace Google.Cloud.Vision.V1P2Beta1 {
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     public static pbr::MessageDescriptor Descriptor {
-      get { return global::Google.Cloud.Vision.V1P2Beta1.ImageAnnotatorReflection.Descriptor.MessageTypes[30]; }
+      get { return global::Google.Cloud.Vision.V1P2Beta1.ImageAnnotatorReflection.Descriptor.MessageTypes[31]; }
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]

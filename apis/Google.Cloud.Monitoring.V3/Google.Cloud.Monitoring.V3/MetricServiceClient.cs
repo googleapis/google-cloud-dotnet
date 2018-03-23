@@ -17,6 +17,7 @@
 using Google.Api;
 using Google.Api.Gax;
 using Google.Api.Gax.Grpc;
+using Google.Protobuf;
 using Google.Protobuf.WellKnownTypes;
 using Grpc.Core;
 using System;
@@ -1461,9 +1462,43 @@ namespace Google.Cloud.Monitoring.V3
                 GrpcClient.ListTimeSeriesAsync, GrpcClient.ListTimeSeries, effectiveSettings.ListTimeSeriesSettings);
             _callCreateTimeSeries = clientHelper.BuildApiCall<CreateTimeSeriesRequest, Empty>(
                 GrpcClient.CreateTimeSeriesAsync, GrpcClient.CreateTimeSeries, effectiveSettings.CreateTimeSeriesSettings);
+            Modify_ApiCall(ref _callListMonitoredResourceDescriptors);
+            Modify_ListMonitoredResourceDescriptorsApiCall(ref _callListMonitoredResourceDescriptors);
+            Modify_ApiCall(ref _callGetMonitoredResourceDescriptor);
+            Modify_GetMonitoredResourceDescriptorApiCall(ref _callGetMonitoredResourceDescriptor);
+            Modify_ApiCall(ref _callListMetricDescriptors);
+            Modify_ListMetricDescriptorsApiCall(ref _callListMetricDescriptors);
+            Modify_ApiCall(ref _callGetMetricDescriptor);
+            Modify_GetMetricDescriptorApiCall(ref _callGetMetricDescriptor);
+            Modify_ApiCall(ref _callCreateMetricDescriptor);
+            Modify_CreateMetricDescriptorApiCall(ref _callCreateMetricDescriptor);
+            Modify_ApiCall(ref _callDeleteMetricDescriptor);
+            Modify_DeleteMetricDescriptorApiCall(ref _callDeleteMetricDescriptor);
+            Modify_ApiCall(ref _callListTimeSeries);
+            Modify_ListTimeSeriesApiCall(ref _callListTimeSeries);
+            Modify_ApiCall(ref _callCreateTimeSeries);
+            Modify_CreateTimeSeriesApiCall(ref _callCreateTimeSeries);
             OnConstruction(grpcClient, effectiveSettings, clientHelper);
         }
 
+        // Partial methods are named to (mostly) ensure there cannot be conflicts with RPC method names.
+
+        // Partial methods called for every ApiCall on construction.
+        // Allows modification of all the underlying ApiCall objects.
+        partial void Modify_ApiCall<TRequest, TResponse>(ref ApiCall<TRequest, TResponse> call)
+            where TRequest : class, IMessage<TRequest>
+            where TResponse : class, IMessage<TResponse>;
+
+        // Partial methods called for each ApiCall on construction.
+        // Allows per-RPC-method modification of the underlying ApiCall object.
+        partial void Modify_ListMonitoredResourceDescriptorsApiCall(ref ApiCall<ListMonitoredResourceDescriptorsRequest, ListMonitoredResourceDescriptorsResponse> call);
+        partial void Modify_GetMonitoredResourceDescriptorApiCall(ref ApiCall<GetMonitoredResourceDescriptorRequest, MonitoredResourceDescriptor> call);
+        partial void Modify_ListMetricDescriptorsApiCall(ref ApiCall<ListMetricDescriptorsRequest, ListMetricDescriptorsResponse> call);
+        partial void Modify_GetMetricDescriptorApiCall(ref ApiCall<GetMetricDescriptorRequest, MetricDescriptor> call);
+        partial void Modify_CreateMetricDescriptorApiCall(ref ApiCall<CreateMetricDescriptorRequest, MetricDescriptor> call);
+        partial void Modify_DeleteMetricDescriptorApiCall(ref ApiCall<DeleteMetricDescriptorRequest, Empty> call);
+        partial void Modify_ListTimeSeriesApiCall(ref ApiCall<ListTimeSeriesRequest, ListTimeSeriesResponse> call);
+        partial void Modify_CreateTimeSeriesApiCall(ref ApiCall<CreateTimeSeriesRequest, Empty> call);
         partial void OnConstruction(MetricService.MetricServiceClient grpcClient, MetricServiceSettings effectiveSettings, ClientHelper clientHelper);
 
         /// <summary>
@@ -1471,7 +1506,9 @@ namespace Google.Cloud.Monitoring.V3
         /// </summary>
         public override MetricService.MetricServiceClient GrpcClient { get; }
 
-        // Partial modifier methods contain '_' to ensure no name conflicts with RPC methods.
+        // Partial methods called on each request.
+        // Allows per-RPC-call modification to the request and CallSettings objects,
+        // before the underlying RPC is performed.
         partial void Modify_ListMonitoredResourceDescriptorsRequest(ref ListMonitoredResourceDescriptorsRequest request, ref CallSettings settings);
         partial void Modify_GetMonitoredResourceDescriptorRequest(ref GetMonitoredResourceDescriptorRequest request, ref CallSettings settings);
         partial void Modify_ListMetricDescriptorsRequest(ref ListMetricDescriptorsRequest request, ref CallSettings settings);
