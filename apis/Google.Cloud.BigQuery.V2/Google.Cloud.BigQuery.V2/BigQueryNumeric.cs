@@ -28,7 +28,7 @@ namespace Google.Cloud.BigQuery.V2
     /// Representation of the BigQuery NUMERIC type, which has 38 digits of precision,
     /// and a fixed scale of 9 decimal places to the right of the decimal point
     /// </summary>
-    public struct BigQueryNumeric : IEquatable<BigQueryNumeric>, IComparable<BigQueryNumeric>
+    public struct BigQueryNumeric : IEquatable<BigQueryNumeric>, IComparable<BigQueryNumeric>, IComparable
     {
         private static readonly BigInteger s_maxValue = BigInteger.Parse("99999999999999999999999999999999999999");
         private static readonly BigInteger s_minValue = -s_maxValue;
@@ -59,9 +59,27 @@ namespace Google.Cloud.BigQuery.V2
         /// <param name="other">The value to compare with this one</param>
         /// <returns>A negative integer if this value is less than <paramref name="other"/>; a positive integer
         /// if it's greater than <paramref name="other"/>; zero if they're equal.</returns>
-        public int CompareTo(BigQueryNumeric other)
+        public int CompareTo(BigQueryNumeric other) => _integer.CompareTo(other._integer);
+
+        /// <summary>
+        /// Implementation of <see cref="IComparable.CompareTo"/> to compare two <see cref="BigQueryNumeric"/> values.
+        /// </summary>
+        /// <remarks>
+        /// This uses explicit interface implementation to avoid it being called accidentally. The generic implementation should usually be preferred.
+        /// </remarks>
+        /// <exception cref="ArgumentException"><paramref name="obj"/> is non-null but does not refer to an instance of <see cref="BigQueryNumeric"/>.</exception>
+        /// <param name="obj">The object to compare this value with.</param>
+        /// <returns>The result of comparing this value with <paramref name="obj"/>. <paramref name="obj"/> is null, this method returns a value greater than 0.
+        /// </returns>
+        int IComparable.CompareTo(object obj)
         {
-            throw new NotImplementedException();
+            if (obj == null)
+            {
+                return 1;
+            }
+            return obj is BigQueryNumeric numeric
+                ? CompareTo(numeric)
+                : throw new ArgumentException($"Object must be of type {nameof(BigQueryNumeric)}", nameof(obj));
         }
 
         /// <summary>
@@ -236,13 +254,13 @@ namespace Google.Cloud.BigQuery.V2
         // Conversions from CLR types to BigQueryNumeric
 
         /// <summary>
-        /// Implicit conversion from <see cref="Decimal"/> to <see cref="BigQueryNumeric"/>.
+        /// Explicit conversion from <see cref="Decimal"/> to <see cref="BigQueryNumeric"/>.
         /// </summary>
         /// <remarks>
         /// This conversion may silently lose precision. Use <see cref="FromDecimal"/> passing in <see cref="LossOfPrecisionHandling.Throw"/>
         /// for the second argument to avoid any information loss.
         /// </remarks>
-        /// <param name="value">The integer value to convert.</param>
+        /// <param name="value">The decimal value to convert.</param>
         /// <returns>The result of the conversion.</returns>
         public static explicit operator BigQueryNumeric(decimal value) =>
             FromDecimal(value, LossOfPrecisionHandling.Truncate);
@@ -290,14 +308,14 @@ namespace Google.Cloud.BigQuery.V2
         }
 
         /// <summary>
-        /// Implicit conversion from <see cref="BigQueryNumeric"/> to <see cref="Decimal"/>.
+        /// Explicit conversion from <see cref="BigQueryNumeric"/> to <see cref="Decimal"/>.
         /// </summary>
         /// <remarks>
         /// This conversion may silently lose precision, but will throw <see cref="OverflowException"/> if the value is out of
         /// range of <see cref="Decimal"/>. Use <see cref="ToDecimal"/> passing in <see cref="LossOfPrecisionHandling.Throw"/>
         /// for the second argument to avoid any information loss.
         /// </remarks>
-        /// <param name="value">The integer value to convert.</param>
+        /// <param name="value">The numeric value to convert.</param>
         /// <returns>The result of the conversion.</returns>
         public static explicit operator decimal(BigQueryNumeric value) =>
             value.ToDecimal(LossOfPrecisionHandling.Truncate);
