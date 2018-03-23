@@ -16,6 +16,7 @@
 
 using Google.Api.Gax;
 using Google.Api.Gax.Grpc;
+using Google.Protobuf;
 using Google.Protobuf.WellKnownTypes;
 using Grpc.Core;
 using System;
@@ -704,9 +705,28 @@ namespace Google.Cloud.ErrorReporting.V1Beta1
                 GrpcClient.ListEventsAsync, GrpcClient.ListEvents, effectiveSettings.ListEventsSettings);
             _callDeleteEvents = clientHelper.BuildApiCall<DeleteEventsRequest, DeleteEventsResponse>(
                 GrpcClient.DeleteEventsAsync, GrpcClient.DeleteEvents, effectiveSettings.DeleteEventsSettings);
+            Modify_ApiCall(ref _callListGroupStats);
+            Modify_ListGroupStatsApiCall(ref _callListGroupStats);
+            Modify_ApiCall(ref _callListEvents);
+            Modify_ListEventsApiCall(ref _callListEvents);
+            Modify_ApiCall(ref _callDeleteEvents);
+            Modify_DeleteEventsApiCall(ref _callDeleteEvents);
             OnConstruction(grpcClient, effectiveSettings, clientHelper);
         }
 
+        // Partial methods are named to (mostly) ensure there cannot be conflicts with RPC method names.
+
+        // Partial methods called for every ApiCall on construction.
+        // Allows modification of all the underlying ApiCall objects.
+        partial void Modify_ApiCall<TRequest, TResponse>(ref ApiCall<TRequest, TResponse> call)
+            where TRequest : class, IMessage<TRequest>
+            where TResponse : class, IMessage<TResponse>;
+
+        // Partial methods called for each ApiCall on construction.
+        // Allows per-RPC-method modification of the underlying ApiCall object.
+        partial void Modify_ListGroupStatsApiCall(ref ApiCall<ListGroupStatsRequest, ListGroupStatsResponse> call);
+        partial void Modify_ListEventsApiCall(ref ApiCall<ListEventsRequest, ListEventsResponse> call);
+        partial void Modify_DeleteEventsApiCall(ref ApiCall<DeleteEventsRequest, DeleteEventsResponse> call);
         partial void OnConstruction(ErrorStatsService.ErrorStatsServiceClient grpcClient, ErrorStatsServiceSettings effectiveSettings, ClientHelper clientHelper);
 
         /// <summary>
@@ -714,7 +734,9 @@ namespace Google.Cloud.ErrorReporting.V1Beta1
         /// </summary>
         public override ErrorStatsService.ErrorStatsServiceClient GrpcClient { get; }
 
-        // Partial modifier methods contain '_' to ensure no name conflicts with RPC methods.
+        // Partial methods called on each request.
+        // Allows per-RPC-call modification to the request and CallSettings objects,
+        // before the underlying RPC is performed.
         partial void Modify_ListGroupStatsRequest(ref ListGroupStatsRequest request, ref CallSettings settings);
         partial void Modify_ListEventsRequest(ref ListEventsRequest request, ref CallSettings settings);
         partial void Modify_DeleteEventsRequest(ref DeleteEventsRequest request, ref CallSettings settings);

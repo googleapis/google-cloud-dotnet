@@ -16,6 +16,7 @@
 
 using Google.Api.Gax;
 using Google.Api.Gax.Grpc;
+using Google.Protobuf;
 using Google.Protobuf.WellKnownTypes;
 using Grpc.Core;
 using System;
@@ -1054,9 +1055,37 @@ namespace Google.Cloud.Monitoring.V3
                 GrpcClient.DeleteUptimeCheckConfigAsync, GrpcClient.DeleteUptimeCheckConfig, effectiveSettings.DeleteUptimeCheckConfigSettings);
             _callListUptimeCheckIps = clientHelper.BuildApiCall<ListUptimeCheckIpsRequest, ListUptimeCheckIpsResponse>(
                 GrpcClient.ListUptimeCheckIpsAsync, GrpcClient.ListUptimeCheckIps, effectiveSettings.ListUptimeCheckIpsSettings);
+            Modify_ApiCall(ref _callListUptimeCheckConfigs);
+            Modify_ListUptimeCheckConfigsApiCall(ref _callListUptimeCheckConfigs);
+            Modify_ApiCall(ref _callGetUptimeCheckConfig);
+            Modify_GetUptimeCheckConfigApiCall(ref _callGetUptimeCheckConfig);
+            Modify_ApiCall(ref _callCreateUptimeCheckConfig);
+            Modify_CreateUptimeCheckConfigApiCall(ref _callCreateUptimeCheckConfig);
+            Modify_ApiCall(ref _callUpdateUptimeCheckConfig);
+            Modify_UpdateUptimeCheckConfigApiCall(ref _callUpdateUptimeCheckConfig);
+            Modify_ApiCall(ref _callDeleteUptimeCheckConfig);
+            Modify_DeleteUptimeCheckConfigApiCall(ref _callDeleteUptimeCheckConfig);
+            Modify_ApiCall(ref _callListUptimeCheckIps);
+            Modify_ListUptimeCheckIpsApiCall(ref _callListUptimeCheckIps);
             OnConstruction(grpcClient, effectiveSettings, clientHelper);
         }
 
+        // Partial methods are named to (mostly) ensure there cannot be conflicts with RPC method names.
+
+        // Partial methods called for every ApiCall on construction.
+        // Allows modification of all the underlying ApiCall objects.
+        partial void Modify_ApiCall<TRequest, TResponse>(ref ApiCall<TRequest, TResponse> call)
+            where TRequest : class, IMessage<TRequest>
+            where TResponse : class, IMessage<TResponse>;
+
+        // Partial methods called for each ApiCall on construction.
+        // Allows per-RPC-method modification of the underlying ApiCall object.
+        partial void Modify_ListUptimeCheckConfigsApiCall(ref ApiCall<ListUptimeCheckConfigsRequest, ListUptimeCheckConfigsResponse> call);
+        partial void Modify_GetUptimeCheckConfigApiCall(ref ApiCall<GetUptimeCheckConfigRequest, UptimeCheckConfig> call);
+        partial void Modify_CreateUptimeCheckConfigApiCall(ref ApiCall<CreateUptimeCheckConfigRequest, UptimeCheckConfig> call);
+        partial void Modify_UpdateUptimeCheckConfigApiCall(ref ApiCall<UpdateUptimeCheckConfigRequest, UptimeCheckConfig> call);
+        partial void Modify_DeleteUptimeCheckConfigApiCall(ref ApiCall<DeleteUptimeCheckConfigRequest, Empty> call);
+        partial void Modify_ListUptimeCheckIpsApiCall(ref ApiCall<ListUptimeCheckIpsRequest, ListUptimeCheckIpsResponse> call);
         partial void OnConstruction(UptimeCheckService.UptimeCheckServiceClient grpcClient, UptimeCheckServiceSettings effectiveSettings, ClientHelper clientHelper);
 
         /// <summary>
@@ -1064,7 +1093,9 @@ namespace Google.Cloud.Monitoring.V3
         /// </summary>
         public override UptimeCheckService.UptimeCheckServiceClient GrpcClient { get; }
 
-        // Partial modifier methods contain '_' to ensure no name conflicts with RPC methods.
+        // Partial methods called on each request.
+        // Allows per-RPC-call modification to the request and CallSettings objects,
+        // before the underlying RPC is performed.
         partial void Modify_ListUptimeCheckConfigsRequest(ref ListUptimeCheckConfigsRequest request, ref CallSettings settings);
         partial void Modify_GetUptimeCheckConfigRequest(ref GetUptimeCheckConfigRequest request, ref CallSettings settings);
         partial void Modify_CreateUptimeCheckConfigRequest(ref CreateUptimeCheckConfigRequest request, ref CallSettings settings);

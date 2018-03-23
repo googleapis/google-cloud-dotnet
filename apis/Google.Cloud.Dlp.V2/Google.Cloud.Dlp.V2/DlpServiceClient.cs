@@ -16,6 +16,7 @@
 
 using Google.Api.Gax;
 using Google.Api.Gax.Grpc;
+using Google.Protobuf;
 using Google.Protobuf.WellKnownTypes;
 using Grpc.Core;
 using System;
@@ -2041,9 +2042,94 @@ namespace Google.Cloud.Dlp.V2
                 GrpcClient.UpdateJobTriggerAsync, GrpcClient.UpdateJobTrigger, effectiveSettings.UpdateJobTriggerSettings);
             _callCreateJobTrigger = clientHelper.BuildApiCall<CreateJobTriggerRequest, JobTrigger>(
                 GrpcClient.CreateJobTriggerAsync, GrpcClient.CreateJobTrigger, effectiveSettings.CreateJobTriggerSettings);
+            Modify_ApiCall(ref _callInspectContent);
+            Modify_InspectContentApiCall(ref _callInspectContent);
+            Modify_ApiCall(ref _callRedactImage);
+            Modify_RedactImageApiCall(ref _callRedactImage);
+            Modify_ApiCall(ref _callDeidentifyContent);
+            Modify_DeidentifyContentApiCall(ref _callDeidentifyContent);
+            Modify_ApiCall(ref _callReidentifyContent);
+            Modify_ReidentifyContentApiCall(ref _callReidentifyContent);
+            Modify_ApiCall(ref _callListInfoTypes);
+            Modify_ListInfoTypesApiCall(ref _callListInfoTypes);
+            Modify_ApiCall(ref _callCreateInspectTemplate);
+            Modify_CreateInspectTemplateApiCall(ref _callCreateInspectTemplate);
+            Modify_ApiCall(ref _callUpdateInspectTemplate);
+            Modify_UpdateInspectTemplateApiCall(ref _callUpdateInspectTemplate);
+            Modify_ApiCall(ref _callGetInspectTemplate);
+            Modify_GetInspectTemplateApiCall(ref _callGetInspectTemplate);
+            Modify_ApiCall(ref _callListInspectTemplates);
+            Modify_ListInspectTemplatesApiCall(ref _callListInspectTemplates);
+            Modify_ApiCall(ref _callDeleteInspectTemplate);
+            Modify_DeleteInspectTemplateApiCall(ref _callDeleteInspectTemplate);
+            Modify_ApiCall(ref _callCreateDeidentifyTemplate);
+            Modify_CreateDeidentifyTemplateApiCall(ref _callCreateDeidentifyTemplate);
+            Modify_ApiCall(ref _callUpdateDeidentifyTemplate);
+            Modify_UpdateDeidentifyTemplateApiCall(ref _callUpdateDeidentifyTemplate);
+            Modify_ApiCall(ref _callGetDeidentifyTemplate);
+            Modify_GetDeidentifyTemplateApiCall(ref _callGetDeidentifyTemplate);
+            Modify_ApiCall(ref _callListDeidentifyTemplates);
+            Modify_ListDeidentifyTemplatesApiCall(ref _callListDeidentifyTemplates);
+            Modify_ApiCall(ref _callDeleteDeidentifyTemplate);
+            Modify_DeleteDeidentifyTemplateApiCall(ref _callDeleteDeidentifyTemplate);
+            Modify_ApiCall(ref _callCreateDlpJob);
+            Modify_CreateDlpJobApiCall(ref _callCreateDlpJob);
+            Modify_ApiCall(ref _callListDlpJobs);
+            Modify_ListDlpJobsApiCall(ref _callListDlpJobs);
+            Modify_ApiCall(ref _callGetDlpJob);
+            Modify_GetDlpJobApiCall(ref _callGetDlpJob);
+            Modify_ApiCall(ref _callDeleteDlpJob);
+            Modify_DeleteDlpJobApiCall(ref _callDeleteDlpJob);
+            Modify_ApiCall(ref _callCancelDlpJob);
+            Modify_CancelDlpJobApiCall(ref _callCancelDlpJob);
+            Modify_ApiCall(ref _callListJobTriggers);
+            Modify_ListJobTriggersApiCall(ref _callListJobTriggers);
+            Modify_ApiCall(ref _callGetJobTrigger);
+            Modify_GetJobTriggerApiCall(ref _callGetJobTrigger);
+            Modify_ApiCall(ref _callDeleteJobTrigger);
+            Modify_DeleteJobTriggerApiCall(ref _callDeleteJobTrigger);
+            Modify_ApiCall(ref _callUpdateJobTrigger);
+            Modify_UpdateJobTriggerApiCall(ref _callUpdateJobTrigger);
+            Modify_ApiCall(ref _callCreateJobTrigger);
+            Modify_CreateJobTriggerApiCall(ref _callCreateJobTrigger);
             OnConstruction(grpcClient, effectiveSettings, clientHelper);
         }
 
+        // Partial methods are named to (mostly) ensure there cannot be conflicts with RPC method names.
+
+        // Partial methods called for every ApiCall on construction.
+        // Allows modification of all the underlying ApiCall objects.
+        partial void Modify_ApiCall<TRequest, TResponse>(ref ApiCall<TRequest, TResponse> call)
+            where TRequest : class, IMessage<TRequest>
+            where TResponse : class, IMessage<TResponse>;
+
+        // Partial methods called for each ApiCall on construction.
+        // Allows per-RPC-method modification of the underlying ApiCall object.
+        partial void Modify_InspectContentApiCall(ref ApiCall<InspectContentRequest, InspectContentResponse> call);
+        partial void Modify_RedactImageApiCall(ref ApiCall<RedactImageRequest, RedactImageResponse> call);
+        partial void Modify_DeidentifyContentApiCall(ref ApiCall<DeidentifyContentRequest, DeidentifyContentResponse> call);
+        partial void Modify_ReidentifyContentApiCall(ref ApiCall<ReidentifyContentRequest, ReidentifyContentResponse> call);
+        partial void Modify_ListInfoTypesApiCall(ref ApiCall<ListInfoTypesRequest, ListInfoTypesResponse> call);
+        partial void Modify_CreateInspectTemplateApiCall(ref ApiCall<CreateInspectTemplateRequest, InspectTemplate> call);
+        partial void Modify_UpdateInspectTemplateApiCall(ref ApiCall<UpdateInspectTemplateRequest, InspectTemplate> call);
+        partial void Modify_GetInspectTemplateApiCall(ref ApiCall<GetInspectTemplateRequest, InspectTemplate> call);
+        partial void Modify_ListInspectTemplatesApiCall(ref ApiCall<ListInspectTemplatesRequest, ListInspectTemplatesResponse> call);
+        partial void Modify_DeleteInspectTemplateApiCall(ref ApiCall<DeleteInspectTemplateRequest, Empty> call);
+        partial void Modify_CreateDeidentifyTemplateApiCall(ref ApiCall<CreateDeidentifyTemplateRequest, DeidentifyTemplate> call);
+        partial void Modify_UpdateDeidentifyTemplateApiCall(ref ApiCall<UpdateDeidentifyTemplateRequest, DeidentifyTemplate> call);
+        partial void Modify_GetDeidentifyTemplateApiCall(ref ApiCall<GetDeidentifyTemplateRequest, DeidentifyTemplate> call);
+        partial void Modify_ListDeidentifyTemplatesApiCall(ref ApiCall<ListDeidentifyTemplatesRequest, ListDeidentifyTemplatesResponse> call);
+        partial void Modify_DeleteDeidentifyTemplateApiCall(ref ApiCall<DeleteDeidentifyTemplateRequest, Empty> call);
+        partial void Modify_CreateDlpJobApiCall(ref ApiCall<CreateDlpJobRequest, DlpJob> call);
+        partial void Modify_ListDlpJobsApiCall(ref ApiCall<ListDlpJobsRequest, ListDlpJobsResponse> call);
+        partial void Modify_GetDlpJobApiCall(ref ApiCall<GetDlpJobRequest, DlpJob> call);
+        partial void Modify_DeleteDlpJobApiCall(ref ApiCall<DeleteDlpJobRequest, Empty> call);
+        partial void Modify_CancelDlpJobApiCall(ref ApiCall<CancelDlpJobRequest, Empty> call);
+        partial void Modify_ListJobTriggersApiCall(ref ApiCall<ListJobTriggersRequest, ListJobTriggersResponse> call);
+        partial void Modify_GetJobTriggerApiCall(ref ApiCall<GetJobTriggerRequest, JobTrigger> call);
+        partial void Modify_DeleteJobTriggerApiCall(ref ApiCall<DeleteJobTriggerRequest, Empty> call);
+        partial void Modify_UpdateJobTriggerApiCall(ref ApiCall<UpdateJobTriggerRequest, JobTrigger> call);
+        partial void Modify_CreateJobTriggerApiCall(ref ApiCall<CreateJobTriggerRequest, JobTrigger> call);
         partial void OnConstruction(DlpService.DlpServiceClient grpcClient, DlpServiceSettings effectiveSettings, ClientHelper clientHelper);
 
         /// <summary>
@@ -2051,7 +2137,9 @@ namespace Google.Cloud.Dlp.V2
         /// </summary>
         public override DlpService.DlpServiceClient GrpcClient { get; }
 
-        // Partial modifier methods contain '_' to ensure no name conflicts with RPC methods.
+        // Partial methods called on each request.
+        // Allows per-RPC-call modification to the request and CallSettings objects,
+        // before the underlying RPC is performed.
         partial void Modify_InspectContentRequest(ref InspectContentRequest request, ref CallSettings settings);
         partial void Modify_RedactImageRequest(ref RedactImageRequest request, ref CallSettings settings);
         partial void Modify_DeidentifyContentRequest(ref DeidentifyContentRequest request, ref CallSettings settings);

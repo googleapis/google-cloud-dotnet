@@ -18,6 +18,7 @@ using Google.Api.Gax;
 using Google.Api.Gax.Grpc;
 using Google.Cloud.Iam.V1;
 using Google.LongRunning;
+using Google.Protobuf;
 using Google.Protobuf.WellKnownTypes;
 using Grpc.Core;
 using System;
@@ -54,7 +55,6 @@ namespace Google.Cloud.Bigtable.Admin.V2
             CreateInstanceOperationsSettings = existing.CreateInstanceOperationsSettings?.Clone();
             GetInstanceSettings = existing.GetInstanceSettings;
             ListInstancesSettings = existing.ListInstancesSettings;
-            UpdateInstanceSettings = existing.UpdateInstanceSettings;
             PartialUpdateInstanceSettings = existing.PartialUpdateInstanceSettings;
             PartialUpdateInstanceOperationsSettings = existing.PartialUpdateInstanceOperationsSettings?.Clone();
             DeleteInstanceSettings = existing.DeleteInstanceSettings;
@@ -249,36 +249,6 @@ namespace Google.Cloud.Bigtable.Admin.V2
         /// Default RPC expiration is 600000 milliseconds.
         /// </remarks>
         public CallSettings ListInstancesSettings { get; set; } = CallSettings.FromCallTiming(
-            CallTiming.FromRetry(new RetrySettings(
-                retryBackoff: GetDefaultRetryBackoff(),
-                timeoutBackoff: GetDefaultTimeoutBackoff(),
-                totalExpiration: Expiration.FromTimeout(TimeSpan.FromMilliseconds(600000)),
-                retryFilter: IdempotentRetryFilter
-            )));
-
-        /// <summary>
-        /// <see cref="CallSettings"/> for synchronous and asynchronous calls to
-        /// <c>BigtableInstanceAdminClient.UpdateInstance</c> and <c>BigtableInstanceAdminClient.UpdateInstanceAsync</c>.
-        /// </summary>
-        /// <remarks>
-        /// The default <c>BigtableInstanceAdminClient.UpdateInstance</c> and
-        /// <c>BigtableInstanceAdminClient.UpdateInstanceAsync</c> <see cref="RetrySettings"/> are:
-        /// <list type="bullet">
-        /// <item><description>Initial retry delay: 5 milliseconds</description></item>
-        /// <item><description>Retry delay multiplier: 2.0</description></item>
-        /// <item><description>Retry maximum delay: 60000 milliseconds</description></item>
-        /// <item><description>Initial timeout: 60000 milliseconds</description></item>
-        /// <item><description>Timeout multiplier: 1.0</description></item>
-        /// <item><description>Timeout maximum delay: 60000 milliseconds</description></item>
-        /// </list>
-        /// Retry will be attempted on the following response status codes:
-        /// <list>
-        /// <item><description><see cref="StatusCode.DeadlineExceeded"/></description></item>
-        /// <item><description><see cref="StatusCode.Unavailable"/></description></item>
-        /// </list>
-        /// Default RPC expiration is 600000 milliseconds.
-        /// </remarks>
-        public CallSettings UpdateInstanceSettings { get; set; } = CallSettings.FromCallTiming(
             CallTiming.FromRetry(new RetrySettings(
                 retryBackoff: GetDefaultRetryBackoff(),
                 timeoutBackoff: GetDefaultTimeoutBackoff(),
@@ -1329,44 +1299,6 @@ namespace Google.Cloud.Bigtable.Admin.V2
         /// </returns>
         public virtual ListInstancesResponse ListInstances(
             ListInstancesRequest request,
-            CallSettings callSettings = null)
-        {
-            throw new NotImplementedException();
-        }
-
-        /// <summary>
-        /// Updates an instance within a project.
-        /// </summary>
-        /// <param name="request">
-        /// The request object containing all of the parameters for the API call.
-        /// </param>
-        /// <param name="callSettings">
-        /// If not null, applies overrides to this RPC call.
-        /// </param>
-        /// <returns>
-        /// A Task containing the RPC response.
-        /// </returns>
-        public virtual Task<Instance> UpdateInstanceAsync(
-            Instance request,
-            CallSettings callSettings = null)
-        {
-            throw new NotImplementedException();
-        }
-
-        /// <summary>
-        /// Updates an instance within a project.
-        /// </summary>
-        /// <param name="request">
-        /// The request object containing all of the parameters for the API call.
-        /// </param>
-        /// <param name="callSettings">
-        /// If not null, applies overrides to this RPC call.
-        /// </param>
-        /// <returns>
-        /// The RPC response.
-        /// </returns>
-        public virtual Instance UpdateInstance(
-            Instance request,
             CallSettings callSettings = null)
         {
             throw new NotImplementedException();
@@ -3356,7 +3288,6 @@ namespace Google.Cloud.Bigtable.Admin.V2
         private readonly ApiCall<CreateInstanceRequest, Operation> _callCreateInstance;
         private readonly ApiCall<GetInstanceRequest, Instance> _callGetInstance;
         private readonly ApiCall<ListInstancesRequest, ListInstancesResponse> _callListInstances;
-        private readonly ApiCall<Instance, Instance> _callUpdateInstance;
         private readonly ApiCall<PartialUpdateInstanceRequest, Operation> _callPartialUpdateInstance;
         private readonly ApiCall<DeleteInstanceRequest, Empty> _callDeleteInstance;
         private readonly ApiCall<CreateClusterRequest, Operation> _callCreateCluster;
@@ -3402,9 +3333,6 @@ namespace Google.Cloud.Bigtable.Admin.V2
             _callListInstances = clientHelper.BuildApiCall<ListInstancesRequest, ListInstancesResponse>(
                 GrpcClient.ListInstancesAsync, GrpcClient.ListInstances, effectiveSettings.ListInstancesSettings)
                 .WithCallSettingsOverlay(request => CallSettings.FromHeader("x-goog-request-params", $"parent={request.Parent}"));
-            _callUpdateInstance = clientHelper.BuildApiCall<Instance, Instance>(
-                GrpcClient.UpdateInstanceAsync, GrpcClient.UpdateInstance, effectiveSettings.UpdateInstanceSettings)
-                .WithCallSettingsOverlay(request => CallSettings.FromHeader("x-goog-request-params", $"name={request.Name}"));
             _callPartialUpdateInstance = clientHelper.BuildApiCall<PartialUpdateInstanceRequest, Operation>(
                 GrpcClient.PartialUpdateInstanceAsync, GrpcClient.PartialUpdateInstance, effectiveSettings.PartialUpdateInstanceSettings)
                 .WithCallSettingsOverlay(request => CallSettings.FromHeader("x-goog-request-params", $"instance.name={request.Instance.Name}"));
@@ -3450,9 +3378,73 @@ namespace Google.Cloud.Bigtable.Admin.V2
             _callTestIamPermissions = clientHelper.BuildApiCall<TestIamPermissionsRequest, TestIamPermissionsResponse>(
                 GrpcClient.TestIamPermissionsAsync, GrpcClient.TestIamPermissions, effectiveSettings.TestIamPermissionsSettings)
                 .WithCallSettingsOverlay(request => CallSettings.FromHeader("x-goog-request-params", $"resource={request.Resource}"));
+            Modify_ApiCall(ref _callCreateInstance);
+            Modify_CreateInstanceApiCall(ref _callCreateInstance);
+            Modify_ApiCall(ref _callGetInstance);
+            Modify_GetInstanceApiCall(ref _callGetInstance);
+            Modify_ApiCall(ref _callListInstances);
+            Modify_ListInstancesApiCall(ref _callListInstances);
+            Modify_ApiCall(ref _callPartialUpdateInstance);
+            Modify_PartialUpdateInstanceApiCall(ref _callPartialUpdateInstance);
+            Modify_ApiCall(ref _callDeleteInstance);
+            Modify_DeleteInstanceApiCall(ref _callDeleteInstance);
+            Modify_ApiCall(ref _callCreateCluster);
+            Modify_CreateClusterApiCall(ref _callCreateCluster);
+            Modify_ApiCall(ref _callGetCluster);
+            Modify_GetClusterApiCall(ref _callGetCluster);
+            Modify_ApiCall(ref _callListClusters);
+            Modify_ListClustersApiCall(ref _callListClusters);
+            Modify_ApiCall(ref _callUpdateCluster);
+            Modify_UpdateClusterApiCall(ref _callUpdateCluster);
+            Modify_ApiCall(ref _callDeleteCluster);
+            Modify_DeleteClusterApiCall(ref _callDeleteCluster);
+            Modify_ApiCall(ref _callCreateAppProfile);
+            Modify_CreateAppProfileApiCall(ref _callCreateAppProfile);
+            Modify_ApiCall(ref _callGetAppProfile);
+            Modify_GetAppProfileApiCall(ref _callGetAppProfile);
+            Modify_ApiCall(ref _callListAppProfiles);
+            Modify_ListAppProfilesApiCall(ref _callListAppProfiles);
+            Modify_ApiCall(ref _callUpdateAppProfile);
+            Modify_UpdateAppProfileApiCall(ref _callUpdateAppProfile);
+            Modify_ApiCall(ref _callDeleteAppProfile);
+            Modify_DeleteAppProfileApiCall(ref _callDeleteAppProfile);
+            Modify_ApiCall(ref _callGetIamPolicy);
+            Modify_GetIamPolicyApiCall(ref _callGetIamPolicy);
+            Modify_ApiCall(ref _callSetIamPolicy);
+            Modify_SetIamPolicyApiCall(ref _callSetIamPolicy);
+            Modify_ApiCall(ref _callTestIamPermissions);
+            Modify_TestIamPermissionsApiCall(ref _callTestIamPermissions);
             OnConstruction(grpcClient, effectiveSettings, clientHelper);
         }
 
+        // Partial methods are named to (mostly) ensure there cannot be conflicts with RPC method names.
+
+        // Partial methods called for every ApiCall on construction.
+        // Allows modification of all the underlying ApiCall objects.
+        partial void Modify_ApiCall<TRequest, TResponse>(ref ApiCall<TRequest, TResponse> call)
+            where TRequest : class, IMessage<TRequest>
+            where TResponse : class, IMessage<TResponse>;
+
+        // Partial methods called for each ApiCall on construction.
+        // Allows per-RPC-method modification of the underlying ApiCall object.
+        partial void Modify_CreateInstanceApiCall(ref ApiCall<CreateInstanceRequest, Operation> call);
+        partial void Modify_GetInstanceApiCall(ref ApiCall<GetInstanceRequest, Instance> call);
+        partial void Modify_ListInstancesApiCall(ref ApiCall<ListInstancesRequest, ListInstancesResponse> call);
+        partial void Modify_PartialUpdateInstanceApiCall(ref ApiCall<PartialUpdateInstanceRequest, Operation> call);
+        partial void Modify_DeleteInstanceApiCall(ref ApiCall<DeleteInstanceRequest, Empty> call);
+        partial void Modify_CreateClusterApiCall(ref ApiCall<CreateClusterRequest, Operation> call);
+        partial void Modify_GetClusterApiCall(ref ApiCall<GetClusterRequest, Cluster> call);
+        partial void Modify_ListClustersApiCall(ref ApiCall<ListClustersRequest, ListClustersResponse> call);
+        partial void Modify_UpdateClusterApiCall(ref ApiCall<Cluster, Operation> call);
+        partial void Modify_DeleteClusterApiCall(ref ApiCall<DeleteClusterRequest, Empty> call);
+        partial void Modify_CreateAppProfileApiCall(ref ApiCall<CreateAppProfileRequest, AppProfile> call);
+        partial void Modify_GetAppProfileApiCall(ref ApiCall<GetAppProfileRequest, AppProfile> call);
+        partial void Modify_ListAppProfilesApiCall(ref ApiCall<ListAppProfilesRequest, ListAppProfilesResponse> call);
+        partial void Modify_UpdateAppProfileApiCall(ref ApiCall<UpdateAppProfileRequest, Operation> call);
+        partial void Modify_DeleteAppProfileApiCall(ref ApiCall<DeleteAppProfileRequest, Empty> call);
+        partial void Modify_GetIamPolicyApiCall(ref ApiCall<GetIamPolicyRequest, Policy> call);
+        partial void Modify_SetIamPolicyApiCall(ref ApiCall<SetIamPolicyRequest, Policy> call);
+        partial void Modify_TestIamPermissionsApiCall(ref ApiCall<TestIamPermissionsRequest, TestIamPermissionsResponse> call);
         partial void OnConstruction(BigtableInstanceAdmin.BigtableInstanceAdminClient grpcClient, BigtableInstanceAdminSettings effectiveSettings, ClientHelper clientHelper);
 
         /// <summary>
@@ -3460,11 +3452,12 @@ namespace Google.Cloud.Bigtable.Admin.V2
         /// </summary>
         public override BigtableInstanceAdmin.BigtableInstanceAdminClient GrpcClient { get; }
 
-        // Partial modifier methods contain '_' to ensure no name conflicts with RPC methods.
+        // Partial methods called on each request.
+        // Allows per-RPC-call modification to the request and CallSettings objects,
+        // before the underlying RPC is performed.
         partial void Modify_CreateInstanceRequest(ref CreateInstanceRequest request, ref CallSettings settings);
         partial void Modify_GetInstanceRequest(ref GetInstanceRequest request, ref CallSettings settings);
         partial void Modify_ListInstancesRequest(ref ListInstancesRequest request, ref CallSettings settings);
-        partial void Modify_Instance(ref Instance request, ref CallSettings settings);
         partial void Modify_PartialUpdateInstanceRequest(ref PartialUpdateInstanceRequest request, ref CallSettings settings);
         partial void Modify_DeleteInstanceRequest(ref DeleteInstanceRequest request, ref CallSettings settings);
         partial void Modify_CreateClusterRequest(ref CreateClusterRequest request, ref CallSettings settings);
@@ -3606,46 +3599,6 @@ namespace Google.Cloud.Bigtable.Admin.V2
         {
             Modify_ListInstancesRequest(ref request, ref callSettings);
             return _callListInstances.Sync(request, callSettings);
-        }
-
-        /// <summary>
-        /// Updates an instance within a project.
-        /// </summary>
-        /// <param name="request">
-        /// The request object containing all of the parameters for the API call.
-        /// </param>
-        /// <param name="callSettings">
-        /// If not null, applies overrides to this RPC call.
-        /// </param>
-        /// <returns>
-        /// A Task containing the RPC response.
-        /// </returns>
-        public override Task<Instance> UpdateInstanceAsync(
-            Instance request,
-            CallSettings callSettings = null)
-        {
-            Modify_Instance(ref request, ref callSettings);
-            return _callUpdateInstance.Async(request, callSettings);
-        }
-
-        /// <summary>
-        /// Updates an instance within a project.
-        /// </summary>
-        /// <param name="request">
-        /// The request object containing all of the parameters for the API call.
-        /// </param>
-        /// <param name="callSettings">
-        /// If not null, applies overrides to this RPC call.
-        /// </param>
-        /// <returns>
-        /// The RPC response.
-        /// </returns>
-        public override Instance UpdateInstance(
-            Instance request,
-            CallSettings callSettings = null)
-        {
-            Modify_Instance(ref request, ref callSettings);
-            return _callUpdateInstance.Sync(request, callSettings);
         }
 
         /// <summary>

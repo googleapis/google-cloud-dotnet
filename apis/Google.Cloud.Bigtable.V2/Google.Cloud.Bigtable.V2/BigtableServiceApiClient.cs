@@ -986,9 +986,40 @@ namespace Google.Cloud.Bigtable.V2
             _callReadModifyWriteRow = clientHelper.BuildApiCall<ReadModifyWriteRowRequest, ReadModifyWriteRowResponse>(
                 GrpcClient.ReadModifyWriteRowAsync, GrpcClient.ReadModifyWriteRow, effectiveSettings.ReadModifyWriteRowSettings)
                 .WithCallSettingsOverlay(request => CallSettings.FromHeader("x-goog-request-params", $"table_name={request.TableName}"));
+            Modify_ApiCall(ref _callReadRows);
+            Modify_ReadRowsApiCall(ref _callReadRows);
+            Modify_ApiCall(ref _callSampleRowKeys);
+            Modify_SampleRowKeysApiCall(ref _callSampleRowKeys);
+            Modify_ApiCall(ref _callMutateRow);
+            Modify_MutateRowApiCall(ref _callMutateRow);
+            Modify_ApiCall(ref _callMutateRows);
+            Modify_MutateRowsApiCall(ref _callMutateRows);
+            Modify_ApiCall(ref _callCheckAndMutateRow);
+            Modify_CheckAndMutateRowApiCall(ref _callCheckAndMutateRow);
+            Modify_ApiCall(ref _callReadModifyWriteRow);
+            Modify_ReadModifyWriteRowApiCall(ref _callReadModifyWriteRow);
             OnConstruction(grpcClient, effectiveSettings, clientHelper);
         }
 
+        // Partial methods are named to (mostly) ensure there cannot be conflicts with RPC method names.
+
+        // Partial methods called for every ApiCall on construction.
+        // Allows modification of all the underlying ApiCall objects.
+        partial void Modify_ApiCall<TRequest, TResponse>(ref ApiCall<TRequest, TResponse> call)
+            where TRequest : class, IMessage<TRequest>
+            where TResponse : class, IMessage<TResponse>;
+        partial void Modify_ApiCall<TRequest, TResponse>(ref ApiServerStreamingCall<TRequest, TResponse> call)
+            where TRequest : class, IMessage<TRequest>
+            where TResponse : class, IMessage<TResponse>;
+
+        // Partial methods called for each ApiCall on construction.
+        // Allows per-RPC-method modification of the underlying ApiCall object.
+        partial void Modify_ReadRowsApiCall(ref ApiServerStreamingCall<ReadRowsRequest, ReadRowsResponse> call);
+        partial void Modify_SampleRowKeysApiCall(ref ApiServerStreamingCall<SampleRowKeysRequest, SampleRowKeysResponse> call);
+        partial void Modify_MutateRowApiCall(ref ApiCall<MutateRowRequest, MutateRowResponse> call);
+        partial void Modify_MutateRowsApiCall(ref ApiServerStreamingCall<MutateRowsRequest, MutateRowsResponse> call);
+        partial void Modify_CheckAndMutateRowApiCall(ref ApiCall<CheckAndMutateRowRequest, CheckAndMutateRowResponse> call);
+        partial void Modify_ReadModifyWriteRowApiCall(ref ApiCall<ReadModifyWriteRowRequest, ReadModifyWriteRowResponse> call);
         partial void OnConstruction(Bigtable.BigtableClient grpcClient, BigtableServiceApiSettings effectiveSettings, ClientHelper clientHelper);
 
         /// <summary>
@@ -996,7 +1027,9 @@ namespace Google.Cloud.Bigtable.V2
         /// </summary>
         public override Bigtable.BigtableClient GrpcClient { get; }
 
-        // Partial modifier methods contain '_' to ensure no name conflicts with RPC methods.
+        // Partial methods called on each request.
+        // Allows per-RPC-call modification to the request and CallSettings objects,
+        // before the underlying RPC is performed.
         partial void Modify_ReadRowsRequest(ref ReadRowsRequest request, ref CallSettings settings);
         partial void Modify_SampleRowKeysRequest(ref SampleRowKeysRequest request, ref CallSettings settings);
         partial void Modify_MutateRowRequest(ref MutateRowRequest request, ref CallSettings settings);

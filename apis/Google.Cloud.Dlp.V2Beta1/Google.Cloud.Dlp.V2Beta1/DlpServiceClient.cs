@@ -17,6 +17,7 @@
 using Google.Api.Gax;
 using Google.Api.Gax.Grpc;
 using Google.LongRunning;
+using Google.Protobuf;
 using Google.Protobuf.WellKnownTypes;
 using Grpc.Core;
 using System;
@@ -1498,9 +1499,43 @@ namespace Google.Cloud.Dlp.V2Beta1
                 GrpcClient.ListInfoTypesAsync, GrpcClient.ListInfoTypes, effectiveSettings.ListInfoTypesSettings);
             _callListRootCategories = clientHelper.BuildApiCall<ListRootCategoriesRequest, ListRootCategoriesResponse>(
                 GrpcClient.ListRootCategoriesAsync, GrpcClient.ListRootCategories, effectiveSettings.ListRootCategoriesSettings);
+            Modify_ApiCall(ref _callInspectContent);
+            Modify_InspectContentApiCall(ref _callInspectContent);
+            Modify_ApiCall(ref _callRedactContent);
+            Modify_RedactContentApiCall(ref _callRedactContent);
+            Modify_ApiCall(ref _callDeidentifyContent);
+            Modify_DeidentifyContentApiCall(ref _callDeidentifyContent);
+            Modify_ApiCall(ref _callAnalyzeDataSourceRisk);
+            Modify_AnalyzeDataSourceRiskApiCall(ref _callAnalyzeDataSourceRisk);
+            Modify_ApiCall(ref _callCreateInspectOperation);
+            Modify_CreateInspectOperationApiCall(ref _callCreateInspectOperation);
+            Modify_ApiCall(ref _callListInspectFindings);
+            Modify_ListInspectFindingsApiCall(ref _callListInspectFindings);
+            Modify_ApiCall(ref _callListInfoTypes);
+            Modify_ListInfoTypesApiCall(ref _callListInfoTypes);
+            Modify_ApiCall(ref _callListRootCategories);
+            Modify_ListRootCategoriesApiCall(ref _callListRootCategories);
             OnConstruction(grpcClient, effectiveSettings, clientHelper);
         }
 
+        // Partial methods are named to (mostly) ensure there cannot be conflicts with RPC method names.
+
+        // Partial methods called for every ApiCall on construction.
+        // Allows modification of all the underlying ApiCall objects.
+        partial void Modify_ApiCall<TRequest, TResponse>(ref ApiCall<TRequest, TResponse> call)
+            where TRequest : class, IMessage<TRequest>
+            where TResponse : class, IMessage<TResponse>;
+
+        // Partial methods called for each ApiCall on construction.
+        // Allows per-RPC-method modification of the underlying ApiCall object.
+        partial void Modify_InspectContentApiCall(ref ApiCall<InspectContentRequest, InspectContentResponse> call);
+        partial void Modify_RedactContentApiCall(ref ApiCall<RedactContentRequest, RedactContentResponse> call);
+        partial void Modify_DeidentifyContentApiCall(ref ApiCall<DeidentifyContentRequest, DeidentifyContentResponse> call);
+        partial void Modify_AnalyzeDataSourceRiskApiCall(ref ApiCall<AnalyzeDataSourceRiskRequest, Operation> call);
+        partial void Modify_CreateInspectOperationApiCall(ref ApiCall<CreateInspectOperationRequest, Operation> call);
+        partial void Modify_ListInspectFindingsApiCall(ref ApiCall<ListInspectFindingsRequest, ListInspectFindingsResponse> call);
+        partial void Modify_ListInfoTypesApiCall(ref ApiCall<ListInfoTypesRequest, ListInfoTypesResponse> call);
+        partial void Modify_ListRootCategoriesApiCall(ref ApiCall<ListRootCategoriesRequest, ListRootCategoriesResponse> call);
         partial void OnConstruction(DlpService.DlpServiceClient grpcClient, DlpServiceSettings effectiveSettings, ClientHelper clientHelper);
 
         /// <summary>
@@ -1508,7 +1543,9 @@ namespace Google.Cloud.Dlp.V2Beta1
         /// </summary>
         public override DlpService.DlpServiceClient GrpcClient { get; }
 
-        // Partial modifier methods contain '_' to ensure no name conflicts with RPC methods.
+        // Partial methods called on each request.
+        // Allows per-RPC-call modification to the request and CallSettings objects,
+        // before the underlying RPC is performed.
         partial void Modify_InspectContentRequest(ref InspectContentRequest request, ref CallSettings settings);
         partial void Modify_RedactContentRequest(ref RedactContentRequest request, ref CallSettings settings);
         partial void Modify_DeidentifyContentRequest(ref DeidentifyContentRequest request, ref CallSettings settings);

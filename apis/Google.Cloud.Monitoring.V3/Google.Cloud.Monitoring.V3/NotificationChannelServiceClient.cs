@@ -16,6 +16,7 @@
 
 using Google.Api.Gax;
 using Google.Api.Gax.Grpc;
+using Google.Protobuf;
 using Google.Protobuf.WellKnownTypes;
 using Grpc.Core;
 using System;
@@ -1326,9 +1327,40 @@ namespace Google.Cloud.Monitoring.V3
                 GrpcClient.UpdateNotificationChannelAsync, GrpcClient.UpdateNotificationChannel, effectiveSettings.UpdateNotificationChannelSettings);
             _callDeleteNotificationChannel = clientHelper.BuildApiCall<DeleteNotificationChannelRequest, Empty>(
                 GrpcClient.DeleteNotificationChannelAsync, GrpcClient.DeleteNotificationChannel, effectiveSettings.DeleteNotificationChannelSettings);
+            Modify_ApiCall(ref _callListNotificationChannelDescriptors);
+            Modify_ListNotificationChannelDescriptorsApiCall(ref _callListNotificationChannelDescriptors);
+            Modify_ApiCall(ref _callGetNotificationChannelDescriptor);
+            Modify_GetNotificationChannelDescriptorApiCall(ref _callGetNotificationChannelDescriptor);
+            Modify_ApiCall(ref _callListNotificationChannels);
+            Modify_ListNotificationChannelsApiCall(ref _callListNotificationChannels);
+            Modify_ApiCall(ref _callGetNotificationChannel);
+            Modify_GetNotificationChannelApiCall(ref _callGetNotificationChannel);
+            Modify_ApiCall(ref _callCreateNotificationChannel);
+            Modify_CreateNotificationChannelApiCall(ref _callCreateNotificationChannel);
+            Modify_ApiCall(ref _callUpdateNotificationChannel);
+            Modify_UpdateNotificationChannelApiCall(ref _callUpdateNotificationChannel);
+            Modify_ApiCall(ref _callDeleteNotificationChannel);
+            Modify_DeleteNotificationChannelApiCall(ref _callDeleteNotificationChannel);
             OnConstruction(grpcClient, effectiveSettings, clientHelper);
         }
 
+        // Partial methods are named to (mostly) ensure there cannot be conflicts with RPC method names.
+
+        // Partial methods called for every ApiCall on construction.
+        // Allows modification of all the underlying ApiCall objects.
+        partial void Modify_ApiCall<TRequest, TResponse>(ref ApiCall<TRequest, TResponse> call)
+            where TRequest : class, IMessage<TRequest>
+            where TResponse : class, IMessage<TResponse>;
+
+        // Partial methods called for each ApiCall on construction.
+        // Allows per-RPC-method modification of the underlying ApiCall object.
+        partial void Modify_ListNotificationChannelDescriptorsApiCall(ref ApiCall<ListNotificationChannelDescriptorsRequest, ListNotificationChannelDescriptorsResponse> call);
+        partial void Modify_GetNotificationChannelDescriptorApiCall(ref ApiCall<GetNotificationChannelDescriptorRequest, NotificationChannelDescriptor> call);
+        partial void Modify_ListNotificationChannelsApiCall(ref ApiCall<ListNotificationChannelsRequest, ListNotificationChannelsResponse> call);
+        partial void Modify_GetNotificationChannelApiCall(ref ApiCall<GetNotificationChannelRequest, NotificationChannel> call);
+        partial void Modify_CreateNotificationChannelApiCall(ref ApiCall<CreateNotificationChannelRequest, NotificationChannel> call);
+        partial void Modify_UpdateNotificationChannelApiCall(ref ApiCall<UpdateNotificationChannelRequest, NotificationChannel> call);
+        partial void Modify_DeleteNotificationChannelApiCall(ref ApiCall<DeleteNotificationChannelRequest, Empty> call);
         partial void OnConstruction(NotificationChannelService.NotificationChannelServiceClient grpcClient, NotificationChannelServiceSettings effectiveSettings, ClientHelper clientHelper);
 
         /// <summary>
@@ -1336,7 +1368,9 @@ namespace Google.Cloud.Monitoring.V3
         /// </summary>
         public override NotificationChannelService.NotificationChannelServiceClient GrpcClient { get; }
 
-        // Partial modifier methods contain '_' to ensure no name conflicts with RPC methods.
+        // Partial methods called on each request.
+        // Allows per-RPC-call modification to the request and CallSettings objects,
+        // before the underlying RPC is performed.
         partial void Modify_ListNotificationChannelDescriptorsRequest(ref ListNotificationChannelDescriptorsRequest request, ref CallSettings settings);
         partial void Modify_GetNotificationChannelDescriptorRequest(ref GetNotificationChannelDescriptorRequest request, ref CallSettings settings);
         partial void Modify_ListNotificationChannelsRequest(ref ListNotificationChannelsRequest request, ref CallSettings settings);

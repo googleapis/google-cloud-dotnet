@@ -16,6 +16,7 @@
 
 using Google.Api.Gax;
 using Google.Api.Gax.Grpc;
+using Google.Protobuf;
 using Google.Protobuf.WellKnownTypes;
 using Grpc.Core;
 using System;
@@ -850,9 +851,31 @@ namespace Google.LongRunning
                 GrpcClient.CancelOperationAsync, GrpcClient.CancelOperation, effectiveSettings.CancelOperationSettings);
             _callDeleteOperation = clientHelper.BuildApiCall<DeleteOperationRequest, Empty>(
                 GrpcClient.DeleteOperationAsync, GrpcClient.DeleteOperation, effectiveSettings.DeleteOperationSettings);
+            Modify_ApiCall(ref _callGetOperation);
+            Modify_GetOperationApiCall(ref _callGetOperation);
+            Modify_ApiCall(ref _callListOperations);
+            Modify_ListOperationsApiCall(ref _callListOperations);
+            Modify_ApiCall(ref _callCancelOperation);
+            Modify_CancelOperationApiCall(ref _callCancelOperation);
+            Modify_ApiCall(ref _callDeleteOperation);
+            Modify_DeleteOperationApiCall(ref _callDeleteOperation);
             OnConstruction(grpcClient, effectiveSettings, clientHelper);
         }
 
+        // Partial methods are named to (mostly) ensure there cannot be conflicts with RPC method names.
+
+        // Partial methods called for every ApiCall on construction.
+        // Allows modification of all the underlying ApiCall objects.
+        partial void Modify_ApiCall<TRequest, TResponse>(ref ApiCall<TRequest, TResponse> call)
+            where TRequest : class, IMessage<TRequest>
+            where TResponse : class, IMessage<TResponse>;
+
+        // Partial methods called for each ApiCall on construction.
+        // Allows per-RPC-method modification of the underlying ApiCall object.
+        partial void Modify_GetOperationApiCall(ref ApiCall<GetOperationRequest, Operation> call);
+        partial void Modify_ListOperationsApiCall(ref ApiCall<ListOperationsRequest, ListOperationsResponse> call);
+        partial void Modify_CancelOperationApiCall(ref ApiCall<CancelOperationRequest, Empty> call);
+        partial void Modify_DeleteOperationApiCall(ref ApiCall<DeleteOperationRequest, Empty> call);
         partial void OnConstruction(Operations.OperationsClient grpcClient, OperationsSettings effectiveSettings, ClientHelper clientHelper);
 
         /// <summary>
@@ -860,7 +883,9 @@ namespace Google.LongRunning
         /// </summary>
         public override Operations.OperationsClient GrpcClient { get; }
 
-        // Partial modifier methods contain '_' to ensure no name conflicts with RPC methods.
+        // Partial methods called on each request.
+        // Allows per-RPC-call modification to the request and CallSettings objects,
+        // before the underlying RPC is performed.
         partial void Modify_GetOperationRequest(ref GetOperationRequest request, ref CallSettings settings);
         partial void Modify_ListOperationsRequest(ref ListOperationsRequest request, ref CallSettings settings);
         partial void Modify_CancelOperationRequest(ref CancelOperationRequest request, ref CallSettings settings);

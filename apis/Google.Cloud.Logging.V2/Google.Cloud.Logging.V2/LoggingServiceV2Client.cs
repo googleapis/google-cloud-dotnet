@@ -17,6 +17,7 @@
 using Google.Api;
 using Google.Api.Gax;
 using Google.Api.Gax.Grpc;
+using Google.Protobuf;
 using Google.Protobuf.WellKnownTypes;
 using Grpc.Core;
 using System;
@@ -1224,9 +1225,34 @@ namespace Google.Cloud.Logging.V2
                 GrpcClient.ListMonitoredResourceDescriptorsAsync, GrpcClient.ListMonitoredResourceDescriptors, effectiveSettings.ListMonitoredResourceDescriptorsSettings);
             _callListLogs = clientHelper.BuildApiCall<ListLogsRequest, ListLogsResponse>(
                 GrpcClient.ListLogsAsync, GrpcClient.ListLogs, effectiveSettings.ListLogsSettings);
+            Modify_ApiCall(ref _callDeleteLog);
+            Modify_DeleteLogApiCall(ref _callDeleteLog);
+            Modify_ApiCall(ref _callWriteLogEntries);
+            Modify_WriteLogEntriesApiCall(ref _callWriteLogEntries);
+            Modify_ApiCall(ref _callListLogEntries);
+            Modify_ListLogEntriesApiCall(ref _callListLogEntries);
+            Modify_ApiCall(ref _callListMonitoredResourceDescriptors);
+            Modify_ListMonitoredResourceDescriptorsApiCall(ref _callListMonitoredResourceDescriptors);
+            Modify_ApiCall(ref _callListLogs);
+            Modify_ListLogsApiCall(ref _callListLogs);
             OnConstruction(grpcClient, effectiveSettings, clientHelper);
         }
 
+        // Partial methods are named to (mostly) ensure there cannot be conflicts with RPC method names.
+
+        // Partial methods called for every ApiCall on construction.
+        // Allows modification of all the underlying ApiCall objects.
+        partial void Modify_ApiCall<TRequest, TResponse>(ref ApiCall<TRequest, TResponse> call)
+            where TRequest : class, IMessage<TRequest>
+            where TResponse : class, IMessage<TResponse>;
+
+        // Partial methods called for each ApiCall on construction.
+        // Allows per-RPC-method modification of the underlying ApiCall object.
+        partial void Modify_DeleteLogApiCall(ref ApiCall<DeleteLogRequest, Empty> call);
+        partial void Modify_WriteLogEntriesApiCall(ref ApiCall<WriteLogEntriesRequest, WriteLogEntriesResponse> call);
+        partial void Modify_ListLogEntriesApiCall(ref ApiCall<ListLogEntriesRequest, ListLogEntriesResponse> call);
+        partial void Modify_ListMonitoredResourceDescriptorsApiCall(ref ApiCall<ListMonitoredResourceDescriptorsRequest, ListMonitoredResourceDescriptorsResponse> call);
+        partial void Modify_ListLogsApiCall(ref ApiCall<ListLogsRequest, ListLogsResponse> call);
         partial void OnConstruction(LoggingServiceV2.LoggingServiceV2Client grpcClient, LoggingServiceV2Settings effectiveSettings, ClientHelper clientHelper);
 
         /// <summary>
@@ -1234,7 +1260,9 @@ namespace Google.Cloud.Logging.V2
         /// </summary>
         public override LoggingServiceV2.LoggingServiceV2Client GrpcClient { get; }
 
-        // Partial modifier methods contain '_' to ensure no name conflicts with RPC methods.
+        // Partial methods called on each request.
+        // Allows per-RPC-call modification to the request and CallSettings objects,
+        // before the underlying RPC is performed.
         partial void Modify_DeleteLogRequest(ref DeleteLogRequest request, ref CallSettings settings);
         partial void Modify_WriteLogEntriesRequest(ref WriteLogEntriesRequest request, ref CallSettings settings);
         partial void Modify_ListLogEntriesRequest(ref ListLogEntriesRequest request, ref CallSettings settings);

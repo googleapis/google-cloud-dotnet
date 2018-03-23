@@ -300,44 +300,6 @@ namespace Google.Cloud.Bigtable.Admin.V2.Snippets
             // End snippet
         }
 
-        /// <summary>Snippet for UpdateInstanceAsync</summary>
-        public async Task UpdateInstanceAsync_RequestObject()
-        {
-            // Snippet: UpdateInstanceAsync(Instance,CallSettings)
-            // Create client
-            BigtableInstanceAdminClient bigtableInstanceAdminClient = await BigtableInstanceAdminClient.CreateAsync();
-            // Initialize request argument(s)
-            Instance request = new Instance
-            {
-                InstanceName = new InstanceName("[PROJECT]", "[INSTANCE]"),
-                DisplayName = "",
-                Type = Instance.Types.Type.Unspecified,
-                Labels = { },
-            };
-            // Make the request
-            Instance response = await bigtableInstanceAdminClient.UpdateInstanceAsync(request);
-            // End snippet
-        }
-
-        /// <summary>Snippet for UpdateInstance</summary>
-        public void UpdateInstance_RequestObject()
-        {
-            // Snippet: UpdateInstance(Instance,CallSettings)
-            // Create client
-            BigtableInstanceAdminClient bigtableInstanceAdminClient = BigtableInstanceAdminClient.Create();
-            // Initialize request argument(s)
-            Instance request = new Instance
-            {
-                InstanceName = new InstanceName("[PROJECT]", "[INSTANCE]"),
-                DisplayName = "",
-                Type = Instance.Types.Type.Unspecified,
-                Labels = { },
-            };
-            // Make the request
-            Instance response = bigtableInstanceAdminClient.UpdateInstance(request);
-            // End snippet
-        }
-
         /// <summary>Snippet for PartialUpdateInstanceAsync</summary>
         public async Task PartialUpdateInstanceAsync()
         {

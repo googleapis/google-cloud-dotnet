@@ -1412,9 +1412,40 @@ namespace Google.Cloud.Datastore.V1
                 GrpcClient.AllocateIdsAsync, GrpcClient.AllocateIds, effectiveSettings.AllocateIdsSettings);
             _callReserveIds = clientHelper.BuildApiCall<ReserveIdsRequest, ReserveIdsResponse>(
                 GrpcClient.ReserveIdsAsync, GrpcClient.ReserveIds, effectiveSettings.ReserveIdsSettings);
+            Modify_ApiCall(ref _callLookup);
+            Modify_LookupApiCall(ref _callLookup);
+            Modify_ApiCall(ref _callRunQuery);
+            Modify_RunQueryApiCall(ref _callRunQuery);
+            Modify_ApiCall(ref _callBeginTransaction);
+            Modify_BeginTransactionApiCall(ref _callBeginTransaction);
+            Modify_ApiCall(ref _callCommit);
+            Modify_CommitApiCall(ref _callCommit);
+            Modify_ApiCall(ref _callRollback);
+            Modify_RollbackApiCall(ref _callRollback);
+            Modify_ApiCall(ref _callAllocateIds);
+            Modify_AllocateIdsApiCall(ref _callAllocateIds);
+            Modify_ApiCall(ref _callReserveIds);
+            Modify_ReserveIdsApiCall(ref _callReserveIds);
             OnConstruction(grpcClient, effectiveSettings, clientHelper);
         }
 
+        // Partial methods are named to (mostly) ensure there cannot be conflicts with RPC method names.
+
+        // Partial methods called for every ApiCall on construction.
+        // Allows modification of all the underlying ApiCall objects.
+        partial void Modify_ApiCall<TRequest, TResponse>(ref ApiCall<TRequest, TResponse> call)
+            where TRequest : class, IMessage<TRequest>
+            where TResponse : class, IMessage<TResponse>;
+
+        // Partial methods called for each ApiCall on construction.
+        // Allows per-RPC-method modification of the underlying ApiCall object.
+        partial void Modify_LookupApiCall(ref ApiCall<LookupRequest, LookupResponse> call);
+        partial void Modify_RunQueryApiCall(ref ApiCall<RunQueryRequest, RunQueryResponse> call);
+        partial void Modify_BeginTransactionApiCall(ref ApiCall<BeginTransactionRequest, BeginTransactionResponse> call);
+        partial void Modify_CommitApiCall(ref ApiCall<CommitRequest, CommitResponse> call);
+        partial void Modify_RollbackApiCall(ref ApiCall<RollbackRequest, RollbackResponse> call);
+        partial void Modify_AllocateIdsApiCall(ref ApiCall<AllocateIdsRequest, AllocateIdsResponse> call);
+        partial void Modify_ReserveIdsApiCall(ref ApiCall<ReserveIdsRequest, ReserveIdsResponse> call);
         partial void OnConstruction(Datastore.DatastoreClient grpcClient, DatastoreSettings effectiveSettings, ClientHelper clientHelper);
 
         /// <summary>
@@ -1422,7 +1453,9 @@ namespace Google.Cloud.Datastore.V1
         /// </summary>
         public override Datastore.DatastoreClient GrpcClient { get; }
 
-        // Partial modifier methods contain '_' to ensure no name conflicts with RPC methods.
+        // Partial methods called on each request.
+        // Allows per-RPC-call modification to the request and CallSettings objects,
+        // before the underlying RPC is performed.
         partial void Modify_LookupRequest(ref LookupRequest request, ref CallSettings settings);
         partial void Modify_RunQueryRequest(ref RunQueryRequest request, ref CallSettings settings);
         partial void Modify_BeginTransactionRequest(ref BeginTransactionRequest request, ref CallSettings settings);

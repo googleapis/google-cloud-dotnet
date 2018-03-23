@@ -17,6 +17,7 @@
 using Google.Api.Gax;
 using Google.Api.Gax.Grpc;
 using Google.LongRunning;
+using Google.Protobuf;
 using Google.Protobuf.WellKnownTypes;
 using Grpc.Core;
 using System;
@@ -1356,9 +1357,37 @@ namespace Google.Cloud.Dataproc.V1
                 GrpcClient.ListClustersAsync, GrpcClient.ListClusters, effectiveSettings.ListClustersSettings);
             _callDiagnoseCluster = clientHelper.BuildApiCall<DiagnoseClusterRequest, Operation>(
                 GrpcClient.DiagnoseClusterAsync, GrpcClient.DiagnoseCluster, effectiveSettings.DiagnoseClusterSettings);
+            Modify_ApiCall(ref _callCreateCluster);
+            Modify_CreateClusterApiCall(ref _callCreateCluster);
+            Modify_ApiCall(ref _callUpdateCluster);
+            Modify_UpdateClusterApiCall(ref _callUpdateCluster);
+            Modify_ApiCall(ref _callDeleteCluster);
+            Modify_DeleteClusterApiCall(ref _callDeleteCluster);
+            Modify_ApiCall(ref _callGetCluster);
+            Modify_GetClusterApiCall(ref _callGetCluster);
+            Modify_ApiCall(ref _callListClusters);
+            Modify_ListClustersApiCall(ref _callListClusters);
+            Modify_ApiCall(ref _callDiagnoseCluster);
+            Modify_DiagnoseClusterApiCall(ref _callDiagnoseCluster);
             OnConstruction(grpcClient, effectiveSettings, clientHelper);
         }
 
+        // Partial methods are named to (mostly) ensure there cannot be conflicts with RPC method names.
+
+        // Partial methods called for every ApiCall on construction.
+        // Allows modification of all the underlying ApiCall objects.
+        partial void Modify_ApiCall<TRequest, TResponse>(ref ApiCall<TRequest, TResponse> call)
+            where TRequest : class, IMessage<TRequest>
+            where TResponse : class, IMessage<TResponse>;
+
+        // Partial methods called for each ApiCall on construction.
+        // Allows per-RPC-method modification of the underlying ApiCall object.
+        partial void Modify_CreateClusterApiCall(ref ApiCall<CreateClusterRequest, Operation> call);
+        partial void Modify_UpdateClusterApiCall(ref ApiCall<UpdateClusterRequest, Operation> call);
+        partial void Modify_DeleteClusterApiCall(ref ApiCall<DeleteClusterRequest, Operation> call);
+        partial void Modify_GetClusterApiCall(ref ApiCall<GetClusterRequest, Cluster> call);
+        partial void Modify_ListClustersApiCall(ref ApiCall<ListClustersRequest, ListClustersResponse> call);
+        partial void Modify_DiagnoseClusterApiCall(ref ApiCall<DiagnoseClusterRequest, Operation> call);
         partial void OnConstruction(ClusterController.ClusterControllerClient grpcClient, ClusterControllerSettings effectiveSettings, ClientHelper clientHelper);
 
         /// <summary>
@@ -1366,7 +1395,9 @@ namespace Google.Cloud.Dataproc.V1
         /// </summary>
         public override ClusterController.ClusterControllerClient GrpcClient { get; }
 
-        // Partial modifier methods contain '_' to ensure no name conflicts with RPC methods.
+        // Partial methods called on each request.
+        // Allows per-RPC-call modification to the request and CallSettings objects,
+        // before the underlying RPC is performed.
         partial void Modify_CreateClusterRequest(ref CreateClusterRequest request, ref CallSettings settings);
         partial void Modify_UpdateClusterRequest(ref UpdateClusterRequest request, ref CallSettings settings);
         partial void Modify_DeleteClusterRequest(ref DeleteClusterRequest request, ref CallSettings settings);

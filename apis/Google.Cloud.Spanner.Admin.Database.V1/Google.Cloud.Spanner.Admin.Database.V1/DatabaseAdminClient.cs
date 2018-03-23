@@ -18,6 +18,7 @@ using Google.Api.Gax;
 using Google.Api.Gax.Grpc;
 using Google.Cloud.Iam.V1;
 using Google.LongRunning;
+using Google.Protobuf;
 using Google.Protobuf.WellKnownTypes;
 using Grpc.Core;
 using System;
@@ -1795,9 +1796,46 @@ namespace Google.Cloud.Spanner.Admin.Database.V1
                 GrpcClient.GetIamPolicyAsync, GrpcClient.GetIamPolicy, effectiveSettings.GetIamPolicySettings);
             _callTestIamPermissions = clientHelper.BuildApiCall<TestIamPermissionsRequest, TestIamPermissionsResponse>(
                 GrpcClient.TestIamPermissionsAsync, GrpcClient.TestIamPermissions, effectiveSettings.TestIamPermissionsSettings);
+            Modify_ApiCall(ref _callListDatabases);
+            Modify_ListDatabasesApiCall(ref _callListDatabases);
+            Modify_ApiCall(ref _callCreateDatabase);
+            Modify_CreateDatabaseApiCall(ref _callCreateDatabase);
+            Modify_ApiCall(ref _callGetDatabase);
+            Modify_GetDatabaseApiCall(ref _callGetDatabase);
+            Modify_ApiCall(ref _callUpdateDatabaseDdl);
+            Modify_UpdateDatabaseDdlApiCall(ref _callUpdateDatabaseDdl);
+            Modify_ApiCall(ref _callDropDatabase);
+            Modify_DropDatabaseApiCall(ref _callDropDatabase);
+            Modify_ApiCall(ref _callGetDatabaseDdl);
+            Modify_GetDatabaseDdlApiCall(ref _callGetDatabaseDdl);
+            Modify_ApiCall(ref _callSetIamPolicy);
+            Modify_SetIamPolicyApiCall(ref _callSetIamPolicy);
+            Modify_ApiCall(ref _callGetIamPolicy);
+            Modify_GetIamPolicyApiCall(ref _callGetIamPolicy);
+            Modify_ApiCall(ref _callTestIamPermissions);
+            Modify_TestIamPermissionsApiCall(ref _callTestIamPermissions);
             OnConstruction(grpcClient, effectiveSettings, clientHelper);
         }
 
+        // Partial methods are named to (mostly) ensure there cannot be conflicts with RPC method names.
+
+        // Partial methods called for every ApiCall on construction.
+        // Allows modification of all the underlying ApiCall objects.
+        partial void Modify_ApiCall<TRequest, TResponse>(ref ApiCall<TRequest, TResponse> call)
+            where TRequest : class, IMessage<TRequest>
+            where TResponse : class, IMessage<TResponse>;
+
+        // Partial methods called for each ApiCall on construction.
+        // Allows per-RPC-method modification of the underlying ApiCall object.
+        partial void Modify_ListDatabasesApiCall(ref ApiCall<ListDatabasesRequest, ListDatabasesResponse> call);
+        partial void Modify_CreateDatabaseApiCall(ref ApiCall<CreateDatabaseRequest, Operation> call);
+        partial void Modify_GetDatabaseApiCall(ref ApiCall<GetDatabaseRequest, Database> call);
+        partial void Modify_UpdateDatabaseDdlApiCall(ref ApiCall<UpdateDatabaseDdlRequest, Operation> call);
+        partial void Modify_DropDatabaseApiCall(ref ApiCall<DropDatabaseRequest, Empty> call);
+        partial void Modify_GetDatabaseDdlApiCall(ref ApiCall<GetDatabaseDdlRequest, GetDatabaseDdlResponse> call);
+        partial void Modify_SetIamPolicyApiCall(ref ApiCall<SetIamPolicyRequest, Policy> call);
+        partial void Modify_GetIamPolicyApiCall(ref ApiCall<GetIamPolicyRequest, Policy> call);
+        partial void Modify_TestIamPermissionsApiCall(ref ApiCall<TestIamPermissionsRequest, TestIamPermissionsResponse> call);
         partial void OnConstruction(DatabaseAdmin.DatabaseAdminClient grpcClient, DatabaseAdminSettings effectiveSettings, ClientHelper clientHelper);
 
         /// <summary>
@@ -1805,7 +1843,9 @@ namespace Google.Cloud.Spanner.Admin.Database.V1
         /// </summary>
         public override DatabaseAdmin.DatabaseAdminClient GrpcClient { get; }
 
-        // Partial modifier methods contain '_' to ensure no name conflicts with RPC methods.
+        // Partial methods called on each request.
+        // Allows per-RPC-call modification to the request and CallSettings objects,
+        // before the underlying RPC is performed.
         partial void Modify_ListDatabasesRequest(ref ListDatabasesRequest request, ref CallSettings settings);
         partial void Modify_CreateDatabaseRequest(ref CreateDatabaseRequest request, ref CallSettings settings);
         partial void Modify_GetDatabaseRequest(ref GetDatabaseRequest request, ref CallSettings settings);

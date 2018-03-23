@@ -17,6 +17,7 @@
 using Google.Api;
 using Google.Api.Gax;
 using Google.Api.Gax.Grpc;
+using Google.Protobuf;
 using Google.Protobuf.WellKnownTypes;
 using Grpc.Core;
 using System;
@@ -1009,9 +1010,37 @@ namespace Google.Cloud.Monitoring.V3
                 GrpcClient.DeleteGroupAsync, GrpcClient.DeleteGroup, effectiveSettings.DeleteGroupSettings);
             _callListGroupMembers = clientHelper.BuildApiCall<ListGroupMembersRequest, ListGroupMembersResponse>(
                 GrpcClient.ListGroupMembersAsync, GrpcClient.ListGroupMembers, effectiveSettings.ListGroupMembersSettings);
+            Modify_ApiCall(ref _callListGroups);
+            Modify_ListGroupsApiCall(ref _callListGroups);
+            Modify_ApiCall(ref _callGetGroup);
+            Modify_GetGroupApiCall(ref _callGetGroup);
+            Modify_ApiCall(ref _callCreateGroup);
+            Modify_CreateGroupApiCall(ref _callCreateGroup);
+            Modify_ApiCall(ref _callUpdateGroup);
+            Modify_UpdateGroupApiCall(ref _callUpdateGroup);
+            Modify_ApiCall(ref _callDeleteGroup);
+            Modify_DeleteGroupApiCall(ref _callDeleteGroup);
+            Modify_ApiCall(ref _callListGroupMembers);
+            Modify_ListGroupMembersApiCall(ref _callListGroupMembers);
             OnConstruction(grpcClient, effectiveSettings, clientHelper);
         }
 
+        // Partial methods are named to (mostly) ensure there cannot be conflicts with RPC method names.
+
+        // Partial methods called for every ApiCall on construction.
+        // Allows modification of all the underlying ApiCall objects.
+        partial void Modify_ApiCall<TRequest, TResponse>(ref ApiCall<TRequest, TResponse> call)
+            where TRequest : class, IMessage<TRequest>
+            where TResponse : class, IMessage<TResponse>;
+
+        // Partial methods called for each ApiCall on construction.
+        // Allows per-RPC-method modification of the underlying ApiCall object.
+        partial void Modify_ListGroupsApiCall(ref ApiCall<ListGroupsRequest, ListGroupsResponse> call);
+        partial void Modify_GetGroupApiCall(ref ApiCall<GetGroupRequest, Group> call);
+        partial void Modify_CreateGroupApiCall(ref ApiCall<CreateGroupRequest, Group> call);
+        partial void Modify_UpdateGroupApiCall(ref ApiCall<UpdateGroupRequest, Group> call);
+        partial void Modify_DeleteGroupApiCall(ref ApiCall<DeleteGroupRequest, Empty> call);
+        partial void Modify_ListGroupMembersApiCall(ref ApiCall<ListGroupMembersRequest, ListGroupMembersResponse> call);
         partial void OnConstruction(GroupService.GroupServiceClient grpcClient, GroupServiceSettings effectiveSettings, ClientHelper clientHelper);
 
         /// <summary>
@@ -1019,7 +1048,9 @@ namespace Google.Cloud.Monitoring.V3
         /// </summary>
         public override GroupService.GroupServiceClient GrpcClient { get; }
 
-        // Partial modifier methods contain '_' to ensure no name conflicts with RPC methods.
+        // Partial methods called on each request.
+        // Allows per-RPC-call modification to the request and CallSettings objects,
+        // before the underlying RPC is performed.
         partial void Modify_ListGroupsRequest(ref ListGroupsRequest request, ref CallSettings settings);
         partial void Modify_GetGroupRequest(ref GetGroupRequest request, ref CallSettings settings);
         partial void Modify_CreateGroupRequest(ref CreateGroupRequest request, ref CallSettings settings);

@@ -16,6 +16,7 @@
 
 using Google.Api.Gax;
 using Google.Api.Gax.Grpc;
+using Google.Protobuf;
 using Google.Protobuf.WellKnownTypes;
 using Grpc.Core;
 using System;
@@ -5055,9 +5056,109 @@ namespace Google.Cloud.Container.V1
                 GrpcClient.SetNetworkPolicyAsync, GrpcClient.SetNetworkPolicy, effectiveSettings.SetNetworkPolicySettings);
             _callSetMaintenancePolicy = clientHelper.BuildApiCall<SetMaintenancePolicyRequest, Operation>(
                 GrpcClient.SetMaintenancePolicyAsync, GrpcClient.SetMaintenancePolicy, effectiveSettings.SetMaintenancePolicySettings);
+            Modify_ApiCall(ref _callListClusters);
+            Modify_ListClustersApiCall(ref _callListClusters);
+            Modify_ApiCall(ref _callGetCluster);
+            Modify_GetClusterApiCall(ref _callGetCluster);
+            Modify_ApiCall(ref _callCreateCluster);
+            Modify_CreateClusterApiCall(ref _callCreateCluster);
+            Modify_ApiCall(ref _callUpdateCluster);
+            Modify_UpdateClusterApiCall(ref _callUpdateCluster);
+            Modify_ApiCall(ref _callUpdateNodePool);
+            Modify_UpdateNodePoolApiCall(ref _callUpdateNodePool);
+            Modify_ApiCall(ref _callSetNodePoolAutoscaling);
+            Modify_SetNodePoolAutoscalingApiCall(ref _callSetNodePoolAutoscaling);
+            Modify_ApiCall(ref _callSetLoggingService);
+            Modify_SetLoggingServiceApiCall(ref _callSetLoggingService);
+            Modify_ApiCall(ref _callSetMonitoringService);
+            Modify_SetMonitoringServiceApiCall(ref _callSetMonitoringService);
+            Modify_ApiCall(ref _callSetAddonsConfig);
+            Modify_SetAddonsConfigApiCall(ref _callSetAddonsConfig);
+            Modify_ApiCall(ref _callSetLocations);
+            Modify_SetLocationsApiCall(ref _callSetLocations);
+            Modify_ApiCall(ref _callUpdateMaster);
+            Modify_UpdateMasterApiCall(ref _callUpdateMaster);
+            Modify_ApiCall(ref _callSetMasterAuth);
+            Modify_SetMasterAuthApiCall(ref _callSetMasterAuth);
+            Modify_ApiCall(ref _callDeleteCluster);
+            Modify_DeleteClusterApiCall(ref _callDeleteCluster);
+            Modify_ApiCall(ref _callListOperations);
+            Modify_ListOperationsApiCall(ref _callListOperations);
+            Modify_ApiCall(ref _callGetOperation);
+            Modify_GetOperationApiCall(ref _callGetOperation);
+            Modify_ApiCall(ref _callCancelOperation);
+            Modify_CancelOperationApiCall(ref _callCancelOperation);
+            Modify_ApiCall(ref _callGetServerConfig);
+            Modify_GetServerConfigApiCall(ref _callGetServerConfig);
+            Modify_ApiCall(ref _callListNodePools);
+            Modify_ListNodePoolsApiCall(ref _callListNodePools);
+            Modify_ApiCall(ref _callGetNodePool);
+            Modify_GetNodePoolApiCall(ref _callGetNodePool);
+            Modify_ApiCall(ref _callCreateNodePool);
+            Modify_CreateNodePoolApiCall(ref _callCreateNodePool);
+            Modify_ApiCall(ref _callDeleteNodePool);
+            Modify_DeleteNodePoolApiCall(ref _callDeleteNodePool);
+            Modify_ApiCall(ref _callRollbackNodePoolUpgrade);
+            Modify_RollbackNodePoolUpgradeApiCall(ref _callRollbackNodePoolUpgrade);
+            Modify_ApiCall(ref _callSetNodePoolManagement);
+            Modify_SetNodePoolManagementApiCall(ref _callSetNodePoolManagement);
+            Modify_ApiCall(ref _callSetLabels);
+            Modify_SetLabelsApiCall(ref _callSetLabels);
+            Modify_ApiCall(ref _callSetLegacyAbac);
+            Modify_SetLegacyAbacApiCall(ref _callSetLegacyAbac);
+            Modify_ApiCall(ref _callStartIPRotation);
+            Modify_StartIPRotationApiCall(ref _callStartIPRotation);
+            Modify_ApiCall(ref _callCompleteIPRotation);
+            Modify_CompleteIPRotationApiCall(ref _callCompleteIPRotation);
+            Modify_ApiCall(ref _callSetNodePoolSize);
+            Modify_SetNodePoolSizeApiCall(ref _callSetNodePoolSize);
+            Modify_ApiCall(ref _callSetNetworkPolicy);
+            Modify_SetNetworkPolicyApiCall(ref _callSetNetworkPolicy);
+            Modify_ApiCall(ref _callSetMaintenancePolicy);
+            Modify_SetMaintenancePolicyApiCall(ref _callSetMaintenancePolicy);
             OnConstruction(grpcClient, effectiveSettings, clientHelper);
         }
 
+        // Partial methods are named to (mostly) ensure there cannot be conflicts with RPC method names.
+
+        // Partial methods called for every ApiCall on construction.
+        // Allows modification of all the underlying ApiCall objects.
+        partial void Modify_ApiCall<TRequest, TResponse>(ref ApiCall<TRequest, TResponse> call)
+            where TRequest : class, IMessage<TRequest>
+            where TResponse : class, IMessage<TResponse>;
+
+        // Partial methods called for each ApiCall on construction.
+        // Allows per-RPC-method modification of the underlying ApiCall object.
+        partial void Modify_ListClustersApiCall(ref ApiCall<ListClustersRequest, ListClustersResponse> call);
+        partial void Modify_GetClusterApiCall(ref ApiCall<GetClusterRequest, Cluster> call);
+        partial void Modify_CreateClusterApiCall(ref ApiCall<CreateClusterRequest, Operation> call);
+        partial void Modify_UpdateClusterApiCall(ref ApiCall<UpdateClusterRequest, Operation> call);
+        partial void Modify_UpdateNodePoolApiCall(ref ApiCall<UpdateNodePoolRequest, Operation> call);
+        partial void Modify_SetNodePoolAutoscalingApiCall(ref ApiCall<SetNodePoolAutoscalingRequest, Operation> call);
+        partial void Modify_SetLoggingServiceApiCall(ref ApiCall<SetLoggingServiceRequest, Operation> call);
+        partial void Modify_SetMonitoringServiceApiCall(ref ApiCall<SetMonitoringServiceRequest, Operation> call);
+        partial void Modify_SetAddonsConfigApiCall(ref ApiCall<SetAddonsConfigRequest, Operation> call);
+        partial void Modify_SetLocationsApiCall(ref ApiCall<SetLocationsRequest, Operation> call);
+        partial void Modify_UpdateMasterApiCall(ref ApiCall<UpdateMasterRequest, Operation> call);
+        partial void Modify_SetMasterAuthApiCall(ref ApiCall<SetMasterAuthRequest, Operation> call);
+        partial void Modify_DeleteClusterApiCall(ref ApiCall<DeleteClusterRequest, Operation> call);
+        partial void Modify_ListOperationsApiCall(ref ApiCall<ListOperationsRequest, ListOperationsResponse> call);
+        partial void Modify_GetOperationApiCall(ref ApiCall<GetOperationRequest, Operation> call);
+        partial void Modify_CancelOperationApiCall(ref ApiCall<CancelOperationRequest, Empty> call);
+        partial void Modify_GetServerConfigApiCall(ref ApiCall<GetServerConfigRequest, ServerConfig> call);
+        partial void Modify_ListNodePoolsApiCall(ref ApiCall<ListNodePoolsRequest, ListNodePoolsResponse> call);
+        partial void Modify_GetNodePoolApiCall(ref ApiCall<GetNodePoolRequest, NodePool> call);
+        partial void Modify_CreateNodePoolApiCall(ref ApiCall<CreateNodePoolRequest, Operation> call);
+        partial void Modify_DeleteNodePoolApiCall(ref ApiCall<DeleteNodePoolRequest, Operation> call);
+        partial void Modify_RollbackNodePoolUpgradeApiCall(ref ApiCall<RollbackNodePoolUpgradeRequest, Operation> call);
+        partial void Modify_SetNodePoolManagementApiCall(ref ApiCall<SetNodePoolManagementRequest, Operation> call);
+        partial void Modify_SetLabelsApiCall(ref ApiCall<SetLabelsRequest, Operation> call);
+        partial void Modify_SetLegacyAbacApiCall(ref ApiCall<SetLegacyAbacRequest, Operation> call);
+        partial void Modify_StartIPRotationApiCall(ref ApiCall<StartIPRotationRequest, Operation> call);
+        partial void Modify_CompleteIPRotationApiCall(ref ApiCall<CompleteIPRotationRequest, Operation> call);
+        partial void Modify_SetNodePoolSizeApiCall(ref ApiCall<SetNodePoolSizeRequest, Operation> call);
+        partial void Modify_SetNetworkPolicyApiCall(ref ApiCall<SetNetworkPolicyRequest, Operation> call);
+        partial void Modify_SetMaintenancePolicyApiCall(ref ApiCall<SetMaintenancePolicyRequest, Operation> call);
         partial void OnConstruction(ClusterManager.ClusterManagerClient grpcClient, ClusterManagerSettings effectiveSettings, ClientHelper clientHelper);
 
         /// <summary>
@@ -5065,7 +5166,9 @@ namespace Google.Cloud.Container.V1
         /// </summary>
         public override ClusterManager.ClusterManagerClient GrpcClient { get; }
 
-        // Partial modifier methods contain '_' to ensure no name conflicts with RPC methods.
+        // Partial methods called on each request.
+        // Allows per-RPC-call modification to the request and CallSettings objects,
+        // before the underlying RPC is performed.
         partial void Modify_ListClustersRequest(ref ListClustersRequest request, ref CallSettings settings);
         partial void Modify_GetClusterRequest(ref GetClusterRequest request, ref CallSettings settings);
         partial void Modify_CreateClusterRequest(ref CreateClusterRequest request, ref CallSettings settings);

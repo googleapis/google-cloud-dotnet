@@ -16,6 +16,7 @@
 
 using Google.Api.Gax;
 using Google.Api.Gax.Grpc;
+using Google.Protobuf;
 using Google.Protobuf.WellKnownTypes;
 using Grpc.Core;
 using System;
@@ -1949,9 +1950,49 @@ namespace Google.Cloud.Logging.V2
                 GrpcClient.UpdateExclusionAsync, GrpcClient.UpdateExclusion, effectiveSettings.UpdateExclusionSettings);
             _callDeleteExclusion = clientHelper.BuildApiCall<DeleteExclusionRequest, Empty>(
                 GrpcClient.DeleteExclusionAsync, GrpcClient.DeleteExclusion, effectiveSettings.DeleteExclusionSettings);
+            Modify_ApiCall(ref _callListSinks);
+            Modify_ListSinksApiCall(ref _callListSinks);
+            Modify_ApiCall(ref _callGetSink);
+            Modify_GetSinkApiCall(ref _callGetSink);
+            Modify_ApiCall(ref _callCreateSink);
+            Modify_CreateSinkApiCall(ref _callCreateSink);
+            Modify_ApiCall(ref _callUpdateSink);
+            Modify_UpdateSinkApiCall(ref _callUpdateSink);
+            Modify_ApiCall(ref _callDeleteSink);
+            Modify_DeleteSinkApiCall(ref _callDeleteSink);
+            Modify_ApiCall(ref _callListExclusions);
+            Modify_ListExclusionsApiCall(ref _callListExclusions);
+            Modify_ApiCall(ref _callGetExclusion);
+            Modify_GetExclusionApiCall(ref _callGetExclusion);
+            Modify_ApiCall(ref _callCreateExclusion);
+            Modify_CreateExclusionApiCall(ref _callCreateExclusion);
+            Modify_ApiCall(ref _callUpdateExclusion);
+            Modify_UpdateExclusionApiCall(ref _callUpdateExclusion);
+            Modify_ApiCall(ref _callDeleteExclusion);
+            Modify_DeleteExclusionApiCall(ref _callDeleteExclusion);
             OnConstruction(grpcClient, effectiveSettings, clientHelper);
         }
 
+        // Partial methods are named to (mostly) ensure there cannot be conflicts with RPC method names.
+
+        // Partial methods called for every ApiCall on construction.
+        // Allows modification of all the underlying ApiCall objects.
+        partial void Modify_ApiCall<TRequest, TResponse>(ref ApiCall<TRequest, TResponse> call)
+            where TRequest : class, IMessage<TRequest>
+            where TResponse : class, IMessage<TResponse>;
+
+        // Partial methods called for each ApiCall on construction.
+        // Allows per-RPC-method modification of the underlying ApiCall object.
+        partial void Modify_ListSinksApiCall(ref ApiCall<ListSinksRequest, ListSinksResponse> call);
+        partial void Modify_GetSinkApiCall(ref ApiCall<GetSinkRequest, LogSink> call);
+        partial void Modify_CreateSinkApiCall(ref ApiCall<CreateSinkRequest, LogSink> call);
+        partial void Modify_UpdateSinkApiCall(ref ApiCall<UpdateSinkRequest, LogSink> call);
+        partial void Modify_DeleteSinkApiCall(ref ApiCall<DeleteSinkRequest, Empty> call);
+        partial void Modify_ListExclusionsApiCall(ref ApiCall<ListExclusionsRequest, ListExclusionsResponse> call);
+        partial void Modify_GetExclusionApiCall(ref ApiCall<GetExclusionRequest, LogExclusion> call);
+        partial void Modify_CreateExclusionApiCall(ref ApiCall<CreateExclusionRequest, LogExclusion> call);
+        partial void Modify_UpdateExclusionApiCall(ref ApiCall<UpdateExclusionRequest, LogExclusion> call);
+        partial void Modify_DeleteExclusionApiCall(ref ApiCall<DeleteExclusionRequest, Empty> call);
         partial void OnConstruction(ConfigServiceV2.ConfigServiceV2Client grpcClient, ConfigServiceV2Settings effectiveSettings, ClientHelper clientHelper);
 
         /// <summary>
@@ -1959,7 +2000,9 @@ namespace Google.Cloud.Logging.V2
         /// </summary>
         public override ConfigServiceV2.ConfigServiceV2Client GrpcClient { get; }
 
-        // Partial modifier methods contain '_' to ensure no name conflicts with RPC methods.
+        // Partial methods called on each request.
+        // Allows per-RPC-call modification to the request and CallSettings objects,
+        // before the underlying RPC is performed.
         partial void Modify_ListSinksRequest(ref ListSinksRequest request, ref CallSettings settings);
         partial void Modify_GetSinkRequest(ref GetSinkRequest request, ref CallSettings settings);
         partial void Modify_CreateSinkRequest(ref CreateSinkRequest request, ref CallSettings settings);

@@ -16,6 +16,7 @@
 
 using Google.Api.Gax;
 using Google.Api.Gax.Grpc;
+using Google.Protobuf;
 using Google.Protobuf.WellKnownTypes;
 using Grpc.Core;
 using System;
@@ -684,9 +685,28 @@ namespace Google.Cloud.Trace.V1
                 GrpcClient.GetTraceAsync, GrpcClient.GetTrace, effectiveSettings.GetTraceSettings);
             _callListTraces = clientHelper.BuildApiCall<ListTracesRequest, ListTracesResponse>(
                 GrpcClient.ListTracesAsync, GrpcClient.ListTraces, effectiveSettings.ListTracesSettings);
+            Modify_ApiCall(ref _callPatchTraces);
+            Modify_PatchTracesApiCall(ref _callPatchTraces);
+            Modify_ApiCall(ref _callGetTrace);
+            Modify_GetTraceApiCall(ref _callGetTrace);
+            Modify_ApiCall(ref _callListTraces);
+            Modify_ListTracesApiCall(ref _callListTraces);
             OnConstruction(grpcClient, effectiveSettings, clientHelper);
         }
 
+        // Partial methods are named to (mostly) ensure there cannot be conflicts with RPC method names.
+
+        // Partial methods called for every ApiCall on construction.
+        // Allows modification of all the underlying ApiCall objects.
+        partial void Modify_ApiCall<TRequest, TResponse>(ref ApiCall<TRequest, TResponse> call)
+            where TRequest : class, IMessage<TRequest>
+            where TResponse : class, IMessage<TResponse>;
+
+        // Partial methods called for each ApiCall on construction.
+        // Allows per-RPC-method modification of the underlying ApiCall object.
+        partial void Modify_PatchTracesApiCall(ref ApiCall<PatchTracesRequest, Empty> call);
+        partial void Modify_GetTraceApiCall(ref ApiCall<GetTraceRequest, Trace> call);
+        partial void Modify_ListTracesApiCall(ref ApiCall<ListTracesRequest, ListTracesResponse> call);
         partial void OnConstruction(TraceService.TraceServiceClient grpcClient, TraceServiceSettings effectiveSettings, ClientHelper clientHelper);
 
         /// <summary>
@@ -694,7 +714,9 @@ namespace Google.Cloud.Trace.V1
         /// </summary>
         public override TraceService.TraceServiceClient GrpcClient { get; }
 
-        // Partial modifier methods contain '_' to ensure no name conflicts with RPC methods.
+        // Partial methods called on each request.
+        // Allows per-RPC-call modification to the request and CallSettings objects,
+        // before the underlying RPC is performed.
         partial void Modify_PatchTracesRequest(ref PatchTracesRequest request, ref CallSettings settings);
         partial void Modify_GetTraceRequest(ref GetTraceRequest request, ref CallSettings settings);
         partial void Modify_ListTracesRequest(ref ListTracesRequest request, ref CallSettings settings);

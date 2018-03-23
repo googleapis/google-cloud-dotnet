@@ -17,6 +17,7 @@
 using Google.Api.Gax;
 using Google.Api.Gax.Grpc;
 using Google.Cloud.OsLogin.Common;
+using Google.Protobuf;
 using Google.Protobuf.WellKnownTypes;
 using Grpc.Core;
 using System;
@@ -1290,9 +1291,37 @@ namespace Google.Cloud.OsLogin.V1
                 GrpcClient.ImportSshPublicKeyAsync, GrpcClient.ImportSshPublicKey, effectiveSettings.ImportSshPublicKeySettings);
             _callUpdateSshPublicKey = clientHelper.BuildApiCall<UpdateSshPublicKeyRequest, SshPublicKey>(
                 GrpcClient.UpdateSshPublicKeyAsync, GrpcClient.UpdateSshPublicKey, effectiveSettings.UpdateSshPublicKeySettings);
+            Modify_ApiCall(ref _callDeletePosixAccount);
+            Modify_DeletePosixAccountApiCall(ref _callDeletePosixAccount);
+            Modify_ApiCall(ref _callDeleteSshPublicKey);
+            Modify_DeleteSshPublicKeyApiCall(ref _callDeleteSshPublicKey);
+            Modify_ApiCall(ref _callGetLoginProfile);
+            Modify_GetLoginProfileApiCall(ref _callGetLoginProfile);
+            Modify_ApiCall(ref _callGetSshPublicKey);
+            Modify_GetSshPublicKeyApiCall(ref _callGetSshPublicKey);
+            Modify_ApiCall(ref _callImportSshPublicKey);
+            Modify_ImportSshPublicKeyApiCall(ref _callImportSshPublicKey);
+            Modify_ApiCall(ref _callUpdateSshPublicKey);
+            Modify_UpdateSshPublicKeyApiCall(ref _callUpdateSshPublicKey);
             OnConstruction(grpcClient, effectiveSettings, clientHelper);
         }
 
+        // Partial methods are named to (mostly) ensure there cannot be conflicts with RPC method names.
+
+        // Partial methods called for every ApiCall on construction.
+        // Allows modification of all the underlying ApiCall objects.
+        partial void Modify_ApiCall<TRequest, TResponse>(ref ApiCall<TRequest, TResponse> call)
+            where TRequest : class, IMessage<TRequest>
+            where TResponse : class, IMessage<TResponse>;
+
+        // Partial methods called for each ApiCall on construction.
+        // Allows per-RPC-method modification of the underlying ApiCall object.
+        partial void Modify_DeletePosixAccountApiCall(ref ApiCall<DeletePosixAccountRequest, Empty> call);
+        partial void Modify_DeleteSshPublicKeyApiCall(ref ApiCall<DeleteSshPublicKeyRequest, Empty> call);
+        partial void Modify_GetLoginProfileApiCall(ref ApiCall<GetLoginProfileRequest, LoginProfile> call);
+        partial void Modify_GetSshPublicKeyApiCall(ref ApiCall<GetSshPublicKeyRequest, SshPublicKey> call);
+        partial void Modify_ImportSshPublicKeyApiCall(ref ApiCall<ImportSshPublicKeyRequest, ImportSshPublicKeyResponse> call);
+        partial void Modify_UpdateSshPublicKeyApiCall(ref ApiCall<UpdateSshPublicKeyRequest, SshPublicKey> call);
         partial void OnConstruction(OsLoginService.OsLoginServiceClient grpcClient, OsLoginServiceSettings effectiveSettings, ClientHelper clientHelper);
 
         /// <summary>
@@ -1300,7 +1329,9 @@ namespace Google.Cloud.OsLogin.V1
         /// </summary>
         public override OsLoginService.OsLoginServiceClient GrpcClient { get; }
 
-        // Partial modifier methods contain '_' to ensure no name conflicts with RPC methods.
+        // Partial methods called on each request.
+        // Allows per-RPC-call modification to the request and CallSettings objects,
+        // before the underlying RPC is performed.
         partial void Modify_DeletePosixAccountRequest(ref DeletePosixAccountRequest request, ref CallSettings settings);
         partial void Modify_DeleteSshPublicKeyRequest(ref DeleteSshPublicKeyRequest request, ref CallSettings settings);
         partial void Modify_GetLoginProfileRequest(ref GetLoginProfileRequest request, ref CallSettings settings);

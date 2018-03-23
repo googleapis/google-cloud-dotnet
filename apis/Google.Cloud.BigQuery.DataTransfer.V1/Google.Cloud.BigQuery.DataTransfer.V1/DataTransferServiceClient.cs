@@ -16,6 +16,7 @@
 
 using Google.Api.Gax;
 using Google.Api.Gax.Grpc;
+using Google.Protobuf;
 using Google.Protobuf.WellKnownTypes;
 using Grpc.Core;
 using System;
@@ -2124,9 +2125,58 @@ namespace Google.Cloud.BigQuery.DataTransfer.V1
                 GrpcClient.ListTransferLogsAsync, GrpcClient.ListTransferLogs, effectiveSettings.ListTransferLogsSettings);
             _callCheckValidCreds = clientHelper.BuildApiCall<CheckValidCredsRequest, CheckValidCredsResponse>(
                 GrpcClient.CheckValidCredsAsync, GrpcClient.CheckValidCreds, effectiveSettings.CheckValidCredsSettings);
+            Modify_ApiCall(ref _callGetDataSource);
+            Modify_GetDataSourceApiCall(ref _callGetDataSource);
+            Modify_ApiCall(ref _callListDataSources);
+            Modify_ListDataSourcesApiCall(ref _callListDataSources);
+            Modify_ApiCall(ref _callCreateTransferConfig);
+            Modify_CreateTransferConfigApiCall(ref _callCreateTransferConfig);
+            Modify_ApiCall(ref _callUpdateTransferConfig);
+            Modify_UpdateTransferConfigApiCall(ref _callUpdateTransferConfig);
+            Modify_ApiCall(ref _callDeleteTransferConfig);
+            Modify_DeleteTransferConfigApiCall(ref _callDeleteTransferConfig);
+            Modify_ApiCall(ref _callGetTransferConfig);
+            Modify_GetTransferConfigApiCall(ref _callGetTransferConfig);
+            Modify_ApiCall(ref _callListTransferConfigs);
+            Modify_ListTransferConfigsApiCall(ref _callListTransferConfigs);
+            Modify_ApiCall(ref _callScheduleTransferRuns);
+            Modify_ScheduleTransferRunsApiCall(ref _callScheduleTransferRuns);
+            Modify_ApiCall(ref _callGetTransferRun);
+            Modify_GetTransferRunApiCall(ref _callGetTransferRun);
+            Modify_ApiCall(ref _callDeleteTransferRun);
+            Modify_DeleteTransferRunApiCall(ref _callDeleteTransferRun);
+            Modify_ApiCall(ref _callListTransferRuns);
+            Modify_ListTransferRunsApiCall(ref _callListTransferRuns);
+            Modify_ApiCall(ref _callListTransferLogs);
+            Modify_ListTransferLogsApiCall(ref _callListTransferLogs);
+            Modify_ApiCall(ref _callCheckValidCreds);
+            Modify_CheckValidCredsApiCall(ref _callCheckValidCreds);
             OnConstruction(grpcClient, effectiveSettings, clientHelper);
         }
 
+        // Partial methods are named to (mostly) ensure there cannot be conflicts with RPC method names.
+
+        // Partial methods called for every ApiCall on construction.
+        // Allows modification of all the underlying ApiCall objects.
+        partial void Modify_ApiCall<TRequest, TResponse>(ref ApiCall<TRequest, TResponse> call)
+            where TRequest : class, IMessage<TRequest>
+            where TResponse : class, IMessage<TResponse>;
+
+        // Partial methods called for each ApiCall on construction.
+        // Allows per-RPC-method modification of the underlying ApiCall object.
+        partial void Modify_GetDataSourceApiCall(ref ApiCall<GetDataSourceRequest, DataSource> call);
+        partial void Modify_ListDataSourcesApiCall(ref ApiCall<ListDataSourcesRequest, ListDataSourcesResponse> call);
+        partial void Modify_CreateTransferConfigApiCall(ref ApiCall<CreateTransferConfigRequest, TransferConfig> call);
+        partial void Modify_UpdateTransferConfigApiCall(ref ApiCall<UpdateTransferConfigRequest, TransferConfig> call);
+        partial void Modify_DeleteTransferConfigApiCall(ref ApiCall<DeleteTransferConfigRequest, Empty> call);
+        partial void Modify_GetTransferConfigApiCall(ref ApiCall<GetTransferConfigRequest, TransferConfig> call);
+        partial void Modify_ListTransferConfigsApiCall(ref ApiCall<ListTransferConfigsRequest, ListTransferConfigsResponse> call);
+        partial void Modify_ScheduleTransferRunsApiCall(ref ApiCall<ScheduleTransferRunsRequest, ScheduleTransferRunsResponse> call);
+        partial void Modify_GetTransferRunApiCall(ref ApiCall<GetTransferRunRequest, TransferRun> call);
+        partial void Modify_DeleteTransferRunApiCall(ref ApiCall<DeleteTransferRunRequest, Empty> call);
+        partial void Modify_ListTransferRunsApiCall(ref ApiCall<ListTransferRunsRequest, ListTransferRunsResponse> call);
+        partial void Modify_ListTransferLogsApiCall(ref ApiCall<ListTransferLogsRequest, ListTransferLogsResponse> call);
+        partial void Modify_CheckValidCredsApiCall(ref ApiCall<CheckValidCredsRequest, CheckValidCredsResponse> call);
         partial void OnConstruction(DataTransferService.DataTransferServiceClient grpcClient, DataTransferServiceSettings effectiveSettings, ClientHelper clientHelper);
 
         /// <summary>
@@ -2134,7 +2184,9 @@ namespace Google.Cloud.BigQuery.DataTransfer.V1
         /// </summary>
         public override DataTransferService.DataTransferServiceClient GrpcClient { get; }
 
-        // Partial modifier methods contain '_' to ensure no name conflicts with RPC methods.
+        // Partial methods called on each request.
+        // Allows per-RPC-call modification to the request and CallSettings objects,
+        // before the underlying RPC is performed.
         partial void Modify_GetDataSourceRequest(ref GetDataSourceRequest request, ref CallSettings settings);
         partial void Modify_ListDataSourcesRequest(ref ListDataSourcesRequest request, ref CallSettings settings);
         partial void Modify_CreateTransferConfigRequest(ref CreateTransferConfigRequest request, ref CallSettings settings);

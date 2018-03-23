@@ -16,6 +16,7 @@
 
 using Google.Api.Gax;
 using Google.Api.Gax.Grpc;
+using Google.Protobuf;
 using Google.Protobuf.WellKnownTypes;
 using Grpc.Core;
 using System;
@@ -424,9 +425,22 @@ namespace Google.Cloud.ErrorReporting.V1Beta1
             ClientHelper clientHelper = new ClientHelper(effectiveSettings);
             _callReportErrorEvent = clientHelper.BuildApiCall<ReportErrorEventRequest, ReportErrorEventResponse>(
                 GrpcClient.ReportErrorEventAsync, GrpcClient.ReportErrorEvent, effectiveSettings.ReportErrorEventSettings);
+            Modify_ApiCall(ref _callReportErrorEvent);
+            Modify_ReportErrorEventApiCall(ref _callReportErrorEvent);
             OnConstruction(grpcClient, effectiveSettings, clientHelper);
         }
 
+        // Partial methods are named to (mostly) ensure there cannot be conflicts with RPC method names.
+
+        // Partial methods called for every ApiCall on construction.
+        // Allows modification of all the underlying ApiCall objects.
+        partial void Modify_ApiCall<TRequest, TResponse>(ref ApiCall<TRequest, TResponse> call)
+            where TRequest : class, IMessage<TRequest>
+            where TResponse : class, IMessage<TResponse>;
+
+        // Partial methods called for each ApiCall on construction.
+        // Allows per-RPC-method modification of the underlying ApiCall object.
+        partial void Modify_ReportErrorEventApiCall(ref ApiCall<ReportErrorEventRequest, ReportErrorEventResponse> call);
         partial void OnConstruction(ReportErrorsService.ReportErrorsServiceClient grpcClient, ReportErrorsServiceSettings effectiveSettings, ClientHelper clientHelper);
 
         /// <summary>
@@ -434,7 +448,9 @@ namespace Google.Cloud.ErrorReporting.V1Beta1
         /// </summary>
         public override ReportErrorsService.ReportErrorsServiceClient GrpcClient { get; }
 
-        // Partial modifier methods contain '_' to ensure no name conflicts with RPC methods.
+        // Partial methods called on each request.
+        // Allows per-RPC-call modification to the request and CallSettings objects,
+        // before the underlying RPC is performed.
         partial void Modify_ReportErrorEventRequest(ref ReportErrorEventRequest request, ref CallSettings settings);
 
         /// <summary>

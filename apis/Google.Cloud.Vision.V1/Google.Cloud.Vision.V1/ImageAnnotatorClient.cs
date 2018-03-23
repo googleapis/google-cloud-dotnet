@@ -16,6 +16,7 @@
 
 using Google.Api.Gax;
 using Google.Api.Gax.Grpc;
+using Google.Protobuf;
 using Google.Protobuf.WellKnownTypes;
 using Grpc.Core;
 using System;
@@ -368,9 +369,22 @@ namespace Google.Cloud.Vision.V1
             ClientHelper clientHelper = new ClientHelper(effectiveSettings);
             _callBatchAnnotateImages = clientHelper.BuildApiCall<BatchAnnotateImagesRequest, BatchAnnotateImagesResponse>(
                 GrpcClient.BatchAnnotateImagesAsync, GrpcClient.BatchAnnotateImages, effectiveSettings.BatchAnnotateImagesSettings);
+            Modify_ApiCall(ref _callBatchAnnotateImages);
+            Modify_BatchAnnotateImagesApiCall(ref _callBatchAnnotateImages);
             OnConstruction(grpcClient, effectiveSettings, clientHelper);
         }
 
+        // Partial methods are named to (mostly) ensure there cannot be conflicts with RPC method names.
+
+        // Partial methods called for every ApiCall on construction.
+        // Allows modification of all the underlying ApiCall objects.
+        partial void Modify_ApiCall<TRequest, TResponse>(ref ApiCall<TRequest, TResponse> call)
+            where TRequest : class, IMessage<TRequest>
+            where TResponse : class, IMessage<TResponse>;
+
+        // Partial methods called for each ApiCall on construction.
+        // Allows per-RPC-method modification of the underlying ApiCall object.
+        partial void Modify_BatchAnnotateImagesApiCall(ref ApiCall<BatchAnnotateImagesRequest, BatchAnnotateImagesResponse> call);
         partial void OnConstruction(ImageAnnotator.ImageAnnotatorClient grpcClient, ImageAnnotatorSettings effectiveSettings, ClientHelper clientHelper);
 
         /// <summary>
@@ -378,7 +392,9 @@ namespace Google.Cloud.Vision.V1
         /// </summary>
         public override ImageAnnotator.ImageAnnotatorClient GrpcClient { get; }
 
-        // Partial modifier methods contain '_' to ensure no name conflicts with RPC methods.
+        // Partial methods called on each request.
+        // Allows per-RPC-call modification to the request and CallSettings objects,
+        // before the underlying RPC is performed.
         partial void Modify_BatchAnnotateImagesRequest(ref BatchAnnotateImagesRequest request, ref CallSettings settings);
 
         /// <summary>

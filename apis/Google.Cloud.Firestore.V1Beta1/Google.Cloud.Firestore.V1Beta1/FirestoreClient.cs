@@ -1547,9 +1547,64 @@ namespace Google.Cloud.Firestore.V1Beta1
                 GrpcClient.Listen, effectiveSettings.ListenSettings, effectiveSettings.ListenStreamingSettings);
             _callListCollectionIds = clientHelper.BuildApiCall<ListCollectionIdsRequest, ListCollectionIdsResponse>(
                 GrpcClient.ListCollectionIdsAsync, GrpcClient.ListCollectionIds, effectiveSettings.ListCollectionIdsSettings);
+            Modify_ApiCall(ref _callGetDocument);
+            Modify_GetDocumentApiCall(ref _callGetDocument);
+            Modify_ApiCall(ref _callListDocuments);
+            Modify_ListDocumentsApiCall(ref _callListDocuments);
+            Modify_ApiCall(ref _callCreateDocument);
+            Modify_CreateDocumentApiCall(ref _callCreateDocument);
+            Modify_ApiCall(ref _callUpdateDocument);
+            Modify_UpdateDocumentApiCall(ref _callUpdateDocument);
+            Modify_ApiCall(ref _callDeleteDocument);
+            Modify_DeleteDocumentApiCall(ref _callDeleteDocument);
+            Modify_ApiCall(ref _callBatchGetDocuments);
+            Modify_BatchGetDocumentsApiCall(ref _callBatchGetDocuments);
+            Modify_ApiCall(ref _callBeginTransaction);
+            Modify_BeginTransactionApiCall(ref _callBeginTransaction);
+            Modify_ApiCall(ref _callCommit);
+            Modify_CommitApiCall(ref _callCommit);
+            Modify_ApiCall(ref _callRollback);
+            Modify_RollbackApiCall(ref _callRollback);
+            Modify_ApiCall(ref _callRunQuery);
+            Modify_RunQueryApiCall(ref _callRunQuery);
+            Modify_ApiCall(ref _callWrite);
+            Modify_WriteApiCall(ref _callWrite);
+            Modify_ApiCall(ref _callListen);
+            Modify_ListenApiCall(ref _callListen);
+            Modify_ApiCall(ref _callListCollectionIds);
+            Modify_ListCollectionIdsApiCall(ref _callListCollectionIds);
             OnConstruction(grpcClient, effectiveSettings, clientHelper);
         }
 
+        // Partial methods are named to (mostly) ensure there cannot be conflicts with RPC method names.
+
+        // Partial methods called for every ApiCall on construction.
+        // Allows modification of all the underlying ApiCall objects.
+        partial void Modify_ApiCall<TRequest, TResponse>(ref ApiCall<TRequest, TResponse> call)
+            where TRequest : class, IMessage<TRequest>
+            where TResponse : class, IMessage<TResponse>;
+        partial void Modify_ApiCall<TRequest, TResponse>(ref ApiServerStreamingCall<TRequest, TResponse> call)
+            where TRequest : class, IMessage<TRequest>
+            where TResponse : class, IMessage<TResponse>;
+        partial void Modify_ApiCall<TRequest, TResponse>(ref ApiBidirectionalStreamingCall<TRequest, TResponse> call)
+            where TRequest : class, IMessage<TRequest>
+            where TResponse : class, IMessage<TResponse>;
+
+        // Partial methods called for each ApiCall on construction.
+        // Allows per-RPC-method modification of the underlying ApiCall object.
+        partial void Modify_GetDocumentApiCall(ref ApiCall<GetDocumentRequest, Document> call);
+        partial void Modify_ListDocumentsApiCall(ref ApiCall<ListDocumentsRequest, ListDocumentsResponse> call);
+        partial void Modify_CreateDocumentApiCall(ref ApiCall<CreateDocumentRequest, Document> call);
+        partial void Modify_UpdateDocumentApiCall(ref ApiCall<UpdateDocumentRequest, Document> call);
+        partial void Modify_DeleteDocumentApiCall(ref ApiCall<DeleteDocumentRequest, Empty> call);
+        partial void Modify_BatchGetDocumentsApiCall(ref ApiServerStreamingCall<BatchGetDocumentsRequest, BatchGetDocumentsResponse> call);
+        partial void Modify_BeginTransactionApiCall(ref ApiCall<BeginTransactionRequest, BeginTransactionResponse> call);
+        partial void Modify_CommitApiCall(ref ApiCall<CommitRequest, CommitResponse> call);
+        partial void Modify_RollbackApiCall(ref ApiCall<RollbackRequest, Empty> call);
+        partial void Modify_RunQueryApiCall(ref ApiServerStreamingCall<RunQueryRequest, RunQueryResponse> call);
+        partial void Modify_WriteApiCall(ref ApiBidirectionalStreamingCall<WriteRequest, WriteResponse> call);
+        partial void Modify_ListenApiCall(ref ApiBidirectionalStreamingCall<ListenRequest, ListenResponse> call);
+        partial void Modify_ListCollectionIdsApiCall(ref ApiCall<ListCollectionIdsRequest, ListCollectionIdsResponse> call);
         partial void OnConstruction(Firestore.FirestoreClient grpcClient, FirestoreSettings effectiveSettings, ClientHelper clientHelper);
 
         /// <summary>
@@ -1557,7 +1612,9 @@ namespace Google.Cloud.Firestore.V1Beta1
         /// </summary>
         public override Firestore.FirestoreClient GrpcClient { get; }
 
-        // Partial modifier methods contain '_' to ensure no name conflicts with RPC methods.
+        // Partial methods called on each request.
+        // Allows per-RPC-call modification to the request and CallSettings objects,
+        // before the underlying RPC is performed.
         partial void Modify_GetDocumentRequest(ref GetDocumentRequest request, ref CallSettings settings);
         partial void Modify_ListDocumentsRequest(ref ListDocumentsRequest request, ref CallSettings settings);
         partial void Modify_CreateDocumentRequest(ref CreateDocumentRequest request, ref CallSettings settings);
