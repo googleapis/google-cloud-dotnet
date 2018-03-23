@@ -108,14 +108,23 @@ namespace Google.Cloud.BigQuery.V2.Tests
             Assert.Throws<InvalidOperationException>(() => numeric.ToDecimal(LossOfPrecisionHandling.Throw));
         }
 
-        [Theory]
-        [InlineData("123456789012345678901234567.890123456")]
-        [InlineData("-123456789012345678901234567.890123456")]
-        [InlineData("79228162514264337593543950335.000000001")]
-        [InlineData("5")]
-        [InlineData("-5")]
-        public void ParseToStringRoundTrip(string text)
+        [Theory, CombinatorialData]
+        public void ParseToStringRoundTrip(
+            [CombinatorialValues(
+                "123456789012345678901234567.890123456",
+                "79228162514264337593543950335.000000001",
+                "99999999999999999999999999999.999999999",
+                "5",
+                "50",
+                "0.1",
+                "0.000000001"
+            )]
+            string text, bool negate)
         {
+            if (negate)
+            {
+                text = "-" + text;
+            }
             BigQueryNumeric numeric = BigQueryNumeric.Parse(text);
             Assert.Equal(text, numeric.ToString());
         }
