@@ -188,36 +188,70 @@ namespace Google.Cloud.BigQuery.V2
         /// <returns>A canonical string representation of this value.</returns>
         public override string ToString()
         {
-            if (_integer.IsZero)
+            int sign = _integer.Sign;
+            if (sign == 0)
             {
                 return "0";
             }
-            var absInteger = BigInteger.Abs(_integer).ToString();
-            // First get a string which will always have exactly 9 DPs
-            string absResult;
-            if (absInteger.Length <= 9)
+            var integerText = _integer.ToString(CultureInfo.InvariantCulture);
+
+            int decimalPlaces = 9;
+            for (int place = integerText.Length - 1; place > 0 && decimalPlaces > 0; place--)
             {
-                absResult = "0." + absInteger.PadLeft(9, '0');
+                if (integerText[place] != '0')
+                {
+                    break;
+                }
+                decimalPlaces--;
             }
-            else
+
+            int signLength = sign > 0 ? 0 : 1;
+
+            // Always have something before the period, even if it's just a 0
+            int originalIntegerPlaces = Math.Max(integerText.Length - signLength - 9, 0);
+            int resultIntegerPlaces = Math.Max(originalIntegerPlaces, 1);
+
+            // Sign, then integer part, then period (maybe), then significant decimals
+            int resultLength = signLength + resultIntegerPlaces + (decimalPlaces > 0 ? 1 : 0) + decimalPlaces;
+            var chars = new char[resultLength];
+            int position = 0;
+
+            // Copy some text from the original string representation, including the leading '-' if necessary
+            int leadCharactersToCopy = originalIntegerPlaces + signLength;
+            for (int i = 0; i < leadCharactersToCopy; i++)
             {
-                absResult = absInteger.Insert(absInteger.Length - 9, ".");
+                chars[position] = integerText[position];
+                position++;
             }
-            // Remove trailing 0s and .
-            int finalLength = absResult.Length;
-            while (absResult[finalLength - 1] == '0')
+
+            if (originalIntegerPlaces == 0)
             {
-                finalLength--;
+                chars[position++] = '0';
             }
-            if (absResult[finalLength - 1] == '.')
+            if (decimalPlaces > 0)
             {
-                finalLength--;
+                chars[position++] = '.';
+                int decimalsToCopy = decimalPlaces;
+                
+                // Fill zeroes if necessary
+                if (originalIntegerPlaces == 0)
+                {
+                    int decimalsToFill = 9 - (integerText.Length - signLength);
+                    for (int i = 0; i < decimalsToFill; i++)
+                    {
+                        chars[position++] = '0';
+                    }
+                    decimalsToCopy -= decimalsToFill;
+                }
+
+                // Now the significant digits in the remaining text
+                int sourcePosition = leadCharactersToCopy;
+                for (int i = 0; i < decimalsToCopy; i++)
+                {
+                    chars[position++] = integerText[sourcePosition++];
+                }
             }
-            if (absResult.Length != finalLength)
-            {
-                absResult = absResult.Substring(0, finalLength);
-            }
-            return _integer < 0 ? "-" + absResult : absResult;
+            return new string(chars);
         }
 
         /// <summary>
