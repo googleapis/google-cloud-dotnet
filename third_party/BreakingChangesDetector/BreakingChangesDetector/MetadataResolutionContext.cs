@@ -34,7 +34,7 @@ using System.Reflection;
 
 namespace BreakingChangesDetector
 {
-    public class MetadataResolutionContext
+    public sealed class MetadataResolutionContext
     {
         // TODO_Refactor: Make private/non-static
         internal readonly Dictionary<AssemblyIdentity, AssemblyData> _cachedAssemblyDatas =

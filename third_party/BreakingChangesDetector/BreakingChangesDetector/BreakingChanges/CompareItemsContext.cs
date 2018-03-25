@@ -28,7 +28,7 @@ using System.Collections.Generic;
 
 namespace BreakingChangesDetector.BreakingChanges
 {
-    internal class CompareItemsContext
+    internal sealed class CompareItemsContext
     {
         public readonly MetadataItemBase AdditionalInfo;
         public readonly List<BreakingChangeBase> BreakingChanges;

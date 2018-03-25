@@ -29,7 +29,7 @@ using System.Reflection;
 
 namespace BreakingChangesDetector.BreakingChanges.Definitions
 {
-    internal class ChangedGenericTypeParameterConstraintsDefinition : BreakingChangeDefinitionBase
+    internal sealed class ChangedGenericTypeParameterConstraintsDefinition : BreakingChangeDefinitionBase
     {
         public static readonly ChangedGenericTypeParameterConstraintsDefinition Instance =
             new ChangedGenericTypeParameterConstraintsDefinition();

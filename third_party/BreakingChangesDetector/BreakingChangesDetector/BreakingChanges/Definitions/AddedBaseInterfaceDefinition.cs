@@ -28,7 +28,7 @@ using Microsoft.CodeAnalysis;
 
 namespace BreakingChangesDetector.BreakingChanges.Definitions
 {
-    internal class AddedBaseInterfaceDefinition : BreakingChangeDefinitionBase
+    internal sealed class AddedBaseInterfaceDefinition : BreakingChangeDefinitionBase
     {
         public static readonly AddedBaseInterfaceDefinition Instance = new AddedBaseInterfaceDefinition();
 

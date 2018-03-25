@@ -27,7 +27,7 @@ using BreakingChangesDetector.MetadataItems;
 
 namespace BreakingChangesDetector.BreakingChanges.Definitions
 {
-    internal class ChangedStaticOrInstanceStatusDefinition : BreakingChangeDefinitionBase
+    internal sealed class ChangedStaticOrInstanceStatusDefinition : BreakingChangeDefinitionBase
     {
         public static readonly ChangedStaticOrInstanceStatusDefinition Instance =
             new ChangedStaticOrInstanceStatusDefinition();

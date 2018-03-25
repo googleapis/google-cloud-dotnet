@@ -33,7 +33,7 @@ using System.Reflection;
 
 namespace BreakingChangesDetector.Serialization
 {
-    internal class BinaryItemDeserializerV1
+    internal sealed class BinaryItemDeserializerV1
     {
         private readonly BinaryReader _reader;
         private readonly Dictionary<uint, TypeData> _typeTable;

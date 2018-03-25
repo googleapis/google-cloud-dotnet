@@ -27,7 +27,7 @@ using BreakingChangesDetector.MetadataItems;
 
 namespace BreakingChangesDetector.BreakingChanges.Definitions
 {
-    internal class RemovedImplementedInterfaceDefinition : BreakingChangeDefinitionBase
+    internal sealed class RemovedImplementedInterfaceDefinition : BreakingChangeDefinitionBase
     {
         public static readonly RemovedImplementedInterfaceDefinition Instance =
             new RemovedImplementedInterfaceDefinition();

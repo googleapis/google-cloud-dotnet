@@ -34,7 +34,7 @@ namespace BreakingChangesDetector.MetadataItems
     /// <summary>
     /// Represents the a group of externally visible <see cref="AssemblyData"/> instances.
     /// </summary>
-    public class AssemblyFamily : IEnumerable<AssemblyData>
+    public sealed class AssemblyFamily : IEnumerable<AssemblyData>
     {
         private readonly List<AssemblyData> _assemblies = new List<AssemblyData>();
 

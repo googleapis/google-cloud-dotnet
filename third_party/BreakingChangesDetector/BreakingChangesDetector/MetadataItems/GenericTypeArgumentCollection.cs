@@ -32,7 +32,7 @@ namespace BreakingChangesDetector.MetadataItems
     /// <summary>
     /// A collection of <see cref="TypeData"/> instances used as generic type arguments in a constructed generic type.
     /// </summary>
-    public class GenericTypeArgumentCollection : IEnumerable<TypeData>
+    public sealed class GenericTypeArgumentCollection : IEnumerable<TypeData>
     {
         private readonly TypeData[] _arguments;
 

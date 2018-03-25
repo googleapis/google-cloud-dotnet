@@ -28,7 +28,7 @@ using System;
 
 namespace BreakingChangesDetector.BreakingChanges.Definitions
 {
-    internal class ChangedParameterDefaultValueDefinition : BreakingChangeDefinitionBase
+    internal sealed class ChangedParameterDefaultValueDefinition : BreakingChangeDefinitionBase
     {
         public static readonly ChangedParameterDefaultValueDefinition Instance =
             new ChangedParameterDefaultValueDefinition();

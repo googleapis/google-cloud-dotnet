@@ -28,7 +28,7 @@ using Microsoft.CodeAnalysis;
 
 namespace BreakingChangesDetector.BreakingChanges.Definitions
 {
-    internal class ChangedMemberTypeDefinition : BreakingChangeDefinitionBase
+    internal sealed class ChangedMemberTypeDefinition : BreakingChangeDefinitionBase
     {
         public static readonly ChangedMemberTypeDefinition Instance = new ChangedMemberTypeDefinition();
 

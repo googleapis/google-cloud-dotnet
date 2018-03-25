@@ -32,7 +32,7 @@ using System.Linq;
 
 namespace BreakingChangesDetector.Serialization
 {
-    internal class BinaryItemSerializerV1
+    internal sealed class BinaryItemSerializerV1
     {
         /*
         * File structure
@@ -320,7 +320,7 @@ namespace BreakingChangesDetector.Serialization
             }
         }
 
-        private class AdditionalDataWriter : MetadataItemVisitor
+        private sealed class AdditionalDataWriter : MetadataItemVisitor
         {
             public BinaryItemSerializerV1 _owner;
 

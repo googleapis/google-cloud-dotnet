@@ -27,7 +27,7 @@ using BreakingChangesDetector.MetadataItems;
 
 namespace BreakingChangesDetector.BreakingChanges.Definitions
 {
-    internal class RemovedExtensionMethodModifierDefinition : BreakingChangeDefinitionBase
+    internal sealed class RemovedExtensionMethodModifierDefinition : BreakingChangeDefinitionBase
     {
         public static readonly RemovedExtensionMethodModifierDefinition Instance =
             new RemovedExtensionMethodModifierDefinition();

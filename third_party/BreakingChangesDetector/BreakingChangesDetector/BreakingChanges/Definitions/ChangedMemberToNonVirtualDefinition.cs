@@ -27,7 +27,7 @@ using BreakingChangesDetector.MetadataItems;
 
 namespace BreakingChangesDetector.BreakingChanges.Definitions
 {
-    internal class ChangedMemberToNonVirtualDefinition : BreakingChangeDefinitionBase
+    internal sealed class ChangedMemberToNonVirtualDefinition : BreakingChangeDefinitionBase
     {
         public static readonly ChangedMemberToNonVirtualDefinition Instance =
             new ChangedMemberToNonVirtualDefinition();

@@ -28,7 +28,7 @@ using Microsoft.CodeAnalysis;
 namespace BreakingChangesDetector.MetadataItems
 {
     /// <summary>
-    /// Abstract base class representing the metadata for an externally visible type with an element type, which is either an array or pointer type.
+    /// Abstract base sealed class representing the metadata for an externally visible type with an element type, which is either an array or pointer type.
     /// </summary>
     public abstract class TypeWithElementData : TypeData
     {
