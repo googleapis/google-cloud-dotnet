@@ -2,6 +2,7 @@
     MIT License
 
     Copyright(c) 2014-2018 Infragistics, Inc.
+    Copyright 2018 Google LLC
 
     Permission is hereby granted, free of charge, to any person obtaining a copy
     of this software and associated documentation files (the "Software"), to deal
@@ -31,21 +32,21 @@ using System.Threading.Tasks;
 
 namespace BreakingChangesDetector.BreakingChanges
 {
-	internal class CompareItemsContext
-	{
-		public readonly MetadataItemBase AdditionalInfo;
-		public readonly List<BreakingChangeBase> BreakingChanges;
-		public readonly MetadataItemBase OldItem;
-		public readonly AssemblyFamily NewAssemblyFamily;
-		public readonly MetadataItemBase NewItem;
+    internal class CompareItemsContext
+    {
+        public readonly MetadataItemBase AdditionalInfo;
+        public readonly List<BreakingChangeBase> BreakingChanges;
+        public readonly MetadataItemBase OldItem;
+        public readonly AssemblyFamily NewAssemblyFamily;
+        public readonly MetadataItemBase NewItem;
 
-		public CompareItemsContext(MetadataItemBase oldItem, MetadataItemBase newItem, AssemblyFamily newAssemblyFamily, List<BreakingChangeBase> breakingChanges, MetadataItemBase additionalInfo = null)
-		{
-			this.OldItem = oldItem;
-			this.NewItem = newItem;
-			this.NewAssemblyFamily = newAssemblyFamily;
-			this.BreakingChanges = breakingChanges;
-			this.AdditionalInfo = additionalInfo;
-		}
-	}
+        public CompareItemsContext(MetadataItemBase oldItem, MetadataItemBase newItem, AssemblyFamily newAssemblyFamily, List<BreakingChangeBase> breakingChanges, MetadataItemBase additionalInfo = null)
+        {
+            this.OldItem = oldItem;
+            this.NewItem = newItem;
+            this.NewAssemblyFamily = newAssemblyFamily;
+            this.BreakingChanges = breakingChanges;
+            this.AdditionalInfo = additionalInfo;
+        }
+    }
 }

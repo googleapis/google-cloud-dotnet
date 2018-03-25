@@ -34,134 +34,134 @@ using System.Threading.Tasks;
 
 namespace BreakingChangesDetector.MetadataItems
 {
-	/// <summary>
-	/// Represents the metadata for an externally visible constant field.
-	/// </summary>
-	public sealed class ConstantData : TypedMemberDataBase
-	{
-		#region Constructors
+    /// <summary>
+    /// Represents the metadata for an externally visible constant field.
+    /// </summary>
+    public sealed class ConstantData : TypedMemberDataBase
+    {
+        #region Constructors
 
-		internal ConstantData(string name, MemberAccessibility accessibility, MemberFlags memberFlags, TypeData type, bool isTypeDynamic, object value)
-			: base(name, accessibility, memberFlags, type, isTypeDynamic)
-		{
-			this.Value = value;
-		}
+        internal ConstantData(string name, MemberAccessibility accessibility, MemberFlags memberFlags, TypeData type, bool isTypeDynamic, object value)
+            : base(name, accessibility, memberFlags, type, isTypeDynamic)
+        {
+            this.Value = value;
+        }
 
-		private ConstantData(IFieldSymbol fieldSymbol, MemberAccessibility accessibility, DeclaringTypeData declaringType)
-			: base(fieldSymbol, accessibility, fieldSymbol.Type, fieldSymbol.IsDynamicType(), MemberFlags.Static, declaringType)
-		{
-			this.Value = Utilities.PreprocessConstantValue(fieldSymbol.Type, fieldSymbol.ConstantValue);
-		}
+        private ConstantData(IFieldSymbol fieldSymbol, MemberAccessibility accessibility, DeclaringTypeData declaringType)
+            : base(fieldSymbol, accessibility, fieldSymbol.Type, fieldSymbol.IsDynamicType(), MemberFlags.Static, declaringType)
+        {
+            this.Value = Utilities.PreprocessConstantValue(fieldSymbol.Type, fieldSymbol.ConstantValue);
+        }
 
-		#endregion // Constructors
+        #endregion // Constructors
 
-		#region Base Class Overrides
+        #region Base Class Overrides
 
-		#region Accept
+        #region Accept
 
-		/// <summary>
-		/// Performs the specified visitor's functionality on this instance.
-		/// </summary>
-		/// <param name="visitor">The visitor whose functionality should be performed on the instance.</param>
-		public override void Accept(MetadataItemVisitor visitor)
-		{
-			visitor.VisitConstantData(this);
-		}
+        /// <summary>
+        /// Performs the specified visitor's functionality on this instance.
+        /// </summary>
+        /// <param name="visitor">The visitor whose functionality should be performed on the instance.</param>
+        public override void Accept(MetadataItemVisitor visitor)
+        {
+            visitor.VisitConstantData(this);
+        }
 
-		#endregion // Accept
+        #endregion // Accept
 
-		#region CanOverrideMember
-
-#if DEBUG
-		/// <summary>
-		/// Indicates whether the current member can override the specified member from a base type.
-		/// </summary>
-		/// <param name="baseMember">The member from the base type.</param>
-		/// <returns>True if the current member can override the base member; False otherwise.</returns> 
-#endif
-		internal override bool CanOverrideMember(MemberDataBase baseMember)
-		{
-			Debug.Fail("Constants cannot be overridden.");
-			return false;
-		}
-
-		#endregion // CanOverrideMember
-
-		#region DoesMatch
-
-		internal override bool DoesMatch(MetadataItemBase other)
-		{
-			if (base.DoesMatch(other) == false)
-				return false;
-
-			var otherTyped = other as ConstantData;
-			if (otherTyped == null)
-				return false;
-
-			if (Object.Equals(this.Value, otherTyped.Value))
-				return false;
-
-			return true;
-		}
-
-		#endregion // DoesMatch
-
-		#region MetadataItemKind
-
-		/// <summary>
-		/// Gets the type of item the instance represents.
-		/// </summary>
-		public override MetadataItemKinds MetadataItemKind
-		{
-			get { return MetadataItemKinds.Constant; }
-		}
-
-		#endregion // MetadataItemKind
-
-		#region ReplaceGenericTypeParameters
+        #region CanOverrideMember
 
 #if DEBUG
-		/// <summary>
-		/// Replaces all type parameters used by the member with their associated generic arguments specified in a constructed generic type.
-		/// </summary>
-		/// <param name="genericParameters">The generic parameters being replaced.</param>
-		/// <param name="genericArguments">The generic arguments replacing the parameters.</param>
-		/// <returns>A new member with the replaced type parameters or the current instance if the member does not use any of the generic parameters.</returns> 
+        /// <summary>
+        /// Indicates whether the current member can override the specified member from a base type.
+        /// </summary>
+        /// <param name="baseMember">The member from the base type.</param>
+        /// <returns>True if the current member can override the base member; False otherwise.</returns> 
 #endif
-		internal override MemberDataBase ReplaceGenericTypeParameters(GenericTypeParameterCollection genericParameters, GenericTypeArgumentCollection genericArguments)
-		{
-			var replacedType = (TypeData)this.Type.ReplaceGenericTypeParameters(genericParameters, genericArguments);
-			if (replacedType == this.Type)
-				return this;
+        internal override bool CanOverrideMember(MemberDataBase baseMember)
+        {
+            Debug.Fail("Constants cannot be overridden.");
+            return false;
+        }
 
-			Debug.Fail("It was assumed that constants cannot be generic");
-			return new ConstantData(this.Name, this.Accessibility, this.MemberFlags, replacedType, this.IsTypeDynamic, this.Value);
-		}
+        #endregion // CanOverrideMember
 
-		#endregion // ReplaceGenericTypeParameters
+        #region DoesMatch
 
-		#endregion // Base Class Overrides
+        internal override bool DoesMatch(MetadataItemBase other)
+        {
+            if (base.DoesMatch(other) == false)
+                return false;
 
-		#region Methods
+            var otherTyped = other as ConstantData;
+            if (otherTyped == null)
+                return false;
 
-		internal static MemberDataBase ConstantDataFromReflection(IFieldSymbol fieldSymbol, DeclaringTypeData declaringType)
-		{
-			var accessibility = fieldSymbol.GetAccessibility();
-			if (accessibility == null)
-				return null;
+            if (Object.Equals(this.Value, otherTyped.Value))
+                return false;
 
-			return new ConstantData(fieldSymbol, accessibility.Value, declaringType);
-		}
+            return true;
+        }
 
-		#endregion // Methods
+        #endregion // DoesMatch
 
-		#region Properties
+        #region MetadataItemKind
 
-		/// <summary>
-		/// Gets the compiled constant value.
-		/// </summary>
-		public object Value { get; private set; } // TODO_Serialize: Round trip and unit test
+        /// <summary>
+        /// Gets the type of item the instance represents.
+        /// </summary>
+        public override MetadataItemKinds MetadataItemKind
+        {
+            get { return MetadataItemKinds.Constant; }
+        }
 
-		#endregion // Properties
-	}
+        #endregion // MetadataItemKind
+
+        #region ReplaceGenericTypeParameters
+
+#if DEBUG
+        /// <summary>
+        /// Replaces all type parameters used by the member with their associated generic arguments specified in a constructed generic type.
+        /// </summary>
+        /// <param name="genericParameters">The generic parameters being replaced.</param>
+        /// <param name="genericArguments">The generic arguments replacing the parameters.</param>
+        /// <returns>A new member with the replaced type parameters or the current instance if the member does not use any of the generic parameters.</returns> 
+#endif
+        internal override MemberDataBase ReplaceGenericTypeParameters(GenericTypeParameterCollection genericParameters, GenericTypeArgumentCollection genericArguments)
+        {
+            var replacedType = (TypeData)this.Type.ReplaceGenericTypeParameters(genericParameters, genericArguments);
+            if (replacedType == this.Type)
+                return this;
+
+            Debug.Fail("It was assumed that constants cannot be generic");
+            return new ConstantData(this.Name, this.Accessibility, this.MemberFlags, replacedType, this.IsTypeDynamic, this.Value);
+        }
+
+        #endregion // ReplaceGenericTypeParameters
+
+        #endregion // Base Class Overrides
+
+        #region Methods
+
+        internal static MemberDataBase ConstantDataFromReflection(IFieldSymbol fieldSymbol, DeclaringTypeData declaringType)
+        {
+            var accessibility = fieldSymbol.GetAccessibility();
+            if (accessibility == null)
+                return null;
+
+            return new ConstantData(fieldSymbol, accessibility.Value, declaringType);
+        }
+
+        #endregion // Methods
+
+        #region Properties
+
+        /// <summary>
+        /// Gets the compiled constant value.
+        /// </summary>
+        public object Value { get; private set; } // TODO_Serialize: Round trip and unit test
+
+        #endregion // Properties
+    }
 }

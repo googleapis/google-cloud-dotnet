@@ -29,146 +29,146 @@ using BreakingChangesDetector.MetadataItems;
 
 namespace BreakingChangesDetector.UnitTests.MetadataTypesTests
 {
-	public class PropertyDataTests
-	{
-		#region PropertyDataAccessibilityTest
+    public class PropertyDataTests
+    {
+        #region PropertyDataAccessibilityTest
 
-		[Fact]
-		public void PropertyDataAccessibilityTest()
-		{
-			var t = typeof(VariousMemberFeatures);
-			var context = MetadataResolutionContext.CreateFromTypes(t);
-			var typeData = context.GetTypeDefinitionData(t);
+        [Fact]
+        public void PropertyDataAccessibilityTest()
+        {
+            var t = typeof(VariousMemberFeatures);
+            var context = MetadataResolutionContext.CreateFromTypes(t);
+            var typeData = context.GetTypeDefinitionData(t);
 
-			var member = (PropertyData)typeData.GetMember("PropertyReadOnly");
-			AssertX.Equal(MemberAccessibility.Protected, member.Accessibility, "Incorrect MemberAccessibility.");
+            var member = (PropertyData)typeData.GetMember("PropertyReadOnly");
+            AssertX.Equal(MemberAccessibility.Protected, member.Accessibility, "Incorrect MemberAccessibility.");
 
-			member = (PropertyData)typeData.GetMember("PropertyWriteOnly");
-			AssertX.Equal(MemberAccessibility.Public, member.Accessibility, "Incorrect MemberAccessibility.");
+            member = (PropertyData)typeData.GetMember("PropertyWriteOnly");
+            AssertX.Equal(MemberAccessibility.Public, member.Accessibility, "Incorrect MemberAccessibility.");
 
-			member = (PropertyData)typeData.GetMember("PropertyReadWrite");
-			AssertX.Equal(MemberAccessibility.Public, member.Accessibility, "Incorrect MemberAccessibility.");
-		}
+            member = (PropertyData)typeData.GetMember("PropertyReadWrite");
+            AssertX.Equal(MemberAccessibility.Public, member.Accessibility, "Incorrect MemberAccessibility.");
+        }
 
-		#endregion // PropertyDataAccessibilityTest
+        #endregion // PropertyDataAccessibilityTest
 
-		#region PropertyDataDeclaringTypeTest
+        #region PropertyDataDeclaringTypeTest
 
-		[Fact]
-		public void PropertyDataDeclaringTypeTest()
-		{
-			var t = typeof(VariousMemberFeatures);
-			var context = MetadataResolutionContext.CreateFromTypes(t);
-			var typeData = context.GetTypeDefinitionData(t);
-			var member = (PropertyData)typeData.GetMember("PropertyReadOnly");
-			AssertX.Equal(typeData, member.ContainingType, "The DeclaringType of a member should be the type in which it is defined.");
-		}
+        [Fact]
+        public void PropertyDataDeclaringTypeTest()
+        {
+            var t = typeof(VariousMemberFeatures);
+            var context = MetadataResolutionContext.CreateFromTypes(t);
+            var typeData = context.GetTypeDefinitionData(t);
+            var member = (PropertyData)typeData.GetMember("PropertyReadOnly");
+            AssertX.Equal(typeData, member.ContainingType, "The DeclaringType of a member should be the type in which it is defined.");
+        }
 
-		#endregion // PropertyDataDeclaringTypeTest
+        #endregion // PropertyDataDeclaringTypeTest
 
-		#region PropertyDataMemberFlagsTest
+        #region PropertyDataMemberFlagsTest
 
-		[Fact]
-		public void PropertyDataMemberFlagsTest()
-		{
-			var t = typeof(OverloadedMemberFeatures);
-			var context = MetadataResolutionContext.CreateFromTypes(t);
-			var typeData = context.GetTypeDefinitionData(t);
+        [Fact]
+        public void PropertyDataMemberFlagsTest()
+        {
+            var t = typeof(OverloadedMemberFeatures);
+            var context = MetadataResolutionContext.CreateFromTypes(t);
+            var typeData = context.GetTypeDefinitionData(t);
 
-			var eventData = (PropertyData)typeData.GetMember("PropertyInstance");
-			AssertX.Equal(MemberFlags.None, eventData.MemberFlags, "The Flags value of the member is wrong.");
-			eventData = (PropertyData)typeData.GetMember("PropertyStatic");
-			AssertX.Equal(MemberFlags.Static, eventData.MemberFlags, "The Flags value of the member is wrong.");
-			eventData = (PropertyData)typeData.GetMember("PropertyInstanceAbstract");
-			AssertX.Equal(MemberFlags.Abstract, eventData.MemberFlags, "The Flags value of the member is wrong.");
-			eventData = (PropertyData)typeData.GetMember("PropertyInstanceVirtual");
-			AssertX.Equal(MemberFlags.Virtual, eventData.MemberFlags, "The Flags value of the member is wrong.");
-			eventData = (PropertyData)typeData.GetMember("PropertyInstanceOverrideAbstract");
-			AssertX.Equal(MemberFlags.Override, eventData.MemberFlags, "The Flags value of the member is wrong.");
-			eventData = (PropertyData)typeData.GetMember("PropertyInstanceOverrideAbstractSealed");
-			AssertX.Equal(MemberFlags.Override | MemberFlags.Sealed, eventData.MemberFlags, "The Flags value of the member is wrong.");
-			eventData = (PropertyData)typeData.GetMember("PropertyInstanceOverrideAbstractAbstract");
-			AssertX.Equal(MemberFlags.Override | MemberFlags.Abstract, eventData.MemberFlags, "The Flags value of the member is wrong.");
-			eventData = (PropertyData)typeData.GetMember("PropertyInstanceOverrideVirtual");
-			AssertX.Equal(MemberFlags.Override, eventData.MemberFlags, "The Flags value of the member is wrong.");
-			eventData = (PropertyData)typeData.GetMember("PropertyInstanceOverrideVirtualSealed");
-			AssertX.Equal(MemberFlags.Override | MemberFlags.Sealed, eventData.MemberFlags, "The Flags value of the member is wrong.");
-			eventData = (PropertyData)typeData.GetMember("PropertyInstanceOverrideVirtualAbstract");
-			AssertX.Equal(MemberFlags.Override | MemberFlags.Abstract, eventData.MemberFlags, "The Flags value of the member is wrong.");
-		}
+            var eventData = (PropertyData)typeData.GetMember("PropertyInstance");
+            AssertX.Equal(MemberFlags.None, eventData.MemberFlags, "The Flags value of the member is wrong.");
+            eventData = (PropertyData)typeData.GetMember("PropertyStatic");
+            AssertX.Equal(MemberFlags.Static, eventData.MemberFlags, "The Flags value of the member is wrong.");
+            eventData = (PropertyData)typeData.GetMember("PropertyInstanceAbstract");
+            AssertX.Equal(MemberFlags.Abstract, eventData.MemberFlags, "The Flags value of the member is wrong.");
+            eventData = (PropertyData)typeData.GetMember("PropertyInstanceVirtual");
+            AssertX.Equal(MemberFlags.Virtual, eventData.MemberFlags, "The Flags value of the member is wrong.");
+            eventData = (PropertyData)typeData.GetMember("PropertyInstanceOverrideAbstract");
+            AssertX.Equal(MemberFlags.Override, eventData.MemberFlags, "The Flags value of the member is wrong.");
+            eventData = (PropertyData)typeData.GetMember("PropertyInstanceOverrideAbstractSealed");
+            AssertX.Equal(MemberFlags.Override | MemberFlags.Sealed, eventData.MemberFlags, "The Flags value of the member is wrong.");
+            eventData = (PropertyData)typeData.GetMember("PropertyInstanceOverrideAbstractAbstract");
+            AssertX.Equal(MemberFlags.Override | MemberFlags.Abstract, eventData.MemberFlags, "The Flags value of the member is wrong.");
+            eventData = (PropertyData)typeData.GetMember("PropertyInstanceOverrideVirtual");
+            AssertX.Equal(MemberFlags.Override, eventData.MemberFlags, "The Flags value of the member is wrong.");
+            eventData = (PropertyData)typeData.GetMember("PropertyInstanceOverrideVirtualSealed");
+            AssertX.Equal(MemberFlags.Override | MemberFlags.Sealed, eventData.MemberFlags, "The Flags value of the member is wrong.");
+            eventData = (PropertyData)typeData.GetMember("PropertyInstanceOverrideVirtualAbstract");
+            AssertX.Equal(MemberFlags.Override | MemberFlags.Abstract, eventData.MemberFlags, "The Flags value of the member is wrong.");
+        }
 
-		#endregion // PropertyDataMemberFlagsTest
+        #endregion // PropertyDataMemberFlagsTest
 
-		#region PropertyDataGetMethodAccessibilityTest
+        #region PropertyDataGetMethodAccessibilityTest
 
-		[Fact]
-		public void PropertyDataGetMethodAccessibilityTest()
-		{
-			var t = typeof(VariousMemberFeatures);
-			var context = MetadataResolutionContext.CreateFromTypes(t);
-			var typeData = context.GetTypeDefinitionData(t);
+        [Fact]
+        public void PropertyDataGetMethodAccessibilityTest()
+        {
+            var t = typeof(VariousMemberFeatures);
+            var context = MetadataResolutionContext.CreateFromTypes(t);
+            var typeData = context.GetTypeDefinitionData(t);
 
-			var member = (PropertyData)typeData.GetMember("PropertyReadOnly");
-			AssertX.Equal(MemberAccessibility.Protected, member.GetMethodAccessibility, "The GetMethodAccessibility of the read only property is incorrect.");
+            var member = (PropertyData)typeData.GetMember("PropertyReadOnly");
+            AssertX.Equal(MemberAccessibility.Protected, member.GetMethodAccessibility, "The GetMethodAccessibility of the read only property is incorrect.");
 
-			member = (PropertyData)typeData.GetMember("PropertyWriteOnly");
-			AssertX.Equal(null, member.GetMethodAccessibility, "The GetMethodAccessibility of the write only property is incorrect.");
+            member = (PropertyData)typeData.GetMember("PropertyWriteOnly");
+            AssertX.Equal(null, member.GetMethodAccessibility, "The GetMethodAccessibility of the write only property is incorrect.");
 
-			member = (PropertyData)typeData.GetMember("PropertyReadWrite");
-			AssertX.Equal(MemberAccessibility.Public, member.GetMethodAccessibility, "The GetMethodAccessibility of the read write property is incorrect.");
-		}
+            member = (PropertyData)typeData.GetMember("PropertyReadWrite");
+            AssertX.Equal(MemberAccessibility.Public, member.GetMethodAccessibility, "The GetMethodAccessibility of the read write property is incorrect.");
+        }
 
-		#endregion // PropertyDataGetMethodAccessibilityTest
+        #endregion // PropertyDataGetMethodAccessibilityTest
 
-		#region PropertyDataNameTest
+        #region PropertyDataNameTest
 
-		[Fact]
-		public void PropertyDataNameTest()
-		{
-			var t = typeof(VariousMemberFeatures);
-			var context = MetadataResolutionContext.CreateFromTypes(t);
-			var typeData = context.GetTypeDefinitionData(t);
+        [Fact]
+        public void PropertyDataNameTest()
+        {
+            var t = typeof(VariousMemberFeatures);
+            var context = MetadataResolutionContext.CreateFromTypes(t);
+            var typeData = context.GetTypeDefinitionData(t);
 
-			var member = (PropertyData)typeData.GetMember("PropertyReadOnly");
-			AssertX.Equal("PropertyReadOnly", member.Name, "The Name of the member is incorrect.");
-		}
+            var member = (PropertyData)typeData.GetMember("PropertyReadOnly");
+            AssertX.Equal("PropertyReadOnly", member.Name, "The Name of the member is incorrect.");
+        }
 
-		#endregion // PropertyDataNameTest
+        #endregion // PropertyDataNameTest
 
-		#region PropertyDataSetMethodAccessibilityTest
+        #region PropertyDataSetMethodAccessibilityTest
 
-		[Fact]
-		public void PropertyDataSetMethodAccessibilityTest()
-		{
-			var t = typeof(VariousMemberFeatures);
-			var context = MetadataResolutionContext.CreateFromTypes(t);
-			var typeData = context.GetTypeDefinitionData(t);
+        [Fact]
+        public void PropertyDataSetMethodAccessibilityTest()
+        {
+            var t = typeof(VariousMemberFeatures);
+            var context = MetadataResolutionContext.CreateFromTypes(t);
+            var typeData = context.GetTypeDefinitionData(t);
 
-			var member = (PropertyData)typeData.GetMember("PropertyReadOnly");
-			AssertX.Equal(null, member.SetMethodAccessibility, "The SetMethodAccessibility of the read only property is incorrect.");
+            var member = (PropertyData)typeData.GetMember("PropertyReadOnly");
+            AssertX.Equal(null, member.SetMethodAccessibility, "The SetMethodAccessibility of the read only property is incorrect.");
 
-			member = (PropertyData)typeData.GetMember("PropertyWriteOnly");
-			AssertX.Equal(MemberAccessibility.Public, member.SetMethodAccessibility, "The SetMethodAccessibility of the write only property is incorrect.");
+            member = (PropertyData)typeData.GetMember("PropertyWriteOnly");
+            AssertX.Equal(MemberAccessibility.Public, member.SetMethodAccessibility, "The SetMethodAccessibility of the write only property is incorrect.");
 
-			member = (PropertyData)typeData.GetMember("PropertyReadWrite");
-			AssertX.Equal(MemberAccessibility.Protected, member.SetMethodAccessibility, "The SetMethodAccessibility of the read write property is incorrect.");
-		}
+            member = (PropertyData)typeData.GetMember("PropertyReadWrite");
+            AssertX.Equal(MemberAccessibility.Protected, member.SetMethodAccessibility, "The SetMethodAccessibility of the read write property is incorrect.");
+        }
 
-		#endregion // PropertyDataSetMethodAccessibilityTest
+        #endregion // PropertyDataSetMethodAccessibilityTest
 
-		#region PropertyDataTypeTest
+        #region PropertyDataTypeTest
 
-		[Fact]
-		public void PropertyDataTypeTest()
-		{
-			var t = typeof(VariousMemberFeatures);
-			var context = MetadataResolutionContext.CreateFromTypes(t);
-			var typeData = context.GetTypeDefinitionData(t);
-			var member = (PropertyData)typeData.GetMember("PropertyReadOnly");
-			var objectType = context.GetTypeDefinitionData<object>();
-			AssertX.Equal(objectType, member.Type, "The Type of the member is incorrect.");
-		}
+        [Fact]
+        public void PropertyDataTypeTest()
+        {
+            var t = typeof(VariousMemberFeatures);
+            var context = MetadataResolutionContext.CreateFromTypes(t);
+            var typeData = context.GetTypeDefinitionData(t);
+            var member = (PropertyData)typeData.GetMember("PropertyReadOnly");
+            var objectType = context.GetTypeDefinitionData<object>();
+            AssertX.Equal(objectType, member.Type, "The Type of the member is incorrect.");
+        }
 
-		#endregion // PropertyDataTypeTest
-	}
+        #endregion // PropertyDataTypeTest
+    }
 }

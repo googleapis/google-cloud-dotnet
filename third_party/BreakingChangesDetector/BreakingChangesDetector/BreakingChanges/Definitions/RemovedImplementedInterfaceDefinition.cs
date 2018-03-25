@@ -2,6 +2,7 @@
     MIT License
 
     Copyright(c) 2014-2018 Infragistics, Inc.
+    Copyright 2018 Google LLC
 
     Permission is hereby granted, free of charge, to any person obtaining a copy
     of this software and associated documentation files (the "Software"), to deal
@@ -31,42 +32,42 @@ using System.Threading.Tasks;
 
 namespace BreakingChangesDetector.BreakingChanges.Definitions
 {
-	internal class RemovedImplementedInterfaceDefinition : BreakingChangeDefinitionBase
-	{
-		public static readonly RemovedImplementedInterfaceDefinition Instance = new RemovedImplementedInterfaceDefinition();
+    internal class RemovedImplementedInterfaceDefinition : BreakingChangeDefinitionBase
+    {
+        public static readonly RemovedImplementedInterfaceDefinition Instance = new RemovedImplementedInterfaceDefinition();
 
-		private RemovedImplementedInterfaceDefinition() { }
+        private RemovedImplementedInterfaceDefinition() { }
 
-		public override void CompareItems(CompareItemsContext context)
-		{
-			var oldType = (TypeDefinitionData)context.OldItem;
-			var newType = (TypeDefinitionData)context.NewItem;
+        public override void CompareItems(CompareItemsContext context)
+        {
+            var oldType = (TypeDefinitionData)context.OldItem;
+            var newType = (TypeDefinitionData)context.NewItem;
 
-			foreach (var oldInterfaceType in oldType.ImplementedInterfaces)
-			{
-				var hasOldInterfaceEquivalent = false;
-				foreach (var newInterfaceType in newType.ImplementedInterfaces)
-				{
-					if (oldInterfaceType.IsAssignableFromNew(newInterfaceType, context.NewAssemblyFamily))
-					{
-						hasOldInterfaceEquivalent = true;
-						break;
-					}
-				}
+            foreach (var oldInterfaceType in oldType.ImplementedInterfaces)
+            {
+                var hasOldInterfaceEquivalent = false;
+                foreach (var newInterfaceType in newType.ImplementedInterfaces)
+                {
+                    if (oldInterfaceType.IsAssignableFromNew(newInterfaceType, context.NewAssemblyFamily))
+                    {
+                        hasOldInterfaceEquivalent = true;
+                        break;
+                    }
+                }
 
-				if (hasOldInterfaceEquivalent == false)
-					context.BreakingChanges.Add(new RemovedImplementedInterface(oldType, newType, oldInterfaceType));
-			}
-		}
+                if (hasOldInterfaceEquivalent == false)
+                    context.BreakingChanges.Add(new RemovedImplementedInterface(oldType, newType, oldInterfaceType));
+            }
+        }
 
-		public override BreakingChangeKind BreakingChangeKind
-		{
-			get { return BreakingChangeKind.RemovedImplementedInterface; }
-		}
+        public override BreakingChangeKind BreakingChangeKind
+        {
+            get { return BreakingChangeKind.RemovedImplementedInterface; }
+        }
 
-		public override MetadataItemKinds MembersKindsHandled
-		{
-			get { return MetadataItemKinds.TypeDefinition; }
-		}
-	}
+        public override MetadataItemKinds MembersKindsHandled
+        {
+            get { return MetadataItemKinds.TypeDefinition; }
+        }
+    }
 }

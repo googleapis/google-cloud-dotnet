@@ -2,6 +2,7 @@
     MIT License
 
     Copyright(c) 2014-2018 Infragistics, Inc.
+    Copyright 2018 Google LLC
 
     Permission is hereby granted, free of charge, to any person obtaining a copy
     of this software and associated documentation files (the "Software"), to deal
@@ -33,57 +34,57 @@ using System.Threading.Tasks;
 
 namespace BreakingChangesDetector.BreakingChanges.Definitions
 {
-	internal class ChangedGenericTypeParameterConstraintsDefinition : BreakingChangeDefinitionBase
-	{
-		public static readonly ChangedGenericTypeParameterConstraintsDefinition Instance = new ChangedGenericTypeParameterConstraintsDefinition();
+    internal class ChangedGenericTypeParameterConstraintsDefinition : BreakingChangeDefinitionBase
+    {
+        public static readonly ChangedGenericTypeParameterConstraintsDefinition Instance = new ChangedGenericTypeParameterConstraintsDefinition();
 
-		private ChangedGenericTypeParameterConstraintsDefinition() { }
+        private ChangedGenericTypeParameterConstraintsDefinition() { }
 
-		public override void CompareItems(CompareItemsContext context)
-		{
-			var oldGenericParameter = (GenericTypeParameterData)context.OldItem;
-			var newGenericParameter = (GenericTypeParameterData)context.NewItem;
+        public override void CompareItems(CompareItemsContext context)
+        {
+            var oldGenericParameter = (GenericTypeParameterData)context.OldItem;
+            var newGenericParameter = (GenericTypeParameterData)context.NewItem;
 
-			var oldConstraintAttributes = oldGenericParameter.GenericParameterAttributes & GenericParameterAttributes.SpecialConstraintMask;
-			var newConstraintAttributes = newGenericParameter.GenericParameterAttributes & GenericParameterAttributes.SpecialConstraintMask;
+            var oldConstraintAttributes = oldGenericParameter.GenericParameterAttributes & GenericParameterAttributes.SpecialConstraintMask;
+            var newConstraintAttributes = newGenericParameter.GenericParameterAttributes & GenericParameterAttributes.SpecialConstraintMask;
 
-			bool haveConstraintsChanged = (oldConstraintAttributes != newConstraintAttributes);
-			if (haveConstraintsChanged == false)
-			{
-				foreach (var oldContraintType in oldGenericParameter.Constraints)
-				{
-					if (newGenericParameter.Constraints.Any(c => oldContraintType.IsEquivalentToNew(c, context.NewAssemblyFamily)) == false)
-					{
-						haveConstraintsChanged = true;
-						break;
-					}
-				}
+            bool haveConstraintsChanged = (oldConstraintAttributes != newConstraintAttributes);
+            if (haveConstraintsChanged == false)
+            {
+                foreach (var oldContraintType in oldGenericParameter.Constraints)
+                {
+                    if (newGenericParameter.Constraints.Any(c => oldContraintType.IsEquivalentToNew(c, context.NewAssemblyFamily)) == false)
+                    {
+                        haveConstraintsChanged = true;
+                        break;
+                    }
+                }
 
-				if (haveConstraintsChanged == false)
-				{
-					foreach (var newContraintType in newGenericParameter.Constraints)
-					{
-						if (oldGenericParameter.Constraints.Any(c => newContraintType.IsEquivalentToOld(c, context.NewAssemblyFamily)) == false)
-						{
-							haveConstraintsChanged = true;
-							break;
-						}
-					}
-				}
-			}
+                if (haveConstraintsChanged == false)
+                {
+                    foreach (var newContraintType in newGenericParameter.Constraints)
+                    {
+                        if (oldGenericParameter.Constraints.Any(c => newContraintType.IsEquivalentToOld(c, context.NewAssemblyFamily)) == false)
+                        {
+                            haveConstraintsChanged = true;
+                            break;
+                        }
+                    }
+                }
+            }
 
-			if (haveConstraintsChanged)
-				context.BreakingChanges.Add(new ChangedGenericTypeParameterConstraints(oldGenericParameter, newGenericParameter));
-		}
+            if (haveConstraintsChanged)
+                context.BreakingChanges.Add(new ChangedGenericTypeParameterConstraints(oldGenericParameter, newGenericParameter));
+        }
 
-		public override BreakingChangeKind BreakingChangeKind
-		{
-			get { return BreakingChangeKind.ChangedGenericTypeParameterConstraints; }
-		}
+        public override BreakingChangeKind BreakingChangeKind
+        {
+            get { return BreakingChangeKind.ChangedGenericTypeParameterConstraints; }
+        }
 
-		public override MetadataItemKinds MembersKindsHandled
-		{
-			get { return MetadataItemKinds.GenericTypeParameter; }
-		}
-	}
+        public override MetadataItemKinds MembersKindsHandled
+        {
+            get { return MetadataItemKinds.GenericTypeParameter; }
+        }
+    }
 }

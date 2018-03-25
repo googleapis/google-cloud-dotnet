@@ -30,96 +30,96 @@ using BreakingChangesDetector.BreakingChanges;
 
 namespace BreakingChangesDetector.UnitTests.BreakingChangesTests
 {
-	public class IncompatibleClassHierarchyTests
-	{
-		#region NestedTypeTests
+    public class IncompatibleClassHierarchyTests
+    {
+        #region NestedTypeTests
 
-		[Fact]
-		public void NestedTypeTests()
-		{
-			var context = MetadataResolutionContext.CreateFromTypes(typeof(ChangedAccessibilityFromPublicToProtectedTests));
-			var nestedDerivedFromBase = context.GetTypeDefinitionData(typeof(NestedDerivedFromBase));
-			var nestedDerivedFromSpecializedBase = context.GetTypeDefinitionData(typeof(NestedDerivedFromSpecializedBase));
-			var nestedDerivedFromOtherBase = context.GetTypeDefinitionData(typeof(NestedDerivedFromOtherBase));
-			
-			var breakingChanges = MetadataComparer.CompareTypes(nestedDerivedFromBase, nestedDerivedFromSpecializedBase);
-			AssertX.Equal(0, breakingChanges.Count, "There should be no breaking changes when the new type derives from a more specialized base class.");
+        [Fact]
+        public void NestedTypeTests()
+        {
+            var context = MetadataResolutionContext.CreateFromTypes(typeof(ChangedAccessibilityFromPublicToProtectedTests));
+            var nestedDerivedFromBase = context.GetTypeDefinitionData(typeof(NestedDerivedFromBase));
+            var nestedDerivedFromSpecializedBase = context.GetTypeDefinitionData(typeof(NestedDerivedFromSpecializedBase));
+            var nestedDerivedFromOtherBase = context.GetTypeDefinitionData(typeof(NestedDerivedFromOtherBase));
 
-			breakingChanges = MetadataComparer.CompareTypes(nestedDerivedFromBase, nestedDerivedFromOtherBase);
-			AssertX.Equal(1, breakingChanges.Count, "There should be one breaking change when the new type derives from a different base class.");
-			AssertX.Equal(BreakingChangeKind.IncompatibleClassHierarchy, breakingChanges[0].BreakingChangeKind, "The BreakingChangeKind is incorrect.");
-			AssertX.Equal(nestedDerivedFromBase.GetNestedType("Class"), breakingChanges[0].OldItem, "The OldItem is incorrect.");
-			AssertX.Equal(nestedDerivedFromOtherBase.GetNestedType("Class"), breakingChanges[0].NewItem, "The NewItem is incorrect.");
-			AssertX.Null(breakingChanges[0].AssociatedData, "The AssociatedData is incorrect.");
+            var breakingChanges = MetadataComparer.CompareTypes(nestedDerivedFromBase, nestedDerivedFromSpecializedBase);
+            AssertX.Equal(0, breakingChanges.Count, "There should be no breaking changes when the new type derives from a more specialized base class.");
 
-			breakingChanges = MetadataComparer.CompareTypes(nestedDerivedFromSpecializedBase, nestedDerivedFromBase);
-			AssertX.Equal(1, breakingChanges.Count, "There should be one breaking change when the new type derives from a less specialized base class.");
-			AssertX.Equal(BreakingChangeKind.IncompatibleClassHierarchy, breakingChanges[0].BreakingChangeKind, "The BreakingChangeKind is incorrect.");
-			AssertX.Equal(nestedDerivedFromSpecializedBase.GetNestedType("Class"), breakingChanges[0].OldItem, "The OldItem is incorrect.");
-			AssertX.Equal(nestedDerivedFromBase.GetNestedType("Class"), breakingChanges[0].NewItem, "The NewItem is incorrect.");
-			AssertX.Null(breakingChanges[0].AssociatedData, "The AssociatedData is incorrect.");
+            breakingChanges = MetadataComparer.CompareTypes(nestedDerivedFromBase, nestedDerivedFromOtherBase);
+            AssertX.Equal(1, breakingChanges.Count, "There should be one breaking change when the new type derives from a different base class.");
+            AssertX.Equal(BreakingChangeKind.IncompatibleClassHierarchy, breakingChanges[0].BreakingChangeKind, "The BreakingChangeKind is incorrect.");
+            AssertX.Equal(nestedDerivedFromBase.GetNestedType("Class"), breakingChanges[0].OldItem, "The OldItem is incorrect.");
+            AssertX.Equal(nestedDerivedFromOtherBase.GetNestedType("Class"), breakingChanges[0].NewItem, "The NewItem is incorrect.");
+            AssertX.Null(breakingChanges[0].AssociatedData, "The AssociatedData is incorrect.");
 
-			breakingChanges = MetadataComparer.CompareTypes(nestedDerivedFromSpecializedBase, nestedDerivedFromOtherBase);
-			AssertX.Equal(1, breakingChanges.Count, "There should be one breaking change when the new type derives from a different base class.");
-			AssertX.Equal(BreakingChangeKind.IncompatibleClassHierarchy, breakingChanges[0].BreakingChangeKind, "The BreakingChangeKind is incorrect.");
-			AssertX.Equal(nestedDerivedFromSpecializedBase.GetNestedType("Class"), breakingChanges[0].OldItem, "The OldItem is incorrect.");
-			AssertX.Equal(nestedDerivedFromOtherBase.GetNestedType("Class"), breakingChanges[0].NewItem, "The NewItem is incorrect.");
-			AssertX.Null(breakingChanges[0].AssociatedData, "The AssociatedData is incorrect.");
-		}
+            breakingChanges = MetadataComparer.CompareTypes(nestedDerivedFromSpecializedBase, nestedDerivedFromBase);
+            AssertX.Equal(1, breakingChanges.Count, "There should be one breaking change when the new type derives from a less specialized base class.");
+            AssertX.Equal(BreakingChangeKind.IncompatibleClassHierarchy, breakingChanges[0].BreakingChangeKind, "The BreakingChangeKind is incorrect.");
+            AssertX.Equal(nestedDerivedFromSpecializedBase.GetNestedType("Class"), breakingChanges[0].OldItem, "The OldItem is incorrect.");
+            AssertX.Equal(nestedDerivedFromBase.GetNestedType("Class"), breakingChanges[0].NewItem, "The NewItem is incorrect.");
+            AssertX.Null(breakingChanges[0].AssociatedData, "The AssociatedData is incorrect.");
 
-		#endregion // NestedTypeTests
+            breakingChanges = MetadataComparer.CompareTypes(nestedDerivedFromSpecializedBase, nestedDerivedFromOtherBase);
+            AssertX.Equal(1, breakingChanges.Count, "There should be one breaking change when the new type derives from a different base class.");
+            AssertX.Equal(BreakingChangeKind.IncompatibleClassHierarchy, breakingChanges[0].BreakingChangeKind, "The BreakingChangeKind is incorrect.");
+            AssertX.Equal(nestedDerivedFromSpecializedBase.GetNestedType("Class"), breakingChanges[0].OldItem, "The OldItem is incorrect.");
+            AssertX.Equal(nestedDerivedFromOtherBase.GetNestedType("Class"), breakingChanges[0].NewItem, "The NewItem is incorrect.");
+            AssertX.Null(breakingChanges[0].AssociatedData, "The AssociatedData is incorrect.");
+        }
 
-		#region TypeTests
+        #endregion // NestedTypeTests
 
-		[Fact]
-		public void TypeTests()
-		{
-			var context = MetadataResolutionContext.CreateFromTypes(typeof(ChangedAccessibilityFromPublicToProtectedTests));
-			var derivedFromBase = context.GetTypeDefinitionData(typeof(DerivedFromBase));
-			var derivedFromSpecializedBase = context.GetTypeDefinitionData(typeof(DerivedFromSpecializedBase));
-			var derivedFromOtherBase = context.GetTypeDefinitionData(typeof(DerivedFromOtherBase));
-			
-			var breakingChanges = MetadataComparer.CompareTypes(derivedFromBase, derivedFromSpecializedBase);
-			AssertX.Equal(0, breakingChanges.Count, "There should be no breaking changes when the new type derives from a more specialized base class.");
+        #region TypeTests
 
-			breakingChanges = MetadataComparer.CompareTypes(derivedFromBase, derivedFromOtherBase);
-			AssertX.Equal(1, breakingChanges.Count, "There should be one breaking change when the new type derives from a different base class.");
-			AssertX.Equal(BreakingChangeKind.IncompatibleClassHierarchy, breakingChanges[0].BreakingChangeKind, "The BreakingChangeKind is incorrect.");
-			AssertX.Equal(derivedFromBase, breakingChanges[0].OldItem, "The OldItem is incorrect.");
-			AssertX.Equal(derivedFromOtherBase, breakingChanges[0].NewItem, "The NewItem is incorrect.");
-			AssertX.Null(breakingChanges[0].AssociatedData, "The AssociatedData is incorrect.");
+        [Fact]
+        public void TypeTests()
+        {
+            var context = MetadataResolutionContext.CreateFromTypes(typeof(ChangedAccessibilityFromPublicToProtectedTests));
+            var derivedFromBase = context.GetTypeDefinitionData(typeof(DerivedFromBase));
+            var derivedFromSpecializedBase = context.GetTypeDefinitionData(typeof(DerivedFromSpecializedBase));
+            var derivedFromOtherBase = context.GetTypeDefinitionData(typeof(DerivedFromOtherBase));
 
-			breakingChanges = MetadataComparer.CompareTypes(derivedFromSpecializedBase, derivedFromBase);
-			AssertX.Equal(1, breakingChanges.Count, "There should be one breaking change when the new type derives from a less specialized base class.");
-			AssertX.Equal(BreakingChangeKind.IncompatibleClassHierarchy, breakingChanges[0].BreakingChangeKind, "The BreakingChangeKind is incorrect.");
-			AssertX.Equal(derivedFromSpecializedBase, breakingChanges[0].OldItem, "The OldItem is incorrect.");
-			AssertX.Equal(derivedFromBase, breakingChanges[0].NewItem, "The NewItem is incorrect.");
-			AssertX.Null(breakingChanges[0].AssociatedData, "The AssociatedData is incorrect.");
+            var breakingChanges = MetadataComparer.CompareTypes(derivedFromBase, derivedFromSpecializedBase);
+            AssertX.Equal(0, breakingChanges.Count, "There should be no breaking changes when the new type derives from a more specialized base class.");
 
-			breakingChanges = MetadataComparer.CompareTypes(derivedFromSpecializedBase, derivedFromOtherBase);
-			AssertX.Equal(1, breakingChanges.Count, "There should be one breaking change when the new type derives from a different base class.");
-			AssertX.Equal(BreakingChangeKind.IncompatibleClassHierarchy, breakingChanges[0].BreakingChangeKind, "The BreakingChangeKind is incorrect.");
-			AssertX.Equal(derivedFromSpecializedBase, breakingChanges[0].OldItem, "The OldItem is incorrect.");
-			AssertX.Equal(derivedFromOtherBase, breakingChanges[0].NewItem, "The NewItem is incorrect.");
-			AssertX.Null(breakingChanges[0].AssociatedData, "The AssociatedData is incorrect.");
-		}
+            breakingChanges = MetadataComparer.CompareTypes(derivedFromBase, derivedFromOtherBase);
+            AssertX.Equal(1, breakingChanges.Count, "There should be one breaking change when the new type derives from a different base class.");
+            AssertX.Equal(BreakingChangeKind.IncompatibleClassHierarchy, breakingChanges[0].BreakingChangeKind, "The BreakingChangeKind is incorrect.");
+            AssertX.Equal(derivedFromBase, breakingChanges[0].OldItem, "The OldItem is incorrect.");
+            AssertX.Equal(derivedFromOtherBase, breakingChanges[0].NewItem, "The NewItem is incorrect.");
+            AssertX.Null(breakingChanges[0].AssociatedData, "The AssociatedData is incorrect.");
 
-		#endregion // TypeTests
+            breakingChanges = MetadataComparer.CompareTypes(derivedFromSpecializedBase, derivedFromBase);
+            AssertX.Equal(1, breakingChanges.Count, "There should be one breaking change when the new type derives from a less specialized base class.");
+            AssertX.Equal(BreakingChangeKind.IncompatibleClassHierarchy, breakingChanges[0].BreakingChangeKind, "The BreakingChangeKind is incorrect.");
+            AssertX.Equal(derivedFromSpecializedBase, breakingChanges[0].OldItem, "The OldItem is incorrect.");
+            AssertX.Equal(derivedFromBase, breakingChanges[0].NewItem, "The NewItem is incorrect.");
+            AssertX.Null(breakingChanges[0].AssociatedData, "The AssociatedData is incorrect.");
 
-		public class NestedBaseClass { public class Class { } }
-		public class NestedSpecializedBaseClass { public class Class : BaseClass { } }
-		public class NestedOtherBaseClass { public class Class { } }
+            breakingChanges = MetadataComparer.CompareTypes(derivedFromSpecializedBase, derivedFromOtherBase);
+            AssertX.Equal(1, breakingChanges.Count, "There should be one breaking change when the new type derives from a different base class.");
+            AssertX.Equal(BreakingChangeKind.IncompatibleClassHierarchy, breakingChanges[0].BreakingChangeKind, "The BreakingChangeKind is incorrect.");
+            AssertX.Equal(derivedFromSpecializedBase, breakingChanges[0].OldItem, "The OldItem is incorrect.");
+            AssertX.Equal(derivedFromOtherBase, breakingChanges[0].NewItem, "The NewItem is incorrect.");
+            AssertX.Null(breakingChanges[0].AssociatedData, "The AssociatedData is incorrect.");
+        }
 
-		public class NestedDerivedFromBase { public class Class : BaseClass { } }
-		public class NestedDerivedFromSpecializedBase { public class Class : SpecializedBaseClass { } }
-		public class NestedDerivedFromOtherBase { public class Class : OtherBaseClass { } }
+        #endregion // TypeTests
 
-		public class BaseClass { }
-		public class SpecializedBaseClass : BaseClass { }
-		public class OtherBaseClass { }
+        public class NestedBaseClass { public class Class { } }
+        public class NestedSpecializedBaseClass { public class Class : BaseClass { } }
+        public class NestedOtherBaseClass { public class Class { } }
 
-		public class DerivedFromBase : BaseClass { }
-		public class DerivedFromSpecializedBase : SpecializedBaseClass { }
-		public class DerivedFromOtherBase : OtherBaseClass { }
-	}
+        public class NestedDerivedFromBase { public class Class : BaseClass { } }
+        public class NestedDerivedFromSpecializedBase { public class Class : SpecializedBaseClass { } }
+        public class NestedDerivedFromOtherBase { public class Class : OtherBaseClass { } }
+
+        public class BaseClass { }
+        public class SpecializedBaseClass : BaseClass { }
+        public class OtherBaseClass { }
+
+        public class DerivedFromBase : BaseClass { }
+        public class DerivedFromSpecializedBase : SpecializedBaseClass { }
+        public class DerivedFromOtherBase : OtherBaseClass { }
+    }
 }

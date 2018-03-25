@@ -2,6 +2,7 @@
     MIT License
 
     Copyright(c) 2014-2018 Infragistics, Inc.
+    Copyright 2018 Google LLC
 
     Permission is hereby granted, free of charge, to any person obtaining a copy
     of this software and associated documentation files (the "Software"), to deal
@@ -30,20 +31,20 @@ using System.Threading.Tasks;
 
 namespace BreakingChangesDetector.MetadataItems
 {
-	/// <summary>
-	/// Represents an item that has parameters, such as a constructor, method, delegate, or indexer.
-	/// </summary>
-	public interface IParameterizedItem
-	{
-		/// <summary>
-		/// Indicates whether a new member of the same type and name is logically the same member as the current member, just from a newer build, possibly
-		/// by ignoring any new optional parameters which may have been added since the older build.
-		/// </summary> 
-		bool IsEquivalentToNewMember(MemberDataBase newMember, AssemblyFamily newAssemblyFamily, bool ignoreNewOptionalParameters);
+    /// <summary>
+    /// Represents an item that has parameters, such as a constructor, method, delegate, or indexer.
+    /// </summary>
+    public interface IParameterizedItem
+    {
+        /// <summary>
+        /// Indicates whether a new member of the same type and name is logically the same member as the current member, just from a newer build, possibly
+        /// by ignoring any new optional parameters which may have been added since the older build.
+        /// </summary> 
+        bool IsEquivalentToNewMember(MemberDataBase newMember, AssemblyFamily newAssemblyFamily, bool ignoreNewOptionalParameters);
 
-		/// <summary>
-		/// Gets the collection of parameters on the item.
-		/// </summary>
-		ParameterCollection Parameters { get; }
-	}
+        /// <summary>
+        /// Gets the collection of parameters on the item.
+        /// </summary>
+        ParameterCollection Parameters { get; }
+    }
 }

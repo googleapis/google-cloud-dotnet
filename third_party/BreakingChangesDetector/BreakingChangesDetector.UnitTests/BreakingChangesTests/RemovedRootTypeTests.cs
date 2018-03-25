@@ -28,10 +28,10 @@ using Xunit;
 
 namespace BreakingChangesDetector.UnitTests.BreakingChangesTests
 {
-	public class RemovedRootTypeTests
-	{
-		// TODO_Test: Figure out how to test this
-		// TODO_Test: also test changing visibilty to protected and internal
-		// TODO_Test: also test changing a type's name
-	}
+    public class RemovedRootTypeTests
+    {
+        // TODO_Test: Figure out how to test this
+        // TODO_Test: also test changing visibilty to protected and internal
+        // TODO_Test: also test changing a type's name
+    }
 }

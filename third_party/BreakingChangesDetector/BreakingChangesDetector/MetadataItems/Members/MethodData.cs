@@ -34,201 +34,201 @@ using System.Threading.Tasks;
 
 namespace BreakingChangesDetector.MetadataItems
 {
-	/// <summary>
-	/// Represents the metadata for an externally visible method.
-	/// </summary>
-	public sealed class MethodData : MethodDataBase, IGenericItem
-	{
-		#region Constructor
+    /// <summary>
+    /// Represents the metadata for an externally visible method.
+    /// </summary>
+    public sealed class MethodData : MethodDataBase, IGenericItem
+    {
+        #region Constructor
 
-		internal MethodData(string name, MemberAccessibility accessibility, MemberFlags memberFlags, TypeData type, bool isTypeDynamic, GenericTypeParameterCollection genericParameters, bool isExtensionMethod, ParameterCollection parameters)
-			: base(name, accessibility, memberFlags, type, isTypeDynamic, parameters)
-		{
-			this.GenericParameters = genericParameters;
-			this.IsExtensionMethod = isExtensionMethod;
-		}
+        internal MethodData(string name, MemberAccessibility accessibility, MemberFlags memberFlags, TypeData type, bool isTypeDynamic, GenericTypeParameterCollection genericParameters, bool isExtensionMethod, ParameterCollection parameters)
+            : base(name, accessibility, memberFlags, type, isTypeDynamic, parameters)
+        {
+            this.GenericParameters = genericParameters;
+            this.IsExtensionMethod = isExtensionMethod;
+        }
 
-		private MethodData(IMethodSymbol methodSymbol, MemberAccessibility accessibility, DeclaringTypeData declaringType)
-			: base(methodSymbol, accessibility, declaringType)
-		{
-			if (methodSymbol.IsGenericMethod)
-			{
+        private MethodData(IMethodSymbol methodSymbol, MemberAccessibility accessibility, DeclaringTypeData declaringType)
+            : base(methodSymbol, accessibility, declaringType)
+        {
+            if (methodSymbol.IsGenericMethod)
+            {
                 // TODO: This seems odd
-				MemberDataBase declaringMember = null;
+                MemberDataBase declaringMember = null;
                 if (!methodSymbol.ContainingType.IsConstructed())
                 {
                     declaringMember = this;
                 }
 
-				this.GenericParameters = Utilities.GetGenericParameters(methodSymbol.TypeParameters, declaringMember);
-			}
-			else
-			{
-				this.GenericParameters = GenericTypeParameterData.EmptyList;
-			}
+                this.GenericParameters = Utilities.GetGenericParameters(methodSymbol.TypeParameters, declaringMember);
+            }
+            else
+            {
+                this.GenericParameters = GenericTypeParameterData.EmptyList;
+            }
 
-			this.IsExtensionMethod = methodSymbol.IsExtensionMethod;
-		}
+            this.IsExtensionMethod = methodSymbol.IsExtensionMethod;
+        }
 
-		#endregion // Constructor
+        #endregion // Constructor
 
-		#region Base Class Overrides
+        #region Base Class Overrides
 
-		#region Accept
+        #region Accept
 
-		/// <summary>
-		/// Performs the specified visitor's functionality on this instance.
-		/// </summary>
-		/// <param name="visitor">The visitor whose functionality should be performed on the instance.</param>
-		public override void Accept(MetadataItemVisitor visitor)
-		{
-			visitor.VisitMethodData(this);
-		}
+        /// <summary>
+        /// Performs the specified visitor's functionality on this instance.
+        /// </summary>
+        /// <param name="visitor">The visitor whose functionality should be performed on the instance.</param>
+        public override void Accept(MetadataItemVisitor visitor)
+        {
+            visitor.VisitMethodData(this);
+        }
 
-		#endregion // Accept
+        #endregion // Accept
 
-		#region CanOverrideMember
-
-#if DEBUG
-		/// <summary>
-		/// Indicates whether the current member can override the specified member from a base type.
-		/// </summary>
-		/// <param name="baseMember">The member from the base type.</param>
-		/// <returns>True if the current member can override the base member; False otherwise.</returns>  
-#endif
-		internal override bool CanOverrideMember(MemberDataBase baseMember)
-		{
-			if (base.CanOverrideMember(baseMember) == false)
-				return false;
-
-			var otherMethod = (MethodData)baseMember;
-			return this.GenericParameters.Count == otherMethod.GenericParameters.Count;
-		}
-
-		#endregion // CanOverrideMember
-
-		#region DisplayName
-
-		/// <summary>
-		/// Gets the name to use for this item in messages.
-		/// </summary>
-		public override string DisplayName
-		{
-			get
-			{
-				return
-					this.Name +
-					this.GenericParameters.GetParameterListText() +
-					this.Parameters.GetParameterListDisplayText(this.IsExtensionMethod);
-			}
-		}
-
-		#endregion // DisplayName
-
-		#region DoesMatch
-
-		internal override bool DoesMatch(MetadataItemBase other)
-		{
-			if (base.DoesMatch(other) == false)
-				return false;
-
-			var otherTyped = other as MethodData;
-			if (otherTyped == null)
-				return false;
-
-			if (this.GenericParameters.DoesMatch(otherTyped.GenericParameters) == false)
-				return false;
-
-			if (this.IsExtensionMethod != otherTyped.IsExtensionMethod)
-				return false;
-
-			return true;
-		}
-
-		#endregion // DoesMatch
-
-		#region IsEquivalentToNewMember
+        #region CanOverrideMember
 
 #if DEBUG
-		/// <summary>
-		/// Indicates whether a new member of the same type and name is logically the same member as the current member, just from a newer build.
-		/// </summary> 
+        /// <summary>
+        /// Indicates whether the current member can override the specified member from a base type.
+        /// </summary>
+        /// <param name="baseMember">The member from the base type.</param>
+        /// <returns>True if the current member can override the base member; False otherwise.</returns>  
 #endif
-		internal override bool IsEquivalentToNewMember(MemberDataBase newMember, AssemblyFamily newAssemblyFamily)
-		{
-			if (base.IsEquivalentToNewMember(newMember, newAssemblyFamily) == false)
-				return false;
+        internal override bool CanOverrideMember(MemberDataBase baseMember)
+        {
+            if (base.CanOverrideMember(baseMember) == false)
+                return false;
 
-			var otherMethod = (MethodData)newMember;
-			return this.GenericParameters.Count == otherMethod.GenericParameters.Count;
-		}
+            var otherMethod = (MethodData)baseMember;
+            return this.GenericParameters.Count == otherMethod.GenericParameters.Count;
+        }
 
-		#endregion // IsEquivalentToNewMember
+        #endregion // CanOverrideMember
 
-		#region MetadataItemKind
+        #region DisplayName
 
-		/// <summary>
-		/// Gets the type of item the instance represents.
-		/// </summary>
-		public override MetadataItemKinds MetadataItemKind
-		{
-			get { return MetadataItemKinds.Method; }
-		}
+        /// <summary>
+        /// Gets the name to use for this item in messages.
+        /// </summary>
+        public override string DisplayName
+        {
+            get
+            {
+                return
+                    this.Name +
+                    this.GenericParameters.GetParameterListText() +
+                    this.Parameters.GetParameterListDisplayText(this.IsExtensionMethod);
+            }
+        }
 
-		#endregion // MetadataItemKind
+        #endregion // DisplayName
 
-		#region ReplaceGenericTypeParameters
+        #region DoesMatch
+
+        internal override bool DoesMatch(MetadataItemBase other)
+        {
+            if (base.DoesMatch(other) == false)
+                return false;
+
+            var otherTyped = other as MethodData;
+            if (otherTyped == null)
+                return false;
+
+            if (this.GenericParameters.DoesMatch(otherTyped.GenericParameters) == false)
+                return false;
+
+            if (this.IsExtensionMethod != otherTyped.IsExtensionMethod)
+                return false;
+
+            return true;
+        }
+
+        #endregion // DoesMatch
+
+        #region IsEquivalentToNewMember
 
 #if DEBUG
-		/// <summary>
-		/// Replaces all type parameters used by the member with their associated generic arguments specified in a constructed generic type.
-		/// </summary>
-		/// <param name="genericParameters">The generic parameters being replaced.</param>
-		/// <param name="genericArguments">The generic arguments replacing the parameters.</param>
-		/// <returns>A new member with the replaced type parameters or the current instance if the member does not use any of the generic parameters.</returns> 
+        /// <summary>
+        /// Indicates whether a new member of the same type and name is logically the same member as the current member, just from a newer build.
+        /// </summary> 
 #endif
-		internal override MemberDataBase ReplaceGenericTypeParameters(GenericTypeParameterCollection genericParameters, GenericTypeArgumentCollection genericArguments)
-		{
-			var replacedType = (TypeData)this.Type.ReplaceGenericTypeParameters(genericParameters, genericArguments);
-			var replacedParameters = this.Parameters.ReplaceGenericTypeParameters(this.MetadataItemKind, genericParameters, genericArguments);
-			if (replacedType == this.Type &&
-				replacedParameters == this.Parameters)
-			{
-				return this;
-			}
+        internal override bool IsEquivalentToNewMember(MemberDataBase newMember, AssemblyFamily newAssemblyFamily)
+        {
+            if (base.IsEquivalentToNewMember(newMember, newAssemblyFamily) == false)
+                return false;
 
-			return new MethodData(this.Name, this.Accessibility, this.MemberFlags, replacedType, this.IsTypeDynamic, this.GenericParameters, this.IsExtensionMethod, replacedParameters);
-		}
+            var otherMethod = (MethodData)newMember;
+            return this.GenericParameters.Count == otherMethod.GenericParameters.Count;
+        }
 
-		#endregion // ReplaceGenericTypeParameters
+        #endregion // IsEquivalentToNewMember
 
-		#endregion // Base Class Overrides
+        #region MetadataItemKind
 
-		#region Methods
+        /// <summary>
+        /// Gets the type of item the instance represents.
+        /// </summary>
+        public override MetadataItemKinds MetadataItemKind
+        {
+            get { return MetadataItemKinds.Method; }
+        }
 
-		internal static MemberDataBase MethodDataFromReflection(IMethodSymbol methodSymbol, DeclaringTypeData declaringType)
-		{
-			var accessibility = methodSymbol.GetAccessibility();
-			if (accessibility == null)
-				return null;
+        #endregion // MetadataItemKind
 
-			return new MethodData(methodSymbol, accessibility.Value, declaringType);
-		}
+        #region ReplaceGenericTypeParameters
 
-		#endregion // Methods
+#if DEBUG
+        /// <summary>
+        /// Replaces all type parameters used by the member with their associated generic arguments specified in a constructed generic type.
+        /// </summary>
+        /// <param name="genericParameters">The generic parameters being replaced.</param>
+        /// <param name="genericArguments">The generic arguments replacing the parameters.</param>
+        /// <returns>A new member with the replaced type parameters or the current instance if the member does not use any of the generic parameters.</returns> 
+#endif
+        internal override MemberDataBase ReplaceGenericTypeParameters(GenericTypeParameterCollection genericParameters, GenericTypeArgumentCollection genericArguments)
+        {
+            var replacedType = (TypeData)this.Type.ReplaceGenericTypeParameters(genericParameters, genericArguments);
+            var replacedParameters = this.Parameters.ReplaceGenericTypeParameters(this.MetadataItemKind, genericParameters, genericArguments);
+            if (replacedType == this.Type &&
+                replacedParameters == this.Parameters)
+            {
+                return this;
+            }
 
-		#region Properties
+            return new MethodData(this.Name, this.Accessibility, this.MemberFlags, replacedType, this.IsTypeDynamic, this.GenericParameters, this.IsExtensionMethod, replacedParameters);
+        }
 
-		/// <summary>
-		/// Gets the collection of generic parameters for the method.
-		/// </summary>
-		public GenericTypeParameterCollection GenericParameters { get; private set; }
+        #endregion // ReplaceGenericTypeParameters
 
-		/// <summary>
-		/// Gets the value indicating whether the method is an extension method.
-		/// </summary>
-		public bool IsExtensionMethod { get; private set; }
+        #endregion // Base Class Overrides
 
-		#endregion // Properties
-	}
+        #region Methods
+
+        internal static MemberDataBase MethodDataFromReflection(IMethodSymbol methodSymbol, DeclaringTypeData declaringType)
+        {
+            var accessibility = methodSymbol.GetAccessibility();
+            if (accessibility == null)
+                return null;
+
+            return new MethodData(methodSymbol, accessibility.Value, declaringType);
+        }
+
+        #endregion // Methods
+
+        #region Properties
+
+        /// <summary>
+        /// Gets the collection of generic parameters for the method.
+        /// </summary>
+        public GenericTypeParameterCollection GenericParameters { get; private set; }
+
+        /// <summary>
+        /// Gets the value indicating whether the method is an extension method.
+        /// </summary>
+        public bool IsExtensionMethod { get; private set; }
+
+        #endregion // Properties
+    }
 }

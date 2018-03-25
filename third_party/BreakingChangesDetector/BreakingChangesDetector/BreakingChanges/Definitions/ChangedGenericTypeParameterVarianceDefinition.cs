@@ -2,6 +2,7 @@
     MIT License
 
     Copyright(c) 2014-2018 Infragistics, Inc.
+    Copyright 2018 Google LLC
 
     Permission is hereby granted, free of charge, to any person obtaining a copy
     of this software and associated documentation files (the "Software"), to deal
@@ -32,32 +33,32 @@ using System.Threading.Tasks;
 
 namespace BreakingChangesDetector.BreakingChanges.Definitions
 {
-	internal class ChangedGenericTypeParameterVarianceDefinition : BreakingChangeDefinitionBase
-	{
-		public static readonly ChangedGenericTypeParameterVarianceDefinition Instance = new ChangedGenericTypeParameterVarianceDefinition();
+    internal class ChangedGenericTypeParameterVarianceDefinition : BreakingChangeDefinitionBase
+    {
+        public static readonly ChangedGenericTypeParameterVarianceDefinition Instance = new ChangedGenericTypeParameterVarianceDefinition();
 
-		private ChangedGenericTypeParameterVarianceDefinition() { }
+        private ChangedGenericTypeParameterVarianceDefinition() { }
 
-		public override void CompareItems(CompareItemsContext context)
-		{
-			var oldGenericParameter = (GenericTypeParameterData)context.OldItem;
-			var newGenericParameter = (GenericTypeParameterData)context.NewItem;
+        public override void CompareItems(CompareItemsContext context)
+        {
+            var oldGenericParameter = (GenericTypeParameterData)context.OldItem;
+            var newGenericParameter = (GenericTypeParameterData)context.NewItem;
 
-			var oldVarianceAttributes = oldGenericParameter.GenericParameterAttributes & GenericParameterAttributes.VarianceMask;
-			var newVarianceAttributes = newGenericParameter.GenericParameterAttributes & GenericParameterAttributes.VarianceMask;
+            var oldVarianceAttributes = oldGenericParameter.GenericParameterAttributes & GenericParameterAttributes.VarianceMask;
+            var newVarianceAttributes = newGenericParameter.GenericParameterAttributes & GenericParameterAttributes.VarianceMask;
 
-			if (oldVarianceAttributes != GenericParameterAttributes.None && oldVarianceAttributes != newVarianceAttributes)
-				context.BreakingChanges.Add(new ChangedGenericTypeParameterVariance(oldGenericParameter, newGenericParameter));
-		}
+            if (oldVarianceAttributes != GenericParameterAttributes.None && oldVarianceAttributes != newVarianceAttributes)
+                context.BreakingChanges.Add(new ChangedGenericTypeParameterVariance(oldGenericParameter, newGenericParameter));
+        }
 
-		public override BreakingChangeKind BreakingChangeKind
-		{
-			get { return BreakingChangeKind.ChangedGenericTypeParameterVariance; }
-		}
+        public override BreakingChangeKind BreakingChangeKind
+        {
+            get { return BreakingChangeKind.ChangedGenericTypeParameterVariance; }
+        }
 
-		public override MetadataItemKinds MembersKindsHandled
-		{
-			get { return MetadataItemKinds.GenericTypeParameter; }
-		}
-	}
+        public override MetadataItemKinds MembersKindsHandled
+        {
+            get { return MetadataItemKinds.GenericTypeParameter; }
+        }
+    }
 }

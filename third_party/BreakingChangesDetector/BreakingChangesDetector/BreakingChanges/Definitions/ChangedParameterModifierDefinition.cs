@@ -2,6 +2,7 @@
     MIT License
 
     Copyright(c) 2014-2018 Infragistics, Inc.
+    Copyright 2018 Google LLC
 
     Permission is hereby granted, free of charge, to any person obtaining a copy
     of this software and associated documentation files (the "Software"), to deal
@@ -31,29 +32,29 @@ using System.Threading.Tasks;
 
 namespace BreakingChangesDetector.BreakingChanges.Definitions
 {
-	internal class ChangedParameterModifierDefinition : BreakingChangeDefinitionBase
-	{
-		public static readonly ChangedParameterModifierDefinition Instance = new ChangedParameterModifierDefinition();
+    internal class ChangedParameterModifierDefinition : BreakingChangeDefinitionBase
+    {
+        public static readonly ChangedParameterModifierDefinition Instance = new ChangedParameterModifierDefinition();
 
-		private ChangedParameterModifierDefinition() { }
+        private ChangedParameterModifierDefinition() { }
 
-		public override void CompareItems(CompareItemsContext context)
-		{
-			var oldParameter = (ParameterData)context.OldItem;
-			var newParameter = (ParameterData)context.NewItem;
+        public override void CompareItems(CompareItemsContext context)
+        {
+            var oldParameter = (ParameterData)context.OldItem;
+            var newParameter = (ParameterData)context.NewItem;
 
-			if (oldParameter.Modifer != newParameter.Modifer)
-				context.BreakingChanges.Add(new ChangedParameterModifier(oldParameter, newParameter, (IParameterizedItem)context.AdditionalInfo));
-		}
+            if (oldParameter.Modifer != newParameter.Modifer)
+                context.BreakingChanges.Add(new ChangedParameterModifier(oldParameter, newParameter, (IParameterizedItem)context.AdditionalInfo));
+        }
 
-		public override BreakingChangeKind BreakingChangeKind
-		{
-			get { return BreakingChangeKind.ChangedParameterModifier; }
-		}
+        public override BreakingChangeKind BreakingChangeKind
+        {
+            get { return BreakingChangeKind.ChangedParameterModifier; }
+        }
 
-		public override MetadataItemKinds MembersKindsHandled
-		{
-			get { return MetadataItemKinds.Parameter; }
-		}
-	}
+        public override MetadataItemKinds MembersKindsHandled
+        {
+            get { return MetadataItemKinds.Parameter; }
+        }
+    }
 }

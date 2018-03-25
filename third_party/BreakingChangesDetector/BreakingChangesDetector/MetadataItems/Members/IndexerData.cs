@@ -33,210 +33,210 @@ using System.Threading.Tasks;
 
 namespace BreakingChangesDetector.MetadataItems
 {
-	/// <summary>
-	/// Represents the metadata for an externally visible indexer property.
-	/// </summary>
-	public sealed class IndexerData : PropertyData, IParameterizedItem
-	{
-		#region Constructors
+    /// <summary>
+    /// Represents the metadata for an externally visible indexer property.
+    /// </summary>
+    public sealed class IndexerData : PropertyData, IParameterizedItem
+    {
+        #region Constructors
 
-		internal IndexerData(string name, MemberAccessibility accessibility, MemberFlags memberFlags, TypeData type, bool isTypeDynamic, ParameterCollection parameters, MemberAccessibility? getMethodAccessibility, MemberAccessibility? setMethodAccessibility)
-			: base(name, accessibility, memberFlags, type, isTypeDynamic, getMethodAccessibility, setMethodAccessibility)
-		{
-			this.Parameters = parameters;
-		}
+        internal IndexerData(string name, MemberAccessibility accessibility, MemberFlags memberFlags, TypeData type, bool isTypeDynamic, ParameterCollection parameters, MemberAccessibility? getMethodAccessibility, MemberAccessibility? setMethodAccessibility)
+            : base(name, accessibility, memberFlags, type, isTypeDynamic, getMethodAccessibility, setMethodAccessibility)
+        {
+            this.Parameters = parameters;
+        }
 
-		private IndexerData(IPropertySymbol propertySymbol, MemberAccessibility? getAccessibility, MemberAccessibility? setAccessibility, DeclaringTypeData declaringType)
-			: base(propertySymbol, getAccessibility, setAccessibility, declaringType)
-		{
-			this.Parameters = new ParameterCollection(propertySymbol.Parameters, this);
-		}
+        private IndexerData(IPropertySymbol propertySymbol, MemberAccessibility? getAccessibility, MemberAccessibility? setAccessibility, DeclaringTypeData declaringType)
+            : base(propertySymbol, getAccessibility, setAccessibility, declaringType)
+        {
+            this.Parameters = new ParameterCollection(propertySymbol.Parameters, this);
+        }
 
-		#endregion // Constructors
+        #endregion // Constructors
 
-		#region Interfaces
+        #region Interfaces
 
-		bool IParameterizedItem.IsEquivalentToNewMember(MemberDataBase newMember, AssemblyFamily newAssemblyFamily, bool ignoreNewOptionalParameters)
-		{
-			var newIndexer = newMember as IndexerData;
-			if (newIndexer == null)
-				return false;
+        bool IParameterizedItem.IsEquivalentToNewMember(MemberDataBase newMember, AssemblyFamily newAssemblyFamily, bool ignoreNewOptionalParameters)
+        {
+            var newIndexer = newMember as IndexerData;
+            if (newIndexer == null)
+                return false;
 
-			return this.IsEquivalentToNewMember(newIndexer, newAssemblyFamily, ignoreNewOptionalParameters);
-		}
+            return this.IsEquivalentToNewMember(newIndexer, newAssemblyFamily, ignoreNewOptionalParameters);
+        }
 
-		#endregion // Interfaces
+        #endregion // Interfaces
 
-		#region Base Class Overrides
+        #region Base Class Overrides
 
-		#region Accept
+        #region Accept
 
-		/// <summary>
-		/// Performs the specified visitor's functionality on this instance.
-		/// </summary>
-		/// <param name="visitor">The visitor whose functionality should be performed on the instance.</param>
-		public override void Accept(MetadataItemVisitor visitor)
-		{
-			visitor.VisitIndexerData(this);
-		}
+        /// <summary>
+        /// Performs the specified visitor's functionality on this instance.
+        /// </summary>
+        /// <param name="visitor">The visitor whose functionality should be performed on the instance.</param>
+        public override void Accept(MetadataItemVisitor visitor)
+        {
+            visitor.VisitIndexerData(this);
+        }
 
-		#endregion // Accept
+        #endregion // Accept
 
-		#region CanOverrideMember
-
-#if DEBUG
-		/// <summary>
-		/// Indicates whether the current member can override the specified member from a base type.
-		/// </summary>
-		/// <param name="baseMember">The member from the base type.</param>
-		/// <returns>True if the current member can override the base member; False otherwise.</returns>  
-#endif
-		internal override bool CanOverrideMember(MemberDataBase baseMember)
-		{
-			if (base.CanOverrideMember(baseMember) == false)
-				return false;
-
-			var otherIndexer = (IndexerData)baseMember;
-			return this.Parameters.IsEquivalentTo(otherIndexer.Parameters);
-		}
-
-		#endregion // CanOverrideMember
-
-		#region DisplayName
-
-		/// <summary>
-		/// Gets the name to use for this item in messages.
-		/// </summary>
-		public override string DisplayName
-		{
-			get { return this.Name + this.Parameters.GetParameterListDisplayText(open: '[', close: ']'); }
-		}
-
-		#endregion // DisplayName
-
-		#region DoesMatch
-
-		internal override bool DoesMatch(MetadataItemBase other)
-		{
-			if (base.DoesMatch(other) == false)
-				return false;
-
-			var otherTyped = other as IndexerData;
-			if (otherTyped == null)
-				return false;
-
-			if (this.Parameters.DoesMatch(otherTyped.Parameters) == false)
-				return false;
-
-			return true;
-		}
-
-		#endregion // DoesMatch
-
-		#region IsEquivalentToNewMember
+        #region CanOverrideMember
 
 #if DEBUG
-		/// <summary>
-		/// Indicates whether a new member of the same type and name is logically the same member as the current member, just from a newer build.
-		/// </summary> 
+        /// <summary>
+        /// Indicates whether the current member can override the specified member from a base type.
+        /// </summary>
+        /// <param name="baseMember">The member from the base type.</param>
+        /// <returns>True if the current member can override the base member; False otherwise.</returns>  
 #endif
-		internal override bool IsEquivalentToNewMember(MemberDataBase newMember, AssemblyFamily newAssemblyFamily)
-		{
-			var newIndexer = newMember as IndexerData;
-			if (newIndexer == null)
-				return false;
+        internal override bool CanOverrideMember(MemberDataBase baseMember)
+        {
+            if (base.CanOverrideMember(baseMember) == false)
+                return false;
 
-			return this.IsEquivalentToNewMember(newIndexer, newAssemblyFamily, ignoreNewOptionalParameters: false);
-		}
+            var otherIndexer = (IndexerData)baseMember;
+            return this.Parameters.IsEquivalentTo(otherIndexer.Parameters);
+        }
 
-		#endregion // IsEquivalentToNewMember
+        #endregion // CanOverrideMember
 
-		#region MetadataItemKind
+        #region DisplayName
 
-		/// <summary>
-		/// Gets the type of item the instance represents.
-		/// </summary>
-		public override MetadataItemKinds MetadataItemKind
-		{
-			get { return MetadataItemKinds.Indexer; }
-		}
+        /// <summary>
+        /// Gets the name to use for this item in messages.
+        /// </summary>
+        public override string DisplayName
+        {
+            get { return this.Name + this.Parameters.GetParameterListDisplayText(open: '[', close: ']'); }
+        }
 
-		#endregion // MetadataItemKind
+        #endregion // DisplayName
 
-		#region ReplaceGenericTypeParameters
+        #region DoesMatch
+
+        internal override bool DoesMatch(MetadataItemBase other)
+        {
+            if (base.DoesMatch(other) == false)
+                return false;
+
+            var otherTyped = other as IndexerData;
+            if (otherTyped == null)
+                return false;
+
+            if (this.Parameters.DoesMatch(otherTyped.Parameters) == false)
+                return false;
+
+            return true;
+        }
+
+        #endregion // DoesMatch
+
+        #region IsEquivalentToNewMember
 
 #if DEBUG
-		/// <summary>
-		/// Replaces all type parameters used by the member with their associated generic arguments specified in a constructed generic type.
-		/// </summary>
-		/// <param name="genericParameters">The generic parameters being replaced.</param>
-		/// <param name="genericArguments">The generic arguments replacing the parameters.</param>
-		/// <returns>A new member with the replaced type parameters or the current instance if the member does not use any of the generic parameters.</returns> 
+        /// <summary>
+        /// Indicates whether a new member of the same type and name is logically the same member as the current member, just from a newer build.
+        /// </summary> 
 #endif
-		internal override MemberDataBase ReplaceGenericTypeParameters(GenericTypeParameterCollection genericParameters, GenericTypeArgumentCollection genericArguments)
-		{
-			var replacedType = (TypeData)this.Type.ReplaceGenericTypeParameters(genericParameters, genericArguments);
-			var replacedParameters = this.Parameters.ReplaceGenericTypeParameters(this.MetadataItemKind, genericParameters, genericArguments);
-			if (replacedType == this.Type &&
-				replacedParameters == this.Parameters)
-			{
-				return this;
-			}
+        internal override bool IsEquivalentToNewMember(MemberDataBase newMember, AssemblyFamily newAssemblyFamily)
+        {
+            var newIndexer = newMember as IndexerData;
+            if (newIndexer == null)
+                return false;
 
-			return new IndexerData(this.Name, this.Accessibility, this.MemberFlags, replacedType, this.IsTypeDynamic, replacedParameters, this.GetMethodAccessibility, this.SetMethodAccessibility);
-		}
+            return this.IsEquivalentToNewMember(newIndexer, newAssemblyFamily, ignoreNewOptionalParameters: false);
+        }
 
-		#endregion // ReplaceGenericTypeParameters
+        #endregion // IsEquivalentToNewMember
 
-		#endregion // Base Class Overrides
+        #region MetadataItemKind
 
-		#region Methods
+        /// <summary>
+        /// Gets the type of item the instance represents.
+        /// </summary>
+        public override MetadataItemKinds MetadataItemKind
+        {
+            get { return MetadataItemKinds.Indexer; }
+        }
 
-		#region IndexerDataFromReflection
+        #endregion // MetadataItemKind
 
-		internal static IndexerData IndexerDataFromReflection(IPropertySymbol propertySymbol, DeclaringTypeData declaringType)
-		{
-			var getAccessibility = propertySymbol.GetMethod.GetAccessibility();
-			var setAccessibility = propertySymbol.SetMethod.GetAccessibility();
-			if (getAccessibility == null && setAccessibility == null)
-				return null;
-
-			return new IndexerData(propertySymbol, getAccessibility, setAccessibility, declaringType);
-		}
-
-		#endregion // IndexerDataFromReflection
-
-		#region IsEquivalentToNewMember
+        #region ReplaceGenericTypeParameters
 
 #if DEBUG
-		/// <summary>
-		/// Indicates whether a new member of the same type and name is logically the same member as the current member, just from a newer build.
-		/// </summary>
-		/// <param name="newMember">The new member to compare.</param>
-		/// <param name="newAssemblyFamily">The assembly family in which new assemblies reside.</param>
-		/// <param name="ignoreNewOptionalParameters">
-		/// Indicates whether to ignore any new parameters at the end of the collection which are optional when comparing.
-		/// </param>
+        /// <summary>
+        /// Replaces all type parameters used by the member with their associated generic arguments specified in a constructed generic type.
+        /// </summary>
+        /// <param name="genericParameters">The generic parameters being replaced.</param>
+        /// <param name="genericArguments">The generic arguments replacing the parameters.</param>
+        /// <returns>A new member with the replaced type parameters or the current instance if the member does not use any of the generic parameters.</returns> 
 #endif
-		private bool IsEquivalentToNewMember(IndexerData newMember, AssemblyFamily newAssemblyFamily, bool ignoreNewOptionalParameters)
-		{
-			if (base.IsEquivalentToNewMember(newMember, newAssemblyFamily) == false)
-				return false;
+        internal override MemberDataBase ReplaceGenericTypeParameters(GenericTypeParameterCollection genericParameters, GenericTypeArgumentCollection genericArguments)
+        {
+            var replacedType = (TypeData)this.Type.ReplaceGenericTypeParameters(genericParameters, genericArguments);
+            var replacedParameters = this.Parameters.ReplaceGenericTypeParameters(this.MetadataItemKind, genericParameters, genericArguments);
+            if (replacedType == this.Type &&
+                replacedParameters == this.Parameters)
+            {
+                return this;
+            }
 
-			return this.Parameters.IsEquivalentToNewParameters(newMember.Parameters, newAssemblyFamily, ignoreNewOptionalParameters);
-		}
+            return new IndexerData(this.Name, this.Accessibility, this.MemberFlags, replacedType, this.IsTypeDynamic, replacedParameters, this.GetMethodAccessibility, this.SetMethodAccessibility);
+        }
 
-		#endregion // IsEquivalentToNewMember
+        #endregion // ReplaceGenericTypeParameters
 
-		#endregion // Methods
+        #endregion // Base Class Overrides
 
-		#region Properties
+        #region Methods
 
-		/// <summary>
-		/// Gets the collection of parameters for the indexer.
-		/// </summary>
-		public ParameterCollection Parameters { get; private set; }
+        #region IndexerDataFromReflection
 
-		#endregion // Properties
-	}
+        internal static IndexerData IndexerDataFromReflection(IPropertySymbol propertySymbol, DeclaringTypeData declaringType)
+        {
+            var getAccessibility = propertySymbol.GetMethod.GetAccessibility();
+            var setAccessibility = propertySymbol.SetMethod.GetAccessibility();
+            if (getAccessibility == null && setAccessibility == null)
+                return null;
+
+            return new IndexerData(propertySymbol, getAccessibility, setAccessibility, declaringType);
+        }
+
+        #endregion // IndexerDataFromReflection
+
+        #region IsEquivalentToNewMember
+
+#if DEBUG
+        /// <summary>
+        /// Indicates whether a new member of the same type and name is logically the same member as the current member, just from a newer build.
+        /// </summary>
+        /// <param name="newMember">The new member to compare.</param>
+        /// <param name="newAssemblyFamily">The assembly family in which new assemblies reside.</param>
+        /// <param name="ignoreNewOptionalParameters">
+        /// Indicates whether to ignore any new parameters at the end of the collection which are optional when comparing.
+        /// </param>
+#endif
+        private bool IsEquivalentToNewMember(IndexerData newMember, AssemblyFamily newAssemblyFamily, bool ignoreNewOptionalParameters)
+        {
+            if (base.IsEquivalentToNewMember(newMember, newAssemblyFamily) == false)
+                return false;
+
+            return this.Parameters.IsEquivalentToNewParameters(newMember.Parameters, newAssemblyFamily, ignoreNewOptionalParameters);
+        }
+
+        #endregion // IsEquivalentToNewMember
+
+        #endregion // Methods
+
+        #region Properties
+
+        /// <summary>
+        /// Gets the collection of parameters for the indexer.
+        /// </summary>
+        public ParameterCollection Parameters { get; private set; }
+
+        #endregion // Properties
+    }
 }

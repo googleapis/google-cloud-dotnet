@@ -30,31 +30,31 @@ using BreakingChangesDetector.BreakingChanges;
 
 namespace BreakingChangesDetector.UnitTests.BreakingChangesTests
 {
-	public class ChangedFieldToReadOnlyTests
-	{
-		#region FieldTests
+    public class ChangedFieldToReadOnlyTests
+    {
+        #region FieldTests
 
-		[Fact]
-		public void FieldTests()
-		{
-			var context = MetadataResolutionContext.CreateFromTypes(typeof(ChangedMemberTypeTests));
-			var FieldReadOnly = context.GetTypeDefinitionData(typeof(FieldReadOnly));
-			var FieldReadWrite = context.GetTypeDefinitionData(typeof(FieldReadWrite));
-			
-			var breakingChanges = MetadataComparer.CompareTypes(FieldReadOnly, FieldReadWrite);
-			AssertX.Equal(0, breakingChanges.Count, "There should be no breaking changes when changing a read-only field to read/write.");
+        [Fact]
+        public void FieldTests()
+        {
+            var context = MetadataResolutionContext.CreateFromTypes(typeof(ChangedMemberTypeTests));
+            var FieldReadOnly = context.GetTypeDefinitionData(typeof(FieldReadOnly));
+            var FieldReadWrite = context.GetTypeDefinitionData(typeof(FieldReadWrite));
 
-			breakingChanges = MetadataComparer.CompareTypes(FieldReadWrite, FieldReadOnly);
-			AssertX.Equal(1, breakingChanges.Count, "There should be one breaking change when changing a read/write field to read-only.");
-			AssertX.Equal(BreakingChangeKind.ChangedFieldToReadOnly, breakingChanges[0].BreakingChangeKind, "The BreakingChangeKind is incorrect.");
-			AssertX.Equal(FieldReadWrite.GetMember("Field"), breakingChanges[0].OldItem, "The OldItem is incorrect.");
-			AssertX.Equal(FieldReadOnly.GetMember("Field"), breakingChanges[0].NewItem, "The NewItem is incorrect.");
-			AssertX.Null(breakingChanges[0].AssociatedData, "The AssociatedData is incorrect.");
-		}
+            var breakingChanges = MetadataComparer.CompareTypes(FieldReadOnly, FieldReadWrite);
+            AssertX.Equal(0, breakingChanges.Count, "There should be no breaking changes when changing a read-only field to read/write.");
 
-		#endregion // FieldTests
+            breakingChanges = MetadataComparer.CompareTypes(FieldReadWrite, FieldReadOnly);
+            AssertX.Equal(1, breakingChanges.Count, "There should be one breaking change when changing a read/write field to read-only.");
+            AssertX.Equal(BreakingChangeKind.ChangedFieldToReadOnly, breakingChanges[0].BreakingChangeKind, "The BreakingChangeKind is incorrect.");
+            AssertX.Equal(FieldReadWrite.GetMember("Field"), breakingChanges[0].OldItem, "The OldItem is incorrect.");
+            AssertX.Equal(FieldReadOnly.GetMember("Field"), breakingChanges[0].NewItem, "The NewItem is incorrect.");
+            AssertX.Null(breakingChanges[0].AssociatedData, "The AssociatedData is incorrect.");
+        }
 
-		public class FieldReadOnly { public readonly int Field; }
-		public class FieldReadWrite { public int Field; }
-	}
+        #endregion // FieldTests
+
+        public class FieldReadOnly { public readonly int Field; }
+        public class FieldReadWrite { public int Field; }
+    }
 }

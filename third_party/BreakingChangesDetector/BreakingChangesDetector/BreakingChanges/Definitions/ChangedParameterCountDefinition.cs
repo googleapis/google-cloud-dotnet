@@ -2,6 +2,7 @@
     MIT License
 
     Copyright(c) 2014-2018 Infragistics, Inc.
+    Copyright 2018 Google LLC
 
     Permission is hereby granted, free of charge, to any person obtaining a copy
     of this software and associated documentation files (the "Software"), to deal
@@ -31,51 +32,51 @@ using System.Threading.Tasks;
 
 namespace BreakingChangesDetector.BreakingChanges.Definitions
 {
-	internal class ChangedParameterCountDefinition : BreakingChangeDefinitionBase
-	{
-		public static readonly ChangedParameterCountDefinition Instance = new ChangedParameterCountDefinition();
+    internal class ChangedParameterCountDefinition : BreakingChangeDefinitionBase
+    {
+        public static readonly ChangedParameterCountDefinition Instance = new ChangedParameterCountDefinition();
 
-		private ChangedParameterCountDefinition() { }
+        private ChangedParameterCountDefinition() { }
 
-		public override void CompareItems(CompareItemsContext context)
-		{
-			var oldParameterizedItem = (IParameterizedItem)context.OldItem;
-			var newParameterizedItem = (IParameterizedItem)context.NewItem;
+        public override void CompareItems(CompareItemsContext context)
+        {
+            var oldParameterizedItem = (IParameterizedItem)context.OldItem;
+            var newParameterizedItem = (IParameterizedItem)context.NewItem;
 
-			if (oldParameterizedItem.Parameters == null || newParameterizedItem.Parameters == null)
-				return;
+            if (oldParameterizedItem.Parameters == null || newParameterizedItem.Parameters == null)
+                return;
 
-			// If there are now fewer parameters than before, it could be breaking, because someone could have specified all parameters
-			if (newParameterizedItem.Parameters.Count < oldParameterizedItem.Parameters.Count)
-			{
-				context.BreakingChanges.Add(new ChangedParameterCount(oldParameterizedItem, newParameterizedItem));
-				return;
-			}
+            // If there are now fewer parameters than before, it could be breaking, because someone could have specified all parameters
+            if (newParameterizedItem.Parameters.Count < oldParameterizedItem.Parameters.Count)
+            {
+                context.BreakingChanges.Add(new ChangedParameterCount(oldParameterizedItem, newParameterizedItem));
+                return;
+            }
 
-			// If there are now more required parameters than before, it could be breaking, because someone could have specified the minimum 
-			// required parameters before, which is no longer valid.
-			if (oldParameterizedItem.Parameters.RequiredArgumentCount < newParameterizedItem.Parameters.RequiredArgumentCount)
-			{
-				context.BreakingChanges.Add(new ChangedParameterCount(oldParameterizedItem, newParameterizedItem));
-				return;
-			}
-		}
+            // If there are now more required parameters than before, it could be breaking, because someone could have specified the minimum 
+            // required parameters before, which is no longer valid.
+            if (oldParameterizedItem.Parameters.RequiredArgumentCount < newParameterizedItem.Parameters.RequiredArgumentCount)
+            {
+                context.BreakingChanges.Add(new ChangedParameterCount(oldParameterizedItem, newParameterizedItem));
+                return;
+            }
+        }
 
-		public override BreakingChangeKind BreakingChangeKind
-		{
-			get { return BreakingChangeKind.ChangedParameterCount; }
-		}
+        public override BreakingChangeKind BreakingChangeKind
+        {
+            get { return BreakingChangeKind.ChangedParameterCount; }
+        }
 
-		public override MetadataItemKinds MembersKindsHandled
-		{
-			get
-			{
-				return
-					MetadataItemKinds.TypeDefinition |
-					MetadataItemKinds.Method |
-					MetadataItemKinds.Indexer |
-					MetadataItemKinds.Constructor;
-			}
-		}
-	}
+        public override MetadataItemKinds MembersKindsHandled
+        {
+            get
+            {
+                return
+                    MetadataItemKinds.TypeDefinition |
+                    MetadataItemKinds.Method |
+                    MetadataItemKinds.Indexer |
+                    MetadataItemKinds.Constructor;
+            }
+        }
+    }
 }

@@ -31,32 +31,32 @@ using System.Threading.Tasks;
 
 namespace Infragistics // TODO: Use a more generic namespace name
 {
-	/// <summary>
-	/// Represents the old name of a type which was renamed.
-	/// </summary>
-	[AttributeUsage(
-		AttributeTargets.Class | AttributeTargets.Delegate | AttributeTargets.Interface | AttributeTargets.Struct | AttributeTargets.Enum,
-		Inherited = false,
-		AllowMultiple = false)]
-	internal sealed class TypeRenamedAttribute : Attribute
-	{
-		private readonly string _oldName;
+    /// <summary>
+    /// Represents the old name of a type which was renamed.
+    /// </summary>
+    [AttributeUsage(
+        AttributeTargets.Class | AttributeTargets.Delegate | AttributeTargets.Interface | AttributeTargets.Struct | AttributeTargets.Enum,
+        Inherited = false,
+        AllowMultiple = false)]
+    internal sealed class TypeRenamedAttribute : Attribute
+    {
+        private readonly string _oldName;
 
-		/// <summary>
-		/// Creates a new <see cref="TypeRenamedAttribute"/> instance.
-		/// </summary>
-		/// <param name="oldName">The case-sensitive fully qualified name of the old type.</param>
-		public TypeRenamedAttribute(string oldName)
-		{
-			_oldName = oldName;
-		}
+        /// <summary>
+        /// Creates a new <see cref="TypeRenamedAttribute"/> instance.
+        /// </summary>
+        /// <param name="oldName">The case-sensitive fully qualified name of the old type.</param>
+        public TypeRenamedAttribute(string oldName)
+        {
+            _oldName = oldName;
+        }
 
-		/// <summary>
-		/// Gets the case-sensitive fully qualified name of the old type.
-		/// </summary>
-		public string OldName
-		{
-			get { return _oldName; }
-		}
-	}
+        /// <summary>
+        /// Gets the case-sensitive fully qualified name of the old type.
+        /// </summary>
+        public string OldName
+        {
+            get { return _oldName; }
+        }
+    }
 }

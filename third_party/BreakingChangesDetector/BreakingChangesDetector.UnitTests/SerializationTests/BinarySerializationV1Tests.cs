@@ -35,26 +35,26 @@ using System.Threading.Tasks;
 
 namespace BreakingChangesDetector.UnitTests.SerializationTests
 {
-	public class BinarySerializationV1Tests
-	{
-		// TODO_Test: Re-add this test
+    public class BinarySerializationV1Tests
+    {
+        // TODO_Test: Re-add this test
 
-		//[Fact]
-		//public void RoundTripTest()
-		//{
-		//	var family = AssemblyFamily.LoadFromAssemblies(new[] { typeof(BinarySerializationV1Tests).Assembly });
-		//	var allAssemblies = family.GetAllReferencedAssemblies().ToArray();
+        //[Fact]
+        //public void RoundTripTest()
+        //{
+        //	var family = AssemblyFamily.LoadFromAssemblies(new[] { typeof(BinarySerializationV1Tests).Assembly });
+        //	var allAssemblies = family.GetAllReferencedAssemblies().ToArray();
 
-		//	using (var stream = new MemoryStream())
-		//	{
-		//		new BinaryItemSerializerV1(stream, allAssemblies);
-		//		stream.Position = 0;
-		//		var loadedAssemblies = new BinaryItemDeserializerV1(stream).LoadedAssemblies;
+        //	using (var stream = new MemoryStream())
+        //	{
+        //		new BinaryItemSerializerV1(stream, allAssemblies);
+        //		stream.Position = 0;
+        //		var loadedAssemblies = new BinaryItemDeserializerV1(stream).LoadedAssemblies;
 
-		//		AssertX.Equal(allAssemblies.Length, loadedAssemblies.Length);
-		//		for (int i = 0; i < allAssemblies.Length; i++)
-		//			TestUtilities.VerifyAreEqual(allAssemblies[i], loadedAssemblies[i]);
-		//	}
-		//}
-	}
+        //		AssertX.Equal(allAssemblies.Length, loadedAssemblies.Length);
+        //		for (int i = 0; i < allAssemblies.Length; i++)
+        //			TestUtilities.VerifyAreEqual(allAssemblies[i], loadedAssemblies[i]);
+        //	}
+        //}
+    }
 }

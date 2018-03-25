@@ -2,6 +2,7 @@
     MIT License
 
     Copyright(c) 2014-2018 Infragistics, Inc.
+    Copyright 2018 Google LLC
 
     Permission is hereby granted, free of charge, to any person obtaining a copy
     of this software and associated documentation files (the "Software"), to deal
@@ -32,48 +33,48 @@ using System.Threading.Tasks;
 
 namespace BreakingChangesDetector.BreakingChanges.Definitions
 {
-	internal class AddedBaseInterfaceDefinition : BreakingChangeDefinitionBase
-	{
-		public static readonly AddedBaseInterfaceDefinition Instance = new AddedBaseInterfaceDefinition();
+    internal class AddedBaseInterfaceDefinition : BreakingChangeDefinitionBase
+    {
+        public static readonly AddedBaseInterfaceDefinition Instance = new AddedBaseInterfaceDefinition();
 
-		private AddedBaseInterfaceDefinition() { }
+        private AddedBaseInterfaceDefinition() { }
 
-		public override void CompareItems(CompareItemsContext context)
-		{
-			var oldType = (TypeDefinitionData)context.OldItem;
-			var newType = (TypeDefinitionData)context.NewItem;
+        public override void CompareItems(CompareItemsContext context)
+        {
+            var oldType = (TypeDefinitionData)context.OldItem;
+            var newType = (TypeDefinitionData)context.NewItem;
 
-			if (oldType.TypeKind != TypeKind.Interface)
-				return;
+            if (oldType.TypeKind != TypeKind.Interface)
+                return;
 
-			foreach (var newInterfaceType in newType.ImplementedInterfaces)
-			{
-				if (newInterfaceType.HasMembers == false)
-					continue;
+            foreach (var newInterfaceType in newType.ImplementedInterfaces)
+            {
+                if (newInterfaceType.HasMembers == false)
+                    continue;
 
-				var hasNewInterfaceEquivalent = false;
-				foreach (var oldInterfaceType in oldType.ImplementedInterfaces)
-				{
-					if (oldInterfaceType.IsEquivalentToNew(newInterfaceType, context.NewAssemblyFamily))
-					{
-						hasNewInterfaceEquivalent = true;
-						break;
-					}
-				}
+                var hasNewInterfaceEquivalent = false;
+                foreach (var oldInterfaceType in oldType.ImplementedInterfaces)
+                {
+                    if (oldInterfaceType.IsEquivalentToNew(newInterfaceType, context.NewAssemblyFamily))
+                    {
+                        hasNewInterfaceEquivalent = true;
+                        break;
+                    }
+                }
 
-				if (hasNewInterfaceEquivalent == false)
-					context.BreakingChanges.Add(new AddedBaseInterface(oldType, newType, newInterfaceType));
-			}
-		}
+                if (hasNewInterfaceEquivalent == false)
+                    context.BreakingChanges.Add(new AddedBaseInterface(oldType, newType, newInterfaceType));
+            }
+        }
 
-		public override BreakingChangeKind BreakingChangeKind
-		{
-			get { return BreakingChangeKind.AddedBaseInterface; }
-		}
+        public override BreakingChangeKind BreakingChangeKind
+        {
+            get { return BreakingChangeKind.AddedBaseInterface; }
+        }
 
-		public override MetadataItemKinds MembersKindsHandled
-		{
-			get { return MetadataItemKinds.TypeDefinition; }
-		}
-	}
+        public override MetadataItemKinds MembersKindsHandled
+        {
+            get { return MetadataItemKinds.TypeDefinition; }
+        }
+    }
 }

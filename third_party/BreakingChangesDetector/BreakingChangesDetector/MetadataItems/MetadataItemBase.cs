@@ -31,11 +31,11 @@ using System.Threading.Tasks;
 
 namespace BreakingChangesDetector.MetadataItems
 {
-	/// <summary>
-	/// Abstract base class for all classes representing and entity obtained from reflection metadata.
-	/// </summary>
-	public abstract class MetadataItemBase
-	{
+    /// <summary>
+    /// Abstract base class for all classes representing and entity obtained from reflection metadata.
+    /// </summary>
+    public abstract class MetadataItemBase
+    {
         /// <summary>
         /// Performs the specified visitor's functionality on this instance.
         /// </summary>
@@ -44,34 +44,34 @@ namespace BreakingChangesDetector.MetadataItems
 
         public abstract MetadataResolutionContext Context { get; }
 
-		/// <summary>
-		/// Gets the name to use for this item in messages.
-		/// </summary>
-		public abstract string DisplayName { get; }
+        /// <summary>
+        /// Gets the name to use for this item in messages.
+        /// </summary>
+        public abstract string DisplayName { get; }
 
-		internal virtual bool DoesMatch(MetadataItemBase other)
-		{
-			if (this.DisplayName != other.DisplayName)
-				return false;
+        internal virtual bool DoesMatch(MetadataItemBase other)
+        {
+            if (this.DisplayName != other.DisplayName)
+                return false;
 
-			if (this.MetadataItemKind != other.MetadataItemKind)
-				return false;
+            if (this.MetadataItemKind != other.MetadataItemKind)
+                return false;
 
-			return true;
-		}
+            return true;
+        }
 
-		/// <summary>
-		/// Gets the type of item the instance represents.
-		/// </summary>
-		public abstract MetadataItemKinds MetadataItemKind { get; }
+        /// <summary>
+        /// Gets the type of item the instance represents.
+        /// </summary>
+        public abstract MetadataItemKinds MetadataItemKind { get; }
 
-		/// <summary>
-		/// Gets the <see cref="DisplayName"/> of the item.
-		/// </summary>
-		/// <returns></returns>
-		public sealed override string ToString()
-		{
-			return this.DisplayName;
-		}
-	}
+        /// <summary>
+        /// Gets the <see cref="DisplayName"/> of the item.
+        /// </summary>
+        /// <returns></returns>
+        public sealed override string ToString()
+        {
+            return this.DisplayName;
+        }
+    }
 }

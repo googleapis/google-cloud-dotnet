@@ -29,16 +29,16 @@ using System.Linq;
 namespace BreakingChangesDetector.MetadataItems
 {
 #if DEBUG
-	/// <summary>
-	/// Represent the signature of a method which can be distinguished from other methods in the same assembly.
-	/// </summary> 
+    /// <summary>
+    /// Represent the signature of a method which can be distinguished from other methods in the same assembly.
+    /// </summary> 
 #endif
-	internal class MethodSignature
-	{
-		private readonly string _declaringTypeName;
-		private readonly int _typeParameterCount;
-		private readonly string _methodName;
-		private readonly ParameterKey[] _parameters;
+    internal class MethodSignature
+    {
+        private readonly string _declaringTypeName;
+        private readonly int _typeParameterCount;
+        private readonly string _methodName;
+        private readonly ParameterKey[] _parameters;
 
         public MethodSignature(MetadataResolutionContext context, IMethodSymbol methodSymbol)
         {
@@ -52,53 +52,53 @@ namespace BreakingChangesDetector.MetadataItems
             }
         }
 
-		public override bool Equals(object obj)
-		{
-			var other = obj as MethodSignature;
-			if (other == null)
-				return false;
+        public override bool Equals(object obj)
+        {
+            var other = obj as MethodSignature;
+            if (other == null)
+                return false;
 
-			if (_declaringTypeName != other._declaringTypeName)
-				return false;
+            if (_declaringTypeName != other._declaringTypeName)
+                return false;
 
-			if (_typeParameterCount != other._typeParameterCount)
-				return false;
+            if (_typeParameterCount != other._typeParameterCount)
+                return false;
 
-			if (_methodName != other._methodName)
-				return false;
+            if (_methodName != other._methodName)
+                return false;
 
-			if (_parameters.Length != other._parameters.Length)
-				return false;
+            if (_parameters.Length != other._parameters.Length)
+                return false;
 
-			for (int i = 0; i < _parameters.Length; i++)
-			{
-				if (_parameters[i].Equals(other._parameters[i]) == false)
-					return false;
-			}
+            for (int i = 0; i < _parameters.Length; i++)
+            {
+                if (_parameters[i].Equals(other._parameters[i]) == false)
+                    return false;
+            }
 
-			return true;
-		}
+            return true;
+        }
 
-		public override int GetHashCode()
-		{
-			var hashCode =
-				_declaringTypeName.GetHashCode() ^
-				(_typeParameterCount << 5) ^
-				_methodName.GetHashCode() << 7 ^
-				_parameters.Length << 10;
+        public override int GetHashCode()
+        {
+            var hashCode =
+                _declaringTypeName.GetHashCode() ^
+                (_typeParameterCount << 5) ^
+                _methodName.GetHashCode() << 7 ^
+                _parameters.Length << 10;
 
-			for (int i = 0; i < _parameters.Length; i++)
-				hashCode ^= _parameters[i].GetHashCode() << (i % 16);
+            for (int i = 0; i < _parameters.Length; i++)
+                hashCode ^= _parameters[i].GetHashCode() << (i % 16);
 
-			return hashCode;
-		}
+            return hashCode;
+        }
 
-		public override string ToString()
-		{
-			var genericSignature = _typeParameterCount == 0 ? "" : "<" + new string(',', _typeParameterCount - 1) + ">";
-			var parameterSignature = string.Join(", ", from t in _parameters select t);
-			return _declaringTypeName + "." + _methodName + genericSignature + "(" + parameterSignature + ")";
-		}
+        public override string ToString()
+        {
+            var genericSignature = _typeParameterCount == 0 ? "" : "<" + new string(',', _typeParameterCount - 1) + ">";
+            var parameterSignature = string.Join(", ", from t in _parameters select t);
+            return _declaringTypeName + "." + _methodName + genericSignature + "(" + parameterSignature + ")";
+        }
 
         private sealed class ParameterKey
         {
@@ -136,104 +136,104 @@ namespace BreakingChangesDetector.MetadataItems
             }
         }
 
-		private abstract class TypeKey
-		{
-			public static TypeKey Create(MetadataResolutionContext context, IParameterSymbol parameterSymbol)
+        private abstract class TypeKey
+        {
+            public static TypeKey Create(MetadataResolutionContext context, IParameterSymbol parameterSymbol)
             {
-				var typeParameterSymbol = parameterSymbol.Type as ITypeParameterSymbol;
-				if (typeParameterSymbol == null)
-					return new TypeNameTypeKey(context, parameterSymbol.Type);
+                var typeParameterSymbol = parameterSymbol.Type as ITypeParameterSymbol;
+                if (typeParameterSymbol == null)
+                    return new TypeNameTypeKey(context, parameterSymbol.Type);
 
-				if (typeParameterSymbol.DeclaringMethod != null)
-					return new MethodGenericParameterTypeKey(typeParameterSymbol.Ordinal);
+                if (typeParameterSymbol.DeclaringMethod != null)
+                    return new MethodGenericParameterTypeKey(typeParameterSymbol.Ordinal);
 
-				return new TypeGenericParameterTypeKey(typeParameterSymbol.Ordinal);
-			}
-		}
+                return new TypeGenericParameterTypeKey(typeParameterSymbol.Ordinal);
+            }
+        }
 
-		private sealed class MethodGenericParameterTypeKey : TypeKey
-		{
-			private readonly int _position;
+        private sealed class MethodGenericParameterTypeKey : TypeKey
+        {
+            private readonly int _position;
 
-			public MethodGenericParameterTypeKey(int position)
-			{
-				_position = position;
-			}
-
-			public override bool Equals(object obj)
-			{
-				var other = obj as MethodGenericParameterTypeKey;
-				return other != null && _position == other._position;
-			}
-
-			public override int GetHashCode()
-			{
-				return _position << 3;
-			}
-
-			public override string ToString()
-			{
-				return "<M_" + _position + ">";
-			}
-		}
-
-		private sealed class TypeGenericParameterTypeKey : TypeKey
-		{
-			private readonly int _position;
-
-			public TypeGenericParameterTypeKey(int position)
-			{
-				_position = position;
-			}
-
-			public override bool Equals(object obj)
-			{
-				var other = obj as TypeGenericParameterTypeKey;
-				return other != null && _position == other._position;
-			}
-
-			public override int GetHashCode()
-			{
-				return _position << 7;
-			}
-
-			public override string ToString()
-			{
-				return "<T_" + _position + ">";
-			}
-		}
-
-		private sealed class TypeNameTypeKey : TypeKey
-		{
-			private readonly string _assemblyName;
-			private readonly string _fullName;
-
-			public TypeNameTypeKey(MetadataResolutionContext context, ITypeSymbol typeSymbol)
+            public MethodGenericParameterTypeKey(int position)
             {
-				_fullName = typeSymbol.GetFullName();
-				_assemblyName = context.GetDeclaringAssemblySymbol(typeSymbol).ToDisplayString();
-			}
+                _position = position;
+            }
 
-			public override bool Equals(object obj)
-			{
-				var other = obj as TypeNameTypeKey;
-				return
-					other != null &&
-					_assemblyName == other._assemblyName &&
-					_fullName == other._fullName;
-			}
+            public override bool Equals(object obj)
+            {
+                var other = obj as MethodGenericParameterTypeKey;
+                return other != null && _position == other._position;
+            }
 
-			public override int GetHashCode()
-			{
-				return
-					_assemblyName.GetHashCode() ^
-					(_fullName.GetHashCode() << 5);
-			}
+            public override int GetHashCode()
+            {
+                return _position << 3;
+            }
 
-			public override string ToString()
-			{
-				return _fullName;
-			}
-		}
-	}
+            public override string ToString()
+            {
+                return "<M_" + _position + ">";
+            }
+        }
+
+        private sealed class TypeGenericParameterTypeKey : TypeKey
+        {
+            private readonly int _position;
+
+            public TypeGenericParameterTypeKey(int position)
+            {
+                _position = position;
+            }
+
+            public override bool Equals(object obj)
+            {
+                var other = obj as TypeGenericParameterTypeKey;
+                return other != null && _position == other._position;
+            }
+
+            public override int GetHashCode()
+            {
+                return _position << 7;
+            }
+
+            public override string ToString()
+            {
+                return "<T_" + _position + ">";
+            }
+        }
+
+        private sealed class TypeNameTypeKey : TypeKey
+        {
+            private readonly string _assemblyName;
+            private readonly string _fullName;
+
+            public TypeNameTypeKey(MetadataResolutionContext context, ITypeSymbol typeSymbol)
+            {
+                _fullName = typeSymbol.GetFullName();
+                _assemblyName = context.GetDeclaringAssemblySymbol(typeSymbol).ToDisplayString();
+            }
+
+            public override bool Equals(object obj)
+            {
+                var other = obj as TypeNameTypeKey;
+                return
+                    other != null &&
+                    _assemblyName == other._assemblyName &&
+                    _fullName == other._fullName;
+            }
+
+            public override int GetHashCode()
+            {
+                return
+                    _assemblyName.GetHashCode() ^
+                    (_fullName.GetHashCode() << 5);
+            }
+
+            public override string ToString()
+            {
+                return _fullName;
+            }
+        }
+    }
 }

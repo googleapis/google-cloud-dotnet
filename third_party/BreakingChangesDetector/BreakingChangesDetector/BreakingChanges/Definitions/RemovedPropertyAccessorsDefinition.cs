@@ -2,6 +2,7 @@
     MIT License
 
     Copyright(c) 2014-2018 Infragistics, Inc.
+    Copyright 2018 Google LLC
 
     Permission is hereby granted, free of charge, to any person obtaining a copy
     of this software and associated documentation files (the "Software"), to deal
@@ -31,44 +32,44 @@ using System.Threading.Tasks;
 
 namespace BreakingChangesDetector.BreakingChanges.Definitions
 {
-	internal class RemovedPropertyAccessorsDefinition : BreakingChangeDefinitionBase
-	{
-		public static readonly RemovedPropertyAccessorsDefinition Instance = new RemovedPropertyAccessorsDefinition();
+    internal class RemovedPropertyAccessorsDefinition : BreakingChangeDefinitionBase
+    {
+        public static readonly RemovedPropertyAccessorsDefinition Instance = new RemovedPropertyAccessorsDefinition();
 
-		private RemovedPropertyAccessorsDefinition() { }
+        private RemovedPropertyAccessorsDefinition() { }
 
-		public override void CompareItems(CompareItemsContext context)
-		{
-			var oldProperty = (PropertyData)context.OldItem;
-			var newProperty = (PropertyData)context.NewItem;
+        public override void CompareItems(CompareItemsContext context)
+        {
+            var oldProperty = (PropertyData)context.OldItem;
+            var newProperty = (PropertyData)context.NewItem;
 
-			if ((oldProperty.GetMethodAccessibility != null && newProperty.GetMethodAccessibility == null) ||
-				(oldProperty.Accessibility == newProperty.Accessibility && oldProperty.GetMethodAccessibility == MemberAccessibility.Public && newProperty.GetMethodAccessibility == MemberAccessibility.Protected))
-			{
-				context.BreakingChanges.Add(new RemovedPropertyAccessors(oldProperty, newProperty));
-				return;
-			}
+            if ((oldProperty.GetMethodAccessibility != null && newProperty.GetMethodAccessibility == null) ||
+                (oldProperty.Accessibility == newProperty.Accessibility && oldProperty.GetMethodAccessibility == MemberAccessibility.Public && newProperty.GetMethodAccessibility == MemberAccessibility.Protected))
+            {
+                context.BreakingChanges.Add(new RemovedPropertyAccessors(oldProperty, newProperty));
+                return;
+            }
 
-			if ((oldProperty.SetMethodAccessibility != null && newProperty.SetMethodAccessibility == null) ||
-				(oldProperty.Accessibility == newProperty.Accessibility && oldProperty.SetMethodAccessibility == MemberAccessibility.Public && newProperty.SetMethodAccessibility == MemberAccessibility.Protected))
-			{
-				context.BreakingChanges.Add(new RemovedPropertyAccessors(oldProperty, newProperty));
-			}
-		}
+            if ((oldProperty.SetMethodAccessibility != null && newProperty.SetMethodAccessibility == null) ||
+                (oldProperty.Accessibility == newProperty.Accessibility && oldProperty.SetMethodAccessibility == MemberAccessibility.Public && newProperty.SetMethodAccessibility == MemberAccessibility.Protected))
+            {
+                context.BreakingChanges.Add(new RemovedPropertyAccessors(oldProperty, newProperty));
+            }
+        }
 
-		public override BreakingChangeKind BreakingChangeKind
-		{
-			get { return BreakingChangeKind.RemovedPropertyAccessors; }
-		}
+        public override BreakingChangeKind BreakingChangeKind
+        {
+            get { return BreakingChangeKind.RemovedPropertyAccessors; }
+        }
 
-		public override MetadataItemKinds MembersKindsHandled
-		{
-			get
-			{
-				return
-					MetadataItemKinds.Property |
-					MetadataItemKinds.Indexer;
-			}
-		}
-	}
+        public override MetadataItemKinds MembersKindsHandled
+        {
+            get
+            {
+                return
+                    MetadataItemKinds.Property |
+                    MetadataItemKinds.Indexer;
+            }
+        }
+    }
 }

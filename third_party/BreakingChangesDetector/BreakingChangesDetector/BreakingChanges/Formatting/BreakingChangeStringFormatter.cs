@@ -2,6 +2,7 @@
     MIT License
 
     Copyright(c) 2014-2018 Infragistics, Inc.
+    Copyright 2018 Google LLC
 
     Permission is hereby granted, free of charge, to any person obtaining a copy
     of this software and associated documentation files (the "Software"), to deal
@@ -30,52 +31,52 @@ using System.Threading.Tasks;
 
 namespace BreakingChangesDetector.BreakingChanges.Formatting
 {
-	/// <summary>
-	/// A class capable of formatting breaking changes messages into a string.
-	/// </summary>
-	public class BreakingChangeStringFormatter : IBreakingChangeFormatter
-	{
-		#region Constructor
+    /// <summary>
+    /// A class capable of formatting breaking changes messages into a string.
+    /// </summary>
+    public class BreakingChangeStringFormatter : IBreakingChangeFormatter
+    {
+        #region Constructor
 
-		/// <summary>
-		/// Creates a new <see cref="BreakingChangeStringFormatter"/> instance.
-		/// </summary>
-		public BreakingChangeStringFormatter()
-		{
-			this.Builder = new StringBuilder();
-		}
+        /// <summary>
+        /// Creates a new <see cref="BreakingChangeStringFormatter"/> instance.
+        /// </summary>
+        public BreakingChangeStringFormatter()
+        {
+            this.Builder = new StringBuilder();
+        }
 
-		#endregion // Constructor
+        #endregion // Constructor
 
-		#region Methods
+        #region Methods
 
-		/// <summary>
-		/// Appends the text to the document using the specified format and formatting arguments.
-		/// </summary>
-		/// <param name="text">The format string used to append the text.</param>
-		/// <param name="arguments">The arguments to use in the format string.</param>
-		public void AppendFormat(string text, params FormatItem[] arguments)
-		{
-			this.Builder.AppendFormat(text, arguments);
-		}
+        /// <summary>
+        /// Appends the text to the document using the specified format and formatting arguments.
+        /// </summary>
+        /// <param name="text">The format string used to append the text.</param>
+        /// <param name="arguments">The arguments to use in the format string.</param>
+        public void AppendFormat(string text, params FormatItem[] arguments)
+        {
+            this.Builder.AppendFormat(text, arguments);
+        }
 
-		/// <summary>
-		/// Appends a new line to the formatted text.
-		/// </summary>
-		public void AppendLine()
-		{
-			this.Builder.AppendLine();
-		}
+        /// <summary>
+        /// Appends a new line to the formatted text.
+        /// </summary>
+        public void AppendLine()
+        {
+            this.Builder.AppendLine();
+        }
 
-		#endregion // Methods
+        #endregion // Methods
 
-		#region Properties
+        #region Properties
 
-		/// <summary>
-		/// Gets the StringBuilder containing the currently formatted string.
-		/// </summary>
-		public StringBuilder Builder { get; private set; }
+        /// <summary>
+        /// Gets the StringBuilder containing the currently formatted string.
+        /// </summary>
+        public StringBuilder Builder { get; private set; }
 
-		#endregion // Properties
-	}
+        #endregion // Properties
+    }
 }

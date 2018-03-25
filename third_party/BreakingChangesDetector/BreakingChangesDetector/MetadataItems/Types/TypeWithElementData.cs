@@ -34,89 +34,89 @@ using System.Threading.Tasks;
 
 namespace BreakingChangesDetector.MetadataItems
 {
-	/// <summary>
-	/// Abstract base class representing the metadata for an externally visible type with an element type, which is either an array or pointer type.
-	/// </summary>
-	public abstract class TypeWithElementData : TypeData
-	{
-		internal TypeWithElementData(string name, MemberAccessibility accessibility, MemberFlags memberFlags, TypeKind typeKind, TypeData elementType)
-			: base(name, accessibility, memberFlags, typeKind)
-		{
-			this.ElementType = elementType;
-		}
+    /// <summary>
+    /// Abstract base class representing the metadata for an externally visible type with an element type, which is either an array or pointer type.
+    /// </summary>
+    public abstract class TypeWithElementData : TypeData
+    {
+        internal TypeWithElementData(string name, MemberAccessibility accessibility, MemberFlags memberFlags, TypeKind typeKind, TypeData elementType)
+            : base(name, accessibility, memberFlags, typeKind)
+        {
+            this.ElementType = elementType;
+        }
 
-		/// <summary>
-		/// Performs the specified visitor's functionality on this instance.
-		/// </summary>
-		/// <param name="visitor">The visitor whose functionality should be performed on the instance.</param>
-		public override void Accept(MetadataItemVisitor visitor)
-		{
-			visitor.VisitTypeWithElementData(this);
-		}
+        /// <summary>
+        /// Performs the specified visitor's functionality on this instance.
+        /// </summary>
+        /// <param name="visitor">The visitor whose functionality should be performed on the instance.</param>
+        public override void Accept(MetadataItemVisitor visitor)
+        {
+            visitor.VisitTypeWithElementData(this);
+        }
 
-		/// <summary>
-		/// Gets the <see cref="T:AssemblyData"/> representing the assembly in which the type is defined.
-		/// </summary>
-		public override AssemblyData AssemblyData
-		{
-			get { return this.ElementType.AssemblyData; }
-		}
+        /// <summary>
+        /// Gets the <see cref="T:AssemblyData"/> representing the assembly in which the type is defined.
+        /// </summary>
+        public override AssemblyData AssemblyData
+        {
+            get { return this.ElementType.AssemblyData; }
+        }
 
-		internal override bool DoesMatch(MetadataItemBase other)
-		{
-			if (base.DoesMatch(other) == false)
-				return false;
+        internal override bool DoesMatch(MetadataItemBase other)
+        {
+            if (base.DoesMatch(other) == false)
+                return false;
 
-			var otherTyped = other as TypeWithElementData;
-			if (otherTyped == null)
-				return false;
+            var otherTyped = other as TypeWithElementData;
+            if (otherTyped == null)
+                return false;
 
-			if (this.ElementType.DisplayName != otherTyped.ElementType.DisplayName)
-				return false;
+            if (this.ElementType.DisplayName != otherTyped.ElementType.DisplayName)
+                return false;
 
-			return true;
-		}
-
-#if DEBUG
-		/// <summary>
-		/// Gets the <see cref="AssemblyFamily"/> containing the type. If the type is nullable and type with element, 
-		/// such as T?, T[], or T*, this returns the family containing the type T.
-		/// </summary> 
-#endif
-		internal override AssemblyFamily GetDefiningAssemblyFamily()
-		{
-			return this.ElementType.GetDefiningAssemblyFamily();
-		}
+            return true;
+        }
 
 #if DEBUG
-		/// <summary>
-		/// Gets the name of the namespace in which the type is defined, or null if it is not defined in a namespace.
-		/// </summary> 
+        /// <summary>
+        /// Gets the <see cref="AssemblyFamily"/> containing the type. If the type is nullable and type with element, 
+        /// such as T?, T[], or T*, this returns the family containing the type T.
+        /// </summary> 
 #endif
-		internal override string GetNamespaceName()
-		{
-			return this.ElementType.GetNamespaceName();
-		}
+        internal override AssemblyFamily GetDefiningAssemblyFamily()
+        {
+            return this.ElementType.GetDefiningAssemblyFamily();
+        }
 
 #if DEBUG
-		/// <summary>
-		/// Indicates whether a new member of the same type and name is logically the same member as the current member, just from a newer build.
-		/// </summary> 
+        /// <summary>
+        /// Gets the name of the namespace in which the type is defined, or null if it is not defined in a namespace.
+        /// </summary> 
 #endif
-		internal override bool IsEquivalentToNewMember(MemberDataBase newMember, AssemblyFamily newAssemblyFamily)
-		{
-			if (base.IsEquivalentToNewMember(newMember, newAssemblyFamily) == false)
-				return false;
+        internal override string GetNamespaceName()
+        {
+            return this.ElementType.GetNamespaceName();
+        }
 
-			var other = newMember as TypeWithElementData;
-			return
-				other != null &&
-				this.ElementType.IsEquivalentToNew(other.ElementType, newAssemblyFamily);
-		}
+#if DEBUG
+        /// <summary>
+        /// Indicates whether a new member of the same type and name is logically the same member as the current member, just from a newer build.
+        /// </summary> 
+#endif
+        internal override bool IsEquivalentToNewMember(MemberDataBase newMember, AssemblyFamily newAssemblyFamily)
+        {
+            if (base.IsEquivalentToNewMember(newMember, newAssemblyFamily) == false)
+                return false;
 
-		/// <summary>
-		/// Gets the underlying element type.
-		/// </summary>
-		public TypeData ElementType { get; private set; } // TODO_Serialize: Round trip and unit test
-	}
+            var other = newMember as TypeWithElementData;
+            return
+                other != null &&
+                this.ElementType.IsEquivalentToNew(other.ElementType, newAssemblyFamily);
+        }
+
+        /// <summary>
+        /// Gets the underlying element type.
+        /// </summary>
+        public TypeData ElementType { get; private set; } // TODO_Serialize: Round trip and unit test
+    }
 }

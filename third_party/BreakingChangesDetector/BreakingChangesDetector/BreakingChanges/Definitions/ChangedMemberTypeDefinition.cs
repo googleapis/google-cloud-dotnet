@@ -33,76 +33,76 @@ using System.Threading.Tasks;
 
 namespace BreakingChangesDetector.BreakingChanges.Definitions
 {
-	internal class ChangedMemberTypeDefinition : BreakingChangeDefinitionBase
-	{
-		public static readonly ChangedMemberTypeDefinition Instance = new ChangedMemberTypeDefinition();
+    internal class ChangedMemberTypeDefinition : BreakingChangeDefinitionBase
+    {
+        public static readonly ChangedMemberTypeDefinition Instance = new ChangedMemberTypeDefinition();
 
-		private ChangedMemberTypeDefinition() { }
+        private ChangedMemberTypeDefinition() { }
 
-		public override void CompareItems(CompareItemsContext context)
-		{
-			var oldTypedItem = (ITypedItem)context.OldItem;
-			var newTypedItem = (ITypedItem)context.NewItem;
-			if (oldTypedItem.Type == null || newTypedItem.Type == null)
-				return;
+        public override void CompareItems(CompareItemsContext context)
+        {
+            var oldTypedItem = (ITypedItem)context.OldItem;
+            var newTypedItem = (ITypedItem)context.NewItem;
+            if (oldTypedItem.Type == null || newTypedItem.Type == null)
+                return;
 
-			// Changing from void to non-void is allowed.
-			var typeDefinition = oldTypedItem.Type as TypeDefinitionData;
-			if (typeDefinition != null &&
-				typeDefinition.FullName == Utilities.VoidTypeName &&
-				typeDefinition.AssemblyData.Name == Utilities.CommonObjectRuntimeAssemblyName)
-				return;
+            // Changing from void to non-void is allowed.
+            var typeDefinition = oldTypedItem.Type as TypeDefinitionData;
+            if (typeDefinition != null &&
+                typeDefinition.FullName == Utilities.VoidTypeName &&
+                typeDefinition.AssemblyData.Name == Utilities.CommonObjectRuntimeAssemblyName)
+                return;
 
-			// If we are comparing two enum members, we know they came from the same type, which is also their return type, so we don't need to check below.
-			if (context.OldItem.MetadataItemKind == MetadataItemKinds.Constant &&
-				((MemberDataBase)context.OldItem).ContainingType.TypeKind == TypeKind.Enum)
-			{
-				return;
-			}
+            // If we are comparing two enum members, we know they came from the same type, which is also their return type, so we don't need to check below.
+            if (context.OldItem.MetadataItemKind == MetadataItemKinds.Constant &&
+                ((MemberDataBase)context.OldItem).ContainingType.TypeKind == TypeKind.Enum)
+            {
+                return;
+            }
 
-			switch (context.OldItem.MetadataItemKind)
-			{
-				// Read/write fields cannot change type at all because they can be used in out or ref parameters
-				case MetadataItemKinds.Field:
-					if (((FieldData)context.OldItem).IsReadOnly)
-						goto default;
+            switch (context.OldItem.MetadataItemKind)
+            {
+                // Read/write fields cannot change type at all because they can be used in out or ref parameters
+                case MetadataItemKinds.Field:
+                    if (((FieldData)context.OldItem).IsReadOnly)
+                        goto default;
 
-					if (oldTypedItem.IsTypeDynamic != newTypedItem.IsTypeDynamic ||
-						oldTypedItem.Type.IsEquivalentToNew(newTypedItem.Type, context.NewAssemblyFamily) == false)
-					{
-						context.BreakingChanges.Add(new ChangedMemberType(oldTypedItem, newTypedItem));
-					}
-					break;
+                    if (oldTypedItem.IsTypeDynamic != newTypedItem.IsTypeDynamic ||
+                        oldTypedItem.Type.IsEquivalentToNew(newTypedItem.Type, context.NewAssemblyFamily) == false)
+                    {
+                        context.BreakingChanges.Add(new ChangedMemberType(oldTypedItem, newTypedItem));
+                    }
+                    break;
 
-				default:
-					if (newTypedItem.IsTypeDynamic == false)
-					{
-						if (oldTypedItem.IsTypeDynamic || oldTypedItem.Type.IsAssignableFromNew(newTypedItem.Type, context.NewAssemblyFamily) == false)
-							context.BreakingChanges.Add(new ChangedMemberType(oldTypedItem, newTypedItem));
-					}
-					break;
-			}
-		}
+                default:
+                    if (newTypedItem.IsTypeDynamic == false)
+                    {
+                        if (oldTypedItem.IsTypeDynamic || oldTypedItem.Type.IsAssignableFromNew(newTypedItem.Type, context.NewAssemblyFamily) == false)
+                            context.BreakingChanges.Add(new ChangedMemberType(oldTypedItem, newTypedItem));
+                    }
+                    break;
+            }
+        }
 
-		public override BreakingChangeKind BreakingChangeKind
-		{
-			get { return BreakingChangeKind.ChangedMemberType; }
-		}
+        public override BreakingChangeKind BreakingChangeKind
+        {
+            get { return BreakingChangeKind.ChangedMemberType; }
+        }
 
-		public override MetadataItemKinds MembersKindsHandled
-		{
-			get
-			{
-				return
-					MetadataItemKinds.Constant |
-					MetadataItemKinds.Event |
-					MetadataItemKinds.Field |
-					MetadataItemKinds.Indexer |
-					MetadataItemKinds.Method |
-					MetadataItemKinds.Operator |
-					MetadataItemKinds.Property |
-					MetadataItemKinds.TypeDefinition;
-			}
-		}
-	}
+        public override MetadataItemKinds MembersKindsHandled
+        {
+            get
+            {
+                return
+                    MetadataItemKinds.Constant |
+                    MetadataItemKinds.Event |
+                    MetadataItemKinds.Field |
+                    MetadataItemKinds.Indexer |
+                    MetadataItemKinds.Method |
+                    MetadataItemKinds.Operator |
+                    MetadataItemKinds.Property |
+                    MetadataItemKinds.TypeDefinition;
+            }
+        }
+    }
 }

@@ -2,6 +2,7 @@
     MIT License
 
     Copyright(c) 2014-2018 Infragistics, Inc.
+    Copyright 2018 Google LLC
 
     Permission is hereby granted, free of charge, to any person obtaining a copy
     of this software and associated documentation files (the "Software"), to deal
@@ -32,33 +33,33 @@ using System.Threading.Tasks;
 
 namespace BreakingChangesDetector.BreakingChanges.Definitions
 {
-	internal class IncompatibleClassHierarchyDefinition : BreakingChangeDefinitionBase
-	{
-		public static readonly IncompatibleClassHierarchyDefinition Instance = new IncompatibleClassHierarchyDefinition();
+    internal class IncompatibleClassHierarchyDefinition : BreakingChangeDefinitionBase
+    {
+        public static readonly IncompatibleClassHierarchyDefinition Instance = new IncompatibleClassHierarchyDefinition();
 
-		private IncompatibleClassHierarchyDefinition() { }
+        private IncompatibleClassHierarchyDefinition() { }
 
-		public override void CompareItems(CompareItemsContext context)
-		{
-			var oldType = (TypeDefinitionData)context.OldItem;
-			var newType = (TypeDefinitionData)context.NewItem;
+        public override void CompareItems(CompareItemsContext context)
+        {
+            var oldType = (TypeDefinitionData)context.OldItem;
+            var newType = (TypeDefinitionData)context.NewItem;
 
-			// If the old type is object, the new type will be derived from it, so there are no breaking changes.
-			if (oldType.BaseType != null)
-			{
-				if (oldType.TypeKind == TypeKind.Class && oldType.BaseType.IsAssignableFromNew(newType.BaseType, context.NewAssemblyFamily) == false)
-					context.BreakingChanges.Add(new IncompatibleClassHierarchy(oldType, newType));
-			}
-		}
+            // If the old type is object, the new type will be derived from it, so there are no breaking changes.
+            if (oldType.BaseType != null)
+            {
+                if (oldType.TypeKind == TypeKind.Class && oldType.BaseType.IsAssignableFromNew(newType.BaseType, context.NewAssemblyFamily) == false)
+                    context.BreakingChanges.Add(new IncompatibleClassHierarchy(oldType, newType));
+            }
+        }
 
-		public override BreakingChangeKind BreakingChangeKind
-		{
-			get { return BreakingChangeKind.IncompatibleClassHierarchy; }
-		}
+        public override BreakingChangeKind BreakingChangeKind
+        {
+            get { return BreakingChangeKind.IncompatibleClassHierarchy; }
+        }
 
-		public override MetadataItemKinds MembersKindsHandled
-		{
-			get { return MetadataItemKinds.TypeDefinition; }
-		}
-	}
+        public override MetadataItemKinds MembersKindsHandled
+        {
+            get { return MetadataItemKinds.TypeDefinition; }
+        }
+    }
 }

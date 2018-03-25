@@ -29,31 +29,31 @@ using BreakingChangesDetector.MetadataItems;
 
 namespace BreakingChangesDetector.UnitTests.MetadataTypesTests
 {
-	
-	public class ParameterCollectionTests
-	{
-		#region RequiredArgumentCount
 
-		[Fact]
-		public void RequiredArgumentCount()
-		{
-			var t = typeof(VariousMemberFeatures);
-			var context = MetadataResolutionContext.CreateFromTypes(t);
-			var typeData = context.GetTypeDefinitionData(t);
+    public class ParameterCollectionTests
+    {
+        #region RequiredArgumentCount
 
-			var method = (MethodData)typeData.GetMember("MethodWithDefaultParameter");
-			AssertX.Equal(1, method.Parameters.RequiredArgumentCount, "The RequiredArgumentCount of the parameters collection is not correct.");
+        [Fact]
+        public void RequiredArgumentCount()
+        {
+            var t = typeof(VariousMemberFeatures);
+            var context = MetadataResolutionContext.CreateFromTypes(t);
+            var typeData = context.GetTypeDefinitionData(t);
 
-			method = (MethodData)typeData.GetMember("MethodWithParameterModifiers");
-			AssertX.Equal(3, method.Parameters.RequiredArgumentCount, "The RequiredArgumentCount of the parameters collection is not correct.");
+            var method = (MethodData)typeData.GetMember("MethodWithDefaultParameter");
+            AssertX.Equal(1, method.Parameters.RequiredArgumentCount, "The RequiredArgumentCount of the parameters collection is not correct.");
 
-			method = (MethodData)typeData.GetMember("MethodWithParameterTypes");
-			AssertX.Equal(2, method.Parameters.RequiredArgumentCount, "The RequiredArgumentCount of the parameters collection is not correct.");
+            method = (MethodData)typeData.GetMember("MethodWithParameterModifiers");
+            AssertX.Equal(3, method.Parameters.RequiredArgumentCount, "The RequiredArgumentCount of the parameters collection is not correct.");
 
-			method = (MethodData)typeData.GetMember("MethodWithParamsArray");
-			AssertX.Equal(1, method.Parameters.RequiredArgumentCount, "The RequiredArgumentCount of the parameters collection is not correct.");
-		}
+            method = (MethodData)typeData.GetMember("MethodWithParameterTypes");
+            AssertX.Equal(2, method.Parameters.RequiredArgumentCount, "The RequiredArgumentCount of the parameters collection is not correct.");
 
-		#endregion // RequiredArgumentCount
-	}
+            method = (MethodData)typeData.GetMember("MethodWithParamsArray");
+            AssertX.Equal(1, method.Parameters.RequiredArgumentCount, "The RequiredArgumentCount of the parameters collection is not correct.");
+        }
+
+        #endregion // RequiredArgumentCount
+    }
 }

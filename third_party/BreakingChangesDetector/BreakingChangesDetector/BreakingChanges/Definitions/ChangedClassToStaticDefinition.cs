@@ -2,6 +2,7 @@
     MIT License
 
     Copyright(c) 2014-2018 Infragistics, Inc.
+    Copyright 2018 Google LLC
 
     Permission is hereby granted, free of charge, to any person obtaining a copy
     of this software and associated documentation files (the "Software"), to deal
@@ -31,32 +32,32 @@ using System.Threading.Tasks;
 
 namespace BreakingChangesDetector.BreakingChanges.Definitions
 {
-	internal class ChangedClassToStaticDefinition : BreakingChangeDefinitionBase
-	{
-		public static readonly ChangedClassToStaticDefinition Instance = new ChangedClassToStaticDefinition();
+    internal class ChangedClassToStaticDefinition : BreakingChangeDefinitionBase
+    {
+        public static readonly ChangedClassToStaticDefinition Instance = new ChangedClassToStaticDefinition();
 
-		private ChangedClassToStaticDefinition() { }
+        private ChangedClassToStaticDefinition() { }
 
-		public override void CompareItems(CompareItemsContext context)
-		{
-			var oldType = (TypeDefinitionData)context.OldItem;
-			var newType = (TypeDefinitionData)context.NewItem;
+        public override void CompareItems(CompareItemsContext context)
+        {
+            var oldType = (TypeDefinitionData)context.OldItem;
+            var newType = (TypeDefinitionData)context.NewItem;
 
-			if (oldType.IsStatic == false && newType.IsStatic)
-			{
-				if (oldType.HasPublicConstructors || oldType.CanBeInherited)
-					context.BreakingChanges.Add(new ChangedClassToStatic(oldType, newType));
-			}
-		}
+            if (oldType.IsStatic == false && newType.IsStatic)
+            {
+                if (oldType.HasPublicConstructors || oldType.CanBeInherited)
+                    context.BreakingChanges.Add(new ChangedClassToStatic(oldType, newType));
+            }
+        }
 
-		public override BreakingChangeKind BreakingChangeKind
-		{
-			get { return BreakingChangeKind.ChangedClassToStatic; }
-		}
+        public override BreakingChangeKind BreakingChangeKind
+        {
+            get { return BreakingChangeKind.ChangedClassToStatic; }
+        }
 
-		public override MetadataItemKinds MembersKindsHandled
-		{
-			get { return MetadataItemKinds.TypeDefinition; }
-		}
-	}
+        public override MetadataItemKinds MembersKindsHandled
+        {
+            get { return MetadataItemKinds.TypeDefinition; }
+        }
+    }
 }

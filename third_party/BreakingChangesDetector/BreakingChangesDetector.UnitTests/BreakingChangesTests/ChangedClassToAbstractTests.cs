@@ -31,60 +31,60 @@ using BreakingChangesDetector.BreakingChanges;
 
 namespace BreakingChangesDetector.UnitTests.BreakingChangesTests
 {
-	public class ChangedClassToAbstractTests
-	{
-		#region NestedTypeTests
+    public class ChangedClassToAbstractTests
+    {
+        #region NestedTypeTests
 
-		[Fact]
-		public void NestedTypeTests()
-		{
-			var context = MetadataResolutionContext.CreateFromTypes(typeof(ChangedAccessibilityFromPublicToProtectedTests));
-			var NestedClass = context.GetTypeDefinitionData(typeof(NestedClass));
-			var NestedClassWithInternalConstructor = context.GetTypeDefinitionData(typeof(NestedClassWithInternalConstructor));
-			var NestedAbstractClass = context.GetTypeDefinitionData(typeof(NestedAbstractClass));
-			
-			var breakingChanges = MetadataComparer.CompareTypes(NestedClass, NestedAbstractClass).Where(b => b.BreakingChangeKind == BreakingChangeKind.ChangedClassToAbstract).ToList();
-			AssertX.Equal(1, breakingChanges.Count, "There should be one breaking change when a class is made abstract.");
-			AssertX.Equal(BreakingChangeKind.ChangedClassToAbstract, breakingChanges[0].BreakingChangeKind, "The BreakingChangeKind is incorrect.");
-			AssertX.Equal(NestedClass.GetMember("Class"), breakingChanges[0].OldItem, "The OldItem is incorrect.");
-			AssertX.Equal(NestedAbstractClass.GetMember("Class"), breakingChanges[0].NewItem, "The NewItem is incorrect.");
-			AssertX.Null(breakingChanges[0].AssociatedData, "The AssociatedData is incorrect.");
+        [Fact]
+        public void NestedTypeTests()
+        {
+            var context = MetadataResolutionContext.CreateFromTypes(typeof(ChangedAccessibilityFromPublicToProtectedTests));
+            var NestedClass = context.GetTypeDefinitionData(typeof(NestedClass));
+            var NestedClassWithInternalConstructor = context.GetTypeDefinitionData(typeof(NestedClassWithInternalConstructor));
+            var NestedAbstractClass = context.GetTypeDefinitionData(typeof(NestedAbstractClass));
 
-			breakingChanges = MetadataComparer.CompareTypes(NestedClassWithInternalConstructor, NestedAbstractClass);
-			AssertX.Equal(0, breakingChanges.Count, "There should be no breaking changes when a class with no public constructors is made abstract.");
-		}
+            var breakingChanges = MetadataComparer.CompareTypes(NestedClass, NestedAbstractClass).Where(b => b.BreakingChangeKind == BreakingChangeKind.ChangedClassToAbstract).ToList();
+            AssertX.Equal(1, breakingChanges.Count, "There should be one breaking change when a class is made abstract.");
+            AssertX.Equal(BreakingChangeKind.ChangedClassToAbstract, breakingChanges[0].BreakingChangeKind, "The BreakingChangeKind is incorrect.");
+            AssertX.Equal(NestedClass.GetMember("Class"), breakingChanges[0].OldItem, "The OldItem is incorrect.");
+            AssertX.Equal(NestedAbstractClass.GetMember("Class"), breakingChanges[0].NewItem, "The NewItem is incorrect.");
+            AssertX.Null(breakingChanges[0].AssociatedData, "The AssociatedData is incorrect.");
 
-		#endregion // NestedTypeTests
+            breakingChanges = MetadataComparer.CompareTypes(NestedClassWithInternalConstructor, NestedAbstractClass);
+            AssertX.Equal(0, breakingChanges.Count, "There should be no breaking changes when a class with no public constructors is made abstract.");
+        }
 
-		#region TypeTests
+        #endregion // NestedTypeTests
 
-		[Fact]
-		public void TypeTests()
-		{
-			var context = MetadataResolutionContext.CreateFromTypes(typeof(ChangedAccessibilityFromPublicToProtectedTests));
-			var Class = context.GetTypeDefinitionData(typeof(Class));
-			var ClassWithInternalConstructor = context.GetTypeDefinitionData(typeof(ClassWithInternalConstructor));
-			var AbstractClass = context.GetTypeDefinitionData(typeof(AbstractClass));
-			
-			var breakingChanges = MetadataComparer.CompareTypes(Class, AbstractClass).Where(b => b.BreakingChangeKind == BreakingChangeKind.ChangedClassToAbstract).ToList();
-			AssertX.Equal(1, breakingChanges.Count, "There should be one breaking change when a class is made abstract.");
-			AssertX.Equal(BreakingChangeKind.ChangedClassToAbstract, breakingChanges[0].BreakingChangeKind, "The BreakingChangeKind is incorrect.");
-			AssertX.Equal(Class, breakingChanges[0].OldItem, "The OldItem is incorrect.");
-			AssertX.Equal(AbstractClass, breakingChanges[0].NewItem, "The NewItem is incorrect.");
-			AssertX.Null(breakingChanges[0].AssociatedData, "The AssociatedData is incorrect.");
+        #region TypeTests
 
-			breakingChanges = MetadataComparer.CompareTypes(ClassWithInternalConstructor, AbstractClass);
-			AssertX.Equal(0, breakingChanges.Count, "There should be no breaking changes when a class with no public constructors is made abstract.");
-		}
+        [Fact]
+        public void TypeTests()
+        {
+            var context = MetadataResolutionContext.CreateFromTypes(typeof(ChangedAccessibilityFromPublicToProtectedTests));
+            var Class = context.GetTypeDefinitionData(typeof(Class));
+            var ClassWithInternalConstructor = context.GetTypeDefinitionData(typeof(ClassWithInternalConstructor));
+            var AbstractClass = context.GetTypeDefinitionData(typeof(AbstractClass));
 
-		#endregion // TypeTests
+            var breakingChanges = MetadataComparer.CompareTypes(Class, AbstractClass).Where(b => b.BreakingChangeKind == BreakingChangeKind.ChangedClassToAbstract).ToList();
+            AssertX.Equal(1, breakingChanges.Count, "There should be one breaking change when a class is made abstract.");
+            AssertX.Equal(BreakingChangeKind.ChangedClassToAbstract, breakingChanges[0].BreakingChangeKind, "The BreakingChangeKind is incorrect.");
+            AssertX.Equal(Class, breakingChanges[0].OldItem, "The OldItem is incorrect.");
+            AssertX.Equal(AbstractClass, breakingChanges[0].NewItem, "The NewItem is incorrect.");
+            AssertX.Null(breakingChanges[0].AssociatedData, "The AssociatedData is incorrect.");
 
-		public class NestedClass { public class Class { } }
-		public class NestedClassWithInternalConstructor { public class Class { internal Class() { } } }
-		public class NestedAbstractClass { public abstract class Class { } }
+            breakingChanges = MetadataComparer.CompareTypes(ClassWithInternalConstructor, AbstractClass);
+            AssertX.Equal(0, breakingChanges.Count, "There should be no breaking changes when a class with no public constructors is made abstract.");
+        }
 
-		public class Class { }
-		public class ClassWithInternalConstructor { internal ClassWithInternalConstructor() { } }
-		public abstract class AbstractClass { }
-	}
+        #endregion // TypeTests
+
+        public class NestedClass { public class Class { } }
+        public class NestedClassWithInternalConstructor { public class Class { internal Class() { } } }
+        public class NestedAbstractClass { public abstract class Class { } }
+
+        public class Class { }
+        public class ClassWithInternalConstructor { internal ClassWithInternalConstructor() { } }
+        public abstract class AbstractClass { }
+    }
 }

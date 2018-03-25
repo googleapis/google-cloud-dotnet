@@ -2,6 +2,7 @@
     MIT License
 
     Copyright(c) 2014-2018 Infragistics, Inc.
+    Copyright 2018 Google LLC
 
     Permission is hereby granted, free of charge, to any person obtaining a copy
     of this software and associated documentation files (the "Software"), to deal
@@ -31,29 +32,29 @@ using System.Threading.Tasks;
 
 namespace BreakingChangesDetector.BreakingChanges.Definitions
 {
-	internal class ChangedClassToAbstractDefinition : BreakingChangeDefinitionBase
-	{
-		public static readonly ChangedClassToAbstractDefinition Instance = new ChangedClassToAbstractDefinition();
+    internal class ChangedClassToAbstractDefinition : BreakingChangeDefinitionBase
+    {
+        public static readonly ChangedClassToAbstractDefinition Instance = new ChangedClassToAbstractDefinition();
 
-		private ChangedClassToAbstractDefinition() { }
+        private ChangedClassToAbstractDefinition() { }
 
-		public override void CompareItems(CompareItemsContext context)
-		{
-			var oldType = (TypeDefinitionData)context.OldItem;
-			var newType = (TypeDefinitionData)context.NewItem;
+        public override void CompareItems(CompareItemsContext context)
+        {
+            var oldType = (TypeDefinitionData)context.OldItem;
+            var newType = (TypeDefinitionData)context.NewItem;
 
-			if (oldType.HasPublicConstructors && oldType.IsAbstract == false && newType.IsAbstract)
-				context.BreakingChanges.Add(new ChangedClassToAbstract(oldType, newType));
-		}
+            if (oldType.HasPublicConstructors && oldType.IsAbstract == false && newType.IsAbstract)
+                context.BreakingChanges.Add(new ChangedClassToAbstract(oldType, newType));
+        }
 
-		public override BreakingChangeKind BreakingChangeKind
-		{
-			get { return BreakingChangeKind.ChangedClassToAbstract; }
-		}
+        public override BreakingChangeKind BreakingChangeKind
+        {
+            get { return BreakingChangeKind.ChangedClassToAbstract; }
+        }
 
-		public override MetadataItemKinds MembersKindsHandled
-		{
-			get { return MetadataItemKinds.TypeDefinition; }
-		}
-	}
+        public override MetadataItemKinds MembersKindsHandled
+        {
+            get { return MetadataItemKinds.TypeDefinition; }
+        }
+    }
 }
