@@ -31,7 +31,7 @@ namespace BreakingChangesDetector.MetadataItems
     /// <summary>
     /// A collection of <see cref="DeclaringTypeData"/> instances representing interfaces
     /// </summary>
-    public class ImplementedInterfacesCollection : IEnumerable<DeclaringTypeData>
+    public sealed class ImplementedInterfacesCollection : IEnumerable<DeclaringTypeData>
     {
         private readonly DeclaringTypeData[] _implementedInterfaces;
 

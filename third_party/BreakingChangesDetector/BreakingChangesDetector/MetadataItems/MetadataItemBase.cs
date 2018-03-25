@@ -27,7 +27,7 @@
 namespace BreakingChangesDetector.MetadataItems
 {
     /// <summary>
-    /// Abstract base class for all classes representing and entity obtained from reflection metadata.
+    /// Abstract base sealed class for all classes representing and entity obtained from reflection metadata.
     /// </summary>
     public abstract class MetadataItemBase
     {

@@ -27,7 +27,7 @@ using BreakingChangesDetector.MetadataItems;
 
 namespace BreakingChangesDetector.BreakingChanges.Definitions
 {
-    internal class ChangedMemberToAbstractDefinition : BreakingChangeDefinitionBase
+    internal sealed class ChangedMemberToAbstractDefinition : BreakingChangeDefinitionBase
     {
         public static readonly ChangedMemberToAbstractDefinition Instance =
             new ChangedMemberToAbstractDefinition();

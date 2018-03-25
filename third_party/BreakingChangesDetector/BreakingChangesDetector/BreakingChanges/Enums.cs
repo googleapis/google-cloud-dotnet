@@ -55,7 +55,7 @@ namespace BreakingChangesDetector.BreakingChanges
         ChangedAccessibilityFromPublicToProtected,
 
         /// <summary>
-        /// Represents the change of the non-abstract class to abstract, which will cause instantiations of the type to not compile.
+        /// Represents the change of the non-abstract sealed class to abstract, which will cause instantiations of the type to not compile.
         /// </summary>
         ChangedClassToAbstract,
 
@@ -65,7 +65,7 @@ namespace BreakingChangesDetector.BreakingChanges
         ChangedFieldToReadOnly,
 
         /// <summary>
-        /// Represents the change of the class to static, which will cause instantiations of the type to not compile.
+        /// Represents the change of the sealed class to static, which will cause instantiations of the type to not compile.
         /// </summary>
         ChangedClassToStatic,
 
@@ -140,7 +140,7 @@ namespace BreakingChangesDetector.BreakingChanges
 
         /// <summary>
         /// Represents the change of a class's base type to something not derived from the original base type, which may cause external usages of
-        /// the class to not compile.
+        /// the sealed class to not compile.
         /// </summary>
         IncompatibleClassHierarchy,
 
@@ -184,7 +184,7 @@ namespace BreakingChangesDetector.BreakingChanges
         RemovedRootType,
 
         /// <summary>
-        /// Represents the addition of the 'sealed' keyword to a class declaration, which will cause externally derived classes to not compile.
+        /// Represents the addition of the 'sealed' keyword to a sealed class declaration, which will cause externally derived classes to not compile.
         /// </summary>
         SealedClass,
 

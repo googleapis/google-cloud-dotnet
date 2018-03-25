@@ -27,7 +27,7 @@ using BreakingChangesDetector.MetadataItems;
 
 namespace BreakingChangesDetector.BreakingChanges.Definitions
 {
-    internal class ChangedFieldToReadOnlyDefinition : BreakingChangeDefinitionBase
+    internal sealed class ChangedFieldToReadOnlyDefinition : BreakingChangeDefinitionBase
     {
         public static readonly ChangedFieldToReadOnlyDefinition Instance = new ChangedFieldToReadOnlyDefinition();
 

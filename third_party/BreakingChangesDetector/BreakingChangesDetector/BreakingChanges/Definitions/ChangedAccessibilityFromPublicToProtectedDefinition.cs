@@ -27,7 +27,7 @@ using BreakingChangesDetector.MetadataItems;
 
 namespace BreakingChangesDetector.BreakingChanges.Definitions
 {
-    internal class ChangedAccessibilityFromPublicToProtectedDefinition : BreakingChangeDefinitionBase
+    internal sealed class ChangedAccessibilityFromPublicToProtectedDefinition : BreakingChangeDefinitionBase
     {
         public static readonly ChangedAccessibilityFromPublicToProtectedDefinition Instance =
             new ChangedAccessibilityFromPublicToProtectedDefinition();

@@ -29,7 +29,7 @@ using System.Diagnostics;
 namespace BreakingChangesDetector.MetadataItems
 {
     /// <summary>
-    /// Abstract base class representing metadata for externally visible members with an type or return type.
+    /// Abstract base sealed class representing metadata for externally visible members with an type or return type.
     /// </summary>
     public abstract class TypedMemberDataBase : MemberDataBase,
         ITypedItem

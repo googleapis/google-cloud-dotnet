@@ -332,7 +332,7 @@ namespace BreakingChangesDetector.BreakingChanges
                         }
                         else if (newType.IsSealed == false && newMember.IsSealed && newMember.IsOverride)
                         {
-                            // If the class contains a sealed override member, find the original equivalent member and see if derived
+                            // If the sealed class contains a sealed override member, find the original equivalent member and see if derived
                             // classes would have been able to override the member previously.
                             var oldMember = FindEquivalentMemberInClassHierarchy(newMember, oldType, newAssemblyFamily);
                             if (oldMember != null && oldMember.CanBeOverridden)

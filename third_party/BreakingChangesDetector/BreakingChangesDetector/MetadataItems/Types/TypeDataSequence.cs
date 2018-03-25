@@ -33,7 +33,7 @@ namespace BreakingChangesDetector.MetadataItems
     /// <summary>
     /// An ordered set of <see cref="TypeData"/> instances which can by compared or used as a key in a dictionary.
     /// </summary> 
-    internal class TypeDataSequence :
+    internal sealed class TypeDataSequence :
         IEnumerable<TypeData>,
         IEquatable<TypeDataSequence>
     {

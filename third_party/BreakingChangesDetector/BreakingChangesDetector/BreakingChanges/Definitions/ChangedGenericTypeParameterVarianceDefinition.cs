@@ -28,7 +28,7 @@ using System.Reflection;
 
 namespace BreakingChangesDetector.BreakingChanges.Definitions
 {
-    internal class ChangedGenericTypeParameterVarianceDefinition : BreakingChangeDefinitionBase
+    internal sealed class ChangedGenericTypeParameterVarianceDefinition : BreakingChangeDefinitionBase
     {
         public static readonly ChangedGenericTypeParameterVarianceDefinition Instance =
             new ChangedGenericTypeParameterVarianceDefinition();

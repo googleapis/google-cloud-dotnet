@@ -31,7 +31,7 @@ namespace BreakingChangesDetector.MetadataItems
     /// <summary>
     /// Represent the signature of a method which can be distinguished from other methods in the same assembly.
     /// </summary> 
-    internal class MethodSignature
+    internal sealed class MethodSignature
     {
         private readonly string _declaringTypeName;
         private readonly int _typeParameterCount;

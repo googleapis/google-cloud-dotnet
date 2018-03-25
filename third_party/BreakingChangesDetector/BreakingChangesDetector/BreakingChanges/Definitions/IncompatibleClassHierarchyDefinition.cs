@@ -28,7 +28,7 @@ using Microsoft.CodeAnalysis;
 
 namespace BreakingChangesDetector.BreakingChanges.Definitions
 {
-    internal class IncompatibleClassHierarchyDefinition : BreakingChangeDefinitionBase
+    internal sealed class IncompatibleClassHierarchyDefinition : BreakingChangeDefinitionBase
     {
         public static readonly IncompatibleClassHierarchyDefinition Instance =
             new IncompatibleClassHierarchyDefinition();

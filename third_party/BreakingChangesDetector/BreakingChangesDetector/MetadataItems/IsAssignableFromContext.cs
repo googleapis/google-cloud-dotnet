@@ -26,7 +26,7 @@
 
 namespace BreakingChangesDetector.MetadataItems
 {
-    internal class IsAssignableFromContext
+    internal sealed class IsAssignableFromContext
     {
         public readonly bool IsSourceTypeOld;
         public bool IsTargetTypeOld => IsSourceTypeOld == false;

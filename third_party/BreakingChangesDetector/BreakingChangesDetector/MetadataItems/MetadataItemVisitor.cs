@@ -27,7 +27,7 @@
 namespace BreakingChangesDetector.MetadataItems
 {
     /// <summary>
-    /// Abstract base class for a visitor of <see cref="MetadataItemBase"/> instances.
+    /// Abstract base sealed class for a visitor of <see cref="MetadataItemBase"/> instances.
     /// </summary>
     public abstract class MetadataItemVisitor
     {

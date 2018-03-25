@@ -28,7 +28,7 @@ using Microsoft.CodeAnalysis;
 namespace BreakingChangesDetector.MetadataItems
 {
     /// <summary>
-    /// Abstract base class representing metadata for externally visible methods.
+    /// Abstract base sealed class representing metadata for externally visible methods.
     /// </summary>
     public abstract class MethodDataBase : TypedMemberDataBase,
         IParameterizedItem

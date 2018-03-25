@@ -31,7 +31,7 @@ using System.Linq;
 namespace BreakingChangesDetector.MetadataItems
 {
     /// <summary>
-    /// Abstract base class representing metadata for an externally visible type which can contain member declarations.
+    /// Abstract base sealed class representing metadata for an externally visible type which can contain member declarations.
     /// </summary>
     public abstract class DeclaringTypeData : TypeData
     {

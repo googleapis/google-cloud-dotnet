@@ -32,7 +32,7 @@ using System.Reflection;
 namespace BreakingChangesDetector.MetadataItems
 {
     /// <summary>
-    /// Abstract base class representing metadata for externally visible members declared within a type.
+    /// Abstract base sealed class representing metadata for externally visible members declared within a type.
     /// </summary>
     public abstract class MemberDataBase : MetadataItemBase
     {

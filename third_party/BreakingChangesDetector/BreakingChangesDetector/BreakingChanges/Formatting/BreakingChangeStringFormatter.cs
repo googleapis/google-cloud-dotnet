@@ -28,9 +28,9 @@ using System.Text;
 namespace BreakingChangesDetector.BreakingChanges.Formatting
 {
     /// <summary>
-    /// A class capable of formatting breaking changes messages into a string.
+    /// A sealed class capable of formatting breaking changes messages into a string.
     /// </summary>
-    public class BreakingChangeStringFormatter : IBreakingChangeFormatter
+    public sealed class BreakingChangeStringFormatter : IBreakingChangeFormatter
     {
         /// <summary>
         /// Creates a new <see cref="BreakingChangeStringFormatter"/> instance.

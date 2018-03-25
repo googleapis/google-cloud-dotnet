@@ -551,7 +551,7 @@ namespace BreakingChangesDetector.MetadataItems
         }
 
         /// <summary>
-        /// Gets the value indicating whether the class can be inherited by a type external to its assembly.
+        /// Gets the value indicating whether the sealed class can be inherited by a type external to its assembly.
         /// </summary>
         public bool CanBeInherited => TypeDefinitionFlags.HasFlag(TypeDefinitionFlags.CanBeInherited);
 

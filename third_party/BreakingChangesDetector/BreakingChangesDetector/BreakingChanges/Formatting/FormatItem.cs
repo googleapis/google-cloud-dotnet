@@ -32,7 +32,7 @@ namespace BreakingChangesDetector.BreakingChanges.Formatting
     /// <summary>
     /// Represents an entity that can be represented as text with specific formatting.
     /// </summary>
-    public class FormatItem
+    public sealed class FormatItem
     {
         private FormatItem(string text, StyleFlags style)
         {

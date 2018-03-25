@@ -29,7 +29,7 @@ using BreakingChangesDetector.MetadataItems;
 namespace BreakingChangesDetector.BreakingChanges
 {
     /// <summary>
-    /// Abstract base class for an object representing a breaking change.
+    /// Abstract base sealed class for an object representing a breaking change.
     /// </summary>
     public abstract class BreakingChangeBase
     {
@@ -201,7 +201,7 @@ namespace BreakingChangesDetector.BreakingChanges
     }
 
     /// <summary>
-    /// Represents the change of the non-abstract class to abstract, which will cause instantiations of the type to not compile.
+    /// Represents the change of the non-abstract sealed class to abstract, which will cause instantiations of the type to not compile.
     /// </summary>
     public sealed class ChangedClassToAbstract : BreakingChangeBase
     {
@@ -216,7 +216,7 @@ namespace BreakingChangesDetector.BreakingChanges
         /// Formats a message explaining the breaking change using the specified formatter.
         /// </summary>
         public override void FormatMessage(IBreakingChangeFormatter formatter) =>
-            formatter.AppendFormat("Changed non-abstract class {0} to abstract which will cause instantiations of the class to not compile.",
+            formatter.AppendFormat("Changed non-abstract sealed class {0} to abstract which will cause instantiations of the sealed class to not compile.",
                 FormatItem.MemberName(NewType, StyleFlags.Bold));
 
         /// <summary>
@@ -261,7 +261,7 @@ namespace BreakingChangesDetector.BreakingChanges
     }
 
     /// <summary>
-    /// Represents the change of the class to static, which will cause instantiations of the type to not compile.
+    /// Represents the change of the sealed class to static, which will cause instantiations of the type to not compile.
     /// </summary>
     public sealed class ChangedClassToStatic : BreakingChangeBase
     {
@@ -276,7 +276,7 @@ namespace BreakingChangesDetector.BreakingChanges
         /// Formats a message explaining the breaking change using the specified formatter.
         /// </summary>
         public override void FormatMessage(IBreakingChangeFormatter formatter) =>
-            formatter.AppendFormat("Changed non-static class {0} to static which will cause instantiations of the class to not compile.",
+            formatter.AppendFormat("Changed non-static sealed class {0} to static which will cause instantiations of the sealed class to not compile.",
                 FormatItem.MemberName(NewType, StyleFlags.Bold));
 
         /// <summary>
@@ -680,7 +680,7 @@ namespace BreakingChangesDetector.BreakingChanges
 
     /// <summary>
     /// Represents the change of a class's base type to something not derived from the original base type, which may cause external usages of
-    /// the class to not compile.
+    /// the sealed class to not compile.
     /// </summary>
     public sealed class IncompatibleClassHierarchy : BreakingChangeBase
     {
@@ -695,7 +695,7 @@ namespace BreakingChangesDetector.BreakingChanges
         /// Formats a message explaining the breaking change using the specified formatter.
         /// </summary>
         public override void FormatMessage(IBreakingChangeFormatter formatter) =>
-            formatter.AppendFormat("Changed the base class of {0} to something not derived from the previous base class which may cause code using the class to not compile. The base class was changed from {1} to {2}.",
+            formatter.AppendFormat("Changed the base sealed class of {0} to something not derived from the previous base sealed class which may cause code using the sealed class to not compile. The base sealed class was changed from {1} to {2}.",
                 FormatItem.MemberName(NewType, StyleFlags.Bold),
                 FormatItem.MemberName(OldType.BaseType, StyleFlags.Italics),
                 FormatItem.MemberName(NewType.BaseType, StyleFlags.Italics));
@@ -925,7 +925,7 @@ namespace BreakingChangesDetector.BreakingChanges
     }
 
     /// <summary>
-    /// Represents the addition of the 'sealed' keyword to a class declaration, which will cause externally derived classes to not compile.
+    /// Represents the addition of the 'sealed' keyword to a sealed class declaration, which will cause externally derived classes to not compile.
     /// </summary>
     public sealed class SealedClass : BreakingChangeBase
     {
@@ -940,16 +940,16 @@ namespace BreakingChangesDetector.BreakingChanges
         /// Formats a message explaining the breaking change using the specified formatter.
         /// </summary>
         public override void FormatMessage(IBreakingChangeFormatter formatter) =>
-            formatter.AppendFormat("Changed class {0} from unsealed to sealed which will cause derived classes to not compile.",
+            formatter.AppendFormat("Changed sealed class {0} from unsealed to sealed which will cause derived classes to not compile.",
                 FormatItem.MemberName(NewType, StyleFlags.Bold));
 
         /// <summary>
-        /// Gets the older version of the class declaration.
+        /// Gets the older version of the sealed class declaration.
         /// </summary>
         public TypeDefinitionData OldType { get; }
 
         /// <summary>
-        /// Gets the newer version of the class declaration.
+        /// Gets the newer version of the sealed class declaration.
         /// </summary>
         public TypeDefinitionData NewType { get; }
     }

@@ -27,7 +27,7 @@ using BreakingChangesDetector.MetadataItems;
 
 namespace BreakingChangesDetector.BreakingChanges.Definitions
 {
-    internal class RemovedPropertyAccessorsDefinition : BreakingChangeDefinitionBase
+    internal sealed class RemovedPropertyAccessorsDefinition : BreakingChangeDefinitionBase
     {
         public static readonly RemovedPropertyAccessorsDefinition Instance =
             new RemovedPropertyAccessorsDefinition();

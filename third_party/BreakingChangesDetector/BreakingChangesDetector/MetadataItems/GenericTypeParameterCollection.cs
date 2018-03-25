@@ -32,7 +32,7 @@ namespace BreakingChangesDetector.MetadataItems
     /// <summary>
     /// A collection of <see cref="GenericTypeParameterData"/> instances used as generic type parameters in a generic type definition.
     /// </summary>
-    public class GenericTypeParameterCollection : IEnumerable<GenericTypeParameterData>
+    public sealed class GenericTypeParameterCollection : IEnumerable<GenericTypeParameterData>
     {
         private readonly GenericTypeParameterData[] _parameters;
 
