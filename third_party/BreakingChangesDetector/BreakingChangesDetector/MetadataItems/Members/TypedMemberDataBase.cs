@@ -49,11 +49,7 @@ namespace BreakingChangesDetector.MetadataItems
             Debug.Assert(Type != null, "Unable to get the TypeData.");
         }
 
-        /// <summary>
-        /// Indicates whether the current member can override the specified member from a base type.
-        /// </summary>
-        /// <param name="baseMember">The member from the base type.</param>
-        /// <returns>True if the current member can override the base member; False otherwise.</returns>  
+        /// <inheritdoc/>
         internal override bool CanOverrideMember(MemberDataBase baseMember)
         {
             if (base.CanOverrideMember(baseMember) == false)

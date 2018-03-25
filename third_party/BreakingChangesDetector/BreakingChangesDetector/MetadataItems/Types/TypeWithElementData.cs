@@ -36,15 +36,10 @@ namespace BreakingChangesDetector.MetadataItems
             : base(name, accessibility, memberFlags, typeKind) =>
             ElementType = elementType;
 
-        /// <summary>
-        /// Performs the specified visitor's functionality on this instance.
-        /// </summary>
-        /// <param name="visitor">The visitor whose functionality should be performed on the instance.</param>
+        /// <inheritdoc/>
         public override void Accept(MetadataItemVisitor visitor) => visitor.VisitTypeWithElementData(this);
 
-        /// <summary>
-        /// Gets the <see cref="T:AssemblyData"/> representing the assembly in which the type is defined.
-        /// </summary>
+        /// <inheritdoc/>
         public override AssemblyData AssemblyData => ElementType.AssemblyData;
 
         internal override bool DoesMatch(MetadataItemBase other)
@@ -68,20 +63,13 @@ namespace BreakingChangesDetector.MetadataItems
             return true;
         }
 
-        /// <summary>
-        /// Gets the <see cref="AssemblyFamily"/> containing the type. If the type is nullable and type with element, 
-        /// such as T?, T[], or T*, this returns the family containing the type T.
-        /// </summary> 
+        /// <inheritdoc/>
         internal override AssemblyFamily GetDefiningAssemblyFamily() => ElementType.GetDefiningAssemblyFamily();
 
-        /// <summary>
-        /// Gets the name of the namespace in which the type is defined, or null if it is not defined in a namespace.
-        /// </summary> 
+        /// <inheritdoc/>
         internal override string GetNamespaceName() => ElementType.GetNamespaceName();
 
-        /// <summary>
-        /// Indicates whether a new member of the same type and name is logically the same member as the current member, just from a newer build.
-        /// </summary> 
+        /// <inheritdoc/>
         internal override bool IsEquivalentToNewMember(MemberDataBase newMember, AssemblyFamily newAssemblyFamily)
         {
             if (base.IsEquivalentToNewMember(newMember, newAssemblyFamily) == false)

@@ -41,11 +41,7 @@ namespace BreakingChangesDetector.MetadataItems
             : base(methodSymbol, accessibility, methodSymbol.ReturnType, methodSymbol.IsReturnTypeDynamic(), Utilities.GetMemberFlags(methodSymbol), declaringType) =>
             Parameters = new ParameterCollection(methodSymbol.Parameters, this);
 
-        /// <summary>
-        /// Indicates whether the current member can override the specified member from a base type.
-        /// </summary>
-        /// <param name="baseMember">The member from the base type.</param>
-        /// <returns>True if the current member can override the base member; False otherwise.</returns>  
+        /// <inheritdoc/>
         internal override bool CanOverrideMember(MemberDataBase baseMember)
         {
             if (base.CanOverrideMember(baseMember) == false)
@@ -57,9 +53,7 @@ namespace BreakingChangesDetector.MetadataItems
             return Parameters.IsEquivalentTo(otherMethodBase.Parameters);
         }
 
-        /// <summary>
-        /// Gets the name to use for this item in messages.
-        /// </summary>
+        /// <inheritdoc/>
         public override string DisplayName => Name + Parameters.GetParameterListDisplayText();
 
         internal override bool DoesMatch(MetadataItemBase other)
@@ -83,9 +77,7 @@ namespace BreakingChangesDetector.MetadataItems
             return true;
         }
 
-        /// <summary>
-        /// Indicates whether a new member of the same type and name is logically the same member as the current member, just from a newer build.
-        /// </summary> 
+        /// <inheritdoc/>
         internal override bool IsEquivalentToNewMember(MemberDataBase newMember, AssemblyFamily newAssemblyFamily) =>
             IsEquivalentToNewMember((MethodDataBase)newMember, newAssemblyFamily, ignoreNewOptionalParameters: false);
 

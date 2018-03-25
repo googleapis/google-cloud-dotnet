@@ -42,18 +42,11 @@ namespace BreakingChangesDetector.MetadataItems
             : base(fieldSymbol, accessibility, fieldSymbol.Type, fieldSymbol.Type.TypeKind == TypeKind.Dynamic, MemberFlags.Static, declaringType) =>
             Value = Utilities.PreprocessConstantValue(fieldSymbol.Type, fieldSymbol.ConstantValue);
 
-        /// <summary>
-        /// Performs the specified visitor's functionality on this instance.
-        /// </summary>
-        /// <param name="visitor">The visitor whose functionality should be performed on the instance.</param>
+        /// <inheritdoc/>
         public override void Accept(MetadataItemVisitor visitor) =>
             visitor.VisitConstantData(this);
 
-        /// <summary>
-        /// Indicates whether the current member can override the specified member from a base type.
-        /// </summary>
-        /// <param name="baseMember">The member from the base type.</param>
-        /// <returns>True if the current member can override the base member; False otherwise.</returns> 
+        /// <inheritdoc/>
         internal override bool CanOverrideMember(MemberDataBase baseMember)
         {
             Debug.Fail("Constants cannot be overridden.");
@@ -81,18 +74,11 @@ namespace BreakingChangesDetector.MetadataItems
             return true;
         }
 
-        /// <summary>
-        /// Gets the type of item the instance represents.
-        /// </summary>
+        /// <inheritdoc/>
         public override MetadataItemKinds MetadataItemKind =>
             MetadataItemKinds.Constant;
 
-        /// <summary>
-        /// Replaces all type parameters used by the member with their associated generic arguments specified in a constructed generic type.
-        /// </summary>
-        /// <param name="genericParameters">The generic parameters being replaced.</param>
-        /// <param name="genericArguments">The generic arguments replacing the parameters.</param>
-        /// <returns>A new member with the replaced type parameters or the current instance if the member does not use any of the generic parameters.</returns> 
+        /// <inheritdoc/>
         internal override MemberDataBase ReplaceGenericTypeParameters(GenericTypeParameterCollection genericParameters, GenericTypeArgumentCollection genericArguments)
         {
             var replacedType = (TypeData)Type.ReplaceGenericTypeParameters(genericParameters, genericArguments);

@@ -43,9 +43,7 @@ namespace BreakingChangesDetector.BreakingChanges
             OldItem = oldItem;
         }
 
-        /// <summary>
-        /// Gets a string representation of the breaking change.
-        /// </summary>
+        /// <inheritdoc/>
         public override string ToString() => Message;
 
         /// <summary>
@@ -92,9 +90,7 @@ namespace BreakingChangesDetector.BreakingChanges
             NewMember = newMember;
         }
 
-        /// <summary>
-        /// Formats a message explaining the breaking change using the specified formatter.
-        /// </summary>
+        /// <inheritdoc/>
         public override void FormatMessage(IBreakingChangeFormatter formatter) =>
             formatter.AppendFormat("Added a new abstract {0} {1} which will cause derived classes to not compile.",
                 FormatItem.MemberKind(NewMember),
@@ -120,9 +116,7 @@ namespace BreakingChangesDetector.BreakingChanges
             NewInterfaceType = newInterfaceType;
         }
 
-        /// <summary>
-        /// Formats a message explaining the breaking change using the specified formatter.
-        /// </summary>
+        /// <inheritdoc/>
         public override void FormatMessage(IBreakingChangeFormatter formatter) =>
             formatter.AppendFormat("Added a new base interface {1} to {0} which will cause implementing types to not compile.",
                 FormatItem.MemberName(NewType, StyleFlags.Bold),
@@ -155,9 +149,7 @@ namespace BreakingChangesDetector.BreakingChanges
             NewMember = newMember;
         }
 
-        /// <summary>
-        /// Formats a message explaining the breaking change using the specified formatter.
-        /// </summary>
+        /// <inheritdoc/>
         public override void FormatMessage(IBreakingChangeFormatter formatter) =>
             formatter.AppendFormat("Added a new interface {0} {1} which will cause implementing types to not compile.",
                 FormatItem.MemberKind(NewMember),
@@ -180,11 +172,9 @@ namespace BreakingChangesDetector.BreakingChanges
         {
             OldMember = oldMember;
             NewMember = newMember;
+
         }
 
-        /// <summary>
-        /// Formats a message explaining the breaking change using the specified formatter.
-        /// </summary>
         public override void FormatMessage(IBreakingChangeFormatter formatter) =>
             formatter.AppendFormat("Changed accessibility of {0} from public to protected which may cause code to not compile.",
                 FormatItem.MemberName(NewMember, StyleFlags.Bold));
@@ -212,9 +202,7 @@ namespace BreakingChangesDetector.BreakingChanges
             NewType = newType;
         }
 
-        /// <summary>
-        /// Formats a message explaining the breaking change using the specified formatter.
-        /// </summary>
+        /// <inheritdoc/>
         public override void FormatMessage(IBreakingChangeFormatter formatter) =>
             formatter.AppendFormat("Changed non-abstract sealed class {0} to abstract which will cause instantiations of the sealed class to not compile.",
                 FormatItem.MemberName(NewType, StyleFlags.Bold));
@@ -242,9 +230,7 @@ namespace BreakingChangesDetector.BreakingChanges
             NewField = newField;
         }
 
-        /// <summary>
-        /// Formats a message explaining the breaking change using the specified formatter.
-        /// </summary>
+        /// <inheritdoc/>
         public override void FormatMessage(IBreakingChangeFormatter formatter) =>
             formatter.AppendFormat("Changed read-write field {0} to read-only which will cause writes to the field to not compile.",
                 FormatItem.MemberName(NewField, StyleFlags.Bold));
@@ -272,9 +258,7 @@ namespace BreakingChangesDetector.BreakingChanges
             NewType = newType;
         }
 
-        /// <summary>
-        /// Formats a message explaining the breaking change using the specified formatter.
-        /// </summary>
+        /// <inheritdoc/>
         public override void FormatMessage(IBreakingChangeFormatter formatter) =>
             formatter.AppendFormat("Changed non-static sealed class {0} to static which will cause instantiations of the sealed class to not compile.",
                 FormatItem.MemberName(NewType, StyleFlags.Bold));
@@ -303,9 +287,7 @@ namespace BreakingChangesDetector.BreakingChanges
             NewGenericParameter = newGenericParameter;
         }
 
-        /// <summary>
-        /// Formats a message explaining the breaking change using the specified formatter.
-        /// </summary>
+        /// <inheritdoc/>
         public override void FormatMessage(IBreakingChangeFormatter formatter) =>
             formatter.AppendFormat("Changed constraints for the generic type parameter {0} in {1} {2} which may cause constructions of the entity to not compile.",
                 FormatItem.MemberName(NewGenericParameter, StyleFlags.Italics),
@@ -336,9 +318,7 @@ namespace BreakingChangesDetector.BreakingChanges
             NewGenericParameter = newGenericParameter;
         }
 
-        /// <summary>
-        /// Formats a message explaining the breaking change using the specified formatter.
-        /// </summary>
+        /// <inheritdoc/>
         public override void FormatMessage(IBreakingChangeFormatter formatter) =>
             formatter.AppendFormat("Changed variance (in or out modifier) for the generic type parameter {0} in {1} {2} which may cause implicit conversions of the {1} to not compile.",
                 FormatItem.MemberName(NewGenericParameter, StyleFlags.Italics),
@@ -368,9 +348,7 @@ namespace BreakingChangesDetector.BreakingChanges
             NewMember = newMember;
         }
 
-        /// <summary>
-        /// Formats a message explaining the breaking change using the specified formatter.
-        /// </summary>
+        /// <inheritdoc/>
         public override void FormatMessage(IBreakingChangeFormatter formatter) =>
             formatter.AppendFormat("Changed non-abstract {0} {1} to abstract which will cause derived classes not overriding the {0} to not compile.",
                 FormatItem.MemberKind(NewMember),
@@ -400,9 +378,7 @@ namespace BreakingChangesDetector.BreakingChanges
             NewMember = newMember;
         }
 
-        /// <summary>
-        /// Formats a message explaining the breaking change using the specified formatter.
-        /// </summary>
+        /// <inheritdoc/>
         public override void FormatMessage(IBreakingChangeFormatter formatter) =>
             formatter.AppendFormat("Changed virtual {0} {1} to non-virtual which will cause derived classes overriding the {0} to not compile.",
                 FormatItem.MemberKind(NewMember),
@@ -435,9 +411,7 @@ namespace BreakingChangesDetector.BreakingChanges
             NewTypedItem = newTypedItem;
         }
 
-        /// <summary>
-        /// Formats a message explaining the breaking change using the specified formatter.
-        /// </summary>
+        /// <inheritdoc/>
         public override void FormatMessage(IBreakingChangeFormatter formatter) =>
             formatter.AppendFormat("Changed the type of {0} {1} in a way which may cause code using the {0} to not compile. Type was changed from {2} to {3}.",
                 FormatItem.TypedItemKind(NewTypedItem),
@@ -471,9 +445,7 @@ namespace BreakingChangesDetector.BreakingChanges
             NewParameterizedItem = newParameterizedItem;
         }
 
-        /// <summary>
-        /// Formats a message explaining the breaking change using the specified formatter.
-        /// </summary>
+        /// <inheritdoc/>
         public override void FormatMessage(IBreakingChangeFormatter formatter) =>
             formatter.AppendFormat("Changed the parameter count of {0} in a way which may cause invocations to not compile. Previous declaration was {1}.",
                 FormatItem.ParameterizedItemName(NewParameterizedItem, StyleFlags.Bold),
@@ -503,9 +475,7 @@ namespace BreakingChangesDetector.BreakingChanges
             NewParameterizedItem = newParameterizedItem;
         }
 
-        /// <summary>
-        /// Formats a message explaining the breaking change using the specified formatter.
-        /// </summary>
+        /// <inheritdoc/>
         public override void FormatMessage(IBreakingChangeFormatter formatter) =>
             formatter.AppendFormat("Changed default value of parameter '{0}' in {1} which may cause an unintentional behavioral change in code. The value was changed from '{2}' to '{3}'.",
                 FormatItem.ParameterName(NewParameter, StyleFlags.Italics),
@@ -543,9 +513,7 @@ namespace BreakingChangesDetector.BreakingChanges
             NewParameterizedItem = newParameterizedItem;
         }
 
-        /// <summary>
-        /// Formats a message explaining the breaking change using the specified formatter.
-        /// </summary>
+        /// <inheritdoc/>
         public override void FormatMessage(IBreakingChangeFormatter formatter) =>
             formatter.AppendFormat("Changed the ref or out modifier of parameter '{0}' in {1} which will cause invocations to not compile.",
                 FormatItem.ParameterName(NewParameter, StyleFlags.Italics),
@@ -580,9 +548,7 @@ namespace BreakingChangesDetector.BreakingChanges
             NewParameterizedItem = newParameterizedItem;
         }
 
-        /// <summary>
-        /// Formats a message explaining the breaking change using the specified formatter.
-        /// </summary>
+        /// <inheritdoc/>
         public override void FormatMessage(IBreakingChangeFormatter formatter) =>
             formatter.AppendFormat("Changed the name of a parameter from '{0}' to '{1}' in {2} which will cause named arguments in invocations to not compile.",
                 FormatItem.ParameterName(OldParameter, StyleFlags.Italics),
@@ -620,9 +586,7 @@ namespace BreakingChangesDetector.BreakingChanges
             NewParameterizedItem = newParameterizedItem;
         }
 
-        /// <summary>
-        /// Formats a message explaining the breaking change using the specified formatter.
-        /// </summary>
+        /// <inheritdoc/>
         public override void FormatMessage(IBreakingChangeFormatter formatter) =>
             formatter.AppendFormat("Changed the type of parameter '{0}' in {1} in a way which may cause invocations to not compile. Type was changed from {2} to {3}.",
                 FormatItem.ParameterName(NewParameter, StyleFlags.Italics),
@@ -659,9 +623,7 @@ namespace BreakingChangesDetector.BreakingChanges
             NewMember = newMember;
         }
 
-        /// <summary>
-        /// Formats a message explaining the breaking change using the specified formatter.
-        /// </summary>
+        /// <inheritdoc/>
         public override void FormatMessage(IBreakingChangeFormatter formatter) =>
             formatter.AppendFormat("Added or removed the static modifier of {0} {1} which may cause code using the {0} to not compile.",
                 FormatItem.MemberKind(NewMember),
@@ -691,9 +653,7 @@ namespace BreakingChangesDetector.BreakingChanges
             NewType = newType;
         }
 
-        /// <summary>
-        /// Formats a message explaining the breaking change using the specified formatter.
-        /// </summary>
+        /// <inheritdoc/>
         public override void FormatMessage(IBreakingChangeFormatter formatter) =>
             formatter.AppendFormat("Changed the base sealed class of {0} to something not derived from the previous base sealed class which may cause code using the sealed class to not compile. The base sealed class was changed from {1} to {2}.",
                 FormatItem.MemberName(NewType, StyleFlags.Bold),
@@ -722,9 +682,7 @@ namespace BreakingChangesDetector.BreakingChanges
             OldAssembly = oldAssembly;
         }
 
-        /// <summary>
-        /// Formats a message explaining the breaking change using the specified formatter.
-        /// </summary>
+        /// <inheritdoc/>
         public override void FormatMessage(IBreakingChangeFormatter formatter) =>
             formatter.AppendFormat("Removed the equivalent to assembly {0} in the new version, which will cause projects referencing the assembly to not compile.",
                 FormatItem.AssemblyName(OldAssembly, StyleFlags.Bold));
@@ -748,9 +706,7 @@ namespace BreakingChangesDetector.BreakingChanges
             NewMethod = newMethod;
         }
 
-        /// <summary>
-        /// Formats a message explaining the breaking change using the specified formatter.
-        /// </summary>
+        /// <inheritdoc/>
         public override void FormatMessage(IBreakingChangeFormatter formatter) =>
             formatter.AppendFormat("Removed the 'this' modifier from the first parameter of {0} which will cause code using the method as an extension method to not compile.",
                 FormatItem.MemberName(NewMethod, StyleFlags.Bold));
@@ -780,9 +736,7 @@ namespace BreakingChangesDetector.BreakingChanges
             OldInterfaceType = oldInterfaceType;
         }
 
-        /// <summary>
-        /// Formats a message explaining the breaking change using the specified formatter.
-        /// </summary>
+        /// <inheritdoc/>
         public override void FormatMessage(IBreakingChangeFormatter formatter) =>
             formatter.AppendFormat("Removed implementation of interface {0} from {1} which may cause code using the {2} to not compile.",
                 FormatItem.MemberName(OldInterfaceType, StyleFlags.Italics),
@@ -817,9 +771,7 @@ namespace BreakingChangesDetector.BreakingChanges
             OldMember = oldMember;
         }
 
-        /// <summary>
-        /// Formats a message explaining the breaking change using the specified formatter.
-        /// </summary>
+        /// <inheritdoc/>
         public override void FormatMessage(IBreakingChangeFormatter formatter) =>
             formatter.AppendFormat("Removed {0} {1} which will cause code using the {0} to not compile.",
                 FormatItem.MemberKind(OldMember),
@@ -849,9 +801,7 @@ namespace BreakingChangesDetector.BreakingChanges
             OldMemberOverride = oldMemberOverride;
         }
 
-        /// <summary>
-        /// Formats a message explaining the breaking change using the specified formatter.
-        /// </summary>
+        /// <inheritdoc/>
         public override void FormatMessage(IBreakingChangeFormatter formatter) =>
             formatter.AppendFormat("Removed override of abstract {0} {1} in {2} which may derived classes to not compile.",
                 FormatItem.MemberKind(OldMemberOverride),
@@ -882,9 +832,7 @@ namespace BreakingChangesDetector.BreakingChanges
             NewProperty = newProperty;
         }
 
-        /// <summary>
-        /// Formats a message explaining the breaking change using the specified formatter.
-        /// </summary>
+        /// <inheritdoc/>
         public override void FormatMessage(IBreakingChangeFormatter formatter) =>
             formatter.AppendFormat("Removed or changed the visibility of the get or set accessor of {0} {1} which may code using the {0} to not compile.",
                 FormatItem.MemberKind(NewProperty),
@@ -910,9 +858,7 @@ namespace BreakingChangesDetector.BreakingChanges
             : base(oldType, null, null, BreakingChangeKind.RemovedRootType) =>
             OldType = oldType;
 
-        /// <summary>
-        /// Formats a message explaining the breaking change using the specified formatter.
-        /// </summary>
+        /// <inheritdoc/>
         public override void FormatMessage(IBreakingChangeFormatter formatter) =>
             formatter.AppendFormat("Removed {0} {1} which will cause code using the {0} to not compile.",
                 FormatItem.MemberKind(OldType),
@@ -936,9 +882,7 @@ namespace BreakingChangesDetector.BreakingChanges
             NewType = newType;
         }
 
-        /// <summary>
-        /// Formats a message explaining the breaking change using the specified formatter.
-        /// </summary>
+        /// <inheritdoc/>
         public override void FormatMessage(IBreakingChangeFormatter formatter) =>
             formatter.AppendFormat("Changed sealed class {0} from unsealed to sealed which will cause derived classes to not compile.",
                 FormatItem.MemberName(NewType, StyleFlags.Bold));
@@ -967,9 +911,7 @@ namespace BreakingChangesDetector.BreakingChanges
             NewMember = newMember;
         }
 
-        /// <summary>
-        /// Formats a message explaining the breaking change using the specified formatter.
-        /// </summary>
+        /// <inheritdoc/>
         public override void FormatMessage(IBreakingChangeFormatter formatter) =>
             formatter.AppendFormat("Changed {0} {1} from unsealed to sealed which will cause derived classes overriding the {0} to not compile.",
                 FormatItem.MemberKind(NewMember),

@@ -126,16 +126,7 @@ namespace BreakingChangesDetector.MetadataItems
             return true;
         }
 
-        /// <summary>
-        /// Gets the types to which this type can implicitly convert. For type hierarchy conversions, only the direct base type will be enumerated.
-        /// Ancestor base types will can be enumerated recursively by calling this method on the base type.
-        /// </summary>
-        /// <param name="onlyReferenceAndIdentityConversions">
-        /// True if reference and identify conversions are they only allowed conversions; False if all implicit conversions are allowed.
-        /// </param>
-        /// <returns>
-        /// A collection of all types to which this type can convert explicitly, except for ancestor base types which are not the direct base type.
-        /// </returns> 
+        /// <inheritdoc/>
         internal override IEnumerable<TypeData> GetDirectImplicitConversions(bool onlyReferenceAndIdentityConversions)
         {
             if (onlyReferenceAndIdentityConversions && IsValueType)
@@ -164,21 +155,11 @@ namespace BreakingChangesDetector.MetadataItems
             }
         }
 
-        /// <summary>
-        /// Gets the display name for the type, which can be used for generating user-readable messages about the type.
-        /// </summary>
-        /// <param name="fullyQualify">Indicates whether the type name should be fully qualified with declaring type and namespace names.</param>
-        /// <param name="includeGenericInfo">Indicates whether generic parameters and arguments should be included in type names.</param>
-        /// <returns>The display name of the type.</returns>
+        /// <inheritdoc/>
         public override sealed string GetDisplayName(bool fullyQualify = true, bool includeGenericInfo = true) =>
             GetDisplayName(fullyQualify, includeGenericInfo, null);
 
-        /// <summary>
-        /// Gets the value indicating whether a variable of the current type is assignable from the specified source type.
-        /// </summary>
-        /// <param name="sourceType">The source type from which to test assignability to this type.</param>
-        /// <param name="context">Information about the context of the IsAssignableFrom invocation.</param>
-        /// <returns>True if a value of the source type is assignable to a variable of the current type.</returns> 
+        /// <inheritdoc/>
         internal override bool IsAssignableFrom(TypeData sourceType, IsAssignableFromContext context)
         {
             if (base.IsAssignableFrom(sourceType, context))
