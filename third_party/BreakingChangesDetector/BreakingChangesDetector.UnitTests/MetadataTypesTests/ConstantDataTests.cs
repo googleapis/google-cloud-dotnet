@@ -2,6 +2,7 @@
     MIT License
 
     Copyright(c) 2014-2018 Infragistics, Inc.
+    Copyright 2018 Google LLC
 
     Permission is hereby granted, free of charge, to any person obtaining a copy
     of this software and associated documentation files (the "Software"), to deal
@@ -23,22 +24,21 @@
 */
 
 using System;
-using Microsoft.VisualStudio.TestTools.UnitTesting;
+using Xunit;
 using BreakingChangesDetector.MetadataItems;
 
 namespace BreakingChangesDetector.UnitTests.MetadataTypesTests
 {
-	[TestClass]
 	public class ConstantDataTests
 	{
 		#region ConstantDataAccessibilityTest
 
-		[TestMethod]
+		[Fact]
 		public void ConstantDataAccessibilityTest()
 		{
 			var t = typeof(TestClassDefinition);
-			var assembly = AssemblyData.FromAssembly(t.Assembly);
-			var typeData = TypeDefinitionData.FromType(t);
+			var context = MetadataResolutionContext.CreateFromTypes(t);
+			var typeData = context.GetTypeDefinitionData(t);
 			TestUtilities.VerifyAccessibility(typeData, "Constant");
 		}
 
@@ -46,43 +46,43 @@ namespace BreakingChangesDetector.UnitTests.MetadataTypesTests
 
 		#region ConstantDataDeclaringTypeTest
 
-		[TestMethod]
+		[Fact]
 		public void ConstantDataDeclaringTypeTest()
 		{
 			var t = typeof(TestClassDefinition);
-			var assembly = AssemblyData.FromAssembly(t.Assembly);
-			var typeData = TypeDefinitionData.FromType(t);
+            var context = MetadataResolutionContext.CreateFromTypes(t);
+            var typeData = context.GetTypeDefinitionData(t);
 			var constant = typeData.GetMember("Constant");
-			Assert.AreEqual(typeData, constant.DeclaringType, "The DeclaringType of a member should be the type in which it is defined.");
+			AssertX.Equal(typeData, constant.ContainingType, "The DeclaringType of a member should be the type in which it is defined.");
 		}
 
 		#endregion // ConstantDataDeclaringTypeTest
 
 		#region ConstantDataNameTest
 
-		[TestMethod]
+		[Fact]
 		public void ConstantDataNameTest()
 		{
 			var t = typeof(TestClassDefinition);
-			var assembly = AssemblyData.FromAssembly(t.Assembly);
-			var typeData = TypeDefinitionData.FromType(t);
+            var context = MetadataResolutionContext.CreateFromTypes(t);
+            var typeData = context.GetTypeDefinitionData(t);
 			var constant = typeData.GetMember("Constant");
-			Assert.AreEqual("Constant", constant.Name, "The Name of the member is incorrect.");
+			AssertX.Equal("Constant", constant.Name, "The Name of the member is incorrect.");
 		}
 
 		#endregion // ConstantDataNameTest
 
 		#region ConstantDataTypeTest
 
-		[TestMethod]
+		[Fact]
 		public void ConstantDataTypeTest()
 		{
 			var t = typeof(TestClassDefinition);
-			var assembly = AssemblyData.FromAssembly(t.Assembly);
-			var typeData = TypeDefinitionData.FromType(t);
+            var context = MetadataResolutionContext.CreateFromTypes(t);
+            var typeData = context.GetTypeDefinitionData(t);
 			var constant = (ConstantData)typeData.GetMember("Constant");
-			var intType = TypeDefinitionData.FromType<int>();
-			Assert.AreEqual(intType, constant.Type, "The Type of the member is incorrect.");
+			var intType = context.GetTypeDefinitionData<int>();
+			AssertX.Equal(intType, constant.Type, "The Type of the member is incorrect.");
 		}
 
 		#endregion // ConstantDataTypeTest

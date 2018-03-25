@@ -2,6 +2,7 @@
     MIT License
 
     Copyright(c) 2014-2018 Infragistics, Inc.
+    Copyright 2018 Google LLC
 
     Permission is hereby granted, free of charge, to any person obtaining a copy
     of this software and associated documentation files (the "Software"), to deal
@@ -23,17 +24,56 @@
 */
 
 using BreakingChangesDetector.MetadataItems;
-using Microsoft.VisualStudio.TestTools.UnitTesting;
+using Xunit;
 using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Reflection;
-using System.Text;
-using System.Threading.Tasks;
+using Microsoft.CodeAnalysis;
 
 namespace BreakingChangesDetector.UnitTests
 {
-	internal static class TestUtilities
+    // TODO_Refactor: Do we want to keep this? If so, do something with the messages
+    internal static class AssertX
+    {
+        internal static void Equal<T>(T expected, T actual, string message)
+        {
+            Assert.Equal(expected, actual);
+        }
+
+        internal static void Equal(int expected, int actual, string message)
+        {
+            Assert.Equal(expected, actual);
+        }
+
+        internal static void Fail(string message)
+        {
+            Assert.True(false, message);
+        }
+
+        internal static void Equal(string expected, string actual, string message)
+        {
+            Assert.Equal(expected, actual);
+        }
+
+        internal static void Null(object @object, string message)
+        {
+            Assert.Null(@object);
+        }
+
+        internal static void NotNull(object @object, string message)
+        {
+            Assert.NotNull(@object);
+        }
+
+        internal static void Inconclusive(string message)
+        {
+            // TODO: What should we do here?
+            Fail(message);
+        }
+    }
+
+    internal static class TestUtilities
 	{
 		#region IsImplicitlyAssignableFrom
 
@@ -103,11 +143,11 @@ namespace BreakingChangesDetector.UnitTests
 		{
 			var typeData = (TypeDefinitionData)typeDataBase;
 			var member = typeData.GetMember(memberName);
-			Assert.AreEqual(MemberAccessibility.Public, member.Accessibility, "Incorrect MemberAccessibility.");
+			AssertX.Equal(MemberAccessibility.Public, member.Accessibility, "Incorrect MemberAccessibility.");
 			member = typeData.GetMember(memberName + "Protected");
-			Assert.AreEqual(MemberAccessibility.Protected, member.Accessibility, "Incorrect MemberAccessibility.");
+			AssertX.Equal(MemberAccessibility.Protected, member.Accessibility, "Incorrect MemberAccessibility.");
 			member = typeData.GetMember(memberName + "ProtectedInternal");
-			Assert.AreEqual(MemberAccessibility.Protected, member.Accessibility, "Incorrect MemberAccessibility.");
+			AssertX.Equal(MemberAccessibility.Protected, member.Accessibility, "Incorrect MemberAccessibility.");
 		}
 
 		#endregion // VerifyAccessibility
@@ -135,25 +175,25 @@ namespace BreakingChangesDetector.UnitTests
 			var canHaveProtectedMembers = typeData.TypeKind == TypeKind.Class;
 
 			var member = (T)typeData.GetMember(memberName);
-			Assert.IsNotNull(member, "Public " + typeof(T).Name + " instances should be returned.");
+			AssertX.NotNull(member, "Public " + typeof(T).Name + " instances should be returned.");
 			member = (T)typeData.GetMember(memberName + "Internal");
-			Assert.IsNull(member, "Internal members should not be returned.");
+			AssertX.Null(member, "Internal members should not be returned.");
 			if (canHaveProtectedMembers)
 			{
 				member = (T)typeData.GetMember(memberName + "Protected");
-				Assert.IsNotNull(member, "Protected " + typeof(T).Name + " instances should be returned.");
+				AssertX.NotNull(member, "Protected " + typeof(T).Name + " instances should be returned.");
 				member = (T)typeData.GetMember(memberName + "ProtectedInternal");
-				Assert.IsNotNull(member, "Protected internal " + typeof(T).Name + " instances should be returned.");
+				AssertX.NotNull(member, "Protected internal " + typeof(T).Name + " instances should be returned.");
 			}
 			else
 			{
 				member = (T)typeData.GetMember(memberName + "Protected");
-				Assert.IsNull(member, "Protected members should not be returned.");
+				AssertX.Null(member, "Protected members should not be returned.");
 				member = (T)typeData.GetMember(memberName + "ProtectedInternal");
-				Assert.IsNull(member, "Protected internal members should not be returned.");
+				AssertX.Null(member, "Protected internal members should not be returned.");
 			}
 			member = (T)typeData.GetMember(memberName + "Private");
-			Assert.IsNull(member, "Private members should not be returned.");
+			AssertX.Null(member, "Private members should not be returned.");
 		}
 
 		#endregion // VerifyMember

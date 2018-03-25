@@ -2,6 +2,7 @@
     MIT License
 
     Copyright(c) 2014-2018 Infragistics, Inc.
+    Copyright 2018 Google LLC
 
     Permission is hereby granted, free of charge, to any person obtaining a copy
     of this software and associated documentation files (the "Software"), to deal
@@ -23,147 +24,146 @@
 */
 
 using System;
-using Microsoft.VisualStudio.TestTools.UnitTesting;
+using Xunit;
 using BreakingChangesDetector.MetadataItems;
 using BreakingChangesDetector.BreakingChanges;
 
 namespace BreakingChangesDetector.UnitTests.BreakingChangesTests
 {
-	[TestClass]
 	public class RemovedOverrideOfAbstractMemberTests
 	{
 		#region EventTests
 
-		[TestMethod]
+		[Fact]
 		public void EventTests()
 		{
-			var assembly = AssemblyData.FromAssembly(typeof(RemovedOverrideOfAbstractMemberTests).Assembly);
-			var EventVirtual = TypeDefinitionData.FromType(typeof(EventVirtual));
-			var EventAbstract = TypeDefinitionData.FromType(typeof(EventAbstract));
-			var EventVirtualOverride = TypeDefinitionData.FromType(typeof(EventVirtualOverride));
-			var EventAbstractOverride = TypeDefinitionData.FromType(typeof(EventAbstractOverride));
-			var EventVirtualOverrideInternalConstructor = TypeDefinitionData.FromType(typeof(EventVirtualOverrideInternalConstructor));
-			var EventAbstractOverrideInternalConstructor = TypeDefinitionData.FromType(typeof(EventAbstractOverrideInternalConstructor));
-			var EventVirtualNoOverride = TypeDefinitionData.FromType(typeof(EventVirtualNoOverride));
-			var EventAbstractNoOverride = TypeDefinitionData.FromType(typeof(EventAbstractNoOverride));
+			var context = MetadataResolutionContext.CreateFromTypes(typeof(RemovedOverrideOfAbstractMemberTests));
+			var EventVirtual = context.GetTypeDefinitionData(typeof(EventVirtual));
+			var EventAbstract = context.GetTypeDefinitionData(typeof(EventAbstract));
+			var EventVirtualOverride = context.GetTypeDefinitionData(typeof(EventVirtualOverride));
+			var EventAbstractOverride = context.GetTypeDefinitionData(typeof(EventAbstractOverride));
+			var EventVirtualOverrideInternalConstructor = context.GetTypeDefinitionData(typeof(EventVirtualOverrideInternalConstructor));
+			var EventAbstractOverrideInternalConstructor = context.GetTypeDefinitionData(typeof(EventAbstractOverrideInternalConstructor));
+			var EventVirtualNoOverride = context.GetTypeDefinitionData(typeof(EventVirtualNoOverride));
+			var EventAbstractNoOverride = context.GetTypeDefinitionData(typeof(EventAbstractNoOverride));
 			
 			var breakingChanges = MetadataComparer.CompareTypes(EventVirtualOverride, EventVirtualNoOverride);
-			Assert.AreEqual(0, breakingChanges.Count, "There should be no breaking changes when an override of a virtual member is removed.");
+			AssertX.Equal(0, breakingChanges.Count, "There should be no breaking changes when an override of a virtual member is removed.");
 
 			breakingChanges = MetadataComparer.CompareTypes(EventVirtualOverrideInternalConstructor, EventVirtualNoOverride);
-			Assert.AreEqual(0, breakingChanges.Count, "There should be no breaking changes when an override of a virtual member is removed and there are no externally visible constructors.");
+			AssertX.Equal(0, breakingChanges.Count, "There should be no breaking changes when an override of a virtual member is removed and there are no externally visible constructors.");
 
 			breakingChanges = MetadataComparer.CompareTypes(EventAbstractOverride, EventAbstractNoOverride);
-			Assert.AreEqual(1, breakingChanges.Count, "There should be one breaking change when an override of an abstract member is removed.");
-			Assert.AreEqual(BreakingChangeKind.RemovedOverrideOfAbstractMember, breakingChanges[0].BreakingChangeKind, "The BreakingChangeKind is incorrect.");
-			Assert.AreEqual(EventAbstractOverride.GetMember("Event"), breakingChanges[0].OldItem, "The OldItem is incorrect.");
-			Assert.IsNull(breakingChanges[0].NewItem, "The NewItem is incorrect.");
-			Assert.AreEqual(EventAbstractNoOverride, breakingChanges[0].AssociatedData, "The AssociatedData is incorrect.");
+			AssertX.Equal(1, breakingChanges.Count, "There should be one breaking change when an override of an abstract member is removed.");
+			AssertX.Equal(BreakingChangeKind.RemovedOverrideOfAbstractMember, breakingChanges[0].BreakingChangeKind, "The BreakingChangeKind is incorrect.");
+			AssertX.Equal(EventAbstractOverride.GetMember("Event"), breakingChanges[0].OldItem, "The OldItem is incorrect.");
+			AssertX.Null(breakingChanges[0].NewItem, "The NewItem is incorrect.");
+			AssertX.Equal(EventAbstractNoOverride, breakingChanges[0].AssociatedData, "The AssociatedData is incorrect.");
 
 			breakingChanges = MetadataComparer.CompareTypes(EventAbstractOverrideInternalConstructor, EventAbstractNoOverride);
-			Assert.AreEqual(0, breakingChanges.Count, "There should be no breaking changes when an override of an abstract member is removed and there are no externally visible constructors.");
+			AssertX.Equal(0, breakingChanges.Count, "There should be no breaking changes when an override of an abstract member is removed and there are no externally visible constructors.");
 		}
 
 		#endregion // EventTests
 
 		#region IndexerTests
 
-		[TestMethod]
+		[Fact]
 		public void IndexerTests()
 		{
-			var assembly = AssemblyData.FromAssembly(typeof(RemovedOverrideOfAbstractMemberTests).Assembly);
-			var IndexerVirtual = TypeDefinitionData.FromType(typeof(IndexerVirtual));
-			var IndexerAbstract = TypeDefinitionData.FromType(typeof(IndexerAbstract));
-			var IndexerVirtualOverride = TypeDefinitionData.FromType(typeof(IndexerVirtualOverride));
-			var IndexerAbstractOverride = TypeDefinitionData.FromType(typeof(IndexerAbstractOverride));
-			var IndexerVirtualOverrideInternalConstructor = TypeDefinitionData.FromType(typeof(IndexerVirtualOverrideInternalConstructor));
-			var IndexerAbstractOverrideInternalConstructor = TypeDefinitionData.FromType(typeof(IndexerAbstractOverrideInternalConstructor));
-			var IndexerVirtualNoOverride = TypeDefinitionData.FromType(typeof(IndexerVirtualNoOverride));
-			var IndexerAbstractNoOverride = TypeDefinitionData.FromType(typeof(IndexerAbstractNoOverride));
+			var context = MetadataResolutionContext.CreateFromTypes(typeof(RemovedOverrideOfAbstractMemberTests));
+			var IndexerVirtual = context.GetTypeDefinitionData(typeof(IndexerVirtual));
+			var IndexerAbstract = context.GetTypeDefinitionData(typeof(IndexerAbstract));
+			var IndexerVirtualOverride = context.GetTypeDefinitionData(typeof(IndexerVirtualOverride));
+			var IndexerAbstractOverride = context.GetTypeDefinitionData(typeof(IndexerAbstractOverride));
+			var IndexerVirtualOverrideInternalConstructor = context.GetTypeDefinitionData(typeof(IndexerVirtualOverrideInternalConstructor));
+			var IndexerAbstractOverrideInternalConstructor = context.GetTypeDefinitionData(typeof(IndexerAbstractOverrideInternalConstructor));
+			var IndexerVirtualNoOverride = context.GetTypeDefinitionData(typeof(IndexerVirtualNoOverride));
+			var IndexerAbstractNoOverride = context.GetTypeDefinitionData(typeof(IndexerAbstractNoOverride));
 			
 			var breakingChanges = MetadataComparer.CompareTypes(IndexerVirtualOverride, IndexerVirtualNoOverride);
-			Assert.AreEqual(0, breakingChanges.Count, "There should be no breaking changes when an override of a virtual member is removed.");
+			AssertX.Equal(0, breakingChanges.Count, "There should be no breaking changes when an override of a virtual member is removed.");
 
 			breakingChanges = MetadataComparer.CompareTypes(IndexerVirtualOverrideInternalConstructor, IndexerVirtualNoOverride);
-			Assert.AreEqual(0, breakingChanges.Count, "There should be no breaking changes when an override of a virtual member is removed and there are no externally visible constructors.");
+			AssertX.Equal(0, breakingChanges.Count, "There should be no breaking changes when an override of a virtual member is removed and there are no externally visible constructors.");
 
 			breakingChanges = MetadataComparer.CompareTypes(IndexerAbstractOverride, IndexerAbstractNoOverride);
-			Assert.AreEqual(1, breakingChanges.Count, "There should be one breaking change when an override of an abstract member is removed.");
-			Assert.AreEqual(BreakingChangeKind.RemovedOverrideOfAbstractMember, breakingChanges[0].BreakingChangeKind, "The BreakingChangeKind is incorrect.");
-			Assert.AreEqual(IndexerAbstractOverride.GetMember("Item"), breakingChanges[0].OldItem, "The OldItem is incorrect.");
-			Assert.IsNull(breakingChanges[0].NewItem, "The NewItem is incorrect.");
-			Assert.AreEqual(IndexerAbstractNoOverride, breakingChanges[0].AssociatedData, "The AssociatedData is incorrect.");
+			AssertX.Equal(1, breakingChanges.Count, "There should be one breaking change when an override of an abstract member is removed.");
+			AssertX.Equal(BreakingChangeKind.RemovedOverrideOfAbstractMember, breakingChanges[0].BreakingChangeKind, "The BreakingChangeKind is incorrect.");
+			AssertX.Equal(IndexerAbstractOverride.GetMember("Item"), breakingChanges[0].OldItem, "The OldItem is incorrect.");
+			AssertX.Null(breakingChanges[0].NewItem, "The NewItem is incorrect.");
+			AssertX.Equal(IndexerAbstractNoOverride, breakingChanges[0].AssociatedData, "The AssociatedData is incorrect.");
 
 			breakingChanges = MetadataComparer.CompareTypes(IndexerAbstractOverrideInternalConstructor, IndexerAbstractNoOverride);
-			Assert.AreEqual(0, breakingChanges.Count, "There should be no breaking changes when an override of an abstract member is removed and there are no externally visible constructors.");
+			AssertX.Equal(0, breakingChanges.Count, "There should be no breaking changes when an override of an abstract member is removed and there are no externally visible constructors.");
 		}
 
 		#endregion // IndexerTests
 
 		#region MethodTests
 
-		[TestMethod]
+		[Fact]
 		public void MethodTests()
 		{
-			var assembly = AssemblyData.FromAssembly(typeof(RemovedOverrideOfAbstractMemberTests).Assembly);
-			var MethodVirtual = TypeDefinitionData.FromType(typeof(MethodVirtual));
-			var MethodAbstract = TypeDefinitionData.FromType(typeof(MethodAbstract));
-			var MethodVirtualOverride = TypeDefinitionData.FromType(typeof(MethodVirtualOverride));
-			var MethodAbstractOverride = TypeDefinitionData.FromType(typeof(MethodAbstractOverride));
-			var MethodVirtualOverrideInternalConstructor = TypeDefinitionData.FromType(typeof(MethodVirtualOverrideInternalConstructor));
-			var MethodAbstractOverrideInternalConstructor = TypeDefinitionData.FromType(typeof(MethodAbstractOverrideInternalConstructor));
-			var MethodVirtualNoOverride = TypeDefinitionData.FromType(typeof(MethodVirtualNoOverride));
-			var MethodAbstractNoOverride = TypeDefinitionData.FromType(typeof(MethodAbstractNoOverride));
+			var context = MetadataResolutionContext.CreateFromTypes(typeof(RemovedOverrideOfAbstractMemberTests));
+			var MethodVirtual = context.GetTypeDefinitionData(typeof(MethodVirtual));
+			var MethodAbstract = context.GetTypeDefinitionData(typeof(MethodAbstract));
+			var MethodVirtualOverride = context.GetTypeDefinitionData(typeof(MethodVirtualOverride));
+			var MethodAbstractOverride = context.GetTypeDefinitionData(typeof(MethodAbstractOverride));
+			var MethodVirtualOverrideInternalConstructor = context.GetTypeDefinitionData(typeof(MethodVirtualOverrideInternalConstructor));
+			var MethodAbstractOverrideInternalConstructor = context.GetTypeDefinitionData(typeof(MethodAbstractOverrideInternalConstructor));
+			var MethodVirtualNoOverride = context.GetTypeDefinitionData(typeof(MethodVirtualNoOverride));
+			var MethodAbstractNoOverride = context.GetTypeDefinitionData(typeof(MethodAbstractNoOverride));
 			
 			var breakingChanges = MetadataComparer.CompareTypes(MethodVirtualOverride, MethodVirtualNoOverride);
-			Assert.AreEqual(0, breakingChanges.Count, "There should be no breaking changes when an override of a virtual member is removed.");
+			AssertX.Equal(0, breakingChanges.Count, "There should be no breaking changes when an override of a virtual member is removed.");
 
 			breakingChanges = MetadataComparer.CompareTypes(MethodVirtualOverrideInternalConstructor, MethodVirtualNoOverride);
-			Assert.AreEqual(0, breakingChanges.Count, "There should be no breaking changes when an override of a virtual member is removed and there are no externally visible constructors.");
+			AssertX.Equal(0, breakingChanges.Count, "There should be no breaking changes when an override of a virtual member is removed and there are no externally visible constructors.");
 
 			breakingChanges = MetadataComparer.CompareTypes(MethodAbstractOverride, MethodAbstractNoOverride);
-			Assert.AreEqual(1, breakingChanges.Count, "There should be one breaking change when an override of an abstract member is removed.");
-			Assert.AreEqual(BreakingChangeKind.RemovedOverrideOfAbstractMember, breakingChanges[0].BreakingChangeKind, "The BreakingChangeKind is incorrect.");
-			Assert.AreEqual(MethodAbstractOverride.GetMember("Method"), breakingChanges[0].OldItem, "The OldItem is incorrect.");
-			Assert.IsNull(breakingChanges[0].NewItem, "The NewItem is incorrect.");
-			Assert.AreEqual(MethodAbstractNoOverride, breakingChanges[0].AssociatedData, "The AssociatedData is incorrect.");
+			AssertX.Equal(1, breakingChanges.Count, "There should be one breaking change when an override of an abstract member is removed.");
+			AssertX.Equal(BreakingChangeKind.RemovedOverrideOfAbstractMember, breakingChanges[0].BreakingChangeKind, "The BreakingChangeKind is incorrect.");
+			AssertX.Equal(MethodAbstractOverride.GetMember("Method"), breakingChanges[0].OldItem, "The OldItem is incorrect.");
+			AssertX.Null(breakingChanges[0].NewItem, "The NewItem is incorrect.");
+			AssertX.Equal(MethodAbstractNoOverride, breakingChanges[0].AssociatedData, "The AssociatedData is incorrect.");
 
 			breakingChanges = MetadataComparer.CompareTypes(MethodAbstractOverrideInternalConstructor, MethodAbstractNoOverride);
-			Assert.AreEqual(0, breakingChanges.Count, "There should be no breaking changes when an override of an abstract member is removed and there are no externally visible constructors.");
+			AssertX.Equal(0, breakingChanges.Count, "There should be no breaking changes when an override of an abstract member is removed and there are no externally visible constructors.");
 		}
 
 		#endregion // MethodTests
 
 		#region PropertyTests
 
-		[TestMethod]
+		[Fact]
 		public void PropertyTests()
 		{
-			var assembly = AssemblyData.FromAssembly(typeof(RemovedOverrideOfAbstractMemberTests).Assembly);
-			var PropertyVirtual = TypeDefinitionData.FromType(typeof(PropertyVirtual));
-			var PropertyAbstract = TypeDefinitionData.FromType(typeof(PropertyAbstract));
-			var PropertyVirtualOverride = TypeDefinitionData.FromType(typeof(PropertyVirtualOverride));
-			var PropertyAbstractOverride = TypeDefinitionData.FromType(typeof(PropertyAbstractOverride));
-			var PropertyVirtualOverrideInternalConstructor = TypeDefinitionData.FromType(typeof(PropertyVirtualOverrideInternalConstructor));
-			var PropertyAbstractOverrideInternalConstructor = TypeDefinitionData.FromType(typeof(PropertyAbstractOverrideInternalConstructor));
-			var PropertyVirtualNoOverride = TypeDefinitionData.FromType(typeof(PropertyVirtualNoOverride));
-			var PropertyAbstractNoOverride = TypeDefinitionData.FromType(typeof(PropertyAbstractNoOverride));
+			var context = MetadataResolutionContext.CreateFromTypes(typeof(RemovedOverrideOfAbstractMemberTests));
+			var PropertyVirtual = context.GetTypeDefinitionData(typeof(PropertyVirtual));
+			var PropertyAbstract = context.GetTypeDefinitionData(typeof(PropertyAbstract));
+			var PropertyVirtualOverride = context.GetTypeDefinitionData(typeof(PropertyVirtualOverride));
+			var PropertyAbstractOverride = context.GetTypeDefinitionData(typeof(PropertyAbstractOverride));
+			var PropertyVirtualOverrideInternalConstructor = context.GetTypeDefinitionData(typeof(PropertyVirtualOverrideInternalConstructor));
+			var PropertyAbstractOverrideInternalConstructor = context.GetTypeDefinitionData(typeof(PropertyAbstractOverrideInternalConstructor));
+			var PropertyVirtualNoOverride = context.GetTypeDefinitionData(typeof(PropertyVirtualNoOverride));
+			var PropertyAbstractNoOverride = context.GetTypeDefinitionData(typeof(PropertyAbstractNoOverride));
 			
 			var breakingChanges = MetadataComparer.CompareTypes(PropertyVirtualOverride, PropertyVirtualNoOverride);
-			Assert.AreEqual(0, breakingChanges.Count, "There should be no breaking changes when an override of a virtual member is removed.");
+			AssertX.Equal(0, breakingChanges.Count, "There should be no breaking changes when an override of a virtual member is removed.");
 
 			breakingChanges = MetadataComparer.CompareTypes(PropertyVirtualOverrideInternalConstructor, PropertyVirtualNoOverride);
-			Assert.AreEqual(0, breakingChanges.Count, "There should be no breaking changes when an override of a virtual member is removed and there are no externally visible constructors.");
+			AssertX.Equal(0, breakingChanges.Count, "There should be no breaking changes when an override of a virtual member is removed and there are no externally visible constructors.");
 
 			breakingChanges = MetadataComparer.CompareTypes(PropertyAbstractOverride, PropertyAbstractNoOverride);
-			Assert.AreEqual(1, breakingChanges.Count, "There should be one breaking change when an override of an abstract member is removed.");
-			Assert.AreEqual(BreakingChangeKind.RemovedOverrideOfAbstractMember, breakingChanges[0].BreakingChangeKind, "The BreakingChangeKind is incorrect.");
-			Assert.AreEqual(PropertyAbstractOverride.GetMember("Property"), breakingChanges[0].OldItem, "The OldItem is incorrect.");
-			Assert.IsNull(breakingChanges[0].NewItem, "The NewItem is incorrect.");
-			Assert.AreEqual(PropertyAbstractNoOverride, breakingChanges[0].AssociatedData, "The AssociatedData is incorrect.");
+			AssertX.Equal(1, breakingChanges.Count, "There should be one breaking change when an override of an abstract member is removed.");
+			AssertX.Equal(BreakingChangeKind.RemovedOverrideOfAbstractMember, breakingChanges[0].BreakingChangeKind, "The BreakingChangeKind is incorrect.");
+			AssertX.Equal(PropertyAbstractOverride.GetMember("Property"), breakingChanges[0].OldItem, "The OldItem is incorrect.");
+			AssertX.Null(breakingChanges[0].NewItem, "The NewItem is incorrect.");
+			AssertX.Equal(PropertyAbstractNoOverride, breakingChanges[0].AssociatedData, "The AssociatedData is incorrect.");
 
 			breakingChanges = MetadataComparer.CompareTypes(PropertyAbstractOverrideInternalConstructor, PropertyAbstractNoOverride);
-			Assert.AreEqual(0, breakingChanges.Count, "There should be no breaking changes when an override of an abstract member is removed and there are no externally visible constructors.");
+			AssertX.Equal(0, breakingChanges.Count, "There should be no breaking changes when an override of an abstract member is removed and there are no externally visible constructors.");
 		}
 
 		#endregion // PropertyTests

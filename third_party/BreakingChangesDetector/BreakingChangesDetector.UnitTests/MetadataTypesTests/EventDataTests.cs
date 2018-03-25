@@ -2,6 +2,7 @@
     MIT License
 
     Copyright(c) 2014-2018 Infragistics, Inc.
+    Copyright 2018 Google LLC
 
     Permission is hereby granted, free of charge, to any person obtaining a copy
     of this software and associated documentation files (the "Software"), to deal
@@ -23,22 +24,21 @@
 */
 
 using System;
-using Microsoft.VisualStudio.TestTools.UnitTesting;
+using Xunit;
 using BreakingChangesDetector.MetadataItems;
 
 namespace BreakingChangesDetector.UnitTests.MetadataTypesTests
-{
-	[TestClass]
+{	
 	public class EventDataTests
 	{
 		#region EventDataAccessibilityTest
 
-		[TestMethod]
+		[Fact]
 		public void EventDataAccessibilityTest()
 		{
 			var t = typeof(TestClassDefinition);
-			var assembly = AssemblyData.FromAssembly(t.Assembly);
-			var typeData = TypeDefinitionData.FromType(t);
+            var context = MetadataResolutionContext.CreateFromTypes(t);
+            var typeData = context.GetTypeDefinitionData(t);
 			TestUtilities.VerifyAccessibility(typeData, "EventInstance");
 		}
 
@@ -46,76 +46,76 @@ namespace BreakingChangesDetector.UnitTests.MetadataTypesTests
 
 		#region EventDataDeclaringTypeTest
 
-		[TestMethod]
+		[Fact]
 		public void EventDataDeclaringTypeTest()
 		{
 			var t = typeof(TestClassDefinition);
-			var assembly = AssemblyData.FromAssembly(t.Assembly);
-			var typeData = TypeDefinitionData.FromType(t);
+            var context = MetadataResolutionContext.CreateFromTypes(t);
+            var typeData = context.GetTypeDefinitionData(t);
 			var eventData = typeData.GetMember("EventInstance");
-			Assert.AreEqual(typeData, eventData.DeclaringType, "The DeclaringType of a member should be the type in which it is defined.");
+			AssertX.Equal(typeData, eventData.ContainingType, "The DeclaringType of a member should be the type in which it is defined.");
 		}
 
 		#endregion // EventDataDeclaringTypeTest
 
 		#region EventDataMemberFlagsTest
 
-		[TestMethod]
+		[Fact]
 		public void EventDataMemberFlagsTest()
 		{
 			var t = typeof(OverloadedMemberFeatures);
-			var assembly = AssemblyData.FromAssembly(t.Assembly);
-			var typeData = TypeDefinitionData.FromType(t);
+			var context = MetadataResolutionContext.CreateFromTypes(t);
+			var typeData = context.GetTypeDefinitionData(t);
 
 			var eventData = (EventData)typeData.GetMember("EventInstance");
-			Assert.AreEqual(MemberFlags.None, eventData.MemberFlags, "The Flags value of the member is wrong.");
+			AssertX.Equal(MemberFlags.None, eventData.MemberFlags, "The Flags value of the member is wrong.");
 			eventData = (EventData)typeData.GetMember("EventStatic");
-			Assert.AreEqual(MemberFlags.Static, eventData.MemberFlags, "The Flags value of the member is wrong.");
+			AssertX.Equal(MemberFlags.Static, eventData.MemberFlags, "The Flags value of the member is wrong.");
 			eventData = (EventData)typeData.GetMember("EventInstanceAbstract");
-			Assert.AreEqual(MemberFlags.Abstract, eventData.MemberFlags, "The Flags value of the member is wrong.");
+			AssertX.Equal(MemberFlags.Abstract, eventData.MemberFlags, "The Flags value of the member is wrong.");
 			eventData = (EventData)typeData.GetMember("EventInstanceVirtual");
-			Assert.AreEqual(MemberFlags.Virtual, eventData.MemberFlags, "The Flags value of the member is wrong.");
+			AssertX.Equal(MemberFlags.Virtual, eventData.MemberFlags, "The Flags value of the member is wrong.");
 			eventData = (EventData)typeData.GetMember("EventInstanceOverrideAbstract");
-			Assert.AreEqual(MemberFlags.Override, eventData.MemberFlags, "The Flags value of the member is wrong.");
+			AssertX.Equal(MemberFlags.Override, eventData.MemberFlags, "The Flags value of the member is wrong.");
 			eventData = (EventData)typeData.GetMember("EventInstanceOverrideAbstractSealed");
-			Assert.AreEqual(MemberFlags.Override | MemberFlags.Sealed, eventData.MemberFlags, "The Flags value of the member is wrong.");
+			AssertX.Equal(MemberFlags.Override | MemberFlags.Sealed, eventData.MemberFlags, "The Flags value of the member is wrong.");
 			eventData = (EventData)typeData.GetMember("EventInstanceOverrideAbstractAbstract");
-			Assert.AreEqual(MemberFlags.Override | MemberFlags.Abstract, eventData.MemberFlags, "The Flags value of the member is wrong.");
+			AssertX.Equal(MemberFlags.Override | MemberFlags.Abstract, eventData.MemberFlags, "The Flags value of the member is wrong.");
 			eventData = (EventData)typeData.GetMember("EventInstanceOverrideVirtual");
-			Assert.AreEqual(MemberFlags.Override, eventData.MemberFlags, "The Flags value of the member is wrong.");
+			AssertX.Equal(MemberFlags.Override, eventData.MemberFlags, "The Flags value of the member is wrong.");
 			eventData = (EventData)typeData.GetMember("EventInstanceOverrideVirtualSealed");
-			Assert.AreEqual(MemberFlags.Override | MemberFlags.Sealed, eventData.MemberFlags, "The Flags value of the member is wrong.");
+			AssertX.Equal(MemberFlags.Override | MemberFlags.Sealed, eventData.MemberFlags, "The Flags value of the member is wrong.");
 			eventData = (EventData)typeData.GetMember("EventInstanceOverrideVirtualAbstract");
-			Assert.AreEqual(MemberFlags.Override | MemberFlags.Abstract, eventData.MemberFlags, "The Flags value of the member is wrong.");
+			AssertX.Equal(MemberFlags.Override | MemberFlags.Abstract, eventData.MemberFlags, "The Flags value of the member is wrong.");
 		}
 
 		#endregion // EventDataMemberFlagsTest
 
 		#region EventDataNameTest
 
-		[TestMethod]
+		[Fact]
 		public void EventDataNameTest()
 		{
 			var t = typeof(TestClassDefinition);
-			var assembly = AssemblyData.FromAssembly(t.Assembly);
-			var typeData = TypeDefinitionData.FromType(t);
+			var context = MetadataResolutionContext.CreateFromTypes(t);
+			var typeData = context.GetTypeDefinitionData(t);
 			var eventData = typeData.GetMember("EventInstance");
-			Assert.AreEqual("EventInstance", eventData.Name, "The Name of the member is incorrect.");
+			AssertX.Equal("EventInstance", eventData.Name, "The Name of the member is incorrect.");
 		}
 
 		#endregion // EventDataNameTest
 
 		#region EventDataTypeTest
 
-		[TestMethod]
+		[Fact]
 		public void EventDataTypeTest()
 		{
 			var t = typeof(TestClassDefinition);
-			var assembly = AssemblyData.FromAssembly(t.Assembly);
-			var typeData = TypeDefinitionData.FromType(t);
+			var context = MetadataResolutionContext.CreateFromTypes(t);
+			var typeData = context.GetTypeDefinitionData(t);
 			var eventData = (EventData)typeData.GetMember("EventInstance");
-			var eventHandlerType = TypeDefinitionData.FromType<EventHandler>();
-			Assert.AreEqual(eventHandlerType, eventData.Type, "The Type of the member is incorrect.");
+			var eventHandlerType = context.GetTypeDefinitionData<EventHandler>();
+			AssertX.Equal(eventHandlerType, eventData.Type, "The Type of the member is incorrect.");
 		}
 
 		#endregion // EventDataTypeTest

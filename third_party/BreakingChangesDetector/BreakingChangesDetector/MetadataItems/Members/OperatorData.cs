@@ -2,6 +2,7 @@
     MIT License
 
     Copyright(c) 2014-2018 Infragistics, Inc.
+    Copyright 2018 Google LLC
 
     Permission is hereby granted, free of charge, to any person obtaining a copy
     of this software and associated documentation files (the "Software"), to deal
@@ -22,7 +23,7 @@
     SOFTWARE.
 */
 
-using Mono.Cecil;
+using Microsoft.CodeAnalysis;
 using System;
 using System.Collections.Generic;
 using System.Linq;
@@ -50,8 +51,8 @@ namespace BreakingChangesDetector.MetadataItems
 		{
 		}
 
-		internal OperatorData(MethodDefinition methodDefinition, DeclaringTypeData declaringType)
-			: base(methodDefinition, MemberAccessibility.Public, declaringType)
+		internal OperatorData(IMethodSymbol methodSymbol, DeclaringTypeData declaringType)
+			: base(methodSymbol, MemberAccessibility.Public, declaringType)
 		{
 		}
 

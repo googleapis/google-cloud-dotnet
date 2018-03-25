@@ -2,6 +2,7 @@
     MIT License
 
     Copyright(c) 2014-2018 Infragistics, Inc.
+    Copyright 2018 Google LLC
 
     Permission is hereby granted, free of charge, to any person obtaining a copy
     of this software and associated documentation files (the "Software"), to deal
@@ -22,13 +23,9 @@
     SOFTWARE.
 */
 
-using Mono.Cecil;
-using System;
+using Microsoft.CodeAnalysis;
 using System.Collections.Generic;
-using System.Linq;
-using System.Reflection;
 using System.Text;
-using System.Threading.Tasks;
 
 namespace BreakingChangesDetector.MetadataItems
 {
@@ -45,11 +42,13 @@ namespace BreakingChangesDetector.MetadataItems
 			_parameters = new List<ParameterData>();
 		}
 
-		internal ParameterCollection(IEnumerable<ParameterDefinition> underlyingParameters, MemberDataBase declaringMember)
+		internal ParameterCollection(IEnumerable<IParameterSymbol> parameterSymbols, MemberDataBase declaringMember)
 		{
 			_parameters = new List<ParameterData>();
-			foreach (var parameter in underlyingParameters)
-				this.Add(new ParameterData(parameter, declaringMember));
+            foreach (var parameterSymbol in parameterSymbols)
+            {
+                this.Add(new ParameterData(parameterSymbol, declaringMember));
+            }
 		}
 
 		System.Collections.IEnumerator System.Collections.IEnumerable.GetEnumerator()

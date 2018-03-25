@@ -2,6 +2,7 @@
     MIT License
 
     Copyright(c) 2014-2018 Infragistics, Inc.
+    Copyright 2018 Google LLC
 
     Permission is hereby granted, free of charge, to any person obtaining a copy
     of this software and associated documentation files (the "Software"), to deal
@@ -24,19 +25,18 @@
 
 using System;
 using System.Linq;
-using Microsoft.VisualStudio.TestTools.UnitTesting;
+using Xunit;
 using BreakingChangesDetector.MetadataItems;
 using System.Collections;
 using System.Collections.Generic;
 
 namespace BreakingChangesDetector.UnitTests.MetadataTypesTests
 {
-	[TestClass]
 	public class AssignabilityTests
 	{
 		#region ImplicitBoxingConversionsTests
 
-		[TestMethod]
+		[Fact]
 		public void ImplicitBoxingConversionsTests()
 		{
 			TestAssignability(
@@ -66,7 +66,7 @@ namespace BreakingChangesDetector.UnitTests.MetadataTypesTests
 
 		#region ImplicitConversionsInvolvingTypeParametersTests
 
-		[TestMethod]
+		[Fact]
 		public void ImplicitConversionsInvolvingTypeParametersTests()
 		{
 			TestAssignability(
@@ -91,7 +91,7 @@ namespace BreakingChangesDetector.UnitTests.MetadataTypesTests
 
 		#region ImplicitIdentityConversionsTests
 
-		[TestMethod]
+		[Fact]
 		public void ImplicitIdentityConversionsTests()
 		{
 			TestAssignability<List<object>, List<dynamic>>();
@@ -101,11 +101,9 @@ namespace BreakingChangesDetector.UnitTests.MetadataTypesTests
 
 		#region ImplicitNullableConversionsTests
 
-		[TestMethod]
+		[Fact]
 		public void ImplicitNullableConversionsTests()
 		{
-			var result = TypeData.FromType<BStruct?>().IsAssignableFromNew(TypeData.FromType<CStruct?>());
-
 			TestAssignability((a, b) => a.IsNullable() || b.IsNullable(),
 				typeof(byte),
 				typeof(sbyte),
@@ -143,7 +141,7 @@ namespace BreakingChangesDetector.UnitTests.MetadataTypesTests
 
 		#region ImplicitNumericConversionsTests
 
-		[TestMethod]
+		[Fact]
 		public void ImplicitNumericConversionsTests()
 		{
 			TestAssignability(
@@ -165,12 +163,10 @@ namespace BreakingChangesDetector.UnitTests.MetadataTypesTests
 
 		#region ImplicitReferenceConversionsTests
 
-		[TestMethod]
+		[Fact]
 		public void ImplicitReferenceConversionsTests()
 		{
-			var dynamicType = TypeDefinitionData.FromType<DynamicMethod>();
-
-			TestAssignability(
+            TestAssignability(
 				typeof(object),
 				typeof(AssignabilityTests),
 				typeof(BaseClass),
@@ -214,7 +210,7 @@ namespace BreakingChangesDetector.UnitTests.MetadataTypesTests
 
 		#region NullableTests
 
-		[TestMethod]
+		[Fact]
 		public void NullableTests()
 		{
 			TestAssignability<object, Nullable<int>>();
@@ -225,19 +221,20 @@ namespace BreakingChangesDetector.UnitTests.MetadataTypesTests
 
 		#region OnlyReferenceAndIdentityConversionsInVariancesTest
 
-		[TestMethod]
+		[Fact]
 		public void OnlyReferenceAndIdentityConversionsInVariancesTest()
 		{
-			Assert.IsFalse(ConstructedGenericTypeData.FromType<IEnumerable<object>>().IsAssignableFromNew(ConstructedGenericTypeData.FromType<IEnumerable<int>>()));
-			Assert.IsFalse(ConstructedGenericTypeData.FromType<IEnumerable<int>>().IsAssignableFromNew(ConstructedGenericTypeData.FromType<IEnumerable<byte>>()));
-			Assert.IsFalse(ConstructedGenericTypeData.FromType<IEnumerable<int?>>().IsAssignableFromNew(ConstructedGenericTypeData.FromType<IEnumerable<int>>()));
+            var context = MetadataResolutionContext.CreateFromTypes(typeof(IEnumerable<object>));
+            Assert.False(context.GetConstructedGenericTypeData<IEnumerable<object>>().IsAssignableFromNew(context.GetConstructedGenericTypeData<IEnumerable<int>>()));
+			Assert.False(context.GetConstructedGenericTypeData<IEnumerable<int>>().IsAssignableFromNew(context.GetConstructedGenericTypeData<IEnumerable<byte>>()));
+			Assert.False(context.GetConstructedGenericTypeData<IEnumerable<int?>>().IsAssignableFromNew(context.GetConstructedGenericTypeData<IEnumerable<int>>()));
 		}
 
 		#endregion // OnlyReferenceAndIdentityConversionsInVariancesTest
 
 		#region UserDefinedImplicitConversionsTests
 
-		[TestMethod]
+		[Fact]
 		public void UserDefinedImplicitConversionsTests()
 		{
 			TestAssignability(
@@ -250,7 +247,7 @@ namespace BreakingChangesDetector.UnitTests.MetadataTypesTests
 
 		#region ValueTypeTests
 
-		[TestMethod]
+		[Fact]
 		public void ValueTypeTests()
 		{
 			TestAssignability<object, ValueType>();
@@ -261,300 +258,300 @@ namespace BreakingChangesDetector.UnitTests.MetadataTypesTests
 		#endregion // ValueTypeTests
 
 
-		[TestMethod]
+		[Fact]
 		public void IsImplicitlyAssignableFromTests()
 		{
 			#region Implicit Identity Conversions
 
-			Assert.IsTrue(typeof(List<object>).IsImplicitlyAssignableFrom(typeof(List<dynamic>)));
-			Assert.IsTrue(typeof(List<dynamic>).IsImplicitlyAssignableFrom(typeof(List<object>)));
+			Assert.True(typeof(List<object>).IsImplicitlyAssignableFrom(typeof(List<dynamic>)));
+			Assert.True(typeof(List<dynamic>).IsImplicitlyAssignableFrom(typeof(List<object>)));
 
 			#endregion // Implicit Identity Conversions
 
 			#region Implicit Numeric Conversions
 
 
-			Assert.IsTrue(typeof(short).IsImplicitlyAssignableFrom(typeof(sbyte)));
-			Assert.IsTrue(typeof(int).IsImplicitlyAssignableFrom(typeof(sbyte)));
-			Assert.IsTrue(typeof(long).IsImplicitlyAssignableFrom(typeof(sbyte)));
-			Assert.IsTrue(typeof(float).IsImplicitlyAssignableFrom(typeof(sbyte)));
-			Assert.IsTrue(typeof(double).IsImplicitlyAssignableFrom(typeof(sbyte)));
-			Assert.IsTrue(typeof(decimal).IsImplicitlyAssignableFrom(typeof(sbyte)));
-			Assert.IsTrue(typeof(short).IsImplicitlyAssignableFrom(typeof(byte)));
-			Assert.IsTrue(typeof(ushort).IsImplicitlyAssignableFrom(typeof(byte)));
-			Assert.IsTrue(typeof(int).IsImplicitlyAssignableFrom(typeof(byte)));
-			Assert.IsTrue(typeof(uint).IsImplicitlyAssignableFrom(typeof(byte)));
-			Assert.IsTrue(typeof(long).IsImplicitlyAssignableFrom(typeof(byte)));
-			Assert.IsTrue(typeof(ulong).IsImplicitlyAssignableFrom(typeof(byte)));
-			Assert.IsTrue(typeof(float).IsImplicitlyAssignableFrom(typeof(byte)));
-			Assert.IsTrue(typeof(double).IsImplicitlyAssignableFrom(typeof(byte)));
-			Assert.IsTrue(typeof(decimal).IsImplicitlyAssignableFrom(typeof(byte)));
-			Assert.IsTrue(typeof(int).IsImplicitlyAssignableFrom(typeof(short)));
-			Assert.IsTrue(typeof(long).IsImplicitlyAssignableFrom(typeof(short)));
-			Assert.IsTrue(typeof(float).IsImplicitlyAssignableFrom(typeof(short)));
-			Assert.IsTrue(typeof(double).IsImplicitlyAssignableFrom(typeof(short)));
-			Assert.IsTrue(typeof(decimal).IsImplicitlyAssignableFrom(typeof(short)));
-			Assert.IsTrue(typeof(int).IsImplicitlyAssignableFrom(typeof(ushort)));
-			Assert.IsTrue(typeof(uint).IsImplicitlyAssignableFrom(typeof(ushort)));
-			Assert.IsTrue(typeof(long).IsImplicitlyAssignableFrom(typeof(ushort)));
-			Assert.IsTrue(typeof(ulong).IsImplicitlyAssignableFrom(typeof(ushort)));
-			Assert.IsTrue(typeof(float).IsImplicitlyAssignableFrom(typeof(ushort)));
-			Assert.IsTrue(typeof(double).IsImplicitlyAssignableFrom(typeof(ushort)));
-			Assert.IsTrue(typeof(decimal).IsImplicitlyAssignableFrom(typeof(ushort)));
-			Assert.IsTrue(typeof(long).IsImplicitlyAssignableFrom(typeof(int)));
-			Assert.IsTrue(typeof(float).IsImplicitlyAssignableFrom(typeof(int)));
-			Assert.IsTrue(typeof(double).IsImplicitlyAssignableFrom(typeof(int)));
-			Assert.IsTrue(typeof(decimal).IsImplicitlyAssignableFrom(typeof(int)));
-			Assert.IsTrue(typeof(long).IsImplicitlyAssignableFrom(typeof(uint)));
-			Assert.IsTrue(typeof(ulong).IsImplicitlyAssignableFrom(typeof(uint)));
-			Assert.IsTrue(typeof(float).IsImplicitlyAssignableFrom(typeof(uint)));
-			Assert.IsTrue(typeof(double).IsImplicitlyAssignableFrom(typeof(uint)));
-			Assert.IsTrue(typeof(decimal).IsImplicitlyAssignableFrom(typeof(uint)));
-			Assert.IsTrue(typeof(float).IsImplicitlyAssignableFrom(typeof(long)));
-			Assert.IsTrue(typeof(double).IsImplicitlyAssignableFrom(typeof(long)));
-			Assert.IsTrue(typeof(decimal).IsImplicitlyAssignableFrom(typeof(long)));
-			Assert.IsTrue(typeof(float).IsImplicitlyAssignableFrom(typeof(ulong)));
-			Assert.IsTrue(typeof(double).IsImplicitlyAssignableFrom(typeof(ulong)));
-			Assert.IsTrue(typeof(decimal).IsImplicitlyAssignableFrom(typeof(ulong)));
-			Assert.IsTrue(typeof(ushort).IsImplicitlyAssignableFrom(typeof(char)));
-			Assert.IsTrue(typeof(int).IsImplicitlyAssignableFrom(typeof(char)));
-			Assert.IsTrue(typeof(uint).IsImplicitlyAssignableFrom(typeof(char)));
-			Assert.IsTrue(typeof(long).IsImplicitlyAssignableFrom(typeof(char)));
-			Assert.IsTrue(typeof(ulong).IsImplicitlyAssignableFrom(typeof(char)));
-			Assert.IsTrue(typeof(float).IsImplicitlyAssignableFrom(typeof(char)));
-			Assert.IsTrue(typeof(double).IsImplicitlyAssignableFrom(typeof(char)));
-			Assert.IsTrue(typeof(decimal).IsImplicitlyAssignableFrom(typeof(char)));
-			Assert.IsTrue(typeof(double).IsImplicitlyAssignableFrom(typeof(float)));
+			Assert.True(typeof(short).IsImplicitlyAssignableFrom(typeof(sbyte)));
+			Assert.True(typeof(int).IsImplicitlyAssignableFrom(typeof(sbyte)));
+			Assert.True(typeof(long).IsImplicitlyAssignableFrom(typeof(sbyte)));
+			Assert.True(typeof(float).IsImplicitlyAssignableFrom(typeof(sbyte)));
+			Assert.True(typeof(double).IsImplicitlyAssignableFrom(typeof(sbyte)));
+			Assert.True(typeof(decimal).IsImplicitlyAssignableFrom(typeof(sbyte)));
+			Assert.True(typeof(short).IsImplicitlyAssignableFrom(typeof(byte)));
+			Assert.True(typeof(ushort).IsImplicitlyAssignableFrom(typeof(byte)));
+			Assert.True(typeof(int).IsImplicitlyAssignableFrom(typeof(byte)));
+			Assert.True(typeof(uint).IsImplicitlyAssignableFrom(typeof(byte)));
+			Assert.True(typeof(long).IsImplicitlyAssignableFrom(typeof(byte)));
+			Assert.True(typeof(ulong).IsImplicitlyAssignableFrom(typeof(byte)));
+			Assert.True(typeof(float).IsImplicitlyAssignableFrom(typeof(byte)));
+			Assert.True(typeof(double).IsImplicitlyAssignableFrom(typeof(byte)));
+			Assert.True(typeof(decimal).IsImplicitlyAssignableFrom(typeof(byte)));
+			Assert.True(typeof(int).IsImplicitlyAssignableFrom(typeof(short)));
+			Assert.True(typeof(long).IsImplicitlyAssignableFrom(typeof(short)));
+			Assert.True(typeof(float).IsImplicitlyAssignableFrom(typeof(short)));
+			Assert.True(typeof(double).IsImplicitlyAssignableFrom(typeof(short)));
+			Assert.True(typeof(decimal).IsImplicitlyAssignableFrom(typeof(short)));
+			Assert.True(typeof(int).IsImplicitlyAssignableFrom(typeof(ushort)));
+			Assert.True(typeof(uint).IsImplicitlyAssignableFrom(typeof(ushort)));
+			Assert.True(typeof(long).IsImplicitlyAssignableFrom(typeof(ushort)));
+			Assert.True(typeof(ulong).IsImplicitlyAssignableFrom(typeof(ushort)));
+			Assert.True(typeof(float).IsImplicitlyAssignableFrom(typeof(ushort)));
+			Assert.True(typeof(double).IsImplicitlyAssignableFrom(typeof(ushort)));
+			Assert.True(typeof(decimal).IsImplicitlyAssignableFrom(typeof(ushort)));
+			Assert.True(typeof(long).IsImplicitlyAssignableFrom(typeof(int)));
+			Assert.True(typeof(float).IsImplicitlyAssignableFrom(typeof(int)));
+			Assert.True(typeof(double).IsImplicitlyAssignableFrom(typeof(int)));
+			Assert.True(typeof(decimal).IsImplicitlyAssignableFrom(typeof(int)));
+			Assert.True(typeof(long).IsImplicitlyAssignableFrom(typeof(uint)));
+			Assert.True(typeof(ulong).IsImplicitlyAssignableFrom(typeof(uint)));
+			Assert.True(typeof(float).IsImplicitlyAssignableFrom(typeof(uint)));
+			Assert.True(typeof(double).IsImplicitlyAssignableFrom(typeof(uint)));
+			Assert.True(typeof(decimal).IsImplicitlyAssignableFrom(typeof(uint)));
+			Assert.True(typeof(float).IsImplicitlyAssignableFrom(typeof(long)));
+			Assert.True(typeof(double).IsImplicitlyAssignableFrom(typeof(long)));
+			Assert.True(typeof(decimal).IsImplicitlyAssignableFrom(typeof(long)));
+			Assert.True(typeof(float).IsImplicitlyAssignableFrom(typeof(ulong)));
+			Assert.True(typeof(double).IsImplicitlyAssignableFrom(typeof(ulong)));
+			Assert.True(typeof(decimal).IsImplicitlyAssignableFrom(typeof(ulong)));
+			Assert.True(typeof(ushort).IsImplicitlyAssignableFrom(typeof(char)));
+			Assert.True(typeof(int).IsImplicitlyAssignableFrom(typeof(char)));
+			Assert.True(typeof(uint).IsImplicitlyAssignableFrom(typeof(char)));
+			Assert.True(typeof(long).IsImplicitlyAssignableFrom(typeof(char)));
+			Assert.True(typeof(ulong).IsImplicitlyAssignableFrom(typeof(char)));
+			Assert.True(typeof(float).IsImplicitlyAssignableFrom(typeof(char)));
+			Assert.True(typeof(double).IsImplicitlyAssignableFrom(typeof(char)));
+			Assert.True(typeof(decimal).IsImplicitlyAssignableFrom(typeof(char)));
+			Assert.True(typeof(double).IsImplicitlyAssignableFrom(typeof(float)));
 
 			#endregion // Implicit Numeric Conversions
 
 			#region Implicit Nullable Conversions
 
-			Assert.IsTrue(typeof(short?).IsImplicitlyAssignableFrom(typeof(sbyte?)));
-			Assert.IsTrue(typeof(int?).IsImplicitlyAssignableFrom(typeof(sbyte?)));
-			Assert.IsTrue(typeof(long?).IsImplicitlyAssignableFrom(typeof(sbyte?)));
-			Assert.IsTrue(typeof(float?).IsImplicitlyAssignableFrom(typeof(sbyte?)));
-			Assert.IsTrue(typeof(double?).IsImplicitlyAssignableFrom(typeof(sbyte?)));
-			Assert.IsTrue(typeof(decimal?).IsImplicitlyAssignableFrom(typeof(sbyte?)));
-			Assert.IsTrue(typeof(short?).IsImplicitlyAssignableFrom(typeof(byte?)));
-			Assert.IsTrue(typeof(ushort?).IsImplicitlyAssignableFrom(typeof(byte?)));
-			Assert.IsTrue(typeof(int?).IsImplicitlyAssignableFrom(typeof(byte?)));
-			Assert.IsTrue(typeof(uint?).IsImplicitlyAssignableFrom(typeof(byte?)));
-			Assert.IsTrue(typeof(long?).IsImplicitlyAssignableFrom(typeof(byte?)));
-			Assert.IsTrue(typeof(ulong?).IsImplicitlyAssignableFrom(typeof(byte?)));
-			Assert.IsTrue(typeof(float?).IsImplicitlyAssignableFrom(typeof(byte?)));
-			Assert.IsTrue(typeof(double?).IsImplicitlyAssignableFrom(typeof(byte?)));
-			Assert.IsTrue(typeof(decimal?).IsImplicitlyAssignableFrom(typeof(byte?)));
-			Assert.IsTrue(typeof(int?).IsImplicitlyAssignableFrom(typeof(short?)));
-			Assert.IsTrue(typeof(long?).IsImplicitlyAssignableFrom(typeof(short?)));
-			Assert.IsTrue(typeof(float?).IsImplicitlyAssignableFrom(typeof(short?)));
-			Assert.IsTrue(typeof(double?).IsImplicitlyAssignableFrom(typeof(short?)));
-			Assert.IsTrue(typeof(decimal?).IsImplicitlyAssignableFrom(typeof(short?)));
-			Assert.IsTrue(typeof(int?).IsImplicitlyAssignableFrom(typeof(ushort?)));
-			Assert.IsTrue(typeof(uint?).IsImplicitlyAssignableFrom(typeof(ushort?)));
-			Assert.IsTrue(typeof(long?).IsImplicitlyAssignableFrom(typeof(ushort?)));
-			Assert.IsTrue(typeof(ulong?).IsImplicitlyAssignableFrom(typeof(ushort?)));
-			Assert.IsTrue(typeof(float?).IsImplicitlyAssignableFrom(typeof(ushort?)));
-			Assert.IsTrue(typeof(double?).IsImplicitlyAssignableFrom(typeof(ushort?)));
-			Assert.IsTrue(typeof(decimal?).IsImplicitlyAssignableFrom(typeof(ushort?)));
-			Assert.IsTrue(typeof(long?).IsImplicitlyAssignableFrom(typeof(int?)));
-			Assert.IsTrue(typeof(float?).IsImplicitlyAssignableFrom(typeof(int?)));
-			Assert.IsTrue(typeof(double?).IsImplicitlyAssignableFrom(typeof(int?)));
-			Assert.IsTrue(typeof(decimal?).IsImplicitlyAssignableFrom(typeof(int?)));
-			Assert.IsTrue(typeof(long?).IsImplicitlyAssignableFrom(typeof(uint?)));
-			Assert.IsTrue(typeof(ulong?).IsImplicitlyAssignableFrom(typeof(uint?)));
-			Assert.IsTrue(typeof(float?).IsImplicitlyAssignableFrom(typeof(uint?)));
-			Assert.IsTrue(typeof(double?).IsImplicitlyAssignableFrom(typeof(uint?)));
-			Assert.IsTrue(typeof(decimal?).IsImplicitlyAssignableFrom(typeof(uint?)));
-			Assert.IsTrue(typeof(float?).IsImplicitlyAssignableFrom(typeof(long?)));
-			Assert.IsTrue(typeof(double?).IsImplicitlyAssignableFrom(typeof(long?)));
-			Assert.IsTrue(typeof(decimal?).IsImplicitlyAssignableFrom(typeof(long?)));
-			Assert.IsTrue(typeof(float?).IsImplicitlyAssignableFrom(typeof(ulong?)));
-			Assert.IsTrue(typeof(double?).IsImplicitlyAssignableFrom(typeof(ulong?)));
-			Assert.IsTrue(typeof(decimal?).IsImplicitlyAssignableFrom(typeof(ulong?)));
-			Assert.IsTrue(typeof(ushort?).IsImplicitlyAssignableFrom(typeof(char?)));
-			Assert.IsTrue(typeof(int?).IsImplicitlyAssignableFrom(typeof(char?)));
-			Assert.IsTrue(typeof(uint?).IsImplicitlyAssignableFrom(typeof(char?)));
-			Assert.IsTrue(typeof(long?).IsImplicitlyAssignableFrom(typeof(char?)));
-			Assert.IsTrue(typeof(ulong?).IsImplicitlyAssignableFrom(typeof(char?)));
-			Assert.IsTrue(typeof(float?).IsImplicitlyAssignableFrom(typeof(char?)));
-			Assert.IsTrue(typeof(double?).IsImplicitlyAssignableFrom(typeof(char?)));
-			Assert.IsTrue(typeof(decimal?).IsImplicitlyAssignableFrom(typeof(char?)));
-			Assert.IsTrue(typeof(double?).IsImplicitlyAssignableFrom(typeof(float?)));
-			Assert.IsTrue(typeof(BStruct?).IsImplicitlyAssignableFrom(typeof(CStruct?)));
-			Assert.IsTrue(typeof(AStruct?).IsImplicitlyAssignableFrom(typeof(BStruct?)));
-			Assert.IsTrue(typeof(short?).IsImplicitlyAssignableFrom(typeof(sbyte)));
-			Assert.IsTrue(typeof(int?).IsImplicitlyAssignableFrom(typeof(sbyte)));
-			Assert.IsTrue(typeof(long?).IsImplicitlyAssignableFrom(typeof(sbyte)));
-			Assert.IsTrue(typeof(float?).IsImplicitlyAssignableFrom(typeof(sbyte)));
-			Assert.IsTrue(typeof(double?).IsImplicitlyAssignableFrom(typeof(sbyte)));
-			Assert.IsTrue(typeof(decimal?).IsImplicitlyAssignableFrom(typeof(sbyte)));
-			Assert.IsTrue(typeof(short?).IsImplicitlyAssignableFrom(typeof(byte)));
-			Assert.IsTrue(typeof(ushort?).IsImplicitlyAssignableFrom(typeof(byte)));
-			Assert.IsTrue(typeof(int?).IsImplicitlyAssignableFrom(typeof(byte)));
-			Assert.IsTrue(typeof(uint?).IsImplicitlyAssignableFrom(typeof(byte)));
-			Assert.IsTrue(typeof(long?).IsImplicitlyAssignableFrom(typeof(byte)));
-			Assert.IsTrue(typeof(ulong?).IsImplicitlyAssignableFrom(typeof(byte)));
-			Assert.IsTrue(typeof(float?).IsImplicitlyAssignableFrom(typeof(byte)));
-			Assert.IsTrue(typeof(double?).IsImplicitlyAssignableFrom(typeof(byte)));
-			Assert.IsTrue(typeof(decimal?).IsImplicitlyAssignableFrom(typeof(byte)));
-			Assert.IsTrue(typeof(int?).IsImplicitlyAssignableFrom(typeof(short)));
-			Assert.IsTrue(typeof(long?).IsImplicitlyAssignableFrom(typeof(short)));
-			Assert.IsTrue(typeof(float?).IsImplicitlyAssignableFrom(typeof(short)));
-			Assert.IsTrue(typeof(double?).IsImplicitlyAssignableFrom(typeof(short)));
-			Assert.IsTrue(typeof(decimal?).IsImplicitlyAssignableFrom(typeof(short)));
-			Assert.IsTrue(typeof(int?).IsImplicitlyAssignableFrom(typeof(ushort)));
-			Assert.IsTrue(typeof(uint?).IsImplicitlyAssignableFrom(typeof(ushort)));
-			Assert.IsTrue(typeof(long?).IsImplicitlyAssignableFrom(typeof(ushort)));
-			Assert.IsTrue(typeof(ulong?).IsImplicitlyAssignableFrom(typeof(ushort)));
-			Assert.IsTrue(typeof(float?).IsImplicitlyAssignableFrom(typeof(ushort)));
-			Assert.IsTrue(typeof(double?).IsImplicitlyAssignableFrom(typeof(ushort)));
-			Assert.IsTrue(typeof(decimal?).IsImplicitlyAssignableFrom(typeof(ushort)));
-			Assert.IsTrue(typeof(long?).IsImplicitlyAssignableFrom(typeof(int)));
-			Assert.IsTrue(typeof(float?).IsImplicitlyAssignableFrom(typeof(int)));
-			Assert.IsTrue(typeof(double?).IsImplicitlyAssignableFrom(typeof(int)));
-			Assert.IsTrue(typeof(decimal?).IsImplicitlyAssignableFrom(typeof(int)));
-			Assert.IsTrue(typeof(long?).IsImplicitlyAssignableFrom(typeof(uint)));
-			Assert.IsTrue(typeof(ulong?).IsImplicitlyAssignableFrom(typeof(uint)));
-			Assert.IsTrue(typeof(float?).IsImplicitlyAssignableFrom(typeof(uint)));
-			Assert.IsTrue(typeof(double?).IsImplicitlyAssignableFrom(typeof(uint)));
-			Assert.IsTrue(typeof(decimal?).IsImplicitlyAssignableFrom(typeof(uint)));
-			Assert.IsTrue(typeof(float?).IsImplicitlyAssignableFrom(typeof(long)));
-			Assert.IsTrue(typeof(double?).IsImplicitlyAssignableFrom(typeof(long)));
-			Assert.IsTrue(typeof(decimal?).IsImplicitlyAssignableFrom(typeof(long)));
-			Assert.IsTrue(typeof(float?).IsImplicitlyAssignableFrom(typeof(ulong)));
-			Assert.IsTrue(typeof(double?).IsImplicitlyAssignableFrom(typeof(ulong)));
-			Assert.IsTrue(typeof(decimal?).IsImplicitlyAssignableFrom(typeof(ulong)));
-			Assert.IsTrue(typeof(ushort?).IsImplicitlyAssignableFrom(typeof(char)));
-			Assert.IsTrue(typeof(int?).IsImplicitlyAssignableFrom(typeof(char)));
-			Assert.IsTrue(typeof(uint?).IsImplicitlyAssignableFrom(typeof(char)));
-			Assert.IsTrue(typeof(long?).IsImplicitlyAssignableFrom(typeof(char)));
-			Assert.IsTrue(typeof(ulong?).IsImplicitlyAssignableFrom(typeof(char)));
-			Assert.IsTrue(typeof(float?).IsImplicitlyAssignableFrom(typeof(char)));
-			Assert.IsTrue(typeof(double?).IsImplicitlyAssignableFrom(typeof(char)));
-			Assert.IsTrue(typeof(decimal?).IsImplicitlyAssignableFrom(typeof(char)));
-			Assert.IsTrue(typeof(double?).IsImplicitlyAssignableFrom(typeof(float)));
-			Assert.IsTrue(typeof(BStruct?).IsImplicitlyAssignableFrom(typeof(CStruct)));
-			Assert.IsTrue(typeof(AStruct?).IsImplicitlyAssignableFrom(typeof(BStruct)));
+			Assert.True(typeof(short?).IsImplicitlyAssignableFrom(typeof(sbyte?)));
+			Assert.True(typeof(int?).IsImplicitlyAssignableFrom(typeof(sbyte?)));
+			Assert.True(typeof(long?).IsImplicitlyAssignableFrom(typeof(sbyte?)));
+			Assert.True(typeof(float?).IsImplicitlyAssignableFrom(typeof(sbyte?)));
+			Assert.True(typeof(double?).IsImplicitlyAssignableFrom(typeof(sbyte?)));
+			Assert.True(typeof(decimal?).IsImplicitlyAssignableFrom(typeof(sbyte?)));
+			Assert.True(typeof(short?).IsImplicitlyAssignableFrom(typeof(byte?)));
+			Assert.True(typeof(ushort?).IsImplicitlyAssignableFrom(typeof(byte?)));
+			Assert.True(typeof(int?).IsImplicitlyAssignableFrom(typeof(byte?)));
+			Assert.True(typeof(uint?).IsImplicitlyAssignableFrom(typeof(byte?)));
+			Assert.True(typeof(long?).IsImplicitlyAssignableFrom(typeof(byte?)));
+			Assert.True(typeof(ulong?).IsImplicitlyAssignableFrom(typeof(byte?)));
+			Assert.True(typeof(float?).IsImplicitlyAssignableFrom(typeof(byte?)));
+			Assert.True(typeof(double?).IsImplicitlyAssignableFrom(typeof(byte?)));
+			Assert.True(typeof(decimal?).IsImplicitlyAssignableFrom(typeof(byte?)));
+			Assert.True(typeof(int?).IsImplicitlyAssignableFrom(typeof(short?)));
+			Assert.True(typeof(long?).IsImplicitlyAssignableFrom(typeof(short?)));
+			Assert.True(typeof(float?).IsImplicitlyAssignableFrom(typeof(short?)));
+			Assert.True(typeof(double?).IsImplicitlyAssignableFrom(typeof(short?)));
+			Assert.True(typeof(decimal?).IsImplicitlyAssignableFrom(typeof(short?)));
+			Assert.True(typeof(int?).IsImplicitlyAssignableFrom(typeof(ushort?)));
+			Assert.True(typeof(uint?).IsImplicitlyAssignableFrom(typeof(ushort?)));
+			Assert.True(typeof(long?).IsImplicitlyAssignableFrom(typeof(ushort?)));
+			Assert.True(typeof(ulong?).IsImplicitlyAssignableFrom(typeof(ushort?)));
+			Assert.True(typeof(float?).IsImplicitlyAssignableFrom(typeof(ushort?)));
+			Assert.True(typeof(double?).IsImplicitlyAssignableFrom(typeof(ushort?)));
+			Assert.True(typeof(decimal?).IsImplicitlyAssignableFrom(typeof(ushort?)));
+			Assert.True(typeof(long?).IsImplicitlyAssignableFrom(typeof(int?)));
+			Assert.True(typeof(float?).IsImplicitlyAssignableFrom(typeof(int?)));
+			Assert.True(typeof(double?).IsImplicitlyAssignableFrom(typeof(int?)));
+			Assert.True(typeof(decimal?).IsImplicitlyAssignableFrom(typeof(int?)));
+			Assert.True(typeof(long?).IsImplicitlyAssignableFrom(typeof(uint?)));
+			Assert.True(typeof(ulong?).IsImplicitlyAssignableFrom(typeof(uint?)));
+			Assert.True(typeof(float?).IsImplicitlyAssignableFrom(typeof(uint?)));
+			Assert.True(typeof(double?).IsImplicitlyAssignableFrom(typeof(uint?)));
+			Assert.True(typeof(decimal?).IsImplicitlyAssignableFrom(typeof(uint?)));
+			Assert.True(typeof(float?).IsImplicitlyAssignableFrom(typeof(long?)));
+			Assert.True(typeof(double?).IsImplicitlyAssignableFrom(typeof(long?)));
+			Assert.True(typeof(decimal?).IsImplicitlyAssignableFrom(typeof(long?)));
+			Assert.True(typeof(float?).IsImplicitlyAssignableFrom(typeof(ulong?)));
+			Assert.True(typeof(double?).IsImplicitlyAssignableFrom(typeof(ulong?)));
+			Assert.True(typeof(decimal?).IsImplicitlyAssignableFrom(typeof(ulong?)));
+			Assert.True(typeof(ushort?).IsImplicitlyAssignableFrom(typeof(char?)));
+			Assert.True(typeof(int?).IsImplicitlyAssignableFrom(typeof(char?)));
+			Assert.True(typeof(uint?).IsImplicitlyAssignableFrom(typeof(char?)));
+			Assert.True(typeof(long?).IsImplicitlyAssignableFrom(typeof(char?)));
+			Assert.True(typeof(ulong?).IsImplicitlyAssignableFrom(typeof(char?)));
+			Assert.True(typeof(float?).IsImplicitlyAssignableFrom(typeof(char?)));
+			Assert.True(typeof(double?).IsImplicitlyAssignableFrom(typeof(char?)));
+			Assert.True(typeof(decimal?).IsImplicitlyAssignableFrom(typeof(char?)));
+			Assert.True(typeof(double?).IsImplicitlyAssignableFrom(typeof(float?)));
+			Assert.True(typeof(BStruct?).IsImplicitlyAssignableFrom(typeof(CStruct?)));
+			Assert.True(typeof(AStruct?).IsImplicitlyAssignableFrom(typeof(BStruct?)));
+			Assert.True(typeof(short?).IsImplicitlyAssignableFrom(typeof(sbyte)));
+			Assert.True(typeof(int?).IsImplicitlyAssignableFrom(typeof(sbyte)));
+			Assert.True(typeof(long?).IsImplicitlyAssignableFrom(typeof(sbyte)));
+			Assert.True(typeof(float?).IsImplicitlyAssignableFrom(typeof(sbyte)));
+			Assert.True(typeof(double?).IsImplicitlyAssignableFrom(typeof(sbyte)));
+			Assert.True(typeof(decimal?).IsImplicitlyAssignableFrom(typeof(sbyte)));
+			Assert.True(typeof(short?).IsImplicitlyAssignableFrom(typeof(byte)));
+			Assert.True(typeof(ushort?).IsImplicitlyAssignableFrom(typeof(byte)));
+			Assert.True(typeof(int?).IsImplicitlyAssignableFrom(typeof(byte)));
+			Assert.True(typeof(uint?).IsImplicitlyAssignableFrom(typeof(byte)));
+			Assert.True(typeof(long?).IsImplicitlyAssignableFrom(typeof(byte)));
+			Assert.True(typeof(ulong?).IsImplicitlyAssignableFrom(typeof(byte)));
+			Assert.True(typeof(float?).IsImplicitlyAssignableFrom(typeof(byte)));
+			Assert.True(typeof(double?).IsImplicitlyAssignableFrom(typeof(byte)));
+			Assert.True(typeof(decimal?).IsImplicitlyAssignableFrom(typeof(byte)));
+			Assert.True(typeof(int?).IsImplicitlyAssignableFrom(typeof(short)));
+			Assert.True(typeof(long?).IsImplicitlyAssignableFrom(typeof(short)));
+			Assert.True(typeof(float?).IsImplicitlyAssignableFrom(typeof(short)));
+			Assert.True(typeof(double?).IsImplicitlyAssignableFrom(typeof(short)));
+			Assert.True(typeof(decimal?).IsImplicitlyAssignableFrom(typeof(short)));
+			Assert.True(typeof(int?).IsImplicitlyAssignableFrom(typeof(ushort)));
+			Assert.True(typeof(uint?).IsImplicitlyAssignableFrom(typeof(ushort)));
+			Assert.True(typeof(long?).IsImplicitlyAssignableFrom(typeof(ushort)));
+			Assert.True(typeof(ulong?).IsImplicitlyAssignableFrom(typeof(ushort)));
+			Assert.True(typeof(float?).IsImplicitlyAssignableFrom(typeof(ushort)));
+			Assert.True(typeof(double?).IsImplicitlyAssignableFrom(typeof(ushort)));
+			Assert.True(typeof(decimal?).IsImplicitlyAssignableFrom(typeof(ushort)));
+			Assert.True(typeof(long?).IsImplicitlyAssignableFrom(typeof(int)));
+			Assert.True(typeof(float?).IsImplicitlyAssignableFrom(typeof(int)));
+			Assert.True(typeof(double?).IsImplicitlyAssignableFrom(typeof(int)));
+			Assert.True(typeof(decimal?).IsImplicitlyAssignableFrom(typeof(int)));
+			Assert.True(typeof(long?).IsImplicitlyAssignableFrom(typeof(uint)));
+			Assert.True(typeof(ulong?).IsImplicitlyAssignableFrom(typeof(uint)));
+			Assert.True(typeof(float?).IsImplicitlyAssignableFrom(typeof(uint)));
+			Assert.True(typeof(double?).IsImplicitlyAssignableFrom(typeof(uint)));
+			Assert.True(typeof(decimal?).IsImplicitlyAssignableFrom(typeof(uint)));
+			Assert.True(typeof(float?).IsImplicitlyAssignableFrom(typeof(long)));
+			Assert.True(typeof(double?).IsImplicitlyAssignableFrom(typeof(long)));
+			Assert.True(typeof(decimal?).IsImplicitlyAssignableFrom(typeof(long)));
+			Assert.True(typeof(float?).IsImplicitlyAssignableFrom(typeof(ulong)));
+			Assert.True(typeof(double?).IsImplicitlyAssignableFrom(typeof(ulong)));
+			Assert.True(typeof(decimal?).IsImplicitlyAssignableFrom(typeof(ulong)));
+			Assert.True(typeof(ushort?).IsImplicitlyAssignableFrom(typeof(char)));
+			Assert.True(typeof(int?).IsImplicitlyAssignableFrom(typeof(char)));
+			Assert.True(typeof(uint?).IsImplicitlyAssignableFrom(typeof(char)));
+			Assert.True(typeof(long?).IsImplicitlyAssignableFrom(typeof(char)));
+			Assert.True(typeof(ulong?).IsImplicitlyAssignableFrom(typeof(char)));
+			Assert.True(typeof(float?).IsImplicitlyAssignableFrom(typeof(char)));
+			Assert.True(typeof(double?).IsImplicitlyAssignableFrom(typeof(char)));
+			Assert.True(typeof(decimal?).IsImplicitlyAssignableFrom(typeof(char)));
+			Assert.True(typeof(double?).IsImplicitlyAssignableFrom(typeof(float)));
+			Assert.True(typeof(BStruct?).IsImplicitlyAssignableFrom(typeof(CStruct)));
+			Assert.True(typeof(AStruct?).IsImplicitlyAssignableFrom(typeof(BStruct)));
 
 			#endregion // Implicit Nullable Conversions
 
 			#region Implicit Reference Conversions
 
-			Assert.IsTrue(typeof(object).IsImplicitlyAssignableFrom(typeof(AssignabilityTests)));
-			Assert.IsTrue(typeof(BaseClass).IsImplicitlyAssignableFrom(typeof(DerivedClass)));
-			Assert.IsTrue(typeof(BaseInterface).IsImplicitlyAssignableFrom(typeof(DerivedClass)));
-			Assert.IsTrue(typeof(DerivedInterface).IsImplicitlyAssignableFrom(typeof(DerivedClass)));
-			Assert.IsTrue(typeof(BaseInterface).IsImplicitlyAssignableFrom(typeof(DerivedInterface)));
-			Assert.IsTrue(typeof(object[]).IsImplicitlyAssignableFrom(typeof(AssignabilityTests[])));
-			Assert.IsTrue(typeof(BaseClass[]).IsImplicitlyAssignableFrom(typeof(DerivedClass[])));
-			Assert.IsTrue(typeof(BaseInterface[]).IsImplicitlyAssignableFrom(typeof(DerivedClass[])));
-			Assert.IsTrue(typeof(DerivedInterface[]).IsImplicitlyAssignableFrom(typeof(DerivedClass[])));
-			Assert.IsTrue(typeof(BaseInterface[]).IsImplicitlyAssignableFrom(typeof(DerivedInterface[])));
-			Assert.IsTrue(typeof(object[,]).IsImplicitlyAssignableFrom(typeof(AssignabilityTests[,])));
-			Assert.IsTrue(typeof(BaseClass[,]).IsImplicitlyAssignableFrom(typeof(DerivedClass[,])));
-			Assert.IsTrue(typeof(BaseInterface[,]).IsImplicitlyAssignableFrom(typeof(DerivedClass[,])));
-			Assert.IsTrue(typeof(DerivedInterface[,]).IsImplicitlyAssignableFrom(typeof(DerivedClass[,])));
-			Assert.IsTrue(typeof(BaseInterface[,]).IsImplicitlyAssignableFrom(typeof(DerivedInterface[,])));
-			Assert.IsFalse(typeof(object[]).IsImplicitlyAssignableFrom(typeof(AssignabilityTests[,])));
-			Assert.IsFalse(typeof(object[,]).IsImplicitlyAssignableFrom(typeof(AssignabilityTests[])));
-			Assert.IsTrue(typeof(Array).IsImplicitlyAssignableFrom(typeof(AssignabilityTests[])));
-			Assert.IsTrue(typeof(Array).IsImplicitlyAssignableFrom(typeof(AssignabilityTests[,])));
-			Assert.IsTrue(typeof(ICloneable).IsImplicitlyAssignableFrom(typeof(AssignabilityTests[])));
-			Assert.IsTrue(typeof(ICloneable).IsImplicitlyAssignableFrom(typeof(AssignabilityTests[,])));
-			Assert.IsTrue(typeof(IList).IsImplicitlyAssignableFrom(typeof(AssignabilityTests[])));
-			Assert.IsTrue(typeof(IList).IsImplicitlyAssignableFrom(typeof(AssignabilityTests[,])));
-			Assert.IsTrue(typeof(ICollection).IsImplicitlyAssignableFrom(typeof(AssignabilityTests[])));
-			Assert.IsTrue(typeof(ICollection).IsImplicitlyAssignableFrom(typeof(AssignabilityTests[,])));
-			Assert.IsTrue(typeof(IEnumerable).IsImplicitlyAssignableFrom(typeof(AssignabilityTests[])));
-			Assert.IsTrue(typeof(IEnumerable).IsImplicitlyAssignableFrom(typeof(AssignabilityTests[,])));
-			Assert.IsTrue(typeof(IStructuralComparable).IsImplicitlyAssignableFrom(typeof(AssignabilityTests[])));
-			Assert.IsTrue(typeof(IStructuralComparable).IsImplicitlyAssignableFrom(typeof(AssignabilityTests[,])));
-			Assert.IsTrue(typeof(IStructuralEquatable).IsImplicitlyAssignableFrom(typeof(AssignabilityTests[])));
-			Assert.IsTrue(typeof(IStructuralEquatable).IsImplicitlyAssignableFrom(typeof(AssignabilityTests[,])));
-			Assert.IsTrue(typeof(IList<AssignabilityTests>).IsImplicitlyAssignableFrom(typeof(AssignabilityTests[])));
-			Assert.IsTrue(typeof(IList<object>).IsImplicitlyAssignableFrom(typeof(AssignabilityTests[])));
-			Assert.IsTrue(typeof(Delegate).IsImplicitlyAssignableFrom(typeof(Action)));
-			Assert.IsTrue(typeof(Delegate).IsImplicitlyAssignableFrom(typeof(Func<int>)));
-			Assert.IsTrue(typeof(IEnumerable<BaseClass>).IsImplicitlyAssignableFrom(typeof(IEnumerable<DerivedClass>)));
-			Assert.IsTrue(typeof(Func<BaseClass>).IsImplicitlyAssignableFrom(typeof(Func<DerivedClass>)));
-			Assert.IsFalse(typeof(Func<DerivedClass>).IsImplicitlyAssignableFrom(typeof(Func<BaseClass>)));
-			Assert.IsFalse(typeof(Action<BaseClass>).IsImplicitlyAssignableFrom(typeof(Action<DerivedClass>)));
-			Assert.IsTrue(typeof(Action<DerivedClass>).IsImplicitlyAssignableFrom(typeof(Action<BaseClass>)));
-			Assert.IsTrue(typeof(Func<DerivedClass, BaseClass>).IsImplicitlyAssignableFrom(typeof(Func<BaseClass, DerivedClass>)));
-			Assert.IsFalse(typeof(Func<BaseClass, BaseClass>).IsImplicitlyAssignableFrom(typeof(Func<DerivedClass, DerivedClass>)));
-			Assert.IsFalse(typeof(Func<DerivedClass, DerivedClass>).IsImplicitlyAssignableFrom(typeof(Func<BaseClass, BaseClass>)));
+			Assert.True(typeof(object).IsImplicitlyAssignableFrom(typeof(AssignabilityTests)));
+			Assert.True(typeof(BaseClass).IsImplicitlyAssignableFrom(typeof(DerivedClass)));
+			Assert.True(typeof(BaseInterface).IsImplicitlyAssignableFrom(typeof(DerivedClass)));
+			Assert.True(typeof(DerivedInterface).IsImplicitlyAssignableFrom(typeof(DerivedClass)));
+			Assert.True(typeof(BaseInterface).IsImplicitlyAssignableFrom(typeof(DerivedInterface)));
+			Assert.True(typeof(object[]).IsImplicitlyAssignableFrom(typeof(AssignabilityTests[])));
+			Assert.True(typeof(BaseClass[]).IsImplicitlyAssignableFrom(typeof(DerivedClass[])));
+			Assert.True(typeof(BaseInterface[]).IsImplicitlyAssignableFrom(typeof(DerivedClass[])));
+			Assert.True(typeof(DerivedInterface[]).IsImplicitlyAssignableFrom(typeof(DerivedClass[])));
+			Assert.True(typeof(BaseInterface[]).IsImplicitlyAssignableFrom(typeof(DerivedInterface[])));
+			Assert.True(typeof(object[,]).IsImplicitlyAssignableFrom(typeof(AssignabilityTests[,])));
+			Assert.True(typeof(BaseClass[,]).IsImplicitlyAssignableFrom(typeof(DerivedClass[,])));
+			Assert.True(typeof(BaseInterface[,]).IsImplicitlyAssignableFrom(typeof(DerivedClass[,])));
+			Assert.True(typeof(DerivedInterface[,]).IsImplicitlyAssignableFrom(typeof(DerivedClass[,])));
+			Assert.True(typeof(BaseInterface[,]).IsImplicitlyAssignableFrom(typeof(DerivedInterface[,])));
+			Assert.False(typeof(object[]).IsImplicitlyAssignableFrom(typeof(AssignabilityTests[,])));
+			Assert.False(typeof(object[,]).IsImplicitlyAssignableFrom(typeof(AssignabilityTests[])));
+			Assert.True(typeof(Array).IsImplicitlyAssignableFrom(typeof(AssignabilityTests[])));
+			Assert.True(typeof(Array).IsImplicitlyAssignableFrom(typeof(AssignabilityTests[,])));
+			Assert.True(typeof(ICloneable).IsImplicitlyAssignableFrom(typeof(AssignabilityTests[])));
+			Assert.True(typeof(ICloneable).IsImplicitlyAssignableFrom(typeof(AssignabilityTests[,])));
+			Assert.True(typeof(IList).IsImplicitlyAssignableFrom(typeof(AssignabilityTests[])));
+			Assert.True(typeof(IList).IsImplicitlyAssignableFrom(typeof(AssignabilityTests[,])));
+			Assert.True(typeof(ICollection).IsImplicitlyAssignableFrom(typeof(AssignabilityTests[])));
+			Assert.True(typeof(ICollection).IsImplicitlyAssignableFrom(typeof(AssignabilityTests[,])));
+			Assert.True(typeof(IEnumerable).IsImplicitlyAssignableFrom(typeof(AssignabilityTests[])));
+			Assert.True(typeof(IEnumerable).IsImplicitlyAssignableFrom(typeof(AssignabilityTests[,])));
+			Assert.True(typeof(IStructuralComparable).IsImplicitlyAssignableFrom(typeof(AssignabilityTests[])));
+			Assert.True(typeof(IStructuralComparable).IsImplicitlyAssignableFrom(typeof(AssignabilityTests[,])));
+			Assert.True(typeof(IStructuralEquatable).IsImplicitlyAssignableFrom(typeof(AssignabilityTests[])));
+			Assert.True(typeof(IStructuralEquatable).IsImplicitlyAssignableFrom(typeof(AssignabilityTests[,])));
+			Assert.True(typeof(IList<AssignabilityTests>).IsImplicitlyAssignableFrom(typeof(AssignabilityTests[])));
+			Assert.True(typeof(IList<object>).IsImplicitlyAssignableFrom(typeof(AssignabilityTests[])));
+			Assert.True(typeof(Delegate).IsImplicitlyAssignableFrom(typeof(Action)));
+			Assert.True(typeof(Delegate).IsImplicitlyAssignableFrom(typeof(Func<int>)));
+			Assert.True(typeof(IEnumerable<BaseClass>).IsImplicitlyAssignableFrom(typeof(IEnumerable<DerivedClass>)));
+			Assert.True(typeof(Func<BaseClass>).IsImplicitlyAssignableFrom(typeof(Func<DerivedClass>)));
+			Assert.False(typeof(Func<DerivedClass>).IsImplicitlyAssignableFrom(typeof(Func<BaseClass>)));
+			Assert.False(typeof(Action<BaseClass>).IsImplicitlyAssignableFrom(typeof(Action<DerivedClass>)));
+			Assert.True(typeof(Action<DerivedClass>).IsImplicitlyAssignableFrom(typeof(Action<BaseClass>)));
+			Assert.True(typeof(Func<DerivedClass, BaseClass>).IsImplicitlyAssignableFrom(typeof(Func<BaseClass, DerivedClass>)));
+			Assert.False(typeof(Func<BaseClass, BaseClass>).IsImplicitlyAssignableFrom(typeof(Func<DerivedClass, DerivedClass>)));
+			Assert.False(typeof(Func<DerivedClass, DerivedClass>).IsImplicitlyAssignableFrom(typeof(Func<BaseClass, BaseClass>)));
 
 			#endregion // Implicit Reference Conversions
 
 			#region Boxing Conversions
 
-			Assert.IsTrue(typeof(object).IsImplicitlyAssignableFrom(typeof(int)));
-			Assert.IsTrue(typeof(object).IsImplicitlyAssignableFrom(typeof(EnumValues)));
-			Assert.IsTrue(typeof(object).IsImplicitlyAssignableFrom(typeof(Struct)));
-			Assert.IsTrue(typeof(ValueType).IsImplicitlyAssignableFrom(typeof(int)));
-			Assert.IsTrue(typeof(ValueType).IsImplicitlyAssignableFrom(typeof(Struct)));
-			Assert.IsTrue(typeof(ValueType).IsImplicitlyAssignableFrom(typeof(EnumValues)));
-			Assert.IsTrue(typeof(IComparable).IsImplicitlyAssignableFrom(typeof(int)));
-			Assert.IsTrue(typeof(IFormattable).IsImplicitlyAssignableFrom(typeof(int)));
-			Assert.IsTrue(typeof(IConvertible).IsImplicitlyAssignableFrom(typeof(int)));
-			Assert.IsTrue(typeof(IComparable<int>).IsImplicitlyAssignableFrom(typeof(int)));
-			Assert.IsTrue(typeof(IEquatable<int>).IsImplicitlyAssignableFrom(typeof(int)));
-			Assert.IsTrue(typeof(DerivedInterface).IsImplicitlyAssignableFrom(typeof(Struct)));
-			Assert.IsTrue(typeof(BaseInterface).IsImplicitlyAssignableFrom(typeof(Struct)));
-			Assert.IsTrue(typeof(IComparable).IsImplicitlyAssignableFrom(typeof(EnumValues)));
-			Assert.IsTrue(typeof(IFormattable).IsImplicitlyAssignableFrom(typeof(EnumValues)));
-			Assert.IsTrue(typeof(IConvertible).IsImplicitlyAssignableFrom(typeof(EnumValues)));
-			Assert.IsTrue(typeof(Enum).IsImplicitlyAssignableFrom(typeof(EnumValues)));
-			Assert.IsTrue(typeof(object).IsImplicitlyAssignableFrom(typeof(int?)));
-			Assert.IsTrue(typeof(object).IsImplicitlyAssignableFrom(typeof(EnumValues?)));
-			Assert.IsTrue(typeof(object).IsImplicitlyAssignableFrom(typeof(Struct?)));
-			Assert.IsTrue(typeof(ValueType).IsImplicitlyAssignableFrom(typeof(int?)));
-			Assert.IsTrue(typeof(ValueType).IsImplicitlyAssignableFrom(typeof(Struct?)));
-			Assert.IsTrue(typeof(ValueType).IsImplicitlyAssignableFrom(typeof(EnumValues?)));
-			Assert.IsTrue(typeof(IComparable).IsImplicitlyAssignableFrom(typeof(int?)));
-			Assert.IsTrue(typeof(IFormattable).IsImplicitlyAssignableFrom(typeof(int?)));
-			Assert.IsTrue(typeof(IConvertible).IsImplicitlyAssignableFrom(typeof(int?)));
-			Assert.IsTrue(typeof(IComparable<int>).IsImplicitlyAssignableFrom(typeof(int?)));
-			Assert.IsTrue(typeof(IEquatable<int>).IsImplicitlyAssignableFrom(typeof(int?)));
-			Assert.IsTrue(typeof(DerivedInterface).IsImplicitlyAssignableFrom(typeof(Struct?)));
-			Assert.IsTrue(typeof(BaseInterface).IsImplicitlyAssignableFrom(typeof(Struct?)));
-			Assert.IsTrue(typeof(IComparable).IsImplicitlyAssignableFrom(typeof(EnumValues?)));
-			Assert.IsTrue(typeof(IFormattable).IsImplicitlyAssignableFrom(typeof(EnumValues?)));
-			Assert.IsTrue(typeof(IConvertible).IsImplicitlyAssignableFrom(typeof(EnumValues?)));
-			Assert.IsTrue(typeof(Enum).IsImplicitlyAssignableFrom(typeof(EnumValues?)));
-			Assert.IsTrue(typeof(IEnumerable<DerivedClass>).IsImplicitlyAssignableFrom(typeof(Struct2)));
-			Assert.IsTrue(typeof(IEnumerable<BaseClass>).IsImplicitlyAssignableFrom(typeof(Struct2)));
-			Assert.IsTrue(typeof(IEnumerable<DerivedClass>).IsImplicitlyAssignableFrom(typeof(Struct2?)));
-			Assert.IsTrue(typeof(IEnumerable<BaseClass>).IsImplicitlyAssignableFrom(typeof(Struct2?)));
+			Assert.True(typeof(object).IsImplicitlyAssignableFrom(typeof(int)));
+			Assert.True(typeof(object).IsImplicitlyAssignableFrom(typeof(EnumValues)));
+			Assert.True(typeof(object).IsImplicitlyAssignableFrom(typeof(Struct)));
+			Assert.True(typeof(ValueType).IsImplicitlyAssignableFrom(typeof(int)));
+			Assert.True(typeof(ValueType).IsImplicitlyAssignableFrom(typeof(Struct)));
+			Assert.True(typeof(ValueType).IsImplicitlyAssignableFrom(typeof(EnumValues)));
+			Assert.True(typeof(IComparable).IsImplicitlyAssignableFrom(typeof(int)));
+			Assert.True(typeof(IFormattable).IsImplicitlyAssignableFrom(typeof(int)));
+			Assert.True(typeof(IConvertible).IsImplicitlyAssignableFrom(typeof(int)));
+			Assert.True(typeof(IComparable<int>).IsImplicitlyAssignableFrom(typeof(int)));
+			Assert.True(typeof(IEquatable<int>).IsImplicitlyAssignableFrom(typeof(int)));
+			Assert.True(typeof(DerivedInterface).IsImplicitlyAssignableFrom(typeof(Struct)));
+			Assert.True(typeof(BaseInterface).IsImplicitlyAssignableFrom(typeof(Struct)));
+			Assert.True(typeof(IComparable).IsImplicitlyAssignableFrom(typeof(EnumValues)));
+			Assert.True(typeof(IFormattable).IsImplicitlyAssignableFrom(typeof(EnumValues)));
+			Assert.True(typeof(IConvertible).IsImplicitlyAssignableFrom(typeof(EnumValues)));
+			Assert.True(typeof(Enum).IsImplicitlyAssignableFrom(typeof(EnumValues)));
+			Assert.True(typeof(object).IsImplicitlyAssignableFrom(typeof(int?)));
+			Assert.True(typeof(object).IsImplicitlyAssignableFrom(typeof(EnumValues?)));
+			Assert.True(typeof(object).IsImplicitlyAssignableFrom(typeof(Struct?)));
+			Assert.True(typeof(ValueType).IsImplicitlyAssignableFrom(typeof(int?)));
+			Assert.True(typeof(ValueType).IsImplicitlyAssignableFrom(typeof(Struct?)));
+			Assert.True(typeof(ValueType).IsImplicitlyAssignableFrom(typeof(EnumValues?)));
+			Assert.True(typeof(IComparable).IsImplicitlyAssignableFrom(typeof(int?)));
+			Assert.True(typeof(IFormattable).IsImplicitlyAssignableFrom(typeof(int?)));
+			Assert.True(typeof(IConvertible).IsImplicitlyAssignableFrom(typeof(int?)));
+			Assert.True(typeof(IComparable<int>).IsImplicitlyAssignableFrom(typeof(int?)));
+			Assert.True(typeof(IEquatable<int>).IsImplicitlyAssignableFrom(typeof(int?)));
+			Assert.True(typeof(DerivedInterface).IsImplicitlyAssignableFrom(typeof(Struct?)));
+			Assert.True(typeof(BaseInterface).IsImplicitlyAssignableFrom(typeof(Struct?)));
+			Assert.True(typeof(IComparable).IsImplicitlyAssignableFrom(typeof(EnumValues?)));
+			Assert.True(typeof(IFormattable).IsImplicitlyAssignableFrom(typeof(EnumValues?)));
+			Assert.True(typeof(IConvertible).IsImplicitlyAssignableFrom(typeof(EnumValues?)));
+			Assert.True(typeof(Enum).IsImplicitlyAssignableFrom(typeof(EnumValues?)));
+			Assert.True(typeof(IEnumerable<DerivedClass>).IsImplicitlyAssignableFrom(typeof(Struct2)));
+			Assert.True(typeof(IEnumerable<BaseClass>).IsImplicitlyAssignableFrom(typeof(Struct2)));
+			Assert.True(typeof(IEnumerable<DerivedClass>).IsImplicitlyAssignableFrom(typeof(Struct2?)));
+			Assert.True(typeof(IEnumerable<BaseClass>).IsImplicitlyAssignableFrom(typeof(Struct2?)));
 
 			#endregion // Boxing Conversions
 
 			#region Implicit conversions involving type parameters
 
 			var typeParameter = typeof(TypeParameterWithBaseClass<>).GetGenericArguments()[0];
-			Assert.IsTrue(typeof(DerivedClass).IsImplicitlyAssignableFrom(typeParameter));
-			Assert.IsTrue(typeof(BaseClass).IsImplicitlyAssignableFrom(typeParameter));
-			Assert.IsTrue(typeof(object).IsImplicitlyAssignableFrom(typeParameter));
-			Assert.IsTrue(typeof(DerivedInterface).IsImplicitlyAssignableFrom(typeParameter));
-			Assert.IsTrue(typeof(BaseInterface).IsImplicitlyAssignableFrom(typeParameter));
+			Assert.True(typeof(DerivedClass).IsImplicitlyAssignableFrom(typeParameter));
+			Assert.True(typeof(BaseClass).IsImplicitlyAssignableFrom(typeParameter));
+			Assert.True(typeof(object).IsImplicitlyAssignableFrom(typeParameter));
+			Assert.True(typeof(DerivedInterface).IsImplicitlyAssignableFrom(typeParameter));
+			Assert.True(typeof(BaseInterface).IsImplicitlyAssignableFrom(typeParameter));
 			typeParameter = typeof(TypeParameterWithInterface<>).GetGenericArguments()[0];
-			Assert.IsTrue(typeof(DerivedInterface).IsImplicitlyAssignableFrom(typeParameter));
-			Assert.IsTrue(typeof(BaseInterface).IsImplicitlyAssignableFrom(typeParameter));
+			Assert.True(typeof(DerivedInterface).IsImplicitlyAssignableFrom(typeParameter));
+			Assert.True(typeof(BaseInterface).IsImplicitlyAssignableFrom(typeParameter));
 			var typeParameter1 = typeof(TypeParameterWithBaseGeneric<,>).GetGenericArguments()[0];
 			var typeParameter2 = typeof(TypeParameterWithBaseGeneric<,>).GetGenericArguments()[1];
-			Assert.IsTrue(typeParameter2.IsImplicitlyAssignableFrom(typeParameter1));
+			Assert.True(typeParameter2.IsImplicitlyAssignableFrom(typeParameter1));
 			typeParameter1 = typeof(TypeParameterWithVariantInterfaces<,>).GetGenericArguments()[0];
 			typeParameter2 = typeof(TypeParameterWithVariantInterfaces<,>).GetGenericArguments()[1];
-			Assert.IsTrue(typeof(ContravariantInterface<DerivedClass>).IsImplicitlyAssignableFrom(typeParameter1));
-			Assert.IsTrue(typeof(CovariantInterface<BaseClass>).IsImplicitlyAssignableFrom(typeParameter2));
+			Assert.True(typeof(ContravariantInterface<DerivedClass>).IsImplicitlyAssignableFrom(typeParameter1));
+			Assert.True(typeof(CovariantInterface<BaseClass>).IsImplicitlyAssignableFrom(typeParameter2));
 
 			#endregion // Implicit conversions involving type parameters
 
 			#region User-defined implicit conversions
 
-			Assert.IsTrue(typeof(A).IsImplicitlyAssignableFrom(typeof(B)));
-			Assert.IsTrue(typeof(B).IsImplicitlyAssignableFrom(typeof(C)));
+			Assert.True(typeof(A).IsImplicitlyAssignableFrom(typeof(B)));
+			Assert.True(typeof(B).IsImplicitlyAssignableFrom(typeof(C)));
 
 			#endregion // User-defined implicit conversions
 		}
@@ -614,15 +611,16 @@ namespace BreakingChangesDetector.UnitTests.MetadataTypesTests
 		}
 
 		private static void TestAssignability(Func<Type, Type, bool> filter, params Type[] types)
-		{
-			var pairs =
+        {
+            var context = MetadataResolutionContext.CreateFromTypes(types);
+            var pairs =
 				from a in types
 				from b in types
 				where a != b && filter(a, b)
 				select new { a, b };
 
 			foreach (var pair in pairs)
-				TestAssignability(pair.a, pair.b);
+				TestAssignability(pair.a, pair.b, context);
 		}
 
 		private static void TestAssignability<A, B>()
@@ -630,23 +628,23 @@ namespace BreakingChangesDetector.UnitTests.MetadataTypesTests
 			TestAssignability(typeof(A), typeof(B));
 		}
 
-		private static void TestAssignability(Type a, Type b)
+		private static void TestAssignability(Type a, Type b, MetadataResolutionContext context)
 		{
-			var aData = a.IsGenericParameter ? GenericTypeParameterData.FromType(a) : TypeData.FromType(a);
-			var bData = b.IsGenericParameter ? GenericTypeParameterData.FromType(b) : TypeData.FromType(b);
+            var aData = a.IsGenericParameter ? context.GetGenericTypeParameterData(a) : context.GetTypeData(a);
+			var bData = b.IsGenericParameter ? context.GetGenericTypeParameterData(b) : context.GetTypeData(b);
 
 			if (aData == null || bData == null)
-				Assert.Inconclusive("Unable to get one of the types");
+				AssertX.Inconclusive("Unable to get one of the types");
 
 			if (a.IsImplicitlyAssignableFrom(b))
-				Assert.IsTrue(aData.IsAssignableFromNew(bData), string.Format("The type should be assignable: {0} <- {1}", aData.Name, bData.Name));
+				Assert.True(aData.IsAssignableFromNew(bData), string.Format("The type should be assignable: {0} <- {1}", aData.Name, bData.Name));
 			else
-				Assert.IsFalse(aData.IsAssignableFromNew(bData), string.Format("The type should not be assignable: {0} <- {1}", aData.Name, bData.Name));
+				Assert.False(aData.IsAssignableFromNew(bData), string.Format("The type should not be assignable: {0} <- {1}", aData.Name, bData.Name));
 
 			if (b.IsImplicitlyAssignableFrom(a))
-				Assert.IsTrue(bData.IsAssignableFromNew(aData), string.Format("The type should be assignable: {0} <- {1}", bData.Name, aData.Name));
+				Assert.True(bData.IsAssignableFromNew(aData), string.Format("The type should be assignable: {0} <- {1}", bData.Name, aData.Name));
 			else
-				Assert.IsFalse(bData.IsAssignableFromNew(aData), string.Format("The type should not be assignable: {0} <- {1}", bData.Name, aData.Name));
+				Assert.False(bData.IsAssignableFromNew(aData), string.Format("The type should not be assignable: {0} <- {1}", bData.Name, aData.Name));
 		}
 	}
 }

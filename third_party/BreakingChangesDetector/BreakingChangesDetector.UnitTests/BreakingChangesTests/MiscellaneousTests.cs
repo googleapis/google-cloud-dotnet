@@ -2,6 +2,7 @@
     MIT License
 
     Copyright(c) 2014-2018 Infragistics, Inc.
+    Copyright 2018 Google LLC
 
     Permission is hereby granted, free of charge, to any person obtaining a copy
     of this software and associated documentation files (the "Software"), to deal
@@ -26,7 +27,7 @@ extern alias older;
 extern alias newer;
 
 using System;
-using Microsoft.VisualStudio.TestTools.UnitTesting;
+using Xunit;
 using BreakingChangesDetector.MetadataItems;
 using BreakingChangesDetector.BreakingChanges;
 using Infragistics;
@@ -34,38 +35,37 @@ using System.Reflection;
 
 namespace BreakingChangesDetector.UnitTests.BreakingChangesTests
 {
-	[TestClass]
 	public class MiscellaneousTests
 	{
 		#region GenericParameterRenameTest
 
-		[TestMethod]
+		[Fact]
 		public void GenericParameterRenameTest()
 		{
-			var assembly = AssemblyData.FromAssembly(typeof(MiscellaneousTests).Assembly);
-			var typeData1 = TypeDefinitionData.FromType(typeof(GenericParameter1<>));
-			var typeData2 = TypeDefinitionData.FromType(typeof(GenericParameter2<>));
-			var typeData3 = TypeDefinitionData.FromType(typeof(GenericParameter3<,>));
-			var typeData4 = TypeDefinitionData.FromType(typeof(GenericParameter4<,>));
+			var context = MetadataResolutionContext.CreateFromTypes(typeof(MiscellaneousTests));
+			var typeData1 = context.GetTypeDefinitionData(typeof(GenericParameter1<>));
+			var typeData2 = context.GetTypeDefinitionData(typeof(GenericParameter2<>));
+			var typeData3 = context.GetTypeDefinitionData(typeof(GenericParameter3<,>));
+			var typeData4 = context.GetTypeDefinitionData(typeof(GenericParameter4<,>));
 			
 			var breakingChanges = MetadataComparer.CompareTypes(typeData1, typeData2);
-			Assert.AreEqual(0, breakingChanges.Count, "There should be no breaking changes for renaming a class's generic type parameter.");
+			AssertX.Equal(0, breakingChanges.Count, "There should be no breaking changes for renaming a class's generic type parameter.");
 
 			breakingChanges = MetadataComparer.CompareTypes(typeData3, typeData4);
-			Assert.AreEqual(1, breakingChanges.Count, "There should be a breaking changes for using a different generic type parameter position as a return type.");
-			Assert.AreEqual(BreakingChangeKind.ChangedMemberType, breakingChanges[0].BreakingChangeKind, "There should be a breaking changes for using a different generic type parameter position as a return type.");
+			AssertX.Equal(1, breakingChanges.Count, "There should be a breaking changes for using a different generic type parameter position as a return type.");
+			AssertX.Equal(BreakingChangeKind.ChangedMemberType, breakingChanges[0].BreakingChangeKind, "There should be a breaking changes for using a different generic type parameter position as a return type.");
 
-			typeData1 = TypeDefinitionData.FromType(typeof(GenericMethodParameter1));
-			typeData2 = TypeDefinitionData.FromType(typeof(GenericMethodParameter2));
-			typeData3 = TypeDefinitionData.FromType(typeof(GenericMethodParameter3));
-			typeData4 = TypeDefinitionData.FromType(typeof(GenericMethodParameter4));
+			typeData1 = context.GetTypeDefinitionData(typeof(GenericMethodParameter1));
+			typeData2 = context.GetTypeDefinitionData(typeof(GenericMethodParameter2));
+			typeData3 = context.GetTypeDefinitionData(typeof(GenericMethodParameter3));
+			typeData4 = context.GetTypeDefinitionData(typeof(GenericMethodParameter4));
 
 			breakingChanges = MetadataComparer.CompareTypes(typeData1, typeData2);
-			Assert.AreEqual(0, breakingChanges.Count, "There should be no breaking changes for renaming a class's generic type parameter.");
+			AssertX.Equal(0, breakingChanges.Count, "There should be no breaking changes for renaming a class's generic type parameter.");
 
 			breakingChanges = MetadataComparer.CompareTypes(typeData3, typeData4);
-			Assert.AreEqual(1, breakingChanges.Count, "There should be a breaking changes for using a different generic type parameter position as a return type.");
-			Assert.AreEqual(BreakingChangeKind.ChangedMemberType, breakingChanges[0].BreakingChangeKind, "There should be a breaking changes for using a different generic type parameter position as a return type.");
+			AssertX.Equal(1, breakingChanges.Count, "There should be a breaking changes for using a different generic type parameter position as a return type.");
+			AssertX.Equal(BreakingChangeKind.ChangedMemberType, breakingChanges[0].BreakingChangeKind, "There should be a breaking changes for using a different generic type parameter position as a return type.");
 		}
 
 		public class GenericMethodParameter1 { public T Method<T>(T x) { return default(T); } }
@@ -83,40 +83,51 @@ namespace BreakingChangesDetector.UnitTests.BreakingChangesTests
 
 		#region NamespaceRenamedAttributeTest
 
-		[TestMethod]
+		[Fact]
 		public void NamespaceRenamedAttributeTest()
 		{
-			var oldFamily = new AssemblyFamily { AssemblyData.FromAssembly(typeof(NamespaceRenamedAttributeOld.Type).Assembly) };
-			var newFamily = new AssemblyFamily { AssemblyData.FromAssembly(typeof(NamespaceRenamedAttributeNew.Type).Assembly) };
+            var context = MetadataResolutionContext.CreateFromTypes(
+                typeof(NamespaceRenamedAttributeOld.Type),
+                typeof(NamespaceRenamedAttributeNew.Type));
+            var oldFamily = new AssemblyFamily { context.GetAssemblyData(typeof(NamespaceRenamedAttributeOld.Type).Assembly) };
+			var newFamily = new AssemblyFamily { context.GetAssemblyData(typeof(NamespaceRenamedAttributeNew.Type).Assembly) };
 			var breakingChanges = MetadataComparer.CompareAssemblyFamilies(oldFamily, newFamily);
 
 			// Verify that the two 'Type' classes match up and that the comparer correctly detects the breaking change between them.
-			Assert.AreEqual(1, breakingChanges.Count, "There should be a breaking change for the removed IDisposable interface.");
-			Assert.AreEqual(BreakingChangeKind.RemovedImplementedInterface, breakingChanges[0].BreakingChangeKind, "There should be a breaking change for the removed IDisposable interface.");
+			AssertX.Equal(1, breakingChanges.Count, "There should be a breaking change for the removed IDisposable interface.");
+			AssertX.Equal(BreakingChangeKind.RemovedImplementedInterface, breakingChanges[0].BreakingChangeKind, "There should be a breaking change for the removed IDisposable interface.");
 
 			// However, when reversing the order, we should detect a removed type since the old assembly doesn't have the rename attribute
 			breakingChanges = MetadataComparer.CompareAssemblyFamilies(newFamily, oldFamily);
-			Assert.AreEqual(1, breakingChanges.Count, "There should be a breaking change for removing a root type.");
-			Assert.AreEqual(BreakingChangeKind.RemovedRootType, breakingChanges[0].BreakingChangeKind, "There should be a breaking change for removing a root type.");
+			AssertX.Equal(1, breakingChanges.Count, "There should be a breaking change for removing a root type.");
+			AssertX.Equal(BreakingChangeKind.RemovedRootType, breakingChanges[0].BreakingChangeKind, "There should be a breaking change for removing a root type.");
 		}
 
 		#endregion // NamespaceRenamedAttributeTest
 
 		#region TypeForwardingTest
 
-		[TestMethod]
+		[Fact]
 		public void TypeForwardingTest()
 		{
-			var foo = typeof(older::TypeForwardingOld.SourceType).Assembly.FullName;
+			var olderSourceType = typeof(older::TypeForwardingOld.SourceType);
 
-			var oldFamily = new AssemblyFamily { AssemblyData.FromAssembly(typeof(older::TypeForwardingOld.SourceType).Assembly) };
+            var olderContext = MetadataResolutionContext.CreateFromTypes(olderSourceType);
+            var olderFamily = new AssemblyFamily
+            {
+                olderContext.GetAssemblyData(olderSourceType.Assembly)
+            };
+
+            var newerSourceType = typeof(newer::TypeForwardingOld.SourceType);
+            var newerTargetType = typeof(newer::TypeForwardingOld.TargetType1);
+            var newerContext = MetadataResolutionContext.CreateFromTypes(newerSourceType, newerTargetType);
 			var newFamily = new AssemblyFamily 
-			{ 
-				AssemblyData.FromAssembly(typeof(newer::TypeForwardingOld.SourceType).Assembly),
-				AssemblyData.FromAssembly(typeof(newer::TypeForwardingOld.TargetType1).Assembly) 
+			{
+                newerContext.GetAssemblyData(newerSourceType.Assembly),
+                newerContext.GetAssemblyData(newerTargetType.Assembly) 
 			};
-			var breakingChanges = MetadataComparer.CompareAssemblyFamilies(oldFamily, newFamily);
-			Assert.AreEqual(0, breakingChanges.Count, "There should be no breaking changes when the removed type is forwarded.");
+			var breakingChanges = MetadataComparer.CompareAssemblyFamilies(olderFamily, newFamily);
+			AssertX.Equal(0, breakingChanges.Count, "There should be no breaking changes when the removed type is forwarded.");
 		}
 
 		#endregion // TypeForwardingTest

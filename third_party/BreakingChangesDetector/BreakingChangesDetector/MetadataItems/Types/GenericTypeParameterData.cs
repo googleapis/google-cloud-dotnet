@@ -2,6 +2,7 @@
     MIT License
 
     Copyright(c) 2014-2018 Infragistics, Inc.
+    Copyright 2018 Google LLC
 
     Permission is hereby granted, free of charge, to any person obtaining a copy
     of this software and associated documentation files (the "Software"), to deal
@@ -22,7 +23,7 @@
     SOFTWARE.
 */
 
-using Mono.Cecil;
+using Microsoft.CodeAnalysis;
 using System;
 using System.Collections.Generic;
 using System.Diagnostics;
@@ -33,6 +34,8 @@ using System.Threading.Tasks;
 
 namespace BreakingChangesDetector.MetadataItems
 {
+    // TODO: Remove 'Generic' to be consistent with Roslyn?
+
 	/// <summary>
 	/// Represents the metadata for an generic type parameter defined on an externally visible generic type or method.
 	/// </summary>
@@ -69,12 +72,36 @@ namespace BreakingChangesDetector.MetadataItems
 			this.GenericParameterPosition = genericParameterPosition;
 		}
 
-		internal GenericTypeParameterData(GenericParameter genericTypeParameter, AssemblyData assembly)
-			: base(genericTypeParameter, MemberAccessibility.Public, declaringType: null)
+		internal GenericTypeParameterData(ITypeParameterSymbol typeParameterSymbol, AssemblyData assembly)
+			: base(typeParameterSymbol, MemberAccessibility.Public, declaringType: null)
 		{
 			_assembly = assembly;
-			this.GenericParameterAttributes = (System.Reflection.GenericParameterAttributes)genericTypeParameter.Attributes;
-			this.GenericParameterPosition = genericTypeParameter.Position;
+
+            // TODO_Refactor: should we expose this info as 4 properties now, like Roslyn?
+            switch (typeParameterSymbol.Variance)
+            {
+                case VarianceKind.In:
+                    GenericParameterAttributes |= GenericParameterAttributes.Contravariant;
+                    break;
+                case VarianceKind.Out:
+                    GenericParameterAttributes |= GenericParameterAttributes.Covariant;
+                    break;
+            }
+
+            if (typeParameterSymbol.HasReferenceTypeConstraint)
+            {
+                GenericParameterAttributes |= GenericParameterAttributes.ReferenceTypeConstraint;
+            }
+            if (typeParameterSymbol.HasValueTypeConstraint)
+            {
+                GenericParameterAttributes |= GenericParameterAttributes.NotNullableValueTypeConstraint;
+            }
+            if (typeParameterSymbol.HasConstructorConstraint)
+            {
+                GenericParameterAttributes |= GenericParameterAttributes.DefaultConstructorConstraint;
+            }
+
+            this.GenericParameterPosition = typeParameterSymbol.Ordinal;
 			this.Constraints = new List<TypeData>();
 		}
 
@@ -213,7 +240,7 @@ namespace BreakingChangesDetector.MetadataItems
 			{
 				Debug.Assert(this == declaringGenericMethod.GenericParameters[this.GenericParameterPosition], "This type should be the generic parameter at its position in the declaring method.");
 
-				var newDeclaringType = (DeclaringTypeData)declaringGenericMethod.DeclaringType.GetEquivalentNewType(newAssemblyFamily);
+				var newDeclaringType = (DeclaringTypeData)declaringGenericMethod.ContainingType.GetEquivalentNewType(newAssemblyFamily);
 				if (newDeclaringType == null)
 					return null;
 
@@ -302,7 +329,8 @@ namespace BreakingChangesDetector.MetadataItems
 			{
 				if (this == genericParameters[i])
 				{
-					Debug.Assert(this.GenericParameterPosition == i, "We are expecting the generic argument to be in its proper position.");
+                    // TODO_Refactor: Re-add something like this?
+					//Debug.Assert(this.GenericParameterPosition == i, "We are expecting the generic argument to be in its proper position.");
 					return genericArguments[i];
 				}
 			}
@@ -316,78 +344,6 @@ namespace BreakingChangesDetector.MetadataItems
 
 		#region Methods
 
-		#region Public Methods
-
-		/// <summary>
-		/// Gets the derived <see cref="GenericTypeParameterData"/> instance representing the specified type.
-		/// </summary>
-		/// <typeparam name="T">The type for which to get the <see cref="GenericTypeParameterData"/>.</typeparam>
-		/// <returns>The derived <see cref="GenericTypeParameterData"/> instance.</returns>
-		public new static GenericTypeParameterData FromType<T>()
-		{
-			return GenericTypeParameterData.FromType(typeof(T));
-		}
-
-		/// <summary>
-		/// Gets the derived <see cref="GenericTypeParameterData"/> instance representing the specified type.
-		/// </summary>
-		/// <returns>The derived <see cref="GenericTypeParameterData"/> instance.</returns>
-		public new static GenericTypeParameterData FromType(Type t)
-		{
-			if (t.IsGenericParameter == false)
-				throw new ArgumentException("The specified type is not a valid generic type parameter.", "t");
-
-			var module = t.Assembly.ToAssemblyDefinition().MainModule;
-			var declaringType = module.GetType(t.DeclaringType.FullName, runtimeName: true);
-
-			if (t.DeclaringMethod != null)
-			{
-				var methods = declaringType.Resolve().Methods.Where(
-					m => m.Name == t.DeclaringMethod.Name &&
-					m.Parameters.Count == t.DeclaringMethod.GetParameters().Length &&
-					m.GenericParameters.Count == t.DeclaringMethod.GetGenericArguments().Length);
-
-				// TODO: Test this with various cases (ref and out parameters, parameters types being nested types
-				foreach (var method in methods)
-				{
-					var isMatch = true;
-
-					int parameterIndex = 0;
-					foreach (var parameter in t.DeclaringMethod.GetParameters())
-					{
-						if (method.Parameters[parameterIndex++].ParameterType.EqualsType(parameter.ParameterType) == false)
-						{
-							isMatch = false;
-							break;
-						}
-					}
-
-					if (isMatch)
-						return GenericTypeParameterData.FromType(method.GenericParameters[t.GenericParameterPosition]);
-				}
-
-				Debug.Fail("Cannot find matching method");
-				return null;
-			}
-			else
-			{
-				return GenericTypeParameterData.FromType(declaringType.GenericParameters[t.GenericParameterPosition]);
-			}
-		}
-
-		/// <summary>
-		/// Gets the derived <see cref="GenericTypeParameterData"/> instance representing the specified type.
-		/// </summary>
-		/// <returns>The derived <see cref="GenericTypeParameterData"/> instance.</returns>
-		internal static GenericTypeParameterData FromType(GenericParameter t)
-		{
-			return AssemblyData.FromAssembly(t.GetDeclaringAssembly()).GetGenericTypeParameterData(t);
-		}
-
-		
-
-		#endregion // Public Methods
-
 		#region Internal Methods
 
 		#region FinalizeDefinition
@@ -396,12 +352,14 @@ namespace BreakingChangesDetector.MetadataItems
 		/// <summary>
 		/// Populates the type with additional information which can't be loaded when the type is created (due to potential circularities in item dependencies).
 		/// </summary>
-		/// <param name="underlyingType">The underlying type this instance represents.</param>
+		/// <param name="underlyingTypeSymbol">The underlying type this instance represents.</param>
 #endif
-		internal void FinalizeDefinition(GenericParameter underlyingType)
+		internal void FinalizeDefinition(ITypeParameterSymbol underlyingTypeSymbol)
 		{
-			foreach (var type in underlyingType.Constraints)
-				this.Constraints.Add(TypeData.FromType(type));
+            foreach (var type in underlyingTypeSymbol.ConstraintTypes)
+            {
+                this.Constraints.Add(Context.GetTypeData(type));
+            }
 		}
 
 		#endregion // FinalizeDefinition

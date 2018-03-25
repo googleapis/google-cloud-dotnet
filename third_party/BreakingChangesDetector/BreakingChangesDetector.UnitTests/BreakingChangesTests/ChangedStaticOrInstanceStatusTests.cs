@@ -2,6 +2,7 @@
     MIT License
 
     Copyright(c) 2014-2018 Infragistics, Inc.
+    Copyright 2018 Google LLC
 
     Permission is hereby granted, free of charge, to any person obtaining a copy
     of this software and associated documentation files (the "Software"), to deal
@@ -23,115 +24,114 @@
 */
 
 using System;
-using Microsoft.VisualStudio.TestTools.UnitTesting;
+using Xunit;
 using BreakingChangesDetector.MetadataItems;
 using BreakingChangesDetector.BreakingChanges;
 
 namespace BreakingChangesDetector.UnitTests.BreakingChangesTests
 {
-	[TestClass]
 	public class ChangedStaticOrInstanceStatusTests
 	{
 		#region EventTests
 
-		[TestMethod]
+		[Fact]
 		public void EventTests()
 		{
-			var assembly = AssemblyData.FromAssembly(typeof(ChangedMemberTypeTests).Assembly);
-			var EventInstance = TypeDefinitionData.FromType(typeof(EventInstance));
-			var EventStatic = TypeDefinitionData.FromType(typeof(EventStatic));
+			var context = MetadataResolutionContext.CreateFromTypes(typeof(ChangedMemberTypeTests));
+			var EventInstance = context.GetTypeDefinitionData(typeof(EventInstance));
+			var EventStatic = context.GetTypeDefinitionData(typeof(EventStatic));
 			
 			var breakingChanges = MetadataComparer.CompareTypes(EventInstance, EventStatic);
-			Assert.AreEqual(1, breakingChanges.Count, "There should be one breaking change when an instance member changes to static.");
-			Assert.AreEqual(BreakingChangeKind.ChangedStaticOrInstanceStatus, breakingChanges[0].BreakingChangeKind, "The BreakingChangeKind is incorrect.");
-			Assert.AreEqual(EventInstance.GetMember("Event"), breakingChanges[0].OldItem, "The OldItem is incorrect.");
-			Assert.AreEqual(EventStatic.GetMember("Event"), breakingChanges[0].NewItem, "The NewItem is incorrect.");
-			Assert.IsNull(breakingChanges[0].AssociatedData, "The AssociatedData is incorrect.");
+			AssertX.Equal(1, breakingChanges.Count, "There should be one breaking change when an instance member changes to static.");
+			AssertX.Equal(BreakingChangeKind.ChangedStaticOrInstanceStatus, breakingChanges[0].BreakingChangeKind, "The BreakingChangeKind is incorrect.");
+			AssertX.Equal(EventInstance.GetMember("Event"), breakingChanges[0].OldItem, "The OldItem is incorrect.");
+			AssertX.Equal(EventStatic.GetMember("Event"), breakingChanges[0].NewItem, "The NewItem is incorrect.");
+			AssertX.Null(breakingChanges[0].AssociatedData, "The AssociatedData is incorrect.");
 
 			breakingChanges = MetadataComparer.CompareTypes(EventStatic, EventInstance);
-			Assert.AreEqual(1, breakingChanges.Count, "There should be one breaking change when a static member changes to instance.");
-			Assert.AreEqual(BreakingChangeKind.ChangedStaticOrInstanceStatus, breakingChanges[0].BreakingChangeKind, "The BreakingChangeKind is incorrect.");
-			Assert.AreEqual(EventStatic.GetMember("Event"), breakingChanges[0].OldItem, "The OldItem is incorrect.");
-			Assert.AreEqual(EventInstance.GetMember("Event"), breakingChanges[0].NewItem, "The NewItem is incorrect.");
-			Assert.IsNull(breakingChanges[0].AssociatedData, "The AssociatedData is incorrect.");
+			AssertX.Equal(1, breakingChanges.Count, "There should be one breaking change when a static member changes to instance.");
+			AssertX.Equal(BreakingChangeKind.ChangedStaticOrInstanceStatus, breakingChanges[0].BreakingChangeKind, "The BreakingChangeKind is incorrect.");
+			AssertX.Equal(EventStatic.GetMember("Event"), breakingChanges[0].OldItem, "The OldItem is incorrect.");
+			AssertX.Equal(EventInstance.GetMember("Event"), breakingChanges[0].NewItem, "The NewItem is incorrect.");
+			AssertX.Null(breakingChanges[0].AssociatedData, "The AssociatedData is incorrect.");
 		}
 
 		#endregion // EventTests
 
 		#region FieldTests
 
-		[TestMethod]
+		[Fact]
 		public void FieldTests()
 		{
-			var assembly = AssemblyData.FromAssembly(typeof(ChangedMemberTypeTests).Assembly);
-			var FieldInstance = TypeDefinitionData.FromType(typeof(FieldInstance));
-			var FieldStatic = TypeDefinitionData.FromType(typeof(FieldStatic));
+			var context = MetadataResolutionContext.CreateFromTypes(typeof(ChangedMemberTypeTests));
+			var FieldInstance = context.GetTypeDefinitionData(typeof(FieldInstance));
+			var FieldStatic = context.GetTypeDefinitionData(typeof(FieldStatic));
 			
 			var breakingChanges = MetadataComparer.CompareTypes(FieldInstance, FieldStatic);
-			Assert.AreEqual(1, breakingChanges.Count, "There should be one breaking change when an instance member changes to static.");
-			Assert.AreEqual(BreakingChangeKind.ChangedStaticOrInstanceStatus, breakingChanges[0].BreakingChangeKind, "The BreakingChangeKind is incorrect.");
-			Assert.AreEqual(FieldInstance.GetMember("Field"), breakingChanges[0].OldItem, "The OldItem is incorrect.");
-			Assert.AreEqual(FieldStatic.GetMember("Field"), breakingChanges[0].NewItem, "The NewItem is incorrect.");
-			Assert.IsNull(breakingChanges[0].AssociatedData, "The AssociatedData is incorrect.");
+			AssertX.Equal(1, breakingChanges.Count, "There should be one breaking change when an instance member changes to static.");
+			AssertX.Equal(BreakingChangeKind.ChangedStaticOrInstanceStatus, breakingChanges[0].BreakingChangeKind, "The BreakingChangeKind is incorrect.");
+			AssertX.Equal(FieldInstance.GetMember("Field"), breakingChanges[0].OldItem, "The OldItem is incorrect.");
+			AssertX.Equal(FieldStatic.GetMember("Field"), breakingChanges[0].NewItem, "The NewItem is incorrect.");
+			AssertX.Null(breakingChanges[0].AssociatedData, "The AssociatedData is incorrect.");
 
 			breakingChanges = MetadataComparer.CompareTypes(FieldStatic, FieldInstance);
-			Assert.AreEqual(1, breakingChanges.Count, "There should be one breaking change when a static member changes to instance.");
-			Assert.AreEqual(BreakingChangeKind.ChangedStaticOrInstanceStatus, breakingChanges[0].BreakingChangeKind, "The BreakingChangeKind is incorrect.");
-			Assert.AreEqual(FieldStatic.GetMember("Field"), breakingChanges[0].OldItem, "The OldItem is incorrect.");
-			Assert.AreEqual(FieldInstance.GetMember("Field"), breakingChanges[0].NewItem, "The NewItem is incorrect.");
-			Assert.IsNull(breakingChanges[0].AssociatedData, "The AssociatedData is incorrect.");
+			AssertX.Equal(1, breakingChanges.Count, "There should be one breaking change when a static member changes to instance.");
+			AssertX.Equal(BreakingChangeKind.ChangedStaticOrInstanceStatus, breakingChanges[0].BreakingChangeKind, "The BreakingChangeKind is incorrect.");
+			AssertX.Equal(FieldStatic.GetMember("Field"), breakingChanges[0].OldItem, "The OldItem is incorrect.");
+			AssertX.Equal(FieldInstance.GetMember("Field"), breakingChanges[0].NewItem, "The NewItem is incorrect.");
+			AssertX.Null(breakingChanges[0].AssociatedData, "The AssociatedData is incorrect.");
 		}
 
 		#endregion // FieldTests
 
 		#region MethodTests
 
-		[TestMethod]
+		[Fact]
 		public void MethodTests()
 		{
-			var assembly = AssemblyData.FromAssembly(typeof(ChangedMemberTypeTests).Assembly);
-			var MethodInstance = TypeDefinitionData.FromType(typeof(MethodInstance));
-			var MethodStatic = TypeDefinitionData.FromType(typeof(MethodStatic));
+			var context = MetadataResolutionContext.CreateFromTypes(typeof(ChangedMemberTypeTests));
+			var MethodInstance = context.GetTypeDefinitionData(typeof(MethodInstance));
+			var MethodStatic = context.GetTypeDefinitionData(typeof(MethodStatic));
 			
 			var breakingChanges = MetadataComparer.CompareTypes(MethodInstance, MethodStatic);
-			Assert.AreEqual(1, breakingChanges.Count, "There should be one breaking change when an instance member changes to static.");
-			Assert.AreEqual(BreakingChangeKind.ChangedStaticOrInstanceStatus, breakingChanges[0].BreakingChangeKind, "The BreakingChangeKind is incorrect.");
-			Assert.AreEqual(MethodInstance.GetMember("Method"), breakingChanges[0].OldItem, "The OldItem is incorrect.");
-			Assert.AreEqual(MethodStatic.GetMember("Method"), breakingChanges[0].NewItem, "The NewItem is incorrect.");
-			Assert.IsNull(breakingChanges[0].AssociatedData, "The AssociatedData is incorrect.");
+			AssertX.Equal(1, breakingChanges.Count, "There should be one breaking change when an instance member changes to static.");
+			AssertX.Equal(BreakingChangeKind.ChangedStaticOrInstanceStatus, breakingChanges[0].BreakingChangeKind, "The BreakingChangeKind is incorrect.");
+			AssertX.Equal(MethodInstance.GetMember("Method"), breakingChanges[0].OldItem, "The OldItem is incorrect.");
+			AssertX.Equal(MethodStatic.GetMember("Method"), breakingChanges[0].NewItem, "The NewItem is incorrect.");
+			AssertX.Null(breakingChanges[0].AssociatedData, "The AssociatedData is incorrect.");
 
 			breakingChanges = MetadataComparer.CompareTypes(MethodStatic, MethodInstance);
-			Assert.AreEqual(1, breakingChanges.Count, "There should be one breaking change when a static member changes to instance.");
-			Assert.AreEqual(BreakingChangeKind.ChangedStaticOrInstanceStatus, breakingChanges[0].BreakingChangeKind, "The BreakingChangeKind is incorrect.");
-			Assert.AreEqual(MethodStatic.GetMember("Method"), breakingChanges[0].OldItem, "The OldItem is incorrect.");
-			Assert.AreEqual(MethodInstance.GetMember("Method"), breakingChanges[0].NewItem, "The NewItem is incorrect.");
-			Assert.IsNull(breakingChanges[0].AssociatedData, "The AssociatedData is incorrect.");
+			AssertX.Equal(1, breakingChanges.Count, "There should be one breaking change when a static member changes to instance.");
+			AssertX.Equal(BreakingChangeKind.ChangedStaticOrInstanceStatus, breakingChanges[0].BreakingChangeKind, "The BreakingChangeKind is incorrect.");
+			AssertX.Equal(MethodStatic.GetMember("Method"), breakingChanges[0].OldItem, "The OldItem is incorrect.");
+			AssertX.Equal(MethodInstance.GetMember("Method"), breakingChanges[0].NewItem, "The NewItem is incorrect.");
+			AssertX.Null(breakingChanges[0].AssociatedData, "The AssociatedData is incorrect.");
 		}
 
 		#endregion // MethodTests
 
 		#region PropertyTests
 
-		[TestMethod]
+		[Fact]
 		public void PropertyTests()
 		{
-			var assembly = AssemblyData.FromAssembly(typeof(ChangedMemberTypeTests).Assembly);
-			var PropertyInstance = TypeDefinitionData.FromType(typeof(PropertyInstance));
-			var PropertyStatic = TypeDefinitionData.FromType(typeof(PropertyStatic));
+			var context = MetadataResolutionContext.CreateFromTypes(typeof(ChangedMemberTypeTests));
+			var PropertyInstance = context.GetTypeDefinitionData(typeof(PropertyInstance));
+			var PropertyStatic = context.GetTypeDefinitionData(typeof(PropertyStatic));
 			
 			var breakingChanges = MetadataComparer.CompareTypes(PropertyInstance, PropertyStatic);
-			Assert.AreEqual(1, breakingChanges.Count, "There should be one breaking change when an instance member changes to static.");
-			Assert.AreEqual(BreakingChangeKind.ChangedStaticOrInstanceStatus, breakingChanges[0].BreakingChangeKind, "The BreakingChangeKind is incorrect.");
-			Assert.AreEqual(PropertyInstance.GetMember("Property"), breakingChanges[0].OldItem, "The OldItem is incorrect.");
-			Assert.AreEqual(PropertyStatic.GetMember("Property"), breakingChanges[0].NewItem, "The NewItem is incorrect.");
-			Assert.IsNull(breakingChanges[0].AssociatedData, "The AssociatedData is incorrect.");
+			AssertX.Equal(1, breakingChanges.Count, "There should be one breaking change when an instance member changes to static.");
+			AssertX.Equal(BreakingChangeKind.ChangedStaticOrInstanceStatus, breakingChanges[0].BreakingChangeKind, "The BreakingChangeKind is incorrect.");
+			AssertX.Equal(PropertyInstance.GetMember("Property"), breakingChanges[0].OldItem, "The OldItem is incorrect.");
+			AssertX.Equal(PropertyStatic.GetMember("Property"), breakingChanges[0].NewItem, "The NewItem is incorrect.");
+			AssertX.Null(breakingChanges[0].AssociatedData, "The AssociatedData is incorrect.");
 
 			breakingChanges = MetadataComparer.CompareTypes(PropertyStatic, PropertyInstance);
-			Assert.AreEqual(1, breakingChanges.Count, "There should be one breaking change when a static member changes to instance.");
-			Assert.AreEqual(BreakingChangeKind.ChangedStaticOrInstanceStatus, breakingChanges[0].BreakingChangeKind, "The BreakingChangeKind is incorrect.");
-			Assert.AreEqual(PropertyStatic.GetMember("Property"), breakingChanges[0].OldItem, "The OldItem is incorrect.");
-			Assert.AreEqual(PropertyInstance.GetMember("Property"), breakingChanges[0].NewItem, "The NewItem is incorrect.");
-			Assert.IsNull(breakingChanges[0].AssociatedData, "The AssociatedData is incorrect.");
+			AssertX.Equal(1, breakingChanges.Count, "There should be one breaking change when a static member changes to instance.");
+			AssertX.Equal(BreakingChangeKind.ChangedStaticOrInstanceStatus, breakingChanges[0].BreakingChangeKind, "The BreakingChangeKind is incorrect.");
+			AssertX.Equal(PropertyStatic.GetMember("Property"), breakingChanges[0].OldItem, "The OldItem is incorrect.");
+			AssertX.Equal(PropertyInstance.GetMember("Property"), breakingChanges[0].NewItem, "The NewItem is incorrect.");
+			AssertX.Null(breakingChanges[0].AssociatedData, "The AssociatedData is incorrect.");
 		}
 
 		#endregion // PropertyTests

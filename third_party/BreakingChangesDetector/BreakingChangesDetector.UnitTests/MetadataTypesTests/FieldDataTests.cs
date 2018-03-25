@@ -2,6 +2,7 @@
     MIT License
 
     Copyright(c) 2014-2018 Infragistics, Inc.
+    Copyright 2018 Google LLC
 
     Permission is hereby granted, free of charge, to any person obtaining a copy
     of this software and associated documentation files (the "Software"), to deal
@@ -23,22 +24,21 @@
 */
 
 using System;
-using Microsoft.VisualStudio.TestTools.UnitTesting;
+using Xunit;
 using BreakingChangesDetector.MetadataItems;
 
 namespace BreakingChangesDetector.UnitTests.MetadataTypesTests
 {
-	[TestClass]
 	public class FieldDataTests
 	{
 		#region FieldDataAccessibilityTest
 
-		[TestMethod]
+		[Fact]
 		public void FieldDataAccessibilityTest()
 		{
 			var t = typeof(TestClassDefinition);
-			var assembly = AssemblyData.FromAssembly(t.Assembly);
-			var typeData = TypeDefinitionData.FromType(t);
+            var context = MetadataResolutionContext.CreateFromTypes(t);
+            var typeData = context.GetTypeDefinitionData(t);
 			TestUtilities.VerifyAccessibility(typeData, "FieldInstance");
 		}
 
@@ -46,81 +46,81 @@ namespace BreakingChangesDetector.UnitTests.MetadataTypesTests
 
 		#region FieldDataDeclaringTypeTest
 
-		[TestMethod]
+		[Fact]
 		public void FieldDataDeclaringTypeTest()
 		{
 			var t = typeof(TestClassDefinition);
-			var assembly = AssemblyData.FromAssembly(t.Assembly);
-			var typeData = TypeDefinitionData.FromType(t);
+			var context = MetadataResolutionContext.CreateFromTypes(t);
+			var typeData = context.GetTypeDefinitionData(t);
 			var field = typeData.GetMember("FieldInstance");
-			Assert.AreEqual(typeData, field.DeclaringType, "The DeclaringType of a member should be the type in which it is defined.");
+			AssertX.Equal(typeData, field.ContainingType, "The DeclaringType of a member should be the type in which it is defined.");
 		}
 
 		#endregion // FieldDataDeclaringTypeTest
 
 		#region FieldDataIsReadOnlyTest
 
-		[TestMethod]
+		[Fact]
 		public void FieldDataIsReadOnlyTest()
 		{
 			var t = typeof(TestClassDefinition);
-			var assembly = AssemblyData.FromAssembly(t.Assembly);
-			var typeData = TypeDefinitionData.FromType(t);
+			var context = MetadataResolutionContext.CreateFromTypes(t);
+			var typeData = context.GetTypeDefinitionData(t);
 			var field = (FieldData)typeData.GetMember("FieldInstance");
-			Assert.IsFalse(field.IsReadOnly, "The IsReadOnly of the member is incorrect.");
+			Assert.False(field.IsReadOnly, "The IsReadOnly of the member is incorrect.");
 			field = (FieldData)typeData.GetMember("FieldReadOnlyInstance");
-			Assert.IsTrue(field.IsReadOnly, "The IsReadOnly of the member is incorrect.");
+			Assert.True(field.IsReadOnly, "The IsReadOnly of the member is incorrect.");
 			field = (FieldData)typeData.GetMember("FieldStatic");
-			Assert.IsFalse(field.IsReadOnly, "The IsReadOnly of the member is incorrect.");
+			Assert.False(field.IsReadOnly, "The IsReadOnly of the member is incorrect.");
 			field = (FieldData)typeData.GetMember("FieldReadOnlyStatic");
-			Assert.IsTrue(field.IsReadOnly, "The IsReadOnly of the member is incorrect.");
+			Assert.True(field.IsReadOnly, "The IsReadOnly of the member is incorrect.");
 		}
 
 		#endregion // FieldDataIsReadOnlyTest
 
 		#region FieldDataMemberFlagsTest
 
-		[TestMethod]
+		[Fact]
 		public void FieldDataMemberFlagsTest()
 		{
 			var t = typeof(TestClassDefinition);
-			var assembly = AssemblyData.FromAssembly(t.Assembly);
-			var typeData = TypeDefinitionData.FromType(t);
+			var context = MetadataResolutionContext.CreateFromTypes(t);
+			var typeData = context.GetTypeDefinitionData(t);
 
 			var field = (FieldData)typeData.GetMember( "FieldInstance");
-			Assert.AreEqual(MemberFlags.None, field.MemberFlags, "The Flags value of the member is wrong.");
+			AssertX.Equal(MemberFlags.None, field.MemberFlags, "The Flags value of the member is wrong.");
 
 			field = (FieldData)typeData.GetMember("FieldStatic");
-			Assert.AreEqual(MemberFlags.Static, field.MemberFlags, "The Flags value of the member is wrong.");
+			AssertX.Equal(MemberFlags.Static, field.MemberFlags, "The Flags value of the member is wrong.");
 		}
 
 		#endregion // FieldDataMemberFlagsTest
 
 		#region FieldDataNameTest
 
-		[TestMethod]
+		[Fact]
 		public void FieldDataNameTest()
 		{
 			var t = typeof(TestClassDefinition);
-			var assembly = AssemblyData.FromAssembly(t.Assembly);
-			var typeData = TypeDefinitionData.FromType(t);
+			var context = MetadataResolutionContext.CreateFromTypes(t);
+			var typeData = context.GetTypeDefinitionData(t);
 			var field = typeData.GetMember("FieldInstance");
-			Assert.AreEqual("FieldInstance", field.Name, "The Name of the member is incorrect.");
+			AssertX.Equal("FieldInstance", field.Name, "The Name of the member is incorrect.");
 		}
 
 		#endregion // FieldDataNameTest
 
 		#region FieldDataTypeTest
 
-		[TestMethod]
+		[Fact]
 		public void FieldDataTypeTest()
 		{
 			var t = typeof(TestClassDefinition);
-			var assembly = AssemblyData.FromAssembly(t.Assembly);
-			var typeData = TypeDefinitionData.FromType(t);
+			var context = MetadataResolutionContext.CreateFromTypes(t);
+			var typeData = context.GetTypeDefinitionData(t);
 			var field = (FieldData)typeData.GetMember("FieldInstance");
-			var intType = TypeDefinitionData.FromType<int>();
-			Assert.AreEqual(intType, field.Type, "The Type of the member is incorrect.");
+			var intType = context.GetTypeDefinitionData<int>();
+			AssertX.Equal(intType, field.Type, "The Type of the member is incorrect.");
 		}
 
 		#endregion // FieldDataTypeTest

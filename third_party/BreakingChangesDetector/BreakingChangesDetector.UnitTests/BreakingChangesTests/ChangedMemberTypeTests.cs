@@ -2,6 +2,7 @@
     MIT License
 
     Copyright(c) 2014-2018 Infragistics, Inc.
+    Copyright 2018 Google LLC
 
     Permission is hereby granted, free of charge, to any person obtaining a copy
     of this software and associated documentation files (the "Software"), to deal
@@ -24,34 +25,33 @@
 
 using System;
 using System.Linq;
-using Microsoft.VisualStudio.TestTools.UnitTesting;
+using Xunit;
 using BreakingChangesDetector.MetadataItems;
 using BreakingChangesDetector.BreakingChanges;
 
 namespace BreakingChangesDetector.UnitTests.BreakingChangesTests
 {
-	[TestClass]
 	public class ChangedMemberTypeTests
 	{
 		#region ChangeVoidToNonVoidAllowedTest
 
-		[TestMethod]
+		[Fact]
 		public void ChangeVoidToNonVoidAllowedTest()
 		{
-			var assembly = AssemblyData.FromAssembly(typeof(ChangedMemberTypeTests).Assembly);
-			var MethodWithIntReturn = TypeDefinitionData.FromType(typeof(MethodWithIntReturn));
-			var MethodWithStringReturn = TypeDefinitionData.FromType(typeof(MethodWithStringReturn));
-			var MethodWithDynamicReturn = TypeDefinitionData.FromType(typeof(MethodWithDynamicReturn));
-			var MethodWithVoidReturn = TypeDefinitionData.FromType(typeof(MethodWithVoidReturn));
+			var context = MetadataResolutionContext.CreateFromTypes(typeof(ChangedMemberTypeTests));
+			var MethodWithIntReturn = context.GetTypeDefinitionData(typeof(MethodWithIntReturn));
+			var MethodWithStringReturn = context.GetTypeDefinitionData(typeof(MethodWithStringReturn));
+			var MethodWithDynamicReturn = context.GetTypeDefinitionData(typeof(MethodWithDynamicReturn));
+			var MethodWithVoidReturn = context.GetTypeDefinitionData(typeof(MethodWithVoidReturn));
 			
 			var breakingChanges = MetadataComparer.CompareTypes(MethodWithVoidReturn, MethodWithIntReturn);
-			Assert.AreEqual(0, breakingChanges.Count, "There should be no breaking changes when the Return type changes from void to non-void.");
+			AssertX.Equal(0, breakingChanges.Count, "There should be no breaking changes when the Return type changes from void to non-void.");
 
 			breakingChanges = MetadataComparer.CompareTypes(MethodWithVoidReturn, MethodWithStringReturn);
-			Assert.AreEqual(0, breakingChanges.Count, "There should be no breaking changes when the Return type changes from void to non-void.");
+			AssertX.Equal(0, breakingChanges.Count, "There should be no breaking changes when the Return type changes from void to non-void.");
 
 			breakingChanges = MetadataComparer.CompareTypes(MethodWithVoidReturn, MethodWithDynamicReturn);
-			Assert.AreEqual(0, breakingChanges.Count, "There should be no breaking changes when the Return type changes from void to non-void.");
+			AssertX.Equal(0, breakingChanges.Count, "There should be no breaking changes when the Return type changes from void to non-void.");
 		}
 
 		public class MethodWithVoidReturn { public void Method() { } }
@@ -60,451 +60,451 @@ namespace BreakingChangesDetector.UnitTests.BreakingChangesTests
 
 		#region ConstantTests
 
-		[TestMethod]
+		[Fact]
 		public void ConstantTests()
 		{
-			var assembly = AssemblyData.FromAssembly(typeof(ChangedMemberTypeTests).Assembly);
-			var ConstantWithIntReturn = TypeDefinitionData.FromType(typeof(ConstantWithIntReturn));
-			var ConstantWithStringReturn = TypeDefinitionData.FromType(typeof(ConstantWithStringReturn));
+			var context = MetadataResolutionContext.CreateFromTypes(typeof(ChangedMemberTypeTests));
+			var ConstantWithIntReturn = context.GetTypeDefinitionData(typeof(ConstantWithIntReturn));
+			var ConstantWithStringReturn = context.GetTypeDefinitionData(typeof(ConstantWithStringReturn));
 			
 			var breakingChanges = MetadataComparer.CompareTypes(ConstantWithIntReturn, ConstantWithStringReturn);
-			Assert.AreEqual(1, breakingChanges.Count, "There should be one breaking change when the Return type changes.");
-			Assert.AreEqual(BreakingChangeKind.ChangedMemberType, breakingChanges[0].BreakingChangeKind, "The BreakingChangeKind is incorrect.");
-			Assert.AreEqual(ConstantWithIntReturn.GetMember("Constant"), breakingChanges[0].OldItem, "The OldItem is incorrect.");
-			Assert.AreEqual(ConstantWithStringReturn.GetMember("Constant"), breakingChanges[0].NewItem, "The NewItem is incorrect.");
-			Assert.IsNull(breakingChanges[0].AssociatedData, "The AssociatedData is incorrect.");
+			AssertX.Equal(1, breakingChanges.Count, "There should be one breaking change when the Return type changes.");
+			AssertX.Equal(BreakingChangeKind.ChangedMemberType, breakingChanges[0].BreakingChangeKind, "The BreakingChangeKind is incorrect.");
+			AssertX.Equal(ConstantWithIntReturn.GetMember("Constant"), breakingChanges[0].OldItem, "The OldItem is incorrect.");
+			AssertX.Equal(ConstantWithStringReturn.GetMember("Constant"), breakingChanges[0].NewItem, "The NewItem is incorrect.");
+			AssertX.Null(breakingChanges[0].AssociatedData, "The AssociatedData is incorrect.");
 
 			breakingChanges = MetadataComparer.CompareTypes(ConstantWithStringReturn, ConstantWithIntReturn);
-			Assert.AreEqual(1, breakingChanges.Count, "There should be one breaking change when the Return type changes.");
-			Assert.AreEqual(BreakingChangeKind.ChangedMemberType, breakingChanges[0].BreakingChangeKind, "The BreakingChangeKind is incorrect.");
-			Assert.AreEqual(ConstantWithStringReturn.GetMember("Constant"), breakingChanges[0].OldItem, "The OldItem is incorrect.");
-			Assert.AreEqual(ConstantWithIntReturn.GetMember("Constant"), breakingChanges[0].NewItem, "The NewItem is incorrect.");
-			Assert.IsNull(breakingChanges[0].AssociatedData, "The AssociatedData is incorrect.");
+			AssertX.Equal(1, breakingChanges.Count, "There should be one breaking change when the Return type changes.");
+			AssertX.Equal(BreakingChangeKind.ChangedMemberType, breakingChanges[0].BreakingChangeKind, "The BreakingChangeKind is incorrect.");
+			AssertX.Equal(ConstantWithStringReturn.GetMember("Constant"), breakingChanges[0].OldItem, "The OldItem is incorrect.");
+			AssertX.Equal(ConstantWithIntReturn.GetMember("Constant"), breakingChanges[0].NewItem, "The NewItem is incorrect.");
+			AssertX.Null(breakingChanges[0].AssociatedData, "The AssociatedData is incorrect.");
 		}
 
 		#endregion // ConstantTests
 
 		#region EventTests
 
-		[TestMethod]
+		[Fact]
 		public void EventTests()
 		{
-			var assembly = AssemblyData.FromAssembly(typeof(ChangedMemberTypeTests).Assembly);
-			var EventWithIntReturn = TypeDefinitionData.FromType(typeof(EventWithIntReturn));
-			var EventWithStringReturn = TypeDefinitionData.FromType(typeof(EventWithStringReturn));
+			var context = MetadataResolutionContext.CreateFromTypes(typeof(ChangedMemberTypeTests));
+			var EventWithIntReturn = context.GetTypeDefinitionData(typeof(EventWithIntReturn));
+			var EventWithStringReturn = context.GetTypeDefinitionData(typeof(EventWithStringReturn));
 			
 			var breakingChanges = MetadataComparer.CompareTypes(EventWithIntReturn, EventWithStringReturn);
-			Assert.AreEqual(1, breakingChanges.Count, "There should be one breaking change when the Return type changes.");
-			Assert.AreEqual(BreakingChangeKind.ChangedMemberType, breakingChanges[0].BreakingChangeKind, "The BreakingChangeKind is incorrect.");
-			Assert.AreEqual(EventWithIntReturn.GetMember("Event"), breakingChanges[0].OldItem, "The OldItem is incorrect.");
-			Assert.AreEqual(EventWithStringReturn.GetMember("Event"), breakingChanges[0].NewItem, "The NewItem is incorrect.");
-			Assert.IsNull(breakingChanges[0].AssociatedData, "The AssociatedData is incorrect.");
+			AssertX.Equal(1, breakingChanges.Count, "There should be one breaking change when the Return type changes.");
+			AssertX.Equal(BreakingChangeKind.ChangedMemberType, breakingChanges[0].BreakingChangeKind, "The BreakingChangeKind is incorrect.");
+			AssertX.Equal(EventWithIntReturn.GetMember("Event"), breakingChanges[0].OldItem, "The OldItem is incorrect.");
+			AssertX.Equal(EventWithStringReturn.GetMember("Event"), breakingChanges[0].NewItem, "The NewItem is incorrect.");
+			AssertX.Null(breakingChanges[0].AssociatedData, "The AssociatedData is incorrect.");
 
 			breakingChanges = MetadataComparer.CompareTypes(EventWithStringReturn, EventWithIntReturn);
-			Assert.AreEqual(1, breakingChanges.Count, "There should be one breaking change when the Return type changes.");
-			Assert.AreEqual(BreakingChangeKind.ChangedMemberType, breakingChanges[0].BreakingChangeKind, "The BreakingChangeKind is incorrect.");
-			Assert.AreEqual(EventWithStringReturn.GetMember("Event"), breakingChanges[0].OldItem, "The OldItem is incorrect.");
-			Assert.AreEqual(EventWithIntReturn.GetMember("Event"), breakingChanges[0].NewItem, "The NewItem is incorrect.");
-			Assert.IsNull(breakingChanges[0].AssociatedData, "The AssociatedData is incorrect.");
+			AssertX.Equal(1, breakingChanges.Count, "There should be one breaking change when the Return type changes.");
+			AssertX.Equal(BreakingChangeKind.ChangedMemberType, breakingChanges[0].BreakingChangeKind, "The BreakingChangeKind is incorrect.");
+			AssertX.Equal(EventWithStringReturn.GetMember("Event"), breakingChanges[0].OldItem, "The OldItem is incorrect.");
+			AssertX.Equal(EventWithIntReturn.GetMember("Event"), breakingChanges[0].NewItem, "The NewItem is incorrect.");
+			AssertX.Null(breakingChanges[0].AssociatedData, "The AssociatedData is incorrect.");
 		}
 
 		#endregion // EventTests
 
 		#region FieldTests
 
-		[TestMethod]
+		[Fact]
 		public void FieldTests()
 		{
-			var assembly = AssemblyData.FromAssembly(typeof(ChangedMemberTypeTests).Assembly);
-			var FieldWithIntReturn = TypeDefinitionData.FromType(typeof(FieldWithIntReturn));
-			var FieldWithStringReturn = TypeDefinitionData.FromType(typeof(FieldWithStringReturn));
-			var FieldWithDynamicReturn = TypeDefinitionData.FromType(typeof(FieldWithDynamicReturn));
+			var context = MetadataResolutionContext.CreateFromTypes(typeof(ChangedMemberTypeTests));
+			var FieldWithIntReturn = context.GetTypeDefinitionData(typeof(FieldWithIntReturn));
+			var FieldWithStringReturn = context.GetTypeDefinitionData(typeof(FieldWithStringReturn));
+			var FieldWithDynamicReturn = context.GetTypeDefinitionData(typeof(FieldWithDynamicReturn));
 			
 			var breakingChanges = MetadataComparer.CompareTypes(FieldWithIntReturn, FieldWithStringReturn);
-			Assert.AreEqual(1, breakingChanges.Count, "There should be one breaking change when the Return type changes.");
-			Assert.AreEqual(BreakingChangeKind.ChangedMemberType, breakingChanges[0].BreakingChangeKind, "The BreakingChangeKind is incorrect.");
-			Assert.AreEqual(FieldWithIntReturn.GetMember("Field"), breakingChanges[0].OldItem, "The OldItem is incorrect.");
-			Assert.AreEqual(FieldWithStringReturn.GetMember("Field"), breakingChanges[0].NewItem, "The NewItem is incorrect.");
-			Assert.IsNull(breakingChanges[0].AssociatedData, "The AssociatedData is incorrect.");
+			AssertX.Equal(1, breakingChanges.Count, "There should be one breaking change when the Return type changes.");
+			AssertX.Equal(BreakingChangeKind.ChangedMemberType, breakingChanges[0].BreakingChangeKind, "The BreakingChangeKind is incorrect.");
+			AssertX.Equal(FieldWithIntReturn.GetMember("Field"), breakingChanges[0].OldItem, "The OldItem is incorrect.");
+			AssertX.Equal(FieldWithStringReturn.GetMember("Field"), breakingChanges[0].NewItem, "The NewItem is incorrect.");
+			AssertX.Null(breakingChanges[0].AssociatedData, "The AssociatedData is incorrect.");
 
 			breakingChanges = MetadataComparer.CompareTypes(FieldWithStringReturn, FieldWithIntReturn);
-			Assert.AreEqual(1, breakingChanges.Count, "There should be one breaking change when the Return type changes.");
-			Assert.AreEqual(BreakingChangeKind.ChangedMemberType, breakingChanges[0].BreakingChangeKind, "The BreakingChangeKind is incorrect.");
-			Assert.AreEqual(FieldWithStringReturn.GetMember("Field"), breakingChanges[0].OldItem, "The OldItem is incorrect.");
-			Assert.AreEqual(FieldWithIntReturn.GetMember("Field"), breakingChanges[0].NewItem, "The NewItem is incorrect.");
-			Assert.IsNull(breakingChanges[0].AssociatedData, "The AssociatedData is incorrect.");
+			AssertX.Equal(1, breakingChanges.Count, "There should be one breaking change when the Return type changes.");
+			AssertX.Equal(BreakingChangeKind.ChangedMemberType, breakingChanges[0].BreakingChangeKind, "The BreakingChangeKind is incorrect.");
+			AssertX.Equal(FieldWithStringReturn.GetMember("Field"), breakingChanges[0].OldItem, "The OldItem is incorrect.");
+			AssertX.Equal(FieldWithIntReturn.GetMember("Field"), breakingChanges[0].NewItem, "The NewItem is incorrect.");
+			AssertX.Null(breakingChanges[0].AssociatedData, "The AssociatedData is incorrect.");
 
 			breakingChanges = MetadataComparer.CompareTypes(FieldWithIntReturn, FieldWithDynamicReturn);
-			Assert.AreEqual(1, breakingChanges.Count, "There should be one breaking change when the Return type changes.");
-			Assert.AreEqual(BreakingChangeKind.ChangedMemberType, breakingChanges[0].BreakingChangeKind, "The BreakingChangeKind is incorrect.");
-			Assert.AreEqual(FieldWithIntReturn.GetMember("Field"), breakingChanges[0].OldItem, "The OldItem is incorrect.");
-			Assert.AreEqual(FieldWithDynamicReturn.GetMember("Field"), breakingChanges[0].NewItem, "The NewItem is incorrect.");
-			Assert.IsNull(breakingChanges[0].AssociatedData, "The AssociatedData is incorrect.");
+			AssertX.Equal(1, breakingChanges.Count, "There should be one breaking change when the Return type changes.");
+			AssertX.Equal(BreakingChangeKind.ChangedMemberType, breakingChanges[0].BreakingChangeKind, "The BreakingChangeKind is incorrect.");
+			AssertX.Equal(FieldWithIntReturn.GetMember("Field"), breakingChanges[0].OldItem, "The OldItem is incorrect.");
+			AssertX.Equal(FieldWithDynamicReturn.GetMember("Field"), breakingChanges[0].NewItem, "The NewItem is incorrect.");
+			AssertX.Null(breakingChanges[0].AssociatedData, "The AssociatedData is incorrect.");
 
 			breakingChanges = MetadataComparer.CompareTypes(FieldWithDynamicReturn, FieldWithIntReturn);
-			Assert.AreEqual(1, breakingChanges.Count, "There should be one breaking change when the Return type changes.");
-			Assert.AreEqual(BreakingChangeKind.ChangedMemberType, breakingChanges[0].BreakingChangeKind, "The BreakingChangeKind is incorrect.");
-			Assert.AreEqual(FieldWithDynamicReturn.GetMember("Field"), breakingChanges[0].OldItem, "The OldItem is incorrect.");
-			Assert.AreEqual(FieldWithIntReturn.GetMember("Field"), breakingChanges[0].NewItem, "The NewItem is incorrect.");
-			Assert.IsNull(breakingChanges[0].AssociatedData, "The AssociatedData is incorrect.");
+			AssertX.Equal(1, breakingChanges.Count, "There should be one breaking change when the Return type changes.");
+			AssertX.Equal(BreakingChangeKind.ChangedMemberType, breakingChanges[0].BreakingChangeKind, "The BreakingChangeKind is incorrect.");
+			AssertX.Equal(FieldWithDynamicReturn.GetMember("Field"), breakingChanges[0].OldItem, "The OldItem is incorrect.");
+			AssertX.Equal(FieldWithIntReturn.GetMember("Field"), breakingChanges[0].NewItem, "The NewItem is incorrect.");
+			AssertX.Null(breakingChanges[0].AssociatedData, "The AssociatedData is incorrect.");
 
 			breakingChanges = MetadataComparer.CompareTypes(FieldWithStringReturn, FieldWithDynamicReturn);
-			Assert.AreEqual(1, breakingChanges.Count, "There should be one breaking change when the Return type changes.");
-			Assert.AreEqual(BreakingChangeKind.ChangedMemberType, breakingChanges[0].BreakingChangeKind, "The BreakingChangeKind is incorrect.");
-			Assert.AreEqual(FieldWithStringReturn.GetMember("Field"), breakingChanges[0].OldItem, "The OldItem is incorrect.");
-			Assert.AreEqual(FieldWithDynamicReturn.GetMember("Field"), breakingChanges[0].NewItem, "The NewItem is incorrect.");
-			Assert.IsNull(breakingChanges[0].AssociatedData, "The AssociatedData is incorrect.");
+			AssertX.Equal(1, breakingChanges.Count, "There should be one breaking change when the Return type changes.");
+			AssertX.Equal(BreakingChangeKind.ChangedMemberType, breakingChanges[0].BreakingChangeKind, "The BreakingChangeKind is incorrect.");
+			AssertX.Equal(FieldWithStringReturn.GetMember("Field"), breakingChanges[0].OldItem, "The OldItem is incorrect.");
+			AssertX.Equal(FieldWithDynamicReturn.GetMember("Field"), breakingChanges[0].NewItem, "The NewItem is incorrect.");
+			AssertX.Null(breakingChanges[0].AssociatedData, "The AssociatedData is incorrect.");
 
 			breakingChanges = MetadataComparer.CompareTypes(FieldWithDynamicReturn, FieldWithStringReturn);
-			Assert.AreEqual(1, breakingChanges.Count, "There should be one breaking change when the Return type changes.");
-			Assert.AreEqual(BreakingChangeKind.ChangedMemberType, breakingChanges[0].BreakingChangeKind, "The BreakingChangeKind is incorrect.");
-			Assert.AreEqual(FieldWithDynamicReturn.GetMember("Field"), breakingChanges[0].OldItem, "The OldItem is incorrect.");
-			Assert.AreEqual(FieldWithStringReturn.GetMember("Field"), breakingChanges[0].NewItem, "The NewItem is incorrect.");
-			Assert.IsNull(breakingChanges[0].AssociatedData, "The AssociatedData is incorrect.");
+			AssertX.Equal(1, breakingChanges.Count, "There should be one breaking change when the Return type changes.");
+			AssertX.Equal(BreakingChangeKind.ChangedMemberType, breakingChanges[0].BreakingChangeKind, "The BreakingChangeKind is incorrect.");
+			AssertX.Equal(FieldWithDynamicReturn.GetMember("Field"), breakingChanges[0].OldItem, "The OldItem is incorrect.");
+			AssertX.Equal(FieldWithStringReturn.GetMember("Field"), breakingChanges[0].NewItem, "The NewItem is incorrect.");
+			AssertX.Null(breakingChanges[0].AssociatedData, "The AssociatedData is incorrect.");
 		}
 
 		#endregion // FieldTests
 
 		#region IndexerTests
 
-		[TestMethod]
+		[Fact]
 		public void IndexerTests()
 		{
-			var assembly = AssemblyData.FromAssembly(typeof(ChangedMemberTypeTests).Assembly);
-			var IndexerWithIntReturn = TypeDefinitionData.FromType(typeof(IndexerWithIntReturn));
-			var IndexerWithStringReturn = TypeDefinitionData.FromType(typeof(IndexerWithStringReturn));
-			var IndexerWithDynamicReturn = TypeDefinitionData.FromType(typeof(IndexerWithDynamicReturn));
+			var context = MetadataResolutionContext.CreateFromTypes(typeof(ChangedMemberTypeTests));
+			var IndexerWithIntReturn = context.GetTypeDefinitionData(typeof(IndexerWithIntReturn));
+			var IndexerWithStringReturn = context.GetTypeDefinitionData(typeof(IndexerWithStringReturn));
+			var IndexerWithDynamicReturn = context.GetTypeDefinitionData(typeof(IndexerWithDynamicReturn));
 			
 			var breakingChanges = MetadataComparer.CompareTypes(IndexerWithIntReturn, IndexerWithStringReturn);
-			Assert.AreEqual(1, breakingChanges.Count, "There should be one breaking change when the Return type changes.");
-			Assert.AreEqual(BreakingChangeKind.ChangedMemberType, breakingChanges[0].BreakingChangeKind, "The BreakingChangeKind is incorrect.");
-			Assert.AreEqual(IndexerWithIntReturn.GetMember("Item"), breakingChanges[0].OldItem, "The OldItem is incorrect.");
-			Assert.AreEqual(IndexerWithStringReturn.GetMember("Item"), breakingChanges[0].NewItem, "The NewItem is incorrect.");
-			Assert.IsNull(breakingChanges[0].AssociatedData, "The AssociatedData is incorrect.");
+			AssertX.Equal(1, breakingChanges.Count, "There should be one breaking change when the Return type changes.");
+			AssertX.Equal(BreakingChangeKind.ChangedMemberType, breakingChanges[0].BreakingChangeKind, "The BreakingChangeKind is incorrect.");
+			AssertX.Equal(IndexerWithIntReturn.GetMember("Item"), breakingChanges[0].OldItem, "The OldItem is incorrect.");
+			AssertX.Equal(IndexerWithStringReturn.GetMember("Item"), breakingChanges[0].NewItem, "The NewItem is incorrect.");
+			AssertX.Null(breakingChanges[0].AssociatedData, "The AssociatedData is incorrect.");
 
 			breakingChanges = MetadataComparer.CompareTypes(IndexerWithStringReturn, IndexerWithIntReturn);
-			Assert.AreEqual(1, breakingChanges.Count, "There should be one breaking change when the Return type changes.");
-			Assert.AreEqual(BreakingChangeKind.ChangedMemberType, breakingChanges[0].BreakingChangeKind, "The BreakingChangeKind is incorrect.");
-			Assert.AreEqual(IndexerWithStringReturn.GetMember("Item"), breakingChanges[0].OldItem, "The OldItem is incorrect.");
-			Assert.AreEqual(IndexerWithIntReturn.GetMember("Item"), breakingChanges[0].NewItem, "The NewItem is incorrect.");
-			Assert.IsNull(breakingChanges[0].AssociatedData, "The AssociatedData is incorrect.");
+			AssertX.Equal(1, breakingChanges.Count, "There should be one breaking change when the Return type changes.");
+			AssertX.Equal(BreakingChangeKind.ChangedMemberType, breakingChanges[0].BreakingChangeKind, "The BreakingChangeKind is incorrect.");
+			AssertX.Equal(IndexerWithStringReturn.GetMember("Item"), breakingChanges[0].OldItem, "The OldItem is incorrect.");
+			AssertX.Equal(IndexerWithIntReturn.GetMember("Item"), breakingChanges[0].NewItem, "The NewItem is incorrect.");
+			AssertX.Null(breakingChanges[0].AssociatedData, "The AssociatedData is incorrect.");
 
 			breakingChanges = MetadataComparer.CompareTypes(IndexerWithIntReturn, IndexerWithDynamicReturn);
-			Assert.AreEqual(0, breakingChanges.Count, "There should be no breaking changes when the Return type changes to dynamic.");
+			AssertX.Equal(0, breakingChanges.Count, "There should be no breaking changes when the Return type changes to dynamic.");
 
 			breakingChanges = MetadataComparer.CompareTypes(IndexerWithDynamicReturn, IndexerWithIntReturn);
-			Assert.AreEqual(1, breakingChanges.Count, "There should be one breaking change when the Return type changes.");
-			Assert.AreEqual(BreakingChangeKind.ChangedMemberType, breakingChanges[0].BreakingChangeKind, "The BreakingChangeKind is incorrect.");
-			Assert.AreEqual(IndexerWithDynamicReturn.GetMember("Item"), breakingChanges[0].OldItem, "The OldItem is incorrect.");
-			Assert.AreEqual(IndexerWithIntReturn.GetMember("Item"), breakingChanges[0].NewItem, "The NewItem is incorrect.");
-			Assert.IsNull(breakingChanges[0].AssociatedData, "The AssociatedData is incorrect.");
+			AssertX.Equal(1, breakingChanges.Count, "There should be one breaking change when the Return type changes.");
+			AssertX.Equal(BreakingChangeKind.ChangedMemberType, breakingChanges[0].BreakingChangeKind, "The BreakingChangeKind is incorrect.");
+			AssertX.Equal(IndexerWithDynamicReturn.GetMember("Item"), breakingChanges[0].OldItem, "The OldItem is incorrect.");
+			AssertX.Equal(IndexerWithIntReturn.GetMember("Item"), breakingChanges[0].NewItem, "The NewItem is incorrect.");
+			AssertX.Null(breakingChanges[0].AssociatedData, "The AssociatedData is incorrect.");
 
 			breakingChanges = MetadataComparer.CompareTypes(IndexerWithStringReturn, IndexerWithDynamicReturn);
-			Assert.AreEqual(0, breakingChanges.Count, "There should be no breaking changes when the Return type changes to dynamic.");
+			AssertX.Equal(0, breakingChanges.Count, "There should be no breaking changes when the Return type changes to dynamic.");
 
 			breakingChanges = MetadataComparer.CompareTypes(IndexerWithDynamicReturn, IndexerWithStringReturn);
-			Assert.AreEqual(1, breakingChanges.Count, "There should be one breaking change when the Return type changes.");
-			Assert.AreEqual(BreakingChangeKind.ChangedMemberType, breakingChanges[0].BreakingChangeKind, "The BreakingChangeKind is incorrect.");
-			Assert.AreEqual(IndexerWithDynamicReturn.GetMember("Item"), breakingChanges[0].OldItem, "The OldItem is incorrect.");
-			Assert.AreEqual(IndexerWithStringReturn.GetMember("Item"), breakingChanges[0].NewItem, "The NewItem is incorrect.");
-			Assert.IsNull(breakingChanges[0].AssociatedData, "The AssociatedData is incorrect.");
+			AssertX.Equal(1, breakingChanges.Count, "There should be one breaking change when the Return type changes.");
+			AssertX.Equal(BreakingChangeKind.ChangedMemberType, breakingChanges[0].BreakingChangeKind, "The BreakingChangeKind is incorrect.");
+			AssertX.Equal(IndexerWithDynamicReturn.GetMember("Item"), breakingChanges[0].OldItem, "The OldItem is incorrect.");
+			AssertX.Equal(IndexerWithStringReturn.GetMember("Item"), breakingChanges[0].NewItem, "The NewItem is incorrect.");
+			AssertX.Null(breakingChanges[0].AssociatedData, "The AssociatedData is incorrect.");
 		}
 
 		#endregion // IndexerTests
 
 		#region MethodTests
 
-		[TestMethod]
+		[Fact]
 		public void MethodTests()
 		{
-			var assembly = AssemblyData.FromAssembly(typeof(ChangedMemberTypeTests).Assembly);
-			var MethodWithIntReturn = TypeDefinitionData.FromType(typeof(MethodWithIntReturn));
-			var MethodWithStringReturn = TypeDefinitionData.FromType(typeof(MethodWithStringReturn));
-			var MethodWithDynamicReturn = TypeDefinitionData.FromType(typeof(MethodWithDynamicReturn));
+			var context = MetadataResolutionContext.CreateFromTypes(typeof(ChangedMemberTypeTests));
+			var MethodWithIntReturn = context.GetTypeDefinitionData(typeof(MethodWithIntReturn));
+			var MethodWithStringReturn = context.GetTypeDefinitionData(typeof(MethodWithStringReturn));
+			var MethodWithDynamicReturn = context.GetTypeDefinitionData(typeof(MethodWithDynamicReturn));
 			
 			var breakingChanges = MetadataComparer.CompareTypes(MethodWithIntReturn, MethodWithStringReturn);
-			Assert.AreEqual(1, breakingChanges.Count, "There should be one breaking change when the Return type changes.");
-			Assert.AreEqual(BreakingChangeKind.ChangedMemberType, breakingChanges[0].BreakingChangeKind, "The BreakingChangeKind is incorrect.");
-			Assert.AreEqual(MethodWithIntReturn.GetMember("Method"), breakingChanges[0].OldItem, "The OldItem is incorrect.");
-			Assert.AreEqual(MethodWithStringReturn.GetMember("Method"), breakingChanges[0].NewItem, "The NewItem is incorrect.");
-			Assert.IsNull(breakingChanges[0].AssociatedData, "The AssociatedData is incorrect.");
+			AssertX.Equal(1, breakingChanges.Count, "There should be one breaking change when the Return type changes.");
+			AssertX.Equal(BreakingChangeKind.ChangedMemberType, breakingChanges[0].BreakingChangeKind, "The BreakingChangeKind is incorrect.");
+			AssertX.Equal(MethodWithIntReturn.GetMember("Method"), breakingChanges[0].OldItem, "The OldItem is incorrect.");
+			AssertX.Equal(MethodWithStringReturn.GetMember("Method"), breakingChanges[0].NewItem, "The NewItem is incorrect.");
+			AssertX.Null(breakingChanges[0].AssociatedData, "The AssociatedData is incorrect.");
 
 			breakingChanges = MetadataComparer.CompareTypes(MethodWithStringReturn, MethodWithIntReturn);
-			Assert.AreEqual(1, breakingChanges.Count, "There should be one breaking change when the Return type changes.");
-			Assert.AreEqual(BreakingChangeKind.ChangedMemberType, breakingChanges[0].BreakingChangeKind, "The BreakingChangeKind is incorrect.");
-			Assert.AreEqual(MethodWithStringReturn.GetMember("Method"), breakingChanges[0].OldItem, "The OldItem is incorrect.");
-			Assert.AreEqual(MethodWithIntReturn.GetMember("Method"), breakingChanges[0].NewItem, "The NewItem is incorrect.");
-			Assert.IsNull(breakingChanges[0].AssociatedData, "The AssociatedData is incorrect.");
+			AssertX.Equal(1, breakingChanges.Count, "There should be one breaking change when the Return type changes.");
+			AssertX.Equal(BreakingChangeKind.ChangedMemberType, breakingChanges[0].BreakingChangeKind, "The BreakingChangeKind is incorrect.");
+			AssertX.Equal(MethodWithStringReturn.GetMember("Method"), breakingChanges[0].OldItem, "The OldItem is incorrect.");
+			AssertX.Equal(MethodWithIntReturn.GetMember("Method"), breakingChanges[0].NewItem, "The NewItem is incorrect.");
+			AssertX.Null(breakingChanges[0].AssociatedData, "The AssociatedData is incorrect.");
 
 			breakingChanges = MetadataComparer.CompareTypes(MethodWithIntReturn, MethodWithDynamicReturn);
-			Assert.AreEqual(0, breakingChanges.Count, "There should be no breaking changes when the Return type changes to dynamic.");
+			AssertX.Equal(0, breakingChanges.Count, "There should be no breaking changes when the Return type changes to dynamic.");
 
 			breakingChanges = MetadataComparer.CompareTypes(MethodWithDynamicReturn, MethodWithIntReturn);
-			Assert.AreEqual(1, breakingChanges.Count, "There should be one breaking change when the Return type changes.");
-			Assert.AreEqual(BreakingChangeKind.ChangedMemberType, breakingChanges[0].BreakingChangeKind, "The BreakingChangeKind is incorrect.");
-			Assert.AreEqual(MethodWithDynamicReturn.GetMember("Method"), breakingChanges[0].OldItem, "The OldItem is incorrect.");
-			Assert.AreEqual(MethodWithIntReturn.GetMember("Method"), breakingChanges[0].NewItem, "The NewItem is incorrect.");
-			Assert.IsNull(breakingChanges[0].AssociatedData, "The AssociatedData is incorrect.");
+			AssertX.Equal(1, breakingChanges.Count, "There should be one breaking change when the Return type changes.");
+			AssertX.Equal(BreakingChangeKind.ChangedMemberType, breakingChanges[0].BreakingChangeKind, "The BreakingChangeKind is incorrect.");
+			AssertX.Equal(MethodWithDynamicReturn.GetMember("Method"), breakingChanges[0].OldItem, "The OldItem is incorrect.");
+			AssertX.Equal(MethodWithIntReturn.GetMember("Method"), breakingChanges[0].NewItem, "The NewItem is incorrect.");
+			AssertX.Null(breakingChanges[0].AssociatedData, "The AssociatedData is incorrect.");
 
 			breakingChanges = MetadataComparer.CompareTypes(MethodWithStringReturn, MethodWithDynamicReturn);
-			Assert.AreEqual(0, breakingChanges.Count, "There should be no breaking changes when the Return type changes to dynamic.");
+			AssertX.Equal(0, breakingChanges.Count, "There should be no breaking changes when the Return type changes to dynamic.");
 
 			breakingChanges = MetadataComparer.CompareTypes(MethodWithDynamicReturn, MethodWithStringReturn);
-			Assert.AreEqual(1, breakingChanges.Count, "There should be one breaking change when the Return type changes.");
-			Assert.AreEqual(BreakingChangeKind.ChangedMemberType, breakingChanges[0].BreakingChangeKind, "The BreakingChangeKind is incorrect.");
-			Assert.AreEqual(MethodWithDynamicReturn.GetMember("Method"), breakingChanges[0].OldItem, "The OldItem is incorrect.");
-			Assert.AreEqual(MethodWithStringReturn.GetMember("Method"), breakingChanges[0].NewItem, "The NewItem is incorrect.");
-			Assert.IsNull(breakingChanges[0].AssociatedData, "The AssociatedData is incorrect.");
+			AssertX.Equal(1, breakingChanges.Count, "There should be one breaking change when the Return type changes.");
+			AssertX.Equal(BreakingChangeKind.ChangedMemberType, breakingChanges[0].BreakingChangeKind, "The BreakingChangeKind is incorrect.");
+			AssertX.Equal(MethodWithDynamicReturn.GetMember("Method"), breakingChanges[0].OldItem, "The OldItem is incorrect.");
+			AssertX.Equal(MethodWithStringReturn.GetMember("Method"), breakingChanges[0].NewItem, "The NewItem is incorrect.");
+			AssertX.Null(breakingChanges[0].AssociatedData, "The AssociatedData is incorrect.");
 		}
 
 		#endregion // MethodTests
 
 		#region NestedTypeTests
 
-		[TestMethod]
+		[Fact]
 		public void NestedTypeTests()
 		{
-			var assembly = AssemblyData.FromAssembly(typeof(ChangedMemberTypeTests).Assembly);
-			var nestedDelegateWithIntReturn = TypeDefinitionData.FromType(typeof(NestedDelegateWithIntReturn));
-			var nestedDelegateWithStringReturn = TypeDefinitionData.FromType(typeof(NestedDelegateWithStringReturn));
-			var nestedDelegateWithDynamicReturn = TypeDefinitionData.FromType(typeof(NestedDelegateWithDynamicReturn));
+			var context = MetadataResolutionContext.CreateFromTypes(typeof(ChangedMemberTypeTests));
+			var nestedDelegateWithIntReturn = context.GetTypeDefinitionData(typeof(NestedDelegateWithIntReturn));
+			var nestedDelegateWithStringReturn = context.GetTypeDefinitionData(typeof(NestedDelegateWithStringReturn));
+			var nestedDelegateWithDynamicReturn = context.GetTypeDefinitionData(typeof(NestedDelegateWithDynamicReturn));
 			
 			var breakingChanges = MetadataComparer.CompareTypes(nestedDelegateWithIntReturn, nestedDelegateWithStringReturn);
-			Assert.AreEqual(1, breakingChanges.Count, "There should be one breaking change when the Return type changes.");
-			Assert.AreEqual(BreakingChangeKind.ChangedMemberType, breakingChanges[0].BreakingChangeKind, "The BreakingChangeKind is incorrect.");
-			Assert.AreEqual(nestedDelegateWithIntReturn.GetNestedType("Delegate"), breakingChanges[0].OldItem, "The OldItem is incorrect.");
-			Assert.AreEqual(nestedDelegateWithStringReturn.GetNestedType("Delegate"), breakingChanges[0].NewItem, "The NewItem is incorrect.");
-			Assert.IsNull(breakingChanges[0].AssociatedData, "The AssociatedData is incorrect.");
+			AssertX.Equal(1, breakingChanges.Count, "There should be one breaking change when the Return type changes.");
+			AssertX.Equal(BreakingChangeKind.ChangedMemberType, breakingChanges[0].BreakingChangeKind, "The BreakingChangeKind is incorrect.");
+			AssertX.Equal(nestedDelegateWithIntReturn.GetNestedType("Delegate"), breakingChanges[0].OldItem, "The OldItem is incorrect.");
+			AssertX.Equal(nestedDelegateWithStringReturn.GetNestedType("Delegate"), breakingChanges[0].NewItem, "The NewItem is incorrect.");
+			AssertX.Null(breakingChanges[0].AssociatedData, "The AssociatedData is incorrect.");
 
 			breakingChanges = MetadataComparer.CompareTypes(nestedDelegateWithStringReturn, nestedDelegateWithIntReturn);
-			Assert.AreEqual(1, breakingChanges.Count, "There should be one breaking change when the Return type changes.");
-			Assert.AreEqual(BreakingChangeKind.ChangedMemberType, breakingChanges[0].BreakingChangeKind, "The BreakingChangeKind is incorrect.");
-			Assert.AreEqual(nestedDelegateWithStringReturn.GetNestedType("Delegate"), breakingChanges[0].OldItem, "The OldItem is incorrect.");
-			Assert.AreEqual(nestedDelegateWithIntReturn.GetNestedType("Delegate"), breakingChanges[0].NewItem, "The NewItem is incorrect.");
-			Assert.IsNull(breakingChanges[0].AssociatedData, "The AssociatedData is incorrect.");
+			AssertX.Equal(1, breakingChanges.Count, "There should be one breaking change when the Return type changes.");
+			AssertX.Equal(BreakingChangeKind.ChangedMemberType, breakingChanges[0].BreakingChangeKind, "The BreakingChangeKind is incorrect.");
+			AssertX.Equal(nestedDelegateWithStringReturn.GetNestedType("Delegate"), breakingChanges[0].OldItem, "The OldItem is incorrect.");
+			AssertX.Equal(nestedDelegateWithIntReturn.GetNestedType("Delegate"), breakingChanges[0].NewItem, "The NewItem is incorrect.");
+			AssertX.Null(breakingChanges[0].AssociatedData, "The AssociatedData is incorrect.");
 
 			breakingChanges = MetadataComparer.CompareTypes(nestedDelegateWithIntReturn, nestedDelegateWithDynamicReturn);
-			Assert.AreEqual(0, breakingChanges.Count, "There should be no breaking changes when the Return type changes to dynamic.");
+			AssertX.Equal(0, breakingChanges.Count, "There should be no breaking changes when the Return type changes to dynamic.");
 
 			breakingChanges = MetadataComparer.CompareTypes(nestedDelegateWithDynamicReturn, nestedDelegateWithIntReturn);
-			Assert.AreEqual(1, breakingChanges.Count, "There should be one breaking change when the Return type changes.");
-			Assert.AreEqual(BreakingChangeKind.ChangedMemberType, breakingChanges[0].BreakingChangeKind, "The BreakingChangeKind is incorrect.");
-			Assert.AreEqual(nestedDelegateWithDynamicReturn.GetMember("Delegate"), breakingChanges[0].OldItem, "The OldItem is incorrect.");
-			Assert.AreEqual(nestedDelegateWithIntReturn.GetMember("Delegate"), breakingChanges[0].NewItem, "The NewItem is incorrect.");
-			Assert.IsNull(breakingChanges[0].AssociatedData, "The AssociatedData is incorrect.");
+			AssertX.Equal(1, breakingChanges.Count, "There should be one breaking change when the Return type changes.");
+			AssertX.Equal(BreakingChangeKind.ChangedMemberType, breakingChanges[0].BreakingChangeKind, "The BreakingChangeKind is incorrect.");
+			AssertX.Equal(nestedDelegateWithDynamicReturn.GetMember("Delegate"), breakingChanges[0].OldItem, "The OldItem is incorrect.");
+			AssertX.Equal(nestedDelegateWithIntReturn.GetMember("Delegate"), breakingChanges[0].NewItem, "The NewItem is incorrect.");
+			AssertX.Null(breakingChanges[0].AssociatedData, "The AssociatedData is incorrect.");
 
 			breakingChanges = MetadataComparer.CompareTypes(nestedDelegateWithStringReturn, nestedDelegateWithDynamicReturn);
-			Assert.AreEqual(0, breakingChanges.Count, "There should be no breaking changes when the Return type changes to dynamic.");
+			AssertX.Equal(0, breakingChanges.Count, "There should be no breaking changes when the Return type changes to dynamic.");
 
 			breakingChanges = MetadataComparer.CompareTypes(nestedDelegateWithDynamicReturn, nestedDelegateWithStringReturn);
-			Assert.AreEqual(1, breakingChanges.Count, "There should be one breaking change when the Return type changes.");
-			Assert.AreEqual(BreakingChangeKind.ChangedMemberType, breakingChanges[0].BreakingChangeKind, "The BreakingChangeKind is incorrect.");
-			Assert.AreEqual(nestedDelegateWithDynamicReturn.GetMember("Delegate"), breakingChanges[0].OldItem, "The OldItem is incorrect.");
-			Assert.AreEqual(nestedDelegateWithStringReturn.GetMember("Delegate"), breakingChanges[0].NewItem, "The NewItem is incorrect.");
-			Assert.IsNull(breakingChanges[0].AssociatedData, "The AssociatedData is incorrect.");
+			AssertX.Equal(1, breakingChanges.Count, "There should be one breaking change when the Return type changes.");
+			AssertX.Equal(BreakingChangeKind.ChangedMemberType, breakingChanges[0].BreakingChangeKind, "The BreakingChangeKind is incorrect.");
+			AssertX.Equal(nestedDelegateWithDynamicReturn.GetMember("Delegate"), breakingChanges[0].OldItem, "The OldItem is incorrect.");
+			AssertX.Equal(nestedDelegateWithStringReturn.GetMember("Delegate"), breakingChanges[0].NewItem, "The NewItem is incorrect.");
+			AssertX.Null(breakingChanges[0].AssociatedData, "The AssociatedData is incorrect.");
 		}
 
 		#endregion // NestedTypeTests
 
 		#region OperatorTests
 
-		[TestMethod]
+		[Fact]
 		public void OperatorTests()
 		{
-			var assembly = AssemblyData.FromAssembly(typeof(ChangedMemberTypeTests).Assembly);
-			var OperatorWithIntReturn = TypeDefinitionData.FromType(typeof(OperatorWithIntReturn));
-			var OperatorWithStringReturn = TypeDefinitionData.FromType(typeof(OperatorWithStringReturn));
-			var OperatorWithDynamicReturn = TypeDefinitionData.FromType(typeof(OperatorWithDynamicReturn));
+			var context = MetadataResolutionContext.CreateFromTypes(typeof(ChangedMemberTypeTests));
+			var OperatorWithIntReturn = context.GetTypeDefinitionData(typeof(OperatorWithIntReturn));
+			var OperatorWithStringReturn = context.GetTypeDefinitionData(typeof(OperatorWithStringReturn));
+			var OperatorWithDynamicReturn = context.GetTypeDefinitionData(typeof(OperatorWithDynamicReturn));
 			
 			var breakingChanges = MetadataComparer.CompareTypes(OperatorWithIntReturn, OperatorWithStringReturn);
 			breakingChanges = breakingChanges.Where(b => b.BreakingChangeKind == BreakingChangeKind.ChangedMemberType).ToList();
-			Assert.AreEqual(1, breakingChanges.Count, "There should be one breaking change when the Return type changes.");
-			Assert.AreEqual(BreakingChangeKind.ChangedMemberType, breakingChanges[0].BreakingChangeKind, "The BreakingChangeKind is incorrect.");
-			Assert.AreEqual(OperatorWithIntReturn.GetMember("op_Addition"), breakingChanges[0].OldItem, "The OldItem is incorrect.");
-			Assert.AreEqual(OperatorWithStringReturn.GetMember("op_Addition"), breakingChanges[0].NewItem, "The NewItem is incorrect.");
-			Assert.IsNull(breakingChanges[0].AssociatedData, "The AssociatedData is incorrect.");
+			AssertX.Equal(1, breakingChanges.Count, "There should be one breaking change when the Return type changes.");
+			AssertX.Equal(BreakingChangeKind.ChangedMemberType, breakingChanges[0].BreakingChangeKind, "The BreakingChangeKind is incorrect.");
+			AssertX.Equal(OperatorWithIntReturn.GetMember("op_Addition"), breakingChanges[0].OldItem, "The OldItem is incorrect.");
+			AssertX.Equal(OperatorWithStringReturn.GetMember("op_Addition"), breakingChanges[0].NewItem, "The NewItem is incorrect.");
+			AssertX.Null(breakingChanges[0].AssociatedData, "The AssociatedData is incorrect.");
 
 			breakingChanges = MetadataComparer.CompareTypes(OperatorWithStringReturn, OperatorWithIntReturn);
 			breakingChanges = breakingChanges.Where(b => b.BreakingChangeKind == BreakingChangeKind.ChangedMemberType).ToList();
-			Assert.AreEqual(1, breakingChanges.Count, "There should be one breaking change when the Return type changes.");
-			Assert.AreEqual(BreakingChangeKind.ChangedMemberType, breakingChanges[0].BreakingChangeKind, "The BreakingChangeKind is incorrect.");
-			Assert.AreEqual(OperatorWithStringReturn.GetMember("op_Addition"), breakingChanges[0].OldItem, "The OldItem is incorrect.");
-			Assert.AreEqual(OperatorWithIntReturn.GetMember("op_Addition"), breakingChanges[0].NewItem, "The NewItem is incorrect.");
-			Assert.IsNull(breakingChanges[0].AssociatedData, "The AssociatedData is incorrect.");
+			AssertX.Equal(1, breakingChanges.Count, "There should be one breaking change when the Return type changes.");
+			AssertX.Equal(BreakingChangeKind.ChangedMemberType, breakingChanges[0].BreakingChangeKind, "The BreakingChangeKind is incorrect.");
+			AssertX.Equal(OperatorWithStringReturn.GetMember("op_Addition"), breakingChanges[0].OldItem, "The OldItem is incorrect.");
+			AssertX.Equal(OperatorWithIntReturn.GetMember("op_Addition"), breakingChanges[0].NewItem, "The NewItem is incorrect.");
+			AssertX.Null(breakingChanges[0].AssociatedData, "The AssociatedData is incorrect.");
 
 			breakingChanges = MetadataComparer.CompareTypes(OperatorWithIntReturn, OperatorWithDynamicReturn);
 			breakingChanges = breakingChanges.Where(b => b.BreakingChangeKind == BreakingChangeKind.ChangedMemberType).ToList();
-			Assert.AreEqual(0, breakingChanges.Count, "There should be no breaking changes when the Return type changes to dynamic.");
+			AssertX.Equal(0, breakingChanges.Count, "There should be no breaking changes when the Return type changes to dynamic.");
 
 			breakingChanges = MetadataComparer.CompareTypes(OperatorWithDynamicReturn, OperatorWithIntReturn);
 			breakingChanges = breakingChanges.Where(b => b.BreakingChangeKind == BreakingChangeKind.ChangedMemberType).ToList();
-			Assert.AreEqual(1, breakingChanges.Count, "There should be one breaking change when the Return type changes.");
-			Assert.AreEqual(BreakingChangeKind.ChangedMemberType, breakingChanges[0].BreakingChangeKind, "The BreakingChangeKind is incorrect.");
-			Assert.AreEqual(OperatorWithDynamicReturn.GetMember("op_Addition"), breakingChanges[0].OldItem, "The OldItem is incorrect.");
-			Assert.AreEqual(OperatorWithIntReturn.GetMember("op_Addition"), breakingChanges[0].NewItem, "The NewItem is incorrect.");
-			Assert.IsNull(breakingChanges[0].AssociatedData, "The AssociatedData is incorrect.");
+			AssertX.Equal(1, breakingChanges.Count, "There should be one breaking change when the Return type changes.");
+			AssertX.Equal(BreakingChangeKind.ChangedMemberType, breakingChanges[0].BreakingChangeKind, "The BreakingChangeKind is incorrect.");
+			AssertX.Equal(OperatorWithDynamicReturn.GetMember("op_Addition"), breakingChanges[0].OldItem, "The OldItem is incorrect.");
+			AssertX.Equal(OperatorWithIntReturn.GetMember("op_Addition"), breakingChanges[0].NewItem, "The NewItem is incorrect.");
+			AssertX.Null(breakingChanges[0].AssociatedData, "The AssociatedData is incorrect.");
 
 			breakingChanges = MetadataComparer.CompareTypes(OperatorWithStringReturn, OperatorWithDynamicReturn);
 			breakingChanges = breakingChanges.Where(b => b.BreakingChangeKind == BreakingChangeKind.ChangedMemberType).ToList();
-			Assert.AreEqual(0, breakingChanges.Count, "There should be no breaking changes when the Return type changes to dynamic.");
+			AssertX.Equal(0, breakingChanges.Count, "There should be no breaking changes when the Return type changes to dynamic.");
 
 			breakingChanges = MetadataComparer.CompareTypes(OperatorWithDynamicReturn, OperatorWithStringReturn);
 			breakingChanges = breakingChanges.Where(b => b.BreakingChangeKind == BreakingChangeKind.ChangedMemberType).ToList();
-			Assert.AreEqual(1, breakingChanges.Count, "There should be one breaking change when the Return type changes.");
-			Assert.AreEqual(BreakingChangeKind.ChangedMemberType, breakingChanges[0].BreakingChangeKind, "The BreakingChangeKind is incorrect.");
-			Assert.AreEqual(OperatorWithDynamicReturn.GetMember("op_Addition"), breakingChanges[0].OldItem, "The OldItem is incorrect.");
-			Assert.AreEqual(OperatorWithStringReturn.GetMember("op_Addition"), breakingChanges[0].NewItem, "The NewItem is incorrect.");
-			Assert.IsNull(breakingChanges[0].AssociatedData, "The AssociatedData is incorrect.");
+			AssertX.Equal(1, breakingChanges.Count, "There should be one breaking change when the Return type changes.");
+			AssertX.Equal(BreakingChangeKind.ChangedMemberType, breakingChanges[0].BreakingChangeKind, "The BreakingChangeKind is incorrect.");
+			AssertX.Equal(OperatorWithDynamicReturn.GetMember("op_Addition"), breakingChanges[0].OldItem, "The OldItem is incorrect.");
+			AssertX.Equal(OperatorWithStringReturn.GetMember("op_Addition"), breakingChanges[0].NewItem, "The NewItem is incorrect.");
+			AssertX.Null(breakingChanges[0].AssociatedData, "The AssociatedData is incorrect.");
 		}
 
 		#endregion // OperatorTests
 
 		#region PropertyTests
 
-		[TestMethod]
+		[Fact]
 		public void PropertyTests()
 		{
-			var assembly = AssemblyData.FromAssembly(typeof(ChangedMemberTypeTests).Assembly);
-			var PropertyWithIntReturn = TypeDefinitionData.FromType(typeof(PropertyWithIntReturn));
-			var PropertyWithStringReturn = TypeDefinitionData.FromType(typeof(PropertyWithStringReturn));
-			var PropertyWithDynamicReturn = TypeDefinitionData.FromType(typeof(PropertyWithDynamicReturn));
+			var context = MetadataResolutionContext.CreateFromTypes(typeof(ChangedMemberTypeTests));
+			var PropertyWithIntReturn = context.GetTypeDefinitionData(typeof(PropertyWithIntReturn));
+			var PropertyWithStringReturn = context.GetTypeDefinitionData(typeof(PropertyWithStringReturn));
+			var PropertyWithDynamicReturn = context.GetTypeDefinitionData(typeof(PropertyWithDynamicReturn));
 			
 			var breakingChanges = MetadataComparer.CompareTypes(PropertyWithIntReturn, PropertyWithStringReturn);
-			Assert.AreEqual(1, breakingChanges.Count, "There should be one breaking change when the Return type changes.");
-			Assert.AreEqual(BreakingChangeKind.ChangedMemberType, breakingChanges[0].BreakingChangeKind, "The BreakingChangeKind is incorrect.");
-			Assert.AreEqual(PropertyWithIntReturn.GetMember("Property"), breakingChanges[0].OldItem, "The OldItem is incorrect.");
-			Assert.AreEqual(PropertyWithStringReturn.GetMember("Property"), breakingChanges[0].NewItem, "The NewItem is incorrect.");
-			Assert.IsNull(breakingChanges[0].AssociatedData, "The AssociatedData is incorrect.");
+			AssertX.Equal(1, breakingChanges.Count, "There should be one breaking change when the Return type changes.");
+			AssertX.Equal(BreakingChangeKind.ChangedMemberType, breakingChanges[0].BreakingChangeKind, "The BreakingChangeKind is incorrect.");
+			AssertX.Equal(PropertyWithIntReturn.GetMember("Property"), breakingChanges[0].OldItem, "The OldItem is incorrect.");
+			AssertX.Equal(PropertyWithStringReturn.GetMember("Property"), breakingChanges[0].NewItem, "The NewItem is incorrect.");
+			AssertX.Null(breakingChanges[0].AssociatedData, "The AssociatedData is incorrect.");
 
 			breakingChanges = MetadataComparer.CompareTypes(PropertyWithStringReturn, PropertyWithIntReturn);
-			Assert.AreEqual(1, breakingChanges.Count, "There should be one breaking change when the Return type changes.");
-			Assert.AreEqual(BreakingChangeKind.ChangedMemberType, breakingChanges[0].BreakingChangeKind, "The BreakingChangeKind is incorrect.");
-			Assert.AreEqual(PropertyWithStringReturn.GetMember("Property"), breakingChanges[0].OldItem, "The OldItem is incorrect.");
-			Assert.AreEqual(PropertyWithIntReturn.GetMember("Property"), breakingChanges[0].NewItem, "The NewItem is incorrect.");
-			Assert.IsNull(breakingChanges[0].AssociatedData, "The AssociatedData is incorrect.");
+			AssertX.Equal(1, breakingChanges.Count, "There should be one breaking change when the Return type changes.");
+			AssertX.Equal(BreakingChangeKind.ChangedMemberType, breakingChanges[0].BreakingChangeKind, "The BreakingChangeKind is incorrect.");
+			AssertX.Equal(PropertyWithStringReturn.GetMember("Property"), breakingChanges[0].OldItem, "The OldItem is incorrect.");
+			AssertX.Equal(PropertyWithIntReturn.GetMember("Property"), breakingChanges[0].NewItem, "The NewItem is incorrect.");
+			AssertX.Null(breakingChanges[0].AssociatedData, "The AssociatedData is incorrect.");
 
 			breakingChanges = MetadataComparer.CompareTypes(PropertyWithIntReturn, PropertyWithDynamicReturn);
-			Assert.AreEqual(0, breakingChanges.Count, "There should be no breaking changes when the Return type changes to dynamic.");
+			AssertX.Equal(0, breakingChanges.Count, "There should be no breaking changes when the Return type changes to dynamic.");
 
 			breakingChanges = MetadataComparer.CompareTypes(PropertyWithDynamicReturn, PropertyWithIntReturn);
-			Assert.AreEqual(1, breakingChanges.Count, "There should be one breaking change when the Return type changes.");
-			Assert.AreEqual(BreakingChangeKind.ChangedMemberType, breakingChanges[0].BreakingChangeKind, "The BreakingChangeKind is incorrect.");
-			Assert.AreEqual(PropertyWithDynamicReturn.GetMember("Property"), breakingChanges[0].OldItem, "The OldItem is incorrect.");
-			Assert.AreEqual(PropertyWithIntReturn.GetMember("Property"), breakingChanges[0].NewItem, "The NewItem is incorrect.");
-			Assert.IsNull(breakingChanges[0].AssociatedData, "The AssociatedData is incorrect.");
+			AssertX.Equal(1, breakingChanges.Count, "There should be one breaking change when the Return type changes.");
+			AssertX.Equal(BreakingChangeKind.ChangedMemberType, breakingChanges[0].BreakingChangeKind, "The BreakingChangeKind is incorrect.");
+			AssertX.Equal(PropertyWithDynamicReturn.GetMember("Property"), breakingChanges[0].OldItem, "The OldItem is incorrect.");
+			AssertX.Equal(PropertyWithIntReturn.GetMember("Property"), breakingChanges[0].NewItem, "The NewItem is incorrect.");
+			AssertX.Null(breakingChanges[0].AssociatedData, "The AssociatedData is incorrect.");
 
 			breakingChanges = MetadataComparer.CompareTypes(PropertyWithStringReturn, PropertyWithDynamicReturn);
-			Assert.AreEqual(0, breakingChanges.Count, "There should be no breaking changes when the Return type changes to dynamic.");
+			AssertX.Equal(0, breakingChanges.Count, "There should be no breaking changes when the Return type changes to dynamic.");
 
 			breakingChanges = MetadataComparer.CompareTypes(PropertyWithDynamicReturn, PropertyWithStringReturn);
-			Assert.AreEqual(1, breakingChanges.Count, "There should be one breaking change when the Return type changes.");
-			Assert.AreEqual(BreakingChangeKind.ChangedMemberType, breakingChanges[0].BreakingChangeKind, "The BreakingChangeKind is incorrect.");
-			Assert.AreEqual(PropertyWithDynamicReturn.GetMember("Property"), breakingChanges[0].OldItem, "The OldItem is incorrect.");
-			Assert.AreEqual(PropertyWithStringReturn.GetMember("Property"), breakingChanges[0].NewItem, "The NewItem is incorrect.");
-			Assert.IsNull(breakingChanges[0].AssociatedData, "The AssociatedData is incorrect.");
+			AssertX.Equal(1, breakingChanges.Count, "There should be one breaking change when the Return type changes.");
+			AssertX.Equal(BreakingChangeKind.ChangedMemberType, breakingChanges[0].BreakingChangeKind, "The BreakingChangeKind is incorrect.");
+			AssertX.Equal(PropertyWithDynamicReturn.GetMember("Property"), breakingChanges[0].OldItem, "The OldItem is incorrect.");
+			AssertX.Equal(PropertyWithStringReturn.GetMember("Property"), breakingChanges[0].NewItem, "The NewItem is incorrect.");
+			AssertX.Null(breakingChanges[0].AssociatedData, "The AssociatedData is incorrect.");
 		}
 
 		#endregion // PropertyTests
 
 		#region ReturnTypeCovarianceTests
 
-		[TestMethod]
+		[Fact]
 		public void ReturnTypeCovarianceTests()
 		{
-			var assembly = AssemblyData.FromAssembly(typeof(ChangedMemberTypeTests).Assembly);
-			var methodWithReturnBase = TypeDefinitionData.FromType(typeof(MethodWithReturnBase));
-			var methodWithReturnDerived = TypeDefinitionData.FromType(typeof(MethodWithReturnDerived));
+			var context = MetadataResolutionContext.CreateFromTypes(typeof(ChangedMemberTypeTests));
+			var methodWithReturnBase = context.GetTypeDefinitionData(typeof(MethodWithReturnBase));
+			var methodWithReturnDerived = context.GetTypeDefinitionData(typeof(MethodWithReturnDerived));
 			
 			var breakingChanges = MetadataComparer.CompareTypes(methodWithReturnDerived, methodWithReturnBase);
-			Assert.AreEqual(1, breakingChanges.Count, "There should be one breaking change when the Return type changes.");
-			Assert.AreEqual(BreakingChangeKind.ChangedMemberType, breakingChanges[0].BreakingChangeKind, "The BreakingChangeKind is incorrect.");
-			Assert.AreEqual(methodWithReturnDerived.GetMember("Method"), breakingChanges[0].OldItem, "The OldItem is incorrect.");
-			Assert.AreEqual(methodWithReturnBase.GetMember("Method"), breakingChanges[0].NewItem, "The NewItem is incorrect.");
-			Assert.IsNull(breakingChanges[0].AssociatedData, "The AssociatedData is incorrect.");
+			AssertX.Equal(1, breakingChanges.Count, "There should be one breaking change when the Return type changes.");
+			AssertX.Equal(BreakingChangeKind.ChangedMemberType, breakingChanges[0].BreakingChangeKind, "The BreakingChangeKind is incorrect.");
+			AssertX.Equal(methodWithReturnDerived.GetMember("Method"), breakingChanges[0].OldItem, "The OldItem is incorrect.");
+			AssertX.Equal(methodWithReturnBase.GetMember("Method"), breakingChanges[0].NewItem, "The NewItem is incorrect.");
+			AssertX.Null(breakingChanges[0].AssociatedData, "The AssociatedData is incorrect.");
 
 			breakingChanges = MetadataComparer.CompareTypes(methodWithReturnBase, methodWithReturnDerived);
-			Assert.AreEqual(0, breakingChanges.Count, "There should be no breaking changes when the Return type changes to a base type.");
+			AssertX.Equal(0, breakingChanges.Count, "There should be no breaking changes when the Return type changes to a base type.");
 
 			// Read/write fields cannot change type at all because they can be used in out or ref parameters
-			var FieldWithReturnBase = TypeDefinitionData.FromType(typeof(FieldWithReturnBase));
-			var FieldWithReturnDerived = TypeDefinitionData.FromType(typeof(FieldWithReturnDerived));
-			var FieldWithReadonlyReturnBase = TypeDefinitionData.FromType(typeof(FieldWithReadonlyReturnBase));
+			var FieldWithReturnBase = context.GetTypeDefinitionData(typeof(FieldWithReturnBase));
+			var FieldWithReturnDerived = context.GetTypeDefinitionData(typeof(FieldWithReturnDerived));
+			var FieldWithReadonlyReturnBase = context.GetTypeDefinitionData(typeof(FieldWithReadonlyReturnBase));
 			breakingChanges = MetadataComparer.CompareTypes(FieldWithReturnDerived, FieldWithReturnBase);
-			Assert.AreEqual(1, breakingChanges.Count, "There should be one breaking change when the Return type changes.");
-			Assert.AreEqual(BreakingChangeKind.ChangedMemberType, breakingChanges[0].BreakingChangeKind, "The BreakingChangeKind is incorrect.");
-			Assert.AreEqual(FieldWithReturnDerived.GetMember("Field"), breakingChanges[0].OldItem, "The OldItem is incorrect.");
-			Assert.AreEqual(FieldWithReturnBase.GetMember("Field"), breakingChanges[0].NewItem, "The NewItem is incorrect.");
-			Assert.IsNull(breakingChanges[0].AssociatedData, "The AssociatedData is incorrect.");
+			AssertX.Equal(1, breakingChanges.Count, "There should be one breaking change when the Return type changes.");
+			AssertX.Equal(BreakingChangeKind.ChangedMemberType, breakingChanges[0].BreakingChangeKind, "The BreakingChangeKind is incorrect.");
+			AssertX.Equal(FieldWithReturnDerived.GetMember("Field"), breakingChanges[0].OldItem, "The OldItem is incorrect.");
+			AssertX.Equal(FieldWithReturnBase.GetMember("Field"), breakingChanges[0].NewItem, "The NewItem is incorrect.");
+			AssertX.Null(breakingChanges[0].AssociatedData, "The AssociatedData is incorrect.");
 			breakingChanges = MetadataComparer.CompareTypes(FieldWithReturnBase, FieldWithReturnDerived);
-			Assert.AreEqual(1, breakingChanges.Count, "There should be one breaking change when the Return type changes.");
-			Assert.AreEqual(BreakingChangeKind.ChangedMemberType, breakingChanges[0].BreakingChangeKind, "The BreakingChangeKind is incorrect.");
-			Assert.AreEqual(FieldWithReturnBase.GetMember("Field"), breakingChanges[0].OldItem, "The OldItem is incorrect.");
-			Assert.AreEqual(FieldWithReturnDerived.GetMember("Field"), breakingChanges[0].NewItem, "The NewItem is incorrect.");
-			Assert.IsNull(breakingChanges[0].AssociatedData, "The AssociatedData is incorrect.");
+			AssertX.Equal(1, breakingChanges.Count, "There should be one breaking change when the Return type changes.");
+			AssertX.Equal(BreakingChangeKind.ChangedMemberType, breakingChanges[0].BreakingChangeKind, "The BreakingChangeKind is incorrect.");
+			AssertX.Equal(FieldWithReturnBase.GetMember("Field"), breakingChanges[0].OldItem, "The OldItem is incorrect.");
+			AssertX.Equal(FieldWithReturnDerived.GetMember("Field"), breakingChanges[0].NewItem, "The NewItem is incorrect.");
+			AssertX.Null(breakingChanges[0].AssociatedData, "The AssociatedData is incorrect.");
 			breakingChanges = MetadataComparer.CompareTypes(FieldWithReadonlyReturnBase, FieldWithReturnDerived);
-			Assert.AreEqual(0, breakingChanges.Count, "There should be no breaking changes when the read-only field type changes to a base type.");
+			AssertX.Equal(0, breakingChanges.Count, "There should be no breaking changes when the read-only field type changes to a base type.");
 
-			var EventWithReturnBase = TypeDefinitionData.FromType(typeof(EventWithReturnBase));
-			var EventWithReturnDerived = TypeDefinitionData.FromType(typeof(EventWithReturnDerived));
+			var EventWithReturnBase = context.GetTypeDefinitionData(typeof(EventWithReturnBase));
+			var EventWithReturnDerived = context.GetTypeDefinitionData(typeof(EventWithReturnDerived));
 			breakingChanges = MetadataComparer.CompareTypes(EventWithReturnDerived, EventWithReturnBase);
-			Assert.AreEqual(1, breakingChanges.Count, "There should be one breaking change when the Return type changes.");
-			Assert.AreEqual(BreakingChangeKind.ChangedMemberType, breakingChanges[0].BreakingChangeKind, "The BreakingChangeKind is incorrect.");
-			Assert.AreEqual(EventWithReturnDerived.GetMember("Event"), breakingChanges[0].OldItem, "The OldItem is incorrect.");
-			Assert.AreEqual(EventWithReturnBase.GetMember("Event"), breakingChanges[0].NewItem, "The NewItem is incorrect.");
-			Assert.IsNull(breakingChanges[0].AssociatedData, "The AssociatedData is incorrect.");
+			AssertX.Equal(1, breakingChanges.Count, "There should be one breaking change when the Return type changes.");
+			AssertX.Equal(BreakingChangeKind.ChangedMemberType, breakingChanges[0].BreakingChangeKind, "The BreakingChangeKind is incorrect.");
+			AssertX.Equal(EventWithReturnDerived.GetMember("Event"), breakingChanges[0].OldItem, "The OldItem is incorrect.");
+			AssertX.Equal(EventWithReturnBase.GetMember("Event"), breakingChanges[0].NewItem, "The NewItem is incorrect.");
+			AssertX.Null(breakingChanges[0].AssociatedData, "The AssociatedData is incorrect.");
 			breakingChanges = MetadataComparer.CompareTypes(EventWithReturnBase, EventWithReturnDerived);
-			Assert.AreEqual(1, breakingChanges.Count, "There should be one breaking change when the Return type changes.");
-			Assert.AreEqual(BreakingChangeKind.ChangedMemberType, breakingChanges[0].BreakingChangeKind, "The BreakingChangeKind is incorrect.");
-			Assert.AreEqual(EventWithReturnBase.GetMember("Event"), breakingChanges[0].OldItem, "The OldItem is incorrect.");
-			Assert.AreEqual(EventWithReturnDerived.GetMember("Event"), breakingChanges[0].NewItem, "The NewItem is incorrect.");
-			Assert.IsNull(breakingChanges[0].AssociatedData, "The AssociatedData is incorrect.");
+			AssertX.Equal(1, breakingChanges.Count, "There should be one breaking change when the Return type changes.");
+			AssertX.Equal(BreakingChangeKind.ChangedMemberType, breakingChanges[0].BreakingChangeKind, "The BreakingChangeKind is incorrect.");
+			AssertX.Equal(EventWithReturnBase.GetMember("Event"), breakingChanges[0].OldItem, "The OldItem is incorrect.");
+			AssertX.Equal(EventWithReturnDerived.GetMember("Event"), breakingChanges[0].NewItem, "The NewItem is incorrect.");
+			AssertX.Null(breakingChanges[0].AssociatedData, "The AssociatedData is incorrect.");
 		}
 
 		#endregion // ReturnTypeCovarianceTests
 
 		#region TypeTests
 
-		[TestMethod]
+		[Fact]
 		public void TypeTests()
 		{
-			var assembly = AssemblyData.FromAssembly(typeof(ChangedMemberTypeTests).Assembly);
-			var DelegateWithIntReturn = TypeDefinitionData.FromType(typeof(DelegateWithIntReturn));
-			var DelegateWithStringReturn = TypeDefinitionData.FromType(typeof(DelegateWithStringReturn));
-			var DelegateWithDynamicReturn = TypeDefinitionData.FromType(typeof(DelegateWithDynamicReturn));
+			var context = MetadataResolutionContext.CreateFromTypes(typeof(ChangedMemberTypeTests));
+			var DelegateWithIntReturn = context.GetTypeDefinitionData(typeof(DelegateWithIntReturn));
+			var DelegateWithStringReturn = context.GetTypeDefinitionData(typeof(DelegateWithStringReturn));
+			var DelegateWithDynamicReturn = context.GetTypeDefinitionData(typeof(DelegateWithDynamicReturn));
 			
 			var breakingChanges = MetadataComparer.CompareTypes(DelegateWithIntReturn, DelegateWithStringReturn);
-			Assert.AreEqual(1, breakingChanges.Count, "There should be one breaking change when the Return type changes.");
-			Assert.AreEqual(BreakingChangeKind.ChangedMemberType, breakingChanges[0].BreakingChangeKind, "The BreakingChangeKind is incorrect.");
-			Assert.AreEqual(DelegateWithIntReturn, breakingChanges[0].OldItem, "The OldItem is incorrect.");
-			Assert.AreEqual(DelegateWithStringReturn, breakingChanges[0].NewItem, "The NewItem is incorrect.");
-			Assert.IsNull(breakingChanges[0].AssociatedData, "The AssociatedData is incorrect.");
+			AssertX.Equal(1, breakingChanges.Count, "There should be one breaking change when the Return type changes.");
+			AssertX.Equal(BreakingChangeKind.ChangedMemberType, breakingChanges[0].BreakingChangeKind, "The BreakingChangeKind is incorrect.");
+			AssertX.Equal(DelegateWithIntReturn, breakingChanges[0].OldItem, "The OldItem is incorrect.");
+			AssertX.Equal(DelegateWithStringReturn, breakingChanges[0].NewItem, "The NewItem is incorrect.");
+			AssertX.Null(breakingChanges[0].AssociatedData, "The AssociatedData is incorrect.");
 
 			breakingChanges = MetadataComparer.CompareTypes(DelegateWithStringReturn, DelegateWithIntReturn);
-			Assert.AreEqual(1, breakingChanges.Count, "There should be one breaking change when the Return type changes.");
-			Assert.AreEqual(BreakingChangeKind.ChangedMemberType, breakingChanges[0].BreakingChangeKind, "The BreakingChangeKind is incorrect.");
-			Assert.AreEqual(DelegateWithStringReturn, breakingChanges[0].OldItem, "The OldItem is incorrect.");
-			Assert.AreEqual(DelegateWithIntReturn, breakingChanges[0].NewItem, "The NewItem is incorrect.");
-			Assert.IsNull(breakingChanges[0].AssociatedData, "The AssociatedData is incorrect.");
+			AssertX.Equal(1, breakingChanges.Count, "There should be one breaking change when the Return type changes.");
+			AssertX.Equal(BreakingChangeKind.ChangedMemberType, breakingChanges[0].BreakingChangeKind, "The BreakingChangeKind is incorrect.");
+			AssertX.Equal(DelegateWithStringReturn, breakingChanges[0].OldItem, "The OldItem is incorrect.");
+			AssertX.Equal(DelegateWithIntReturn, breakingChanges[0].NewItem, "The NewItem is incorrect.");
+			AssertX.Null(breakingChanges[0].AssociatedData, "The AssociatedData is incorrect.");
 
 			breakingChanges = MetadataComparer.CompareTypes(DelegateWithIntReturn, DelegateWithDynamicReturn);
-			Assert.AreEqual(0, breakingChanges.Count, "There should be no breaking changes when the Return type changes to dynamic.");
+			AssertX.Equal(0, breakingChanges.Count, "There should be no breaking changes when the Return type changes to dynamic.");
 
 			breakingChanges = MetadataComparer.CompareTypes(DelegateWithDynamicReturn, DelegateWithIntReturn);
-			Assert.AreEqual(1, breakingChanges.Count, "There should be one breaking change when the Return type changes.");
-			Assert.AreEqual(BreakingChangeKind.ChangedMemberType, breakingChanges[0].BreakingChangeKind, "The BreakingChangeKind is incorrect.");
-			Assert.AreEqual(DelegateWithDynamicReturn, breakingChanges[0].OldItem, "The OldItem is incorrect.");
-			Assert.AreEqual(DelegateWithIntReturn, breakingChanges[0].NewItem, "The NewItem is incorrect.");
-			Assert.IsNull(breakingChanges[0].AssociatedData, "The AssociatedData is incorrect.");
+			AssertX.Equal(1, breakingChanges.Count, "There should be one breaking change when the Return type changes.");
+			AssertX.Equal(BreakingChangeKind.ChangedMemberType, breakingChanges[0].BreakingChangeKind, "The BreakingChangeKind is incorrect.");
+			AssertX.Equal(DelegateWithDynamicReturn, breakingChanges[0].OldItem, "The OldItem is incorrect.");
+			AssertX.Equal(DelegateWithIntReturn, breakingChanges[0].NewItem, "The NewItem is incorrect.");
+			AssertX.Null(breakingChanges[0].AssociatedData, "The AssociatedData is incorrect.");
 
 			breakingChanges = MetadataComparer.CompareTypes(DelegateWithStringReturn, DelegateWithDynamicReturn);
-			Assert.AreEqual(0, breakingChanges.Count, "There should be no breaking changes when the Return type changes to dynamic.");
+			AssertX.Equal(0, breakingChanges.Count, "There should be no breaking changes when the Return type changes to dynamic.");
 
 			breakingChanges = MetadataComparer.CompareTypes(DelegateWithDynamicReturn, DelegateWithStringReturn);
-			Assert.AreEqual(1, breakingChanges.Count, "There should be one breaking change when the Return type changes.");
-			Assert.AreEqual(BreakingChangeKind.ChangedMemberType, breakingChanges[0].BreakingChangeKind, "The BreakingChangeKind is incorrect.");
-			Assert.AreEqual(DelegateWithDynamicReturn, breakingChanges[0].OldItem, "The OldItem is incorrect.");
-			Assert.AreEqual(DelegateWithStringReturn, breakingChanges[0].NewItem, "The NewItem is incorrect.");
-			Assert.IsNull(breakingChanges[0].AssociatedData, "The AssociatedData is incorrect.");
+			AssertX.Equal(1, breakingChanges.Count, "There should be one breaking change when the Return type changes.");
+			AssertX.Equal(BreakingChangeKind.ChangedMemberType, breakingChanges[0].BreakingChangeKind, "The BreakingChangeKind is incorrect.");
+			AssertX.Equal(DelegateWithDynamicReturn, breakingChanges[0].OldItem, "The OldItem is incorrect.");
+			AssertX.Equal(DelegateWithStringReturn, breakingChanges[0].NewItem, "The NewItem is incorrect.");
+			AssertX.Null(breakingChanges[0].AssociatedData, "The AssociatedData is incorrect.");
 		}
 
 		#endregion // TypeTests

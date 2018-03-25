@@ -2,6 +2,7 @@
     MIT License
 
     Copyright(c) 2014-2018 Infragistics, Inc.
+    Copyright 2018 Google LLC
 
     Permission is hereby granted, free of charge, to any person obtaining a copy
     of this software and associated documentation files (the "Software"), to deal
@@ -24,7 +25,7 @@
 
 using BreakingChangesDetector.BreakingChanges;
 using BreakingChangesDetector.MetadataItems;
-using Microsoft.VisualStudio.TestTools.UnitTesting;
+using Xunit;
 using System;
 using System.Collections.Generic;
 using System.Linq;
@@ -33,125 +34,124 @@ using System.Threading.Tasks;
 
 namespace BreakingChangesDetector.UnitTests.BreakingChangesTests
 {
-	[TestClass]
 	public class ChangedMemberToNonVirtualTests
 	{
 		#region EventTests
 
-		[TestMethod]
+		[Fact]
 		public void EventTests()
 		{
-			var assembly = AssemblyData.FromAssembly(typeof(AddedAbstractMemberTests).Assembly);
-			var EventNonVirtual = TypeDefinitionData.FromType(typeof(EventNonVirtual));
-			var EventVirtual = TypeDefinitionData.FromType(typeof(EventVirtual));
-			var EventAbstract = TypeDefinitionData.FromType(typeof(EventAbstract));
+			var context = MetadataResolutionContext.CreateFromTypes(typeof(AddedAbstractMemberTests));
+			var EventNonVirtual = context.GetTypeDefinitionData(typeof(EventNonVirtual));
+			var EventVirtual = context.GetTypeDefinitionData(typeof(EventVirtual));
+			var EventAbstract = context.GetTypeDefinitionData(typeof(EventAbstract));
 			
 			var breakingChanges = MetadataComparer.CompareTypes(EventVirtual, EventNonVirtual);
-			Assert.AreEqual(1, breakingChanges.Count, "There should be one breaking change when a virtual member changes to non-virtual.");
-			Assert.AreEqual(BreakingChangeKind.ChangedMemberToNonVirtual, breakingChanges[0].BreakingChangeKind, "The BreakingChangeKind is incorrect.");
-			Assert.AreEqual(EventVirtual.GetMember("Event"), breakingChanges[0].OldItem, "The OldItem is incorrect.");
-			Assert.AreEqual(EventNonVirtual.GetMember("Event"), breakingChanges[0].NewItem, "The NewItem is incorrect.");
-			Assert.IsNull(breakingChanges[0].AssociatedData, "The AssociatedData is incorrect.");
+			AssertX.Equal(1, breakingChanges.Count, "There should be one breaking change when a virtual member changes to non-virtual.");
+			AssertX.Equal(BreakingChangeKind.ChangedMemberToNonVirtual, breakingChanges[0].BreakingChangeKind, "The BreakingChangeKind is incorrect.");
+			AssertX.Equal(EventVirtual.GetMember("Event"), breakingChanges[0].OldItem, "The OldItem is incorrect.");
+			AssertX.Equal(EventNonVirtual.GetMember("Event"), breakingChanges[0].NewItem, "The NewItem is incorrect.");
+			AssertX.Null(breakingChanges[0].AssociatedData, "The AssociatedData is incorrect.");
 
 			breakingChanges = MetadataComparer.CompareTypes(EventAbstract, EventNonVirtual);
-			Assert.AreEqual(1, breakingChanges.Count, "There should be one breaking change when an abstract member changes to non-virtual.");
-			Assert.AreEqual(BreakingChangeKind.ChangedMemberToNonVirtual, breakingChanges[0].BreakingChangeKind, "The BreakingChangeKind is incorrect.");
-			Assert.AreEqual(EventAbstract.GetMember("Event"), breakingChanges[0].OldItem, "The OldItem is incorrect.");
-			Assert.AreEqual(EventNonVirtual.GetMember("Event"), breakingChanges[0].NewItem, "The NewItem is incorrect.");
-			Assert.IsNull(breakingChanges[0].AssociatedData, "The AssociatedData is incorrect.");
+			AssertX.Equal(1, breakingChanges.Count, "There should be one breaking change when an abstract member changes to non-virtual.");
+			AssertX.Equal(BreakingChangeKind.ChangedMemberToNonVirtual, breakingChanges[0].BreakingChangeKind, "The BreakingChangeKind is incorrect.");
+			AssertX.Equal(EventAbstract.GetMember("Event"), breakingChanges[0].OldItem, "The OldItem is incorrect.");
+			AssertX.Equal(EventNonVirtual.GetMember("Event"), breakingChanges[0].NewItem, "The NewItem is incorrect.");
+			AssertX.Null(breakingChanges[0].AssociatedData, "The AssociatedData is incorrect.");
 
 			breakingChanges = MetadataComparer.CompareTypes(EventNonVirtual, EventVirtual);
-			Assert.AreEqual(0, breakingChanges.Count, "There should be no breaking changes when a non-virtual member changes to virtual.");
+			AssertX.Equal(0, breakingChanges.Count, "There should be no breaking changes when a non-virtual member changes to virtual.");
 		}
 
 		#endregion // EventTests
 
 		#region IndexerTests
 
-		[TestMethod]
+		[Fact]
 		public void IndexerTests()
 		{
-			var assembly = AssemblyData.FromAssembly(typeof(AddedAbstractMemberTests).Assembly);
-			var IndexerNonVirtual = TypeDefinitionData.FromType(typeof(IndexerNonVirtual));
-			var IndexerVirtual = TypeDefinitionData.FromType(typeof(IndexerVirtual));
-			var IndexerAbstract = TypeDefinitionData.FromType(typeof(IndexerAbstract));
+			var context = MetadataResolutionContext.CreateFromTypes(typeof(AddedAbstractMemberTests));
+			var IndexerNonVirtual = context.GetTypeDefinitionData(typeof(IndexerNonVirtual));
+			var IndexerVirtual = context.GetTypeDefinitionData(typeof(IndexerVirtual));
+			var IndexerAbstract = context.GetTypeDefinitionData(typeof(IndexerAbstract));
 			
 			var breakingChanges = MetadataComparer.CompareTypes(IndexerVirtual, IndexerNonVirtual);
-			Assert.AreEqual(1, breakingChanges.Count, "There should be one breaking change when a virtual member changes to non-virtual.");
-			Assert.AreEqual(BreakingChangeKind.ChangedMemberToNonVirtual, breakingChanges[0].BreakingChangeKind, "The BreakingChangeKind is incorrect.");
-			Assert.AreEqual(IndexerVirtual.GetMember("Item"), breakingChanges[0].OldItem, "The OldItem is incorrect.");
-			Assert.AreEqual(IndexerNonVirtual.GetMember("Item"), breakingChanges[0].NewItem, "The NewItem is incorrect.");
-			Assert.IsNull(breakingChanges[0].AssociatedData, "The AssociatedData is incorrect.");
+			AssertX.Equal(1, breakingChanges.Count, "There should be one breaking change when a virtual member changes to non-virtual.");
+			AssertX.Equal(BreakingChangeKind.ChangedMemberToNonVirtual, breakingChanges[0].BreakingChangeKind, "The BreakingChangeKind is incorrect.");
+			AssertX.Equal(IndexerVirtual.GetMember("Item"), breakingChanges[0].OldItem, "The OldItem is incorrect.");
+			AssertX.Equal(IndexerNonVirtual.GetMember("Item"), breakingChanges[0].NewItem, "The NewItem is incorrect.");
+			AssertX.Null(breakingChanges[0].AssociatedData, "The AssociatedData is incorrect.");
 
 			breakingChanges = MetadataComparer.CompareTypes(IndexerAbstract, IndexerNonVirtual);
-			Assert.AreEqual(1, breakingChanges.Count, "There should be one breaking change when an abstract member changes to non-virtual.");
-			Assert.AreEqual(BreakingChangeKind.ChangedMemberToNonVirtual, breakingChanges[0].BreakingChangeKind, "The BreakingChangeKind is incorrect.");
-			Assert.AreEqual(IndexerAbstract.GetMember("Item"), breakingChanges[0].OldItem, "The OldItem is incorrect.");
-			Assert.AreEqual(IndexerNonVirtual.GetMember("Item"), breakingChanges[0].NewItem, "The NewItem is incorrect.");
-			Assert.IsNull(breakingChanges[0].AssociatedData, "The AssociatedData is incorrect.");
+			AssertX.Equal(1, breakingChanges.Count, "There should be one breaking change when an abstract member changes to non-virtual.");
+			AssertX.Equal(BreakingChangeKind.ChangedMemberToNonVirtual, breakingChanges[0].BreakingChangeKind, "The BreakingChangeKind is incorrect.");
+			AssertX.Equal(IndexerAbstract.GetMember("Item"), breakingChanges[0].OldItem, "The OldItem is incorrect.");
+			AssertX.Equal(IndexerNonVirtual.GetMember("Item"), breakingChanges[0].NewItem, "The NewItem is incorrect.");
+			AssertX.Null(breakingChanges[0].AssociatedData, "The AssociatedData is incorrect.");
 
 			breakingChanges = MetadataComparer.CompareTypes(IndexerNonVirtual, IndexerVirtual);
-			Assert.AreEqual(0, breakingChanges.Count, "There should be no breaking changes when a non-virtual member changes to virtual.");
+			AssertX.Equal(0, breakingChanges.Count, "There should be no breaking changes when a non-virtual member changes to virtual.");
 		}
 
 		#endregion // IndexerTests
 
 		#region MethodTests
 
-		[TestMethod]
+		[Fact]
 		public void MethodTests()
 		{
-			var assembly = AssemblyData.FromAssembly(typeof(AddedAbstractMemberTests).Assembly);
-			var MethodNonVirtual = TypeDefinitionData.FromType(typeof(MethodNonVirtual));
-			var MethodVirtual = TypeDefinitionData.FromType(typeof(MethodVirtual));
-			var MethodAbstract = TypeDefinitionData.FromType(typeof(MethodAbstract));
+			var context = MetadataResolutionContext.CreateFromTypes(typeof(AddedAbstractMemberTests));
+			var MethodNonVirtual = context.GetTypeDefinitionData(typeof(MethodNonVirtual));
+			var MethodVirtual = context.GetTypeDefinitionData(typeof(MethodVirtual));
+			var MethodAbstract = context.GetTypeDefinitionData(typeof(MethodAbstract));
 			
 			var breakingChanges = MetadataComparer.CompareTypes(MethodVirtual, MethodNonVirtual);
-			Assert.AreEqual(1, breakingChanges.Count, "There should be one breaking change when a virtual member changes to non-virtual.");
-			Assert.AreEqual(BreakingChangeKind.ChangedMemberToNonVirtual, breakingChanges[0].BreakingChangeKind, "The BreakingChangeKind is incorrect.");
-			Assert.AreEqual(MethodVirtual.GetMember("Method"), breakingChanges[0].OldItem, "The OldItem is incorrect.");
-			Assert.AreEqual(MethodNonVirtual.GetMember("Method"), breakingChanges[0].NewItem, "The NewItem is incorrect.");
-			Assert.IsNull(breakingChanges[0].AssociatedData, "The AssociatedData is incorrect.");
+			AssertX.Equal(1, breakingChanges.Count, "There should be one breaking change when a virtual member changes to non-virtual.");
+			AssertX.Equal(BreakingChangeKind.ChangedMemberToNonVirtual, breakingChanges[0].BreakingChangeKind, "The BreakingChangeKind is incorrect.");
+			AssertX.Equal(MethodVirtual.GetMember("Method"), breakingChanges[0].OldItem, "The OldItem is incorrect.");
+			AssertX.Equal(MethodNonVirtual.GetMember("Method"), breakingChanges[0].NewItem, "The NewItem is incorrect.");
+			AssertX.Null(breakingChanges[0].AssociatedData, "The AssociatedData is incorrect.");
 
 			breakingChanges = MetadataComparer.CompareTypes(MethodAbstract, MethodNonVirtual);
-			Assert.AreEqual(1, breakingChanges.Count, "There should be one breaking change when an abstract member changes to non-virtual.");
-			Assert.AreEqual(BreakingChangeKind.ChangedMemberToNonVirtual, breakingChanges[0].BreakingChangeKind, "The BreakingChangeKind is incorrect.");
-			Assert.AreEqual(MethodAbstract.GetMember("Method"), breakingChanges[0].OldItem, "The OldItem is incorrect.");
-			Assert.AreEqual(MethodNonVirtual.GetMember("Method"), breakingChanges[0].NewItem, "The NewItem is incorrect.");
-			Assert.IsNull(breakingChanges[0].AssociatedData, "The AssociatedData is incorrect.");
+			AssertX.Equal(1, breakingChanges.Count, "There should be one breaking change when an abstract member changes to non-virtual.");
+			AssertX.Equal(BreakingChangeKind.ChangedMemberToNonVirtual, breakingChanges[0].BreakingChangeKind, "The BreakingChangeKind is incorrect.");
+			AssertX.Equal(MethodAbstract.GetMember("Method"), breakingChanges[0].OldItem, "The OldItem is incorrect.");
+			AssertX.Equal(MethodNonVirtual.GetMember("Method"), breakingChanges[0].NewItem, "The NewItem is incorrect.");
+			AssertX.Null(breakingChanges[0].AssociatedData, "The AssociatedData is incorrect.");
 
 			breakingChanges = MetadataComparer.CompareTypes(MethodNonVirtual, MethodVirtual);
-			Assert.AreEqual(0, breakingChanges.Count, "There should be no breaking changes when a non-virtual member changes to virtual.");
+			AssertX.Equal(0, breakingChanges.Count, "There should be no breaking changes when a non-virtual member changes to virtual.");
 		}
 
 		#endregion // MethodTests
 
 		#region PropertyTests
 
-		[TestMethod]
+		[Fact]
 		public void PropertyTests()
 		{
-			var assembly = AssemblyData.FromAssembly(typeof(AddedAbstractMemberTests).Assembly);
-			var PropertyNonVirtual = TypeDefinitionData.FromType(typeof(PropertyNonVirtual));
-			var PropertyVirtual = TypeDefinitionData.FromType(typeof(PropertyVirtual));
-			var PropertyAbstract = TypeDefinitionData.FromType(typeof(PropertyAbstract));
+			var context = MetadataResolutionContext.CreateFromTypes(typeof(AddedAbstractMemberTests));
+			var PropertyNonVirtual = context.GetTypeDefinitionData(typeof(PropertyNonVirtual));
+			var PropertyVirtual = context.GetTypeDefinitionData(typeof(PropertyVirtual));
+			var PropertyAbstract = context.GetTypeDefinitionData(typeof(PropertyAbstract));
 			
 			var breakingChanges = MetadataComparer.CompareTypes(PropertyVirtual, PropertyNonVirtual);
-			Assert.AreEqual(1, breakingChanges.Count, "There should be one breaking change when a virtual member changes to non-virtual.");
-			Assert.AreEqual(BreakingChangeKind.ChangedMemberToNonVirtual, breakingChanges[0].BreakingChangeKind, "The BreakingChangeKind is incorrect.");
-			Assert.AreEqual(PropertyVirtual.GetMember("Property"), breakingChanges[0].OldItem, "The OldItem is incorrect.");
-			Assert.AreEqual(PropertyNonVirtual.GetMember("Property"), breakingChanges[0].NewItem, "The NewItem is incorrect.");
-			Assert.IsNull(breakingChanges[0].AssociatedData, "The AssociatedData is incorrect.");
+			AssertX.Equal(1, breakingChanges.Count, "There should be one breaking change when a virtual member changes to non-virtual.");
+			AssertX.Equal(BreakingChangeKind.ChangedMemberToNonVirtual, breakingChanges[0].BreakingChangeKind, "The BreakingChangeKind is incorrect.");
+			AssertX.Equal(PropertyVirtual.GetMember("Property"), breakingChanges[0].OldItem, "The OldItem is incorrect.");
+			AssertX.Equal(PropertyNonVirtual.GetMember("Property"), breakingChanges[0].NewItem, "The NewItem is incorrect.");
+			AssertX.Null(breakingChanges[0].AssociatedData, "The AssociatedData is incorrect.");
 
 			breakingChanges = MetadataComparer.CompareTypes(PropertyAbstract, PropertyNonVirtual);
-			Assert.AreEqual(1, breakingChanges.Count, "There should be one breaking change when an abstract member changes to non-virtual.");
-			Assert.AreEqual(BreakingChangeKind.ChangedMemberToNonVirtual, breakingChanges[0].BreakingChangeKind, "The BreakingChangeKind is incorrect.");
-			Assert.AreEqual(PropertyAbstract.GetMember("Property"), breakingChanges[0].OldItem, "The OldItem is incorrect.");
-			Assert.AreEqual(PropertyNonVirtual.GetMember("Property"), breakingChanges[0].NewItem, "The NewItem is incorrect.");
-			Assert.IsNull(breakingChanges[0].AssociatedData, "The AssociatedData is incorrect.");
+			AssertX.Equal(1, breakingChanges.Count, "There should be one breaking change when an abstract member changes to non-virtual.");
+			AssertX.Equal(BreakingChangeKind.ChangedMemberToNonVirtual, breakingChanges[0].BreakingChangeKind, "The BreakingChangeKind is incorrect.");
+			AssertX.Equal(PropertyAbstract.GetMember("Property"), breakingChanges[0].OldItem, "The OldItem is incorrect.");
+			AssertX.Equal(PropertyNonVirtual.GetMember("Property"), breakingChanges[0].NewItem, "The NewItem is incorrect.");
+			AssertX.Null(breakingChanges[0].AssociatedData, "The AssociatedData is incorrect.");
 
 			breakingChanges = MetadataComparer.CompareTypes(PropertyNonVirtual, PropertyVirtual);
-			Assert.AreEqual(0, breakingChanges.Count, "There should be no breaking changes when a non-virtual member changes to virtual.");
+			AssertX.Equal(0, breakingChanges.Count, "There should be no breaking changes when a non-virtual member changes to virtual.");
 		}
 
 		#endregion // PropertyTests

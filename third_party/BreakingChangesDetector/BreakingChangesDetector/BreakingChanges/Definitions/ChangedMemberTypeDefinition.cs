@@ -2,6 +2,7 @@
     MIT License
 
     Copyright(c) 2014-2018 Infragistics, Inc.
+    Copyright 2018 Google LLC
 
     Permission is hereby granted, free of charge, to any person obtaining a copy
     of this software and associated documentation files (the "Software"), to deal
@@ -23,6 +24,7 @@
 */
 
 using BreakingChangesDetector.MetadataItems;
+using Microsoft.CodeAnalysis;
 using System;
 using System.Collections.Generic;
 using System.Linq;
@@ -53,7 +55,7 @@ namespace BreakingChangesDetector.BreakingChanges.Definitions
 
 			// If we are comparing two enum members, we know they came from the same type, which is also their return type, so we don't need to check below.
 			if (context.OldItem.MetadataItemKind == MetadataItemKinds.Constant &&
-				((MemberDataBase)context.OldItem).DeclaringType.TypeKind == TypeKind.Enum)
+				((MemberDataBase)context.OldItem).ContainingType.TypeKind == TypeKind.Enum)
 			{
 				return;
 			}

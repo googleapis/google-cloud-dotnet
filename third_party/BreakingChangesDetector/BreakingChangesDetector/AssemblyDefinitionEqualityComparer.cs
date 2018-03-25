@@ -2,6 +2,7 @@
     MIT License
 
     Copyright(c) 2014-2018 Infragistics, Inc.
+    Copyright 2018 Google LLC
 
     Permission is hereby granted, free of charge, to any person obtaining a copy
     of this software and associated documentation files (the "Software"), to deal
@@ -22,29 +23,25 @@
     SOFTWARE.
 */
 
-using Mono.Cecil;
-using System;
+using Microsoft.CodeAnalysis;
 using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
 
 namespace BreakingChangesDetector
 {
-	internal class AssemblyDefinitionEqualityComparer : IEqualityComparer<AssemblyDefinition>
-	{
-		public static readonly AssemblyDefinitionEqualityComparer Instance = new AssemblyDefinitionEqualityComparer();
+    internal class AssemblyDefinitionEqualityComparer : IEqualityComparer<IAssemblySymbol>
+    {
+        public static readonly AssemblyDefinitionEqualityComparer Instance = new AssemblyDefinitionEqualityComparer();
 
-		private AssemblyDefinitionEqualityComparer() { }
+        private AssemblyDefinitionEqualityComparer() { }
 
-		public bool Equals(AssemblyDefinition x, AssemblyDefinition y)
-		{
-			return x.FullName == y.FullName;
-		}
+        public bool Equals(IAssemblySymbol x, IAssemblySymbol y)
+        {
+            return x.Identity == y.Identity;
+        }
 
-		public int GetHashCode(AssemblyDefinition obj)
-		{
-			return obj.FullName.GetHashCode();
-		}
-	}
+        public int GetHashCode(IAssemblySymbol obj)
+        {
+            return obj.Identity.GetHashCode();
+        }
+    }
 }

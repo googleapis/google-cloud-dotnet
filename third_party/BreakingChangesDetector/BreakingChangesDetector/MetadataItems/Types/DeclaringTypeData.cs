@@ -2,6 +2,7 @@
     MIT License
 
     Copyright(c) 2014-2018 Infragistics, Inc.
+    Copyright 2018 Google LLC
 
     Permission is hereby granted, free of charge, to any person obtaining a copy
     of this software and associated documentation files (the "Software"), to deal
@@ -22,7 +23,7 @@
     SOFTWARE.
 */
 
-using Mono.Cecil;
+using Microsoft.CodeAnalysis;
 using System;
 using System.Collections.Generic;
 using System.Diagnostics;
@@ -52,8 +53,8 @@ namespace BreakingChangesDetector.MetadataItems
 			_membersByName = new Dictionary<string, List<MemberDataBase>>();
 		}
 
-		internal DeclaringTypeData(TypeReference type, MemberAccessibility accessibility, DeclaringTypeData declaringType)
-			: base(type, accessibility, declaringType)
+		internal DeclaringTypeData(ITypeSymbol typeSymbol, MemberAccessibility accessibility, DeclaringTypeData declaringType)
+			: base(typeSymbol, accessibility, declaringType)
 		{
 			_membersByName = new Dictionary<string, List<MemberDataBase>>();
 		}
@@ -95,9 +96,6 @@ namespace BreakingChangesDetector.MetadataItems
 				return false;
 
 			if (this.GenericArity != otherTyped.GenericArity)
-				return false;
-
-			if (this.IsExtensionsClass != otherTyped.IsExtensionsClass)
 				return false;
 
 			if (_membersByName.Count != otherTyped._membersByName.Count)
@@ -343,8 +341,8 @@ namespace BreakingChangesDetector.MetadataItems
 		{
 			if (fullyQualify)
 			{
-				if (this.DeclaringType != null)
-					return this.DeclaringType.GetDisplayName(fullyQualify, includeGenericInfo, genericArguments) + "." + unqualifiedName;
+				if (this.ContainingType != null)
+					return this.ContainingType.GetDisplayName(fullyQualify, includeGenericInfo, genericArguments) + "." + unqualifiedName;
 
 				var namespaceName = this.GetNamespaceName();
 				if (string.IsNullOrEmpty(namespaceName) == false)
@@ -487,17 +485,6 @@ namespace BreakingChangesDetector.MetadataItems
 		internal abstract int GenericArity { get; }
 
 		#endregion // GenericArity
-
-		#region IsExtensionsClass
-
-#if DEBUG
-		/// <summary>
-		/// Gets the value indicating whether the type is an extension class (a class containing extension methods).
-		/// </summary> 
-#endif
-		internal abstract bool IsExtensionsClass { get; }
-
-		#endregion // IsExtensionsClass
 
 		#endregion // Internal Properties
 

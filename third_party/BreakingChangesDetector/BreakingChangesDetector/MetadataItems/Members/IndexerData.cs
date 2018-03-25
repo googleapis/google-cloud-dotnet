@@ -2,6 +2,7 @@
     MIT License
 
     Copyright(c) 2014-2018 Infragistics, Inc.
+    Copyright 2018 Google LLC
 
     Permission is hereby granted, free of charge, to any person obtaining a copy
     of this software and associated documentation files (the "Software"), to deal
@@ -22,7 +23,7 @@
     SOFTWARE.
 */
 
-using Mono.Cecil;
+using Microsoft.CodeAnalysis;
 using System;
 using System.Collections.Generic;
 using System.Linq;
@@ -45,10 +46,10 @@ namespace BreakingChangesDetector.MetadataItems
 			this.Parameters = parameters;
 		}
 
-		private IndexerData(PropertyDefinition propertyDefinition, MemberAccessibility? getAccessibility, MemberAccessibility? setAccessibility, DeclaringTypeData declaringType)
-			: base(propertyDefinition, getAccessibility, setAccessibility, declaringType)
+		private IndexerData(IPropertySymbol propertySymbol, MemberAccessibility? getAccessibility, MemberAccessibility? setAccessibility, DeclaringTypeData declaringType)
+			: base(propertySymbol, getAccessibility, setAccessibility, declaringType)
 		{
-			this.Parameters = new ParameterCollection(propertyDefinition.Parameters, this);
+			this.Parameters = new ParameterCollection(propertySymbol.Parameters, this);
 		}
 
 		#endregion // Constructors
@@ -193,14 +194,14 @@ namespace BreakingChangesDetector.MetadataItems
 
 		#region IndexerDataFromReflection
 
-		internal static IndexerData IndexerDataFromReflection(PropertyDefinition propertyDefinition, DeclaringTypeData declaringType)
+		internal static IndexerData IndexerDataFromReflection(IPropertySymbol propertySymbol, DeclaringTypeData declaringType)
 		{
-			var getAccessibility = propertyDefinition.GetMethod.GetAccessibility();
-			var setAccessibility = propertyDefinition.SetMethod.GetAccessibility();
+			var getAccessibility = propertySymbol.GetMethod.GetAccessibility();
+			var setAccessibility = propertySymbol.SetMethod.GetAccessibility();
 			if (getAccessibility == null && setAccessibility == null)
 				return null;
 
-			return new IndexerData(propertyDefinition, getAccessibility, setAccessibility, declaringType);
+			return new IndexerData(propertySymbol, getAccessibility, setAccessibility, declaringType);
 		}
 
 		#endregion // IndexerDataFromReflection

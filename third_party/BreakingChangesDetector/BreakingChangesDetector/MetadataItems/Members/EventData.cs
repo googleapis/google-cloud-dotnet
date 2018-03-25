@@ -2,6 +2,7 @@
     MIT License
 
     Copyright(c) 2014-2018 Infragistics, Inc.
+    Copyright 2018 Google LLC
 
     Permission is hereby granted, free of charge, to any person obtaining a copy
     of this software and associated documentation files (the "Software"), to deal
@@ -22,7 +23,7 @@
     SOFTWARE.
 */
 
-using Mono.Cecil;
+using Microsoft.CodeAnalysis;
 using System;
 using System.Collections.Generic;
 using System.Linq;
@@ -44,8 +45,8 @@ namespace BreakingChangesDetector.MetadataItems
 		{
 		}
 
-		private EventData(EventDefinition eventDefinition, MemberAccessibility accessibility, DeclaringTypeData declaringType)
-			: base(eventDefinition, accessibility, eventDefinition.EventType, false, Utilities.GetMemberFlags(eventDefinition.AddMethod), declaringType) { }
+		private EventData(IEventSymbol eventSymbol, MemberAccessibility accessibility, DeclaringTypeData declaringType)
+			: base(eventSymbol, accessibility, eventSymbol.Type, false, Utilities.GetMemberFlags(eventSymbol.AddMethod), declaringType) { }
 
 		#endregion // Constructors
 
@@ -103,13 +104,13 @@ namespace BreakingChangesDetector.MetadataItems
 
 		#region EventDataFromReflection
 
-		internal static EventData EventDataFromReflection(EventDefinition eventDefinition, DeclaringTypeData declaringType)
+		internal static EventData EventDataFromReflection(IEventSymbol eventSymbol, DeclaringTypeData declaringType)
 		{
-			var accessibility = eventDefinition.AddMethod.GetAccessibility();
+			var accessibility = eventSymbol.AddMethod.GetAccessibility();
 			if (accessibility == null)
 				return null;
 
-			return new EventData(eventDefinition, accessibility.Value, declaringType);
+			return new EventData(eventSymbol, accessibility.Value, declaringType);
 		}
 
 		#endregion // EventDataFromReflection

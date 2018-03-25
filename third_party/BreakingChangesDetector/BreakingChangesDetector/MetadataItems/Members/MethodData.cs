@@ -2,6 +2,7 @@
     MIT License
 
     Copyright(c) 2014-2018 Infragistics, Inc.
+    Copyright 2018 Google LLC
 
     Permission is hereby granted, free of charge, to any person obtaining a copy
     of this software and associated documentation files (the "Software"), to deal
@@ -22,7 +23,7 @@
     SOFTWARE.
 */
 
-using Mono.Cecil;
+using Microsoft.CodeAnalysis;
 using System;
 using System.Collections.Generic;
 using System.Linq;
@@ -47,25 +48,26 @@ namespace BreakingChangesDetector.MetadataItems
 			this.IsExtensionMethod = isExtensionMethod;
 		}
 
-		private MethodData(MethodDefinition methodDefinition, MemberAccessibility accessibility, DeclaringTypeData declaringType)
-			: base(methodDefinition, accessibility, declaringType)
+		private MethodData(IMethodSymbol methodSymbol, MemberAccessibility accessibility, DeclaringTypeData declaringType)
+			: base(methodSymbol, accessibility, declaringType)
 		{
-			if (methodDefinition.HasGenericParameters)
+			if (methodSymbol.IsGenericMethod)
 			{
+                // TODO: This seems odd
 				MemberDataBase declaringMember = null;
-				if (methodDefinition.DeclaringType.IsGenericInstance == false)
-					declaringMember = this;
+                if (!methodSymbol.ContainingType.IsConstructed())
+                {
+                    declaringMember = this;
+                }
 
-				this.GenericParameters = Utilities.GetGenericParameters(methodDefinition.GenericParameters, declaringMember);
+				this.GenericParameters = Utilities.GetGenericParameters(methodSymbol.TypeParameters, declaringMember);
 			}
 			else
 			{
 				this.GenericParameters = GenericTypeParameterData.EmptyList;
 			}
 
-			this.IsExtensionMethod =
-				declaringType.IsExtensionsClass &&
-				methodDefinition.CustomAttributes.Any(a => a.AttributeType.EqualsType(typeof(ExtensionAttribute)));
+			this.IsExtensionMethod = methodSymbol.IsExtensionMethod;
 		}
 
 		#endregion // Constructor
@@ -204,13 +206,13 @@ namespace BreakingChangesDetector.MetadataItems
 
 		#region Methods
 
-		internal static MemberDataBase MethodDataFromReflection(MethodDefinition methodDefinition, DeclaringTypeData declaringType)
+		internal static MemberDataBase MethodDataFromReflection(IMethodSymbol methodSymbol, DeclaringTypeData declaringType)
 		{
-			var accessibility = methodDefinition.GetAccessibility();
+			var accessibility = methodSymbol.GetAccessibility();
 			if (accessibility == null)
 				return null;
 
-			return new MethodData(methodDefinition, accessibility.Value, declaringType);
+			return new MethodData(methodSymbol, accessibility.Value, declaringType);
 		}
 
 		#endregion // Methods

@@ -2,6 +2,7 @@
     MIT License
 
     Copyright(c) 2014-2018 Infragistics, Inc.
+    Copyright 2018 Google LLC
 
     Permission is hereby granted, free of charge, to any person obtaining a copy
     of this software and associated documentation files (the "Software"), to deal
@@ -23,6 +24,7 @@
 */
 
 using BreakingChangesDetector.MetadataItems;
+using Microsoft.CodeAnalysis;
 using System;
 using System.Collections.Generic;
 using System.Diagnostics;
@@ -144,7 +146,7 @@ namespace BreakingChangesDetector.BreakingChanges.Formatting
 			if (member.MetadataItemKind == MetadataItemKinds.TypeDefinition)
 				return member.DisplayName;
 
-			return member.DeclaringType.DisplayName + "." + member.DisplayName;
+			return member.ContainingType.DisplayName + "." + member.DisplayName;
 		}
 
 		private static string GetItemDescription(MetadataItemBase item)

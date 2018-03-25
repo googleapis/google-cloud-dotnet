@@ -2,6 +2,7 @@
     MIT License
 
     Copyright(c) 2014-2018 Infragistics, Inc.
+    Copyright 2018 Google LLC
 
     Permission is hereby granted, free of charge, to any person obtaining a copy
     of this software and associated documentation files (the "Software"), to deal
@@ -24,6 +25,7 @@
 
 using BreakingChangesDetector.BreakingChanges.Definitions;
 using BreakingChangesDetector.MetadataItems;
+using Microsoft.CodeAnalysis;
 using System;
 using System.Collections.Generic;
 using System.Diagnostics;
@@ -395,7 +397,7 @@ namespace BreakingChangesDetector.BreakingChanges
 			// we can safely assume they are the "same" and report errors for the number or types of parameters changing.
 			if (allowMatchOnNameOnly &&
 				candidateMembers.Count == 1 &&
-				oldMember.DeclaringType.GetMembers(oldMember.Name).Count == 1)
+				oldMember.ContainingType.GetMembers(oldMember.Name).Count == 1)
 			{
 				switch (oldMember.MetadataItemKind)
 				{

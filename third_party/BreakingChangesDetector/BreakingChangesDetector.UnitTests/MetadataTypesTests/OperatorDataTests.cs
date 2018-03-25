@@ -2,6 +2,7 @@
     MIT License
 
     Copyright(c) 2014-2018 Infragistics, Inc.
+    Copyright 2018 Google LLC
 
     Permission is hereby granted, free of charge, to any person obtaining a copy
     of this software and associated documentation files (the "Software"), to deal
@@ -23,121 +24,120 @@
 */
 
 using System;
-using Microsoft.VisualStudio.TestTools.UnitTesting;
+using Xunit;
 using BreakingChangesDetector.MetadataItems;
 
 namespace BreakingChangesDetector.UnitTests.MetadataTypesTests
 {
-	[TestClass]
 	public class OperatorDataTests
 	{
 		#region OperatorDataAccessibilityTest
 
-		[TestMethod]
+		[Fact]
 		public void OperatorDataAccessibilityTest()
 		{
 			var t = typeof(VariousMemberFeatures);
-			var assembly = AssemblyData.FromAssembly(t.Assembly);
-			var typeData = TypeDefinitionData.FromType(t);
+            var context = MetadataResolutionContext.CreateFromTypes(t);
+            var typeData = context.GetTypeDefinitionData(t);
 			var member = typeData.GetMember("op_Addition");
-			Assert.AreEqual(MemberAccessibility.Public, member.Accessibility, "Incorrect Accessibility");
+			AssertX.Equal(MemberAccessibility.Public, member.Accessibility, "Incorrect Accessibility");
 		}
 
 		#endregion // OperatorDataAccessibilityTest
 
 		#region OperatorDataAllOperatorsTest
 
-		[TestMethod]
+		[Fact]
 		public void OperatorDataAllOperatorsTest()
 		{
 			var t = typeof(VariousMemberFeatures);
-			var assembly = AssemblyData.FromAssembly(t.Assembly);
-			var typeData = TypeDefinitionData.FromType(t);
+			var context = MetadataResolutionContext.CreateFromTypes(t);
+			var typeData = context.GetTypeDefinitionData(t);
 			
-			Assert.IsNotNull(typeData.GetMember("op_Implicit"));
-			Assert.IsNotNull(typeData.GetMember("op_Explicit"));
-			Assert.IsNotNull(typeData.GetMember("op_Addition"));
-			Assert.IsNotNull(typeData.GetMember("op_Subtraction"));
-			Assert.IsNotNull(typeData.GetMember("op_Multiply"));
-			Assert.IsNotNull(typeData.GetMember("op_Division"));
-			Assert.IsNotNull(typeData.GetMember("op_Modulus"));
-			Assert.IsNotNull(typeData.GetMember("op_ExclusiveOr"));
-			Assert.IsNotNull(typeData.GetMember("op_BitwiseAnd"));
-			Assert.IsNotNull(typeData.GetMember("op_BitwiseOr"));
-			Assert.IsNotNull(typeData.GetMember("op_LeftShift"));
-			Assert.IsNotNull(typeData.GetMember("op_RightShift"));
-			Assert.IsNotNull(typeData.GetMember("op_Equality"));
-			Assert.IsNotNull(typeData.GetMember("op_GreaterThan"));
-			Assert.IsNotNull(typeData.GetMember("op_LessThan"));
-			Assert.IsNotNull(typeData.GetMember("op_Inequality"));
-			Assert.IsNotNull(typeData.GetMember("op_GreaterThanOrEqual"));
-			Assert.IsNotNull(typeData.GetMember("op_LessThanOrEqual"));
-			Assert.IsNotNull(typeData.GetMember("op_Decrement"));
-			Assert.IsNotNull(typeData.GetMember("op_Increment"));
-			Assert.IsNotNull(typeData.GetMember("op_UnaryNegation"));
-			Assert.IsNotNull(typeData.GetMember("op_UnaryPlus"));
-			Assert.IsNotNull(typeData.GetMember("op_OnesComplement"));
-			Assert.IsNotNull(typeData.GetMember("op_LogicalNot"));
-			Assert.IsNotNull(typeData.GetMember("op_True"));
-			Assert.IsNotNull(typeData.GetMember("op_False"));
+			Assert.NotNull(typeData.GetMember("op_Implicit"));
+			Assert.NotNull(typeData.GetMember("op_Explicit"));
+			Assert.NotNull(typeData.GetMember("op_Addition"));
+			Assert.NotNull(typeData.GetMember("op_Subtraction"));
+			Assert.NotNull(typeData.GetMember("op_Multiply"));
+			Assert.NotNull(typeData.GetMember("op_Division"));
+			Assert.NotNull(typeData.GetMember("op_Modulus"));
+			Assert.NotNull(typeData.GetMember("op_ExclusiveOr"));
+			Assert.NotNull(typeData.GetMember("op_BitwiseAnd"));
+			Assert.NotNull(typeData.GetMember("op_BitwiseOr"));
+			Assert.NotNull(typeData.GetMember("op_LeftShift"));
+			Assert.NotNull(typeData.GetMember("op_RightShift"));
+			Assert.NotNull(typeData.GetMember("op_Equality"));
+			Assert.NotNull(typeData.GetMember("op_GreaterThan"));
+			Assert.NotNull(typeData.GetMember("op_LessThan"));
+			Assert.NotNull(typeData.GetMember("op_Inequality"));
+			Assert.NotNull(typeData.GetMember("op_GreaterThanOrEqual"));
+			Assert.NotNull(typeData.GetMember("op_LessThanOrEqual"));
+			Assert.NotNull(typeData.GetMember("op_Decrement"));
+			Assert.NotNull(typeData.GetMember("op_Increment"));
+			Assert.NotNull(typeData.GetMember("op_UnaryNegation"));
+			Assert.NotNull(typeData.GetMember("op_UnaryPlus"));
+			Assert.NotNull(typeData.GetMember("op_OnesComplement"));
+			Assert.NotNull(typeData.GetMember("op_LogicalNot"));
+			Assert.NotNull(typeData.GetMember("op_True"));
+			Assert.NotNull(typeData.GetMember("op_False"));
 		}
 
 		#endregion // OperatorDataAllOperatorsTest
 
 		#region OperatorDataDeclaringTypeTest
 
-		[TestMethod]
+		[Fact]
 		public void OperatorDataDeclaringTypeTest()
 		{
 			var t = typeof(VariousMemberFeatures);
-			var assembly = AssemblyData.FromAssembly(t.Assembly);
-			var typeData = TypeDefinitionData.FromType(t);
+			var context = MetadataResolutionContext.CreateFromTypes(t);
+			var typeData = context.GetTypeDefinitionData(t);
 			var method = typeData.GetMember("op_Addition");
-			Assert.AreEqual(typeData, method.DeclaringType, "The DeclaringType of a member should be the type in which it is defined.");
+			AssertX.Equal(typeData, method.ContainingType, "The DeclaringType of a member should be the type in which it is defined.");
 		}
 
 		#endregion // OperatorDataDeclaringTypeTest
 
 		#region OperatorDataNameTest
 
-		[TestMethod]
+		[Fact]
 		public void OperatorDataNameTest()
 		{
 			var t = typeof(VariousMemberFeatures);
-			var assembly = AssemblyData.FromAssembly(t.Assembly);
-			var typeData = TypeDefinitionData.FromType(t);
+			var context = MetadataResolutionContext.CreateFromTypes(t);
+			var typeData = context.GetTypeDefinitionData(t);
 			var method = typeData.GetMember("op_Addition");
-			Assert.AreEqual("op_Addition", method.Name, "The Name of the member is incorrect.");
+			AssertX.Equal("op_Addition", method.Name, "The Name of the member is incorrect.");
 		}
 
 		#endregion // OperatorDataNameTest
 
 		#region OperatorDataParametersTest
 
-		[TestMethod]
+		[Fact]
 		public void OperatorDataParametersTest()
 		{
 			var t = typeof(VariousMemberFeatures);
-			var assembly = AssemblyData.FromAssembly(t.Assembly);
-			var typeData = TypeDefinitionData.FromType(t);
+			var context = MetadataResolutionContext.CreateFromTypes(t);
+			var typeData = context.GetTypeDefinitionData(t);
 			var method = (OperatorData)typeData.GetMember("op_Addition");
-			Assert.AreEqual(2, method.Parameters.Count, "The public method has the wrong number of parameters.");
+			AssertX.Equal(2, method.Parameters.Count, "The public method has the wrong number of parameters.");
 		}
 
 		#endregion // OperatorDataParametersTest
 
 		#region OperatorDataTypeTest
 
-		[TestMethod]
+		[Fact]
 		public void OperatorDataTypeTest()
 		{
 			var t = typeof(VariousMemberFeatures);
-			var assembly = AssemblyData.FromAssembly(t.Assembly);
-			var typeData = TypeDefinitionData.FromType(t);
-			var voidType =TypeDefinitionData.FromType(typeof(void));
+			var context = MetadataResolutionContext.CreateFromTypes(t);
+			var typeData = context.GetTypeDefinitionData(t);
+			var voidType =context.GetTypeDefinitionData(typeof(void));
 
 			var method = (OperatorData)typeData.GetMember("op_Addition");
-			Assert.AreEqual(typeData, method.Type, "The Type of the member is incorrect.");
+			AssertX.Equal(typeData, method.Type, "The Type of the member is incorrect.");
 		}
 
 		#endregion // OperatorDataTypeTest

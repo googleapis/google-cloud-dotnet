@@ -2,6 +2,7 @@
     MIT License
 
     Copyright(c) 2014-2018 Infragistics, Inc.
+    Copyright 2018 Google LLC
 
     Permission is hereby granted, free of charge, to any person obtaining a copy
     of this software and associated documentation files (the "Software"), to deal
@@ -22,7 +23,7 @@
     SOFTWARE.
 */
 
-using Mono.Cecil;
+using Microsoft.CodeAnalysis;
 using System;
 using System.Collections.Generic;
 using System.Linq;
@@ -46,10 +47,10 @@ namespace BreakingChangesDetector.MetadataItems
 			this.Parameters = parameters;
 		}
 
-		private ConstructorData(MethodDefinition methodDefinition, MemberAccessibility accessibility, DeclaringTypeData declaringType)
-			: base(methodDefinition, accessibility, Utilities.GetMemberFlags(methodDefinition), declaringType)
+		private ConstructorData(IMethodSymbol methodSymbol, MemberAccessibility accessibility, DeclaringTypeData declaringType)
+			: base(methodSymbol, accessibility, Utilities.GetMemberFlags(methodSymbol), declaringType)
 		{
-			this.Parameters = new ParameterCollection(methodDefinition.Parameters, this);
+			this.Parameters = new ParameterCollection(methodSymbol.Parameters, this);
 		}
 
 		#endregion // Constructors
@@ -190,13 +191,13 @@ namespace BreakingChangesDetector.MetadataItems
 
 		#region ConstructorDataFromReflection
 
-		internal static ConstructorData ConstructorDataFromReflection(MethodDefinition methodDefinition, DeclaringTypeData declaringType)
+		internal static ConstructorData ConstructorDataFromReflection(IMethodSymbol methodSymbol, DeclaringTypeData declaringType)
 		{
-			var accessibility = methodDefinition.GetAccessibility();
+			var accessibility = methodSymbol.GetAccessibility();
 			if (accessibility == null)
 				return null;
 
-			return new ConstructorData(methodDefinition, accessibility.Value, declaringType);
+			return new ConstructorData(methodSymbol, accessibility.Value, declaringType);
 		}
 
 		#endregion // ConstructorDataFromReflection

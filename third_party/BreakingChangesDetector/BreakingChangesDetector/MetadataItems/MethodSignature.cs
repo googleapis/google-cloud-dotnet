@@ -2,6 +2,7 @@
     MIT License
 
     Copyright(c) 2014-2018 Infragistics, Inc.
+    Copyright 2018 Google LLC
 
     Permission is hereby granted, free of charge, to any person obtaining a copy
     of this software and associated documentation files (the "Software"), to deal
@@ -22,12 +23,8 @@
     SOFTWARE.
 */
 
-using Mono.Cecil;
-using System;
-using System.Collections.Generic;
+using Microsoft.CodeAnalysis;
 using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
 
 namespace BreakingChangesDetector.MetadataItems
 {
@@ -39,19 +36,21 @@ namespace BreakingChangesDetector.MetadataItems
 	internal class MethodSignature
 	{
 		private readonly string _declaringTypeName;
-		private readonly int _genericParameterCount;
+		private readonly int _typeParameterCount;
 		private readonly string _methodName;
-		private readonly TypeKey[] _parameterTypes;
+		private readonly ParameterKey[] _parameters;
 
-		public MethodSignature(MethodDefinition method)
-		{
-			_declaringTypeName = method.DeclaringType.FullName;
-			_genericParameterCount = method.GenericParameters.Count;
-			_methodName = method.Name;
-			_parameterTypes = new TypeKey[method.Parameters.Count];
-			for (int i = 0; i < _parameterTypes.Length; i++)
-				_parameterTypes[i] = TypeKey.Create(method.Parameters[i]);
-		}
+        public MethodSignature(MetadataResolutionContext context, IMethodSymbol methodSymbol)
+        {
+            _declaringTypeName = methodSymbol.ContainingType.GetFullName();
+            _typeParameterCount = methodSymbol.TypeParameters.Length;
+            _methodName = methodSymbol.Name;
+            _parameters = new ParameterKey[methodSymbol.Parameters.Length];
+            for (int i = 0; i < _parameters.Length; i++)
+            {
+                _parameters[i] = new ParameterKey(TypeKey.Create(context, methodSymbol.Parameters[i]), methodSymbol.Parameters[i].RefKind);
+            }
+        }
 
 		public override bool Equals(object obj)
 		{
@@ -62,18 +61,18 @@ namespace BreakingChangesDetector.MetadataItems
 			if (_declaringTypeName != other._declaringTypeName)
 				return false;
 
-			if (_genericParameterCount != other._genericParameterCount)
+			if (_typeParameterCount != other._typeParameterCount)
 				return false;
 
 			if (_methodName != other._methodName)
 				return false;
 
-			if (_parameterTypes.Length != other._parameterTypes.Length)
+			if (_parameters.Length != other._parameters.Length)
 				return false;
 
-			for (int i = 0; i < _parameterTypes.Length; i++)
+			for (int i = 0; i < _parameters.Length; i++)
 			{
-				if (_parameterTypes[i].Equals(other._parameterTypes[i]) == false)
+				if (_parameters[i].Equals(other._parameters[i]) == false)
 					return false;
 			}
 
@@ -84,35 +83,71 @@ namespace BreakingChangesDetector.MetadataItems
 		{
 			var hashCode =
 				_declaringTypeName.GetHashCode() ^
-				(_genericParameterCount << 5) ^
+				(_typeParameterCount << 5) ^
 				_methodName.GetHashCode() << 7 ^
-				_parameterTypes.Length << 10;
+				_parameters.Length << 10;
 
-			for (int i = 0; i < _parameterTypes.Length; i++)
-				hashCode ^= _parameterTypes[i].GetHashCode() << (i % 16);
+			for (int i = 0; i < _parameters.Length; i++)
+				hashCode ^= _parameters[i].GetHashCode() << (i % 16);
 
 			return hashCode;
 		}
 
 		public override string ToString()
 		{
-			var genericSignature = _genericParameterCount == 0 ? "" : "<" + new string(',', _genericParameterCount - 1) + ">";
-			var parameterSignature = string.Join(", ", from t in _parameterTypes select t);
+			var genericSignature = _typeParameterCount == 0 ? "" : "<" + new string(',', _typeParameterCount - 1) + ">";
+			var parameterSignature = string.Join(", ", from t in _parameters select t);
 			return _declaringTypeName + "." + _methodName + genericSignature + "(" + parameterSignature + ")";
 		}
 
+        private sealed class ParameterKey
+        {
+            private readonly RefKind _refKind;
+            private readonly TypeKey _type;
+
+            public ParameterKey(TypeKey type, RefKind refKind)
+            {
+                _type = type;
+                _refKind = refKind;
+            }
+
+            public override bool Equals(object obj)
+            {
+                var other = obj as ParameterKey;
+                return other != null && _refKind == other._refKind && _type.Equals(other._type);
+            }
+
+            public override int GetHashCode() =>
+                _refKind.GetHashCode() ^ _type.GetHashCode() << 3;
+
+            public override string ToString() =>
+                GetModifier(_refKind) + _type.ToString();
+
+            private static string GetModifier(RefKind refKind)
+            {
+                switch (refKind)
+                {
+                    default:
+                    case RefKind.None: return "";
+                    case RefKind.In: return "in ";
+                    case RefKind.Out: return "out ";
+                    case RefKind.Ref: return "ref ";
+                }
+            }
+        }
+
 		private abstract class TypeKey
 		{
-			public static TypeKey Create(ParameterDefinition parameter)
-			{
-				var genericParameter = parameter.ParameterType as GenericParameter;
-				if (genericParameter == null)
-					return new TypeNameTypeKey(parameter.ParameterType);
+			public static TypeKey Create(MetadataResolutionContext context, IParameterSymbol parameterSymbol)
+            {
+				var typeParameterSymbol = parameterSymbol.Type as ITypeParameterSymbol;
+				if (typeParameterSymbol == null)
+					return new TypeNameTypeKey(context, parameterSymbol.Type);
 
-				if (genericParameter.DeclaringMethod != null)
-					return new MethodGenericParameterTypeKey(genericParameter.Position);
+				if (typeParameterSymbol.DeclaringMethod != null)
+					return new MethodGenericParameterTypeKey(typeParameterSymbol.Ordinal);
 
-				return new TypeGenericParameterTypeKey(genericParameter.Position);
+				return new TypeGenericParameterTypeKey(typeParameterSymbol.Ordinal);
 			}
 		}
 
@@ -173,13 +208,10 @@ namespace BreakingChangesDetector.MetadataItems
 			private readonly string _assemblyName;
 			private readonly string _fullName;
 
-			public TypeNameTypeKey(TypeReference type)
-			{
-				if (type.GetType() == typeof(TypeReference))
-					type = type.Resolve();
-
-				_fullName = type.FullName;
-				_assemblyName = type.GetDeclaringAssembly().FullName;
+			public TypeNameTypeKey(MetadataResolutionContext context, ITypeSymbol typeSymbol)
+            {
+				_fullName = typeSymbol.GetFullName();
+				_assemblyName = context.GetDeclaringAssemblySymbol(typeSymbol).ToDisplayString();
 			}
 
 			public override bool Equals(object obj)
