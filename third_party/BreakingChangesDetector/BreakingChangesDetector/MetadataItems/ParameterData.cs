@@ -92,18 +92,13 @@ namespace BreakingChangesDetector.MetadataItems
             }
         }
 
-        /// <summary>
-        /// Performs the specified visitor's functionality on this instance.
-        /// </summary>
-        /// <param name="visitor">The visitor whose functionality should be performed on the instance.</param>
+        /// <inheritdoc/>
         public override void Accept(MetadataItemVisitor visitor) => visitor.VisitParameterData(this);
 
         // TODO_Refactor: Can we get away with this not storing the context? The parameter would need to store its owning member.
         public override MetadataResolutionContext Context { get; }
 
-        /// <summary>
-        /// Gets the name to use for this item in messages.
-        /// </summary>
+        /// <inheritdoc/>
         public override string DisplayName => Name;
 
         internal override bool DoesMatch(MetadataItemBase other)
@@ -283,9 +278,7 @@ namespace BreakingChangesDetector.MetadataItems
         /// </summary>
         public bool IsTypeDynamic => GetFlag(InternalFlags.IsTypeDynamic);
 
-        /// <summary>
-        /// Gets the type of item the instance represents.
-        /// </summary>
+        /// <inheritdoc/>
         public override MetadataItemKinds MetadataItemKind => MetadataItemKinds.Parameter;
 
         /// <summary>

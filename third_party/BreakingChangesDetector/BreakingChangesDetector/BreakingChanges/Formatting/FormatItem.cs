@@ -40,9 +40,7 @@ namespace BreakingChangesDetector.BreakingChanges.Formatting
             Text = text;
         }
 
-        /// <summary>
-        /// Gets the string representation of the <see cref="FormatItem"/>.
-        /// </summary>
+        /// <inheritdoc/>
         public override string ToString() => Text;
 
         /// <summary>

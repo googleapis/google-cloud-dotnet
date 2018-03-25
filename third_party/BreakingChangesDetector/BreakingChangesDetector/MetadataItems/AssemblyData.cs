@@ -83,17 +83,12 @@ namespace BreakingChangesDetector.MetadataItems
             Utilities.GetNamespaceRenames(underlyingAssemblySymbol))
         { }
 
-        /// <summary>
-        /// Performs the specified visitor's functionality on this instance.
-        /// </summary>
-        /// <param name="visitor">The visitor whose functionality should be performed on the instance.</param>
+        /// <inheritdoc/>
         public override void Accept(MetadataItemVisitor visitor) => visitor.VisitAssemblyData(this);
 
         public override MetadataResolutionContext Context { get; }
 
-        /// <summary>
-        /// Gets the name to use for this item in messages.
-        /// </summary>
+        /// <inheritdoc/>
         public override string DisplayName => Name;
 
         internal override bool DoesMatch(MetadataItemBase other)
@@ -255,9 +250,7 @@ namespace BreakingChangesDetector.MetadataItems
             return true;
         }
 
-        /// <summary>
-        /// Gets the type of item the instance represents.
-        /// </summary>
+        /// <inheritdoc/>
         public override MetadataItemKinds MetadataItemKind => MetadataItemKinds.Assembly;
 
         internal void AddForwardedTypeFromTarget(TypeDefinitionData type, string sourceAssembly) =>

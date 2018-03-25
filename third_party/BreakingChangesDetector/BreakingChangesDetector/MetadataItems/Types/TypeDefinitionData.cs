@@ -145,22 +145,13 @@ namespace BreakingChangesDetector.MetadataItems
 
         TypeData ITypedItem.Type => DelegateReturnType;
 
-        /// <summary>
-        /// Performs the specified visitor's functionality on this instance.
-        /// </summary>
-        /// <param name="visitor">The visitor whose functionality should be performed on the instance.</param>
+        /// <inheritdoc/>
         public override void Accept(MetadataItemVisitor visitor) => visitor.VisitTypeDefinitionData(this);
 
-        /// <summary>
-        /// Gets the <see cref="T:AssemblyData"/> representing the assembly in which the type is defined.
-        /// </summary>
+        /// <inheritdoc/>
         public override AssemblyData AssemblyData { get; }
 
-        /// <summary>
-        /// Indicates whether the current member can override the specified member from a base type.
-        /// </summary>
-        /// <param name="baseMember">The member from the base type.</param>
-        /// <returns>True if the current member can override the base member; False otherwise.</returns> 
+        /// <inheritdoc/>
         internal override bool CanOverrideMember(MemberDataBase baseMember)
         {
             Debug.Fail("Types cannot be overridden.");
@@ -208,21 +199,10 @@ namespace BreakingChangesDetector.MetadataItems
             return true;
         }
 
-        /// <summary>
-        /// Gets the number of generic parameters/arguments for the type.
-        /// </summary> 
+        /// <inheritdoc/>
         internal override int GenericArity => GenericParameters.Count;
 
-        /// <summary>
-        /// Gets the types to which this type can implicitly convert. For type hierarchy conversions, only the direct base type will be enumerated.
-        /// Ancestor base types will can be enumerated recursively by calling this method on the base type.
-        /// </summary>
-        /// <param name="onlyReferenceAndIdentityConversions">
-        /// True if reference and identify conversions are they only allowed conversions; False if all implicit conversions are allowed.
-        /// </param>
-        /// <returns>
-        /// A collection of all types to which this type can convert explicitly, except for ancestor base types which are not the direct base type.
-        /// </returns> 
+        /// <inheritdoc/>
         internal override IEnumerable<TypeData> GetDirectImplicitConversions(bool onlyReferenceAndIdentityConversions)
         {
             if (onlyReferenceAndIdentityConversions == false)
@@ -255,16 +235,7 @@ namespace BreakingChangesDetector.MetadataItems
             }
         }
 
-        /// <summary>
-        /// Gets the display name for the type, which can be used for generating user-readable messages about the type.
-        /// </summary>
-        /// <param name="fullyQualify">Indicates whether the type name should be fully qualified with declaring type and namespace names.</param>
-        /// <param name="includeGenericInfo">Indicates whether generic parameters and arguments should be included in type names.</param>
-        /// <param name="genericArguments">
-        /// The generic arguments used to parameterize a type. For nested types, this will include the arguments for the declaring type before the arguments 
-        /// for the nested type.
-        /// </param>
-        /// <returns>The display name of the type.</returns> 
+        /// <inheritdoc/>
         internal override string GetDisplayName(bool fullyQualify, bool includeGenericInfo, GenericTypeArgumentCollection genericArguments)
         {
             if (_primitiveTypeNames.TryGetValue(FullName, out string primitiveTypeName))
@@ -296,10 +267,7 @@ namespace BreakingChangesDetector.MetadataItems
             return PostProcessUnqualifiedName(rootName, fullyQualify, includeGenericInfo, genericArguments);
         }
 
-        /// <summary>
-        /// Gets the type equivalent to this one which is from a newer assembly.
-        /// </summary>
-        /// <param name="newAssemblyFamily">The assembly family in which new assemblies reside.</param>
+        /// <inheritdoc/>
         internal override TypeData GetEquivalentNewType(AssemblyFamily newAssemblyFamily)
         {
             var newAssembly = newAssemblyFamily.GetEquivalentAssembly(AssemblyData);
@@ -343,9 +311,7 @@ namespace BreakingChangesDetector.MetadataItems
             return null;
         }
 
-        /// <summary>
-        /// Gets the name of the namespace in which the type is defined, or null if it is not defined in a namespace.
-        /// </summary> 
+        /// <inheritdoc/>
         internal override string GetNamespaceName()
         {
             if (_primitiveTypeNames.ContainsKey(FullName))
@@ -367,9 +333,7 @@ namespace BreakingChangesDetector.MetadataItems
             return string.Empty;
         }
 
-        /// <summary>
-        /// Indicates whether a new member of the same type and name is logically the same member as the current member, just from a newer build.
-        /// </summary> 
+        /// <inheritdoc/>
         internal override bool IsEquivalentToNewMember(MemberDataBase newMember, AssemblyFamily newAssemblyFamily)
         {
             var newType = newMember as TypeDefinitionData;
@@ -381,17 +345,10 @@ namespace BreakingChangesDetector.MetadataItems
             return IsEquivalentToNewTypeHelper(newType, newAssemblyFamily, ignoreNewOptionalParameters: false);
         }
 
-        /// <summary>
-        /// Gets the type of item the instance represents.
-        /// </summary>
+        /// <inheritdoc/>
         public override MetadataItemKinds MetadataItemKind => MetadataItemKinds.TypeDefinition;
 
-        /// <summary>
-        /// Replaces all type parameters used by the member with their associated generic arguments specified in a constructed generic type.
-        /// </summary>
-        /// <param name="genericParameters">The generic parameters being replaced.</param>
-        /// <param name="genericArguments">The generic arguments replacing the parameters.</param>
-        /// <returns>A new member with the replaced type parameters or the current instance if the member does not use any of the generic parameters.</returns> 
+        /// <inheritdoc/>
         internal override MemberDataBase ReplaceGenericTypeParameters(GenericTypeParameterCollection genericParameters, GenericTypeArgumentCollection genericArguments) =>
             GenericParameters == genericParameters ? GetConstructedGenericTypeData(genericArguments) : (MemberDataBase)this;
 

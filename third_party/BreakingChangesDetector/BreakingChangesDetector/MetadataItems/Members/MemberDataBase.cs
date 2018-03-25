@@ -60,9 +60,7 @@ namespace BreakingChangesDetector.MetadataItems
 
         public override MetadataResolutionContext Context => AssemblyData?.Context;
 
-        /// <summary>
-        /// Gets the name to use for this item in messages.
-        /// </summary>
+        /// <inheritdoc/>
         public override string DisplayName => Name;
 
         internal override bool DoesMatch(MetadataItemBase other)

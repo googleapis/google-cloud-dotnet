@@ -51,15 +51,10 @@ namespace BreakingChangesDetector.MetadataItems
             genericTypeDefinition.AssemblyData.RegisterForFinalize(this);
         }
 
-        /// <summary>
-        /// Performs the specified visitor's functionality on this instance.
-        /// </summary>
-        /// <param name="visitor">The visitor whose functionality should be performed on the instance.</param>
+        /// <inheritdoc/>
         public override void Accept(MetadataItemVisitor visitor) => visitor.VisitConstructedGenericTypeData(this);
 
-        /// <summary>
-        /// Gets the <see cref="T:AssemblyData"/> representing the assembly in which the type is defined.
-        /// </summary>
+        /// <inheritdoc/>
         public override AssemblyData AssemblyData => GenericTypeDefinition?.AssemblyData;
 
         internal override bool DoesMatch(MetadataItemBase other)
@@ -93,15 +88,10 @@ namespace BreakingChangesDetector.MetadataItems
             return true;
         }
 
-        /// <summary>
-        /// Gets the number of generic parameters/arguments for the type.
-        /// </summary> 
+        /// <inheritdoc/>
         internal override int GenericArity => GenericArguments.Count;
 
-        /// <summary>
-        /// Gets the <see cref="AssemblyFamily"/> containing the type. If the type is nullable and type with element, 
-        /// such as T?, T[], or T*, this returns the family containing the type T.
-        /// </summary> 
+        /// <inheritdoc/>
         internal override AssemblyFamily GetDefiningAssemblyFamily()
         {
             if (IsNullable(out TypeData underlyingType))
@@ -112,16 +102,7 @@ namespace BreakingChangesDetector.MetadataItems
             return base.GetDefiningAssemblyFamily();
         }
 
-        /// <summary>
-        /// Gets the types to which this type can implicitly convert. For type hierarchy conversions, only the direct base type will be enumerated.
-        /// Ancestor base types will can be enumerated recursively by calling this method on the base type.
-        /// </summary>
-        /// <param name="onlyReferenceAndIdentityConversions">
-        /// True if reference and identify conversions are they only allowed conversions; False if all implicit conversions are allowed.
-        /// </param>
-        /// <returns>
-        /// A collection of all types to which this type can convert explicitly, except for ancestor base types which are not the direct base type.
-        /// </returns> 
+        /// <inheritdoc/>
         internal override IEnumerable<TypeData> GetDirectImplicitConversions(bool onlyReferenceAndIdentityConversions)
         {
             if (onlyReferenceAndIdentityConversions == false)
@@ -145,16 +126,7 @@ namespace BreakingChangesDetector.MetadataItems
             }
         }
 
-        /// <summary>
-        /// Gets the display name for the type, which can be used for generating user-readable messages about the type.
-        /// </summary>
-        /// <param name="fullyQualify">Indicates whether the type name should be fully qualified with declaring type and namespace names.</param>
-        /// <param name="includeGenericInfo">Indicates whether generic parameters and arguments should be included in type names.</param>
-        /// <param name="genericArguments">
-        /// The generic arguments used to parameterize a type. For nested types, this will include the arguments for the declaring type before the arguments 
-        /// for the nested type.
-        /// </param>
-        /// <returns>The display name of the type.</returns> 
+        /// <inheritdoc/>
         internal override string GetDisplayName(bool fullyQualify, bool includeGenericInfo, GenericTypeArgumentCollection genericArguments)
         {
             if (IsNullable(out TypeData underlyingType))
@@ -174,10 +146,7 @@ namespace BreakingChangesDetector.MetadataItems
             return PostProcessUnqualifiedName(rootName, fullyQualify, includeGenericInfo, genericArgumentsResolved);
         }
 
-        /// <summary>
-        /// Gets the type equivalent to this one which is from a newer assembly.
-        /// </summary>
-        /// <param name="newAssemblyFamily">The assembly family in which new assemblies reside.</param>
+        /// <inheritdoc/>
         internal override TypeData GetEquivalentNewType(AssemblyFamily newAssemblyFamily)
         {
             var newGenericTypeDefinition = (TypeDefinitionData)GenericTypeDefinition.GetEquivalentNewType(newAssemblyFamily);
@@ -201,9 +170,7 @@ namespace BreakingChangesDetector.MetadataItems
             return newGenericTypeDefinition.GetConstructedGenericTypeData(newGenericArguments);
         }
 
-        /// <summary>
-        /// Gets the name of the namespace in which the type is defined, or null if it is not defined in a namespace.
-        /// </summary> 
+        /// <inheritdoc/>
         internal override string GetNamespaceName()
         {
             // For nullable types, we want to get the namespace of the underlying type, not the System.Nullable<T> type, because it will be displayed as T?.
@@ -215,12 +182,7 @@ namespace BreakingChangesDetector.MetadataItems
             return GenericTypeDefinition.GetNamespaceName();
         }
 
-        /// <summary>
-        /// Gets the value indicating whether a variable of the current type is assignable from the specified source type.
-        /// </summary>
-        /// <param name="sourceType">The source type from which to test assignability to this type.</param>
-        /// <param name="context">Information about the context of the IsAssignableFrom invocation.</param>
-        /// <returns>True if a value of the source type is assignable to a variable of the current type.</returns> 
+        /// <inheritdoc/>
         internal override bool IsAssignableFrom(TypeData sourceType, IsAssignableFromContext context)
         {
             if (base.IsAssignableFrom(sourceType, context))
@@ -258,9 +220,7 @@ namespace BreakingChangesDetector.MetadataItems
             return false;
         }
 
-        /// <summary>
-        /// Indicates whether a new member of the same type and name is logically the same member as the current member, just from a newer build.
-        /// </summary> 
+        /// <inheritdoc/>
         internal override bool IsEquivalentToNewMember(MemberDataBase newMember, AssemblyFamily newAssemblyFamily)
         {
             if (base.IsEquivalentToNewMember(newMember, newAssemblyFamily) == false)
@@ -295,11 +255,7 @@ namespace BreakingChangesDetector.MetadataItems
             return true;
         }
 
-        /// <summary>
-        /// Gets the value indicating whether type is a nullable value type.
-        /// </summary>
-        /// <param name="underlyingType">[Out] Will be set to the underlying value type if the tpye is nullable; will be null otherwise.</param>
-        /// <returns>True if the type is nullable; False otherwise.</returns> 
+        /// <inheritdoc/>
         internal override bool IsNullable(out TypeData underlyingType)
         {
             if (GenericArguments.Count == 1 &&
@@ -313,12 +269,7 @@ namespace BreakingChangesDetector.MetadataItems
             return false;
         }
 
-        /// <summary>
-        /// Gets the value indicating whether the type can convert to the specified target type using type parameter variance.
-        /// </summary>
-        /// <param name="target">The target type to which this type might convert.</param>
-        /// <param name="context">Information about the context of the IsAssignableFrom invocation.</param>
-        /// <returns>True is the type is variance convertible to the target; False otherwise.</returns> 
+        /// <inheritdoc/>
         internal override bool IsVarianceConvertibleTo(ConstructedGenericTypeData target, IsAssignableFromContext context)
         {
             if (target.TypeKind == TypeKind &&
@@ -344,17 +295,10 @@ namespace BreakingChangesDetector.MetadataItems
             return false;
         }
 
-        /// <summary>
-        /// Gets the type of item the instance represents.
-        /// </summary>
+        /// <inheritdoc/>
         public override MetadataItemKinds MetadataItemKind => MetadataItemKinds.ConstructedGenericType;
 
-        /// <summary>
-        /// Replaces all type parameters used by the member with their associated generic arguments specified in a constructed generic type.
-        /// </summary>
-        /// <param name="genericParameters">The generic parameters being replaced.</param>
-        /// <param name="genericArguments">The generic arguments replacing the parameters.</param>
-        /// <returns>A new member with the replaced type parameters or the current instance if the member does not use any of the generic parameters.</returns> 
+        /// <inheritdoc/>
         internal override MemberDataBase ReplaceGenericTypeParameters(GenericTypeParameterCollection genericParameters, GenericTypeArgumentCollection genericArguments)
         {
             List<TypeData> replacedGenericArguments = null;

@@ -61,17 +61,10 @@ namespace BreakingChangesDetector.MetadataItems
             IsExtensionMethod = methodSymbol.IsExtensionMethod;
         }
 
-        /// <summary>
-        /// Performs the specified visitor's functionality on this instance.
-        /// </summary>
-        /// <param name="visitor">The visitor whose functionality should be performed on the instance.</param>
+        /// <inheritdoc/>
         public override void Accept(MetadataItemVisitor visitor) => visitor.VisitMethodData(this);
 
-        /// <summary>
-        /// Indicates whether the current member can override the specified member from a base type.
-        /// </summary>
-        /// <param name="baseMember">The member from the base type.</param>
-        /// <returns>True if the current member can override the base member; False otherwise.</returns>  
+        /// <inheritdoc/>
         internal override bool CanOverrideMember(MemberDataBase baseMember)
         {
             if (base.CanOverrideMember(baseMember) == false)
@@ -83,9 +76,7 @@ namespace BreakingChangesDetector.MetadataItems
             return GenericParameters.Count == otherMethod.GenericParameters.Count;
         }
 
-        /// <summary>
-        /// Gets the name to use for this item in messages.
-        /// </summary>
+        /// <inheritdoc/>
         public override string DisplayName =>
             Name +
             GenericParameters.GetParameterListText() +
@@ -117,9 +108,7 @@ namespace BreakingChangesDetector.MetadataItems
             return true;
         }
 
-        /// <summary>
-        /// Indicates whether a new member of the same type and name is logically the same member as the current member, just from a newer build.
-        /// </summary> 
+        /// <inheritdoc/>
         internal override bool IsEquivalentToNewMember(MemberDataBase newMember, AssemblyFamily newAssemblyFamily)
         {
             if (base.IsEquivalentToNewMember(newMember, newAssemblyFamily) == false)
@@ -131,17 +120,10 @@ namespace BreakingChangesDetector.MetadataItems
             return GenericParameters.Count == otherMethod.GenericParameters.Count;
         }
 
-        /// <summary>
-        /// Gets the type of item the instance represents.
-        /// </summary>
+        /// <inheritdoc/>
         public override MetadataItemKinds MetadataItemKind => MetadataItemKinds.Method;
 
-        /// <summary>
-        /// Replaces all type parameters used by the member with their associated generic arguments specified in a constructed generic type.
-        /// </summary>
-        /// <param name="genericParameters">The generic parameters being replaced.</param>
-        /// <param name="genericArguments">The generic arguments replacing the parameters.</param>
-        /// <returns>A new member with the replaced type parameters or the current instance if the member does not use any of the generic parameters.</returns> 
+        /// <inheritdoc/>
         internal override MemberDataBase ReplaceGenericTypeParameters(GenericTypeParameterCollection genericParameters, GenericTypeArgumentCollection genericArguments)
         {
             var replacedType = (TypeData)Type.ReplaceGenericTypeParameters(genericParameters, genericArguments);
