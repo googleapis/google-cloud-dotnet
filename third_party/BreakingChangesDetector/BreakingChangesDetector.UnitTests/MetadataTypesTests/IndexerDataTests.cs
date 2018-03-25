@@ -29,164 +29,164 @@ using BreakingChangesDetector.MetadataItems;
 
 namespace BreakingChangesDetector.UnitTests.MetadataTypesTests
 {
-	public class IndexerDataTests
-	{
-		#region IndexerDataAccessibilityTest
+    public class IndexerDataTests
+    {
+        #region IndexerDataAccessibilityTest
 
-		[Fact]
-		public void IndexerDataAccessibilityTest()
-		{
-			var t = typeof(VariousMemberFeatures);
-			var context = MetadataResolutionContext.CreateFromTypes(t);
-			var typeData = context.GetTypeDefinitionData(t);
+        [Fact]
+        public void IndexerDataAccessibilityTest()
+        {
+            var t = typeof(VariousMemberFeatures);
+            var context = MetadataResolutionContext.CreateFromTypes(t);
+            var typeData = context.GetTypeDefinitionData(t);
 
-			var members = typeData.GetMembers("Item");
-			AssertX.Equal(3, members.Count, "Incorrect number of indexers returned.");
-			AssertX.Equal(MemberAccessibility.Protected, ((IndexerData)members[0]).Accessibility, "Incorrect MemberAccessibility.");
-			AssertX.Equal(MemberAccessibility.Public, ((IndexerData)members[1]).Accessibility, "Incorrect MemberAccessibility.");
-			AssertX.Equal(MemberAccessibility.Public, ((IndexerData)members[2]).Accessibility, "Incorrect MemberAccessibility.");
-		}
+            var members = typeData.GetMembers("Item");
+            AssertX.Equal(3, members.Count, "Incorrect number of indexers returned.");
+            AssertX.Equal(MemberAccessibility.Protected, ((IndexerData)members[0]).Accessibility, "Incorrect MemberAccessibility.");
+            AssertX.Equal(MemberAccessibility.Public, ((IndexerData)members[1]).Accessibility, "Incorrect MemberAccessibility.");
+            AssertX.Equal(MemberAccessibility.Public, ((IndexerData)members[2]).Accessibility, "Incorrect MemberAccessibility.");
+        }
 
-		#endregion // IndexerDataAccessibilityTest
+        #endregion // IndexerDataAccessibilityTest
 
-		#region IndexerDataDeclaringTypeTest
+        #region IndexerDataDeclaringTypeTest
 
-		[Fact]
-		public void IndexerDataDeclaringTypeTest()
-		{
-			var t = typeof(TestClassDefinition);
-			var context = MetadataResolutionContext.CreateFromTypes(t);
-			var typeData = context.GetTypeDefinitionData(t);
-			var indexer = typeData.GetMembers("Item")[0];
-			AssertX.Equal(typeData, indexer.ContainingType, "The DeclaringType of a member should be the type in which it is defined.");
-		}
+        [Fact]
+        public void IndexerDataDeclaringTypeTest()
+        {
+            var t = typeof(TestClassDefinition);
+            var context = MetadataResolutionContext.CreateFromTypes(t);
+            var typeData = context.GetTypeDefinitionData(t);
+            var indexer = typeData.GetMembers("Item")[0];
+            AssertX.Equal(typeData, indexer.ContainingType, "The DeclaringType of a member should be the type in which it is defined.");
+        }
 
-		#endregion // IndexerDataDeclaringTypeTest
+        #endregion // IndexerDataDeclaringTypeTest
 
-		#region IndexerDataMemberFlagsTest
+        #region IndexerDataMemberFlagsTest
 
-		[Fact]
-		public void IndexerDataMemberFlagsTest()
-		{
-			var t = typeof(OverloadedMemberFeatures);
-			var context = MetadataResolutionContext.CreateFromTypes(t);
-			var typeData = context.GetTypeDefinitionData(t);
+        [Fact]
+        public void IndexerDataMemberFlagsTest()
+        {
+            var t = typeof(OverloadedMemberFeatures);
+            var context = MetadataResolutionContext.CreateFromTypes(t);
+            var typeData = context.GetTypeDefinitionData(t);
 
-			var members = typeData.GetMembers("Item");
-			AssertX.Equal(9, members.Count, "Incorrect number of indexers");
+            var members = typeData.GetMembers("Item");
+            AssertX.Equal(9, members.Count, "Incorrect number of indexers");
 
-			var indexerData = (IndexerData)members[0];
-			AssertX.Equal(MemberFlags.None, indexerData.MemberFlags, "The Flags value of the member is wrong.");
-			indexerData = (IndexerData)members[1];
-			AssertX.Equal(MemberFlags.Abstract, indexerData.MemberFlags, "The Flags value of the member is wrong.");
-			indexerData = (IndexerData)members[2];
-			AssertX.Equal(MemberFlags.Virtual, indexerData.MemberFlags, "The Flags value of the member is wrong.");
-			indexerData = (IndexerData)members[3];
-			AssertX.Equal(MemberFlags.Override, indexerData.MemberFlags, "The Flags value of the member is wrong.");
-			indexerData = (IndexerData)members[4];
-			AssertX.Equal(MemberFlags.Override | MemberFlags.Sealed, indexerData.MemberFlags, "The Flags value of the member is wrong.");
-			indexerData = (IndexerData)members[5];
-			AssertX.Equal(MemberFlags.Override | MemberFlags.Abstract, indexerData.MemberFlags, "The Flags value of the member is wrong.");
-			indexerData = (IndexerData)members[6];
-			AssertX.Equal(MemberFlags.Override, indexerData.MemberFlags, "The Flags value of the member is wrong.");
-			indexerData = (IndexerData)members[7];
-			AssertX.Equal(MemberFlags.Override | MemberFlags.Sealed, indexerData.MemberFlags, "The Flags value of the member is wrong.");
-			indexerData = (IndexerData)members[8];
-			AssertX.Equal(MemberFlags.Override | MemberFlags.Abstract, indexerData.MemberFlags, "The Flags value of the member is wrong.");
-		}
+            var indexerData = (IndexerData)members[0];
+            AssertX.Equal(MemberFlags.None, indexerData.MemberFlags, "The Flags value of the member is wrong.");
+            indexerData = (IndexerData)members[1];
+            AssertX.Equal(MemberFlags.Abstract, indexerData.MemberFlags, "The Flags value of the member is wrong.");
+            indexerData = (IndexerData)members[2];
+            AssertX.Equal(MemberFlags.Virtual, indexerData.MemberFlags, "The Flags value of the member is wrong.");
+            indexerData = (IndexerData)members[3];
+            AssertX.Equal(MemberFlags.Override, indexerData.MemberFlags, "The Flags value of the member is wrong.");
+            indexerData = (IndexerData)members[4];
+            AssertX.Equal(MemberFlags.Override | MemberFlags.Sealed, indexerData.MemberFlags, "The Flags value of the member is wrong.");
+            indexerData = (IndexerData)members[5];
+            AssertX.Equal(MemberFlags.Override | MemberFlags.Abstract, indexerData.MemberFlags, "The Flags value of the member is wrong.");
+            indexerData = (IndexerData)members[6];
+            AssertX.Equal(MemberFlags.Override, indexerData.MemberFlags, "The Flags value of the member is wrong.");
+            indexerData = (IndexerData)members[7];
+            AssertX.Equal(MemberFlags.Override | MemberFlags.Sealed, indexerData.MemberFlags, "The Flags value of the member is wrong.");
+            indexerData = (IndexerData)members[8];
+            AssertX.Equal(MemberFlags.Override | MemberFlags.Abstract, indexerData.MemberFlags, "The Flags value of the member is wrong.");
+        }
 
-		#endregion // IndexerDataMemberFlagsTest
+        #endregion // IndexerDataMemberFlagsTest
 
-		#region IndexerDataGetMethodAccessibilityTest
+        #region IndexerDataGetMethodAccessibilityTest
 
-		[Fact]
-		public void IndexerDataGetMethodAccessibilityTest()
-		{
-			var t = typeof(VariousMemberFeatures);
-			var context = MetadataResolutionContext.CreateFromTypes(t);
-			var typeData = context.GetTypeDefinitionData(t);
+        [Fact]
+        public void IndexerDataGetMethodAccessibilityTest()
+        {
+            var t = typeof(VariousMemberFeatures);
+            var context = MetadataResolutionContext.CreateFromTypes(t);
+            var typeData = context.GetTypeDefinitionData(t);
 
-			var members = typeData.GetMembers("Item");
+            var members = typeData.GetMembers("Item");
 
-			var readOnlyIndexer = (IndexerData)members[0];
-			AssertX.Equal(MemberAccessibility.Protected, readOnlyIndexer.GetMethodAccessibility, "The GetMethodAccessibility of the read only property is incorrect.");
+            var readOnlyIndexer = (IndexerData)members[0];
+            AssertX.Equal(MemberAccessibility.Protected, readOnlyIndexer.GetMethodAccessibility, "The GetMethodAccessibility of the read only property is incorrect.");
 
-			var writeOnlyIndexer = (IndexerData)members[1];
-			AssertX.Equal(null, writeOnlyIndexer.GetMethodAccessibility, "The GetMethodAccessibility of the write only property is incorrect.");
+            var writeOnlyIndexer = (IndexerData)members[1];
+            AssertX.Equal(null, writeOnlyIndexer.GetMethodAccessibility, "The GetMethodAccessibility of the write only property is incorrect.");
 
-			var readWriteIndexer = (IndexerData)members[2];
-			AssertX.Equal(MemberAccessibility.Public, readWriteIndexer.GetMethodAccessibility, "The GetMethodAccessibility of the read write property is incorrect.");
-		}
+            var readWriteIndexer = (IndexerData)members[2];
+            AssertX.Equal(MemberAccessibility.Public, readWriteIndexer.GetMethodAccessibility, "The GetMethodAccessibility of the read write property is incorrect.");
+        }
 
-		#endregion // IndexerDataGetMethodAccessibilityTest
+        #endregion // IndexerDataGetMethodAccessibilityTest
 
-		#region IndexerDataNameTest
+        #region IndexerDataNameTest
 
-		[Fact]
-		public void IndexerDataNameTest()
-		{
-			var t = typeof(TestClassDefinition);
-			var context = MetadataResolutionContext.CreateFromTypes(t);
-			var typeData = context.GetTypeDefinitionData(t);
-			var indexer = typeData.GetMembers("Item")[0];
-			AssertX.Equal("Item", indexer.Name, "The Name of the member is incorrect.");
-		}
+        [Fact]
+        public void IndexerDataNameTest()
+        {
+            var t = typeof(TestClassDefinition);
+            var context = MetadataResolutionContext.CreateFromTypes(t);
+            var typeData = context.GetTypeDefinitionData(t);
+            var indexer = typeData.GetMembers("Item")[0];
+            AssertX.Equal("Item", indexer.Name, "The Name of the member is incorrect.");
+        }
 
-		#endregion // IndexerDataNameTest
+        #endregion // IndexerDataNameTest
 
-		#region IndexerDataParametersTest
+        #region IndexerDataParametersTest
 
-		[Fact]
-		public void IndexerDataParametersTest()
-		{
-			var t = typeof(VariousMemberFeatures);
-			var context = MetadataResolutionContext.CreateFromTypes(t);
-			var typeData = context.GetTypeDefinitionData(t);
-			var members = typeData.GetMembers("Item");
-			AssertX.Equal(3, members.Count, "Incorrect number of constructors returned.");
-			AssertX.Equal(1, ((IndexerData)members[0]).Parameters.Count, "The read only indexer has the wrong number of parameters.");
-			AssertX.Equal(2, ((IndexerData)members[1]).Parameters.Count, "The write only indexer has the wrong number of parameters.");
-			AssertX.Equal(3, ((IndexerData)members[2]).Parameters.Count, "The read write indexer has the wrong number of parameters.");
-		}
+        [Fact]
+        public void IndexerDataParametersTest()
+        {
+            var t = typeof(VariousMemberFeatures);
+            var context = MetadataResolutionContext.CreateFromTypes(t);
+            var typeData = context.GetTypeDefinitionData(t);
+            var members = typeData.GetMembers("Item");
+            AssertX.Equal(3, members.Count, "Incorrect number of constructors returned.");
+            AssertX.Equal(1, ((IndexerData)members[0]).Parameters.Count, "The read only indexer has the wrong number of parameters.");
+            AssertX.Equal(2, ((IndexerData)members[1]).Parameters.Count, "The write only indexer has the wrong number of parameters.");
+            AssertX.Equal(3, ((IndexerData)members[2]).Parameters.Count, "The read write indexer has the wrong number of parameters.");
+        }
 
-		#endregion // IndexerDataParametersTest
+        #endregion // IndexerDataParametersTest
 
-		#region IndexerDataSetMethodAccessibilityTest
+        #region IndexerDataSetMethodAccessibilityTest
 
-		[Fact]
-		public void IndexerDataSetMethodAccessibilityTest()
-		{
-			var t = typeof(VariousMemberFeatures);
-			var context = MetadataResolutionContext.CreateFromTypes(t);
-			var typeData = context.GetTypeDefinitionData(t);
+        [Fact]
+        public void IndexerDataSetMethodAccessibilityTest()
+        {
+            var t = typeof(VariousMemberFeatures);
+            var context = MetadataResolutionContext.CreateFromTypes(t);
+            var typeData = context.GetTypeDefinitionData(t);
 
-			var members = typeData.GetMembers("Item");
+            var members = typeData.GetMembers("Item");
 
-			var readOnlyIndexer = (IndexerData)members[0];
-			AssertX.Equal(null, readOnlyIndexer.SetMethodAccessibility, "The SetMethodAccessibility of the read only property is incorrect.");
+            var readOnlyIndexer = (IndexerData)members[0];
+            AssertX.Equal(null, readOnlyIndexer.SetMethodAccessibility, "The SetMethodAccessibility of the read only property is incorrect.");
 
-			var writeOnlyIndexer = (IndexerData)members[1];
-			AssertX.Equal(MemberAccessibility.Public, writeOnlyIndexer.SetMethodAccessibility, "The SetMethodAccessibility of the write only property is incorrect.");
+            var writeOnlyIndexer = (IndexerData)members[1];
+            AssertX.Equal(MemberAccessibility.Public, writeOnlyIndexer.SetMethodAccessibility, "The SetMethodAccessibility of the write only property is incorrect.");
 
-			var readWriteIndexer = (IndexerData)members[2];
-			AssertX.Equal(MemberAccessibility.Protected, readWriteIndexer.SetMethodAccessibility, "The SetMethodAccessibility of the read write property is incorrect.");
-		}
+            var readWriteIndexer = (IndexerData)members[2];
+            AssertX.Equal(MemberAccessibility.Protected, readWriteIndexer.SetMethodAccessibility, "The SetMethodAccessibility of the read write property is incorrect.");
+        }
 
-		#endregion // IndexerDataSetMethodAccessibilityTest
+        #endregion // IndexerDataSetMethodAccessibilityTest
 
-		#region IndexerDataTypeTest
+        #region IndexerDataTypeTest
 
-		[Fact]
-		public void IndexerDataTypeTest()
-		{
-			var t = typeof(VariousMemberFeatures);
-			var context = MetadataResolutionContext.CreateFromTypes(t);
-			var typeData = context.GetTypeDefinitionData(t);
-			var indexer = (IndexerData)typeData.GetMembers("Item")[0];
-			var objectType = context.GetTypeDefinitionData<object>();
-			AssertX.Equal(objectType, indexer.Type, "The Type of the member is incorrect.");
-		}
+        [Fact]
+        public void IndexerDataTypeTest()
+        {
+            var t = typeof(VariousMemberFeatures);
+            var context = MetadataResolutionContext.CreateFromTypes(t);
+            var typeData = context.GetTypeDefinitionData(t);
+            var indexer = (IndexerData)typeData.GetMembers("Item")[0];
+            var objectType = context.GetTypeDefinitionData<object>();
+            AssertX.Equal(objectType, indexer.Type, "The Type of the member is incorrect.");
+        }
 
-		#endregion // IndexerDataTypeTest
-	}
+        #endregion // IndexerDataTypeTest
+    }
 }

@@ -2,6 +2,7 @@
     MIT License
 
     Copyright(c) 2014-2018 Infragistics, Inc.
+    Copyright 2018 Google LLC
 
     Permission is hereby granted, free of charge, to any person obtaining a copy
     of this software and associated documentation files (the "Software"), to deal
@@ -31,29 +32,29 @@ using System.Threading.Tasks;
 
 namespace BreakingChangesDetector.BreakingChanges.Definitions
 {
-	internal class RemovedExtensionMethodModifierDefinition : BreakingChangeDefinitionBase
-	{
-		public static readonly RemovedExtensionMethodModifierDefinition Instance = new RemovedExtensionMethodModifierDefinition();
+    internal class RemovedExtensionMethodModifierDefinition : BreakingChangeDefinitionBase
+    {
+        public static readonly RemovedExtensionMethodModifierDefinition Instance = new RemovedExtensionMethodModifierDefinition();
 
-		private RemovedExtensionMethodModifierDefinition() { }
+        private RemovedExtensionMethodModifierDefinition() { }
 
-		public override void CompareItems(CompareItemsContext context)
-		{
-			var oldMethod = (MethodData)context.OldItem;
-			var newMethod = (MethodData)context.NewItem;
+        public override void CompareItems(CompareItemsContext context)
+        {
+            var oldMethod = (MethodData)context.OldItem;
+            var newMethod = (MethodData)context.NewItem;
 
-			if (oldMethod.IsExtensionMethod && newMethod.IsExtensionMethod == false)
-				context.BreakingChanges.Add(new RemovedExtensionMethodModifier(oldMethod, newMethod));
-		}
+            if (oldMethod.IsExtensionMethod && newMethod.IsExtensionMethod == false)
+                context.BreakingChanges.Add(new RemovedExtensionMethodModifier(oldMethod, newMethod));
+        }
 
-		public override BreakingChangeKind BreakingChangeKind
-		{
-			get { return BreakingChangeKind.RemovedExtensionMethodModifier; }
-		}
+        public override BreakingChangeKind BreakingChangeKind
+        {
+            get { return BreakingChangeKind.RemovedExtensionMethodModifier; }
+        }
 
-		public override MetadataItemKinds MembersKindsHandled
-		{
-			get { return MetadataItemKinds.Method; }
-		}
-	}
+        public override MetadataItemKinds MembersKindsHandled
+        {
+            get { return MetadataItemKinds.Method; }
+        }
+    }
 }

@@ -35,9 +35,9 @@ using System.Threading.Tasks;
 
 namespace BreakingChangesDetector.Serialization
 {
-	internal class BinaryItemSerializerV1
-	{
-		/*
+    internal class BinaryItemSerializerV1
+    {
+        /*
 		 * File structure
 		 * ***************************************************************************
 		 * byte: Version1 marker
@@ -157,299 +157,299 @@ namespace BreakingChangesDetector.Serialization
 		 * ***************************************************************************
 		 */
 
-		private readonly AdditionalDataWriter _additionalDataWriter;
-		private uint _nextTypeId = SerializationUtilities.FirstTypeId;
-		private readonly Dictionary<TypeData, uint> _typeTable;
-		private readonly BinaryWriter _writer;
+        private readonly AdditionalDataWriter _additionalDataWriter;
+        private uint _nextTypeId = SerializationUtilities.FirstTypeId;
+        private readonly Dictionary<TypeData, uint> _typeTable;
+        private readonly BinaryWriter _writer;
 
-		public BinaryItemSerializerV1(Stream stream, AssemblyData[] assemblies)
-		{
-			_additionalDataWriter = new AdditionalDataWriter(this);
-			_typeTable = new Dictionary<TypeData, uint>();
-			_writer = new BinaryWriter(stream);
+        public BinaryItemSerializerV1(Stream stream, AssemblyData[] assemblies)
+        {
+            _additionalDataWriter = new AdditionalDataWriter(this);
+            _typeTable = new Dictionary<TypeData, uint>();
+            _writer = new BinaryWriter(stream);
 
-			// TODO_Serialize: Use a factory method instead of writing directly.
-			_writer.Write(SerializationUtilities.Version1Marker);
+            // TODO_Serialize: Use a factory method instead of writing directly.
+            _writer.Write(SerializationUtilities.Version1Marker);
 
-			this.WriteTypeTable(assemblies);
-			this.WriteAdditionalInfo();
-		}
+            this.WriteTypeTable(assemblies);
+            this.WriteAdditionalInfo();
+        }
 
-		private uint GetTypeId(TypeData type)
-		{
-			if (type == null)
-				return SerializationUtilities.NullTypeId;
+        private uint GetTypeId(TypeData type)
+        {
+            if (type == null)
+                return SerializationUtilities.NullTypeId;
 
-			uint id;
-			if (_typeTable.TryGetValue(type, out id) == false)
-				Debug.Fail("Could not find the type in the table.");
+            uint id;
+            if (_typeTable.TryGetValue(type, out id) == false)
+                Debug.Fail("Could not find the type in the table.");
 
-			return id;
-		}
+            return id;
+        }
 
-		#region WriteAdditionalInfo
+        #region WriteAdditionalInfo
 
-		private void WriteAdditionalInfo()
-		{
-			foreach (var pair in _typeTable.Where(p => IsConstructedGenericType(p.Key) == false))
-				this.WriteAdditionalInfoHelper(pair.Key, pair.Value);
+        private void WriteAdditionalInfo()
+        {
+            foreach (var pair in _typeTable.Where(p => IsConstructedGenericType(p.Key) == false))
+                this.WriteAdditionalInfoHelper(pair.Key, pair.Value);
 
-			foreach (var pair in _typeTable.Where(p => IsConstructedGenericType(p.Key)))
-				this.WriteAdditionalInfoHelper(pair.Key, pair.Value);
-		}
+            foreach (var pair in _typeTable.Where(p => IsConstructedGenericType(p.Key)))
+                this.WriteAdditionalInfoHelper(pair.Key, pair.Value);
+        }
 
-		private static bool IsConstructedGenericType(TypeData typeBase)
-		{
-			return typeBase is ConstructedGenericTypeData;
-		}
+        private static bool IsConstructedGenericType(TypeData typeBase)
+        {
+            return typeBase is ConstructedGenericTypeData;
+        }
 
-		private void WriteAdditionalInfoHelper(TypeData typeBase, uint typeId)
-		{
-			_writer.Write(typeId);
+        private void WriteAdditionalInfoHelper(TypeData typeBase, uint typeId)
+        {
+            _writer.Write(typeId);
 
-			var type = typeBase as TypeDefinitionData;
-			if (type != null)
-			{
-				// TODO_Serialize: Fix this
-				//if (type.IsConstructedGenericType)
-				//{
-				//	var hasSpecialDecalringType = type.ContainingType != null;
-				//	_writer.Write(hasSpecialDecalringType);
-				//	if (hasSpecialDecalringType)
-				//		_writer.Write(this.GetTypeId(type.ContainingType));
-				//}
+            var type = typeBase as TypeDefinitionData;
+            if (type != null)
+            {
+                // TODO_Serialize: Fix this
+                //if (type.IsConstructedGenericType)
+                //{
+                //	var hasSpecialDecalringType = type.ContainingType != null;
+                //	_writer.Write(hasSpecialDecalringType);
+                //	if (hasSpecialDecalringType)
+                //		_writer.Write(this.GetTypeId(type.ContainingType));
+                //}
 
-				_writer.Write(this.GetTypeId(type.BaseType));
+                _writer.Write(this.GetTypeId(type.BaseType));
 
-				_writer.Write((ushort)type.ImplementedInterfaces.Count);
-				for (int i = 0; i < type.ImplementedInterfaces.Count; i++)
-					_writer.Write(this.GetTypeId(type.ImplementedInterfaces[i]));
+                _writer.Write((ushort)type.ImplementedInterfaces.Count);
+                for (int i = 0; i < type.ImplementedInterfaces.Count; i++)
+                    _writer.Write(this.GetTypeId(type.ImplementedInterfaces[i]));
 
-				this.WriteAdditionalInfoHelper(type.GenericParameters);
+                this.WriteAdditionalInfoHelper(type.GenericParameters);
 
-				if (type.TypeKind == TypeKind.Delegate)
-				{
-					_writer.Write(this.GetTypeId(type.DelegateReturnType));
-					this.WriteAdditionalInfoHelper(type.DelegateParameters);
-				}
-				else
-				{
-					var members = type.GetMembers().ToArray();
-					_writer.Write(members.Length);
-					for (int i = 0; i < members.Length; i++)
-						members[i].Accept(_additionalDataWriter);
-				}
-			}
-			else
-			{
-				var genericTypeParameterData = (GenericTypeParameterData)typeBase;
-				_writer.Write((ushort)genericTypeParameterData.Constraints.Count);
-				for (int i = 0; i < genericTypeParameterData.Constraints.Count; i++)
-					_writer.Write(this.GetTypeId(genericTypeParameterData.Constraints[i]));
-			}
-		}
+                if (type.TypeKind == TypeKind.Delegate)
+                {
+                    _writer.Write(this.GetTypeId(type.DelegateReturnType));
+                    this.WriteAdditionalInfoHelper(type.DelegateParameters);
+                }
+                else
+                {
+                    var members = type.GetMembers().ToArray();
+                    _writer.Write(members.Length);
+                    for (int i = 0; i < members.Length; i++)
+                        members[i].Accept(_additionalDataWriter);
+                }
+            }
+            else
+            {
+                var genericTypeParameterData = (GenericTypeParameterData)typeBase;
+                _writer.Write((ushort)genericTypeParameterData.Constraints.Count);
+                for (int i = 0; i < genericTypeParameterData.Constraints.Count; i++)
+                    _writer.Write(this.GetTypeId(genericTypeParameterData.Constraints[i]));
+            }
+        }
 
-		private void WriteAdditionalInfoHelper(ParameterCollection paramters)
-		{
-			_writer.Write((ushort)paramters.Count);
-			for (int i = 0; i < paramters.Count; i++)
-				paramters[i].Accept(_additionalDataWriter);
-		}
+        private void WriteAdditionalInfoHelper(ParameterCollection paramters)
+        {
+            _writer.Write((ushort)paramters.Count);
+            for (int i = 0; i < paramters.Count; i++)
+                paramters[i].Accept(_additionalDataWriter);
+        }
 
-		private void WriteAdditionalInfoHelper(GenericTypeParameterCollection genericParamters)
-		{
-			_writer.Write((ushort)genericParamters.Count);
-			for (int i = 0; i < genericParamters.Count; i++)
-				_writer.Write(this.GetTypeId(genericParamters[i]));
-		}
+        private void WriteAdditionalInfoHelper(GenericTypeParameterCollection genericParamters)
+        {
+            _writer.Write((ushort)genericParamters.Count);
+            for (int i = 0; i < genericParamters.Count; i++)
+                _writer.Write(this.GetTypeId(genericParamters[i]));
+        }
 
-		#endregion // WriteAdditionalInfo
+        #endregion // WriteAdditionalInfo
 
-		#region WriteTypeTable
+        #region WriteTypeTable
 
-		private void WriteTypeTable(AssemblyData[] assemblies)
-		{
-			_writer.Write((ushort)assemblies.Length);
-			foreach (var assemblyData in assemblies)
-				this.WriteTypeTableHelper(assemblyData);
-		}
+        private void WriteTypeTable(AssemblyData[] assemblies)
+        {
+            _writer.Write((ushort)assemblies.Length);
+            foreach (var assemblyData in assemblies)
+                this.WriteTypeTableHelper(assemblyData);
+        }
 
-		private void WriteTypeTableHelper(AssemblyData assembly)
-		{
-			var types = assembly.GetTypeDatas();
+        private void WriteTypeTableHelper(AssemblyData assembly)
+        {
+            var types = assembly.GetTypeDatas();
 
-			_writer.Write(assembly.FullName);
-			_writer.Write(types.Count);
-			for (int i = 0; i < types.Count; i++)
-				this.WriteTypeTableHelper(types[i]);
-		}
+            _writer.Write(assembly.FullName);
+            _writer.Write(types.Count);
+            for (int i = 0; i < types.Count; i++)
+                this.WriteTypeTableHelper(types[i]);
+        }
 
-		private void WriteTypeTableHelper(TypeData typeBase)
-		{
-			var typeId = _nextTypeId++;
-			_typeTable[typeBase] = typeId;
+        private void WriteTypeTableHelper(TypeData typeBase)
+        {
+            var typeId = _nextTypeId++;
+            _typeTable[typeBase] = typeId;
 
-			var type = typeBase as TypeDefinitionData;
-			var isTypeData = type != null;
+            var type = typeBase as TypeDefinitionData;
+            var isTypeData = type != null;
 
-			_writer.Write(typeId);
-			_writer.Write(typeBase.Name);
-			_writer.Write((byte)typeBase.Accessibility);
-			_writer.Write((byte)typeBase.MemberFlags);
-			_writer.Write((byte)typeBase.TypeKind);
-			_writer.Write(isTypeData);
+            _writer.Write(typeId);
+            _writer.Write(typeBase.Name);
+            _writer.Write((byte)typeBase.Accessibility);
+            _writer.Write((byte)typeBase.MemberFlags);
+            _writer.Write((byte)typeBase.TypeKind);
+            _writer.Write(isTypeData);
 
-			if (isTypeData)
-			{
-				_writer.Write((byte)type.TypeDefinitionFlags);
-				_writer.Write(type.FullName);
-			}
-			else
-			{
-				var genericTypeParameterData = (GenericTypeParameterData)typeBase;
-				_writer.Write((int)genericTypeParameterData.GenericParameterAttributes);
-				_writer.Write((ushort)genericTypeParameterData.GenericParameterPosition);
-			}
-		}
+            if (isTypeData)
+            {
+                _writer.Write((byte)type.TypeDefinitionFlags);
+                _writer.Write(type.FullName);
+            }
+            else
+            {
+                var genericTypeParameterData = (GenericTypeParameterData)typeBase;
+                _writer.Write((int)genericTypeParameterData.GenericParameterAttributes);
+                _writer.Write((ushort)genericTypeParameterData.GenericParameterPosition);
+            }
+        }
 
-		#endregion // WriteTypeTable
+        #endregion // WriteTypeTable
 
-		private class AdditionalDataWriter : MetadataItemVisitor
-		{
-			public BinaryItemSerializerV1 _owner;
+        private class AdditionalDataWriter : MetadataItemVisitor
+        {
+            public BinaryItemSerializerV1 _owner;
 
-			public AdditionalDataWriter(BinaryItemSerializerV1 owner)
-			{
-				_owner = owner;
-			}
+            public AdditionalDataWriter(BinaryItemSerializerV1 owner)
+            {
+                _owner = owner;
+            }
 
-			public override void DefaultVisit(MetadataItemBase item)
-			{
-				Debug.Fail("Unhandled item:" + item.GetType().Name);
-			}
+            public override void DefaultVisit(MetadataItemBase item)
+            {
+                Debug.Fail("Unhandled item:" + item.GetType().Name);
+            }
 
-			public override void VisitConstantData(ConstantData item)
-			{
-				this.WriteMemberHeader(item);
-				_owner._writer.Write(_owner.GetTypeId(item.Type));
-			}
+            public override void VisitConstantData(ConstantData item)
+            {
+                this.WriteMemberHeader(item);
+                _owner._writer.Write(_owner.GetTypeId(item.Type));
+            }
 
-			public override void VisitConstructorData(ConstructorData item)
-			{
-				this.WriteMemberHeader(item);
-				_owner.WriteAdditionalInfoHelper(item.Parameters);
-			}
+            public override void VisitConstructorData(ConstructorData item)
+            {
+                this.WriteMemberHeader(item);
+                _owner.WriteAdditionalInfoHelper(item.Parameters);
+            }
 
-			public override void VisitFieldData(FieldData item)
-			{
-				this.WriteMemberHeader(item);
-				_owner._writer.Write(_owner.GetTypeId(item.Type));
-				_owner._writer.Write(item.IsReadOnly);
-			}
+            public override void VisitFieldData(FieldData item)
+            {
+                this.WriteMemberHeader(item);
+                _owner._writer.Write(_owner.GetTypeId(item.Type));
+                _owner._writer.Write(item.IsReadOnly);
+            }
 
-			public override void VisitEventData(EventData item)
-			{
-				this.WriteMemberHeader(item);
-				_owner._writer.Write(_owner.GetTypeId(item.Type));
-			}
+            public override void VisitEventData(EventData item)
+            {
+                this.WriteMemberHeader(item);
+                _owner._writer.Write(_owner.GetTypeId(item.Type));
+            }
 
-			public override void VisitMethodData(MethodData item)
-			{
-				this.WriteMemberHeader(item);
-				_owner._writer.Write(_owner.GetTypeId(item.Type));
-				_owner._writer.Write(item.IsExtensionMethod);
-				_owner.WriteAdditionalInfoHelper(item.GenericParameters);
-				_owner.WriteAdditionalInfoHelper(item.Parameters);
-			}
+            public override void VisitMethodData(MethodData item)
+            {
+                this.WriteMemberHeader(item);
+                _owner._writer.Write(_owner.GetTypeId(item.Type));
+                _owner._writer.Write(item.IsExtensionMethod);
+                _owner.WriteAdditionalInfoHelper(item.GenericParameters);
+                _owner.WriteAdditionalInfoHelper(item.Parameters);
+            }
 
-			public override void VisitIndexerData(IndexerData item)
-			{
-				this.WriteMemberHeader(item);
-				_owner._writer.Write(_owner.GetTypeId(item.Type));
-				_owner._writer.Write(((byte?)item.GetMethodAccessibility).GetValueOrDefault(0xFF));
-				_owner._writer.Write(((byte?)item.SetMethodAccessibility).GetValueOrDefault(0xFF));
-				_owner.WriteAdditionalInfoHelper(item.Parameters);
-			}
+            public override void VisitIndexerData(IndexerData item)
+            {
+                this.WriteMemberHeader(item);
+                _owner._writer.Write(_owner.GetTypeId(item.Type));
+                _owner._writer.Write(((byte?)item.GetMethodAccessibility).GetValueOrDefault(0xFF));
+                _owner._writer.Write(((byte?)item.SetMethodAccessibility).GetValueOrDefault(0xFF));
+                _owner.WriteAdditionalInfoHelper(item.Parameters);
+            }
 
-			public override void VisitOperatorData(OperatorData item)
-			{
-				this.WriteMemberHeader(item);
-				_owner._writer.Write(_owner.GetTypeId(item.Type));
-				_owner.WriteAdditionalInfoHelper(item.Parameters);
-			}
+            public override void VisitOperatorData(OperatorData item)
+            {
+                this.WriteMemberHeader(item);
+                _owner._writer.Write(_owner.GetTypeId(item.Type));
+                _owner.WriteAdditionalInfoHelper(item.Parameters);
+            }
 
-			public override void VisitParameterData(ParameterData item)
-			{
-				_owner._writer.Write(item.Name);
-				_owner._writer.Write(_owner.GetTypeId(item.Type));
-				_owner._writer.Write((byte)item.Modifer);
-				_owner._writer.Write(item.IsParamsArray);
-				_owner._writer.Write(item.IsOptional);
-				if (item.IsOptional)
-					this.WriteDefaultValue(item.DefaultValue);
-			}
+            public override void VisitParameterData(ParameterData item)
+            {
+                _owner._writer.Write(item.Name);
+                _owner._writer.Write(_owner.GetTypeId(item.Type));
+                _owner._writer.Write((byte)item.Modifer);
+                _owner._writer.Write(item.IsParamsArray);
+                _owner._writer.Write(item.IsOptional);
+                if (item.IsOptional)
+                    this.WriteDefaultValue(item.DefaultValue);
+            }
 
-			public override void VisitPropertyData(PropertyData item)
-			{
-				this.WriteMemberHeader(item);
-				_owner._writer.Write(_owner.GetTypeId(item.Type));
-				_owner._writer.Write(((byte?)item.GetMethodAccessibility).GetValueOrDefault(0xFF));
-				_owner._writer.Write(((byte?)item.SetMethodAccessibility).GetValueOrDefault(0xFF));		
-			}
+            public override void VisitPropertyData(PropertyData item)
+            {
+                this.WriteMemberHeader(item);
+                _owner._writer.Write(_owner.GetTypeId(item.Type));
+                _owner._writer.Write(((byte?)item.GetMethodAccessibility).GetValueOrDefault(0xFF));
+                _owner._writer.Write(((byte?)item.SetMethodAccessibility).GetValueOrDefault(0xFF));
+            }
 
-			public override void VisitTypeDefinitionData(TypeDefinitionData item)
-			{
-				_owner._writer.Write((ushort)item.MetadataItemKind);
-				_owner._writer.Write(_owner.GetTypeId(item));
-			}
+            public override void VisitTypeDefinitionData(TypeDefinitionData item)
+            {
+                _owner._writer.Write((ushort)item.MetadataItemKind);
+                _owner._writer.Write(_owner.GetTypeId(item));
+            }
 
-			private void WriteMemberHeader(MemberDataBase item)
-			{
-				_owner._writer.Write((ushort)item.MetadataItemKind);
-				_owner._writer.Write(item.Name);
-				_owner._writer.Write((byte)item.Accessibility);
-				_owner._writer.Write((byte)item.MemberFlags);
-			}
+            private void WriteMemberHeader(MemberDataBase item)
+            {
+                _owner._writer.Write((ushort)item.MetadataItemKind);
+                _owner._writer.Write(item.Name);
+                _owner._writer.Write((byte)item.Accessibility);
+                _owner._writer.Write((byte)item.MemberFlags);
+            }
 
-			private void WriteDefaultValue(object value)
-			{
-				var hasNonNullValue = value != null;
-				_owner._writer.Write(hasNonNullValue);
+            private void WriteDefaultValue(object value)
+            {
+                var hasNonNullValue = value != null;
+                _owner._writer.Write(hasNonNullValue);
 
-				if (hasNonNullValue)
-				{
-					_owner._writer.Write(value.GetType().FullName);
+                if (hasNonNullValue)
+                {
+                    _owner._writer.Write(value.GetType().FullName);
 
-					if (value is bool)
-						_owner._writer.Write((bool)value);
-					else if (value is byte)
-						_owner._writer.Write((byte)value);
-					else if (value is char)
-						_owner._writer.Write((char)value);
-					else if (value is decimal)
-						_owner._writer.Write((decimal)value);
-					else if (value is double)
-						_owner._writer.Write((double)value);
-					else if (value is float)
-						_owner._writer.Write((float)value);
-					else if (value is int)
-						_owner._writer.Write((int)value);
-					else if (value is long)
-						_owner._writer.Write((long)value);
-					else if (value is sbyte)
-						_owner._writer.Write((sbyte)value);
-					else if (value is short)
-						_owner._writer.Write((short)value);
-					else if (value is string)
-						_owner._writer.Write((string)value);
-					else if (value is uint)
-						_owner._writer.Write((uint)value);
-					else if (value is ulong)
-						_owner._writer.Write((ulong)value);
-					else if (value is ushort)
-						_owner._writer.Write((ushort)value);
-				}
-			}
-		}
-	}
+                    if (value is bool)
+                        _owner._writer.Write((bool)value);
+                    else if (value is byte)
+                        _owner._writer.Write((byte)value);
+                    else if (value is char)
+                        _owner._writer.Write((char)value);
+                    else if (value is decimal)
+                        _owner._writer.Write((decimal)value);
+                    else if (value is double)
+                        _owner._writer.Write((double)value);
+                    else if (value is float)
+                        _owner._writer.Write((float)value);
+                    else if (value is int)
+                        _owner._writer.Write((int)value);
+                    else if (value is long)
+                        _owner._writer.Write((long)value);
+                    else if (value is sbyte)
+                        _owner._writer.Write((sbyte)value);
+                    else if (value is short)
+                        _owner._writer.Write((short)value);
+                    else if (value is string)
+                        _owner._writer.Write((string)value);
+                    else if (value is uint)
+                        _owner._writer.Write((uint)value);
+                    else if (value is ulong)
+                        _owner._writer.Write((ulong)value);
+                    else if (value is ushort)
+                        _owner._writer.Write((ushort)value);
+                }
+            }
+        }
+    }
 }

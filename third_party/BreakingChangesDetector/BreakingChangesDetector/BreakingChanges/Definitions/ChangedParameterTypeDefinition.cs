@@ -2,6 +2,7 @@
     MIT License
 
     Copyright(c) 2014-2018 Infragistics, Inc.
+    Copyright 2018 Google LLC
 
     Permission is hereby granted, free of charge, to any person obtaining a copy
     of this software and associated documentation files (the "Software"), to deal
@@ -31,43 +32,43 @@ using System.Threading.Tasks;
 
 namespace BreakingChangesDetector.BreakingChanges.Definitions
 {
-	internal class ChangedParameterTypeDefinition : BreakingChangeDefinitionBase
-	{
-		public static readonly ChangedParameterTypeDefinition Instance = new ChangedParameterTypeDefinition();
+    internal class ChangedParameterTypeDefinition : BreakingChangeDefinitionBase
+    {
+        public static readonly ChangedParameterTypeDefinition Instance = new ChangedParameterTypeDefinition();
 
-		private ChangedParameterTypeDefinition() { }
+        private ChangedParameterTypeDefinition() { }
 
-		public override void CompareItems(CompareItemsContext context)
-		{
-			var oldParameter = (ParameterData)context.OldItem;
-			var newParameter = (ParameterData)context.NewItem;
+        public override void CompareItems(CompareItemsContext context)
+        {
+            var oldParameter = (ParameterData)context.OldItem;
+            var newParameter = (ParameterData)context.NewItem;
 
-			if (oldParameter.IsTypeDynamic == newParameter.IsTypeDynamic && oldParameter.Type.IsEquivalentToNew(newParameter.Type, context.NewAssemblyFamily))
-				return;
+            if (oldParameter.IsTypeDynamic == newParameter.IsTypeDynamic && oldParameter.Type.IsEquivalentToNew(newParameter.Type, context.NewAssemblyFamily))
+                return;
 
-			var isBreakingChange = false;
+            var isBreakingChange = false;
 
-			if (oldParameter.Modifer != ParameterModifier.None)
-			{
-				isBreakingChange = true;
-			}
-			else if (newParameter.IsTypeDynamic == false)
-			{
-				isBreakingChange = (oldParameter.IsTypeDynamic || newParameter.Type.IsAssignableFromOld(oldParameter.Type, context.NewAssemblyFamily) == false);
-			}
+            if (oldParameter.Modifer != ParameterModifier.None)
+            {
+                isBreakingChange = true;
+            }
+            else if (newParameter.IsTypeDynamic == false)
+            {
+                isBreakingChange = (oldParameter.IsTypeDynamic || newParameter.Type.IsAssignableFromOld(oldParameter.Type, context.NewAssemblyFamily) == false);
+            }
 
-			if (isBreakingChange)
-				context.BreakingChanges.Add(new ChangedParameterType(oldParameter, newParameter, (IParameterizedItem)context.AdditionalInfo));
-		}
+            if (isBreakingChange)
+                context.BreakingChanges.Add(new ChangedParameterType(oldParameter, newParameter, (IParameterizedItem)context.AdditionalInfo));
+        }
 
-		public override BreakingChangeKind BreakingChangeKind
-		{
-			get { return BreakingChangeKind.ChangedParameterType; }
-		}
+        public override BreakingChangeKind BreakingChangeKind
+        {
+            get { return BreakingChangeKind.ChangedParameterType; }
+        }
 
-		public override MetadataItemKinds MembersKindsHandled
-		{
-			get { return MetadataItemKinds.Parameter; }
-		}
-	}
+        public override MetadataItemKinds MembersKindsHandled
+        {
+            get { return MetadataItemKinds.Parameter; }
+        }
+    }
 }

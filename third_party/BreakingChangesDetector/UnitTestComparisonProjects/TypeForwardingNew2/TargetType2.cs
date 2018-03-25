@@ -2,6 +2,7 @@
     MIT License
 
     Copyright(c) 2014-2018 Infragistics, Inc.
+    Copyright 2018 Google LLC
 
     Permission is hereby granted, free of charge, to any person obtaining a copy
     of this software and associated documentation files (the "Software"), to deal
@@ -31,8 +32,8 @@ using System.Threading.Tasks;
 
 namespace TypeForwardingOld
 {
-	[TypeForwardedFrom("TypeForwardingNew1, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null")]
-	public class TargetType2
-	{
-	}
+    [TypeForwardedFrom("TypeForwardingNew1, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null")]
+    public class TargetType2
+    {
+    }
 }

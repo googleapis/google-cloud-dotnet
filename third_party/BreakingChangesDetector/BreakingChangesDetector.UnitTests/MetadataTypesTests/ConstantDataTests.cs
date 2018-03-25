@@ -29,62 +29,62 @@ using BreakingChangesDetector.MetadataItems;
 
 namespace BreakingChangesDetector.UnitTests.MetadataTypesTests
 {
-	public class ConstantDataTests
-	{
-		#region ConstantDataAccessibilityTest
+    public class ConstantDataTests
+    {
+        #region ConstantDataAccessibilityTest
 
-		[Fact]
-		public void ConstantDataAccessibilityTest()
-		{
-			var t = typeof(TestClassDefinition);
-			var context = MetadataResolutionContext.CreateFromTypes(t);
-			var typeData = context.GetTypeDefinitionData(t);
-			TestUtilities.VerifyAccessibility(typeData, "Constant");
-		}
-
-		#endregion // ConstantDataAccessibilityTest
-
-		#region ConstantDataDeclaringTypeTest
-
-		[Fact]
-		public void ConstantDataDeclaringTypeTest()
-		{
-			var t = typeof(TestClassDefinition);
+        [Fact]
+        public void ConstantDataAccessibilityTest()
+        {
+            var t = typeof(TestClassDefinition);
             var context = MetadataResolutionContext.CreateFromTypes(t);
             var typeData = context.GetTypeDefinitionData(t);
-			var constant = typeData.GetMember("Constant");
-			AssertX.Equal(typeData, constant.ContainingType, "The DeclaringType of a member should be the type in which it is defined.");
-		}
+            TestUtilities.VerifyAccessibility(typeData, "Constant");
+        }
 
-		#endregion // ConstantDataDeclaringTypeTest
+        #endregion // ConstantDataAccessibilityTest
 
-		#region ConstantDataNameTest
+        #region ConstantDataDeclaringTypeTest
 
-		[Fact]
-		public void ConstantDataNameTest()
-		{
-			var t = typeof(TestClassDefinition);
+        [Fact]
+        public void ConstantDataDeclaringTypeTest()
+        {
+            var t = typeof(TestClassDefinition);
             var context = MetadataResolutionContext.CreateFromTypes(t);
             var typeData = context.GetTypeDefinitionData(t);
-			var constant = typeData.GetMember("Constant");
-			AssertX.Equal("Constant", constant.Name, "The Name of the member is incorrect.");
-		}
+            var constant = typeData.GetMember("Constant");
+            AssertX.Equal(typeData, constant.ContainingType, "The DeclaringType of a member should be the type in which it is defined.");
+        }
 
-		#endregion // ConstantDataNameTest
+        #endregion // ConstantDataDeclaringTypeTest
 
-		#region ConstantDataTypeTest
+        #region ConstantDataNameTest
 
-		[Fact]
-		public void ConstantDataTypeTest()
-		{
-			var t = typeof(TestClassDefinition);
+        [Fact]
+        public void ConstantDataNameTest()
+        {
+            var t = typeof(TestClassDefinition);
             var context = MetadataResolutionContext.CreateFromTypes(t);
             var typeData = context.GetTypeDefinitionData(t);
-			var constant = (ConstantData)typeData.GetMember("Constant");
-			var intType = context.GetTypeDefinitionData<int>();
-			AssertX.Equal(intType, constant.Type, "The Type of the member is incorrect.");
-		}
+            var constant = typeData.GetMember("Constant");
+            AssertX.Equal("Constant", constant.Name, "The Name of the member is incorrect.");
+        }
 
-		#endregion // ConstantDataTypeTest
-	}
+        #endregion // ConstantDataNameTest
+
+        #region ConstantDataTypeTest
+
+        [Fact]
+        public void ConstantDataTypeTest()
+        {
+            var t = typeof(TestClassDefinition);
+            var context = MetadataResolutionContext.CreateFromTypes(t);
+            var typeData = context.GetTypeDefinitionData(t);
+            var constant = (ConstantData)typeData.GetMember("Constant");
+            var intType = context.GetTypeDefinitionData<int>();
+            AssertX.Equal(intType, constant.Type, "The Type of the member is incorrect.");
+        }
+
+        #endregion // ConstantDataTypeTest
+    }
 }

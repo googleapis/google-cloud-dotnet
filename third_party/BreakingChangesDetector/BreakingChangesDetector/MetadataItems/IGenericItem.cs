@@ -2,6 +2,7 @@
     MIT License
 
     Copyright(c) 2014-2018 Infragistics, Inc.
+    Copyright 2018 Google LLC
 
     Permission is hereby granted, free of charge, to any person obtaining a copy
     of this software and associated documentation files (the "Software"), to deal
@@ -30,14 +31,14 @@ using System.Threading.Tasks;
 
 namespace BreakingChangesDetector.MetadataItems
 {
-	/// <summary>
-	/// Represents an item that has generic type parameters, such as a method or delegate type declaration.
-	/// </summary>
-	public interface IGenericItem
-	{
-		/// <summary>
-		/// Gets the collection of generic type parameters on the item.
-		/// </summary>
-		GenericTypeParameterCollection GenericParameters { get; }
-	}
+    /// <summary>
+    /// Represents an item that has generic type parameters, such as a method or delegate type declaration.
+    /// </summary>
+    public interface IGenericItem
+    {
+        /// <summary>
+        /// Gets the collection of generic type parameters on the item.
+        /// </summary>
+        GenericTypeParameterCollection GenericParameters { get; }
+    }
 }

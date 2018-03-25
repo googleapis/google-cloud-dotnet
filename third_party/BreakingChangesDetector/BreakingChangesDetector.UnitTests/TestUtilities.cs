@@ -74,128 +74,128 @@ namespace BreakingChangesDetector.UnitTests
     }
 
     internal static class TestUtilities
-	{
-		#region IsImplicitlyAssignableFrom
+    {
+        #region IsImplicitlyAssignableFrom
 
-		private static Dictionary<Type, HashSet<Type>> _implicitNumericConversions = new Dictionary<Type, HashSet<Type>>() {
-			{ typeof(decimal), new HashSet<Type> { typeof(sbyte), typeof(byte), typeof(short), typeof(ushort), typeof(int), typeof(uint), typeof(long), typeof(ulong), typeof(char) } },
-			{ typeof(double), new HashSet<Type> { typeof(sbyte), typeof(byte), typeof(short), typeof(ushort), typeof(int), typeof(uint), typeof(long), typeof(ulong), typeof(char), typeof(float) } },
-			{ typeof(float), new HashSet<Type> { typeof(sbyte), typeof(byte), typeof(short), typeof(ushort), typeof(int), typeof(uint), typeof(long), typeof(ulong), typeof(char), typeof(float) } },
-			{ typeof(ulong), new HashSet<Type> { typeof(byte), typeof(ushort), typeof(uint), typeof(char) } },
-			{ typeof(long), new HashSet<Type> { typeof(sbyte), typeof(byte), typeof(short), typeof(ushort), typeof(int), typeof(uint), typeof(char) } },
-			{ typeof(uint), new HashSet<Type> { typeof(byte), typeof(ushort), typeof(char) } },
-			{ typeof(int), new HashSet<Type> { typeof(sbyte), typeof(byte), typeof(short), typeof(ushort), typeof(char) } },
-			{ typeof(ushort), new HashSet<Type> { typeof(byte), typeof(char) } },
-			{ typeof(short), new HashSet<Type> { typeof(sbyte), typeof(byte) } }
-		};
-		public static bool IsImplicitlyAssignableFrom(this Type to, Type from)
-		{
-			if (to.IsAssignableFrom(from))
-				return true;
+        private static Dictionary<Type, HashSet<Type>> _implicitNumericConversions = new Dictionary<Type, HashSet<Type>>() {
+            { typeof(decimal), new HashSet<Type> { typeof(sbyte), typeof(byte), typeof(short), typeof(ushort), typeof(int), typeof(uint), typeof(long), typeof(ulong), typeof(char) } },
+            { typeof(double), new HashSet<Type> { typeof(sbyte), typeof(byte), typeof(short), typeof(ushort), typeof(int), typeof(uint), typeof(long), typeof(ulong), typeof(char), typeof(float) } },
+            { typeof(float), new HashSet<Type> { typeof(sbyte), typeof(byte), typeof(short), typeof(ushort), typeof(int), typeof(uint), typeof(long), typeof(ulong), typeof(char), typeof(float) } },
+            { typeof(ulong), new HashSet<Type> { typeof(byte), typeof(ushort), typeof(uint), typeof(char) } },
+            { typeof(long), new HashSet<Type> { typeof(sbyte), typeof(byte), typeof(short), typeof(ushort), typeof(int), typeof(uint), typeof(char) } },
+            { typeof(uint), new HashSet<Type> { typeof(byte), typeof(ushort), typeof(char) } },
+            { typeof(int), new HashSet<Type> { typeof(sbyte), typeof(byte), typeof(short), typeof(ushort), typeof(char) } },
+            { typeof(ushort), new HashSet<Type> { typeof(byte), typeof(char) } },
+            { typeof(short), new HashSet<Type> { typeof(sbyte), typeof(byte) } }
+        };
+        public static bool IsImplicitlyAssignableFrom(this Type to, Type from)
+        {
+            if (to.IsAssignableFrom(from))
+                return true;
 
-			HashSet<Type> destTypes;
-			if (_implicitNumericConversions.TryGetValue(to, out destTypes) && destTypes.Contains(from))
-				return true;
+            HashSet<Type> destTypes;
+            if (_implicitNumericConversions.TryGetValue(to, out destTypes) && destTypes.Contains(from))
+                return true;
 
-			if (from.GetMethods(BindingFlags.Public | BindingFlags.Static)
-					.Any(m => m.Name == "op_Implicit" && m.ReturnType == to && m.GetParameters()[0].ParameterType == from))
-			{
-				return true;
-			}
+            if (from.GetMethods(BindingFlags.Public | BindingFlags.Static)
+                    .Any(m => m.Name == "op_Implicit" && m.ReturnType == to && m.GetParameters()[0].ParameterType == from))
+            {
+                return true;
+            }
 
-			if (to.GetMethods(BindingFlags.Public | BindingFlags.Static)
-					.Any(m => m.Name == "op_Implicit" && m.ReturnType == to && m.GetParameters()[0].ParameterType == from))
-			{
-				return true;
-			}
+            if (to.GetMethods(BindingFlags.Public | BindingFlags.Static)
+                    .Any(m => m.Name == "op_Implicit" && m.ReturnType == to && m.GetParameters()[0].ParameterType == from))
+            {
+                return true;
+            }
 
-			if (to.IsNullable())
-			{
-				// An implicit conversion from S? to T?
-				if (from.IsNullable())
-					return to.UnwrapNullable().IsImplicitlyAssignableFrom(from.UnwrapNullable());
-				
-				// An implicit conversion from S to T?
-				return to.UnwrapNullable().IsImplicitlyAssignableFrom(from);
-			}
+            if (to.IsNullable())
+            {
+                // An implicit conversion from S? to T?
+                if (from.IsNullable())
+                    return to.UnwrapNullable().IsImplicitlyAssignableFrom(from.UnwrapNullable());
 
-			// An implicit conversion from S? to to interfaces and base classes of S
-			if (from.IsNullable() && to.IsValueType == false)
-				return to.IsImplicitlyAssignableFrom(from.UnwrapNullable());
+                // An implicit conversion from S to T?
+                return to.UnwrapNullable().IsImplicitlyAssignableFrom(from);
+            }
 
-			return false;
-		}
+            // An implicit conversion from S? to to interfaces and base classes of S
+            if (from.IsNullable() && to.IsValueType == false)
+                return to.IsImplicitlyAssignableFrom(from.UnwrapNullable());
 
-		#endregion // IsImplicitlyAssignableFrom
+            return false;
+        }
 
-		#region UnwrapNullable
+        #endregion // IsImplicitlyAssignableFrom
 
-		public static Type UnwrapNullable(this Type t)
-		{
-			return t.GenericTypeArguments[0];
-		}
+        #region UnwrapNullable
 
-		#endregion // UnwrapNullable
+        public static Type UnwrapNullable(this Type t)
+        {
+            return t.GenericTypeArguments[0];
+        }
 
-		#region VerifyAccessibility
+        #endregion // UnwrapNullable
 
-		public static void VerifyAccessibility(TypeData typeDataBase, string memberName)
-		{
-			var typeData = (TypeDefinitionData)typeDataBase;
-			var member = typeData.GetMember(memberName);
-			AssertX.Equal(MemberAccessibility.Public, member.Accessibility, "Incorrect MemberAccessibility.");
-			member = typeData.GetMember(memberName + "Protected");
-			AssertX.Equal(MemberAccessibility.Protected, member.Accessibility, "Incorrect MemberAccessibility.");
-			member = typeData.GetMember(memberName + "ProtectedInternal");
-			AssertX.Equal(MemberAccessibility.Protected, member.Accessibility, "Incorrect MemberAccessibility.");
-		}
+        #region VerifyAccessibility
 
-		#endregion // VerifyAccessibility
+        public static void VerifyAccessibility(TypeData typeDataBase, string memberName)
+        {
+            var typeData = (TypeDefinitionData)typeDataBase;
+            var member = typeData.GetMember(memberName);
+            AssertX.Equal(MemberAccessibility.Public, member.Accessibility, "Incorrect MemberAccessibility.");
+            member = typeData.GetMember(memberName + "Protected");
+            AssertX.Equal(MemberAccessibility.Protected, member.Accessibility, "Incorrect MemberAccessibility.");
+            member = typeData.GetMember(memberName + "ProtectedInternal");
+            AssertX.Equal(MemberAccessibility.Protected, member.Accessibility, "Incorrect MemberAccessibility.");
+        }
 
-		#region VerifyInstanceAndStaticMember
+        #endregion // VerifyAccessibility
 
-		public static void VerifyInstanceAndStaticMember<T>(TypeData typeDataBase, string memberName)
-			where T : MemberDataBase
-		{
-			var typeData = (TypeDefinitionData)typeDataBase;
-			if (typeData.TypeKind != TypeKind.Interface)
-				VerifyMember<T>(typeData, memberName + "Static");
+        #region VerifyInstanceAndStaticMember
 
-			VerifyMember<T>(typeData, memberName + "Instance");
-		}
+        public static void VerifyInstanceAndStaticMember<T>(TypeData typeDataBase, string memberName)
+            where T : MemberDataBase
+        {
+            var typeData = (TypeDefinitionData)typeDataBase;
+            if (typeData.TypeKind != TypeKind.Interface)
+                VerifyMember<T>(typeData, memberName + "Static");
 
-		#endregion // VerifyInstanceAndStaticMember
+            VerifyMember<T>(typeData, memberName + "Instance");
+        }
 
-		#region VerifyMember
+        #endregion // VerifyInstanceAndStaticMember
 
-		public static void VerifyMember<T>(TypeData typeDataBase, string memberName)
-			where T : MemberDataBase
-		{
-			var typeData = (TypeDefinitionData)typeDataBase;
-			var canHaveProtectedMembers = typeData.TypeKind == TypeKind.Class;
+        #region VerifyMember
 
-			var member = (T)typeData.GetMember(memberName);
-			AssertX.NotNull(member, "Public " + typeof(T).Name + " instances should be returned.");
-			member = (T)typeData.GetMember(memberName + "Internal");
-			AssertX.Null(member, "Internal members should not be returned.");
-			if (canHaveProtectedMembers)
-			{
-				member = (T)typeData.GetMember(memberName + "Protected");
-				AssertX.NotNull(member, "Protected " + typeof(T).Name + " instances should be returned.");
-				member = (T)typeData.GetMember(memberName + "ProtectedInternal");
-				AssertX.NotNull(member, "Protected internal " + typeof(T).Name + " instances should be returned.");
-			}
-			else
-			{
-				member = (T)typeData.GetMember(memberName + "Protected");
-				AssertX.Null(member, "Protected members should not be returned.");
-				member = (T)typeData.GetMember(memberName + "ProtectedInternal");
-				AssertX.Null(member, "Protected internal members should not be returned.");
-			}
-			member = (T)typeData.GetMember(memberName + "Private");
-			AssertX.Null(member, "Private members should not be returned.");
-		}
+        public static void VerifyMember<T>(TypeData typeDataBase, string memberName)
+            where T : MemberDataBase
+        {
+            var typeData = (TypeDefinitionData)typeDataBase;
+            var canHaveProtectedMembers = typeData.TypeKind == TypeKind.Class;
 
-		#endregion // VerifyMember
-	}
+            var member = (T)typeData.GetMember(memberName);
+            AssertX.NotNull(member, "Public " + typeof(T).Name + " instances should be returned.");
+            member = (T)typeData.GetMember(memberName + "Internal");
+            AssertX.Null(member, "Internal members should not be returned.");
+            if (canHaveProtectedMembers)
+            {
+                member = (T)typeData.GetMember(memberName + "Protected");
+                AssertX.NotNull(member, "Protected " + typeof(T).Name + " instances should be returned.");
+                member = (T)typeData.GetMember(memberName + "ProtectedInternal");
+                AssertX.NotNull(member, "Protected internal " + typeof(T).Name + " instances should be returned.");
+            }
+            else
+            {
+                member = (T)typeData.GetMember(memberName + "Protected");
+                AssertX.Null(member, "Protected members should not be returned.");
+                member = (T)typeData.GetMember(memberName + "ProtectedInternal");
+                AssertX.Null(member, "Protected internal members should not be returned.");
+            }
+            member = (T)typeData.GetMember(memberName + "Private");
+            AssertX.Null(member, "Private members should not be returned.");
+        }
+
+        #endregion // VerifyMember
+    }
 }

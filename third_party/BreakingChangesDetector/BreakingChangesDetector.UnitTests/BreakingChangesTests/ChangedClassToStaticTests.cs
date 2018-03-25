@@ -31,78 +31,78 @@ using BreakingChangesDetector.BreakingChanges;
 
 namespace BreakingChangesDetector.UnitTests.BreakingChangesTests
 {
-	public class ChangedClassToStaticTests
-	{
-		#region NestedTypeTests
+    public class ChangedClassToStaticTests
+    {
+        #region NestedTypeTests
 
-		[Fact]
-		public void NestedTypeTests()
-		{
-			var context = MetadataResolutionContext.CreateFromTypes(typeof(ChangedClassToStaticTests));
-			var NestedClass = context.GetTypeDefinitionData(typeof(NestedClass));
-			var NestedClassWithInternalConstructor = context.GetTypeDefinitionData(typeof(NestedClassWithInternalConstructor));
-			var NestedClassWithProtectedConstructor = context.GetTypeDefinitionData(typeof(NestedClassWithProtectedConstructor));
-			var NestedStaticClass = context.GetTypeDefinitionData(typeof(NestedStaticClass));
-			
-			var breakingChanges = MetadataComparer.CompareTypes(NestedClass, NestedStaticClass).Where(b => b.BreakingChangeKind == BreakingChangeKind.ChangedClassToStatic).ToList();
-			AssertX.Equal(1, breakingChanges.Count, "There should be one breaking change when a class is made static.");
-			AssertX.Equal(BreakingChangeKind.ChangedClassToStatic, breakingChanges[0].BreakingChangeKind, "The BreakingChangeKind is incorrect.");
-			AssertX.Equal(NestedClass.GetMember("Class"), breakingChanges[0].OldItem, "The OldItem is incorrect.");
-			AssertX.Equal(NestedStaticClass.GetMember("Class"), breakingChanges[0].NewItem, "The NewItem is incorrect.");
-			AssertX.Null(breakingChanges[0].AssociatedData, "The AssociatedData is incorrect.");
+        [Fact]
+        public void NestedTypeTests()
+        {
+            var context = MetadataResolutionContext.CreateFromTypes(typeof(ChangedClassToStaticTests));
+            var NestedClass = context.GetTypeDefinitionData(typeof(NestedClass));
+            var NestedClassWithInternalConstructor = context.GetTypeDefinitionData(typeof(NestedClassWithInternalConstructor));
+            var NestedClassWithProtectedConstructor = context.GetTypeDefinitionData(typeof(NestedClassWithProtectedConstructor));
+            var NestedStaticClass = context.GetTypeDefinitionData(typeof(NestedStaticClass));
 
-			breakingChanges = MetadataComparer.CompareTypes(NestedClassWithInternalConstructor, NestedStaticClass);
-			AssertX.Equal(0, breakingChanges.Count, "There should be no breaking changes when a class with no public constructors is made abstract.");
+            var breakingChanges = MetadataComparer.CompareTypes(NestedClass, NestedStaticClass).Where(b => b.BreakingChangeKind == BreakingChangeKind.ChangedClassToStatic).ToList();
+            AssertX.Equal(1, breakingChanges.Count, "There should be one breaking change when a class is made static.");
+            AssertX.Equal(BreakingChangeKind.ChangedClassToStatic, breakingChanges[0].BreakingChangeKind, "The BreakingChangeKind is incorrect.");
+            AssertX.Equal(NestedClass.GetMember("Class"), breakingChanges[0].OldItem, "The OldItem is incorrect.");
+            AssertX.Equal(NestedStaticClass.GetMember("Class"), breakingChanges[0].NewItem, "The NewItem is incorrect.");
+            AssertX.Null(breakingChanges[0].AssociatedData, "The AssociatedData is incorrect.");
 
-			breakingChanges = MetadataComparer.CompareTypes(NestedClassWithProtectedConstructor, NestedStaticClass).Where(b => b.BreakingChangeKind == BreakingChangeKind.ChangedClassToStatic).ToList();
-			AssertX.Equal(1, breakingChanges.Count, "There should be one breaking change when a class is made static.");
-			AssertX.Equal(BreakingChangeKind.ChangedClassToStatic, breakingChanges[0].BreakingChangeKind, "The BreakingChangeKind is incorrect.");
-			AssertX.Equal(NestedClassWithProtectedConstructor.GetMember("Class"), breakingChanges[0].OldItem, "The OldItem is incorrect.");
-			AssertX.Equal(NestedStaticClass.GetMember("Class"), breakingChanges[0].NewItem, "The NewItem is incorrect.");
-			AssertX.Null(breakingChanges[0].AssociatedData, "The AssociatedData is incorrect.");
-		}
+            breakingChanges = MetadataComparer.CompareTypes(NestedClassWithInternalConstructor, NestedStaticClass);
+            AssertX.Equal(0, breakingChanges.Count, "There should be no breaking changes when a class with no public constructors is made abstract.");
 
-		#endregion // NestedTypeTests
+            breakingChanges = MetadataComparer.CompareTypes(NestedClassWithProtectedConstructor, NestedStaticClass).Where(b => b.BreakingChangeKind == BreakingChangeKind.ChangedClassToStatic).ToList();
+            AssertX.Equal(1, breakingChanges.Count, "There should be one breaking change when a class is made static.");
+            AssertX.Equal(BreakingChangeKind.ChangedClassToStatic, breakingChanges[0].BreakingChangeKind, "The BreakingChangeKind is incorrect.");
+            AssertX.Equal(NestedClassWithProtectedConstructor.GetMember("Class"), breakingChanges[0].OldItem, "The OldItem is incorrect.");
+            AssertX.Equal(NestedStaticClass.GetMember("Class"), breakingChanges[0].NewItem, "The NewItem is incorrect.");
+            AssertX.Null(breakingChanges[0].AssociatedData, "The AssociatedData is incorrect.");
+        }
 
-		#region TypeTests
+        #endregion // NestedTypeTests
 
-		[Fact]
-		public void TypeTests()
-		{
-			var context = MetadataResolutionContext.CreateFromTypes(typeof(ChangedClassToStaticTests));
-			var Class = context.GetTypeDefinitionData(typeof(Class));
-			var ClassWithInternalConstructor = context.GetTypeDefinitionData(typeof(ClassWithInternalConstructor));
-			var ClassWithProtectedConstructor = context.GetTypeDefinitionData(typeof(ClassWithProtectedConstructor));
-			var StaticClass = context.GetTypeDefinitionData(typeof(StaticClass));
-			
-			var breakingChanges = MetadataComparer.CompareTypes(Class, StaticClass).Where(b => b.BreakingChangeKind == BreakingChangeKind.ChangedClassToStatic).ToList();
-			AssertX.Equal(1, breakingChanges.Count, "There should be one breaking change when a class is made static.");
-			AssertX.Equal(BreakingChangeKind.ChangedClassToStatic, breakingChanges[0].BreakingChangeKind, "The BreakingChangeKind is incorrect.");
-			AssertX.Equal(Class, breakingChanges[0].OldItem, "The OldItem is incorrect.");
-			AssertX.Equal(StaticClass, breakingChanges[0].NewItem, "The NewItem is incorrect.");
-			AssertX.Null(breakingChanges[0].AssociatedData, "The AssociatedData is incorrect.");
+        #region TypeTests
 
-			breakingChanges = MetadataComparer.CompareTypes(ClassWithInternalConstructor, StaticClass);
-			AssertX.Equal(0, breakingChanges.Count, "There should be no breaking changes when a class with no public constructors is made abstract.");
+        [Fact]
+        public void TypeTests()
+        {
+            var context = MetadataResolutionContext.CreateFromTypes(typeof(ChangedClassToStaticTests));
+            var Class = context.GetTypeDefinitionData(typeof(Class));
+            var ClassWithInternalConstructor = context.GetTypeDefinitionData(typeof(ClassWithInternalConstructor));
+            var ClassWithProtectedConstructor = context.GetTypeDefinitionData(typeof(ClassWithProtectedConstructor));
+            var StaticClass = context.GetTypeDefinitionData(typeof(StaticClass));
 
-			breakingChanges = MetadataComparer.CompareTypes(ClassWithProtectedConstructor, StaticClass).Where(b => b.BreakingChangeKind == BreakingChangeKind.ChangedClassToStatic).ToList();
-			AssertX.Equal(1, breakingChanges.Count, "There should be one breaking change when a class is made static.");
-			AssertX.Equal(BreakingChangeKind.ChangedClassToStatic, breakingChanges[0].BreakingChangeKind, "The BreakingChangeKind is incorrect.");
-			AssertX.Equal(ClassWithProtectedConstructor, breakingChanges[0].OldItem, "The OldItem is incorrect.");
-			AssertX.Equal(StaticClass, breakingChanges[0].NewItem, "The NewItem is incorrect.");
-			AssertX.Null(breakingChanges[0].AssociatedData, "The AssociatedData is incorrect.");
-		}
+            var breakingChanges = MetadataComparer.CompareTypes(Class, StaticClass).Where(b => b.BreakingChangeKind == BreakingChangeKind.ChangedClassToStatic).ToList();
+            AssertX.Equal(1, breakingChanges.Count, "There should be one breaking change when a class is made static.");
+            AssertX.Equal(BreakingChangeKind.ChangedClassToStatic, breakingChanges[0].BreakingChangeKind, "The BreakingChangeKind is incorrect.");
+            AssertX.Equal(Class, breakingChanges[0].OldItem, "The OldItem is incorrect.");
+            AssertX.Equal(StaticClass, breakingChanges[0].NewItem, "The NewItem is incorrect.");
+            AssertX.Null(breakingChanges[0].AssociatedData, "The AssociatedData is incorrect.");
 
-		#endregion // TypeTests
+            breakingChanges = MetadataComparer.CompareTypes(ClassWithInternalConstructor, StaticClass);
+            AssertX.Equal(0, breakingChanges.Count, "There should be no breaking changes when a class with no public constructors is made abstract.");
 
-		public class NestedClass { public class Class { } }
-		public class NestedClassWithInternalConstructor { public class Class { internal Class() { } } }
-		public class NestedClassWithProtectedConstructor { public class Class { protected Class() { } } }
-		public class NestedStaticClass { public static class Class { } }
+            breakingChanges = MetadataComparer.CompareTypes(ClassWithProtectedConstructor, StaticClass).Where(b => b.BreakingChangeKind == BreakingChangeKind.ChangedClassToStatic).ToList();
+            AssertX.Equal(1, breakingChanges.Count, "There should be one breaking change when a class is made static.");
+            AssertX.Equal(BreakingChangeKind.ChangedClassToStatic, breakingChanges[0].BreakingChangeKind, "The BreakingChangeKind is incorrect.");
+            AssertX.Equal(ClassWithProtectedConstructor, breakingChanges[0].OldItem, "The OldItem is incorrect.");
+            AssertX.Equal(StaticClass, breakingChanges[0].NewItem, "The NewItem is incorrect.");
+            AssertX.Null(breakingChanges[0].AssociatedData, "The AssociatedData is incorrect.");
+        }
 
-		public class Class { }
-		public class ClassWithInternalConstructor { internal ClassWithInternalConstructor() { } }
-		public class ClassWithProtectedConstructor { protected ClassWithProtectedConstructor() { } }
-		public static class StaticClass { }
-	}
+        #endregion // TypeTests
+
+        public class NestedClass { public class Class { } }
+        public class NestedClassWithInternalConstructor { public class Class { internal Class() { } } }
+        public class NestedClassWithProtectedConstructor { public class Class { protected Class() { } } }
+        public class NestedStaticClass { public static class Class { } }
+
+        public class Class { }
+        public class ClassWithInternalConstructor { internal ClassWithInternalConstructor() { } }
+        public class ClassWithProtectedConstructor { protected ClassWithProtectedConstructor() { } }
+        public static class StaticClass { }
+    }
 }

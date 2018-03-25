@@ -2,6 +2,7 @@
     MIT License
 
     Copyright(c) 2014-2018 Infragistics, Inc.
+    Copyright 2018 Google LLC
 
     Permission is hereby granted, free of charge, to any person obtaining a copy
     of this software and associated documentation files (the "Software"), to deal
@@ -30,77 +31,77 @@ using System.Threading.Tasks;
 
 namespace BreakingChangesDetector.MetadataItems
 {
-	/// <summary>
-	/// A collection of <see cref="TypeData"/> instances used as generic type arguments in a constructed generic type.
-	/// </summary>
-	public class GenericTypeArgumentCollection : IEnumerable<TypeData>
-	{
-		private readonly TypeData[] _arguments;
+    /// <summary>
+    /// A collection of <see cref="TypeData"/> instances used as generic type arguments in a constructed generic type.
+    /// </summary>
+    public class GenericTypeArgumentCollection : IEnumerable<TypeData>
+    {
+        private readonly TypeData[] _arguments;
 
-		internal GenericTypeArgumentCollection(IEnumerable<TypeData> types)
-		{
-			_arguments = types.ToArray();
-		}
+        internal GenericTypeArgumentCollection(IEnumerable<TypeData> types)
+        {
+            _arguments = types.ToArray();
+        }
 
-		System.Collections.IEnumerator System.Collections.IEnumerable.GetEnumerator()
-		{
-			return _arguments.GetEnumerator();
-		}
+        System.Collections.IEnumerator System.Collections.IEnumerable.GetEnumerator()
+        {
+            return _arguments.GetEnumerator();
+        }
 
-		/// <summary>
-		/// Gets an enumerator capable of iterating the generic type arguments.
-		/// </summary>
-		public IEnumerator<TypeData> GetEnumerator()
-		{
-			for (int i = 0; i < _arguments.Length; i++)
-				yield return _arguments[i];
-		}
+        /// <summary>
+        /// Gets an enumerator capable of iterating the generic type arguments.
+        /// </summary>
+        public IEnumerator<TypeData> GetEnumerator()
+        {
+            for (int i = 0; i < _arguments.Length; i++)
+                yield return _arguments[i];
+        }
 
-		/// <summary>
-		/// Gets the number of generic type arguments in the collection.
-		/// </summary>
-		public int Count
-		{
-			get { return _arguments.Length; }
-		}
+        /// <summary>
+        /// Gets the number of generic type arguments in the collection.
+        /// </summary>
+        public int Count
+        {
+            get { return _arguments.Length; }
+        }
 
-		/// <summary>
-		/// Gets the generic type argument at the specified index in the collection.
-		/// </summary>
-		public TypeData this[int index]
-		{
-			get { return _arguments[index]; }
-		}
+        /// <summary>
+        /// Gets the generic type argument at the specified index in the collection.
+        /// </summary>
+        public TypeData this[int index]
+        {
+            get { return _arguments[index]; }
+        }
 
-		internal bool DoesMatch(GenericTypeArgumentCollection other)
-		{
-			if (this.Count != other.Count)
-				return false;
+        internal bool DoesMatch(GenericTypeArgumentCollection other)
+        {
+            if (this.Count != other.Count)
+                return false;
 
-			for (int i = 0; i < this.Count; i++)
-			{
-				if (this[i].DoesMatch(other[i]) == false)
-					return false;
-			}
+            for (int i = 0; i < this.Count; i++)
+            {
+                if (this[i].DoesMatch(other[i]) == false)
+                    return false;
+            }
 
-			return true;
-		}
+            return true;
+        }
 
-		internal string GetGenericArgumentListDisplayText(bool includeGenericInfo, int start, int length)
-		{
-			if (length == 0)
-				return string.Empty;
+        internal string GetGenericArgumentListDisplayText(bool includeGenericInfo, int start, int length)
+        {
+            if (length == 0)
+                return string.Empty;
 
-			var sb = new StringBuilder("<");
-			sb.Append(this[start].GetDisplayName(fullyQualify: false, includeGenericInfo: includeGenericInfo));
-			for (int i = start + 1; i < start + length; i++)
-			{
-				sb.Append(", ");
-				sb.Append(this[i].GetDisplayName(fullyQualify: false, includeGenericInfo: includeGenericInfo));
-			}
+            var sb = new StringBuilder("<");
+            sb.Append(this[start].GetDisplayName(fullyQualify: false, includeGenericInfo: includeGenericInfo));
+            for (int i = start + 1; i < start + length; i++)
+            {
+                sb.Append(", ");
+                sb.Append(this[i].GetDisplayName(fullyQualify: false, includeGenericInfo: includeGenericInfo));
+            }
 
-			sb.Append(">");
-			return sb.ToString();
-		}
-	}
+            sb.Append(">");
+            return sb.ToString();
+        }
+    }
 }

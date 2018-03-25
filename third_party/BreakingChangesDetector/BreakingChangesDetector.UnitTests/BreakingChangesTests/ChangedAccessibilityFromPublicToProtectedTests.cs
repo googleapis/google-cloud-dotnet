@@ -34,318 +34,318 @@ using System.Threading.Tasks;
 
 namespace BreakingChangesDetector.UnitTests.BreakingChangesTests
 {
-	public class ChangedAccessibilityFromPublicToProtectedTests
-	{
-		#region ConstantTests
+    public class ChangedAccessibilityFromPublicToProtectedTests
+    {
+        #region ConstantTests
 
-		[Fact]
-		public void ConstantTests()
-		{
-			var context = MetadataResolutionContext.CreateFromTypes(typeof(ChangedAccessibilityFromPublicToProtectedTests));
-			var publicConstant = context.GetTypeDefinitionData(typeof(PublicConstant));
-			var protectedConstant = context.GetTypeDefinitionData(typeof(ProtectedConstant));
-			var protectedInternalConstant = context.GetTypeDefinitionData(typeof(ProtectedInternalConstant));
-			
-			var breakingChanges = MetadataComparer.CompareTypes(publicConstant, protectedConstant);
-			AssertX.Equal(1, breakingChanges.Count, "There should be one breaking change when a constant is changed from public to protected");
-			AssertX.Equal(BreakingChangeKind.ChangedAccessibilityFromPublicToProtected, breakingChanges[0].BreakingChangeKind, "The BreakingChangeKind is incorrect.");
-			AssertX.Equal(context.GetTypeDefinitionData(typeof(PublicConstant)).GetMember("Constant"), breakingChanges[0].OldItem, "The OldItem is incorrect.");
-			AssertX.Equal(context.GetTypeDefinitionData(typeof(ProtectedConstant)).GetMember("Constant"), breakingChanges[0].NewItem, "The NewItem is incorrect.");
-			AssertX.Null(breakingChanges[0].AssociatedData, "The AssociatedData is incorrect.");
+        [Fact]
+        public void ConstantTests()
+        {
+            var context = MetadataResolutionContext.CreateFromTypes(typeof(ChangedAccessibilityFromPublicToProtectedTests));
+            var publicConstant = context.GetTypeDefinitionData(typeof(PublicConstant));
+            var protectedConstant = context.GetTypeDefinitionData(typeof(ProtectedConstant));
+            var protectedInternalConstant = context.GetTypeDefinitionData(typeof(ProtectedInternalConstant));
 
-			breakingChanges = MetadataComparer.CompareTypes(publicConstant, protectedInternalConstant);
-			AssertX.Equal(1, breakingChanges.Count, "There should be one breaking change when a constant is changed from public to protected internal");
-			AssertX.Equal(BreakingChangeKind.ChangedAccessibilityFromPublicToProtected, breakingChanges[0].BreakingChangeKind, "The BreakingChangeKind is incorrect.");
-			AssertX.Equal(context.GetTypeDefinitionData(typeof(PublicConstant)).GetMember("Constant"), breakingChanges[0].OldItem, "The OldItem is incorrect.");
-			AssertX.Equal(context.GetTypeDefinitionData(typeof(ProtectedInternalConstant)).GetMember("Constant"), breakingChanges[0].NewItem, "The NewItem is incorrect.");
-			AssertX.Null(breakingChanges[0].AssociatedData, "The AssociatedData is incorrect.");
+            var breakingChanges = MetadataComparer.CompareTypes(publicConstant, protectedConstant);
+            AssertX.Equal(1, breakingChanges.Count, "There should be one breaking change when a constant is changed from public to protected");
+            AssertX.Equal(BreakingChangeKind.ChangedAccessibilityFromPublicToProtected, breakingChanges[0].BreakingChangeKind, "The BreakingChangeKind is incorrect.");
+            AssertX.Equal(context.GetTypeDefinitionData(typeof(PublicConstant)).GetMember("Constant"), breakingChanges[0].OldItem, "The OldItem is incorrect.");
+            AssertX.Equal(context.GetTypeDefinitionData(typeof(ProtectedConstant)).GetMember("Constant"), breakingChanges[0].NewItem, "The NewItem is incorrect.");
+            AssertX.Null(breakingChanges[0].AssociatedData, "The AssociatedData is incorrect.");
 
-			breakingChanges = MetadataComparer.CompareTypes(protectedConstant, publicConstant);
-			AssertX.Equal(0, breakingChanges.Count, "There should be no breaking changes when a constant is changed from protected to public");
+            breakingChanges = MetadataComparer.CompareTypes(publicConstant, protectedInternalConstant);
+            AssertX.Equal(1, breakingChanges.Count, "There should be one breaking change when a constant is changed from public to protected internal");
+            AssertX.Equal(BreakingChangeKind.ChangedAccessibilityFromPublicToProtected, breakingChanges[0].BreakingChangeKind, "The BreakingChangeKind is incorrect.");
+            AssertX.Equal(context.GetTypeDefinitionData(typeof(PublicConstant)).GetMember("Constant"), breakingChanges[0].OldItem, "The OldItem is incorrect.");
+            AssertX.Equal(context.GetTypeDefinitionData(typeof(ProtectedInternalConstant)).GetMember("Constant"), breakingChanges[0].NewItem, "The NewItem is incorrect.");
+            AssertX.Null(breakingChanges[0].AssociatedData, "The AssociatedData is incorrect.");
 
-			breakingChanges = MetadataComparer.CompareTypes(protectedConstant, protectedInternalConstant);
-			AssertX.Equal(0, breakingChanges.Count, "There should be no breaking changes when a constant is changed from protected to protected internal");
+            breakingChanges = MetadataComparer.CompareTypes(protectedConstant, publicConstant);
+            AssertX.Equal(0, breakingChanges.Count, "There should be no breaking changes when a constant is changed from protected to public");
 
-			breakingChanges = MetadataComparer.CompareTypes(protectedInternalConstant, publicConstant);
-			AssertX.Equal(0, breakingChanges.Count, "There should be no breaking changes when a constant is changed from protected internal to public");
+            breakingChanges = MetadataComparer.CompareTypes(protectedConstant, protectedInternalConstant);
+            AssertX.Equal(0, breakingChanges.Count, "There should be no breaking changes when a constant is changed from protected to protected internal");
 
-			breakingChanges = MetadataComparer.CompareTypes(protectedInternalConstant, protectedConstant);
-			AssertX.Equal(0, breakingChanges.Count, "There should be no breaking changes when a constant is changed from protected internal to protected");
-		}
+            breakingChanges = MetadataComparer.CompareTypes(protectedInternalConstant, publicConstant);
+            AssertX.Equal(0, breakingChanges.Count, "There should be no breaking changes when a constant is changed from protected internal to public");
 
-		#endregion // ConstantTests
+            breakingChanges = MetadataComparer.CompareTypes(protectedInternalConstant, protectedConstant);
+            AssertX.Equal(0, breakingChanges.Count, "There should be no breaking changes when a constant is changed from protected internal to protected");
+        }
 
-		#region ConstructorTests
+        #endregion // ConstantTests
 
-		[Fact]
-		public void ConstructorTests()
-		{
-			var context = MetadataResolutionContext.CreateFromTypes(typeof(ChangedAccessibilityFromPublicToProtectedTests));
-			var publicConstructor = context.GetTypeDefinitionData(typeof(PublicConstructor));
-			var protectedConstructor = context.GetTypeDefinitionData(typeof(ProtectedConstructor));
-			var protectedInternalConstructor = context.GetTypeDefinitionData(typeof(ProtectedInternalConstructor));
-			
-			var breakingChanges = MetadataComparer.CompareTypes(publicConstructor, protectedConstructor);
-			AssertX.Equal(1, breakingChanges.Count, "There should be one breaking change when a constant is changed from public to protected");
-			AssertX.Equal(BreakingChangeKind.ChangedAccessibilityFromPublicToProtected, breakingChanges[0].BreakingChangeKind, "The BreakingChangeKind is incorrect.");
-			AssertX.Equal(context.GetTypeDefinitionData(typeof(PublicConstructor)).GetMembers(".ctor")[0], breakingChanges[0].OldItem, "The OldItem is incorrect.");
-			AssertX.Equal(context.GetTypeDefinitionData(typeof(ProtectedConstructor)).GetMembers(".ctor")[0], breakingChanges[0].NewItem, "The NewItem is incorrect.");
-			AssertX.Null(breakingChanges[0].AssociatedData, "The AssociatedData is incorrect.");
+        #region ConstructorTests
 
-			breakingChanges = MetadataComparer.CompareTypes(publicConstructor, protectedInternalConstructor);
-			AssertX.Equal(1, breakingChanges.Count, "There should be one breaking change when a constructor is changed from public to protected internal");
-			AssertX.Equal(BreakingChangeKind.ChangedAccessibilityFromPublicToProtected, breakingChanges[0].BreakingChangeKind, "The BreakingChangeKind is incorrect.");
-			AssertX.Equal(context.GetTypeDefinitionData(typeof(PublicConstructor)).GetMembers(".ctor")[0], breakingChanges[0].OldItem, "The OldItem is incorrect.");
-			AssertX.Equal(context.GetTypeDefinitionData(typeof(ProtectedInternalConstructor)).GetMembers(".ctor")[0], breakingChanges[0].NewItem, "The NewItem is incorrect.");
-			AssertX.Null(breakingChanges[0].AssociatedData, "The AssociatedData is incorrect.");
+        [Fact]
+        public void ConstructorTests()
+        {
+            var context = MetadataResolutionContext.CreateFromTypes(typeof(ChangedAccessibilityFromPublicToProtectedTests));
+            var publicConstructor = context.GetTypeDefinitionData(typeof(PublicConstructor));
+            var protectedConstructor = context.GetTypeDefinitionData(typeof(ProtectedConstructor));
+            var protectedInternalConstructor = context.GetTypeDefinitionData(typeof(ProtectedInternalConstructor));
 
-			breakingChanges = MetadataComparer.CompareTypes(protectedConstructor, publicConstructor);
-			AssertX.Equal(0, breakingChanges.Count, "There should be no breaking changes when a constructor is changed from protected to public");
+            var breakingChanges = MetadataComparer.CompareTypes(publicConstructor, protectedConstructor);
+            AssertX.Equal(1, breakingChanges.Count, "There should be one breaking change when a constant is changed from public to protected");
+            AssertX.Equal(BreakingChangeKind.ChangedAccessibilityFromPublicToProtected, breakingChanges[0].BreakingChangeKind, "The BreakingChangeKind is incorrect.");
+            AssertX.Equal(context.GetTypeDefinitionData(typeof(PublicConstructor)).GetMembers(".ctor")[0], breakingChanges[0].OldItem, "The OldItem is incorrect.");
+            AssertX.Equal(context.GetTypeDefinitionData(typeof(ProtectedConstructor)).GetMembers(".ctor")[0], breakingChanges[0].NewItem, "The NewItem is incorrect.");
+            AssertX.Null(breakingChanges[0].AssociatedData, "The AssociatedData is incorrect.");
 
-			breakingChanges = MetadataComparer.CompareTypes(protectedConstructor, protectedInternalConstructor);
-			AssertX.Equal(0, breakingChanges.Count, "There should be no breaking changes when a constructor is changed from protected to protected internal");
+            breakingChanges = MetadataComparer.CompareTypes(publicConstructor, protectedInternalConstructor);
+            AssertX.Equal(1, breakingChanges.Count, "There should be one breaking change when a constructor is changed from public to protected internal");
+            AssertX.Equal(BreakingChangeKind.ChangedAccessibilityFromPublicToProtected, breakingChanges[0].BreakingChangeKind, "The BreakingChangeKind is incorrect.");
+            AssertX.Equal(context.GetTypeDefinitionData(typeof(PublicConstructor)).GetMembers(".ctor")[0], breakingChanges[0].OldItem, "The OldItem is incorrect.");
+            AssertX.Equal(context.GetTypeDefinitionData(typeof(ProtectedInternalConstructor)).GetMembers(".ctor")[0], breakingChanges[0].NewItem, "The NewItem is incorrect.");
+            AssertX.Null(breakingChanges[0].AssociatedData, "The AssociatedData is incorrect.");
 
-			breakingChanges = MetadataComparer.CompareTypes(protectedInternalConstructor, publicConstructor);
-			AssertX.Equal(0, breakingChanges.Count, "There should be no breaking changes when a constructor is changed from protected internal to public");
+            breakingChanges = MetadataComparer.CompareTypes(protectedConstructor, publicConstructor);
+            AssertX.Equal(0, breakingChanges.Count, "There should be no breaking changes when a constructor is changed from protected to public");
 
-			breakingChanges = MetadataComparer.CompareTypes(protectedInternalConstructor, protectedConstructor);
-			AssertX.Equal(0, breakingChanges.Count, "There should be no breaking changes when a constructor is changed from protected internal to protected");
-		}
+            breakingChanges = MetadataComparer.CompareTypes(protectedConstructor, protectedInternalConstructor);
+            AssertX.Equal(0, breakingChanges.Count, "There should be no breaking changes when a constructor is changed from protected to protected internal");
 
-		#endregion // ConstructorTests
+            breakingChanges = MetadataComparer.CompareTypes(protectedInternalConstructor, publicConstructor);
+            AssertX.Equal(0, breakingChanges.Count, "There should be no breaking changes when a constructor is changed from protected internal to public");
 
-		#region EventTests
+            breakingChanges = MetadataComparer.CompareTypes(protectedInternalConstructor, protectedConstructor);
+            AssertX.Equal(0, breakingChanges.Count, "There should be no breaking changes when a constructor is changed from protected internal to protected");
+        }
 
-		[Fact]
-		public void EventTests()
-		{
-			var context = MetadataResolutionContext.CreateFromTypes(typeof(ChangedAccessibilityFromPublicToProtectedTests));
-			var publicEvent = context.GetTypeDefinitionData(typeof(PublicEvent));
-			var protectedEvent = context.GetTypeDefinitionData(typeof(ProtectedEvent));
-			var protectedInternalEvent = context.GetTypeDefinitionData(typeof(ProtectedInternalEvent));
-			
-			var breakingChanges = MetadataComparer.CompareTypes(publicEvent, protectedEvent);
-			AssertX.Equal(1, breakingChanges.Count, "There should be one breaking change when a constant is changed from public to protected");
-			AssertX.Equal(BreakingChangeKind.ChangedAccessibilityFromPublicToProtected, breakingChanges[0].BreakingChangeKind, "The BreakingChangeKind is incorrect.");
-			AssertX.Equal(context.GetTypeDefinitionData(typeof(PublicEvent)).GetMember("Event"), breakingChanges[0].OldItem, "The OldItem is incorrect.");
-			AssertX.Equal(context.GetTypeDefinitionData(typeof(ProtectedEvent)).GetMember("Event"), breakingChanges[0].NewItem, "The NewItem is incorrect.");
-			AssertX.Null(breakingChanges[0].AssociatedData, "The AssociatedData is incorrect.");
+        #endregion // ConstructorTests
 
-			breakingChanges = MetadataComparer.CompareTypes(publicEvent, protectedInternalEvent);
-			AssertX.Equal(1, breakingChanges.Count, "There should be one breaking change when a event is changed from public to protected internal");
-			AssertX.Equal(BreakingChangeKind.ChangedAccessibilityFromPublicToProtected, breakingChanges[0].BreakingChangeKind, "The BreakingChangeKind is incorrect.");
-			AssertX.Equal(context.GetTypeDefinitionData(typeof(PublicEvent)).GetMember("Event"), breakingChanges[0].OldItem, "The OldItem is incorrect.");
-			AssertX.Equal(context.GetTypeDefinitionData(typeof(ProtectedInternalEvent)).GetMember("Event"), breakingChanges[0].NewItem, "The NewItem is incorrect.");
-			AssertX.Null(breakingChanges[0].AssociatedData, "The AssociatedData is incorrect.");
+        #region EventTests
 
-			breakingChanges = MetadataComparer.CompareTypes(protectedEvent, publicEvent);
-			AssertX.Equal(0, breakingChanges.Count, "There should be no breaking changes when a event is changed from protected to public");
+        [Fact]
+        public void EventTests()
+        {
+            var context = MetadataResolutionContext.CreateFromTypes(typeof(ChangedAccessibilityFromPublicToProtectedTests));
+            var publicEvent = context.GetTypeDefinitionData(typeof(PublicEvent));
+            var protectedEvent = context.GetTypeDefinitionData(typeof(ProtectedEvent));
+            var protectedInternalEvent = context.GetTypeDefinitionData(typeof(ProtectedInternalEvent));
 
-			breakingChanges = MetadataComparer.CompareTypes(protectedEvent, protectedInternalEvent);
-			AssertX.Equal(0, breakingChanges.Count, "There should be no breaking changes when a event is changed from protected to protected internal");
+            var breakingChanges = MetadataComparer.CompareTypes(publicEvent, protectedEvent);
+            AssertX.Equal(1, breakingChanges.Count, "There should be one breaking change when a constant is changed from public to protected");
+            AssertX.Equal(BreakingChangeKind.ChangedAccessibilityFromPublicToProtected, breakingChanges[0].BreakingChangeKind, "The BreakingChangeKind is incorrect.");
+            AssertX.Equal(context.GetTypeDefinitionData(typeof(PublicEvent)).GetMember("Event"), breakingChanges[0].OldItem, "The OldItem is incorrect.");
+            AssertX.Equal(context.GetTypeDefinitionData(typeof(ProtectedEvent)).GetMember("Event"), breakingChanges[0].NewItem, "The NewItem is incorrect.");
+            AssertX.Null(breakingChanges[0].AssociatedData, "The AssociatedData is incorrect.");
 
-			breakingChanges = MetadataComparer.CompareTypes(protectedInternalEvent, publicEvent);
-			AssertX.Equal(0, breakingChanges.Count, "There should be no breaking changes when a event is changed from protected internal to public");
+            breakingChanges = MetadataComparer.CompareTypes(publicEvent, protectedInternalEvent);
+            AssertX.Equal(1, breakingChanges.Count, "There should be one breaking change when a event is changed from public to protected internal");
+            AssertX.Equal(BreakingChangeKind.ChangedAccessibilityFromPublicToProtected, breakingChanges[0].BreakingChangeKind, "The BreakingChangeKind is incorrect.");
+            AssertX.Equal(context.GetTypeDefinitionData(typeof(PublicEvent)).GetMember("Event"), breakingChanges[0].OldItem, "The OldItem is incorrect.");
+            AssertX.Equal(context.GetTypeDefinitionData(typeof(ProtectedInternalEvent)).GetMember("Event"), breakingChanges[0].NewItem, "The NewItem is incorrect.");
+            AssertX.Null(breakingChanges[0].AssociatedData, "The AssociatedData is incorrect.");
 
-			breakingChanges = MetadataComparer.CompareTypes(protectedInternalEvent, protectedEvent);
-			AssertX.Equal(0, breakingChanges.Count, "There should be no breaking changes when a event is changed from protected internal to protected");
-		}
+            breakingChanges = MetadataComparer.CompareTypes(protectedEvent, publicEvent);
+            AssertX.Equal(0, breakingChanges.Count, "There should be no breaking changes when a event is changed from protected to public");
 
-		#endregion // EventTests
+            breakingChanges = MetadataComparer.CompareTypes(protectedEvent, protectedInternalEvent);
+            AssertX.Equal(0, breakingChanges.Count, "There should be no breaking changes when a event is changed from protected to protected internal");
 
-		#region FieldTests
+            breakingChanges = MetadataComparer.CompareTypes(protectedInternalEvent, publicEvent);
+            AssertX.Equal(0, breakingChanges.Count, "There should be no breaking changes when a event is changed from protected internal to public");
 
-		[Fact]
-		public void FieldTests()
-		{
-			var context = MetadataResolutionContext.CreateFromTypes(typeof(ChangedAccessibilityFromPublicToProtectedTests));
-			var publicField = context.GetTypeDefinitionData(typeof(PublicField));
-			var protectedField = context.GetTypeDefinitionData(typeof(ProtectedField));
-			var protectedInternalField = context.GetTypeDefinitionData(typeof(ProtectedInternalField));
-			
-			var breakingChanges = MetadataComparer.CompareTypes(publicField, protectedField);
-			AssertX.Equal(1, breakingChanges.Count, "There should be one breaking change when a constant is changed from public to protected");
-			AssertX.Equal(BreakingChangeKind.ChangedAccessibilityFromPublicToProtected, breakingChanges[0].BreakingChangeKind, "The BreakingChangeKind is incorrect.");
-			AssertX.Equal(context.GetTypeDefinitionData(typeof(PublicField)).GetMember("Field"), breakingChanges[0].OldItem, "The OldItem is incorrect.");
-			AssertX.Equal(context.GetTypeDefinitionData(typeof(ProtectedField)).GetMember("Field"), breakingChanges[0].NewItem, "The NewItem is incorrect.");
-			AssertX.Null(breakingChanges[0].AssociatedData, "The AssociatedData is incorrect.");
+            breakingChanges = MetadataComparer.CompareTypes(protectedInternalEvent, protectedEvent);
+            AssertX.Equal(0, breakingChanges.Count, "There should be no breaking changes when a event is changed from protected internal to protected");
+        }
 
-			breakingChanges = MetadataComparer.CompareTypes(publicField, protectedInternalField);
-			AssertX.Equal(1, breakingChanges.Count, "There should be one breaking change when a field is changed from public to protected internal");
-			AssertX.Equal(BreakingChangeKind.ChangedAccessibilityFromPublicToProtected, breakingChanges[0].BreakingChangeKind, "The BreakingChangeKind is incorrect.");
-			AssertX.Equal(context.GetTypeDefinitionData(typeof(PublicField)).GetMember("Field"), breakingChanges[0].OldItem, "The OldItem is incorrect.");
-			AssertX.Equal(context.GetTypeDefinitionData(typeof(ProtectedInternalField)).GetMember("Field"), breakingChanges[0].NewItem, "The NewItem is incorrect.");
-			AssertX.Null(breakingChanges[0].AssociatedData, "The AssociatedData is incorrect.");
+        #endregion // EventTests
 
-			breakingChanges = MetadataComparer.CompareTypes(protectedField, publicField);
-			AssertX.Equal(0, breakingChanges.Count, "There should be no breaking changes when a field is changed from protected to public");
+        #region FieldTests
 
-			breakingChanges = MetadataComparer.CompareTypes(protectedField, protectedInternalField);
-			AssertX.Equal(0, breakingChanges.Count, "There should be no breaking changes when a field is changed from protected to protected internal");
+        [Fact]
+        public void FieldTests()
+        {
+            var context = MetadataResolutionContext.CreateFromTypes(typeof(ChangedAccessibilityFromPublicToProtectedTests));
+            var publicField = context.GetTypeDefinitionData(typeof(PublicField));
+            var protectedField = context.GetTypeDefinitionData(typeof(ProtectedField));
+            var protectedInternalField = context.GetTypeDefinitionData(typeof(ProtectedInternalField));
 
-			breakingChanges = MetadataComparer.CompareTypes(protectedInternalField, publicField);
-			AssertX.Equal(0, breakingChanges.Count, "There should be no breaking changes when a field is changed from protected internal to public");
+            var breakingChanges = MetadataComparer.CompareTypes(publicField, protectedField);
+            AssertX.Equal(1, breakingChanges.Count, "There should be one breaking change when a constant is changed from public to protected");
+            AssertX.Equal(BreakingChangeKind.ChangedAccessibilityFromPublicToProtected, breakingChanges[0].BreakingChangeKind, "The BreakingChangeKind is incorrect.");
+            AssertX.Equal(context.GetTypeDefinitionData(typeof(PublicField)).GetMember("Field"), breakingChanges[0].OldItem, "The OldItem is incorrect.");
+            AssertX.Equal(context.GetTypeDefinitionData(typeof(ProtectedField)).GetMember("Field"), breakingChanges[0].NewItem, "The NewItem is incorrect.");
+            AssertX.Null(breakingChanges[0].AssociatedData, "The AssociatedData is incorrect.");
 
-			breakingChanges = MetadataComparer.CompareTypes(protectedInternalField, protectedField);
-			AssertX.Equal(0, breakingChanges.Count, "There should be no breaking changes when a field is changed from protected internal to protected");
-		}
+            breakingChanges = MetadataComparer.CompareTypes(publicField, protectedInternalField);
+            AssertX.Equal(1, breakingChanges.Count, "There should be one breaking change when a field is changed from public to protected internal");
+            AssertX.Equal(BreakingChangeKind.ChangedAccessibilityFromPublicToProtected, breakingChanges[0].BreakingChangeKind, "The BreakingChangeKind is incorrect.");
+            AssertX.Equal(context.GetTypeDefinitionData(typeof(PublicField)).GetMember("Field"), breakingChanges[0].OldItem, "The OldItem is incorrect.");
+            AssertX.Equal(context.GetTypeDefinitionData(typeof(ProtectedInternalField)).GetMember("Field"), breakingChanges[0].NewItem, "The NewItem is incorrect.");
+            AssertX.Null(breakingChanges[0].AssociatedData, "The AssociatedData is incorrect.");
 
-		#endregion // FieldTests
+            breakingChanges = MetadataComparer.CompareTypes(protectedField, publicField);
+            AssertX.Equal(0, breakingChanges.Count, "There should be no breaking changes when a field is changed from protected to public");
 
-		#region IndexerTests
+            breakingChanges = MetadataComparer.CompareTypes(protectedField, protectedInternalField);
+            AssertX.Equal(0, breakingChanges.Count, "There should be no breaking changes when a field is changed from protected to protected internal");
 
-		[Fact]
-		public void IndexerTests()
-		{
-			var context = MetadataResolutionContext.CreateFromTypes(typeof(ChangedAccessibilityFromPublicToProtectedTests));
-			var publicIndexer = context.GetTypeDefinitionData(typeof(PublicIndexer));
-			var protectedIndexer = context.GetTypeDefinitionData(typeof(ProtectedIndexer));
-			var protectedInternalIndexer = context.GetTypeDefinitionData(typeof(ProtectedInternalIndexer));
-			
-			var breakingChanges = MetadataComparer.CompareTypes(publicIndexer, protectedIndexer);
-			AssertX.Equal(1, breakingChanges.Count, "There should be one breaking change when a constant is changed from public to protected");
-			AssertX.Equal(BreakingChangeKind.ChangedAccessibilityFromPublicToProtected, breakingChanges[0].BreakingChangeKind, "The BreakingChangeKind is incorrect.");
-			AssertX.Equal(context.GetTypeDefinitionData(typeof(PublicIndexer)).GetMember("Item"), breakingChanges[0].OldItem, "The OldItem is incorrect.");
-			AssertX.Equal(context.GetTypeDefinitionData(typeof(ProtectedIndexer)).GetMember("Item"), breakingChanges[0].NewItem, "The NewItem is incorrect.");
-			AssertX.Null(breakingChanges[0].AssociatedData, "The AssociatedData is incorrect.");
+            breakingChanges = MetadataComparer.CompareTypes(protectedInternalField, publicField);
+            AssertX.Equal(0, breakingChanges.Count, "There should be no breaking changes when a field is changed from protected internal to public");
 
-			breakingChanges = MetadataComparer.CompareTypes(publicIndexer, protectedInternalIndexer);
-			AssertX.Equal(1, breakingChanges.Count, "There should be one breaking change when a indexer is changed from public to protected internal");
-			AssertX.Equal(BreakingChangeKind.ChangedAccessibilityFromPublicToProtected, breakingChanges[0].BreakingChangeKind, "The BreakingChangeKind is incorrect.");
-			AssertX.Equal(context.GetTypeDefinitionData(typeof(PublicIndexer)).GetMember("Item"), breakingChanges[0].OldItem, "The OldItem is incorrect.");
-			AssertX.Equal(context.GetTypeDefinitionData(typeof(ProtectedInternalIndexer)).GetMember("Item"), breakingChanges[0].NewItem, "The NewItem is incorrect.");
-			AssertX.Null(breakingChanges[0].AssociatedData, "The AssociatedData is incorrect.");
+            breakingChanges = MetadataComparer.CompareTypes(protectedInternalField, protectedField);
+            AssertX.Equal(0, breakingChanges.Count, "There should be no breaking changes when a field is changed from protected internal to protected");
+        }
 
-			breakingChanges = MetadataComparer.CompareTypes(protectedIndexer, publicIndexer);
-			AssertX.Equal(0, breakingChanges.Count, "There should be no breaking changes when a indexer is changed from protected to public");
+        #endregion // FieldTests
 
-			breakingChanges = MetadataComparer.CompareTypes(protectedIndexer, protectedInternalIndexer);
-			AssertX.Equal(0, breakingChanges.Count, "There should be no breaking changes when a indexer is changed from protected to protected internal");
+        #region IndexerTests
 
-			breakingChanges = MetadataComparer.CompareTypes(protectedInternalIndexer, publicIndexer);
-			AssertX.Equal(0, breakingChanges.Count, "There should be no breaking changes when a indexer is changed from protected internal to public");
+        [Fact]
+        public void IndexerTests()
+        {
+            var context = MetadataResolutionContext.CreateFromTypes(typeof(ChangedAccessibilityFromPublicToProtectedTests));
+            var publicIndexer = context.GetTypeDefinitionData(typeof(PublicIndexer));
+            var protectedIndexer = context.GetTypeDefinitionData(typeof(ProtectedIndexer));
+            var protectedInternalIndexer = context.GetTypeDefinitionData(typeof(ProtectedInternalIndexer));
 
-			breakingChanges = MetadataComparer.CompareTypes(protectedInternalIndexer, protectedIndexer);
-			AssertX.Equal(0, breakingChanges.Count, "There should be no breaking changes when a indexer is changed from protected internal to protected");
-		}
+            var breakingChanges = MetadataComparer.CompareTypes(publicIndexer, protectedIndexer);
+            AssertX.Equal(1, breakingChanges.Count, "There should be one breaking change when a constant is changed from public to protected");
+            AssertX.Equal(BreakingChangeKind.ChangedAccessibilityFromPublicToProtected, breakingChanges[0].BreakingChangeKind, "The BreakingChangeKind is incorrect.");
+            AssertX.Equal(context.GetTypeDefinitionData(typeof(PublicIndexer)).GetMember("Item"), breakingChanges[0].OldItem, "The OldItem is incorrect.");
+            AssertX.Equal(context.GetTypeDefinitionData(typeof(ProtectedIndexer)).GetMember("Item"), breakingChanges[0].NewItem, "The NewItem is incorrect.");
+            AssertX.Null(breakingChanges[0].AssociatedData, "The AssociatedData is incorrect.");
 
-		#endregion // IndexerTests
+            breakingChanges = MetadataComparer.CompareTypes(publicIndexer, protectedInternalIndexer);
+            AssertX.Equal(1, breakingChanges.Count, "There should be one breaking change when a indexer is changed from public to protected internal");
+            AssertX.Equal(BreakingChangeKind.ChangedAccessibilityFromPublicToProtected, breakingChanges[0].BreakingChangeKind, "The BreakingChangeKind is incorrect.");
+            AssertX.Equal(context.GetTypeDefinitionData(typeof(PublicIndexer)).GetMember("Item"), breakingChanges[0].OldItem, "The OldItem is incorrect.");
+            AssertX.Equal(context.GetTypeDefinitionData(typeof(ProtectedInternalIndexer)).GetMember("Item"), breakingChanges[0].NewItem, "The NewItem is incorrect.");
+            AssertX.Null(breakingChanges[0].AssociatedData, "The AssociatedData is incorrect.");
 
-		#region MethodTests
+            breakingChanges = MetadataComparer.CompareTypes(protectedIndexer, publicIndexer);
+            AssertX.Equal(0, breakingChanges.Count, "There should be no breaking changes when a indexer is changed from protected to public");
 
-		[Fact]
-		public void MethodTests()
-		{
-			var context = MetadataResolutionContext.CreateFromTypes(typeof(ChangedAccessibilityFromPublicToProtectedTests));
-			var publicMethod = context.GetTypeDefinitionData(typeof(PublicMethod));
-			var protectedMethod = context.GetTypeDefinitionData(typeof(ProtectedMethod));
-			var protectedInternalMethod = context.GetTypeDefinitionData(typeof(ProtectedInternalMethod));
-			
-			var breakingChanges = MetadataComparer.CompareTypes(publicMethod, protectedMethod);
-			AssertX.Equal(1, breakingChanges.Count, "There should be one breaking change when a constant is changed from public to protected");
-			AssertX.Equal(BreakingChangeKind.ChangedAccessibilityFromPublicToProtected, breakingChanges[0].BreakingChangeKind, "The BreakingChangeKind is incorrect.");
-			AssertX.Equal(context.GetTypeDefinitionData(typeof(PublicMethod)).GetMember("Method"), breakingChanges[0].OldItem, "The OldItem is incorrect.");
-			AssertX.Equal(context.GetTypeDefinitionData(typeof(ProtectedMethod)).GetMember("Method"), breakingChanges[0].NewItem, "The NewItem is incorrect.");
-			AssertX.Null(breakingChanges[0].AssociatedData, "The AssociatedData is incorrect.");
+            breakingChanges = MetadataComparer.CompareTypes(protectedIndexer, protectedInternalIndexer);
+            AssertX.Equal(0, breakingChanges.Count, "There should be no breaking changes when a indexer is changed from protected to protected internal");
 
-			breakingChanges = MetadataComparer.CompareTypes(publicMethod, protectedInternalMethod);
-			AssertX.Equal(1, breakingChanges.Count, "There should be one breaking change when a method is changed from public to protected internal");
-			AssertX.Equal(BreakingChangeKind.ChangedAccessibilityFromPublicToProtected, breakingChanges[0].BreakingChangeKind, "The BreakingChangeKind is incorrect.");
-			AssertX.Equal(context.GetTypeDefinitionData(typeof(PublicMethod)).GetMember("Method"), breakingChanges[0].OldItem, "The OldItem is incorrect.");
-			AssertX.Equal(context.GetTypeDefinitionData(typeof(ProtectedInternalMethod)).GetMember("Method"), breakingChanges[0].NewItem, "The NewItem is incorrect.");
-			AssertX.Null(breakingChanges[0].AssociatedData, "The AssociatedData is incorrect.");
+            breakingChanges = MetadataComparer.CompareTypes(protectedInternalIndexer, publicIndexer);
+            AssertX.Equal(0, breakingChanges.Count, "There should be no breaking changes when a indexer is changed from protected internal to public");
 
-			breakingChanges = MetadataComparer.CompareTypes(protectedMethod, publicMethod);
-			AssertX.Equal(0, breakingChanges.Count, "There should be no breaking changes when a method is changed from protected to public");
+            breakingChanges = MetadataComparer.CompareTypes(protectedInternalIndexer, protectedIndexer);
+            AssertX.Equal(0, breakingChanges.Count, "There should be no breaking changes when a indexer is changed from protected internal to protected");
+        }
 
-			breakingChanges = MetadataComparer.CompareTypes(protectedMethod, protectedInternalMethod);
-			AssertX.Equal(0, breakingChanges.Count, "There should be no breaking changes when a method is changed from protected to protected internal");
+        #endregion // IndexerTests
 
-			breakingChanges = MetadataComparer.CompareTypes(protectedInternalMethod, publicMethod);
-			AssertX.Equal(0, breakingChanges.Count, "There should be no breaking changes when a method is changed from protected internal to public");
+        #region MethodTests
 
-			breakingChanges = MetadataComparer.CompareTypes(protectedInternalMethod, protectedMethod);
-			AssertX.Equal(0, breakingChanges.Count, "There should be no breaking changes when a method is changed from protected internal to protected");
-		}
+        [Fact]
+        public void MethodTests()
+        {
+            var context = MetadataResolutionContext.CreateFromTypes(typeof(ChangedAccessibilityFromPublicToProtectedTests));
+            var publicMethod = context.GetTypeDefinitionData(typeof(PublicMethod));
+            var protectedMethod = context.GetTypeDefinitionData(typeof(ProtectedMethod));
+            var protectedInternalMethod = context.GetTypeDefinitionData(typeof(ProtectedInternalMethod));
 
-		#endregion // MethodTests
+            var breakingChanges = MetadataComparer.CompareTypes(publicMethod, protectedMethod);
+            AssertX.Equal(1, breakingChanges.Count, "There should be one breaking change when a constant is changed from public to protected");
+            AssertX.Equal(BreakingChangeKind.ChangedAccessibilityFromPublicToProtected, breakingChanges[0].BreakingChangeKind, "The BreakingChangeKind is incorrect.");
+            AssertX.Equal(context.GetTypeDefinitionData(typeof(PublicMethod)).GetMember("Method"), breakingChanges[0].OldItem, "The OldItem is incorrect.");
+            AssertX.Equal(context.GetTypeDefinitionData(typeof(ProtectedMethod)).GetMember("Method"), breakingChanges[0].NewItem, "The NewItem is incorrect.");
+            AssertX.Null(breakingChanges[0].AssociatedData, "The AssociatedData is incorrect.");
 
-		#region PropertyTests
+            breakingChanges = MetadataComparer.CompareTypes(publicMethod, protectedInternalMethod);
+            AssertX.Equal(1, breakingChanges.Count, "There should be one breaking change when a method is changed from public to protected internal");
+            AssertX.Equal(BreakingChangeKind.ChangedAccessibilityFromPublicToProtected, breakingChanges[0].BreakingChangeKind, "The BreakingChangeKind is incorrect.");
+            AssertX.Equal(context.GetTypeDefinitionData(typeof(PublicMethod)).GetMember("Method"), breakingChanges[0].OldItem, "The OldItem is incorrect.");
+            AssertX.Equal(context.GetTypeDefinitionData(typeof(ProtectedInternalMethod)).GetMember("Method"), breakingChanges[0].NewItem, "The NewItem is incorrect.");
+            AssertX.Null(breakingChanges[0].AssociatedData, "The AssociatedData is incorrect.");
 
-		[Fact]
-		public void PropertyTests()
-		{
-			var context = MetadataResolutionContext.CreateFromTypes(typeof(ChangedAccessibilityFromPublicToProtectedTests));
-			var publicProperty = context.GetTypeDefinitionData(typeof(PublicProperty));
-			var protectedProperty = context.GetTypeDefinitionData(typeof(ProtectedProperty));
-			var protectedInternalProperty = context.GetTypeDefinitionData(typeof(ProtectedInternalProperty));
-			
-			var breakingChanges = MetadataComparer.CompareTypes(publicProperty, protectedProperty);
-			AssertX.Equal(1, breakingChanges.Count, "There should be one breaking change when a constant is changed from public to protected");
-			AssertX.Equal(BreakingChangeKind.ChangedAccessibilityFromPublicToProtected, breakingChanges[0].BreakingChangeKind, "The BreakingChangeKind is incorrect.");
-			AssertX.Equal(context.GetTypeDefinitionData(typeof(PublicProperty)).GetMember("Property"), breakingChanges[0].OldItem, "The OldItem is incorrect.");
-			AssertX.Equal(context.GetTypeDefinitionData(typeof(ProtectedProperty)).GetMember("Property"), breakingChanges[0].NewItem, "The NewItem is incorrect.");
-			AssertX.Null(breakingChanges[0].AssociatedData, "The AssociatedData is incorrect.");
+            breakingChanges = MetadataComparer.CompareTypes(protectedMethod, publicMethod);
+            AssertX.Equal(0, breakingChanges.Count, "There should be no breaking changes when a method is changed from protected to public");
 
-			breakingChanges = MetadataComparer.CompareTypes(publicProperty, protectedInternalProperty);
-			AssertX.Equal(1, breakingChanges.Count, "There should be one breaking change when a property is changed from public to protected internal");
-			AssertX.Equal(BreakingChangeKind.ChangedAccessibilityFromPublicToProtected, breakingChanges[0].BreakingChangeKind, "The BreakingChangeKind is incorrect.");
-			AssertX.Equal(context.GetTypeDefinitionData(typeof(PublicProperty)).GetMember("Property"), breakingChanges[0].OldItem, "The OldItem is incorrect.");
-			AssertX.Equal(context.GetTypeDefinitionData(typeof(ProtectedInternalProperty)).GetMember("Property"), breakingChanges[0].NewItem, "The NewItem is incorrect.");
-			AssertX.Null(breakingChanges[0].AssociatedData, "The AssociatedData is incorrect.");
+            breakingChanges = MetadataComparer.CompareTypes(protectedMethod, protectedInternalMethod);
+            AssertX.Equal(0, breakingChanges.Count, "There should be no breaking changes when a method is changed from protected to protected internal");
 
-			breakingChanges = MetadataComparer.CompareTypes(protectedProperty, publicProperty);
-			AssertX.Equal(0, breakingChanges.Count, "There should be no breaking changes when a property is changed from protected to public");
+            breakingChanges = MetadataComparer.CompareTypes(protectedInternalMethod, publicMethod);
+            AssertX.Equal(0, breakingChanges.Count, "There should be no breaking changes when a method is changed from protected internal to public");
 
-			breakingChanges = MetadataComparer.CompareTypes(protectedProperty, protectedInternalProperty);
-			AssertX.Equal(0, breakingChanges.Count, "There should be no breaking changes when a property is changed from protected to protected internal");
+            breakingChanges = MetadataComparer.CompareTypes(protectedInternalMethod, protectedMethod);
+            AssertX.Equal(0, breakingChanges.Count, "There should be no breaking changes when a method is changed from protected internal to protected");
+        }
 
-			breakingChanges = MetadataComparer.CompareTypes(protectedInternalProperty, publicProperty);
-			AssertX.Equal(0, breakingChanges.Count, "There should be no breaking changes when a property is changed from protected internal to public");
+        #endregion // MethodTests
 
-			breakingChanges = MetadataComparer.CompareTypes(protectedInternalProperty, protectedProperty);
-			AssertX.Equal(0, breakingChanges.Count, "There should be no breaking changes when a property is changed from protected internal to protected");
-		}
+        #region PropertyTests
 
-		#endregion // PropertyTests
+        [Fact]
+        public void PropertyTests()
+        {
+            var context = MetadataResolutionContext.CreateFromTypes(typeof(ChangedAccessibilityFromPublicToProtectedTests));
+            var publicProperty = context.GetTypeDefinitionData(typeof(PublicProperty));
+            var protectedProperty = context.GetTypeDefinitionData(typeof(ProtectedProperty));
+            var protectedInternalProperty = context.GetTypeDefinitionData(typeof(ProtectedInternalProperty));
 
-		#region TypeTests
+            var breakingChanges = MetadataComparer.CompareTypes(publicProperty, protectedProperty);
+            AssertX.Equal(1, breakingChanges.Count, "There should be one breaking change when a constant is changed from public to protected");
+            AssertX.Equal(BreakingChangeKind.ChangedAccessibilityFromPublicToProtected, breakingChanges[0].BreakingChangeKind, "The BreakingChangeKind is incorrect.");
+            AssertX.Equal(context.GetTypeDefinitionData(typeof(PublicProperty)).GetMember("Property"), breakingChanges[0].OldItem, "The OldItem is incorrect.");
+            AssertX.Equal(context.GetTypeDefinitionData(typeof(ProtectedProperty)).GetMember("Property"), breakingChanges[0].NewItem, "The NewItem is incorrect.");
+            AssertX.Null(breakingChanges[0].AssociatedData, "The AssociatedData is incorrect.");
 
-		[Fact]
-		public void TypeTests()
-		{
-			var context = MetadataResolutionContext.CreateFromTypes(typeof(ChangedAccessibilityFromPublicToProtectedTests));
-			var publicNestedType = context.GetTypeDefinitionData(typeof(PublicNestedType));
-			var protectedNestedType = context.GetTypeDefinitionData(typeof(ProtectedNestedType));
-			var protectedInternalNestedType = context.GetTypeDefinitionData(typeof(ProtectedInternalNestedType));
-			
-			var breakingChanges = MetadataComparer.CompareTypes(publicNestedType, protectedNestedType);
-			AssertX.Equal(1, breakingChanges.Count, "There should be one breaking change when a nested type is changed from public to protected");
-			AssertX.Equal(BreakingChangeKind.ChangedAccessibilityFromPublicToProtected, breakingChanges[0].BreakingChangeKind, "The BreakingChangeKind is incorrect.");
-			AssertX.Equal(context.GetTypeDefinitionData(typeof(PublicNestedType.NestedType)), breakingChanges[0].OldItem, "The OldItem is incorrect.");
-			AssertX.Equal(context.GetTypeDefinitionData(typeof(ProtectedNestedType)).GetMember("NestedType"), breakingChanges[0].NewItem, "The NewItem is incorrect.");
-			AssertX.Null(breakingChanges[0].AssociatedData, "The AssociatedData is incorrect.");
+            breakingChanges = MetadataComparer.CompareTypes(publicProperty, protectedInternalProperty);
+            AssertX.Equal(1, breakingChanges.Count, "There should be one breaking change when a property is changed from public to protected internal");
+            AssertX.Equal(BreakingChangeKind.ChangedAccessibilityFromPublicToProtected, breakingChanges[0].BreakingChangeKind, "The BreakingChangeKind is incorrect.");
+            AssertX.Equal(context.GetTypeDefinitionData(typeof(PublicProperty)).GetMember("Property"), breakingChanges[0].OldItem, "The OldItem is incorrect.");
+            AssertX.Equal(context.GetTypeDefinitionData(typeof(ProtectedInternalProperty)).GetMember("Property"), breakingChanges[0].NewItem, "The NewItem is incorrect.");
+            AssertX.Null(breakingChanges[0].AssociatedData, "The AssociatedData is incorrect.");
 
-			breakingChanges = MetadataComparer.CompareTypes(publicNestedType, protectedInternalNestedType);
-			AssertX.Equal(1, breakingChanges.Count, "There should be one breaking change when a nested type is changed from public to protected internal");
-			AssertX.Equal(BreakingChangeKind.ChangedAccessibilityFromPublicToProtected, breakingChanges[0].BreakingChangeKind, "The BreakingChangeKind is incorrect.");
-			AssertX.Equal(context.GetTypeDefinitionData(typeof(PublicNestedType.NestedType)), breakingChanges[0].OldItem, "The OldItem is incorrect.");
-			AssertX.Equal(context.GetTypeDefinitionData(typeof(ProtectedInternalNestedType.NestedType)), breakingChanges[0].NewItem, "The NewItem is incorrect.");
-			AssertX.Null(breakingChanges[0].AssociatedData, "The AssociatedData is incorrect.");
+            breakingChanges = MetadataComparer.CompareTypes(protectedProperty, publicProperty);
+            AssertX.Equal(0, breakingChanges.Count, "There should be no breaking changes when a property is changed from protected to public");
 
-			breakingChanges = MetadataComparer.CompareTypes(protectedNestedType, publicNestedType);
-			AssertX.Equal(0, breakingChanges.Count, "There should be no breaking changes when a nested type is changed from protected to public");
+            breakingChanges = MetadataComparer.CompareTypes(protectedProperty, protectedInternalProperty);
+            AssertX.Equal(0, breakingChanges.Count, "There should be no breaking changes when a property is changed from protected to protected internal");
 
-			breakingChanges = MetadataComparer.CompareTypes(protectedNestedType, protectedInternalNestedType);
-			AssertX.Equal(0, breakingChanges.Count, "There should be no breaking changes when a nested type is changed from protected to protected internal");
+            breakingChanges = MetadataComparer.CompareTypes(protectedInternalProperty, publicProperty);
+            AssertX.Equal(0, breakingChanges.Count, "There should be no breaking changes when a property is changed from protected internal to public");
 
-			breakingChanges = MetadataComparer.CompareTypes(protectedInternalNestedType, publicNestedType);
-			AssertX.Equal(0, breakingChanges.Count, "There should be no breaking changes when a nested type is changed from protected internal to public");
+            breakingChanges = MetadataComparer.CompareTypes(protectedInternalProperty, protectedProperty);
+            AssertX.Equal(0, breakingChanges.Count, "There should be no breaking changes when a property is changed from protected internal to protected");
+        }
 
-			breakingChanges = MetadataComparer.CompareTypes(protectedInternalNestedType, protectedNestedType);
-			AssertX.Equal(0, breakingChanges.Count, "There should be no breaking changes when a nested type is changed from protected internal to protected");
-		}
+        #endregion // PropertyTests
 
-		#endregion // TypeTests
-	}
+        #region TypeTests
+
+        [Fact]
+        public void TypeTests()
+        {
+            var context = MetadataResolutionContext.CreateFromTypes(typeof(ChangedAccessibilityFromPublicToProtectedTests));
+            var publicNestedType = context.GetTypeDefinitionData(typeof(PublicNestedType));
+            var protectedNestedType = context.GetTypeDefinitionData(typeof(ProtectedNestedType));
+            var protectedInternalNestedType = context.GetTypeDefinitionData(typeof(ProtectedInternalNestedType));
+
+            var breakingChanges = MetadataComparer.CompareTypes(publicNestedType, protectedNestedType);
+            AssertX.Equal(1, breakingChanges.Count, "There should be one breaking change when a nested type is changed from public to protected");
+            AssertX.Equal(BreakingChangeKind.ChangedAccessibilityFromPublicToProtected, breakingChanges[0].BreakingChangeKind, "The BreakingChangeKind is incorrect.");
+            AssertX.Equal(context.GetTypeDefinitionData(typeof(PublicNestedType.NestedType)), breakingChanges[0].OldItem, "The OldItem is incorrect.");
+            AssertX.Equal(context.GetTypeDefinitionData(typeof(ProtectedNestedType)).GetMember("NestedType"), breakingChanges[0].NewItem, "The NewItem is incorrect.");
+            AssertX.Null(breakingChanges[0].AssociatedData, "The AssociatedData is incorrect.");
+
+            breakingChanges = MetadataComparer.CompareTypes(publicNestedType, protectedInternalNestedType);
+            AssertX.Equal(1, breakingChanges.Count, "There should be one breaking change when a nested type is changed from public to protected internal");
+            AssertX.Equal(BreakingChangeKind.ChangedAccessibilityFromPublicToProtected, breakingChanges[0].BreakingChangeKind, "The BreakingChangeKind is incorrect.");
+            AssertX.Equal(context.GetTypeDefinitionData(typeof(PublicNestedType.NestedType)), breakingChanges[0].OldItem, "The OldItem is incorrect.");
+            AssertX.Equal(context.GetTypeDefinitionData(typeof(ProtectedInternalNestedType.NestedType)), breakingChanges[0].NewItem, "The NewItem is incorrect.");
+            AssertX.Null(breakingChanges[0].AssociatedData, "The AssociatedData is incorrect.");
+
+            breakingChanges = MetadataComparer.CompareTypes(protectedNestedType, publicNestedType);
+            AssertX.Equal(0, breakingChanges.Count, "There should be no breaking changes when a nested type is changed from protected to public");
+
+            breakingChanges = MetadataComparer.CompareTypes(protectedNestedType, protectedInternalNestedType);
+            AssertX.Equal(0, breakingChanges.Count, "There should be no breaking changes when a nested type is changed from protected to protected internal");
+
+            breakingChanges = MetadataComparer.CompareTypes(protectedInternalNestedType, publicNestedType);
+            AssertX.Equal(0, breakingChanges.Count, "There should be no breaking changes when a nested type is changed from protected internal to public");
+
+            breakingChanges = MetadataComparer.CompareTypes(protectedInternalNestedType, protectedNestedType);
+            AssertX.Equal(0, breakingChanges.Count, "There should be no breaking changes when a nested type is changed from protected internal to protected");
+        }
+
+        #endregion // TypeTests
+    }
 }

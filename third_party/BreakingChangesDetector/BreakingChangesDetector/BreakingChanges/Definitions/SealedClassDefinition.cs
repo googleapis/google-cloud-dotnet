@@ -2,6 +2,7 @@
     MIT License
 
     Copyright(c) 2014-2018 Infragistics, Inc.
+    Copyright 2018 Google LLC
 
     Permission is hereby granted, free of charge, to any person obtaining a copy
     of this software and associated documentation files (the "Software"), to deal
@@ -31,32 +32,32 @@ using System.Threading.Tasks;
 
 namespace BreakingChangesDetector.BreakingChanges.Definitions
 {
-	internal class SealedClassDefinition : BreakingChangeDefinitionBase
-	{
-		public static readonly SealedClassDefinition Instance = new SealedClassDefinition();
+    internal class SealedClassDefinition : BreakingChangeDefinitionBase
+    {
+        public static readonly SealedClassDefinition Instance = new SealedClassDefinition();
 
-		private SealedClassDefinition() { }
+        private SealedClassDefinition() { }
 
-		public override void CompareItems(CompareItemsContext context)
-		{
-			var oldType = (TypeDefinitionData)context.OldItem;
-			var newType = (TypeDefinitionData)context.NewItem;
+        public override void CompareItems(CompareItemsContext context)
+        {
+            var oldType = (TypeDefinitionData)context.OldItem;
+            var newType = (TypeDefinitionData)context.NewItem;
 
-			if (oldType.GetMembers(".ctor").Count != 0 &&
-				oldType.IsSealed == false && newType.IsSealed)
-			{
-				context.BreakingChanges.Add(new SealedClass(oldType, newType));
-			}
-		}
+            if (oldType.GetMembers(".ctor").Count != 0 &&
+                oldType.IsSealed == false && newType.IsSealed)
+            {
+                context.BreakingChanges.Add(new SealedClass(oldType, newType));
+            }
+        }
 
-		public override BreakingChangeKind BreakingChangeKind
-		{
-			get { return BreakingChangeKind.SealedClass; }
-		}
+        public override BreakingChangeKind BreakingChangeKind
+        {
+            get { return BreakingChangeKind.SealedClass; }
+        }
 
-		public override MetadataItemKinds MembersKindsHandled
-		{
-			get { return MetadataItemKinds.TypeDefinition; }
-		}
-	}
+        public override MetadataItemKinds MembersKindsHandled
+        {
+            get { return MetadataItemKinds.TypeDefinition; }
+        }
+    }
 }

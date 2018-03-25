@@ -35,42 +35,42 @@ using System.Threading.Tasks;
 
 namespace BreakingChangesDetector.MetadataItems
 {
-	/// <summary>
-	/// Abstract base class representing metadata for externally visible members declared within a type.
-	/// </summary>
-	public abstract class MemberDataBase : MetadataItemBase
-	{
-		#region Constants
+    /// <summary>
+    /// Abstract base class representing metadata for externally visible members declared within a type.
+    /// </summary>
+    public abstract class MemberDataBase : MetadataItemBase
+    {
+        #region Constants
 
-		internal const BindingFlags DeclaredOnlyFlags =
-			BindingFlags.Public | BindingFlags.NonPublic |
-			BindingFlags.Instance | BindingFlags.Static |
-			BindingFlags.DeclaredOnly;
+        internal const BindingFlags DeclaredOnlyFlags =
+            BindingFlags.Public | BindingFlags.NonPublic |
+            BindingFlags.Instance | BindingFlags.Static |
+            BindingFlags.DeclaredOnly;
 
-		#endregion // Constants
+        #endregion // Constants
 
-		#region Static Variables
+        #region Static Variables
 
-		internal static readonly List<MemberDataBase> EmptyList = new List<MemberDataBase>();
+        internal static readonly List<MemberDataBase> EmptyList = new List<MemberDataBase>();
 
-		#endregion // Static Variables
+        #endregion // Static Variables
 
-		#region Constructor
+        #region Constructor
 
-		internal MemberDataBase(string name, MemberAccessibility accessibility, MemberFlags memberFlags)
-		{
-			this.Accessibility = accessibility;
-			this.MemberFlags = memberFlags;
-			this.Name = name;
-		}
-
-		internal MemberDataBase(ISymbol underlyingSymbol, MemberAccessibility accessibility, MemberFlags memberFlags, DeclaringTypeData declaringType)
+        internal MemberDataBase(string name, MemberAccessibility accessibility, MemberFlags memberFlags)
         {
-			this.Accessibility = accessibility;
-			this.ContainingType = declaringType;
-			this.MemberFlags = memberFlags;
-			this.Name = underlyingSymbol.MetadataName;
-		}
+            this.Accessibility = accessibility;
+            this.MemberFlags = memberFlags;
+            this.Name = name;
+        }
+
+        internal MemberDataBase(ISymbol underlyingSymbol, MemberAccessibility accessibility, MemberFlags memberFlags, DeclaringTypeData declaringType)
+        {
+            this.Accessibility = accessibility;
+            this.ContainingType = declaringType;
+            this.MemberFlags = memberFlags;
+            this.Name = underlyingSymbol.MetadataName;
+        }
 
         #endregion // Constructor
 
@@ -84,150 +84,150 @@ namespace BreakingChangesDetector.MetadataItems
         /// Gets the name to use for this item in messages.
         /// </summary>
         public override string DisplayName
-		{
-			get { return this.Name; }
-		}
+        {
+            get { return this.Name; }
+        }
 
-		#endregion // DisplayName
+        #endregion // DisplayName
 
-		#region DoesMatch
+        #region DoesMatch
 
-		internal override bool DoesMatch(MetadataItemBase other)
-		{
-			if (base.DoesMatch(other) == false)
-				return false;
+        internal override bool DoesMatch(MetadataItemBase other)
+        {
+            if (base.DoesMatch(other) == false)
+                return false;
 
-			var otherTyped = other as MemberDataBase;
-			if (otherTyped == null)
-				return false;
+            var otherTyped = other as MemberDataBase;
+            if (otherTyped == null)
+                return false;
 
-			if (this.Accessibility != otherTyped.Accessibility)
-				return false;
+            if (this.Accessibility != otherTyped.Accessibility)
+                return false;
 
-			if (this.ContainingType == null ^ otherTyped.ContainingType == null)
-				return false;
+            if (this.ContainingType == null ^ otherTyped.ContainingType == null)
+                return false;
 
-			if (this.ContainingType != null && this.ContainingType.DisplayName != otherTyped.ContainingType.DisplayName)
-				return false;
+            if (this.ContainingType != null && this.ContainingType.DisplayName != otherTyped.ContainingType.DisplayName)
+                return false;
 
-			if (this.MemberFlags != otherTyped.MemberFlags)
-				return false;
+            if (this.MemberFlags != otherTyped.MemberFlags)
+                return false;
 
-			if (this.Name != otherTyped.Name)
-				return false;
+            if (this.Name != otherTyped.Name)
+                return false;
 
-			return true;
-		}
+            return true;
+        }
 
-		#endregion // DoesMatch
+        #endregion // DoesMatch
 
-		#endregion // Base Class Overrides
+        #endregion // Base Class Overrides
 
-		#region Methods
+        #region Methods
 
-		#region CanOverrideMember
-
-#if DEBUG
-		/// <summary>
-		/// Indicates whether the current member can override the specified member from a base type.
-		/// </summary>
-		/// <param name="baseMember">The member from the base type.</param>
-		/// <returns>True if the current member can override the base member; False otherwise.</returns>  
-#endif
-		internal virtual bool CanOverrideMember(MemberDataBase baseMember)
-		{
-			// Static members cannot be overridden
-			if (this.IsStatic || baseMember.IsStatic)
-				return false;
-
-			// Members which are not virtual, abstract, or override cannot be overridden.
-			if (this.IsVirtualCallType == false || baseMember.IsVirtualCallType == false)
-				return false;
-
-			return
-				this.Accessibility == baseMember.Accessibility &&
-				this.Name == baseMember.Name;
-		}
-
-		#endregion // CanOverrideMember
-
-		#region GetBaseMember
+        #region CanOverrideMember
 
 #if DEBUG
-		/// <summary>
-		/// Gets the base member this member overrides, or null if this member doesn't override anything.
-		/// </summary>
-		/// <returns></returns>  
+        /// <summary>
+        /// Indicates whether the current member can override the specified member from a base type.
+        /// </summary>
+        /// <param name="baseMember">The member from the base type.</param>
+        /// <returns>True if the current member can override the base member; False otherwise.</returns>  
 #endif
-		internal MemberDataBase GetBaseMember()
-		{
-			if (this.ContainingType == null || this.IsOverride == false)
-				return null;
+        internal virtual bool CanOverrideMember(MemberDataBase baseMember)
+        {
+            // Static members cannot be overridden
+            if (this.IsStatic || baseMember.IsStatic)
+                return false;
 
-			var baseType = this.ContainingType.BaseType;
-			while (baseType != null)
-			{
-				var members = baseType.GetMembers(this.Name).Where(m => m.MetadataItemKind == this.MetadataItemKind && m.CanBeOverridden);
-				foreach (var member in members)
-				{
-					if (this.CanOverrideMember(member))
-						return member;
-				}
+            // Members which are not virtual, abstract, or override cannot be overridden.
+            if (this.IsVirtualCallType == false || baseMember.IsVirtualCallType == false)
+                return false;
 
-				baseType = baseType.BaseType;
-			}
+            return
+                this.Accessibility == baseMember.Accessibility &&
+                this.Name == baseMember.Name;
+        }
 
-			return null;
-		}
+        #endregion // CanOverrideMember
 
-		#endregion // GetBaseMember
-
-		#region IsEquivalentToNewMember
+        #region GetBaseMember
 
 #if DEBUG
-		/// <summary>
-		/// Indicates whether a new member of the same type and name is logically the same member as the current member, just from a newer build.
-		/// </summary> 
+        /// <summary>
+        /// Gets the base member this member overrides, or null if this member doesn't override anything.
+        /// </summary>
+        /// <returns></returns>  
 #endif
-		internal virtual bool IsEquivalentToNewMember(MemberDataBase newMember, AssemblyFamily newAssemblyFamily)
-		{
-			if (this.IsNameUsedToVerifyEquivalence && this.Name != newMember.Name)
-				return false;
+        internal MemberDataBase GetBaseMember()
+        {
+            if (this.ContainingType == null || this.IsOverride == false)
+                return null;
 
-			return this.MetadataItemKind == newMember.MetadataItemKind;
-		}
+            var baseType = this.ContainingType.BaseType;
+            while (baseType != null)
+            {
+                var members = baseType.GetMembers(this.Name).Where(m => m.MetadataItemKind == this.MetadataItemKind && m.CanBeOverridden);
+                foreach (var member in members)
+                {
+                    if (this.CanOverrideMember(member))
+                        return member;
+                }
 
-		#endregion // IsEquivalentToNewMember
+                baseType = baseType.BaseType;
+            }
 
-		#region MemberDataFromReflection
+            return null;
+        }
 
-		internal static MemberDataBase MemberDataFromReflection(ISymbol symbol, DeclaringTypeData declaringType)
-		{
+        #endregion // GetBaseMember
+
+        #region IsEquivalentToNewMember
+
+#if DEBUG
+        /// <summary>
+        /// Indicates whether a new member of the same type and name is logically the same member as the current member, just from a newer build.
+        /// </summary> 
+#endif
+        internal virtual bool IsEquivalentToNewMember(MemberDataBase newMember, AssemblyFamily newAssemblyFamily)
+        {
+            if (this.IsNameUsedToVerifyEquivalence && this.Name != newMember.Name)
+                return false;
+
+            return this.MetadataItemKind == newMember.MetadataItemKind;
+        }
+
+        #endregion // IsEquivalentToNewMember
+
+        #region MemberDataFromReflection
+
+        internal static MemberDataBase MemberDataFromReflection(ISymbol symbol, DeclaringTypeData declaringType)
+        {
             // TODO: Use a symbol visitor instead?
-			switch (symbol.Kind)
-			{
-				case SymbolKind.NamedType:
-					return declaringType.AssemblyData.GetTypeData((ITypeSymbol)symbol);
+            switch (symbol.Kind)
+            {
+                case SymbolKind.NamedType:
+                    return declaringType.AssemblyData.GetTypeData((ITypeSymbol)symbol);
 
-				case SymbolKind.Method:
-					{
+                case SymbolKind.Method:
+                    {
                         var method = (IMethodSymbol)symbol;
 
-						if (method.MethodKind == MethodKind.Constructor)
+                        if (method.MethodKind == MethodKind.Constructor)
                         {
                             if (declaringType.TypeKind == TypeKind.Enum)
                             {
                                 return null;
                             }
-							return ConstructorData.ConstructorDataFromReflection(method, declaringType);
+                            return ConstructorData.ConstructorDataFromReflection(method, declaringType);
                         }
 
-						if (method.MethodKind == MethodKind.UserDefinedOperator ||
+                        if (method.MethodKind == MethodKind.UserDefinedOperator ||
                             method.MethodKind == MethodKind.Conversion)
-						{
+                        {
                             if (method.DeclaredAccessibility == Microsoft.CodeAnalysis.Accessibility.Public && method.IsStatic && method.Name.StartsWith("op_"))
-								return new OperatorData(method, declaringType);
-						}
+                                return new OperatorData(method, declaringType);
+                        }
 
                         if (method.MethodKind == MethodKind.Ordinary ||
                             method.MethodKind == MethodKind.DelegateInvoke)
@@ -238,133 +238,133 @@ namespace BreakingChangesDetector.MetadataItems
                         return null;
                     }
 
-				case SymbolKind.Field:
-					{
-						var field = (IFieldSymbol)symbol;
+                case SymbolKind.Field:
+                    {
+                        var field = (IFieldSymbol)symbol;
 
-						// Filter out the "value__" field on enums
-						if (declaringType.TypeKind == TypeKind.Enum && field.IsStatic == false)
-							return null;
+                        // Filter out the "value__" field on enums
+                        if (declaringType.TypeKind == TypeKind.Enum && field.IsStatic == false)
+                            return null;
 
-						if (field.IsConst)
-							return ConstantData.ConstantDataFromReflection(field, declaringType);
+                        if (field.IsConst)
+                            return ConstantData.ConstantDataFromReflection(field, declaringType);
 
-						return FieldData.FieldDataFromReflection(field, declaringType);
-					}
+                        return FieldData.FieldDataFromReflection(field, declaringType);
+                    }
 
-				case SymbolKind.Event:
-					return EventData.EventDataFromReflection((IEventSymbol)symbol, declaringType);
+                case SymbolKind.Event:
+                    return EventData.EventDataFromReflection((IEventSymbol)symbol, declaringType);
 
-				case SymbolKind.Property:
-					{
-						var property = (IPropertySymbol)symbol;
-						if (property.IsIndexer)
-							return IndexerData.IndexerDataFromReflection(property, declaringType);
+                case SymbolKind.Property:
+                    {
+                        var property = (IPropertySymbol)symbol;
+                        if (property.IsIndexer)
+                            return IndexerData.IndexerDataFromReflection(property, declaringType);
 
-						return PropertyData.PropertyDataFromReflection(property, declaringType);
-					}
+                        return PropertyData.PropertyDataFromReflection(property, declaringType);
+                    }
 
-				default:
-					Debug.Fail("Unknown SymbolKind: " + symbol.Kind);
-					return null;
-			}
-		}
+                default:
+                    Debug.Fail("Unknown SymbolKind: " + symbol.Kind);
+                    return null;
+            }
+        }
 
-		#endregion // MemberDataFromReflection
+        #endregion // MemberDataFromReflection
 
-		#region ReplaceGenericTypeParameters
+        #region ReplaceGenericTypeParameters
 
 #if DEBUG
-		/// <summary>
-		/// Replaces all type parameters used by the member with their associated generic arguments specified in a constructed generic type.
-		/// </summary>
-		/// <param name="genericParameters">The generic parameters being replaced.</param>
-		/// <param name="genericArguments">The generic arguments replacing the parameters.</param>
-		/// <returns>A new member with the replaced type parameters or the current instance if the member does not use any of the generic parameters.</returns> 
+        /// <summary>
+        /// Replaces all type parameters used by the member with their associated generic arguments specified in a constructed generic type.
+        /// </summary>
+        /// <param name="genericParameters">The generic parameters being replaced.</param>
+        /// <param name="genericArguments">The generic arguments replacing the parameters.</param>
+        /// <returns>A new member with the replaced type parameters or the current instance if the member does not use any of the generic parameters.</returns> 
 #endif
-		internal abstract MemberDataBase ReplaceGenericTypeParameters(GenericTypeParameterCollection genericParameters, GenericTypeArgumentCollection genericArguments);
+        internal abstract MemberDataBase ReplaceGenericTypeParameters(GenericTypeParameterCollection genericParameters, GenericTypeArgumentCollection genericArguments);
 
-		#endregion // ReplaceGenericTypeParameters
+        #endregion // ReplaceGenericTypeParameters
 
-		#endregion // Methods
+        #endregion // Methods
 
-		#region Properties
+        #region Properties
 
-		#region Public Properties
+        #region Public Properties
 
-		/// <summary>
-		/// Gets the external accessibility of the member, which indicates whether it is public or protected.
-		/// </summary>
-		public MemberAccessibility Accessibility { get; private set; }
+        /// <summary>
+        /// Gets the external accessibility of the member, which indicates whether it is public or protected.
+        /// </summary>
+        public MemberAccessibility Accessibility { get; private set; }
 
-		/// <summary>
-		/// Gets the <see cref="T:AssemblyData"/> representing the assembly in which the member is defined.
-		/// </summary>
-		public virtual AssemblyData AssemblyData { get { return this.ContainingType == null ? null : this.ContainingType.AssemblyData; } }
+        /// <summary>
+        /// Gets the <see cref="T:AssemblyData"/> representing the assembly in which the member is defined.
+        /// </summary>
+        public virtual AssemblyData AssemblyData { get { return this.ContainingType == null ? null : this.ContainingType.AssemblyData; } }
 
-		/// <summary>
-		/// Gets the value indicating whether the member can be overridden in derived types.
-		/// </summary>
-		public bool CanBeOverridden { get { return this.IsSealed == false && this.IsVirtualCallType; } }
+        /// <summary>
+        /// Gets the value indicating whether the member can be overridden in derived types.
+        /// </summary>
+        public bool CanBeOverridden { get { return this.IsSealed == false && this.IsVirtualCallType; } }
 
-		/// <summary>
-		/// Gets the type in which this member is declared.
-		/// </summary>
-		public DeclaringTypeData ContainingType { get; internal set; } // TODO: Make private?
+        /// <summary>
+        /// Gets the type in which this member is declared.
+        /// </summary>
+        public DeclaringTypeData ContainingType { get; internal set; } // TODO: Make private?
 
-		/// <summary>
-		/// Gets the value indicating whether the member is marked abstract.
-		/// </summary>
-		public bool IsAbstract { get { return this.MemberFlags.HasFlag(MemberFlags.Abstract); } }
+        /// <summary>
+        /// Gets the value indicating whether the member is marked abstract.
+        /// </summary>
+        public bool IsAbstract { get { return this.MemberFlags.HasFlag(MemberFlags.Abstract); } }
 
-		/// <summary>
-		/// Gets the value indicating whether the member is and instance member.
-		/// </summary>
-		public bool IsInstance { get { return this.IsStatic == false; } }
+        /// <summary>
+        /// Gets the value indicating whether the member is and instance member.
+        /// </summary>
+        public bool IsInstance { get { return this.IsStatic == false; } }
 
-		/// <summary>
-		/// Gets the value indicating whether the <see cref="Name"/> of the member is primarily used to determine whether it is equivalent to another member.
-		/// </summary>
-		public virtual bool IsNameUsedToVerifyEquivalence { get { return true; } }
+        /// <summary>
+        /// Gets the value indicating whether the <see cref="Name"/> of the member is primarily used to determine whether it is equivalent to another member.
+        /// </summary>
+        public virtual bool IsNameUsedToVerifyEquivalence { get { return true; } }
 
-		/// <summary>
-		/// Gets the value indicating whether the member overrides another.
-		/// </summary>
-		public bool IsOverride { get { return this.MemberFlags.HasFlag(MemberFlags.Override); } }
+        /// <summary>
+        /// Gets the value indicating whether the member overrides another.
+        /// </summary>
+        public bool IsOverride { get { return this.MemberFlags.HasFlag(MemberFlags.Override); } }
 
-		/// <summary>
-		/// Gets the value indicating whether the member is marked sealed.
-		/// </summary>
-		public bool IsSealed { get { return this.MemberFlags.HasFlag(MemberFlags.Sealed); } }
+        /// <summary>
+        /// Gets the value indicating whether the member is marked sealed.
+        /// </summary>
+        public bool IsSealed { get { return this.MemberFlags.HasFlag(MemberFlags.Sealed); } }
 
-		/// <summary>
-		/// Gets the value indicating whether the member is marked static.
-		/// </summary>
-		public bool IsStatic { get { return this.MemberFlags.HasFlag(MemberFlags.Static); } }
+        /// <summary>
+        /// Gets the value indicating whether the member is marked static.
+        /// </summary>
+        public bool IsStatic { get { return this.MemberFlags.HasFlag(MemberFlags.Static); } }
 
-		/// <summary>
-		/// Gets the value indicating whether the member is marked virtual.
-		/// </summary>
-		public bool IsVirtual { get { return this.MemberFlags.HasFlag(MemberFlags.Virtual); } }
+        /// <summary>
+        /// Gets the value indicating whether the member is marked virtual.
+        /// </summary>
+        public bool IsVirtual { get { return this.MemberFlags.HasFlag(MemberFlags.Virtual); } }
 
-		/// <summary>
-		/// Gets the value indicating whether the member uses a virtual call type (is marked virtual, abstract, or override).
-		/// </summary>
-		public bool IsVirtualCallType { get { return (this.MemberFlags & (MemberFlags.Virtual | MemberFlags.Abstract | MemberFlags.Override)) != 0; } }
+        /// <summary>
+        /// Gets the value indicating whether the member uses a virtual call type (is marked virtual, abstract, or override).
+        /// </summary>
+        public bool IsVirtualCallType { get { return (this.MemberFlags & (MemberFlags.Virtual | MemberFlags.Abstract | MemberFlags.Override)) != 0; } }
 
-		/// <summary>
-		/// Gets the name of the member.
-		/// </summary>
-		public string Name { get; private set; }
+        /// <summary>
+        /// Gets the name of the member.
+        /// </summary>
+        public string Name { get; private set; }
 
-		#endregion // Public Properties
+        #endregion // Public Properties
 
-		#region Internal Properties
+        #region Internal Properties
 
-		internal MemberFlags MemberFlags { get; private set; }
+        internal MemberFlags MemberFlags { get; private set; }
 
-		#endregion // Internal Properties
+        #endregion // Internal Properties
 
-		#endregion // Properties
-	}
+        #endregion // Properties
+    }
 }

@@ -29,74 +29,74 @@ using BreakingChangesDetector.MetadataItems;
 
 namespace BreakingChangesDetector.UnitTests.MetadataTypesTests
 {
-	public class DefaultValueInfoTests
-	{
-		#region NullableBoolDefaultValueTests
+    public class DefaultValueInfoTests
+    {
+        #region NullableBoolDefaultValueTests
 
-		[Fact]
-		public void NullableBoolDefaultValueTests()
-		{
-			var context = MetadataResolutionContext.CreateFromTypes(typeof(DefaultValueInfoTests));
-			var typeData = context.GetTypeDefinitionData(typeof(MethodWithDefaultValues));
-			var method = typeData.GetMethod("MethodWithBools");
+        [Fact]
+        public void NullableBoolDefaultValueTests()
+        {
+            var context = MetadataResolutionContext.CreateFromTypes(typeof(DefaultValueInfoTests));
+            var typeData = context.GetTypeDefinitionData(typeof(MethodWithDefaultValues));
+            var method = typeData.GetMethod("MethodWithBools");
 
-			Assert.Null(method.Parameters[0].DefaultValue);
-			Assert.Equal(true, method.Parameters[1].DefaultValue);
-		}
+            Assert.Null(method.Parameters[0].DefaultValue);
+            Assert.Equal(true, method.Parameters[1].DefaultValue);
+        }
 
-		#endregion // NullableBoolDefaultValueTests
+        #endregion // NullableBoolDefaultValueTests
 
-		#region NullableDecimalDefaultValueTests
+        #region NullableDecimalDefaultValueTests
 
-		[Fact]
-		public void NullableDecimalDefaultValueTests()
-		{
-			var context = MetadataResolutionContext.CreateFromTypes(typeof(DefaultValueInfoTests));
-			var typeData = context.GetTypeDefinitionData(typeof(MethodWithDefaultValues));
-			var method = typeData.GetMethod("MethodWithDecimals");
+        [Fact]
+        public void NullableDecimalDefaultValueTests()
+        {
+            var context = MetadataResolutionContext.CreateFromTypes(typeof(DefaultValueInfoTests));
+            var typeData = context.GetTypeDefinitionData(typeof(MethodWithDefaultValues));
+            var method = typeData.GetMethod("MethodWithDecimals");
 
-			Assert.Null(method.Parameters[0].DefaultValue);
-			Assert.Equal(0m, method.Parameters[1].DefaultValue);
-		}
+            Assert.Null(method.Parameters[0].DefaultValue);
+            Assert.Equal(0m, method.Parameters[1].DefaultValue);
+        }
 
-		#endregion // NullableDecimalDefaultValueTests
+        #endregion // NullableDecimalDefaultValueTests
 
-		#region NullableEnumDefaultValueTests
+        #region NullableEnumDefaultValueTests
 
-		[Fact]
-		public void NullableEnumDefaultValueTests()
-		{
-			var context = MetadataResolutionContext.CreateFromTypes(typeof(DefaultValueInfoTests));
-			var typeData = context.GetTypeDefinitionData(typeof(MethodWithDefaultValues));
-			var method = typeData.GetMethod("MethodWithEnums");
+        [Fact]
+        public void NullableEnumDefaultValueTests()
+        {
+            var context = MetadataResolutionContext.CreateFromTypes(typeof(DefaultValueInfoTests));
+            var typeData = context.GetTypeDefinitionData(typeof(MethodWithDefaultValues));
+            var method = typeData.GetMethod("MethodWithEnums");
 
-			Assert.Null(method.Parameters[0].DefaultValue);
-			Assert.Equal((ulong)DateTimeKind.Local, method.Parameters[1].DefaultValue);
-		}
+            Assert.Null(method.Parameters[0].DefaultValue);
+            Assert.Equal((ulong)DateTimeKind.Local, method.Parameters[1].DefaultValue);
+        }
 
-		#endregion // NullableEnumDefaultValueTests
+        #endregion // NullableEnumDefaultValueTests
 
-		#region NullableIntDefaultValueTests
+        #region NullableIntDefaultValueTests
 
-		[Fact]
-		public void NullableIntDefaultValueTests()
-		{
-			var context = MetadataResolutionContext.CreateFromTypes(typeof(DefaultValueInfoTests));
-			var typeData = context.GetTypeDefinitionData(typeof(MethodWithDefaultValues));
-			var method = typeData.GetMethod("MethodWithInts");
+        [Fact]
+        public void NullableIntDefaultValueTests()
+        {
+            var context = MetadataResolutionContext.CreateFromTypes(typeof(DefaultValueInfoTests));
+            var typeData = context.GetTypeDefinitionData(typeof(MethodWithDefaultValues));
+            var method = typeData.GetMethod("MethodWithInts");
 
-			Assert.Null(method.Parameters[0].DefaultValue);
-			Assert.Equal(0, method.Parameters[1].DefaultValue);
-		}
+            Assert.Null(method.Parameters[0].DefaultValue);
+            Assert.Equal(0, method.Parameters[1].DefaultValue);
+        }
 
-		#endregion // NullableIntDefaultValueTests
+        #endregion // NullableIntDefaultValueTests
 
-		public class MethodWithDefaultValues
-		{
-			public void MethodWithBools(bool? x = null, bool? y = true) { }
-			public void MethodWithDecimals(decimal? x = null, decimal? y = 0) { }
-			public void MethodWithEnums(DateTimeKind? x = null, DateTimeKind? y = DateTimeKind.Local) { }
-			public void MethodWithInts(int? x = null, int? y = 0) { }
-		}
-	}
+        public class MethodWithDefaultValues
+        {
+            public void MethodWithBools(bool? x = null, bool? y = true) { }
+            public void MethodWithDecimals(decimal? x = null, decimal? y = 0) { }
+            public void MethodWithEnums(DateTimeKind? x = null, DateTimeKind? y = DateTimeKind.Local) { }
+            public void MethodWithInts(int? x = null, int? y = 0) { }
+        }
+    }
 }

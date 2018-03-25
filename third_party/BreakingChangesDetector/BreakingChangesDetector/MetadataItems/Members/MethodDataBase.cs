@@ -33,139 +33,139 @@ using System.Threading.Tasks;
 
 namespace BreakingChangesDetector.MetadataItems
 {
-	/// <summary>
-	/// Abstract base class representing metadata for externally visible methods.
-	/// </summary>
-	public abstract class MethodDataBase : TypedMemberDataBase, 
-		IParameterizedItem
-	{
-		#region Constructor
+    /// <summary>
+    /// Abstract base class representing metadata for externally visible methods.
+    /// </summary>
+    public abstract class MethodDataBase : TypedMemberDataBase,
+        IParameterizedItem
+    {
+        #region Constructor
 
-		internal MethodDataBase(string name, MemberAccessibility accessibility, MemberFlags memberFlags, TypeData type, bool isTypeDynamic, ParameterCollection parameters)
-			: base(name, accessibility, memberFlags, type, isTypeDynamic)
-		{
-			this.Parameters = parameters;
-		}
+        internal MethodDataBase(string name, MemberAccessibility accessibility, MemberFlags memberFlags, TypeData type, bool isTypeDynamic, ParameterCollection parameters)
+            : base(name, accessibility, memberFlags, type, isTypeDynamic)
+        {
+            this.Parameters = parameters;
+        }
 
-		internal MethodDataBase(IMethodSymbol methodSymbol, MemberAccessibility accessibility, DeclaringTypeData declaringType)
-			: base(methodSymbol, accessibility, methodSymbol.ReturnType, methodSymbol.IsReturnTypeDynamic(), Utilities.GetMemberFlags(methodSymbol), declaringType)
-		{
-			this.Parameters = new ParameterCollection(methodSymbol.Parameters, this);
-		} 
+        internal MethodDataBase(IMethodSymbol methodSymbol, MemberAccessibility accessibility, DeclaringTypeData declaringType)
+            : base(methodSymbol, accessibility, methodSymbol.ReturnType, methodSymbol.IsReturnTypeDynamic(), Utilities.GetMemberFlags(methodSymbol), declaringType)
+        {
+            this.Parameters = new ParameterCollection(methodSymbol.Parameters, this);
+        }
 
-		#endregion // Constructor
+        #endregion // Constructor
 
-		#region Base Class Overrides
+        #region Base Class Overrides
 
-		#region CanOverrideMember
-
-#if DEBUG
-		/// <summary>
-		/// Indicates whether the current member can override the specified member from a base type.
-		/// </summary>
-		/// <param name="baseMember">The member from the base type.</param>
-		/// <returns>True if the current member can override the base member; False otherwise.</returns>  
-#endif
-		internal override bool CanOverrideMember(MemberDataBase baseMember)
-		{
-			if (base.CanOverrideMember(baseMember) == false)
-				return false;
-
-			var otherMethodBase = (MethodDataBase)baseMember;
-			return this.Parameters.IsEquivalentTo(otherMethodBase.Parameters);
-		}
-
-		#endregion // CanOverrideMember
-
-		#region DisplayName
-
-		/// <summary>
-		/// Gets the name to use for this item in messages.
-		/// </summary>
-		public override string DisplayName
-		{
-			get { return this.Name + this.Parameters.GetParameterListDisplayText(); }
-		}
-
-		#endregion // DisplayName
-
-		#region DoesMatch
-
-		internal override bool DoesMatch(MetadataItemBase other)
-		{
-			if (base.DoesMatch(other) == false)
-				return false;
-
-			var otherTyped = other as MethodDataBase;
-			if (otherTyped == null)
-				return false;
-
-			if (this.Parameters.DoesMatch(otherTyped.Parameters) == false)
-				return false;
-
-			return true;
-		}
-
-		#endregion // DoesMatch
-
-		#region IsEquivalentToNewMember
+        #region CanOverrideMember
 
 #if DEBUG
-		/// <summary>
-		/// Indicates whether a new member of the same type and name is logically the same member as the current member, just from a newer build.
-		/// </summary> 
+        /// <summary>
+        /// Indicates whether the current member can override the specified member from a base type.
+        /// </summary>
+        /// <param name="baseMember">The member from the base type.</param>
+        /// <returns>True if the current member can override the base member; False otherwise.</returns>  
 #endif
-		internal override bool IsEquivalentToNewMember(MemberDataBase newMember, AssemblyFamily newAssemblyFamily)
-		{
-			return this.IsEquivalentToNewMember((MethodDataBase)newMember, newAssemblyFamily, ignoreNewOptionalParameters: false);
-		}
+        internal override bool CanOverrideMember(MemberDataBase baseMember)
+        {
+            if (base.CanOverrideMember(baseMember) == false)
+                return false;
 
-		#endregion // IsEquivalentToNewMember
+            var otherMethodBase = (MethodDataBase)baseMember;
+            return this.Parameters.IsEquivalentTo(otherMethodBase.Parameters);
+        }
 
-		#endregion // Base Class Overrides
+        #endregion // CanOverrideMember
 
-		#region Interfaces
+        #region DisplayName
 
-		bool IParameterizedItem.IsEquivalentToNewMember(MemberDataBase newMember, AssemblyFamily newAssemblyFamily, bool ignoreNewOptionalParameters)
-		{
-			return this.IsEquivalentToNewMember((MethodDataBase)newMember, newAssemblyFamily, ignoreNewOptionalParameters);
-		}
+        /// <summary>
+        /// Gets the name to use for this item in messages.
+        /// </summary>
+        public override string DisplayName
+        {
+            get { return this.Name + this.Parameters.GetParameterListDisplayText(); }
+        }
 
-		#endregion // Interfaces
+        #endregion // DisplayName
 
-		#region Methods
+        #region DoesMatch
 
-		#region IsEquivalentToNewMember
+        internal override bool DoesMatch(MetadataItemBase other)
+        {
+            if (base.DoesMatch(other) == false)
+                return false;
+
+            var otherTyped = other as MethodDataBase;
+            if (otherTyped == null)
+                return false;
+
+            if (this.Parameters.DoesMatch(otherTyped.Parameters) == false)
+                return false;
+
+            return true;
+        }
+
+        #endregion // DoesMatch
+
+        #region IsEquivalentToNewMember
 
 #if DEBUG
-		/// <summary>
-		/// Indicates whether a new member of the same type and name is logically the same member as the current member, just from a newer build.
-		/// </summary>
-		/// <param name="newMember">The new member to compare.</param>
-		/// <param name="newAssemblyFamily">The assembly family in which new assemblies reside.</param>
-		/// <param name="ignoreNewOptionalParameters">
-		/// Indicates whether to ignore any new parameters at the end of the collection which are optional when comparing.
-		/// </param>
+        /// <summary>
+        /// Indicates whether a new member of the same type and name is logically the same member as the current member, just from a newer build.
+        /// </summary> 
 #endif
-		private bool IsEquivalentToNewMember(MethodDataBase newMember, AssemblyFamily newAssemblyFamily, bool ignoreNewOptionalParameters)
-		{
-			if (base.IsEquivalentToNewMember(newMember, newAssemblyFamily) == false)
-				return false;
+        internal override bool IsEquivalentToNewMember(MemberDataBase newMember, AssemblyFamily newAssemblyFamily)
+        {
+            return this.IsEquivalentToNewMember((MethodDataBase)newMember, newAssemblyFamily, ignoreNewOptionalParameters: false);
+        }
 
-			return this.Parameters.IsEquivalentToNewParameters(newMember.Parameters, newAssemblyFamily, ignoreNewOptionalParameters);
-		}
+        #endregion // IsEquivalentToNewMember
 
-		#endregion // IsEquivalentToNewMember
+        #endregion // Base Class Overrides
 
-		#endregion // Methods
+        #region Interfaces
 
-		#region Properties
+        bool IParameterizedItem.IsEquivalentToNewMember(MemberDataBase newMember, AssemblyFamily newAssemblyFamily, bool ignoreNewOptionalParameters)
+        {
+            return this.IsEquivalentToNewMember((MethodDataBase)newMember, newAssemblyFamily, ignoreNewOptionalParameters);
+        }
 
-		/// <summary>
-		/// Gets the collection of parameters for the method.
-		/// </summary>
-		public ParameterCollection Parameters { get; private set; }
+        #endregion // Interfaces
 
-		#endregion // Properties
-	}
+        #region Methods
+
+        #region IsEquivalentToNewMember
+
+#if DEBUG
+        /// <summary>
+        /// Indicates whether a new member of the same type and name is logically the same member as the current member, just from a newer build.
+        /// </summary>
+        /// <param name="newMember">The new member to compare.</param>
+        /// <param name="newAssemblyFamily">The assembly family in which new assemblies reside.</param>
+        /// <param name="ignoreNewOptionalParameters">
+        /// Indicates whether to ignore any new parameters at the end of the collection which are optional when comparing.
+        /// </param>
+#endif
+        private bool IsEquivalentToNewMember(MethodDataBase newMember, AssemblyFamily newAssemblyFamily, bool ignoreNewOptionalParameters)
+        {
+            if (base.IsEquivalentToNewMember(newMember, newAssemblyFamily) == false)
+                return false;
+
+            return this.Parameters.IsEquivalentToNewParameters(newMember.Parameters, newAssemblyFamily, ignoreNewOptionalParameters);
+        }
+
+        #endregion // IsEquivalentToNewMember
+
+        #endregion // Methods
+
+        #region Properties
+
+        /// <summary>
+        /// Gets the collection of parameters for the method.
+        /// </summary>
+        public ParameterCollection Parameters { get; private set; }
+
+        #endregion // Properties
+    }
 }

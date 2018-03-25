@@ -2,6 +2,7 @@
     MIT License
 
     Copyright(c) 2014-2018 Infragistics, Inc.
+    Copyright 2018 Google LLC
 
     Permission is hereby granted, free of charge, to any person obtaining a copy
     of this software and associated documentation files (the "Software"), to deal
@@ -30,18 +31,18 @@ using System.Threading.Tasks;
 
 namespace BreakingChangesDetector.MetadataItems
 {
-	internal class IsAssignableFromContext
-	{
-		public readonly bool IsSourceTypeOld;
-		public bool IsTargetTypeOld { get { return this.IsSourceTypeOld == false; } }
-		public readonly AssemblyFamily NewAssemblyFamily;
-		public readonly bool OnlyReferenceAndIdentityConversions;
+    internal class IsAssignableFromContext
+    {
+        public readonly bool IsSourceTypeOld;
+        public bool IsTargetTypeOld { get { return this.IsSourceTypeOld == false; } }
+        public readonly AssemblyFamily NewAssemblyFamily;
+        public readonly bool OnlyReferenceAndIdentityConversions;
 
-		public IsAssignableFromContext(AssemblyFamily newAssemblyFamily, bool isSourceTypeOld, bool onlyReferenceAndIdentityConversions)
-		{
-			this.IsSourceTypeOld = isSourceTypeOld;
-			this.NewAssemblyFamily = newAssemblyFamily;
-			this.OnlyReferenceAndIdentityConversions = onlyReferenceAndIdentityConversions;
-		}
-	}
+        public IsAssignableFromContext(AssemblyFamily newAssemblyFamily, bool isSourceTypeOld, bool onlyReferenceAndIdentityConversions)
+        {
+            this.IsSourceTypeOld = isSourceTypeOld;
+            this.NewAssemblyFamily = newAssemblyFamily;
+            this.OnlyReferenceAndIdentityConversions = onlyReferenceAndIdentityConversions;
+        }
+    }
 }

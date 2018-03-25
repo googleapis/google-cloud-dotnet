@@ -29,63 +29,63 @@ using System.Collections.Generic;
 
 namespace BreakingChangesDetector.UnitTests.MetadataTypesTests
 {
-	public class TypeDisplayNameTests
-	{
-		#region ConstructedGenericTypeDataTests
+    public class TypeDisplayNameTests
+    {
+        #region ConstructedGenericTypeDataTests
 
-		[Fact]
-		public void ConstructedGenericTypeDataTests()
-		{
+        [Fact]
+        public void ConstructedGenericTypeDataTests()
+        {
             var context = MetadataResolutionContext.CreateFromTypes(typeof(object));
             Assert.Equal("object", context.GetTypeData<object>().DisplayName);
-			Assert.Equal("System.Collections.Generic.IEnumerable<out T>", context.GetTypeData(typeof(IEnumerable<>)).DisplayName);
-			Assert.Equal("System.Collections.Generic.IEnumerable<int>", context.GetTypeData(typeof(IEnumerable<int>)).DisplayName);
-			Assert.Equal("System.Collections.Generic.IEnumerable<List<int[]>>", context.GetTypeData(typeof(IEnumerable<List<int[]>>)).DisplayName);
-			Assert.Equal("int?", context.GetTypeData<Nullable<int>>().DisplayName);
-		}
+            Assert.Equal("System.Collections.Generic.IEnumerable<out T>", context.GetTypeData(typeof(IEnumerable<>)).DisplayName);
+            Assert.Equal("System.Collections.Generic.IEnumerable<int>", context.GetTypeData(typeof(IEnumerable<int>)).DisplayName);
+            Assert.Equal("System.Collections.Generic.IEnumerable<List<int[]>>", context.GetTypeData(typeof(IEnumerable<List<int[]>>)).DisplayName);
+            Assert.Equal("int?", context.GetTypeData<Nullable<int>>().DisplayName);
+        }
 
-		#endregion // ConstructedGenericTypeDataTests
+        #endregion // ConstructedGenericTypeDataTests
 
-		#region GenericTypeParameterDataTests
+        #region GenericTypeParameterDataTests
 
-		[Fact]
-		public void GenericTypeParameterDataTests()
-		{
+        [Fact]
+        public void GenericTypeParameterDataTests()
+        {
             var context = MetadataResolutionContext.CreateFromTypes(typeof(object));
-			Assert.Equal("T", context.GetTypeDefinitionData(typeof(IEnumerable<>)).GenericParameters[0].DisplayName);
-			Assert.Equal("TKey", context.GetTypeDefinitionData(typeof(Dictionary<,>)).GenericParameters[0].DisplayName);
-			Assert.Equal("TValue", context.GetTypeDefinitionData(typeof(Dictionary<,>)).GenericParameters[1].DisplayName);
-		}
+            Assert.Equal("T", context.GetTypeDefinitionData(typeof(IEnumerable<>)).GenericParameters[0].DisplayName);
+            Assert.Equal("TKey", context.GetTypeDefinitionData(typeof(Dictionary<,>)).GenericParameters[0].DisplayName);
+            Assert.Equal("TValue", context.GetTypeDefinitionData(typeof(Dictionary<,>)).GenericParameters[1].DisplayName);
+        }
 
-		#endregion // GenericTypeParameterDataTests
+        #endregion // GenericTypeParameterDataTests
 
-		#region TypeDefinitionDataTests
+        #region TypeDefinitionDataTests
 
-		[Fact]
-		public void TypeDefinitionDataTests()
-		{
+        [Fact]
+        public void TypeDefinitionDataTests()
+        {
             var context = MetadataResolutionContext.CreateFromTypes(typeof(object));
             Assert.Equal("object", context.GetTypeData<object>().DisplayName);
-			Assert.Equal("System.Collections.Generic.IEnumerable<out T>", context.GetTypeData(typeof(IEnumerable<>)).DisplayName);
-		}
+            Assert.Equal("System.Collections.Generic.IEnumerable<out T>", context.GetTypeData(typeof(IEnumerable<>)).DisplayName);
+        }
 
-		#endregion // TypeDefinitionDataTests
+        #endregion // TypeDefinitionDataTests
 
-		#region TypeWithElementDataTest
+        #region TypeWithElementDataTest
 
-		[Fact]
-		public void TypeWithElementDataTest()
-		{
+        [Fact]
+        public void TypeWithElementDataTest()
+        {
             var context = MetadataResolutionContext.CreateFromTypes(typeof(TestMethods));
             var method = typeof(TestMethods).GetMethod("Method1");
-			Assert.Equal("int*", context.GetTypeData(method.GetParameters()[0].ParameterType).DisplayName);
+            Assert.Equal("int*", context.GetTypeData(method.GetParameters()[0].ParameterType).DisplayName);
 
-			method = typeof(TestMethods).GetMethod("Method2");
-			Assert.Equal("void*", context.GetTypeData(method.GetParameters()[0].ParameterType).DisplayName);
+            method = typeof(TestMethods).GetMethod("Method2");
+            Assert.Equal("void*", context.GetTypeData(method.GetParameters()[0].ParameterType).DisplayName);
 
-			method = typeof(TestMethods).GetMethod("Method3");
-			Assert.Equal("byte***", context.GetTypeData(method.GetParameters()[0].ParameterType).DisplayName);
-		}
+            method = typeof(TestMethods).GetMethod("Method3");
+            Assert.Equal("byte***", context.GetTypeData(method.GetParameters()[0].ParameterType).DisplayName);
+        }
 
         #endregion // TypeWithElementDataTest
 
@@ -95,5 +95,5 @@ namespace BreakingChangesDetector.UnitTests.MetadataTypesTests
             public static unsafe void Method2(void* x) { }
             public static unsafe void Method3(byte*** x) { }
         }
-	}
+    }
 }

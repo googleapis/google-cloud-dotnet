@@ -2,6 +2,7 @@
     MIT License
 
     Copyright(c) 2014-2018 Infragistics, Inc.
+    Copyright 2018 Google LLC
 
     Permission is hereby granted, free of charge, to any person obtaining a copy
     of this software and associated documentation files (the "Software"), to deal
@@ -30,84 +31,84 @@ using System.Threading.Tasks;
 
 namespace BreakingChangesDetector.MetadataItems
 {
-	/// <summary>
-	/// A collection of <see cref="GenericTypeParameterData"/> instances used as generic type parameters in a generic type definiton.
-	/// </summary>
-	public class GenericTypeParameterCollection : IEnumerable<GenericTypeParameterData>
-	{
-		private readonly GenericTypeParameterData[] _parameters;
+    /// <summary>
+    /// A collection of <see cref="GenericTypeParameterData"/> instances used as generic type parameters in a generic type definiton.
+    /// </summary>
+    public class GenericTypeParameterCollection : IEnumerable<GenericTypeParameterData>
+    {
+        private readonly GenericTypeParameterData[] _parameters;
 
-		internal GenericTypeParameterCollection(IEnumerable<GenericTypeParameterData> parameters = null)
-		{
-			if (parameters == null)
-				_parameters = new GenericTypeParameterData[0];
-			else
-				_parameters = parameters.ToArray();
-		}
+        internal GenericTypeParameterCollection(IEnumerable<GenericTypeParameterData> parameters = null)
+        {
+            if (parameters == null)
+                _parameters = new GenericTypeParameterData[0];
+            else
+                _parameters = parameters.ToArray();
+        }
 
-		System.Collections.IEnumerator System.Collections.IEnumerable.GetEnumerator()
-		{
-			return _parameters.GetEnumerator();
-		}
+        System.Collections.IEnumerator System.Collections.IEnumerable.GetEnumerator()
+        {
+            return _parameters.GetEnumerator();
+        }
 
-		/// <summary>
-		/// Gets an enumerator capable of iterating the generic type parameters.
-		/// </summary>
-		public IEnumerator<GenericTypeParameterData> GetEnumerator()
-		{
-			for (int i = 0; i < _parameters.Length; i++)
-				yield return _parameters[i];
-		}
+        /// <summary>
+        /// Gets an enumerator capable of iterating the generic type parameters.
+        /// </summary>
+        public IEnumerator<GenericTypeParameterData> GetEnumerator()
+        {
+            for (int i = 0; i < _parameters.Length; i++)
+                yield return _parameters[i];
+        }
 
-		/// <summary>
-		/// Gets the number of generic type parameters in the collection.
-		/// </summary>
-		public int Count
-		{
-			get { return _parameters.Length; }
-		}
+        /// <summary>
+        /// Gets the number of generic type parameters in the collection.
+        /// </summary>
+        public int Count
+        {
+            get { return _parameters.Length; }
+        }
 
-		/// <summary>
-		/// Gets the generic type parameter at the specified index in the collection.
-		/// </summary>
-		public GenericTypeParameterData this[int index]
-		{
-			get { return _parameters[index]; }
-		}
+        /// <summary>
+        /// Gets the generic type parameter at the specified index in the collection.
+        /// </summary>
+        public GenericTypeParameterData this[int index]
+        {
+            get { return _parameters[index]; }
+        }
 
-		internal bool DoesMatch(GenericTypeParameterCollection other)
-		{
-			if (this.Count != other.Count)
-				return false;
+        internal bool DoesMatch(GenericTypeParameterCollection other)
+        {
+            if (this.Count != other.Count)
+                return false;
 
-			for (int i = 0; i < this.Count; i++)
-			{
-				if (this[i].DoesMatch(other[i]) == false)
-					return false;
-			}
+            for (int i = 0; i < this.Count; i++)
+            {
+                if (this[i].DoesMatch(other[i]) == false)
+                    return false;
+            }
 
-			return true;
-		}
+            return true;
+        }
 
-		internal string GetParameterListText(int skipCount = 0)
-		{
-			var parameters = _parameters.Skip(skipCount).ToList();
+        internal string GetParameterListText(int skipCount = 0)
+        {
+            var parameters = _parameters.Skip(skipCount).ToList();
 
-			if (parameters.Count == 0)
-				return string.Empty;
+            if (parameters.Count == 0)
+                return string.Empty;
 
-			var sb = new StringBuilder("<");
+            var sb = new StringBuilder("<");
 
-			sb.Append(parameters[0].GetParameterListDisplayText());
-			for (int i = 1; i < parameters.Count; i++)
-			{
-				sb.Append(", ");
-				sb.Append(parameters[i].GetParameterListDisplayText());
-			}
+            sb.Append(parameters[0].GetParameterListDisplayText());
+            for (int i = 1; i < parameters.Count; i++)
+            {
+                sb.Append(", ");
+                sb.Append(parameters[i].GetParameterListDisplayText());
+            }
 
-			sb.Append(">");
+            sb.Append(">");
 
-			return sb.ToString();
-		}
-	}
+            return sb.ToString();
+        }
+    }
 }

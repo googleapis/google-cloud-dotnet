@@ -31,72 +31,72 @@ using System.Linq;
 namespace BreakingChangesDetector.MetadataItems
 {
 #if DEBUG
-	/// <summary>
-	/// An ordered set of <see cref="TypeData"/> instances which can by compared or used as a key in a dictionary.
-	/// </summary> 
+    /// <summary>
+    /// An ordered set of <see cref="TypeData"/> instances which can by compared or used as a key in a dictionary.
+    /// </summary> 
 #endif
-	internal class TypeDataSequence :
-		IEnumerable<TypeData>,
-		IEquatable<TypeDataSequence>
-	{
-		private readonly TypeData[] _types;
+    internal class TypeDataSequence :
+        IEnumerable<TypeData>,
+        IEquatable<TypeDataSequence>
+    {
+        private readonly TypeData[] _types;
 
-		public TypeDataSequence(params TypeData[] types)
-		{
+        public TypeDataSequence(params TypeData[] types)
+        {
             Debug.Assert(types.All(t => t != null));
             _types = types;
-		}
+        }
 
-		public TypeDataSequence(IEnumerable<TypeData> types)
-			: this(types.ToArray()) { }
+        public TypeDataSequence(IEnumerable<TypeData> types)
+            : this(types.ToArray()) { }
 
-		public override bool Equals(object obj)
-		{
-			var other = obj as TypeDataSequence;
-			return other != null && this.Equals(other);
-		}
+        public override bool Equals(object obj)
+        {
+            var other = obj as TypeDataSequence;
+            return other != null && this.Equals(other);
+        }
 
-		public override int GetHashCode()
-		{
-			int hashCode = 0;
-			for (int i = 0; i < _types.Length; i++)
-				hashCode ^= (_types[i].GetHashCode() << (i % 16));
+        public override int GetHashCode()
+        {
+            int hashCode = 0;
+            for (int i = 0; i < _types.Length; i++)
+                hashCode ^= (_types[i].GetHashCode() << (i % 16));
 
-			return hashCode;
-		}
+            return hashCode;
+        }
 
-		public override string ToString()
-		{
-			return string.Join<TypeData>(", ", _types);
-		}
+        public override string ToString()
+        {
+            return string.Join<TypeData>(", ", _types);
+        }
 
-		public bool Equals(TypeDataSequence other)
-		{
-			if (_types.Length != other._types.Length)
-				return false;
+        public bool Equals(TypeDataSequence other)
+        {
+            if (_types.Length != other._types.Length)
+                return false;
 
-			for (int i = 0; i < _types.Length; i++)
-			{
-				if (_types[i] != other._types[i])
-					return false;
-			}
+            for (int i = 0; i < _types.Length; i++)
+            {
+                if (_types[i] != other._types[i])
+                    return false;
+            }
 
-			return true;
-		}
+            return true;
+        }
 
-		public int Count
-		{
-			get { return _types.Length; }
-		}
+        public int Count
+        {
+            get { return _types.Length; }
+        }
 
-		public IEnumerator<TypeData> GetEnumerator()
-		{
-			return ((IEnumerable<TypeData>)_types).GetEnumerator();
-		}
+        public IEnumerator<TypeData> GetEnumerator()
+        {
+            return ((IEnumerable<TypeData>)_types).GetEnumerator();
+        }
 
-		System.Collections.IEnumerator System.Collections.IEnumerable.GetEnumerator()
-		{
-			return _types.GetEnumerator();
-		}
-	}
+        System.Collections.IEnumerator System.Collections.IEnumerable.GetEnumerator()
+        {
+            return _types.GetEnumerator();
+        }
+    }
 }

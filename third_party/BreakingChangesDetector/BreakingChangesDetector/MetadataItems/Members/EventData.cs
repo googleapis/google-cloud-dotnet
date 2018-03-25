@@ -33,88 +33,88 @@ using System.Threading.Tasks;
 
 namespace BreakingChangesDetector.MetadataItems
 {
-	/// <summary>
-	/// Represents the metadata for an externally visible event.
-	/// </summary>
-	public sealed class EventData : TypedMemberDataBase
-	{
-		#region Constructors
+    /// <summary>
+    /// Represents the metadata for an externally visible event.
+    /// </summary>
+    public sealed class EventData : TypedMemberDataBase
+    {
+        #region Constructors
 
-		internal EventData(string name, MemberAccessibility accessibility, MemberFlags memberFlags, TypeData type)
-			: base(name, accessibility, memberFlags, type, isTypeDynamic: false)
-		{
-		}
+        internal EventData(string name, MemberAccessibility accessibility, MemberFlags memberFlags, TypeData type)
+            : base(name, accessibility, memberFlags, type, isTypeDynamic: false)
+        {
+        }
 
-		private EventData(IEventSymbol eventSymbol, MemberAccessibility accessibility, DeclaringTypeData declaringType)
-			: base(eventSymbol, accessibility, eventSymbol.Type, false, Utilities.GetMemberFlags(eventSymbol.AddMethod), declaringType) { }
+        private EventData(IEventSymbol eventSymbol, MemberAccessibility accessibility, DeclaringTypeData declaringType)
+            : base(eventSymbol, accessibility, eventSymbol.Type, false, Utilities.GetMemberFlags(eventSymbol.AddMethod), declaringType) { }
 
-		#endregion // Constructors
+        #endregion // Constructors
 
-		#region Base Class Overrides
+        #region Base Class Overrides
 
-		#region Accept
+        #region Accept
 
-		/// <summary>
-		/// Performs the specified visitor's functionality on this instance.
-		/// </summary>
-		/// <param name="visitor">The visitor whose functionality should be performed on the instance.</param>
-		public override void Accept(MetadataItemVisitor visitor)
-		{
-			visitor.VisitEventData(this);
-		}
+        /// <summary>
+        /// Performs the specified visitor's functionality on this instance.
+        /// </summary>
+        /// <param name="visitor">The visitor whose functionality should be performed on the instance.</param>
+        public override void Accept(MetadataItemVisitor visitor)
+        {
+            visitor.VisitEventData(this);
+        }
 
-		#endregion // Accept
+        #endregion // Accept
 
-		#region MetadataItemKind
+        #region MetadataItemKind
 
-		/// <summary>
-		/// Gets the type of item the instance represents.
-		/// </summary>
-		public override MetadataItemKinds MetadataItemKind
-		{
-			get { return MetadataItemKinds.Event; }
-		}
+        /// <summary>
+        /// Gets the type of item the instance represents.
+        /// </summary>
+        public override MetadataItemKinds MetadataItemKind
+        {
+            get { return MetadataItemKinds.Event; }
+        }
 
-		#endregion // MetadataItemKind
+        #endregion // MetadataItemKind
 
-		#region ReplaceGenericTypeParameters
+        #region ReplaceGenericTypeParameters
 
 #if DEBUG
-		/// <summary>
-		/// Replaces all type parameters used by the member with their associated generic arguments specified in a constructed generic type.
-		/// </summary>
-		/// <param name="genericParameters">The generic parameters being replaced.</param>
-		/// <param name="genericArguments">The generic arguments replacing the parameters.</param>
-		/// <returns>A new member with the replaced type parameters or the current instance if the member does not use any of the generic parameters.</returns> 
+        /// <summary>
+        /// Replaces all type parameters used by the member with their associated generic arguments specified in a constructed generic type.
+        /// </summary>
+        /// <param name="genericParameters">The generic parameters being replaced.</param>
+        /// <param name="genericArguments">The generic arguments replacing the parameters.</param>
+        /// <returns>A new member with the replaced type parameters or the current instance if the member does not use any of the generic parameters.</returns> 
 #endif
-		internal override MemberDataBase ReplaceGenericTypeParameters(GenericTypeParameterCollection genericParameters, GenericTypeArgumentCollection genericArguments)
-		{
-			var replacedType = (TypeData)this.Type.ReplaceGenericTypeParameters(genericParameters, genericArguments);
-			if (replacedType == this.Type)
-				return this;
+        internal override MemberDataBase ReplaceGenericTypeParameters(GenericTypeParameterCollection genericParameters, GenericTypeArgumentCollection genericArguments)
+        {
+            var replacedType = (TypeData)this.Type.ReplaceGenericTypeParameters(genericParameters, genericArguments);
+            if (replacedType == this.Type)
+                return this;
 
-			return new EventData(this.Name, this.Accessibility, this.MemberFlags, replacedType);
-		}
+            return new EventData(this.Name, this.Accessibility, this.MemberFlags, replacedType);
+        }
 
-		#endregion // ReplaceGenericTypeParameters
+        #endregion // ReplaceGenericTypeParameters
 
-		#endregion // Base Class Overrides
+        #endregion // Base Class Overrides
 
-		#region Methods
+        #region Methods
 
-		#region EventDataFromReflection
+        #region EventDataFromReflection
 
-		internal static EventData EventDataFromReflection(IEventSymbol eventSymbol, DeclaringTypeData declaringType)
-		{
-			var accessibility = eventSymbol.AddMethod.GetAccessibility();
-			if (accessibility == null)
-				return null;
+        internal static EventData EventDataFromReflection(IEventSymbol eventSymbol, DeclaringTypeData declaringType)
+        {
+            var accessibility = eventSymbol.AddMethod.GetAccessibility();
+            if (accessibility == null)
+                return null;
 
-			return new EventData(eventSymbol, accessibility.Value, declaringType);
-		}
+            return new EventData(eventSymbol, accessibility.Value, declaringType);
+        }
 
-		#endregion // EventDataFromReflection
+        #endregion // EventDataFromReflection
 
-		#endregion // Methods
-	}
+        #endregion // Methods
+    }
 }

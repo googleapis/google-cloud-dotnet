@@ -34,109 +34,109 @@ using System.Threading.Tasks;
 
 namespace BreakingChangesDetector.UnitTests.BreakingChangesTests
 {
-	public class ChangedMemberToAbstractTests
-	{
-		#region EventTests
+    public class ChangedMemberToAbstractTests
+    {
+        #region EventTests
 
-		[Fact]
-		public void EventTests()
-		{
-			var context = MetadataResolutionContext.CreateFromTypes(typeof(AddedAbstractMemberTests));
-			var EventVirtual = context.GetTypeDefinitionData(typeof(EventVirtual));
-			var EventAbstract = context.GetTypeDefinitionData(typeof(EventAbstract));
-			
-			var breakingChanges = MetadataComparer.CompareTypes(EventVirtual, EventAbstract);
-			AssertX.Equal(1, breakingChanges.Count, "There should be one breaking change when a virtual member changes to abstract.");
-			AssertX.Equal(BreakingChangeKind.ChangedMemberToAbstract, breakingChanges[0].BreakingChangeKind, "The BreakingChangeKind is incorrect.");
-			AssertX.Equal(EventVirtual.GetMember("Event"), breakingChanges[0].OldItem, "The OldItem is incorrect.");
-			AssertX.Equal(EventAbstract.GetMember("Event"), breakingChanges[0].NewItem, "The NewItem is incorrect.");
-			AssertX.Null(breakingChanges[0].AssociatedData, "The AssociatedData is incorrect.");
+        [Fact]
+        public void EventTests()
+        {
+            var context = MetadataResolutionContext.CreateFromTypes(typeof(AddedAbstractMemberTests));
+            var EventVirtual = context.GetTypeDefinitionData(typeof(EventVirtual));
+            var EventAbstract = context.GetTypeDefinitionData(typeof(EventAbstract));
 
-			breakingChanges = MetadataComparer.CompareTypes(EventAbstract, EventVirtual);
-			AssertX.Equal(0, breakingChanges.Count, "There should be no breaking changes when an abstract member changes to virtual.");
-		}
+            var breakingChanges = MetadataComparer.CompareTypes(EventVirtual, EventAbstract);
+            AssertX.Equal(1, breakingChanges.Count, "There should be one breaking change when a virtual member changes to abstract.");
+            AssertX.Equal(BreakingChangeKind.ChangedMemberToAbstract, breakingChanges[0].BreakingChangeKind, "The BreakingChangeKind is incorrect.");
+            AssertX.Equal(EventVirtual.GetMember("Event"), breakingChanges[0].OldItem, "The OldItem is incorrect.");
+            AssertX.Equal(EventAbstract.GetMember("Event"), breakingChanges[0].NewItem, "The NewItem is incorrect.");
+            AssertX.Null(breakingChanges[0].AssociatedData, "The AssociatedData is incorrect.");
 
-		#endregion // EventTests
+            breakingChanges = MetadataComparer.CompareTypes(EventAbstract, EventVirtual);
+            AssertX.Equal(0, breakingChanges.Count, "There should be no breaking changes when an abstract member changes to virtual.");
+        }
 
-		#region IndexerTests
+        #endregion // EventTests
 
-		[Fact]
-		public void IndexerTests()
-		{
-			var context = MetadataResolutionContext.CreateFromTypes(typeof(AddedAbstractMemberTests));
-			var indexerVirtual = context.GetTypeDefinitionData(typeof(IndexerVirtual));
-			var indexerAbstract = context.GetTypeDefinitionData(typeof(IndexerAbstract));
-			
-			var breakingChanges = MetadataComparer.CompareTypes(indexerVirtual, indexerAbstract);
-			AssertX.Equal(1, breakingChanges.Count, "There should be one breaking change when a virtual member changes to abstract.");
-			AssertX.Equal(BreakingChangeKind.ChangedMemberToAbstract, breakingChanges[0].BreakingChangeKind, "The BreakingChangeKind is incorrect.");
-			AssertX.Equal(indexerVirtual.GetMember("Item"), breakingChanges[0].OldItem, "The OldItem is incorrect.");
-			AssertX.Equal(indexerAbstract.GetMember("Item"), breakingChanges[0].NewItem, "The NewItem is incorrect.");
-			AssertX.Null(breakingChanges[0].AssociatedData, "The AssociatedData is incorrect.");
+        #region IndexerTests
 
-			breakingChanges = MetadataComparer.CompareTypes(indexerAbstract, indexerVirtual);
-			AssertX.Equal(0, breakingChanges.Count, "There should be no breaking changes when an abstract member changes to virtual.");
-		}
+        [Fact]
+        public void IndexerTests()
+        {
+            var context = MetadataResolutionContext.CreateFromTypes(typeof(AddedAbstractMemberTests));
+            var indexerVirtual = context.GetTypeDefinitionData(typeof(IndexerVirtual));
+            var indexerAbstract = context.GetTypeDefinitionData(typeof(IndexerAbstract));
 
-		#endregion // IndexerTests
+            var breakingChanges = MetadataComparer.CompareTypes(indexerVirtual, indexerAbstract);
+            AssertX.Equal(1, breakingChanges.Count, "There should be one breaking change when a virtual member changes to abstract.");
+            AssertX.Equal(BreakingChangeKind.ChangedMemberToAbstract, breakingChanges[0].BreakingChangeKind, "The BreakingChangeKind is incorrect.");
+            AssertX.Equal(indexerVirtual.GetMember("Item"), breakingChanges[0].OldItem, "The OldItem is incorrect.");
+            AssertX.Equal(indexerAbstract.GetMember("Item"), breakingChanges[0].NewItem, "The NewItem is incorrect.");
+            AssertX.Null(breakingChanges[0].AssociatedData, "The AssociatedData is incorrect.");
 
-		#region MethodTests
+            breakingChanges = MetadataComparer.CompareTypes(indexerAbstract, indexerVirtual);
+            AssertX.Equal(0, breakingChanges.Count, "There should be no breaking changes when an abstract member changes to virtual.");
+        }
 
-		[Fact]
-		public void MethodTests()
-		{
-			var context = MetadataResolutionContext.CreateFromTypes(typeof(AddedAbstractMemberTests));
-			var methodVirtual = context.GetTypeDefinitionData(typeof(MethodVirtual));
-			var methodAbstract = context.GetTypeDefinitionData(typeof(MethodAbstract));
-			
-			var breakingChanges = MetadataComparer.CompareTypes(methodVirtual, methodAbstract);
-			AssertX.Equal(1, breakingChanges.Count, "There should be one breaking change when a virtual member changes to abstract.");
-			AssertX.Equal(BreakingChangeKind.ChangedMemberToAbstract, breakingChanges[0].BreakingChangeKind, "The BreakingChangeKind is incorrect.");
-			AssertX.Equal(methodVirtual.GetMember("Method"), breakingChanges[0].OldItem, "The OldItem is incorrect.");
-			AssertX.Equal(methodAbstract.GetMember("Method"), breakingChanges[0].NewItem, "The NewItem is incorrect.");
-			AssertX.Null(breakingChanges[0].AssociatedData, "The AssociatedData is incorrect.");
+        #endregion // IndexerTests
 
-			breakingChanges = MetadataComparer.CompareTypes(methodAbstract, methodVirtual);
-			AssertX.Equal(0, breakingChanges.Count, "There should be no breaking changes when an abstract member changes to virtual.");
-		}
+        #region MethodTests
 
-		#endregion // MethodTests
+        [Fact]
+        public void MethodTests()
+        {
+            var context = MetadataResolutionContext.CreateFromTypes(typeof(AddedAbstractMemberTests));
+            var methodVirtual = context.GetTypeDefinitionData(typeof(MethodVirtual));
+            var methodAbstract = context.GetTypeDefinitionData(typeof(MethodAbstract));
 
-		#region PropertyTests
+            var breakingChanges = MetadataComparer.CompareTypes(methodVirtual, methodAbstract);
+            AssertX.Equal(1, breakingChanges.Count, "There should be one breaking change when a virtual member changes to abstract.");
+            AssertX.Equal(BreakingChangeKind.ChangedMemberToAbstract, breakingChanges[0].BreakingChangeKind, "The BreakingChangeKind is incorrect.");
+            AssertX.Equal(methodVirtual.GetMember("Method"), breakingChanges[0].OldItem, "The OldItem is incorrect.");
+            AssertX.Equal(methodAbstract.GetMember("Method"), breakingChanges[0].NewItem, "The NewItem is incorrect.");
+            AssertX.Null(breakingChanges[0].AssociatedData, "The AssociatedData is incorrect.");
 
-		[Fact]
-		public void PropertyTests()
-		{
-			var context = MetadataResolutionContext.CreateFromTypes(typeof(AddedAbstractMemberTests));
-			var PropertyVirtual = context.GetTypeDefinitionData(typeof(PropertyVirtual));
-			var PropertyAbstract = context.GetTypeDefinitionData(typeof(PropertyAbstract));
-			
-			var breakingChanges = MetadataComparer.CompareTypes(PropertyVirtual, PropertyAbstract);
-			AssertX.Equal(1, breakingChanges.Count, "There should be one breaking change when a virtual member changes to abstract.");
-			AssertX.Equal(BreakingChangeKind.ChangedMemberToAbstract, breakingChanges[0].BreakingChangeKind, "The BreakingChangeKind is incorrect.");
-			AssertX.Equal(PropertyVirtual.GetMember("Property"), breakingChanges[0].OldItem, "The OldItem is incorrect.");
-			AssertX.Equal(PropertyAbstract.GetMember("Property"), breakingChanges[0].NewItem, "The NewItem is incorrect.");
-			AssertX.Null(breakingChanges[0].AssociatedData, "The AssociatedData is incorrect.");
+            breakingChanges = MetadataComparer.CompareTypes(methodAbstract, methodVirtual);
+            AssertX.Equal(0, breakingChanges.Count, "There should be no breaking changes when an abstract member changes to virtual.");
+        }
 
-			breakingChanges = MetadataComparer.CompareTypes(PropertyAbstract, PropertyVirtual);
-			AssertX.Equal(0, breakingChanges.Count, "There should be no breaking changes when an abstract member changes to virtual.");
-		}
+        #endregion // MethodTests
 
-		#endregion // PropertyTests
+        #region PropertyTests
+
+        [Fact]
+        public void PropertyTests()
+        {
+            var context = MetadataResolutionContext.CreateFromTypes(typeof(AddedAbstractMemberTests));
+            var PropertyVirtual = context.GetTypeDefinitionData(typeof(PropertyVirtual));
+            var PropertyAbstract = context.GetTypeDefinitionData(typeof(PropertyAbstract));
+
+            var breakingChanges = MetadataComparer.CompareTypes(PropertyVirtual, PropertyAbstract);
+            AssertX.Equal(1, breakingChanges.Count, "There should be one breaking change when a virtual member changes to abstract.");
+            AssertX.Equal(BreakingChangeKind.ChangedMemberToAbstract, breakingChanges[0].BreakingChangeKind, "The BreakingChangeKind is incorrect.");
+            AssertX.Equal(PropertyVirtual.GetMember("Property"), breakingChanges[0].OldItem, "The OldItem is incorrect.");
+            AssertX.Equal(PropertyAbstract.GetMember("Property"), breakingChanges[0].NewItem, "The NewItem is incorrect.");
+            AssertX.Null(breakingChanges[0].AssociatedData, "The AssociatedData is incorrect.");
+
+            breakingChanges = MetadataComparer.CompareTypes(PropertyAbstract, PropertyVirtual);
+            AssertX.Equal(0, breakingChanges.Count, "There should be no breaking changes when an abstract member changes to virtual.");
+        }
+
+        #endregion // PropertyTests
 
 
 #pragma warning disable 0067
-		public abstract class EventVirtual { public virtual event EventHandler Event; }
-		public abstract class EventAbstract { public abstract event EventHandler Event; }
+        public abstract class EventVirtual { public virtual event EventHandler Event; }
+        public abstract class EventAbstract { public abstract event EventHandler Event; }
 #pragma warning restore 0067
 
-		public abstract class IndexerVirtual { public virtual int this[int x] { get { return 0; } } }
-		public abstract class IndexerAbstract { public abstract int this[int x] { get; } }
+        public abstract class IndexerVirtual { public virtual int this[int x] { get { return 0; } } }
+        public abstract class IndexerAbstract { public abstract int this[int x] { get; } }
 
-		public abstract class MethodVirtual { public virtual int Method() { return 0; } }
-		public abstract class MethodAbstract { public abstract int Method(); }
+        public abstract class MethodVirtual { public virtual int Method() { return 0; } }
+        public abstract class MethodAbstract { public abstract int Method(); }
 
-		public abstract class PropertyVirtual { public virtual int Property { get { return 0; } } }
-		public abstract class PropertyAbstract { public abstract int Property { get; } }
-	}
+        public abstract class PropertyVirtual { public virtual int Property { get { return 0; } } }
+        public abstract class PropertyAbstract { public abstract int Property { get; } }
+    }
 }

@@ -30,31 +30,31 @@ using BreakingChangesDetector.BreakingChanges;
 
 namespace BreakingChangesDetector.UnitTests.BreakingChangesTests
 {
-	public class RemovedExtensionMethodModifierTests
-	{
-		#region MethodTests
+    public class RemovedExtensionMethodModifierTests
+    {
+        #region MethodTests
 
-		[Fact]
-		public void MethodTests()
-		{
-			var context = MetadataResolutionContext.CreateFromTypes(typeof(RemovedExtensionMethodModifierTests));
-			var ClassWithExtensionMethod = context.GetTypeDefinitionData(typeof(ClassWithExtensionMethod));
-			var ClassWithoutExtensionMethod = context.GetTypeDefinitionData(typeof(ClassWithoutExtensionMethod));
-			
-			var breakingChanges = MetadataComparer.CompareTypes(ClassWithExtensionMethod, ClassWithoutExtensionMethod);
-			AssertX.Equal(1, breakingChanges.Count, "There should be one breaking change when an extension method is turned into a normal method.");
-			AssertX.Equal(BreakingChangeKind.RemovedExtensionMethodModifier, breakingChanges[0].BreakingChangeKind, "The BreakingChangeKind is incorrect.");
-			AssertX.Equal(ClassWithExtensionMethod.GetMember("Method"), breakingChanges[0].OldItem, "The OldItem is incorrect.");
-			AssertX.Equal(ClassWithoutExtensionMethod.GetMember("Method"), breakingChanges[0].NewItem, "The NewItem is incorrect.");
-			AssertX.Null(breakingChanges[0].AssociatedData, "The AssociatedData is incorrect.");
+        [Fact]
+        public void MethodTests()
+        {
+            var context = MetadataResolutionContext.CreateFromTypes(typeof(RemovedExtensionMethodModifierTests));
+            var ClassWithExtensionMethod = context.GetTypeDefinitionData(typeof(ClassWithExtensionMethod));
+            var ClassWithoutExtensionMethod = context.GetTypeDefinitionData(typeof(ClassWithoutExtensionMethod));
 
-			breakingChanges = MetadataComparer.CompareTypes(ClassWithoutExtensionMethod, ClassWithExtensionMethod);
-			AssertX.Equal(0, breakingChanges.Count, "There should be no breaking changes when an normal method is turned into an extension method.");
-		}
+            var breakingChanges = MetadataComparer.CompareTypes(ClassWithExtensionMethod, ClassWithoutExtensionMethod);
+            AssertX.Equal(1, breakingChanges.Count, "There should be one breaking change when an extension method is turned into a normal method.");
+            AssertX.Equal(BreakingChangeKind.RemovedExtensionMethodModifier, breakingChanges[0].BreakingChangeKind, "The BreakingChangeKind is incorrect.");
+            AssertX.Equal(ClassWithExtensionMethod.GetMember("Method"), breakingChanges[0].OldItem, "The OldItem is incorrect.");
+            AssertX.Equal(ClassWithoutExtensionMethod.GetMember("Method"), breakingChanges[0].NewItem, "The NewItem is incorrect.");
+            AssertX.Null(breakingChanges[0].AssociatedData, "The AssociatedData is incorrect.");
 
-		#endregion // MethodTests
-	}
+            breakingChanges = MetadataComparer.CompareTypes(ClassWithoutExtensionMethod, ClassWithExtensionMethod);
+            AssertX.Equal(0, breakingChanges.Count, "There should be no breaking changes when an normal method is turned into an extension method.");
+        }
 
-	public static class ClassWithExtensionMethod { public static void Method(this RemovedExtensionMethodModifierTests x) { } }
-	public static class ClassWithoutExtensionMethod { public static void Method(RemovedExtensionMethodModifierTests x) { } }
+        #endregion // MethodTests
+    }
+
+    public static class ClassWithExtensionMethod { public static void Method(this RemovedExtensionMethodModifierTests x) { } }
+    public static class ClassWithoutExtensionMethod { public static void Method(RemovedExtensionMethodModifierTests x) { } }
 }

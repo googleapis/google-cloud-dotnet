@@ -36,340 +36,340 @@ using System.Threading.Tasks;
 
 namespace BreakingChangesDetector.Serialization
 {
-	internal class BinaryItemDeserializerV1
+    internal class BinaryItemDeserializerV1
     {
         private readonly BinaryReader _reader;
-		private readonly Dictionary<uint, TypeData> _typeTable;
+        private readonly Dictionary<uint, TypeData> _typeTable;
 
-		public BinaryItemDeserializerV1(Stream stream)
-		{
-			_reader = new BinaryReader(stream);
-			_typeTable = new Dictionary<uint, TypeData>();
+        public BinaryItemDeserializerV1(Stream stream)
+        {
+            _reader = new BinaryReader(stream);
+            _typeTable = new Dictionary<uint, TypeData>();
 
-			// TODO_Serialize: Use a factory method instead of reading directly.
-			var versionMarker = _reader.ReadByte();
-			Debug.Assert(versionMarker == SerializationUtilities.Version1Marker, "Incorrect version");
+            // TODO_Serialize: Use a factory method instead of reading directly.
+            var versionMarker = _reader.ReadByte();
+            Debug.Assert(versionMarker == SerializationUtilities.Version1Marker, "Incorrect version");
 
-			var assemblyCount = _reader.ReadUInt16();
-			this.LoadedAssemblies = this.ReadAssemblyDataCollection(assemblyCount);
-			this.ReadAdditionalData();
-		}
+            var assemblyCount = _reader.ReadUInt16();
+            this.LoadedAssemblies = this.ReadAssemblyDataCollection(assemblyCount);
+            this.ReadAdditionalData();
+        }
 
-		private void ReadAdditionalData()
-		{
-			var length = _reader.BaseStream.Length;
-			while (_reader.BaseStream.Position < length)
-			{
-				var typeId = _reader.ReadUInt32();
-				var typeBase = _typeTable[typeId];
-				var type = typeBase as TypeDefinitionData;
-				if (type != null)
-				{
-					// TODO_Serialize: Fix this
-					//if (type.IsConstructedGenericType)
-					//{
-					//	var hasSpecialDecalringType = _reader.ReadBoolean();
-					//	if (hasSpecialDecalringType)
-					//	{
-					//		var declaringType = _reader.ReadUInt32();
-					//		type.ContainingType = (TypeDefinitionData)_typeTable[declaringType];
-					//	}
-					//}
+        private void ReadAdditionalData()
+        {
+            var length = _reader.BaseStream.Length;
+            while (_reader.BaseStream.Position < length)
+            {
+                var typeId = _reader.ReadUInt32();
+                var typeBase = _typeTable[typeId];
+                var type = typeBase as TypeDefinitionData;
+                if (type != null)
+                {
+                    // TODO_Serialize: Fix this
+                    //if (type.IsConstructedGenericType)
+                    //{
+                    //	var hasSpecialDecalringType = _reader.ReadBoolean();
+                    //	if (hasSpecialDecalringType)
+                    //	{
+                    //		var declaringType = _reader.ReadUInt32();
+                    //		type.ContainingType = (TypeDefinitionData)_typeTable[declaringType];
+                    //	}
+                    //}
 
-					var baseTypeId = _reader.ReadUInt32();
+                    var baseTypeId = _reader.ReadUInt32();
 
-					if (baseTypeId != SerializationUtilities.NullTypeId)
-						type.BaseType = (TypeDefinitionData)_typeTable[baseTypeId];
+                    if (baseTypeId != SerializationUtilities.NullTypeId)
+                        type.BaseType = (TypeDefinitionData)_typeTable[baseTypeId];
 
-					var interfaceCount = _reader.ReadUInt16();
-					var interfaceTypeIds = new uint[interfaceCount];
-					for (int i = 0; i < interfaceCount; i++)
-						interfaceTypeIds[i] = _reader.ReadUInt32();
+                    var interfaceCount = _reader.ReadUInt16();
+                    var interfaceTypeIds = new uint[interfaceCount];
+                    for (int i = 0; i < interfaceCount; i++)
+                        interfaceTypeIds[i] = _reader.ReadUInt32();
 
-					var implementedInterfaces = new ImplementedInterfacesCollection(interfaceTypeIds.Select(i => (DeclaringTypeData)_typeTable[i]));
-					
-					type.ImplementedInterfaces = implementedInterfaces;
+                    var implementedInterfaces = new ImplementedInterfacesCollection(interfaceTypeIds.Select(i => (DeclaringTypeData)_typeTable[i]));
 
-					type.GenericParameters = this.ReadGenericParametersCollection();
+                    type.ImplementedInterfaces = implementedInterfaces;
 
-					if (type.TypeKind == TypeKind.Delegate)
-					{
-						var returnTypeId = _reader.ReadUInt32();
-						type.DelegateReturnType = _typeTable[returnTypeId];
-						type.DelegateParameters = this.ReadParametersCollection(type.MetadataItemKind);
-					}
-					else
-					{
-						var memberCount = _reader.ReadInt32();
-						for (int i = 0; i < memberCount; i++)
-							type.AddMember(this.ReadMember(type));
-					}
-				}
-				else
-				{
-					var genericTypeParameterData = (GenericTypeParameterData)typeBase;
+                    type.GenericParameters = this.ReadGenericParametersCollection();
 
-					var constraintCount = _reader.ReadUInt16();
-					for (int i = 0; i < constraintCount; i++)
-					{
-						var contraintTypeId = _reader.ReadUInt32();
-						genericTypeParameterData.Constraints.Add(_typeTable[contraintTypeId]);
-					}
-				}
-			}
-		}
+                    if (type.TypeKind == TypeKind.Delegate)
+                    {
+                        var returnTypeId = _reader.ReadUInt32();
+                        type.DelegateReturnType = _typeTable[returnTypeId];
+                        type.DelegateParameters = this.ReadParametersCollection(type.MetadataItemKind);
+                    }
+                    else
+                    {
+                        var memberCount = _reader.ReadInt32();
+                        for (int i = 0; i < memberCount; i++)
+                            type.AddMember(this.ReadMember(type));
+                    }
+                }
+                else
+                {
+                    var genericTypeParameterData = (GenericTypeParameterData)typeBase;
 
-		private MemberDataBase ReadMember(TypeDefinitionData declaringType)
-		{
-			var memberItemKind = (MetadataItemKinds)_reader.ReadUInt16();
-			if (memberItemKind == MetadataItemKinds.TypeDefinition)
-			{
-				var nestedTypeId = _reader.ReadUInt32();
-				var nestedType = _typeTable[nestedTypeId];
+                    var constraintCount = _reader.ReadUInt16();
+                    for (int i = 0; i < constraintCount; i++)
+                    {
+                        var contraintTypeId = _reader.ReadUInt32();
+                        genericTypeParameterData.Constraints.Add(_typeTable[contraintTypeId]);
+                    }
+                }
+            }
+        }
 
-				if (nestedType.ContainingType == null)
-					nestedType.ContainingType = declaringType;
+        private MemberDataBase ReadMember(TypeDefinitionData declaringType)
+        {
+            var memberItemKind = (MetadataItemKinds)_reader.ReadUInt16();
+            if (memberItemKind == MetadataItemKinds.TypeDefinition)
+            {
+                var nestedTypeId = _reader.ReadUInt32();
+                var nestedType = _typeTable[nestedTypeId];
 
-				return nestedType;
-			}
+                if (nestedType.ContainingType == null)
+                    nestedType.ContainingType = declaringType;
 
-			var name = _reader.ReadString();
-			var accessibility = (MemberAccessibility)_reader.ReadByte();
-			var memberFlags = (MemberFlags)_reader.ReadByte();
+                return nestedType;
+            }
 
-			if (memberItemKind == MetadataItemKinds.Constructor)
-			{
-				var parameters = this.ReadParametersCollection(memberItemKind);
-				return new ConstructorData(name, accessibility, memberFlags, parameters)
-				{
-					ContainingType = declaringType,
-				};
-			}
+            var name = _reader.ReadString();
+            var accessibility = (MemberAccessibility)_reader.ReadByte();
+            var memberFlags = (MemberFlags)_reader.ReadByte();
 
-			var typeId = _reader.ReadUInt32();
-			var type = _typeTable[typeId];
+            if (memberItemKind == MetadataItemKinds.Constructor)
+            {
+                var parameters = this.ReadParametersCollection(memberItemKind);
+                return new ConstructorData(name, accessibility, memberFlags, parameters)
+                {
+                    ContainingType = declaringType,
+                };
+            }
 
-			switch (memberItemKind)
-			{
-				case MetadataItemKinds.Constant:
-					object constantValue = null; // TODO_Serialize: get the real value here
-					return new ConstantData(name, accessibility, memberFlags, type, false, constantValue)
-					{
-						ContainingType = declaringType,
-					};
+            var typeId = _reader.ReadUInt32();
+            var type = _typeTable[typeId];
 
-				case MetadataItemKinds.Event:
-					return new EventData(name, accessibility, memberFlags, type)
-					{
-						ContainingType = declaringType,
-					};
+            switch (memberItemKind)
+            {
+                case MetadataItemKinds.Constant:
+                    object constantValue = null; // TODO_Serialize: get the real value here
+                    return new ConstantData(name, accessibility, memberFlags, type, false, constantValue)
+                    {
+                        ContainingType = declaringType,
+                    };
 
-				case MetadataItemKinds.Field:
-					{
-						var isReadOnly = _reader.ReadBoolean();
-						return new FieldData(name, accessibility, memberFlags, type, false, isReadOnly)
-						{
-							ContainingType = declaringType,
-						};
-					}
+                case MetadataItemKinds.Event:
+                    return new EventData(name, accessibility, memberFlags, type)
+                    {
+                        ContainingType = declaringType,
+                    };
 
-				case MetadataItemKinds.Method:
-					{
-						var isExtensionMethod = _reader.ReadBoolean();
-						var genericParameters = this.ReadGenericParametersCollection();
-						var parameters = this.ReadParametersCollection(memberItemKind);
-						return new MethodData(name, accessibility, memberFlags, type, false, genericParameters, isExtensionMethod, parameters)
-						{
-							ContainingType = declaringType,
-						};
-					}
+                case MetadataItemKinds.Field:
+                    {
+                        var isReadOnly = _reader.ReadBoolean();
+                        return new FieldData(name, accessibility, memberFlags, type, false, isReadOnly)
+                        {
+                            ContainingType = declaringType,
+                        };
+                    }
 
-				case MetadataItemKinds.Operator:
-					{
-						var parameters = this.ReadParametersCollection(memberItemKind);
-						return new OperatorData(name, accessibility, memberFlags, type, false, parameters)
-						{
-							ContainingType = declaringType,
-						};
-					}
+                case MetadataItemKinds.Method:
+                    {
+                        var isExtensionMethod = _reader.ReadBoolean();
+                        var genericParameters = this.ReadGenericParametersCollection();
+                        var parameters = this.ReadParametersCollection(memberItemKind);
+                        return new MethodData(name, accessibility, memberFlags, type, false, genericParameters, isExtensionMethod, parameters)
+                        {
+                            ContainingType = declaringType,
+                        };
+                    }
 
-				case MetadataItemKinds.Indexer:
-				case MetadataItemKinds.Property:
-					{
-						var getMethodAccessibilityTemp = _reader.ReadByte();
-						var getMethodAccessibility = getMethodAccessibilityTemp == 0xFF
-							? default(MemberAccessibility?)
-							: (MemberAccessibility)getMethodAccessibilityTemp;
-						var setMethodAccessibilityTemp = _reader.ReadByte();
-						var setMethodAccessibility = setMethodAccessibilityTemp == 0xFF
-							? default(MemberAccessibility?)
-							: (MemberAccessibility)setMethodAccessibilityTemp;
+                case MetadataItemKinds.Operator:
+                    {
+                        var parameters = this.ReadParametersCollection(memberItemKind);
+                        return new OperatorData(name, accessibility, memberFlags, type, false, parameters)
+                        {
+                            ContainingType = declaringType,
+                        };
+                    }
 
-						if (memberItemKind == MetadataItemKinds.Property)
-						{
-							return new PropertyData(name, accessibility, memberFlags, type, false, getMethodAccessibility, setMethodAccessibility)
-							{
-								ContainingType = declaringType,
-							};
-						}
-						else
-						{
-							var parameters = this.ReadParametersCollection(memberItemKind);
-							return new IndexerData(name, accessibility, memberFlags, type, false, parameters, getMethodAccessibility, setMethodAccessibility)
-							{
-								ContainingType = declaringType,
-							};
-						}
-					}
+                case MetadataItemKinds.Indexer:
+                case MetadataItemKinds.Property:
+                    {
+                        var getMethodAccessibilityTemp = _reader.ReadByte();
+                        var getMethodAccessibility = getMethodAccessibilityTemp == 0xFF
+                            ? default(MemberAccessibility?)
+                            : (MemberAccessibility)getMethodAccessibilityTemp;
+                        var setMethodAccessibilityTemp = _reader.ReadByte();
+                        var setMethodAccessibility = setMethodAccessibilityTemp == 0xFF
+                            ? default(MemberAccessibility?)
+                            : (MemberAccessibility)setMethodAccessibilityTemp;
 
-				case MetadataItemKinds.Assembly:
-				case MetadataItemKinds.GenericTypeParameter:
-				case MetadataItemKinds.Parameter:
-				default:
-					Debug.Fail("Incorrect member type.");
-					return null;
-			}
-		}
+                        if (memberItemKind == MetadataItemKinds.Property)
+                        {
+                            return new PropertyData(name, accessibility, memberFlags, type, false, getMethodAccessibility, setMethodAccessibility)
+                            {
+                                ContainingType = declaringType,
+                            };
+                        }
+                        else
+                        {
+                            var parameters = this.ReadParametersCollection(memberItemKind);
+                            return new IndexerData(name, accessibility, memberFlags, type, false, parameters, getMethodAccessibility, setMethodAccessibility)
+                            {
+                                ContainingType = declaringType,
+                            };
+                        }
+                    }
 
-		private GenericTypeParameterCollection ReadGenericParametersCollection()
-		{
-			var genericParametersCount = _reader.ReadUInt16();
+                case MetadataItemKinds.Assembly:
+                case MetadataItemKinds.GenericTypeParameter:
+                case MetadataItemKinds.Parameter:
+                default:
+                    Debug.Fail("Incorrect member type.");
+                    return null;
+            }
+        }
 
-			if (genericParametersCount == 0)
-				return GenericTypeParameterData.EmptyList;
+        private GenericTypeParameterCollection ReadGenericParametersCollection()
+        {
+            var genericParametersCount = _reader.ReadUInt16();
 
-			var genericParameterIds = new uint[genericParametersCount];
-			for (int i = 0; i < genericParametersCount; i++)
-				genericParameterIds[i] = _reader.ReadUInt32();
+            if (genericParametersCount == 0)
+                return GenericTypeParameterData.EmptyList;
 
-			return new GenericTypeParameterCollection(genericParameterIds.Select(i => (GenericTypeParameterData)_typeTable[i]));
-		}
+            var genericParameterIds = new uint[genericParametersCount];
+            for (int i = 0; i < genericParametersCount; i++)
+                genericParameterIds[i] = _reader.ReadUInt32();
 
-		private ParameterCollection ReadParametersCollection(MetadataItemKinds declaringMemberKind)
-		{
-			var parametersCount = _reader.ReadUInt16();
+            return new GenericTypeParameterCollection(genericParameterIds.Select(i => (GenericTypeParameterData)_typeTable[i]));
+        }
 
-			var parameters = new ParameterCollection();
-			for (int i = 0; i < parametersCount; i++)
-				parameters.Add(this.ReadParameter(declaringMemberKind));
+        private ParameterCollection ReadParametersCollection(MetadataItemKinds declaringMemberKind)
+        {
+            var parametersCount = _reader.ReadUInt16();
 
-			return parameters;
-		}
+            var parameters = new ParameterCollection();
+            for (int i = 0; i < parametersCount; i++)
+                parameters.Add(this.ReadParameter(declaringMemberKind));
 
-		private ParameterData ReadParameter(MetadataItemKinds declaringMemberKind)
-		{
-			var name = _reader.ReadString();
-			var typeId = _reader.ReadUInt32();
-			var modifier = (MetadataItems.ParameterModifier)_reader.ReadByte();
-			var flags = (ParameterData.InternalFlags)_reader.ReadByte();
-			
-			object defaultValue = null;
-			if ((flags & ParameterData.InternalFlags.IsOptional) != 0)
-				defaultValue = this.ReadDefaultValue();
+            return parameters;
+        }
 
-			return new ParameterData(declaringMemberKind, name, _typeTable[typeId], modifier, flags, defaultValue);
-		}
+        private ParameterData ReadParameter(MetadataItemKinds declaringMemberKind)
+        {
+            var name = _reader.ReadString();
+            var typeId = _reader.ReadUInt32();
+            var modifier = (MetadataItems.ParameterModifier)_reader.ReadByte();
+            var flags = (ParameterData.InternalFlags)_reader.ReadByte();
 
-		private AssemblyData[] ReadAssemblyDataCollection(int assemblyCount)
-		{
-			var family = new AssemblyFamily();
+            object defaultValue = null;
+            if ((flags & ParameterData.InternalFlags.IsOptional) != 0)
+                defaultValue = this.ReadDefaultValue();
 
-			var loadedAssemblies = new AssemblyData[assemblyCount];
-			for (int i = 0; i < assemblyCount; i++)
-				loadedAssemblies[i] = this.ReadAssemblyData(family);
+            return new ParameterData(declaringMemberKind, name, _typeTable[typeId], modifier, flags, defaultValue);
+        }
 
-			return loadedAssemblies;
-		}
+        private AssemblyData[] ReadAssemblyDataCollection(int assemblyCount)
+        {
+            var family = new AssemblyFamily();
 
-		private AssemblyData ReadAssemblyData(AssemblyFamily family)
-		{
-			var fullName = _reader.ReadString();
-			var typeCount = _reader.ReadInt32();
+            var loadedAssemblies = new AssemblyData[assemblyCount];
+            for (int i = 0; i < assemblyCount; i++)
+                loadedAssemblies[i] = this.ReadAssemblyData(family);
 
-			var assemblyData = new AssemblyData(null, fullName, null, null, null); // TODO_Serialize: pass the names here
-			//for (int i = 0; i < typeCount; i++)
-			//	assemblyData.AddType(this.ReadTypeDataBase(assemblyData));
+            return loadedAssemblies;
+        }
 
-			family.Add(assemblyData);
-			return assemblyData;
-		}
+        private AssemblyData ReadAssemblyData(AssemblyFamily family)
+        {
+            var fullName = _reader.ReadString();
+            var typeCount = _reader.ReadInt32();
 
-		private TypeData ReadTypeDataBase(AssemblyData assemblyData)
-		{
-			var typeId = _reader.ReadUInt32();
-			var name = _reader.ReadString();
-			var accessibility = (MemberAccessibility)_reader.ReadByte();
-			var memberFlags = (MemberFlags)_reader.ReadByte();
-			var typeKind = (TypeKind)_reader.ReadByte();
-			var delegateReturnTypeIsDynamic = _reader.ReadBoolean();
+            var assemblyData = new AssemblyData(null, fullName, null, null, null); // TODO_Serialize: pass the names here
+                                                                                   //for (int i = 0; i < typeCount; i++)
+                                                                                   //	assemblyData.AddType(this.ReadTypeDataBase(assemblyData));
 
-			TypeData type;
+            family.Add(assemblyData);
+            return assemblyData;
+        }
 
-			var isTypeData = _reader.ReadBoolean();
-			if (isTypeData)
-			{
-				var typeFlags = (TypeDefinitionFlags)_reader.ReadByte();
-				var hasFullName = _reader.ReadBoolean();
-				var fullName = hasFullName ? _reader.ReadString() : null;
+        private TypeData ReadTypeDataBase(AssemblyData assemblyData)
+        {
+            var typeId = _reader.ReadUInt32();
+            var name = _reader.ReadString();
+            var accessibility = (MemberAccessibility)_reader.ReadByte();
+            var memberFlags = (MemberFlags)_reader.ReadByte();
+            var typeKind = (TypeKind)_reader.ReadByte();
+            var delegateReturnTypeIsDynamic = _reader.ReadBoolean();
 
-				type = new TypeDefinitionData(name, accessibility, memberFlags, typeKind, assemblyData, fullName, typeFlags, delegateReturnTypeIsDynamic);
-			}
-			else
-			{
-				var genericParameterAttributes = (GenericParameterAttributes)_reader.ReadInt32();
-				var genericParameterPosition = (int)_reader.ReadUInt16();
+            TypeData type;
 
-				type = new GenericTypeParameterData(name, accessibility, memberFlags, typeKind, assemblyData, genericParameterAttributes, genericParameterPosition);
-			}
+            var isTypeData = _reader.ReadBoolean();
+            if (isTypeData)
+            {
+                var typeFlags = (TypeDefinitionFlags)_reader.ReadByte();
+                var hasFullName = _reader.ReadBoolean();
+                var fullName = hasFullName ? _reader.ReadString() : null;
 
-			_typeTable.Add(typeId, type);
-			return type;
-		}
+                type = new TypeDefinitionData(name, accessibility, memberFlags, typeKind, assemblyData, fullName, typeFlags, delegateReturnTypeIsDynamic);
+            }
+            else
+            {
+                var genericParameterAttributes = (GenericParameterAttributes)_reader.ReadInt32();
+                var genericParameterPosition = (int)_reader.ReadUInt16();
 
-		private object ReadDefaultValue()
-		{
-			var hasNonNullValue = _reader.ReadBoolean();
+                type = new GenericTypeParameterData(name, accessibility, memberFlags, typeKind, assemblyData, genericParameterAttributes, genericParameterPosition);
+            }
 
-			object value = null;
-			if (hasNonNullValue)
-			{
-				var typeName = _reader.ReadString();
+            _typeTable.Add(typeId, type);
+            return type;
+        }
 
-				if (typeName == typeof(bool).FullName)
-					value = _reader.ReadBoolean();
-				else if (typeName == typeof(byte).FullName)
-					value = _reader.ReadByte();
-				else if (typeName == typeof(char).FullName)
-					value = _reader.ReadChar();
-				else if (typeName == typeof(decimal).FullName)
-					value = _reader.ReadDecimal();
-				else if (typeName == typeof(double).FullName)
-					value = _reader.ReadDouble();
-				else if (typeName == typeof(float).FullName)
-					value = _reader.ReadSingle();
-				else if (typeName == typeof(int).FullName)
-					value = _reader.ReadInt32();
-				else if (typeName == typeof(long).FullName)
-					value = _reader.ReadInt64();
-				else if (typeName == typeof(sbyte).FullName)
-					value = _reader.ReadSByte();
-				else if (typeName == typeof(short).FullName)
-					value = _reader.ReadInt16();
-				else if (typeName == typeof(string).FullName)
-					value = _reader.ReadString();
-				else if (typeName == typeof(uint).FullName)
-					value = _reader.ReadUInt32();
-				else if (typeName == typeof(ulong).FullName)
-					value = _reader.ReadUInt64();
-				else if (typeName == typeof(ushort).FullName)
-					value = _reader.ReadUInt16();
-				else // The value is an enum and is encoded as a ulong
-					value = _reader.ReadUInt64();
-			}
+        private object ReadDefaultValue()
+        {
+            var hasNonNullValue = _reader.ReadBoolean();
 
-			return value;
-		}
+            object value = null;
+            if (hasNonNullValue)
+            {
+                var typeName = _reader.ReadString();
 
-		public AssemblyData[] LoadedAssemblies { get; private set; }
-	}
+                if (typeName == typeof(bool).FullName)
+                    value = _reader.ReadBoolean();
+                else if (typeName == typeof(byte).FullName)
+                    value = _reader.ReadByte();
+                else if (typeName == typeof(char).FullName)
+                    value = _reader.ReadChar();
+                else if (typeName == typeof(decimal).FullName)
+                    value = _reader.ReadDecimal();
+                else if (typeName == typeof(double).FullName)
+                    value = _reader.ReadDouble();
+                else if (typeName == typeof(float).FullName)
+                    value = _reader.ReadSingle();
+                else if (typeName == typeof(int).FullName)
+                    value = _reader.ReadInt32();
+                else if (typeName == typeof(long).FullName)
+                    value = _reader.ReadInt64();
+                else if (typeName == typeof(sbyte).FullName)
+                    value = _reader.ReadSByte();
+                else if (typeName == typeof(short).FullName)
+                    value = _reader.ReadInt16();
+                else if (typeName == typeof(string).FullName)
+                    value = _reader.ReadString();
+                else if (typeName == typeof(uint).FullName)
+                    value = _reader.ReadUInt32();
+                else if (typeName == typeof(ulong).FullName)
+                    value = _reader.ReadUInt64();
+                else if (typeName == typeof(ushort).FullName)
+                    value = _reader.ReadUInt16();
+                else // The value is an enum and is encoded as a ulong
+                    value = _reader.ReadUInt64();
+            }
+
+            return value;
+        }
+
+        public AssemblyData[] LoadedAssemblies { get; private set; }
+    }
 }

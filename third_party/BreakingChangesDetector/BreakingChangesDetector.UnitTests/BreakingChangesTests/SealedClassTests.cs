@@ -30,72 +30,72 @@ using BreakingChangesDetector.BreakingChanges;
 
 namespace BreakingChangesDetector.UnitTests.BreakingChangesTests
 {
-	public class SealedClassTests
-	{
-		#region NestedTypeTests
+    public class SealedClassTests
+    {
+        #region NestedTypeTests
 
-		[Fact]
-		public void NestedTypeTests()
-		{
-			var context = MetadataResolutionContext.CreateFromTypes(typeof(ChangedAccessibilityFromPublicToProtectedTests));
-			var nestedUnsealedClass = context.GetTypeDefinitionData(typeof(NestedUnsealedClass));
-			var nestedUnsealedClassWithInternalConstructor = context.GetTypeDefinitionData(typeof(NestedUnsealedClassWithInternalConstructor));
-			var nestedSealedClass = context.GetTypeDefinitionData(typeof(NestedSealedClass));
-			
-			var breakingChanges = MetadataComparer.CompareTypes(nestedUnsealedClass, nestedSealedClass);
-			AssertX.Equal(1, breakingChanges.Count, "There should be one breaking change when a type is sealed.");
-			AssertX.Equal(BreakingChangeKind.SealedClass, breakingChanges[0].BreakingChangeKind, "The BreakingChangeKind is incorrect.");
-			AssertX.Equal(nestedUnsealedClass.GetNestedType("Class"), breakingChanges[0].OldItem, "The OldItem is incorrect.");
-			AssertX.Equal(nestedSealedClass.GetNestedType("Class"), breakingChanges[0].NewItem, "The NewItem is incorrect.");
-			AssertX.Null(breakingChanges[0].AssociatedData, "The AssociatedData is incorrect.");
+        [Fact]
+        public void NestedTypeTests()
+        {
+            var context = MetadataResolutionContext.CreateFromTypes(typeof(ChangedAccessibilityFromPublicToProtectedTests));
+            var nestedUnsealedClass = context.GetTypeDefinitionData(typeof(NestedUnsealedClass));
+            var nestedUnsealedClassWithInternalConstructor = context.GetTypeDefinitionData(typeof(NestedUnsealedClassWithInternalConstructor));
+            var nestedSealedClass = context.GetTypeDefinitionData(typeof(NestedSealedClass));
 
-			breakingChanges = MetadataComparer.CompareTypes(nestedUnsealedClassWithInternalConstructor, nestedSealedClass);
-			AssertX.Equal(0, breakingChanges.Count, "There should be no breaking changes when a type is sealed which couldn't be derived externally.");
+            var breakingChanges = MetadataComparer.CompareTypes(nestedUnsealedClass, nestedSealedClass);
+            AssertX.Equal(1, breakingChanges.Count, "There should be one breaking change when a type is sealed.");
+            AssertX.Equal(BreakingChangeKind.SealedClass, breakingChanges[0].BreakingChangeKind, "The BreakingChangeKind is incorrect.");
+            AssertX.Equal(nestedUnsealedClass.GetNestedType("Class"), breakingChanges[0].OldItem, "The OldItem is incorrect.");
+            AssertX.Equal(nestedSealedClass.GetNestedType("Class"), breakingChanges[0].NewItem, "The NewItem is incorrect.");
+            AssertX.Null(breakingChanges[0].AssociatedData, "The AssociatedData is incorrect.");
 
-			breakingChanges = MetadataComparer.CompareTypes(nestedSealedClass, nestedUnsealedClass);
-			AssertX.Equal(0, breakingChanges.Count, "There should be no breaking changes when unsealing a class.");
+            breakingChanges = MetadataComparer.CompareTypes(nestedUnsealedClassWithInternalConstructor, nestedSealedClass);
+            AssertX.Equal(0, breakingChanges.Count, "There should be no breaking changes when a type is sealed which couldn't be derived externally.");
 
-			breakingChanges = MetadataComparer.CompareTypes(nestedSealedClass, nestedUnsealedClassWithInternalConstructor);
-			AssertX.Equal(0, breakingChanges.Where(b => b.BreakingChangeKind == BreakingChangeKind.SealedClass).Count(), "There should be no breaking changes when unsealing a class.");
-		}
+            breakingChanges = MetadataComparer.CompareTypes(nestedSealedClass, nestedUnsealedClass);
+            AssertX.Equal(0, breakingChanges.Count, "There should be no breaking changes when unsealing a class.");
 
-		#endregion // NestedTypeTests
+            breakingChanges = MetadataComparer.CompareTypes(nestedSealedClass, nestedUnsealedClassWithInternalConstructor);
+            AssertX.Equal(0, breakingChanges.Where(b => b.BreakingChangeKind == BreakingChangeKind.SealedClass).Count(), "There should be no breaking changes when unsealing a class.");
+        }
 
-		#region TypeTests
+        #endregion // NestedTypeTests
 
-		[Fact]
-		public void TypeTests()
-		{
-			var context = MetadataResolutionContext.CreateFromTypes(typeof(ChangedAccessibilityFromPublicToProtectedTests));
-			var unsealedClass = context.GetTypeDefinitionData(typeof(UnsealedClass));
-			var unsealedClassWithInternalConstructor = context.GetTypeDefinitionData(typeof(UnsealedClassWithInternalConstructor));
-			var sealedClass = context.GetTypeDefinitionData(typeof(SealedClass));
-			
-			var breakingChanges = MetadataComparer.CompareTypes(unsealedClass, sealedClass);
-			AssertX.Equal(1, breakingChanges.Count, "There should be one breaking change when a type is sealed.");
-			AssertX.Equal(BreakingChangeKind.SealedClass, breakingChanges[0].BreakingChangeKind, "The BreakingChangeKind is incorrect.");
-			AssertX.Equal(unsealedClass, breakingChanges[0].OldItem, "The OldItem is incorrect.");
-			AssertX.Equal(sealedClass, breakingChanges[0].NewItem, "The NewItem is incorrect.");
-			AssertX.Null(breakingChanges[0].AssociatedData, "The AssociatedData is incorrect.");
+        #region TypeTests
 
-			breakingChanges = MetadataComparer.CompareTypes(unsealedClassWithInternalConstructor, sealedClass);
-			AssertX.Equal(0, breakingChanges.Count, "There should be no breaking changes when a type is sealed which couldn't be derived externally.");
+        [Fact]
+        public void TypeTests()
+        {
+            var context = MetadataResolutionContext.CreateFromTypes(typeof(ChangedAccessibilityFromPublicToProtectedTests));
+            var unsealedClass = context.GetTypeDefinitionData(typeof(UnsealedClass));
+            var unsealedClassWithInternalConstructor = context.GetTypeDefinitionData(typeof(UnsealedClassWithInternalConstructor));
+            var sealedClass = context.GetTypeDefinitionData(typeof(SealedClass));
 
-			breakingChanges = MetadataComparer.CompareTypes(sealedClass, unsealedClass);
-			AssertX.Equal(0, breakingChanges.Count, "There should be no breaking changes when unsealing a class.");
+            var breakingChanges = MetadataComparer.CompareTypes(unsealedClass, sealedClass);
+            AssertX.Equal(1, breakingChanges.Count, "There should be one breaking change when a type is sealed.");
+            AssertX.Equal(BreakingChangeKind.SealedClass, breakingChanges[0].BreakingChangeKind, "The BreakingChangeKind is incorrect.");
+            AssertX.Equal(unsealedClass, breakingChanges[0].OldItem, "The OldItem is incorrect.");
+            AssertX.Equal(sealedClass, breakingChanges[0].NewItem, "The NewItem is incorrect.");
+            AssertX.Null(breakingChanges[0].AssociatedData, "The AssociatedData is incorrect.");
 
-			breakingChanges = MetadataComparer.CompareTypes(sealedClass, unsealedClassWithInternalConstructor);
-			AssertX.Equal(0, breakingChanges.Where(b => b.BreakingChangeKind == BreakingChangeKind.SealedClass).Count(), "There should be no breaking changes when unsealing a class.");
-		}
+            breakingChanges = MetadataComparer.CompareTypes(unsealedClassWithInternalConstructor, sealedClass);
+            AssertX.Equal(0, breakingChanges.Count, "There should be no breaking changes when a type is sealed which couldn't be derived externally.");
 
-		#endregion // TypeTests
+            breakingChanges = MetadataComparer.CompareTypes(sealedClass, unsealedClass);
+            AssertX.Equal(0, breakingChanges.Count, "There should be no breaking changes when unsealing a class.");
 
-		public class NestedUnsealedClass { public class Class { } }
-		public class NestedUnsealedClassWithInternalConstructor { public class Class { internal Class() { }} }
-		public class NestedSealedClass { public sealed class Class { } }
+            breakingChanges = MetadataComparer.CompareTypes(sealedClass, unsealedClassWithInternalConstructor);
+            AssertX.Equal(0, breakingChanges.Where(b => b.BreakingChangeKind == BreakingChangeKind.SealedClass).Count(), "There should be no breaking changes when unsealing a class.");
+        }
 
-		public class UnsealedClass { }
-		public class UnsealedClassWithInternalConstructor { internal UnsealedClassWithInternalConstructor() { } }
-		public sealed class SealedClass { }
-	}
+        #endregion // TypeTests
+
+        public class NestedUnsealedClass { public class Class { } }
+        public class NestedUnsealedClassWithInternalConstructor { public class Class { internal Class() { } } }
+        public class NestedSealedClass { public sealed class Class { } }
+
+        public class UnsealedClass { }
+        public class UnsealedClassWithInternalConstructor { internal UnsealedClassWithInternalConstructor() { } }
+        public sealed class SealedClass { }
+    }
 }

@@ -34,180 +34,180 @@ using System.Threading.Tasks;
 
 namespace BreakingChangesDetector.MetadataItems
 {
-	/// <summary>
-	/// Represents the a group of externally visible <see cref="AssemblyData"/> instances.
-	/// </summary>
-	public class AssemblyFamily : IEnumerable<AssemblyData>
-	{
-		#region Member Variables
+    /// <summary>
+    /// Represents the a group of externally visible <see cref="AssemblyData"/> instances.
+    /// </summary>
+    public class AssemblyFamily : IEnumerable<AssemblyData>
+    {
+        #region Member Variables
 
-		private readonly List<AssemblyData> _assemblies;
+        private readonly List<AssemblyData> _assemblies;
 
-		#endregion // Member Variables
+        #endregion // Member Variables
 
-		#region Constructor
+        #region Constructor
 
-		internal AssemblyFamily()
-		{
-			_assemblies = new List<AssemblyData>();
-		}
+        internal AssemblyFamily()
+        {
+            _assemblies = new List<AssemblyData>();
+        }
 
-		#endregion // Constructor
+        #endregion // Constructor
 
-		#region Interfaces
+        #region Interfaces
 
-		System.Collections.IEnumerator System.Collections.IEnumerable.GetEnumerator()
-		{
-			return _assemblies.GetEnumerator();
-		}
+        System.Collections.IEnumerator System.Collections.IEnumerable.GetEnumerator()
+        {
+            return _assemblies.GetEnumerator();
+        }
 
-		#endregion // Interfaces
+        #endregion // Interfaces
 
-		#region Methods
+        #region Methods
 
-		#region Public Methods
+        #region Public Methods
 
-		#region Add
+        #region Add
 
-		/// <summary>
-		/// Add an <see cref="AssemblyData"/> instance to the family.
-		/// </summary>
-		/// <param name="assemblyData">The AssemblyData to add.</param>
-		public void Add(AssemblyData assemblyData)
-		{
-			_assemblies.Add(assemblyData);
-		}
+        /// <summary>
+        /// Add an <see cref="AssemblyData"/> instance to the family.
+        /// </summary>
+        /// <param name="assemblyData">The AssemblyData to add.</param>
+        public void Add(AssemblyData assemblyData)
+        {
+            _assemblies.Add(assemblyData);
+        }
 
-		#endregion // Add
+        #endregion // Add
 
-		#region FromAssemblies
+        #region FromAssemblies
 
-		/// <summary>
-		/// Creates an <see cref="AssemblyFamily"/> instance from a collection of assemblies. 
-		/// </summary>
-		/// <param name="assemblies">A collection of assemblies all belonging to the same logical group.</param>
-		/// <returns>The created <see cref="AssemblyFamily"/> instance.</returns>
-		public static AssemblyFamily FromAssemblies(IEnumerable<Assembly> assemblies)
-		{
+        /// <summary>
+        /// Creates an <see cref="AssemblyFamily"/> instance from a collection of assemblies. 
+        /// </summary>
+        /// <param name="assemblies">A collection of assemblies all belonging to the same logical group.</param>
+        /// <returns>The created <see cref="AssemblyFamily"/> instance.</returns>
+        public static AssemblyFamily FromAssemblies(IEnumerable<Assembly> assemblies)
+        {
             var context = MetadataResolutionContext.CreateFromAssemblies(assemblies);
-			var family = new AssemblyFamily();
+            var family = new AssemblyFamily();
 
-			foreach (var assembly in assemblies)
-				family.Add(context.GetAssemblyData(assembly));
+            foreach (var assembly in assemblies)
+                family.Add(context.GetAssemblyData(assembly));
 
-			return family;
-		}
+            return family;
+        }
 
-		#endregion // FromAssemblies
+        #endregion // FromAssemblies
 
-		#region FromDirectory
+        #region FromDirectory
 
-		/// <summary>
-		/// Creates an <see cref="AssemblyFamily"/> instance from all assemblies in the specified directory.
-		/// </summary>
-		/// <param name="path">The path from which to load the assemblies.</param>
-		/// <param name="recursive">Indicates whether to recursively search for assemblies in descendant directories</param>
-		/// <returns>The created <see cref="AssemblyFamily"/> instance.</returns>
-		public static AssemblyFamily FromDirectory(string path, bool recursive = false)
-		{
-			var assemblies = new List<Assembly>();
-			AssemblyFamily.FromDirectoryHelper(assemblies, path, recursive);
-			return AssemblyFamily.FromAssemblies(assemblies);
-		}
+        /// <summary>
+        /// Creates an <see cref="AssemblyFamily"/> instance from all assemblies in the specified directory.
+        /// </summary>
+        /// <param name="path">The path from which to load the assemblies.</param>
+        /// <param name="recursive">Indicates whether to recursively search for assemblies in descendant directories</param>
+        /// <returns>The created <see cref="AssemblyFamily"/> instance.</returns>
+        public static AssemblyFamily FromDirectory(string path, bool recursive = false)
+        {
+            var assemblies = new List<Assembly>();
+            AssemblyFamily.FromDirectoryHelper(assemblies, path, recursive);
+            return AssemblyFamily.FromAssemblies(assemblies);
+        }
 
-		#endregion // FromDirectory
+        #endregion // FromDirectory
 
-		#region GetAssembly
+        #region GetAssembly
 
-		/// <summary>
-		/// Gets the <see cref="AssemblyData"/> with the specified full name in the family.
-		/// </summary>
-		public AssemblyData GetAssembly(string fullName)
-		{
-			return _assemblies.FirstOrDefault(a => a.FullName == fullName);
-		}
+        /// <summary>
+        /// Gets the <see cref="AssemblyData"/> with the specified full name in the family.
+        /// </summary>
+        public AssemblyData GetAssembly(string fullName)
+        {
+            return _assemblies.FirstOrDefault(a => a.FullName == fullName);
+        }
 
-		#endregion // GetAssembly
+        #endregion // GetAssembly
 
-		#region GetEnumerator
+        #region GetEnumerator
 
-		/// <summary>
-		/// Gets an enumerator capable of iterating the assemblies.
-		/// </summary>
-		public IEnumerator<AssemblyData> GetEnumerator()
-		{
-			return _assemblies.GetEnumerator();
-		}
+        /// <summary>
+        /// Gets an enumerator capable of iterating the assemblies.
+        /// </summary>
+        public IEnumerator<AssemblyData> GetEnumerator()
+        {
+            return _assemblies.GetEnumerator();
+        }
 
-		#endregion // GetEnumerator
+        #endregion // GetEnumerator
 
-		#endregion // Public Methods
+        #endregion // Public Methods
 
-		#region Internal Methods
+        #region Internal Methods
 
 #if DEBUG
-		/// <summary>
-		/// Gets a newer <see cref="AssemblyData"/> equivalent to the specified older version.
-		/// </summary>
-		/// <param name="oldAssembly"></param>
-		/// <returns></returns> 
+        /// <summary>
+        /// Gets a newer <see cref="AssemblyData"/> equivalent to the specified older version.
+        /// </summary>
+        /// <param name="oldAssembly"></param>
+        /// <returns></returns> 
 #endif
-		internal AssemblyData GetEquivalentAssembly(AssemblyData oldAssembly)
-		{
-			foreach (var newAssembly in _assemblies)
-			{
-				if (oldAssembly.IsEquivalentToNewAssembly(newAssembly))
-					return newAssembly;
-			}
+        internal AssemblyData GetEquivalentAssembly(AssemblyData oldAssembly)
+        {
+            foreach (var newAssembly in _assemblies)
+            {
+                if (oldAssembly.IsEquivalentToNewAssembly(newAssembly))
+                    return newAssembly;
+            }
 
-			foreach (var newAssembly in _assemblies)
-			{
-				var referencedNewAssembly = newAssembly.GetReferencedAssemblies()
-					.Where(a => oldAssembly.IsEquivalentToNewAssembly(a))
-					.FirstOrDefault();
+            foreach (var newAssembly in _assemblies)
+            {
+                var referencedNewAssembly = newAssembly.GetReferencedAssemblies()
+                    .Where(a => oldAssembly.IsEquivalentToNewAssembly(a))
+                    .FirstOrDefault();
 
-				if (referencedNewAssembly != null)
-					return referencedNewAssembly;
-			}
+                if (referencedNewAssembly != null)
+                    return referencedNewAssembly;
+            }
 
-			return null;
-		}
+            return null;
+        }
 
-		#endregion // Internal Methods
+        #endregion // Internal Methods
 
-		#region Private Methods
+        #region Private Methods
 
-		#region FromDirectoryHelper
+        #region FromDirectoryHelper
 
-		private static void FromDirectoryHelper(List<Assembly> assemblies, string path, bool recursive)
-		{
-			foreach (var file in Directory.GetFiles(path))
-			{
-				var extension = Path.GetExtension(file).ToLower();
-				if (extension == ".dll" || extension == ".exe")
-				{
-					try
-					{
-						assemblies.Add(Assembly.LoadFrom(file));
-					}
-					catch (BadImageFormatException)
-					{
-						// Ignore files that are not .NET assemblies
-					}
-				}
-			}
+        private static void FromDirectoryHelper(List<Assembly> assemblies, string path, bool recursive)
+        {
+            foreach (var file in Directory.GetFiles(path))
+            {
+                var extension = Path.GetExtension(file).ToLower();
+                if (extension == ".dll" || extension == ".exe")
+                {
+                    try
+                    {
+                        assemblies.Add(Assembly.LoadFrom(file));
+                    }
+                    catch (BadImageFormatException)
+                    {
+                        // Ignore files that are not .NET assemblies
+                    }
+                }
+            }
 
-			if (recursive)
-			{
-				foreach (var directory in Directory.GetDirectories(path))
-					AssemblyFamily.FromDirectoryHelper(assemblies, directory, recursive);
-			}
-		}
+            if (recursive)
+            {
+                foreach (var directory in Directory.GetDirectories(path))
+                    AssemblyFamily.FromDirectoryHelper(assemblies, directory, recursive);
+            }
+        }
 
-		#endregion // FromDirectoryHelper
+        #endregion // FromDirectoryHelper
 
-		#endregion // Private Methods
+        #endregion // Private Methods
 
-		#endregion // Methods
-	}
+        #endregion // Methods
+    }
 }

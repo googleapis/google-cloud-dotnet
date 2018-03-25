@@ -2,6 +2,7 @@
     MIT License
 
     Copyright(c) 2014-2018 Infragistics, Inc.
+    Copyright 2018 Google LLC
 
     Permission is hereby granted, free of charge, to any person obtaining a copy
     of this software and associated documentation files (the "Software"), to deal
@@ -30,19 +31,19 @@ using System.Threading.Tasks;
 
 namespace BreakingChangesDetector.MetadataItems
 {
-	/// <summary>
-	/// Represents a member or delegate with an associated type or return type.
-	/// </summary>
-	public interface ITypedItem
-	{
-		/// <summary>
-		/// Gets the type or return type associated with the item.
-		/// </summary>
-		TypeData Type { get; }
+    /// <summary>
+    /// Represents a member or delegate with an associated type or return type.
+    /// </summary>
+    public interface ITypedItem
+    {
+        /// <summary>
+        /// Gets the type or return type associated with the item.
+        /// </summary>
+        TypeData Type { get; }
 
-		/// <summary>
-		/// Gets the value indicating whether the type is the 'dynamic' type.
-		/// </summary>
-		bool IsTypeDynamic { get; }
-	}
+        /// <summary>
+        /// Gets the value indicating whether the type is the 'dynamic' type.
+        /// </summary>
+        bool IsTypeDynamic { get; }
+    }
 }

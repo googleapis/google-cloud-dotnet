@@ -34,88 +34,88 @@ using System.Threading.Tasks;
 
 namespace BreakingChangesDetector.MetadataItems
 {
-	/// <summary>
-	/// Abstract base class representing metadata for externally visible members with an type or return type.
-	/// </summary>
-	public abstract class TypedMemberDataBase : MemberDataBase,
-		ITypedItem
-	{
-		#region Constructor
+    /// <summary>
+    /// Abstract base class representing metadata for externally visible members with an type or return type.
+    /// </summary>
+    public abstract class TypedMemberDataBase : MemberDataBase,
+        ITypedItem
+    {
+        #region Constructor
 
-		internal TypedMemberDataBase(string name, MemberAccessibility accessibility, MemberFlags memberFlags, TypeData type, bool isTypeDynamic)
-			: base(name, accessibility, memberFlags)
-		{
-			this.Type = type;
-			this.IsTypeDynamic = isTypeDynamic;
-		}
+        internal TypedMemberDataBase(string name, MemberAccessibility accessibility, MemberFlags memberFlags, TypeData type, bool isTypeDynamic)
+            : base(name, accessibility, memberFlags)
+        {
+            this.Type = type;
+            this.IsTypeDynamic = isTypeDynamic;
+        }
 
-		internal TypedMemberDataBase(ISymbol symbol, MemberAccessibility accessibility, ITypeSymbol type, bool isTypeDynamic, MemberFlags flags, DeclaringTypeData declaringType)
-			: base(symbol, accessibility, flags, declaringType)
-		{
-			this.Type = declaringType.Context.GetTypeData(type);
-			this.IsTypeDynamic = isTypeDynamic;
-			Debug.Assert(this.Type != null, "Unable to get the TypeData.");
-		}
+        internal TypedMemberDataBase(ISymbol symbol, MemberAccessibility accessibility, ITypeSymbol type, bool isTypeDynamic, MemberFlags flags, DeclaringTypeData declaringType)
+            : base(symbol, accessibility, flags, declaringType)
+        {
+            this.Type = declaringType.Context.GetTypeData(type);
+            this.IsTypeDynamic = isTypeDynamic;
+            Debug.Assert(this.Type != null, "Unable to get the TypeData.");
+        }
 
-		#endregion // Constructor
+        #endregion // Constructor
 
-		#region Base Class Overrides
+        #region Base Class Overrides
 
-		#region CanOverrideMember
+        #region CanOverrideMember
 
 #if DEBUG
-		/// <summary>
-		/// Indicates whether the current member can override the specified member from a base type.
-		/// </summary>
-		/// <param name="baseMember">The member from the base type.</param>
-		/// <returns>True if the current member can override the base member; False otherwise.</returns>  
+        /// <summary>
+        /// Indicates whether the current member can override the specified member from a base type.
+        /// </summary>
+        /// <param name="baseMember">The member from the base type.</param>
+        /// <returns>True if the current member can override the base member; False otherwise.</returns>  
 #endif
-		internal override bool CanOverrideMember(MemberDataBase baseMember)
-		{
-			if (base.CanOverrideMember(baseMember) == false)
-				return false;
+        internal override bool CanOverrideMember(MemberDataBase baseMember)
+        {
+            if (base.CanOverrideMember(baseMember) == false)
+                return false;
 
-			return this.Type == ((TypedMemberDataBase)baseMember).Type;
-		}
+            return this.Type == ((TypedMemberDataBase)baseMember).Type;
+        }
 
-		#endregion // CanOverrideMember
+        #endregion // CanOverrideMember
 
-		#region DoesMatch
+        #region DoesMatch
 
-		internal override bool DoesMatch(MetadataItemBase other)
-		{
-			if (base.DoesMatch(other) == false)
-				return false;
+        internal override bool DoesMatch(MetadataItemBase other)
+        {
+            if (base.DoesMatch(other) == false)
+                return false;
 
-			var otherTyped = other as TypedMemberDataBase;
-			if (otherTyped == null)
-				return false;
+            var otherTyped = other as TypedMemberDataBase;
+            if (otherTyped == null)
+                return false;
 
-			if (this.IsTypeDynamic != otherTyped.IsTypeDynamic)
-				return false;
+            if (this.IsTypeDynamic != otherTyped.IsTypeDynamic)
+                return false;
 
-			if (this.Type.DisplayName != otherTyped.Type.DisplayName)
-				return false;
+            if (this.Type.DisplayName != otherTyped.Type.DisplayName)
+                return false;
 
-			return true;
-		}
+            return true;
+        }
 
-		#endregion // DoesMatch
+        #endregion // DoesMatch
 
-		#endregion // Base Class Overrides
+        #endregion // Base Class Overrides
 
-		#region Properties
+        #region Properties
 
-		/// <summary>
-		/// Gets the value indicating whether the type is dynamic.
-		/// </summary>
-		public bool IsTypeDynamic { get; private set; } // TODO_Serialize: round trip and test
+        /// <summary>
+        /// Gets the value indicating whether the type is dynamic.
+        /// </summary>
+        public bool IsTypeDynamic { get; private set; } // TODO_Serialize: round trip and test
 
-		/// <summary>
-		/// Gets the type (or return type) of the member.
-		/// </summary>
-		public TypeData Type { get; private set; }
+        /// <summary>
+        /// Gets the type (or return type) of the member.
+        /// </summary>
+        public TypeData Type { get; private set; }
 
-		#endregion // Properties
-	}
+        #endregion // Properties
+    }
 }

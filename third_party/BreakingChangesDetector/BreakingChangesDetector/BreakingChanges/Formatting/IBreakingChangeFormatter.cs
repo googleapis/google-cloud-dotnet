@@ -2,6 +2,7 @@
     MIT License
 
     Copyright(c) 2014-2018 Infragistics, Inc.
+    Copyright 2018 Google LLC
 
     Permission is hereby granted, free of charge, to any person obtaining a copy
     of this software and associated documentation files (the "Software"), to deal
@@ -30,21 +31,21 @@ using System.Threading.Tasks;
 
 namespace BreakingChangesDetector.BreakingChanges.Formatting
 {
-	/// <summary>
-	/// Represents a formatter capable of representing breaking change messages in some human-readable form.
-	/// </summary>
-	public interface IBreakingChangeFormatter
-	{
-		/// <summary>
-		/// Appends the text to the document using the specified format and formatting arguments.
-		/// </summary>
-		/// <param name="format">The format string used to append the text.</param>
-		/// <param name="arguments">The arguments to use in the format string.</param>
-		void AppendFormat(string format, params FormatItem[] arguments);
+    /// <summary>
+    /// Represents a formatter capable of representing breaking change messages in some human-readable form.
+    /// </summary>
+    public interface IBreakingChangeFormatter
+    {
+        /// <summary>
+        /// Appends the text to the document using the specified format and formatting arguments.
+        /// </summary>
+        /// <param name="format">The format string used to append the text.</param>
+        /// <param name="arguments">The arguments to use in the format string.</param>
+        void AppendFormat(string format, params FormatItem[] arguments);
 
-		/// <summary>
-		/// Appends a new line to the formatted text.
-		/// </summary>
-		void AppendLine();
-	}
+        /// <summary>
+        /// Appends a new line to the formatted text.
+        /// </summary>
+        void AppendLine();
+    }
 }

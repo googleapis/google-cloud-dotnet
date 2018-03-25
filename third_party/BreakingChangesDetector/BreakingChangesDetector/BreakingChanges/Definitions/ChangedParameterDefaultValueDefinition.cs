@@ -2,6 +2,7 @@
     MIT License
 
     Copyright(c) 2014-2018 Infragistics, Inc.
+    Copyright 2018 Google LLC
 
     Permission is hereby granted, free of charge, to any person obtaining a copy
     of this software and associated documentation files (the "Software"), to deal
@@ -31,33 +32,33 @@ using System.Threading.Tasks;
 
 namespace BreakingChangesDetector.BreakingChanges.Definitions
 {
-	internal class ChangedParameterDefaultValueDefinition : BreakingChangeDefinitionBase
-	{
-		public static readonly ChangedParameterDefaultValueDefinition Instance = new ChangedParameterDefaultValueDefinition();
+    internal class ChangedParameterDefaultValueDefinition : BreakingChangeDefinitionBase
+    {
+        public static readonly ChangedParameterDefaultValueDefinition Instance = new ChangedParameterDefaultValueDefinition();
 
-		private ChangedParameterDefaultValueDefinition() { }
+        private ChangedParameterDefaultValueDefinition() { }
 
-		public override void CompareItems(CompareItemsContext context)
-		{
-			var oldParameter = (ParameterData)context.OldItem;
-			var newParameter = (ParameterData)context.NewItem;
+        public override void CompareItems(CompareItemsContext context)
+        {
+            var oldParameter = (ParameterData)context.OldItem;
+            var newParameter = (ParameterData)context.NewItem;
 
-			if (oldParameter.IsOptional &&
-				newParameter.IsOptional &&
-				Object.Equals(oldParameter.DefaultValue, newParameter.DefaultValue) == false)
-			{
-				context.BreakingChanges.Add(new ChangedParameterDefaultValue(oldParameter, newParameter, (IParameterizedItem)context.AdditionalInfo));
-			}
-		}
+            if (oldParameter.IsOptional &&
+                newParameter.IsOptional &&
+                Object.Equals(oldParameter.DefaultValue, newParameter.DefaultValue) == false)
+            {
+                context.BreakingChanges.Add(new ChangedParameterDefaultValue(oldParameter, newParameter, (IParameterizedItem)context.AdditionalInfo));
+            }
+        }
 
-		public override BreakingChangeKind BreakingChangeKind
-		{
-			get { return BreakingChangeKind.ChangedParameterDefaultValue; }
-		}
+        public override BreakingChangeKind BreakingChangeKind
+        {
+            get { return BreakingChangeKind.ChangedParameterDefaultValue; }
+        }
 
-		public override MetadataItemKinds MembersKindsHandled
-		{
-			get { return MetadataItemKinds.Parameter; }
-		}
-	}
+        public override MetadataItemKinds MembersKindsHandled
+        {
+            get { return MetadataItemKinds.Parameter; }
+        }
+    }
 }

@@ -29,68 +29,68 @@ using BreakingChangesDetector.MetadataItems;
 
 namespace BreakingChangesDetector.UnitTests.MetadataTypesTests
 {
-	public class ConstructorDataTests
-	{
-		#region ConstructorDataAccessibilityTest
+    public class ConstructorDataTests
+    {
+        #region ConstructorDataAccessibilityTest
 
-		[Fact]
-		public void ConstructorDataAccessibilityTest()
-		{
-			var t = typeof(TestClassDefinition);
-			var context = MetadataResolutionContext.CreateFromTypes(t);
-			var typeData = context.GetTypeDefinitionData(t);
-			var members = typeData.GetMembers(".ctor");
-			AssertX.Equal(3, members.Count, "Incorrect number of constructors returned.");
-			AssertX.Equal(MemberAccessibility.Public, ((ConstructorData)members[0]).Accessibility, "Incorrect MemberAccessibility.");
-			AssertX.Equal(MemberAccessibility.Protected, ((ConstructorData)members[1]).Accessibility, "Incorrect MemberAccessibility.");
-			AssertX.Equal(MemberAccessibility.Protected, ((ConstructorData)members[2]).Accessibility, "Incorrect MemberAccessibility.");
-		}
+        [Fact]
+        public void ConstructorDataAccessibilityTest()
+        {
+            var t = typeof(TestClassDefinition);
+            var context = MetadataResolutionContext.CreateFromTypes(t);
+            var typeData = context.GetTypeDefinitionData(t);
+            var members = typeData.GetMembers(".ctor");
+            AssertX.Equal(3, members.Count, "Incorrect number of constructors returned.");
+            AssertX.Equal(MemberAccessibility.Public, ((ConstructorData)members[0]).Accessibility, "Incorrect MemberAccessibility.");
+            AssertX.Equal(MemberAccessibility.Protected, ((ConstructorData)members[1]).Accessibility, "Incorrect MemberAccessibility.");
+            AssertX.Equal(MemberAccessibility.Protected, ((ConstructorData)members[2]).Accessibility, "Incorrect MemberAccessibility.");
+        }
 
-		#endregion // ConstructorDataAccessibilityTest
+        #endregion // ConstructorDataAccessibilityTest
 
-		#region ConstructorDataDeclaringTypeTest
+        #region ConstructorDataDeclaringTypeTest
 
-		[Fact]
-		public void ConstructorDataDeclaringTypeTest()
-		{
-			var t = typeof(TestClassDefinition);
-			var context = MetadataResolutionContext.CreateFromTypes(t);
-			var typeData = context.GetTypeDefinitionData(t);
-			var constructor = typeData.GetMembers(".ctor")[0];
-			AssertX.Equal(typeData, constructor.ContainingType, "The DeclaringType of a member should be the type in which it is defined.");
-		}
+        [Fact]
+        public void ConstructorDataDeclaringTypeTest()
+        {
+            var t = typeof(TestClassDefinition);
+            var context = MetadataResolutionContext.CreateFromTypes(t);
+            var typeData = context.GetTypeDefinitionData(t);
+            var constructor = typeData.GetMembers(".ctor")[0];
+            AssertX.Equal(typeData, constructor.ContainingType, "The DeclaringType of a member should be the type in which it is defined.");
+        }
 
-		#endregion // ConstructorDataDeclaringTypeTest
+        #endregion // ConstructorDataDeclaringTypeTest
 
-		#region ConstructorDataNameTest
+        #region ConstructorDataNameTest
 
-		[Fact]
-		public void ConstructorDataNameTest()
-		{
-			var t = typeof(TestClassDefinition);
-			var context = MetadataResolutionContext.CreateFromTypes(t);
-			var typeData = context.GetTypeDefinitionData(t);
-			var constructor = typeData.GetMembers(".ctor")[0];
-			AssertX.Equal(".ctor", constructor.Name, "The Name of the member is incorrect.");
-		}
+        [Fact]
+        public void ConstructorDataNameTest()
+        {
+            var t = typeof(TestClassDefinition);
+            var context = MetadataResolutionContext.CreateFromTypes(t);
+            var typeData = context.GetTypeDefinitionData(t);
+            var constructor = typeData.GetMembers(".ctor")[0];
+            AssertX.Equal(".ctor", constructor.Name, "The Name of the member is incorrect.");
+        }
 
-		#endregion // ConstructorDataNameTest
+        #endregion // ConstructorDataNameTest
 
-		#region ConstructorDataParametersTest
+        #region ConstructorDataParametersTest
 
-		[Fact]
-		public void ConstructorDataParametersTest()
-		{
-			var t = typeof(TestClassDefinition);
-			var context = MetadataResolutionContext.CreateFromTypes(t);
-			var typeData = context.GetTypeDefinitionData(t);
-			var members = typeData.GetMembers(".ctor");
-			AssertX.Equal(3, members.Count, "Incorrect number of constructors returned.");
-			AssertX.Equal(0, ((ConstructorData)members[0]).Parameters.Count, "The public constructor has the wrong number of parameters.");
-			AssertX.Equal(2, ((ConstructorData)members[1]).Parameters.Count, "The protected constructor has the wrong number of parameters.");
-			AssertX.Equal(3, ((ConstructorData)members[2]).Parameters.Count, "The protected internal constructor has the wrong number of parameters.");
-		}
+        [Fact]
+        public void ConstructorDataParametersTest()
+        {
+            var t = typeof(TestClassDefinition);
+            var context = MetadataResolutionContext.CreateFromTypes(t);
+            var typeData = context.GetTypeDefinitionData(t);
+            var members = typeData.GetMembers(".ctor");
+            AssertX.Equal(3, members.Count, "Incorrect number of constructors returned.");
+            AssertX.Equal(0, ((ConstructorData)members[0]).Parameters.Count, "The public constructor has the wrong number of parameters.");
+            AssertX.Equal(2, ((ConstructorData)members[1]).Parameters.Count, "The protected constructor has the wrong number of parameters.");
+            AssertX.Equal(3, ((ConstructorData)members[2]).Parameters.Count, "The protected internal constructor has the wrong number of parameters.");
+        }
 
-		#endregion // ConstructorDataParametersTest
-	}
+        #endregion // ConstructorDataParametersTest
+    }
 }

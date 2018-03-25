@@ -33,83 +33,83 @@ using System.Threading.Tasks;
 
 namespace BreakingChangesDetector.MetadataItems
 {
-	/// <summary>
-	/// Represents the metadata for an externally visible operator overload.
-	/// </summary>
-	public sealed class OperatorData : MethodDataBase
-	{
-		#region Constants
+    /// <summary>
+    /// Represents the metadata for an externally visible operator overload.
+    /// </summary>
+    public sealed class OperatorData : MethodDataBase
+    {
+        #region Constants
 
-		internal const string ImplicitCastOperatorName = "op_Implicit";
+        internal const string ImplicitCastOperatorName = "op_Implicit";
 
-		#endregion // Constants
+        #endregion // Constants
 
-		#region Constructor
+        #region Constructor
 
-		internal OperatorData(string name, MemberAccessibility accessibility, MemberFlags memberFlags, TypeData type, bool isTypeDynamic, ParameterCollection parameters)
-			: base(name, accessibility, memberFlags, type, isTypeDynamic, parameters)
-		{
-		}
+        internal OperatorData(string name, MemberAccessibility accessibility, MemberFlags memberFlags, TypeData type, bool isTypeDynamic, ParameterCollection parameters)
+            : base(name, accessibility, memberFlags, type, isTypeDynamic, parameters)
+        {
+        }
 
-		internal OperatorData(IMethodSymbol methodSymbol, DeclaringTypeData declaringType)
-			: base(methodSymbol, MemberAccessibility.Public, declaringType)
-		{
-		}
+        internal OperatorData(IMethodSymbol methodSymbol, DeclaringTypeData declaringType)
+            : base(methodSymbol, MemberAccessibility.Public, declaringType)
+        {
+        }
 
-		#endregion // Constructor
+        #endregion // Constructor
 
-		#region Base Class Overrides
+        #region Base Class Overrides
 
-		#region Accept
+        #region Accept
 
-		/// <summary>
-		/// Performs the specified visitor's functionality on this instance.
-		/// </summary>
-		/// <param name="visitor">The visitor whose functionality should be performed on the instance.</param>
-		public override void Accept(MetadataItemVisitor visitor)
-		{
-			visitor.VisitOperatorData(this);
-		}
+        /// <summary>
+        /// Performs the specified visitor's functionality on this instance.
+        /// </summary>
+        /// <param name="visitor">The visitor whose functionality should be performed on the instance.</param>
+        public override void Accept(MetadataItemVisitor visitor)
+        {
+            visitor.VisitOperatorData(this);
+        }
 
-		#endregion // Accept
+        #endregion // Accept
 
-		#region MetadataItemKind
+        #region MetadataItemKind
 
-		/// <summary>
-		/// Gets the type of item the instance represents.
-		/// </summary>
-		public override MetadataItemKinds MetadataItemKind
-		{
-			get { return MetadataItemKinds.Operator; }
-		}
+        /// <summary>
+        /// Gets the type of item the instance represents.
+        /// </summary>
+        public override MetadataItemKinds MetadataItemKind
+        {
+            get { return MetadataItemKinds.Operator; }
+        }
 
-		#endregion // MetadataItemKind
+        #endregion // MetadataItemKind
 
-		#region ReplaceGenericTypeParameters
+        #region ReplaceGenericTypeParameters
 
 #if DEBUG
-		/// <summary>
-		/// Replaces all type parameters used by the member with their associated generic arguments specified in a constructed generic type.
-		/// </summary>
-		/// <param name="genericParameters">The generic parameters being replaced.</param>
-		/// <param name="genericArguments">The generic arguments replacing the parameters.</param>
-		/// <returns>A new member with the replaced type parameters or the current instance if the member does not use any of the generic parameters.</returns> 
+        /// <summary>
+        /// Replaces all type parameters used by the member with their associated generic arguments specified in a constructed generic type.
+        /// </summary>
+        /// <param name="genericParameters">The generic parameters being replaced.</param>
+        /// <param name="genericArguments">The generic arguments replacing the parameters.</param>
+        /// <returns>A new member with the replaced type parameters or the current instance if the member does not use any of the generic parameters.</returns> 
 #endif
-		internal override MemberDataBase ReplaceGenericTypeParameters(GenericTypeParameterCollection genericParameters, GenericTypeArgumentCollection genericArguments)
-		{
-			var replacedType = (TypeData)this.Type.ReplaceGenericTypeParameters(genericParameters, genericArguments);
-			var replacedParameters = this.Parameters.ReplaceGenericTypeParameters(this.MetadataItemKind, genericParameters, genericArguments);
-			if (replacedType == this.Type &&
-				replacedParameters == this.Parameters)
-			{
-				return this;
-			}
+        internal override MemberDataBase ReplaceGenericTypeParameters(GenericTypeParameterCollection genericParameters, GenericTypeArgumentCollection genericArguments)
+        {
+            var replacedType = (TypeData)this.Type.ReplaceGenericTypeParameters(genericParameters, genericArguments);
+            var replacedParameters = this.Parameters.ReplaceGenericTypeParameters(this.MetadataItemKind, genericParameters, genericArguments);
+            if (replacedType == this.Type &&
+                replacedParameters == this.Parameters)
+            {
+                return this;
+            }
 
-			return new OperatorData(this.Name, this.Accessibility, this.MemberFlags, replacedType, this.IsTypeDynamic, replacedParameters);
-		}
+            return new OperatorData(this.Name, this.Accessibility, this.MemberFlags, replacedType, this.IsTypeDynamic, replacedParameters);
+        }
 
-		#endregion // ReplaceGenericTypeParameters
+        #endregion // ReplaceGenericTypeParameters
 
-		#endregion // Base Class Overrides
-	}
+        #endregion // Base Class Overrides
+    }
 }

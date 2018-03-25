@@ -2,6 +2,7 @@
     MIT License
 
     Copyright(c) 2014-2018 Infragistics, Inc.
+    Copyright 2018 Google LLC
 
     Permission is hereby granted, free of charge, to any person obtaining a copy
     of this software and associated documentation files (the "Software"), to deal
@@ -31,29 +32,29 @@ using System.Threading.Tasks;
 
 namespace BreakingChangesDetector.BreakingChanges.Definitions
 {
-	internal class ChangedFieldToReadOnlyDefinition : BreakingChangeDefinitionBase
-	{
-		public static readonly ChangedFieldToReadOnlyDefinition Instance = new ChangedFieldToReadOnlyDefinition();
+    internal class ChangedFieldToReadOnlyDefinition : BreakingChangeDefinitionBase
+    {
+        public static readonly ChangedFieldToReadOnlyDefinition Instance = new ChangedFieldToReadOnlyDefinition();
 
-		private ChangedFieldToReadOnlyDefinition() { }
+        private ChangedFieldToReadOnlyDefinition() { }
 
-		public override void CompareItems(CompareItemsContext context)
-		{
-			var oldField = (FieldData)context.OldItem;
-			var newField = (FieldData)context.NewItem;
+        public override void CompareItems(CompareItemsContext context)
+        {
+            var oldField = (FieldData)context.OldItem;
+            var newField = (FieldData)context.NewItem;
 
-			if (oldField.IsReadOnly == false && newField.IsReadOnly)
-				context.BreakingChanges.Add(new ChangedFieldToReadOnly(oldField, newField));
-		}
+            if (oldField.IsReadOnly == false && newField.IsReadOnly)
+                context.BreakingChanges.Add(new ChangedFieldToReadOnly(oldField, newField));
+        }
 
-		public override BreakingChangeKind BreakingChangeKind
-		{
-			get { return BreakingChangeKind.ChangedFieldToReadOnly; }
-		}
+        public override BreakingChangeKind BreakingChangeKind
+        {
+            get { return BreakingChangeKind.ChangedFieldToReadOnly; }
+        }
 
-		public override MetadataItemKinds MembersKindsHandled
-		{
-			get { return MetadataItemKinds.Field; }
-		}
-	}
+        public override MetadataItemKinds MembersKindsHandled
+        {
+            get { return MetadataItemKinds.Field; }
+        }
+    }
 }
