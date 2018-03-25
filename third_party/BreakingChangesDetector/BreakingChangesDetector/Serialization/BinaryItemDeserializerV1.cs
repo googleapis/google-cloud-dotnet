@@ -25,14 +25,11 @@
 
 using BreakingChangesDetector.MetadataItems;
 using Microsoft.CodeAnalysis;
-using System;
 using System.Collections.Generic;
 using System.Diagnostics;
 using System.IO;
 using System.Linq;
 using System.Reflection;
-using System.Text;
-using System.Threading.Tasks;
 
 namespace BreakingChangesDetector.Serialization
 {
@@ -51,8 +48,8 @@ namespace BreakingChangesDetector.Serialization
             Debug.Assert(versionMarker == SerializationUtilities.Version1Marker, "Incorrect version");
 
             var assemblyCount = _reader.ReadUInt16();
-            this.LoadedAssemblies = this.ReadAssemblyDataCollection(assemblyCount);
-            this.ReadAdditionalData();
+            LoadedAssemblies = ReadAssemblyDataCollection(assemblyCount);
+            ReadAdditionalData();
         }
 
         private void ReadAdditionalData()
@@ -62,47 +59,52 @@ namespace BreakingChangesDetector.Serialization
             {
                 var typeId = _reader.ReadUInt32();
                 var typeBase = _typeTable[typeId];
-                var type = typeBase as TypeDefinitionData;
-                if (type != null)
+                if (typeBase is TypeDefinitionData type)
                 {
                     // TODO_Serialize: Fix this
                     //if (type.IsConstructedGenericType)
                     //{
-                    //	var hasSpecialDecalringType = _reader.ReadBoolean();
-                    //	if (hasSpecialDecalringType)
-                    //	{
-                    //		var declaringType = _reader.ReadUInt32();
-                    //		type.ContainingType = (TypeDefinitionData)_typeTable[declaringType];
-                    //	}
+                    //    var hasSpecialDecalringType = _reader.ReadBoolean();
+                    //    if (hasSpecialDecalringType)
+                    //    {
+                    //        var declaringType = _reader.ReadUInt32();
+                    //        type.ContainingType = (TypeDefinitionData)_typeTable[declaringType];
+                    //    }
                     //}
 
                     var baseTypeId = _reader.ReadUInt32();
 
                     if (baseTypeId != SerializationUtilities.NullTypeId)
+                    {
                         type.BaseType = (TypeDefinitionData)_typeTable[baseTypeId];
+                    }
 
                     var interfaceCount = _reader.ReadUInt16();
                     var interfaceTypeIds = new uint[interfaceCount];
                     for (int i = 0; i < interfaceCount; i++)
+                    {
                         interfaceTypeIds[i] = _reader.ReadUInt32();
+                    }
 
                     var implementedInterfaces = new ImplementedInterfacesCollection(interfaceTypeIds.Select(i => (DeclaringTypeData)_typeTable[i]));
 
                     type.ImplementedInterfaces = implementedInterfaces;
 
-                    type.GenericParameters = this.ReadGenericParametersCollection();
+                    type.GenericParameters = ReadGenericParametersCollection();
 
                     if (type.TypeKind == TypeKind.Delegate)
                     {
                         var returnTypeId = _reader.ReadUInt32();
                         type.DelegateReturnType = _typeTable[returnTypeId];
-                        type.DelegateParameters = this.ReadParametersCollection(type.MetadataItemKind);
+                        type.DelegateParameters = ReadParametersCollection(type.MetadataItemKind);
                     }
                     else
                     {
                         var memberCount = _reader.ReadInt32();
                         for (int i = 0; i < memberCount; i++)
-                            type.AddMember(this.ReadMember(type));
+                        {
+                            type.AddMember(ReadMember(type));
+                        }
                     }
                 }
                 else
@@ -128,7 +130,9 @@ namespace BreakingChangesDetector.Serialization
                 var nestedType = _typeTable[nestedTypeId];
 
                 if (nestedType.ContainingType == null)
+                {
                     nestedType.ContainingType = declaringType;
+                }
 
                 return nestedType;
             }
@@ -139,7 +143,7 @@ namespace BreakingChangesDetector.Serialization
 
             if (memberItemKind == MetadataItemKinds.Constructor)
             {
-                var parameters = this.ReadParametersCollection(memberItemKind);
+                var parameters = ReadParametersCollection(memberItemKind);
                 return new ConstructorData(name, accessibility, memberFlags, parameters)
                 {
                     ContainingType = declaringType,
@@ -176,8 +180,8 @@ namespace BreakingChangesDetector.Serialization
                 case MetadataItemKinds.Method:
                     {
                         var isExtensionMethod = _reader.ReadBoolean();
-                        var genericParameters = this.ReadGenericParametersCollection();
-                        var parameters = this.ReadParametersCollection(memberItemKind);
+                        var genericParameters = ReadGenericParametersCollection();
+                        var parameters = ReadParametersCollection(memberItemKind);
                         return new MethodData(name, accessibility, memberFlags, type, false, genericParameters, isExtensionMethod, parameters)
                         {
                             ContainingType = declaringType,
@@ -186,7 +190,7 @@ namespace BreakingChangesDetector.Serialization
 
                 case MetadataItemKinds.Operator:
                     {
-                        var parameters = this.ReadParametersCollection(memberItemKind);
+                        var parameters = ReadParametersCollection(memberItemKind);
                         return new OperatorData(name, accessibility, memberFlags, type, false, parameters)
                         {
                             ContainingType = declaringType,
@@ -214,7 +218,7 @@ namespace BreakingChangesDetector.Serialization
                         }
                         else
                         {
-                            var parameters = this.ReadParametersCollection(memberItemKind);
+                            var parameters = ReadParametersCollection(memberItemKind);
                             return new IndexerData(name, accessibility, memberFlags, type, false, parameters, getMethodAccessibility, setMethodAccessibility)
                             {
                                 ContainingType = declaringType,
@@ -236,11 +240,15 @@ namespace BreakingChangesDetector.Serialization
             var genericParametersCount = _reader.ReadUInt16();
 
             if (genericParametersCount == 0)
+            {
                 return GenericTypeParameterData.EmptyList;
+            }
 
             var genericParameterIds = new uint[genericParametersCount];
             for (int i = 0; i < genericParametersCount; i++)
+            {
                 genericParameterIds[i] = _reader.ReadUInt32();
+            }
 
             return new GenericTypeParameterCollection(genericParameterIds.Select(i => (GenericTypeParameterData)_typeTable[i]));
         }
@@ -251,7 +259,9 @@ namespace BreakingChangesDetector.Serialization
 
             var parameters = new ParameterCollection();
             for (int i = 0; i < parametersCount; i++)
-                parameters.Add(this.ReadParameter(declaringMemberKind));
+            {
+                parameters.Add(ReadParameter(declaringMemberKind));
+            }
 
             return parameters;
         }
@@ -265,7 +275,9 @@ namespace BreakingChangesDetector.Serialization
 
             object defaultValue = null;
             if ((flags & ParameterData.InternalFlags.IsOptional) != 0)
-                defaultValue = this.ReadDefaultValue();
+            {
+                defaultValue = ReadDefaultValue();
+            }
 
             return new ParameterData(declaringMemberKind, name, _typeTable[typeId], modifier, flags, defaultValue);
         }
@@ -276,7 +288,9 @@ namespace BreakingChangesDetector.Serialization
 
             var loadedAssemblies = new AssemblyData[assemblyCount];
             for (int i = 0; i < assemblyCount; i++)
-                loadedAssemblies[i] = this.ReadAssemblyData(family);
+            {
+                loadedAssemblies[i] = ReadAssemblyData(family);
+            }
 
             return loadedAssemblies;
         }
@@ -287,8 +301,8 @@ namespace BreakingChangesDetector.Serialization
             var typeCount = _reader.ReadInt32();
 
             var assemblyData = new AssemblyData(null, fullName, null, null, null); // TODO_Serialize: pass the names here
-                                                                                   //for (int i = 0; i < typeCount; i++)
-                                                                                   //	assemblyData.AddType(this.ReadTypeDataBase(assemblyData));
+            //for (int i = 0; i < typeCount; i++)
+            //    assemblyData.AddType(this.ReadTypeDataBase(assemblyData));
 
             family.Add(assemblyData);
             return assemblyData;
@@ -336,40 +350,70 @@ namespace BreakingChangesDetector.Serialization
                 var typeName = _reader.ReadString();
 
                 if (typeName == typeof(bool).FullName)
+                {
                     value = _reader.ReadBoolean();
+                }
                 else if (typeName == typeof(byte).FullName)
+                {
                     value = _reader.ReadByte();
+                }
                 else if (typeName == typeof(char).FullName)
+                {
                     value = _reader.ReadChar();
+                }
                 else if (typeName == typeof(decimal).FullName)
+                {
                     value = _reader.ReadDecimal();
+                }
                 else if (typeName == typeof(double).FullName)
+                {
                     value = _reader.ReadDouble();
+                }
                 else if (typeName == typeof(float).FullName)
+                {
                     value = _reader.ReadSingle();
+                }
                 else if (typeName == typeof(int).FullName)
+                {
                     value = _reader.ReadInt32();
+                }
                 else if (typeName == typeof(long).FullName)
+                {
                     value = _reader.ReadInt64();
+                }
                 else if (typeName == typeof(sbyte).FullName)
+                {
                     value = _reader.ReadSByte();
+                }
                 else if (typeName == typeof(short).FullName)
+                {
                     value = _reader.ReadInt16();
+                }
                 else if (typeName == typeof(string).FullName)
+                {
                     value = _reader.ReadString();
+                }
                 else if (typeName == typeof(uint).FullName)
+                {
                     value = _reader.ReadUInt32();
+                }
                 else if (typeName == typeof(ulong).FullName)
+                {
                     value = _reader.ReadUInt64();
+                }
                 else if (typeName == typeof(ushort).FullName)
+                {
                     value = _reader.ReadUInt16();
+                }
                 else // The value is an enum and is encoded as a ulong
+                {
                     value = _reader.ReadUInt64();
+                }
             }
 
             return value;
         }
 
-        public AssemblyData[] LoadedAssemblies { get; private set; }
+        public AssemblyData[] LoadedAssemblies { get; }
     }
 }

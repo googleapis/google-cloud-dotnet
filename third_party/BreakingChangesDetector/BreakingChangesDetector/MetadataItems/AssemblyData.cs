@@ -70,22 +70,23 @@ namespace BreakingChangesDetector.MetadataItems
             _typeDefinitions = new Dictionary<string, TypeDefinitionData>();
             _typeOwnedGenericParameters = new Dictionary<Tuple<string, int>, GenericTypeParameterData>();
 
-            this.FullName = fullName;
-            this.Name = name;
-            this.VersionComparisonName = versionComparisonName;
+            FullName = fullName;
+            Name = name;
+            VersionComparisonName = versionComparisonName;
 
             if (namespaceRenames != null)
             {
                 foreach (var namespaceRename in namespaceRenames)
+                {
                     _namespaceRenames[namespaceRename.Key] = namespaceRename.Value;
+                }
             }
         }
 
         internal AssemblyData(MetadataResolutionContext context, IAssemblySymbol underlyingAssemblySymbol)
             : this(context, underlyingAssemblySymbol.ToDisplayString(), underlyingAssemblySymbol.Name,
             Utilities.GetVersionComparisonName(underlyingAssemblySymbol),
-            Utilities.GetNamespaceRenames(underlyingAssemblySymbol))
-        { }
+            Utilities.GetNamespaceRenames(underlyingAssemblySymbol)) { }
 
         #endregion // Constructor
 
@@ -97,10 +98,7 @@ namespace BreakingChangesDetector.MetadataItems
         /// Performs the specified visitor's functionality on this instance.
         /// </summary>
         /// <param name="visitor">The visitor whose functionality should be performed on the instance.</param>
-        public override void Accept(MetadataItemVisitor visitor)
-        {
-            visitor.VisitAssemblyData(this);
-        }
+        public override void Accept(MetadataItemVisitor visitor) => visitor.VisitAssemblyData(this);
 
         #endregion // Accept
 
@@ -111,10 +109,7 @@ namespace BreakingChangesDetector.MetadataItems
         /// <summary>
         /// Gets the name to use for this item in messages.
         /// </summary>
-        public override string DisplayName
-        {
-            get { return this.Name; }
-        }
+        public override string DisplayName => Name;
 
         #endregion // DisplayName
 
@@ -123,65 +118,92 @@ namespace BreakingChangesDetector.MetadataItems
         internal override bool DoesMatch(MetadataItemBase other)
         {
             if (base.DoesMatch(other) == false)
+            {
                 return false;
+            }
 
             var otherTyped = other as AssemblyData;
             if (otherTyped == null)
+            {
                 return false;
+            }
 
-            if (this.FullName != otherTyped.FullName)
+            if (FullName != otherTyped.FullName)
+            {
                 return false;
+            }
 
-            if (this.Name != otherTyped.Name)
+            if (Name != otherTyped.Name)
+            {
                 return false;
+            }
 
-            if (this.VersionComparisonName != otherTyped.VersionComparisonName)
+            if (VersionComparisonName != otherTyped.VersionComparisonName)
+            {
                 return false;
+            }
 
             if (_typeDefinitions.Count != otherTyped._typeDefinitions.Count)
+            {
                 return false;
+            }
 
             foreach (var pair in _typeDefinitions)
             {
                 var type = pair.Value;
-                TypeDefinitionData otherType;
-                if (otherTyped._typeDefinitions.TryGetValue(pair.Key, out otherType) == false)
+                if (otherTyped._typeDefinitions.TryGetValue(pair.Key, out TypeDefinitionData otherType) == false)
+                {
                     return false;
+                }
 
                 if (type.DoesMatch(otherType) == false)
+                {
                     return false;
+                }
             }
 
             if (_typeOwnedGenericParameters.Count != otherTyped._typeOwnedGenericParameters.Count)
+            {
                 return false;
+            }
 
             foreach (var pair in _typeOwnedGenericParameters)
             {
                 var type = pair.Value;
-                GenericTypeParameterData otherType;
-                if (otherTyped._typeOwnedGenericParameters.TryGetValue(pair.Key, out otherType) == false)
+                if (otherTyped._typeOwnedGenericParameters.TryGetValue(pair.Key, out GenericTypeParameterData otherType) == false)
+                {
                     return false;
+                }
 
                 if (type.DoesMatch(otherType) == false)
+                {
                     return false;
+                }
             }
 
             if (_methodOwnedGenericParameters.Count != otherTyped._methodOwnedGenericParameters.Count)
+            {
                 return false;
+            }
 
             foreach (var pair in _methodOwnedGenericParameters)
             {
                 var type = pair.Value;
-                GenericTypeParameterData otherType;
-                if (otherTyped._methodOwnedGenericParameters.TryGetValue(pair.Key, out otherType) == false)
+                if (otherTyped._methodOwnedGenericParameters.TryGetValue(pair.Key, out GenericTypeParameterData otherType) == false)
+                {
                     return false;
+                }
 
                 if (type.DoesMatch(otherType) == false)
+                {
                     return false;
+                }
             }
 
             if (_namespaceRenames.Count != otherTyped._namespaceRenames.Count)
+            {
                 return false;
+            }
 
             foreach (var pair in _namespaceRenames)
             {
@@ -189,20 +211,30 @@ namespace BreakingChangesDetector.MetadataItems
                 var otherNewName = otherTyped._namespaceRenames[pair.Key];
 
                 if (newName != otherNewName)
+                {
                     return false;
+                }
             }
 
             var referenceNames = _referencedAssemblies.Select(a => a.FullName).OrderBy(n => n).ToArray();
             var otherReferenceNames = otherTyped._referencedAssemblies.Select(a => a.FullName).OrderBy(n => n).ToArray();
             if (referenceNames.Length != otherReferenceNames.Length)
+            {
                 return false;
+            }
 
             for (int i = 0; i < referenceNames.Length; i++)
+            {
                 if (referenceNames[i] != otherReferenceNames[i])
+                {
                     return false;
+                }
+            }
 
             if (_forwardedTypeSources.Count != otherTyped._forwardedTypeSources.Count)
+            {
                 return false;
+            }
 
             foreach (var pair in _forwardedTypeSources)
             {
@@ -210,15 +242,23 @@ namespace BreakingChangesDetector.MetadataItems
                 var otherAssemblies = otherTyped._forwardedTypeSources[otherTyped.GetTypeDefinitionData(pair.Key.FullName)];
 
                 if (assemblies.Count != otherAssemblies.Count)
+                {
                     return false;
+                }
 
                 for (int i = 0; i < assemblies.Count; i++)
+                {
                     if (assemblies[i].FullName != otherAssemblies[i].FullName)
+                    {
                         return false;
+                    }
+                }
             }
 
             if (_forwardedTypeSourcesOnTarget.Count != otherTyped._forwardedTypeSourcesOnTarget.Count)
+            {
                 return false;
+            }
 
             foreach (var pair in _forwardedTypeSourcesOnTarget)
             {
@@ -226,7 +266,9 @@ namespace BreakingChangesDetector.MetadataItems
                 var otherFullName = otherTyped._forwardedTypeSourcesOnTarget[otherTyped.GetTypeDefinitionData(pair.Key.FullName)];
 
                 if (fullName != otherFullName)
+                {
                     return false;
+                }
             }
 
             return true;
@@ -239,10 +281,7 @@ namespace BreakingChangesDetector.MetadataItems
         /// <summary>
         /// Gets the type of item the instance represents.
         /// </summary>
-        public override MetadataItemKinds MetadataItemKind
-        {
-            get { return MetadataItemKinds.Assembly; }
-        }
+        public override MetadataItemKinds MetadataItemKind => MetadataItemKinds.Assembly;
 
         #endregion // MetadataItemKind
 
@@ -254,10 +293,8 @@ namespace BreakingChangesDetector.MetadataItems
 
         #region AddForwardedTypeFromTarget
 
-        internal void AddForwardedTypeFromTarget(TypeDefinitionData type, string sourceAssembly)
-        {
+        internal void AddForwardedTypeFromTarget(TypeDefinitionData type, string sourceAssembly) =>
             _forwardedTypeSourcesOnTarget.Add(type, sourceAssembly);
-        }
 
         #endregion // AddForwardedTypeFromTarget
 
@@ -265,49 +302,46 @@ namespace BreakingChangesDetector.MetadataItems
 
         internal IEnumerable<string> GetForwardedTypeSources(TypeDefinitionData type)
         {
-            List<AssemblyData> sourceAssemblies;
-            if (_forwardedTypeSources.TryGetValue(type, out sourceAssemblies))
+            if (_forwardedTypeSources.TryGetValue(type, out List<AssemblyData> sourceAssemblies))
             {
                 foreach (var sourceAssembly in sourceAssemblies)
+                {
                     yield return sourceAssembly.FullName;
+                }
             }
 
-            string sourceFullName;
-            if (_forwardedTypeSourcesOnTarget.TryGetValue(type, out sourceFullName))
+            if (_forwardedTypeSourcesOnTarget.TryGetValue(type, out string sourceFullName))
+            {
                 yield return sourceFullName;
+            }
         }
 
         #endregion // GetForwardedTypeSources
 
         #region GetGenericTypeParameterData
 
-        internal GenericTypeParameterData GetGenericTypeParameterData(ITypeParameterSymbol typeParameterSymbol)
-        {
-            if (typeParameterSymbol.DeclaringMethod != null)
-                return this.GetGenericTypeParameterData(typeParameterSymbol.DeclaringMethod, typeParameterSymbol.Ordinal);
-
-            return this.GetGenericTypeParameterData(typeParameterSymbol.ContainingType, typeParameterSymbol.Ordinal);
-        }
+        internal GenericTypeParameterData GetGenericTypeParameterData(ITypeParameterSymbol typeParameterSymbol) =>
+            typeParameterSymbol.DeclaringMethod != null
+                ? GetGenericTypeParameterData(typeParameterSymbol.DeclaringMethod, typeParameterSymbol.Ordinal)
+                : GetGenericTypeParameterData(typeParameterSymbol.ContainingType, typeParameterSymbol.Ordinal);
 
         private GenericTypeParameterData GetGenericTypeParameterData(IMethodSymbol methodSymbol, int position)
         {
             Debug.Assert(
-                Context.GetDeclaringAssemblySymbol(methodSymbol.ContainingType).ToDisplayString() == this.FullName,
+                Context.GetDeclaringAssemblySymbol(methodSymbol.ContainingType).ToDisplayString() == FullName,
                 "The method is not from this assembly");
-            GenericTypeParameterData genericParameter;
             _methodOwnedGenericParameters.TryGetValue(
                 Tuple.Create(new MethodSignature(Context, methodSymbol), position),
-                out genericParameter);
+                out GenericTypeParameterData genericParameter);
             return genericParameter;
         }
 
         private GenericTypeParameterData GetGenericTypeParameterData(INamedTypeSymbol typeSymbol, int position)
         {
             Debug.Assert(
-                Context.GetDeclaringAssemblySymbol(typeSymbol).ToDisplayString() == this.FullName,
+                Context.GetDeclaringAssemblySymbol(typeSymbol).ToDisplayString() == FullName,
                 "The method is not from this assembly");
-            GenericTypeParameterData genericParameter;
-            _typeOwnedGenericParameters.TryGetValue(Tuple.Create(typeSymbol.GetFullName(), position), out genericParameter);
+            _typeOwnedGenericParameters.TryGetValue(Tuple.Create(typeSymbol.GetFullName(), position), out GenericTypeParameterData genericParameter);
             return genericParameter;
         }
 
@@ -318,10 +352,11 @@ namespace BreakingChangesDetector.MetadataItems
         internal string GetNewNamespaceName(string oldNamespaceName)
         {
             if (oldNamespaceName == null)
+            {
                 return null;
+            }
 
-            string newNamespaceName;
-            _namespaceRenames.TryGetValue(oldNamespaceName, out newNamespaceName);
+            _namespaceRenames.TryGetValue(oldNamespaceName, out string newNamespaceName);
             return newNamespaceName;
         }
 
@@ -335,31 +370,21 @@ namespace BreakingChangesDetector.MetadataItems
         /// </summary>
         /// <returns>An enumerable collection of all non-nested type definitions.</returns> 
 #endif
-        internal IEnumerable<TypeDefinitionData> GetNonNestedTypeDefinitions()
-        {
-            return _typeDefinitions.Values.OfType<TypeDefinitionData>().Where(t => t.ContainingType == null);
-        }
+        internal IEnumerable<TypeDefinitionData> GetNonNestedTypeDefinitions() =>
+            _typeDefinitions.Values.OfType<TypeDefinitionData>().Where(t => t.ContainingType == null);
 
         #endregion // GetNonNestedTypeDefinitions
 
         #region GetReferencedAssemblies
 
-        internal IEnumerable<AssemblyData> GetReferencedAssemblies()
-        {
-            return _referencedAssemblies;
-        }
+        internal IEnumerable<AssemblyData> GetReferencedAssemblies() => _referencedAssemblies;
 
         #endregion // GetReferencedAssembly
 
         #region GetReferencedAssembly
 
-        internal AssemblyData GetReferencedAssembly(string name)
-        {
-            if (this.Name == name)
-                return this;
-
-            return this.GetReferencedAssemblies().Where(a => a.Name == name).FirstOrDefault();
-        }
+        internal AssemblyData GetReferencedAssembly(string name) =>
+            Name == name ? this : GetReferencedAssemblies().Where(a => a.Name == name).FirstOrDefault();
 
         #endregion // GetReferencedAssembly
 
@@ -375,19 +400,21 @@ namespace BreakingChangesDetector.MetadataItems
         internal TypeData GetTypeData(ITypeSymbol typeSymbol)
         {
             Debug.Assert(
-                Context.GetDeclaringAssemblySymbol(typeSymbol).ToDisplayString() == this.FullName,
+                Context.GetDeclaringAssemblySymbol(typeSymbol).ToDisplayString() == FullName,
                 "The type belongs to another assembly.");
 
-            var typeParameterSymbol = typeSymbol as ITypeParameterSymbol;
-            if (typeParameterSymbol != null)
-                return this.GetGenericTypeParameterData(typeParameterSymbol);
+            if (typeSymbol is ITypeParameterSymbol typeParameterSymbol)
+            {
+                return GetGenericTypeParameterData(typeParameterSymbol);
+            }
 
             var accessibility = typeSymbol.GetAccessibility();
             if (accessibility == null)
+            {
                 return null;
+            }
 
-            var namedTypeSymbol = typeSymbol as INamedTypeSymbol;
-            if (namedTypeSymbol != null)
+            if (typeSymbol is INamedTypeSymbol namedTypeSymbol)
             {
                 // TODO: I think this may be a bug. Report if so: ValueTuple<T1> doesn't report its fully qualified name correctly unless we do this.
                 //       However, this is needed anyway to get the proper type info for tuple types.
@@ -401,34 +428,31 @@ namespace BreakingChangesDetector.MetadataItems
                     return Context.GetTypeDefinitionData(namedTypeSymbol.ConstructedFrom).GetConstructedGenericTypeData(namedTypeSymbol.TypeArguments.Select(a => Context.GetTypeData(a)));
                 }
 
-                return this.GetTypeDefinitionData(namedTypeSymbol.GetFullName());
+                return GetTypeDefinitionData(namedTypeSymbol.GetFullName());
             }
 
             DeclaringTypeData declaringType = null;
             if (typeSymbol.ContainingType != null)
             {
-                declaringType = (DeclaringTypeData)this.GetTypeData(typeSymbol.ContainingType);
+                declaringType = (DeclaringTypeData)GetTypeData(typeSymbol.ContainingType);
             }
 
-            var arrayType = typeSymbol as IArrayTypeSymbol;
-            if (arrayType != null)
+            if (typeSymbol is IArrayTypeSymbol arrayType)
             {
                 Debug.Assert(declaringType == null, "Types with elements should not be declared within other types.");
                 var elementType = Context.GetTypeData(arrayType.ElementType);
                 return elementType.GetArrayType((byte)arrayType.Rank);
             }
 
-            var pointerTypeSymbol = typeSymbol as IPointerTypeSymbol;
-            if (pointerTypeSymbol != null)
+            if (typeSymbol is IPointerTypeSymbol pointerTypeSymbol)
             {
                 return Context.GetTypeData(pointerTypeSymbol.PointedAtType).GetPointerType();
             }
 
-            var dynamicTypeSymbol = typeSymbol as IDynamicTypeSymbol;
-            if (dynamicTypeSymbol != null)
+            if (typeSymbol is IDynamicTypeSymbol dynamicTypeSymbol)
             {
                 // TODO: Not sure if this is the right thing to do
-                return this.GetTypeDefinitionData(Utilities.ObjectTypeName);
+                return GetTypeDefinitionData(Utilities.ObjectTypeName);
             }
 
             Debug.Fail("Unknown kind of type.");
@@ -444,10 +468,8 @@ namespace BreakingChangesDetector.MetadataItems
         /// Gets all <see cref="TypeData"/> instance in the <see cref="AssemblyData"/>.
         /// </summary> 
 #endif
-        internal IList<TypeData> GetTypeDatas()
-        {
-            return _typeDefinitions.OrderBy(p => p.Key).Select(p => p.Value).Cast<TypeData>().ToList();
-        }
+        internal IList<TypeData> GetTypeDatas() =>
+            _typeDefinitions.OrderBy(p => p.Key).Select(p => p.Value).Cast<TypeData>().ToList();
 
         #endregion // GetTypeDatas
 
@@ -462,11 +484,8 @@ namespace BreakingChangesDetector.MetadataItems
 #endif
         internal TypeDefinitionData GetTypeDefinitionData(string fullName)
         {
-            TypeDefinitionData internalType;
-            if (_typeDefinitions.TryGetValue(fullName, out internalType))
-                return internalType;
-
-            return null;
+            _typeDefinitions.TryGetValue(fullName, out TypeDefinitionData internalType);
+            return internalType;
         }
 
         #endregion // GetTypeDefinitionData
@@ -479,10 +498,8 @@ namespace BreakingChangesDetector.MetadataItems
         /// </summary>
         /// <param name="assemblyData"></param> 
 #endif
-        internal bool IsEquivalentToNewAssembly(AssemblyData assemblyData)
-        {
-            return assemblyData != null && this.VersionComparisonName == assemblyData.VersionComparisonName;
-        }
+        internal bool IsEquivalentToNewAssembly(AssemblyData assemblyData) =>
+            VersionComparisonName == assemblyData?.VersionComparisonName;
 
         #endregion // IsEquivalentToNewAssembly
 
@@ -491,9 +508,13 @@ namespace BreakingChangesDetector.MetadataItems
         internal void RegisterForFinalize(ConstructedGenericTypeData type)
         {
             if (_isLoading)
+            {
                 _constructedGenericsToFinalizeAfterLoad.Add(type);
+            }
             else
+            {
                 type.FinalizeDefiniton();
+            }
         }
 
         #endregion // RegisterForFinalize
@@ -508,9 +529,10 @@ namespace BreakingChangesDetector.MetadataItems
         {
             Debug.Assert(this != type.AssemblyData, "A type should not be forwarded to its own assembly.");
 
-            List<AssemblyData> forwardedTypeSources;
-            if (type.AssemblyData._forwardedTypeSources.TryGetValue(type, out forwardedTypeSources) == false)
+            if (type.AssemblyData._forwardedTypeSources.TryGetValue(type, out List<AssemblyData> forwardedTypeSources) == false)
+            {
                 type.AssemblyData._forwardedTypeSources[type] = forwardedTypeSources = new List<AssemblyData>();
+            }
 
             forwardedTypeSources.Add(this);
         }
@@ -536,10 +558,8 @@ namespace BreakingChangesDetector.MetadataItems
 
         private void IterateAllTypeDefinitions(IAssemblySymbol assemblySymbol,
             Func<INamedTypeSymbol, bool> namedTypeAction,
-            Action<ITypeParameterSymbol> typeParameterAction = null)
-        {
-            this.IterateAllTypeDefinitions(assemblySymbol.GlobalNamespace, namedTypeAction, typeParameterAction);
-        }
+            Action<ITypeParameterSymbol> typeParameterAction = null) =>
+            IterateAllTypeDefinitions(assemblySymbol.GlobalNamespace, namedTypeAction, typeParameterAction);
 
         private void IterateAllTypeDefinitions(INamespaceSymbol namespaceSymbol,
             Func<INamedTypeSymbol, bool> namedTypeAction,
@@ -549,11 +569,11 @@ namespace BreakingChangesDetector.MetadataItems
             {
                 if (namespaceOrTypeSymbol.IsType)
                 {
-                    this.IterateAllTypeDefinitions((INamedTypeSymbol)namespaceOrTypeSymbol, namedTypeAction, typeParameterAction);
+                    IterateAllTypeDefinitions((INamedTypeSymbol)namespaceOrTypeSymbol, namedTypeAction, typeParameterAction);
                 }
                 else
                 {
-                    this.IterateAllTypeDefinitions((INamespaceSymbol)namespaceOrTypeSymbol, namedTypeAction, typeParameterAction);
+                    IterateAllTypeDefinitions((INamespaceSymbol)namespaceOrTypeSymbol, namedTypeAction, typeParameterAction);
                 }
             }
         }
@@ -563,20 +583,30 @@ namespace BreakingChangesDetector.MetadataItems
             Action<ITypeParameterSymbol> typeParameterAction)
         {
             if (namedTypeAction(namedTypeSymbol) == false)
+            {
                 return;
+            }
 
             if (typeParameterAction != null)
             {
                 foreach (var genericParameter in namedTypeSymbol.TypeParameters)
+                {
                     typeParameterAction(genericParameter);
+                }
 
                 foreach (var method in namedTypeSymbol.Methods().Where(m => !m.TypeParameters.IsEmpty && m.GetAccessibility() != null))
+                {
                     foreach (var genericParameter in method.TypeParameters)
+                    {
                         typeParameterAction(genericParameter);
+                    }
+                }
             }
 
             foreach (var nestedType in namedTypeSymbol.GetTypeMembers())
-                this.IterateAllTypeDefinitions(nestedType, namedTypeAction, typeParameterAction);
+            {
+                IterateAllTypeDefinitions(nestedType, namedTypeAction, typeParameterAction);
+            }
         }
 
         #endregion // IterateAllTypeDefinitions
@@ -588,35 +618,39 @@ namespace BreakingChangesDetector.MetadataItems
             _isLoading = true;
             IterateAllTypeDefinitions(assemblySymbol, namedTypeSymbol =>
             {
-                this.RegisterType(namedTypeSymbol, null);
+                RegisterType(namedTypeSymbol, null);
 
                 // Return false so we don't process nested types. RegisterType will register nested type recursively.
                 return false;
             });
 
             // Finalize Definitions
-            this.IterateAllTypeDefinitions(assemblySymbol,
+            IterateAllTypeDefinitions(assemblySymbol,
                 namedTypeAction: namedTypeSymbol =>
                 {
-                    var typeData = (TypeDefinitionData)this.GetTypeData(namedTypeSymbol);
+                    var typeData = (TypeDefinitionData)GetTypeData(namedTypeSymbol);
                     if (typeData == null)
+                    {
                         return false;
+                    }
 
                     typeData.FinalizeDefinition(namedTypeSymbol);
                     return true;
                 },
                 typeParameterAction: typeParameterSymbol =>
                 {
-                    this.GetGenericTypeParameterData(typeParameterSymbol).FinalizeDefinition(typeParameterSymbol);
+                    GetGenericTypeParameterData(typeParameterSymbol).FinalizeDefinition(typeParameterSymbol);
                 });
 
             // Populate Members
-            this.IterateAllTypeDefinitions(assemblySymbol,
+            IterateAllTypeDefinitions(assemblySymbol,
                 namedTypeAction: namedTypeSymbol =>
                 {
-                    var typeData = (TypeDefinitionData)this.GetTypeData(namedTypeSymbol);
+                    var typeData = (TypeDefinitionData)GetTypeData(namedTypeSymbol);
                     if (typeData == null)
+                    {
                         return false;
+                    }
 
                     typeData.PopulateMembers(namedTypeSymbol);
                     return true;
@@ -627,7 +661,9 @@ namespace BreakingChangesDetector.MetadataItems
                 var temp = _constructedGenericsToFinalizeAfterLoad.ToArray();
                 _constructedGenericsToFinalizeAfterLoad.Clear();
                 foreach (var type in temp)
+                {
                     type.FinalizeDefiniton();
+                }
             }
 
             var metadataReader = assemblySymbol.Modules.First().GetMetadata().GetMetadataReader();
@@ -652,9 +688,10 @@ namespace BreakingChangesDetector.MetadataItems
 
             foreach (var referenceIdentity in assemblySymbol.Modules.SelectMany(m => m.ReferencedAssemblies))
             {
-                AssemblyData reference;
-                if (Context._cachedAssemblyDatas.TryGetValue(referenceIdentity, out reference))
+                if (Context._cachedAssemblyDatas.TryGetValue(referenceIdentity, out AssemblyData reference))
+                {
                     _referencedAssemblies.Add(reference);
+                }
             }
 
             _isLoading = false;
@@ -668,23 +705,31 @@ namespace BreakingChangesDetector.MetadataItems
         {
             var accessibility = namedTypeSymbol.GetAccessibility();
             if (accessibility == null)
+            {
                 return;
+            }
 
             var typeDefinitionData = new TypeDefinitionData(namedTypeSymbol, accessibility.Value, declaringType, this);
             _typeDefinitions.Add(namedTypeSymbol.GetFullName(), typeDefinitionData);
 
             foreach (var typeParameterSymbol in namedTypeSymbol.TypeParameters)
+            {
                 _typeOwnedGenericParameters.Add(Tuple.Create(namedTypeSymbol.GetFullName(), typeParameterSymbol.Ordinal), new GenericTypeParameterData(typeParameterSymbol, this));
+            }
 
             foreach (var method in namedTypeSymbol.Methods().Where(m => !m.TypeParameters.IsEmpty && m.GetAccessibility() != null))
             {
                 var signature = new MethodSignature(Context, method);
                 foreach (var typeParameterSymbol in method.TypeParameters)
+                {
                     _methodOwnedGenericParameters.Add(Tuple.Create(signature, typeParameterSymbol.Ordinal), new GenericTypeParameterData(typeParameterSymbol, this));
+                }
             }
 
             foreach (var nestedTypeSymbol in namedTypeSymbol.GetTypeMembers())
-                this.RegisterType(nestedTypeSymbol, typeDefinitionData);
+            {
+                RegisterType(nestedTypeSymbol, typeDefinitionData);
+            }
         }
 
         #endregion // RegisterType
@@ -698,18 +743,18 @@ namespace BreakingChangesDetector.MetadataItems
         /// <summary>
         /// Gets the full name of the assembly.
         /// </summary>
-        public string FullName { get; private set; }
+        public string FullName { get; }
 
         /// <summary>
         /// Gets the name of the assembly.
         /// </summary>
-        public string Name { get; private set; } // TODO_Serialize: Round trip and unit test
+        public string Name { get; } // TODO_Serialize: Round trip and unit test
 
         /// <summary>
         /// Gets the name used to compare logically equivalent assemblies from different versions. This should not change across versions 
         /// of the assembly.
         /// </summary>
-        public string VersionComparisonName { get; private set; } // TODO_Serialize: Round trip and unit test
+        public string VersionComparisonName { get; } // TODO_Serialize: Round trip and unit test
 
         #endregion // Properties
     }

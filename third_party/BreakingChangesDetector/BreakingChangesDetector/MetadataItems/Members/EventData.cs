@@ -24,12 +24,6 @@
 */
 
 using Microsoft.CodeAnalysis;
-using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Reflection;
-using System.Text;
-using System.Threading.Tasks;
 
 namespace BreakingChangesDetector.MetadataItems
 {
@@ -41,9 +35,7 @@ namespace BreakingChangesDetector.MetadataItems
         #region Constructors
 
         internal EventData(string name, MemberAccessibility accessibility, MemberFlags memberFlags, TypeData type)
-            : base(name, accessibility, memberFlags, type, isTypeDynamic: false)
-        {
-        }
+            : base(name, accessibility, memberFlags, type, isTypeDynamic: false) { }
 
         private EventData(IEventSymbol eventSymbol, MemberAccessibility accessibility, DeclaringTypeData declaringType)
             : base(eventSymbol, accessibility, eventSymbol.Type, false, Utilities.GetMemberFlags(eventSymbol.AddMethod), declaringType) { }
@@ -58,10 +50,8 @@ namespace BreakingChangesDetector.MetadataItems
         /// Performs the specified visitor's functionality on this instance.
         /// </summary>
         /// <param name="visitor">The visitor whose functionality should be performed on the instance.</param>
-        public override void Accept(MetadataItemVisitor visitor)
-        {
+        public override void Accept(MetadataItemVisitor visitor) =>
             visitor.VisitEventData(this);
-        }
 
         #endregion // Accept
 
@@ -70,10 +60,8 @@ namespace BreakingChangesDetector.MetadataItems
         /// <summary>
         /// Gets the type of item the instance represents.
         /// </summary>
-        public override MetadataItemKinds MetadataItemKind
-        {
-            get { return MetadataItemKinds.Event; }
-        }
+        public override MetadataItemKinds MetadataItemKind =>
+            MetadataItemKinds.Event;
 
         #endregion // MetadataItemKind
 
@@ -89,11 +77,13 @@ namespace BreakingChangesDetector.MetadataItems
 #endif
         internal override MemberDataBase ReplaceGenericTypeParameters(GenericTypeParameterCollection genericParameters, GenericTypeArgumentCollection genericArguments)
         {
-            var replacedType = (TypeData)this.Type.ReplaceGenericTypeParameters(genericParameters, genericArguments);
-            if (replacedType == this.Type)
+            var replacedType = (TypeData)Type.ReplaceGenericTypeParameters(genericParameters, genericArguments);
+            if (replacedType == Type)
+            {
                 return this;
+            }
 
-            return new EventData(this.Name, this.Accessibility, this.MemberFlags, replacedType);
+            return new EventData(Name, Accessibility, MemberFlags, replacedType);
         }
 
         #endregion // ReplaceGenericTypeParameters
@@ -108,7 +98,9 @@ namespace BreakingChangesDetector.MetadataItems
         {
             var accessibility = eventSymbol.AddMethod.GetAccessibility();
             if (accessibility == null)
+            {
                 return null;
+            }
 
             return new EventData(eventSymbol, accessibility.Value, declaringType);
         }

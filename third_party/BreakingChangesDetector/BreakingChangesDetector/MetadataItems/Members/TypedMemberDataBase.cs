@@ -24,13 +24,7 @@
 */
 
 using Microsoft.CodeAnalysis;
-using System;
-using System.Collections.Generic;
 using System.Diagnostics;
-using System.Linq;
-using System.Reflection;
-using System.Text;
-using System.Threading.Tasks;
 
 namespace BreakingChangesDetector.MetadataItems
 {
@@ -45,16 +39,16 @@ namespace BreakingChangesDetector.MetadataItems
         internal TypedMemberDataBase(string name, MemberAccessibility accessibility, MemberFlags memberFlags, TypeData type, bool isTypeDynamic)
             : base(name, accessibility, memberFlags)
         {
-            this.Type = type;
-            this.IsTypeDynamic = isTypeDynamic;
+            Type = type;
+            IsTypeDynamic = isTypeDynamic;
         }
 
         internal TypedMemberDataBase(ISymbol symbol, MemberAccessibility accessibility, ITypeSymbol type, bool isTypeDynamic, MemberFlags flags, DeclaringTypeData declaringType)
             : base(symbol, accessibility, flags, declaringType)
         {
-            this.Type = declaringType.Context.GetTypeData(type);
-            this.IsTypeDynamic = isTypeDynamic;
-            Debug.Assert(this.Type != null, "Unable to get the TypeData.");
+            Type = declaringType.Context.GetTypeData(type);
+            IsTypeDynamic = isTypeDynamic;
+            Debug.Assert(Type != null, "Unable to get the TypeData.");
         }
 
         #endregion // Constructor
@@ -73,9 +67,11 @@ namespace BreakingChangesDetector.MetadataItems
         internal override bool CanOverrideMember(MemberDataBase baseMember)
         {
             if (base.CanOverrideMember(baseMember) == false)
+            {
                 return false;
+            }
 
-            return this.Type == ((TypedMemberDataBase)baseMember).Type;
+            return Type == ((TypedMemberDataBase)baseMember).Type;
         }
 
         #endregion // CanOverrideMember
@@ -85,17 +81,25 @@ namespace BreakingChangesDetector.MetadataItems
         internal override bool DoesMatch(MetadataItemBase other)
         {
             if (base.DoesMatch(other) == false)
+            {
                 return false;
+            }
 
             var otherTyped = other as TypedMemberDataBase;
             if (otherTyped == null)
+            {
                 return false;
+            }
 
-            if (this.IsTypeDynamic != otherTyped.IsTypeDynamic)
+            if (IsTypeDynamic != otherTyped.IsTypeDynamic)
+            {
                 return false;
+            }
 
-            if (this.Type.DisplayName != otherTyped.Type.DisplayName)
+            if (Type.DisplayName != otherTyped.Type.DisplayName)
+            {
                 return false;
+            }
 
             return true;
         }
@@ -109,12 +113,12 @@ namespace BreakingChangesDetector.MetadataItems
         /// <summary>
         /// Gets the value indicating whether the type is dynamic.
         /// </summary>
-        public bool IsTypeDynamic { get; private set; } // TODO_Serialize: round trip and test
+        public bool IsTypeDynamic { get; } // TODO_Serialize: round trip and test
 
         /// <summary>
         /// Gets the type (or return type) of the member.
         /// </summary>
-        public TypeData Type { get; private set; }
+        public TypeData Type { get; }
 
         #endregion // Properties
     }

@@ -24,12 +24,6 @@
 */
 
 using Microsoft.CodeAnalysis;
-using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Reflection;
-using System.Text;
-using System.Threading.Tasks;
 
 namespace BreakingChangesDetector.MetadataItems
 {
@@ -47,14 +41,10 @@ namespace BreakingChangesDetector.MetadataItems
         #region Constructor
 
         internal OperatorData(string name, MemberAccessibility accessibility, MemberFlags memberFlags, TypeData type, bool isTypeDynamic, ParameterCollection parameters)
-            : base(name, accessibility, memberFlags, type, isTypeDynamic, parameters)
-        {
-        }
+            : base(name, accessibility, memberFlags, type, isTypeDynamic, parameters) { }
 
         internal OperatorData(IMethodSymbol methodSymbol, DeclaringTypeData declaringType)
-            : base(methodSymbol, MemberAccessibility.Public, declaringType)
-        {
-        }
+            : base(methodSymbol, MemberAccessibility.Public, declaringType) { }
 
         #endregion // Constructor
 
@@ -66,10 +56,7 @@ namespace BreakingChangesDetector.MetadataItems
         /// Performs the specified visitor's functionality on this instance.
         /// </summary>
         /// <param name="visitor">The visitor whose functionality should be performed on the instance.</param>
-        public override void Accept(MetadataItemVisitor visitor)
-        {
-            visitor.VisitOperatorData(this);
-        }
+        public override void Accept(MetadataItemVisitor visitor) => visitor.VisitOperatorData(this);
 
         #endregion // Accept
 
@@ -78,10 +65,7 @@ namespace BreakingChangesDetector.MetadataItems
         /// <summary>
         /// Gets the type of item the instance represents.
         /// </summary>
-        public override MetadataItemKinds MetadataItemKind
-        {
-            get { return MetadataItemKinds.Operator; }
-        }
+        public override MetadataItemKinds MetadataItemKind => MetadataItemKinds.Operator;
 
         #endregion // MetadataItemKind
 
@@ -97,15 +81,15 @@ namespace BreakingChangesDetector.MetadataItems
 #endif
         internal override MemberDataBase ReplaceGenericTypeParameters(GenericTypeParameterCollection genericParameters, GenericTypeArgumentCollection genericArguments)
         {
-            var replacedType = (TypeData)this.Type.ReplaceGenericTypeParameters(genericParameters, genericArguments);
-            var replacedParameters = this.Parameters.ReplaceGenericTypeParameters(this.MetadataItemKind, genericParameters, genericArguments);
-            if (replacedType == this.Type &&
-                replacedParameters == this.Parameters)
+            var replacedType = (TypeData)Type.ReplaceGenericTypeParameters(genericParameters, genericArguments);
+            var replacedParameters = Parameters.ReplaceGenericTypeParameters(MetadataItemKind, genericParameters, genericArguments);
+            if (replacedType == Type &&
+                replacedParameters == Parameters)
             {
                 return this;
             }
 
-            return new OperatorData(this.Name, this.Accessibility, this.MemberFlags, replacedType, this.IsTypeDynamic, replacedParameters);
+            return new OperatorData(Name, Accessibility, MemberFlags, replacedType, IsTypeDynamic, replacedParameters);
         }
 
         #endregion // ReplaceGenericTypeParameters

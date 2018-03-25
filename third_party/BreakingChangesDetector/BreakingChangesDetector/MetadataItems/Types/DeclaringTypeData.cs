@@ -26,11 +26,7 @@
 using Microsoft.CodeAnalysis;
 using System;
 using System.Collections.Generic;
-using System.Diagnostics;
 using System.Linq;
-using System.Reflection;
-using System.Text;
-using System.Threading.Tasks;
 
 namespace BreakingChangesDetector.MetadataItems
 {
@@ -41,23 +37,17 @@ namespace BreakingChangesDetector.MetadataItems
     {
         #region Member Variables
 
-        private readonly Dictionary<string, List<MemberDataBase>> _membersByName;
+        private readonly Dictionary<string, List<MemberDataBase>> _membersByName = new Dictionary<string, List<MemberDataBase>>();
 
         #endregion // Member Variables
 
         #region Constructors
 
         internal DeclaringTypeData(string name, MemberAccessibility accessibility, MemberFlags memberFlags, TypeKind typeKind)
-            : base(name, accessibility, memberFlags, typeKind)
-        {
-            _membersByName = new Dictionary<string, List<MemberDataBase>>();
-        }
+            : base(name, accessibility, memberFlags, typeKind) { }
 
         internal DeclaringTypeData(ITypeSymbol typeSymbol, MemberAccessibility accessibility, DeclaringTypeData declaringType)
-            : base(typeSymbol, accessibility, declaringType)
-        {
-            _membersByName = new Dictionary<string, List<MemberDataBase>>();
-        }
+            : base(typeSymbol, accessibility, declaringType) { }
 
         #endregion // Constructors
 
@@ -68,52 +58,81 @@ namespace BreakingChangesDetector.MetadataItems
         internal override bool DoesMatch(MetadataItemBase other)
         {
             if (base.DoesMatch(other) == false)
+            {
                 return false;
+            }
 
             var otherTyped = other as DeclaringTypeData;
             if (otherTyped == null)
+            {
                 return false;
+            }
 
-            if (this.BaseType == null ^ otherTyped.BaseType == null)
+            if (BaseType == null ^ otherTyped.BaseType == null)
+            {
                 return false;
+            }
 
-            if (this.BaseType != null && this.BaseType.DisplayName != otherTyped.BaseType.DisplayName)
+            if (BaseType != null && BaseType.DisplayName != otherTyped.BaseType.DisplayName)
+            {
                 return false;
+            }
 
-            if (this.DelegateParameters == null ^ otherTyped.DelegateParameters == null)
+            if (DelegateParameters == null ^ otherTyped.DelegateParameters == null)
+            {
                 return false;
+            }
 
-            if (this.DelegateParameters != null && this.DelegateParameters.DoesMatch(otherTyped.DelegateParameters) == false)
+            if (DelegateParameters != null && DelegateParameters.DoesMatch(otherTyped.DelegateParameters) == false)
+            {
                 return false;
+            }
 
-            if (this.DelegateReturnType == null ^ otherTyped.DelegateReturnType == null)
+            if (DelegateReturnType == null ^ otherTyped.DelegateReturnType == null)
+            {
                 return false;
+            }
 
-            if (this.DelegateReturnType != null && this.DelegateReturnType.DisplayName != otherTyped.DelegateReturnType.DisplayName)
+            if (DelegateReturnType != null && DelegateReturnType.DisplayName != otherTyped.DelegateReturnType.DisplayName)
+            {
                 return false;
+            }
 
-            if (this.DelegateReturnTypeIsDynamic != this.DelegateReturnTypeIsDynamic)
+            if (DelegateReturnTypeIsDynamic != DelegateReturnTypeIsDynamic)
+            {
                 return false;
+            }
 
-            if (this.GenericArity != otherTyped.GenericArity)
+            if (GenericArity != otherTyped.GenericArity)
+            {
                 return false;
+            }
 
             if (_membersByName.Count != otherTyped._membersByName.Count)
+            {
                 return false;
+            }
 
             foreach (var pair in _membersByName)
             {
                 var value = pair.Value;
-                List<MemberDataBase> otherValue;
-                if (otherTyped._membersByName.TryGetValue(pair.Key, out otherValue) == false)
+                if (otherTyped._membersByName.TryGetValue(pair.Key, out List<MemberDataBase> otherValue) == false)
+                {
                     return false;
+                }
 
                 if (value.Count != otherValue.Count)
+                {
                     return false;
+                }
 
                 for (int i = 0; i < value.Count; i++)
+                {
                     if (value[i].DoesMatch(otherValue[i]) == false)
+                    {
                         return false;
+                    }
+                }
             }
 
             return true;
@@ -137,21 +156,29 @@ namespace BreakingChangesDetector.MetadataItems
 #endif
         internal override IEnumerable<TypeData> GetDirectImplicitConversions(bool onlyReferenceAndIdentityConversions)
         {
-            if (onlyReferenceAndIdentityConversions && this.IsValueType)
+            if (onlyReferenceAndIdentityConversions && IsValueType)
+            {
                 yield break;
+            }
 
-            if (this.TypeKind != TypeKind.Enum && this.BaseType != null)
-                yield return this.BaseType;
+            if (TypeKind != TypeKind.Enum && BaseType != null)
+            {
+                yield return BaseType;
+            }
 
-            foreach (var implementedInterface in this.ImplementedInterfaces)
+            foreach (var implementedInterface in ImplementedInterfaces)
+            {
                 yield return implementedInterface;
+            }
 
             // Any interface type can convert to object
-            if (this.TypeKind == TypeKind.Interface)
+            if (TypeKind == TypeKind.Interface)
             {
-                var mscorlibData = this.AssemblyData.GetReferencedAssembly(Utilities.CommonObjectRuntimeAssemblyName);
+                var mscorlibData = AssemblyData.GetReferencedAssembly(Utilities.CommonObjectRuntimeAssemblyName);
                 if (mscorlibData != null)
+                {
                     yield return mscorlibData.GetTypeDefinitionData(Utilities.ObjectTypeName);
+                }
             }
         }
 
@@ -165,10 +192,8 @@ namespace BreakingChangesDetector.MetadataItems
         /// <param name="fullyQualify">Indicates whether the type name should be fully qualified with declaring type and namespace names.</param>
         /// <param name="includeGenericInfo">Indicates whether generic parameters and arguments should be included in type names.</param>
         /// <returns>The display name of the type.</returns>
-        public override sealed string GetDisplayName(bool fullyQualify = true, bool includeGenericInfo = true)
-        {
-            return this.GetDisplayName(fullyQualify, includeGenericInfo, null);
-        }
+        public override sealed string GetDisplayName(bool fullyQualify = true, bool includeGenericInfo = true) =>
+            GetDisplayName(fullyQualify, includeGenericInfo, null);
 
         #endregion // GetDisplayName
 
@@ -185,18 +210,24 @@ namespace BreakingChangesDetector.MetadataItems
         internal override bool IsAssignableFrom(TypeData sourceType, IsAssignableFromContext context)
         {
             if (base.IsAssignableFrom(sourceType, context))
+            {
                 return true;
+            }
 
             if (context.OnlyReferenceAndIdentityConversions == false)
             {
                 // See if there are any user-defined implicit conversions from the source type to the target type defined in new types:
                 // (we want to check in new types because a breaking change in a new version due to a type change can be mitigated by
                 // defining an implicit conversion in one of the types in the new version).
-                if (this.DoesSourceTypeHaveImplicitOperatorOverloadToTarget(sourceType, context))
+                if (DoesSourceTypeHaveImplicitOperatorOverloadToTarget(sourceType, context))
+                {
                     return true;
+                }
 
-                if (this.DoesTargetTypeHaveImplicitOperatorOverloadFromSource(sourceType, context))
+                if (DoesTargetTypeHaveImplicitOperatorOverloadFromSource(sourceType, context))
+                {
                     return true;
+                }
             }
 
             return false;
@@ -223,12 +254,16 @@ namespace BreakingChangesDetector.MetadataItems
         /// <returns>The single member with the specified name, or null if no such member exists.</returns>
         public MemberDataBase GetMember(string name)
         {
-            var members = this.GetMembers(name);
+            var members = GetMembers(name);
             if (members.Count == 0)
+            {
                 return null;
+            }
 
             if (members.Count != 1)
-                throw new InvalidOperationException(string.Format("There are multiple members in {0} with the name '{1}'", this.Name, name));
+            {
+                throw new InvalidOperationException(string.Format("There are multiple members in {0} with the name '{1}'", Name, name));
+            }
 
             return members[0];
         }
@@ -240,21 +275,19 @@ namespace BreakingChangesDetector.MetadataItems
         /// <summary>
         /// Gets the collection of all members declared in the type.
         /// </summary>
-        public IEnumerable<MemberDataBase> GetMembers()
-        {
-            return _membersByName.OrderBy(p => p.Key).SelectMany(p => p.Value);
-        }
+        public IEnumerable<MemberDataBase> GetMembers() => _membersByName.OrderBy(p => p.Key).SelectMany(p => p.Value);
 
         /// <summary>
         /// Gets the collection of all members declared in the type with the specified name.
         /// </summary>
         public List<MemberDataBase> GetMembers(string name)
         {
-            List<MemberDataBase> members;
-            if (_membersByName.TryGetValue(name, out members))
+            if (_membersByName.TryGetValue(name, out List<MemberDataBase> members))
+            {
                 return members;
+            }
 
-            return MemberDataBase.EmptyList;
+            return EmptyList;
         }
 
         #endregion // GetMembers
@@ -267,10 +300,7 @@ namespace BreakingChangesDetector.MetadataItems
         /// </summary>
         /// <param name="name">The name of the method to get.</param>
         /// <returns>The single method with the specified name, or null if no such method exists.</returns>
-        public MethodData GetMethod(string name)
-        {
-            return this.GetMembers(name).OfType<MethodData>().SingleOrDefault();
-        }
+        public MethodData GetMethod(string name) => GetMembers(name).OfType<MethodData>().SingleOrDefault();
 
         #endregion // GetMethod
 
@@ -288,13 +318,16 @@ namespace BreakingChangesDetector.MetadataItems
         internal void AddMember(MemberDataBase member)
         {
             if (member == null)
+            {
                 return;
+            }
 
-            if (member.Accessibility == MemberAccessibility.Protected && this.IsSealed)
+            if (member.Accessibility == MemberAccessibility.Protected && IsSealed)
+            {
                 return;
+            }
 
-            List<MemberDataBase> members;
-            if (_membersByName.TryGetValue(member.Name, out members) == false)
+            if (_membersByName.TryGetValue(member.Name, out List<MemberDataBase> members) == false)
             {
                 members = new List<MemberDataBase>();
                 _membersByName[member.Name] = members;
@@ -341,12 +374,16 @@ namespace BreakingChangesDetector.MetadataItems
         {
             if (fullyQualify)
             {
-                if (this.ContainingType != null)
-                    return this.ContainingType.GetDisplayName(fullyQualify, includeGenericInfo, genericArguments) + "." + unqualifiedName;
+                if (ContainingType != null)
+                {
+                    return ContainingType.GetDisplayName(fullyQualify, includeGenericInfo, genericArguments) + "." + unqualifiedName;
+                }
 
-                var namespaceName = this.GetNamespaceName();
+                var namespaceName = GetNamespaceName();
                 if (string.IsNullOrEmpty(namespaceName) == false)
+                {
                     return namespaceName + "." + unqualifiedName;
+                }
             }
 
             return unqualifiedName;
@@ -364,14 +401,18 @@ namespace BreakingChangesDetector.MetadataItems
         {
             var sourceDeclaringTypeData = sourceType as DeclaringTypeData;
             if (sourceDeclaringTypeData == null)
+            {
                 return false;
+            }
 
             var newSourceType = context.IsSourceTypeOld
                 ? sourceDeclaringTypeData.GetEquivalentNewType(context.NewAssemblyFamily) as DeclaringTypeData
                 : sourceDeclaringTypeData;
 
             if (newSourceType == null)
+            {
                 return false;
+            }
 
             var implicitOperatorsFromSource = newSourceType.GetMembers(OperatorData.ImplicitCastOperatorName)
                 .OfType<OperatorData>()
@@ -382,12 +423,16 @@ namespace BreakingChangesDetector.MetadataItems
                 if (context.IsTargetTypeOld)
                 {
                     if (op.Type.IsEquivalentToOld(this, context.NewAssemblyFamily))
+                    {
                         return true;
+                    }
                 }
                 else
                 {
                     if (op.Type == this)
+                    {
                         return true;
+                    }
                 }
             }
 
@@ -401,11 +446,13 @@ namespace BreakingChangesDetector.MetadataItems
         private bool DoesTargetTypeHaveImplicitOperatorOverloadFromSource(TypeData sourceType, IsAssignableFromContext context)
         {
             var newTargetType = context.IsTargetTypeOld
-                ? this.GetEquivalentNewType(context.NewAssemblyFamily) as DeclaringTypeData
+                ? GetEquivalentNewType(context.NewAssemblyFamily) as DeclaringTypeData
                 : this;
 
             if (newTargetType == null)
+            {
                 return false;
+            }
 
             var implicitOperators = newTargetType.GetMembers(OperatorData.ImplicitCastOperatorName)
                 .OfType<OperatorData>()
@@ -416,12 +463,16 @@ namespace BreakingChangesDetector.MetadataItems
                 if (context.IsSourceTypeOld)
                 {
                     if (op.Parameters[0].Type.IsEquivalentToOld(sourceType, context.NewAssemblyFamily))
+                    {
                         return true;
+                    }
                 }
                 else
                 {
                     if (op.Parameters[0].Type == sourceType)
+                    {
                         return true;
+                    }
                 }
             }
 
@@ -461,10 +512,7 @@ namespace BreakingChangesDetector.MetadataItems
         /// <summary>
         /// Gets the value indicating whether the type has any members declared.
         /// </summary>
-        public bool HasMembers
-        {
-            get { return _membersByName.Count != 0; }
-        }
+        public bool HasMembers => _membersByName.Count != 0;
 
         /// <summary>
         /// Gets the collection of interfaces implemented by the type.

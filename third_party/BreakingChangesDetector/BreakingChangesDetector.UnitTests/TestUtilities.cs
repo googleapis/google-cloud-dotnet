@@ -91,11 +91,14 @@ namespace BreakingChangesDetector.UnitTests
         public static bool IsImplicitlyAssignableFrom(this Type to, Type from)
         {
             if (to.IsAssignableFrom(from))
+            {
                 return true;
+            }
 
-            HashSet<Type> destTypes;
-            if (_implicitNumericConversions.TryGetValue(to, out destTypes) && destTypes.Contains(from))
+            if (_implicitNumericConversions.TryGetValue(to, out HashSet<Type> destTypes) && destTypes.Contains(from))
+            {
                 return true;
+            }
 
             if (from.GetMethods(BindingFlags.Public | BindingFlags.Static)
                     .Any(m => m.Name == "op_Implicit" && m.ReturnType == to && m.GetParameters()[0].ParameterType == from))
@@ -113,7 +116,9 @@ namespace BreakingChangesDetector.UnitTests
             {
                 // An implicit conversion from S? to T?
                 if (from.IsNullable())
+                {
                     return to.UnwrapNullable().IsImplicitlyAssignableFrom(from.UnwrapNullable());
+                }
 
                 // An implicit conversion from S to T?
                 return to.UnwrapNullable().IsImplicitlyAssignableFrom(from);
@@ -121,7 +126,9 @@ namespace BreakingChangesDetector.UnitTests
 
             // An implicit conversion from S? to to interfaces and base classes of S
             if (from.IsNullable() && to.IsValueType == false)
+            {
                 return to.IsImplicitlyAssignableFrom(from.UnwrapNullable());
+            }
 
             return false;
         }
@@ -130,10 +137,7 @@ namespace BreakingChangesDetector.UnitTests
 
         #region UnwrapNullable
 
-        public static Type UnwrapNullable(this Type t)
-        {
-            return t.GenericTypeArguments[0];
-        }
+        public static Type UnwrapNullable(this Type t) => t.GenericTypeArguments[0];
 
         #endregion // UnwrapNullable
 
@@ -159,7 +163,9 @@ namespace BreakingChangesDetector.UnitTests
         {
             var typeData = (TypeDefinitionData)typeDataBase;
             if (typeData.TypeKind != TypeKind.Interface)
+            {
                 VerifyMember<T>(typeData, memberName + "Static");
+            }
 
             VerifyMember<T>(typeData, memberName + "Instance");
         }

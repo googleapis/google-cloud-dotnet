@@ -23,15 +23,6 @@
     SOFTWARE.
 */
 
-using BreakingChangesDetector.MetadataItems;
-using BreakingChangesDetector.Serialization;
-using Xunit;
-using System;
-using System.Collections.Generic;
-using System.IO;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
 
 namespace BreakingChangesDetector.UnitTests.SerializationTests
 {

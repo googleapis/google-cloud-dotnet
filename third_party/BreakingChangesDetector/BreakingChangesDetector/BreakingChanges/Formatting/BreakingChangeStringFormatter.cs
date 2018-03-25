@@ -23,11 +23,7 @@
     SOFTWARE.
 */
 
-using System;
-using System.Collections.Generic;
-using System.Linq;
 using System.Text;
-using System.Threading.Tasks;
 
 namespace BreakingChangesDetector.BreakingChanges.Formatting
 {
@@ -41,10 +37,8 @@ namespace BreakingChangesDetector.BreakingChanges.Formatting
         /// <summary>
         /// Creates a new <see cref="BreakingChangeStringFormatter"/> instance.
         /// </summary>
-        public BreakingChangeStringFormatter()
-        {
-            this.Builder = new StringBuilder();
-        }
+        public BreakingChangeStringFormatter() =>
+            Builder = new StringBuilder();
 
         #endregion // Constructor
 
@@ -55,18 +49,14 @@ namespace BreakingChangesDetector.BreakingChanges.Formatting
         /// </summary>
         /// <param name="text">The format string used to append the text.</param>
         /// <param name="arguments">The arguments to use in the format string.</param>
-        public void AppendFormat(string text, params FormatItem[] arguments)
-        {
-            this.Builder.AppendFormat(text, arguments);
-        }
+        public void AppendFormat(string text, params FormatItem[] arguments) =>
+            Builder.AppendFormat(text, arguments);
 
         /// <summary>
         /// Appends a new line to the formatted text.
         /// </summary>
-        public void AppendLine()
-        {
-            this.Builder.AppendLine();
-        }
+        public void AppendLine() =>
+            Builder.AppendLine();
 
         #endregion // Methods
 
@@ -75,7 +65,7 @@ namespace BreakingChangesDetector.BreakingChanges.Formatting
         /// <summary>
         /// Gets the StringBuilder containing the currently formatted string.
         /// </summary>
-        public StringBuilder Builder { get; private set; }
+        public StringBuilder Builder { get; }
 
         #endregion // Properties
     }

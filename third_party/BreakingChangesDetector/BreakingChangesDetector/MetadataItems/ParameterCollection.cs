@@ -34,48 +34,49 @@ namespace BreakingChangesDetector.MetadataItems
     /// </summary>
     public sealed class ParameterCollection : IEnumerable<ParameterData>
     {
-        private readonly List<ParameterData> _parameters;
-        private int _requiredArgumentCount;
+        private readonly List<ParameterData> _parameters = new List<ParameterData>();
 
-        internal ParameterCollection()
-        {
-            _parameters = new List<ParameterData>();
-        }
+        internal ParameterCollection() { }
 
         internal ParameterCollection(IEnumerable<IParameterSymbol> parameterSymbols, MemberDataBase declaringMember)
         {
-            _parameters = new List<ParameterData>();
             foreach (var parameterSymbol in parameterSymbols)
             {
-                this.Add(new ParameterData(parameterSymbol, declaringMember));
+                Add(new ParameterData(parameterSymbol, declaringMember));
             }
         }
 
-        System.Collections.IEnumerator System.Collections.IEnumerable.GetEnumerator()
-        {
-            return _parameters.GetEnumerator();
-        }
+        System.Collections.IEnumerator System.Collections.IEnumerable.GetEnumerator() =>
+            _parameters.GetEnumerator();
 
         internal void Add(ParameterData parameterData)
         {
             if (parameterData.IsOptional == false && parameterData.IsParamsArray == false)
-                _requiredArgumentCount++;
+            {
+                RequiredArgumentCount++;
+            }
 
             _parameters.Add(parameterData);
         }
 
         internal bool DoesMatch(ParameterCollection other)
         {
-            if (_requiredArgumentCount != other._requiredArgumentCount)
+            if (RequiredArgumentCount != other.RequiredArgumentCount)
+            {
                 return false;
+            }
 
-            if (this.Count != other.Count)
+            if (Count != other.Count)
+            {
                 return false;
+            }
 
-            for (int i = 0; i < this.Count; i++)
+            for (int i = 0; i < Count; i++)
             {
                 if (this[i].DoesMatch(other[i]) == false)
+                {
                     return false;
+                }
             }
 
             return true;
@@ -84,10 +85,8 @@ namespace BreakingChangesDetector.MetadataItems
         /// <summary>
         /// Gets an enumerator capable of iterating the parameters.
         /// </summary>
-        public IEnumerator<ParameterData> GetEnumerator()
-        {
-            return _parameters.GetEnumerator();
-        }
+        public IEnumerator<ParameterData> GetEnumerator() =>
+            _parameters.GetEnumerator();
 
 #if DEBUG
         /// <summary>
@@ -96,13 +95,17 @@ namespace BreakingChangesDetector.MetadataItems
 #endif
         internal bool IsEquivalentTo(ParameterCollection other)
         {
-            if (this.Count != other.Count)
+            if (Count != other.Count)
+            {
                 return false;
+            }
 
-            for (int i = 0; i < this.Count; i++)
+            for (int i = 0; i < Count; i++)
             {
                 if (this[i].IsEquivalentTo(other[i]) == false)
+                {
                     return false;
+                }
             }
 
             return true;
@@ -122,19 +125,25 @@ namespace BreakingChangesDetector.MetadataItems
         {
             if (ignoreNewOptionalParameters)
             {
-                if (this.Count < newParameters.RequiredArgumentCount || newParameters.Count < this.Count)
+                if (Count < newParameters.RequiredArgumentCount || newParameters.Count < Count)
+                {
                     return false;
+                }
             }
             else
             {
-                if (this.Count != newParameters.Count)
+                if (Count != newParameters.Count)
+                {
                     return false;
+                }
             }
 
-            for (int i = 0; i < this.Count; i++)
+            for (int i = 0; i < Count; i++)
             {
                 if (this[i].IsEquivalentToNewParameter(newParameters[i], newAssemblyFamily) == false)
+                {
                     return false;
+                }
             }
 
             return true;
@@ -143,26 +152,17 @@ namespace BreakingChangesDetector.MetadataItems
         /// <summary>
         /// Gets the number of parameters in the collection.
         /// </summary>
-        public int Count
-        {
-            get { return _parameters.Count; }
-        }
+        public int Count => _parameters.Count;
 
         /// <summary>
         /// Gets the number of arguments required by callers to the entity owning the parameters.
         /// </summary>
-        public int RequiredArgumentCount
-        {
-            get { return _requiredArgumentCount; }
-        }
+        public int RequiredArgumentCount { get; private set; }
 
         /// <summary>
         /// Gets the parameter at the specified index in the collection.
         /// </summary>
-        public ParameterData this[int index]
-        {
-            get { return _parameters[index]; }
-        }
+        public ParameterData this[int index] => _parameters[index];
 
         /// <summary>
         /// Gets the display text of the parameter list, which is the C# code that represents it.
@@ -172,17 +172,21 @@ namespace BreakingChangesDetector.MetadataItems
         /// <param name="close">The character to use to close the parameter list.</param>
         public string GetParameterListDisplayText(bool isExtensionMethod = false, char open = '(', char close = ')')
         {
-            if (this.Count == 0)
+            if (Count == 0)
+            {
                 return open.ToString() + close;
+            }
 
             var sb = new StringBuilder();
 
             sb.Append(open);
             if (isExtensionMethod)
+            {
                 sb.Append("this ");
+            }
 
             sb.Append(this[0].GetParameterListDisplayText());
-            for (int i = 1; i < this.Count; i++)
+            for (int i = 1; i < Count; i++)
             {
                 sb.Append(", ");
                 sb.Append(this[i].GetParameterListDisplayText());
@@ -205,12 +209,14 @@ namespace BreakingChangesDetector.MetadataItems
         {
             ParameterCollection replacedParameters = null;
 
-            for (int i = 0; i < this.Count; i++)
+            for (int i = 0; i < Count; i++)
             {
                 var currentParameter = this[i];
                 var replacedParameter = currentParameter.ReplaceGenericTypeParameters(declaringMemberKind, genericParameters, genericArguments);
                 if (replacedParameter == currentParameter)
+                {
                     continue;
+                }
 
                 if (replacedParameters == null)
                 {

@@ -24,17 +24,13 @@
 */
 
 using BreakingChangesDetector.MetadataItems;
-using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
 
 namespace BreakingChangesDetector.BreakingChanges.Definitions
 {
     internal class ChangedParameterModifierDefinition : BreakingChangeDefinitionBase
     {
-        public static readonly ChangedParameterModifierDefinition Instance = new ChangedParameterModifierDefinition();
+        public static readonly ChangedParameterModifierDefinition Instance =
+            new ChangedParameterModifierDefinition();
 
         private ChangedParameterModifierDefinition() { }
 
@@ -44,17 +40,15 @@ namespace BreakingChangesDetector.BreakingChanges.Definitions
             var newParameter = (ParameterData)context.NewItem;
 
             if (oldParameter.Modifer != newParameter.Modifer)
+            {
                 context.BreakingChanges.Add(new ChangedParameterModifier(oldParameter, newParameter, (IParameterizedItem)context.AdditionalInfo));
+            }
         }
 
-        public override BreakingChangeKind BreakingChangeKind
-        {
-            get { return BreakingChangeKind.ChangedParameterModifier; }
-        }
+        public override BreakingChangeKind BreakingChangeKind =>
+            BreakingChangeKind.ChangedParameterModifier;
 
-        public override MetadataItemKinds MembersKindsHandled
-        {
-            get { return MetadataItemKinds.Parameter; }
-        }
+        public override MetadataItemKinds MembersKindsHandled =>
+            MetadataItemKinds.Parameter;
     }
 }

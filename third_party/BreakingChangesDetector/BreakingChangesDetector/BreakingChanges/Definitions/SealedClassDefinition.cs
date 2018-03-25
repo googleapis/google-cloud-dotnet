@@ -24,11 +24,6 @@
 */
 
 using BreakingChangesDetector.MetadataItems;
-using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
 
 namespace BreakingChangesDetector.BreakingChanges.Definitions
 {
@@ -50,14 +45,10 @@ namespace BreakingChangesDetector.BreakingChanges.Definitions
             }
         }
 
-        public override BreakingChangeKind BreakingChangeKind
-        {
-            get { return BreakingChangeKind.SealedClass; }
-        }
+        public override BreakingChangeKind BreakingChangeKind =>
+            BreakingChangeKind.SealedClass;
 
-        public override MetadataItemKinds MembersKindsHandled
-        {
-            get { return MetadataItemKinds.TypeDefinition; }
-        }
+        public override MetadataItemKinds MembersKindsHandled =>
+            MetadataItemKinds.TypeDefinition;
     }
 }

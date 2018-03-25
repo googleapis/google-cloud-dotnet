@@ -27,9 +27,6 @@
 
 using System;
 using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
 
 namespace BreakingChangesDetector.UnitTests.MetadataTypesTests
 {
@@ -188,39 +185,39 @@ namespace BreakingChangesDetector.UnitTests.MetadataTypesTests
 
         public TestStructDefinition(int p1)
         {
-            this.FieldInstance = 1;
-            this.FieldInstanceInternal = 1;
-            this.FieldInstancePrivate = 1;
-            this.FieldReadOnlyInstance = 1;
-            this.FieldReadOnlyInstanceInternal = 1;
-            this.FieldReadOnlyInstancePrivate = 1;
-            this.EventInstance = null;
-            this.EventInstanceInternal = null;
-            this.EventInstancePrivate = null;
+            FieldInstance = 1;
+            FieldInstanceInternal = 1;
+            FieldInstancePrivate = 1;
+            FieldReadOnlyInstance = 1;
+            FieldReadOnlyInstanceInternal = 1;
+            FieldReadOnlyInstancePrivate = 1;
+            EventInstance = null;
+            EventInstanceInternal = null;
+            EventInstancePrivate = null;
         }
         internal TestStructDefinition(int p1, int p2)
         {
-            this.FieldInstance = 1;
-            this.FieldInstanceInternal = 1;
-            this.FieldInstancePrivate = 1;
-            this.FieldReadOnlyInstance = 1;
-            this.FieldReadOnlyInstanceInternal = 1;
-            this.FieldReadOnlyInstancePrivate = 1;
-            this.EventInstance = null;
-            this.EventInstanceInternal = null;
-            this.EventInstancePrivate = null;
+            FieldInstance = 1;
+            FieldInstanceInternal = 1;
+            FieldInstancePrivate = 1;
+            FieldReadOnlyInstance = 1;
+            FieldReadOnlyInstanceInternal = 1;
+            FieldReadOnlyInstancePrivate = 1;
+            EventInstance = null;
+            EventInstanceInternal = null;
+            EventInstancePrivate = null;
         }
         private TestStructDefinition(int p1, int p2, int p3)
         {
-            this.FieldInstance = 1;
-            this.FieldInstanceInternal = 1;
-            this.FieldInstancePrivate = 1;
-            this.FieldReadOnlyInstance = 1;
-            this.FieldReadOnlyInstanceInternal = 1;
-            this.FieldReadOnlyInstancePrivate = 1;
-            this.EventInstance = null;
-            this.EventInstanceInternal = null;
-            this.EventInstancePrivate = null;
+            FieldInstance = 1;
+            FieldInstanceInternal = 1;
+            FieldInstancePrivate = 1;
+            FieldReadOnlyInstance = 1;
+            FieldReadOnlyInstanceInternal = 1;
+            FieldReadOnlyInstancePrivate = 1;
+            EventInstance = null;
+            EventInstanceInternal = null;
+            EventInstancePrivate = null;
         }
 
         public event EventHandler EventInstance;

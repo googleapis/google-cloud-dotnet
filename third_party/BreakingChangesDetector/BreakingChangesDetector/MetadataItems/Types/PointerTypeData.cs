@@ -24,12 +24,7 @@
 */
 
 using Microsoft.CodeAnalysis;
-using System;
 using System.Collections.Generic;
-using System.Diagnostics;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
 
 namespace BreakingChangesDetector.MetadataItems
 {
@@ -64,10 +59,8 @@ namespace BreakingChangesDetector.MetadataItems
         /// <param name="fullyQualify">Indicates whether the type name should be fully qualified with declaring type and namespace names.</param>
         /// <param name="includeGenericInfo">Indicates whether generic parameters and arguments should be included in type names.</param>
         /// <returns>The display name of the type.</returns>
-        public override string GetDisplayName(bool fullyQualify = true, bool includeGenericInfo = true)
-        {
-            return this.ElementType.GetDisplayName(fullyQualify, includeGenericInfo) + '*';
-        }
+        public override string GetDisplayName(bool fullyQualify = true, bool includeGenericInfo = true) =>
+            ElementType.GetDisplayName(fullyQualify, includeGenericInfo) + '*';
 
 #if DEBUG
         /// <summary>
@@ -75,24 +68,15 @@ namespace BreakingChangesDetector.MetadataItems
         /// </summary>
         /// <param name="newAssemblyFamily">The assembly family in which new assemblies reside.</param>
 #endif
-        internal override TypeData GetEquivalentNewType(AssemblyFamily newAssemblyFamily)
-        {
-            var newElementType = this.ElementType.GetEquivalentNewType(newAssemblyFamily);
-            if (newElementType == null)
-                return null;
-
-            return newElementType.GetPointerType();
-        }
+        internal override TypeData GetEquivalentNewType(AssemblyFamily newAssemblyFamily) =>
+            ElementType.GetEquivalentNewType(newAssemblyFamily)?.GetPointerType();
 
         #region MetadataItemKind
 
         /// <summary>
         /// Gets the type of item the instance represents.
         /// </summary>
-        public override MetadataItemKinds MetadataItemKind
-        {
-            get { return MetadataItemKinds.PointerType; }
-        }
+        public override MetadataItemKinds MetadataItemKind => MetadataItemKinds.PointerType;
 
         #endregion // MetadataItemKind
 
@@ -106,9 +90,11 @@ namespace BreakingChangesDetector.MetadataItems
 #endif
         internal override MemberDataBase ReplaceGenericTypeParameters(GenericTypeParameterCollection genericParameters, GenericTypeArgumentCollection genericArguments)
         {
-            var replacedElementType = (TypeData)this.ElementType.ReplaceGenericTypeParameters(genericParameters, genericArguments);
-            if (replacedElementType == this.ElementType)
+            var replacedElementType = (TypeData)ElementType.ReplaceGenericTypeParameters(genericParameters, genericArguments);
+            if (replacedElementType == ElementType)
+            {
                 return this;
+            }
 
             return replacedElementType.GetPointerType();
         }

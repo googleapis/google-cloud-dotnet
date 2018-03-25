@@ -23,7 +23,6 @@
     SOFTWARE.
 */
 
-using System;
 using Xunit;
 using BreakingChangesDetector.MetadataItems;
 using System.Collections.Generic;
@@ -44,12 +43,16 @@ namespace BreakingChangesDetector.UnitTests.MetadataTypesTests
             var implicitConversions = new HashSet<TypeData>(rank1ArrayTypeData.GetDirectImplicitConversions(true));
 
             if (implicitConversions.Remove(context.GetTypeData(rank1ArrayType.BaseType)) == false)
+            {
                 AssertX.Fail(string.Format("Base type {0} was not returned from GetDirectImplicitConversions of a rank-1 array.", rank1ArrayType.BaseType));
+            }
 
             foreach (var implementedInterface in rank1ArrayType.GetInterfaces())
             {
                 if (implicitConversions.Remove(context.GetTypeData(implementedInterface)) == false)
+                {
                     AssertX.Fail(string.Format("Implemented interface type {0} was not returned from GetDirectImplicitConversions of a rank-1 array.", implementedInterface.Name));
+                }
             }
 
             AssertX.Equal(0, implicitConversions.Count, "Extra interfaces were returned from GetDirectImplicitConversions of a rank-1 array.");
@@ -62,12 +65,16 @@ namespace BreakingChangesDetector.UnitTests.MetadataTypesTests
             implicitConversions = new HashSet<TypeData>(rank2ArrayTypeData.GetDirectImplicitConversions(true));
 
             if (implicitConversions.Remove(context.GetTypeData(rank2ArrayType.BaseType)) == false)
+            {
                 AssertX.Fail(string.Format("Base type {0} was not returned from GetDirectImplicitConversions of a rank-1 array.", rank2ArrayType.BaseType));
+            }
 
             foreach (var implementedInterface in rank2ArrayType.GetInterfaces())
             {
                 if (implicitConversions.Remove(context.GetTypeData(implementedInterface)) == false)
+                {
                     AssertX.Fail(string.Format("Implemented interface type {0} was not returned from GetDirectImplicitConversions of a rank-2 array.", implementedInterface.Name));
+                }
             }
 
             AssertX.Equal(0, implicitConversions.Count, "Extra interfaces were returned from GetDirectImplicitConversions of a rank-2 array.");

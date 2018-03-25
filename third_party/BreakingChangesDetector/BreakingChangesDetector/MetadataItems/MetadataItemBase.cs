@@ -23,11 +23,6 @@
     SOFTWARE.
 */
 
-using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
 
 namespace BreakingChangesDetector.MetadataItems
 {
@@ -49,16 +44,8 @@ namespace BreakingChangesDetector.MetadataItems
         /// </summary>
         public abstract string DisplayName { get; }
 
-        internal virtual bool DoesMatch(MetadataItemBase other)
-        {
-            if (this.DisplayName != other.DisplayName)
-                return false;
-
-            if (this.MetadataItemKind != other.MetadataItemKind)
-                return false;
-
-            return true;
-        }
+        internal virtual bool DoesMatch(MetadataItemBase other) =>
+            MetadataItemKind == other.MetadataItemKind && DisplayName == other.DisplayName;
 
         /// <summary>
         /// Gets the type of item the instance represents.
@@ -69,9 +56,6 @@ namespace BreakingChangesDetector.MetadataItems
         /// Gets the <see cref="DisplayName"/> of the item.
         /// </summary>
         /// <returns></returns>
-        public sealed override string ToString()
-        {
-            return this.DisplayName;
-        }
+        public sealed override string ToString() => DisplayName;
     }
 }

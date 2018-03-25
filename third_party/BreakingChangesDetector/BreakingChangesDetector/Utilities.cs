@@ -87,7 +87,7 @@ namespace BreakingChangesDetector
 
         public static string GetFullName(this ITypeSymbol typeSymbol)
         {
-            if (!typeSymbol.CanBeReferencedByName || typeSymbol.TypeKind == Microsoft.CodeAnalysis.TypeKind.TypeParameter)
+            if (!typeSymbol.CanBeReferencedByName || typeSymbol.TypeKind == TypeKind.TypeParameter)
             {
                 return typeSymbol.ToDisplayString();
             }
@@ -116,9 +116,13 @@ namespace BreakingChangesDetector
         public static bool EqualsType(this ITypeSymbol typeSymbol, Type type)
         {
             if (typeSymbol == null)
+            {
                 return type == null;
+            }
             else if (type == null)
+            {
                 return false;
+            }
 
             return
                 typeSymbol.GetFullName() == type.FullName.Replace('+', '/') &&
@@ -132,7 +136,9 @@ namespace BreakingChangesDetector
             foreach (ConstantData constant in enumType.GetMembers())
             {
                 if (Object.Equals(constant.Value, value))
+                {
                     return unqualifiedName + "." + constant.Name;
+                }
             }
 
             if (enumType.IsFlagsEnum)
@@ -147,12 +153,16 @@ namespace BreakingChangesDetector
                         longValue &= ~longFlag;
 
                         if (sb.Length != 0)
+                        {
                             sb.Append(" | ");
+                        }
 
                         sb.AppendFormat("{0}.{1}", unqualifiedName, constant.Name);
 
                         if (longValue == 0)
+                        {
                             return sb.ToString();
+                        }
                     }
                 }
             }
@@ -222,10 +232,14 @@ namespace BreakingChangesDetector
         public static MemberAccessibility GetLeastRestrictiveAccessibility(MemberAccessibility? a, MemberAccessibility? b)
         {
             if (a == MemberAccessibility.Public || b == MemberAccessibility.Public)
+            {
                 return MemberAccessibility.Public;
+            }
 
             if (a == MemberAccessibility.Protected || b == MemberAccessibility.Protected)
+            {
                 return MemberAccessibility.Protected;
+            }
 
             Debug.Fail("Unknown MemberAccessibility: " + (a ?? b));
             return MemberAccessibility.Protected;
@@ -234,7 +248,9 @@ namespace BreakingChangesDetector
         public static MemberFlags GetMemberFlags(IMethodSymbol methodSymbol)
         {
             if (methodSymbol == null)
+            {
                 return 0;
+            }
 
             var flags = MemberFlags.None;
 
@@ -266,7 +282,9 @@ namespace BreakingChangesDetector
             // Non-virtual interface implicit implementations are marked virtual sealed. They should have neither flag for our purposes.
             // It is safe to strip out these flags when both are present because it is impossible in code to declare something as virtual sealed.
             if (flags.HasFlag(MemberFlags.Virtual) && flags.HasFlag(MemberFlags.Sealed))
+            {
                 flags &= ~(MemberFlags.Virtual | MemberFlags.Sealed);
+            }
 
             return flags;
         }
@@ -275,7 +293,9 @@ namespace BreakingChangesDetector
         {
             var namedTypeSymbol = typeSymbol as INamedTypeSymbol;
             if (namedTypeSymbol == null)
+            {
                 return 0;
+            }
 
             var flags = (MemberFlags)0;
 
@@ -338,10 +358,11 @@ namespace BreakingChangesDetector
 
             foreach (var attributeData in namespaceRenamedAttributeDatas)
             {
-                var oldNamespaceName = attributeData.ConstructorArguments[0].Value as string;
                 var newNamespaceName = attributeData.ConstructorArguments[1].Value as string;
-                if (oldNamespaceName != null && newNamespaceName != null)
+                if (attributeData.ConstructorArguments[0].Value is string oldNamespaceName && newNamespaceName != null)
+                {
                     yield return new KeyValuePair<string, string>(oldNamespaceName, newNamespaceName);
+                }
             }
         }
 
@@ -349,29 +370,40 @@ namespace BreakingChangesDetector
 
         public static TypeKind GetTypeKind(ITypeSymbol typeSymbol)
         {
-            var typeParameterSymbol = typeSymbol as ITypeParameterSymbol;
-            if (typeParameterSymbol != null)
+            if (typeSymbol is ITypeParameterSymbol typeParameterSymbol)
             {
                 if (typeParameterSymbol.HasValueTypeConstraint)
+                {
                     return TypeKind.Struct;
+                }
 
                 return TypeKind.Class;
             }
 
             if (typeSymbol.BaseType.EqualsType(typeof(MulticastDelegate)))
+            {
                 return TypeKind.Delegate;
+            }
 
-            if (typeSymbol.TypeKind == Microsoft.CodeAnalysis.TypeKind.Enum)
+            if (typeSymbol.TypeKind == TypeKind.Enum)
+            {
                 return TypeKind.Enum;
+            }
 
             if (typeSymbol.IsValueType)
+            {
                 return TypeKind.Struct;
+            }
 
-            if (typeSymbol.TypeKind == Microsoft.CodeAnalysis.TypeKind.Interface)
+            if (typeSymbol.TypeKind == TypeKind.Interface)
+            {
                 return TypeKind.Interface;
+            }
 
             if (typeSymbol.IsReferenceType)
+            {
                 return TypeKind.Class;
+            }
 
             Debug.Fail("Unknown kind of type: " + typeSymbol.GetFullName());
             return TypeKind.Class;
@@ -395,9 +427,10 @@ namespace BreakingChangesDetector
 
             if (versionComparisonNameAttributeData != null)
             {
-                var value = versionComparisonNameAttributeData.ConstructorArguments[0].Value as string;
-                if (value != null)
+                if (versionComparisonNameAttributeData.ConstructorArguments[0].Value is string value)
+                {
                     return value;
+                }
             }
 
             return assemblySymbol.Name;
@@ -408,26 +441,11 @@ namespace BreakingChangesDetector
         public static bool IsConstructed(this INamedTypeSymbol namedTypeSymbol) =>
             !namedTypeSymbol.ConstructedFrom.Equals(namedTypeSymbol);
 
-        public static bool IsDynamicType(this IFieldSymbol fieldSymbol)
-        {
-            return fieldSymbol.GetAttributes().Any(a => a.AttributeClass.EqualsType(typeof(DynamicAttribute)));
-        }
+        public static bool IsNullable(this Type t) =>
+            t.IsConstructedGenericType && t.GetGenericTypeDefinition() == typeof(Nullable<>);
 
-        public static bool IsDynamicType(this IParameterSymbol parameterSymbol)
-        {
-            return parameterSymbol.GetAttributes().Any(a => a.AttributeClass.EqualsType(typeof(DynamicAttribute)));
-        }
-
-        public static bool IsNullable(this Type t)
-        {
-            return t.IsConstructedGenericType && t.GetGenericTypeDefinition() == typeof(Nullable<>);
-        }
-
-        public static bool IsNullable(this ITypeSymbol typeSymbol)
-        {
-            var namedTypeSymbol = typeSymbol as INamedTypeSymbol;
-            return namedTypeSymbol != null && namedTypeSymbol.ConstructedFrom.EqualsType(typeof(Nullable<>));
-        }
+        public static bool IsNullable(this ITypeSymbol typeSymbol) =>
+            typeSymbol is INamedTypeSymbol namedTypeSymbol && namedTypeSymbol.ConstructedFrom.EqualsType(typeof(Nullable<>));
 
         public static bool TryGetNullableUnderlyingType(this ITypeSymbol type, out ITypeSymbol underlyingType)
         {
@@ -446,16 +464,16 @@ namespace BreakingChangesDetector
         public static bool IsPropertyTypeDynamic(this IPropertySymbol propertySymbol)
         {
             if (propertySymbol.GetMethod != null)
+            {
                 return propertySymbol.GetMethod.IsReturnTypeDynamic();
+            }
 
             var parameters = propertySymbol.SetMethod.Parameters;
-            return parameters[parameters.Length - 1].IsDynamicType();
+            return parameters[parameters.Length - 1].Type.TypeKind == TypeKind.Dynamic;
         }
 
-        public static bool IsReturnTypeDynamic(this IMethodSymbol methodSymbol)
-        {
-            return methodSymbol.GetReturnTypeAttributes().Any(a => a.AttributeClass.EqualsType(typeof(DynamicAttribute)));
-        }
+        public static bool IsReturnTypeDynamic(this IMethodSymbol methodSymbol) =>
+            methodSymbol.GetReturnTypeAttributes().Any(a => a.AttributeClass.EqualsType(typeof(DynamicAttribute)));
 
         public static object PreprocessConstantValue(ITypeSymbol typeSymbol, object value)
         {
@@ -466,7 +484,7 @@ namespace BreakingChangesDetector
                     typeSymbol = underlyingType;
                 }
 
-                if (typeSymbol.TypeKind == Microsoft.CodeAnalysis.TypeKind.Enum)
+                if (typeSymbol.TypeKind == TypeKind.Enum)
                 {
                     try
                     {

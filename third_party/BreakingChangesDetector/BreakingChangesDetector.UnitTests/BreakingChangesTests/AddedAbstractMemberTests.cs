@@ -24,7 +24,6 @@
 */
 
 using BreakingChangesDetector.BreakingChanges;
-using BreakingChangesDetector.MetadataItems;
 using Xunit;
 using System;
 using System.Linq;

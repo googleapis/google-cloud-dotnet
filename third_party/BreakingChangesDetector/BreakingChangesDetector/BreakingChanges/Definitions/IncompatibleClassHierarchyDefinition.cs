@@ -25,17 +25,13 @@
 
 using BreakingChangesDetector.MetadataItems;
 using Microsoft.CodeAnalysis;
-using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
 
 namespace BreakingChangesDetector.BreakingChanges.Definitions
 {
     internal class IncompatibleClassHierarchyDefinition : BreakingChangeDefinitionBase
     {
-        public static readonly IncompatibleClassHierarchyDefinition Instance = new IncompatibleClassHierarchyDefinition();
+        public static readonly IncompatibleClassHierarchyDefinition Instance =
+            new IncompatibleClassHierarchyDefinition();
 
         private IncompatibleClassHierarchyDefinition() { }
 
@@ -48,18 +44,16 @@ namespace BreakingChangesDetector.BreakingChanges.Definitions
             if (oldType.BaseType != null)
             {
                 if (oldType.TypeKind == TypeKind.Class && oldType.BaseType.IsAssignableFromNew(newType.BaseType, context.NewAssemblyFamily) == false)
+                {
                     context.BreakingChanges.Add(new IncompatibleClassHierarchy(oldType, newType));
+                }
             }
         }
 
-        public override BreakingChangeKind BreakingChangeKind
-        {
-            get { return BreakingChangeKind.IncompatibleClassHierarchy; }
-        }
+        public override BreakingChangeKind BreakingChangeKind =>
+            BreakingChangeKind.IncompatibleClassHierarchy;
 
-        public override MetadataItemKinds MembersKindsHandled
-        {
-            get { return MetadataItemKinds.TypeDefinition; }
-        }
+        public override MetadataItemKinds MembersKindsHandled =>
+            MetadataItemKinds.TypeDefinition;
     }
 }

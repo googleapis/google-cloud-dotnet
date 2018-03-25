@@ -29,10 +29,7 @@ using System;
 using System.Collections.Generic;
 using System.Diagnostics;
 using System.Linq;
-using System.Reflection;
 using System.Runtime.CompilerServices;
-using System.Text;
-using System.Threading.Tasks;
 
 namespace BreakingChangesDetector.MetadataItems
 {
@@ -80,7 +77,6 @@ namespace BreakingChangesDetector.MetadataItems
 
         #region Member Variables
 
-        private readonly AssemblyData _assembly;
         private Dictionary<TypeDataSequence, ConstructedGenericTypeData> _constructedGenericTypes;
 
         #endregion // Member Variables
@@ -90,79 +86,78 @@ namespace BreakingChangesDetector.MetadataItems
         internal TypeDefinitionData(string name, MemberAccessibility accessibility, MemberFlags memberFlags, TypeKind typeKind, AssemblyData assembly, string fullName, TypeDefinitionFlags typeDefinitionFlags, bool delegateReturnTypeIsDynamic)
             : base(name, accessibility, memberFlags, typeKind)
         {
-            _assembly = assembly;
-            this.DelegateReturnTypeIsDynamic = delegateReturnTypeIsDynamic;
-            this.FullName = fullName;
-            this.TypeDefinitionFlags = typeDefinitionFlags;
+            AssemblyData = assembly;
+            DelegateReturnTypeIsDynamic = delegateReturnTypeIsDynamic;
+            FullName = fullName;
+            TypeDefinitionFlags = typeDefinitionFlags;
         }
 
         internal TypeDefinitionData(INamedTypeSymbol typeSymbol, MemberAccessibility accessibility, DeclaringTypeData declaringType, AssemblyData assembly)
             : base(typeSymbol, accessibility, declaringType)
         {
-            _assembly = assembly;
+            AssemblyData = assembly;
 
             var typeFlags = TypeDefinitionFlags.None;
 
-            if (this.IsSealed == false)
+            if (IsSealed == false)
             {
                 // TODO_Refactor: we can probably clean this up
 
                 // A type can only be inherited if it has at least one externally visible constructor and any abstract members are also externally visible.
                 var canBeIherited = typeSymbol.Methods().Where(c => c.MethodKind == MethodKind.Constructor && c.GetAccessibility() != null).Any();
-                if (this.CanBeInherited)
+                if (CanBeInherited)
                 {
                     if (typeSymbol.Methods().Where(m => m.AssociatedSymbol == null && m.MethodKind != MethodKind.StaticConstructor && m.MethodKind != MethodKind.Destructor && m.MethodKind != MethodKind.Constructor && m.GetAccessibility() == null && m.IsAbstract).Any() ||
                         typeSymbol.Events().Where(e => e.AddMethod.GetAccessibility() == null && e.AddMethod.IsAbstract).Any() ||
                         typeSymbol.Properties().Where(p => p.GetMethod != null ? p.GetMethod.GetAccessibility() == null && p.GetMethod.IsAbstract : p.SetMethod.GetAccessibility() == null && p.SetMethod.IsAbstract).Any())
+                    {
                         canBeIherited = false;
+                    }
                 }
 
                 if (canBeIherited)
+                {
                     typeFlags |= TypeDefinitionFlags.CanBeInherited;
+                }
             }
 
-            if (this.TypeKind == TypeKind.Enum)
+            if (TypeKind == TypeKind.Enum)
             {
                 var flagsAttributeData = typeSymbol.GetAttributes().Where(a => a.AttributeClass.EqualsType(typeof(FlagsAttribute))).SingleOrDefault();
                 if (flagsAttributeData != null)
+                {
                     typeFlags |= TypeDefinitionFlags.FlagsEnum;
+                }
             }
 
-            this.TypeDefinitionFlags = typeFlags;
-            this.FullName = typeSymbol.GetFullName();
+            TypeDefinitionFlags = typeFlags;
+            FullName = typeSymbol.GetFullName();
 
             var renamedAttributeData = typeSymbol.GetAttributes().Where(a => a.AttributeClass.GetFullName() == typeof(TypeRenamedAttribute).FullName).SingleOrDefault();
             if (renamedAttributeData != null)
-                this.OldName = renamedAttributeData.ConstructorArguments[0].Value as string;
+            {
+                OldName = renamedAttributeData.ConstructorArguments[0].Value as string;
+            }
 
             var typeForwardedFromAttribute = typeSymbol.GetAttributes().Where(a => a.AttributeClass.EqualsType(typeof(TypeForwardedFromAttribute))).SingleOrDefault();
             if (typeForwardedFromAttribute != null)
-                this.AssemblyData.AddForwardedTypeFromTarget(this, typeForwardedFromAttribute.ConstructorArguments[0].Value.ToString());
+            {
+                AssemblyData.AddForwardedTypeFromTarget(this, typeForwardedFromAttribute.ConstructorArguments[0].Value.ToString());
+            }
         }
 
         #endregion // Constructor
 
         #region Interfaces
 
-        bool IParameterizedItem.IsEquivalentToNewMember(MemberDataBase newMember, AssemblyFamily newAssemblyFamily, bool ignoreNewOptionalParameters)
-        {
-            return this.IsEquivalentToNewTypeHelper((TypeDefinitionData)newMember, newAssemblyFamily, ignoreNewOptionalParameters);
-        }
+        bool IParameterizedItem.IsEquivalentToNewMember(MemberDataBase newMember, AssemblyFamily newAssemblyFamily, bool ignoreNewOptionalParameters) =>
+            IsEquivalentToNewTypeHelper((TypeDefinitionData)newMember, newAssemblyFamily, ignoreNewOptionalParameters);
 
-        ParameterCollection IParameterizedItem.Parameters
-        {
-            get { return this.DelegateParameters; }
-        }
+        ParameterCollection IParameterizedItem.Parameters => DelegateParameters;
 
-        bool ITypedItem.IsTypeDynamic
-        {
-            get { return this.DelegateReturnTypeIsDynamic; }
-        }
+        bool ITypedItem.IsTypeDynamic => DelegateReturnTypeIsDynamic;
 
-        TypeData ITypedItem.Type
-        {
-            get { return this.DelegateReturnType; }
-        }
+        TypeData ITypedItem.Type => DelegateReturnType;
 
         #endregion // Interfaces
 
@@ -174,10 +169,7 @@ namespace BreakingChangesDetector.MetadataItems
         /// Performs the specified visitor's functionality on this instance.
         /// </summary>
         /// <param name="visitor">The visitor whose functionality should be performed on the instance.</param>
-        public override void Accept(MetadataItemVisitor visitor)
-        {
-            visitor.VisitTypeDefinitionData(this);
-        }
+        public override void Accept(MetadataItemVisitor visitor) => visitor.VisitTypeDefinitionData(this);
 
         #endregion // Accept
 
@@ -186,10 +178,7 @@ namespace BreakingChangesDetector.MetadataItems
         /// <summary>
         /// Gets the <see cref="T:AssemblyData"/> representing the assembly in which the type is defined.
         /// </summary>
-        public override AssemblyData AssemblyData
-        {
-            get { return _assembly; }
-        }
+        public override AssemblyData AssemblyData { get; }
 
         #endregion // AssemblyData
 
@@ -215,26 +204,40 @@ namespace BreakingChangesDetector.MetadataItems
         internal override bool DoesMatch(MetadataItemBase other)
         {
             if (base.DoesMatch(other) == false)
+            {
                 return false;
+            }
 
             var otherTyped = other as TypeDefinitionData;
             if (otherTyped == null)
+            {
                 return false;
+            }
 
-            if (this.FullName != otherTyped.FullName)
+            if (FullName != otherTyped.FullName)
+            {
                 return false;
+            }
 
-            if (this.GenericParameters.DoesMatch(otherTyped.GenericParameters) == false)
+            if (GenericParameters.DoesMatch(otherTyped.GenericParameters) == false)
+            {
                 return false;
+            }
 
-            if (this.NameForComparison != otherTyped.NameForComparison)
+            if (NameForComparison != otherTyped.NameForComparison)
+            {
                 return false;
+            }
 
-            if (this.OldName != otherTyped.OldName)
+            if (OldName != otherTyped.OldName)
+            {
                 return false;
+            }
 
-            if (this.TypeDefinitionFlags != otherTyped.TypeDefinitionFlags)
+            if (TypeDefinitionFlags != otherTyped.TypeDefinitionFlags)
+            {
                 return false;
+            }
 
             return true;
         }
@@ -248,10 +251,7 @@ namespace BreakingChangesDetector.MetadataItems
         /// Gets the number of generic parameters/arguments for the type.
         /// </summary> 
 #endif
-        internal override int GenericArity
-        {
-            get { return this.GenericParameters.Count; }
-        }
+        internal override int GenericArity => GenericParameters.Count;
 
         #endregion // GenericArity
 
@@ -273,29 +273,32 @@ namespace BreakingChangesDetector.MetadataItems
         {
             if (onlyReferenceAndIdentityConversions == false)
             {
-                var mscorlibData = this.AssemblyData.GetReferencedAssembly(Utilities.CommonObjectRuntimeAssemblyName);
+                var mscorlibData = AssemblyData.GetReferencedAssembly(Utilities.CommonObjectRuntimeAssemblyName);
                 if (mscorlibData != null)
                 {
-                    if (this.TypeKind == TypeKind.Enum)
+                    if (TypeKind == TypeKind.Enum)
                     {
                         yield return mscorlibData.GetTypeDefinitionData(Utilities.EnumTypeName);
                     }
                     else
                     {
                         // See if there is an implicit numeric conversion for the types.
-                        HashSet<string> destTypeNames;
                         if (mscorlibData != null &&
-                            _implicitNumericConversions.TryGetValue(this.FullName, out destTypeNames))
+                            _implicitNumericConversions.TryGetValue(FullName, out HashSet<string> destTypeNames))
                         {
                             foreach (var numericTypeName in destTypeNames)
+                            {
                                 yield return mscorlibData.GetTypeDefinitionData(numericTypeName);
+                            }
                         }
                     }
                 }
             }
 
             foreach (var item in base.GetDirectImplicitConversions(onlyReferenceAndIdentityConversions))
+            {
                 yield return item;
+            }
         }
 
         #endregion // GetDirectImplicitConversions
@@ -316,26 +319,33 @@ namespace BreakingChangesDetector.MetadataItems
 #endif
         internal override string GetDisplayName(bool fullyQualify, bool includeGenericInfo, GenericTypeArgumentCollection genericArguments)
         {
-            string primitiveTypeName;
-            if (_primitiveTypeNames.TryGetValue(this.FullName, out primitiveTypeName))
+            if (_primitiveTypeNames.TryGetValue(FullName, out string primitiveTypeName))
+            {
                 return primitiveTypeName;
+            }
 
-            var rootName = this.Name;
+            var rootName = Name;
             var tickIndex = rootName.LastIndexOf('`');
             if (0 <= tickIndex)
+            {
                 rootName = rootName.Substring(0, tickIndex);
+            }
 
             if (includeGenericInfo)
             {
-                var declaringTypeGenericArity = this.ContainingType == null ? 0 : this.ContainingType.GenericArity;
+                var declaringTypeGenericArity = ContainingType == null ? 0 : ContainingType.GenericArity;
 
                 if (genericArguments != null)
-                    rootName += genericArguments.GetGenericArgumentListDisplayText(includeGenericInfo, declaringTypeGenericArity, this.GenericParameters.Count - declaringTypeGenericArity);
-                else if (this.GenericParameters != null) // While initializing, this.GenericParameters could be null and we don't want this throwing an exception
-                    rootName += this.GenericParameters.GetParameterListText(skipCount: declaringTypeGenericArity);
+                {
+                    rootName += genericArguments.GetGenericArgumentListDisplayText(includeGenericInfo, declaringTypeGenericArity, GenericParameters.Count - declaringTypeGenericArity);
+                }
+                else if (GenericParameters != null) // While initializing, this.GenericParameters could be null and we don't want this throwing an exception
+                {
+                    rootName += GenericParameters.GetParameterListText(skipCount: declaringTypeGenericArity);
+                }
             }
 
-            return this.PostProcessUnqualifiedName(rootName, fullyQualify, includeGenericInfo, genericArguments);
+            return PostProcessUnqualifiedName(rootName, fullyQualify, includeGenericInfo, genericArguments);
         }
 
         #endregion // GetDisplayName
@@ -350,32 +360,42 @@ namespace BreakingChangesDetector.MetadataItems
 #endif
         internal override TypeData GetEquivalentNewType(AssemblyFamily newAssemblyFamily)
         {
-            var newAssembly = newAssemblyFamily.GetEquivalentAssembly(this.AssemblyData);
+            var newAssembly = newAssemblyFamily.GetEquivalentAssembly(AssemblyData);
             if (newAssembly == null)
+            {
                 return null;
+            }
 
-            var newType = newAssembly.GetTypeDefinitionData(this.FullName);
+            var newType = newAssembly.GetTypeDefinitionData(FullName);
             if (newType != null)
+            {
                 return newType;
+            }
 
-            var oldNamespaceName = this.GetNamespaceName();
+            var oldNamespaceName = GetNamespaceName();
             var newNamespaceName = newAssembly.GetNewNamespaceName(oldNamespaceName);
             if (newNamespaceName != null)
             {
-                var newFullName = newNamespaceName + this.FullName.Substring(oldNamespaceName.Length);
+                var newFullName = newNamespaceName + FullName.Substring(oldNamespaceName.Length);
                 newType = newAssembly.GetTypeDefinitionData(newFullName);
                 if (newType != null)
+                {
                     return newType;
+                }
             }
 
             foreach (var otherAssembly in newAssemblyFamily)
             {
                 if (otherAssembly == newAssembly)
+                {
                     continue;
+                }
 
-                newType = otherAssembly.GetTypeDefinitionData(this.FullName);
+                newType = otherAssembly.GetTypeDefinitionData(FullName);
                 if (newType != null && otherAssembly.GetForwardedTypeSources(newType).Any(s => s == newAssembly.FullName))
+                {
                     return newType;
+                }
             }
 
             return null;
@@ -392,15 +412,21 @@ namespace BreakingChangesDetector.MetadataItems
 #endif
         internal override string GetNamespaceName()
         {
-            if (_primitiveTypeNames.ContainsKey(this.FullName))
+            if (_primitiveTypeNames.ContainsKey(FullName))
+            {
                 return null;
+            }
 
-            if (this.ContainingType != null)
-                return this.ContainingType.GetNamespaceName();
+            if (ContainingType != null)
+            {
+                return ContainingType.GetNamespaceName();
+            }
 
-            var lastDot = this.FullName.LastIndexOf(".");
+            var lastDot = FullName.LastIndexOf(".");
             if (0 <= lastDot)
-                return this.FullName.Substring(0, lastDot);
+            {
+                return FullName.Substring(0, lastDot);
+            }
 
             return string.Empty;
         }
@@ -418,9 +444,11 @@ namespace BreakingChangesDetector.MetadataItems
         {
             var newType = newMember as TypeDefinitionData;
             if (newType == null)
+            {
                 return false;
+            }
 
-            return this.IsEquivalentToNewTypeHelper(newType, newAssemblyFamily, ignoreNewOptionalParameters: false);
+            return IsEquivalentToNewTypeHelper(newType, newAssemblyFamily, ignoreNewOptionalParameters: false);
         }
 
         #endregion // IsEquivalentToNewMember
@@ -430,10 +458,7 @@ namespace BreakingChangesDetector.MetadataItems
         /// <summary>
         /// Gets the type of item the instance represents.
         /// </summary>
-        public override MetadataItemKinds MetadataItemKind
-        {
-            get { return MetadataItemKinds.TypeDefinition; }
-        }
+        public override MetadataItemKinds MetadataItemKind => MetadataItemKinds.TypeDefinition;
 
         #endregion // MetadataItemKind
 
@@ -447,13 +472,8 @@ namespace BreakingChangesDetector.MetadataItems
         /// <param name="genericArguments">The generic arguments replacing the parameters.</param>
         /// <returns>A new member with the replaced type parameters or the current instance if the member does not use any of the generic parameters.</returns> 
 #endif
-        internal override MemberDataBase ReplaceGenericTypeParameters(GenericTypeParameterCollection genericParameters, GenericTypeArgumentCollection genericArguments)
-        {
-            if (this.GenericParameters == genericParameters)
-                return this.GetConstructedGenericTypeData(genericArguments);
-
-            return this;
-        }
+        internal override MemberDataBase ReplaceGenericTypeParameters(GenericTypeParameterCollection genericParameters, GenericTypeArgumentCollection genericArguments) =>
+            GenericParameters == genericParameters ? GetConstructedGenericTypeData(genericArguments) : (MemberDataBase)this;
 
         #endregion // ReplaceGenericTypeParameters
 
@@ -471,10 +491,8 @@ namespace BreakingChangesDetector.MetadataItems
         /// </summary>
         /// <param name="name">The name of the nested type to get.</param>
         /// <returns>The single nested type with the specified name, or null if no such nested type exists.</returns>
-        public TypeDefinitionData GetNestedType(string name)
-        {
-            return this.GetMembers(name).OfType<TypeDefinitionData>().SingleOrDefault();
-        }
+        public TypeDefinitionData GetNestedType(string name) =>
+            GetMembers(name).OfType<TypeDefinitionData>().SingleOrDefault();
 
         #endregion // GetNestedType
 
@@ -492,39 +510,43 @@ namespace BreakingChangesDetector.MetadataItems
 #endif
         internal void FinalizeDefinition(INamedTypeSymbol underlyingTypeSymbol)
         {
-            if (underlyingTypeSymbol.TypeKind == Microsoft.CodeAnalysis.TypeKind.Enum)
-                this.BaseType = (DeclaringTypeData)Context.GetTypeData(underlyingTypeSymbol.EnumUnderlyingType);
+            if (underlyingTypeSymbol.TypeKind == TypeKind.Enum)
+            {
+                BaseType = (DeclaringTypeData)Context.GetTypeData(underlyingTypeSymbol.EnumUnderlyingType);
+            }
             else if (underlyingTypeSymbol.BaseType != null)
-                this.BaseType = (DeclaringTypeData)Context.GetTypeData(underlyingTypeSymbol.BaseType);
+            {
+                BaseType = (DeclaringTypeData)Context.GetTypeData(underlyingTypeSymbol.BaseType);
+            }
 
-            this.ImplementedInterfaces = new ImplementedInterfacesCollection(
+            ImplementedInterfaces = new ImplementedInterfacesCollection(
                 underlyingTypeSymbol.Interfaces.Select(i => (DeclaringTypeData)Context.GetTypeData(i)).Where(i => i != null)
                 );
 
-            if (this.TypeKind == TypeKind.Delegate)
+            if (TypeKind == TypeKind.Delegate)
             {
                 var invokeMethod = underlyingTypeSymbol.Methods().Single(m => m.Name == "Invoke");
-                this.DelegateParameters = new ParameterCollection(invokeMethod.Parameters, this);
-                this.DelegateReturnType = Context.GetTypeData(invokeMethod.ReturnType);
-                this.DelegateReturnTypeIsDynamic = invokeMethod.IsReturnTypeDynamic();
+                DelegateParameters = new ParameterCollection(invokeMethod.Parameters, this);
+                DelegateReturnType = Context.GetTypeData(invokeMethod.ReturnType);
+                DelegateReturnTypeIsDynamic = invokeMethod.IsReturnTypeDynamic();
             }
 
             if (!underlyingTypeSymbol.TypeParameters.IsEmpty)
             {
-                this.GenericParameters = Utilities.GetGenericParameters(underlyingTypeSymbol, this);
+                GenericParameters = Utilities.GetGenericParameters(underlyingTypeSymbol, this);
                 Debug.Assert(
-                    _constructedGenericTypes == null || _constructedGenericTypes.Values.All(c => c.GenericArguments.Count == this.GenericParameters.Count),
+                    _constructedGenericTypes == null || _constructedGenericTypes.Values.All(c => c.GenericArguments.Count == GenericParameters.Count),
                     "The type arity does not match.");
             }
             else
             {
-                this.GenericParameters = GenericTypeParameterData.EmptyList;
+                GenericParameters = GenericTypeParameterData.EmptyList;
                 Debug.Assert(_constructedGenericTypes == null, "There should be no constructed generic types.");
             }
 
-            this.NameForComparison = this.GetDisplayName(fullyQualify: true, includeGenericInfo: false);
+            NameForComparison = GetDisplayName(fullyQualify: true, includeGenericInfo: false);
 
-            Debug.Assert(_constructedGenericTypes == null || _constructedGenericTypes.Keys.All(t => t.Count == this.GenericParameters.Count), "A constructed generic has the wrong type arity.");
+            Debug.Assert(_constructedGenericTypes == null || _constructedGenericTypes.Keys.All(t => t.Count == GenericParameters.Count), "A constructed generic has the wrong type arity.");
         }
 
         #endregion // FinalizeDefinition
@@ -537,10 +559,8 @@ namespace BreakingChangesDetector.MetadataItems
         /// generic type arguments.
         /// </summary>
 #endif
-        internal ConstructedGenericTypeData GetConstructedGenericTypeData(IEnumerable<TypeData> typeArguments)
-        {
-            return this.GetConstructedGenericTypeData(new TypeDataSequence(typeArguments));
-        }
+        internal ConstructedGenericTypeData GetConstructedGenericTypeData(IEnumerable<TypeData> typeArguments) =>
+            GetConstructedGenericTypeData(new TypeDataSequence(typeArguments));
 
 #if DEBUG
         /// <summary>
@@ -550,13 +570,14 @@ namespace BreakingChangesDetector.MetadataItems
 #endif
         internal ConstructedGenericTypeData GetConstructedGenericTypeData(TypeDataSequence typeArguments)
         {
-            Debug.Assert(this.GenericParameters == null || this.GenericParameters.Count == typeArguments.Count, "The type arity does not match.");
+            Debug.Assert(GenericParameters == null || GenericParameters.Count == typeArguments.Count, "The type arity does not match.");
 
             if (_constructedGenericTypes == null)
+            {
                 _constructedGenericTypes = new Dictionary<TypeDataSequence, ConstructedGenericTypeData>();
+            }
 
-            ConstructedGenericTypeData constructedGenericType;
-            if (_constructedGenericTypes.TryGetValue(typeArguments, out constructedGenericType) == false)
+            if (_constructedGenericTypes.TryGetValue(typeArguments, out ConstructedGenericTypeData constructedGenericType) == false)
             {
                 constructedGenericType = new ConstructedGenericTypeData(this, typeArguments);
                 Debug.Assert(_constructedGenericTypes.ContainsKey(typeArguments), "The constructed generic type did not register itself.");
@@ -574,12 +595,9 @@ namespace BreakingChangesDetector.MetadataItems
         /// Indicates whether the specified type is represented by the current <see cref="TypeDefinitionData"/> instance.
         /// </summary> 
 #endif
-        internal bool IsType(Type type)
-        {
-            return
-                this.FullName == type.FullName &&
-                this.AssemblyData.Name == type.Assembly.GetName().Name;
-        }
+        internal bool IsType(Type type) =>
+            FullName == type.FullName &&
+            AssemblyData.Name == type.Assembly.GetName().Name;
 
         #endregion // IsType
 
@@ -589,7 +607,7 @@ namespace BreakingChangesDetector.MetadataItems
         {
             foreach (var member in underlyingTypeSymbol.Members())
             {
-                this.AddMember(MemberDataBase.MemberDataFromReflection(member, this));
+                AddMember(MemberDataFromReflection(member, this));
             }
         }
 
@@ -605,10 +623,12 @@ namespace BreakingChangesDetector.MetadataItems
 #endif
         internal void RegisterConstructedGenericTypeData(ConstructedGenericTypeData constructedGenericType)
         {
-            Debug.Assert(this.GenericParameters == null || this.GenericParameters.Count == constructedGenericType.GenericArguments.Count, "The type arity does not match.");
+            Debug.Assert(GenericParameters == null || GenericParameters.Count == constructedGenericType.GenericArguments.Count, "The type arity does not match.");
 
             if (_constructedGenericTypes == null)
+            {
                 _constructedGenericTypes = new Dictionary<TypeDataSequence, ConstructedGenericTypeData>();
+            }
 
             var key = new TypeDataSequence(constructedGenericType.GenericArguments);
             Debug.Assert(_constructedGenericTypes.ContainsKey(key) == false, "We should not register the same constructed generic twice.");
@@ -636,14 +656,16 @@ namespace BreakingChangesDetector.MetadataItems
         private bool IsEquivalentToNewTypeHelper(TypeDefinitionData newType, AssemblyFamily newAssemblyFamily, bool ignoreNewOptionalParameters)
         {
             if (base.IsEquivalentToNewMember(newType, newAssemblyFamily) == false)
+            {
                 return false;
+            }
 
-            var isEquivalent = this.AssemblyData.IsEquivalentToNewAssembly(newType.AssemblyData);
+            var isEquivalent = AssemblyData.IsEquivalentToNewAssembly(newType.AssemblyData);
             if (isEquivalent == false)
             {
                 foreach (var source in newType.AssemblyData.GetForwardedTypeSources(newType))
                 {
-                    if (this.AssemblyData.IsEquivalentToNewAssembly(newAssemblyFamily.GetAssembly(source)))
+                    if (AssemblyData.IsEquivalentToNewAssembly(newAssemblyFamily.GetAssembly(source)))
                     {
                         isEquivalent = true;
                         break;
@@ -651,13 +673,15 @@ namespace BreakingChangesDetector.MetadataItems
                 }
 
                 if (isEquivalent == false)
+                {
                     return false;
+                }
             }
 
             return
-                this.GenericParameters.Count == newType.GenericParameters.Count &&
-                this.TypeKind == newType.TypeKind &&
-                this.NameForComparison == newType.OldNameResolved;
+                GenericParameters.Count == newType.GenericParameters.Count &&
+                TypeKind == newType.TypeKind &&
+                NameForComparison == newType.OldNameResolved;
         }
 
         #endregion // IsEquivalentToNewTypeHelper
@@ -673,12 +697,12 @@ namespace BreakingChangesDetector.MetadataItems
         /// <summary>
         /// Gets the value indicating whether the class can be inherited by a type external to its assembly.
         /// </summary>
-        public bool CanBeInherited { get { return this.TypeDefinitionFlags.HasFlag(TypeDefinitionFlags.CanBeInherited); } }
+        public bool CanBeInherited => TypeDefinitionFlags.HasFlag(TypeDefinitionFlags.CanBeInherited);
 
         /// <summary>
         /// Gets the fully qualified name of the type.
         /// </summary>
-        public string FullName { get; private set; }
+        public string FullName { get; }
 
         /// <summary>
         /// Gets the collection of generic parameters for the type.
@@ -688,21 +712,21 @@ namespace BreakingChangesDetector.MetadataItems
         /// <summary>
         /// Gets the value indicating whether the type is an enum definition with the Flags attribute applied.
         /// </summary>
-        public bool IsFlagsEnum { get { return this.TypeDefinitionFlags.HasFlag(TypeDefinitionFlags.FlagsEnum); } }
+        public bool IsFlagsEnum => TypeDefinitionFlags.HasFlag(TypeDefinitionFlags.FlagsEnum);
 
         #endregion // Public Properties
 
         #region Internal Properties
 
-        internal bool HasPublicConstructors { get { return this.GetMembers(".ctor").Any(c => c.Accessibility == MemberAccessibility.Public); } }
+        internal bool HasPublicConstructors => GetMembers(".ctor").Any(c => c.Accessibility == MemberAccessibility.Public);
 
         internal string NameForComparison { get; private set; }
 
         internal string OldName { get; set; } // TODO_Serialize: Test and round-trip
 
-        internal string OldNameResolved { get { return this.OldName ?? this.NameForComparison; } }
+        internal string OldNameResolved => OldName ?? NameForComparison;
 
-        internal TypeDefinitionFlags TypeDefinitionFlags { get; private set; }
+        internal TypeDefinitionFlags TypeDefinitionFlags { get; }
 
         #endregion // Internal Properties
 

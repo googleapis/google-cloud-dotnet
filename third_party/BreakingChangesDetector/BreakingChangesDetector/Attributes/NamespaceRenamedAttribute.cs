@@ -24,10 +24,6 @@
 */
 
 using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
 
 namespace Infragistics // TODO: Use a more generic namespace name
 {
@@ -37,9 +33,6 @@ namespace Infragistics // TODO: Use a more generic namespace name
     [AttributeUsage(AttributeTargets.Assembly, Inherited = false, AllowMultiple = true)]
     internal sealed class NamespaceRenamedAttribute : Attribute
     {
-        private readonly string _oldName;
-        private readonly string _newName;
-
         /// <summary>
         /// Creates a new <see cref="NamespaceRenamedAttribute"/> instance.
         /// </summary>
@@ -47,24 +40,18 @@ namespace Infragistics // TODO: Use a more generic namespace name
         /// <param name="newName">The name of the namespace in the newer versions of the assembly.</param>
         public NamespaceRenamedAttribute(string oldName, string newName)
         {
-            _oldName = oldName;
-            _newName = newName;
+            OldName = oldName;
+            NewName = newName;
         }
 
         /// <summary>
         /// Gets the name of the namespace in the newer versions of the assembly.
         /// </summary>
-        public string NewName
-        {
-            get { return _newName; }
-        }
+        public string NewName { get; }
 
         /// <summary>
         /// Gets the name of the namespace in the older versions of the assembly.
         /// </summary>
-        public string OldName
-        {
-            get { return _oldName; }
-        }
+        public string OldName { get; }
     }
 }

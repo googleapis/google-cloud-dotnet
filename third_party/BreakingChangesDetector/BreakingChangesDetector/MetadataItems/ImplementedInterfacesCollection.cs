@@ -23,11 +23,8 @@
     SOFTWARE.
 */
 
-using System;
 using System.Collections.Generic;
 using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
 
 namespace BreakingChangesDetector.MetadataItems
 {
@@ -38,44 +35,29 @@ namespace BreakingChangesDetector.MetadataItems
     {
         private readonly DeclaringTypeData[] _implementedInterfaces;
 
-        internal ImplementedInterfacesCollection(IEnumerable<DeclaringTypeData> types)
-        {
+        internal ImplementedInterfacesCollection(IEnumerable<DeclaringTypeData> types) =>
             _implementedInterfaces = types.ToArray();
-        }
 
-        System.Collections.IEnumerator System.Collections.IEnumerable.GetEnumerator()
-        {
-            return _implementedInterfaces.GetEnumerator();
-        }
+        System.Collections.IEnumerator System.Collections.IEnumerable.GetEnumerator() =>
+            _implementedInterfaces.GetEnumerator();
 
         /// <summary>
         /// Gets an enumerator capable of iterating the interfaces
         /// </summary>
-        public IEnumerator<DeclaringTypeData> GetEnumerator()
-        {
-            for (int i = 0; i < _implementedInterfaces.Length; i++)
-                yield return _implementedInterfaces[i];
-        }
+        public IEnumerator<DeclaringTypeData> GetEnumerator() =>
+            ((IEnumerable<DeclaringTypeData>)_implementedInterfaces).GetEnumerator();
 
         /// <summary>
         /// Gets the number of implemented interfaces in the collection.
         /// </summary>
-        public int Count
-        {
-            get { return _implementedInterfaces.Length; }
-        }
+        public int Count => _implementedInterfaces.Length;
 
         /// <summary>
         /// Gets the implemented interface at the specified index in the collection.
         /// </summary>
-        public DeclaringTypeData this[int index]
-        {
-            get { return _implementedInterfaces[index]; }
-        }
+        public DeclaringTypeData this[int index] => _implementedInterfaces[index];
 
-        internal ImplementedInterfacesCollection ReplaceGenericTypeParameters(GenericTypeParameterCollection genericParameters, GenericTypeArgumentCollection genericArguments)
-        {
-            return new ImplementedInterfacesCollection(this.Select(im => (DeclaringTypeData)im.ReplaceGenericTypeParameters(genericParameters, genericArguments)));
-        }
+        internal ImplementedInterfacesCollection ReplaceGenericTypeParameters(GenericTypeParameterCollection genericParameters, GenericTypeArgumentCollection genericArguments) =>
+            new ImplementedInterfacesCollection(this.Select(im => (DeclaringTypeData)im.ReplaceGenericTypeParameters(genericParameters, genericArguments)));
     }
 }

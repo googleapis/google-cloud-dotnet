@@ -24,12 +24,6 @@
 */
 
 using Microsoft.CodeAnalysis;
-using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Reflection;
-using System.Text;
-using System.Threading.Tasks;
 
 namespace BreakingChangesDetector.MetadataItems
 {
@@ -43,8 +37,8 @@ namespace BreakingChangesDetector.MetadataItems
         internal PropertyData(string name, MemberAccessibility accessibility, MemberFlags memberFlags, TypeData type, bool isTypeDynamic, MemberAccessibility? getMethodAccessibility, MemberAccessibility? setMethodAccessibility)
             : base(name, accessibility, memberFlags, type, isTypeDynamic)
         {
-            this.GetMethodAccessibility = getMethodAccessibility;
-            this.SetMethodAccessibility = setMethodAccessibility;
+            GetMethodAccessibility = getMethodAccessibility;
+            SetMethodAccessibility = setMethodAccessibility;
         }
 
         internal PropertyData(IPropertySymbol propertySymbol, MemberAccessibility? getAccessibility, MemberAccessibility? setAccessibility, DeclaringTypeData declaringType)
@@ -55,8 +49,8 @@ namespace BreakingChangesDetector.MetadataItems
             Utilities.GetMemberFlags(propertySymbol.GetMethod) | Utilities.GetMemberFlags(propertySymbol.SetMethod),
             declaringType)
         {
-            this.GetMethodAccessibility = getAccessibility;
-            this.SetMethodAccessibility = setAccessibility;
+            GetMethodAccessibility = getAccessibility;
+            SetMethodAccessibility = setAccessibility;
         }
 
         #endregion // Constructor
@@ -69,10 +63,7 @@ namespace BreakingChangesDetector.MetadataItems
         /// Performs the specified visitor's functionality on this instance.
         /// </summary>
         /// <param name="visitor">The visitor whose functionality should be performed on the instance.</param>
-        public override void Accept(MetadataItemVisitor visitor)
-        {
-            visitor.VisitPropertyData(this);
-        }
+        public override void Accept(MetadataItemVisitor visitor) => visitor.VisitPropertyData(this);
 
         #endregion // Accept
 
@@ -88,27 +79,37 @@ namespace BreakingChangesDetector.MetadataItems
         internal override bool CanOverrideMember(MemberDataBase baseMember)
         {
             if (base.CanOverrideMember(baseMember) == false)
+            {
                 return false;
+            }
 
             var basePropertyData = (PropertyData)baseMember;
 
             // Overrides cannot add accessors
-            if (this.GetMethodAccessibility != null && basePropertyData.GetMethodAccessibility == null)
+            if (GetMethodAccessibility != null && basePropertyData.GetMethodAccessibility == null)
+            {
                 return false;
+            }
 
-            if (this.SetMethodAccessibility != null && basePropertyData.SetMethodAccessibility == null)
+            if (SetMethodAccessibility != null && basePropertyData.SetMethodAccessibility == null)
+            {
                 return false;
+            }
 
             // Overrides cannot change the accessibility of accessors
-            if (this.GetMethodAccessibility != null &&
+            if (GetMethodAccessibility != null &&
                 basePropertyData.GetMethodAccessibility != null &&
-                this.GetMethodAccessibility != basePropertyData.GetMethodAccessibility)
+                GetMethodAccessibility != basePropertyData.GetMethodAccessibility)
+            {
                 return false;
+            }
 
-            if (this.SetMethodAccessibility != null &&
+            if (SetMethodAccessibility != null &&
                 basePropertyData.SetMethodAccessibility != null &&
-                this.SetMethodAccessibility != basePropertyData.SetMethodAccessibility)
+                SetMethodAccessibility != basePropertyData.SetMethodAccessibility)
+            {
                 return false;
+            }
 
             return true;
         }
@@ -120,17 +121,25 @@ namespace BreakingChangesDetector.MetadataItems
         internal override bool DoesMatch(MetadataItemBase other)
         {
             if (base.DoesMatch(other) == false)
+            {
                 return false;
+            }
 
             var otherTyped = other as PropertyData;
             if (otherTyped == null)
+            {
                 return false;
+            }
 
-            if (this.GetMethodAccessibility != otherTyped.GetMethodAccessibility)
+            if (GetMethodAccessibility != otherTyped.GetMethodAccessibility)
+            {
                 return false;
+            }
 
-            if (this.SetMethodAccessibility != otherTyped.SetMethodAccessibility)
+            if (SetMethodAccessibility != otherTyped.SetMethodAccessibility)
+            {
                 return false;
+            }
 
             return true;
         }
@@ -142,10 +151,7 @@ namespace BreakingChangesDetector.MetadataItems
         /// <summary>
         /// Gets the type of item the instance represents.
         /// </summary>
-        public override MetadataItemKinds MetadataItemKind
-        {
-            get { return MetadataItemKinds.Property; }
-        }
+        public override MetadataItemKinds MetadataItemKind => MetadataItemKinds.Property;
 
         #endregion // MetadataItemKind
 
@@ -161,11 +167,13 @@ namespace BreakingChangesDetector.MetadataItems
 #endif
         internal override MemberDataBase ReplaceGenericTypeParameters(GenericTypeParameterCollection genericParameters, GenericTypeArgumentCollection genericArguments)
         {
-            var replacedType = (TypeData)this.Type.ReplaceGenericTypeParameters(genericParameters, genericArguments);
-            if (replacedType == this.Type)
+            var replacedType = (TypeData)Type.ReplaceGenericTypeParameters(genericParameters, genericArguments);
+            if (replacedType == Type)
+            {
                 return this;
+            }
 
-            return new PropertyData(this.Name, this.Accessibility, this.MemberFlags, replacedType, this.IsTypeDynamic, this.GetMethodAccessibility, this.SetMethodAccessibility);
+            return new PropertyData(Name, Accessibility, MemberFlags, replacedType, IsTypeDynamic, GetMethodAccessibility, SetMethodAccessibility);
         }
 
         #endregion // ReplaceGenericTypeParameters
@@ -179,7 +187,9 @@ namespace BreakingChangesDetector.MetadataItems
             var getAccessibility = propertySymbol.GetMethod.GetAccessibility();
             var setAccessibility = propertySymbol.SetMethod.GetAccessibility();
             if (getAccessibility == null && setAccessibility == null)
+            {
                 return null;
+            }
 
             return new PropertyData(propertySymbol, getAccessibility, setAccessibility, declaringType);
         }
@@ -191,12 +201,12 @@ namespace BreakingChangesDetector.MetadataItems
         /// <summary>
         /// Gets the accessibility of the get accessor, or null if it is not externally visible.
         /// </summary>
-        public MemberAccessibility? GetMethodAccessibility { get; private set; }
+        public MemberAccessibility? GetMethodAccessibility { get; }
 
         /// <summary>
         /// Gets the accessibility of the set accessor, or null if it is not externally visible.
         /// </summary>
-        public MemberAccessibility? SetMethodAccessibility { get; private set; }
+        public MemberAccessibility? SetMethodAccessibility { get; }
 
         #endregion // Properties
     }

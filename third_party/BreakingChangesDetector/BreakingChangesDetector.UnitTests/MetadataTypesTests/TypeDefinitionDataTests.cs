@@ -26,7 +26,6 @@
 using System;
 using Xunit;
 using BreakingChangesDetector.MetadataItems;
-using System.Collections.Generic;
 using Microsoft.CodeAnalysis;
 
 namespace BreakingChangesDetector.UnitTests.MetadataTypesTests

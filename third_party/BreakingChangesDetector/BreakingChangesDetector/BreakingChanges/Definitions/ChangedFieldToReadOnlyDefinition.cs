@@ -24,11 +24,6 @@
 */
 
 using BreakingChangesDetector.MetadataItems;
-using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
 
 namespace BreakingChangesDetector.BreakingChanges.Definitions
 {
@@ -44,17 +39,15 @@ namespace BreakingChangesDetector.BreakingChanges.Definitions
             var newField = (FieldData)context.NewItem;
 
             if (oldField.IsReadOnly == false && newField.IsReadOnly)
+            {
                 context.BreakingChanges.Add(new ChangedFieldToReadOnly(oldField, newField));
+            }
         }
 
-        public override BreakingChangeKind BreakingChangeKind
-        {
-            get { return BreakingChangeKind.ChangedFieldToReadOnly; }
-        }
+        public override BreakingChangeKind BreakingChangeKind =>
+            BreakingChangeKind.ChangedFieldToReadOnly;
 
-        public override MetadataItemKinds MembersKindsHandled
-        {
-            get { return MetadataItemKinds.Field; }
-        }
+        public override MetadataItemKinds MembersKindsHandled =>
+            MetadataItemKinds.Field;
     }
 }

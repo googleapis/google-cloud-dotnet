@@ -24,19 +24,15 @@
 */
 
 using BreakingChangesDetector.MetadataItems;
-using System;
-using System.Collections.Generic;
-using System.Diagnostics;
 using System.Linq;
 using System.Reflection;
-using System.Text;
-using System.Threading.Tasks;
 
 namespace BreakingChangesDetector.BreakingChanges.Definitions
 {
     internal class ChangedGenericTypeParameterConstraintsDefinition : BreakingChangeDefinitionBase
     {
-        public static readonly ChangedGenericTypeParameterConstraintsDefinition Instance = new ChangedGenericTypeParameterConstraintsDefinition();
+        public static readonly ChangedGenericTypeParameterConstraintsDefinition Instance =
+            new ChangedGenericTypeParameterConstraintsDefinition();
 
         private ChangedGenericTypeParameterConstraintsDefinition() { }
 
@@ -74,17 +70,15 @@ namespace BreakingChangesDetector.BreakingChanges.Definitions
             }
 
             if (haveConstraintsChanged)
+            {
                 context.BreakingChanges.Add(new ChangedGenericTypeParameterConstraints(oldGenericParameter, newGenericParameter));
+            }
         }
 
-        public override BreakingChangeKind BreakingChangeKind
-        {
-            get { return BreakingChangeKind.ChangedGenericTypeParameterConstraints; }
-        }
+        public override BreakingChangeKind BreakingChangeKind =>
+            BreakingChangeKind.ChangedGenericTypeParameterConstraints;
 
-        public override MetadataItemKinds MembersKindsHandled
-        {
-            get { return MetadataItemKinds.GenericTypeParameter; }
-        }
+        public override MetadataItemKinds MembersKindsHandled =>
+            MetadataItemKinds.GenericTypeParameter;
     }
 }

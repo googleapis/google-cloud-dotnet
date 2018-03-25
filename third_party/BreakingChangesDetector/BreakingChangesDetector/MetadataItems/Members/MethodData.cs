@@ -24,13 +24,6 @@
 */
 
 using Microsoft.CodeAnalysis;
-using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Reflection;
-using System.Runtime.CompilerServices;
-using System.Text;
-using System.Threading.Tasks;
 
 namespace BreakingChangesDetector.MetadataItems
 {
@@ -44,8 +37,8 @@ namespace BreakingChangesDetector.MetadataItems
         internal MethodData(string name, MemberAccessibility accessibility, MemberFlags memberFlags, TypeData type, bool isTypeDynamic, GenericTypeParameterCollection genericParameters, bool isExtensionMethod, ParameterCollection parameters)
             : base(name, accessibility, memberFlags, type, isTypeDynamic, parameters)
         {
-            this.GenericParameters = genericParameters;
-            this.IsExtensionMethod = isExtensionMethod;
+            GenericParameters = genericParameters;
+            IsExtensionMethod = isExtensionMethod;
         }
 
         private MethodData(IMethodSymbol methodSymbol, MemberAccessibility accessibility, DeclaringTypeData declaringType)
@@ -60,14 +53,14 @@ namespace BreakingChangesDetector.MetadataItems
                     declaringMember = this;
                 }
 
-                this.GenericParameters = Utilities.GetGenericParameters(methodSymbol.TypeParameters, declaringMember);
+                GenericParameters = Utilities.GetGenericParameters(methodSymbol.TypeParameters, declaringMember);
             }
             else
             {
-                this.GenericParameters = GenericTypeParameterData.EmptyList;
+                GenericParameters = GenericTypeParameterData.EmptyList;
             }
 
-            this.IsExtensionMethod = methodSymbol.IsExtensionMethod;
+            IsExtensionMethod = methodSymbol.IsExtensionMethod;
         }
 
         #endregion // Constructor
@@ -80,10 +73,7 @@ namespace BreakingChangesDetector.MetadataItems
         /// Performs the specified visitor's functionality on this instance.
         /// </summary>
         /// <param name="visitor">The visitor whose functionality should be performed on the instance.</param>
-        public override void Accept(MetadataItemVisitor visitor)
-        {
-            visitor.VisitMethodData(this);
-        }
+        public override void Accept(MetadataItemVisitor visitor) => visitor.VisitMethodData(this);
 
         #endregion // Accept
 
@@ -99,10 +89,12 @@ namespace BreakingChangesDetector.MetadataItems
         internal override bool CanOverrideMember(MemberDataBase baseMember)
         {
             if (base.CanOverrideMember(baseMember) == false)
+            {
                 return false;
+            }
 
             var otherMethod = (MethodData)baseMember;
-            return this.GenericParameters.Count == otherMethod.GenericParameters.Count;
+            return GenericParameters.Count == otherMethod.GenericParameters.Count;
         }
 
         #endregion // CanOverrideMember
@@ -112,16 +104,10 @@ namespace BreakingChangesDetector.MetadataItems
         /// <summary>
         /// Gets the name to use for this item in messages.
         /// </summary>
-        public override string DisplayName
-        {
-            get
-            {
-                return
-                    this.Name +
-                    this.GenericParameters.GetParameterListText() +
-                    this.Parameters.GetParameterListDisplayText(this.IsExtensionMethod);
-            }
-        }
+        public override string DisplayName =>
+            Name +
+            GenericParameters.GetParameterListText() +
+            Parameters.GetParameterListDisplayText(IsExtensionMethod);
 
         #endregion // DisplayName
 
@@ -130,17 +116,25 @@ namespace BreakingChangesDetector.MetadataItems
         internal override bool DoesMatch(MetadataItemBase other)
         {
             if (base.DoesMatch(other) == false)
+            {
                 return false;
+            }
 
             var otherTyped = other as MethodData;
             if (otherTyped == null)
+            {
                 return false;
+            }
 
-            if (this.GenericParameters.DoesMatch(otherTyped.GenericParameters) == false)
+            if (GenericParameters.DoesMatch(otherTyped.GenericParameters) == false)
+            {
                 return false;
+            }
 
-            if (this.IsExtensionMethod != otherTyped.IsExtensionMethod)
+            if (IsExtensionMethod != otherTyped.IsExtensionMethod)
+            {
                 return false;
+            }
 
             return true;
         }
@@ -157,10 +151,12 @@ namespace BreakingChangesDetector.MetadataItems
         internal override bool IsEquivalentToNewMember(MemberDataBase newMember, AssemblyFamily newAssemblyFamily)
         {
             if (base.IsEquivalentToNewMember(newMember, newAssemblyFamily) == false)
+            {
                 return false;
+            }
 
             var otherMethod = (MethodData)newMember;
-            return this.GenericParameters.Count == otherMethod.GenericParameters.Count;
+            return GenericParameters.Count == otherMethod.GenericParameters.Count;
         }
 
         #endregion // IsEquivalentToNewMember
@@ -170,10 +166,7 @@ namespace BreakingChangesDetector.MetadataItems
         /// <summary>
         /// Gets the type of item the instance represents.
         /// </summary>
-        public override MetadataItemKinds MetadataItemKind
-        {
-            get { return MetadataItemKinds.Method; }
-        }
+        public override MetadataItemKinds MetadataItemKind => MetadataItemKinds.Method;
 
         #endregion // MetadataItemKind
 
@@ -189,15 +182,15 @@ namespace BreakingChangesDetector.MetadataItems
 #endif
         internal override MemberDataBase ReplaceGenericTypeParameters(GenericTypeParameterCollection genericParameters, GenericTypeArgumentCollection genericArguments)
         {
-            var replacedType = (TypeData)this.Type.ReplaceGenericTypeParameters(genericParameters, genericArguments);
-            var replacedParameters = this.Parameters.ReplaceGenericTypeParameters(this.MetadataItemKind, genericParameters, genericArguments);
-            if (replacedType == this.Type &&
-                replacedParameters == this.Parameters)
+            var replacedType = (TypeData)Type.ReplaceGenericTypeParameters(genericParameters, genericArguments);
+            var replacedParameters = Parameters.ReplaceGenericTypeParameters(MetadataItemKind, genericParameters, genericArguments);
+            if (replacedType == Type &&
+                replacedParameters == Parameters)
             {
                 return this;
             }
 
-            return new MethodData(this.Name, this.Accessibility, this.MemberFlags, replacedType, this.IsTypeDynamic, this.GenericParameters, this.IsExtensionMethod, replacedParameters);
+            return new MethodData(Name, Accessibility, MemberFlags, replacedType, IsTypeDynamic, GenericParameters, IsExtensionMethod, replacedParameters);
         }
 
         #endregion // ReplaceGenericTypeParameters
@@ -210,7 +203,9 @@ namespace BreakingChangesDetector.MetadataItems
         {
             var accessibility = methodSymbol.GetAccessibility();
             if (accessibility == null)
+            {
                 return null;
+            }
 
             return new MethodData(methodSymbol, accessibility.Value, declaringType);
         }
@@ -222,12 +217,12 @@ namespace BreakingChangesDetector.MetadataItems
         /// <summary>
         /// Gets the collection of generic parameters for the method.
         /// </summary>
-        public GenericTypeParameterCollection GenericParameters { get; private set; }
+        public GenericTypeParameterCollection GenericParameters { get; }
 
         /// <summary>
         /// Gets the value indicating whether the method is an extension method.
         /// </summary>
-        public bool IsExtensionMethod { get; private set; }
+        public bool IsExtensionMethod { get; }
 
         #endregion // Properties
     }

@@ -24,13 +24,10 @@
 */
 
 using Microsoft.CodeAnalysis;
-using System;
 using System.Collections.Generic;
 using System.Diagnostics;
 using System.Linq;
 using System.Reflection;
-using System.Text;
-using System.Threading.Tasks;
 
 namespace BreakingChangesDetector.MetadataItems
 {
@@ -56,7 +53,6 @@ namespace BreakingChangesDetector.MetadataItems
 
         #region Member Variables
 
-        private readonly AssemblyData _assembly;
         private bool _isInIsEquivalentToNewMember;
 
         #endregion // Member Variables
@@ -66,16 +62,15 @@ namespace BreakingChangesDetector.MetadataItems
         internal GenericTypeParameterData(string name, MemberAccessibility accessibility, MemberFlags memberFlags, TypeKind typeKind, AssemblyData assembly, System.Reflection.GenericParameterAttributes genericParameterAttributes, int genericParameterPosition)
             : base(name, accessibility, memberFlags, typeKind)
         {
-            _assembly = assembly;
-            this.Constraints = new List<TypeData>();
-            this.GenericParameterAttributes = genericParameterAttributes;
-            this.GenericParameterPosition = genericParameterPosition;
+            AssemblyData = assembly;
+            GenericParameterAttributes = genericParameterAttributes;
+            GenericParameterPosition = genericParameterPosition;
         }
 
         internal GenericTypeParameterData(ITypeParameterSymbol typeParameterSymbol, AssemblyData assembly)
             : base(typeParameterSymbol, MemberAccessibility.Public, declaringType: null)
         {
-            _assembly = assembly;
+            AssemblyData = assembly;
 
             // TODO_Refactor: should we expose this info as 4 properties now, like Roslyn?
             switch (typeParameterSymbol.Variance)
@@ -101,8 +96,7 @@ namespace BreakingChangesDetector.MetadataItems
                 GenericParameterAttributes |= GenericParameterAttributes.DefaultConstructorConstraint;
             }
 
-            this.GenericParameterPosition = typeParameterSymbol.Ordinal;
-            this.Constraints = new List<TypeData>();
+            GenericParameterPosition = typeParameterSymbol.Ordinal;
         }
 
         #endregion // Constructors
@@ -115,10 +109,7 @@ namespace BreakingChangesDetector.MetadataItems
         /// Performs the specified visitor's functionality on this instance.
         /// </summary>
         /// <param name="visitor">The visitor whose functionality should be performed on the instance.</param>
-        public override void Accept(MetadataItemVisitor visitor)
-        {
-            visitor.VisitGenericTypeParameterData(this);
-        }
+        public override void Accept(MetadataItemVisitor visitor) => visitor.VisitGenericTypeParameterData(this);
 
         #endregion // Accept
 
@@ -127,10 +118,7 @@ namespace BreakingChangesDetector.MetadataItems
         /// <summary>
         /// Gets the <see cref="T:AssemblyData"/> representing the assembly in which the type is defined.
         /// </summary>
-        public override AssemblyData AssemblyData
-        {
-            get { return _assembly; }
-        }
+        public override AssemblyData AssemblyData { get; }
 
         #endregion // AssemblyData
 
@@ -139,29 +127,43 @@ namespace BreakingChangesDetector.MetadataItems
         internal override bool DoesMatch(MetadataItemBase other)
         {
             if (base.DoesMatch(other) == false)
+            {
                 return false;
+            }
 
             var otherTyped = other as GenericTypeParameterData;
             if (otherTyped == null)
-                return false;
-
-            if (this.Constraints.Count != otherTyped.Constraints.Count)
-                return false;
-
-            for (int i = 0; i < this.Constraints.Count; i++)
             {
-                if (this.Constraints[i].DisplayName != otherTyped.Constraints[i].DisplayName)
-                    return false;
+                return false;
             }
 
-            if (this.GenericDeclaringMember.DisplayName != otherTyped.GenericDeclaringMember.DisplayName)
+            if (Constraints.Count != otherTyped.Constraints.Count)
+            {
                 return false;
+            }
 
-            if (this.GenericParameterAttributes != otherTyped.GenericParameterAttributes)
-                return false;
+            for (int i = 0; i < Constraints.Count; i++)
+            {
+                if (Constraints[i].DisplayName != otherTyped.Constraints[i].DisplayName)
+                {
+                    return false;
+                }
+            }
 
-            if (this.GenericParameterPosition != otherTyped.GenericParameterPosition)
+            if (GenericDeclaringMember.DisplayName != otherTyped.GenericDeclaringMember.DisplayName)
+            {
                 return false;
+            }
+
+            if (GenericParameterAttributes != otherTyped.GenericParameterAttributes)
+            {
+                return false;
+            }
+
+            if (GenericParameterPosition != otherTyped.GenericParameterPosition)
+            {
+                return false;
+            }
 
             return true;
         }
@@ -184,16 +186,22 @@ namespace BreakingChangesDetector.MetadataItems
 #endif
         internal override IEnumerable<TypeData> GetDirectImplicitConversions(bool onlyReferenceAndIdentityConversions)
         {
-            if (onlyReferenceAndIdentityConversions && this.IsValueType)
+            if (onlyReferenceAndIdentityConversions && IsValueType)
+            {
                 yield break;
+            }
 
-            foreach (var constraint in this.Constraints)
+            foreach (var constraint in Constraints)
+            {
                 yield return constraint;
+            }
 
             // Any generic type parameter can convert to object
-            var mscorlibData = this.AssemblyData.GetReferencedAssembly(Utilities.CommonObjectRuntimeAssemblyName);
+            var mscorlibData = AssemblyData.GetReferencedAssembly(Utilities.CommonObjectRuntimeAssemblyName);
             if (mscorlibData != null)
+            {
                 yield return mscorlibData.GetTypeDefinitionData(Utilities.ObjectTypeName);
+            }
         }
 
         #endregion // GetDirectImplicitConversions
@@ -206,10 +214,7 @@ namespace BreakingChangesDetector.MetadataItems
         /// <param name="fullyQualify">Indicates whether the type name should be fully qualified with declaring type and namespace names.</param>
         /// <param name="includeGenericInfo">Indicates whether generic parameters and arguments should be included in type names.</param>
         /// <returns>The display name of the type.</returns>
-        public override string GetDisplayName(bool fullyQualify = true, bool includeGenericInfo = true)
-        {
-            return this.Name;
-        }
+        public override string GetDisplayName(bool fullyQualify = true, bool includeGenericInfo = true) => Name;
 
         #endregion // GetDisplayName
 
@@ -223,38 +228,43 @@ namespace BreakingChangesDetector.MetadataItems
 #endif
         internal override TypeData GetEquivalentNewType(AssemblyFamily newAssemblyFamily)
         {
-            var declaringGenericType = this.GenericDeclaringMember as TypeDefinitionData;
-            if (declaringGenericType != null)
+            if (GenericDeclaringMember is TypeDefinitionData declaringGenericType)
             {
-                Debug.Assert(this == declaringGenericType.GenericParameters[this.GenericParameterPosition], "This type should be the generic parameter at its position in the declaring type.");
+                Debug.Assert(this == declaringGenericType.GenericParameters[GenericParameterPosition], "This type should be the generic parameter at its position in the declaring type.");
 
                 var newGenericType = (TypeDefinitionData)declaringGenericType.GetEquivalentNewType(newAssemblyFamily);
-                if (newGenericType == null || newGenericType.GenericParameters.Count <= this.GenericParameterPosition)
+                if (newGenericType == null || newGenericType.GenericParameters.Count <= GenericParameterPosition)
+                {
                     return null;
+                }
 
-                return newGenericType.GenericParameters[this.GenericParameterPosition];
+                return newGenericType.GenericParameters[GenericParameterPosition];
             }
 
-            var declaringGenericMethod = this.GenericDeclaringMember as MethodData;
-            if (declaringGenericMethod != null)
+            if (GenericDeclaringMember is MethodData declaringGenericMethod)
             {
-                Debug.Assert(this == declaringGenericMethod.GenericParameters[this.GenericParameterPosition], "This type should be the generic parameter at its position in the declaring method.");
+                Debug.Assert(this == declaringGenericMethod.GenericParameters[GenericParameterPosition], "This type should be the generic parameter at its position in the declaring method.");
 
                 var newDeclaringType = (DeclaringTypeData)declaringGenericMethod.ContainingType.GetEquivalentNewType(newAssemblyFamily);
                 if (newDeclaringType == null)
+                {
                     return null;
+                }
 
                 var matchingMethods = newDeclaringType.GetMembers(declaringGenericMethod.Name).OfType<MethodData>().Where(m => declaringGenericMethod.IsEquivalentToNewMember(m, newAssemblyFamily)).ToList();
                 if (matchingMethods.Count == 0)
+                {
                     return null;
+                }
 
                 Debug.Assert(matchingMethods.Count == 1, "There should only be one matching method.");
                 var newGenericMethod = matchingMethods[0];
-                if (newGenericMethod.GenericParameters.Count <= this.GenericParameterPosition)
+                if (newGenericMethod.GenericParameters.Count <= GenericParameterPosition)
+                {
                     return null;
+                }
 
-
-                return newGenericMethod.GenericParameters[this.GenericParameterPosition];
+                return newGenericMethod.GenericParameters[GenericParameterPosition];
             }
 
             Debug.Fail("Unknown owner of the generic parameter");
@@ -268,13 +278,17 @@ namespace BreakingChangesDetector.MetadataItems
         internal override bool IsEquivalentToNewMember(MemberDataBase newMember, AssemblyFamily newAssemblyFamily)
         {
             if (base.IsEquivalentToNewMember(newMember, newAssemblyFamily) == false)
+            {
                 return false;
+            }
 
             var newGenericParameter = (GenericTypeParameterData)newMember;
-            if (this.GenericParameterPosition != newGenericParameter.GenericParameterPosition)
+            if (GenericParameterPosition != newGenericParameter.GenericParameterPosition)
+            {
                 return false;
+            }
 
-            if (this.GenericDeclaringMember.MetadataItemKind == MetadataItemKinds.Method &&
+            if (GenericDeclaringMember.MetadataItemKind == MetadataItemKinds.Method &&
                 newGenericParameter.GenericDeclaringMember.MetadataItemKind == MetadataItemKinds.Method)
             {
                 // We will get in here recursively for generic methods that take one of their own generic parameters as a parameter
@@ -283,12 +297,14 @@ namespace BreakingChangesDetector.MetadataItems
                 // otherwise equal, so are these parameters because they came from the same method and had the same position. 
                 // If the methods are not, neither are the parameters.
                 if (_isInIsEquivalentToNewMember)
+                {
                     return true;
+                }
 
                 try
                 {
                     _isInIsEquivalentToNewMember = true;
-                    return this.GenericDeclaringMember.IsEquivalentToNewMember(newGenericParameter.GenericDeclaringMember, newAssemblyFamily);
+                    return GenericDeclaringMember.IsEquivalentToNewMember(newGenericParameter.GenericDeclaringMember, newAssemblyFamily);
                 }
                 finally
                 {
@@ -296,7 +312,7 @@ namespace BreakingChangesDetector.MetadataItems
                 }
             }
 
-            return this.GenericDeclaringMember.IsEquivalentToNewMember(newGenericParameter.GenericDeclaringMember, newAssemblyFamily);
+            return GenericDeclaringMember.IsEquivalentToNewMember(newGenericParameter.GenericDeclaringMember, newAssemblyFamily);
         }
 
         #endregion // IsEquivalentToNewMember
@@ -306,10 +322,7 @@ namespace BreakingChangesDetector.MetadataItems
         /// <summary>
         /// Gets the type of item the instance represents.
         /// </summary>
-        public override MetadataItemKinds MetadataItemKind
-        {
-            get { return MetadataItemKinds.GenericTypeParameter; }
-        }
+        public override MetadataItemKinds MetadataItemKind => MetadataItemKinds.GenericTypeParameter;
 
         #endregion // MetadataItemKind
 
@@ -358,7 +371,7 @@ namespace BreakingChangesDetector.MetadataItems
         {
             foreach (var type in underlyingTypeSymbol.ConstraintTypes)
             {
-                this.Constraints.Add(Context.GetTypeData(type));
+                Constraints.Add(Context.GetTypeData(type));
             }
         }
 
@@ -373,20 +386,20 @@ namespace BreakingChangesDetector.MetadataItems
 #endif
         internal string GetParameterListDisplayText()
         {
-            switch (this.GenericParameterAttributes & System.Reflection.GenericParameterAttributes.VarianceMask)
+            switch (GenericParameterAttributes & GenericParameterAttributes.VarianceMask)
             {
-                case System.Reflection.GenericParameterAttributes.None:
-                    return this.Name;
+                case GenericParameterAttributes.None:
+                    return Name;
 
-                case System.Reflection.GenericParameterAttributes.Covariant:
-                    return GenericTypeParameterData.OutVarianceModifier + this.Name;
+                case GenericParameterAttributes.Covariant:
+                    return OutVarianceModifier + Name;
 
-                case System.Reflection.GenericParameterAttributes.Contravariant:
-                    return GenericTypeParameterData.InVarianceModifier + this.Name;
+                case GenericParameterAttributes.Contravariant:
+                    return InVarianceModifier + Name;
 
                 default:
-                    Debug.Fail("Unknown GenericParameterAttributes: " + this.GenericParameterAttributes);
-                    return this.Name;
+                    Debug.Fail("Unknown GenericParameterAttributes: " + GenericParameterAttributes);
+                    return Name;
             }
         }
 
@@ -405,16 +418,16 @@ namespace BreakingChangesDetector.MetadataItems
 #endif
         internal bool IsGenericTypeArgumentVariant(TypeData targetArgument, TypeData sourceArgument, IsAssignableFromContext context)
         {
-            var variance = this.GenericParameterAttributes & System.Reflection.GenericParameterAttributes.VarianceMask;
+            var variance = GenericParameterAttributes & GenericParameterAttributes.VarianceMask;
             switch (variance)
             {
-                case System.Reflection.GenericParameterAttributes.None:
+                case GenericParameterAttributes.None:
                     return targetArgument.IsEquivalentTo(sourceArgument, context.NewAssemblyFamily, context.IsSourceTypeOld);
 
-                case System.Reflection.GenericParameterAttributes.Contravariant:
+                case GenericParameterAttributes.Contravariant:
                     return sourceArgument.IsAssignableFrom(targetArgument, new IsAssignableFromContext(context.NewAssemblyFamily, context.IsSourceTypeOld, onlyReferenceAndIdentityConversions: true));
 
-                case System.Reflection.GenericParameterAttributes.Covariant:
+                case GenericParameterAttributes.Covariant:
                     return targetArgument.IsAssignableFrom(sourceArgument, new IsAssignableFromContext(context.NewAssemblyFamily, context.IsSourceTypeOld, onlyReferenceAndIdentityConversions: true));
 
                 default:
@@ -434,7 +447,7 @@ namespace BreakingChangesDetector.MetadataItems
         /// <summary>
         /// Gets the set of constraints imposed on the generic type parameter.
         /// </summary>
-        public List<TypeData> Constraints { get; private set; }
+        public List<TypeData> Constraints { get; } = new List<TypeData>();
 
         /// <summary>
         /// Gets the method or delegate which defines the generic type parameter.
@@ -444,12 +457,12 @@ namespace BreakingChangesDetector.MetadataItems
         /// <summary>
         /// Gets the attributes (variance and additional constraints) of the generic type parameter.
         /// </summary>
-        public System.Reflection.GenericParameterAttributes GenericParameterAttributes { get; private set; }
+        public System.Reflection.GenericParameterAttributes GenericParameterAttributes { get; }
 
         /// <summary>
         /// Gets the 0-based position of the parameter in the declaring type's generic type parameter list.
         /// </summary>
-        public int GenericParameterPosition { get; private set; }
+        public int GenericParameterPosition { get; }
 
         #endregion // Properties
     }

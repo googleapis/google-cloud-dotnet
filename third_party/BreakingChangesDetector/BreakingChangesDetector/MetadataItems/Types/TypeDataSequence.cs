@@ -50,53 +50,43 @@ namespace BreakingChangesDetector.MetadataItems
         public TypeDataSequence(IEnumerable<TypeData> types)
             : this(types.ToArray()) { }
 
-        public override bool Equals(object obj)
-        {
-            var other = obj as TypeDataSequence;
-            return other != null && this.Equals(other);
-        }
+        public override bool Equals(object obj) => obj is TypeDataSequence other && Equals(other);
 
         public override int GetHashCode()
         {
             int hashCode = 0;
             for (int i = 0; i < _types.Length; i++)
+            {
                 hashCode ^= (_types[i].GetHashCode() << (i % 16));
+            }
 
             return hashCode;
         }
 
-        public override string ToString()
-        {
-            return string.Join<TypeData>(", ", _types);
-        }
+        public override string ToString() => string.Join<TypeData>(", ", _types);
 
         public bool Equals(TypeDataSequence other)
         {
             if (_types.Length != other._types.Length)
+            {
                 return false;
+            }
 
             for (int i = 0; i < _types.Length; i++)
             {
                 if (_types[i] != other._types[i])
+                {
                     return false;
+                }
             }
 
             return true;
         }
 
-        public int Count
-        {
-            get { return _types.Length; }
-        }
+        public int Count => _types.Length;
 
-        public IEnumerator<TypeData> GetEnumerator()
-        {
-            return ((IEnumerable<TypeData>)_types).GetEnumerator();
-        }
+        public IEnumerator<TypeData> GetEnumerator() => ((IEnumerable<TypeData>)_types).GetEnumerator();
 
-        System.Collections.IEnumerator System.Collections.IEnumerable.GetEnumerator()
-        {
-            return _types.GetEnumerator();
-        }
+        System.Collections.IEnumerator System.Collections.IEnumerable.GetEnumerator() => _types.GetEnumerator();
     }
 }

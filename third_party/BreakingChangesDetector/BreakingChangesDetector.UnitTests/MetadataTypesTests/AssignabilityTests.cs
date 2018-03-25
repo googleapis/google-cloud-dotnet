@@ -26,7 +26,6 @@
 using System;
 using System.Linq;
 using Xunit;
-using BreakingChangesDetector.MetadataItems;
 using System.Collections;
 using System.Collections.Generic;
 
@@ -621,7 +620,9 @@ namespace BreakingChangesDetector.UnitTests.MetadataTypesTests
                 select new { a, b };
 
             foreach (var pair in pairs)
+            {
                 TestAssignability(pair.a, pair.b, context);
+            }
         }
 
         private static void TestAssignability<A, B>()
@@ -635,17 +636,27 @@ namespace BreakingChangesDetector.UnitTests.MetadataTypesTests
             var bData = b.IsGenericParameter ? context.GetGenericTypeParameterData(b) : context.GetTypeData(b);
 
             if (aData == null || bData == null)
+            {
                 AssertX.Inconclusive("Unable to get one of the types");
+            }
 
             if (a.IsImplicitlyAssignableFrom(b))
+            {
                 Assert.True(aData.IsAssignableFromNew(bData), string.Format("The type should be assignable: {0} <- {1}", aData.Name, bData.Name));
+            }
             else
+            {
                 Assert.False(aData.IsAssignableFromNew(bData), string.Format("The type should not be assignable: {0} <- {1}", aData.Name, bData.Name));
+            }
 
             if (b.IsImplicitlyAssignableFrom(a))
+            {
                 Assert.True(bData.IsAssignableFromNew(aData), string.Format("The type should be assignable: {0} <- {1}", bData.Name, aData.Name));
+            }
             else
+            {
                 Assert.False(bData.IsAssignableFromNew(aData), string.Format("The type should not be assignable: {0} <- {1}", bData.Name, aData.Name));
+            }
         }
     }
 }

@@ -24,18 +24,14 @@
 */
 
 using BreakingChangesDetector.MetadataItems;
-using System;
-using System.Collections.Generic;
-using System.Linq;
 using System.Reflection;
-using System.Text;
-using System.Threading.Tasks;
 
 namespace BreakingChangesDetector.BreakingChanges.Definitions
 {
     internal class ChangedGenericTypeParameterVarianceDefinition : BreakingChangeDefinitionBase
     {
-        public static readonly ChangedGenericTypeParameterVarianceDefinition Instance = new ChangedGenericTypeParameterVarianceDefinition();
+        public static readonly ChangedGenericTypeParameterVarianceDefinition Instance =
+            new ChangedGenericTypeParameterVarianceDefinition();
 
         private ChangedGenericTypeParameterVarianceDefinition() { }
 
@@ -48,17 +44,15 @@ namespace BreakingChangesDetector.BreakingChanges.Definitions
             var newVarianceAttributes = newGenericParameter.GenericParameterAttributes & GenericParameterAttributes.VarianceMask;
 
             if (oldVarianceAttributes != GenericParameterAttributes.None && oldVarianceAttributes != newVarianceAttributes)
+            {
                 context.BreakingChanges.Add(new ChangedGenericTypeParameterVariance(oldGenericParameter, newGenericParameter));
+            }
         }
 
-        public override BreakingChangeKind BreakingChangeKind
-        {
-            get { return BreakingChangeKind.ChangedGenericTypeParameterVariance; }
-        }
+        public override BreakingChangeKind BreakingChangeKind =>
+            BreakingChangeKind.ChangedGenericTypeParameterVariance;
 
-        public override MetadataItemKinds MembersKindsHandled
-        {
-            get { return MetadataItemKinds.GenericTypeParameter; }
-        }
+        public override MetadataItemKinds MembersKindsHandled =>
+            MetadataItemKinds.GenericTypeParameter;
     }
 }

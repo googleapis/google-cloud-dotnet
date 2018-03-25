@@ -25,7 +25,6 @@
 
 using System;
 using Xunit;
-using BreakingChangesDetector.MetadataItems;
 
 namespace BreakingChangesDetector.UnitTests.MetadataTypesTests
 {

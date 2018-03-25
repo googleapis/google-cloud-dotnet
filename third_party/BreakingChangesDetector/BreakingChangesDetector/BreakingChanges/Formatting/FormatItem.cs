@@ -25,12 +25,7 @@
 
 using BreakingChangesDetector.MetadataItems;
 using Microsoft.CodeAnalysis;
-using System;
-using System.Collections.Generic;
 using System.Diagnostics;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
 
 namespace BreakingChangesDetector.BreakingChanges.Formatting
 {
@@ -43,8 +38,8 @@ namespace BreakingChangesDetector.BreakingChanges.Formatting
 
         private FormatItem(string text, StyleFlags style)
         {
-            this.Style = style;
-            this.Text = text;
+            Style = style;
+            Text = text;
         }
 
         #endregion // Constructor
@@ -54,10 +49,7 @@ namespace BreakingChangesDetector.BreakingChanges.Formatting
         /// <summary>
         /// Gets the string representation of the <see cref="FormatItem"/>.
         /// </summary>
-        public override string ToString()
-        {
-            return this.Text;
-        }
+        public override string ToString() => Text;
 
         #endregion // Base Class Overrides
 
@@ -68,74 +60,56 @@ namespace BreakingChangesDetector.BreakingChanges.Formatting
         /// <summary>
         /// Creates a <see cref="FormatItem"/> to represent the display name of an <see cref="AssemblyData"/> with the specified formatting.
         /// </summary>
-        public static FormatItem AssemblyName(AssemblyData assembly, StyleFlags style = StyleFlags.Normal)
-        {
-            return new FormatItem(assembly.DisplayName, style);
-        }
+        public static FormatItem AssemblyName(AssemblyData assembly, StyleFlags style = StyleFlags.Normal) =>
+            new FormatItem(assembly.DisplayName, style);
 
         /// <summary>
         /// Creates a <see cref="FormatItem"/> to represent the default value of a <see cref="ParameterData"/> with the specified formatting.
         /// </summary>
-        public static FormatItem DefaultParameterValue(ParameterData parameter, StyleFlags style = StyleFlags.Normal)
-        {
-            return new FormatItem(parameter.GetDefaultValueDisplayText(), style);
-        }
+        public static FormatItem DefaultParameterValue(ParameterData parameter, StyleFlags style = StyleFlags.Normal) =>
+            new FormatItem(parameter.GetDefaultValueDisplayText(), style);
 
         /// <summary>
         /// Creates a <see cref="FormatItem"/> to represent the C# name of a <see cref="MemberDataBase"/> with the specified formatting.
         /// </summary>
-        public static FormatItem MemberKind(MemberDataBase member, StyleFlags style = StyleFlags.Normal)
-        {
-            return new FormatItem(GetItemDescription(member), style);
-        }
+        public static FormatItem MemberKind(MemberDataBase member, StyleFlags style = StyleFlags.Normal) =>
+            new FormatItem(GetItemDescription(member), style);
 
         /// <summary>
         /// Creates a <see cref="FormatItem"/> to represent the full name of a <see cref="MemberDataBase"/> with the specified formatting.
         /// </summary>
-        public static FormatItem MemberName(MemberDataBase member, StyleFlags style = StyleFlags.Normal)
-        {
-            return new FormatItem(GetFullMemberName(member), style);
-        }
+        public static FormatItem MemberName(MemberDataBase member, StyleFlags style = StyleFlags.Normal) =>
+            new FormatItem(GetFullMemberName(member), style);
 
         /// <summary>
         /// Creates a <see cref="FormatItem"/> to represent the full name of an entity with parameters with the specified formatting.
         /// </summary>
-        public static FormatItem ParameterizedItemName(IParameterizedItem item, StyleFlags style = StyleFlags.Normal)
-        {
-            return new FormatItem(GetFullMemberName((MemberDataBase)item), style);
-        }
+        public static FormatItem ParameterizedItemName(IParameterizedItem item, StyleFlags style = StyleFlags.Normal) =>
+            new FormatItem(GetFullMemberName((MemberDataBase)item), style);
 
         /// <summary>
         /// Creates a <see cref="FormatItem"/> to represent the name of a <see cref="ParameterData"/> with the specified formatting.
         /// </summary>
-        public static FormatItem ParameterName(ParameterData parameter, StyleFlags style = StyleFlags.Normal)
-        {
-            return new FormatItem(parameter.DisplayName, style);
-        }
+        public static FormatItem ParameterName(ParameterData parameter, StyleFlags style = StyleFlags.Normal) =>
+            new FormatItem(parameter.DisplayName, style);
 
         /// <summary>
         /// Creates a <see cref="FormatItem"/> to represent the C# name of a typed item with the specified formatting.
         /// </summary>
-        public static FormatItem TypedItemKind(ITypedItem item, StyleFlags style = StyleFlags.Normal)
-        {
-            return new FormatItem(GetItemDescription((MetadataItemBase)item), style);
-        }
+        public static FormatItem TypedItemKind(ITypedItem item, StyleFlags style = StyleFlags.Normal) =>
+            new FormatItem(GetItemDescription((MetadataItemBase)item), style);
 
         /// <summary>
         /// Creates a <see cref="FormatItem"/> to represent the full name of a typed item with the specified formatting.
         /// </summary>
-        public static FormatItem TypedItemName(ITypedItem item, StyleFlags style = StyleFlags.Normal)
-        {
-            return new FormatItem(GetFullMemberName((MemberDataBase)item), style);
-        }
+        public static FormatItem TypedItemName(ITypedItem item, StyleFlags style = StyleFlags.Normal) =>
+            new FormatItem(GetFullMemberName((MemberDataBase)item), style);
 
         /// <summary>
         /// Creates a <see cref="FormatItem"/> to represent the type name of a typed item with the specified formatting.
         /// </summary>
-        public static FormatItem TypedItemTypeName(ITypedItem item, StyleFlags style = StyleFlags.Normal)
-        {
-            return new FormatItem(GetTypeDisplayName(item), style);
-        }
+        public static FormatItem TypedItemTypeName(ITypedItem item, StyleFlags style = StyleFlags.Normal) =>
+            new FormatItem(GetTypeDisplayName(item), style);
 
         #endregion // Public Methods
 
@@ -144,7 +118,9 @@ namespace BreakingChangesDetector.BreakingChanges.Formatting
         private static string GetFullMemberName(MemberDataBase member)
         {
             if (member.MetadataItemKind == MetadataItemKinds.TypeDefinition)
+            {
                 return member.DisplayName;
+            }
 
             return member.ContainingType.DisplayName + "." + member.DisplayName;
         }
@@ -186,13 +162,8 @@ namespace BreakingChangesDetector.BreakingChanges.Formatting
             }
         }
 
-        private static string GetTypeDisplayName(ITypedItem item)
-        {
-            if (item.IsTypeDynamic)
-                return Utilities.DynamicTypeName;
-
-            return item.Type.DisplayName;
-        }
+        private static string GetTypeDisplayName(ITypedItem item) =>
+            item.IsTypeDynamic ? Utilities.DynamicTypeName : item.Type.DisplayName;
 
         #endregion // Private Methods
 
@@ -203,12 +174,12 @@ namespace BreakingChangesDetector.BreakingChanges.Formatting
         /// <summary>
         /// Gets the formatting to use with the item.
         /// </summary>
-        public StyleFlags Style { get; private set; }
+        public StyleFlags Style { get; }
 
         /// <summary>
         /// Gets the text to format with the item.
         /// </summary>
-        public string Text { get; private set; }
+        public string Text { get; }
 
         #endregion // Properties
     }

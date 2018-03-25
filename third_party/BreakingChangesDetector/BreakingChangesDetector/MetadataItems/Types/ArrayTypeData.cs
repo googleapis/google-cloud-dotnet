@@ -24,12 +24,7 @@
 */
 
 using Microsoft.CodeAnalysis;
-using System;
 using System.Collections.Generic;
-using System.Diagnostics;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
 
 namespace BreakingChangesDetector.MetadataItems
 {
@@ -41,10 +36,8 @@ namespace BreakingChangesDetector.MetadataItems
         #region Constructor
 
         internal ArrayTypeData(string name, MemberAccessibility accessibility, MemberFlags memberFlags, TypeKind typeKind, TypeData elementType, byte arrayRank)
-            : base(name, accessibility, memberFlags, typeKind, elementType)
-        {
-            this.ArrayRank = arrayRank;
-        }
+            : base(name, accessibility, memberFlags, typeKind, elementType) =>
+            ArrayRank = arrayRank;
 
         #endregion // Constructor
 
@@ -55,14 +48,20 @@ namespace BreakingChangesDetector.MetadataItems
         internal override bool DoesMatch(MetadataItemBase other)
         {
             if (base.DoesMatch(other) == false)
+            {
                 return false;
+            }
 
             var otherTyped = other as ArrayTypeData;
             if (otherTyped == null)
+            {
                 return false;
+            }
 
-            if (this.ArrayRank != otherTyped.ArrayRank)
+            if (ArrayRank != otherTyped.ArrayRank)
+            {
                 return false;
+            }
 
             return true;
         }
@@ -85,9 +84,11 @@ namespace BreakingChangesDetector.MetadataItems
 #endif
         internal override IEnumerable<TypeData> GetDirectImplicitConversions(bool onlyReferenceAndIdentityConversions)
         {
-            var mscorlibData = this.AssemblyData.GetReferencedAssembly(Utilities.CommonObjectRuntimeAssemblyName);
+            var mscorlibData = AssemblyData.GetReferencedAssembly(Utilities.CommonObjectRuntimeAssemblyName);
             if (mscorlibData == null)
+            {
                 yield break;
+            }
 
             yield return mscorlibData.GetTypeDefinitionData(Utilities.ArrayTypeName);
             yield return mscorlibData.GetTypeDefinitionData(Utilities.ICloneableTypeName);
@@ -97,9 +98,9 @@ namespace BreakingChangesDetector.MetadataItems
             yield return mscorlibData.GetTypeDefinitionData(Utilities.IStructuralComparableTypeName);
             yield return mscorlibData.GetTypeDefinitionData(Utilities.IStructuralEquatableTypeName);
 
-            if (this.ArrayRank == 1)
+            if (ArrayRank == 1)
             {
-                var genericArguments = new TypeDataSequence(this.ElementType);
+                var genericArguments = new TypeDataSequence(ElementType);
                 yield return mscorlibData.GetTypeDefinitionData(Utilities.IListGenericTypeName).GetConstructedGenericTypeData(genericArguments);
                 yield return mscorlibData.GetTypeDefinitionData(Utilities.ICollectionGenericTypeName).GetConstructedGenericTypeData(genericArguments);
                 yield return mscorlibData.GetTypeDefinitionData(Utilities.IEnumerableGenericTypeName).GetConstructedGenericTypeData(genericArguments);
@@ -118,10 +119,8 @@ namespace BreakingChangesDetector.MetadataItems
         /// <param name="fullyQualify">Indicates whether the type name should be fully qualified with declaring type and namespace names.</param>
         /// <param name="includeGenericInfo">Indicates whether generic parameters and arguments should be included in type names.</param>
         /// <returns>The display name of the type.</returns>
-        public override string GetDisplayName(bool fullyQualify = true, bool includeGenericInfo = true)
-        {
-            return this.ElementType.GetDisplayName(fullyQualify, includeGenericInfo) + '[' + new string(',', this.ArrayRank - 1) + ']';
-        }
+        public override string GetDisplayName(bool fullyQualify = true, bool includeGenericInfo = true) =>
+            ElementType.GetDisplayName(fullyQualify, includeGenericInfo) + '[' + new string(',', ArrayRank - 1) + ']';
 
         #endregion // GetDisplayName
 
@@ -135,13 +134,15 @@ namespace BreakingChangesDetector.MetadataItems
 #endif
         internal override TypeData GetEquivalentNewType(AssemblyFamily newAssemblyFamily)
         {
-            var newElementType = this.ElementType.GetEquivalentNewType(newAssemblyFamily);
+            var newElementType = ElementType.GetEquivalentNewType(newAssemblyFamily);
             if (newElementType == null)
+            {
                 return null;
+            }
 
             return
-                newElementType.GetArrayType(this.ArrayRank) ??
-                new ArrayTypeData(this.Name, this.Accessibility, this.MemberFlags, this.TypeKind, newElementType, this.ArrayRank);
+                newElementType.GetArrayType(ArrayRank) ??
+                new ArrayTypeData(Name, Accessibility, MemberFlags, TypeKind, newElementType, ArrayRank);
         }
 
         #endregion // GetEquivalentNewType
@@ -150,8 +151,8 @@ namespace BreakingChangesDetector.MetadataItems
 
         internal override bool IsArray(out int rank, out TypeData elementType)
         {
-            rank = this.ArrayRank;
-            elementType = this.ElementType;
+            rank = ArrayRank;
+            elementType = ElementType;
             return true;
         }
 
@@ -170,22 +171,22 @@ namespace BreakingChangesDetector.MetadataItems
         internal override bool IsAssignableFrom(TypeData sourceType, IsAssignableFromContext context)
         {
             if (base.IsAssignableFrom(sourceType, context))
+            {
                 return true;
+            }
 
             // From C# specification: (The implicit reference conversions are) 
             // - From an array-type S with an element type Se to an array-type T with an element type Te, provided all of the following are true:
             //   - S and T differ only in element type. In other words, S and T have the same number of dimensions.
             //   - Both Se and Te are reference-types.
             //   - An implicit reference conversion exists from Se to Te.
-            if (this.ElementType.IsValueType == false)
+            if (ElementType.IsValueType == false)
             {
-                int sourceRank;
-                TypeData sourceElementType;
-                if (sourceType.IsArray(out sourceRank, out sourceElementType) &&
+                if (sourceType.IsArray(out int sourceRank, out TypeData sourceElementType) &&
                     sourceElementType.IsValueType == false &&
-                    this.ArrayRank == sourceRank)
+                    ArrayRank == sourceRank)
                 {
-                    return this.ElementType.IsAssignableFrom(sourceElementType, new IsAssignableFromContext(context.NewAssemblyFamily, context.IsSourceTypeOld, onlyReferenceAndIdentityConversions: true));
+                    return ElementType.IsAssignableFrom(sourceElementType, new IsAssignableFromContext(context.NewAssemblyFamily, context.IsSourceTypeOld, onlyReferenceAndIdentityConversions: true));
                 }
             }
 
@@ -204,13 +205,17 @@ namespace BreakingChangesDetector.MetadataItems
         internal override bool IsEquivalentToNewMember(MemberDataBase newMember, AssemblyFamily newAssemblyFamily)
         {
             if (base.IsEquivalentToNewMember(newMember, newAssemblyFamily) == false)
+            {
                 return false;
+            }
 
             var other = newMember as ArrayTypeData;
             if (other == null)
+            {
                 return false;
+            }
 
-            return this.ArrayRank == other.ArrayRank;
+            return ArrayRank == other.ArrayRank;
         }
 
         #endregion // IsEquivalentToNewMember
@@ -220,10 +225,8 @@ namespace BreakingChangesDetector.MetadataItems
         /// <summary>
         /// Gets the type of item the instance represents.
         /// </summary>
-        public override MetadataItemKinds MetadataItemKind
-        {
-            get { return MetadataItemKinds.ArrayType; }
-        }
+        public override MetadataItemKinds MetadataItemKind =>
+            MetadataItemKinds.ArrayType;
 
         #endregion // MetadataItemKind
 
@@ -239,19 +242,21 @@ namespace BreakingChangesDetector.MetadataItems
 #endif
         internal override MemberDataBase ReplaceGenericTypeParameters(GenericTypeParameterCollection genericParameters, GenericTypeArgumentCollection genericArguments)
         {
-            var replacedElementType = (TypeData)this.ElementType.ReplaceGenericTypeParameters(genericParameters, genericArguments);
-            if (replacedElementType == this.ElementType)
+            var replacedElementType = (TypeData)ElementType.ReplaceGenericTypeParameters(genericParameters, genericArguments);
+            if (replacedElementType == ElementType)
+            {
                 return this;
+            }
 
             return
-                replacedElementType.GetArrayType(this.ArrayRank) ??
+                replacedElementType.GetArrayType(ArrayRank) ??
                 new ArrayTypeData(
-                    this.Name,
-                    this.Accessibility,
-                    this.MemberFlags,
-                    this.TypeKind,
+                    Name,
+                    Accessibility,
+                    MemberFlags,
+                    TypeKind,
                     replacedElementType,
-                    this.ArrayRank);
+                    ArrayRank);
         }
 
         #endregion // ReplaceGenericTypeParameters
@@ -263,7 +268,7 @@ namespace BreakingChangesDetector.MetadataItems
         /// <summary>
         /// Gets the number of dimensions for array types if <see cref="IsArray"/> is true; 0 otherwise.
         /// </summary>
-        public byte ArrayRank { get; private set; } // TODO_Serialize: Round trip and unit test
+        public byte ArrayRank { get; } // TODO_Serialize: Round trip and unit test
 
         #endregion // Properties
     }
