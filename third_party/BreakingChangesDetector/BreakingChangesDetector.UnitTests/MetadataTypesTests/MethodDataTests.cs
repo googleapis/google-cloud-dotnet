@@ -2,6 +2,7 @@
     MIT License
 
     Copyright(c) 2014-2018 Infragistics, Inc.
+    Copyright 2018 Google LLC
 
     Permission is hereby granted, free of charge, to any person obtaining a copy
     of this software and associated documentation files (the "Software"), to deal
@@ -23,22 +24,21 @@
 */
 
 using System;
-using Microsoft.VisualStudio.TestTools.UnitTesting;
+using Xunit;
 using BreakingChangesDetector.MetadataItems;
 
 namespace BreakingChangesDetector.UnitTests.MetadataTypesTests
 {
-	[TestClass]
 	public class MethodDataTests
 	{
 		#region MethodDataAccessibilityTest
 
-		[TestMethod]
+		[Fact]
 		public void MethodDataAccessibilityTest()
 		{
 			var t = typeof(TestClassDefinition);
-			var assembly = AssemblyData.FromAssembly(t.Assembly);
-			var typeData = TypeDefinitionData.FromType(t);
+            var context = MetadataResolutionContext.CreateFromTypes(t);
+            var typeData = context.GetTypeDefinitionData(t);
 			TestUtilities.VerifyAccessibility(typeData, "MethodInstance");
 		}
 
@@ -46,130 +46,130 @@ namespace BreakingChangesDetector.UnitTests.MetadataTypesTests
 
 		#region MethodDataDeclaringTypeTest
 
-		[TestMethod]
+		[Fact]
 		public void MethodDataDeclaringTypeTest()
 		{
 			var t = typeof(TestClassDefinition);
-			var assembly = AssemblyData.FromAssembly(t.Assembly);
-			var typeData = TypeDefinitionData.FromType(t);
+			var context = MetadataResolutionContext.CreateFromTypes(t);
+			var typeData = context.GetTypeDefinitionData(t);
 			var method = typeData.GetMember("MethodInstance");
-			Assert.AreEqual(typeData, method.DeclaringType, "The DeclaringType of a member should be the type in which it is defined.");
+			AssertX.Equal(typeData, method.ContainingType, "The DeclaringType of a member should be the type in which it is defined.");
 		}
 
 		#endregion // MethodDataDeclaringTypeTest
 
 		#region MethodDataMemberFlagsTest
 
-		[TestMethod]
+		[Fact]
 		public void MethodDataMemberFlagsTest()
 		{
 			var t = typeof(OverloadedMemberFeatures);
-			var assembly = AssemblyData.FromAssembly(t.Assembly);
-			var typeData = TypeDefinitionData.FromType(t);
+			var context = MetadataResolutionContext.CreateFromTypes(t);
+			var typeData = context.GetTypeDefinitionData(t);
 
 			var eventData = (MethodData)typeData.GetMember("MethodInstance");
-			Assert.AreEqual(MemberFlags.None, eventData.MemberFlags, "The Flags value of the member is wrong.");
+			AssertX.Equal(MemberFlags.None, eventData.MemberFlags, "The Flags value of the member is wrong.");
 			eventData = (MethodData)typeData.GetMember("MethodStatic");
-			Assert.AreEqual(MemberFlags.Static, eventData.MemberFlags, "The Flags value of the member is wrong.");
+			AssertX.Equal(MemberFlags.Static, eventData.MemberFlags, "The Flags value of the member is wrong.");
 			eventData = (MethodData)typeData.GetMember("MethodInstanceAbstract");
-			Assert.AreEqual(MemberFlags.Abstract, eventData.MemberFlags, "The Flags value of the member is wrong.");
+			AssertX.Equal(MemberFlags.Abstract, eventData.MemberFlags, "The Flags value of the member is wrong.");
 			eventData = (MethodData)typeData.GetMember("MethodInstanceVirtual");
-			Assert.AreEqual(MemberFlags.Virtual, eventData.MemberFlags, "The Flags value of the member is wrong.");
+			AssertX.Equal(MemberFlags.Virtual, eventData.MemberFlags, "The Flags value of the member is wrong.");
 			eventData = (MethodData)typeData.GetMember("MethodInstanceOverrideAbstract");
-			Assert.AreEqual(MemberFlags.Override, eventData.MemberFlags, "The Flags value of the member is wrong.");
+			AssertX.Equal(MemberFlags.Override, eventData.MemberFlags, "The Flags value of the member is wrong.");
 			eventData = (MethodData)typeData.GetMember("MethodInstanceOverrideAbstractSealed");
-			Assert.AreEqual(MemberFlags.Override | MemberFlags.Sealed, eventData.MemberFlags, "The Flags value of the member is wrong.");
+			AssertX.Equal(MemberFlags.Override | MemberFlags.Sealed, eventData.MemberFlags, "The Flags value of the member is wrong.");
 			eventData = (MethodData)typeData.GetMember("MethodInstanceOverrideAbstractAbstract");
-			Assert.AreEqual(MemberFlags.Override | MemberFlags.Abstract, eventData.MemberFlags, "The Flags value of the member is wrong.");
+			AssertX.Equal(MemberFlags.Override | MemberFlags.Abstract, eventData.MemberFlags, "The Flags value of the member is wrong.");
 			eventData = (MethodData)typeData.GetMember("MethodInstanceOverrideVirtual");
-			Assert.AreEqual(MemberFlags.Override, eventData.MemberFlags, "The Flags value of the member is wrong.");
+			AssertX.Equal(MemberFlags.Override, eventData.MemberFlags, "The Flags value of the member is wrong.");
 			eventData = (MethodData)typeData.GetMember("MethodInstanceOverrideVirtualSealed");
-			Assert.AreEqual(MemberFlags.Override | MemberFlags.Sealed, eventData.MemberFlags, "The Flags value of the member is wrong.");
+			AssertX.Equal(MemberFlags.Override | MemberFlags.Sealed, eventData.MemberFlags, "The Flags value of the member is wrong.");
 			eventData = (MethodData)typeData.GetMember("MethodInstanceOverrideVirtualAbstract");
-			Assert.AreEqual(MemberFlags.Override | MemberFlags.Abstract, eventData.MemberFlags, "The Flags value of the member is wrong.");
+			AssertX.Equal(MemberFlags.Override | MemberFlags.Abstract, eventData.MemberFlags, "The Flags value of the member is wrong.");
 		}
 
 		#endregion // MethodDataMemberFlagsTest
 
 		#region MethodDataGenericParametersTest
 
-		[TestMethod]
+		[Fact]
 		public void MethodDataGenericParametersTest()
 		{
 			var t = typeof(VariousMemberFeatures);
-			var assembly = AssemblyData.FromAssembly(t.Assembly);
+			var context = MetadataResolutionContext.CreateFromTypes(t);
 
-			var typeData = TypeDefinitionData.FromType(t);
+			var typeData = context.GetTypeDefinitionData(t);
 			var genericMethod = (MethodData)typeData.GetMember("GenericMethod");
-			Assert.AreEqual(5, genericMethod.GenericParameters.Count, "The number of generic parameters is incorrect.");
+			AssertX.Equal(5, genericMethod.GenericParameters.Count, "The number of generic parameters is incorrect.");
 		}
 
 		#endregion // MethodDataGenericParametersTest
 
 		#region MethodDataIsExtensionMethodTest
 
-		[TestMethod]
+		[Fact]
 		public void MethodDataIsExtensionMethodTest()
 		{
-			var assembly = AssemblyData.FromAssembly(typeof(MethodDataTests).Assembly);
+			var context = MetadataResolutionContext.CreateFromTypes(typeof(MethodDataTests));
 
-			var typeData = TypeDefinitionData.FromType(typeof(StaticClass));
+			var typeData = context.GetTypeDefinitionData(typeof(StaticClass));
 			var methodData = (MethodData)typeData.GetMember("Method");
-			Assert.IsFalse(methodData.IsExtensionMethod, "The IsExtensionMethod value is incorrect.");
+			Assert.False(methodData.IsExtensionMethod, "The IsExtensionMethod value is incorrect.");
 			
-			typeData = TypeDefinitionData.FromType(typeof(ExtensionsClass));
+			typeData = context.GetTypeDefinitionData(typeof(ExtensionsClass));
 			methodData = (MethodData)typeData.GetMember("Method");
-			Assert.IsTrue(methodData.IsExtensionMethod, "The IsExtensionMethod value is incorrect.");
+			Assert.True(methodData.IsExtensionMethod, "The IsExtensionMethod value is incorrect.");
 		}
 
 		#endregion // MethodDataIsExtensionMethodTest
 
 		#region MethodDataNameTest
 
-		[TestMethod]
+		[Fact]
 		public void MethodDataNameTest()
 		{
 			var t = typeof(TestClassDefinition);
-			var assembly = AssemblyData.FromAssembly(t.Assembly);
-			var typeData = TypeDefinitionData.FromType(t);
+			var context = MetadataResolutionContext.CreateFromTypes(t);
+			var typeData = context.GetTypeDefinitionData(t);
 			var method = typeData.GetMember("MethodInstance");
-			Assert.AreEqual("MethodInstance", method.Name, "The Name of the member is incorrect.");
+			AssertX.Equal("MethodInstance", method.Name, "The Name of the member is incorrect.");
 		}
 
 		#endregion // MethodDataNameTest
 
 		#region MethodDataParametersTest
 
-		[TestMethod]
+		[Fact]
 		public void MethodDataParametersTest()
 		{
 			var t = typeof(TestClassDefinition);
-			var assembly = AssemblyData.FromAssembly(t.Assembly);
-			var typeData = TypeDefinitionData.FromType(t);
+			var context = MetadataResolutionContext.CreateFromTypes(t);
+			var typeData = context.GetTypeDefinitionData(t);
 			var method = (MethodData)typeData.GetMember("MethodInstance");
-			Assert.AreEqual(0, method.Parameters.Count, "The public method has the wrong number of parameters.");
+			AssertX.Equal(0, method.Parameters.Count, "The public method has the wrong number of parameters.");
 
 			method = (MethodData)typeData.GetMember("MethodInstanceProtected");
-			Assert.AreEqual(2, method.Parameters.Count, "The protected method has the wrong number of parameters.");
+			AssertX.Equal(2, method.Parameters.Count, "The protected method has the wrong number of parameters.");
 
 			method = (MethodData)typeData.GetMember("MethodInstanceProtectedInternal");
-			Assert.AreEqual(3, method.Parameters.Count, "The protected internal method has the wrong number of parameters.");
+			AssertX.Equal(3, method.Parameters.Count, "The protected internal method has the wrong number of parameters.");
 		}
 
 		#endregion // MethodDataParametersTest
 
 		#region MethodDataTypeTest
 
-		[TestMethod]
+		[Fact]
 		public void MethodDataTypeTest()
 		{
 			var t = typeof(TestClassDefinition);
-			var assembly = AssemblyData.FromAssembly(t.Assembly);
-			var typeData = TypeDefinitionData.FromType(t);
-			var voidType = TypeDefinitionData.FromType(typeof(void));
+			var context = MetadataResolutionContext.CreateFromTypes(t);
+			var typeData = context.GetTypeDefinitionData(t);
+			var voidType = context.GetTypeDefinitionData(typeof(void));
 
 			var method = (MethodData)typeData.GetMember("MethodInstance");
-			Assert.AreEqual(voidType, method.Type, "The Type of the member is incorrect.");
+			AssertX.Equal(voidType, method.Type, "The Type of the member is incorrect.");
 		}
 
 		#endregion // MethodDataTypeTest

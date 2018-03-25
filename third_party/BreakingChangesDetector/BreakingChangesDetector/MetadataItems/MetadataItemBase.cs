@@ -2,6 +2,7 @@
     MIT License
 
     Copyright(c) 2014-2018 Infragistics, Inc.
+    Copyright 2018 Google LLC
 
     Permission is hereby granted, free of charge, to any person obtaining a copy
     of this software and associated documentation files (the "Software"), to deal
@@ -35,11 +36,13 @@ namespace BreakingChangesDetector.MetadataItems
 	/// </summary>
 	public abstract class MetadataItemBase
 	{
-		/// <summary>
-		/// Performs the specified visitor's functionality on this instance.
-		/// </summary>
-		/// <param name="visitor">The visitor whose functionality should be performed on the instance.</param>
-		public abstract void Accept(MetadataItemVisitor visitor);
+        /// <summary>
+        /// Performs the specified visitor's functionality on this instance.
+        /// </summary>
+        /// <param name="visitor">The visitor whose functionality should be performed on the instance.</param>
+        public abstract void Accept(MetadataItemVisitor visitor);
+
+        public abstract MetadataResolutionContext Context { get; }
 
 		/// <summary>
 		/// Gets the name to use for this item in messages.

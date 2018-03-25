@@ -2,6 +2,7 @@
     MIT License
 
     Copyright(c) 2014-2018 Infragistics, Inc.
+    Copyright 2018 Google LLC
 
     Permission is hereby granted, free of charge, to any person obtaining a copy
     of this software and associated documentation files (the "Software"), to deal
@@ -23,6 +24,7 @@
 */
 
 using BreakingChangesDetector.MetadataItems;
+using Microsoft.CodeAnalysis;
 using System;
 using System.Collections.Generic;
 using System.Diagnostics;
@@ -35,8 +37,8 @@ using System.Threading.Tasks;
 namespace BreakingChangesDetector.Serialization
 {
 	internal class BinaryItemDeserializerV1
-	{
-		private readonly BinaryReader _reader;
+    {
+        private readonly BinaryReader _reader;
 		private readonly Dictionary<uint, TypeData> _typeTable;
 
 		public BinaryItemDeserializerV1(Stream stream)
@@ -70,7 +72,7 @@ namespace BreakingChangesDetector.Serialization
 					//	if (hasSpecialDecalringType)
 					//	{
 					//		var declaringType = _reader.ReadUInt32();
-					//		type.DeclaringType = (TypeDefinitionData)_typeTable[declaringType];
+					//		type.ContainingType = (TypeDefinitionData)_typeTable[declaringType];
 					//	}
 					//}
 
@@ -125,8 +127,8 @@ namespace BreakingChangesDetector.Serialization
 				var nestedTypeId = _reader.ReadUInt32();
 				var nestedType = _typeTable[nestedTypeId];
 
-				if (nestedType.DeclaringType == null)
-					nestedType.DeclaringType = declaringType;
+				if (nestedType.ContainingType == null)
+					nestedType.ContainingType = declaringType;
 
 				return nestedType;
 			}
@@ -140,7 +142,7 @@ namespace BreakingChangesDetector.Serialization
 				var parameters = this.ReadParametersCollection(memberItemKind);
 				return new ConstructorData(name, accessibility, memberFlags, parameters)
 				{
-					DeclaringType = declaringType,
+					ContainingType = declaringType,
 				};
 			}
 
@@ -153,13 +155,13 @@ namespace BreakingChangesDetector.Serialization
 					object constantValue = null; // TODO_Serialize: get the real value here
 					return new ConstantData(name, accessibility, memberFlags, type, false, constantValue)
 					{
-						DeclaringType = declaringType,
+						ContainingType = declaringType,
 					};
 
 				case MetadataItemKinds.Event:
 					return new EventData(name, accessibility, memberFlags, type)
 					{
-						DeclaringType = declaringType,
+						ContainingType = declaringType,
 					};
 
 				case MetadataItemKinds.Field:
@@ -167,7 +169,7 @@ namespace BreakingChangesDetector.Serialization
 						var isReadOnly = _reader.ReadBoolean();
 						return new FieldData(name, accessibility, memberFlags, type, false, isReadOnly)
 						{
-							DeclaringType = declaringType,
+							ContainingType = declaringType,
 						};
 					}
 
@@ -178,7 +180,7 @@ namespace BreakingChangesDetector.Serialization
 						var parameters = this.ReadParametersCollection(memberItemKind);
 						return new MethodData(name, accessibility, memberFlags, type, false, genericParameters, isExtensionMethod, parameters)
 						{
-							DeclaringType = declaringType,
+							ContainingType = declaringType,
 						};
 					}
 
@@ -187,7 +189,7 @@ namespace BreakingChangesDetector.Serialization
 						var parameters = this.ReadParametersCollection(memberItemKind);
 						return new OperatorData(name, accessibility, memberFlags, type, false, parameters)
 						{
-							DeclaringType = declaringType,
+							ContainingType = declaringType,
 						};
 					}
 
@@ -207,7 +209,7 @@ namespace BreakingChangesDetector.Serialization
 						{
 							return new PropertyData(name, accessibility, memberFlags, type, false, getMethodAccessibility, setMethodAccessibility)
 							{
-								DeclaringType = declaringType,
+								ContainingType = declaringType,
 							};
 						}
 						else
@@ -215,7 +217,7 @@ namespace BreakingChangesDetector.Serialization
 							var parameters = this.ReadParametersCollection(memberItemKind);
 							return new IndexerData(name, accessibility, memberFlags, type, false, parameters, getMethodAccessibility, setMethodAccessibility)
 							{
-								DeclaringType = declaringType,
+								ContainingType = declaringType,
 							};
 						}
 					}
@@ -284,7 +286,7 @@ namespace BreakingChangesDetector.Serialization
 			var fullName = _reader.ReadString();
 			var typeCount = _reader.ReadInt32();
 
-			var assemblyData = new AssemblyData(fullName, null, null, null); // TODO_Serialize: pass the names here
+			var assemblyData = new AssemblyData(null, fullName, null, null, null); // TODO_Serialize: pass the names here
 			//for (int i = 0; i < typeCount; i++)
 			//	assemblyData.AddType(this.ReadTypeDataBase(assemblyData));
 

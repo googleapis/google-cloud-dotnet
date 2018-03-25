@@ -2,6 +2,7 @@
     MIT License
 
     Copyright(c) 2014-2018 Infragistics, Inc.
+    Copyright 2018 Google LLC
 
     Permission is hereby granted, free of charge, to any person obtaining a copy
     of this software and associated documentation files (the "Software"), to deal
@@ -23,105 +24,106 @@
 */
 
 using System;
-using Microsoft.VisualStudio.TestTools.UnitTesting;
+using Xunit;
 using BreakingChangesDetector.MetadataItems;
 
 namespace BreakingChangesDetector.UnitTests.MetadataTypesTests
 {
-	[TestClass]
 	public class ParameterDataTests
 	{
 		// TODO_Test: Delegates are not tested here.
 
 		#region ParameterDataDeclaringMemberKindTest
 
-		[TestMethod]
+		[Fact]
 		public void ParameterDataDeclaringMemberKindTest()
 		{
 			var t = typeof(TestClassDefinition);
-			var assembly = AssemblyData.FromAssembly(t.Assembly);
-			var typeData = TypeDefinitionData.FromType(t);
+			var context = MetadataResolutionContext.CreateFromTypes(t);
+			var typeData = context.GetTypeDefinitionData(t);
 			var constructor = (ConstructorData)typeData.GetMembers(".ctor")[1];
-			Assert.AreEqual(constructor.MetadataItemKind, constructor.Parameters[0].DeclaringMemberKind, "The DeclaringMemberKind of the constructor parameter is not assigned correctly.");
+			AssertX.Equal(constructor.MetadataItemKind, constructor.Parameters[0].DeclaringMemberKind, "The DeclaringMemberKind of the constructor parameter is not assigned correctly.");
 
 			var method = (MethodData)typeData.GetMember("MethodInstanceProtected");
-			Assert.AreEqual(method.MetadataItemKind, method.Parameters[0].DeclaringMemberKind, "The DeclaringMemberKind of the method parameter is not assigned correctly.");
+			AssertX.Equal(method.MetadataItemKind, method.Parameters[0].DeclaringMemberKind, "The DeclaringMemberKind of the method parameter is not assigned correctly.");
 
 			var indexer = (IndexerData)typeData.GetMembers("Item")[0];
-			Assert.AreEqual(indexer.MetadataItemKind, indexer.Parameters[0].DeclaringMemberKind, "The DeclaringMemberKind of the indexer parameter is not assigned correctly.");
+			AssertX.Equal(indexer.MetadataItemKind, indexer.Parameters[0].DeclaringMemberKind, "The DeclaringMemberKind of the indexer parameter is not assigned correctly.");
 		}
 
 		#endregion // ParameterDataDeclaringMemberKindTest
 
 		#region ParameterDataDefaultValueTest
 
-		[TestMethod]
+		[Fact]
 		public void ParameterDataDefaultValueTest()
 		{
 			var t = typeof(VariousMemberFeatures);
-			var assembly = AssemblyData.FromAssembly(t.Assembly);
-			var typeData = TypeDefinitionData.FromType(t);
+			var context = MetadataResolutionContext.CreateFromTypes(t);
+			var typeData = context.GetTypeDefinitionData(t);
 
 			var method = (MethodData)typeData.GetMember("MethodWithDefaultParameter");
-			Assert.IsNull(method.Parameters[0].DefaultValue, "The DefaultValue of the method parameter is not assigned correctly.");
-			Assert.AreEqual(1, method.Parameters[1].DefaultValue, "The DefaultValue of the method parameter is not assigned correctly.");
-			Assert.AreEqual((ulong)DateTimeKind.Local, method.Parameters[2].DefaultValue, "The DefaultValue of the method parameter is not assigned correctly.");
-			Assert.IsNull(method.Parameters[3].DefaultValue, "The DefaultValue of the method parameter is not assigned correctly.");
+			AssertX.Null(method.Parameters[0].DefaultValue, "The DefaultValue of the method parameter is not assigned correctly.");
+			AssertX.Equal(1, method.Parameters[1].DefaultValue, "The DefaultValue of the method parameter is not assigned correctly.");
+			AssertX.Equal((ulong)DateTimeKind.Local, method.Parameters[2].DefaultValue, "The DefaultValue of the method parameter is not assigned correctly.");
+			AssertX.Null(method.Parameters[3].DefaultValue, "The DefaultValue of the method parameter is not assigned correctly.");
 		}
 
 		#endregion // ParameterDataDefaultValueTest
 
 		#region ParameterDataHasDefaultValueTest
 
-		[TestMethod]
+		[Fact]
 		public void ParameterDataHasDefaultValueTest()
 		{
 			var t = typeof(VariousMemberFeatures);
-			var assembly = AssemblyData.FromAssembly(t.Assembly);
-			var typeData = TypeDefinitionData.FromType(t);
+			var context = MetadataResolutionContext.CreateFromTypes(t);
+			var typeData = context.GetTypeDefinitionData(t);
 
 			var method = (MethodData)typeData.GetMember("MethodWithDefaultParameter");
-			Assert.IsFalse(method.Parameters[0].IsOptional, "The IsOptional of the method parameter is not assigned correctly.");
-			Assert.IsTrue(method.Parameters[1].IsOptional, "The IsOptional of the method parameter is not assigned correctly.");
-			Assert.IsTrue(method.Parameters[2].IsOptional, "The IsOptional of the method parameter is not assigned correctly.");
+			Assert.False(method.Parameters[0].IsOptional, "The IsOptional of the method parameter is not assigned correctly.");
+			Assert.True(method.Parameters[1].IsOptional, "The IsOptional of the method parameter is not assigned correctly.");
+			Assert.True(method.Parameters[2].IsOptional, "The IsOptional of the method parameter is not assigned correctly.");
 		}
 
 		#endregion // ParameterDataHasDefaultValueTest
 
 		#region ParameterDataIsParamsArrayTest
 
-		[TestMethod]
+		[Fact]
 		public void ParameterDataIsParamsArrayTest()
 		{
 			var t = typeof(VariousMemberFeatures);
-			var assembly = AssemblyData.FromAssembly(t.Assembly);
-			var typeData = TypeDefinitionData.FromType(t);
+			var context = MetadataResolutionContext.CreateFromTypes(t);
+			var typeData = context.GetTypeDefinitionData(t);
 
 			var method = (MethodData)typeData.GetMember("MethodWithParamsArray");
-			Assert.IsFalse(method.Parameters[0].IsParamsArray, "The IsParamsArray of the method parameter is not assigned correctly.");
-			Assert.IsTrue(method.Parameters[1].IsParamsArray, "The IsParamsArray of the method parameter is not assigned correctly.");
+			Assert.False(method.Parameters[0].IsParamsArray, "The IsParamsArray of the method parameter is not assigned correctly.");
+			Assert.True(method.Parameters[1].IsParamsArray, "The IsParamsArray of the method parameter is not assigned correctly.");
 		}
 
 		#endregion // ParameterDataIsParamsArrayTest
 
 		#region ParameterDataGetDefaultValueDisplayText
 
-		[TestMethod]
+		[Fact]
 		public void ParameterDataGetDefaultValueDisplayText()
 		{
-			var typeData = TypeDefinitionData.FromType<DefualtValues>();
+            var t = typeof(DefualtValues);
+            var context = MetadataResolutionContext.CreateFromTypes(t);
+            var typeData = context.GetTypeDefinitionData(t);
 
 			var method = (MethodData)typeData.GetMember("Method1");
-			Assert.AreEqual("Method1Values.A", method.Parameters[0].GetDefaultValueDisplayText(), "The display text of the default value is incorrect.");
-			Assert.AreEqual("(Method1Values)3", method.Parameters[1].GetDefaultValueDisplayText(), "The display text of the default value is incorrect.");
-			Assert.AreEqual("Method1Values.D", method.Parameters[2].GetDefaultValueDisplayText(), "The display text of the default value is incorrect.");
-			Assert.AreEqual("(Method1Values)15", method.Parameters[3].GetDefaultValueDisplayText(), "The display text of the default value is incorrect.");
+			AssertX.Equal("Method1Values.A", method.Parameters[0].GetDefaultValueDisplayText(), "The display text of the default value is incorrect.");
+			AssertX.Equal("(Method1Values)3", method.Parameters[1].GetDefaultValueDisplayText(), "The display text of the default value is incorrect.");
+			AssertX.Equal("Method1Values.D", method.Parameters[2].GetDefaultValueDisplayText(), "The display text of the default value is incorrect.");
+			AssertX.Equal("(Method1Values)15", method.Parameters[3].GetDefaultValueDisplayText(), "The display text of the default value is incorrect.");
 
 			method = (MethodData)typeData.GetMember("Method2");
-			Assert.AreEqual("Method2Values.A", method.Parameters[0].GetDefaultValueDisplayText(), "The display text of the default value is incorrect.");
-			Assert.AreEqual("Method2Values.A | Method2Values.B", method.Parameters[1].GetDefaultValueDisplayText(), "The display text of the default value is incorrect.");
-			Assert.AreEqual("Method2Values.D", method.Parameters[2].GetDefaultValueDisplayText(), "The display text of the default value is incorrect.");
-			Assert.AreEqual("(Method2Values)15", method.Parameters[3].GetDefaultValueDisplayText(), "The display text of the default value is incorrect.");
+			AssertX.Equal("Method2Values.A", method.Parameters[0].GetDefaultValueDisplayText(), "The display text of the default value is incorrect.");
+			AssertX.Equal("Method2Values.A | Method2Values.B", method.Parameters[1].GetDefaultValueDisplayText(), "The display text of the default value is incorrect.");
+			AssertX.Equal("Method2Values.D", method.Parameters[2].GetDefaultValueDisplayText(), "The display text of the default value is incorrect.");
+			AssertX.Equal("(Method2Values)15", method.Parameters[3].GetDefaultValueDisplayText(), "The display text of the default value is incorrect.");
 		}
 
 		public class DefualtValues
@@ -152,51 +154,51 @@ namespace BreakingChangesDetector.UnitTests.MetadataTypesTests
 
 		#region ParameterDataModiferTest
 
-		[TestMethod]
+		[Fact]
 		public void ParameterDataModiferTest()
 		{
 			var t = typeof(VariousMemberFeatures);
-			var assembly = AssemblyData.FromAssembly(t.Assembly);
-			var typeData = TypeDefinitionData.FromType(t);
+			var context = MetadataResolutionContext.CreateFromTypes(t);
+			var typeData = context.GetTypeDefinitionData(t);
 
 			var method = (MethodData)typeData.GetMember("MethodWithParameterModifiers");
-			Assert.AreEqual(ParameterModifier.None, method.Parameters[0].Modifer, "The ParameterModifier of the method parameter is not assigned correctly.");
-			Assert.AreEqual(ParameterModifier.Ref, method.Parameters[1].Modifer, "The ParameterModifier of the method parameter is not assigned correctly.");
-			Assert.AreEqual(ParameterModifier.Out, method.Parameters[2].Modifer, "The ParameterModifier of the method parameter is not assigned correctly.");
+			AssertX.Equal(ParameterModifier.None, method.Parameters[0].Modifer, "The ParameterModifier of the method parameter is not assigned correctly.");
+			AssertX.Equal(ParameterModifier.Ref, method.Parameters[1].Modifer, "The ParameterModifier of the method parameter is not assigned correctly.");
+			AssertX.Equal(ParameterModifier.Out, method.Parameters[2].Modifer, "The ParameterModifier of the method parameter is not assigned correctly.");
 		}
 
 		#endregion // ParameterDataModiferTest
 
 		#region ParameterDataNameTest
 
-		[TestMethod]
+		[Fact]
 		public void ParameterDataNameTest()
 		{
 			var t = typeof(VariousMemberFeatures);
-			var assembly = AssemblyData.FromAssembly(t.Assembly);
-			var typeData = TypeDefinitionData.FromType(t);
+			var context = MetadataResolutionContext.CreateFromTypes(t);
+			var typeData = context.GetTypeDefinitionData(t);
 
 			var method = (MethodData)typeData.GetMember("MethodWithParameterModifiers");
-			Assert.AreEqual("param1", method.Parameters[0].Name, "The Name of the method parameter is not assigned correctly.");
-			Assert.AreEqual("param2", method.Parameters[1].Name, "The Name of the method parameter is not assigned correctly.");
-			Assert.AreEqual("param3", method.Parameters[2].Name, "The Name of the method parameter is not assigned correctly.");
+			AssertX.Equal("param1", method.Parameters[0].Name, "The Name of the method parameter is not assigned correctly.");
+			AssertX.Equal("param2", method.Parameters[1].Name, "The Name of the method parameter is not assigned correctly.");
+			AssertX.Equal("param3", method.Parameters[2].Name, "The Name of the method parameter is not assigned correctly.");
 		}
 
 		#endregion // ParameterDataNameTest
 
 		#region ParameterDataTypeTest
 
-		[TestMethod]
+		[Fact]
 		public void ParameterDataTypeTest()
 		{
 			var t = typeof(VariousMemberFeatures);
-			var assembly = AssemblyData.FromAssembly(t.Assembly);
-			var typeData = TypeDefinitionData.FromType(t);
-			var intType = TypeDefinitionData.FromType<int>();
+			var context = MetadataResolutionContext.CreateFromTypes(t);
+			var typeData = context.GetTypeDefinitionData(t);
+			var intType = context.GetTypeDefinitionData<int>();
 
 			var method = (MethodData)typeData.GetMember("MethodWithParameterTypes");
-			Assert.AreEqual(intType, method.Parameters[0].Type, "The Type of the method parameter is not assigned correctly.");
-			Assert.AreEqual(typeData, method.Parameters[1].Type, "The Type of the method parameter is not assigned correctly.");
+			AssertX.Equal(intType, method.Parameters[0].Type, "The Type of the method parameter is not assigned correctly.");
+			AssertX.Equal(typeData, method.Parameters[1].Type, "The Type of the method parameter is not assigned correctly.");
 		}
 
 		#endregion // ParameterDataTypeTest

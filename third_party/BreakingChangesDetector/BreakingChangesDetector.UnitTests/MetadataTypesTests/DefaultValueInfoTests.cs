@@ -2,6 +2,7 @@
     MIT License
 
     Copyright(c) 2014-2018 Infragistics, Inc.
+    Copyright 2018 Google LLC
 
     Permission is hereby granted, free of charge, to any person obtaining a copy
     of this software and associated documentation files (the "Software"), to deal
@@ -23,70 +24,69 @@
 */
 
 using System;
-using Microsoft.VisualStudio.TestTools.UnitTesting;
+using Xunit;
 using BreakingChangesDetector.MetadataItems;
 
 namespace BreakingChangesDetector.UnitTests.MetadataTypesTests
 {
-	[TestClass]
 	public class DefaultValueInfoTests
 	{
 		#region NullableBoolDefaultValueTests
 
-		[TestMethod]
+		[Fact]
 		public void NullableBoolDefaultValueTests()
 		{
-			var assembly = AssemblyData.FromAssembly(typeof(DefaultValueInfoTests).Assembly);
-			var typeData = TypeDefinitionData.FromType(typeof(MethodWithDefaultValues));
+			var context = MetadataResolutionContext.CreateFromTypes(typeof(DefaultValueInfoTests));
+			var typeData = context.GetTypeDefinitionData(typeof(MethodWithDefaultValues));
 			var method = typeData.GetMethod("MethodWithBools");
 
-			Assert.AreEqual(null, method.Parameters[0].DefaultValue);
-			Assert.AreEqual(true, method.Parameters[1].DefaultValue);
+			Assert.Null(method.Parameters[0].DefaultValue);
+			Assert.Equal(true, method.Parameters[1].DefaultValue);
 		}
 
 		#endregion // NullableBoolDefaultValueTests
 
 		#region NullableDecimalDefaultValueTests
 
-		[TestMethod]
+		[Fact]
 		public void NullableDecimalDefaultValueTests()
 		{
-			var assembly = AssemblyData.FromAssembly(typeof(DefaultValueInfoTests).Assembly);
-			var typeData = TypeDefinitionData.FromType(typeof(MethodWithDefaultValues));
+			var context = MetadataResolutionContext.CreateFromTypes(typeof(DefaultValueInfoTests));
+			var typeData = context.GetTypeDefinitionData(typeof(MethodWithDefaultValues));
 			var method = typeData.GetMethod("MethodWithDecimals");
 
-			Assert.AreEqual(null, method.Parameters[0].DefaultValue);
-			Assert.AreEqual(0m, method.Parameters[1].DefaultValue);
+			Assert.Null(method.Parameters[0].DefaultValue);
+			Assert.Equal(0m, method.Parameters[1].DefaultValue);
 		}
 
 		#endregion // NullableDecimalDefaultValueTests
 
 		#region NullableEnumDefaultValueTests
 
-		[TestMethod]
+		[Fact]
 		public void NullableEnumDefaultValueTests()
 		{
-			var assembly = AssemblyData.FromAssembly(typeof(DefaultValueInfoTests).Assembly);
-			var typeData = TypeDefinitionData.FromType(typeof(MethodWithDefaultValues));
+			var context = MetadataResolutionContext.CreateFromTypes(typeof(DefaultValueInfoTests));
+			var typeData = context.GetTypeDefinitionData(typeof(MethodWithDefaultValues));
 			var method = typeData.GetMethod("MethodWithEnums");
 
-			Assert.AreEqual(null, method.Parameters[0].DefaultValue);
-			Assert.AreEqual((ulong)DateTimeKind.Local, method.Parameters[1].DefaultValue);
+			Assert.Null(method.Parameters[0].DefaultValue);
+			Assert.Equal((ulong)DateTimeKind.Local, method.Parameters[1].DefaultValue);
 		}
 
 		#endregion // NullableEnumDefaultValueTests
 
 		#region NullableIntDefaultValueTests
 
-		[TestMethod]
+		[Fact]
 		public void NullableIntDefaultValueTests()
 		{
-			var assembly = AssemblyData.FromAssembly(typeof(DefaultValueInfoTests).Assembly);
-			var typeData = TypeDefinitionData.FromType(typeof(MethodWithDefaultValues));
+			var context = MetadataResolutionContext.CreateFromTypes(typeof(DefaultValueInfoTests));
+			var typeData = context.GetTypeDefinitionData(typeof(MethodWithDefaultValues));
 			var method = typeData.GetMethod("MethodWithInts");
 
-			Assert.AreEqual(null, method.Parameters[0].DefaultValue);
-			Assert.AreEqual(0, method.Parameters[1].DefaultValue);
+			Assert.Null(method.Parameters[0].DefaultValue);
+			Assert.Equal(0, method.Parameters[1].DefaultValue);
 		}
 
 		#endregion // NullableIntDefaultValueTests

@@ -2,6 +2,7 @@
     MIT License
 
     Copyright(c) 2014-2018 Infragistics, Inc.
+    Copyright 2018 Google LLC
 
     Permission is hereby granted, free of charge, to any person obtaining a copy
     of this software and associated documentation files (the "Software"), to deal
@@ -24,7 +25,7 @@
 
 using BreakingChangesDetector.BreakingChanges;
 using BreakingChangesDetector.MetadataItems;
-using Microsoft.VisualStudio.TestTools.UnitTesting;
+using Xunit;
 using System;
 using System.Collections.Generic;
 using System.Linq;
@@ -33,48 +34,47 @@ using System.Threading.Tasks;
 
 namespace BreakingChangesDetector.UnitTests.BreakingChangesTests
 {
-	[TestClass]
 	public class RemovedPropertyAccessorsTests
 	{
 		#region PropertyTests
 
-		[TestMethod]
+		[Fact]
 		public void PropertyTests()
 		{
-			var assembly = AssemblyData.FromAssembly(typeof(ChangedMemberTypeTests).Assembly);
-			var PropertyReadOnly = TypeDefinitionData.FromType(typeof(PropertyReadOnly));
-			var PropertyReadOnlyPublic = TypeDefinitionData.FromType(typeof(PropertyReadOnlyPublic));
-			var PropertyReadWrite = TypeDefinitionData.FromType(typeof(PropertyReadWrite));
-			var PropertyWriteOnly = TypeDefinitionData.FromType(typeof(PropertyWriteOnly));
-			var PropertyWriteOnlyPublic = TypeDefinitionData.FromType(typeof(PropertyWriteOnlyPublic));
+			var context = MetadataResolutionContext.CreateFromTypes(typeof(ChangedMemberTypeTests));
+			var PropertyReadOnly = context.GetTypeDefinitionData(typeof(PropertyReadOnly));
+			var PropertyReadOnlyPublic = context.GetTypeDefinitionData(typeof(PropertyReadOnlyPublic));
+			var PropertyReadWrite = context.GetTypeDefinitionData(typeof(PropertyReadWrite));
+			var PropertyWriteOnly = context.GetTypeDefinitionData(typeof(PropertyWriteOnly));
+			var PropertyWriteOnlyPublic = context.GetTypeDefinitionData(typeof(PropertyWriteOnlyPublic));
 			
 			var breakingChanges = MetadataComparer.CompareTypes(PropertyReadWrite, PropertyReadOnly);
-			Assert.AreEqual(1, breakingChanges.Count, "There should be one breaking change when changing a read/write Property to read-only.");
-			Assert.AreEqual(BreakingChangeKind.RemovedPropertyAccessors, breakingChanges[0].BreakingChangeKind, "The BreakingChangeKind is incorrect.");
-			Assert.AreEqual(PropertyReadWrite.GetMember("Property"), breakingChanges[0].OldItem, "The OldItem is incorrect.");
-			Assert.AreEqual(PropertyReadOnly.GetMember("Property"), breakingChanges[0].NewItem, "The NewItem is incorrect.");
-			Assert.IsNull(breakingChanges[0].AssociatedData, "The AssociatedData is incorrect.");
+			AssertX.Equal(1, breakingChanges.Count, "There should be one breaking change when changing a read/write Property to read-only.");
+			AssertX.Equal(BreakingChangeKind.RemovedPropertyAccessors, breakingChanges[0].BreakingChangeKind, "The BreakingChangeKind is incorrect.");
+			AssertX.Equal(PropertyReadWrite.GetMember("Property"), breakingChanges[0].OldItem, "The OldItem is incorrect.");
+			AssertX.Equal(PropertyReadOnly.GetMember("Property"), breakingChanges[0].NewItem, "The NewItem is incorrect.");
+			AssertX.Null(breakingChanges[0].AssociatedData, "The AssociatedData is incorrect.");
 
 			breakingChanges = MetadataComparer.CompareTypes(PropertyReadWrite, PropertyReadOnlyPublic);
-			Assert.AreEqual(1, breakingChanges.Count, "There should be one breaking change when changing a read/write Property to read-only.");
-			Assert.AreEqual(BreakingChangeKind.RemovedPropertyAccessors, breakingChanges[0].BreakingChangeKind, "The BreakingChangeKind is incorrect.");
-			Assert.AreEqual(PropertyReadWrite.GetMember("Property"), breakingChanges[0].OldItem, "The OldItem is incorrect.");
-			Assert.AreEqual(PropertyReadOnlyPublic.GetMember("Property"), breakingChanges[0].NewItem, "The NewItem is incorrect.");
-			Assert.IsNull(breakingChanges[0].AssociatedData, "The AssociatedData is incorrect.");
+			AssertX.Equal(1, breakingChanges.Count, "There should be one breaking change when changing a read/write Property to read-only.");
+			AssertX.Equal(BreakingChangeKind.RemovedPropertyAccessors, breakingChanges[0].BreakingChangeKind, "The BreakingChangeKind is incorrect.");
+			AssertX.Equal(PropertyReadWrite.GetMember("Property"), breakingChanges[0].OldItem, "The OldItem is incorrect.");
+			AssertX.Equal(PropertyReadOnlyPublic.GetMember("Property"), breakingChanges[0].NewItem, "The NewItem is incorrect.");
+			AssertX.Null(breakingChanges[0].AssociatedData, "The AssociatedData is incorrect.");
 
 			breakingChanges = MetadataComparer.CompareTypes(PropertyReadWrite, PropertyWriteOnly);
-			Assert.AreEqual(1, breakingChanges.Count, "There should be one breaking change when changing a read/write Property to write-only.");
-			Assert.AreEqual(BreakingChangeKind.RemovedPropertyAccessors, breakingChanges[0].BreakingChangeKind, "The BreakingChangeKind is incorrect.");
-			Assert.AreEqual(PropertyReadWrite.GetMember("Property"), breakingChanges[0].OldItem, "The OldItem is incorrect.");
-			Assert.AreEqual(PropertyWriteOnly.GetMember("Property"), breakingChanges[0].NewItem, "The NewItem is incorrect.");
-			Assert.IsNull(breakingChanges[0].AssociatedData, "The AssociatedData is incorrect.");
+			AssertX.Equal(1, breakingChanges.Count, "There should be one breaking change when changing a read/write Property to write-only.");
+			AssertX.Equal(BreakingChangeKind.RemovedPropertyAccessors, breakingChanges[0].BreakingChangeKind, "The BreakingChangeKind is incorrect.");
+			AssertX.Equal(PropertyReadWrite.GetMember("Property"), breakingChanges[0].OldItem, "The OldItem is incorrect.");
+			AssertX.Equal(PropertyWriteOnly.GetMember("Property"), breakingChanges[0].NewItem, "The NewItem is incorrect.");
+			AssertX.Null(breakingChanges[0].AssociatedData, "The AssociatedData is incorrect.");
 
 			breakingChanges = MetadataComparer.CompareTypes(PropertyReadWrite, PropertyWriteOnlyPublic);
-			Assert.AreEqual(1, breakingChanges.Count, "There should be one breaking change when changing a read/write Property to write-only.");
-			Assert.AreEqual(BreakingChangeKind.RemovedPropertyAccessors, breakingChanges[0].BreakingChangeKind, "The BreakingChangeKind is incorrect.");
-			Assert.AreEqual(PropertyReadWrite.GetMember("Property"), breakingChanges[0].OldItem, "The OldItem is incorrect.");
-			Assert.AreEqual(PropertyWriteOnlyPublic.GetMember("Property"), breakingChanges[0].NewItem, "The NewItem is incorrect.");
-			Assert.IsNull(breakingChanges[0].AssociatedData, "The AssociatedData is incorrect.");
+			AssertX.Equal(1, breakingChanges.Count, "There should be one breaking change when changing a read/write Property to write-only.");
+			AssertX.Equal(BreakingChangeKind.RemovedPropertyAccessors, breakingChanges[0].BreakingChangeKind, "The BreakingChangeKind is incorrect.");
+			AssertX.Equal(PropertyReadWrite.GetMember("Property"), breakingChanges[0].OldItem, "The OldItem is incorrect.");
+			AssertX.Equal(PropertyWriteOnlyPublic.GetMember("Property"), breakingChanges[0].NewItem, "The NewItem is incorrect.");
+			AssertX.Null(breakingChanges[0].AssociatedData, "The AssociatedData is incorrect.");
 		}
 
 		#endregion // PropertyTests

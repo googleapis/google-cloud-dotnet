@@ -2,6 +2,7 @@
     MIT License
 
     Copyright(c) 2014-2018 Infragistics, Inc.
+    Copyright 2018 Google LLC
 
     Permission is hereby granted, free of charge, to any person obtaining a copy
     of this software and associated documentation files (the "Software"), to deal
@@ -22,7 +23,7 @@
     SOFTWARE.
 */
 
-using Mono.Cecil;
+using Microsoft.CodeAnalysis;
 using System;
 using System.Collections.Generic;
 using System.Linq;
@@ -46,10 +47,10 @@ namespace BreakingChangesDetector.MetadataItems
 			this.Parameters = parameters;
 		}
 
-		internal MethodDataBase(MethodDefinition methodDefinition, MemberAccessibility accessibility, DeclaringTypeData declaringType)
-			: base(methodDefinition, accessibility, methodDefinition.ReturnType, methodDefinition.IsReturnTypeDynamic(), Utilities.GetMemberFlags(methodDefinition), declaringType)
+		internal MethodDataBase(IMethodSymbol methodSymbol, MemberAccessibility accessibility, DeclaringTypeData declaringType)
+			: base(methodSymbol, accessibility, methodSymbol.ReturnType, methodSymbol.IsReturnTypeDynamic(), Utilities.GetMemberFlags(methodSymbol), declaringType)
 		{
-			this.Parameters = new ParameterCollection(methodDefinition.Parameters, this);
+			this.Parameters = new ParameterCollection(methodSymbol.Parameters, this);
 		} 
 
 		#endregion // Constructor

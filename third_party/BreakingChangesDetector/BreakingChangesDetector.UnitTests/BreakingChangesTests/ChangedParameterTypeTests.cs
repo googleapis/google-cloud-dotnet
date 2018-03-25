@@ -2,6 +2,7 @@
     MIT License
 
     Copyright(c) 2014-2018 Infragistics, Inc.
+    Copyright 2018 Google LLC
 
     Permission is hereby granted, free of charge, to any person obtaining a copy
     of this software and associated documentation files (the "Software"), to deal
@@ -24,363 +25,363 @@
 
 using System;
 using System.Linq;
-using Microsoft.VisualStudio.TestTools.UnitTesting;
+using Xunit;
 using BreakingChangesDetector.MetadataItems;
 using BreakingChangesDetector.BreakingChanges;
 
 namespace BreakingChangesDetector.UnitTests.BreakingChangesTests
 {
-	[TestClass]
+	
 	public class ChangedParameterTypeTests
 	{
 		#region ConstructorTests
 
-		[TestMethod]
+		[Fact]
 		public void ConstructorTests()
 		{
-			var assembly = AssemblyData.FromAssembly(typeof(ChangedParameterTypeTests).Assembly);
-			var ConstructorWithIntParameter = TypeDefinitionData.FromType(typeof(ConstructorWithIntParameter));
-			var ConstructorWithStringParameter = TypeDefinitionData.FromType(typeof(ConstructorWithStringParameter));
-			var ConstructorWithDynamicParameter = TypeDefinitionData.FromType(typeof(ConstructorWithDynamicParameter));
+			var context = MetadataResolutionContext.CreateFromTypes(typeof(ChangedParameterTypeTests));
+			var ConstructorWithIntParameter = context.GetTypeDefinitionData(typeof(ConstructorWithIntParameter));
+			var ConstructorWithStringParameter = context.GetTypeDefinitionData(typeof(ConstructorWithStringParameter));
+			var ConstructorWithDynamicParameter = context.GetTypeDefinitionData(typeof(ConstructorWithDynamicParameter));
 			
 			var breakingChanges = MetadataComparer.CompareTypes(ConstructorWithIntParameter, ConstructorWithStringParameter);
-			Assert.AreEqual(1, breakingChanges.Count, "There should be one breaking change when the parameter type changes.");
-			Assert.AreEqual(BreakingChangeKind.ChangedParameterType, breakingChanges[0].BreakingChangeKind, "The BreakingChangeKind is incorrect.");
-			Assert.AreEqual(((IParameterizedItem)ConstructorWithIntParameter.GetMember(".ctor")).Parameters[0], breakingChanges[0].OldItem, "The OldItem is incorrect.");
-			Assert.AreEqual(((IParameterizedItem)ConstructorWithStringParameter.GetMember(".ctor")).Parameters[0], breakingChanges[0].NewItem, "The NewItem is incorrect.");
-			Assert.AreEqual(ConstructorWithStringParameter.GetMember(".ctor"), breakingChanges[0].AssociatedData, "The AssociatedData is incorrect.");
+			AssertX.Equal(1, breakingChanges.Count, "There should be one breaking change when the parameter type changes.");
+			AssertX.Equal(BreakingChangeKind.ChangedParameterType, breakingChanges[0].BreakingChangeKind, "The BreakingChangeKind is incorrect.");
+			AssertX.Equal(((IParameterizedItem)ConstructorWithIntParameter.GetMember(".ctor")).Parameters[0], breakingChanges[0].OldItem, "The OldItem is incorrect.");
+			AssertX.Equal(((IParameterizedItem)ConstructorWithStringParameter.GetMember(".ctor")).Parameters[0], breakingChanges[0].NewItem, "The NewItem is incorrect.");
+			AssertX.Equal(ConstructorWithStringParameter.GetMember(".ctor"), breakingChanges[0].AssociatedData, "The AssociatedData is incorrect.");
 
 			breakingChanges = MetadataComparer.CompareTypes(ConstructorWithStringParameter, ConstructorWithIntParameter);
-			Assert.AreEqual(1, breakingChanges.Count, "There should be one breaking change when the parameter type changes.");
-			Assert.AreEqual(BreakingChangeKind.ChangedParameterType, breakingChanges[0].BreakingChangeKind, "The BreakingChangeKind is incorrect.");
-			Assert.AreEqual(((IParameterizedItem)ConstructorWithStringParameter.GetMember(".ctor")).Parameters[0], breakingChanges[0].OldItem, "The OldItem is incorrect.");
-			Assert.AreEqual(((IParameterizedItem)ConstructorWithIntParameter.GetMember(".ctor")).Parameters[0], breakingChanges[0].NewItem, "The NewItem is incorrect.");
-			Assert.AreEqual(ConstructorWithIntParameter.GetMember(".ctor"), breakingChanges[0].AssociatedData, "The AssociatedData is incorrect.");
+			AssertX.Equal(1, breakingChanges.Count, "There should be one breaking change when the parameter type changes.");
+			AssertX.Equal(BreakingChangeKind.ChangedParameterType, breakingChanges[0].BreakingChangeKind, "The BreakingChangeKind is incorrect.");
+			AssertX.Equal(((IParameterizedItem)ConstructorWithStringParameter.GetMember(".ctor")).Parameters[0], breakingChanges[0].OldItem, "The OldItem is incorrect.");
+			AssertX.Equal(((IParameterizedItem)ConstructorWithIntParameter.GetMember(".ctor")).Parameters[0], breakingChanges[0].NewItem, "The NewItem is incorrect.");
+			AssertX.Equal(ConstructorWithIntParameter.GetMember(".ctor"), breakingChanges[0].AssociatedData, "The AssociatedData is incorrect.");
 
 			breakingChanges = MetadataComparer.CompareTypes(ConstructorWithIntParameter, ConstructorWithDynamicParameter);
-			Assert.AreEqual(0, breakingChanges.Count, "There should be no breaking changes when the Parameter type changes to dynamic.");
+			AssertX.Equal(0, breakingChanges.Count, "There should be no breaking changes when the Parameter type changes to dynamic.");
 
 			breakingChanges = MetadataComparer.CompareTypes(ConstructorWithDynamicParameter, ConstructorWithIntParameter);
-			Assert.AreEqual(1, breakingChanges.Count, "There should be one breaking change when the Parameter type changes.");
-			Assert.AreEqual(BreakingChangeKind.ChangedParameterType, breakingChanges[0].BreakingChangeKind, "The BreakingChangeKind is incorrect.");
-			Assert.AreEqual(((IParameterizedItem)ConstructorWithDynamicParameter.GetMember(".ctor")).Parameters[0], breakingChanges[0].OldItem, "The OldItem is incorrect.");
-			Assert.AreEqual(((IParameterizedItem)ConstructorWithIntParameter.GetMember(".ctor")).Parameters[0], breakingChanges[0].NewItem, "The NewItem is incorrect.");
-			Assert.AreEqual(ConstructorWithIntParameter.GetMember(".ctor"), breakingChanges[0].AssociatedData, "The AssociatedData is incorrect.");
+			AssertX.Equal(1, breakingChanges.Count, "There should be one breaking change when the Parameter type changes.");
+			AssertX.Equal(BreakingChangeKind.ChangedParameterType, breakingChanges[0].BreakingChangeKind, "The BreakingChangeKind is incorrect.");
+			AssertX.Equal(((IParameterizedItem)ConstructorWithDynamicParameter.GetMember(".ctor")).Parameters[0], breakingChanges[0].OldItem, "The OldItem is incorrect.");
+			AssertX.Equal(((IParameterizedItem)ConstructorWithIntParameter.GetMember(".ctor")).Parameters[0], breakingChanges[0].NewItem, "The NewItem is incorrect.");
+			AssertX.Equal(ConstructorWithIntParameter.GetMember(".ctor"), breakingChanges[0].AssociatedData, "The AssociatedData is incorrect.");
 
 			breakingChanges = MetadataComparer.CompareTypes(ConstructorWithStringParameter, ConstructorWithDynamicParameter);
-			Assert.AreEqual(0, breakingChanges.Count, "There should be no breaking changes when the Parameter type changes to dynamic.");
+			AssertX.Equal(0, breakingChanges.Count, "There should be no breaking changes when the Parameter type changes to dynamic.");
 
 			breakingChanges = MetadataComparer.CompareTypes(ConstructorWithDynamicParameter, ConstructorWithStringParameter);
-			Assert.AreEqual(1, breakingChanges.Count, "There should be one breaking change when the Parameter type changes.");
-			Assert.AreEqual(BreakingChangeKind.ChangedParameterType, breakingChanges[0].BreakingChangeKind, "The BreakingChangeKind is incorrect.");
-			Assert.AreEqual(((IParameterizedItem)ConstructorWithDynamicParameter.GetMember(".ctor")).Parameters[0], breakingChanges[0].OldItem, "The OldItem is incorrect.");
-			Assert.AreEqual(((IParameterizedItem)ConstructorWithStringParameter.GetMember(".ctor")).Parameters[0], breakingChanges[0].NewItem, "The NewItem is incorrect.");
-			Assert.AreEqual(ConstructorWithStringParameter.GetMember(".ctor"), breakingChanges[0].AssociatedData, "The AssociatedData is incorrect.");
+			AssertX.Equal(1, breakingChanges.Count, "There should be one breaking change when the Parameter type changes.");
+			AssertX.Equal(BreakingChangeKind.ChangedParameterType, breakingChanges[0].BreakingChangeKind, "The BreakingChangeKind is incorrect.");
+			AssertX.Equal(((IParameterizedItem)ConstructorWithDynamicParameter.GetMember(".ctor")).Parameters[0], breakingChanges[0].OldItem, "The OldItem is incorrect.");
+			AssertX.Equal(((IParameterizedItem)ConstructorWithStringParameter.GetMember(".ctor")).Parameters[0], breakingChanges[0].NewItem, "The NewItem is incorrect.");
+			AssertX.Equal(ConstructorWithStringParameter.GetMember(".ctor"), breakingChanges[0].AssociatedData, "The AssociatedData is incorrect.");
 		}
 
 		#endregion // ConstructorTests
 
 		#region IndexerTests
 
-		[TestMethod]
+		[Fact]
 		public void IndexerTests()
 		{
-			var assembly = AssemblyData.FromAssembly(typeof(ChangedParameterTypeTests).Assembly);
-			var IndexerWithIntParameter = TypeDefinitionData.FromType(typeof(IndexerWithIntParameter));
-			var IndexerWithStringParameter = TypeDefinitionData.FromType(typeof(IndexerWithStringParameter));
-			var IndexerWithDynamicParameter = TypeDefinitionData.FromType(typeof(IndexerWithDynamicParameter));
+			var context = MetadataResolutionContext.CreateFromTypes(typeof(ChangedParameterTypeTests));
+			var IndexerWithIntParameter = context.GetTypeDefinitionData(typeof(IndexerWithIntParameter));
+			var IndexerWithStringParameter = context.GetTypeDefinitionData(typeof(IndexerWithStringParameter));
+			var IndexerWithDynamicParameter = context.GetTypeDefinitionData(typeof(IndexerWithDynamicParameter));
 			
 			var breakingChanges = MetadataComparer.CompareTypes(IndexerWithIntParameter, IndexerWithStringParameter);
-			Assert.AreEqual(1, breakingChanges.Count, "There should be one breaking change when the parameter type changes.");
-			Assert.AreEqual(BreakingChangeKind.ChangedParameterType, breakingChanges[0].BreakingChangeKind, "The BreakingChangeKind is incorrect.");
-			Assert.AreEqual(((IParameterizedItem)IndexerWithIntParameter.GetMember("Item")).Parameters[0], breakingChanges[0].OldItem, "The OldItem is incorrect.");
-			Assert.AreEqual(((IParameterizedItem)IndexerWithStringParameter.GetMember("Item")).Parameters[0], breakingChanges[0].NewItem, "The NewItem is incorrect.");
-			Assert.AreEqual(IndexerWithStringParameter.GetMember("Item"), breakingChanges[0].AssociatedData, "The AssociatedData is incorrect.");
+			AssertX.Equal(1, breakingChanges.Count, "There should be one breaking change when the parameter type changes.");
+			AssertX.Equal(BreakingChangeKind.ChangedParameterType, breakingChanges[0].BreakingChangeKind, "The BreakingChangeKind is incorrect.");
+			AssertX.Equal(((IParameterizedItem)IndexerWithIntParameter.GetMember("Item")).Parameters[0], breakingChanges[0].OldItem, "The OldItem is incorrect.");
+			AssertX.Equal(((IParameterizedItem)IndexerWithStringParameter.GetMember("Item")).Parameters[0], breakingChanges[0].NewItem, "The NewItem is incorrect.");
+			AssertX.Equal(IndexerWithStringParameter.GetMember("Item"), breakingChanges[0].AssociatedData, "The AssociatedData is incorrect.");
 
 			breakingChanges = MetadataComparer.CompareTypes(IndexerWithStringParameter, IndexerWithIntParameter);
-			Assert.AreEqual(1, breakingChanges.Count, "There should be one breaking change when the parameter type changes.");
-			Assert.AreEqual(BreakingChangeKind.ChangedParameterType, breakingChanges[0].BreakingChangeKind, "The BreakingChangeKind is incorrect.");
-			Assert.AreEqual(((IParameterizedItem)IndexerWithStringParameter.GetMember("Item")).Parameters[0], breakingChanges[0].OldItem, "The OldItem is incorrect.");
-			Assert.AreEqual(((IParameterizedItem)IndexerWithIntParameter.GetMember("Item")).Parameters[0], breakingChanges[0].NewItem, "The NewItem is incorrect.");
-			Assert.AreEqual(IndexerWithIntParameter.GetMember("Item"), breakingChanges[0].AssociatedData, "The AssociatedData is incorrect.");
+			AssertX.Equal(1, breakingChanges.Count, "There should be one breaking change when the parameter type changes.");
+			AssertX.Equal(BreakingChangeKind.ChangedParameterType, breakingChanges[0].BreakingChangeKind, "The BreakingChangeKind is incorrect.");
+			AssertX.Equal(((IParameterizedItem)IndexerWithStringParameter.GetMember("Item")).Parameters[0], breakingChanges[0].OldItem, "The OldItem is incorrect.");
+			AssertX.Equal(((IParameterizedItem)IndexerWithIntParameter.GetMember("Item")).Parameters[0], breakingChanges[0].NewItem, "The NewItem is incorrect.");
+			AssertX.Equal(IndexerWithIntParameter.GetMember("Item"), breakingChanges[0].AssociatedData, "The AssociatedData is incorrect.");
 
 			breakingChanges = MetadataComparer.CompareTypes(IndexerWithIntParameter, IndexerWithDynamicParameter);
-			Assert.AreEqual(0, breakingChanges.Count, "There should be no breaking changes when the Parameter type changes to dynamic.");
+			AssertX.Equal(0, breakingChanges.Count, "There should be no breaking changes when the Parameter type changes to dynamic.");
 
 			breakingChanges = MetadataComparer.CompareTypes(IndexerWithDynamicParameter, IndexerWithIntParameter);
-			Assert.AreEqual(1, breakingChanges.Count, "There should be one breaking change when the Parameter type changes.");
-			Assert.AreEqual(BreakingChangeKind.ChangedParameterType, breakingChanges[0].BreakingChangeKind, "The BreakingChangeKind is incorrect.");
-			Assert.AreEqual(((IParameterizedItem)IndexerWithDynamicParameter.GetMember("Item")).Parameters[0], breakingChanges[0].OldItem, "The OldItem is incorrect.");
-			Assert.AreEqual(((IParameterizedItem)IndexerWithIntParameter.GetMember("Item")).Parameters[0], breakingChanges[0].NewItem, "The NewItem is incorrect.");
-			Assert.AreEqual(IndexerWithIntParameter.GetMember("Item"), breakingChanges[0].AssociatedData, "The AssociatedData is incorrect.");
+			AssertX.Equal(1, breakingChanges.Count, "There should be one breaking change when the Parameter type changes.");
+			AssertX.Equal(BreakingChangeKind.ChangedParameterType, breakingChanges[0].BreakingChangeKind, "The BreakingChangeKind is incorrect.");
+			AssertX.Equal(((IParameterizedItem)IndexerWithDynamicParameter.GetMember("Item")).Parameters[0], breakingChanges[0].OldItem, "The OldItem is incorrect.");
+			AssertX.Equal(((IParameterizedItem)IndexerWithIntParameter.GetMember("Item")).Parameters[0], breakingChanges[0].NewItem, "The NewItem is incorrect.");
+			AssertX.Equal(IndexerWithIntParameter.GetMember("Item"), breakingChanges[0].AssociatedData, "The AssociatedData is incorrect.");
 
 			breakingChanges = MetadataComparer.CompareTypes(IndexerWithStringParameter, IndexerWithDynamicParameter);
-			Assert.AreEqual(0, breakingChanges.Count, "There should be no breaking changes when the Parameter type changes to dynamic.");
+			AssertX.Equal(0, breakingChanges.Count, "There should be no breaking changes when the Parameter type changes to dynamic.");
 
 			breakingChanges = MetadataComparer.CompareTypes(IndexerWithDynamicParameter, IndexerWithStringParameter);
-			Assert.AreEqual(1, breakingChanges.Count, "There should be one breaking change when the Parameter type changes.");
-			Assert.AreEqual(BreakingChangeKind.ChangedParameterType, breakingChanges[0].BreakingChangeKind, "The BreakingChangeKind is incorrect.");
-			Assert.AreEqual(((IParameterizedItem)IndexerWithDynamicParameter.GetMember("Item")).Parameters[0], breakingChanges[0].OldItem, "The OldItem is incorrect.");
-			Assert.AreEqual(((IParameterizedItem)IndexerWithStringParameter.GetMember("Item")).Parameters[0], breakingChanges[0].NewItem, "The NewItem is incorrect.");
-			Assert.AreEqual(IndexerWithStringParameter.GetMember("Item"), breakingChanges[0].AssociatedData, "The AssociatedData is incorrect.");
+			AssertX.Equal(1, breakingChanges.Count, "There should be one breaking change when the Parameter type changes.");
+			AssertX.Equal(BreakingChangeKind.ChangedParameterType, breakingChanges[0].BreakingChangeKind, "The BreakingChangeKind is incorrect.");
+			AssertX.Equal(((IParameterizedItem)IndexerWithDynamicParameter.GetMember("Item")).Parameters[0], breakingChanges[0].OldItem, "The OldItem is incorrect.");
+			AssertX.Equal(((IParameterizedItem)IndexerWithStringParameter.GetMember("Item")).Parameters[0], breakingChanges[0].NewItem, "The NewItem is incorrect.");
+			AssertX.Equal(IndexerWithStringParameter.GetMember("Item"), breakingChanges[0].AssociatedData, "The AssociatedData is incorrect.");
 		}
 
 		#endregion // IndexerTests
 
 		#region ModiferRestrictionsTests
 
-		[TestMethod]
+		[Fact]
 		public void ModiferRestrictionsTests()
 		{
-			var assembly = AssemblyData.FromAssembly(typeof(ChangedParameterTypeTests).Assembly);
-			var methodWithRefParameterBase = TypeDefinitionData.FromType(typeof(MethodWithRefParameterBase));
-			var methodWithRefParameterDerived = TypeDefinitionData.FromType(typeof(MethodWithRefParameterDerived));
-			var methodWithOutParameterBase = TypeDefinitionData.FromType(typeof(MethodWithOutParameterBase));
-			var methodWithOutParameterDerived = TypeDefinitionData.FromType(typeof(MethodWithOutParameterDerived));
+			var context = MetadataResolutionContext.CreateFromTypes(typeof(ChangedParameterTypeTests));
+			var methodWithRefParameterBase = context.GetTypeDefinitionData(typeof(MethodWithRefParameterBase));
+			var methodWithRefParameterDerived = context.GetTypeDefinitionData(typeof(MethodWithRefParameterDerived));
+			var methodWithOutParameterBase = context.GetTypeDefinitionData(typeof(MethodWithOutParameterBase));
+			var methodWithOutParameterDerived = context.GetTypeDefinitionData(typeof(MethodWithOutParameterDerived));
 			
 			var breakingChanges = MetadataComparer.CompareTypes(methodWithRefParameterBase, methodWithRefParameterDerived);
-			Assert.AreEqual(1, breakingChanges.Count, "There should be one breaking change when the parameter type changes at all on a ref parameter.");
-			Assert.AreEqual(BreakingChangeKind.ChangedParameterType, breakingChanges[0].BreakingChangeKind, "The BreakingChangeKind is incorrect.");
-			Assert.AreEqual(((IParameterizedItem)methodWithRefParameterBase.GetMember("Method")).Parameters[0], breakingChanges[0].OldItem, "The OldItem is incorrect.");
-			Assert.AreEqual(((IParameterizedItem)methodWithRefParameterDerived.GetMember("Method")).Parameters[0], breakingChanges[0].NewItem, "The NewItem is incorrect.");
-			Assert.AreEqual(methodWithRefParameterDerived.GetMember("Method"), breakingChanges[0].AssociatedData, "The AssociatedData is incorrect.");
+			AssertX.Equal(1, breakingChanges.Count, "There should be one breaking change when the parameter type changes at all on a ref parameter.");
+			AssertX.Equal(BreakingChangeKind.ChangedParameterType, breakingChanges[0].BreakingChangeKind, "The BreakingChangeKind is incorrect.");
+			AssertX.Equal(((IParameterizedItem)methodWithRefParameterBase.GetMember("Method")).Parameters[0], breakingChanges[0].OldItem, "The OldItem is incorrect.");
+			AssertX.Equal(((IParameterizedItem)methodWithRefParameterDerived.GetMember("Method")).Parameters[0], breakingChanges[0].NewItem, "The NewItem is incorrect.");
+			AssertX.Equal(methodWithRefParameterDerived.GetMember("Method"), breakingChanges[0].AssociatedData, "The AssociatedData is incorrect.");
 
 			breakingChanges = MetadataComparer.CompareTypes(methodWithRefParameterDerived, methodWithRefParameterBase);
-			Assert.AreEqual(1, breakingChanges.Count, "There should be one breaking change when the parameter type changes at all on a ref parameter.");
-			Assert.AreEqual(BreakingChangeKind.ChangedParameterType, breakingChanges[0].BreakingChangeKind, "The BreakingChangeKind is incorrect.");
-			Assert.AreEqual(((IParameterizedItem)methodWithRefParameterDerived.GetMember("Method")).Parameters[0], breakingChanges[0].OldItem, "The OldItem is incorrect.");
-			Assert.AreEqual(((IParameterizedItem)methodWithRefParameterBase.GetMember("Method")).Parameters[0], breakingChanges[0].NewItem, "The NewItem is incorrect.");
-			Assert.AreEqual(methodWithRefParameterBase.GetMember("Method"), breakingChanges[0].AssociatedData, "The AssociatedData is incorrect.");
+			AssertX.Equal(1, breakingChanges.Count, "There should be one breaking change when the parameter type changes at all on a ref parameter.");
+			AssertX.Equal(BreakingChangeKind.ChangedParameterType, breakingChanges[0].BreakingChangeKind, "The BreakingChangeKind is incorrect.");
+			AssertX.Equal(((IParameterizedItem)methodWithRefParameterDerived.GetMember("Method")).Parameters[0], breakingChanges[0].OldItem, "The OldItem is incorrect.");
+			AssertX.Equal(((IParameterizedItem)methodWithRefParameterBase.GetMember("Method")).Parameters[0], breakingChanges[0].NewItem, "The NewItem is incorrect.");
+			AssertX.Equal(methodWithRefParameterBase.GetMember("Method"), breakingChanges[0].AssociatedData, "The AssociatedData is incorrect.");
 
 			breakingChanges = MetadataComparer.CompareTypes(methodWithOutParameterBase, methodWithOutParameterDerived);
-			Assert.AreEqual(1, breakingChanges.Count, "There should be one breaking change when the parameter type changes at all on an out parameter.");
-			Assert.AreEqual(BreakingChangeKind.ChangedParameterType, breakingChanges[0].BreakingChangeKind, "The BreakingChangeKind is incorrect.");
-			Assert.AreEqual(((IParameterizedItem)methodWithOutParameterBase.GetMember("Method")).Parameters[0], breakingChanges[0].OldItem, "The OldItem is incorrect.");
-			Assert.AreEqual(((IParameterizedItem)methodWithOutParameterDerived.GetMember("Method")).Parameters[0], breakingChanges[0].NewItem, "The NewItem is incorrect.");
-			Assert.AreEqual(methodWithOutParameterDerived.GetMember("Method"), breakingChanges[0].AssociatedData, "The AssociatedData is incorrect.");
+			AssertX.Equal(1, breakingChanges.Count, "There should be one breaking change when the parameter type changes at all on an out parameter.");
+			AssertX.Equal(BreakingChangeKind.ChangedParameterType, breakingChanges[0].BreakingChangeKind, "The BreakingChangeKind is incorrect.");
+			AssertX.Equal(((IParameterizedItem)methodWithOutParameterBase.GetMember("Method")).Parameters[0], breakingChanges[0].OldItem, "The OldItem is incorrect.");
+			AssertX.Equal(((IParameterizedItem)methodWithOutParameterDerived.GetMember("Method")).Parameters[0], breakingChanges[0].NewItem, "The NewItem is incorrect.");
+			AssertX.Equal(methodWithOutParameterDerived.GetMember("Method"), breakingChanges[0].AssociatedData, "The AssociatedData is incorrect.");
 
 			breakingChanges = MetadataComparer.CompareTypes(methodWithOutParameterDerived, methodWithOutParameterBase);
-			Assert.AreEqual(1, breakingChanges.Count, "There should be one breaking change when the parameter type changes at all on an out parameter.");
-			Assert.AreEqual(BreakingChangeKind.ChangedParameterType, breakingChanges[0].BreakingChangeKind, "The BreakingChangeKind is incorrect.");
-			Assert.AreEqual(((IParameterizedItem)methodWithOutParameterDerived.GetMember("Method")).Parameters[0], breakingChanges[0].OldItem, "The OldItem is incorrect.");
-			Assert.AreEqual(((IParameterizedItem)methodWithOutParameterBase.GetMember("Method")).Parameters[0], breakingChanges[0].NewItem, "The NewItem is incorrect.");
-			Assert.AreEqual(methodWithOutParameterBase.GetMember("Method"), breakingChanges[0].AssociatedData, "The AssociatedData is incorrect.");
+			AssertX.Equal(1, breakingChanges.Count, "There should be one breaking change when the parameter type changes at all on an out parameter.");
+			AssertX.Equal(BreakingChangeKind.ChangedParameterType, breakingChanges[0].BreakingChangeKind, "The BreakingChangeKind is incorrect.");
+			AssertX.Equal(((IParameterizedItem)methodWithOutParameterDerived.GetMember("Method")).Parameters[0], breakingChanges[0].OldItem, "The OldItem is incorrect.");
+			AssertX.Equal(((IParameterizedItem)methodWithOutParameterBase.GetMember("Method")).Parameters[0], breakingChanges[0].NewItem, "The NewItem is incorrect.");
+			AssertX.Equal(methodWithOutParameterBase.GetMember("Method"), breakingChanges[0].AssociatedData, "The AssociatedData is incorrect.");
 		}
 
 		#endregion // ModiferRestrictionsTests
 
 		#region MethodTests
 
-		[TestMethod]
+		[Fact]
 		public void MethodTests()
 		{
-			var assembly = AssemblyData.FromAssembly(typeof(ChangedParameterTypeTests).Assembly);
-			var MethodWithIntParameter = TypeDefinitionData.FromType(typeof(MethodWithIntParameter));
-			var MethodWithStringParameter = TypeDefinitionData.FromType(typeof(MethodWithStringParameter));
-			var MethodWithDynamicParameter = TypeDefinitionData.FromType(typeof(MethodWithDynamicParameter));
+			var context = MetadataResolutionContext.CreateFromTypes(typeof(ChangedParameterTypeTests));
+			var MethodWithIntParameter = context.GetTypeDefinitionData(typeof(MethodWithIntParameter));
+			var MethodWithStringParameter = context.GetTypeDefinitionData(typeof(MethodWithStringParameter));
+			var MethodWithDynamicParameter = context.GetTypeDefinitionData(typeof(MethodWithDynamicParameter));
 			
 			var breakingChanges = MetadataComparer.CompareTypes(MethodWithIntParameter, MethodWithStringParameter);
-			Assert.AreEqual(1, breakingChanges.Count, "There should be one breaking change when the parameter type changes.");
-			Assert.AreEqual(BreakingChangeKind.ChangedParameterType, breakingChanges[0].BreakingChangeKind, "The BreakingChangeKind is incorrect.");
-			Assert.AreEqual(((IParameterizedItem)MethodWithIntParameter.GetMember("Method")).Parameters[0], breakingChanges[0].OldItem, "The OldItem is incorrect.");
-			Assert.AreEqual(((IParameterizedItem)MethodWithStringParameter.GetMember("Method")).Parameters[0], breakingChanges[0].NewItem, "The NewItem is incorrect.");
-			Assert.AreEqual(MethodWithStringParameter.GetMember("Method"), breakingChanges[0].AssociatedData, "The AssociatedData is incorrect.");
+			AssertX.Equal(1, breakingChanges.Count, "There should be one breaking change when the parameter type changes.");
+			AssertX.Equal(BreakingChangeKind.ChangedParameterType, breakingChanges[0].BreakingChangeKind, "The BreakingChangeKind is incorrect.");
+			AssertX.Equal(((IParameterizedItem)MethodWithIntParameter.GetMember("Method")).Parameters[0], breakingChanges[0].OldItem, "The OldItem is incorrect.");
+			AssertX.Equal(((IParameterizedItem)MethodWithStringParameter.GetMember("Method")).Parameters[0], breakingChanges[0].NewItem, "The NewItem is incorrect.");
+			AssertX.Equal(MethodWithStringParameter.GetMember("Method"), breakingChanges[0].AssociatedData, "The AssociatedData is incorrect.");
 
 			breakingChanges = MetadataComparer.CompareTypes(MethodWithStringParameter, MethodWithIntParameter);
-			Assert.AreEqual(1, breakingChanges.Count, "There should be one breaking change when the parameter type changes.");
-			Assert.AreEqual(BreakingChangeKind.ChangedParameterType, breakingChanges[0].BreakingChangeKind, "The BreakingChangeKind is incorrect.");
-			Assert.AreEqual(((IParameterizedItem)MethodWithStringParameter.GetMember("Method")).Parameters[0], breakingChanges[0].OldItem, "The OldItem is incorrect.");
-			Assert.AreEqual(((IParameterizedItem)MethodWithIntParameter.GetMember("Method")).Parameters[0], breakingChanges[0].NewItem, "The NewItem is incorrect.");
-			Assert.AreEqual(MethodWithIntParameter.GetMember("Method"), breakingChanges[0].AssociatedData, "The AssociatedData is incorrect.");
+			AssertX.Equal(1, breakingChanges.Count, "There should be one breaking change when the parameter type changes.");
+			AssertX.Equal(BreakingChangeKind.ChangedParameterType, breakingChanges[0].BreakingChangeKind, "The BreakingChangeKind is incorrect.");
+			AssertX.Equal(((IParameterizedItem)MethodWithStringParameter.GetMember("Method")).Parameters[0], breakingChanges[0].OldItem, "The OldItem is incorrect.");
+			AssertX.Equal(((IParameterizedItem)MethodWithIntParameter.GetMember("Method")).Parameters[0], breakingChanges[0].NewItem, "The NewItem is incorrect.");
+			AssertX.Equal(MethodWithIntParameter.GetMember("Method"), breakingChanges[0].AssociatedData, "The AssociatedData is incorrect.");
 
 			breakingChanges = MetadataComparer.CompareTypes(MethodWithIntParameter, MethodWithDynamicParameter);
-			Assert.AreEqual(0, breakingChanges.Count, "There should be no breaking changes when the Parameter type changes to dynamic.");
+			AssertX.Equal(0, breakingChanges.Count, "There should be no breaking changes when the Parameter type changes to dynamic.");
 
 			breakingChanges = MetadataComparer.CompareTypes(MethodWithDynamicParameter, MethodWithIntParameter);
-			Assert.AreEqual(1, breakingChanges.Count, "There should be one breaking change when the Parameter type changes.");
-			Assert.AreEqual(BreakingChangeKind.ChangedParameterType, breakingChanges[0].BreakingChangeKind, "The BreakingChangeKind is incorrect.");
-			Assert.AreEqual(((IParameterizedItem)MethodWithDynamicParameter.GetMember("Method")).Parameters[0], breakingChanges[0].OldItem, "The OldItem is incorrect.");
-			Assert.AreEqual(((IParameterizedItem)MethodWithIntParameter.GetMember("Method")).Parameters[0], breakingChanges[0].NewItem, "The NewItem is incorrect.");
-			Assert.AreEqual(MethodWithIntParameter.GetMember("Method"), breakingChanges[0].AssociatedData, "The AssociatedData is incorrect.");
+			AssertX.Equal(1, breakingChanges.Count, "There should be one breaking change when the Parameter type changes.");
+			AssertX.Equal(BreakingChangeKind.ChangedParameterType, breakingChanges[0].BreakingChangeKind, "The BreakingChangeKind is incorrect.");
+			AssertX.Equal(((IParameterizedItem)MethodWithDynamicParameter.GetMember("Method")).Parameters[0], breakingChanges[0].OldItem, "The OldItem is incorrect.");
+			AssertX.Equal(((IParameterizedItem)MethodWithIntParameter.GetMember("Method")).Parameters[0], breakingChanges[0].NewItem, "The NewItem is incorrect.");
+			AssertX.Equal(MethodWithIntParameter.GetMember("Method"), breakingChanges[0].AssociatedData, "The AssociatedData is incorrect.");
 
 			breakingChanges = MetadataComparer.CompareTypes(MethodWithStringParameter, MethodWithDynamicParameter);
-			Assert.AreEqual(0, breakingChanges.Count, "There should be no breaking changes when the Parameter type changes to dynamic.");
+			AssertX.Equal(0, breakingChanges.Count, "There should be no breaking changes when the Parameter type changes to dynamic.");
 
 			breakingChanges = MetadataComparer.CompareTypes(MethodWithDynamicParameter, MethodWithStringParameter);
-			Assert.AreEqual(1, breakingChanges.Count, "There should be one breaking change when the Parameter type changes.");
-			Assert.AreEqual(BreakingChangeKind.ChangedParameterType, breakingChanges[0].BreakingChangeKind, "The BreakingChangeKind is incorrect.");
-			Assert.AreEqual(((IParameterizedItem)MethodWithDynamicParameter.GetMember("Method")).Parameters[0], breakingChanges[0].OldItem, "The OldItem is incorrect.");
-			Assert.AreEqual(((IParameterizedItem)MethodWithStringParameter.GetMember("Method")).Parameters[0], breakingChanges[0].NewItem, "The NewItem is incorrect.");
-			Assert.AreEqual(MethodWithStringParameter.GetMember("Method"), breakingChanges[0].AssociatedData, "The AssociatedData is incorrect.");
+			AssertX.Equal(1, breakingChanges.Count, "There should be one breaking change when the Parameter type changes.");
+			AssertX.Equal(BreakingChangeKind.ChangedParameterType, breakingChanges[0].BreakingChangeKind, "The BreakingChangeKind is incorrect.");
+			AssertX.Equal(((IParameterizedItem)MethodWithDynamicParameter.GetMember("Method")).Parameters[0], breakingChanges[0].OldItem, "The OldItem is incorrect.");
+			AssertX.Equal(((IParameterizedItem)MethodWithStringParameter.GetMember("Method")).Parameters[0], breakingChanges[0].NewItem, "The NewItem is incorrect.");
+			AssertX.Equal(MethodWithStringParameter.GetMember("Method"), breakingChanges[0].AssociatedData, "The AssociatedData is incorrect.");
 		}
 
 		#endregion // MethodTests
 
 		#region NestedTypeTests
 
-		[TestMethod]
+		[Fact]
 		public void NestedTypeTests()
 		{
-			var assembly = AssemblyData.FromAssembly(typeof(ChangedParameterTypeTests).Assembly);
-			var NestedDelegateWithIntParameter = TypeDefinitionData.FromType(typeof(NestedDelegateWithIntParameter));
-			var NestedDelegateWithStringParameter = TypeDefinitionData.FromType(typeof(NestedDelegateWithStringParameter));
-			var NestedDelegateWithDynamicParameter = TypeDefinitionData.FromType(typeof(NestedDelegateWithDynamicParameter));
+			var context = MetadataResolutionContext.CreateFromTypes(typeof(ChangedParameterTypeTests));
+			var NestedDelegateWithIntParameter = context.GetTypeDefinitionData(typeof(NestedDelegateWithIntParameter));
+			var NestedDelegateWithStringParameter = context.GetTypeDefinitionData(typeof(NestedDelegateWithStringParameter));
+			var NestedDelegateWithDynamicParameter = context.GetTypeDefinitionData(typeof(NestedDelegateWithDynamicParameter));
 			
 			var breakingChanges = MetadataComparer.CompareTypes(NestedDelegateWithIntParameter, NestedDelegateWithStringParameter);
-			Assert.AreEqual(1, breakingChanges.Count, "There should be one breaking change when the parameter type changes.");
-			Assert.AreEqual(BreakingChangeKind.ChangedParameterType, breakingChanges[0].BreakingChangeKind, "The BreakingChangeKind is incorrect.");
-			Assert.AreEqual(NestedDelegateWithIntParameter.GetNestedType("Delegate").DelegateParameters[0], breakingChanges[0].OldItem, "The OldItem is incorrect.");
-			Assert.AreEqual(NestedDelegateWithStringParameter.GetNestedType("Delegate").DelegateParameters[0], breakingChanges[0].NewItem, "The NewItem is incorrect.");
-			Assert.AreEqual(NestedDelegateWithStringParameter.GetNestedType("Delegate"), breakingChanges[0].AssociatedData, "The AssociatedData is incorrect.");
+			AssertX.Equal(1, breakingChanges.Count, "There should be one breaking change when the parameter type changes.");
+			AssertX.Equal(BreakingChangeKind.ChangedParameterType, breakingChanges[0].BreakingChangeKind, "The BreakingChangeKind is incorrect.");
+			AssertX.Equal(NestedDelegateWithIntParameter.GetNestedType("Delegate").DelegateParameters[0], breakingChanges[0].OldItem, "The OldItem is incorrect.");
+			AssertX.Equal(NestedDelegateWithStringParameter.GetNestedType("Delegate").DelegateParameters[0], breakingChanges[0].NewItem, "The NewItem is incorrect.");
+			AssertX.Equal(NestedDelegateWithStringParameter.GetNestedType("Delegate"), breakingChanges[0].AssociatedData, "The AssociatedData is incorrect.");
 
 			breakingChanges = MetadataComparer.CompareTypes(NestedDelegateWithStringParameter, NestedDelegateWithIntParameter);
-			Assert.AreEqual(1, breakingChanges.Count, "There should be one breaking change when the parameter type changes.");
-			Assert.AreEqual(BreakingChangeKind.ChangedParameterType, breakingChanges[0].BreakingChangeKind, "The BreakingChangeKind is incorrect.");
-			Assert.AreEqual(NestedDelegateWithStringParameter.GetNestedType("Delegate").DelegateParameters[0], breakingChanges[0].OldItem, "The OldItem is incorrect.");
-			Assert.AreEqual(NestedDelegateWithIntParameter.GetNestedType("Delegate").DelegateParameters[0], breakingChanges[0].NewItem, "The NewItem is incorrect.");
-			Assert.AreEqual(NestedDelegateWithIntParameter.GetNestedType("Delegate"), breakingChanges[0].AssociatedData, "The AssociatedData is incorrect.");
+			AssertX.Equal(1, breakingChanges.Count, "There should be one breaking change when the parameter type changes.");
+			AssertX.Equal(BreakingChangeKind.ChangedParameterType, breakingChanges[0].BreakingChangeKind, "The BreakingChangeKind is incorrect.");
+			AssertX.Equal(NestedDelegateWithStringParameter.GetNestedType("Delegate").DelegateParameters[0], breakingChanges[0].OldItem, "The OldItem is incorrect.");
+			AssertX.Equal(NestedDelegateWithIntParameter.GetNestedType("Delegate").DelegateParameters[0], breakingChanges[0].NewItem, "The NewItem is incorrect.");
+			AssertX.Equal(NestedDelegateWithIntParameter.GetNestedType("Delegate"), breakingChanges[0].AssociatedData, "The AssociatedData is incorrect.");
 
 			breakingChanges = MetadataComparer.CompareTypes(NestedDelegateWithIntParameter, NestedDelegateWithDynamicParameter);
-			Assert.AreEqual(0, breakingChanges.Count, "There should be no breaking changes when the Parameter type changes to dynamic.");
+			AssertX.Equal(0, breakingChanges.Count, "There should be no breaking changes when the Parameter type changes to dynamic.");
 
 			breakingChanges = MetadataComparer.CompareTypes(NestedDelegateWithDynamicParameter, NestedDelegateWithIntParameter);
-			Assert.AreEqual(1, breakingChanges.Count, "There should be one breaking change when the Parameter type changes.");
-			Assert.AreEqual(BreakingChangeKind.ChangedParameterType, breakingChanges[0].BreakingChangeKind, "The BreakingChangeKind is incorrect.");
-			Assert.AreEqual(((IParameterizedItem)NestedDelegateWithDynamicParameter.GetMember("Delegate")).Parameters[0], breakingChanges[0].OldItem, "The OldItem is incorrect.");
-			Assert.AreEqual(((IParameterizedItem)NestedDelegateWithIntParameter.GetMember("Delegate")).Parameters[0], breakingChanges[0].NewItem, "The NewItem is incorrect.");
-			Assert.AreEqual(NestedDelegateWithIntParameter.GetMember("Delegate"), breakingChanges[0].AssociatedData, "The AssociatedData is incorrect.");
+			AssertX.Equal(1, breakingChanges.Count, "There should be one breaking change when the Parameter type changes.");
+			AssertX.Equal(BreakingChangeKind.ChangedParameterType, breakingChanges[0].BreakingChangeKind, "The BreakingChangeKind is incorrect.");
+			AssertX.Equal(((IParameterizedItem)NestedDelegateWithDynamicParameter.GetMember("Delegate")).Parameters[0], breakingChanges[0].OldItem, "The OldItem is incorrect.");
+			AssertX.Equal(((IParameterizedItem)NestedDelegateWithIntParameter.GetMember("Delegate")).Parameters[0], breakingChanges[0].NewItem, "The NewItem is incorrect.");
+			AssertX.Equal(NestedDelegateWithIntParameter.GetMember("Delegate"), breakingChanges[0].AssociatedData, "The AssociatedData is incorrect.");
 
 			breakingChanges = MetadataComparer.CompareTypes(NestedDelegateWithStringParameter, NestedDelegateWithDynamicParameter);
-			Assert.AreEqual(0, breakingChanges.Count, "There should be no breaking changes when the Parameter type changes to dynamic.");
+			AssertX.Equal(0, breakingChanges.Count, "There should be no breaking changes when the Parameter type changes to dynamic.");
 
 			breakingChanges = MetadataComparer.CompareTypes(NestedDelegateWithDynamicParameter, NestedDelegateWithStringParameter);
-			Assert.AreEqual(1, breakingChanges.Count, "There should be one breaking change when the Parameter type changes.");
-			Assert.AreEqual(BreakingChangeKind.ChangedParameterType, breakingChanges[0].BreakingChangeKind, "The BreakingChangeKind is incorrect.");
-			Assert.AreEqual(((IParameterizedItem)NestedDelegateWithDynamicParameter.GetMember("Delegate")).Parameters[0], breakingChanges[0].OldItem, "The OldItem is incorrect.");
-			Assert.AreEqual(((IParameterizedItem)NestedDelegateWithStringParameter.GetMember("Delegate")).Parameters[0], breakingChanges[0].NewItem, "The NewItem is incorrect.");
-			Assert.AreEqual(NestedDelegateWithStringParameter.GetMember("Delegate"), breakingChanges[0].AssociatedData, "The AssociatedData is incorrect.");
+			AssertX.Equal(1, breakingChanges.Count, "There should be one breaking change when the Parameter type changes.");
+			AssertX.Equal(BreakingChangeKind.ChangedParameterType, breakingChanges[0].BreakingChangeKind, "The BreakingChangeKind is incorrect.");
+			AssertX.Equal(((IParameterizedItem)NestedDelegateWithDynamicParameter.GetMember("Delegate")).Parameters[0], breakingChanges[0].OldItem, "The OldItem is incorrect.");
+			AssertX.Equal(((IParameterizedItem)NestedDelegateWithStringParameter.GetMember("Delegate")).Parameters[0], breakingChanges[0].NewItem, "The NewItem is incorrect.");
+			AssertX.Equal(NestedDelegateWithStringParameter.GetMember("Delegate"), breakingChanges[0].AssociatedData, "The AssociatedData is incorrect.");
 		}
 
 		#endregion // NestedTypeTests
 
 		#region ParameterTypeContravarianceTests
 
-		[TestMethod]
+		[Fact]
 		public void ParameterTypeContravarianceTests()
 		{
-			var assembly = AssemblyData.FromAssembly(typeof(ChangedParameterTypeTests).Assembly);
-			var methodWithParameterBase = TypeDefinitionData.FromType(typeof(MethodWithParameterBase));
-			var methodWithParameterDerived = TypeDefinitionData.FromType(typeof(MethodWithParameterDerived));
+			var context = MetadataResolutionContext.CreateFromTypes(typeof(ChangedParameterTypeTests));
+			var methodWithParameterBase = context.GetTypeDefinitionData(typeof(MethodWithParameterBase));
+			var methodWithParameterDerived = context.GetTypeDefinitionData(typeof(MethodWithParameterDerived));
 			
 			var breakingChanges = MetadataComparer.CompareTypes(methodWithParameterBase, methodWithParameterDerived);
-			Assert.AreEqual(1, breakingChanges.Count, "There should be one breaking change when the parameter type changes.");
-			Assert.AreEqual(BreakingChangeKind.ChangedParameterType, breakingChanges[0].BreakingChangeKind, "The BreakingChangeKind is incorrect.");
-			Assert.AreEqual(((IParameterizedItem)methodWithParameterBase.GetMember("Method")).Parameters[0], breakingChanges[0].OldItem, "The OldItem is incorrect.");
-			Assert.AreEqual(((IParameterizedItem)methodWithParameterDerived.GetMember("Method")).Parameters[0], breakingChanges[0].NewItem, "The NewItem is incorrect.");
-			Assert.AreEqual(methodWithParameterDerived.GetMember("Method"), breakingChanges[0].AssociatedData, "The AssociatedData is incorrect.");
+			AssertX.Equal(1, breakingChanges.Count, "There should be one breaking change when the parameter type changes.");
+			AssertX.Equal(BreakingChangeKind.ChangedParameterType, breakingChanges[0].BreakingChangeKind, "The BreakingChangeKind is incorrect.");
+			AssertX.Equal(((IParameterizedItem)methodWithParameterBase.GetMember("Method")).Parameters[0], breakingChanges[0].OldItem, "The OldItem is incorrect.");
+			AssertX.Equal(((IParameterizedItem)methodWithParameterDerived.GetMember("Method")).Parameters[0], breakingChanges[0].NewItem, "The NewItem is incorrect.");
+			AssertX.Equal(methodWithParameterDerived.GetMember("Method"), breakingChanges[0].AssociatedData, "The AssociatedData is incorrect.");
 
 			breakingChanges = MetadataComparer.CompareTypes(methodWithParameterDerived, methodWithParameterBase);
-			Assert.AreEqual(0, breakingChanges.Count, "There should be no breaking changes when the parameter type changes to a base type.");
+			AssertX.Equal(0, breakingChanges.Count, "There should be no breaking changes when the parameter type changes to a base type.");
 		}
 
 		#endregion // ParameterTypeContravarianceTests
 
 		#region OperatorTests
 
-		[TestMethod]
+		[Fact]
 		public void OperatorTests()
 		{
-			var assembly = AssemblyData.FromAssembly(typeof(ChangedParameterTypeTests).Assembly);
-			var OperatorWithIntParameter = TypeDefinitionData.FromType(typeof(OperatorWithIntParameter));
-			var OperatorWithStringParameter = TypeDefinitionData.FromType(typeof(OperatorWithStringParameter));
-			var OperatorWithDynamicParameter = TypeDefinitionData.FromType(typeof(OperatorWithDynamicParameter));
+			var context = MetadataResolutionContext.CreateFromTypes(typeof(ChangedParameterTypeTests));
+			var OperatorWithIntParameter = context.GetTypeDefinitionData(typeof(OperatorWithIntParameter));
+			var OperatorWithStringParameter = context.GetTypeDefinitionData(typeof(OperatorWithStringParameter));
+			var OperatorWithDynamicParameter = context.GetTypeDefinitionData(typeof(OperatorWithDynamicParameter));
 			
 			var breakingChanges = MetadataComparer.CompareTypes(OperatorWithIntParameter, OperatorWithStringParameter);
 			breakingChanges = breakingChanges.Where(b => b.BreakingChangeKind == BreakingChangeKind.ChangedParameterType).ToList();
-			Assert.AreEqual(2, breakingChanges.Count, "There should be one breaking change when the parameter type changes.");
-			Assert.AreEqual(BreakingChangeKind.ChangedParameterType, breakingChanges[0].BreakingChangeKind, "The BreakingChangeKind is incorrect.");
-			Assert.AreEqual(((IParameterizedItem)OperatorWithIntParameter.GetMember("op_Addition")).Parameters[0], breakingChanges[0].OldItem, "The OldItem is incorrect.");
-			Assert.AreEqual(((IParameterizedItem)OperatorWithStringParameter.GetMember("op_Addition")).Parameters[0], breakingChanges[0].NewItem, "The NewItem is incorrect.");
-			Assert.AreEqual(OperatorWithStringParameter.GetMember("op_Addition"), breakingChanges[0].AssociatedData, "The AssociatedData is incorrect.");
+			AssertX.Equal(2, breakingChanges.Count, "There should be one breaking change when the parameter type changes.");
+			AssertX.Equal(BreakingChangeKind.ChangedParameterType, breakingChanges[0].BreakingChangeKind, "The BreakingChangeKind is incorrect.");
+			AssertX.Equal(((IParameterizedItem)OperatorWithIntParameter.GetMember("op_Addition")).Parameters[0], breakingChanges[0].OldItem, "The OldItem is incorrect.");
+			AssertX.Equal(((IParameterizedItem)OperatorWithStringParameter.GetMember("op_Addition")).Parameters[0], breakingChanges[0].NewItem, "The NewItem is incorrect.");
+			AssertX.Equal(OperatorWithStringParameter.GetMember("op_Addition"), breakingChanges[0].AssociatedData, "The AssociatedData is incorrect.");
 
 			breakingChanges = MetadataComparer.CompareTypes(OperatorWithStringParameter, OperatorWithIntParameter);
 			breakingChanges = breakingChanges.Where(b => b.BreakingChangeKind == BreakingChangeKind.ChangedParameterType).ToList();
-			Assert.AreEqual(2, breakingChanges.Count, "There should be one breaking change when the parameter type changes.");
-			Assert.AreEqual(BreakingChangeKind.ChangedParameterType, breakingChanges[0].BreakingChangeKind, "The BreakingChangeKind is incorrect.");
-			Assert.AreEqual(((IParameterizedItem)OperatorWithStringParameter.GetMember("op_Addition")).Parameters[0], breakingChanges[0].OldItem, "The OldItem is incorrect.");
-            Assert.AreEqual(((IParameterizedItem)OperatorWithIntParameter.GetMember("op_Addition")).Parameters[0], breakingChanges[0].NewItem, "The NewItem is incorrect.");
-			Assert.AreEqual(OperatorWithIntParameter.GetMember("op_Addition"), breakingChanges[0].AssociatedData, "The AssociatedData is incorrect.");
+			AssertX.Equal(2, breakingChanges.Count, "There should be one breaking change when the parameter type changes.");
+			AssertX.Equal(BreakingChangeKind.ChangedParameterType, breakingChanges[0].BreakingChangeKind, "The BreakingChangeKind is incorrect.");
+			AssertX.Equal(((IParameterizedItem)OperatorWithStringParameter.GetMember("op_Addition")).Parameters[0], breakingChanges[0].OldItem, "The OldItem is incorrect.");
+            AssertX.Equal(((IParameterizedItem)OperatorWithIntParameter.GetMember("op_Addition")).Parameters[0], breakingChanges[0].NewItem, "The NewItem is incorrect.");
+			AssertX.Equal(OperatorWithIntParameter.GetMember("op_Addition"), breakingChanges[0].AssociatedData, "The AssociatedData is incorrect.");
 
 			breakingChanges = MetadataComparer.CompareTypes(OperatorWithIntParameter, OperatorWithDynamicParameter);
 			breakingChanges = breakingChanges.Where(b => b.BreakingChangeKind == BreakingChangeKind.ChangedParameterType).ToList();
-			Assert.AreEqual(1, breakingChanges.Count, "There should be no breaking changes when the Parameter type changes to dynamic.");
+			AssertX.Equal(1, breakingChanges.Count, "There should be no breaking changes when the Parameter type changes to dynamic.");
 
 			breakingChanges = MetadataComparer.CompareTypes(OperatorWithDynamicParameter, OperatorWithIntParameter);
 			breakingChanges = breakingChanges.Where(b => b.BreakingChangeKind == BreakingChangeKind.ChangedParameterType).ToList();
-			Assert.AreEqual(2, breakingChanges.Count, "There should be one breaking change when the Parameter type changes.");
-			Assert.AreEqual(BreakingChangeKind.ChangedParameterType, breakingChanges[0].BreakingChangeKind, "The BreakingChangeKind is incorrect.");
-			Assert.AreEqual(((IParameterizedItem)OperatorWithDynamicParameter.GetMember("op_Addition")).Parameters[0], breakingChanges[0].OldItem, "The OldItem is incorrect.");
-			Assert.AreEqual(((IParameterizedItem)OperatorWithIntParameter.GetMember("op_Addition")).Parameters[0], breakingChanges[0].NewItem, "The NewItem is incorrect.");
-			Assert.AreEqual(OperatorWithIntParameter.GetMember("op_Addition"), breakingChanges[0].AssociatedData, "The AssociatedData is incorrect.");
+			AssertX.Equal(2, breakingChanges.Count, "There should be one breaking change when the Parameter type changes.");
+			AssertX.Equal(BreakingChangeKind.ChangedParameterType, breakingChanges[0].BreakingChangeKind, "The BreakingChangeKind is incorrect.");
+			AssertX.Equal(((IParameterizedItem)OperatorWithDynamicParameter.GetMember("op_Addition")).Parameters[0], breakingChanges[0].OldItem, "The OldItem is incorrect.");
+			AssertX.Equal(((IParameterizedItem)OperatorWithIntParameter.GetMember("op_Addition")).Parameters[0], breakingChanges[0].NewItem, "The NewItem is incorrect.");
+			AssertX.Equal(OperatorWithIntParameter.GetMember("op_Addition"), breakingChanges[0].AssociatedData, "The AssociatedData is incorrect.");
 
 			breakingChanges = MetadataComparer.CompareTypes(OperatorWithStringParameter, OperatorWithDynamicParameter);
 			breakingChanges = breakingChanges.Where(b => b.BreakingChangeKind == BreakingChangeKind.ChangedParameterType).ToList();
-			Assert.AreEqual(1, breakingChanges.Count, "There should be no breaking changes when the Parameter type changes to dynamic.");
+			AssertX.Equal(1, breakingChanges.Count, "There should be no breaking changes when the Parameter type changes to dynamic.");
 
 			breakingChanges = MetadataComparer.CompareTypes(OperatorWithDynamicParameter, OperatorWithStringParameter);
 			breakingChanges = breakingChanges.Where(b => b.BreakingChangeKind == BreakingChangeKind.ChangedParameterType).ToList();
-			Assert.AreEqual(2, breakingChanges.Count, "There should be one breaking change when the Parameter type changes.");
-			Assert.AreEqual(BreakingChangeKind.ChangedParameterType, breakingChanges[0].BreakingChangeKind, "The BreakingChangeKind is incorrect.");
-			Assert.AreEqual(((IParameterizedItem)OperatorWithDynamicParameter.GetMember("op_Addition")).Parameters[0], breakingChanges[0].OldItem, "The OldItem is incorrect.");
-			Assert.AreEqual(((IParameterizedItem)OperatorWithStringParameter.GetMember("op_Addition")).Parameters[0], breakingChanges[0].NewItem, "The NewItem is incorrect.");
-			Assert.AreEqual(OperatorWithStringParameter.GetMember("op_Addition"), breakingChanges[0].AssociatedData, "The AssociatedData is incorrect.");
+			AssertX.Equal(2, breakingChanges.Count, "There should be one breaking change when the Parameter type changes.");
+			AssertX.Equal(BreakingChangeKind.ChangedParameterType, breakingChanges[0].BreakingChangeKind, "The BreakingChangeKind is incorrect.");
+			AssertX.Equal(((IParameterizedItem)OperatorWithDynamicParameter.GetMember("op_Addition")).Parameters[0], breakingChanges[0].OldItem, "The OldItem is incorrect.");
+			AssertX.Equal(((IParameterizedItem)OperatorWithStringParameter.GetMember("op_Addition")).Parameters[0], breakingChanges[0].NewItem, "The NewItem is incorrect.");
+			AssertX.Equal(OperatorWithStringParameter.GetMember("op_Addition"), breakingChanges[0].AssociatedData, "The AssociatedData is incorrect.");
 		}
 
 		#endregion // OperatorTests
 
 		#region TypeTests
 
-		[TestMethod]
+		[Fact]
 		public void TypeTests()
 		{
-			var assembly = AssemblyData.FromAssembly(typeof(ChangedParameterTypeTests).Assembly);
-			var DelegateWithIntParameter = TypeDefinitionData.FromType(typeof(DelegateWithIntParameter));
-			var DelegateWithStringParameter = TypeDefinitionData.FromType(typeof(DelegateWithStringParameter));
-			var DelegateWithDynamicParameter = TypeDefinitionData.FromType(typeof(DelegateWithDynamicParameter));
+			var context = MetadataResolutionContext.CreateFromTypes(typeof(ChangedParameterTypeTests));
+			var DelegateWithIntParameter = context.GetTypeDefinitionData(typeof(DelegateWithIntParameter));
+			var DelegateWithStringParameter = context.GetTypeDefinitionData(typeof(DelegateWithStringParameter));
+			var DelegateWithDynamicParameter = context.GetTypeDefinitionData(typeof(DelegateWithDynamicParameter));
 			
 			var breakingChanges = MetadataComparer.CompareTypes(DelegateWithIntParameter, DelegateWithStringParameter);
-			Assert.AreEqual(1, breakingChanges.Count, "There should be one breaking change when the parameter type changes.");
-			Assert.AreEqual(BreakingChangeKind.ChangedParameterType, breakingChanges[0].BreakingChangeKind, "The BreakingChangeKind is incorrect.");
-			Assert.AreEqual(DelegateWithIntParameter.DelegateParameters[0], breakingChanges[0].OldItem, "The OldItem is incorrect.");
-			Assert.AreEqual(DelegateWithStringParameter.DelegateParameters[0], breakingChanges[0].NewItem, "The NewItem is incorrect.");
-			Assert.AreEqual(DelegateWithStringParameter, breakingChanges[0].AssociatedData, "The AssociatedData is incorrect.");
+			AssertX.Equal(1, breakingChanges.Count, "There should be one breaking change when the parameter type changes.");
+			AssertX.Equal(BreakingChangeKind.ChangedParameterType, breakingChanges[0].BreakingChangeKind, "The BreakingChangeKind is incorrect.");
+			AssertX.Equal(DelegateWithIntParameter.DelegateParameters[0], breakingChanges[0].OldItem, "The OldItem is incorrect.");
+			AssertX.Equal(DelegateWithStringParameter.DelegateParameters[0], breakingChanges[0].NewItem, "The NewItem is incorrect.");
+			AssertX.Equal(DelegateWithStringParameter, breakingChanges[0].AssociatedData, "The AssociatedData is incorrect.");
 
 			breakingChanges = MetadataComparer.CompareTypes(DelegateWithStringParameter, DelegateWithIntParameter);
-			Assert.AreEqual(1, breakingChanges.Count, "There should be one breaking change when the parameter type changes.");
-			Assert.AreEqual(BreakingChangeKind.ChangedParameterType, breakingChanges[0].BreakingChangeKind, "The BreakingChangeKind is incorrect.");
-			Assert.AreEqual(DelegateWithStringParameter.DelegateParameters[0], breakingChanges[0].OldItem, "The OldItem is incorrect.");
-			Assert.AreEqual(DelegateWithIntParameter.DelegateParameters[0], breakingChanges[0].NewItem, "The NewItem is incorrect.");
-			Assert.AreEqual(DelegateWithIntParameter, breakingChanges[0].AssociatedData, "The AssociatedData is incorrect.");
+			AssertX.Equal(1, breakingChanges.Count, "There should be one breaking change when the parameter type changes.");
+			AssertX.Equal(BreakingChangeKind.ChangedParameterType, breakingChanges[0].BreakingChangeKind, "The BreakingChangeKind is incorrect.");
+			AssertX.Equal(DelegateWithStringParameter.DelegateParameters[0], breakingChanges[0].OldItem, "The OldItem is incorrect.");
+			AssertX.Equal(DelegateWithIntParameter.DelegateParameters[0], breakingChanges[0].NewItem, "The NewItem is incorrect.");
+			AssertX.Equal(DelegateWithIntParameter, breakingChanges[0].AssociatedData, "The AssociatedData is incorrect.");
 
 			breakingChanges = MetadataComparer.CompareTypes(DelegateWithIntParameter, DelegateWithDynamicParameter);
-			Assert.AreEqual(0, breakingChanges.Count, "There should be no breaking changes when the Parameter type changes to dynamic.");
+			AssertX.Equal(0, breakingChanges.Count, "There should be no breaking changes when the Parameter type changes to dynamic.");
 
 			breakingChanges = MetadataComparer.CompareTypes(DelegateWithDynamicParameter, DelegateWithIntParameter);
-			Assert.AreEqual(1, breakingChanges.Count, "There should be one breaking change when the Parameter type changes.");
-			Assert.AreEqual(BreakingChangeKind.ChangedParameterType, breakingChanges[0].BreakingChangeKind, "The BreakingChangeKind is incorrect.");
-			Assert.AreEqual(DelegateWithDynamicParameter.DelegateParameters[0], breakingChanges[0].OldItem, "The OldItem is incorrect.");
-			Assert.AreEqual(DelegateWithIntParameter.DelegateParameters[0], breakingChanges[0].NewItem, "The NewItem is incorrect.");
-			Assert.AreEqual(DelegateWithIntParameter, breakingChanges[0].AssociatedData, "The AssociatedData is incorrect.");
+			AssertX.Equal(1, breakingChanges.Count, "There should be one breaking change when the Parameter type changes.");
+			AssertX.Equal(BreakingChangeKind.ChangedParameterType, breakingChanges[0].BreakingChangeKind, "The BreakingChangeKind is incorrect.");
+			AssertX.Equal(DelegateWithDynamicParameter.DelegateParameters[0], breakingChanges[0].OldItem, "The OldItem is incorrect.");
+			AssertX.Equal(DelegateWithIntParameter.DelegateParameters[0], breakingChanges[0].NewItem, "The NewItem is incorrect.");
+			AssertX.Equal(DelegateWithIntParameter, breakingChanges[0].AssociatedData, "The AssociatedData is incorrect.");
 
 			breakingChanges = MetadataComparer.CompareTypes(DelegateWithStringParameter, DelegateWithDynamicParameter);
-			Assert.AreEqual(0, breakingChanges.Count, "There should be no breaking changes when the Parameter type changes to dynamic.");
+			AssertX.Equal(0, breakingChanges.Count, "There should be no breaking changes when the Parameter type changes to dynamic.");
 
 			breakingChanges = MetadataComparer.CompareTypes(DelegateWithDynamicParameter, DelegateWithStringParameter);
-			Assert.AreEqual(1, breakingChanges.Count, "There should be one breaking change when the Parameter type changes.");
-			Assert.AreEqual(BreakingChangeKind.ChangedParameterType, breakingChanges[0].BreakingChangeKind, "The BreakingChangeKind is incorrect.");
-			Assert.AreEqual(DelegateWithDynamicParameter.DelegateParameters[0], breakingChanges[0].OldItem, "The OldItem is incorrect.");
-			Assert.AreEqual(DelegateWithStringParameter.DelegateParameters[0], breakingChanges[0].NewItem, "The NewItem is incorrect.");
-			Assert.AreEqual(DelegateWithStringParameter, breakingChanges[0].AssociatedData, "The AssociatedData is incorrect.");
+			AssertX.Equal(1, breakingChanges.Count, "There should be one breaking change when the Parameter type changes.");
+			AssertX.Equal(BreakingChangeKind.ChangedParameterType, breakingChanges[0].BreakingChangeKind, "The BreakingChangeKind is incorrect.");
+			AssertX.Equal(DelegateWithDynamicParameter.DelegateParameters[0], breakingChanges[0].OldItem, "The OldItem is incorrect.");
+			AssertX.Equal(DelegateWithStringParameter.DelegateParameters[0], breakingChanges[0].NewItem, "The NewItem is incorrect.");
+			AssertX.Equal(DelegateWithStringParameter, breakingChanges[0].AssociatedData, "The AssociatedData is incorrect.");
 		}
 
 		#endregion // TypeTests

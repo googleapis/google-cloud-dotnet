@@ -2,6 +2,7 @@
     MIT License
 
     Copyright(c) 2014-2018 Infragistics, Inc.
+    Copyright 2018 Google LLC
 
     Permission is hereby granted, free of charge, to any person obtaining a copy
     of this software and associated documentation files (the "Software"), to deal
@@ -24,7 +25,7 @@
 
 using BreakingChangesDetector.BreakingChanges;
 using BreakingChangesDetector.MetadataItems;
-using Microsoft.VisualStudio.TestTools.UnitTesting;
+using Xunit;
 using System;
 using System.Collections.Generic;
 using System.Linq;
@@ -33,99 +34,98 @@ using System.Threading.Tasks;
 
 namespace BreakingChangesDetector.UnitTests.BreakingChangesTests
 {
-	[TestClass]
 	public class AddedBaseInterfaceTests
 	{
 		#region NestedTypeTests
 
-		[TestMethod]
+		[Fact]
 		public void NestedTypeTests()
 		{
-			var assembly = AssemblyData.FromAssembly(typeof(ChangedAccessibilityFromPublicToProtectedTests).Assembly);
-			var NestedInterfaceImplementingNothing = TypeDefinitionData.FromType(typeof(NestedInterfaceImplementingNothing));
-			var NestedInterfaceImplementingBase = TypeDefinitionData.FromType(typeof(NestedInterfaceImplementingBase));
-			var NestedInterfaceImplementingDerived = TypeDefinitionData.FromType(typeof(NestedInterfaceImplementingDerived));
-			var NestedInterfaceImplementingDerivedAndBase = TypeDefinitionData.FromType(typeof(NestedInterfaceImplementingDerivedAndBase));
-			var NestedInterfaceImplementingInterfaceWithNoMembers = TypeDefinitionData.FromType(typeof(NestedInterfaceImplementingInterfaceWithNoMembers));
+			var context = MetadataResolutionContext.CreateFromTypes(typeof(ChangedAccessibilityFromPublicToProtectedTests));
+			var NestedInterfaceImplementingNothing = context.GetTypeDefinitionData(typeof(NestedInterfaceImplementingNothing));
+			var NestedInterfaceImplementingBase = context.GetTypeDefinitionData(typeof(NestedInterfaceImplementingBase));
+			var NestedInterfaceImplementingDerived = context.GetTypeDefinitionData(typeof(NestedInterfaceImplementingDerived));
+			var NestedInterfaceImplementingDerivedAndBase = context.GetTypeDefinitionData(typeof(NestedInterfaceImplementingDerivedAndBase));
+			var NestedInterfaceImplementingInterfaceWithNoMembers = context.GetTypeDefinitionData(typeof(NestedInterfaceImplementingInterfaceWithNoMembers));
 			
 			var breakingChanges = MetadataComparer.CompareTypes(NestedInterfaceImplementingNothing, NestedInterfaceImplementingBase);
-			Assert.AreEqual(1, breakingChanges.Count, "There should be one breaking change when an interface is added.");
-			Assert.AreEqual(BreakingChangeKind.AddedBaseInterface, breakingChanges[0].BreakingChangeKind, "The BreakingChangeKind is incorrect.");
-			Assert.AreEqual(NestedInterfaceImplementingNothing.GetMember("Interface"), breakingChanges[0].OldItem, "The OldItem is incorrect.");
-			Assert.AreEqual(NestedInterfaceImplementingBase.GetMember("Interface"), breakingChanges[0].NewItem, "The NewItem is incorrect.");
-			Assert.AreEqual(TypeDefinitionData.FromType(typeof(BaseInterfaceWithMembers)), breakingChanges[0].AssociatedData, "The AssociatedData is incorrect.");
+			AssertX.Equal(1, breakingChanges.Count, "There should be one breaking change when an interface is added.");
+			AssertX.Equal(BreakingChangeKind.AddedBaseInterface, breakingChanges[0].BreakingChangeKind, "The BreakingChangeKind is incorrect.");
+			AssertX.Equal(NestedInterfaceImplementingNothing.GetMember("Interface"), breakingChanges[0].OldItem, "The OldItem is incorrect.");
+			AssertX.Equal(NestedInterfaceImplementingBase.GetMember("Interface"), breakingChanges[0].NewItem, "The NewItem is incorrect.");
+			AssertX.Equal(context.GetTypeDefinitionData(typeof(BaseInterfaceWithMembers)), breakingChanges[0].AssociatedData, "The AssociatedData is incorrect.");
 
 			breakingChanges = MetadataComparer.CompareTypes(NestedInterfaceImplementingNothing, NestedInterfaceImplementingDerived);
-			Assert.AreEqual(2, breakingChanges.Count, "There should be breaking changes when an interfaces are added.");
+			AssertX.Equal(2, breakingChanges.Count, "There should be breaking changes when an interfaces are added.");
 			// These might need to be reversed
-			Assert.AreEqual(BreakingChangeKind.AddedBaseInterface, breakingChanges[0].BreakingChangeKind, "The BreakingChangeKind is incorrect.");
-			Assert.AreEqual(NestedInterfaceImplementingNothing.GetMember("Interface"), breakingChanges[0].OldItem, "The OldItem is incorrect.");
-			Assert.AreEqual(NestedInterfaceImplementingDerived.GetMember("Interface"), breakingChanges[0].NewItem, "The NewItem is incorrect.");
-			Assert.AreEqual(TypeDefinitionData.FromType(typeof(DerivedInterfaceWithMembers)), breakingChanges[0].AssociatedData, "The AssociatedData is incorrect.");
-			Assert.AreEqual(BreakingChangeKind.AddedBaseInterface, breakingChanges[1].BreakingChangeKind, "The BreakingChangeKind is incorrect.");
-			Assert.AreEqual(NestedInterfaceImplementingNothing.GetMember("Interface"), breakingChanges[1].OldItem, "The OldItem is incorrect.");
-			Assert.AreEqual(NestedInterfaceImplementingDerived.GetMember("Interface"), breakingChanges[1].NewItem, "The NewItem is incorrect.");
-			Assert.AreEqual(TypeDefinitionData.FromType(typeof(BaseInterfaceWithMembers)), breakingChanges[1].AssociatedData, "The AssociatedData is incorrect.");
+			AssertX.Equal(BreakingChangeKind.AddedBaseInterface, breakingChanges[0].BreakingChangeKind, "The BreakingChangeKind is incorrect.");
+			AssertX.Equal(NestedInterfaceImplementingNothing.GetMember("Interface"), breakingChanges[0].OldItem, "The OldItem is incorrect.");
+			AssertX.Equal(NestedInterfaceImplementingDerived.GetMember("Interface"), breakingChanges[0].NewItem, "The NewItem is incorrect.");
+			AssertX.Equal(context.GetTypeDefinitionData(typeof(DerivedInterfaceWithMembers)), breakingChanges[0].AssociatedData, "The AssociatedData is incorrect.");
+			AssertX.Equal(BreakingChangeKind.AddedBaseInterface, breakingChanges[1].BreakingChangeKind, "The BreakingChangeKind is incorrect.");
+			AssertX.Equal(NestedInterfaceImplementingNothing.GetMember("Interface"), breakingChanges[1].OldItem, "The OldItem is incorrect.");
+			AssertX.Equal(NestedInterfaceImplementingDerived.GetMember("Interface"), breakingChanges[1].NewItem, "The NewItem is incorrect.");
+			AssertX.Equal(context.GetTypeDefinitionData(typeof(BaseInterfaceWithMembers)), breakingChanges[1].AssociatedData, "The AssociatedData is incorrect.");
 
 			breakingChanges = MetadataComparer.CompareTypes(NestedInterfaceImplementingBase, NestedInterfaceImplementingDerived);
-			Assert.AreEqual(1, breakingChanges.Count, "There should be one breaking change when an interface is added.");
-			Assert.AreEqual(BreakingChangeKind.AddedBaseInterface, breakingChanges[0].BreakingChangeKind, "The BreakingChangeKind is incorrect.");
-			Assert.AreEqual(NestedInterfaceImplementingBase.GetMember("Interface"), breakingChanges[0].OldItem, "The OldItem is incorrect.");
-			Assert.AreEqual(NestedInterfaceImplementingDerived.GetMember("Interface"), breakingChanges[0].NewItem, "The NewItem is incorrect.");
-			Assert.AreEqual(TypeDefinitionData.FromType(typeof(DerivedInterfaceWithMembers)), breakingChanges[0].AssociatedData, "The AssociatedData is incorrect.");
+			AssertX.Equal(1, breakingChanges.Count, "There should be one breaking change when an interface is added.");
+			AssertX.Equal(BreakingChangeKind.AddedBaseInterface, breakingChanges[0].BreakingChangeKind, "The BreakingChangeKind is incorrect.");
+			AssertX.Equal(NestedInterfaceImplementingBase.GetMember("Interface"), breakingChanges[0].OldItem, "The OldItem is incorrect.");
+			AssertX.Equal(NestedInterfaceImplementingDerived.GetMember("Interface"), breakingChanges[0].NewItem, "The NewItem is incorrect.");
+			AssertX.Equal(context.GetTypeDefinitionData(typeof(DerivedInterfaceWithMembers)), breakingChanges[0].AssociatedData, "The AssociatedData is incorrect.");
 
 			breakingChanges = MetadataComparer.CompareTypes(NestedInterfaceImplementingDerived, NestedInterfaceImplementingDerivedAndBase);
-			Assert.AreEqual(0, breakingChanges.Count, "There should be no breaking changes when an interface already implemented is added.");
+			AssertX.Equal(0, breakingChanges.Count, "There should be no breaking changes when an interface already implemented is added.");
 
 			breakingChanges = MetadataComparer.CompareTypes(NestedInterfaceImplementingNothing, NestedInterfaceImplementingInterfaceWithNoMembers);
-			Assert.AreEqual(0, breakingChanges.Count, "There should be no breaking changes when an interface is added but contains no members.");
+			AssertX.Equal(0, breakingChanges.Count, "There should be no breaking changes when an interface is added but contains no members.");
 		}
 
 		#endregion // NestedTypeTests
 
 		#region TypeTests
 
-		[TestMethod]
+		[Fact]
 		public void TypeTests()
 		{
-			var assembly = AssemblyData.FromAssembly(typeof(ChangedAccessibilityFromPublicToProtectedTests).Assembly);
-			var InterfaceImplementingNothing = TypeDefinitionData.FromType(typeof(InterfaceImplementingNothing));
-			var InterfaceImplementingBase = TypeDefinitionData.FromType(typeof(InterfaceImplementingBase));
-			var InterfaceImplementingDerived = TypeDefinitionData.FromType(typeof(InterfaceImplementingDerived));
-			var InterfaceImplementingDerivedAndBase = TypeDefinitionData.FromType(typeof(InterfaceImplementingDerivedAndBase));
-			var InterfaceImplementingInterfaceWithNoMembers = TypeDefinitionData.FromType(typeof(InterfaceImplementingInterfaceWithNoMembers));
+			var context = MetadataResolutionContext.CreateFromTypes(typeof(ChangedAccessibilityFromPublicToProtectedTests));
+			var InterfaceImplementingNothing = context.GetTypeDefinitionData(typeof(InterfaceImplementingNothing));
+			var InterfaceImplementingBase = context.GetTypeDefinitionData(typeof(InterfaceImplementingBase));
+			var InterfaceImplementingDerived = context.GetTypeDefinitionData(typeof(InterfaceImplementingDerived));
+			var InterfaceImplementingDerivedAndBase = context.GetTypeDefinitionData(typeof(InterfaceImplementingDerivedAndBase));
+			var InterfaceImplementingInterfaceWithNoMembers = context.GetTypeDefinitionData(typeof(InterfaceImplementingInterfaceWithNoMembers));
 			
 			var breakingChanges = MetadataComparer.CompareTypes(InterfaceImplementingNothing, InterfaceImplementingBase);
-			Assert.AreEqual(1, breakingChanges.Count, "There should be one breaking change when an interface is added.");
-			Assert.AreEqual(BreakingChangeKind.AddedBaseInterface, breakingChanges[0].BreakingChangeKind, "The BreakingChangeKind is incorrect.");
-			Assert.AreEqual(InterfaceImplementingNothing, breakingChanges[0].OldItem, "The OldItem is incorrect.");
-			Assert.AreEqual(InterfaceImplementingBase, breakingChanges[0].NewItem, "The NewItem is incorrect.");
-			Assert.AreEqual(TypeDefinitionData.FromType(typeof(BaseInterfaceWithMembers)), breakingChanges[0].AssociatedData, "The AssociatedData is incorrect.");
+			AssertX.Equal(1, breakingChanges.Count, "There should be one breaking change when an interface is added.");
+			AssertX.Equal(BreakingChangeKind.AddedBaseInterface, breakingChanges[0].BreakingChangeKind, "The BreakingChangeKind is incorrect.");
+			AssertX.Equal(InterfaceImplementingNothing, breakingChanges[0].OldItem, "The OldItem is incorrect.");
+			AssertX.Equal(InterfaceImplementingBase, breakingChanges[0].NewItem, "The NewItem is incorrect.");
+			AssertX.Equal(context.GetTypeDefinitionData(typeof(BaseInterfaceWithMembers)), breakingChanges[0].AssociatedData, "The AssociatedData is incorrect.");
 
 			breakingChanges = MetadataComparer.CompareTypes(InterfaceImplementingNothing, InterfaceImplementingDerived);
-			Assert.AreEqual(2, breakingChanges.Count, "There should be breaking changes when an interfaces are added.");
+			AssertX.Equal(2, breakingChanges.Count, "There should be breaking changes when an interfaces are added.");
 			// These might need to be reversed
-			Assert.AreEqual(BreakingChangeKind.AddedBaseInterface, breakingChanges[0].BreakingChangeKind, "The BreakingChangeKind is incorrect.");
-			Assert.AreEqual(InterfaceImplementingNothing, breakingChanges[0].OldItem, "The OldItem is incorrect.");
-			Assert.AreEqual(InterfaceImplementingDerived, breakingChanges[0].NewItem, "The NewItem is incorrect.");
-			Assert.AreEqual(TypeDefinitionData.FromType(typeof(DerivedInterfaceWithMembers)), breakingChanges[0].AssociatedData, "The AssociatedData is incorrect.");
-			Assert.AreEqual(BreakingChangeKind.AddedBaseInterface, breakingChanges[1].BreakingChangeKind, "The BreakingChangeKind is incorrect.");
-			Assert.AreEqual(InterfaceImplementingNothing, breakingChanges[1].OldItem, "The OldItem is incorrect.");
-			Assert.AreEqual(InterfaceImplementingDerived, breakingChanges[1].NewItem, "The NewItem is incorrect.");
-			Assert.AreEqual(TypeDefinitionData.FromType(typeof(BaseInterfaceWithMembers)), breakingChanges[1].AssociatedData, "The AssociatedData is incorrect.");
+			AssertX.Equal(BreakingChangeKind.AddedBaseInterface, breakingChanges[0].BreakingChangeKind, "The BreakingChangeKind is incorrect.");
+			AssertX.Equal(InterfaceImplementingNothing, breakingChanges[0].OldItem, "The OldItem is incorrect.");
+			AssertX.Equal(InterfaceImplementingDerived, breakingChanges[0].NewItem, "The NewItem is incorrect.");
+			AssertX.Equal(context.GetTypeDefinitionData(typeof(DerivedInterfaceWithMembers)), breakingChanges[0].AssociatedData, "The AssociatedData is incorrect.");
+			AssertX.Equal(BreakingChangeKind.AddedBaseInterface, breakingChanges[1].BreakingChangeKind, "The BreakingChangeKind is incorrect.");
+			AssertX.Equal(InterfaceImplementingNothing, breakingChanges[1].OldItem, "The OldItem is incorrect.");
+			AssertX.Equal(InterfaceImplementingDerived, breakingChanges[1].NewItem, "The NewItem is incorrect.");
+			AssertX.Equal(context.GetTypeDefinitionData(typeof(BaseInterfaceWithMembers)), breakingChanges[1].AssociatedData, "The AssociatedData is incorrect.");
 
 			breakingChanges = MetadataComparer.CompareTypes(InterfaceImplementingBase, InterfaceImplementingDerived);
-			Assert.AreEqual(1, breakingChanges.Count, "There should be one breaking change when an interface is added.");
-			Assert.AreEqual(BreakingChangeKind.AddedBaseInterface, breakingChanges[0].BreakingChangeKind, "The BreakingChangeKind is incorrect.");
-			Assert.AreEqual(InterfaceImplementingBase, breakingChanges[0].OldItem, "The OldItem is incorrect.");
-			Assert.AreEqual(InterfaceImplementingDerived, breakingChanges[0].NewItem, "The NewItem is incorrect.");
-			Assert.AreEqual(TypeDefinitionData.FromType(typeof(DerivedInterfaceWithMembers)), breakingChanges[0].AssociatedData, "The AssociatedData is incorrect.");
+			AssertX.Equal(1, breakingChanges.Count, "There should be one breaking change when an interface is added.");
+			AssertX.Equal(BreakingChangeKind.AddedBaseInterface, breakingChanges[0].BreakingChangeKind, "The BreakingChangeKind is incorrect.");
+			AssertX.Equal(InterfaceImplementingBase, breakingChanges[0].OldItem, "The OldItem is incorrect.");
+			AssertX.Equal(InterfaceImplementingDerived, breakingChanges[0].NewItem, "The NewItem is incorrect.");
+			AssertX.Equal(context.GetTypeDefinitionData(typeof(DerivedInterfaceWithMembers)), breakingChanges[0].AssociatedData, "The AssociatedData is incorrect.");
 
 			breakingChanges = MetadataComparer.CompareTypes(InterfaceImplementingDerived, InterfaceImplementingDerivedAndBase);
-			Assert.AreEqual(0, breakingChanges.Count, "There should be no breaking changes when an interface already implemented is added.");
+			AssertX.Equal(0, breakingChanges.Count, "There should be no breaking changes when an interface already implemented is added.");
 
 			breakingChanges = MetadataComparer.CompareTypes(InterfaceImplementingNothing, InterfaceImplementingInterfaceWithNoMembers);
-			Assert.AreEqual(0, breakingChanges.Count, "There should be no breaking changes when an interface is added but contains no members.");
+			AssertX.Equal(0, breakingChanges.Count, "There should be no breaking changes when an interface is added but contains no members.");
 		}
 
 		#endregion // TypeTests

@@ -2,6 +2,7 @@
     MIT License
 
     Copyright(c) 2014-2018 Infragistics, Inc.
+    Copyright 2018 Google LLC
 
     Permission is hereby granted, free of charge, to any person obtaining a copy
     of this software and associated documentation files (the "Software"), to deal
@@ -22,7 +23,7 @@
     SOFTWARE.
 */
 
-using Mono.Cecil;
+using Microsoft.CodeAnalysis;
 using System;
 using System.Collections.Generic;
 using System.Diagnostics;
@@ -48,10 +49,10 @@ namespace BreakingChangesDetector.MetadataItems
 			this.IsTypeDynamic = isTypeDynamic;
 		}
 
-		internal TypedMemberDataBase(MemberReference member, MemberAccessibility accessibility, TypeReference type, bool isTypeDynamic, MemberFlags flags, DeclaringTypeData declaringType)
-			: base(member, accessibility, flags, declaringType)
+		internal TypedMemberDataBase(ISymbol symbol, MemberAccessibility accessibility, ITypeSymbol type, bool isTypeDynamic, MemberFlags flags, DeclaringTypeData declaringType)
+			: base(symbol, accessibility, flags, declaringType)
 		{
-			this.Type = TypeData.FromType(type);
+			this.Type = declaringType.Context.GetTypeData(type);
 			this.IsTypeDynamic = isTypeDynamic;
 			Debug.Assert(this.Type != null, "Unable to get the TypeData.");
 		}

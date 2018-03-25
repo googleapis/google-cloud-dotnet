@@ -2,6 +2,7 @@
     MIT License
 
     Copyright(c) 2014-2018 Infragistics, Inc.
+    Copyright 2018 Google LLC
 
     Permission is hereby granted, free of charge, to any person obtaining a copy
     of this software and associated documentation files (the "Software"), to deal
@@ -23,8 +24,7 @@
 */
 
 using Infragistics;
-using Mono.Cecil;
-using Mono.Cecil.Rocks;
+using Microsoft.CodeAnalysis;
 using System;
 using System.Collections.Generic;
 using System.Diagnostics;
@@ -96,25 +96,24 @@ namespace BreakingChangesDetector.MetadataItems
 			this.TypeDefinitionFlags = typeDefinitionFlags;
 		}
 
-		internal TypeDefinitionData(TypeDefinition type, MemberAccessibility accessibility, DeclaringTypeData declaringType, AssemblyData assembly)
-			: base(type, accessibility, declaringType)
+		internal TypeDefinitionData(INamedTypeSymbol typeSymbol, MemberAccessibility accessibility, DeclaringTypeData declaringType, AssemblyData assembly)
+			: base(typeSymbol, accessibility, declaringType)
 		{
 			_assembly = assembly;
 
 			var typeFlags = TypeDefinitionFlags.None;
 
-			if (this.TypeKind == TypeKind.Class && type.CustomAttributes.Any(a => a.AttributeType.EqualsType(typeof(ExtensionAttribute))))
-				typeFlags |= TypeDefinitionFlags.ExtensionsClass;
-
 			if (this.IsSealed == false)
 			{
+                // TODO_Refactor: we can probably clean this up
+
 				// A type can only be inherited if it has at least one externally visible constructor and any abstract members are also externally visible.
-				var canBeIherited = type.Methods.Where(c => c.IsConstructor && c.GetAccessibility() != null).Any();
+				var canBeIherited = typeSymbol.Methods().Where(c => c.MethodKind == MethodKind.Constructor && c.GetAccessibility() != null).Any();
 				if (this.CanBeInherited)
 				{
-					if (type.Methods.Where(m => m.IsSpecialName == false && m.IsConstructor == false && m.GetAccessibility() == null && m.IsAbstract).Any() ||
-						type.Events.Where(e => e.AddMethod.GetAccessibility() == null && e.AddMethod.IsAbstract).Any() ||
-						type.Properties.Where(p => p.GetMethod != null ? p.GetMethod.GetAccessibility() == null && p.GetMethod.IsAbstract : p.SetMethod.GetAccessibility() == null && p.SetMethod.IsAbstract).Any())
+					if (typeSymbol.Methods().Where(m => m.AssociatedSymbol == null && m.MethodKind != MethodKind.StaticConstructor && m.MethodKind != MethodKind.Destructor && m.MethodKind != MethodKind.Constructor && m.GetAccessibility() == null && m.IsAbstract).Any() ||
+						typeSymbol.Events().Where(e => e.AddMethod.GetAccessibility() == null && e.AddMethod.IsAbstract).Any() ||
+						typeSymbol.Properties().Where(p => p.GetMethod != null ? p.GetMethod.GetAccessibility() == null && p.GetMethod.IsAbstract : p.SetMethod.GetAccessibility() == null && p.SetMethod.IsAbstract).Any())
 						canBeIherited = false;
 				}
 
@@ -124,19 +123,19 @@ namespace BreakingChangesDetector.MetadataItems
 
 			if (this.TypeKind == TypeKind.Enum)
 			{
-				var flagsAttributeData = type.CustomAttributes.Where(a => a.AttributeType.EqualsType(typeof(FlagsAttribute))).SingleOrDefault();
+				var flagsAttributeData = typeSymbol.GetAttributes().Where(a => a.AttributeClass.EqualsType(typeof(FlagsAttribute))).SingleOrDefault();
 				if (flagsAttributeData != null)
 					typeFlags |= TypeDefinitionFlags.FlagsEnum;
 			}
 
 			this.TypeDefinitionFlags = typeFlags;
-			this.FullName = type.FullName;
+            this.FullName = typeSymbol.GetFullName();
 
-			var renamedAttributeData = type.CustomAttributes.Where(a => a.AttributeType.EqualsType(typeof(TypeRenamedAttribute))).SingleOrDefault();
+			var renamedAttributeData = typeSymbol.GetAttributes().Where(a => a.AttributeClass.GetFullName() == typeof(TypeRenamedAttribute).FullName).SingleOrDefault();
 			if (renamedAttributeData != null)
 				this.OldName = renamedAttributeData.ConstructorArguments[0].Value as string;
 
-			var typeForwardedFromAttribute = type.CustomAttributes.Where(a => a.AttributeType.EqualsType(typeof(TypeForwardedFromAttribute))).SingleOrDefault();
+			var typeForwardedFromAttribute = typeSymbol.GetAttributes().Where(a => a.AttributeClass.EqualsType(typeof(TypeForwardedFromAttribute))).SingleOrDefault();
 			if (typeForwardedFromAttribute != null)
 				this.AssemblyData.AddForwardedTypeFromTarget(this, typeForwardedFromAttribute.ConstructorArguments[0].Value.ToString());
 		}
@@ -209,11 +208,11 @@ namespace BreakingChangesDetector.MetadataItems
 			return false;
 		}
 
-		#endregion // CanOverrideMember
+        #endregion // CanOverrideMember
 
-		#region DoesMatch
+        #region DoesMatch
 
-		internal override bool DoesMatch(MetadataItemBase other)
+        internal override bool DoesMatch(MetadataItemBase other)
 		{
 			if (base.DoesMatch(other) == false)
 				return false;
@@ -328,7 +327,7 @@ namespace BreakingChangesDetector.MetadataItems
 
 			if (includeGenericInfo)
 			{
-				var declaringTypeGenericArity = this.DeclaringType == null ? 0 : this.DeclaringType.GenericArity;
+				var declaringTypeGenericArity = this.ContainingType == null ? 0 : this.ContainingType.GenericArity;
 
 				if (genericArguments != null)
 					rootName += genericArguments.GetGenericArgumentListDisplayText(includeGenericInfo, declaringTypeGenericArity, this.GenericParameters.Count - declaringTypeGenericArity);
@@ -396,8 +395,8 @@ namespace BreakingChangesDetector.MetadataItems
 			if (_primitiveTypeNames.ContainsKey(this.FullName))
 				return null;
 
-			if (this.DeclaringType != null)
-				return this.DeclaringType.GetNamespaceName();
+			if (this.ContainingType != null)
+				return this.ContainingType.GetNamespaceName();
 
 			var lastDot = this.FullName.LastIndexOf(".");
 			if (0 <= lastDot)
@@ -425,20 +424,6 @@ namespace BreakingChangesDetector.MetadataItems
 		}
 
 		#endregion // IsEquivalentToNewMember
-
-		#region IsExtensionsClass
-
-#if DEBUG
-		/// <summary>
-		/// Gets the value indicating whether the type is an extension class (a class containing extension methods).
-		/// </summary> 
-#endif
-		internal override bool IsExtensionsClass
-		{
-			get { return this.TypeDefinitionFlags.HasFlag(TypeDefinitionFlags.ExtensionsClass); }
-		}
-
-		#endregion // IsExtensionsClass
 
 		#region MetadataItemKind
 
@@ -478,42 +463,6 @@ namespace BreakingChangesDetector.MetadataItems
 
 		#region Public Methods
 
-		#region FromType
-
-		/// <summary>
-		/// Gets the <see cref="TypeDefinitionData"/> instance representing the specified type.
-		/// </summary>
-		/// <typeparam name="T">The type for which to get the <see cref="TypeDefinitionData"/>.</typeparam>
-		/// <returns>The <see cref="TypeDefinitionData"/> instance.</returns>
-		public new static TypeDefinitionData FromType<T>()
-		{
-			return TypeDefinitionData.FromType(typeof(T));
-		}
-
-		/// <summary>
-		/// Gets the <see cref="TypeDefinitionData"/> instance representing the specified type.
-		/// </summary>
-		/// <returns>The <see cref="TypeDefinitionData"/> instance.</returns>
-		public new static TypeDefinitionData FromType(Type t)
-		{
-			var typeDefinition = TypeData.FromType(t) as TypeDefinitionData;
-			if (typeDefinition == null)
-				throw new ArgumentException("The specified type is not an externally visible type definition.", "t");
-
-			return typeDefinition;
-		}
-
-		/// <summary>
-		/// Gets the <see cref="TypeDefinitionData"/> instance representing the specified type.
-		/// </summary>
-		/// <returns>The <see cref="TypeDefinitionData"/> instance.</returns>
-		public new static TypeDefinitionData FromType(TypeReference t)
-		{
-			return (TypeDefinitionData)TypeData.FromType(t);
-		}
-
-		#endregion // FromType
-
 		#region GetNestedType
 
 		/// <summary>
@@ -539,30 +488,30 @@ namespace BreakingChangesDetector.MetadataItems
 		/// <summary>
 		/// Populates the type with additional information which can't be loaded when the type is created (due to potential circularities in item dependencies).
 		/// </summary>
-		/// <param name="underlyingType">The underlying type this instance represents.</param>
+		/// <param name="underlyingTypeSymbol">The underlying type this instance represents.</param>
 #endif
-		internal void FinalizeDefinition(TypeDefinition underlyingType)
+		internal void FinalizeDefinition(INamedTypeSymbol underlyingTypeSymbol)
 		{
-			if (underlyingType.IsEnum)
-				this.BaseType = (DeclaringTypeData)TypeData.FromType(underlyingType.GetEnumUnderlyingType());
-			else if (underlyingType.BaseType != null)
-				this.BaseType = (DeclaringTypeData)TypeData.FromType(underlyingType.BaseType);
+			if (underlyingTypeSymbol.TypeKind == Microsoft.CodeAnalysis.TypeKind.Enum)
+				this.BaseType = (DeclaringTypeData)Context.GetTypeData(underlyingTypeSymbol.EnumUnderlyingType);
+			else if (underlyingTypeSymbol.BaseType != null)
+				this.BaseType = (DeclaringTypeData)Context.GetTypeData(underlyingTypeSymbol.BaseType);
 
 			this.ImplementedInterfaces = new ImplementedInterfacesCollection(
-				underlyingType.Interfaces.Select(i => (DeclaringTypeData)TypeData.FromType(i)).Where(i => i != null)
+				underlyingTypeSymbol.Interfaces.Select(i => (DeclaringTypeData)Context.GetTypeData(i)).Where(i => i != null)
 				);
 
 			if (this.TypeKind == TypeKind.Delegate)
 			{
-				var invokeMethod = underlyingType.Methods.Single(m => m.Name == "Invoke");
+				var invokeMethod = underlyingTypeSymbol.Methods().Single(m => m.Name == "Invoke");
 				this.DelegateParameters = new ParameterCollection(invokeMethod.Parameters, this);
-				this.DelegateReturnType = TypeData.FromType(invokeMethod.ReturnType);
+				this.DelegateReturnType = Context.GetTypeData(invokeMethod.ReturnType);
 				this.DelegateReturnTypeIsDynamic = invokeMethod.IsReturnTypeDynamic();
 			}
 
-			if (underlyingType.HasGenericParameters)
+			if (!underlyingTypeSymbol.TypeParameters.IsEmpty)
 			{
-				this.GenericParameters = Utilities.GetGenericParameters(underlyingType.GenericParameters, this);
+				this.GenericParameters = Utilities.GetGenericParameters(underlyingTypeSymbol, this);
 				Debug.Assert(
 					_constructedGenericTypes == null || _constructedGenericTypes.Values.All(c => c.GenericArguments.Count == this.GenericParameters.Count),
 					"The type arity does not match.");
@@ -601,7 +550,7 @@ namespace BreakingChangesDetector.MetadataItems
 #endif
 		internal ConstructedGenericTypeData GetConstructedGenericTypeData(TypeDataSequence typeArguments)
 		{
-			Debug.Assert(this.GenericParameters == null || this.GenericParameters.Count == typeArguments.Count, "The type arity does not match.");
+            Debug.Assert(this.GenericParameters == null || this.GenericParameters.Count == typeArguments.Count, "The type arity does not match.");
 
 			if (_constructedGenericTypes == null)
 				_constructedGenericTypes = new Dictionary<TypeDataSequence, ConstructedGenericTypeData>();
@@ -632,15 +581,17 @@ namespace BreakingChangesDetector.MetadataItems
 				this.AssemblyData.Name == type.Assembly.GetName().Name;
 		}
 
-		#endregion // IsType
+        #endregion // IsType
 
-		#region PopulateMembers
+        #region PopulateMembers
 
-		internal void PopulateMembers(TypeDefinition underlyingType)
-		{
-			foreach (var member in underlyingType.GetMembers())
-				this.AddMember(MemberDataBase.MemberDataFromReflection(member, this));
-		}
+        internal void PopulateMembers(INamedTypeSymbol underlyingTypeSymbol)
+        {
+            foreach (var member in underlyingTypeSymbol.Members())
+            {
+                this.AddMember(MemberDataBase.MemberDataFromReflection(member, this));
+            }
+        }
 
 		#endregion // PopulateMembers
 

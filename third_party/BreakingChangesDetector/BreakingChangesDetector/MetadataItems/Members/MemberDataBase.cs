@@ -2,6 +2,7 @@
     MIT License
 
     Copyright(c) 2014-2018 Infragistics, Inc.
+    Copyright 2018 Google LLC
 
     Permission is hereby granted, free of charge, to any person obtaining a copy
     of this software and associated documentation files (the "Software"), to deal
@@ -22,7 +23,7 @@
     SOFTWARE.
 */
 
-using Mono.Cecil;
+using Microsoft.CodeAnalysis;
 using System;
 using System.Collections.Generic;
 using System.Diagnostics;
@@ -63,24 +64,26 @@ namespace BreakingChangesDetector.MetadataItems
 			this.Name = name;
 		}
 
-		internal MemberDataBase(MemberReference underlyingMember, MemberAccessibility accessibility, MemberFlags memberFlags, DeclaringTypeData declaringType)
-		{
+		internal MemberDataBase(ISymbol underlyingSymbol, MemberAccessibility accessibility, MemberFlags memberFlags, DeclaringTypeData declaringType)
+        {
 			this.Accessibility = accessibility;
-			this.DeclaringType = declaringType;
+			this.ContainingType = declaringType;
 			this.MemberFlags = memberFlags;
-			this.Name = underlyingMember.Name;
+			this.Name = underlyingSymbol.MetadataName;
 		}
 
-		#endregion // Constructor
+        #endregion // Constructor
 
-		#region Base Class Overrides
+        #region Base Class Overrides
 
-		#region DisplayName
+        public override MetadataResolutionContext Context => AssemblyData?.Context;
 
-		/// <summary>
-		/// Gets the name to use for this item in messages.
-		/// </summary>
-		public override string DisplayName
+        #region DisplayName
+
+        /// <summary>
+        /// Gets the name to use for this item in messages.
+        /// </summary>
+        public override string DisplayName
 		{
 			get { return this.Name; }
 		}
@@ -101,10 +104,10 @@ namespace BreakingChangesDetector.MetadataItems
 			if (this.Accessibility != otherTyped.Accessibility)
 				return false;
 
-			if (this.DeclaringType == null ^ otherTyped.DeclaringType == null)
+			if (this.ContainingType == null ^ otherTyped.ContainingType == null)
 				return false;
 
-			if (this.DeclaringType != null && this.DeclaringType.DisplayName != otherTyped.DeclaringType.DisplayName)
+			if (this.ContainingType != null && this.ContainingType.DisplayName != otherTyped.ContainingType.DisplayName)
 				return false;
 
 			if (this.MemberFlags != otherTyped.MemberFlags)
@@ -158,10 +161,10 @@ namespace BreakingChangesDetector.MetadataItems
 #endif
 		internal MemberDataBase GetBaseMember()
 		{
-			if (this.DeclaringType == null || this.IsOverride == false)
+			if (this.ContainingType == null || this.IsOverride == false)
 				return null;
 
-			var baseType = this.DeclaringType.BaseType;
+			var baseType = this.ContainingType.BaseType;
 			while (baseType != null)
 			{
 				var members = baseType.GetMembers(this.Name).Where(m => m.MetadataItemKind == this.MetadataItemKind && m.CanBeOverridden);
@@ -198,69 +201,72 @@ namespace BreakingChangesDetector.MetadataItems
 
 		#region MemberDataFromReflection
 
-		internal static MemberDataBase MemberDataFromReflection(MemberReference member, DeclaringTypeData declaringType)
+		internal static MemberDataBase MemberDataFromReflection(ISymbol symbol, DeclaringTypeData declaringType)
 		{
-			try
+            // TODO: Use a symbol visitor instead?
+			switch (symbol.Kind)
 			{
-				switch (member.MetadataToken.TokenType)
-				{
-					case TokenType.TypeDef:
-						return declaringType.AssemblyData.GetTypeData((TypeDefinition)member);
+				case SymbolKind.NamedType:
+					return declaringType.AssemblyData.GetTypeData((ITypeSymbol)symbol);
 
-					case TokenType.Method:
+				case SymbolKind.Method:
+					{
+                        var method = (IMethodSymbol)symbol;
+
+						if (method.MethodKind == MethodKind.Constructor)
+                        {
+                            if (declaringType.TypeKind == TypeKind.Enum)
+                            {
+                                return null;
+                            }
+							return ConstructorData.ConstructorDataFromReflection(method, declaringType);
+                        }
+
+						if (method.MethodKind == MethodKind.UserDefinedOperator ||
+                            method.MethodKind == MethodKind.Conversion)
 						{
-							var method = (MethodDefinition)member;
-
-							if (method.IsConstructor)
-								return ConstructorData.ConstructorDataFromReflection(method, declaringType);
-
-							if (method.IsSpecialName)
-							{
-								if (method.IsPublic && method.IsStatic && method.Name.StartsWith("op_"))
-									return new OperatorData(method, declaringType);
-
-								return null;
-							}
-
-							return MethodData.MethodDataFromReflection(method, declaringType);
+                            if (method.DeclaredAccessibility == Microsoft.CodeAnalysis.Accessibility.Public && method.IsStatic && method.Name.StartsWith("op_"))
+								return new OperatorData(method, declaringType);
 						}
 
-					case TokenType.Field:
-						{
-							var field = (FieldDefinition)member;
+                        if (method.MethodKind == MethodKind.Ordinary ||
+                            method.MethodKind == MethodKind.DelegateInvoke)
+                        {
+                            return MethodData.MethodDataFromReflection(method, declaringType);
+                        }
 
-							// Filter out the "value__" field on enums
-							if (declaringType.TypeKind == TypeKind.Enum && field.IsStatic == false)
-								return null;
+                        return null;
+                    }
 
-							if (field.IsLiteral && field.IsInitOnly == false)
-								return ConstantData.ConstantDataFromReflection(field, declaringType);
+				case SymbolKind.Field:
+					{
+						var field = (IFieldSymbol)symbol;
 
-							return FieldData.FieldDataFromReflection(field, declaringType);
-						}
+						// Filter out the "value__" field on enums
+						if (declaringType.TypeKind == TypeKind.Enum && field.IsStatic == false)
+							return null;
 
-					case TokenType.Event:
-						return EventData.EventDataFromReflection((EventDefinition)member, declaringType);
+						if (field.IsConst)
+							return ConstantData.ConstantDataFromReflection(field, declaringType);
 
-					case TokenType.Property:
-						{
-							var property = (PropertyDefinition)member;
-							if (property.HasParameters)
-								return IndexerData.IndexerDataFromReflection(property, declaringType);
+						return FieldData.FieldDataFromReflection(field, declaringType);
+					}
 
-							return PropertyData.PropertyDataFromReflection(property, declaringType);
-						}
+				case SymbolKind.Event:
+					return EventData.EventDataFromReflection((IEventSymbol)symbol, declaringType);
 
-					default:
-						Debug.Fail("Unknown TokenType: " + member.MetadataToken.TokenType);
-						return null;
-				}
-			}
-			catch (AssemblyResolutionException ex)
-			{
-				// TODO: How should we handle this? This happens when an assembly reference cant be found.
-				Debug.Fail("Could not load assembly: " + ex.ToString());
-				return null;
+				case SymbolKind.Property:
+					{
+						var property = (IPropertySymbol)symbol;
+						if (property.IsIndexer)
+							return IndexerData.IndexerDataFromReflection(property, declaringType);
+
+						return PropertyData.PropertyDataFromReflection(property, declaringType);
+					}
+
+				default:
+					Debug.Fail("Unknown SymbolKind: " + symbol.Kind);
+					return null;
 			}
 		}
 
@@ -294,7 +300,7 @@ namespace BreakingChangesDetector.MetadataItems
 		/// <summary>
 		/// Gets the <see cref="T:AssemblyData"/> representing the assembly in which the member is defined.
 		/// </summary>
-		public virtual AssemblyData AssemblyData { get { return this.DeclaringType == null ? null : this.DeclaringType.AssemblyData; } }
+		public virtual AssemblyData AssemblyData { get { return this.ContainingType == null ? null : this.ContainingType.AssemblyData; } }
 
 		/// <summary>
 		/// Gets the value indicating whether the member can be overridden in derived types.
@@ -304,7 +310,7 @@ namespace BreakingChangesDetector.MetadataItems
 		/// <summary>
 		/// Gets the type in which this member is declared.
 		/// </summary>
-		public DeclaringTypeData DeclaringType { get; internal set; } // TODO: Make private?
+		public DeclaringTypeData ContainingType { get; internal set; } // TODO: Make private?
 
 		/// <summary>
 		/// Gets the value indicating whether the member is marked abstract.

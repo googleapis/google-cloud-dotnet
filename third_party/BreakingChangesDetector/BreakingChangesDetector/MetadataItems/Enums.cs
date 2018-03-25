@@ -2,6 +2,7 @@
     MIT License
 
     Copyright(c) 2014-2018 Infragistics, Inc.
+    Copyright 2018 Google LLC
 
     Permission is hereby granted, free of charge, to any person obtaining a copy
     of this software and associated documentation files (the "Software"), to deal
@@ -30,6 +31,7 @@ using System.Threading.Tasks;
 
 namespace BreakingChangesDetector.MetadataItems
 {
+    // TODO_Refactor: Is this needed?
 	/// <summary>
 	/// Represents the various externally visible accessibilities available for members.
 	/// </summary>
@@ -200,49 +202,13 @@ namespace BreakingChangesDetector.MetadataItems
 		None = 0,
 
 		/// <summary>
-		/// The type is an extension class: a static non-nested class with at least one extension method.
-		/// </summary>
-		ExtensionsClass = 1 << 1,
-
-		/// <summary>
 		/// The type can be used as a base type for other types.
 		/// </summary>
-		CanBeInherited = 1 << 2,
+		CanBeInherited = 1 << 1,
 
 		/// <summary>
 		/// The type is an enum definition with the Flags attribute applied.
 		/// </summary>
-		FlagsEnum = 1 << 3,
-	}
-
-	/// <summary>
-	/// Represents the various kinds of types which can be defined.
-	/// </summary>
-	public enum TypeKind : byte
-	{
-		/// <summary>
-		/// A class type
-		/// </summary>
-		Class,
-
-		/// <summary>
-		/// A struct type
-		/// </summary>
-		Struct,
-
-		/// <summary>
-		/// An interface type
-		/// </summary>
-		Interface,
-
-		/// <summary>
-		/// A enum type
-		/// </summary>
-		Enum,
-
-		/// <summary>
-		/// A delegate type
-		/// </summary>
-		Delegate
+		FlagsEnum = 1 << 2,
 	}
 }

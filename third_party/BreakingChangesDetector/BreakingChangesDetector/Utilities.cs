@@ -2,6 +2,7 @@
     MIT License
 
     Copyright(c) 2014-2018 Infragistics, Inc.
+    Copyright 2018 Google LLC
 
     Permission is hereby granted, free of charge, to any person obtaining a copy
     of this software and associated documentation files (the "Software"), to deal
@@ -24,21 +25,17 @@
 
 using BreakingChangesDetector.MetadataItems;
 using Infragistics;
-using Mono.Cecil;
-using Mono.Cecil.Rocks;
+using Microsoft.CodeAnalysis;
 using System;
-using System.Collections.Concurrent;
 using System.Collections.Generic;
 using System.Diagnostics;
 using System.Linq;
-using System.Reflection;
 using System.Runtime.CompilerServices;
 using System.Text;
-using System.Threading.Tasks;
 
 namespace BreakingChangesDetector
 {
-	internal static class Utilities
+    internal static class Utilities
 	{
 		public const string DynamicTypeName = "dynamic";
 
@@ -46,7 +43,7 @@ namespace BreakingChangesDetector
 		public static readonly string CommonObjectRuntimeAssemblyName = typeof(int).Assembly.GetName().Name;
 		public static readonly string EnumTypeName = typeof(Enum).FullName;
 		public static readonly string ObjectTypeName = typeof(Object).FullName;
-		public static readonly string VoidTypeName = typeof(void).FullName;
+        public static readonly string VoidTypeName = typeof(void).FullName;
 
 		public static readonly string ICloneableTypeName = typeof(ICloneable).FullName;
 		public static readonly string IListTypeName = typeof(System.Collections.IList).FullName;
@@ -88,19 +85,44 @@ namespace BreakingChangesDetector
 			}
 		}
 
-		public static bool EqualsType(this TypeReference typeReference, Type type)
+        public static string GetFullName(this ITypeSymbol typeSymbol)
+        {
+            if (!typeSymbol.CanBeReferencedByName || typeSymbol.TypeKind == Microsoft.CodeAnalysis.TypeKind.TypeParameter)
+            {
+                return typeSymbol.ToDisplayString();
+            }
+
+            string suffix = null;
+            if (typeSymbol is INamedTypeSymbol namedType && namedType.IsConstructed())
+            {
+                // TODO_Refactor: The assembly full name is included in the arguments here
+                suffix = $"[{string.Join(",", namedType.TypeArguments.Select(a => $"[{a.GetFullName()}]"))}]";
+            }
+
+            if (typeSymbol.ContainingType != null)
+            {
+                return typeSymbol.ContainingType.GetFullName() + "/" + typeSymbol.MetadataName + suffix;
+            }
+            else if (typeSymbol.ContainingNamespace.IsGlobalNamespace)
+            {
+                return typeSymbol.MetadataName + suffix;
+            }
+            else
+            {
+                return typeSymbol.ContainingNamespace.ToDisplayString() + "." + typeSymbol.MetadataName + suffix;
+            }
+        }
+
+		public static bool EqualsType(this ITypeSymbol typeSymbol, Type type)
 		{
-			if (typeReference == null)
+			if (typeSymbol == null)
 				return type == null;
 			else if (type == null)
 				return false;
 
-			if (typeReference.GetType() == typeof(TypeReference))
-				typeReference = typeReference.Resolve();
-
 			return
-				typeReference.FullName == type.FullName.Replace('+', '/') &&
-				typeReference.GetDeclaringAssembly().FullName == type.Assembly.FullName;
+                typeSymbol.GetFullName() == type.FullName.Replace('+', '/') &&
+				typeSymbol.ContainingAssembly.ToDisplayString() == type.Assembly.FullName;
 		}
 
 		public static string FormatEnumValue(TypeDefinitionData enumType, object value)
@@ -139,111 +161,63 @@ namespace BreakingChangesDetector
 			return string.Format("({0}){1}", unqualifiedName, rawValue);
 		}
 
-		public static MemberAccessibility? GetAccessibility(this FieldDefinition field)
-		{
-			if (field.IsPublic)
-				return MemberAccessibility.Public;
-			else if (field.IsFamily || field.IsFamilyAndAssembly || field.IsFamilyOrAssembly)
-				return MemberAccessibility.Protected;
+        public static MemberAccessibility? GetAccessibility(this ISymbol symbol)
+        {
+            if (symbol == null)
+            {
+                return null;
+            }
+            switch (symbol.DeclaredAccessibility)
+            {
+                case Accessibility.NotApplicable:
+                case Accessibility.Public:
+                    return MemberAccessibility.Public;
+                case Accessibility.ProtectedAndInternal:
+                case Accessibility.ProtectedOrInternal:
+                case Accessibility.Protected:
+                    return MemberAccessibility.Protected;
+            }
+            return null;
+        }
 
-			return null;
-		}
+        public static GenericTypeParameterCollection GetGenericParameters(INamedTypeSymbol namedTypeSymbol, MemberDataBase declaringMember)
+        {
+            // TODO_Refactor: Since Roslyn requires this but Mono.Cecil did not, perhaps we can redesign things so we don't have to do this.
+            IEnumerable<ITypeParameterSymbol> allGenericParameters = namedTypeSymbol.TypeParameters;
+            while (true)
+            {
+                namedTypeSymbol = namedTypeSymbol.ContainingType;
+                if (namedTypeSymbol == null)
+                {
+                    break;
+                }
+                if (!namedTypeSymbol.TypeParameters.IsEmpty)
+                {
+                    allGenericParameters = namedTypeSymbol.TypeParameters.Concat(allGenericParameters);
+                }
+            }
+            return GetGenericParameters(allGenericParameters, declaringMember);
+        }
 
-		public static MemberAccessibility? GetAccessibility(this MethodDefinition member)
-		{
-			if (member != null)
-			{
-				if (member.IsPublic)
-					return MemberAccessibility.Public;
-				else if (member.IsFamily || member.IsFamilyAndAssembly || member.IsFamilyOrAssembly)
-					return MemberAccessibility.Protected;
-			}
+        public static GenericTypeParameterCollection GetGenericParameters(IEnumerable<ITypeParameterSymbol> typeParameterSymbols, MemberDataBase declaringMember)
+        {
+            return new GenericTypeParameterCollection(typeParameterSymbols.Select(typeParameterSymbol =>
+            {
+                var genericParameter = declaringMember.Context.GetGenericTypeParameterData(typeParameterSymbol);
 
-			return null;
-		}
+                if (declaringMember != null) // TODO: Is this needed?
+                {
+                    // TODO_Refactor: If non-null, assert it is a containing type
+                    //Debug.Assert(genericParameter.GenericDeclaringMember == null, "The GenericDeclaringMember should not be set twice.");
+                    if (genericParameter.GenericDeclaringMember == null)
+                    {
+                        genericParameter.GenericDeclaringMember = declaringMember;
+                    }
+                }
 
-		public static MemberAccessibility? GetAccessibility(this TypeReference type)
-		{
-			TypeSpecification typeSpecification;
-			while ((typeSpecification = type as TypeSpecification) != null)
-				type = typeSpecification.ElementType;
-
-			if (type is GenericParameter)
-				return MemberAccessibility.Public;
-
-			var typeDefinition = type.Resolve();
-			if (typeDefinition.IsPublic)
-				return MemberAccessibility.Public;
-
-			if (typeDefinition.IsNested && GetAccessibility(typeDefinition.DeclaringType) != null)
-			{
-				if (typeDefinition.IsNestedPublic)
-					return MemberAccessibility.Public;
-				else if (typeDefinition.IsNestedFamily || typeDefinition.IsNestedFamilyAndAssembly || typeDefinition.IsNestedFamilyOrAssembly)
-					return MemberAccessibility.Protected;
-			}
-
-			return null;
-		}
-
-		public static AssemblyDefinition GetDeclaringAssembly(this TypeReference type)
-		{
-			var elementType = type.GetElementType();
-
-			var genericParameter = elementType as GenericParameter;
-			if (genericParameter != null)
-			{
-				if (genericParameter.DeclaringMethod != null)
-					return genericParameter.DeclaringMethod.DeclaringType.GetDeclaringAssembly();
-
-				return genericParameter.DeclaringType.GetDeclaringAssembly();
-			}
-
-			return elementType.Resolve().Module.AssemblyResolved;
-		}
-
-		public static object GetDefualtValue(this ParameterDefinition parameter)
-		{
-			if (parameter.HasCustomAttributes)
-			{
-				var decimalConstant = parameter.CustomAttributes.FirstOrDefault(a => a.AttributeType.EqualsType(typeof(DecimalConstantAttribute)));
-				if (decimalConstant != null)
-				{
-					if (decimalConstant.ConstructorArguments.Count == 5)
-					{
-						var scale = Convert.ToByte(decimalConstant.ConstructorArguments[0].Value);
-						var sign = Convert.ToByte(decimalConstant.ConstructorArguments[1].Value);
-						var hi = Convert.ToInt32(decimalConstant.ConstructorArguments[2].Value);
-						var mid = Convert.ToInt32(decimalConstant.ConstructorArguments[3].Value);
-						var low = Convert.ToInt32(decimalConstant.ConstructorArguments[4].Value);
-						return new decimal(low, mid, hi, sign != 0, scale);
-					}
-					else
-					{
-						Debug.Fail("There should be 5 arguments in the DecimalConstantAttribute");
-
-					}
-				}
-			}
-
-			return parameter.Constant;
-		}
-
-		public static GenericTypeParameterCollection GetGenericParameters(IEnumerable<GenericParameter> genericArguments, MemberDataBase declaringMember)
-		{
-			return new GenericTypeParameterCollection(genericArguments.Select(a =>
-			{
-				var genericParameter = GenericTypeParameterData.FromType(a);
-
-				if (declaringMember != null)
-				{
-					Debug.Assert(genericParameter.GenericDeclaringMember == null, "The GenericDeclaringMember should not be set twice.");
-					genericParameter.GenericDeclaringMember = declaringMember;
-				}
-
-				return genericParameter;
-			}));
-		}
+                return genericParameter;
+            }));
+        }
 
 		public static MemberAccessibility GetLeastRestrictiveAccessibility(MemberAccessibility? a, MemberAccessibility? b)
 		{
@@ -257,33 +231,37 @@ namespace BreakingChangesDetector
 			return MemberAccessibility.Protected;
 		}
 
-		public static MemberFlags GetMemberFlags(MethodDefinition method)
+		public static MemberFlags GetMemberFlags(IMethodSymbol methodSymbol)
 		{
-			if (method == null)
+			if (methodSymbol == null)
 				return 0;
 
 			var flags = MemberFlags.None;
 
-			if (method.IsStatic)
-				flags |= MemberFlags.Static;
+            if (methodSymbol.IsStatic)
+            {
+                flags |= MemberFlags.Static;
+            }
 
-			if (method.IsAbstract)
+            if (methodSymbol.IsOverride)
+            {
+                flags |= MemberFlags.Override;
+            }
+
+            if (methodSymbol.IsAbstract)
 			{
 				flags |= MemberFlags.Abstract;
-
-				if (method.GetBaseMethod() != method)
-					flags |= MemberFlags.Override;
 			}
-			else if (method.IsVirtual)
+
+            if (methodSymbol.IsVirtual)
 			{
-				if (method.GetBaseMethod() != method)
-					flags |= MemberFlags.Override;
-				else
-					flags |= MemberFlags.Virtual;
+                flags |= MemberFlags.Virtual;
 			}
 
-			if (method.IsFinal)
-				flags |= MemberFlags.Sealed;
+            if (methodSymbol.IsSealed)
+            {
+                flags |= MemberFlags.Sealed;
+            }
 
 			// Non-virtual interface implicit implementations are marked virtual sealed. They should have neither flag for our purposes.
 			// It is safe to strip out these flags when both are present because it is impossible in code to declare something as virtual sealed.
@@ -293,22 +271,25 @@ namespace BreakingChangesDetector
 			return flags;
 		}
 
-		public static MemberFlags GetMemberFlags(TypeReference type)
+		public static MemberFlags GetMemberFlags(ITypeSymbol typeSymbol)
 		{
-			var typeDefinition = type as TypeDefinition;
-			if (typeDefinition == null)
+			var namedTypeSymbol = typeSymbol as INamedTypeSymbol;
+			if (namedTypeSymbol == null)
 				return 0;
 
 			var flags = (MemberFlags)0;
 
-			if (typeDefinition.IsAbstract)
+            if (namedTypeSymbol.IsStatic)
+            {
+                flags |= MemberFlags.Static;
+            }
+
+			if (namedTypeSymbol.IsAbstract)
 			{
-				if (typeDefinition.IsSealed)
-					flags |= MemberFlags.Static;
-				else
-					flags |= MemberFlags.Abstract;
+                flags |= MemberFlags.Abstract;
 			}
-			else if (typeDefinition.IsSealed)
+
+            if (namedTypeSymbol.IsSealed)
 			{
 				flags |= MemberFlags.Sealed;
 			}
@@ -316,30 +297,43 @@ namespace BreakingChangesDetector
 			return flags;
 		}
 
-		public static IEnumerable<MemberReference> GetMembers(this TypeDefinition type)
+        // TODO: Rename these
+		public static IEnumerable<ISymbol> Members(this INamedTypeSymbol namedTypeSymbol)
 		{
-			foreach (var member in type.Events)
-				yield return member;
+            foreach (var member in namedTypeSymbol.GetMembers())
+            {
+                switch (namedTypeSymbol.Kind)
+                {
+                    case SymbolKind.Event:
+                    case SymbolKind.Property:
+                    case SymbolKind.Field:
+                    case SymbolKind.NamedType:
+                        yield return member;
+                        break;
 
-			foreach (var member in type.Fields)
-				yield return member;
-
-			foreach (var member in type.Methods)
-				yield return member;
-
-			foreach (var member in type.NestedTypes)
-				yield return member;
-
-			foreach (var member in type.Properties)
-				yield return member;
+                    case SymbolKind.Method:
+                        {
+                            var method = (IMethodSymbol)member;
+                            if (method.AssociatedSymbol == null)
+                            {
+                                yield return member;
+                            }
+                            break;
+                        }
+                }
+            }
 		}
 
-		#region GetNamespaceRenames
+        public static IEnumerable<IMethodSymbol> Methods(this INamedTypeSymbol namedTypeSymbol) => namedTypeSymbol.Members().OfType<IMethodSymbol>();
+        public static IEnumerable<IPropertySymbol> Properties(this INamedTypeSymbol namedTypeSymbol) => namedTypeSymbol.Members().OfType<IPropertySymbol>();
+        public static IEnumerable<IEventSymbol> Events(this INamedTypeSymbol namedTypeSymbol) => namedTypeSymbol.Members().OfType<IEventSymbol>();
 
-		public static IEnumerable<KeyValuePair<string, string>> GetNamespaceRenames(AssemblyDefinition assembly)
+        #region GetNamespaceRenames
+
+        public static IEnumerable<KeyValuePair<string, string>> GetNamespaceRenames(IAssemblySymbol assemblySymbol)
 		{
-			var namespaceRenamedAttributeDatas = assembly.CustomAttributes.Where(
-				a => a.AttributeType.FullName == typeof(NamespaceRenamedAttribute).FullName
+			var namespaceRenamedAttributeDatas = assemblySymbol.GetAttributes().Where(
+				a => a.AttributeClass.GetFullName() == typeof(NamespaceRenamedAttribute).FullName
 				);
 
 			foreach (var attributeData in namespaceRenamedAttributeDatas)
@@ -353,35 +347,33 @@ namespace BreakingChangesDetector
 
 		#endregion // GetNamespaceRenames
 
-		public static TypeKind GetTypeKind(TypeReference type)
+		public static TypeKind GetTypeKind(ITypeSymbol typeSymbol)
 		{
-			var genericParameter = type as GenericParameter;
-			if (genericParameter != null)
+			var typeParameterSymbol = typeSymbol as ITypeParameterSymbol;
+			if (typeParameterSymbol != null)
 			{
-				if (genericParameter.HasNotNullableValueTypeConstraint)
+				if (typeParameterSymbol.HasValueTypeConstraint)
 					return TypeKind.Struct;
 
 				return TypeKind.Class;
 			}
 
-			var typeDefinition = type.Resolve();
-
-			if (typeDefinition.BaseType.EqualsType(typeof(MulticastDelegate)))
+            if (typeSymbol.BaseType.EqualsType(typeof(MulticastDelegate)))
 				return TypeKind.Delegate;
 
-			if (typeDefinition.IsEnum)
+			if (typeSymbol.TypeKind == Microsoft.CodeAnalysis.TypeKind.Enum)
 				return TypeKind.Enum;
 
-			if (typeDefinition.IsValueType)
+			if (typeSymbol.IsValueType)
 				return TypeKind.Struct;
 
-			if (typeDefinition.IsInterface)
+			if (typeSymbol.TypeKind == Microsoft.CodeAnalysis.TypeKind.Interface)
 				return TypeKind.Interface;
 
-			if (typeDefinition.IsClass)
+			if (typeSymbol.IsReferenceType)
 				return TypeKind.Class;
 
-			Debug.Fail("Unknown kind of type: " + type.FullName);
+			Debug.Fail("Unknown kind of type: " + typeSymbol.GetFullName());
 			return TypeKind.Class;
 		}
 
@@ -392,14 +384,14 @@ namespace BreakingChangesDetector
 		/// Gets the version comparison name for the specified <see cref="Assembly"/>, which is the name by which assemblies across versions can be 
 		/// matched up to be treated as logically equivalent.
 		/// </summary>
-		/// <param name="assembly">The Assembly of which to get the version comparison name.</param>
+		/// <param name="assemblySymbol">The Assembly of which to get the version comparison name.</param>
 		/// <returns></returns> 
 #endif
-		public static string GetVersionComparisonName(AssemblyDefinition assembly)
+		public static string GetVersionComparisonName(IAssemblySymbol assemblySymbol)
 		{
-			var versionComparisonNameAttributeData = assembly.CustomAttributes.Where(
-				a => a.AttributeType.FullName == typeof(VersionComparisonNameAttribute).FullName
-				).FirstOrDefault();
+			var versionComparisonNameAttributeData = assemblySymbol.GetAttributes().FirstOrDefault(
+				a => a.AttributeClass.GetFullName() == typeof(VersionComparisonNameAttribute).FullName
+				);
 
 			if (versionComparisonNameAttributeData != null)
 			{
@@ -408,90 +400,86 @@ namespace BreakingChangesDetector
 					return value;
 			}
 
-			return assembly.FullName;
+			return assemblySymbol.Name;
 		}
 
-		#endregion // GetVersionComparisonName
+        #endregion // GetVersionComparisonName
 
-		public static bool IsDynamicType(this FieldDefinition field)
+        public static bool IsConstructed(this INamedTypeSymbol namedTypeSymbol) =>
+            !namedTypeSymbol.ConstructedFrom.Equals(namedTypeSymbol);
+
+		public static bool IsDynamicType(this IFieldSymbol fieldSymbol)
 		{
-			return field.CustomAttributes.Any(a => a.AttributeType.EqualsType(typeof(DynamicAttribute)));
+			return fieldSymbol.GetAttributes().Any(a => a.AttributeClass.EqualsType(typeof(DynamicAttribute)));
 		}
 
-		public static bool IsDynamicType(this ParameterDefinition parameter)
+		public static bool IsDynamicType(this IParameterSymbol parameterSymbol)
 		{
-			return parameter.CustomAttributes.Any(a => a.AttributeType.EqualsType(typeof(DynamicAttribute)));
+			return parameterSymbol.GetAttributes().Any(a => a.AttributeClass.EqualsType(typeof(DynamicAttribute)));
 		}
-
-		public static bool IsEnum(this TypeReference type)
-		{
-			if (type.GetType() == typeof(TypeReference))
-				type = type.Resolve();
-
-			var typeDefinition = type as TypeDefinition;
-			return typeDefinition != null && typeDefinition.IsEnum;
-		}
-
-		#region IsNullable
 
 		public static bool IsNullable(this Type t)
 		{
 			return t.IsConstructedGenericType && t.GetGenericTypeDefinition() == typeof(Nullable<>);
 		}
 
-		public static bool IsNullable(this TypeReference type)
+		public static bool IsNullable(this ITypeSymbol typeSymbol)
 		{
-			var genericInstance = type as GenericInstanceType;
-			return genericInstance != null && genericInstance.ElementType.EqualsType(typeof(Nullable<>));
+			var namedTypeSymbol = typeSymbol as INamedTypeSymbol;
+			return namedTypeSymbol != null && namedTypeSymbol.ConstructedFrom.EqualsType(typeof(Nullable<>));
 		}
 
-		#endregion // IsNullable
+        public static bool TryGetNullableUnderlyingType(this ITypeSymbol type, out ITypeSymbol underlyingType)
+        {
+            if (type.IsNullable())
+            {
+                underlyingType = ((INamedTypeSymbol)type).TypeArguments[0];
+                return true;
+            }
+            else
+            {
+                underlyingType = null;
+                return false;
+            }
+        }
 
-		public static bool IsPropertyTypeDynamic(this PropertyDefinition property)
+        public static bool IsPropertyTypeDynamic(this IPropertySymbol propertySymbol)
 		{
-			if (property.GetMethod != null)
-				return property.GetMethod.IsReturnTypeDynamic();
+			if (propertySymbol.GetMethod != null)
+				return propertySymbol.GetMethod.IsReturnTypeDynamic();
 
-			var parameters = property.SetMethod.Parameters;
-			return parameters[parameters.Count - 1].IsDynamicType();
+			var parameters = propertySymbol.SetMethod.Parameters;
+			return parameters[parameters.Length - 1].IsDynamicType();
 		}
 
-		public static bool IsReturnTypeDynamic(this MethodDefinition method)
+		public static bool IsReturnTypeDynamic(this IMethodSymbol methodSymbol)
 		{
-			return method.MethodReturnType.CustomAttributes.Any(a => a.AttributeType.EqualsType(typeof(DynamicAttribute)));
+			return methodSymbol.GetReturnTypeAttributes().Any(a => a.AttributeClass.EqualsType(typeof(DynamicAttribute)));
 		}
 
-		public static object PreprocessConstantValue(TypeReference type, object value)
-		{
-			if (value != null)
-			{
-				if (type.IsEnum() ||
-					(value != null && type.IsNullable() && ((GenericInstanceType)type).GenericArguments[0].IsEnum()))
-				{
-					try
-					{
-						value = Convert.ToUInt64(value);
-					}
-					catch (OverflowException)
-					{
-						value = unchecked((ulong)Convert.ToInt64(value));
-					}
-				}
-			}
+        public static object PreprocessConstantValue(ITypeSymbol typeSymbol, object value)
+        {
+            if (value != null)
+            {
+                if (typeSymbol.TryGetNullableUnderlyingType(out var underlyingType))
+                {
+                    typeSymbol = underlyingType;
+                }
 
-			return value;
-		}
+                if (typeSymbol.TypeKind == Microsoft.CodeAnalysis.TypeKind.Enum)
+                {
+                    try
+                    {
+                        value = Convert.ToUInt64(value);
+                    }
+                    catch (OverflowException)
+                    {
+                        value = unchecked((ulong)Convert.ToInt64(value));
+                    }
+                }
+            }
 
-		#region ToAssemblyDefinition
-
-		private static ConcurrentDictionary<Assembly, AssemblyDefinition> _cache =
-			new ConcurrentDictionary<Assembly, AssemblyDefinition>();
-
-		public static AssemblyDefinition ToAssemblyDefinition(this Assembly assembly)
-		{
-			return _cache.GetOrAdd(assembly, a => AssemblyDefinition.ReadAssembly(a.Location));
-		}
-
-		#endregion // ToAssemblyDefinition
+            return value;
+        }
 	}
 }

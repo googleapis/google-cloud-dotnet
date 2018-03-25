@@ -2,6 +2,7 @@
     MIT License
 
     Copyright(c) 2014-2018 Infragistics, Inc.
+    Copyright 2018 Google LLC
 
     Permission is hereby granted, free of charge, to any person obtaining a copy
     of this software and associated documentation files (the "Software"), to deal
@@ -22,14 +23,9 @@
     SOFTWARE.
 */
 
-using Mono.Cecil;
+using Microsoft.CodeAnalysis;
 using System;
-using System.Collections.Generic;
 using System.Diagnostics;
-using System.Linq;
-using System.Reflection;
-using System.Text;
-using System.Threading.Tasks;
 
 namespace BreakingChangesDetector.MetadataItems
 {
@@ -48,7 +44,7 @@ namespace BreakingChangesDetector.MetadataItems
 		#region Constructor
 
 		internal ParameterData(MetadataItemKinds declaringMemberKind, string name, TypeData type, ParameterModifier modifer, InternalFlags flags, object defaultValue)
-		{
+        {
 			_flags = flags;
 
 			this.DeclaringMemberKind = declaringMemberKind;
@@ -58,32 +54,43 @@ namespace BreakingChangesDetector.MetadataItems
 			this.Type = type;
 		}
 
-		internal ParameterData(ParameterDefinition underlyingParameter, MemberDataBase declaringMember)
+		internal ParameterData(IParameterSymbol parameterSymbol, MemberDataBase declaringMember)
 		{
-			var modifer = ParameterModifier.None;
-			var parameterType = underlyingParameter.ParameterType;
-			var byReferenceType = parameterType as ByReferenceType;
-			if (byReferenceType != null)
-			{
-				modifer = underlyingParameter.IsOut ? ParameterModifier.Out : ParameterModifier.Ref;
-				parameterType = byReferenceType.ElementType;
-			}
+            Context = declaringMember.Context;
+
+            var parameterType = parameterSymbol.Type;
+
+            ParameterModifier modifer;
+            switch (parameterSymbol.RefKind)
+            {
+                case RefKind.None:
+                    modifer = ParameterModifier.None;
+                    break;
+                case RefKind.Out:
+                    modifer = ParameterModifier.Out;
+                    break;
+                case RefKind.Ref:
+                    modifer = ParameterModifier.Ref;
+                    break;
+                default:
+                    throw new InvalidOperationException($"Unknown RefKind value: {parameterSymbol.RefKind}");
+            }
 
 			this.DeclaringMemberKind = declaringMember.MetadataItemKind;
 			this.Modifer = modifer;
-			this.Name = underlyingParameter.Name;
-			this.Type = TypeData.FromType(parameterType);
+			this.Name = parameterSymbol.Name;
+			this.Type = Context.GetTypeData(parameterType);
 
-			if (underlyingParameter.IsOptional)
+			if (parameterSymbol.IsOptional)
 			{
 				_flags |= InternalFlags.IsOptional;
-				this.DefaultValue = Utilities.PreprocessConstantValue(parameterType, underlyingParameter.GetDefualtValue());
+				this.DefaultValue = Utilities.PreprocessConstantValue(parameterType, parameterSymbol.ExplicitDefaultValue);
 			}
 
-			if (underlyingParameter.CustomAttributes.Any(c => c.AttributeType.EqualsType(typeof(ParamArrayAttribute))))
+			if (parameterSymbol.IsParams)
 				_flags |= InternalFlags.IsParamsArray;
 
-			if (underlyingParameter.IsDynamicType())
+			if (parameterSymbol.IsDynamicType())
 				_flags |= InternalFlags.IsTypeDynamic;
 		}
 
@@ -102,14 +109,17 @@ namespace BreakingChangesDetector.MetadataItems
 			visitor.VisitParameterData(this);
 		}
 
-		#endregion // Accept
+        #endregion // Accept
 
-		#region DisplayName
+        // TODO_Refactor: Can we get away with this not storing the context? The parameter would need to store its owning member.
+        public override MetadataResolutionContext Context { get; }
 
-		/// <summary>
-		/// Gets the name to use for this item in messages.
-		/// </summary>
-		public override string DisplayName
+        #region DisplayName
+
+        /// <summary>
+        /// Gets the name to use for this item in messages.
+        /// </summary>
+        public override string DisplayName
 		{
 			get { return this.Name; }
 		}

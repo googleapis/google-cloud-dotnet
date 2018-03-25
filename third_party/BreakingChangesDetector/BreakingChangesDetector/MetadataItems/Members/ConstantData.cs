@@ -2,6 +2,7 @@
     MIT License
 
     Copyright(c) 2014-2018 Infragistics, Inc.
+    Copyright 2018 Google LLC
 
     Permission is hereby granted, free of charge, to any person obtaining a copy
     of this software and associated documentation files (the "Software"), to deal
@@ -22,7 +23,7 @@
     SOFTWARE.
 */
 
-using Mono.Cecil;
+using Microsoft.CodeAnalysis;
 using System;
 using System.Collections.Generic;
 using System.Diagnostics;
@@ -46,10 +47,10 @@ namespace BreakingChangesDetector.MetadataItems
 			this.Value = value;
 		}
 
-		private ConstantData(FieldDefinition fieldDefinition, MemberAccessibility accessibility, DeclaringTypeData declaringType)
-			: base(fieldDefinition, accessibility, fieldDefinition.FieldType, fieldDefinition.IsDynamicType(), MemberFlags.Static, declaringType)
+		private ConstantData(IFieldSymbol fieldSymbol, MemberAccessibility accessibility, DeclaringTypeData declaringType)
+			: base(fieldSymbol, accessibility, fieldSymbol.Type, fieldSymbol.IsDynamicType(), MemberFlags.Static, declaringType)
 		{
-			this.Value = Utilities.PreprocessConstantValue(fieldDefinition.FieldType, fieldDefinition.Constant);
+			this.Value = Utilities.PreprocessConstantValue(fieldSymbol.Type, fieldSymbol.ConstantValue);
 		}
 
 		#endregion // Constructors
@@ -143,13 +144,13 @@ namespace BreakingChangesDetector.MetadataItems
 
 		#region Methods
 
-		internal static MemberDataBase ConstantDataFromReflection(FieldDefinition fieldDefinition, DeclaringTypeData declaringType)
+		internal static MemberDataBase ConstantDataFromReflection(IFieldSymbol fieldSymbol, DeclaringTypeData declaringType)
 		{
-			var accessibility = fieldDefinition.GetAccessibility();
+			var accessibility = fieldSymbol.GetAccessibility();
 			if (accessibility == null)
 				return null;
 
-			return new ConstantData(fieldDefinition, accessibility.Value, declaringType);
+			return new ConstantData(fieldSymbol, accessibility.Value, declaringType);
 		}
 
 		#endregion // Methods

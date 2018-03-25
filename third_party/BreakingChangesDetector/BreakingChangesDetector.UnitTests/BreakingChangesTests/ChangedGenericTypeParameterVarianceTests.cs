@@ -2,6 +2,7 @@
     MIT License
 
     Copyright(c) 2014-2018 Infragistics, Inc.
+    Copyright 2018 Google LLC
 
     Permission is hereby granted, free of charge, to any person obtaining a copy
     of this software and associated documentation files (the "Software"), to deal
@@ -23,181 +24,180 @@
 */
 
 using System;
-using Microsoft.VisualStudio.TestTools.UnitTesting;
+using Xunit;
 using BreakingChangesDetector.MetadataItems;
 using BreakingChangesDetector.BreakingChanges;
 
 namespace BreakingChangesDetector.UnitTests.BreakingChangesTests
 {
-	[TestClass]
 	public class ChangedGenericTypeParameterVarianceTests
 	{
 		#region NestedTypeTests
 
-		[TestMethod]
+		[Fact]
 		public void NestedTypeTests()
 		{
-			var assembly = AssemblyData.FromAssembly(typeof(ChangedAccessibilityFromPublicToProtectedTests).Assembly);
-			var nestedInterfaceWithNonVariantParam = TypeDefinitionData.FromType(typeof(NestedInterfaceWithNonVariantParam));
-			var nestedInterfaceWithCovariantParam = TypeDefinitionData.FromType(typeof(NestedInterfaceWithCovariantParam));
-			var nestedInterfaceWithContravariantParam = TypeDefinitionData.FromType(typeof(NestedInterfaceWithContravariantParam));
+			var context = MetadataResolutionContext.CreateFromTypes(typeof(ChangedAccessibilityFromPublicToProtectedTests));
+			var nestedInterfaceWithNonVariantParam = context.GetTypeDefinitionData(typeof(NestedInterfaceWithNonVariantParam));
+			var nestedInterfaceWithCovariantParam = context.GetTypeDefinitionData(typeof(NestedInterfaceWithCovariantParam));
+			var nestedInterfaceWithContravariantParam = context.GetTypeDefinitionData(typeof(NestedInterfaceWithContravariantParam));
 			
 			var breakingChanges = MetadataComparer.CompareTypes(nestedInterfaceWithNonVariantParam, nestedInterfaceWithCovariantParam);
-			Assert.AreEqual(0, breakingChanges.Count, "There should be no breaking changes when a type parameter changes from invariant to variant.");
+			AssertX.Equal(0, breakingChanges.Count, "There should be no breaking changes when a type parameter changes from invariant to variant.");
 
 			breakingChanges = MetadataComparer.CompareTypes(nestedInterfaceWithNonVariantParam, nestedInterfaceWithContravariantParam);
-			Assert.AreEqual(0, breakingChanges.Count, "There should be no breaking changes when a type parameter changes from invariant to variant.");
+			AssertX.Equal(0, breakingChanges.Count, "There should be no breaking changes when a type parameter changes from invariant to variant.");
 
 			breakingChanges = MetadataComparer.CompareTypes(nestedInterfaceWithCovariantParam, nestedInterfaceWithNonVariantParam);
-			Assert.AreEqual(1, breakingChanges.Count, "There should be one breaking change when type parameter variance changes.");
-			Assert.AreEqual(BreakingChangeKind.ChangedGenericTypeParameterVariance, breakingChanges[0].BreakingChangeKind, "The BreakingChangeKind is incorrect.");
-			Assert.AreEqual(nestedInterfaceWithCovariantParam.GetNestedType("Interface`1").GenericParameters[0], breakingChanges[0].OldItem, "The OldItem is incorrect.");
-			Assert.AreEqual(nestedInterfaceWithNonVariantParam.GetNestedType("Interface`1").GenericParameters[0], breakingChanges[0].NewItem, "The NewItem is incorrect.");
-			Assert.IsNull(breakingChanges[0].AssociatedData, "The AssociatedData is incorrect.");
+			AssertX.Equal(1, breakingChanges.Count, "There should be one breaking change when type parameter variance changes.");
+			AssertX.Equal(BreakingChangeKind.ChangedGenericTypeParameterVariance, breakingChanges[0].BreakingChangeKind, "The BreakingChangeKind is incorrect.");
+			AssertX.Equal(nestedInterfaceWithCovariantParam.GetNestedType("Interface`1").GenericParameters[0], breakingChanges[0].OldItem, "The OldItem is incorrect.");
+			AssertX.Equal(nestedInterfaceWithNonVariantParam.GetNestedType("Interface`1").GenericParameters[0], breakingChanges[0].NewItem, "The NewItem is incorrect.");
+			AssertX.Null(breakingChanges[0].AssociatedData, "The AssociatedData is incorrect.");
 
 			breakingChanges = MetadataComparer.CompareTypes(nestedInterfaceWithCovariantParam, nestedInterfaceWithContravariantParam);
-			Assert.AreEqual(1, breakingChanges.Count, "There should be one breaking change when type parameter variance changes.");
-			Assert.AreEqual(BreakingChangeKind.ChangedGenericTypeParameterVariance, breakingChanges[0].BreakingChangeKind, "The BreakingChangeKind is incorrect.");
-			Assert.AreEqual(nestedInterfaceWithCovariantParam.GetNestedType("Interface`1").GenericParameters[0], breakingChanges[0].OldItem, "The OldItem is incorrect.");
-			Assert.AreEqual(nestedInterfaceWithContravariantParam.GetNestedType("Interface`1").GenericParameters[0], breakingChanges[0].NewItem, "The NewItem is incorrect.");
-			Assert.IsNull(breakingChanges[0].AssociatedData, "The AssociatedData is incorrect.");
+			AssertX.Equal(1, breakingChanges.Count, "There should be one breaking change when type parameter variance changes.");
+			AssertX.Equal(BreakingChangeKind.ChangedGenericTypeParameterVariance, breakingChanges[0].BreakingChangeKind, "The BreakingChangeKind is incorrect.");
+			AssertX.Equal(nestedInterfaceWithCovariantParam.GetNestedType("Interface`1").GenericParameters[0], breakingChanges[0].OldItem, "The OldItem is incorrect.");
+			AssertX.Equal(nestedInterfaceWithContravariantParam.GetNestedType("Interface`1").GenericParameters[0], breakingChanges[0].NewItem, "The NewItem is incorrect.");
+			AssertX.Null(breakingChanges[0].AssociatedData, "The AssociatedData is incorrect.");
 
 			breakingChanges = MetadataComparer.CompareTypes(nestedInterfaceWithContravariantParam, nestedInterfaceWithNonVariantParam);
-			Assert.AreEqual(1, breakingChanges.Count, "There should be one breaking change when type parameter variance changes.");
-			Assert.AreEqual(BreakingChangeKind.ChangedGenericTypeParameterVariance, breakingChanges[0].BreakingChangeKind, "The BreakingChangeKind is incorrect.");
-			Assert.AreEqual(nestedInterfaceWithContravariantParam.GetNestedType("Interface`1").GenericParameters[0], breakingChanges[0].OldItem, "The OldItem is incorrect.");
-			Assert.AreEqual(nestedInterfaceWithNonVariantParam.GetNestedType("Interface`1").GenericParameters[0], breakingChanges[0].NewItem, "The NewItem is incorrect.");
-			Assert.IsNull(breakingChanges[0].AssociatedData, "The AssociatedData is incorrect.");
+			AssertX.Equal(1, breakingChanges.Count, "There should be one breaking change when type parameter variance changes.");
+			AssertX.Equal(BreakingChangeKind.ChangedGenericTypeParameterVariance, breakingChanges[0].BreakingChangeKind, "The BreakingChangeKind is incorrect.");
+			AssertX.Equal(nestedInterfaceWithContravariantParam.GetNestedType("Interface`1").GenericParameters[0], breakingChanges[0].OldItem, "The OldItem is incorrect.");
+			AssertX.Equal(nestedInterfaceWithNonVariantParam.GetNestedType("Interface`1").GenericParameters[0], breakingChanges[0].NewItem, "The NewItem is incorrect.");
+			AssertX.Null(breakingChanges[0].AssociatedData, "The AssociatedData is incorrect.");
 
 			breakingChanges = MetadataComparer.CompareTypes(nestedInterfaceWithContravariantParam, nestedInterfaceWithCovariantParam);
-			Assert.AreEqual(1, breakingChanges.Count, "There should be one breaking change when type parameter variance changes.");
-			Assert.AreEqual(BreakingChangeKind.ChangedGenericTypeParameterVariance, breakingChanges[0].BreakingChangeKind, "The BreakingChangeKind is incorrect.");
-			Assert.AreEqual(nestedInterfaceWithContravariantParam.GetNestedType("Interface`1").GenericParameters[0], breakingChanges[0].OldItem, "The OldItem is incorrect.");
-			Assert.AreEqual(nestedInterfaceWithCovariantParam.GetNestedType("Interface`1").GenericParameters[0], breakingChanges[0].NewItem, "The NewItem is incorrect.");
-			Assert.IsNull(breakingChanges[0].AssociatedData, "The AssociatedData is incorrect.");
+			AssertX.Equal(1, breakingChanges.Count, "There should be one breaking change when type parameter variance changes.");
+			AssertX.Equal(BreakingChangeKind.ChangedGenericTypeParameterVariance, breakingChanges[0].BreakingChangeKind, "The BreakingChangeKind is incorrect.");
+			AssertX.Equal(nestedInterfaceWithContravariantParam.GetNestedType("Interface`1").GenericParameters[0], breakingChanges[0].OldItem, "The OldItem is incorrect.");
+			AssertX.Equal(nestedInterfaceWithCovariantParam.GetNestedType("Interface`1").GenericParameters[0], breakingChanges[0].NewItem, "The NewItem is incorrect.");
+			AssertX.Null(breakingChanges[0].AssociatedData, "The AssociatedData is incorrect.");
 
-			var nestedDelegateWithNonVariantParam = TypeDefinitionData.FromType(typeof(NestedDelegateWithNonVariantParam));
-			var nestedDelegateWithCovariantParam = TypeDefinitionData.FromType(typeof(NestedDelegateWithCovariantParam));
-			var nestedDelegateWithContravariantParam = TypeDefinitionData.FromType(typeof(NestedDelegateWithContravariantParam));
+			var nestedDelegateWithNonVariantParam = context.GetTypeDefinitionData(typeof(NestedDelegateWithNonVariantParam));
+			var nestedDelegateWithCovariantParam = context.GetTypeDefinitionData(typeof(NestedDelegateWithCovariantParam));
+			var nestedDelegateWithContravariantParam = context.GetTypeDefinitionData(typeof(NestedDelegateWithContravariantParam));
 
 			breakingChanges = MetadataComparer.CompareTypes(nestedDelegateWithNonVariantParam, nestedDelegateWithCovariantParam);
-			Assert.AreEqual(0, breakingChanges.Count, "There should be no breaking changes when a type parameter changes from invariant to variant.");
+			AssertX.Equal(0, breakingChanges.Count, "There should be no breaking changes when a type parameter changes from invariant to variant.");
 
 			breakingChanges = MetadataComparer.CompareTypes(nestedDelegateWithNonVariantParam, nestedDelegateWithContravariantParam);
-			Assert.AreEqual(0, breakingChanges.Count, "There should be no breaking changes when a type parameter changes from invariant to variant.");
+			AssertX.Equal(0, breakingChanges.Count, "There should be no breaking changes when a type parameter changes from invariant to variant.");
 
 			breakingChanges = MetadataComparer.CompareTypes(nestedDelegateWithCovariantParam, nestedDelegateWithNonVariantParam);
-			Assert.AreEqual(1, breakingChanges.Count, "There should be one breaking change when type parameter variance changes.");
-			Assert.AreEqual(BreakingChangeKind.ChangedGenericTypeParameterVariance, breakingChanges[0].BreakingChangeKind, "The BreakingChangeKind is incorrect.");
-			Assert.AreEqual(nestedDelegateWithCovariantParam.GetNestedType("Delegate`1").GenericParameters[0], breakingChanges[0].OldItem, "The OldItem is incorrect.");
-			Assert.AreEqual(nestedDelegateWithNonVariantParam.GetNestedType("Delegate`1").GenericParameters[0], breakingChanges[0].NewItem, "The NewItem is incorrect.");
-			Assert.IsNull(breakingChanges[0].AssociatedData, "The AssociatedData is incorrect.");
+			AssertX.Equal(1, breakingChanges.Count, "There should be one breaking change when type parameter variance changes.");
+			AssertX.Equal(BreakingChangeKind.ChangedGenericTypeParameterVariance, breakingChanges[0].BreakingChangeKind, "The BreakingChangeKind is incorrect.");
+			AssertX.Equal(nestedDelegateWithCovariantParam.GetNestedType("Delegate`1").GenericParameters[0], breakingChanges[0].OldItem, "The OldItem is incorrect.");
+			AssertX.Equal(nestedDelegateWithNonVariantParam.GetNestedType("Delegate`1").GenericParameters[0], breakingChanges[0].NewItem, "The NewItem is incorrect.");
+			AssertX.Null(breakingChanges[0].AssociatedData, "The AssociatedData is incorrect.");
 
 			breakingChanges = MetadataComparer.CompareTypes(nestedDelegateWithCovariantParam, nestedDelegateWithContravariantParam);
-			Assert.AreEqual(1, breakingChanges.Count, "There should be one breaking change when type parameter variance changes.");
-			Assert.AreEqual(BreakingChangeKind.ChangedGenericTypeParameterVariance, breakingChanges[0].BreakingChangeKind, "The BreakingChangeKind is incorrect.");
-			Assert.AreEqual(nestedDelegateWithCovariantParam.GetNestedType("Delegate`1").GenericParameters[0], breakingChanges[0].OldItem, "The OldItem is incorrect.");
-			Assert.AreEqual(nestedDelegateWithContravariantParam.GetNestedType("Delegate`1").GenericParameters[0], breakingChanges[0].NewItem, "The NewItem is incorrect.");
-			Assert.IsNull(breakingChanges[0].AssociatedData, "The AssociatedData is incorrect.");
+			AssertX.Equal(1, breakingChanges.Count, "There should be one breaking change when type parameter variance changes.");
+			AssertX.Equal(BreakingChangeKind.ChangedGenericTypeParameterVariance, breakingChanges[0].BreakingChangeKind, "The BreakingChangeKind is incorrect.");
+			AssertX.Equal(nestedDelegateWithCovariantParam.GetNestedType("Delegate`1").GenericParameters[0], breakingChanges[0].OldItem, "The OldItem is incorrect.");
+			AssertX.Equal(nestedDelegateWithContravariantParam.GetNestedType("Delegate`1").GenericParameters[0], breakingChanges[0].NewItem, "The NewItem is incorrect.");
+			AssertX.Null(breakingChanges[0].AssociatedData, "The AssociatedData is incorrect.");
 
 			breakingChanges = MetadataComparer.CompareTypes(nestedDelegateWithContravariantParam, nestedDelegateWithNonVariantParam);
-			Assert.AreEqual(1, breakingChanges.Count, "There should be one breaking change when type parameter variance changes.");
-			Assert.AreEqual(BreakingChangeKind.ChangedGenericTypeParameterVariance, breakingChanges[0].BreakingChangeKind, "The BreakingChangeKind is incorrect.");
-			Assert.AreEqual(nestedDelegateWithContravariantParam.GetNestedType("Delegate`1").GenericParameters[0], breakingChanges[0].OldItem, "The OldItem is incorrect.");
-			Assert.AreEqual(nestedDelegateWithNonVariantParam.GetNestedType("Delegate`1").GenericParameters[0], breakingChanges[0].NewItem, "The NewItem is incorrect.");
-			Assert.IsNull(breakingChanges[0].AssociatedData, "The AssociatedData is incorrect.");
+			AssertX.Equal(1, breakingChanges.Count, "There should be one breaking change when type parameter variance changes.");
+			AssertX.Equal(BreakingChangeKind.ChangedGenericTypeParameterVariance, breakingChanges[0].BreakingChangeKind, "The BreakingChangeKind is incorrect.");
+			AssertX.Equal(nestedDelegateWithContravariantParam.GetNestedType("Delegate`1").GenericParameters[0], breakingChanges[0].OldItem, "The OldItem is incorrect.");
+			AssertX.Equal(nestedDelegateWithNonVariantParam.GetNestedType("Delegate`1").GenericParameters[0], breakingChanges[0].NewItem, "The NewItem is incorrect.");
+			AssertX.Null(breakingChanges[0].AssociatedData, "The AssociatedData is incorrect.");
 
 			breakingChanges = MetadataComparer.CompareTypes(nestedDelegateWithContravariantParam, nestedDelegateWithCovariantParam);
-			Assert.AreEqual(1, breakingChanges.Count, "There should be one breaking change when type parameter variance changes.");
-			Assert.AreEqual(BreakingChangeKind.ChangedGenericTypeParameterVariance, breakingChanges[0].BreakingChangeKind, "The BreakingChangeKind is incorrect.");
-			Assert.AreEqual(nestedDelegateWithContravariantParam.GetNestedType("Delegate`1").GenericParameters[0], breakingChanges[0].OldItem, "The OldItem is incorrect.");
-			Assert.AreEqual(nestedDelegateWithCovariantParam.GetNestedType("Delegate`1").GenericParameters[0], breakingChanges[0].NewItem, "The NewItem is incorrect.");
-			Assert.IsNull(breakingChanges[0].AssociatedData, "The AssociatedData is incorrect.");
+			AssertX.Equal(1, breakingChanges.Count, "There should be one breaking change when type parameter variance changes.");
+			AssertX.Equal(BreakingChangeKind.ChangedGenericTypeParameterVariance, breakingChanges[0].BreakingChangeKind, "The BreakingChangeKind is incorrect.");
+			AssertX.Equal(nestedDelegateWithContravariantParam.GetNestedType("Delegate`1").GenericParameters[0], breakingChanges[0].OldItem, "The OldItem is incorrect.");
+			AssertX.Equal(nestedDelegateWithCovariantParam.GetNestedType("Delegate`1").GenericParameters[0], breakingChanges[0].NewItem, "The NewItem is incorrect.");
+			AssertX.Null(breakingChanges[0].AssociatedData, "The AssociatedData is incorrect.");
 		}
 
 		#endregion // NestedTypeTests
 
 		#region TypeTests
 
-		[TestMethod]
+		[Fact]
 		public void TypeTests()
 		{
-			var assembly = AssemblyData.FromAssembly(typeof(ChangedAccessibilityFromPublicToProtectedTests).Assembly);
-			var interfaceWithNonVariantParam = TypeDefinitionData.FromType(typeof(InterfaceWithNonVariantParam<>));
-			var interfaceWithCovariantParam = TypeDefinitionData.FromType(typeof(InterfaceWithCovariantParam<>));
-			var interfaceWithContravariantParam = TypeDefinitionData.FromType(typeof(InterfaceWithContravariantParam<>));
+			var context = MetadataResolutionContext.CreateFromTypes(typeof(ChangedAccessibilityFromPublicToProtectedTests));
+			var interfaceWithNonVariantParam = context.GetTypeDefinitionData(typeof(InterfaceWithNonVariantParam<>));
+			var interfaceWithCovariantParam = context.GetTypeDefinitionData(typeof(InterfaceWithCovariantParam<>));
+			var interfaceWithContravariantParam = context.GetTypeDefinitionData(typeof(InterfaceWithContravariantParam<>));
 			
 			var breakingChanges = MetadataComparer.CompareTypes(interfaceWithNonVariantParam, interfaceWithCovariantParam);
-			Assert.AreEqual(0, breakingChanges.Count, "There should be no breaking changes when a type parameter changes from invariant to variant.");
+			AssertX.Equal(0, breakingChanges.Count, "There should be no breaking changes when a type parameter changes from invariant to variant.");
 
 			breakingChanges = MetadataComparer.CompareTypes(interfaceWithNonVariantParam, interfaceWithContravariantParam);
-			Assert.AreEqual(0, breakingChanges.Count, "There should be no breaking changes when a type parameter changes from invariant to variant.");
+			AssertX.Equal(0, breakingChanges.Count, "There should be no breaking changes when a type parameter changes from invariant to variant.");
 
 			breakingChanges = MetadataComparer.CompareTypes(interfaceWithCovariantParam, interfaceWithNonVariantParam);
-			Assert.AreEqual(1, breakingChanges.Count, "There should be one breaking change when type parameter variance changes.");
-			Assert.AreEqual(BreakingChangeKind.ChangedGenericTypeParameterVariance, breakingChanges[0].BreakingChangeKind, "The BreakingChangeKind is incorrect.");
-			Assert.AreEqual(interfaceWithCovariantParam.GenericParameters[0], breakingChanges[0].OldItem, "The OldItem is incorrect.");
-			Assert.AreEqual(interfaceWithNonVariantParam.GenericParameters[0], breakingChanges[0].NewItem, "The NewItem is incorrect.");
-			Assert.IsNull(breakingChanges[0].AssociatedData, "The AssociatedData is incorrect.");
+			AssertX.Equal(1, breakingChanges.Count, "There should be one breaking change when type parameter variance changes.");
+			AssertX.Equal(BreakingChangeKind.ChangedGenericTypeParameterVariance, breakingChanges[0].BreakingChangeKind, "The BreakingChangeKind is incorrect.");
+			AssertX.Equal(interfaceWithCovariantParam.GenericParameters[0], breakingChanges[0].OldItem, "The OldItem is incorrect.");
+			AssertX.Equal(interfaceWithNonVariantParam.GenericParameters[0], breakingChanges[0].NewItem, "The NewItem is incorrect.");
+			AssertX.Null(breakingChanges[0].AssociatedData, "The AssociatedData is incorrect.");
 
 			breakingChanges = MetadataComparer.CompareTypes(interfaceWithCovariantParam, interfaceWithContravariantParam);
-			Assert.AreEqual(1, breakingChanges.Count, "There should be one breaking change when type parameter variance changes.");
-			Assert.AreEqual(BreakingChangeKind.ChangedGenericTypeParameterVariance, breakingChanges[0].BreakingChangeKind, "The BreakingChangeKind is incorrect.");
-			Assert.AreEqual(interfaceWithCovariantParam.GenericParameters[0], breakingChanges[0].OldItem, "The OldItem is incorrect.");
-			Assert.AreEqual(interfaceWithContravariantParam.GenericParameters[0], breakingChanges[0].NewItem, "The NewItem is incorrect.");
-			Assert.IsNull(breakingChanges[0].AssociatedData, "The AssociatedData is incorrect.");
+			AssertX.Equal(1, breakingChanges.Count, "There should be one breaking change when type parameter variance changes.");
+			AssertX.Equal(BreakingChangeKind.ChangedGenericTypeParameterVariance, breakingChanges[0].BreakingChangeKind, "The BreakingChangeKind is incorrect.");
+			AssertX.Equal(interfaceWithCovariantParam.GenericParameters[0], breakingChanges[0].OldItem, "The OldItem is incorrect.");
+			AssertX.Equal(interfaceWithContravariantParam.GenericParameters[0], breakingChanges[0].NewItem, "The NewItem is incorrect.");
+			AssertX.Null(breakingChanges[0].AssociatedData, "The AssociatedData is incorrect.");
 
 			breakingChanges = MetadataComparer.CompareTypes(interfaceWithContravariantParam, interfaceWithNonVariantParam);
-			Assert.AreEqual(1, breakingChanges.Count, "There should be one breaking change when type parameter variance changes.");
-			Assert.AreEqual(BreakingChangeKind.ChangedGenericTypeParameterVariance, breakingChanges[0].BreakingChangeKind, "The BreakingChangeKind is incorrect.");
-			Assert.AreEqual(interfaceWithContravariantParam.GenericParameters[0], breakingChanges[0].OldItem, "The OldItem is incorrect.");
-			Assert.AreEqual(interfaceWithNonVariantParam.GenericParameters[0], breakingChanges[0].NewItem, "The NewItem is incorrect.");
-			Assert.IsNull(breakingChanges[0].AssociatedData, "The AssociatedData is incorrect.");
+			AssertX.Equal(1, breakingChanges.Count, "There should be one breaking change when type parameter variance changes.");
+			AssertX.Equal(BreakingChangeKind.ChangedGenericTypeParameterVariance, breakingChanges[0].BreakingChangeKind, "The BreakingChangeKind is incorrect.");
+			AssertX.Equal(interfaceWithContravariantParam.GenericParameters[0], breakingChanges[0].OldItem, "The OldItem is incorrect.");
+			AssertX.Equal(interfaceWithNonVariantParam.GenericParameters[0], breakingChanges[0].NewItem, "The NewItem is incorrect.");
+			AssertX.Null(breakingChanges[0].AssociatedData, "The AssociatedData is incorrect.");
 
 			breakingChanges = MetadataComparer.CompareTypes(interfaceWithContravariantParam, interfaceWithCovariantParam);
-			Assert.AreEqual(1, breakingChanges.Count, "There should be one breaking change when type parameter variance changes.");
-			Assert.AreEqual(BreakingChangeKind.ChangedGenericTypeParameterVariance, breakingChanges[0].BreakingChangeKind, "The BreakingChangeKind is incorrect.");
-			Assert.AreEqual(interfaceWithContravariantParam.GenericParameters[0], breakingChanges[0].OldItem, "The OldItem is incorrect.");
-			Assert.AreEqual(interfaceWithCovariantParam.GenericParameters[0], breakingChanges[0].NewItem, "The NewItem is incorrect.");
-			Assert.IsNull(breakingChanges[0].AssociatedData, "The AssociatedData is incorrect.");
+			AssertX.Equal(1, breakingChanges.Count, "There should be one breaking change when type parameter variance changes.");
+			AssertX.Equal(BreakingChangeKind.ChangedGenericTypeParameterVariance, breakingChanges[0].BreakingChangeKind, "The BreakingChangeKind is incorrect.");
+			AssertX.Equal(interfaceWithContravariantParam.GenericParameters[0], breakingChanges[0].OldItem, "The OldItem is incorrect.");
+			AssertX.Equal(interfaceWithCovariantParam.GenericParameters[0], breakingChanges[0].NewItem, "The NewItem is incorrect.");
+			AssertX.Null(breakingChanges[0].AssociatedData, "The AssociatedData is incorrect.");
 
-			var delegateWithNonVariantParam = TypeDefinitionData.FromType(typeof(DelegateWithNonVariantParam<>));
-			var delegateWithCovariantParam = TypeDefinitionData.FromType(typeof(DelegateWithCovariantParam<>));
-			var delegateWithContravariantParam = TypeDefinitionData.FromType(typeof(DelegateWithContravariantParam<>));
+			var delegateWithNonVariantParam = context.GetTypeDefinitionData(typeof(DelegateWithNonVariantParam<>));
+			var delegateWithCovariantParam = context.GetTypeDefinitionData(typeof(DelegateWithCovariantParam<>));
+			var delegateWithContravariantParam = context.GetTypeDefinitionData(typeof(DelegateWithContravariantParam<>));
 
 			breakingChanges = MetadataComparer.CompareTypes(delegateWithNonVariantParam, delegateWithCovariantParam);
-			Assert.AreEqual(0, breakingChanges.Count, "There should be no breaking changes when a type parameter changes from invariant to variant.");
+			AssertX.Equal(0, breakingChanges.Count, "There should be no breaking changes when a type parameter changes from invariant to variant.");
 
 			breakingChanges = MetadataComparer.CompareTypes(delegateWithNonVariantParam, delegateWithContravariantParam);
-			Assert.AreEqual(0, breakingChanges.Count, "There should be no breaking changes when a type parameter changes from invariant to variant.");
+			AssertX.Equal(0, breakingChanges.Count, "There should be no breaking changes when a type parameter changes from invariant to variant.");
 
 			breakingChanges = MetadataComparer.CompareTypes(delegateWithCovariantParam, delegateWithNonVariantParam);
-			Assert.AreEqual(1, breakingChanges.Count, "There should be one breaking change when type parameter variance changes.");
-			Assert.AreEqual(BreakingChangeKind.ChangedGenericTypeParameterVariance, breakingChanges[0].BreakingChangeKind, "The BreakingChangeKind is incorrect.");
-			Assert.AreEqual(delegateWithCovariantParam.GenericParameters[0], breakingChanges[0].OldItem, "The OldItem is incorrect.");
-			Assert.AreEqual(delegateWithNonVariantParam.GenericParameters[0], breakingChanges[0].NewItem, "The NewItem is incorrect.");
-			Assert.IsNull(breakingChanges[0].AssociatedData, "The AssociatedData is incorrect.");
+			AssertX.Equal(1, breakingChanges.Count, "There should be one breaking change when type parameter variance changes.");
+			AssertX.Equal(BreakingChangeKind.ChangedGenericTypeParameterVariance, breakingChanges[0].BreakingChangeKind, "The BreakingChangeKind is incorrect.");
+			AssertX.Equal(delegateWithCovariantParam.GenericParameters[0], breakingChanges[0].OldItem, "The OldItem is incorrect.");
+			AssertX.Equal(delegateWithNonVariantParam.GenericParameters[0], breakingChanges[0].NewItem, "The NewItem is incorrect.");
+			AssertX.Null(breakingChanges[0].AssociatedData, "The AssociatedData is incorrect.");
 
 			breakingChanges = MetadataComparer.CompareTypes(delegateWithCovariantParam, delegateWithContravariantParam);
-			Assert.AreEqual(1, breakingChanges.Count, "There should be one breaking change when type parameter variance changes.");
-			Assert.AreEqual(BreakingChangeKind.ChangedGenericTypeParameterVariance, breakingChanges[0].BreakingChangeKind, "The BreakingChangeKind is incorrect.");
-			Assert.AreEqual(delegateWithCovariantParam.GenericParameters[0], breakingChanges[0].OldItem, "The OldItem is incorrect.");
-			Assert.AreEqual(delegateWithContravariantParam.GenericParameters[0], breakingChanges[0].NewItem, "The NewItem is incorrect.");
-			Assert.IsNull(breakingChanges[0].AssociatedData, "The AssociatedData is incorrect.");
+			AssertX.Equal(1, breakingChanges.Count, "There should be one breaking change when type parameter variance changes.");
+			AssertX.Equal(BreakingChangeKind.ChangedGenericTypeParameterVariance, breakingChanges[0].BreakingChangeKind, "The BreakingChangeKind is incorrect.");
+			AssertX.Equal(delegateWithCovariantParam.GenericParameters[0], breakingChanges[0].OldItem, "The OldItem is incorrect.");
+			AssertX.Equal(delegateWithContravariantParam.GenericParameters[0], breakingChanges[0].NewItem, "The NewItem is incorrect.");
+			AssertX.Null(breakingChanges[0].AssociatedData, "The AssociatedData is incorrect.");
 
 			breakingChanges = MetadataComparer.CompareTypes(delegateWithContravariantParam, delegateWithNonVariantParam);
-			Assert.AreEqual(1, breakingChanges.Count, "There should be one breaking change when type parameter variance changes.");
-			Assert.AreEqual(BreakingChangeKind.ChangedGenericTypeParameterVariance, breakingChanges[0].BreakingChangeKind, "The BreakingChangeKind is incorrect.");
-			Assert.AreEqual(delegateWithContravariantParam.GenericParameters[0], breakingChanges[0].OldItem, "The OldItem is incorrect.");
-			Assert.AreEqual(delegateWithNonVariantParam.GenericParameters[0], breakingChanges[0].NewItem, "The NewItem is incorrect.");
-			Assert.IsNull(breakingChanges[0].AssociatedData, "The AssociatedData is incorrect.");
+			AssertX.Equal(1, breakingChanges.Count, "There should be one breaking change when type parameter variance changes.");
+			AssertX.Equal(BreakingChangeKind.ChangedGenericTypeParameterVariance, breakingChanges[0].BreakingChangeKind, "The BreakingChangeKind is incorrect.");
+			AssertX.Equal(delegateWithContravariantParam.GenericParameters[0], breakingChanges[0].OldItem, "The OldItem is incorrect.");
+			AssertX.Equal(delegateWithNonVariantParam.GenericParameters[0], breakingChanges[0].NewItem, "The NewItem is incorrect.");
+			AssertX.Null(breakingChanges[0].AssociatedData, "The AssociatedData is incorrect.");
 
 			breakingChanges = MetadataComparer.CompareTypes(delegateWithContravariantParam, delegateWithCovariantParam);
-			Assert.AreEqual(1, breakingChanges.Count, "There should be one breaking change when type parameter variance changes.");
-			Assert.AreEqual(BreakingChangeKind.ChangedGenericTypeParameterVariance, breakingChanges[0].BreakingChangeKind, "The BreakingChangeKind is incorrect.");
-			Assert.AreEqual(delegateWithContravariantParam.GenericParameters[0], breakingChanges[0].OldItem, "The OldItem is incorrect.");
-			Assert.AreEqual(delegateWithCovariantParam.GenericParameters[0], breakingChanges[0].NewItem, "The NewItem is incorrect.");
-			Assert.IsNull(breakingChanges[0].AssociatedData, "The AssociatedData is incorrect.");
+			AssertX.Equal(1, breakingChanges.Count, "There should be one breaking change when type parameter variance changes.");
+			AssertX.Equal(BreakingChangeKind.ChangedGenericTypeParameterVariance, breakingChanges[0].BreakingChangeKind, "The BreakingChangeKind is incorrect.");
+			AssertX.Equal(delegateWithContravariantParam.GenericParameters[0], breakingChanges[0].OldItem, "The OldItem is incorrect.");
+			AssertX.Equal(delegateWithCovariantParam.GenericParameters[0], breakingChanges[0].NewItem, "The NewItem is incorrect.");
+			AssertX.Null(breakingChanges[0].AssociatedData, "The AssociatedData is incorrect.");
 		}
 
 		#endregion // TypeTests

@@ -2,6 +2,7 @@
     MIT License
 
     Copyright(c) 2014-2018 Infragistics, Inc.
+    Copyright 2018 Google LLC
 
     Permission is hereby granted, free of charge, to any person obtaining a copy
     of this software and associated documentation files (the "Software"), to deal
@@ -23,251 +24,250 @@
 */
 
 using System;
-using Microsoft.VisualStudio.TestTools.UnitTesting;
+using Xunit;
 using BreakingChangesDetector.MetadataItems;
 using BreakingChangesDetector.BreakingChanges;
 
 namespace BreakingChangesDetector.UnitTests.BreakingChangesTests
-{
-	[TestClass]
+{	
 	public class SealedMemberTests
 	{
 		#region EventTests
 
-		[TestMethod]
+		[Fact]
 		public void EventTests()
 		{
-			var assembly = AssemblyData.FromAssembly(typeof(SealedMemberTests).Assembly);
-			var EventVirtual = TypeDefinitionData.FromType(typeof(EventVirtual));
-			var EventAbstract = TypeDefinitionData.FromType(typeof(EventAbstract));
-			var EventVirtualOverride = TypeDefinitionData.FromType(typeof(EventVirtualOverride));
-			var EventAbstractOverride = TypeDefinitionData.FromType(typeof(EventAbstractOverride));
-			var EventVirtualNoOverride = TypeDefinitionData.FromType(typeof(EventVirtualNoOverride));
-			var EventAbstractNoOverride = TypeDefinitionData.FromType(typeof(EventAbstractNoOverride));
-			var EventVirtualSealedOverride = TypeDefinitionData.FromType(typeof(EventVirtualSealedOverride));
-			var EventAbstractSealedOverride = TypeDefinitionData.FromType(typeof(EventAbstractSealedOverride));
-			var EventVirtualSealedOverrideSealed = TypeDefinitionData.FromType(typeof(EventVirtualSealedOverrideSealed));
-			var EventAbstractSealedOverrideSealed = TypeDefinitionData.FromType(typeof(EventAbstractSealedOverrideSealed));
+			var context = MetadataResolutionContext.CreateFromTypes(typeof(SealedMemberTests));
+			var EventVirtual = context.GetTypeDefinitionData(typeof(EventVirtual));
+			var EventAbstract = context.GetTypeDefinitionData(typeof(EventAbstract));
+			var EventVirtualOverride = context.GetTypeDefinitionData(typeof(EventVirtualOverride));
+			var EventAbstractOverride = context.GetTypeDefinitionData(typeof(EventAbstractOverride));
+			var EventVirtualNoOverride = context.GetTypeDefinitionData(typeof(EventVirtualNoOverride));
+			var EventAbstractNoOverride = context.GetTypeDefinitionData(typeof(EventAbstractNoOverride));
+			var EventVirtualSealedOverride = context.GetTypeDefinitionData(typeof(EventVirtualSealedOverride));
+			var EventAbstractSealedOverride = context.GetTypeDefinitionData(typeof(EventAbstractSealedOverride));
+			var EventVirtualSealedOverrideSealed = context.GetTypeDefinitionData(typeof(EventVirtualSealedOverrideSealed));
+			var EventAbstractSealedOverrideSealed = context.GetTypeDefinitionData(typeof(EventAbstractSealedOverrideSealed));
 			
 			var breakingChanges = MetadataComparer.CompareTypes(EventVirtualOverride, EventVirtualSealedOverride);
-			Assert.AreEqual(1, breakingChanges.Count, "There should be one breaking change when a sealed override is added to an unsealed class.");
-			Assert.AreEqual(BreakingChangeKind.SealedMember, breakingChanges[0].BreakingChangeKind, "The BreakingChangeKind is incorrect.");
-			Assert.AreEqual(EventVirtualOverride.GetMember("Event"), breakingChanges[0].OldItem, "The OldItem is incorrect.");
-			Assert.AreEqual(EventVirtualSealedOverride.GetMember("Event"), breakingChanges[0].NewItem, "The NewItem is incorrect.");
-			Assert.IsNull(breakingChanges[0].AssociatedData, "The AssociatedData is incorrect.");
+			AssertX.Equal(1, breakingChanges.Count, "There should be one breaking change when a sealed override is added to an unsealed class.");
+			AssertX.Equal(BreakingChangeKind.SealedMember, breakingChanges[0].BreakingChangeKind, "The BreakingChangeKind is incorrect.");
+			AssertX.Equal(EventVirtualOverride.GetMember("Event"), breakingChanges[0].OldItem, "The OldItem is incorrect.");
+			AssertX.Equal(EventVirtualSealedOverride.GetMember("Event"), breakingChanges[0].NewItem, "The NewItem is incorrect.");
+			AssertX.Null(breakingChanges[0].AssociatedData, "The AssociatedData is incorrect.");
 
 			breakingChanges = MetadataComparer.CompareTypes(EventVirtualOverride, EventVirtualSealedOverrideSealed);
-			Assert.AreEqual(1, breakingChanges.Count, "There should be no breaking changes when a sealed override is added to a sealed class.");
+			AssertX.Equal(1, breakingChanges.Count, "There should be no breaking changes when a sealed override is added to a sealed class.");
 
 			breakingChanges = MetadataComparer.CompareTypes(EventAbstractOverride, EventAbstractSealedOverride);
-			Assert.AreEqual(1, breakingChanges.Count, "There should be one breaking change when a sealed override is added to an unsealed class.");
-			Assert.AreEqual(BreakingChangeKind.SealedMember, breakingChanges[0].BreakingChangeKind, "The BreakingChangeKind is incorrect.");
-			Assert.AreEqual(EventAbstractOverride.GetMember("Event"), breakingChanges[0].OldItem, "The OldItem is incorrect.");
-			Assert.AreEqual(EventAbstractSealedOverride.GetMember("Event"), breakingChanges[0].NewItem, "The NewItem is incorrect.");
-			Assert.IsNull(breakingChanges[0].AssociatedData, "The AssociatedData is incorrect.");
+			AssertX.Equal(1, breakingChanges.Count, "There should be one breaking change when a sealed override is added to an unsealed class.");
+			AssertX.Equal(BreakingChangeKind.SealedMember, breakingChanges[0].BreakingChangeKind, "The BreakingChangeKind is incorrect.");
+			AssertX.Equal(EventAbstractOverride.GetMember("Event"), breakingChanges[0].OldItem, "The OldItem is incorrect.");
+			AssertX.Equal(EventAbstractSealedOverride.GetMember("Event"), breakingChanges[0].NewItem, "The NewItem is incorrect.");
+			AssertX.Null(breakingChanges[0].AssociatedData, "The AssociatedData is incorrect.");
 
 			breakingChanges = MetadataComparer.CompareTypes(EventAbstractOverride, EventAbstractSealedOverrideSealed);
-			Assert.AreEqual(1, breakingChanges.Count, "There should be no breaking changes when a sealed override is added to a sealed class.");
+			AssertX.Equal(1, breakingChanges.Count, "There should be no breaking changes when a sealed override is added to a sealed class.");
 
 			breakingChanges = MetadataComparer.CompareTypes(EventVirtualNoOverride, EventVirtualSealedOverride);
-			Assert.AreEqual(1, breakingChanges.Count, "There should be one breaking change when a sealed override is added to an unsealed class.");
-			Assert.AreEqual(BreakingChangeKind.SealedMember, breakingChanges[0].BreakingChangeKind, "The BreakingChangeKind is incorrect.");
-			Assert.AreEqual(EventVirtual.GetMember("Event"), breakingChanges[0].OldItem, "The OldItem is incorrect.");
-			Assert.AreEqual(EventVirtualSealedOverride.GetMember("Event"), breakingChanges[0].NewItem, "The NewItem is incorrect.");
-			Assert.IsNull(breakingChanges[0].AssociatedData, "The AssociatedData is incorrect.");
+			AssertX.Equal(1, breakingChanges.Count, "There should be one breaking change when a sealed override is added to an unsealed class.");
+			AssertX.Equal(BreakingChangeKind.SealedMember, breakingChanges[0].BreakingChangeKind, "The BreakingChangeKind is incorrect.");
+			AssertX.Equal(EventVirtual.GetMember("Event"), breakingChanges[0].OldItem, "The OldItem is incorrect.");
+			AssertX.Equal(EventVirtualSealedOverride.GetMember("Event"), breakingChanges[0].NewItem, "The NewItem is incorrect.");
+			AssertX.Null(breakingChanges[0].AssociatedData, "The AssociatedData is incorrect.");
 
 			breakingChanges = MetadataComparer.CompareTypes(EventVirtualNoOverride, EventVirtualSealedOverrideSealed);
-			Assert.AreEqual(1, breakingChanges.Count, "There should be no breaking changes when a sealed override is added to a sealed class.");
+			AssertX.Equal(1, breakingChanges.Count, "There should be no breaking changes when a sealed override is added to a sealed class.");
 
 			breakingChanges = MetadataComparer.CompareTypes(EventAbstractNoOverride, EventAbstractSealedOverride);
-			Assert.AreEqual(1, breakingChanges.Count, "There should be one breaking change when a sealed override is added to an unsealed class.");
-			Assert.AreEqual(BreakingChangeKind.SealedMember, breakingChanges[0].BreakingChangeKind, "The BreakingChangeKind is incorrect.");
-			Assert.AreEqual(EventAbstract.GetMember("Event"), breakingChanges[0].OldItem, "The OldItem is incorrect.");
-			Assert.AreEqual(EventAbstractSealedOverride.GetMember("Event"), breakingChanges[0].NewItem, "The NewItem is incorrect.");
-			Assert.IsNull(breakingChanges[0].AssociatedData, "The AssociatedData is incorrect.");
+			AssertX.Equal(1, breakingChanges.Count, "There should be one breaking change when a sealed override is added to an unsealed class.");
+			AssertX.Equal(BreakingChangeKind.SealedMember, breakingChanges[0].BreakingChangeKind, "The BreakingChangeKind is incorrect.");
+			AssertX.Equal(EventAbstract.GetMember("Event"), breakingChanges[0].OldItem, "The OldItem is incorrect.");
+			AssertX.Equal(EventAbstractSealedOverride.GetMember("Event"), breakingChanges[0].NewItem, "The NewItem is incorrect.");
+			AssertX.Null(breakingChanges[0].AssociatedData, "The AssociatedData is incorrect.");
 
 			breakingChanges = MetadataComparer.CompareTypes(EventAbstractNoOverride, EventAbstractSealedOverrideSealed);
-			Assert.AreEqual(1, breakingChanges.Count, "There should be no breaking changes when a sealed override is added to a sealed class.");
+			AssertX.Equal(1, breakingChanges.Count, "There should be no breaking changes when a sealed override is added to a sealed class.");
 		}
 
 		#endregion // EventTests
 
 		#region IndexerTests
 
-		[TestMethod]
+		[Fact]
 		public void IndexerTests()
 		{
-			var assembly = AssemblyData.FromAssembly(typeof(SealedMemberTests).Assembly);
-			var IndexerVirtual = TypeDefinitionData.FromType(typeof(IndexerVirtual));
-			var IndexerAbstract = TypeDefinitionData.FromType(typeof(IndexerAbstract));
-			var IndexerVirtualOverride = TypeDefinitionData.FromType(typeof(IndexerVirtualOverride));
-			var IndexerAbstractOverride = TypeDefinitionData.FromType(typeof(IndexerAbstractOverride));
-			var IndexerVirtualNoOverride = TypeDefinitionData.FromType(typeof(IndexerVirtualNoOverride));
-			var IndexerAbstractNoOverride = TypeDefinitionData.FromType(typeof(IndexerAbstractNoOverride));
-			var IndexerVirtualSealedOverride = TypeDefinitionData.FromType(typeof(IndexerVirtualSealedOverride));
-			var IndexerAbstractSealedOverride = TypeDefinitionData.FromType(typeof(IndexerAbstractSealedOverride));
-			var IndexerVirtualSealedOverrideSealed = TypeDefinitionData.FromType(typeof(IndexerVirtualSealedOverrideSealed));
-			var IndexerAbstractSealedOverrideSealed = TypeDefinitionData.FromType(typeof(IndexerAbstractSealedOverrideSealed));
+			var context = MetadataResolutionContext.CreateFromTypes(typeof(SealedMemberTests));
+			var IndexerVirtual = context.GetTypeDefinitionData(typeof(IndexerVirtual));
+			var IndexerAbstract = context.GetTypeDefinitionData(typeof(IndexerAbstract));
+			var IndexerVirtualOverride = context.GetTypeDefinitionData(typeof(IndexerVirtualOverride));
+			var IndexerAbstractOverride = context.GetTypeDefinitionData(typeof(IndexerAbstractOverride));
+			var IndexerVirtualNoOverride = context.GetTypeDefinitionData(typeof(IndexerVirtualNoOverride));
+			var IndexerAbstractNoOverride = context.GetTypeDefinitionData(typeof(IndexerAbstractNoOverride));
+			var IndexerVirtualSealedOverride = context.GetTypeDefinitionData(typeof(IndexerVirtualSealedOverride));
+			var IndexerAbstractSealedOverride = context.GetTypeDefinitionData(typeof(IndexerAbstractSealedOverride));
+			var IndexerVirtualSealedOverrideSealed = context.GetTypeDefinitionData(typeof(IndexerVirtualSealedOverrideSealed));
+			var IndexerAbstractSealedOverrideSealed = context.GetTypeDefinitionData(typeof(IndexerAbstractSealedOverrideSealed));
 			
 			var breakingChanges = MetadataComparer.CompareTypes(IndexerVirtualOverride, IndexerVirtualSealedOverride);
-			Assert.AreEqual(1, breakingChanges.Count, "There should be one breaking change when a sealed override is added to an unsealed class.");
-			Assert.AreEqual(BreakingChangeKind.SealedMember, breakingChanges[0].BreakingChangeKind, "The BreakingChangeKind is incorrect.");
-			Assert.AreEqual(IndexerVirtualOverride.GetMember("Item"), breakingChanges[0].OldItem, "The OldItem is incorrect.");
-			Assert.AreEqual(IndexerVirtualSealedOverride.GetMember("Item"), breakingChanges[0].NewItem, "The NewItem is incorrect.");
-			Assert.IsNull(breakingChanges[0].AssociatedData, "The AssociatedData is incorrect.");
+			AssertX.Equal(1, breakingChanges.Count, "There should be one breaking change when a sealed override is added to an unsealed class.");
+			AssertX.Equal(BreakingChangeKind.SealedMember, breakingChanges[0].BreakingChangeKind, "The BreakingChangeKind is incorrect.");
+			AssertX.Equal(IndexerVirtualOverride.GetMember("Item"), breakingChanges[0].OldItem, "The OldItem is incorrect.");
+			AssertX.Equal(IndexerVirtualSealedOverride.GetMember("Item"), breakingChanges[0].NewItem, "The NewItem is incorrect.");
+			AssertX.Null(breakingChanges[0].AssociatedData, "The AssociatedData is incorrect.");
 
 			breakingChanges = MetadataComparer.CompareTypes(IndexerVirtualOverride, IndexerVirtualSealedOverrideSealed);
-			Assert.AreEqual(1, breakingChanges.Count, "There should be no breaking changes when a sealed override is added to a sealed class.");
+			AssertX.Equal(1, breakingChanges.Count, "There should be no breaking changes when a sealed override is added to a sealed class.");
 
 			breakingChanges = MetadataComparer.CompareTypes(IndexerAbstractOverride, IndexerAbstractSealedOverride);
-			Assert.AreEqual(1, breakingChanges.Count, "There should be one breaking change when a sealed override is added to an unsealed class.");
-			Assert.AreEqual(BreakingChangeKind.SealedMember, breakingChanges[0].BreakingChangeKind, "The BreakingChangeKind is incorrect.");
-			Assert.AreEqual(IndexerAbstractOverride.GetMember("Item"), breakingChanges[0].OldItem, "The OldItem is incorrect.");
-			Assert.AreEqual(IndexerAbstractSealedOverride.GetMember("Item"), breakingChanges[0].NewItem, "The NewItem is incorrect.");
-			Assert.IsNull(breakingChanges[0].AssociatedData, "The AssociatedData is incorrect.");
+			AssertX.Equal(1, breakingChanges.Count, "There should be one breaking change when a sealed override is added to an unsealed class.");
+			AssertX.Equal(BreakingChangeKind.SealedMember, breakingChanges[0].BreakingChangeKind, "The BreakingChangeKind is incorrect.");
+			AssertX.Equal(IndexerAbstractOverride.GetMember("Item"), breakingChanges[0].OldItem, "The OldItem is incorrect.");
+			AssertX.Equal(IndexerAbstractSealedOverride.GetMember("Item"), breakingChanges[0].NewItem, "The NewItem is incorrect.");
+			AssertX.Null(breakingChanges[0].AssociatedData, "The AssociatedData is incorrect.");
 
 			breakingChanges = MetadataComparer.CompareTypes(IndexerAbstractOverride, IndexerAbstractSealedOverrideSealed);
-			Assert.AreEqual(1, breakingChanges.Count, "There should be no breaking changes when a sealed override is added to a sealed class.");
+			AssertX.Equal(1, breakingChanges.Count, "There should be no breaking changes when a sealed override is added to a sealed class.");
 
 			breakingChanges = MetadataComparer.CompareTypes(IndexerVirtualNoOverride, IndexerVirtualSealedOverride);
-			Assert.AreEqual(1, breakingChanges.Count, "There should be one breaking change when a sealed override is added to an unsealed class.");
-			Assert.AreEqual(BreakingChangeKind.SealedMember, breakingChanges[0].BreakingChangeKind, "The BreakingChangeKind is incorrect.");
-			Assert.AreEqual(IndexerVirtual.GetMember("Item"), breakingChanges[0].OldItem, "The OldItem is incorrect.");
-			Assert.AreEqual(IndexerVirtualSealedOverride.GetMember("Item"), breakingChanges[0].NewItem, "The NewItem is incorrect.");
-			Assert.IsNull(breakingChanges[0].AssociatedData, "The AssociatedData is incorrect.");
+			AssertX.Equal(1, breakingChanges.Count, "There should be one breaking change when a sealed override is added to an unsealed class.");
+			AssertX.Equal(BreakingChangeKind.SealedMember, breakingChanges[0].BreakingChangeKind, "The BreakingChangeKind is incorrect.");
+			AssertX.Equal(IndexerVirtual.GetMember("Item"), breakingChanges[0].OldItem, "The OldItem is incorrect.");
+			AssertX.Equal(IndexerVirtualSealedOverride.GetMember("Item"), breakingChanges[0].NewItem, "The NewItem is incorrect.");
+			AssertX.Null(breakingChanges[0].AssociatedData, "The AssociatedData is incorrect.");
 
 			breakingChanges = MetadataComparer.CompareTypes(IndexerVirtualNoOverride, IndexerVirtualSealedOverrideSealed);
-			Assert.AreEqual(1, breakingChanges.Count, "There should be no breaking changes when a sealed override is added to a sealed class.");
+			AssertX.Equal(1, breakingChanges.Count, "There should be no breaking changes when a sealed override is added to a sealed class.");
 
 			breakingChanges = MetadataComparer.CompareTypes(IndexerAbstractNoOverride, IndexerAbstractSealedOverride);
-			Assert.AreEqual(1, breakingChanges.Count, "There should be one breaking change when a sealed override is added to an unsealed class.");
-			Assert.AreEqual(BreakingChangeKind.SealedMember, breakingChanges[0].BreakingChangeKind, "The BreakingChangeKind is incorrect.");
-			Assert.AreEqual(IndexerAbstract.GetMember("Item"), breakingChanges[0].OldItem, "The OldItem is incorrect.");
-			Assert.AreEqual(IndexerAbstractSealedOverride.GetMember("Item"), breakingChanges[0].NewItem, "The NewItem is incorrect.");
-			Assert.IsNull(breakingChanges[0].AssociatedData, "The AssociatedData is incorrect.");
+			AssertX.Equal(1, breakingChanges.Count, "There should be one breaking change when a sealed override is added to an unsealed class.");
+			AssertX.Equal(BreakingChangeKind.SealedMember, breakingChanges[0].BreakingChangeKind, "The BreakingChangeKind is incorrect.");
+			AssertX.Equal(IndexerAbstract.GetMember("Item"), breakingChanges[0].OldItem, "The OldItem is incorrect.");
+			AssertX.Equal(IndexerAbstractSealedOverride.GetMember("Item"), breakingChanges[0].NewItem, "The NewItem is incorrect.");
+			AssertX.Null(breakingChanges[0].AssociatedData, "The AssociatedData is incorrect.");
 
 			breakingChanges = MetadataComparer.CompareTypes(IndexerAbstractNoOverride, IndexerAbstractSealedOverrideSealed);
-			Assert.AreEqual(1, breakingChanges.Count, "There should be no breaking changes when a sealed override is added to a sealed class.");
+			AssertX.Equal(1, breakingChanges.Count, "There should be no breaking changes when a sealed override is added to a sealed class.");
 		}
 
 		#endregion // IndexerTests
 
 		#region MethodTests
 
-		[TestMethod]
+		[Fact]
 		public void MethodTests()
 		{
-			var assembly = AssemblyData.FromAssembly(typeof(SealedMemberTests).Assembly);
-			var MethodVirtual = TypeDefinitionData.FromType(typeof(MethodVirtual));
-			var MethodAbstract = TypeDefinitionData.FromType(typeof(MethodAbstract));
-			var MethodVirtualOverride = TypeDefinitionData.FromType(typeof(MethodVirtualOverride));
-			var MethodAbstractOverride = TypeDefinitionData.FromType(typeof(MethodAbstractOverride));
-			var MethodVirtualNoOverride = TypeDefinitionData.FromType(typeof(MethodVirtualNoOverride));
-			var MethodAbstractNoOverride = TypeDefinitionData.FromType(typeof(MethodAbstractNoOverride));
-			var MethodVirtualSealedOverride = TypeDefinitionData.FromType(typeof(MethodVirtualSealedOverride));
-			var MethodAbstractSealedOverride = TypeDefinitionData.FromType(typeof(MethodAbstractSealedOverride));
-			var MethodVirtualSealedOverrideSealed = TypeDefinitionData.FromType(typeof(MethodVirtualSealedOverrideSealed));
-			var MethodAbstractSealedOverrideSealed = TypeDefinitionData.FromType(typeof(MethodAbstractSealedOverrideSealed));
+			var context = MetadataResolutionContext.CreateFromTypes(typeof(SealedMemberTests));
+			var MethodVirtual = context.GetTypeDefinitionData(typeof(MethodVirtual));
+			var MethodAbstract = context.GetTypeDefinitionData(typeof(MethodAbstract));
+			var MethodVirtualOverride = context.GetTypeDefinitionData(typeof(MethodVirtualOverride));
+			var MethodAbstractOverride = context.GetTypeDefinitionData(typeof(MethodAbstractOverride));
+			var MethodVirtualNoOverride = context.GetTypeDefinitionData(typeof(MethodVirtualNoOverride));
+			var MethodAbstractNoOverride = context.GetTypeDefinitionData(typeof(MethodAbstractNoOverride));
+			var MethodVirtualSealedOverride = context.GetTypeDefinitionData(typeof(MethodVirtualSealedOverride));
+			var MethodAbstractSealedOverride = context.GetTypeDefinitionData(typeof(MethodAbstractSealedOverride));
+			var MethodVirtualSealedOverrideSealed = context.GetTypeDefinitionData(typeof(MethodVirtualSealedOverrideSealed));
+			var MethodAbstractSealedOverrideSealed = context.GetTypeDefinitionData(typeof(MethodAbstractSealedOverrideSealed));
 			
 			var breakingChanges = MetadataComparer.CompareTypes(MethodVirtualOverride, MethodVirtualSealedOverride);
-			Assert.AreEqual(1, breakingChanges.Count, "There should be one breaking change when a sealed override is added to an unsealed class.");
-			Assert.AreEqual(BreakingChangeKind.SealedMember, breakingChanges[0].BreakingChangeKind, "The BreakingChangeKind is incorrect.");
-			Assert.AreEqual(MethodVirtualOverride.GetMember("Method"), breakingChanges[0].OldItem, "The OldItem is incorrect.");
-			Assert.AreEqual(MethodVirtualSealedOverride.GetMember("Method"), breakingChanges[0].NewItem, "The NewItem is incorrect.");
-			Assert.IsNull(breakingChanges[0].AssociatedData, "The AssociatedData is incorrect.");
+			AssertX.Equal(1, breakingChanges.Count, "There should be one breaking change when a sealed override is added to an unsealed class.");
+			AssertX.Equal(BreakingChangeKind.SealedMember, breakingChanges[0].BreakingChangeKind, "The BreakingChangeKind is incorrect.");
+			AssertX.Equal(MethodVirtualOverride.GetMember("Method"), breakingChanges[0].OldItem, "The OldItem is incorrect.");
+			AssertX.Equal(MethodVirtualSealedOverride.GetMember("Method"), breakingChanges[0].NewItem, "The NewItem is incorrect.");
+			AssertX.Null(breakingChanges[0].AssociatedData, "The AssociatedData is incorrect.");
 
 			breakingChanges = MetadataComparer.CompareTypes(MethodVirtualOverride, MethodVirtualSealedOverrideSealed);
-			Assert.AreEqual(1, breakingChanges.Count, "There should be no breaking changes when a sealed override is added to a sealed class.");
+			AssertX.Equal(1, breakingChanges.Count, "There should be no breaking changes when a sealed override is added to a sealed class.");
 
 			breakingChanges = MetadataComparer.CompareTypes(MethodAbstractOverride, MethodAbstractSealedOverride);
-			Assert.AreEqual(1, breakingChanges.Count, "There should be one breaking change when a sealed override is added to an unsealed class.");
-			Assert.AreEqual(BreakingChangeKind.SealedMember, breakingChanges[0].BreakingChangeKind, "The BreakingChangeKind is incorrect.");
-			Assert.AreEqual(MethodAbstractOverride.GetMember("Method"), breakingChanges[0].OldItem, "The OldItem is incorrect.");
-			Assert.AreEqual(MethodAbstractSealedOverride.GetMember("Method"), breakingChanges[0].NewItem, "The NewItem is incorrect.");
-			Assert.IsNull(breakingChanges[0].AssociatedData, "The AssociatedData is incorrect.");
+			AssertX.Equal(1, breakingChanges.Count, "There should be one breaking change when a sealed override is added to an unsealed class.");
+			AssertX.Equal(BreakingChangeKind.SealedMember, breakingChanges[0].BreakingChangeKind, "The BreakingChangeKind is incorrect.");
+			AssertX.Equal(MethodAbstractOverride.GetMember("Method"), breakingChanges[0].OldItem, "The OldItem is incorrect.");
+			AssertX.Equal(MethodAbstractSealedOverride.GetMember("Method"), breakingChanges[0].NewItem, "The NewItem is incorrect.");
+			AssertX.Null(breakingChanges[0].AssociatedData, "The AssociatedData is incorrect.");
 
 			breakingChanges = MetadataComparer.CompareTypes(MethodAbstractOverride, MethodAbstractSealedOverrideSealed);
-			Assert.AreEqual(1, breakingChanges.Count, "There should be no breaking changes when a sealed override is added to a sealed class.");
+			AssertX.Equal(1, breakingChanges.Count, "There should be no breaking changes when a sealed override is added to a sealed class.");
 
 			breakingChanges = MetadataComparer.CompareTypes(MethodVirtualNoOverride, MethodVirtualSealedOverride);
-			Assert.AreEqual(1, breakingChanges.Count, "There should be one breaking change when a sealed override is added to an unsealed class.");
-			Assert.AreEqual(BreakingChangeKind.SealedMember, breakingChanges[0].BreakingChangeKind, "The BreakingChangeKind is incorrect.");
-			Assert.AreEqual(MethodVirtual.GetMember("Method"), breakingChanges[0].OldItem, "The OldItem is incorrect.");
-			Assert.AreEqual(MethodVirtualSealedOverride.GetMember("Method"), breakingChanges[0].NewItem, "The NewItem is incorrect.");
-			Assert.IsNull(breakingChanges[0].AssociatedData, "The AssociatedData is incorrect.");
+			AssertX.Equal(1, breakingChanges.Count, "There should be one breaking change when a sealed override is added to an unsealed class.");
+			AssertX.Equal(BreakingChangeKind.SealedMember, breakingChanges[0].BreakingChangeKind, "The BreakingChangeKind is incorrect.");
+			AssertX.Equal(MethodVirtual.GetMember("Method"), breakingChanges[0].OldItem, "The OldItem is incorrect.");
+			AssertX.Equal(MethodVirtualSealedOverride.GetMember("Method"), breakingChanges[0].NewItem, "The NewItem is incorrect.");
+			AssertX.Null(breakingChanges[0].AssociatedData, "The AssociatedData is incorrect.");
 
 			breakingChanges = MetadataComparer.CompareTypes(MethodVirtualNoOverride, MethodVirtualSealedOverrideSealed);
-			Assert.AreEqual(1, breakingChanges.Count, "There should be no breaking changes when a sealed override is added to a sealed class.");
+			AssertX.Equal(1, breakingChanges.Count, "There should be no breaking changes when a sealed override is added to a sealed class.");
 
 			breakingChanges = MetadataComparer.CompareTypes(MethodAbstractNoOverride, MethodAbstractSealedOverride);
-			Assert.AreEqual(1, breakingChanges.Count, "There should be one breaking change when a sealed override is added to an unsealed class.");
-			Assert.AreEqual(BreakingChangeKind.SealedMember, breakingChanges[0].BreakingChangeKind, "The BreakingChangeKind is incorrect.");
-			Assert.AreEqual(MethodAbstract.GetMember("Method"), breakingChanges[0].OldItem, "The OldItem is incorrect.");
-			Assert.AreEqual(MethodAbstractSealedOverride.GetMember("Method"), breakingChanges[0].NewItem, "The NewItem is incorrect.");
-			Assert.IsNull(breakingChanges[0].AssociatedData, "The AssociatedData is incorrect.");
+			AssertX.Equal(1, breakingChanges.Count, "There should be one breaking change when a sealed override is added to an unsealed class.");
+			AssertX.Equal(BreakingChangeKind.SealedMember, breakingChanges[0].BreakingChangeKind, "The BreakingChangeKind is incorrect.");
+			AssertX.Equal(MethodAbstract.GetMember("Method"), breakingChanges[0].OldItem, "The OldItem is incorrect.");
+			AssertX.Equal(MethodAbstractSealedOverride.GetMember("Method"), breakingChanges[0].NewItem, "The NewItem is incorrect.");
+			AssertX.Null(breakingChanges[0].AssociatedData, "The AssociatedData is incorrect.");
 
 			breakingChanges = MetadataComparer.CompareTypes(MethodAbstractNoOverride, MethodAbstractSealedOverrideSealed);
-			Assert.AreEqual(1, breakingChanges.Count, "There should be no breaking changes when a sealed override is added to a sealed class.");
+			AssertX.Equal(1, breakingChanges.Count, "There should be no breaking changes when a sealed override is added to a sealed class.");
 		}
 
 		#endregion // MethodTests
 
 		#region PropertyTests
 
-		[TestMethod]
+		[Fact]
 		public void PropertyTests()
 		{
-			var assembly = AssemblyData.FromAssembly(typeof(SealedMemberTests).Assembly);
-			var PropertyVirtual = TypeDefinitionData.FromType(typeof(PropertyVirtual));
-			var PropertyAbstract = TypeDefinitionData.FromType(typeof(PropertyAbstract));
-			var PropertyVirtualOverride = TypeDefinitionData.FromType(typeof(PropertyVirtualOverride));
-			var PropertyAbstractOverride = TypeDefinitionData.FromType(typeof(PropertyAbstractOverride));
-			var PropertyVirtualNoOverride = TypeDefinitionData.FromType(typeof(PropertyVirtualNoOverride));
-			var PropertyAbstractNoOverride = TypeDefinitionData.FromType(typeof(PropertyAbstractNoOverride));
-			var PropertyVirtualSealedOverride = TypeDefinitionData.FromType(typeof(PropertyVirtualSealedOverride));
-			var PropertyAbstractSealedOverride = TypeDefinitionData.FromType(typeof(PropertyAbstractSealedOverride));
-			var PropertyVirtualSealedOverrideSealed = TypeDefinitionData.FromType(typeof(PropertyVirtualSealedOverrideSealed));
-			var PropertyAbstractSealedOverrideSealed = TypeDefinitionData.FromType(typeof(PropertyAbstractSealedOverrideSealed));
+			var context = MetadataResolutionContext.CreateFromTypes(typeof(SealedMemberTests));
+			var PropertyVirtual = context.GetTypeDefinitionData(typeof(PropertyVirtual));
+			var PropertyAbstract = context.GetTypeDefinitionData(typeof(PropertyAbstract));
+			var PropertyVirtualOverride = context.GetTypeDefinitionData(typeof(PropertyVirtualOverride));
+			var PropertyAbstractOverride = context.GetTypeDefinitionData(typeof(PropertyAbstractOverride));
+			var PropertyVirtualNoOverride = context.GetTypeDefinitionData(typeof(PropertyVirtualNoOverride));
+			var PropertyAbstractNoOverride = context.GetTypeDefinitionData(typeof(PropertyAbstractNoOverride));
+			var PropertyVirtualSealedOverride = context.GetTypeDefinitionData(typeof(PropertyVirtualSealedOverride));
+			var PropertyAbstractSealedOverride = context.GetTypeDefinitionData(typeof(PropertyAbstractSealedOverride));
+			var PropertyVirtualSealedOverrideSealed = context.GetTypeDefinitionData(typeof(PropertyVirtualSealedOverrideSealed));
+			var PropertyAbstractSealedOverrideSealed = context.GetTypeDefinitionData(typeof(PropertyAbstractSealedOverrideSealed));
 			
 			var breakingChanges = MetadataComparer.CompareTypes(PropertyVirtualOverride, PropertyVirtualSealedOverride);
-			Assert.AreEqual(1, breakingChanges.Count, "There should be one breaking change when a sealed override is added to an unsealed class.");
-			Assert.AreEqual(BreakingChangeKind.SealedMember, breakingChanges[0].BreakingChangeKind, "The BreakingChangeKind is incorrect.");
-			Assert.AreEqual(PropertyVirtualOverride.GetMember("Property"), breakingChanges[0].OldItem, "The OldItem is incorrect.");
-			Assert.AreEqual(PropertyVirtualSealedOverride.GetMember("Property"), breakingChanges[0].NewItem, "The NewItem is incorrect.");
-			Assert.IsNull(breakingChanges[0].AssociatedData, "The AssociatedData is incorrect.");
+			AssertX.Equal(1, breakingChanges.Count, "There should be one breaking change when a sealed override is added to an unsealed class.");
+			AssertX.Equal(BreakingChangeKind.SealedMember, breakingChanges[0].BreakingChangeKind, "The BreakingChangeKind is incorrect.");
+			AssertX.Equal(PropertyVirtualOverride.GetMember("Property"), breakingChanges[0].OldItem, "The OldItem is incorrect.");
+			AssertX.Equal(PropertyVirtualSealedOverride.GetMember("Property"), breakingChanges[0].NewItem, "The NewItem is incorrect.");
+			AssertX.Null(breakingChanges[0].AssociatedData, "The AssociatedData is incorrect.");
 
 			breakingChanges = MetadataComparer.CompareTypes(PropertyVirtualOverride, PropertyVirtualSealedOverrideSealed);
-			Assert.AreEqual(1, breakingChanges.Count, "There should be no breaking changes when a sealed override is added to a sealed class.");
+			AssertX.Equal(1, breakingChanges.Count, "There should be no breaking changes when a sealed override is added to a sealed class.");
 
 			breakingChanges = MetadataComparer.CompareTypes(PropertyAbstractOverride, PropertyAbstractSealedOverride);
-			Assert.AreEqual(1, breakingChanges.Count, "There should be one breaking change when a sealed override is added to an unsealed class.");
-			Assert.AreEqual(BreakingChangeKind.SealedMember, breakingChanges[0].BreakingChangeKind, "The BreakingChangeKind is incorrect.");
-			Assert.AreEqual(PropertyAbstractOverride.GetMember("Property"), breakingChanges[0].OldItem, "The OldItem is incorrect.");
-			Assert.AreEqual(PropertyAbstractSealedOverride.GetMember("Property"), breakingChanges[0].NewItem, "The NewItem is incorrect.");
-			Assert.IsNull(breakingChanges[0].AssociatedData, "The AssociatedData is incorrect.");
+			AssertX.Equal(1, breakingChanges.Count, "There should be one breaking change when a sealed override is added to an unsealed class.");
+			AssertX.Equal(BreakingChangeKind.SealedMember, breakingChanges[0].BreakingChangeKind, "The BreakingChangeKind is incorrect.");
+			AssertX.Equal(PropertyAbstractOverride.GetMember("Property"), breakingChanges[0].OldItem, "The OldItem is incorrect.");
+			AssertX.Equal(PropertyAbstractSealedOverride.GetMember("Property"), breakingChanges[0].NewItem, "The NewItem is incorrect.");
+			AssertX.Null(breakingChanges[0].AssociatedData, "The AssociatedData is incorrect.");
 
 			breakingChanges = MetadataComparer.CompareTypes(PropertyAbstractOverride, PropertyAbstractSealedOverrideSealed);
-			Assert.AreEqual(1, breakingChanges.Count, "There should be no breaking changes when a sealed override is added to a sealed class.");
+			AssertX.Equal(1, breakingChanges.Count, "There should be no breaking changes when a sealed override is added to a sealed class.");
 
 			breakingChanges = MetadataComparer.CompareTypes(PropertyVirtualNoOverride, PropertyVirtualSealedOverride);
-			Assert.AreEqual(1, breakingChanges.Count, "There should be one breaking change when a sealed override is added to an unsealed class.");
-			Assert.AreEqual(BreakingChangeKind.SealedMember, breakingChanges[0].BreakingChangeKind, "The BreakingChangeKind is incorrect.");
-			Assert.AreEqual(PropertyVirtual.GetMember("Property"), breakingChanges[0].OldItem, "The OldItem is incorrect.");
-			Assert.AreEqual(PropertyVirtualSealedOverride.GetMember("Property"), breakingChanges[0].NewItem, "The NewItem is incorrect.");
-			Assert.IsNull(breakingChanges[0].AssociatedData, "The AssociatedData is incorrect.");
+			AssertX.Equal(1, breakingChanges.Count, "There should be one breaking change when a sealed override is added to an unsealed class.");
+			AssertX.Equal(BreakingChangeKind.SealedMember, breakingChanges[0].BreakingChangeKind, "The BreakingChangeKind is incorrect.");
+			AssertX.Equal(PropertyVirtual.GetMember("Property"), breakingChanges[0].OldItem, "The OldItem is incorrect.");
+			AssertX.Equal(PropertyVirtualSealedOverride.GetMember("Property"), breakingChanges[0].NewItem, "The NewItem is incorrect.");
+			AssertX.Null(breakingChanges[0].AssociatedData, "The AssociatedData is incorrect.");
 
 			breakingChanges = MetadataComparer.CompareTypes(PropertyVirtualNoOverride, PropertyVirtualSealedOverrideSealed);
-			Assert.AreEqual(1, breakingChanges.Count, "There should be no breaking changes when a sealed override is added to a sealed class.");
+			AssertX.Equal(1, breakingChanges.Count, "There should be no breaking changes when a sealed override is added to a sealed class.");
 
 			breakingChanges = MetadataComparer.CompareTypes(PropertyAbstractNoOverride, PropertyAbstractSealedOverride);
-			Assert.AreEqual(1, breakingChanges.Count, "There should be one breaking change when a sealed override is added to an unsealed class.");
-			Assert.AreEqual(BreakingChangeKind.SealedMember, breakingChanges[0].BreakingChangeKind, "The BreakingChangeKind is incorrect.");
-			Assert.AreEqual(PropertyAbstract.GetMember("Property"), breakingChanges[0].OldItem, "The OldItem is incorrect.");
-			Assert.AreEqual(PropertyAbstractSealedOverride.GetMember("Property"), breakingChanges[0].NewItem, "The NewItem is incorrect.");
-			Assert.IsNull(breakingChanges[0].AssociatedData, "The AssociatedData is incorrect.");
+			AssertX.Equal(1, breakingChanges.Count, "There should be one breaking change when a sealed override is added to an unsealed class.");
+			AssertX.Equal(BreakingChangeKind.SealedMember, breakingChanges[0].BreakingChangeKind, "The BreakingChangeKind is incorrect.");
+			AssertX.Equal(PropertyAbstract.GetMember("Property"), breakingChanges[0].OldItem, "The OldItem is incorrect.");
+			AssertX.Equal(PropertyAbstractSealedOverride.GetMember("Property"), breakingChanges[0].NewItem, "The NewItem is incorrect.");
+			AssertX.Null(breakingChanges[0].AssociatedData, "The AssociatedData is incorrect.");
 
 			breakingChanges = MetadataComparer.CompareTypes(PropertyAbstractNoOverride, PropertyAbstractSealedOverrideSealed);
-			Assert.AreEqual(1, breakingChanges.Count, "There should be no breaking changes when a sealed override is added to a sealed class.");
+			AssertX.Equal(1, breakingChanges.Count, "There should be no breaking changes when a sealed override is added to a sealed class.");
 		}
 
 		#endregion // PropertyTests

@@ -2,6 +2,7 @@
     MIT License
 
     Copyright(c) 2014-2018 Infragistics, Inc.
+    Copyright 2018 Google LLC
 
     Permission is hereby granted, free of charge, to any person obtaining a copy
     of this software and associated documentation files (the "Software"), to deal
@@ -24,9 +25,8 @@
 
 using System;
 using System.Collections.Generic;
+using System.Diagnostics;
 using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
 
 namespace BreakingChangesDetector.MetadataItems
 {
@@ -43,7 +43,8 @@ namespace BreakingChangesDetector.MetadataItems
 
 		public TypeDataSequence(params TypeData[] types)
 		{
-			_types = types;
+            Debug.Assert(types.All(t => t != null));
+            _types = types;
 		}
 
 		public TypeDataSequence(IEnumerable<TypeData> types)

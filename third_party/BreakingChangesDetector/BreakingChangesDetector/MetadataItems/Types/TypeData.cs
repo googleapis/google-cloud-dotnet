@@ -2,6 +2,7 @@
     MIT License
 
     Copyright(c) 2014-2018 Infragistics, Inc.
+    Copyright 2018 Google LLC
 
     Permission is hereby granted, free of charge, to any person obtaining a copy
     of this software and associated documentation files (the "Software"), to deal
@@ -22,7 +23,7 @@
     SOFTWARE.
 */
 
-using Mono.Cecil;
+using Microsoft.CodeAnalysis;
 using System;
 using System.Collections.Generic;
 using System.Diagnostics;
@@ -53,10 +54,10 @@ namespace BreakingChangesDetector.MetadataItems
 			this.TypeKind = typeKind;
 		}
 
-		internal TypeData(TypeReference type, MemberAccessibility accessibility, DeclaringTypeData declaringType)
-			: base(type, accessibility, Utilities.GetMemberFlags(type), declaringType)
+		internal TypeData(ITypeSymbol typeSymbol, MemberAccessibility accessibility, DeclaringTypeData declaringType)
+			: base(typeSymbol, accessibility, Utilities.GetMemberFlags(typeSymbol), declaringType)
 		{
-			this.TypeKind = Utilities.GetTypeKind(type);
+			this.TypeKind = Utilities.GetTypeKind(typeSymbol);
 		}
 
 		#endregion // Constructors
@@ -116,45 +117,6 @@ namespace BreakingChangesDetector.MetadataItems
 		#region Methods
 
 		#region Public Methods
-
-		#region FromType
-
-		/// <summary>
-		/// Gets the derived <see cref="TypeData"/> instance representing the specified type.
-		/// </summary>
-		/// <typeparam name="T">The type for which to get the <see cref="TypeData"/>.</typeparam>
-		/// <returns>The derived <see cref="TypeData"/> instance.</returns>
-		public static TypeData FromType<T>()
-		{
-			return TypeData.FromType(typeof(T));
-		}
-
-		/// <summary>
-		/// Gets the derived <see cref="TypeData"/> instance representing the specified type.
-		/// </summary>
-		/// <param name="t">The type for which to get the <see cref="TypeData"/>.</param>
-		/// <returns>The derived <see cref="TypeData"/> instance.</returns>
-		public static TypeData FromType(Type t)
-		{
-			return TypeData.FromType(
-				t.Assembly.ToAssemblyDefinition().MainModule.GetType(t.FullName, runtimeName: true));
-		}
-
-		/// <summary>
-		/// Gets the derived <see cref="TypeData"/> instance representing the specified type.
-		/// </summary>
-		/// <param name="t">The type for which to get the <see cref="TypeData"/>.</param>
-		/// <returns>The derived <see cref="TypeData"/> instance.</returns>
-		public static TypeData FromType(TypeReference t)
-		{
-			if (t.GetType() == typeof(TypeReference))
-				t = t.Resolve();
-
-			// TODO_Public: throw an exception if the type is not externally visible
-			return AssemblyData.FromAssembly(t.GetDeclaringAssembly()).GetTypeData(t);
-		}
-
-		#endregion // FromType
 
 		#region GetDisplayName
 
@@ -288,9 +250,10 @@ namespace BreakingChangesDetector.MetadataItems
 
 		internal PointerTypeData GetPointerType()
 		{
-			if (_pointerType == null)
-				_pointerType = new PointerTypeData(this.Name + "*", this.Accessibility, MemberFlags.None, TypeKind.Class, this);
-
+            if (_pointerType == null)
+            {
+                _pointerType = new PointerTypeData(this.Name + "*", this.Accessibility, MemberFlags.None, TypeKind.Class, this);
+            }
 			return _pointerType;
 		}
 

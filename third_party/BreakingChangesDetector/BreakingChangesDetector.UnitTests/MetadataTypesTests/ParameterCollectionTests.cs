@@ -2,6 +2,7 @@
     MIT License
 
     Copyright(c) 2014-2018 Infragistics, Inc.
+    Copyright 2018 Google LLC
 
     Permission is hereby granted, free of charge, to any person obtaining a copy
     of this software and associated documentation files (the "Software"), to deal
@@ -23,34 +24,34 @@
 */
 
 using System;
-using Microsoft.VisualStudio.TestTools.UnitTesting;
+using Xunit;
 using BreakingChangesDetector.MetadataItems;
 
 namespace BreakingChangesDetector.UnitTests.MetadataTypesTests
 {
-	[TestClass]
+	
 	public class ParameterCollectionTests
 	{
 		#region RequiredArgumentCount
 
-		[TestMethod]
+		[Fact]
 		public void RequiredArgumentCount()
 		{
 			var t = typeof(VariousMemberFeatures);
-			var assembly = AssemblyData.FromAssembly(t.Assembly);
-			var typeData = TypeDefinitionData.FromType(t);
+			var context = MetadataResolutionContext.CreateFromTypes(t);
+			var typeData = context.GetTypeDefinitionData(t);
 
 			var method = (MethodData)typeData.GetMember("MethodWithDefaultParameter");
-			Assert.AreEqual(1, method.Parameters.RequiredArgumentCount, "The RequiredArgumentCount of the parameters collection is not correct.");
+			AssertX.Equal(1, method.Parameters.RequiredArgumentCount, "The RequiredArgumentCount of the parameters collection is not correct.");
 
 			method = (MethodData)typeData.GetMember("MethodWithParameterModifiers");
-			Assert.AreEqual(3, method.Parameters.RequiredArgumentCount, "The RequiredArgumentCount of the parameters collection is not correct.");
+			AssertX.Equal(3, method.Parameters.RequiredArgumentCount, "The RequiredArgumentCount of the parameters collection is not correct.");
 
 			method = (MethodData)typeData.GetMember("MethodWithParameterTypes");
-			Assert.AreEqual(2, method.Parameters.RequiredArgumentCount, "The RequiredArgumentCount of the parameters collection is not correct.");
+			AssertX.Equal(2, method.Parameters.RequiredArgumentCount, "The RequiredArgumentCount of the parameters collection is not correct.");
 
 			method = (MethodData)typeData.GetMember("MethodWithParamsArray");
-			Assert.AreEqual(1, method.Parameters.RequiredArgumentCount, "The RequiredArgumentCount of the parameters collection is not correct.");
+			AssertX.Equal(1, method.Parameters.RequiredArgumentCount, "The RequiredArgumentCount of the parameters collection is not correct.");
 		}
 
 		#endregion // RequiredArgumentCount

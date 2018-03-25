@@ -2,6 +2,7 @@
     MIT License
 
     Copyright(c) 2014-2018 Infragistics, Inc.
+    Copyright 2018 Google LLC
 
     Permission is hereby granted, free of charge, to any person obtaining a copy
     of this software and associated documentation files (the "Software"), to deal
@@ -22,7 +23,7 @@
     SOFTWARE.
 */
 
-using Mono.Cecil;
+using Microsoft.CodeAnalysis;
 using System;
 using System.Collections.Generic;
 using System.Linq;
@@ -46,12 +47,12 @@ namespace BreakingChangesDetector.MetadataItems
 			this.SetMethodAccessibility = setMethodAccessibility;
 		}
 
-		internal PropertyData(PropertyDefinition propertyDefinition, MemberAccessibility? getAccessibility, MemberAccessibility? setAccessibility, DeclaringTypeData declaringType)
-			: base(propertyDefinition,
+		internal PropertyData(IPropertySymbol propertySymbol, MemberAccessibility? getAccessibility, MemberAccessibility? setAccessibility, DeclaringTypeData declaringType)
+			: base(propertySymbol,
 			Utilities.GetLeastRestrictiveAccessibility(getAccessibility, setAccessibility),
-			propertyDefinition.PropertyType,
-			propertyDefinition.IsPropertyTypeDynamic(),
-			Utilities.GetMemberFlags(propertyDefinition.GetMethod) | Utilities.GetMemberFlags(propertyDefinition.SetMethod),
+			propertySymbol.Type,
+			propertySymbol.IsPropertyTypeDynamic(),
+			Utilities.GetMemberFlags(propertySymbol.GetMethod) | Utilities.GetMemberFlags(propertySymbol.SetMethod),
 			declaringType)
 		{
 			this.GetMethodAccessibility = getAccessibility;
@@ -173,14 +174,14 @@ namespace BreakingChangesDetector.MetadataItems
 
 		#region Methods
 
-		internal static PropertyData PropertyDataFromReflection(PropertyDefinition propertyDefinition, DeclaringTypeData declaringType)
+		internal static PropertyData PropertyDataFromReflection(IPropertySymbol propertySymbol, DeclaringTypeData declaringType)
 		{
-			var getAccessibility = propertyDefinition.GetMethod.GetAccessibility();
-			var setAccessibility = propertyDefinition.SetMethod.GetAccessibility();
+			var getAccessibility = propertySymbol.GetMethod.GetAccessibility();
+			var setAccessibility = propertySymbol.SetMethod.GetAccessibility();
 			if (getAccessibility == null && setAccessibility == null)
 				return null;
 
-			return new PropertyData(propertyDefinition, getAccessibility, setAccessibility, declaringType);
+			return new PropertyData(propertySymbol, getAccessibility, setAccessibility, declaringType);
 		}
 
 		#endregion // Methods

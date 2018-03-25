@@ -2,6 +2,7 @@
     MIT License
 
     Copyright(c) 2014-2018 Infragistics, Inc.
+    Copyright 2018 Google LLC
 
     Permission is hereby granted, free of charge, to any person obtaining a copy
     of this software and associated documentation files (the "Software"), to deal
@@ -23,362 +24,361 @@
 */
 
 using System;
-using Microsoft.VisualStudio.TestTools.UnitTesting;
+using Xunit;
 using BreakingChangesDetector.MetadataItems;
 using BreakingChangesDetector.BreakingChanges;
 
 namespace BreakingChangesDetector.UnitTests.BreakingChangesTests
 {
-	[TestClass]
 	public class ChangedGenericTypeParameterConstraintsTests
 	{
 		#region MethodTests
 
-		[TestMethod]
+		[Fact]
 		public void MethodTests()
 		{
-			var assembly = AssemblyData.FromAssembly(typeof(ChangedAccessibilityFromPublicToProtectedTests).Assembly);
-			var methodWithNoConstraints = TypeDefinitionData.FromType(typeof(MethodWithNoConstraints));
-			var methodWithNewConstraint = TypeDefinitionData.FromType(typeof(MethodWithNewConstraint));
-			var methodWithStructConstraint = TypeDefinitionData.FromType(typeof(MethodWithStructConstraint));
-			var methodWithClassConstraint = TypeDefinitionData.FromType(typeof(MethodWithClassConstraint));
-			var methodWithClassNewConstraints = TypeDefinitionData.FromType(typeof(MethodWithClassNewConstraints));
-			var methodWithBaseInterfaceConstraint = TypeDefinitionData.FromType(typeof(MethodWithBaseInterfaceConstraint));
-			var methodWithDerivedInterfaceConstraint = TypeDefinitionData.FromType(typeof(MethodWithDerivedInterfaceConstraint));
-			var methodWithBaseTypeContraint = TypeDefinitionData.FromType(typeof(MethodWithBaseTypeContraint));
+			var context = MetadataResolutionContext.CreateFromTypes(typeof(ChangedAccessibilityFromPublicToProtectedTests));
+			var methodWithNoConstraints = context.GetTypeDefinitionData(typeof(MethodWithNoConstraints));
+			var methodWithNewConstraint = context.GetTypeDefinitionData(typeof(MethodWithNewConstraint));
+			var methodWithStructConstraint = context.GetTypeDefinitionData(typeof(MethodWithStructConstraint));
+			var methodWithClassConstraint = context.GetTypeDefinitionData(typeof(MethodWithClassConstraint));
+			var methodWithClassNewConstraints = context.GetTypeDefinitionData(typeof(MethodWithClassNewConstraints));
+			var methodWithBaseInterfaceConstraint = context.GetTypeDefinitionData(typeof(MethodWithBaseInterfaceConstraint));
+			var methodWithDerivedInterfaceConstraint = context.GetTypeDefinitionData(typeof(MethodWithDerivedInterfaceConstraint));
+			var methodWithBaseTypeContraint = context.GetTypeDefinitionData(typeof(MethodWithBaseTypeContraint));
 			
 			var breakingChanges = MetadataComparer.CompareTypes(methodWithNoConstraints, methodWithNewConstraint);
-			Assert.AreEqual(1, breakingChanges.Count, "There should be one breaking change when type parameter constraints change.");
-			Assert.AreEqual(BreakingChangeKind.ChangedGenericTypeParameterConstraints, breakingChanges[0].BreakingChangeKind, "The BreakingChangeKind is incorrect.");
-			Assert.AreEqual(((MethodData)methodWithNoConstraints.GetMember("Method")).GenericParameters[0], breakingChanges[0].OldItem, "The OldItem is incorrect.");
-			Assert.AreEqual(((MethodData)methodWithNewConstraint.GetMember("Method")).GenericParameters[0], breakingChanges[0].NewItem, "The NewItem is incorrect.");
-			Assert.IsNull(breakingChanges[0].AssociatedData, "The AssociatedData is incorrect.");
+			AssertX.Equal(1, breakingChanges.Count, "There should be one breaking change when type parameter constraints change.");
+			AssertX.Equal(BreakingChangeKind.ChangedGenericTypeParameterConstraints, breakingChanges[0].BreakingChangeKind, "The BreakingChangeKind is incorrect.");
+			AssertX.Equal(((MethodData)methodWithNoConstraints.GetMember("Method")).GenericParameters[0], breakingChanges[0].OldItem, "The OldItem is incorrect.");
+			AssertX.Equal(((MethodData)methodWithNewConstraint.GetMember("Method")).GenericParameters[0], breakingChanges[0].NewItem, "The NewItem is incorrect.");
+			AssertX.Null(breakingChanges[0].AssociatedData, "The AssociatedData is incorrect.");
 
 			breakingChanges = MetadataComparer.CompareTypes(methodWithNoConstraints, methodWithStructConstraint);
-			Assert.AreEqual(1, breakingChanges.Count, "There should be one breaking change when type parameter constraints change.");
-			Assert.AreEqual(BreakingChangeKind.ChangedGenericTypeParameterConstraints, breakingChanges[0].BreakingChangeKind, "The BreakingChangeKind is incorrect.");
-			Assert.AreEqual(((MethodData)methodWithNoConstraints.GetMember("Method")).GenericParameters[0], breakingChanges[0].OldItem, "The OldItem is incorrect.");
-			Assert.AreEqual(((MethodData)methodWithStructConstraint.GetMember("Method")).GenericParameters[0], breakingChanges[0].NewItem, "The NewItem is incorrect.");
-			Assert.IsNull(breakingChanges[0].AssociatedData, "The AssociatedData is incorrect.");
+			AssertX.Equal(1, breakingChanges.Count, "There should be one breaking change when type parameter constraints change.");
+			AssertX.Equal(BreakingChangeKind.ChangedGenericTypeParameterConstraints, breakingChanges[0].BreakingChangeKind, "The BreakingChangeKind is incorrect.");
+			AssertX.Equal(((MethodData)methodWithNoConstraints.GetMember("Method")).GenericParameters[0], breakingChanges[0].OldItem, "The OldItem is incorrect.");
+			AssertX.Equal(((MethodData)methodWithStructConstraint.GetMember("Method")).GenericParameters[0], breakingChanges[0].NewItem, "The NewItem is incorrect.");
+			AssertX.Null(breakingChanges[0].AssociatedData, "The AssociatedData is incorrect.");
 
 			breakingChanges = MetadataComparer.CompareTypes(methodWithNoConstraints, methodWithClassConstraint);
-			Assert.AreEqual(1, breakingChanges.Count, "There should be one breaking change when type parameter constraints change.");
-			Assert.AreEqual(BreakingChangeKind.ChangedGenericTypeParameterConstraints, breakingChanges[0].BreakingChangeKind, "The BreakingChangeKind is incorrect.");
-			Assert.AreEqual(((MethodData)methodWithNoConstraints.GetMember("Method")).GenericParameters[0], breakingChanges[0].OldItem, "The OldItem is incorrect.");
-			Assert.AreEqual(((MethodData)methodWithClassConstraint.GetMember("Method")).GenericParameters[0], breakingChanges[0].NewItem, "The NewItem is incorrect.");
-			Assert.IsNull(breakingChanges[0].AssociatedData, "The AssociatedData is incorrect.");
+			AssertX.Equal(1, breakingChanges.Count, "There should be one breaking change when type parameter constraints change.");
+			AssertX.Equal(BreakingChangeKind.ChangedGenericTypeParameterConstraints, breakingChanges[0].BreakingChangeKind, "The BreakingChangeKind is incorrect.");
+			AssertX.Equal(((MethodData)methodWithNoConstraints.GetMember("Method")).GenericParameters[0], breakingChanges[0].OldItem, "The OldItem is incorrect.");
+			AssertX.Equal(((MethodData)methodWithClassConstraint.GetMember("Method")).GenericParameters[0], breakingChanges[0].NewItem, "The NewItem is incorrect.");
+			AssertX.Null(breakingChanges[0].AssociatedData, "The AssociatedData is incorrect.");
 
 			breakingChanges = MetadataComparer.CompareTypes(methodWithNoConstraints, methodWithClassNewConstraints);
-			Assert.AreEqual(1, breakingChanges.Count, "There should be one breaking change when type parameter constraints change.");
-			Assert.AreEqual(BreakingChangeKind.ChangedGenericTypeParameterConstraints, breakingChanges[0].BreakingChangeKind, "The BreakingChangeKind is incorrect.");
-			Assert.AreEqual(((MethodData)methodWithNoConstraints.GetMember("Method")).GenericParameters[0], breakingChanges[0].OldItem, "The OldItem is incorrect.");
-			Assert.AreEqual(((MethodData)methodWithClassNewConstraints.GetMember("Method")).GenericParameters[0], breakingChanges[0].NewItem, "The NewItem is incorrect.");
-			Assert.IsNull(breakingChanges[0].AssociatedData, "The AssociatedData is incorrect.");
+			AssertX.Equal(1, breakingChanges.Count, "There should be one breaking change when type parameter constraints change.");
+			AssertX.Equal(BreakingChangeKind.ChangedGenericTypeParameterConstraints, breakingChanges[0].BreakingChangeKind, "The BreakingChangeKind is incorrect.");
+			AssertX.Equal(((MethodData)methodWithNoConstraints.GetMember("Method")).GenericParameters[0], breakingChanges[0].OldItem, "The OldItem is incorrect.");
+			AssertX.Equal(((MethodData)methodWithClassNewConstraints.GetMember("Method")).GenericParameters[0], breakingChanges[0].NewItem, "The NewItem is incorrect.");
+			AssertX.Null(breakingChanges[0].AssociatedData, "The AssociatedData is incorrect.");
 
 			breakingChanges = MetadataComparer.CompareTypes(methodWithNoConstraints, methodWithBaseInterfaceConstraint);
-			Assert.AreEqual(1, breakingChanges.Count, "There should be one breaking change when type parameter constraints change.");
-			Assert.AreEqual(BreakingChangeKind.ChangedGenericTypeParameterConstraints, breakingChanges[0].BreakingChangeKind, "The BreakingChangeKind is incorrect.");
-			Assert.AreEqual(((MethodData)methodWithNoConstraints.GetMember("Method")).GenericParameters[0], breakingChanges[0].OldItem, "The OldItem is incorrect.");
-			Assert.AreEqual(((MethodData)methodWithBaseInterfaceConstraint.GetMember("Method")).GenericParameters[0], breakingChanges[0].NewItem, "The NewItem is incorrect.");
-			Assert.IsNull(breakingChanges[0].AssociatedData, "The AssociatedData is incorrect.");
+			AssertX.Equal(1, breakingChanges.Count, "There should be one breaking change when type parameter constraints change.");
+			AssertX.Equal(BreakingChangeKind.ChangedGenericTypeParameterConstraints, breakingChanges[0].BreakingChangeKind, "The BreakingChangeKind is incorrect.");
+			AssertX.Equal(((MethodData)methodWithNoConstraints.GetMember("Method")).GenericParameters[0], breakingChanges[0].OldItem, "The OldItem is incorrect.");
+			AssertX.Equal(((MethodData)methodWithBaseInterfaceConstraint.GetMember("Method")).GenericParameters[0], breakingChanges[0].NewItem, "The NewItem is incorrect.");
+			AssertX.Null(breakingChanges[0].AssociatedData, "The AssociatedData is incorrect.");
 
 			breakingChanges = MetadataComparer.CompareTypes(methodWithNoConstraints, methodWithDerivedInterfaceConstraint);
-			Assert.AreEqual(1, breakingChanges.Count, "There should be one breaking change when type parameter constraints change.");
-			Assert.AreEqual(BreakingChangeKind.ChangedGenericTypeParameterConstraints, breakingChanges[0].BreakingChangeKind, "The BreakingChangeKind is incorrect.");
-			Assert.AreEqual(((MethodData)methodWithNoConstraints.GetMember("Method")).GenericParameters[0], breakingChanges[0].OldItem, "The OldItem is incorrect.");
-			Assert.AreEqual(((MethodData)methodWithDerivedInterfaceConstraint.GetMember("Method")).GenericParameters[0], breakingChanges[0].NewItem, "The NewItem is incorrect.");
-			Assert.IsNull(breakingChanges[0].AssociatedData, "The AssociatedData is incorrect.");
+			AssertX.Equal(1, breakingChanges.Count, "There should be one breaking change when type parameter constraints change.");
+			AssertX.Equal(BreakingChangeKind.ChangedGenericTypeParameterConstraints, breakingChanges[0].BreakingChangeKind, "The BreakingChangeKind is incorrect.");
+			AssertX.Equal(((MethodData)methodWithNoConstraints.GetMember("Method")).GenericParameters[0], breakingChanges[0].OldItem, "The OldItem is incorrect.");
+			AssertX.Equal(((MethodData)methodWithDerivedInterfaceConstraint.GetMember("Method")).GenericParameters[0], breakingChanges[0].NewItem, "The NewItem is incorrect.");
+			AssertX.Null(breakingChanges[0].AssociatedData, "The AssociatedData is incorrect.");
 
 			breakingChanges = MetadataComparer.CompareTypes(methodWithNoConstraints, methodWithBaseTypeContraint);
-			Assert.AreEqual(1, breakingChanges.Count, "There should be one breaking change when type parameter constraints change.");
-			Assert.AreEqual(BreakingChangeKind.ChangedGenericTypeParameterConstraints, breakingChanges[0].BreakingChangeKind, "The BreakingChangeKind is incorrect.");
-			Assert.AreEqual(((MethodData)methodWithNoConstraints.GetMember("Method")).GenericParameters[0], breakingChanges[0].OldItem, "The OldItem is incorrect.");
-			Assert.AreEqual(((MethodData)methodWithBaseTypeContraint.GetMember("Method")).GenericParameters[0], breakingChanges[0].NewItem, "The NewItem is incorrect.");
-			Assert.IsNull(breakingChanges[0].AssociatedData, "The AssociatedData is incorrect.");
+			AssertX.Equal(1, breakingChanges.Count, "There should be one breaking change when type parameter constraints change.");
+			AssertX.Equal(BreakingChangeKind.ChangedGenericTypeParameterConstraints, breakingChanges[0].BreakingChangeKind, "The BreakingChangeKind is incorrect.");
+			AssertX.Equal(((MethodData)methodWithNoConstraints.GetMember("Method")).GenericParameters[0], breakingChanges[0].OldItem, "The OldItem is incorrect.");
+			AssertX.Equal(((MethodData)methodWithBaseTypeContraint.GetMember("Method")).GenericParameters[0], breakingChanges[0].NewItem, "The NewItem is incorrect.");
+			AssertX.Null(breakingChanges[0].AssociatedData, "The AssociatedData is incorrect.");
 
 			// Do the same tests in reverse order
 			breakingChanges = MetadataComparer.CompareTypes(methodWithNewConstraint, methodWithNoConstraints);
-			Assert.AreEqual(1, breakingChanges.Count, "There should be one breaking change when type parameter constraints change.");
-			Assert.AreEqual(BreakingChangeKind.ChangedGenericTypeParameterConstraints, breakingChanges[0].BreakingChangeKind, "The BreakingChangeKind is incorrect.");
-			Assert.AreEqual(((MethodData)methodWithNewConstraint.GetMember("Method")).GenericParameters[0], breakingChanges[0].OldItem, "The OldItem is incorrect.");
-			Assert.AreEqual(((MethodData)methodWithNoConstraints.GetMember("Method")).GenericParameters[0], breakingChanges[0].NewItem, "The NewItem is incorrect.");
-			Assert.IsNull(breakingChanges[0].AssociatedData, "The AssociatedData is incorrect.");
+			AssertX.Equal(1, breakingChanges.Count, "There should be one breaking change when type parameter constraints change.");
+			AssertX.Equal(BreakingChangeKind.ChangedGenericTypeParameterConstraints, breakingChanges[0].BreakingChangeKind, "The BreakingChangeKind is incorrect.");
+			AssertX.Equal(((MethodData)methodWithNewConstraint.GetMember("Method")).GenericParameters[0], breakingChanges[0].OldItem, "The OldItem is incorrect.");
+			AssertX.Equal(((MethodData)methodWithNoConstraints.GetMember("Method")).GenericParameters[0], breakingChanges[0].NewItem, "The NewItem is incorrect.");
+			AssertX.Null(breakingChanges[0].AssociatedData, "The AssociatedData is incorrect.");
 
 			breakingChanges = MetadataComparer.CompareTypes(methodWithStructConstraint, methodWithNoConstraints);
-			Assert.AreEqual(1, breakingChanges.Count, "There should be one breaking change when type parameter constraints change.");
-			Assert.AreEqual(BreakingChangeKind.ChangedGenericTypeParameterConstraints, breakingChanges[0].BreakingChangeKind, "The BreakingChangeKind is incorrect.");
-			Assert.AreEqual(((MethodData)methodWithStructConstraint.GetMember("Method")).GenericParameters[0], breakingChanges[0].OldItem, "The OldItem is incorrect.");
-			Assert.AreEqual(((MethodData)methodWithNoConstraints.GetMember("Method")).GenericParameters[0], breakingChanges[0].NewItem, "The NewItem is incorrect.");
-			Assert.IsNull(breakingChanges[0].AssociatedData, "The AssociatedData is incorrect.");
+			AssertX.Equal(1, breakingChanges.Count, "There should be one breaking change when type parameter constraints change.");
+			AssertX.Equal(BreakingChangeKind.ChangedGenericTypeParameterConstraints, breakingChanges[0].BreakingChangeKind, "The BreakingChangeKind is incorrect.");
+			AssertX.Equal(((MethodData)methodWithStructConstraint.GetMember("Method")).GenericParameters[0], breakingChanges[0].OldItem, "The OldItem is incorrect.");
+			AssertX.Equal(((MethodData)methodWithNoConstraints.GetMember("Method")).GenericParameters[0], breakingChanges[0].NewItem, "The NewItem is incorrect.");
+			AssertX.Null(breakingChanges[0].AssociatedData, "The AssociatedData is incorrect.");
 
 			breakingChanges = MetadataComparer.CompareTypes(methodWithClassConstraint, methodWithNoConstraints);
-			Assert.AreEqual(1, breakingChanges.Count, "There should be one breaking change when type parameter constraints change.");
-			Assert.AreEqual(BreakingChangeKind.ChangedGenericTypeParameterConstraints, breakingChanges[0].BreakingChangeKind, "The BreakingChangeKind is incorrect.");
-			Assert.AreEqual(((MethodData)methodWithClassConstraint.GetMember("Method")).GenericParameters[0], breakingChanges[0].OldItem, "The OldItem is incorrect.");
-			Assert.AreEqual(((MethodData)methodWithNoConstraints.GetMember("Method")).GenericParameters[0], breakingChanges[0].NewItem, "The NewItem is incorrect.");
-			Assert.IsNull(breakingChanges[0].AssociatedData, "The AssociatedData is incorrect.");
+			AssertX.Equal(1, breakingChanges.Count, "There should be one breaking change when type parameter constraints change.");
+			AssertX.Equal(BreakingChangeKind.ChangedGenericTypeParameterConstraints, breakingChanges[0].BreakingChangeKind, "The BreakingChangeKind is incorrect.");
+			AssertX.Equal(((MethodData)methodWithClassConstraint.GetMember("Method")).GenericParameters[0], breakingChanges[0].OldItem, "The OldItem is incorrect.");
+			AssertX.Equal(((MethodData)methodWithNoConstraints.GetMember("Method")).GenericParameters[0], breakingChanges[0].NewItem, "The NewItem is incorrect.");
+			AssertX.Null(breakingChanges[0].AssociatedData, "The AssociatedData is incorrect.");
 
 			breakingChanges = MetadataComparer.CompareTypes(methodWithClassNewConstraints, methodWithNoConstraints);
-			Assert.AreEqual(1, breakingChanges.Count, "There should be one breaking change when type parameter constraints change.");
-			Assert.AreEqual(BreakingChangeKind.ChangedGenericTypeParameterConstraints, breakingChanges[0].BreakingChangeKind, "The BreakingChangeKind is incorrect.");
-			Assert.AreEqual(((MethodData)methodWithClassNewConstraints.GetMember("Method")).GenericParameters[0], breakingChanges[0].OldItem, "The OldItem is incorrect.");
-			Assert.AreEqual(((MethodData)methodWithNoConstraints.GetMember("Method")).GenericParameters[0], breakingChanges[0].NewItem, "The NewItem is incorrect.");
-			Assert.IsNull(breakingChanges[0].AssociatedData, "The AssociatedData is incorrect.");
+			AssertX.Equal(1, breakingChanges.Count, "There should be one breaking change when type parameter constraints change.");
+			AssertX.Equal(BreakingChangeKind.ChangedGenericTypeParameterConstraints, breakingChanges[0].BreakingChangeKind, "The BreakingChangeKind is incorrect.");
+			AssertX.Equal(((MethodData)methodWithClassNewConstraints.GetMember("Method")).GenericParameters[0], breakingChanges[0].OldItem, "The OldItem is incorrect.");
+			AssertX.Equal(((MethodData)methodWithNoConstraints.GetMember("Method")).GenericParameters[0], breakingChanges[0].NewItem, "The NewItem is incorrect.");
+			AssertX.Null(breakingChanges[0].AssociatedData, "The AssociatedData is incorrect.");
 
 			breakingChanges = MetadataComparer.CompareTypes(methodWithBaseInterfaceConstraint, methodWithNoConstraints);
-			Assert.AreEqual(1, breakingChanges.Count, "There should be one breaking change when type parameter constraints change.");
-			Assert.AreEqual(BreakingChangeKind.ChangedGenericTypeParameterConstraints, breakingChanges[0].BreakingChangeKind, "The BreakingChangeKind is incorrect.");
-			Assert.AreEqual(((MethodData)methodWithBaseInterfaceConstraint.GetMember("Method")).GenericParameters[0], breakingChanges[0].OldItem, "The OldItem is incorrect.");
-			Assert.AreEqual(((MethodData)methodWithNoConstraints.GetMember("Method")).GenericParameters[0], breakingChanges[0].NewItem, "The NewItem is incorrect.");
-			Assert.IsNull(breakingChanges[0].AssociatedData, "The AssociatedData is incorrect.");
+			AssertX.Equal(1, breakingChanges.Count, "There should be one breaking change when type parameter constraints change.");
+			AssertX.Equal(BreakingChangeKind.ChangedGenericTypeParameterConstraints, breakingChanges[0].BreakingChangeKind, "The BreakingChangeKind is incorrect.");
+			AssertX.Equal(((MethodData)methodWithBaseInterfaceConstraint.GetMember("Method")).GenericParameters[0], breakingChanges[0].OldItem, "The OldItem is incorrect.");
+			AssertX.Equal(((MethodData)methodWithNoConstraints.GetMember("Method")).GenericParameters[0], breakingChanges[0].NewItem, "The NewItem is incorrect.");
+			AssertX.Null(breakingChanges[0].AssociatedData, "The AssociatedData is incorrect.");
 
 			breakingChanges = MetadataComparer.CompareTypes(methodWithDerivedInterfaceConstraint, methodWithNoConstraints);
-			Assert.AreEqual(1, breakingChanges.Count, "There should be one breaking change when type parameter constraints change.");
-			Assert.AreEqual(BreakingChangeKind.ChangedGenericTypeParameterConstraints, breakingChanges[0].BreakingChangeKind, "The BreakingChangeKind is incorrect.");
-			Assert.AreEqual(((MethodData)methodWithDerivedInterfaceConstraint.GetMember("Method")).GenericParameters[0], breakingChanges[0].OldItem, "The OldItem is incorrect.");
-			Assert.AreEqual(((MethodData)methodWithNoConstraints.GetMember("Method")).GenericParameters[0], breakingChanges[0].NewItem, "The NewItem is incorrect.");
-			Assert.IsNull(breakingChanges[0].AssociatedData, "The AssociatedData is incorrect.");
+			AssertX.Equal(1, breakingChanges.Count, "There should be one breaking change when type parameter constraints change.");
+			AssertX.Equal(BreakingChangeKind.ChangedGenericTypeParameterConstraints, breakingChanges[0].BreakingChangeKind, "The BreakingChangeKind is incorrect.");
+			AssertX.Equal(((MethodData)methodWithDerivedInterfaceConstraint.GetMember("Method")).GenericParameters[0], breakingChanges[0].OldItem, "The OldItem is incorrect.");
+			AssertX.Equal(((MethodData)methodWithNoConstraints.GetMember("Method")).GenericParameters[0], breakingChanges[0].NewItem, "The NewItem is incorrect.");
+			AssertX.Null(breakingChanges[0].AssociatedData, "The AssociatedData is incorrect.");
 
 			breakingChanges = MetadataComparer.CompareTypes(methodWithBaseTypeContraint, methodWithNoConstraints);
-			Assert.AreEqual(1, breakingChanges.Count, "There should be one breaking change when type parameter constraints change.");
-			Assert.AreEqual(BreakingChangeKind.ChangedGenericTypeParameterConstraints, breakingChanges[0].BreakingChangeKind, "The BreakingChangeKind is incorrect.");
-			Assert.AreEqual(((MethodData)methodWithBaseTypeContraint.GetMember("Method")).GenericParameters[0], breakingChanges[0].OldItem, "The OldItem is incorrect.");
-			Assert.AreEqual(((MethodData)methodWithNoConstraints.GetMember("Method")).GenericParameters[0], breakingChanges[0].NewItem, "The NewItem is incorrect.");
-			Assert.IsNull(breakingChanges[0].AssociatedData, "The AssociatedData is incorrect.");
+			AssertX.Equal(1, breakingChanges.Count, "There should be one breaking change when type parameter constraints change.");
+			AssertX.Equal(BreakingChangeKind.ChangedGenericTypeParameterConstraints, breakingChanges[0].BreakingChangeKind, "The BreakingChangeKind is incorrect.");
+			AssertX.Equal(((MethodData)methodWithBaseTypeContraint.GetMember("Method")).GenericParameters[0], breakingChanges[0].OldItem, "The OldItem is incorrect.");
+			AssertX.Equal(((MethodData)methodWithNoConstraints.GetMember("Method")).GenericParameters[0], breakingChanges[0].NewItem, "The NewItem is incorrect.");
+			AssertX.Null(breakingChanges[0].AssociatedData, "The AssociatedData is incorrect.");
 		}
 
 		#endregion // MethodTests
 
 		#region NestedTypeTests
 
-		[TestMethod]
+		[Fact]
 		public void NestedTypeTests()
 		{
-			var assembly = AssemblyData.FromAssembly(typeof(ChangedAccessibilityFromPublicToProtectedTests).Assembly);
-			var nestedClassWithNoConstraints = TypeDefinitionData.FromType(typeof(NestedClassWithNoConstraints));
-			var nestedClassWithNewConstraint = TypeDefinitionData.FromType(typeof(NestedClassWithNewConstraint));
-			var nestedClassWithStructConstraint = TypeDefinitionData.FromType(typeof(NestedClassWithStructConstraint));
-			var nestedClassWithClassConstraint = TypeDefinitionData.FromType(typeof(NestedClassWithClassConstraint));
-			var nestedClassWithClassNewConstraints = TypeDefinitionData.FromType(typeof(NestedClassWithClassNewConstraints));
-			var nestedClassWithBaseInterfaceConstraint = TypeDefinitionData.FromType(typeof(NestedClassWithBaseInterfaceConstraint));
-			var nestedClassWithDerivedInterfaceConstraint = TypeDefinitionData.FromType(typeof(NestedClassWithDerivedInterfaceConstraint));
-			var nestedClassWithBaseTypeContraint = TypeDefinitionData.FromType(typeof(NestedClassWithBaseTypeContraint));
+			var context = MetadataResolutionContext.CreateFromTypes(typeof(ChangedAccessibilityFromPublicToProtectedTests));
+			var nestedClassWithNoConstraints = context.GetTypeDefinitionData(typeof(NestedClassWithNoConstraints));
+			var nestedClassWithNewConstraint = context.GetTypeDefinitionData(typeof(NestedClassWithNewConstraint));
+			var nestedClassWithStructConstraint = context.GetTypeDefinitionData(typeof(NestedClassWithStructConstraint));
+			var nestedClassWithClassConstraint = context.GetTypeDefinitionData(typeof(NestedClassWithClassConstraint));
+			var nestedClassWithClassNewConstraints = context.GetTypeDefinitionData(typeof(NestedClassWithClassNewConstraints));
+			var nestedClassWithBaseInterfaceConstraint = context.GetTypeDefinitionData(typeof(NestedClassWithBaseInterfaceConstraint));
+			var nestedClassWithDerivedInterfaceConstraint = context.GetTypeDefinitionData(typeof(NestedClassWithDerivedInterfaceConstraint));
+			var nestedClassWithBaseTypeContraint = context.GetTypeDefinitionData(typeof(NestedClassWithBaseTypeContraint));
 			
 			var breakingChanges = MetadataComparer.CompareTypes(nestedClassWithNoConstraints, nestedClassWithNewConstraint);
-			Assert.AreEqual(1, breakingChanges.Count, "There should be one breaking change when type parameter constraints change.");
-			Assert.AreEqual(BreakingChangeKind.ChangedGenericTypeParameterConstraints, breakingChanges[0].BreakingChangeKind, "The BreakingChangeKind is incorrect.");
-			Assert.AreEqual(nestedClassWithNoConstraints.GetNestedType("Class`1").GenericParameters[0], breakingChanges[0].OldItem, "The OldItem is incorrect.");
-			Assert.AreEqual(nestedClassWithNewConstraint.GetNestedType("Class`1").GenericParameters[0], breakingChanges[0].NewItem, "The NewItem is incorrect.");
-			Assert.IsNull(breakingChanges[0].AssociatedData, "The AssociatedData is incorrect.");
+			AssertX.Equal(1, breakingChanges.Count, "There should be one breaking change when type parameter constraints change.");
+			AssertX.Equal(BreakingChangeKind.ChangedGenericTypeParameterConstraints, breakingChanges[0].BreakingChangeKind, "The BreakingChangeKind is incorrect.");
+			AssertX.Equal(nestedClassWithNoConstraints.GetNestedType("Class`1").GenericParameters[0], breakingChanges[0].OldItem, "The OldItem is incorrect.");
+			AssertX.Equal(nestedClassWithNewConstraint.GetNestedType("Class`1").GenericParameters[0], breakingChanges[0].NewItem, "The NewItem is incorrect.");
+			AssertX.Null(breakingChanges[0].AssociatedData, "The AssociatedData is incorrect.");
 
 			breakingChanges = MetadataComparer.CompareTypes(nestedClassWithNoConstraints, nestedClassWithStructConstraint);
-			Assert.AreEqual(1, breakingChanges.Count, "There should be one breaking change when type parameter constraints change.");
-			Assert.AreEqual(BreakingChangeKind.ChangedGenericTypeParameterConstraints, breakingChanges[0].BreakingChangeKind, "The BreakingChangeKind is incorrect.");
-			Assert.AreEqual(nestedClassWithNoConstraints.GetNestedType("Class`1").GenericParameters[0], breakingChanges[0].OldItem, "The OldItem is incorrect.");
-			Assert.AreEqual(nestedClassWithStructConstraint.GetNestedType("Class`1").GenericParameters[0], breakingChanges[0].NewItem, "The NewItem is incorrect.");
-			Assert.IsNull(breakingChanges[0].AssociatedData, "The AssociatedData is incorrect.");
+			AssertX.Equal(1, breakingChanges.Count, "There should be one breaking change when type parameter constraints change.");
+			AssertX.Equal(BreakingChangeKind.ChangedGenericTypeParameterConstraints, breakingChanges[0].BreakingChangeKind, "The BreakingChangeKind is incorrect.");
+			AssertX.Equal(nestedClassWithNoConstraints.GetNestedType("Class`1").GenericParameters[0], breakingChanges[0].OldItem, "The OldItem is incorrect.");
+			AssertX.Equal(nestedClassWithStructConstraint.GetNestedType("Class`1").GenericParameters[0], breakingChanges[0].NewItem, "The NewItem is incorrect.");
+			AssertX.Null(breakingChanges[0].AssociatedData, "The AssociatedData is incorrect.");
 
 			breakingChanges = MetadataComparer.CompareTypes(nestedClassWithNoConstraints, nestedClassWithClassConstraint);
-			Assert.AreEqual(1, breakingChanges.Count, "There should be one breaking change when type parameter constraints change.");
-			Assert.AreEqual(BreakingChangeKind.ChangedGenericTypeParameterConstraints, breakingChanges[0].BreakingChangeKind, "The BreakingChangeKind is incorrect.");
-			Assert.AreEqual(nestedClassWithNoConstraints.GetNestedType("Class`1").GenericParameters[0], breakingChanges[0].OldItem, "The OldItem is incorrect.");
-			Assert.AreEqual(nestedClassWithClassConstraint.GetNestedType("Class`1").GenericParameters[0], breakingChanges[0].NewItem, "The NewItem is incorrect.");
-			Assert.IsNull(breakingChanges[0].AssociatedData, "The AssociatedData is incorrect.");
+			AssertX.Equal(1, breakingChanges.Count, "There should be one breaking change when type parameter constraints change.");
+			AssertX.Equal(BreakingChangeKind.ChangedGenericTypeParameterConstraints, breakingChanges[0].BreakingChangeKind, "The BreakingChangeKind is incorrect.");
+			AssertX.Equal(nestedClassWithNoConstraints.GetNestedType("Class`1").GenericParameters[0], breakingChanges[0].OldItem, "The OldItem is incorrect.");
+			AssertX.Equal(nestedClassWithClassConstraint.GetNestedType("Class`1").GenericParameters[0], breakingChanges[0].NewItem, "The NewItem is incorrect.");
+			AssertX.Null(breakingChanges[0].AssociatedData, "The AssociatedData is incorrect.");
 
 			breakingChanges = MetadataComparer.CompareTypes(nestedClassWithNoConstraints, nestedClassWithClassNewConstraints);
-			Assert.AreEqual(1, breakingChanges.Count, "There should be one breaking change when type parameter constraints change.");
-			Assert.AreEqual(BreakingChangeKind.ChangedGenericTypeParameterConstraints, breakingChanges[0].BreakingChangeKind, "The BreakingChangeKind is incorrect.");
-			Assert.AreEqual(nestedClassWithNoConstraints.GetNestedType("Class`1").GenericParameters[0], breakingChanges[0].OldItem, "The OldItem is incorrect.");
-			Assert.AreEqual(nestedClassWithClassNewConstraints.GetNestedType("Class`1").GenericParameters[0], breakingChanges[0].NewItem, "The NewItem is incorrect.");
-			Assert.IsNull(breakingChanges[0].AssociatedData, "The AssociatedData is incorrect.");
+			AssertX.Equal(1, breakingChanges.Count, "There should be one breaking change when type parameter constraints change.");
+			AssertX.Equal(BreakingChangeKind.ChangedGenericTypeParameterConstraints, breakingChanges[0].BreakingChangeKind, "The BreakingChangeKind is incorrect.");
+			AssertX.Equal(nestedClassWithNoConstraints.GetNestedType("Class`1").GenericParameters[0], breakingChanges[0].OldItem, "The OldItem is incorrect.");
+			AssertX.Equal(nestedClassWithClassNewConstraints.GetNestedType("Class`1").GenericParameters[0], breakingChanges[0].NewItem, "The NewItem is incorrect.");
+			AssertX.Null(breakingChanges[0].AssociatedData, "The AssociatedData is incorrect.");
 
 			breakingChanges = MetadataComparer.CompareTypes(nestedClassWithNoConstraints, nestedClassWithBaseInterfaceConstraint);
-			Assert.AreEqual(1, breakingChanges.Count, "There should be one breaking change when type parameter constraints change.");
-			Assert.AreEqual(BreakingChangeKind.ChangedGenericTypeParameterConstraints, breakingChanges[0].BreakingChangeKind, "The BreakingChangeKind is incorrect.");
-			Assert.AreEqual(nestedClassWithNoConstraints.GetNestedType("Class`1").GenericParameters[0], breakingChanges[0].OldItem, "The OldItem is incorrect.");
-			Assert.AreEqual(nestedClassWithBaseInterfaceConstraint.GetNestedType("Class`1").GenericParameters[0], breakingChanges[0].NewItem, "The NewItem is incorrect.");
-			Assert.IsNull(breakingChanges[0].AssociatedData, "The AssociatedData is incorrect.");
+			AssertX.Equal(1, breakingChanges.Count, "There should be one breaking change when type parameter constraints change.");
+			AssertX.Equal(BreakingChangeKind.ChangedGenericTypeParameterConstraints, breakingChanges[0].BreakingChangeKind, "The BreakingChangeKind is incorrect.");
+			AssertX.Equal(nestedClassWithNoConstraints.GetNestedType("Class`1").GenericParameters[0], breakingChanges[0].OldItem, "The OldItem is incorrect.");
+			AssertX.Equal(nestedClassWithBaseInterfaceConstraint.GetNestedType("Class`1").GenericParameters[0], breakingChanges[0].NewItem, "The NewItem is incorrect.");
+			AssertX.Null(breakingChanges[0].AssociatedData, "The AssociatedData is incorrect.");
 
 			breakingChanges = MetadataComparer.CompareTypes(nestedClassWithNoConstraints, nestedClassWithDerivedInterfaceConstraint);
-			Assert.AreEqual(1, breakingChanges.Count, "There should be one breaking change when type parameter constraints change.");
-			Assert.AreEqual(BreakingChangeKind.ChangedGenericTypeParameterConstraints, breakingChanges[0].BreakingChangeKind, "The BreakingChangeKind is incorrect.");
-			Assert.AreEqual(nestedClassWithNoConstraints.GetNestedType("Class`1").GenericParameters[0], breakingChanges[0].OldItem, "The OldItem is incorrect.");
-			Assert.AreEqual(nestedClassWithDerivedInterfaceConstraint.GetNestedType("Class`1").GenericParameters[0], breakingChanges[0].NewItem, "The NewItem is incorrect.");
-			Assert.IsNull(breakingChanges[0].AssociatedData, "The AssociatedData is incorrect.");
+			AssertX.Equal(1, breakingChanges.Count, "There should be one breaking change when type parameter constraints change.");
+			AssertX.Equal(BreakingChangeKind.ChangedGenericTypeParameterConstraints, breakingChanges[0].BreakingChangeKind, "The BreakingChangeKind is incorrect.");
+			AssertX.Equal(nestedClassWithNoConstraints.GetNestedType("Class`1").GenericParameters[0], breakingChanges[0].OldItem, "The OldItem is incorrect.");
+			AssertX.Equal(nestedClassWithDerivedInterfaceConstraint.GetNestedType("Class`1").GenericParameters[0], breakingChanges[0].NewItem, "The NewItem is incorrect.");
+			AssertX.Null(breakingChanges[0].AssociatedData, "The AssociatedData is incorrect.");
 
 			breakingChanges = MetadataComparer.CompareTypes(nestedClassWithNoConstraints, nestedClassWithBaseTypeContraint);
-			Assert.AreEqual(1, breakingChanges.Count, "There should be one breaking change when type parameter constraints change.");
-			Assert.AreEqual(BreakingChangeKind.ChangedGenericTypeParameterConstraints, breakingChanges[0].BreakingChangeKind, "The BreakingChangeKind is incorrect.");
-			Assert.AreEqual(nestedClassWithNoConstraints.GetNestedType("Class`1").GenericParameters[0], breakingChanges[0].OldItem, "The OldItem is incorrect.");
-			Assert.AreEqual(nestedClassWithBaseTypeContraint.GetNestedType("Class`1").GenericParameters[0], breakingChanges[0].NewItem, "The NewItem is incorrect.");
-			Assert.IsNull(breakingChanges[0].AssociatedData, "The AssociatedData is incorrect.");
+			AssertX.Equal(1, breakingChanges.Count, "There should be one breaking change when type parameter constraints change.");
+			AssertX.Equal(BreakingChangeKind.ChangedGenericTypeParameterConstraints, breakingChanges[0].BreakingChangeKind, "The BreakingChangeKind is incorrect.");
+			AssertX.Equal(nestedClassWithNoConstraints.GetNestedType("Class`1").GenericParameters[0], breakingChanges[0].OldItem, "The OldItem is incorrect.");
+			AssertX.Equal(nestedClassWithBaseTypeContraint.GetNestedType("Class`1").GenericParameters[0], breakingChanges[0].NewItem, "The NewItem is incorrect.");
+			AssertX.Null(breakingChanges[0].AssociatedData, "The AssociatedData is incorrect.");
 
 			// Do the same tests in reverse order
 			breakingChanges = MetadataComparer.CompareTypes(nestedClassWithNewConstraint, nestedClassWithNoConstraints);
-			Assert.AreEqual(1, breakingChanges.Count, "There should be one breaking change when type parameter constraints change.");
-			Assert.AreEqual(BreakingChangeKind.ChangedGenericTypeParameterConstraints, breakingChanges[0].BreakingChangeKind, "The BreakingChangeKind is incorrect.");
-			Assert.AreEqual(nestedClassWithNewConstraint.GetNestedType("Class`1").GenericParameters[0], breakingChanges[0].OldItem, "The OldItem is incorrect.");
-			Assert.AreEqual(nestedClassWithNoConstraints.GetNestedType("Class`1").GenericParameters[0], breakingChanges[0].NewItem, "The NewItem is incorrect.");
-			Assert.IsNull(breakingChanges[0].AssociatedData, "The AssociatedData is incorrect.");
+			AssertX.Equal(1, breakingChanges.Count, "There should be one breaking change when type parameter constraints change.");
+			AssertX.Equal(BreakingChangeKind.ChangedGenericTypeParameterConstraints, breakingChanges[0].BreakingChangeKind, "The BreakingChangeKind is incorrect.");
+			AssertX.Equal(nestedClassWithNewConstraint.GetNestedType("Class`1").GenericParameters[0], breakingChanges[0].OldItem, "The OldItem is incorrect.");
+			AssertX.Equal(nestedClassWithNoConstraints.GetNestedType("Class`1").GenericParameters[0], breakingChanges[0].NewItem, "The NewItem is incorrect.");
+			AssertX.Null(breakingChanges[0].AssociatedData, "The AssociatedData is incorrect.");
 
 			breakingChanges = MetadataComparer.CompareTypes(nestedClassWithStructConstraint, nestedClassWithNoConstraints);
-			Assert.AreEqual(1, breakingChanges.Count, "There should be one breaking change when type parameter constraints change.");
-			Assert.AreEqual(BreakingChangeKind.ChangedGenericTypeParameterConstraints, breakingChanges[0].BreakingChangeKind, "The BreakingChangeKind is incorrect.");
-			Assert.AreEqual(nestedClassWithStructConstraint.GetNestedType("Class`1").GenericParameters[0], breakingChanges[0].OldItem, "The OldItem is incorrect.");
-			Assert.AreEqual(nestedClassWithNoConstraints.GetNestedType("Class`1").GenericParameters[0], breakingChanges[0].NewItem, "The NewItem is incorrect.");
-			Assert.IsNull(breakingChanges[0].AssociatedData, "The AssociatedData is incorrect.");
+			AssertX.Equal(1, breakingChanges.Count, "There should be one breaking change when type parameter constraints change.");
+			AssertX.Equal(BreakingChangeKind.ChangedGenericTypeParameterConstraints, breakingChanges[0].BreakingChangeKind, "The BreakingChangeKind is incorrect.");
+			AssertX.Equal(nestedClassWithStructConstraint.GetNestedType("Class`1").GenericParameters[0], breakingChanges[0].OldItem, "The OldItem is incorrect.");
+			AssertX.Equal(nestedClassWithNoConstraints.GetNestedType("Class`1").GenericParameters[0], breakingChanges[0].NewItem, "The NewItem is incorrect.");
+			AssertX.Null(breakingChanges[0].AssociatedData, "The AssociatedData is incorrect.");
 
 			breakingChanges = MetadataComparer.CompareTypes(nestedClassWithClassConstraint, nestedClassWithNoConstraints);
-			Assert.AreEqual(1, breakingChanges.Count, "There should be one breaking change when type parameter constraints change.");
-			Assert.AreEqual(BreakingChangeKind.ChangedGenericTypeParameterConstraints, breakingChanges[0].BreakingChangeKind, "The BreakingChangeKind is incorrect.");
-			Assert.AreEqual(nestedClassWithClassConstraint.GetNestedType("Class`1").GenericParameters[0], breakingChanges[0].OldItem, "The OldItem is incorrect.");
-			Assert.AreEqual(nestedClassWithNoConstraints.GetNestedType("Class`1").GenericParameters[0], breakingChanges[0].NewItem, "The NewItem is incorrect.");
-			Assert.IsNull(breakingChanges[0].AssociatedData, "The AssociatedData is incorrect.");
+			AssertX.Equal(1, breakingChanges.Count, "There should be one breaking change when type parameter constraints change.");
+			AssertX.Equal(BreakingChangeKind.ChangedGenericTypeParameterConstraints, breakingChanges[0].BreakingChangeKind, "The BreakingChangeKind is incorrect.");
+			AssertX.Equal(nestedClassWithClassConstraint.GetNestedType("Class`1").GenericParameters[0], breakingChanges[0].OldItem, "The OldItem is incorrect.");
+			AssertX.Equal(nestedClassWithNoConstraints.GetNestedType("Class`1").GenericParameters[0], breakingChanges[0].NewItem, "The NewItem is incorrect.");
+			AssertX.Null(breakingChanges[0].AssociatedData, "The AssociatedData is incorrect.");
 
 			breakingChanges = MetadataComparer.CompareTypes(nestedClassWithClassNewConstraints, nestedClassWithNoConstraints);
-			Assert.AreEqual(1, breakingChanges.Count, "There should be one breaking change when type parameter constraints change.");
-			Assert.AreEqual(BreakingChangeKind.ChangedGenericTypeParameterConstraints, breakingChanges[0].BreakingChangeKind, "The BreakingChangeKind is incorrect.");
-			Assert.AreEqual(nestedClassWithClassNewConstraints.GetNestedType("Class`1").GenericParameters[0], breakingChanges[0].OldItem, "The OldItem is incorrect.");
-			Assert.AreEqual(nestedClassWithNoConstraints.GetNestedType("Class`1").GenericParameters[0], breakingChanges[0].NewItem, "The NewItem is incorrect.");
-			Assert.IsNull(breakingChanges[0].AssociatedData, "The AssociatedData is incorrect.");
+			AssertX.Equal(1, breakingChanges.Count, "There should be one breaking change when type parameter constraints change.");
+			AssertX.Equal(BreakingChangeKind.ChangedGenericTypeParameterConstraints, breakingChanges[0].BreakingChangeKind, "The BreakingChangeKind is incorrect.");
+			AssertX.Equal(nestedClassWithClassNewConstraints.GetNestedType("Class`1").GenericParameters[0], breakingChanges[0].OldItem, "The OldItem is incorrect.");
+			AssertX.Equal(nestedClassWithNoConstraints.GetNestedType("Class`1").GenericParameters[0], breakingChanges[0].NewItem, "The NewItem is incorrect.");
+			AssertX.Null(breakingChanges[0].AssociatedData, "The AssociatedData is incorrect.");
 
 			breakingChanges = MetadataComparer.CompareTypes(nestedClassWithBaseInterfaceConstraint, nestedClassWithNoConstraints);
-			Assert.AreEqual(1, breakingChanges.Count, "There should be one breaking change when type parameter constraints change.");
-			Assert.AreEqual(BreakingChangeKind.ChangedGenericTypeParameterConstraints, breakingChanges[0].BreakingChangeKind, "The BreakingChangeKind is incorrect.");
-			Assert.AreEqual(nestedClassWithBaseInterfaceConstraint.GetNestedType("Class`1").GenericParameters[0], breakingChanges[0].OldItem, "The OldItem is incorrect.");
-			Assert.AreEqual(nestedClassWithNoConstraints.GetNestedType("Class`1").GenericParameters[0], breakingChanges[0].NewItem, "The NewItem is incorrect.");
-			Assert.IsNull(breakingChanges[0].AssociatedData, "The AssociatedData is incorrect.");
+			AssertX.Equal(1, breakingChanges.Count, "There should be one breaking change when type parameter constraints change.");
+			AssertX.Equal(BreakingChangeKind.ChangedGenericTypeParameterConstraints, breakingChanges[0].BreakingChangeKind, "The BreakingChangeKind is incorrect.");
+			AssertX.Equal(nestedClassWithBaseInterfaceConstraint.GetNestedType("Class`1").GenericParameters[0], breakingChanges[0].OldItem, "The OldItem is incorrect.");
+			AssertX.Equal(nestedClassWithNoConstraints.GetNestedType("Class`1").GenericParameters[0], breakingChanges[0].NewItem, "The NewItem is incorrect.");
+			AssertX.Null(breakingChanges[0].AssociatedData, "The AssociatedData is incorrect.");
 
 			breakingChanges = MetadataComparer.CompareTypes(nestedClassWithDerivedInterfaceConstraint, nestedClassWithNoConstraints);
-			Assert.AreEqual(1, breakingChanges.Count, "There should be one breaking change when type parameter constraints change.");
-			Assert.AreEqual(BreakingChangeKind.ChangedGenericTypeParameterConstraints, breakingChanges[0].BreakingChangeKind, "The BreakingChangeKind is incorrect.");
-			Assert.AreEqual(nestedClassWithDerivedInterfaceConstraint.GetNestedType("Class`1").GenericParameters[0], breakingChanges[0].OldItem, "The OldItem is incorrect.");
-			Assert.AreEqual(nestedClassWithNoConstraints.GetNestedType("Class`1").GenericParameters[0], breakingChanges[0].NewItem, "The NewItem is incorrect.");
-			Assert.IsNull(breakingChanges[0].AssociatedData, "The AssociatedData is incorrect.");
+			AssertX.Equal(1, breakingChanges.Count, "There should be one breaking change when type parameter constraints change.");
+			AssertX.Equal(BreakingChangeKind.ChangedGenericTypeParameterConstraints, breakingChanges[0].BreakingChangeKind, "The BreakingChangeKind is incorrect.");
+			AssertX.Equal(nestedClassWithDerivedInterfaceConstraint.GetNestedType("Class`1").GenericParameters[0], breakingChanges[0].OldItem, "The OldItem is incorrect.");
+			AssertX.Equal(nestedClassWithNoConstraints.GetNestedType("Class`1").GenericParameters[0], breakingChanges[0].NewItem, "The NewItem is incorrect.");
+			AssertX.Null(breakingChanges[0].AssociatedData, "The AssociatedData is incorrect.");
 
 			breakingChanges = MetadataComparer.CompareTypes(nestedClassWithBaseTypeContraint, nestedClassWithNoConstraints);
-			Assert.AreEqual(1, breakingChanges.Count, "There should be one breaking change when type parameter constraints change.");
-			Assert.AreEqual(BreakingChangeKind.ChangedGenericTypeParameterConstraints, breakingChanges[0].BreakingChangeKind, "The BreakingChangeKind is incorrect.");
-			Assert.AreEqual(nestedClassWithBaseTypeContraint.GetNestedType("Class`1").GenericParameters[0], breakingChanges[0].OldItem, "The OldItem is incorrect.");
-			Assert.AreEqual(nestedClassWithNoConstraints.GetNestedType("Class`1").GenericParameters[0], breakingChanges[0].NewItem, "The NewItem is incorrect.");
-			Assert.IsNull(breakingChanges[0].AssociatedData, "The AssociatedData is incorrect.");
+			AssertX.Equal(1, breakingChanges.Count, "There should be one breaking change when type parameter constraints change.");
+			AssertX.Equal(BreakingChangeKind.ChangedGenericTypeParameterConstraints, breakingChanges[0].BreakingChangeKind, "The BreakingChangeKind is incorrect.");
+			AssertX.Equal(nestedClassWithBaseTypeContraint.GetNestedType("Class`1").GenericParameters[0], breakingChanges[0].OldItem, "The OldItem is incorrect.");
+			AssertX.Equal(nestedClassWithNoConstraints.GetNestedType("Class`1").GenericParameters[0], breakingChanges[0].NewItem, "The NewItem is incorrect.");
+			AssertX.Null(breakingChanges[0].AssociatedData, "The AssociatedData is incorrect.");
 		}
 
 		#endregion // NestedTypeTests
 
 		#region TypeTests
 
-		[TestMethod]
+		[Fact]
 		public void TypeTests()
 		{
-			var assembly = AssemblyData.FromAssembly(typeof(ChangedAccessibilityFromPublicToProtectedTests).Assembly);
-			var classWithNoConstraints = TypeDefinitionData.FromType(typeof(ClassWithNoConstraints<>));
-			var classWithNewConstraint = TypeDefinitionData.FromType(typeof(ClassWithNewConstraint<>));
-			var classWithStructConstraint = TypeDefinitionData.FromType(typeof(ClassWithStructConstraint<>));
-			var classWithClassConstraint = TypeDefinitionData.FromType(typeof(ClassWithClassConstraint<>));
-			var classWithClassNewConstraints = TypeDefinitionData.FromType(typeof(ClassWithClassNewConstraints<>));
-			var classWithBaseInterfaceConstraint = TypeDefinitionData.FromType(typeof(ClassWithBaseInterfaceConstraint<>));
-			var classWithDerivedInterfaceConstraint = TypeDefinitionData.FromType(typeof(ClassWithDerivedInterfaceConstraint<>));
-			var classWithBaseTypeContraint = TypeDefinitionData.FromType(typeof(ClassWithBaseTypeContraint<>));
+			var context = MetadataResolutionContext.CreateFromTypes(typeof(ChangedAccessibilityFromPublicToProtectedTests));
+			var classWithNoConstraints = context.GetTypeDefinitionData(typeof(ClassWithNoConstraints<>));
+			var classWithNewConstraint = context.GetTypeDefinitionData(typeof(ClassWithNewConstraint<>));
+			var classWithStructConstraint = context.GetTypeDefinitionData(typeof(ClassWithStructConstraint<>));
+			var classWithClassConstraint = context.GetTypeDefinitionData(typeof(ClassWithClassConstraint<>));
+			var classWithClassNewConstraints = context.GetTypeDefinitionData(typeof(ClassWithClassNewConstraints<>));
+			var classWithBaseInterfaceConstraint = context.GetTypeDefinitionData(typeof(ClassWithBaseInterfaceConstraint<>));
+			var classWithDerivedInterfaceConstraint = context.GetTypeDefinitionData(typeof(ClassWithDerivedInterfaceConstraint<>));
+			var classWithBaseTypeContraint = context.GetTypeDefinitionData(typeof(ClassWithBaseTypeContraint<>));
 			
 			var breakingChanges = MetadataComparer.CompareTypes(classWithNoConstraints, classWithNewConstraint);
-			Assert.AreEqual(1, breakingChanges.Count, "There should be one breaking change when type parameter constraints change.");
-			Assert.AreEqual(BreakingChangeKind.ChangedGenericTypeParameterConstraints, breakingChanges[0].BreakingChangeKind, "The BreakingChangeKind is incorrect.");
-			Assert.AreEqual(classWithNoConstraints.GenericParameters[0], breakingChanges[0].OldItem, "The OldItem is incorrect.");
-			Assert.AreEqual(classWithNewConstraint.GenericParameters[0], breakingChanges[0].NewItem, "The NewItem is incorrect.");
-			Assert.IsNull(breakingChanges[0].AssociatedData, "The AssociatedData is incorrect.");
+			AssertX.Equal(1, breakingChanges.Count, "There should be one breaking change when type parameter constraints change.");
+			AssertX.Equal(BreakingChangeKind.ChangedGenericTypeParameterConstraints, breakingChanges[0].BreakingChangeKind, "The BreakingChangeKind is incorrect.");
+			AssertX.Equal(classWithNoConstraints.GenericParameters[0], breakingChanges[0].OldItem, "The OldItem is incorrect.");
+			AssertX.Equal(classWithNewConstraint.GenericParameters[0], breakingChanges[0].NewItem, "The NewItem is incorrect.");
+			AssertX.Null(breakingChanges[0].AssociatedData, "The AssociatedData is incorrect.");
 
 			breakingChanges = MetadataComparer.CompareTypes(classWithNoConstraints, classWithStructConstraint);
-			Assert.AreEqual(1, breakingChanges.Count, "There should be one breaking change when type parameter constraints change.");
-			Assert.AreEqual(BreakingChangeKind.ChangedGenericTypeParameterConstraints, breakingChanges[0].BreakingChangeKind, "The BreakingChangeKind is incorrect.");
-			Assert.AreEqual(classWithNoConstraints.GenericParameters[0], breakingChanges[0].OldItem, "The OldItem is incorrect.");
-			Assert.AreEqual(classWithStructConstraint.GenericParameters[0], breakingChanges[0].NewItem, "The NewItem is incorrect.");
-			Assert.IsNull(breakingChanges[0].AssociatedData, "The AssociatedData is incorrect.");
+			AssertX.Equal(1, breakingChanges.Count, "There should be one breaking change when type parameter constraints change.");
+			AssertX.Equal(BreakingChangeKind.ChangedGenericTypeParameterConstraints, breakingChanges[0].BreakingChangeKind, "The BreakingChangeKind is incorrect.");
+			AssertX.Equal(classWithNoConstraints.GenericParameters[0], breakingChanges[0].OldItem, "The OldItem is incorrect.");
+			AssertX.Equal(classWithStructConstraint.GenericParameters[0], breakingChanges[0].NewItem, "The NewItem is incorrect.");
+			AssertX.Null(breakingChanges[0].AssociatedData, "The AssociatedData is incorrect.");
 
 			breakingChanges = MetadataComparer.CompareTypes(classWithNoConstraints, classWithClassConstraint);
-			Assert.AreEqual(1, breakingChanges.Count, "There should be one breaking change when type parameter constraints change.");
-			Assert.AreEqual(BreakingChangeKind.ChangedGenericTypeParameterConstraints, breakingChanges[0].BreakingChangeKind, "The BreakingChangeKind is incorrect.");
-			Assert.AreEqual(classWithNoConstraints.GenericParameters[0], breakingChanges[0].OldItem, "The OldItem is incorrect.");
-			Assert.AreEqual(classWithClassConstraint.GenericParameters[0], breakingChanges[0].NewItem, "The NewItem is incorrect.");
-			Assert.IsNull(breakingChanges[0].AssociatedData, "The AssociatedData is incorrect.");
+			AssertX.Equal(1, breakingChanges.Count, "There should be one breaking change when type parameter constraints change.");
+			AssertX.Equal(BreakingChangeKind.ChangedGenericTypeParameterConstraints, breakingChanges[0].BreakingChangeKind, "The BreakingChangeKind is incorrect.");
+			AssertX.Equal(classWithNoConstraints.GenericParameters[0], breakingChanges[0].OldItem, "The OldItem is incorrect.");
+			AssertX.Equal(classWithClassConstraint.GenericParameters[0], breakingChanges[0].NewItem, "The NewItem is incorrect.");
+			AssertX.Null(breakingChanges[0].AssociatedData, "The AssociatedData is incorrect.");
 
 			breakingChanges = MetadataComparer.CompareTypes(classWithNoConstraints, classWithClassNewConstraints);
-			Assert.AreEqual(1, breakingChanges.Count, "There should be one breaking change when type parameter constraints change.");
-			Assert.AreEqual(BreakingChangeKind.ChangedGenericTypeParameterConstraints, breakingChanges[0].BreakingChangeKind, "The BreakingChangeKind is incorrect.");
-			Assert.AreEqual(classWithNoConstraints.GenericParameters[0], breakingChanges[0].OldItem, "The OldItem is incorrect.");
-			Assert.AreEqual(classWithClassNewConstraints.GenericParameters[0], breakingChanges[0].NewItem, "The NewItem is incorrect.");
-			Assert.IsNull(breakingChanges[0].AssociatedData, "The AssociatedData is incorrect.");
+			AssertX.Equal(1, breakingChanges.Count, "There should be one breaking change when type parameter constraints change.");
+			AssertX.Equal(BreakingChangeKind.ChangedGenericTypeParameterConstraints, breakingChanges[0].BreakingChangeKind, "The BreakingChangeKind is incorrect.");
+			AssertX.Equal(classWithNoConstraints.GenericParameters[0], breakingChanges[0].OldItem, "The OldItem is incorrect.");
+			AssertX.Equal(classWithClassNewConstraints.GenericParameters[0], breakingChanges[0].NewItem, "The NewItem is incorrect.");
+			AssertX.Null(breakingChanges[0].AssociatedData, "The AssociatedData is incorrect.");
 
 			breakingChanges = MetadataComparer.CompareTypes(classWithNoConstraints, classWithBaseInterfaceConstraint);
-			Assert.AreEqual(1, breakingChanges.Count, "There should be one breaking change when type parameter constraints change.");
-			Assert.AreEqual(BreakingChangeKind.ChangedGenericTypeParameterConstraints, breakingChanges[0].BreakingChangeKind, "The BreakingChangeKind is incorrect.");
-			Assert.AreEqual(classWithNoConstraints.GenericParameters[0], breakingChanges[0].OldItem, "The OldItem is incorrect.");
-			Assert.AreEqual(classWithBaseInterfaceConstraint.GenericParameters[0], breakingChanges[0].NewItem, "The NewItem is incorrect.");
-			Assert.IsNull(breakingChanges[0].AssociatedData, "The AssociatedData is incorrect.");
+			AssertX.Equal(1, breakingChanges.Count, "There should be one breaking change when type parameter constraints change.");
+			AssertX.Equal(BreakingChangeKind.ChangedGenericTypeParameterConstraints, breakingChanges[0].BreakingChangeKind, "The BreakingChangeKind is incorrect.");
+			AssertX.Equal(classWithNoConstraints.GenericParameters[0], breakingChanges[0].OldItem, "The OldItem is incorrect.");
+			AssertX.Equal(classWithBaseInterfaceConstraint.GenericParameters[0], breakingChanges[0].NewItem, "The NewItem is incorrect.");
+			AssertX.Null(breakingChanges[0].AssociatedData, "The AssociatedData is incorrect.");
 
 			breakingChanges = MetadataComparer.CompareTypes(classWithNoConstraints, classWithDerivedInterfaceConstraint);
-			Assert.AreEqual(1, breakingChanges.Count, "There should be one breaking change when type parameter constraints change.");
-			Assert.AreEqual(BreakingChangeKind.ChangedGenericTypeParameterConstraints, breakingChanges[0].BreakingChangeKind, "The BreakingChangeKind is incorrect.");
-			Assert.AreEqual(classWithNoConstraints.GenericParameters[0], breakingChanges[0].OldItem, "The OldItem is incorrect.");
-			Assert.AreEqual(classWithDerivedInterfaceConstraint.GenericParameters[0], breakingChanges[0].NewItem, "The NewItem is incorrect.");
-			Assert.IsNull(breakingChanges[0].AssociatedData, "The AssociatedData is incorrect.");
+			AssertX.Equal(1, breakingChanges.Count, "There should be one breaking change when type parameter constraints change.");
+			AssertX.Equal(BreakingChangeKind.ChangedGenericTypeParameterConstraints, breakingChanges[0].BreakingChangeKind, "The BreakingChangeKind is incorrect.");
+			AssertX.Equal(classWithNoConstraints.GenericParameters[0], breakingChanges[0].OldItem, "The OldItem is incorrect.");
+			AssertX.Equal(classWithDerivedInterfaceConstraint.GenericParameters[0], breakingChanges[0].NewItem, "The NewItem is incorrect.");
+			AssertX.Null(breakingChanges[0].AssociatedData, "The AssociatedData is incorrect.");
 
 			breakingChanges = MetadataComparer.CompareTypes(classWithNoConstraints, classWithBaseTypeContraint);
-			Assert.AreEqual(1, breakingChanges.Count, "There should be one breaking change when type parameter constraints change.");
-			Assert.AreEqual(BreakingChangeKind.ChangedGenericTypeParameterConstraints, breakingChanges[0].BreakingChangeKind, "The BreakingChangeKind is incorrect.");
-			Assert.AreEqual(classWithNoConstraints.GenericParameters[0], breakingChanges[0].OldItem, "The OldItem is incorrect.");
-			Assert.AreEqual(classWithBaseTypeContraint.GenericParameters[0], breakingChanges[0].NewItem, "The NewItem is incorrect.");
-			Assert.IsNull(breakingChanges[0].AssociatedData, "The AssociatedData is incorrect.");
+			AssertX.Equal(1, breakingChanges.Count, "There should be one breaking change when type parameter constraints change.");
+			AssertX.Equal(BreakingChangeKind.ChangedGenericTypeParameterConstraints, breakingChanges[0].BreakingChangeKind, "The BreakingChangeKind is incorrect.");
+			AssertX.Equal(classWithNoConstraints.GenericParameters[0], breakingChanges[0].OldItem, "The OldItem is incorrect.");
+			AssertX.Equal(classWithBaseTypeContraint.GenericParameters[0], breakingChanges[0].NewItem, "The NewItem is incorrect.");
+			AssertX.Null(breakingChanges[0].AssociatedData, "The AssociatedData is incorrect.");
 
 			// Do the same tests in reverse order
 			breakingChanges = MetadataComparer.CompareTypes(classWithNewConstraint, classWithNoConstraints);
-			Assert.AreEqual(1, breakingChanges.Count, "There should be one breaking change when type parameter constraints change.");
-			Assert.AreEqual(BreakingChangeKind.ChangedGenericTypeParameterConstraints, breakingChanges[0].BreakingChangeKind, "The BreakingChangeKind is incorrect.");
-			Assert.AreEqual(classWithNewConstraint.GenericParameters[0], breakingChanges[0].OldItem, "The OldItem is incorrect.");
-			Assert.AreEqual(classWithNoConstraints.GenericParameters[0], breakingChanges[0].NewItem, "The NewItem is incorrect.");
-			Assert.IsNull(breakingChanges[0].AssociatedData, "The AssociatedData is incorrect.");
+			AssertX.Equal(1, breakingChanges.Count, "There should be one breaking change when type parameter constraints change.");
+			AssertX.Equal(BreakingChangeKind.ChangedGenericTypeParameterConstraints, breakingChanges[0].BreakingChangeKind, "The BreakingChangeKind is incorrect.");
+			AssertX.Equal(classWithNewConstraint.GenericParameters[0], breakingChanges[0].OldItem, "The OldItem is incorrect.");
+			AssertX.Equal(classWithNoConstraints.GenericParameters[0], breakingChanges[0].NewItem, "The NewItem is incorrect.");
+			AssertX.Null(breakingChanges[0].AssociatedData, "The AssociatedData is incorrect.");
 
 			breakingChanges = MetadataComparer.CompareTypes(classWithStructConstraint, classWithNoConstraints);
-			Assert.AreEqual(1, breakingChanges.Count, "There should be one breaking change when type parameter constraints change.");
-			Assert.AreEqual(BreakingChangeKind.ChangedGenericTypeParameterConstraints, breakingChanges[0].BreakingChangeKind, "The BreakingChangeKind is incorrect.");
-			Assert.AreEqual(classWithStructConstraint.GenericParameters[0], breakingChanges[0].OldItem, "The OldItem is incorrect.");
-			Assert.AreEqual(classWithNoConstraints.GenericParameters[0], breakingChanges[0].NewItem, "The NewItem is incorrect.");
-			Assert.IsNull(breakingChanges[0].AssociatedData, "The AssociatedData is incorrect.");
+			AssertX.Equal(1, breakingChanges.Count, "There should be one breaking change when type parameter constraints change.");
+			AssertX.Equal(BreakingChangeKind.ChangedGenericTypeParameterConstraints, breakingChanges[0].BreakingChangeKind, "The BreakingChangeKind is incorrect.");
+			AssertX.Equal(classWithStructConstraint.GenericParameters[0], breakingChanges[0].OldItem, "The OldItem is incorrect.");
+			AssertX.Equal(classWithNoConstraints.GenericParameters[0], breakingChanges[0].NewItem, "The NewItem is incorrect.");
+			AssertX.Null(breakingChanges[0].AssociatedData, "The AssociatedData is incorrect.");
 
 			breakingChanges = MetadataComparer.CompareTypes(classWithClassConstraint, classWithNoConstraints);
-			Assert.AreEqual(1, breakingChanges.Count, "There should be one breaking change when type parameter constraints change.");
-			Assert.AreEqual(BreakingChangeKind.ChangedGenericTypeParameterConstraints, breakingChanges[0].BreakingChangeKind, "The BreakingChangeKind is incorrect.");
-			Assert.AreEqual(classWithClassConstraint.GenericParameters[0], breakingChanges[0].OldItem, "The OldItem is incorrect.");
-			Assert.AreEqual(classWithNoConstraints.GenericParameters[0], breakingChanges[0].NewItem, "The NewItem is incorrect.");
-			Assert.IsNull(breakingChanges[0].AssociatedData, "The AssociatedData is incorrect.");
+			AssertX.Equal(1, breakingChanges.Count, "There should be one breaking change when type parameter constraints change.");
+			AssertX.Equal(BreakingChangeKind.ChangedGenericTypeParameterConstraints, breakingChanges[0].BreakingChangeKind, "The BreakingChangeKind is incorrect.");
+			AssertX.Equal(classWithClassConstraint.GenericParameters[0], breakingChanges[0].OldItem, "The OldItem is incorrect.");
+			AssertX.Equal(classWithNoConstraints.GenericParameters[0], breakingChanges[0].NewItem, "The NewItem is incorrect.");
+			AssertX.Null(breakingChanges[0].AssociatedData, "The AssociatedData is incorrect.");
 
 			breakingChanges = MetadataComparer.CompareTypes(classWithClassNewConstraints, classWithNoConstraints);
-			Assert.AreEqual(1, breakingChanges.Count, "There should be one breaking change when type parameter constraints change.");
-			Assert.AreEqual(BreakingChangeKind.ChangedGenericTypeParameterConstraints, breakingChanges[0].BreakingChangeKind, "The BreakingChangeKind is incorrect.");
-			Assert.AreEqual(classWithClassNewConstraints.GenericParameters[0], breakingChanges[0].OldItem, "The OldItem is incorrect.");
-			Assert.AreEqual(classWithNoConstraints.GenericParameters[0], breakingChanges[0].NewItem, "The NewItem is incorrect.");
-			Assert.IsNull(breakingChanges[0].AssociatedData, "The AssociatedData is incorrect.");
+			AssertX.Equal(1, breakingChanges.Count, "There should be one breaking change when type parameter constraints change.");
+			AssertX.Equal(BreakingChangeKind.ChangedGenericTypeParameterConstraints, breakingChanges[0].BreakingChangeKind, "The BreakingChangeKind is incorrect.");
+			AssertX.Equal(classWithClassNewConstraints.GenericParameters[0], breakingChanges[0].OldItem, "The OldItem is incorrect.");
+			AssertX.Equal(classWithNoConstraints.GenericParameters[0], breakingChanges[0].NewItem, "The NewItem is incorrect.");
+			AssertX.Null(breakingChanges[0].AssociatedData, "The AssociatedData is incorrect.");
 
 			breakingChanges = MetadataComparer.CompareTypes(classWithBaseInterfaceConstraint, classWithNoConstraints);
-			Assert.AreEqual(1, breakingChanges.Count, "There should be one breaking change when type parameter constraints change.");
-			Assert.AreEqual(BreakingChangeKind.ChangedGenericTypeParameterConstraints, breakingChanges[0].BreakingChangeKind, "The BreakingChangeKind is incorrect.");
-			Assert.AreEqual(classWithBaseInterfaceConstraint.GenericParameters[0], breakingChanges[0].OldItem, "The OldItem is incorrect.");
-			Assert.AreEqual(classWithNoConstraints.GenericParameters[0], breakingChanges[0].NewItem, "The NewItem is incorrect.");
-			Assert.IsNull(breakingChanges[0].AssociatedData, "The AssociatedData is incorrect.");
+			AssertX.Equal(1, breakingChanges.Count, "There should be one breaking change when type parameter constraints change.");
+			AssertX.Equal(BreakingChangeKind.ChangedGenericTypeParameterConstraints, breakingChanges[0].BreakingChangeKind, "The BreakingChangeKind is incorrect.");
+			AssertX.Equal(classWithBaseInterfaceConstraint.GenericParameters[0], breakingChanges[0].OldItem, "The OldItem is incorrect.");
+			AssertX.Equal(classWithNoConstraints.GenericParameters[0], breakingChanges[0].NewItem, "The NewItem is incorrect.");
+			AssertX.Null(breakingChanges[0].AssociatedData, "The AssociatedData is incorrect.");
 
 			breakingChanges = MetadataComparer.CompareTypes(classWithDerivedInterfaceConstraint, classWithNoConstraints);
-			Assert.AreEqual(1, breakingChanges.Count, "There should be one breaking change when type parameter constraints change.");
-			Assert.AreEqual(BreakingChangeKind.ChangedGenericTypeParameterConstraints, breakingChanges[0].BreakingChangeKind, "The BreakingChangeKind is incorrect.");
-			Assert.AreEqual(classWithDerivedInterfaceConstraint.GenericParameters[0], breakingChanges[0].OldItem, "The OldItem is incorrect.");
-			Assert.AreEqual(classWithNoConstraints.GenericParameters[0], breakingChanges[0].NewItem, "The NewItem is incorrect.");
-			Assert.IsNull(breakingChanges[0].AssociatedData, "The AssociatedData is incorrect.");
+			AssertX.Equal(1, breakingChanges.Count, "There should be one breaking change when type parameter constraints change.");
+			AssertX.Equal(BreakingChangeKind.ChangedGenericTypeParameterConstraints, breakingChanges[0].BreakingChangeKind, "The BreakingChangeKind is incorrect.");
+			AssertX.Equal(classWithDerivedInterfaceConstraint.GenericParameters[0], breakingChanges[0].OldItem, "The OldItem is incorrect.");
+			AssertX.Equal(classWithNoConstraints.GenericParameters[0], breakingChanges[0].NewItem, "The NewItem is incorrect.");
+			AssertX.Null(breakingChanges[0].AssociatedData, "The AssociatedData is incorrect.");
 
 			breakingChanges = MetadataComparer.CompareTypes(classWithBaseTypeContraint, classWithNoConstraints);
-			Assert.AreEqual(1, breakingChanges.Count, "There should be one breaking change when type parameter constraints change.");
-			Assert.AreEqual(BreakingChangeKind.ChangedGenericTypeParameterConstraints, breakingChanges[0].BreakingChangeKind, "The BreakingChangeKind is incorrect.");
-			Assert.AreEqual(classWithBaseTypeContraint.GenericParameters[0], breakingChanges[0].OldItem, "The OldItem is incorrect.");
-			Assert.AreEqual(classWithNoConstraints.GenericParameters[0], breakingChanges[0].NewItem, "The NewItem is incorrect.");
-			Assert.IsNull(breakingChanges[0].AssociatedData, "The AssociatedData is incorrect.");
+			AssertX.Equal(1, breakingChanges.Count, "There should be one breaking change when type parameter constraints change.");
+			AssertX.Equal(BreakingChangeKind.ChangedGenericTypeParameterConstraints, breakingChanges[0].BreakingChangeKind, "The BreakingChangeKind is incorrect.");
+			AssertX.Equal(classWithBaseTypeContraint.GenericParameters[0], breakingChanges[0].OldItem, "The OldItem is incorrect.");
+			AssertX.Equal(classWithNoConstraints.GenericParameters[0], breakingChanges[0].NewItem, "The NewItem is incorrect.");
+			AssertX.Null(breakingChanges[0].AssociatedData, "The AssociatedData is incorrect.");
 		}
 
 		#endregion // TypeTests

@@ -2,6 +2,7 @@
     MIT License
 
     Copyright(c) 2014-2018 Infragistics, Inc.
+    Copyright 2018 Google LLC
 
     Permission is hereby granted, free of charge, to any person obtaining a copy
     of this software and associated documentation files (the "Software"), to deal
@@ -24,7 +25,7 @@
 
 using BreakingChangesDetector.MetadataItems;
 using BreakingChangesDetector.Serialization;
-using Microsoft.VisualStudio.TestTools.UnitTesting;
+using Xunit;
 using System;
 using System.Collections.Generic;
 using System.IO;
@@ -34,12 +35,11 @@ using System.Threading.Tasks;
 
 namespace BreakingChangesDetector.UnitTests.SerializationTests
 {
-	[TestClass]
 	public class BinarySerializationV1Tests
 	{
 		// TODO_Test: Re-add this test
 
-		//[TestMethod]
+		//[Fact]
 		//public void RoundTripTest()
 		//{
 		//	var family = AssemblyFamily.LoadFromAssemblies(new[] { typeof(BinarySerializationV1Tests).Assembly });
@@ -51,7 +51,7 @@ namespace BreakingChangesDetector.UnitTests.SerializationTests
 		//		stream.Position = 0;
 		//		var loadedAssemblies = new BinaryItemDeserializerV1(stream).LoadedAssemblies;
 
-		//		Assert.AreEqual(allAssemblies.Length, loadedAssemblies.Length);
+		//		AssertX.Equal(allAssemblies.Length, loadedAssemblies.Length);
 		//		for (int i = 0; i < allAssemblies.Length; i++)
 		//			TestUtilities.VerifyAreEqual(allAssemblies[i], loadedAssemblies[i]);
 		//	}

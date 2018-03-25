@@ -2,6 +2,7 @@
     MIT License
 
     Copyright(c) 2014-2018 Infragistics, Inc.
+    Copyright 2018 Google LLC
 
     Permission is hereby granted, free of charge, to any person obtaining a copy
     of this software and associated documentation files (the "Software"), to deal
@@ -22,7 +23,7 @@
     SOFTWARE.
 */
 
-using Mono.Cecil;
+using Microsoft.CodeAnalysis;
 using System;
 using System.Collections.Generic;
 using System.IO;
@@ -88,10 +89,11 @@ namespace BreakingChangesDetector.MetadataItems
 		/// <returns>The created <see cref="AssemblyFamily"/> instance.</returns>
 		public static AssemblyFamily FromAssemblies(IEnumerable<Assembly> assemblies)
 		{
+            var context = MetadataResolutionContext.CreateFromAssemblies(assemblies);
 			var family = new AssemblyFamily();
 
 			foreach (var assembly in assemblies)
-				family.Add(AssemblyData.FromAssembly(AssemblyDefinition.ReadAssembly(assembly.Location)));
+				family.Add(context.GetAssemblyData(assembly));
 
 			return family;
 		}

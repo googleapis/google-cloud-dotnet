@@ -2,6 +2,7 @@
     MIT License
 
     Copyright(c) 2014-2018 Infragistics, Inc.
+    Copyright 2018 Google LLC
 
     Permission is hereby granted, free of charge, to any person obtaining a copy
     of this software and associated documentation files (the "Software"), to deal
@@ -23,72 +24,71 @@
 */
 
 using System;
-using Microsoft.VisualStudio.TestTools.UnitTesting;
+using Xunit;
 using BreakingChangesDetector.MetadataItems;
 
 namespace BreakingChangesDetector.UnitTests.MetadataTypesTests
 {
-	[TestClass]
 	public class ConstructorDataTests
 	{
 		#region ConstructorDataAccessibilityTest
 
-		[TestMethod]
+		[Fact]
 		public void ConstructorDataAccessibilityTest()
 		{
 			var t = typeof(TestClassDefinition);
-			var assembly = AssemblyData.FromAssembly(t.Assembly);
-			var typeData = TypeDefinitionData.FromType(t);
+			var context = MetadataResolutionContext.CreateFromTypes(t);
+			var typeData = context.GetTypeDefinitionData(t);
 			var members = typeData.GetMembers(".ctor");
-			Assert.AreEqual(3, members.Count, "Incorrect number of constructors returned.");
-			Assert.AreEqual(MemberAccessibility.Public, ((ConstructorData)members[0]).Accessibility, "Incorrect MemberAccessibility.");
-			Assert.AreEqual(MemberAccessibility.Protected, ((ConstructorData)members[1]).Accessibility, "Incorrect MemberAccessibility.");
-			Assert.AreEqual(MemberAccessibility.Protected, ((ConstructorData)members[2]).Accessibility, "Incorrect MemberAccessibility.");
+			AssertX.Equal(3, members.Count, "Incorrect number of constructors returned.");
+			AssertX.Equal(MemberAccessibility.Public, ((ConstructorData)members[0]).Accessibility, "Incorrect MemberAccessibility.");
+			AssertX.Equal(MemberAccessibility.Protected, ((ConstructorData)members[1]).Accessibility, "Incorrect MemberAccessibility.");
+			AssertX.Equal(MemberAccessibility.Protected, ((ConstructorData)members[2]).Accessibility, "Incorrect MemberAccessibility.");
 		}
 
 		#endregion // ConstructorDataAccessibilityTest
 
 		#region ConstructorDataDeclaringTypeTest
 
-		[TestMethod]
+		[Fact]
 		public void ConstructorDataDeclaringTypeTest()
 		{
 			var t = typeof(TestClassDefinition);
-			var assembly = AssemblyData.FromAssembly(t.Assembly);
-			var typeData = TypeDefinitionData.FromType(t);
+			var context = MetadataResolutionContext.CreateFromTypes(t);
+			var typeData = context.GetTypeDefinitionData(t);
 			var constructor = typeData.GetMembers(".ctor")[0];
-			Assert.AreEqual(typeData, constructor.DeclaringType, "The DeclaringType of a member should be the type in which it is defined.");
+			AssertX.Equal(typeData, constructor.ContainingType, "The DeclaringType of a member should be the type in which it is defined.");
 		}
 
 		#endregion // ConstructorDataDeclaringTypeTest
 
 		#region ConstructorDataNameTest
 
-		[TestMethod]
+		[Fact]
 		public void ConstructorDataNameTest()
 		{
 			var t = typeof(TestClassDefinition);
-			var assembly = AssemblyData.FromAssembly(t.Assembly);
-			var typeData = TypeDefinitionData.FromType(t);
+			var context = MetadataResolutionContext.CreateFromTypes(t);
+			var typeData = context.GetTypeDefinitionData(t);
 			var constructor = typeData.GetMembers(".ctor")[0];
-			Assert.AreEqual(".ctor", constructor.Name, "The Name of the member is incorrect.");
+			AssertX.Equal(".ctor", constructor.Name, "The Name of the member is incorrect.");
 		}
 
 		#endregion // ConstructorDataNameTest
 
 		#region ConstructorDataParametersTest
 
-		[TestMethod]
+		[Fact]
 		public void ConstructorDataParametersTest()
 		{
 			var t = typeof(TestClassDefinition);
-			var assembly = AssemblyData.FromAssembly(t.Assembly);
-			var typeData = TypeDefinitionData.FromType(t);
+			var context = MetadataResolutionContext.CreateFromTypes(t);
+			var typeData = context.GetTypeDefinitionData(t);
 			var members = typeData.GetMembers(".ctor");
-			Assert.AreEqual(3, members.Count, "Incorrect number of constructors returned.");
-			Assert.AreEqual(0, ((ConstructorData)members[0]).Parameters.Count, "The public constructor has the wrong number of parameters.");
-			Assert.AreEqual(2, ((ConstructorData)members[1]).Parameters.Count, "The protected constructor has the wrong number of parameters.");
-			Assert.AreEqual(3, ((ConstructorData)members[2]).Parameters.Count, "The protected internal constructor has the wrong number of parameters.");
+			AssertX.Equal(3, members.Count, "Incorrect number of constructors returned.");
+			AssertX.Equal(0, ((ConstructorData)members[0]).Parameters.Count, "The public constructor has the wrong number of parameters.");
+			AssertX.Equal(2, ((ConstructorData)members[1]).Parameters.Count, "The protected constructor has the wrong number of parameters.");
+			AssertX.Equal(3, ((ConstructorData)members[2]).Parameters.Count, "The protected internal constructor has the wrong number of parameters.");
 		}
 
 		#endregion // ConstructorDataParametersTest

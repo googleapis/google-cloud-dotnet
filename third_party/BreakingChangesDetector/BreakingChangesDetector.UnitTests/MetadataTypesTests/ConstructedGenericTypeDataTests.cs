@@ -2,6 +2,7 @@
     MIT License
 
     Copyright(c) 2014-2018 Infragistics, Inc.
+    Copyright 2018 Google LLC
 
     Permission is hereby granted, free of charge, to any person obtaining a copy
     of this software and associated documentation files (the "Software"), to deal
@@ -23,64 +24,64 @@
 */
 
 using System;
-using Microsoft.VisualStudio.TestTools.UnitTesting;
+using Xunit;
 using BreakingChangesDetector.MetadataItems;
 using System.Collections.Generic;
 
 namespace BreakingChangesDetector.UnitTests.MetadataTypesTests
 {
-	[TestClass]
 	public class ConstructedGenericTypeDataTests
 	{
-		[TestMethod]
+		[Fact]
 		public void CustomConstructionTest()
 		{
-			var type = TypeDefinitionData.FromType(typeof(List<>));
+            var context = MetadataResolutionContext.CreateFromTypes(typeof(ConstructedGenericTypeDataTests));
+			var type = context.GetTypeDefinitionData(typeof(List<>));
 			var addMethod = type.GetMethod("Add");
-			Assert.AreEqual("T", addMethod.Parameters[0].Type.Name);
+			Assert.Equal("T", addMethod.Parameters[0].Type.Name);
 
-			var constructedType = type.GetConstructedGenericTypeData(new[] { TypeData.FromType<TestTypeArgument>() });
+			var constructedType = type.GetConstructedGenericTypeData(new[] { context.GetTypeData<TestTypeArgument>() });
 			addMethod = constructedType.GetMethod("Add");
-			Assert.AreEqual("TestTypeArgument", addMethod.Parameters[0].Type.Name);
+			Assert.Equal("TestTypeArgument", addMethod.Parameters[0].Type.Name);
 
 
-			type = TypeDefinitionData.FromType(typeof(TestGenericTypeDefinition<>));
-			constructedType = type.GetConstructedGenericTypeData(new[] { TypeData.FromType<TestTypeArgument>() });
+			type = context.GetTypeDefinitionData(typeof(TestGenericTypeDefinition<>));
+			constructedType = type.GetConstructedGenericTypeData(new[] { context.GetTypeData<TestTypeArgument>() });
 
 			var constructor = (ConstructorData)constructedType.GetMember(".ctor");
-			Assert.AreEqual("TestTypeArgument?", constructor.Parameters[0].Type.GetDisplayName(fullyQualify: false));
+			Assert.Equal("TestTypeArgument?", constructor.Parameters[0].Type.GetDisplayName(fullyQualify: false));
 			var _event = (EventData)constructedType.GetMember("Event");
-			Assert.AreEqual("EventHandler<TestTypeArgument>", _event.Type.GetDisplayName(fullyQualify: false));
+			Assert.Equal("EventHandler<TestTypeArgument>", _event.Type.GetDisplayName(fullyQualify: false));
 			var field = (FieldData)constructedType.GetMember("Field");
-			Assert.AreEqual("TestTypeArgument[]", field.Type.GetDisplayName(fullyQualify: false));
+			Assert.Equal("TestTypeArgument[]", field.Type.GetDisplayName(fullyQualify: false));
 			var indexer = (IndexerData)constructedType.GetMember("Item");
-			Assert.AreEqual("IList<TestTypeArgument>", indexer.Type.GetDisplayName(fullyQualify: false));
-			Assert.AreEqual("TestTypeArgument[]", indexer.Parameters[0].Type.GetDisplayName(fullyQualify: false));
+			Assert.Equal("IList<TestTypeArgument>", indexer.Type.GetDisplayName(fullyQualify: false));
+			Assert.Equal("TestTypeArgument[]", indexer.Parameters[0].Type.GetDisplayName(fullyQualify: false));
 			var method = (MethodData)constructedType.GetMember("Method");
-			Assert.AreEqual("TestTypeArgument?", method.Type.GetDisplayName(fullyQualify: false));
-			Assert.AreEqual("TestTypeArgument", method.Parameters[0].Type.GetDisplayName(fullyQualify: false));
-			Assert.AreEqual("U", method.Parameters[1].Type.GetDisplayName(fullyQualify: false));
-			Assert.AreEqual("Dictionary<TestTypeArgument[], U[]>", method.Parameters[2].Type.GetDisplayName(fullyQualify: false));
+			Assert.Equal("TestTypeArgument?", method.Type.GetDisplayName(fullyQualify: false));
+			Assert.Equal("TestTypeArgument", method.Parameters[0].Type.GetDisplayName(fullyQualify: false));
+			Assert.Equal("U", method.Parameters[1].Type.GetDisplayName(fullyQualify: false));
+			Assert.Equal("Dictionary<TestTypeArgument[], U[]>", method.Parameters[2].Type.GetDisplayName(fullyQualify: false));
 			var _operator = (OperatorData)constructedType.GetMember("op_Addition");
-			Assert.AreEqual("KeyValuePair<TestTypeArgument, object>", _operator.Type.GetDisplayName(fullyQualify: false));
-			Assert.AreEqual("TestGenericTypeDefinition<TestTypeArgument>", _operator.Parameters[0].Type.GetDisplayName(fullyQualify: false));
-			Assert.AreEqual("TestTypeArgument", _operator.Parameters[1].Type.GetDisplayName(fullyQualify: false));
+			Assert.Equal("KeyValuePair<TestTypeArgument, object>", _operator.Type.GetDisplayName(fullyQualify: false));
+			Assert.Equal("TestGenericTypeDefinition<TestTypeArgument>", _operator.Parameters[0].Type.GetDisplayName(fullyQualify: false));
+			Assert.Equal("TestTypeArgument", _operator.Parameters[1].Type.GetDisplayName(fullyQualify: false));
 			var property = (PropertyData)constructedType.GetMember("Property");
-			Assert.AreEqual("IComparer<TestTypeArgument>", property.Type.GetDisplayName(fullyQualify: false));
+			Assert.Equal("IComparer<TestTypeArgument>", property.Type.GetDisplayName(fullyQualify: false));
 			var nestedType = (ConstructedGenericTypeData)constructedType.GetMember("NestedType`1");
-			Assert.IsNull(nestedType);
+			Assert.Null(nestedType);
 
-			type = TypeDefinitionData.FromType(typeof(TestGenericTypeDefinition<>.NestedType<>));
-			constructedType = type.GetConstructedGenericTypeData(new[] { TypeData.FromType<TestTypeArgument>(), TypeData.FromType<double>() });
-			Assert.AreEqual("NestedType<double>", constructedType.GetDisplayName(fullyQualify: false));
-			Assert.AreEqual("BreakingChangesDetector.UnitTests.MetadataTypesTests.ConstructedGenericTypeDataTests.TestGenericTypeDefinition<TestTypeArgument>.NestedType<double>", constructedType.GetDisplayName());
-			Assert.AreEqual("Tuple<int, TestTypeArgument[], double>", constructedType.BaseType.GetDisplayName(fullyQualify: false));
+			type = context.GetTypeDefinitionData(typeof(TestGenericTypeDefinition<>.NestedType<>));
+			constructedType = type.GetConstructedGenericTypeData(new[] { context.GetTypeData<TestTypeArgument>(), context.GetTypeData<double>() });
+			Assert.Equal("NestedType<double>", constructedType.GetDisplayName(fullyQualify: false));
+			Assert.Equal("BreakingChangesDetector.UnitTests.MetadataTypesTests.ConstructedGenericTypeDataTests.TestGenericTypeDefinition<TestTypeArgument>.NestedType<double>", constructedType.GetDisplayName());
+			Assert.Equal("Tuple<int, TestTypeArgument[], double>", constructedType.BaseType.GetDisplayName(fullyQualify: false));
 
-			type = TypeDefinitionData.FromType(typeof(TestGenericTypeDefinition<>.NestedType<>.FurtherNestedType<>));
-			constructedType = type.GetConstructedGenericTypeData(new[] { TypeData.FromType<int>(), TypeData.FromType<TestTypeArgument>(), TypeData.FromType<double>() });
-			Assert.AreEqual("FurtherNestedType<double>", constructedType.GetDisplayName(fullyQualify: false));
-			Assert.AreEqual("BreakingChangesDetector.UnitTests.MetadataTypesTests.ConstructedGenericTypeDataTests.TestGenericTypeDefinition<int>.NestedType<TestTypeArgument>.FurtherNestedType<double>", constructedType.GetDisplayName());
-			Assert.AreEqual("Dictionary<int, Tuple<TestTypeArgument, double>>", constructedType.BaseType.GetDisplayName(fullyQualify: false));
+			type = context.GetTypeDefinitionData(typeof(TestGenericTypeDefinition<>.NestedType<>.FurtherNestedType<>));
+			constructedType = type.GetConstructedGenericTypeData(new[] { context.GetTypeData<int>(), context.GetTypeData<TestTypeArgument>(), context.GetTypeData<double>() });
+			Assert.Equal("FurtherNestedType<double>", constructedType.GetDisplayName(fullyQualify: false));
+			Assert.Equal("BreakingChangesDetector.UnitTests.MetadataTypesTests.ConstructedGenericTypeDataTests.TestGenericTypeDefinition<int>.NestedType<TestTypeArgument>.FurtherNestedType<double>", constructedType.GetDisplayName());
+			Assert.Equal("Dictionary<int, Tuple<TestTypeArgument, double>>", constructedType.BaseType.GetDisplayName(fullyQualify: false));
 		}
 
 		protected struct TestTypeArgument { }

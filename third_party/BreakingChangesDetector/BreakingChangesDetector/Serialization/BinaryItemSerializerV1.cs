@@ -2,6 +2,7 @@
     MIT License
 
     Copyright(c) 2014-2018 Infragistics, Inc.
+    Copyright 2018 Google LLC
 
     Permission is hereby granted, free of charge, to any person obtaining a copy
     of this software and associated documentation files (the "Software"), to deal
@@ -23,6 +24,7 @@
 */
 
 using BreakingChangesDetector.MetadataItems;
+using Microsoft.CodeAnalysis;
 using System;
 using System.Collections.Generic;
 using System.Diagnostics;
@@ -66,9 +68,9 @@ namespace BreakingChangesDetector.Serialization
 		 *		uint: id in type table
 		 *		------ If (TypeDataBase is TypeData) ---------------------------------
 		 *			------ If (IsConstructedGenericType) -----------------------------
-		 *				bool: (DeclaringType != null)
-		 *				------ If (DeclaringType != null) ----------------------------
-		 *					uint: id of DeclaringType in type table
+		 *				bool: (ContainingType != null)
+		 *				------ If (ContainingType != null) ----------------------------
+		 *					uint: id of ContainingType in type table
 		 *				------ End If ------------------------------------------------
 		 *			------ End If ----------------------------------------------------
 		 *			uint: id of BaseType in type table (0 for null)
@@ -211,10 +213,10 @@ namespace BreakingChangesDetector.Serialization
 				// TODO_Serialize: Fix this
 				//if (type.IsConstructedGenericType)
 				//{
-				//	var hasSpecialDecalringType = type.DeclaringType != null;
+				//	var hasSpecialDecalringType = type.ContainingType != null;
 				//	_writer.Write(hasSpecialDecalringType);
 				//	if (hasSpecialDecalringType)
-				//		_writer.Write(this.GetTypeId(type.DeclaringType));
+				//		_writer.Write(this.GetTypeId(type.ContainingType));
 				//}
 
 				_writer.Write(this.GetTypeId(type.BaseType));

@@ -2,6 +2,7 @@
     MIT License
 
     Copyright(c) 2014-2018 Infragistics, Inc.
+    Copyright 2018 Google LLC
 
     Permission is hereby granted, free of charge, to any person obtaining a copy
     of this software and associated documentation files (the "Software"), to deal
@@ -22,7 +23,6 @@
     SOFTWARE.
 */
 
-using Mono.Cecil;
 using System;
 using System.Collections.Generic;
 using System.Diagnostics;
@@ -51,7 +51,7 @@ namespace BreakingChangesDetector.MetadataItems
 			: base(genericTypeDefinition.Name, genericTypeDefinition.Accessibility, genericTypeDefinition.MemberFlags, genericTypeDefinition.TypeKind)
 		{
 			this.GenericTypeDefinition = genericTypeDefinition;
-			this.DeclaringType = genericTypeDefinition.DeclaringType;
+			this.ContainingType = genericTypeDefinition.ContainingType;
 
 			_isNullable = genericTypeDefinition.IsType(typeof(Nullable<>));
 
@@ -87,11 +87,11 @@ namespace BreakingChangesDetector.MetadataItems
 			get { return this.GenericTypeDefinition == null ? null : this.GenericTypeDefinition.AssemblyData; }
 		}
 
-		#endregion // AssemblyData
+        #endregion // AssemblyData
 
-		#region DoesMatch
+        #region DoesMatch
 
-		internal override bool DoesMatch(MetadataItemBase other)
+        internal override bool DoesMatch(MetadataItemBase other)
 		{
 			if (base.DoesMatch(other) == false)
 				return false;
@@ -208,7 +208,7 @@ namespace BreakingChangesDetector.MetadataItems
 			var rootName = this.GenericTypeDefinition.GetDisplayName(fullyQualify: false, includeGenericInfo: false);
 			if (includeGenericInfo)
 			{
-				var parentGenericArgumentCount = this.DeclaringType == null ? 0 : this.DeclaringType.GenericArity;
+				var parentGenericArgumentCount = this.ContainingType == null ? 0 : this.ContainingType.GenericArity;
 				rootName += genericArgumentsResolved.GetGenericArgumentListDisplayText(includeGenericInfo, parentGenericArgumentCount, this.GenericArguments.Count - parentGenericArgumentCount);
 			}
 
@@ -350,20 +350,6 @@ namespace BreakingChangesDetector.MetadataItems
 
 		#endregion // IsEquivalentToNewMember
 
-		#region IsExtensionsClass
-
-#if DEBUG
-		/// <summary>
-		/// Gets the value indicating whether the type is an extension class (a class containing extension methods).
-		/// </summary> 
-#endif
-		internal override bool IsExtensionsClass
-		{
-			get { return false; }
-		}
-
-		#endregion // IsExtensionsClass
-
 		#region IsNullable
 
 #if DEBUG
@@ -473,34 +459,6 @@ namespace BreakingChangesDetector.MetadataItems
 
 		#region Methods
 
-		#region Public Methods
-
-		#region FromType
-
-		/// <summary>
-		/// Gets the derived <see cref="ConstructedGenericTypeData"/> instance representing the specified type.
-		/// </summary>
-		/// <typeparam name="T">The type for which to get the <see cref="ConstructedGenericTypeData"/>.</typeparam>
-		/// <returns>The derived <see cref="ConstructedGenericTypeData"/> instance.</returns>
-		public new static ConstructedGenericTypeData FromType<T>()
-		{
-			return ConstructedGenericTypeData.FromType(typeof(T));
-		}
-
-		/// <summary>
-		/// Gets the derived <see cref="ConstructedGenericTypeData"/> instance representing the specified type.
-		/// </summary>
-		/// <returns>The derived <see cref="ConstructedGenericTypeData"/> instance.</returns>
-		public new static ConstructedGenericTypeData FromType(Type t)
-		{
-			// TODO_Public: throw an exception if the type is not a constructed generic
-			return (ConstructedGenericTypeData)TypeData.FromType(t);
-		}
-
-		#endregion // FromType
-
-		#endregion // Public Methods
-
 		#region Internal Methods
 
 		#region FinalizeDefiniton
@@ -516,7 +474,7 @@ namespace BreakingChangesDetector.MetadataItems
 				this.GenericTypeDefinition.ImplementedInterfaces.Select(i => (DeclaringTypeData)i.ReplaceGenericTypeParameters(genericParameters, this.GenericArguments))
 				);
 
-			if (this.TypeKind == TypeKind.Delegate)
+			if (TypeKind == Microsoft.CodeAnalysis.TypeKind.Delegate)
 			{
 				var invokeMethod = (MethodData)this.GenericTypeDefinition.GetMethod("Invoke").ReplaceGenericTypeParameters(genericParameters, this.GenericArguments);
 				this.DelegateParameters = invokeMethod.Parameters;
@@ -587,7 +545,7 @@ namespace BreakingChangesDetector.MetadataItems
 #endif
 		internal bool SupportsVariantTypeParameters
 		{
-			get { return this.TypeKind == TypeKind.Interface || this.TypeKind == TypeKind.Delegate; }
+			get { return TypeKind == Microsoft.CodeAnalysis.TypeKind.Interface|| TypeKind == Microsoft.CodeAnalysis.TypeKind.Delegate; }
 		}
 
 		#endregion // Internal Properties
