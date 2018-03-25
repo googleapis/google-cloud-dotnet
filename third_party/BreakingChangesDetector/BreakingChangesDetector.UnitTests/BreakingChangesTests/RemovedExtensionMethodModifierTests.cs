@@ -30,8 +30,6 @@ namespace BreakingChangesDetector.UnitTests.BreakingChangesTests
 {
     public class RemovedExtensionMethodModifierTests
     {
-        #region MethodTests
-
         [Fact]
         public void MethodTests()
         {
@@ -49,8 +47,6 @@ namespace BreakingChangesDetector.UnitTests.BreakingChangesTests
             breakingChanges = MetadataComparer.CompareTypes(ClassWithoutExtensionMethod, ClassWithExtensionMethod);
             AssertX.Equal(0, breakingChanges.Count, "There should be no breaking changes when an normal method is turned into an extension method.");
         }
-
-        #endregion // MethodTests
     }
 
     public static class ClassWithExtensionMethod { public static void Method(this RemovedExtensionMethodModifierTests x) { } }

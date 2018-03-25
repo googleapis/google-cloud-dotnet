@@ -30,8 +30,6 @@ namespace BreakingChangesDetector.UnitTests.BreakingChangesTests
 {
     public class ChangedFieldToReadOnlyTests
     {
-        #region FieldTests
-
         [Fact]
         public void FieldTests()
         {
@@ -49,8 +47,6 @@ namespace BreakingChangesDetector.UnitTests.BreakingChangesTests
             AssertX.Equal(FieldReadOnly.GetMember("Field"), breakingChanges[0].NewItem, "The NewItem is incorrect.");
             AssertX.Null(breakingChanges[0].AssociatedData, "The AssociatedData is incorrect.");
         }
-
-        #endregion // FieldTests
 
         public class FieldReadOnly { public readonly int Field; }
         public class FieldReadWrite { public int Field; }

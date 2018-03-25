@@ -34,8 +34,6 @@ namespace BreakingChangesDetector.MetadataItems
     /// </summary>
     public sealed class ConstantData : TypedMemberDataBase
     {
-        #region Constructors
-
         internal ConstantData(string name, MemberAccessibility accessibility, MemberFlags memberFlags, TypeData type, bool isTypeDynamic, object value)
             : base(name, accessibility, memberFlags, type, isTypeDynamic) =>
             Value = value;
@@ -44,12 +42,6 @@ namespace BreakingChangesDetector.MetadataItems
             : base(fieldSymbol, accessibility, fieldSymbol.Type, fieldSymbol.Type.TypeKind == TypeKind.Dynamic, MemberFlags.Static, declaringType) =>
             Value = Utilities.PreprocessConstantValue(fieldSymbol.Type, fieldSymbol.ConstantValue);
 
-        #endregion // Constructors
-
-        #region Base Class Overrides
-
-        #region Accept
-
         /// <summary>
         /// Performs the specified visitor's functionality on this instance.
         /// </summary>
@@ -57,26 +49,16 @@ namespace BreakingChangesDetector.MetadataItems
         public override void Accept(MetadataItemVisitor visitor) =>
             visitor.VisitConstantData(this);
 
-        #endregion // Accept
-
-        #region CanOverrideMember
-
-#if DEBUG
         /// <summary>
         /// Indicates whether the current member can override the specified member from a base type.
         /// </summary>
         /// <param name="baseMember">The member from the base type.</param>
         /// <returns>True if the current member can override the base member; False otherwise.</returns> 
-#endif
         internal override bool CanOverrideMember(MemberDataBase baseMember)
         {
             Debug.Fail("Constants cannot be overridden.");
             return false;
         }
-
-        #endregion // CanOverrideMember
-
-        #region DoesMatch
 
         internal override bool DoesMatch(MetadataItemBase other)
         {
@@ -99,28 +81,18 @@ namespace BreakingChangesDetector.MetadataItems
             return true;
         }
 
-        #endregion // DoesMatch
-
-        #region MetadataItemKind
-
         /// <summary>
         /// Gets the type of item the instance represents.
         /// </summary>
         public override MetadataItemKinds MetadataItemKind =>
             MetadataItemKinds.Constant;
 
-        #endregion // MetadataItemKind
-
-        #region ReplaceGenericTypeParameters
-
-#if DEBUG
         /// <summary>
         /// Replaces all type parameters used by the member with their associated generic arguments specified in a constructed generic type.
         /// </summary>
         /// <param name="genericParameters">The generic parameters being replaced.</param>
         /// <param name="genericArguments">The generic arguments replacing the parameters.</param>
         /// <returns>A new member with the replaced type parameters or the current instance if the member does not use any of the generic parameters.</returns> 
-#endif
         internal override MemberDataBase ReplaceGenericTypeParameters(GenericTypeParameterCollection genericParameters, GenericTypeArgumentCollection genericArguments)
         {
             var replacedType = (TypeData)Type.ReplaceGenericTypeParameters(genericParameters, genericArguments);
@@ -133,12 +105,6 @@ namespace BreakingChangesDetector.MetadataItems
             return new ConstantData(Name, Accessibility, MemberFlags, replacedType, IsTypeDynamic, Value);
         }
 
-        #endregion // ReplaceGenericTypeParameters
-
-        #endregion // Base Class Overrides
-
-        #region Methods
-
         internal static MemberDataBase ConstantDataFromReflection(IFieldSymbol fieldSymbol, DeclaringTypeData declaringType)
         {
             var accessibility = fieldSymbol.GetAccessibility();
@@ -150,15 +116,9 @@ namespace BreakingChangesDetector.MetadataItems
             return new ConstantData(fieldSymbol, accessibility.Value, declaringType);
         }
 
-        #endregion // Methods
-
-        #region Properties
-
         /// <summary>
         /// Gets the compiled constant value.
         /// </summary>
         public object Value { get; } // TODO_Serialize: Round trip and unit test
-
-        #endregion // Properties
     }
 }

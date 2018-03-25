@@ -31,8 +31,6 @@ namespace BreakingChangesDetector.UnitTests.MetadataTypesTests
 {
     public class EventDataTests
     {
-        #region EventDataAccessibilityTest
-
         [Fact]
         public void EventDataAccessibilityTest()
         {
@@ -41,10 +39,6 @@ namespace BreakingChangesDetector.UnitTests.MetadataTypesTests
             var typeData = context.GetTypeDefinitionData(t);
             TestUtilities.VerifyAccessibility(typeData, "EventInstance");
         }
-
-        #endregion // EventDataAccessibilityTest
-
-        #region EventDataDeclaringTypeTest
 
         [Fact]
         public void EventDataDeclaringTypeTest()
@@ -55,10 +49,6 @@ namespace BreakingChangesDetector.UnitTests.MetadataTypesTests
             var eventData = typeData.GetMember("EventInstance");
             AssertX.Equal(typeData, eventData.ContainingType, "The DeclaringType of a member should be the type in which it is defined.");
         }
-
-        #endregion // EventDataDeclaringTypeTest
-
-        #region EventDataMemberFlagsTest
 
         [Fact]
         public void EventDataMemberFlagsTest()
@@ -89,10 +79,6 @@ namespace BreakingChangesDetector.UnitTests.MetadataTypesTests
             AssertX.Equal(MemberFlags.Override | MemberFlags.Abstract, eventData.MemberFlags, "The Flags value of the member is wrong.");
         }
 
-        #endregion // EventDataMemberFlagsTest
-
-        #region EventDataNameTest
-
         [Fact]
         public void EventDataNameTest()
         {
@@ -102,10 +88,6 @@ namespace BreakingChangesDetector.UnitTests.MetadataTypesTests
             var eventData = typeData.GetMember("EventInstance");
             AssertX.Equal("EventInstance", eventData.Name, "The Name of the member is incorrect.");
         }
-
-        #endregion // EventDataNameTest
-
-        #region EventDataTypeTest
 
         [Fact]
         public void EventDataTypeTest()
@@ -117,7 +99,5 @@ namespace BreakingChangesDetector.UnitTests.MetadataTypesTests
             var eventHandlerType = context.GetTypeDefinitionData<EventHandler>();
             AssertX.Equal(eventHandlerType, eventData.Type, "The Type of the member is incorrect.");
         }
-
-        #endregion // EventDataTypeTest
     }
 }

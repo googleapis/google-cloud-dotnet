@@ -32,8 +32,6 @@ namespace BreakingChangesDetector.UnitTests.BreakingChangesTests
 {
     public class ChangedParameterDefaultValueTests
     {
-        #region ConstructorTests
-
         [Fact]
         public void ConstructorTests()
         {
@@ -55,10 +53,6 @@ namespace BreakingChangesDetector.UnitTests.BreakingChangesTests
             AssertX.Equal(((IParameterizedItem)ConstructorWithDefault0.GetMember(".ctor")).Parameters[0], breakingChanges[0].NewItem, "The NewItem is incorrect.");
             AssertX.Equal(ConstructorWithDefault0.GetMember(".ctor"), breakingChanges[0].AssociatedData, "The AssociatedData is incorrect.");
         }
-
-        #endregion // ConstructorTests
-
-        #region IndexerTests
 
         [Fact]
         public void IndexerTests()
@@ -82,10 +76,6 @@ namespace BreakingChangesDetector.UnitTests.BreakingChangesTests
             AssertX.Equal(IndexerWithDefault0.GetMember("Item"), breakingChanges[0].AssociatedData, "The AssociatedData is incorrect.");
         }
 
-        #endregion // IndexerTests
-
-        #region MethodTests
-
         [Fact]
         public void MethodTests()
         {
@@ -107,10 +97,6 @@ namespace BreakingChangesDetector.UnitTests.BreakingChangesTests
             AssertX.Equal(MethodWithDefault0.GetMethod("Method").Parameters[0], breakingChanges[0].NewItem, "The NewItem is incorrect.");
             AssertX.Equal(MethodWithDefault0.GetMethod("Method"), breakingChanges[0].AssociatedData, "The AssociatedData is incorrect.");
         }
-
-        #endregion // MethodTests
-
-        #region NestedTypeTests
 
         [Fact]
         public void NestedTypeTests()
@@ -134,10 +120,6 @@ namespace BreakingChangesDetector.UnitTests.BreakingChangesTests
             AssertX.Equal(nestedDelegateWithDefault0.GetNestedType("Delegate"), breakingChanges[0].AssociatedData, "The AssociatedData is incorrect.");
         }
 
-        #endregion // NestedTypeTests
-
-        #region TypeTests
-
         [Fact]
         public void TypeTests()
         {
@@ -159,8 +141,6 @@ namespace BreakingChangesDetector.UnitTests.BreakingChangesTests
             AssertX.Equal(DelegateWithDefault0.DelegateParameters[0], breakingChanges[0].NewItem, "The NewItem is incorrect.");
             AssertX.Equal(DelegateWithDefault0, breakingChanges[0].AssociatedData, "The AssociatedData is incorrect.");
         }
-
-        #endregion // TypeTests
 
         public class NestedDelegateWithDefault0 { public delegate void Delegate(int x = 0); }
         public class NestedDelegateWithDefault1 { public delegate void Delegate(int x = 1); }

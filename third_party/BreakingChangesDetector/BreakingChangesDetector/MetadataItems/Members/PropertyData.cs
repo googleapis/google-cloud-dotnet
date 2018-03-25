@@ -32,8 +32,6 @@ namespace BreakingChangesDetector.MetadataItems
     /// </summary>
     public class PropertyData : TypedMemberDataBase
     {
-        #region Constructor
-
         internal PropertyData(string name, MemberAccessibility accessibility, MemberFlags memberFlags, TypeData type, bool isTypeDynamic, MemberAccessibility? getMethodAccessibility, MemberAccessibility? setMethodAccessibility)
             : base(name, accessibility, memberFlags, type, isTypeDynamic)
         {
@@ -53,29 +51,17 @@ namespace BreakingChangesDetector.MetadataItems
             SetMethodAccessibility = setAccessibility;
         }
 
-        #endregion // Constructor
-
-        #region Base Class Overrides
-
-        #region Accept
-
         /// <summary>
         /// Performs the specified visitor's functionality on this instance.
         /// </summary>
         /// <param name="visitor">The visitor whose functionality should be performed on the instance.</param>
         public override void Accept(MetadataItemVisitor visitor) => visitor.VisitPropertyData(this);
 
-        #endregion // Accept
-
-        #region CanOverrideMember
-
-#if DEBUG
         /// <summary>
         /// Indicates whether the current member can override the specified member from a base type.
         /// </summary>
         /// <param name="baseMember">The member from the base type.</param>
         /// <returns>True if the current member can override the base member; False otherwise.</returns>  
-#endif
         internal override bool CanOverrideMember(MemberDataBase baseMember)
         {
             if (base.CanOverrideMember(baseMember) == false)
@@ -114,10 +100,6 @@ namespace BreakingChangesDetector.MetadataItems
             return true;
         }
 
-        #endregion // CanOverrideMember
-
-        #region DoesMatch
-
         internal override bool DoesMatch(MetadataItemBase other)
         {
             if (base.DoesMatch(other) == false)
@@ -144,27 +126,17 @@ namespace BreakingChangesDetector.MetadataItems
             return true;
         }
 
-        #endregion // DoesMatch
-
-        #region MetadataItemKind
-
         /// <summary>
         /// Gets the type of item the instance represents.
         /// </summary>
         public override MetadataItemKinds MetadataItemKind => MetadataItemKinds.Property;
 
-        #endregion // MetadataItemKind
-
-        #region ReplaceGenericTypeParameters
-
-#if DEBUG
         /// <summary>
         /// Replaces all type parameters used by the member with their associated generic arguments specified in a constructed generic type.
         /// </summary>
         /// <param name="genericParameters">The generic parameters being replaced.</param>
         /// <param name="genericArguments">The generic arguments replacing the parameters.</param>
         /// <returns>A new member with the replaced type parameters or the current instance if the member does not use any of the generic parameters.</returns> 
-#endif
         internal override MemberDataBase ReplaceGenericTypeParameters(GenericTypeParameterCollection genericParameters, GenericTypeArgumentCollection genericArguments)
         {
             var replacedType = (TypeData)Type.ReplaceGenericTypeParameters(genericParameters, genericArguments);
@@ -175,12 +147,6 @@ namespace BreakingChangesDetector.MetadataItems
 
             return new PropertyData(Name, Accessibility, MemberFlags, replacedType, IsTypeDynamic, GetMethodAccessibility, SetMethodAccessibility);
         }
-
-        #endregion // ReplaceGenericTypeParameters
-
-        #endregion // Base Class Overrides
-
-        #region Methods
 
         internal static PropertyData PropertyDataFromReflection(IPropertySymbol propertySymbol, DeclaringTypeData declaringType)
         {
@@ -194,10 +160,6 @@ namespace BreakingChangesDetector.MetadataItems
             return new PropertyData(propertySymbol, getAccessibility, setAccessibility, declaringType);
         }
 
-        #endregion // Methods
-
-        #region Properties
-
         /// <summary>
         /// Gets the accessibility of the get accessor, or null if it is not externally visible.
         /// </summary>
@@ -207,7 +169,5 @@ namespace BreakingChangesDetector.MetadataItems
         /// Gets the accessibility of the set accessor, or null if it is not externally visible.
         /// </summary>
         public MemberAccessibility? SetMethodAccessibility { get; }
-
-        #endregion // Properties
     }
 }

@@ -30,8 +30,6 @@ namespace BreakingChangesDetector.UnitTests.MetadataTypesTests
 {
     public class ConstantDataTests
     {
-        #region ConstantDataAccessibilityTest
-
         [Fact]
         public void ConstantDataAccessibilityTest()
         {
@@ -40,10 +38,6 @@ namespace BreakingChangesDetector.UnitTests.MetadataTypesTests
             var typeData = context.GetTypeDefinitionData(t);
             TestUtilities.VerifyAccessibility(typeData, "Constant");
         }
-
-        #endregion // ConstantDataAccessibilityTest
-
-        #region ConstantDataDeclaringTypeTest
 
         [Fact]
         public void ConstantDataDeclaringTypeTest()
@@ -55,10 +49,6 @@ namespace BreakingChangesDetector.UnitTests.MetadataTypesTests
             AssertX.Equal(typeData, constant.ContainingType, "The DeclaringType of a member should be the type in which it is defined.");
         }
 
-        #endregion // ConstantDataDeclaringTypeTest
-
-        #region ConstantDataNameTest
-
         [Fact]
         public void ConstantDataNameTest()
         {
@@ -68,10 +58,6 @@ namespace BreakingChangesDetector.UnitTests.MetadataTypesTests
             var constant = typeData.GetMember("Constant");
             AssertX.Equal("Constant", constant.Name, "The Name of the member is incorrect.");
         }
-
-        #endregion // ConstantDataNameTest
-
-        #region ConstantDataTypeTest
 
         [Fact]
         public void ConstantDataTypeTest()
@@ -83,7 +69,5 @@ namespace BreakingChangesDetector.UnitTests.MetadataTypesTests
             var intType = context.GetTypeDefinitionData<int>();
             AssertX.Equal(intType, constant.Type, "The Type of the member is incorrect.");
         }
-
-        #endregion // ConstantDataTypeTest
     }
 }

@@ -31,8 +31,6 @@ namespace BreakingChangesDetector.UnitTests.BreakingChangesTests
 {
     public class SealedClassTests
     {
-        #region NestedTypeTests
-
         [Fact]
         public void NestedTypeTests()
         {
@@ -58,10 +56,6 @@ namespace BreakingChangesDetector.UnitTests.BreakingChangesTests
             AssertX.Equal(0, breakingChanges.Where(b => b.BreakingChangeKind == BreakingChangeKind.SealedClass).Count(), "There should be no breaking changes when unsealing a class.");
         }
 
-        #endregion // NestedTypeTests
-
-        #region TypeTests
-
         [Fact]
         public void TypeTests()
         {
@@ -86,8 +80,6 @@ namespace BreakingChangesDetector.UnitTests.BreakingChangesTests
             breakingChanges = MetadataComparer.CompareTypes(sealedClass, unsealedClassWithInternalConstructor);
             AssertX.Equal(0, breakingChanges.Where(b => b.BreakingChangeKind == BreakingChangeKind.SealedClass).Count(), "There should be no breaking changes when unsealing a class.");
         }
-
-        #endregion // TypeTests
 
         public class NestedUnsealedClass { public class Class { } }
         public class NestedUnsealedClassWithInternalConstructor { public class Class { internal Class() { } } }

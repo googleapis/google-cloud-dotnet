@@ -32,8 +32,6 @@ namespace BreakingChangesDetector.UnitTests.BreakingChangesTests
 {
     public class RemovedMemberTests
     {
-        #region ChangeConstantToFieldTest
-
         [Fact]
         public void ChangeConstantToFieldTest()
         {
@@ -64,10 +62,6 @@ namespace BreakingChangesDetector.UnitTests.BreakingChangesTests
             AssertX.Null(breakingChanges[0].NewItem, "The NewItem is incorrect.");
             AssertX.Equal(ClassWithReadWriteField, breakingChanges[0].AssociatedData, "The AssociatedData is incorrect.");
         }
-
-        #endregion // ChangeConstantToFieldTest
-
-        #region ChangeConstantToPropertyTest
 
         [Fact]
         public void ChangeConstantToPropertyTest()
@@ -104,10 +98,6 @@ namespace BreakingChangesDetector.UnitTests.BreakingChangesTests
             AssertX.Equal(ClassWithStaticProtectedGetProperty, breakingChanges[0].AssociatedData, "The AssociatedData is incorrect.");
         }
 
-        #endregion // ChangeConstantToPropertyTest
-
-        #region ChangeExplicitToImplicitMemberTests
-
         [Fact]
         public void ChangeExplicitToImplicitMemberTests()
         {
@@ -125,10 +115,6 @@ namespace BreakingChangesDetector.UnitTests.BreakingChangesTests
             breakingChanges = MetadataComparer.CompareTypes(ExplicitInterfaceMember, ImplicitInterfaceMember);
             AssertX.Equal(0, breakingChanges.Count, "There should be no breaking changes when an explicit interface member is changed to implicit");
         }
-
-        #endregion // ChangeExplicitToImplicitMemberTests
-
-        #region ChangeFieldToConstantTest
 
         [Fact]
         public void ChangeFieldToConstantTest()
@@ -164,10 +150,6 @@ namespace BreakingChangesDetector.UnitTests.BreakingChangesTests
             AssertX.Null(breakingChanges[0].NewItem, "The NewItem is incorrect.");
             AssertX.Equal(ClassWithConstant, breakingChanges[0].AssociatedData, "The AssociatedData is incorrect.");
         }
-
-        #endregion // ChangeFieldToConstantTest
-
-        #region ChangeFieldToPropertyTest
 
         [Fact]
         public void ChangeFieldToPropertyTest()
@@ -259,10 +241,6 @@ namespace BreakingChangesDetector.UnitTests.BreakingChangesTests
             AssertX.Equal(ClassWithProtectedGetProperty, breakingChanges[0].AssociatedData, "The AssociatedData is incorrect.");
         }
 
-        #endregion // ChangeFieldToPropertyTest
-
-        #region ChangePropertyToConstantTest
-
         [Fact]
         public void ChangePropertyToConstantTest()
         {
@@ -313,10 +291,6 @@ namespace BreakingChangesDetector.UnitTests.BreakingChangesTests
             AssertX.Null(breakingChanges[0].NewItem, "The NewItem is incorrect.");
             AssertX.Equal(ClassWithConstant, breakingChanges[0].AssociatedData, "The AssociatedData is incorrect.");
         }
-
-        #endregion // ChangePropertyToConstantTest
-
-        #region ChangePropertyToFieldTest
 
         [Fact]
         public void ChangePropertyToFieldTest()
@@ -395,10 +369,6 @@ namespace BreakingChangesDetector.UnitTests.BreakingChangesTests
             AssertX.Equal(ClassWithReadOnlyProtectedField, breakingChanges[0].AssociatedData, "The AssociatedData is incorrect.");
         }
 
-        #endregion // ChangePropertyToFieldTest
-
-        #region ConstantTests
-
         [Fact]
         public void ConstantTests()
         {
@@ -460,10 +430,6 @@ namespace BreakingChangesDetector.UnitTests.BreakingChangesTests
             AssertX.Equal(0, breakingChanges.Count, "There should be no breaking changes when a public constant is added");
         }
 
-        #endregion // ConstantTests
-
-        #region ConstructorTests
-
         [Fact]
         public void ConstructorTests()
         {
@@ -512,10 +478,6 @@ namespace BreakingChangesDetector.UnitTests.BreakingChangesTests
             breakingChanges = MetadataComparer.CompareTypes(noConstructor, privateConstructor);
             AssertX.Equal(0, breakingChanges.Count, "There should be no breaking changes when a protected internal constructor is added");
         }
-
-        #endregion // ConstructorTests
-
-        #region EventTests
 
         [Fact]
         public void EventTests()
@@ -566,10 +528,6 @@ namespace BreakingChangesDetector.UnitTests.BreakingChangesTests
             AssertX.Equal(0, breakingChanges.Count, "There should be no breaking changes when a protected internal event is added");
         }
 
-        #endregion // EventTests
-
-        #region FieldTests
-
         [Fact]
         public void FieldTests()
         {
@@ -619,10 +577,6 @@ namespace BreakingChangesDetector.UnitTests.BreakingChangesTests
             AssertX.Equal(0, breakingChanges.Count, "There should be no breaking changes when a protected internal field is added");
         }
 
-        #endregion // FieldTests
-
-        #region IndexerTests
-
         [Fact]
         public void IndexerTests()
         {
@@ -671,10 +625,6 @@ namespace BreakingChangesDetector.UnitTests.BreakingChangesTests
             breakingChanges = MetadataComparer.CompareTypes(noIndexer, privateIndexer);
             AssertX.Equal(0, breakingChanges.Count, "There should be no breaking changes when a protected internal indexer is added");
         }
-
-        #endregion // IndexerTests
-
-        #region MethodTests
 
         [Fact]
         public void MethodTests()
@@ -756,10 +706,6 @@ namespace BreakingChangesDetector.UnitTests.BreakingChangesTests
         public class BaseClassWithMethod { public void Method() { } }
         public class DerivedClassWithMethod : BaseClassWithMethod { }
 
-        #endregion // MethodTests
-
-        #region OperatorTests
-
         [Fact]
         public void OperatorTests()
         {
@@ -778,10 +724,6 @@ namespace BreakingChangesDetector.UnitTests.BreakingChangesTests
             AssertX.Equal(0, breakingChanges.Count, "There should be no breaking changes when a public operator is added");
         }
 
-        #endregion // OperatorTests
-
-        #region RemovingOverrideInNonBreaking
-
         [Fact]
         public void RemovingOverrideInNonBreaking()
         {
@@ -792,10 +734,6 @@ namespace BreakingChangesDetector.UnitTests.BreakingChangesTests
             var breakingChanges = MetadataComparer.CompareTypes(ClassWithOverride, ClassWithoutOverride);
             AssertX.Equal(0, breakingChanges.Count, "There should be no breaking changes when removing an override of a virtual method");
         }
-
-        #endregion // RemovingOverrideInNonBreaking
-
-        #region PropertyTests
 
         [Fact]
         public void PropertyTests()
@@ -846,10 +784,6 @@ namespace BreakingChangesDetector.UnitTests.BreakingChangesTests
             AssertX.Equal(0, breakingChanges.Count, "There should be no breaking changes when a protected internal property is added");
         }
 
-        #endregion // PropertyTests
-
-        #region NestedTypeTests
-
         [Fact]
         public void NestedTypeTests()
         {
@@ -899,9 +833,6 @@ namespace BreakingChangesDetector.UnitTests.BreakingChangesTests
             AssertX.Equal(0, breakingChanges.Count, "There should be no breaking changes when a protected internal nested type is added");
         }
 
-        #endregion // NestedTypeTests
-
-
         public class ExplicitInterfaceMember : IEquatable<int> { bool IEquatable<int>.Equals(int other) { return false; } }
         public class ImplicitInterfaceMember : IEquatable<int> { public bool Equals(int other) { return false; } }
 
@@ -916,8 +847,6 @@ namespace BreakingChangesDetector.UnitTests.BreakingChangesTests
 
         public struct StructWithMethod { public void Method() { } }
         public struct StructWithoutMethod { }
-
-
 
         public class ClassWithConstant { public const int Data = 0; }
 

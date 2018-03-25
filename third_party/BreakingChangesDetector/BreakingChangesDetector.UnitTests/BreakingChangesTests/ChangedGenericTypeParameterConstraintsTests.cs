@@ -32,8 +32,6 @@ namespace BreakingChangesDetector.UnitTests.BreakingChangesTests
 {
     public class ChangedGenericTypeParameterConstraintsTests
     {
-        #region MethodTests
-
         [Fact]
         public void MethodTests()
         {
@@ -146,10 +144,6 @@ namespace BreakingChangesDetector.UnitTests.BreakingChangesTests
             AssertX.Equal(((MethodData)methodWithNoConstraints.GetMember("Method")).GenericParameters[0], breakingChanges[0].NewItem, "The NewItem is incorrect.");
             AssertX.Null(breakingChanges[0].AssociatedData, "The AssociatedData is incorrect.");
         }
-
-        #endregion // MethodTests
-
-        #region NestedTypeTests
 
         [Fact]
         public void NestedTypeTests()
@@ -264,10 +258,6 @@ namespace BreakingChangesDetector.UnitTests.BreakingChangesTests
             AssertX.Null(breakingChanges[0].AssociatedData, "The AssociatedData is incorrect.");
         }
 
-        #endregion // NestedTypeTests
-
-        #region TypeTests
-
         [Fact]
         public void TypeTests()
         {
@@ -381,8 +371,6 @@ namespace BreakingChangesDetector.UnitTests.BreakingChangesTests
             AssertX.Null(breakingChanges[0].AssociatedData, "The AssociatedData is incorrect.");
         }
 
-        #endregion // TypeTests
-
         public class NestedClassWithNoConstraints { public class Class<T> { } }
         public class NestedClassWithNewConstraint { public class Class<T> where T : new() { } }
         public class NestedClassWithStructConstraint { public class Class<T> where T : struct { } }
@@ -391,7 +379,6 @@ namespace BreakingChangesDetector.UnitTests.BreakingChangesTests
         public class NestedClassWithBaseInterfaceConstraint { public class Class<T> where T : BaseInterface { } }
         public class NestedClassWithDerivedInterfaceConstraint { public class Class<T> where T : DerivedInterface { } }
         public class NestedClassWithBaseTypeContraint { public class Class<T> where T : Attribute { } }
-
 
         public class ClassWithNoConstraints<T> { }
         public class ClassWithNewConstraint<T> where T : new() { }

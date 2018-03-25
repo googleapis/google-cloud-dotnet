@@ -36,8 +36,6 @@ namespace BreakingChangesDetector.MetadataItems
     /// </summary>
     public sealed class AssemblyData : MetadataItemBase
     {
-        #region Member Variables
-
         private readonly List<ConstructedGenericTypeData> _constructedGenericsToFinalizeAfterLoad;
         private readonly Dictionary<TypeDefinitionData, List<AssemblyData>> _forwardedTypeSources;
         private readonly Dictionary<TypeDefinitionData, string> _forwardedTypeSourcesOnTarget;
@@ -47,10 +45,6 @@ namespace BreakingChangesDetector.MetadataItems
         private readonly HashSet<AssemblyData> _referencedAssemblies; // TODO_Serialize: Round trip and unit test
         private readonly Dictionary<string, TypeDefinitionData> _typeDefinitions;
         private readonly Dictionary<Tuple<string, int>, GenericTypeParameterData> _typeOwnedGenericParameters;
-
-        #endregion // Member Variables
-
-        #region Constructor
 
         internal AssemblyData(
             MetadataResolutionContext context,
@@ -86,13 +80,8 @@ namespace BreakingChangesDetector.MetadataItems
         internal AssemblyData(MetadataResolutionContext context, IAssemblySymbol underlyingAssemblySymbol)
             : this(context, underlyingAssemblySymbol.ToDisplayString(), underlyingAssemblySymbol.Name,
             Utilities.GetVersionComparisonName(underlyingAssemblySymbol),
-            Utilities.GetNamespaceRenames(underlyingAssemblySymbol)) { }
-
-        #endregion // Constructor
-
-        #region Base Class Overrides
-
-        #region Accept
+            Utilities.GetNamespaceRenames(underlyingAssemblySymbol))
+        { }
 
         /// <summary>
         /// Performs the specified visitor's functionality on this instance.
@@ -100,20 +89,12 @@ namespace BreakingChangesDetector.MetadataItems
         /// <param name="visitor">The visitor whose functionality should be performed on the instance.</param>
         public override void Accept(MetadataItemVisitor visitor) => visitor.VisitAssemblyData(this);
 
-        #endregion // Accept
-
         public override MetadataResolutionContext Context { get; }
-
-        #region DisplayName
 
         /// <summary>
         /// Gets the name to use for this item in messages.
         /// </summary>
         public override string DisplayName => Name;
-
-        #endregion // DisplayName
-
-        #region DoesMatch
 
         internal override bool DoesMatch(MetadataItemBase other)
         {
@@ -274,31 +255,13 @@ namespace BreakingChangesDetector.MetadataItems
             return true;
         }
 
-        #endregion // DoesMatch
-
-        #region MetadataItemKind
-
         /// <summary>
         /// Gets the type of item the instance represents.
         /// </summary>
         public override MetadataItemKinds MetadataItemKind => MetadataItemKinds.Assembly;
 
-        #endregion // MetadataItemKind
-
-        #endregion // Base Class Overrides
-
-        #region Methods
-
-        #region Internal Methods
-
-        #region AddForwardedTypeFromTarget
-
         internal void AddForwardedTypeFromTarget(TypeDefinitionData type, string sourceAssembly) =>
             _forwardedTypeSourcesOnTarget.Add(type, sourceAssembly);
-
-        #endregion // AddForwardedTypeFromTarget
-
-        #region GetForwardedTypeSources
 
         internal IEnumerable<string> GetForwardedTypeSources(TypeDefinitionData type)
         {
@@ -315,10 +278,6 @@ namespace BreakingChangesDetector.MetadataItems
                 yield return sourceFullName;
             }
         }
-
-        #endregion // GetForwardedTypeSources
-
-        #region GetGenericTypeParameterData
 
         internal GenericTypeParameterData GetGenericTypeParameterData(ITypeParameterSymbol typeParameterSymbol) =>
             typeParameterSymbol.DeclaringMethod != null
@@ -345,10 +304,6 @@ namespace BreakingChangesDetector.MetadataItems
             return genericParameter;
         }
 
-        #endregion // GetGenericTypeParameterData
-
-        #region GetNewNamespaceName
-
         internal string GetNewNamespaceName(string oldNamespaceName)
         {
             if (oldNamespaceName == null)
@@ -360,43 +315,23 @@ namespace BreakingChangesDetector.MetadataItems
             return newNamespaceName;
         }
 
-        #endregion // GetNewNamespaceName
-
-        #region GetNonNestedTypeDefinitions
-
-#if DEBUG
         /// <summary>
         /// Gets all non-nested types which are type definitions and therefore not constructed generic, array, by-ref, or pointer types.
         /// </summary>
         /// <returns>An enumerable collection of all non-nested type definitions.</returns> 
-#endif
         internal IEnumerable<TypeDefinitionData> GetNonNestedTypeDefinitions() =>
             _typeDefinitions.Values.OfType<TypeDefinitionData>().Where(t => t.ContainingType == null);
 
-        #endregion // GetNonNestedTypeDefinitions
-
-        #region GetReferencedAssemblies
-
         internal IEnumerable<AssemblyData> GetReferencedAssemblies() => _referencedAssemblies;
-
-        #endregion // GetReferencedAssembly
-
-        #region GetReferencedAssembly
 
         internal AssemblyData GetReferencedAssembly(string name) =>
             Name == name ? this : GetReferencedAssemblies().Where(a => a.Name == name).FirstOrDefault();
 
-        #endregion // GetReferencedAssembly
-
-        #region GetTypeData
-
-#if DEBUG
         /// <summary>
         /// Gets the <see cref="TypeData"/> instance containing the metadata for externally visible types and members of the specified <see cref="Type"/>.
         /// </summary>
         /// <param name="typeSymbol">The type for which of corresponding to the TypeData to get.</param>
         /// <returns>The TypeData instance containing the metadata for externally visible types and members of the specified Type.</returns> 
-#endif
         internal TypeData GetTypeData(ITypeSymbol typeSymbol)
         {
             Debug.Assert(
@@ -459,51 +394,29 @@ namespace BreakingChangesDetector.MetadataItems
             return Context.GetTypeData(typeSymbol);
         }
 
-        #endregion // GetTypeData
-
-        #region GetTypeDatas
-
-#if DEBUG
         /// <summary>
         /// Gets all <see cref="TypeData"/> instance in the <see cref="AssemblyData"/>.
         /// </summary> 
-#endif
         internal IList<TypeData> GetTypeDatas() =>
             _typeDefinitions.OrderBy(p => p.Key).Select(p => p.Value).Cast<TypeData>().ToList();
 
-        #endregion // GetTypeDatas
-
-        #region GetTypeDefinitionData
-
-#if DEBUG
         /// <summary>
         /// Gets the <see cref="DeclaringTypeData"/> representing the type with the specified full name.
         /// </summary>
         /// <param name="fullName">The full name of the type to get.</param>
         /// <returns>The type with the specified full name or null if no such type exists.</returns> 
-#endif
         internal TypeDefinitionData GetTypeDefinitionData(string fullName)
         {
             _typeDefinitions.TryGetValue(fullName, out TypeDefinitionData internalType);
             return internalType;
         }
 
-        #endregion // GetTypeDefinitionData
-
-        #region IsEquivalentToNewAssembly
-
-#if DEBUG
         /// <summary>
         /// Indicates whether the current assembly is logically equivalent to the specified assembly, just from a different version.
         /// </summary>
         /// <param name="assemblyData"></param> 
-#endif
         internal bool IsEquivalentToNewAssembly(AssemblyData assemblyData) =>
             VersionComparisonName == assemblyData?.VersionComparisonName;
-
-        #endregion // IsEquivalentToNewAssembly
-
-        #region RegisterForFinalize
 
         internal void RegisterForFinalize(ConstructedGenericTypeData type)
         {
@@ -517,14 +430,6 @@ namespace BreakingChangesDetector.MetadataItems
             }
         }
 
-        #endregion // RegisterForFinalize
-
-        #endregion // Internal Methods
-
-        #region Private Methods
-
-        #region AddForwardedType
-
         private void AddForwardedType(TypeDefinitionData type)
         {
             Debug.Assert(this != type.AssemblyData, "A type should not be forwarded to its own assembly.");
@@ -537,24 +442,14 @@ namespace BreakingChangesDetector.MetadataItems
             forwardedTypeSources.Add(this);
         }
 
-        #endregion // AddForwardedType
-
-        #region AddReference
-
-#if DEBUG
         /// <summary>
         /// Adds the <see cref="AssemblyData"/> of a directly assembly reference to the current AssemblyData.
         /// </summary>
         /// <param name="reference">The AssemblyData of the directly referenced assembly.</param> 
-#endif
         private void AddReference(AssemblyData reference)
         {
             _referencedAssemblies.Add(reference);
         }
-
-        #endregion // AddReference
-
-        #region IterateAllTypeDefinitions
 
         private void IterateAllTypeDefinitions(IAssemblySymbol assemblySymbol,
             Func<INamedTypeSymbol, bool> namedTypeAction,
@@ -608,10 +503,6 @@ namespace BreakingChangesDetector.MetadataItems
                 IterateAllTypeDefinitions(nestedType, namedTypeAction, typeParameterAction);
             }
         }
-
-        #endregion // IterateAllTypeDefinitions
-
-        #region LoadFromMetadata
 
         internal void LoadFromMetadata(IAssemblySymbol assemblySymbol)
         {
@@ -697,10 +588,6 @@ namespace BreakingChangesDetector.MetadataItems
             _isLoading = false;
         }
 
-        #endregion // LoadFromMetadata
-
-        #region RegisterType
-
         private void RegisterType(INamedTypeSymbol namedTypeSymbol, TypeDefinitionData declaringType)
         {
             var accessibility = namedTypeSymbol.GetAccessibility();
@@ -732,14 +619,6 @@ namespace BreakingChangesDetector.MetadataItems
             }
         }
 
-        #endregion // RegisterType
-
-        #endregion // Private Methods
-
-        #endregion // Methods
-
-        #region Properties
-
         /// <summary>
         /// Gets the full name of the assembly.
         /// </summary>
@@ -755,7 +634,5 @@ namespace BreakingChangesDetector.MetadataItems
         /// of the assembly.
         /// </summary>
         public string VersionComparisonName { get; } // TODO_Serialize: Round trip and unit test
-
-        #endregion // Properties
     }
 }

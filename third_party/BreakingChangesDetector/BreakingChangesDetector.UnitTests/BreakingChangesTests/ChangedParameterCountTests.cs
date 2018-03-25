@@ -30,8 +30,6 @@ namespace BreakingChangesDetector.UnitTests.BreakingChangesTests
 {
     public class ChangedParameterCountTests
     {
-        #region ConstructorTests
-
         [Fact]
         public void ConstructorTests()
         {
@@ -78,10 +76,6 @@ namespace BreakingChangesDetector.UnitTests.BreakingChangesTests
             AssertX.Equal(ConstructorWithMoreParameters.GetMember(".ctor"), breakingChanges[0].NewItem, "The NewItem is incorrect.");
             AssertX.Null(breakingChanges[0].AssociatedData, "The AssociatedData is incorrect.");
         }
-
-        #endregion // ConstructorTests
-
-        #region IndexerTests
 
         [Fact]
         public void IndexerTests()
@@ -130,10 +124,6 @@ namespace BreakingChangesDetector.UnitTests.BreakingChangesTests
             AssertX.Null(breakingChanges[0].AssociatedData, "The AssociatedData is incorrect.");
         }
 
-        #endregion // IndexerTests
-
-        #region MethodTests
-
         [Fact]
         public void MethodTests()
         {
@@ -180,10 +170,6 @@ namespace BreakingChangesDetector.UnitTests.BreakingChangesTests
             AssertX.Equal(MethodWithMoreParameters.GetMember("Method"), breakingChanges[0].NewItem, "The NewItem is incorrect.");
             AssertX.Null(breakingChanges[0].AssociatedData, "The AssociatedData is incorrect.");
         }
-
-        #endregion // MethodTests
-
-        #region NestedTypeTests
 
         [Fact]
         public void NestedTypeTests()
@@ -232,10 +218,6 @@ namespace BreakingChangesDetector.UnitTests.BreakingChangesTests
             AssertX.Null(breakingChanges[0].AssociatedData, "The AssociatedData is incorrect.");
         }
 
-        #endregion // NestedTypeTests
-
-        #region TypeTests
-
         [Fact]
         public void TypeTests()
         {
@@ -282,8 +264,6 @@ namespace BreakingChangesDetector.UnitTests.BreakingChangesTests
             AssertX.Equal(DelegateWithMoreParameters, breakingChanges[0].NewItem, "The NewItem is incorrect.");
             AssertX.Null(breakingChanges[0].AssociatedData, "The AssociatedData is incorrect.");
         }
-
-        #endregion // TypeTests
 
         public class NestedDelegateWithFewerParameters { public delegate void Delegate(int x); }
         public class NestedDelegateWithMoreParameters { public delegate void Delegate(int x, int[] y); }

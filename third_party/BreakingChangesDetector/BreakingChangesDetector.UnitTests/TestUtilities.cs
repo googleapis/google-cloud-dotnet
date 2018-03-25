@@ -75,8 +75,6 @@ namespace BreakingChangesDetector.UnitTests
 
     internal static class TestUtilities
     {
-        #region IsImplicitlyAssignableFrom
-
         private static Dictionary<Type, HashSet<Type>> _implicitNumericConversions = new Dictionary<Type, HashSet<Type>>() {
             { typeof(decimal), new HashSet<Type> { typeof(sbyte), typeof(byte), typeof(short), typeof(ushort), typeof(int), typeof(uint), typeof(long), typeof(ulong), typeof(char) } },
             { typeof(double), new HashSet<Type> { typeof(sbyte), typeof(byte), typeof(short), typeof(ushort), typeof(int), typeof(uint), typeof(long), typeof(ulong), typeof(char), typeof(float) } },
@@ -133,15 +131,7 @@ namespace BreakingChangesDetector.UnitTests
             return false;
         }
 
-        #endregion // IsImplicitlyAssignableFrom
-
-        #region UnwrapNullable
-
         public static Type UnwrapNullable(this Type t) => t.GenericTypeArguments[0];
-
-        #endregion // UnwrapNullable
-
-        #region VerifyAccessibility
 
         public static void VerifyAccessibility(TypeData typeDataBase, string memberName)
         {
@@ -154,10 +144,6 @@ namespace BreakingChangesDetector.UnitTests
             AssertX.Equal(MemberAccessibility.Protected, member.Accessibility, "Incorrect MemberAccessibility.");
         }
 
-        #endregion // VerifyAccessibility
-
-        #region VerifyInstanceAndStaticMember
-
         public static void VerifyInstanceAndStaticMember<T>(TypeData typeDataBase, string memberName)
             where T : MemberDataBase
         {
@@ -169,10 +155,6 @@ namespace BreakingChangesDetector.UnitTests
 
             VerifyMember<T>(typeData, memberName + "Instance");
         }
-
-        #endregion // VerifyInstanceAndStaticMember
-
-        #region VerifyMember
 
         public static void VerifyMember<T>(TypeData typeDataBase, string memberName)
             where T : MemberDataBase
@@ -201,7 +183,5 @@ namespace BreakingChangesDetector.UnitTests
             member = (T)typeData.GetMember(memberName + "Private");
             AssertX.Null(member, "Private members should not be returned.");
         }
-
-        #endregion // VerifyMember
     }
 }

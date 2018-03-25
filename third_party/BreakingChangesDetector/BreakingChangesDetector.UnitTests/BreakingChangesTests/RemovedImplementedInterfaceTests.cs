@@ -30,8 +30,6 @@ namespace BreakingChangesDetector.UnitTests.BreakingChangesTests
 {
     public class RemovedImplementedInterfaceTests
     {
-        #region NestedTypeTests
-
         [Fact]
         public void NestedTypeTests()
         {
@@ -69,10 +67,6 @@ namespace BreakingChangesDetector.UnitTests.BreakingChangesTests
             AssertX.Equal(context.GetTypeDefinitionData(typeof(NestedBaseInterface.Interface)), breakingChanges[1].AssociatedData, "The AssociatedData is incorrect.");
         }
 
-        #endregion // NestedTypeTests
-
-        #region TypeTests
-
         [Fact]
         public void TypeTests()
         {
@@ -109,8 +103,6 @@ namespace BreakingChangesDetector.UnitTests.BreakingChangesTests
             AssertX.Equal(classImplementingNothing, breakingChanges[1].NewItem, "The NewItem is incorrect.");
             AssertX.Equal(context.GetTypeDefinitionData(typeof(BaseInterface)), breakingChanges[1].AssociatedData, "The AssociatedData is incorrect.");
         }
-
-        #endregion // TypeTests
 
         public class NestedBaseInterface { public interface Interface { } }
         public class NestedDerivedInterface { public interface Interface : NestedBaseInterface.Interface { } }

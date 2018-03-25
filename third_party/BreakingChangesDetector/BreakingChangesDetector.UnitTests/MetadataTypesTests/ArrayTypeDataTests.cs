@@ -31,8 +31,6 @@ namespace BreakingChangesDetector.UnitTests.MetadataTypesTests
 {
     public class ArrayTypeDataTests
     {
-        #region GetDirectImplicitConversionsTests
-
         [Fact]
         public void GetDirectImplicitConversionsTests()
         {
@@ -79,7 +77,5 @@ namespace BreakingChangesDetector.UnitTests.MetadataTypesTests
 
             AssertX.Equal(0, implicitConversions.Count, "Extra interfaces were returned from GetDirectImplicitConversions of a rank-2 array.");
         }
-
-        #endregion // GetDirectImplicitConversionsTests
     }
 }

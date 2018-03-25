@@ -31,8 +31,6 @@ namespace BreakingChangesDetector.UnitTests.BreakingChangesTests
 {
     public class ChangedParameterModifierTests
     {
-        #region ConstructorTests
-
         [Fact]
         public void ConstructorTests()
         {
@@ -83,10 +81,6 @@ namespace BreakingChangesDetector.UnitTests.BreakingChangesTests
             AssertX.Equal(((IParameterizedItem)ConstructorWithRefParameter.GetMember(".ctor")).Parameters[0], breakingChanges[0].NewItem, "The NewItem is incorrect.");
             AssertX.Equal(ConstructorWithRefParameter.GetMember(".ctor"), breakingChanges[0].AssociatedData, "The AssociatedData is incorrect.");
         }
-
-        #endregion // ConstructorTests
-
-        #region MethodTests
 
         [Fact]
         public void MethodTests()
@@ -139,10 +133,6 @@ namespace BreakingChangesDetector.UnitTests.BreakingChangesTests
             AssertX.Equal(MethodWithRefParameter.GetMember("Method"), breakingChanges[0].AssociatedData, "The AssociatedData is incorrect.");
         }
 
-        #endregion // MethodTests
-
-        #region NestedTypeTests
-
         [Fact]
         public void NestedTypeTests()
         {
@@ -194,10 +184,6 @@ namespace BreakingChangesDetector.UnitTests.BreakingChangesTests
             AssertX.Equal(NestedDelegateWithRefParameter.GetNestedType("Delegate"), breakingChanges[0].AssociatedData, "The AssociatedData is incorrect.");
         }
 
-        #endregion // NestedTypeTests
-
-        #region TypeTests
-
         [Fact]
         public void TypeTests()
         {
@@ -248,8 +234,6 @@ namespace BreakingChangesDetector.UnitTests.BreakingChangesTests
             AssertX.Equal(DelegateWithRefParameter.DelegateParameters[0], breakingChanges[0].NewItem, "The NewItem is incorrect.");
             AssertX.Equal(DelegateWithRefParameter, breakingChanges[0].AssociatedData, "The AssociatedData is incorrect.");
         }
-
-        #endregion // TypeTests
 
         public class NestedDelegateWithUnmodifiedParameter { public delegate void Delegate(int x); }
         public class NestedDelegateWithRefParameter { public delegate void Delegate(ref int x); }

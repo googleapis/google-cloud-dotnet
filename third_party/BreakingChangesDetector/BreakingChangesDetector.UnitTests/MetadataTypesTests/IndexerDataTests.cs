@@ -30,8 +30,6 @@ namespace BreakingChangesDetector.UnitTests.MetadataTypesTests
 {
     public class IndexerDataTests
     {
-        #region IndexerDataAccessibilityTest
-
         [Fact]
         public void IndexerDataAccessibilityTest()
         {
@@ -46,10 +44,6 @@ namespace BreakingChangesDetector.UnitTests.MetadataTypesTests
             AssertX.Equal(MemberAccessibility.Public, ((IndexerData)members[2]).Accessibility, "Incorrect MemberAccessibility.");
         }
 
-        #endregion // IndexerDataAccessibilityTest
-
-        #region IndexerDataDeclaringTypeTest
-
         [Fact]
         public void IndexerDataDeclaringTypeTest()
         {
@@ -59,10 +53,6 @@ namespace BreakingChangesDetector.UnitTests.MetadataTypesTests
             var indexer = typeData.GetMembers("Item")[0];
             AssertX.Equal(typeData, indexer.ContainingType, "The DeclaringType of a member should be the type in which it is defined.");
         }
-
-        #endregion // IndexerDataDeclaringTypeTest
-
-        #region IndexerDataMemberFlagsTest
 
         [Fact]
         public void IndexerDataMemberFlagsTest()
@@ -94,10 +84,6 @@ namespace BreakingChangesDetector.UnitTests.MetadataTypesTests
             AssertX.Equal(MemberFlags.Override | MemberFlags.Abstract, indexerData.MemberFlags, "The Flags value of the member is wrong.");
         }
 
-        #endregion // IndexerDataMemberFlagsTest
-
-        #region IndexerDataGetMethodAccessibilityTest
-
         [Fact]
         public void IndexerDataGetMethodAccessibilityTest()
         {
@@ -117,10 +103,6 @@ namespace BreakingChangesDetector.UnitTests.MetadataTypesTests
             AssertX.Equal(MemberAccessibility.Public, readWriteIndexer.GetMethodAccessibility, "The GetMethodAccessibility of the read write property is incorrect.");
         }
 
-        #endregion // IndexerDataGetMethodAccessibilityTest
-
-        #region IndexerDataNameTest
-
         [Fact]
         public void IndexerDataNameTest()
         {
@@ -130,10 +112,6 @@ namespace BreakingChangesDetector.UnitTests.MetadataTypesTests
             var indexer = typeData.GetMembers("Item")[0];
             AssertX.Equal("Item", indexer.Name, "The Name of the member is incorrect.");
         }
-
-        #endregion // IndexerDataNameTest
-
-        #region IndexerDataParametersTest
 
         [Fact]
         public void IndexerDataParametersTest()
@@ -147,10 +125,6 @@ namespace BreakingChangesDetector.UnitTests.MetadataTypesTests
             AssertX.Equal(2, ((IndexerData)members[1]).Parameters.Count, "The write only indexer has the wrong number of parameters.");
             AssertX.Equal(3, ((IndexerData)members[2]).Parameters.Count, "The read write indexer has the wrong number of parameters.");
         }
-
-        #endregion // IndexerDataParametersTest
-
-        #region IndexerDataSetMethodAccessibilityTest
 
         [Fact]
         public void IndexerDataSetMethodAccessibilityTest()
@@ -171,10 +145,6 @@ namespace BreakingChangesDetector.UnitTests.MetadataTypesTests
             AssertX.Equal(MemberAccessibility.Protected, readWriteIndexer.SetMethodAccessibility, "The SetMethodAccessibility of the read write property is incorrect.");
         }
 
-        #endregion // IndexerDataSetMethodAccessibilityTest
-
-        #region IndexerDataTypeTest
-
         [Fact]
         public void IndexerDataTypeTest()
         {
@@ -185,7 +155,5 @@ namespace BreakingChangesDetector.UnitTests.MetadataTypesTests
             var objectType = context.GetTypeDefinitionData<object>();
             AssertX.Equal(objectType, indexer.Type, "The Type of the member is incorrect.");
         }
-
-        #endregion // IndexerDataTypeTest
     }
 }

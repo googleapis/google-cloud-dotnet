@@ -34,8 +34,6 @@ namespace BreakingChangesDetector.MetadataItems
     public abstract class TypedMemberDataBase : MemberDataBase,
         ITypedItem
     {
-        #region Constructor
-
         internal TypedMemberDataBase(string name, MemberAccessibility accessibility, MemberFlags memberFlags, TypeData type, bool isTypeDynamic)
             : base(name, accessibility, memberFlags)
         {
@@ -51,19 +49,11 @@ namespace BreakingChangesDetector.MetadataItems
             Debug.Assert(Type != null, "Unable to get the TypeData.");
         }
 
-        #endregion // Constructor
-
-        #region Base Class Overrides
-
-        #region CanOverrideMember
-
-#if DEBUG
         /// <summary>
         /// Indicates whether the current member can override the specified member from a base type.
         /// </summary>
         /// <param name="baseMember">The member from the base type.</param>
         /// <returns>True if the current member can override the base member; False otherwise.</returns>  
-#endif
         internal override bool CanOverrideMember(MemberDataBase baseMember)
         {
             if (base.CanOverrideMember(baseMember) == false)
@@ -73,10 +63,6 @@ namespace BreakingChangesDetector.MetadataItems
 
             return Type == ((TypedMemberDataBase)baseMember).Type;
         }
-
-        #endregion // CanOverrideMember
-
-        #region DoesMatch
 
         internal override bool DoesMatch(MetadataItemBase other)
         {
@@ -104,12 +90,6 @@ namespace BreakingChangesDetector.MetadataItems
             return true;
         }
 
-        #endregion // DoesMatch
-
-        #endregion // Base Class Overrides
-
-        #region Properties
-
         /// <summary>
         /// Gets the value indicating whether the type is dynamic.
         /// </summary>
@@ -119,7 +99,5 @@ namespace BreakingChangesDetector.MetadataItems
         /// Gets the type (or return type) of the member.
         /// </summary>
         public TypeData Type { get; }
-
-        #endregion // Properties
     }
 }

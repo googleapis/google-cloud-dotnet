@@ -28,20 +28,12 @@ using BreakingChangesDetector.MetadataItems;
 
 namespace BreakingChangesDetector.BreakingChanges
 {
-    #region BreakingChangeBase
-
     /// <summary>
     /// Abstract base class for an object representing a breaking change.
     /// </summary>
     public abstract class BreakingChangeBase
     {
-        #region Member Variables
-
         private string _message;
-
-        #endregion // Member Variables
-
-        #region Constructor
 
         internal BreakingChangeBase(MetadataItemBase oldItem, MetadataItemBase newItem, MetadataItemBase associatedData, BreakingChangeKind breakingChangeKind)
         {
@@ -51,29 +43,15 @@ namespace BreakingChangesDetector.BreakingChanges
             OldItem = oldItem;
         }
 
-        #endregion // Constructor
-
-        #region Base Class Overrides
-
         /// <summary>
         /// Gets a string representation of the breaking change.
         /// </summary>
         public override string ToString() => Message;
 
-        #endregion // Base Class Overrides
-
-        #region Methods
-
         /// <summary>
         /// Formats a message explaining the breaking change using the specified formatter.
         /// </summary>
         public abstract void FormatMessage(IBreakingChangeFormatter formatter);
-
-        #endregion // Methods
-
-        #region Properties
-
-        #region Public Properties
 
         /// <summary>
         /// Gets the type of breaking change this instance represents.
@@ -98,23 +76,10 @@ namespace BreakingChangesDetector.BreakingChanges
             }
         }
 
-        #endregion // Public Properties
-
-        #region Internal Properties
-
         internal MetadataItemBase AssociatedData { get; }
         internal MetadataItemBase NewItem { get; }
         internal MetadataItemBase OldItem { get; }
-
-        #endregion // Internal Properties
-
-        #endregion // Properties
     }
-
-    #endregion // BreakingChangeBase
-
-
-    #region AddedAbstractMember
 
     /// <summary>
     /// Represents an abstract member which has been added to an abstract type, which may cause externally derived types to not compile.
@@ -140,10 +105,6 @@ namespace BreakingChangesDetector.BreakingChanges
         /// </summary>
         public MemberDataBase NewMember { get; }
     }
-
-    #endregion // AddedAbstractMember
-
-    #region AddedBaseInterface
 
     /// <summary>
     /// Represents an interface (with at least one member) which has been added to the base type list of an existing interface,
@@ -183,10 +144,6 @@ namespace BreakingChangesDetector.BreakingChanges
         public DeclaringTypeData NewInterfaceType { get; }
     }
 
-    #endregion // AddedBaseInterface
-
-    #region AddedInterfaceMember
-
     /// <summary>
     /// Represents an member which has been added to an interface type, which may cause externally implementing types to not compile.
     /// </summary>
@@ -211,10 +168,6 @@ namespace BreakingChangesDetector.BreakingChanges
         /// </summary>
         public MemberDataBase NewMember { get; }
     }
-
-    #endregion // AddedInterfaceMember
-
-    #region ChangedAccessibilityFromPublicToProtected
 
     /// <summary>
     /// Represents the change of a member or type's accessibility from public to protected, which will cause usages of it outside
@@ -247,10 +200,6 @@ namespace BreakingChangesDetector.BreakingChanges
         public MemberDataBase NewMember { get; }
     }
 
-    #endregion // ChangedAccessibilityFromPublicToProtected
-
-    #region ChangedClassToAbstract
-
     /// <summary>
     /// Represents the change of the non-abstract class to abstract, which will cause instantiations of the type to not compile.
     /// </summary>
@@ -280,10 +229,6 @@ namespace BreakingChangesDetector.BreakingChanges
         /// </summary>
         public TypeDefinitionData NewType { get; }
     }
-
-    #endregion // ChangedClassToAbstract
-
-    #region ChangedFieldToReadOnly
 
     /// <summary>
     /// Represents the change of a read-write field to read-only, which will cause assignments to the field to not compile.
@@ -315,10 +260,6 @@ namespace BreakingChangesDetector.BreakingChanges
         public FieldData NewField { get; }
     }
 
-    #endregion // ChangedFieldToReadOnly
-
-    #region ChangedClassToStatic
-
     /// <summary>
     /// Represents the change of the class to static, which will cause instantiations of the type to not compile.
     /// </summary>
@@ -348,10 +289,6 @@ namespace BreakingChangesDetector.BreakingChanges
         /// </summary>
         public TypeDefinitionData NewType { get; }
     }
-
-    #endregion // ChangedClassToStatic
-
-    #region ChangedGenericTypeParameterConstraints
 
     /// <summary>
     /// Represents the change of the constraints on a generic type parameter, which may cause constructions of the generic entity
@@ -386,10 +323,6 @@ namespace BreakingChangesDetector.BreakingChanges
         public GenericTypeParameterData NewGenericParameter { get; }
     }
 
-    #endregion // ChangedGenericTypeParameterConstraints
-
-    #region ChangedGenericTypeParameterVariance
-
     /// <summary>
     /// Represents the removal or change of the 'in' or 'out' variance modifier on a generic type parameter's definition, which may 
     /// cause contra- or co-variant conversions of the declaring generic type to not compile.
@@ -423,10 +356,6 @@ namespace BreakingChangesDetector.BreakingChanges
         public GenericTypeParameterData NewGenericParameter { get; }
     }
 
-    #endregion // ChangedGenericTypeParameterVariance
-
-    #region ChangedMemberToAbstract
-
     /// <summary>
     /// Represents the change of a non-abstract member to abstract, which may cause externally derived types to not compile.
     /// </summary>
@@ -457,10 +386,6 @@ namespace BreakingChangesDetector.BreakingChanges
         /// </summary>
         public MemberDataBase NewMember { get; }
     }
-
-    #endregion // ChangedMemberToAbstract
-
-    #region ChangedMemberToNonVirtual
 
     /// <summary>
     /// Represents the change of a virtual member to non-virtual, which will cause overrides of the member in externally derived types 
@@ -493,10 +418,6 @@ namespace BreakingChangesDetector.BreakingChanges
         /// </summary>
         public MemberDataBase NewMember { get; }
     }
-
-    #endregion // ChangedMemberToNonVirtual
-
-    #region ChangedMemberType
 
     /// <summary>
     /// Represents the change of a member type to something which will cause usages of it in external code to not compile. For out-only
@@ -535,10 +456,6 @@ namespace BreakingChangesDetector.BreakingChanges
         public ITypedItem NewTypedItem { get; }
     }
 
-    #endregion // ChangedMemberType
-
-    #region ChangedParameterCount
-
     /// <summary>
     /// Represents the change of the required or total parameter count of a method, indexer, or delegate in a way which could cause 
     /// external invocations to not compile. This can represent an increase in the required parameter count, perhaps by removing the a 
@@ -572,10 +489,6 @@ namespace BreakingChangesDetector.BreakingChanges
         /// </summary>
         public IParameterizedItem NewParameterizedItem { get; }
     }
-
-    #endregion // ChangedParameterCount
-
-    #region ChangedParameterDefaultValue
 
     /// <summary>
     /// Represents the change of a parameter's default value, which may cause a behavioral change in an external invocation.
@@ -616,10 +529,6 @@ namespace BreakingChangesDetector.BreakingChanges
         public IParameterizedItem NewParameterizedItem { get; }
     }
 
-    #endregion // ChangedParameterDefaultValue
-
-    #region ChangedParameterModifier
-
     /// <summary>
     /// Represents the addition, removal, or change of a parameter's 'ref' or 'out' modifier, which will cause external invocations to 
     /// not compile.
@@ -658,10 +567,6 @@ namespace BreakingChangesDetector.BreakingChanges
         public IParameterizedItem NewParameterizedItem { get; }
     }
 
-    #endregion // ChangedParameterModifier
-
-    #region ChangedParameterName
-
     /// <summary>
     /// Represents the change of a parameter's name, which will cause a named argument in an external invocation to not compile.
     /// </summary>
@@ -699,10 +604,6 @@ namespace BreakingChangesDetector.BreakingChanges
         /// </summary>
         public IParameterizedItem NewParameterizedItem { get; }
     }
-
-    #endregion // ChangedParameterName
-
-    #region ChangedParameterType
 
     /// <summary>
     /// Represents the change of a parameter's type to something which will cause external invocations to not compile. For normal parameters, 
@@ -745,10 +646,6 @@ namespace BreakingChangesDetector.BreakingChanges
         public IParameterizedItem NewParameterizedItem { get; }
     }
 
-    #endregion // ChangedParameterType
-
-    #region ChangedStaticOrInstanceStatus
-
     /// <summary>
     /// Represents the removal or addition of the static modifier on an event, field, property, or method, which may cause external usages of
     /// the member to not compile.
@@ -780,10 +677,6 @@ namespace BreakingChangesDetector.BreakingChanges
         /// </summary>
         public MemberDataBase NewMember { get; }
     }
-
-    #endregion // ChangedStaticOrInstanceStatus
-
-    #region IncompatibleClassHierarchy
 
     /// <summary>
     /// Represents the change of a class's base type to something not derived from the original base type, which may cause external usages of
@@ -818,10 +711,6 @@ namespace BreakingChangesDetector.BreakingChanges
         public TypeDefinitionData NewType { get; }
     }
 
-    #endregion // IncompatibleClassHierarchy
-
-    #region RemovedAssembly
-
     /// <summary>
     /// Represents the removal of an assembly, which will cause external usages of types from the assembly to not compile.
     /// </summary>
@@ -845,10 +734,6 @@ namespace BreakingChangesDetector.BreakingChanges
         /// </summary>
         public AssemblyData OldAssembly { get; }
     }
-
-    #endregion // RemovedAssembly
-
-    #region RemovedExtensionMethodModifier
 
     /// <summary>
     /// Represents the removal of the 'this' parameter modifier on the first parameter of an extension method, which may cause external 
@@ -880,10 +765,6 @@ namespace BreakingChangesDetector.BreakingChanges
         /// </summary>
         public MethodData NewMethod { get; }
     }
-
-    #endregion // RemovedExtensionMethodModifier
-
-    #region RemovedImplementedInterface
 
     /// <summary>
     /// Represents the removal of an interface from a types implemented interfaces list, which may cause external usages of the type to
@@ -924,10 +805,6 @@ namespace BreakingChangesDetector.BreakingChanges
         public DeclaringTypeData OldInterfaceType { get; }
     }
 
-    #endregion // RemovedImplementedInterface
-
-    #region RemovedMember
-
     /// <summary>
     /// Represents the removal or rename of a member from a type, which will cause external usages of the member to not compile.
     /// </summary>
@@ -958,10 +835,6 @@ namespace BreakingChangesDetector.BreakingChanges
         /// </summary>
         public MemberDataBase OldMember { get; }
     }
-
-    #endregion // RemovedMember
-
-    #region RemovedOverrideOfAbstractMember
 
     /// <summary>
     /// Represents the removal of an override of an abstract member, which may cause externally derived types not also overriding the 
@@ -996,10 +869,6 @@ namespace BreakingChangesDetector.BreakingChanges
         public MemberDataBase OldMemberOverride { get; }
     }
 
-    #endregion // RemovedOverrideOfAbstractMember
-
-    #region RemovedPropertyAccessors
-
     /// <summary>
     /// Represents the removal (or hiding) of the get and/or set accessor from a property or indexer, which may cause external usages 
     /// of the member to not compile.
@@ -1032,10 +901,6 @@ namespace BreakingChangesDetector.BreakingChanges
         public PropertyData NewProperty { get; }
     }
 
-    #endregion // RemovedPropertyAccessors
-
-    #region RemovedRootType
-
     /// <summary>
     /// Removed or renamed a non-nested type declaration, which will cause external usages of the type to not compile.
     /// </summary>
@@ -1058,10 +923,6 @@ namespace BreakingChangesDetector.BreakingChanges
         /// </summary>
         public TypeDefinitionData OldType { get; }
     }
-
-    #endregion // RemovedRootType
-
-    #region SealedClass
 
     /// <summary>
     /// Represents the addition of the 'sealed' keyword to a class declaration, which will cause externally derived classes to not compile.
@@ -1092,10 +953,6 @@ namespace BreakingChangesDetector.BreakingChanges
         /// </summary>
         public TypeDefinitionData NewType { get; }
     }
-
-    #endregion // SealedClass
-
-    #region SealedMember
 
     /// <summary>
     /// Represents the addition of the 'sealed' keyword to a member override, which will cause externally derived classes also overriding 
@@ -1128,6 +985,4 @@ namespace BreakingChangesDetector.BreakingChanges
         /// </summary>
         public MemberDataBase NewMember { get; }
     }
-
-    #endregion // SealedMember
 }

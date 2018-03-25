@@ -34,14 +34,8 @@ namespace BreakingChangesDetector.MetadataItems
     /// </summary>
     public abstract class TypeData : MemberDataBase
     {
-        #region Member Variables
-
         private Dictionary<byte, ArrayTypeData> _arrayTypes;
         private PointerTypeData _pointerType;
-
-        #endregion // Member Variables
-
-        #region Constructors
 
         internal TypeData(string name, MemberAccessibility accessibility, MemberFlags memberFlags, TypeKind typeKind)
             : base(name, accessibility, memberFlags) =>
@@ -51,20 +45,10 @@ namespace BreakingChangesDetector.MetadataItems
             : base(typeSymbol, accessibility, Utilities.GetMemberFlags(typeSymbol), declaringType) =>
             TypeKind = Utilities.GetTypeKind(typeSymbol);
 
-        #endregion // Constructors
-
-        #region Base Class Overrides
-
-        #region DisplayName
-
         /// <summary>
         /// Gets the name to use for this item in messages.
         /// </summary>
         public sealed override string DisplayName => GetDisplayName();
-
-        #endregion // DisplayName
-
-        #region DoesMatch
 
         internal override bool DoesMatch(MetadataItemBase other)
         {
@@ -87,10 +71,6 @@ namespace BreakingChangesDetector.MetadataItems
             return true;
         }
 
-        #endregion // DoesMatch
-
-        #region IsNameUsedToVerifyEquivalence
-
         /// <summary>
         /// Gets the value indicating whether the <see cref="MemberDataBase.Name"/> of the member is primarily used to determine whether it is equivalent to another member.
         /// </summary>
@@ -100,16 +80,6 @@ namespace BreakingChangesDetector.MetadataItems
             // within the class). For other types, the full name is used to verify equivalence, not the name
             false;
 
-        #endregion // IsNameUsedToVerifyEquivalence
-
-        #endregion // Base Class Overrides
-
-        #region Methods
-
-        #region Public Methods
-
-        #region GetDisplayName
-
         /// <summary>
         /// Gets the display name for the type, which can be used for generating user-readable messages about the type.
         /// </summary>
@@ -118,37 +88,17 @@ namespace BreakingChangesDetector.MetadataItems
         /// <returns>The display name of the type.</returns>
         public abstract string GetDisplayName(bool fullyQualify = true, bool includeGenericInfo = true);
 
-        #endregion // GetDisplayName
-
-        #region IsEquivalentToNew
-
-#if DEBUG
         /// <summary>
         /// Indicates whether a new type is logically the same as the current type, just from a newer build.
         /// </summary> 
-#endif
         public bool IsEquivalentToNew(TypeData newType, AssemblyFamily newAssemblyFamily) =>
             IsEquivalentToNewMember(newType, newAssemblyFamily);
 
-        #endregion // IsEquivalentToNew
-
-        #region IsEquivalentToOld
-
-#if DEBUG
         /// <summary>
         /// Indicates whether an old type is logically the same as the current type, just from an older build.
         /// </summary> 
-#endif
         public bool IsEquivalentToOld(TypeData oldType, AssemblyFamily newAssemblyFamily) =>
             oldType.IsEquivalentToNewMember(this, newAssemblyFamily);
-
-        #endregion // IsEquivalentToOld
-
-        #endregion // Public Methods
-
-        #region Internal Methods
-
-        #region GetArrayType
 
         internal ArrayTypeData GetArrayType(byte rank)
         {
@@ -172,24 +122,13 @@ namespace BreakingChangesDetector.MetadataItems
             return arrayTypeData;
         }
 
-        #endregion // GetArrayType
-
-        #region GetDefiningAssemblyFamily
-
-#if DEBUG
         /// <summary>
         /// Gets the <see cref="AssemblyFamily"/> containing the type. If the type is nullable and type with element, 
         /// such as T?, T[], or T*, this returns the family containing the type T.
         /// </summary> 
-#endif
         internal virtual AssemblyFamily GetDefiningAssemblyFamily() =>
             new AssemblyFamily { AssemblyData };
 
-        #endregion // GetDefiningAssemblyFamily
-
-        #region GetDirectImplicitConversions
-
-#if DEBUG
         /// <summary>
         /// Gets the types to which this type can implicitly convert. For type hierarchy conversions, only the direct base type will be enumerated.
         /// Ancestor base types will can be enumerated recursively by calling this method on the base type.
@@ -200,35 +139,18 @@ namespace BreakingChangesDetector.MetadataItems
         /// <returns>
         /// A collection of all types to which this type can convert explicitly, except for ancestor base types which are not the direct base type.
         /// </returns> 
-#endif
         internal abstract IEnumerable<TypeData> GetDirectImplicitConversions(bool onlyReferenceAndIdentityConversions);
 
-        #endregion // GetDirectImplicitConversions
-
-        #region GetEquivalentNewType
-
-#if DEBUG
         /// <summary>
         /// Gets the type equivalent to this one which is from a newer assembly.
         /// </summary>
         /// <param name="newAssemblyFamily">The assembly family in which new assemblies reside.</param>
-#endif
         internal abstract TypeData GetEquivalentNewType(AssemblyFamily newAssemblyFamily);
 
-        #endregion // GetEquivalentNewType
-
-        #region GetNamespaceName
-
-#if DEBUG
         /// <summary>
         /// Gets the name of the namespace in which the type is defined, or null if it is not defined in a namespace.
         /// </summary> 
-#endif
         internal virtual string GetNamespaceName() => null;
-
-        #endregion // GetNamespaceName
-
-        #region GetPointerType
 
         internal PointerTypeData GetPointerType()
         {
@@ -239,10 +161,6 @@ namespace BreakingChangesDetector.MetadataItems
             return _pointerType;
         }
 
-        #endregion // GetPointerType
-
-        #region IsArray
-
         internal virtual bool IsArray(out int rank, out TypeData elementType)
         {
             rank = 0;
@@ -250,18 +168,12 @@ namespace BreakingChangesDetector.MetadataItems
             return false;
         }
 
-        #endregion // IsArray
-
-        #region IsAssignableFrom
-
-#if DEBUG
         /// <summary>
         /// Indicates whether a variable of the current type is assignable from the specified source type.
         /// </summary>
         /// <param name="sourceType">The source type from which to test assignability to this type.</param>
         /// <param name="context">Information about the context of the IsAssignableFrom invocation.</param>
         /// <returns>True if a value of the source type is assignable to a variable of the current type.</returns> 
-#endif
         internal virtual bool IsAssignableFrom(TypeData sourceType, IsAssignableFromContext context)
         {
             if (IsEquivalentTo(sourceType, context.NewAssemblyFamily, context.IsSourceTypeOld))
@@ -280,11 +192,6 @@ namespace BreakingChangesDetector.MetadataItems
             return false;
         }
 
-        #endregion // IsAssignableFrom
-
-        #region IsAssignableFromNew
-
-#if DEBUG
         /// <summary>
         /// Indicates whether a variable of the current type is assignable from the specified source type, which is from a newer build, if they
         /// had been from the same assembly version.
@@ -293,18 +200,12 @@ namespace BreakingChangesDetector.MetadataItems
         /// <param name="newAssemblyFamily">
         /// The newer family of assemblies from which to obtain equivalents of older types, or null to use a default family containing only the new type's assembly.
         /// </param>
-#endif
         internal bool IsAssignableFromNew(TypeData newSourceType, AssemblyFamily newAssemblyFamily = null)
         {
             newAssemblyFamily = newAssemblyFamily ?? newSourceType.GetDefiningAssemblyFamily();
             return IsAssignableFrom(newSourceType, new IsAssignableFromContext(newAssemblyFamily, isSourceTypeOld: false, onlyReferenceAndIdentityConversions: false));
         }
 
-        #endregion // IsAssignableFromNew
-
-        #region IsAssignableFromOld
-
-#if DEBUG
         /// <summary>
         /// Indicates whether a variable of the current type is assignable from the specified source type, which is from an older build, if they
         /// had been from the same assembly version.
@@ -313,18 +214,12 @@ namespace BreakingChangesDetector.MetadataItems
         /// <param name="newAssemblyFamily">
         /// The newer family of assemblies from which to obtain equivalents of older types, or null to use a default family containing only the new type's assembly.
         /// </param>
-#endif
         internal bool IsAssignableFromOld(TypeData oldSourceType, AssemblyFamily newAssemblyFamily = null)
         {
             newAssemblyFamily = newAssemblyFamily ?? GetDefiningAssemblyFamily();
             return IsAssignableFrom(oldSourceType, new IsAssignableFromContext(newAssemblyFamily, isSourceTypeOld: true, onlyReferenceAndIdentityConversions: false));
         }
 
-        #endregion // IsAssignableFromOld
-
-        #region IsEquivalentTo
-
-#if DEBUG
         /// <summary>
         /// Indicates whether the specified type is equivalent to the current type (but from another version).
         /// </summary>
@@ -332,69 +227,38 @@ namespace BreakingChangesDetector.MetadataItems
         /// <param name="newAssemblyFamily">The assembly family in which new assemblies reside.</param>
         /// <param name="isOtherTypeOld">Indicates whether the type on which this method is called is from the older version of assemblies.</param>
         /// <returns>True if the types are equivalent but from different assembly versions; False otherwise.</returns> 
-#endif
         internal bool IsEquivalentTo(TypeData otherType, AssemblyFamily newAssemblyFamily, bool isOtherTypeOld) =>
             isOtherTypeOld
                 ? otherType.IsEquivalentToNewMember(this, newAssemblyFamily)
                 : IsEquivalentToNewMember(otherType, newAssemblyFamily);
 
-        #endregion // IsEquivalentTo
-
-        #region IsNullable
-
-#if DEBUG
         /// <summary>
         /// Indicates whether the type is a nullable value type.
         /// </summary>
         /// <param name="underlyingType">[Out] Will be set to the underlying value type if the tpye is nullable; will be null otherwise.</param>
         /// <returns>True if the type is nullable; False otherwise.</returns> 
-#endif
         internal virtual bool IsNullable(out TypeData underlyingType)
         {
             underlyingType = null;
             return false;
         }
 
-        #endregion // IsNullable
-
-        #region IsVarianceConvertibleTo
-
-#if DEBUG
         /// <summary>
         /// Indicates whether the type can convert to the specified target type using type parameter variance.
         /// </summary>
         /// <param name="target">The target type to which this type might convert.</param>
         /// <param name="context">Information about the context of the IsAssignableFrom invocation.</param>
         /// <returns>True is the type is variance convertible to the target; False otherwise.</returns> 
-#endif
         internal virtual bool IsVarianceConvertibleTo(ConstructedGenericTypeData target, IsAssignableFromContext context) => false;
-
-        #endregion // IsVarianceConvertibleTo
-
-        #endregion // Internal Methods
-
-        #endregion // Methods
-
-        #region Properties
-
-        #region Public Properties
 
         /// <summary>
         /// Gets the kind of type this instance represents.
         /// </summary>
         public TypeKind TypeKind { get; }
 
-        #endregion // Public Properties
-
-        #region Internal Properties
-
         /// <summary>
         /// Gets the value indicating whether the type represents a value type.
         /// </summary>
         internal bool IsValueType => TypeKind == TypeKind.Enum || TypeKind == TypeKind.Struct;
-
-        #endregion // Internal Properties
-
-        #endregion // Properties
     }
 }

@@ -30,11 +30,9 @@ using System.Linq;
 
 namespace BreakingChangesDetector.MetadataItems
 {
-#if DEBUG
     /// <summary>
     /// An ordered set of <see cref="TypeData"/> instances which can by compared or used as a key in a dictionary.
     /// </summary> 
-#endif
     internal class TypeDataSequence :
         IEnumerable<TypeData>,
         IEquatable<TypeDataSequence>
