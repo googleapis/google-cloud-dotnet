@@ -187,8 +187,6 @@ namespace BreakingChangesDetector.Serialization
             return id;
         }
 
-        #region WriteAdditionalInfo
-
         private void WriteAdditionalInfo()
         {
             foreach (var pair in _typeTable.Where(p => IsConstructedGenericType(p.Key) == false))
@@ -273,10 +271,6 @@ namespace BreakingChangesDetector.Serialization
             }
         }
 
-        #endregion // WriteAdditionalInfo
-
-        #region WriteTypeTable
-
         private void WriteTypeTable(AssemblyData[] assemblies)
         {
             _writer.Write((ushort)assemblies.Length);
@@ -325,8 +319,6 @@ namespace BreakingChangesDetector.Serialization
                 _writer.Write((ushort)genericTypeParameterData.GenericParameterPosition);
             }
         }
-
-        #endregion // WriteTypeTable
 
         private class AdditionalDataWriter : MetadataItemVisitor
         {

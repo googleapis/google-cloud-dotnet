@@ -32,8 +32,6 @@ namespace BreakingChangesDetector.UnitTests.MetadataTypesTests
 {
     public class GenericTypeParameterDataTests
     {
-        #region GenericTypeParameterDataContraintsTest
-
         [Fact]
         public void GenericTypeParameterDataContraintsTest()
         {
@@ -62,10 +60,6 @@ namespace BreakingChangesDetector.UnitTests.MetadataTypesTests
             var p5 = testClassDefinitionData.GenericParameters[4];
             AssertX.Equal(0, p5.Constraints.Count, "The number of Constraints on the genertic type parameter is incorrect.");
         }
-
-        #endregion // GenericTypeParameterDataContraintsTest
-
-        #region GenericTypeParameterDataGenericParameterAttributesTest
 
         [Fact]
         public void GenericTypeParameterDataGenericParameterAttributesTest()
@@ -102,10 +96,6 @@ namespace BreakingChangesDetector.UnitTests.MetadataTypesTests
             AssertX.Equal(GenericParameterAttributes.Covariant, p3.GenericParameterAttributes, "The number of generic parameters is incorrect.");
         }
 
-        #endregion // GenericTypeParameterDataGenericParameterAttributesTest
-
-        #region GenericTypeParameterDataKindTest
-
         [Fact]
         public void GenericTypeParameterDataKindTest()
         {
@@ -120,10 +110,6 @@ namespace BreakingChangesDetector.UnitTests.MetadataTypesTests
             Assert.Equal(TypeKind.Class, typeData.GenericParameters[4].TypeKind);
         }
 
-        #endregion // GenericTypeParameterDataKindTest
-
-        #region GenericTypeParameterDataNameTest
-
         [Fact]
         public void GenericTypeParameterDataNameTest()
         {
@@ -134,7 +120,5 @@ namespace BreakingChangesDetector.UnitTests.MetadataTypesTests
             var p1 = typeData.GenericParameters[0];
             AssertX.Equal(t.GetGenericArguments()[0].Name, p1.Name, "The Name is not assigned correctly.");
         }
-
-        #endregion // GenericTypeParameterDataNameTest
     }
 }

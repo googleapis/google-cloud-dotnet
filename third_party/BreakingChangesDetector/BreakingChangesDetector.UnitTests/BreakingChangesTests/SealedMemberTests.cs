@@ -31,8 +31,6 @@ namespace BreakingChangesDetector.UnitTests.BreakingChangesTests
 {
     public class SealedMemberTests
     {
-        #region EventTests
-
         [Fact]
         public void EventTests()
         {
@@ -88,10 +86,6 @@ namespace BreakingChangesDetector.UnitTests.BreakingChangesTests
             breakingChanges = MetadataComparer.CompareTypes(EventAbstractNoOverride, EventAbstractSealedOverrideSealed);
             AssertX.Equal(1, breakingChanges.Count, "There should be no breaking changes when a sealed override is added to a sealed class.");
         }
-
-        #endregion // EventTests
-
-        #region IndexerTests
 
         [Fact]
         public void IndexerTests()
@@ -149,10 +143,6 @@ namespace BreakingChangesDetector.UnitTests.BreakingChangesTests
             AssertX.Equal(1, breakingChanges.Count, "There should be no breaking changes when a sealed override is added to a sealed class.");
         }
 
-        #endregion // IndexerTests
-
-        #region MethodTests
-
         [Fact]
         public void MethodTests()
         {
@@ -209,10 +199,6 @@ namespace BreakingChangesDetector.UnitTests.BreakingChangesTests
             AssertX.Equal(1, breakingChanges.Count, "There should be no breaking changes when a sealed override is added to a sealed class.");
         }
 
-        #endregion // MethodTests
-
-        #region PropertyTests
-
         [Fact]
         public void PropertyTests()
         {
@@ -268,9 +254,6 @@ namespace BreakingChangesDetector.UnitTests.BreakingChangesTests
             breakingChanges = MetadataComparer.CompareTypes(PropertyAbstractNoOverride, PropertyAbstractSealedOverrideSealed);
             AssertX.Equal(1, breakingChanges.Count, "There should be no breaking changes when a sealed override is added to a sealed class.");
         }
-
-        #endregion // PropertyTests
-
 
 #pragma warning disable 0067
         public abstract class EventVirtual { public virtual event EventHandler Event; }

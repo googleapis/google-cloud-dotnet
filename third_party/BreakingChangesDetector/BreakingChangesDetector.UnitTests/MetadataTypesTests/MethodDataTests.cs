@@ -30,8 +30,6 @@ namespace BreakingChangesDetector.UnitTests.MetadataTypesTests
 {
     public class MethodDataTests
     {
-        #region MethodDataAccessibilityTest
-
         [Fact]
         public void MethodDataAccessibilityTest()
         {
@@ -40,10 +38,6 @@ namespace BreakingChangesDetector.UnitTests.MetadataTypesTests
             var typeData = context.GetTypeDefinitionData(t);
             TestUtilities.VerifyAccessibility(typeData, "MethodInstance");
         }
-
-        #endregion // MethodDataAccessibilityTest
-
-        #region MethodDataDeclaringTypeTest
 
         [Fact]
         public void MethodDataDeclaringTypeTest()
@@ -54,10 +48,6 @@ namespace BreakingChangesDetector.UnitTests.MetadataTypesTests
             var method = typeData.GetMember("MethodInstance");
             AssertX.Equal(typeData, method.ContainingType, "The DeclaringType of a member should be the type in which it is defined.");
         }
-
-        #endregion // MethodDataDeclaringTypeTest
-
-        #region MethodDataMemberFlagsTest
 
         [Fact]
         public void MethodDataMemberFlagsTest()
@@ -88,10 +78,6 @@ namespace BreakingChangesDetector.UnitTests.MetadataTypesTests
             AssertX.Equal(MemberFlags.Override | MemberFlags.Abstract, eventData.MemberFlags, "The Flags value of the member is wrong.");
         }
 
-        #endregion // MethodDataMemberFlagsTest
-
-        #region MethodDataGenericParametersTest
-
         [Fact]
         public void MethodDataGenericParametersTest()
         {
@@ -102,10 +88,6 @@ namespace BreakingChangesDetector.UnitTests.MetadataTypesTests
             var genericMethod = (MethodData)typeData.GetMember("GenericMethod");
             AssertX.Equal(5, genericMethod.GenericParameters.Count, "The number of generic parameters is incorrect.");
         }
-
-        #endregion // MethodDataGenericParametersTest
-
-        #region MethodDataIsExtensionMethodTest
 
         [Fact]
         public void MethodDataIsExtensionMethodTest()
@@ -121,10 +103,6 @@ namespace BreakingChangesDetector.UnitTests.MetadataTypesTests
             Assert.True(methodData.IsExtensionMethod, "The IsExtensionMethod value is incorrect.");
         }
 
-        #endregion // MethodDataIsExtensionMethodTest
-
-        #region MethodDataNameTest
-
         [Fact]
         public void MethodDataNameTest()
         {
@@ -134,10 +112,6 @@ namespace BreakingChangesDetector.UnitTests.MetadataTypesTests
             var method = typeData.GetMember("MethodInstance");
             AssertX.Equal("MethodInstance", method.Name, "The Name of the member is incorrect.");
         }
-
-        #endregion // MethodDataNameTest
-
-        #region MethodDataParametersTest
 
         [Fact]
         public void MethodDataParametersTest()
@@ -155,10 +129,6 @@ namespace BreakingChangesDetector.UnitTests.MetadataTypesTests
             AssertX.Equal(3, method.Parameters.Count, "The protected internal method has the wrong number of parameters.");
         }
 
-        #endregion // MethodDataParametersTest
-
-        #region MethodDataTypeTest
-
         [Fact]
         public void MethodDataTypeTest()
         {
@@ -170,7 +140,5 @@ namespace BreakingChangesDetector.UnitTests.MetadataTypesTests
             var method = (MethodData)typeData.GetMember("MethodInstance");
             AssertX.Equal(voidType, method.Type, "The Type of the member is incorrect.");
         }
-
-        #endregion // MethodDataTypeTest
     }
 }

@@ -34,8 +34,6 @@ namespace BreakingChangesDetector.UnitTests.BreakingChangesTests
 {
     public class MiscellaneousTests
     {
-        #region GenericParameterRenameTest
-
         [Fact]
         public void GenericParameterRenameTest()
         {
@@ -76,10 +74,6 @@ namespace BreakingChangesDetector.UnitTests.BreakingChangesTests
         [TypeRenamed("BreakingChangesDetector.UnitTests.BreakingChangesTests.MiscellaneousTests.GenericParameter3")]
         public class GenericParameter4<V, W> { public W Method(V x) { return default(W); } }
 
-        #endregion // GenericParameterRenameTest
-
-        #region NamespaceRenamedAttributeTest
-
         [Fact]
         public void NamespaceRenamedAttributeTest()
         {
@@ -99,10 +93,6 @@ namespace BreakingChangesDetector.UnitTests.BreakingChangesTests
             AssertX.Equal(1, breakingChanges.Count, "There should be a breaking change for removing a root type.");
             AssertX.Equal(BreakingChangeKind.RemovedRootType, breakingChanges[0].BreakingChangeKind, "There should be a breaking change for removing a root type.");
         }
-
-        #endregion // NamespaceRenamedAttributeTest
-
-        #region TypeForwardingTest
 
         [Fact]
         public void TypeForwardingTest()
@@ -126,7 +116,5 @@ namespace BreakingChangesDetector.UnitTests.BreakingChangesTests
             var breakingChanges = MetadataComparer.CompareAssemblyFamilies(olderFamily, newFamily);
             AssertX.Equal(0, breakingChanges.Count, "There should be no breaking changes when the removed type is forwarded.");
         }
-
-        #endregion // TypeForwardingTest
     }
 }

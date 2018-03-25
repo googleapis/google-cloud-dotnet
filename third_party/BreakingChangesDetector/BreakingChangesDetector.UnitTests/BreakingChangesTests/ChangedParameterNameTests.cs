@@ -32,8 +32,6 @@ namespace BreakingChangesDetector.UnitTests.BreakingChangesTests
 {
     public class ChangedParameterNameTests
     {
-        #region ConstructorTests
-
         [Fact]
         public void ConstructorTests()
         {
@@ -55,10 +53,6 @@ namespace BreakingChangesDetector.UnitTests.BreakingChangesTests
             AssertX.Equal(((IParameterizedItem)constructorWithOldParameterName.GetMember(".ctor")).Parameters[0], breakingChanges[0].NewItem, "The NewItem is incorrect.");
             AssertX.Equal(constructorWithOldParameterName.GetMember(".ctor"), breakingChanges[0].AssociatedData, "The AssociatedData is incorrect.");
         }
-
-        #endregion // ConstructorTests
-
-        #region IndexerTests
 
         [Fact]
         public void IndexerTests()
@@ -82,10 +76,6 @@ namespace BreakingChangesDetector.UnitTests.BreakingChangesTests
             AssertX.Equal(indexerWithOldParameterName.GetMember("Item"), breakingChanges[0].AssociatedData, "The AssociatedData is incorrect.");
         }
 
-        #endregion // IndexerTests
-
-        #region MethodTests
-
         [Fact]
         public void MethodTests()
         {
@@ -107,10 +97,6 @@ namespace BreakingChangesDetector.UnitTests.BreakingChangesTests
             AssertX.Equal(((IParameterizedItem)methodWithOldParameterName.GetMember("Method")).Parameters[0], breakingChanges[0].NewItem, "The NewItem is incorrect.");
             AssertX.Equal(methodWithOldParameterName.GetMember("Method"), breakingChanges[0].AssociatedData, "The AssociatedData is incorrect.");
         }
-
-        #endregion // MethodTests
-
-        #region NestedTypeTests
 
         [Fact]
         public void NestedTypeTests()
@@ -134,10 +120,6 @@ namespace BreakingChangesDetector.UnitTests.BreakingChangesTests
             AssertX.Equal(nestedDelegateWithOldParameterName.GetNestedType("Delegate"), breakingChanges[0].AssociatedData, "The AssociatedData is incorrect.");
         }
 
-        #endregion // NestedTypeTests
-
-        #region OperatorTests
-
         [Fact]
         public void OperatorTests()
         {
@@ -148,10 +130,6 @@ namespace BreakingChangesDetector.UnitTests.BreakingChangesTests
             var breakingChanges = MetadataComparer.CompareTypes(OperatorWithOldParameterName, OperatorWithNewParameterName);
             AssertX.Equal(0, breakingChanges.Count, "There should be one breaking change when the parameter name changes.");
         }
-
-        #endregion // OperatorTests
-
-        #region TypeTests
 
         [Fact]
         public void TypeTests()
@@ -174,8 +152,6 @@ namespace BreakingChangesDetector.UnitTests.BreakingChangesTests
             AssertX.Equal(delegateWithOldParameterName.DelegateParameters[0], breakingChanges[0].NewItem, "The NewItem is incorrect.");
             AssertX.Equal(delegateWithOldParameterName, breakingChanges[0].AssociatedData, "The AssociatedData is incorrect.");
         }
-
-        #endregion // TypeTests
 
         public class NestedDelegateWithOldParameterName { public delegate void Delegate(int x); }
         public class NestedDelegateWithNewParameterName { public delegate void Delegate(int y); }

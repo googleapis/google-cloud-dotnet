@@ -32,8 +32,6 @@ namespace BreakingChangesDetector.UnitTests.MetadataTypesTests
 {
     public class TypeDefinitionDataTests
     {
-        #region ProtectedMembersInSealedClassesNotStoredTest
-
         [Fact]
         public void ProtectedMembersInSealedClassesNotStoredTest()
         {
@@ -44,10 +42,6 @@ namespace BreakingChangesDetector.UnitTests.MetadataTypesTests
             Assert.True(members == null || members.Count == 0, "Protected members of sealed classes should never be considered for breaking changes.");
         }
 
-        #endregion // ProtectedMembersInSealedClassesNotStoredTest
-
-        #region TypeDefinitionDataAccessibilityTest
-
         [Fact]
         public void TypeDefinitionDataAccessibilityTest()
         {
@@ -56,10 +50,6 @@ namespace BreakingChangesDetector.UnitTests.MetadataTypesTests
             var typeData = context.GetTypeDefinitionData(t);
             TestUtilities.VerifyAccessibility(typeData, "NestedStruct");
         }
-
-        #endregion // TypeDefinitionDataAccessibilityTest
-
-        #region TypeDefinitionDataAssemblyTest
 
         [Fact]
         public void TypeDefinitionDataAssemblyTest()
@@ -70,10 +60,6 @@ namespace BreakingChangesDetector.UnitTests.MetadataTypesTests
             var typeData = context.GetTypeDefinitionData(t);
             AssertX.Equal(assembly, typeData.AssemblyData, "The Assembly reference is not assigned correctly.");
         }
-
-        #endregion // TypeDefinitionDataAssemblyTest
-
-        #region TypeDefinitionDataBaseTypeTest
 
         [Fact]
         public void TypeDefinitionDataBaseTypeTest()
@@ -111,10 +97,6 @@ namespace BreakingChangesDetector.UnitTests.MetadataTypesTests
             AssertX.Equal(null, current.BaseType, "The base type of " + current.Name + "is incorrect.");
         }
 
-        #endregion // TypeDefinitionDataBaseTypeTest
-
-        #region TypeDefinitionDataDeclaringTypeTest
-
         [Fact]
         public void TypeDefinitionDataDeclaringTypeTest()
         {
@@ -125,10 +107,6 @@ namespace BreakingChangesDetector.UnitTests.MetadataTypesTests
             var nestedType = typeData.GetMember("NestedStruct");
             AssertX.Equal(typeData, nestedType.ContainingType, "The DeclaringType of a nested type should be the root level type.");
         }
-
-        #endregion // TypeDefinitionDataDeclaringTypeTest
-
-        #region TypeDefinitionDataDelegateParametersTest
 
         [Fact]
         public void TypeDefinitionDataDelegateParametersTest()
@@ -142,10 +120,6 @@ namespace BreakingChangesDetector.UnitTests.MetadataTypesTests
             typeData = context.GetTypeDefinitionData(typeof(TestDelegateDefinitionWithParams));
             AssertX.Equal(2, typeData.DelegateParameters.Count, "The number of delegate parameters is incorrect.");
         }
-
-        #endregion // TypeDefinitionDataDelegateParametersTest
-
-        #region TypeDefinitionDataFlagsTest
 
         [Fact]
         public void TypeDefinitionDataFlagsTest()
@@ -166,10 +140,6 @@ namespace BreakingChangesDetector.UnitTests.MetadataTypesTests
             AssertX.Equal(MemberFlags.Static, typeData.MemberFlags, "The Flags of class incorrect.");
         }
 
-        #endregion // TypeDefinitionDataFlagsTest
-
-        #region TypeDefinitionDataFullNameTest
-
         [Fact]
         public void TypeDefinitionDataFullNameTest()
         {
@@ -178,10 +148,6 @@ namespace BreakingChangesDetector.UnitTests.MetadataTypesTests
             var typeData = context.GetTypeDefinitionData(t);
             AssertX.Equal(t.FullName, typeData.FullName, "The FullName is not assigned correctly.");
         }
-
-        #endregion // TypeDefinitionDataFullNameTest
-
-        #region TypeDefinitionDataGenericParametersTest
 
         [Fact]
         public void TypeDefinitionDataGenericParametersTest()
@@ -195,10 +161,6 @@ namespace BreakingChangesDetector.UnitTests.MetadataTypesTests
             var baseType = (ConstructedGenericTypeData)context.GetTypeDefinitionData(typeof(TestClassDefinitionPartiallyDerived<,,>)).BaseType;
             AssertX.Equal(5, baseType.GenericArguments.Count, "The number of generic arguments is incorrect.");
         }
-
-        #endregion // TypeDefinitionDataGenericParametersTest
-
-        #region TypeDefinitionDataImplementedInterfacesTest
 
         [Fact]
         public void TypeDefinitionDataImplementedInterfacesTest()
@@ -218,11 +180,7 @@ namespace BreakingChangesDetector.UnitTests.MetadataTypesTests
             AssertX.Equal(equatableInterfaceData, testInterfaceDefinitionData.ImplementedInterfaces[0], "The reported interface is not correct.");
         }
 
-        #endregion // TypeDefinitionDataImplementedInterfacesTest
-
         // TODO_Test: test IsConstructedGenericType, IsPointer, IsByRef
-
-        #region TypeDefinitionDataKindTest
 
         [Fact]
         public void TypeDefinitionDataKindTest()
@@ -236,10 +194,6 @@ namespace BreakingChangesDetector.UnitTests.MetadataTypesTests
             Assert.Equal(TypeKind.Enum, context.GetTypeDefinitionData(typeof(TestEnumDefinition)).TypeKind);
             Assert.Equal(TypeKind.Delegate, context.GetTypeDefinitionData(typeof(TestDelegateDefinition)).TypeKind);
         }
-
-        #endregion // TypeDefinitionDataKindTest
-
-        #region TypeDefinitionDataMembersInClassTest
 
         [Fact]
         public void TypeDefinitionDataMembersInClassTest()
@@ -278,10 +232,6 @@ namespace BreakingChangesDetector.UnitTests.MetadataTypesTests
             TestUtilities.VerifyMember<TypeDefinitionData>(typeData, "NestedStruct");
         }
 
-        #endregion // TypeDefinitionDataMembersInClassTest
-
-        #region TypeDefinitionDataMembersInEnumTest
-
         [Fact]
         public void TypeDefinitionDataMembersInEnumTest()
         {
@@ -292,10 +242,6 @@ namespace BreakingChangesDetector.UnitTests.MetadataTypesTests
 
             TestUtilities.VerifyMember<ConstantData>(typeData, "Constant");
         }
-
-        #endregion // TypeDefinitionDataMembersInEnumTest
-
-        #region TypeDefinitionDataMembersInInterfaceTest
 
         [Fact]
         public void TypeDefinitionDataMembersInInterfaceTest()
@@ -314,10 +260,6 @@ namespace BreakingChangesDetector.UnitTests.MetadataTypesTests
             TestUtilities.VerifyInstanceAndStaticMember<MethodData>(typeData, "Method");
             TestUtilities.VerifyInstanceAndStaticMember<PropertyData>(typeData, "Property");
         }
-
-        #endregion // TypeDefinitionDataMembersInInterfaceTest
-
-        #region TypeDefinitionDataMembersInStructTest
 
         [Fact]
         public void TypeDefinitionDataMembersInStructTest()
@@ -353,10 +295,6 @@ namespace BreakingChangesDetector.UnitTests.MetadataTypesTests
             TestUtilities.VerifyMember<TypeDefinitionData>(typeData, "NestedStruct");
         }
 
-        #endregion // TypeDefinitionDataMembersInStructTest
-
-        #region TypeDefinitionDataNameTest
-
         [Fact]
         public void TypeDefinitionDataNameTest()
         {
@@ -365,7 +303,5 @@ namespace BreakingChangesDetector.UnitTests.MetadataTypesTests
             var typeData = context.GetTypeDefinitionData(t);
             AssertX.Equal(t.Name, typeData.Name, "The Name is not assigned correctly.");
         }
-
-        #endregion // TypeDefinitionDataNameTest
     }
 }

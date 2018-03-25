@@ -33,8 +33,6 @@ namespace BreakingChangesDetector.UnitTests.MetadataTypesTests
     {
         // TODO_Test: Delegates are not tested here.
 
-        #region ParameterDataDeclaringMemberKindTest
-
         [Fact]
         public void ParameterDataDeclaringMemberKindTest()
         {
@@ -51,10 +49,6 @@ namespace BreakingChangesDetector.UnitTests.MetadataTypesTests
             AssertX.Equal(indexer.MetadataItemKind, indexer.Parameters[0].DeclaringMemberKind, "The DeclaringMemberKind of the indexer parameter is not assigned correctly.");
         }
 
-        #endregion // ParameterDataDeclaringMemberKindTest
-
-        #region ParameterDataDefaultValueTest
-
         [Fact]
         public void ParameterDataDefaultValueTest()
         {
@@ -69,10 +63,6 @@ namespace BreakingChangesDetector.UnitTests.MetadataTypesTests
             AssertX.Null(method.Parameters[3].DefaultValue, "The DefaultValue of the method parameter is not assigned correctly.");
         }
 
-        #endregion // ParameterDataDefaultValueTest
-
-        #region ParameterDataHasDefaultValueTest
-
         [Fact]
         public void ParameterDataHasDefaultValueTest()
         {
@@ -86,10 +76,6 @@ namespace BreakingChangesDetector.UnitTests.MetadataTypesTests
             Assert.True(method.Parameters[2].IsOptional, "The IsOptional of the method parameter is not assigned correctly.");
         }
 
-        #endregion // ParameterDataHasDefaultValueTest
-
-        #region ParameterDataIsParamsArrayTest
-
         [Fact]
         public void ParameterDataIsParamsArrayTest()
         {
@@ -101,10 +87,6 @@ namespace BreakingChangesDetector.UnitTests.MetadataTypesTests
             Assert.False(method.Parameters[0].IsParamsArray, "The IsParamsArray of the method parameter is not assigned correctly.");
             Assert.True(method.Parameters[1].IsParamsArray, "The IsParamsArray of the method parameter is not assigned correctly.");
         }
-
-        #endregion // ParameterDataIsParamsArrayTest
-
-        #region ParameterDataGetDefaultValueDisplayText
 
         [Fact]
         public void ParameterDataGetDefaultValueDisplayText()
@@ -150,10 +132,6 @@ namespace BreakingChangesDetector.UnitTests.MetadataTypesTests
             public enum Method2Values { A = 1 << 0, B = 1 << 1, C = 1 << 2, D = A | C }
         }
 
-        #endregion // ParameterDataGetDefaultValueDisplayText
-
-        #region ParameterDataModiferTest
-
         [Fact]
         public void ParameterDataModiferTest()
         {
@@ -166,10 +144,6 @@ namespace BreakingChangesDetector.UnitTests.MetadataTypesTests
             AssertX.Equal(ParameterModifier.Ref, method.Parameters[1].Modifer, "The ParameterModifier of the method parameter is not assigned correctly.");
             AssertX.Equal(ParameterModifier.Out, method.Parameters[2].Modifer, "The ParameterModifier of the method parameter is not assigned correctly.");
         }
-
-        #endregion // ParameterDataModiferTest
-
-        #region ParameterDataNameTest
 
         [Fact]
         public void ParameterDataNameTest()
@@ -184,10 +158,6 @@ namespace BreakingChangesDetector.UnitTests.MetadataTypesTests
             AssertX.Equal("param3", method.Parameters[2].Name, "The Name of the method parameter is not assigned correctly.");
         }
 
-        #endregion // ParameterDataNameTest
-
-        #region ParameterDataTypeTest
-
         [Fact]
         public void ParameterDataTypeTest()
         {
@@ -200,7 +170,5 @@ namespace BreakingChangesDetector.UnitTests.MetadataTypesTests
             AssertX.Equal(intType, method.Parameters[0].Type, "The Type of the method parameter is not assigned correctly.");
             AssertX.Equal(typeData, method.Parameters[1].Type, "The Type of the method parameter is not assigned correctly.");
         }
-
-        #endregion // ParameterDataTypeTest
     }
 }

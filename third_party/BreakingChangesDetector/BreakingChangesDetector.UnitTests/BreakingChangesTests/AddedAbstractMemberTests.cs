@@ -32,8 +32,6 @@ namespace BreakingChangesDetector.UnitTests.BreakingChangesTests
 {
     public class AddedAbstractMemberTests
     {
-        #region EventTests
-
         [Fact]
         public void EventTests()
         {
@@ -51,10 +49,6 @@ namespace BreakingChangesDetector.UnitTests.BreakingChangesTests
             breakingChanges = MetadataComparer.CompareTypes(EventAbstract, EventNotDeclared).Where(b => b.BreakingChangeKind == BreakingChangeKind.AddedAbstractMember).ToList();
             AssertX.Equal(0, breakingChanges.Count, "There should be no breaking changes when an abstract member changes to virtual.");
         }
-
-        #endregion // EventTests
-
-        #region IndexerTests
 
         [Fact]
         public void IndexerTests()
@@ -74,10 +68,6 @@ namespace BreakingChangesDetector.UnitTests.BreakingChangesTests
             AssertX.Equal(0, breakingChanges.Count, "There should be no breaking changes when an abstract member changes to virtual.");
         }
 
-        #endregion // IndexerTests
-
-        #region MethodTests
-
         [Fact]
         public void MethodTests()
         {
@@ -96,10 +86,6 @@ namespace BreakingChangesDetector.UnitTests.BreakingChangesTests
             AssertX.Equal(0, breakingChanges.Count, "There should be no breaking changes when an abstract member changes to virtual.");
         }
 
-        #endregion // MethodTests
-
-        #region PropertyTests
-
         [Fact]
         public void PropertyTests()
         {
@@ -117,9 +103,6 @@ namespace BreakingChangesDetector.UnitTests.BreakingChangesTests
             breakingChanges = MetadataComparer.CompareTypes(PropertyAbstract, PropertyNotDeclared).Where(b => b.BreakingChangeKind == BreakingChangeKind.AddedAbstractMember).ToList();
             AssertX.Equal(0, breakingChanges.Count, "There should be no breaking changes when an abstract member changes to virtual.");
         }
-
-        #endregion // PropertyTests
-
 
 #pragma warning disable 0067
         public abstract class EventNotDeclared { }

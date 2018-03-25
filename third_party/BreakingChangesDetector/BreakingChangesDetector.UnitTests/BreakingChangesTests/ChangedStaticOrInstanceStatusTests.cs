@@ -31,8 +31,6 @@ namespace BreakingChangesDetector.UnitTests.BreakingChangesTests
 {
     public class ChangedStaticOrInstanceStatusTests
     {
-        #region EventTests
-
         [Fact]
         public void EventTests()
         {
@@ -54,10 +52,6 @@ namespace BreakingChangesDetector.UnitTests.BreakingChangesTests
             AssertX.Equal(EventInstance.GetMember("Event"), breakingChanges[0].NewItem, "The NewItem is incorrect.");
             AssertX.Null(breakingChanges[0].AssociatedData, "The AssociatedData is incorrect.");
         }
-
-        #endregion // EventTests
-
-        #region FieldTests
 
         [Fact]
         public void FieldTests()
@@ -81,10 +75,6 @@ namespace BreakingChangesDetector.UnitTests.BreakingChangesTests
             AssertX.Null(breakingChanges[0].AssociatedData, "The AssociatedData is incorrect.");
         }
 
-        #endregion // FieldTests
-
-        #region MethodTests
-
         [Fact]
         public void MethodTests()
         {
@@ -107,10 +97,6 @@ namespace BreakingChangesDetector.UnitTests.BreakingChangesTests
             AssertX.Null(breakingChanges[0].AssociatedData, "The AssociatedData is incorrect.");
         }
 
-        #endregion // MethodTests
-
-        #region PropertyTests
-
         [Fact]
         public void PropertyTests()
         {
@@ -132,9 +118,6 @@ namespace BreakingChangesDetector.UnitTests.BreakingChangesTests
             AssertX.Equal(PropertyInstance.GetMember("Property"), breakingChanges[0].NewItem, "The NewItem is incorrect.");
             AssertX.Null(breakingChanges[0].AssociatedData, "The AssociatedData is incorrect.");
         }
-
-        #endregion // PropertyTests
-
 
 #pragma warning disable 0067
         public class EventInstance { public event EventHandler<int> Event; }

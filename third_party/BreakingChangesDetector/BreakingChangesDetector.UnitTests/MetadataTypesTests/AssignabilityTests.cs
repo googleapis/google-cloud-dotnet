@@ -33,8 +33,6 @@ namespace BreakingChangesDetector.UnitTests.MetadataTypesTests
 {
     public class AssignabilityTests
     {
-        #region ImplicitBoxingConversionsTests
-
         [Fact]
         public void ImplicitBoxingConversionsTests()
         {
@@ -61,10 +59,6 @@ namespace BreakingChangesDetector.UnitTests.MetadataTypesTests
                 typeof(IEnumerable<BaseClass>));
         }
 
-        #endregion // ImplicitBoxingConversionsTests
-
-        #region ImplicitConversionsInvolvingTypeParametersTests
-
         [Fact]
         public void ImplicitConversionsInvolvingTypeParametersTests()
         {
@@ -86,19 +80,11 @@ namespace BreakingChangesDetector.UnitTests.MetadataTypesTests
                 typeof(CovariantInterface<DerivedClass>));
         }
 
-        #endregion // ImplicitConversionsInvolvingTypeParametersTests
-
-        #region ImplicitIdentityConversionsTests
-
         [Fact]
         public void ImplicitIdentityConversionsTests()
         {
             TestAssignability<List<object>, List<dynamic>>();
         }
-
-        #endregion // ImplicitIdentityConversionsTests
-
-        #region ImplicitNullableConversionsTests
 
         [Fact]
         public void ImplicitNullableConversionsTests()
@@ -136,10 +122,6 @@ namespace BreakingChangesDetector.UnitTests.MetadataTypesTests
                 typeof(AStruct?));
         }
 
-        #endregion // ImplicitNullableConversionsTests
-
-        #region ImplicitNumericConversionsTests
-
         [Fact]
         public void ImplicitNumericConversionsTests()
         {
@@ -157,10 +139,6 @@ namespace BreakingChangesDetector.UnitTests.MetadataTypesTests
                 typeof(decimal),
                 typeof(char));
         }
-
-        #endregion // ImplicitNumericConversionsTests
-
-        #region ImplicitReferenceConversionsTests
 
         [Fact]
         public void ImplicitReferenceConversionsTests()
@@ -205,20 +183,12 @@ namespace BreakingChangesDetector.UnitTests.MetadataTypesTests
                 typeof(Func<DerivedClass, BaseClass>));
         }
 
-        #endregion // ImplicitReferenceConversionsTests
-
-        #region NullableTests
-
         [Fact]
         public void NullableTests()
         {
             TestAssignability<object, Nullable<int>>();
             TestAssignability<int, Nullable<int>>();
         }
-
-        #endregion // NullableTests
-
-        #region OnlyReferenceAndIdentityConversionsInVariancesTest
 
         [Fact]
         public void OnlyReferenceAndIdentityConversionsInVariancesTest()
@@ -229,10 +199,6 @@ namespace BreakingChangesDetector.UnitTests.MetadataTypesTests
             Assert.False(context.GetConstructedGenericTypeData<IEnumerable<int?>>().IsAssignableFromNew(context.GetConstructedGenericTypeData<IEnumerable<int>>()));
         }
 
-        #endregion // OnlyReferenceAndIdentityConversionsInVariancesTest
-
-        #region UserDefinedImplicitConversionsTests
-
         [Fact]
         public void UserDefinedImplicitConversionsTests()
         {
@@ -242,10 +208,6 @@ namespace BreakingChangesDetector.UnitTests.MetadataTypesTests
                 typeof(C));
         }
 
-        #endregion // UserDefinedImplicitConversionsTests
-
-        #region ValueTypeTests
-
         [Fact]
         public void ValueTypeTests()
         {
@@ -254,22 +216,14 @@ namespace BreakingChangesDetector.UnitTests.MetadataTypesTests
             TestAssignability<object, int>();
         }
 
-        #endregion // ValueTypeTests
-
-
         [Fact]
         public void IsImplicitlyAssignableFromTests()
         {
-            #region Implicit Identity Conversions
-
+            // Implicit identity conversions
             Assert.True(typeof(List<object>).IsImplicitlyAssignableFrom(typeof(List<dynamic>)));
             Assert.True(typeof(List<dynamic>).IsImplicitlyAssignableFrom(typeof(List<object>)));
 
-            #endregion // Implicit Identity Conversions
-
-            #region Implicit Numeric Conversions
-
-
+            // Implicit numeric conversions
             Assert.True(typeof(short).IsImplicitlyAssignableFrom(typeof(sbyte)));
             Assert.True(typeof(int).IsImplicitlyAssignableFrom(typeof(sbyte)));
             Assert.True(typeof(long).IsImplicitlyAssignableFrom(typeof(sbyte)));
@@ -322,10 +276,7 @@ namespace BreakingChangesDetector.UnitTests.MetadataTypesTests
             Assert.True(typeof(decimal).IsImplicitlyAssignableFrom(typeof(char)));
             Assert.True(typeof(double).IsImplicitlyAssignableFrom(typeof(float)));
 
-            #endregion // Implicit Numeric Conversions
-
-            #region Implicit Nullable Conversions
-
+            // Implicit nullable conversions
             Assert.True(typeof(short?).IsImplicitlyAssignableFrom(typeof(sbyte?)));
             Assert.True(typeof(int?).IsImplicitlyAssignableFrom(typeof(sbyte?)));
             Assert.True(typeof(long?).IsImplicitlyAssignableFrom(typeof(sbyte?)));
@@ -433,10 +384,7 @@ namespace BreakingChangesDetector.UnitTests.MetadataTypesTests
             Assert.True(typeof(BStruct?).IsImplicitlyAssignableFrom(typeof(CStruct)));
             Assert.True(typeof(AStruct?).IsImplicitlyAssignableFrom(typeof(BStruct)));
 
-            #endregion // Implicit Nullable Conversions
-
-            #region Implicit Reference Conversions
-
+            // Implicit reference conversions
             Assert.True(typeof(object).IsImplicitlyAssignableFrom(typeof(AssignabilityTests)));
             Assert.True(typeof(BaseClass).IsImplicitlyAssignableFrom(typeof(DerivedClass)));
             Assert.True(typeof(BaseInterface).IsImplicitlyAssignableFrom(typeof(DerivedClass)));
@@ -481,10 +429,7 @@ namespace BreakingChangesDetector.UnitTests.MetadataTypesTests
             Assert.False(typeof(Func<BaseClass, BaseClass>).IsImplicitlyAssignableFrom(typeof(Func<DerivedClass, DerivedClass>)));
             Assert.False(typeof(Func<DerivedClass, DerivedClass>).IsImplicitlyAssignableFrom(typeof(Func<BaseClass, BaseClass>)));
 
-            #endregion // Implicit Reference Conversions
-
-            #region Boxing Conversions
-
+            // Boxing conversions
             Assert.True(typeof(object).IsImplicitlyAssignableFrom(typeof(int)));
             Assert.True(typeof(object).IsImplicitlyAssignableFrom(typeof(EnumValues)));
             Assert.True(typeof(object).IsImplicitlyAssignableFrom(typeof(Struct)));
@@ -524,10 +469,7 @@ namespace BreakingChangesDetector.UnitTests.MetadataTypesTests
             Assert.True(typeof(IEnumerable<DerivedClass>).IsImplicitlyAssignableFrom(typeof(Struct2?)));
             Assert.True(typeof(IEnumerable<BaseClass>).IsImplicitlyAssignableFrom(typeof(Struct2?)));
 
-            #endregion // Boxing Conversions
-
-            #region Implicit conversions involving type parameters
-
+            // Implicit conversions involving type parameters
             var typeParameter = typeof(TypeParameterWithBaseClass<>).GetGenericArguments()[0];
             Assert.True(typeof(DerivedClass).IsImplicitlyAssignableFrom(typeParameter));
             Assert.True(typeof(BaseClass).IsImplicitlyAssignableFrom(typeParameter));
@@ -545,14 +487,9 @@ namespace BreakingChangesDetector.UnitTests.MetadataTypesTests
             Assert.True(typeof(ContravariantInterface<DerivedClass>).IsImplicitlyAssignableFrom(typeParameter1));
             Assert.True(typeof(CovariantInterface<BaseClass>).IsImplicitlyAssignableFrom(typeParameter2));
 
-            #endregion // Implicit conversions involving type parameters
-
-            #region User-defined implicit conversions
-
+            // User-defined implicit conversions
             Assert.True(typeof(A).IsImplicitlyAssignableFrom(typeof(B)));
             Assert.True(typeof(B).IsImplicitlyAssignableFrom(typeof(C)));
-
-            #endregion // User-defined implicit conversions
         }
 
 

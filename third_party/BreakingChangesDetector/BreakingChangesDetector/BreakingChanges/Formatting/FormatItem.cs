@@ -34,28 +34,16 @@ namespace BreakingChangesDetector.BreakingChanges.Formatting
     /// </summary>
     public class FormatItem
     {
-        #region Constructor
-
         private FormatItem(string text, StyleFlags style)
         {
             Style = style;
             Text = text;
         }
 
-        #endregion // Constructor
-
-        #region Base Class Overrides
-
         /// <summary>
         /// Gets the string representation of the <see cref="FormatItem"/>.
         /// </summary>
         public override string ToString() => Text;
-
-        #endregion // Base Class Overrides
-
-        #region Methods
-
-        #region Public Methods
 
         /// <summary>
         /// Creates a <see cref="FormatItem"/> to represent the display name of an <see cref="AssemblyData"/> with the specified formatting.
@@ -111,10 +99,6 @@ namespace BreakingChangesDetector.BreakingChanges.Formatting
         public static FormatItem TypedItemTypeName(ITypedItem item, StyleFlags style = StyleFlags.Normal) =>
             new FormatItem(GetTypeDisplayName(item), style);
 
-        #endregion // Public Methods
-
-        #region Private Methods
-
         private static string GetFullMemberName(MemberDataBase member)
         {
             if (member.MetadataItemKind == MetadataItemKinds.TypeDefinition)
@@ -165,12 +149,6 @@ namespace BreakingChangesDetector.BreakingChanges.Formatting
         private static string GetTypeDisplayName(ITypedItem item) =>
             item.IsTypeDynamic ? Utilities.DynamicTypeName : item.Type.DisplayName;
 
-        #endregion // Private Methods
-
-        #endregion // Methods
-
-        #region Properties
-
         /// <summary>
         /// Gets the formatting to use with the item.
         /// </summary>
@@ -180,7 +158,5 @@ namespace BreakingChangesDetector.BreakingChanges.Formatting
         /// Gets the text to format with the item.
         /// </summary>
         public string Text { get; }
-
-        #endregion // Properties
     }
 }

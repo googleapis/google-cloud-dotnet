@@ -30,8 +30,6 @@ namespace BreakingChangesDetector.UnitTests.MetadataTypesTests
 {
     public class ConstructorDataTests
     {
-        #region ConstructorDataAccessibilityTest
-
         [Fact]
         public void ConstructorDataAccessibilityTest()
         {
@@ -45,10 +43,6 @@ namespace BreakingChangesDetector.UnitTests.MetadataTypesTests
             AssertX.Equal(MemberAccessibility.Protected, ((ConstructorData)members[2]).Accessibility, "Incorrect MemberAccessibility.");
         }
 
-        #endregion // ConstructorDataAccessibilityTest
-
-        #region ConstructorDataDeclaringTypeTest
-
         [Fact]
         public void ConstructorDataDeclaringTypeTest()
         {
@@ -59,10 +53,6 @@ namespace BreakingChangesDetector.UnitTests.MetadataTypesTests
             AssertX.Equal(typeData, constructor.ContainingType, "The DeclaringType of a member should be the type in which it is defined.");
         }
 
-        #endregion // ConstructorDataDeclaringTypeTest
-
-        #region ConstructorDataNameTest
-
         [Fact]
         public void ConstructorDataNameTest()
         {
@@ -72,10 +62,6 @@ namespace BreakingChangesDetector.UnitTests.MetadataTypesTests
             var constructor = typeData.GetMembers(".ctor")[0];
             AssertX.Equal(".ctor", constructor.Name, "The Name of the member is incorrect.");
         }
-
-        #endregion // ConstructorDataNameTest
-
-        #region ConstructorDataParametersTest
 
         [Fact]
         public void ConstructorDataParametersTest()
@@ -89,7 +75,5 @@ namespace BreakingChangesDetector.UnitTests.MetadataTypesTests
             AssertX.Equal(2, ((ConstructorData)members[1]).Parameters.Count, "The protected constructor has the wrong number of parameters.");
             AssertX.Equal(3, ((ConstructorData)members[2]).Parameters.Count, "The protected internal constructor has the wrong number of parameters.");
         }
-
-        #endregion // ConstructorDataParametersTest
     }
 }

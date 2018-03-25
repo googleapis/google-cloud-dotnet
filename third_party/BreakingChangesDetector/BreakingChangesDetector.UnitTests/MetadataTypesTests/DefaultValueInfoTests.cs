@@ -30,8 +30,6 @@ namespace BreakingChangesDetector.UnitTests.MetadataTypesTests
 {
     public class DefaultValueInfoTests
     {
-        #region NullableBoolDefaultValueTests
-
         [Fact]
         public void NullableBoolDefaultValueTests()
         {
@@ -42,10 +40,6 @@ namespace BreakingChangesDetector.UnitTests.MetadataTypesTests
             Assert.Null(method.Parameters[0].DefaultValue);
             Assert.Equal(true, method.Parameters[1].DefaultValue);
         }
-
-        #endregion // NullableBoolDefaultValueTests
-
-        #region NullableDecimalDefaultValueTests
 
         [Fact]
         public void NullableDecimalDefaultValueTests()
@@ -58,10 +52,6 @@ namespace BreakingChangesDetector.UnitTests.MetadataTypesTests
             Assert.Equal(0m, method.Parameters[1].DefaultValue);
         }
 
-        #endregion // NullableDecimalDefaultValueTests
-
-        #region NullableEnumDefaultValueTests
-
         [Fact]
         public void NullableEnumDefaultValueTests()
         {
@@ -73,10 +63,6 @@ namespace BreakingChangesDetector.UnitTests.MetadataTypesTests
             Assert.Equal((ulong)DateTimeKind.Local, method.Parameters[1].DefaultValue);
         }
 
-        #endregion // NullableEnumDefaultValueTests
-
-        #region NullableIntDefaultValueTests
-
         [Fact]
         public void NullableIntDefaultValueTests()
         {
@@ -87,8 +73,6 @@ namespace BreakingChangesDetector.UnitTests.MetadataTypesTests
             Assert.Null(method.Parameters[0].DefaultValue);
             Assert.Equal(0, method.Parameters[1].DefaultValue);
         }
-
-        #endregion // NullableIntDefaultValueTests
 
         public class MethodWithDefaultValues
         {

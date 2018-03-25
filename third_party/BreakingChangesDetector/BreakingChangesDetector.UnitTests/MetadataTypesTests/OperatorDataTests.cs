@@ -30,8 +30,6 @@ namespace BreakingChangesDetector.UnitTests.MetadataTypesTests
 {
     public class OperatorDataTests
     {
-        #region OperatorDataAccessibilityTest
-
         [Fact]
         public void OperatorDataAccessibilityTest()
         {
@@ -41,10 +39,6 @@ namespace BreakingChangesDetector.UnitTests.MetadataTypesTests
             var member = typeData.GetMember("op_Addition");
             AssertX.Equal(MemberAccessibility.Public, member.Accessibility, "Incorrect Accessibility");
         }
-
-        #endregion // OperatorDataAccessibilityTest
-
-        #region OperatorDataAllOperatorsTest
 
         [Fact]
         public void OperatorDataAllOperatorsTest()
@@ -81,10 +75,6 @@ namespace BreakingChangesDetector.UnitTests.MetadataTypesTests
             Assert.NotNull(typeData.GetMember("op_False"));
         }
 
-        #endregion // OperatorDataAllOperatorsTest
-
-        #region OperatorDataDeclaringTypeTest
-
         [Fact]
         public void OperatorDataDeclaringTypeTest()
         {
@@ -94,10 +84,6 @@ namespace BreakingChangesDetector.UnitTests.MetadataTypesTests
             var method = typeData.GetMember("op_Addition");
             AssertX.Equal(typeData, method.ContainingType, "The DeclaringType of a member should be the type in which it is defined.");
         }
-
-        #endregion // OperatorDataDeclaringTypeTest
-
-        #region OperatorDataNameTest
 
         [Fact]
         public void OperatorDataNameTest()
@@ -109,10 +95,6 @@ namespace BreakingChangesDetector.UnitTests.MetadataTypesTests
             AssertX.Equal("op_Addition", method.Name, "The Name of the member is incorrect.");
         }
 
-        #endregion // OperatorDataNameTest
-
-        #region OperatorDataParametersTest
-
         [Fact]
         public void OperatorDataParametersTest()
         {
@@ -122,10 +104,6 @@ namespace BreakingChangesDetector.UnitTests.MetadataTypesTests
             var method = (OperatorData)typeData.GetMember("op_Addition");
             AssertX.Equal(2, method.Parameters.Count, "The public method has the wrong number of parameters.");
         }
-
-        #endregion // OperatorDataParametersTest
-
-        #region OperatorDataTypeTest
 
         [Fact]
         public void OperatorDataTypeTest()
@@ -138,7 +116,5 @@ namespace BreakingChangesDetector.UnitTests.MetadataTypesTests
             var method = (OperatorData)typeData.GetMember("op_Addition");
             AssertX.Equal(typeData, method.Type, "The Type of the member is incorrect.");
         }
-
-        #endregion // OperatorDataTypeTest
     }
 }

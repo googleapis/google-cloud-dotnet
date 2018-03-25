@@ -30,8 +30,6 @@ namespace BreakingChangesDetector.UnitTests.MetadataTypesTests
 {
     public class PropertyDataTests
     {
-        #region PropertyDataAccessibilityTest
-
         [Fact]
         public void PropertyDataAccessibilityTest()
         {
@@ -49,10 +47,6 @@ namespace BreakingChangesDetector.UnitTests.MetadataTypesTests
             AssertX.Equal(MemberAccessibility.Public, member.Accessibility, "Incorrect MemberAccessibility.");
         }
 
-        #endregion // PropertyDataAccessibilityTest
-
-        #region PropertyDataDeclaringTypeTest
-
         [Fact]
         public void PropertyDataDeclaringTypeTest()
         {
@@ -62,10 +56,6 @@ namespace BreakingChangesDetector.UnitTests.MetadataTypesTests
             var member = (PropertyData)typeData.GetMember("PropertyReadOnly");
             AssertX.Equal(typeData, member.ContainingType, "The DeclaringType of a member should be the type in which it is defined.");
         }
-
-        #endregion // PropertyDataDeclaringTypeTest
-
-        #region PropertyDataMemberFlagsTest
 
         [Fact]
         public void PropertyDataMemberFlagsTest()
@@ -96,10 +86,6 @@ namespace BreakingChangesDetector.UnitTests.MetadataTypesTests
             AssertX.Equal(MemberFlags.Override | MemberFlags.Abstract, eventData.MemberFlags, "The Flags value of the member is wrong.");
         }
 
-        #endregion // PropertyDataMemberFlagsTest
-
-        #region PropertyDataGetMethodAccessibilityTest
-
         [Fact]
         public void PropertyDataGetMethodAccessibilityTest()
         {
@@ -117,10 +103,6 @@ namespace BreakingChangesDetector.UnitTests.MetadataTypesTests
             AssertX.Equal(MemberAccessibility.Public, member.GetMethodAccessibility, "The GetMethodAccessibility of the read write property is incorrect.");
         }
 
-        #endregion // PropertyDataGetMethodAccessibilityTest
-
-        #region PropertyDataNameTest
-
         [Fact]
         public void PropertyDataNameTest()
         {
@@ -131,10 +113,6 @@ namespace BreakingChangesDetector.UnitTests.MetadataTypesTests
             var member = (PropertyData)typeData.GetMember("PropertyReadOnly");
             AssertX.Equal("PropertyReadOnly", member.Name, "The Name of the member is incorrect.");
         }
-
-        #endregion // PropertyDataNameTest
-
-        #region PropertyDataSetMethodAccessibilityTest
 
         [Fact]
         public void PropertyDataSetMethodAccessibilityTest()
@@ -153,10 +131,6 @@ namespace BreakingChangesDetector.UnitTests.MetadataTypesTests
             AssertX.Equal(MemberAccessibility.Protected, member.SetMethodAccessibility, "The SetMethodAccessibility of the read write property is incorrect.");
         }
 
-        #endregion // PropertyDataSetMethodAccessibilityTest
-
-        #region PropertyDataTypeTest
-
         [Fact]
         public void PropertyDataTypeTest()
         {
@@ -167,7 +141,5 @@ namespace BreakingChangesDetector.UnitTests.MetadataTypesTests
             var objectType = context.GetTypeDefinitionData<object>();
             AssertX.Equal(objectType, member.Type, "The Type of the member is incorrect.");
         }
-
-        #endregion // PropertyDataTypeTest
     }
 }

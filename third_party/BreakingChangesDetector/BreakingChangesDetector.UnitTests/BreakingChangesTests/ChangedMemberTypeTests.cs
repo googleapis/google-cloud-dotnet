@@ -32,8 +32,6 @@ namespace BreakingChangesDetector.UnitTests.BreakingChangesTests
 {
     public class ChangedMemberTypeTests
     {
-        #region ChangeVoidToNonVoidAllowedTest
-
         [Fact]
         public void ChangeVoidToNonVoidAllowedTest()
         {
@@ -54,10 +52,6 @@ namespace BreakingChangesDetector.UnitTests.BreakingChangesTests
         }
 
         public class MethodWithVoidReturn { public void Method() { } }
-
-        #endregion // ChangeVoidToNonVoidAllowedTest
-
-        #region ConstantTests
 
         [Fact]
         public void ConstantTests()
@@ -81,10 +75,6 @@ namespace BreakingChangesDetector.UnitTests.BreakingChangesTests
             AssertX.Null(breakingChanges[0].AssociatedData, "The AssociatedData is incorrect.");
         }
 
-        #endregion // ConstantTests
-
-        #region EventTests
-
         [Fact]
         public void EventTests()
         {
@@ -106,10 +96,6 @@ namespace BreakingChangesDetector.UnitTests.BreakingChangesTests
             AssertX.Equal(EventWithIntReturn.GetMember("Event"), breakingChanges[0].NewItem, "The NewItem is incorrect.");
             AssertX.Null(breakingChanges[0].AssociatedData, "The AssociatedData is incorrect.");
         }
-
-        #endregion // EventTests
-
-        #region FieldTests
 
         [Fact]
         public void FieldTests()
@@ -162,10 +148,6 @@ namespace BreakingChangesDetector.UnitTests.BreakingChangesTests
             AssertX.Null(breakingChanges[0].AssociatedData, "The AssociatedData is incorrect.");
         }
 
-        #endregion // FieldTests
-
-        #region IndexerTests
-
         [Fact]
         public void IndexerTests()
         {
@@ -208,10 +190,6 @@ namespace BreakingChangesDetector.UnitTests.BreakingChangesTests
             AssertX.Equal(IndexerWithStringReturn.GetMember("Item"), breakingChanges[0].NewItem, "The NewItem is incorrect.");
             AssertX.Null(breakingChanges[0].AssociatedData, "The AssociatedData is incorrect.");
         }
-
-        #endregion // IndexerTests
-
-        #region MethodTests
 
         [Fact]
         public void MethodTests()
@@ -256,10 +234,6 @@ namespace BreakingChangesDetector.UnitTests.BreakingChangesTests
             AssertX.Null(breakingChanges[0].AssociatedData, "The AssociatedData is incorrect.");
         }
 
-        #endregion // MethodTests
-
-        #region NestedTypeTests
-
         [Fact]
         public void NestedTypeTests()
         {
@@ -302,10 +276,6 @@ namespace BreakingChangesDetector.UnitTests.BreakingChangesTests
             AssertX.Equal(nestedDelegateWithStringReturn.GetMember("Delegate"), breakingChanges[0].NewItem, "The NewItem is incorrect.");
             AssertX.Null(breakingChanges[0].AssociatedData, "The AssociatedData is incorrect.");
         }
-
-        #endregion // NestedTypeTests
-
-        #region OperatorTests
 
         [Fact]
         public void OperatorTests()
@@ -356,10 +326,6 @@ namespace BreakingChangesDetector.UnitTests.BreakingChangesTests
             AssertX.Null(breakingChanges[0].AssociatedData, "The AssociatedData is incorrect.");
         }
 
-        #endregion // OperatorTests
-
-        #region PropertyTests
-
         [Fact]
         public void PropertyTests()
         {
@@ -402,10 +368,6 @@ namespace BreakingChangesDetector.UnitTests.BreakingChangesTests
             AssertX.Equal(PropertyWithStringReturn.GetMember("Property"), breakingChanges[0].NewItem, "The NewItem is incorrect.");
             AssertX.Null(breakingChanges[0].AssociatedData, "The AssociatedData is incorrect.");
         }
-
-        #endregion // PropertyTests
-
-        #region ReturnTypeCovarianceTests
 
         [Fact]
         public void ReturnTypeCovarianceTests()
@@ -459,10 +421,6 @@ namespace BreakingChangesDetector.UnitTests.BreakingChangesTests
             AssertX.Null(breakingChanges[0].AssociatedData, "The AssociatedData is incorrect.");
         }
 
-        #endregion // ReturnTypeCovarianceTests
-
-        #region TypeTests
-
         [Fact]
         public void TypeTests()
         {
@@ -506,8 +464,6 @@ namespace BreakingChangesDetector.UnitTests.BreakingChangesTests
             AssertX.Null(breakingChanges[0].AssociatedData, "The AssociatedData is incorrect.");
         }
 
-        #endregion // TypeTests
-
         public class NestedDelegateWithIntReturn { public delegate int Delegate(); }
         public class NestedDelegateWithStringReturn { public delegate string Delegate(); }
         public class NestedDelegateWithDynamicReturn { public delegate dynamic Delegate(); }
@@ -526,7 +482,6 @@ namespace BreakingChangesDetector.UnitTests.BreakingChangesTests
 
         public class ReturnBase { }
         public class ReturnDerived : ReturnBase { }
-
 
         public class ConstantWithIntReturn { public const int Constant = 0; }
         public class ConstantWithStringReturn { public const string Constant = "X"; }

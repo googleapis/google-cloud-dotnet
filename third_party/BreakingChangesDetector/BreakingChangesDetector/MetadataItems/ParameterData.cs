@@ -35,13 +35,7 @@ namespace BreakingChangesDetector.MetadataItems
     public sealed class ParameterData : MetadataItemBase,
         ITypedItem
     {
-        #region Member Variables
-
         private readonly InternalFlags _flags; // TODO_Serialize: round trip and test
-
-        #endregion // Member Variables
-
-        #region Constructor
 
         internal ParameterData(MetadataItemKinds declaringMemberKind, string name, TypeData type, ParameterModifier modifer, InternalFlags flags, object defaultValue)
         {
@@ -98,33 +92,19 @@ namespace BreakingChangesDetector.MetadataItems
             }
         }
 
-        #endregion // Constructor
-
-        #region Base Class Overrides
-
-        #region Accept
-
         /// <summary>
         /// Performs the specified visitor's functionality on this instance.
         /// </summary>
         /// <param name="visitor">The visitor whose functionality should be performed on the instance.</param>
         public override void Accept(MetadataItemVisitor visitor) => visitor.VisitParameterData(this);
 
-        #endregion // Accept
-
         // TODO_Refactor: Can we get away with this not storing the context? The parameter would need to store its owning member.
         public override MetadataResolutionContext Context { get; }
-
-        #region DisplayName
 
         /// <summary>
         /// Gets the name to use for this item in messages.
         /// </summary>
         public override string DisplayName => Name;
-
-        #endregion // DisplayName
-
-        #region DoesMatch
 
         internal override bool DoesMatch(MetadataItemBase other)
         {
@@ -172,16 +152,6 @@ namespace BreakingChangesDetector.MetadataItems
             return true;
         }
 
-        #endregion // DoesMatch
-
-        #endregion // Base Class Overrides
-
-        #region Methods
-
-        #region Internal Methods
-
-        #region GetDefaultValueDisplayText
-
         internal string GetDefaultValueDisplayText()
         {
             if (IsOptional == false)
@@ -207,10 +177,6 @@ namespace BreakingChangesDetector.MetadataItems
 
             return value.ToString();
         }
-
-        #endregion // GetDefaultValueDisplayText
-
-        #region GetParameterListDisplayText
 
         internal string GetParameterListDisplayText()
         {
@@ -252,41 +218,24 @@ namespace BreakingChangesDetector.MetadataItems
             return typeName;
         }
 
-        #endregion // GetParameterListDisplayText
-
-        #region IsEquivalentTo
-
-#if DEBUG
         /// <summary>
         /// Indicates whether the two parameter is equivalent to the specified parameter, meaning it has the same type and modifiers (name and default value are ignored).
         /// </summary> 
-#endif
         internal bool IsEquivalentTo(ParameterData other) =>
             IsTypeDynamic == other.IsTypeDynamic &&
             IsParamsArray == other.IsParamsArray &&
             Modifer == other.Modifer &&
             Type == other.Type;
 
-        #endregion // IsEquivalentTo
-
-        #region IsEquivalentToNewParameter
-
-#if DEBUG
         /// <summary>
         /// Indicates whether a new parameter of the same type and name is logically the same member as the current parameter, just from a newer build.
         /// </summary> 
-#endif
         internal bool IsEquivalentToNewParameter(ParameterData newParameter, AssemblyFamily newAssemblyFamily) =>
             IsTypeDynamic == newParameter.IsTypeDynamic &&
             IsParamsArray == newParameter.IsParamsArray &&
             Modifer == newParameter.Modifer &&
             Type.IsEquivalentToNew(newParameter.Type, newAssemblyFamily);
 
-        #endregion // IsEquivalentToNewParameter
-
-        #region ReplaceGenericTypeParameters
-
-#if DEBUG
         /// <summary>
         /// Replaces all type parameters used by the member with their associated generic arguments specified in a constructed generic type.
         /// </summary>
@@ -294,7 +243,6 @@ namespace BreakingChangesDetector.MetadataItems
         /// <param name="genericParameters">The generic parameters being replaced.</param>
         /// <param name="genericArguments">The generic arguments replacing the parameters.</param>
         /// <returns>A new member with the replaced type parameters or the current instance if the member does not use any of the generic parameters.</returns> 
-#endif
         internal ParameterData ReplaceGenericTypeParameters(MetadataItemKinds declaringMemberKind, GenericTypeParameterCollection genericParameters, GenericTypeArgumentCollection genericArguments)
         {
             var replacedType = (TypeData)Type.ReplaceGenericTypeParameters(genericParameters, genericArguments);
@@ -306,23 +254,7 @@ namespace BreakingChangesDetector.MetadataItems
             return new ParameterData(declaringMemberKind, Name, replacedType, Modifer, _flags, DefaultValue);
         }
 
-        #endregion // ReplaceGenericTypeParameters
-
-        #endregion // Internal Methods
-
-        #region Private Methods
-
-        #region GetFlag
-
         private bool GetFlag(InternalFlags flag) => (_flags & flag) == flag;
-
-        #endregion // GetFlag
-
-        #endregion // Private Methods
-
-        #endregion // Methods
-
-        #region Properties
 
         /// <summary>
         /// Gets the type of member owning the parameter collection.
@@ -371,11 +303,6 @@ namespace BreakingChangesDetector.MetadataItems
         /// </summary>
         public TypeData Type { get; }
 
-        #endregion // Properties
-
-
-        #region InternalFlags enum
-
         [Flags]
         internal enum InternalFlags : byte
         {
@@ -383,7 +310,5 @@ namespace BreakingChangesDetector.MetadataItems
             IsParamsArray = 1 << 1,
             IsTypeDynamic = 1 << 2,
         }
-
-        #endregion // InternalFlags enum
     }
 }

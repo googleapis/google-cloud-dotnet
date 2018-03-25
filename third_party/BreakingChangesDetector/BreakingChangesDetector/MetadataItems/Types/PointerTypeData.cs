@@ -36,7 +36,6 @@ namespace BreakingChangesDetector.MetadataItems
         internal PointerTypeData(string name, MemberAccessibility accessibility, MemberFlags memberFlags, TypeKind typeKind, TypeData elementType)
             : base(name, accessibility, memberFlags, typeKind, elementType) { }
 
-#if DEBUG
         /// <summary>
         /// Gets the types to which this type can implicitly convert. For type hierarchy conversions, only the direct base type will be enumerated.
         /// Ancestor base types will can be enumerated recursively by calling this method on the base type.
@@ -47,7 +46,6 @@ namespace BreakingChangesDetector.MetadataItems
         /// <returns>
         /// A collection of all types to which this type can convert explicitly, except for ancestor base types which are not the direct base type.
         /// </returns> 
-#endif
         internal override IEnumerable<TypeData> GetDirectImplicitConversions(bool onlyReferenceAndIdentityConversions)
         {
             yield break;
@@ -62,32 +60,24 @@ namespace BreakingChangesDetector.MetadataItems
         public override string GetDisplayName(bool fullyQualify = true, bool includeGenericInfo = true) =>
             ElementType.GetDisplayName(fullyQualify, includeGenericInfo) + '*';
 
-#if DEBUG
         /// <summary>
         /// Gets the type equivalent to this one which is from a newer assembly.
         /// </summary>
         /// <param name="newAssemblyFamily">The assembly family in which new assemblies reside.</param>
-#endif
         internal override TypeData GetEquivalentNewType(AssemblyFamily newAssemblyFamily) =>
             ElementType.GetEquivalentNewType(newAssemblyFamily)?.GetPointerType();
-
-        #region MetadataItemKind
 
         /// <summary>
         /// Gets the type of item the instance represents.
         /// </summary>
         public override MetadataItemKinds MetadataItemKind => MetadataItemKinds.PointerType;
 
-        #endregion // MetadataItemKind
-
-#if DEBUG
         /// <summary>
         /// Replaces all type parameters used by the member with their associated generic arguments specified in a constructed generic type.
         /// </summary>
         /// <param name="genericParameters">The generic parameters being replaced.</param>
         /// <param name="genericArguments">The generic arguments replacing the parameters.</param>
         /// <returns>A new member with the replaced type parameters or the current instance if the member does not use any of the generic parameters.</returns> 
-#endif
         internal override MemberDataBase ReplaceGenericTypeParameters(GenericTypeParameterCollection genericParameters, GenericTypeArgumentCollection genericArguments)
         {
             var replacedElementType = (TypeData)ElementType.ReplaceGenericTypeParameters(genericParameters, genericArguments);

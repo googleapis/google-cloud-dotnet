@@ -30,8 +30,6 @@ namespace BreakingChangesDetector.UnitTests.BreakingChangesTests
 {
     public class ChangedAccessibilityFromPublicToProtectedTests
     {
-        #region ConstantTests
-
         [Fact]
         public void ConstantTests()
         {
@@ -66,10 +64,6 @@ namespace BreakingChangesDetector.UnitTests.BreakingChangesTests
             breakingChanges = MetadataComparer.CompareTypes(protectedInternalConstant, protectedConstant);
             AssertX.Equal(0, breakingChanges.Count, "There should be no breaking changes when a constant is changed from protected internal to protected");
         }
-
-        #endregion // ConstantTests
-
-        #region ConstructorTests
 
         [Fact]
         public void ConstructorTests()
@@ -106,10 +100,6 @@ namespace BreakingChangesDetector.UnitTests.BreakingChangesTests
             AssertX.Equal(0, breakingChanges.Count, "There should be no breaking changes when a constructor is changed from protected internal to protected");
         }
 
-        #endregion // ConstructorTests
-
-        #region EventTests
-
         [Fact]
         public void EventTests()
         {
@@ -144,10 +134,6 @@ namespace BreakingChangesDetector.UnitTests.BreakingChangesTests
             breakingChanges = MetadataComparer.CompareTypes(protectedInternalEvent, protectedEvent);
             AssertX.Equal(0, breakingChanges.Count, "There should be no breaking changes when a event is changed from protected internal to protected");
         }
-
-        #endregion // EventTests
-
-        #region FieldTests
 
         [Fact]
         public void FieldTests()
@@ -184,10 +170,6 @@ namespace BreakingChangesDetector.UnitTests.BreakingChangesTests
             AssertX.Equal(0, breakingChanges.Count, "There should be no breaking changes when a field is changed from protected internal to protected");
         }
 
-        #endregion // FieldTests
-
-        #region IndexerTests
-
         [Fact]
         public void IndexerTests()
         {
@@ -222,10 +204,6 @@ namespace BreakingChangesDetector.UnitTests.BreakingChangesTests
             breakingChanges = MetadataComparer.CompareTypes(protectedInternalIndexer, protectedIndexer);
             AssertX.Equal(0, breakingChanges.Count, "There should be no breaking changes when a indexer is changed from protected internal to protected");
         }
-
-        #endregion // IndexerTests
-
-        #region MethodTests
 
         [Fact]
         public void MethodTests()
@@ -262,10 +240,6 @@ namespace BreakingChangesDetector.UnitTests.BreakingChangesTests
             AssertX.Equal(0, breakingChanges.Count, "There should be no breaking changes when a method is changed from protected internal to protected");
         }
 
-        #endregion // MethodTests
-
-        #region PropertyTests
-
         [Fact]
         public void PropertyTests()
         {
@@ -301,10 +275,6 @@ namespace BreakingChangesDetector.UnitTests.BreakingChangesTests
             AssertX.Equal(0, breakingChanges.Count, "There should be no breaking changes when a property is changed from protected internal to protected");
         }
 
-        #endregion // PropertyTests
-
-        #region TypeTests
-
         [Fact]
         public void TypeTests()
         {
@@ -339,7 +309,5 @@ namespace BreakingChangesDetector.UnitTests.BreakingChangesTests
             breakingChanges = MetadataComparer.CompareTypes(protectedInternalNestedType, protectedNestedType);
             AssertX.Equal(0, breakingChanges.Count, "There should be no breaking changes when a nested type is changed from protected internal to protected");
         }
-
-        #endregion // TypeTests
     }
 }

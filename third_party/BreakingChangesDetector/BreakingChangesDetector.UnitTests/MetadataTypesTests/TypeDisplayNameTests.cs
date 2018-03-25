@@ -31,8 +31,6 @@ namespace BreakingChangesDetector.UnitTests.MetadataTypesTests
 {
     public class TypeDisplayNameTests
     {
-        #region ConstructedGenericTypeDataTests
-
         [Fact]
         public void ConstructedGenericTypeDataTests()
         {
@@ -44,10 +42,6 @@ namespace BreakingChangesDetector.UnitTests.MetadataTypesTests
             Assert.Equal("int?", context.GetTypeData<Nullable<int>>().DisplayName);
         }
 
-        #endregion // ConstructedGenericTypeDataTests
-
-        #region GenericTypeParameterDataTests
-
         [Fact]
         public void GenericTypeParameterDataTests()
         {
@@ -57,10 +51,6 @@ namespace BreakingChangesDetector.UnitTests.MetadataTypesTests
             Assert.Equal("TValue", context.GetTypeDefinitionData(typeof(Dictionary<,>)).GenericParameters[1].DisplayName);
         }
 
-        #endregion // GenericTypeParameterDataTests
-
-        #region TypeDefinitionDataTests
-
         [Fact]
         public void TypeDefinitionDataTests()
         {
@@ -68,10 +58,6 @@ namespace BreakingChangesDetector.UnitTests.MetadataTypesTests
             Assert.Equal("object", context.GetTypeData<object>().DisplayName);
             Assert.Equal("System.Collections.Generic.IEnumerable<out T>", context.GetTypeData(typeof(IEnumerable<>)).DisplayName);
         }
-
-        #endregion // TypeDefinitionDataTests
-
-        #region TypeWithElementDataTest
 
         [Fact]
         public void TypeWithElementDataTest()
@@ -86,8 +72,6 @@ namespace BreakingChangesDetector.UnitTests.MetadataTypesTests
             method = typeof(TestMethods).GetMethod("Method3");
             Assert.Equal("byte***", context.GetTypeData(method.GetParameters()[0].ParameterType).DisplayName);
         }
-
-        #endregion // TypeWithElementDataTest
 
         private class TestMethods
         {

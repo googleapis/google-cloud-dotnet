@@ -30,8 +30,6 @@ namespace BreakingChangesDetector.UnitTests.MetadataTypesTests
 {
     public class FieldDataTests
     {
-        #region FieldDataAccessibilityTest
-
         [Fact]
         public void FieldDataAccessibilityTest()
         {
@@ -40,10 +38,6 @@ namespace BreakingChangesDetector.UnitTests.MetadataTypesTests
             var typeData = context.GetTypeDefinitionData(t);
             TestUtilities.VerifyAccessibility(typeData, "FieldInstance");
         }
-
-        #endregion // FieldDataAccessibilityTest
-
-        #region FieldDataDeclaringTypeTest
 
         [Fact]
         public void FieldDataDeclaringTypeTest()
@@ -54,10 +48,6 @@ namespace BreakingChangesDetector.UnitTests.MetadataTypesTests
             var field = typeData.GetMember("FieldInstance");
             AssertX.Equal(typeData, field.ContainingType, "The DeclaringType of a member should be the type in which it is defined.");
         }
-
-        #endregion // FieldDataDeclaringTypeTest
-
-        #region FieldDataIsReadOnlyTest
 
         [Fact]
         public void FieldDataIsReadOnlyTest()
@@ -75,10 +65,6 @@ namespace BreakingChangesDetector.UnitTests.MetadataTypesTests
             Assert.True(field.IsReadOnly, "The IsReadOnly of the member is incorrect.");
         }
 
-        #endregion // FieldDataIsReadOnlyTest
-
-        #region FieldDataMemberFlagsTest
-
         [Fact]
         public void FieldDataMemberFlagsTest()
         {
@@ -93,10 +79,6 @@ namespace BreakingChangesDetector.UnitTests.MetadataTypesTests
             AssertX.Equal(MemberFlags.Static, field.MemberFlags, "The Flags value of the member is wrong.");
         }
 
-        #endregion // FieldDataMemberFlagsTest
-
-        #region FieldDataNameTest
-
         [Fact]
         public void FieldDataNameTest()
         {
@@ -106,10 +88,6 @@ namespace BreakingChangesDetector.UnitTests.MetadataTypesTests
             var field = typeData.GetMember("FieldInstance");
             AssertX.Equal("FieldInstance", field.Name, "The Name of the member is incorrect.");
         }
-
-        #endregion // FieldDataNameTest
-
-        #region FieldDataTypeTest
 
         [Fact]
         public void FieldDataTypeTest()
@@ -121,7 +99,5 @@ namespace BreakingChangesDetector.UnitTests.MetadataTypesTests
             var intType = context.GetTypeDefinitionData<int>();
             AssertX.Equal(intType, field.Type, "The Type of the member is incorrect.");
         }
-
-        #endregion // FieldDataTypeTest
     }
 }

@@ -28,11 +28,9 @@ using System.Linq;
 
 namespace BreakingChangesDetector.MetadataItems
 {
-#if DEBUG
     /// <summary>
     /// Represent the signature of a method which can be distinguished from other methods in the same assembly.
     /// </summary> 
-#endif
     internal class MethodSignature
     {
         private readonly string _declaringTypeName;

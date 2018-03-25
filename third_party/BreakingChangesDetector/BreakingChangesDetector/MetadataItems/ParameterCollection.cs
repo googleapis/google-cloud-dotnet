@@ -88,11 +88,9 @@ namespace BreakingChangesDetector.MetadataItems
         public IEnumerator<ParameterData> GetEnumerator() =>
             _parameters.GetEnumerator();
 
-#if DEBUG
         /// <summary>
         /// Indicates whether the specified collection has the same parameter types and modifiers in the same order as the current collection.
         /// </summary> 
-#endif
         internal bool IsEquivalentTo(ParameterCollection other)
         {
             if (Count != other.Count)
@@ -111,7 +109,6 @@ namespace BreakingChangesDetector.MetadataItems
             return true;
         }
 
-#if DEBUG
         /// <summary>
         /// Indicates whether a new parameter collection is logically the same as the current parameter collection, just from a newer build.
         /// </summary>
@@ -120,7 +117,6 @@ namespace BreakingChangesDetector.MetadataItems
         /// <param name="ignoreNewOptionalParameters">
         /// Indicates whether to ignore any new parameters at the end of the collection which are optional when comparing.
         /// </param>
-#endif
         internal bool IsEquivalentToNewParameters(ParameterCollection newParameters, AssemblyFamily newAssemblyFamily, bool ignoreNewOptionalParameters)
         {
             if (ignoreNewOptionalParameters)
@@ -196,7 +192,6 @@ namespace BreakingChangesDetector.MetadataItems
             return sb.ToString();
         }
 
-#if DEBUG
         /// <summary>
         /// Replaces all type parameters used by the member with their associated generic arguments specified in a constructed generic type.
         /// </summary>
@@ -204,7 +199,6 @@ namespace BreakingChangesDetector.MetadataItems
         /// <param name="genericParameters">The generic parameters being replaced.</param>
         /// <param name="genericArguments">The generic arguments replacing the parameters.</param>
         /// <returns>A new member with the replaced type parameters or the current instance if the member does not use any of the generic parameters.</returns> 
-#endif
         internal ParameterCollection ReplaceGenericTypeParameters(MetadataItemKinds declaringMemberKind, GenericTypeParameterCollection genericParameters, GenericTypeArgumentCollection genericArguments)
         {
             ParameterCollection replacedParameters = null;

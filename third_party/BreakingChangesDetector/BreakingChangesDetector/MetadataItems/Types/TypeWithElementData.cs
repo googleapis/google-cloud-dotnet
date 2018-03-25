@@ -68,26 +68,20 @@ namespace BreakingChangesDetector.MetadataItems
             return true;
         }
 
-#if DEBUG
         /// <summary>
         /// Gets the <see cref="AssemblyFamily"/> containing the type. If the type is nullable and type with element, 
         /// such as T?, T[], or T*, this returns the family containing the type T.
         /// </summary> 
-#endif
         internal override AssemblyFamily GetDefiningAssemblyFamily() => ElementType.GetDefiningAssemblyFamily();
 
-#if DEBUG
         /// <summary>
         /// Gets the name of the namespace in which the type is defined, or null if it is not defined in a namespace.
         /// </summary> 
-#endif
         internal override string GetNamespaceName() => ElementType.GetNamespaceName();
 
-#if DEBUG
         /// <summary>
         /// Indicates whether a new member of the same type and name is logically the same member as the current member, just from a newer build.
         /// </summary> 
-#endif
         internal override bool IsEquivalentToNewMember(MemberDataBase newMember, AssemblyFamily newAssemblyFamily)
         {
             if (base.IsEquivalentToNewMember(newMember, newAssemblyFamily) == false)

@@ -31,8 +31,6 @@ namespace BreakingChangesDetector.UnitTests.BreakingChangesTests
 {
     public class RemovedOverrideOfAbstractMemberTests
     {
-        #region EventTests
-
         [Fact]
         public void EventTests()
         {
@@ -62,10 +60,6 @@ namespace BreakingChangesDetector.UnitTests.BreakingChangesTests
             breakingChanges = MetadataComparer.CompareTypes(EventAbstractOverrideInternalConstructor, EventAbstractNoOverride);
             AssertX.Equal(0, breakingChanges.Count, "There should be no breaking changes when an override of an abstract member is removed and there are no externally visible constructors.");
         }
-
-        #endregion // EventTests
-
-        #region IndexerTests
 
         [Fact]
         public void IndexerTests()
@@ -97,10 +91,6 @@ namespace BreakingChangesDetector.UnitTests.BreakingChangesTests
             AssertX.Equal(0, breakingChanges.Count, "There should be no breaking changes when an override of an abstract member is removed and there are no externally visible constructors.");
         }
 
-        #endregion // IndexerTests
-
-        #region MethodTests
-
         [Fact]
         public void MethodTests()
         {
@@ -131,10 +121,6 @@ namespace BreakingChangesDetector.UnitTests.BreakingChangesTests
             AssertX.Equal(0, breakingChanges.Count, "There should be no breaking changes when an override of an abstract member is removed and there are no externally visible constructors.");
         }
 
-        #endregion // MethodTests
-
-        #region PropertyTests
-
         [Fact]
         public void PropertyTests()
         {
@@ -164,9 +150,6 @@ namespace BreakingChangesDetector.UnitTests.BreakingChangesTests
             breakingChanges = MetadataComparer.CompareTypes(PropertyAbstractOverrideInternalConstructor, PropertyAbstractNoOverride);
             AssertX.Equal(0, breakingChanges.Count, "There should be no breaking changes when an override of an abstract member is removed and there are no externally visible constructors.");
         }
-
-        #endregion // PropertyTests
-
 
 #pragma warning disable 0067
         public abstract class EventVirtual { public virtual event EventHandler Event; }

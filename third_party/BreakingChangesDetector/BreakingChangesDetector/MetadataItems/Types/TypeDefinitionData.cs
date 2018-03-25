@@ -41,8 +41,6 @@ namespace BreakingChangesDetector.MetadataItems
         IParameterizedItem,
         ITypedItem
     {
-        #region Static Variables
-
         private static Dictionary<string, HashSet<string>> _implicitNumericConversions = new Dictionary<string, HashSet<string>>() {
             { typeof(sbyte).FullName, new HashSet<string> { typeof(short).FullName, typeof(int).FullName, typeof(long).FullName, typeof(float).FullName, typeof(double).FullName, typeof(decimal).FullName } },
             { typeof(byte).FullName, new HashSet<string> { typeof(short).FullName, typeof(ushort).FullName, typeof(int).FullName, typeof(uint).FullName, typeof(long).FullName, typeof(ulong).FullName, typeof(float).FullName, typeof(double).FullName, typeof(decimal).FullName } },
@@ -73,15 +71,7 @@ namespace BreakingChangesDetector.MetadataItems
             { typeof(void).FullName, "void" },
         };
 
-        #endregion // Static Variables
-
-        #region Member Variables
-
         private Dictionary<TypeDataSequence, ConstructedGenericTypeData> _constructedGenericTypes;
-
-        #endregion // Member Variables
-
-        #region Constructor
 
         internal TypeDefinitionData(string name, MemberAccessibility accessibility, MemberFlags memberFlags, TypeKind typeKind, AssemblyData assembly, string fullName, TypeDefinitionFlags typeDefinitionFlags, bool delegateReturnTypeIsDynamic)
             : base(name, accessibility, memberFlags, typeKind)
@@ -146,10 +136,6 @@ namespace BreakingChangesDetector.MetadataItems
             }
         }
 
-        #endregion // Constructor
-
-        #region Interfaces
-
         bool IParameterizedItem.IsEquivalentToNewMember(MemberDataBase newMember, AssemblyFamily newAssemblyFamily, bool ignoreNewOptionalParameters) =>
             IsEquivalentToNewTypeHelper((TypeDefinitionData)newMember, newAssemblyFamily, ignoreNewOptionalParameters);
 
@@ -159,47 +145,27 @@ namespace BreakingChangesDetector.MetadataItems
 
         TypeData ITypedItem.Type => DelegateReturnType;
 
-        #endregion // Interfaces
-
-        #region Base Class Overrides
-
-        #region Accept
-
         /// <summary>
         /// Performs the specified visitor's functionality on this instance.
         /// </summary>
         /// <param name="visitor">The visitor whose functionality should be performed on the instance.</param>
         public override void Accept(MetadataItemVisitor visitor) => visitor.VisitTypeDefinitionData(this);
 
-        #endregion // Accept
-
-        #region AssemblyData
-
         /// <summary>
         /// Gets the <see cref="T:AssemblyData"/> representing the assembly in which the type is defined.
         /// </summary>
         public override AssemblyData AssemblyData { get; }
 
-        #endregion // AssemblyData
-
-        #region CanOverrideMember
-
-#if DEBUG
         /// <summary>
         /// Indicates whether the current member can override the specified member from a base type.
         /// </summary>
         /// <param name="baseMember">The member from the base type.</param>
         /// <returns>True if the current member can override the base member; False otherwise.</returns> 
-#endif
         internal override bool CanOverrideMember(MemberDataBase baseMember)
         {
             Debug.Fail("Types cannot be overridden.");
             return false;
         }
-
-        #endregion // CanOverrideMember
-
-        #region DoesMatch
 
         internal override bool DoesMatch(MetadataItemBase other)
         {
@@ -242,22 +208,11 @@ namespace BreakingChangesDetector.MetadataItems
             return true;
         }
 
-        #endregion // DoesMatch
-
-        #region GenericArity
-
-#if DEBUG
         /// <summary>
         /// Gets the number of generic parameters/arguments for the type.
         /// </summary> 
-#endif
         internal override int GenericArity => GenericParameters.Count;
 
-        #endregion // GenericArity
-
-        #region GetDirectImplicitConversions
-
-#if DEBUG
         /// <summary>
         /// Gets the types to which this type can implicitly convert. For type hierarchy conversions, only the direct base type will be enumerated.
         /// Ancestor base types will can be enumerated recursively by calling this method on the base type.
@@ -268,7 +223,6 @@ namespace BreakingChangesDetector.MetadataItems
         /// <returns>
         /// A collection of all types to which this type can convert explicitly, except for ancestor base types which are not the direct base type.
         /// </returns> 
-#endif
         internal override IEnumerable<TypeData> GetDirectImplicitConversions(bool onlyReferenceAndIdentityConversions)
         {
             if (onlyReferenceAndIdentityConversions == false)
@@ -301,11 +255,6 @@ namespace BreakingChangesDetector.MetadataItems
             }
         }
 
-        #endregion // GetDirectImplicitConversions
-
-        #region GetDisplayName
-
-#if DEBUG
         /// <summary>
         /// Gets the display name for the type, which can be used for generating user-readable messages about the type.
         /// </summary>
@@ -316,7 +265,6 @@ namespace BreakingChangesDetector.MetadataItems
         /// for the nested type.
         /// </param>
         /// <returns>The display name of the type.</returns> 
-#endif
         internal override string GetDisplayName(bool fullyQualify, bool includeGenericInfo, GenericTypeArgumentCollection genericArguments)
         {
             if (_primitiveTypeNames.TryGetValue(FullName, out string primitiveTypeName))
@@ -348,16 +296,10 @@ namespace BreakingChangesDetector.MetadataItems
             return PostProcessUnqualifiedName(rootName, fullyQualify, includeGenericInfo, genericArguments);
         }
 
-        #endregion // GetDisplayName
-
-        #region GetEquivalentNewType
-
-#if DEBUG
         /// <summary>
         /// Gets the type equivalent to this one which is from a newer assembly.
         /// </summary>
         /// <param name="newAssemblyFamily">The assembly family in which new assemblies reside.</param>
-#endif
         internal override TypeData GetEquivalentNewType(AssemblyFamily newAssemblyFamily)
         {
             var newAssembly = newAssemblyFamily.GetEquivalentAssembly(AssemblyData);
@@ -401,15 +343,9 @@ namespace BreakingChangesDetector.MetadataItems
             return null;
         }
 
-        #endregion // GetEquivalentNewType
-
-        #region GetNamespaceName
-
-#if DEBUG
         /// <summary>
         /// Gets the name of the namespace in which the type is defined, or null if it is not defined in a namespace.
         /// </summary> 
-#endif
         internal override string GetNamespaceName()
         {
             if (_primitiveTypeNames.ContainsKey(FullName))
@@ -431,15 +367,9 @@ namespace BreakingChangesDetector.MetadataItems
             return string.Empty;
         }
 
-        #endregion // GetNamespaceName
-
-        #region IsEquivalentToNewMember
-
-#if DEBUG
         /// <summary>
         /// Indicates whether a new member of the same type and name is logically the same member as the current member, just from a newer build.
         /// </summary> 
-#endif
         internal override bool IsEquivalentToNewMember(MemberDataBase newMember, AssemblyFamily newAssemblyFamily)
         {
             var newType = newMember as TypeDefinitionData;
@@ -451,39 +381,19 @@ namespace BreakingChangesDetector.MetadataItems
             return IsEquivalentToNewTypeHelper(newType, newAssemblyFamily, ignoreNewOptionalParameters: false);
         }
 
-        #endregion // IsEquivalentToNewMember
-
-        #region MetadataItemKind
-
         /// <summary>
         /// Gets the type of item the instance represents.
         /// </summary>
         public override MetadataItemKinds MetadataItemKind => MetadataItemKinds.TypeDefinition;
 
-        #endregion // MetadataItemKind
-
-        #region ReplaceGenericTypeParameters
-
-#if DEBUG
         /// <summary>
         /// Replaces all type parameters used by the member with their associated generic arguments specified in a constructed generic type.
         /// </summary>
         /// <param name="genericParameters">The generic parameters being replaced.</param>
         /// <param name="genericArguments">The generic arguments replacing the parameters.</param>
         /// <returns>A new member with the replaced type parameters or the current instance if the member does not use any of the generic parameters.</returns> 
-#endif
         internal override MemberDataBase ReplaceGenericTypeParameters(GenericTypeParameterCollection genericParameters, GenericTypeArgumentCollection genericArguments) =>
             GenericParameters == genericParameters ? GetConstructedGenericTypeData(genericArguments) : (MemberDataBase)this;
-
-        #endregion // ReplaceGenericTypeParameters
-
-        #endregion // Base Class Overrides
-
-        #region Methods
-
-        #region Public Methods
-
-        #region GetNestedType
 
         /// <summary>
         /// Gets the single nested type with the specified name or null if no such nested type exists. If multiple nested types exist with the specified name, 
@@ -494,20 +404,10 @@ namespace BreakingChangesDetector.MetadataItems
         public TypeDefinitionData GetNestedType(string name) =>
             GetMembers(name).OfType<TypeDefinitionData>().SingleOrDefault();
 
-        #endregion // GetNestedType
-
-        #endregion // Public Methods
-
-        #region Internal Methods
-
-        #region FinalizeDefinition
-
-#if DEBUG
         /// <summary>
         /// Populates the type with additional information which can't be loaded when the type is created (due to potential circularities in item dependencies).
         /// </summary>
         /// <param name="underlyingTypeSymbol">The underlying type this instance represents.</param>
-#endif
         internal void FinalizeDefinition(INamedTypeSymbol underlyingTypeSymbol)
         {
             if (underlyingTypeSymbol.TypeKind == TypeKind.Enum)
@@ -549,25 +449,17 @@ namespace BreakingChangesDetector.MetadataItems
             Debug.Assert(_constructedGenericTypes == null || _constructedGenericTypes.Keys.All(t => t.Count == GenericParameters.Count), "A constructed generic has the wrong type arity.");
         }
 
-        #endregion // FinalizeDefinition
-
-        #region GetConstructedGenericTypeData
-
-#if DEBUG
         /// <summary>
         /// Gets a <see cref="ConstructedGenericTypeData"/> instance with the current type as its generic type definition and the specified sequence of type as its 
         /// generic type arguments.
         /// </summary>
-#endif
         internal ConstructedGenericTypeData GetConstructedGenericTypeData(IEnumerable<TypeData> typeArguments) =>
             GetConstructedGenericTypeData(new TypeDataSequence(typeArguments));
 
-#if DEBUG
         /// <summary>
         /// Gets a <see cref="ConstructedGenericTypeData"/> instance with the current type as its generic type definition and the specified sequence of type as its 
         /// generic type arguments.
         /// </summary>
-#endif
         internal ConstructedGenericTypeData GetConstructedGenericTypeData(TypeDataSequence typeArguments)
         {
             Debug.Assert(GenericParameters == null || GenericParameters.Count == typeArguments.Count, "The type arity does not match.");
@@ -586,22 +478,12 @@ namespace BreakingChangesDetector.MetadataItems
             return constructedGenericType;
         }
 
-        #endregion // GetConstructedGenericTypeData
-
-        #region IsType
-
-#if DEBUG
         /// <summary>
         /// Indicates whether the specified type is represented by the current <see cref="TypeDefinitionData"/> instance.
         /// </summary> 
-#endif
         internal bool IsType(Type type) =>
             FullName == type.FullName &&
             AssemblyData.Name == type.Assembly.GetName().Name;
-
-        #endregion // IsType
-
-        #region PopulateMembers
 
         internal void PopulateMembers(INamedTypeSymbol underlyingTypeSymbol)
         {
@@ -611,16 +493,10 @@ namespace BreakingChangesDetector.MetadataItems
             }
         }
 
-        #endregion // PopulateMembers
-
-        #region RegisterConstructedGenericTypeData
-
-#if DEBUG
         /// <summary>
         /// Registers a <see cref="ConstructedGenericTypeData"/> instance with the current type as its generic type definition so it can be cached and re-used when trying 
         /// to get a constructed generic type with the same type arguments.
         /// </summary>
-#endif
         internal void RegisterConstructedGenericTypeData(ConstructedGenericTypeData constructedGenericType)
         {
             Debug.Assert(GenericParameters == null || GenericParameters.Count == constructedGenericType.GenericArguments.Count, "The type arity does not match.");
@@ -635,15 +511,6 @@ namespace BreakingChangesDetector.MetadataItems
             _constructedGenericTypes[key] = constructedGenericType;
         }
 
-        #endregion // RegisterConstructedGenericTypeData
-
-        #endregion // Internal Methods
-
-        #region Private Methods
-
-        #region IsEquivalentToNewTypeHelper
-
-#if DEBUG
         /// <summary>
         /// Indicates whether a new member of the same type and name is logically the same member as the current member, just from a newer build.
         /// </summary>
@@ -652,7 +519,6 @@ namespace BreakingChangesDetector.MetadataItems
         /// <param name="ignoreNewOptionalParameters">
         /// Indicates whether to ignore any new parameters at the end of the collection which are optional when comparing.
         /// </param>
-#endif
         private bool IsEquivalentToNewTypeHelper(TypeDefinitionData newType, AssemblyFamily newAssemblyFamily, bool ignoreNewOptionalParameters)
         {
             if (base.IsEquivalentToNewMember(newType, newAssemblyFamily) == false)
@@ -684,16 +550,6 @@ namespace BreakingChangesDetector.MetadataItems
                 NameForComparison == newType.OldNameResolved;
         }
 
-        #endregion // IsEquivalentToNewTypeHelper
-
-        #endregion // Private Methods
-
-        #endregion // Methods
-
-        #region Properties
-
-        #region Public Properties
-
         /// <summary>
         /// Gets the value indicating whether the class can be inherited by a type external to its assembly.
         /// </summary>
@@ -714,10 +570,6 @@ namespace BreakingChangesDetector.MetadataItems
         /// </summary>
         public bool IsFlagsEnum => TypeDefinitionFlags.HasFlag(TypeDefinitionFlags.FlagsEnum);
 
-        #endregion // Public Properties
-
-        #region Internal Properties
-
         internal bool HasPublicConstructors => GetMembers(".ctor").Any(c => c.Accessibility == MemberAccessibility.Public);
 
         internal string NameForComparison { get; private set; }
@@ -727,9 +579,5 @@ namespace BreakingChangesDetector.MetadataItems
         internal string OldNameResolved => OldName ?? NameForComparison;
 
         internal TypeDefinitionFlags TypeDefinitionFlags { get; }
-
-        #endregion // Internal Properties
-
-        #endregion // Properties
     }
 }

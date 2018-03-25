@@ -39,15 +39,9 @@ namespace BreakingChangesDetector.BreakingChanges
     /// </summary>
     public static class MetadataComparer
     {
-        #region Static Variables
-
         private static readonly Dictionary<MetadataItemKinds, List<BreakingChangeDefinitionBase>> _definitionsByKind;
         private static readonly MetadataItemKinds[] _metadataItemKinds;
         private static readonly IEnumerable<BreakingChangeBase> _noBreakingChanges = Enumerable.Empty<BreakingChangeBase>();
-
-        #endregion // Static Variables
-
-        #region Constructor
 
         static MetadataComparer()
         {
@@ -96,12 +90,6 @@ namespace BreakingChangesDetector.BreakingChanges
             }
         }
 
-        #endregion // Constructor
-
-        #region Methods
-
-        #region Public Methods
-
         /// <summary>
         /// Compares two <see cref="AssemblyFamily"/> instances and returns the breaking changes introduced in the newer assemblies if their 
         /// associated older versions exist in the <paramref name="oldFamily"/>.
@@ -139,10 +127,6 @@ namespace BreakingChangesDetector.BreakingChanges
         /// </summary>
         public static List<BreakingChangeBase> CompareTypes(TypeData oldTypeBase, TypeData newTypeBase) =>
             CompareTypes(oldTypeBase, newTypeBase, newTypeBase.GetDefiningAssemblyFamily());
-
-        #endregion // Public Methods
-
-        #region Private Methods
 
         private static List<BreakingChangeBase> CompareAssemblies(AssemblyData oldAssembly, AssemblyData newAssembly, AssemblyFamily newFamily)
         {
@@ -498,9 +482,5 @@ namespace BreakingChangesDetector.BreakingChanges
 
             return false;
         }
-
-        #endregion // Private Methods
-
-        #endregion // Methods
     }
 }

@@ -32,19 +32,11 @@ namespace BreakingChangesDetector.MetadataItems
     /// </summary>
     public sealed class EventData : TypedMemberDataBase
     {
-        #region Constructors
-
         internal EventData(string name, MemberAccessibility accessibility, MemberFlags memberFlags, TypeData type)
             : base(name, accessibility, memberFlags, type, isTypeDynamic: false) { }
 
         private EventData(IEventSymbol eventSymbol, MemberAccessibility accessibility, DeclaringTypeData declaringType)
             : base(eventSymbol, accessibility, eventSymbol.Type, false, Utilities.GetMemberFlags(eventSymbol.AddMethod), declaringType) { }
-
-        #endregion // Constructors
-
-        #region Base Class Overrides
-
-        #region Accept
 
         /// <summary>
         /// Performs the specified visitor's functionality on this instance.
@@ -53,28 +45,18 @@ namespace BreakingChangesDetector.MetadataItems
         public override void Accept(MetadataItemVisitor visitor) =>
             visitor.VisitEventData(this);
 
-        #endregion // Accept
-
-        #region MetadataItemKind
-
         /// <summary>
         /// Gets the type of item the instance represents.
         /// </summary>
         public override MetadataItemKinds MetadataItemKind =>
             MetadataItemKinds.Event;
 
-        #endregion // MetadataItemKind
-
-        #region ReplaceGenericTypeParameters
-
-#if DEBUG
         /// <summary>
         /// Replaces all type parameters used by the member with their associated generic arguments specified in a constructed generic type.
         /// </summary>
         /// <param name="genericParameters">The generic parameters being replaced.</param>
         /// <param name="genericArguments">The generic arguments replacing the parameters.</param>
         /// <returns>A new member with the replaced type parameters or the current instance if the member does not use any of the generic parameters.</returns> 
-#endif
         internal override MemberDataBase ReplaceGenericTypeParameters(GenericTypeParameterCollection genericParameters, GenericTypeArgumentCollection genericArguments)
         {
             var replacedType = (TypeData)Type.ReplaceGenericTypeParameters(genericParameters, genericArguments);
@@ -86,14 +68,6 @@ namespace BreakingChangesDetector.MetadataItems
             return new EventData(Name, Accessibility, MemberFlags, replacedType);
         }
 
-        #endregion // ReplaceGenericTypeParameters
-
-        #endregion // Base Class Overrides
-
-        #region Methods
-
-        #region EventDataFromReflection
-
         internal static EventData EventDataFromReflection(IEventSymbol eventSymbol, DeclaringTypeData declaringType)
         {
             var accessibility = eventSymbol.AddMethod.GetAccessibility();
@@ -104,9 +78,5 @@ namespace BreakingChangesDetector.MetadataItems
 
             return new EventData(eventSymbol, accessibility.Value, declaringType);
         }
-
-        #endregion // EventDataFromReflection
-
-        #endregion // Methods
     }
 }

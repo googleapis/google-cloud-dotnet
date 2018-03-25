@@ -32,17 +32,11 @@ namespace BreakingChangesDetector.BreakingChanges.Formatting
     /// </summary>
     public class BreakingChangeStringFormatter : IBreakingChangeFormatter
     {
-        #region Constructor
-
         /// <summary>
         /// Creates a new <see cref="BreakingChangeStringFormatter"/> instance.
         /// </summary>
         public BreakingChangeStringFormatter() =>
             Builder = new StringBuilder();
-
-        #endregion // Constructor
-
-        #region Methods
 
         /// <summary>
         /// Appends the text to the document using the specified format and formatting arguments.
@@ -58,15 +52,9 @@ namespace BreakingChangesDetector.BreakingChanges.Formatting
         public void AppendLine() =>
             Builder.AppendLine();
 
-        #endregion // Methods
-
-        #region Properties
-
         /// <summary>
         /// Gets the StringBuilder containing the currently formatted string.
         /// </summary>
         public StringBuilder Builder { get; }
-
-        #endregion // Properties
     }
 }

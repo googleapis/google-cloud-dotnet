@@ -30,8 +30,6 @@ namespace BreakingChangesDetector.UnitTests.BreakingChangesTests
 {
     public class AddedBaseInterfaceTests
     {
-        #region NestedTypeTests
-
         [Fact]
         public void NestedTypeTests()
         {
@@ -74,10 +72,6 @@ namespace BreakingChangesDetector.UnitTests.BreakingChangesTests
             breakingChanges = MetadataComparer.CompareTypes(NestedInterfaceImplementingNothing, NestedInterfaceImplementingInterfaceWithNoMembers);
             AssertX.Equal(0, breakingChanges.Count, "There should be no breaking changes when an interface is added but contains no members.");
         }
-
-        #endregion // NestedTypeTests
-
-        #region TypeTests
 
         [Fact]
         public void TypeTests()
@@ -122,8 +116,6 @@ namespace BreakingChangesDetector.UnitTests.BreakingChangesTests
             AssertX.Equal(0, breakingChanges.Count, "There should be no breaking changes when an interface is added but contains no members.");
         }
 
-        #endregion // TypeTests
-
         public interface BaseInterfaceWithMembers { void Method(); }
         public interface DerivedInterfaceWithMembers : BaseInterfaceWithMembers { void Method2(); }
         public interface InterfaceWithNoMembers { }
@@ -133,7 +125,6 @@ namespace BreakingChangesDetector.UnitTests.BreakingChangesTests
         public interface InterfaceImplementingDerived : DerivedInterfaceWithMembers { }
         public interface InterfaceImplementingDerivedAndBase : DerivedInterfaceWithMembers, BaseInterfaceWithMembers { }
         public interface InterfaceImplementingInterfaceWithNoMembers : InterfaceWithNoMembers { }
-
 
         public class NestedInterfaceImplementingNothing { public interface Interface { } }
         public class NestedInterfaceImplementingBase { public interface Interface : BaseInterfaceWithMembers { } }

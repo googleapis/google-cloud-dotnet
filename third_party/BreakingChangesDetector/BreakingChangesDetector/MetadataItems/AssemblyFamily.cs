@@ -36,39 +36,17 @@ namespace BreakingChangesDetector.MetadataItems
     /// </summary>
     public class AssemblyFamily : IEnumerable<AssemblyData>
     {
-        #region Member Variables
-
         private readonly List<AssemblyData> _assemblies = new List<AssemblyData>();
-
-        #endregion // Member Variables
-
-        #region Constructor
 
         internal AssemblyFamily() { }
 
-        #endregion // Constructor
-
-        #region Interfaces
-
         System.Collections.IEnumerator System.Collections.IEnumerable.GetEnumerator() => _assemblies.GetEnumerator();
-
-        #endregion // Interfaces
-
-        #region Methods
-
-        #region Public Methods
-
-        #region Add
 
         /// <summary>
         /// Add an <see cref="AssemblyData"/> instance to the family.
         /// </summary>
         /// <param name="assemblyData">The AssemblyData to add.</param>
         public void Add(AssemblyData assemblyData) => _assemblies.Add(assemblyData);
-
-        #endregion // Add
-
-        #region FromAssemblies
 
         /// <summary>
         /// Creates an <see cref="AssemblyFamily"/> instance from a collection of assemblies. 
@@ -88,10 +66,6 @@ namespace BreakingChangesDetector.MetadataItems
             return family;
         }
 
-        #endregion // FromAssemblies
-
-        #region FromDirectory
-
         /// <summary>
         /// Creates an <see cref="AssemblyFamily"/> instance from all assemblies in the specified directory.
         /// </summary>
@@ -105,38 +79,22 @@ namespace BreakingChangesDetector.MetadataItems
             return FromAssemblies(assemblies);
         }
 
-        #endregion // FromDirectory
-
-        #region GetAssembly
-
         /// <summary>
         /// Gets the <see cref="AssemblyData"/> with the specified full name in the family.
         /// </summary>
         public AssemblyData GetAssembly(string fullName) =>
             _assemblies.FirstOrDefault(a => a.FullName == fullName);
 
-        #endregion // GetAssembly
-
-        #region GetEnumerator
-
         /// <summary>
         /// Gets an enumerator capable of iterating the assemblies.
         /// </summary>
         public IEnumerator<AssemblyData> GetEnumerator() => _assemblies.GetEnumerator();
 
-        #endregion // GetEnumerator
-
-        #endregion // Public Methods
-
-        #region Internal Methods
-
-#if DEBUG
         /// <summary>
         /// Gets a newer <see cref="AssemblyData"/> equivalent to the specified older version.
         /// </summary>
         /// <param name="oldAssembly"></param>
         /// <returns></returns> 
-#endif
         internal AssemblyData GetEquivalentAssembly(AssemblyData oldAssembly)
         {
             foreach (var newAssembly in _assemblies)
@@ -161,12 +119,6 @@ namespace BreakingChangesDetector.MetadataItems
 
             return null;
         }
-
-        #endregion // Internal Methods
-
-        #region Private Methods
-
-        #region FromDirectoryHelper
 
         private static void FromDirectoryHelper(List<Assembly> assemblies, string path, bool recursive)
         {
@@ -194,11 +146,5 @@ namespace BreakingChangesDetector.MetadataItems
                 }
             }
         }
-
-        #endregion // FromDirectoryHelper
-
-        #endregion // Private Methods
-
-        #endregion // Methods
     }
 }

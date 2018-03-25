@@ -31,8 +31,6 @@ namespace BreakingChangesDetector.UnitTests.BreakingChangesTests
 {
     public class ChangedClassToStaticTests
     {
-        #region NestedTypeTests
-
         [Fact]
         public void NestedTypeTests()
         {
@@ -60,10 +58,6 @@ namespace BreakingChangesDetector.UnitTests.BreakingChangesTests
             AssertX.Null(breakingChanges[0].AssociatedData, "The AssociatedData is incorrect.");
         }
 
-        #endregion // NestedTypeTests
-
-        #region TypeTests
-
         [Fact]
         public void TypeTests()
         {
@@ -90,8 +84,6 @@ namespace BreakingChangesDetector.UnitTests.BreakingChangesTests
             AssertX.Equal(StaticClass, breakingChanges[0].NewItem, "The NewItem is incorrect.");
             AssertX.Null(breakingChanges[0].AssociatedData, "The AssociatedData is incorrect.");
         }
-
-        #endregion // TypeTests
 
         public class NestedClass { public class Class { } }
         public class NestedClassWithInternalConstructor { public class Class { internal Class() { } } }

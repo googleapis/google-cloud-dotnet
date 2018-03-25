@@ -31,8 +31,6 @@ namespace BreakingChangesDetector.UnitTests.MetadataTypesTests
 
     public class ParameterCollectionTests
     {
-        #region RequiredArgumentCount
-
         [Fact]
         public void RequiredArgumentCount()
         {
@@ -52,7 +50,5 @@ namespace BreakingChangesDetector.UnitTests.MetadataTypesTests
             method = (MethodData)typeData.GetMember("MethodWithParamsArray");
             AssertX.Equal(1, method.Parameters.RequiredArgumentCount, "The RequiredArgumentCount of the parameters collection is not correct.");
         }
-
-        #endregion // RequiredArgumentCount
     }
 }

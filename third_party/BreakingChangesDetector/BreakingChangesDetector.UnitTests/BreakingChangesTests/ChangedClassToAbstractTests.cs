@@ -31,8 +31,6 @@ namespace BreakingChangesDetector.UnitTests.BreakingChangesTests
 {
     public class ChangedClassToAbstractTests
     {
-        #region NestedTypeTests
-
         [Fact]
         public void NestedTypeTests()
         {
@@ -52,10 +50,6 @@ namespace BreakingChangesDetector.UnitTests.BreakingChangesTests
             AssertX.Equal(0, breakingChanges.Count, "There should be no breaking changes when a class with no public constructors is made abstract.");
         }
 
-        #endregion // NestedTypeTests
-
-        #region TypeTests
-
         [Fact]
         public void TypeTests()
         {
@@ -74,8 +68,6 @@ namespace BreakingChangesDetector.UnitTests.BreakingChangesTests
             breakingChanges = MetadataComparer.CompareTypes(ClassWithInternalConstructor, AbstractClass);
             AssertX.Equal(0, breakingChanges.Count, "There should be no breaking changes when a class with no public constructors is made abstract.");
         }
-
-        #endregion // TypeTests
 
         public class NestedClass { public class Class { } }
         public class NestedClassWithInternalConstructor { public class Class { internal Class() { } } }

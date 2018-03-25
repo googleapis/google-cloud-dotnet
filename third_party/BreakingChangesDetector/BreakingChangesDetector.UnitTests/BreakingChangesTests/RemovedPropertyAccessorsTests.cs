@@ -30,8 +30,6 @@ namespace BreakingChangesDetector.UnitTests.BreakingChangesTests
 {
     public class RemovedPropertyAccessorsTests
     {
-        #region PropertyTests
-
         [Fact]
         public void PropertyTests()
         {
@@ -70,8 +68,6 @@ namespace BreakingChangesDetector.UnitTests.BreakingChangesTests
             AssertX.Equal(PropertyWriteOnlyPublic.GetMember("Property"), breakingChanges[0].NewItem, "The NewItem is incorrect.");
             AssertX.Null(breakingChanges[0].AssociatedData, "The AssociatedData is incorrect.");
         }
-
-        #endregion // PropertyTests
 
         public class PropertyReadOnly { public int Property { get { return 0; } } }
         public class PropertyReadOnlyPublic { public int Property { get { return 0; } protected set { } } }

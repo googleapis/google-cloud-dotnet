@@ -36,22 +36,12 @@ namespace BreakingChangesDetector.MetadataItems
     /// </summary>
     public abstract class MemberDataBase : MetadataItemBase
     {
-        #region Constants
-
         internal const BindingFlags DeclaredOnlyFlags =
             BindingFlags.Public | BindingFlags.NonPublic |
             BindingFlags.Instance | BindingFlags.Static |
             BindingFlags.DeclaredOnly;
 
-        #endregion // Constants
-
-        #region Static Variables
-
         internal static readonly List<MemberDataBase> EmptyList = new List<MemberDataBase>();
-
-        #endregion // Static Variables
-
-        #region Constructor
 
         internal MemberDataBase(string name, MemberAccessibility accessibility, MemberFlags memberFlags)
         {
@@ -68,22 +58,12 @@ namespace BreakingChangesDetector.MetadataItems
             Name = underlyingSymbol.MetadataName;
         }
 
-        #endregion // Constructor
-
-        #region Base Class Overrides
-
         public override MetadataResolutionContext Context => AssemblyData?.Context;
-
-        #region DisplayName
 
         /// <summary>
         /// Gets the name to use for this item in messages.
         /// </summary>
         public override string DisplayName => Name;
-
-        #endregion // DisplayName
-
-        #region DoesMatch
 
         internal override bool DoesMatch(MetadataItemBase other)
         {
@@ -126,21 +106,11 @@ namespace BreakingChangesDetector.MetadataItems
             return true;
         }
 
-        #endregion // DoesMatch
-
-        #endregion // Base Class Overrides
-
-        #region Methods
-
-        #region CanOverrideMember
-
-#if DEBUG
         /// <summary>
         /// Indicates whether the current member can override the specified member from a base type.
         /// </summary>
         /// <param name="baseMember">The member from the base type.</param>
         /// <returns>True if the current member can override the base member; False otherwise.</returns>  
-#endif
         internal virtual bool CanOverrideMember(MemberDataBase baseMember)
         {
             // Static members cannot be overridden
@@ -160,16 +130,10 @@ namespace BreakingChangesDetector.MetadataItems
                 Name == baseMember.Name;
         }
 
-        #endregion // CanOverrideMember
-
-        #region GetBaseMember
-
-#if DEBUG
         /// <summary>
         /// Gets the base member this member overrides, or null if this member doesn't override anything.
         /// </summary>
         /// <returns></returns>  
-#endif
         internal MemberDataBase GetBaseMember()
         {
             if (ContainingType == null || IsOverride == false)
@@ -195,15 +159,9 @@ namespace BreakingChangesDetector.MetadataItems
             return null;
         }
 
-        #endregion // GetBaseMember
-
-        #region IsEquivalentToNewMember
-
-#if DEBUG
         /// <summary>
         /// Indicates whether a new member of the same type and name is logically the same member as the current member, just from a newer build.
         /// </summary> 
-#endif
         internal virtual bool IsEquivalentToNewMember(MemberDataBase newMember, AssemblyFamily newAssemblyFamily)
         {
             if (IsNameUsedToVerifyEquivalence && Name != newMember.Name)
@@ -213,10 +171,6 @@ namespace BreakingChangesDetector.MetadataItems
 
             return MetadataItemKind == newMember.MetadataItemKind;
         }
-
-        #endregion // IsEquivalentToNewMember
-
-        #region MemberDataFromReflection
 
         internal static MemberDataBase MemberDataFromReflection(ISymbol symbol, DeclaringTypeData declaringType)
         {
@@ -295,27 +249,13 @@ namespace BreakingChangesDetector.MetadataItems
             }
         }
 
-        #endregion // MemberDataFromReflection
-
-        #region ReplaceGenericTypeParameters
-
-#if DEBUG
         /// <summary>
         /// Replaces all type parameters used by the member with their associated generic arguments specified in a constructed generic type.
         /// </summary>
         /// <param name="genericParameters">The generic parameters being replaced.</param>
         /// <param name="genericArguments">The generic arguments replacing the parameters.</param>
         /// <returns>A new member with the replaced type parameters or the current instance if the member does not use any of the generic parameters.</returns> 
-#endif
         internal abstract MemberDataBase ReplaceGenericTypeParameters(GenericTypeParameterCollection genericParameters, GenericTypeArgumentCollection genericArguments);
-
-        #endregion // ReplaceGenericTypeParameters
-
-        #endregion // Methods
-
-        #region Properties
-
-        #region Public Properties
 
         /// <summary>
         /// Gets the external accessibility of the member, which indicates whether it is public or protected.
@@ -383,14 +323,6 @@ namespace BreakingChangesDetector.MetadataItems
         /// </summary>
         public string Name { get; }
 
-        #endregion // Public Properties
-
-        #region Internal Properties
-
         internal MemberFlags MemberFlags { get; }
-
-        #endregion // Internal Properties
-
-        #endregion // Properties
     }
 }

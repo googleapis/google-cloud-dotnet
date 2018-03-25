@@ -36,12 +36,7 @@ namespace BreakingChangesDetector.MetadataItems
     public sealed class ConstructedGenericTypeData : DeclaringTypeData
     {
 
-        #region Member Variables
         private readonly bool _isNullable;
-
-        #endregion // Member Variables
-
-        #region Constructor
 
         internal ConstructedGenericTypeData(TypeDefinitionData genericTypeDefinition, IEnumerable<TypeData> genericArguments)
             : base(genericTypeDefinition.Name, genericTypeDefinition.Accessibility, genericTypeDefinition.MemberFlags, genericTypeDefinition.TypeKind)
@@ -56,30 +51,16 @@ namespace BreakingChangesDetector.MetadataItems
             genericTypeDefinition.AssemblyData.RegisterForFinalize(this);
         }
 
-        #endregion // Constructor
-
-        #region Base Class Overrides
-
-        #region Accept
-
         /// <summary>
         /// Performs the specified visitor's functionality on this instance.
         /// </summary>
         /// <param name="visitor">The visitor whose functionality should be performed on the instance.</param>
         public override void Accept(MetadataItemVisitor visitor) => visitor.VisitConstructedGenericTypeData(this);
 
-        #endregion // Accept
-
-        #region AssemblyData
-
         /// <summary>
         /// Gets the <see cref="T:AssemblyData"/> representing the assembly in which the type is defined.
         /// </summary>
         public override AssemblyData AssemblyData => GenericTypeDefinition?.AssemblyData;
-
-        #endregion // AssemblyData
-
-        #region DoesMatch
 
         internal override bool DoesMatch(MetadataItemBase other)
         {
@@ -112,27 +93,15 @@ namespace BreakingChangesDetector.MetadataItems
             return true;
         }
 
-        #endregion // DoesMatch
-
-        #region GenericArity
-
-#if DEBUG
         /// <summary>
         /// Gets the number of generic parameters/arguments for the type.
         /// </summary> 
-#endif
         internal override int GenericArity => GenericArguments.Count;
 
-        #endregion // GenericArity
-
-        #region GetDefiningAssemblyFamily
-
-#if DEBUG
         /// <summary>
         /// Gets the <see cref="AssemblyFamily"/> containing the type. If the type is nullable and type with element, 
         /// such as T?, T[], or T*, this returns the family containing the type T.
         /// </summary> 
-#endif
         internal override AssemblyFamily GetDefiningAssemblyFamily()
         {
             if (IsNullable(out TypeData underlyingType))
@@ -143,11 +112,6 @@ namespace BreakingChangesDetector.MetadataItems
             return base.GetDefiningAssemblyFamily();
         }
 
-        #endregion // GetDefiningAssemblyFamily
-
-        #region GetDirectImplicitConversions
-
-#if DEBUG
         /// <summary>
         /// Gets the types to which this type can implicitly convert. For type hierarchy conversions, only the direct base type will be enumerated.
         /// Ancestor base types will can be enumerated recursively by calling this method on the base type.
@@ -158,7 +122,6 @@ namespace BreakingChangesDetector.MetadataItems
         /// <returns>
         /// A collection of all types to which this type can convert explicitly, except for ancestor base types which are not the direct base type.
         /// </returns> 
-#endif
         internal override IEnumerable<TypeData> GetDirectImplicitConversions(bool onlyReferenceAndIdentityConversions)
         {
             if (onlyReferenceAndIdentityConversions == false)
@@ -182,11 +145,6 @@ namespace BreakingChangesDetector.MetadataItems
             }
         }
 
-        #endregion // GetDirectImplicitConversions
-
-        #region GetDisplayName
-
-#if DEBUG
         /// <summary>
         /// Gets the display name for the type, which can be used for generating user-readable messages about the type.
         /// </summary>
@@ -197,7 +155,6 @@ namespace BreakingChangesDetector.MetadataItems
         /// for the nested type.
         /// </param>
         /// <returns>The display name of the type.</returns> 
-#endif
         internal override string GetDisplayName(bool fullyQualify, bool includeGenericInfo, GenericTypeArgumentCollection genericArguments)
         {
             if (IsNullable(out TypeData underlyingType))
@@ -217,16 +174,10 @@ namespace BreakingChangesDetector.MetadataItems
             return PostProcessUnqualifiedName(rootName, fullyQualify, includeGenericInfo, genericArgumentsResolved);
         }
 
-        #endregion // GetDisplayName
-
-        #region GetEquivalentNewType
-
-#if DEBUG
         /// <summary>
         /// Gets the type equivalent to this one which is from a newer assembly.
         /// </summary>
         /// <param name="newAssemblyFamily">The assembly family in which new assemblies reside.</param>
-#endif
         internal override TypeData GetEquivalentNewType(AssemblyFamily newAssemblyFamily)
         {
             var newGenericTypeDefinition = (TypeDefinitionData)GenericTypeDefinition.GetEquivalentNewType(newAssemblyFamily);
@@ -250,15 +201,9 @@ namespace BreakingChangesDetector.MetadataItems
             return newGenericTypeDefinition.GetConstructedGenericTypeData(newGenericArguments);
         }
 
-        #endregion // GetEquivalentNewType
-
-        #region GetNamespaceName
-
-#if DEBUG
         /// <summary>
         /// Gets the name of the namespace in which the type is defined, or null if it is not defined in a namespace.
         /// </summary> 
-#endif
         internal override string GetNamespaceName()
         {
             // For nullable types, we want to get the namespace of the underlying type, not the System.Nullable<T> type, because it will be displayed as T?.
@@ -270,18 +215,12 @@ namespace BreakingChangesDetector.MetadataItems
             return GenericTypeDefinition.GetNamespaceName();
         }
 
-        #endregion // GetNamespaceName
-
-        #region IsAssignableFrom
-
-#if DEBUG
         /// <summary>
         /// Gets the value indicating whether a variable of the current type is assignable from the specified source type.
         /// </summary>
         /// <param name="sourceType">The source type from which to test assignability to this type.</param>
         /// <param name="context">Information about the context of the IsAssignableFrom invocation.</param>
         /// <returns>True if a value of the source type is assignable to a variable of the current type.</returns> 
-#endif
         internal override bool IsAssignableFrom(TypeData sourceType, IsAssignableFromContext context)
         {
             if (base.IsAssignableFrom(sourceType, context))
@@ -319,15 +258,9 @@ namespace BreakingChangesDetector.MetadataItems
             return false;
         }
 
-        #endregion // IsAssignableFrom
-
-        #region IsEquivalentToNewMember
-
-#if DEBUG
         /// <summary>
         /// Indicates whether a new member of the same type and name is logically the same member as the current member, just from a newer build.
         /// </summary> 
-#endif
         internal override bool IsEquivalentToNewMember(MemberDataBase newMember, AssemblyFamily newAssemblyFamily)
         {
             if (base.IsEquivalentToNewMember(newMember, newAssemblyFamily) == false)
@@ -362,17 +295,11 @@ namespace BreakingChangesDetector.MetadataItems
             return true;
         }
 
-        #endregion // IsEquivalentToNewMember
-
-        #region IsNullable
-
-#if DEBUG
         /// <summary>
         /// Gets the value indicating whether type is a nullable value type.
         /// </summary>
         /// <param name="underlyingType">[Out] Will be set to the underlying value type if the tpye is nullable; will be null otherwise.</param>
         /// <returns>True if the type is nullable; False otherwise.</returns> 
-#endif
         internal override bool IsNullable(out TypeData underlyingType)
         {
             if (GenericArguments.Count == 1 &&
@@ -386,18 +313,12 @@ namespace BreakingChangesDetector.MetadataItems
             return false;
         }
 
-        #endregion // IsNullable
-
-        #region IsVarianceConvertibleTo
-
-#if DEBUG
         /// <summary>
         /// Gets the value indicating whether the type can convert to the specified target type using type parameter variance.
         /// </summary>
         /// <param name="target">The target type to which this type might convert.</param>
         /// <param name="context">Information about the context of the IsAssignableFrom invocation.</param>
         /// <returns>True is the type is variance convertible to the target; False otherwise.</returns> 
-#endif
         internal override bool IsVarianceConvertibleTo(ConstructedGenericTypeData target, IsAssignableFromContext context)
         {
             if (target.TypeKind == TypeKind &&
@@ -423,27 +344,17 @@ namespace BreakingChangesDetector.MetadataItems
             return false;
         }
 
-        #endregion // IsVarianceConvertibleTo
-
-        #region MetadataItemKind
-
         /// <summary>
         /// Gets the type of item the instance represents.
         /// </summary>
         public override MetadataItemKinds MetadataItemKind => MetadataItemKinds.ConstructedGenericType;
 
-        #endregion // MetadataItemKind
-
-        #region ReplaceGenericTypeParameters
-
-#if DEBUG
         /// <summary>
         /// Replaces all type parameters used by the member with their associated generic arguments specified in a constructed generic type.
         /// </summary>
         /// <param name="genericParameters">The generic parameters being replaced.</param>
         /// <param name="genericArguments">The generic arguments replacing the parameters.</param>
         /// <returns>A new member with the replaced type parameters or the current instance if the member does not use any of the generic parameters.</returns> 
-#endif
         internal override MemberDataBase ReplaceGenericTypeParameters(GenericTypeParameterCollection genericParameters, GenericTypeArgumentCollection genericArguments)
         {
             List<TypeData> replacedGenericArguments = null;
@@ -471,16 +382,6 @@ namespace BreakingChangesDetector.MetadataItems
 
             return this;
         }
-
-        #endregion // ReplaceGenericTypeParameters
-
-        #endregion // Base Class Overrides
-
-        #region Methods
-
-        #region Internal Methods
-
-        #region FinalizeDefiniton
 
         internal void FinalizeDefiniton()
         {
@@ -511,19 +412,9 @@ namespace BreakingChangesDetector.MetadataItems
             }
         }
 
-        #endregion // FinalizeDefiniton
-
-        #endregion // Internal Methods
-
-        #region Private Methods
-
-        #region IsIListGenericType
-
-#if DEBUG
         /// <summary>
         /// Indicates whether the type is an IList&lt;T&gt; constructed generic type.
         /// </summary> 
-#endif
         private bool IsIListGenericType(out TypeData elementType)
         {
             if (GenericArguments.Count == 1 &&
@@ -537,16 +428,6 @@ namespace BreakingChangesDetector.MetadataItems
             return false;
         }
 
-        #endregion // IsIListGenericType
-
-        #endregion // Private Methods
-
-        #endregion // Methods
-
-        #region Properties
-
-        #region Public Properties
-
         /// <summary>
         /// Gets the collection of generic arguments specified when constructing this type.
         /// </summary>
@@ -557,21 +438,11 @@ namespace BreakingChangesDetector.MetadataItems
         /// </summary>
         public TypeDefinitionData GenericTypeDefinition { get; } // TODO_Serialize: Round trip and unit test
 
-        #endregion // Public Properties
-
-        #region Internal Properties
-
-#if DEBUG
         /// <summary>
         /// Gets the value indicating whether the type, if it were generic, supports variant type parameters (this is true for interfaces and delegates).
         /// </summary>  
-#endif
         internal bool SupportsVariantTypeParameters =>
             TypeKind == Microsoft.CodeAnalysis.TypeKind.Interface ||
             TypeKind == Microsoft.CodeAnalysis.TypeKind.Delegate;
-
-        #endregion // Internal Properties
-
-        #endregion // Properties
     }
 }

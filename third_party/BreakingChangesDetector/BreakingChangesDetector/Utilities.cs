@@ -348,8 +348,6 @@ namespace BreakingChangesDetector
         public static IEnumerable<IPropertySymbol> Properties(this INamedTypeSymbol namedTypeSymbol) => namedTypeSymbol.Members().OfType<IPropertySymbol>();
         public static IEnumerable<IEventSymbol> Events(this INamedTypeSymbol namedTypeSymbol) => namedTypeSymbol.Members().OfType<IEventSymbol>();
 
-        #region GetNamespaceRenames
-
         public static IEnumerable<KeyValuePair<string, string>> GetNamespaceRenames(IAssemblySymbol assemblySymbol)
         {
             var namespaceRenamedAttributeDatas = assemblySymbol.GetAttributes().Where(
@@ -365,8 +363,6 @@ namespace BreakingChangesDetector
                 }
             }
         }
-
-        #endregion // GetNamespaceRenames
 
         public static TypeKind GetTypeKind(ITypeSymbol typeSymbol)
         {
@@ -409,16 +405,12 @@ namespace BreakingChangesDetector
             return TypeKind.Class;
         }
 
-        #region GetVersionComparisonName
-
-#if DEBUG
         /// <summary>
         /// Gets the version comparison name for the specified <see cref="Assembly"/>, which is the name by which assemblies across versions can be 
         /// matched up to be treated as logically equivalent.
         /// </summary>
         /// <param name="assemblySymbol">The Assembly of which to get the version comparison name.</param>
         /// <returns></returns> 
-#endif
         public static string GetVersionComparisonName(IAssemblySymbol assemblySymbol)
         {
             var versionComparisonNameAttributeData = assemblySymbol.GetAttributes().FirstOrDefault(
@@ -435,8 +427,6 @@ namespace BreakingChangesDetector
 
             return assemblySymbol.Name;
         }
-
-        #endregion // GetVersionComparisonName
 
         public static bool IsConstructed(this INamedTypeSymbol namedTypeSymbol) =>
             !namedTypeSymbol.ConstructedFrom.Equals(namedTypeSymbol);

@@ -35,25 +35,13 @@ namespace BreakingChangesDetector.MetadataItems
     /// </summary>
     public abstract class DeclaringTypeData : TypeData
     {
-        #region Member Variables
-
         private readonly Dictionary<string, List<MemberDataBase>> _membersByName = new Dictionary<string, List<MemberDataBase>>();
-
-        #endregion // Member Variables
-
-        #region Constructors
 
         internal DeclaringTypeData(string name, MemberAccessibility accessibility, MemberFlags memberFlags, TypeKind typeKind)
             : base(name, accessibility, memberFlags, typeKind) { }
 
         internal DeclaringTypeData(ITypeSymbol typeSymbol, MemberAccessibility accessibility, DeclaringTypeData declaringType)
             : base(typeSymbol, accessibility, declaringType) { }
-
-        #endregion // Constructors
-
-        #region Base Class Overrides
-
-        #region DoesMatch
 
         internal override bool DoesMatch(MetadataItemBase other)
         {
@@ -138,11 +126,6 @@ namespace BreakingChangesDetector.MetadataItems
             return true;
         }
 
-        #endregion // DoesMatch
-
-        #region GetDirectImplicitConversions
-
-#if DEBUG
         /// <summary>
         /// Gets the types to which this type can implicitly convert. For type hierarchy conversions, only the direct base type will be enumerated.
         /// Ancestor base types will can be enumerated recursively by calling this method on the base type.
@@ -153,7 +136,6 @@ namespace BreakingChangesDetector.MetadataItems
         /// <returns>
         /// A collection of all types to which this type can convert explicitly, except for ancestor base types which are not the direct base type.
         /// </returns> 
-#endif
         internal override IEnumerable<TypeData> GetDirectImplicitConversions(bool onlyReferenceAndIdentityConversions)
         {
             if (onlyReferenceAndIdentityConversions && IsValueType)
@@ -182,10 +164,6 @@ namespace BreakingChangesDetector.MetadataItems
             }
         }
 
-        #endregion // GetDirectImplicitConversions
-
-        #region GetDisplayName
-
         /// <summary>
         /// Gets the display name for the type, which can be used for generating user-readable messages about the type.
         /// </summary>
@@ -195,18 +173,12 @@ namespace BreakingChangesDetector.MetadataItems
         public override sealed string GetDisplayName(bool fullyQualify = true, bool includeGenericInfo = true) =>
             GetDisplayName(fullyQualify, includeGenericInfo, null);
 
-        #endregion // GetDisplayName
-
-        #region IsAssignableFrom
-
-#if DEBUG
         /// <summary>
         /// Gets the value indicating whether a variable of the current type is assignable from the specified source type.
         /// </summary>
         /// <param name="sourceType">The source type from which to test assignability to this type.</param>
         /// <param name="context">Information about the context of the IsAssignableFrom invocation.</param>
         /// <returns>True if a value of the source type is assignable to a variable of the current type.</returns> 
-#endif
         internal override bool IsAssignableFrom(TypeData sourceType, IsAssignableFromContext context)
         {
             if (base.IsAssignableFrom(sourceType, context))
@@ -233,16 +205,6 @@ namespace BreakingChangesDetector.MetadataItems
             return false;
         }
 
-        #endregion // IsAssignableFrom
-
-        #endregion // Base Class Overrides
-
-        #region Methods
-
-        #region Public Methods
-
-        #region GetMember
-
         /// <summary>
         /// Gets the single member with the specified name or null if no such member exists. If multiple members exist with the specified name, 
         /// an exception will be thrown.
@@ -268,10 +230,6 @@ namespace BreakingChangesDetector.MetadataItems
             return members[0];
         }
 
-        #endregion // GetMember
-
-        #region GetMembers
-
         /// <summary>
         /// Gets the collection of all members declared in the type.
         /// </summary>
@@ -290,10 +248,6 @@ namespace BreakingChangesDetector.MetadataItems
             return EmptyList;
         }
 
-        #endregion // GetMembers
-
-        #region GetMethod
-
         /// <summary>
         /// Gets the single method with the specified name or null if no such method exists. If multiple methods exist with the specified name, 
         /// an exception will be thrown.
@@ -302,19 +256,9 @@ namespace BreakingChangesDetector.MetadataItems
         /// <returns>The single method with the specified name, or null if no such method exists.</returns>
         public MethodData GetMethod(string name) => GetMembers(name).OfType<MethodData>().SingleOrDefault();
 
-        #endregion // GetMethod
-
-        #endregion // Public Methods
-
-        #region Internal Methods
-
-        #region AddMember
-
-#if DEBUG
         /// <summary>
         /// Adds the specified member to the declaring type.
         /// </summary> 
-#endif
         internal void AddMember(MemberDataBase member)
         {
             if (member == null)
@@ -336,11 +280,6 @@ namespace BreakingChangesDetector.MetadataItems
             members.Add(member);
         }
 
-        #endregion // AddMember
-
-        #region GetDisplayName
-
-#if DEBUG
         /// <summary>
         /// Gets the display name for the type, which can be used for generating user-readable messages about the type.
         /// </summary>
@@ -351,14 +290,8 @@ namespace BreakingChangesDetector.MetadataItems
         /// for the nested type.
         /// </param>
         /// <returns>The display name of the type.</returns> 
-#endif
         internal abstract string GetDisplayName(bool fullyQualify, bool includeGenericInfo, GenericTypeArgumentCollection genericArguments);
 
-        #endregion // GetDisplayName
-
-        #region PostProcessUnqualifiedName
-
-#if DEBUG
         /// <summary>
         /// Adds in the fully qualified information for the type name if necessary.
         /// </summary>
@@ -369,7 +302,6 @@ namespace BreakingChangesDetector.MetadataItems
         /// The generic arguments used to parameterize a type. For nested types, this will include the arguments for the declaring type before the arguments 
         /// for the nested type.
         /// </param>
-#endif
         internal string PostProcessUnqualifiedName(string unqualifiedName, bool fullyQualify, bool includeGenericInfo, GenericTypeArgumentCollection genericArguments)
         {
             if (fullyQualify)
@@ -388,14 +320,6 @@ namespace BreakingChangesDetector.MetadataItems
 
             return unqualifiedName;
         }
-
-        #endregion // PostProcessUnqualifiedName
-
-        #endregion // Internal Methods
-
-        #region Private Methods
-
-        #region DoesSourceTypeHaveImplicitOperatorOverloadToTarget
 
         private bool DoesSourceTypeHaveImplicitOperatorOverloadToTarget(TypeData sourceType, IsAssignableFromContext context)
         {
@@ -439,10 +363,6 @@ namespace BreakingChangesDetector.MetadataItems
             return false;
         }
 
-        #endregion // DoesSourceTypeHaveImplicitOperatorOverloadToTarget
-
-        #region DoesTargetTypeHaveImplicitOperatorOverloadFromSource
-
         private bool DoesTargetTypeHaveImplicitOperatorOverloadFromSource(TypeData sourceType, IsAssignableFromContext context)
         {
             var newTargetType = context.IsTargetTypeOld
@@ -479,16 +399,6 @@ namespace BreakingChangesDetector.MetadataItems
             return false;
         }
 
-        #endregion // DoesTargetTypeHaveImplicitOperatorOverloadFromSource
-
-        #endregion // Private Methods
-
-        #endregion // Methods
-
-        #region Properties
-
-        #region Public Properties
-
         /// <summary>
         /// Gets the base type of the current type.
         /// </summary>
@@ -519,23 +429,9 @@ namespace BreakingChangesDetector.MetadataItems
         /// </summary>
         public ImplementedInterfacesCollection ImplementedInterfaces { get; internal set; }
 
-        #endregion // Public Properties
-
-        #region Internal Properties
-
-        #region GenericArity
-
-#if DEBUG
         /// <summary>
         /// Gets the number of generic parameters/arguments for the type.
         /// </summary> 
-#endif
         internal abstract int GenericArity { get; }
-
-        #endregion // GenericArity
-
-        #endregion // Internal Properties
-
-        #endregion // Properties
     }
 }
