@@ -23,14 +23,11 @@
     SOFTWARE.
 */
 
-using Microsoft.CodeAnalysis;
 using System;
 using System.Collections.Generic;
 using System.IO;
 using System.Linq;
 using System.Reflection;
-using System.Text;
-using System.Threading.Tasks;
 
 namespace BreakingChangesDetector.MetadataItems
 {
@@ -41,25 +38,19 @@ namespace BreakingChangesDetector.MetadataItems
     {
         #region Member Variables
 
-        private readonly List<AssemblyData> _assemblies;
+        private readonly List<AssemblyData> _assemblies = new List<AssemblyData>();
 
         #endregion // Member Variables
 
         #region Constructor
 
-        internal AssemblyFamily()
-        {
-            _assemblies = new List<AssemblyData>();
-        }
+        internal AssemblyFamily() { }
 
         #endregion // Constructor
 
         #region Interfaces
 
-        System.Collections.IEnumerator System.Collections.IEnumerable.GetEnumerator()
-        {
-            return _assemblies.GetEnumerator();
-        }
+        System.Collections.IEnumerator System.Collections.IEnumerable.GetEnumerator() => _assemblies.GetEnumerator();
 
         #endregion // Interfaces
 
@@ -73,10 +64,7 @@ namespace BreakingChangesDetector.MetadataItems
         /// Add an <see cref="AssemblyData"/> instance to the family.
         /// </summary>
         /// <param name="assemblyData">The AssemblyData to add.</param>
-        public void Add(AssemblyData assemblyData)
-        {
-            _assemblies.Add(assemblyData);
-        }
+        public void Add(AssemblyData assemblyData) => _assemblies.Add(assemblyData);
 
         #endregion // Add
 
@@ -93,7 +81,9 @@ namespace BreakingChangesDetector.MetadataItems
             var family = new AssemblyFamily();
 
             foreach (var assembly in assemblies)
+            {
                 family.Add(context.GetAssemblyData(assembly));
+            }
 
             return family;
         }
@@ -111,8 +101,8 @@ namespace BreakingChangesDetector.MetadataItems
         public static AssemblyFamily FromDirectory(string path, bool recursive = false)
         {
             var assemblies = new List<Assembly>();
-            AssemblyFamily.FromDirectoryHelper(assemblies, path, recursive);
-            return AssemblyFamily.FromAssemblies(assemblies);
+            FromDirectoryHelper(assemblies, path, recursive);
+            return FromAssemblies(assemblies);
         }
 
         #endregion // FromDirectory
@@ -122,10 +112,8 @@ namespace BreakingChangesDetector.MetadataItems
         /// <summary>
         /// Gets the <see cref="AssemblyData"/> with the specified full name in the family.
         /// </summary>
-        public AssemblyData GetAssembly(string fullName)
-        {
-            return _assemblies.FirstOrDefault(a => a.FullName == fullName);
-        }
+        public AssemblyData GetAssembly(string fullName) =>
+            _assemblies.FirstOrDefault(a => a.FullName == fullName);
 
         #endregion // GetAssembly
 
@@ -134,10 +122,7 @@ namespace BreakingChangesDetector.MetadataItems
         /// <summary>
         /// Gets an enumerator capable of iterating the assemblies.
         /// </summary>
-        public IEnumerator<AssemblyData> GetEnumerator()
-        {
-            return _assemblies.GetEnumerator();
-        }
+        public IEnumerator<AssemblyData> GetEnumerator() => _assemblies.GetEnumerator();
 
         #endregion // GetEnumerator
 
@@ -157,7 +142,9 @@ namespace BreakingChangesDetector.MetadataItems
             foreach (var newAssembly in _assemblies)
             {
                 if (oldAssembly.IsEquivalentToNewAssembly(newAssembly))
+                {
                     return newAssembly;
+                }
             }
 
             foreach (var newAssembly in _assemblies)
@@ -167,7 +154,9 @@ namespace BreakingChangesDetector.MetadataItems
                     .FirstOrDefault();
 
                 if (referencedNewAssembly != null)
+                {
                     return referencedNewAssembly;
+                }
             }
 
             return null;
@@ -200,7 +189,9 @@ namespace BreakingChangesDetector.MetadataItems
             if (recursive)
             {
                 foreach (var directory in Directory.GetDirectories(path))
-                    AssemblyFamily.FromDirectoryHelper(assemblies, directory, recursive);
+                {
+                    FromDirectoryHelper(assemblies, directory, recursive);
+                }
             }
         }
 

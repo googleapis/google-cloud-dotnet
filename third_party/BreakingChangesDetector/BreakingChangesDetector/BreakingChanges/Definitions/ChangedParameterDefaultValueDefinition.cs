@@ -25,16 +25,13 @@
 
 using BreakingChangesDetector.MetadataItems;
 using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
 
 namespace BreakingChangesDetector.BreakingChanges.Definitions
 {
     internal class ChangedParameterDefaultValueDefinition : BreakingChangeDefinitionBase
     {
-        public static readonly ChangedParameterDefaultValueDefinition Instance = new ChangedParameterDefaultValueDefinition();
+        public static readonly ChangedParameterDefaultValueDefinition Instance =
+            new ChangedParameterDefaultValueDefinition();
 
         private ChangedParameterDefaultValueDefinition() { }
 
@@ -51,14 +48,10 @@ namespace BreakingChangesDetector.BreakingChanges.Definitions
             }
         }
 
-        public override BreakingChangeKind BreakingChangeKind
-        {
-            get { return BreakingChangeKind.ChangedParameterDefaultValue; }
-        }
+        public override BreakingChangeKind BreakingChangeKind =>
+            BreakingChangeKind.ChangedParameterDefaultValue;
 
-        public override MetadataItemKinds MembersKindsHandled
-        {
-            get { return MetadataItemKinds.Parameter; }
-        }
+        public override MetadataItemKinds MembersKindsHandled =>
+            MetadataItemKinds.Parameter;
     }
 }

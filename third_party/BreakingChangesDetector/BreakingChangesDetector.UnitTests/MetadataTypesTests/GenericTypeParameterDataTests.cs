@@ -25,7 +25,6 @@
 
 using System;
 using Xunit;
-using BreakingChangesDetector.MetadataItems;
 using System.Reflection;
 using Microsoft.CodeAnalysis;
 

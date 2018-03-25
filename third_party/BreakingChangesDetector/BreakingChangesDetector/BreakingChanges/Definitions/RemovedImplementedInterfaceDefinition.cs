@@ -24,17 +24,13 @@
 */
 
 using BreakingChangesDetector.MetadataItems;
-using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
 
 namespace BreakingChangesDetector.BreakingChanges.Definitions
 {
     internal class RemovedImplementedInterfaceDefinition : BreakingChangeDefinitionBase
     {
-        public static readonly RemovedImplementedInterfaceDefinition Instance = new RemovedImplementedInterfaceDefinition();
+        public static readonly RemovedImplementedInterfaceDefinition Instance =
+            new RemovedImplementedInterfaceDefinition();
 
         private RemovedImplementedInterfaceDefinition() { }
 
@@ -56,18 +52,16 @@ namespace BreakingChangesDetector.BreakingChanges.Definitions
                 }
 
                 if (hasOldInterfaceEquivalent == false)
+                {
                     context.BreakingChanges.Add(new RemovedImplementedInterface(oldType, newType, oldInterfaceType));
+                }
             }
         }
 
-        public override BreakingChangeKind BreakingChangeKind
-        {
-            get { return BreakingChangeKind.RemovedImplementedInterface; }
-        }
+        public override BreakingChangeKind BreakingChangeKind =>
+            BreakingChangeKind.RemovedImplementedInterface;
 
-        public override MetadataItemKinds MembersKindsHandled
-        {
-            get { return MetadataItemKinds.TypeDefinition; }
-        }
+        public override MetadataItemKinds MembersKindsHandled =>
+            MetadataItemKinds.TypeDefinition;
     }
 }

@@ -24,10 +24,6 @@
 */
 
 using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
 
 namespace Infragistics // TODO: Use a more generic namespace name
 {
@@ -40,23 +36,15 @@ namespace Infragistics // TODO: Use a more generic namespace name
         AllowMultiple = false)]
     internal sealed class TypeRenamedAttribute : Attribute
     {
-        private readonly string _oldName;
-
         /// <summary>
         /// Creates a new <see cref="TypeRenamedAttribute"/> instance.
         /// </summary>
         /// <param name="oldName">The case-sensitive fully qualified name of the old type.</param>
-        public TypeRenamedAttribute(string oldName)
-        {
-            _oldName = oldName;
-        }
+        public TypeRenamedAttribute(string oldName) => OldName = oldName;
 
         /// <summary>
         /// Gets the case-sensitive fully qualified name of the old type.
         /// </summary>
-        public string OldName
-        {
-            get { return _oldName; }
-        }
+        public string OldName { get; }
     }
 }

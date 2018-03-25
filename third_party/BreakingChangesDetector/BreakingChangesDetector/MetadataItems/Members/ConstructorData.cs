@@ -24,12 +24,6 @@
 */
 
 using Microsoft.CodeAnalysis;
-using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Reflection;
-using System.Text;
-using System.Threading.Tasks;
 
 namespace BreakingChangesDetector.MetadataItems
 {
@@ -42,16 +36,12 @@ namespace BreakingChangesDetector.MetadataItems
         #region Constructors
 
         internal ConstructorData(string name, MemberAccessibility accessibility, MemberFlags memberFlags, ParameterCollection parameters)
-            : base(name, accessibility, memberFlags)
-        {
-            this.Parameters = parameters;
-        }
+            : base(name, accessibility, memberFlags) =>
+            Parameters = parameters;
 
         private ConstructorData(IMethodSymbol methodSymbol, MemberAccessibility accessibility, DeclaringTypeData declaringType)
-            : base(methodSymbol, accessibility, Utilities.GetMemberFlags(methodSymbol), declaringType)
-        {
-            this.Parameters = new ParameterCollection(methodSymbol.Parameters, this);
-        }
+            : base(methodSymbol, accessibility, Utilities.GetMemberFlags(methodSymbol), declaringType) =>
+            Parameters = new ParameterCollection(methodSymbol.Parameters, this);
 
         #endregion // Constructors
 
@@ -61,9 +51,11 @@ namespace BreakingChangesDetector.MetadataItems
         {
             var newConstructor = newMember as ConstructorData;
             if (newConstructor == null)
+            {
                 return false;
+            }
 
-            return this.IsEquivalentToNewMember(newConstructor, newAssemblyFamily, ignoreNewOptionalParameters);
+            return IsEquivalentToNewMember(newConstructor, newAssemblyFamily, ignoreNewOptionalParameters);
         }
 
         #endregion // Interfaces
@@ -76,10 +68,8 @@ namespace BreakingChangesDetector.MetadataItems
         /// Performs the specified visitor's functionality on this instance.
         /// </summary>
         /// <param name="visitor">The visitor whose functionality should be performed on the instance.</param>
-        public override void Accept(MetadataItemVisitor visitor)
-        {
+        public override void Accept(MetadataItemVisitor visitor) =>
             visitor.VisitConstructorData(this);
-        }
 
         #endregion // Accept
 
@@ -95,10 +85,12 @@ namespace BreakingChangesDetector.MetadataItems
         internal override bool CanOverrideMember(MemberDataBase baseMember)
         {
             if (base.CanOverrideMember(baseMember) == false)
+            {
                 return false;
+            }
 
             var otherConstructor = (ConstructorData)baseMember;
-            return this.Parameters.IsEquivalentTo(otherConstructor.Parameters);
+            return Parameters.IsEquivalentTo(otherConstructor.Parameters);
         }
 
         #endregion // CanOverrideMember
@@ -108,10 +100,8 @@ namespace BreakingChangesDetector.MetadataItems
         /// <summary>
         /// Gets the name to use for this item in messages.
         /// </summary>
-        public override string DisplayName
-        {
-            get { return this.Name + this.Parameters.GetParameterListDisplayText(); }
-        }
+        public override string DisplayName =>
+            Name + Parameters.GetParameterListDisplayText();
 
         #endregion // DisplayName
 
@@ -120,14 +110,20 @@ namespace BreakingChangesDetector.MetadataItems
         internal override bool DoesMatch(MetadataItemBase other)
         {
             if (base.DoesMatch(other) == false)
+            {
                 return false;
+            }
 
             var otherTyped = other as ConstructorData;
             if (otherTyped == null)
+            {
                 return false;
+            }
 
-            if (this.Parameters.DoesMatch(otherTyped.Parameters) == false)
+            if (Parameters.DoesMatch(otherTyped.Parameters) == false)
+            {
                 return false;
+            }
 
             return true;
         }
@@ -145,9 +141,11 @@ namespace BreakingChangesDetector.MetadataItems
         {
             var newConstructor = newMember as ConstructorData;
             if (newConstructor == null)
+            {
                 return false;
+            }
 
-            return this.IsEquivalentToNewMember(newConstructor, newAssemblyFamily, ignoreNewOptionalParameters: false);
+            return IsEquivalentToNewMember(newConstructor, newAssemblyFamily, ignoreNewOptionalParameters: false);
         }
 
         #endregion // IsEquivalentToNewMember
@@ -157,10 +155,8 @@ namespace BreakingChangesDetector.MetadataItems
         /// <summary>
         /// Gets the type of item the instance represents.
         /// </summary>
-        public override MetadataItemKinds MetadataItemKind
-        {
-            get { return MetadataItemKinds.Constructor; }
-        }
+        public override MetadataItemKinds MetadataItemKind =>
+            MetadataItemKinds.Constructor;
 
         #endregion // MetadataItemKind
 
@@ -176,11 +172,13 @@ namespace BreakingChangesDetector.MetadataItems
 #endif
         internal override MemberDataBase ReplaceGenericTypeParameters(GenericTypeParameterCollection genericParameters, GenericTypeArgumentCollection genericArguments)
         {
-            var replacedParameters = this.Parameters.ReplaceGenericTypeParameters(this.MetadataItemKind, genericParameters, genericArguments);
-            if (replacedParameters == this.Parameters)
+            var replacedParameters = Parameters.ReplaceGenericTypeParameters(MetadataItemKind, genericParameters, genericArguments);
+            if (replacedParameters == Parameters)
+            {
                 return this;
+            }
 
-            return new ConstructorData(this.Name, this.Accessibility, this.MemberFlags, replacedParameters);
+            return new ConstructorData(Name, Accessibility, MemberFlags, replacedParameters);
         }
 
         #endregion // ReplaceGenericTypeParameters
@@ -195,7 +193,9 @@ namespace BreakingChangesDetector.MetadataItems
         {
             var accessibility = methodSymbol.GetAccessibility();
             if (accessibility == null)
+            {
                 return null;
+            }
 
             return new ConstructorData(methodSymbol, accessibility.Value, declaringType);
         }
@@ -217,9 +217,11 @@ namespace BreakingChangesDetector.MetadataItems
         private bool IsEquivalentToNewMember(ConstructorData newMember, AssemblyFamily newAssemblyFamily, bool ignoreNewOptionalParameters)
         {
             if (base.IsEquivalentToNewMember(newMember, newAssemblyFamily) == false)
+            {
                 return false;
+            }
 
-            return this.Parameters.IsEquivalentToNewParameters(newMember.Parameters, newAssemblyFamily, ignoreNewOptionalParameters);
+            return Parameters.IsEquivalentToNewParameters(newMember.Parameters, newAssemblyFamily, ignoreNewOptionalParameters);
         }
 
         #endregion // IsEquivalentToNewMember
@@ -231,7 +233,7 @@ namespace BreakingChangesDetector.MetadataItems
         /// <summary>
         /// Gets the collection of parameters for the constructor.
         /// </summary>
-        public ParameterCollection Parameters { get; private set; }
+        public ParameterCollection Parameters { get; }
 
         #endregion // Properties
     }

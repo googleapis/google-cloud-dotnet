@@ -23,8 +23,6 @@
     SOFTWARE.
 */
 
-using System;
-using Xunit;
 
 namespace BreakingChangesDetector.UnitTests.BreakingChangesTests
 {

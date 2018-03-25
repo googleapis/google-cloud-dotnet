@@ -24,11 +24,7 @@
 */
 
 using BreakingChangesDetector.MetadataItems;
-using System;
 using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
 
 namespace BreakingChangesDetector.BreakingChanges
 {
@@ -42,11 +38,11 @@ namespace BreakingChangesDetector.BreakingChanges
 
         public CompareItemsContext(MetadataItemBase oldItem, MetadataItemBase newItem, AssemblyFamily newAssemblyFamily, List<BreakingChangeBase> breakingChanges, MetadataItemBase additionalInfo = null)
         {
-            this.OldItem = oldItem;
-            this.NewItem = newItem;
-            this.NewAssemblyFamily = newAssemblyFamily;
-            this.BreakingChanges = breakingChanges;
-            this.AdditionalInfo = additionalInfo;
+            OldItem = oldItem;
+            NewItem = newItem;
+            NewAssemblyFamily = newAssemblyFamily;
+            BreakingChanges = breakingChanges;
+            AdditionalInfo = additionalInfo;
         }
     }
 }

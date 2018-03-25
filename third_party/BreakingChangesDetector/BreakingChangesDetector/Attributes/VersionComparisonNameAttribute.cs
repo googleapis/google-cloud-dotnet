@@ -24,10 +24,6 @@
 */
 
 using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
 
 namespace Infragistics  // TODO: Find a more generic namespace
 {
@@ -37,23 +33,15 @@ namespace Infragistics  // TODO: Find a more generic namespace
     [AttributeUsage(AttributeTargets.Assembly, Inherited = false, AllowMultiple = false)]
     internal sealed class VersionComparisonNameAttribute : Attribute
     {
-        private readonly string _name;
-
         /// <summary>
         /// Creates a new <see cref="VersionComparisonNameAttribute"/> instance.
         /// </summary>
         /// <param name="name">The case-sensitive name of the assembly, which should be consistent across versions.</param>
-        public VersionComparisonNameAttribute(string name)
-        {
-            _name = name;
-        }
+        public VersionComparisonNameAttribute(string name) => Name = name;
 
         /// <summary>
         /// Gets the case-sensitive name of the assembly, which should be consistent across versions.
         /// </summary>
-        public string Name
-        {
-            get { return _name; }
-        }
+        public string Name { get; }
     }
 }

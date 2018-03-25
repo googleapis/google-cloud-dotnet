@@ -24,12 +24,6 @@
 */
 
 using Microsoft.CodeAnalysis;
-using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Reflection;
-using System.Text;
-using System.Threading.Tasks;
 
 namespace BreakingChangesDetector.MetadataItems
 {
@@ -42,16 +36,12 @@ namespace BreakingChangesDetector.MetadataItems
         #region Constructor
 
         internal MethodDataBase(string name, MemberAccessibility accessibility, MemberFlags memberFlags, TypeData type, bool isTypeDynamic, ParameterCollection parameters)
-            : base(name, accessibility, memberFlags, type, isTypeDynamic)
-        {
-            this.Parameters = parameters;
-        }
+            : base(name, accessibility, memberFlags, type, isTypeDynamic) =>
+            Parameters = parameters;
 
         internal MethodDataBase(IMethodSymbol methodSymbol, MemberAccessibility accessibility, DeclaringTypeData declaringType)
-            : base(methodSymbol, accessibility, methodSymbol.ReturnType, methodSymbol.IsReturnTypeDynamic(), Utilities.GetMemberFlags(methodSymbol), declaringType)
-        {
-            this.Parameters = new ParameterCollection(methodSymbol.Parameters, this);
-        }
+            : base(methodSymbol, accessibility, methodSymbol.ReturnType, methodSymbol.IsReturnTypeDynamic(), Utilities.GetMemberFlags(methodSymbol), declaringType) =>
+            Parameters = new ParameterCollection(methodSymbol.Parameters, this);
 
         #endregion // Constructor
 
@@ -69,10 +59,12 @@ namespace BreakingChangesDetector.MetadataItems
         internal override bool CanOverrideMember(MemberDataBase baseMember)
         {
             if (base.CanOverrideMember(baseMember) == false)
+            {
                 return false;
+            }
 
             var otherMethodBase = (MethodDataBase)baseMember;
-            return this.Parameters.IsEquivalentTo(otherMethodBase.Parameters);
+            return Parameters.IsEquivalentTo(otherMethodBase.Parameters);
         }
 
         #endregion // CanOverrideMember
@@ -82,10 +74,7 @@ namespace BreakingChangesDetector.MetadataItems
         /// <summary>
         /// Gets the name to use for this item in messages.
         /// </summary>
-        public override string DisplayName
-        {
-            get { return this.Name + this.Parameters.GetParameterListDisplayText(); }
-        }
+        public override string DisplayName => Name + Parameters.GetParameterListDisplayText();
 
         #endregion // DisplayName
 
@@ -94,14 +83,20 @@ namespace BreakingChangesDetector.MetadataItems
         internal override bool DoesMatch(MetadataItemBase other)
         {
             if (base.DoesMatch(other) == false)
+            {
                 return false;
+            }
 
             var otherTyped = other as MethodDataBase;
             if (otherTyped == null)
+            {
                 return false;
+            }
 
-            if (this.Parameters.DoesMatch(otherTyped.Parameters) == false)
+            if (Parameters.DoesMatch(otherTyped.Parameters) == false)
+            {
                 return false;
+            }
 
             return true;
         }
@@ -115,10 +110,8 @@ namespace BreakingChangesDetector.MetadataItems
         /// Indicates whether a new member of the same type and name is logically the same member as the current member, just from a newer build.
         /// </summary> 
 #endif
-        internal override bool IsEquivalentToNewMember(MemberDataBase newMember, AssemblyFamily newAssemblyFamily)
-        {
-            return this.IsEquivalentToNewMember((MethodDataBase)newMember, newAssemblyFamily, ignoreNewOptionalParameters: false);
-        }
+        internal override bool IsEquivalentToNewMember(MemberDataBase newMember, AssemblyFamily newAssemblyFamily) =>
+            IsEquivalentToNewMember((MethodDataBase)newMember, newAssemblyFamily, ignoreNewOptionalParameters: false);
 
         #endregion // IsEquivalentToNewMember
 
@@ -126,10 +119,8 @@ namespace BreakingChangesDetector.MetadataItems
 
         #region Interfaces
 
-        bool IParameterizedItem.IsEquivalentToNewMember(MemberDataBase newMember, AssemblyFamily newAssemblyFamily, bool ignoreNewOptionalParameters)
-        {
-            return this.IsEquivalentToNewMember((MethodDataBase)newMember, newAssemblyFamily, ignoreNewOptionalParameters);
-        }
+        bool IParameterizedItem.IsEquivalentToNewMember(MemberDataBase newMember, AssemblyFamily newAssemblyFamily, bool ignoreNewOptionalParameters) =>
+            IsEquivalentToNewMember((MethodDataBase)newMember, newAssemblyFamily, ignoreNewOptionalParameters);
 
         #endregion // Interfaces
 
@@ -150,9 +141,11 @@ namespace BreakingChangesDetector.MetadataItems
         private bool IsEquivalentToNewMember(MethodDataBase newMember, AssemblyFamily newAssemblyFamily, bool ignoreNewOptionalParameters)
         {
             if (base.IsEquivalentToNewMember(newMember, newAssemblyFamily) == false)
+            {
                 return false;
+            }
 
-            return this.Parameters.IsEquivalentToNewParameters(newMember.Parameters, newAssemblyFamily, ignoreNewOptionalParameters);
+            return Parameters.IsEquivalentToNewParameters(newMember.Parameters, newAssemblyFamily, ignoreNewOptionalParameters);
         }
 
         #endregion // IsEquivalentToNewMember
@@ -164,7 +157,7 @@ namespace BreakingChangesDetector.MetadataItems
         /// <summary>
         /// Gets the collection of parameters for the method.
         /// </summary>
-        public ParameterCollection Parameters { get; private set; }
+        public ParameterCollection Parameters { get; }
 
         #endregion // Properties
     }

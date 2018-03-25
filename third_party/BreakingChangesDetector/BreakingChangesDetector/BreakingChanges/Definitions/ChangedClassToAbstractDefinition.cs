@@ -24,11 +24,6 @@
 */
 
 using BreakingChangesDetector.MetadataItems;
-using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
 
 namespace BreakingChangesDetector.BreakingChanges.Definitions
 {
@@ -44,17 +39,15 @@ namespace BreakingChangesDetector.BreakingChanges.Definitions
             var newType = (TypeDefinitionData)context.NewItem;
 
             if (oldType.HasPublicConstructors && oldType.IsAbstract == false && newType.IsAbstract)
+            {
                 context.BreakingChanges.Add(new ChangedClassToAbstract(oldType, newType));
+            }
         }
 
-        public override BreakingChangeKind BreakingChangeKind
-        {
-            get { return BreakingChangeKind.ChangedClassToAbstract; }
-        }
+        public override BreakingChangeKind BreakingChangeKind =>
+            BreakingChangeKind.ChangedClassToAbstract;
 
-        public override MetadataItemKinds MembersKindsHandled
-        {
-            get { return MetadataItemKinds.TypeDefinition; }
-        }
+        public override MetadataItemKinds MembersKindsHandled =>
+            MetadataItemKinds.TypeDefinition;
     }
 }

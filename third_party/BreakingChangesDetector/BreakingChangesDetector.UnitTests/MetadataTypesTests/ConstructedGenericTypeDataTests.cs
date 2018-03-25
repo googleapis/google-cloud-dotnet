@@ -23,10 +23,10 @@
     SOFTWARE.
 */
 
-using System;
-using Xunit;
 using BreakingChangesDetector.MetadataItems;
+using System;
 using System.Collections.Generic;
+using Xunit;
 
 namespace BreakingChangesDetector.UnitTests.MetadataTypesTests
 {

@@ -24,17 +24,13 @@
 */
 
 using BreakingChangesDetector.MetadataItems;
-using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
 
 namespace BreakingChangesDetector.BreakingChanges.Definitions
 {
     internal class ChangedParameterCountDefinition : BreakingChangeDefinitionBase
     {
-        public static readonly ChangedParameterCountDefinition Instance = new ChangedParameterCountDefinition();
+        public static readonly ChangedParameterCountDefinition Instance =
+            new ChangedParameterCountDefinition();
 
         private ChangedParameterCountDefinition() { }
 
@@ -44,7 +40,9 @@ namespace BreakingChangesDetector.BreakingChanges.Definitions
             var newParameterizedItem = (IParameterizedItem)context.NewItem;
 
             if (oldParameterizedItem.Parameters == null || newParameterizedItem.Parameters == null)
+            {
                 return;
+            }
 
             // If there are now fewer parameters than before, it could be breaking, because someone could have specified all parameters
             if (newParameterizedItem.Parameters.Count < oldParameterizedItem.Parameters.Count)
@@ -62,21 +60,12 @@ namespace BreakingChangesDetector.BreakingChanges.Definitions
             }
         }
 
-        public override BreakingChangeKind BreakingChangeKind
-        {
-            get { return BreakingChangeKind.ChangedParameterCount; }
-        }
+        public override BreakingChangeKind BreakingChangeKind => BreakingChangeKind.ChangedParameterCount;
 
-        public override MetadataItemKinds MembersKindsHandled
-        {
-            get
-            {
-                return
-                    MetadataItemKinds.TypeDefinition |
-                    MetadataItemKinds.Method |
-                    MetadataItemKinds.Indexer |
-                    MetadataItemKinds.Constructor;
-            }
-        }
+        public override MetadataItemKinds MembersKindsHandled =>
+            MetadataItemKinds.TypeDefinition |
+            MetadataItemKinds.Method |
+            MetadataItemKinds.Indexer |
+            MetadataItemKinds.Constructor;
     }
 }

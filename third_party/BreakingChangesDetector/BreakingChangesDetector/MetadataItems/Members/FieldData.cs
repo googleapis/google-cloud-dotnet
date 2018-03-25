@@ -24,13 +24,7 @@
 */
 
 using Microsoft.CodeAnalysis;
-using System;
-using System.Collections.Generic;
 using System.Diagnostics;
-using System.Linq;
-using System.Reflection;
-using System.Text;
-using System.Threading.Tasks;
 
 namespace BreakingChangesDetector.MetadataItems
 {
@@ -42,16 +36,12 @@ namespace BreakingChangesDetector.MetadataItems
         #region Constructors
 
         internal FieldData(string name, MemberAccessibility accessibility, MemberFlags memberFlags, TypeData type, bool isTypeDynamic, bool isReadOnly)
-            : base(name, accessibility, memberFlags, type, isTypeDynamic)
-        {
-            this.IsReadOnly = isReadOnly;
-        }
+            : base(name, accessibility, memberFlags, type, isTypeDynamic) =>
+            IsReadOnly = isReadOnly;
 
         private FieldData(IFieldSymbol fieldSymbol, MemberAccessibility accessibility, DeclaringTypeData declaringType)
-            : base(fieldSymbol, accessibility, fieldSymbol.Type, fieldSymbol.IsDynamicType(), fieldSymbol.IsStatic ? MemberFlags.Static : MemberFlags.None, declaringType)
-        {
-            this.IsReadOnly = fieldSymbol.IsReadOnly;
-        }
+            : base(fieldSymbol, accessibility, fieldSymbol.Type, fieldSymbol.Type.TypeKind == TypeKind.Dynamic, fieldSymbol.IsStatic ? MemberFlags.Static : MemberFlags.None, declaringType) =>
+            IsReadOnly = fieldSymbol.IsReadOnly;
 
         #endregion // Constructors
 
@@ -63,10 +53,8 @@ namespace BreakingChangesDetector.MetadataItems
         /// Performs the specified visitor's functionality on this instance.
         /// </summary>
         /// <param name="visitor">The visitor whose functionality should be performed on the instance.</param>
-        public override void Accept(MetadataItemVisitor visitor)
-        {
+        public override void Accept(MetadataItemVisitor visitor) =>
             visitor.VisitFieldData(this);
-        }
 
         #endregion // Accept
 
@@ -92,14 +80,20 @@ namespace BreakingChangesDetector.MetadataItems
         internal override bool DoesMatch(MetadataItemBase other)
         {
             if (base.DoesMatch(other) == false)
+            {
                 return false;
+            }
 
             var otherTyped = other as FieldData;
             if (otherTyped == null)
+            {
                 return false;
+            }
 
-            if (this.IsReadOnly != otherTyped.IsReadOnly)
+            if (IsReadOnly != otherTyped.IsReadOnly)
+            {
                 return false;
+            }
 
             return true;
         }
@@ -111,10 +105,8 @@ namespace BreakingChangesDetector.MetadataItems
         /// <summary>
         /// Gets the type of item the instance represents.
         /// </summary>
-        public override MetadataItemKinds MetadataItemKind
-        {
-            get { return MetadataItemKinds.Field; }
-        }
+        public override MetadataItemKinds MetadataItemKind =>
+            MetadataItemKinds.Field;
 
         #endregion // MetadataItemKind
 
@@ -130,11 +122,13 @@ namespace BreakingChangesDetector.MetadataItems
 #endif
         internal override MemberDataBase ReplaceGenericTypeParameters(GenericTypeParameterCollection genericParameters, GenericTypeArgumentCollection genericArguments)
         {
-            var replacedType = (TypeData)this.Type.ReplaceGenericTypeParameters(genericParameters, genericArguments);
-            if (replacedType == this.Type)
+            var replacedType = (TypeData)Type.ReplaceGenericTypeParameters(genericParameters, genericArguments);
+            if (replacedType == Type)
+            {
                 return this;
+            }
 
-            return new FieldData(this.Name, this.Accessibility, this.MemberFlags, replacedType, this.IsTypeDynamic, this.IsReadOnly);
+            return new FieldData(Name, Accessibility, MemberFlags, replacedType, IsTypeDynamic, IsReadOnly);
         }
 
         #endregion // ReplaceGenericTypeParameters
@@ -147,7 +141,9 @@ namespace BreakingChangesDetector.MetadataItems
         {
             var accessibility = fieldSymbol.GetAccessibility();
             if (accessibility == null)
+            {
                 return null;
+            }
 
             return new FieldData(fieldSymbol, accessibility.Value, declaringType);
         }
@@ -159,7 +155,7 @@ namespace BreakingChangesDetector.MetadataItems
         /// <summary>
         /// Gets the value indicating whether the field is read-only.
         /// </summary>
-        public bool IsReadOnly { get; private set; }
+        public bool IsReadOnly { get; }
 
         #endregion // Properties
     }

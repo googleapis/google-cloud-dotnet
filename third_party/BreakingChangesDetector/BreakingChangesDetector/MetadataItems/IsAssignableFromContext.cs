@@ -23,26 +23,21 @@
     SOFTWARE.
 */
 
-using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
 
 namespace BreakingChangesDetector.MetadataItems
 {
     internal class IsAssignableFromContext
     {
         public readonly bool IsSourceTypeOld;
-        public bool IsTargetTypeOld { get { return this.IsSourceTypeOld == false; } }
+        public bool IsTargetTypeOld => IsSourceTypeOld == false;
         public readonly AssemblyFamily NewAssemblyFamily;
         public readonly bool OnlyReferenceAndIdentityConversions;
 
         public IsAssignableFromContext(AssemblyFamily newAssemblyFamily, bool isSourceTypeOld, bool onlyReferenceAndIdentityConversions)
         {
-            this.IsSourceTypeOld = isSourceTypeOld;
-            this.NewAssemblyFamily = newAssemblyFamily;
-            this.OnlyReferenceAndIdentityConversions = onlyReferenceAndIdentityConversions;
+            IsSourceTypeOld = isSourceTypeOld;
+            NewAssemblyFamily = newAssemblyFamily;
+            OnlyReferenceAndIdentityConversions = onlyReferenceAndIdentityConversions;
         }
     }
 }

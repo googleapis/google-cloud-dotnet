@@ -23,7 +23,6 @@
     SOFTWARE.
 */
 
-using System;
 using Xunit;
 using BreakingChangesDetector.MetadataItems;
 

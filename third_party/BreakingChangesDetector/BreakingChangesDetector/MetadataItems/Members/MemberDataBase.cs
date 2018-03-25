@@ -24,14 +24,10 @@
 */
 
 using Microsoft.CodeAnalysis;
-using System;
 using System.Collections.Generic;
 using System.Diagnostics;
-using System.IO;
 using System.Linq;
 using System.Reflection;
-using System.Text;
-using System.Threading.Tasks;
 
 namespace BreakingChangesDetector.MetadataItems
 {
@@ -59,17 +55,17 @@ namespace BreakingChangesDetector.MetadataItems
 
         internal MemberDataBase(string name, MemberAccessibility accessibility, MemberFlags memberFlags)
         {
-            this.Accessibility = accessibility;
-            this.MemberFlags = memberFlags;
-            this.Name = name;
+            Accessibility = accessibility;
+            MemberFlags = memberFlags;
+            Name = name;
         }
 
         internal MemberDataBase(ISymbol underlyingSymbol, MemberAccessibility accessibility, MemberFlags memberFlags, DeclaringTypeData declaringType)
         {
-            this.Accessibility = accessibility;
-            this.ContainingType = declaringType;
-            this.MemberFlags = memberFlags;
-            this.Name = underlyingSymbol.MetadataName;
+            Accessibility = accessibility;
+            ContainingType = declaringType;
+            MemberFlags = memberFlags;
+            Name = underlyingSymbol.MetadataName;
         }
 
         #endregion // Constructor
@@ -83,10 +79,7 @@ namespace BreakingChangesDetector.MetadataItems
         /// <summary>
         /// Gets the name to use for this item in messages.
         /// </summary>
-        public override string DisplayName
-        {
-            get { return this.Name; }
-        }
+        public override string DisplayName => Name;
 
         #endregion // DisplayName
 
@@ -95,26 +88,40 @@ namespace BreakingChangesDetector.MetadataItems
         internal override bool DoesMatch(MetadataItemBase other)
         {
             if (base.DoesMatch(other) == false)
+            {
                 return false;
+            }
 
             var otherTyped = other as MemberDataBase;
             if (otherTyped == null)
+            {
                 return false;
+            }
 
-            if (this.Accessibility != otherTyped.Accessibility)
+            if (Accessibility != otherTyped.Accessibility)
+            {
                 return false;
+            }
 
-            if (this.ContainingType == null ^ otherTyped.ContainingType == null)
+            if (ContainingType == null ^ otherTyped.ContainingType == null)
+            {
                 return false;
+            }
 
-            if (this.ContainingType != null && this.ContainingType.DisplayName != otherTyped.ContainingType.DisplayName)
+            if (ContainingType != null && ContainingType.DisplayName != otherTyped.ContainingType.DisplayName)
+            {
                 return false;
+            }
 
-            if (this.MemberFlags != otherTyped.MemberFlags)
+            if (MemberFlags != otherTyped.MemberFlags)
+            {
                 return false;
+            }
 
-            if (this.Name != otherTyped.Name)
+            if (Name != otherTyped.Name)
+            {
                 return false;
+            }
 
             return true;
         }
@@ -137,16 +144,20 @@ namespace BreakingChangesDetector.MetadataItems
         internal virtual bool CanOverrideMember(MemberDataBase baseMember)
         {
             // Static members cannot be overridden
-            if (this.IsStatic || baseMember.IsStatic)
+            if (IsStatic || baseMember.IsStatic)
+            {
                 return false;
+            }
 
             // Members which are not virtual, abstract, or override cannot be overridden.
-            if (this.IsVirtualCallType == false || baseMember.IsVirtualCallType == false)
+            if (IsVirtualCallType == false || baseMember.IsVirtualCallType == false)
+            {
                 return false;
+            }
 
             return
-                this.Accessibility == baseMember.Accessibility &&
-                this.Name == baseMember.Name;
+                Accessibility == baseMember.Accessibility &&
+                Name == baseMember.Name;
         }
 
         #endregion // CanOverrideMember
@@ -161,17 +172,21 @@ namespace BreakingChangesDetector.MetadataItems
 #endif
         internal MemberDataBase GetBaseMember()
         {
-            if (this.ContainingType == null || this.IsOverride == false)
+            if (ContainingType == null || IsOverride == false)
+            {
                 return null;
+            }
 
-            var baseType = this.ContainingType.BaseType;
+            var baseType = ContainingType.BaseType;
             while (baseType != null)
             {
-                var members = baseType.GetMembers(this.Name).Where(m => m.MetadataItemKind == this.MetadataItemKind && m.CanBeOverridden);
+                var members = baseType.GetMembers(Name).Where(m => m.MetadataItemKind == MetadataItemKind && m.CanBeOverridden);
                 foreach (var member in members)
                 {
-                    if (this.CanOverrideMember(member))
+                    if (CanOverrideMember(member))
+                    {
                         return member;
+                    }
                 }
 
                 baseType = baseType.BaseType;
@@ -191,10 +206,12 @@ namespace BreakingChangesDetector.MetadataItems
 #endif
         internal virtual bool IsEquivalentToNewMember(MemberDataBase newMember, AssemblyFamily newAssemblyFamily)
         {
-            if (this.IsNameUsedToVerifyEquivalence && this.Name != newMember.Name)
+            if (IsNameUsedToVerifyEquivalence && Name != newMember.Name)
+            {
                 return false;
+            }
 
-            return this.MetadataItemKind == newMember.MetadataItemKind;
+            return MetadataItemKind == newMember.MetadataItemKind;
         }
 
         #endregion // IsEquivalentToNewMember
@@ -226,7 +243,9 @@ namespace BreakingChangesDetector.MetadataItems
                             method.MethodKind == MethodKind.Conversion)
                         {
                             if (method.DeclaredAccessibility == Microsoft.CodeAnalysis.Accessibility.Public && method.IsStatic && method.Name.StartsWith("op_"))
+                            {
                                 return new OperatorData(method, declaringType);
+                            }
                         }
 
                         if (method.MethodKind == MethodKind.Ordinary ||
@@ -244,10 +263,14 @@ namespace BreakingChangesDetector.MetadataItems
 
                         // Filter out the "value__" field on enums
                         if (declaringType.TypeKind == TypeKind.Enum && field.IsStatic == false)
+                        {
                             return null;
+                        }
 
                         if (field.IsConst)
+                        {
                             return ConstantData.ConstantDataFromReflection(field, declaringType);
+                        }
 
                         return FieldData.FieldDataFromReflection(field, declaringType);
                     }
@@ -259,7 +282,9 @@ namespace BreakingChangesDetector.MetadataItems
                     {
                         var property = (IPropertySymbol)symbol;
                         if (property.IsIndexer)
+                        {
                             return IndexerData.IndexerDataFromReflection(property, declaringType);
+                        }
 
                         return PropertyData.PropertyDataFromReflection(property, declaringType);
                     }
@@ -295,17 +320,17 @@ namespace BreakingChangesDetector.MetadataItems
         /// <summary>
         /// Gets the external accessibility of the member, which indicates whether it is public or protected.
         /// </summary>
-        public MemberAccessibility Accessibility { get; private set; }
+        public MemberAccessibility Accessibility { get; }
 
         /// <summary>
         /// Gets the <see cref="T:AssemblyData"/> representing the assembly in which the member is defined.
         /// </summary>
-        public virtual AssemblyData AssemblyData { get { return this.ContainingType == null ? null : this.ContainingType.AssemblyData; } }
+        public virtual AssemblyData AssemblyData => ContainingType?.AssemblyData;
 
         /// <summary>
         /// Gets the value indicating whether the member can be overridden in derived types.
         /// </summary>
-        public bool CanBeOverridden { get { return this.IsSealed == false && this.IsVirtualCallType; } }
+        public bool CanBeOverridden => IsSealed == false && IsVirtualCallType;
 
         /// <summary>
         /// Gets the type in which this member is declared.
@@ -315,53 +340,54 @@ namespace BreakingChangesDetector.MetadataItems
         /// <summary>
         /// Gets the value indicating whether the member is marked abstract.
         /// </summary>
-        public bool IsAbstract { get { return this.MemberFlags.HasFlag(MemberFlags.Abstract); } }
+        public bool IsAbstract => MemberFlags.HasFlag(MemberFlags.Abstract);
 
         /// <summary>
         /// Gets the value indicating whether the member is and instance member.
         /// </summary>
-        public bool IsInstance { get { return this.IsStatic == false; } }
+        public bool IsInstance => IsStatic == false;
 
         /// <summary>
         /// Gets the value indicating whether the <see cref="Name"/> of the member is primarily used to determine whether it is equivalent to another member.
         /// </summary>
-        public virtual bool IsNameUsedToVerifyEquivalence { get { return true; } }
+        public virtual bool IsNameUsedToVerifyEquivalence => true;
 
         /// <summary>
         /// Gets the value indicating whether the member overrides another.
         /// </summary>
-        public bool IsOverride { get { return this.MemberFlags.HasFlag(MemberFlags.Override); } }
+        public bool IsOverride => MemberFlags.HasFlag(MemberFlags.Override);
 
         /// <summary>
         /// Gets the value indicating whether the member is marked sealed.
         /// </summary>
-        public bool IsSealed { get { return this.MemberFlags.HasFlag(MemberFlags.Sealed); } }
+        public bool IsSealed => MemberFlags.HasFlag(MemberFlags.Sealed);
 
         /// <summary>
         /// Gets the value indicating whether the member is marked static.
         /// </summary>
-        public bool IsStatic { get { return this.MemberFlags.HasFlag(MemberFlags.Static); } }
+        public bool IsStatic => MemberFlags.HasFlag(MemberFlags.Static);
 
         /// <summary>
         /// Gets the value indicating whether the member is marked virtual.
         /// </summary>
-        public bool IsVirtual { get { return this.MemberFlags.HasFlag(MemberFlags.Virtual); } }
+        public bool IsVirtual => MemberFlags.HasFlag(MemberFlags.Virtual);
 
         /// <summary>
         /// Gets the value indicating whether the member uses a virtual call type (is marked virtual, abstract, or override).
         /// </summary>
-        public bool IsVirtualCallType { get { return (this.MemberFlags & (MemberFlags.Virtual | MemberFlags.Abstract | MemberFlags.Override)) != 0; } }
+        public bool IsVirtualCallType =>
+            (MemberFlags & (MemberFlags.Virtual | MemberFlags.Abstract | MemberFlags.Override)) != 0;
 
         /// <summary>
         /// Gets the name of the member.
         /// </summary>
-        public string Name { get; private set; }
+        public string Name { get; }
 
         #endregion // Public Properties
 
         #region Internal Properties
 
-        internal MemberFlags MemberFlags { get; private set; }
+        internal MemberFlags MemberFlags { get; }
 
         #endregion // Internal Properties
 

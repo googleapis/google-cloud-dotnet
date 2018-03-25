@@ -25,13 +25,10 @@
 
 extern alias older;
 extern alias newer;
-
-using System;
 using Xunit;
 using BreakingChangesDetector.MetadataItems;
 using BreakingChangesDetector.BreakingChanges;
 using Infragistics;
-using System.Reflection;
 
 namespace BreakingChangesDetector.UnitTests.BreakingChangesTests
 {

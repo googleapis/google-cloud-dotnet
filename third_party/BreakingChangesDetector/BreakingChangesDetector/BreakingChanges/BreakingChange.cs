@@ -25,12 +25,6 @@
 
 using BreakingChangesDetector.BreakingChanges.Formatting;
 using BreakingChangesDetector.MetadataItems;
-using System;
-using System.Collections.Generic;
-using System.Diagnostics;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
 
 namespace BreakingChangesDetector.BreakingChanges
 {
@@ -51,10 +45,10 @@ namespace BreakingChangesDetector.BreakingChanges
 
         internal BreakingChangeBase(MetadataItemBase oldItem, MetadataItemBase newItem, MetadataItemBase associatedData, BreakingChangeKind breakingChangeKind)
         {
-            this.AssociatedData = associatedData;
-            this.BreakingChangeKind = breakingChangeKind;
-            this.NewItem = newItem;
-            this.OldItem = oldItem;
+            AssociatedData = associatedData;
+            BreakingChangeKind = breakingChangeKind;
+            NewItem = newItem;
+            OldItem = oldItem;
         }
 
         #endregion // Constructor
@@ -64,10 +58,7 @@ namespace BreakingChangesDetector.BreakingChanges
         /// <summary>
         /// Gets a string representation of the breaking change.
         /// </summary>
-        public override string ToString()
-        {
-            return this.Message;
-        }
+        public override string ToString() => Message;
 
         #endregion // Base Class Overrides
 
@@ -87,7 +78,7 @@ namespace BreakingChangesDetector.BreakingChanges
         /// <summary>
         /// Gets the type of breaking change this instance represents.
         /// </summary>
-        public BreakingChangeKind BreakingChangeKind { get; private set; }
+        public BreakingChangeKind BreakingChangeKind { get; }
 
         /// <summary>
         /// Gets the message describing the breaking change.
@@ -99,7 +90,7 @@ namespace BreakingChangesDetector.BreakingChanges
                 if (_message == null)
                 {
                     var stringFormatter = new BreakingChangeStringFormatter();
-                    this.FormatMessage(stringFormatter);
+                    FormatMessage(stringFormatter);
                     _message = stringFormatter.Builder.ToString();
                 }
 
@@ -111,9 +102,9 @@ namespace BreakingChangesDetector.BreakingChanges
 
         #region Internal Properties
 
-        internal MetadataItemBase AssociatedData { get; private set; }
-        internal MetadataItemBase NewItem { get; private set; }
-        internal MetadataItemBase OldItem { get; private set; }
+        internal MetadataItemBase AssociatedData { get; }
+        internal MetadataItemBase NewItem { get; }
+        internal MetadataItemBase OldItem { get; }
 
         #endregion // Internal Properties
 
@@ -133,23 +124,21 @@ namespace BreakingChangesDetector.BreakingChanges
         internal AddedAbstractMember(MemberDataBase newMember)
             : base(null, newMember, null, BreakingChangeKind.AddedAbstractMember)
         {
-            this.NewMember = newMember;
+            NewMember = newMember;
         }
 
         /// <summary>
         /// Formats a message explaining the breaking change using the specified formatter.
         /// </summary>
-        public override void FormatMessage(IBreakingChangeFormatter formatter)
-        {
+        public override void FormatMessage(IBreakingChangeFormatter formatter) =>
             formatter.AppendFormat("Added a new abstract {0} {1} which will cause derived classes to not compile.",
-                FormatItem.MemberKind(this.NewMember),
-                FormatItem.MemberName(this.NewMember, StyleFlags.Bold));
-        }
+                FormatItem.MemberKind(NewMember),
+                FormatItem.MemberName(NewMember, StyleFlags.Bold));
 
         /// <summary>
         /// Gets the abstract member which has been added.
         /// </summary>
-        public MemberDataBase NewMember { get; private set; }
+        public MemberDataBase NewMember { get; }
     }
 
     #endregion // AddedAbstractMember
@@ -165,35 +154,33 @@ namespace BreakingChangesDetector.BreakingChanges
         internal AddedBaseInterface(TypeDefinitionData oldType, TypeDefinitionData newType, DeclaringTypeData newInterfaceType)
             : base(oldType, newType, newInterfaceType, BreakingChangeKind.AddedBaseInterface)
         {
-            this.OldType = oldType;
-            this.NewType = newType;
-            this.NewInterfaceType = newInterfaceType;
+            OldType = oldType;
+            NewType = newType;
+            NewInterfaceType = newInterfaceType;
         }
 
         /// <summary>
         /// Formats a message explaining the breaking change using the specified formatter.
         /// </summary>
-        public override void FormatMessage(IBreakingChangeFormatter formatter)
-        {
+        public override void FormatMessage(IBreakingChangeFormatter formatter) =>
             formatter.AppendFormat("Added a new base interface {1} to {0} which will cause implementing types to not compile.",
-                FormatItem.MemberName(this.NewType, StyleFlags.Bold),
-                FormatItem.MemberName(this.NewInterfaceType, StyleFlags.Italics));
-        }
+                FormatItem.MemberName(NewType, StyleFlags.Bold),
+                FormatItem.MemberName(NewInterfaceType, StyleFlags.Italics));
 
         /// <summary>
         /// Gets the older version of the existing interface.
         /// </summary>
-        public TypeDefinitionData OldType { get; private set; }
+        public TypeDefinitionData OldType { get; }
 
         /// <summary>
         /// Gets the newer version of the existing interface.
         /// </summary>
-        public TypeDefinitionData NewType { get; private set; }
+        public TypeDefinitionData NewType { get; }
 
         /// <summary>
         /// Gets the interface which has been added to the base type list of the existing interface.
         /// </summary>
-        public DeclaringTypeData NewInterfaceType { get; private set; }
+        public DeclaringTypeData NewInterfaceType { get; }
     }
 
     #endregion // AddedBaseInterface
@@ -208,23 +195,21 @@ namespace BreakingChangesDetector.BreakingChanges
         internal AddedInterfaceMember(MemberDataBase newMember)
             : base(null, newMember, null, BreakingChangeKind.AddedInterfaceMember)
         {
-            this.NewMember = newMember;
+            NewMember = newMember;
         }
 
         /// <summary>
         /// Formats a message explaining the breaking change using the specified formatter.
         /// </summary>
-        public override void FormatMessage(IBreakingChangeFormatter formatter)
-        {
+        public override void FormatMessage(IBreakingChangeFormatter formatter) =>
             formatter.AppendFormat("Added a new interface {0} {1} which will cause implementing types to not compile.",
-                FormatItem.MemberKind(this.NewMember),
-                FormatItem.MemberName(this.NewMember, StyleFlags.Bold));
-        }
+                FormatItem.MemberKind(NewMember),
+                FormatItem.MemberName(NewMember, StyleFlags.Bold));
 
         /// <summary>
         /// Gets the member which has been added.
         /// </summary>
-        public MemberDataBase NewMember { get; private set; }
+        public MemberDataBase NewMember { get; }
     }
 
     #endregion // AddedInterfaceMember
@@ -240,28 +225,26 @@ namespace BreakingChangesDetector.BreakingChanges
         internal ChangedAccessibilityFromPublicToProtected(MemberDataBase oldMember, MemberDataBase newMember)
             : base(oldMember, newMember, null, BreakingChangeKind.ChangedAccessibilityFromPublicToProtected)
         {
-            this.OldMember = oldMember;
-            this.NewMember = newMember;
+            OldMember = oldMember;
+            NewMember = newMember;
         }
 
         /// <summary>
         /// Formats a message explaining the breaking change using the specified formatter.
         /// </summary>
-        public override void FormatMessage(IBreakingChangeFormatter formatter)
-        {
+        public override void FormatMessage(IBreakingChangeFormatter formatter) =>
             formatter.AppendFormat("Changed accessibility of {0} from public to protected which may cause code to not compile.",
-                FormatItem.MemberName(this.NewMember, StyleFlags.Bold));
-        }
+                FormatItem.MemberName(NewMember, StyleFlags.Bold));
 
         /// <summary>
         /// Gets the older version of the member or type.
         /// </summary>
-        public MemberDataBase OldMember { get; private set; }
+        public MemberDataBase OldMember { get; }
 
         /// <summary>
         /// Gets the newer version of the member or type.
         /// </summary>
-        public MemberDataBase NewMember { get; private set; }
+        public MemberDataBase NewMember { get; }
     }
 
     #endregion // ChangedAccessibilityFromPublicToProtected
@@ -276,28 +259,26 @@ namespace BreakingChangesDetector.BreakingChanges
         internal ChangedClassToAbstract(TypeDefinitionData oldType, TypeDefinitionData newType)
             : base(oldType, newType, null, BreakingChangeKind.ChangedClassToAbstract)
         {
-            this.OldType = oldType;
-            this.NewType = newType;
+            OldType = oldType;
+            NewType = newType;
         }
 
         /// <summary>
         /// Formats a message explaining the breaking change using the specified formatter.
         /// </summary>
-        public override void FormatMessage(IBreakingChangeFormatter formatter)
-        {
+        public override void FormatMessage(IBreakingChangeFormatter formatter) =>
             formatter.AppendFormat("Changed non-abstract class {0} to abstract which will cause instantiations of the class to not compile.",
-                FormatItem.MemberName(this.NewType, StyleFlags.Bold));
-        }
+                FormatItem.MemberName(NewType, StyleFlags.Bold));
 
         /// <summary>
         /// Gets the older version of the class.
         /// </summary>
-        public TypeDefinitionData OldType { get; private set; }
+        public TypeDefinitionData OldType { get; }
 
         /// <summary>
         /// Gets the newer version of the class.
         /// </summary>
-        public TypeDefinitionData NewType { get; private set; }
+        public TypeDefinitionData NewType { get; }
     }
 
     #endregion // ChangedClassToAbstract
@@ -312,28 +293,26 @@ namespace BreakingChangesDetector.BreakingChanges
         internal ChangedFieldToReadOnly(FieldData oldField, FieldData newField)
             : base(oldField, newField, null, BreakingChangeKind.ChangedFieldToReadOnly)
         {
-            this.OldField = oldField;
-            this.NewField = newField;
+            OldField = oldField;
+            NewField = newField;
         }
 
         /// <summary>
         /// Formats a message explaining the breaking change using the specified formatter.
         /// </summary>
-        public override void FormatMessage(IBreakingChangeFormatter formatter)
-        {
+        public override void FormatMessage(IBreakingChangeFormatter formatter) =>
             formatter.AppendFormat("Changed read-write field {0} to read-only which will cause writes to the field to not compile.",
-                FormatItem.MemberName(this.NewField, StyleFlags.Bold));
-        }
+                FormatItem.MemberName(NewField, StyleFlags.Bold));
 
         /// <summary>
         /// Gets the older version of the field.
         /// </summary>
-        public FieldData OldField { get; private set; }
+        public FieldData OldField { get; }
 
         /// <summary>
         /// Gets the newer version of the field.
         /// </summary>
-        public FieldData NewField { get; private set; }
+        public FieldData NewField { get; }
     }
 
     #endregion // ChangedFieldToReadOnly
@@ -348,28 +327,26 @@ namespace BreakingChangesDetector.BreakingChanges
         internal ChangedClassToStatic(TypeDefinitionData oldType, TypeDefinitionData newType)
             : base(oldType, newType, null, BreakingChangeKind.ChangedClassToStatic)
         {
-            this.OldType = oldType;
-            this.NewType = newType;
+            OldType = oldType;
+            NewType = newType;
         }
 
         /// <summary>
         /// Formats a message explaining the breaking change using the specified formatter.
         /// </summary>
-        public override void FormatMessage(IBreakingChangeFormatter formatter)
-        {
+        public override void FormatMessage(IBreakingChangeFormatter formatter) =>
             formatter.AppendFormat("Changed non-static class {0} to static which will cause instantiations of the class to not compile.",
-                FormatItem.MemberName(this.NewType, StyleFlags.Bold));
-        }
+                FormatItem.MemberName(NewType, StyleFlags.Bold));
 
         /// <summary>
         /// Gets the older version of the class.
         /// </summary>
-        public TypeDefinitionData OldType { get; private set; }
+        public TypeDefinitionData OldType { get; }
 
         /// <summary>
         /// Gets the newer version of the class.
         /// </summary>
-        public TypeDefinitionData NewType { get; private set; }
+        public TypeDefinitionData NewType { get; }
     }
 
     #endregion // ChangedClassToStatic
@@ -385,30 +362,28 @@ namespace BreakingChangesDetector.BreakingChanges
         internal ChangedGenericTypeParameterConstraints(GenericTypeParameterData oldGenericParameter, GenericTypeParameterData newGenericParameter)
             : base(oldGenericParameter, newGenericParameter, null, BreakingChangeKind.ChangedGenericTypeParameterConstraints)
         {
-            this.OldGenericParameter = oldGenericParameter;
-            this.NewGenericParameter = newGenericParameter;
+            OldGenericParameter = oldGenericParameter;
+            NewGenericParameter = newGenericParameter;
         }
 
         /// <summary>
         /// Formats a message explaining the breaking change using the specified formatter.
         /// </summary>
-        public override void FormatMessage(IBreakingChangeFormatter formatter)
-        {
+        public override void FormatMessage(IBreakingChangeFormatter formatter) =>
             formatter.AppendFormat("Changed constraints for the generic type parameter {0} in {1} {2} which may cause constructions of the entity to not compile.",
-                FormatItem.MemberName(this.NewGenericParameter, StyleFlags.Italics),
-                FormatItem.MemberKind(this.NewGenericParameter.GenericDeclaringMember),
-                FormatItem.MemberName(this.NewGenericParameter.GenericDeclaringMember, StyleFlags.Bold));
-        }
+                FormatItem.MemberName(NewGenericParameter, StyleFlags.Italics),
+                FormatItem.MemberKind(NewGenericParameter.GenericDeclaringMember),
+                FormatItem.MemberName(NewGenericParameter.GenericDeclaringMember, StyleFlags.Bold));
 
         /// <summary>
         /// Gets the older version of the generic type parameter.
         /// </summary>
-        public GenericTypeParameterData OldGenericParameter { get; private set; }
+        public GenericTypeParameterData OldGenericParameter { get; }
 
         /// <summary>
         /// Gets the newer version of the generic type parameter.
         /// </summary>
-        public GenericTypeParameterData NewGenericParameter { get; private set; }
+        public GenericTypeParameterData NewGenericParameter { get; }
     }
 
     #endregion // ChangedGenericTypeParameterConstraints
@@ -424,30 +399,28 @@ namespace BreakingChangesDetector.BreakingChanges
         internal ChangedGenericTypeParameterVariance(GenericTypeParameterData oldGenericParameter, GenericTypeParameterData newGenericParameter)
             : base(oldGenericParameter, newGenericParameter, null, BreakingChangeKind.ChangedGenericTypeParameterVariance)
         {
-            this.OldGenericParameter = oldGenericParameter;
-            this.NewGenericParameter = newGenericParameter;
+            OldGenericParameter = oldGenericParameter;
+            NewGenericParameter = newGenericParameter;
         }
 
         /// <summary>
         /// Formats a message explaining the breaking change using the specified formatter.
         /// </summary>
-        public override void FormatMessage(IBreakingChangeFormatter formatter)
-        {
+        public override void FormatMessage(IBreakingChangeFormatter formatter) =>
             formatter.AppendFormat("Changed variance (in or out modifier) for the generic type parameter {0} in {1} {2} which may cause implicit conversions of the {1} to not compile.",
-                FormatItem.MemberName(this.NewGenericParameter, StyleFlags.Italics),
-                FormatItem.MemberKind(this.NewGenericParameter.GenericDeclaringMember),
-                FormatItem.MemberName(this.NewGenericParameter.GenericDeclaringMember, StyleFlags.Bold));
-        }
+                FormatItem.MemberName(NewGenericParameter, StyleFlags.Italics),
+                FormatItem.MemberKind(NewGenericParameter.GenericDeclaringMember),
+                FormatItem.MemberName(NewGenericParameter.GenericDeclaringMember, StyleFlags.Bold));
 
         /// <summary>
         /// Gets the older version of the generic type parameter.
         /// </summary>
-        public GenericTypeParameterData OldGenericParameter { get; private set; }
+        public GenericTypeParameterData OldGenericParameter { get; }
 
         /// <summary>
         /// Gets the newer version of the generic type parameter.
         /// </summary>
-        public GenericTypeParameterData NewGenericParameter { get; private set; }
+        public GenericTypeParameterData NewGenericParameter { get; }
     }
 
     #endregion // ChangedGenericTypeParameterVariance
@@ -462,29 +435,27 @@ namespace BreakingChangesDetector.BreakingChanges
         internal ChangedMemberToAbstract(MemberDataBase oldMember, MemberDataBase newMember)
             : base(oldMember, newMember, null, BreakingChangeKind.ChangedMemberToAbstract)
         {
-            this.OldMember = oldMember;
-            this.NewMember = newMember;
+            OldMember = oldMember;
+            NewMember = newMember;
         }
 
         /// <summary>
         /// Formats a message explaining the breaking change using the specified formatter.
         /// </summary>
-        public override void FormatMessage(IBreakingChangeFormatter formatter)
-        {
+        public override void FormatMessage(IBreakingChangeFormatter formatter) =>
             formatter.AppendFormat("Changed non-abstract {0} {1} to abstract which will cause derived classes not overriding the {0} to not compile.",
-                FormatItem.MemberKind(this.NewMember),
-                FormatItem.MemberName(this.NewMember, StyleFlags.Bold));
-        }
+                FormatItem.MemberKind(NewMember),
+                FormatItem.MemberName(NewMember, StyleFlags.Bold));
 
         /// <summary>
         /// Gets the older definition of the member, which is not abstract.
         /// </summary>
-        public MemberDataBase OldMember { get; private set; }
+        public MemberDataBase OldMember { get; }
 
         /// <summary>
         /// Gets the newer definition of the member, which is abstract.
         /// </summary>
-        public MemberDataBase NewMember { get; private set; }
+        public MemberDataBase NewMember { get; }
     }
 
     #endregion // ChangedMemberToAbstract
@@ -500,29 +471,27 @@ namespace BreakingChangesDetector.BreakingChanges
         internal ChangedMemberToNonVirtual(MemberDataBase oldMember, MemberDataBase newMember)
             : base(oldMember, newMember, null, BreakingChangeKind.ChangedMemberToNonVirtual)
         {
-            this.OldMember = oldMember;
-            this.NewMember = newMember;
+            OldMember = oldMember;
+            NewMember = newMember;
         }
 
         /// <summary>
         /// Formats a message explaining the breaking change using the specified formatter.
         /// </summary>
-        public override void FormatMessage(IBreakingChangeFormatter formatter)
-        {
+        public override void FormatMessage(IBreakingChangeFormatter formatter) =>
             formatter.AppendFormat("Changed virtual {0} {1} to non-virtual which will cause derived classes overriding the {0} to not compile.",
-                FormatItem.MemberKind(this.NewMember),
-                FormatItem.MemberName(this.NewMember, StyleFlags.Bold));
-        }
+                FormatItem.MemberKind(NewMember),
+                FormatItem.MemberName(NewMember, StyleFlags.Bold));
 
         /// <summary>
         /// Gets the older definition of the member, which is not virtual, abstract, or override (without a sealed modifier).
         /// </summary>
-        public MemberDataBase OldMember { get; private set; }
+        public MemberDataBase OldMember { get; }
 
         /// <summary>
         /// Gets the newer definition of the member, which is non-virtual.
         /// </summary>
-        public MemberDataBase NewMember { get; private set; }
+        public MemberDataBase NewMember { get; }
     }
 
     #endregion // ChangedMemberToNonVirtual
@@ -541,31 +510,29 @@ namespace BreakingChangesDetector.BreakingChanges
         internal ChangedMemberType(ITypedItem oldTypedItem, ITypedItem newTypedItem)
             : base((MetadataItemBase)oldTypedItem, (MetadataItemBase)newTypedItem, null, BreakingChangeKind.ChangedMemberType)
         {
-            this.OldTypedItem = oldTypedItem;
-            this.NewTypedItem = newTypedItem;
+            OldTypedItem = oldTypedItem;
+            NewTypedItem = newTypedItem;
         }
 
         /// <summary>
         /// Formats a message explaining the breaking change using the specified formatter.
         /// </summary>
-        public override void FormatMessage(IBreakingChangeFormatter formatter)
-        {
+        public override void FormatMessage(IBreakingChangeFormatter formatter) =>
             formatter.AppendFormat("Changed the type of {0} {1} in a way which may cause code using the {0} to not compile. Type was changed from {2} to {3}.",
-                FormatItem.TypedItemKind(this.NewTypedItem),
-                FormatItem.TypedItemName(this.NewTypedItem, StyleFlags.Bold),
-                FormatItem.TypedItemTypeName(this.OldTypedItem, StyleFlags.Italics),
-                FormatItem.TypedItemTypeName(this.NewTypedItem, StyleFlags.Italics));
-        }
+                FormatItem.TypedItemKind(NewTypedItem),
+                FormatItem.TypedItemName(NewTypedItem, StyleFlags.Bold),
+                FormatItem.TypedItemTypeName(OldTypedItem, StyleFlags.Italics),
+                FormatItem.TypedItemTypeName(NewTypedItem, StyleFlags.Italics));
 
         /// <summary>
         /// Gets the older definition of the member.
         /// </summary>
-        public ITypedItem OldTypedItem { get; private set; }
+        public ITypedItem OldTypedItem { get; }
 
         /// <summary>
         /// Gets the newer definition of the member.
         /// </summary>
-        public ITypedItem NewTypedItem { get; private set; }
+        public ITypedItem NewTypedItem { get; }
     }
 
     #endregion // ChangedMemberType
@@ -583,29 +550,27 @@ namespace BreakingChangesDetector.BreakingChanges
         internal ChangedParameterCount(IParameterizedItem oldParameterizedItem, IParameterizedItem newParameterizedItem)
             : base((MetadataItemBase)oldParameterizedItem, (MetadataItemBase)newParameterizedItem, null, BreakingChangeKind.ChangedParameterCount)
         {
-            this.OldParameterizedItem = oldParameterizedItem;
-            this.NewParameterizedItem = newParameterizedItem;
+            OldParameterizedItem = oldParameterizedItem;
+            NewParameterizedItem = newParameterizedItem;
         }
 
         /// <summary>
         /// Formats a message explaining the breaking change using the specified formatter.
         /// </summary>
-        public override void FormatMessage(IBreakingChangeFormatter formatter)
-        {
+        public override void FormatMessage(IBreakingChangeFormatter formatter) =>
             formatter.AppendFormat("Changed the parameter count of {0} in a way which may cause invocations to not compile. Previous declaration was {1}.",
-                FormatItem.ParameterizedItemName(this.NewParameterizedItem, StyleFlags.Bold),
-                FormatItem.ParameterizedItemName(this.OldParameterizedItem, StyleFlags.Italics));
-        }
+                FormatItem.ParameterizedItemName(NewParameterizedItem, StyleFlags.Bold),
+                FormatItem.ParameterizedItemName(OldParameterizedItem, StyleFlags.Italics));
 
         /// <summary>
         /// Gets the older version of the method, indexer, or delegate owning the parameters.
         /// </summary>
-        public IParameterizedItem OldParameterizedItem { get; private set; }
+        public IParameterizedItem OldParameterizedItem { get; }
 
         /// <summary>
         /// Gets the newer version of the method, indexer, or delegate owning the parameters.
         /// </summary>
-        public IParameterizedItem NewParameterizedItem { get; private set; }
+        public IParameterizedItem NewParameterizedItem { get; }
     }
 
     #endregion // ChangedParameterCount
@@ -620,37 +585,35 @@ namespace BreakingChangesDetector.BreakingChanges
         internal ChangedParameterDefaultValue(ParameterData oldParameter, ParameterData newParameter, IParameterizedItem newParameterizedItem)
             : base(oldParameter, newParameter, (MetadataItemBase)newParameterizedItem, BreakingChangeKind.ChangedParameterDefaultValue)
         {
-            this.OldParameter = oldParameter;
-            this.NewParameter = newParameter;
-            this.NewParameterizedItem = newParameterizedItem;
+            OldParameter = oldParameter;
+            NewParameter = newParameter;
+            NewParameterizedItem = newParameterizedItem;
         }
 
         /// <summary>
         /// Formats a message explaining the breaking change using the specified formatter.
         /// </summary>
-        public override void FormatMessage(IBreakingChangeFormatter formatter)
-        {
+        public override void FormatMessage(IBreakingChangeFormatter formatter) =>
             formatter.AppendFormat("Changed default value of parameter '{0}' in {1} which may cause an unintentional behavioral change in code. The value was changed from '{2}' to '{3}'.",
-                FormatItem.ParameterName(this.NewParameter, StyleFlags.Italics),
-                FormatItem.ParameterizedItemName(this.NewParameterizedItem, StyleFlags.Bold),
-                FormatItem.DefaultParameterValue(this.OldParameter, StyleFlags.Italics),
-                FormatItem.DefaultParameterValue(this.NewParameter, StyleFlags.Italics));
-        }
+                FormatItem.ParameterName(NewParameter, StyleFlags.Italics),
+                FormatItem.ParameterizedItemName(NewParameterizedItem, StyleFlags.Bold),
+                FormatItem.DefaultParameterValue(OldParameter, StyleFlags.Italics),
+                FormatItem.DefaultParameterValue(NewParameter, StyleFlags.Italics));
 
         /// <summary>
         /// Gets the older version of the parameter.
         /// </summary>
-        public ParameterData OldParameter { get; private set; }
+        public ParameterData OldParameter { get; }
 
         /// <summary>
         /// Gets the older version of the parameter.
         /// </summary>
-        public ParameterData NewParameter { get; private set; }
+        public ParameterData NewParameter { get; }
 
         /// <summary>
         /// Gets the newer version of the method, indexer, or delegate which defines the parameter.
         /// </summary>
-        public IParameterizedItem NewParameterizedItem { get; private set; }
+        public IParameterizedItem NewParameterizedItem { get; }
     }
 
     #endregion // ChangedParameterDefaultValue
@@ -666,35 +629,33 @@ namespace BreakingChangesDetector.BreakingChanges
         internal ChangedParameterModifier(ParameterData oldParameter, ParameterData newParameter, IParameterizedItem newParameterizedItem)
             : base(oldParameter, newParameter, (MetadataItemBase)newParameterizedItem, BreakingChangeKind.ChangedParameterModifier)
         {
-            this.OldParameter = oldParameter;
-            this.NewParameter = newParameter;
-            this.NewParameterizedItem = newParameterizedItem;
+            OldParameter = oldParameter;
+            NewParameter = newParameter;
+            NewParameterizedItem = newParameterizedItem;
         }
 
         /// <summary>
         /// Formats a message explaining the breaking change using the specified formatter.
         /// </summary>
-        public override void FormatMessage(IBreakingChangeFormatter formatter)
-        {
+        public override void FormatMessage(IBreakingChangeFormatter formatter) =>
             formatter.AppendFormat("Changed the ref or out modifier of parameter '{0}' in {1} which will cause invocations to not compile.",
-                FormatItem.ParameterName(this.NewParameter, StyleFlags.Italics),
-                FormatItem.ParameterizedItemName(this.NewParameterizedItem, StyleFlags.Bold));
-        }
+                FormatItem.ParameterName(NewParameter, StyleFlags.Italics),
+                FormatItem.ParameterizedItemName(NewParameterizedItem, StyleFlags.Bold));
 
         /// <summary>
         /// Gets the older version of the parameter.
         /// </summary>
-        public ParameterData OldParameter { get; private set; }
+        public ParameterData OldParameter { get; }
 
         /// <summary>
         /// Gets the older version of the parameter.
         /// </summary>
-        public ParameterData NewParameter { get; private set; }
+        public ParameterData NewParameter { get; }
 
         /// <summary>
         /// Gets the newer version of the method, indexer, or delegate which defines the parameter.
         /// </summary>
-        public IParameterizedItem NewParameterizedItem { get; private set; }
+        public IParameterizedItem NewParameterizedItem { get; }
     }
 
     #endregion // ChangedParameterModifier
@@ -709,36 +670,34 @@ namespace BreakingChangesDetector.BreakingChanges
         internal ChangedParameterName(ParameterData oldParameter, ParameterData newParameter, IParameterizedItem newParameterizedItem)
             : base(oldParameter, newParameter, (MetadataItemBase)newParameterizedItem, BreakingChangeKind.ChangedParameterName)
         {
-            this.OldParameter = oldParameter;
-            this.NewParameter = newParameter;
-            this.NewParameterizedItem = newParameterizedItem;
+            OldParameter = oldParameter;
+            NewParameter = newParameter;
+            NewParameterizedItem = newParameterizedItem;
         }
 
         /// <summary>
         /// Formats a message explaining the breaking change using the specified formatter.
         /// </summary>
-        public override void FormatMessage(IBreakingChangeFormatter formatter)
-        {
+        public override void FormatMessage(IBreakingChangeFormatter formatter) =>
             formatter.AppendFormat("Changed the name of a parameter from '{0}' to '{1}' in {2} which will cause named arguments in invocations to not compile.",
-                FormatItem.ParameterName(this.OldParameter, StyleFlags.Italics),
-                FormatItem.ParameterName(this.NewParameter, StyleFlags.Italics),
-                FormatItem.ParameterizedItemName(this.NewParameterizedItem, StyleFlags.Bold));
-        }
+                FormatItem.ParameterName(OldParameter, StyleFlags.Italics),
+                FormatItem.ParameterName(NewParameter, StyleFlags.Italics),
+                FormatItem.ParameterizedItemName(NewParameterizedItem, StyleFlags.Bold));
 
         /// <summary>
         /// Gets the older version of the parameter.
         /// </summary>
-        public ParameterData OldParameter { get; private set; }
+        public ParameterData OldParameter { get; }
 
         /// <summary>
         /// Gets the older version of the parameter.
         /// </summary>
-        public ParameterData NewParameter { get; private set; }
+        public ParameterData NewParameter { get; }
 
         /// <summary>
         /// Gets the newer version of the method, indexer, or delegate which defines the parameter.
         /// </summary>
-        public IParameterizedItem NewParameterizedItem { get; private set; }
+        public IParameterizedItem NewParameterizedItem { get; }
     }
 
     #endregion // ChangedParameterName
@@ -755,37 +714,35 @@ namespace BreakingChangesDetector.BreakingChanges
         internal ChangedParameterType(ParameterData oldParameter, ParameterData newParameter, IParameterizedItem newParameterizedItem)
             : base(oldParameter, newParameter, (MetadataItemBase)newParameterizedItem, BreakingChangeKind.ChangedParameterType)
         {
-            this.OldParameter = oldParameter;
-            this.NewParameter = newParameter;
-            this.NewParameterizedItem = newParameterizedItem;
+            OldParameter = oldParameter;
+            NewParameter = newParameter;
+            NewParameterizedItem = newParameterizedItem;
         }
 
         /// <summary>
         /// Formats a message explaining the breaking change using the specified formatter.
         /// </summary>
-        public override void FormatMessage(IBreakingChangeFormatter formatter)
-        {
+        public override void FormatMessage(IBreakingChangeFormatter formatter) =>
             formatter.AppendFormat("Changed the type of parameter '{0}' in {1} in a way which may cause invocations to not compile. Type was changed from {2} to {3}.",
-                FormatItem.ParameterName(this.NewParameter, StyleFlags.Italics),
-                FormatItem.ParameterizedItemName(this.NewParameterizedItem, StyleFlags.Bold),
-                FormatItem.TypedItemTypeName(this.OldParameter, StyleFlags.Italics),
-                FormatItem.TypedItemTypeName(this.NewParameter, StyleFlags.Italics));
-        }
+                FormatItem.ParameterName(NewParameter, StyleFlags.Italics),
+                FormatItem.ParameterizedItemName(NewParameterizedItem, StyleFlags.Bold),
+                FormatItem.TypedItemTypeName(OldParameter, StyleFlags.Italics),
+                FormatItem.TypedItemTypeName(NewParameter, StyleFlags.Italics));
 
         /// <summary>
         /// Gets the older version of the parameter.
         /// </summary>
-        public ParameterData OldParameter { get; private set; }
+        public ParameterData OldParameter { get; }
 
         /// <summary>
         /// Gets the older version of the parameter.
         /// </summary>
-        public ParameterData NewParameter { get; private set; }
+        public ParameterData NewParameter { get; }
 
         /// <summary>
         /// Gets the newer version of the method, indexer, or delegate which defines the parameter.
         /// </summary>
-        public IParameterizedItem NewParameterizedItem { get; private set; }
+        public IParameterizedItem NewParameterizedItem { get; }
     }
 
     #endregion // ChangedParameterType
@@ -801,29 +758,27 @@ namespace BreakingChangesDetector.BreakingChanges
         internal ChangedStaticOrInstanceStatus(MemberDataBase oldMember, MemberDataBase newMember)
             : base(oldMember, newMember, null, BreakingChangeKind.ChangedStaticOrInstanceStatus)
         {
-            this.OldMember = oldMember;
-            this.NewMember = newMember;
+            OldMember = oldMember;
+            NewMember = newMember;
         }
 
         /// <summary>
         /// Formats a message explaining the breaking change using the specified formatter.
         /// </summary>
-        public override void FormatMessage(IBreakingChangeFormatter formatter)
-        {
+        public override void FormatMessage(IBreakingChangeFormatter formatter) =>
             formatter.AppendFormat("Added or removed the static modifier of {0} {1} which may cause code using the {0} to not compile.",
-                FormatItem.MemberKind(this.NewMember),
-                FormatItem.MemberName(this.NewMember, StyleFlags.Bold));
-        }
+                FormatItem.MemberKind(NewMember),
+                FormatItem.MemberName(NewMember, StyleFlags.Bold));
 
         /// <summary>
         /// Gets the older version of the member.
         /// </summary>
-        public MemberDataBase OldMember { get; private set; }
+        public MemberDataBase OldMember { get; }
 
         /// <summary>
         /// Gets the newer version of the member.
         /// </summary>
-        public MemberDataBase NewMember { get; private set; }
+        public MemberDataBase NewMember { get; }
     }
 
     #endregion // ChangedStaticOrInstanceStatus
@@ -839,30 +794,28 @@ namespace BreakingChangesDetector.BreakingChanges
         internal IncompatibleClassHierarchy(TypeDefinitionData oldType, TypeDefinitionData newType)
             : base(oldType, newType, null, BreakingChangeKind.IncompatibleClassHierarchy)
         {
-            this.OldType = oldType;
-            this.NewType = newType;
+            OldType = oldType;
+            NewType = newType;
         }
 
         /// <summary>
         /// Formats a message explaining the breaking change using the specified formatter.
         /// </summary>
-        public override void FormatMessage(IBreakingChangeFormatter formatter)
-        {
+        public override void FormatMessage(IBreakingChangeFormatter formatter) =>
             formatter.AppendFormat("Changed the base class of {0} to something not derived from the previous base class which may cause code using the class to not compile. The base class was changed from {1} to {2}.",
-                FormatItem.MemberName(this.NewType, StyleFlags.Bold),
-                FormatItem.MemberName(this.OldType.BaseType, StyleFlags.Italics),
-                FormatItem.MemberName(this.NewType.BaseType, StyleFlags.Italics));
-        }
+                FormatItem.MemberName(NewType, StyleFlags.Bold),
+                FormatItem.MemberName(OldType.BaseType, StyleFlags.Italics),
+                FormatItem.MemberName(NewType.BaseType, StyleFlags.Italics));
 
         /// <summary>
         /// Gets the older version of the class.
         /// </summary>
-        public TypeDefinitionData OldType { get; private set; }
+        public TypeDefinitionData OldType { get; }
 
         /// <summary>
         /// Gets the newer version of the class.
         /// </summary>
-        public TypeDefinitionData NewType { get; private set; }
+        public TypeDefinitionData NewType { get; }
     }
 
     #endregion // IncompatibleClassHierarchy
@@ -877,22 +830,20 @@ namespace BreakingChangesDetector.BreakingChanges
         internal RemovedAssembly(AssemblyData oldAssembly)
             : base(oldAssembly, null, null, BreakingChangeKind.RemovedAssembly)
         {
-            this.OldAssembly = oldAssembly;
+            OldAssembly = oldAssembly;
         }
 
         /// <summary>
         /// Formats a message explaining the breaking change using the specified formatter.
         /// </summary>
-        public override void FormatMessage(IBreakingChangeFormatter formatter)
-        {
+        public override void FormatMessage(IBreakingChangeFormatter formatter) =>
             formatter.AppendFormat("Removed the equivalent to assembly {0} in the new version, which will cause projects referencing the assembly to not compile.",
-                FormatItem.AssemblyName(this.OldAssembly, StyleFlags.Bold));
-        }
+                FormatItem.AssemblyName(OldAssembly, StyleFlags.Bold));
 
         /// <summary>
         /// Gets the older version of the assembly.
         /// </summary>
-        public AssemblyData OldAssembly { get; private set; }
+        public AssemblyData OldAssembly { get; }
     }
 
     #endregion // RemovedAssembly
@@ -908,28 +859,26 @@ namespace BreakingChangesDetector.BreakingChanges
         internal RemovedExtensionMethodModifier(MethodData oldMethod, MethodData newMethod)
             : base(oldMethod, newMethod, null, BreakingChangeKind.RemovedExtensionMethodModifier)
         {
-            this.OldMethod = oldMethod;
-            this.NewMethod = newMethod;
+            OldMethod = oldMethod;
+            NewMethod = newMethod;
         }
 
         /// <summary>
         /// Formats a message explaining the breaking change using the specified formatter.
         /// </summary>
-        public override void FormatMessage(IBreakingChangeFormatter formatter)
-        {
+        public override void FormatMessage(IBreakingChangeFormatter formatter) =>
             formatter.AppendFormat("Removed the 'this' modifier from the first parameter of {0} which will cause code using the method as an extension method to not compile.",
-                FormatItem.MemberName(this.NewMethod, StyleFlags.Bold));
-        }
+                FormatItem.MemberName(NewMethod, StyleFlags.Bold));
 
         /// <summary>
         /// Gets the older version of the method.
         /// </summary>
-        public MethodData OldMethod { get; private set; }
+        public MethodData OldMethod { get; }
 
         /// <summary>
         /// Gets the newer version of the method.
         /// </summary>
-        public MethodData NewMethod { get; private set; }
+        public MethodData NewMethod { get; }
     }
 
     #endregion // RemovedExtensionMethodModifier
@@ -945,36 +894,34 @@ namespace BreakingChangesDetector.BreakingChanges
         internal RemovedImplementedInterface(TypeDefinitionData oldType, TypeDefinitionData newType, DeclaringTypeData oldInterfaceType)
             : base(oldType, newType, oldInterfaceType, BreakingChangeKind.RemovedImplementedInterface)
         {
-            this.OldType = oldType;
-            this.NewType = newType;
-            this.OldInterfaceType = oldInterfaceType;
+            OldType = oldType;
+            NewType = newType;
+            OldInterfaceType = oldInterfaceType;
         }
 
         /// <summary>
         /// Formats a message explaining the breaking change using the specified formatter.
         /// </summary>
-        public override void FormatMessage(IBreakingChangeFormatter formatter)
-        {
+        public override void FormatMessage(IBreakingChangeFormatter formatter) =>
             formatter.AppendFormat("Removed implementation of interface {0} from {1} which may cause code using the {2} to not compile.",
-                FormatItem.MemberName(this.OldInterfaceType, StyleFlags.Italics),
-                FormatItem.MemberName(this.NewType, StyleFlags.Bold),
-                FormatItem.MemberKind(this.NewType));
-        }
+                FormatItem.MemberName(OldInterfaceType, StyleFlags.Italics),
+                FormatItem.MemberName(NewType, StyleFlags.Bold),
+                FormatItem.MemberKind(NewType));
 
         /// <summary>
         /// Gets the older version of the type.
         /// </summary>
-        public TypeDefinitionData OldType { get; private set; }
+        public TypeDefinitionData OldType { get; }
 
         /// <summary>
         /// Gets the newer version of the type.
         /// </summary>
-        public TypeDefinitionData NewType { get; private set; }
+        public TypeDefinitionData NewType { get; }
 
         /// <summary>
         /// Gets the older version of the interface which was implemented on the type.
         /// </summary>
-        public DeclaringTypeData OldInterfaceType { get; private set; }
+        public DeclaringTypeData OldInterfaceType { get; }
     }
 
     #endregion // RemovedImplementedInterface
@@ -989,29 +936,27 @@ namespace BreakingChangesDetector.BreakingChanges
         internal RemovedMember(MemberDataBase oldMember, TypeDefinitionData newType)
             : base(oldMember, null, newType, BreakingChangeKind.RemovedMember)
         {
-            this.NewType = newType;
-            this.OldMember = oldMember;
+            NewType = newType;
+            OldMember = oldMember;
         }
 
         /// <summary>
         /// Formats a message explaining the breaking change using the specified formatter.
         /// </summary>
-        public override void FormatMessage(IBreakingChangeFormatter formatter)
-        {
+        public override void FormatMessage(IBreakingChangeFormatter formatter) =>
             formatter.AppendFormat("Removed {0} {1} which will cause code using the {0} to not compile.",
-                FormatItem.MemberKind(this.OldMember),
-                FormatItem.MemberName(this.OldMember, StyleFlags.Bold));
-        }
+                FormatItem.MemberKind(OldMember),
+                FormatItem.MemberName(OldMember, StyleFlags.Bold));
 
         /// <summary>
         /// Gets the newer version of the type, which no longer defines the member.
         /// </summary>
-        public TypeDefinitionData NewType { get; private set; }
+        public TypeDefinitionData NewType { get; }
 
         /// <summary>
         /// Gets the older version of the member.
         /// </summary>
-        public MemberDataBase OldMember { get; private set; }
+        public MemberDataBase OldMember { get; }
     }
 
     #endregion // RemovedMember
@@ -1027,30 +972,28 @@ namespace BreakingChangesDetector.BreakingChanges
         internal RemovedOverrideOfAbstractMember(MemberDataBase oldMemberOverride, TypeDefinitionData newType)
             : base(oldMemberOverride, null, newType, BreakingChangeKind.RemovedOverrideOfAbstractMember)
         {
-            this.NewType = newType;
-            this.OldMemberOverride = oldMemberOverride;
+            NewType = newType;
+            OldMemberOverride = oldMemberOverride;
         }
 
         /// <summary>
         /// Formats a message explaining the breaking change using the specified formatter.
         /// </summary>
-        public override void FormatMessage(IBreakingChangeFormatter formatter)
-        {
+        public override void FormatMessage(IBreakingChangeFormatter formatter) =>
             formatter.AppendFormat("Removed override of abstract {0} {1} in {2} which may derived classes to not compile.",
-                FormatItem.MemberKind(this.OldMemberOverride),
-                FormatItem.MemberName(this.OldMemberOverride, StyleFlags.Italics),
-                FormatItem.MemberName(this.NewType, StyleFlags.Bold));
-        }
+                FormatItem.MemberKind(OldMemberOverride),
+                FormatItem.MemberName(OldMemberOverride, StyleFlags.Italics),
+                FormatItem.MemberName(NewType, StyleFlags.Bold));
 
         /// <summary>
         /// Gets the newer version of the type, which no longer defines the override.
         /// </summary>
-        public TypeDefinitionData NewType { get; private set; }
+        public TypeDefinitionData NewType { get; }
 
         /// <summary>
         /// Gets the older version of the member override.
         /// </summary>
-        public MemberDataBase OldMemberOverride { get; private set; }
+        public MemberDataBase OldMemberOverride { get; }
     }
 
     #endregion // RemovedOverrideOfAbstractMember
@@ -1066,29 +1009,27 @@ namespace BreakingChangesDetector.BreakingChanges
         internal RemovedPropertyAccessors(PropertyData oldProperty, PropertyData newProperty)
             : base(oldProperty, newProperty, null, BreakingChangeKind.RemovedPropertyAccessors)
         {
-            this.OldProperty = oldProperty;
-            this.NewProperty = newProperty;
+            OldProperty = oldProperty;
+            NewProperty = newProperty;
         }
 
         /// <summary>
         /// Formats a message explaining the breaking change using the specified formatter.
         /// </summary>
-        public override void FormatMessage(IBreakingChangeFormatter formatter)
-        {
+        public override void FormatMessage(IBreakingChangeFormatter formatter) =>
             formatter.AppendFormat("Removed or changed the visibility of the get or set accessor of {0} {1} which may code using the {0} to not compile.",
-                FormatItem.MemberKind(this.NewProperty),
-                FormatItem.MemberName(this.NewProperty, StyleFlags.Bold));
-        }
+                FormatItem.MemberKind(NewProperty),
+                FormatItem.MemberName(NewProperty, StyleFlags.Bold));
 
         /// <summary>
         /// Gets the older version of the property or indexer.
         /// </summary>
-        public PropertyData OldProperty { get; private set; }
+        public PropertyData OldProperty { get; }
 
         /// <summary>
         /// Gets the newer version of the property or indexer.
         /// </summary>
-        public PropertyData NewProperty { get; private set; }
+        public PropertyData NewProperty { get; }
     }
 
     #endregion // RemovedPropertyAccessors
@@ -1101,25 +1042,21 @@ namespace BreakingChangesDetector.BreakingChanges
     public sealed class RemovedRootType : BreakingChangeBase
     {
         internal RemovedRootType(TypeDefinitionData oldType)
-            : base(oldType, null, null, BreakingChangeKind.RemovedRootType)
-        {
-            this.OldType = oldType;
-        }
+            : base(oldType, null, null, BreakingChangeKind.RemovedRootType) =>
+            OldType = oldType;
 
         /// <summary>
         /// Formats a message explaining the breaking change using the specified formatter.
         /// </summary>
-        public override void FormatMessage(IBreakingChangeFormatter formatter)
-        {
+        public override void FormatMessage(IBreakingChangeFormatter formatter) =>
             formatter.AppendFormat("Removed {0} {1} which will cause code using the {0} to not compile.",
-                FormatItem.MemberKind(this.OldType),
-                FormatItem.MemberName(this.OldType, StyleFlags.Bold));
-        }
+                FormatItem.MemberKind(OldType),
+                FormatItem.MemberName(OldType, StyleFlags.Bold));
 
         /// <summary>
         /// Gets the older version of the type.
         /// </summary>
-        public TypeDefinitionData OldType { get; private set; }
+        public TypeDefinitionData OldType { get; }
     }
 
     #endregion // RemovedRootType
@@ -1134,28 +1071,26 @@ namespace BreakingChangesDetector.BreakingChanges
         internal SealedClass(TypeDefinitionData oldType, TypeDefinitionData newType)
             : base(oldType, newType, null, BreakingChangeKind.SealedClass)
         {
-            this.OldType = oldType;
-            this.NewType = newType;
+            OldType = oldType;
+            NewType = newType;
         }
 
         /// <summary>
         /// Formats a message explaining the breaking change using the specified formatter.
         /// </summary>
-        public override void FormatMessage(IBreakingChangeFormatter formatter)
-        {
+        public override void FormatMessage(IBreakingChangeFormatter formatter) =>
             formatter.AppendFormat("Changed class {0} from unsealed to sealed which will cause derived classes to not compile.",
-                FormatItem.MemberName(this.NewType, StyleFlags.Bold));
-        }
+                FormatItem.MemberName(NewType, StyleFlags.Bold));
 
         /// <summary>
         /// Gets the older version of the class declaration.
         /// </summary>
-        public TypeDefinitionData OldType { get; private set; }
+        public TypeDefinitionData OldType { get; }
 
         /// <summary>
         /// Gets the newer version of the class declaration.
         /// </summary>
-        public TypeDefinitionData NewType { get; private set; }
+        public TypeDefinitionData NewType { get; }
     }
 
     #endregion // SealedClass
@@ -1171,29 +1106,27 @@ namespace BreakingChangesDetector.BreakingChanges
         internal SealedMember(MemberDataBase oldMember, MemberDataBase newMember)
             : base(oldMember, newMember, null, BreakingChangeKind.SealedMember)
         {
-            this.OldMember = oldMember;
-            this.NewMember = newMember;
+            OldMember = oldMember;
+            NewMember = newMember;
         }
 
         /// <summary>
         /// Formats a message explaining the breaking change using the specified formatter.
         /// </summary>
-        public override void FormatMessage(IBreakingChangeFormatter formatter)
-        {
+        public override void FormatMessage(IBreakingChangeFormatter formatter) =>
             formatter.AppendFormat("Changed {0} {1} from unsealed to sealed which will cause derived classes overriding the {0} to not compile.",
-                FormatItem.MemberKind(this.NewMember),
-                FormatItem.MemberName(this.NewMember, StyleFlags.Bold));
-        }
+                FormatItem.MemberKind(NewMember),
+                FormatItem.MemberName(NewMember, StyleFlags.Bold));
 
         /// <summary>
         /// Gets the older version of the member.
         /// </summary>
-        public MemberDataBase OldMember { get; private set; }
+        public MemberDataBase OldMember { get; }
 
         /// <summary>
         /// Gets the newer version of the member.
         /// </summary>
-        public MemberDataBase NewMember { get; private set; }
+        public MemberDataBase NewMember { get; }
     }
 
     #endregion // SealedMember

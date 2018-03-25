@@ -25,12 +25,7 @@
 
 using Microsoft.CodeAnalysis;
 using System;
-using System.Collections.Generic;
 using System.Diagnostics;
-using System.Linq;
-using System.Reflection;
-using System.Text;
-using System.Threading.Tasks;
 
 namespace BreakingChangesDetector.MetadataItems
 {
@@ -42,16 +37,12 @@ namespace BreakingChangesDetector.MetadataItems
         #region Constructors
 
         internal ConstantData(string name, MemberAccessibility accessibility, MemberFlags memberFlags, TypeData type, bool isTypeDynamic, object value)
-            : base(name, accessibility, memberFlags, type, isTypeDynamic)
-        {
-            this.Value = value;
-        }
+            : base(name, accessibility, memberFlags, type, isTypeDynamic) =>
+            Value = value;
 
         private ConstantData(IFieldSymbol fieldSymbol, MemberAccessibility accessibility, DeclaringTypeData declaringType)
-            : base(fieldSymbol, accessibility, fieldSymbol.Type, fieldSymbol.IsDynamicType(), MemberFlags.Static, declaringType)
-        {
-            this.Value = Utilities.PreprocessConstantValue(fieldSymbol.Type, fieldSymbol.ConstantValue);
-        }
+            : base(fieldSymbol, accessibility, fieldSymbol.Type, fieldSymbol.Type.TypeKind == TypeKind.Dynamic, MemberFlags.Static, declaringType) =>
+            Value = Utilities.PreprocessConstantValue(fieldSymbol.Type, fieldSymbol.ConstantValue);
 
         #endregion // Constructors
 
@@ -63,10 +54,8 @@ namespace BreakingChangesDetector.MetadataItems
         /// Performs the specified visitor's functionality on this instance.
         /// </summary>
         /// <param name="visitor">The visitor whose functionality should be performed on the instance.</param>
-        public override void Accept(MetadataItemVisitor visitor)
-        {
+        public override void Accept(MetadataItemVisitor visitor) =>
             visitor.VisitConstantData(this);
-        }
 
         #endregion // Accept
 
@@ -92,14 +81,20 @@ namespace BreakingChangesDetector.MetadataItems
         internal override bool DoesMatch(MetadataItemBase other)
         {
             if (base.DoesMatch(other) == false)
+            {
                 return false;
+            }
 
             var otherTyped = other as ConstantData;
             if (otherTyped == null)
+            {
                 return false;
+            }
 
-            if (Object.Equals(this.Value, otherTyped.Value))
+            if (Object.Equals(Value, otherTyped.Value))
+            {
                 return false;
+            }
 
             return true;
         }
@@ -111,10 +106,8 @@ namespace BreakingChangesDetector.MetadataItems
         /// <summary>
         /// Gets the type of item the instance represents.
         /// </summary>
-        public override MetadataItemKinds MetadataItemKind
-        {
-            get { return MetadataItemKinds.Constant; }
-        }
+        public override MetadataItemKinds MetadataItemKind =>
+            MetadataItemKinds.Constant;
 
         #endregion // MetadataItemKind
 
@@ -130,12 +123,14 @@ namespace BreakingChangesDetector.MetadataItems
 #endif
         internal override MemberDataBase ReplaceGenericTypeParameters(GenericTypeParameterCollection genericParameters, GenericTypeArgumentCollection genericArguments)
         {
-            var replacedType = (TypeData)this.Type.ReplaceGenericTypeParameters(genericParameters, genericArguments);
-            if (replacedType == this.Type)
+            var replacedType = (TypeData)Type.ReplaceGenericTypeParameters(genericParameters, genericArguments);
+            if (replacedType == Type)
+            {
                 return this;
+            }
 
             Debug.Fail("It was assumed that constants cannot be generic");
-            return new ConstantData(this.Name, this.Accessibility, this.MemberFlags, replacedType, this.IsTypeDynamic, this.Value);
+            return new ConstantData(Name, Accessibility, MemberFlags, replacedType, IsTypeDynamic, Value);
         }
 
         #endregion // ReplaceGenericTypeParameters
@@ -148,7 +143,9 @@ namespace BreakingChangesDetector.MetadataItems
         {
             var accessibility = fieldSymbol.GetAccessibility();
             if (accessibility == null)
+            {
                 return null;
+            }
 
             return new ConstantData(fieldSymbol, accessibility.Value, declaringType);
         }
@@ -160,7 +157,7 @@ namespace BreakingChangesDetector.MetadataItems
         /// <summary>
         /// Gets the compiled constant value.
         /// </summary>
-        public object Value { get; private set; } // TODO_Serialize: Round trip and unit test
+        public object Value { get; } // TODO_Serialize: Round trip and unit test
 
         #endregion // Properties
     }

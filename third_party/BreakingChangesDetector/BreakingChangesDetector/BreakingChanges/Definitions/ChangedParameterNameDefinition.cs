@@ -24,11 +24,6 @@
 */
 
 using BreakingChangesDetector.MetadataItems;
-using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
 
 namespace BreakingChangesDetector.BreakingChanges.Definitions
 {
@@ -44,17 +39,15 @@ namespace BreakingChangesDetector.BreakingChanges.Definitions
             var newParameter = (ParameterData)context.NewItem;
 
             if (oldParameter.DeclaringMemberKind != MetadataItemKinds.Operator && oldParameter.Name != newParameter.Name)
+            {
                 context.BreakingChanges.Add(new ChangedParameterName(oldParameter, newParameter, (IParameterizedItem)context.AdditionalInfo));
+            }
         }
 
-        public override BreakingChangeKind BreakingChangeKind
-        {
-            get { return BreakingChangeKind.ChangedParameterName; }
-        }
+        public override BreakingChangeKind BreakingChangeKind =>
+            BreakingChangeKind.ChangedParameterName;
 
-        public override MetadataItemKinds MembersKindsHandled
-        {
-            get { return MetadataItemKinds.Parameter; }
-        }
+        public override MetadataItemKinds MembersKindsHandled =>
+            MetadataItemKinds.Parameter;
     }
 }

@@ -26,7 +26,6 @@
 using System;
 using System.Linq;
 using Xunit;
-using BreakingChangesDetector.MetadataItems;
 using BreakingChangesDetector.BreakingChanges;
 
 namespace BreakingChangesDetector.UnitTests.BreakingChangesTests

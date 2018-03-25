@@ -25,137 +25,134 @@
 
 using BreakingChangesDetector.MetadataItems;
 using Microsoft.CodeAnalysis;
-using System;
 using System.Collections.Generic;
 using System.Diagnostics;
 using System.IO;
 using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
 
 namespace BreakingChangesDetector.Serialization
 {
     internal class BinaryItemSerializerV1
     {
         /*
-		 * File structure
-		 * ***************************************************************************
-		 * byte: Version1 marker
-		 * ushort: Count of assemblies in assembly table
-		 * ------ For each AssemblyData in assembly table ----------------------------
-		 *		string FullName
-		 *		int: Count of types in AssemblyData
-		 *		------ For each TypeDataBase in AssemblyData -------------------------
-		 *			uint: id in type table
-		 *			string: Name
-		 *			byte: Accessibility
-		 *			byte: MemberFlags
-		 *			byte: TypeKind
-		 *			bool: (type is TypeData)
-		 *			------ If (type is TypeData) -------------------------------------
-		 *				byte: TypeFlags
-		 *				bool: (FullName != null)
-		 *				------ If (FullName != null) ---------------------------------
-		 *					string: FullName
-		 *				------ End If ------------------------------------------------
-		 *			------ Else ------------------------------------------------------
-		 *				int: GenericParameterAttributes
-		 *				ushort: GenericParameterPosition
-		 *			------ End If ----------------------------------------------------
-		 *		------ End for each --------------------------------------------------
-		 * ------ End for each -------------------------------------------------------
-		 * ------ For each TypeDataBase in type table (non-constructed types 1st) ----
-		 *		uint: id in type table
-		 *		------ If (TypeDataBase is TypeData) ---------------------------------
-		 *			------ If (IsConstructedGenericType) -----------------------------
-		 *				bool: (ContainingType != null)
-		 *				------ If (ContainingType != null) ----------------------------
-		 *					uint: id of ContainingType in type table
-		 *				------ End If ------------------------------------------------
-		 *			------ End If ----------------------------------------------------
-		 *			uint: id of BaseType in type table (0 for null)
-		 *			ushort: Count of ImplementedInterfaces
-		 *			------ For each TypeData in ImplementedInterfaces ----------------
-		 *				uint: id of TypeData in type table
-		 *			----- End for each -----------------------------------------------
-		 *			(GenericParameters : GenericParameters)
-		 *			------ If (TypeKind == Delegate) ---------------------------------
-		 *				uint: id of DelegateReturnType in type table
-		 *				(ParameterCollection : DelegateParameters)
-		 *			------ Else ------------------------------------------------------
-		 *				int: Count of members in TypeData
-		 *				------ For each MemberDataBase in members --------------------
-		 *					ushort: MetadataItemKind
-		 *					----- If (MetadataItemKind == Type) ----------------------
-		 *						uint: id of TypeData in type table
-		 *					----- Else -----------------------------------------------
-		 *						string: Name
-		 *						byte: Accessibility
-		 *						byte: MemberFlags
-		 *						----- If (MetadataItemKind == Constructor) -----------
-		 *							(ParameterCollection : Parameters)
-		 *						----- Else If (MetadataItemKind == Operator) ---------
-		 *							uint: id of Type in type table
-		 *							(ParameterCollection : Parameters)
-		 *						----- Else If (MetadataItemKind == Method) -----------
-		 *							uint: id of Type in type table
-		 *							bool: IsExtensionMethod
-		 *							(GenericParameters : GenericParameters)
-		 *							(ParameterCollection : Parameters)
-		 *						----- Else If (MetadataItemKind == Constant) ---------
-		 *							uint: id of Type in type table
-		 *						----- Else If (MetadataItemKind == Field) ------------
-		 *							uint: id of Type in type table
-		 *							bool: IsReadOnly
-		 *						----- Else If (MetadataItemKind == Event) ------------
-		 *							uint: id of Type in type table
-		 *						----- Else If (MetadataItemKind == Indexer) ----------
-		 *							uint: id of Type in type table
-		 *							byte: GetMethodAccessibility (0xFF for null)
-		 *							byte: SetMethodAccessibility (0xFF for null)
-		 *							(ParameterCollection : Parameters)
-		 *						----- Else If (MetadataItemKind == Property) ---------
-		 *							uint: id of Type in type table
-		 *							byte: GetMethodAccessibility (0xFF for null)
-		 *							byte: SetMethodAccessibility (0xFF for null)
-		 *						----- End If -----------------------------------------
-		 *					----- End If ---------------------------------------------
-		 *				----- End for each -------------------------------------------
-		 *			------ End If ----------------------------------------------------
-		 *		------ Else ----------------------------------------------------------
-		 *			ushort: Constraints.Count
-		 *			------ For each TypeDataBase in Constraints ----------------------
-		 *				uint: id of TypeDataBase in type table
-		 *			------ End for each ----------------------------------------------
-		 *		------ End If --------------------------------------------------------
-		 * ------ End for each -------------------------------------------------------
-		 * ***************************************************************************
-		 * ------ Helper (ParameterCollection) ---------------------------------------
-		 *		ushort: Count of parameters in Parameters
-		 *		------ For each ParameterData in Parameters --------------------------
-		 *			string: Name
-		 *			uint: id of Type in type table
-		 *			byte: Modifier
-		 *			bool: IsParamsArray
-		 *			bool: HasDefaultValue
-		 *			------ If (HasDefaultValue) --------------------------------------
-		 *				bool: (Value != null)
-		 *				------ If (Value != null) ------------------------------------
-		 *					string: TypeFullName
-		 *					(type specific Value)
-		 *				------ End If ------------------------------------------------
-		 *			------ End If ----------------------------------------------------
-		 *		----- End for each ---------------------------------------------------
-		 * ----- End ParameterCollection ---------------------------------------------
-		 * ***************************************************************************
-		 * ------ Helper (GenericParameters) -----------------------------------------
-		 *		ushort: Count of parameters in GenericParameters
-		 *		------ For each GenericTypeParameterData in GenericParameters --------
-		 *			uint: id of GenericTypeParameterData in type table
-		 *		----- End for each ---------------------------------------------------
-		 * ----- End GenericParameters -----------------------------------------------
-		 * ***************************************************************************
-		 */
+        * File structure
+        * ***************************************************************************
+        * byte: Version1 marker
+        * ushort: Count of assemblies in assembly table
+        * ------ For each AssemblyData in assembly table ----------------------------
+        *        string FullName
+        *        int: Count of types in AssemblyData
+        *        ------ For each TypeDataBase in AssemblyData -------------------------
+        *            uint: id in type table
+        *            string: Name
+        *            byte: Accessibility
+        *            byte: MemberFlags
+        *            byte: TypeKind
+        *            bool: (type is TypeData)
+        *            ------ If (type is TypeData) -------------------------------------
+        *                byte: TypeFlags
+        *                bool: (FullName != null)
+        *                ------ If (FullName != null) ---------------------------------
+        *                    string: FullName
+        *                ------ End If ------------------------------------------------
+        *            ------ Else ------------------------------------------------------
+        *                int: GenericParameterAttributes
+        *                ushort: GenericParameterPosition
+        *            ------ End If ----------------------------------------------------
+        *        ------ End for each --------------------------------------------------
+        * ------ End for each -------------------------------------------------------
+        * ------ For each TypeDataBase in type table (non-constructed types 1st) ----
+        *        uint: id in type table
+        *        ------ If (TypeDataBase is TypeData) ---------------------------------
+        *            ------ If (IsConstructedGenericType) -----------------------------
+        *                bool: (ContainingType != null)
+        *                ------ If (ContainingType != null) ----------------------------
+        *                    uint: id of ContainingType in type table
+        *                ------ End If ------------------------------------------------
+        *            ------ End If ----------------------------------------------------
+        *            uint: id of BaseType in type table (0 for null)
+        *            ushort: Count of ImplementedInterfaces
+        *            ------ For each TypeData in ImplementedInterfaces ----------------
+        *                uint: id of TypeData in type table
+        *            ----- End for each -----------------------------------------------
+        *            (GenericParameters : GenericParameters)
+        *            ------ If (TypeKind == Delegate) ---------------------------------
+        *                uint: id of DelegateReturnType in type table
+        *                (ParameterCollection : DelegateParameters)
+        *            ------ Else ------------------------------------------------------
+        *                int: Count of members in TypeData
+        *                ------ For each MemberDataBase in members --------------------
+        *                    ushort: MetadataItemKind
+        *                    ----- If (MetadataItemKind == Type) ----------------------
+        *                        uint: id of TypeData in type table
+        *                    ----- Else -----------------------------------------------
+        *                        string: Name
+        *                        byte: Accessibility
+        *                        byte: MemberFlags
+        *                        ----- If (MetadataItemKind == Constructor) -----------
+        *                            (ParameterCollection : Parameters)
+        *                        ----- Else If (MetadataItemKind == Operator) ---------
+        *                            uint: id of Type in type table
+        *                            (ParameterCollection : Parameters)
+        *                        ----- Else If (MetadataItemKind == Method) -----------
+        *                            uint: id of Type in type table
+        *                            bool: IsExtensionMethod
+        *                            (GenericParameters : GenericParameters)
+        *                            (ParameterCollection : Parameters)
+        *                        ----- Else If (MetadataItemKind == Constant) ---------
+        *                            uint: id of Type in type table
+        *                        ----- Else If (MetadataItemKind == Field) ------------
+        *                            uint: id of Type in type table
+        *                            bool: IsReadOnly
+        *                        ----- Else If (MetadataItemKind == Event) ------------
+        *                            uint: id of Type in type table
+        *                        ----- Else If (MetadataItemKind == Indexer) ----------
+        *                            uint: id of Type in type table
+        *                            byte: GetMethodAccessibility (0xFF for null)
+        *                            byte: SetMethodAccessibility (0xFF for null)
+        *                            (ParameterCollection : Parameters)
+        *                        ----- Else If (MetadataItemKind == Property) ---------
+        *                            uint: id of Type in type table
+        *                            byte: GetMethodAccessibility (0xFF for null)
+        *                            byte: SetMethodAccessibility (0xFF for null)
+        *                        ----- End If -----------------------------------------
+        *                    ----- End If ---------------------------------------------
+        *                ----- End for each -------------------------------------------
+        *            ------ End If ----------------------------------------------------
+        *        ------ Else ----------------------------------------------------------
+        *            ushort: Constraints.Count
+        *            ------ For each TypeDataBase in Constraints ----------------------
+        *                uint: id of TypeDataBase in type table
+        *            ------ End for each ----------------------------------------------
+        *        ------ End If --------------------------------------------------------
+        * ------ End for each -------------------------------------------------------
+        * ***************************************************************************
+        * ------ Helper (ParameterCollection) ---------------------------------------
+        *        ushort: Count of parameters in Parameters
+        *        ------ For each ParameterData in Parameters --------------------------
+        *            string: Name
+        *            uint: id of Type in type table
+        *            byte: Modifier
+        *            bool: IsParamsArray
+        *            bool: HasDefaultValue
+        *            ------ If (HasDefaultValue) --------------------------------------
+        *                bool: (Value != null)
+        *                ------ If (Value != null) ------------------------------------
+        *                    string: TypeFullName
+        *                    (type specific Value)
+        *                ------ End If ------------------------------------------------
+        *            ------ End If ----------------------------------------------------
+        *        ----- End for each ---------------------------------------------------
+        * ----- End ParameterCollection ---------------------------------------------
+        * ***************************************************************************
+        * ------ Helper (GenericParameters) -----------------------------------------
+        *        ushort: Count of parameters in GenericParameters
+        *        ------ For each GenericTypeParameterData in GenericParameters --------
+        *            uint: id of GenericTypeParameterData in type table
+        *        ----- End for each ---------------------------------------------------
+        * ----- End GenericParameters -----------------------------------------------
+        * ***************************************************************************
+        */
 
         private readonly AdditionalDataWriter _additionalDataWriter;
         private uint _nextTypeId = SerializationUtilities.FirstTypeId;
@@ -171,18 +168,21 @@ namespace BreakingChangesDetector.Serialization
             // TODO_Serialize: Use a factory method instead of writing directly.
             _writer.Write(SerializationUtilities.Version1Marker);
 
-            this.WriteTypeTable(assemblies);
-            this.WriteAdditionalInfo();
+            WriteTypeTable(assemblies);
+            WriteAdditionalInfo();
         }
 
         private uint GetTypeId(TypeData type)
         {
             if (type == null)
+            {
                 return SerializationUtilities.NullTypeId;
+            }
 
-            uint id;
-            if (_typeTable.TryGetValue(type, out id) == false)
+            if (_typeTable.TryGetValue(type, out uint id) == false)
+            {
                 Debug.Fail("Could not find the type in the table.");
+            }
 
             return id;
         }
@@ -192,52 +192,56 @@ namespace BreakingChangesDetector.Serialization
         private void WriteAdditionalInfo()
         {
             foreach (var pair in _typeTable.Where(p => IsConstructedGenericType(p.Key) == false))
-                this.WriteAdditionalInfoHelper(pair.Key, pair.Value);
+            {
+                WriteAdditionalInfoHelper(pair.Key, pair.Value);
+            }
 
             foreach (var pair in _typeTable.Where(p => IsConstructedGenericType(p.Key)))
-                this.WriteAdditionalInfoHelper(pair.Key, pair.Value);
+            {
+                WriteAdditionalInfoHelper(pair.Key, pair.Value);
+            }
         }
 
-        private static bool IsConstructedGenericType(TypeData typeBase)
-        {
-            return typeBase is ConstructedGenericTypeData;
-        }
+        private static bool IsConstructedGenericType(TypeData typeBase) => typeBase is ConstructedGenericTypeData;
 
         private void WriteAdditionalInfoHelper(TypeData typeBase, uint typeId)
         {
             _writer.Write(typeId);
 
-            var type = typeBase as TypeDefinitionData;
-            if (type != null)
+            if (typeBase is TypeDefinitionData type)
             {
                 // TODO_Serialize: Fix this
                 //if (type.IsConstructedGenericType)
                 //{
-                //	var hasSpecialDecalringType = type.ContainingType != null;
-                //	_writer.Write(hasSpecialDecalringType);
-                //	if (hasSpecialDecalringType)
-                //		_writer.Write(this.GetTypeId(type.ContainingType));
+                //    var hasSpecialDecalringType = type.ContainingType != null;
+                //    _writer.Write(hasSpecialDecalringType);
+                //    if (hasSpecialDecalringType)
+                //        _writer.Write(this.GetTypeId(type.ContainingType));
                 //}
 
-                _writer.Write(this.GetTypeId(type.BaseType));
+                _writer.Write(GetTypeId(type.BaseType));
 
                 _writer.Write((ushort)type.ImplementedInterfaces.Count);
                 for (int i = 0; i < type.ImplementedInterfaces.Count; i++)
-                    _writer.Write(this.GetTypeId(type.ImplementedInterfaces[i]));
+                {
+                    _writer.Write(GetTypeId(type.ImplementedInterfaces[i]));
+                }
 
-                this.WriteAdditionalInfoHelper(type.GenericParameters);
+                WriteAdditionalInfoHelper(type.GenericParameters);
 
                 if (type.TypeKind == TypeKind.Delegate)
                 {
-                    _writer.Write(this.GetTypeId(type.DelegateReturnType));
-                    this.WriteAdditionalInfoHelper(type.DelegateParameters);
+                    _writer.Write(GetTypeId(type.DelegateReturnType));
+                    WriteAdditionalInfoHelper(type.DelegateParameters);
                 }
                 else
                 {
                     var members = type.GetMembers().ToArray();
                     _writer.Write(members.Length);
                     for (int i = 0; i < members.Length; i++)
+                    {
                         members[i].Accept(_additionalDataWriter);
+                    }
                 }
             }
             else
@@ -245,7 +249,9 @@ namespace BreakingChangesDetector.Serialization
                 var genericTypeParameterData = (GenericTypeParameterData)typeBase;
                 _writer.Write((ushort)genericTypeParameterData.Constraints.Count);
                 for (int i = 0; i < genericTypeParameterData.Constraints.Count; i++)
-                    _writer.Write(this.GetTypeId(genericTypeParameterData.Constraints[i]));
+                {
+                    _writer.Write(GetTypeId(genericTypeParameterData.Constraints[i]));
+                }
             }
         }
 
@@ -253,14 +259,18 @@ namespace BreakingChangesDetector.Serialization
         {
             _writer.Write((ushort)paramters.Count);
             for (int i = 0; i < paramters.Count; i++)
+            {
                 paramters[i].Accept(_additionalDataWriter);
+            }
         }
 
         private void WriteAdditionalInfoHelper(GenericTypeParameterCollection genericParamters)
         {
             _writer.Write((ushort)genericParamters.Count);
             for (int i = 0; i < genericParamters.Count; i++)
-                _writer.Write(this.GetTypeId(genericParamters[i]));
+            {
+                _writer.Write(GetTypeId(genericParamters[i]));
+            }
         }
 
         #endregion // WriteAdditionalInfo
@@ -271,7 +281,9 @@ namespace BreakingChangesDetector.Serialization
         {
             _writer.Write((ushort)assemblies.Length);
             foreach (var assemblyData in assemblies)
-                this.WriteTypeTableHelper(assemblyData);
+            {
+                WriteTypeTableHelper(assemblyData);
+            }
         }
 
         private void WriteTypeTableHelper(AssemblyData assembly)
@@ -281,7 +293,9 @@ namespace BreakingChangesDetector.Serialization
             _writer.Write(assembly.FullName);
             _writer.Write(types.Count);
             for (int i = 0; i < types.Count; i++)
-                this.WriteTypeTableHelper(types[i]);
+            {
+                WriteTypeTableHelper(types[i]);
+            }
         }
 
         private void WriteTypeTableHelper(TypeData typeBase)
@@ -318,10 +332,7 @@ namespace BreakingChangesDetector.Serialization
         {
             public BinaryItemSerializerV1 _owner;
 
-            public AdditionalDataWriter(BinaryItemSerializerV1 owner)
-            {
-                _owner = owner;
-            }
+            public AdditionalDataWriter(BinaryItemSerializerV1 owner) => _owner = owner;
 
             public override void DefaultVisit(MetadataItemBase item)
             {
@@ -330,32 +341,32 @@ namespace BreakingChangesDetector.Serialization
 
             public override void VisitConstantData(ConstantData item)
             {
-                this.WriteMemberHeader(item);
+                WriteMemberHeader(item);
                 _owner._writer.Write(_owner.GetTypeId(item.Type));
             }
 
             public override void VisitConstructorData(ConstructorData item)
             {
-                this.WriteMemberHeader(item);
+                WriteMemberHeader(item);
                 _owner.WriteAdditionalInfoHelper(item.Parameters);
             }
 
             public override void VisitFieldData(FieldData item)
             {
-                this.WriteMemberHeader(item);
+                WriteMemberHeader(item);
                 _owner._writer.Write(_owner.GetTypeId(item.Type));
                 _owner._writer.Write(item.IsReadOnly);
             }
 
             public override void VisitEventData(EventData item)
             {
-                this.WriteMemberHeader(item);
+                WriteMemberHeader(item);
                 _owner._writer.Write(_owner.GetTypeId(item.Type));
             }
 
             public override void VisitMethodData(MethodData item)
             {
-                this.WriteMemberHeader(item);
+                WriteMemberHeader(item);
                 _owner._writer.Write(_owner.GetTypeId(item.Type));
                 _owner._writer.Write(item.IsExtensionMethod);
                 _owner.WriteAdditionalInfoHelper(item.GenericParameters);
@@ -364,7 +375,7 @@ namespace BreakingChangesDetector.Serialization
 
             public override void VisitIndexerData(IndexerData item)
             {
-                this.WriteMemberHeader(item);
+                WriteMemberHeader(item);
                 _owner._writer.Write(_owner.GetTypeId(item.Type));
                 _owner._writer.Write(((byte?)item.GetMethodAccessibility).GetValueOrDefault(0xFF));
                 _owner._writer.Write(((byte?)item.SetMethodAccessibility).GetValueOrDefault(0xFF));
@@ -373,7 +384,7 @@ namespace BreakingChangesDetector.Serialization
 
             public override void VisitOperatorData(OperatorData item)
             {
-                this.WriteMemberHeader(item);
+                WriteMemberHeader(item);
                 _owner._writer.Write(_owner.GetTypeId(item.Type));
                 _owner.WriteAdditionalInfoHelper(item.Parameters);
             }
@@ -386,12 +397,14 @@ namespace BreakingChangesDetector.Serialization
                 _owner._writer.Write(item.IsParamsArray);
                 _owner._writer.Write(item.IsOptional);
                 if (item.IsOptional)
-                    this.WriteDefaultValue(item.DefaultValue);
+                {
+                    WriteDefaultValue(item.DefaultValue);
+                }
             }
 
             public override void VisitPropertyData(PropertyData item)
             {
-                this.WriteMemberHeader(item);
+                WriteMemberHeader(item);
                 _owner._writer.Write(_owner.GetTypeId(item.Type));
                 _owner._writer.Write(((byte?)item.GetMethodAccessibility).GetValueOrDefault(0xFF));
                 _owner._writer.Write(((byte?)item.SetMethodAccessibility).GetValueOrDefault(0xFF));
@@ -421,33 +434,61 @@ namespace BreakingChangesDetector.Serialization
                     _owner._writer.Write(value.GetType().FullName);
 
                     if (value is bool)
+                    {
                         _owner._writer.Write((bool)value);
+                    }
                     else if (value is byte)
+                    {
                         _owner._writer.Write((byte)value);
+                    }
                     else if (value is char)
+                    {
                         _owner._writer.Write((char)value);
+                    }
                     else if (value is decimal)
+                    {
                         _owner._writer.Write((decimal)value);
+                    }
                     else if (value is double)
+                    {
                         _owner._writer.Write((double)value);
+                    }
                     else if (value is float)
+                    {
                         _owner._writer.Write((float)value);
+                    }
                     else if (value is int)
+                    {
                         _owner._writer.Write((int)value);
+                    }
                     else if (value is long)
+                    {
                         _owner._writer.Write((long)value);
+                    }
                     else if (value is sbyte)
+                    {
                         _owner._writer.Write((sbyte)value);
+                    }
                     else if (value is short)
+                    {
                         _owner._writer.Write((short)value);
+                    }
                     else if (value is string)
+                    {
                         _owner._writer.Write((string)value);
+                    }
                     else if (value is uint)
+                    {
                         _owner._writer.Write((uint)value);
+                    }
                     else if (value is ulong)
+                    {
                         _owner._writer.Write((ulong)value);
+                    }
                     else if (value is ushort)
+                    {
                         _owner._writer.Write((ushort)value);
+                    }
                 }
             }
         }

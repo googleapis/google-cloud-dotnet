@@ -24,17 +24,13 @@
 */
 
 using BreakingChangesDetector.MetadataItems;
-using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
 
 namespace BreakingChangesDetector.BreakingChanges.Definitions
 {
     internal class RemovedPropertyAccessorsDefinition : BreakingChangeDefinitionBase
     {
-        public static readonly RemovedPropertyAccessorsDefinition Instance = new RemovedPropertyAccessorsDefinition();
+        public static readonly RemovedPropertyAccessorsDefinition Instance =
+            new RemovedPropertyAccessorsDefinition();
 
         private RemovedPropertyAccessorsDefinition() { }
 
@@ -57,19 +53,11 @@ namespace BreakingChangesDetector.BreakingChanges.Definitions
             }
         }
 
-        public override BreakingChangeKind BreakingChangeKind
-        {
-            get { return BreakingChangeKind.RemovedPropertyAccessors; }
-        }
+        public override BreakingChangeKind BreakingChangeKind =>
+            BreakingChangeKind.RemovedPropertyAccessors;
 
-        public override MetadataItemKinds MembersKindsHandled
-        {
-            get
-            {
-                return
-                    MetadataItemKinds.Property |
-                    MetadataItemKinds.Indexer;
-            }
-        }
+        public override MetadataItemKinds MembersKindsHandled =>
+            MetadataItemKinds.Property |
+            MetadataItemKinds.Indexer;
     }
 }

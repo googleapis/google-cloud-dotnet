@@ -23,11 +23,9 @@
     SOFTWARE.
 */
 
-using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
-using System.Threading.Tasks;
 
 namespace BreakingChangesDetector.MetadataItems
 {
@@ -38,50 +36,38 @@ namespace BreakingChangesDetector.MetadataItems
     {
         private readonly TypeData[] _arguments;
 
-        internal GenericTypeArgumentCollection(IEnumerable<TypeData> types)
-        {
-            _arguments = types.ToArray();
-        }
+        internal GenericTypeArgumentCollection(IEnumerable<TypeData> types) => _arguments = types.ToArray();
 
-        System.Collections.IEnumerator System.Collections.IEnumerable.GetEnumerator()
-        {
-            return _arguments.GetEnumerator();
-        }
+        System.Collections.IEnumerator System.Collections.IEnumerable.GetEnumerator() => _arguments.GetEnumerator();
 
         /// <summary>
         /// Gets an enumerator capable of iterating the generic type arguments.
         /// </summary>
-        public IEnumerator<TypeData> GetEnumerator()
-        {
-            for (int i = 0; i < _arguments.Length; i++)
-                yield return _arguments[i];
-        }
+        public IEnumerator<TypeData> GetEnumerator() => ((IEnumerable<TypeData>)_arguments).GetEnumerator();
 
         /// <summary>
         /// Gets the number of generic type arguments in the collection.
         /// </summary>
-        public int Count
-        {
-            get { return _arguments.Length; }
-        }
+        public int Count => _arguments.Length;
 
         /// <summary>
         /// Gets the generic type argument at the specified index in the collection.
         /// </summary>
-        public TypeData this[int index]
-        {
-            get { return _arguments[index]; }
-        }
+        public TypeData this[int index] => _arguments[index];
 
         internal bool DoesMatch(GenericTypeArgumentCollection other)
         {
-            if (this.Count != other.Count)
+            if (Count != other.Count)
+            {
                 return false;
+            }
 
-            for (int i = 0; i < this.Count; i++)
+            for (int i = 0; i < Count; i++)
             {
                 if (this[i].DoesMatch(other[i]) == false)
+                {
                     return false;
+                }
             }
 
             return true;
@@ -90,7 +76,9 @@ namespace BreakingChangesDetector.MetadataItems
         internal string GetGenericArgumentListDisplayText(bool includeGenericInfo, int start, int length)
         {
             if (length == 0)
+            {
                 return string.Empty;
+            }
 
             var sb = new StringBuilder("<");
             sb.Append(this[start].GetDisplayName(fullyQualify: false, includeGenericInfo: includeGenericInfo));

@@ -24,13 +24,6 @@
 */
 
 using Microsoft.CodeAnalysis;
-using System;
-using System.Collections.Generic;
-using System.Diagnostics;
-using System.Linq;
-using System.Reflection;
-using System.Text;
-using System.Threading.Tasks;
 
 namespace BreakingChangesDetector.MetadataItems
 {
@@ -40,39 +33,37 @@ namespace BreakingChangesDetector.MetadataItems
     public abstract class TypeWithElementData : TypeData
     {
         internal TypeWithElementData(string name, MemberAccessibility accessibility, MemberFlags memberFlags, TypeKind typeKind, TypeData elementType)
-            : base(name, accessibility, memberFlags, typeKind)
-        {
-            this.ElementType = elementType;
-        }
+            : base(name, accessibility, memberFlags, typeKind) =>
+            ElementType = elementType;
 
         /// <summary>
         /// Performs the specified visitor's functionality on this instance.
         /// </summary>
         /// <param name="visitor">The visitor whose functionality should be performed on the instance.</param>
-        public override void Accept(MetadataItemVisitor visitor)
-        {
-            visitor.VisitTypeWithElementData(this);
-        }
+        public override void Accept(MetadataItemVisitor visitor) => visitor.VisitTypeWithElementData(this);
 
         /// <summary>
         /// Gets the <see cref="T:AssemblyData"/> representing the assembly in which the type is defined.
         /// </summary>
-        public override AssemblyData AssemblyData
-        {
-            get { return this.ElementType.AssemblyData; }
-        }
+        public override AssemblyData AssemblyData => ElementType.AssemblyData;
 
         internal override bool DoesMatch(MetadataItemBase other)
         {
             if (base.DoesMatch(other) == false)
+            {
                 return false;
+            }
 
             var otherTyped = other as TypeWithElementData;
             if (otherTyped == null)
+            {
                 return false;
+            }
 
-            if (this.ElementType.DisplayName != otherTyped.ElementType.DisplayName)
+            if (ElementType.DisplayName != otherTyped.ElementType.DisplayName)
+            {
                 return false;
+            }
 
             return true;
         }
@@ -83,20 +74,14 @@ namespace BreakingChangesDetector.MetadataItems
         /// such as T?, T[], or T*, this returns the family containing the type T.
         /// </summary> 
 #endif
-        internal override AssemblyFamily GetDefiningAssemblyFamily()
-        {
-            return this.ElementType.GetDefiningAssemblyFamily();
-        }
+        internal override AssemblyFamily GetDefiningAssemblyFamily() => ElementType.GetDefiningAssemblyFamily();
 
 #if DEBUG
         /// <summary>
         /// Gets the name of the namespace in which the type is defined, or null if it is not defined in a namespace.
         /// </summary> 
 #endif
-        internal override string GetNamespaceName()
-        {
-            return this.ElementType.GetNamespaceName();
-        }
+        internal override string GetNamespaceName() => ElementType.GetNamespaceName();
 
 #if DEBUG
         /// <summary>
@@ -106,17 +91,18 @@ namespace BreakingChangesDetector.MetadataItems
         internal override bool IsEquivalentToNewMember(MemberDataBase newMember, AssemblyFamily newAssemblyFamily)
         {
             if (base.IsEquivalentToNewMember(newMember, newAssemblyFamily) == false)
+            {
                 return false;
+            }
 
-            var other = newMember as TypeWithElementData;
             return
-                other != null &&
-                this.ElementType.IsEquivalentToNew(other.ElementType, newAssemblyFamily);
+                newMember is TypeWithElementData other &&
+                ElementType.IsEquivalentToNew(other.ElementType, newAssemblyFamily);
         }
 
         /// <summary>
         /// Gets the underlying element type.
         /// </summary>
-        public TypeData ElementType { get; private set; } // TODO_Serialize: Round trip and unit test
+        public TypeData ElementType { get; } // TODO_Serialize: Round trip and unit test
     }
 }

@@ -24,12 +24,6 @@
 */
 
 using Microsoft.CodeAnalysis;
-using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Reflection;
-using System.Text;
-using System.Threading.Tasks;
 
 namespace BreakingChangesDetector.MetadataItems
 {
@@ -41,16 +35,12 @@ namespace BreakingChangesDetector.MetadataItems
         #region Constructors
 
         internal IndexerData(string name, MemberAccessibility accessibility, MemberFlags memberFlags, TypeData type, bool isTypeDynamic, ParameterCollection parameters, MemberAccessibility? getMethodAccessibility, MemberAccessibility? setMethodAccessibility)
-            : base(name, accessibility, memberFlags, type, isTypeDynamic, getMethodAccessibility, setMethodAccessibility)
-        {
-            this.Parameters = parameters;
-        }
+            : base(name, accessibility, memberFlags, type, isTypeDynamic, getMethodAccessibility, setMethodAccessibility) =>
+            Parameters = parameters;
 
         private IndexerData(IPropertySymbol propertySymbol, MemberAccessibility? getAccessibility, MemberAccessibility? setAccessibility, DeclaringTypeData declaringType)
-            : base(propertySymbol, getAccessibility, setAccessibility, declaringType)
-        {
-            this.Parameters = new ParameterCollection(propertySymbol.Parameters, this);
-        }
+            : base(propertySymbol, getAccessibility, setAccessibility, declaringType) =>
+            Parameters = new ParameterCollection(propertySymbol.Parameters, this);
 
         #endregion // Constructors
 
@@ -60,9 +50,11 @@ namespace BreakingChangesDetector.MetadataItems
         {
             var newIndexer = newMember as IndexerData;
             if (newIndexer == null)
+            {
                 return false;
+            }
 
-            return this.IsEquivalentToNewMember(newIndexer, newAssemblyFamily, ignoreNewOptionalParameters);
+            return IsEquivalentToNewMember(newIndexer, newAssemblyFamily, ignoreNewOptionalParameters);
         }
 
         #endregion // Interfaces
@@ -75,10 +67,8 @@ namespace BreakingChangesDetector.MetadataItems
         /// Performs the specified visitor's functionality on this instance.
         /// </summary>
         /// <param name="visitor">The visitor whose functionality should be performed on the instance.</param>
-        public override void Accept(MetadataItemVisitor visitor)
-        {
+        public override void Accept(MetadataItemVisitor visitor) =>
             visitor.VisitIndexerData(this);
-        }
 
         #endregion // Accept
 
@@ -94,10 +84,12 @@ namespace BreakingChangesDetector.MetadataItems
         internal override bool CanOverrideMember(MemberDataBase baseMember)
         {
             if (base.CanOverrideMember(baseMember) == false)
+            {
                 return false;
+            }
 
             var otherIndexer = (IndexerData)baseMember;
-            return this.Parameters.IsEquivalentTo(otherIndexer.Parameters);
+            return Parameters.IsEquivalentTo(otherIndexer.Parameters);
         }
 
         #endregion // CanOverrideMember
@@ -107,10 +99,8 @@ namespace BreakingChangesDetector.MetadataItems
         /// <summary>
         /// Gets the name to use for this item in messages.
         /// </summary>
-        public override string DisplayName
-        {
-            get { return this.Name + this.Parameters.GetParameterListDisplayText(open: '[', close: ']'); }
-        }
+        public override string DisplayName =>
+            Name + Parameters.GetParameterListDisplayText(open: '[', close: ']');
 
         #endregion // DisplayName
 
@@ -119,14 +109,20 @@ namespace BreakingChangesDetector.MetadataItems
         internal override bool DoesMatch(MetadataItemBase other)
         {
             if (base.DoesMatch(other) == false)
+            {
                 return false;
+            }
 
             var otherTyped = other as IndexerData;
             if (otherTyped == null)
+            {
                 return false;
+            }
 
-            if (this.Parameters.DoesMatch(otherTyped.Parameters) == false)
+            if (Parameters.DoesMatch(otherTyped.Parameters) == false)
+            {
                 return false;
+            }
 
             return true;
         }
@@ -144,9 +140,11 @@ namespace BreakingChangesDetector.MetadataItems
         {
             var newIndexer = newMember as IndexerData;
             if (newIndexer == null)
+            {
                 return false;
+            }
 
-            return this.IsEquivalentToNewMember(newIndexer, newAssemblyFamily, ignoreNewOptionalParameters: false);
+            return IsEquivalentToNewMember(newIndexer, newAssemblyFamily, ignoreNewOptionalParameters: false);
         }
 
         #endregion // IsEquivalentToNewMember
@@ -156,10 +154,8 @@ namespace BreakingChangesDetector.MetadataItems
         /// <summary>
         /// Gets the type of item the instance represents.
         /// </summary>
-        public override MetadataItemKinds MetadataItemKind
-        {
-            get { return MetadataItemKinds.Indexer; }
-        }
+        public override MetadataItemKinds MetadataItemKind =>
+            MetadataItemKinds.Indexer;
 
         #endregion // MetadataItemKind
 
@@ -175,15 +171,15 @@ namespace BreakingChangesDetector.MetadataItems
 #endif
         internal override MemberDataBase ReplaceGenericTypeParameters(GenericTypeParameterCollection genericParameters, GenericTypeArgumentCollection genericArguments)
         {
-            var replacedType = (TypeData)this.Type.ReplaceGenericTypeParameters(genericParameters, genericArguments);
-            var replacedParameters = this.Parameters.ReplaceGenericTypeParameters(this.MetadataItemKind, genericParameters, genericArguments);
-            if (replacedType == this.Type &&
-                replacedParameters == this.Parameters)
+            var replacedType = (TypeData)Type.ReplaceGenericTypeParameters(genericParameters, genericArguments);
+            var replacedParameters = Parameters.ReplaceGenericTypeParameters(MetadataItemKind, genericParameters, genericArguments);
+            if (replacedType == Type &&
+                replacedParameters == Parameters)
             {
                 return this;
             }
 
-            return new IndexerData(this.Name, this.Accessibility, this.MemberFlags, replacedType, this.IsTypeDynamic, replacedParameters, this.GetMethodAccessibility, this.SetMethodAccessibility);
+            return new IndexerData(Name, Accessibility, MemberFlags, replacedType, IsTypeDynamic, replacedParameters, GetMethodAccessibility, SetMethodAccessibility);
         }
 
         #endregion // ReplaceGenericTypeParameters
@@ -199,7 +195,9 @@ namespace BreakingChangesDetector.MetadataItems
             var getAccessibility = propertySymbol.GetMethod.GetAccessibility();
             var setAccessibility = propertySymbol.SetMethod.GetAccessibility();
             if (getAccessibility == null && setAccessibility == null)
+            {
                 return null;
+            }
 
             return new IndexerData(propertySymbol, getAccessibility, setAccessibility, declaringType);
         }
@@ -221,9 +219,11 @@ namespace BreakingChangesDetector.MetadataItems
         private bool IsEquivalentToNewMember(IndexerData newMember, AssemblyFamily newAssemblyFamily, bool ignoreNewOptionalParameters)
         {
             if (base.IsEquivalentToNewMember(newMember, newAssemblyFamily) == false)
+            {
                 return false;
+            }
 
-            return this.Parameters.IsEquivalentToNewParameters(newMember.Parameters, newAssemblyFamily, ignoreNewOptionalParameters);
+            return Parameters.IsEquivalentToNewParameters(newMember.Parameters, newAssemblyFamily, ignoreNewOptionalParameters);
         }
 
         #endregion // IsEquivalentToNewMember
@@ -235,7 +235,7 @@ namespace BreakingChangesDetector.MetadataItems
         /// <summary>
         /// Gets the collection of parameters for the indexer.
         /// </summary>
-        public ParameterCollection Parameters { get; private set; }
+        public ParameterCollection Parameters { get; }
 
         #endregion // Properties
     }

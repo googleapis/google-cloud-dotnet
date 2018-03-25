@@ -47,11 +47,11 @@ namespace BreakingChangesDetector.MetadataItems
         {
             _flags = flags;
 
-            this.DeclaringMemberKind = declaringMemberKind;
-            this.DefaultValue = defaultValue;
-            this.Modifer = modifer;
-            this.Name = name;
-            this.Type = type;
+            DeclaringMemberKind = declaringMemberKind;
+            DefaultValue = defaultValue;
+            Modifer = modifer;
+            Name = name;
+            Type = type;
         }
 
         internal ParameterData(IParameterSymbol parameterSymbol, MemberDataBase declaringMember)
@@ -76,22 +76,26 @@ namespace BreakingChangesDetector.MetadataItems
                     throw new InvalidOperationException($"Unknown RefKind value: {parameterSymbol.RefKind}");
             }
 
-            this.DeclaringMemberKind = declaringMember.MetadataItemKind;
-            this.Modifer = modifer;
-            this.Name = parameterSymbol.Name;
-            this.Type = Context.GetTypeData(parameterType);
+            DeclaringMemberKind = declaringMember.MetadataItemKind;
+            Modifer = modifer;
+            Name = parameterSymbol.Name;
+            Type = Context.GetTypeData(parameterType);
 
             if (parameterSymbol.IsOptional)
             {
                 _flags |= InternalFlags.IsOptional;
-                this.DefaultValue = Utilities.PreprocessConstantValue(parameterType, parameterSymbol.ExplicitDefaultValue);
+                DefaultValue = Utilities.PreprocessConstantValue(parameterType, parameterSymbol.ExplicitDefaultValue);
             }
 
             if (parameterSymbol.IsParams)
+            {
                 _flags |= InternalFlags.IsParamsArray;
+            }
 
-            if (parameterSymbol.IsDynamicType())
+            if (parameterSymbol.Type.TypeKind == TypeKind.Dynamic)
+            {
                 _flags |= InternalFlags.IsTypeDynamic;
+            }
         }
 
         #endregion // Constructor
@@ -104,10 +108,7 @@ namespace BreakingChangesDetector.MetadataItems
         /// Performs the specified visitor's functionality on this instance.
         /// </summary>
         /// <param name="visitor">The visitor whose functionality should be performed on the instance.</param>
-        public override void Accept(MetadataItemVisitor visitor)
-        {
-            visitor.VisitParameterData(this);
-        }
+        public override void Accept(MetadataItemVisitor visitor) => visitor.VisitParameterData(this);
 
         #endregion // Accept
 
@@ -119,10 +120,7 @@ namespace BreakingChangesDetector.MetadataItems
         /// <summary>
         /// Gets the name to use for this item in messages.
         /// </summary>
-        public override string DisplayName
-        {
-            get { return this.Name; }
-        }
+        public override string DisplayName => Name;
 
         #endregion // DisplayName
 
@@ -131,29 +129,45 @@ namespace BreakingChangesDetector.MetadataItems
         internal override bool DoesMatch(MetadataItemBase other)
         {
             if (base.DoesMatch(other) == false)
+            {
                 return false;
+            }
 
             var otherTyped = other as ParameterData;
             if (otherTyped == null)
+            {
                 return false;
+            }
 
             if (_flags != otherTyped._flags)
+            {
                 return false;
+            }
 
-            if (this.DeclaringMemberKind != otherTyped.DeclaringMemberKind)
+            if (DeclaringMemberKind != otherTyped.DeclaringMemberKind)
+            {
                 return false;
+            }
 
-            if (Object.Equals(this.DefaultValue, otherTyped.DefaultValue) == false)
+            if (Object.Equals(DefaultValue, otherTyped.DefaultValue) == false)
+            {
                 return false;
+            }
 
-            if (this.Modifer != otherTyped.Modifer)
+            if (Modifer != otherTyped.Modifer)
+            {
                 return false;
+            }
 
-            if (this.Name != otherTyped.Name)
+            if (Name != otherTyped.Name)
+            {
                 return false;
+            }
 
-            if (this.Type.DisplayName != otherTyped.DisplayName)
+            if (Type.DisplayName != otherTyped.DisplayName)
+            {
                 return false;
+            }
 
             return true;
         }
@@ -170,18 +184,26 @@ namespace BreakingChangesDetector.MetadataItems
 
         internal string GetDefaultValueDisplayText()
         {
-            if (this.IsOptional == false)
+            if (IsOptional == false)
+            {
                 return null;
+            }
 
-            var value = this.DefaultValue;
+            var value = DefaultValue;
             if (value == null)
+            {
                 return "null";
+            }
 
             if (value is bool)
+            {
                 return value.ToString().ToLower();
+            }
 
-            if (this.Type.TypeKind == TypeKind.Enum)
-                return Utilities.FormatEnumValue((TypeDefinitionData)this.Type, value);
+            if (Type.TypeKind == TypeKind.Enum)
+            {
+                return Utilities.FormatEnumValue((TypeDefinitionData)Type, value);
+            }
 
             return value.ToString();
         }
@@ -192,17 +214,17 @@ namespace BreakingChangesDetector.MetadataItems
 
         internal string GetParameterListDisplayText()
         {
-            var typeName = this.IsTypeDynamic
+            var typeName = IsTypeDynamic
                 ? Utilities.DynamicTypeName
-                : this.Type.GetDisplayName(fullyQualify: false);
+                : Type.GetDisplayName(fullyQualify: false);
 
-            if (this.IsParamsArray)
+            if (IsParamsArray)
             {
                 typeName = "params " + typeName;
             }
             else
             {
-                switch (this.Modifer)
+                switch (Modifer)
                 {
                     case ParameterModifier.None:
                         break;
@@ -216,14 +238,16 @@ namespace BreakingChangesDetector.MetadataItems
                         break;
 
                     default:
-                        Debug.Fail("Unknown ParameterModifier: " + this.Modifer);
+                        Debug.Fail("Unknown ParameterModifier: " + Modifer);
                         break;
                 }
             }
 
-            var defaultValueText = this.GetDefaultValueDisplayText();
+            var defaultValueText = GetDefaultValueDisplayText();
             if (defaultValueText != null)
+            {
                 return typeName + " = " + defaultValueText;
+            }
 
             return typeName;
         }
@@ -237,14 +261,11 @@ namespace BreakingChangesDetector.MetadataItems
         /// Indicates whether the two parameter is equivalent to the specified parameter, meaning it has the same type and modifiers (name and default value are ignored).
         /// </summary> 
 #endif
-        internal bool IsEquivalentTo(ParameterData other)
-        {
-            return
-                this.IsTypeDynamic == other.IsTypeDynamic &&
-                this.IsParamsArray == other.IsParamsArray &&
-                this.Modifer == other.Modifer &&
-                this.Type == other.Type;
-        }
+        internal bool IsEquivalentTo(ParameterData other) =>
+            IsTypeDynamic == other.IsTypeDynamic &&
+            IsParamsArray == other.IsParamsArray &&
+            Modifer == other.Modifer &&
+            Type == other.Type;
 
         #endregion // IsEquivalentTo
 
@@ -255,14 +276,11 @@ namespace BreakingChangesDetector.MetadataItems
         /// Indicates whether a new parameter of the same type and name is logically the same member as the current parameter, just from a newer build.
         /// </summary> 
 #endif
-        internal bool IsEquivalentToNewParameter(ParameterData newParameter, AssemblyFamily newAssemblyFamily)
-        {
-            return
-                this.IsTypeDynamic == newParameter.IsTypeDynamic &&
-                this.IsParamsArray == newParameter.IsParamsArray &&
-                this.Modifer == newParameter.Modifer &&
-                this.Type.IsEquivalentToNew(newParameter.Type, newAssemblyFamily);
-        }
+        internal bool IsEquivalentToNewParameter(ParameterData newParameter, AssemblyFamily newAssemblyFamily) =>
+            IsTypeDynamic == newParameter.IsTypeDynamic &&
+            IsParamsArray == newParameter.IsParamsArray &&
+            Modifer == newParameter.Modifer &&
+            Type.IsEquivalentToNew(newParameter.Type, newAssemblyFamily);
 
         #endregion // IsEquivalentToNewParameter
 
@@ -279,11 +297,13 @@ namespace BreakingChangesDetector.MetadataItems
 #endif
         internal ParameterData ReplaceGenericTypeParameters(MetadataItemKinds declaringMemberKind, GenericTypeParameterCollection genericParameters, GenericTypeArgumentCollection genericArguments)
         {
-            var replacedType = (TypeData)this.Type.ReplaceGenericTypeParameters(genericParameters, genericArguments);
-            if (replacedType == this.Type)
+            var replacedType = (TypeData)Type.ReplaceGenericTypeParameters(genericParameters, genericArguments);
+            if (replacedType == Type)
+            {
                 return this;
+            }
 
-            return new ParameterData(declaringMemberKind, this.Name, replacedType, this.Modifer, _flags, this.DefaultValue);
+            return new ParameterData(declaringMemberKind, Name, replacedType, Modifer, _flags, DefaultValue);
         }
 
         #endregion // ReplaceGenericTypeParameters
@@ -294,10 +314,7 @@ namespace BreakingChangesDetector.MetadataItems
 
         #region GetFlag
 
-        private bool GetFlag(InternalFlags flag)
-        {
-            return (_flags & flag) == flag;
-        }
+        private bool GetFlag(InternalFlags flag) => (_flags & flag) == flag;
 
         #endregion // GetFlag
 
@@ -310,52 +327,49 @@ namespace BreakingChangesDetector.MetadataItems
         /// <summary>
         /// Gets the type of member owning the parameter collection.
         /// </summary>
-        public MetadataItemKinds DeclaringMemberKind { get; private set; }
+        public MetadataItemKinds DeclaringMemberKind { get; }
 
         /// <summary>
         /// Gets the default value of an optional parameter (only valid if <see cref="IsOptional"/> is true).
         /// </summary>
         /// <seealso cref="IsOptional"/>
-        public object DefaultValue { get; private set; }
+        public object DefaultValue { get; }
 
         /// <summary>
         /// Gets the value indicating whether the parameter has a default value and is therefore optional.
         /// </summary>
         /// <seealso cref="DefaultValue"/>
-        public bool IsOptional { get { return this.GetFlag(InternalFlags.IsOptional); } }
+        public bool IsOptional => GetFlag(InternalFlags.IsOptional);
 
         /// <summary>
         /// Gets the value indicating whether the parameter is a paras array.
         /// </summary>
-        public bool IsParamsArray { get { return this.GetFlag(InternalFlags.IsParamsArray); } }
+        public bool IsParamsArray => GetFlag(InternalFlags.IsParamsArray);
 
         /// <summary>
         /// Gets the value indicating whether the parameter type is 'dynamic', in which case <see cref="Type"/> will be System.Object.
         /// </summary>
-        public bool IsTypeDynamic { get { return this.GetFlag(InternalFlags.IsTypeDynamic); } }
+        public bool IsTypeDynamic => GetFlag(InternalFlags.IsTypeDynamic);
 
         /// <summary>
         /// Gets the type of item the instance represents.
         /// </summary>
-        public override MetadataItemKinds MetadataItemKind
-        {
-            get { return MetadataItemKinds.Parameter; }
-        }
+        public override MetadataItemKinds MetadataItemKind => MetadataItemKinds.Parameter;
 
         /// <summary>
         /// Gets the value indicating whether a ref or out modifier is specified on the parameter.
         /// </summary>
-        public ParameterModifier Modifer { get; private set; }
+        public ParameterModifier Modifer { get; }
 
         /// <summary>
         /// Gets the name of the parameter.
         /// </summary>
-        public string Name { get; private set; }
+        public string Name { get; }
 
         /// <summary>
         /// Gets the type of the parameter.
         /// </summary>
-        public TypeData Type { get; private set; }
+        public TypeData Type { get; }
 
         #endregion // Properties
 

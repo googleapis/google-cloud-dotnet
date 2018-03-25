@@ -25,11 +25,6 @@
 
 using BreakingChangesDetector.MetadataItems;
 using Microsoft.CodeAnalysis;
-using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
 
 namespace BreakingChangesDetector.BreakingChanges.Definitions
 {
@@ -45,12 +40,16 @@ namespace BreakingChangesDetector.BreakingChanges.Definitions
             var newType = (TypeDefinitionData)context.NewItem;
 
             if (oldType.TypeKind != TypeKind.Interface)
+            {
                 return;
+            }
 
             foreach (var newInterfaceType in newType.ImplementedInterfaces)
             {
                 if (newInterfaceType.HasMembers == false)
+                {
                     continue;
+                }
 
                 var hasNewInterfaceEquivalent = false;
                 foreach (var oldInterfaceType in oldType.ImplementedInterfaces)
@@ -63,18 +62,16 @@ namespace BreakingChangesDetector.BreakingChanges.Definitions
                 }
 
                 if (hasNewInterfaceEquivalent == false)
+                {
                     context.BreakingChanges.Add(new AddedBaseInterface(oldType, newType, newInterfaceType));
+                }
             }
         }
 
-        public override BreakingChangeKind BreakingChangeKind
-        {
-            get { return BreakingChangeKind.AddedBaseInterface; }
-        }
+        public override BreakingChangeKind BreakingChangeKind =>
+            BreakingChangeKind.AddedBaseInterface;
 
-        public override MetadataItemKinds MembersKindsHandled
-        {
-            get { return MetadataItemKinds.TypeDefinition; }
-        }
+        public override MetadataItemKinds MembersKindsHandled =>
+            MetadataItemKinds.TypeDefinition;
     }
 }

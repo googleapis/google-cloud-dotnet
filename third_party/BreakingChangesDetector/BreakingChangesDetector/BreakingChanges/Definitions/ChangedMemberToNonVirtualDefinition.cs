@@ -24,17 +24,13 @@
 */
 
 using BreakingChangesDetector.MetadataItems;
-using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
 
 namespace BreakingChangesDetector.BreakingChanges.Definitions
 {
     internal class ChangedMemberToNonVirtualDefinition : BreakingChangeDefinitionBase
     {
-        public static readonly ChangedMemberToNonVirtualDefinition Instance = new ChangedMemberToNonVirtualDefinition();
+        public static readonly ChangedMemberToNonVirtualDefinition Instance =
+            new ChangedMemberToNonVirtualDefinition();
 
         private ChangedMemberToNonVirtualDefinition() { }
 
@@ -43,24 +39,18 @@ namespace BreakingChangesDetector.BreakingChanges.Definitions
             var oldMember = (MemberDataBase)context.OldItem;
             var newMember = (MemberDataBase)context.NewItem;
             if (oldMember.IsVirtualCallType && newMember.IsVirtualCallType == false)
-                context.BreakingChanges.Add(new ChangedMemberToNonVirtual(oldMember, newMember));
-        }
-
-        public override BreakingChangeKind BreakingChangeKind
-        {
-            get { return BreakingChangeKind.ChangedMemberToNonVirtual; }
-        }
-
-        public override MetadataItemKinds MembersKindsHandled
-        {
-            get
             {
-                return
-                    MetadataItemKinds.Event |
-                    MetadataItemKinds.Indexer |
-                    MetadataItemKinds.Method |
-                    MetadataItemKinds.Property;
+                context.BreakingChanges.Add(new ChangedMemberToNonVirtual(oldMember, newMember));
             }
         }
+
+        public override BreakingChangeKind BreakingChangeKind =>
+            BreakingChangeKind.ChangedMemberToNonVirtual;
+
+        public override MetadataItemKinds MembersKindsHandled =>
+            MetadataItemKinds.Event |
+            MetadataItemKinds.Indexer |
+            MetadataItemKinds.Method |
+            MetadataItemKinds.Property;
     }
 }

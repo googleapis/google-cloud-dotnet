@@ -24,17 +24,13 @@
 */
 
 using BreakingChangesDetector.MetadataItems;
-using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
 
 namespace BreakingChangesDetector.BreakingChanges.Definitions
 {
     internal class RemovedExtensionMethodModifierDefinition : BreakingChangeDefinitionBase
     {
-        public static readonly RemovedExtensionMethodModifierDefinition Instance = new RemovedExtensionMethodModifierDefinition();
+        public static readonly RemovedExtensionMethodModifierDefinition Instance =
+            new RemovedExtensionMethodModifierDefinition();
 
         private RemovedExtensionMethodModifierDefinition() { }
 
@@ -44,17 +40,15 @@ namespace BreakingChangesDetector.BreakingChanges.Definitions
             var newMethod = (MethodData)context.NewItem;
 
             if (oldMethod.IsExtensionMethod && newMethod.IsExtensionMethod == false)
+            {
                 context.BreakingChanges.Add(new RemovedExtensionMethodModifier(oldMethod, newMethod));
+            }
         }
 
-        public override BreakingChangeKind BreakingChangeKind
-        {
-            get { return BreakingChangeKind.RemovedExtensionMethodModifier; }
-        }
+        public override BreakingChangeKind BreakingChangeKind =>
+            BreakingChangeKind.RemovedExtensionMethodModifier;
 
-        public override MetadataItemKinds MembersKindsHandled
-        {
-            get { return MetadataItemKinds.Method; }
-        }
+        public override MetadataItemKinds MembersKindsHandled =>
+            MetadataItemKinds.Method;
     }
 }

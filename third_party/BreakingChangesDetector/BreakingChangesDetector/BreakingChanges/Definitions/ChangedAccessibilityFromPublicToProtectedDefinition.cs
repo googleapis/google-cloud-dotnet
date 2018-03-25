@@ -24,17 +24,13 @@
 */
 
 using BreakingChangesDetector.MetadataItems;
-using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
 
 namespace BreakingChangesDetector.BreakingChanges.Definitions
 {
     internal class ChangedAccessibilityFromPublicToProtectedDefinition : BreakingChangeDefinitionBase
     {
-        public static readonly ChangedAccessibilityFromPublicToProtectedDefinition Instance = new ChangedAccessibilityFromPublicToProtectedDefinition();
+        public static readonly ChangedAccessibilityFromPublicToProtectedDefinition Instance =
+            new ChangedAccessibilityFromPublicToProtectedDefinition();
 
         private ChangedAccessibilityFromPublicToProtectedDefinition() { }
 
@@ -50,25 +46,17 @@ namespace BreakingChangesDetector.BreakingChanges.Definitions
             }
         }
 
-        public override BreakingChangeKind BreakingChangeKind
-        {
-            get { return BreakingChangeKind.ChangedAccessibilityFromPublicToProtected; }
-        }
+        public override BreakingChangeKind BreakingChangeKind =>
+            BreakingChangeKind.ChangedAccessibilityFromPublicToProtected;
 
-        public override MetadataItemKinds MembersKindsHandled
-        {
-            get
-            {
-                return
-                    MetadataItemKinds.Constant |
-                    MetadataItemKinds.Constructor |
-                    MetadataItemKinds.Event |
-                    MetadataItemKinds.Field |
-                    MetadataItemKinds.Indexer |
-                    MetadataItemKinds.Method |
-                    MetadataItemKinds.Property |
-                    MetadataItemKinds.TypeDefinition;
-            }
-        }
+        public override MetadataItemKinds MembersKindsHandled =>
+            MetadataItemKinds.Constant |
+            MetadataItemKinds.Constructor |
+            MetadataItemKinds.Event |
+            MetadataItemKinds.Field |
+            MetadataItemKinds.Indexer |
+            MetadataItemKinds.Method |
+            MetadataItemKinds.Property |
+            MetadataItemKinds.TypeDefinition;
     }
 }

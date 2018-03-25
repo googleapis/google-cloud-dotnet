@@ -30,8 +30,6 @@ using System;
 using System.Collections.Generic;
 using System.Diagnostics;
 using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
 
 namespace BreakingChangesDetector.BreakingChanges
 {
@@ -55,19 +53,17 @@ namespace BreakingChangesDetector.BreakingChanges
         {
             var metadataItemKinds = new List<MetadataItemKinds>();
             foreach (var name in Enum.GetNames(typeof(MetadataItemKinds)))
+            {
                 metadataItemKinds.Add((MetadataItemKinds)Enum.Parse(typeof(MetadataItemKinds), name));
+            }
 
             _metadataItemKinds = metadataItemKinds.ToArray();
 
             _definitionsByKind = new Dictionary<MetadataItemKinds, List<BreakingChangeDefinitionBase>>();
             foreach (var kind in _metadataItemKinds)
+            {
                 _definitionsByKind[kind] = new List<BreakingChangeDefinitionBase>();
-
-            Action<BreakingChangeDefinitionBase> addDefinition = definition =>
-                {
-                    foreach (var kind in _metadataItemKinds.Where(k => definition.MembersKindsHandled.HasFlag(k)))
-                        _definitionsByKind[kind].Add(definition);
-                };
+            }
 
             addDefinition(AddedBaseInterfaceDefinition.Instance);
             addDefinition(ChangedAccessibilityFromPublicToProtectedDefinition.Instance);
@@ -90,6 +86,14 @@ namespace BreakingChangesDetector.BreakingChanges
             addDefinition(RemovedImplementedInterfaceDefinition.Instance);
             addDefinition(RemovedPropertyAccessorsDefinition.Instance);
             addDefinition(SealedClassDefinition.Instance);
+
+            void addDefinition(BreakingChangeDefinitionBase definition)
+            {
+                foreach (var kind in _metadataItemKinds.Where(k => definition.MembersKindsHandled.HasFlag(k)))
+                {
+                    _definitionsByKind[kind].Add(definition);
+                }
+            }
         }
 
         #endregion // Constructor
@@ -110,9 +114,13 @@ namespace BreakingChangesDetector.BreakingChanges
             {
                 var newAssembly = newFamily.GetEquivalentAssembly(oldAssembly);
                 if (newAssembly == null)
+                {
                     breakingChanges.Add(new RemovedAssembly(oldAssembly));
+                }
                 else
-                    breakingChanges.AddRange(MetadataComparer.CompareAssemblies(oldAssembly, newAssembly, newFamily));
+                {
+                    breakingChanges.AddRange(CompareAssemblies(oldAssembly, newAssembly, newFamily));
+                }
             }
 
             return breakingChanges;
@@ -122,19 +130,15 @@ namespace BreakingChangesDetector.BreakingChanges
         /// Compares two associated <see cref="AssemblyData"/> instances and returns the breaking changes introduced in the newer version of 
         /// the assembly.
         /// </summary>
-        public static List<BreakingChangeBase> CompareAssemblies(AssemblyData oldAssembly, AssemblyData newAssembly)
-        {
-            return MetadataComparer.CompareAssemblies(oldAssembly, newAssembly, new AssemblyFamily { newAssembly });
-        }
+        public static List<BreakingChangeBase> CompareAssemblies(AssemblyData oldAssembly, AssemblyData newAssembly) =>
+            CompareAssemblies(oldAssembly, newAssembly, new AssemblyFamily { newAssembly });
 
         /// <summary>
         /// Compares two associated <see cref="TypeData"/> instances and returns the breaking changes introduced in the newer version of the 
         /// type.
         /// </summary>
-        public static List<BreakingChangeBase> CompareTypes(TypeData oldTypeBase, TypeData newTypeBase)
-        {
-            return MetadataComparer.CompareTypes(oldTypeBase, newTypeBase, newTypeBase.GetDefiningAssemblyFamily());
-        }
+        public static List<BreakingChangeBase> CompareTypes(TypeData oldTypeBase, TypeData newTypeBase) =>
+            CompareTypes(oldTypeBase, newTypeBase, newTypeBase.GetDefiningAssemblyFamily());
 
         #endregion // Public Methods
 
@@ -147,22 +151,24 @@ namespace BreakingChangesDetector.BreakingChanges
             {
                 var newType = oldType.GetEquivalentNewType(newFamily);
                 if (newType == null)
+                {
                     breakingChanges.Add(new RemovedRootType(oldType));
+                }
                 else
-                    breakingChanges.AddRange(MetadataComparer.CompareTypes(oldType, newType, newFamily));
+                {
+                    breakingChanges.AddRange(CompareTypes(oldType, newType, newFamily));
+                }
             }
             return breakingChanges;
         }
 
-        private static List<BreakingChangeBase> CompareGenericTypeParameters(GenericTypeParameterData oldGenericTypeParameter, GenericTypeParameterData newGenericTypeParameter, AssemblyFamily newAssemblyFamily)
-        {
-            return MetadataComparer.CompareItems(oldGenericTypeParameter, newGenericTypeParameter, newAssemblyFamily);
-        }
+        private static List<BreakingChangeBase> CompareGenericTypeParameters(GenericTypeParameterData oldGenericTypeParameter, GenericTypeParameterData newGenericTypeParameter, AssemblyFamily newAssemblyFamily) =>
+            CompareItems(oldGenericTypeParameter, newGenericTypeParameter, newAssemblyFamily);
 
         private static List<BreakingChangeBase> CompareIndexers(IndexerData oldIndexer, IndexerData newIndexer, AssemblyFamily newAssemblyFamily)
         {
-            var breakingChanges = MetadataComparer.CompareItems(oldIndexer, newIndexer, newAssemblyFamily);
-            MetadataComparer.CompareParameters(oldIndexer, newIndexer, newAssemblyFamily, breakingChanges);
+            var breakingChanges = CompareItems(oldIndexer, newIndexer, newAssemblyFamily);
+            CompareParameters(oldIndexer, newIndexer, newAssemblyFamily, breakingChanges);
             return breakingChanges;
         }
 
@@ -174,7 +180,9 @@ namespace BreakingChangesDetector.BreakingChanges
             Debug.Assert(oldItem.MetadataItemKind == newItem.MetadataItemKind, "The items are not the same kind.");
             var definitions = _definitionsByKind[oldItem.MetadataItemKind];
             foreach (var definition in definitions)
+            {
                 definition.CompareItems(context);
+            }
 
             return breakingChanges;
         }
@@ -187,24 +195,24 @@ namespace BreakingChangesDetector.BreakingChanges
                 case MetadataItemKinds.Event:
                 case MetadataItemKinds.Field:
                 case MetadataItemKinds.Property:
-                    return MetadataComparer.CompareItems(oldMember, newMember, newAssemblyFamily);
+                    return CompareItems(oldMember, newMember, newAssemblyFamily);
 
                 case MetadataItemKinds.Indexer:
-                    return MetadataComparer.CompareIndexers((IndexerData)oldMember, (IndexerData)newMember, newAssemblyFamily);
+                    return CompareIndexers((IndexerData)oldMember, (IndexerData)newMember, newAssemblyFamily);
 
                 case MetadataItemKinds.Constructor:
                 case MetadataItemKinds.Operator:
                     {
-                        var breakingChanges = MetadataComparer.CompareItems(oldMember, newMember, newAssemblyFamily);
-                        MetadataComparer.CompareParameters((IParameterizedItem)oldMember, (IParameterizedItem)newMember, newAssemblyFamily, breakingChanges);
+                        var breakingChanges = CompareItems(oldMember, newMember, newAssemblyFamily);
+                        CompareParameters((IParameterizedItem)oldMember, (IParameterizedItem)newMember, newAssemblyFamily, breakingChanges);
                         return breakingChanges;
                     }
 
                 case MetadataItemKinds.Method:
-                    return MetadataComparer.CompareMethods((MethodData)oldMember, (MethodData)newMember, newAssemblyFamily);
+                    return CompareMethods((MethodData)oldMember, (MethodData)newMember, newAssemblyFamily);
 
                 case MetadataItemKinds.TypeDefinition:
-                    return MetadataComparer.CompareTypes((TypeDefinitionData)oldMember, (TypeDefinitionData)newMember, newAssemblyFamily);
+                    return CompareTypes((TypeDefinitionData)oldMember, (TypeDefinitionData)newMember, newAssemblyFamily);
 
                 case MetadataItemKinds.Assembly:
                 case MetadataItemKinds.GenericTypeParameter:
@@ -222,18 +230,20 @@ namespace BreakingChangesDetector.BreakingChanges
 
         private static List<BreakingChangeBase> CompareMethods(MethodData oldMethodBase, MethodData newMethodBase, AssemblyFamily newAssemblyFamily)
         {
-            var breakingChanges = MetadataComparer.CompareItems(oldMethodBase, newMethodBase, newAssemblyFamily);
-            MetadataComparer.CompareParameters(oldMethodBase, newMethodBase, newAssemblyFamily, breakingChanges);
+            var breakingChanges = CompareItems(oldMethodBase, newMethodBase, newAssemblyFamily);
+            CompareParameters(oldMethodBase, newMethodBase, newAssemblyFamily, breakingChanges);
 
             if (oldMethodBase.MetadataItemKind == MetadataItemKinds.Method)
             {
-                var oldMethod = (MethodData)oldMethodBase;
-                var newMethod = (MethodData)newMethodBase;
+                var oldMethod = oldMethodBase;
+                var newMethod = newMethodBase;
 
                 if (oldMethod.GenericParameters.Count == newMethod.GenericParameters.Count)
                 {
                     for (int i = 0; i < oldMethod.GenericParameters.Count; i++)
-                        breakingChanges.AddRange(MetadataComparer.CompareGenericTypeParameters(oldMethod.GenericParameters[i], newMethod.GenericParameters[i], newAssemblyFamily));
+                    {
+                        breakingChanges.AddRange(CompareGenericTypeParameters(oldMethod.GenericParameters[i], newMethod.GenericParameters[i], newAssemblyFamily));
+                    }
                 }
             }
             return breakingChanges;
@@ -244,13 +254,15 @@ namespace BreakingChangesDetector.BreakingChanges
             if (oldParameterizedItem.Parameters.Count == newParameterizedItem.Parameters.Count)
             {
                 for (int i = 0; i < oldParameterizedItem.Parameters.Count; i++)
-                    breakingChanges.AddRange(MetadataComparer.CompareParameters(oldParameterizedItem.Parameters[i], newParameterizedItem.Parameters[i], newAssemblyFamily, (MetadataItemBase)newParameterizedItem));
+                {
+                    breakingChanges.AddRange(CompareParameters(oldParameterizedItem.Parameters[i], newParameterizedItem.Parameters[i], newAssemblyFamily, (MetadataItemBase)newParameterizedItem));
+                }
             }
         }
 
         private static List<BreakingChangeBase> CompareParameters(ParameterData oldParameter, ParameterData newParameter, AssemblyFamily newAssemblyFamily, MetadataItemBase declaringMember)
         {
-            var breakingChanges = MetadataComparer.CompareItems(oldParameter, newParameter, newAssemblyFamily, declaringMember);
+            var breakingChanges = CompareItems(oldParameter, newParameter, newAssemblyFamily, declaringMember);
 
             // If a parameter is changed completely, it will most likely have a new type and name. We should only warn about the type change.
             var typeChanges = new HashSet<ParameterData>(
@@ -266,12 +278,14 @@ namespace BreakingChangesDetector.BreakingChanges
             var oldType = (TypeDefinitionData)oldTypeBase;
             var newType = (TypeDefinitionData)newTypeBase;
 
-            var breakingChanges = MetadataComparer.CompareItems(oldType, newType, newAssemblyFamily);
+            var breakingChanges = CompareItems(oldType, newType, newAssemblyFamily);
 
             if (oldType.GenericParameters.Count == newType.GenericParameters.Count)
             {
                 for (int i = 0; i < oldType.GenericParameters.Count; i++)
-                    breakingChanges.AddRange(MetadataComparer.CompareGenericTypeParameters(oldType.GenericParameters[i], newType.GenericParameters[i], newAssemblyFamily));
+                {
+                    breakingChanges.AddRange(CompareGenericTypeParameters(oldType.GenericParameters[i], newType.GenericParameters[i], newAssemblyFamily));
+                }
             }
 
             var hasExternallyVisibleConstructor = oldType.GetMembers(".ctor").Count != 0;
@@ -282,18 +296,24 @@ namespace BreakingChangesDetector.BreakingChanges
                 {
                     MemberDataBase newMember;
                     if (oldType.TypeKind == TypeKind.Class && oldMember.IsOverride == false)
-                        newMember = MetadataComparer.FindEquivalentMemberInClassHierarchy(oldMember, newType, newAssemblyFamily);
+                    {
+                        newMember = FindEquivalentMemberInClassHierarchy(oldMember, newType, newAssemblyFamily);
+                    }
                     else
-                        newMember = MetadataComparer.FindEquivalentMember(oldMember, newType, newAssemblyFamily);
+                    {
+                        newMember = FindEquivalentMember(oldMember, newType, newAssemblyFamily);
+                    }
 
                     if (newMember != null)
                     {
-                        breakingChanges.AddRange(MetadataComparer.CompareMembers(oldMember, newMember, newAssemblyFamily));
+                        breakingChanges.AddRange(CompareMembers(oldMember, newMember, newAssemblyFamily));
                         continue;
                     }
 
-                    if (MetadataComparer.IsMemberKindChangeAllowed(oldMember, newType, newAssemblyFamily))
+                    if (IsMemberKindChangeAllowed(oldMember, newType, newAssemblyFamily))
+                    {
                         continue;
+                    }
 
                     if (oldMember.IsOverride)
                     {
@@ -301,7 +321,9 @@ namespace BreakingChangesDetector.BreakingChanges
                         {
                             var baseMember = oldMember.GetBaseMember();
                             if (baseMember.IsAbstract)
+                            {
                                 breakingChanges.Add(new RemovedOverrideOfAbstractMember(oldMember, newType));
+                            }
                         }
 
                         continue;
@@ -318,17 +340,21 @@ namespace BreakingChangesDetector.BreakingChanges
                     {
                         if (newMember.IsAbstract)
                         {
-                            var oldMember = MetadataComparer.FindEquivalentMemberInClassHierarchy(newMember, oldType, newAssemblyFamily);
+                            var oldMember = FindEquivalentMemberInClassHierarchy(newMember, oldType, newAssemblyFamily);
                             if (oldMember == null)
+                            {
                                 breakingChanges.Add(new AddedAbstractMember(newMember));
+                            }
                         }
                         else if (newType.IsSealed == false && newMember.IsSealed && newMember.IsOverride)
                         {
                             // If the class contains a sealed override member, find the original equivalent member and see if derived
                             // classes would have been able to override the member previously.
-                            var oldMember = MetadataComparer.FindEquivalentMemberInClassHierarchy(newMember, oldType, newAssemblyFamily);
+                            var oldMember = FindEquivalentMemberInClassHierarchy(newMember, oldType, newAssemblyFamily);
                             if (oldMember != null && oldMember.CanBeOverridden)
+                            {
                                 breakingChanges.Add(new SealedMember(oldMember, newMember));
+                            }
                         }
                     }
                     break;
@@ -336,14 +362,16 @@ namespace BreakingChangesDetector.BreakingChanges
                 case TypeKind.Interface:
                     foreach (var newMember in newType.GetMembers())
                     {
-                        var oldMember = MetadataComparer.FindEquivalentMember(newMember, oldType, newAssemblyFamily);
+                        var oldMember = FindEquivalentMember(newMember, oldType, newAssemblyFamily);
                         if (oldMember == null)
+                        {
                             breakingChanges.Add(new AddedInterfaceMember(newMember));
+                        }
                     }
                     break;
 
                 case TypeKind.Delegate:
-                    MetadataComparer.CompareParameters(oldType, newType, newAssemblyFamily, breakingChanges);
+                    CompareParameters(oldType, newType, newAssemblyFamily, breakingChanges);
                     break;
             }
             return breakingChanges;
@@ -355,9 +383,11 @@ namespace BreakingChangesDetector.BreakingChanges
             var current = newType;
             while (current != null)
             {
-                var newMember = MetadataComparer.FindEquivalentMember(oldMember, current, newAssemblyFamily, allowMatchOnNameOnly);
+                var newMember = FindEquivalentMember(oldMember, current, newAssemblyFamily, allowMatchOnNameOnly);
                 if (newMember != null)
+                {
                     return newMember;
+                }
 
                 current = current.BaseType;
                 allowMatchOnNameOnly = false;
@@ -370,25 +400,30 @@ namespace BreakingChangesDetector.BreakingChanges
         {
             var newMembers = newType.GetMembers(oldMember.Name);
             if (newMembers.Count == 0)
+            {
                 return null;
+            }
 
             var candidateMembers = newMembers.Where(m => m.MetadataItemKind == oldMember.MetadataItemKind).ToList();
             foreach (var newMember in candidateMembers)
             {
                 if (oldMember.IsEquivalentToNewMember(newMember, newAssemblyFamily))
+                {
                     return newMember;
+                }
             }
 
             // TODO: This could match up a new item to multiple old items. This might need to be improved.
             // If we didn't find any match and the current member has parameters, we should try to match this method up
             // with any new method that has the same required parameters, but new optional parameters as well.
-            var oldParameterizedMember = oldMember as IParameterizedItem;
-            if (oldParameterizedMember != null)
+            if (oldMember is IParameterizedItem oldParameterizedMember)
             {
                 foreach (var newParameterizedMember in candidateMembers)
                 {
                     if (oldParameterizedMember.IsEquivalentToNewMember(newParameterizedMember, newAssemblyFamily, ignoreNewOptionalParameters: true))
-                        return (MemberDataBase)newParameterizedMember;
+                    {
+                        return newParameterizedMember;
+                    }
                 }
             }
 
@@ -436,20 +471,27 @@ namespace BreakingChangesDetector.BreakingChanges
                     ).ToList();
 
                 if (candidateMembers.Count == 0)
+                {
                     return false;
+                }
 
                 Debug.Assert(candidateMembers.Count == 1, "There should only be one member with the same name.");
 
                 var newMember = candidateMembers[0];
                 if (oldMember.CanRead() && newMember.CanRead() == false)
+                {
                     return false;
+                }
 
                 if (oldMember.CanWrite() && newMember.CanWrite() == false)
+                {
                     return false;
+                }
 
-                var newProperty = newMember as PropertyData;
-                if (newProperty != null && newProperty.GetMethodAccessibility < oldMember.Accessibility)
+                if (newMember is PropertyData newProperty && newProperty.GetMethodAccessibility < oldMember.Accessibility)
+                {
                     return false;
+                }
 
                 return true;
             }

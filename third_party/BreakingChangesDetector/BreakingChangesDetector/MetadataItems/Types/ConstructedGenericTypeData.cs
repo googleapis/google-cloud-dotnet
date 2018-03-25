@@ -27,9 +27,6 @@ using System;
 using System.Collections.Generic;
 using System.Diagnostics;
 using System.Linq;
-using System.Reflection;
-using System.Text;
-using System.Threading.Tasks;
 
 namespace BreakingChangesDetector.MetadataItems
 {
@@ -38,9 +35,8 @@ namespace BreakingChangesDetector.MetadataItems
     /// </summary>
     public sealed class ConstructedGenericTypeData : DeclaringTypeData
     {
-        #region Member Variables
 
-        private readonly GenericTypeArgumentCollection _genericArguments;
+        #region Member Variables
         private readonly bool _isNullable;
 
         #endregion // Member Variables
@@ -50,12 +46,12 @@ namespace BreakingChangesDetector.MetadataItems
         internal ConstructedGenericTypeData(TypeDefinitionData genericTypeDefinition, IEnumerable<TypeData> genericArguments)
             : base(genericTypeDefinition.Name, genericTypeDefinition.Accessibility, genericTypeDefinition.MemberFlags, genericTypeDefinition.TypeKind)
         {
-            this.GenericTypeDefinition = genericTypeDefinition;
-            this.ContainingType = genericTypeDefinition.ContainingType;
+            GenericTypeDefinition = genericTypeDefinition;
+            ContainingType = genericTypeDefinition.ContainingType;
 
             _isNullable = genericTypeDefinition.IsType(typeof(Nullable<>));
 
-            _genericArguments = new GenericTypeArgumentCollection(genericArguments);
+            GenericArguments = new GenericTypeArgumentCollection(genericArguments);
             genericTypeDefinition.RegisterConstructedGenericTypeData(this);
             genericTypeDefinition.AssemblyData.RegisterForFinalize(this);
         }
@@ -70,10 +66,7 @@ namespace BreakingChangesDetector.MetadataItems
         /// Performs the specified visitor's functionality on this instance.
         /// </summary>
         /// <param name="visitor">The visitor whose functionality should be performed on the instance.</param>
-        public override void Accept(MetadataItemVisitor visitor)
-        {
-            visitor.VisitConstructedGenericTypeData(this);
-        }
+        public override void Accept(MetadataItemVisitor visitor) => visitor.VisitConstructedGenericTypeData(this);
 
         #endregion // Accept
 
@@ -82,10 +75,7 @@ namespace BreakingChangesDetector.MetadataItems
         /// <summary>
         /// Gets the <see cref="T:AssemblyData"/> representing the assembly in which the type is defined.
         /// </summary>
-        public override AssemblyData AssemblyData
-        {
-            get { return this.GenericTypeDefinition == null ? null : this.GenericTypeDefinition.AssemblyData; }
-        }
+        public override AssemblyData AssemblyData => GenericTypeDefinition?.AssemblyData;
 
         #endregion // AssemblyData
 
@@ -94,20 +84,30 @@ namespace BreakingChangesDetector.MetadataItems
         internal override bool DoesMatch(MetadataItemBase other)
         {
             if (base.DoesMatch(other) == false)
+            {
                 return false;
+            }
 
             var otherTyped = other as ConstructedGenericTypeData;
             if (otherTyped == null)
+            {
                 return false;
+            }
 
-            if (_genericArguments.DoesMatch(otherTyped._genericArguments) == false)
+            if (GenericArguments.DoesMatch(otherTyped.GenericArguments) == false)
+            {
                 return false;
+            }
 
-            if (this.GenericTypeDefinition.DisplayName != otherTyped.GenericTypeDefinition.DisplayName)
+            if (GenericTypeDefinition.DisplayName != otherTyped.GenericTypeDefinition.DisplayName)
+            {
                 return false;
+            }
 
             if (_isNullable != otherTyped._isNullable)
+            {
                 return false;
+            }
 
             return true;
         }
@@ -121,10 +121,7 @@ namespace BreakingChangesDetector.MetadataItems
         /// Gets the number of generic parameters/arguments for the type.
         /// </summary> 
 #endif
-        internal override int GenericArity
-        {
-            get { return this.GenericArguments.Count; }
-        }
+        internal override int GenericArity => GenericArguments.Count;
 
         #endregion // GenericArity
 
@@ -138,9 +135,10 @@ namespace BreakingChangesDetector.MetadataItems
 #endif
         internal override AssemblyFamily GetDefiningAssemblyFamily()
         {
-            TypeData underlyingType;
-            if (this.IsNullable(out underlyingType))
+            if (IsNullable(out TypeData underlyingType))
+            {
                 return underlyingType.GetDefiningAssemblyFamily();
+            }
 
             return base.GetDefiningAssemblyFamily();
         }
@@ -166,19 +164,22 @@ namespace BreakingChangesDetector.MetadataItems
             if (onlyReferenceAndIdentityConversions == false)
             {
                 // An implicit conversion from S? to interfaces and base classes of S
-                TypeData underlyingType;
-                if (this.IsNullable(out underlyingType))
+                if (IsNullable(out TypeData underlyingType))
                 {
                     foreach (var item in underlyingType.GetDirectImplicitConversions(onlyReferenceAndIdentityConversions))
                     {
                         if (item.IsValueType == false)
+                        {
                             yield return item;
+                        }
                     }
                 }
             }
 
             foreach (var item in base.GetDirectImplicitConversions(onlyReferenceAndIdentityConversions))
+            {
                 yield return item;
+            }
         }
 
         #endregion // GetDirectImplicitConversions
@@ -199,20 +200,21 @@ namespace BreakingChangesDetector.MetadataItems
 #endif
         internal override string GetDisplayName(bool fullyQualify, bool includeGenericInfo, GenericTypeArgumentCollection genericArguments)
         {
-            TypeData underlyingType;
-            if (this.IsNullable(out underlyingType))
-                return underlyingType.GetDisplayName(fullyQualify: false, includeGenericInfo: includeGenericInfo) + '?';
-
-            var genericArgumentsResolved = genericArguments ?? this.GenericArguments;
-
-            var rootName = this.GenericTypeDefinition.GetDisplayName(fullyQualify: false, includeGenericInfo: false);
-            if (includeGenericInfo)
+            if (IsNullable(out TypeData underlyingType))
             {
-                var parentGenericArgumentCount = this.ContainingType == null ? 0 : this.ContainingType.GenericArity;
-                rootName += genericArgumentsResolved.GetGenericArgumentListDisplayText(includeGenericInfo, parentGenericArgumentCount, this.GenericArguments.Count - parentGenericArgumentCount);
+                return underlyingType.GetDisplayName(fullyQualify: false, includeGenericInfo: includeGenericInfo) + '?';
             }
 
-            return this.PostProcessUnqualifiedName(rootName, fullyQualify, includeGenericInfo, genericArgumentsResolved);
+            var genericArgumentsResolved = genericArguments ?? GenericArguments;
+
+            var rootName = GenericTypeDefinition.GetDisplayName(fullyQualify: false, includeGenericInfo: false);
+            if (includeGenericInfo)
+            {
+                var parentGenericArgumentCount = ContainingType == null ? 0 : ContainingType.GenericArity;
+                rootName += genericArgumentsResolved.GetGenericArgumentListDisplayText(includeGenericInfo, parentGenericArgumentCount, GenericArguments.Count - parentGenericArgumentCount);
+            }
+
+            return PostProcessUnqualifiedName(rootName, fullyQualify, includeGenericInfo, genericArgumentsResolved);
         }
 
         #endregion // GetDisplayName
@@ -227,16 +229,20 @@ namespace BreakingChangesDetector.MetadataItems
 #endif
         internal override TypeData GetEquivalentNewType(AssemblyFamily newAssemblyFamily)
         {
-            var newGenericTypeDefinition = (TypeDefinitionData)this.GenericTypeDefinition.GetEquivalentNewType(newAssemblyFamily);
+            var newGenericTypeDefinition = (TypeDefinitionData)GenericTypeDefinition.GetEquivalentNewType(newAssemblyFamily);
             if (newGenericTypeDefinition == null)
-                return null;
-
-            var newGenericArguments = new TypeData[this.GenericArguments.Count];
-            for (int i = 0; i < this.GenericArguments.Count; i++)
             {
-                var newGenericArgument = this.GenericArguments[i].GetEquivalentNewType(newAssemblyFamily);
+                return null;
+            }
+
+            var newGenericArguments = new TypeData[GenericArguments.Count];
+            for (int i = 0; i < GenericArguments.Count; i++)
+            {
+                var newGenericArgument = GenericArguments[i].GetEquivalentNewType(newAssemblyFamily);
                 if (newGenericArgument == null)
+                {
                     return null;
+                }
 
                 newGenericArguments[i] = newGenericArgument;
             }
@@ -256,11 +262,12 @@ namespace BreakingChangesDetector.MetadataItems
         internal override string GetNamespaceName()
         {
             // For nullable types, we want to get the namespace of the underlying type, not the System.Nullable<T> type, because it will be displayed as T?.
-            TypeData underlyingType;
-            if (this.IsNullable(out underlyingType))
+            if (IsNullable(out TypeData underlyingType))
+            {
                 return underlyingType.GetNamespaceName();
+            }
 
-            return this.GenericTypeDefinition.GetNamespaceName();
+            return GenericTypeDefinition.GetNamespaceName();
         }
 
         #endregion // GetNamespaceName
@@ -278,20 +285,17 @@ namespace BreakingChangesDetector.MetadataItems
         internal override bool IsAssignableFrom(TypeData sourceType, IsAssignableFromContext context)
         {
             if (base.IsAssignableFrom(sourceType, context))
+            {
                 return true;
+            }
 
             // Test for covariance and contravariance
-            if (this.SupportsVariantTypeParameters && sourceType.IsVarianceConvertibleTo(this, context))
+            if (SupportsVariantTypeParameters && sourceType.IsVarianceConvertibleTo(this, context))
+            {
                 return true;
-
-            // From C# specification: (The implicit reference conversions are) 
-            // - From a single-dimensional array type S[] to System.Collections.Generic.IList<T> and its base interfaces, provided that there is an implicit identity 
-            //   or reference conversion from S to T.
-            TypeData iListElementType;
-            int arrayRank;
-            TypeData arrayElementType;
-            if (this.IsIListGenericType(out iListElementType) &&
-                sourceType.IsArray(out arrayRank, out arrayElementType) &&
+            }
+            if (IsIListGenericType(out TypeData iListElementType) &&
+                sourceType.IsArray(out int arrayRank, out TypeData arrayElementType) &&
                 arrayRank == 1)
             {
                 return iListElementType.IsAssignableFrom(arrayElementType, new IsAssignableFromContext(context.NewAssemblyFamily, context.IsSourceTypeOld, onlyReferenceAndIdentityConversions: true));
@@ -299,13 +303,13 @@ namespace BreakingChangesDetector.MetadataItems
 
             if (context.OnlyReferenceAndIdentityConversions == false)
             {
-                TypeData targetUnderlyingType;
-                if (this.IsNullable(out targetUnderlyingType))
+                if (IsNullable(out TypeData targetUnderlyingType))
                 {
                     // An implicit conversion from S? to T?
-                    TypeData sourceUnderlyingType;
-                    if (sourceType.IsNullable(out sourceUnderlyingType))
+                    if (sourceType.IsNullable(out TypeData sourceUnderlyingType))
+                    {
                         return targetUnderlyingType.IsAssignableFrom(sourceUnderlyingType, context);
+                    }
 
                     // An implicit conversion from S to T?
                     return targetUnderlyingType.IsAssignableFrom(sourceType, context);
@@ -327,22 +331,32 @@ namespace BreakingChangesDetector.MetadataItems
         internal override bool IsEquivalentToNewMember(MemberDataBase newMember, AssemblyFamily newAssemblyFamily)
         {
             if (base.IsEquivalentToNewMember(newMember, newAssemblyFamily) == false)
+            {
                 return false;
+            }
 
             var other = newMember as ConstructedGenericTypeData;
             if (other == null)
-                return false;
-
-            if (this.GenericTypeDefinition.IsEquivalentToNew(other.GenericTypeDefinition, newAssemblyFamily) == false)
-                return false;
-
-            if (this.GenericArguments.Count != other.GenericArguments.Count)
-                return false;
-
-            for (int i = 0; i < this.GenericArguments.Count; i++)
             {
-                if (this.GenericArguments[i].IsEquivalentToNewMember(other.GenericArguments[i], newAssemblyFamily) == false)
+                return false;
+            }
+
+            if (GenericTypeDefinition.IsEquivalentToNew(other.GenericTypeDefinition, newAssemblyFamily) == false)
+            {
+                return false;
+            }
+
+            if (GenericArguments.Count != other.GenericArguments.Count)
+            {
+                return false;
+            }
+
+            for (int i = 0; i < GenericArguments.Count; i++)
+            {
+                if (GenericArguments[i].IsEquivalentToNewMember(other.GenericArguments[i], newAssemblyFamily) == false)
+                {
                     return false;
+                }
             }
 
             return true;
@@ -361,10 +375,10 @@ namespace BreakingChangesDetector.MetadataItems
 #endif
         internal override bool IsNullable(out TypeData underlyingType)
         {
-            if (this.GenericArguments.Count == 1 &&
+            if (GenericArguments.Count == 1 &&
                 _isNullable)
             {
-                underlyingType = this.GenericArguments[0];
+                underlyingType = GenericArguments[0];
                 return true;
             }
 
@@ -386,19 +400,21 @@ namespace BreakingChangesDetector.MetadataItems
 #endif
         internal override bool IsVarianceConvertibleTo(ConstructedGenericTypeData target, IsAssignableFromContext context)
         {
-            if (target.TypeKind == this.TypeKind &&
-                target.GenericTypeDefinition == this.GenericTypeDefinition &&
-                target.GenericArguments.Count == this.GenericArguments.Count)
+            if (target.TypeKind == TypeKind &&
+                target.GenericTypeDefinition == GenericTypeDefinition &&
+                target.GenericArguments.Count == GenericArguments.Count)
             {
                 Debug.Assert(
-                    target.GenericArguments.Count == this.GenericArguments.Count,
+                    target.GenericArguments.Count == GenericArguments.Count,
                     "Two constructed generic types from the same generic type definition should have the same number of generic arguments.");
 
                 var genericParameters = target.GenericTypeDefinition.GenericParameters;
                 for (int i = 0, count = genericParameters.Count; i < count; i++)
                 {
-                    if (genericParameters[i].IsGenericTypeArgumentVariant(target.GenericArguments[i], this.GenericArguments[i], context) == false)
+                    if (genericParameters[i].IsGenericTypeArgumentVariant(target.GenericArguments[i], GenericArguments[i], context) == false)
+                    {
                         return false;
+                    }
                 }
 
                 return true;
@@ -414,10 +430,7 @@ namespace BreakingChangesDetector.MetadataItems
         /// <summary>
         /// Gets the type of item the instance represents.
         /// </summary>
-        public override MetadataItemKinds MetadataItemKind
-        {
-            get { return MetadataItemKinds.ConstructedGenericType; }
-        }
+        public override MetadataItemKinds MetadataItemKind => MetadataItemKinds.ConstructedGenericType;
 
         #endregion // MetadataItemKind
 
@@ -434,21 +447,27 @@ namespace BreakingChangesDetector.MetadataItems
         internal override MemberDataBase ReplaceGenericTypeParameters(GenericTypeParameterCollection genericParameters, GenericTypeArgumentCollection genericArguments)
         {
             List<TypeData> replacedGenericArguments = null;
-            for (int i = 0; i < this.GenericArguments.Count; i++)
+            for (int i = 0; i < GenericArguments.Count; i++)
             {
-                var currentArgument = this.GenericArguments[i];
+                var currentArgument = GenericArguments[i];
                 var replacedArgument = (TypeData)currentArgument.ReplaceGenericTypeParameters(genericParameters, genericArguments);
                 if (replacedArgument == currentArgument)
+                {
                     continue;
+                }
 
                 if (replacedGenericArguments == null)
-                    replacedGenericArguments = new List<TypeData>(this.GenericArguments);
+                {
+                    replacedGenericArguments = new List<TypeData>(GenericArguments);
+                }
 
                 replacedGenericArguments[i] = replacedArgument;
             }
 
             if (replacedGenericArguments != null)
-                return this.GenericTypeDefinition.GetConstructedGenericTypeData(replacedGenericArguments);
+            {
+                return GenericTypeDefinition.GetConstructedGenericTypeData(replacedGenericArguments);
+            }
 
             return this;
         }
@@ -465,26 +484,30 @@ namespace BreakingChangesDetector.MetadataItems
 
         internal void FinalizeDefiniton()
         {
-            var genericParameters = this.GenericTypeDefinition.GenericParameters;
+            var genericParameters = GenericTypeDefinition.GenericParameters;
 
-            if (this.GenericTypeDefinition.BaseType != null)
-                this.BaseType = (DeclaringTypeData)this.GenericTypeDefinition.BaseType.ReplaceGenericTypeParameters(genericParameters, this.GenericArguments);
+            if (GenericTypeDefinition.BaseType != null)
+            {
+                BaseType = (DeclaringTypeData)GenericTypeDefinition.BaseType.ReplaceGenericTypeParameters(genericParameters, GenericArguments);
+            }
 
-            this.ImplementedInterfaces = new ImplementedInterfacesCollection(
-                this.GenericTypeDefinition.ImplementedInterfaces.Select(i => (DeclaringTypeData)i.ReplaceGenericTypeParameters(genericParameters, this.GenericArguments))
+            ImplementedInterfaces = new ImplementedInterfacesCollection(
+                GenericTypeDefinition.ImplementedInterfaces.Select(i => (DeclaringTypeData)i.ReplaceGenericTypeParameters(genericParameters, GenericArguments))
                 );
 
             if (TypeKind == Microsoft.CodeAnalysis.TypeKind.Delegate)
             {
-                var invokeMethod = (MethodData)this.GenericTypeDefinition.GetMethod("Invoke").ReplaceGenericTypeParameters(genericParameters, this.GenericArguments);
-                this.DelegateParameters = invokeMethod.Parameters;
-                this.DelegateReturnType = invokeMethod.Type;
-                this.DelegateReturnTypeIsDynamic = invokeMethod.IsTypeDynamic;
+                var invokeMethod = (MethodData)GenericTypeDefinition.GetMethod("Invoke").ReplaceGenericTypeParameters(genericParameters, GenericArguments);
+                DelegateParameters = invokeMethod.Parameters;
+                DelegateReturnType = invokeMethod.Type;
+                DelegateReturnTypeIsDynamic = invokeMethod.IsTypeDynamic;
             }
             else
             {
-                foreach (var member in this.GenericTypeDefinition.GetMembers().Where(m => m.MetadataItemKind != MetadataItemKinds.TypeDefinition))
-                    this.AddMember(member.ReplaceGenericTypeParameters(genericParameters, this.GenericArguments));
+                foreach (var member in GenericTypeDefinition.GetMembers().Where(m => m.MetadataItemKind != MetadataItemKinds.TypeDefinition))
+                {
+                    AddMember(member.ReplaceGenericTypeParameters(genericParameters, GenericArguments));
+                }
             }
         }
 
@@ -503,10 +526,10 @@ namespace BreakingChangesDetector.MetadataItems
 #endif
         private bool IsIListGenericType(out TypeData elementType)
         {
-            if (this.GenericArguments.Count == 1 &&
-                this.GenericTypeDefinition.IsType(typeof(IList<>)))
+            if (GenericArguments.Count == 1 &&
+                GenericTypeDefinition.IsType(typeof(IList<>)))
             {
-                elementType = this.GenericArguments[0];
+                elementType = GenericArguments[0];
                 return true;
             }
 
@@ -527,12 +550,12 @@ namespace BreakingChangesDetector.MetadataItems
         /// <summary>
         /// Gets the collection of generic arguments specified when constructing this type.
         /// </summary>
-        public GenericTypeArgumentCollection GenericArguments { get { return _genericArguments; } } // TODO_Serialize: Round trip and unit test
+        public GenericTypeArgumentCollection GenericArguments { get; } // TODO_Serialize: Round trip and unit test
 
         /// <summary>
         /// Gets the generic type definition.
         /// </summary>
-        public TypeDefinitionData GenericTypeDefinition { get; private set; } // TODO_Serialize: Round trip and unit test
+        public TypeDefinitionData GenericTypeDefinition { get; } // TODO_Serialize: Round trip and unit test
 
         #endregion // Public Properties
 
@@ -543,10 +566,9 @@ namespace BreakingChangesDetector.MetadataItems
         /// Gets the value indicating whether the type, if it were generic, supports variant type parameters (this is true for interfaces and delegates).
         /// </summary>  
 #endif
-        internal bool SupportsVariantTypeParameters
-        {
-            get { return TypeKind == Microsoft.CodeAnalysis.TypeKind.Interface || TypeKind == Microsoft.CodeAnalysis.TypeKind.Delegate; }
-        }
+        internal bool SupportsVariantTypeParameters =>
+            TypeKind == Microsoft.CodeAnalysis.TypeKind.Interface ||
+            TypeKind == Microsoft.CodeAnalysis.TypeKind.Delegate;
 
         #endregion // Internal Properties
 

@@ -61,10 +61,8 @@ namespace BreakingChangesDetector
         /// Creates a <see cref="MetadataResolutionContext"/> which can resolve symbols from any assemblies specified or from references
         /// of those assemblies.
         /// </summary>
-        public static MetadataResolutionContext CreateFromAssemblies(IEnumerable<Assembly> assemblies)
-        {
-            return new MetadataResolutionContext(assemblies.Distinct().Select(a => MetadataReference.CreateFromFile(a.Location)).ToArray());
-        }
+        public static MetadataResolutionContext CreateFromAssemblies(IEnumerable<Assembly> assemblies) =>
+            new MetadataResolutionContext(assemblies.Distinct().Select(a => MetadataReference.CreateFromFile(a.Location)).ToArray());
 
         /// <summary>
         /// Creates a <see cref="MetadataResolutionContext"/> which can resolve symbols from any assemblies needed by the specified type
@@ -113,8 +111,7 @@ namespace BreakingChangesDetector
         {
             lock (_cachedAssemblyDatas)
             {
-                AssemblyData assemblyData;
-                if (_cachedAssemblyDatas.TryGetValue(assembly.Identity, out assemblyData) == false)
+                if (_cachedAssemblyDatas.TryGetValue(assembly.Identity, out AssemblyData assemblyData) == false)
                 {
                     assemblyData = new AssemblyData(this, assembly);
                     _cachedAssemblyDatas[assembly.Identity] = assemblyData;
@@ -253,11 +250,11 @@ namespace BreakingChangesDetector
         {
             switch (type.TypeKind)
             {
-                case Microsoft.CodeAnalysis.TypeKind.Array:
+                case TypeKind.Array:
                     return GetDeclaringAssemblySymbol(((IArrayTypeSymbol)type).ElementType);
-                case Microsoft.CodeAnalysis.TypeKind.Dynamic:
+                case TypeKind.Dynamic:
                     return _compilation.ObjectType.ContainingAssembly;
-                case Microsoft.CodeAnalysis.TypeKind.Pointer:
+                case TypeKind.Pointer:
                     return GetDeclaringAssemblySymbol(((IPointerTypeSymbol)type).PointedAtType);
                 default:
                     return type.ContainingAssembly;

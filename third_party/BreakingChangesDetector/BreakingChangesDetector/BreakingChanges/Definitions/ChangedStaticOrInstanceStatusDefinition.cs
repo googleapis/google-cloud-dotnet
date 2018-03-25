@@ -24,17 +24,13 @@
 */
 
 using BreakingChangesDetector.MetadataItems;
-using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
 
 namespace BreakingChangesDetector.BreakingChanges.Definitions
 {
     internal class ChangedStaticOrInstanceStatusDefinition : BreakingChangeDefinitionBase
     {
-        public static readonly ChangedStaticOrInstanceStatusDefinition Instance = new ChangedStaticOrInstanceStatusDefinition();
+        public static readonly ChangedStaticOrInstanceStatusDefinition Instance =
+            new ChangedStaticOrInstanceStatusDefinition();
 
         private ChangedStaticOrInstanceStatusDefinition() { }
 
@@ -43,24 +39,18 @@ namespace BreakingChangesDetector.BreakingChanges.Definitions
             var oldMember = (MemberDataBase)context.OldItem;
             var newMember = (MemberDataBase)context.NewItem;
             if (oldMember.IsInstance != newMember.IsInstance)
-                context.BreakingChanges.Add(new ChangedStaticOrInstanceStatus(oldMember, newMember));
-        }
-
-        public override BreakingChangeKind BreakingChangeKind
-        {
-            get { return BreakingChangeKind.ChangedStaticOrInstanceStatus; }
-        }
-
-        public override MetadataItemKinds MembersKindsHandled
-        {
-            get
             {
-                return
-                    MetadataItemKinds.Event |
-                    MetadataItemKinds.Field |
-                    MetadataItemKinds.Method |
-                    MetadataItemKinds.Property;
+                context.BreakingChanges.Add(new ChangedStaticOrInstanceStatus(oldMember, newMember));
             }
         }
+
+        public override BreakingChangeKind BreakingChangeKind =>
+            BreakingChangeKind.ChangedStaticOrInstanceStatus;
+
+        public override MetadataItemKinds MembersKindsHandled =>
+            MetadataItemKinds.Event |
+            MetadataItemKinds.Field |
+            MetadataItemKinds.Method |
+            MetadataItemKinds.Property;
     }
 }

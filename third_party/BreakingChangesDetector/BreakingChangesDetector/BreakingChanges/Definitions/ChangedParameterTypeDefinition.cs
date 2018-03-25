@@ -24,17 +24,13 @@
 */
 
 using BreakingChangesDetector.MetadataItems;
-using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
 
 namespace BreakingChangesDetector.BreakingChanges.Definitions
 {
     internal class ChangedParameterTypeDefinition : BreakingChangeDefinitionBase
     {
-        public static readonly ChangedParameterTypeDefinition Instance = new ChangedParameterTypeDefinition();
+        public static readonly ChangedParameterTypeDefinition Instance =
+            new ChangedParameterTypeDefinition();
 
         private ChangedParameterTypeDefinition() { }
 
@@ -44,7 +40,9 @@ namespace BreakingChangesDetector.BreakingChanges.Definitions
             var newParameter = (ParameterData)context.NewItem;
 
             if (oldParameter.IsTypeDynamic == newParameter.IsTypeDynamic && oldParameter.Type.IsEquivalentToNew(newParameter.Type, context.NewAssemblyFamily))
+            {
                 return;
+            }
 
             var isBreakingChange = false;
 
@@ -58,17 +56,15 @@ namespace BreakingChangesDetector.BreakingChanges.Definitions
             }
 
             if (isBreakingChange)
+            {
                 context.BreakingChanges.Add(new ChangedParameterType(oldParameter, newParameter, (IParameterizedItem)context.AdditionalInfo));
+            }
         }
 
-        public override BreakingChangeKind BreakingChangeKind
-        {
-            get { return BreakingChangeKind.ChangedParameterType; }
-        }
+        public override BreakingChangeKind BreakingChangeKind =>
+            BreakingChangeKind.ChangedParameterType;
 
-        public override MetadataItemKinds MembersKindsHandled
-        {
-            get { return MetadataItemKinds.Parameter; }
-        }
+        public override MetadataItemKinds MembersKindsHandled =>
+            MetadataItemKinds.Parameter;
     }
 }
