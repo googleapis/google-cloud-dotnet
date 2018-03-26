@@ -87,7 +87,8 @@ namespace Google.Cloud.Tools.TagReleases
 
             await MakeReleasesAsync(client, newReleases, commit);
             Console.WriteLine();
-            Console.WriteLine($"Release tags created. Next step: run ./buildrelease.sh {commit}");
+            Console.WriteLine($"Release tags created. Please wait for emails confirming the automated build and push process.");
+            Console.WriteLine($"For a manual release, run ./buildrelease.sh {commit}");
             return 0;
         }
 
