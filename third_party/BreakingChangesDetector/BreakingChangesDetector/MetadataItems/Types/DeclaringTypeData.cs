@@ -37,11 +37,11 @@ namespace BreakingChangesDetector.MetadataItems
     {
         private readonly Dictionary<string, List<MemberDataBase>> _membersByName = new Dictionary<string, List<MemberDataBase>>();
 
-        internal DeclaringTypeData(string name, MemberAccessibility accessibility, MemberFlags memberFlags, TypeKind typeKind)
+        internal DeclaringTypeData(string name, Accessibility accessibility, MemberFlags memberFlags, TypeKind typeKind)
             : base(name, accessibility, memberFlags, typeKind) { }
 
-        internal DeclaringTypeData(ITypeSymbol typeSymbol, MemberAccessibility accessibility, DeclaringTypeData declaringType)
-            : base(typeSymbol, accessibility, declaringType) { }
+        internal DeclaringTypeData(ITypeSymbol typeSymbol, DeclaringTypeData declaringType)
+            : base(typeSymbol, declaringType) { }
 
         internal override bool DoesMatch(MetadataItemBase other)
         {
@@ -247,7 +247,7 @@ namespace BreakingChangesDetector.MetadataItems
                 return;
             }
 
-            if (member.Accessibility == MemberAccessibility.Protected && IsSealed)
+            if (member.Accessibility != Accessibility.Public && IsSealed)
             {
                 return;
             }

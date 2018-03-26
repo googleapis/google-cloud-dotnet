@@ -33,12 +33,12 @@ namespace BreakingChangesDetector.MetadataItems
     /// </summary>
     public sealed class FieldData : TypedMemberDataBase
     {
-        internal FieldData(string name, MemberAccessibility accessibility, MemberFlags memberFlags, TypeData type, bool isTypeDynamic, bool isReadOnly)
+        internal FieldData(string name, Accessibility accessibility, MemberFlags memberFlags, TypeData type, bool isTypeDynamic, bool isReadOnly)
             : base(name, accessibility, memberFlags, type, isTypeDynamic) =>
             IsReadOnly = isReadOnly;
 
-        private FieldData(IFieldSymbol fieldSymbol, MemberAccessibility accessibility, DeclaringTypeData declaringType)
-            : base(fieldSymbol, accessibility, fieldSymbol.Type, fieldSymbol.Type.TypeKind == TypeKind.Dynamic, fieldSymbol.IsStatic ? MemberFlags.Static : MemberFlags.None, declaringType) =>
+        internal FieldData(IFieldSymbol fieldSymbol, DeclaringTypeData declaringType)
+            : base(fieldSymbol, fieldSymbol.Type, fieldSymbol.Type.TypeKind == TypeKind.Dynamic, fieldSymbol.IsStatic ? MemberFlags.Static : MemberFlags.None, declaringType) =>
             IsReadOnly = fieldSymbol.IsReadOnly;
 
         /// <inheritdoc/>
@@ -87,17 +87,6 @@ namespace BreakingChangesDetector.MetadataItems
             }
 
             return new FieldData(Name, Accessibility, MemberFlags, replacedType, IsTypeDynamic, IsReadOnly);
-        }
-
-        internal static MemberDataBase FieldDataFromReflection(IFieldSymbol fieldSymbol, DeclaringTypeData declaringType)
-        {
-            var accessibility = fieldSymbol.GetAccessibility();
-            if (accessibility == null)
-            {
-                return null;
-            }
-
-            return new FieldData(fieldSymbol, accessibility.Value, declaringType);
         }
 
         /// <summary>

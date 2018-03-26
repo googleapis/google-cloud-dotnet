@@ -34,12 +34,12 @@ namespace BreakingChangesDetector.MetadataItems
     /// </summary>
     public sealed class ConstantData : TypedMemberDataBase
     {
-        internal ConstantData(string name, MemberAccessibility accessibility, MemberFlags memberFlags, TypeData type, bool isTypeDynamic, object value)
+        internal ConstantData(string name, Accessibility accessibility, MemberFlags memberFlags, TypeData type, bool isTypeDynamic, object value)
             : base(name, accessibility, memberFlags, type, isTypeDynamic) =>
             Value = value;
 
-        private ConstantData(IFieldSymbol fieldSymbol, MemberAccessibility accessibility, DeclaringTypeData declaringType)
-            : base(fieldSymbol, accessibility, fieldSymbol.Type, fieldSymbol.Type.TypeKind == TypeKind.Dynamic, MemberFlags.Static, declaringType) =>
+        internal ConstantData(IFieldSymbol fieldSymbol, DeclaringTypeData declaringType)
+            : base(fieldSymbol, fieldSymbol.Type, fieldSymbol.Type.TypeKind == TypeKind.Dynamic, MemberFlags.Static, declaringType) =>
             Value = Utilities.PreprocessConstantValue(fieldSymbol.Type, fieldSymbol.ConstantValue);
 
         /// <inheritdoc/>
@@ -89,17 +89,6 @@ namespace BreakingChangesDetector.MetadataItems
 
             Debug.Fail("It was assumed that constants cannot be generic");
             return new ConstantData(Name, Accessibility, MemberFlags, replacedType, IsTypeDynamic, Value);
-        }
-
-        internal static MemberDataBase ConstantDataFromReflection(IFieldSymbol fieldSymbol, DeclaringTypeData declaringType)
-        {
-            var accessibility = fieldSymbol.GetAccessibility();
-            if (accessibility == null)
-            {
-                return null;
-            }
-
-            return new ConstantData(fieldSymbol, accessibility.Value, declaringType);
         }
 
         /// <summary>

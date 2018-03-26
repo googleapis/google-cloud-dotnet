@@ -32,11 +32,11 @@ namespace BreakingChangesDetector.MetadataItems
     /// </summary>
     public sealed class EventData : TypedMemberDataBase
     {
-        internal EventData(string name, MemberAccessibility accessibility, MemberFlags memberFlags, TypeData type)
+        internal EventData(string name, Accessibility accessibility, MemberFlags memberFlags, TypeData type)
             : base(name, accessibility, memberFlags, type, isTypeDynamic: false) { }
 
-        private EventData(IEventSymbol eventSymbol, MemberAccessibility accessibility, DeclaringTypeData declaringType)
-            : base(eventSymbol, accessibility, eventSymbol.Type, false, Utilities.GetMemberFlags(eventSymbol.AddMethod), declaringType) { }
+        internal EventData(IEventSymbol eventSymbol, DeclaringTypeData declaringType)
+            : base(eventSymbol, eventSymbol.Type, false, Utilities.GetMemberFlags(eventSymbol.AddMethod), declaringType) { }
 
         /// <inheritdoc/>
         public override void Accept(MetadataItemVisitor visitor) =>
@@ -56,17 +56,6 @@ namespace BreakingChangesDetector.MetadataItems
             }
 
             return new EventData(Name, Accessibility, MemberFlags, replacedType);
-        }
-
-        internal static EventData EventDataFromReflection(IEventSymbol eventSymbol, DeclaringTypeData declaringType)
-        {
-            var accessibility = eventSymbol.AddMethod.GetAccessibility();
-            if (accessibility == null)
-            {
-                return null;
-            }
-
-            return new EventData(eventSymbol, accessibility.Value, declaringType);
         }
     }
 }

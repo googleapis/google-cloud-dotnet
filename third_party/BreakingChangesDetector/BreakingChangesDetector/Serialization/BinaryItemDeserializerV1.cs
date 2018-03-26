@@ -138,7 +138,7 @@ namespace BreakingChangesDetector.Serialization
             }
 
             var name = _reader.ReadString();
-            var accessibility = (MemberAccessibility)_reader.ReadByte();
+            var accessibility = (Accessibility)_reader.ReadByte();
             var memberFlags = (MemberFlags)_reader.ReadByte();
 
             if (memberItemKind == MetadataItemKinds.Constructor)
@@ -202,12 +202,12 @@ namespace BreakingChangesDetector.Serialization
                     {
                         var getMethodAccessibilityTemp = _reader.ReadByte();
                         var getMethodAccessibility = getMethodAccessibilityTemp == 0xFF
-                            ? default(MemberAccessibility?)
-                            : (MemberAccessibility)getMethodAccessibilityTemp;
+                            ? default(Accessibility?)
+                            : (Accessibility)getMethodAccessibilityTemp;
                         var setMethodAccessibilityTemp = _reader.ReadByte();
                         var setMethodAccessibility = setMethodAccessibilityTemp == 0xFF
-                            ? default(MemberAccessibility?)
-                            : (MemberAccessibility)setMethodAccessibilityTemp;
+                            ? default(Accessibility?)
+                            : (Accessibility)setMethodAccessibilityTemp;
 
                         if (memberItemKind == MetadataItemKinds.Property)
                         {
@@ -312,7 +312,7 @@ namespace BreakingChangesDetector.Serialization
         {
             var typeId = _reader.ReadUInt32();
             var name = _reader.ReadString();
-            var accessibility = (MemberAccessibility)_reader.ReadByte();
+            var accessibility = (Accessibility)_reader.ReadByte();
             var memberFlags = (MemberFlags)_reader.ReadByte();
             var typeKind = (TypeKind)_reader.ReadByte();
             var delegateReturnTypeIsDynamic = _reader.ReadBoolean();

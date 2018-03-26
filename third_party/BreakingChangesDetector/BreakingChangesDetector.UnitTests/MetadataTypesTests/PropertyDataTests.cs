@@ -23,8 +23,9 @@
     SOFTWARE.
 */
 
-using Xunit;
 using BreakingChangesDetector.MetadataItems;
+using Microsoft.CodeAnalysis;
+using Xunit;
 
 namespace BreakingChangesDetector.UnitTests.MetadataTypesTests
 {
@@ -38,13 +39,13 @@ namespace BreakingChangesDetector.UnitTests.MetadataTypesTests
             var typeData = context.GetTypeDefinitionData(t);
 
             var member = (PropertyData)typeData.GetMember("PropertyReadOnly");
-            AssertX.Equal(MemberAccessibility.Protected, member.Accessibility, "Incorrect MemberAccessibility.");
+            AssertX.Equal(Accessibility.Protected, member.Accessibility, "Incorrect Accessibility.");
 
             member = (PropertyData)typeData.GetMember("PropertyWriteOnly");
-            AssertX.Equal(MemberAccessibility.Public, member.Accessibility, "Incorrect MemberAccessibility.");
+            AssertX.Equal(Accessibility.Public, member.Accessibility, "Incorrect Accessibility.");
 
             member = (PropertyData)typeData.GetMember("PropertyReadWrite");
-            AssertX.Equal(MemberAccessibility.Public, member.Accessibility, "Incorrect MemberAccessibility.");
+            AssertX.Equal(Accessibility.Public, member.Accessibility, "Incorrect Accessibility.");
         }
 
         [Fact]
@@ -94,13 +95,13 @@ namespace BreakingChangesDetector.UnitTests.MetadataTypesTests
             var typeData = context.GetTypeDefinitionData(t);
 
             var member = (PropertyData)typeData.GetMember("PropertyReadOnly");
-            AssertX.Equal(MemberAccessibility.Protected, member.GetMethodAccessibility, "The GetMethodAccessibility of the read only property is incorrect.");
+            AssertX.Equal(Accessibility.Protected, member.GetMethodAccessibility, "The GetMethodAccessibility of the read only property is incorrect.");
 
             member = (PropertyData)typeData.GetMember("PropertyWriteOnly");
             AssertX.Equal(null, member.GetMethodAccessibility, "The GetMethodAccessibility of the write only property is incorrect.");
 
             member = (PropertyData)typeData.GetMember("PropertyReadWrite");
-            AssertX.Equal(MemberAccessibility.Public, member.GetMethodAccessibility, "The GetMethodAccessibility of the read write property is incorrect.");
+            AssertX.Equal(Accessibility.Public, member.GetMethodAccessibility, "The GetMethodAccessibility of the read write property is incorrect.");
         }
 
         [Fact]
@@ -125,10 +126,10 @@ namespace BreakingChangesDetector.UnitTests.MetadataTypesTests
             AssertX.Equal(null, member.SetMethodAccessibility, "The SetMethodAccessibility of the read only property is incorrect.");
 
             member = (PropertyData)typeData.GetMember("PropertyWriteOnly");
-            AssertX.Equal(MemberAccessibility.Public, member.SetMethodAccessibility, "The SetMethodAccessibility of the write only property is incorrect.");
+            AssertX.Equal(Accessibility.Public, member.SetMethodAccessibility, "The SetMethodAccessibility of the write only property is incorrect.");
 
             member = (PropertyData)typeData.GetMember("PropertyReadWrite");
-            AssertX.Equal(MemberAccessibility.Protected, member.SetMethodAccessibility, "The SetMethodAccessibility of the read write property is incorrect.");
+            AssertX.Equal(Accessibility.Protected, member.SetMethodAccessibility, "The SetMethodAccessibility of the read write property is incorrect.");
         }
 
         [Fact]

@@ -33,7 +33,7 @@ namespace BreakingChangesDetector.MetadataItems
     /// </summary>
     public sealed class PointerTypeData : TypeWithElementData
     {
-        internal PointerTypeData(string name, MemberAccessibility accessibility, MemberFlags memberFlags, TypeKind typeKind, TypeData elementType)
+        internal PointerTypeData(string name, Accessibility accessibility, MemberFlags memberFlags, TypeKind typeKind, TypeData elementType)
             : base(name, accessibility, memberFlags, typeKind, elementType) { }
 
         /// <inheritdoc/>
