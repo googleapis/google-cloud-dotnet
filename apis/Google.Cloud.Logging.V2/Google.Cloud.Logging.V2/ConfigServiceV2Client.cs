@@ -798,6 +798,24 @@ namespace Google.Cloud.Logging.V2
         /// <param name="request">
         /// The request object containing all of the parameters for the API call.
         /// </param>
+        /// <param name="cancellationToken">
+        /// A <see cref="CancellationToken"/> to use for this RPC.
+        /// </param>
+        /// <returns>
+        /// A Task containing the RPC response.
+        /// </returns>
+        public virtual Task<LogSink> GetSinkAsync(
+            GetSinkRequest request,
+            CancellationToken cancellationToken) => GetSinkAsync(
+                request,
+                CallSettings.FromCancellationToken(cancellationToken));
+
+        /// <summary>
+        /// Gets a sink.
+        /// </summary>
+        /// <param name="request">
+        /// The request object containing all of the parameters for the API call.
+        /// </param>
         /// <param name="callSettings">
         /// If not null, applies overrides to this RPC call.
         /// </param>
@@ -940,6 +958,27 @@ namespace Google.Cloud.Logging.V2
         {
             throw new NotImplementedException();
         }
+
+        /// <summary>
+        /// Creates a sink that exports specified log entries to a destination.  The
+        /// export of newly-ingested log entries begins immediately, unless the sink's
+        /// `writer_identity` is not permitted to write to the destination.  A sink can
+        /// export log entries only from the resource owning the sink.
+        /// </summary>
+        /// <param name="request">
+        /// The request object containing all of the parameters for the API call.
+        /// </param>
+        /// <param name="cancellationToken">
+        /// A <see cref="CancellationToken"/> to use for this RPC.
+        /// </param>
+        /// <returns>
+        /// A Task containing the RPC response.
+        /// </returns>
+        public virtual Task<LogSink> CreateSinkAsync(
+            CreateSinkRequest request,
+            CancellationToken cancellationToken) => CreateSinkAsync(
+                request,
+                CallSettings.FromCancellationToken(cancellationToken));
 
         /// <summary>
         /// Creates a sink that exports specified log entries to a destination.  The
@@ -1105,6 +1144,27 @@ namespace Google.Cloud.Logging.V2
         /// <param name="request">
         /// The request object containing all of the parameters for the API call.
         /// </param>
+        /// <param name="cancellationToken">
+        /// A <see cref="CancellationToken"/> to use for this RPC.
+        /// </param>
+        /// <returns>
+        /// A Task containing the RPC response.
+        /// </returns>
+        public virtual Task<LogSink> UpdateSinkAsync(
+            UpdateSinkRequest request,
+            CancellationToken cancellationToken) => UpdateSinkAsync(
+                request,
+                CallSettings.FromCancellationToken(cancellationToken));
+
+        /// <summary>
+        /// Updates a sink.  This method replaces the following fields in the existing
+        /// sink with values from the new sink: `destination`, and `filter`.
+        /// The updated sink might also have a new `writer_identity`; see the
+        /// `unique_writer_identity` field.
+        /// </summary>
+        /// <param name="request">
+        /// The request object containing all of the parameters for the API call.
+        /// </param>
         /// <param name="callSettings">
         /// If not null, applies overrides to this RPC call.
         /// </param>
@@ -1221,6 +1281,25 @@ namespace Google.Cloud.Logging.V2
         {
             throw new NotImplementedException();
         }
+
+        /// <summary>
+        /// Deletes a sink. If the sink has a unique `writer_identity`, then that
+        /// service account is also deleted.
+        /// </summary>
+        /// <param name="request">
+        /// The request object containing all of the parameters for the API call.
+        /// </param>
+        /// <param name="cancellationToken">
+        /// A <see cref="CancellationToken"/> to use for this RPC.
+        /// </param>
+        /// <returns>
+        /// A Task that completes when the RPC has completed.
+        /// </returns>
+        public virtual Task DeleteSinkAsync(
+            DeleteSinkRequest request,
+            CancellationToken cancellationToken) => DeleteSinkAsync(
+                request,
+                CallSettings.FromCancellationToken(cancellationToken));
 
         /// <summary>
         /// Deletes a sink. If the sink has a unique `writer_identity`, then that
@@ -1459,6 +1538,24 @@ namespace Google.Cloud.Logging.V2
         /// <param name="request">
         /// The request object containing all of the parameters for the API call.
         /// </param>
+        /// <param name="cancellationToken">
+        /// A <see cref="CancellationToken"/> to use for this RPC.
+        /// </param>
+        /// <returns>
+        /// A Task containing the RPC response.
+        /// </returns>
+        public virtual Task<LogExclusion> GetExclusionAsync(
+            GetExclusionRequest request,
+            CancellationToken cancellationToken) => GetExclusionAsync(
+                request,
+                CallSettings.FromCancellationToken(cancellationToken));
+
+        /// <summary>
+        /// Gets the description of an exclusion.
+        /// </summary>
+        /// <param name="request">
+        /// The request object containing all of the parameters for the API call.
+        /// </param>
         /// <param name="callSettings">
         /// If not null, applies overrides to this RPC call.
         /// </param>
@@ -1597,6 +1694,26 @@ namespace Google.Cloud.Logging.V2
         {
             throw new NotImplementedException();
         }
+
+        /// <summary>
+        /// Creates a new exclusion in a specified parent resource.
+        /// Only log entries belonging to that resource can be excluded.
+        /// You can have up to 10 exclusions in a resource.
+        /// </summary>
+        /// <param name="request">
+        /// The request object containing all of the parameters for the API call.
+        /// </param>
+        /// <param name="cancellationToken">
+        /// A <see cref="CancellationToken"/> to use for this RPC.
+        /// </param>
+        /// <returns>
+        /// A Task containing the RPC response.
+        /// </returns>
+        public virtual Task<LogExclusion> CreateExclusionAsync(
+            CreateExclusionRequest request,
+            CancellationToken cancellationToken) => CreateExclusionAsync(
+                request,
+                CallSettings.FromCancellationToken(cancellationToken));
 
         /// <summary>
         /// Creates a new exclusion in a specified parent resource.
@@ -1776,6 +1893,24 @@ namespace Google.Cloud.Logging.V2
         /// <param name="request">
         /// The request object containing all of the parameters for the API call.
         /// </param>
+        /// <param name="cancellationToken">
+        /// A <see cref="CancellationToken"/> to use for this RPC.
+        /// </param>
+        /// <returns>
+        /// A Task containing the RPC response.
+        /// </returns>
+        public virtual Task<LogExclusion> UpdateExclusionAsync(
+            UpdateExclusionRequest request,
+            CancellationToken cancellationToken) => UpdateExclusionAsync(
+                request,
+                CallSettings.FromCancellationToken(cancellationToken));
+
+        /// <summary>
+        /// Changes one or more properties of an existing exclusion.
+        /// </summary>
+        /// <param name="request">
+        /// The request object containing all of the parameters for the API call.
+        /// </param>
         /// <param name="callSettings">
         /// If not null, applies overrides to this RPC call.
         /// </param>
@@ -1885,6 +2020,24 @@ namespace Google.Cloud.Logging.V2
         {
             throw new NotImplementedException();
         }
+
+        /// <summary>
+        /// Deletes an exclusion.
+        /// </summary>
+        /// <param name="request">
+        /// The request object containing all of the parameters for the API call.
+        /// </param>
+        /// <param name="cancellationToken">
+        /// A <see cref="CancellationToken"/> to use for this RPC.
+        /// </param>
+        /// <returns>
+        /// A Task that completes when the RPC has completed.
+        /// </returns>
+        public virtual Task DeleteExclusionAsync(
+            DeleteExclusionRequest request,
+            CancellationToken cancellationToken) => DeleteExclusionAsync(
+                request,
+                CallSettings.FromCancellationToken(cancellationToken));
 
         /// <summary>
         /// Deletes an exclusion.

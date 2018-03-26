@@ -807,6 +807,42 @@ namespace Google.Cloud.Spanner.V1
         /// <param name="request">
         /// The request object containing all of the parameters for the API call.
         /// </param>
+        /// <param name="cancellationToken">
+        /// A <see cref="CancellationToken"/> to use for this RPC.
+        /// </param>
+        /// <returns>
+        /// A Task containing the RPC response.
+        /// </returns>
+        public virtual Task<Session> CreateSessionAsync(
+            CreateSessionRequest request,
+            CancellationToken cancellationToken) => CreateSessionAsync(
+                request,
+                CallSettings.FromCancellationToken(cancellationToken));
+
+        /// <summary>
+        /// Creates a new session. A session can be used to perform
+        /// transactions that read and/or modify data in a Cloud Spanner database.
+        /// Sessions are meant to be reused for many consecutive
+        /// transactions.
+        ///
+        /// Sessions can only execute one transaction at a time. To execute
+        /// multiple concurrent read-write/write-only transactions, create
+        /// multiple sessions. Note that standalone reads and queries use a
+        /// transaction internally, and count toward the one transaction
+        /// limit.
+        ///
+        /// Cloud Spanner limits the number of sessions that can exist at any given
+        /// time; thus, it is a good idea to delete idle and/or unneeded sessions.
+        /// Aside from explicit deletes, Cloud Spanner can delete sessions for which no
+        /// operations are sent for more than an hour. If a session is deleted,
+        /// requests to it return `NOT_FOUND`.
+        ///
+        /// Idle sessions can be kept alive by sending a trivial SQL query
+        /// periodically, e.g., `"SELECT 1"`.
+        /// </summary>
+        /// <param name="request">
+        /// The request object containing all of the parameters for the API call.
+        /// </param>
         /// <param name="callSettings">
         /// If not null, applies overrides to this RPC call.
         /// </param>
@@ -906,6 +942,26 @@ namespace Google.Cloud.Spanner.V1
         {
             throw new NotImplementedException();
         }
+
+        /// <summary>
+        /// Gets a session. Returns `NOT_FOUND` if the session does not exist.
+        /// This is mainly useful for determining whether a session is still
+        /// alive.
+        /// </summary>
+        /// <param name="request">
+        /// The request object containing all of the parameters for the API call.
+        /// </param>
+        /// <param name="cancellationToken">
+        /// A <see cref="CancellationToken"/> to use for this RPC.
+        /// </param>
+        /// <returns>
+        /// A Task containing the RPC response.
+        /// </returns>
+        public virtual Task<Session> GetSessionAsync(
+            GetSessionRequest request,
+            CancellationToken cancellationToken) => GetSessionAsync(
+                request,
+                CallSettings.FromCancellationToken(cancellationToken));
 
         /// <summary>
         /// Gets a session. Returns `NOT_FOUND` if the session does not exist.
@@ -1114,6 +1170,24 @@ namespace Google.Cloud.Spanner.V1
         /// <param name="request">
         /// The request object containing all of the parameters for the API call.
         /// </param>
+        /// <param name="cancellationToken">
+        /// A <see cref="CancellationToken"/> to use for this RPC.
+        /// </param>
+        /// <returns>
+        /// A Task that completes when the RPC has completed.
+        /// </returns>
+        public virtual Task DeleteSessionAsync(
+            DeleteSessionRequest request,
+            CancellationToken cancellationToken) => DeleteSessionAsync(
+                request,
+                CallSettings.FromCancellationToken(cancellationToken));
+
+        /// <summary>
+        /// Ends a session, releasing server resources associated with it.
+        /// </summary>
+        /// <param name="request">
+        /// The request object containing all of the parameters for the API call.
+        /// </param>
         /// <param name="callSettings">
         /// If not null, applies overrides to this RPC call.
         /// </param>
@@ -1152,6 +1226,34 @@ namespace Google.Cloud.Spanner.V1
         {
             throw new NotImplementedException();
         }
+
+        /// <summary>
+        /// Executes an SQL query, returning all rows in a single reply. This
+        /// method cannot be used to return a result set larger than 10 MiB;
+        /// if the query yields more data than that, the query fails with
+        /// a `FAILED_PRECONDITION` error.
+        ///
+        /// Queries inside read-write transactions might return `ABORTED`. If
+        /// this occurs, the application should restart the transaction from
+        /// the beginning. See [Transaction][google.spanner.v1.Transaction] for more details.
+        ///
+        /// Larger result sets can be fetched in streaming fashion by calling
+        /// [ExecuteStreamingSql][google.spanner.v1.Spanner.ExecuteStreamingSql] instead.
+        /// </summary>
+        /// <param name="request">
+        /// The request object containing all of the parameters for the API call.
+        /// </param>
+        /// <param name="cancellationToken">
+        /// A <see cref="CancellationToken"/> to use for this RPC.
+        /// </param>
+        /// <returns>
+        /// A Task containing the RPC response.
+        /// </returns>
+        public virtual Task<ResultSet> ExecuteSqlAsync(
+            ExecuteSqlRequest request,
+            CancellationToken cancellationToken) => ExecuteSqlAsync(
+                request,
+                CallSettings.FromCancellationToken(cancellationToken));
 
         /// <summary>
         /// Executes an SQL query, returning all rows in a single reply. This
@@ -1242,6 +1344,36 @@ namespace Google.Cloud.Spanner.V1
         {
             throw new NotImplementedException();
         }
+
+        /// <summary>
+        /// Reads rows from the database using key lookups and scans, as a
+        /// simple key/value style alternative to
+        /// [ExecuteSql][google.spanner.v1.Spanner.ExecuteSql].  This method cannot be used to
+        /// return a result set larger than 10 MiB; if the read matches more
+        /// data than that, the read fails with a `FAILED_PRECONDITION`
+        /// error.
+        ///
+        /// Reads inside read-write transactions might return `ABORTED`. If
+        /// this occurs, the application should restart the transaction from
+        /// the beginning. See [Transaction][google.spanner.v1.Transaction] for more details.
+        ///
+        /// Larger result sets can be yielded in streaming fashion by calling
+        /// [StreamingRead][google.spanner.v1.Spanner.StreamingRead] instead.
+        /// </summary>
+        /// <param name="request">
+        /// The request object containing all of the parameters for the API call.
+        /// </param>
+        /// <param name="cancellationToken">
+        /// A <see cref="CancellationToken"/> to use for this RPC.
+        /// </param>
+        /// <returns>
+        /// A Task containing the RPC response.
+        /// </returns>
+        public virtual Task<ResultSet> ReadAsync(
+            ReadRequest request,
+            CancellationToken cancellationToken) => ReadAsync(
+                request,
+                CallSettings.FromCancellationToken(cancellationToken));
 
         /// <summary>
         /// Reads rows from the database using key lookups and scans, as a
@@ -1409,6 +1541,27 @@ namespace Google.Cloud.Spanner.V1
         {
             throw new NotImplementedException();
         }
+
+        /// <summary>
+        /// Begins a new transaction. This step can often be skipped:
+        /// [Read][google.spanner.v1.Spanner.Read], [ExecuteSql][google.spanner.v1.Spanner.ExecuteSql] and
+        /// [Commit][google.spanner.v1.Spanner.Commit] can begin a new transaction as a
+        /// side-effect.
+        /// </summary>
+        /// <param name="request">
+        /// The request object containing all of the parameters for the API call.
+        /// </param>
+        /// <param name="cancellationToken">
+        /// A <see cref="CancellationToken"/> to use for this RPC.
+        /// </param>
+        /// <returns>
+        /// A Task containing the RPC response.
+        /// </returns>
+        public virtual Task<Transaction> BeginTransactionAsync(
+            BeginTransactionRequest request,
+            CancellationToken cancellationToken) => BeginTransactionAsync(
+                request,
+                CallSettings.FromCancellationToken(cancellationToken));
 
         /// <summary>
         /// Begins a new transaction. This step can often be skipped:
@@ -1729,6 +1882,31 @@ namespace Google.Cloud.Spanner.V1
         /// <param name="request">
         /// The request object containing all of the parameters for the API call.
         /// </param>
+        /// <param name="cancellationToken">
+        /// A <see cref="CancellationToken"/> to use for this RPC.
+        /// </param>
+        /// <returns>
+        /// A Task containing the RPC response.
+        /// </returns>
+        public virtual Task<CommitResponse> CommitAsync(
+            CommitRequest request,
+            CancellationToken cancellationToken) => CommitAsync(
+                request,
+                CallSettings.FromCancellationToken(cancellationToken));
+
+        /// <summary>
+        /// Commits a transaction. The request includes the mutations to be
+        /// applied to rows in the database.
+        ///
+        /// `Commit` might return an `ABORTED` error. This can occur at any time;
+        /// commonly, the cause is conflicts with concurrent
+        /// transactions. However, it can also happen for a variety of other
+        /// reasons. If `Commit` returns `ABORTED`, the caller should re-attempt
+        /// the transaction from the beginning, re-using the same session.
+        /// </summary>
+        /// <param name="request">
+        /// The request object containing all of the parameters for the API call.
+        /// </param>
         /// <param name="callSettings">
         /// If not null, applies overrides to this RPC call.
         /// </param>
@@ -1874,6 +2052,31 @@ namespace Google.Cloud.Spanner.V1
         /// <param name="request">
         /// The request object containing all of the parameters for the API call.
         /// </param>
+        /// <param name="cancellationToken">
+        /// A <see cref="CancellationToken"/> to use for this RPC.
+        /// </param>
+        /// <returns>
+        /// A Task that completes when the RPC has completed.
+        /// </returns>
+        public virtual Task RollbackAsync(
+            RollbackRequest request,
+            CancellationToken cancellationToken) => RollbackAsync(
+                request,
+                CallSettings.FromCancellationToken(cancellationToken));
+
+        /// <summary>
+        /// Rolls back a transaction, releasing any locks it holds. It is a good
+        /// idea to call this for any transaction that includes one or more
+        /// [Read][google.spanner.v1.Spanner.Read] or [ExecuteSql][google.spanner.v1.Spanner.ExecuteSql] requests and
+        /// ultimately decides not to commit.
+        ///
+        /// `Rollback` returns `OK` if it successfully aborts the transaction, the
+        /// transaction was already aborted, or the transaction is not
+        /// found. `Rollback` never returns `ABORTED`.
+        /// </summary>
+        /// <param name="request">
+        /// The request object containing all of the parameters for the API call.
+        /// </param>
         /// <param name="callSettings">
         /// If not null, applies overrides to this RPC call.
         /// </param>
@@ -1909,6 +2112,31 @@ namespace Google.Cloud.Spanner.V1
         {
             throw new NotImplementedException();
         }
+
+        /// <summary>
+        /// Creates a set of partition tokens that can be used to execute a query
+        /// operation in parallel.  Each of the returned partition tokens can be used
+        /// by [ExecuteStreamingSql][google.spanner.v1.Spanner.ExecuteStreamingSql] to specify a subset
+        /// of the query result to read.  The same session and read-only transaction
+        /// must be used by the PartitionQueryRequest used to create the
+        /// partition tokens and the ExecuteSqlRequests that use the partition tokens.
+        /// Partition tokens become invalid when the session used to create them
+        /// is deleted or begins a new transaction.
+        /// </summary>
+        /// <param name="request">
+        /// The request object containing all of the parameters for the API call.
+        /// </param>
+        /// <param name="cancellationToken">
+        /// A <see cref="CancellationToken"/> to use for this RPC.
+        /// </param>
+        /// <returns>
+        /// A Task containing the RPC response.
+        /// </returns>
+        public virtual Task<PartitionResponse> PartitionQueryAsync(
+            PartitionQueryRequest request,
+            CancellationToken cancellationToken) => PartitionQueryAsync(
+                request,
+                CallSettings.FromCancellationToken(cancellationToken));
 
         /// <summary>
         /// Creates a set of partition tokens that can be used to execute a query
@@ -1961,6 +2189,31 @@ namespace Google.Cloud.Spanner.V1
         {
             throw new NotImplementedException();
         }
+
+        /// <summary>
+        /// Creates a set of partition tokens that can be used to execute a read
+        /// operation in parallel.  Each of the returned partition tokens can be used
+        /// by [StreamingRead][google.spanner.v1.Spanner.StreamingRead] to specify a subset of the read
+        /// result to read.  The same session and read-only transaction must be used by
+        /// the PartitionReadRequest used to create the partition tokens and the
+        /// ReadRequests that use the partition tokens.
+        /// Partition tokens become invalid when the session used to create them
+        /// is deleted or begins a new transaction.
+        /// </summary>
+        /// <param name="request">
+        /// The request object containing all of the parameters for the API call.
+        /// </param>
+        /// <param name="cancellationToken">
+        /// A <see cref="CancellationToken"/> to use for this RPC.
+        /// </param>
+        /// <returns>
+        /// A Task containing the RPC response.
+        /// </returns>
+        public virtual Task<PartitionResponse> PartitionReadAsync(
+            PartitionReadRequest request,
+            CancellationToken cancellationToken) => PartitionReadAsync(
+                request,
+                CallSettings.FromCancellationToken(cancellationToken));
 
         /// <summary>
         /// Creates a set of partition tokens that can be used to execute a read

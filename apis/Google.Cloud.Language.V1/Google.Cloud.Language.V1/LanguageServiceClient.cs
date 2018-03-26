@@ -488,6 +488,24 @@ namespace Google.Cloud.Language.V1
         /// <param name="request">
         /// The request object containing all of the parameters for the API call.
         /// </param>
+        /// <param name="cancellationToken">
+        /// A <see cref="CancellationToken"/> to use for this RPC.
+        /// </param>
+        /// <returns>
+        /// A Task containing the RPC response.
+        /// </returns>
+        public virtual Task<AnalyzeSentimentResponse> AnalyzeSentimentAsync(
+            AnalyzeSentimentRequest request,
+            CancellationToken cancellationToken) => AnalyzeSentimentAsync(
+                request,
+                CallSettings.FromCancellationToken(cancellationToken));
+
+        /// <summary>
+        /// Analyzes the sentiment of the provided text.
+        /// </summary>
+        /// <param name="request">
+        /// The request object containing all of the parameters for the API call.
+        /// </param>
         /// <param name="callSettings">
         /// If not null, applies overrides to this RPC call.
         /// </param>
@@ -611,6 +629,26 @@ namespace Google.Cloud.Language.V1
         /// <param name="request">
         /// The request object containing all of the parameters for the API call.
         /// </param>
+        /// <param name="cancellationToken">
+        /// A <see cref="CancellationToken"/> to use for this RPC.
+        /// </param>
+        /// <returns>
+        /// A Task containing the RPC response.
+        /// </returns>
+        public virtual Task<AnalyzeEntitiesResponse> AnalyzeEntitiesAsync(
+            AnalyzeEntitiesRequest request,
+            CancellationToken cancellationToken) => AnalyzeEntitiesAsync(
+                request,
+                CallSettings.FromCancellationToken(cancellationToken));
+
+        /// <summary>
+        /// Finds named entities (currently proper names and common nouns) in the text
+        /// along with entity types, salience, mentions for each entity, and
+        /// other properties.
+        /// </summary>
+        /// <param name="request">
+        /// The request object containing all of the parameters for the API call.
+        /// </param>
         /// <param name="callSettings">
         /// If not null, applies overrides to this RPC call.
         /// </param>
@@ -721,6 +759,25 @@ namespace Google.Cloud.Language.V1
         {
             throw new NotImplementedException();
         }
+
+        /// <summary>
+        /// Finds entities, similar to [AnalyzeEntities][google.cloud.language.v1.LanguageService.AnalyzeEntities] in the text and analyzes
+        /// sentiment associated with each entity and its mentions.
+        /// </summary>
+        /// <param name="request">
+        /// The request object containing all of the parameters for the API call.
+        /// </param>
+        /// <param name="cancellationToken">
+        /// A <see cref="CancellationToken"/> to use for this RPC.
+        /// </param>
+        /// <returns>
+        /// A Task containing the RPC response.
+        /// </returns>
+        public virtual Task<AnalyzeEntitySentimentResponse> AnalyzeEntitySentimentAsync(
+            AnalyzeEntitySentimentRequest request,
+            CancellationToken cancellationToken) => AnalyzeEntitySentimentAsync(
+                request,
+                CallSettings.FromCancellationToken(cancellationToken));
 
         /// <summary>
         /// Finds entities, similar to [AnalyzeEntities][google.cloud.language.v1.LanguageService.AnalyzeEntities] in the text and analyzes
@@ -852,6 +909,26 @@ namespace Google.Cloud.Language.V1
         /// <param name="request">
         /// The request object containing all of the parameters for the API call.
         /// </param>
+        /// <param name="cancellationToken">
+        /// A <see cref="CancellationToken"/> to use for this RPC.
+        /// </param>
+        /// <returns>
+        /// A Task containing the RPC response.
+        /// </returns>
+        public virtual Task<AnalyzeSyntaxResponse> AnalyzeSyntaxAsync(
+            AnalyzeSyntaxRequest request,
+            CancellationToken cancellationToken) => AnalyzeSyntaxAsync(
+                request,
+                CallSettings.FromCancellationToken(cancellationToken));
+
+        /// <summary>
+        /// Analyzes the syntax of the text and provides sentence boundaries and
+        /// tokenization along with part of speech tags, dependency trees, and other
+        /// properties.
+        /// </summary>
+        /// <param name="request">
+        /// The request object containing all of the parameters for the API call.
+        /// </param>
         /// <param name="callSettings">
         /// If not null, applies overrides to this RPC call.
         /// </param>
@@ -943,6 +1020,24 @@ namespace Google.Cloud.Language.V1
         {
             throw new NotImplementedException();
         }
+
+        /// <summary>
+        /// Classifies a document into categories.
+        /// </summary>
+        /// <param name="request">
+        /// The request object containing all of the parameters for the API call.
+        /// </param>
+        /// <param name="cancellationToken">
+        /// A <see cref="CancellationToken"/> to use for this RPC.
+        /// </param>
+        /// <returns>
+        /// A Task containing the RPC response.
+        /// </returns>
+        public virtual Task<ClassifyTextResponse> ClassifyTextAsync(
+            ClassifyTextRequest request,
+            CancellationToken cancellationToken) => ClassifyTextAsync(
+                request,
+                CallSettings.FromCancellationToken(cancellationToken));
 
         /// <summary>
         /// Classifies a document into categories.
@@ -1075,6 +1170,25 @@ namespace Google.Cloud.Language.V1
         {
             throw new NotImplementedException();
         }
+
+        /// <summary>
+        /// A convenience method that provides all the features that analyzeSentiment,
+        /// analyzeEntities, and analyzeSyntax provide in one call.
+        /// </summary>
+        /// <param name="request">
+        /// The request object containing all of the parameters for the API call.
+        /// </param>
+        /// <param name="cancellationToken">
+        /// A <see cref="CancellationToken"/> to use for this RPC.
+        /// </param>
+        /// <returns>
+        /// A Task containing the RPC response.
+        /// </returns>
+        public virtual Task<AnnotateTextResponse> AnnotateTextAsync(
+            AnnotateTextRequest request,
+            CancellationToken cancellationToken) => AnnotateTextAsync(
+                request,
+                CallSettings.FromCancellationToken(cancellationToken));
 
         /// <summary>
         /// A convenience method that provides all the features that analyzeSentiment,

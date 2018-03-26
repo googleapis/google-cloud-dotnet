@@ -806,6 +806,26 @@ namespace Google.Cloud.Bigtable.Admin.V2
         /// <param name="request">
         /// The request object containing all of the parameters for the API call.
         /// </param>
+        /// <param name="cancellationToken">
+        /// A <see cref="CancellationToken"/> to use for this RPC.
+        /// </param>
+        /// <returns>
+        /// A Task containing the RPC response.
+        /// </returns>
+        public virtual Task<Table> CreateTableAsync(
+            CreateTableRequest request,
+            CancellationToken cancellationToken) => CreateTableAsync(
+                request,
+                CallSettings.FromCancellationToken(cancellationToken));
+
+        /// <summary>
+        /// Creates a new table in the specified instance.
+        /// The table can be created with a full set of initial column families,
+        /// specified in the request.
+        /// </summary>
+        /// <param name="request">
+        /// The request object containing all of the parameters for the API call.
+        /// </param>
         /// <param name="callSettings">
         /// If not null, applies overrides to this RPC call.
         /// </param>
@@ -1223,6 +1243,24 @@ namespace Google.Cloud.Bigtable.Admin.V2
         /// <param name="request">
         /// The request object containing all of the parameters for the API call.
         /// </param>
+        /// <param name="cancellationToken">
+        /// A <see cref="CancellationToken"/> to use for this RPC.
+        /// </param>
+        /// <returns>
+        /// A Task containing the RPC response.
+        /// </returns>
+        public virtual Task<Table> GetTableAsync(
+            GetTableRequest request,
+            CancellationToken cancellationToken) => GetTableAsync(
+                request,
+                CallSettings.FromCancellationToken(cancellationToken));
+
+        /// <summary>
+        /// Gets metadata information about the specified table.
+        /// </summary>
+        /// <param name="request">
+        /// The request object containing all of the parameters for the API call.
+        /// </param>
         /// <param name="callSettings">
         /// If not null, applies overrides to this RPC call.
         /// </param>
@@ -1317,6 +1355,24 @@ namespace Google.Cloud.Bigtable.Admin.V2
         {
             throw new NotImplementedException();
         }
+
+        /// <summary>
+        /// Permanently deletes a specified table and all of its data.
+        /// </summary>
+        /// <param name="request">
+        /// The request object containing all of the parameters for the API call.
+        /// </param>
+        /// <param name="cancellationToken">
+        /// A <see cref="CancellationToken"/> to use for this RPC.
+        /// </param>
+        /// <returns>
+        /// A Task that completes when the RPC has completed.
+        /// </returns>
+        public virtual Task DeleteTableAsync(
+            DeleteTableRequest request,
+            CancellationToken cancellationToken) => DeleteTableAsync(
+                request,
+                CallSettings.FromCancellationToken(cancellationToken));
 
         /// <summary>
         /// Permanently deletes a specified table and all of its data.
@@ -1464,6 +1520,27 @@ namespace Google.Cloud.Bigtable.Admin.V2
         /// <param name="request">
         /// The request object containing all of the parameters for the API call.
         /// </param>
+        /// <param name="cancellationToken">
+        /// A <see cref="CancellationToken"/> to use for this RPC.
+        /// </param>
+        /// <returns>
+        /// A Task containing the RPC response.
+        /// </returns>
+        public virtual Task<Table> ModifyColumnFamiliesAsync(
+            ModifyColumnFamiliesRequest request,
+            CancellationToken cancellationToken) => ModifyColumnFamiliesAsync(
+                request,
+                CallSettings.FromCancellationToken(cancellationToken));
+
+        /// <summary>
+        /// Performs a series of column family modifications on the specified table.
+        /// Either all or none of the modifications will occur before this method
+        /// returns, but data requests received prior to that point may see a table
+        /// where only some modifications have taken effect.
+        /// </summary>
+        /// <param name="request">
+        /// The request object containing all of the parameters for the API call.
+        /// </param>
         /// <param name="callSettings">
         /// If not null, applies overrides to this RPC call.
         /// </param>
@@ -1497,6 +1574,26 @@ namespace Google.Cloud.Bigtable.Admin.V2
         {
             throw new NotImplementedException();
         }
+
+        /// <summary>
+        /// Permanently drop/delete a row range from a specified table. The request can
+        /// specify whether to delete all rows in a table, or only those that match a
+        /// particular prefix.
+        /// </summary>
+        /// <param name="request">
+        /// The request object containing all of the parameters for the API call.
+        /// </param>
+        /// <param name="cancellationToken">
+        /// A <see cref="CancellationToken"/> to use for this RPC.
+        /// </param>
+        /// <returns>
+        /// A Task that completes when the RPC has completed.
+        /// </returns>
+        public virtual Task DropRowRangeAsync(
+            DropRowRangeRequest request,
+            CancellationToken cancellationToken) => DropRowRangeAsync(
+                request,
+                CallSettings.FromCancellationToken(cancellationToken));
 
         /// <summary>
         /// Permanently drop/delete a row range from a specified table. The request can
@@ -1632,6 +1729,32 @@ namespace Google.Cloud.Bigtable.Admin.V2
         {
             throw new NotImplementedException();
         }
+
+        /// <summary>
+        /// This is a private alpha release of Cloud Bigtable replication. This feature
+        /// is not currently available to most Cloud Bigtable customers. This feature
+        /// might be changed in backward-incompatible ways and is not recommended for
+        /// production use. It is not subject to any SLA or deprecation policy.
+        ///
+        /// Generates a consistency token for a Table, which can be used in
+        /// CheckConsistency to check whether mutations to the table that finished
+        /// before this call started have been replicated. The tokens will be available
+        /// for 90 days.
+        /// </summary>
+        /// <param name="request">
+        /// The request object containing all of the parameters for the API call.
+        /// </param>
+        /// <param name="cancellationToken">
+        /// A <see cref="CancellationToken"/> to use for this RPC.
+        /// </param>
+        /// <returns>
+        /// A Task containing the RPC response.
+        /// </returns>
+        public virtual Task<GenerateConsistencyTokenResponse> GenerateConsistencyTokenAsync(
+            GenerateConsistencyTokenRequest request,
+            CancellationToken cancellationToken) => GenerateConsistencyTokenAsync(
+                request,
+                CallSettings.FromCancellationToken(cancellationToken));
 
         /// <summary>
         /// This is a private alpha release of Cloud Bigtable replication. This feature
@@ -1787,6 +1910,31 @@ namespace Google.Cloud.Bigtable.Admin.V2
         {
             throw new NotImplementedException();
         }
+
+        /// <summary>
+        /// This is a private alpha release of Cloud Bigtable replication. This feature
+        /// is not currently available to most Cloud Bigtable customers. This feature
+        /// might be changed in backward-incompatible ways and is not recommended for
+        /// production use. It is not subject to any SLA or deprecation policy.
+        ///
+        /// Checks replication consistency based on a consistency token, that is, if
+        /// replication has caught up based on the conditions specified in the token
+        /// and the check request.
+        /// </summary>
+        /// <param name="request">
+        /// The request object containing all of the parameters for the API call.
+        /// </param>
+        /// <param name="cancellationToken">
+        /// A <see cref="CancellationToken"/> to use for this RPC.
+        /// </param>
+        /// <returns>
+        /// A Task containing the RPC response.
+        /// </returns>
+        public virtual Task<CheckConsistencyResponse> CheckConsistencyAsync(
+            CheckConsistencyRequest request,
+            CancellationToken cancellationToken) => CheckConsistencyAsync(
+                request,
+                CallSettings.FromCancellationToken(cancellationToken));
 
         /// <summary>
         /// This is a private alpha release of Cloud Bigtable replication. This feature
@@ -2158,6 +2306,29 @@ namespace Google.Cloud.Bigtable.Admin.V2
         /// <param name="request">
         /// The request object containing all of the parameters for the API call.
         /// </param>
+        /// <param name="cancellationToken">
+        /// A <see cref="CancellationToken"/> to use for this RPC.
+        /// </param>
+        /// <returns>
+        /// A Task containing the RPC response.
+        /// </returns>
+        public virtual Task<Snapshot> GetSnapshotAsync(
+            GetSnapshotRequest request,
+            CancellationToken cancellationToken) => GetSnapshotAsync(
+                request,
+                CallSettings.FromCancellationToken(cancellationToken));
+
+        /// <summary>
+        /// This is a private alpha release of Cloud Bigtable snapshots. This feature
+        /// is not currently available to most Cloud Bigtable customers. This feature
+        /// might be changed in backward-incompatible ways and is not recommended for
+        /// production use. It is not subject to any SLA or deprecation policy.
+        ///
+        /// Gets metadata information about the specified snapshot.
+        /// </summary>
+        /// <param name="request">
+        /// The request object containing all of the parameters for the API call.
+        /// </param>
         /// <param name="callSettings">
         /// If not null, applies overrides to this RPC call.
         /// </param>
@@ -2404,6 +2575,29 @@ namespace Google.Cloud.Bigtable.Admin.V2
         {
             throw new NotImplementedException();
         }
+
+        /// <summary>
+        /// This is a private alpha release of Cloud Bigtable snapshots. This feature
+        /// is not currently available to most Cloud Bigtable customers. This feature
+        /// might be changed in backward-incompatible ways and is not recommended for
+        /// production use. It is not subject to any SLA or deprecation policy.
+        ///
+        /// Permanently deletes the specified snapshot.
+        /// </summary>
+        /// <param name="request">
+        /// The request object containing all of the parameters for the API call.
+        /// </param>
+        /// <param name="cancellationToken">
+        /// A <see cref="CancellationToken"/> to use for this RPC.
+        /// </param>
+        /// <returns>
+        /// A Task that completes when the RPC has completed.
+        /// </returns>
+        public virtual Task DeleteSnapshotAsync(
+            DeleteSnapshotRequest request,
+            CancellationToken cancellationToken) => DeleteSnapshotAsync(
+                request,
+                CallSettings.FromCancellationToken(cancellationToken));
 
         /// <summary>
         /// This is a private alpha release of Cloud Bigtable snapshots. This feature

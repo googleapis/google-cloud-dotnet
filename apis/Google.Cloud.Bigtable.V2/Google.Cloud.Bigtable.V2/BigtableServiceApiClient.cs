@@ -540,6 +540,25 @@ namespace Google.Cloud.Bigtable.V2
         /// <param name="request">
         /// The request object containing all of the parameters for the API call.
         /// </param>
+        /// <param name="cancellationToken">
+        /// A <see cref="CancellationToken"/> to use for this RPC.
+        /// </param>
+        /// <returns>
+        /// A Task containing the RPC response.
+        /// </returns>
+        public virtual Task<MutateRowResponse> MutateRowAsync(
+            MutateRowRequest request,
+            CancellationToken cancellationToken) => MutateRowAsync(
+                request,
+                CallSettings.FromCancellationToken(cancellationToken));
+
+        /// <summary>
+        /// Mutates a row atomically. Cells already present in the row are left
+        /// unchanged unless explicitly changed by `mutation`.
+        /// </summary>
+        /// <param name="request">
+        /// The request object containing all of the parameters for the API call.
+        /// </param>
         /// <param name="callSettings">
         /// If not null, applies overrides to this RPC call.
         /// </param>
@@ -768,6 +787,24 @@ namespace Google.Cloud.Bigtable.V2
         /// <param name="request">
         /// The request object containing all of the parameters for the API call.
         /// </param>
+        /// <param name="cancellationToken">
+        /// A <see cref="CancellationToken"/> to use for this RPC.
+        /// </param>
+        /// <returns>
+        /// A Task containing the RPC response.
+        /// </returns>
+        public virtual Task<CheckAndMutateRowResponse> CheckAndMutateRowAsync(
+            CheckAndMutateRowRequest request,
+            CancellationToken cancellationToken) => CheckAndMutateRowAsync(
+                request,
+                CallSettings.FromCancellationToken(cancellationToken));
+
+        /// <summary>
+        /// Mutates a row atomically based on the output of a predicate Reader filter.
+        /// </summary>
+        /// <param name="request">
+        /// The request object containing all of the parameters for the API call.
+        /// </param>
         /// <param name="callSettings">
         /// If not null, applies overrides to this RPC call.
         /// </param>
@@ -920,6 +957,28 @@ namespace Google.Cloud.Bigtable.V2
         {
             throw new NotImplementedException();
         }
+
+        /// <summary>
+        /// Modifies a row atomically on the server. The method reads the latest
+        /// existing timestamp and value from the specified columns and writes a new
+        /// entry based on pre-defined read/modify/write rules. The new value for the
+        /// timestamp is the greater of the existing timestamp or the current server
+        /// time. The method returns the new contents of all modified cells.
+        /// </summary>
+        /// <param name="request">
+        /// The request object containing all of the parameters for the API call.
+        /// </param>
+        /// <param name="cancellationToken">
+        /// A <see cref="CancellationToken"/> to use for this RPC.
+        /// </param>
+        /// <returns>
+        /// A Task containing the RPC response.
+        /// </returns>
+        public virtual Task<ReadModifyWriteRowResponse> ReadModifyWriteRowAsync(
+            ReadModifyWriteRowRequest request,
+            CancellationToken cancellationToken) => ReadModifyWriteRowAsync(
+                request,
+                CallSettings.FromCancellationToken(cancellationToken));
 
         /// <summary>
         /// Modifies a row atomically on the server. The method reads the latest

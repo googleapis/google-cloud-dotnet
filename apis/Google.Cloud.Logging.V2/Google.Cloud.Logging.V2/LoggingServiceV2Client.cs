@@ -555,6 +555,27 @@ namespace Google.Cloud.Logging.V2
         /// <param name="request">
         /// The request object containing all of the parameters for the API call.
         /// </param>
+        /// <param name="cancellationToken">
+        /// A <see cref="CancellationToken"/> to use for this RPC.
+        /// </param>
+        /// <returns>
+        /// A Task that completes when the RPC has completed.
+        /// </returns>
+        public virtual Task DeleteLogAsync(
+            DeleteLogRequest request,
+            CancellationToken cancellationToken) => DeleteLogAsync(
+                request,
+                CallSettings.FromCancellationToken(cancellationToken));
+
+        /// <summary>
+        /// Deletes all the log entries in a log.
+        /// The log reappears if it receives new entries.
+        /// Log entries written shortly before the delete operation might not be
+        /// deleted.
+        /// </summary>
+        /// <param name="request">
+        /// The request object containing all of the parameters for the API call.
+        /// </param>
         /// <param name="callSettings">
         /// If not null, applies overrides to this RPC call.
         /// </param>
@@ -838,6 +859,30 @@ namespace Google.Cloud.Logging.V2
         {
             throw new NotImplementedException();
         }
+
+        /// <summary>
+        /// ## Log entry resources
+        ///
+        /// Writes log entries to Stackdriver Logging. This API method is the
+        /// only way to send log entries to Stackdriver Logging. This method
+        /// is used, directly or indirectly, by the Stackdriver Logging agent
+        /// (fluentd) and all logging libraries configured to use Stackdriver
+        /// Logging.
+        /// </summary>
+        /// <param name="request">
+        /// The request object containing all of the parameters for the API call.
+        /// </param>
+        /// <param name="cancellationToken">
+        /// A <see cref="CancellationToken"/> to use for this RPC.
+        /// </param>
+        /// <returns>
+        /// A Task containing the RPC response.
+        /// </returns>
+        public virtual Task<WriteLogEntriesResponse> WriteLogEntriesAsync(
+            WriteLogEntriesRequest request,
+            CancellationToken cancellationToken) => WriteLogEntriesAsync(
+                request,
+                CallSettings.FromCancellationToken(cancellationToken));
 
         /// <summary>
         /// ## Log entry resources

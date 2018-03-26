@@ -65,6 +65,7 @@ namespace Google.Cloud.OsLogin.V1.Snippets
         public async Task DeletePosixAccountAsync_RequestObject()
         {
             // Snippet: DeletePosixAccountAsync(DeletePosixAccountRequest,CallSettings)
+            // Additional: DeletePosixAccountAsync(DeletePosixAccountRequest,CancellationToken)
             // Create client
             OsLoginServiceClient osLoginServiceClient = await OsLoginServiceClient.CreateAsync();
             // Initialize request argument(s)
@@ -124,6 +125,7 @@ namespace Google.Cloud.OsLogin.V1.Snippets
         public async Task DeleteSshPublicKeyAsync_RequestObject()
         {
             // Snippet: DeleteSshPublicKeyAsync(DeleteSshPublicKeyRequest,CallSettings)
+            // Additional: DeleteSshPublicKeyAsync(DeleteSshPublicKeyRequest,CancellationToken)
             // Create client
             OsLoginServiceClient osLoginServiceClient = await OsLoginServiceClient.CreateAsync();
             // Initialize request argument(s)
@@ -183,6 +185,7 @@ namespace Google.Cloud.OsLogin.V1.Snippets
         public async Task GetLoginProfileAsync_RequestObject()
         {
             // Snippet: GetLoginProfileAsync(GetLoginProfileRequest,CallSettings)
+            // Additional: GetLoginProfileAsync(GetLoginProfileRequest,CancellationToken)
             // Create client
             OsLoginServiceClient osLoginServiceClient = await OsLoginServiceClient.CreateAsync();
             // Initialize request argument(s)
@@ -242,6 +245,7 @@ namespace Google.Cloud.OsLogin.V1.Snippets
         public async Task GetSshPublicKeyAsync_RequestObject()
         {
             // Snippet: GetSshPublicKeyAsync(GetSshPublicKeyRequest,CallSettings)
+            // Additional: GetSshPublicKeyAsync(GetSshPublicKeyRequest,CancellationToken)
             // Create client
             OsLoginServiceClient osLoginServiceClient = await OsLoginServiceClient.CreateAsync();
             // Initialize request argument(s)
@@ -334,6 +338,7 @@ namespace Google.Cloud.OsLogin.V1.Snippets
         public async Task ImportSshPublicKeyAsync_RequestObject()
         {
             // Snippet: ImportSshPublicKeyAsync(ImportSshPublicKeyRequest,CallSettings)
+            // Additional: ImportSshPublicKeyAsync(ImportSshPublicKeyRequest,CancellationToken)
             // Create client
             OsLoginServiceClient osLoginServiceClient = await OsLoginServiceClient.CreateAsync();
             // Initialize request argument(s)
@@ -428,6 +433,7 @@ namespace Google.Cloud.OsLogin.V1.Snippets
         public async Task UpdateSshPublicKeyAsync_RequestObject()
         {
             // Snippet: UpdateSshPublicKeyAsync(UpdateSshPublicKeyRequest,CallSettings)
+            // Additional: UpdateSshPublicKeyAsync(UpdateSshPublicKeyRequest,CancellationToken)
             // Create client
             OsLoginServiceClient osLoginServiceClient = await OsLoginServiceClient.CreateAsync();
             // Initialize request argument(s)

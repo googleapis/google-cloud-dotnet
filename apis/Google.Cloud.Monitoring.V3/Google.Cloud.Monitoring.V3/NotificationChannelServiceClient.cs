@@ -655,6 +655,25 @@ namespace Google.Cloud.Monitoring.V3
         /// <param name="request">
         /// The request object containing all of the parameters for the API call.
         /// </param>
+        /// <param name="cancellationToken">
+        /// A <see cref="CancellationToken"/> to use for this RPC.
+        /// </param>
+        /// <returns>
+        /// A Task containing the RPC response.
+        /// </returns>
+        public virtual Task<NotificationChannelDescriptor> GetNotificationChannelDescriptorAsync(
+            GetNotificationChannelDescriptorRequest request,
+            CancellationToken cancellationToken) => GetNotificationChannelDescriptorAsync(
+                request,
+                CallSettings.FromCancellationToken(cancellationToken));
+
+        /// <summary>
+        /// Gets a single channel descriptor. The descriptor indicates which fields
+        /// are expected / permitted for a notification channel of the given type.
+        /// </summary>
+        /// <param name="request">
+        /// The request object containing all of the parameters for the API call.
+        /// </param>
         /// <param name="callSettings">
         /// If not null, applies overrides to this RPC call.
         /// </param>
@@ -890,6 +909,28 @@ namespace Google.Cloud.Monitoring.V3
         /// <param name="request">
         /// The request object containing all of the parameters for the API call.
         /// </param>
+        /// <param name="cancellationToken">
+        /// A <see cref="CancellationToken"/> to use for this RPC.
+        /// </param>
+        /// <returns>
+        /// A Task containing the RPC response.
+        /// </returns>
+        public virtual Task<NotificationChannel> GetNotificationChannelAsync(
+            GetNotificationChannelRequest request,
+            CancellationToken cancellationToken) => GetNotificationChannelAsync(
+                request,
+                CallSettings.FromCancellationToken(cancellationToken));
+
+        /// <summary>
+        /// Gets a single notification channel. The channel includes the relevant
+        /// configuration details with which the channel was created. However, the
+        /// response may truncate or omit passwords, API keys, or other private key
+        /// matter and thus the response may not be 100% identical to the information
+        /// that was supplied in the call to the create method.
+        /// </summary>
+        /// <param name="request">
+        /// The request object containing all of the parameters for the API call.
+        /// </param>
         /// <param name="callSettings">
         /// If not null, applies overrides to this RPC call.
         /// </param>
@@ -1029,6 +1070,25 @@ namespace Google.Cloud.Monitoring.V3
         /// <param name="request">
         /// The request object containing all of the parameters for the API call.
         /// </param>
+        /// <param name="cancellationToken">
+        /// A <see cref="CancellationToken"/> to use for this RPC.
+        /// </param>
+        /// <returns>
+        /// A Task containing the RPC response.
+        /// </returns>
+        public virtual Task<NotificationChannel> CreateNotificationChannelAsync(
+            CreateNotificationChannelRequest request,
+            CancellationToken cancellationToken) => CreateNotificationChannelAsync(
+                request,
+                CallSettings.FromCancellationToken(cancellationToken));
+
+        /// <summary>
+        /// Creates a new notification channel, representing a single notification
+        /// endpoint such as an email address, SMS number, or pagerduty service.
+        /// </summary>
+        /// <param name="request">
+        /// The request object containing all of the parameters for the API call.
+        /// </param>
         /// <param name="callSettings">
         /// If not null, applies overrides to this RPC call.
         /// </param>
@@ -1156,6 +1216,25 @@ namespace Google.Cloud.Monitoring.V3
         /// <param name="request">
         /// The request object containing all of the parameters for the API call.
         /// </param>
+        /// <param name="cancellationToken">
+        /// A <see cref="CancellationToken"/> to use for this RPC.
+        /// </param>
+        /// <returns>
+        /// A Task containing the RPC response.
+        /// </returns>
+        public virtual Task<NotificationChannel> UpdateNotificationChannelAsync(
+            UpdateNotificationChannelRequest request,
+            CancellationToken cancellationToken) => UpdateNotificationChannelAsync(
+                request,
+                CallSettings.FromCancellationToken(cancellationToken));
+
+        /// <summary>
+        /// Updates a notification channel. Fields not specified in the field mask
+        /// remain unchanged.
+        /// </summary>
+        /// <param name="request">
+        /// The request object containing all of the parameters for the API call.
+        /// </param>
         /// <param name="callSettings">
         /// If not null, applies overrides to this RPC call.
         /// </param>
@@ -1271,6 +1350,24 @@ namespace Google.Cloud.Monitoring.V3
         {
             throw new NotImplementedException();
         }
+
+        /// <summary>
+        /// Deletes a notification channel.
+        /// </summary>
+        /// <param name="request">
+        /// The request object containing all of the parameters for the API call.
+        /// </param>
+        /// <param name="cancellationToken">
+        /// A <see cref="CancellationToken"/> to use for this RPC.
+        /// </param>
+        /// <returns>
+        /// A Task that completes when the RPC has completed.
+        /// </returns>
+        public virtual Task DeleteNotificationChannelAsync(
+            DeleteNotificationChannelRequest request,
+            CancellationToken cancellationToken) => DeleteNotificationChannelAsync(
+                request,
+                CallSettings.FromCancellationToken(cancellationToken));
 
         /// <summary>
         /// Deletes a notification channel.

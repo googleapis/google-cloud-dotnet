@@ -66,6 +66,7 @@ namespace Google.Cloud.ErrorReporting.V1Beta1.Snippets
         public async Task ReportErrorEventAsync_RequestObject()
         {
             // Snippet: ReportErrorEventAsync(ReportErrorEventRequest,CallSettings)
+            // Additional: ReportErrorEventAsync(ReportErrorEventRequest,CancellationToken)
             // Create client
             ReportErrorsServiceClient reportErrorsServiceClient = await ReportErrorsServiceClient.CreateAsync();
             // Initialize request argument(s)

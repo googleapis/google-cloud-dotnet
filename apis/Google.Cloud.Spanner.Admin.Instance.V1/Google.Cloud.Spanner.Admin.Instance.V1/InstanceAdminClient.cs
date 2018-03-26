@@ -767,6 +767,24 @@ namespace Google.Cloud.Spanner.Admin.Instance.V1
         /// <param name="request">
         /// The request object containing all of the parameters for the API call.
         /// </param>
+        /// <param name="cancellationToken">
+        /// A <see cref="CancellationToken"/> to use for this RPC.
+        /// </param>
+        /// <returns>
+        /// A Task containing the RPC response.
+        /// </returns>
+        public virtual Task<InstanceConfig> GetInstanceConfigAsync(
+            GetInstanceConfigRequest request,
+            CancellationToken cancellationToken) => GetInstanceConfigAsync(
+                request,
+                CallSettings.FromCancellationToken(cancellationToken));
+
+        /// <summary>
+        /// Gets information about a particular instance configuration.
+        /// </summary>
+        /// <param name="request">
+        /// The request object containing all of the parameters for the API call.
+        /// </param>
         /// <param name="callSettings">
         /// If not null, applies overrides to this RPC call.
         /// </param>
@@ -967,6 +985,24 @@ namespace Google.Cloud.Spanner.Admin.Instance.V1
         {
             throw new NotImplementedException();
         }
+
+        /// <summary>
+        /// Gets information about a particular instance.
+        /// </summary>
+        /// <param name="request">
+        /// The request object containing all of the parameters for the API call.
+        /// </param>
+        /// <param name="cancellationToken">
+        /// A <see cref="CancellationToken"/> to use for this RPC.
+        /// </param>
+        /// <returns>
+        /// A Task containing the RPC response.
+        /// </returns>
+        public virtual Task<Instance> GetInstanceAsync(
+            GetInstanceRequest request,
+            CancellationToken cancellationToken) => GetInstanceAsync(
+                request,
+                CallSettings.FromCancellationToken(cancellationToken));
 
         /// <summary>
         /// Gets information about a particular instance.
@@ -1815,6 +1851,34 @@ namespace Google.Cloud.Spanner.Admin.Instance.V1
         /// <param name="request">
         /// The request object containing all of the parameters for the API call.
         /// </param>
+        /// <param name="cancellationToken">
+        /// A <see cref="CancellationToken"/> to use for this RPC.
+        /// </param>
+        /// <returns>
+        /// A Task that completes when the RPC has completed.
+        /// </returns>
+        public virtual Task DeleteInstanceAsync(
+            DeleteInstanceRequest request,
+            CancellationToken cancellationToken) => DeleteInstanceAsync(
+                request,
+                CallSettings.FromCancellationToken(cancellationToken));
+
+        /// <summary>
+        /// Deletes an instance.
+        ///
+        /// Immediately upon completion of the request:
+        ///
+        ///   * Billing ceases for all of the instance's reserved resources.
+        ///
+        /// Soon afterward:
+        ///
+        ///   * The instance and *all of its databases* immediately and
+        ///     irrevocably disappear from the API. All data in the databases
+        ///     is permanently deleted.
+        /// </summary>
+        /// <param name="request">
+        /// The request object containing all of the parameters for the API call.
+        /// </param>
         /// <param name="callSettings">
         /// If not null, applies overrides to this RPC call.
         /// </param>
@@ -1960,6 +2024,28 @@ namespace Google.Cloud.Spanner.Admin.Instance.V1
         /// <param name="request">
         /// The request object containing all of the parameters for the API call.
         /// </param>
+        /// <param name="cancellationToken">
+        /// A <see cref="CancellationToken"/> to use for this RPC.
+        /// </param>
+        /// <returns>
+        /// A Task containing the RPC response.
+        /// </returns>
+        public virtual Task<Policy> SetIamPolicyAsync(
+            SetIamPolicyRequest request,
+            CancellationToken cancellationToken) => SetIamPolicyAsync(
+                request,
+                CallSettings.FromCancellationToken(cancellationToken));
+
+        /// <summary>
+        /// Sets the access control policy on an instance resource. Replaces any
+        /// existing policy.
+        ///
+        /// Authorization requires `spanner.instances.setIamPolicy` on
+        /// [resource][google.iam.v1.SetIamPolicyRequest.resource].
+        /// </summary>
+        /// <param name="request">
+        /// The request object containing all of the parameters for the API call.
+        /// </param>
         /// <param name="callSettings">
         /// If not null, applies overrides to this RPC call.
         /// </param>
@@ -2073,6 +2159,28 @@ namespace Google.Cloud.Spanner.Admin.Instance.V1
         {
             throw new NotImplementedException();
         }
+
+        /// <summary>
+        /// Gets the access control policy for an instance resource. Returns an empty
+        /// policy if an instance exists but does not have a policy set.
+        ///
+        /// Authorization requires `spanner.instances.getIamPolicy` on
+        /// [resource][google.iam.v1.GetIamPolicyRequest.resource].
+        /// </summary>
+        /// <param name="request">
+        /// The request object containing all of the parameters for the API call.
+        /// </param>
+        /// <param name="cancellationToken">
+        /// A <see cref="CancellationToken"/> to use for this RPC.
+        /// </param>
+        /// <returns>
+        /// A Task containing the RPC response.
+        /// </returns>
+        public virtual Task<Policy> GetIamPolicyAsync(
+            GetIamPolicyRequest request,
+            CancellationToken cancellationToken) => GetIamPolicyAsync(
+                request,
+                CallSettings.FromCancellationToken(cancellationToken));
 
         /// <summary>
         /// Gets the access control policy for an instance resource. Returns an empty
@@ -2225,6 +2333,29 @@ namespace Google.Cloud.Spanner.Admin.Instance.V1
         {
             throw new NotImplementedException();
         }
+
+        /// <summary>
+        /// Returns permissions that the caller has on the specified instance resource.
+        ///
+        /// Attempting this RPC on a non-existent Cloud Spanner instance resource will
+        /// result in a NOT_FOUND error if the user has `spanner.instances.list`
+        /// permission on the containing Google Cloud Project. Otherwise returns an
+        /// empty set of permissions.
+        /// </summary>
+        /// <param name="request">
+        /// The request object containing all of the parameters for the API call.
+        /// </param>
+        /// <param name="cancellationToken">
+        /// A <see cref="CancellationToken"/> to use for this RPC.
+        /// </param>
+        /// <returns>
+        /// A Task containing the RPC response.
+        /// </returns>
+        public virtual Task<TestIamPermissionsResponse> TestIamPermissionsAsync(
+            TestIamPermissionsRequest request,
+            CancellationToken cancellationToken) => TestIamPermissionsAsync(
+                request,
+                CallSettings.FromCancellationToken(cancellationToken));
 
         /// <summary>
         /// Returns permissions that the caller has on the specified instance resource.

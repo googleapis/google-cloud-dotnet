@@ -388,6 +388,25 @@ namespace Google.Cloud.Trace.V2
         /// <param name="request">
         /// The request object containing all of the parameters for the API call.
         /// </param>
+        /// <param name="cancellationToken">
+        /// A <see cref="CancellationToken"/> to use for this RPC.
+        /// </param>
+        /// <returns>
+        /// A Task that completes when the RPC has completed.
+        /// </returns>
+        public virtual Task BatchWriteSpansAsync(
+            BatchWriteSpansRequest request,
+            CancellationToken cancellationToken) => BatchWriteSpansAsync(
+                request,
+                CallSettings.FromCancellationToken(cancellationToken));
+
+        /// <summary>
+        /// Sends new spans to new or existing traces. You cannot update
+        /// existing spans.
+        /// </summary>
+        /// <param name="request">
+        /// The request object containing all of the parameters for the API call.
+        /// </param>
         /// <param name="callSettings">
         /// If not null, applies overrides to this RPC call.
         /// </param>
@@ -416,6 +435,24 @@ namespace Google.Cloud.Trace.V2
         {
             throw new NotImplementedException();
         }
+
+        /// <summary>
+        /// Creates a new span.
+        /// </summary>
+        /// <param name="request">
+        /// The request object containing all of the parameters for the API call.
+        /// </param>
+        /// <param name="cancellationToken">
+        /// A <see cref="CancellationToken"/> to use for this RPC.
+        /// </param>
+        /// <returns>
+        /// A Task containing the RPC response.
+        /// </returns>
+        public virtual Task<Span> CreateSpanAsync(
+            Span request,
+            CancellationToken cancellationToken) => CreateSpanAsync(
+                request,
+                CallSettings.FromCancellationToken(cancellationToken));
 
         /// <summary>
         /// Creates a new span.

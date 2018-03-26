@@ -118,6 +118,7 @@ namespace Google.Cloud.Bigtable.V2.Snippets
         public async Task MutateRowAsync_RequestObject()
         {
             // Snippet: MutateRowAsync(MutateRowRequest,CallSettings)
+            // Additional: MutateRowAsync(MutateRowRequest,CancellationToken)
             // Create client
             BigtableServiceApiClient bigtableServiceApiClient = await BigtableServiceApiClient.CreateAsync();
             // Initialize request argument(s)
@@ -215,6 +216,7 @@ namespace Google.Cloud.Bigtable.V2.Snippets
         public async Task CheckAndMutateRowAsync_RequestObject()
         {
             // Snippet: CheckAndMutateRowAsync(CheckAndMutateRowRequest,CallSettings)
+            // Additional: CheckAndMutateRowAsync(CheckAndMutateRowRequest,CancellationToken)
             // Create client
             BigtableServiceApiClient bigtableServiceApiClient = await BigtableServiceApiClient.CreateAsync();
             // Initialize request argument(s)
@@ -280,6 +282,7 @@ namespace Google.Cloud.Bigtable.V2.Snippets
         public async Task ReadModifyWriteRowAsync_RequestObject()
         {
             // Snippet: ReadModifyWriteRowAsync(ReadModifyWriteRowRequest,CallSettings)
+            // Additional: ReadModifyWriteRowAsync(ReadModifyWriteRowRequest,CancellationToken)
             // Create client
             BigtableServiceApiClient bigtableServiceApiClient = await BigtableServiceApiClient.CreateAsync();
             // Initialize request argument(s)

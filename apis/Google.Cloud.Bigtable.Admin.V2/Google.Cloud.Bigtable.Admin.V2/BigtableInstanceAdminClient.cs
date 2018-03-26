@@ -1190,6 +1190,24 @@ namespace Google.Cloud.Bigtable.Admin.V2
         /// <param name="request">
         /// The request object containing all of the parameters for the API call.
         /// </param>
+        /// <param name="cancellationToken">
+        /// A <see cref="CancellationToken"/> to use for this RPC.
+        /// </param>
+        /// <returns>
+        /// A Task containing the RPC response.
+        /// </returns>
+        public virtual Task<Instance> GetInstanceAsync(
+            GetInstanceRequest request,
+            CancellationToken cancellationToken) => GetInstanceAsync(
+                request,
+                CallSettings.FromCancellationToken(cancellationToken));
+
+        /// <summary>
+        /// Gets information about an instance.
+        /// </summary>
+        /// <param name="request">
+        /// The request object containing all of the parameters for the API call.
+        /// </param>
         /// <param name="callSettings">
         /// If not null, applies overrides to this RPC call.
         /// </param>
@@ -1284,6 +1302,24 @@ namespace Google.Cloud.Bigtable.Admin.V2
         {
             throw new NotImplementedException();
         }
+
+        /// <summary>
+        /// Lists information about instances in a project.
+        /// </summary>
+        /// <param name="request">
+        /// The request object containing all of the parameters for the API call.
+        /// </param>
+        /// <param name="cancellationToken">
+        /// A <see cref="CancellationToken"/> to use for this RPC.
+        /// </param>
+        /// <returns>
+        /// A Task containing the RPC response.
+        /// </returns>
+        public virtual Task<ListInstancesResponse> ListInstancesAsync(
+            ListInstancesRequest request,
+            CancellationToken cancellationToken) => ListInstancesAsync(
+                request,
+                CallSettings.FromCancellationToken(cancellationToken));
 
         /// <summary>
         /// Lists information about instances in a project.
@@ -1532,6 +1568,24 @@ namespace Google.Cloud.Bigtable.Admin.V2
         {
             throw new NotImplementedException();
         }
+
+        /// <summary>
+        /// Delete an instance from a project.
+        /// </summary>
+        /// <param name="request">
+        /// The request object containing all of the parameters for the API call.
+        /// </param>
+        /// <param name="cancellationToken">
+        /// A <see cref="CancellationToken"/> to use for this RPC.
+        /// </param>
+        /// <returns>
+        /// A Task that completes when the RPC has completed.
+        /// </returns>
+        public virtual Task DeleteInstanceAsync(
+            DeleteInstanceRequest request,
+            CancellationToken cancellationToken) => DeleteInstanceAsync(
+                request,
+                CallSettings.FromCancellationToken(cancellationToken));
 
         /// <summary>
         /// Delete an instance from a project.
@@ -1814,6 +1868,24 @@ namespace Google.Cloud.Bigtable.Admin.V2
         /// <param name="request">
         /// The request object containing all of the parameters for the API call.
         /// </param>
+        /// <param name="cancellationToken">
+        /// A <see cref="CancellationToken"/> to use for this RPC.
+        /// </param>
+        /// <returns>
+        /// A Task containing the RPC response.
+        /// </returns>
+        public virtual Task<Cluster> GetClusterAsync(
+            GetClusterRequest request,
+            CancellationToken cancellationToken) => GetClusterAsync(
+                request,
+                CallSettings.FromCancellationToken(cancellationToken));
+
+        /// <summary>
+        /// Gets information about a cluster.
+        /// </summary>
+        /// <param name="request">
+        /// The request object containing all of the parameters for the API call.
+        /// </param>
         /// <param name="callSettings">
         /// If not null, applies overrides to this RPC call.
         /// </param>
@@ -1914,6 +1986,24 @@ namespace Google.Cloud.Bigtable.Admin.V2
         {
             throw new NotImplementedException();
         }
+
+        /// <summary>
+        /// Lists information about clusters in an instance.
+        /// </summary>
+        /// <param name="request">
+        /// The request object containing all of the parameters for the API call.
+        /// </param>
+        /// <param name="cancellationToken">
+        /// A <see cref="CancellationToken"/> to use for this RPC.
+        /// </param>
+        /// <returns>
+        /// A Task containing the RPC response.
+        /// </returns>
+        public virtual Task<ListClustersResponse> ListClustersAsync(
+            ListClustersRequest request,
+            CancellationToken cancellationToken) => ListClustersAsync(
+                request,
+                CallSettings.FromCancellationToken(cancellationToken));
 
         /// <summary>
         /// Lists information about clusters in an instance.
@@ -2091,6 +2181,24 @@ namespace Google.Cloud.Bigtable.Admin.V2
         /// <param name="request">
         /// The request object containing all of the parameters for the API call.
         /// </param>
+        /// <param name="cancellationToken">
+        /// A <see cref="CancellationToken"/> to use for this RPC.
+        /// </param>
+        /// <returns>
+        /// A Task that completes when the RPC has completed.
+        /// </returns>
+        public virtual Task DeleteClusterAsync(
+            DeleteClusterRequest request,
+            CancellationToken cancellationToken) => DeleteClusterAsync(
+                request,
+                CallSettings.FromCancellationToken(cancellationToken));
+
+        /// <summary>
+        /// Deletes a cluster from an instance.
+        /// </summary>
+        /// <param name="request">
+        /// The request object containing all of the parameters for the API call.
+        /// </param>
         /// <param name="callSettings">
         /// If not null, applies overrides to this RPC call.
         /// </param>
@@ -2256,6 +2364,29 @@ namespace Google.Cloud.Bigtable.Admin.V2
         /// <param name="request">
         /// The request object containing all of the parameters for the API call.
         /// </param>
+        /// <param name="cancellationToken">
+        /// A <see cref="CancellationToken"/> to use for this RPC.
+        /// </param>
+        /// <returns>
+        /// A Task containing the RPC response.
+        /// </returns>
+        public virtual Task<AppProfile> CreateAppProfileAsync(
+            CreateAppProfileRequest request,
+            CancellationToken cancellationToken) => CreateAppProfileAsync(
+                request,
+                CallSettings.FromCancellationToken(cancellationToken));
+
+        /// <summary>
+        /// This is a private alpha release of Cloud Bigtable replication. This feature
+        /// is not currently available to most Cloud Bigtable customers. This feature
+        /// might be changed in backward-incompatible ways and is not recommended for
+        /// production use. It is not subject to any SLA or deprecation policy.
+        ///
+        /// Creates an app profile within an instance.
+        /// </summary>
+        /// <param name="request">
+        /// The request object containing all of the parameters for the API call.
+        /// </param>
         /// <param name="callSettings">
         /// If not null, applies overrides to this RPC call.
         /// </param>
@@ -2370,6 +2501,29 @@ namespace Google.Cloud.Bigtable.Admin.V2
         {
             throw new NotImplementedException();
         }
+
+        /// <summary>
+        /// This is a private alpha release of Cloud Bigtable replication. This feature
+        /// is not currently available to most Cloud Bigtable customers. This feature
+        /// might be changed in backward-incompatible ways and is not recommended for
+        /// production use. It is not subject to any SLA or deprecation policy.
+        ///
+        /// Gets information about an app profile.
+        /// </summary>
+        /// <param name="request">
+        /// The request object containing all of the parameters for the API call.
+        /// </param>
+        /// <param name="cancellationToken">
+        /// A <see cref="CancellationToken"/> to use for this RPC.
+        /// </param>
+        /// <returns>
+        /// A Task containing the RPC response.
+        /// </returns>
+        public virtual Task<AppProfile> GetAppProfileAsync(
+            GetAppProfileRequest request,
+            CancellationToken cancellationToken) => GetAppProfileAsync(
+                request,
+                CallSettings.FromCancellationToken(cancellationToken));
 
         /// <summary>
         /// This is a private alpha release of Cloud Bigtable replication. This feature
@@ -2808,6 +2962,29 @@ namespace Google.Cloud.Bigtable.Admin.V2
         /// <param name="request">
         /// The request object containing all of the parameters for the API call.
         /// </param>
+        /// <param name="cancellationToken">
+        /// A <see cref="CancellationToken"/> to use for this RPC.
+        /// </param>
+        /// <returns>
+        /// A Task that completes when the RPC has completed.
+        /// </returns>
+        public virtual Task DeleteAppProfileAsync(
+            DeleteAppProfileRequest request,
+            CancellationToken cancellationToken) => DeleteAppProfileAsync(
+                request,
+                CallSettings.FromCancellationToken(cancellationToken));
+
+        /// <summary>
+        /// This is a private alpha release of Cloud Bigtable replication. This feature
+        /// is not currently available to most Cloud Bigtable customers. This feature
+        /// might be changed in backward-incompatible ways and is not recommended for
+        /// production use. It is not subject to any SLA or deprecation policy.
+        ///
+        /// Deletes an app profile from an instance.
+        /// </summary>
+        /// <param name="request">
+        /// The request object containing all of the parameters for the API call.
+        /// </param>
         /// <param name="callSettings">
         /// If not null, applies overrides to this RPC call.
         /// </param>
@@ -2930,6 +3107,31 @@ namespace Google.Cloud.Bigtable.Admin.V2
         {
             throw new NotImplementedException();
         }
+
+        /// <summary>
+        /// This is a private alpha release of Cloud Bigtable instance level
+        /// permissions. This feature is not currently available to most Cloud Bigtable
+        /// customers. This feature might be changed in backward-incompatible ways and
+        /// is not recommended for production use. It is not subject to any SLA or
+        /// deprecation policy.
+        ///
+        /// Gets the access control policy for an instance resource. Returns an empty
+        /// policy if an instance exists but does not have a policy set.
+        /// </summary>
+        /// <param name="request">
+        /// The request object containing all of the parameters for the API call.
+        /// </param>
+        /// <param name="cancellationToken">
+        /// A <see cref="CancellationToken"/> to use for this RPC.
+        /// </param>
+        /// <returns>
+        /// A Task containing the RPC response.
+        /// </returns>
+        public virtual Task<Policy> GetIamPolicyAsync(
+            GetIamPolicyRequest request,
+            CancellationToken cancellationToken) => GetIamPolicyAsync(
+                request,
+                CallSettings.FromCancellationToken(cancellationToken));
 
         /// <summary>
         /// This is a private alpha release of Cloud Bigtable instance level
@@ -3107,6 +3309,31 @@ namespace Google.Cloud.Bigtable.Admin.V2
         /// <param name="request">
         /// The request object containing all of the parameters for the API call.
         /// </param>
+        /// <param name="cancellationToken">
+        /// A <see cref="CancellationToken"/> to use for this RPC.
+        /// </param>
+        /// <returns>
+        /// A Task containing the RPC response.
+        /// </returns>
+        public virtual Task<Policy> SetIamPolicyAsync(
+            SetIamPolicyRequest request,
+            CancellationToken cancellationToken) => SetIamPolicyAsync(
+                request,
+                CallSettings.FromCancellationToken(cancellationToken));
+
+        /// <summary>
+        /// This is a private alpha release of Cloud Bigtable instance level
+        /// permissions. This feature is not currently available to most Cloud Bigtable
+        /// customers. This feature might be changed in backward-incompatible ways and
+        /// is not recommended for production use. It is not subject to any SLA or
+        /// deprecation policy.
+        ///
+        /// Sets the access control policy on an instance resource. Replaces any
+        /// existing policy.
+        /// </summary>
+        /// <param name="request">
+        /// The request object containing all of the parameters for the API call.
+        /// </param>
         /// <param name="callSettings">
         /// If not null, applies overrides to this RPC call.
         /// </param>
@@ -3252,6 +3479,30 @@ namespace Google.Cloud.Bigtable.Admin.V2
         {
             throw new NotImplementedException();
         }
+
+        /// <summary>
+        /// This is a private alpha release of Cloud Bigtable instance level
+        /// permissions. This feature is not currently available to most Cloud Bigtable
+        /// customers. This feature might be changed in backward-incompatible ways and
+        /// is not recommended for production use. It is not subject to any SLA or
+        /// deprecation policy.
+        ///
+        /// Returns permissions that the caller has on the specified instance resource.
+        /// </summary>
+        /// <param name="request">
+        /// The request object containing all of the parameters for the API call.
+        /// </param>
+        /// <param name="cancellationToken">
+        /// A <see cref="CancellationToken"/> to use for this RPC.
+        /// </param>
+        /// <returns>
+        /// A Task containing the RPC response.
+        /// </returns>
+        public virtual Task<TestIamPermissionsResponse> TestIamPermissionsAsync(
+            TestIamPermissionsRequest request,
+            CancellationToken cancellationToken) => TestIamPermissionsAsync(
+                request,
+                CallSettings.FromCancellationToken(cancellationToken));
 
         /// <summary>
         /// This is a private alpha release of Cloud Bigtable instance level

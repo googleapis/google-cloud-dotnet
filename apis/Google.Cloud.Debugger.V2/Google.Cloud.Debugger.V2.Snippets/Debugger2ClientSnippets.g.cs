@@ -68,6 +68,7 @@ namespace Google.Cloud.Debugger.V2.Snippets
         public async Task SetBreakpointAsync_RequestObject()
         {
             // Snippet: SetBreakpointAsync(SetBreakpointRequest,CallSettings)
+            // Additional: SetBreakpointAsync(SetBreakpointRequest,CancellationToken)
             // Create client
             Debugger2Client debugger2Client = await Debugger2Client.CreateAsync();
             // Initialize request argument(s)
@@ -135,6 +136,7 @@ namespace Google.Cloud.Debugger.V2.Snippets
         public async Task GetBreakpointAsync_RequestObject()
         {
             // Snippet: GetBreakpointAsync(GetBreakpointRequest,CallSettings)
+            // Additional: GetBreakpointAsync(GetBreakpointRequest,CancellationToken)
             // Create client
             Debugger2Client debugger2Client = await Debugger2Client.CreateAsync();
             // Initialize request argument(s)
@@ -202,6 +204,7 @@ namespace Google.Cloud.Debugger.V2.Snippets
         public async Task DeleteBreakpointAsync_RequestObject()
         {
             // Snippet: DeleteBreakpointAsync(DeleteBreakpointRequest,CallSettings)
+            // Additional: DeleteBreakpointAsync(DeleteBreakpointRequest,CancellationToken)
             // Create client
             Debugger2Client debugger2Client = await Debugger2Client.CreateAsync();
             // Initialize request argument(s)
@@ -267,6 +270,7 @@ namespace Google.Cloud.Debugger.V2.Snippets
         public async Task ListBreakpointsAsync_RequestObject()
         {
             // Snippet: ListBreakpointsAsync(ListBreakpointsRequest,CallSettings)
+            // Additional: ListBreakpointsAsync(ListBreakpointsRequest,CancellationToken)
             // Create client
             Debugger2Client debugger2Client = await Debugger2Client.CreateAsync();
             // Initialize request argument(s)
@@ -330,6 +334,7 @@ namespace Google.Cloud.Debugger.V2.Snippets
         public async Task ListDebuggeesAsync_RequestObject()
         {
             // Snippet: ListDebuggeesAsync(ListDebuggeesRequest,CallSettings)
+            // Additional: ListDebuggeesAsync(ListDebuggeesRequest,CancellationToken)
             // Create client
             Debugger2Client debugger2Client = await Debugger2Client.CreateAsync();
             // Initialize request argument(s)

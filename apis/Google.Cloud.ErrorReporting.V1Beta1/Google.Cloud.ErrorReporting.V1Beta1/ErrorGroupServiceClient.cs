@@ -385,6 +385,24 @@ namespace Google.Cloud.ErrorReporting.V1Beta1
         /// <param name="request">
         /// The request object containing all of the parameters for the API call.
         /// </param>
+        /// <param name="cancellationToken">
+        /// A <see cref="CancellationToken"/> to use for this RPC.
+        /// </param>
+        /// <returns>
+        /// A Task containing the RPC response.
+        /// </returns>
+        public virtual Task<ErrorGroup> GetGroupAsync(
+            GetGroupRequest request,
+            CancellationToken cancellationToken) => GetGroupAsync(
+                request,
+                CallSettings.FromCancellationToken(cancellationToken));
+
+        /// <summary>
+        /// Get the specified group.
+        /// </summary>
+        /// <param name="request">
+        /// The request object containing all of the parameters for the API call.
+        /// </param>
         /// <param name="callSettings">
         /// If not null, applies overrides to this RPC call.
         /// </param>
@@ -480,6 +498,25 @@ namespace Google.Cloud.ErrorReporting.V1Beta1
         {
             throw new NotImplementedException();
         }
+
+        /// <summary>
+        /// Replace the data for the specified group.
+        /// Fails if the group does not exist.
+        /// </summary>
+        /// <param name="request">
+        /// The request object containing all of the parameters for the API call.
+        /// </param>
+        /// <param name="cancellationToken">
+        /// A <see cref="CancellationToken"/> to use for this RPC.
+        /// </param>
+        /// <returns>
+        /// A Task containing the RPC response.
+        /// </returns>
+        public virtual Task<ErrorGroup> UpdateGroupAsync(
+            UpdateGroupRequest request,
+            CancellationToken cancellationToken) => UpdateGroupAsync(
+                request,
+                CallSettings.FromCancellationToken(cancellationToken));
 
         /// <summary>
         /// Replace the data for the specified group.

@@ -436,6 +436,7 @@ namespace Google.Cloud.ErrorReporting.V1Beta1.Snippets
         public async Task DeleteEventsAsync_RequestObject()
         {
             // Snippet: DeleteEventsAsync(DeleteEventsRequest,CallSettings)
+            // Additional: DeleteEventsAsync(DeleteEventsRequest,CancellationToken)
             // Create client
             ErrorStatsServiceClient errorStatsServiceClient = await ErrorStatsServiceClient.CreateAsync();
             // Initialize request argument(s)

@@ -246,6 +246,7 @@ namespace Google.Cloud.Logging.V2.Snippets
         public async Task GetLogMetricAsync_RequestObject()
         {
             // Snippet: GetLogMetricAsync(GetLogMetricRequest,CallSettings)
+            // Additional: GetLogMetricAsync(GetLogMetricRequest,CancellationToken)
             // Create client
             MetricsServiceV2Client metricsServiceV2Client = await MetricsServiceV2Client.CreateAsync();
             // Initialize request argument(s)
@@ -307,6 +308,7 @@ namespace Google.Cloud.Logging.V2.Snippets
         public async Task CreateLogMetricAsync_RequestObject()
         {
             // Snippet: CreateLogMetricAsync(CreateLogMetricRequest,CallSettings)
+            // Additional: CreateLogMetricAsync(CreateLogMetricRequest,CancellationToken)
             // Create client
             MetricsServiceV2Client metricsServiceV2Client = await MetricsServiceV2Client.CreateAsync();
             // Initialize request argument(s)
@@ -370,6 +372,7 @@ namespace Google.Cloud.Logging.V2.Snippets
         public async Task UpdateLogMetricAsync_RequestObject()
         {
             // Snippet: UpdateLogMetricAsync(UpdateLogMetricRequest,CallSettings)
+            // Additional: UpdateLogMetricAsync(UpdateLogMetricRequest,CancellationToken)
             // Create client
             MetricsServiceV2Client metricsServiceV2Client = await MetricsServiceV2Client.CreateAsync();
             // Initialize request argument(s)
@@ -431,6 +434,7 @@ namespace Google.Cloud.Logging.V2.Snippets
         public async Task DeleteLogMetricAsync_RequestObject()
         {
             // Snippet: DeleteLogMetricAsync(DeleteLogMetricRequest,CallSettings)
+            // Additional: DeleteLogMetricAsync(DeleteLogMetricRequest,CancellationToken)
             // Create client
             MetricsServiceV2Client metricsServiceV2Client = await MetricsServiceV2Client.CreateAsync();
             // Initialize request argument(s)

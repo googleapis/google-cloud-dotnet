@@ -391,6 +391,31 @@ namespace Google.Cloud.ErrorReporting.V1Beta1
         /// <param name="request">
         /// The request object containing all of the parameters for the API call.
         /// </param>
+        /// <param name="cancellationToken">
+        /// A <see cref="CancellationToken"/> to use for this RPC.
+        /// </param>
+        /// <returns>
+        /// A Task containing the RPC response.
+        /// </returns>
+        public virtual Task<ReportErrorEventResponse> ReportErrorEventAsync(
+            ReportErrorEventRequest request,
+            CancellationToken cancellationToken) => ReportErrorEventAsync(
+                request,
+                CallSettings.FromCancellationToken(cancellationToken));
+
+        /// <summary>
+        /// Report an individual error event.
+        ///
+        /// This endpoint accepts &lt;strong&gt;either&lt;/strong&gt; an OAuth token,
+        /// &lt;strong&gt;or&lt;/strong&gt; an
+        /// &lt;a href="https://support.google.com/cloud/answer/6158862"&gt;API key&lt;/a&gt;
+        /// for authentication. To use an API key, append it to the URL as the value of
+        /// a `key` parameter. For example:
+        /// &lt;pre&gt;POST https://clouderrorreporting.googleapis.com/v1beta1/projects/example-project/events:report?key=123ABC456&lt;/pre&gt;
+        /// </summary>
+        /// <param name="request">
+        /// The request object containing all of the parameters for the API call.
+        /// </param>
         /// <param name="callSettings">
         /// If not null, applies overrides to this RPC call.
         /// </param>

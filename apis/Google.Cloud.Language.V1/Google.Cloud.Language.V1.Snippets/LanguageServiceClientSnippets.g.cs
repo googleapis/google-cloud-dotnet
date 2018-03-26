@@ -64,6 +64,7 @@ namespace Google.Cloud.Language.V1.Snippets
         public async Task AnalyzeSentimentAsync_RequestObject()
         {
             // Snippet: AnalyzeSentimentAsync(AnalyzeSentimentRequest,CallSettings)
+            // Additional: AnalyzeSentimentAsync(AnalyzeSentimentRequest,CancellationToken)
             // Create client
             LanguageServiceClient languageServiceClient = await LanguageServiceClient.CreateAsync();
             // Initialize request argument(s)
@@ -125,6 +126,7 @@ namespace Google.Cloud.Language.V1.Snippets
         public async Task AnalyzeEntitiesAsync_RequestObject()
         {
             // Snippet: AnalyzeEntitiesAsync(AnalyzeEntitiesRequest,CallSettings)
+            // Additional: AnalyzeEntitiesAsync(AnalyzeEntitiesRequest,CancellationToken)
             // Create client
             LanguageServiceClient languageServiceClient = await LanguageServiceClient.CreateAsync();
             // Initialize request argument(s)
@@ -186,6 +188,7 @@ namespace Google.Cloud.Language.V1.Snippets
         public async Task AnalyzeEntitySentimentAsync_RequestObject()
         {
             // Snippet: AnalyzeEntitySentimentAsync(AnalyzeEntitySentimentRequest,CallSettings)
+            // Additional: AnalyzeEntitySentimentAsync(AnalyzeEntitySentimentRequest,CancellationToken)
             // Create client
             LanguageServiceClient languageServiceClient = await LanguageServiceClient.CreateAsync();
             // Initialize request argument(s)
@@ -247,6 +250,7 @@ namespace Google.Cloud.Language.V1.Snippets
         public async Task AnalyzeSyntaxAsync_RequestObject()
         {
             // Snippet: AnalyzeSyntaxAsync(AnalyzeSyntaxRequest,CallSettings)
+            // Additional: AnalyzeSyntaxAsync(AnalyzeSyntaxRequest,CancellationToken)
             // Create client
             LanguageServiceClient languageServiceClient = await LanguageServiceClient.CreateAsync();
             // Initialize request argument(s)
@@ -306,6 +310,7 @@ namespace Google.Cloud.Language.V1.Snippets
         public async Task ClassifyTextAsync_RequestObject()
         {
             // Snippet: ClassifyTextAsync(ClassifyTextRequest,CallSettings)
+            // Additional: ClassifyTextAsync(ClassifyTextRequest,CancellationToken)
             // Create client
             LanguageServiceClient languageServiceClient = await LanguageServiceClient.CreateAsync();
             // Initialize request argument(s)
@@ -369,6 +374,7 @@ namespace Google.Cloud.Language.V1.Snippets
         public async Task AnnotateTextAsync_RequestObject()
         {
             // Snippet: AnnotateTextAsync(AnnotateTextRequest,CallSettings)
+            // Additional: AnnotateTextAsync(AnnotateTextRequest,CancellationToken)
             // Create client
             LanguageServiceClient languageServiceClient = await LanguageServiceClient.CreateAsync();
             // Initialize request argument(s)

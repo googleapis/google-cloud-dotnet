@@ -213,6 +213,7 @@ namespace Google.Cloud.Bigtable.Admin.V2.Snippets
         public async Task GetInstanceAsync_RequestObject()
         {
             // Snippet: GetInstanceAsync(GetInstanceRequest,CallSettings)
+            // Additional: GetInstanceAsync(GetInstanceRequest,CancellationToken)
             // Create client
             BigtableInstanceAdminClient bigtableInstanceAdminClient = await BigtableInstanceAdminClient.CreateAsync();
             // Initialize request argument(s)
@@ -272,6 +273,7 @@ namespace Google.Cloud.Bigtable.Admin.V2.Snippets
         public async Task ListInstancesAsync_RequestObject()
         {
             // Snippet: ListInstancesAsync(ListInstancesRequest,CallSettings)
+            // Additional: ListInstancesAsync(ListInstancesRequest,CancellationToken)
             // Create client
             BigtableInstanceAdminClient bigtableInstanceAdminClient = await BigtableInstanceAdminClient.CreateAsync();
             // Initialize request argument(s)
@@ -470,6 +472,7 @@ namespace Google.Cloud.Bigtable.Admin.V2.Snippets
         public async Task DeleteInstanceAsync_RequestObject()
         {
             // Snippet: DeleteInstanceAsync(DeleteInstanceRequest,CallSettings)
+            // Additional: DeleteInstanceAsync(DeleteInstanceRequest,CancellationToken)
             // Create client
             BigtableInstanceAdminClient bigtableInstanceAdminClient = await BigtableInstanceAdminClient.CreateAsync();
             // Initialize request argument(s)
@@ -672,6 +675,7 @@ namespace Google.Cloud.Bigtable.Admin.V2.Snippets
         public async Task GetClusterAsync_RequestObject()
         {
             // Snippet: GetClusterAsync(GetClusterRequest,CallSettings)
+            // Additional: GetClusterAsync(GetClusterRequest,CancellationToken)
             // Create client
             BigtableInstanceAdminClient bigtableInstanceAdminClient = await BigtableInstanceAdminClient.CreateAsync();
             // Initialize request argument(s)
@@ -731,6 +735,7 @@ namespace Google.Cloud.Bigtable.Admin.V2.Snippets
         public async Task ListClustersAsync_RequestObject()
         {
             // Snippet: ListClustersAsync(ListClustersRequest,CallSettings)
+            // Additional: ListClustersAsync(ListClustersRequest,CancellationToken)
             // Create client
             BigtableInstanceAdminClient bigtableInstanceAdminClient = await BigtableInstanceAdminClient.CreateAsync();
             // Initialize request argument(s)
@@ -864,6 +869,7 @@ namespace Google.Cloud.Bigtable.Admin.V2.Snippets
         public async Task DeleteClusterAsync_RequestObject()
         {
             // Snippet: DeleteClusterAsync(DeleteClusterRequest,CallSettings)
+            // Additional: DeleteClusterAsync(DeleteClusterRequest,CancellationToken)
             // Create client
             BigtableInstanceAdminClient bigtableInstanceAdminClient = await BigtableInstanceAdminClient.CreateAsync();
             // Initialize request argument(s)
@@ -927,6 +933,7 @@ namespace Google.Cloud.Bigtable.Admin.V2.Snippets
         public async Task CreateAppProfileAsync_RequestObject()
         {
             // Snippet: CreateAppProfileAsync(CreateAppProfileRequest,CallSettings)
+            // Additional: CreateAppProfileAsync(CreateAppProfileRequest,CancellationToken)
             // Create client
             BigtableInstanceAdminClient bigtableInstanceAdminClient = await BigtableInstanceAdminClient.CreateAsync();
             // Initialize request argument(s)
@@ -990,6 +997,7 @@ namespace Google.Cloud.Bigtable.Admin.V2.Snippets
         public async Task GetAppProfileAsync_RequestObject()
         {
             // Snippet: GetAppProfileAsync(GetAppProfileRequest,CallSettings)
+            // Additional: GetAppProfileAsync(GetAppProfileRequest,CancellationToken)
             // Create client
             BigtableInstanceAdminClient bigtableInstanceAdminClient = await BigtableInstanceAdminClient.CreateAsync();
             // Initialize request argument(s)
@@ -1370,6 +1378,7 @@ namespace Google.Cloud.Bigtable.Admin.V2.Snippets
         public async Task DeleteAppProfileAsync_RequestObject()
         {
             // Snippet: DeleteAppProfileAsync(DeleteAppProfileRequest,CallSettings)
+            // Additional: DeleteAppProfileAsync(DeleteAppProfileRequest,CancellationToken)
             // Create client
             BigtableInstanceAdminClient bigtableInstanceAdminClient = await BigtableInstanceAdminClient.CreateAsync();
             // Initialize request argument(s)
@@ -1431,6 +1440,7 @@ namespace Google.Cloud.Bigtable.Admin.V2.Snippets
         public async Task GetIamPolicyAsync_RequestObject()
         {
             // Snippet: GetIamPolicyAsync(GetIamPolicyRequest,CallSettings)
+            // Additional: GetIamPolicyAsync(GetIamPolicyRequest,CancellationToken)
             // Create client
             BigtableInstanceAdminClient bigtableInstanceAdminClient = await BigtableInstanceAdminClient.CreateAsync();
             // Initialize request argument(s)
@@ -1492,6 +1502,7 @@ namespace Google.Cloud.Bigtable.Admin.V2.Snippets
         public async Task SetIamPolicyAsync_RequestObject()
         {
             // Snippet: SetIamPolicyAsync(SetIamPolicyRequest,CallSettings)
+            // Additional: SetIamPolicyAsync(SetIamPolicyRequest,CancellationToken)
             // Create client
             BigtableInstanceAdminClient bigtableInstanceAdminClient = await BigtableInstanceAdminClient.CreateAsync();
             // Initialize request argument(s)
@@ -1555,6 +1566,7 @@ namespace Google.Cloud.Bigtable.Admin.V2.Snippets
         public async Task TestIamPermissionsAsync_RequestObject()
         {
             // Snippet: TestIamPermissionsAsync(TestIamPermissionsRequest,CallSettings)
+            // Additional: TestIamPermissionsAsync(TestIamPermissionsRequest,CancellationToken)
             // Create client
             BigtableInstanceAdminClient bigtableInstanceAdminClient = await BigtableInstanceAdminClient.CreateAsync();
             // Initialize request argument(s)

@@ -71,6 +71,7 @@ namespace Google.Cloud.PubSub.V1.Snippets
         public async Task CreateSubscriptionAsync_RequestObject()
         {
             // Snippet: CreateSubscriptionAsync(Subscription,CallSettings)
+            // Additional: CreateSubscriptionAsync(Subscription,CancellationToken)
             // Create client
             SubscriberServiceApiClient subscriberServiceApiClient = await SubscriberServiceApiClient.CreateAsync();
             // Initialize request argument(s)
@@ -132,6 +133,7 @@ namespace Google.Cloud.PubSub.V1.Snippets
         public async Task GetSubscriptionAsync_RequestObject()
         {
             // Snippet: GetSubscriptionAsync(GetSubscriptionRequest,CallSettings)
+            // Additional: GetSubscriptionAsync(GetSubscriptionRequest,CancellationToken)
             // Create client
             SubscriberServiceApiClient subscriberServiceApiClient = await SubscriberServiceApiClient.CreateAsync();
             // Initialize request argument(s)
@@ -164,6 +166,7 @@ namespace Google.Cloud.PubSub.V1.Snippets
         public async Task UpdateSubscriptionAsync_RequestObject()
         {
             // Snippet: UpdateSubscriptionAsync(UpdateSubscriptionRequest,CallSettings)
+            // Additional: UpdateSubscriptionAsync(UpdateSubscriptionRequest,CancellationToken)
             // Create client
             SubscriberServiceApiClient subscriberServiceApiClient = await SubscriberServiceApiClient.CreateAsync();
             // Initialize request argument(s)
@@ -423,6 +426,7 @@ namespace Google.Cloud.PubSub.V1.Snippets
         public async Task DeleteSubscriptionAsync_RequestObject()
         {
             // Snippet: DeleteSubscriptionAsync(DeleteSubscriptionRequest,CallSettings)
+            // Additional: DeleteSubscriptionAsync(DeleteSubscriptionRequest,CancellationToken)
             // Create client
             SubscriberServiceApiClient subscriberServiceApiClient = await SubscriberServiceApiClient.CreateAsync();
             // Initialize request argument(s)
@@ -486,6 +490,7 @@ namespace Google.Cloud.PubSub.V1.Snippets
         public async Task ModifyAckDeadlineAsync_RequestObject()
         {
             // Snippet: ModifyAckDeadlineAsync(ModifyAckDeadlineRequest,CallSettings)
+            // Additional: ModifyAckDeadlineAsync(ModifyAckDeadlineRequest,CancellationToken)
             // Create client
             SubscriberServiceApiClient subscriberServiceApiClient = await SubscriberServiceApiClient.CreateAsync();
             // Initialize request argument(s)
@@ -551,6 +556,7 @@ namespace Google.Cloud.PubSub.V1.Snippets
         public async Task AcknowledgeAsync_RequestObject()
         {
             // Snippet: AcknowledgeAsync(AcknowledgeRequest,CallSettings)
+            // Additional: AcknowledgeAsync(AcknowledgeRequest,CancellationToken)
             // Create client
             SubscriberServiceApiClient subscriberServiceApiClient = await SubscriberServiceApiClient.CreateAsync();
             // Initialize request argument(s)
@@ -616,6 +622,7 @@ namespace Google.Cloud.PubSub.V1.Snippets
         public async Task PullAsync_RequestObject()
         {
             // Snippet: PullAsync(PullRequest,CallSettings)
+            // Additional: PullAsync(PullRequest,CancellationToken)
             // Create client
             SubscriberServiceApiClient subscriberServiceApiClient = await SubscriberServiceApiClient.CreateAsync();
             // Initialize request argument(s)
@@ -726,6 +733,7 @@ namespace Google.Cloud.PubSub.V1.Snippets
         public async Task ModifyPushConfigAsync_RequestObject()
         {
             // Snippet: ModifyPushConfigAsync(ModifyPushConfigRequest,CallSettings)
+            // Additional: ModifyPushConfigAsync(ModifyPushConfigRequest,CancellationToken)
             // Create client
             SubscriberServiceApiClient subscriberServiceApiClient = await SubscriberServiceApiClient.CreateAsync();
             // Initialize request argument(s)
@@ -971,6 +979,7 @@ namespace Google.Cloud.PubSub.V1.Snippets
         public async Task CreateSnapshotAsync_RequestObject()
         {
             // Snippet: CreateSnapshotAsync(CreateSnapshotRequest,CallSettings)
+            // Additional: CreateSnapshotAsync(CreateSnapshotRequest,CancellationToken)
             // Create client
             SubscriberServiceApiClient subscriberServiceApiClient = await SubscriberServiceApiClient.CreateAsync();
             // Initialize request argument(s)
@@ -1005,6 +1014,7 @@ namespace Google.Cloud.PubSub.V1.Snippets
         public async Task UpdateSnapshotAsync_RequestObject()
         {
             // Snippet: UpdateSnapshotAsync(UpdateSnapshotRequest,CallSettings)
+            // Additional: UpdateSnapshotAsync(UpdateSnapshotRequest,CancellationToken)
             // Create client
             SubscriberServiceApiClient subscriberServiceApiClient = await SubscriberServiceApiClient.CreateAsync();
             // Initialize request argument(s)
@@ -1088,6 +1098,7 @@ namespace Google.Cloud.PubSub.V1.Snippets
         public async Task DeleteSnapshotAsync_RequestObject()
         {
             // Snippet: DeleteSnapshotAsync(DeleteSnapshotRequest,CallSettings)
+            // Additional: DeleteSnapshotAsync(DeleteSnapshotRequest,CancellationToken)
             // Create client
             SubscriberServiceApiClient subscriberServiceApiClient = await SubscriberServiceApiClient.CreateAsync();
             // Initialize request argument(s)
@@ -1120,6 +1131,7 @@ namespace Google.Cloud.PubSub.V1.Snippets
         public async Task SeekAsync_RequestObject()
         {
             // Snippet: SeekAsync(SeekRequest,CallSettings)
+            // Additional: SeekAsync(SeekRequest,CancellationToken)
             // Create client
             SubscriberServiceApiClient subscriberServiceApiClient = await SubscriberServiceApiClient.CreateAsync();
             // Initialize request argument(s)
@@ -1181,6 +1193,7 @@ namespace Google.Cloud.PubSub.V1.Snippets
         public async Task SetIamPolicyAsync_RequestObject()
         {
             // Snippet: SetIamPolicyAsync(SetIamPolicyRequest,CallSettings)
+            // Additional: SetIamPolicyAsync(SetIamPolicyRequest,CancellationToken)
             // Create client
             SubscriberServiceApiClient subscriberServiceApiClient = await SubscriberServiceApiClient.CreateAsync();
             // Initialize request argument(s)
@@ -1242,6 +1255,7 @@ namespace Google.Cloud.PubSub.V1.Snippets
         public async Task GetIamPolicyAsync_RequestObject()
         {
             // Snippet: GetIamPolicyAsync(GetIamPolicyRequest,CallSettings)
+            // Additional: GetIamPolicyAsync(GetIamPolicyRequest,CancellationToken)
             // Create client
             SubscriberServiceApiClient subscriberServiceApiClient = await SubscriberServiceApiClient.CreateAsync();
             // Initialize request argument(s)
@@ -1303,6 +1317,7 @@ namespace Google.Cloud.PubSub.V1.Snippets
         public async Task TestIamPermissionsAsync_RequestObject()
         {
             // Snippet: TestIamPermissionsAsync(TestIamPermissionsRequest,CallSettings)
+            // Additional: TestIamPermissionsAsync(TestIamPermissionsRequest,CancellationToken)
             // Create client
             SubscriberServiceApiClient subscriberServiceApiClient = await SubscriberServiceApiClient.CreateAsync();
             // Initialize request argument(s)

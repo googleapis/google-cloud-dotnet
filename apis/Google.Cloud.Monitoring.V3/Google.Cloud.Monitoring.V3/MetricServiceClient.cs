@@ -670,6 +670,24 @@ namespace Google.Cloud.Monitoring.V3
         /// <param name="request">
         /// The request object containing all of the parameters for the API call.
         /// </param>
+        /// <param name="cancellationToken">
+        /// A <see cref="CancellationToken"/> to use for this RPC.
+        /// </param>
+        /// <returns>
+        /// A Task containing the RPC response.
+        /// </returns>
+        public virtual Task<MonitoredResourceDescriptor> GetMonitoredResourceDescriptorAsync(
+            GetMonitoredResourceDescriptorRequest request,
+            CancellationToken cancellationToken) => GetMonitoredResourceDescriptorAsync(
+                request,
+                CallSettings.FromCancellationToken(cancellationToken));
+
+        /// <summary>
+        /// Gets a single monitored resource descriptor. This method does not require a Stackdriver account.
+        /// </summary>
+        /// <param name="request">
+        /// The request object containing all of the parameters for the API call.
+        /// </param>
         /// <param name="callSettings">
         /// If not null, applies overrides to this RPC call.
         /// </param>
@@ -883,6 +901,24 @@ namespace Google.Cloud.Monitoring.V3
         /// <param name="request">
         /// The request object containing all of the parameters for the API call.
         /// </param>
+        /// <param name="cancellationToken">
+        /// A <see cref="CancellationToken"/> to use for this RPC.
+        /// </param>
+        /// <returns>
+        /// A Task containing the RPC response.
+        /// </returns>
+        public virtual Task<MetricDescriptor> GetMetricDescriptorAsync(
+            GetMetricDescriptorRequest request,
+            CancellationToken cancellationToken) => GetMetricDescriptorAsync(
+                request,
+                CallSettings.FromCancellationToken(cancellationToken));
+
+        /// <summary>
+        /// Gets a single metric descriptor. This method does not require a Stackdriver account.
+        /// </summary>
+        /// <param name="request">
+        /// The request object containing all of the parameters for the API call.
+        /// </param>
         /// <param name="callSettings">
         /// If not null, applies overrides to this RPC call.
         /// </param>
@@ -1012,6 +1048,26 @@ namespace Google.Cloud.Monitoring.V3
         /// <param name="request">
         /// The request object containing all of the parameters for the API call.
         /// </param>
+        /// <param name="cancellationToken">
+        /// A <see cref="CancellationToken"/> to use for this RPC.
+        /// </param>
+        /// <returns>
+        /// A Task containing the RPC response.
+        /// </returns>
+        public virtual Task<MetricDescriptor> CreateMetricDescriptorAsync(
+            CreateMetricDescriptorRequest request,
+            CancellationToken cancellationToken) => CreateMetricDescriptorAsync(
+                request,
+                CallSettings.FromCancellationToken(cancellationToken));
+
+        /// <summary>
+        /// Creates a new metric descriptor.
+        /// User-created metric descriptors define
+        /// [custom metrics](/monitoring/custom-metrics).
+        /// </summary>
+        /// <param name="request">
+        /// The request object containing all of the parameters for the API call.
+        /// </param>
         /// <param name="callSettings">
         /// If not null, applies overrides to this RPC call.
         /// </param>
@@ -1113,6 +1169,25 @@ namespace Google.Cloud.Monitoring.V3
         {
             throw new NotImplementedException();
         }
+
+        /// <summary>
+        /// Deletes a metric descriptor. Only user-created
+        /// [custom metrics](/monitoring/custom-metrics) can be deleted.
+        /// </summary>
+        /// <param name="request">
+        /// The request object containing all of the parameters for the API call.
+        /// </param>
+        /// <param name="cancellationToken">
+        /// A <see cref="CancellationToken"/> to use for this RPC.
+        /// </param>
+        /// <returns>
+        /// A Task that completes when the RPC has completed.
+        /// </returns>
+        public virtual Task DeleteMetricDescriptorAsync(
+            DeleteMetricDescriptorRequest request,
+            CancellationToken cancellationToken) => DeleteMetricDescriptorAsync(
+                request,
+                CallSettings.FromCancellationToken(cancellationToken));
 
         /// <summary>
         /// Deletes a metric descriptor. Only user-created
@@ -1400,6 +1475,27 @@ namespace Google.Cloud.Monitoring.V3
         {
             throw new NotImplementedException();
         }
+
+        /// <summary>
+        /// Creates or adds data to one or more time series.
+        /// The response is empty if all time series in the request were written.
+        /// If any time series could not be written, a corresponding failure message is
+        /// included in the error response.
+        /// </summary>
+        /// <param name="request">
+        /// The request object containing all of the parameters for the API call.
+        /// </param>
+        /// <param name="cancellationToken">
+        /// A <see cref="CancellationToken"/> to use for this RPC.
+        /// </param>
+        /// <returns>
+        /// A Task that completes when the RPC has completed.
+        /// </returns>
+        public virtual Task CreateTimeSeriesAsync(
+            CreateTimeSeriesRequest request,
+            CancellationToken cancellationToken) => CreateTimeSeriesAsync(
+                request,
+                CallSettings.FromCancellationToken(cancellationToken));
 
         /// <summary>
         /// Creates or adds data to one or more time series.

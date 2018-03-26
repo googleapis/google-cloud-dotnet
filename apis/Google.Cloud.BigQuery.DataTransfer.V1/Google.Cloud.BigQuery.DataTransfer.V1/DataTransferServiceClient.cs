@@ -710,6 +710,25 @@ namespace Google.Cloud.BigQuery.DataTransfer.V1
         /// <param name="request">
         /// The request object containing all of the parameters for the API call.
         /// </param>
+        /// <param name="cancellationToken">
+        /// A <see cref="CancellationToken"/> to use for this RPC.
+        /// </param>
+        /// <returns>
+        /// A Task containing the RPC response.
+        /// </returns>
+        public virtual Task<DataSource> GetDataSourceAsync(
+            GetDataSourceRequest request,
+            CancellationToken cancellationToken) => GetDataSourceAsync(
+                request,
+                CallSettings.FromCancellationToken(cancellationToken));
+
+        /// <summary>
+        /// Retrieves a supported data source and returns its settings,
+        /// which can be used for UI rendering.
+        /// </summary>
+        /// <param name="request">
+        /// The request object containing all of the parameters for the API call.
+        /// </param>
         /// <param name="callSettings">
         /// If not null, applies overrides to this RPC call.
         /// </param>
@@ -942,6 +961,24 @@ namespace Google.Cloud.BigQuery.DataTransfer.V1
         /// <param name="request">
         /// The request object containing all of the parameters for the API call.
         /// </param>
+        /// <param name="cancellationToken">
+        /// A <see cref="CancellationToken"/> to use for this RPC.
+        /// </param>
+        /// <returns>
+        /// A Task containing the RPC response.
+        /// </returns>
+        public virtual Task<TransferConfig> CreateTransferConfigAsync(
+            CreateTransferConfigRequest request,
+            CancellationToken cancellationToken) => CreateTransferConfigAsync(
+                request,
+                CallSettings.FromCancellationToken(cancellationToken));
+
+        /// <summary>
+        /// Creates a new data transfer configuration.
+        /// </summary>
+        /// <param name="request">
+        /// The request object containing all of the parameters for the API call.
+        /// </param>
         /// <param name="callSettings">
         /// If not null, applies overrides to this RPC call.
         /// </param>
@@ -1060,6 +1097,25 @@ namespace Google.Cloud.BigQuery.DataTransfer.V1
         /// <param name="request">
         /// The request object containing all of the parameters for the API call.
         /// </param>
+        /// <param name="cancellationToken">
+        /// A <see cref="CancellationToken"/> to use for this RPC.
+        /// </param>
+        /// <returns>
+        /// A Task containing the RPC response.
+        /// </returns>
+        public virtual Task<TransferConfig> UpdateTransferConfigAsync(
+            UpdateTransferConfigRequest request,
+            CancellationToken cancellationToken) => UpdateTransferConfigAsync(
+                request,
+                CallSettings.FromCancellationToken(cancellationToken));
+
+        /// <summary>
+        /// Updates a data transfer configuration.
+        /// All fields must be set, even if they are not updated.
+        /// </summary>
+        /// <param name="request">
+        /// The request object containing all of the parameters for the API call.
+        /// </param>
         /// <param name="callSettings">
         /// If not null, applies overrides to this RPC call.
         /// </param>
@@ -1163,6 +1219,25 @@ namespace Google.Cloud.BigQuery.DataTransfer.V1
         /// <param name="request">
         /// The request object containing all of the parameters for the API call.
         /// </param>
+        /// <param name="cancellationToken">
+        /// A <see cref="CancellationToken"/> to use for this RPC.
+        /// </param>
+        /// <returns>
+        /// A Task that completes when the RPC has completed.
+        /// </returns>
+        public virtual Task DeleteTransferConfigAsync(
+            DeleteTransferConfigRequest request,
+            CancellationToken cancellationToken) => DeleteTransferConfigAsync(
+                request,
+                CallSettings.FromCancellationToken(cancellationToken));
+
+        /// <summary>
+        /// Deletes a data transfer configuration,
+        /// including any associated transfer runs and logs.
+        /// </summary>
+        /// <param name="request">
+        /// The request object containing all of the parameters for the API call.
+        /// </param>
         /// <param name="callSettings">
         /// If not null, applies overrides to this RPC call.
         /// </param>
@@ -1254,6 +1329,24 @@ namespace Google.Cloud.BigQuery.DataTransfer.V1
         {
             throw new NotImplementedException();
         }
+
+        /// <summary>
+        /// Returns information about a data transfer config.
+        /// </summary>
+        /// <param name="request">
+        /// The request object containing all of the parameters for the API call.
+        /// </param>
+        /// <param name="cancellationToken">
+        /// A <see cref="CancellationToken"/> to use for this RPC.
+        /// </param>
+        /// <returns>
+        /// A Task containing the RPC response.
+        /// </returns>
+        public virtual Task<TransferConfig> GetTransferConfigAsync(
+            GetTransferConfigRequest request,
+            CancellationToken cancellationToken) => GetTransferConfigAsync(
+                request,
+                CallSettings.FromCancellationToken(cancellationToken));
 
         /// <summary>
         /// Returns information about a data transfer config.
@@ -1519,6 +1612,27 @@ namespace Google.Cloud.BigQuery.DataTransfer.V1
         /// <param name="request">
         /// The request object containing all of the parameters for the API call.
         /// </param>
+        /// <param name="cancellationToken">
+        /// A <see cref="CancellationToken"/> to use for this RPC.
+        /// </param>
+        /// <returns>
+        /// A Task containing the RPC response.
+        /// </returns>
+        public virtual Task<ScheduleTransferRunsResponse> ScheduleTransferRunsAsync(
+            ScheduleTransferRunsRequest request,
+            CancellationToken cancellationToken) => ScheduleTransferRunsAsync(
+                request,
+                CallSettings.FromCancellationToken(cancellationToken));
+
+        /// <summary>
+        /// Creates transfer runs for a time range [start_time, end_time].
+        /// For each date - or whatever granularity the data source supports - in the
+        /// range, one transfer run is created.
+        /// Note that runs are created per UTC time in the time range.
+        /// </summary>
+        /// <param name="request">
+        /// The request object containing all of the parameters for the API call.
+        /// </param>
         /// <param name="callSettings">
         /// If not null, applies overrides to this RPC call.
         /// </param>
@@ -1620,6 +1734,24 @@ namespace Google.Cloud.BigQuery.DataTransfer.V1
         /// <param name="request">
         /// The request object containing all of the parameters for the API call.
         /// </param>
+        /// <param name="cancellationToken">
+        /// A <see cref="CancellationToken"/> to use for this RPC.
+        /// </param>
+        /// <returns>
+        /// A Task containing the RPC response.
+        /// </returns>
+        public virtual Task<TransferRun> GetTransferRunAsync(
+            GetTransferRunRequest request,
+            CancellationToken cancellationToken) => GetTransferRunAsync(
+                request,
+                CallSettings.FromCancellationToken(cancellationToken));
+
+        /// <summary>
+        /// Returns information about the particular transfer run.
+        /// </summary>
+        /// <param name="request">
+        /// The request object containing all of the parameters for the API call.
+        /// </param>
         /// <param name="callSettings">
         /// If not null, applies overrides to this RPC call.
         /// </param>
@@ -1711,6 +1843,24 @@ namespace Google.Cloud.BigQuery.DataTransfer.V1
         {
             throw new NotImplementedException();
         }
+
+        /// <summary>
+        /// Deletes the specified transfer run.
+        /// </summary>
+        /// <param name="request">
+        /// The request object containing all of the parameters for the API call.
+        /// </param>
+        /// <param name="cancellationToken">
+        /// A <see cref="CancellationToken"/> to use for this RPC.
+        /// </param>
+        /// <returns>
+        /// A Task that completes when the RPC has completed.
+        /// </returns>
+        public virtual Task DeleteTransferRunAsync(
+            DeleteTransferRunRequest request,
+            CancellationToken cancellationToken) => DeleteTransferRunAsync(
+                request,
+                CallSettings.FromCancellationToken(cancellationToken));
 
         /// <summary>
         /// Deletes the specified transfer run.
@@ -2043,6 +2193,29 @@ namespace Google.Cloud.BigQuery.DataTransfer.V1
         {
             throw new NotImplementedException();
         }
+
+        /// <summary>
+        /// Returns true if valid credentials exist for the given data source and
+        /// requesting user.
+        /// Some data sources doesn't support service account, so we need to talk to
+        /// them on behalf of the end user. This API just checks whether we have OAuth
+        /// token for the particular user, which is a pre-requisite before user can
+        /// create a transfer config.
+        /// </summary>
+        /// <param name="request">
+        /// The request object containing all of the parameters for the API call.
+        /// </param>
+        /// <param name="cancellationToken">
+        /// A <see cref="CancellationToken"/> to use for this RPC.
+        /// </param>
+        /// <returns>
+        /// A Task containing the RPC response.
+        /// </returns>
+        public virtual Task<CheckValidCredsResponse> CheckValidCredsAsync(
+            CheckValidCredsRequest request,
+            CancellationToken cancellationToken) => CheckValidCredsAsync(
+                request,
+                CallSettings.FromCancellationToken(cancellationToken));
 
         /// <summary>
         /// Returns true if valid credentials exist for the given data source and

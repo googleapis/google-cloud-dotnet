@@ -64,6 +64,7 @@ namespace Google.Cloud.ErrorReporting.V1Beta1.Snippets
         public async Task GetGroupAsync_RequestObject()
         {
             // Snippet: GetGroupAsync(GetGroupRequest,CallSettings)
+            // Additional: GetGroupAsync(GetGroupRequest,CancellationToken)
             // Create client
             ErrorGroupServiceClient errorGroupServiceClient = await ErrorGroupServiceClient.CreateAsync();
             // Initialize request argument(s)
@@ -123,6 +124,7 @@ namespace Google.Cloud.ErrorReporting.V1Beta1.Snippets
         public async Task UpdateGroupAsync_RequestObject()
         {
             // Snippet: UpdateGroupAsync(UpdateGroupRequest,CallSettings)
+            // Additional: UpdateGroupAsync(UpdateGroupRequest,CancellationToken)
             // Create client
             ErrorGroupServiceClient errorGroupServiceClient = await ErrorGroupServiceClient.CreateAsync();
             // Initialize request argument(s)

@@ -246,6 +246,7 @@ namespace Google.Cloud.Monitoring.V3.Snippets
         public async Task GetNotificationChannelDescriptorAsync_RequestObject()
         {
             // Snippet: GetNotificationChannelDescriptorAsync(GetNotificationChannelDescriptorRequest,CallSettings)
+            // Additional: GetNotificationChannelDescriptorAsync(GetNotificationChannelDescriptorRequest,CancellationToken)
             // Create client
             NotificationChannelServiceClient notificationChannelServiceClient = await NotificationChannelServiceClient.CreateAsync();
             // Initialize request argument(s)
@@ -487,6 +488,7 @@ namespace Google.Cloud.Monitoring.V3.Snippets
         public async Task GetNotificationChannelAsync_RequestObject()
         {
             // Snippet: GetNotificationChannelAsync(GetNotificationChannelRequest,CallSettings)
+            // Additional: GetNotificationChannelAsync(GetNotificationChannelRequest,CancellationToken)
             // Create client
             NotificationChannelServiceClient notificationChannelServiceClient = await NotificationChannelServiceClient.CreateAsync();
             // Initialize request argument(s)
@@ -548,6 +550,7 @@ namespace Google.Cloud.Monitoring.V3.Snippets
         public async Task CreateNotificationChannelAsync_RequestObject()
         {
             // Snippet: CreateNotificationChannelAsync(CreateNotificationChannelRequest,CallSettings)
+            // Additional: CreateNotificationChannelAsync(CreateNotificationChannelRequest,CancellationToken)
             // Create client
             NotificationChannelServiceClient notificationChannelServiceClient = await NotificationChannelServiceClient.CreateAsync();
             // Initialize request argument(s)
@@ -611,6 +614,7 @@ namespace Google.Cloud.Monitoring.V3.Snippets
         public async Task UpdateNotificationChannelAsync_RequestObject()
         {
             // Snippet: UpdateNotificationChannelAsync(UpdateNotificationChannelRequest,CallSettings)
+            // Additional: UpdateNotificationChannelAsync(UpdateNotificationChannelRequest,CancellationToken)
             // Create client
             NotificationChannelServiceClient notificationChannelServiceClient = await NotificationChannelServiceClient.CreateAsync();
             // Initialize request argument(s)
@@ -672,6 +676,7 @@ namespace Google.Cloud.Monitoring.V3.Snippets
         public async Task DeleteNotificationChannelAsync_RequestObject()
         {
             // Snippet: DeleteNotificationChannelAsync(DeleteNotificationChannelRequest,CallSettings)
+            // Additional: DeleteNotificationChannelAsync(DeleteNotificationChannelRequest,CancellationToken)
             // Create client
             NotificationChannelServiceClient notificationChannelServiceClient = await NotificationChannelServiceClient.CreateAsync();
             // Initialize request argument(s)
