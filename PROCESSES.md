@@ -120,21 +120,16 @@ Releasing consists of five steps:
 
 - After the version number is committed, run `tagreleases.sh` from the
   root directory to tag all updated versions.
-- Run `buildrelease.sh` manually, specifying the commit that was
-  tagged. (`tagreleases.sh` outputs the command line to run)
-- Go into the `releasebuild/nuget` directory and push
-- Make sure you have a clone of the gh-pages branch, copy the
-  documentation from `releasebuild/docs/output/assembled` as the new
-  `docs` directory in the `gh-pages branch, commit and push.
+- Confirm that you wish to create the given tags.
+- A Jenkins build system will now notice the tags (after a short
+  delay; it checks periodically) and perform the rest of the build
+  and push process automatically.
+  - If you wish to perform a manual build, use the command line
+    displayed by `tagreleases.sh` to run `buildrelease.sh`, which
+    then displays final instructions for pushing to nuget.org and
+    updating the docs.
 
 Note that `tagreleases.sh` checks that there are no project
 references from APIs being released now to APIs that *aren't* being
 released. Without this check, it's possible for a released version
 to depend on unreleased changes.
-
-### Future process
-
-- Commit the new versions as before
-- Run `tagreleases.sh` as before
-- A build machine picks up the tags and performs all the remaining
-  steps with no manual intervention
