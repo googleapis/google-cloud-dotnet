@@ -101,7 +101,10 @@ namespace Google.Cloud.Bigtable.V2.GenerateClient
         internal static ExpressionStatementSyntax ToStatement(this ExpressionSyntax expression) =>
             ExpressionStatement(expression);
 
-        internal static MethodDeclarationSyntax WithBody(this MethodDeclarationSyntax method, ExpressionSyntax expressionBody) =>
+        internal static MethodDeclarationSyntax WithBodySafe(this MethodDeclarationSyntax method, ExpressionSyntax expressionBody) =>
             method.WithBody(null).WithExpressionBody(ArrowExpressionClause(expressionBody)).WithSemicolonToken(Token(SyntaxKind.SemicolonToken));
+
+        internal static MethodDeclarationSyntax WithBodySafe(this MethodDeclarationSyntax method, BlockSyntax block) =>
+            method.WithExpressionBody(null).WithSemicolonToken(Token(SyntaxKind.None)).WithBody(block);
     }
 }

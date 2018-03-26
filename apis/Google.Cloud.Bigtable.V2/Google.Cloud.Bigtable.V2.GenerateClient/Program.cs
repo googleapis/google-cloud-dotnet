@@ -192,7 +192,7 @@ namespace Google.Cloud.Bigtable.V2.GenerateClient
                         var asyncMethod = clientMethod.ToAsync();
                         userClientSyntax = userClientSyntax.AddMembers(asyncMethod);
 
-                        var clientImplSyncMethod = clientImplMethod.WithBody(
+                        var clientImplSyncMethod = clientImplMethod.WithBodySafe(
                             Task().Member("Run")
                                 .Invoke(Lambda(asyncMethod.Invoke(clientImplMethod.ParameterList.AsArguments())))
                                 .Member("ResultWithUnwrappedExceptions").Invoke());
@@ -362,7 +362,7 @@ namespace Google.Cloud.Bigtable.V2.GenerateClient
                         IdentifierName("ConvertResult").Invoke(
                             node.ParameterList.AsArguments().AddArgument(resultExpression));
                 }
-                node = node.WithBody(Block(
+                node = node.WithBodySafe(Block(
                     If(appProfileIdProperty.EqualTo(Null()),
                         appProfileIdProperty.AssignFrom(AppProfileIdFieldName).ToStatement()),
                     ReturnStatement(resultExpression)));
