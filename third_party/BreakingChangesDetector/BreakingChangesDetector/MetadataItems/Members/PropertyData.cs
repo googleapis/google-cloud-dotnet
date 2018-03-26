@@ -32,23 +32,31 @@ namespace BreakingChangesDetector.MetadataItems
     /// </summary>
     public class PropertyData : TypedMemberDataBase
     {
-        internal PropertyData(string name, MemberAccessibility accessibility, MemberFlags memberFlags, TypeData type, bool isTypeDynamic, MemberAccessibility? getMethodAccessibility, MemberAccessibility? setMethodAccessibility)
+        internal PropertyData(string name, Accessibility accessibility, MemberFlags memberFlags, TypeData type, bool isTypeDynamic, Accessibility? getMethodAccessibility, Accessibility? setMethodAccessibility)
             : base(name, accessibility, memberFlags, type, isTypeDynamic)
         {
             GetMethodAccessibility = getMethodAccessibility;
             SetMethodAccessibility = setMethodAccessibility;
         }
 
-        internal PropertyData(IPropertySymbol propertySymbol, MemberAccessibility? getAccessibility, MemberAccessibility? setAccessibility, DeclaringTypeData declaringType)
+        internal PropertyData(IPropertySymbol propertySymbol, DeclaringTypeData declaringType)
             : base(propertySymbol,
-            Utilities.GetLeastRestrictiveAccessibility(getAccessibility, setAccessibility),
             propertySymbol.Type,
             propertySymbol.IsPropertyTypeDynamic(),
             Utilities.GetMemberFlags(propertySymbol.GetMethod) | Utilities.GetMemberFlags(propertySymbol.SetMethod),
             declaringType)
         {
-            GetMethodAccessibility = getAccessibility;
-            SetMethodAccessibility = setAccessibility;
+            GetMethodAccessibility = propertySymbol.GetMethod?.DeclaredAccessibility;
+            if (GetMethodAccessibility?.IsPublicOrProtected() == false)
+            {
+                GetMethodAccessibility = null;
+            }
+
+            SetMethodAccessibility = propertySymbol.SetMethod?.DeclaredAccessibility;
+            if (SetMethodAccessibility?.IsPublicOrProtected() == false)
+            {
+                SetMethodAccessibility = null;
+            }
         }
 
         /// <inheritdoc/>
@@ -134,26 +142,14 @@ namespace BreakingChangesDetector.MetadataItems
             return new PropertyData(Name, Accessibility, MemberFlags, replacedType, IsTypeDynamic, GetMethodAccessibility, SetMethodAccessibility);
         }
 
-        internal static PropertyData PropertyDataFromReflection(IPropertySymbol propertySymbol, DeclaringTypeData declaringType)
-        {
-            var getAccessibility = propertySymbol.GetMethod.GetAccessibility();
-            var setAccessibility = propertySymbol.SetMethod.GetAccessibility();
-            if (getAccessibility == null && setAccessibility == null)
-            {
-                return null;
-            }
-
-            return new PropertyData(propertySymbol, getAccessibility, setAccessibility, declaringType);
-        }
-
         /// <summary>
         /// Gets the accessibility of the get accessor, or null if it is not externally visible.
         /// </summary>
-        public MemberAccessibility? GetMethodAccessibility { get; }
+        public Accessibility? GetMethodAccessibility { get; }
 
         /// <summary>
         /// Gets the accessibility of the set accessor, or null if it is not externally visible.
         /// </summary>
-        public MemberAccessibility? SetMethodAccessibility { get; }
+        public Accessibility? SetMethodAccessibility { get; }
     }
 }

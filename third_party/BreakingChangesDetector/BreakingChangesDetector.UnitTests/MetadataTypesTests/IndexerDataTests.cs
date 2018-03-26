@@ -23,8 +23,9 @@
     SOFTWARE.
 */
 
-using Xunit;
 using BreakingChangesDetector.MetadataItems;
+using Microsoft.CodeAnalysis;
+using Xunit;
 
 namespace BreakingChangesDetector.UnitTests.MetadataTypesTests
 {
@@ -39,9 +40,9 @@ namespace BreakingChangesDetector.UnitTests.MetadataTypesTests
 
             var members = typeData.GetMembers("Item");
             AssertX.Equal(3, members.Count, "Incorrect number of indexers returned.");
-            AssertX.Equal(MemberAccessibility.Protected, ((IndexerData)members[0]).Accessibility, "Incorrect MemberAccessibility.");
-            AssertX.Equal(MemberAccessibility.Public, ((IndexerData)members[1]).Accessibility, "Incorrect MemberAccessibility.");
-            AssertX.Equal(MemberAccessibility.Public, ((IndexerData)members[2]).Accessibility, "Incorrect MemberAccessibility.");
+            AssertX.Equal(Accessibility.Protected, ((IndexerData)members[0]).Accessibility, "Incorrect Accessibility.");
+            AssertX.Equal(Accessibility.Public, ((IndexerData)members[1]).Accessibility, "Incorrect Accessibility.");
+            AssertX.Equal(Accessibility.Public, ((IndexerData)members[2]).Accessibility, "Incorrect Accessibility.");
         }
 
         [Fact]
@@ -94,13 +95,13 @@ namespace BreakingChangesDetector.UnitTests.MetadataTypesTests
             var members = typeData.GetMembers("Item");
 
             var readOnlyIndexer = (IndexerData)members[0];
-            AssertX.Equal(MemberAccessibility.Protected, readOnlyIndexer.GetMethodAccessibility, "The GetMethodAccessibility of the read only property is incorrect.");
+            AssertX.Equal(Accessibility.Protected, readOnlyIndexer.GetMethodAccessibility, "The GetMethodAccessibility of the read only property is incorrect.");
 
             var writeOnlyIndexer = (IndexerData)members[1];
             AssertX.Equal(null, writeOnlyIndexer.GetMethodAccessibility, "The GetMethodAccessibility of the write only property is incorrect.");
 
             var readWriteIndexer = (IndexerData)members[2];
-            AssertX.Equal(MemberAccessibility.Public, readWriteIndexer.GetMethodAccessibility, "The GetMethodAccessibility of the read write property is incorrect.");
+            AssertX.Equal(Accessibility.Public, readWriteIndexer.GetMethodAccessibility, "The GetMethodAccessibility of the read write property is incorrect.");
         }
 
         [Fact]
@@ -139,10 +140,10 @@ namespace BreakingChangesDetector.UnitTests.MetadataTypesTests
             AssertX.Equal(null, readOnlyIndexer.SetMethodAccessibility, "The SetMethodAccessibility of the read only property is incorrect.");
 
             var writeOnlyIndexer = (IndexerData)members[1];
-            AssertX.Equal(MemberAccessibility.Public, writeOnlyIndexer.SetMethodAccessibility, "The SetMethodAccessibility of the write only property is incorrect.");
+            AssertX.Equal(Accessibility.Public, writeOnlyIndexer.SetMethodAccessibility, "The SetMethodAccessibility of the write only property is incorrect.");
 
             var readWriteIndexer = (IndexerData)members[2];
-            AssertX.Equal(MemberAccessibility.Protected, readWriteIndexer.SetMethodAccessibility, "The SetMethodAccessibility of the read write property is incorrect.");
+            AssertX.Equal(Accessibility.Protected, readWriteIndexer.SetMethodAccessibility, "The SetMethodAccessibility of the read write property is incorrect.");
         }
 
         [Fact]

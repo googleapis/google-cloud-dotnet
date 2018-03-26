@@ -37,12 +37,12 @@ namespace BreakingChangesDetector.MetadataItems
         private Dictionary<byte, ArrayTypeData> _arrayTypes;
         private PointerTypeData _pointerType;
 
-        internal TypeData(string name, MemberAccessibility accessibility, MemberFlags memberFlags, TypeKind typeKind)
+        internal TypeData(string name, Accessibility accessibility, MemberFlags memberFlags, TypeKind typeKind)
             : base(name, accessibility, memberFlags) =>
             TypeKind = typeKind;
 
-        internal TypeData(ITypeSymbol typeSymbol, MemberAccessibility accessibility, DeclaringTypeData declaringType)
-            : base(typeSymbol, accessibility, Utilities.GetMemberFlags(typeSymbol), declaringType) =>
+        internal TypeData(ITypeSymbol typeSymbol, DeclaringTypeData declaringType)
+            : base(typeSymbol, Utilities.GetMemberFlags(typeSymbol), declaringType) =>
             TypeKind = Utilities.GetTypeKind(typeSymbol);
 
         /// <summary>
@@ -110,13 +110,7 @@ namespace BreakingChangesDetector.MetadataItems
             if (_arrayTypes.TryGetValue(rank, out ArrayTypeData arrayTypeData) == false)
             {
                 Debug.Assert(_arrayTypes.ContainsKey(rank) == false, "The array type was cached twice");
-                _arrayTypes[rank] = arrayTypeData = new ArrayTypeData(
-                    string.Format("{0}[{1}]", Name, new string(',', rank - 1)),
-                    MemberAccessibility.Public,
-                    MemberFlags.None,
-                    TypeKind.Class,
-                    this,
-                    rank);
+                _arrayTypes[rank] = arrayTypeData = new ArrayTypeData(this, rank);
             }
 
             return arrayTypeData;

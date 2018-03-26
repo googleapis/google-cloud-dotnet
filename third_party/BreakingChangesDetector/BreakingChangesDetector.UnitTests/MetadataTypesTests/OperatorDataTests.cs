@@ -23,8 +23,9 @@
     SOFTWARE.
 */
 
-using Xunit;
 using BreakingChangesDetector.MetadataItems;
+using Microsoft.CodeAnalysis;
+using Xunit;
 
 namespace BreakingChangesDetector.UnitTests.MetadataTypesTests
 {
@@ -37,7 +38,7 @@ namespace BreakingChangesDetector.UnitTests.MetadataTypesTests
             var context = MetadataResolutionContext.CreateFromTypes(t);
             var typeData = context.GetTypeDefinitionData(t);
             var member = typeData.GetMember("op_Addition");
-            AssertX.Equal(MemberAccessibility.Public, member.Accessibility, "Incorrect Accessibility");
+            AssertX.Equal(Accessibility.Public, member.Accessibility, "Incorrect Accessibility");
         }
 
         [Fact]

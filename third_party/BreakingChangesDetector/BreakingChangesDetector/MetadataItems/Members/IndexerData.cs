@@ -32,12 +32,12 @@ namespace BreakingChangesDetector.MetadataItems
     /// </summary>
     public sealed class IndexerData : PropertyData, IParameterizedItem
     {
-        internal IndexerData(string name, MemberAccessibility accessibility, MemberFlags memberFlags, TypeData type, bool isTypeDynamic, ParameterCollection parameters, MemberAccessibility? getMethodAccessibility, MemberAccessibility? setMethodAccessibility)
+        internal IndexerData(string name, Accessibility accessibility, MemberFlags memberFlags, TypeData type, bool isTypeDynamic, ParameterCollection parameters, Accessibility? getMethodAccessibility, Accessibility? setMethodAccessibility)
             : base(name, accessibility, memberFlags, type, isTypeDynamic, getMethodAccessibility, setMethodAccessibility) =>
             Parameters = parameters;
 
-        private IndexerData(IPropertySymbol propertySymbol, MemberAccessibility? getAccessibility, MemberAccessibility? setAccessibility, DeclaringTypeData declaringType)
-            : base(propertySymbol, getAccessibility, setAccessibility, declaringType) =>
+        internal IndexerData(IPropertySymbol propertySymbol, DeclaringTypeData declaringType)
+            : base(propertySymbol, declaringType) =>
             Parameters = new ParameterCollection(propertySymbol.Parameters, this);
 
         bool IParameterizedItem.IsEquivalentToNewMember(MemberDataBase newMember, AssemblyFamily newAssemblyFamily, bool ignoreNewOptionalParameters)
@@ -120,18 +120,6 @@ namespace BreakingChangesDetector.MetadataItems
             }
 
             return new IndexerData(Name, Accessibility, MemberFlags, replacedType, IsTypeDynamic, replacedParameters, GetMethodAccessibility, SetMethodAccessibility);
-        }
-
-        internal static IndexerData IndexerDataFromReflection(IPropertySymbol propertySymbol, DeclaringTypeData declaringType)
-        {
-            var getAccessibility = propertySymbol.GetMethod.GetAccessibility();
-            var setAccessibility = propertySymbol.SetMethod.GetAccessibility();
-            if (getAccessibility == null && setAccessibility == null)
-            {
-                return null;
-            }
-
-            return new IndexerData(propertySymbol, getAccessibility, setAccessibility, declaringType);
         }
 
         /// <summary>

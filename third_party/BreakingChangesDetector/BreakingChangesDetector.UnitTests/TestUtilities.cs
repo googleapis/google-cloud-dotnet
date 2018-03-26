@@ -122,7 +122,7 @@ namespace BreakingChangesDetector.UnitTests
                 return to.UnwrapNullable().IsImplicitlyAssignableFrom(from);
             }
 
-            // An implicit conversion from S? to to interfaces and base classes of S
+            // An implicit conversion from S? to interfaces and base classes of S
             if (from.IsNullable() && to.IsValueType == false)
             {
                 return to.IsImplicitlyAssignableFrom(from.UnwrapNullable());
@@ -137,11 +137,11 @@ namespace BreakingChangesDetector.UnitTests
         {
             var typeData = (TypeDefinitionData)typeDataBase;
             var member = typeData.GetMember(memberName);
-            AssertX.Equal(MemberAccessibility.Public, member.Accessibility, "Incorrect MemberAccessibility.");
+            AssertX.Equal(Accessibility.Public, member.Accessibility, "Incorrect Accessibility.");
             member = typeData.GetMember(memberName + "Protected");
-            AssertX.Equal(MemberAccessibility.Protected, member.Accessibility, "Incorrect MemberAccessibility.");
+            AssertX.Equal(Accessibility.Protected, member.Accessibility, "Incorrect Accessibility.");
             member = typeData.GetMember(memberName + "ProtectedInternal");
-            AssertX.Equal(MemberAccessibility.Protected, member.Accessibility, "Incorrect MemberAccessibility.");
+            AssertX.Equal(Accessibility.ProtectedOrInternal, member.Accessibility, "Incorrect Accessibility.");
         }
 
         public static void VerifyInstanceAndStaticMember<T>(TypeData typeDataBase, string memberName)

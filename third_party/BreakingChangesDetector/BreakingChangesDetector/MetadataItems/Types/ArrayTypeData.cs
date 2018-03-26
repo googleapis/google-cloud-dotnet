@@ -33,8 +33,8 @@ namespace BreakingChangesDetector.MetadataItems
     /// </summary>
     public sealed class ArrayTypeData : TypeWithElementData
     {
-        internal ArrayTypeData(string name, MemberAccessibility accessibility, MemberFlags memberFlags, TypeKind typeKind, TypeData elementType, byte arrayRank)
-            : base(name, accessibility, memberFlags, typeKind, elementType) =>
+        internal ArrayTypeData(TypeData elementType, byte arrayRank)
+            : base($"{elementType.Name}[{new string(',', arrayRank - 1)}]", Accessibility.Public, MemberFlags.None, TypeKind.Class, elementType) =>
             ArrayRank = arrayRank;
 
         internal override bool DoesMatch(MetadataItemBase other)
@@ -99,9 +99,7 @@ namespace BreakingChangesDetector.MetadataItems
                 return null;
             }
 
-            return
-                newElementType.GetArrayType(ArrayRank) ??
-                new ArrayTypeData(Name, Accessibility, MemberFlags, TypeKind, newElementType, ArrayRank);
+            return newElementType.GetArrayType(ArrayRank) ?? new ArrayTypeData(newElementType, ArrayRank);
         }
 
         internal override bool IsArray(out int rank, out TypeData elementType)
@@ -166,15 +164,7 @@ namespace BreakingChangesDetector.MetadataItems
                 return this;
             }
 
-            return
-                replacedElementType.GetArrayType(ArrayRank) ??
-                new ArrayTypeData(
-                    Name,
-                    Accessibility,
-                    MemberFlags,
-                    TypeKind,
-                    replacedElementType,
-                    ArrayRank);
+            return replacedElementType.GetArrayType(ArrayRank) ?? new ArrayTypeData(replacedElementType, ArrayRank);
         }
 
         /// <summary>

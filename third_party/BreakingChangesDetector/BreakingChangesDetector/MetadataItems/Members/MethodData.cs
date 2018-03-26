@@ -32,15 +32,15 @@ namespace BreakingChangesDetector.MetadataItems
     /// </summary>
     public sealed class MethodData : MethodDataBase, IGenericItem
     {
-        internal MethodData(string name, MemberAccessibility accessibility, MemberFlags memberFlags, TypeData type, bool isTypeDynamic, GenericTypeParameterCollection genericParameters, bool isExtensionMethod, ParameterCollection parameters)
+        internal MethodData(string name, Accessibility accessibility, MemberFlags memberFlags, TypeData type, bool isTypeDynamic, GenericTypeParameterCollection genericParameters, bool isExtensionMethod, ParameterCollection parameters)
             : base(name, accessibility, memberFlags, type, isTypeDynamic, parameters)
         {
             GenericParameters = genericParameters;
             IsExtensionMethod = isExtensionMethod;
         }
 
-        private MethodData(IMethodSymbol methodSymbol, MemberAccessibility accessibility, DeclaringTypeData declaringType)
-            : base(methodSymbol, accessibility, declaringType)
+        internal MethodData(IMethodSymbol methodSymbol, DeclaringTypeData declaringType)
+            : base(methodSymbol, declaringType)
         {
             if (methodSymbol.IsGenericMethod)
             {
@@ -135,17 +135,6 @@ namespace BreakingChangesDetector.MetadataItems
             }
 
             return new MethodData(Name, Accessibility, MemberFlags, replacedType, IsTypeDynamic, GenericParameters, IsExtensionMethod, replacedParameters);
-        }
-
-        internal static MemberDataBase MethodDataFromReflection(IMethodSymbol methodSymbol, DeclaringTypeData declaringType)
-        {
-            var accessibility = methodSymbol.GetAccessibility();
-            if (accessibility == null)
-            {
-                return null;
-            }
-
-            return new MethodData(methodSymbol, accessibility.Value, declaringType);
         }
 
         /// <summary>

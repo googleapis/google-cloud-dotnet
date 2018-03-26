@@ -45,7 +45,7 @@ namespace BreakingChangesDetector.MetadataItems
 
         private bool _isInIsEquivalentToNewMember;
 
-        internal GenericTypeParameterData(string name, MemberAccessibility accessibility, MemberFlags memberFlags, TypeKind typeKind, AssemblyData assembly, System.Reflection.GenericParameterAttributes genericParameterAttributes, int genericParameterPosition)
+        internal GenericTypeParameterData(string name, Accessibility accessibility, MemberFlags memberFlags, TypeKind typeKind, AssemblyData assembly, System.Reflection.GenericParameterAttributes genericParameterAttributes, int genericParameterPosition)
             : base(name, accessibility, memberFlags, typeKind)
         {
             AssemblyData = assembly;
@@ -54,7 +54,7 @@ namespace BreakingChangesDetector.MetadataItems
         }
 
         internal GenericTypeParameterData(ITypeParameterSymbol typeParameterSymbol, AssemblyData assembly)
-            : base(typeParameterSymbol, MemberAccessibility.Public, declaringType: null)
+            : base(typeParameterSymbol, declaringType: null)
         {
             AssemblyData = assembly;
 

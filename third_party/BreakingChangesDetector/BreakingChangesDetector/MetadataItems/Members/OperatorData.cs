@@ -34,11 +34,11 @@ namespace BreakingChangesDetector.MetadataItems
     {
         internal const string ImplicitCastOperatorName = "op_Implicit";
 
-        internal OperatorData(string name, MemberAccessibility accessibility, MemberFlags memberFlags, TypeData type, bool isTypeDynamic, ParameterCollection parameters)
+        internal OperatorData(string name, Accessibility accessibility, MemberFlags memberFlags, TypeData type, bool isTypeDynamic, ParameterCollection parameters)
             : base(name, accessibility, memberFlags, type, isTypeDynamic, parameters) { }
 
         internal OperatorData(IMethodSymbol methodSymbol, DeclaringTypeData declaringType)
-            : base(methodSymbol, MemberAccessibility.Public, declaringType) { }
+            : base(methodSymbol, declaringType) { }
 
         /// <inheritdoc/>
         public override void Accept(MetadataItemVisitor visitor) => visitor.VisitOperatorData(this);

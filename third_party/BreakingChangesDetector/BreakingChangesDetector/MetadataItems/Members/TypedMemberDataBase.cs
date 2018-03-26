@@ -34,15 +34,15 @@ namespace BreakingChangesDetector.MetadataItems
     public abstract class TypedMemberDataBase : MemberDataBase,
         ITypedItem
     {
-        internal TypedMemberDataBase(string name, MemberAccessibility accessibility, MemberFlags memberFlags, TypeData type, bool isTypeDynamic)
+        internal TypedMemberDataBase(string name, Accessibility accessibility, MemberFlags memberFlags, TypeData type, bool isTypeDynamic)
             : base(name, accessibility, memberFlags)
         {
             Type = type;
             IsTypeDynamic = isTypeDynamic;
         }
 
-        internal TypedMemberDataBase(ISymbol symbol, MemberAccessibility accessibility, ITypeSymbol type, bool isTypeDynamic, MemberFlags flags, DeclaringTypeData declaringType)
-            : base(symbol, accessibility, flags, declaringType)
+        internal TypedMemberDataBase(ISymbol symbol, ITypeSymbol type, bool isTypeDynamic, MemberFlags flags, DeclaringTypeData declaringType)
+            : base(symbol, flags, declaringType)
         {
             Type = declaringType.Context.GetTypeData(type);
             IsTypeDynamic = isTypeDynamic;

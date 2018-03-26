@@ -23,8 +23,9 @@
     SOFTWARE.
 */
 
-using Xunit;
 using BreakingChangesDetector.MetadataItems;
+using Microsoft.CodeAnalysis;
+using Xunit;
 
 namespace BreakingChangesDetector.UnitTests.MetadataTypesTests
 {
@@ -38,9 +39,9 @@ namespace BreakingChangesDetector.UnitTests.MetadataTypesTests
             var typeData = context.GetTypeDefinitionData(t);
             var members = typeData.GetMembers(".ctor");
             AssertX.Equal(3, members.Count, "Incorrect number of constructors returned.");
-            AssertX.Equal(MemberAccessibility.Public, ((ConstructorData)members[0]).Accessibility, "Incorrect MemberAccessibility.");
-            AssertX.Equal(MemberAccessibility.Protected, ((ConstructorData)members[1]).Accessibility, "Incorrect MemberAccessibility.");
-            AssertX.Equal(MemberAccessibility.Protected, ((ConstructorData)members[2]).Accessibility, "Incorrect MemberAccessibility.");
+            AssertX.Equal(Accessibility.Public, ((ConstructorData)members[0]).Accessibility, "Incorrect Accessibility.");
+            AssertX.Equal(Accessibility.Protected, ((ConstructorData)members[1]).Accessibility, "Incorrect Accessibility.");
+            AssertX.Equal(Accessibility.ProtectedOrInternal, ((ConstructorData)members[2]).Accessibility, "Incorrect Accessibility.");
         }
 
         [Fact]

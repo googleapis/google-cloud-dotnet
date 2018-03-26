@@ -24,6 +24,7 @@
 */
 
 using BreakingChangesDetector.MetadataItems;
+using Microsoft.CodeAnalysis;
 
 namespace BreakingChangesDetector.BreakingChanges.Definitions
 {
@@ -39,8 +40,8 @@ namespace BreakingChangesDetector.BreakingChanges.Definitions
             var oldMember = (MemberDataBase)context.OldItem;
             var newMember = (MemberDataBase)context.NewItem;
 
-            if (oldMember.Accessibility == MemberAccessibility.Public &&
-                newMember.Accessibility == MemberAccessibility.Protected)
+            if (oldMember.Accessibility == Accessibility.Public &&
+                newMember.Accessibility != Accessibility.Public)
             {
                 context.BreakingChanges.Add(new ChangedAccessibilityFromPublicToProtected(oldMember, newMember));
             }

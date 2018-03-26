@@ -73,7 +73,7 @@ namespace BreakingChangesDetector.MetadataItems
 
         private Dictionary<TypeDataSequence, ConstructedGenericTypeData> _constructedGenericTypes;
 
-        internal TypeDefinitionData(string name, MemberAccessibility accessibility, MemberFlags memberFlags, TypeKind typeKind, AssemblyData assembly, string fullName, TypeDefinitionFlags typeDefinitionFlags, bool delegateReturnTypeIsDynamic)
+        internal TypeDefinitionData(string name, Accessibility accessibility, MemberFlags memberFlags, TypeKind typeKind, AssemblyData assembly, string fullName, TypeDefinitionFlags typeDefinitionFlags, bool delegateReturnTypeIsDynamic)
             : base(name, accessibility, memberFlags, typeKind)
         {
             AssemblyData = assembly;
@@ -82,33 +82,20 @@ namespace BreakingChangesDetector.MetadataItems
             TypeDefinitionFlags = typeDefinitionFlags;
         }
 
-        internal TypeDefinitionData(INamedTypeSymbol typeSymbol, MemberAccessibility accessibility, DeclaringTypeData declaringType, AssemblyData assembly)
-            : base(typeSymbol, accessibility, declaringType)
+        internal TypeDefinitionData(INamedTypeSymbol typeSymbol, DeclaringTypeData declaringType, AssemblyData assembly)
+            : base(typeSymbol, declaringType)
         {
             AssemblyData = assembly;
 
             var typeFlags = TypeDefinitionFlags.None;
 
-            if (IsSealed == false)
+            // A type can only be inherited if it is unsealed, has at least one externally visible
+            // constructor, and any abstract members are also externally visible.
+            if (!IsSealed &&
+                typeSymbol.Methods().Any(c => c.MethodKind == MethodKind.Constructor && c.DeclaredAccessibility.IsPublicOrProtected()) &&
+                !typeSymbol.Members().Any(m => m.IsAbstract && !m.DeclaredAccessibility.IsPublicOrProtected()))
             {
-                // TODO_Refactor: we can probably clean this up
-
-                // A type can only be inherited if it has at least one externally visible constructor and any abstract members are also externally visible.
-                var canBeIherited = typeSymbol.Methods().Where(c => c.MethodKind == MethodKind.Constructor && c.GetAccessibility() != null).Any();
-                if (CanBeInherited)
-                {
-                    if (typeSymbol.Methods().Where(m => m.AssociatedSymbol == null && m.MethodKind != MethodKind.StaticConstructor && m.MethodKind != MethodKind.Destructor && m.MethodKind != MethodKind.Constructor && m.GetAccessibility() == null && m.IsAbstract).Any() ||
-                        typeSymbol.Events().Where(e => e.AddMethod.GetAccessibility() == null && e.AddMethod.IsAbstract).Any() ||
-                        typeSymbol.Properties().Where(p => p.GetMethod != null ? p.GetMethod.GetAccessibility() == null && p.GetMethod.IsAbstract : p.SetMethod.GetAccessibility() == null && p.SetMethod.IsAbstract).Any())
-                    {
-                        canBeIherited = false;
-                    }
-                }
-
-                if (canBeIherited)
-                {
-                    typeFlags |= TypeDefinitionFlags.CanBeInherited;
-                }
+                typeFlags |= TypeDefinitionFlags.CanBeInherited;
             }
 
             if (TypeKind == TypeKind.Enum)
@@ -527,7 +514,7 @@ namespace BreakingChangesDetector.MetadataItems
         /// </summary>
         public bool IsFlagsEnum => TypeDefinitionFlags.HasFlag(TypeDefinitionFlags.FlagsEnum);
 
-        internal bool HasPublicConstructors => GetMembers(".ctor").Any(c => c.Accessibility == MemberAccessibility.Public);
+        internal bool HasPublicConstructors => GetMembers(".ctor").Any(c => c.Accessibility == Accessibility.Public);
 
         internal string NameForComparison { get; private set; }
 

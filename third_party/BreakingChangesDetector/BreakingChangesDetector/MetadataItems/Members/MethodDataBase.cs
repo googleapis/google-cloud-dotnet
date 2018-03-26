@@ -33,12 +33,12 @@ namespace BreakingChangesDetector.MetadataItems
     public abstract class MethodDataBase : TypedMemberDataBase,
         IParameterizedItem
     {
-        internal MethodDataBase(string name, MemberAccessibility accessibility, MemberFlags memberFlags, TypeData type, bool isTypeDynamic, ParameterCollection parameters)
+        internal MethodDataBase(string name, Accessibility accessibility, MemberFlags memberFlags, TypeData type, bool isTypeDynamic, ParameterCollection parameters)
             : base(name, accessibility, memberFlags, type, isTypeDynamic) =>
             Parameters = parameters;
 
-        internal MethodDataBase(IMethodSymbol methodSymbol, MemberAccessibility accessibility, DeclaringTypeData declaringType)
-            : base(methodSymbol, accessibility, methodSymbol.ReturnType, methodSymbol.IsReturnTypeDynamic(), Utilities.GetMemberFlags(methodSymbol), declaringType) =>
+        internal MethodDataBase(IMethodSymbol methodSymbol, DeclaringTypeData declaringType)
+            : base(methodSymbol, methodSymbol.ReturnType, methodSymbol.IsReturnTypeDynamic(), Utilities.GetMemberFlags(methodSymbol), declaringType) =>
             Parameters = new ParameterCollection(methodSymbol.Parameters, this);
 
         /// <inheritdoc/>

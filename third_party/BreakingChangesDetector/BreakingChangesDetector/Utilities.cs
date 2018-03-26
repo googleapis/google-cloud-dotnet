@@ -171,25 +171,6 @@ namespace BreakingChangesDetector
             return string.Format("({0}){1}", unqualifiedName, rawValue);
         }
 
-        public static MemberAccessibility? GetAccessibility(this ISymbol symbol)
-        {
-            if (symbol == null)
-            {
-                return null;
-            }
-            switch (symbol.DeclaredAccessibility)
-            {
-                case Accessibility.NotApplicable:
-                case Accessibility.Public:
-                    return MemberAccessibility.Public;
-                case Accessibility.ProtectedAndInternal:
-                case Accessibility.ProtectedOrInternal:
-                case Accessibility.Protected:
-                    return MemberAccessibility.Protected;
-            }
-            return null;
-        }
-
         public static GenericTypeParameterCollection GetGenericParameters(INamedTypeSymbol namedTypeSymbol, MemberDataBase declaringMember)
         {
             // TODO_Refactor: Since Roslyn requires this but Mono.Cecil did not, perhaps we can redesign things so we don't have to do this.
@@ -227,22 +208,6 @@ namespace BreakingChangesDetector
 
                 return genericParameter;
             }));
-        }
-
-        public static MemberAccessibility GetLeastRestrictiveAccessibility(MemberAccessibility? a, MemberAccessibility? b)
-        {
-            if (a == MemberAccessibility.Public || b == MemberAccessibility.Public)
-            {
-                return MemberAccessibility.Public;
-            }
-
-            if (a == MemberAccessibility.Protected || b == MemberAccessibility.Protected)
-            {
-                return MemberAccessibility.Protected;
-            }
-
-            Debug.Fail("Unknown MemberAccessibility: " + (a ?? b));
-            return MemberAccessibility.Protected;
         }
 
         public static MemberFlags GetMemberFlags(IMethodSymbol methodSymbol)
@@ -436,6 +401,19 @@ namespace BreakingChangesDetector
 
         public static bool IsNullable(this ITypeSymbol typeSymbol) =>
             typeSymbol is INamedTypeSymbol namedTypeSymbol && namedTypeSymbol.ConstructedFrom.EqualsType(typeof(Nullable<>));
+
+        public static bool IsPublicOrProtected(this Accessibility accessibility)
+        {
+            switch (accessibility)
+            {
+                case Accessibility.NotApplicable:
+                case Accessibility.Public:
+                case Accessibility.ProtectedOrInternal:
+                case Accessibility.Protected:
+                    return true;
+            }
+            return false;
+        }
 
         public static bool TryGetNullableUnderlyingType(this ITypeSymbol type, out ITypeSymbol underlyingType)
         {

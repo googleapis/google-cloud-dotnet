@@ -336,8 +336,7 @@ namespace BreakingChangesDetector.MetadataItems
                 return GetGenericTypeParameterData(typeParameterSymbol);
             }
 
-            var accessibility = typeSymbol.GetAccessibility();
-            if (accessibility == null)
+            if (!typeSymbol.DeclaredAccessibility.IsPublicOrProtected())
             {
                 return null;
             }
@@ -482,7 +481,7 @@ namespace BreakingChangesDetector.MetadataItems
                     typeParameterAction(genericParameter);
                 }
 
-                foreach (var method in namedTypeSymbol.Methods().Where(m => !m.TypeParameters.IsEmpty && m.GetAccessibility() != null))
+                foreach (var method in namedTypeSymbol.Methods().Where(m => !m.TypeParameters.IsEmpty && m.DeclaredAccessibility.IsPublicOrProtected()))
                 {
                     foreach (var genericParameter in method.TypeParameters)
                     {
@@ -583,13 +582,13 @@ namespace BreakingChangesDetector.MetadataItems
 
         private void RegisterType(INamedTypeSymbol namedTypeSymbol, TypeDefinitionData declaringType)
         {
-            var accessibility = namedTypeSymbol.GetAccessibility();
-            if (accessibility == null)
+            var accessibility = namedTypeSymbol.DeclaredAccessibility;
+            if (!accessibility.IsPublicOrProtected())
             {
                 return;
             }
 
-            var typeDefinitionData = new TypeDefinitionData(namedTypeSymbol, accessibility.Value, declaringType, this);
+            var typeDefinitionData = new TypeDefinitionData(namedTypeSymbol, declaringType, this);
             _typeDefinitions.Add(namedTypeSymbol.GetFullName(), typeDefinitionData);
 
             foreach (var typeParameterSymbol in namedTypeSymbol.TypeParameters)
@@ -597,7 +596,7 @@ namespace BreakingChangesDetector.MetadataItems
                 _typeOwnedGenericParameters.Add(Tuple.Create(namedTypeSymbol.GetFullName(), typeParameterSymbol.Ordinal), new GenericTypeParameterData(typeParameterSymbol, this));
             }
 
-            foreach (var method in namedTypeSymbol.Methods().Where(m => !m.TypeParameters.IsEmpty && m.GetAccessibility() != null))
+            foreach (var method in namedTypeSymbol.Methods().Where(m => !m.TypeParameters.IsEmpty && m.DeclaredAccessibility.IsPublicOrProtected()))
             {
                 var signature = new MethodSignature(Context, method);
                 foreach (var typeParameterSymbol in method.TypeParameters)

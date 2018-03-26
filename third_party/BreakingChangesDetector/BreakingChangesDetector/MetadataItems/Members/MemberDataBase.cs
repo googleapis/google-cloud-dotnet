@@ -43,19 +43,19 @@ namespace BreakingChangesDetector.MetadataItems
 
         internal static readonly List<MemberDataBase> EmptyList = new List<MemberDataBase>();
 
-        internal MemberDataBase(string name, MemberAccessibility accessibility, MemberFlags memberFlags)
+        internal MemberDataBase(string name, Accessibility accessibility, MemberFlags memberFlags)
         {
             Accessibility = accessibility;
             MemberFlags = memberFlags;
             Name = name;
         }
 
-        internal MemberDataBase(ISymbol underlyingSymbol, MemberAccessibility accessibility, MemberFlags memberFlags, DeclaringTypeData declaringType)
+        internal MemberDataBase(ISymbol symbol, MemberFlags memberFlags, DeclaringTypeData declaringType)
         {
-            Accessibility = accessibility;
+            Accessibility = symbol.DeclaredAccessibility;
             ContainingType = declaringType;
             MemberFlags = memberFlags;
-            Name = underlyingSymbol.MetadataName;
+            Name = symbol.MetadataName;
         }
 
         public override MetadataResolutionContext Context => AssemblyData?.Context;
@@ -172,6 +172,11 @@ namespace BreakingChangesDetector.MetadataItems
 
         internal static MemberDataBase MemberDataFromReflection(ISymbol symbol, DeclaringTypeData declaringType)
         {
+            if (!symbol.DeclaredAccessibility.IsPublicOrProtected())
+            {
+                return null;
+            }
+
             // TODO: Use a symbol visitor instead?
             switch (symbol.Kind)
             {
@@ -188,13 +193,15 @@ namespace BreakingChangesDetector.MetadataItems
                             {
                                 return null;
                             }
-                            return ConstructorData.ConstructorDataFromReflection(method, declaringType);
+                            return new ConstructorData(method, declaringType);
                         }
 
                         if (method.MethodKind == MethodKind.UserDefinedOperator ||
                             method.MethodKind == MethodKind.Conversion)
                         {
-                            if (method.DeclaredAccessibility == Microsoft.CodeAnalysis.Accessibility.Public && method.IsStatic && method.Name.StartsWith("op_"))
+                            if (method.DeclaredAccessibility == Accessibility.Public &&
+                                method.IsStatic &&
+                                method.Name.StartsWith("op_"))
                             {
                                 return new OperatorData(method, declaringType);
                             }
@@ -203,7 +210,7 @@ namespace BreakingChangesDetector.MetadataItems
                         if (method.MethodKind == MethodKind.Ordinary ||
                             method.MethodKind == MethodKind.DelegateInvoke)
                         {
-                            return MethodData.MethodDataFromReflection(method, declaringType);
+                            return new MethodData(method, declaringType);
                         }
 
                         return null;
@@ -221,24 +228,24 @@ namespace BreakingChangesDetector.MetadataItems
 
                         if (field.IsConst)
                         {
-                            return ConstantData.ConstantDataFromReflection(field, declaringType);
+                            return new ConstantData(field, declaringType);
                         }
 
-                        return FieldData.FieldDataFromReflection(field, declaringType);
+                        return new FieldData(field, declaringType);
                     }
 
                 case SymbolKind.Event:
-                    return EventData.EventDataFromReflection((IEventSymbol)symbol, declaringType);
+                    return new EventData((IEventSymbol)symbol, declaringType);
 
                 case SymbolKind.Property:
                     {
                         var property = (IPropertySymbol)symbol;
                         if (property.IsIndexer)
                         {
-                            return IndexerData.IndexerDataFromReflection(property, declaringType);
+                            return new IndexerData(property, declaringType);
                         }
 
-                        return PropertyData.PropertyDataFromReflection(property, declaringType);
+                        return new PropertyData(property, declaringType);
                     }
 
                 default:
@@ -256,9 +263,9 @@ namespace BreakingChangesDetector.MetadataItems
         internal abstract MemberDataBase ReplaceGenericTypeParameters(GenericTypeParameterCollection genericParameters, GenericTypeArgumentCollection genericArguments);
 
         /// <summary>
-        /// Gets the external accessibility of the member, which indicates whether it is public or protected.
+        /// Gets the declared accessibility of the member.
         /// </summary>
-        public MemberAccessibility Accessibility { get; }
+        public Accessibility Accessibility { get; }
 
         /// <summary>
         /// Gets the <see cref="T:AssemblyData"/> representing the assembly in which the member is defined.

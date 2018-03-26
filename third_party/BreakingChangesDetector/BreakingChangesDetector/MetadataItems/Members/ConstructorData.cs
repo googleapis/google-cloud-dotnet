@@ -33,12 +33,12 @@ namespace BreakingChangesDetector.MetadataItems
     public sealed class ConstructorData : MemberDataBase,
         IParameterizedItem
     {
-        internal ConstructorData(string name, MemberAccessibility accessibility, MemberFlags memberFlags, ParameterCollection parameters)
+        internal ConstructorData(string name, Accessibility accessibility, MemberFlags memberFlags, ParameterCollection parameters)
             : base(name, accessibility, memberFlags) =>
             Parameters = parameters;
 
-        private ConstructorData(IMethodSymbol methodSymbol, MemberAccessibility accessibility, DeclaringTypeData declaringType)
-            : base(methodSymbol, accessibility, Utilities.GetMemberFlags(methodSymbol), declaringType) =>
+        internal ConstructorData(IMethodSymbol methodSymbol, DeclaringTypeData declaringType)
+            : base(methodSymbol, Utilities.GetMemberFlags(methodSymbol), declaringType) =>
             Parameters = new ParameterCollection(methodSymbol.Parameters, this);
 
         bool IParameterizedItem.IsEquivalentToNewMember(MemberDataBase newMember, AssemblyFamily newAssemblyFamily, bool ignoreNewOptionalParameters)
@@ -119,17 +119,6 @@ namespace BreakingChangesDetector.MetadataItems
             }
 
             return new ConstructorData(Name, Accessibility, MemberFlags, replacedParameters);
-        }
-
-        internal static ConstructorData ConstructorDataFromReflection(IMethodSymbol methodSymbol, DeclaringTypeData declaringType)
-        {
-            var accessibility = methodSymbol.GetAccessibility();
-            if (accessibility == null)
-            {
-                return null;
-            }
-
-            return new ConstructorData(methodSymbol, accessibility.Value, declaringType);
         }
 
         /// <summary>

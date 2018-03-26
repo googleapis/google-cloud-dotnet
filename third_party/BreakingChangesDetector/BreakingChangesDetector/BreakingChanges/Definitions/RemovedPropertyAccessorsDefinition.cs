@@ -24,6 +24,7 @@
 */
 
 using BreakingChangesDetector.MetadataItems;
+using Microsoft.CodeAnalysis;
 
 namespace BreakingChangesDetector.BreakingChanges.Definitions
 {
@@ -39,15 +40,16 @@ namespace BreakingChangesDetector.BreakingChanges.Definitions
             var oldProperty = (PropertyData)context.OldItem;
             var newProperty = (PropertyData)context.NewItem;
 
+            // TODO: What about protected accessors that are made internal/private. This doesn't seem to check for it. Do we handle it somewhere else?
             if ((oldProperty.GetMethodAccessibility != null && newProperty.GetMethodAccessibility == null) ||
-                (oldProperty.Accessibility == newProperty.Accessibility && oldProperty.GetMethodAccessibility == MemberAccessibility.Public && newProperty.GetMethodAccessibility == MemberAccessibility.Protected))
+                (oldProperty.Accessibility == newProperty.Accessibility && oldProperty.GetMethodAccessibility == Accessibility.Public && newProperty.GetMethodAccessibility != Accessibility.Public))
             {
                 context.BreakingChanges.Add(new RemovedPropertyAccessors(oldProperty, newProperty));
                 return;
             }
 
             if ((oldProperty.SetMethodAccessibility != null && newProperty.SetMethodAccessibility == null) ||
-                (oldProperty.Accessibility == newProperty.Accessibility && oldProperty.SetMethodAccessibility == MemberAccessibility.Public && newProperty.SetMethodAccessibility == MemberAccessibility.Protected))
+                (oldProperty.Accessibility == newProperty.Accessibility && oldProperty.SetMethodAccessibility == Accessibility.Public && newProperty.SetMethodAccessibility != Accessibility.Public))
             {
                 context.BreakingChanges.Add(new RemovedPropertyAccessors(oldProperty, newProperty));
             }

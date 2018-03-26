@@ -27,25 +27,6 @@ using System;
 
 namespace BreakingChangesDetector.MetadataItems
 {
-    // TODO_Refactor: Is this needed?
-    /// <summary>
-    /// Represents the various externally visible accessibilities available for members.
-    /// </summary>
-    public enum MemberAccessibility : byte
-    {
-        // Note: these are ordered so we can compare them: Protected < Public
-
-        /// <summary>
-        /// A member is publicly visible to derived types in external assemblies.
-        /// </summary>
-        Protected = 0,
-
-        /// <summary>
-        /// A member is publicly visible to external assemblies.
-        /// </summary>
-        Public = 1,
-    }
-
     /// <summary>
     /// Represents the various boolean options available on members.
     /// </summary>

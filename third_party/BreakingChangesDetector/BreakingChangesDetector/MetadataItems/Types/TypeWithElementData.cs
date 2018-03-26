@@ -32,7 +32,7 @@ namespace BreakingChangesDetector.MetadataItems
     /// </summary>
     public abstract class TypeWithElementData : TypeData
     {
-        internal TypeWithElementData(string name, MemberAccessibility accessibility, MemberFlags memberFlags, TypeKind typeKind, TypeData elementType)
+        internal TypeWithElementData(string name, Accessibility accessibility, MemberFlags memberFlags, TypeKind typeKind, TypeData elementType)
             : base(name, accessibility, memberFlags, typeKind) =>
             ElementType = elementType;
 
