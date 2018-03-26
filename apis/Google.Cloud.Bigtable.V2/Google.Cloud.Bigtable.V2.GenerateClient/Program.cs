@@ -33,6 +33,9 @@ namespace Google.Cloud.Bigtable.V2.GenerateClient
     {
         private const string AppProfileIdFieldName = "_appProfileId";
         private const string AppProfileIdPropertyName = "AppProfileId";
+        private const string CallSettingsTypeName = "CallSettings";
+        private const string CancellationTokenParameterName = "cancellationToken";
+        private const string CancellationTokenTypeName = "CancellationToken";
         private const string GetUnderlyingClientMethodName = "GetUnderlyingClient";
 
         /// <summary>
@@ -153,6 +156,7 @@ namespace Google.Cloud.Bigtable.V2.GenerateClient
             var generator = SyntaxGenerator.GetGenerator(project.GetDocument(syntaxTree));
             var requestMethodRewriter = new RequestMethodRewriter(semanticModel);
             var requestMethodToImplRewriter = new RequestMethodToImplRewriter();
+            var convertToAsyncCancellationTokenOverload = new ConvertToAsyncCancellationTokenOverloadRewriter();
 
             var userClientSyntax =
                 (ClassDeclarationSyntax)generator.ClassDeclaration(
@@ -179,31 +183,38 @@ namespace Google.Cloud.Bigtable.V2.GenerateClient
                     continue;
                 }
 
-                if (method.Parameters[0].Type.Name.EndsWith("Request"))
+                if (method.Parameters.Length == 2 &&
+                    method.Parameters[0].Type.Name.EndsWith("Request"))
                 {
                     var clientMethod = (MethodDeclarationSyntax)requestMethodRewriter.Visit(methodSyntax);
                     userClientSyntax = userClientSyntax.AddMembers(clientMethod);
 
-                    var clientImplMethod = (MethodDeclarationSyntax)requestMethodToImplRewriter.Visit(clientMethod);
-
-                    if (s_customStreamMethods.TryGetValue(method.Name, out var customStreamMethodInfo) &&
-                        customStreamMethodInfo.SplitSyncAndAsync)
+                    if (method.Parameters[1].Type.Name.EndsWith("CallSettings"))
                     {
-                        var asyncMethod = clientMethod.ToAsync();
-                        userClientSyntax = userClientSyntax.AddMembers(asyncMethod);
+                        var clientImplMethod = (MethodDeclarationSyntax)requestMethodToImplRewriter.Visit(clientMethod);
 
-                        var clientImplSyncMethod = clientImplMethod.WithBodySafe(
-                            Task().Member("Run")
-                                .Invoke(Lambda(asyncMethod.Invoke(clientImplMethod.ParameterList.AsArguments())))
-                                .Member("ResultWithUnwrappedExceptions").Invoke());
-                        userClientImplSyntax = userClientImplSyntax.AddMembers(clientImplSyncMethod);
+                        if (s_customStreamMethods.TryGetValue(method.Name, out var customStreamMethodInfo) &&
+                            customStreamMethodInfo.SplitSyncAndAsync)
+                        {
+                            var asyncMethod = clientMethod.ToAsync();
+                            userClientSyntax = userClientSyntax.AddMembers(asyncMethod);
 
-                        var clientImplAsyncMethod = clientImplMethod.ToAsync();
-                        userClientImplSyntax = userClientImplSyntax.AddMembers(clientImplAsyncMethod);
-                    }
-                    else
-                    {
-                        userClientImplSyntax = userClientImplSyntax.AddMembers(clientImplMethod);
+                            var asyncMethodWithCancellationToken = (MethodDeclarationSyntax)convertToAsyncCancellationTokenOverload.Visit(asyncMethod);
+                            userClientSyntax = userClientSyntax.AddMembers(asyncMethodWithCancellationToken);
+
+                            var clientImplSyncMethod = clientImplMethod.WithBodySafe(
+                                Task().Member("Run")
+                                    .Invoke(Lambda(asyncMethod.Invoke(clientImplMethod.ParameterList.AsArguments())))
+                                    .Member("ResultWithUnwrappedExceptions").Invoke());
+                            userClientImplSyntax = userClientImplSyntax.AddMembers(clientImplSyncMethod);
+
+                            var clientImplAsyncMethod = clientImplMethod.ToAsync();
+                            userClientImplSyntax = userClientImplSyntax.AddMembers(clientImplAsyncMethod);
+                        }
+                        else
+                        {
+                            userClientImplSyntax = userClientImplSyntax.AddMembers(clientImplMethod);
+                        }
                     }
                 }
             }
@@ -240,6 +251,82 @@ namespace Google.Cloud.Bigtable.V2.GenerateClient
                 return 4;
             }
             return 0;
+        }
+
+        /// <summary>
+        /// Rewriter which takes a second pass at a split async method (<see cref="CustomStreamMethodInfo.SplitSyncAndAsync"/>)
+        /// to convert the (request, callSettings) overload into a (request, cancellationToken) overload which delegates to the
+        /// original.
+        /// </summary>
+        private class ConvertToAsyncCancellationTokenOverloadRewriter : CSharpSyntaxRewriter
+        {
+            private ParameterSyntax _callSettingsParameterSyntax;
+
+            public ConvertToAsyncCancellationTokenOverloadRewriter() : base(visitIntoStructuredTrivia: true) { }
+
+            public override SyntaxNode VisitMethodDeclaration(MethodDeclarationSyntax node)
+            {
+                var requestParameterSyntax = node.ParameterList.Parameters[0];
+                _callSettingsParameterSyntax = node.ParameterList.Parameters[1];
+
+                node = (MethodDeclarationSyntax)base.VisitMethodDeclaration(node);
+
+                // Replace the body with an expression that delegated to the original method with a CallSettings created from cancellation token.
+                node = node.WithBodySafe(
+                    node.Invoke(
+                        IdentifierName(requestParameterSyntax.Identifier),
+                        IdentifierName(CallSettingsTypeName).Member("FromCancellationToken").Invoke(IdentifierName(CancellationTokenParameterName))));
+
+                return node;
+            }
+
+            public override SyntaxNode VisitParameter(ParameterSyntax node)
+            {
+                node = (ParameterSyntax)base.VisitParameter(node);
+
+                if (node == _callSettingsParameterSyntax)
+                {
+                    // Replace the CallSettings parameter with a CancellationToken parameter which doesn't have a default value.
+                    node = node
+                        .WithType(ParseTypeName(CancellationTokenTypeName)).WithLeadingTrivia(node.Type.GetLeadingTrivia())
+                        .WithIdentifier(Identifier(CancellationTokenParameterName))
+                        .WithDefault(null);
+                }
+                return node;
+            }
+
+            public override SyntaxNode VisitXmlElement(XmlElementSyntax node)
+            {
+                var originalNode = node;
+                node = (XmlElementSyntax)base.VisitXmlElement(node);
+
+                if (originalNode.StartTag.Name.LocalName.ToString() == "param" &&
+                    originalNode.StartTag.Attributes.FirstOrDefault() is XmlNameAttributeSyntax paramNameSyntax &&
+                    paramNameSyntax.Identifier.ToString() == _callSettingsParameterSyntax.Identifier.ToString())
+                {
+                    // Replace the parameter doc comments for the cancellation token.
+                    node = node.WithContent(List(new XmlNodeSyntax[] {
+                        XmlText("A "),
+                        SeeTag(TypeCref(ParseTypeName(CancellationTokenTypeName))),
+                        XmlText(XmlTextLiteral(" to use for this RPC.")) }));
+                }
+
+                return node;
+            }
+
+            public override SyntaxNode VisitXmlNameAttribute(XmlNameAttributeSyntax node)
+            {
+                node = (XmlNameAttributeSyntax)base.VisitXmlNameAttribute(node);
+
+                if (((XmlElementStartTagSyntax)node.Parent).Name.LocalName.ToString() == "param" &&
+                    node.Identifier.ToString() == _callSettingsParameterSyntax.Identifier.ToString())
+                {
+                    // Replace the parameter doc comment name attribute with the name of the new parameter.
+                    node = node.WithIdentifier(IdentifierName(CancellationTokenParameterName));
+                }
+
+                return node;
+            }
         }
 
         /// <summary>
