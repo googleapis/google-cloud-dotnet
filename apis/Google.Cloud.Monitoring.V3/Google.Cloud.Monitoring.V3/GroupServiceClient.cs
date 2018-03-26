@@ -535,6 +535,24 @@ namespace Google.Cloud.Monitoring.V3
         /// <param name="request">
         /// The request object containing all of the parameters for the API call.
         /// </param>
+        /// <param name="cancellationToken">
+        /// A <see cref="CancellationToken"/> to use for this RPC.
+        /// </param>
+        /// <returns>
+        /// A Task containing the RPC response.
+        /// </returns>
+        public virtual Task<Group> GetGroupAsync(
+            GetGroupRequest request,
+            CancellationToken cancellationToken) => GetGroupAsync(
+                request,
+                CallSettings.FromCancellationToken(cancellationToken));
+
+        /// <summary>
+        /// Gets a single group.
+        /// </summary>
+        /// <param name="request">
+        /// The request object containing all of the parameters for the API call.
+        /// </param>
         /// <param name="callSettings">
         /// If not null, applies overrides to this RPC call.
         /// </param>
@@ -654,6 +672,24 @@ namespace Google.Cloud.Monitoring.V3
         /// <param name="request">
         /// The request object containing all of the parameters for the API call.
         /// </param>
+        /// <param name="cancellationToken">
+        /// A <see cref="CancellationToken"/> to use for this RPC.
+        /// </param>
+        /// <returns>
+        /// A Task containing the RPC response.
+        /// </returns>
+        public virtual Task<Group> CreateGroupAsync(
+            CreateGroupRequest request,
+            CancellationToken cancellationToken) => CreateGroupAsync(
+                request,
+                CallSettings.FromCancellationToken(cancellationToken));
+
+        /// <summary>
+        /// Creates a new group.
+        /// </summary>
+        /// <param name="request">
+        /// The request object containing all of the parameters for the API call.
+        /// </param>
         /// <param name="callSettings">
         /// If not null, applies overrides to this RPC call.
         /// </param>
@@ -760,6 +796,25 @@ namespace Google.Cloud.Monitoring.V3
         /// <param name="request">
         /// The request object containing all of the parameters for the API call.
         /// </param>
+        /// <param name="cancellationToken">
+        /// A <see cref="CancellationToken"/> to use for this RPC.
+        /// </param>
+        /// <returns>
+        /// A Task containing the RPC response.
+        /// </returns>
+        public virtual Task<Group> UpdateGroupAsync(
+            UpdateGroupRequest request,
+            CancellationToken cancellationToken) => UpdateGroupAsync(
+                request,
+                CallSettings.FromCancellationToken(cancellationToken));
+
+        /// <summary>
+        /// Updates an existing group.
+        /// You can change any group attributes except `name`.
+        /// </summary>
+        /// <param name="request">
+        /// The request object containing all of the parameters for the API call.
+        /// </param>
         /// <param name="callSettings">
         /// If not null, applies overrides to this RPC call.
         /// </param>
@@ -851,6 +906,24 @@ namespace Google.Cloud.Monitoring.V3
         {
             throw new NotImplementedException();
         }
+
+        /// <summary>
+        /// Deletes an existing group.
+        /// </summary>
+        /// <param name="request">
+        /// The request object containing all of the parameters for the API call.
+        /// </param>
+        /// <param name="cancellationToken">
+        /// A <see cref="CancellationToken"/> to use for this RPC.
+        /// </param>
+        /// <returns>
+        /// A Task that completes when the RPC has completed.
+        /// </returns>
+        public virtual Task DeleteGroupAsync(
+            DeleteGroupRequest request,
+            CancellationToken cancellationToken) => DeleteGroupAsync(
+                request,
+                CallSettings.FromCancellationToken(cancellationToken));
 
         /// <summary>
         /// Deletes an existing group.

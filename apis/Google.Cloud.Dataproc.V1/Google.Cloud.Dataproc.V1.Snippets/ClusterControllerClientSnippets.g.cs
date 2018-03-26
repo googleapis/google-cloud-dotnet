@@ -425,6 +425,7 @@ namespace Google.Cloud.Dataproc.V1.Snippets
         public async Task GetClusterAsync_RequestObject()
         {
             // Snippet: GetClusterAsync(GetClusterRequest,CallSettings)
+            // Additional: GetClusterAsync(GetClusterRequest,CancellationToken)
             // Create client
             ClusterControllerClient clusterControllerClient = await ClusterControllerClient.CreateAsync();
             // Initialize request argument(s)

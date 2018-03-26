@@ -66,6 +66,7 @@ namespace Google.Cloud.Container.V1.Snippets
         public async Task ListClustersAsync_RequestObject()
         {
             // Snippet: ListClustersAsync(ListClustersRequest,CallSettings)
+            // Additional: ListClustersAsync(ListClustersRequest,CancellationToken)
             // Create client
             ClusterManagerClient clusterManagerClient = await ClusterManagerClient.CreateAsync();
             // Initialize request argument(s)
@@ -131,6 +132,7 @@ namespace Google.Cloud.Container.V1.Snippets
         public async Task GetClusterAsync_RequestObject()
         {
             // Snippet: GetClusterAsync(GetClusterRequest,CallSettings)
+            // Additional: GetClusterAsync(GetClusterRequest,CancellationToken)
             // Create client
             ClusterManagerClient clusterManagerClient = await ClusterManagerClient.CreateAsync();
             // Initialize request argument(s)
@@ -198,6 +200,7 @@ namespace Google.Cloud.Container.V1.Snippets
         public async Task CreateClusterAsync_RequestObject()
         {
             // Snippet: CreateClusterAsync(CreateClusterRequest,CallSettings)
+            // Additional: CreateClusterAsync(CreateClusterRequest,CancellationToken)
             // Create client
             ClusterManagerClient clusterManagerClient = await ClusterManagerClient.CreateAsync();
             // Initialize request argument(s)
@@ -267,6 +270,7 @@ namespace Google.Cloud.Container.V1.Snippets
         public async Task UpdateClusterAsync_RequestObject()
         {
             // Snippet: UpdateClusterAsync(UpdateClusterRequest,CallSettings)
+            // Additional: UpdateClusterAsync(UpdateClusterRequest,CancellationToken)
             // Create client
             ClusterManagerClient clusterManagerClient = await ClusterManagerClient.CreateAsync();
             // Initialize request argument(s)
@@ -305,6 +309,7 @@ namespace Google.Cloud.Container.V1.Snippets
         public async Task UpdateNodePoolAsync_RequestObject()
         {
             // Snippet: UpdateNodePoolAsync(UpdateNodePoolRequest,CallSettings)
+            // Additional: UpdateNodePoolAsync(UpdateNodePoolRequest,CancellationToken)
             // Create client
             ClusterManagerClient clusterManagerClient = await ClusterManagerClient.CreateAsync();
             // Initialize request argument(s)
@@ -347,6 +352,7 @@ namespace Google.Cloud.Container.V1.Snippets
         public async Task SetNodePoolAutoscalingAsync_RequestObject()
         {
             // Snippet: SetNodePoolAutoscalingAsync(SetNodePoolAutoscalingRequest,CallSettings)
+            // Additional: SetNodePoolAutoscalingAsync(SetNodePoolAutoscalingRequest,CancellationToken)
             // Create client
             ClusterManagerClient clusterManagerClient = await ClusterManagerClient.CreateAsync();
             // Initialize request argument(s)
@@ -420,6 +426,7 @@ namespace Google.Cloud.Container.V1.Snippets
         public async Task SetLoggingServiceAsync_RequestObject()
         {
             // Snippet: SetLoggingServiceAsync(SetLoggingServiceRequest,CallSettings)
+            // Additional: SetLoggingServiceAsync(SetLoggingServiceRequest,CancellationToken)
             // Create client
             ClusterManagerClient clusterManagerClient = await ClusterManagerClient.CreateAsync();
             // Initialize request argument(s)
@@ -491,6 +498,7 @@ namespace Google.Cloud.Container.V1.Snippets
         public async Task SetMonitoringServiceAsync_RequestObject()
         {
             // Snippet: SetMonitoringServiceAsync(SetMonitoringServiceRequest,CallSettings)
+            // Additional: SetMonitoringServiceAsync(SetMonitoringServiceRequest,CancellationToken)
             // Create client
             ClusterManagerClient clusterManagerClient = await ClusterManagerClient.CreateAsync();
             // Initialize request argument(s)
@@ -562,6 +570,7 @@ namespace Google.Cloud.Container.V1.Snippets
         public async Task SetAddonsConfigAsync_RequestObject()
         {
             // Snippet: SetAddonsConfigAsync(SetAddonsConfigRequest,CallSettings)
+            // Additional: SetAddonsConfigAsync(SetAddonsConfigRequest,CancellationToken)
             // Create client
             ClusterManagerClient clusterManagerClient = await ClusterManagerClient.CreateAsync();
             // Initialize request argument(s)
@@ -633,6 +642,7 @@ namespace Google.Cloud.Container.V1.Snippets
         public async Task SetLocationsAsync_RequestObject()
         {
             // Snippet: SetLocationsAsync(SetLocationsRequest,CallSettings)
+            // Additional: SetLocationsAsync(SetLocationsRequest,CancellationToken)
             // Create client
             ClusterManagerClient clusterManagerClient = await ClusterManagerClient.CreateAsync();
             // Initialize request argument(s)
@@ -704,6 +714,7 @@ namespace Google.Cloud.Container.V1.Snippets
         public async Task UpdateMasterAsync_RequestObject()
         {
             // Snippet: UpdateMasterAsync(UpdateMasterRequest,CallSettings)
+            // Additional: UpdateMasterAsync(UpdateMasterRequest,CancellationToken)
             // Create client
             ClusterManagerClient clusterManagerClient = await ClusterManagerClient.CreateAsync();
             // Initialize request argument(s)
@@ -742,6 +753,7 @@ namespace Google.Cloud.Container.V1.Snippets
         public async Task SetMasterAuthAsync_RequestObject()
         {
             // Snippet: SetMasterAuthAsync(SetMasterAuthRequest,CallSettings)
+            // Additional: SetMasterAuthAsync(SetMasterAuthRequest,CancellationToken)
             // Create client
             ClusterManagerClient clusterManagerClient = await ClusterManagerClient.CreateAsync();
             // Initialize request argument(s)
@@ -813,6 +825,7 @@ namespace Google.Cloud.Container.V1.Snippets
         public async Task DeleteClusterAsync_RequestObject()
         {
             // Snippet: DeleteClusterAsync(DeleteClusterRequest,CallSettings)
+            // Additional: DeleteClusterAsync(DeleteClusterRequest,CancellationToken)
             // Create client
             ClusterManagerClient clusterManagerClient = await ClusterManagerClient.CreateAsync();
             // Initialize request argument(s)
@@ -878,6 +891,7 @@ namespace Google.Cloud.Container.V1.Snippets
         public async Task ListOperationsAsync_RequestObject()
         {
             // Snippet: ListOperationsAsync(ListOperationsRequest,CallSettings)
+            // Additional: ListOperationsAsync(ListOperationsRequest,CancellationToken)
             // Create client
             ClusterManagerClient clusterManagerClient = await ClusterManagerClient.CreateAsync();
             // Initialize request argument(s)
@@ -943,6 +957,7 @@ namespace Google.Cloud.Container.V1.Snippets
         public async Task GetOperationAsync_RequestObject()
         {
             // Snippet: GetOperationAsync(GetOperationRequest,CallSettings)
+            // Additional: GetOperationAsync(GetOperationRequest,CancellationToken)
             // Create client
             ClusterManagerClient clusterManagerClient = await ClusterManagerClient.CreateAsync();
             // Initialize request argument(s)
@@ -1010,6 +1025,7 @@ namespace Google.Cloud.Container.V1.Snippets
         public async Task CancelOperationAsync_RequestObject()
         {
             // Snippet: CancelOperationAsync(CancelOperationRequest,CallSettings)
+            // Additional: CancelOperationAsync(CancelOperationRequest,CancellationToken)
             // Create client
             ClusterManagerClient clusterManagerClient = await ClusterManagerClient.CreateAsync();
             // Initialize request argument(s)
@@ -1075,6 +1091,7 @@ namespace Google.Cloud.Container.V1.Snippets
         public async Task GetServerConfigAsync_RequestObject()
         {
             // Snippet: GetServerConfigAsync(GetServerConfigRequest,CallSettings)
+            // Additional: GetServerConfigAsync(GetServerConfigRequest,CancellationToken)
             // Create client
             ClusterManagerClient clusterManagerClient = await ClusterManagerClient.CreateAsync();
             // Initialize request argument(s)
@@ -1140,6 +1157,7 @@ namespace Google.Cloud.Container.V1.Snippets
         public async Task ListNodePoolsAsync_RequestObject()
         {
             // Snippet: ListNodePoolsAsync(ListNodePoolsRequest,CallSettings)
+            // Additional: ListNodePoolsAsync(ListNodePoolsRequest,CancellationToken)
             // Create client
             ClusterManagerClient clusterManagerClient = await ClusterManagerClient.CreateAsync();
             // Initialize request argument(s)
@@ -1209,6 +1227,7 @@ namespace Google.Cloud.Container.V1.Snippets
         public async Task GetNodePoolAsync_RequestObject()
         {
             // Snippet: GetNodePoolAsync(GetNodePoolRequest,CallSettings)
+            // Additional: GetNodePoolAsync(GetNodePoolRequest,CancellationToken)
             // Create client
             ClusterManagerClient clusterManagerClient = await ClusterManagerClient.CreateAsync();
             // Initialize request argument(s)
@@ -1280,6 +1299,7 @@ namespace Google.Cloud.Container.V1.Snippets
         public async Task CreateNodePoolAsync_RequestObject()
         {
             // Snippet: CreateNodePoolAsync(CreateNodePoolRequest,CallSettings)
+            // Additional: CreateNodePoolAsync(CreateNodePoolRequest,CancellationToken)
             // Create client
             ClusterManagerClient clusterManagerClient = await ClusterManagerClient.CreateAsync();
             // Initialize request argument(s)
@@ -1351,6 +1371,7 @@ namespace Google.Cloud.Container.V1.Snippets
         public async Task DeleteNodePoolAsync_RequestObject()
         {
             // Snippet: DeleteNodePoolAsync(DeleteNodePoolRequest,CallSettings)
+            // Additional: DeleteNodePoolAsync(DeleteNodePoolRequest,CancellationToken)
             // Create client
             ClusterManagerClient clusterManagerClient = await ClusterManagerClient.CreateAsync();
             // Initialize request argument(s)
@@ -1422,6 +1443,7 @@ namespace Google.Cloud.Container.V1.Snippets
         public async Task RollbackNodePoolUpgradeAsync_RequestObject()
         {
             // Snippet: RollbackNodePoolUpgradeAsync(RollbackNodePoolUpgradeRequest,CallSettings)
+            // Additional: RollbackNodePoolUpgradeAsync(RollbackNodePoolUpgradeRequest,CancellationToken)
             // Create client
             ClusterManagerClient clusterManagerClient = await ClusterManagerClient.CreateAsync();
             // Initialize request argument(s)
@@ -1460,6 +1482,7 @@ namespace Google.Cloud.Container.V1.Snippets
         public async Task SetNodePoolManagementAsync_RequestObject()
         {
             // Snippet: SetNodePoolManagementAsync(SetNodePoolManagementRequest,CallSettings)
+            // Additional: SetNodePoolManagementAsync(SetNodePoolManagementRequest,CancellationToken)
             // Create client
             ClusterManagerClient clusterManagerClient = await ClusterManagerClient.CreateAsync();
             // Initialize request argument(s)
@@ -1500,6 +1523,7 @@ namespace Google.Cloud.Container.V1.Snippets
         public async Task SetLabelsAsync_RequestObject()
         {
             // Snippet: SetLabelsAsync(SetLabelsRequest,CallSettings)
+            // Additional: SetLabelsAsync(SetLabelsRequest,CancellationToken)
             // Create client
             ClusterManagerClient clusterManagerClient = await ClusterManagerClient.CreateAsync();
             // Initialize request argument(s)
@@ -1573,6 +1597,7 @@ namespace Google.Cloud.Container.V1.Snippets
         public async Task SetLegacyAbacAsync_RequestObject()
         {
             // Snippet: SetLegacyAbacAsync(SetLegacyAbacRequest,CallSettings)
+            // Additional: SetLegacyAbacAsync(SetLegacyAbacRequest,CancellationToken)
             // Create client
             ClusterManagerClient clusterManagerClient = await ClusterManagerClient.CreateAsync();
             // Initialize request argument(s)
@@ -1642,6 +1667,7 @@ namespace Google.Cloud.Container.V1.Snippets
         public async Task StartIPRotationAsync_RequestObject()
         {
             // Snippet: StartIPRotationAsync(StartIPRotationRequest,CallSettings)
+            // Additional: StartIPRotationAsync(StartIPRotationRequest,CancellationToken)
             // Create client
             ClusterManagerClient clusterManagerClient = await ClusterManagerClient.CreateAsync();
             // Initialize request argument(s)
@@ -1709,6 +1735,7 @@ namespace Google.Cloud.Container.V1.Snippets
         public async Task CompleteIPRotationAsync_RequestObject()
         {
             // Snippet: CompleteIPRotationAsync(CompleteIPRotationRequest,CallSettings)
+            // Additional: CompleteIPRotationAsync(CompleteIPRotationRequest,CancellationToken)
             // Create client
             ClusterManagerClient clusterManagerClient = await ClusterManagerClient.CreateAsync();
             // Initialize request argument(s)
@@ -1745,6 +1772,7 @@ namespace Google.Cloud.Container.V1.Snippets
         public async Task SetNodePoolSizeAsync_RequestObject()
         {
             // Snippet: SetNodePoolSizeAsync(SetNodePoolSizeRequest,CallSettings)
+            // Additional: SetNodePoolSizeAsync(SetNodePoolSizeRequest,CancellationToken)
             // Create client
             ClusterManagerClient clusterManagerClient = await ClusterManagerClient.CreateAsync();
             // Initialize request argument(s)
@@ -1818,6 +1846,7 @@ namespace Google.Cloud.Container.V1.Snippets
         public async Task SetNetworkPolicyAsync_RequestObject()
         {
             // Snippet: SetNetworkPolicyAsync(SetNetworkPolicyRequest,CallSettings)
+            // Additional: SetNetworkPolicyAsync(SetNetworkPolicyRequest,CancellationToken)
             // Create client
             ClusterManagerClient clusterManagerClient = await ClusterManagerClient.CreateAsync();
             // Initialize request argument(s)
@@ -1889,6 +1918,7 @@ namespace Google.Cloud.Container.V1.Snippets
         public async Task SetMaintenancePolicyAsync_RequestObject()
         {
             // Snippet: SetMaintenancePolicyAsync(SetMaintenancePolicyRequest,CallSettings)
+            // Additional: SetMaintenancePolicyAsync(SetMaintenancePolicyRequest,CancellationToken)
             // Create client
             ClusterManagerClient clusterManagerClient = await ClusterManagerClient.CreateAsync();
             // Initialize request argument(s)

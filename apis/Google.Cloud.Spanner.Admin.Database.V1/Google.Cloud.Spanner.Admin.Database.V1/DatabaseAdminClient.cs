@@ -932,6 +932,24 @@ namespace Google.Cloud.Spanner.Admin.Database.V1
         /// <param name="request">
         /// The request object containing all of the parameters for the API call.
         /// </param>
+        /// <param name="cancellationToken">
+        /// A <see cref="CancellationToken"/> to use for this RPC.
+        /// </param>
+        /// <returns>
+        /// A Task containing the RPC response.
+        /// </returns>
+        public virtual Task<Database> GetDatabaseAsync(
+            GetDatabaseRequest request,
+            CancellationToken cancellationToken) => GetDatabaseAsync(
+                request,
+                CallSettings.FromCancellationToken(cancellationToken));
+
+        /// <summary>
+        /// Gets the state of a Cloud Spanner database.
+        /// </summary>
+        /// <param name="request">
+        /// The request object containing all of the parameters for the API call.
+        /// </param>
         /// <param name="callSettings">
         /// If not null, applies overrides to this RPC call.
         /// </param>
@@ -1204,6 +1222,24 @@ namespace Google.Cloud.Spanner.Admin.Database.V1
         /// <param name="request">
         /// The request object containing all of the parameters for the API call.
         /// </param>
+        /// <param name="cancellationToken">
+        /// A <see cref="CancellationToken"/> to use for this RPC.
+        /// </param>
+        /// <returns>
+        /// A Task that completes when the RPC has completed.
+        /// </returns>
+        public virtual Task DropDatabaseAsync(
+            DropDatabaseRequest request,
+            CancellationToken cancellationToken) => DropDatabaseAsync(
+                request,
+                CallSettings.FromCancellationToken(cancellationToken));
+
+        /// <summary>
+        /// Drops (aka deletes) a Cloud Spanner database.
+        /// </summary>
+        /// <param name="request">
+        /// The request object containing all of the parameters for the API call.
+        /// </param>
         /// <param name="callSettings">
         /// If not null, applies overrides to this RPC call.
         /// </param>
@@ -1300,6 +1336,26 @@ namespace Google.Cloud.Spanner.Admin.Database.V1
         {
             throw new NotImplementedException();
         }
+
+        /// <summary>
+        /// Returns the schema of a Cloud Spanner database as a list of formatted
+        /// DDL statements. This method does not show pending schema updates, those may
+        /// be queried using the [Operations][google.longrunning.Operations] API.
+        /// </summary>
+        /// <param name="request">
+        /// The request object containing all of the parameters for the API call.
+        /// </param>
+        /// <param name="cancellationToken">
+        /// A <see cref="CancellationToken"/> to use for this RPC.
+        /// </param>
+        /// <returns>
+        /// A Task containing the RPC response.
+        /// </returns>
+        public virtual Task<GetDatabaseDdlResponse> GetDatabaseDdlAsync(
+            GetDatabaseDdlRequest request,
+            CancellationToken cancellationToken) => GetDatabaseDdlAsync(
+                request,
+                CallSettings.FromCancellationToken(cancellationToken));
 
         /// <summary>
         /// Returns the schema of a Cloud Spanner database as a list of formatted
@@ -1457,6 +1513,28 @@ namespace Google.Cloud.Spanner.Admin.Database.V1
         /// <param name="request">
         /// The request object containing all of the parameters for the API call.
         /// </param>
+        /// <param name="cancellationToken">
+        /// A <see cref="CancellationToken"/> to use for this RPC.
+        /// </param>
+        /// <returns>
+        /// A Task containing the RPC response.
+        /// </returns>
+        public virtual Task<Policy> SetIamPolicyAsync(
+            SetIamPolicyRequest request,
+            CancellationToken cancellationToken) => SetIamPolicyAsync(
+                request,
+                CallSettings.FromCancellationToken(cancellationToken));
+
+        /// <summary>
+        /// Sets the access control policy on a database resource. Replaces any
+        /// existing policy.
+        ///
+        /// Authorization requires `spanner.databases.setIamPolicy` permission on
+        /// [resource][google.iam.v1.SetIamPolicyRequest.resource].
+        /// </summary>
+        /// <param name="request">
+        /// The request object containing all of the parameters for the API call.
+        /// </param>
         /// <param name="callSettings">
         /// If not null, applies overrides to this RPC call.
         /// </param>
@@ -1570,6 +1648,28 @@ namespace Google.Cloud.Spanner.Admin.Database.V1
         {
             throw new NotImplementedException();
         }
+
+        /// <summary>
+        /// Gets the access control policy for a database resource. Returns an empty
+        /// policy if a database exists but does not have a policy set.
+        ///
+        /// Authorization requires `spanner.databases.getIamPolicy` permission on
+        /// [resource][google.iam.v1.GetIamPolicyRequest.resource].
+        /// </summary>
+        /// <param name="request">
+        /// The request object containing all of the parameters for the API call.
+        /// </param>
+        /// <param name="cancellationToken">
+        /// A <see cref="CancellationToken"/> to use for this RPC.
+        /// </param>
+        /// <returns>
+        /// A Task containing the RPC response.
+        /// </returns>
+        public virtual Task<Policy> GetIamPolicyAsync(
+            GetIamPolicyRequest request,
+            CancellationToken cancellationToken) => GetIamPolicyAsync(
+                request,
+                CallSettings.FromCancellationToken(cancellationToken));
 
         /// <summary>
         /// Gets the access control policy for a database resource. Returns an empty
@@ -1722,6 +1822,29 @@ namespace Google.Cloud.Spanner.Admin.Database.V1
         {
             throw new NotImplementedException();
         }
+
+        /// <summary>
+        /// Returns permissions that the caller has on the specified database resource.
+        ///
+        /// Attempting this RPC on a non-existent Cloud Spanner database will result in
+        /// a NOT_FOUND error if the user has `spanner.databases.list` permission on
+        /// the containing Cloud Spanner instance. Otherwise returns an empty set of
+        /// permissions.
+        /// </summary>
+        /// <param name="request">
+        /// The request object containing all of the parameters for the API call.
+        /// </param>
+        /// <param name="cancellationToken">
+        /// A <see cref="CancellationToken"/> to use for this RPC.
+        /// </param>
+        /// <returns>
+        /// A Task containing the RPC response.
+        /// </returns>
+        public virtual Task<TestIamPermissionsResponse> TestIamPermissionsAsync(
+            TestIamPermissionsRequest request,
+            CancellationToken cancellationToken) => TestIamPermissionsAsync(
+                request,
+                CallSettings.FromCancellationToken(cancellationToken));
 
         /// <summary>
         /// Returns permissions that the caller has on the specified database resource.

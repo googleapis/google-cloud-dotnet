@@ -246,6 +246,7 @@ namespace Google.Cloud.Logging.V2.Snippets
         public async Task GetSinkAsync_RequestObject()
         {
             // Snippet: GetSinkAsync(GetSinkRequest,CallSettings)
+            // Additional: GetSinkAsync(GetSinkRequest,CancellationToken)
             // Create client
             ConfigServiceV2Client configServiceV2Client = await ConfigServiceV2Client.CreateAsync();
             // Initialize request argument(s)
@@ -307,6 +308,7 @@ namespace Google.Cloud.Logging.V2.Snippets
         public async Task CreateSinkAsync_RequestObject()
         {
             // Snippet: CreateSinkAsync(CreateSinkRequest,CallSettings)
+            // Additional: CreateSinkAsync(CreateSinkRequest,CancellationToken)
             // Create client
             ConfigServiceV2Client configServiceV2Client = await ConfigServiceV2Client.CreateAsync();
             // Initialize request argument(s)
@@ -370,6 +372,7 @@ namespace Google.Cloud.Logging.V2.Snippets
         public async Task UpdateSinkAsync_RequestObject()
         {
             // Snippet: UpdateSinkAsync(UpdateSinkRequest,CallSettings)
+            // Additional: UpdateSinkAsync(UpdateSinkRequest,CancellationToken)
             // Create client
             ConfigServiceV2Client configServiceV2Client = await ConfigServiceV2Client.CreateAsync();
             // Initialize request argument(s)
@@ -431,6 +434,7 @@ namespace Google.Cloud.Logging.V2.Snippets
         public async Task DeleteSinkAsync_RequestObject()
         {
             // Snippet: DeleteSinkAsync(DeleteSinkRequest,CallSettings)
+            // Additional: DeleteSinkAsync(DeleteSinkRequest,CancellationToken)
             // Create client
             ConfigServiceV2Client configServiceV2Client = await ConfigServiceV2Client.CreateAsync();
             // Initialize request argument(s)
@@ -672,6 +676,7 @@ namespace Google.Cloud.Logging.V2.Snippets
         public async Task GetExclusionAsync_RequestObject()
         {
             // Snippet: GetExclusionAsync(GetExclusionRequest,CallSettings)
+            // Additional: GetExclusionAsync(GetExclusionRequest,CancellationToken)
             // Create client
             ConfigServiceV2Client configServiceV2Client = await ConfigServiceV2Client.CreateAsync();
             // Initialize request argument(s)
@@ -733,6 +738,7 @@ namespace Google.Cloud.Logging.V2.Snippets
         public async Task CreateExclusionAsync_RequestObject()
         {
             // Snippet: CreateExclusionAsync(CreateExclusionRequest,CallSettings)
+            // Additional: CreateExclusionAsync(CreateExclusionRequest,CancellationToken)
             // Create client
             ConfigServiceV2Client configServiceV2Client = await ConfigServiceV2Client.CreateAsync();
             // Initialize request argument(s)
@@ -798,6 +804,7 @@ namespace Google.Cloud.Logging.V2.Snippets
         public async Task UpdateExclusionAsync_RequestObject()
         {
             // Snippet: UpdateExclusionAsync(UpdateExclusionRequest,CallSettings)
+            // Additional: UpdateExclusionAsync(UpdateExclusionRequest,CancellationToken)
             // Create client
             ConfigServiceV2Client configServiceV2Client = await ConfigServiceV2Client.CreateAsync();
             // Initialize request argument(s)
@@ -861,6 +868,7 @@ namespace Google.Cloud.Logging.V2.Snippets
         public async Task DeleteExclusionAsync_RequestObject()
         {
             // Snippet: DeleteExclusionAsync(DeleteExclusionRequest,CallSettings)
+            // Additional: DeleteExclusionAsync(DeleteExclusionRequest,CancellationToken)
             // Create client
             ConfigServiceV2Client configServiceV2Client = await ConfigServiceV2Client.CreateAsync();
             // Initialize request argument(s)

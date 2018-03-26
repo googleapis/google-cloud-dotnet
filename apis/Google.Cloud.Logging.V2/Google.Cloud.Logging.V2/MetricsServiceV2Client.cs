@@ -581,6 +581,24 @@ namespace Google.Cloud.Logging.V2
         /// <param name="request">
         /// The request object containing all of the parameters for the API call.
         /// </param>
+        /// <param name="cancellationToken">
+        /// A <see cref="CancellationToken"/> to use for this RPC.
+        /// </param>
+        /// <returns>
+        /// A Task containing the RPC response.
+        /// </returns>
+        public virtual Task<LogMetric> GetLogMetricAsync(
+            GetLogMetricRequest request,
+            CancellationToken cancellationToken) => GetLogMetricAsync(
+                request,
+                CallSettings.FromCancellationToken(cancellationToken));
+
+        /// <summary>
+        /// Gets a logs-based metric.
+        /// </summary>
+        /// <param name="request">
+        /// The request object containing all of the parameters for the API call.
+        /// </param>
         /// <param name="callSettings">
         /// If not null, applies overrides to this RPC call.
         /// </param>
@@ -702,6 +720,24 @@ namespace Google.Cloud.Logging.V2
         {
             throw new NotImplementedException();
         }
+
+        /// <summary>
+        /// Creates a logs-based metric.
+        /// </summary>
+        /// <param name="request">
+        /// The request object containing all of the parameters for the API call.
+        /// </param>
+        /// <param name="cancellationToken">
+        /// A <see cref="CancellationToken"/> to use for this RPC.
+        /// </param>
+        /// <returns>
+        /// A Task containing the RPC response.
+        /// </returns>
+        public virtual Task<LogMetric> CreateLogMetricAsync(
+            CreateLogMetricRequest request,
+            CancellationToken cancellationToken) => CreateLogMetricAsync(
+                request,
+                CallSettings.FromCancellationToken(cancellationToken));
 
         /// <summary>
         /// Creates a logs-based metric.
@@ -840,6 +876,24 @@ namespace Google.Cloud.Logging.V2
         /// <param name="request">
         /// The request object containing all of the parameters for the API call.
         /// </param>
+        /// <param name="cancellationToken">
+        /// A <see cref="CancellationToken"/> to use for this RPC.
+        /// </param>
+        /// <returns>
+        /// A Task containing the RPC response.
+        /// </returns>
+        public virtual Task<LogMetric> UpdateLogMetricAsync(
+            UpdateLogMetricRequest request,
+            CancellationToken cancellationToken) => UpdateLogMetricAsync(
+                request,
+                CallSettings.FromCancellationToken(cancellationToken));
+
+        /// <summary>
+        /// Creates or updates a logs-based metric.
+        /// </summary>
+        /// <param name="request">
+        /// The request object containing all of the parameters for the API call.
+        /// </param>
         /// <param name="callSettings">
         /// If not null, applies overrides to this RPC call.
         /// </param>
@@ -934,6 +988,24 @@ namespace Google.Cloud.Logging.V2
         {
             throw new NotImplementedException();
         }
+
+        /// <summary>
+        /// Deletes a logs-based metric.
+        /// </summary>
+        /// <param name="request">
+        /// The request object containing all of the parameters for the API call.
+        /// </param>
+        /// <param name="cancellationToken">
+        /// A <see cref="CancellationToken"/> to use for this RPC.
+        /// </param>
+        /// <returns>
+        /// A Task that completes when the RPC has completed.
+        /// </returns>
+        public virtual Task DeleteLogMetricAsync(
+            DeleteLogMetricRequest request,
+            CancellationToken cancellationToken) => DeleteLogMetricAsync(
+                request,
+                CallSettings.FromCancellationToken(cancellationToken));
 
         /// <summary>
         /// Deletes a logs-based metric.

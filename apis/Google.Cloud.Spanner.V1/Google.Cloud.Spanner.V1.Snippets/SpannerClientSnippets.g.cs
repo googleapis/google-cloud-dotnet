@@ -64,6 +64,7 @@ namespace Google.Cloud.Spanner.V1.Snippets
         public async Task CreateSessionAsync_RequestObject()
         {
             // Snippet: CreateSessionAsync(CreateSessionRequest,CallSettings)
+            // Additional: CreateSessionAsync(CreateSessionRequest,CancellationToken)
             // Create client
             SpannerClient spannerClient = await SpannerClient.CreateAsync();
             // Initialize request argument(s)
@@ -123,6 +124,7 @@ namespace Google.Cloud.Spanner.V1.Snippets
         public async Task GetSessionAsync_RequestObject()
         {
             // Snippet: GetSessionAsync(GetSessionRequest,CallSettings)
+            // Additional: GetSessionAsync(GetSessionRequest,CancellationToken)
             // Create client
             SpannerClient spannerClient = await SpannerClient.CreateAsync();
             // Initialize request argument(s)
@@ -364,6 +366,7 @@ namespace Google.Cloud.Spanner.V1.Snippets
         public async Task DeleteSessionAsync_RequestObject()
         {
             // Snippet: DeleteSessionAsync(DeleteSessionRequest,CallSettings)
+            // Additional: DeleteSessionAsync(DeleteSessionRequest,CancellationToken)
             // Create client
             SpannerClient spannerClient = await SpannerClient.CreateAsync();
             // Initialize request argument(s)
@@ -396,6 +399,7 @@ namespace Google.Cloud.Spanner.V1.Snippets
         public async Task ExecuteSqlAsync_RequestObject()
         {
             // Snippet: ExecuteSqlAsync(ExecuteSqlRequest,CallSettings)
+            // Additional: ExecuteSqlAsync(ExecuteSqlRequest,CancellationToken)
             // Create client
             SpannerClient spannerClient = await SpannerClient.CreateAsync();
             // Initialize request argument(s)
@@ -456,6 +460,7 @@ namespace Google.Cloud.Spanner.V1.Snippets
         public async Task ReadAsync_RequestObject()
         {
             // Snippet: ReadAsync(ReadRequest,CallSettings)
+            // Additional: ReadAsync(ReadRequest,CancellationToken)
             // Create client
             SpannerClient spannerClient = await SpannerClient.CreateAsync();
             // Initialize request argument(s)
@@ -551,6 +556,7 @@ namespace Google.Cloud.Spanner.V1.Snippets
         public async Task BeginTransactionAsync_RequestObject()
         {
             // Snippet: BeginTransactionAsync(BeginTransactionRequest,CallSettings)
+            // Additional: BeginTransactionAsync(BeginTransactionRequest,CancellationToken)
             // Create client
             SpannerClient spannerClient = await SpannerClient.CreateAsync();
             // Initialize request argument(s)
@@ -647,6 +653,7 @@ namespace Google.Cloud.Spanner.V1.Snippets
         public async Task CommitAsync_RequestObject()
         {
             // Snippet: CommitAsync(CommitRequest,CallSettings)
+            // Additional: CommitAsync(CommitRequest,CancellationToken)
             // Create client
             SpannerClient spannerClient = await SpannerClient.CreateAsync();
             // Initialize request argument(s)
@@ -710,6 +717,7 @@ namespace Google.Cloud.Spanner.V1.Snippets
         public async Task RollbackAsync_RequestObject()
         {
             // Snippet: RollbackAsync(RollbackRequest,CallSettings)
+            // Additional: RollbackAsync(RollbackRequest,CancellationToken)
             // Create client
             SpannerClient spannerClient = await SpannerClient.CreateAsync();
             // Initialize request argument(s)
@@ -744,6 +752,7 @@ namespace Google.Cloud.Spanner.V1.Snippets
         public async Task PartitionQueryAsync_RequestObject()
         {
             // Snippet: PartitionQueryAsync(PartitionQueryRequest,CallSettings)
+            // Additional: PartitionQueryAsync(PartitionQueryRequest,CancellationToken)
             // Create client
             SpannerClient spannerClient = await SpannerClient.CreateAsync();
             // Initialize request argument(s)
@@ -778,6 +787,7 @@ namespace Google.Cloud.Spanner.V1.Snippets
         public async Task PartitionReadAsync_RequestObject()
         {
             // Snippet: PartitionReadAsync(PartitionReadRequest,CallSettings)
+            // Additional: PartitionReadAsync(PartitionReadRequest,CancellationToken)
             // Create client
             SpannerClient spannerClient = await SpannerClient.CreateAsync();
             // Initialize request argument(s)

@@ -248,6 +248,7 @@ namespace Google.Cloud.Spanner.Admin.Instance.V1.Snippets
         public async Task GetInstanceConfigAsync_RequestObject()
         {
             // Snippet: GetInstanceConfigAsync(GetInstanceConfigRequest,CallSettings)
+            // Additional: GetInstanceConfigAsync(GetInstanceConfigRequest,CancellationToken)
             // Create client
             InstanceAdminClient instanceAdminClient = await InstanceAdminClient.CreateAsync();
             // Initialize request argument(s)
@@ -489,6 +490,7 @@ namespace Google.Cloud.Spanner.Admin.Instance.V1.Snippets
         public async Task GetInstanceAsync_RequestObject()
         {
             // Snippet: GetInstanceAsync(GetInstanceRequest,CallSettings)
+            // Additional: GetInstanceAsync(GetInstanceRequest,CancellationToken)
             // Create client
             InstanceAdminClient instanceAdminClient = await InstanceAdminClient.CreateAsync();
             // Initialize request argument(s)
@@ -830,6 +832,7 @@ namespace Google.Cloud.Spanner.Admin.Instance.V1.Snippets
         public async Task DeleteInstanceAsync_RequestObject()
         {
             // Snippet: DeleteInstanceAsync(DeleteInstanceRequest,CallSettings)
+            // Additional: DeleteInstanceAsync(DeleteInstanceRequest,CancellationToken)
             // Create client
             InstanceAdminClient instanceAdminClient = await InstanceAdminClient.CreateAsync();
             // Initialize request argument(s)
@@ -891,6 +894,7 @@ namespace Google.Cloud.Spanner.Admin.Instance.V1.Snippets
         public async Task SetIamPolicyAsync_RequestObject()
         {
             // Snippet: SetIamPolicyAsync(SetIamPolicyRequest,CallSettings)
+            // Additional: SetIamPolicyAsync(SetIamPolicyRequest,CancellationToken)
             // Create client
             InstanceAdminClient instanceAdminClient = await InstanceAdminClient.CreateAsync();
             // Initialize request argument(s)
@@ -952,6 +956,7 @@ namespace Google.Cloud.Spanner.Admin.Instance.V1.Snippets
         public async Task GetIamPolicyAsync_RequestObject()
         {
             // Snippet: GetIamPolicyAsync(GetIamPolicyRequest,CallSettings)
+            // Additional: GetIamPolicyAsync(GetIamPolicyRequest,CancellationToken)
             // Create client
             InstanceAdminClient instanceAdminClient = await InstanceAdminClient.CreateAsync();
             // Initialize request argument(s)
@@ -1013,6 +1018,7 @@ namespace Google.Cloud.Spanner.Admin.Instance.V1.Snippets
         public async Task TestIamPermissionsAsync_RequestObject()
         {
             // Snippet: TestIamPermissionsAsync(TestIamPermissionsRequest,CallSettings)
+            // Additional: TestIamPermissionsAsync(TestIamPermissionsRequest,CancellationToken)
             // Create client
             InstanceAdminClient instanceAdminClient = await InstanceAdminClient.CreateAsync();
             // Initialize request argument(s)

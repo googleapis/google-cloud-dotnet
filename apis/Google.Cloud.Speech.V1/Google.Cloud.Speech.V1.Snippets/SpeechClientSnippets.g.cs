@@ -83,6 +83,7 @@ namespace Google.Cloud.Speech.V1.Snippets
         public async Task RecognizeAsync_RequestObject()
         {
             // Snippet: RecognizeAsync(RecognizeRequest,CallSettings)
+            // Additional: RecognizeAsync(RecognizeRequest,CancellationToken)
             // Create client
             SpeechClient speechClient = await SpeechClient.CreateAsync();
             // Initialize request argument(s)

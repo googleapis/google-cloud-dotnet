@@ -69,6 +69,7 @@ namespace Google.Cloud.Bigtable.Admin.V2.Snippets
         public async Task CreateTableAsync_RequestObject()
         {
             // Snippet: CreateTableAsync(CreateTableRequest,CallSettings)
+            // Additional: CreateTableAsync(CreateTableRequest,CancellationToken)
             // Create client
             BigtableTableAdminClient bigtableTableAdminClient = await BigtableTableAdminClient.CreateAsync();
             // Initialize request argument(s)
@@ -457,6 +458,7 @@ namespace Google.Cloud.Bigtable.Admin.V2.Snippets
         public async Task GetTableAsync_RequestObject()
         {
             // Snippet: GetTableAsync(GetTableRequest,CallSettings)
+            // Additional: GetTableAsync(GetTableRequest,CancellationToken)
             // Create client
             BigtableTableAdminClient bigtableTableAdminClient = await BigtableTableAdminClient.CreateAsync();
             // Initialize request argument(s)
@@ -516,6 +518,7 @@ namespace Google.Cloud.Bigtable.Admin.V2.Snippets
         public async Task DeleteTableAsync_RequestObject()
         {
             // Snippet: DeleteTableAsync(DeleteTableRequest,CallSettings)
+            // Additional: DeleteTableAsync(DeleteTableRequest,CancellationToken)
             // Create client
             BigtableTableAdminClient bigtableTableAdminClient = await BigtableTableAdminClient.CreateAsync();
             // Initialize request argument(s)
@@ -577,6 +580,7 @@ namespace Google.Cloud.Bigtable.Admin.V2.Snippets
         public async Task ModifyColumnFamiliesAsync_RequestObject()
         {
             // Snippet: ModifyColumnFamiliesAsync(ModifyColumnFamiliesRequest,CallSettings)
+            // Additional: ModifyColumnFamiliesAsync(ModifyColumnFamiliesRequest,CancellationToken)
             // Create client
             BigtableTableAdminClient bigtableTableAdminClient = await BigtableTableAdminClient.CreateAsync();
             // Initialize request argument(s)
@@ -611,6 +615,7 @@ namespace Google.Cloud.Bigtable.Admin.V2.Snippets
         public async Task DropRowRangeAsync_RequestObject()
         {
             // Snippet: DropRowRangeAsync(DropRowRangeRequest,CallSettings)
+            // Additional: DropRowRangeAsync(DropRowRangeRequest,CancellationToken)
             // Create client
             BigtableTableAdminClient bigtableTableAdminClient = await BigtableTableAdminClient.CreateAsync();
             // Initialize request argument(s)
@@ -670,6 +675,7 @@ namespace Google.Cloud.Bigtable.Admin.V2.Snippets
         public async Task GenerateConsistencyTokenAsync_RequestObject()
         {
             // Snippet: GenerateConsistencyTokenAsync(GenerateConsistencyTokenRequest,CallSettings)
+            // Additional: GenerateConsistencyTokenAsync(GenerateConsistencyTokenRequest,CancellationToken)
             // Create client
             BigtableTableAdminClient bigtableTableAdminClient = await BigtableTableAdminClient.CreateAsync();
             // Initialize request argument(s)
@@ -731,6 +737,7 @@ namespace Google.Cloud.Bigtable.Admin.V2.Snippets
         public async Task CheckConsistencyAsync_RequestObject()
         {
             // Snippet: CheckConsistencyAsync(CheckConsistencyRequest,CallSettings)
+            // Additional: CheckConsistencyAsync(CheckConsistencyRequest,CancellationToken)
             // Create client
             BigtableTableAdminClient bigtableTableAdminClient = await BigtableTableAdminClient.CreateAsync();
             // Initialize request argument(s)
@@ -939,6 +946,7 @@ namespace Google.Cloud.Bigtable.Admin.V2.Snippets
         public async Task GetSnapshotAsync_RequestObject()
         {
             // Snippet: GetSnapshotAsync(GetSnapshotRequest,CallSettings)
+            // Additional: GetSnapshotAsync(GetSnapshotRequest,CancellationToken)
             // Create client
             BigtableTableAdminClient bigtableTableAdminClient = await BigtableTableAdminClient.CreateAsync();
             // Initialize request argument(s)
@@ -1180,6 +1188,7 @@ namespace Google.Cloud.Bigtable.Admin.V2.Snippets
         public async Task DeleteSnapshotAsync_RequestObject()
         {
             // Snippet: DeleteSnapshotAsync(DeleteSnapshotRequest,CallSettings)
+            // Additional: DeleteSnapshotAsync(DeleteSnapshotRequest,CancellationToken)
             // Create client
             BigtableTableAdminClient bigtableTableAdminClient = await BigtableTableAdminClient.CreateAsync();
             // Initialize request argument(s)

@@ -246,6 +246,7 @@ namespace Google.Cloud.Monitoring.V3.Snippets
         public async Task GetAlertPolicyAsync_RequestObject()
         {
             // Snippet: GetAlertPolicyAsync(GetAlertPolicyRequest,CallSettings)
+            // Additional: GetAlertPolicyAsync(GetAlertPolicyRequest,CancellationToken)
             // Create client
             AlertPolicyServiceClient alertPolicyServiceClient = await AlertPolicyServiceClient.CreateAsync();
             // Initialize request argument(s)
@@ -307,6 +308,7 @@ namespace Google.Cloud.Monitoring.V3.Snippets
         public async Task CreateAlertPolicyAsync_RequestObject()
         {
             // Snippet: CreateAlertPolicyAsync(CreateAlertPolicyRequest,CallSettings)
+            // Additional: CreateAlertPolicyAsync(CreateAlertPolicyRequest,CancellationToken)
             // Create client
             AlertPolicyServiceClient alertPolicyServiceClient = await AlertPolicyServiceClient.CreateAsync();
             // Initialize request argument(s)
@@ -368,6 +370,7 @@ namespace Google.Cloud.Monitoring.V3.Snippets
         public async Task DeleteAlertPolicyAsync_RequestObject()
         {
             // Snippet: DeleteAlertPolicyAsync(DeleteAlertPolicyRequest,CallSettings)
+            // Additional: DeleteAlertPolicyAsync(DeleteAlertPolicyRequest,CancellationToken)
             // Create client
             AlertPolicyServiceClient alertPolicyServiceClient = await AlertPolicyServiceClient.CreateAsync();
             // Initialize request argument(s)
@@ -429,6 +432,7 @@ namespace Google.Cloud.Monitoring.V3.Snippets
         public async Task UpdateAlertPolicyAsync_RequestObject()
         {
             // Snippet: UpdateAlertPolicyAsync(UpdateAlertPolicyRequest,CallSettings)
+            // Additional: UpdateAlertPolicyAsync(UpdateAlertPolicyRequest,CancellationToken)
             // Create client
             AlertPolicyServiceClient alertPolicyServiceClient = await AlertPolicyServiceClient.CreateAsync();
             // Initialize request argument(s)

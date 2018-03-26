@@ -518,6 +518,24 @@ namespace Google.Cloud.Dataproc.V1
         /// <param name="request">
         /// The request object containing all of the parameters for the API call.
         /// </param>
+        /// <param name="cancellationToken">
+        /// A <see cref="CancellationToken"/> to use for this RPC.
+        /// </param>
+        /// <returns>
+        /// A Task containing the RPC response.
+        /// </returns>
+        public virtual Task<Job> SubmitJobAsync(
+            SubmitJobRequest request,
+            CancellationToken cancellationToken) => SubmitJobAsync(
+                request,
+                CallSettings.FromCancellationToken(cancellationToken));
+
+        /// <summary>
+        /// Submits a job to a cluster.
+        /// </summary>
+        /// <param name="request">
+        /// The request object containing all of the parameters for the API call.
+        /// </param>
         /// <param name="callSettings">
         /// If not null, applies overrides to this RPC call.
         /// </param>
@@ -642,6 +660,24 @@ namespace Google.Cloud.Dataproc.V1
         {
             throw new NotImplementedException();
         }
+
+        /// <summary>
+        /// Gets the resource representation for a job in a project.
+        /// </summary>
+        /// <param name="request">
+        /// The request object containing all of the parameters for the API call.
+        /// </param>
+        /// <param name="cancellationToken">
+        /// A <see cref="CancellationToken"/> to use for this RPC.
+        /// </param>
+        /// <returns>
+        /// A Task containing the RPC response.
+        /// </returns>
+        public virtual Task<Job> GetJobAsync(
+            GetJobRequest request,
+            CancellationToken cancellationToken) => GetJobAsync(
+                request,
+                CallSettings.FromCancellationToken(cancellationToken));
 
         /// <summary>
         /// Gets the resource representation for a job in a project.
@@ -803,6 +839,24 @@ namespace Google.Cloud.Dataproc.V1
         /// <param name="request">
         /// The request object containing all of the parameters for the API call.
         /// </param>
+        /// <param name="cancellationToken">
+        /// A <see cref="CancellationToken"/> to use for this RPC.
+        /// </param>
+        /// <returns>
+        /// A Task containing the RPC response.
+        /// </returns>
+        public virtual Task<Job> UpdateJobAsync(
+            UpdateJobRequest request,
+            CancellationToken cancellationToken) => UpdateJobAsync(
+                request,
+                CallSettings.FromCancellationToken(cancellationToken));
+
+        /// <summary>
+        /// Updates a job in a project.
+        /// </summary>
+        /// <param name="request">
+        /// The request object containing all of the parameters for the API call.
+        /// </param>
         /// <param name="callSettings">
         /// If not null, applies overrides to this RPC call.
         /// </param>
@@ -949,6 +1003,27 @@ namespace Google.Cloud.Dataproc.V1
         /// <param name="request">
         /// The request object containing all of the parameters for the API call.
         /// </param>
+        /// <param name="cancellationToken">
+        /// A <see cref="CancellationToken"/> to use for this RPC.
+        /// </param>
+        /// <returns>
+        /// A Task containing the RPC response.
+        /// </returns>
+        public virtual Task<Job> CancelJobAsync(
+            CancelJobRequest request,
+            CancellationToken cancellationToken) => CancelJobAsync(
+                request,
+                CallSettings.FromCancellationToken(cancellationToken));
+
+        /// <summary>
+        /// Starts a job cancellation request. To access the job resource
+        /// after cancellation, call
+        /// [regions/{region}/jobs.list](/dataproc/docs/reference/rest/v1/projects.regions.jobs/list) or
+        /// [regions/{region}/jobs.get](/dataproc/docs/reference/rest/v1/projects.regions.jobs/get).
+        /// </summary>
+        /// <param name="request">
+        /// The request object containing all of the parameters for the API call.
+        /// </param>
         /// <param name="callSettings">
         /// If not null, applies overrides to this RPC call.
         /// </param>
@@ -1074,6 +1149,25 @@ namespace Google.Cloud.Dataproc.V1
         {
             throw new NotImplementedException();
         }
+
+        /// <summary>
+        /// Deletes the job from the project. If the job is active, the delete fails,
+        /// and the response returns `FAILED_PRECONDITION`.
+        /// </summary>
+        /// <param name="request">
+        /// The request object containing all of the parameters for the API call.
+        /// </param>
+        /// <param name="cancellationToken">
+        /// A <see cref="CancellationToken"/> to use for this RPC.
+        /// </param>
+        /// <returns>
+        /// A Task that completes when the RPC has completed.
+        /// </returns>
+        public virtual Task DeleteJobAsync(
+            DeleteJobRequest request,
+            CancellationToken cancellationToken) => DeleteJobAsync(
+                request,
+                CallSettings.FromCancellationToken(cancellationToken));
 
         /// <summary>
         /// Deletes the job from the project. If the job is active, the delete fails,

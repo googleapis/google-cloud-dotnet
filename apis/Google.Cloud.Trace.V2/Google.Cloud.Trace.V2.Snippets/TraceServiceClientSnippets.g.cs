@@ -66,6 +66,7 @@ namespace Google.Cloud.Trace.V2.Snippets
         public async Task BatchWriteSpansAsync_RequestObject()
         {
             // Snippet: BatchWriteSpansAsync(BatchWriteSpansRequest,CallSettings)
+            // Additional: BatchWriteSpansAsync(BatchWriteSpansRequest,CancellationToken)
             // Create client
             TraceServiceClient traceServiceClient = await TraceServiceClient.CreateAsync();
             // Initialize request argument(s)
@@ -100,6 +101,7 @@ namespace Google.Cloud.Trace.V2.Snippets
         public async Task CreateSpanAsync_RequestObject()
         {
             // Snippet: CreateSpanAsync(Span,CallSettings)
+            // Additional: CreateSpanAsync(Span,CancellationToken)
             // Create client
             TraceServiceClient traceServiceClient = await TraceServiceClient.CreateAsync();
             // Initialize request argument(s)

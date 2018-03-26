@@ -159,6 +159,7 @@ namespace Google.Cloud.Monitoring.V3.Snippets
         public async Task GetGroupAsync_RequestObject()
         {
             // Snippet: GetGroupAsync(GetGroupRequest,CallSettings)
+            // Additional: GetGroupAsync(GetGroupRequest,CancellationToken)
             // Create client
             GroupServiceClient groupServiceClient = await GroupServiceClient.CreateAsync();
             // Initialize request argument(s)
@@ -220,6 +221,7 @@ namespace Google.Cloud.Monitoring.V3.Snippets
         public async Task CreateGroupAsync_RequestObject()
         {
             // Snippet: CreateGroupAsync(CreateGroupRequest,CallSettings)
+            // Additional: CreateGroupAsync(CreateGroupRequest,CancellationToken)
             // Create client
             GroupServiceClient groupServiceClient = await GroupServiceClient.CreateAsync();
             // Initialize request argument(s)
@@ -281,6 +283,7 @@ namespace Google.Cloud.Monitoring.V3.Snippets
         public async Task UpdateGroupAsync_RequestObject()
         {
             // Snippet: UpdateGroupAsync(UpdateGroupRequest,CallSettings)
+            // Additional: UpdateGroupAsync(UpdateGroupRequest,CancellationToken)
             // Create client
             GroupServiceClient groupServiceClient = await GroupServiceClient.CreateAsync();
             // Initialize request argument(s)
@@ -340,6 +343,7 @@ namespace Google.Cloud.Monitoring.V3.Snippets
         public async Task DeleteGroupAsync_RequestObject()
         {
             // Snippet: DeleteGroupAsync(DeleteGroupRequest,CallSettings)
+            // Additional: DeleteGroupAsync(DeleteGroupRequest,CancellationToken)
             // Create client
             GroupServiceClient groupServiceClient = await GroupServiceClient.CreateAsync();
             // Initialize request argument(s)

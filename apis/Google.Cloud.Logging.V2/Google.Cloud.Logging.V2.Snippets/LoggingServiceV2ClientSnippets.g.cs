@@ -65,6 +65,7 @@ namespace Google.Cloud.Logging.V2.Snippets
         public async Task DeleteLogAsync_RequestObject()
         {
             // Snippet: DeleteLogAsync(DeleteLogRequest,CallSettings)
+            // Additional: DeleteLogAsync(DeleteLogRequest,CancellationToken)
             // Create client
             LoggingServiceV2Client loggingServiceV2Client = await LoggingServiceV2Client.CreateAsync();
             // Initialize request argument(s)
@@ -130,6 +131,7 @@ namespace Google.Cloud.Logging.V2.Snippets
         public async Task WriteLogEntriesAsync_RequestObject()
         {
             // Snippet: WriteLogEntriesAsync(WriteLogEntriesRequest,CallSettings)
+            // Additional: WriteLogEntriesAsync(WriteLogEntriesRequest,CancellationToken)
             // Create client
             LoggingServiceV2Client loggingServiceV2Client = await LoggingServiceV2Client.CreateAsync();
             // Initialize request argument(s)

@@ -498,6 +498,24 @@ namespace Google.Cloud.OsLogin.V1Beta
         /// <param name="request">
         /// The request object containing all of the parameters for the API call.
         /// </param>
+        /// <param name="cancellationToken">
+        /// A <see cref="CancellationToken"/> to use for this RPC.
+        /// </param>
+        /// <returns>
+        /// A Task that completes when the RPC has completed.
+        /// </returns>
+        public virtual Task DeletePosixAccountAsync(
+            DeletePosixAccountRequest request,
+            CancellationToken cancellationToken) => DeletePosixAccountAsync(
+                request,
+                CallSettings.FromCancellationToken(cancellationToken));
+
+        /// <summary>
+        /// Deletes a POSIX account.
+        /// </summary>
+        /// <param name="request">
+        /// The request object containing all of the parameters for the API call.
+        /// </param>
         /// <param name="callSettings">
         /// If not null, applies overrides to this RPC call.
         /// </param>
@@ -589,6 +607,24 @@ namespace Google.Cloud.OsLogin.V1Beta
         {
             throw new NotImplementedException();
         }
+
+        /// <summary>
+        /// Deletes an SSH public key.
+        /// </summary>
+        /// <param name="request">
+        /// The request object containing all of the parameters for the API call.
+        /// </param>
+        /// <param name="cancellationToken">
+        /// A <see cref="CancellationToken"/> to use for this RPC.
+        /// </param>
+        /// <returns>
+        /// A Task that completes when the RPC has completed.
+        /// </returns>
+        public virtual Task DeleteSshPublicKeyAsync(
+            DeleteSshPublicKeyRequest request,
+            CancellationToken cancellationToken) => DeleteSshPublicKeyAsync(
+                request,
+                CallSettings.FromCancellationToken(cancellationToken));
 
         /// <summary>
         /// Deletes an SSH public key.
@@ -696,6 +732,25 @@ namespace Google.Cloud.OsLogin.V1Beta
         /// <param name="request">
         /// The request object containing all of the parameters for the API call.
         /// </param>
+        /// <param name="cancellationToken">
+        /// A <see cref="CancellationToken"/> to use for this RPC.
+        /// </param>
+        /// <returns>
+        /// A Task containing the RPC response.
+        /// </returns>
+        public virtual Task<LoginProfile> GetLoginProfileAsync(
+            GetLoginProfileRequest request,
+            CancellationToken cancellationToken) => GetLoginProfileAsync(
+                request,
+                CallSettings.FromCancellationToken(cancellationToken));
+
+        /// <summary>
+        /// Retrieves the profile information used for logging in to a virtual machine
+        /// on Google Compute Engine.
+        /// </summary>
+        /// <param name="request">
+        /// The request object containing all of the parameters for the API call.
+        /// </param>
         /// <param name="callSettings">
         /// If not null, applies overrides to this RPC call.
         /// </param>
@@ -793,6 +848,24 @@ namespace Google.Cloud.OsLogin.V1Beta
         {
             throw new NotImplementedException();
         }
+
+        /// <summary>
+        /// Retrieves an SSH public key.
+        /// </summary>
+        /// <param name="request">
+        /// The request object containing all of the parameters for the API call.
+        /// </param>
+        /// <param name="cancellationToken">
+        /// A <see cref="CancellationToken"/> to use for this RPC.
+        /// </param>
+        /// <returns>
+        /// A Task containing the RPC response.
+        /// </returns>
+        public virtual Task<SshPublicKey> GetSshPublicKeyAsync(
+            GetSshPublicKeyRequest request,
+            CancellationToken cancellationToken) => GetSshPublicKeyAsync(
+                request,
+                CallSettings.FromCancellationToken(cancellationToken));
 
         /// <summary>
         /// Retrieves an SSH public key.
@@ -1019,6 +1092,26 @@ namespace Google.Cloud.OsLogin.V1Beta
         /// <param name="request">
         /// The request object containing all of the parameters for the API call.
         /// </param>
+        /// <param name="cancellationToken">
+        /// A <see cref="CancellationToken"/> to use for this RPC.
+        /// </param>
+        /// <returns>
+        /// A Task containing the RPC response.
+        /// </returns>
+        public virtual Task<ImportSshPublicKeyResponse> ImportSshPublicKeyAsync(
+            ImportSshPublicKeyRequest request,
+            CancellationToken cancellationToken) => ImportSshPublicKeyAsync(
+                request,
+                CallSettings.FromCancellationToken(cancellationToken));
+
+        /// <summary>
+        /// Adds an SSH public key and returns the profile information. Default POSIX
+        /// account information is set when no username and UID exist as part of the
+        /// login profile.
+        /// </summary>
+        /// <param name="request">
+        /// The request object containing all of the parameters for the API call.
+        /// </param>
         /// <param name="callSettings">
         /// If not null, applies overrides to this RPC call.
         /// </param>
@@ -1234,6 +1327,25 @@ namespace Google.Cloud.OsLogin.V1Beta
         {
             throw new NotImplementedException();
         }
+
+        /// <summary>
+        /// Updates an SSH public key and returns the profile information. This method
+        /// supports patch semantics.
+        /// </summary>
+        /// <param name="request">
+        /// The request object containing all of the parameters for the API call.
+        /// </param>
+        /// <param name="cancellationToken">
+        /// A <see cref="CancellationToken"/> to use for this RPC.
+        /// </param>
+        /// <returns>
+        /// A Task containing the RPC response.
+        /// </returns>
+        public virtual Task<SshPublicKey> UpdateSshPublicKeyAsync(
+            UpdateSshPublicKeyRequest request,
+            CancellationToken cancellationToken) => UpdateSshPublicKeyAsync(
+                request,
+                CallSettings.FromCancellationToken(cancellationToken));
 
         /// <summary>
         /// Updates an SSH public key and returns the profile information. This method

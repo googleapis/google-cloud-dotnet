@@ -387,6 +387,7 @@ namespace Google.Cloud.Spanner.Admin.Database.V1.Snippets
         public async Task GetDatabaseAsync_RequestObject()
         {
             // Snippet: GetDatabaseAsync(GetDatabaseRequest,CallSettings)
+            // Additional: GetDatabaseAsync(GetDatabaseRequest,CancellationToken)
             // Create client
             DatabaseAdminClient databaseAdminClient = await DatabaseAdminClient.CreateAsync();
             // Initialize request argument(s)
@@ -577,6 +578,7 @@ namespace Google.Cloud.Spanner.Admin.Database.V1.Snippets
         public async Task DropDatabaseAsync_RequestObject()
         {
             // Snippet: DropDatabaseAsync(DropDatabaseRequest,CallSettings)
+            // Additional: DropDatabaseAsync(DropDatabaseRequest,CancellationToken)
             // Create client
             DatabaseAdminClient databaseAdminClient = await DatabaseAdminClient.CreateAsync();
             // Initialize request argument(s)
@@ -636,6 +638,7 @@ namespace Google.Cloud.Spanner.Admin.Database.V1.Snippets
         public async Task GetDatabaseDdlAsync_RequestObject()
         {
             // Snippet: GetDatabaseDdlAsync(GetDatabaseDdlRequest,CallSettings)
+            // Additional: GetDatabaseDdlAsync(GetDatabaseDdlRequest,CancellationToken)
             // Create client
             DatabaseAdminClient databaseAdminClient = await DatabaseAdminClient.CreateAsync();
             // Initialize request argument(s)
@@ -697,6 +700,7 @@ namespace Google.Cloud.Spanner.Admin.Database.V1.Snippets
         public async Task SetIamPolicyAsync_RequestObject()
         {
             // Snippet: SetIamPolicyAsync(SetIamPolicyRequest,CallSettings)
+            // Additional: SetIamPolicyAsync(SetIamPolicyRequest,CancellationToken)
             // Create client
             DatabaseAdminClient databaseAdminClient = await DatabaseAdminClient.CreateAsync();
             // Initialize request argument(s)
@@ -758,6 +762,7 @@ namespace Google.Cloud.Spanner.Admin.Database.V1.Snippets
         public async Task GetIamPolicyAsync_RequestObject()
         {
             // Snippet: GetIamPolicyAsync(GetIamPolicyRequest,CallSettings)
+            // Additional: GetIamPolicyAsync(GetIamPolicyRequest,CancellationToken)
             // Create client
             DatabaseAdminClient databaseAdminClient = await DatabaseAdminClient.CreateAsync();
             // Initialize request argument(s)
@@ -819,6 +824,7 @@ namespace Google.Cloud.Spanner.Admin.Database.V1.Snippets
         public async Task TestIamPermissionsAsync_RequestObject()
         {
             // Snippet: TestIamPermissionsAsync(TestIamPermissionsRequest,CallSettings)
+            // Additional: TestIamPermissionsAsync(TestIamPermissionsRequest,CancellationToken)
             // Create client
             DatabaseAdminClient databaseAdminClient = await DatabaseAdminClient.CreateAsync();
             // Initialize request argument(s)

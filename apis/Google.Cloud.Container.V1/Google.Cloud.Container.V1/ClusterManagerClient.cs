@@ -1240,6 +1240,25 @@ namespace Google.Cloud.Container.V1
         /// <param name="request">
         /// The request object containing all of the parameters for the API call.
         /// </param>
+        /// <param name="cancellationToken">
+        /// A <see cref="CancellationToken"/> to use for this RPC.
+        /// </param>
+        /// <returns>
+        /// A Task containing the RPC response.
+        /// </returns>
+        public virtual Task<ListClustersResponse> ListClustersAsync(
+            ListClustersRequest request,
+            CancellationToken cancellationToken) => ListClustersAsync(
+                request,
+                CallSettings.FromCancellationToken(cancellationToken));
+
+        /// <summary>
+        /// Lists all clusters owned by a project in either the specified zone or all
+        /// zones.
+        /// </summary>
+        /// <param name="request">
+        /// The request object containing all of the parameters for the API call.
+        /// </param>
         /// <param name="callSettings">
         /// If not null, applies overrides to this RPC call.
         /// </param>
@@ -1370,6 +1389,24 @@ namespace Google.Cloud.Container.V1
         {
             throw new NotImplementedException();
         }
+
+        /// <summary>
+        /// Gets the details of a specific cluster.
+        /// </summary>
+        /// <param name="request">
+        /// The request object containing all of the parameters for the API call.
+        /// </param>
+        /// <param name="cancellationToken">
+        /// A <see cref="CancellationToken"/> to use for this RPC.
+        /// </param>
+        /// <returns>
+        /// A Task containing the RPC response.
+        /// </returns>
+        public virtual Task<Cluster> GetClusterAsync(
+            GetClusterRequest request,
+            CancellationToken cancellationToken) => GetClusterAsync(
+                request,
+                CallSettings.FromCancellationToken(cancellationToken));
 
         /// <summary>
         /// Gets the details of a specific cluster.
@@ -1577,6 +1614,36 @@ namespace Google.Cloud.Container.V1
         /// <param name="request">
         /// The request object containing all of the parameters for the API call.
         /// </param>
+        /// <param name="cancellationToken">
+        /// A <see cref="CancellationToken"/> to use for this RPC.
+        /// </param>
+        /// <returns>
+        /// A Task containing the RPC response.
+        /// </returns>
+        public virtual Task<Operation> CreateClusterAsync(
+            CreateClusterRequest request,
+            CancellationToken cancellationToken) => CreateClusterAsync(
+                request,
+                CallSettings.FromCancellationToken(cancellationToken));
+
+        /// <summary>
+        /// Creates a cluster, consisting of the specified number and type of Google
+        /// Compute Engine instances.
+        ///
+        /// By default, the cluster is created in the project's
+        /// [default network](/compute/docs/networks-and-firewalls#networks).
+        ///
+        /// One firewall is added for the cluster. After cluster creation,
+        /// the cluster creates routes for each node to allow the containers
+        /// on that node to communicate with all other instances in the
+        /// cluster.
+        ///
+        /// Finally, an entry is added to the project's global metadata indicating
+        /// which CIDR range is being used by the cluster.
+        /// </summary>
+        /// <param name="request">
+        /// The request object containing all of the parameters for the API call.
+        /// </param>
         /// <param name="callSettings">
         /// If not null, applies overrides to this RPC call.
         /// </param>
@@ -1729,6 +1796,24 @@ namespace Google.Cloud.Container.V1
         /// <param name="request">
         /// The request object containing all of the parameters for the API call.
         /// </param>
+        /// <param name="cancellationToken">
+        /// A <see cref="CancellationToken"/> to use for this RPC.
+        /// </param>
+        /// <returns>
+        /// A Task containing the RPC response.
+        /// </returns>
+        public virtual Task<Operation> UpdateClusterAsync(
+            UpdateClusterRequest request,
+            CancellationToken cancellationToken) => UpdateClusterAsync(
+                request,
+                CallSettings.FromCancellationToken(cancellationToken));
+
+        /// <summary>
+        /// Updates the settings of a specific cluster.
+        /// </summary>
+        /// <param name="request">
+        /// The request object containing all of the parameters for the API call.
+        /// </param>
         /// <param name="callSettings">
         /// If not null, applies overrides to this RPC call.
         /// </param>
@@ -1767,6 +1852,24 @@ namespace Google.Cloud.Container.V1
         /// <param name="request">
         /// The request object containing all of the parameters for the API call.
         /// </param>
+        /// <param name="cancellationToken">
+        /// A <see cref="CancellationToken"/> to use for this RPC.
+        /// </param>
+        /// <returns>
+        /// A Task containing the RPC response.
+        /// </returns>
+        public virtual Task<Operation> UpdateNodePoolAsync(
+            UpdateNodePoolRequest request,
+            CancellationToken cancellationToken) => UpdateNodePoolAsync(
+                request,
+                CallSettings.FromCancellationToken(cancellationToken));
+
+        /// <summary>
+        /// Updates the version and/or image type of a specific node pool.
+        /// </summary>
+        /// <param name="request">
+        /// The request object containing all of the parameters for the API call.
+        /// </param>
         /// <param name="callSettings">
         /// If not null, applies overrides to this RPC call.
         /// </param>
@@ -1798,6 +1901,24 @@ namespace Google.Cloud.Container.V1
         {
             throw new NotImplementedException();
         }
+
+        /// <summary>
+        /// Sets the autoscaling settings of a specific node pool.
+        /// </summary>
+        /// <param name="request">
+        /// The request object containing all of the parameters for the API call.
+        /// </param>
+        /// <param name="cancellationToken">
+        /// A <see cref="CancellationToken"/> to use for this RPC.
+        /// </param>
+        /// <returns>
+        /// A Task containing the RPC response.
+        /// </returns>
+        public virtual Task<Operation> SetNodePoolAutoscalingAsync(
+            SetNodePoolAutoscalingRequest request,
+            CancellationToken cancellationToken) => SetNodePoolAutoscalingAsync(
+                request,
+                CallSettings.FromCancellationToken(cancellationToken));
 
         /// <summary>
         /// Sets the autoscaling settings of a specific node pool.
@@ -1969,6 +2090,24 @@ namespace Google.Cloud.Container.V1
         /// <param name="request">
         /// The request object containing all of the parameters for the API call.
         /// </param>
+        /// <param name="cancellationToken">
+        /// A <see cref="CancellationToken"/> to use for this RPC.
+        /// </param>
+        /// <returns>
+        /// A Task containing the RPC response.
+        /// </returns>
+        public virtual Task<Operation> SetLoggingServiceAsync(
+            SetLoggingServiceRequest request,
+            CancellationToken cancellationToken) => SetLoggingServiceAsync(
+                request,
+                CallSettings.FromCancellationToken(cancellationToken));
+
+        /// <summary>
+        /// Sets the logging service of a specific cluster.
+        /// </summary>
+        /// <param name="request">
+        /// The request object containing all of the parameters for the API call.
+        /// </param>
         /// <param name="callSettings">
         /// If not null, applies overrides to this RPC call.
         /// </param>
@@ -2133,6 +2272,24 @@ namespace Google.Cloud.Container.V1
         /// <param name="request">
         /// The request object containing all of the parameters for the API call.
         /// </param>
+        /// <param name="cancellationToken">
+        /// A <see cref="CancellationToken"/> to use for this RPC.
+        /// </param>
+        /// <returns>
+        /// A Task containing the RPC response.
+        /// </returns>
+        public virtual Task<Operation> SetMonitoringServiceAsync(
+            SetMonitoringServiceRequest request,
+            CancellationToken cancellationToken) => SetMonitoringServiceAsync(
+                request,
+                CallSettings.FromCancellationToken(cancellationToken));
+
+        /// <summary>
+        /// Sets the monitoring service of a specific cluster.
+        /// </summary>
+        /// <param name="request">
+        /// The request object containing all of the parameters for the API call.
+        /// </param>
         /// <param name="callSettings">
         /// If not null, applies overrides to this RPC call.
         /// </param>
@@ -2281,6 +2438,24 @@ namespace Google.Cloud.Container.V1
         {
             throw new NotImplementedException();
         }
+
+        /// <summary>
+        /// Sets the addons of a specific cluster.
+        /// </summary>
+        /// <param name="request">
+        /// The request object containing all of the parameters for the API call.
+        /// </param>
+        /// <param name="cancellationToken">
+        /// A <see cref="CancellationToken"/> to use for this RPC.
+        /// </param>
+        /// <returns>
+        /// A Task containing the RPC response.
+        /// </returns>
+        public virtual Task<Operation> SetAddonsConfigAsync(
+            SetAddonsConfigRequest request,
+            CancellationToken cancellationToken) => SetAddonsConfigAsync(
+                request,
+                CallSettings.FromCancellationToken(cancellationToken));
 
         /// <summary>
         /// Sets the addons of a specific cluster.
@@ -2458,6 +2633,24 @@ namespace Google.Cloud.Container.V1
         /// <param name="request">
         /// The request object containing all of the parameters for the API call.
         /// </param>
+        /// <param name="cancellationToken">
+        /// A <see cref="CancellationToken"/> to use for this RPC.
+        /// </param>
+        /// <returns>
+        /// A Task containing the RPC response.
+        /// </returns>
+        public virtual Task<Operation> SetLocationsAsync(
+            SetLocationsRequest request,
+            CancellationToken cancellationToken) => SetLocationsAsync(
+                request,
+                CallSettings.FromCancellationToken(cancellationToken));
+
+        /// <summary>
+        /// Sets the locations of a specific cluster.
+        /// </summary>
+        /// <param name="request">
+        /// The request object containing all of the parameters for the API call.
+        /// </param>
         /// <param name="callSettings">
         /// If not null, applies overrides to this RPC call.
         /// </param>
@@ -2616,6 +2809,24 @@ namespace Google.Cloud.Container.V1
         /// <param name="request">
         /// The request object containing all of the parameters for the API call.
         /// </param>
+        /// <param name="cancellationToken">
+        /// A <see cref="CancellationToken"/> to use for this RPC.
+        /// </param>
+        /// <returns>
+        /// A Task containing the RPC response.
+        /// </returns>
+        public virtual Task<Operation> UpdateMasterAsync(
+            UpdateMasterRequest request,
+            CancellationToken cancellationToken) => UpdateMasterAsync(
+                request,
+                CallSettings.FromCancellationToken(cancellationToken));
+
+        /// <summary>
+        /// Updates the master of a specific cluster.
+        /// </summary>
+        /// <param name="request">
+        /// The request object containing all of the parameters for the API call.
+        /// </param>
         /// <param name="callSettings">
         /// If not null, applies overrides to this RPC call.
         /// </param>
@@ -2649,6 +2860,26 @@ namespace Google.Cloud.Container.V1
         {
             throw new NotImplementedException();
         }
+
+        /// <summary>
+        /// Used to set master auth materials. Currently supports :-
+        /// Changing the admin password of a specific cluster.
+        /// This can be either via password generation or explicitly set the password.
+        /// </summary>
+        /// <param name="request">
+        /// The request object containing all of the parameters for the API call.
+        /// </param>
+        /// <param name="cancellationToken">
+        /// A <see cref="CancellationToken"/> to use for this RPC.
+        /// </param>
+        /// <returns>
+        /// A Task containing the RPC response.
+        /// </returns>
+        public virtual Task<Operation> SetMasterAuthAsync(
+            SetMasterAuthRequest request,
+            CancellationToken cancellationToken) => SetMasterAuthAsync(
+                request,
+                CallSettings.FromCancellationToken(cancellationToken));
 
         /// <summary>
         /// Used to set master auth materials. Currently supports :-
@@ -2835,6 +3066,32 @@ namespace Google.Cloud.Container.V1
         /// <param name="request">
         /// The request object containing all of the parameters for the API call.
         /// </param>
+        /// <param name="cancellationToken">
+        /// A <see cref="CancellationToken"/> to use for this RPC.
+        /// </param>
+        /// <returns>
+        /// A Task containing the RPC response.
+        /// </returns>
+        public virtual Task<Operation> DeleteClusterAsync(
+            DeleteClusterRequest request,
+            CancellationToken cancellationToken) => DeleteClusterAsync(
+                request,
+                CallSettings.FromCancellationToken(cancellationToken));
+
+        /// <summary>
+        /// Deletes the cluster, including the Kubernetes endpoint and all worker
+        /// nodes.
+        ///
+        /// Firewalls and routes that were configured during cluster creation
+        /// are also deleted.
+        ///
+        /// Other Google Compute Engine resources that might be in use by the cluster
+        /// (e.g. load balancer resources) will not be deleted if they weren't present
+        /// at the initial create time.
+        /// </summary>
+        /// <param name="request">
+        /// The request object containing all of the parameters for the API call.
+        /// </param>
         /// <param name="callSettings">
         /// If not null, applies overrides to this RPC call.
         /// </param>
@@ -2947,6 +3204,24 @@ namespace Google.Cloud.Container.V1
         {
             throw new NotImplementedException();
         }
+
+        /// <summary>
+        /// Lists all operations in a project in a specific zone or all zones.
+        /// </summary>
+        /// <param name="request">
+        /// The request object containing all of the parameters for the API call.
+        /// </param>
+        /// <param name="cancellationToken">
+        /// A <see cref="CancellationToken"/> to use for this RPC.
+        /// </param>
+        /// <returns>
+        /// A Task containing the RPC response.
+        /// </returns>
+        public virtual Task<ListOperationsResponse> ListOperationsAsync(
+            ListOperationsRequest request,
+            CancellationToken cancellationToken) => ListOperationsAsync(
+                request,
+                CallSettings.FromCancellationToken(cancellationToken));
 
         /// <summary>
         /// Lists all operations in a project in a specific zone or all zones.
@@ -3091,6 +3366,24 @@ namespace Google.Cloud.Container.V1
         /// <param name="request">
         /// The request object containing all of the parameters for the API call.
         /// </param>
+        /// <param name="cancellationToken">
+        /// A <see cref="CancellationToken"/> to use for this RPC.
+        /// </param>
+        /// <returns>
+        /// A Task containing the RPC response.
+        /// </returns>
+        public virtual Task<Operation> GetOperationAsync(
+            GetOperationRequest request,
+            CancellationToken cancellationToken) => GetOperationAsync(
+                request,
+                CallSettings.FromCancellationToken(cancellationToken));
+
+        /// <summary>
+        /// Gets the specified operation.
+        /// </summary>
+        /// <param name="request">
+        /// The request object containing all of the parameters for the API call.
+        /// </param>
         /// <param name="callSettings">
         /// If not null, applies overrides to this RPC call.
         /// </param>
@@ -3222,6 +3515,24 @@ namespace Google.Cloud.Container.V1
         /// <param name="request">
         /// The request object containing all of the parameters for the API call.
         /// </param>
+        /// <param name="cancellationToken">
+        /// A <see cref="CancellationToken"/> to use for this RPC.
+        /// </param>
+        /// <returns>
+        /// A Task that completes when the RPC has completed.
+        /// </returns>
+        public virtual Task CancelOperationAsync(
+            CancelOperationRequest request,
+            CancellationToken cancellationToken) => CancelOperationAsync(
+                request,
+                CallSettings.FromCancellationToken(cancellationToken));
+
+        /// <summary>
+        /// Cancels the specified operation.
+        /// </summary>
+        /// <param name="request">
+        /// The request object containing all of the parameters for the API call.
+        /// </param>
         /// <param name="callSettings">
         /// If not null, applies overrides to this RPC call.
         /// </param>
@@ -3331,6 +3642,24 @@ namespace Google.Cloud.Container.V1
         {
             throw new NotImplementedException();
         }
+
+        /// <summary>
+        /// Returns configuration info about the Container Engine service.
+        /// </summary>
+        /// <param name="request">
+        /// The request object containing all of the parameters for the API call.
+        /// </param>
+        /// <param name="cancellationToken">
+        /// A <see cref="CancellationToken"/> to use for this RPC.
+        /// </param>
+        /// <returns>
+        /// A Task containing the RPC response.
+        /// </returns>
+        public virtual Task<ServerConfig> GetServerConfigAsync(
+            GetServerConfigRequest request,
+            CancellationToken cancellationToken) => GetServerConfigAsync(
+                request,
+                CallSettings.FromCancellationToken(cancellationToken));
 
         /// <summary>
         /// Returns configuration info about the Container Engine service.
@@ -3468,6 +3797,24 @@ namespace Google.Cloud.Container.V1
         {
             throw new NotImplementedException();
         }
+
+        /// <summary>
+        /// Lists the node pools for a cluster.
+        /// </summary>
+        /// <param name="request">
+        /// The request object containing all of the parameters for the API call.
+        /// </param>
+        /// <param name="cancellationToken">
+        /// A <see cref="CancellationToken"/> to use for this RPC.
+        /// </param>
+        /// <returns>
+        /// A Task containing the RPC response.
+        /// </returns>
+        public virtual Task<ListNodePoolsResponse> ListNodePoolsAsync(
+            ListNodePoolsRequest request,
+            CancellationToken cancellationToken) => ListNodePoolsAsync(
+                request,
+                CallSettings.FromCancellationToken(cancellationToken));
 
         /// <summary>
         /// Lists the node pools for a cluster.
@@ -3627,6 +3974,24 @@ namespace Google.Cloud.Container.V1
         /// <param name="request">
         /// The request object containing all of the parameters for the API call.
         /// </param>
+        /// <param name="cancellationToken">
+        /// A <see cref="CancellationToken"/> to use for this RPC.
+        /// </param>
+        /// <returns>
+        /// A Task containing the RPC response.
+        /// </returns>
+        public virtual Task<NodePool> GetNodePoolAsync(
+            GetNodePoolRequest request,
+            CancellationToken cancellationToken) => GetNodePoolAsync(
+                request,
+                CallSettings.FromCancellationToken(cancellationToken));
+
+        /// <summary>
+        /// Retrieves the node pool requested.
+        /// </summary>
+        /// <param name="request">
+        /// The request object containing all of the parameters for the API call.
+        /// </param>
         /// <param name="callSettings">
         /// If not null, applies overrides to this RPC call.
         /// </param>
@@ -3779,6 +4144,24 @@ namespace Google.Cloud.Container.V1
         /// <param name="request">
         /// The request object containing all of the parameters for the API call.
         /// </param>
+        /// <param name="cancellationToken">
+        /// A <see cref="CancellationToken"/> to use for this RPC.
+        /// </param>
+        /// <returns>
+        /// A Task containing the RPC response.
+        /// </returns>
+        public virtual Task<Operation> CreateNodePoolAsync(
+            CreateNodePoolRequest request,
+            CancellationToken cancellationToken) => CreateNodePoolAsync(
+                request,
+                CallSettings.FromCancellationToken(cancellationToken));
+
+        /// <summary>
+        /// Creates a node pool for a cluster.
+        /// </summary>
+        /// <param name="request">
+        /// The request object containing all of the parameters for the API call.
+        /// </param>
         /// <param name="callSettings">
         /// If not null, applies overrides to this RPC call.
         /// </param>
@@ -3924,6 +4307,24 @@ namespace Google.Cloud.Container.V1
         {
             throw new NotImplementedException();
         }
+
+        /// <summary>
+        /// Deletes a node pool from a cluster.
+        /// </summary>
+        /// <param name="request">
+        /// The request object containing all of the parameters for the API call.
+        /// </param>
+        /// <param name="cancellationToken">
+        /// A <see cref="CancellationToken"/> to use for this RPC.
+        /// </param>
+        /// <returns>
+        /// A Task containing the RPC response.
+        /// </returns>
+        public virtual Task<Operation> DeleteNodePoolAsync(
+            DeleteNodePoolRequest request,
+            CancellationToken cancellationToken) => DeleteNodePoolAsync(
+                request,
+                CallSettings.FromCancellationToken(cancellationToken));
 
         /// <summary>
         /// Deletes a node pool from a cluster.
@@ -4088,6 +4489,25 @@ namespace Google.Cloud.Container.V1
         /// <param name="request">
         /// The request object containing all of the parameters for the API call.
         /// </param>
+        /// <param name="cancellationToken">
+        /// A <see cref="CancellationToken"/> to use for this RPC.
+        /// </param>
+        /// <returns>
+        /// A Task containing the RPC response.
+        /// </returns>
+        public virtual Task<Operation> RollbackNodePoolUpgradeAsync(
+            RollbackNodePoolUpgradeRequest request,
+            CancellationToken cancellationToken) => RollbackNodePoolUpgradeAsync(
+                request,
+                CallSettings.FromCancellationToken(cancellationToken));
+
+        /// <summary>
+        /// Roll back the previously Aborted or Failed NodePool upgrade.
+        /// This will be an no-op if the last upgrade successfully completed.
+        /// </summary>
+        /// <param name="request">
+        /// The request object containing all of the parameters for the API call.
+        /// </param>
         /// <param name="callSettings">
         /// If not null, applies overrides to this RPC call.
         /// </param>
@@ -4126,6 +4546,24 @@ namespace Google.Cloud.Container.V1
         /// <param name="request">
         /// The request object containing all of the parameters for the API call.
         /// </param>
+        /// <param name="cancellationToken">
+        /// A <see cref="CancellationToken"/> to use for this RPC.
+        /// </param>
+        /// <returns>
+        /// A Task containing the RPC response.
+        /// </returns>
+        public virtual Task<Operation> SetNodePoolManagementAsync(
+            SetNodePoolManagementRequest request,
+            CancellationToken cancellationToken) => SetNodePoolManagementAsync(
+                request,
+                CallSettings.FromCancellationToken(cancellationToken));
+
+        /// <summary>
+        /// Sets the NodeManagement options for a node pool.
+        /// </summary>
+        /// <param name="request">
+        /// The request object containing all of the parameters for the API call.
+        /// </param>
         /// <param name="callSettings">
         /// If not null, applies overrides to this RPC call.
         /// </param>
@@ -4157,6 +4595,24 @@ namespace Google.Cloud.Container.V1
         {
             throw new NotImplementedException();
         }
+
+        /// <summary>
+        /// Sets labels on a cluster.
+        /// </summary>
+        /// <param name="request">
+        /// The request object containing all of the parameters for the API call.
+        /// </param>
+        /// <param name="cancellationToken">
+        /// A <see cref="CancellationToken"/> to use for this RPC.
+        /// </param>
+        /// <returns>
+        /// A Task containing the RPC response.
+        /// </returns>
+        public virtual Task<Operation> SetLabelsAsync(
+            SetLabelsRequest request,
+            CancellationToken cancellationToken) => SetLabelsAsync(
+                request,
+                CallSettings.FromCancellationToken(cancellationToken));
 
         /// <summary>
         /// Sets labels on a cluster.
@@ -4316,6 +4772,24 @@ namespace Google.Cloud.Container.V1
         /// <param name="request">
         /// The request object containing all of the parameters for the API call.
         /// </param>
+        /// <param name="cancellationToken">
+        /// A <see cref="CancellationToken"/> to use for this RPC.
+        /// </param>
+        /// <returns>
+        /// A Task containing the RPC response.
+        /// </returns>
+        public virtual Task<Operation> SetLegacyAbacAsync(
+            SetLegacyAbacRequest request,
+            CancellationToken cancellationToken) => SetLegacyAbacAsync(
+                request,
+                CallSettings.FromCancellationToken(cancellationToken));
+
+        /// <summary>
+        /// Enables or disables the ABAC authorization mechanism on a cluster.
+        /// </summary>
+        /// <param name="request">
+        /// The request object containing all of the parameters for the API call.
+        /// </param>
         /// <param name="callSettings">
         /// If not null, applies overrides to this RPC call.
         /// </param>
@@ -4446,6 +4920,24 @@ namespace Google.Cloud.Container.V1
         {
             throw new NotImplementedException();
         }
+
+        /// <summary>
+        /// Start master IP rotation.
+        /// </summary>
+        /// <param name="request">
+        /// The request object containing all of the parameters for the API call.
+        /// </param>
+        /// <param name="cancellationToken">
+        /// A <see cref="CancellationToken"/> to use for this RPC.
+        /// </param>
+        /// <returns>
+        /// A Task containing the RPC response.
+        /// </returns>
+        public virtual Task<Operation> StartIPRotationAsync(
+            StartIPRotationRequest request,
+            CancellationToken cancellationToken) => StartIPRotationAsync(
+                request,
+                CallSettings.FromCancellationToken(cancellationToken));
 
         /// <summary>
         /// Start master IP rotation.
@@ -4590,6 +5082,24 @@ namespace Google.Cloud.Container.V1
         /// <param name="request">
         /// The request object containing all of the parameters for the API call.
         /// </param>
+        /// <param name="cancellationToken">
+        /// A <see cref="CancellationToken"/> to use for this RPC.
+        /// </param>
+        /// <returns>
+        /// A Task containing the RPC response.
+        /// </returns>
+        public virtual Task<Operation> CompleteIPRotationAsync(
+            CompleteIPRotationRequest request,
+            CancellationToken cancellationToken) => CompleteIPRotationAsync(
+                request,
+                CallSettings.FromCancellationToken(cancellationToken));
+
+        /// <summary>
+        /// Completes master IP rotation.
+        /// </summary>
+        /// <param name="request">
+        /// The request object containing all of the parameters for the API call.
+        /// </param>
         /// <param name="callSettings">
         /// If not null, applies overrides to this RPC call.
         /// </param>
@@ -4621,6 +5131,24 @@ namespace Google.Cloud.Container.V1
         {
             throw new NotImplementedException();
         }
+
+        /// <summary>
+        /// Sets the size of a specific node pool.
+        /// </summary>
+        /// <param name="request">
+        /// The request object containing all of the parameters for the API call.
+        /// </param>
+        /// <param name="cancellationToken">
+        /// A <see cref="CancellationToken"/> to use for this RPC.
+        /// </param>
+        /// <returns>
+        /// A Task containing the RPC response.
+        /// </returns>
+        public virtual Task<Operation> SetNodePoolSizeAsync(
+            SetNodePoolSizeRequest request,
+            CancellationToken cancellationToken) => SetNodePoolSizeAsync(
+                request,
+                CallSettings.FromCancellationToken(cancellationToken));
 
         /// <summary>
         /// Sets the size of a specific node pool.
@@ -4780,6 +5308,24 @@ namespace Google.Cloud.Container.V1
         /// <param name="request">
         /// The request object containing all of the parameters for the API call.
         /// </param>
+        /// <param name="cancellationToken">
+        /// A <see cref="CancellationToken"/> to use for this RPC.
+        /// </param>
+        /// <returns>
+        /// A Task containing the RPC response.
+        /// </returns>
+        public virtual Task<Operation> SetNetworkPolicyAsync(
+            SetNetworkPolicyRequest request,
+            CancellationToken cancellationToken) => SetNetworkPolicyAsync(
+                request,
+                CallSettings.FromCancellationToken(cancellationToken));
+
+        /// <summary>
+        /// Enables/Disables Network Policy for a cluster.
+        /// </summary>
+        /// <param name="request">
+        /// The request object containing all of the parameters for the API call.
+        /// </param>
         /// <param name="callSettings">
         /// If not null, applies overrides to this RPC call.
         /// </param>
@@ -4928,6 +5474,24 @@ namespace Google.Cloud.Container.V1
         {
             throw new NotImplementedException();
         }
+
+        /// <summary>
+        /// Sets the maintenance policy for a cluster.
+        /// </summary>
+        /// <param name="request">
+        /// The request object containing all of the parameters for the API call.
+        /// </param>
+        /// <param name="cancellationToken">
+        /// A <see cref="CancellationToken"/> to use for this RPC.
+        /// </param>
+        /// <returns>
+        /// A Task containing the RPC response.
+        /// </returns>
+        public virtual Task<Operation> SetMaintenancePolicyAsync(
+            SetMaintenancePolicyRequest request,
+            CancellationToken cancellationToken) => SetMaintenancePolicyAsync(
+                request,
+                CallSettings.FromCancellationToken(cancellationToken));
 
         /// <summary>
         /// Sets the maintenance policy for a cluster.

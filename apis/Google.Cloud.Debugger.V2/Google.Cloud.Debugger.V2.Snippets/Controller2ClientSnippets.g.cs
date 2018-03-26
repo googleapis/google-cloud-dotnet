@@ -64,6 +64,7 @@ namespace Google.Cloud.Debugger.V2.Snippets
         public async Task RegisterDebuggeeAsync_RequestObject()
         {
             // Snippet: RegisterDebuggeeAsync(RegisterDebuggeeRequest,CallSettings)
+            // Additional: RegisterDebuggeeAsync(RegisterDebuggeeRequest,CancellationToken)
             // Create client
             Controller2Client controller2Client = await Controller2Client.CreateAsync();
             // Initialize request argument(s)
@@ -123,6 +124,7 @@ namespace Google.Cloud.Debugger.V2.Snippets
         public async Task ListActiveBreakpointsAsync_RequestObject()
         {
             // Snippet: ListActiveBreakpointsAsync(ListActiveBreakpointsRequest,CallSettings)
+            // Additional: ListActiveBreakpointsAsync(ListActiveBreakpointsRequest,CancellationToken)
             // Create client
             Controller2Client controller2Client = await Controller2Client.CreateAsync();
             // Initialize request argument(s)
@@ -184,6 +186,7 @@ namespace Google.Cloud.Debugger.V2.Snippets
         public async Task UpdateActiveBreakpointAsync_RequestObject()
         {
             // Snippet: UpdateActiveBreakpointAsync(UpdateActiveBreakpointRequest,CallSettings)
+            // Additional: UpdateActiveBreakpointAsync(UpdateActiveBreakpointRequest,CancellationToken)
             // Create client
             Controller2Client controller2Client = await Controller2Client.CreateAsync();
             // Initialize request argument(s)

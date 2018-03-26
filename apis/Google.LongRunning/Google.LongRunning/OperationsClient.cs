@@ -434,6 +434,26 @@ namespace Google.LongRunning
         /// <param name="request">
         /// The request object containing all of the parameters for the API call.
         /// </param>
+        /// <param name="cancellationToken">
+        /// A <see cref="CancellationToken"/> to use for this RPC.
+        /// </param>
+        /// <returns>
+        /// A Task containing the RPC response.
+        /// </returns>
+        public virtual Task<Operation> GetOperationAsync(
+            GetOperationRequest request,
+            CancellationToken cancellationToken) => GetOperationAsync(
+                request,
+                CallSettings.FromCancellationToken(cancellationToken));
+
+        /// <summary>
+        /// Gets the latest state of a long-running operation.  Clients can use this
+        /// method to poll the operation result at intervals as recommended by the API
+        /// service.
+        /// </summary>
+        /// <param name="request">
+        /// The request object containing all of the parameters for the API call.
+        /// </param>
         /// <param name="callSettings">
         /// If not null, applies overrides to this RPC call.
         /// </param>
@@ -704,6 +724,33 @@ namespace Google.LongRunning
         /// <param name="request">
         /// The request object containing all of the parameters for the API call.
         /// </param>
+        /// <param name="cancellationToken">
+        /// A <see cref="CancellationToken"/> to use for this RPC.
+        /// </param>
+        /// <returns>
+        /// A Task that completes when the RPC has completed.
+        /// </returns>
+        public virtual Task CancelOperationAsync(
+            CancelOperationRequest request,
+            CancellationToken cancellationToken) => CancelOperationAsync(
+                request,
+                CallSettings.FromCancellationToken(cancellationToken));
+
+        /// <summary>
+        /// Starts asynchronous cancellation on a long-running operation.  The server
+        /// makes a best effort to cancel the operation, but success is not
+        /// guaranteed.  If the server doesn't support this method, it returns
+        /// `google.rpc.Code.UNIMPLEMENTED`.  Clients can use
+        /// [Operations.GetOperation][google.longrunning.Operations.GetOperation] or
+        /// other methods to check whether the cancellation succeeded or whether the
+        /// operation completed despite cancellation. On successful cancellation,
+        /// the operation is not deleted; instead, it becomes an operation with
+        /// an [Operation.error][google.longrunning.Operation.error] value with a [google.rpc.Status.code][google.rpc.Status.code] of 1,
+        /// corresponding to `Code.CANCELLED`.
+        /// </summary>
+        /// <param name="request">
+        /// The request object containing all of the parameters for the API call.
+        /// </param>
         /// <param name="callSettings">
         /// If not null, applies overrides to this RPC call.
         /// </param>
@@ -801,6 +848,27 @@ namespace Google.LongRunning
         {
             throw new NotImplementedException();
         }
+
+        /// <summary>
+        /// Deletes a long-running operation. This method indicates that the client is
+        /// no longer interested in the operation result. It does not cancel the
+        /// operation. If the server doesn't support this method, it returns
+        /// `google.rpc.Code.UNIMPLEMENTED`.
+        /// </summary>
+        /// <param name="request">
+        /// The request object containing all of the parameters for the API call.
+        /// </param>
+        /// <param name="cancellationToken">
+        /// A <see cref="CancellationToken"/> to use for this RPC.
+        /// </param>
+        /// <returns>
+        /// A Task that completes when the RPC has completed.
+        /// </returns>
+        public virtual Task DeleteOperationAsync(
+            DeleteOperationRequest request,
+            CancellationToken cancellationToken) => DeleteOperationAsync(
+                request,
+                CallSettings.FromCancellationToken(cancellationToken));
 
         /// <summary>
         /// Deletes a long-running operation. This method indicates that the client is

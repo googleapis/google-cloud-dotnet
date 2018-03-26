@@ -622,6 +622,24 @@ namespace Google.Cloud.Firestore.V1Beta1
         /// <param name="request">
         /// The request object containing all of the parameters for the API call.
         /// </param>
+        /// <param name="cancellationToken">
+        /// A <see cref="CancellationToken"/> to use for this RPC.
+        /// </param>
+        /// <returns>
+        /// A Task containing the RPC response.
+        /// </returns>
+        public virtual Task<Document> GetDocumentAsync(
+            GetDocumentRequest request,
+            CancellationToken cancellationToken) => GetDocumentAsync(
+                request,
+                CallSettings.FromCancellationToken(cancellationToken));
+
+        /// <summary>
+        /// Gets a single document.
+        /// </summary>
+        /// <param name="request">
+        /// The request object containing all of the parameters for the API call.
+        /// </param>
         /// <param name="callSettings">
         /// If not null, applies overrides to this RPC call.
         /// </param>
@@ -691,6 +709,24 @@ namespace Google.Cloud.Firestore.V1Beta1
         {
             throw new NotImplementedException();
         }
+
+        /// <summary>
+        /// Creates a new document.
+        /// </summary>
+        /// <param name="request">
+        /// The request object containing all of the parameters for the API call.
+        /// </param>
+        /// <param name="cancellationToken">
+        /// A <see cref="CancellationToken"/> to use for this RPC.
+        /// </param>
+        /// <returns>
+        /// A Task containing the RPC response.
+        /// </returns>
+        public virtual Task<Document> CreateDocumentAsync(
+            CreateDocumentRequest request,
+            CancellationToken cancellationToken) => CreateDocumentAsync(
+                request,
+                CallSettings.FromCancellationToken(cancellationToken));
 
         /// <summary>
         /// Creates a new document.
@@ -832,6 +868,24 @@ namespace Google.Cloud.Firestore.V1Beta1
         /// <param name="request">
         /// The request object containing all of the parameters for the API call.
         /// </param>
+        /// <param name="cancellationToken">
+        /// A <see cref="CancellationToken"/> to use for this RPC.
+        /// </param>
+        /// <returns>
+        /// A Task containing the RPC response.
+        /// </returns>
+        public virtual Task<Document> UpdateDocumentAsync(
+            UpdateDocumentRequest request,
+            CancellationToken cancellationToken) => UpdateDocumentAsync(
+                request,
+                CallSettings.FromCancellationToken(cancellationToken));
+
+        /// <summary>
+        /// Updates or inserts a document.
+        /// </summary>
+        /// <param name="request">
+        /// The request object containing all of the parameters for the API call.
+        /// </param>
         /// <param name="callSettings">
         /// If not null, applies overrides to this RPC call.
         /// </param>
@@ -923,6 +977,24 @@ namespace Google.Cloud.Firestore.V1Beta1
         {
             throw new NotImplementedException();
         }
+
+        /// <summary>
+        /// Deletes a document.
+        /// </summary>
+        /// <param name="request">
+        /// The request object containing all of the parameters for the API call.
+        /// </param>
+        /// <param name="cancellationToken">
+        /// A <see cref="CancellationToken"/> to use for this RPC.
+        /// </param>
+        /// <returns>
+        /// A Task that completes when the RPC has completed.
+        /// </returns>
+        public virtual Task DeleteDocumentAsync(
+            DeleteDocumentRequest request,
+            CancellationToken cancellationToken) => DeleteDocumentAsync(
+                request,
+                CallSettings.FromCancellationToken(cancellationToken));
 
         /// <summary>
         /// Deletes a document.
@@ -1057,6 +1129,24 @@ namespace Google.Cloud.Firestore.V1Beta1
         /// <param name="request">
         /// The request object containing all of the parameters for the API call.
         /// </param>
+        /// <param name="cancellationToken">
+        /// A <see cref="CancellationToken"/> to use for this RPC.
+        /// </param>
+        /// <returns>
+        /// A Task containing the RPC response.
+        /// </returns>
+        public virtual Task<BeginTransactionResponse> BeginTransactionAsync(
+            BeginTransactionRequest request,
+            CancellationToken cancellationToken) => BeginTransactionAsync(
+                request,
+                CallSettings.FromCancellationToken(cancellationToken));
+
+        /// <summary>
+        /// Starts a new transaction.
+        /// </summary>
+        /// <param name="request">
+        /// The request object containing all of the parameters for the API call.
+        /// </param>
         /// <param name="callSettings">
         /// If not null, applies overrides to this RPC call.
         /// </param>
@@ -1179,6 +1269,24 @@ namespace Google.Cloud.Firestore.V1Beta1
         /// <param name="request">
         /// The request object containing all of the parameters for the API call.
         /// </param>
+        /// <param name="cancellationToken">
+        /// A <see cref="CancellationToken"/> to use for this RPC.
+        /// </param>
+        /// <returns>
+        /// A Task containing the RPC response.
+        /// </returns>
+        public virtual Task<CommitResponse> CommitAsync(
+            CommitRequest request,
+            CancellationToken cancellationToken) => CommitAsync(
+                request,
+                CallSettings.FromCancellationToken(cancellationToken));
+
+        /// <summary>
+        /// Commits a transaction, while optionally updating documents.
+        /// </summary>
+        /// <param name="request">
+        /// The request object containing all of the parameters for the API call.
+        /// </param>
         /// <param name="callSettings">
         /// If not null, applies overrides to this RPC call.
         /// </param>
@@ -1285,6 +1393,24 @@ namespace Google.Cloud.Firestore.V1Beta1
         {
             throw new NotImplementedException();
         }
+
+        /// <summary>
+        /// Rolls back a transaction.
+        /// </summary>
+        /// <param name="request">
+        /// The request object containing all of the parameters for the API call.
+        /// </param>
+        /// <param name="cancellationToken">
+        /// A <see cref="CancellationToken"/> to use for this RPC.
+        /// </param>
+        /// <returns>
+        /// A Task that completes when the RPC has completed.
+        /// </returns>
+        public virtual Task RollbackAsync(
+            RollbackRequest request,
+            CancellationToken cancellationToken) => RollbackAsync(
+                request,
+                CallSettings.FromCancellationToken(cancellationToken));
 
         /// <summary>
         /// Rolls back a transaction.

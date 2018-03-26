@@ -66,6 +66,7 @@ namespace Google.Cloud.Trace.V1.Snippets
         public async Task PatchTracesAsync_RequestObject()
         {
             // Snippet: PatchTracesAsync(PatchTracesRequest,CallSettings)
+            // Additional: PatchTracesAsync(PatchTracesRequest,CancellationToken)
             // Create client
             TraceServiceClient traceServiceClient = await TraceServiceClient.CreateAsync();
             // Initialize request argument(s)
@@ -129,6 +130,7 @@ namespace Google.Cloud.Trace.V1.Snippets
         public async Task GetTraceAsync_RequestObject()
         {
             // Snippet: GetTraceAsync(GetTraceRequest,CallSettings)
+            // Additional: GetTraceAsync(GetTraceRequest,CancellationToken)
             // Create client
             TraceServiceClient traceServiceClient = await TraceServiceClient.CreateAsync();
             // Initialize request argument(s)

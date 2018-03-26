@@ -1015,6 +1015,27 @@ namespace Google.Cloud.Dlp.V2
         /// <param name="request">
         /// The request object containing all of the parameters for the API call.
         /// </param>
+        /// <param name="cancellationToken">
+        /// A <see cref="CancellationToken"/> to use for this RPC.
+        /// </param>
+        /// <returns>
+        /// A Task containing the RPC response.
+        /// </returns>
+        public virtual Task<InspectContentResponse> InspectContentAsync(
+            InspectContentRequest request,
+            CancellationToken cancellationToken) => InspectContentAsync(
+                request,
+                CallSettings.FromCancellationToken(cancellationToken));
+
+        /// <summary>
+        /// Finds potentially sensitive info in content.
+        /// This method has limits on input size, processing time, and output size.
+        /// [How-to guide for text](/dlp/docs/inspecting-text), [How-to guide for
+        /// images](/dlp/docs/inspecting-images)
+        /// </summary>
+        /// <param name="request">
+        /// The request object containing all of the parameters for the API call.
+        /// </param>
         /// <param name="callSettings">
         /// If not null, applies overrides to this RPC call.
         /// </param>
@@ -1048,6 +1069,26 @@ namespace Google.Cloud.Dlp.V2
         {
             throw new NotImplementedException();
         }
+
+        /// <summary>
+        /// Redacts potentially sensitive info from an image.
+        /// This method has limits on input size, processing time, and output size.
+        /// [How-to guide](/dlp/docs/redacting-sensitive-data-images)
+        /// </summary>
+        /// <param name="request">
+        /// The request object containing all of the parameters for the API call.
+        /// </param>
+        /// <param name="cancellationToken">
+        /// A <see cref="CancellationToken"/> to use for this RPC.
+        /// </param>
+        /// <returns>
+        /// A Task containing the RPC response.
+        /// </returns>
+        public virtual Task<RedactImageResponse> RedactImageAsync(
+            RedactImageRequest request,
+            CancellationToken cancellationToken) => RedactImageAsync(
+                request,
+                CallSettings.FromCancellationToken(cancellationToken));
 
         /// <summary>
         /// Redacts potentially sensitive info from an image.
@@ -1099,6 +1140,26 @@ namespace Google.Cloud.Dlp.V2
         /// <param name="request">
         /// The request object containing all of the parameters for the API call.
         /// </param>
+        /// <param name="cancellationToken">
+        /// A <see cref="CancellationToken"/> to use for this RPC.
+        /// </param>
+        /// <returns>
+        /// A Task containing the RPC response.
+        /// </returns>
+        public virtual Task<DeidentifyContentResponse> DeidentifyContentAsync(
+            DeidentifyContentRequest request,
+            CancellationToken cancellationToken) => DeidentifyContentAsync(
+                request,
+                CallSettings.FromCancellationToken(cancellationToken));
+
+        /// <summary>
+        /// De-identifies potentially sensitive info from a ContentItem.
+        /// This method has limits on input size and output size.
+        /// [How-to guide](/dlp/docs/deidentify-sensitive-data)
+        /// </summary>
+        /// <param name="request">
+        /// The request object containing all of the parameters for the API call.
+        /// </param>
         /// <param name="callSettings">
         /// If not null, applies overrides to this RPC call.
         /// </param>
@@ -1137,6 +1198,24 @@ namespace Google.Cloud.Dlp.V2
         /// <param name="request">
         /// The request object containing all of the parameters for the API call.
         /// </param>
+        /// <param name="cancellationToken">
+        /// A <see cref="CancellationToken"/> to use for this RPC.
+        /// </param>
+        /// <returns>
+        /// A Task containing the RPC response.
+        /// </returns>
+        public virtual Task<ReidentifyContentResponse> ReidentifyContentAsync(
+            ReidentifyContentRequest request,
+            CancellationToken cancellationToken) => ReidentifyContentAsync(
+                request,
+                CallSettings.FromCancellationToken(cancellationToken));
+
+        /// <summary>
+        /// Re-identifies content that has been de-identified.
+        /// </summary>
+        /// <param name="request">
+        /// The request object containing all of the parameters for the API call.
+        /// </param>
         /// <param name="callSettings">
         /// If not null, applies overrides to this RPC call.
         /// </param>
@@ -1168,6 +1247,24 @@ namespace Google.Cloud.Dlp.V2
         {
             throw new NotImplementedException();
         }
+
+        /// <summary>
+        /// Returns sensitive information types DLP supports.
+        /// </summary>
+        /// <param name="request">
+        /// The request object containing all of the parameters for the API call.
+        /// </param>
+        /// <param name="cancellationToken">
+        /// A <see cref="CancellationToken"/> to use for this RPC.
+        /// </param>
+        /// <returns>
+        /// A Task containing the RPC response.
+        /// </returns>
+        public virtual Task<ListInfoTypesResponse> ListInfoTypesAsync(
+            ListInfoTypesRequest request,
+            CancellationToken cancellationToken) => ListInfoTypesAsync(
+                request,
+                CallSettings.FromCancellationToken(cancellationToken));
 
         /// <summary>
         /// Returns sensitive information types DLP supports.
@@ -1215,6 +1312,25 @@ namespace Google.Cloud.Dlp.V2
         /// <param name="request">
         /// The request object containing all of the parameters for the API call.
         /// </param>
+        /// <param name="cancellationToken">
+        /// A <see cref="CancellationToken"/> to use for this RPC.
+        /// </param>
+        /// <returns>
+        /// A Task containing the RPC response.
+        /// </returns>
+        public virtual Task<InspectTemplate> CreateInspectTemplateAsync(
+            CreateInspectTemplateRequest request,
+            CancellationToken cancellationToken) => CreateInspectTemplateAsync(
+                request,
+                CallSettings.FromCancellationToken(cancellationToken));
+
+        /// <summary>
+        /// Creates an inspect template for re-using frequently used configuration
+        /// for inspecting content, images, and storage.
+        /// </summary>
+        /// <param name="request">
+        /// The request object containing all of the parameters for the API call.
+        /// </param>
         /// <param name="callSettings">
         /// If not null, applies overrides to this RPC call.
         /// </param>
@@ -1253,6 +1369,24 @@ namespace Google.Cloud.Dlp.V2
         /// <param name="request">
         /// The request object containing all of the parameters for the API call.
         /// </param>
+        /// <param name="cancellationToken">
+        /// A <see cref="CancellationToken"/> to use for this RPC.
+        /// </param>
+        /// <returns>
+        /// A Task containing the RPC response.
+        /// </returns>
+        public virtual Task<InspectTemplate> UpdateInspectTemplateAsync(
+            UpdateInspectTemplateRequest request,
+            CancellationToken cancellationToken) => UpdateInspectTemplateAsync(
+                request,
+                CallSettings.FromCancellationToken(cancellationToken));
+
+        /// <summary>
+        /// Updates the inspect template.
+        /// </summary>
+        /// <param name="request">
+        /// The request object containing all of the parameters for the API call.
+        /// </param>
         /// <param name="callSettings">
         /// If not null, applies overrides to this RPC call.
         /// </param>
@@ -1284,6 +1418,24 @@ namespace Google.Cloud.Dlp.V2
         {
             throw new NotImplementedException();
         }
+
+        /// <summary>
+        /// Gets an inspect template.
+        /// </summary>
+        /// <param name="request">
+        /// The request object containing all of the parameters for the API call.
+        /// </param>
+        /// <param name="cancellationToken">
+        /// A <see cref="CancellationToken"/> to use for this RPC.
+        /// </param>
+        /// <returns>
+        /// A Task containing the RPC response.
+        /// </returns>
+        public virtual Task<InspectTemplate> GetInspectTemplateAsync(
+            GetInspectTemplateRequest request,
+            CancellationToken cancellationToken) => GetInspectTemplateAsync(
+                request,
+                CallSettings.FromCancellationToken(cancellationToken));
 
         /// <summary>
         /// Gets an inspect template.
@@ -1367,6 +1519,24 @@ namespace Google.Cloud.Dlp.V2
         /// <param name="request">
         /// The request object containing all of the parameters for the API call.
         /// </param>
+        /// <param name="cancellationToken">
+        /// A <see cref="CancellationToken"/> to use for this RPC.
+        /// </param>
+        /// <returns>
+        /// A Task that completes when the RPC has completed.
+        /// </returns>
+        public virtual Task DeleteInspectTemplateAsync(
+            DeleteInspectTemplateRequest request,
+            CancellationToken cancellationToken) => DeleteInspectTemplateAsync(
+                request,
+                CallSettings.FromCancellationToken(cancellationToken));
+
+        /// <summary>
+        /// Deletes an inspect template.
+        /// </summary>
+        /// <param name="request">
+        /// The request object containing all of the parameters for the API call.
+        /// </param>
         /// <param name="callSettings">
         /// If not null, applies overrides to this RPC call.
         /// </param>
@@ -1396,6 +1566,25 @@ namespace Google.Cloud.Dlp.V2
         {
             throw new NotImplementedException();
         }
+
+        /// <summary>
+        /// Creates a de-identify template for re-using frequently used configuration
+        /// for Deidentifying content, images, and storage.
+        /// </summary>
+        /// <param name="request">
+        /// The request object containing all of the parameters for the API call.
+        /// </param>
+        /// <param name="cancellationToken">
+        /// A <see cref="CancellationToken"/> to use for this RPC.
+        /// </param>
+        /// <returns>
+        /// A Task containing the RPC response.
+        /// </returns>
+        public virtual Task<DeidentifyTemplate> CreateDeidentifyTemplateAsync(
+            CreateDeidentifyTemplateRequest request,
+            CancellationToken cancellationToken) => CreateDeidentifyTemplateAsync(
+                request,
+                CallSettings.FromCancellationToken(cancellationToken));
 
         /// <summary>
         /// Creates a de-identify template for re-using frequently used configuration
@@ -1442,6 +1631,24 @@ namespace Google.Cloud.Dlp.V2
         /// <param name="request">
         /// The request object containing all of the parameters for the API call.
         /// </param>
+        /// <param name="cancellationToken">
+        /// A <see cref="CancellationToken"/> to use for this RPC.
+        /// </param>
+        /// <returns>
+        /// A Task containing the RPC response.
+        /// </returns>
+        public virtual Task<DeidentifyTemplate> UpdateDeidentifyTemplateAsync(
+            UpdateDeidentifyTemplateRequest request,
+            CancellationToken cancellationToken) => UpdateDeidentifyTemplateAsync(
+                request,
+                CallSettings.FromCancellationToken(cancellationToken));
+
+        /// <summary>
+        /// Updates the de-identify template.
+        /// </summary>
+        /// <param name="request">
+        /// The request object containing all of the parameters for the API call.
+        /// </param>
         /// <param name="callSettings">
         /// If not null, applies overrides to this RPC call.
         /// </param>
@@ -1473,6 +1680,24 @@ namespace Google.Cloud.Dlp.V2
         {
             throw new NotImplementedException();
         }
+
+        /// <summary>
+        /// Gets a de-identify template.
+        /// </summary>
+        /// <param name="request">
+        /// The request object containing all of the parameters for the API call.
+        /// </param>
+        /// <param name="cancellationToken">
+        /// A <see cref="CancellationToken"/> to use for this RPC.
+        /// </param>
+        /// <returns>
+        /// A Task containing the RPC response.
+        /// </returns>
+        public virtual Task<DeidentifyTemplate> GetDeidentifyTemplateAsync(
+            GetDeidentifyTemplateRequest request,
+            CancellationToken cancellationToken) => GetDeidentifyTemplateAsync(
+                request,
+                CallSettings.FromCancellationToken(cancellationToken));
 
         /// <summary>
         /// Gets a de-identify template.
@@ -1556,6 +1781,24 @@ namespace Google.Cloud.Dlp.V2
         /// <param name="request">
         /// The request object containing all of the parameters for the API call.
         /// </param>
+        /// <param name="cancellationToken">
+        /// A <see cref="CancellationToken"/> to use for this RPC.
+        /// </param>
+        /// <returns>
+        /// A Task that completes when the RPC has completed.
+        /// </returns>
+        public virtual Task DeleteDeidentifyTemplateAsync(
+            DeleteDeidentifyTemplateRequest request,
+            CancellationToken cancellationToken) => DeleteDeidentifyTemplateAsync(
+                request,
+                CallSettings.FromCancellationToken(cancellationToken));
+
+        /// <summary>
+        /// Deletes a de-identify template.
+        /// </summary>
+        /// <param name="request">
+        /// The request object containing all of the parameters for the API call.
+        /// </param>
         /// <param name="callSettings">
         /// If not null, applies overrides to this RPC call.
         /// </param>
@@ -1585,6 +1828,25 @@ namespace Google.Cloud.Dlp.V2
         {
             throw new NotImplementedException();
         }
+
+        /// <summary>
+        /// Creates a new job to inspect storage or calculate risk metrics [How-to
+        /// guide](/dlp/docs/compute-risk-analysis).
+        /// </summary>
+        /// <param name="request">
+        /// The request object containing all of the parameters for the API call.
+        /// </param>
+        /// <param name="cancellationToken">
+        /// A <see cref="CancellationToken"/> to use for this RPC.
+        /// </param>
+        /// <returns>
+        /// A Task containing the RPC response.
+        /// </returns>
+        public virtual Task<DlpJob> CreateDlpJobAsync(
+            CreateDlpJobRequest request,
+            CancellationToken cancellationToken) => CreateDlpJobAsync(
+                request,
+                CallSettings.FromCancellationToken(cancellationToken));
 
         /// <summary>
         /// Creates a new job to inspect storage or calculate risk metrics [How-to
@@ -1669,6 +1931,24 @@ namespace Google.Cloud.Dlp.V2
         /// <param name="request">
         /// The request object containing all of the parameters for the API call.
         /// </param>
+        /// <param name="cancellationToken">
+        /// A <see cref="CancellationToken"/> to use for this RPC.
+        /// </param>
+        /// <returns>
+        /// A Task containing the RPC response.
+        /// </returns>
+        public virtual Task<DlpJob> GetDlpJobAsync(
+            GetDlpJobRequest request,
+            CancellationToken cancellationToken) => GetDlpJobAsync(
+                request,
+                CallSettings.FromCancellationToken(cancellationToken));
+
+        /// <summary>
+        /// Gets the latest state of a long-running DlpJob.
+        /// </summary>
+        /// <param name="request">
+        /// The request object containing all of the parameters for the API call.
+        /// </param>
         /// <param name="callSettings">
         /// If not null, applies overrides to this RPC call.
         /// </param>
@@ -1711,6 +1991,26 @@ namespace Google.Cloud.Dlp.V2
         /// <param name="request">
         /// The request object containing all of the parameters for the API call.
         /// </param>
+        /// <param name="cancellationToken">
+        /// A <see cref="CancellationToken"/> to use for this RPC.
+        /// </param>
+        /// <returns>
+        /// A Task that completes when the RPC has completed.
+        /// </returns>
+        public virtual Task DeleteDlpJobAsync(
+            DeleteDlpJobRequest request,
+            CancellationToken cancellationToken) => DeleteDlpJobAsync(
+                request,
+                CallSettings.FromCancellationToken(cancellationToken));
+
+        /// <summary>
+        /// Deletes a long-running DlpJob. This method indicates that the client is
+        /// no longer interested in the DlpJob result. The job will be cancelled if
+        /// possible.
+        /// </summary>
+        /// <param name="request">
+        /// The request object containing all of the parameters for the API call.
+        /// </param>
         /// <param name="callSettings">
         /// If not null, applies overrides to this RPC call.
         /// </param>
@@ -1741,6 +2041,26 @@ namespace Google.Cloud.Dlp.V2
         {
             throw new NotImplementedException();
         }
+
+        /// <summary>
+        /// Starts asynchronous cancellation on a long-running DlpJob. The server
+        /// makes a best effort to cancel the DlpJob, but success is not
+        /// guaranteed.
+        /// </summary>
+        /// <param name="request">
+        /// The request object containing all of the parameters for the API call.
+        /// </param>
+        /// <param name="cancellationToken">
+        /// A <see cref="CancellationToken"/> to use for this RPC.
+        /// </param>
+        /// <returns>
+        /// A Task that completes when the RPC has completed.
+        /// </returns>
+        public virtual Task CancelDlpJobAsync(
+            CancelDlpJobRequest request,
+            CancellationToken cancellationToken) => CancelDlpJobAsync(
+                request,
+                CallSettings.FromCancellationToken(cancellationToken));
 
         /// <summary>
         /// Starts asynchronous cancellation on a long-running DlpJob. The server
@@ -1823,6 +2143,24 @@ namespace Google.Cloud.Dlp.V2
         /// <param name="request">
         /// The request object containing all of the parameters for the API call.
         /// </param>
+        /// <param name="cancellationToken">
+        /// A <see cref="CancellationToken"/> to use for this RPC.
+        /// </param>
+        /// <returns>
+        /// A Task containing the RPC response.
+        /// </returns>
+        public virtual Task<JobTrigger> GetJobTriggerAsync(
+            GetJobTriggerRequest request,
+            CancellationToken cancellationToken) => GetJobTriggerAsync(
+                request,
+                CallSettings.FromCancellationToken(cancellationToken));
+
+        /// <summary>
+        /// Gets a job trigger.
+        /// </summary>
+        /// <param name="request">
+        /// The request object containing all of the parameters for the API call.
+        /// </param>
         /// <param name="callSettings">
         /// If not null, applies overrides to this RPC call.
         /// </param>
@@ -1854,6 +2192,24 @@ namespace Google.Cloud.Dlp.V2
         {
             throw new NotImplementedException();
         }
+
+        /// <summary>
+        /// Deletes a job trigger.
+        /// </summary>
+        /// <param name="request">
+        /// The request object containing all of the parameters for the API call.
+        /// </param>
+        /// <param name="cancellationToken">
+        /// A <see cref="CancellationToken"/> to use for this RPC.
+        /// </param>
+        /// <returns>
+        /// A Task that completes when the RPC has completed.
+        /// </returns>
+        public virtual Task DeleteJobTriggerAsync(
+            DeleteJobTriggerRequest request,
+            CancellationToken cancellationToken) => DeleteJobTriggerAsync(
+                request,
+                CallSettings.FromCancellationToken(cancellationToken));
 
         /// <summary>
         /// Deletes a job trigger.
@@ -1896,6 +2252,24 @@ namespace Google.Cloud.Dlp.V2
         /// <param name="request">
         /// The request object containing all of the parameters for the API call.
         /// </param>
+        /// <param name="cancellationToken">
+        /// A <see cref="CancellationToken"/> to use for this RPC.
+        /// </param>
+        /// <returns>
+        /// A Task containing the RPC response.
+        /// </returns>
+        public virtual Task<JobTrigger> UpdateJobTriggerAsync(
+            UpdateJobTriggerRequest request,
+            CancellationToken cancellationToken) => UpdateJobTriggerAsync(
+                request,
+                CallSettings.FromCancellationToken(cancellationToken));
+
+        /// <summary>
+        /// Updates a job trigger.
+        /// </summary>
+        /// <param name="request">
+        /// The request object containing all of the parameters for the API call.
+        /// </param>
         /// <param name="callSettings">
         /// If not null, applies overrides to this RPC call.
         /// </param>
@@ -1928,6 +2302,25 @@ namespace Google.Cloud.Dlp.V2
         {
             throw new NotImplementedException();
         }
+
+        /// <summary>
+        /// Creates a job trigger to run DLP actions such as scanning storage for
+        /// sensitive information on a set schedule.
+        /// </summary>
+        /// <param name="request">
+        /// The request object containing all of the parameters for the API call.
+        /// </param>
+        /// <param name="cancellationToken">
+        /// A <see cref="CancellationToken"/> to use for this RPC.
+        /// </param>
+        /// <returns>
+        /// A Task containing the RPC response.
+        /// </returns>
+        public virtual Task<JobTrigger> CreateJobTriggerAsync(
+            CreateJobTriggerRequest request,
+            CancellationToken cancellationToken) => CreateJobTriggerAsync(
+                request,
+                CallSettings.FromCancellationToken(cancellationToken));
 
         /// <summary>
         /// Creates a job trigger to run DLP actions such as scanning storage for

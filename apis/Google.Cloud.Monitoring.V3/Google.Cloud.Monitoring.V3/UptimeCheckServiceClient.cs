@@ -610,6 +610,24 @@ namespace Google.Cloud.Monitoring.V3
         /// <param name="request">
         /// The request object containing all of the parameters for the API call.
         /// </param>
+        /// <param name="cancellationToken">
+        /// A <see cref="CancellationToken"/> to use for this RPC.
+        /// </param>
+        /// <returns>
+        /// A Task containing the RPC response.
+        /// </returns>
+        public virtual Task<UptimeCheckConfig> GetUptimeCheckConfigAsync(
+            GetUptimeCheckConfigRequest request,
+            CancellationToken cancellationToken) => GetUptimeCheckConfigAsync(
+                request,
+                CallSettings.FromCancellationToken(cancellationToken));
+
+        /// <summary>
+        /// Gets a single uptime check configuration.
+        /// </summary>
+        /// <param name="request">
+        /// The request object containing all of the parameters for the API call.
+        /// </param>
         /// <param name="callSettings">
         /// If not null, applies overrides to this RPC call.
         /// </param>
@@ -722,6 +740,24 @@ namespace Google.Cloud.Monitoring.V3
         {
             throw new NotImplementedException();
         }
+
+        /// <summary>
+        /// Creates a new uptime check configuration.
+        /// </summary>
+        /// <param name="request">
+        /// The request object containing all of the parameters for the API call.
+        /// </param>
+        /// <param name="cancellationToken">
+        /// A <see cref="CancellationToken"/> to use for this RPC.
+        /// </param>
+        /// <returns>
+        /// A Task containing the RPC response.
+        /// </returns>
+        public virtual Task<UptimeCheckConfig> CreateUptimeCheckConfigAsync(
+            CreateUptimeCheckConfigRequest request,
+            CancellationToken cancellationToken) => CreateUptimeCheckConfigAsync(
+                request,
+                CallSettings.FromCancellationToken(cancellationToken));
 
         /// <summary>
         /// Creates a new uptime check configuration.
@@ -860,6 +896,27 @@ namespace Google.Cloud.Monitoring.V3
         /// <param name="request">
         /// The request object containing all of the parameters for the API call.
         /// </param>
+        /// <param name="cancellationToken">
+        /// A <see cref="CancellationToken"/> to use for this RPC.
+        /// </param>
+        /// <returns>
+        /// A Task containing the RPC response.
+        /// </returns>
+        public virtual Task<UptimeCheckConfig> UpdateUptimeCheckConfigAsync(
+            UpdateUptimeCheckConfigRequest request,
+            CancellationToken cancellationToken) => UpdateUptimeCheckConfigAsync(
+                request,
+                CallSettings.FromCancellationToken(cancellationToken));
+
+        /// <summary>
+        /// Updates an uptime check configuration. You can either replace the entire
+        /// configuration with a new one or replace only certain fields in the current
+        /// configuration by specifying the fields to be updated via `"updateMask"`.
+        /// Returns the updated configuration.
+        /// </summary>
+        /// <param name="request">
+        /// The request object containing all of the parameters for the API call.
+        /// </param>
         /// <param name="callSettings">
         /// If not null, applies overrides to this RPC call.
         /// </param>
@@ -962,6 +1019,26 @@ namespace Google.Cloud.Monitoring.V3
         {
             throw new NotImplementedException();
         }
+
+        /// <summary>
+        /// Deletes an uptime check configuration. Note that this method will fail
+        /// if the uptime check configuration is referenced by an alert policy or
+        /// other dependent configs that would be rendered invalid by the deletion.
+        /// </summary>
+        /// <param name="request">
+        /// The request object containing all of the parameters for the API call.
+        /// </param>
+        /// <param name="cancellationToken">
+        /// A <see cref="CancellationToken"/> to use for this RPC.
+        /// </param>
+        /// <returns>
+        /// A Task that completes when the RPC has completed.
+        /// </returns>
+        public virtual Task DeleteUptimeCheckConfigAsync(
+            DeleteUptimeCheckConfigRequest request,
+            CancellationToken cancellationToken) => DeleteUptimeCheckConfigAsync(
+                request,
+                CallSettings.FromCancellationToken(cancellationToken));
 
         /// <summary>
         /// Deletes an uptime check configuration. Note that this method will fail

@@ -692,6 +692,24 @@ namespace Google.Cloud.PubSub.V1
         /// <param name="request">
         /// The request object containing all of the parameters for the API call.
         /// </param>
+        /// <param name="cancellationToken">
+        /// A <see cref="CancellationToken"/> to use for this RPC.
+        /// </param>
+        /// <returns>
+        /// A Task containing the RPC response.
+        /// </returns>
+        public virtual Task<Topic> CreateTopicAsync(
+            Topic request,
+            CancellationToken cancellationToken) => CreateTopicAsync(
+                request,
+                CallSettings.FromCancellationToken(cancellationToken));
+
+        /// <summary>
+        /// Creates the given topic with the given name.
+        /// </summary>
+        /// <param name="request">
+        /// The request object containing all of the parameters for the API call.
+        /// </param>
         /// <param name="callSettings">
         /// If not null, applies overrides to this RPC call.
         /// </param>
@@ -728,6 +746,29 @@ namespace Google.Cloud.PubSub.V1
         {
             throw new NotImplementedException();
         }
+
+        /// <summary>
+        /// Updates an existing topic. Note that certain properties of a topic are not
+        /// modifiable.  Options settings follow the style guide:
+        /// NOTE:  The style guide requires body: "topic" instead of body: "*".
+        /// Keeping the latter for internal consistency in V1, however it should be
+        /// corrected in V2.  See
+        /// https://cloud.google.com/apis/design/standard_methods#update for details.
+        /// </summary>
+        /// <param name="request">
+        /// The request object containing all of the parameters for the API call.
+        /// </param>
+        /// <param name="cancellationToken">
+        /// A <see cref="CancellationToken"/> to use for this RPC.
+        /// </param>
+        /// <returns>
+        /// A Task containing the RPC response.
+        /// </returns>
+        public virtual Task<Topic> UpdateTopicAsync(
+            UpdateTopicRequest request,
+            CancellationToken cancellationToken) => UpdateTopicAsync(
+                request,
+                CallSettings.FromCancellationToken(cancellationToken));
 
         /// <summary>
         /// Updates an existing topic. Note that certain properties of a topic are not
@@ -866,6 +907,26 @@ namespace Google.Cloud.PubSub.V1
         /// <param name="request">
         /// The request object containing all of the parameters for the API call.
         /// </param>
+        /// <param name="cancellationToken">
+        /// A <see cref="CancellationToken"/> to use for this RPC.
+        /// </param>
+        /// <returns>
+        /// A Task containing the RPC response.
+        /// </returns>
+        public virtual Task<PublishResponse> PublishAsync(
+            PublishRequest request,
+            CancellationToken cancellationToken) => PublishAsync(
+                request,
+                CallSettings.FromCancellationToken(cancellationToken));
+
+        /// <summary>
+        /// Adds one or more messages to the topic. Returns `NOT_FOUND` if the topic
+        /// does not exist. The message payload must not be empty; it must contain
+        ///  either a non-empty data field, or at least one attribute.
+        /// </summary>
+        /// <param name="request">
+        /// The request object containing all of the parameters for the API call.
+        /// </param>
         /// <param name="callSettings">
         /// If not null, applies overrides to this RPC call.
         /// </param>
@@ -960,6 +1021,24 @@ namespace Google.Cloud.PubSub.V1
         {
             throw new NotImplementedException();
         }
+
+        /// <summary>
+        /// Gets the configuration of a topic.
+        /// </summary>
+        /// <param name="request">
+        /// The request object containing all of the parameters for the API call.
+        /// </param>
+        /// <param name="cancellationToken">
+        /// A <see cref="CancellationToken"/> to use for this RPC.
+        /// </param>
+        /// <returns>
+        /// A Task containing the RPC response.
+        /// </returns>
+        public virtual Task<Topic> GetTopicAsync(
+            GetTopicRequest request,
+            CancellationToken cancellationToken) => GetTopicAsync(
+                request,
+                CallSettings.FromCancellationToken(cancellationToken));
 
         /// <summary>
         /// Gets the configuration of a topic.
@@ -1297,6 +1376,28 @@ namespace Google.Cloud.PubSub.V1
         /// <param name="request">
         /// The request object containing all of the parameters for the API call.
         /// </param>
+        /// <param name="cancellationToken">
+        /// A <see cref="CancellationToken"/> to use for this RPC.
+        /// </param>
+        /// <returns>
+        /// A Task that completes when the RPC has completed.
+        /// </returns>
+        public virtual Task DeleteTopicAsync(
+            DeleteTopicRequest request,
+            CancellationToken cancellationToken) => DeleteTopicAsync(
+                request,
+                CallSettings.FromCancellationToken(cancellationToken));
+
+        /// <summary>
+        /// Deletes the topic with the given name. Returns `NOT_FOUND` if the topic
+        /// does not exist. After a topic is deleted, a new topic may be created with
+        /// the same name; this is an entirely new topic with none of the old
+        /// configuration or subscriptions. Existing subscriptions to this topic are
+        /// not deleted, but their `topic` field is set to `_deleted-topic_`.
+        /// </summary>
+        /// <param name="request">
+        /// The request object containing all of the parameters for the API call.
+        /// </param>
         /// <param name="callSettings">
         /// If not null, applies overrides to this RPC call.
         /// </param>
@@ -1427,6 +1528,25 @@ namespace Google.Cloud.PubSub.V1
         /// <param name="request">
         /// The request object containing all of the parameters for the API call.
         /// </param>
+        /// <param name="cancellationToken">
+        /// A <see cref="CancellationToken"/> to use for this RPC.
+        /// </param>
+        /// <returns>
+        /// A Task containing the RPC response.
+        /// </returns>
+        public virtual Task<Policy> SetIamPolicyAsync(
+            SetIamPolicyRequest request,
+            CancellationToken cancellationToken) => SetIamPolicyAsync(
+                request,
+                CallSettings.FromCancellationToken(cancellationToken));
+
+        /// <summary>
+        /// Sets the access control policy on the specified resource. Replaces any
+        /// existing policy.
+        /// </summary>
+        /// <param name="request">
+        /// The request object containing all of the parameters for the API call.
+        /// </param>
         /// <param name="callSettings">
         /// If not null, applies overrides to this RPC call.
         /// </param>
@@ -1532,6 +1652,26 @@ namespace Google.Cloud.PubSub.V1
         {
             throw new NotImplementedException();
         }
+
+        /// <summary>
+        /// Gets the access control policy for a resource.
+        /// Returns an empty policy if the resource exists and does not have a policy
+        /// set.
+        /// </summary>
+        /// <param name="request">
+        /// The request object containing all of the parameters for the API call.
+        /// </param>
+        /// <param name="cancellationToken">
+        /// A <see cref="CancellationToken"/> to use for this RPC.
+        /// </param>
+        /// <returns>
+        /// A Task containing the RPC response.
+        /// </returns>
+        public virtual Task<Policy> GetIamPolicyAsync(
+            GetIamPolicyRequest request,
+            CancellationToken cancellationToken) => GetIamPolicyAsync(
+                request,
+                CallSettings.FromCancellationToken(cancellationToken));
 
         /// <summary>
         /// Gets the access control policy for a resource.
@@ -1670,6 +1810,26 @@ namespace Google.Cloud.PubSub.V1
         {
             throw new NotImplementedException();
         }
+
+        /// <summary>
+        /// Returns permissions that a caller has on the specified resource.
+        /// If the resource does not exist, this will return an empty set of
+        /// permissions, not a NOT_FOUND error.
+        /// </summary>
+        /// <param name="request">
+        /// The request object containing all of the parameters for the API call.
+        /// </param>
+        /// <param name="cancellationToken">
+        /// A <see cref="CancellationToken"/> to use for this RPC.
+        /// </param>
+        /// <returns>
+        /// A Task containing the RPC response.
+        /// </returns>
+        public virtual Task<TestIamPermissionsResponse> TestIamPermissionsAsync(
+            TestIamPermissionsRequest request,
+            CancellationToken cancellationToken) => TestIamPermissionsAsync(
+                request,
+                CallSettings.FromCancellationToken(cancellationToken));
 
         /// <summary>
         /// Returns permissions that a caller has on the specified resource.

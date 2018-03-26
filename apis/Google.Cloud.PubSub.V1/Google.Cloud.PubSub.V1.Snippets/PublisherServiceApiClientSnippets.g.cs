@@ -65,6 +65,7 @@ namespace Google.Cloud.PubSub.V1.Snippets
         public async Task CreateTopicAsync_RequestObject()
         {
             // Snippet: CreateTopicAsync(Topic,CallSettings)
+            // Additional: CreateTopicAsync(Topic,CancellationToken)
             // Create client
             PublisherServiceApiClient publisherServiceApiClient = await PublisherServiceApiClient.CreateAsync();
             // Initialize request argument(s)
@@ -97,6 +98,7 @@ namespace Google.Cloud.PubSub.V1.Snippets
         public async Task UpdateTopicAsync_RequestObject()
         {
             // Snippet: UpdateTopicAsync(UpdateTopicRequest,CallSettings)
+            // Additional: UpdateTopicAsync(UpdateTopicRequest,CancellationToken)
             // Create client
             PublisherServiceApiClient publisherServiceApiClient = await PublisherServiceApiClient.CreateAsync();
             // Initialize request argument(s)
@@ -172,6 +174,7 @@ namespace Google.Cloud.PubSub.V1.Snippets
         public async Task PublishAsync_RequestObject()
         {
             // Snippet: PublishAsync(PublishRequest,CallSettings)
+            // Additional: PublishAsync(PublishRequest,CancellationToken)
             // Create client
             PublisherServiceApiClient publisherServiceApiClient = await PublisherServiceApiClient.CreateAsync();
             // Initialize request argument(s)
@@ -243,6 +246,7 @@ namespace Google.Cloud.PubSub.V1.Snippets
         public async Task GetTopicAsync_RequestObject()
         {
             // Snippet: GetTopicAsync(GetTopicRequest,CallSettings)
+            // Additional: GetTopicAsync(GetTopicRequest,CancellationToken)
             // Create client
             PublisherServiceApiClient publisherServiceApiClient = await PublisherServiceApiClient.CreateAsync();
             // Initialize request argument(s)
@@ -666,6 +670,7 @@ namespace Google.Cloud.PubSub.V1.Snippets
         public async Task DeleteTopicAsync_RequestObject()
         {
             // Snippet: DeleteTopicAsync(DeleteTopicRequest,CallSettings)
+            // Additional: DeleteTopicAsync(DeleteTopicRequest,CancellationToken)
             // Create client
             PublisherServiceApiClient publisherServiceApiClient = await PublisherServiceApiClient.CreateAsync();
             // Initialize request argument(s)
@@ -727,6 +732,7 @@ namespace Google.Cloud.PubSub.V1.Snippets
         public async Task SetIamPolicyAsync_RequestObject()
         {
             // Snippet: SetIamPolicyAsync(SetIamPolicyRequest,CallSettings)
+            // Additional: SetIamPolicyAsync(SetIamPolicyRequest,CancellationToken)
             // Create client
             PublisherServiceApiClient publisherServiceApiClient = await PublisherServiceApiClient.CreateAsync();
             // Initialize request argument(s)
@@ -788,6 +794,7 @@ namespace Google.Cloud.PubSub.V1.Snippets
         public async Task GetIamPolicyAsync_RequestObject()
         {
             // Snippet: GetIamPolicyAsync(GetIamPolicyRequest,CallSettings)
+            // Additional: GetIamPolicyAsync(GetIamPolicyRequest,CancellationToken)
             // Create client
             PublisherServiceApiClient publisherServiceApiClient = await PublisherServiceApiClient.CreateAsync();
             // Initialize request argument(s)
@@ -849,6 +856,7 @@ namespace Google.Cloud.PubSub.V1.Snippets
         public async Task TestIamPermissionsAsync_RequestObject()
         {
             // Snippet: TestIamPermissionsAsync(TestIamPermissionsRequest,CallSettings)
+            // Additional: TestIamPermissionsAsync(TestIamPermissionsRequest,CancellationToken)
             // Create client
             PublisherServiceApiClient publisherServiceApiClient = await PublisherServiceApiClient.CreateAsync();
             // Initialize request argument(s)

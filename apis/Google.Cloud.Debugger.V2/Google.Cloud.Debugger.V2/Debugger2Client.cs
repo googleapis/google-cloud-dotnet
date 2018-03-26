@@ -494,6 +494,24 @@ namespace Google.Cloud.Debugger.V2
         /// <param name="request">
         /// The request object containing all of the parameters for the API call.
         /// </param>
+        /// <param name="cancellationToken">
+        /// A <see cref="CancellationToken"/> to use for this RPC.
+        /// </param>
+        /// <returns>
+        /// A Task containing the RPC response.
+        /// </returns>
+        public virtual Task<SetBreakpointResponse> SetBreakpointAsync(
+            SetBreakpointRequest request,
+            CancellationToken cancellationToken) => SetBreakpointAsync(
+                request,
+                CallSettings.FromCancellationToken(cancellationToken));
+
+        /// <summary>
+        /// Sets the breakpoint to the debuggee.
+        /// </summary>
+        /// <param name="request">
+        /// The request object containing all of the parameters for the API call.
+        /// </param>
         /// <param name="callSettings">
         /// If not null, applies overrides to this RPC call.
         /// </param>
@@ -618,6 +636,24 @@ namespace Google.Cloud.Debugger.V2
         {
             throw new NotImplementedException();
         }
+
+        /// <summary>
+        /// Gets breakpoint information.
+        /// </summary>
+        /// <param name="request">
+        /// The request object containing all of the parameters for the API call.
+        /// </param>
+        /// <param name="cancellationToken">
+        /// A <see cref="CancellationToken"/> to use for this RPC.
+        /// </param>
+        /// <returns>
+        /// A Task containing the RPC response.
+        /// </returns>
+        public virtual Task<GetBreakpointResponse> GetBreakpointAsync(
+            GetBreakpointRequest request,
+            CancellationToken cancellationToken) => GetBreakpointAsync(
+                request,
+                CallSettings.FromCancellationToken(cancellationToken));
 
         /// <summary>
         /// Gets breakpoint information.
@@ -753,6 +789,24 @@ namespace Google.Cloud.Debugger.V2
         /// <param name="request">
         /// The request object containing all of the parameters for the API call.
         /// </param>
+        /// <param name="cancellationToken">
+        /// A <see cref="CancellationToken"/> to use for this RPC.
+        /// </param>
+        /// <returns>
+        /// A Task that completes when the RPC has completed.
+        /// </returns>
+        public virtual Task DeleteBreakpointAsync(
+            DeleteBreakpointRequest request,
+            CancellationToken cancellationToken) => DeleteBreakpointAsync(
+                request,
+                CallSettings.FromCancellationToken(cancellationToken));
+
+        /// <summary>
+        /// Deletes the breakpoint from the debuggee.
+        /// </summary>
+        /// <param name="request">
+        /// The request object containing all of the parameters for the API call.
+        /// </param>
         /// <param name="callSettings">
         /// If not null, applies overrides to this RPC call.
         /// </param>
@@ -859,6 +913,24 @@ namespace Google.Cloud.Debugger.V2
         {
             throw new NotImplementedException();
         }
+
+        /// <summary>
+        /// Lists all breakpoints for the debuggee.
+        /// </summary>
+        /// <param name="request">
+        /// The request object containing all of the parameters for the API call.
+        /// </param>
+        /// <param name="cancellationToken">
+        /// A <see cref="CancellationToken"/> to use for this RPC.
+        /// </param>
+        /// <returns>
+        /// A Task containing the RPC response.
+        /// </returns>
+        public virtual Task<ListBreakpointsResponse> ListBreakpointsAsync(
+            ListBreakpointsRequest request,
+            CancellationToken cancellationToken) => ListBreakpointsAsync(
+                request,
+                CallSettings.FromCancellationToken(cancellationToken));
 
         /// <summary>
         /// Lists all breakpoints for the debuggee.
@@ -975,6 +1047,24 @@ namespace Google.Cloud.Debugger.V2
         {
             throw new NotImplementedException();
         }
+
+        /// <summary>
+        /// Lists all the debuggees that the user has access to.
+        /// </summary>
+        /// <param name="request">
+        /// The request object containing all of the parameters for the API call.
+        /// </param>
+        /// <param name="cancellationToken">
+        /// A <see cref="CancellationToken"/> to use for this RPC.
+        /// </param>
+        /// <returns>
+        /// A Task containing the RPC response.
+        /// </returns>
+        public virtual Task<ListDebuggeesResponse> ListDebuggeesAsync(
+            ListDebuggeesRequest request,
+            CancellationToken cancellationToken) => ListDebuggeesAsync(
+                request,
+                CallSettings.FromCancellationToken(cancellationToken));
 
         /// <summary>
         /// Lists all the debuggees that the user has access to.

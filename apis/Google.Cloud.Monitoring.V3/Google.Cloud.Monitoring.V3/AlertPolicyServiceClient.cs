@@ -587,6 +587,24 @@ namespace Google.Cloud.Monitoring.V3
         /// <param name="request">
         /// The request object containing all of the parameters for the API call.
         /// </param>
+        /// <param name="cancellationToken">
+        /// A <see cref="CancellationToken"/> to use for this RPC.
+        /// </param>
+        /// <returns>
+        /// A Task containing the RPC response.
+        /// </returns>
+        public virtual Task<AlertPolicy> GetAlertPolicyAsync(
+            GetAlertPolicyRequest request,
+            CancellationToken cancellationToken) => GetAlertPolicyAsync(
+                request,
+                CallSettings.FromCancellationToken(cancellationToken));
+
+        /// <summary>
+        /// Gets a single alerting policy.
+        /// </summary>
+        /// <param name="request">
+        /// The request object containing all of the parameters for the API call.
+        /// </param>
         /// <param name="callSettings">
         /// If not null, applies overrides to this RPC call.
         /// </param>
@@ -727,6 +745,24 @@ namespace Google.Cloud.Monitoring.V3
         /// <param name="request">
         /// The request object containing all of the parameters for the API call.
         /// </param>
+        /// <param name="cancellationToken">
+        /// A <see cref="CancellationToken"/> to use for this RPC.
+        /// </param>
+        /// <returns>
+        /// A Task containing the RPC response.
+        /// </returns>
+        public virtual Task<AlertPolicy> CreateAlertPolicyAsync(
+            CreateAlertPolicyRequest request,
+            CancellationToken cancellationToken) => CreateAlertPolicyAsync(
+                request,
+                CallSettings.FromCancellationToken(cancellationToken));
+
+        /// <summary>
+        /// Creates a new alerting policy.
+        /// </summary>
+        /// <param name="request">
+        /// The request object containing all of the parameters for the API call.
+        /// </param>
         /// <param name="callSettings">
         /// If not null, applies overrides to this RPC call.
         /// </param>
@@ -827,6 +863,24 @@ namespace Google.Cloud.Monitoring.V3
         {
             throw new NotImplementedException();
         }
+
+        /// <summary>
+        /// Deletes an alerting policy.
+        /// </summary>
+        /// <param name="request">
+        /// The request object containing all of the parameters for the API call.
+        /// </param>
+        /// <param name="cancellationToken">
+        /// A <see cref="CancellationToken"/> to use for this RPC.
+        /// </param>
+        /// <returns>
+        /// A Task that completes when the RPC has completed.
+        /// </returns>
+        public virtual Task DeleteAlertPolicyAsync(
+            DeleteAlertPolicyRequest request,
+            CancellationToken cancellationToken) => DeleteAlertPolicyAsync(
+                request,
+                CallSettings.FromCancellationToken(cancellationToken));
 
         /// <summary>
         /// Deletes an alerting policy.
@@ -1018,6 +1072,27 @@ namespace Google.Cloud.Monitoring.V3
         {
             throw new NotImplementedException();
         }
+
+        /// <summary>
+        /// Updates an alerting policy. You can either replace the entire policy with
+        /// a new one or replace only certain fields in the current alerting policy by
+        /// specifying the fields to be updated via `updateMask`. Returns the
+        /// updated alerting policy.
+        /// </summary>
+        /// <param name="request">
+        /// The request object containing all of the parameters for the API call.
+        /// </param>
+        /// <param name="cancellationToken">
+        /// A <see cref="CancellationToken"/> to use for this RPC.
+        /// </param>
+        /// <returns>
+        /// A Task containing the RPC response.
+        /// </returns>
+        public virtual Task<AlertPolicy> UpdateAlertPolicyAsync(
+            UpdateAlertPolicyRequest request,
+            CancellationToken cancellationToken) => UpdateAlertPolicyAsync(
+                request,
+                CallSettings.FromCancellationToken(cancellationToken));
 
         /// <summary>
         /// Updates an alerting policy. You can either replace the entire policy with

@@ -246,6 +246,7 @@ namespace Google.Cloud.Monitoring.V3.Snippets
         public async Task GetUptimeCheckConfigAsync_RequestObject()
         {
             // Snippet: GetUptimeCheckConfigAsync(GetUptimeCheckConfigRequest,CallSettings)
+            // Additional: GetUptimeCheckConfigAsync(GetUptimeCheckConfigRequest,CancellationToken)
             // Create client
             UptimeCheckServiceClient uptimeCheckServiceClient = await UptimeCheckServiceClient.CreateAsync();
             // Initialize request argument(s)
@@ -307,6 +308,7 @@ namespace Google.Cloud.Monitoring.V3.Snippets
         public async Task CreateUptimeCheckConfigAsync_RequestObject()
         {
             // Snippet: CreateUptimeCheckConfigAsync(CreateUptimeCheckConfigRequest,CallSettings)
+            // Additional: CreateUptimeCheckConfigAsync(CreateUptimeCheckConfigRequest,CancellationToken)
             // Create client
             UptimeCheckServiceClient uptimeCheckServiceClient = await UptimeCheckServiceClient.CreateAsync();
             // Initialize request argument(s)
@@ -368,6 +370,7 @@ namespace Google.Cloud.Monitoring.V3.Snippets
         public async Task UpdateUptimeCheckConfigAsync_RequestObject()
         {
             // Snippet: UpdateUptimeCheckConfigAsync(UpdateUptimeCheckConfigRequest,CallSettings)
+            // Additional: UpdateUptimeCheckConfigAsync(UpdateUptimeCheckConfigRequest,CancellationToken)
             // Create client
             UptimeCheckServiceClient uptimeCheckServiceClient = await UptimeCheckServiceClient.CreateAsync();
             // Initialize request argument(s)
@@ -427,6 +430,7 @@ namespace Google.Cloud.Monitoring.V3.Snippets
         public async Task DeleteUptimeCheckConfigAsync_RequestObject()
         {
             // Snippet: DeleteUptimeCheckConfigAsync(DeleteUptimeCheckConfigRequest,CallSettings)
+            // Additional: DeleteUptimeCheckConfigAsync(DeleteUptimeCheckConfigRequest,CancellationToken)
             // Create client
             UptimeCheckServiceClient uptimeCheckServiceClient = await UptimeCheckServiceClient.CreateAsync();
             // Initialize request argument(s)

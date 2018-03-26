@@ -97,6 +97,7 @@ namespace Google.Cloud.Dlp.V2Beta1.Snippets
         public async Task InspectContentAsync_RequestObject()
         {
             // Snippet: InspectContentAsync(InspectContentRequest,CallSettings)
+            // Additional: InspectContentAsync(InspectContentRequest,CancellationToken)
             // Create client
             DlpServiceClient dlpServiceClient = await DlpServiceClient.CreateAsync();
             // Initialize request argument(s)
@@ -159,6 +160,7 @@ namespace Google.Cloud.Dlp.V2Beta1.Snippets
         public async Task RedactContentAsync_RequestObject()
         {
             // Snippet: RedactContentAsync(RedactContentRequest,CallSettings)
+            // Additional: RedactContentAsync(RedactContentRequest,CancellationToken)
             // Create client
             DlpServiceClient dlpServiceClient = await DlpServiceClient.CreateAsync();
             // Initialize request argument(s)
@@ -272,6 +274,7 @@ namespace Google.Cloud.Dlp.V2Beta1.Snippets
         public async Task DeidentifyContentAsync_RequestObject()
         {
             // Snippet: DeidentifyContentAsync(DeidentifyContentRequest,CallSettings)
+            // Additional: DeidentifyContentAsync(DeidentifyContentRequest,CancellationToken)
             // Create client
             DlpServiceClient dlpServiceClient = await DlpServiceClient.CreateAsync();
             // Initialize request argument(s)
@@ -685,6 +688,7 @@ namespace Google.Cloud.Dlp.V2Beta1.Snippets
         public async Task ListInspectFindingsAsync_RequestObject()
         {
             // Snippet: ListInspectFindingsAsync(ListInspectFindingsRequest,CallSettings)
+            // Additional: ListInspectFindingsAsync(ListInspectFindingsRequest,CancellationToken)
             // Create client
             DlpServiceClient dlpServiceClient = await DlpServiceClient.CreateAsync();
             // Initialize request argument(s)
@@ -746,6 +750,7 @@ namespace Google.Cloud.Dlp.V2Beta1.Snippets
         public async Task ListInfoTypesAsync_RequestObject()
         {
             // Snippet: ListInfoTypesAsync(ListInfoTypesRequest,CallSettings)
+            // Additional: ListInfoTypesAsync(ListInfoTypesRequest,CancellationToken)
             // Create client
             DlpServiceClient dlpServiceClient = await DlpServiceClient.CreateAsync();
             // Initialize request argument(s)
@@ -807,6 +812,7 @@ namespace Google.Cloud.Dlp.V2Beta1.Snippets
         public async Task ListRootCategoriesAsync_RequestObject()
         {
             // Snippet: ListRootCategoriesAsync(ListRootCategoriesRequest,CallSettings)
+            // Additional: ListRootCategoriesAsync(ListRootCategoriesRequest,CancellationToken)
             // Create client
             DlpServiceClient dlpServiceClient = await DlpServiceClient.CreateAsync();
             // Initialize request argument(s)

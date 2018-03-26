@@ -65,6 +65,7 @@ namespace Google.Cloud.Vision.V1P2Beta1.Snippets
         public async Task BatchAnnotateImagesAsync_RequestObject()
         {
             // Snippet: BatchAnnotateImagesAsync(BatchAnnotateImagesRequest,CallSettings)
+            // Additional: BatchAnnotateImagesAsync(BatchAnnotateImagesRequest,CancellationToken)
             // Create client
             ImageAnnotatorClient imageAnnotatorClient = await ImageAnnotatorClient.CreateAsync();
             // Initialize request argument(s)

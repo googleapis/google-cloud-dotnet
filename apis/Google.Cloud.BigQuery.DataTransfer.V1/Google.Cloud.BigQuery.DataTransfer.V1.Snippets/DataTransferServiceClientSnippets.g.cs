@@ -64,6 +64,7 @@ namespace Google.Cloud.BigQuery.DataTransfer.V1.Snippets
         public async Task GetDataSourceAsync_RequestObject()
         {
             // Snippet: GetDataSourceAsync(GetDataSourceRequest,CallSettings)
+            // Additional: GetDataSourceAsync(GetDataSourceRequest,CancellationToken)
             // Create client
             DataTransferServiceClient dataTransferServiceClient = await DataTransferServiceClient.CreateAsync();
             // Initialize request argument(s)
@@ -307,6 +308,7 @@ namespace Google.Cloud.BigQuery.DataTransfer.V1.Snippets
         public async Task CreateTransferConfigAsync_RequestObject()
         {
             // Snippet: CreateTransferConfigAsync(CreateTransferConfigRequest,CallSettings)
+            // Additional: CreateTransferConfigAsync(CreateTransferConfigRequest,CancellationToken)
             // Create client
             DataTransferServiceClient dataTransferServiceClient = await DataTransferServiceClient.CreateAsync();
             // Initialize request argument(s)
@@ -370,6 +372,7 @@ namespace Google.Cloud.BigQuery.DataTransfer.V1.Snippets
         public async Task UpdateTransferConfigAsync_RequestObject()
         {
             // Snippet: UpdateTransferConfigAsync(UpdateTransferConfigRequest,CallSettings)
+            // Additional: UpdateTransferConfigAsync(UpdateTransferConfigRequest,CancellationToken)
             // Create client
             DataTransferServiceClient dataTransferServiceClient = await DataTransferServiceClient.CreateAsync();
             // Initialize request argument(s)
@@ -431,6 +434,7 @@ namespace Google.Cloud.BigQuery.DataTransfer.V1.Snippets
         public async Task DeleteTransferConfigAsync_RequestObject()
         {
             // Snippet: DeleteTransferConfigAsync(DeleteTransferConfigRequest,CallSettings)
+            // Additional: DeleteTransferConfigAsync(DeleteTransferConfigRequest,CancellationToken)
             // Create client
             DataTransferServiceClient dataTransferServiceClient = await DataTransferServiceClient.CreateAsync();
             // Initialize request argument(s)
@@ -490,6 +494,7 @@ namespace Google.Cloud.BigQuery.DataTransfer.V1.Snippets
         public async Task GetTransferConfigAsync_RequestObject()
         {
             // Snippet: GetTransferConfigAsync(GetTransferConfigRequest,CallSettings)
+            // Additional: GetTransferConfigAsync(GetTransferConfigRequest,CancellationToken)
             // Create client
             DataTransferServiceClient dataTransferServiceClient = await DataTransferServiceClient.CreateAsync();
             // Initialize request argument(s)
@@ -735,6 +740,7 @@ namespace Google.Cloud.BigQuery.DataTransfer.V1.Snippets
         public async Task ScheduleTransferRunsAsync_RequestObject()
         {
             // Snippet: ScheduleTransferRunsAsync(ScheduleTransferRunsRequest,CallSettings)
+            // Additional: ScheduleTransferRunsAsync(ScheduleTransferRunsRequest,CancellationToken)
             // Create client
             DataTransferServiceClient dataTransferServiceClient = await DataTransferServiceClient.CreateAsync();
             // Initialize request argument(s)
@@ -798,6 +804,7 @@ namespace Google.Cloud.BigQuery.DataTransfer.V1.Snippets
         public async Task GetTransferRunAsync_RequestObject()
         {
             // Snippet: GetTransferRunAsync(GetTransferRunRequest,CallSettings)
+            // Additional: GetTransferRunAsync(GetTransferRunRequest,CancellationToken)
             // Create client
             DataTransferServiceClient dataTransferServiceClient = await DataTransferServiceClient.CreateAsync();
             // Initialize request argument(s)
@@ -857,6 +864,7 @@ namespace Google.Cloud.BigQuery.DataTransfer.V1.Snippets
         public async Task DeleteTransferRunAsync_RequestObject()
         {
             // Snippet: DeleteTransferRunAsync(DeleteTransferRunRequest,CallSettings)
+            // Additional: DeleteTransferRunAsync(DeleteTransferRunRequest,CancellationToken)
             // Create client
             DataTransferServiceClient dataTransferServiceClient = await DataTransferServiceClient.CreateAsync();
             // Initialize request argument(s)
@@ -1280,6 +1288,7 @@ namespace Google.Cloud.BigQuery.DataTransfer.V1.Snippets
         public async Task CheckValidCredsAsync_RequestObject()
         {
             // Snippet: CheckValidCredsAsync(CheckValidCredsRequest,CallSettings)
+            // Additional: CheckValidCredsAsync(CheckValidCredsRequest,CancellationToken)
             // Create client
             DataTransferServiceClient dataTransferServiceClient = await DataTransferServiceClient.CreateAsync();
             // Initialize request argument(s)

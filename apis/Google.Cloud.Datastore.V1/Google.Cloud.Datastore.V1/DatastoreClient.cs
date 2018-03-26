@@ -547,6 +547,24 @@ namespace Google.Cloud.Datastore.V1
         /// <param name="request">
         /// The request object containing all of the parameters for the API call.
         /// </param>
+        /// <param name="cancellationToken">
+        /// A <see cref="CancellationToken"/> to use for this RPC.
+        /// </param>
+        /// <returns>
+        /// A Task containing the RPC response.
+        /// </returns>
+        public virtual Task<LookupResponse> LookupAsync(
+            LookupRequest request,
+            CancellationToken cancellationToken) => LookupAsync(
+                request,
+                CallSettings.FromCancellationToken(cancellationToken));
+
+        /// <summary>
+        /// Looks up entities by key.
+        /// </summary>
+        /// <param name="request">
+        /// The request object containing all of the parameters for the API call.
+        /// </param>
         /// <param name="callSettings">
         /// If not null, applies overrides to this RPC call.
         /// </param>
@@ -578,6 +596,24 @@ namespace Google.Cloud.Datastore.V1
         {
             throw new NotImplementedException();
         }
+
+        /// <summary>
+        /// Queries for entities.
+        /// </summary>
+        /// <param name="request">
+        /// The request object containing all of the parameters for the API call.
+        /// </param>
+        /// <param name="cancellationToken">
+        /// A <see cref="CancellationToken"/> to use for this RPC.
+        /// </param>
+        /// <returns>
+        /// A Task containing the RPC response.
+        /// </returns>
+        public virtual Task<RunQueryResponse> RunQueryAsync(
+            RunQueryRequest request,
+            CancellationToken cancellationToken) => RunQueryAsync(
+                request,
+                CallSettings.FromCancellationToken(cancellationToken));
 
         /// <summary>
         /// Queries for entities.
@@ -676,6 +712,24 @@ namespace Google.Cloud.Datastore.V1
         {
             throw new NotImplementedException();
         }
+
+        /// <summary>
+        /// Begins a new transaction.
+        /// </summary>
+        /// <param name="request">
+        /// The request object containing all of the parameters for the API call.
+        /// </param>
+        /// <param name="cancellationToken">
+        /// A <see cref="CancellationToken"/> to use for this RPC.
+        /// </param>
+        /// <returns>
+        /// A Task containing the RPC response.
+        /// </returns>
+        public virtual Task<BeginTransactionResponse> BeginTransactionAsync(
+            BeginTransactionRequest request,
+            CancellationToken cancellationToken) => BeginTransactionAsync(
+                request,
+                CallSettings.FromCancellationToken(cancellationToken));
 
         /// <summary>
         /// Begins a new transaction.
@@ -994,6 +1048,25 @@ namespace Google.Cloud.Datastore.V1
         {
             throw new NotImplementedException();
         }
+
+        /// <summary>
+        /// Commits a transaction, optionally creating, deleting or modifying some
+        /// entities.
+        /// </summary>
+        /// <param name="request">
+        /// The request object containing all of the parameters for the API call.
+        /// </param>
+        /// <param name="cancellationToken">
+        /// A <see cref="CancellationToken"/> to use for this RPC.
+        /// </param>
+        /// <returns>
+        /// A Task containing the RPC response.
+        /// </returns>
+        public virtual Task<CommitResponse> CommitAsync(
+            CommitRequest request,
+            CancellationToken cancellationToken) => CommitAsync(
+                request,
+                CallSettings.FromCancellationToken(cancellationToken));
 
         /// <summary>
         /// Commits a transaction, optionally creating, deleting or modifying some
@@ -1111,6 +1184,24 @@ namespace Google.Cloud.Datastore.V1
         {
             throw new NotImplementedException();
         }
+
+        /// <summary>
+        /// Rolls back a transaction.
+        /// </summary>
+        /// <param name="request">
+        /// The request object containing all of the parameters for the API call.
+        /// </param>
+        /// <param name="cancellationToken">
+        /// A <see cref="CancellationToken"/> to use for this RPC.
+        /// </param>
+        /// <returns>
+        /// A Task containing the RPC response.
+        /// </returns>
+        public virtual Task<RollbackResponse> RollbackAsync(
+            RollbackRequest request,
+            CancellationToken cancellationToken) => RollbackAsync(
+                request,
+                CallSettings.FromCancellationToken(cancellationToken));
 
         /// <summary>
         /// Rolls back a transaction.
@@ -1239,6 +1330,25 @@ namespace Google.Cloud.Datastore.V1
         /// <param name="request">
         /// The request object containing all of the parameters for the API call.
         /// </param>
+        /// <param name="cancellationToken">
+        /// A <see cref="CancellationToken"/> to use for this RPC.
+        /// </param>
+        /// <returns>
+        /// A Task containing the RPC response.
+        /// </returns>
+        public virtual Task<AllocateIdsResponse> AllocateIdsAsync(
+            AllocateIdsRequest request,
+            CancellationToken cancellationToken) => AllocateIdsAsync(
+                request,
+                CallSettings.FromCancellationToken(cancellationToken));
+
+        /// <summary>
+        /// Allocates IDs for the given keys, which is useful for referencing an entity
+        /// before it is inserted.
+        /// </summary>
+        /// <param name="request">
+        /// The request object containing all of the parameters for the API call.
+        /// </param>
         /// <param name="callSettings">
         /// If not null, applies overrides to this RPC call.
         /// </param>
@@ -1352,6 +1462,25 @@ namespace Google.Cloud.Datastore.V1
         {
             throw new NotImplementedException();
         }
+
+        /// <summary>
+        /// Prevents the supplied keys' IDs from being auto-allocated by Cloud
+        /// Datastore.
+        /// </summary>
+        /// <param name="request">
+        /// The request object containing all of the parameters for the API call.
+        /// </param>
+        /// <param name="cancellationToken">
+        /// A <see cref="CancellationToken"/> to use for this RPC.
+        /// </param>
+        /// <returns>
+        /// A Task containing the RPC response.
+        /// </returns>
+        public virtual Task<ReserveIdsResponse> ReserveIdsAsync(
+            ReserveIdsRequest request,
+            CancellationToken cancellationToken) => ReserveIdsAsync(
+                request,
+                CallSettings.FromCancellationToken(cancellationToken));
 
         /// <summary>
         /// Prevents the supplied keys' IDs from being auto-allocated by Cloud

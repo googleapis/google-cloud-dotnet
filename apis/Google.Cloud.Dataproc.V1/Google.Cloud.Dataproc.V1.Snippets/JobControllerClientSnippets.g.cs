@@ -68,6 +68,7 @@ namespace Google.Cloud.Dataproc.V1.Snippets
         public async Task SubmitJobAsync_RequestObject()
         {
             // Snippet: SubmitJobAsync(SubmitJobRequest,CallSettings)
+            // Additional: SubmitJobAsync(SubmitJobRequest,CancellationToken)
             // Create client
             JobControllerClient jobControllerClient = await JobControllerClient.CreateAsync();
             // Initialize request argument(s)
@@ -135,6 +136,7 @@ namespace Google.Cloud.Dataproc.V1.Snippets
         public async Task GetJobAsync_RequestObject()
         {
             // Snippet: GetJobAsync(GetJobRequest,CallSettings)
+            // Additional: GetJobAsync(GetJobRequest,CancellationToken)
             // Create client
             JobControllerClient jobControllerClient = await JobControllerClient.CreateAsync();
             // Initialize request argument(s)
@@ -357,6 +359,7 @@ namespace Google.Cloud.Dataproc.V1.Snippets
         public async Task UpdateJobAsync_RequestObject()
         {
             // Snippet: UpdateJobAsync(UpdateJobRequest,CallSettings)
+            // Additional: UpdateJobAsync(UpdateJobRequest,CancellationToken)
             // Create client
             JobControllerClient jobControllerClient = await JobControllerClient.CreateAsync();
             // Initialize request argument(s)
@@ -428,6 +431,7 @@ namespace Google.Cloud.Dataproc.V1.Snippets
         public async Task CancelJobAsync_RequestObject()
         {
             // Snippet: CancelJobAsync(CancelJobRequest,CallSettings)
+            // Additional: CancelJobAsync(CancelJobRequest,CancellationToken)
             // Create client
             JobControllerClient jobControllerClient = await JobControllerClient.CreateAsync();
             // Initialize request argument(s)
@@ -495,6 +499,7 @@ namespace Google.Cloud.Dataproc.V1.Snippets
         public async Task DeleteJobAsync_RequestObject()
         {
             // Snippet: DeleteJobAsync(DeleteJobRequest,CallSettings)
+            // Additional: DeleteJobAsync(DeleteJobRequest,CancellationToken)
             // Create client
             JobControllerClient jobControllerClient = await JobControllerClient.CreateAsync();
             // Initialize request argument(s)

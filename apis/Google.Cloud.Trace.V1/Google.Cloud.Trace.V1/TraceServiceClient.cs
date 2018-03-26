@@ -431,6 +431,28 @@ namespace Google.Cloud.Trace.V1
         /// <param name="request">
         /// The request object containing all of the parameters for the API call.
         /// </param>
+        /// <param name="cancellationToken">
+        /// A <see cref="CancellationToken"/> to use for this RPC.
+        /// </param>
+        /// <returns>
+        /// A Task that completes when the RPC has completed.
+        /// </returns>
+        public virtual Task PatchTracesAsync(
+            PatchTracesRequest request,
+            CancellationToken cancellationToken) => PatchTracesAsync(
+                request,
+                CallSettings.FromCancellationToken(cancellationToken));
+
+        /// <summary>
+        /// Sends new traces to Stackdriver Trace or updates existing traces. If the ID
+        /// of a trace that you send matches that of an existing trace, any fields
+        /// in the existing trace and its spans are overwritten by the provided values,
+        /// and any new fields provided are merged with the existing trace data. If the
+        /// ID does not match, a new trace is created.
+        /// </summary>
+        /// <param name="request">
+        /// The request object containing all of the parameters for the API call.
+        /// </param>
         /// <param name="callSettings">
         /// If not null, applies overrides to this RPC call.
         /// </param>
@@ -534,6 +556,24 @@ namespace Google.Cloud.Trace.V1
         {
             throw new NotImplementedException();
         }
+
+        /// <summary>
+        /// Gets a single trace by its ID.
+        /// </summary>
+        /// <param name="request">
+        /// The request object containing all of the parameters for the API call.
+        /// </param>
+        /// <param name="cancellationToken">
+        /// A <see cref="CancellationToken"/> to use for this RPC.
+        /// </param>
+        /// <returns>
+        /// A Task containing the RPC response.
+        /// </returns>
+        public virtual Task<Trace> GetTraceAsync(
+            GetTraceRequest request,
+            CancellationToken cancellationToken) => GetTraceAsync(
+                request,
+                CallSettings.FromCancellationToken(cancellationToken));
 
         /// <summary>
         /// Gets a single trace by its ID.

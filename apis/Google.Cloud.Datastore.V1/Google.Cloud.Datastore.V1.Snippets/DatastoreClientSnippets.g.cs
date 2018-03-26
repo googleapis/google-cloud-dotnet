@@ -68,6 +68,7 @@ namespace Google.Cloud.Datastore.V1.Snippets
         public async Task LookupAsync_RequestObject()
         {
             // Snippet: LookupAsync(LookupRequest,CallSettings)
+            // Additional: LookupAsync(LookupRequest,CancellationToken)
             // Create client
             DatastoreClient datastoreClient = await DatastoreClient.CreateAsync();
             // Initialize request argument(s)
@@ -102,6 +103,7 @@ namespace Google.Cloud.Datastore.V1.Snippets
         public async Task RunQueryAsync_RequestObject()
         {
             // Snippet: RunQueryAsync(RunQueryRequest,CallSettings)
+            // Additional: RunQueryAsync(RunQueryRequest,CancellationToken)
             // Create client
             DatastoreClient datastoreClient = await DatastoreClient.CreateAsync();
             // Initialize request argument(s)
@@ -163,6 +165,7 @@ namespace Google.Cloud.Datastore.V1.Snippets
         public async Task BeginTransactionAsync_RequestObject()
         {
             // Snippet: BeginTransactionAsync(BeginTransactionRequest,CallSettings)
+            // Additional: BeginTransactionAsync(BeginTransactionRequest,CancellationToken)
             // Create client
             DatastoreClient datastoreClient = await DatastoreClient.CreateAsync();
             // Initialize request argument(s)
@@ -259,6 +262,7 @@ namespace Google.Cloud.Datastore.V1.Snippets
         public async Task CommitAsync_RequestObject()
         {
             // Snippet: CommitAsync(CommitRequest,CallSettings)
+            // Additional: CommitAsync(CommitRequest,CancellationToken)
             // Create client
             DatastoreClient datastoreClient = await DatastoreClient.CreateAsync();
             // Initialize request argument(s)
@@ -324,6 +328,7 @@ namespace Google.Cloud.Datastore.V1.Snippets
         public async Task RollbackAsync_RequestObject()
         {
             // Snippet: RollbackAsync(RollbackRequest,CallSettings)
+            // Additional: RollbackAsync(RollbackRequest,CancellationToken)
             // Create client
             DatastoreClient datastoreClient = await DatastoreClient.CreateAsync();
             // Initialize request argument(s)
@@ -387,6 +392,7 @@ namespace Google.Cloud.Datastore.V1.Snippets
         public async Task AllocateIdsAsync_RequestObject()
         {
             // Snippet: AllocateIdsAsync(AllocateIdsRequest,CallSettings)
+            // Additional: AllocateIdsAsync(AllocateIdsRequest,CancellationToken)
             // Create client
             DatastoreClient datastoreClient = await DatastoreClient.CreateAsync();
             // Initialize request argument(s)
@@ -450,6 +456,7 @@ namespace Google.Cloud.Datastore.V1.Snippets
         public async Task ReserveIdsAsync_RequestObject()
         {
             // Snippet: ReserveIdsAsync(ReserveIdsRequest,CallSettings)
+            // Additional: ReserveIdsAsync(ReserveIdsRequest,CancellationToken)
             // Create client
             DatastoreClient datastoreClient = await DatastoreClient.CreateAsync();
             // Initialize request argument(s)

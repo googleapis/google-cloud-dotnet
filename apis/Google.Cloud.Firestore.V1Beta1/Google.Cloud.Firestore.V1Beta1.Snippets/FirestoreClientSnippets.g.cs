@@ -37,6 +37,7 @@ namespace Google.Cloud.Firestore.V1Beta1.Snippets
         public async Task GetDocumentAsync_RequestObject()
         {
             // Snippet: GetDocumentAsync(GetDocumentRequest,CallSettings)
+            // Additional: GetDocumentAsync(GetDocumentRequest,CancellationToken)
             // Create client
             FirestoreClient firestoreClient = await FirestoreClient.CreateAsync();
             // Initialize request argument(s)
@@ -165,6 +166,7 @@ namespace Google.Cloud.Firestore.V1Beta1.Snippets
         public async Task CreateDocumentAsync_RequestObject()
         {
             // Snippet: CreateDocumentAsync(CreateDocumentRequest,CallSettings)
+            // Additional: CreateDocumentAsync(CreateDocumentRequest,CancellationToken)
             // Create client
             FirestoreClient firestoreClient = await FirestoreClient.CreateAsync();
             // Initialize request argument(s)
@@ -232,6 +234,7 @@ namespace Google.Cloud.Firestore.V1Beta1.Snippets
         public async Task UpdateDocumentAsync_RequestObject()
         {
             // Snippet: UpdateDocumentAsync(UpdateDocumentRequest,CallSettings)
+            // Additional: UpdateDocumentAsync(UpdateDocumentRequest,CancellationToken)
             // Create client
             FirestoreClient firestoreClient = await FirestoreClient.CreateAsync();
             // Initialize request argument(s)
@@ -293,6 +296,7 @@ namespace Google.Cloud.Firestore.V1Beta1.Snippets
         public async Task DeleteDocumentAsync_RequestObject()
         {
             // Snippet: DeleteDocumentAsync(DeleteDocumentRequest,CallSettings)
+            // Additional: DeleteDocumentAsync(DeleteDocumentRequest,CancellationToken)
             // Create client
             FirestoreClient firestoreClient = await FirestoreClient.CreateAsync();
             // Initialize request argument(s)
@@ -378,6 +382,7 @@ namespace Google.Cloud.Firestore.V1Beta1.Snippets
         public async Task BeginTransactionAsync_RequestObject()
         {
             // Snippet: BeginTransactionAsync(BeginTransactionRequest,CallSettings)
+            // Additional: BeginTransactionAsync(BeginTransactionRequest,CancellationToken)
             // Create client
             FirestoreClient firestoreClient = await FirestoreClient.CreateAsync();
             // Initialize request argument(s)
@@ -439,6 +444,7 @@ namespace Google.Cloud.Firestore.V1Beta1.Snippets
         public async Task CommitAsync_RequestObject()
         {
             // Snippet: CommitAsync(CommitRequest,CallSettings)
+            // Additional: CommitAsync(CommitRequest,CancellationToken)
             // Create client
             FirestoreClient firestoreClient = await FirestoreClient.CreateAsync();
             // Initialize request argument(s)
@@ -502,6 +508,7 @@ namespace Google.Cloud.Firestore.V1Beta1.Snippets
         public async Task RollbackAsync_RequestObject()
         {
             // Snippet: RollbackAsync(RollbackRequest,CallSettings)
+            // Additional: RollbackAsync(RollbackRequest,CancellationToken)
             // Create client
             FirestoreClient firestoreClient = await FirestoreClient.CreateAsync();
             // Initialize request argument(s)

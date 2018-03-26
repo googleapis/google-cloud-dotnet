@@ -618,6 +618,25 @@ namespace Google.Cloud.Dlp.V2Beta1
         /// <param name="request">
         /// The request object containing all of the parameters for the API call.
         /// </param>
+        /// <param name="cancellationToken">
+        /// A <see cref="CancellationToken"/> to use for this RPC.
+        /// </param>
+        /// <returns>
+        /// A Task containing the RPC response.
+        /// </returns>
+        public virtual Task<InspectContentResponse> InspectContentAsync(
+            InspectContentRequest request,
+            CancellationToken cancellationToken) => InspectContentAsync(
+                request,
+                CallSettings.FromCancellationToken(cancellationToken));
+
+        /// <summary>
+        /// Finds potentially sensitive info in a list of strings.
+        /// This method has limits on input size, processing time, and output size.
+        /// </summary>
+        /// <param name="request">
+        /// The request object containing all of the parameters for the API call.
+        /// </param>
         /// <param name="callSettings">
         /// If not null, applies overrides to this RPC call.
         /// </param>
@@ -650,6 +669,25 @@ namespace Google.Cloud.Dlp.V2Beta1
         {
             throw new NotImplementedException();
         }
+
+        /// <summary>
+        /// Redacts potentially sensitive info from a list of strings.
+        /// This method has limits on input size, processing time, and output size.
+        /// </summary>
+        /// <param name="request">
+        /// The request object containing all of the parameters for the API call.
+        /// </param>
+        /// <param name="cancellationToken">
+        /// A <see cref="CancellationToken"/> to use for this RPC.
+        /// </param>
+        /// <returns>
+        /// A Task containing the RPC response.
+        /// </returns>
+        public virtual Task<RedactContentResponse> RedactContentAsync(
+            RedactContentRequest request,
+            CancellationToken cancellationToken) => RedactContentAsync(
+                request,
+                CallSettings.FromCancellationToken(cancellationToken));
 
         /// <summary>
         /// Redacts potentially sensitive info from a list of strings.
@@ -786,6 +824,25 @@ namespace Google.Cloud.Dlp.V2Beta1
         {
             throw new NotImplementedException();
         }
+
+        /// <summary>
+        /// De-identifies potentially sensitive info from a list of strings.
+        /// This method has limits on input size and output size.
+        /// </summary>
+        /// <param name="request">
+        /// The request object containing all of the parameters for the API call.
+        /// </param>
+        /// <param name="cancellationToken">
+        /// A <see cref="CancellationToken"/> to use for this RPC.
+        /// </param>
+        /// <returns>
+        /// A Task containing the RPC response.
+        /// </returns>
+        public virtual Task<DeidentifyContentResponse> DeidentifyContentAsync(
+            DeidentifyContentRequest request,
+            CancellationToken cancellationToken) => DeidentifyContentAsync(
+                request,
+                CallSettings.FromCancellationToken(cancellationToken));
 
         /// <summary>
         /// De-identifies potentially sensitive info from a list of strings.
@@ -1217,6 +1274,24 @@ namespace Google.Cloud.Dlp.V2Beta1
         /// <param name="request">
         /// The request object containing all of the parameters for the API call.
         /// </param>
+        /// <param name="cancellationToken">
+        /// A <see cref="CancellationToken"/> to use for this RPC.
+        /// </param>
+        /// <returns>
+        /// A Task containing the RPC response.
+        /// </returns>
+        public virtual Task<ListInspectFindingsResponse> ListInspectFindingsAsync(
+            ListInspectFindingsRequest request,
+            CancellationToken cancellationToken) => ListInspectFindingsAsync(
+                request,
+                CallSettings.FromCancellationToken(cancellationToken));
+
+        /// <summary>
+        /// Returns list of results for given inspect operation result set id.
+        /// </summary>
+        /// <param name="request">
+        /// The request object containing all of the parameters for the API call.
+        /// </param>
         /// <param name="callSettings">
         /// If not null, applies overrides to this RPC call.
         /// </param>
@@ -1336,6 +1411,24 @@ namespace Google.Cloud.Dlp.V2Beta1
         /// <param name="request">
         /// The request object containing all of the parameters for the API call.
         /// </param>
+        /// <param name="cancellationToken">
+        /// A <see cref="CancellationToken"/> to use for this RPC.
+        /// </param>
+        /// <returns>
+        /// A Task containing the RPC response.
+        /// </returns>
+        public virtual Task<ListInfoTypesResponse> ListInfoTypesAsync(
+            ListInfoTypesRequest request,
+            CancellationToken cancellationToken) => ListInfoTypesAsync(
+                request,
+                CallSettings.FromCancellationToken(cancellationToken));
+
+        /// <summary>
+        /// Returns sensitive information types for given category.
+        /// </summary>
+        /// <param name="request">
+        /// The request object containing all of the parameters for the API call.
+        /// </param>
         /// <param name="callSettings">
         /// If not null, applies overrides to this RPC call.
         /// </param>
@@ -1433,6 +1526,24 @@ namespace Google.Cloud.Dlp.V2Beta1
         {
             throw new NotImplementedException();
         }
+
+        /// <summary>
+        /// Returns the list of root categories of sensitive information.
+        /// </summary>
+        /// <param name="request">
+        /// The request object containing all of the parameters for the API call.
+        /// </param>
+        /// <param name="cancellationToken">
+        /// A <see cref="CancellationToken"/> to use for this RPC.
+        /// </param>
+        /// <returns>
+        /// A Task containing the RPC response.
+        /// </returns>
+        public virtual Task<ListRootCategoriesResponse> ListRootCategoriesAsync(
+            ListRootCategoriesRequest request,
+            CancellationToken cancellationToken) => ListRootCategoriesAsync(
+                request,
+                CallSettings.FromCancellationToken(cancellationToken));
 
         /// <summary>
         /// Returns the list of root categories of sensitive information.
