@@ -15,6 +15,7 @@
 using Google.Api.Gax;
 using Google.Api.Gax.Grpc;
 using Google.Protobuf;
+using System.Threading;
 using System.Threading.Tasks;
 
 namespace Google.Cloud.Bigtable.Admin.V2
@@ -38,12 +39,30 @@ namespace Google.Cloud.Bigtable.Admin.V2
         /// <returns>
         /// A Task that completes when the RPC has completed.
         /// </returns>
-        public Task DropAllRowsAsync(
-            TableName tableName,
-            CallSettings callSettings = null) =>
+        public Task DropAllRowsAsync(TableName tableName, CallSettings callSettings = null) =>
             DropRowRangeAsync(
                 CreateDropRowRangeRequest(tableName, rowKeyPrefix: null, deleteAllDataFromTable: true),
                 callSettings);
+
+        /// <summary>
+        /// Permanently drop/delete all rows in the table.
+        /// </summary>
+        /// <remarks>
+        /// <para>
+        /// This method simply delegates to <see cref="DropAllRowsAsync(TableName, CallSettings)"/>.
+        /// </para>
+        /// </remarks>
+        /// <param name="tableName">
+        /// The unique name of the table on which to drop the rows. Must not be null.
+        /// </param>
+        /// <param name="cancellationToken">
+        /// A <see cref="CancellationToken"/> to use for this RPC.
+        /// </param>
+        /// <returns>
+        /// A Task that completes when the RPC has completed.
+        /// </returns>
+        public Task DropAllRowsAsync(TableName tableName, CancellationToken cancellationToken) =>
+            DropAllRowsAsync(tableName, CallSettings.FromCancellationToken(cancellationToken));
 
         /// <summary>
         /// Permanently drop/delete all rows in the table.
@@ -62,9 +81,7 @@ namespace Google.Cloud.Bigtable.Admin.V2
         /// <returns>
         /// A Task that completes when the RPC has completed.
         /// </returns>
-        public void DropAllRows(
-            TableName tableName,
-            CallSettings callSettings = null) =>
+        public void DropAllRows(TableName tableName, CallSettings callSettings = null) =>
             DropRowRange(
                 CreateDropRowRangeRequest(tableName, rowKeyPrefix: null, deleteAllDataFromTable: true),
                 callSettings);
@@ -96,6 +113,32 @@ namespace Google.Cloud.Bigtable.Admin.V2
             DropRowRangeAsync(
                 CreateDropRowRangeRequest(tableName, rowKeyPrefix, deleteAllDataFromTable: false),
                 callSettings);
+
+        /// <summary>
+        /// Permanently drop/delete all rows that start with this row key prefix.
+        /// </summary>
+        /// <remarks>
+        /// <para>
+        /// This method simply delegates to <see cref="DropRowRangeAsync(TableName, ByteString, CallSettings)"/>.
+        /// </para>
+        /// </remarks>
+        /// <param name="tableName">
+        /// The unique name of the table on which to drop a range of rows. Must not be null.
+        /// </param>
+        /// <param name="rowKeyPrefix">
+        /// The prefix of all rows which should be dropped. Cannot be null or empty.
+        /// </param>
+        /// <param name="cancellationToken">
+        /// A <see cref="CancellationToken"/> to use for this RPC.
+        /// </param>
+        /// <returns>
+        /// A Task that completes when the RPC has completed.
+        /// </returns>
+        public Task DropRowRangeAsync(
+            TableName tableName,
+            ByteString rowKeyPrefix, // TODO: Use BigtableByteString when shared
+            CancellationToken cancellationToken) =>
+            DropRowRangeAsync(tableName, rowKeyPrefix, CallSettings.FromCancellationToken(cancellationToken));
 
         /// <summary>
         /// Permanently drop/delete all rows that start with this row key prefix.

@@ -33,7 +33,7 @@ namespace Google.Cloud.Bigtable.Admin.V2.Tests
         }
 
         [Fact]
-        public async Task DropAllRowse_Validate_TableName()
+        public async Task DropAllRows_Validate_TableName()
         {
             await DropAllRows_ValidateArguments<ArgumentNullException>(null);
         }
