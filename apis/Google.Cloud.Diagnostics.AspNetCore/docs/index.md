@@ -12,10 +12,20 @@ and Stackdriver Trace.
 
 # Note
 The Google.Cloud.Diagnostics.AspNetCore package attempts to collect the filename and line number when
-entries are collected.  However, to be able to collect this information PDBs must be included with
+entries are collected. However, to be able to collect this information PDBs must be included with
 the deployed code.
 
 # Getting started
+
+## Initializing Google Diagnostics (ASP.NET Core 2.0+)
+
+The preferred way to initialize Google Diagnostics services in ASP.NET Core 2.0 or higher
+is using the `UseGoogleDiagnostics` extentension method on `IWebHostBuilder`. This configures
+Logging, Tracing and Error Reporting middleware.
+
+[!code-cs[](obj/snippets/Google.Cloud.Diagnostics.AspNetCore.AspNetCore.txt#UseGoogleDiagnostics)]
+
+You can still initialize the separate components using the extension methods below.
 
 ## Registering Error Reporting
 
@@ -29,7 +39,7 @@ the deployed code.
 
 [!code-cs[](obj/snippets/Google.Cloud.Diagnostics.AspNetCore.AspNetCore.txt#RegisterGoogleLogger)]
 
-## Initializing Logging (AspNetCore 2.0)
+## Initializing Logging (ASP.NET Core 2.0+)
 
 [!code-cs[](obj/snippets/Google.Cloud.Diagnostics.AspNetCore.AspNetCore.txt#RegisterGoogleLogger2)]
 

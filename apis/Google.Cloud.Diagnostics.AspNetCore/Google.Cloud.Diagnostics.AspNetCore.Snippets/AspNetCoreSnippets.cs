@@ -1,29 +1,29 @@
-// Copyright 2016 Google Inc. All Rights Reserved.
-// 
+// Copyright 2018 Google Inc. All Rights Reserved.
+//
 // Licensed under the Apache License, Version 2.0 (the "License");
 // you may not use this file except in compliance with the License.
 // You may obtain a copy of the License at
-// 
+//
 //     http://www.apache.org/licenses/LICENSE-2.0
-// 
+//
 // Unless required by applicable law or agreed to in writing, software
 // distributed under the License is distributed on an "AS IS" BASIS,
 // WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
 // See the License for the specific language governing permissions and
 // limitations under the License.
 
-using Google.Cloud.Diagnostics.Common;
-using Google.Cloud.ClientTesting;
-using Microsoft.AspNetCore.Builder;
-using Microsoft.Extensions.DependencyInjection;
-using Microsoft.Extensions.Logging;
 using System;
 using System.IO;
 using System.Net.Http;
 using System.Threading.Tasks;
-using Microsoft.AspNetCore.Mvc;
+using Google.Cloud.ClientTesting;
+using Google.Cloud.Diagnostics.Common;
+using Microsoft.AspNetCore.Builder;
 using Microsoft.AspNetCore.Hosting;
 using Microsoft.AspNetCore.Http;
+using Microsoft.AspNetCore.Mvc;
+using Microsoft.Extensions.DependencyInjection;
+using Microsoft.Extensions.Logging;
 
 namespace Google.Cloud.Diagnostics.AspNetCore.Snippets
 {
@@ -88,20 +88,35 @@ namespace Google.Cloud.Diagnostics.AspNetCore.Snippets
         }
         // End sample
 
-#if NETCOREAPP2_0
         private class Startup { }
+
+#if NETCOREAPP2_0
         public void Configure()
         {
             // Sample: RegisterGoogleLogger2
             string projectId = "[Google Cloud Platform project ID]";
             var webHost = new WebHostBuilder()
-                .ConfigureLogging((hostingContext, logging) =>
-                    logging.AddProvider(GoogleLoggerProvider.Create(null, projectId: projectId)))
+                .ConfigureServices(services =>
+                {
+                    services.AddSingleton<ILoggerProvider>(sp => GoogleLoggerProvider.Create(sp, projectId));
+                })
                 .UseStartup<Startup>()
                 .Build();
             // End sample
         }
 #endif
+
+        public void Configure2()
+        {
+            // Sample: UseGoogleDiagnostics
+            string projectId = "[Google Cloud Platform project ID]";
+            var webHost = new WebHostBuilder()
+                .UseGoogleDiagnostics(projectId)
+                .UseStartup<Startup>()
+                .Build();
+            // End sample
+        }
+
         // Sample: UseGoogleLogger
         public void LogMessage(ILoggerFactory loggerFactory)
         {
@@ -109,7 +124,7 @@ namespace Google.Cloud.Diagnostics.AspNetCore.Snippets
             logger.LogInformation("This is a log message.");
         }
         // End sample
-        
+
         private class Trace
         {
             // Sample: RegisterGoogleTracer
@@ -141,7 +156,7 @@ namespace Google.Cloud.Diagnostics.AspNetCore.Snippets
             }
             // End sample
 
-            // Sample: UseTracer 
+            // Sample: UseTracer
             /// <summary>
             /// The <see cref="IManagedTracer"/> is populated by dependency injection.
             /// </summary>
