@@ -54,6 +54,9 @@ namespace Google.Cloud.Bigtable.V2.GenerateClient
         internal static InvocationExpressionSyntax Invoke(this ExpressionSyntax expression) =>
             InvocationExpression(expression);
 
+        internal static InvocationExpressionSyntax Invoke(this MethodDeclarationSyntax method, params ExpressionSyntax[] argumentExpressions) =>
+            method.Invoke(argumentExpressions.Select(argumentExpression => SyntaxFactory.Argument(argumentExpression)));
+
         internal static InvocationExpressionSyntax Invoke(this MethodDeclarationSyntax method, IEnumerable<ArgumentSyntax> arguments) =>
             IdentifierName(method.Identifier).Invoke(arguments);
 
@@ -104,7 +107,7 @@ namespace Google.Cloud.Bigtable.V2.GenerateClient
         internal static MethodDeclarationSyntax WithBodySafe(this MethodDeclarationSyntax method, ExpressionSyntax expressionBody) =>
             method.WithBody(null).WithExpressionBody(ArrowExpressionClause(expressionBody)).WithSemicolonToken(Token(SyntaxKind.SemicolonToken));
 
-        internal static MethodDeclarationSyntax WithBodySafe(this MethodDeclarationSyntax method, BlockSyntax block) =>
-            method.WithExpressionBody(null).WithSemicolonToken(Token(SyntaxKind.None)).WithBody(block);
+        internal static MethodDeclarationSyntax WithBodySafe(this MethodDeclarationSyntax method, BlockSyntax body) =>
+            method.WithExpressionBody(null).WithSemicolonToken(Token(SyntaxKind.None)).WithBody(body);
     }
 }

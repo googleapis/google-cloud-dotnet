@@ -178,6 +178,21 @@ namespace Google.Cloud.Bigtable.V2
         }
 
         /// <summary>
+        /// Mutates multiple rows in a batch. Each individual row is mutated
+        /// atomically as in MutateRow, but the entire batch is not executed
+        /// atomically.
+        /// </summary>
+        /// <param name="request">
+        /// The request object containing all of the parameters for the API call.
+        /// If the <see cref="MutateRowsRequest.AppProfileId"/> has not been specified, it will be initialized from the value stored in the client.
+        /// </param>
+        /// <param name="cancellationToken">A <see cref="CancellationToken"/> to use for this RPC.</param>
+        /// <returns>The RPC response.</returns>
+        public virtual Task<MutateRowsResponse> MutateRowsAsync(
+            MutateRowsRequest request,
+            CancellationToken cancellationToken) => MutateRowsAsync(request, CallSettings.FromCancellationToken(cancellationToken));
+
+        /// <summary>
         /// Mutates a row atomically based on the output of a predicate Reader filter.
         /// </summary>
         /// <param name="request">
@@ -353,19 +368,6 @@ namespace Google.Cloud.Bigtable.V2
         }
 
         /// <inheritdoc/>
-        public override Task<MutateRowResponse> MutateRowAsync(
-            MutateRowRequest request,
-            CancellationToken cancellationToken)
-        {
-            if (request.AppProfileId == null)
-            {
-                request.AppProfileId = _appProfileId;
-            }
-
-            return GetUnderlyingClient().MutateRowAsync(request, cancellationToken);
-        }
-
-        /// <inheritdoc/>
         public override MutateRowResponse MutateRow(
             MutateRowRequest request,
             CallSettings callSettings = null)
@@ -410,19 +412,6 @@ namespace Google.Cloud.Bigtable.V2
         }
 
         /// <inheritdoc/>
-        public override Task<CheckAndMutateRowResponse> CheckAndMutateRowAsync(
-            CheckAndMutateRowRequest request,
-            CancellationToken cancellationToken)
-        {
-            if (request.AppProfileId == null)
-            {
-                request.AppProfileId = _appProfileId;
-            }
-
-            return GetUnderlyingClient().CheckAndMutateRowAsync(request, cancellationToken);
-        }
-
-        /// <inheritdoc/>
         public override CheckAndMutateRowResponse CheckAndMutateRow(
             CheckAndMutateRowRequest request,
             CallSettings callSettings = null)
@@ -446,19 +435,6 @@ namespace Google.Cloud.Bigtable.V2
             }
 
             return GetUnderlyingClient().ReadModifyWriteRowAsync(request, callSettings);
-        }
-
-        /// <inheritdoc/>
-        public override Task<ReadModifyWriteRowResponse> ReadModifyWriteRowAsync(
-            ReadModifyWriteRowRequest request,
-            CancellationToken cancellationToken)
-        {
-            if (request.AppProfileId == null)
-            {
-                request.AppProfileId = _appProfileId;
-            }
-
-            return GetUnderlyingClient().ReadModifyWriteRowAsync(request, cancellationToken);
         }
 
         /// <inheritdoc/>
