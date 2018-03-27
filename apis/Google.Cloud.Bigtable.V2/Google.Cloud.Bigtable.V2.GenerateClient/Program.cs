@@ -22,6 +22,7 @@ using System;
 using System.Collections.Generic;
 using System.IO;
 using System.Linq;
+using System.Threading;
 using System.Threading.Tasks;
 
 using static Google.Cloud.Bigtable.V2.GenerateClient.RoslynHelpers;
@@ -35,7 +36,7 @@ namespace Google.Cloud.Bigtable.V2.GenerateClient
         private const string AppProfileIdPropertyName = "AppProfileId";
         private const string CallSettingsTypeName = "CallSettings";
         private const string CancellationTokenParameterName = "cancellationToken";
-        private const string CancellationTokenTypeName = "CancellationToken";
+        private const string CancellationTokenTypeName = nameof(CancellationToken);
         private const string GetUnderlyingClientMethodName = "GetUnderlyingClient";
 
         /// <summary>
