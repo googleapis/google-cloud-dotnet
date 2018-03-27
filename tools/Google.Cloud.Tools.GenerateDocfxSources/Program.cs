@@ -188,7 +188,7 @@ project in Visual Studio and choosing ""Manage NuGet Packages..."").";
             if (!api.IsReleaseVersion)
             {
                 installation += @"
-Please ensure you enable pre-release packages(for example, in the
+Please ensure you enable pre-release packages (for example, in the
 Visual Studio NuGet user interface, check the ""Include prerelease""
 box).";
             }
