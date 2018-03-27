@@ -12,6 +12,7 @@
 // See the License for the specific language governing permissions and
 // limitations under the License.
 
+using Google.Api.Gax.Grpc;
 using Microsoft.CodeAnalysis;
 using Microsoft.CodeAnalysis.CSharp;
 using Microsoft.CodeAnalysis.CSharp.Syntax;
@@ -34,9 +35,7 @@ namespace Google.Cloud.Bigtable.V2.GenerateClient
     {
         private const string AppProfileIdFieldName = "_appProfileId";
         private const string AppProfileIdPropertyName = "AppProfileId";
-        private const string CallSettingsTypeName = "CallSettings";
         private const string CancellationTokenParameterName = "cancellationToken";
-        private const string CancellationTokenTypeName = nameof(CancellationToken);
         private const string GetUnderlyingClientMethodName = "GetUnderlyingClient";
 
         /// <summary>
@@ -276,7 +275,7 @@ namespace Google.Cloud.Bigtable.V2.GenerateClient
                 node = node.WithBodySafe(
                     node.Invoke(
                         IdentifierName(requestParameterSyntax.Identifier),
-                        IdentifierName(CallSettingsTypeName).Member("FromCancellationToken").Invoke(IdentifierName(CancellationTokenParameterName))));
+                        IdentifierName(nameof(CallSettings)).Member(nameof(CallSettings.FromCancellationToken)).Invoke(IdentifierName(CancellationTokenParameterName))));
 
                 return node;
             }
@@ -289,7 +288,7 @@ namespace Google.Cloud.Bigtable.V2.GenerateClient
                 {
                     // Replace the CallSettings parameter with a CancellationToken parameter which doesn't have a default value.
                     node = node
-                        .WithType(ParseTypeName(CancellationTokenTypeName)).WithLeadingTrivia(node.Type.GetLeadingTrivia())
+                        .WithType(ParseTypeName(nameof(CancellationToken))).WithLeadingTrivia(node.Type.GetLeadingTrivia())
                         .WithIdentifier(Identifier(CancellationTokenParameterName))
                         .WithDefault(null);
                 }
@@ -308,7 +307,7 @@ namespace Google.Cloud.Bigtable.V2.GenerateClient
                     // Replace the parameter doc comments for the cancellation token.
                     node = node.WithContent(List(new XmlNodeSyntax[] {
                         XmlText("A "),
-                        SeeTag(TypeCref(ParseTypeName(CancellationTokenTypeName))),
+                        SeeTag(TypeCref(ParseTypeName(nameof(CancellationToken)))),
                         XmlText(XmlTextLiteral(" to use for this RPC.")) }));
                 }
 

@@ -14,6 +14,7 @@
   </PropertyGroup>
 
   <ItemGroup>
+    <PackageReference Include="Google.Api.Gax.Grpc" Version="2.3.0" />
     <PackageReference Include="Microsoft.Build" Version="15.6.82" />
     <PackageReference Include="Microsoft.Build.Engine" Version="15.6.82" />
     <PackageReference Include="Microsoft.Build.Tasks.Core" Version="15.6.82" />
