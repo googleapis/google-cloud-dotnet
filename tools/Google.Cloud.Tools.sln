@@ -36,7 +36,9 @@ Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Google.Cloud.Tools.Analyzer
 EndProject
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Google.Cloud.Tools.TrimCoverageReport", "Google.Cloud.Tools.TrimCoverageReport\Google.Cloud.Tools.TrimCoverageReport.csproj", "{A0FB3380-F0B1-4E61-90AF-291606C3128A}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Google.Cloud.Tools.GenerateReleaseNotes", "Google.Cloud.Tools.GenerateReleaseNotes\Google.Cloud.Tools.GenerateReleaseNotes.csproj", "{EE6A9A45-06C4-402A-B008-8D50A53613CC}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Google.Cloud.Tools.GenerateReleaseNotes", "Google.Cloud.Tools.GenerateReleaseNotes\Google.Cloud.Tools.GenerateReleaseNotes.csproj", "{EE6A9A45-06C4-402A-B008-8D50A53613CC}"
+EndProject
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Google.Cloud.Tools.GenerateTypeNamesToAlias", "Google.Cloud.Tools.GenerateTypeNamesToAlias\Google.Cloud.Tools.GenerateTypeNamesToAlias.csproj", "{39CE9CF1-921C-425A-A1F3-E22075413872}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -264,6 +266,18 @@ Global
 		{EE6A9A45-06C4-402A-B008-8D50A53613CC}.Release|x64.Build.0 = Release|Any CPU
 		{EE6A9A45-06C4-402A-B008-8D50A53613CC}.Release|x86.ActiveCfg = Release|Any CPU
 		{EE6A9A45-06C4-402A-B008-8D50A53613CC}.Release|x86.Build.0 = Release|Any CPU
+		{39CE9CF1-921C-425A-A1F3-E22075413872}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{39CE9CF1-921C-425A-A1F3-E22075413872}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{39CE9CF1-921C-425A-A1F3-E22075413872}.Debug|x64.ActiveCfg = Debug|Any CPU
+		{39CE9CF1-921C-425A-A1F3-E22075413872}.Debug|x64.Build.0 = Debug|Any CPU
+		{39CE9CF1-921C-425A-A1F3-E22075413872}.Debug|x86.ActiveCfg = Debug|Any CPU
+		{39CE9CF1-921C-425A-A1F3-E22075413872}.Debug|x86.Build.0 = Debug|Any CPU
+		{39CE9CF1-921C-425A-A1F3-E22075413872}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{39CE9CF1-921C-425A-A1F3-E22075413872}.Release|Any CPU.Build.0 = Release|Any CPU
+		{39CE9CF1-921C-425A-A1F3-E22075413872}.Release|x64.ActiveCfg = Release|Any CPU
+		{39CE9CF1-921C-425A-A1F3-E22075413872}.Release|x64.Build.0 = Release|Any CPU
+		{39CE9CF1-921C-425A-A1F3-E22075413872}.Release|x86.ActiveCfg = Release|Any CPU
+		{39CE9CF1-921C-425A-A1F3-E22075413872}.Release|x86.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
