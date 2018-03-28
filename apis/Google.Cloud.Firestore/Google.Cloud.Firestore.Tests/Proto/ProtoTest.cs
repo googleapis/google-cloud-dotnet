@@ -326,6 +326,7 @@ namespace Google.Cloud.Firestore.Tests.Proto
                 case wkt::Value.KindOneofCase.StringValue:
                     return value.StringValue == "ServerTimestamp" ? FieldValue.ServerTimestamp
                         : value.StringValue == "Delete" ? FieldValue.Delete
+                        : value.StringValue == "NaN" ? (object) double.NaN
                         : value.StringValue;
                 case wkt::Value.KindOneofCase.StructValue:
                     return value.StructValue.Fields.ToDictionary(pair => pair.Key, pair => ConvertValue(pair.Value));
