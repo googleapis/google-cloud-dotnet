@@ -34,10 +34,8 @@ OUTDIR=tmp
 fetch_github_repos() {
   if [ -d "toolkit" ]
   then
-    pushd toolkit > /dev/null
-    git pull
-    git submodule update
-    popd > /dev/null
+    git -C toolkit pull
+    git -C toolkit submodule update
   else
     git clone --recursive https://github.com/googleapis/toolkit \
       --config core.autocrlf=false \
@@ -46,11 +44,11 @@ fetch_github_repos() {
           
   if [ -d "googleapis" ]
   then
-    pushd googleapis > /dev/null
-    git pull
-    popd > /dev/null
+    git -C googleapis pull
   else
-    git clone --recursive  https://github.com/googleapis/googleapis
+    # Auto-detect whether we're cloning the public or private googleapis repo.
+    git remote -v | grep -q google-cloud-dotnet-private && repo=googleapis-private || repo=googleapis
+    git clone --recursive https://github.com/googleapis/${repo} googleapis
   fi
 }
 
