@@ -12,13 +12,15 @@
 // See the License for the specific language governing permissions and
 // limitations under the License.
 
-using Google.Cloud.Logging.V2;
-using Google.Cloud.Diagnostics.Common;
-using Google.Protobuf.WellKnownTypes;
 using Google.Api.Gax;
+using Google.Cloud.Diagnostics.Common;
+using Google.Cloud.Logging.V2;
+using Google.Protobuf.WellKnownTypes;
+using Microsoft.AspNetCore.Http;
 using Microsoft.Extensions.Logging;
 using System;
-using Microsoft.AspNetCore.Http;
+using System.Collections.Generic;
+using System.Linq;
 
 namespace Google.Cloud.Diagnostics.AspNetCore
 {
@@ -44,6 +46,9 @@ namespace Google.Cloud.Diagnostics.AspNetCore
     /// <seealso cref="GoogleLoggerFactoryExtensions"/>
     public sealed class GoogleLogger : ILogger
     {
+        /// <summary>The log name given when creating the logger.</summary>
+        private readonly string _logName;
+
         /// <summary>The consumer to push logs to.</summary>
         private readonly IConsumer<LogEntry> _consumer;
 
@@ -54,7 +59,7 @@ namespace Google.Cloud.Diagnostics.AspNetCore
         private readonly LoggerOptions _loggerOptions;
 
         /// <summary>The formatted log name.</summary>
-        private readonly string _logName;
+        private readonly string _fullLogName;
 
         /// <summary>A clock for getting the current timestamp.</summary>
         private readonly IClock _clock;
@@ -66,12 +71,12 @@ namespace Google.Cloud.Diagnostics.AspNetCore
             string logName, IClock clock = null, IHttpContextAccessor accessor = null)
         {
             GaxPreconditions.CheckNotNull(logTarget, nameof(logTarget));
-            GaxPreconditions.CheckNotNullOrEmpty(logName, nameof(logName));
             _traceTarget = logTarget.Kind == LogTargetKind.Project ?
                 TraceTarget.ForProject(logTarget.ProjectId) : null;
             _consumer = GaxPreconditions.CheckNotNull(consumer, nameof(consumer));
-            _loggerOptions = GaxPreconditions.CheckNotNull(loggerOptions, nameof(loggerOptions)); ;
-            _logName = logTarget.GetFullLogName(logName);
+            _loggerOptions = GaxPreconditions.CheckNotNull(loggerOptions, nameof(loggerOptions));
+            _logName = GaxPreconditions.CheckNotNullOrEmpty(logName, nameof(logName)); ;
+            _fullLogName = logTarget.GetFullLogName(_loggerOptions.LogName);
             _accessor = accessor;
             _clock = clock ?? SystemClock.Instance;
         }
@@ -98,13 +103,52 @@ namespace Google.Cloud.Diagnostics.AspNetCore
                 return;
             }
 
+            var jsonStruct = new Struct();
+            jsonStruct.Fields.Add("message", Value.ForString(message));
+            jsonStruct.Fields.Add("log_name", Value.ForString(_logName));
+
+            if (GoogleLoggerScope.Current != null)
+            {
+                jsonStruct.Fields.Add("scope", Value.ForString(GoogleLoggerScope.Current.ToString()));
+            }
+
+            if (eventId.Id != 0 || eventId.Name != null)
+            {
+                var eventStruct = new Struct();
+                if (eventId.Id != 0)
+                {
+                    eventStruct.Fields.Add("id", Value.ForNumber(eventId.Id));
+                }
+                if (!string.IsNullOrWhiteSpace(eventId.Name))
+                {
+                    eventStruct.Fields.Add("name", Value.ForString(eventId.Name));
+                }
+                jsonStruct.Fields.Add("event_id", Value.ForStruct(eventStruct));
+            }
+
+            // If we have format params and its more than just the original message add them.
+            if (state is IEnumerable<KeyValuePair<string, object>> formatParams && 
+                !(formatParams.Count() == 1 && formatParams.Single().Key.Equals("{OriginalFormat}")))
+            {
+                var paramStruct = new Struct();
+                foreach (var pair in formatParams)
+                {
+                    paramStruct.Fields.Add(pair.Key, Value.ForString(pair.Value?.ToString() ?? ""));
+                }
+
+                if (paramStruct.Fields.Count > 0)
+                {
+                    jsonStruct.Fields.Add("format_parameters", Value.ForStruct(paramStruct));
+                }
+            }
+
             LogEntry entry = new LogEntry
             {
                 Resource = _loggerOptions.MonitoredResource,
-                LogName = _logName,
+                LogName = _fullLogName,
                 Severity = logLevel.ToLogSeverity(),
                 Timestamp = Timestamp.FromDateTime(_clock.GetCurrentDateTimeUtc()),
-                TextPayload = string.Concat(GoogleLoggerScope.Current, message),
+                JsonPayload = jsonStruct,
                 Labels = { _loggerOptions.Labels },
                 Trace = GetTraceName() ?? "",
             };

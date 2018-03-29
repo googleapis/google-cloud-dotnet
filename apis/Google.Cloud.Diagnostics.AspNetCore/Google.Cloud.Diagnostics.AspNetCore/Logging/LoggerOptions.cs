@@ -26,8 +26,14 @@ namespace Google.Cloud.Diagnostics.AspNetCore
     /// </summary>
     public sealed class LoggerOptions
     {
+        /// <summary>The base log name for all logs.</summary>
+        private const string _baseLogName = "aspnetcore";
+
         /// <summary>The minimum log level.</summary>
         public LogLevel LogLevel { get; }
+
+        /// <summary>The name for the all logs.</summary>
+        public string LogName { get; }
 
         /// <summary>The monitored resource. See: https://cloud.google.com/logging/docs/api/v2/resource-list </summary>
         public MonitoredResource MonitoredResource { get; }
@@ -42,9 +48,14 @@ namespace Google.Cloud.Diagnostics.AspNetCore
         public Dictionary<string, string> Labels { get; }
 
         private LoggerOptions(
-            LogLevel logLevel, Dictionary<string, string> labels,
-            MonitoredResource monitoredResource, BufferOptions bufferOptions, RetryOptions retryOptions)
+            string logName,
+            LogLevel logLevel, 
+            Dictionary<string, string> labels,
+            MonitoredResource monitoredResource, 
+            BufferOptions bufferOptions,
+            RetryOptions retryOptions)
         {
+            LogName = logName;
             LogLevel = GaxPreconditions.CheckEnumValue(logLevel, nameof(logLevel));
             Labels = labels;
             MonitoredResource = monitoredResource;
@@ -56,21 +67,27 @@ namespace Google.Cloud.Diagnostics.AspNetCore
         /// Create a new instance of <see cref="LoggerOptions"/>.
         /// </summary>
         /// <param name="logLevel">Optional, the minimum log level.  Defaults to <see cref="LogLevel.Information"/></param>
+        /// <param name="logName">Optional, the name of the log.  Defaults to 'aspnetcore'.</param>
         /// <param name="labels">Optional, custom labels to be added to log entries.</param>
         /// <param name="monitoredResource">Optional, the monitored resource.  The monitored resource will
         ///     be automatically detected if it is not set and will default to the global resource if the detection fails.
         ///     See: https://cloud.google.com/logging/docs/api/v2/resource-list </param>
         /// <param name="bufferOptions">Optional, the buffer options.  Defaults to a <see cref="BufferType.Timed"/></param>
         /// <param name="retryOptions">Optional, the retry options.  Defaults to a <see cref="RetryType.None"/></param>
-        public static LoggerOptions Create(LogLevel logLevel = LogLevel.Information,
+        public static LoggerOptions Create(
+            string logName = null,
+            LogLevel logLevel = LogLevel.Information,
             Dictionary<string, string> labels = null,
-            MonitoredResource monitoredResource = null, BufferOptions bufferOptions = null, RetryOptions retryOptions = null)
+            MonitoredResource monitoredResource = null,
+            BufferOptions bufferOptions = null,
+            RetryOptions retryOptions = null)
         {
+            logName = logName ?? _baseLogName;
             labels = labels ?? new Dictionary<string, string>();
             monitoredResource = monitoredResource ?? MonitoredResourceBuilder.FromPlatform();
             bufferOptions = bufferOptions ?? BufferOptions.TimedBuffer();
             retryOptions = retryOptions ?? RetryOptions.NoRetry();
-            return new LoggerOptions(logLevel, labels, monitoredResource, bufferOptions, retryOptions);
+            return new LoggerOptions(logName, logLevel, labels, monitoredResource, bufferOptions, retryOptions);
         }
     }
 }

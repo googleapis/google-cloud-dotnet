@@ -206,7 +206,31 @@ namespace Google.Cloud.Diagnostics.AspNetCore.IntegrationTests
                 await client.GetAsync($"/Main/Scope/{testId}");
                 var results = _polling.GetEntries(startTime, testId, 1, LogSeverity.Critical);
                 var message = MainController.GetMessage(nameof(MainController.Scope), testId);
-                Assert.Contains($"Scope => {message}", results.Single().TextPayload);
+                Assert.Equal(message, results.Single().JsonPayload.Fields["message"].StringValue);
+                Assert.Equal("Scope => ", results.Single().JsonPayload.Fields["scope"].StringValue);
+            }
+        }
+
+        [Fact]
+        public async Task Logging_FormatParameter()
+        {
+            string testId = Utils.GetTestId();
+            DateTime startTime = DateTime.UtcNow;
+
+            var builder = new WebHostBuilder().UseStartup<NoBufferResourceLoggerTestApplication>();
+            using (var server = new TestServer(builder))
+            using (var client = server.CreateClient())
+            {
+                await client.GetAsync($"/Main/FormatParameters/{testId}");
+                var results = _polling.GetEntries(startTime, testId, 1, LogSeverity.Critical);
+                var message = MainController.GetMessage(nameof(MainController.FormatParameters), testId);
+                var json = results.Single().JsonPayload.Fields;
+                Assert.Equal(message, json["message"].StringValue);
+                var formatParams = json["format_parameters"]?.StructValue?.Fields;
+                Assert.NotNull(formatParams);
+                Assert.Equal(3, formatParams.Count);
+                Assert.Equal(nameof(MainController.FormatParameters), formatParams["message"].StringValue);
+                Assert.Equal(testId, formatParams["id"].StringValue);
             }
         }
 
@@ -276,7 +300,7 @@ namespace Google.Cloud.Diagnostics.AspNetCore.IntegrationTests
         public void Configure(IApplicationBuilder app, ILoggerFactory loggerFactory)
         {
             SetupRoutes(app);
-            LoggerOptions loggerOptions = LoggerOptions.Create(
+            LoggerOptions loggerOptions = LoggerOptions.Create(null,
                 LogLevel.Warning, null, null, BufferOptions.NoBuffer());
             loggerFactory.AddGoogle(ProjectId, loggerOptions);
         }
@@ -301,7 +325,7 @@ namespace Google.Cloud.Diagnostics.AspNetCore.IntegrationTests
         public void Configure(IApplicationBuilder app, ILoggerFactory loggerFactory)
         {
             SetupRoutes(app);
-            LoggerOptions loggerOptions = LoggerOptions.Create(
+            LoggerOptions loggerOptions = LoggerOptions.Create(null,
                 LogLevel.Warning, null, Resource, BufferOptions.NoBuffer());
             loggerFactory.AddGoogle(ProjectId, loggerOptions);
         }
@@ -316,7 +340,7 @@ namespace Google.Cloud.Diagnostics.AspNetCore.IntegrationTests
         public void Configure(IApplicationBuilder app, ILoggerFactory loggerFactory)
         {
             SetupRoutes(app);
-            LoggerOptions loggerOptions = LoggerOptions.Create(
+            LoggerOptions loggerOptions = LoggerOptions.Create(null,
                 LogLevel.Error, null, null, BufferOptions.SizedBuffer());
             loggerFactory.AddGoogle(ProjectId, loggerOptions);
         }
@@ -333,7 +357,7 @@ namespace Google.Cloud.Diagnostics.AspNetCore.IntegrationTests
         {
             SetupRoutes(app);
             var options = BufferOptions.TimedBuffer(TimeSpan.FromSeconds(20));
-            LoggerOptions loggerOptions = LoggerOptions.Create(
+            LoggerOptions loggerOptions = LoggerOptions.Create(null,
                 LogLevel.Warning, null, null, options);
             loggerFactory.AddGoogle(ProjectId, loggerOptions);
         }
@@ -396,6 +420,13 @@ namespace Google.Cloud.Diagnostics.AspNetCore.IntegrationTests
                 _logger.LogCritical(message);
                 return message;
             }
+        }
+
+        public string FormatParameters(string id)
+        {
+            string message = "{message} - {id}";
+            _logger.LogCritical(message, nameof(FormatParameters), id);
+            return message;
         }
 
         public string Exception(string id)

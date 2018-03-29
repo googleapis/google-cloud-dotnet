@@ -32,6 +32,7 @@ namespace Google.Cloud.Diagnostics.AspNetCore.Tests
     {
         private const string _logMessage = "a log message";
         private const string _logName = "log-name";
+        private const string _baseLogName = "aspnetcore";
         private const string _projectId = "pid";
         private static readonly DateTime s_dateTime = DateTime.UtcNow;
         private static readonly Exception s_exception = new Exception("some message");
@@ -46,20 +47,22 @@ namespace Google.Cloud.Diagnostics.AspNetCore.Tests
 
         private GoogleLogger GetLogger(
             IConsumer<LogEntry> consumer, LogLevel logLevel = LogLevel.Information,
-            Dictionary<string, string> labels = null, IHttpContextAccessor accessor = null)
+            Dictionary<string, string> labels = null, IHttpContextAccessor accessor = null,
+            string logName = null)
         {
-            LoggerOptions options = LoggerOptions.Create(logLevel, labels, MonitoredResourceBuilder.GlobalResource);
+            LoggerOptions options = LoggerOptions.Create(logName, logLevel, labels, MonitoredResourceBuilder.GlobalResource);
             return new GoogleLogger(consumer, s_logTarget, options, _logName, s_clock, accessor);
         }
 
         [Fact]
         public void BeginScope()
         {
-            var expectedMessage = $"scope => {_logMessage}";
-            Predicate<IEnumerable<LogEntry>> matcher = (l) => l.Single().TextPayload == expectedMessage;
+            Predicate<IEnumerable<LogEntry>> matcher = (l) =>
+                l.Single().JsonPayload.Fields["message"].StringValue == _logMessage &&
+                l.Single().JsonPayload.Fields["scope"].StringValue == "scope => ";
             var mockConsumer = new Mock<IConsumer<LogEntry>>();
             mockConsumer.Setup(c => c.Receive(Match.Create(matcher)));
-            var logger = GetLogger(mockConsumer.Object, LogLevel.Information);
+            var logger = GetLogger(mockConsumer.Object, logLevel:LogLevel.Information);
             using (logger.BeginScope("scope"))
             {
                 logger.Log(LogLevel.Error, 0, _logMessage, null, Formatter);
@@ -70,8 +73,9 @@ namespace Google.Cloud.Diagnostics.AspNetCore.Tests
         [Fact]
         public void BeginScope_Nested()
         {
-            var expectedMessage = $"parent => child => {_logMessage}";
-            Predicate<IEnumerable<LogEntry>> matcher = (l) => l.Single().TextPayload == expectedMessage;
+            Predicate<IEnumerable<LogEntry>> matcher = (l) =>
+                l.Single().JsonPayload.Fields["message"].StringValue == _logMessage &&
+                l.Single().JsonPayload.Fields["scope"].StringValue == "parent => child => ";
             var mockConsumer = new Mock<IConsumer<LogEntry>>();
             mockConsumer.Setup(c => c.Receive(Match.Create(matcher)));
             var logger = GetLogger(mockConsumer.Object, LogLevel.Information);
@@ -127,16 +131,25 @@ namespace Google.Cloud.Diagnostics.AspNetCore.Tests
         [Fact]
         public void Log()
         {
+            var message = "a {things} message with stuff";
+            var logStr = "log";
+
             var labels = new Dictionary<string, string> { { "some-key", "some-value" } };
             Predicate<IEnumerable<LogEntry>> matcher = logEntries =>
             {
                 LogEntry entry = logEntries.Single();
                 KeyValuePair<string, string> label = entry.Labels.Single();
-                return entry.LogName == new LogName(_projectId, _logName).ToString() &&
+                var json = entry.JsonPayload.Fields;
+                return entry.LogName == new LogName(_projectId, _baseLogName).ToString() &&
                     entry.Severity == LogLevel.Error.ToLogSeverity() &&
                     string.IsNullOrWhiteSpace(entry.Trace) &&
                     entry.Timestamp.Equals(Timestamp.FromDateTime(s_dateTime)) &&
-                    entry.TextPayload == Formatter(_logMessage, s_exception) &&
+                    json["message"].StringValue == "a log message with stuff" &&
+                    json["log_name"].StringValue == _logName &&
+                    json["event_id"].StructValue.Fields["id"].NumberValue == 28 &&
+                    json["format_parameters"].StructValue.Fields.Count == 2 &&
+                    json["format_parameters"].StructValue.Fields["things"].StringValue == logStr &&
+                    !json.ContainsKey("scope") &&
                     entry.Resource.Equals(MonitoredResourceBuilder.GlobalResource) &&
                     label.Key == "some-key" &&
                     label.Value == "some-value";
@@ -144,8 +157,48 @@ namespace Google.Cloud.Diagnostics.AspNetCore.Tests
 
             var mockConsumer = new Mock<IConsumer<LogEntry>>();
             mockConsumer.Setup(c => c.Receive(Match.Create(matcher)));
-            var logger = GetLogger(mockConsumer.Object, LogLevel.Information, labels);
-            logger.Log(LogLevel.Error, 0, _logMessage, s_exception, Formatter);
+            var logger = GetLogger(mockConsumer.Object, LogLevel.Information, labels, null, _baseLogName);
+            logger.LogError(28, s_exception, message, logStr);
+            mockConsumer.VerifyAll();
+        }
+
+        [Fact]
+        public void Log_EventName()
+        {
+            Predicate<IEnumerable<LogEntry>> matcher = logEntries =>
+            {
+                LogEntry entry = logEntries.Single();
+                var json = entry.JsonPayload.Fields;
+                return entry.LogName == new LogName(_projectId, _baseLogName).ToString() &&
+                    json["message"].StringValue == _logMessage &&
+                    json["event_id"].StructValue.Fields["id"].NumberValue == 11 &&
+                    json["event_id"].StructValue.Fields["name"].StringValue == "some-event";
+            };
+
+            var mockConsumer = new Mock<IConsumer<LogEntry>>();
+            mockConsumer.Setup(c => c.Receive(Match.Create(matcher)));
+            var logger = GetLogger(mockConsumer.Object, LogLevel.Information, null, null, _baseLogName);
+            var eventId = new EventId(11, "some-event");
+            logger.LogError(eventId, s_exception, _logMessage);
+            mockConsumer.VerifyAll();
+        }
+
+        [Fact]
+        public void Log_NoFormatParams()
+        {
+            Predicate<IEnumerable<LogEntry>> matcher = logEntries =>
+            {
+                LogEntry entry = logEntries.Single();
+                var json = entry.JsonPayload.Fields;
+                return entry.LogName == new LogName(_projectId, _baseLogName).ToString() &&
+                    json["message"].StringValue == _logMessage &&
+                    !json.ContainsKey("format_parameters");
+            };
+
+            var mockConsumer = new Mock<IConsumer<LogEntry>>();
+            mockConsumer.Setup(c => c.Receive(Match.Create(matcher)));
+            var logger = GetLogger(mockConsumer.Object, LogLevel.Information, null, null, _baseLogName);
+            logger.LogError(_logMessage);
             mockConsumer.VerifyAll();
         }
 
@@ -158,7 +211,7 @@ namespace Google.Cloud.Diagnostics.AspNetCore.Tests
             Predicate<IEnumerable<LogEntry>> matcher = logEntries =>
             {
                 LogEntry entry = logEntries.Single();
-                return entry.LogName == new LogName(_projectId, _logName).ToString() &&
+                return entry.LogName == new LogName(_projectId, _baseLogName).ToString() &&
                     entry.Trace == fullTraceName;
             };
 
@@ -175,7 +228,8 @@ namespace Google.Cloud.Diagnostics.AspNetCore.Tests
 
             var mockConsumer = new Mock<IConsumer<LogEntry>>();
             mockConsumer.Setup(c => c.Receive(Match.Create(matcher)));
-            var logger = GetLogger(mockConsumer.Object, LogLevel.Information, accessor: mockAccessor.Object);
+            var logger = GetLogger(
+                mockConsumer.Object, LogLevel.Information, accessor: mockAccessor.Object, logName: _baseLogName);
             logger.Log(LogLevel.Error, 0, _logMessage, s_exception, Formatter);
             mockConsumer.VerifyAll();
         }
