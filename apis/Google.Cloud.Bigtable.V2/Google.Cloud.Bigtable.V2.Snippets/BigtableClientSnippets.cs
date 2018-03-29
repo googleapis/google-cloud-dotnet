@@ -34,6 +34,76 @@ namespace Google.Cloud.Bigtable.V2.Snippets
         public BigtableClientSnippets(BigtableClientSnippetsFixture fixture) => _fixture = fixture;
 
         [Fact]
+        public async Task Overview()
+        {
+            if (_fixture.EmulatorChannel != null)
+            {
+                // Because we're creating the client in the sample, we can't pass
+                // in the emulator channel, so skip this when there is one.
+                return;
+            }
+
+            string projectId = _fixture.TableName.ProjectId;
+            string instanceId = _fixture.TableName.InstanceId;
+            string tableId = _fixture.TableName.TableId;
+
+            // Sample: Overview
+            BigtableClient client = BigtableClient.Create();
+            TableName tableName = new TableName(projectId, instanceId, tableId);
+
+            // Insert a row with some cells into the table
+            await client.MutateRowAsync(
+                tableName,
+                "user12345",
+                Mutations.SetCell(
+                    familyName: "Score",
+                    columnQualifier: "Level 1",
+                    value: 456),
+                Mutations.SetCell(
+                    familyName: "metrics",
+                    columnQualifier: "Level 1 - total time",
+                    value: 12000));
+
+            // Read the row back from the table, but only the latest cell values
+            // from the 'Score' column family
+            Row row = await client.ReadRowAsync(
+                tableName,
+                "user12345",
+                filter: RowFilters.Chain(
+                    RowFilters.FamilyNameExact("Score"),
+                    RowFilters.CellsPerColumnLimit(1)));
+
+            foreach (Family family in row.Families)
+            {
+                string familyName = family.Name;
+                Console.WriteLine($"Family: {familyName}");
+
+                foreach (Column column in family.Columns)
+                {
+                    BigtableByteString columnQualifier = column.Qualifier;
+                    BigtableByteString cellValue = column.Cells[0].Value;
+                    Console.WriteLine(
+                        $"\tColumn: {(string)columnQualifier}, Value: {(long)cellValue}");
+                }
+            }
+            // End sample
+
+            foreach (Family family in row.Families)
+            {
+                Assert.Equal("Score", family.Name);
+
+                foreach (Column column in family.Columns)
+                {
+                    BigtableByteString columnQualifier = column.Qualifier;
+                    Assert.Equal("Level 1", (string)columnQualifier);
+
+                    BigtableByteString cellValue = column.Cells[0].Value;
+                    Assert.Equal(456, (long)cellValue);
+                }
+            }
+        }
+
+        [Fact]
         public async Task CheckAndMutateRowAsync()
         {
             var client = _fixture.TableClient;
