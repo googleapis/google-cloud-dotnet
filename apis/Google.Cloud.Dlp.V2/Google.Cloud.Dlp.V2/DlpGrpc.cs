@@ -314,7 +314,9 @@ namespace Google.Cloud.Dlp.V2 {
       }
 
       /// <summary>
-      /// Returns sensitive information types DLP supports.
+      /// Returns a list of the sensitive information types that the DLP API
+      /// supports. For more information, see [Listing supported predefined
+      /// infoTypes](/dlp/docs/listing-infotypes).
       /// </summary>
       /// <param name="request">The request received from the client.</param>
       /// <param name="context">The context of the server-side call handler being invoked.</param>
@@ -782,7 +784,9 @@ namespace Google.Cloud.Dlp.V2 {
         return CallInvoker.AsyncUnaryCall(__Method_ReidentifyContent, null, options, request);
       }
       /// <summary>
-      /// Returns sensitive information types DLP supports.
+      /// Returns a list of the sensitive information types that the DLP API
+      /// supports. For more information, see [Listing supported predefined
+      /// infoTypes](/dlp/docs/listing-infotypes).
       /// </summary>
       /// <param name="request">The request to send to the server.</param>
       /// <param name="headers">The initial metadata to send with the call. This parameter is optional.</param>
@@ -794,7 +798,9 @@ namespace Google.Cloud.Dlp.V2 {
         return ListInfoTypes(request, new grpc::CallOptions(headers, deadline, cancellationToken));
       }
       /// <summary>
-      /// Returns sensitive information types DLP supports.
+      /// Returns a list of the sensitive information types that the DLP API
+      /// supports. For more information, see [Listing supported predefined
+      /// infoTypes](/dlp/docs/listing-infotypes).
       /// </summary>
       /// <param name="request">The request to send to the server.</param>
       /// <param name="options">The options for the call.</param>
@@ -804,7 +810,9 @@ namespace Google.Cloud.Dlp.V2 {
         return CallInvoker.BlockingUnaryCall(__Method_ListInfoTypes, null, options, request);
       }
       /// <summary>
-      /// Returns sensitive information types DLP supports.
+      /// Returns a list of the sensitive information types that the DLP API
+      /// supports. For more information, see [Listing supported predefined
+      /// infoTypes](/dlp/docs/listing-infotypes).
       /// </summary>
       /// <param name="request">The request to send to the server.</param>
       /// <param name="headers">The initial metadata to send with the call. This parameter is optional.</param>
@@ -816,7 +824,9 @@ namespace Google.Cloud.Dlp.V2 {
         return ListInfoTypesAsync(request, new grpc::CallOptions(headers, deadline, cancellationToken));
       }
       /// <summary>
-      /// Returns sensitive information types DLP supports.
+      /// Returns a list of the sensitive information types that the DLP API
+      /// supports. For more information, see [Listing supported predefined
+      /// infoTypes](/dlp/docs/listing-infotypes).
       /// </summary>
       /// <param name="request">The request to send to the server.</param>
       /// <param name="options">The options for the call.</param>

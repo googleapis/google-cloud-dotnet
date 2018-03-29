@@ -1230,7 +1230,9 @@ namespace Google.Cloud.Dlp.V2
         }
 
         /// <summary>
-        /// Returns sensitive information types DLP supports.
+        /// Returns a list of the sensitive information types that the DLP API
+        /// supports. For more information, see [Listing supported predefined
+        /// infoTypes](/dlp/docs/listing-infotypes).
         /// </summary>
         /// <param name="request">
         /// The request object containing all of the parameters for the API call.
@@ -1249,7 +1251,9 @@ namespace Google.Cloud.Dlp.V2
         }
 
         /// <summary>
-        /// Returns sensitive information types DLP supports.
+        /// Returns a list of the sensitive information types that the DLP API
+        /// supports. For more information, see [Listing supported predefined
+        /// infoTypes](/dlp/docs/listing-infotypes).
         /// </summary>
         /// <param name="request">
         /// The request object containing all of the parameters for the API call.
@@ -1267,7 +1271,9 @@ namespace Google.Cloud.Dlp.V2
                 CallSettings.FromCancellationToken(cancellationToken));
 
         /// <summary>
-        /// Returns sensitive information types DLP supports.
+        /// Returns a list of the sensitive information types that the DLP API
+        /// supports. For more information, see [Listing supported predefined
+        /// infoTypes](/dlp/docs/listing-infotypes).
         /// </summary>
         /// <param name="request">
         /// The request object containing all of the parameters for the API call.
@@ -2734,7 +2740,9 @@ namespace Google.Cloud.Dlp.V2
         }
 
         /// <summary>
-        /// Returns sensitive information types DLP supports.
+        /// Returns a list of the sensitive information types that the DLP API
+        /// supports. For more information, see [Listing supported predefined
+        /// infoTypes](/dlp/docs/listing-infotypes).
         /// </summary>
         /// <param name="request">
         /// The request object containing all of the parameters for the API call.
@@ -2754,7 +2762,9 @@ namespace Google.Cloud.Dlp.V2
         }
 
         /// <summary>
-        /// Returns sensitive information types DLP supports.
+        /// Returns a list of the sensitive information types that the DLP API
+        /// supports. For more information, see [Listing supported predefined
+        /// infoTypes](/dlp/docs/listing-infotypes).
         /// </summary>
         /// <param name="request">
         /// The request object containing all of the parameters for the API call.
