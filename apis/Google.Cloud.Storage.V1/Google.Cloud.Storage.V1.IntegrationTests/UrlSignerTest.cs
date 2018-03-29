@@ -681,7 +681,8 @@ namespace Google.Cloud.Storage.V1.IntegrationTests
             Assert.NotNull(actual);
 
             // Use the actual content string as the failure message so mis-matches are not truncated to 5 bytes in the build logs.
-            Assert.True(expected.SequenceEqual(actual), "Content did not match. Actual content:\n" + Encoding.UTF8.GetString(actual));
+            Assert.True(expected.SequenceEqual(actual),
+                $"Content did not match at {DateTimeOffset.UtcNow:s}. Actual content:\n{Encoding.UTF8.GetString(actual)}");
         }
     }
 }
