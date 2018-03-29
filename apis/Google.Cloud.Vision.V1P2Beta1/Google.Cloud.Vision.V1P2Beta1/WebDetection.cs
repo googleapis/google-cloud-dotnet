@@ -179,8 +179,7 @@ namespace Google.Cloud.Vision.V1P2Beta1 {
         = pb::FieldCodec.ForMessage(66, global::Google.Cloud.Vision.V1P2Beta1.WebDetection.Types.WebLabel.Parser);
     private readonly pbc::RepeatedField<global::Google.Cloud.Vision.V1P2Beta1.WebDetection.Types.WebLabel> bestGuessLabels_ = new pbc::RepeatedField<global::Google.Cloud.Vision.V1P2Beta1.WebDetection.Types.WebLabel>();
     /// <summary>
-    /// The service's best guess as to the topic of the request image.
-    /// Inferred from similar images on the open web.
+    /// Best guess text labels for the request image.
     /// </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     public pbc::RepeatedField<global::Google.Cloud.Vision.V1P2Beta1.WebDetection.Types.WebLabel> BestGuessLabels {
