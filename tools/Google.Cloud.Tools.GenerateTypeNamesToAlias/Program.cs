@@ -17,6 +17,10 @@ using System.Collections.Generic;
 using System.IO;
 using System.Linq;
 
+// This code generates the toolkit CSharpImports.java source file:
+// https://github.com/googleapis/toolkit/blob/master/src/main/java/com/google/api/codegen/util/csharp/CSharpImports.java
+// And should be periodically regenerated and merged.
+
 namespace Google.Cloud.Tools.GenerateTypeNamesToAlias
 {
     class Program
@@ -85,8 +89,8 @@ namespace Google.Cloud.Tools.GenerateTypeNamesToAlias
 
         private static IEnumerable<string> PreLines()
         {
-            var lines = @"
-/* Copyright 2018 Google LLC
+            var lines = $@"
+/* Copyright {DateTime.Today.Year} Google LLC
  *
  * Licensed under the Apache License, Version 2.0(the ""License"");
  * you may not use this file except in compliance with the License.
@@ -110,7 +114,7 @@ import com.google.common.collect.ImmutableMap;
 import java.util.List;
 import java.util.Map;
 
-public class CSharpImports {
+public class CSharpImports {{
   // Type names that must be aliased when used as a user-defined message type.
   public static Map<String, List<String>> typeNamesToAlias = ImmutableMap.<String, List<String>>builder()
 ";
