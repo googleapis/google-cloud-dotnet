@@ -4113,7 +4113,7 @@ namespace Google.Cloud.Vision.V1P2Beta1 {
     public const int LatLongRectFieldNumber = 1;
     private global::Google.Cloud.Vision.V1P2Beta1.LatLongRect latLongRect_;
     /// <summary>
-    /// lat/long rectangle that specifies the location of the image.
+    /// Not used.
     /// </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     public global::Google.Cloud.Vision.V1P2Beta1.LatLongRect LatLongRect {
