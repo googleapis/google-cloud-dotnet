@@ -231,6 +231,7 @@ namespace Google.Cloud.Diagnostics.AspNetCore.IntegrationTests
                 Assert.Equal(3, formatParams.Count);
                 Assert.Equal(nameof(MainController.FormatParameters), formatParams["message"].StringValue);
                 Assert.Equal(testId, formatParams["id"].StringValue);
+                Assert.Equal("{message} - {id}", formatParams["{OriginalFormat}"].StringValue);
             }
         }
 
