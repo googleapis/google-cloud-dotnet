@@ -14,6 +14,7 @@
 
 using Google.Api.Gax;
 using Google.Protobuf;
+using System;
 
 namespace Google.Cloud.Bigtable.V2
 {
@@ -164,7 +165,7 @@ namespace Google.Cloud.Bigtable.V2
                     FamilyName = Utilities.ValidateFamilyName(familyName),
                     ColumnQualifier = columnQualifier.Value,
                     Value = value.Value,
-                    TimestampMicros = version.ToTimestampMicros()
+                    TimestampMicros = (version ?? new BigtableVersion(DateTime.UtcNow)).Micros
                 }
             };
     }

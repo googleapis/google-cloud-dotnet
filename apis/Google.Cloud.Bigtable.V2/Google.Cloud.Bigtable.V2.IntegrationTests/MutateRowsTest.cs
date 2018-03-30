@@ -282,5 +282,33 @@ namespace Google.Cloud.Bigtable.V2.IntegrationTests
                         }
                     }));
         }
+
+        [Fact]
+        public async Task OmittedVersion()
+        {
+            var beforeInsertTimestamp = DateTime.UtcNow.AddMilliseconds(-1);
+
+            var tableName = _fixture.TableName;
+            var client = _fixture.TableClient;
+            BigtableByteString rowKey = Guid.NewGuid().ToString();
+            var response = await client.MutateRowsAsync(
+                tableName,
+                Mutations.CreateEntry(
+                    rowKey,
+                    Mutations.SetCell(
+                        BigtableFixture.DefaultColumnFamily,
+                        "column_name",
+                        "test12345")));
+
+            var entries = response.Entries.OrderBy(e => e.Index);
+            Assert.True(entries.All(e => e.Status.Code == (int)Code.Ok));
+
+            var row = await client.ReadRowAsync(tableName, rowKey);
+            var cell = row.Families[0].Columns[0].Cells[0];
+            var insertTimestamp = cell.Version.ToDateTime();
+            Assert.True(
+                beforeInsertTimestamp <= insertTimestamp,
+                $"Expected insert time to be on or after {beforeInsertTimestamp:s}, but was {insertTimestamp:s}");
+        }
     }
 }
