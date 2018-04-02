@@ -69,7 +69,7 @@
     "id": "Google.Cloud.Bigtable.V2",
     "productName": "Google Bigtable",
     "productUrl": "https://cloud.google.com/bigtable/",
-    "version": "1.0.0-alpha04",
+    "version": "1.0.0-alpha05",
     "type": "grpc",
     "description": "Recommended Google client library to access the Google Cloud Bigtable API.",
     "tags": [ "Bigtable" ],
