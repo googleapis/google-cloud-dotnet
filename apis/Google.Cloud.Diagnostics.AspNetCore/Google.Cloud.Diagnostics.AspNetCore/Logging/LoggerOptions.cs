@@ -48,8 +48,8 @@ namespace Google.Cloud.Diagnostics.AspNetCore
         public Dictionary<string, string> Labels { get; }
 
         private LoggerOptions(
+            LogLevel logLevel,
             string logName,
-            LogLevel logLevel, 
             Dictionary<string, string> labels,
             MonitoredResource monitoredResource, 
             BufferOptions bufferOptions,
@@ -75,8 +75,8 @@ namespace Google.Cloud.Diagnostics.AspNetCore
         /// <param name="bufferOptions">Optional, the buffer options.  Defaults to a <see cref="BufferType.Timed"/></param>
         /// <param name="retryOptions">Optional, the retry options.  Defaults to a <see cref="RetryType.None"/></param>
         public static LoggerOptions Create(
-            string logName = null,
             LogLevel logLevel = LogLevel.Information,
+            string logName = null,
             Dictionary<string, string> labels = null,
             MonitoredResource monitoredResource = null,
             BufferOptions bufferOptions = null,
@@ -87,7 +87,7 @@ namespace Google.Cloud.Diagnostics.AspNetCore
             monitoredResource = monitoredResource ?? MonitoredResourceBuilder.FromPlatform();
             bufferOptions = bufferOptions ?? BufferOptions.TimedBuffer();
             retryOptions = retryOptions ?? RetryOptions.NoRetry();
-            return new LoggerOptions(logName, logLevel, labels, monitoredResource, bufferOptions, retryOptions);
+            return new LoggerOptions(logLevel, logName, labels, monitoredResource, bufferOptions, retryOptions);
         }
     }
 }

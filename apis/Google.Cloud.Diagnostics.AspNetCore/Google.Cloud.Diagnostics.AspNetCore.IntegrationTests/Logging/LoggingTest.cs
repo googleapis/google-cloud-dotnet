@@ -301,8 +301,8 @@ namespace Google.Cloud.Diagnostics.AspNetCore.IntegrationTests
         public void Configure(IApplicationBuilder app, ILoggerFactory loggerFactory)
         {
             SetupRoutes(app);
-            LoggerOptions loggerOptions = LoggerOptions.Create(null,
-                LogLevel.Warning, null, null, BufferOptions.NoBuffer());
+            LoggerOptions loggerOptions = LoggerOptions.Create(
+                LogLevel.Warning, null, null, null, BufferOptions.NoBuffer());
             loggerFactory.AddGoogle(ProjectId, loggerOptions);
         }
     }
@@ -326,8 +326,8 @@ namespace Google.Cloud.Diagnostics.AspNetCore.IntegrationTests
         public void Configure(IApplicationBuilder app, ILoggerFactory loggerFactory)
         {
             SetupRoutes(app);
-            LoggerOptions loggerOptions = LoggerOptions.Create(null,
-                LogLevel.Warning, null, Resource, BufferOptions.NoBuffer());
+            LoggerOptions loggerOptions = LoggerOptions.Create(
+                LogLevel.Warning, null, null, Resource, BufferOptions.NoBuffer());
             loggerFactory.AddGoogle(ProjectId, loggerOptions);
         }
     }
@@ -341,8 +341,8 @@ namespace Google.Cloud.Diagnostics.AspNetCore.IntegrationTests
         public void Configure(IApplicationBuilder app, ILoggerFactory loggerFactory)
         {
             SetupRoutes(app);
-            LoggerOptions loggerOptions = LoggerOptions.Create(null,
-                LogLevel.Error, null, null, BufferOptions.SizedBuffer());
+            LoggerOptions loggerOptions = LoggerOptions.Create(
+                LogLevel.Error, null, null, null, BufferOptions.SizedBuffer());
             loggerFactory.AddGoogle(ProjectId, loggerOptions);
         }
     }
@@ -358,8 +358,8 @@ namespace Google.Cloud.Diagnostics.AspNetCore.IntegrationTests
         {
             SetupRoutes(app);
             var options = BufferOptions.TimedBuffer(TimeSpan.FromSeconds(20));
-            LoggerOptions loggerOptions = LoggerOptions.Create(null,
-                LogLevel.Warning, null, null, options);
+            LoggerOptions loggerOptions = LoggerOptions.Create(
+                LogLevel.Warning, null, null, null, options);
             loggerFactory.AddGoogle(ProjectId, loggerOptions);
         }
     }

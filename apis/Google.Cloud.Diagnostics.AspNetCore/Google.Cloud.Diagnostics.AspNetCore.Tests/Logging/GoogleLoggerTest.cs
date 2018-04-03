@@ -50,7 +50,7 @@ namespace Google.Cloud.Diagnostics.AspNetCore.Tests
             Dictionary<string, string> labels = null, IHttpContextAccessor accessor = null,
             string logName = null)
         {
-            LoggerOptions options = LoggerOptions.Create(logName, logLevel, labels, MonitoredResourceBuilder.GlobalResource);
+            LoggerOptions options = LoggerOptions.Create(logLevel, logName, labels, MonitoredResourceBuilder.GlobalResource);
             return new GoogleLogger(consumer, s_logTarget, options, _logName, s_clock, accessor);
         }
 
