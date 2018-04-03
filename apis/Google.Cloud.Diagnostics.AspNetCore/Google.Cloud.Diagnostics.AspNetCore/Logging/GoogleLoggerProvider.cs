@@ -12,6 +12,7 @@
 // See the License for the specific language governing permissions and
 // limitations under the License.
 
+using System;
 using Google.Api.Gax;
 using Google.Cloud.Diagnostics.Common;
 using Google.Cloud.Logging.V2;
@@ -33,42 +34,49 @@ namespace Google.Cloud.Diagnostics.AspNetCore
         /// <summary>Where to log to.</summary>
         private readonly LogTarget _logTarget;
 
+        /// <summary>The service provider to resolve additional services from.</summary>
+        private readonly IServiceProvider _serviceProvider;
+
         /// <summary>
         /// <see cref="ILoggerProvider"/> for Google Stackdriver Logging.
         /// </summary>
         /// <param name="consumer">The consumer to push logs to. Cannot be null.</param>
         /// <param name="logTarget">Where to log to. Cannot be null.</param>
         /// <param name="loggerOptions">The logger options. Cannot be null.</param>
-        internal GoogleLoggerProvider(IConsumer<LogEntry> consumer, LogTarget logTarget, LoggerOptions loggerOptions)
+        /// <param name="serviceProvider">The service provider to resolve additional services from.</param>
+        internal GoogleLoggerProvider(IConsumer<LogEntry> consumer, LogTarget logTarget, LoggerOptions loggerOptions,  IServiceProvider serviceProvider)
         {
             _consumer = GaxPreconditions.CheckNotNull(consumer, nameof(consumer));
             _logTarget = GaxPreconditions.CheckNotNull(logTarget, nameof(logTarget));
             _loggerOptions = GaxPreconditions.CheckNotNull(loggerOptions, nameof(loggerOptions));
+            _serviceProvider = serviceProvider;
         }
 
         /// <summary>
         /// Create an <see cref="ILoggerProvider"/> for Google Stackdriver Logging.
         /// </summary>
+        /// <param name="serviceProvider">The service provider to resolve additional services from.</param>
         /// <param name="projectId">Optional if running on Google App Engine or Google Compute Engine.
         ///     The Google Cloud Platform project ID. If unspecified and running on GAE or GCE the project ID will be
         ///     detected from the platform.</param>
         /// <param name="options">Optional, options for the logger.</param>
         /// <param name="client">Optional, logging client.</param>
-        public static GoogleLoggerProvider Create(string projectId = null,
+        public static GoogleLoggerProvider Create(IServiceProvider serviceProvider, string projectId = null,
             LoggerOptions options = null, LoggingServiceV2Client client = null)
         {
             options = options ?? LoggerOptions.Create();
             projectId = Project.GetAndCheckProjectId(projectId, options.MonitoredResource);
-            return Create(LogTarget.ForProject(projectId), options, client);
+            return Create(LogTarget.ForProject(projectId), serviceProvider, options, client);
         }
 
         /// <summary>
         /// Create an <see cref="ILoggerProvider"/> for Google Stackdriver Logging.
         /// </summary>
         /// <param name="logTarget">Where to log to. Cannot be null.</param>
+        /// <param name="serviceProvider">The service provider to resolve additional services from.</param>
         /// <param name="options">Optional, options for the logger.</param>
         /// <param name="client">Optional, logging client.</param>
-        public static GoogleLoggerProvider Create(LogTarget logTarget,
+        public static GoogleLoggerProvider Create(LogTarget logTarget, IServiceProvider serviceProvider,
             LoggerOptions options = null, LoggingServiceV2Client client = null)
         {
             // Check params and set defaults if unset.
@@ -78,7 +86,7 @@ namespace Google.Cloud.Diagnostics.AspNetCore
 
             // Get the proper consumer from the options and add a logger provider.
             IConsumer<LogEntry> consumer = LogConsumer.Create(client, options.BufferOptions, options.RetryOptions);
-            return new GoogleLoggerProvider(consumer, logTarget, options);
+            return new GoogleLoggerProvider(consumer, logTarget, options, serviceProvider);
         }
 
         /// <summary>
@@ -87,7 +95,7 @@ namespace Google.Cloud.Diagnostics.AspNetCore
         /// <param name="logName">The name of the log.  This will be combined with the log location
         ///     (<see cref="LogTarget"/>) to generate the resource name for the log.</param>
         public ILogger CreateLogger(string logName) => new GoogleLogger(
-            _consumer, _logTarget, _loggerOptions, logName, accessor: HttpContextAccessorWrapper.Accessor);
+            _consumer, _logTarget, _loggerOptions, logName, serviceProvider: _serviceProvider);
 
         /// <inheritdoc />
         public void Dispose() => _consumer.Dispose();

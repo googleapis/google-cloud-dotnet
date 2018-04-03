@@ -1,11 +1,11 @@
 ﻿// Copyright 2016 Google Inc. All Rights Reserved.
-// 
+//
 // Licensed under the Apache License, Version 2.0 (the "License");
 // you may not use this file except in compliance with the License.
 // You may obtain a copy of the License at
-// 
+//
 //     http://www.apache.org/licenses/LICENSE-2.0
-// 
+//
 // Unless required by applicable law or agreed to in writing, software
 // distributed under the License is distributed on an "AS IS" BASIS,
 // WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
@@ -17,6 +17,7 @@ using Google.Cloud.Diagnostics.Common;
 using Google.Cloud.Logging.V2;
 using Google.Protobuf.WellKnownTypes;
 using Microsoft.AspNetCore.Http;
+using Microsoft.Extensions.DependencyInjection;
 using Microsoft.Extensions.Logging;
 using System;
 using System.Collections.Generic;
@@ -27,7 +28,7 @@ namespace Google.Cloud.Diagnostics.AspNetCore
     /// <summary>
     /// <see cref="ILogger"/> for Google Stackdriver Logging.
     /// </summary>
-    /// 
+    ///
     /// <example>
     /// <code>
     /// public void Configure(ILoggerFactory loggerFactory)
@@ -38,7 +39,7 @@ namespace Google.Cloud.Diagnostics.AspNetCore
     /// }
     /// </code>
     /// </example>
-    /// 
+    ///
     /// <remarks>
     /// Logs to Google Stackdriver Cloud Logging.
     /// Docs: https://cloud.google.com/logging/docs/
@@ -64,20 +65,20 @@ namespace Google.Cloud.Diagnostics.AspNetCore
         /// <summary>A clock for getting the current timestamp.</summary>
         private readonly IClock _clock;
 
-        /// <summary>An accessor to get the current <see cref="HttpContext"/>.</summary>
-        private readonly IHttpContextAccessor _accessor;
+        /// <summary>The service provider to resolve additional services from.</summary>
+        private readonly IServiceProvider _serviceProvider;
 
-        internal GoogleLogger(IConsumer<LogEntry> consumer, LogTarget logTarget, LoggerOptions loggerOptions, 
-            string logName, IClock clock = null, IHttpContextAccessor accessor = null)
+        internal GoogleLogger(IConsumer<LogEntry> consumer, LogTarget logTarget, LoggerOptions loggerOptions,
+            string logName, IClock clock = null, IServiceProvider serviceProvider = null)
         {
             GaxPreconditions.CheckNotNull(logTarget, nameof(logTarget));
             _traceTarget = logTarget.Kind == LogTargetKind.Project ?
                 TraceTarget.ForProject(logTarget.ProjectId) : null;
             _consumer = GaxPreconditions.CheckNotNull(consumer, nameof(consumer));
-            _loggerOptions = GaxPreconditions.CheckNotNull(loggerOptions, nameof(loggerOptions));
-            _logName = GaxPreconditions.CheckNotNullOrEmpty(logName, nameof(logName)); ;
+            _loggerOptions = GaxPreconditions.CheckNotNull(loggerOptions, nameof(loggerOptions)); ;
+            _logName = GaxPreconditions.CheckNotNullOrEmpty(logName, nameof(logName));
             _fullLogName = logTarget.GetFullLogName(_loggerOptions.LogName);
-            _accessor = accessor;
+            _serviceProvider = serviceProvider;
             _clock = clock ?? SystemClock.Instance;
         }
 
@@ -127,7 +128,7 @@ namespace Google.Cloud.Diagnostics.AspNetCore
             }
 
             // If we have format params and its more than just the original message add them.
-            if (state is IEnumerable<KeyValuePair<string, object>> formatParams && 
+            if (state is IEnumerable<KeyValuePair<string, object>> formatParams &&
                 !(formatParams.Count() == 1 && formatParams.Single().Key.Equals("{OriginalFormat}")))
             {
                 var paramStruct = new Struct();
@@ -165,12 +166,13 @@ namespace Google.Cloud.Diagnostics.AspNetCore
         /// </summary>
         internal string GetTraceName()
         {
-            if (_traceTarget == null || _accessor == null)
+            var httpContext = _serviceProvider?.GetService<IHttpContextAccessor>()?.HttpContext;
+            if (_traceTarget == null || httpContext == null)
             {
                 return null;
             }
 
-            string header = _accessor.HttpContext?.Request?.Headers[TraceHeaderContext.TraceHeader];
+            string header = httpContext.Request?.Headers[TraceHeaderContext.TraceHeader];
             var traceContext = TraceHeaderContext.FromHeader(header);
             return traceContext.TraceId == null ? null : _traceTarget.GetFullTraceName(traceContext.TraceId);
         }

@@ -19,6 +19,7 @@ using Google.Cloud.Diagnostics.Common;
 using Google.Cloud.Logging.V2;
 using Google.Protobuf.WellKnownTypes;
 using Microsoft.AspNetCore.Http;
+using Microsoft.Extensions.DependencyInjection;
 using Microsoft.Extensions.Logging;
 using Moq;
 using System;
@@ -47,11 +48,11 @@ namespace Google.Cloud.Diagnostics.AspNetCore.Tests
 
         private GoogleLogger GetLogger(
             IConsumer<LogEntry> consumer, LogLevel logLevel = LogLevel.Information,
-            Dictionary<string, string> labels = null, IHttpContextAccessor accessor = null,
+            Dictionary<string, string> labels = null, IServiceProvider serviceProvider = null,
             string logName = null)
         {
             LoggerOptions options = LoggerOptions.Create(logLevel, logName, labels, MonitoredResourceBuilder.GlobalResource);
-            return new GoogleLogger(consumer, s_logTarget, options, _logName, s_clock, accessor);
+            return new GoogleLogger(consumer, s_logTarget, options, _logName, s_clock, serviceProvider);
         }
 
         [Fact]
@@ -219,17 +220,18 @@ namespace Google.Cloud.Diagnostics.AspNetCore.Tests
             HeaderDictionary dict = new HeaderDictionary();
             dict[TraceHeaderContext.TraceHeader] = tracerContext.ToString();
 
+            var mockServiceProvider = new Mock<IServiceProvider>();
             var mockAccessor = new Mock<IHttpContextAccessor>();
             var mockContext = new Mock<HttpContext>();
             var mockRequest = new Mock<HttpRequest>();
+            mockServiceProvider.Setup(sp => sp.GetService(typeof(IHttpContextAccessor))).Returns(mockAccessor.Object);
             mockAccessor.Setup(a => a.HttpContext).Returns(mockContext.Object);
             mockContext.Setup(c => c.Request).Returns(mockRequest.Object);
             mockRequest.Setup(r => r.Headers).Returns(dict);
 
             var mockConsumer = new Mock<IConsumer<LogEntry>>();
             mockConsumer.Setup(c => c.Receive(Match.Create(matcher)));
-            var logger = GetLogger(
-                mockConsumer.Object, LogLevel.Information, accessor: mockAccessor.Object, logName: _baseLogName);
+            var logger = GetLogger(mockConsumer.Object, LogLevel.Information, serviceProvider: mockServiceProvider.Object, logName: _baseLogName);
             logger.Log(LogLevel.Error, 0, _logMessage, s_exception, Formatter);
             mockConsumer.VerifyAll();
         }

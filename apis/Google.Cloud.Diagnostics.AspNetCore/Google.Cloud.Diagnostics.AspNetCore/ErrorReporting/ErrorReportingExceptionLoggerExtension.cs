@@ -17,6 +17,7 @@ using Google.Cloud.Diagnostics.Common;
 using Microsoft.AspNetCore.Builder;
 using Microsoft.AspNetCore.Http;
 using Microsoft.Extensions.DependencyInjection;
+using Microsoft.Extensions.DependencyInjection.Extensions;
 using System;
 
 namespace Google.Cloud.Diagnostics.AspNetCore
@@ -97,7 +98,8 @@ namespace Google.Cloud.Diagnostics.AspNetCore
             var serviceName = GaxPreconditions.CheckNotNull(serviceOptions.ServiceName, nameof(serviceOptions.ServiceName));
             var version = GaxPreconditions.CheckNotNull(serviceOptions.Version, nameof(serviceOptions.Version));
 
-            services.AddSingleton<IHttpContextAccessor, HttpContextAccessor>();
+            // Only add the HttpContextAccessor if it's not already added.
+            services.TryAddSingleton<IHttpContextAccessor, HttpContextAccessor>();
             services.AddSingleton(ContextExceptionLogger.Create(
                 serviceOptions.ProjectId, serviceName, version, serviceOptions.Options));
             return services.AddSingleton(CreateExceptionLogger);

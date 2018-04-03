@@ -303,7 +303,7 @@ namespace Google.Cloud.Diagnostics.AspNetCore.IntegrationTests
             SetupRoutes(app);
             LoggerOptions loggerOptions = LoggerOptions.Create(
                 LogLevel.Warning, null, null, null, BufferOptions.NoBuffer());
-            loggerFactory.AddGoogle(ProjectId, loggerOptions);
+            loggerFactory.AddGoogle(app.ApplicationServices, ProjectId, loggerOptions);
         }
     }
 
@@ -328,7 +328,7 @@ namespace Google.Cloud.Diagnostics.AspNetCore.IntegrationTests
             SetupRoutes(app);
             LoggerOptions loggerOptions = LoggerOptions.Create(
                 LogLevel.Warning, null, null, Resource, BufferOptions.NoBuffer());
-            loggerFactory.AddGoogle(ProjectId, loggerOptions);
+            loggerFactory.AddGoogle(app.ApplicationServices, ProjectId, loggerOptions);
         }
     }
 
@@ -343,7 +343,7 @@ namespace Google.Cloud.Diagnostics.AspNetCore.IntegrationTests
             SetupRoutes(app);
             LoggerOptions loggerOptions = LoggerOptions.Create(
                 LogLevel.Error, null, null, null, BufferOptions.SizedBuffer());
-            loggerFactory.AddGoogle(ProjectId, loggerOptions);
+            loggerFactory.AddGoogle(app.ApplicationServices, ProjectId, loggerOptions);
         }
     }
 
@@ -360,7 +360,7 @@ namespace Google.Cloud.Diagnostics.AspNetCore.IntegrationTests
             var options = BufferOptions.TimedBuffer(TimeSpan.FromSeconds(20));
             LoggerOptions loggerOptions = LoggerOptions.Create(
                 LogLevel.Warning, null, null, null, options);
-            loggerFactory.AddGoogle(ProjectId, loggerOptions);
+            loggerFactory.AddGoogle(app.ApplicationServices, ProjectId, loggerOptions);
         }
     }
 
@@ -369,10 +369,10 @@ namespace Google.Cloud.Diagnostics.AspNetCore.IntegrationTests
     /// </summary>
     public class MainController : Controller
     {
-        private readonly ILogger _logger;        
+        private readonly ILogger _logger;
 
         public MainController(ILoggerFactory loggerFactory)
-        {            
+        {
             _logger = loggerFactory.CreateLogger(nameof(_logger));
         }
 
