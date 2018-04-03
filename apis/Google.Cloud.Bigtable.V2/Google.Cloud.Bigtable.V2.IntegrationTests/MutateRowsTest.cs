@@ -45,7 +45,7 @@ namespace Google.Cloud.Bigtable.V2.IntegrationTests
                         new BigtableVersion(1))));
 
             var entries = response.Entries.OrderBy(e => e.Index);
-            Assert.True(entries.All(e => e.Status.Code == (int)Code.Ok));
+            Assert.All(entries, e => Assert.Equal((int)Code.Ok, e.Status.Code));
 
             await BigtableAssert.HasSingleValueAsync(
                 client,
@@ -75,7 +75,7 @@ namespace Google.Cloud.Bigtable.V2.IntegrationTests
                         new BigtableVersion(1))));
 
             var entries = response.Entries.OrderBy(e => e.Index);
-            Assert.True(entries.All(e => e.Status.Code == (int)Code.Ok));
+            Assert.All(entries, e => Assert.Equal((int)Code.Ok, e.Status.Code));
 
             await BigtableAssert.HasValueAsync(
                 client,
@@ -112,7 +112,7 @@ namespace Google.Cloud.Bigtable.V2.IntegrationTests
                         new BigtableVersionRange(1, 2))));
 
             var entries = response.Entries.OrderBy(e => e.Index);
-            Assert.True(entries.All(e => e.Status.Code == (int)Code.Ok));
+            Assert.All(entries, e => Assert.Equal((int)Code.Ok, e.Status.Code));
 
             await BigtableAssert.HasSingleValueAsync(
                 client,
@@ -146,7 +146,7 @@ namespace Google.Cloud.Bigtable.V2.IntegrationTests
                     Mutations.DeleteFromFamily(BigtableFixture.DefaultColumnFamily)));
 
             var entries = response.Entries.OrderBy(e => e.Index);
-            Assert.True(entries.All(e => e.Status.Code == (int)Code.Ok));
+            Assert.All(entries, e => Assert.Equal((int)Code.Ok, e.Status.Code));
 
             await BigtableAssert.HasSingleValueAsync(
                 client,
@@ -172,7 +172,7 @@ namespace Google.Cloud.Bigtable.V2.IntegrationTests
                     Mutations.DeleteFromRow()));
 
             var entries = response.Entries.OrderBy(e => e.Index);
-            Assert.True(entries.All(e => e.Status.Code == (int)Code.Ok));
+            Assert.All(entries, e => Assert.Equal((int)Code.Ok, e.Status.Code));
 
             await BigtableAssert.HasNoValuesAsync(client, tableName, rowKey);
         }
@@ -211,7 +211,7 @@ namespace Google.Cloud.Bigtable.V2.IntegrationTests
                         new BigtableVersion(2))));
 
             var entries = response.Entries.OrderBy(e => e.Index);
-            Assert.True(entries.All(e => e.Status.Code == (int)Code.Ok));
+            Assert.All(entries, e => Assert.Equal((int)Code.Ok, e.Status.Code));
 
             await BigtableAssert.HasNoValuesAsync(
                 client,
@@ -301,7 +301,7 @@ namespace Google.Cloud.Bigtable.V2.IntegrationTests
                         "test12345")));
 
             var entries = response.Entries.OrderBy(e => e.Index);
-            Assert.True(entries.All(e => e.Status.Code == (int)Code.Ok));
+            Assert.All(entries, e => Assert.Equal((int)Code.Ok, e.Status.Code));
 
             var row = await client.ReadRowAsync(tableName, rowKey);
             var cell = row.Families[0].Columns[0].Cells[0];
