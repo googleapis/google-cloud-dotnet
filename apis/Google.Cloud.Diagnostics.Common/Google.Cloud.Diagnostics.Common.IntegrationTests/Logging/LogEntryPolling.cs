@@ -53,7 +53,7 @@ namespace Google.Cloud.Diagnostics.Common.IntegrationTests
                 var request = new ListLogEntriesRequest
                 {
                     ResourceNames = { $"projects/{_projectId}" },
-                    Filter = $"timestamp >= \"{time}\" AND textPayload:{testId} AND severity >= {minSeverity}",
+                    Filter = $"timestamp >= \"{time}\" AND jsonPayload.message:\"{testId}\" AND severity >= {minSeverity} AND logName=\"projects/{_projectId}/logs/aspnetcore\"",
                     PageSize = 1000,
                 };
                 return _client.ListLogEntries(request);
