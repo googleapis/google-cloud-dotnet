@@ -106,7 +106,7 @@ namespace Google.Cloud.Bigtable.V2.IntegrationTests
                                 new BigtableByteString(counter++).Value),
                             version))).ToArray());
             var entries = response.Entries.OrderBy(e => e.Index);
-            Assert.True(entries.All(e => e.Status.Code == (int)Code.Ok));
+            Assert.All(entries, e => Assert.Equal((int)Code.Ok, e.Status.Code));
         }
     }
 }

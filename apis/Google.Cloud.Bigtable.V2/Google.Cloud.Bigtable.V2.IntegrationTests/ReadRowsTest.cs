@@ -477,7 +477,7 @@ namespace Google.Cloud.Bigtable.V2.IntegrationTests
                 Mutations.CreateEntry(@"row1", Mutations.DeleteFromRow()),
                 Mutations.CreateEntry(@"row\2", Mutations.DeleteFromRow()));
             var entries = response.Entries.OrderBy(e => e.Index);
-            Assert.True(entries.All(e => e.Status.Code == (int)Code.Ok));
+            Assert.All(entries, e => Assert.Equal((int)Code.Ok, e.Status.Code));
 
             response = await client.MutateRowsAsync(
                 tableName,
@@ -487,7 +487,7 @@ namespace Google.Cloud.Bigtable.V2.IntegrationTests
                 Mutations.CreateEntry(@"row1", Mutations.SetCell(BigtableFixture.DefaultColumnFamily, "i", 3)),
                 Mutations.CreateEntry(@"row\2", Mutations.SetCell(BigtableFixture.DefaultColumnFamily, "i", 4)));
             entries = response.Entries.OrderBy(e => e.Index);
-            Assert.True(entries.All(e => e.Status.Code == (int)Code.Ok));
+            Assert.All(entries, e => Assert.Equal((int)Code.Ok, e.Status.Code));
 
             var rowsStream = client.ReadRows(
                 tableName,
