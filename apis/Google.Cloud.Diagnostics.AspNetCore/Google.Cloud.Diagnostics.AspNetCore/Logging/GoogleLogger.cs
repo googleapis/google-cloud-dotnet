@@ -133,6 +133,7 @@ namespace Google.Cloud.Diagnostics.AspNetCore
                 var paramStruct = new Struct();
                 foreach (var pair in formatParams)
                 {
+                    // Consider adding formatting support for values that are IFormattable.
                     paramStruct.Fields.Add(pair.Key, Value.ForString(pair.Value?.ToString() ?? ""));
                 }
 
