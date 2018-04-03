@@ -207,7 +207,7 @@ namespace Google.Cloud.Diagnostics.AspNetCore.IntegrationTests
                 var results = _polling.GetEntries(startTime, testId, 1, LogSeverity.Critical);
                 var message = MainController.GetMessage(nameof(MainController.Scope), testId);
                 Assert.Equal(message, results.Single().JsonPayload.Fields["message"].StringValue);
-                Assert.Equal("Scope => ", results.Single().JsonPayload.Fields["scope"].StringValue);
+                Assert.Contains("Scope => ", results.Single().JsonPayload.Fields["scope"].StringValue);
             }
         }
 
