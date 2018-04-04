@@ -28,6 +28,9 @@ namespace Google.Cloud.BigQuery.V2.Tests
 {
     public class BigQueryClientImplTest
     {
+        // Default location for tests that need one.
+        private const string DefaultLocation = "default-location";
+
         [Fact]
         public void Constructor_DefaultLocations()
         {
@@ -506,7 +509,7 @@ namespace Google.Cloud.BigQuery.V2.Tests
         {
             var projectId = "project";
             var service = new FakeBigqueryService();
-            var client = new BigQueryClientImpl(projectId, service);
+            var client = new BigQueryClientImpl(projectId, service, DefaultLocation);
             return client.CreateJob(new JobConfiguration(), options);
         }
 
@@ -517,14 +520,16 @@ namespace Google.Cloud.BigQuery.V2.Tests
             Assert.Equal("project", job.JobReference.ProjectId);
             Assert.StartsWith(BigQueryClientImpl.DefaultJobIdPrefix, job.JobReference.JobId);
             Assert.NotEqual(BigQueryClientImpl.DefaultJobIdPrefix, job.JobReference.JobId);
+            Assert.Equal(DefaultLocation, job.JobReference.Location);
         }
 
         [Fact]
-        public void CreateJob_DefaultProjectId()
+        public void CreateJob_DefaultConfiguration()
         {
             var job = CreateJobWithSampleConfiguration(new UploadCsvOptions());
             Assert.Equal("project", job.JobReference.ProjectId);
             Assert.StartsWith(BigQueryClientImpl.DefaultJobIdPrefix, job.JobReference.JobId);
+            Assert.Equal(DefaultLocation, job.JobReference.Location);
         }
 
         [Fact]
@@ -558,6 +563,13 @@ namespace Google.Cloud.BigQuery.V2.Tests
         {
             var options = new UploadCsvOptions { JobIdPrefix = "prefix", JobId = "id" };
             Assert.Throws<ArgumentException>(() => CreateJobWithSampleConfiguration(options));
+        }
+
+        [Fact]
+        public void CreateJob_CustomLocation()
+        {
+            var job = CreateJobWithSampleConfiguration(new UploadCsvOptions { JobLocation = "custom-location" });
+            Assert.Equal("custom-location", job.JobReference.Location);
         }
 
         [Fact]
