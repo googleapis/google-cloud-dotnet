@@ -499,6 +499,23 @@ namespace Google.Cloud.BigQuery.V2.IntegrationTests
             Assert.Throws<ArgumentException>(() => client.ExecuteQuery(sql, new[] { parameter }));
         }
 
+        [Fact]
+        public void JobCreation_CustomDefaultLocation()
+        {
+            var client = BigQueryClient.Create(_fixture.ProjectId).WithDefaultLocation(_fixture.CustomLocation);
+            var job = client.CreateQueryJob("SELECT 'value' AS value", parameters: null);
+            Assert.Equal(_fixture.CustomLocation, job.Reference.Location);
+        }
+
+        [Fact]
+        public void JobCreation_WithCustomLocation()
+        {
+            var client = BigQueryClient.Create(_fixture.ProjectId);
+            var job = client.CreateQueryJob("SELECT 'value' AS value", parameters: null,
+                new QueryOptions { JobLocation = _fixture.CustomLocation });
+            Assert.Equal(_fixture.CustomLocation, job.Reference.Location);
+        }
+
         private class TitleComparer : IEqualityComparer<BigQueryRow>
         {
             public bool Equals(BigQueryRow x, BigQueryRow y) => (string)x["title"] == (string)y["title"];

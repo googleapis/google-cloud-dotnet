@@ -93,6 +93,26 @@ namespace Google.Cloud.BigQuery.V2.IntegrationTests
         }
 
         [Fact]
+        public void CreateDataset_WithCustomDefaultLocation()
+        {
+            var client = BigQueryClient.Create(_fixture.ProjectId).WithDefaultLocation(_fixture.CustomLocation);
+            var id = _fixture.CreateDatasetId();
+
+            var created = client.CreateDataset(id);
+            Assert.Equal(_fixture.CustomLocation, created.Resource.Location);
+        }
+
+        [Fact]
+        public void CreateDataset_WithCustomLocation()
+        {
+            var client = BigQueryClient.Create(_fixture.ProjectId);
+            var id = _fixture.CreateDatasetId();
+
+            var created = client.CreateDataset(id, new CreateDatasetOptions { Location = _fixture.CustomLocation } );
+            Assert.Equal(_fixture.CustomLocation, created.Resource.Location);
+        }
+
+        [Fact]
         public void UpdateDataset()
         {
             var client = BigQueryClient.Create(_fixture.ProjectId);
