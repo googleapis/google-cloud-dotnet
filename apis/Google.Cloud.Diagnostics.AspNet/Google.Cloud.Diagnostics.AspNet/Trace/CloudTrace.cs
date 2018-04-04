@@ -113,7 +113,8 @@ namespace Google.Cloud.Diagnostics.AspNet
             GaxPreconditions.CheckNotNull(projectId, nameof(projectId));
 
             // Create the default values if not set.
-            client = client ?? TraceServiceClient.Create();
+            client = client ?? TraceServiceClient.Create(
+                settings: TraceServiceSettings.GetDefault().AddStackdriverHeader());
             options = options ?? TraceOptions.Create(); 
             _traceFallbackPredicate = traceFallbackPredicate ?? TraceDecisionPredicate.Default;
 

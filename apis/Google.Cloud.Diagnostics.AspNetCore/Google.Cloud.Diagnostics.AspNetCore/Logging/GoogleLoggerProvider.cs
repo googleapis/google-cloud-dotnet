@@ -81,7 +81,8 @@ namespace Google.Cloud.Diagnostics.AspNetCore
         {
             // Check params and set defaults if unset.
             GaxPreconditions.CheckNotNull(logTarget, nameof(logTarget));
-            client = client ?? LoggingServiceV2Client.Create();
+            client = client ?? LoggingServiceV2Client.Create(
+                settings: LoggingServiceV2Settings.GetDefault().AppendStackdriverAssemblyVersion());
             options = options ?? LoggerOptions.Create();
 
             // Get the proper consumer from the options and add a logger provider.

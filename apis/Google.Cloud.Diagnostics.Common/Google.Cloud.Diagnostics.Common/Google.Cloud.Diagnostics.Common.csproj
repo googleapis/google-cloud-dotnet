@@ -24,6 +24,7 @@
   </PropertyGroup>
   <ItemGroup>
     <PackageReference Include="ConfigureAwaitChecker.Analyzer" Version="1.0.1" PrivateAssets="All" />
+    <PackageReference Include="Google.Api.Gax.Grpc" Version="2.4.0-beta01" />
     <PackageReference Include="Google.Cloud.Logging.V2" Version="2.0.0" />
     <PackageReference Include="Google.Cloud.Trace.V1" Version="1.0.0" />
     <PackageReference Include="Grpc.Core" Version="1.10.0" PrivateAssets="None" />
