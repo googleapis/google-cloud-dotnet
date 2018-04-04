@@ -64,7 +64,7 @@ namespace Google.Cloud.Firestore
             RemoveSentinels(fields, serverTimestamps);
             // Force a write if we've not got any sentinel values. Otherwise, we end up with an empty transform instead,
             // just to specify the precondition.
-            AddUpdateWrites(documentReference, fields, s_emptyFieldPathList, Precondition.MustNotExist, serverTimestamps, serverTimestamps.Count == 0);
+            AddUpdateWrites(documentReference, fields, s_emptyFieldPathList, Precondition.MustNotExist, serverTimestamps, serverTimestamps.Count == 0, false);
             return this;
         }
 
@@ -139,7 +139,7 @@ namespace Google.Cloud.Firestore
             GaxPreconditions.CheckArgument(deletes.All(fp => updates.ContainsKey(fp)), nameof(updates), "Deletes cannot be nested within update calls");
             RemoveSentinels(expanded, deletes);
             RemoveSentinels(expanded, serverTimestamps);
-            AddUpdateWrites(documentReference, expanded, updates.Keys.ToList(), precondition ?? Precondition.MustExist, serverTimestamps, false);
+            AddUpdateWrites(documentReference, expanded, updates.Keys.ToList(), precondition ?? Precondition.MustExist, serverTimestamps, false, false);
             return this;
         }
 
@@ -170,11 +170,11 @@ namespace Google.Cloud.Firestore
                 if (mask.Count == 0)
                 {
                     // Merge all:
-                    // - Empty data is not allowed
+                    // - If the data is empty, we force a write
                     // - Deletes are allowed anywhere
                     // - All timestamps converted to transforms
                     // - Each top-level entry becomes a FieldPath
-                    GaxPreconditions.CheckArgument(fields.Count != 0, nameof(documentData), "{0} cannot be specified with empty data", nameof(SetOptions.MergeAll));
+                    forceWrite = fields.Count == 0;
                     RemoveSentinels(fields, serverTimestamps);
                     // Work out the update paths after removing server timestamps but before removing deletes,
                     // so that we correctly perform the deletes.
@@ -213,7 +213,7 @@ namespace Google.Cloud.Firestore
                 forceWrite = true;
             }
 
-            AddUpdateWrites(documentReference, ExpandObject(updates), updatePaths, null, serverTimestamps, forceWrite);
+            AddUpdateWrites(documentReference, ExpandObject(updates), updatePaths, null, serverTimestamps, forceWrite, options.Merge);
             return this;
         }
 
@@ -241,7 +241,8 @@ namespace Google.Cloud.Firestore
             IReadOnlyList<FieldPath> updatePaths,
             Precondition precondition,
             IList<FieldPath> serverTimestampPaths,
-            bool forceWrite)
+            bool forceWrite,
+            bool includeEmptyUpdatePath)
         {
             updatePaths = updatePaths.Except(serverTimestampPaths).ToList();
             bool includeTransformInWriteResults = true;
@@ -255,7 +256,7 @@ namespace Google.Cloud.Firestore
                         Fields = { fields },
                         Name = documentReference.Path,
                     },
-                    UpdateMask = updatePaths.Count > 0 ? new DocumentMask { FieldPaths = { updatePaths.Select(fp => fp.EncodedPath) } } : null
+                    UpdateMask = includeEmptyUpdatePath || updatePaths.Count > 0 ? new DocumentMask { FieldPaths = { updatePaths.Select(fp => fp.EncodedPath) } } : null
                 }, true));
                 includeTransformInWriteResults = false;
                 precondition = null;
