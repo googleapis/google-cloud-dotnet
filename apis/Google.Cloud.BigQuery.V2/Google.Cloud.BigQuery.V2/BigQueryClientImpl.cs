@@ -74,8 +74,12 @@ namespace Google.Cloud.BigQuery.V2
         /// <inheritdoc />
         public override string ProjectId { get; }
 
+        /// <inheritdoc />
+        public override string DefaultLocation { get; }
+
         /// <summary>
-        /// Constructs a new client wrapping the given <see cref="BigqueryService"/>.
+        /// Constructs a new client wrapping the given <see cref="BigqueryService"/>, with a specified default location
+        /// for location-specific operations.
         /// </summary>
         /// <remarks>
         /// Care should be taken when constructing the service: if the default serializer settings are used,
@@ -85,10 +89,45 @@ namespace Google.Cloud.BigQuery.V2
         /// </remarks>
         /// <param name="projectId">The ID of the project to work with. Must not be null.</param>
         /// <param name="service">The service to wrap. Must not be null.</param>
-        public BigQueryClientImpl(string projectId, BigqueryService service)
-        {            
+        /// <param name="defaultLocation">The default location to use for location-specific operations. May be null.</param>
+        public BigQueryClientImpl(string projectId, BigqueryService service, string defaultLocation)
+        {
             ProjectId = GaxPreconditions.CheckNotNull(projectId, nameof(projectId));
             Service = GaxPreconditions.CheckNotNull(service, nameof(service));
+            DefaultLocation = defaultLocation;
+        }
+
+        /// <summary>
+        /// Constructs a new client wrapping the given <see cref="BigqueryService"/>, with no default location.
+        /// </summary>
+        /// <remarks>
+        /// Care should be taken when constructing the service: if the default serializer settings are used,
+        /// result values which can be parsed as date/time values can cause problems. Where possible, either use
+        /// <see cref="BigQueryClient.Create(string, Apis.Auth.OAuth2.GoogleCredential)"/> or construct a service
+        /// using serializer settings from <see cref="BigQueryClient.CreateJsonSerializersSettings"/>.
+        /// </remarks>
+        /// <param name="projectId">The ID of the project to work with. Must not be null.</param>
+        /// <param name="service">The service to wrap. Must not be null.</param>
+        public BigQueryClientImpl(string projectId, BigqueryService service) : this(projectId, service, null)
+        {
+        }
+
+        /// <summary>
+        /// Constructs a new client wrapping the given <see cref="BigqueryService"/>, with a specified default location
+        /// for location-specific operations.
+        /// </summary>
+        /// <remarks>
+        /// Care should be taken when constructing the service: if the default serializer settings are used,
+        /// result values which can be parsed as date/time values can cause problems. Where possible, either use
+        /// <see cref="BigQueryClient.Create(string, Apis.Auth.OAuth2.GoogleCredential)"/> or construct a service
+        /// using serializer settings from <see cref="BigQueryClient.CreateJsonSerializersSettings"/>.
+        /// </remarks>
+        /// <param name="projectReference">A fully-qualified identifier for the project. Must not be null.</param>
+        /// <param name="service">The service to wrap. Must not be null.</param>
+        /// <param name="defaultLocation">The default location to use for location-specific operations. May be null.</param>
+        public BigQueryClientImpl(ProjectReference projectReference, BigqueryService service, string defaultLocation)
+            : this(GaxPreconditions.CheckNotNull(projectReference, nameof(projectReference)).ProjectId, service, defaultLocation)
+        {
         }
 
         /// <summary>
@@ -103,11 +142,15 @@ namespace Google.Cloud.BigQuery.V2
         /// <param name="projectReference">A fully-qualified identifier for the project. Must not be null.</param>
         /// <param name="service">The service to wrap. Must not be null.</param>
         public BigQueryClientImpl(ProjectReference projectReference, BigqueryService service)
-            : this(GaxPreconditions.CheckNotNull(projectReference, nameof(projectReference)).ProjectId, service)
+            : this(projectReference, service, null)
         {
         }
 
         /// <inheritdoc />
         public override void Dispose() => Service.Dispose();
+
+        /// <inheritdoc />
+        public override BigQueryClient WithDefaultLocation(string defaultLocation) =>
+            new BigQueryClientImpl(ProjectId, Service, defaultLocation);
     }
 }
