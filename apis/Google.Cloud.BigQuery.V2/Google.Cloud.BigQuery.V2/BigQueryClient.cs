@@ -68,13 +68,19 @@ namespace Google.Cloud.BigQuery.V2
         /// to use the same service object as the wrapper, in order to take advantage of its configuration (for authentication,
         /// application naming etc).
         /// </remarks>
-        public virtual BigqueryService Service { get { throw new NotImplementedException(); } }
+        public virtual BigqueryService Service => throw new NotImplementedException();
 
         /// <summary>
         /// The ID of the project this client operates on. All operations that require a
         /// project to be specified implicitly supply this ID.
         /// </summary>
-        public virtual string ProjectId { get { throw new NotImplementedException(); } }
+        public virtual string ProjectId => throw new NotImplementedException();
+
+        /// <summary>
+        /// The default location to use for all operations where locations
+        /// can be specified, such as dataset and job creation.
+        /// </summary>
+        public virtual string DefaultLocation => throw new NotImplementedException();
 
         /// <summary>
         /// Asynchronously creates a <see cref="BigQueryClient"/>, using application default credentials if
@@ -121,6 +127,19 @@ namespace Google.Cloud.BigQuery.V2
 
             return new BigQueryClientImpl(projectId, service);
         }
+
+        /// <summary>
+        /// Creates a new client which uses the specified location by default for all operations where locations
+        /// can be specified, such as dataset and job creation.
+        /// </summary>
+        /// <remarks>
+        /// Implementations should normally ensure that the object returned is of the same type as this client,
+        /// in case users need implementation-specific features of that client.
+        /// </remarks>
+        /// <param name="defaultLocation">The location to use by default, for job creation etc.</param>
+        /// <returns>A new client with the specified default location.</returns>
+        public virtual BigQueryClient WithDefaultLocation(string defaultLocation) =>
+            throw new NotImplementedException();
 
         /// <summary>
         /// Creates a <see cref="TableReference"/> from the given dataset ID and table ID,

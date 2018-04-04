@@ -29,6 +29,34 @@ namespace Google.Cloud.BigQuery.V2.Tests
     public class BigQueryClientImplTest
     {
         [Fact]
+        public void Constructor_DefaultLocations()
+        {
+            var projectId = "project";
+            var service = new FakeBigqueryService();
+            var client = new BigQueryClientImpl(projectId, service);
+            Assert.Null(client.DefaultLocation);
+            client = new BigQueryClientImpl(new ProjectReference { ProjectId = projectId }, service);
+            Assert.Null(client.DefaultLocation);
+
+            client = new BigQueryClientImpl(projectId, service, "us");
+            Assert.Equal("us", client.DefaultLocation);
+
+            client = new BigQueryClientImpl(new ProjectReference { ProjectId = projectId }, service, "us");
+            Assert.Equal("us", client.DefaultLocation);
+        }
+
+        [Fact]
+        public void WithDefaultLocation()
+        {
+            var projectId = "project";
+            var service = new FakeBigqueryService();
+            var client = new BigQueryClientImpl(projectId, service).WithDefaultLocation("us");
+            Assert.Same(projectId, client.ProjectId);
+            Assert.Same(service, client.Service);
+            Assert.Equal("us", client.DefaultLocation);
+        }
+
+        [Fact]
         public void ListProjects()
         {
             var projectId = "project";
