@@ -27,14 +27,24 @@ namespace Google.Cloud.Firestore.Tests
         internal static wkt::Timestamp CreateProtoTimestamp(long seconds, int nanos) =>
             new wkt::Timestamp { Seconds = seconds, Nanos = nanos };
 
-        internal static Value CreateValue(long integer) => new Value { IntegerValue = integer };
+        // Allows tests to use dynamic calls to CreateValue but still use previously-constructed Value references.
+        internal static Value CreateValue(Value value) => value;
 
-        internal static Value CreateValue(string text) => new Value { StringValue = text };
+        internal static Value CreateValue(Blob value) => new Value { BytesValue = value.ByteString };
+        internal static Value CreateValue(GeoPoint value) => new Value { GeoPointValue = value.ToProto() };
+        internal static Value CreateValue(Timestamp value) => new Value { TimestampValue = value.ToProto() };
+        internal static Value CreateValue(bool value) => new Value { BooleanValue = value };
+        internal static Value CreateValue(double value) => new Value { DoubleValue = value };
+        internal static Value CreateValue(long value) => new Value { IntegerValue = value };
+        internal static Value CreateValue(string value) => new Value { StringValue = value };
 
         internal static Value CreateNullValue() => new Value { NullValue = wkt.NullValue.NullValue };
+
+        internal static Value CreateReference(string value) => new Value { ReferenceValue = value };
 
         internal static Value CreateMap(string name, Value value) => CreateMap((name, value));
         internal static Value CreateMap(params (string name, Value value)[] fields) =>
             new Value { MapValue = new MapValue { Fields = { fields.ToDictionary(field => field.name, field => field.value) } } };
+        internal static Value CreateArray(params Value[] values) => new Value { ArrayValue = new ArrayValue { Values = { values } } };
     }
 }
