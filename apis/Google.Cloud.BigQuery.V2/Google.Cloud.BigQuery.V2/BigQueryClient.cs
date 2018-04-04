@@ -211,7 +211,7 @@ namespace Google.Cloud.BigQuery.V2
 
         /// <summary>
         /// Creates a <see cref="JobReference"/> from the given job ID,
-        /// using this client's project ID.
+        /// using this client's project ID and default location.
         /// </summary>
         /// <param name="jobId">The job ID. Must not be null.</param>
         /// <returns>A <see cref="JobReference"/> representing the requested job.</returns>
@@ -219,18 +219,30 @@ namespace Google.Cloud.BigQuery.V2
             GetJobReference(ProjectId, jobId);
 
         /// <summary>
-        /// Creates a <see cref="JobReference"/> from the given project ID and job ID.
+        /// Creates a <see cref="JobReference"/> from the given project ID and job ID, using
+        /// this client's default location.
         /// </summary>
         /// <param name="projectId">The project ID. Must not be null.</param>
         /// <param name="jobId">The job ID. Must not be null.</param>
         /// <returns>A <see cref="JobReference"/> representing the requested job.</returns>
         public JobReference GetJobReference(string projectId, string jobId) =>
+            GetJobReference(projectId, jobId, DefaultLocation);
+
+        /// <summary>
+        /// Creates a <see cref="JobReference"/> from the given project ID, job ID and location.
+        /// </summary>
+        /// <param name="projectId">The project ID. Must not be null.</param>
+        /// <param name="jobId">The job ID. Must not be null.</param>
+        /// <param name="location">The location. May be null.</param>
+        /// <returns>A <see cref="JobReference"/> representing the requested job.</returns>
+        public JobReference GetJobReference(string projectId, string jobId, string location) =>
             new JobReference
             {
                 ProjectId = GaxPreconditions.CheckNotNull(projectId, nameof(projectId)),
-                JobId = GaxPreconditions.CheckNotNull(jobId, nameof(jobId))
+                JobId = GaxPreconditions.CheckNotNull(jobId, nameof(jobId)),
+                Location = location
             };
-        
+
         /// <summary>
         /// Creates a set of <see cref="JsonSerializerSettings"/> suitable for specifying in
         /// <see cref="BigqueryService"/> construction. The settings have Json.NET date parsing
