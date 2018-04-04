@@ -33,6 +33,7 @@ namespace Google.Cloud.BigQuery.V2.Tests
     public class BigQueryClientTest : AbstractClientTester<BigQueryClient, BigQueryClientTest.NoOverridesBigQueryClient>
     {
         private const string ProjectId = "sample-project";
+        private const string Location = "default-location";
 
         public static IEnumerable<object[]> NotImplementedMethods => AllInstanceMethods
             .Where(array =>
@@ -61,6 +62,7 @@ namespace Google.Cloud.BigQuery.V2.Tests
         public class DerivedBigQueryClient : BigQueryClient
         {
             public override string ProjectId => BigQueryClientTest.ProjectId;
+            public override string DefaultLocation => BigQueryClientTest.Location;
         }
 
         [Theory]
@@ -84,19 +86,30 @@ namespace Google.Cloud.BigQuery.V2.Tests
         }
 
         [Fact]
-        public void GetJobReference_ImplicitProject()
+        public void GetJobReference_ImplicitProjectAndLocation()
         {
             var reference = new DerivedBigQueryClient().GetJobReference("jobid");
             Assert.Equal("jobid", reference.JobId);
             Assert.Equal(ProjectId, reference.ProjectId);
+            Assert.Equal(Location, reference.Location);
         }
 
         [Fact]
-        public void GetJobReference_ExplicitProject()
+        public void GetJobReference_ExplicitProjectImplicitLocation()
         {
             var reference = new DerivedBigQueryClient().GetJobReference("p", "jobid");
             Assert.Equal("jobid", reference.JobId);
             Assert.Equal("p", reference.ProjectId);
+            Assert.Equal(Location, reference.Location);
+        }
+
+        [Fact]
+        public void GetJobReference_ExplicitProjectAndLocation()
+        {
+            var reference = new DerivedBigQueryClient().GetJobReference("p", "jobid", "loc");
+            Assert.Equal("jobid", reference.JobId);
+            Assert.Equal("p", reference.ProjectId);
+            Assert.Equal("loc", reference.Location);
         }
 
         [Fact]
@@ -1227,7 +1240,7 @@ namespace Google.Cloud.BigQuery.V2.Tests
         private static Job GetJob(JobReference reference) => new Job { JobReference = reference };
 
         private static JobReference GetJobReference(string JobId) =>
-            new JobReference { ProjectId = ProjectId, JobId = JobId };
+            new JobReference { ProjectId = ProjectId, JobId = JobId, Location = Location };
 
         private static ProjectReference GetProjectReference() => new ProjectReference { ProjectId = ProjectId };
 
