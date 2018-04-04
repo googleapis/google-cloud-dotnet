@@ -40,8 +40,9 @@ namespace Google.Cloud.BigQuery.V2
 
         /// <summary>
         /// If specified, the job will be created in this location. Otherwise, it will be created in the client's
-        /// default location.
+        /// <see cref="BigQueryClient.DefaultLocation">default location</see>.
         /// </summary>
+        /// <seealso cref="BigQueryClient.WithDefaultLocation(string)"/>
         public string JobLocation { get; set; }
     }
 }

@@ -502,9 +502,9 @@ namespace Google.Cloud.BigQuery.V2.IntegrationTests
         [Fact]
         public void JobCreation_CustomDefaultLocation()
         {
-            var client = BigQueryClient.Create(_fixture.ProjectId).WithDefaultLocation(_fixture.CustomLocation);
+            var client = BigQueryClient.Create(_fixture.ProjectId).WithDefaultLocation(_fixture.CustomLocation1);
             var job = client.CreateQueryJob("SELECT 'value' AS value", parameters: null);
-            Assert.Equal(_fixture.CustomLocation, job.Reference.Location);
+            Assert.Equal(_fixture.CustomLocation1, job.Reference.Location);
         }
 
         [Fact]
@@ -512,8 +512,17 @@ namespace Google.Cloud.BigQuery.V2.IntegrationTests
         {
             var client = BigQueryClient.Create(_fixture.ProjectId);
             var job = client.CreateQueryJob("SELECT 'value' AS value", parameters: null,
-                new QueryOptions { JobLocation = _fixture.CustomLocation });
-            Assert.Equal(_fixture.CustomLocation, job.Reference.Location);
+                new QueryOptions { JobLocation = _fixture.CustomLocation1 });
+            Assert.Equal(_fixture.CustomLocation1, job.Reference.Location);
+        }
+
+        [Fact]
+        public void JobCreation_WithCustomLocationOverridingDefaultLocation()
+        {
+            var client = BigQueryClient.Create(_fixture.ProjectId).WithDefaultLocation(_fixture.CustomLocation1);
+            var job = client.CreateQueryJob("SELECT 'value' AS value", parameters: null,
+                new QueryOptions { JobLocation = _fixture.CustomLocation2 });
+            Assert.Equal(_fixture.CustomLocation2, job.Reference.Location);
         }
 
         private class TitleComparer : IEqualityComparer<BigQueryRow>

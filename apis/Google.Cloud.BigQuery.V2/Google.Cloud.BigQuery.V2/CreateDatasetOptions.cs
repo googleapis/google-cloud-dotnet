@@ -42,8 +42,11 @@ namespace Google.Cloud.BigQuery.V2
 
         /// <summary>
         /// Location to create the dataset in, such as "EU" or "US". See
-        /// the Dataset resource documentation for all possible values.
+        /// the Dataset resource documentation for all possible values. If this is not set, the
+        /// client's <see cref="BigQueryClient.DefaultLocation">default location</see> will be used
+        /// instead.
         /// </summary>
+        /// <seealso cref="BigQueryClient.WithDefaultLocation(string)"/>
         public string Location { get; set; }
 
         internal void ModifyRequest(Dataset dataset, InsertRequest request)
