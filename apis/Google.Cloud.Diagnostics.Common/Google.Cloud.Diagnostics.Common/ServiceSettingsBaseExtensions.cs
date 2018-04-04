@@ -23,12 +23,13 @@ namespace Google.Cloud.Diagnostics.Common
     public static class ServiceSettingsBaseExtensions
     {
         /// <summary>
-        /// The name of the stackdriver diagnostics version key.  Do not change this!
+        /// The name of the stackdriver diagnostics version key.  Do not change this as
+        /// down stream services may depend on this key.
         /// </summary>
         private const string StackdriverDiagnosticsHeaderKey = "sdi";
 
         /// <summary>
-        /// Add to the name and version of this library to the version header string 
+        /// Add the name and version of this library to the header string 
         /// of the 'x-goog-api-client' header.
         /// </summary>
         /// <typeparam name="T">A <see cref="ServiceSettingsBase"/>.</typeparam>
