@@ -48,7 +48,8 @@ namespace Google.Cloud.BigQuery.V2.IntegrationTests
         public string PeopleTableId { get; } = "people";
         public string ComplexTypesTableId { get; } = "complex";
         public string ExhaustiveTypesTableId { get; } = "exhaustive";
-        public string CustomLocation { get; } = "asia-northeast1";
+        public string CustomLocation1 { get; } = "asia-northeast1";
+        public string CustomLocation2 { get; } = "EU";
 
         public BigQueryFixture()
         {
