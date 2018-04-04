@@ -32,13 +32,29 @@ namespace Google.Cloud.BigQuery.V2.Tests
                 FriendlyName = "A friendly name",
                 Location = "EU"
             };
-            Dataset dataset = new Dataset();
+            Dataset dataset = new Dataset { Location = "US" };
             InsertRequest request = new InsertRequest(new BigqueryService(), dataset, "project");
             options.ModifyRequest(dataset, request);
             Assert.Equal(10 * 1000, dataset.DefaultTableExpirationMs);
             Assert.Equal("A description", dataset.Description);
             Assert.Equal("A friendly name", dataset.FriendlyName);
             Assert.Equal("EU", dataset.Location);
+        }
+
+        [Fact]
+        public void ModifyRequest_NoLocation()
+        {
+            // When the options don't specify a location, we should keep the one in the original Dataset.
+            var options = new CreateDatasetOptions
+            {
+                DefaultTableExpiration = TimeSpan.FromSeconds(10),
+                Description = "A description",
+                FriendlyName = "A friendly name",
+            };
+            Dataset dataset = new Dataset { Location = "US" };
+            InsertRequest request = new InsertRequest(new BigqueryService(), dataset, "project");
+            options.ModifyRequest(dataset, request);
+            Assert.Equal("US", dataset.Location);
         }
     }
 }

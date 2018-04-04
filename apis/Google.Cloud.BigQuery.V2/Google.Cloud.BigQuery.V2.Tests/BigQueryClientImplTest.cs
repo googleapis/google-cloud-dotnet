@@ -344,10 +344,10 @@ namespace Google.Cloud.BigQuery.V2.Tests
             var projectId = "project";
             var datasetId = "dataset";
             var service = new FakeBigqueryService();
-            var client = new BigQueryClientImpl(projectId, service);
+            var client = new BigQueryClientImpl(projectId, service, DefaultLocation);
             var reference = client.GetDatasetReference(projectId, datasetId);
             service.ExpectRequest(
-                service.Datasets.Insert(new Dataset { DatasetReference = reference }, projectId),
+                service.Datasets.Insert(new Dataset { DatasetReference = reference, Location = DefaultLocation }, projectId),
                 new Dataset { DatasetReference = reference });
             var result = await client.CreateDatasetAsync(reference);
             Assert.Equal(projectId, result.Reference.ProjectId);

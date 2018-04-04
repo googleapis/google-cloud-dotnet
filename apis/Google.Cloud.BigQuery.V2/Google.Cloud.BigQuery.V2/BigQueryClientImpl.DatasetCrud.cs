@@ -184,7 +184,7 @@ namespace Google.Cloud.BigQuery.V2
         private InsertRequest CreateInsertDatasetRequest(DatasetReference datasetReference, CreateDatasetOptions options)
         {
             GaxPreconditions.CheckNotNull(datasetReference, nameof(datasetReference));
-            var dataset = new Dataset { DatasetReference = datasetReference };
+            var dataset = new Dataset { DatasetReference = datasetReference, Location = DefaultLocation };
             var request = Service.Datasets.Insert(dataset, datasetReference.ProjectId);
             request.ModifyRequest += _versionHeaderAction;
             options?.ModifyRequest(dataset, request);
