@@ -100,7 +100,8 @@ namespace Google.Cloud.Diagnostics.Common
             return new EventTarget
             {
                 Kind = EventTargetKind.Logging,
-                LoggingClient = loggingClient ?? LoggingServiceV2Client.Create(),
+                LoggingClient = loggingClient ?? LoggingServiceV2Client.Create(
+                    settings: LoggingServiceV2Settings.GetDefault().AppendStackdriverAssemblyVersion()),
                 LogTarget = GaxPreconditions.CheckNotNull(logTarget, nameof(logTarget)),
                 LogName = GaxPreconditions.CheckNotNullOrEmpty(logName, nameof(logName)),
                 MonitoredResource = monitoredResource ?? MonitoredResourceBuilder.FromPlatform(),

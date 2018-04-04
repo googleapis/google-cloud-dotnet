@@ -107,7 +107,8 @@ namespace Google.Cloud.Diagnostics.AspNetCore
             var serviceOptions = new TraceServiceOptions();
             setupAction(serviceOptions);
 
-            var client = serviceOptions.Client ?? TraceServiceClient.Create();
+            var client = serviceOptions.Client ?? TraceServiceClient.Create(
+                settings: TraceServiceSettings.GetDefault().AppendStackdriverAssemblyVersion());
             var options = serviceOptions.Options ?? TraceOptions.Create();
             var traceFallbackPredicate = serviceOptions.TraceFallbackPredicate ?? TraceDecisionPredicate.Default;
             var projectId = Project.GetAndCheckProjectId(serviceOptions.ProjectId);
