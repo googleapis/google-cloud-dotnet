@@ -46,7 +46,8 @@ Beta:
 - [Google.Cloud.Dataproc.V1](Google.Cloud.Dataproc.V1/index.html)
 - [Google.Cloud.Debugger.V2](Google.Cloud.Debugger.V2/index.html)
 - [Google.Cloud.Dlp.V2](Google.Cloud.Dlp.V2/index.html)
-- [Google.Cloud.Dlp.V2Beta1](Google.Cloud.Dlp.V2Beta1/index.html)
+  - The Google.Cloud.Dlp.V2Beta1 package has now been deprecated, and is unlisted on nuget.org.
+    Please update to Google.Cloud.Dlp.V2.
 - [Google.Cloud.ErrorReporting.V1Beta1](Google.Cloud.ErrorReporting.V1Beta1/index.html)
 - Google Cloud Firestore:
   - [Google.Cloud.Firestore](Google.Cloud.Firestore/index.html): High-level client library for Google Cloud Firestore (recommended)
