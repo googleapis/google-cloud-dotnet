@@ -37,5 +37,11 @@ namespace Google.Cloud.BigQuery.V2
         /// and <see cref="JobIdPrefix"/>.
         /// </summary>
         public string JobId { get; set; }
+
+        /// <summary>
+        /// If specified, the job will be created in this location. Otherwise, it will be created in the client's
+        /// default location.
+        /// </summary>
+        public string JobLocation { get; set; }
     }
 }

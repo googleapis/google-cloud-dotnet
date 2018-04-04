@@ -185,7 +185,8 @@ namespace Google.Cloud.BigQuery.V2
                 var prefix = jobIdPrefix ?? DefaultJobIdPrefix;
                 jobId = prefix + Guid.NewGuid().ToString().Replace("-", "_");
             }
-            return new Job { Configuration = configuration, JobReference = GetJobReference(projectId, jobId) };
+            string location = options?.JobLocation ?? DefaultLocation;
+            return new Job { Configuration = configuration, JobReference = GetJobReference(projectId, jobId, location) };
         }
 
         // Request creation
