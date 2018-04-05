@@ -95,11 +95,11 @@ namespace Google.Cloud.BigQuery.V2.IntegrationTests
         [Fact]
         public void CreateDataset_WithCustomDefaultLocation()
         {
-            var client = BigQueryClient.Create(_fixture.ProjectId).WithDefaultLocation(_fixture.CustomLocation1);
+            var client = BigQueryClient.Create(_fixture.ProjectId).WithDefaultLocation(Locations.Tokyo);
             var id = _fixture.CreateDatasetId();
 
             var created = client.CreateDataset(id);
-            Assert.Equal(_fixture.CustomLocation1, created.Resource.Location);
+            Assert.Equal(Locations.Tokyo, created.Resource.Location);
         }
 
         [Fact]
@@ -108,18 +108,18 @@ namespace Google.Cloud.BigQuery.V2.IntegrationTests
             var client = BigQueryClient.Create(_fixture.ProjectId);
             var id = _fixture.CreateDatasetId();
 
-            var created = client.CreateDataset(id, new CreateDatasetOptions { Location = _fixture.CustomLocation1 } );
-            Assert.Equal(_fixture.CustomLocation1, created.Resource.Location);
+            var created = client.CreateDataset(id, new CreateDatasetOptions { Location = Locations.Tokyo } );
+            Assert.Equal(Locations.Tokyo, created.Resource.Location);
         }
 
         [Fact]
         public void CreateDataset_WithCustomLocationOverridingDefaultLocation()
         {
-            var client = BigQueryClient.Create(_fixture.ProjectId).WithDefaultLocation(_fixture.CustomLocation1);
+            var client = BigQueryClient.Create(_fixture.ProjectId).WithDefaultLocation(Locations.Tokyo);
             var id = _fixture.CreateDatasetId();
 
-            var created = client.CreateDataset(id, new CreateDatasetOptions { Location = _fixture.CustomLocation2 });
-            Assert.Equal(_fixture.CustomLocation2, created.Resource.Location);
+            var created = client.CreateDataset(id, new CreateDatasetOptions { Location = Locations.EuropeanUnion });
+            Assert.Equal(Locations.EuropeanUnion, created.Resource.Location);
         }
 
         [Fact]
