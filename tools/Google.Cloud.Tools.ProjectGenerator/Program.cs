@@ -108,6 +108,8 @@ namespace Google.Cloud.Tools.ProjectGenerator
         };
 
         private const string AnalyzersPath = @"..\..\..\tools\Google.Cloud.Tools.Analyzers\bin\$(Configuration)\netstandard1.3\publish\Google.Cloud.Tools.Analyzers.dll";
+        private const string AnalyzersSuffix = ".Analyzers";
+        private const string AnalyzersTestsSuffix = ".Analyzers.Tests";
 
         static int Main()
         {
@@ -149,13 +151,13 @@ namespace Google.Cloud.Tools.ProjectGenerator
         {
             if (api.HasAnalyzers)
             {
-                var analyzersDirectory = Path.Combine(apiRoot, api.Id + ".Analyzers");
+                var analyzersDirectory = Path.Combine(apiRoot, api.Id + AnalyzersSuffix);
                 if (!Directory.Exists(analyzersDirectory))
                 {
                     Directory.CreateDirectory(analyzersDirectory);
                 }
 
-                var analyzersTestDirectory = Path.Combine(apiRoot, api.Id + ".Analyzers.Tests");
+                var analyzersTestDirectory = Path.Combine(apiRoot, api.Id + AnalyzersTestsSuffix);
                 if (!Directory.Exists(analyzersTestDirectory))
                 {
                     Directory.CreateDirectory(analyzersTestDirectory);
@@ -182,10 +184,10 @@ namespace Google.Cloud.Tools.ProjectGenerator
                     case "":
                         GenerateMainProject(api, dir, apiNames);
                         break;
-                    case ".Analyzers":
+                    case AnalyzersSuffix:
                         GenerateAnalyzersProject(api, dir, apiNames);
                         break;
-                    case ".Analyzers.Tests":
+                    case AnalyzersTestsSuffix:
                         GenerateTestProject(api, dir, apiNames, isForAnalyzers: true);
                         break;
                     case ".IntegrationTests":
@@ -244,7 +246,7 @@ namespace Google.Cloud.Tools.ProjectGenerator
                 // built, the analyzers are always built first.
                 var solutionFile = SolutionFile.Parse(fullFile);
                 var mainProject = solutionFile.ProjectsInOrder.Single(p => p.ProjectName == api.Id);
-                var analyzerProject = solutionFile.ProjectsInOrder.Single(p => p.ProjectName == api.Id + ".Analyzers");
+                var analyzerProject = solutionFile.ProjectsInOrder.Single(p => p.ProjectName == api.Id + AnalyzersSuffix);
                 if (!mainProject.Dependencies.Contains(analyzerProject.ProjectGuid))
                 {
                     var updatedSlnContent = new StringBuilder();
@@ -456,9 +458,12 @@ namespace Google.Cloud.Tools.ProjectGenerator
             {
                 dependencies.Remove("Google.Cloud.ClientTesting");
                 dependencies.Add("Google.Cloud.AnalyzersTesting", ProjectVersionValue);
+                dependencies.Add(api.Id + AnalyzersSuffix, "project");
             }
-
-            dependencies.Add(api.Id, "project");
+            else
+            {
+                dependencies.Add(api.Id, "project");
+            }
 
             // Deliberately not using Add, so that a project can override the defaults.
             foreach (var dependency in api.TestDependencies)
@@ -612,7 +617,8 @@ namespace Google.Cloud.Tools.ProjectGenerator
             if (version == ProjectVersionValue)
             {
                 string path;
-                if (apiNames.Contains(package))
+                if (apiNames.Contains(package) ||
+                    (package.EndsWith(AnalyzersSuffix) && apiNames.Contains(package.Remove(package.Length - AnalyzersSuffix.Length))))
                 {
                     // Simplify path for test packages - no need to go all the way back to the api directory
                     path = project.StartsWith(package + ".")
