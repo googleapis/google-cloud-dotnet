@@ -1,5 +1,7 @@
 ﻿// This file was automatically created from the "Analyzer With Code Fix (NuGet + VSIX)" template.
-// It has only been updated to use xunit's Assert APIs.
+// It has been updated in the following ways:
+// 1) to use xunit's Assert APIs.
+// 2) to provide a hook point to add in extra references to the compilation.
 
 using Microsoft.CodeAnalysis;
 using Microsoft.CodeAnalysis.CSharp;
@@ -90,7 +92,7 @@ namespace TestHelper
         /// <param name="expected">DiagnosticResults that should appear after the analyzer is run on the sources</param>
         private void VerifyDiagnostics(string[] sources, string language, DiagnosticAnalyzer analyzer, params DiagnosticResult[] expected)
         {
-            var diagnostics = GetSortedDiagnostics(sources, language, analyzer);
+            var diagnostics = GetSortedDiagnostics(this, sources, language, analyzer);
             VerifyDiagnosticResults(diagnostics, analyzer, expected);
         }
 

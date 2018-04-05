@@ -23,7 +23,7 @@ using Xunit;
 
 namespace Google.Cloud.Tools.Analyzers.Tests
 {
-    public class DefaultLiteralTest : CodeFixVerifier
+    public class DefaultLiteralTest : CodeFixVerifierWithOperations
     {
         [Fact]
         public void DefaultBool()
