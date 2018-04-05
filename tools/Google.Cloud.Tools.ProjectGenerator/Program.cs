@@ -256,6 +256,10 @@ namespace Google.Cloud.Tools.ProjectGenerator
                         string line;
                         while ((line = streamReader.ReadLine()) != null)
                         {
+                            // Implement workaround to build issue on Linux with project dependencies, found here:
+                            // https://github.com/Microsoft/msbuild/issues/1957#issuecomment-353875257
+                            line = line.Replace('\\', '/');
+
                             updatedSlnContent.AppendLine(line);
                             if (!addedDependency &&
                                 line.StartsWith($"Project(\"{{9A19103F-16F7-4668-BE54-9A1E7A4F7556}}\") = \"{api.Id}\""))
