@@ -29,6 +29,9 @@
     <PackageReference Include="Microsoft.DotNet.Analyzers.Compatibility" Version="0.1.2-alpha" PrivateAssets="All" />
     <PackageReference Include="SourceLink.Create.CommandLine" Version="2.8.0" PrivateAssets="All" />
     <Analyzer Condition="Exists('..\..\..\tools\Google.Cloud.Tools.Analyzers\bin\$(Configuration)\netstandard1.3\publish\Google.Cloud.Tools.Analyzers.dll')" Include="..\..\..\tools\Google.Cloud.Tools.Analyzers\bin\$(Configuration)\netstandard1.3\publish\Google.Cloud.Tools.Analyzers.dll" />
+    <None Include="..\Google.Cloud.Diagnostics.AspNetCore.Analyzers\bin\$(Configuration)\netstandard1.3\Google.Cloud.Diagnostics.AspNetCore.Analyzers.dll" Pack="true" PackagePath="analyzers/dotnet/cs" Visible="false" />
+    <None Include="..\..\..\analyzerScripts\install.ps1" Pack="true" PackagePath="tools" Visible="false" />
+    <None Include="..\..\..\analyzerScripts\uninstall.ps1" Pack="true" PackagePath="tools" Visible="false" />
   </ItemGroup>
   <ItemGroup Condition=" '$(TargetFramework)' == 'netstandard1.5' OR  '$(TargetFramework)' == 'net46' ">
     <PackageReference Include="Microsoft.AspNetCore.Http" Version="1.0.4" />
