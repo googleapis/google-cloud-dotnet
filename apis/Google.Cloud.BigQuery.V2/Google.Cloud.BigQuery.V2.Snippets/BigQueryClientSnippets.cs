@@ -2386,6 +2386,22 @@ namespace Google.Cloud.BigQuery.V2.Snippets
             // End snippet
         }
 
+        [Fact]
+        public void WithDefaultLocation()
+        {
+            string projectId = _fixture.ProjectId;
+            string datasetId = _fixture.GenerateDatasetId();
+
+            // Snippet: WithDefaultLocation(*)
+            BigQueryClient client = BigQueryClient.Create(projectId).WithDefaultLocation(Locations.Tokyo);
+
+            // This dataset will be implicitly created in the Tokyo region. All jobs will also
+            // be implicitly created in the Tokyo region.
+            BigQueryDataset dataset = client.CreateDataset(datasetId);
+            // End snippet
+            _fixture.RegisterDatasetToDelete(datasetId);
+        }
+
         // See-also: GetBigQueryServiceAccountEmail(*)
         // Member: GetBigQueryServiceAccountEmail(string, *)
         // Member: GetBigQueryServiceAccountEmail(ProjectReference, *)
