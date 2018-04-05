@@ -14,6 +14,7 @@
 
 using Google.Apis.Bigquery.v2.Data;
 using Google.Cloud.ClientTesting;
+using Google.Cloud.Storage.V1;
 using System;
 using System.Collections.Generic;
 using System.Globalization;
@@ -48,6 +49,10 @@ namespace Google.Cloud.BigQuery.V2.IntegrationTests
         public string PeopleTableId { get; } = "people";
         public string ComplexTypesTableId { get; } = "complex";
         public string ExhaustiveTypesTableId { get; } = "exhaustive";
+        /// <summary>
+        /// A GCS bucket created for this fixture.
+        /// </summary>
+        public string StorageBucketName { get; }
 
         public BigQueryFixture()
         {
@@ -56,7 +61,12 @@ namespace Google.Cloud.BigQuery.V2.IntegrationTests
             LabelsDatasetId = now.ToString("'testlabels'_yyyyMMddTHHmmssfff", CultureInfo.InvariantCulture);
 
             CreateData();
+            StorageBucketName = GenerateStorageBucketName();
+            StorageClient.Create().CreateBucket(ProjectId, StorageBucketName);
         }
+
+        private string GenerateStorageBucketName() => "bigquerytests-" + Guid.NewGuid().ToString().ToLowerInvariant();
+        internal string GenerateStorageObjectName() => "file-" + Guid.NewGuid().ToString();
 
         private void CreateData()
         {

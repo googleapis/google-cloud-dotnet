@@ -206,6 +206,7 @@ namespace Google.Cloud.BigQuery.V2
             }
             var requestTimeoutMs = Math.Min(timeRemainingMs, s_maxGetQueryResultsRequestTimeout);
             var request = Service.Jobs.GetQueryResults(jobReference.ProjectId, jobReference.JobId);
+            request.Location = jobReference.Location;
             // We never use the results within the first response; instead, we're just checking that the job has
             // completed and using the statistics and schema from it.
             request.MaxResults = 0;

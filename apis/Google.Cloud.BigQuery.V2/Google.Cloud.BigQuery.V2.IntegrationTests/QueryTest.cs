@@ -435,9 +435,8 @@ namespace Google.Cloud.BigQuery.V2.IntegrationTests
             // Create the object in GCS
             byte[] bytes = Encoding.UTF8.GetBytes(string.Join("\n", csvRows));
             StorageClient storage = StorageClient.Create();
-            string bucketName = "bigquerytests-" + Guid.NewGuid().ToString().ToLowerInvariant();
-            string objectName = "file-" + Guid.NewGuid().ToString();
-            storage.CreateBucket(_fixture.ProjectId, bucketName);
+            string bucketName = _fixture.StorageBucketName;
+            string objectName = _fixture.GenerateStorageObjectName();
             storage.UploadObject(bucketName, objectName, "text/csv", new MemoryStream(bytes));
 
             // Create the table associated with it
