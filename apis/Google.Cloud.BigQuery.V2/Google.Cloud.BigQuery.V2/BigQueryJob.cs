@@ -98,7 +98,7 @@ namespace Google.Cloud.BigQuery.V2
             var errors = Resource.Status?.Errors;
             if (errors?.Count > 0)
             {
-                throw new GoogleApiException(_client.Service.Name, $"Job {Reference?.ProjectId}/{Reference?.JobId} contained errors")
+                throw new GoogleApiException(_client.Service.Name, $"Job {Reference?.ProjectId}/{Reference?.Location}/{Reference?.JobId} contained errors")
                 {
                     Error = new RequestError
                     {

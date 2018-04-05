@@ -195,6 +195,7 @@ namespace Google.Cloud.BigQuery.V2
             GaxPreconditions.CheckNotNull(jobReference, nameof(jobReference));
 
             var request = Service.Jobs.Get(jobReference.ProjectId, jobReference.JobId);
+            request.Location = jobReference.Location;
             request.ModifyRequest += _versionHeaderAction;
             options?.ModifyRequest(request);
             RetryHandler.MarkAsRetriable(request);
@@ -214,6 +215,7 @@ namespace Google.Cloud.BigQuery.V2
         {
             GaxPreconditions.CheckNotNull(jobReference, nameof(jobReference));
             var request = Service.Jobs.Cancel(jobReference.ProjectId, jobReference.JobId);
+            request.Location = jobReference.Location;
             request.ModifyRequest += _versionHeaderAction;
             options?.ModifyRequest(request);
             RetryHandler.MarkAsRetriable(request);
