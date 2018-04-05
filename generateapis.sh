@@ -197,7 +197,6 @@ generate_api Google.Cloud.Container.V1 google/container/v1 container.yaml
 generate_api Google.Cloud.Dataproc.V1 google/cloud/dataproc/v1 v1/dataproc.yaml
 generate_api Google.Cloud.Datastore.V1 google/datastore/v1 datastore.yaml
 generate_api Google.Cloud.Debugger.V2 google/devtools/clouddebugger/v2 clouddebugger.yaml
-generate_api Google.Cloud.Dlp.V2Beta1 google/privacy/dlp/v2beta1 dlp.yaml
 generate_api Google.Cloud.Dlp.V2 google/privacy/dlp/v2 dlp_v2.yaml
 generate_api Google.Cloud.ErrorReporting.V1Beta1 google/devtools/clouderrorreporting/v1beta1 errorreporting.yaml
 generate_api Google.Cloud.Firestore.V1Beta1 google/firestore/v1beta1 firestore.yaml
