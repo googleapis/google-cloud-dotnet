@@ -33,6 +33,14 @@ namespace Google.Cloud.Diagnostics.AspNetCore.IntegrationTests
 {
     public class DiagnosticsWebHostTests
     {
+        public DiagnosticsWebHostTests()
+        {
+            // The rate limiter instance is static and only set once.  If we do not reset it at the
+            // beginning of each tests the qps will not change.  This is dependent on the tests not
+            // running in parallel.
+            RateLimiter.Reset();
+        }
+
         [Fact]
         public void UseGoogleDiagnostics_ConfiguresServices()
         {
