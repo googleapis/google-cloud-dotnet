@@ -13,12 +13,14 @@
 // limitations under the License.
 
 using Google.Cloud.Tools.Common;
+using Microsoft.Build.Construction;
 using System;
 using System.Collections.Generic;
 using System.Diagnostics;
 using System.IO;
 using System.Linq;
 using System.Security.Cryptography;
+using System.Text;
 using System.Text.RegularExpressions;
 using System.Xml.Linq;
 
@@ -33,6 +35,7 @@ namespace Google.Cloud.Tools.ProjectGenerator
         // Project references which don't just follow the pattern of ..\..\{package}\{package}\{package}.csproj
         private static readonly Dictionary<string, string> KnownProjectReferences = new Dictionary<string, string>
         {
+            { "Google.Cloud.AnalyzersTesting", @"..\..\..\tools\Google.Cloud.AnalyzersTesting\Google.Cloud.AnalyzersTesting.csproj" },
             { "Google.Cloud.ClientTesting", @"..\..\..\tools\Google.Cloud.ClientTesting\Google.Cloud.ClientTesting.csproj" },
             { "Google.Cloud.Diagnostics.Common.Tests", @"..\..\Google.Cloud.Diagnostics.Common\Google.Cloud.Diagnostics.Common.Tests\Google.Cloud.Diagnostics.Common.Tests.csproj" },
             { "Google.Cloud.Diagnostics.Common.IntegrationTests", @"..\..\Google.Cloud.Diagnostics.Common\Google.Cloud.Diagnostics.Common.IntegrationTests\Google.Cloud.Diagnostics.Common.IntegrationTests.csproj" }
@@ -41,6 +44,9 @@ namespace Google.Cloud.Tools.ProjectGenerator
         private const string DefaultRestTargetFrameworks = "netstandard1.3;net45";
         private const string DefaultGrpcTargetFrameworks = "netstandard1.5;net45";
         private const string DefaultTestTargetFrameworks = "netcoreapp1.0;net452";
+
+        private const string AnalyzersTargetFramework = "netstandard1.3";
+        private const string AnalyzersTestTargetFramework = "netcoreapp2.0";
 
         private const string ProjectVersionValue = "project";
         private const string DefaultVersionValue = "default";
@@ -55,6 +61,12 @@ namespace Google.Cloud.Tools.ProjectGenerator
             { "Google.Api.Gax.Testing", DefaultGaxVersion },
             { "Google.Api.Gax.Grpc.Testing", DefaultGaxVersion },
             { GrpcPackage, GrpcVersion },
+        };
+
+        // Hard-coded versions for all analyzer projects.
+        private static readonly Dictionary<string, string> CommonAnalyzerDependencies = new Dictionary<string, string>
+        {
+            { CSharpWorkspacesPackage, "2.4.0" }
         };
 
         // Hard-coded versions for all test packages. These can be defaulted even for stable packages, whereas
@@ -81,6 +93,7 @@ namespace Google.Cloud.Tools.ProjectGenerator
         private const string CompatibilityAnalyzer = "Microsoft.DotNet.Analyzers.Compatibility";
         private const string ConfigureAwaitAnalyzer = "ConfigureAwaitChecker.Analyzer";
         private const string SourceLinkPackage = "SourceLink.Create.CommandLine";
+        private const string CSharpWorkspacesPackage = "Microsoft.CodeAnalysis.CSharp.Workspaces";
 
         /// <summary>
         /// For packages which need a PrivateAssets attribute in dependencies, this dictionary provides the value of the attribute.
@@ -90,7 +103,8 @@ namespace Google.Cloud.Tools.ProjectGenerator
             { GrpcPackage, "None" },
             { CompatibilityAnalyzer, "All" },
             { ConfigureAwaitAnalyzer, "All" },
-            { SourceLinkPackage, "All" }
+            { SourceLinkPackage, "All" },
+            { CSharpWorkspacesPackage, "All" }
         };
 
         private const string AnalyzersPath = @"..\..\..\tools\Google.Cloud.Tools.Analyzers\bin\$(Configuration)\netstandard1.3\publish\Google.Cloud.Tools.Analyzers.dll";
@@ -133,6 +147,21 @@ namespace Google.Cloud.Tools.ProjectGenerator
 
         static void GenerateProjects(string apiRoot, ApiMetadata api, HashSet<string> apiNames)
         {
+            if (api.HasAnalyzers)
+            {
+                var analyzersDirectory = Path.Combine(apiRoot, api.Id + ".Analyzers");
+                if (!Directory.Exists(analyzersDirectory))
+                {
+                    Directory.CreateDirectory(analyzersDirectory);
+                }
+
+                var analyzersTestDirectory = Path.Combine(apiRoot, api.Id + ".Analyzers.Tests");
+                if (!Directory.Exists(analyzersTestDirectory))
+                {
+                    Directory.CreateDirectory(analyzersTestDirectory);
+                }
+            }
+
             // We assume the source directories already exist, either because they've just
             // been generated or because they were already there. We infer the type of each
             // project based on the directory name. Expected suffixes:
@@ -152,6 +181,12 @@ namespace Google.Cloud.Tools.ProjectGenerator
                 {
                     case "":
                         GenerateMainProject(api, dir, apiNames);
+                        break;
+                    case ".Analyzers":
+                        GenerateAnalyzersProject(api, dir, apiNames);
+                        break;
+                    case ".Analyzers.Tests":
+                        GenerateTestProject(api, dir, apiNames, isForAnalyzers: true);
                         break;
                     case ".IntegrationTests":
                     case ".Snippets":
@@ -193,15 +228,51 @@ namespace Google.Cloud.Tools.ProjectGenerator
                 }
             }
 
-            var solutionFile = $"{api.Id}.sln";
-            string fullFile = Path.Combine(apiRoot, solutionFile);
+            var solutionFileName = $"{api.Id}.sln";
+            string fullFile = Path.Combine(apiRoot, solutionFileName);
             string beforeHash = GetFileHash(fullFile);
             if (!File.Exists(fullFile))
             {
                 RunDotnet(apiRoot, "new", "sln", "-n", api.Id);
             }
             // It's much faster to run a single process than to run it once per project.
-            RunDotnet(apiRoot, new[] { "sln", solutionFile, "add" }.Concat(projects).ToArray());
+            RunDotnet(apiRoot, new[] { "sln", solutionFileName, "add" }.Concat(projects).ToArray());
+
+            if (api.HasAnalyzers)
+            {
+                // Add a build dependency from the main project to the analyzers so if the solution is
+                // built, the analyzers are always built first.
+                var solutionFile = SolutionFile.Parse(fullFile);
+                var mainProject = solutionFile.ProjectsInOrder.Single(p => p.ProjectName == api.Id);
+                var analyzerProject = solutionFile.ProjectsInOrder.Single(p => p.ProjectName == api.Id + ".Analyzers");
+                if (!mainProject.Dependencies.Contains(analyzerProject.ProjectGuid))
+                {
+                    var updatedSlnContent = new StringBuilder();
+                    using (var streamReader = File.OpenText(fullFile))
+                    {
+                        bool addedDependency = false;
+                        string line;
+                        while ((line = streamReader.ReadLine()) != null)
+                        {
+                            updatedSlnContent.AppendLine(line);
+                            if (!addedDependency &&
+                                line.StartsWith($"Project(\"{{9A19103F-16F7-4668-BE54-9A1E7A4F7556}}\") = \"{api.Id}\""))
+                            {
+                                updatedSlnContent.AppendLine("\tProjectSection(ProjectDependencies) = postProject");
+                                updatedSlnContent.AppendLine($"\t\t{analyzerProject.ProjectGuid} = {analyzerProject.ProjectGuid}");
+                                updatedSlnContent.AppendLine("\tEndProjectSection");
+                                addedDependency = true;
+                            }
+                        }
+                        if (!addedDependency)
+                        {
+                            throw new InvalidOperationException("Could not add build dependency on analyzer");
+                        }
+                    }
+                    File.WriteAllText(fullFile, updatedSlnContent.ToString());
+                }
+            }
+
             string afterHash = GetFileHash(fullFile);
             if (beforeHash != afterHash)
             {
@@ -315,13 +386,65 @@ namespace Google.Cloud.Tools.ProjectGenerator
                 propertyGroup.Add(new XElement("CodeAnalysisRuleSet", "..\\..\\..\\grpc.ruleset"));
             }
             var dependenciesElement = CreateDependenciesElement(api.Id, dependencies, api.IsReleaseVersion, testProject: false, apiNames: apiNames);
+            if (api.HasAnalyzers)
+            {
+                void AddPackFile(string includePath, string packagePath)
+                {
+                    dependenciesElement.Add(
+                        new XElement("None",
+                            new XAttribute("Include", includePath),
+                            new XAttribute("Pack", "true"),
+                            new XAttribute("PackagePath", packagePath),
+                            new XAttribute("Visible", "false")));
+                }
+
+                AddPackFile(
+                    $@"..\{api.Id}.Analyzers\bin\$(Configuration)\{AnalyzersTargetFramework}\{api.Id}.Analyzers.dll",
+                    "analyzers/dotnet/cs");
+
+                // Add install scripts as per
+                // https://docs.microsoft.com/en-us/nuget/reference/analyzers-conventions#install-and-uninstall-scripts
+                // Name each file rather than using a wildcard so 'dotnet pack' will error out if the files are missing
+                // for some reason.
+                AddPackFile(
+                    @"..\..\..\analyzerScripts\install.ps1",
+                    "tools");
+                AddPackFile(
+                    @"..\..\..\analyzerScripts\uninstall.ps1",
+                    "tools");
+            }
             WriteProjectFile(api, directory, propertyGroup, dependenciesElement);
         }
 
-        private static string GetTestTargetFrameworks(ApiMetadata api) => api.TestTargetFrameworks ??
-                                                                      api.TargetFrameworks ?? DefaultTestTargetFrameworks;
+        private static string GetTestTargetFrameworks(ApiMetadata api, bool isForAnalyzers) =>
+            isForAnalyzers
+                ? AnalyzersTestTargetFramework
+                : api.TestTargetFrameworks ?? api.TargetFrameworks ?? DefaultTestTargetFrameworks;
 
-        private static void GenerateTestProject(ApiMetadata api, string directory, HashSet<string> apiNames)
+        private static void GenerateAnalyzersProject(ApiMetadata api, string directory, HashSet<string> apiNames)
+        {
+            var dependencies = new SortedList<string, string>(CommonAnalyzerDependencies);
+
+            // Note: If support is added here for using additional dependencies, we need to resolve
+            //       the packaging issues and make sure the onus won't be on the user to add the
+            //       dependency references.
+
+            var propertyGroup = new XElement("PropertyGroup",
+                // Build-related properties
+                new XElement("TargetFramework", AnalyzersTargetFramework),
+                new XElement("LangVersion", "latest"),
+                new XElement("Features", "IOperation"),
+                new XElement("AssemblyOriginatorKeyFile", "../../GoogleApis.snk"),
+                new XElement("SignAssembly", true),
+                new XElement("Deterministic", true),
+                new XElement("TreatWarningsAsErrors", true)
+            );
+
+            var dependenciesElement = CreateDependenciesElement(api.Id, dependencies, api.IsReleaseVersion, testProject: false, apiNames: apiNames);
+            WriteProjectFile(api, directory, propertyGroup, dependenciesElement);
+        }
+
+        private static void GenerateTestProject(ApiMetadata api, string directory, HashSet<string> apiNames, bool isForAnalyzers = false)
         {
             // Don't generate a project file if we've got a placeholder directory
             if (Directory.GetFiles(directory, "*.cs").Length == 0)
@@ -329,6 +452,12 @@ namespace Google.Cloud.Tools.ProjectGenerator
                 return;
             }
             var dependencies = new SortedList<string, string>(CommonTestDependencies);
+            if (isForAnalyzers)
+            {
+                dependencies.Remove("Google.Cloud.ClientTesting");
+                dependencies.Add("Google.Cloud.AnalyzersTesting", ProjectVersionValue);
+            }
+
             dependencies.Add(api.Id, "project");
 
             // Deliberately not using Add, so that a project can override the defaults.
@@ -336,11 +465,20 @@ namespace Google.Cloud.Tools.ProjectGenerator
             {
                 dependencies[dependency.Key] = dependency.Value;
             }
-            
+
+            if (isForAnalyzers)
+            {
+                foreach (var dependency in api.AdditionalAnalyzerTestDependencies)
+                {
+                    dependencies[dependency.Key] = dependency.Value;
+                }
+            }
+
+            var testTargetFrameworks = GetTestTargetFrameworks(api, isForAnalyzers);
             var propertyGroup =
                 new XElement("PropertyGroup",
-                    new XElement("TargetFrameworks", GetTestTargetFrameworks(api)),
-                    new XElement("TargetFrameworks", new XAttribute("Condition", " '$(OS)' != 'Windows_NT' "), AnyDesktopFramework.Replace(GetTestTargetFrameworks(api), "")),
+                    new XElement("TargetFrameworks", testTargetFrameworks),
+                    new XElement("TargetFrameworks", new XAttribute("Condition", " '$(OS)' != 'Windows_NT' "), AnyDesktopFramework.Replace(testTargetFrameworks, "")),
                     new XElement("LangVersion", "latest"),
                     new XElement("Features", "IOperation"),
                     new XElement("IsPackable", false),
