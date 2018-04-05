@@ -1,4 +1,4 @@
-﻿// Copyright 2016 Google Inc. All Rights Reserved.
+﻿// Copyright 2018 Google Inc. All Rights Reserved.
 //
 // Licensed under the Apache License, Version 2.0 (the "License");
 // you may not use this file except in compliance with the License.
@@ -75,7 +75,7 @@ namespace Google.Cloud.Diagnostics.AspNetCore
             _traceTarget = logTarget.Kind == LogTargetKind.Project ?
                 TraceTarget.ForProject(logTarget.ProjectId) : null;
             _consumer = GaxPreconditions.CheckNotNull(consumer, nameof(consumer));
-            _loggerOptions = GaxPreconditions.CheckNotNull(loggerOptions, nameof(loggerOptions)); ;
+            _loggerOptions = GaxPreconditions.CheckNotNull(loggerOptions, nameof(loggerOptions));
             _logName = GaxPreconditions.CheckNotNullOrEmpty(logName, nameof(logName));
             _fullLogName = logTarget.GetFullLogName(_loggerOptions.LogName);
             _serviceProvider = serviceProvider;
@@ -144,6 +144,22 @@ namespace Google.Cloud.Diagnostics.AspNetCore
                 }
             }
 
+            Dictionary<string, string> labels;
+            var labelProviders = GetLabelProviders()?.ToArray();
+            if (labelProviders?.Length > 0)
+            {
+                // Create a copy of the labels from the options and invoke each provider
+                labels = _loggerOptions.Labels.ToDictionary(kvp => kvp.Key, kvp => kvp.Value);
+                foreach (var provider in labelProviders)
+                {
+                    provider.Invoke(labels);
+                }
+            }
+            else
+            {
+                labels = _loggerOptions.Labels;
+            }
+
             LogEntry entry = new LogEntry
             {
                 Resource = _loggerOptions.MonitoredResource,
@@ -151,7 +167,7 @@ namespace Google.Cloud.Diagnostics.AspNetCore
                 Severity = logLevel.ToLogSeverity(),
                 Timestamp = Timestamp.FromDateTime(_clock.GetCurrentDateTimeUtc()),
                 JsonPayload = jsonStruct,
-                Labels = { _loggerOptions.Labels },
+                Labels = { labels },
                 Trace = GetTraceName() ?? "",
             };
 
@@ -176,5 +192,12 @@ namespace Google.Cloud.Diagnostics.AspNetCore
             var traceContext = TraceHeaderContext.FromHeader(header);
             return traceContext.TraceId == null ? null : _traceTarget.GetFullTraceName(traceContext.TraceId);
         }
+
+        /// <summary>
+        /// Gets the collection of <see cref="ILogEntryLabelProvider"/>'s
+        /// registered in the application <see cref="IServiceProvider"/>.
+        /// </summary>
+        internal IEnumerable<ILogEntryLabelProvider> GetLabelProviders() =>
+            _serviceProvider?.GetService<IEnumerable<ILogEntryLabelProvider>>();
     }
 }
