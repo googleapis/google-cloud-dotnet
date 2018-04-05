@@ -29,9 +29,7 @@
   </ItemGroup>
   <PropertyGroup>
     <!-- Make sure we get suitable stack traces for tests -->
-    <DebugType>full</DebugType>
-    <DebugType Condition="'$(TargetFramework)' == 'netcoreapp1.0'">pdbonly</DebugType>
-    <DebugType Condition="'$(TargetFramework)' == 'net452'">pdbonly</DebugType>
+    <DebugType>pdbonly</DebugType>
     <DebugType Condition="'$(TargetFramework)' == 'netcoreapp2.0'">portable</DebugType>
   </PropertyGroup>
 </Project>
