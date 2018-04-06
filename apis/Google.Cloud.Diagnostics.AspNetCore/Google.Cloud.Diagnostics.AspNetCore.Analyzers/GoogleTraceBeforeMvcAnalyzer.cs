@@ -44,11 +44,11 @@ namespace Google.Cloud.Diagnostics.AspNetCore.Analyzers
         private const string UseMvc = "UseMvc";
 
         private static readonly LocalizableString Title =
-            "Add Google trace before MVC";
+            "Add Google Trace before MVC";
         private static readonly LocalizableString MessageFormat =
             $"{UseGoogleTrace} should be used before {{0}} so requests can be traced";
         private static readonly LocalizableString Description =
-            "Google trace middleware should be added before MVC to the request pipeline.";
+            "Google Trace middleware should be added before MVC to the request pipeline.";
 
         private static DiagnosticDescriptor Rule =
             new DiagnosticDescriptor(

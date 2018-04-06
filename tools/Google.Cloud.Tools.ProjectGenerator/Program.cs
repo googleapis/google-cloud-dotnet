@@ -152,16 +152,10 @@ namespace Google.Cloud.Tools.ProjectGenerator
             if (api.HasAnalyzers)
             {
                 var analyzersDirectory = Path.Combine(apiRoot, api.Id + AnalyzersSuffix);
-                if (!Directory.Exists(analyzersDirectory))
-                {
-                    Directory.CreateDirectory(analyzersDirectory);
-                }
+                Directory.CreateDirectory(analyzersDirectory);
 
                 var analyzersTestDirectory = Path.Combine(apiRoot, api.Id + AnalyzersTestsSuffix);
-                if (!Directory.Exists(analyzersTestDirectory))
-                {
-                    Directory.CreateDirectory(analyzersTestDirectory);
-                }
+                Directory.CreateDirectory(analyzersTestDirectory);
             }
 
             // We assume the source directories already exist, either because they've just
