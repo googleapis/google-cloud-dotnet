@@ -91,8 +91,8 @@ namespace Google.Cloud.Diagnostics.AspNetCore.IntegrationTests
             using (var server = new TestServer(webHostBuilder))
             using (var client = server.CreateClient())
             {
-                await TestLogging(testId, startTime, client);
                 await TestTrace(testId, startTime, client);
+                await TestLogging(testId, startTime, client);
                 await TestErrorReporting(testId, startTime, client);
             }
         }
@@ -107,8 +107,6 @@ namespace Google.Cloud.Diagnostics.AspNetCore.IntegrationTests
 
         private static async Task TestTrace(string testId, DateTime startTime, HttpClient client)
         {
-            RateLimiter.Reset();
-
             var response = await client.GetAsync($"/Trace/Trace/{testId}");
 
             var spanName = TraceController.GetMessage(nameof(TraceController.Trace), testId);

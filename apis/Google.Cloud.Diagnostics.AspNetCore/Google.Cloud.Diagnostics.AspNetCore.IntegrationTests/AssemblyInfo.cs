@@ -14,4 +14,6 @@
 
 using Xunit;
 
+// This is needed to ensure trace tests that rely on the RateLimiter
+// do not affect each other.
 [assembly: CollectionBehavior(DisableTestParallelization = true)]
