@@ -33,6 +33,14 @@ namespace Google.Cloud.Diagnostics.AspNetCore.IntegrationTests
 {
     public class DiagnosticsWebHostTests
     {
+        public DiagnosticsWebHostTests()
+        {
+            // The rate limiter instance is static and only set once.  If we do not reset it at the
+            // beginning of each tests the qps will not change.  This is dependent on the tests not
+            // running in parallel.
+            RateLimiter.Reset();
+        }
+
         [Fact]
         public void UseGoogleDiagnostics_ConfiguresServices()
         {
@@ -83,8 +91,8 @@ namespace Google.Cloud.Diagnostics.AspNetCore.IntegrationTests
             using (var server = new TestServer(webHostBuilder))
             using (var client = server.CreateClient())
             {
-                await TestLogging(testId, startTime, client);
                 await TestTrace(testId, startTime, client);
+                await TestLogging(testId, startTime, client);
                 await TestErrorReporting(testId, startTime, client);
             }
         }
@@ -99,8 +107,6 @@ namespace Google.Cloud.Diagnostics.AspNetCore.IntegrationTests
 
         private static async Task TestTrace(string testId, DateTime startTime, HttpClient client)
         {
-            RateLimiter.Reset();
-
             var response = await client.GetAsync($"/Trace/Trace/{testId}");
 
             var spanName = TraceController.GetMessage(nameof(TraceController.Trace), testId);
