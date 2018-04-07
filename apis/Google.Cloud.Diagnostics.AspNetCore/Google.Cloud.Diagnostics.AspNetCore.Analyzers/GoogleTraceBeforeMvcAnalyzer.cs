@@ -111,7 +111,7 @@ namespace Google.Cloud.Diagnostics.AspNetCore.Analyzers
                     break;
                 }
 
-                switch (symbol?.Kind)
+                switch (symbol.Kind)
                 {
                     case SymbolKind.Local:
                     case SymbolKind.Field:
@@ -137,10 +137,11 @@ namespace Google.Cloud.Diagnostics.AspNetCore.Analyzers
         {
             var symbolInfo = _applicationBuilderSymbolInfos.GetOrCreateValue(symbol);
 
+            var scopeEnclosingNode =
+                currentAccessNode.FirstAncestorOrSelf<CSharpSyntaxNode>(IsScopeEnclosingNode);
+
             lock (symbolInfo)
             {
-                var scopeEnclosingNode =
-                    currentAccessNode.FirstAncestorOrSelf<CSharpSyntaxNode>(IsScopeEnclosingNode);
                 if (!symbolInfo.Scopes.TryGetValue(scopeEnclosingNode, out var scopeInfo))
                 {
                     symbolInfo.Scopes[scopeEnclosingNode] = scopeInfo = new ScopeInfo();
