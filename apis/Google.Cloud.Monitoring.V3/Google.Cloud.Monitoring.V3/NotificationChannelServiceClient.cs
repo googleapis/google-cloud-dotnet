@@ -14,24 +14,24 @@
 
 // Generated code. DO NOT EDIT!
 
-using Google.Api.Gax;
-using Google.Api.Gax.Grpc;
-using Google.Protobuf;
-using Google.Protobuf.WellKnownTypes;
-using Grpc.Core;
-using System;
-using System.Collections;
-using System.Collections.Generic;
-using System.Collections.ObjectModel;
-using System.Threading;
-using System.Threading.Tasks;
+using gax = Google.Api.Gax;
+using gaxgrpc = Google.Api.Gax.Grpc;
+using proto = Google.Protobuf;
+using protowkt = Google.Protobuf.WellKnownTypes;
+using grpccore = Grpc.Core;
+using s = System;
+using sc = System.Collections;
+using scg = System.Collections.Generic;
+using sco = System.Collections.ObjectModel;
+using st = System.Threading;
+using stt = System.Threading.Tasks;
 
 namespace Google.Cloud.Monitoring.V3
 {
     /// <summary>
     /// Settings for a <see cref="NotificationChannelServiceClient"/>.
     /// </summary>
-    public sealed partial class NotificationChannelServiceSettings : ServiceSettingsBase
+    public sealed partial class NotificationChannelServiceSettings : gaxgrpc::ServiceSettingsBase
     {
         /// <summary>
         /// Get a new instance of the default <see cref="NotificationChannelServiceSettings"/>.
@@ -48,7 +48,7 @@ namespace Google.Cloud.Monitoring.V3
 
         private NotificationChannelServiceSettings(NotificationChannelServiceSettings existing) : base(existing)
         {
-            GaxPreconditions.CheckNotNull(existing, nameof(existing));
+            gax::GaxPreconditions.CheckNotNull(existing, nameof(existing));
             ListNotificationChannelDescriptorsSettings = existing.ListNotificationChannelDescriptorsSettings;
             GetNotificationChannelDescriptorSettings = existing.GetNotificationChannelDescriptorSettings;
             ListNotificationChannelsSettings = existing.ListNotificationChannelsSettings;
@@ -62,28 +62,28 @@ namespace Google.Cloud.Monitoring.V3
         partial void OnCopy(NotificationChannelServiceSettings existing);
 
         /// <summary>
-        /// The filter specifying which RPC <see cref="StatusCode"/>s are eligible for retry
+        /// The filter specifying which RPC <see cref="grpccore::StatusCode"/>s are eligible for retry
         /// for "Idempotent" <see cref="NotificationChannelServiceClient"/> RPC methods.
         /// </summary>
         /// <remarks>
-        /// The eligible RPC <see cref="StatusCode"/>s for retry for "Idempotent" RPC methods are:
+        /// The eligible RPC <see cref="grpccore::StatusCode"/>s for retry for "Idempotent" RPC methods are:
         /// <list type="bullet">
-        /// <item><description><see cref="StatusCode.DeadlineExceeded"/></description></item>
-        /// <item><description><see cref="StatusCode.Unavailable"/></description></item>
+        /// <item><description><see cref="grpccore::StatusCode.DeadlineExceeded"/></description></item>
+        /// <item><description><see cref="grpccore::StatusCode.Unavailable"/></description></item>
         /// </list>
         /// </remarks>
-        public static Predicate<RpcException> IdempotentRetryFilter { get; } =
-            RetrySettings.FilterForStatusCodes(StatusCode.DeadlineExceeded, StatusCode.Unavailable);
+        public static s::Predicate<grpccore::RpcException> IdempotentRetryFilter { get; } =
+            gaxgrpc::RetrySettings.FilterForStatusCodes(grpccore::StatusCode.DeadlineExceeded, grpccore::StatusCode.Unavailable);
 
         /// <summary>
-        /// The filter specifying which RPC <see cref="StatusCode"/>s are eligible for retry
+        /// The filter specifying which RPC <see cref="grpccore::StatusCode"/>s are eligible for retry
         /// for "NonIdempotent" <see cref="NotificationChannelServiceClient"/> RPC methods.
         /// </summary>
         /// <remarks>
-        /// There are no RPC <see cref="StatusCode"/>s eligible for retry for "NonIdempotent" RPC methods.
+        /// There are no RPC <see cref="grpccore::StatusCode"/>s eligible for retry for "NonIdempotent" RPC methods.
         /// </remarks>
-        public static Predicate<RpcException> NonIdempotentRetryFilter { get; } =
-            RetrySettings.FilterForStatusCodes();
+        public static s::Predicate<grpccore::RpcException> NonIdempotentRetryFilter { get; } =
+            gaxgrpc::RetrySettings.FilterForStatusCodes();
 
         /// <summary>
         /// "Default" retry backoff for <see cref="NotificationChannelServiceClient"/> RPC methods.
@@ -99,9 +99,9 @@ namespace Google.Cloud.Monitoring.V3
         /// <item><description>Delay multiplier: 1.3</description></item>
         /// </list>
         /// </remarks>
-        public static BackoffSettings GetDefaultRetryBackoff() => new BackoffSettings(
-            delay: TimeSpan.FromMilliseconds(100),
-            maxDelay: TimeSpan.FromMilliseconds(60000),
+        public static gaxgrpc::BackoffSettings GetDefaultRetryBackoff() => new gaxgrpc::BackoffSettings(
+            delay: s::TimeSpan.FromMilliseconds(100),
+            maxDelay: s::TimeSpan.FromMilliseconds(60000),
             delayMultiplier: 1.3
         );
 
@@ -119,19 +119,19 @@ namespace Google.Cloud.Monitoring.V3
         /// <item><description>Maximum timeout: 20000 milliseconds</description></item>
         /// </list>
         /// </remarks>
-        public static BackoffSettings GetDefaultTimeoutBackoff() => new BackoffSettings(
-            delay: TimeSpan.FromMilliseconds(20000),
-            maxDelay: TimeSpan.FromMilliseconds(20000),
+        public static gaxgrpc::BackoffSettings GetDefaultTimeoutBackoff() => new gaxgrpc::BackoffSettings(
+            delay: s::TimeSpan.FromMilliseconds(20000),
+            maxDelay: s::TimeSpan.FromMilliseconds(20000),
             delayMultiplier: 1.0
         );
 
         /// <summary>
-        /// <see cref="CallSettings"/> for synchronous and asynchronous calls to
+        /// <see cref="gaxgrpc::CallSettings"/> for synchronous and asynchronous calls to
         /// <c>NotificationChannelServiceClient.ListNotificationChannelDescriptors</c> and <c>NotificationChannelServiceClient.ListNotificationChannelDescriptorsAsync</c>.
         /// </summary>
         /// <remarks>
         /// The default <c>NotificationChannelServiceClient.ListNotificationChannelDescriptors</c> and
-        /// <c>NotificationChannelServiceClient.ListNotificationChannelDescriptorsAsync</c> <see cref="RetrySettings"/> are:
+        /// <c>NotificationChannelServiceClient.ListNotificationChannelDescriptorsAsync</c> <see cref="gaxgrpc::RetrySettings"/> are:
         /// <list type="bullet">
         /// <item><description>Initial retry delay: 100 milliseconds</description></item>
         /// <item><description>Retry delay multiplier: 1.3</description></item>
@@ -142,26 +142,26 @@ namespace Google.Cloud.Monitoring.V3
         /// </list>
         /// Retry will be attempted on the following response status codes:
         /// <list>
-        /// <item><description><see cref="StatusCode.DeadlineExceeded"/></description></item>
-        /// <item><description><see cref="StatusCode.Unavailable"/></description></item>
+        /// <item><description><see cref="grpccore::StatusCode.DeadlineExceeded"/></description></item>
+        /// <item><description><see cref="grpccore::StatusCode.Unavailable"/></description></item>
         /// </list>
         /// Default RPC expiration is 600000 milliseconds.
         /// </remarks>
-        public CallSettings ListNotificationChannelDescriptorsSettings { get; set; } = CallSettings.FromCallTiming(
-            CallTiming.FromRetry(new RetrySettings(
+        public gaxgrpc::CallSettings ListNotificationChannelDescriptorsSettings { get; set; } = gaxgrpc::CallSettings.FromCallTiming(
+            gaxgrpc::CallTiming.FromRetry(new gaxgrpc::RetrySettings(
                 retryBackoff: GetDefaultRetryBackoff(),
                 timeoutBackoff: GetDefaultTimeoutBackoff(),
-                totalExpiration: Expiration.FromTimeout(TimeSpan.FromMilliseconds(600000)),
+                totalExpiration: gax::Expiration.FromTimeout(s::TimeSpan.FromMilliseconds(600000)),
                 retryFilter: IdempotentRetryFilter
             )));
 
         /// <summary>
-        /// <see cref="CallSettings"/> for synchronous and asynchronous calls to
+        /// <see cref="gaxgrpc::CallSettings"/> for synchronous and asynchronous calls to
         /// <c>NotificationChannelServiceClient.GetNotificationChannelDescriptor</c> and <c>NotificationChannelServiceClient.GetNotificationChannelDescriptorAsync</c>.
         /// </summary>
         /// <remarks>
         /// The default <c>NotificationChannelServiceClient.GetNotificationChannelDescriptor</c> and
-        /// <c>NotificationChannelServiceClient.GetNotificationChannelDescriptorAsync</c> <see cref="RetrySettings"/> are:
+        /// <c>NotificationChannelServiceClient.GetNotificationChannelDescriptorAsync</c> <see cref="gaxgrpc::RetrySettings"/> are:
         /// <list type="bullet">
         /// <item><description>Initial retry delay: 100 milliseconds</description></item>
         /// <item><description>Retry delay multiplier: 1.3</description></item>
@@ -172,26 +172,26 @@ namespace Google.Cloud.Monitoring.V3
         /// </list>
         /// Retry will be attempted on the following response status codes:
         /// <list>
-        /// <item><description><see cref="StatusCode.DeadlineExceeded"/></description></item>
-        /// <item><description><see cref="StatusCode.Unavailable"/></description></item>
+        /// <item><description><see cref="grpccore::StatusCode.DeadlineExceeded"/></description></item>
+        /// <item><description><see cref="grpccore::StatusCode.Unavailable"/></description></item>
         /// </list>
         /// Default RPC expiration is 600000 milliseconds.
         /// </remarks>
-        public CallSettings GetNotificationChannelDescriptorSettings { get; set; } = CallSettings.FromCallTiming(
-            CallTiming.FromRetry(new RetrySettings(
+        public gaxgrpc::CallSettings GetNotificationChannelDescriptorSettings { get; set; } = gaxgrpc::CallSettings.FromCallTiming(
+            gaxgrpc::CallTiming.FromRetry(new gaxgrpc::RetrySettings(
                 retryBackoff: GetDefaultRetryBackoff(),
                 timeoutBackoff: GetDefaultTimeoutBackoff(),
-                totalExpiration: Expiration.FromTimeout(TimeSpan.FromMilliseconds(600000)),
+                totalExpiration: gax::Expiration.FromTimeout(s::TimeSpan.FromMilliseconds(600000)),
                 retryFilter: IdempotentRetryFilter
             )));
 
         /// <summary>
-        /// <see cref="CallSettings"/> for synchronous and asynchronous calls to
+        /// <see cref="gaxgrpc::CallSettings"/> for synchronous and asynchronous calls to
         /// <c>NotificationChannelServiceClient.ListNotificationChannels</c> and <c>NotificationChannelServiceClient.ListNotificationChannelsAsync</c>.
         /// </summary>
         /// <remarks>
         /// The default <c>NotificationChannelServiceClient.ListNotificationChannels</c> and
-        /// <c>NotificationChannelServiceClient.ListNotificationChannelsAsync</c> <see cref="RetrySettings"/> are:
+        /// <c>NotificationChannelServiceClient.ListNotificationChannelsAsync</c> <see cref="gaxgrpc::RetrySettings"/> are:
         /// <list type="bullet">
         /// <item><description>Initial retry delay: 100 milliseconds</description></item>
         /// <item><description>Retry delay multiplier: 1.3</description></item>
@@ -202,26 +202,26 @@ namespace Google.Cloud.Monitoring.V3
         /// </list>
         /// Retry will be attempted on the following response status codes:
         /// <list>
-        /// <item><description><see cref="StatusCode.DeadlineExceeded"/></description></item>
-        /// <item><description><see cref="StatusCode.Unavailable"/></description></item>
+        /// <item><description><see cref="grpccore::StatusCode.DeadlineExceeded"/></description></item>
+        /// <item><description><see cref="grpccore::StatusCode.Unavailable"/></description></item>
         /// </list>
         /// Default RPC expiration is 600000 milliseconds.
         /// </remarks>
-        public CallSettings ListNotificationChannelsSettings { get; set; } = CallSettings.FromCallTiming(
-            CallTiming.FromRetry(new RetrySettings(
+        public gaxgrpc::CallSettings ListNotificationChannelsSettings { get; set; } = gaxgrpc::CallSettings.FromCallTiming(
+            gaxgrpc::CallTiming.FromRetry(new gaxgrpc::RetrySettings(
                 retryBackoff: GetDefaultRetryBackoff(),
                 timeoutBackoff: GetDefaultTimeoutBackoff(),
-                totalExpiration: Expiration.FromTimeout(TimeSpan.FromMilliseconds(600000)),
+                totalExpiration: gax::Expiration.FromTimeout(s::TimeSpan.FromMilliseconds(600000)),
                 retryFilter: IdempotentRetryFilter
             )));
 
         /// <summary>
-        /// <see cref="CallSettings"/> for synchronous and asynchronous calls to
+        /// <see cref="gaxgrpc::CallSettings"/> for synchronous and asynchronous calls to
         /// <c>NotificationChannelServiceClient.GetNotificationChannel</c> and <c>NotificationChannelServiceClient.GetNotificationChannelAsync</c>.
         /// </summary>
         /// <remarks>
         /// The default <c>NotificationChannelServiceClient.GetNotificationChannel</c> and
-        /// <c>NotificationChannelServiceClient.GetNotificationChannelAsync</c> <see cref="RetrySettings"/> are:
+        /// <c>NotificationChannelServiceClient.GetNotificationChannelAsync</c> <see cref="gaxgrpc::RetrySettings"/> are:
         /// <list type="bullet">
         /// <item><description>Initial retry delay: 100 milliseconds</description></item>
         /// <item><description>Retry delay multiplier: 1.3</description></item>
@@ -232,26 +232,26 @@ namespace Google.Cloud.Monitoring.V3
         /// </list>
         /// Retry will be attempted on the following response status codes:
         /// <list>
-        /// <item><description><see cref="StatusCode.DeadlineExceeded"/></description></item>
-        /// <item><description><see cref="StatusCode.Unavailable"/></description></item>
+        /// <item><description><see cref="grpccore::StatusCode.DeadlineExceeded"/></description></item>
+        /// <item><description><see cref="grpccore::StatusCode.Unavailable"/></description></item>
         /// </list>
         /// Default RPC expiration is 600000 milliseconds.
         /// </remarks>
-        public CallSettings GetNotificationChannelSettings { get; set; } = CallSettings.FromCallTiming(
-            CallTiming.FromRetry(new RetrySettings(
+        public gaxgrpc::CallSettings GetNotificationChannelSettings { get; set; } = gaxgrpc::CallSettings.FromCallTiming(
+            gaxgrpc::CallTiming.FromRetry(new gaxgrpc::RetrySettings(
                 retryBackoff: GetDefaultRetryBackoff(),
                 timeoutBackoff: GetDefaultTimeoutBackoff(),
-                totalExpiration: Expiration.FromTimeout(TimeSpan.FromMilliseconds(600000)),
+                totalExpiration: gax::Expiration.FromTimeout(s::TimeSpan.FromMilliseconds(600000)),
                 retryFilter: IdempotentRetryFilter
             )));
 
         /// <summary>
-        /// <see cref="CallSettings"/> for synchronous and asynchronous calls to
+        /// <see cref="gaxgrpc::CallSettings"/> for synchronous and asynchronous calls to
         /// <c>NotificationChannelServiceClient.CreateNotificationChannel</c> and <c>NotificationChannelServiceClient.CreateNotificationChannelAsync</c>.
         /// </summary>
         /// <remarks>
         /// The default <c>NotificationChannelServiceClient.CreateNotificationChannel</c> and
-        /// <c>NotificationChannelServiceClient.CreateNotificationChannelAsync</c> <see cref="RetrySettings"/> are:
+        /// <c>NotificationChannelServiceClient.CreateNotificationChannelAsync</c> <see cref="gaxgrpc::RetrySettings"/> are:
         /// <list type="bullet">
         /// <item><description>Initial retry delay: 100 milliseconds</description></item>
         /// <item><description>Retry delay multiplier: 1.3</description></item>
@@ -266,21 +266,21 @@ namespace Google.Cloud.Monitoring.V3
         /// </list>
         /// Default RPC expiration is 600000 milliseconds.
         /// </remarks>
-        public CallSettings CreateNotificationChannelSettings { get; set; } = CallSettings.FromCallTiming(
-            CallTiming.FromRetry(new RetrySettings(
+        public gaxgrpc::CallSettings CreateNotificationChannelSettings { get; set; } = gaxgrpc::CallSettings.FromCallTiming(
+            gaxgrpc::CallTiming.FromRetry(new gaxgrpc::RetrySettings(
                 retryBackoff: GetDefaultRetryBackoff(),
                 timeoutBackoff: GetDefaultTimeoutBackoff(),
-                totalExpiration: Expiration.FromTimeout(TimeSpan.FromMilliseconds(600000)),
+                totalExpiration: gax::Expiration.FromTimeout(s::TimeSpan.FromMilliseconds(600000)),
                 retryFilter: NonIdempotentRetryFilter
             )));
 
         /// <summary>
-        /// <see cref="CallSettings"/> for synchronous and asynchronous calls to
+        /// <see cref="gaxgrpc::CallSettings"/> for synchronous and asynchronous calls to
         /// <c>NotificationChannelServiceClient.UpdateNotificationChannel</c> and <c>NotificationChannelServiceClient.UpdateNotificationChannelAsync</c>.
         /// </summary>
         /// <remarks>
         /// The default <c>NotificationChannelServiceClient.UpdateNotificationChannel</c> and
-        /// <c>NotificationChannelServiceClient.UpdateNotificationChannelAsync</c> <see cref="RetrySettings"/> are:
+        /// <c>NotificationChannelServiceClient.UpdateNotificationChannelAsync</c> <see cref="gaxgrpc::RetrySettings"/> are:
         /// <list type="bullet">
         /// <item><description>Initial retry delay: 100 milliseconds</description></item>
         /// <item><description>Retry delay multiplier: 1.3</description></item>
@@ -295,21 +295,21 @@ namespace Google.Cloud.Monitoring.V3
         /// </list>
         /// Default RPC expiration is 600000 milliseconds.
         /// </remarks>
-        public CallSettings UpdateNotificationChannelSettings { get; set; } = CallSettings.FromCallTiming(
-            CallTiming.FromRetry(new RetrySettings(
+        public gaxgrpc::CallSettings UpdateNotificationChannelSettings { get; set; } = gaxgrpc::CallSettings.FromCallTiming(
+            gaxgrpc::CallTiming.FromRetry(new gaxgrpc::RetrySettings(
                 retryBackoff: GetDefaultRetryBackoff(),
                 timeoutBackoff: GetDefaultTimeoutBackoff(),
-                totalExpiration: Expiration.FromTimeout(TimeSpan.FromMilliseconds(600000)),
+                totalExpiration: gax::Expiration.FromTimeout(s::TimeSpan.FromMilliseconds(600000)),
                 retryFilter: NonIdempotentRetryFilter
             )));
 
         /// <summary>
-        /// <see cref="CallSettings"/> for synchronous and asynchronous calls to
+        /// <see cref="gaxgrpc::CallSettings"/> for synchronous and asynchronous calls to
         /// <c>NotificationChannelServiceClient.DeleteNotificationChannel</c> and <c>NotificationChannelServiceClient.DeleteNotificationChannelAsync</c>.
         /// </summary>
         /// <remarks>
         /// The default <c>NotificationChannelServiceClient.DeleteNotificationChannel</c> and
-        /// <c>NotificationChannelServiceClient.DeleteNotificationChannelAsync</c> <see cref="RetrySettings"/> are:
+        /// <c>NotificationChannelServiceClient.DeleteNotificationChannelAsync</c> <see cref="gaxgrpc::RetrySettings"/> are:
         /// <list type="bullet">
         /// <item><description>Initial retry delay: 100 milliseconds</description></item>
         /// <item><description>Retry delay multiplier: 1.3</description></item>
@@ -320,16 +320,16 @@ namespace Google.Cloud.Monitoring.V3
         /// </list>
         /// Retry will be attempted on the following response status codes:
         /// <list>
-        /// <item><description><see cref="StatusCode.DeadlineExceeded"/></description></item>
-        /// <item><description><see cref="StatusCode.Unavailable"/></description></item>
+        /// <item><description><see cref="grpccore::StatusCode.DeadlineExceeded"/></description></item>
+        /// <item><description><see cref="grpccore::StatusCode.Unavailable"/></description></item>
         /// </list>
         /// Default RPC expiration is 600000 milliseconds.
         /// </remarks>
-        public CallSettings DeleteNotificationChannelSettings { get; set; } = CallSettings.FromCallTiming(
-            CallTiming.FromRetry(new RetrySettings(
+        public gaxgrpc::CallSettings DeleteNotificationChannelSettings { get; set; } = gaxgrpc::CallSettings.FromCallTiming(
+            gaxgrpc::CallTiming.FromRetry(new gaxgrpc::RetrySettings(
                 retryBackoff: GetDefaultRetryBackoff(),
                 timeoutBackoff: GetDefaultTimeoutBackoff(),
-                totalExpiration: Expiration.FromTimeout(TimeSpan.FromMilliseconds(600000)),
+                totalExpiration: gax::Expiration.FromTimeout(s::TimeSpan.FromMilliseconds(600000)),
                 retryFilter: IdempotentRetryFilter
             )));
 
@@ -348,7 +348,7 @@ namespace Google.Cloud.Monitoring.V3
         /// <summary>
         /// The default endpoint for the NotificationChannelService service, which is a host of "monitoring.googleapis.com" and a port of 443.
         /// </summary>
-        public static ServiceEndpoint DefaultEndpoint { get; } = new ServiceEndpoint("monitoring.googleapis.com", 443);
+        public static gaxgrpc::ServiceEndpoint DefaultEndpoint { get; } = new gaxgrpc::ServiceEndpoint("monitoring.googleapis.com", 443);
 
         /// <summary>
         /// The default NotificationChannelService scopes.
@@ -362,14 +362,14 @@ namespace Google.Cloud.Monitoring.V3
         /// <item><description>"https://www.googleapis.com/auth/monitoring.write"</description></item>
         /// </list>
         /// </remarks>
-        public static IReadOnlyList<string> DefaultScopes { get; } = new ReadOnlyCollection<string>(new string[] {
+        public static scg::IReadOnlyList<string> DefaultScopes { get; } = new sco::ReadOnlyCollection<string>(new string[] {
             "https://www.googleapis.com/auth/cloud-platform",
             "https://www.googleapis.com/auth/monitoring",
             "https://www.googleapis.com/auth/monitoring.read",
             "https://www.googleapis.com/auth/monitoring.write",
         });
 
-        private static readonly ChannelPool s_channelPool = new ChannelPool(DefaultScopes);
+        private static readonly gaxgrpc::ChannelPool s_channelPool = new gaxgrpc::ChannelPool(DefaultScopes);
 
         // Note: we could have parameterless overloads of Create and CreateAsync,
         // documented to just use the default endpoint, settings and credentials.
@@ -383,12 +383,12 @@ namespace Google.Cloud.Monitoring.V3
         /// and creating a channel connecting to the given endpoint with application default credentials where
         /// necessary.
         /// </summary>
-        /// <param name="endpoint">Optional <see cref="ServiceEndpoint"/>.</param>
+        /// <param name="endpoint">Optional <see cref="gaxgrpc::ServiceEndpoint"/>.</param>
         /// <param name="settings">Optional <see cref="NotificationChannelServiceSettings"/>.</param>
         /// <returns>The task representing the created <see cref="NotificationChannelServiceClient"/>.</returns>
-        public static async Task<NotificationChannelServiceClient> CreateAsync(ServiceEndpoint endpoint = null, NotificationChannelServiceSettings settings = null)
+        public static async stt::Task<NotificationChannelServiceClient> CreateAsync(gaxgrpc::ServiceEndpoint endpoint = null, NotificationChannelServiceSettings settings = null)
         {
-            Channel channel = await s_channelPool.GetChannelAsync(endpoint ?? DefaultEndpoint).ConfigureAwait(false);
+            grpccore::Channel channel = await s_channelPool.GetChannelAsync(endpoint ?? DefaultEndpoint).ConfigureAwait(false);
             return Create(channel, settings);
         }
 
@@ -397,45 +397,45 @@ namespace Google.Cloud.Monitoring.V3
         /// and creating a channel connecting to the given endpoint with application default credentials where
         /// necessary.
         /// </summary>
-        /// <param name="endpoint">Optional <see cref="ServiceEndpoint"/>.</param>
+        /// <param name="endpoint">Optional <see cref="gaxgrpc::ServiceEndpoint"/>.</param>
         /// <param name="settings">Optional <see cref="NotificationChannelServiceSettings"/>.</param>
         /// <returns>The created <see cref="NotificationChannelServiceClient"/>.</returns>
-        public static NotificationChannelServiceClient Create(ServiceEndpoint endpoint = null, NotificationChannelServiceSettings settings = null)
+        public static NotificationChannelServiceClient Create(gaxgrpc::ServiceEndpoint endpoint = null, NotificationChannelServiceSettings settings = null)
         {
-            Channel channel = s_channelPool.GetChannel(endpoint ?? DefaultEndpoint);
+            grpccore::Channel channel = s_channelPool.GetChannel(endpoint ?? DefaultEndpoint);
             return Create(channel, settings);
         }
 
         /// <summary>
         /// Creates a <see cref="NotificationChannelServiceClient"/> which uses the specified channel for remote operations.
         /// </summary>
-        /// <param name="channel">The <see cref="Channel"/> for remote operations. Must not be null.</param>
+        /// <param name="channel">The <see cref="grpccore::Channel"/> for remote operations. Must not be null.</param>
         /// <param name="settings">Optional <see cref="NotificationChannelServiceSettings"/>.</param>
         /// <returns>The created <see cref="NotificationChannelServiceClient"/>.</returns>
-        public static NotificationChannelServiceClient Create(Channel channel, NotificationChannelServiceSettings settings = null)
+        public static NotificationChannelServiceClient Create(grpccore::Channel channel, NotificationChannelServiceSettings settings = null)
         {
-            GaxPreconditions.CheckNotNull(channel, nameof(channel));
+            gax::GaxPreconditions.CheckNotNull(channel, nameof(channel));
             NotificationChannelService.NotificationChannelServiceClient grpcClient = new NotificationChannelService.NotificationChannelServiceClient(channel);
             return new NotificationChannelServiceClientImpl(grpcClient, settings);
         }
 
         /// <summary>
-        /// Shuts down any channels automatically created by <see cref="Create(ServiceEndpoint, NotificationChannelServiceSettings)"/>
-        /// and <see cref="CreateAsync(ServiceEndpoint, NotificationChannelServiceSettings)"/>. Channels which weren't automatically
+        /// Shuts down any channels automatically created by <see cref="Create(gaxgrpc::ServiceEndpoint, NotificationChannelServiceSettings)"/>
+        /// and <see cref="CreateAsync(gaxgrpc::ServiceEndpoint, NotificationChannelServiceSettings)"/>. Channels which weren't automatically
         /// created are not affected.
         /// </summary>
-        /// <remarks>After calling this method, further calls to <see cref="Create(ServiceEndpoint, NotificationChannelServiceSettings)"/>
-        /// and <see cref="CreateAsync(ServiceEndpoint, NotificationChannelServiceSettings)"/> will create new channels, which could
+        /// <remarks>After calling this method, further calls to <see cref="Create(gaxgrpc::ServiceEndpoint, NotificationChannelServiceSettings)"/>
+        /// and <see cref="CreateAsync(gaxgrpc::ServiceEndpoint, NotificationChannelServiceSettings)"/> will create new channels, which could
         /// in turn be shut down by another call to this method.</remarks>
         /// <returns>A task representing the asynchronous shutdown operation.</returns>
-        public static Task ShutdownDefaultChannelsAsync() => s_channelPool.ShutdownChannelsAsync();
+        public static stt::Task ShutdownDefaultChannelsAsync() => s_channelPool.ShutdownChannelsAsync();
 
         /// <summary>
         /// The underlying gRPC NotificationChannelService client.
         /// </summary>
         public virtual NotificationChannelService.NotificationChannelServiceClient GrpcClient
         {
-            get { throw new NotImplementedException(); }
+            get { throw new s::NotImplementedException(); }
         }
 
         /// <summary>
@@ -467,14 +467,14 @@ namespace Google.Cloud.Monitoring.V3
         /// <returns>
         /// A pageable asynchronous sequence of <see cref="NotificationChannelDescriptor"/> resources.
         /// </returns>
-        public virtual PagedAsyncEnumerable<ListNotificationChannelDescriptorsResponse, NotificationChannelDescriptor> ListNotificationChannelDescriptorsAsync(
+        public virtual gax::PagedAsyncEnumerable<ListNotificationChannelDescriptorsResponse, NotificationChannelDescriptor> ListNotificationChannelDescriptorsAsync(
             ProjectName name,
             string pageToken = null,
             int? pageSize = null,
-            CallSettings callSettings = null) => ListNotificationChannelDescriptorsAsync(
+            gaxgrpc::CallSettings callSettings = null) => ListNotificationChannelDescriptorsAsync(
                 new ListNotificationChannelDescriptorsRequest
                 {
-                    ProjectName = GaxPreconditions.CheckNotNull(name, nameof(name)),
+                    ProjectName = gax::GaxPreconditions.CheckNotNull(name, nameof(name)),
                     PageToken = pageToken ?? "",
                     PageSize = pageSize ?? 0,
                 },
@@ -509,14 +509,14 @@ namespace Google.Cloud.Monitoring.V3
         /// <returns>
         /// A pageable sequence of <see cref="NotificationChannelDescriptor"/> resources.
         /// </returns>
-        public virtual PagedEnumerable<ListNotificationChannelDescriptorsResponse, NotificationChannelDescriptor> ListNotificationChannelDescriptors(
+        public virtual gax::PagedEnumerable<ListNotificationChannelDescriptorsResponse, NotificationChannelDescriptor> ListNotificationChannelDescriptors(
             ProjectName name,
             string pageToken = null,
             int? pageSize = null,
-            CallSettings callSettings = null) => ListNotificationChannelDescriptors(
+            gaxgrpc::CallSettings callSettings = null) => ListNotificationChannelDescriptors(
                 new ListNotificationChannelDescriptorsRequest
                 {
-                    ProjectName = GaxPreconditions.CheckNotNull(name, nameof(name)),
+                    ProjectName = gax::GaxPreconditions.CheckNotNull(name, nameof(name)),
                     PageToken = pageToken ?? "",
                     PageSize = pageSize ?? 0,
                 },
@@ -535,11 +535,11 @@ namespace Google.Cloud.Monitoring.V3
         /// <returns>
         /// A pageable asynchronous sequence of <see cref="NotificationChannelDescriptor"/> resources.
         /// </returns>
-        public virtual PagedAsyncEnumerable<ListNotificationChannelDescriptorsResponse, NotificationChannelDescriptor> ListNotificationChannelDescriptorsAsync(
+        public virtual gax::PagedAsyncEnumerable<ListNotificationChannelDescriptorsResponse, NotificationChannelDescriptor> ListNotificationChannelDescriptorsAsync(
             ListNotificationChannelDescriptorsRequest request,
-            CallSettings callSettings = null)
+            gaxgrpc::CallSettings callSettings = null)
         {
-            throw new NotImplementedException();
+            throw new s::NotImplementedException();
         }
 
         /// <summary>
@@ -555,11 +555,11 @@ namespace Google.Cloud.Monitoring.V3
         /// <returns>
         /// A pageable sequence of <see cref="NotificationChannelDescriptor"/> resources.
         /// </returns>
-        public virtual PagedEnumerable<ListNotificationChannelDescriptorsResponse, NotificationChannelDescriptor> ListNotificationChannelDescriptors(
+        public virtual gax::PagedEnumerable<ListNotificationChannelDescriptorsResponse, NotificationChannelDescriptor> ListNotificationChannelDescriptors(
             ListNotificationChannelDescriptorsRequest request,
-            CallSettings callSettings = null)
+            gaxgrpc::CallSettings callSettings = null)
         {
-            throw new NotImplementedException();
+            throw new s::NotImplementedException();
         }
 
         /// <summary>
@@ -576,12 +576,12 @@ namespace Google.Cloud.Monitoring.V3
         /// <returns>
         /// A Task containing the RPC response.
         /// </returns>
-        public virtual Task<NotificationChannelDescriptor> GetNotificationChannelDescriptorAsync(
+        public virtual stt::Task<NotificationChannelDescriptor> GetNotificationChannelDescriptorAsync(
             NotificationChannelDescriptorName name,
-            CallSettings callSettings = null) => GetNotificationChannelDescriptorAsync(
+            gaxgrpc::CallSettings callSettings = null) => GetNotificationChannelDescriptorAsync(
                 new GetNotificationChannelDescriptorRequest
                 {
-                    NotificationChannelDescriptorName = GaxPreconditions.CheckNotNull(name, nameof(name)),
+                    NotificationChannelDescriptorName = gax::GaxPreconditions.CheckNotNull(name, nameof(name)),
                 },
                 callSettings);
 
@@ -594,16 +594,16 @@ namespace Google.Cloud.Monitoring.V3
         /// `projects/[PROJECT_ID]/notificationChannelDescriptors/{channel_type}`.
         /// </param>
         /// <param name="cancellationToken">
-        /// A <see cref="CancellationToken"/> to use for this RPC.
+        /// A <see cref="st::CancellationToken"/> to use for this RPC.
         /// </param>
         /// <returns>
         /// A Task containing the RPC response.
         /// </returns>
-        public virtual Task<NotificationChannelDescriptor> GetNotificationChannelDescriptorAsync(
+        public virtual stt::Task<NotificationChannelDescriptor> GetNotificationChannelDescriptorAsync(
             NotificationChannelDescriptorName name,
-            CancellationToken cancellationToken) => GetNotificationChannelDescriptorAsync(
+            st::CancellationToken cancellationToken) => GetNotificationChannelDescriptorAsync(
                 name,
-                CallSettings.FromCancellationToken(cancellationToken));
+                gaxgrpc::CallSettings.FromCancellationToken(cancellationToken));
 
         /// <summary>
         /// Gets a single channel descriptor. The descriptor indicates which fields
@@ -621,10 +621,10 @@ namespace Google.Cloud.Monitoring.V3
         /// </returns>
         public virtual NotificationChannelDescriptor GetNotificationChannelDescriptor(
             NotificationChannelDescriptorName name,
-            CallSettings callSettings = null) => GetNotificationChannelDescriptor(
+            gaxgrpc::CallSettings callSettings = null) => GetNotificationChannelDescriptor(
                 new GetNotificationChannelDescriptorRequest
                 {
-                    NotificationChannelDescriptorName = GaxPreconditions.CheckNotNull(name, nameof(name)),
+                    NotificationChannelDescriptorName = gax::GaxPreconditions.CheckNotNull(name, nameof(name)),
                 },
                 callSettings);
 
@@ -641,11 +641,11 @@ namespace Google.Cloud.Monitoring.V3
         /// <returns>
         /// A Task containing the RPC response.
         /// </returns>
-        public virtual Task<NotificationChannelDescriptor> GetNotificationChannelDescriptorAsync(
+        public virtual stt::Task<NotificationChannelDescriptor> GetNotificationChannelDescriptorAsync(
             GetNotificationChannelDescriptorRequest request,
-            CallSettings callSettings = null)
+            gaxgrpc::CallSettings callSettings = null)
         {
-            throw new NotImplementedException();
+            throw new s::NotImplementedException();
         }
 
         /// <summary>
@@ -656,16 +656,16 @@ namespace Google.Cloud.Monitoring.V3
         /// The request object containing all of the parameters for the API call.
         /// </param>
         /// <param name="cancellationToken">
-        /// A <see cref="CancellationToken"/> to use for this RPC.
+        /// A <see cref="st::CancellationToken"/> to use for this RPC.
         /// </param>
         /// <returns>
         /// A Task containing the RPC response.
         /// </returns>
-        public virtual Task<NotificationChannelDescriptor> GetNotificationChannelDescriptorAsync(
+        public virtual stt::Task<NotificationChannelDescriptor> GetNotificationChannelDescriptorAsync(
             GetNotificationChannelDescriptorRequest request,
-            CancellationToken cancellationToken) => GetNotificationChannelDescriptorAsync(
+            st::CancellationToken cancellationToken) => GetNotificationChannelDescriptorAsync(
                 request,
-                CallSettings.FromCancellationToken(cancellationToken));
+                gaxgrpc::CallSettings.FromCancellationToken(cancellationToken));
 
         /// <summary>
         /// Gets a single channel descriptor. The descriptor indicates which fields
@@ -682,9 +682,9 @@ namespace Google.Cloud.Monitoring.V3
         /// </returns>
         public virtual NotificationChannelDescriptor GetNotificationChannelDescriptor(
             GetNotificationChannelDescriptorRequest request,
-            CallSettings callSettings = null)
+            gaxgrpc::CallSettings callSettings = null)
         {
-            throw new NotImplementedException();
+            throw new s::NotImplementedException();
         }
 
         /// <summary>
@@ -712,14 +712,14 @@ namespace Google.Cloud.Monitoring.V3
         /// <returns>
         /// A pageable asynchronous sequence of <see cref="NotificationChannel"/> resources.
         /// </returns>
-        public virtual PagedAsyncEnumerable<ListNotificationChannelsResponse, NotificationChannel> ListNotificationChannelsAsync(
+        public virtual gax::PagedAsyncEnumerable<ListNotificationChannelsResponse, NotificationChannel> ListNotificationChannelsAsync(
             ProjectName name,
             string pageToken = null,
             int? pageSize = null,
-            CallSettings callSettings = null) => ListNotificationChannelsAsync(
+            gaxgrpc::CallSettings callSettings = null) => ListNotificationChannelsAsync(
                 new ListNotificationChannelsRequest
                 {
-                    ProjectName = GaxPreconditions.CheckNotNull(name, nameof(name)),
+                    ProjectName = gax::GaxPreconditions.CheckNotNull(name, nameof(name)),
                     PageToken = pageToken ?? "",
                     PageSize = pageSize ?? 0,
                 },
@@ -750,14 +750,14 @@ namespace Google.Cloud.Monitoring.V3
         /// <returns>
         /// A pageable sequence of <see cref="NotificationChannel"/> resources.
         /// </returns>
-        public virtual PagedEnumerable<ListNotificationChannelsResponse, NotificationChannel> ListNotificationChannels(
+        public virtual gax::PagedEnumerable<ListNotificationChannelsResponse, NotificationChannel> ListNotificationChannels(
             ProjectName name,
             string pageToken = null,
             int? pageSize = null,
-            CallSettings callSettings = null) => ListNotificationChannels(
+            gaxgrpc::CallSettings callSettings = null) => ListNotificationChannels(
                 new ListNotificationChannelsRequest
                 {
-                    ProjectName = GaxPreconditions.CheckNotNull(name, nameof(name)),
+                    ProjectName = gax::GaxPreconditions.CheckNotNull(name, nameof(name)),
                     PageToken = pageToken ?? "",
                     PageSize = pageSize ?? 0,
                 },
@@ -775,11 +775,11 @@ namespace Google.Cloud.Monitoring.V3
         /// <returns>
         /// A pageable asynchronous sequence of <see cref="NotificationChannel"/> resources.
         /// </returns>
-        public virtual PagedAsyncEnumerable<ListNotificationChannelsResponse, NotificationChannel> ListNotificationChannelsAsync(
+        public virtual gax::PagedAsyncEnumerable<ListNotificationChannelsResponse, NotificationChannel> ListNotificationChannelsAsync(
             ListNotificationChannelsRequest request,
-            CallSettings callSettings = null)
+            gaxgrpc::CallSettings callSettings = null)
         {
-            throw new NotImplementedException();
+            throw new s::NotImplementedException();
         }
 
         /// <summary>
@@ -794,11 +794,11 @@ namespace Google.Cloud.Monitoring.V3
         /// <returns>
         /// A pageable sequence of <see cref="NotificationChannel"/> resources.
         /// </returns>
-        public virtual PagedEnumerable<ListNotificationChannelsResponse, NotificationChannel> ListNotificationChannels(
+        public virtual gax::PagedEnumerable<ListNotificationChannelsResponse, NotificationChannel> ListNotificationChannels(
             ListNotificationChannelsRequest request,
-            CallSettings callSettings = null)
+            gaxgrpc::CallSettings callSettings = null)
         {
-            throw new NotImplementedException();
+            throw new s::NotImplementedException();
         }
 
         /// <summary>
@@ -818,12 +818,12 @@ namespace Google.Cloud.Monitoring.V3
         /// <returns>
         /// A Task containing the RPC response.
         /// </returns>
-        public virtual Task<NotificationChannel> GetNotificationChannelAsync(
+        public virtual stt::Task<NotificationChannel> GetNotificationChannelAsync(
             NotificationChannelName name,
-            CallSettings callSettings = null) => GetNotificationChannelAsync(
+            gaxgrpc::CallSettings callSettings = null) => GetNotificationChannelAsync(
                 new GetNotificationChannelRequest
                 {
-                    NotificationChannelName = GaxPreconditions.CheckNotNull(name, nameof(name)),
+                    NotificationChannelName = gax::GaxPreconditions.CheckNotNull(name, nameof(name)),
                 },
                 callSettings);
 
@@ -839,16 +839,16 @@ namespace Google.Cloud.Monitoring.V3
         /// `projects/[PROJECT_ID]/notificationChannels/[CHANNEL_ID]`.
         /// </param>
         /// <param name="cancellationToken">
-        /// A <see cref="CancellationToken"/> to use for this RPC.
+        /// A <see cref="st::CancellationToken"/> to use for this RPC.
         /// </param>
         /// <returns>
         /// A Task containing the RPC response.
         /// </returns>
-        public virtual Task<NotificationChannel> GetNotificationChannelAsync(
+        public virtual stt::Task<NotificationChannel> GetNotificationChannelAsync(
             NotificationChannelName name,
-            CancellationToken cancellationToken) => GetNotificationChannelAsync(
+            st::CancellationToken cancellationToken) => GetNotificationChannelAsync(
                 name,
-                CallSettings.FromCancellationToken(cancellationToken));
+                gaxgrpc::CallSettings.FromCancellationToken(cancellationToken));
 
         /// <summary>
         /// Gets a single notification channel. The channel includes the relevant
@@ -869,10 +869,10 @@ namespace Google.Cloud.Monitoring.V3
         /// </returns>
         public virtual NotificationChannel GetNotificationChannel(
             NotificationChannelName name,
-            CallSettings callSettings = null) => GetNotificationChannel(
+            gaxgrpc::CallSettings callSettings = null) => GetNotificationChannel(
                 new GetNotificationChannelRequest
                 {
-                    NotificationChannelName = GaxPreconditions.CheckNotNull(name, nameof(name)),
+                    NotificationChannelName = gax::GaxPreconditions.CheckNotNull(name, nameof(name)),
                 },
                 callSettings);
 
@@ -892,11 +892,11 @@ namespace Google.Cloud.Monitoring.V3
         /// <returns>
         /// A Task containing the RPC response.
         /// </returns>
-        public virtual Task<NotificationChannel> GetNotificationChannelAsync(
+        public virtual stt::Task<NotificationChannel> GetNotificationChannelAsync(
             GetNotificationChannelRequest request,
-            CallSettings callSettings = null)
+            gaxgrpc::CallSettings callSettings = null)
         {
-            throw new NotImplementedException();
+            throw new s::NotImplementedException();
         }
 
         /// <summary>
@@ -910,16 +910,16 @@ namespace Google.Cloud.Monitoring.V3
         /// The request object containing all of the parameters for the API call.
         /// </param>
         /// <param name="cancellationToken">
-        /// A <see cref="CancellationToken"/> to use for this RPC.
+        /// A <see cref="st::CancellationToken"/> to use for this RPC.
         /// </param>
         /// <returns>
         /// A Task containing the RPC response.
         /// </returns>
-        public virtual Task<NotificationChannel> GetNotificationChannelAsync(
+        public virtual stt::Task<NotificationChannel> GetNotificationChannelAsync(
             GetNotificationChannelRequest request,
-            CancellationToken cancellationToken) => GetNotificationChannelAsync(
+            st::CancellationToken cancellationToken) => GetNotificationChannelAsync(
                 request,
-                CallSettings.FromCancellationToken(cancellationToken));
+                gaxgrpc::CallSettings.FromCancellationToken(cancellationToken));
 
         /// <summary>
         /// Gets a single notification channel. The channel includes the relevant
@@ -939,9 +939,9 @@ namespace Google.Cloud.Monitoring.V3
         /// </returns>
         public virtual NotificationChannel GetNotificationChannel(
             GetNotificationChannelRequest request,
-            CallSettings callSettings = null)
+            gaxgrpc::CallSettings callSettings = null)
         {
-            throw new NotImplementedException();
+            throw new s::NotImplementedException();
         }
 
         /// <summary>
@@ -967,14 +967,14 @@ namespace Google.Cloud.Monitoring.V3
         /// <returns>
         /// A Task containing the RPC response.
         /// </returns>
-        public virtual Task<NotificationChannel> CreateNotificationChannelAsync(
+        public virtual stt::Task<NotificationChannel> CreateNotificationChannelAsync(
             ProjectName name,
             NotificationChannel notificationChannel,
-            CallSettings callSettings = null) => CreateNotificationChannelAsync(
+            gaxgrpc::CallSettings callSettings = null) => CreateNotificationChannelAsync(
                 new CreateNotificationChannelRequest
                 {
-                    ProjectName = GaxPreconditions.CheckNotNull(name, nameof(name)),
-                    NotificationChannel = GaxPreconditions.CheckNotNull(notificationChannel, nameof(notificationChannel)),
+                    ProjectName = gax::GaxPreconditions.CheckNotNull(name, nameof(name)),
+                    NotificationChannel = gax::GaxPreconditions.CheckNotNull(notificationChannel, nameof(notificationChannel)),
                 },
                 callSettings);
 
@@ -996,18 +996,18 @@ namespace Google.Cloud.Monitoring.V3
         /// The definition of the `NotificationChannel` to create.
         /// </param>
         /// <param name="cancellationToken">
-        /// A <see cref="CancellationToken"/> to use for this RPC.
+        /// A <see cref="st::CancellationToken"/> to use for this RPC.
         /// </param>
         /// <returns>
         /// A Task containing the RPC response.
         /// </returns>
-        public virtual Task<NotificationChannel> CreateNotificationChannelAsync(
+        public virtual stt::Task<NotificationChannel> CreateNotificationChannelAsync(
             ProjectName name,
             NotificationChannel notificationChannel,
-            CancellationToken cancellationToken) => CreateNotificationChannelAsync(
+            st::CancellationToken cancellationToken) => CreateNotificationChannelAsync(
                 name,
                 notificationChannel,
-                CallSettings.FromCancellationToken(cancellationToken));
+                gaxgrpc::CallSettings.FromCancellationToken(cancellationToken));
 
         /// <summary>
         /// Creates a new notification channel, representing a single notification
@@ -1035,11 +1035,11 @@ namespace Google.Cloud.Monitoring.V3
         public virtual NotificationChannel CreateNotificationChannel(
             ProjectName name,
             NotificationChannel notificationChannel,
-            CallSettings callSettings = null) => CreateNotificationChannel(
+            gaxgrpc::CallSettings callSettings = null) => CreateNotificationChannel(
                 new CreateNotificationChannelRequest
                 {
-                    ProjectName = GaxPreconditions.CheckNotNull(name, nameof(name)),
-                    NotificationChannel = GaxPreconditions.CheckNotNull(notificationChannel, nameof(notificationChannel)),
+                    ProjectName = gax::GaxPreconditions.CheckNotNull(name, nameof(name)),
+                    NotificationChannel = gax::GaxPreconditions.CheckNotNull(notificationChannel, nameof(notificationChannel)),
                 },
                 callSettings);
 
@@ -1056,11 +1056,11 @@ namespace Google.Cloud.Monitoring.V3
         /// <returns>
         /// A Task containing the RPC response.
         /// </returns>
-        public virtual Task<NotificationChannel> CreateNotificationChannelAsync(
+        public virtual stt::Task<NotificationChannel> CreateNotificationChannelAsync(
             CreateNotificationChannelRequest request,
-            CallSettings callSettings = null)
+            gaxgrpc::CallSettings callSettings = null)
         {
-            throw new NotImplementedException();
+            throw new s::NotImplementedException();
         }
 
         /// <summary>
@@ -1071,16 +1071,16 @@ namespace Google.Cloud.Monitoring.V3
         /// The request object containing all of the parameters for the API call.
         /// </param>
         /// <param name="cancellationToken">
-        /// A <see cref="CancellationToken"/> to use for this RPC.
+        /// A <see cref="st::CancellationToken"/> to use for this RPC.
         /// </param>
         /// <returns>
         /// A Task containing the RPC response.
         /// </returns>
-        public virtual Task<NotificationChannel> CreateNotificationChannelAsync(
+        public virtual stt::Task<NotificationChannel> CreateNotificationChannelAsync(
             CreateNotificationChannelRequest request,
-            CancellationToken cancellationToken) => CreateNotificationChannelAsync(
+            st::CancellationToken cancellationToken) => CreateNotificationChannelAsync(
                 request,
-                CallSettings.FromCancellationToken(cancellationToken));
+                gaxgrpc::CallSettings.FromCancellationToken(cancellationToken));
 
         /// <summary>
         /// Creates a new notification channel, representing a single notification
@@ -1097,9 +1097,9 @@ namespace Google.Cloud.Monitoring.V3
         /// </returns>
         public virtual NotificationChannel CreateNotificationChannel(
             CreateNotificationChannelRequest request,
-            CallSettings callSettings = null)
+            gaxgrpc::CallSettings callSettings = null)
         {
-            throw new NotImplementedException();
+            throw new s::NotImplementedException();
         }
 
         /// <summary>
@@ -1121,14 +1121,14 @@ namespace Google.Cloud.Monitoring.V3
         /// <returns>
         /// A Task containing the RPC response.
         /// </returns>
-        public virtual Task<NotificationChannel> UpdateNotificationChannelAsync(
-            FieldMask updateMask,
+        public virtual stt::Task<NotificationChannel> UpdateNotificationChannelAsync(
+            protowkt::FieldMask updateMask,
             NotificationChannel notificationChannel,
-            CallSettings callSettings = null) => UpdateNotificationChannelAsync(
+            gaxgrpc::CallSettings callSettings = null) => UpdateNotificationChannelAsync(
                 new UpdateNotificationChannelRequest
                 {
                     UpdateMask = updateMask, // Optional
-                    NotificationChannel = GaxPreconditions.CheckNotNull(notificationChannel, nameof(notificationChannel)),
+                    NotificationChannel = gax::GaxPreconditions.CheckNotNull(notificationChannel, nameof(notificationChannel)),
                 },
                 callSettings);
 
@@ -1146,18 +1146,18 @@ namespace Google.Cloud.Monitoring.V3
         /// included in the `update_mask`.
         /// </param>
         /// <param name="cancellationToken">
-        /// A <see cref="CancellationToken"/> to use for this RPC.
+        /// A <see cref="st::CancellationToken"/> to use for this RPC.
         /// </param>
         /// <returns>
         /// A Task containing the RPC response.
         /// </returns>
-        public virtual Task<NotificationChannel> UpdateNotificationChannelAsync(
-            FieldMask updateMask,
+        public virtual stt::Task<NotificationChannel> UpdateNotificationChannelAsync(
+            protowkt::FieldMask updateMask,
             NotificationChannel notificationChannel,
-            CancellationToken cancellationToken) => UpdateNotificationChannelAsync(
+            st::CancellationToken cancellationToken) => UpdateNotificationChannelAsync(
                 updateMask,
                 notificationChannel,
-                CallSettings.FromCancellationToken(cancellationToken));
+                gaxgrpc::CallSettings.FromCancellationToken(cancellationToken));
 
         /// <summary>
         /// Updates a notification channel. Fields not specified in the field mask
@@ -1179,13 +1179,13 @@ namespace Google.Cloud.Monitoring.V3
         /// The RPC response.
         /// </returns>
         public virtual NotificationChannel UpdateNotificationChannel(
-            FieldMask updateMask,
+            protowkt::FieldMask updateMask,
             NotificationChannel notificationChannel,
-            CallSettings callSettings = null) => UpdateNotificationChannel(
+            gaxgrpc::CallSettings callSettings = null) => UpdateNotificationChannel(
                 new UpdateNotificationChannelRequest
                 {
                     UpdateMask = updateMask, // Optional
-                    NotificationChannel = GaxPreconditions.CheckNotNull(notificationChannel, nameof(notificationChannel)),
+                    NotificationChannel = gax::GaxPreconditions.CheckNotNull(notificationChannel, nameof(notificationChannel)),
                 },
                 callSettings);
 
@@ -1202,11 +1202,11 @@ namespace Google.Cloud.Monitoring.V3
         /// <returns>
         /// A Task containing the RPC response.
         /// </returns>
-        public virtual Task<NotificationChannel> UpdateNotificationChannelAsync(
+        public virtual stt::Task<NotificationChannel> UpdateNotificationChannelAsync(
             UpdateNotificationChannelRequest request,
-            CallSettings callSettings = null)
+            gaxgrpc::CallSettings callSettings = null)
         {
-            throw new NotImplementedException();
+            throw new s::NotImplementedException();
         }
 
         /// <summary>
@@ -1217,16 +1217,16 @@ namespace Google.Cloud.Monitoring.V3
         /// The request object containing all of the parameters for the API call.
         /// </param>
         /// <param name="cancellationToken">
-        /// A <see cref="CancellationToken"/> to use for this RPC.
+        /// A <see cref="st::CancellationToken"/> to use for this RPC.
         /// </param>
         /// <returns>
         /// A Task containing the RPC response.
         /// </returns>
-        public virtual Task<NotificationChannel> UpdateNotificationChannelAsync(
+        public virtual stt::Task<NotificationChannel> UpdateNotificationChannelAsync(
             UpdateNotificationChannelRequest request,
-            CancellationToken cancellationToken) => UpdateNotificationChannelAsync(
+            st::CancellationToken cancellationToken) => UpdateNotificationChannelAsync(
                 request,
-                CallSettings.FromCancellationToken(cancellationToken));
+                gaxgrpc::CallSettings.FromCancellationToken(cancellationToken));
 
         /// <summary>
         /// Updates a notification channel. Fields not specified in the field mask
@@ -1243,9 +1243,9 @@ namespace Google.Cloud.Monitoring.V3
         /// </returns>
         public virtual NotificationChannel UpdateNotificationChannel(
             UpdateNotificationChannelRequest request,
-            CallSettings callSettings = null)
+            gaxgrpc::CallSettings callSettings = null)
         {
-            throw new NotImplementedException();
+            throw new s::NotImplementedException();
         }
 
         /// <summary>
@@ -1267,13 +1267,13 @@ namespace Google.Cloud.Monitoring.V3
         /// <returns>
         /// A Task that completes when the RPC has completed.
         /// </returns>
-        public virtual Task DeleteNotificationChannelAsync(
+        public virtual stt::Task DeleteNotificationChannelAsync(
             NotificationChannelName name,
             bool? force,
-            CallSettings callSettings = null) => DeleteNotificationChannelAsync(
+            gaxgrpc::CallSettings callSettings = null) => DeleteNotificationChannelAsync(
                 new DeleteNotificationChannelRequest
                 {
-                    NotificationChannelName = GaxPreconditions.CheckNotNull(name, nameof(name)),
+                    NotificationChannelName = gax::GaxPreconditions.CheckNotNull(name, nameof(name)),
                     Force = force ?? false, // Optional
                 },
                 callSettings);
@@ -1292,18 +1292,18 @@ namespace Google.Cloud.Monitoring.V3
         /// alerting policy will fail to be deleted in a delete operation.
         /// </param>
         /// <param name="cancellationToken">
-        /// A <see cref="CancellationToken"/> to use for this RPC.
+        /// A <see cref="st::CancellationToken"/> to use for this RPC.
         /// </param>
         /// <returns>
         /// A Task that completes when the RPC has completed.
         /// </returns>
-        public virtual Task DeleteNotificationChannelAsync(
+        public virtual stt::Task DeleteNotificationChannelAsync(
             NotificationChannelName name,
             bool? force,
-            CancellationToken cancellationToken) => DeleteNotificationChannelAsync(
+            st::CancellationToken cancellationToken) => DeleteNotificationChannelAsync(
                 name,
                 force,
-                CallSettings.FromCancellationToken(cancellationToken));
+                gaxgrpc::CallSettings.FromCancellationToken(cancellationToken));
 
         /// <summary>
         /// Deletes a notification channel.
@@ -1324,10 +1324,10 @@ namespace Google.Cloud.Monitoring.V3
         public virtual void DeleteNotificationChannel(
             NotificationChannelName name,
             bool? force,
-            CallSettings callSettings = null) => DeleteNotificationChannel(
+            gaxgrpc::CallSettings callSettings = null) => DeleteNotificationChannel(
                 new DeleteNotificationChannelRequest
                 {
-                    NotificationChannelName = GaxPreconditions.CheckNotNull(name, nameof(name)),
+                    NotificationChannelName = gax::GaxPreconditions.CheckNotNull(name, nameof(name)),
                     Force = force ?? false, // Optional
                 },
                 callSettings);
@@ -1344,11 +1344,11 @@ namespace Google.Cloud.Monitoring.V3
         /// <returns>
         /// A Task that completes when the RPC has completed.
         /// </returns>
-        public virtual Task DeleteNotificationChannelAsync(
+        public virtual stt::Task DeleteNotificationChannelAsync(
             DeleteNotificationChannelRequest request,
-            CallSettings callSettings = null)
+            gaxgrpc::CallSettings callSettings = null)
         {
-            throw new NotImplementedException();
+            throw new s::NotImplementedException();
         }
 
         /// <summary>
@@ -1358,16 +1358,16 @@ namespace Google.Cloud.Monitoring.V3
         /// The request object containing all of the parameters for the API call.
         /// </param>
         /// <param name="cancellationToken">
-        /// A <see cref="CancellationToken"/> to use for this RPC.
+        /// A <see cref="st::CancellationToken"/> to use for this RPC.
         /// </param>
         /// <returns>
         /// A Task that completes when the RPC has completed.
         /// </returns>
-        public virtual Task DeleteNotificationChannelAsync(
+        public virtual stt::Task DeleteNotificationChannelAsync(
             DeleteNotificationChannelRequest request,
-            CancellationToken cancellationToken) => DeleteNotificationChannelAsync(
+            st::CancellationToken cancellationToken) => DeleteNotificationChannelAsync(
                 request,
-                CallSettings.FromCancellationToken(cancellationToken));
+                gaxgrpc::CallSettings.FromCancellationToken(cancellationToken));
 
         /// <summary>
         /// Deletes a notification channel.
@@ -1380,9 +1380,9 @@ namespace Google.Cloud.Monitoring.V3
         /// </param>
         public virtual void DeleteNotificationChannel(
             DeleteNotificationChannelRequest request,
-            CallSettings callSettings = null)
+            gaxgrpc::CallSettings callSettings = null)
         {
-            throw new NotImplementedException();
+            throw new s::NotImplementedException();
         }
 
     }
@@ -1392,13 +1392,13 @@ namespace Google.Cloud.Monitoring.V3
     /// </summary>
     public sealed partial class NotificationChannelServiceClientImpl : NotificationChannelServiceClient
     {
-        private readonly ApiCall<ListNotificationChannelDescriptorsRequest, ListNotificationChannelDescriptorsResponse> _callListNotificationChannelDescriptors;
-        private readonly ApiCall<GetNotificationChannelDescriptorRequest, NotificationChannelDescriptor> _callGetNotificationChannelDescriptor;
-        private readonly ApiCall<ListNotificationChannelsRequest, ListNotificationChannelsResponse> _callListNotificationChannels;
-        private readonly ApiCall<GetNotificationChannelRequest, NotificationChannel> _callGetNotificationChannel;
-        private readonly ApiCall<CreateNotificationChannelRequest, NotificationChannel> _callCreateNotificationChannel;
-        private readonly ApiCall<UpdateNotificationChannelRequest, NotificationChannel> _callUpdateNotificationChannel;
-        private readonly ApiCall<DeleteNotificationChannelRequest, Empty> _callDeleteNotificationChannel;
+        private readonly gaxgrpc::ApiCall<ListNotificationChannelDescriptorsRequest, ListNotificationChannelDescriptorsResponse> _callListNotificationChannelDescriptors;
+        private readonly gaxgrpc::ApiCall<GetNotificationChannelDescriptorRequest, NotificationChannelDescriptor> _callGetNotificationChannelDescriptor;
+        private readonly gaxgrpc::ApiCall<ListNotificationChannelsRequest, ListNotificationChannelsResponse> _callListNotificationChannels;
+        private readonly gaxgrpc::ApiCall<GetNotificationChannelRequest, NotificationChannel> _callGetNotificationChannel;
+        private readonly gaxgrpc::ApiCall<CreateNotificationChannelRequest, NotificationChannel> _callCreateNotificationChannel;
+        private readonly gaxgrpc::ApiCall<UpdateNotificationChannelRequest, NotificationChannel> _callUpdateNotificationChannel;
+        private readonly gaxgrpc::ApiCall<DeleteNotificationChannelRequest, protowkt::Empty> _callDeleteNotificationChannel;
 
         /// <summary>
         /// Constructs a client wrapper for the NotificationChannelService service, with the specified gRPC client and settings.
@@ -1409,7 +1409,7 @@ namespace Google.Cloud.Monitoring.V3
         {
             GrpcClient = grpcClient;
             NotificationChannelServiceSettings effectiveSettings = settings ?? NotificationChannelServiceSettings.GetDefault();
-            ClientHelper clientHelper = new ClientHelper(effectiveSettings);
+            gaxgrpc::ClientHelper clientHelper = new gaxgrpc::ClientHelper(effectiveSettings);
             _callListNotificationChannelDescriptors = clientHelper.BuildApiCall<ListNotificationChannelDescriptorsRequest, ListNotificationChannelDescriptorsResponse>(
                 GrpcClient.ListNotificationChannelDescriptorsAsync, GrpcClient.ListNotificationChannelDescriptors, effectiveSettings.ListNotificationChannelDescriptorsSettings);
             _callGetNotificationChannelDescriptor = clientHelper.BuildApiCall<GetNotificationChannelDescriptorRequest, NotificationChannelDescriptor>(
@@ -1422,7 +1422,7 @@ namespace Google.Cloud.Monitoring.V3
                 GrpcClient.CreateNotificationChannelAsync, GrpcClient.CreateNotificationChannel, effectiveSettings.CreateNotificationChannelSettings);
             _callUpdateNotificationChannel = clientHelper.BuildApiCall<UpdateNotificationChannelRequest, NotificationChannel>(
                 GrpcClient.UpdateNotificationChannelAsync, GrpcClient.UpdateNotificationChannel, effectiveSettings.UpdateNotificationChannelSettings);
-            _callDeleteNotificationChannel = clientHelper.BuildApiCall<DeleteNotificationChannelRequest, Empty>(
+            _callDeleteNotificationChannel = clientHelper.BuildApiCall<DeleteNotificationChannelRequest, protowkt::Empty>(
                 GrpcClient.DeleteNotificationChannelAsync, GrpcClient.DeleteNotificationChannel, effectiveSettings.DeleteNotificationChannelSettings);
             Modify_ApiCall(ref _callListNotificationChannelDescriptors);
             Modify_ListNotificationChannelDescriptorsApiCall(ref _callListNotificationChannelDescriptors);
@@ -1445,20 +1445,20 @@ namespace Google.Cloud.Monitoring.V3
 
         // Partial methods called for every ApiCall on construction.
         // Allows modification of all the underlying ApiCall objects.
-        partial void Modify_ApiCall<TRequest, TResponse>(ref ApiCall<TRequest, TResponse> call)
-            where TRequest : class, IMessage<TRequest>
-            where TResponse : class, IMessage<TResponse>;
+        partial void Modify_ApiCall<TRequest, TResponse>(ref gaxgrpc::ApiCall<TRequest, TResponse> call)
+            where TRequest : class, proto::IMessage<TRequest>
+            where TResponse : class, proto::IMessage<TResponse>;
 
         // Partial methods called for each ApiCall on construction.
         // Allows per-RPC-method modification of the underlying ApiCall object.
-        partial void Modify_ListNotificationChannelDescriptorsApiCall(ref ApiCall<ListNotificationChannelDescriptorsRequest, ListNotificationChannelDescriptorsResponse> call);
-        partial void Modify_GetNotificationChannelDescriptorApiCall(ref ApiCall<GetNotificationChannelDescriptorRequest, NotificationChannelDescriptor> call);
-        partial void Modify_ListNotificationChannelsApiCall(ref ApiCall<ListNotificationChannelsRequest, ListNotificationChannelsResponse> call);
-        partial void Modify_GetNotificationChannelApiCall(ref ApiCall<GetNotificationChannelRequest, NotificationChannel> call);
-        partial void Modify_CreateNotificationChannelApiCall(ref ApiCall<CreateNotificationChannelRequest, NotificationChannel> call);
-        partial void Modify_UpdateNotificationChannelApiCall(ref ApiCall<UpdateNotificationChannelRequest, NotificationChannel> call);
-        partial void Modify_DeleteNotificationChannelApiCall(ref ApiCall<DeleteNotificationChannelRequest, Empty> call);
-        partial void OnConstruction(NotificationChannelService.NotificationChannelServiceClient grpcClient, NotificationChannelServiceSettings effectiveSettings, ClientHelper clientHelper);
+        partial void Modify_ListNotificationChannelDescriptorsApiCall(ref gaxgrpc::ApiCall<ListNotificationChannelDescriptorsRequest, ListNotificationChannelDescriptorsResponse> call);
+        partial void Modify_GetNotificationChannelDescriptorApiCall(ref gaxgrpc::ApiCall<GetNotificationChannelDescriptorRequest, NotificationChannelDescriptor> call);
+        partial void Modify_ListNotificationChannelsApiCall(ref gaxgrpc::ApiCall<ListNotificationChannelsRequest, ListNotificationChannelsResponse> call);
+        partial void Modify_GetNotificationChannelApiCall(ref gaxgrpc::ApiCall<GetNotificationChannelRequest, NotificationChannel> call);
+        partial void Modify_CreateNotificationChannelApiCall(ref gaxgrpc::ApiCall<CreateNotificationChannelRequest, NotificationChannel> call);
+        partial void Modify_UpdateNotificationChannelApiCall(ref gaxgrpc::ApiCall<UpdateNotificationChannelRequest, NotificationChannel> call);
+        partial void Modify_DeleteNotificationChannelApiCall(ref gaxgrpc::ApiCall<DeleteNotificationChannelRequest, protowkt::Empty> call);
+        partial void OnConstruction(NotificationChannelService.NotificationChannelServiceClient grpcClient, NotificationChannelServiceSettings effectiveSettings, gaxgrpc::ClientHelper clientHelper);
 
         /// <summary>
         /// The underlying gRPC NotificationChannelService client.
@@ -1468,13 +1468,13 @@ namespace Google.Cloud.Monitoring.V3
         // Partial methods called on each request.
         // Allows per-RPC-call modification to the request and CallSettings objects,
         // before the underlying RPC is performed.
-        partial void Modify_ListNotificationChannelDescriptorsRequest(ref ListNotificationChannelDescriptorsRequest request, ref CallSettings settings);
-        partial void Modify_GetNotificationChannelDescriptorRequest(ref GetNotificationChannelDescriptorRequest request, ref CallSettings settings);
-        partial void Modify_ListNotificationChannelsRequest(ref ListNotificationChannelsRequest request, ref CallSettings settings);
-        partial void Modify_GetNotificationChannelRequest(ref GetNotificationChannelRequest request, ref CallSettings settings);
-        partial void Modify_CreateNotificationChannelRequest(ref CreateNotificationChannelRequest request, ref CallSettings settings);
-        partial void Modify_UpdateNotificationChannelRequest(ref UpdateNotificationChannelRequest request, ref CallSettings settings);
-        partial void Modify_DeleteNotificationChannelRequest(ref DeleteNotificationChannelRequest request, ref CallSettings settings);
+        partial void Modify_ListNotificationChannelDescriptorsRequest(ref ListNotificationChannelDescriptorsRequest request, ref gaxgrpc::CallSettings settings);
+        partial void Modify_GetNotificationChannelDescriptorRequest(ref GetNotificationChannelDescriptorRequest request, ref gaxgrpc::CallSettings settings);
+        partial void Modify_ListNotificationChannelsRequest(ref ListNotificationChannelsRequest request, ref gaxgrpc::CallSettings settings);
+        partial void Modify_GetNotificationChannelRequest(ref GetNotificationChannelRequest request, ref gaxgrpc::CallSettings settings);
+        partial void Modify_CreateNotificationChannelRequest(ref CreateNotificationChannelRequest request, ref gaxgrpc::CallSettings settings);
+        partial void Modify_UpdateNotificationChannelRequest(ref UpdateNotificationChannelRequest request, ref gaxgrpc::CallSettings settings);
+        partial void Modify_DeleteNotificationChannelRequest(ref DeleteNotificationChannelRequest request, ref gaxgrpc::CallSettings settings);
 
         /// <summary>
         /// Lists the descriptors for supported channel types. The use of descriptors
@@ -1489,12 +1489,12 @@ namespace Google.Cloud.Monitoring.V3
         /// <returns>
         /// A pageable asynchronous sequence of <see cref="NotificationChannelDescriptor"/> resources.
         /// </returns>
-        public override PagedAsyncEnumerable<ListNotificationChannelDescriptorsResponse, NotificationChannelDescriptor> ListNotificationChannelDescriptorsAsync(
+        public override gax::PagedAsyncEnumerable<ListNotificationChannelDescriptorsResponse, NotificationChannelDescriptor> ListNotificationChannelDescriptorsAsync(
             ListNotificationChannelDescriptorsRequest request,
-            CallSettings callSettings = null)
+            gaxgrpc::CallSettings callSettings = null)
         {
             Modify_ListNotificationChannelDescriptorsRequest(ref request, ref callSettings);
-            return new GrpcPagedAsyncEnumerable<ListNotificationChannelDescriptorsRequest, ListNotificationChannelDescriptorsResponse, NotificationChannelDescriptor>(_callListNotificationChannelDescriptors, request, callSettings);
+            return new gaxgrpc::GrpcPagedAsyncEnumerable<ListNotificationChannelDescriptorsRequest, ListNotificationChannelDescriptorsResponse, NotificationChannelDescriptor>(_callListNotificationChannelDescriptors, request, callSettings);
         }
 
         /// <summary>
@@ -1510,12 +1510,12 @@ namespace Google.Cloud.Monitoring.V3
         /// <returns>
         /// A pageable sequence of <see cref="NotificationChannelDescriptor"/> resources.
         /// </returns>
-        public override PagedEnumerable<ListNotificationChannelDescriptorsResponse, NotificationChannelDescriptor> ListNotificationChannelDescriptors(
+        public override gax::PagedEnumerable<ListNotificationChannelDescriptorsResponse, NotificationChannelDescriptor> ListNotificationChannelDescriptors(
             ListNotificationChannelDescriptorsRequest request,
-            CallSettings callSettings = null)
+            gaxgrpc::CallSettings callSettings = null)
         {
             Modify_ListNotificationChannelDescriptorsRequest(ref request, ref callSettings);
-            return new GrpcPagedEnumerable<ListNotificationChannelDescriptorsRequest, ListNotificationChannelDescriptorsResponse, NotificationChannelDescriptor>(_callListNotificationChannelDescriptors, request, callSettings);
+            return new gaxgrpc::GrpcPagedEnumerable<ListNotificationChannelDescriptorsRequest, ListNotificationChannelDescriptorsResponse, NotificationChannelDescriptor>(_callListNotificationChannelDescriptors, request, callSettings);
         }
 
         /// <summary>
@@ -1531,9 +1531,9 @@ namespace Google.Cloud.Monitoring.V3
         /// <returns>
         /// A Task containing the RPC response.
         /// </returns>
-        public override Task<NotificationChannelDescriptor> GetNotificationChannelDescriptorAsync(
+        public override stt::Task<NotificationChannelDescriptor> GetNotificationChannelDescriptorAsync(
             GetNotificationChannelDescriptorRequest request,
-            CallSettings callSettings = null)
+            gaxgrpc::CallSettings callSettings = null)
         {
             Modify_GetNotificationChannelDescriptorRequest(ref request, ref callSettings);
             return _callGetNotificationChannelDescriptor.Async(request, callSettings);
@@ -1554,7 +1554,7 @@ namespace Google.Cloud.Monitoring.V3
         /// </returns>
         public override NotificationChannelDescriptor GetNotificationChannelDescriptor(
             GetNotificationChannelDescriptorRequest request,
-            CallSettings callSettings = null)
+            gaxgrpc::CallSettings callSettings = null)
         {
             Modify_GetNotificationChannelDescriptorRequest(ref request, ref callSettings);
             return _callGetNotificationChannelDescriptor.Sync(request, callSettings);
@@ -1572,12 +1572,12 @@ namespace Google.Cloud.Monitoring.V3
         /// <returns>
         /// A pageable asynchronous sequence of <see cref="NotificationChannel"/> resources.
         /// </returns>
-        public override PagedAsyncEnumerable<ListNotificationChannelsResponse, NotificationChannel> ListNotificationChannelsAsync(
+        public override gax::PagedAsyncEnumerable<ListNotificationChannelsResponse, NotificationChannel> ListNotificationChannelsAsync(
             ListNotificationChannelsRequest request,
-            CallSettings callSettings = null)
+            gaxgrpc::CallSettings callSettings = null)
         {
             Modify_ListNotificationChannelsRequest(ref request, ref callSettings);
-            return new GrpcPagedAsyncEnumerable<ListNotificationChannelsRequest, ListNotificationChannelsResponse, NotificationChannel>(_callListNotificationChannels, request, callSettings);
+            return new gaxgrpc::GrpcPagedAsyncEnumerable<ListNotificationChannelsRequest, ListNotificationChannelsResponse, NotificationChannel>(_callListNotificationChannels, request, callSettings);
         }
 
         /// <summary>
@@ -1592,12 +1592,12 @@ namespace Google.Cloud.Monitoring.V3
         /// <returns>
         /// A pageable sequence of <see cref="NotificationChannel"/> resources.
         /// </returns>
-        public override PagedEnumerable<ListNotificationChannelsResponse, NotificationChannel> ListNotificationChannels(
+        public override gax::PagedEnumerable<ListNotificationChannelsResponse, NotificationChannel> ListNotificationChannels(
             ListNotificationChannelsRequest request,
-            CallSettings callSettings = null)
+            gaxgrpc::CallSettings callSettings = null)
         {
             Modify_ListNotificationChannelsRequest(ref request, ref callSettings);
-            return new GrpcPagedEnumerable<ListNotificationChannelsRequest, ListNotificationChannelsResponse, NotificationChannel>(_callListNotificationChannels, request, callSettings);
+            return new gaxgrpc::GrpcPagedEnumerable<ListNotificationChannelsRequest, ListNotificationChannelsResponse, NotificationChannel>(_callListNotificationChannels, request, callSettings);
         }
 
         /// <summary>
@@ -1616,9 +1616,9 @@ namespace Google.Cloud.Monitoring.V3
         /// <returns>
         /// A Task containing the RPC response.
         /// </returns>
-        public override Task<NotificationChannel> GetNotificationChannelAsync(
+        public override stt::Task<NotificationChannel> GetNotificationChannelAsync(
             GetNotificationChannelRequest request,
-            CallSettings callSettings = null)
+            gaxgrpc::CallSettings callSettings = null)
         {
             Modify_GetNotificationChannelRequest(ref request, ref callSettings);
             return _callGetNotificationChannel.Async(request, callSettings);
@@ -1642,7 +1642,7 @@ namespace Google.Cloud.Monitoring.V3
         /// </returns>
         public override NotificationChannel GetNotificationChannel(
             GetNotificationChannelRequest request,
-            CallSettings callSettings = null)
+            gaxgrpc::CallSettings callSettings = null)
         {
             Modify_GetNotificationChannelRequest(ref request, ref callSettings);
             return _callGetNotificationChannel.Sync(request, callSettings);
@@ -1661,9 +1661,9 @@ namespace Google.Cloud.Monitoring.V3
         /// <returns>
         /// A Task containing the RPC response.
         /// </returns>
-        public override Task<NotificationChannel> CreateNotificationChannelAsync(
+        public override stt::Task<NotificationChannel> CreateNotificationChannelAsync(
             CreateNotificationChannelRequest request,
-            CallSettings callSettings = null)
+            gaxgrpc::CallSettings callSettings = null)
         {
             Modify_CreateNotificationChannelRequest(ref request, ref callSettings);
             return _callCreateNotificationChannel.Async(request, callSettings);
@@ -1684,7 +1684,7 @@ namespace Google.Cloud.Monitoring.V3
         /// </returns>
         public override NotificationChannel CreateNotificationChannel(
             CreateNotificationChannelRequest request,
-            CallSettings callSettings = null)
+            gaxgrpc::CallSettings callSettings = null)
         {
             Modify_CreateNotificationChannelRequest(ref request, ref callSettings);
             return _callCreateNotificationChannel.Sync(request, callSettings);
@@ -1703,9 +1703,9 @@ namespace Google.Cloud.Monitoring.V3
         /// <returns>
         /// A Task containing the RPC response.
         /// </returns>
-        public override Task<NotificationChannel> UpdateNotificationChannelAsync(
+        public override stt::Task<NotificationChannel> UpdateNotificationChannelAsync(
             UpdateNotificationChannelRequest request,
-            CallSettings callSettings = null)
+            gaxgrpc::CallSettings callSettings = null)
         {
             Modify_UpdateNotificationChannelRequest(ref request, ref callSettings);
             return _callUpdateNotificationChannel.Async(request, callSettings);
@@ -1726,7 +1726,7 @@ namespace Google.Cloud.Monitoring.V3
         /// </returns>
         public override NotificationChannel UpdateNotificationChannel(
             UpdateNotificationChannelRequest request,
-            CallSettings callSettings = null)
+            gaxgrpc::CallSettings callSettings = null)
         {
             Modify_UpdateNotificationChannelRequest(ref request, ref callSettings);
             return _callUpdateNotificationChannel.Sync(request, callSettings);
@@ -1744,9 +1744,9 @@ namespace Google.Cloud.Monitoring.V3
         /// <returns>
         /// A Task that completes when the RPC has completed.
         /// </returns>
-        public override Task DeleteNotificationChannelAsync(
+        public override stt::Task DeleteNotificationChannelAsync(
             DeleteNotificationChannelRequest request,
-            CallSettings callSettings = null)
+            gaxgrpc::CallSettings callSettings = null)
         {
             Modify_DeleteNotificationChannelRequest(ref request, ref callSettings);
             return _callDeleteNotificationChannel.Async(request, callSettings);
@@ -1763,7 +1763,7 @@ namespace Google.Cloud.Monitoring.V3
         /// </param>
         public override void DeleteNotificationChannel(
             DeleteNotificationChannelRequest request,
-            CallSettings callSettings = null)
+            gaxgrpc::CallSettings callSettings = null)
         {
             Modify_DeleteNotificationChannelRequest(ref request, ref callSettings);
             _callDeleteNotificationChannel.Sync(request, callSettings);
@@ -1773,28 +1773,28 @@ namespace Google.Cloud.Monitoring.V3
 
     // Partial classes to enable page-streaming
 
-    public partial class ListNotificationChannelDescriptorsRequest : IPageRequest { }
-    public partial class ListNotificationChannelDescriptorsResponse : IPageResponse<NotificationChannelDescriptor>
+    public partial class ListNotificationChannelDescriptorsRequest : gaxgrpc::IPageRequest { }
+    public partial class ListNotificationChannelDescriptorsResponse : gaxgrpc::IPageResponse<NotificationChannelDescriptor>
     {
         /// <summary>
         /// Returns an enumerator that iterates through the resources in this response.
         /// </summary>
-        public IEnumerator<NotificationChannelDescriptor> GetEnumerator() => ChannelDescriptors.GetEnumerator();
+        public scg::IEnumerator<NotificationChannelDescriptor> GetEnumerator() => ChannelDescriptors.GetEnumerator();
 
         /// <inheritdoc/>
-        IEnumerator IEnumerable.GetEnumerator() => GetEnumerator();
+        sc::IEnumerator sc::IEnumerable.GetEnumerator() => GetEnumerator();
     }
 
-    public partial class ListNotificationChannelsRequest : IPageRequest { }
-    public partial class ListNotificationChannelsResponse : IPageResponse<NotificationChannel>
+    public partial class ListNotificationChannelsRequest : gaxgrpc::IPageRequest { }
+    public partial class ListNotificationChannelsResponse : gaxgrpc::IPageResponse<NotificationChannel>
     {
         /// <summary>
         /// Returns an enumerator that iterates through the resources in this response.
         /// </summary>
-        public IEnumerator<NotificationChannel> GetEnumerator() => NotificationChannels.GetEnumerator();
+        public scg::IEnumerator<NotificationChannel> GetEnumerator() => NotificationChannels.GetEnumerator();
 
         /// <inheritdoc/>
-        IEnumerator IEnumerable.GetEnumerator() => GetEnumerator();
+        sc::IEnumerator sc::IEnumerable.GetEnumerator() => GetEnumerator();
     }
 
 

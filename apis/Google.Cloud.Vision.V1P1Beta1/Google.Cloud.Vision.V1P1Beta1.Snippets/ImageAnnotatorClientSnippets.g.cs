@@ -14,22 +14,22 @@
 
 // Generated code. DO NOT EDIT!
 
-using Google.Api.Gax;
-using Google.Api.Gax.Grpc;
-using Google.Cloud.Vision.V1P1Beta1;
-using Google.Protobuf;
-using Google.Protobuf.WellKnownTypes;
-using Grpc.Core;
-using System;
-using System.Collections;
-using System.Collections.Generic;
-using System.Collections.ObjectModel;
-using System.Linq;
-using System.Threading;
-using System.Threading.Tasks;
-
 namespace Google.Cloud.Vision.V1P1Beta1.Snippets
 {
+    using Google.Api.Gax;
+    using Google.Api.Gax.Grpc;
+    using apis = Google.Cloud.Vision.V1P1Beta1;
+    using Google.Protobuf;
+    using Google.Protobuf.WellKnownTypes;
+    using Grpc.Core;
+    using System;
+    using System.Collections;
+    using System.Collections.Generic;
+    using System.Collections.ObjectModel;
+    using System.Linq;
+    using System.Threading;
+    using System.Threading.Tasks;
+
     /// <summary>Generated snippets</summary>
     public class GeneratedImageAnnotatorClientSnippets
     {

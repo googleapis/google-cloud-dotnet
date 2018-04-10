@@ -14,24 +14,24 @@
 
 // Generated code. DO NOT EDIT!
 
-using Google.Api.Gax;
-using Google.Api.Gax.Grpc;
-using Google.Protobuf;
-using Google.Protobuf.WellKnownTypes;
-using Grpc.Core;
-using System;
-using System.Collections;
-using System.Collections.Generic;
-using System.Collections.ObjectModel;
-using System.Threading;
-using System.Threading.Tasks;
+using gax = Google.Api.Gax;
+using gaxgrpc = Google.Api.Gax.Grpc;
+using proto = Google.Protobuf;
+using protowkt = Google.Protobuf.WellKnownTypes;
+using grpccore = Grpc.Core;
+using s = System;
+using sc = System.Collections;
+using scg = System.Collections.Generic;
+using sco = System.Collections.ObjectModel;
+using st = System.Threading;
+using stt = System.Threading.Tasks;
 
 namespace Google.Cloud.ErrorReporting.V1Beta1
 {
     /// <summary>
     /// Settings for a <see cref="ErrorStatsServiceClient"/>.
     /// </summary>
-    public sealed partial class ErrorStatsServiceSettings : ServiceSettingsBase
+    public sealed partial class ErrorStatsServiceSettings : gaxgrpc::ServiceSettingsBase
     {
         /// <summary>
         /// Get a new instance of the default <see cref="ErrorStatsServiceSettings"/>.
@@ -48,7 +48,7 @@ namespace Google.Cloud.ErrorReporting.V1Beta1
 
         private ErrorStatsServiceSettings(ErrorStatsServiceSettings existing) : base(existing)
         {
-            GaxPreconditions.CheckNotNull(existing, nameof(existing));
+            gax::GaxPreconditions.CheckNotNull(existing, nameof(existing));
             ListGroupStatsSettings = existing.ListGroupStatsSettings;
             ListEventsSettings = existing.ListEventsSettings;
             DeleteEventsSettings = existing.DeleteEventsSettings;
@@ -58,28 +58,28 @@ namespace Google.Cloud.ErrorReporting.V1Beta1
         partial void OnCopy(ErrorStatsServiceSettings existing);
 
         /// <summary>
-        /// The filter specifying which RPC <see cref="StatusCode"/>s are eligible for retry
+        /// The filter specifying which RPC <see cref="grpccore::StatusCode"/>s are eligible for retry
         /// for "Idempotent" <see cref="ErrorStatsServiceClient"/> RPC methods.
         /// </summary>
         /// <remarks>
-        /// The eligible RPC <see cref="StatusCode"/>s for retry for "Idempotent" RPC methods are:
+        /// The eligible RPC <see cref="grpccore::StatusCode"/>s for retry for "Idempotent" RPC methods are:
         /// <list type="bullet">
-        /// <item><description><see cref="StatusCode.DeadlineExceeded"/></description></item>
-        /// <item><description><see cref="StatusCode.Unavailable"/></description></item>
+        /// <item><description><see cref="grpccore::StatusCode.DeadlineExceeded"/></description></item>
+        /// <item><description><see cref="grpccore::StatusCode.Unavailable"/></description></item>
         /// </list>
         /// </remarks>
-        public static Predicate<RpcException> IdempotentRetryFilter { get; } =
-            RetrySettings.FilterForStatusCodes(StatusCode.DeadlineExceeded, StatusCode.Unavailable);
+        public static s::Predicate<grpccore::RpcException> IdempotentRetryFilter { get; } =
+            gaxgrpc::RetrySettings.FilterForStatusCodes(grpccore::StatusCode.DeadlineExceeded, grpccore::StatusCode.Unavailable);
 
         /// <summary>
-        /// The filter specifying which RPC <see cref="StatusCode"/>s are eligible for retry
+        /// The filter specifying which RPC <see cref="grpccore::StatusCode"/>s are eligible for retry
         /// for "NonIdempotent" <see cref="ErrorStatsServiceClient"/> RPC methods.
         /// </summary>
         /// <remarks>
-        /// There are no RPC <see cref="StatusCode"/>s eligible for retry for "NonIdempotent" RPC methods.
+        /// There are no RPC <see cref="grpccore::StatusCode"/>s eligible for retry for "NonIdempotent" RPC methods.
         /// </remarks>
-        public static Predicate<RpcException> NonIdempotentRetryFilter { get; } =
-            RetrySettings.FilterForStatusCodes();
+        public static s::Predicate<grpccore::RpcException> NonIdempotentRetryFilter { get; } =
+            gaxgrpc::RetrySettings.FilterForStatusCodes();
 
         /// <summary>
         /// "Default" retry backoff for <see cref="ErrorStatsServiceClient"/> RPC methods.
@@ -95,9 +95,9 @@ namespace Google.Cloud.ErrorReporting.V1Beta1
         /// <item><description>Delay multiplier: 1.3</description></item>
         /// </list>
         /// </remarks>
-        public static BackoffSettings GetDefaultRetryBackoff() => new BackoffSettings(
-            delay: TimeSpan.FromMilliseconds(100),
-            maxDelay: TimeSpan.FromMilliseconds(60000),
+        public static gaxgrpc::BackoffSettings GetDefaultRetryBackoff() => new gaxgrpc::BackoffSettings(
+            delay: s::TimeSpan.FromMilliseconds(100),
+            maxDelay: s::TimeSpan.FromMilliseconds(60000),
             delayMultiplier: 1.3
         );
 
@@ -115,19 +115,19 @@ namespace Google.Cloud.ErrorReporting.V1Beta1
         /// <item><description>Maximum timeout: 20000 milliseconds</description></item>
         /// </list>
         /// </remarks>
-        public static BackoffSettings GetDefaultTimeoutBackoff() => new BackoffSettings(
-            delay: TimeSpan.FromMilliseconds(20000),
-            maxDelay: TimeSpan.FromMilliseconds(20000),
+        public static gaxgrpc::BackoffSettings GetDefaultTimeoutBackoff() => new gaxgrpc::BackoffSettings(
+            delay: s::TimeSpan.FromMilliseconds(20000),
+            maxDelay: s::TimeSpan.FromMilliseconds(20000),
             delayMultiplier: 1.0
         );
 
         /// <summary>
-        /// <see cref="CallSettings"/> for synchronous and asynchronous calls to
+        /// <see cref="gaxgrpc::CallSettings"/> for synchronous and asynchronous calls to
         /// <c>ErrorStatsServiceClient.ListGroupStats</c> and <c>ErrorStatsServiceClient.ListGroupStatsAsync</c>.
         /// </summary>
         /// <remarks>
         /// The default <c>ErrorStatsServiceClient.ListGroupStats</c> and
-        /// <c>ErrorStatsServiceClient.ListGroupStatsAsync</c> <see cref="RetrySettings"/> are:
+        /// <c>ErrorStatsServiceClient.ListGroupStatsAsync</c> <see cref="gaxgrpc::RetrySettings"/> are:
         /// <list type="bullet">
         /// <item><description>Initial retry delay: 100 milliseconds</description></item>
         /// <item><description>Retry delay multiplier: 1.3</description></item>
@@ -138,26 +138,26 @@ namespace Google.Cloud.ErrorReporting.V1Beta1
         /// </list>
         /// Retry will be attempted on the following response status codes:
         /// <list>
-        /// <item><description><see cref="StatusCode.DeadlineExceeded"/></description></item>
-        /// <item><description><see cref="StatusCode.Unavailable"/></description></item>
+        /// <item><description><see cref="grpccore::StatusCode.DeadlineExceeded"/></description></item>
+        /// <item><description><see cref="grpccore::StatusCode.Unavailable"/></description></item>
         /// </list>
         /// Default RPC expiration is 600000 milliseconds.
         /// </remarks>
-        public CallSettings ListGroupStatsSettings { get; set; } = CallSettings.FromCallTiming(
-            CallTiming.FromRetry(new RetrySettings(
+        public gaxgrpc::CallSettings ListGroupStatsSettings { get; set; } = gaxgrpc::CallSettings.FromCallTiming(
+            gaxgrpc::CallTiming.FromRetry(new gaxgrpc::RetrySettings(
                 retryBackoff: GetDefaultRetryBackoff(),
                 timeoutBackoff: GetDefaultTimeoutBackoff(),
-                totalExpiration: Expiration.FromTimeout(TimeSpan.FromMilliseconds(600000)),
+                totalExpiration: gax::Expiration.FromTimeout(s::TimeSpan.FromMilliseconds(600000)),
                 retryFilter: IdempotentRetryFilter
             )));
 
         /// <summary>
-        /// <see cref="CallSettings"/> for synchronous and asynchronous calls to
+        /// <see cref="gaxgrpc::CallSettings"/> for synchronous and asynchronous calls to
         /// <c>ErrorStatsServiceClient.ListEvents</c> and <c>ErrorStatsServiceClient.ListEventsAsync</c>.
         /// </summary>
         /// <remarks>
         /// The default <c>ErrorStatsServiceClient.ListEvents</c> and
-        /// <c>ErrorStatsServiceClient.ListEventsAsync</c> <see cref="RetrySettings"/> are:
+        /// <c>ErrorStatsServiceClient.ListEventsAsync</c> <see cref="gaxgrpc::RetrySettings"/> are:
         /// <list type="bullet">
         /// <item><description>Initial retry delay: 100 milliseconds</description></item>
         /// <item><description>Retry delay multiplier: 1.3</description></item>
@@ -168,26 +168,26 @@ namespace Google.Cloud.ErrorReporting.V1Beta1
         /// </list>
         /// Retry will be attempted on the following response status codes:
         /// <list>
-        /// <item><description><see cref="StatusCode.DeadlineExceeded"/></description></item>
-        /// <item><description><see cref="StatusCode.Unavailable"/></description></item>
+        /// <item><description><see cref="grpccore::StatusCode.DeadlineExceeded"/></description></item>
+        /// <item><description><see cref="grpccore::StatusCode.Unavailable"/></description></item>
         /// </list>
         /// Default RPC expiration is 600000 milliseconds.
         /// </remarks>
-        public CallSettings ListEventsSettings { get; set; } = CallSettings.FromCallTiming(
-            CallTiming.FromRetry(new RetrySettings(
+        public gaxgrpc::CallSettings ListEventsSettings { get; set; } = gaxgrpc::CallSettings.FromCallTiming(
+            gaxgrpc::CallTiming.FromRetry(new gaxgrpc::RetrySettings(
                 retryBackoff: GetDefaultRetryBackoff(),
                 timeoutBackoff: GetDefaultTimeoutBackoff(),
-                totalExpiration: Expiration.FromTimeout(TimeSpan.FromMilliseconds(600000)),
+                totalExpiration: gax::Expiration.FromTimeout(s::TimeSpan.FromMilliseconds(600000)),
                 retryFilter: IdempotentRetryFilter
             )));
 
         /// <summary>
-        /// <see cref="CallSettings"/> for synchronous and asynchronous calls to
+        /// <see cref="gaxgrpc::CallSettings"/> for synchronous and asynchronous calls to
         /// <c>ErrorStatsServiceClient.DeleteEvents</c> and <c>ErrorStatsServiceClient.DeleteEventsAsync</c>.
         /// </summary>
         /// <remarks>
         /// The default <c>ErrorStatsServiceClient.DeleteEvents</c> and
-        /// <c>ErrorStatsServiceClient.DeleteEventsAsync</c> <see cref="RetrySettings"/> are:
+        /// <c>ErrorStatsServiceClient.DeleteEventsAsync</c> <see cref="gaxgrpc::RetrySettings"/> are:
         /// <list type="bullet">
         /// <item><description>Initial retry delay: 100 milliseconds</description></item>
         /// <item><description>Retry delay multiplier: 1.3</description></item>
@@ -198,16 +198,16 @@ namespace Google.Cloud.ErrorReporting.V1Beta1
         /// </list>
         /// Retry will be attempted on the following response status codes:
         /// <list>
-        /// <item><description><see cref="StatusCode.DeadlineExceeded"/></description></item>
-        /// <item><description><see cref="StatusCode.Unavailable"/></description></item>
+        /// <item><description><see cref="grpccore::StatusCode.DeadlineExceeded"/></description></item>
+        /// <item><description><see cref="grpccore::StatusCode.Unavailable"/></description></item>
         /// </list>
         /// Default RPC expiration is 600000 milliseconds.
         /// </remarks>
-        public CallSettings DeleteEventsSettings { get; set; } = CallSettings.FromCallTiming(
-            CallTiming.FromRetry(new RetrySettings(
+        public gaxgrpc::CallSettings DeleteEventsSettings { get; set; } = gaxgrpc::CallSettings.FromCallTiming(
+            gaxgrpc::CallTiming.FromRetry(new gaxgrpc::RetrySettings(
                 retryBackoff: GetDefaultRetryBackoff(),
                 timeoutBackoff: GetDefaultTimeoutBackoff(),
-                totalExpiration: Expiration.FromTimeout(TimeSpan.FromMilliseconds(600000)),
+                totalExpiration: gax::Expiration.FromTimeout(s::TimeSpan.FromMilliseconds(600000)),
                 retryFilter: IdempotentRetryFilter
             )));
 
@@ -226,7 +226,7 @@ namespace Google.Cloud.ErrorReporting.V1Beta1
         /// <summary>
         /// The default endpoint for the ErrorStatsService service, which is a host of "clouderrorreporting.googleapis.com" and a port of 443.
         /// </summary>
-        public static ServiceEndpoint DefaultEndpoint { get; } = new ServiceEndpoint("clouderrorreporting.googleapis.com", 443);
+        public static gaxgrpc::ServiceEndpoint DefaultEndpoint { get; } = new gaxgrpc::ServiceEndpoint("clouderrorreporting.googleapis.com", 443);
 
         /// <summary>
         /// The default ErrorStatsService scopes.
@@ -237,11 +237,11 @@ namespace Google.Cloud.ErrorReporting.V1Beta1
         /// <item><description>"https://www.googleapis.com/auth/cloud-platform"</description></item>
         /// </list>
         /// </remarks>
-        public static IReadOnlyList<string> DefaultScopes { get; } = new ReadOnlyCollection<string>(new string[] {
+        public static scg::IReadOnlyList<string> DefaultScopes { get; } = new sco::ReadOnlyCollection<string>(new string[] {
             "https://www.googleapis.com/auth/cloud-platform",
         });
 
-        private static readonly ChannelPool s_channelPool = new ChannelPool(DefaultScopes);
+        private static readonly gaxgrpc::ChannelPool s_channelPool = new gaxgrpc::ChannelPool(DefaultScopes);
 
         // Note: we could have parameterless overloads of Create and CreateAsync,
         // documented to just use the default endpoint, settings and credentials.
@@ -255,12 +255,12 @@ namespace Google.Cloud.ErrorReporting.V1Beta1
         /// and creating a channel connecting to the given endpoint with application default credentials where
         /// necessary.
         /// </summary>
-        /// <param name="endpoint">Optional <see cref="ServiceEndpoint"/>.</param>
+        /// <param name="endpoint">Optional <see cref="gaxgrpc::ServiceEndpoint"/>.</param>
         /// <param name="settings">Optional <see cref="ErrorStatsServiceSettings"/>.</param>
         /// <returns>The task representing the created <see cref="ErrorStatsServiceClient"/>.</returns>
-        public static async Task<ErrorStatsServiceClient> CreateAsync(ServiceEndpoint endpoint = null, ErrorStatsServiceSettings settings = null)
+        public static async stt::Task<ErrorStatsServiceClient> CreateAsync(gaxgrpc::ServiceEndpoint endpoint = null, ErrorStatsServiceSettings settings = null)
         {
-            Channel channel = await s_channelPool.GetChannelAsync(endpoint ?? DefaultEndpoint).ConfigureAwait(false);
+            grpccore::Channel channel = await s_channelPool.GetChannelAsync(endpoint ?? DefaultEndpoint).ConfigureAwait(false);
             return Create(channel, settings);
         }
 
@@ -269,45 +269,45 @@ namespace Google.Cloud.ErrorReporting.V1Beta1
         /// and creating a channel connecting to the given endpoint with application default credentials where
         /// necessary.
         /// </summary>
-        /// <param name="endpoint">Optional <see cref="ServiceEndpoint"/>.</param>
+        /// <param name="endpoint">Optional <see cref="gaxgrpc::ServiceEndpoint"/>.</param>
         /// <param name="settings">Optional <see cref="ErrorStatsServiceSettings"/>.</param>
         /// <returns>The created <see cref="ErrorStatsServiceClient"/>.</returns>
-        public static ErrorStatsServiceClient Create(ServiceEndpoint endpoint = null, ErrorStatsServiceSettings settings = null)
+        public static ErrorStatsServiceClient Create(gaxgrpc::ServiceEndpoint endpoint = null, ErrorStatsServiceSettings settings = null)
         {
-            Channel channel = s_channelPool.GetChannel(endpoint ?? DefaultEndpoint);
+            grpccore::Channel channel = s_channelPool.GetChannel(endpoint ?? DefaultEndpoint);
             return Create(channel, settings);
         }
 
         /// <summary>
         /// Creates a <see cref="ErrorStatsServiceClient"/> which uses the specified channel for remote operations.
         /// </summary>
-        /// <param name="channel">The <see cref="Channel"/> for remote operations. Must not be null.</param>
+        /// <param name="channel">The <see cref="grpccore::Channel"/> for remote operations. Must not be null.</param>
         /// <param name="settings">Optional <see cref="ErrorStatsServiceSettings"/>.</param>
         /// <returns>The created <see cref="ErrorStatsServiceClient"/>.</returns>
-        public static ErrorStatsServiceClient Create(Channel channel, ErrorStatsServiceSettings settings = null)
+        public static ErrorStatsServiceClient Create(grpccore::Channel channel, ErrorStatsServiceSettings settings = null)
         {
-            GaxPreconditions.CheckNotNull(channel, nameof(channel));
+            gax::GaxPreconditions.CheckNotNull(channel, nameof(channel));
             ErrorStatsService.ErrorStatsServiceClient grpcClient = new ErrorStatsService.ErrorStatsServiceClient(channel);
             return new ErrorStatsServiceClientImpl(grpcClient, settings);
         }
 
         /// <summary>
-        /// Shuts down any channels automatically created by <see cref="Create(ServiceEndpoint, ErrorStatsServiceSettings)"/>
-        /// and <see cref="CreateAsync(ServiceEndpoint, ErrorStatsServiceSettings)"/>. Channels which weren't automatically
+        /// Shuts down any channels automatically created by <see cref="Create(gaxgrpc::ServiceEndpoint, ErrorStatsServiceSettings)"/>
+        /// and <see cref="CreateAsync(gaxgrpc::ServiceEndpoint, ErrorStatsServiceSettings)"/>. Channels which weren't automatically
         /// created are not affected.
         /// </summary>
-        /// <remarks>After calling this method, further calls to <see cref="Create(ServiceEndpoint, ErrorStatsServiceSettings)"/>
-        /// and <see cref="CreateAsync(ServiceEndpoint, ErrorStatsServiceSettings)"/> will create new channels, which could
+        /// <remarks>After calling this method, further calls to <see cref="Create(gaxgrpc::ServiceEndpoint, ErrorStatsServiceSettings)"/>
+        /// and <see cref="CreateAsync(gaxgrpc::ServiceEndpoint, ErrorStatsServiceSettings)"/> will create new channels, which could
         /// in turn be shut down by another call to this method.</remarks>
         /// <returns>A task representing the asynchronous shutdown operation.</returns>
-        public static Task ShutdownDefaultChannelsAsync() => s_channelPool.ShutdownChannelsAsync();
+        public static stt::Task ShutdownDefaultChannelsAsync() => s_channelPool.ShutdownChannelsAsync();
 
         /// <summary>
         /// The underlying gRPC ErrorStatsService client.
         /// </summary>
         public virtual ErrorStatsService.ErrorStatsServiceClient GrpcClient
         {
-            get { throw new NotImplementedException(); }
+            get { throw new s::NotImplementedException(); }
         }
 
         /// <summary>
@@ -344,16 +344,16 @@ namespace Google.Cloud.ErrorReporting.V1Beta1
         /// <returns>
         /// A pageable asynchronous sequence of <see cref="ErrorGroupStats"/> resources.
         /// </returns>
-        public virtual PagedAsyncEnumerable<ListGroupStatsResponse, ErrorGroupStats> ListGroupStatsAsync(
+        public virtual gax::PagedAsyncEnumerable<ListGroupStatsResponse, ErrorGroupStats> ListGroupStatsAsync(
             ProjectName projectName,
             QueryTimeRange timeRange,
             string pageToken = null,
             int? pageSize = null,
-            CallSettings callSettings = null) => ListGroupStatsAsync(
+            gaxgrpc::CallSettings callSettings = null) => ListGroupStatsAsync(
                 new ListGroupStatsRequest
                 {
-                    ProjectNameAsProjectName = GaxPreconditions.CheckNotNull(projectName, nameof(projectName)),
-                    TimeRange = GaxPreconditions.CheckNotNull(timeRange, nameof(timeRange)),
+                    ProjectNameAsProjectName = gax::GaxPreconditions.CheckNotNull(projectName, nameof(projectName)),
+                    TimeRange = gax::GaxPreconditions.CheckNotNull(timeRange, nameof(timeRange)),
                     PageToken = pageToken ?? "",
                     PageSize = pageSize ?? 0,
                 },
@@ -393,16 +393,16 @@ namespace Google.Cloud.ErrorReporting.V1Beta1
         /// <returns>
         /// A pageable sequence of <see cref="ErrorGroupStats"/> resources.
         /// </returns>
-        public virtual PagedEnumerable<ListGroupStatsResponse, ErrorGroupStats> ListGroupStats(
+        public virtual gax::PagedEnumerable<ListGroupStatsResponse, ErrorGroupStats> ListGroupStats(
             ProjectName projectName,
             QueryTimeRange timeRange,
             string pageToken = null,
             int? pageSize = null,
-            CallSettings callSettings = null) => ListGroupStats(
+            gaxgrpc::CallSettings callSettings = null) => ListGroupStats(
                 new ListGroupStatsRequest
                 {
-                    ProjectNameAsProjectName = GaxPreconditions.CheckNotNull(projectName, nameof(projectName)),
-                    TimeRange = GaxPreconditions.CheckNotNull(timeRange, nameof(timeRange)),
+                    ProjectNameAsProjectName = gax::GaxPreconditions.CheckNotNull(projectName, nameof(projectName)),
+                    TimeRange = gax::GaxPreconditions.CheckNotNull(timeRange, nameof(timeRange)),
                     PageToken = pageToken ?? "",
                     PageSize = pageSize ?? 0,
                 },
@@ -420,11 +420,11 @@ namespace Google.Cloud.ErrorReporting.V1Beta1
         /// <returns>
         /// A pageable asynchronous sequence of <see cref="ErrorGroupStats"/> resources.
         /// </returns>
-        public virtual PagedAsyncEnumerable<ListGroupStatsResponse, ErrorGroupStats> ListGroupStatsAsync(
+        public virtual gax::PagedAsyncEnumerable<ListGroupStatsResponse, ErrorGroupStats> ListGroupStatsAsync(
             ListGroupStatsRequest request,
-            CallSettings callSettings = null)
+            gaxgrpc::CallSettings callSettings = null)
         {
-            throw new NotImplementedException();
+            throw new s::NotImplementedException();
         }
 
         /// <summary>
@@ -439,11 +439,11 @@ namespace Google.Cloud.ErrorReporting.V1Beta1
         /// <returns>
         /// A pageable sequence of <see cref="ErrorGroupStats"/> resources.
         /// </returns>
-        public virtual PagedEnumerable<ListGroupStatsResponse, ErrorGroupStats> ListGroupStats(
+        public virtual gax::PagedEnumerable<ListGroupStatsResponse, ErrorGroupStats> ListGroupStats(
             ListGroupStatsRequest request,
-            CallSettings callSettings = null)
+            gaxgrpc::CallSettings callSettings = null)
         {
-            throw new NotImplementedException();
+            throw new s::NotImplementedException();
         }
 
         /// <summary>
@@ -473,16 +473,16 @@ namespace Google.Cloud.ErrorReporting.V1Beta1
         /// <returns>
         /// A pageable asynchronous sequence of <see cref="ErrorEvent"/> resources.
         /// </returns>
-        public virtual PagedAsyncEnumerable<ListEventsResponse, ErrorEvent> ListEventsAsync(
+        public virtual gax::PagedAsyncEnumerable<ListEventsResponse, ErrorEvent> ListEventsAsync(
             ProjectName projectName,
             string groupId,
             string pageToken = null,
             int? pageSize = null,
-            CallSettings callSettings = null) => ListEventsAsync(
+            gaxgrpc::CallSettings callSettings = null) => ListEventsAsync(
                 new ListEventsRequest
                 {
-                    ProjectNameAsProjectName = GaxPreconditions.CheckNotNull(projectName, nameof(projectName)),
-                    GroupId = GaxPreconditions.CheckNotNullOrEmpty(groupId, nameof(groupId)),
+                    ProjectNameAsProjectName = gax::GaxPreconditions.CheckNotNull(projectName, nameof(projectName)),
+                    GroupId = gax::GaxPreconditions.CheckNotNullOrEmpty(groupId, nameof(groupId)),
                     PageToken = pageToken ?? "",
                     PageSize = pageSize ?? 0,
                 },
@@ -515,16 +515,16 @@ namespace Google.Cloud.ErrorReporting.V1Beta1
         /// <returns>
         /// A pageable sequence of <see cref="ErrorEvent"/> resources.
         /// </returns>
-        public virtual PagedEnumerable<ListEventsResponse, ErrorEvent> ListEvents(
+        public virtual gax::PagedEnumerable<ListEventsResponse, ErrorEvent> ListEvents(
             ProjectName projectName,
             string groupId,
             string pageToken = null,
             int? pageSize = null,
-            CallSettings callSettings = null) => ListEvents(
+            gaxgrpc::CallSettings callSettings = null) => ListEvents(
                 new ListEventsRequest
                 {
-                    ProjectNameAsProjectName = GaxPreconditions.CheckNotNull(projectName, nameof(projectName)),
-                    GroupId = GaxPreconditions.CheckNotNullOrEmpty(groupId, nameof(groupId)),
+                    ProjectNameAsProjectName = gax::GaxPreconditions.CheckNotNull(projectName, nameof(projectName)),
+                    GroupId = gax::GaxPreconditions.CheckNotNullOrEmpty(groupId, nameof(groupId)),
                     PageToken = pageToken ?? "",
                     PageSize = pageSize ?? 0,
                 },
@@ -542,11 +542,11 @@ namespace Google.Cloud.ErrorReporting.V1Beta1
         /// <returns>
         /// A pageable asynchronous sequence of <see cref="ErrorEvent"/> resources.
         /// </returns>
-        public virtual PagedAsyncEnumerable<ListEventsResponse, ErrorEvent> ListEventsAsync(
+        public virtual gax::PagedAsyncEnumerable<ListEventsResponse, ErrorEvent> ListEventsAsync(
             ListEventsRequest request,
-            CallSettings callSettings = null)
+            gaxgrpc::CallSettings callSettings = null)
         {
-            throw new NotImplementedException();
+            throw new s::NotImplementedException();
         }
 
         /// <summary>
@@ -561,11 +561,11 @@ namespace Google.Cloud.ErrorReporting.V1Beta1
         /// <returns>
         /// A pageable sequence of <see cref="ErrorEvent"/> resources.
         /// </returns>
-        public virtual PagedEnumerable<ListEventsResponse, ErrorEvent> ListEvents(
+        public virtual gax::PagedEnumerable<ListEventsResponse, ErrorEvent> ListEvents(
             ListEventsRequest request,
-            CallSettings callSettings = null)
+            gaxgrpc::CallSettings callSettings = null)
         {
-            throw new NotImplementedException();
+            throw new s::NotImplementedException();
         }
 
         /// <summary>
@@ -584,12 +584,12 @@ namespace Google.Cloud.ErrorReporting.V1Beta1
         /// <returns>
         /// A Task containing the RPC response.
         /// </returns>
-        public virtual Task<DeleteEventsResponse> DeleteEventsAsync(
+        public virtual stt::Task<DeleteEventsResponse> DeleteEventsAsync(
             ProjectName projectName,
-            CallSettings callSettings = null) => DeleteEventsAsync(
+            gaxgrpc::CallSettings callSettings = null) => DeleteEventsAsync(
                 new DeleteEventsRequest
                 {
-                    ProjectNameAsProjectName = GaxPreconditions.CheckNotNull(projectName, nameof(projectName)),
+                    ProjectNameAsProjectName = gax::GaxPreconditions.CheckNotNull(projectName, nameof(projectName)),
                 },
                 callSettings);
 
@@ -604,16 +604,16 @@ namespace Google.Cloud.ErrorReporting.V1Beta1
         /// Example: `projects/my-project-123`.
         /// </param>
         /// <param name="cancellationToken">
-        /// A <see cref="CancellationToken"/> to use for this RPC.
+        /// A <see cref="st::CancellationToken"/> to use for this RPC.
         /// </param>
         /// <returns>
         /// A Task containing the RPC response.
         /// </returns>
-        public virtual Task<DeleteEventsResponse> DeleteEventsAsync(
+        public virtual stt::Task<DeleteEventsResponse> DeleteEventsAsync(
             ProjectName projectName,
-            CancellationToken cancellationToken) => DeleteEventsAsync(
+            st::CancellationToken cancellationToken) => DeleteEventsAsync(
                 projectName,
-                CallSettings.FromCancellationToken(cancellationToken));
+                gaxgrpc::CallSettings.FromCancellationToken(cancellationToken));
 
         /// <summary>
         /// Deletes all error events of a given project.
@@ -633,10 +633,10 @@ namespace Google.Cloud.ErrorReporting.V1Beta1
         /// </returns>
         public virtual DeleteEventsResponse DeleteEvents(
             ProjectName projectName,
-            CallSettings callSettings = null) => DeleteEvents(
+            gaxgrpc::CallSettings callSettings = null) => DeleteEvents(
                 new DeleteEventsRequest
                 {
-                    ProjectNameAsProjectName = GaxPreconditions.CheckNotNull(projectName, nameof(projectName)),
+                    ProjectNameAsProjectName = gax::GaxPreconditions.CheckNotNull(projectName, nameof(projectName)),
                 },
                 callSettings);
 
@@ -652,11 +652,11 @@ namespace Google.Cloud.ErrorReporting.V1Beta1
         /// <returns>
         /// A Task containing the RPC response.
         /// </returns>
-        public virtual Task<DeleteEventsResponse> DeleteEventsAsync(
+        public virtual stt::Task<DeleteEventsResponse> DeleteEventsAsync(
             DeleteEventsRequest request,
-            CallSettings callSettings = null)
+            gaxgrpc::CallSettings callSettings = null)
         {
-            throw new NotImplementedException();
+            throw new s::NotImplementedException();
         }
 
         /// <summary>
@@ -666,16 +666,16 @@ namespace Google.Cloud.ErrorReporting.V1Beta1
         /// The request object containing all of the parameters for the API call.
         /// </param>
         /// <param name="cancellationToken">
-        /// A <see cref="CancellationToken"/> to use for this RPC.
+        /// A <see cref="st::CancellationToken"/> to use for this RPC.
         /// </param>
         /// <returns>
         /// A Task containing the RPC response.
         /// </returns>
-        public virtual Task<DeleteEventsResponse> DeleteEventsAsync(
+        public virtual stt::Task<DeleteEventsResponse> DeleteEventsAsync(
             DeleteEventsRequest request,
-            CancellationToken cancellationToken) => DeleteEventsAsync(
+            st::CancellationToken cancellationToken) => DeleteEventsAsync(
                 request,
-                CallSettings.FromCancellationToken(cancellationToken));
+                gaxgrpc::CallSettings.FromCancellationToken(cancellationToken));
 
         /// <summary>
         /// Deletes all error events of a given project.
@@ -691,9 +691,9 @@ namespace Google.Cloud.ErrorReporting.V1Beta1
         /// </returns>
         public virtual DeleteEventsResponse DeleteEvents(
             DeleteEventsRequest request,
-            CallSettings callSettings = null)
+            gaxgrpc::CallSettings callSettings = null)
         {
-            throw new NotImplementedException();
+            throw new s::NotImplementedException();
         }
 
     }
@@ -703,9 +703,9 @@ namespace Google.Cloud.ErrorReporting.V1Beta1
     /// </summary>
     public sealed partial class ErrorStatsServiceClientImpl : ErrorStatsServiceClient
     {
-        private readonly ApiCall<ListGroupStatsRequest, ListGroupStatsResponse> _callListGroupStats;
-        private readonly ApiCall<ListEventsRequest, ListEventsResponse> _callListEvents;
-        private readonly ApiCall<DeleteEventsRequest, DeleteEventsResponse> _callDeleteEvents;
+        private readonly gaxgrpc::ApiCall<ListGroupStatsRequest, ListGroupStatsResponse> _callListGroupStats;
+        private readonly gaxgrpc::ApiCall<ListEventsRequest, ListEventsResponse> _callListEvents;
+        private readonly gaxgrpc::ApiCall<DeleteEventsRequest, DeleteEventsResponse> _callDeleteEvents;
 
         /// <summary>
         /// Constructs a client wrapper for the ErrorStatsService service, with the specified gRPC client and settings.
@@ -716,7 +716,7 @@ namespace Google.Cloud.ErrorReporting.V1Beta1
         {
             GrpcClient = grpcClient;
             ErrorStatsServiceSettings effectiveSettings = settings ?? ErrorStatsServiceSettings.GetDefault();
-            ClientHelper clientHelper = new ClientHelper(effectiveSettings);
+            gaxgrpc::ClientHelper clientHelper = new gaxgrpc::ClientHelper(effectiveSettings);
             _callListGroupStats = clientHelper.BuildApiCall<ListGroupStatsRequest, ListGroupStatsResponse>(
                 GrpcClient.ListGroupStatsAsync, GrpcClient.ListGroupStats, effectiveSettings.ListGroupStatsSettings);
             _callListEvents = clientHelper.BuildApiCall<ListEventsRequest, ListEventsResponse>(
@@ -736,16 +736,16 @@ namespace Google.Cloud.ErrorReporting.V1Beta1
 
         // Partial methods called for every ApiCall on construction.
         // Allows modification of all the underlying ApiCall objects.
-        partial void Modify_ApiCall<TRequest, TResponse>(ref ApiCall<TRequest, TResponse> call)
-            where TRequest : class, IMessage<TRequest>
-            where TResponse : class, IMessage<TResponse>;
+        partial void Modify_ApiCall<TRequest, TResponse>(ref gaxgrpc::ApiCall<TRequest, TResponse> call)
+            where TRequest : class, proto::IMessage<TRequest>
+            where TResponse : class, proto::IMessage<TResponse>;
 
         // Partial methods called for each ApiCall on construction.
         // Allows per-RPC-method modification of the underlying ApiCall object.
-        partial void Modify_ListGroupStatsApiCall(ref ApiCall<ListGroupStatsRequest, ListGroupStatsResponse> call);
-        partial void Modify_ListEventsApiCall(ref ApiCall<ListEventsRequest, ListEventsResponse> call);
-        partial void Modify_DeleteEventsApiCall(ref ApiCall<DeleteEventsRequest, DeleteEventsResponse> call);
-        partial void OnConstruction(ErrorStatsService.ErrorStatsServiceClient grpcClient, ErrorStatsServiceSettings effectiveSettings, ClientHelper clientHelper);
+        partial void Modify_ListGroupStatsApiCall(ref gaxgrpc::ApiCall<ListGroupStatsRequest, ListGroupStatsResponse> call);
+        partial void Modify_ListEventsApiCall(ref gaxgrpc::ApiCall<ListEventsRequest, ListEventsResponse> call);
+        partial void Modify_DeleteEventsApiCall(ref gaxgrpc::ApiCall<DeleteEventsRequest, DeleteEventsResponse> call);
+        partial void OnConstruction(ErrorStatsService.ErrorStatsServiceClient grpcClient, ErrorStatsServiceSettings effectiveSettings, gaxgrpc::ClientHelper clientHelper);
 
         /// <summary>
         /// The underlying gRPC ErrorStatsService client.
@@ -755,9 +755,9 @@ namespace Google.Cloud.ErrorReporting.V1Beta1
         // Partial methods called on each request.
         // Allows per-RPC-call modification to the request and CallSettings objects,
         // before the underlying RPC is performed.
-        partial void Modify_ListGroupStatsRequest(ref ListGroupStatsRequest request, ref CallSettings settings);
-        partial void Modify_ListEventsRequest(ref ListEventsRequest request, ref CallSettings settings);
-        partial void Modify_DeleteEventsRequest(ref DeleteEventsRequest request, ref CallSettings settings);
+        partial void Modify_ListGroupStatsRequest(ref ListGroupStatsRequest request, ref gaxgrpc::CallSettings settings);
+        partial void Modify_ListEventsRequest(ref ListEventsRequest request, ref gaxgrpc::CallSettings settings);
+        partial void Modify_DeleteEventsRequest(ref DeleteEventsRequest request, ref gaxgrpc::CallSettings settings);
 
         /// <summary>
         /// Lists the specified groups.
@@ -771,12 +771,12 @@ namespace Google.Cloud.ErrorReporting.V1Beta1
         /// <returns>
         /// A pageable asynchronous sequence of <see cref="ErrorGroupStats"/> resources.
         /// </returns>
-        public override PagedAsyncEnumerable<ListGroupStatsResponse, ErrorGroupStats> ListGroupStatsAsync(
+        public override gax::PagedAsyncEnumerable<ListGroupStatsResponse, ErrorGroupStats> ListGroupStatsAsync(
             ListGroupStatsRequest request,
-            CallSettings callSettings = null)
+            gaxgrpc::CallSettings callSettings = null)
         {
             Modify_ListGroupStatsRequest(ref request, ref callSettings);
-            return new GrpcPagedAsyncEnumerable<ListGroupStatsRequest, ListGroupStatsResponse, ErrorGroupStats>(_callListGroupStats, request, callSettings);
+            return new gaxgrpc::GrpcPagedAsyncEnumerable<ListGroupStatsRequest, ListGroupStatsResponse, ErrorGroupStats>(_callListGroupStats, request, callSettings);
         }
 
         /// <summary>
@@ -791,12 +791,12 @@ namespace Google.Cloud.ErrorReporting.V1Beta1
         /// <returns>
         /// A pageable sequence of <see cref="ErrorGroupStats"/> resources.
         /// </returns>
-        public override PagedEnumerable<ListGroupStatsResponse, ErrorGroupStats> ListGroupStats(
+        public override gax::PagedEnumerable<ListGroupStatsResponse, ErrorGroupStats> ListGroupStats(
             ListGroupStatsRequest request,
-            CallSettings callSettings = null)
+            gaxgrpc::CallSettings callSettings = null)
         {
             Modify_ListGroupStatsRequest(ref request, ref callSettings);
-            return new GrpcPagedEnumerable<ListGroupStatsRequest, ListGroupStatsResponse, ErrorGroupStats>(_callListGroupStats, request, callSettings);
+            return new gaxgrpc::GrpcPagedEnumerable<ListGroupStatsRequest, ListGroupStatsResponse, ErrorGroupStats>(_callListGroupStats, request, callSettings);
         }
 
         /// <summary>
@@ -811,12 +811,12 @@ namespace Google.Cloud.ErrorReporting.V1Beta1
         /// <returns>
         /// A pageable asynchronous sequence of <see cref="ErrorEvent"/> resources.
         /// </returns>
-        public override PagedAsyncEnumerable<ListEventsResponse, ErrorEvent> ListEventsAsync(
+        public override gax::PagedAsyncEnumerable<ListEventsResponse, ErrorEvent> ListEventsAsync(
             ListEventsRequest request,
-            CallSettings callSettings = null)
+            gaxgrpc::CallSettings callSettings = null)
         {
             Modify_ListEventsRequest(ref request, ref callSettings);
-            return new GrpcPagedAsyncEnumerable<ListEventsRequest, ListEventsResponse, ErrorEvent>(_callListEvents, request, callSettings);
+            return new gaxgrpc::GrpcPagedAsyncEnumerable<ListEventsRequest, ListEventsResponse, ErrorEvent>(_callListEvents, request, callSettings);
         }
 
         /// <summary>
@@ -831,12 +831,12 @@ namespace Google.Cloud.ErrorReporting.V1Beta1
         /// <returns>
         /// A pageable sequence of <see cref="ErrorEvent"/> resources.
         /// </returns>
-        public override PagedEnumerable<ListEventsResponse, ErrorEvent> ListEvents(
+        public override gax::PagedEnumerable<ListEventsResponse, ErrorEvent> ListEvents(
             ListEventsRequest request,
-            CallSettings callSettings = null)
+            gaxgrpc::CallSettings callSettings = null)
         {
             Modify_ListEventsRequest(ref request, ref callSettings);
-            return new GrpcPagedEnumerable<ListEventsRequest, ListEventsResponse, ErrorEvent>(_callListEvents, request, callSettings);
+            return new gaxgrpc::GrpcPagedEnumerable<ListEventsRequest, ListEventsResponse, ErrorEvent>(_callListEvents, request, callSettings);
         }
 
         /// <summary>
@@ -851,9 +851,9 @@ namespace Google.Cloud.ErrorReporting.V1Beta1
         /// <returns>
         /// A Task containing the RPC response.
         /// </returns>
-        public override Task<DeleteEventsResponse> DeleteEventsAsync(
+        public override stt::Task<DeleteEventsResponse> DeleteEventsAsync(
             DeleteEventsRequest request,
-            CallSettings callSettings = null)
+            gaxgrpc::CallSettings callSettings = null)
         {
             Modify_DeleteEventsRequest(ref request, ref callSettings);
             return _callDeleteEvents.Async(request, callSettings);
@@ -873,7 +873,7 @@ namespace Google.Cloud.ErrorReporting.V1Beta1
         /// </returns>
         public override DeleteEventsResponse DeleteEvents(
             DeleteEventsRequest request,
-            CallSettings callSettings = null)
+            gaxgrpc::CallSettings callSettings = null)
         {
             Modify_DeleteEventsRequest(ref request, ref callSettings);
             return _callDeleteEvents.Sync(request, callSettings);
@@ -883,28 +883,28 @@ namespace Google.Cloud.ErrorReporting.V1Beta1
 
     // Partial classes to enable page-streaming
 
-    public partial class ListGroupStatsRequest : IPageRequest { }
-    public partial class ListGroupStatsResponse : IPageResponse<ErrorGroupStats>
+    public partial class ListGroupStatsRequest : gaxgrpc::IPageRequest { }
+    public partial class ListGroupStatsResponse : gaxgrpc::IPageResponse<ErrorGroupStats>
     {
         /// <summary>
         /// Returns an enumerator that iterates through the resources in this response.
         /// </summary>
-        public IEnumerator<ErrorGroupStats> GetEnumerator() => ErrorGroupStats.GetEnumerator();
+        public scg::IEnumerator<ErrorGroupStats> GetEnumerator() => ErrorGroupStats.GetEnumerator();
 
         /// <inheritdoc/>
-        IEnumerator IEnumerable.GetEnumerator() => GetEnumerator();
+        sc::IEnumerator sc::IEnumerable.GetEnumerator() => GetEnumerator();
     }
 
-    public partial class ListEventsRequest : IPageRequest { }
-    public partial class ListEventsResponse : IPageResponse<ErrorEvent>
+    public partial class ListEventsRequest : gaxgrpc::IPageRequest { }
+    public partial class ListEventsResponse : gaxgrpc::IPageResponse<ErrorEvent>
     {
         /// <summary>
         /// Returns an enumerator that iterates through the resources in this response.
         /// </summary>
-        public IEnumerator<ErrorEvent> GetEnumerator() => ErrorEvents.GetEnumerator();
+        public scg::IEnumerator<ErrorEvent> GetEnumerator() => ErrorEvents.GetEnumerator();
 
         /// <inheritdoc/>
-        IEnumerator IEnumerable.GetEnumerator() => GetEnumerator();
+        sc::IEnumerator sc::IEnumerable.GetEnumerator() => GetEnumerator();
     }
 
 

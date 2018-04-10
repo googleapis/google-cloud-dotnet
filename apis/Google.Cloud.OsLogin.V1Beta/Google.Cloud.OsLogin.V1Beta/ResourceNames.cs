@@ -14,8 +14,8 @@
 
 // Generated code. DO NOT EDIT!
 
-using Google.Api.Gax;
-using System;
+using gax = Google.Api.Gax;
+using s = System;
 using System.Linq;
 
 namespace Google.Cloud.OsLogin.V1Beta
@@ -23,9 +23,9 @@ namespace Google.Cloud.OsLogin.V1Beta
     /// <summary>
     /// Resource name for the 'user' resource.
     /// </summary>
-    public sealed partial class UserName : IResourceName, IEquatable<UserName>
+    public sealed partial class UserName : gax::IResourceName, s::IEquatable<UserName>
     {
-        private static readonly PathTemplate s_template = new PathTemplate("users/{user}");
+        private static readonly gax::PathTemplate s_template = new gax::PathTemplate("users/{user}");
 
         /// <summary>
         /// Parses the given user resource name in string form into a new
@@ -35,8 +35,8 @@ namespace Google.Cloud.OsLogin.V1Beta
         /// <returns>The parsed <see cref="UserName"/> if successful.</returns>
         public static UserName Parse(string userName)
         {
-            GaxPreconditions.CheckNotNull(userName, nameof(userName));
-            TemplatedResourceName resourceName = s_template.ParseName(userName);
+            gax::GaxPreconditions.CheckNotNull(userName, nameof(userName));
+            gax::TemplatedResourceName resourceName = s_template.ParseName(userName);
             return new UserName(resourceName[0]);
         }
 
@@ -45,7 +45,7 @@ namespace Google.Cloud.OsLogin.V1Beta
         /// <see cref="UserName"/> instance.
         /// </summary>
         /// <remarks>
-        /// This method still throws <see cref="ArgumentNullException"/> if <paramref name="userName"/> is null,
+        /// This method still throws <see cref="s::ArgumentNullException"/> if <paramref name="userName"/> is null,
         /// as this would usually indicate a programming error rather than a data error.
         /// </remarks>
         /// <param name="userName">The user resource name in string form. Must not be <c>null</c>.</param>
@@ -54,8 +54,8 @@ namespace Google.Cloud.OsLogin.V1Beta
         /// <returns><c>true</c> if the name was parsed succssfully; <c>false</c> otherwise.</returns>
         public static bool TryParse(string userName, out UserName result)
         {
-            GaxPreconditions.CheckNotNull(userName, nameof(userName));
-            TemplatedResourceName resourceName;
+            gax::GaxPreconditions.CheckNotNull(userName, nameof(userName));
+            gax::TemplatedResourceName resourceName;
             if (s_template.TryParseName(userName, out resourceName))
             {
                 result = new UserName(resourceName[0]);
@@ -75,7 +75,7 @@ namespace Google.Cloud.OsLogin.V1Beta
         /// <param name="userId">The user ID. Must not be <c>null</c>.</param>
         public UserName(string userId)
         {
-            UserId = GaxPreconditions.CheckNotNull(userId, nameof(userId));
+            UserId = gax::GaxPreconditions.CheckNotNull(userId, nameof(userId));
         }
 
         /// <summary>
@@ -84,7 +84,7 @@ namespace Google.Cloud.OsLogin.V1Beta
         public string UserId { get; }
 
         /// <inheritdoc />
-        public ResourceNameKind Kind => ResourceNameKind.Simple;
+        public gax::ResourceNameKind Kind => gax::ResourceNameKind.Simple;
 
         /// <inheritdoc />
         public override string ToString() => s_template.Expand(UserId);
@@ -108,9 +108,9 @@ namespace Google.Cloud.OsLogin.V1Beta
     /// <summary>
     /// Resource name for the 'project' resource.
     /// </summary>
-    public sealed partial class ProjectName : IResourceName, IEquatable<ProjectName>
+    public sealed partial class ProjectName : gax::IResourceName, s::IEquatable<ProjectName>
     {
-        private static readonly PathTemplate s_template = new PathTemplate("users/{user}/projects/{project}");
+        private static readonly gax::PathTemplate s_template = new gax::PathTemplate("users/{user}/projects/{project}");
 
         /// <summary>
         /// Parses the given project resource name in string form into a new
@@ -120,8 +120,8 @@ namespace Google.Cloud.OsLogin.V1Beta
         /// <returns>The parsed <see cref="ProjectName"/> if successful.</returns>
         public static ProjectName Parse(string projectName)
         {
-            GaxPreconditions.CheckNotNull(projectName, nameof(projectName));
-            TemplatedResourceName resourceName = s_template.ParseName(projectName);
+            gax::GaxPreconditions.CheckNotNull(projectName, nameof(projectName));
+            gax::TemplatedResourceName resourceName = s_template.ParseName(projectName);
             return new ProjectName(resourceName[0], resourceName[1]);
         }
 
@@ -130,7 +130,7 @@ namespace Google.Cloud.OsLogin.V1Beta
         /// <see cref="ProjectName"/> instance.
         /// </summary>
         /// <remarks>
-        /// This method still throws <see cref="ArgumentNullException"/> if <paramref name="projectName"/> is null,
+        /// This method still throws <see cref="s::ArgumentNullException"/> if <paramref name="projectName"/> is null,
         /// as this would usually indicate a programming error rather than a data error.
         /// </remarks>
         /// <param name="projectName">The project resource name in string form. Must not be <c>null</c>.</param>
@@ -139,8 +139,8 @@ namespace Google.Cloud.OsLogin.V1Beta
         /// <returns><c>true</c> if the name was parsed succssfully; <c>false</c> otherwise.</returns>
         public static bool TryParse(string projectName, out ProjectName result)
         {
-            GaxPreconditions.CheckNotNull(projectName, nameof(projectName));
-            TemplatedResourceName resourceName;
+            gax::GaxPreconditions.CheckNotNull(projectName, nameof(projectName));
+            gax::TemplatedResourceName resourceName;
             if (s_template.TryParseName(projectName, out resourceName))
             {
                 result = new ProjectName(resourceName[0], resourceName[1]);
@@ -161,8 +161,8 @@ namespace Google.Cloud.OsLogin.V1Beta
         /// <param name="projectId">The project ID. Must not be <c>null</c>.</param>
         public ProjectName(string userId, string projectId)
         {
-            UserId = GaxPreconditions.CheckNotNull(userId, nameof(userId));
-            ProjectId = GaxPreconditions.CheckNotNull(projectId, nameof(projectId));
+            UserId = gax::GaxPreconditions.CheckNotNull(userId, nameof(userId));
+            ProjectId = gax::GaxPreconditions.CheckNotNull(projectId, nameof(projectId));
         }
 
         /// <summary>
@@ -176,7 +176,7 @@ namespace Google.Cloud.OsLogin.V1Beta
         public string ProjectId { get; }
 
         /// <inheritdoc />
-        public ResourceNameKind Kind => ResourceNameKind.Simple;
+        public gax::ResourceNameKind Kind => gax::ResourceNameKind.Simple;
 
         /// <inheritdoc />
         public override string ToString() => s_template.Expand(UserId, ProjectId);
@@ -200,9 +200,9 @@ namespace Google.Cloud.OsLogin.V1Beta
     /// <summary>
     /// Resource name for the 'fingerprint' resource.
     /// </summary>
-    public sealed partial class FingerprintName : IResourceName, IEquatable<FingerprintName>
+    public sealed partial class FingerprintName : gax::IResourceName, s::IEquatable<FingerprintName>
     {
-        private static readonly PathTemplate s_template = new PathTemplate("users/{user}/sshPublicKeys/{fingerprint}");
+        private static readonly gax::PathTemplate s_template = new gax::PathTemplate("users/{user}/sshPublicKeys/{fingerprint}");
 
         /// <summary>
         /// Parses the given fingerprint resource name in string form into a new
@@ -212,8 +212,8 @@ namespace Google.Cloud.OsLogin.V1Beta
         /// <returns>The parsed <see cref="FingerprintName"/> if successful.</returns>
         public static FingerprintName Parse(string fingerprintName)
         {
-            GaxPreconditions.CheckNotNull(fingerprintName, nameof(fingerprintName));
-            TemplatedResourceName resourceName = s_template.ParseName(fingerprintName);
+            gax::GaxPreconditions.CheckNotNull(fingerprintName, nameof(fingerprintName));
+            gax::TemplatedResourceName resourceName = s_template.ParseName(fingerprintName);
             return new FingerprintName(resourceName[0], resourceName[1]);
         }
 
@@ -222,7 +222,7 @@ namespace Google.Cloud.OsLogin.V1Beta
         /// <see cref="FingerprintName"/> instance.
         /// </summary>
         /// <remarks>
-        /// This method still throws <see cref="ArgumentNullException"/> if <paramref name="fingerprintName"/> is null,
+        /// This method still throws <see cref="s::ArgumentNullException"/> if <paramref name="fingerprintName"/> is null,
         /// as this would usually indicate a programming error rather than a data error.
         /// </remarks>
         /// <param name="fingerprintName">The fingerprint resource name in string form. Must not be <c>null</c>.</param>
@@ -231,8 +231,8 @@ namespace Google.Cloud.OsLogin.V1Beta
         /// <returns><c>true</c> if the name was parsed succssfully; <c>false</c> otherwise.</returns>
         public static bool TryParse(string fingerprintName, out FingerprintName result)
         {
-            GaxPreconditions.CheckNotNull(fingerprintName, nameof(fingerprintName));
-            TemplatedResourceName resourceName;
+            gax::GaxPreconditions.CheckNotNull(fingerprintName, nameof(fingerprintName));
+            gax::TemplatedResourceName resourceName;
             if (s_template.TryParseName(fingerprintName, out resourceName))
             {
                 result = new FingerprintName(resourceName[0], resourceName[1]);
@@ -253,8 +253,8 @@ namespace Google.Cloud.OsLogin.V1Beta
         /// <param name="fingerprintId">The fingerprint ID. Must not be <c>null</c>.</param>
         public FingerprintName(string userId, string fingerprintId)
         {
-            UserId = GaxPreconditions.CheckNotNull(userId, nameof(userId));
-            FingerprintId = GaxPreconditions.CheckNotNull(fingerprintId, nameof(fingerprintId));
+            UserId = gax::GaxPreconditions.CheckNotNull(userId, nameof(userId));
+            FingerprintId = gax::GaxPreconditions.CheckNotNull(fingerprintId, nameof(fingerprintId));
         }
 
         /// <summary>
@@ -268,7 +268,7 @@ namespace Google.Cloud.OsLogin.V1Beta
         public string FingerprintId { get; }
 
         /// <inheritdoc />
-        public ResourceNameKind Kind => ResourceNameKind.Simple;
+        public gax::ResourceNameKind Kind => gax::ResourceNameKind.Simple;
 
         /// <inheritdoc />
         public override string ToString() => s_template.Expand(UserId, FingerprintId);

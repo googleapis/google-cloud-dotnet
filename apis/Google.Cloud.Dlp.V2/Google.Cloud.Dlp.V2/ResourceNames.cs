@@ -14,8 +14,8 @@
 
 // Generated code. DO NOT EDIT!
 
-using Google.Api.Gax;
-using System;
+using gax = Google.Api.Gax;
+using s = System;
 using System.Linq;
 
 namespace Google.Cloud.Dlp.V2
@@ -23,9 +23,9 @@ namespace Google.Cloud.Dlp.V2
     /// <summary>
     /// Resource name for the 'organization' resource.
     /// </summary>
-    public sealed partial class OrganizationName : IResourceName, IEquatable<OrganizationName>
+    public sealed partial class OrganizationName : gax::IResourceName, s::IEquatable<OrganizationName>
     {
-        private static readonly PathTemplate s_template = new PathTemplate("organizations/{organization}");
+        private static readonly gax::PathTemplate s_template = new gax::PathTemplate("organizations/{organization}");
 
         /// <summary>
         /// Parses the given organization resource name in string form into a new
@@ -35,8 +35,8 @@ namespace Google.Cloud.Dlp.V2
         /// <returns>The parsed <see cref="OrganizationName"/> if successful.</returns>
         public static OrganizationName Parse(string organizationName)
         {
-            GaxPreconditions.CheckNotNull(organizationName, nameof(organizationName));
-            TemplatedResourceName resourceName = s_template.ParseName(organizationName);
+            gax::GaxPreconditions.CheckNotNull(organizationName, nameof(organizationName));
+            gax::TemplatedResourceName resourceName = s_template.ParseName(organizationName);
             return new OrganizationName(resourceName[0]);
         }
 
@@ -45,7 +45,7 @@ namespace Google.Cloud.Dlp.V2
         /// <see cref="OrganizationName"/> instance.
         /// </summary>
         /// <remarks>
-        /// This method still throws <see cref="ArgumentNullException"/> if <paramref name="organizationName"/> is null,
+        /// This method still throws <see cref="s::ArgumentNullException"/> if <paramref name="organizationName"/> is null,
         /// as this would usually indicate a programming error rather than a data error.
         /// </remarks>
         /// <param name="organizationName">The organization resource name in string form. Must not be <c>null</c>.</param>
@@ -54,8 +54,8 @@ namespace Google.Cloud.Dlp.V2
         /// <returns><c>true</c> if the name was parsed succssfully; <c>false</c> otherwise.</returns>
         public static bool TryParse(string organizationName, out OrganizationName result)
         {
-            GaxPreconditions.CheckNotNull(organizationName, nameof(organizationName));
-            TemplatedResourceName resourceName;
+            gax::GaxPreconditions.CheckNotNull(organizationName, nameof(organizationName));
+            gax::TemplatedResourceName resourceName;
             if (s_template.TryParseName(organizationName, out resourceName))
             {
                 result = new OrganizationName(resourceName[0]);
@@ -75,7 +75,7 @@ namespace Google.Cloud.Dlp.V2
         /// <param name="organizationId">The organization ID. Must not be <c>null</c>.</param>
         public OrganizationName(string organizationId)
         {
-            OrganizationId = GaxPreconditions.CheckNotNull(organizationId, nameof(organizationId));
+            OrganizationId = gax::GaxPreconditions.CheckNotNull(organizationId, nameof(organizationId));
         }
 
         /// <summary>
@@ -84,7 +84,7 @@ namespace Google.Cloud.Dlp.V2
         public string OrganizationId { get; }
 
         /// <inheritdoc />
-        public ResourceNameKind Kind => ResourceNameKind.Simple;
+        public gax::ResourceNameKind Kind => gax::ResourceNameKind.Simple;
 
         /// <inheritdoc />
         public override string ToString() => s_template.Expand(OrganizationId);
@@ -108,9 +108,9 @@ namespace Google.Cloud.Dlp.V2
     /// <summary>
     /// Resource name for the 'organization_deidentify_template' resource.
     /// </summary>
-    public sealed partial class OrganizationDeidentifyTemplateName : IResourceName, IEquatable<OrganizationDeidentifyTemplateName>
+    public sealed partial class OrganizationDeidentifyTemplateName : gax::IResourceName, s::IEquatable<OrganizationDeidentifyTemplateName>
     {
-        private static readonly PathTemplate s_template = new PathTemplate("organizations/{organization}/deidentifyTemplates/{deidentify_template}");
+        private static readonly gax::PathTemplate s_template = new gax::PathTemplate("organizations/{organization}/deidentifyTemplates/{deidentify_template}");
 
         /// <summary>
         /// Parses the given organization_deidentify_template resource name in string form into a new
@@ -120,8 +120,8 @@ namespace Google.Cloud.Dlp.V2
         /// <returns>The parsed <see cref="OrganizationDeidentifyTemplateName"/> if successful.</returns>
         public static OrganizationDeidentifyTemplateName Parse(string organizationDeidentifyTemplateName)
         {
-            GaxPreconditions.CheckNotNull(organizationDeidentifyTemplateName, nameof(organizationDeidentifyTemplateName));
-            TemplatedResourceName resourceName = s_template.ParseName(organizationDeidentifyTemplateName);
+            gax::GaxPreconditions.CheckNotNull(organizationDeidentifyTemplateName, nameof(organizationDeidentifyTemplateName));
+            gax::TemplatedResourceName resourceName = s_template.ParseName(organizationDeidentifyTemplateName);
             return new OrganizationDeidentifyTemplateName(resourceName[0], resourceName[1]);
         }
 
@@ -130,7 +130,7 @@ namespace Google.Cloud.Dlp.V2
         /// <see cref="OrganizationDeidentifyTemplateName"/> instance.
         /// </summary>
         /// <remarks>
-        /// This method still throws <see cref="ArgumentNullException"/> if <paramref name="organizationDeidentifyTemplateName"/> is null,
+        /// This method still throws <see cref="s::ArgumentNullException"/> if <paramref name="organizationDeidentifyTemplateName"/> is null,
         /// as this would usually indicate a programming error rather than a data error.
         /// </remarks>
         /// <param name="organizationDeidentifyTemplateName">The organization_deidentify_template resource name in string form. Must not be <c>null</c>.</param>
@@ -139,8 +139,8 @@ namespace Google.Cloud.Dlp.V2
         /// <returns><c>true</c> if the name was parsed succssfully; <c>false</c> otherwise.</returns>
         public static bool TryParse(string organizationDeidentifyTemplateName, out OrganizationDeidentifyTemplateName result)
         {
-            GaxPreconditions.CheckNotNull(organizationDeidentifyTemplateName, nameof(organizationDeidentifyTemplateName));
-            TemplatedResourceName resourceName;
+            gax::GaxPreconditions.CheckNotNull(organizationDeidentifyTemplateName, nameof(organizationDeidentifyTemplateName));
+            gax::TemplatedResourceName resourceName;
             if (s_template.TryParseName(organizationDeidentifyTemplateName, out resourceName))
             {
                 result = new OrganizationDeidentifyTemplateName(resourceName[0], resourceName[1]);
@@ -161,8 +161,8 @@ namespace Google.Cloud.Dlp.V2
         /// <param name="deidentifyTemplateId">The deidentifyTemplate ID. Must not be <c>null</c>.</param>
         public OrganizationDeidentifyTemplateName(string organizationId, string deidentifyTemplateId)
         {
-            OrganizationId = GaxPreconditions.CheckNotNull(organizationId, nameof(organizationId));
-            DeidentifyTemplateId = GaxPreconditions.CheckNotNull(deidentifyTemplateId, nameof(deidentifyTemplateId));
+            OrganizationId = gax::GaxPreconditions.CheckNotNull(organizationId, nameof(organizationId));
+            DeidentifyTemplateId = gax::GaxPreconditions.CheckNotNull(deidentifyTemplateId, nameof(deidentifyTemplateId));
         }
 
         /// <summary>
@@ -176,7 +176,7 @@ namespace Google.Cloud.Dlp.V2
         public string DeidentifyTemplateId { get; }
 
         /// <inheritdoc />
-        public ResourceNameKind Kind => ResourceNameKind.Simple;
+        public gax::ResourceNameKind Kind => gax::ResourceNameKind.Simple;
 
         /// <inheritdoc />
         public override string ToString() => s_template.Expand(OrganizationId, DeidentifyTemplateId);
@@ -200,9 +200,9 @@ namespace Google.Cloud.Dlp.V2
     /// <summary>
     /// Resource name for the 'project_deidentify_template' resource.
     /// </summary>
-    public sealed partial class ProjectDeidentifyTemplateName : IResourceName, IEquatable<ProjectDeidentifyTemplateName>
+    public sealed partial class ProjectDeidentifyTemplateName : gax::IResourceName, s::IEquatable<ProjectDeidentifyTemplateName>
     {
-        private static readonly PathTemplate s_template = new PathTemplate("projects/{project}/deidentifyTemplates/{deidentify_template}");
+        private static readonly gax::PathTemplate s_template = new gax::PathTemplate("projects/{project}/deidentifyTemplates/{deidentify_template}");
 
         /// <summary>
         /// Parses the given project_deidentify_template resource name in string form into a new
@@ -212,8 +212,8 @@ namespace Google.Cloud.Dlp.V2
         /// <returns>The parsed <see cref="ProjectDeidentifyTemplateName"/> if successful.</returns>
         public static ProjectDeidentifyTemplateName Parse(string projectDeidentifyTemplateName)
         {
-            GaxPreconditions.CheckNotNull(projectDeidentifyTemplateName, nameof(projectDeidentifyTemplateName));
-            TemplatedResourceName resourceName = s_template.ParseName(projectDeidentifyTemplateName);
+            gax::GaxPreconditions.CheckNotNull(projectDeidentifyTemplateName, nameof(projectDeidentifyTemplateName));
+            gax::TemplatedResourceName resourceName = s_template.ParseName(projectDeidentifyTemplateName);
             return new ProjectDeidentifyTemplateName(resourceName[0], resourceName[1]);
         }
 
@@ -222,7 +222,7 @@ namespace Google.Cloud.Dlp.V2
         /// <see cref="ProjectDeidentifyTemplateName"/> instance.
         /// </summary>
         /// <remarks>
-        /// This method still throws <see cref="ArgumentNullException"/> if <paramref name="projectDeidentifyTemplateName"/> is null,
+        /// This method still throws <see cref="s::ArgumentNullException"/> if <paramref name="projectDeidentifyTemplateName"/> is null,
         /// as this would usually indicate a programming error rather than a data error.
         /// </remarks>
         /// <param name="projectDeidentifyTemplateName">The project_deidentify_template resource name in string form. Must not be <c>null</c>.</param>
@@ -231,8 +231,8 @@ namespace Google.Cloud.Dlp.V2
         /// <returns><c>true</c> if the name was parsed succssfully; <c>false</c> otherwise.</returns>
         public static bool TryParse(string projectDeidentifyTemplateName, out ProjectDeidentifyTemplateName result)
         {
-            GaxPreconditions.CheckNotNull(projectDeidentifyTemplateName, nameof(projectDeidentifyTemplateName));
-            TemplatedResourceName resourceName;
+            gax::GaxPreconditions.CheckNotNull(projectDeidentifyTemplateName, nameof(projectDeidentifyTemplateName));
+            gax::TemplatedResourceName resourceName;
             if (s_template.TryParseName(projectDeidentifyTemplateName, out resourceName))
             {
                 result = new ProjectDeidentifyTemplateName(resourceName[0], resourceName[1]);
@@ -253,8 +253,8 @@ namespace Google.Cloud.Dlp.V2
         /// <param name="deidentifyTemplateId">The deidentifyTemplate ID. Must not be <c>null</c>.</param>
         public ProjectDeidentifyTemplateName(string projectId, string deidentifyTemplateId)
         {
-            ProjectId = GaxPreconditions.CheckNotNull(projectId, nameof(projectId));
-            DeidentifyTemplateId = GaxPreconditions.CheckNotNull(deidentifyTemplateId, nameof(deidentifyTemplateId));
+            ProjectId = gax::GaxPreconditions.CheckNotNull(projectId, nameof(projectId));
+            DeidentifyTemplateId = gax::GaxPreconditions.CheckNotNull(deidentifyTemplateId, nameof(deidentifyTemplateId));
         }
 
         /// <summary>
@@ -268,7 +268,7 @@ namespace Google.Cloud.Dlp.V2
         public string DeidentifyTemplateId { get; }
 
         /// <inheritdoc />
-        public ResourceNameKind Kind => ResourceNameKind.Simple;
+        public gax::ResourceNameKind Kind => gax::ResourceNameKind.Simple;
 
         /// <inheritdoc />
         public override string ToString() => s_template.Expand(ProjectId, DeidentifyTemplateId);
@@ -292,9 +292,9 @@ namespace Google.Cloud.Dlp.V2
     /// <summary>
     /// Resource name for the 'organization_inspect_template' resource.
     /// </summary>
-    public sealed partial class OrganizationInspectTemplateName : IResourceName, IEquatable<OrganizationInspectTemplateName>
+    public sealed partial class OrganizationInspectTemplateName : gax::IResourceName, s::IEquatable<OrganizationInspectTemplateName>
     {
-        private static readonly PathTemplate s_template = new PathTemplate("organizations/{organization}/inspectTemplates/{inspect_template}");
+        private static readonly gax::PathTemplate s_template = new gax::PathTemplate("organizations/{organization}/inspectTemplates/{inspect_template}");
 
         /// <summary>
         /// Parses the given organization_inspect_template resource name in string form into a new
@@ -304,8 +304,8 @@ namespace Google.Cloud.Dlp.V2
         /// <returns>The parsed <see cref="OrganizationInspectTemplateName"/> if successful.</returns>
         public static OrganizationInspectTemplateName Parse(string organizationInspectTemplateName)
         {
-            GaxPreconditions.CheckNotNull(organizationInspectTemplateName, nameof(organizationInspectTemplateName));
-            TemplatedResourceName resourceName = s_template.ParseName(organizationInspectTemplateName);
+            gax::GaxPreconditions.CheckNotNull(organizationInspectTemplateName, nameof(organizationInspectTemplateName));
+            gax::TemplatedResourceName resourceName = s_template.ParseName(organizationInspectTemplateName);
             return new OrganizationInspectTemplateName(resourceName[0], resourceName[1]);
         }
 
@@ -314,7 +314,7 @@ namespace Google.Cloud.Dlp.V2
         /// <see cref="OrganizationInspectTemplateName"/> instance.
         /// </summary>
         /// <remarks>
-        /// This method still throws <see cref="ArgumentNullException"/> if <paramref name="organizationInspectTemplateName"/> is null,
+        /// This method still throws <see cref="s::ArgumentNullException"/> if <paramref name="organizationInspectTemplateName"/> is null,
         /// as this would usually indicate a programming error rather than a data error.
         /// </remarks>
         /// <param name="organizationInspectTemplateName">The organization_inspect_template resource name in string form. Must not be <c>null</c>.</param>
@@ -323,8 +323,8 @@ namespace Google.Cloud.Dlp.V2
         /// <returns><c>true</c> if the name was parsed succssfully; <c>false</c> otherwise.</returns>
         public static bool TryParse(string organizationInspectTemplateName, out OrganizationInspectTemplateName result)
         {
-            GaxPreconditions.CheckNotNull(organizationInspectTemplateName, nameof(organizationInspectTemplateName));
-            TemplatedResourceName resourceName;
+            gax::GaxPreconditions.CheckNotNull(organizationInspectTemplateName, nameof(organizationInspectTemplateName));
+            gax::TemplatedResourceName resourceName;
             if (s_template.TryParseName(organizationInspectTemplateName, out resourceName))
             {
                 result = new OrganizationInspectTemplateName(resourceName[0], resourceName[1]);
@@ -345,8 +345,8 @@ namespace Google.Cloud.Dlp.V2
         /// <param name="inspectTemplateId">The inspectTemplate ID. Must not be <c>null</c>.</param>
         public OrganizationInspectTemplateName(string organizationId, string inspectTemplateId)
         {
-            OrganizationId = GaxPreconditions.CheckNotNull(organizationId, nameof(organizationId));
-            InspectTemplateId = GaxPreconditions.CheckNotNull(inspectTemplateId, nameof(inspectTemplateId));
+            OrganizationId = gax::GaxPreconditions.CheckNotNull(organizationId, nameof(organizationId));
+            InspectTemplateId = gax::GaxPreconditions.CheckNotNull(inspectTemplateId, nameof(inspectTemplateId));
         }
 
         /// <summary>
@@ -360,7 +360,7 @@ namespace Google.Cloud.Dlp.V2
         public string InspectTemplateId { get; }
 
         /// <inheritdoc />
-        public ResourceNameKind Kind => ResourceNameKind.Simple;
+        public gax::ResourceNameKind Kind => gax::ResourceNameKind.Simple;
 
         /// <inheritdoc />
         public override string ToString() => s_template.Expand(OrganizationId, InspectTemplateId);
@@ -384,9 +384,9 @@ namespace Google.Cloud.Dlp.V2
     /// <summary>
     /// Resource name for the 'project_inspect_template' resource.
     /// </summary>
-    public sealed partial class ProjectInspectTemplateName : IResourceName, IEquatable<ProjectInspectTemplateName>
+    public sealed partial class ProjectInspectTemplateName : gax::IResourceName, s::IEquatable<ProjectInspectTemplateName>
     {
-        private static readonly PathTemplate s_template = new PathTemplate("projects/{project}/inspectTemplates/{inspect_template}");
+        private static readonly gax::PathTemplate s_template = new gax::PathTemplate("projects/{project}/inspectTemplates/{inspect_template}");
 
         /// <summary>
         /// Parses the given project_inspect_template resource name in string form into a new
@@ -396,8 +396,8 @@ namespace Google.Cloud.Dlp.V2
         /// <returns>The parsed <see cref="ProjectInspectTemplateName"/> if successful.</returns>
         public static ProjectInspectTemplateName Parse(string projectInspectTemplateName)
         {
-            GaxPreconditions.CheckNotNull(projectInspectTemplateName, nameof(projectInspectTemplateName));
-            TemplatedResourceName resourceName = s_template.ParseName(projectInspectTemplateName);
+            gax::GaxPreconditions.CheckNotNull(projectInspectTemplateName, nameof(projectInspectTemplateName));
+            gax::TemplatedResourceName resourceName = s_template.ParseName(projectInspectTemplateName);
             return new ProjectInspectTemplateName(resourceName[0], resourceName[1]);
         }
 
@@ -406,7 +406,7 @@ namespace Google.Cloud.Dlp.V2
         /// <see cref="ProjectInspectTemplateName"/> instance.
         /// </summary>
         /// <remarks>
-        /// This method still throws <see cref="ArgumentNullException"/> if <paramref name="projectInspectTemplateName"/> is null,
+        /// This method still throws <see cref="s::ArgumentNullException"/> if <paramref name="projectInspectTemplateName"/> is null,
         /// as this would usually indicate a programming error rather than a data error.
         /// </remarks>
         /// <param name="projectInspectTemplateName">The project_inspect_template resource name in string form. Must not be <c>null</c>.</param>
@@ -415,8 +415,8 @@ namespace Google.Cloud.Dlp.V2
         /// <returns><c>true</c> if the name was parsed succssfully; <c>false</c> otherwise.</returns>
         public static bool TryParse(string projectInspectTemplateName, out ProjectInspectTemplateName result)
         {
-            GaxPreconditions.CheckNotNull(projectInspectTemplateName, nameof(projectInspectTemplateName));
-            TemplatedResourceName resourceName;
+            gax::GaxPreconditions.CheckNotNull(projectInspectTemplateName, nameof(projectInspectTemplateName));
+            gax::TemplatedResourceName resourceName;
             if (s_template.TryParseName(projectInspectTemplateName, out resourceName))
             {
                 result = new ProjectInspectTemplateName(resourceName[0], resourceName[1]);
@@ -437,8 +437,8 @@ namespace Google.Cloud.Dlp.V2
         /// <param name="inspectTemplateId">The inspectTemplate ID. Must not be <c>null</c>.</param>
         public ProjectInspectTemplateName(string projectId, string inspectTemplateId)
         {
-            ProjectId = GaxPreconditions.CheckNotNull(projectId, nameof(projectId));
-            InspectTemplateId = GaxPreconditions.CheckNotNull(inspectTemplateId, nameof(inspectTemplateId));
+            ProjectId = gax::GaxPreconditions.CheckNotNull(projectId, nameof(projectId));
+            InspectTemplateId = gax::GaxPreconditions.CheckNotNull(inspectTemplateId, nameof(inspectTemplateId));
         }
 
         /// <summary>
@@ -452,7 +452,7 @@ namespace Google.Cloud.Dlp.V2
         public string InspectTemplateId { get; }
 
         /// <inheritdoc />
-        public ResourceNameKind Kind => ResourceNameKind.Simple;
+        public gax::ResourceNameKind Kind => gax::ResourceNameKind.Simple;
 
         /// <inheritdoc />
         public override string ToString() => s_template.Expand(ProjectId, InspectTemplateId);
@@ -476,9 +476,9 @@ namespace Google.Cloud.Dlp.V2
     /// <summary>
     /// Resource name for the 'project_job_trigger' resource.
     /// </summary>
-    public sealed partial class ProjectJobTriggerName : IResourceName, IEquatable<ProjectJobTriggerName>
+    public sealed partial class ProjectJobTriggerName : gax::IResourceName, s::IEquatable<ProjectJobTriggerName>
     {
-        private static readonly PathTemplate s_template = new PathTemplate("projects/{project}/jobTriggers/{job_trigger}");
+        private static readonly gax::PathTemplate s_template = new gax::PathTemplate("projects/{project}/jobTriggers/{job_trigger}");
 
         /// <summary>
         /// Parses the given project_job_trigger resource name in string form into a new
@@ -488,8 +488,8 @@ namespace Google.Cloud.Dlp.V2
         /// <returns>The parsed <see cref="ProjectJobTriggerName"/> if successful.</returns>
         public static ProjectJobTriggerName Parse(string projectJobTriggerName)
         {
-            GaxPreconditions.CheckNotNull(projectJobTriggerName, nameof(projectJobTriggerName));
-            TemplatedResourceName resourceName = s_template.ParseName(projectJobTriggerName);
+            gax::GaxPreconditions.CheckNotNull(projectJobTriggerName, nameof(projectJobTriggerName));
+            gax::TemplatedResourceName resourceName = s_template.ParseName(projectJobTriggerName);
             return new ProjectJobTriggerName(resourceName[0], resourceName[1]);
         }
 
@@ -498,7 +498,7 @@ namespace Google.Cloud.Dlp.V2
         /// <see cref="ProjectJobTriggerName"/> instance.
         /// </summary>
         /// <remarks>
-        /// This method still throws <see cref="ArgumentNullException"/> if <paramref name="projectJobTriggerName"/> is null,
+        /// This method still throws <see cref="s::ArgumentNullException"/> if <paramref name="projectJobTriggerName"/> is null,
         /// as this would usually indicate a programming error rather than a data error.
         /// </remarks>
         /// <param name="projectJobTriggerName">The project_job_trigger resource name in string form. Must not be <c>null</c>.</param>
@@ -507,8 +507,8 @@ namespace Google.Cloud.Dlp.V2
         /// <returns><c>true</c> if the name was parsed succssfully; <c>false</c> otherwise.</returns>
         public static bool TryParse(string projectJobTriggerName, out ProjectJobTriggerName result)
         {
-            GaxPreconditions.CheckNotNull(projectJobTriggerName, nameof(projectJobTriggerName));
-            TemplatedResourceName resourceName;
+            gax::GaxPreconditions.CheckNotNull(projectJobTriggerName, nameof(projectJobTriggerName));
+            gax::TemplatedResourceName resourceName;
             if (s_template.TryParseName(projectJobTriggerName, out resourceName))
             {
                 result = new ProjectJobTriggerName(resourceName[0], resourceName[1]);
@@ -529,8 +529,8 @@ namespace Google.Cloud.Dlp.V2
         /// <param name="jobTriggerId">The jobTrigger ID. Must not be <c>null</c>.</param>
         public ProjectJobTriggerName(string projectId, string jobTriggerId)
         {
-            ProjectId = GaxPreconditions.CheckNotNull(projectId, nameof(projectId));
-            JobTriggerId = GaxPreconditions.CheckNotNull(jobTriggerId, nameof(jobTriggerId));
+            ProjectId = gax::GaxPreconditions.CheckNotNull(projectId, nameof(projectId));
+            JobTriggerId = gax::GaxPreconditions.CheckNotNull(jobTriggerId, nameof(jobTriggerId));
         }
 
         /// <summary>
@@ -544,7 +544,7 @@ namespace Google.Cloud.Dlp.V2
         public string JobTriggerId { get; }
 
         /// <inheritdoc />
-        public ResourceNameKind Kind => ResourceNameKind.Simple;
+        public gax::ResourceNameKind Kind => gax::ResourceNameKind.Simple;
 
         /// <inheritdoc />
         public override string ToString() => s_template.Expand(ProjectId, JobTriggerId);
@@ -568,9 +568,9 @@ namespace Google.Cloud.Dlp.V2
     /// <summary>
     /// Resource name for the 'project' resource.
     /// </summary>
-    public sealed partial class ProjectName : IResourceName, IEquatable<ProjectName>
+    public sealed partial class ProjectName : gax::IResourceName, s::IEquatable<ProjectName>
     {
-        private static readonly PathTemplate s_template = new PathTemplate("projects/{project}");
+        private static readonly gax::PathTemplate s_template = new gax::PathTemplate("projects/{project}");
 
         /// <summary>
         /// Parses the given project resource name in string form into a new
@@ -580,8 +580,8 @@ namespace Google.Cloud.Dlp.V2
         /// <returns>The parsed <see cref="ProjectName"/> if successful.</returns>
         public static ProjectName Parse(string projectName)
         {
-            GaxPreconditions.CheckNotNull(projectName, nameof(projectName));
-            TemplatedResourceName resourceName = s_template.ParseName(projectName);
+            gax::GaxPreconditions.CheckNotNull(projectName, nameof(projectName));
+            gax::TemplatedResourceName resourceName = s_template.ParseName(projectName);
             return new ProjectName(resourceName[0]);
         }
 
@@ -590,7 +590,7 @@ namespace Google.Cloud.Dlp.V2
         /// <see cref="ProjectName"/> instance.
         /// </summary>
         /// <remarks>
-        /// This method still throws <see cref="ArgumentNullException"/> if <paramref name="projectName"/> is null,
+        /// This method still throws <see cref="s::ArgumentNullException"/> if <paramref name="projectName"/> is null,
         /// as this would usually indicate a programming error rather than a data error.
         /// </remarks>
         /// <param name="projectName">The project resource name in string form. Must not be <c>null</c>.</param>
@@ -599,8 +599,8 @@ namespace Google.Cloud.Dlp.V2
         /// <returns><c>true</c> if the name was parsed succssfully; <c>false</c> otherwise.</returns>
         public static bool TryParse(string projectName, out ProjectName result)
         {
-            GaxPreconditions.CheckNotNull(projectName, nameof(projectName));
-            TemplatedResourceName resourceName;
+            gax::GaxPreconditions.CheckNotNull(projectName, nameof(projectName));
+            gax::TemplatedResourceName resourceName;
             if (s_template.TryParseName(projectName, out resourceName))
             {
                 result = new ProjectName(resourceName[0]);
@@ -620,7 +620,7 @@ namespace Google.Cloud.Dlp.V2
         /// <param name="projectId">The project ID. Must not be <c>null</c>.</param>
         public ProjectName(string projectId)
         {
-            ProjectId = GaxPreconditions.CheckNotNull(projectId, nameof(projectId));
+            ProjectId = gax::GaxPreconditions.CheckNotNull(projectId, nameof(projectId));
         }
 
         /// <summary>
@@ -629,7 +629,7 @@ namespace Google.Cloud.Dlp.V2
         public string ProjectId { get; }
 
         /// <inheritdoc />
-        public ResourceNameKind Kind => ResourceNameKind.Simple;
+        public gax::ResourceNameKind Kind => gax::ResourceNameKind.Simple;
 
         /// <inheritdoc />
         public override string ToString() => s_template.Expand(ProjectId);
@@ -653,9 +653,9 @@ namespace Google.Cloud.Dlp.V2
     /// <summary>
     /// Resource name for the 'dlp_job' resource.
     /// </summary>
-    public sealed partial class DlpJobName : IResourceName, IEquatable<DlpJobName>
+    public sealed partial class DlpJobName : gax::IResourceName, s::IEquatable<DlpJobName>
     {
-        private static readonly PathTemplate s_template = new PathTemplate("projects/{project}/dlpJobs/{dlp_job}");
+        private static readonly gax::PathTemplate s_template = new gax::PathTemplate("projects/{project}/dlpJobs/{dlp_job}");
 
         /// <summary>
         /// Parses the given dlp_job resource name in string form into a new
@@ -665,8 +665,8 @@ namespace Google.Cloud.Dlp.V2
         /// <returns>The parsed <see cref="DlpJobName"/> if successful.</returns>
         public static DlpJobName Parse(string dlpJobName)
         {
-            GaxPreconditions.CheckNotNull(dlpJobName, nameof(dlpJobName));
-            TemplatedResourceName resourceName = s_template.ParseName(dlpJobName);
+            gax::GaxPreconditions.CheckNotNull(dlpJobName, nameof(dlpJobName));
+            gax::TemplatedResourceName resourceName = s_template.ParseName(dlpJobName);
             return new DlpJobName(resourceName[0], resourceName[1]);
         }
 
@@ -675,7 +675,7 @@ namespace Google.Cloud.Dlp.V2
         /// <see cref="DlpJobName"/> instance.
         /// </summary>
         /// <remarks>
-        /// This method still throws <see cref="ArgumentNullException"/> if <paramref name="dlpJobName"/> is null,
+        /// This method still throws <see cref="s::ArgumentNullException"/> if <paramref name="dlpJobName"/> is null,
         /// as this would usually indicate a programming error rather than a data error.
         /// </remarks>
         /// <param name="dlpJobName">The dlp_job resource name in string form. Must not be <c>null</c>.</param>
@@ -684,8 +684,8 @@ namespace Google.Cloud.Dlp.V2
         /// <returns><c>true</c> if the name was parsed succssfully; <c>false</c> otherwise.</returns>
         public static bool TryParse(string dlpJobName, out DlpJobName result)
         {
-            GaxPreconditions.CheckNotNull(dlpJobName, nameof(dlpJobName));
-            TemplatedResourceName resourceName;
+            gax::GaxPreconditions.CheckNotNull(dlpJobName, nameof(dlpJobName));
+            gax::TemplatedResourceName resourceName;
             if (s_template.TryParseName(dlpJobName, out resourceName))
             {
                 result = new DlpJobName(resourceName[0], resourceName[1]);
@@ -706,8 +706,8 @@ namespace Google.Cloud.Dlp.V2
         /// <param name="dlpJobId">The dlpJob ID. Must not be <c>null</c>.</param>
         public DlpJobName(string projectId, string dlpJobId)
         {
-            ProjectId = GaxPreconditions.CheckNotNull(projectId, nameof(projectId));
-            DlpJobId = GaxPreconditions.CheckNotNull(dlpJobId, nameof(dlpJobId));
+            ProjectId = gax::GaxPreconditions.CheckNotNull(projectId, nameof(projectId));
+            DlpJobId = gax::GaxPreconditions.CheckNotNull(dlpJobId, nameof(dlpJobId));
         }
 
         /// <summary>
@@ -721,7 +721,7 @@ namespace Google.Cloud.Dlp.V2
         public string DlpJobId { get; }
 
         /// <inheritdoc />
-        public ResourceNameKind Kind => ResourceNameKind.Simple;
+        public gax::ResourceNameKind Kind => gax::ResourceNameKind.Simple;
 
         /// <inheritdoc />
         public override string ToString() => s_template.Expand(ProjectId, DlpJobId);
@@ -752,7 +752,7 @@ namespace Google.Cloud.Dlp.V2
     /// <item><description>ProjectDeidentifyTemplateName: A resource of type 'project_deidentify_template'.</description></item>
     /// </list>
     /// </remarks>
-    public sealed partial class DeidentifyTemplateNameOneof : IResourceName, IEquatable<DeidentifyTemplateNameOneof>
+    public sealed partial class DeidentifyTemplateNameOneof : gax::IResourceName, s::IEquatable<DeidentifyTemplateNameOneof>
     {
         /// <summary>
         /// The possible contents of <see cref="DeidentifyTemplateNameOneof"/>.
@@ -784,12 +784,12 @@ namespace Google.Cloud.Dlp.V2
         /// <item><description>OrganizationDeidentifyTemplateName: A resource of type 'organization_deidentify_template'.</description></item>
         /// <item><description>ProjectDeidentifyTemplateName: A resource of type 'project_deidentify_template'.</description></item>
         /// </list>
-        /// Or an <see cref="UnknownResourceName"/> if <paramref name="allowUnknown"/> is <c>true</c>.
+        /// Or an <see cref="gax::UnknownResourceName"/> if <paramref name="allowUnknown"/> is <c>true</c>.
         /// </remarks>
         /// <param name="name">The resource name in string form. Must not be <c>null</c>.</param>
         /// <param name="allowUnknown">If true, will successfully parse an unknown resource name
-        /// into an <see cref="UnknownResourceName"/>; otherwise will throw an
-        /// <see cref="ArgumentException"/> if an unknown resource name is given.</param>
+        /// into an <see cref="gax::UnknownResourceName"/>; otherwise will throw an
+        /// <see cref="s::ArgumentException"/> if an unknown resource name is given.</param>
         /// <returns>The parsed <see cref="DeidentifyTemplateNameOneof"/> if successful.</returns>
         public static DeidentifyTemplateNameOneof Parse(string name, bool allowUnknown)
         {
@@ -798,7 +798,7 @@ namespace Google.Cloud.Dlp.V2
             {
                 return result;
             }
-            throw new ArgumentException("Invalid name", nameof(name));
+            throw new s::ArgumentException("Invalid name", nameof(name));
         }
 
         /// <summary>
@@ -810,17 +810,17 @@ namespace Google.Cloud.Dlp.V2
         /// <item><description>OrganizationDeidentifyTemplateName: A resource of type 'organization_deidentify_template'.</description></item>
         /// <item><description>ProjectDeidentifyTemplateName: A resource of type 'project_deidentify_template'.</description></item>
         /// </list>
-        /// Or an <see cref="UnknownResourceName"/> if <paramref name="allowUnknown"/> is <c>true</c>.
+        /// Or an <see cref="gax::UnknownResourceName"/> if <paramref name="allowUnknown"/> is <c>true</c>.
         /// </remarks>
         /// <param name="name">The resource name in string form. Must not be <c>null</c>.</param>
         /// <param name="allowUnknown">If true, will successfully parse an unknown resource name
-        /// into an <see cref="UnknownResourceName"/>.</param>
+        /// into an <see cref="gax::UnknownResourceName"/>.</param>
         /// <param name="result">When this method returns, the parsed <see cref="DeidentifyTemplateNameOneof"/>,
         /// or <c>null</c> if parsing fails.</param>
         /// <returns><c>true</c> if the name was parsed succssfully; <c>false</c> otherwise.</returns>
         public static bool TryParse(string name, bool allowUnknown, out DeidentifyTemplateNameOneof result)
         {
-            GaxPreconditions.CheckNotNull(name, nameof(name));
+            gax::GaxPreconditions.CheckNotNull(name, nameof(name));
             OrganizationDeidentifyTemplateName organizationDeidentifyTemplateName;
             if (OrganizationDeidentifyTemplateName.TryParse(name, out organizationDeidentifyTemplateName))
             {
@@ -835,8 +835,8 @@ namespace Google.Cloud.Dlp.V2
             }
             if (allowUnknown)
             {
-                UnknownResourceName unknownResourceName;
-                if (UnknownResourceName.TryParse(name, out unknownResourceName))
+                gax::UnknownResourceName unknownResourceName;
+                if (gax::UnknownResourceName.TryParse(name, out unknownResourceName))
                 {
                     result = new DeidentifyTemplateNameOneof(OneofType.Unknown, unknownResourceName);
                     return true;
@@ -862,7 +862,7 @@ namespace Google.Cloud.Dlp.V2
         /// <returns>A new <see cref="DeidentifyTemplateNameOneof"/>, containing <paramref name="projectDeidentifyTemplateName"/>.</returns>
         public static DeidentifyTemplateNameOneof From(ProjectDeidentifyTemplateName projectDeidentifyTemplateName) => new DeidentifyTemplateNameOneof(OneofType.ProjectDeidentifyTemplateName, projectDeidentifyTemplateName);
 
-        private static bool IsValid(OneofType type, IResourceName name)
+        private static bool IsValid(OneofType type, gax::IResourceName name)
         {
             switch (type)
             {
@@ -875,15 +875,15 @@ namespace Google.Cloud.Dlp.V2
 
         /// <summary>
         /// Constructs a new instance of the <see cref="DeidentifyTemplateNameOneof"/> resource name class
-        /// from a suitable <see cref="IResourceName"/> instance.
+        /// from a suitable <see cref="gax::IResourceName"/> instance.
         /// </summary>
-        public DeidentifyTemplateNameOneof(OneofType type, IResourceName name)
+        public DeidentifyTemplateNameOneof(OneofType type, gax::IResourceName name)
         {
-            Type = GaxPreconditions.CheckEnumValue<OneofType>(type, nameof(type));
-            Name = GaxPreconditions.CheckNotNull(name, nameof(name));
+            Type = gax::GaxPreconditions.CheckEnumValue<OneofType>(type, nameof(type));
+            Name = gax::GaxPreconditions.CheckNotNull(name, nameof(name));
             if (!IsValid(type, name))
             {
-                throw new ArgumentException($"Mismatched OneofType '{type}' and resource name '{name}'");
+                throw new s::ArgumentException($"Mismatched OneofType '{type}' and resource name '{name}'");
             }
         }
 
@@ -893,39 +893,39 @@ namespace Google.Cloud.Dlp.V2
         public OneofType Type { get; }
 
         /// <summary>
-        /// The <see cref="IResourceName"/> contained in this instance.
+        /// The <see cref="gax::IResourceName"/> contained in this instance.
         /// </summary>
-        public IResourceName Name { get; }
+        public gax::IResourceName Name { get; }
 
         private T CheckAndReturn<T>(OneofType type)
         {
             if (Type != type)
             {
-                throw new InvalidOperationException($"Requested type {type}, but this one-of contains type {Type}");
+                throw new s::InvalidOperationException($"Requested type {type}, but this one-of contains type {Type}");
             }
             return (T)Name;
         }
 
         /// <summary>
-        /// Get the contained <see cref="IResourceName"/> as <see cref="OrganizationDeidentifyTemplateName"/>.
+        /// Get the contained <see cref="gax::IResourceName"/> as <see cref="OrganizationDeidentifyTemplateName"/>.
         /// </summary>
         /// <remarks>
-        /// An <see cref="InvalidOperationException"/> will be thrown if this does not
+        /// An <see cref="s::InvalidOperationException"/> will be thrown if this does not
         /// contain an instance of <see cref="OrganizationDeidentifyTemplateName"/>.
         /// </remarks>
         public OrganizationDeidentifyTemplateName OrganizationDeidentifyTemplateName => CheckAndReturn<OrganizationDeidentifyTemplateName>(OneofType.OrganizationDeidentifyTemplateName);
 
         /// <summary>
-        /// Get the contained <see cref="IResourceName"/> as <see cref="ProjectDeidentifyTemplateName"/>.
+        /// Get the contained <see cref="gax::IResourceName"/> as <see cref="ProjectDeidentifyTemplateName"/>.
         /// </summary>
         /// <remarks>
-        /// An <see cref="InvalidOperationException"/> will be thrown if this does not
+        /// An <see cref="s::InvalidOperationException"/> will be thrown if this does not
         /// contain an instance of <see cref="ProjectDeidentifyTemplateName"/>.
         /// </remarks>
         public ProjectDeidentifyTemplateName ProjectDeidentifyTemplateName => CheckAndReturn<ProjectDeidentifyTemplateName>(OneofType.ProjectDeidentifyTemplateName);
 
         /// <inheritdoc />
-        public ResourceNameKind Kind => ResourceNameKind.Oneof;
+        public gax::ResourceNameKind Kind => gax::ResourceNameKind.Oneof;
 
         /// <inheritdoc />
         public override string ToString() => Name.ToString();
@@ -956,7 +956,7 @@ namespace Google.Cloud.Dlp.V2
     /// <item><description>ProjectInspectTemplateName: A resource of type 'project_inspect_template'.</description></item>
     /// </list>
     /// </remarks>
-    public sealed partial class InspectTemplateNameOneof : IResourceName, IEquatable<InspectTemplateNameOneof>
+    public sealed partial class InspectTemplateNameOneof : gax::IResourceName, s::IEquatable<InspectTemplateNameOneof>
     {
         /// <summary>
         /// The possible contents of <see cref="InspectTemplateNameOneof"/>.
@@ -988,12 +988,12 @@ namespace Google.Cloud.Dlp.V2
         /// <item><description>OrganizationInspectTemplateName: A resource of type 'organization_inspect_template'.</description></item>
         /// <item><description>ProjectInspectTemplateName: A resource of type 'project_inspect_template'.</description></item>
         /// </list>
-        /// Or an <see cref="UnknownResourceName"/> if <paramref name="allowUnknown"/> is <c>true</c>.
+        /// Or an <see cref="gax::UnknownResourceName"/> if <paramref name="allowUnknown"/> is <c>true</c>.
         /// </remarks>
         /// <param name="name">The resource name in string form. Must not be <c>null</c>.</param>
         /// <param name="allowUnknown">If true, will successfully parse an unknown resource name
-        /// into an <see cref="UnknownResourceName"/>; otherwise will throw an
-        /// <see cref="ArgumentException"/> if an unknown resource name is given.</param>
+        /// into an <see cref="gax::UnknownResourceName"/>; otherwise will throw an
+        /// <see cref="s::ArgumentException"/> if an unknown resource name is given.</param>
         /// <returns>The parsed <see cref="InspectTemplateNameOneof"/> if successful.</returns>
         public static InspectTemplateNameOneof Parse(string name, bool allowUnknown)
         {
@@ -1002,7 +1002,7 @@ namespace Google.Cloud.Dlp.V2
             {
                 return result;
             }
-            throw new ArgumentException("Invalid name", nameof(name));
+            throw new s::ArgumentException("Invalid name", nameof(name));
         }
 
         /// <summary>
@@ -1014,17 +1014,17 @@ namespace Google.Cloud.Dlp.V2
         /// <item><description>OrganizationInspectTemplateName: A resource of type 'organization_inspect_template'.</description></item>
         /// <item><description>ProjectInspectTemplateName: A resource of type 'project_inspect_template'.</description></item>
         /// </list>
-        /// Or an <see cref="UnknownResourceName"/> if <paramref name="allowUnknown"/> is <c>true</c>.
+        /// Or an <see cref="gax::UnknownResourceName"/> if <paramref name="allowUnknown"/> is <c>true</c>.
         /// </remarks>
         /// <param name="name">The resource name in string form. Must not be <c>null</c>.</param>
         /// <param name="allowUnknown">If true, will successfully parse an unknown resource name
-        /// into an <see cref="UnknownResourceName"/>.</param>
+        /// into an <see cref="gax::UnknownResourceName"/>.</param>
         /// <param name="result">When this method returns, the parsed <see cref="InspectTemplateNameOneof"/>,
         /// or <c>null</c> if parsing fails.</param>
         /// <returns><c>true</c> if the name was parsed succssfully; <c>false</c> otherwise.</returns>
         public static bool TryParse(string name, bool allowUnknown, out InspectTemplateNameOneof result)
         {
-            GaxPreconditions.CheckNotNull(name, nameof(name));
+            gax::GaxPreconditions.CheckNotNull(name, nameof(name));
             OrganizationInspectTemplateName organizationInspectTemplateName;
             if (OrganizationInspectTemplateName.TryParse(name, out organizationInspectTemplateName))
             {
@@ -1039,8 +1039,8 @@ namespace Google.Cloud.Dlp.V2
             }
             if (allowUnknown)
             {
-                UnknownResourceName unknownResourceName;
-                if (UnknownResourceName.TryParse(name, out unknownResourceName))
+                gax::UnknownResourceName unknownResourceName;
+                if (gax::UnknownResourceName.TryParse(name, out unknownResourceName))
                 {
                     result = new InspectTemplateNameOneof(OneofType.Unknown, unknownResourceName);
                     return true;
@@ -1066,7 +1066,7 @@ namespace Google.Cloud.Dlp.V2
         /// <returns>A new <see cref="InspectTemplateNameOneof"/>, containing <paramref name="projectInspectTemplateName"/>.</returns>
         public static InspectTemplateNameOneof From(ProjectInspectTemplateName projectInspectTemplateName) => new InspectTemplateNameOneof(OneofType.ProjectInspectTemplateName, projectInspectTemplateName);
 
-        private static bool IsValid(OneofType type, IResourceName name)
+        private static bool IsValid(OneofType type, gax::IResourceName name)
         {
             switch (type)
             {
@@ -1079,15 +1079,15 @@ namespace Google.Cloud.Dlp.V2
 
         /// <summary>
         /// Constructs a new instance of the <see cref="InspectTemplateNameOneof"/> resource name class
-        /// from a suitable <see cref="IResourceName"/> instance.
+        /// from a suitable <see cref="gax::IResourceName"/> instance.
         /// </summary>
-        public InspectTemplateNameOneof(OneofType type, IResourceName name)
+        public InspectTemplateNameOneof(OneofType type, gax::IResourceName name)
         {
-            Type = GaxPreconditions.CheckEnumValue<OneofType>(type, nameof(type));
-            Name = GaxPreconditions.CheckNotNull(name, nameof(name));
+            Type = gax::GaxPreconditions.CheckEnumValue<OneofType>(type, nameof(type));
+            Name = gax::GaxPreconditions.CheckNotNull(name, nameof(name));
             if (!IsValid(type, name))
             {
-                throw new ArgumentException($"Mismatched OneofType '{type}' and resource name '{name}'");
+                throw new s::ArgumentException($"Mismatched OneofType '{type}' and resource name '{name}'");
             }
         }
 
@@ -1097,39 +1097,39 @@ namespace Google.Cloud.Dlp.V2
         public OneofType Type { get; }
 
         /// <summary>
-        /// The <see cref="IResourceName"/> contained in this instance.
+        /// The <see cref="gax::IResourceName"/> contained in this instance.
         /// </summary>
-        public IResourceName Name { get; }
+        public gax::IResourceName Name { get; }
 
         private T CheckAndReturn<T>(OneofType type)
         {
             if (Type != type)
             {
-                throw new InvalidOperationException($"Requested type {type}, but this one-of contains type {Type}");
+                throw new s::InvalidOperationException($"Requested type {type}, but this one-of contains type {Type}");
             }
             return (T)Name;
         }
 
         /// <summary>
-        /// Get the contained <see cref="IResourceName"/> as <see cref="OrganizationInspectTemplateName"/>.
+        /// Get the contained <see cref="gax::IResourceName"/> as <see cref="OrganizationInspectTemplateName"/>.
         /// </summary>
         /// <remarks>
-        /// An <see cref="InvalidOperationException"/> will be thrown if this does not
+        /// An <see cref="s::InvalidOperationException"/> will be thrown if this does not
         /// contain an instance of <see cref="OrganizationInspectTemplateName"/>.
         /// </remarks>
         public OrganizationInspectTemplateName OrganizationInspectTemplateName => CheckAndReturn<OrganizationInspectTemplateName>(OneofType.OrganizationInspectTemplateName);
 
         /// <summary>
-        /// Get the contained <see cref="IResourceName"/> as <see cref="ProjectInspectTemplateName"/>.
+        /// Get the contained <see cref="gax::IResourceName"/> as <see cref="ProjectInspectTemplateName"/>.
         /// </summary>
         /// <remarks>
-        /// An <see cref="InvalidOperationException"/> will be thrown if this does not
+        /// An <see cref="s::InvalidOperationException"/> will be thrown if this does not
         /// contain an instance of <see cref="ProjectInspectTemplateName"/>.
         /// </remarks>
         public ProjectInspectTemplateName ProjectInspectTemplateName => CheckAndReturn<ProjectInspectTemplateName>(OneofType.ProjectInspectTemplateName);
 
         /// <inheritdoc />
-        public ResourceNameKind Kind => ResourceNameKind.Oneof;
+        public gax::ResourceNameKind Kind => gax::ResourceNameKind.Oneof;
 
         /// <inheritdoc />
         public override string ToString() => Name.ToString();

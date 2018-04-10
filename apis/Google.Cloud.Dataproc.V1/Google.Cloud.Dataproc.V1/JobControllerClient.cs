@@ -14,24 +14,24 @@
 
 // Generated code. DO NOT EDIT!
 
-using Google.Api.Gax;
-using Google.Api.Gax.Grpc;
-using Google.Protobuf;
-using Google.Protobuf.WellKnownTypes;
-using Grpc.Core;
-using System;
-using System.Collections;
-using System.Collections.Generic;
-using System.Collections.ObjectModel;
-using System.Threading;
-using System.Threading.Tasks;
+using gax = Google.Api.Gax;
+using gaxgrpc = Google.Api.Gax.Grpc;
+using proto = Google.Protobuf;
+using protowkt = Google.Protobuf.WellKnownTypes;
+using grpccore = Grpc.Core;
+using s = System;
+using sc = System.Collections;
+using scg = System.Collections.Generic;
+using sco = System.Collections.ObjectModel;
+using st = System.Threading;
+using stt = System.Threading.Tasks;
 
 namespace Google.Cloud.Dataproc.V1
 {
     /// <summary>
     /// Settings for a <see cref="JobControllerClient"/>.
     /// </summary>
-    public sealed partial class JobControllerSettings : ServiceSettingsBase
+    public sealed partial class JobControllerSettings : gaxgrpc::ServiceSettingsBase
     {
         /// <summary>
         /// Get a new instance of the default <see cref="JobControllerSettings"/>.
@@ -48,7 +48,7 @@ namespace Google.Cloud.Dataproc.V1
 
         private JobControllerSettings(JobControllerSettings existing) : base(existing)
         {
-            GaxPreconditions.CheckNotNull(existing, nameof(existing));
+            gax::GaxPreconditions.CheckNotNull(existing, nameof(existing));
             SubmitJobSettings = existing.SubmitJobSettings;
             GetJobSettings = existing.GetJobSettings;
             ListJobsSettings = existing.ListJobsSettings;
@@ -61,28 +61,28 @@ namespace Google.Cloud.Dataproc.V1
         partial void OnCopy(JobControllerSettings existing);
 
         /// <summary>
-        /// The filter specifying which RPC <see cref="StatusCode"/>s are eligible for retry
+        /// The filter specifying which RPC <see cref="grpccore::StatusCode"/>s are eligible for retry
         /// for "Idempotent" <see cref="JobControllerClient"/> RPC methods.
         /// </summary>
         /// <remarks>
-        /// The eligible RPC <see cref="StatusCode"/>s for retry for "Idempotent" RPC methods are:
+        /// The eligible RPC <see cref="grpccore::StatusCode"/>s for retry for "Idempotent" RPC methods are:
         /// <list type="bullet">
-        /// <item><description><see cref="StatusCode.DeadlineExceeded"/></description></item>
-        /// <item><description><see cref="StatusCode.Unavailable"/></description></item>
+        /// <item><description><see cref="grpccore::StatusCode.DeadlineExceeded"/></description></item>
+        /// <item><description><see cref="grpccore::StatusCode.Unavailable"/></description></item>
         /// </list>
         /// </remarks>
-        public static Predicate<RpcException> IdempotentRetryFilter { get; } =
-            RetrySettings.FilterForStatusCodes(StatusCode.DeadlineExceeded, StatusCode.Unavailable);
+        public static s::Predicate<grpccore::RpcException> IdempotentRetryFilter { get; } =
+            gaxgrpc::RetrySettings.FilterForStatusCodes(grpccore::StatusCode.DeadlineExceeded, grpccore::StatusCode.Unavailable);
 
         /// <summary>
-        /// The filter specifying which RPC <see cref="StatusCode"/>s are eligible for retry
+        /// The filter specifying which RPC <see cref="grpccore::StatusCode"/>s are eligible for retry
         /// for "NonIdempotent" <see cref="JobControllerClient"/> RPC methods.
         /// </summary>
         /// <remarks>
-        /// There are no RPC <see cref="StatusCode"/>s eligible for retry for "NonIdempotent" RPC methods.
+        /// There are no RPC <see cref="grpccore::StatusCode"/>s eligible for retry for "NonIdempotent" RPC methods.
         /// </remarks>
-        public static Predicate<RpcException> NonIdempotentRetryFilter { get; } =
-            RetrySettings.FilterForStatusCodes();
+        public static s::Predicate<grpccore::RpcException> NonIdempotentRetryFilter { get; } =
+            gaxgrpc::RetrySettings.FilterForStatusCodes();
 
         /// <summary>
         /// "Default" retry backoff for <see cref="JobControllerClient"/> RPC methods.
@@ -98,9 +98,9 @@ namespace Google.Cloud.Dataproc.V1
         /// <item><description>Delay multiplier: 1.3</description></item>
         /// </list>
         /// </remarks>
-        public static BackoffSettings GetDefaultRetryBackoff() => new BackoffSettings(
-            delay: TimeSpan.FromMilliseconds(100),
-            maxDelay: TimeSpan.FromMilliseconds(60000),
+        public static gaxgrpc::BackoffSettings GetDefaultRetryBackoff() => new gaxgrpc::BackoffSettings(
+            delay: s::TimeSpan.FromMilliseconds(100),
+            maxDelay: s::TimeSpan.FromMilliseconds(60000),
             delayMultiplier: 1.3
         );
 
@@ -118,19 +118,19 @@ namespace Google.Cloud.Dataproc.V1
         /// <item><description>Maximum timeout: 30000 milliseconds</description></item>
         /// </list>
         /// </remarks>
-        public static BackoffSettings GetDefaultTimeoutBackoff() => new BackoffSettings(
-            delay: TimeSpan.FromMilliseconds(30000),
-            maxDelay: TimeSpan.FromMilliseconds(30000),
+        public static gaxgrpc::BackoffSettings GetDefaultTimeoutBackoff() => new gaxgrpc::BackoffSettings(
+            delay: s::TimeSpan.FromMilliseconds(30000),
+            maxDelay: s::TimeSpan.FromMilliseconds(30000),
             delayMultiplier: 1.0
         );
 
         /// <summary>
-        /// <see cref="CallSettings"/> for synchronous and asynchronous calls to
+        /// <see cref="gaxgrpc::CallSettings"/> for synchronous and asynchronous calls to
         /// <c>JobControllerClient.SubmitJob</c> and <c>JobControllerClient.SubmitJobAsync</c>.
         /// </summary>
         /// <remarks>
         /// The default <c>JobControllerClient.SubmitJob</c> and
-        /// <c>JobControllerClient.SubmitJobAsync</c> <see cref="RetrySettings"/> are:
+        /// <c>JobControllerClient.SubmitJobAsync</c> <see cref="gaxgrpc::RetrySettings"/> are:
         /// <list type="bullet">
         /// <item><description>Initial retry delay: 100 milliseconds</description></item>
         /// <item><description>Retry delay multiplier: 1.3</description></item>
@@ -145,21 +145,21 @@ namespace Google.Cloud.Dataproc.V1
         /// </list>
         /// Default RPC expiration is 600000 milliseconds.
         /// </remarks>
-        public CallSettings SubmitJobSettings { get; set; } = CallSettings.FromCallTiming(
-            CallTiming.FromRetry(new RetrySettings(
+        public gaxgrpc::CallSettings SubmitJobSettings { get; set; } = gaxgrpc::CallSettings.FromCallTiming(
+            gaxgrpc::CallTiming.FromRetry(new gaxgrpc::RetrySettings(
                 retryBackoff: GetDefaultRetryBackoff(),
                 timeoutBackoff: GetDefaultTimeoutBackoff(),
-                totalExpiration: Expiration.FromTimeout(TimeSpan.FromMilliseconds(600000)),
+                totalExpiration: gax::Expiration.FromTimeout(s::TimeSpan.FromMilliseconds(600000)),
                 retryFilter: NonIdempotentRetryFilter
             )));
 
         /// <summary>
-        /// <see cref="CallSettings"/> for synchronous and asynchronous calls to
+        /// <see cref="gaxgrpc::CallSettings"/> for synchronous and asynchronous calls to
         /// <c>JobControllerClient.GetJob</c> and <c>JobControllerClient.GetJobAsync</c>.
         /// </summary>
         /// <remarks>
         /// The default <c>JobControllerClient.GetJob</c> and
-        /// <c>JobControllerClient.GetJobAsync</c> <see cref="RetrySettings"/> are:
+        /// <c>JobControllerClient.GetJobAsync</c> <see cref="gaxgrpc::RetrySettings"/> are:
         /// <list type="bullet">
         /// <item><description>Initial retry delay: 100 milliseconds</description></item>
         /// <item><description>Retry delay multiplier: 1.3</description></item>
@@ -170,26 +170,26 @@ namespace Google.Cloud.Dataproc.V1
         /// </list>
         /// Retry will be attempted on the following response status codes:
         /// <list>
-        /// <item><description><see cref="StatusCode.DeadlineExceeded"/></description></item>
-        /// <item><description><see cref="StatusCode.Unavailable"/></description></item>
+        /// <item><description><see cref="grpccore::StatusCode.DeadlineExceeded"/></description></item>
+        /// <item><description><see cref="grpccore::StatusCode.Unavailable"/></description></item>
         /// </list>
         /// Default RPC expiration is 600000 milliseconds.
         /// </remarks>
-        public CallSettings GetJobSettings { get; set; } = CallSettings.FromCallTiming(
-            CallTiming.FromRetry(new RetrySettings(
+        public gaxgrpc::CallSettings GetJobSettings { get; set; } = gaxgrpc::CallSettings.FromCallTiming(
+            gaxgrpc::CallTiming.FromRetry(new gaxgrpc::RetrySettings(
                 retryBackoff: GetDefaultRetryBackoff(),
                 timeoutBackoff: GetDefaultTimeoutBackoff(),
-                totalExpiration: Expiration.FromTimeout(TimeSpan.FromMilliseconds(600000)),
+                totalExpiration: gax::Expiration.FromTimeout(s::TimeSpan.FromMilliseconds(600000)),
                 retryFilter: IdempotentRetryFilter
             )));
 
         /// <summary>
-        /// <see cref="CallSettings"/> for synchronous and asynchronous calls to
+        /// <see cref="gaxgrpc::CallSettings"/> for synchronous and asynchronous calls to
         /// <c>JobControllerClient.ListJobs</c> and <c>JobControllerClient.ListJobsAsync</c>.
         /// </summary>
         /// <remarks>
         /// The default <c>JobControllerClient.ListJobs</c> and
-        /// <c>JobControllerClient.ListJobsAsync</c> <see cref="RetrySettings"/> are:
+        /// <c>JobControllerClient.ListJobsAsync</c> <see cref="gaxgrpc::RetrySettings"/> are:
         /// <list type="bullet">
         /// <item><description>Initial retry delay: 100 milliseconds</description></item>
         /// <item><description>Retry delay multiplier: 1.3</description></item>
@@ -200,26 +200,26 @@ namespace Google.Cloud.Dataproc.V1
         /// </list>
         /// Retry will be attempted on the following response status codes:
         /// <list>
-        /// <item><description><see cref="StatusCode.DeadlineExceeded"/></description></item>
-        /// <item><description><see cref="StatusCode.Unavailable"/></description></item>
+        /// <item><description><see cref="grpccore::StatusCode.DeadlineExceeded"/></description></item>
+        /// <item><description><see cref="grpccore::StatusCode.Unavailable"/></description></item>
         /// </list>
         /// Default RPC expiration is 600000 milliseconds.
         /// </remarks>
-        public CallSettings ListJobsSettings { get; set; } = CallSettings.FromCallTiming(
-            CallTiming.FromRetry(new RetrySettings(
+        public gaxgrpc::CallSettings ListJobsSettings { get; set; } = gaxgrpc::CallSettings.FromCallTiming(
+            gaxgrpc::CallTiming.FromRetry(new gaxgrpc::RetrySettings(
                 retryBackoff: GetDefaultRetryBackoff(),
                 timeoutBackoff: GetDefaultTimeoutBackoff(),
-                totalExpiration: Expiration.FromTimeout(TimeSpan.FromMilliseconds(600000)),
+                totalExpiration: gax::Expiration.FromTimeout(s::TimeSpan.FromMilliseconds(600000)),
                 retryFilter: IdempotentRetryFilter
             )));
 
         /// <summary>
-        /// <see cref="CallSettings"/> for synchronous and asynchronous calls to
+        /// <see cref="gaxgrpc::CallSettings"/> for synchronous and asynchronous calls to
         /// <c>JobControllerClient.UpdateJob</c> and <c>JobControllerClient.UpdateJobAsync</c>.
         /// </summary>
         /// <remarks>
         /// The default <c>JobControllerClient.UpdateJob</c> and
-        /// <c>JobControllerClient.UpdateJobAsync</c> <see cref="RetrySettings"/> are:
+        /// <c>JobControllerClient.UpdateJobAsync</c> <see cref="gaxgrpc::RetrySettings"/> are:
         /// <list type="bullet">
         /// <item><description>Initial retry delay: 100 milliseconds</description></item>
         /// <item><description>Retry delay multiplier: 1.3</description></item>
@@ -234,21 +234,21 @@ namespace Google.Cloud.Dataproc.V1
         /// </list>
         /// Default RPC expiration is 600000 milliseconds.
         /// </remarks>
-        public CallSettings UpdateJobSettings { get; set; } = CallSettings.FromCallTiming(
-            CallTiming.FromRetry(new RetrySettings(
+        public gaxgrpc::CallSettings UpdateJobSettings { get; set; } = gaxgrpc::CallSettings.FromCallTiming(
+            gaxgrpc::CallTiming.FromRetry(new gaxgrpc::RetrySettings(
                 retryBackoff: GetDefaultRetryBackoff(),
                 timeoutBackoff: GetDefaultTimeoutBackoff(),
-                totalExpiration: Expiration.FromTimeout(TimeSpan.FromMilliseconds(600000)),
+                totalExpiration: gax::Expiration.FromTimeout(s::TimeSpan.FromMilliseconds(600000)),
                 retryFilter: NonIdempotentRetryFilter
             )));
 
         /// <summary>
-        /// <see cref="CallSettings"/> for synchronous and asynchronous calls to
+        /// <see cref="gaxgrpc::CallSettings"/> for synchronous and asynchronous calls to
         /// <c>JobControllerClient.CancelJob</c> and <c>JobControllerClient.CancelJobAsync</c>.
         /// </summary>
         /// <remarks>
         /// The default <c>JobControllerClient.CancelJob</c> and
-        /// <c>JobControllerClient.CancelJobAsync</c> <see cref="RetrySettings"/> are:
+        /// <c>JobControllerClient.CancelJobAsync</c> <see cref="gaxgrpc::RetrySettings"/> are:
         /// <list type="bullet">
         /// <item><description>Initial retry delay: 100 milliseconds</description></item>
         /// <item><description>Retry delay multiplier: 1.3</description></item>
@@ -263,21 +263,21 @@ namespace Google.Cloud.Dataproc.V1
         /// </list>
         /// Default RPC expiration is 600000 milliseconds.
         /// </remarks>
-        public CallSettings CancelJobSettings { get; set; } = CallSettings.FromCallTiming(
-            CallTiming.FromRetry(new RetrySettings(
+        public gaxgrpc::CallSettings CancelJobSettings { get; set; } = gaxgrpc::CallSettings.FromCallTiming(
+            gaxgrpc::CallTiming.FromRetry(new gaxgrpc::RetrySettings(
                 retryBackoff: GetDefaultRetryBackoff(),
                 timeoutBackoff: GetDefaultTimeoutBackoff(),
-                totalExpiration: Expiration.FromTimeout(TimeSpan.FromMilliseconds(600000)),
+                totalExpiration: gax::Expiration.FromTimeout(s::TimeSpan.FromMilliseconds(600000)),
                 retryFilter: NonIdempotentRetryFilter
             )));
 
         /// <summary>
-        /// <see cref="CallSettings"/> for synchronous and asynchronous calls to
+        /// <see cref="gaxgrpc::CallSettings"/> for synchronous and asynchronous calls to
         /// <c>JobControllerClient.DeleteJob</c> and <c>JobControllerClient.DeleteJobAsync</c>.
         /// </summary>
         /// <remarks>
         /// The default <c>JobControllerClient.DeleteJob</c> and
-        /// <c>JobControllerClient.DeleteJobAsync</c> <see cref="RetrySettings"/> are:
+        /// <c>JobControllerClient.DeleteJobAsync</c> <see cref="gaxgrpc::RetrySettings"/> are:
         /// <list type="bullet">
         /// <item><description>Initial retry delay: 100 milliseconds</description></item>
         /// <item><description>Retry delay multiplier: 1.3</description></item>
@@ -288,16 +288,16 @@ namespace Google.Cloud.Dataproc.V1
         /// </list>
         /// Retry will be attempted on the following response status codes:
         /// <list>
-        /// <item><description><see cref="StatusCode.DeadlineExceeded"/></description></item>
-        /// <item><description><see cref="StatusCode.Unavailable"/></description></item>
+        /// <item><description><see cref="grpccore::StatusCode.DeadlineExceeded"/></description></item>
+        /// <item><description><see cref="grpccore::StatusCode.Unavailable"/></description></item>
         /// </list>
         /// Default RPC expiration is 600000 milliseconds.
         /// </remarks>
-        public CallSettings DeleteJobSettings { get; set; } = CallSettings.FromCallTiming(
-            CallTiming.FromRetry(new RetrySettings(
+        public gaxgrpc::CallSettings DeleteJobSettings { get; set; } = gaxgrpc::CallSettings.FromCallTiming(
+            gaxgrpc::CallTiming.FromRetry(new gaxgrpc::RetrySettings(
                 retryBackoff: GetDefaultRetryBackoff(),
                 timeoutBackoff: GetDefaultTimeoutBackoff(),
-                totalExpiration: Expiration.FromTimeout(TimeSpan.FromMilliseconds(600000)),
+                totalExpiration: gax::Expiration.FromTimeout(s::TimeSpan.FromMilliseconds(600000)),
                 retryFilter: IdempotentRetryFilter
             )));
 
@@ -316,7 +316,7 @@ namespace Google.Cloud.Dataproc.V1
         /// <summary>
         /// The default endpoint for the JobController service, which is a host of "dataproc.googleapis.com" and a port of 443.
         /// </summary>
-        public static ServiceEndpoint DefaultEndpoint { get; } = new ServiceEndpoint("dataproc.googleapis.com", 443);
+        public static gaxgrpc::ServiceEndpoint DefaultEndpoint { get; } = new gaxgrpc::ServiceEndpoint("dataproc.googleapis.com", 443);
 
         /// <summary>
         /// The default JobController scopes.
@@ -327,11 +327,11 @@ namespace Google.Cloud.Dataproc.V1
         /// <item><description>"https://www.googleapis.com/auth/cloud-platform"</description></item>
         /// </list>
         /// </remarks>
-        public static IReadOnlyList<string> DefaultScopes { get; } = new ReadOnlyCollection<string>(new string[] {
+        public static scg::IReadOnlyList<string> DefaultScopes { get; } = new sco::ReadOnlyCollection<string>(new string[] {
             "https://www.googleapis.com/auth/cloud-platform",
         });
 
-        private static readonly ChannelPool s_channelPool = new ChannelPool(DefaultScopes);
+        private static readonly gaxgrpc::ChannelPool s_channelPool = new gaxgrpc::ChannelPool(DefaultScopes);
 
         // Note: we could have parameterless overloads of Create and CreateAsync,
         // documented to just use the default endpoint, settings and credentials.
@@ -345,12 +345,12 @@ namespace Google.Cloud.Dataproc.V1
         /// and creating a channel connecting to the given endpoint with application default credentials where
         /// necessary.
         /// </summary>
-        /// <param name="endpoint">Optional <see cref="ServiceEndpoint"/>.</param>
+        /// <param name="endpoint">Optional <see cref="gaxgrpc::ServiceEndpoint"/>.</param>
         /// <param name="settings">Optional <see cref="JobControllerSettings"/>.</param>
         /// <returns>The task representing the created <see cref="JobControllerClient"/>.</returns>
-        public static async Task<JobControllerClient> CreateAsync(ServiceEndpoint endpoint = null, JobControllerSettings settings = null)
+        public static async stt::Task<JobControllerClient> CreateAsync(gaxgrpc::ServiceEndpoint endpoint = null, JobControllerSettings settings = null)
         {
-            Channel channel = await s_channelPool.GetChannelAsync(endpoint ?? DefaultEndpoint).ConfigureAwait(false);
+            grpccore::Channel channel = await s_channelPool.GetChannelAsync(endpoint ?? DefaultEndpoint).ConfigureAwait(false);
             return Create(channel, settings);
         }
 
@@ -359,45 +359,45 @@ namespace Google.Cloud.Dataproc.V1
         /// and creating a channel connecting to the given endpoint with application default credentials where
         /// necessary.
         /// </summary>
-        /// <param name="endpoint">Optional <see cref="ServiceEndpoint"/>.</param>
+        /// <param name="endpoint">Optional <see cref="gaxgrpc::ServiceEndpoint"/>.</param>
         /// <param name="settings">Optional <see cref="JobControllerSettings"/>.</param>
         /// <returns>The created <see cref="JobControllerClient"/>.</returns>
-        public static JobControllerClient Create(ServiceEndpoint endpoint = null, JobControllerSettings settings = null)
+        public static JobControllerClient Create(gaxgrpc::ServiceEndpoint endpoint = null, JobControllerSettings settings = null)
         {
-            Channel channel = s_channelPool.GetChannel(endpoint ?? DefaultEndpoint);
+            grpccore::Channel channel = s_channelPool.GetChannel(endpoint ?? DefaultEndpoint);
             return Create(channel, settings);
         }
 
         /// <summary>
         /// Creates a <see cref="JobControllerClient"/> which uses the specified channel for remote operations.
         /// </summary>
-        /// <param name="channel">The <see cref="Channel"/> for remote operations. Must not be null.</param>
+        /// <param name="channel">The <see cref="grpccore::Channel"/> for remote operations. Must not be null.</param>
         /// <param name="settings">Optional <see cref="JobControllerSettings"/>.</param>
         /// <returns>The created <see cref="JobControllerClient"/>.</returns>
-        public static JobControllerClient Create(Channel channel, JobControllerSettings settings = null)
+        public static JobControllerClient Create(grpccore::Channel channel, JobControllerSettings settings = null)
         {
-            GaxPreconditions.CheckNotNull(channel, nameof(channel));
+            gax::GaxPreconditions.CheckNotNull(channel, nameof(channel));
             JobController.JobControllerClient grpcClient = new JobController.JobControllerClient(channel);
             return new JobControllerClientImpl(grpcClient, settings);
         }
 
         /// <summary>
-        /// Shuts down any channels automatically created by <see cref="Create(ServiceEndpoint, JobControllerSettings)"/>
-        /// and <see cref="CreateAsync(ServiceEndpoint, JobControllerSettings)"/>. Channels which weren't automatically
+        /// Shuts down any channels automatically created by <see cref="Create(gaxgrpc::ServiceEndpoint, JobControllerSettings)"/>
+        /// and <see cref="CreateAsync(gaxgrpc::ServiceEndpoint, JobControllerSettings)"/>. Channels which weren't automatically
         /// created are not affected.
         /// </summary>
-        /// <remarks>After calling this method, further calls to <see cref="Create(ServiceEndpoint, JobControllerSettings)"/>
-        /// and <see cref="CreateAsync(ServiceEndpoint, JobControllerSettings)"/> will create new channels, which could
+        /// <remarks>After calling this method, further calls to <see cref="Create(gaxgrpc::ServiceEndpoint, JobControllerSettings)"/>
+        /// and <see cref="CreateAsync(gaxgrpc::ServiceEndpoint, JobControllerSettings)"/> will create new channels, which could
         /// in turn be shut down by another call to this method.</remarks>
         /// <returns>A task representing the asynchronous shutdown operation.</returns>
-        public static Task ShutdownDefaultChannelsAsync() => s_channelPool.ShutdownChannelsAsync();
+        public static stt::Task ShutdownDefaultChannelsAsync() => s_channelPool.ShutdownChannelsAsync();
 
         /// <summary>
         /// The underlying gRPC JobController client.
         /// </summary>
         public virtual JobController.JobControllerClient GrpcClient
         {
-            get { throw new NotImplementedException(); }
+            get { throw new s::NotImplementedException(); }
         }
 
         /// <summary>
@@ -419,16 +419,16 @@ namespace Google.Cloud.Dataproc.V1
         /// <returns>
         /// A Task containing the RPC response.
         /// </returns>
-        public virtual Task<Job> SubmitJobAsync(
+        public virtual stt::Task<Job> SubmitJobAsync(
             string projectId,
             string region,
             Job job,
-            CallSettings callSettings = null) => SubmitJobAsync(
+            gaxgrpc::CallSettings callSettings = null) => SubmitJobAsync(
                 new SubmitJobRequest
                 {
-                    ProjectId = GaxPreconditions.CheckNotNullOrEmpty(projectId, nameof(projectId)),
-                    Region = GaxPreconditions.CheckNotNullOrEmpty(region, nameof(region)),
-                    Job = GaxPreconditions.CheckNotNull(job, nameof(job)),
+                    ProjectId = gax::GaxPreconditions.CheckNotNullOrEmpty(projectId, nameof(projectId)),
+                    Region = gax::GaxPreconditions.CheckNotNullOrEmpty(region, nameof(region)),
+                    Job = gax::GaxPreconditions.CheckNotNull(job, nameof(job)),
                 },
                 callSettings);
 
@@ -446,20 +446,20 @@ namespace Google.Cloud.Dataproc.V1
         /// Required. The job resource.
         /// </param>
         /// <param name="cancellationToken">
-        /// A <see cref="CancellationToken"/> to use for this RPC.
+        /// A <see cref="st::CancellationToken"/> to use for this RPC.
         /// </param>
         /// <returns>
         /// A Task containing the RPC response.
         /// </returns>
-        public virtual Task<Job> SubmitJobAsync(
+        public virtual stt::Task<Job> SubmitJobAsync(
             string projectId,
             string region,
             Job job,
-            CancellationToken cancellationToken) => SubmitJobAsync(
+            st::CancellationToken cancellationToken) => SubmitJobAsync(
                 projectId,
                 region,
                 job,
-                CallSettings.FromCancellationToken(cancellationToken));
+                gaxgrpc::CallSettings.FromCancellationToken(cancellationToken));
 
         /// <summary>
         /// Submits a job to a cluster.
@@ -484,12 +484,12 @@ namespace Google.Cloud.Dataproc.V1
             string projectId,
             string region,
             Job job,
-            CallSettings callSettings = null) => SubmitJob(
+            gaxgrpc::CallSettings callSettings = null) => SubmitJob(
                 new SubmitJobRequest
                 {
-                    ProjectId = GaxPreconditions.CheckNotNullOrEmpty(projectId, nameof(projectId)),
-                    Region = GaxPreconditions.CheckNotNullOrEmpty(region, nameof(region)),
-                    Job = GaxPreconditions.CheckNotNull(job, nameof(job)),
+                    ProjectId = gax::GaxPreconditions.CheckNotNullOrEmpty(projectId, nameof(projectId)),
+                    Region = gax::GaxPreconditions.CheckNotNullOrEmpty(region, nameof(region)),
+                    Job = gax::GaxPreconditions.CheckNotNull(job, nameof(job)),
                 },
                 callSettings);
 
@@ -505,11 +505,11 @@ namespace Google.Cloud.Dataproc.V1
         /// <returns>
         /// A Task containing the RPC response.
         /// </returns>
-        public virtual Task<Job> SubmitJobAsync(
+        public virtual stt::Task<Job> SubmitJobAsync(
             SubmitJobRequest request,
-            CallSettings callSettings = null)
+            gaxgrpc::CallSettings callSettings = null)
         {
-            throw new NotImplementedException();
+            throw new s::NotImplementedException();
         }
 
         /// <summary>
@@ -519,16 +519,16 @@ namespace Google.Cloud.Dataproc.V1
         /// The request object containing all of the parameters for the API call.
         /// </param>
         /// <param name="cancellationToken">
-        /// A <see cref="CancellationToken"/> to use for this RPC.
+        /// A <see cref="st::CancellationToken"/> to use for this RPC.
         /// </param>
         /// <returns>
         /// A Task containing the RPC response.
         /// </returns>
-        public virtual Task<Job> SubmitJobAsync(
+        public virtual stt::Task<Job> SubmitJobAsync(
             SubmitJobRequest request,
-            CancellationToken cancellationToken) => SubmitJobAsync(
+            st::CancellationToken cancellationToken) => SubmitJobAsync(
                 request,
-                CallSettings.FromCancellationToken(cancellationToken));
+                gaxgrpc::CallSettings.FromCancellationToken(cancellationToken));
 
         /// <summary>
         /// Submits a job to a cluster.
@@ -544,9 +544,9 @@ namespace Google.Cloud.Dataproc.V1
         /// </returns>
         public virtual Job SubmitJob(
             SubmitJobRequest request,
-            CallSettings callSettings = null)
+            gaxgrpc::CallSettings callSettings = null)
         {
-            throw new NotImplementedException();
+            throw new s::NotImplementedException();
         }
 
         /// <summary>
@@ -568,16 +568,16 @@ namespace Google.Cloud.Dataproc.V1
         /// <returns>
         /// A Task containing the RPC response.
         /// </returns>
-        public virtual Task<Job> GetJobAsync(
+        public virtual stt::Task<Job> GetJobAsync(
             string projectId,
             string region,
             string jobId,
-            CallSettings callSettings = null) => GetJobAsync(
+            gaxgrpc::CallSettings callSettings = null) => GetJobAsync(
                 new GetJobRequest
                 {
-                    ProjectId = GaxPreconditions.CheckNotNullOrEmpty(projectId, nameof(projectId)),
-                    Region = GaxPreconditions.CheckNotNullOrEmpty(region, nameof(region)),
-                    JobId = GaxPreconditions.CheckNotNullOrEmpty(jobId, nameof(jobId)),
+                    ProjectId = gax::GaxPreconditions.CheckNotNullOrEmpty(projectId, nameof(projectId)),
+                    Region = gax::GaxPreconditions.CheckNotNullOrEmpty(region, nameof(region)),
+                    JobId = gax::GaxPreconditions.CheckNotNullOrEmpty(jobId, nameof(jobId)),
                 },
                 callSettings);
 
@@ -595,20 +595,20 @@ namespace Google.Cloud.Dataproc.V1
         /// Required. The job ID.
         /// </param>
         /// <param name="cancellationToken">
-        /// A <see cref="CancellationToken"/> to use for this RPC.
+        /// A <see cref="st::CancellationToken"/> to use for this RPC.
         /// </param>
         /// <returns>
         /// A Task containing the RPC response.
         /// </returns>
-        public virtual Task<Job> GetJobAsync(
+        public virtual stt::Task<Job> GetJobAsync(
             string projectId,
             string region,
             string jobId,
-            CancellationToken cancellationToken) => GetJobAsync(
+            st::CancellationToken cancellationToken) => GetJobAsync(
                 projectId,
                 region,
                 jobId,
-                CallSettings.FromCancellationToken(cancellationToken));
+                gaxgrpc::CallSettings.FromCancellationToken(cancellationToken));
 
         /// <summary>
         /// Gets the resource representation for a job in a project.
@@ -633,12 +633,12 @@ namespace Google.Cloud.Dataproc.V1
             string projectId,
             string region,
             string jobId,
-            CallSettings callSettings = null) => GetJob(
+            gaxgrpc::CallSettings callSettings = null) => GetJob(
                 new GetJobRequest
                 {
-                    ProjectId = GaxPreconditions.CheckNotNullOrEmpty(projectId, nameof(projectId)),
-                    Region = GaxPreconditions.CheckNotNullOrEmpty(region, nameof(region)),
-                    JobId = GaxPreconditions.CheckNotNullOrEmpty(jobId, nameof(jobId)),
+                    ProjectId = gax::GaxPreconditions.CheckNotNullOrEmpty(projectId, nameof(projectId)),
+                    Region = gax::GaxPreconditions.CheckNotNullOrEmpty(region, nameof(region)),
+                    JobId = gax::GaxPreconditions.CheckNotNullOrEmpty(jobId, nameof(jobId)),
                 },
                 callSettings);
 
@@ -654,11 +654,11 @@ namespace Google.Cloud.Dataproc.V1
         /// <returns>
         /// A Task containing the RPC response.
         /// </returns>
-        public virtual Task<Job> GetJobAsync(
+        public virtual stt::Task<Job> GetJobAsync(
             GetJobRequest request,
-            CallSettings callSettings = null)
+            gaxgrpc::CallSettings callSettings = null)
         {
-            throw new NotImplementedException();
+            throw new s::NotImplementedException();
         }
 
         /// <summary>
@@ -668,16 +668,16 @@ namespace Google.Cloud.Dataproc.V1
         /// The request object containing all of the parameters for the API call.
         /// </param>
         /// <param name="cancellationToken">
-        /// A <see cref="CancellationToken"/> to use for this RPC.
+        /// A <see cref="st::CancellationToken"/> to use for this RPC.
         /// </param>
         /// <returns>
         /// A Task containing the RPC response.
         /// </returns>
-        public virtual Task<Job> GetJobAsync(
+        public virtual stt::Task<Job> GetJobAsync(
             GetJobRequest request,
-            CancellationToken cancellationToken) => GetJobAsync(
+            st::CancellationToken cancellationToken) => GetJobAsync(
                 request,
-                CallSettings.FromCancellationToken(cancellationToken));
+                gaxgrpc::CallSettings.FromCancellationToken(cancellationToken));
 
         /// <summary>
         /// Gets the resource representation for a job in a project.
@@ -693,9 +693,9 @@ namespace Google.Cloud.Dataproc.V1
         /// </returns>
         public virtual Job GetJob(
             GetJobRequest request,
-            CallSettings callSettings = null)
+            gaxgrpc::CallSettings callSettings = null)
         {
-            throw new NotImplementedException();
+            throw new s::NotImplementedException();
         }
 
         /// <summary>
@@ -722,16 +722,16 @@ namespace Google.Cloud.Dataproc.V1
         /// <returns>
         /// A pageable asynchronous sequence of <see cref="Job"/> resources.
         /// </returns>
-        public virtual PagedAsyncEnumerable<ListJobsResponse, Job> ListJobsAsync(
+        public virtual gax::PagedAsyncEnumerable<ListJobsResponse, Job> ListJobsAsync(
             string projectId,
             string region,
             string pageToken = null,
             int? pageSize = null,
-            CallSettings callSettings = null) => ListJobsAsync(
+            gaxgrpc::CallSettings callSettings = null) => ListJobsAsync(
                 new ListJobsRequest
                 {
-                    ProjectId = GaxPreconditions.CheckNotNullOrEmpty(projectId, nameof(projectId)),
-                    Region = GaxPreconditions.CheckNotNullOrEmpty(region, nameof(region)),
+                    ProjectId = gax::GaxPreconditions.CheckNotNullOrEmpty(projectId, nameof(projectId)),
+                    Region = gax::GaxPreconditions.CheckNotNullOrEmpty(region, nameof(region)),
                     PageToken = pageToken ?? "",
                     PageSize = pageSize ?? 0,
                 },
@@ -761,16 +761,16 @@ namespace Google.Cloud.Dataproc.V1
         /// <returns>
         /// A pageable sequence of <see cref="Job"/> resources.
         /// </returns>
-        public virtual PagedEnumerable<ListJobsResponse, Job> ListJobs(
+        public virtual gax::PagedEnumerable<ListJobsResponse, Job> ListJobs(
             string projectId,
             string region,
             string pageToken = null,
             int? pageSize = null,
-            CallSettings callSettings = null) => ListJobs(
+            gaxgrpc::CallSettings callSettings = null) => ListJobs(
                 new ListJobsRequest
                 {
-                    ProjectId = GaxPreconditions.CheckNotNullOrEmpty(projectId, nameof(projectId)),
-                    Region = GaxPreconditions.CheckNotNullOrEmpty(region, nameof(region)),
+                    ProjectId = gax::GaxPreconditions.CheckNotNullOrEmpty(projectId, nameof(projectId)),
+                    Region = gax::GaxPreconditions.CheckNotNullOrEmpty(region, nameof(region)),
                     PageToken = pageToken ?? "",
                     PageSize = pageSize ?? 0,
                 },
@@ -788,11 +788,11 @@ namespace Google.Cloud.Dataproc.V1
         /// <returns>
         /// A pageable asynchronous sequence of <see cref="Job"/> resources.
         /// </returns>
-        public virtual PagedAsyncEnumerable<ListJobsResponse, Job> ListJobsAsync(
+        public virtual gax::PagedAsyncEnumerable<ListJobsResponse, Job> ListJobsAsync(
             ListJobsRequest request,
-            CallSettings callSettings = null)
+            gaxgrpc::CallSettings callSettings = null)
         {
-            throw new NotImplementedException();
+            throw new s::NotImplementedException();
         }
 
         /// <summary>
@@ -807,11 +807,11 @@ namespace Google.Cloud.Dataproc.V1
         /// <returns>
         /// A pageable sequence of <see cref="Job"/> resources.
         /// </returns>
-        public virtual PagedEnumerable<ListJobsResponse, Job> ListJobs(
+        public virtual gax::PagedEnumerable<ListJobsResponse, Job> ListJobs(
             ListJobsRequest request,
-            CallSettings callSettings = null)
+            gaxgrpc::CallSettings callSettings = null)
         {
-            throw new NotImplementedException();
+            throw new s::NotImplementedException();
         }
 
         /// <summary>
@@ -826,11 +826,11 @@ namespace Google.Cloud.Dataproc.V1
         /// <returns>
         /// A Task containing the RPC response.
         /// </returns>
-        public virtual Task<Job> UpdateJobAsync(
+        public virtual stt::Task<Job> UpdateJobAsync(
             UpdateJobRequest request,
-            CallSettings callSettings = null)
+            gaxgrpc::CallSettings callSettings = null)
         {
-            throw new NotImplementedException();
+            throw new s::NotImplementedException();
         }
 
         /// <summary>
@@ -840,16 +840,16 @@ namespace Google.Cloud.Dataproc.V1
         /// The request object containing all of the parameters for the API call.
         /// </param>
         /// <param name="cancellationToken">
-        /// A <see cref="CancellationToken"/> to use for this RPC.
+        /// A <see cref="st::CancellationToken"/> to use for this RPC.
         /// </param>
         /// <returns>
         /// A Task containing the RPC response.
         /// </returns>
-        public virtual Task<Job> UpdateJobAsync(
+        public virtual stt::Task<Job> UpdateJobAsync(
             UpdateJobRequest request,
-            CancellationToken cancellationToken) => UpdateJobAsync(
+            st::CancellationToken cancellationToken) => UpdateJobAsync(
                 request,
-                CallSettings.FromCancellationToken(cancellationToken));
+                gaxgrpc::CallSettings.FromCancellationToken(cancellationToken));
 
         /// <summary>
         /// Updates a job in a project.
@@ -865,9 +865,9 @@ namespace Google.Cloud.Dataproc.V1
         /// </returns>
         public virtual Job UpdateJob(
             UpdateJobRequest request,
-            CallSettings callSettings = null)
+            gaxgrpc::CallSettings callSettings = null)
         {
-            throw new NotImplementedException();
+            throw new s::NotImplementedException();
         }
 
         /// <summary>
@@ -892,16 +892,16 @@ namespace Google.Cloud.Dataproc.V1
         /// <returns>
         /// A Task containing the RPC response.
         /// </returns>
-        public virtual Task<Job> CancelJobAsync(
+        public virtual stt::Task<Job> CancelJobAsync(
             string projectId,
             string region,
             string jobId,
-            CallSettings callSettings = null) => CancelJobAsync(
+            gaxgrpc::CallSettings callSettings = null) => CancelJobAsync(
                 new CancelJobRequest
                 {
-                    ProjectId = GaxPreconditions.CheckNotNullOrEmpty(projectId, nameof(projectId)),
-                    Region = GaxPreconditions.CheckNotNullOrEmpty(region, nameof(region)),
-                    JobId = GaxPreconditions.CheckNotNullOrEmpty(jobId, nameof(jobId)),
+                    ProjectId = gax::GaxPreconditions.CheckNotNullOrEmpty(projectId, nameof(projectId)),
+                    Region = gax::GaxPreconditions.CheckNotNullOrEmpty(region, nameof(region)),
+                    JobId = gax::GaxPreconditions.CheckNotNullOrEmpty(jobId, nameof(jobId)),
                 },
                 callSettings);
 
@@ -922,20 +922,20 @@ namespace Google.Cloud.Dataproc.V1
         /// Required. The job ID.
         /// </param>
         /// <param name="cancellationToken">
-        /// A <see cref="CancellationToken"/> to use for this RPC.
+        /// A <see cref="st::CancellationToken"/> to use for this RPC.
         /// </param>
         /// <returns>
         /// A Task containing the RPC response.
         /// </returns>
-        public virtual Task<Job> CancelJobAsync(
+        public virtual stt::Task<Job> CancelJobAsync(
             string projectId,
             string region,
             string jobId,
-            CancellationToken cancellationToken) => CancelJobAsync(
+            st::CancellationToken cancellationToken) => CancelJobAsync(
                 projectId,
                 region,
                 jobId,
-                CallSettings.FromCancellationToken(cancellationToken));
+                gaxgrpc::CallSettings.FromCancellationToken(cancellationToken));
 
         /// <summary>
         /// Starts a job cancellation request. To access the job resource
@@ -963,12 +963,12 @@ namespace Google.Cloud.Dataproc.V1
             string projectId,
             string region,
             string jobId,
-            CallSettings callSettings = null) => CancelJob(
+            gaxgrpc::CallSettings callSettings = null) => CancelJob(
                 new CancelJobRequest
                 {
-                    ProjectId = GaxPreconditions.CheckNotNullOrEmpty(projectId, nameof(projectId)),
-                    Region = GaxPreconditions.CheckNotNullOrEmpty(region, nameof(region)),
-                    JobId = GaxPreconditions.CheckNotNullOrEmpty(jobId, nameof(jobId)),
+                    ProjectId = gax::GaxPreconditions.CheckNotNullOrEmpty(projectId, nameof(projectId)),
+                    Region = gax::GaxPreconditions.CheckNotNullOrEmpty(region, nameof(region)),
+                    JobId = gax::GaxPreconditions.CheckNotNullOrEmpty(jobId, nameof(jobId)),
                 },
                 callSettings);
 
@@ -987,11 +987,11 @@ namespace Google.Cloud.Dataproc.V1
         /// <returns>
         /// A Task containing the RPC response.
         /// </returns>
-        public virtual Task<Job> CancelJobAsync(
+        public virtual stt::Task<Job> CancelJobAsync(
             CancelJobRequest request,
-            CallSettings callSettings = null)
+            gaxgrpc::CallSettings callSettings = null)
         {
-            throw new NotImplementedException();
+            throw new s::NotImplementedException();
         }
 
         /// <summary>
@@ -1004,16 +1004,16 @@ namespace Google.Cloud.Dataproc.V1
         /// The request object containing all of the parameters for the API call.
         /// </param>
         /// <param name="cancellationToken">
-        /// A <see cref="CancellationToken"/> to use for this RPC.
+        /// A <see cref="st::CancellationToken"/> to use for this RPC.
         /// </param>
         /// <returns>
         /// A Task containing the RPC response.
         /// </returns>
-        public virtual Task<Job> CancelJobAsync(
+        public virtual stt::Task<Job> CancelJobAsync(
             CancelJobRequest request,
-            CancellationToken cancellationToken) => CancelJobAsync(
+            st::CancellationToken cancellationToken) => CancelJobAsync(
                 request,
-                CallSettings.FromCancellationToken(cancellationToken));
+                gaxgrpc::CallSettings.FromCancellationToken(cancellationToken));
 
         /// <summary>
         /// Starts a job cancellation request. To access the job resource
@@ -1032,9 +1032,9 @@ namespace Google.Cloud.Dataproc.V1
         /// </returns>
         public virtual Job CancelJob(
             CancelJobRequest request,
-            CallSettings callSettings = null)
+            gaxgrpc::CallSettings callSettings = null)
         {
-            throw new NotImplementedException();
+            throw new s::NotImplementedException();
         }
 
         /// <summary>
@@ -1057,16 +1057,16 @@ namespace Google.Cloud.Dataproc.V1
         /// <returns>
         /// A Task that completes when the RPC has completed.
         /// </returns>
-        public virtual Task DeleteJobAsync(
+        public virtual stt::Task DeleteJobAsync(
             string projectId,
             string region,
             string jobId,
-            CallSettings callSettings = null) => DeleteJobAsync(
+            gaxgrpc::CallSettings callSettings = null) => DeleteJobAsync(
                 new DeleteJobRequest
                 {
-                    ProjectId = GaxPreconditions.CheckNotNullOrEmpty(projectId, nameof(projectId)),
-                    Region = GaxPreconditions.CheckNotNullOrEmpty(region, nameof(region)),
-                    JobId = GaxPreconditions.CheckNotNullOrEmpty(jobId, nameof(jobId)),
+                    ProjectId = gax::GaxPreconditions.CheckNotNullOrEmpty(projectId, nameof(projectId)),
+                    Region = gax::GaxPreconditions.CheckNotNullOrEmpty(region, nameof(region)),
+                    JobId = gax::GaxPreconditions.CheckNotNullOrEmpty(jobId, nameof(jobId)),
                 },
                 callSettings);
 
@@ -1085,20 +1085,20 @@ namespace Google.Cloud.Dataproc.V1
         /// Required. The job ID.
         /// </param>
         /// <param name="cancellationToken">
-        /// A <see cref="CancellationToken"/> to use for this RPC.
+        /// A <see cref="st::CancellationToken"/> to use for this RPC.
         /// </param>
         /// <returns>
         /// A Task that completes when the RPC has completed.
         /// </returns>
-        public virtual Task DeleteJobAsync(
+        public virtual stt::Task DeleteJobAsync(
             string projectId,
             string region,
             string jobId,
-            CancellationToken cancellationToken) => DeleteJobAsync(
+            st::CancellationToken cancellationToken) => DeleteJobAsync(
                 projectId,
                 region,
                 jobId,
-                CallSettings.FromCancellationToken(cancellationToken));
+                gaxgrpc::CallSettings.FromCancellationToken(cancellationToken));
 
         /// <summary>
         /// Deletes the job from the project. If the job is active, the delete fails,
@@ -1121,12 +1121,12 @@ namespace Google.Cloud.Dataproc.V1
             string projectId,
             string region,
             string jobId,
-            CallSettings callSettings = null) => DeleteJob(
+            gaxgrpc::CallSettings callSettings = null) => DeleteJob(
                 new DeleteJobRequest
                 {
-                    ProjectId = GaxPreconditions.CheckNotNullOrEmpty(projectId, nameof(projectId)),
-                    Region = GaxPreconditions.CheckNotNullOrEmpty(region, nameof(region)),
-                    JobId = GaxPreconditions.CheckNotNullOrEmpty(jobId, nameof(jobId)),
+                    ProjectId = gax::GaxPreconditions.CheckNotNullOrEmpty(projectId, nameof(projectId)),
+                    Region = gax::GaxPreconditions.CheckNotNullOrEmpty(region, nameof(region)),
+                    JobId = gax::GaxPreconditions.CheckNotNullOrEmpty(jobId, nameof(jobId)),
                 },
                 callSettings);
 
@@ -1143,11 +1143,11 @@ namespace Google.Cloud.Dataproc.V1
         /// <returns>
         /// A Task that completes when the RPC has completed.
         /// </returns>
-        public virtual Task DeleteJobAsync(
+        public virtual stt::Task DeleteJobAsync(
             DeleteJobRequest request,
-            CallSettings callSettings = null)
+            gaxgrpc::CallSettings callSettings = null)
         {
-            throw new NotImplementedException();
+            throw new s::NotImplementedException();
         }
 
         /// <summary>
@@ -1158,16 +1158,16 @@ namespace Google.Cloud.Dataproc.V1
         /// The request object containing all of the parameters for the API call.
         /// </param>
         /// <param name="cancellationToken">
-        /// A <see cref="CancellationToken"/> to use for this RPC.
+        /// A <see cref="st::CancellationToken"/> to use for this RPC.
         /// </param>
         /// <returns>
         /// A Task that completes when the RPC has completed.
         /// </returns>
-        public virtual Task DeleteJobAsync(
+        public virtual stt::Task DeleteJobAsync(
             DeleteJobRequest request,
-            CancellationToken cancellationToken) => DeleteJobAsync(
+            st::CancellationToken cancellationToken) => DeleteJobAsync(
                 request,
-                CallSettings.FromCancellationToken(cancellationToken));
+                gaxgrpc::CallSettings.FromCancellationToken(cancellationToken));
 
         /// <summary>
         /// Deletes the job from the project. If the job is active, the delete fails,
@@ -1181,9 +1181,9 @@ namespace Google.Cloud.Dataproc.V1
         /// </param>
         public virtual void DeleteJob(
             DeleteJobRequest request,
-            CallSettings callSettings = null)
+            gaxgrpc::CallSettings callSettings = null)
         {
-            throw new NotImplementedException();
+            throw new s::NotImplementedException();
         }
 
     }
@@ -1193,12 +1193,12 @@ namespace Google.Cloud.Dataproc.V1
     /// </summary>
     public sealed partial class JobControllerClientImpl : JobControllerClient
     {
-        private readonly ApiCall<SubmitJobRequest, Job> _callSubmitJob;
-        private readonly ApiCall<GetJobRequest, Job> _callGetJob;
-        private readonly ApiCall<ListJobsRequest, ListJobsResponse> _callListJobs;
-        private readonly ApiCall<UpdateJobRequest, Job> _callUpdateJob;
-        private readonly ApiCall<CancelJobRequest, Job> _callCancelJob;
-        private readonly ApiCall<DeleteJobRequest, Empty> _callDeleteJob;
+        private readonly gaxgrpc::ApiCall<SubmitJobRequest, Job> _callSubmitJob;
+        private readonly gaxgrpc::ApiCall<GetJobRequest, Job> _callGetJob;
+        private readonly gaxgrpc::ApiCall<ListJobsRequest, ListJobsResponse> _callListJobs;
+        private readonly gaxgrpc::ApiCall<UpdateJobRequest, Job> _callUpdateJob;
+        private readonly gaxgrpc::ApiCall<CancelJobRequest, Job> _callCancelJob;
+        private readonly gaxgrpc::ApiCall<DeleteJobRequest, protowkt::Empty> _callDeleteJob;
 
         /// <summary>
         /// Constructs a client wrapper for the JobController service, with the specified gRPC client and settings.
@@ -1209,7 +1209,7 @@ namespace Google.Cloud.Dataproc.V1
         {
             GrpcClient = grpcClient;
             JobControllerSettings effectiveSettings = settings ?? JobControllerSettings.GetDefault();
-            ClientHelper clientHelper = new ClientHelper(effectiveSettings);
+            gaxgrpc::ClientHelper clientHelper = new gaxgrpc::ClientHelper(effectiveSettings);
             _callSubmitJob = clientHelper.BuildApiCall<SubmitJobRequest, Job>(
                 GrpcClient.SubmitJobAsync, GrpcClient.SubmitJob, effectiveSettings.SubmitJobSettings);
             _callGetJob = clientHelper.BuildApiCall<GetJobRequest, Job>(
@@ -1220,7 +1220,7 @@ namespace Google.Cloud.Dataproc.V1
                 GrpcClient.UpdateJobAsync, GrpcClient.UpdateJob, effectiveSettings.UpdateJobSettings);
             _callCancelJob = clientHelper.BuildApiCall<CancelJobRequest, Job>(
                 GrpcClient.CancelJobAsync, GrpcClient.CancelJob, effectiveSettings.CancelJobSettings);
-            _callDeleteJob = clientHelper.BuildApiCall<DeleteJobRequest, Empty>(
+            _callDeleteJob = clientHelper.BuildApiCall<DeleteJobRequest, protowkt::Empty>(
                 GrpcClient.DeleteJobAsync, GrpcClient.DeleteJob, effectiveSettings.DeleteJobSettings);
             Modify_ApiCall(ref _callSubmitJob);
             Modify_SubmitJobApiCall(ref _callSubmitJob);
@@ -1241,19 +1241,19 @@ namespace Google.Cloud.Dataproc.V1
 
         // Partial methods called for every ApiCall on construction.
         // Allows modification of all the underlying ApiCall objects.
-        partial void Modify_ApiCall<TRequest, TResponse>(ref ApiCall<TRequest, TResponse> call)
-            where TRequest : class, IMessage<TRequest>
-            where TResponse : class, IMessage<TResponse>;
+        partial void Modify_ApiCall<TRequest, TResponse>(ref gaxgrpc::ApiCall<TRequest, TResponse> call)
+            where TRequest : class, proto::IMessage<TRequest>
+            where TResponse : class, proto::IMessage<TResponse>;
 
         // Partial methods called for each ApiCall on construction.
         // Allows per-RPC-method modification of the underlying ApiCall object.
-        partial void Modify_SubmitJobApiCall(ref ApiCall<SubmitJobRequest, Job> call);
-        partial void Modify_GetJobApiCall(ref ApiCall<GetJobRequest, Job> call);
-        partial void Modify_ListJobsApiCall(ref ApiCall<ListJobsRequest, ListJobsResponse> call);
-        partial void Modify_UpdateJobApiCall(ref ApiCall<UpdateJobRequest, Job> call);
-        partial void Modify_CancelJobApiCall(ref ApiCall<CancelJobRequest, Job> call);
-        partial void Modify_DeleteJobApiCall(ref ApiCall<DeleteJobRequest, Empty> call);
-        partial void OnConstruction(JobController.JobControllerClient grpcClient, JobControllerSettings effectiveSettings, ClientHelper clientHelper);
+        partial void Modify_SubmitJobApiCall(ref gaxgrpc::ApiCall<SubmitJobRequest, Job> call);
+        partial void Modify_GetJobApiCall(ref gaxgrpc::ApiCall<GetJobRequest, Job> call);
+        partial void Modify_ListJobsApiCall(ref gaxgrpc::ApiCall<ListJobsRequest, ListJobsResponse> call);
+        partial void Modify_UpdateJobApiCall(ref gaxgrpc::ApiCall<UpdateJobRequest, Job> call);
+        partial void Modify_CancelJobApiCall(ref gaxgrpc::ApiCall<CancelJobRequest, Job> call);
+        partial void Modify_DeleteJobApiCall(ref gaxgrpc::ApiCall<DeleteJobRequest, protowkt::Empty> call);
+        partial void OnConstruction(JobController.JobControllerClient grpcClient, JobControllerSettings effectiveSettings, gaxgrpc::ClientHelper clientHelper);
 
         /// <summary>
         /// The underlying gRPC JobController client.
@@ -1263,12 +1263,12 @@ namespace Google.Cloud.Dataproc.V1
         // Partial methods called on each request.
         // Allows per-RPC-call modification to the request and CallSettings objects,
         // before the underlying RPC is performed.
-        partial void Modify_SubmitJobRequest(ref SubmitJobRequest request, ref CallSettings settings);
-        partial void Modify_GetJobRequest(ref GetJobRequest request, ref CallSettings settings);
-        partial void Modify_ListJobsRequest(ref ListJobsRequest request, ref CallSettings settings);
-        partial void Modify_UpdateJobRequest(ref UpdateJobRequest request, ref CallSettings settings);
-        partial void Modify_CancelJobRequest(ref CancelJobRequest request, ref CallSettings settings);
-        partial void Modify_DeleteJobRequest(ref DeleteJobRequest request, ref CallSettings settings);
+        partial void Modify_SubmitJobRequest(ref SubmitJobRequest request, ref gaxgrpc::CallSettings settings);
+        partial void Modify_GetJobRequest(ref GetJobRequest request, ref gaxgrpc::CallSettings settings);
+        partial void Modify_ListJobsRequest(ref ListJobsRequest request, ref gaxgrpc::CallSettings settings);
+        partial void Modify_UpdateJobRequest(ref UpdateJobRequest request, ref gaxgrpc::CallSettings settings);
+        partial void Modify_CancelJobRequest(ref CancelJobRequest request, ref gaxgrpc::CallSettings settings);
+        partial void Modify_DeleteJobRequest(ref DeleteJobRequest request, ref gaxgrpc::CallSettings settings);
 
         /// <summary>
         /// Submits a job to a cluster.
@@ -1282,9 +1282,9 @@ namespace Google.Cloud.Dataproc.V1
         /// <returns>
         /// A Task containing the RPC response.
         /// </returns>
-        public override Task<Job> SubmitJobAsync(
+        public override stt::Task<Job> SubmitJobAsync(
             SubmitJobRequest request,
-            CallSettings callSettings = null)
+            gaxgrpc::CallSettings callSettings = null)
         {
             Modify_SubmitJobRequest(ref request, ref callSettings);
             return _callSubmitJob.Async(request, callSettings);
@@ -1304,7 +1304,7 @@ namespace Google.Cloud.Dataproc.V1
         /// </returns>
         public override Job SubmitJob(
             SubmitJobRequest request,
-            CallSettings callSettings = null)
+            gaxgrpc::CallSettings callSettings = null)
         {
             Modify_SubmitJobRequest(ref request, ref callSettings);
             return _callSubmitJob.Sync(request, callSettings);
@@ -1322,9 +1322,9 @@ namespace Google.Cloud.Dataproc.V1
         /// <returns>
         /// A Task containing the RPC response.
         /// </returns>
-        public override Task<Job> GetJobAsync(
+        public override stt::Task<Job> GetJobAsync(
             GetJobRequest request,
-            CallSettings callSettings = null)
+            gaxgrpc::CallSettings callSettings = null)
         {
             Modify_GetJobRequest(ref request, ref callSettings);
             return _callGetJob.Async(request, callSettings);
@@ -1344,7 +1344,7 @@ namespace Google.Cloud.Dataproc.V1
         /// </returns>
         public override Job GetJob(
             GetJobRequest request,
-            CallSettings callSettings = null)
+            gaxgrpc::CallSettings callSettings = null)
         {
             Modify_GetJobRequest(ref request, ref callSettings);
             return _callGetJob.Sync(request, callSettings);
@@ -1362,12 +1362,12 @@ namespace Google.Cloud.Dataproc.V1
         /// <returns>
         /// A pageable asynchronous sequence of <see cref="Job"/> resources.
         /// </returns>
-        public override PagedAsyncEnumerable<ListJobsResponse, Job> ListJobsAsync(
+        public override gax::PagedAsyncEnumerable<ListJobsResponse, Job> ListJobsAsync(
             ListJobsRequest request,
-            CallSettings callSettings = null)
+            gaxgrpc::CallSettings callSettings = null)
         {
             Modify_ListJobsRequest(ref request, ref callSettings);
-            return new GrpcPagedAsyncEnumerable<ListJobsRequest, ListJobsResponse, Job>(_callListJobs, request, callSettings);
+            return new gaxgrpc::GrpcPagedAsyncEnumerable<ListJobsRequest, ListJobsResponse, Job>(_callListJobs, request, callSettings);
         }
 
         /// <summary>
@@ -1382,12 +1382,12 @@ namespace Google.Cloud.Dataproc.V1
         /// <returns>
         /// A pageable sequence of <see cref="Job"/> resources.
         /// </returns>
-        public override PagedEnumerable<ListJobsResponse, Job> ListJobs(
+        public override gax::PagedEnumerable<ListJobsResponse, Job> ListJobs(
             ListJobsRequest request,
-            CallSettings callSettings = null)
+            gaxgrpc::CallSettings callSettings = null)
         {
             Modify_ListJobsRequest(ref request, ref callSettings);
-            return new GrpcPagedEnumerable<ListJobsRequest, ListJobsResponse, Job>(_callListJobs, request, callSettings);
+            return new gaxgrpc::GrpcPagedEnumerable<ListJobsRequest, ListJobsResponse, Job>(_callListJobs, request, callSettings);
         }
 
         /// <summary>
@@ -1402,9 +1402,9 @@ namespace Google.Cloud.Dataproc.V1
         /// <returns>
         /// A Task containing the RPC response.
         /// </returns>
-        public override Task<Job> UpdateJobAsync(
+        public override stt::Task<Job> UpdateJobAsync(
             UpdateJobRequest request,
-            CallSettings callSettings = null)
+            gaxgrpc::CallSettings callSettings = null)
         {
             Modify_UpdateJobRequest(ref request, ref callSettings);
             return _callUpdateJob.Async(request, callSettings);
@@ -1424,7 +1424,7 @@ namespace Google.Cloud.Dataproc.V1
         /// </returns>
         public override Job UpdateJob(
             UpdateJobRequest request,
-            CallSettings callSettings = null)
+            gaxgrpc::CallSettings callSettings = null)
         {
             Modify_UpdateJobRequest(ref request, ref callSettings);
             return _callUpdateJob.Sync(request, callSettings);
@@ -1445,9 +1445,9 @@ namespace Google.Cloud.Dataproc.V1
         /// <returns>
         /// A Task containing the RPC response.
         /// </returns>
-        public override Task<Job> CancelJobAsync(
+        public override stt::Task<Job> CancelJobAsync(
             CancelJobRequest request,
-            CallSettings callSettings = null)
+            gaxgrpc::CallSettings callSettings = null)
         {
             Modify_CancelJobRequest(ref request, ref callSettings);
             return _callCancelJob.Async(request, callSettings);
@@ -1470,7 +1470,7 @@ namespace Google.Cloud.Dataproc.V1
         /// </returns>
         public override Job CancelJob(
             CancelJobRequest request,
-            CallSettings callSettings = null)
+            gaxgrpc::CallSettings callSettings = null)
         {
             Modify_CancelJobRequest(ref request, ref callSettings);
             return _callCancelJob.Sync(request, callSettings);
@@ -1489,9 +1489,9 @@ namespace Google.Cloud.Dataproc.V1
         /// <returns>
         /// A Task that completes when the RPC has completed.
         /// </returns>
-        public override Task DeleteJobAsync(
+        public override stt::Task DeleteJobAsync(
             DeleteJobRequest request,
-            CallSettings callSettings = null)
+            gaxgrpc::CallSettings callSettings = null)
         {
             Modify_DeleteJobRequest(ref request, ref callSettings);
             return _callDeleteJob.Async(request, callSettings);
@@ -1509,7 +1509,7 @@ namespace Google.Cloud.Dataproc.V1
         /// </param>
         public override void DeleteJob(
             DeleteJobRequest request,
-            CallSettings callSettings = null)
+            gaxgrpc::CallSettings callSettings = null)
         {
             Modify_DeleteJobRequest(ref request, ref callSettings);
             _callDeleteJob.Sync(request, callSettings);
@@ -1519,16 +1519,16 @@ namespace Google.Cloud.Dataproc.V1
 
     // Partial classes to enable page-streaming
 
-    public partial class ListJobsRequest : IPageRequest { }
-    public partial class ListJobsResponse : IPageResponse<Job>
+    public partial class ListJobsRequest : gaxgrpc::IPageRequest { }
+    public partial class ListJobsResponse : gaxgrpc::IPageResponse<Job>
     {
         /// <summary>
         /// Returns an enumerator that iterates through the resources in this response.
         /// </summary>
-        public IEnumerator<Job> GetEnumerator() => Jobs.GetEnumerator();
+        public scg::IEnumerator<Job> GetEnumerator() => Jobs.GetEnumerator();
 
         /// <inheritdoc/>
-        IEnumerator IEnumerable.GetEnumerator() => GetEnumerator();
+        sc::IEnumerator sc::IEnumerable.GetEnumerator() => GetEnumerator();
     }
 
 

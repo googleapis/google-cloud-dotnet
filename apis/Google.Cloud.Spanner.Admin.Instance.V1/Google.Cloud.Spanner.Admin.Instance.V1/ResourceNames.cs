@@ -14,8 +14,8 @@
 
 // Generated code. DO NOT EDIT!
 
-using Google.Api.Gax;
-using System;
+using gax = Google.Api.Gax;
+using s = System;
 using System.Linq;
 
 namespace Google.Cloud.Spanner.Admin.Instance.V1
@@ -23,9 +23,9 @@ namespace Google.Cloud.Spanner.Admin.Instance.V1
     /// <summary>
     /// Resource name for the 'project' resource.
     /// </summary>
-    public sealed partial class ProjectName : IResourceName, IEquatable<ProjectName>
+    public sealed partial class ProjectName : gax::IResourceName, s::IEquatable<ProjectName>
     {
-        private static readonly PathTemplate s_template = new PathTemplate("projects/{project}");
+        private static readonly gax::PathTemplate s_template = new gax::PathTemplate("projects/{project}");
 
         /// <summary>
         /// Parses the given project resource name in string form into a new
@@ -35,8 +35,8 @@ namespace Google.Cloud.Spanner.Admin.Instance.V1
         /// <returns>The parsed <see cref="ProjectName"/> if successful.</returns>
         public static ProjectName Parse(string projectName)
         {
-            GaxPreconditions.CheckNotNull(projectName, nameof(projectName));
-            TemplatedResourceName resourceName = s_template.ParseName(projectName);
+            gax::GaxPreconditions.CheckNotNull(projectName, nameof(projectName));
+            gax::TemplatedResourceName resourceName = s_template.ParseName(projectName);
             return new ProjectName(resourceName[0]);
         }
 
@@ -45,7 +45,7 @@ namespace Google.Cloud.Spanner.Admin.Instance.V1
         /// <see cref="ProjectName"/> instance.
         /// </summary>
         /// <remarks>
-        /// This method still throws <see cref="ArgumentNullException"/> if <paramref name="projectName"/> is null,
+        /// This method still throws <see cref="s::ArgumentNullException"/> if <paramref name="projectName"/> is null,
         /// as this would usually indicate a programming error rather than a data error.
         /// </remarks>
         /// <param name="projectName">The project resource name in string form. Must not be <c>null</c>.</param>
@@ -54,8 +54,8 @@ namespace Google.Cloud.Spanner.Admin.Instance.V1
         /// <returns><c>true</c> if the name was parsed succssfully; <c>false</c> otherwise.</returns>
         public static bool TryParse(string projectName, out ProjectName result)
         {
-            GaxPreconditions.CheckNotNull(projectName, nameof(projectName));
-            TemplatedResourceName resourceName;
+            gax::GaxPreconditions.CheckNotNull(projectName, nameof(projectName));
+            gax::TemplatedResourceName resourceName;
             if (s_template.TryParseName(projectName, out resourceName))
             {
                 result = new ProjectName(resourceName[0]);
@@ -75,7 +75,7 @@ namespace Google.Cloud.Spanner.Admin.Instance.V1
         /// <param name="projectId">The project ID. Must not be <c>null</c>.</param>
         public ProjectName(string projectId)
         {
-            ProjectId = GaxPreconditions.CheckNotNull(projectId, nameof(projectId));
+            ProjectId = gax::GaxPreconditions.CheckNotNull(projectId, nameof(projectId));
         }
 
         /// <summary>
@@ -84,7 +84,7 @@ namespace Google.Cloud.Spanner.Admin.Instance.V1
         public string ProjectId { get; }
 
         /// <inheritdoc />
-        public ResourceNameKind Kind => ResourceNameKind.Simple;
+        public gax::ResourceNameKind Kind => gax::ResourceNameKind.Simple;
 
         /// <inheritdoc />
         public override string ToString() => s_template.Expand(ProjectId);
@@ -108,9 +108,9 @@ namespace Google.Cloud.Spanner.Admin.Instance.V1
     /// <summary>
     /// Resource name for the 'instance_config' resource.
     /// </summary>
-    public sealed partial class InstanceConfigName : IResourceName, IEquatable<InstanceConfigName>
+    public sealed partial class InstanceConfigName : gax::IResourceName, s::IEquatable<InstanceConfigName>
     {
-        private static readonly PathTemplate s_template = new PathTemplate("projects/{project}/instanceConfigs/{instance_config}");
+        private static readonly gax::PathTemplate s_template = new gax::PathTemplate("projects/{project}/instanceConfigs/{instance_config}");
 
         /// <summary>
         /// Parses the given instance_config resource name in string form into a new
@@ -120,8 +120,8 @@ namespace Google.Cloud.Spanner.Admin.Instance.V1
         /// <returns>The parsed <see cref="InstanceConfigName"/> if successful.</returns>
         public static InstanceConfigName Parse(string instanceConfigName)
         {
-            GaxPreconditions.CheckNotNull(instanceConfigName, nameof(instanceConfigName));
-            TemplatedResourceName resourceName = s_template.ParseName(instanceConfigName);
+            gax::GaxPreconditions.CheckNotNull(instanceConfigName, nameof(instanceConfigName));
+            gax::TemplatedResourceName resourceName = s_template.ParseName(instanceConfigName);
             return new InstanceConfigName(resourceName[0], resourceName[1]);
         }
 
@@ -130,7 +130,7 @@ namespace Google.Cloud.Spanner.Admin.Instance.V1
         /// <see cref="InstanceConfigName"/> instance.
         /// </summary>
         /// <remarks>
-        /// This method still throws <see cref="ArgumentNullException"/> if <paramref name="instanceConfigName"/> is null,
+        /// This method still throws <see cref="s::ArgumentNullException"/> if <paramref name="instanceConfigName"/> is null,
         /// as this would usually indicate a programming error rather than a data error.
         /// </remarks>
         /// <param name="instanceConfigName">The instance_config resource name in string form. Must not be <c>null</c>.</param>
@@ -139,8 +139,8 @@ namespace Google.Cloud.Spanner.Admin.Instance.V1
         /// <returns><c>true</c> if the name was parsed succssfully; <c>false</c> otherwise.</returns>
         public static bool TryParse(string instanceConfigName, out InstanceConfigName result)
         {
-            GaxPreconditions.CheckNotNull(instanceConfigName, nameof(instanceConfigName));
-            TemplatedResourceName resourceName;
+            gax::GaxPreconditions.CheckNotNull(instanceConfigName, nameof(instanceConfigName));
+            gax::TemplatedResourceName resourceName;
             if (s_template.TryParseName(instanceConfigName, out resourceName))
             {
                 result = new InstanceConfigName(resourceName[0], resourceName[1]);
@@ -161,8 +161,8 @@ namespace Google.Cloud.Spanner.Admin.Instance.V1
         /// <param name="instanceConfigId">The instanceConfig ID. Must not be <c>null</c>.</param>
         public InstanceConfigName(string projectId, string instanceConfigId)
         {
-            ProjectId = GaxPreconditions.CheckNotNull(projectId, nameof(projectId));
-            InstanceConfigId = GaxPreconditions.CheckNotNull(instanceConfigId, nameof(instanceConfigId));
+            ProjectId = gax::GaxPreconditions.CheckNotNull(projectId, nameof(projectId));
+            InstanceConfigId = gax::GaxPreconditions.CheckNotNull(instanceConfigId, nameof(instanceConfigId));
         }
 
         /// <summary>
@@ -176,7 +176,7 @@ namespace Google.Cloud.Spanner.Admin.Instance.V1
         public string InstanceConfigId { get; }
 
         /// <inheritdoc />
-        public ResourceNameKind Kind => ResourceNameKind.Simple;
+        public gax::ResourceNameKind Kind => gax::ResourceNameKind.Simple;
 
         /// <inheritdoc />
         public override string ToString() => s_template.Expand(ProjectId, InstanceConfigId);
@@ -200,9 +200,9 @@ namespace Google.Cloud.Spanner.Admin.Instance.V1
     /// <summary>
     /// Resource name for the 'instance' resource.
     /// </summary>
-    public sealed partial class InstanceName : IResourceName, IEquatable<InstanceName>
+    public sealed partial class InstanceName : gax::IResourceName, s::IEquatable<InstanceName>
     {
-        private static readonly PathTemplate s_template = new PathTemplate("projects/{project}/instances/{instance}");
+        private static readonly gax::PathTemplate s_template = new gax::PathTemplate("projects/{project}/instances/{instance}");
 
         /// <summary>
         /// Parses the given instance resource name in string form into a new
@@ -212,8 +212,8 @@ namespace Google.Cloud.Spanner.Admin.Instance.V1
         /// <returns>The parsed <see cref="InstanceName"/> if successful.</returns>
         public static InstanceName Parse(string instanceName)
         {
-            GaxPreconditions.CheckNotNull(instanceName, nameof(instanceName));
-            TemplatedResourceName resourceName = s_template.ParseName(instanceName);
+            gax::GaxPreconditions.CheckNotNull(instanceName, nameof(instanceName));
+            gax::TemplatedResourceName resourceName = s_template.ParseName(instanceName);
             return new InstanceName(resourceName[0], resourceName[1]);
         }
 
@@ -222,7 +222,7 @@ namespace Google.Cloud.Spanner.Admin.Instance.V1
         /// <see cref="InstanceName"/> instance.
         /// </summary>
         /// <remarks>
-        /// This method still throws <see cref="ArgumentNullException"/> if <paramref name="instanceName"/> is null,
+        /// This method still throws <see cref="s::ArgumentNullException"/> if <paramref name="instanceName"/> is null,
         /// as this would usually indicate a programming error rather than a data error.
         /// </remarks>
         /// <param name="instanceName">The instance resource name in string form. Must not be <c>null</c>.</param>
@@ -231,8 +231,8 @@ namespace Google.Cloud.Spanner.Admin.Instance.V1
         /// <returns><c>true</c> if the name was parsed succssfully; <c>false</c> otherwise.</returns>
         public static bool TryParse(string instanceName, out InstanceName result)
         {
-            GaxPreconditions.CheckNotNull(instanceName, nameof(instanceName));
-            TemplatedResourceName resourceName;
+            gax::GaxPreconditions.CheckNotNull(instanceName, nameof(instanceName));
+            gax::TemplatedResourceName resourceName;
             if (s_template.TryParseName(instanceName, out resourceName))
             {
                 result = new InstanceName(resourceName[0], resourceName[1]);
@@ -253,8 +253,8 @@ namespace Google.Cloud.Spanner.Admin.Instance.V1
         /// <param name="instanceId">The instance ID. Must not be <c>null</c>.</param>
         public InstanceName(string projectId, string instanceId)
         {
-            ProjectId = GaxPreconditions.CheckNotNull(projectId, nameof(projectId));
-            InstanceId = GaxPreconditions.CheckNotNull(instanceId, nameof(instanceId));
+            ProjectId = gax::GaxPreconditions.CheckNotNull(projectId, nameof(projectId));
+            InstanceId = gax::GaxPreconditions.CheckNotNull(instanceId, nameof(instanceId));
         }
 
         /// <summary>
@@ -268,7 +268,7 @@ namespace Google.Cloud.Spanner.Admin.Instance.V1
         public string InstanceId { get; }
 
         /// <inheritdoc />
-        public ResourceNameKind Kind => ResourceNameKind.Simple;
+        public gax::ResourceNameKind Kind => gax::ResourceNameKind.Simple;
 
         /// <inheritdoc />
         public override string ToString() => s_template.Expand(ProjectId, InstanceId);

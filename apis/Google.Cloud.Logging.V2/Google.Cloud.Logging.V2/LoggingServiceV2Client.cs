@@ -15,24 +15,24 @@
 // Generated code. DO NOT EDIT!
 
 using Google.Api;
-using Google.Api.Gax;
-using Google.Api.Gax.Grpc;
-using Google.Protobuf;
-using Google.Protobuf.WellKnownTypes;
-using Grpc.Core;
-using System;
-using System.Collections;
-using System.Collections.Generic;
-using System.Collections.ObjectModel;
-using System.Threading;
-using System.Threading.Tasks;
+using gax = Google.Api.Gax;
+using gaxgrpc = Google.Api.Gax.Grpc;
+using proto = Google.Protobuf;
+using protowkt = Google.Protobuf.WellKnownTypes;
+using grpccore = Grpc.Core;
+using s = System;
+using sc = System.Collections;
+using scg = System.Collections.Generic;
+using sco = System.Collections.ObjectModel;
+using st = System.Threading;
+using stt = System.Threading.Tasks;
 
 namespace Google.Cloud.Logging.V2
 {
     /// <summary>
     /// Settings for a <see cref="LoggingServiceV2Client"/>.
     /// </summary>
-    public sealed partial class LoggingServiceV2Settings : ServiceSettingsBase
+    public sealed partial class LoggingServiceV2Settings : gaxgrpc::ServiceSettingsBase
     {
         /// <summary>
         /// Get a new instance of the default <see cref="LoggingServiceV2Settings"/>.
@@ -49,7 +49,7 @@ namespace Google.Cloud.Logging.V2
 
         private LoggingServiceV2Settings(LoggingServiceV2Settings existing) : base(existing)
         {
-            GaxPreconditions.CheckNotNull(existing, nameof(existing));
+            gax::GaxPreconditions.CheckNotNull(existing, nameof(existing));
             DeleteLogSettings = existing.DeleteLogSettings;
             WriteLogEntriesSettings = existing.WriteLogEntriesSettings;
             ListLogEntriesSettings = existing.ListLogEntriesSettings;
@@ -61,29 +61,29 @@ namespace Google.Cloud.Logging.V2
         partial void OnCopy(LoggingServiceV2Settings existing);
 
         /// <summary>
-        /// The filter specifying which RPC <see cref="StatusCode"/>s are eligible for retry
+        /// The filter specifying which RPC <see cref="grpccore::StatusCode"/>s are eligible for retry
         /// for "Idempotent" <see cref="LoggingServiceV2Client"/> RPC methods.
         /// </summary>
         /// <remarks>
-        /// The eligible RPC <see cref="StatusCode"/>s for retry for "Idempotent" RPC methods are:
+        /// The eligible RPC <see cref="grpccore::StatusCode"/>s for retry for "Idempotent" RPC methods are:
         /// <list type="bullet">
-        /// <item><description><see cref="StatusCode.DeadlineExceeded"/></description></item>
-        /// <item><description><see cref="StatusCode.Internal"/></description></item>
-        /// <item><description><see cref="StatusCode.Unavailable"/></description></item>
+        /// <item><description><see cref="grpccore::StatusCode.DeadlineExceeded"/></description></item>
+        /// <item><description><see cref="grpccore::StatusCode.Internal"/></description></item>
+        /// <item><description><see cref="grpccore::StatusCode.Unavailable"/></description></item>
         /// </list>
         /// </remarks>
-        public static Predicate<RpcException> IdempotentRetryFilter { get; } =
-            RetrySettings.FilterForStatusCodes(StatusCode.DeadlineExceeded, StatusCode.Internal, StatusCode.Unavailable);
+        public static s::Predicate<grpccore::RpcException> IdempotentRetryFilter { get; } =
+            gaxgrpc::RetrySettings.FilterForStatusCodes(grpccore::StatusCode.DeadlineExceeded, grpccore::StatusCode.Internal, grpccore::StatusCode.Unavailable);
 
         /// <summary>
-        /// The filter specifying which RPC <see cref="StatusCode"/>s are eligible for retry
+        /// The filter specifying which RPC <see cref="grpccore::StatusCode"/>s are eligible for retry
         /// for "NonIdempotent" <see cref="LoggingServiceV2Client"/> RPC methods.
         /// </summary>
         /// <remarks>
-        /// There are no RPC <see cref="StatusCode"/>s eligible for retry for "NonIdempotent" RPC methods.
+        /// There are no RPC <see cref="grpccore::StatusCode"/>s eligible for retry for "NonIdempotent" RPC methods.
         /// </remarks>
-        public static Predicate<RpcException> NonIdempotentRetryFilter { get; } =
-            RetrySettings.FilterForStatusCodes();
+        public static s::Predicate<grpccore::RpcException> NonIdempotentRetryFilter { get; } =
+            gaxgrpc::RetrySettings.FilterForStatusCodes();
 
         /// <summary>
         /// "Default" retry backoff for <see cref="LoggingServiceV2Client"/> RPC methods.
@@ -99,9 +99,9 @@ namespace Google.Cloud.Logging.V2
         /// <item><description>Delay multiplier: 1.2</description></item>
         /// </list>
         /// </remarks>
-        public static BackoffSettings GetDefaultRetryBackoff() => new BackoffSettings(
-            delay: TimeSpan.FromMilliseconds(100),
-            maxDelay: TimeSpan.FromMilliseconds(1000),
+        public static gaxgrpc::BackoffSettings GetDefaultRetryBackoff() => new gaxgrpc::BackoffSettings(
+            delay: s::TimeSpan.FromMilliseconds(100),
+            maxDelay: s::TimeSpan.FromMilliseconds(1000),
             delayMultiplier: 1.2
         );
 
@@ -119,9 +119,9 @@ namespace Google.Cloud.Logging.V2
         /// <item><description>Maximum timeout: 60000 milliseconds</description></item>
         /// </list>
         /// </remarks>
-        public static BackoffSettings GetDefaultTimeoutBackoff() => new BackoffSettings(
-            delay: TimeSpan.FromMilliseconds(20000),
-            maxDelay: TimeSpan.FromMilliseconds(60000),
+        public static gaxgrpc::BackoffSettings GetDefaultTimeoutBackoff() => new gaxgrpc::BackoffSettings(
+            delay: s::TimeSpan.FromMilliseconds(20000),
+            maxDelay: s::TimeSpan.FromMilliseconds(60000),
             delayMultiplier: 1.5
         );
 
@@ -139,9 +139,9 @@ namespace Google.Cloud.Logging.V2
         /// <item><description>Delay multiplier: 1.2</description></item>
         /// </list>
         /// </remarks>
-        public static BackoffSettings GetListRetryBackoff() => new BackoffSettings(
-            delay: TimeSpan.FromMilliseconds(100),
-            maxDelay: TimeSpan.FromMilliseconds(1000),
+        public static gaxgrpc::BackoffSettings GetListRetryBackoff() => new gaxgrpc::BackoffSettings(
+            delay: s::TimeSpan.FromMilliseconds(100),
+            maxDelay: s::TimeSpan.FromMilliseconds(1000),
             delayMultiplier: 1.2
         );
 
@@ -159,19 +159,19 @@ namespace Google.Cloud.Logging.V2
         /// <item><description>Maximum timeout: 10000 milliseconds</description></item>
         /// </list>
         /// </remarks>
-        public static BackoffSettings GetListTimeoutBackoff() => new BackoffSettings(
-            delay: TimeSpan.FromMilliseconds(2000),
-            maxDelay: TimeSpan.FromMilliseconds(10000),
+        public static gaxgrpc::BackoffSettings GetListTimeoutBackoff() => new gaxgrpc::BackoffSettings(
+            delay: s::TimeSpan.FromMilliseconds(2000),
+            maxDelay: s::TimeSpan.FromMilliseconds(10000),
             delayMultiplier: 1.5
         );
 
         /// <summary>
-        /// <see cref="CallSettings"/> for synchronous and asynchronous calls to
+        /// <see cref="gaxgrpc::CallSettings"/> for synchronous and asynchronous calls to
         /// <c>LoggingServiceV2Client.DeleteLog</c> and <c>LoggingServiceV2Client.DeleteLogAsync</c>.
         /// </summary>
         /// <remarks>
         /// The default <c>LoggingServiceV2Client.DeleteLog</c> and
-        /// <c>LoggingServiceV2Client.DeleteLogAsync</c> <see cref="RetrySettings"/> are:
+        /// <c>LoggingServiceV2Client.DeleteLogAsync</c> <see cref="gaxgrpc::RetrySettings"/> are:
         /// <list type="bullet">
         /// <item><description>Initial retry delay: 100 milliseconds</description></item>
         /// <item><description>Retry delay multiplier: 1.2</description></item>
@@ -182,27 +182,27 @@ namespace Google.Cloud.Logging.V2
         /// </list>
         /// Retry will be attempted on the following response status codes:
         /// <list>
-        /// <item><description><see cref="StatusCode.DeadlineExceeded"/></description></item>
-        /// <item><description><see cref="StatusCode.Internal"/></description></item>
-        /// <item><description><see cref="StatusCode.Unavailable"/></description></item>
+        /// <item><description><see cref="grpccore::StatusCode.DeadlineExceeded"/></description></item>
+        /// <item><description><see cref="grpccore::StatusCode.Internal"/></description></item>
+        /// <item><description><see cref="grpccore::StatusCode.Unavailable"/></description></item>
         /// </list>
         /// Default RPC expiration is 90000 milliseconds.
         /// </remarks>
-        public CallSettings DeleteLogSettings { get; set; } = CallSettings.FromCallTiming(
-            CallTiming.FromRetry(new RetrySettings(
+        public gaxgrpc::CallSettings DeleteLogSettings { get; set; } = gaxgrpc::CallSettings.FromCallTiming(
+            gaxgrpc::CallTiming.FromRetry(new gaxgrpc::RetrySettings(
                 retryBackoff: GetDefaultRetryBackoff(),
                 timeoutBackoff: GetDefaultTimeoutBackoff(),
-                totalExpiration: Expiration.FromTimeout(TimeSpan.FromMilliseconds(90000)),
+                totalExpiration: gax::Expiration.FromTimeout(s::TimeSpan.FromMilliseconds(90000)),
                 retryFilter: IdempotentRetryFilter
             )));
 
         /// <summary>
-        /// <see cref="CallSettings"/> for synchronous and asynchronous calls to
+        /// <see cref="gaxgrpc::CallSettings"/> for synchronous and asynchronous calls to
         /// <c>LoggingServiceV2Client.WriteLogEntries</c> and <c>LoggingServiceV2Client.WriteLogEntriesAsync</c>.
         /// </summary>
         /// <remarks>
         /// The default <c>LoggingServiceV2Client.WriteLogEntries</c> and
-        /// <c>LoggingServiceV2Client.WriteLogEntriesAsync</c> <see cref="RetrySettings"/> are:
+        /// <c>LoggingServiceV2Client.WriteLogEntriesAsync</c> <see cref="gaxgrpc::RetrySettings"/> are:
         /// <list type="bullet">
         /// <item><description>Initial retry delay: 100 milliseconds</description></item>
         /// <item><description>Retry delay multiplier: 1.2</description></item>
@@ -217,21 +217,21 @@ namespace Google.Cloud.Logging.V2
         /// </list>
         /// Default RPC expiration is 90000 milliseconds.
         /// </remarks>
-        public CallSettings WriteLogEntriesSettings { get; set; } = CallSettings.FromCallTiming(
-            CallTiming.FromRetry(new RetrySettings(
+        public gaxgrpc::CallSettings WriteLogEntriesSettings { get; set; } = gaxgrpc::CallSettings.FromCallTiming(
+            gaxgrpc::CallTiming.FromRetry(new gaxgrpc::RetrySettings(
                 retryBackoff: GetDefaultRetryBackoff(),
                 timeoutBackoff: GetDefaultTimeoutBackoff(),
-                totalExpiration: Expiration.FromTimeout(TimeSpan.FromMilliseconds(90000)),
+                totalExpiration: gax::Expiration.FromTimeout(s::TimeSpan.FromMilliseconds(90000)),
                 retryFilter: NonIdempotentRetryFilter
             )));
 
         /// <summary>
-        /// <see cref="CallSettings"/> for synchronous and asynchronous calls to
+        /// <see cref="gaxgrpc::CallSettings"/> for synchronous and asynchronous calls to
         /// <c>LoggingServiceV2Client.ListLogEntries</c> and <c>LoggingServiceV2Client.ListLogEntriesAsync</c>.
         /// </summary>
         /// <remarks>
         /// The default <c>LoggingServiceV2Client.ListLogEntries</c> and
-        /// <c>LoggingServiceV2Client.ListLogEntriesAsync</c> <see cref="RetrySettings"/> are:
+        /// <c>LoggingServiceV2Client.ListLogEntriesAsync</c> <see cref="gaxgrpc::RetrySettings"/> are:
         /// <list type="bullet">
         /// <item><description>Initial retry delay: 100 milliseconds</description></item>
         /// <item><description>Retry delay multiplier: 1.2</description></item>
@@ -242,27 +242,27 @@ namespace Google.Cloud.Logging.V2
         /// </list>
         /// Retry will be attempted on the following response status codes:
         /// <list>
-        /// <item><description><see cref="StatusCode.DeadlineExceeded"/></description></item>
-        /// <item><description><see cref="StatusCode.Internal"/></description></item>
-        /// <item><description><see cref="StatusCode.Unavailable"/></description></item>
+        /// <item><description><see cref="grpccore::StatusCode.DeadlineExceeded"/></description></item>
+        /// <item><description><see cref="grpccore::StatusCode.Internal"/></description></item>
+        /// <item><description><see cref="grpccore::StatusCode.Unavailable"/></description></item>
         /// </list>
         /// Default RPC expiration is 20000 milliseconds.
         /// </remarks>
-        public CallSettings ListLogEntriesSettings { get; set; } = CallSettings.FromCallTiming(
-            CallTiming.FromRetry(new RetrySettings(
+        public gaxgrpc::CallSettings ListLogEntriesSettings { get; set; } = gaxgrpc::CallSettings.FromCallTiming(
+            gaxgrpc::CallTiming.FromRetry(new gaxgrpc::RetrySettings(
                 retryBackoff: GetListRetryBackoff(),
                 timeoutBackoff: GetListTimeoutBackoff(),
-                totalExpiration: Expiration.FromTimeout(TimeSpan.FromMilliseconds(20000)),
+                totalExpiration: gax::Expiration.FromTimeout(s::TimeSpan.FromMilliseconds(20000)),
                 retryFilter: IdempotentRetryFilter
             )));
 
         /// <summary>
-        /// <see cref="CallSettings"/> for synchronous and asynchronous calls to
+        /// <see cref="gaxgrpc::CallSettings"/> for synchronous and asynchronous calls to
         /// <c>LoggingServiceV2Client.ListMonitoredResourceDescriptors</c> and <c>LoggingServiceV2Client.ListMonitoredResourceDescriptorsAsync</c>.
         /// </summary>
         /// <remarks>
         /// The default <c>LoggingServiceV2Client.ListMonitoredResourceDescriptors</c> and
-        /// <c>LoggingServiceV2Client.ListMonitoredResourceDescriptorsAsync</c> <see cref="RetrySettings"/> are:
+        /// <c>LoggingServiceV2Client.ListMonitoredResourceDescriptorsAsync</c> <see cref="gaxgrpc::RetrySettings"/> are:
         /// <list type="bullet">
         /// <item><description>Initial retry delay: 100 milliseconds</description></item>
         /// <item><description>Retry delay multiplier: 1.2</description></item>
@@ -273,27 +273,27 @@ namespace Google.Cloud.Logging.V2
         /// </list>
         /// Retry will be attempted on the following response status codes:
         /// <list>
-        /// <item><description><see cref="StatusCode.DeadlineExceeded"/></description></item>
-        /// <item><description><see cref="StatusCode.Internal"/></description></item>
-        /// <item><description><see cref="StatusCode.Unavailable"/></description></item>
+        /// <item><description><see cref="grpccore::StatusCode.DeadlineExceeded"/></description></item>
+        /// <item><description><see cref="grpccore::StatusCode.Internal"/></description></item>
+        /// <item><description><see cref="grpccore::StatusCode.Unavailable"/></description></item>
         /// </list>
         /// Default RPC expiration is 90000 milliseconds.
         /// </remarks>
-        public CallSettings ListMonitoredResourceDescriptorsSettings { get; set; } = CallSettings.FromCallTiming(
-            CallTiming.FromRetry(new RetrySettings(
+        public gaxgrpc::CallSettings ListMonitoredResourceDescriptorsSettings { get; set; } = gaxgrpc::CallSettings.FromCallTiming(
+            gaxgrpc::CallTiming.FromRetry(new gaxgrpc::RetrySettings(
                 retryBackoff: GetDefaultRetryBackoff(),
                 timeoutBackoff: GetDefaultTimeoutBackoff(),
-                totalExpiration: Expiration.FromTimeout(TimeSpan.FromMilliseconds(90000)),
+                totalExpiration: gax::Expiration.FromTimeout(s::TimeSpan.FromMilliseconds(90000)),
                 retryFilter: IdempotentRetryFilter
             )));
 
         /// <summary>
-        /// <see cref="CallSettings"/> for synchronous and asynchronous calls to
+        /// <see cref="gaxgrpc::CallSettings"/> for synchronous and asynchronous calls to
         /// <c>LoggingServiceV2Client.ListLogs</c> and <c>LoggingServiceV2Client.ListLogsAsync</c>.
         /// </summary>
         /// <remarks>
         /// The default <c>LoggingServiceV2Client.ListLogs</c> and
-        /// <c>LoggingServiceV2Client.ListLogsAsync</c> <see cref="RetrySettings"/> are:
+        /// <c>LoggingServiceV2Client.ListLogsAsync</c> <see cref="gaxgrpc::RetrySettings"/> are:
         /// <list type="bullet">
         /// <item><description>Initial retry delay: 100 milliseconds</description></item>
         /// <item><description>Retry delay multiplier: 1.2</description></item>
@@ -304,17 +304,17 @@ namespace Google.Cloud.Logging.V2
         /// </list>
         /// Retry will be attempted on the following response status codes:
         /// <list>
-        /// <item><description><see cref="StatusCode.DeadlineExceeded"/></description></item>
-        /// <item><description><see cref="StatusCode.Internal"/></description></item>
-        /// <item><description><see cref="StatusCode.Unavailable"/></description></item>
+        /// <item><description><see cref="grpccore::StatusCode.DeadlineExceeded"/></description></item>
+        /// <item><description><see cref="grpccore::StatusCode.Internal"/></description></item>
+        /// <item><description><see cref="grpccore::StatusCode.Unavailable"/></description></item>
         /// </list>
         /// Default RPC expiration is 90000 milliseconds.
         /// </remarks>
-        public CallSettings ListLogsSettings { get; set; } = CallSettings.FromCallTiming(
-            CallTiming.FromRetry(new RetrySettings(
+        public gaxgrpc::CallSettings ListLogsSettings { get; set; } = gaxgrpc::CallSettings.FromCallTiming(
+            gaxgrpc::CallTiming.FromRetry(new gaxgrpc::RetrySettings(
                 retryBackoff: GetDefaultRetryBackoff(),
                 timeoutBackoff: GetDefaultTimeoutBackoff(),
-                totalExpiration: Expiration.FromTimeout(TimeSpan.FromMilliseconds(90000)),
+                totalExpiration: gax::Expiration.FromTimeout(s::TimeSpan.FromMilliseconds(90000)),
                 retryFilter: IdempotentRetryFilter
             )));
 
@@ -333,7 +333,7 @@ namespace Google.Cloud.Logging.V2
         /// <summary>
         /// The default endpoint for the LoggingServiceV2 service, which is a host of "logging.googleapis.com" and a port of 443.
         /// </summary>
-        public static ServiceEndpoint DefaultEndpoint { get; } = new ServiceEndpoint("logging.googleapis.com", 443);
+        public static gaxgrpc::ServiceEndpoint DefaultEndpoint { get; } = new gaxgrpc::ServiceEndpoint("logging.googleapis.com", 443);
 
         /// <summary>
         /// The default LoggingServiceV2 scopes.
@@ -348,7 +348,7 @@ namespace Google.Cloud.Logging.V2
         /// <item><description>"https://www.googleapis.com/auth/logging.write"</description></item>
         /// </list>
         /// </remarks>
-        public static IReadOnlyList<string> DefaultScopes { get; } = new ReadOnlyCollection<string>(new string[] {
+        public static scg::IReadOnlyList<string> DefaultScopes { get; } = new sco::ReadOnlyCollection<string>(new string[] {
             "https://www.googleapis.com/auth/cloud-platform",
             "https://www.googleapis.com/auth/cloud-platform.read-only",
             "https://www.googleapis.com/auth/logging.admin",
@@ -356,7 +356,7 @@ namespace Google.Cloud.Logging.V2
             "https://www.googleapis.com/auth/logging.write",
         });
 
-        private static readonly ChannelPool s_channelPool = new ChannelPool(DefaultScopes);
+        private static readonly gaxgrpc::ChannelPool s_channelPool = new gaxgrpc::ChannelPool(DefaultScopes);
 
         // Note: we could have parameterless overloads of Create and CreateAsync,
         // documented to just use the default endpoint, settings and credentials.
@@ -370,12 +370,12 @@ namespace Google.Cloud.Logging.V2
         /// and creating a channel connecting to the given endpoint with application default credentials where
         /// necessary.
         /// </summary>
-        /// <param name="endpoint">Optional <see cref="ServiceEndpoint"/>.</param>
+        /// <param name="endpoint">Optional <see cref="gaxgrpc::ServiceEndpoint"/>.</param>
         /// <param name="settings">Optional <see cref="LoggingServiceV2Settings"/>.</param>
         /// <returns>The task representing the created <see cref="LoggingServiceV2Client"/>.</returns>
-        public static async Task<LoggingServiceV2Client> CreateAsync(ServiceEndpoint endpoint = null, LoggingServiceV2Settings settings = null)
+        public static async stt::Task<LoggingServiceV2Client> CreateAsync(gaxgrpc::ServiceEndpoint endpoint = null, LoggingServiceV2Settings settings = null)
         {
-            Channel channel = await s_channelPool.GetChannelAsync(endpoint ?? DefaultEndpoint).ConfigureAwait(false);
+            grpccore::Channel channel = await s_channelPool.GetChannelAsync(endpoint ?? DefaultEndpoint).ConfigureAwait(false);
             return Create(channel, settings);
         }
 
@@ -384,45 +384,45 @@ namespace Google.Cloud.Logging.V2
         /// and creating a channel connecting to the given endpoint with application default credentials where
         /// necessary.
         /// </summary>
-        /// <param name="endpoint">Optional <see cref="ServiceEndpoint"/>.</param>
+        /// <param name="endpoint">Optional <see cref="gaxgrpc::ServiceEndpoint"/>.</param>
         /// <param name="settings">Optional <see cref="LoggingServiceV2Settings"/>.</param>
         /// <returns>The created <see cref="LoggingServiceV2Client"/>.</returns>
-        public static LoggingServiceV2Client Create(ServiceEndpoint endpoint = null, LoggingServiceV2Settings settings = null)
+        public static LoggingServiceV2Client Create(gaxgrpc::ServiceEndpoint endpoint = null, LoggingServiceV2Settings settings = null)
         {
-            Channel channel = s_channelPool.GetChannel(endpoint ?? DefaultEndpoint);
+            grpccore::Channel channel = s_channelPool.GetChannel(endpoint ?? DefaultEndpoint);
             return Create(channel, settings);
         }
 
         /// <summary>
         /// Creates a <see cref="LoggingServiceV2Client"/> which uses the specified channel for remote operations.
         /// </summary>
-        /// <param name="channel">The <see cref="Channel"/> for remote operations. Must not be null.</param>
+        /// <param name="channel">The <see cref="grpccore::Channel"/> for remote operations. Must not be null.</param>
         /// <param name="settings">Optional <see cref="LoggingServiceV2Settings"/>.</param>
         /// <returns>The created <see cref="LoggingServiceV2Client"/>.</returns>
-        public static LoggingServiceV2Client Create(Channel channel, LoggingServiceV2Settings settings = null)
+        public static LoggingServiceV2Client Create(grpccore::Channel channel, LoggingServiceV2Settings settings = null)
         {
-            GaxPreconditions.CheckNotNull(channel, nameof(channel));
+            gax::GaxPreconditions.CheckNotNull(channel, nameof(channel));
             LoggingServiceV2.LoggingServiceV2Client grpcClient = new LoggingServiceV2.LoggingServiceV2Client(channel);
             return new LoggingServiceV2ClientImpl(grpcClient, settings);
         }
 
         /// <summary>
-        /// Shuts down any channels automatically created by <see cref="Create(ServiceEndpoint, LoggingServiceV2Settings)"/>
-        /// and <see cref="CreateAsync(ServiceEndpoint, LoggingServiceV2Settings)"/>. Channels which weren't automatically
+        /// Shuts down any channels automatically created by <see cref="Create(gaxgrpc::ServiceEndpoint, LoggingServiceV2Settings)"/>
+        /// and <see cref="CreateAsync(gaxgrpc::ServiceEndpoint, LoggingServiceV2Settings)"/>. Channels which weren't automatically
         /// created are not affected.
         /// </summary>
-        /// <remarks>After calling this method, further calls to <see cref="Create(ServiceEndpoint, LoggingServiceV2Settings)"/>
-        /// and <see cref="CreateAsync(ServiceEndpoint, LoggingServiceV2Settings)"/> will create new channels, which could
+        /// <remarks>After calling this method, further calls to <see cref="Create(gaxgrpc::ServiceEndpoint, LoggingServiceV2Settings)"/>
+        /// and <see cref="CreateAsync(gaxgrpc::ServiceEndpoint, LoggingServiceV2Settings)"/> will create new channels, which could
         /// in turn be shut down by another call to this method.</remarks>
         /// <returns>A task representing the asynchronous shutdown operation.</returns>
-        public static Task ShutdownDefaultChannelsAsync() => s_channelPool.ShutdownChannelsAsync();
+        public static stt::Task ShutdownDefaultChannelsAsync() => s_channelPool.ShutdownChannelsAsync();
 
         /// <summary>
         /// The underlying gRPC LoggingServiceV2 client.
         /// </summary>
         public virtual LoggingServiceV2.LoggingServiceV2Client GrpcClient
         {
-            get { throw new NotImplementedException(); }
+            get { throw new s::NotImplementedException(); }
         }
 
         /// <summary>
@@ -451,12 +451,12 @@ namespace Google.Cloud.Logging.V2
         /// <returns>
         /// A Task that completes when the RPC has completed.
         /// </returns>
-        public virtual Task DeleteLogAsync(
+        public virtual stt::Task DeleteLogAsync(
             LogNameOneof logName,
-            CallSettings callSettings = null) => DeleteLogAsync(
+            gaxgrpc::CallSettings callSettings = null) => DeleteLogAsync(
                 new DeleteLogRequest
                 {
-                    LogNameAsLogNameOneof = GaxPreconditions.CheckNotNull(logName, nameof(logName)),
+                    LogNameAsLogNameOneof = gax::GaxPreconditions.CheckNotNull(logName, nameof(logName)),
                 },
                 callSettings);
 
@@ -481,16 +481,16 @@ namespace Google.Cloud.Logging.V2
         /// [LogEntry][google.logging.v2.LogEntry].
         /// </param>
         /// <param name="cancellationToken">
-        /// A <see cref="CancellationToken"/> to use for this RPC.
+        /// A <see cref="st::CancellationToken"/> to use for this RPC.
         /// </param>
         /// <returns>
         /// A Task that completes when the RPC has completed.
         /// </returns>
-        public virtual Task DeleteLogAsync(
+        public virtual stt::Task DeleteLogAsync(
             LogNameOneof logName,
-            CancellationToken cancellationToken) => DeleteLogAsync(
+            st::CancellationToken cancellationToken) => DeleteLogAsync(
                 logName,
-                CallSettings.FromCancellationToken(cancellationToken));
+                gaxgrpc::CallSettings.FromCancellationToken(cancellationToken));
 
         /// <summary>
         /// Deletes all the log entries in a log.
@@ -517,10 +517,10 @@ namespace Google.Cloud.Logging.V2
         /// </param>
         public virtual void DeleteLog(
             LogNameOneof logName,
-            CallSettings callSettings = null) => DeleteLog(
+            gaxgrpc::CallSettings callSettings = null) => DeleteLog(
                 new DeleteLogRequest
                 {
-                    LogNameAsLogNameOneof = GaxPreconditions.CheckNotNull(logName, nameof(logName)),
+                    LogNameAsLogNameOneof = gax::GaxPreconditions.CheckNotNull(logName, nameof(logName)),
                 },
                 callSettings);
 
@@ -539,11 +539,11 @@ namespace Google.Cloud.Logging.V2
         /// <returns>
         /// A Task that completes when the RPC has completed.
         /// </returns>
-        public virtual Task DeleteLogAsync(
+        public virtual stt::Task DeleteLogAsync(
             DeleteLogRequest request,
-            CallSettings callSettings = null)
+            gaxgrpc::CallSettings callSettings = null)
         {
-            throw new NotImplementedException();
+            throw new s::NotImplementedException();
         }
 
         /// <summary>
@@ -556,16 +556,16 @@ namespace Google.Cloud.Logging.V2
         /// The request object containing all of the parameters for the API call.
         /// </param>
         /// <param name="cancellationToken">
-        /// A <see cref="CancellationToken"/> to use for this RPC.
+        /// A <see cref="st::CancellationToken"/> to use for this RPC.
         /// </param>
         /// <returns>
         /// A Task that completes when the RPC has completed.
         /// </returns>
-        public virtual Task DeleteLogAsync(
+        public virtual stt::Task DeleteLogAsync(
             DeleteLogRequest request,
-            CancellationToken cancellationToken) => DeleteLogAsync(
+            st::CancellationToken cancellationToken) => DeleteLogAsync(
                 request,
-                CallSettings.FromCancellationToken(cancellationToken));
+                gaxgrpc::CallSettings.FromCancellationToken(cancellationToken));
 
         /// <summary>
         /// Deletes all the log entries in a log.
@@ -581,9 +581,9 @@ namespace Google.Cloud.Logging.V2
         /// </param>
         public virtual void DeleteLog(
             DeleteLogRequest request,
-            CallSettings callSettings = null)
+            gaxgrpc::CallSettings callSettings = null)
         {
-            throw new NotImplementedException();
+            throw new s::NotImplementedException();
         }
 
         /// <summary>
@@ -655,18 +655,18 @@ namespace Google.Cloud.Logging.V2
         /// <returns>
         /// A Task containing the RPC response.
         /// </returns>
-        public virtual Task<WriteLogEntriesResponse> WriteLogEntriesAsync(
+        public virtual stt::Task<WriteLogEntriesResponse> WriteLogEntriesAsync(
             LogNameOneof logName,
             MonitoredResource resource,
-            IDictionary<string, string> labels,
-            IEnumerable<LogEntry> entries,
-            CallSettings callSettings = null) => WriteLogEntriesAsync(
+            scg::IDictionary<string, string> labels,
+            scg::IEnumerable<LogEntry> entries,
+            gaxgrpc::CallSettings callSettings = null) => WriteLogEntriesAsync(
                 new WriteLogEntriesRequest
                 {
                     LogNameAsLogNameOneof = logName, // Optional
                     Resource = resource, // Optional
-                    Labels = { labels ?? EmptyDictionary<string, string>.Instance }, // Optional
-                    Entries = { GaxPreconditions.CheckNotNull(entries, nameof(entries)) },
+                    Labels = { labels ?? gax::EmptyDictionary<string, string>.Instance }, // Optional
+                    Entries = { gax::GaxPreconditions.CheckNotNull(entries, nameof(entries)) },
                 },
                 callSettings);
 
@@ -734,22 +734,22 @@ namespace Google.Cloud.Logging.V2
         /// rather than calling this method for each individual log entry.
         /// </param>
         /// <param name="cancellationToken">
-        /// A <see cref="CancellationToken"/> to use for this RPC.
+        /// A <see cref="st::CancellationToken"/> to use for this RPC.
         /// </param>
         /// <returns>
         /// A Task containing the RPC response.
         /// </returns>
-        public virtual Task<WriteLogEntriesResponse> WriteLogEntriesAsync(
+        public virtual stt::Task<WriteLogEntriesResponse> WriteLogEntriesAsync(
             LogNameOneof logName,
             MonitoredResource resource,
-            IDictionary<string, string> labels,
-            IEnumerable<LogEntry> entries,
-            CancellationToken cancellationToken) => WriteLogEntriesAsync(
+            scg::IDictionary<string, string> labels,
+            scg::IEnumerable<LogEntry> entries,
+            st::CancellationToken cancellationToken) => WriteLogEntriesAsync(
                 logName,
                 resource,
                 labels,
                 entries,
-                CallSettings.FromCancellationToken(cancellationToken));
+                gaxgrpc::CallSettings.FromCancellationToken(cancellationToken));
 
         /// <summary>
         /// ## Log entry resources
@@ -823,15 +823,15 @@ namespace Google.Cloud.Logging.V2
         public virtual WriteLogEntriesResponse WriteLogEntries(
             LogNameOneof logName,
             MonitoredResource resource,
-            IDictionary<string, string> labels,
-            IEnumerable<LogEntry> entries,
-            CallSettings callSettings = null) => WriteLogEntries(
+            scg::IDictionary<string, string> labels,
+            scg::IEnumerable<LogEntry> entries,
+            gaxgrpc::CallSettings callSettings = null) => WriteLogEntries(
                 new WriteLogEntriesRequest
                 {
                     LogNameAsLogNameOneof = logName, // Optional
                     Resource = resource, // Optional
-                    Labels = { labels ?? EmptyDictionary<string, string>.Instance }, // Optional
-                    Entries = { GaxPreconditions.CheckNotNull(entries, nameof(entries)) },
+                    Labels = { labels ?? gax::EmptyDictionary<string, string>.Instance }, // Optional
+                    Entries = { gax::GaxPreconditions.CheckNotNull(entries, nameof(entries)) },
                 },
                 callSettings);
 
@@ -853,11 +853,11 @@ namespace Google.Cloud.Logging.V2
         /// <returns>
         /// A Task containing the RPC response.
         /// </returns>
-        public virtual Task<WriteLogEntriesResponse> WriteLogEntriesAsync(
+        public virtual stt::Task<WriteLogEntriesResponse> WriteLogEntriesAsync(
             WriteLogEntriesRequest request,
-            CallSettings callSettings = null)
+            gaxgrpc::CallSettings callSettings = null)
         {
-            throw new NotImplementedException();
+            throw new s::NotImplementedException();
         }
 
         /// <summary>
@@ -873,16 +873,16 @@ namespace Google.Cloud.Logging.V2
         /// The request object containing all of the parameters for the API call.
         /// </param>
         /// <param name="cancellationToken">
-        /// A <see cref="CancellationToken"/> to use for this RPC.
+        /// A <see cref="st::CancellationToken"/> to use for this RPC.
         /// </param>
         /// <returns>
         /// A Task containing the RPC response.
         /// </returns>
-        public virtual Task<WriteLogEntriesResponse> WriteLogEntriesAsync(
+        public virtual stt::Task<WriteLogEntriesResponse> WriteLogEntriesAsync(
             WriteLogEntriesRequest request,
-            CancellationToken cancellationToken) => WriteLogEntriesAsync(
+            st::CancellationToken cancellationToken) => WriteLogEntriesAsync(
                 request,
-                CallSettings.FromCancellationToken(cancellationToken));
+                gaxgrpc::CallSettings.FromCancellationToken(cancellationToken));
 
         /// <summary>
         /// ## Log entry resources
@@ -904,9 +904,9 @@ namespace Google.Cloud.Logging.V2
         /// </returns>
         public virtual WriteLogEntriesResponse WriteLogEntries(
             WriteLogEntriesRequest request,
-            CallSettings callSettings = null)
+            gaxgrpc::CallSettings callSettings = null)
         {
-            throw new NotImplementedException();
+            throw new s::NotImplementedException();
         }
 
         /// <summary>
@@ -956,16 +956,16 @@ namespace Google.Cloud.Logging.V2
         /// <returns>
         /// A pageable asynchronous sequence of <see cref="LogEntry"/> resources.
         /// </returns>
-        public virtual PagedAsyncEnumerable<ListLogEntriesResponse, LogEntry> ListLogEntriesAsync(
-            IEnumerable<string> resourceNames,
+        public virtual gax::PagedAsyncEnumerable<ListLogEntriesResponse, LogEntry> ListLogEntriesAsync(
+            scg::IEnumerable<string> resourceNames,
             string filter,
             string orderBy,
             string pageToken = null,
             int? pageSize = null,
-            CallSettings callSettings = null) => ListLogEntriesAsync(
+            gaxgrpc::CallSettings callSettings = null) => ListLogEntriesAsync(
                 new ListLogEntriesRequest
                 {
-                    ResourceNames = { GaxPreconditions.CheckNotNull(resourceNames, nameof(resourceNames)) },
+                    ResourceNames = { gax::GaxPreconditions.CheckNotNull(resourceNames, nameof(resourceNames)) },
                     Filter = filter ?? "", // Optional
                     OrderBy = orderBy ?? "", // Optional
                     PageToken = pageToken ?? "",
@@ -1020,16 +1020,16 @@ namespace Google.Cloud.Logging.V2
         /// <returns>
         /// A pageable sequence of <see cref="LogEntry"/> resources.
         /// </returns>
-        public virtual PagedEnumerable<ListLogEntriesResponse, LogEntry> ListLogEntries(
-            IEnumerable<string> resourceNames,
+        public virtual gax::PagedEnumerable<ListLogEntriesResponse, LogEntry> ListLogEntries(
+            scg::IEnumerable<string> resourceNames,
             string filter,
             string orderBy,
             string pageToken = null,
             int? pageSize = null,
-            CallSettings callSettings = null) => ListLogEntries(
+            gaxgrpc::CallSettings callSettings = null) => ListLogEntries(
                 new ListLogEntriesRequest
                 {
-                    ResourceNames = { GaxPreconditions.CheckNotNull(resourceNames, nameof(resourceNames)) },
+                    ResourceNames = { gax::GaxPreconditions.CheckNotNull(resourceNames, nameof(resourceNames)) },
                     Filter = filter ?? "", // Optional
                     OrderBy = orderBy ?? "", // Optional
                     PageToken = pageToken ?? "",
@@ -1051,11 +1051,11 @@ namespace Google.Cloud.Logging.V2
         /// <returns>
         /// A pageable asynchronous sequence of <see cref="LogEntry"/> resources.
         /// </returns>
-        public virtual PagedAsyncEnumerable<ListLogEntriesResponse, LogEntry> ListLogEntriesAsync(
+        public virtual gax::PagedAsyncEnumerable<ListLogEntriesResponse, LogEntry> ListLogEntriesAsync(
             ListLogEntriesRequest request,
-            CallSettings callSettings = null)
+            gaxgrpc::CallSettings callSettings = null)
         {
-            throw new NotImplementedException();
+            throw new s::NotImplementedException();
         }
 
         /// <summary>
@@ -1072,11 +1072,11 @@ namespace Google.Cloud.Logging.V2
         /// <returns>
         /// A pageable sequence of <see cref="LogEntry"/> resources.
         /// </returns>
-        public virtual PagedEnumerable<ListLogEntriesResponse, LogEntry> ListLogEntries(
+        public virtual gax::PagedEnumerable<ListLogEntriesResponse, LogEntry> ListLogEntries(
             ListLogEntriesRequest request,
-            CallSettings callSettings = null)
+            gaxgrpc::CallSettings callSettings = null)
         {
-            throw new NotImplementedException();
+            throw new s::NotImplementedException();
         }
 
         /// <summary>
@@ -1092,11 +1092,11 @@ namespace Google.Cloud.Logging.V2
         /// <returns>
         /// A pageable asynchronous sequence of <see cref="MonitoredResourceDescriptor"/> resources.
         /// </returns>
-        public virtual PagedAsyncEnumerable<ListMonitoredResourceDescriptorsResponse, MonitoredResourceDescriptor> ListMonitoredResourceDescriptorsAsync(
+        public virtual gax::PagedAsyncEnumerable<ListMonitoredResourceDescriptorsResponse, MonitoredResourceDescriptor> ListMonitoredResourceDescriptorsAsync(
             ListMonitoredResourceDescriptorsRequest request,
-            CallSettings callSettings = null)
+            gaxgrpc::CallSettings callSettings = null)
         {
-            throw new NotImplementedException();
+            throw new s::NotImplementedException();
         }
 
         /// <summary>
@@ -1112,11 +1112,11 @@ namespace Google.Cloud.Logging.V2
         /// <returns>
         /// A pageable sequence of <see cref="MonitoredResourceDescriptor"/> resources.
         /// </returns>
-        public virtual PagedEnumerable<ListMonitoredResourceDescriptorsResponse, MonitoredResourceDescriptor> ListMonitoredResourceDescriptors(
+        public virtual gax::PagedEnumerable<ListMonitoredResourceDescriptorsResponse, MonitoredResourceDescriptor> ListMonitoredResourceDescriptors(
             ListMonitoredResourceDescriptorsRequest request,
-            CallSettings callSettings = null)
+            gaxgrpc::CallSettings callSettings = null)
         {
-            throw new NotImplementedException();
+            throw new s::NotImplementedException();
         }
 
         /// <summary>
@@ -1145,14 +1145,14 @@ namespace Google.Cloud.Logging.V2
         /// <returns>
         /// A pageable asynchronous sequence of <see cref="string"/> resources.
         /// </returns>
-        public virtual PagedAsyncEnumerable<ListLogsResponse, string> ListLogsAsync(
+        public virtual gax::PagedAsyncEnumerable<ListLogsResponse, string> ListLogsAsync(
             ParentNameOneof parent,
             string pageToken = null,
             int? pageSize = null,
-            CallSettings callSettings = null) => ListLogsAsync(
+            gaxgrpc::CallSettings callSettings = null) => ListLogsAsync(
                 new ListLogsRequest
                 {
-                    ParentAsParentNameOneof = GaxPreconditions.CheckNotNull(parent, nameof(parent)),
+                    ParentAsParentNameOneof = gax::GaxPreconditions.CheckNotNull(parent, nameof(parent)),
                     PageToken = pageToken ?? "",
                     PageSize = pageSize ?? 0,
                 },
@@ -1184,14 +1184,14 @@ namespace Google.Cloud.Logging.V2
         /// <returns>
         /// A pageable sequence of <see cref="string"/> resources.
         /// </returns>
-        public virtual PagedEnumerable<ListLogsResponse, string> ListLogs(
+        public virtual gax::PagedEnumerable<ListLogsResponse, string> ListLogs(
             ParentNameOneof parent,
             string pageToken = null,
             int? pageSize = null,
-            CallSettings callSettings = null) => ListLogs(
+            gaxgrpc::CallSettings callSettings = null) => ListLogs(
                 new ListLogsRequest
                 {
-                    ParentAsParentNameOneof = GaxPreconditions.CheckNotNull(parent, nameof(parent)),
+                    ParentAsParentNameOneof = gax::GaxPreconditions.CheckNotNull(parent, nameof(parent)),
                     PageToken = pageToken ?? "",
                     PageSize = pageSize ?? 0,
                 },
@@ -1210,11 +1210,11 @@ namespace Google.Cloud.Logging.V2
         /// <returns>
         /// A pageable asynchronous sequence of <see cref="string"/> resources.
         /// </returns>
-        public virtual PagedAsyncEnumerable<ListLogsResponse, string> ListLogsAsync(
+        public virtual gax::PagedAsyncEnumerable<ListLogsResponse, string> ListLogsAsync(
             ListLogsRequest request,
-            CallSettings callSettings = null)
+            gaxgrpc::CallSettings callSettings = null)
         {
-            throw new NotImplementedException();
+            throw new s::NotImplementedException();
         }
 
         /// <summary>
@@ -1230,11 +1230,11 @@ namespace Google.Cloud.Logging.V2
         /// <returns>
         /// A pageable sequence of <see cref="string"/> resources.
         /// </returns>
-        public virtual PagedEnumerable<ListLogsResponse, string> ListLogs(
+        public virtual gax::PagedEnumerable<ListLogsResponse, string> ListLogs(
             ListLogsRequest request,
-            CallSettings callSettings = null)
+            gaxgrpc::CallSettings callSettings = null)
         {
-            throw new NotImplementedException();
+            throw new s::NotImplementedException();
         }
 
     }
@@ -1244,11 +1244,11 @@ namespace Google.Cloud.Logging.V2
     /// </summary>
     public sealed partial class LoggingServiceV2ClientImpl : LoggingServiceV2Client
     {
-        private readonly ApiCall<DeleteLogRequest, Empty> _callDeleteLog;
-        private readonly ApiCall<WriteLogEntriesRequest, WriteLogEntriesResponse> _callWriteLogEntries;
-        private readonly ApiCall<ListLogEntriesRequest, ListLogEntriesResponse> _callListLogEntries;
-        private readonly ApiCall<ListMonitoredResourceDescriptorsRequest, ListMonitoredResourceDescriptorsResponse> _callListMonitoredResourceDescriptors;
-        private readonly ApiCall<ListLogsRequest, ListLogsResponse> _callListLogs;
+        private readonly gaxgrpc::ApiCall<DeleteLogRequest, protowkt::Empty> _callDeleteLog;
+        private readonly gaxgrpc::ApiCall<WriteLogEntriesRequest, WriteLogEntriesResponse> _callWriteLogEntries;
+        private readonly gaxgrpc::ApiCall<ListLogEntriesRequest, ListLogEntriesResponse> _callListLogEntries;
+        private readonly gaxgrpc::ApiCall<ListMonitoredResourceDescriptorsRequest, ListMonitoredResourceDescriptorsResponse> _callListMonitoredResourceDescriptors;
+        private readonly gaxgrpc::ApiCall<ListLogsRequest, ListLogsResponse> _callListLogs;
 
         /// <summary>
         /// Constructs a client wrapper for the LoggingServiceV2 service, with the specified gRPC client and settings.
@@ -1259,8 +1259,8 @@ namespace Google.Cloud.Logging.V2
         {
             GrpcClient = grpcClient;
             LoggingServiceV2Settings effectiveSettings = settings ?? LoggingServiceV2Settings.GetDefault();
-            ClientHelper clientHelper = new ClientHelper(effectiveSettings);
-            _callDeleteLog = clientHelper.BuildApiCall<DeleteLogRequest, Empty>(
+            gaxgrpc::ClientHelper clientHelper = new gaxgrpc::ClientHelper(effectiveSettings);
+            _callDeleteLog = clientHelper.BuildApiCall<DeleteLogRequest, protowkt::Empty>(
                 GrpcClient.DeleteLogAsync, GrpcClient.DeleteLog, effectiveSettings.DeleteLogSettings);
             _callWriteLogEntries = clientHelper.BuildApiCall<WriteLogEntriesRequest, WriteLogEntriesResponse>(
                 GrpcClient.WriteLogEntriesAsync, GrpcClient.WriteLogEntries, effectiveSettings.WriteLogEntriesSettings);
@@ -1287,18 +1287,18 @@ namespace Google.Cloud.Logging.V2
 
         // Partial methods called for every ApiCall on construction.
         // Allows modification of all the underlying ApiCall objects.
-        partial void Modify_ApiCall<TRequest, TResponse>(ref ApiCall<TRequest, TResponse> call)
-            where TRequest : class, IMessage<TRequest>
-            where TResponse : class, IMessage<TResponse>;
+        partial void Modify_ApiCall<TRequest, TResponse>(ref gaxgrpc::ApiCall<TRequest, TResponse> call)
+            where TRequest : class, proto::IMessage<TRequest>
+            where TResponse : class, proto::IMessage<TResponse>;
 
         // Partial methods called for each ApiCall on construction.
         // Allows per-RPC-method modification of the underlying ApiCall object.
-        partial void Modify_DeleteLogApiCall(ref ApiCall<DeleteLogRequest, Empty> call);
-        partial void Modify_WriteLogEntriesApiCall(ref ApiCall<WriteLogEntriesRequest, WriteLogEntriesResponse> call);
-        partial void Modify_ListLogEntriesApiCall(ref ApiCall<ListLogEntriesRequest, ListLogEntriesResponse> call);
-        partial void Modify_ListMonitoredResourceDescriptorsApiCall(ref ApiCall<ListMonitoredResourceDescriptorsRequest, ListMonitoredResourceDescriptorsResponse> call);
-        partial void Modify_ListLogsApiCall(ref ApiCall<ListLogsRequest, ListLogsResponse> call);
-        partial void OnConstruction(LoggingServiceV2.LoggingServiceV2Client grpcClient, LoggingServiceV2Settings effectiveSettings, ClientHelper clientHelper);
+        partial void Modify_DeleteLogApiCall(ref gaxgrpc::ApiCall<DeleteLogRequest, protowkt::Empty> call);
+        partial void Modify_WriteLogEntriesApiCall(ref gaxgrpc::ApiCall<WriteLogEntriesRequest, WriteLogEntriesResponse> call);
+        partial void Modify_ListLogEntriesApiCall(ref gaxgrpc::ApiCall<ListLogEntriesRequest, ListLogEntriesResponse> call);
+        partial void Modify_ListMonitoredResourceDescriptorsApiCall(ref gaxgrpc::ApiCall<ListMonitoredResourceDescriptorsRequest, ListMonitoredResourceDescriptorsResponse> call);
+        partial void Modify_ListLogsApiCall(ref gaxgrpc::ApiCall<ListLogsRequest, ListLogsResponse> call);
+        partial void OnConstruction(LoggingServiceV2.LoggingServiceV2Client grpcClient, LoggingServiceV2Settings effectiveSettings, gaxgrpc::ClientHelper clientHelper);
 
         /// <summary>
         /// The underlying gRPC LoggingServiceV2 client.
@@ -1308,11 +1308,11 @@ namespace Google.Cloud.Logging.V2
         // Partial methods called on each request.
         // Allows per-RPC-call modification to the request and CallSettings objects,
         // before the underlying RPC is performed.
-        partial void Modify_DeleteLogRequest(ref DeleteLogRequest request, ref CallSettings settings);
-        partial void Modify_WriteLogEntriesRequest(ref WriteLogEntriesRequest request, ref CallSettings settings);
-        partial void Modify_ListLogEntriesRequest(ref ListLogEntriesRequest request, ref CallSettings settings);
-        partial void Modify_ListMonitoredResourceDescriptorsRequest(ref ListMonitoredResourceDescriptorsRequest request, ref CallSettings settings);
-        partial void Modify_ListLogsRequest(ref ListLogsRequest request, ref CallSettings settings);
+        partial void Modify_DeleteLogRequest(ref DeleteLogRequest request, ref gaxgrpc::CallSettings settings);
+        partial void Modify_WriteLogEntriesRequest(ref WriteLogEntriesRequest request, ref gaxgrpc::CallSettings settings);
+        partial void Modify_ListLogEntriesRequest(ref ListLogEntriesRequest request, ref gaxgrpc::CallSettings settings);
+        partial void Modify_ListMonitoredResourceDescriptorsRequest(ref ListMonitoredResourceDescriptorsRequest request, ref gaxgrpc::CallSettings settings);
+        partial void Modify_ListLogsRequest(ref ListLogsRequest request, ref gaxgrpc::CallSettings settings);
 
         /// <summary>
         /// Deletes all the log entries in a log.
@@ -1329,9 +1329,9 @@ namespace Google.Cloud.Logging.V2
         /// <returns>
         /// A Task that completes when the RPC has completed.
         /// </returns>
-        public override Task DeleteLogAsync(
+        public override stt::Task DeleteLogAsync(
             DeleteLogRequest request,
-            CallSettings callSettings = null)
+            gaxgrpc::CallSettings callSettings = null)
         {
             Modify_DeleteLogRequest(ref request, ref callSettings);
             return _callDeleteLog.Async(request, callSettings);
@@ -1351,7 +1351,7 @@ namespace Google.Cloud.Logging.V2
         /// </param>
         public override void DeleteLog(
             DeleteLogRequest request,
-            CallSettings callSettings = null)
+            gaxgrpc::CallSettings callSettings = null)
         {
             Modify_DeleteLogRequest(ref request, ref callSettings);
             _callDeleteLog.Sync(request, callSettings);
@@ -1375,9 +1375,9 @@ namespace Google.Cloud.Logging.V2
         /// <returns>
         /// A Task containing the RPC response.
         /// </returns>
-        public override Task<WriteLogEntriesResponse> WriteLogEntriesAsync(
+        public override stt::Task<WriteLogEntriesResponse> WriteLogEntriesAsync(
             WriteLogEntriesRequest request,
-            CallSettings callSettings = null)
+            gaxgrpc::CallSettings callSettings = null)
         {
             Modify_WriteLogEntriesRequest(ref request, ref callSettings);
             return _callWriteLogEntries.Async(request, callSettings);
@@ -1403,7 +1403,7 @@ namespace Google.Cloud.Logging.V2
         /// </returns>
         public override WriteLogEntriesResponse WriteLogEntries(
             WriteLogEntriesRequest request,
-            CallSettings callSettings = null)
+            gaxgrpc::CallSettings callSettings = null)
         {
             Modify_WriteLogEntriesRequest(ref request, ref callSettings);
             return _callWriteLogEntries.Sync(request, callSettings);
@@ -1423,12 +1423,12 @@ namespace Google.Cloud.Logging.V2
         /// <returns>
         /// A pageable asynchronous sequence of <see cref="LogEntry"/> resources.
         /// </returns>
-        public override PagedAsyncEnumerable<ListLogEntriesResponse, LogEntry> ListLogEntriesAsync(
+        public override gax::PagedAsyncEnumerable<ListLogEntriesResponse, LogEntry> ListLogEntriesAsync(
             ListLogEntriesRequest request,
-            CallSettings callSettings = null)
+            gaxgrpc::CallSettings callSettings = null)
         {
             Modify_ListLogEntriesRequest(ref request, ref callSettings);
-            return new GrpcPagedAsyncEnumerable<ListLogEntriesRequest, ListLogEntriesResponse, LogEntry>(_callListLogEntries, request, callSettings);
+            return new gaxgrpc::GrpcPagedAsyncEnumerable<ListLogEntriesRequest, ListLogEntriesResponse, LogEntry>(_callListLogEntries, request, callSettings);
         }
 
         /// <summary>
@@ -1445,12 +1445,12 @@ namespace Google.Cloud.Logging.V2
         /// <returns>
         /// A pageable sequence of <see cref="LogEntry"/> resources.
         /// </returns>
-        public override PagedEnumerable<ListLogEntriesResponse, LogEntry> ListLogEntries(
+        public override gax::PagedEnumerable<ListLogEntriesResponse, LogEntry> ListLogEntries(
             ListLogEntriesRequest request,
-            CallSettings callSettings = null)
+            gaxgrpc::CallSettings callSettings = null)
         {
             Modify_ListLogEntriesRequest(ref request, ref callSettings);
-            return new GrpcPagedEnumerable<ListLogEntriesRequest, ListLogEntriesResponse, LogEntry>(_callListLogEntries, request, callSettings);
+            return new gaxgrpc::GrpcPagedEnumerable<ListLogEntriesRequest, ListLogEntriesResponse, LogEntry>(_callListLogEntries, request, callSettings);
         }
 
         /// <summary>
@@ -1466,12 +1466,12 @@ namespace Google.Cloud.Logging.V2
         /// <returns>
         /// A pageable asynchronous sequence of <see cref="MonitoredResourceDescriptor"/> resources.
         /// </returns>
-        public override PagedAsyncEnumerable<ListMonitoredResourceDescriptorsResponse, MonitoredResourceDescriptor> ListMonitoredResourceDescriptorsAsync(
+        public override gax::PagedAsyncEnumerable<ListMonitoredResourceDescriptorsResponse, MonitoredResourceDescriptor> ListMonitoredResourceDescriptorsAsync(
             ListMonitoredResourceDescriptorsRequest request,
-            CallSettings callSettings = null)
+            gaxgrpc::CallSettings callSettings = null)
         {
             Modify_ListMonitoredResourceDescriptorsRequest(ref request, ref callSettings);
-            return new GrpcPagedAsyncEnumerable<ListMonitoredResourceDescriptorsRequest, ListMonitoredResourceDescriptorsResponse, MonitoredResourceDescriptor>(_callListMonitoredResourceDescriptors, request, callSettings);
+            return new gaxgrpc::GrpcPagedAsyncEnumerable<ListMonitoredResourceDescriptorsRequest, ListMonitoredResourceDescriptorsResponse, MonitoredResourceDescriptor>(_callListMonitoredResourceDescriptors, request, callSettings);
         }
 
         /// <summary>
@@ -1487,12 +1487,12 @@ namespace Google.Cloud.Logging.V2
         /// <returns>
         /// A pageable sequence of <see cref="MonitoredResourceDescriptor"/> resources.
         /// </returns>
-        public override PagedEnumerable<ListMonitoredResourceDescriptorsResponse, MonitoredResourceDescriptor> ListMonitoredResourceDescriptors(
+        public override gax::PagedEnumerable<ListMonitoredResourceDescriptorsResponse, MonitoredResourceDescriptor> ListMonitoredResourceDescriptors(
             ListMonitoredResourceDescriptorsRequest request,
-            CallSettings callSettings = null)
+            gaxgrpc::CallSettings callSettings = null)
         {
             Modify_ListMonitoredResourceDescriptorsRequest(ref request, ref callSettings);
-            return new GrpcPagedEnumerable<ListMonitoredResourceDescriptorsRequest, ListMonitoredResourceDescriptorsResponse, MonitoredResourceDescriptor>(_callListMonitoredResourceDescriptors, request, callSettings);
+            return new gaxgrpc::GrpcPagedEnumerable<ListMonitoredResourceDescriptorsRequest, ListMonitoredResourceDescriptorsResponse, MonitoredResourceDescriptor>(_callListMonitoredResourceDescriptors, request, callSettings);
         }
 
         /// <summary>
@@ -1508,12 +1508,12 @@ namespace Google.Cloud.Logging.V2
         /// <returns>
         /// A pageable asynchronous sequence of <see cref="string"/> resources.
         /// </returns>
-        public override PagedAsyncEnumerable<ListLogsResponse, string> ListLogsAsync(
+        public override gax::PagedAsyncEnumerable<ListLogsResponse, string> ListLogsAsync(
             ListLogsRequest request,
-            CallSettings callSettings = null)
+            gaxgrpc::CallSettings callSettings = null)
         {
             Modify_ListLogsRequest(ref request, ref callSettings);
-            return new GrpcPagedAsyncEnumerable<ListLogsRequest, ListLogsResponse, string>(_callListLogs, request, callSettings);
+            return new gaxgrpc::GrpcPagedAsyncEnumerable<ListLogsRequest, ListLogsResponse, string>(_callListLogs, request, callSettings);
         }
 
         /// <summary>
@@ -1529,52 +1529,52 @@ namespace Google.Cloud.Logging.V2
         /// <returns>
         /// A pageable sequence of <see cref="string"/> resources.
         /// </returns>
-        public override PagedEnumerable<ListLogsResponse, string> ListLogs(
+        public override gax::PagedEnumerable<ListLogsResponse, string> ListLogs(
             ListLogsRequest request,
-            CallSettings callSettings = null)
+            gaxgrpc::CallSettings callSettings = null)
         {
             Modify_ListLogsRequest(ref request, ref callSettings);
-            return new GrpcPagedEnumerable<ListLogsRequest, ListLogsResponse, string>(_callListLogs, request, callSettings);
+            return new gaxgrpc::GrpcPagedEnumerable<ListLogsRequest, ListLogsResponse, string>(_callListLogs, request, callSettings);
         }
 
     }
 
     // Partial classes to enable page-streaming
 
-    public partial class ListLogEntriesRequest : IPageRequest { }
-    public partial class ListLogEntriesResponse : IPageResponse<LogEntry>
+    public partial class ListLogEntriesRequest : gaxgrpc::IPageRequest { }
+    public partial class ListLogEntriesResponse : gaxgrpc::IPageResponse<LogEntry>
     {
         /// <summary>
         /// Returns an enumerator that iterates through the resources in this response.
         /// </summary>
-        public IEnumerator<LogEntry> GetEnumerator() => Entries.GetEnumerator();
+        public scg::IEnumerator<LogEntry> GetEnumerator() => Entries.GetEnumerator();
 
         /// <inheritdoc/>
-        IEnumerator IEnumerable.GetEnumerator() => GetEnumerator();
+        sc::IEnumerator sc::IEnumerable.GetEnumerator() => GetEnumerator();
     }
 
-    public partial class ListMonitoredResourceDescriptorsRequest : IPageRequest { }
-    public partial class ListMonitoredResourceDescriptorsResponse : IPageResponse<MonitoredResourceDescriptor>
+    public partial class ListMonitoredResourceDescriptorsRequest : gaxgrpc::IPageRequest { }
+    public partial class ListMonitoredResourceDescriptorsResponse : gaxgrpc::IPageResponse<MonitoredResourceDescriptor>
     {
         /// <summary>
         /// Returns an enumerator that iterates through the resources in this response.
         /// </summary>
-        public IEnumerator<MonitoredResourceDescriptor> GetEnumerator() => ResourceDescriptors.GetEnumerator();
+        public scg::IEnumerator<MonitoredResourceDescriptor> GetEnumerator() => ResourceDescriptors.GetEnumerator();
 
         /// <inheritdoc/>
-        IEnumerator IEnumerable.GetEnumerator() => GetEnumerator();
+        sc::IEnumerator sc::IEnumerable.GetEnumerator() => GetEnumerator();
     }
 
-    public partial class ListLogsRequest : IPageRequest { }
-    public partial class ListLogsResponse : IPageResponse<string>
+    public partial class ListLogsRequest : gaxgrpc::IPageRequest { }
+    public partial class ListLogsResponse : gaxgrpc::IPageResponse<string>
     {
         /// <summary>
         /// Returns an enumerator that iterates through the resources in this response.
         /// </summary>
-        public IEnumerator<string> GetEnumerator() => LogNames.GetEnumerator();
+        public scg::IEnumerator<string> GetEnumerator() => LogNames.GetEnumerator();
 
         /// <inheritdoc/>
-        IEnumerator IEnumerable.GetEnumerator() => GetEnumerator();
+        sc::IEnumerator sc::IEnumerable.GetEnumerator() => GetEnumerator();
     }
 
 

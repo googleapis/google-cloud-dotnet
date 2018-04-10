@@ -14,25 +14,25 @@
 
 // Generated code. DO NOT EDIT!
 
-using Google.Api.Gax;
-using Google.Api.Gax.Grpc;
-using Google.LongRunning;
-using Google.Protobuf;
-using Google.Protobuf.WellKnownTypes;
-using Grpc.Core;
-using System;
-using System.Collections;
-using System.Collections.Generic;
-using System.Collections.ObjectModel;
-using System.Threading;
-using System.Threading.Tasks;
+using gax = Google.Api.Gax;
+using gaxgrpc = Google.Api.Gax.Grpc;
+using lro = Google.LongRunning;
+using proto = Google.Protobuf;
+using protowkt = Google.Protobuf.WellKnownTypes;
+using grpccore = Grpc.Core;
+using s = System;
+using sc = System.Collections;
+using scg = System.Collections.Generic;
+using sco = System.Collections.ObjectModel;
+using st = System.Threading;
+using stt = System.Threading.Tasks;
 
 namespace Google.Cloud.Bigtable.Admin.V2
 {
     /// <summary>
     /// Settings for a <see cref="BigtableTableAdminClient"/>.
     /// </summary>
-    public sealed partial class BigtableTableAdminSettings : ServiceSettingsBase
+    public sealed partial class BigtableTableAdminSettings : gaxgrpc::ServiceSettingsBase
     {
         /// <summary>
         /// Get a new instance of the default <see cref="BigtableTableAdminSettings"/>.
@@ -49,7 +49,7 @@ namespace Google.Cloud.Bigtable.Admin.V2
 
         private BigtableTableAdminSettings(BigtableTableAdminSettings existing) : base(existing)
         {
-            GaxPreconditions.CheckNotNull(existing, nameof(existing));
+            gax::GaxPreconditions.CheckNotNull(existing, nameof(existing));
             CreateTableSettings = existing.CreateTableSettings;
             CreateTableFromSnapshotSettings = existing.CreateTableFromSnapshotSettings;
             CreateTableFromSnapshotOperationsSettings = existing.CreateTableFromSnapshotOperationsSettings?.Clone();
@@ -71,28 +71,28 @@ namespace Google.Cloud.Bigtable.Admin.V2
         partial void OnCopy(BigtableTableAdminSettings existing);
 
         /// <summary>
-        /// The filter specifying which RPC <see cref="StatusCode"/>s are eligible for retry
+        /// The filter specifying which RPC <see cref="grpccore::StatusCode"/>s are eligible for retry
         /// for "Idempotent" <see cref="BigtableTableAdminClient"/> RPC methods.
         /// </summary>
         /// <remarks>
-        /// The eligible RPC <see cref="StatusCode"/>s for retry for "Idempotent" RPC methods are:
+        /// The eligible RPC <see cref="grpccore::StatusCode"/>s for retry for "Idempotent" RPC methods are:
         /// <list type="bullet">
-        /// <item><description><see cref="StatusCode.DeadlineExceeded"/></description></item>
-        /// <item><description><see cref="StatusCode.Unavailable"/></description></item>
+        /// <item><description><see cref="grpccore::StatusCode.DeadlineExceeded"/></description></item>
+        /// <item><description><see cref="grpccore::StatusCode.Unavailable"/></description></item>
         /// </list>
         /// </remarks>
-        public static Predicate<RpcException> IdempotentRetryFilter { get; } =
-            RetrySettings.FilterForStatusCodes(StatusCode.DeadlineExceeded, StatusCode.Unavailable);
+        public static s::Predicate<grpccore::RpcException> IdempotentRetryFilter { get; } =
+            gaxgrpc::RetrySettings.FilterForStatusCodes(grpccore::StatusCode.DeadlineExceeded, grpccore::StatusCode.Unavailable);
 
         /// <summary>
-        /// The filter specifying which RPC <see cref="StatusCode"/>s are eligible for retry
+        /// The filter specifying which RPC <see cref="grpccore::StatusCode"/>s are eligible for retry
         /// for "NonIdempotent" <see cref="BigtableTableAdminClient"/> RPC methods.
         /// </summary>
         /// <remarks>
-        /// There are no RPC <see cref="StatusCode"/>s eligible for retry for "NonIdempotent" RPC methods.
+        /// There are no RPC <see cref="grpccore::StatusCode"/>s eligible for retry for "NonIdempotent" RPC methods.
         /// </remarks>
-        public static Predicate<RpcException> NonIdempotentRetryFilter { get; } =
-            RetrySettings.FilterForStatusCodes();
+        public static s::Predicate<grpccore::RpcException> NonIdempotentRetryFilter { get; } =
+            gaxgrpc::RetrySettings.FilterForStatusCodes();
 
         /// <summary>
         /// "Default" retry backoff for <see cref="BigtableTableAdminClient"/> RPC methods.
@@ -108,9 +108,9 @@ namespace Google.Cloud.Bigtable.Admin.V2
         /// <item><description>Delay multiplier: 1.3</description></item>
         /// </list>
         /// </remarks>
-        public static BackoffSettings GetDefaultRetryBackoff() => new BackoffSettings(
-            delay: TimeSpan.FromMilliseconds(100),
-            maxDelay: TimeSpan.FromMilliseconds(60000),
+        public static gaxgrpc::BackoffSettings GetDefaultRetryBackoff() => new gaxgrpc::BackoffSettings(
+            delay: s::TimeSpan.FromMilliseconds(100),
+            maxDelay: s::TimeSpan.FromMilliseconds(60000),
             delayMultiplier: 1.3
         );
 
@@ -128,19 +128,19 @@ namespace Google.Cloud.Bigtable.Admin.V2
         /// <item><description>Maximum timeout: 20000 milliseconds</description></item>
         /// </list>
         /// </remarks>
-        public static BackoffSettings GetDefaultTimeoutBackoff() => new BackoffSettings(
-            delay: TimeSpan.FromMilliseconds(20000),
-            maxDelay: TimeSpan.FromMilliseconds(20000),
+        public static gaxgrpc::BackoffSettings GetDefaultTimeoutBackoff() => new gaxgrpc::BackoffSettings(
+            delay: s::TimeSpan.FromMilliseconds(20000),
+            maxDelay: s::TimeSpan.FromMilliseconds(20000),
             delayMultiplier: 1.0
         );
 
         /// <summary>
-        /// <see cref="CallSettings"/> for synchronous and asynchronous calls to
+        /// <see cref="gaxgrpc::CallSettings"/> for synchronous and asynchronous calls to
         /// <c>BigtableTableAdminClient.CreateTable</c> and <c>BigtableTableAdminClient.CreateTableAsync</c>.
         /// </summary>
         /// <remarks>
         /// The default <c>BigtableTableAdminClient.CreateTable</c> and
-        /// <c>BigtableTableAdminClient.CreateTableAsync</c> <see cref="RetrySettings"/> are:
+        /// <c>BigtableTableAdminClient.CreateTableAsync</c> <see cref="gaxgrpc::RetrySettings"/> are:
         /// <list type="bullet">
         /// <item><description>Initial retry delay: 100 milliseconds</description></item>
         /// <item><description>Retry delay multiplier: 1.3</description></item>
@@ -155,21 +155,21 @@ namespace Google.Cloud.Bigtable.Admin.V2
         /// </list>
         /// Default RPC expiration is 600000 milliseconds.
         /// </remarks>
-        public CallSettings CreateTableSettings { get; set; } = CallSettings.FromCallTiming(
-            CallTiming.FromRetry(new RetrySettings(
+        public gaxgrpc::CallSettings CreateTableSettings { get; set; } = gaxgrpc::CallSettings.FromCallTiming(
+            gaxgrpc::CallTiming.FromRetry(new gaxgrpc::RetrySettings(
                 retryBackoff: GetDefaultRetryBackoff(),
                 timeoutBackoff: GetDefaultTimeoutBackoff(),
-                totalExpiration: Expiration.FromTimeout(TimeSpan.FromMilliseconds(600000)),
+                totalExpiration: gax::Expiration.FromTimeout(s::TimeSpan.FromMilliseconds(600000)),
                 retryFilter: NonIdempotentRetryFilter
             )));
 
         /// <summary>
-        /// <see cref="CallSettings"/> for synchronous and asynchronous calls to
+        /// <see cref="gaxgrpc::CallSettings"/> for synchronous and asynchronous calls to
         /// <c>BigtableTableAdminClient.CreateTableFromSnapshot</c> and <c>BigtableTableAdminClient.CreateTableFromSnapshotAsync</c>.
         /// </summary>
         /// <remarks>
         /// The default <c>BigtableTableAdminClient.CreateTableFromSnapshot</c> and
-        /// <c>BigtableTableAdminClient.CreateTableFromSnapshotAsync</c> <see cref="RetrySettings"/> are:
+        /// <c>BigtableTableAdminClient.CreateTableFromSnapshotAsync</c> <see cref="gaxgrpc::RetrySettings"/> are:
         /// <list type="bullet">
         /// <item><description>Initial retry delay: 100 milliseconds</description></item>
         /// <item><description>Retry delay multiplier: 1.3</description></item>
@@ -184,11 +184,11 @@ namespace Google.Cloud.Bigtable.Admin.V2
         /// </list>
         /// Default RPC expiration is 600000 milliseconds.
         /// </remarks>
-        public CallSettings CreateTableFromSnapshotSettings { get; set; } = CallSettings.FromCallTiming(
-            CallTiming.FromRetry(new RetrySettings(
+        public gaxgrpc::CallSettings CreateTableFromSnapshotSettings { get; set; } = gaxgrpc::CallSettings.FromCallTiming(
+            gaxgrpc::CallTiming.FromRetry(new gaxgrpc::RetrySettings(
                 retryBackoff: GetDefaultRetryBackoff(),
                 timeoutBackoff: GetDefaultTimeoutBackoff(),
-                totalExpiration: Expiration.FromTimeout(TimeSpan.FromMilliseconds(600000)),
+                totalExpiration: gax::Expiration.FromTimeout(s::TimeSpan.FromMilliseconds(600000)),
                 retryFilter: NonIdempotentRetryFilter
             )));
 
@@ -196,7 +196,7 @@ namespace Google.Cloud.Bigtable.Admin.V2
         /// Long Running Operation settings for calls to <c>BigtableTableAdminClient.CreateTableFromSnapshot</c>.
         /// </summary>
         /// <remarks>
-        /// Uses default <see cref="PollSettings"/> of:
+        /// Uses default <see cref="gax::PollSettings"/> of:
         /// <list type="bullet">
         /// <item><description>Initial delay: 500 milliseconds</description></item>
         /// <item><description>Delay multiplier: 1.5</description></item>
@@ -204,22 +204,22 @@ namespace Google.Cloud.Bigtable.Admin.V2
         /// <item><description>Total timeout: 300000 milliseconds</description></item>
         /// </list>
         /// </remarks>
-        public OperationsSettings CreateTableFromSnapshotOperationsSettings { get; set; } = new OperationsSettings
+        public lro::OperationsSettings CreateTableFromSnapshotOperationsSettings { get; set; } = new lro::OperationsSettings
         {
-            DefaultPollSettings = new PollSettings(
-                Expiration.FromTimeout(TimeSpan.FromMilliseconds(300000L)),
-                TimeSpan.FromMilliseconds(500L),
+            DefaultPollSettings = new gax::PollSettings(
+                gax::Expiration.FromTimeout(s::TimeSpan.FromMilliseconds(300000L)),
+                s::TimeSpan.FromMilliseconds(500L),
                 1.5,
-                TimeSpan.FromMilliseconds(5000L))
+                s::TimeSpan.FromMilliseconds(5000L))
         };
 
         /// <summary>
-        /// <see cref="CallSettings"/> for synchronous and asynchronous calls to
+        /// <see cref="gaxgrpc::CallSettings"/> for synchronous and asynchronous calls to
         /// <c>BigtableTableAdminClient.ListTables</c> and <c>BigtableTableAdminClient.ListTablesAsync</c>.
         /// </summary>
         /// <remarks>
         /// The default <c>BigtableTableAdminClient.ListTables</c> and
-        /// <c>BigtableTableAdminClient.ListTablesAsync</c> <see cref="RetrySettings"/> are:
+        /// <c>BigtableTableAdminClient.ListTablesAsync</c> <see cref="gaxgrpc::RetrySettings"/> are:
         /// <list type="bullet">
         /// <item><description>Initial retry delay: 100 milliseconds</description></item>
         /// <item><description>Retry delay multiplier: 1.3</description></item>
@@ -230,26 +230,26 @@ namespace Google.Cloud.Bigtable.Admin.V2
         /// </list>
         /// Retry will be attempted on the following response status codes:
         /// <list>
-        /// <item><description><see cref="StatusCode.DeadlineExceeded"/></description></item>
-        /// <item><description><see cref="StatusCode.Unavailable"/></description></item>
+        /// <item><description><see cref="grpccore::StatusCode.DeadlineExceeded"/></description></item>
+        /// <item><description><see cref="grpccore::StatusCode.Unavailable"/></description></item>
         /// </list>
         /// Default RPC expiration is 600000 milliseconds.
         /// </remarks>
-        public CallSettings ListTablesSettings { get; set; } = CallSettings.FromCallTiming(
-            CallTiming.FromRetry(new RetrySettings(
+        public gaxgrpc::CallSettings ListTablesSettings { get; set; } = gaxgrpc::CallSettings.FromCallTiming(
+            gaxgrpc::CallTiming.FromRetry(new gaxgrpc::RetrySettings(
                 retryBackoff: GetDefaultRetryBackoff(),
                 timeoutBackoff: GetDefaultTimeoutBackoff(),
-                totalExpiration: Expiration.FromTimeout(TimeSpan.FromMilliseconds(600000)),
+                totalExpiration: gax::Expiration.FromTimeout(s::TimeSpan.FromMilliseconds(600000)),
                 retryFilter: IdempotentRetryFilter
             )));
 
         /// <summary>
-        /// <see cref="CallSettings"/> for synchronous and asynchronous calls to
+        /// <see cref="gaxgrpc::CallSettings"/> for synchronous and asynchronous calls to
         /// <c>BigtableTableAdminClient.GetTable</c> and <c>BigtableTableAdminClient.GetTableAsync</c>.
         /// </summary>
         /// <remarks>
         /// The default <c>BigtableTableAdminClient.GetTable</c> and
-        /// <c>BigtableTableAdminClient.GetTableAsync</c> <see cref="RetrySettings"/> are:
+        /// <c>BigtableTableAdminClient.GetTableAsync</c> <see cref="gaxgrpc::RetrySettings"/> are:
         /// <list type="bullet">
         /// <item><description>Initial retry delay: 100 milliseconds</description></item>
         /// <item><description>Retry delay multiplier: 1.3</description></item>
@@ -260,26 +260,26 @@ namespace Google.Cloud.Bigtable.Admin.V2
         /// </list>
         /// Retry will be attempted on the following response status codes:
         /// <list>
-        /// <item><description><see cref="StatusCode.DeadlineExceeded"/></description></item>
-        /// <item><description><see cref="StatusCode.Unavailable"/></description></item>
+        /// <item><description><see cref="grpccore::StatusCode.DeadlineExceeded"/></description></item>
+        /// <item><description><see cref="grpccore::StatusCode.Unavailable"/></description></item>
         /// </list>
         /// Default RPC expiration is 600000 milliseconds.
         /// </remarks>
-        public CallSettings GetTableSettings { get; set; } = CallSettings.FromCallTiming(
-            CallTiming.FromRetry(new RetrySettings(
+        public gaxgrpc::CallSettings GetTableSettings { get; set; } = gaxgrpc::CallSettings.FromCallTiming(
+            gaxgrpc::CallTiming.FromRetry(new gaxgrpc::RetrySettings(
                 retryBackoff: GetDefaultRetryBackoff(),
                 timeoutBackoff: GetDefaultTimeoutBackoff(),
-                totalExpiration: Expiration.FromTimeout(TimeSpan.FromMilliseconds(600000)),
+                totalExpiration: gax::Expiration.FromTimeout(s::TimeSpan.FromMilliseconds(600000)),
                 retryFilter: IdempotentRetryFilter
             )));
 
         /// <summary>
-        /// <see cref="CallSettings"/> for synchronous and asynchronous calls to
+        /// <see cref="gaxgrpc::CallSettings"/> for synchronous and asynchronous calls to
         /// <c>BigtableTableAdminClient.DeleteTable</c> and <c>BigtableTableAdminClient.DeleteTableAsync</c>.
         /// </summary>
         /// <remarks>
         /// The default <c>BigtableTableAdminClient.DeleteTable</c> and
-        /// <c>BigtableTableAdminClient.DeleteTableAsync</c> <see cref="RetrySettings"/> are:
+        /// <c>BigtableTableAdminClient.DeleteTableAsync</c> <see cref="gaxgrpc::RetrySettings"/> are:
         /// <list type="bullet">
         /// <item><description>Initial retry delay: 100 milliseconds</description></item>
         /// <item><description>Retry delay multiplier: 1.3</description></item>
@@ -290,26 +290,26 @@ namespace Google.Cloud.Bigtable.Admin.V2
         /// </list>
         /// Retry will be attempted on the following response status codes:
         /// <list>
-        /// <item><description><see cref="StatusCode.DeadlineExceeded"/></description></item>
-        /// <item><description><see cref="StatusCode.Unavailable"/></description></item>
+        /// <item><description><see cref="grpccore::StatusCode.DeadlineExceeded"/></description></item>
+        /// <item><description><see cref="grpccore::StatusCode.Unavailable"/></description></item>
         /// </list>
         /// Default RPC expiration is 600000 milliseconds.
         /// </remarks>
-        public CallSettings DeleteTableSettings { get; set; } = CallSettings.FromCallTiming(
-            CallTiming.FromRetry(new RetrySettings(
+        public gaxgrpc::CallSettings DeleteTableSettings { get; set; } = gaxgrpc::CallSettings.FromCallTiming(
+            gaxgrpc::CallTiming.FromRetry(new gaxgrpc::RetrySettings(
                 retryBackoff: GetDefaultRetryBackoff(),
                 timeoutBackoff: GetDefaultTimeoutBackoff(),
-                totalExpiration: Expiration.FromTimeout(TimeSpan.FromMilliseconds(600000)),
+                totalExpiration: gax::Expiration.FromTimeout(s::TimeSpan.FromMilliseconds(600000)),
                 retryFilter: IdempotentRetryFilter
             )));
 
         /// <summary>
-        /// <see cref="CallSettings"/> for synchronous and asynchronous calls to
+        /// <see cref="gaxgrpc::CallSettings"/> for synchronous and asynchronous calls to
         /// <c>BigtableTableAdminClient.ModifyColumnFamilies</c> and <c>BigtableTableAdminClient.ModifyColumnFamiliesAsync</c>.
         /// </summary>
         /// <remarks>
         /// The default <c>BigtableTableAdminClient.ModifyColumnFamilies</c> and
-        /// <c>BigtableTableAdminClient.ModifyColumnFamiliesAsync</c> <see cref="RetrySettings"/> are:
+        /// <c>BigtableTableAdminClient.ModifyColumnFamiliesAsync</c> <see cref="gaxgrpc::RetrySettings"/> are:
         /// <list type="bullet">
         /// <item><description>Initial retry delay: 100 milliseconds</description></item>
         /// <item><description>Retry delay multiplier: 1.3</description></item>
@@ -324,21 +324,21 @@ namespace Google.Cloud.Bigtable.Admin.V2
         /// </list>
         /// Default RPC expiration is 600000 milliseconds.
         /// </remarks>
-        public CallSettings ModifyColumnFamiliesSettings { get; set; } = CallSettings.FromCallTiming(
-            CallTiming.FromRetry(new RetrySettings(
+        public gaxgrpc::CallSettings ModifyColumnFamiliesSettings { get; set; } = gaxgrpc::CallSettings.FromCallTiming(
+            gaxgrpc::CallTiming.FromRetry(new gaxgrpc::RetrySettings(
                 retryBackoff: GetDefaultRetryBackoff(),
                 timeoutBackoff: GetDefaultTimeoutBackoff(),
-                totalExpiration: Expiration.FromTimeout(TimeSpan.FromMilliseconds(600000)),
+                totalExpiration: gax::Expiration.FromTimeout(s::TimeSpan.FromMilliseconds(600000)),
                 retryFilter: NonIdempotentRetryFilter
             )));
 
         /// <summary>
-        /// <see cref="CallSettings"/> for synchronous and asynchronous calls to
+        /// <see cref="gaxgrpc::CallSettings"/> for synchronous and asynchronous calls to
         /// <c>BigtableTableAdminClient.DropRowRange</c> and <c>BigtableTableAdminClient.DropRowRangeAsync</c>.
         /// </summary>
         /// <remarks>
         /// The default <c>BigtableTableAdminClient.DropRowRange</c> and
-        /// <c>BigtableTableAdminClient.DropRowRangeAsync</c> <see cref="RetrySettings"/> are:
+        /// <c>BigtableTableAdminClient.DropRowRangeAsync</c> <see cref="gaxgrpc::RetrySettings"/> are:
         /// <list type="bullet">
         /// <item><description>Initial retry delay: 100 milliseconds</description></item>
         /// <item><description>Retry delay multiplier: 1.3</description></item>
@@ -353,21 +353,21 @@ namespace Google.Cloud.Bigtable.Admin.V2
         /// </list>
         /// Default RPC expiration is 600000 milliseconds.
         /// </remarks>
-        public CallSettings DropRowRangeSettings { get; set; } = CallSettings.FromCallTiming(
-            CallTiming.FromRetry(new RetrySettings(
+        public gaxgrpc::CallSettings DropRowRangeSettings { get; set; } = gaxgrpc::CallSettings.FromCallTiming(
+            gaxgrpc::CallTiming.FromRetry(new gaxgrpc::RetrySettings(
                 retryBackoff: GetDefaultRetryBackoff(),
                 timeoutBackoff: GetDefaultTimeoutBackoff(),
-                totalExpiration: Expiration.FromTimeout(TimeSpan.FromMilliseconds(600000)),
+                totalExpiration: gax::Expiration.FromTimeout(s::TimeSpan.FromMilliseconds(600000)),
                 retryFilter: NonIdempotentRetryFilter
             )));
 
         /// <summary>
-        /// <see cref="CallSettings"/> for synchronous and asynchronous calls to
+        /// <see cref="gaxgrpc::CallSettings"/> for synchronous and asynchronous calls to
         /// <c>BigtableTableAdminClient.GenerateConsistencyToken</c> and <c>BigtableTableAdminClient.GenerateConsistencyTokenAsync</c>.
         /// </summary>
         /// <remarks>
         /// The default <c>BigtableTableAdminClient.GenerateConsistencyToken</c> and
-        /// <c>BigtableTableAdminClient.GenerateConsistencyTokenAsync</c> <see cref="RetrySettings"/> are:
+        /// <c>BigtableTableAdminClient.GenerateConsistencyTokenAsync</c> <see cref="gaxgrpc::RetrySettings"/> are:
         /// <list type="bullet">
         /// <item><description>Initial retry delay: 100 milliseconds</description></item>
         /// <item><description>Retry delay multiplier: 1.3</description></item>
@@ -378,26 +378,26 @@ namespace Google.Cloud.Bigtable.Admin.V2
         /// </list>
         /// Retry will be attempted on the following response status codes:
         /// <list>
-        /// <item><description><see cref="StatusCode.DeadlineExceeded"/></description></item>
-        /// <item><description><see cref="StatusCode.Unavailable"/></description></item>
+        /// <item><description><see cref="grpccore::StatusCode.DeadlineExceeded"/></description></item>
+        /// <item><description><see cref="grpccore::StatusCode.Unavailable"/></description></item>
         /// </list>
         /// Default RPC expiration is 600000 milliseconds.
         /// </remarks>
-        public CallSettings GenerateConsistencyTokenSettings { get; set; } = CallSettings.FromCallTiming(
-            CallTiming.FromRetry(new RetrySettings(
+        public gaxgrpc::CallSettings GenerateConsistencyTokenSettings { get; set; } = gaxgrpc::CallSettings.FromCallTiming(
+            gaxgrpc::CallTiming.FromRetry(new gaxgrpc::RetrySettings(
                 retryBackoff: GetDefaultRetryBackoff(),
                 timeoutBackoff: GetDefaultTimeoutBackoff(),
-                totalExpiration: Expiration.FromTimeout(TimeSpan.FromMilliseconds(600000)),
+                totalExpiration: gax::Expiration.FromTimeout(s::TimeSpan.FromMilliseconds(600000)),
                 retryFilter: IdempotentRetryFilter
             )));
 
         /// <summary>
-        /// <see cref="CallSettings"/> for synchronous and asynchronous calls to
+        /// <see cref="gaxgrpc::CallSettings"/> for synchronous and asynchronous calls to
         /// <c>BigtableTableAdminClient.CheckConsistency</c> and <c>BigtableTableAdminClient.CheckConsistencyAsync</c>.
         /// </summary>
         /// <remarks>
         /// The default <c>BigtableTableAdminClient.CheckConsistency</c> and
-        /// <c>BigtableTableAdminClient.CheckConsistencyAsync</c> <see cref="RetrySettings"/> are:
+        /// <c>BigtableTableAdminClient.CheckConsistencyAsync</c> <see cref="gaxgrpc::RetrySettings"/> are:
         /// <list type="bullet">
         /// <item><description>Initial retry delay: 100 milliseconds</description></item>
         /// <item><description>Retry delay multiplier: 1.3</description></item>
@@ -408,26 +408,26 @@ namespace Google.Cloud.Bigtable.Admin.V2
         /// </list>
         /// Retry will be attempted on the following response status codes:
         /// <list>
-        /// <item><description><see cref="StatusCode.DeadlineExceeded"/></description></item>
-        /// <item><description><see cref="StatusCode.Unavailable"/></description></item>
+        /// <item><description><see cref="grpccore::StatusCode.DeadlineExceeded"/></description></item>
+        /// <item><description><see cref="grpccore::StatusCode.Unavailable"/></description></item>
         /// </list>
         /// Default RPC expiration is 600000 milliseconds.
         /// </remarks>
-        public CallSettings CheckConsistencySettings { get; set; } = CallSettings.FromCallTiming(
-            CallTiming.FromRetry(new RetrySettings(
+        public gaxgrpc::CallSettings CheckConsistencySettings { get; set; } = gaxgrpc::CallSettings.FromCallTiming(
+            gaxgrpc::CallTiming.FromRetry(new gaxgrpc::RetrySettings(
                 retryBackoff: GetDefaultRetryBackoff(),
                 timeoutBackoff: GetDefaultTimeoutBackoff(),
-                totalExpiration: Expiration.FromTimeout(TimeSpan.FromMilliseconds(600000)),
+                totalExpiration: gax::Expiration.FromTimeout(s::TimeSpan.FromMilliseconds(600000)),
                 retryFilter: IdempotentRetryFilter
             )));
 
         /// <summary>
-        /// <see cref="CallSettings"/> for synchronous and asynchronous calls to
+        /// <see cref="gaxgrpc::CallSettings"/> for synchronous and asynchronous calls to
         /// <c>BigtableTableAdminClient.SnapshotTable</c> and <c>BigtableTableAdminClient.SnapshotTableAsync</c>.
         /// </summary>
         /// <remarks>
         /// The default <c>BigtableTableAdminClient.SnapshotTable</c> and
-        /// <c>BigtableTableAdminClient.SnapshotTableAsync</c> <see cref="RetrySettings"/> are:
+        /// <c>BigtableTableAdminClient.SnapshotTableAsync</c> <see cref="gaxgrpc::RetrySettings"/> are:
         /// <list type="bullet">
         /// <item><description>Initial retry delay: 100 milliseconds</description></item>
         /// <item><description>Retry delay multiplier: 1.3</description></item>
@@ -442,11 +442,11 @@ namespace Google.Cloud.Bigtable.Admin.V2
         /// </list>
         /// Default RPC expiration is 600000 milliseconds.
         /// </remarks>
-        public CallSettings SnapshotTableSettings { get; set; } = CallSettings.FromCallTiming(
-            CallTiming.FromRetry(new RetrySettings(
+        public gaxgrpc::CallSettings SnapshotTableSettings { get; set; } = gaxgrpc::CallSettings.FromCallTiming(
+            gaxgrpc::CallTiming.FromRetry(new gaxgrpc::RetrySettings(
                 retryBackoff: GetDefaultRetryBackoff(),
                 timeoutBackoff: GetDefaultTimeoutBackoff(),
-                totalExpiration: Expiration.FromTimeout(TimeSpan.FromMilliseconds(600000)),
+                totalExpiration: gax::Expiration.FromTimeout(s::TimeSpan.FromMilliseconds(600000)),
                 retryFilter: NonIdempotentRetryFilter
             )));
 
@@ -454,7 +454,7 @@ namespace Google.Cloud.Bigtable.Admin.V2
         /// Long Running Operation settings for calls to <c>BigtableTableAdminClient.SnapshotTable</c>.
         /// </summary>
         /// <remarks>
-        /// Uses default <see cref="PollSettings"/> of:
+        /// Uses default <see cref="gax::PollSettings"/> of:
         /// <list type="bullet">
         /// <item><description>Initial delay: 500 milliseconds</description></item>
         /// <item><description>Delay multiplier: 1.5</description></item>
@@ -462,22 +462,22 @@ namespace Google.Cloud.Bigtable.Admin.V2
         /// <item><description>Total timeout: 300000 milliseconds</description></item>
         /// </list>
         /// </remarks>
-        public OperationsSettings SnapshotTableOperationsSettings { get; set; } = new OperationsSettings
+        public lro::OperationsSettings SnapshotTableOperationsSettings { get; set; } = new lro::OperationsSettings
         {
-            DefaultPollSettings = new PollSettings(
-                Expiration.FromTimeout(TimeSpan.FromMilliseconds(300000L)),
-                TimeSpan.FromMilliseconds(500L),
+            DefaultPollSettings = new gax::PollSettings(
+                gax::Expiration.FromTimeout(s::TimeSpan.FromMilliseconds(300000L)),
+                s::TimeSpan.FromMilliseconds(500L),
                 1.5,
-                TimeSpan.FromMilliseconds(5000L))
+                s::TimeSpan.FromMilliseconds(5000L))
         };
 
         /// <summary>
-        /// <see cref="CallSettings"/> for synchronous and asynchronous calls to
+        /// <see cref="gaxgrpc::CallSettings"/> for synchronous and asynchronous calls to
         /// <c>BigtableTableAdminClient.GetSnapshot</c> and <c>BigtableTableAdminClient.GetSnapshotAsync</c>.
         /// </summary>
         /// <remarks>
         /// The default <c>BigtableTableAdminClient.GetSnapshot</c> and
-        /// <c>BigtableTableAdminClient.GetSnapshotAsync</c> <see cref="RetrySettings"/> are:
+        /// <c>BigtableTableAdminClient.GetSnapshotAsync</c> <see cref="gaxgrpc::RetrySettings"/> are:
         /// <list type="bullet">
         /// <item><description>Initial retry delay: 100 milliseconds</description></item>
         /// <item><description>Retry delay multiplier: 1.3</description></item>
@@ -488,26 +488,26 @@ namespace Google.Cloud.Bigtable.Admin.V2
         /// </list>
         /// Retry will be attempted on the following response status codes:
         /// <list>
-        /// <item><description><see cref="StatusCode.DeadlineExceeded"/></description></item>
-        /// <item><description><see cref="StatusCode.Unavailable"/></description></item>
+        /// <item><description><see cref="grpccore::StatusCode.DeadlineExceeded"/></description></item>
+        /// <item><description><see cref="grpccore::StatusCode.Unavailable"/></description></item>
         /// </list>
         /// Default RPC expiration is 600000 milliseconds.
         /// </remarks>
-        public CallSettings GetSnapshotSettings { get; set; } = CallSettings.FromCallTiming(
-            CallTiming.FromRetry(new RetrySettings(
+        public gaxgrpc::CallSettings GetSnapshotSettings { get; set; } = gaxgrpc::CallSettings.FromCallTiming(
+            gaxgrpc::CallTiming.FromRetry(new gaxgrpc::RetrySettings(
                 retryBackoff: GetDefaultRetryBackoff(),
                 timeoutBackoff: GetDefaultTimeoutBackoff(),
-                totalExpiration: Expiration.FromTimeout(TimeSpan.FromMilliseconds(600000)),
+                totalExpiration: gax::Expiration.FromTimeout(s::TimeSpan.FromMilliseconds(600000)),
                 retryFilter: IdempotentRetryFilter
             )));
 
         /// <summary>
-        /// <see cref="CallSettings"/> for synchronous and asynchronous calls to
+        /// <see cref="gaxgrpc::CallSettings"/> for synchronous and asynchronous calls to
         /// <c>BigtableTableAdminClient.ListSnapshots</c> and <c>BigtableTableAdminClient.ListSnapshotsAsync</c>.
         /// </summary>
         /// <remarks>
         /// The default <c>BigtableTableAdminClient.ListSnapshots</c> and
-        /// <c>BigtableTableAdminClient.ListSnapshotsAsync</c> <see cref="RetrySettings"/> are:
+        /// <c>BigtableTableAdminClient.ListSnapshotsAsync</c> <see cref="gaxgrpc::RetrySettings"/> are:
         /// <list type="bullet">
         /// <item><description>Initial retry delay: 100 milliseconds</description></item>
         /// <item><description>Retry delay multiplier: 1.3</description></item>
@@ -518,26 +518,26 @@ namespace Google.Cloud.Bigtable.Admin.V2
         /// </list>
         /// Retry will be attempted on the following response status codes:
         /// <list>
-        /// <item><description><see cref="StatusCode.DeadlineExceeded"/></description></item>
-        /// <item><description><see cref="StatusCode.Unavailable"/></description></item>
+        /// <item><description><see cref="grpccore::StatusCode.DeadlineExceeded"/></description></item>
+        /// <item><description><see cref="grpccore::StatusCode.Unavailable"/></description></item>
         /// </list>
         /// Default RPC expiration is 600000 milliseconds.
         /// </remarks>
-        public CallSettings ListSnapshotsSettings { get; set; } = CallSettings.FromCallTiming(
-            CallTiming.FromRetry(new RetrySettings(
+        public gaxgrpc::CallSettings ListSnapshotsSettings { get; set; } = gaxgrpc::CallSettings.FromCallTiming(
+            gaxgrpc::CallTiming.FromRetry(new gaxgrpc::RetrySettings(
                 retryBackoff: GetDefaultRetryBackoff(),
                 timeoutBackoff: GetDefaultTimeoutBackoff(),
-                totalExpiration: Expiration.FromTimeout(TimeSpan.FromMilliseconds(600000)),
+                totalExpiration: gax::Expiration.FromTimeout(s::TimeSpan.FromMilliseconds(600000)),
                 retryFilter: IdempotentRetryFilter
             )));
 
         /// <summary>
-        /// <see cref="CallSettings"/> for synchronous and asynchronous calls to
+        /// <see cref="gaxgrpc::CallSettings"/> for synchronous and asynchronous calls to
         /// <c>BigtableTableAdminClient.DeleteSnapshot</c> and <c>BigtableTableAdminClient.DeleteSnapshotAsync</c>.
         /// </summary>
         /// <remarks>
         /// The default <c>BigtableTableAdminClient.DeleteSnapshot</c> and
-        /// <c>BigtableTableAdminClient.DeleteSnapshotAsync</c> <see cref="RetrySettings"/> are:
+        /// <c>BigtableTableAdminClient.DeleteSnapshotAsync</c> <see cref="gaxgrpc::RetrySettings"/> are:
         /// <list type="bullet">
         /// <item><description>Initial retry delay: 100 milliseconds</description></item>
         /// <item><description>Retry delay multiplier: 1.3</description></item>
@@ -552,11 +552,11 @@ namespace Google.Cloud.Bigtable.Admin.V2
         /// </list>
         /// Default RPC expiration is 600000 milliseconds.
         /// </remarks>
-        public CallSettings DeleteSnapshotSettings { get; set; } = CallSettings.FromCallTiming(
-            CallTiming.FromRetry(new RetrySettings(
+        public gaxgrpc::CallSettings DeleteSnapshotSettings { get; set; } = gaxgrpc::CallSettings.FromCallTiming(
+            gaxgrpc::CallTiming.FromRetry(new gaxgrpc::RetrySettings(
                 retryBackoff: GetDefaultRetryBackoff(),
                 timeoutBackoff: GetDefaultTimeoutBackoff(),
-                totalExpiration: Expiration.FromTimeout(TimeSpan.FromMilliseconds(600000)),
+                totalExpiration: gax::Expiration.FromTimeout(s::TimeSpan.FromMilliseconds(600000)),
                 retryFilter: NonIdempotentRetryFilter
             )));
 
@@ -575,7 +575,7 @@ namespace Google.Cloud.Bigtable.Admin.V2
         /// <summary>
         /// The default endpoint for the BigtableTableAdmin service, which is a host of "bigtableadmin.googleapis.com" and a port of 443.
         /// </summary>
-        public static ServiceEndpoint DefaultEndpoint { get; } = new ServiceEndpoint("bigtableadmin.googleapis.com", 443);
+        public static gaxgrpc::ServiceEndpoint DefaultEndpoint { get; } = new gaxgrpc::ServiceEndpoint("bigtableadmin.googleapis.com", 443);
 
         /// <summary>
         /// The default BigtableTableAdmin scopes.
@@ -594,7 +594,7 @@ namespace Google.Cloud.Bigtable.Admin.V2
         /// <item><description>"https://www.googleapis.com/auth/cloud-platform.read-only"</description></item>
         /// </list>
         /// </remarks>
-        public static IReadOnlyList<string> DefaultScopes { get; } = new ReadOnlyCollection<string>(new string[] {
+        public static scg::IReadOnlyList<string> DefaultScopes { get; } = new sco::ReadOnlyCollection<string>(new string[] {
             "https://www.googleapis.com/auth/bigtable.admin",
             "https://www.googleapis.com/auth/bigtable.admin.cluster",
             "https://www.googleapis.com/auth/bigtable.admin.instance",
@@ -606,7 +606,7 @@ namespace Google.Cloud.Bigtable.Admin.V2
             "https://www.googleapis.com/auth/cloud-platform.read-only",
         });
 
-        private static readonly ChannelPool s_channelPool = new ChannelPool(DefaultScopes);
+        private static readonly gaxgrpc::ChannelPool s_channelPool = new gaxgrpc::ChannelPool(DefaultScopes);
 
         // Note: we could have parameterless overloads of Create and CreateAsync,
         // documented to just use the default endpoint, settings and credentials.
@@ -620,12 +620,12 @@ namespace Google.Cloud.Bigtable.Admin.V2
         /// and creating a channel connecting to the given endpoint with application default credentials where
         /// necessary.
         /// </summary>
-        /// <param name="endpoint">Optional <see cref="ServiceEndpoint"/>.</param>
+        /// <param name="endpoint">Optional <see cref="gaxgrpc::ServiceEndpoint"/>.</param>
         /// <param name="settings">Optional <see cref="BigtableTableAdminSettings"/>.</param>
         /// <returns>The task representing the created <see cref="BigtableTableAdminClient"/>.</returns>
-        public static async Task<BigtableTableAdminClient> CreateAsync(ServiceEndpoint endpoint = null, BigtableTableAdminSettings settings = null)
+        public static async stt::Task<BigtableTableAdminClient> CreateAsync(gaxgrpc::ServiceEndpoint endpoint = null, BigtableTableAdminSettings settings = null)
         {
-            Channel channel = await s_channelPool.GetChannelAsync(endpoint ?? DefaultEndpoint).ConfigureAwait(false);
+            grpccore::Channel channel = await s_channelPool.GetChannelAsync(endpoint ?? DefaultEndpoint).ConfigureAwait(false);
             return Create(channel, settings);
         }
 
@@ -634,45 +634,45 @@ namespace Google.Cloud.Bigtable.Admin.V2
         /// and creating a channel connecting to the given endpoint with application default credentials where
         /// necessary.
         /// </summary>
-        /// <param name="endpoint">Optional <see cref="ServiceEndpoint"/>.</param>
+        /// <param name="endpoint">Optional <see cref="gaxgrpc::ServiceEndpoint"/>.</param>
         /// <param name="settings">Optional <see cref="BigtableTableAdminSettings"/>.</param>
         /// <returns>The created <see cref="BigtableTableAdminClient"/>.</returns>
-        public static BigtableTableAdminClient Create(ServiceEndpoint endpoint = null, BigtableTableAdminSettings settings = null)
+        public static BigtableTableAdminClient Create(gaxgrpc::ServiceEndpoint endpoint = null, BigtableTableAdminSettings settings = null)
         {
-            Channel channel = s_channelPool.GetChannel(endpoint ?? DefaultEndpoint);
+            grpccore::Channel channel = s_channelPool.GetChannel(endpoint ?? DefaultEndpoint);
             return Create(channel, settings);
         }
 
         /// <summary>
         /// Creates a <see cref="BigtableTableAdminClient"/> which uses the specified channel for remote operations.
         /// </summary>
-        /// <param name="channel">The <see cref="Channel"/> for remote operations. Must not be null.</param>
+        /// <param name="channel">The <see cref="grpccore::Channel"/> for remote operations. Must not be null.</param>
         /// <param name="settings">Optional <see cref="BigtableTableAdminSettings"/>.</param>
         /// <returns>The created <see cref="BigtableTableAdminClient"/>.</returns>
-        public static BigtableTableAdminClient Create(Channel channel, BigtableTableAdminSettings settings = null)
+        public static BigtableTableAdminClient Create(grpccore::Channel channel, BigtableTableAdminSettings settings = null)
         {
-            GaxPreconditions.CheckNotNull(channel, nameof(channel));
+            gax::GaxPreconditions.CheckNotNull(channel, nameof(channel));
             BigtableTableAdmin.BigtableTableAdminClient grpcClient = new BigtableTableAdmin.BigtableTableAdminClient(channel);
             return new BigtableTableAdminClientImpl(grpcClient, settings);
         }
 
         /// <summary>
-        /// Shuts down any channels automatically created by <see cref="Create(ServiceEndpoint, BigtableTableAdminSettings)"/>
-        /// and <see cref="CreateAsync(ServiceEndpoint, BigtableTableAdminSettings)"/>. Channels which weren't automatically
+        /// Shuts down any channels automatically created by <see cref="Create(gaxgrpc::ServiceEndpoint, BigtableTableAdminSettings)"/>
+        /// and <see cref="CreateAsync(gaxgrpc::ServiceEndpoint, BigtableTableAdminSettings)"/>. Channels which weren't automatically
         /// created are not affected.
         /// </summary>
-        /// <remarks>After calling this method, further calls to <see cref="Create(ServiceEndpoint, BigtableTableAdminSettings)"/>
-        /// and <see cref="CreateAsync(ServiceEndpoint, BigtableTableAdminSettings)"/> will create new channels, which could
+        /// <remarks>After calling this method, further calls to <see cref="Create(gaxgrpc::ServiceEndpoint, BigtableTableAdminSettings)"/>
+        /// and <see cref="CreateAsync(gaxgrpc::ServiceEndpoint, BigtableTableAdminSettings)"/> will create new channels, which could
         /// in turn be shut down by another call to this method.</remarks>
         /// <returns>A task representing the asynchronous shutdown operation.</returns>
-        public static Task ShutdownDefaultChannelsAsync() => s_channelPool.ShutdownChannelsAsync();
+        public static stt::Task ShutdownDefaultChannelsAsync() => s_channelPool.ShutdownChannelsAsync();
 
         /// <summary>
         /// The underlying gRPC BigtableTableAdmin client.
         /// </summary>
         public virtual BigtableTableAdmin.BigtableTableAdminClient GrpcClient
         {
-            get { throw new NotImplementedException(); }
+            get { throw new s::NotImplementedException(); }
         }
 
         /// <summary>
@@ -697,16 +697,16 @@ namespace Google.Cloud.Bigtable.Admin.V2
         /// <returns>
         /// A Task containing the RPC response.
         /// </returns>
-        public virtual Task<Table> CreateTableAsync(
+        public virtual stt::Task<Table> CreateTableAsync(
             InstanceName parent,
             string tableId,
             Table table,
-            CallSettings callSettings = null) => CreateTableAsync(
+            gaxgrpc::CallSettings callSettings = null) => CreateTableAsync(
                 new CreateTableRequest
                 {
-                    ParentAsInstanceName = GaxPreconditions.CheckNotNull(parent, nameof(parent)),
-                    TableId = GaxPreconditions.CheckNotNullOrEmpty(tableId, nameof(tableId)),
-                    Table = GaxPreconditions.CheckNotNull(table, nameof(table)),
+                    ParentAsInstanceName = gax::GaxPreconditions.CheckNotNull(parent, nameof(parent)),
+                    TableId = gax::GaxPreconditions.CheckNotNullOrEmpty(tableId, nameof(tableId)),
+                    Table = gax::GaxPreconditions.CheckNotNull(table, nameof(table)),
                 },
                 callSettings);
 
@@ -727,20 +727,20 @@ namespace Google.Cloud.Bigtable.Admin.V2
         /// The Table to create.
         /// </param>
         /// <param name="cancellationToken">
-        /// A <see cref="CancellationToken"/> to use for this RPC.
+        /// A <see cref="st::CancellationToken"/> to use for this RPC.
         /// </param>
         /// <returns>
         /// A Task containing the RPC response.
         /// </returns>
-        public virtual Task<Table> CreateTableAsync(
+        public virtual stt::Task<Table> CreateTableAsync(
             InstanceName parent,
             string tableId,
             Table table,
-            CancellationToken cancellationToken) => CreateTableAsync(
+            st::CancellationToken cancellationToken) => CreateTableAsync(
                 parent,
                 tableId,
                 table,
-                CallSettings.FromCancellationToken(cancellationToken));
+                gaxgrpc::CallSettings.FromCancellationToken(cancellationToken));
 
         /// <summary>
         /// Creates a new table in the specified instance.
@@ -768,12 +768,12 @@ namespace Google.Cloud.Bigtable.Admin.V2
             InstanceName parent,
             string tableId,
             Table table,
-            CallSettings callSettings = null) => CreateTable(
+            gaxgrpc::CallSettings callSettings = null) => CreateTable(
                 new CreateTableRequest
                 {
-                    ParentAsInstanceName = GaxPreconditions.CheckNotNull(parent, nameof(parent)),
-                    TableId = GaxPreconditions.CheckNotNullOrEmpty(tableId, nameof(tableId)),
-                    Table = GaxPreconditions.CheckNotNull(table, nameof(table)),
+                    ParentAsInstanceName = gax::GaxPreconditions.CheckNotNull(parent, nameof(parent)),
+                    TableId = gax::GaxPreconditions.CheckNotNullOrEmpty(tableId, nameof(tableId)),
+                    Table = gax::GaxPreconditions.CheckNotNull(table, nameof(table)),
                 },
                 callSettings);
 
@@ -791,11 +791,11 @@ namespace Google.Cloud.Bigtable.Admin.V2
         /// <returns>
         /// A Task containing the RPC response.
         /// </returns>
-        public virtual Task<Table> CreateTableAsync(
+        public virtual stt::Task<Table> CreateTableAsync(
             CreateTableRequest request,
-            CallSettings callSettings = null)
+            gaxgrpc::CallSettings callSettings = null)
         {
-            throw new NotImplementedException();
+            throw new s::NotImplementedException();
         }
 
         /// <summary>
@@ -807,16 +807,16 @@ namespace Google.Cloud.Bigtable.Admin.V2
         /// The request object containing all of the parameters for the API call.
         /// </param>
         /// <param name="cancellationToken">
-        /// A <see cref="CancellationToken"/> to use for this RPC.
+        /// A <see cref="st::CancellationToken"/> to use for this RPC.
         /// </param>
         /// <returns>
         /// A Task containing the RPC response.
         /// </returns>
-        public virtual Task<Table> CreateTableAsync(
+        public virtual stt::Task<Table> CreateTableAsync(
             CreateTableRequest request,
-            CancellationToken cancellationToken) => CreateTableAsync(
+            st::CancellationToken cancellationToken) => CreateTableAsync(
                 request,
-                CallSettings.FromCancellationToken(cancellationToken));
+                gaxgrpc::CallSettings.FromCancellationToken(cancellationToken));
 
         /// <summary>
         /// Creates a new table in the specified instance.
@@ -834,9 +834,9 @@ namespace Google.Cloud.Bigtable.Admin.V2
         /// </returns>
         public virtual Table CreateTable(
             CreateTableRequest request,
-            CallSettings callSettings = null)
+            gaxgrpc::CallSettings callSettings = null)
         {
-            throw new NotImplementedException();
+            throw new s::NotImplementedException();
         }
 
         /// <summary>
@@ -868,16 +868,16 @@ namespace Google.Cloud.Bigtable.Admin.V2
         /// <returns>
         /// A Task containing the RPC response.
         /// </returns>
-        public virtual Task<Operation<Table, CreateTableFromSnapshotMetadata>> CreateTableFromSnapshotAsync(
+        public virtual stt::Task<lro::Operation<Table, CreateTableFromSnapshotMetadata>> CreateTableFromSnapshotAsync(
             InstanceName parent,
             string tableId,
             SnapshotName sourceSnapshot,
-            CallSettings callSettings = null) => CreateTableFromSnapshotAsync(
+            gaxgrpc::CallSettings callSettings = null) => CreateTableFromSnapshotAsync(
                 new CreateTableFromSnapshotRequest
                 {
-                    ParentAsInstanceName = GaxPreconditions.CheckNotNull(parent, nameof(parent)),
-                    TableId = GaxPreconditions.CheckNotNullOrEmpty(tableId, nameof(tableId)),
-                    SourceSnapshotAsSnapshotName = GaxPreconditions.CheckNotNull(sourceSnapshot, nameof(sourceSnapshot)),
+                    ParentAsInstanceName = gax::GaxPreconditions.CheckNotNull(parent, nameof(parent)),
+                    TableId = gax::GaxPreconditions.CheckNotNullOrEmpty(tableId, nameof(tableId)),
+                    SourceSnapshotAsSnapshotName = gax::GaxPreconditions.CheckNotNull(sourceSnapshot, nameof(sourceSnapshot)),
                 },
                 callSettings);
 
@@ -905,20 +905,20 @@ namespace Google.Cloud.Bigtable.Admin.V2
         /// `projects/&lt;project&gt;/instances/&lt;instance&gt;/clusters/&lt;cluster&gt;/snapshots/&lt;snapshot&gt;`.
         /// </param>
         /// <param name="cancellationToken">
-        /// A <see cref="CancellationToken"/> to use for this RPC.
+        /// A <see cref="st::CancellationToken"/> to use for this RPC.
         /// </param>
         /// <returns>
         /// A Task containing the RPC response.
         /// </returns>
-        public virtual Task<Operation<Table, CreateTableFromSnapshotMetadata>> CreateTableFromSnapshotAsync(
+        public virtual stt::Task<lro::Operation<Table, CreateTableFromSnapshotMetadata>> CreateTableFromSnapshotAsync(
             InstanceName parent,
             string tableId,
             SnapshotName sourceSnapshot,
-            CancellationToken cancellationToken) => CreateTableFromSnapshotAsync(
+            st::CancellationToken cancellationToken) => CreateTableFromSnapshotAsync(
                 parent,
                 tableId,
                 sourceSnapshot,
-                CallSettings.FromCancellationToken(cancellationToken));
+                gaxgrpc::CallSettings.FromCancellationToken(cancellationToken));
 
         /// <summary>
         /// This is a private alpha release of Cloud Bigtable snapshots. This feature
@@ -949,16 +949,16 @@ namespace Google.Cloud.Bigtable.Admin.V2
         /// <returns>
         /// The RPC response.
         /// </returns>
-        public virtual Operation<Table, CreateTableFromSnapshotMetadata> CreateTableFromSnapshot(
+        public virtual lro::Operation<Table, CreateTableFromSnapshotMetadata> CreateTableFromSnapshot(
             InstanceName parent,
             string tableId,
             SnapshotName sourceSnapshot,
-            CallSettings callSettings = null) => CreateTableFromSnapshot(
+            gaxgrpc::CallSettings callSettings = null) => CreateTableFromSnapshot(
                 new CreateTableFromSnapshotRequest
                 {
-                    ParentAsInstanceName = GaxPreconditions.CheckNotNull(parent, nameof(parent)),
-                    TableId = GaxPreconditions.CheckNotNullOrEmpty(tableId, nameof(tableId)),
-                    SourceSnapshotAsSnapshotName = GaxPreconditions.CheckNotNull(sourceSnapshot, nameof(sourceSnapshot)),
+                    ParentAsInstanceName = gax::GaxPreconditions.CheckNotNull(parent, nameof(parent)),
+                    TableId = gax::GaxPreconditions.CheckNotNullOrEmpty(tableId, nameof(tableId)),
+                    SourceSnapshotAsSnapshotName = gax::GaxPreconditions.CheckNotNull(sourceSnapshot, nameof(sourceSnapshot)),
                 },
                 callSettings);
 
@@ -980,11 +980,11 @@ namespace Google.Cloud.Bigtable.Admin.V2
         /// <returns>
         /// A Task containing the RPC response.
         /// </returns>
-        public virtual Task<Operation<Table, CreateTableFromSnapshotMetadata>> CreateTableFromSnapshotAsync(
+        public virtual stt::Task<lro::Operation<Table, CreateTableFromSnapshotMetadata>> CreateTableFromSnapshotAsync(
             CreateTableFromSnapshotRequest request,
-            CallSettings callSettings = null)
+            gaxgrpc::CallSettings callSettings = null)
         {
-            throw new NotImplementedException();
+            throw new s::NotImplementedException();
         }
 
         /// <summary>
@@ -993,10 +993,10 @@ namespace Google.Cloud.Bigtable.Admin.V2
         /// <param name="operationName">The name of a previously invoked operation. Must not be <c>null</c> or empty.</param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
         /// <returns>A task representing the result of polling the operation.</returns>
-        public virtual Task<Operation<Table, CreateTableFromSnapshotMetadata>> PollOnceCreateTableFromSnapshotAsync(
+        public virtual stt::Task<lro::Operation<Table, CreateTableFromSnapshotMetadata>> PollOnceCreateTableFromSnapshotAsync(
             string operationName,
-            CallSettings callSettings = null) => Operation<Table, CreateTableFromSnapshotMetadata>.PollOnceFromNameAsync(
-                GaxPreconditions.CheckNotNullOrEmpty(operationName, nameof(operationName)),
+            gaxgrpc::CallSettings callSettings = null) => lro::Operation<Table, CreateTableFromSnapshotMetadata>.PollOnceFromNameAsync(
+                gax::GaxPreconditions.CheckNotNullOrEmpty(operationName, nameof(operationName)),
                 CreateTableFromSnapshotOperationsClient,
                 callSettings);
 
@@ -1018,19 +1018,19 @@ namespace Google.Cloud.Bigtable.Admin.V2
         /// <returns>
         /// The RPC response.
         /// </returns>
-        public virtual Operation<Table, CreateTableFromSnapshotMetadata> CreateTableFromSnapshot(
+        public virtual lro::Operation<Table, CreateTableFromSnapshotMetadata> CreateTableFromSnapshot(
             CreateTableFromSnapshotRequest request,
-            CallSettings callSettings = null)
+            gaxgrpc::CallSettings callSettings = null)
         {
-            throw new NotImplementedException();
+            throw new s::NotImplementedException();
         }
 
         /// <summary>
         /// The long-running operations client for <c>CreateTableFromSnapshot</c>.
         /// </summary>
-        public virtual OperationsClient CreateTableFromSnapshotOperationsClient
+        public virtual lro::OperationsClient CreateTableFromSnapshotOperationsClient
         {
-            get { throw new NotImplementedException(); }
+            get { throw new s::NotImplementedException(); }
         }
 
         /// <summary>
@@ -1039,10 +1039,10 @@ namespace Google.Cloud.Bigtable.Admin.V2
         /// <param name="operationName">The name of a previously invoked operation. Must not be <c>null</c> or empty.</param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
         /// <returns>The result of polling the operation.</returns>
-        public virtual Operation<Table, CreateTableFromSnapshotMetadata> PollOnceCreateTableFromSnapshot(
+        public virtual lro::Operation<Table, CreateTableFromSnapshotMetadata> PollOnceCreateTableFromSnapshot(
             string operationName,
-            CallSettings callSettings = null) => Operation<Table, CreateTableFromSnapshotMetadata>.PollOnceFromName(
-                GaxPreconditions.CheckNotNullOrEmpty(operationName, nameof(operationName)),
+            gaxgrpc::CallSettings callSettings = null) => lro::Operation<Table, CreateTableFromSnapshotMetadata>.PollOnceFromName(
+                gax::GaxPreconditions.CheckNotNullOrEmpty(operationName, nameof(operationName)),
                 CreateTableFromSnapshotOperationsClient,
                 callSettings);
 
@@ -1067,14 +1067,14 @@ namespace Google.Cloud.Bigtable.Admin.V2
         /// <returns>
         /// A pageable asynchronous sequence of <see cref="Table"/> resources.
         /// </returns>
-        public virtual PagedAsyncEnumerable<ListTablesResponse, Table> ListTablesAsync(
+        public virtual gax::PagedAsyncEnumerable<ListTablesResponse, Table> ListTablesAsync(
             InstanceName parent,
             string pageToken = null,
             int? pageSize = null,
-            CallSettings callSettings = null) => ListTablesAsync(
+            gaxgrpc::CallSettings callSettings = null) => ListTablesAsync(
                 new ListTablesRequest
                 {
-                    ParentAsInstanceName = GaxPreconditions.CheckNotNull(parent, nameof(parent)),
+                    ParentAsInstanceName = gax::GaxPreconditions.CheckNotNull(parent, nameof(parent)),
                     PageToken = pageToken ?? "",
                     PageSize = pageSize ?? 0,
                 },
@@ -1101,14 +1101,14 @@ namespace Google.Cloud.Bigtable.Admin.V2
         /// <returns>
         /// A pageable sequence of <see cref="Table"/> resources.
         /// </returns>
-        public virtual PagedEnumerable<ListTablesResponse, Table> ListTables(
+        public virtual gax::PagedEnumerable<ListTablesResponse, Table> ListTables(
             InstanceName parent,
             string pageToken = null,
             int? pageSize = null,
-            CallSettings callSettings = null) => ListTables(
+            gaxgrpc::CallSettings callSettings = null) => ListTables(
                 new ListTablesRequest
                 {
-                    ParentAsInstanceName = GaxPreconditions.CheckNotNull(parent, nameof(parent)),
+                    ParentAsInstanceName = gax::GaxPreconditions.CheckNotNull(parent, nameof(parent)),
                     PageToken = pageToken ?? "",
                     PageSize = pageSize ?? 0,
                 },
@@ -1126,11 +1126,11 @@ namespace Google.Cloud.Bigtable.Admin.V2
         /// <returns>
         /// A pageable asynchronous sequence of <see cref="Table"/> resources.
         /// </returns>
-        public virtual PagedAsyncEnumerable<ListTablesResponse, Table> ListTablesAsync(
+        public virtual gax::PagedAsyncEnumerable<ListTablesResponse, Table> ListTablesAsync(
             ListTablesRequest request,
-            CallSettings callSettings = null)
+            gaxgrpc::CallSettings callSettings = null)
         {
-            throw new NotImplementedException();
+            throw new s::NotImplementedException();
         }
 
         /// <summary>
@@ -1145,11 +1145,11 @@ namespace Google.Cloud.Bigtable.Admin.V2
         /// <returns>
         /// A pageable sequence of <see cref="Table"/> resources.
         /// </returns>
-        public virtual PagedEnumerable<ListTablesResponse, Table> ListTables(
+        public virtual gax::PagedEnumerable<ListTablesResponse, Table> ListTables(
             ListTablesRequest request,
-            CallSettings callSettings = null)
+            gaxgrpc::CallSettings callSettings = null)
         {
-            throw new NotImplementedException();
+            throw new s::NotImplementedException();
         }
 
         /// <summary>
@@ -1166,12 +1166,12 @@ namespace Google.Cloud.Bigtable.Admin.V2
         /// <returns>
         /// A Task containing the RPC response.
         /// </returns>
-        public virtual Task<Table> GetTableAsync(
+        public virtual stt::Task<Table> GetTableAsync(
             TableName name,
-            CallSettings callSettings = null) => GetTableAsync(
+            gaxgrpc::CallSettings callSettings = null) => GetTableAsync(
                 new GetTableRequest
                 {
-                    TableName = GaxPreconditions.CheckNotNull(name, nameof(name)),
+                    TableName = gax::GaxPreconditions.CheckNotNull(name, nameof(name)),
                 },
                 callSettings);
 
@@ -1184,16 +1184,16 @@ namespace Google.Cloud.Bigtable.Admin.V2
         /// `projects/&lt;project&gt;/instances/&lt;instance&gt;/tables/&lt;table&gt;`.
         /// </param>
         /// <param name="cancellationToken">
-        /// A <see cref="CancellationToken"/> to use for this RPC.
+        /// A <see cref="st::CancellationToken"/> to use for this RPC.
         /// </param>
         /// <returns>
         /// A Task containing the RPC response.
         /// </returns>
-        public virtual Task<Table> GetTableAsync(
+        public virtual stt::Task<Table> GetTableAsync(
             TableName name,
-            CancellationToken cancellationToken) => GetTableAsync(
+            st::CancellationToken cancellationToken) => GetTableAsync(
                 name,
-                CallSettings.FromCancellationToken(cancellationToken));
+                gaxgrpc::CallSettings.FromCancellationToken(cancellationToken));
 
         /// <summary>
         /// Gets metadata information about the specified table.
@@ -1211,10 +1211,10 @@ namespace Google.Cloud.Bigtable.Admin.V2
         /// </returns>
         public virtual Table GetTable(
             TableName name,
-            CallSettings callSettings = null) => GetTable(
+            gaxgrpc::CallSettings callSettings = null) => GetTable(
                 new GetTableRequest
                 {
-                    TableName = GaxPreconditions.CheckNotNull(name, nameof(name)),
+                    TableName = gax::GaxPreconditions.CheckNotNull(name, nameof(name)),
                 },
                 callSettings);
 
@@ -1230,11 +1230,11 @@ namespace Google.Cloud.Bigtable.Admin.V2
         /// <returns>
         /// A Task containing the RPC response.
         /// </returns>
-        public virtual Task<Table> GetTableAsync(
+        public virtual stt::Task<Table> GetTableAsync(
             GetTableRequest request,
-            CallSettings callSettings = null)
+            gaxgrpc::CallSettings callSettings = null)
         {
-            throw new NotImplementedException();
+            throw new s::NotImplementedException();
         }
 
         /// <summary>
@@ -1244,16 +1244,16 @@ namespace Google.Cloud.Bigtable.Admin.V2
         /// The request object containing all of the parameters for the API call.
         /// </param>
         /// <param name="cancellationToken">
-        /// A <see cref="CancellationToken"/> to use for this RPC.
+        /// A <see cref="st::CancellationToken"/> to use for this RPC.
         /// </param>
         /// <returns>
         /// A Task containing the RPC response.
         /// </returns>
-        public virtual Task<Table> GetTableAsync(
+        public virtual stt::Task<Table> GetTableAsync(
             GetTableRequest request,
-            CancellationToken cancellationToken) => GetTableAsync(
+            st::CancellationToken cancellationToken) => GetTableAsync(
                 request,
-                CallSettings.FromCancellationToken(cancellationToken));
+                gaxgrpc::CallSettings.FromCancellationToken(cancellationToken));
 
         /// <summary>
         /// Gets metadata information about the specified table.
@@ -1269,9 +1269,9 @@ namespace Google.Cloud.Bigtable.Admin.V2
         /// </returns>
         public virtual Table GetTable(
             GetTableRequest request,
-            CallSettings callSettings = null)
+            gaxgrpc::CallSettings callSettings = null)
         {
-            throw new NotImplementedException();
+            throw new s::NotImplementedException();
         }
 
         /// <summary>
@@ -1288,12 +1288,12 @@ namespace Google.Cloud.Bigtable.Admin.V2
         /// <returns>
         /// A Task that completes when the RPC has completed.
         /// </returns>
-        public virtual Task DeleteTableAsync(
+        public virtual stt::Task DeleteTableAsync(
             TableName name,
-            CallSettings callSettings = null) => DeleteTableAsync(
+            gaxgrpc::CallSettings callSettings = null) => DeleteTableAsync(
                 new DeleteTableRequest
                 {
-                    TableName = GaxPreconditions.CheckNotNull(name, nameof(name)),
+                    TableName = gax::GaxPreconditions.CheckNotNull(name, nameof(name)),
                 },
                 callSettings);
 
@@ -1306,16 +1306,16 @@ namespace Google.Cloud.Bigtable.Admin.V2
         /// `projects/&lt;project&gt;/instances/&lt;instance&gt;/tables/&lt;table&gt;`.
         /// </param>
         /// <param name="cancellationToken">
-        /// A <see cref="CancellationToken"/> to use for this RPC.
+        /// A <see cref="st::CancellationToken"/> to use for this RPC.
         /// </param>
         /// <returns>
         /// A Task that completes when the RPC has completed.
         /// </returns>
-        public virtual Task DeleteTableAsync(
+        public virtual stt::Task DeleteTableAsync(
             TableName name,
-            CancellationToken cancellationToken) => DeleteTableAsync(
+            st::CancellationToken cancellationToken) => DeleteTableAsync(
                 name,
-                CallSettings.FromCancellationToken(cancellationToken));
+                gaxgrpc::CallSettings.FromCancellationToken(cancellationToken));
 
         /// <summary>
         /// Permanently deletes a specified table and all of its data.
@@ -1330,10 +1330,10 @@ namespace Google.Cloud.Bigtable.Admin.V2
         /// </param>
         public virtual void DeleteTable(
             TableName name,
-            CallSettings callSettings = null) => DeleteTable(
+            gaxgrpc::CallSettings callSettings = null) => DeleteTable(
                 new DeleteTableRequest
                 {
-                    TableName = GaxPreconditions.CheckNotNull(name, nameof(name)),
+                    TableName = gax::GaxPreconditions.CheckNotNull(name, nameof(name)),
                 },
                 callSettings);
 
@@ -1349,11 +1349,11 @@ namespace Google.Cloud.Bigtable.Admin.V2
         /// <returns>
         /// A Task that completes when the RPC has completed.
         /// </returns>
-        public virtual Task DeleteTableAsync(
+        public virtual stt::Task DeleteTableAsync(
             DeleteTableRequest request,
-            CallSettings callSettings = null)
+            gaxgrpc::CallSettings callSettings = null)
         {
-            throw new NotImplementedException();
+            throw new s::NotImplementedException();
         }
 
         /// <summary>
@@ -1363,16 +1363,16 @@ namespace Google.Cloud.Bigtable.Admin.V2
         /// The request object containing all of the parameters for the API call.
         /// </param>
         /// <param name="cancellationToken">
-        /// A <see cref="CancellationToken"/> to use for this RPC.
+        /// A <see cref="st::CancellationToken"/> to use for this RPC.
         /// </param>
         /// <returns>
         /// A Task that completes when the RPC has completed.
         /// </returns>
-        public virtual Task DeleteTableAsync(
+        public virtual stt::Task DeleteTableAsync(
             DeleteTableRequest request,
-            CancellationToken cancellationToken) => DeleteTableAsync(
+            st::CancellationToken cancellationToken) => DeleteTableAsync(
                 request,
-                CallSettings.FromCancellationToken(cancellationToken));
+                gaxgrpc::CallSettings.FromCancellationToken(cancellationToken));
 
         /// <summary>
         /// Permanently deletes a specified table and all of its data.
@@ -1385,9 +1385,9 @@ namespace Google.Cloud.Bigtable.Admin.V2
         /// </param>
         public virtual void DeleteTable(
             DeleteTableRequest request,
-            CallSettings callSettings = null)
+            gaxgrpc::CallSettings callSettings = null)
         {
-            throw new NotImplementedException();
+            throw new s::NotImplementedException();
         }
 
         /// <summary>
@@ -1413,14 +1413,14 @@ namespace Google.Cloud.Bigtable.Admin.V2
         /// <returns>
         /// A Task containing the RPC response.
         /// </returns>
-        public virtual Task<Table> ModifyColumnFamiliesAsync(
+        public virtual stt::Task<Table> ModifyColumnFamiliesAsync(
             TableName name,
-            IEnumerable<ModifyColumnFamiliesRequest.Types.Modification> modifications,
-            CallSettings callSettings = null) => ModifyColumnFamiliesAsync(
+            scg::IEnumerable<ModifyColumnFamiliesRequest.Types.Modification> modifications,
+            gaxgrpc::CallSettings callSettings = null) => ModifyColumnFamiliesAsync(
                 new ModifyColumnFamiliesRequest
                 {
-                    TableName = GaxPreconditions.CheckNotNull(name, nameof(name)),
-                    Modifications = { GaxPreconditions.CheckNotNull(modifications, nameof(modifications)) },
+                    TableName = gax::GaxPreconditions.CheckNotNull(name, nameof(name)),
+                    Modifications = { gax::GaxPreconditions.CheckNotNull(modifications, nameof(modifications)) },
                 },
                 callSettings);
 
@@ -1442,18 +1442,18 @@ namespace Google.Cloud.Bigtable.Admin.V2
         /// for example).
         /// </param>
         /// <param name="cancellationToken">
-        /// A <see cref="CancellationToken"/> to use for this RPC.
+        /// A <see cref="st::CancellationToken"/> to use for this RPC.
         /// </param>
         /// <returns>
         /// A Task containing the RPC response.
         /// </returns>
-        public virtual Task<Table> ModifyColumnFamiliesAsync(
+        public virtual stt::Task<Table> ModifyColumnFamiliesAsync(
             TableName name,
-            IEnumerable<ModifyColumnFamiliesRequest.Types.Modification> modifications,
-            CancellationToken cancellationToken) => ModifyColumnFamiliesAsync(
+            scg::IEnumerable<ModifyColumnFamiliesRequest.Types.Modification> modifications,
+            st::CancellationToken cancellationToken) => ModifyColumnFamiliesAsync(
                 name,
                 modifications,
-                CallSettings.FromCancellationToken(cancellationToken));
+                gaxgrpc::CallSettings.FromCancellationToken(cancellationToken));
 
         /// <summary>
         /// Performs a series of column family modifications on the specified table.
@@ -1480,12 +1480,12 @@ namespace Google.Cloud.Bigtable.Admin.V2
         /// </returns>
         public virtual Table ModifyColumnFamilies(
             TableName name,
-            IEnumerable<ModifyColumnFamiliesRequest.Types.Modification> modifications,
-            CallSettings callSettings = null) => ModifyColumnFamilies(
+            scg::IEnumerable<ModifyColumnFamiliesRequest.Types.Modification> modifications,
+            gaxgrpc::CallSettings callSettings = null) => ModifyColumnFamilies(
                 new ModifyColumnFamiliesRequest
                 {
-                    TableName = GaxPreconditions.CheckNotNull(name, nameof(name)),
-                    Modifications = { GaxPreconditions.CheckNotNull(modifications, nameof(modifications)) },
+                    TableName = gax::GaxPreconditions.CheckNotNull(name, nameof(name)),
+                    Modifications = { gax::GaxPreconditions.CheckNotNull(modifications, nameof(modifications)) },
                 },
                 callSettings);
 
@@ -1504,11 +1504,11 @@ namespace Google.Cloud.Bigtable.Admin.V2
         /// <returns>
         /// A Task containing the RPC response.
         /// </returns>
-        public virtual Task<Table> ModifyColumnFamiliesAsync(
+        public virtual stt::Task<Table> ModifyColumnFamiliesAsync(
             ModifyColumnFamiliesRequest request,
-            CallSettings callSettings = null)
+            gaxgrpc::CallSettings callSettings = null)
         {
-            throw new NotImplementedException();
+            throw new s::NotImplementedException();
         }
 
         /// <summary>
@@ -1521,16 +1521,16 @@ namespace Google.Cloud.Bigtable.Admin.V2
         /// The request object containing all of the parameters for the API call.
         /// </param>
         /// <param name="cancellationToken">
-        /// A <see cref="CancellationToken"/> to use for this RPC.
+        /// A <see cref="st::CancellationToken"/> to use for this RPC.
         /// </param>
         /// <returns>
         /// A Task containing the RPC response.
         /// </returns>
-        public virtual Task<Table> ModifyColumnFamiliesAsync(
+        public virtual stt::Task<Table> ModifyColumnFamiliesAsync(
             ModifyColumnFamiliesRequest request,
-            CancellationToken cancellationToken) => ModifyColumnFamiliesAsync(
+            st::CancellationToken cancellationToken) => ModifyColumnFamiliesAsync(
                 request,
-                CallSettings.FromCancellationToken(cancellationToken));
+                gaxgrpc::CallSettings.FromCancellationToken(cancellationToken));
 
         /// <summary>
         /// Performs a series of column family modifications on the specified table.
@@ -1549,9 +1549,9 @@ namespace Google.Cloud.Bigtable.Admin.V2
         /// </returns>
         public virtual Table ModifyColumnFamilies(
             ModifyColumnFamiliesRequest request,
-            CallSettings callSettings = null)
+            gaxgrpc::CallSettings callSettings = null)
         {
-            throw new NotImplementedException();
+            throw new s::NotImplementedException();
         }
 
         /// <summary>
@@ -1568,11 +1568,11 @@ namespace Google.Cloud.Bigtable.Admin.V2
         /// <returns>
         /// A Task that completes when the RPC has completed.
         /// </returns>
-        public virtual Task DropRowRangeAsync(
+        public virtual stt::Task DropRowRangeAsync(
             DropRowRangeRequest request,
-            CallSettings callSettings = null)
+            gaxgrpc::CallSettings callSettings = null)
         {
-            throw new NotImplementedException();
+            throw new s::NotImplementedException();
         }
 
         /// <summary>
@@ -1584,16 +1584,16 @@ namespace Google.Cloud.Bigtable.Admin.V2
         /// The request object containing all of the parameters for the API call.
         /// </param>
         /// <param name="cancellationToken">
-        /// A <see cref="CancellationToken"/> to use for this RPC.
+        /// A <see cref="st::CancellationToken"/> to use for this RPC.
         /// </param>
         /// <returns>
         /// A Task that completes when the RPC has completed.
         /// </returns>
-        public virtual Task DropRowRangeAsync(
+        public virtual stt::Task DropRowRangeAsync(
             DropRowRangeRequest request,
-            CancellationToken cancellationToken) => DropRowRangeAsync(
+            st::CancellationToken cancellationToken) => DropRowRangeAsync(
                 request,
-                CallSettings.FromCancellationToken(cancellationToken));
+                gaxgrpc::CallSettings.FromCancellationToken(cancellationToken));
 
         /// <summary>
         /// Permanently drop/delete a row range from a specified table. The request can
@@ -1608,9 +1608,9 @@ namespace Google.Cloud.Bigtable.Admin.V2
         /// </param>
         public virtual void DropRowRange(
             DropRowRangeRequest request,
-            CallSettings callSettings = null)
+            gaxgrpc::CallSettings callSettings = null)
         {
-            throw new NotImplementedException();
+            throw new s::NotImplementedException();
         }
 
         /// <summary>
@@ -1635,12 +1635,12 @@ namespace Google.Cloud.Bigtable.Admin.V2
         /// <returns>
         /// A Task containing the RPC response.
         /// </returns>
-        public virtual Task<GenerateConsistencyTokenResponse> GenerateConsistencyTokenAsync(
+        public virtual stt::Task<GenerateConsistencyTokenResponse> GenerateConsistencyTokenAsync(
             TableName name,
-            CallSettings callSettings = null) => GenerateConsistencyTokenAsync(
+            gaxgrpc::CallSettings callSettings = null) => GenerateConsistencyTokenAsync(
                 new GenerateConsistencyTokenRequest
                 {
-                    TableName = GaxPreconditions.CheckNotNull(name, nameof(name)),
+                    TableName = gax::GaxPreconditions.CheckNotNull(name, nameof(name)),
                 },
                 callSettings);
 
@@ -1661,16 +1661,16 @@ namespace Google.Cloud.Bigtable.Admin.V2
         /// `projects/&lt;project&gt;/instances/&lt;instance&gt;/tables/&lt;table&gt;`.
         /// </param>
         /// <param name="cancellationToken">
-        /// A <see cref="CancellationToken"/> to use for this RPC.
+        /// A <see cref="st::CancellationToken"/> to use for this RPC.
         /// </param>
         /// <returns>
         /// A Task containing the RPC response.
         /// </returns>
-        public virtual Task<GenerateConsistencyTokenResponse> GenerateConsistencyTokenAsync(
+        public virtual stt::Task<GenerateConsistencyTokenResponse> GenerateConsistencyTokenAsync(
             TableName name,
-            CancellationToken cancellationToken) => GenerateConsistencyTokenAsync(
+            st::CancellationToken cancellationToken) => GenerateConsistencyTokenAsync(
                 name,
-                CallSettings.FromCancellationToken(cancellationToken));
+                gaxgrpc::CallSettings.FromCancellationToken(cancellationToken));
 
         /// <summary>
         /// This is a private alpha release of Cloud Bigtable replication. This feature
@@ -1696,10 +1696,10 @@ namespace Google.Cloud.Bigtable.Admin.V2
         /// </returns>
         public virtual GenerateConsistencyTokenResponse GenerateConsistencyToken(
             TableName name,
-            CallSettings callSettings = null) => GenerateConsistencyToken(
+            gaxgrpc::CallSettings callSettings = null) => GenerateConsistencyToken(
                 new GenerateConsistencyTokenRequest
                 {
-                    TableName = GaxPreconditions.CheckNotNull(name, nameof(name)),
+                    TableName = gax::GaxPreconditions.CheckNotNull(name, nameof(name)),
                 },
                 callSettings);
 
@@ -1723,11 +1723,11 @@ namespace Google.Cloud.Bigtable.Admin.V2
         /// <returns>
         /// A Task containing the RPC response.
         /// </returns>
-        public virtual Task<GenerateConsistencyTokenResponse> GenerateConsistencyTokenAsync(
+        public virtual stt::Task<GenerateConsistencyTokenResponse> GenerateConsistencyTokenAsync(
             GenerateConsistencyTokenRequest request,
-            CallSettings callSettings = null)
+            gaxgrpc::CallSettings callSettings = null)
         {
-            throw new NotImplementedException();
+            throw new s::NotImplementedException();
         }
 
         /// <summary>
@@ -1745,16 +1745,16 @@ namespace Google.Cloud.Bigtable.Admin.V2
         /// The request object containing all of the parameters for the API call.
         /// </param>
         /// <param name="cancellationToken">
-        /// A <see cref="CancellationToken"/> to use for this RPC.
+        /// A <see cref="st::CancellationToken"/> to use for this RPC.
         /// </param>
         /// <returns>
         /// A Task containing the RPC response.
         /// </returns>
-        public virtual Task<GenerateConsistencyTokenResponse> GenerateConsistencyTokenAsync(
+        public virtual stt::Task<GenerateConsistencyTokenResponse> GenerateConsistencyTokenAsync(
             GenerateConsistencyTokenRequest request,
-            CancellationToken cancellationToken) => GenerateConsistencyTokenAsync(
+            st::CancellationToken cancellationToken) => GenerateConsistencyTokenAsync(
                 request,
-                CallSettings.FromCancellationToken(cancellationToken));
+                gaxgrpc::CallSettings.FromCancellationToken(cancellationToken));
 
         /// <summary>
         /// This is a private alpha release of Cloud Bigtable replication. This feature
@@ -1778,9 +1778,9 @@ namespace Google.Cloud.Bigtable.Admin.V2
         /// </returns>
         public virtual GenerateConsistencyTokenResponse GenerateConsistencyToken(
             GenerateConsistencyTokenRequest request,
-            CallSettings callSettings = null)
+            gaxgrpc::CallSettings callSettings = null)
         {
-            throw new NotImplementedException();
+            throw new s::NotImplementedException();
         }
 
         /// <summary>
@@ -1807,14 +1807,14 @@ namespace Google.Cloud.Bigtable.Admin.V2
         /// <returns>
         /// A Task containing the RPC response.
         /// </returns>
-        public virtual Task<CheckConsistencyResponse> CheckConsistencyAsync(
+        public virtual stt::Task<CheckConsistencyResponse> CheckConsistencyAsync(
             TableName name,
             string consistencyToken,
-            CallSettings callSettings = null) => CheckConsistencyAsync(
+            gaxgrpc::CallSettings callSettings = null) => CheckConsistencyAsync(
                 new CheckConsistencyRequest
                 {
-                    TableName = GaxPreconditions.CheckNotNull(name, nameof(name)),
-                    ConsistencyToken = GaxPreconditions.CheckNotNullOrEmpty(consistencyToken, nameof(consistencyToken)),
+                    TableName = gax::GaxPreconditions.CheckNotNull(name, nameof(name)),
+                    ConsistencyToken = gax::GaxPreconditions.CheckNotNullOrEmpty(consistencyToken, nameof(consistencyToken)),
                 },
                 callSettings);
 
@@ -1837,18 +1837,18 @@ namespace Google.Cloud.Bigtable.Admin.V2
         /// The token created using GenerateConsistencyToken for the Table.
         /// </param>
         /// <param name="cancellationToken">
-        /// A <see cref="CancellationToken"/> to use for this RPC.
+        /// A <see cref="st::CancellationToken"/> to use for this RPC.
         /// </param>
         /// <returns>
         /// A Task containing the RPC response.
         /// </returns>
-        public virtual Task<CheckConsistencyResponse> CheckConsistencyAsync(
+        public virtual stt::Task<CheckConsistencyResponse> CheckConsistencyAsync(
             TableName name,
             string consistencyToken,
-            CancellationToken cancellationToken) => CheckConsistencyAsync(
+            st::CancellationToken cancellationToken) => CheckConsistencyAsync(
                 name,
                 consistencyToken,
-                CallSettings.FromCancellationToken(cancellationToken));
+                gaxgrpc::CallSettings.FromCancellationToken(cancellationToken));
 
         /// <summary>
         /// This is a private alpha release of Cloud Bigtable replication. This feature
@@ -1877,11 +1877,11 @@ namespace Google.Cloud.Bigtable.Admin.V2
         public virtual CheckConsistencyResponse CheckConsistency(
             TableName name,
             string consistencyToken,
-            CallSettings callSettings = null) => CheckConsistency(
+            gaxgrpc::CallSettings callSettings = null) => CheckConsistency(
                 new CheckConsistencyRequest
                 {
-                    TableName = GaxPreconditions.CheckNotNull(name, nameof(name)),
-                    ConsistencyToken = GaxPreconditions.CheckNotNullOrEmpty(consistencyToken, nameof(consistencyToken)),
+                    TableName = gax::GaxPreconditions.CheckNotNull(name, nameof(name)),
+                    ConsistencyToken = gax::GaxPreconditions.CheckNotNullOrEmpty(consistencyToken, nameof(consistencyToken)),
                 },
                 callSettings);
 
@@ -1904,11 +1904,11 @@ namespace Google.Cloud.Bigtable.Admin.V2
         /// <returns>
         /// A Task containing the RPC response.
         /// </returns>
-        public virtual Task<CheckConsistencyResponse> CheckConsistencyAsync(
+        public virtual stt::Task<CheckConsistencyResponse> CheckConsistencyAsync(
             CheckConsistencyRequest request,
-            CallSettings callSettings = null)
+            gaxgrpc::CallSettings callSettings = null)
         {
-            throw new NotImplementedException();
+            throw new s::NotImplementedException();
         }
 
         /// <summary>
@@ -1925,16 +1925,16 @@ namespace Google.Cloud.Bigtable.Admin.V2
         /// The request object containing all of the parameters for the API call.
         /// </param>
         /// <param name="cancellationToken">
-        /// A <see cref="CancellationToken"/> to use for this RPC.
+        /// A <see cref="st::CancellationToken"/> to use for this RPC.
         /// </param>
         /// <returns>
         /// A Task containing the RPC response.
         /// </returns>
-        public virtual Task<CheckConsistencyResponse> CheckConsistencyAsync(
+        public virtual stt::Task<CheckConsistencyResponse> CheckConsistencyAsync(
             CheckConsistencyRequest request,
-            CancellationToken cancellationToken) => CheckConsistencyAsync(
+            st::CancellationToken cancellationToken) => CheckConsistencyAsync(
                 request,
-                CallSettings.FromCancellationToken(cancellationToken));
+                gaxgrpc::CallSettings.FromCancellationToken(cancellationToken));
 
         /// <summary>
         /// This is a private alpha release of Cloud Bigtable replication. This feature
@@ -1957,9 +1957,9 @@ namespace Google.Cloud.Bigtable.Admin.V2
         /// </returns>
         public virtual CheckConsistencyResponse CheckConsistency(
             CheckConsistencyRequest request,
-            CallSettings callSettings = null)
+            gaxgrpc::CallSettings callSettings = null)
         {
-            throw new NotImplementedException();
+            throw new s::NotImplementedException();
         }
 
         /// <summary>
@@ -1996,18 +1996,18 @@ namespace Google.Cloud.Bigtable.Admin.V2
         /// <returns>
         /// A Task containing the RPC response.
         /// </returns>
-        public virtual Task<Operation<Snapshot, SnapshotTableMetadata>> SnapshotTableAsync(
+        public virtual stt::Task<lro::Operation<Snapshot, SnapshotTableMetadata>> SnapshotTableAsync(
             TableName name,
             ClusterName cluster,
             SnapshotName snapshotId,
             string description,
-            CallSettings callSettings = null) => SnapshotTableAsync(
+            gaxgrpc::CallSettings callSettings = null) => SnapshotTableAsync(
                 new SnapshotTableRequest
                 {
-                    TableName = GaxPreconditions.CheckNotNull(name, nameof(name)),
-                    ClusterAsClusterName = GaxPreconditions.CheckNotNull(cluster, nameof(cluster)),
-                    SnapshotIdAsSnapshotName = GaxPreconditions.CheckNotNull(snapshotId, nameof(snapshotId)),
-                    Description = GaxPreconditions.CheckNotNullOrEmpty(description, nameof(description)),
+                    TableName = gax::GaxPreconditions.CheckNotNull(name, nameof(name)),
+                    ClusterAsClusterName = gax::GaxPreconditions.CheckNotNull(cluster, nameof(cluster)),
+                    SnapshotIdAsSnapshotName = gax::GaxPreconditions.CheckNotNull(snapshotId, nameof(snapshotId)),
+                    Description = gax::GaxPreconditions.CheckNotNullOrEmpty(description, nameof(description)),
                 },
                 callSettings);
 
@@ -2040,22 +2040,22 @@ namespace Google.Cloud.Bigtable.Admin.V2
         /// Description of the snapshot.
         /// </param>
         /// <param name="cancellationToken">
-        /// A <see cref="CancellationToken"/> to use for this RPC.
+        /// A <see cref="st::CancellationToken"/> to use for this RPC.
         /// </param>
         /// <returns>
         /// A Task containing the RPC response.
         /// </returns>
-        public virtual Task<Operation<Snapshot, SnapshotTableMetadata>> SnapshotTableAsync(
+        public virtual stt::Task<lro::Operation<Snapshot, SnapshotTableMetadata>> SnapshotTableAsync(
             TableName name,
             ClusterName cluster,
             SnapshotName snapshotId,
             string description,
-            CancellationToken cancellationToken) => SnapshotTableAsync(
+            st::CancellationToken cancellationToken) => SnapshotTableAsync(
                 name,
                 cluster,
                 snapshotId,
                 description,
-                CallSettings.FromCancellationToken(cancellationToken));
+                gaxgrpc::CallSettings.FromCancellationToken(cancellationToken));
 
         /// <summary>
         /// This is a private alpha release of Cloud Bigtable snapshots. This feature
@@ -2091,18 +2091,18 @@ namespace Google.Cloud.Bigtable.Admin.V2
         /// <returns>
         /// The RPC response.
         /// </returns>
-        public virtual Operation<Snapshot, SnapshotTableMetadata> SnapshotTable(
+        public virtual lro::Operation<Snapshot, SnapshotTableMetadata> SnapshotTable(
             TableName name,
             ClusterName cluster,
             SnapshotName snapshotId,
             string description,
-            CallSettings callSettings = null) => SnapshotTable(
+            gaxgrpc::CallSettings callSettings = null) => SnapshotTable(
                 new SnapshotTableRequest
                 {
-                    TableName = GaxPreconditions.CheckNotNull(name, nameof(name)),
-                    ClusterAsClusterName = GaxPreconditions.CheckNotNull(cluster, nameof(cluster)),
-                    SnapshotIdAsSnapshotName = GaxPreconditions.CheckNotNull(snapshotId, nameof(snapshotId)),
-                    Description = GaxPreconditions.CheckNotNullOrEmpty(description, nameof(description)),
+                    TableName = gax::GaxPreconditions.CheckNotNull(name, nameof(name)),
+                    ClusterAsClusterName = gax::GaxPreconditions.CheckNotNull(cluster, nameof(cluster)),
+                    SnapshotIdAsSnapshotName = gax::GaxPreconditions.CheckNotNull(snapshotId, nameof(snapshotId)),
+                    Description = gax::GaxPreconditions.CheckNotNullOrEmpty(description, nameof(description)),
                 },
                 callSettings);
 
@@ -2124,11 +2124,11 @@ namespace Google.Cloud.Bigtable.Admin.V2
         /// <returns>
         /// A Task containing the RPC response.
         /// </returns>
-        public virtual Task<Operation<Snapshot, SnapshotTableMetadata>> SnapshotTableAsync(
+        public virtual stt::Task<lro::Operation<Snapshot, SnapshotTableMetadata>> SnapshotTableAsync(
             SnapshotTableRequest request,
-            CallSettings callSettings = null)
+            gaxgrpc::CallSettings callSettings = null)
         {
-            throw new NotImplementedException();
+            throw new s::NotImplementedException();
         }
 
         /// <summary>
@@ -2137,10 +2137,10 @@ namespace Google.Cloud.Bigtable.Admin.V2
         /// <param name="operationName">The name of a previously invoked operation. Must not be <c>null</c> or empty.</param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
         /// <returns>A task representing the result of polling the operation.</returns>
-        public virtual Task<Operation<Snapshot, SnapshotTableMetadata>> PollOnceSnapshotTableAsync(
+        public virtual stt::Task<lro::Operation<Snapshot, SnapshotTableMetadata>> PollOnceSnapshotTableAsync(
             string operationName,
-            CallSettings callSettings = null) => Operation<Snapshot, SnapshotTableMetadata>.PollOnceFromNameAsync(
-                GaxPreconditions.CheckNotNullOrEmpty(operationName, nameof(operationName)),
+            gaxgrpc::CallSettings callSettings = null) => lro::Operation<Snapshot, SnapshotTableMetadata>.PollOnceFromNameAsync(
+                gax::GaxPreconditions.CheckNotNullOrEmpty(operationName, nameof(operationName)),
                 SnapshotTableOperationsClient,
                 callSettings);
 
@@ -2162,19 +2162,19 @@ namespace Google.Cloud.Bigtable.Admin.V2
         /// <returns>
         /// The RPC response.
         /// </returns>
-        public virtual Operation<Snapshot, SnapshotTableMetadata> SnapshotTable(
+        public virtual lro::Operation<Snapshot, SnapshotTableMetadata> SnapshotTable(
             SnapshotTableRequest request,
-            CallSettings callSettings = null)
+            gaxgrpc::CallSettings callSettings = null)
         {
-            throw new NotImplementedException();
+            throw new s::NotImplementedException();
         }
 
         /// <summary>
         /// The long-running operations client for <c>SnapshotTable</c>.
         /// </summary>
-        public virtual OperationsClient SnapshotTableOperationsClient
+        public virtual lro::OperationsClient SnapshotTableOperationsClient
         {
-            get { throw new NotImplementedException(); }
+            get { throw new s::NotImplementedException(); }
         }
 
         /// <summary>
@@ -2183,10 +2183,10 @@ namespace Google.Cloud.Bigtable.Admin.V2
         /// <param name="operationName">The name of a previously invoked operation. Must not be <c>null</c> or empty.</param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
         /// <returns>The result of polling the operation.</returns>
-        public virtual Operation<Snapshot, SnapshotTableMetadata> PollOnceSnapshotTable(
+        public virtual lro::Operation<Snapshot, SnapshotTableMetadata> PollOnceSnapshotTable(
             string operationName,
-            CallSettings callSettings = null) => Operation<Snapshot, SnapshotTableMetadata>.PollOnceFromName(
-                GaxPreconditions.CheckNotNullOrEmpty(operationName, nameof(operationName)),
+            gaxgrpc::CallSettings callSettings = null) => lro::Operation<Snapshot, SnapshotTableMetadata>.PollOnceFromName(
+                gax::GaxPreconditions.CheckNotNullOrEmpty(operationName, nameof(operationName)),
                 SnapshotTableOperationsClient,
                 callSettings);
 
@@ -2209,12 +2209,12 @@ namespace Google.Cloud.Bigtable.Admin.V2
         /// <returns>
         /// A Task containing the RPC response.
         /// </returns>
-        public virtual Task<Snapshot> GetSnapshotAsync(
+        public virtual stt::Task<Snapshot> GetSnapshotAsync(
             SnapshotName name,
-            CallSettings callSettings = null) => GetSnapshotAsync(
+            gaxgrpc::CallSettings callSettings = null) => GetSnapshotAsync(
                 new GetSnapshotRequest
                 {
-                    SnapshotName = GaxPreconditions.CheckNotNull(name, nameof(name)),
+                    SnapshotName = gax::GaxPreconditions.CheckNotNull(name, nameof(name)),
                 },
                 callSettings);
 
@@ -2232,16 +2232,16 @@ namespace Google.Cloud.Bigtable.Admin.V2
         /// `projects/&lt;project&gt;/instances/&lt;instance&gt;/clusters/&lt;cluster&gt;/snapshots/&lt;snapshot&gt;`.
         /// </param>
         /// <param name="cancellationToken">
-        /// A <see cref="CancellationToken"/> to use for this RPC.
+        /// A <see cref="st::CancellationToken"/> to use for this RPC.
         /// </param>
         /// <returns>
         /// A Task containing the RPC response.
         /// </returns>
-        public virtual Task<Snapshot> GetSnapshotAsync(
+        public virtual stt::Task<Snapshot> GetSnapshotAsync(
             SnapshotName name,
-            CancellationToken cancellationToken) => GetSnapshotAsync(
+            st::CancellationToken cancellationToken) => GetSnapshotAsync(
                 name,
-                CallSettings.FromCancellationToken(cancellationToken));
+                gaxgrpc::CallSettings.FromCancellationToken(cancellationToken));
 
         /// <summary>
         /// This is a private alpha release of Cloud Bigtable snapshots. This feature
@@ -2264,10 +2264,10 @@ namespace Google.Cloud.Bigtable.Admin.V2
         /// </returns>
         public virtual Snapshot GetSnapshot(
             SnapshotName name,
-            CallSettings callSettings = null) => GetSnapshot(
+            gaxgrpc::CallSettings callSettings = null) => GetSnapshot(
                 new GetSnapshotRequest
                 {
-                    SnapshotName = GaxPreconditions.CheckNotNull(name, nameof(name)),
+                    SnapshotName = gax::GaxPreconditions.CheckNotNull(name, nameof(name)),
                 },
                 callSettings);
 
@@ -2288,11 +2288,11 @@ namespace Google.Cloud.Bigtable.Admin.V2
         /// <returns>
         /// A Task containing the RPC response.
         /// </returns>
-        public virtual Task<Snapshot> GetSnapshotAsync(
+        public virtual stt::Task<Snapshot> GetSnapshotAsync(
             GetSnapshotRequest request,
-            CallSettings callSettings = null)
+            gaxgrpc::CallSettings callSettings = null)
         {
-            throw new NotImplementedException();
+            throw new s::NotImplementedException();
         }
 
         /// <summary>
@@ -2307,16 +2307,16 @@ namespace Google.Cloud.Bigtable.Admin.V2
         /// The request object containing all of the parameters for the API call.
         /// </param>
         /// <param name="cancellationToken">
-        /// A <see cref="CancellationToken"/> to use for this RPC.
+        /// A <see cref="st::CancellationToken"/> to use for this RPC.
         /// </param>
         /// <returns>
         /// A Task containing the RPC response.
         /// </returns>
-        public virtual Task<Snapshot> GetSnapshotAsync(
+        public virtual stt::Task<Snapshot> GetSnapshotAsync(
             GetSnapshotRequest request,
-            CancellationToken cancellationToken) => GetSnapshotAsync(
+            st::CancellationToken cancellationToken) => GetSnapshotAsync(
                 request,
-                CallSettings.FromCancellationToken(cancellationToken));
+                gaxgrpc::CallSettings.FromCancellationToken(cancellationToken));
 
         /// <summary>
         /// This is a private alpha release of Cloud Bigtable snapshots. This feature
@@ -2337,9 +2337,9 @@ namespace Google.Cloud.Bigtable.Admin.V2
         /// </returns>
         public virtual Snapshot GetSnapshot(
             GetSnapshotRequest request,
-            CallSettings callSettings = null)
+            gaxgrpc::CallSettings callSettings = null)
         {
-            throw new NotImplementedException();
+            throw new s::NotImplementedException();
         }
 
         /// <summary>
@@ -2371,14 +2371,14 @@ namespace Google.Cloud.Bigtable.Admin.V2
         /// <returns>
         /// A pageable asynchronous sequence of <see cref="Snapshot"/> resources.
         /// </returns>
-        public virtual PagedAsyncEnumerable<ListSnapshotsResponse, Snapshot> ListSnapshotsAsync(
+        public virtual gax::PagedAsyncEnumerable<ListSnapshotsResponse, Snapshot> ListSnapshotsAsync(
             ClusterName parent,
             string pageToken = null,
             int? pageSize = null,
-            CallSettings callSettings = null) => ListSnapshotsAsync(
+            gaxgrpc::CallSettings callSettings = null) => ListSnapshotsAsync(
                 new ListSnapshotsRequest
                 {
-                    ParentAsClusterName = GaxPreconditions.CheckNotNull(parent, nameof(parent)),
+                    ParentAsClusterName = gax::GaxPreconditions.CheckNotNull(parent, nameof(parent)),
                     PageToken = pageToken ?? "",
                     PageSize = pageSize ?? 0,
                 },
@@ -2413,14 +2413,14 @@ namespace Google.Cloud.Bigtable.Admin.V2
         /// <returns>
         /// A pageable sequence of <see cref="Snapshot"/> resources.
         /// </returns>
-        public virtual PagedEnumerable<ListSnapshotsResponse, Snapshot> ListSnapshots(
+        public virtual gax::PagedEnumerable<ListSnapshotsResponse, Snapshot> ListSnapshots(
             ClusterName parent,
             string pageToken = null,
             int? pageSize = null,
-            CallSettings callSettings = null) => ListSnapshots(
+            gaxgrpc::CallSettings callSettings = null) => ListSnapshots(
                 new ListSnapshotsRequest
                 {
-                    ParentAsClusterName = GaxPreconditions.CheckNotNull(parent, nameof(parent)),
+                    ParentAsClusterName = gax::GaxPreconditions.CheckNotNull(parent, nameof(parent)),
                     PageToken = pageToken ?? "",
                     PageSize = pageSize ?? 0,
                 },
@@ -2443,11 +2443,11 @@ namespace Google.Cloud.Bigtable.Admin.V2
         /// <returns>
         /// A pageable asynchronous sequence of <see cref="Snapshot"/> resources.
         /// </returns>
-        public virtual PagedAsyncEnumerable<ListSnapshotsResponse, Snapshot> ListSnapshotsAsync(
+        public virtual gax::PagedAsyncEnumerable<ListSnapshotsResponse, Snapshot> ListSnapshotsAsync(
             ListSnapshotsRequest request,
-            CallSettings callSettings = null)
+            gaxgrpc::CallSettings callSettings = null)
         {
-            throw new NotImplementedException();
+            throw new s::NotImplementedException();
         }
 
         /// <summary>
@@ -2467,11 +2467,11 @@ namespace Google.Cloud.Bigtable.Admin.V2
         /// <returns>
         /// A pageable sequence of <see cref="Snapshot"/> resources.
         /// </returns>
-        public virtual PagedEnumerable<ListSnapshotsResponse, Snapshot> ListSnapshots(
+        public virtual gax::PagedEnumerable<ListSnapshotsResponse, Snapshot> ListSnapshots(
             ListSnapshotsRequest request,
-            CallSettings callSettings = null)
+            gaxgrpc::CallSettings callSettings = null)
         {
-            throw new NotImplementedException();
+            throw new s::NotImplementedException();
         }
 
         /// <summary>
@@ -2493,12 +2493,12 @@ namespace Google.Cloud.Bigtable.Admin.V2
         /// <returns>
         /// A Task that completes when the RPC has completed.
         /// </returns>
-        public virtual Task DeleteSnapshotAsync(
+        public virtual stt::Task DeleteSnapshotAsync(
             SnapshotName name,
-            CallSettings callSettings = null) => DeleteSnapshotAsync(
+            gaxgrpc::CallSettings callSettings = null) => DeleteSnapshotAsync(
                 new DeleteSnapshotRequest
                 {
-                    SnapshotName = GaxPreconditions.CheckNotNull(name, nameof(name)),
+                    SnapshotName = gax::GaxPreconditions.CheckNotNull(name, nameof(name)),
                 },
                 callSettings);
 
@@ -2516,16 +2516,16 @@ namespace Google.Cloud.Bigtable.Admin.V2
         /// `projects/&lt;project&gt;/instances/&lt;instance&gt;/clusters/&lt;cluster&gt;/snapshots/&lt;snapshot&gt;`.
         /// </param>
         /// <param name="cancellationToken">
-        /// A <see cref="CancellationToken"/> to use for this RPC.
+        /// A <see cref="st::CancellationToken"/> to use for this RPC.
         /// </param>
         /// <returns>
         /// A Task that completes when the RPC has completed.
         /// </returns>
-        public virtual Task DeleteSnapshotAsync(
+        public virtual stt::Task DeleteSnapshotAsync(
             SnapshotName name,
-            CancellationToken cancellationToken) => DeleteSnapshotAsync(
+            st::CancellationToken cancellationToken) => DeleteSnapshotAsync(
                 name,
-                CallSettings.FromCancellationToken(cancellationToken));
+                gaxgrpc::CallSettings.FromCancellationToken(cancellationToken));
 
         /// <summary>
         /// This is a private alpha release of Cloud Bigtable snapshots. This feature
@@ -2545,10 +2545,10 @@ namespace Google.Cloud.Bigtable.Admin.V2
         /// </param>
         public virtual void DeleteSnapshot(
             SnapshotName name,
-            CallSettings callSettings = null) => DeleteSnapshot(
+            gaxgrpc::CallSettings callSettings = null) => DeleteSnapshot(
                 new DeleteSnapshotRequest
                 {
-                    SnapshotName = GaxPreconditions.CheckNotNull(name, nameof(name)),
+                    SnapshotName = gax::GaxPreconditions.CheckNotNull(name, nameof(name)),
                 },
                 callSettings);
 
@@ -2569,11 +2569,11 @@ namespace Google.Cloud.Bigtable.Admin.V2
         /// <returns>
         /// A Task that completes when the RPC has completed.
         /// </returns>
-        public virtual Task DeleteSnapshotAsync(
+        public virtual stt::Task DeleteSnapshotAsync(
             DeleteSnapshotRequest request,
-            CallSettings callSettings = null)
+            gaxgrpc::CallSettings callSettings = null)
         {
-            throw new NotImplementedException();
+            throw new s::NotImplementedException();
         }
 
         /// <summary>
@@ -2588,16 +2588,16 @@ namespace Google.Cloud.Bigtable.Admin.V2
         /// The request object containing all of the parameters for the API call.
         /// </param>
         /// <param name="cancellationToken">
-        /// A <see cref="CancellationToken"/> to use for this RPC.
+        /// A <see cref="st::CancellationToken"/> to use for this RPC.
         /// </param>
         /// <returns>
         /// A Task that completes when the RPC has completed.
         /// </returns>
-        public virtual Task DeleteSnapshotAsync(
+        public virtual stt::Task DeleteSnapshotAsync(
             DeleteSnapshotRequest request,
-            CancellationToken cancellationToken) => DeleteSnapshotAsync(
+            st::CancellationToken cancellationToken) => DeleteSnapshotAsync(
                 request,
-                CallSettings.FromCancellationToken(cancellationToken));
+                gaxgrpc::CallSettings.FromCancellationToken(cancellationToken));
 
         /// <summary>
         /// This is a private alpha release of Cloud Bigtable snapshots. This feature
@@ -2615,9 +2615,9 @@ namespace Google.Cloud.Bigtable.Admin.V2
         /// </param>
         public virtual void DeleteSnapshot(
             DeleteSnapshotRequest request,
-            CallSettings callSettings = null)
+            gaxgrpc::CallSettings callSettings = null)
         {
-            throw new NotImplementedException();
+            throw new s::NotImplementedException();
         }
 
     }
@@ -2627,19 +2627,19 @@ namespace Google.Cloud.Bigtable.Admin.V2
     /// </summary>
     public sealed partial class BigtableTableAdminClientImpl : BigtableTableAdminClient
     {
-        private readonly ApiCall<CreateTableRequest, Table> _callCreateTable;
-        private readonly ApiCall<CreateTableFromSnapshotRequest, Operation> _callCreateTableFromSnapshot;
-        private readonly ApiCall<ListTablesRequest, ListTablesResponse> _callListTables;
-        private readonly ApiCall<GetTableRequest, Table> _callGetTable;
-        private readonly ApiCall<DeleteTableRequest, Empty> _callDeleteTable;
-        private readonly ApiCall<ModifyColumnFamiliesRequest, Table> _callModifyColumnFamilies;
-        private readonly ApiCall<DropRowRangeRequest, Empty> _callDropRowRange;
-        private readonly ApiCall<GenerateConsistencyTokenRequest, GenerateConsistencyTokenResponse> _callGenerateConsistencyToken;
-        private readonly ApiCall<CheckConsistencyRequest, CheckConsistencyResponse> _callCheckConsistency;
-        private readonly ApiCall<SnapshotTableRequest, Operation> _callSnapshotTable;
-        private readonly ApiCall<GetSnapshotRequest, Snapshot> _callGetSnapshot;
-        private readonly ApiCall<ListSnapshotsRequest, ListSnapshotsResponse> _callListSnapshots;
-        private readonly ApiCall<DeleteSnapshotRequest, Empty> _callDeleteSnapshot;
+        private readonly gaxgrpc::ApiCall<CreateTableRequest, Table> _callCreateTable;
+        private readonly gaxgrpc::ApiCall<CreateTableFromSnapshotRequest, lro::Operation> _callCreateTableFromSnapshot;
+        private readonly gaxgrpc::ApiCall<ListTablesRequest, ListTablesResponse> _callListTables;
+        private readonly gaxgrpc::ApiCall<GetTableRequest, Table> _callGetTable;
+        private readonly gaxgrpc::ApiCall<DeleteTableRequest, protowkt::Empty> _callDeleteTable;
+        private readonly gaxgrpc::ApiCall<ModifyColumnFamiliesRequest, Table> _callModifyColumnFamilies;
+        private readonly gaxgrpc::ApiCall<DropRowRangeRequest, protowkt::Empty> _callDropRowRange;
+        private readonly gaxgrpc::ApiCall<GenerateConsistencyTokenRequest, GenerateConsistencyTokenResponse> _callGenerateConsistencyToken;
+        private readonly gaxgrpc::ApiCall<CheckConsistencyRequest, CheckConsistencyResponse> _callCheckConsistency;
+        private readonly gaxgrpc::ApiCall<SnapshotTableRequest, lro::Operation> _callSnapshotTable;
+        private readonly gaxgrpc::ApiCall<GetSnapshotRequest, Snapshot> _callGetSnapshot;
+        private readonly gaxgrpc::ApiCall<ListSnapshotsRequest, ListSnapshotsResponse> _callListSnapshots;
+        private readonly gaxgrpc::ApiCall<DeleteSnapshotRequest, protowkt::Empty> _callDeleteSnapshot;
 
         /// <summary>
         /// Constructs a client wrapper for the BigtableTableAdmin service, with the specified gRPC client and settings.
@@ -2650,50 +2650,50 @@ namespace Google.Cloud.Bigtable.Admin.V2
         {
             GrpcClient = grpcClient;
             BigtableTableAdminSettings effectiveSettings = settings ?? BigtableTableAdminSettings.GetDefault();
-            ClientHelper clientHelper = new ClientHelper(effectiveSettings);
-            CreateTableFromSnapshotOperationsClient = new OperationsClientImpl(
+            gaxgrpc::ClientHelper clientHelper = new gaxgrpc::ClientHelper(effectiveSettings);
+            CreateTableFromSnapshotOperationsClient = new lro::OperationsClientImpl(
                 grpcClient.CreateOperationsClient(), effectiveSettings.CreateTableFromSnapshotOperationsSettings);
-            SnapshotTableOperationsClient = new OperationsClientImpl(
+            SnapshotTableOperationsClient = new lro::OperationsClientImpl(
                 grpcClient.CreateOperationsClient(), effectiveSettings.SnapshotTableOperationsSettings);
             _callCreateTable = clientHelper.BuildApiCall<CreateTableRequest, Table>(
                 GrpcClient.CreateTableAsync, GrpcClient.CreateTable, effectiveSettings.CreateTableSettings)
-                .WithCallSettingsOverlay(request => CallSettings.FromHeader("x-goog-request-params", $"parent={request.Parent}"));
-            _callCreateTableFromSnapshot = clientHelper.BuildApiCall<CreateTableFromSnapshotRequest, Operation>(
+                .WithCallSettingsOverlay(request => gaxgrpc::CallSettings.FromHeader("x-goog-request-params", $"parent={request.Parent}"));
+            _callCreateTableFromSnapshot = clientHelper.BuildApiCall<CreateTableFromSnapshotRequest, lro::Operation>(
                 GrpcClient.CreateTableFromSnapshotAsync, GrpcClient.CreateTableFromSnapshot, effectiveSettings.CreateTableFromSnapshotSettings)
-                .WithCallSettingsOverlay(request => CallSettings.FromHeader("x-goog-request-params", $"parent={request.Parent}"));
+                .WithCallSettingsOverlay(request => gaxgrpc::CallSettings.FromHeader("x-goog-request-params", $"parent={request.Parent}"));
             _callListTables = clientHelper.BuildApiCall<ListTablesRequest, ListTablesResponse>(
                 GrpcClient.ListTablesAsync, GrpcClient.ListTables, effectiveSettings.ListTablesSettings)
-                .WithCallSettingsOverlay(request => CallSettings.FromHeader("x-goog-request-params", $"parent={request.Parent}"));
+                .WithCallSettingsOverlay(request => gaxgrpc::CallSettings.FromHeader("x-goog-request-params", $"parent={request.Parent}"));
             _callGetTable = clientHelper.BuildApiCall<GetTableRequest, Table>(
                 GrpcClient.GetTableAsync, GrpcClient.GetTable, effectiveSettings.GetTableSettings)
-                .WithCallSettingsOverlay(request => CallSettings.FromHeader("x-goog-request-params", $"name={request.Name}"));
-            _callDeleteTable = clientHelper.BuildApiCall<DeleteTableRequest, Empty>(
+                .WithCallSettingsOverlay(request => gaxgrpc::CallSettings.FromHeader("x-goog-request-params", $"name={request.Name}"));
+            _callDeleteTable = clientHelper.BuildApiCall<DeleteTableRequest, protowkt::Empty>(
                 GrpcClient.DeleteTableAsync, GrpcClient.DeleteTable, effectiveSettings.DeleteTableSettings)
-                .WithCallSettingsOverlay(request => CallSettings.FromHeader("x-goog-request-params", $"name={request.Name}"));
+                .WithCallSettingsOverlay(request => gaxgrpc::CallSettings.FromHeader("x-goog-request-params", $"name={request.Name}"));
             _callModifyColumnFamilies = clientHelper.BuildApiCall<ModifyColumnFamiliesRequest, Table>(
                 GrpcClient.ModifyColumnFamiliesAsync, GrpcClient.ModifyColumnFamilies, effectiveSettings.ModifyColumnFamiliesSettings)
-                .WithCallSettingsOverlay(request => CallSettings.FromHeader("x-goog-request-params", $"name={request.Name}"));
-            _callDropRowRange = clientHelper.BuildApiCall<DropRowRangeRequest, Empty>(
+                .WithCallSettingsOverlay(request => gaxgrpc::CallSettings.FromHeader("x-goog-request-params", $"name={request.Name}"));
+            _callDropRowRange = clientHelper.BuildApiCall<DropRowRangeRequest, protowkt::Empty>(
                 GrpcClient.DropRowRangeAsync, GrpcClient.DropRowRange, effectiveSettings.DropRowRangeSettings)
-                .WithCallSettingsOverlay(request => CallSettings.FromHeader("x-goog-request-params", $"name={request.Name}"));
+                .WithCallSettingsOverlay(request => gaxgrpc::CallSettings.FromHeader("x-goog-request-params", $"name={request.Name}"));
             _callGenerateConsistencyToken = clientHelper.BuildApiCall<GenerateConsistencyTokenRequest, GenerateConsistencyTokenResponse>(
                 GrpcClient.GenerateConsistencyTokenAsync, GrpcClient.GenerateConsistencyToken, effectiveSettings.GenerateConsistencyTokenSettings)
-                .WithCallSettingsOverlay(request => CallSettings.FromHeader("x-goog-request-params", $"name={request.Name}"));
+                .WithCallSettingsOverlay(request => gaxgrpc::CallSettings.FromHeader("x-goog-request-params", $"name={request.Name}"));
             _callCheckConsistency = clientHelper.BuildApiCall<CheckConsistencyRequest, CheckConsistencyResponse>(
                 GrpcClient.CheckConsistencyAsync, GrpcClient.CheckConsistency, effectiveSettings.CheckConsistencySettings)
-                .WithCallSettingsOverlay(request => CallSettings.FromHeader("x-goog-request-params", $"name={request.Name}"));
-            _callSnapshotTable = clientHelper.BuildApiCall<SnapshotTableRequest, Operation>(
+                .WithCallSettingsOverlay(request => gaxgrpc::CallSettings.FromHeader("x-goog-request-params", $"name={request.Name}"));
+            _callSnapshotTable = clientHelper.BuildApiCall<SnapshotTableRequest, lro::Operation>(
                 GrpcClient.SnapshotTableAsync, GrpcClient.SnapshotTable, effectiveSettings.SnapshotTableSettings)
-                .WithCallSettingsOverlay(request => CallSettings.FromHeader("x-goog-request-params", $"name={request.Name}"));
+                .WithCallSettingsOverlay(request => gaxgrpc::CallSettings.FromHeader("x-goog-request-params", $"name={request.Name}"));
             _callGetSnapshot = clientHelper.BuildApiCall<GetSnapshotRequest, Snapshot>(
                 GrpcClient.GetSnapshotAsync, GrpcClient.GetSnapshot, effectiveSettings.GetSnapshotSettings)
-                .WithCallSettingsOverlay(request => CallSettings.FromHeader("x-goog-request-params", $"name={request.Name}"));
+                .WithCallSettingsOverlay(request => gaxgrpc::CallSettings.FromHeader("x-goog-request-params", $"name={request.Name}"));
             _callListSnapshots = clientHelper.BuildApiCall<ListSnapshotsRequest, ListSnapshotsResponse>(
                 GrpcClient.ListSnapshotsAsync, GrpcClient.ListSnapshots, effectiveSettings.ListSnapshotsSettings)
-                .WithCallSettingsOverlay(request => CallSettings.FromHeader("x-goog-request-params", $"parent={request.Parent}"));
-            _callDeleteSnapshot = clientHelper.BuildApiCall<DeleteSnapshotRequest, Empty>(
+                .WithCallSettingsOverlay(request => gaxgrpc::CallSettings.FromHeader("x-goog-request-params", $"parent={request.Parent}"));
+            _callDeleteSnapshot = clientHelper.BuildApiCall<DeleteSnapshotRequest, protowkt::Empty>(
                 GrpcClient.DeleteSnapshotAsync, GrpcClient.DeleteSnapshot, effectiveSettings.DeleteSnapshotSettings)
-                .WithCallSettingsOverlay(request => CallSettings.FromHeader("x-goog-request-params", $"name={request.Name}"));
+                .WithCallSettingsOverlay(request => gaxgrpc::CallSettings.FromHeader("x-goog-request-params", $"name={request.Name}"));
             Modify_ApiCall(ref _callCreateTable);
             Modify_CreateTableApiCall(ref _callCreateTable);
             Modify_ApiCall(ref _callCreateTableFromSnapshot);
@@ -2727,26 +2727,26 @@ namespace Google.Cloud.Bigtable.Admin.V2
 
         // Partial methods called for every ApiCall on construction.
         // Allows modification of all the underlying ApiCall objects.
-        partial void Modify_ApiCall<TRequest, TResponse>(ref ApiCall<TRequest, TResponse> call)
-            where TRequest : class, IMessage<TRequest>
-            where TResponse : class, IMessage<TResponse>;
+        partial void Modify_ApiCall<TRequest, TResponse>(ref gaxgrpc::ApiCall<TRequest, TResponse> call)
+            where TRequest : class, proto::IMessage<TRequest>
+            where TResponse : class, proto::IMessage<TResponse>;
 
         // Partial methods called for each ApiCall on construction.
         // Allows per-RPC-method modification of the underlying ApiCall object.
-        partial void Modify_CreateTableApiCall(ref ApiCall<CreateTableRequest, Table> call);
-        partial void Modify_CreateTableFromSnapshotApiCall(ref ApiCall<CreateTableFromSnapshotRequest, Operation> call);
-        partial void Modify_ListTablesApiCall(ref ApiCall<ListTablesRequest, ListTablesResponse> call);
-        partial void Modify_GetTableApiCall(ref ApiCall<GetTableRequest, Table> call);
-        partial void Modify_DeleteTableApiCall(ref ApiCall<DeleteTableRequest, Empty> call);
-        partial void Modify_ModifyColumnFamiliesApiCall(ref ApiCall<ModifyColumnFamiliesRequest, Table> call);
-        partial void Modify_DropRowRangeApiCall(ref ApiCall<DropRowRangeRequest, Empty> call);
-        partial void Modify_GenerateConsistencyTokenApiCall(ref ApiCall<GenerateConsistencyTokenRequest, GenerateConsistencyTokenResponse> call);
-        partial void Modify_CheckConsistencyApiCall(ref ApiCall<CheckConsistencyRequest, CheckConsistencyResponse> call);
-        partial void Modify_SnapshotTableApiCall(ref ApiCall<SnapshotTableRequest, Operation> call);
-        partial void Modify_GetSnapshotApiCall(ref ApiCall<GetSnapshotRequest, Snapshot> call);
-        partial void Modify_ListSnapshotsApiCall(ref ApiCall<ListSnapshotsRequest, ListSnapshotsResponse> call);
-        partial void Modify_DeleteSnapshotApiCall(ref ApiCall<DeleteSnapshotRequest, Empty> call);
-        partial void OnConstruction(BigtableTableAdmin.BigtableTableAdminClient grpcClient, BigtableTableAdminSettings effectiveSettings, ClientHelper clientHelper);
+        partial void Modify_CreateTableApiCall(ref gaxgrpc::ApiCall<CreateTableRequest, Table> call);
+        partial void Modify_CreateTableFromSnapshotApiCall(ref gaxgrpc::ApiCall<CreateTableFromSnapshotRequest, lro::Operation> call);
+        partial void Modify_ListTablesApiCall(ref gaxgrpc::ApiCall<ListTablesRequest, ListTablesResponse> call);
+        partial void Modify_GetTableApiCall(ref gaxgrpc::ApiCall<GetTableRequest, Table> call);
+        partial void Modify_DeleteTableApiCall(ref gaxgrpc::ApiCall<DeleteTableRequest, protowkt::Empty> call);
+        partial void Modify_ModifyColumnFamiliesApiCall(ref gaxgrpc::ApiCall<ModifyColumnFamiliesRequest, Table> call);
+        partial void Modify_DropRowRangeApiCall(ref gaxgrpc::ApiCall<DropRowRangeRequest, protowkt::Empty> call);
+        partial void Modify_GenerateConsistencyTokenApiCall(ref gaxgrpc::ApiCall<GenerateConsistencyTokenRequest, GenerateConsistencyTokenResponse> call);
+        partial void Modify_CheckConsistencyApiCall(ref gaxgrpc::ApiCall<CheckConsistencyRequest, CheckConsistencyResponse> call);
+        partial void Modify_SnapshotTableApiCall(ref gaxgrpc::ApiCall<SnapshotTableRequest, lro::Operation> call);
+        partial void Modify_GetSnapshotApiCall(ref gaxgrpc::ApiCall<GetSnapshotRequest, Snapshot> call);
+        partial void Modify_ListSnapshotsApiCall(ref gaxgrpc::ApiCall<ListSnapshotsRequest, ListSnapshotsResponse> call);
+        partial void Modify_DeleteSnapshotApiCall(ref gaxgrpc::ApiCall<DeleteSnapshotRequest, protowkt::Empty> call);
+        partial void OnConstruction(BigtableTableAdmin.BigtableTableAdminClient grpcClient, BigtableTableAdminSettings effectiveSettings, gaxgrpc::ClientHelper clientHelper);
 
         /// <summary>
         /// The underlying gRPC BigtableTableAdmin client.
@@ -2756,19 +2756,19 @@ namespace Google.Cloud.Bigtable.Admin.V2
         // Partial methods called on each request.
         // Allows per-RPC-call modification to the request and CallSettings objects,
         // before the underlying RPC is performed.
-        partial void Modify_CreateTableRequest(ref CreateTableRequest request, ref CallSettings settings);
-        partial void Modify_CreateTableFromSnapshotRequest(ref CreateTableFromSnapshotRequest request, ref CallSettings settings);
-        partial void Modify_ListTablesRequest(ref ListTablesRequest request, ref CallSettings settings);
-        partial void Modify_GetTableRequest(ref GetTableRequest request, ref CallSettings settings);
-        partial void Modify_DeleteTableRequest(ref DeleteTableRequest request, ref CallSettings settings);
-        partial void Modify_ModifyColumnFamiliesRequest(ref ModifyColumnFamiliesRequest request, ref CallSettings settings);
-        partial void Modify_DropRowRangeRequest(ref DropRowRangeRequest request, ref CallSettings settings);
-        partial void Modify_GenerateConsistencyTokenRequest(ref GenerateConsistencyTokenRequest request, ref CallSettings settings);
-        partial void Modify_CheckConsistencyRequest(ref CheckConsistencyRequest request, ref CallSettings settings);
-        partial void Modify_SnapshotTableRequest(ref SnapshotTableRequest request, ref CallSettings settings);
-        partial void Modify_GetSnapshotRequest(ref GetSnapshotRequest request, ref CallSettings settings);
-        partial void Modify_ListSnapshotsRequest(ref ListSnapshotsRequest request, ref CallSettings settings);
-        partial void Modify_DeleteSnapshotRequest(ref DeleteSnapshotRequest request, ref CallSettings settings);
+        partial void Modify_CreateTableRequest(ref CreateTableRequest request, ref gaxgrpc::CallSettings settings);
+        partial void Modify_CreateTableFromSnapshotRequest(ref CreateTableFromSnapshotRequest request, ref gaxgrpc::CallSettings settings);
+        partial void Modify_ListTablesRequest(ref ListTablesRequest request, ref gaxgrpc::CallSettings settings);
+        partial void Modify_GetTableRequest(ref GetTableRequest request, ref gaxgrpc::CallSettings settings);
+        partial void Modify_DeleteTableRequest(ref DeleteTableRequest request, ref gaxgrpc::CallSettings settings);
+        partial void Modify_ModifyColumnFamiliesRequest(ref ModifyColumnFamiliesRequest request, ref gaxgrpc::CallSettings settings);
+        partial void Modify_DropRowRangeRequest(ref DropRowRangeRequest request, ref gaxgrpc::CallSettings settings);
+        partial void Modify_GenerateConsistencyTokenRequest(ref GenerateConsistencyTokenRequest request, ref gaxgrpc::CallSettings settings);
+        partial void Modify_CheckConsistencyRequest(ref CheckConsistencyRequest request, ref gaxgrpc::CallSettings settings);
+        partial void Modify_SnapshotTableRequest(ref SnapshotTableRequest request, ref gaxgrpc::CallSettings settings);
+        partial void Modify_GetSnapshotRequest(ref GetSnapshotRequest request, ref gaxgrpc::CallSettings settings);
+        partial void Modify_ListSnapshotsRequest(ref ListSnapshotsRequest request, ref gaxgrpc::CallSettings settings);
+        partial void Modify_DeleteSnapshotRequest(ref DeleteSnapshotRequest request, ref gaxgrpc::CallSettings settings);
 
         /// <summary>
         /// Creates a new table in the specified instance.
@@ -2784,9 +2784,9 @@ namespace Google.Cloud.Bigtable.Admin.V2
         /// <returns>
         /// A Task containing the RPC response.
         /// </returns>
-        public override Task<Table> CreateTableAsync(
+        public override stt::Task<Table> CreateTableAsync(
             CreateTableRequest request,
-            CallSettings callSettings = null)
+            gaxgrpc::CallSettings callSettings = null)
         {
             Modify_CreateTableRequest(ref request, ref callSettings);
             return _callCreateTable.Async(request, callSettings);
@@ -2808,7 +2808,7 @@ namespace Google.Cloud.Bigtable.Admin.V2
         /// </returns>
         public override Table CreateTable(
             CreateTableRequest request,
-            CallSettings callSettings = null)
+            gaxgrpc::CallSettings callSettings = null)
         {
             Modify_CreateTableRequest(ref request, ref callSettings);
             return _callCreateTable.Sync(request, callSettings);
@@ -2832,12 +2832,12 @@ namespace Google.Cloud.Bigtable.Admin.V2
         /// <returns>
         /// A Task containing the RPC response.
         /// </returns>
-        public override async Task<Operation<Table, CreateTableFromSnapshotMetadata>> CreateTableFromSnapshotAsync(
+        public override async stt::Task<lro::Operation<Table, CreateTableFromSnapshotMetadata>> CreateTableFromSnapshotAsync(
             CreateTableFromSnapshotRequest request,
-            CallSettings callSettings = null)
+            gaxgrpc::CallSettings callSettings = null)
         {
             Modify_CreateTableFromSnapshotRequest(ref request, ref callSettings);
-            return new Operation<Table, CreateTableFromSnapshotMetadata>(
+            return new lro::Operation<Table, CreateTableFromSnapshotMetadata>(
                 await _callCreateTableFromSnapshot.Async(request, callSettings).ConfigureAwait(false), CreateTableFromSnapshotOperationsClient);
         }
 
@@ -2859,19 +2859,19 @@ namespace Google.Cloud.Bigtable.Admin.V2
         /// <returns>
         /// The RPC response.
         /// </returns>
-        public override Operation<Table, CreateTableFromSnapshotMetadata> CreateTableFromSnapshot(
+        public override lro::Operation<Table, CreateTableFromSnapshotMetadata> CreateTableFromSnapshot(
             CreateTableFromSnapshotRequest request,
-            CallSettings callSettings = null)
+            gaxgrpc::CallSettings callSettings = null)
         {
             Modify_CreateTableFromSnapshotRequest(ref request, ref callSettings);
-            return new Operation<Table, CreateTableFromSnapshotMetadata>(
+            return new lro::Operation<Table, CreateTableFromSnapshotMetadata>(
                 _callCreateTableFromSnapshot.Sync(request, callSettings), CreateTableFromSnapshotOperationsClient);
         }
 
         /// <summary>
         /// The long-running operations client for <c>CreateTableFromSnapshot</c>.
         /// </summary>
-        public override OperationsClient CreateTableFromSnapshotOperationsClient { get; }
+        public override lro::OperationsClient CreateTableFromSnapshotOperationsClient { get; }
 
         /// <summary>
         /// Lists all tables served from a specified instance.
@@ -2885,12 +2885,12 @@ namespace Google.Cloud.Bigtable.Admin.V2
         /// <returns>
         /// A pageable asynchronous sequence of <see cref="Table"/> resources.
         /// </returns>
-        public override PagedAsyncEnumerable<ListTablesResponse, Table> ListTablesAsync(
+        public override gax::PagedAsyncEnumerable<ListTablesResponse, Table> ListTablesAsync(
             ListTablesRequest request,
-            CallSettings callSettings = null)
+            gaxgrpc::CallSettings callSettings = null)
         {
             Modify_ListTablesRequest(ref request, ref callSettings);
-            return new GrpcPagedAsyncEnumerable<ListTablesRequest, ListTablesResponse, Table>(_callListTables, request, callSettings);
+            return new gaxgrpc::GrpcPagedAsyncEnumerable<ListTablesRequest, ListTablesResponse, Table>(_callListTables, request, callSettings);
         }
 
         /// <summary>
@@ -2905,12 +2905,12 @@ namespace Google.Cloud.Bigtable.Admin.V2
         /// <returns>
         /// A pageable sequence of <see cref="Table"/> resources.
         /// </returns>
-        public override PagedEnumerable<ListTablesResponse, Table> ListTables(
+        public override gax::PagedEnumerable<ListTablesResponse, Table> ListTables(
             ListTablesRequest request,
-            CallSettings callSettings = null)
+            gaxgrpc::CallSettings callSettings = null)
         {
             Modify_ListTablesRequest(ref request, ref callSettings);
-            return new GrpcPagedEnumerable<ListTablesRequest, ListTablesResponse, Table>(_callListTables, request, callSettings);
+            return new gaxgrpc::GrpcPagedEnumerable<ListTablesRequest, ListTablesResponse, Table>(_callListTables, request, callSettings);
         }
 
         /// <summary>
@@ -2925,9 +2925,9 @@ namespace Google.Cloud.Bigtable.Admin.V2
         /// <returns>
         /// A Task containing the RPC response.
         /// </returns>
-        public override Task<Table> GetTableAsync(
+        public override stt::Task<Table> GetTableAsync(
             GetTableRequest request,
-            CallSettings callSettings = null)
+            gaxgrpc::CallSettings callSettings = null)
         {
             Modify_GetTableRequest(ref request, ref callSettings);
             return _callGetTable.Async(request, callSettings);
@@ -2947,7 +2947,7 @@ namespace Google.Cloud.Bigtable.Admin.V2
         /// </returns>
         public override Table GetTable(
             GetTableRequest request,
-            CallSettings callSettings = null)
+            gaxgrpc::CallSettings callSettings = null)
         {
             Modify_GetTableRequest(ref request, ref callSettings);
             return _callGetTable.Sync(request, callSettings);
@@ -2965,9 +2965,9 @@ namespace Google.Cloud.Bigtable.Admin.V2
         /// <returns>
         /// A Task that completes when the RPC has completed.
         /// </returns>
-        public override Task DeleteTableAsync(
+        public override stt::Task DeleteTableAsync(
             DeleteTableRequest request,
-            CallSettings callSettings = null)
+            gaxgrpc::CallSettings callSettings = null)
         {
             Modify_DeleteTableRequest(ref request, ref callSettings);
             return _callDeleteTable.Async(request, callSettings);
@@ -2984,7 +2984,7 @@ namespace Google.Cloud.Bigtable.Admin.V2
         /// </param>
         public override void DeleteTable(
             DeleteTableRequest request,
-            CallSettings callSettings = null)
+            gaxgrpc::CallSettings callSettings = null)
         {
             Modify_DeleteTableRequest(ref request, ref callSettings);
             _callDeleteTable.Sync(request, callSettings);
@@ -3005,9 +3005,9 @@ namespace Google.Cloud.Bigtable.Admin.V2
         /// <returns>
         /// A Task containing the RPC response.
         /// </returns>
-        public override Task<Table> ModifyColumnFamiliesAsync(
+        public override stt::Task<Table> ModifyColumnFamiliesAsync(
             ModifyColumnFamiliesRequest request,
-            CallSettings callSettings = null)
+            gaxgrpc::CallSettings callSettings = null)
         {
             Modify_ModifyColumnFamiliesRequest(ref request, ref callSettings);
             return _callModifyColumnFamilies.Async(request, callSettings);
@@ -3030,7 +3030,7 @@ namespace Google.Cloud.Bigtable.Admin.V2
         /// </returns>
         public override Table ModifyColumnFamilies(
             ModifyColumnFamiliesRequest request,
-            CallSettings callSettings = null)
+            gaxgrpc::CallSettings callSettings = null)
         {
             Modify_ModifyColumnFamiliesRequest(ref request, ref callSettings);
             return _callModifyColumnFamilies.Sync(request, callSettings);
@@ -3050,9 +3050,9 @@ namespace Google.Cloud.Bigtable.Admin.V2
         /// <returns>
         /// A Task that completes when the RPC has completed.
         /// </returns>
-        public override Task DropRowRangeAsync(
+        public override stt::Task DropRowRangeAsync(
             DropRowRangeRequest request,
-            CallSettings callSettings = null)
+            gaxgrpc::CallSettings callSettings = null)
         {
             Modify_DropRowRangeRequest(ref request, ref callSettings);
             return _callDropRowRange.Async(request, callSettings);
@@ -3071,7 +3071,7 @@ namespace Google.Cloud.Bigtable.Admin.V2
         /// </param>
         public override void DropRowRange(
             DropRowRangeRequest request,
-            CallSettings callSettings = null)
+            gaxgrpc::CallSettings callSettings = null)
         {
             Modify_DropRowRangeRequest(ref request, ref callSettings);
             _callDropRowRange.Sync(request, callSettings);
@@ -3097,9 +3097,9 @@ namespace Google.Cloud.Bigtable.Admin.V2
         /// <returns>
         /// A Task containing the RPC response.
         /// </returns>
-        public override Task<GenerateConsistencyTokenResponse> GenerateConsistencyTokenAsync(
+        public override stt::Task<GenerateConsistencyTokenResponse> GenerateConsistencyTokenAsync(
             GenerateConsistencyTokenRequest request,
-            CallSettings callSettings = null)
+            gaxgrpc::CallSettings callSettings = null)
         {
             Modify_GenerateConsistencyTokenRequest(ref request, ref callSettings);
             return _callGenerateConsistencyToken.Async(request, callSettings);
@@ -3127,7 +3127,7 @@ namespace Google.Cloud.Bigtable.Admin.V2
         /// </returns>
         public override GenerateConsistencyTokenResponse GenerateConsistencyToken(
             GenerateConsistencyTokenRequest request,
-            CallSettings callSettings = null)
+            gaxgrpc::CallSettings callSettings = null)
         {
             Modify_GenerateConsistencyTokenRequest(ref request, ref callSettings);
             return _callGenerateConsistencyToken.Sync(request, callSettings);
@@ -3152,9 +3152,9 @@ namespace Google.Cloud.Bigtable.Admin.V2
         /// <returns>
         /// A Task containing the RPC response.
         /// </returns>
-        public override Task<CheckConsistencyResponse> CheckConsistencyAsync(
+        public override stt::Task<CheckConsistencyResponse> CheckConsistencyAsync(
             CheckConsistencyRequest request,
-            CallSettings callSettings = null)
+            gaxgrpc::CallSettings callSettings = null)
         {
             Modify_CheckConsistencyRequest(ref request, ref callSettings);
             return _callCheckConsistency.Async(request, callSettings);
@@ -3181,7 +3181,7 @@ namespace Google.Cloud.Bigtable.Admin.V2
         /// </returns>
         public override CheckConsistencyResponse CheckConsistency(
             CheckConsistencyRequest request,
-            CallSettings callSettings = null)
+            gaxgrpc::CallSettings callSettings = null)
         {
             Modify_CheckConsistencyRequest(ref request, ref callSettings);
             return _callCheckConsistency.Sync(request, callSettings);
@@ -3205,12 +3205,12 @@ namespace Google.Cloud.Bigtable.Admin.V2
         /// <returns>
         /// A Task containing the RPC response.
         /// </returns>
-        public override async Task<Operation<Snapshot, SnapshotTableMetadata>> SnapshotTableAsync(
+        public override async stt::Task<lro::Operation<Snapshot, SnapshotTableMetadata>> SnapshotTableAsync(
             SnapshotTableRequest request,
-            CallSettings callSettings = null)
+            gaxgrpc::CallSettings callSettings = null)
         {
             Modify_SnapshotTableRequest(ref request, ref callSettings);
-            return new Operation<Snapshot, SnapshotTableMetadata>(
+            return new lro::Operation<Snapshot, SnapshotTableMetadata>(
                 await _callSnapshotTable.Async(request, callSettings).ConfigureAwait(false), SnapshotTableOperationsClient);
         }
 
@@ -3232,19 +3232,19 @@ namespace Google.Cloud.Bigtable.Admin.V2
         /// <returns>
         /// The RPC response.
         /// </returns>
-        public override Operation<Snapshot, SnapshotTableMetadata> SnapshotTable(
+        public override lro::Operation<Snapshot, SnapshotTableMetadata> SnapshotTable(
             SnapshotTableRequest request,
-            CallSettings callSettings = null)
+            gaxgrpc::CallSettings callSettings = null)
         {
             Modify_SnapshotTableRequest(ref request, ref callSettings);
-            return new Operation<Snapshot, SnapshotTableMetadata>(
+            return new lro::Operation<Snapshot, SnapshotTableMetadata>(
                 _callSnapshotTable.Sync(request, callSettings), SnapshotTableOperationsClient);
         }
 
         /// <summary>
         /// The long-running operations client for <c>SnapshotTable</c>.
         /// </summary>
-        public override OperationsClient SnapshotTableOperationsClient { get; }
+        public override lro::OperationsClient SnapshotTableOperationsClient { get; }
 
         /// <summary>
         /// This is a private alpha release of Cloud Bigtable snapshots. This feature
@@ -3263,9 +3263,9 @@ namespace Google.Cloud.Bigtable.Admin.V2
         /// <returns>
         /// A Task containing the RPC response.
         /// </returns>
-        public override Task<Snapshot> GetSnapshotAsync(
+        public override stt::Task<Snapshot> GetSnapshotAsync(
             GetSnapshotRequest request,
-            CallSettings callSettings = null)
+            gaxgrpc::CallSettings callSettings = null)
         {
             Modify_GetSnapshotRequest(ref request, ref callSettings);
             return _callGetSnapshot.Async(request, callSettings);
@@ -3290,7 +3290,7 @@ namespace Google.Cloud.Bigtable.Admin.V2
         /// </returns>
         public override Snapshot GetSnapshot(
             GetSnapshotRequest request,
-            CallSettings callSettings = null)
+            gaxgrpc::CallSettings callSettings = null)
         {
             Modify_GetSnapshotRequest(ref request, ref callSettings);
             return _callGetSnapshot.Sync(request, callSettings);
@@ -3313,12 +3313,12 @@ namespace Google.Cloud.Bigtable.Admin.V2
         /// <returns>
         /// A pageable asynchronous sequence of <see cref="Snapshot"/> resources.
         /// </returns>
-        public override PagedAsyncEnumerable<ListSnapshotsResponse, Snapshot> ListSnapshotsAsync(
+        public override gax::PagedAsyncEnumerable<ListSnapshotsResponse, Snapshot> ListSnapshotsAsync(
             ListSnapshotsRequest request,
-            CallSettings callSettings = null)
+            gaxgrpc::CallSettings callSettings = null)
         {
             Modify_ListSnapshotsRequest(ref request, ref callSettings);
-            return new GrpcPagedAsyncEnumerable<ListSnapshotsRequest, ListSnapshotsResponse, Snapshot>(_callListSnapshots, request, callSettings);
+            return new gaxgrpc::GrpcPagedAsyncEnumerable<ListSnapshotsRequest, ListSnapshotsResponse, Snapshot>(_callListSnapshots, request, callSettings);
         }
 
         /// <summary>
@@ -3338,12 +3338,12 @@ namespace Google.Cloud.Bigtable.Admin.V2
         /// <returns>
         /// A pageable sequence of <see cref="Snapshot"/> resources.
         /// </returns>
-        public override PagedEnumerable<ListSnapshotsResponse, Snapshot> ListSnapshots(
+        public override gax::PagedEnumerable<ListSnapshotsResponse, Snapshot> ListSnapshots(
             ListSnapshotsRequest request,
-            CallSettings callSettings = null)
+            gaxgrpc::CallSettings callSettings = null)
         {
             Modify_ListSnapshotsRequest(ref request, ref callSettings);
-            return new GrpcPagedEnumerable<ListSnapshotsRequest, ListSnapshotsResponse, Snapshot>(_callListSnapshots, request, callSettings);
+            return new gaxgrpc::GrpcPagedEnumerable<ListSnapshotsRequest, ListSnapshotsResponse, Snapshot>(_callListSnapshots, request, callSettings);
         }
 
         /// <summary>
@@ -3363,9 +3363,9 @@ namespace Google.Cloud.Bigtable.Admin.V2
         /// <returns>
         /// A Task that completes when the RPC has completed.
         /// </returns>
-        public override Task DeleteSnapshotAsync(
+        public override stt::Task DeleteSnapshotAsync(
             DeleteSnapshotRequest request,
-            CallSettings callSettings = null)
+            gaxgrpc::CallSettings callSettings = null)
         {
             Modify_DeleteSnapshotRequest(ref request, ref callSettings);
             return _callDeleteSnapshot.Async(request, callSettings);
@@ -3387,7 +3387,7 @@ namespace Google.Cloud.Bigtable.Admin.V2
         /// </param>
         public override void DeleteSnapshot(
             DeleteSnapshotRequest request,
-            CallSettings callSettings = null)
+            gaxgrpc::CallSettings callSettings = null)
         {
             Modify_DeleteSnapshotRequest(ref request, ref callSettings);
             _callDeleteSnapshot.Sync(request, callSettings);
@@ -3397,28 +3397,28 @@ namespace Google.Cloud.Bigtable.Admin.V2
 
     // Partial classes to enable page-streaming
 
-    public partial class ListTablesRequest : IPageRequest { }
-    public partial class ListTablesResponse : IPageResponse<Table>
+    public partial class ListTablesRequest : gaxgrpc::IPageRequest { }
+    public partial class ListTablesResponse : gaxgrpc::IPageResponse<Table>
     {
         /// <summary>
         /// Returns an enumerator that iterates through the resources in this response.
         /// </summary>
-        public IEnumerator<Table> GetEnumerator() => Tables.GetEnumerator();
+        public scg::IEnumerator<Table> GetEnumerator() => Tables.GetEnumerator();
 
         /// <inheritdoc/>
-        IEnumerator IEnumerable.GetEnumerator() => GetEnumerator();
+        sc::IEnumerator sc::IEnumerable.GetEnumerator() => GetEnumerator();
     }
 
-    public partial class ListSnapshotsRequest : IPageRequest { }
-    public partial class ListSnapshotsResponse : IPageResponse<Snapshot>
+    public partial class ListSnapshotsRequest : gaxgrpc::IPageRequest { }
+    public partial class ListSnapshotsResponse : gaxgrpc::IPageResponse<Snapshot>
     {
         /// <summary>
         /// Returns an enumerator that iterates through the resources in this response.
         /// </summary>
-        public IEnumerator<Snapshot> GetEnumerator() => Snapshots.GetEnumerator();
+        public scg::IEnumerator<Snapshot> GetEnumerator() => Snapshots.GetEnumerator();
 
         /// <inheritdoc/>
-        IEnumerator IEnumerable.GetEnumerator() => GetEnumerator();
+        sc::IEnumerator sc::IEnumerable.GetEnumerator() => GetEnumerator();
     }
 
     // Partial Grpc class to enable LRO client creation
@@ -3427,10 +3427,10 @@ namespace Google.Cloud.Bigtable.Admin.V2
         public partial class BigtableTableAdminClient
         {
             /// <summary>
-            /// Creates a new instance of <see cref="Operations.OperationsClient"/> using the same call invoker as this client.
+            /// Creates a new instance of <see cref="lro::Operations.OperationsClient"/> using the same call invoker as this client.
             /// </summary>
             /// <returns>A new Operations client for the same target as this client.</returns>
-            public virtual Operations.OperationsClient CreateOperationsClient() => new Operations.OperationsClient(CallInvoker);
+            public virtual lro::Operations.OperationsClient CreateOperationsClient() => new lro::Operations.OperationsClient(CallInvoker);
         }
     }
 

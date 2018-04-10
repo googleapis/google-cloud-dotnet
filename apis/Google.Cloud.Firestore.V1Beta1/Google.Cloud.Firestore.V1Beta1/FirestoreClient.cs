@@ -14,24 +14,24 @@
 
 // Generated code. DO NOT EDIT!
 
-using Google.Api.Gax;
-using Google.Api.Gax.Grpc;
-using Google.Protobuf;
-using Google.Protobuf.WellKnownTypes;
-using Grpc.Core;
-using System;
-using System.Collections;
-using System.Collections.Generic;
-using System.Collections.ObjectModel;
-using System.Threading;
-using System.Threading.Tasks;
+using gax = Google.Api.Gax;
+using gaxgrpc = Google.Api.Gax.Grpc;
+using proto = Google.Protobuf;
+using protowkt = Google.Protobuf.WellKnownTypes;
+using grpccore = Grpc.Core;
+using s = System;
+using sc = System.Collections;
+using scg = System.Collections.Generic;
+using sco = System.Collections.ObjectModel;
+using st = System.Threading;
+using stt = System.Threading.Tasks;
 
 namespace Google.Cloud.Firestore.V1Beta1
 {
     /// <summary>
     /// Settings for a <see cref="FirestoreClient"/>.
     /// </summary>
-    public sealed partial class FirestoreSettings : ServiceSettingsBase
+    public sealed partial class FirestoreSettings : gaxgrpc::ServiceSettingsBase
     {
         /// <summary>
         /// Get a new instance of the default <see cref="FirestoreSettings"/>.
@@ -48,7 +48,7 @@ namespace Google.Cloud.Firestore.V1Beta1
 
         private FirestoreSettings(FirestoreSettings existing) : base(existing)
         {
-            GaxPreconditions.CheckNotNull(existing, nameof(existing));
+            gax::GaxPreconditions.CheckNotNull(existing, nameof(existing));
             GetDocumentSettings = existing.GetDocumentSettings;
             ListDocumentsSettings = existing.ListDocumentsSettings;
             CreateDocumentSettings = existing.CreateDocumentSettings;
@@ -70,28 +70,28 @@ namespace Google.Cloud.Firestore.V1Beta1
         partial void OnCopy(FirestoreSettings existing);
 
         /// <summary>
-        /// The filter specifying which RPC <see cref="StatusCode"/>s are eligible for retry
+        /// The filter specifying which RPC <see cref="grpccore::StatusCode"/>s are eligible for retry
         /// for "Idempotent" <see cref="FirestoreClient"/> RPC methods.
         /// </summary>
         /// <remarks>
-        /// The eligible RPC <see cref="StatusCode"/>s for retry for "Idempotent" RPC methods are:
+        /// The eligible RPC <see cref="grpccore::StatusCode"/>s for retry for "Idempotent" RPC methods are:
         /// <list type="bullet">
-        /// <item><description><see cref="StatusCode.DeadlineExceeded"/></description></item>
-        /// <item><description><see cref="StatusCode.Unavailable"/></description></item>
+        /// <item><description><see cref="grpccore::StatusCode.DeadlineExceeded"/></description></item>
+        /// <item><description><see cref="grpccore::StatusCode.Unavailable"/></description></item>
         /// </list>
         /// </remarks>
-        public static Predicate<RpcException> IdempotentRetryFilter { get; } =
-            RetrySettings.FilterForStatusCodes(StatusCode.DeadlineExceeded, StatusCode.Unavailable);
+        public static s::Predicate<grpccore::RpcException> IdempotentRetryFilter { get; } =
+            gaxgrpc::RetrySettings.FilterForStatusCodes(grpccore::StatusCode.DeadlineExceeded, grpccore::StatusCode.Unavailable);
 
         /// <summary>
-        /// The filter specifying which RPC <see cref="StatusCode"/>s are eligible for retry
+        /// The filter specifying which RPC <see cref="grpccore::StatusCode"/>s are eligible for retry
         /// for "NonIdempotent" <see cref="FirestoreClient"/> RPC methods.
         /// </summary>
         /// <remarks>
-        /// There are no RPC <see cref="StatusCode"/>s eligible for retry for "NonIdempotent" RPC methods.
+        /// There are no RPC <see cref="grpccore::StatusCode"/>s eligible for retry for "NonIdempotent" RPC methods.
         /// </remarks>
-        public static Predicate<RpcException> NonIdempotentRetryFilter { get; } =
-            RetrySettings.FilterForStatusCodes();
+        public static s::Predicate<grpccore::RpcException> NonIdempotentRetryFilter { get; } =
+            gaxgrpc::RetrySettings.FilterForStatusCodes();
 
         /// <summary>
         /// "Default" retry backoff for <see cref="FirestoreClient"/> RPC methods.
@@ -107,9 +107,9 @@ namespace Google.Cloud.Firestore.V1Beta1
         /// <item><description>Delay multiplier: 1.3</description></item>
         /// </list>
         /// </remarks>
-        public static BackoffSettings GetDefaultRetryBackoff() => new BackoffSettings(
-            delay: TimeSpan.FromMilliseconds(100),
-            maxDelay: TimeSpan.FromMilliseconds(60000),
+        public static gaxgrpc::BackoffSettings GetDefaultRetryBackoff() => new gaxgrpc::BackoffSettings(
+            delay: s::TimeSpan.FromMilliseconds(100),
+            maxDelay: s::TimeSpan.FromMilliseconds(60000),
             delayMultiplier: 1.3
         );
 
@@ -127,9 +127,9 @@ namespace Google.Cloud.Firestore.V1Beta1
         /// <item><description>Maximum timeout: 20000 milliseconds</description></item>
         /// </list>
         /// </remarks>
-        public static BackoffSettings GetDefaultTimeoutBackoff() => new BackoffSettings(
-            delay: TimeSpan.FromMilliseconds(20000),
-            maxDelay: TimeSpan.FromMilliseconds(20000),
+        public static gaxgrpc::BackoffSettings GetDefaultTimeoutBackoff() => new gaxgrpc::BackoffSettings(
+            delay: s::TimeSpan.FromMilliseconds(20000),
+            maxDelay: s::TimeSpan.FromMilliseconds(20000),
             delayMultiplier: 1.0
         );
 
@@ -147,9 +147,9 @@ namespace Google.Cloud.Firestore.V1Beta1
         /// <item><description>Delay multiplier: 1.3</description></item>
         /// </list>
         /// </remarks>
-        public static BackoffSettings GetStreamingRetryBackoff() => new BackoffSettings(
-            delay: TimeSpan.FromMilliseconds(100),
-            maxDelay: TimeSpan.FromMilliseconds(60000),
+        public static gaxgrpc::BackoffSettings GetStreamingRetryBackoff() => new gaxgrpc::BackoffSettings(
+            delay: s::TimeSpan.FromMilliseconds(100),
+            maxDelay: s::TimeSpan.FromMilliseconds(60000),
             delayMultiplier: 1.3
         );
 
@@ -167,19 +167,19 @@ namespace Google.Cloud.Firestore.V1Beta1
         /// <item><description>Maximum timeout: 300000 milliseconds</description></item>
         /// </list>
         /// </remarks>
-        public static BackoffSettings GetStreamingTimeoutBackoff() => new BackoffSettings(
-            delay: TimeSpan.FromMilliseconds(300000),
-            maxDelay: TimeSpan.FromMilliseconds(300000),
+        public static gaxgrpc::BackoffSettings GetStreamingTimeoutBackoff() => new gaxgrpc::BackoffSettings(
+            delay: s::TimeSpan.FromMilliseconds(300000),
+            maxDelay: s::TimeSpan.FromMilliseconds(300000),
             delayMultiplier: 1.0
         );
 
         /// <summary>
-        /// <see cref="CallSettings"/> for synchronous and asynchronous calls to
+        /// <see cref="gaxgrpc::CallSettings"/> for synchronous and asynchronous calls to
         /// <c>FirestoreClient.GetDocument</c> and <c>FirestoreClient.GetDocumentAsync</c>.
         /// </summary>
         /// <remarks>
         /// The default <c>FirestoreClient.GetDocument</c> and
-        /// <c>FirestoreClient.GetDocumentAsync</c> <see cref="RetrySettings"/> are:
+        /// <c>FirestoreClient.GetDocumentAsync</c> <see cref="gaxgrpc::RetrySettings"/> are:
         /// <list type="bullet">
         /// <item><description>Initial retry delay: 100 milliseconds</description></item>
         /// <item><description>Retry delay multiplier: 1.3</description></item>
@@ -190,26 +190,26 @@ namespace Google.Cloud.Firestore.V1Beta1
         /// </list>
         /// Retry will be attempted on the following response status codes:
         /// <list>
-        /// <item><description><see cref="StatusCode.DeadlineExceeded"/></description></item>
-        /// <item><description><see cref="StatusCode.Unavailable"/></description></item>
+        /// <item><description><see cref="grpccore::StatusCode.DeadlineExceeded"/></description></item>
+        /// <item><description><see cref="grpccore::StatusCode.Unavailable"/></description></item>
         /// </list>
         /// Default RPC expiration is 600000 milliseconds.
         /// </remarks>
-        public CallSettings GetDocumentSettings { get; set; } = CallSettings.FromCallTiming(
-            CallTiming.FromRetry(new RetrySettings(
+        public gaxgrpc::CallSettings GetDocumentSettings { get; set; } = gaxgrpc::CallSettings.FromCallTiming(
+            gaxgrpc::CallTiming.FromRetry(new gaxgrpc::RetrySettings(
                 retryBackoff: GetDefaultRetryBackoff(),
                 timeoutBackoff: GetDefaultTimeoutBackoff(),
-                totalExpiration: Expiration.FromTimeout(TimeSpan.FromMilliseconds(600000)),
+                totalExpiration: gax::Expiration.FromTimeout(s::TimeSpan.FromMilliseconds(600000)),
                 retryFilter: IdempotentRetryFilter
             )));
 
         /// <summary>
-        /// <see cref="CallSettings"/> for synchronous and asynchronous calls to
+        /// <see cref="gaxgrpc::CallSettings"/> for synchronous and asynchronous calls to
         /// <c>FirestoreClient.ListDocuments</c> and <c>FirestoreClient.ListDocumentsAsync</c>.
         /// </summary>
         /// <remarks>
         /// The default <c>FirestoreClient.ListDocuments</c> and
-        /// <c>FirestoreClient.ListDocumentsAsync</c> <see cref="RetrySettings"/> are:
+        /// <c>FirestoreClient.ListDocumentsAsync</c> <see cref="gaxgrpc::RetrySettings"/> are:
         /// <list type="bullet">
         /// <item><description>Initial retry delay: 100 milliseconds</description></item>
         /// <item><description>Retry delay multiplier: 1.3</description></item>
@@ -220,26 +220,26 @@ namespace Google.Cloud.Firestore.V1Beta1
         /// </list>
         /// Retry will be attempted on the following response status codes:
         /// <list>
-        /// <item><description><see cref="StatusCode.DeadlineExceeded"/></description></item>
-        /// <item><description><see cref="StatusCode.Unavailable"/></description></item>
+        /// <item><description><see cref="grpccore::StatusCode.DeadlineExceeded"/></description></item>
+        /// <item><description><see cref="grpccore::StatusCode.Unavailable"/></description></item>
         /// </list>
         /// Default RPC expiration is 600000 milliseconds.
         /// </remarks>
-        public CallSettings ListDocumentsSettings { get; set; } = CallSettings.FromCallTiming(
-            CallTiming.FromRetry(new RetrySettings(
+        public gaxgrpc::CallSettings ListDocumentsSettings { get; set; } = gaxgrpc::CallSettings.FromCallTiming(
+            gaxgrpc::CallTiming.FromRetry(new gaxgrpc::RetrySettings(
                 retryBackoff: GetDefaultRetryBackoff(),
                 timeoutBackoff: GetDefaultTimeoutBackoff(),
-                totalExpiration: Expiration.FromTimeout(TimeSpan.FromMilliseconds(600000)),
+                totalExpiration: gax::Expiration.FromTimeout(s::TimeSpan.FromMilliseconds(600000)),
                 retryFilter: IdempotentRetryFilter
             )));
 
         /// <summary>
-        /// <see cref="CallSettings"/> for synchronous and asynchronous calls to
+        /// <see cref="gaxgrpc::CallSettings"/> for synchronous and asynchronous calls to
         /// <c>FirestoreClient.CreateDocument</c> and <c>FirestoreClient.CreateDocumentAsync</c>.
         /// </summary>
         /// <remarks>
         /// The default <c>FirestoreClient.CreateDocument</c> and
-        /// <c>FirestoreClient.CreateDocumentAsync</c> <see cref="RetrySettings"/> are:
+        /// <c>FirestoreClient.CreateDocumentAsync</c> <see cref="gaxgrpc::RetrySettings"/> are:
         /// <list type="bullet">
         /// <item><description>Initial retry delay: 100 milliseconds</description></item>
         /// <item><description>Retry delay multiplier: 1.3</description></item>
@@ -254,21 +254,21 @@ namespace Google.Cloud.Firestore.V1Beta1
         /// </list>
         /// Default RPC expiration is 600000 milliseconds.
         /// </remarks>
-        public CallSettings CreateDocumentSettings { get; set; } = CallSettings.FromCallTiming(
-            CallTiming.FromRetry(new RetrySettings(
+        public gaxgrpc::CallSettings CreateDocumentSettings { get; set; } = gaxgrpc::CallSettings.FromCallTiming(
+            gaxgrpc::CallTiming.FromRetry(new gaxgrpc::RetrySettings(
                 retryBackoff: GetDefaultRetryBackoff(),
                 timeoutBackoff: GetDefaultTimeoutBackoff(),
-                totalExpiration: Expiration.FromTimeout(TimeSpan.FromMilliseconds(600000)),
+                totalExpiration: gax::Expiration.FromTimeout(s::TimeSpan.FromMilliseconds(600000)),
                 retryFilter: NonIdempotentRetryFilter
             )));
 
         /// <summary>
-        /// <see cref="CallSettings"/> for synchronous and asynchronous calls to
+        /// <see cref="gaxgrpc::CallSettings"/> for synchronous and asynchronous calls to
         /// <c>FirestoreClient.UpdateDocument</c> and <c>FirestoreClient.UpdateDocumentAsync</c>.
         /// </summary>
         /// <remarks>
         /// The default <c>FirestoreClient.UpdateDocument</c> and
-        /// <c>FirestoreClient.UpdateDocumentAsync</c> <see cref="RetrySettings"/> are:
+        /// <c>FirestoreClient.UpdateDocumentAsync</c> <see cref="gaxgrpc::RetrySettings"/> are:
         /// <list type="bullet">
         /// <item><description>Initial retry delay: 100 milliseconds</description></item>
         /// <item><description>Retry delay multiplier: 1.3</description></item>
@@ -283,21 +283,21 @@ namespace Google.Cloud.Firestore.V1Beta1
         /// </list>
         /// Default RPC expiration is 600000 milliseconds.
         /// </remarks>
-        public CallSettings UpdateDocumentSettings { get; set; } = CallSettings.FromCallTiming(
-            CallTiming.FromRetry(new RetrySettings(
+        public gaxgrpc::CallSettings UpdateDocumentSettings { get; set; } = gaxgrpc::CallSettings.FromCallTiming(
+            gaxgrpc::CallTiming.FromRetry(new gaxgrpc::RetrySettings(
                 retryBackoff: GetDefaultRetryBackoff(),
                 timeoutBackoff: GetDefaultTimeoutBackoff(),
-                totalExpiration: Expiration.FromTimeout(TimeSpan.FromMilliseconds(600000)),
+                totalExpiration: gax::Expiration.FromTimeout(s::TimeSpan.FromMilliseconds(600000)),
                 retryFilter: NonIdempotentRetryFilter
             )));
 
         /// <summary>
-        /// <see cref="CallSettings"/> for synchronous and asynchronous calls to
+        /// <see cref="gaxgrpc::CallSettings"/> for synchronous and asynchronous calls to
         /// <c>FirestoreClient.DeleteDocument</c> and <c>FirestoreClient.DeleteDocumentAsync</c>.
         /// </summary>
         /// <remarks>
         /// The default <c>FirestoreClient.DeleteDocument</c> and
-        /// <c>FirestoreClient.DeleteDocumentAsync</c> <see cref="RetrySettings"/> are:
+        /// <c>FirestoreClient.DeleteDocumentAsync</c> <see cref="gaxgrpc::RetrySettings"/> are:
         /// <list type="bullet">
         /// <item><description>Initial retry delay: 100 milliseconds</description></item>
         /// <item><description>Retry delay multiplier: 1.3</description></item>
@@ -308,35 +308,35 @@ namespace Google.Cloud.Firestore.V1Beta1
         /// </list>
         /// Retry will be attempted on the following response status codes:
         /// <list>
-        /// <item><description><see cref="StatusCode.DeadlineExceeded"/></description></item>
-        /// <item><description><see cref="StatusCode.Unavailable"/></description></item>
+        /// <item><description><see cref="grpccore::StatusCode.DeadlineExceeded"/></description></item>
+        /// <item><description><see cref="grpccore::StatusCode.Unavailable"/></description></item>
         /// </list>
         /// Default RPC expiration is 600000 milliseconds.
         /// </remarks>
-        public CallSettings DeleteDocumentSettings { get; set; } = CallSettings.FromCallTiming(
-            CallTiming.FromRetry(new RetrySettings(
+        public gaxgrpc::CallSettings DeleteDocumentSettings { get; set; } = gaxgrpc::CallSettings.FromCallTiming(
+            gaxgrpc::CallTiming.FromRetry(new gaxgrpc::RetrySettings(
                 retryBackoff: GetDefaultRetryBackoff(),
                 timeoutBackoff: GetDefaultTimeoutBackoff(),
-                totalExpiration: Expiration.FromTimeout(TimeSpan.FromMilliseconds(600000)),
+                totalExpiration: gax::Expiration.FromTimeout(s::TimeSpan.FromMilliseconds(600000)),
                 retryFilter: IdempotentRetryFilter
             )));
 
         /// <summary>
-        /// <see cref="CallSettings"/> for calls to <c>FirestoreClient.BatchGetDocuments</c>.
+        /// <see cref="gaxgrpc::CallSettings"/> for calls to <c>FirestoreClient.BatchGetDocuments</c>.
         /// </summary>
         /// <remarks>
         /// Default RPC expiration is 600000 milliseconds.
         /// </remarks>
-        public CallSettings BatchGetDocumentsSettings { get; set; } = CallSettings.FromCallTiming(
-            CallTiming.FromTimeout(TimeSpan.FromMilliseconds(600000)));
+        public gaxgrpc::CallSettings BatchGetDocumentsSettings { get; set; } = gaxgrpc::CallSettings.FromCallTiming(
+            gaxgrpc::CallTiming.FromTimeout(s::TimeSpan.FromMilliseconds(600000)));
 
         /// <summary>
-        /// <see cref="CallSettings"/> for synchronous and asynchronous calls to
+        /// <see cref="gaxgrpc::CallSettings"/> for synchronous and asynchronous calls to
         /// <c>FirestoreClient.BeginTransaction</c> and <c>FirestoreClient.BeginTransactionAsync</c>.
         /// </summary>
         /// <remarks>
         /// The default <c>FirestoreClient.BeginTransaction</c> and
-        /// <c>FirestoreClient.BeginTransactionAsync</c> <see cref="RetrySettings"/> are:
+        /// <c>FirestoreClient.BeginTransactionAsync</c> <see cref="gaxgrpc::RetrySettings"/> are:
         /// <list type="bullet">
         /// <item><description>Initial retry delay: 100 milliseconds</description></item>
         /// <item><description>Retry delay multiplier: 1.3</description></item>
@@ -347,26 +347,26 @@ namespace Google.Cloud.Firestore.V1Beta1
         /// </list>
         /// Retry will be attempted on the following response status codes:
         /// <list>
-        /// <item><description><see cref="StatusCode.DeadlineExceeded"/></description></item>
-        /// <item><description><see cref="StatusCode.Unavailable"/></description></item>
+        /// <item><description><see cref="grpccore::StatusCode.DeadlineExceeded"/></description></item>
+        /// <item><description><see cref="grpccore::StatusCode.Unavailable"/></description></item>
         /// </list>
         /// Default RPC expiration is 600000 milliseconds.
         /// </remarks>
-        public CallSettings BeginTransactionSettings { get; set; } = CallSettings.FromCallTiming(
-            CallTiming.FromRetry(new RetrySettings(
+        public gaxgrpc::CallSettings BeginTransactionSettings { get; set; } = gaxgrpc::CallSettings.FromCallTiming(
+            gaxgrpc::CallTiming.FromRetry(new gaxgrpc::RetrySettings(
                 retryBackoff: GetDefaultRetryBackoff(),
                 timeoutBackoff: GetDefaultTimeoutBackoff(),
-                totalExpiration: Expiration.FromTimeout(TimeSpan.FromMilliseconds(600000)),
+                totalExpiration: gax::Expiration.FromTimeout(s::TimeSpan.FromMilliseconds(600000)),
                 retryFilter: IdempotentRetryFilter
             )));
 
         /// <summary>
-        /// <see cref="CallSettings"/> for synchronous and asynchronous calls to
+        /// <see cref="gaxgrpc::CallSettings"/> for synchronous and asynchronous calls to
         /// <c>FirestoreClient.Commit</c> and <c>FirestoreClient.CommitAsync</c>.
         /// </summary>
         /// <remarks>
         /// The default <c>FirestoreClient.Commit</c> and
-        /// <c>FirestoreClient.CommitAsync</c> <see cref="RetrySettings"/> are:
+        /// <c>FirestoreClient.CommitAsync</c> <see cref="gaxgrpc::RetrySettings"/> are:
         /// <list type="bullet">
         /// <item><description>Initial retry delay: 100 milliseconds</description></item>
         /// <item><description>Retry delay multiplier: 1.3</description></item>
@@ -381,21 +381,21 @@ namespace Google.Cloud.Firestore.V1Beta1
         /// </list>
         /// Default RPC expiration is 600000 milliseconds.
         /// </remarks>
-        public CallSettings CommitSettings { get; set; } = CallSettings.FromCallTiming(
-            CallTiming.FromRetry(new RetrySettings(
+        public gaxgrpc::CallSettings CommitSettings { get; set; } = gaxgrpc::CallSettings.FromCallTiming(
+            gaxgrpc::CallTiming.FromRetry(new gaxgrpc::RetrySettings(
                 retryBackoff: GetDefaultRetryBackoff(),
                 timeoutBackoff: GetDefaultTimeoutBackoff(),
-                totalExpiration: Expiration.FromTimeout(TimeSpan.FromMilliseconds(600000)),
+                totalExpiration: gax::Expiration.FromTimeout(s::TimeSpan.FromMilliseconds(600000)),
                 retryFilter: NonIdempotentRetryFilter
             )));
 
         /// <summary>
-        /// <see cref="CallSettings"/> for synchronous and asynchronous calls to
+        /// <see cref="gaxgrpc::CallSettings"/> for synchronous and asynchronous calls to
         /// <c>FirestoreClient.Rollback</c> and <c>FirestoreClient.RollbackAsync</c>.
         /// </summary>
         /// <remarks>
         /// The default <c>FirestoreClient.Rollback</c> and
-        /// <c>FirestoreClient.RollbackAsync</c> <see cref="RetrySettings"/> are:
+        /// <c>FirestoreClient.RollbackAsync</c> <see cref="gaxgrpc::RetrySettings"/> are:
         /// <list type="bullet">
         /// <item><description>Initial retry delay: 100 milliseconds</description></item>
         /// <item><description>Retry delay multiplier: 1.3</description></item>
@@ -406,73 +406,73 @@ namespace Google.Cloud.Firestore.V1Beta1
         /// </list>
         /// Retry will be attempted on the following response status codes:
         /// <list>
-        /// <item><description><see cref="StatusCode.DeadlineExceeded"/></description></item>
-        /// <item><description><see cref="StatusCode.Unavailable"/></description></item>
+        /// <item><description><see cref="grpccore::StatusCode.DeadlineExceeded"/></description></item>
+        /// <item><description><see cref="grpccore::StatusCode.Unavailable"/></description></item>
         /// </list>
         /// Default RPC expiration is 600000 milliseconds.
         /// </remarks>
-        public CallSettings RollbackSettings { get; set; } = CallSettings.FromCallTiming(
-            CallTiming.FromRetry(new RetrySettings(
+        public gaxgrpc::CallSettings RollbackSettings { get; set; } = gaxgrpc::CallSettings.FromCallTiming(
+            gaxgrpc::CallTiming.FromRetry(new gaxgrpc::RetrySettings(
                 retryBackoff: GetDefaultRetryBackoff(),
                 timeoutBackoff: GetDefaultTimeoutBackoff(),
-                totalExpiration: Expiration.FromTimeout(TimeSpan.FromMilliseconds(600000)),
+                totalExpiration: gax::Expiration.FromTimeout(s::TimeSpan.FromMilliseconds(600000)),
                 retryFilter: IdempotentRetryFilter
             )));
 
         /// <summary>
-        /// <see cref="CallSettings"/> for calls to <c>FirestoreClient.RunQuery</c>.
+        /// <see cref="gaxgrpc::CallSettings"/> for calls to <c>FirestoreClient.RunQuery</c>.
         /// </summary>
         /// <remarks>
         /// Default RPC expiration is 600000 milliseconds.
         /// </remarks>
-        public CallSettings RunQuerySettings { get; set; } = CallSettings.FromCallTiming(
-            CallTiming.FromTimeout(TimeSpan.FromMilliseconds(600000)));
+        public gaxgrpc::CallSettings RunQuerySettings { get; set; } = gaxgrpc::CallSettings.FromCallTiming(
+            gaxgrpc::CallTiming.FromTimeout(s::TimeSpan.FromMilliseconds(600000)));
 
         /// <summary>
-        /// <see cref="CallSettings"/> for calls to <c>FirestoreClient.Write</c>.
+        /// <see cref="gaxgrpc::CallSettings"/> for calls to <c>FirestoreClient.Write</c>.
         /// </summary>
         /// <remarks>
         /// Default RPC expiration is 600000 milliseconds.
         /// </remarks>
-        public CallSettings WriteSettings { get; set; } = CallSettings.FromCallTiming(
-            CallTiming.FromTimeout(TimeSpan.FromMilliseconds(600000)));
+        public gaxgrpc::CallSettings WriteSettings { get; set; } = gaxgrpc::CallSettings.FromCallTiming(
+            gaxgrpc::CallTiming.FromTimeout(s::TimeSpan.FromMilliseconds(600000)));
 
         /// <summary>
-        /// <see cref="BidirectionalStreamingSettings"/> for calls to
+        /// <see cref="gaxgrpc::BidirectionalStreamingSettings"/> for calls to
         /// <c>FirestoreClient.Write</c>.
         /// </summary>
         /// <remarks>
         /// The default local send queue size is 100.
         /// </remarks>
-        public BidirectionalStreamingSettings WriteStreamingSettings { get; set; } =
-            new BidirectionalStreamingSettings(100);
+        public gaxgrpc::BidirectionalStreamingSettings WriteStreamingSettings { get; set; } =
+            new gaxgrpc::BidirectionalStreamingSettings(100);
 
         /// <summary>
-        /// <see cref="CallSettings"/> for calls to <c>FirestoreClient.Listen</c>.
+        /// <see cref="gaxgrpc::CallSettings"/> for calls to <c>FirestoreClient.Listen</c>.
         /// </summary>
         /// <remarks>
         /// Default RPC expiration is 600000 milliseconds.
         /// </remarks>
-        public CallSettings ListenSettings { get; set; } = CallSettings.FromCallTiming(
-            CallTiming.FromTimeout(TimeSpan.FromMilliseconds(600000)));
+        public gaxgrpc::CallSettings ListenSettings { get; set; } = gaxgrpc::CallSettings.FromCallTiming(
+            gaxgrpc::CallTiming.FromTimeout(s::TimeSpan.FromMilliseconds(600000)));
 
         /// <summary>
-        /// <see cref="BidirectionalStreamingSettings"/> for calls to
+        /// <see cref="gaxgrpc::BidirectionalStreamingSettings"/> for calls to
         /// <c>FirestoreClient.Listen</c>.
         /// </summary>
         /// <remarks>
         /// The default local send queue size is 100.
         /// </remarks>
-        public BidirectionalStreamingSettings ListenStreamingSettings { get; set; } =
-            new BidirectionalStreamingSettings(100);
+        public gaxgrpc::BidirectionalStreamingSettings ListenStreamingSettings { get; set; } =
+            new gaxgrpc::BidirectionalStreamingSettings(100);
 
         /// <summary>
-        /// <see cref="CallSettings"/> for synchronous and asynchronous calls to
+        /// <see cref="gaxgrpc::CallSettings"/> for synchronous and asynchronous calls to
         /// <c>FirestoreClient.ListCollectionIds</c> and <c>FirestoreClient.ListCollectionIdsAsync</c>.
         /// </summary>
         /// <remarks>
         /// The default <c>FirestoreClient.ListCollectionIds</c> and
-        /// <c>FirestoreClient.ListCollectionIdsAsync</c> <see cref="RetrySettings"/> are:
+        /// <c>FirestoreClient.ListCollectionIdsAsync</c> <see cref="gaxgrpc::RetrySettings"/> are:
         /// <list type="bullet">
         /// <item><description>Initial retry delay: 100 milliseconds</description></item>
         /// <item><description>Retry delay multiplier: 1.3</description></item>
@@ -483,16 +483,16 @@ namespace Google.Cloud.Firestore.V1Beta1
         /// </list>
         /// Retry will be attempted on the following response status codes:
         /// <list>
-        /// <item><description><see cref="StatusCode.DeadlineExceeded"/></description></item>
-        /// <item><description><see cref="StatusCode.Unavailable"/></description></item>
+        /// <item><description><see cref="grpccore::StatusCode.DeadlineExceeded"/></description></item>
+        /// <item><description><see cref="grpccore::StatusCode.Unavailable"/></description></item>
         /// </list>
         /// Default RPC expiration is 600000 milliseconds.
         /// </remarks>
-        public CallSettings ListCollectionIdsSettings { get; set; } = CallSettings.FromCallTiming(
-            CallTiming.FromRetry(new RetrySettings(
+        public gaxgrpc::CallSettings ListCollectionIdsSettings { get; set; } = gaxgrpc::CallSettings.FromCallTiming(
+            gaxgrpc::CallTiming.FromRetry(new gaxgrpc::RetrySettings(
                 retryBackoff: GetDefaultRetryBackoff(),
                 timeoutBackoff: GetDefaultTimeoutBackoff(),
-                totalExpiration: Expiration.FromTimeout(TimeSpan.FromMilliseconds(600000)),
+                totalExpiration: gax::Expiration.FromTimeout(s::TimeSpan.FromMilliseconds(600000)),
                 retryFilter: IdempotentRetryFilter
             )));
 
@@ -511,7 +511,7 @@ namespace Google.Cloud.Firestore.V1Beta1
         /// <summary>
         /// The default endpoint for the Firestore service, which is a host of "firestore.googleapis.com" and a port of 443.
         /// </summary>
-        public static ServiceEndpoint DefaultEndpoint { get; } = new ServiceEndpoint("firestore.googleapis.com", 443);
+        public static gaxgrpc::ServiceEndpoint DefaultEndpoint { get; } = new gaxgrpc::ServiceEndpoint("firestore.googleapis.com", 443);
 
         /// <summary>
         /// The default Firestore scopes.
@@ -523,12 +523,12 @@ namespace Google.Cloud.Firestore.V1Beta1
         /// <item><description>"https://www.googleapis.com/auth/datastore"</description></item>
         /// </list>
         /// </remarks>
-        public static IReadOnlyList<string> DefaultScopes { get; } = new ReadOnlyCollection<string>(new string[] {
+        public static scg::IReadOnlyList<string> DefaultScopes { get; } = new sco::ReadOnlyCollection<string>(new string[] {
             "https://www.googleapis.com/auth/cloud-platform",
             "https://www.googleapis.com/auth/datastore",
         });
 
-        private static readonly ChannelPool s_channelPool = new ChannelPool(DefaultScopes);
+        private static readonly gaxgrpc::ChannelPool s_channelPool = new gaxgrpc::ChannelPool(DefaultScopes);
 
         // Note: we could have parameterless overloads of Create and CreateAsync,
         // documented to just use the default endpoint, settings and credentials.
@@ -542,12 +542,12 @@ namespace Google.Cloud.Firestore.V1Beta1
         /// and creating a channel connecting to the given endpoint with application default credentials where
         /// necessary.
         /// </summary>
-        /// <param name="endpoint">Optional <see cref="ServiceEndpoint"/>.</param>
+        /// <param name="endpoint">Optional <see cref="gaxgrpc::ServiceEndpoint"/>.</param>
         /// <param name="settings">Optional <see cref="FirestoreSettings"/>.</param>
         /// <returns>The task representing the created <see cref="FirestoreClient"/>.</returns>
-        public static async Task<FirestoreClient> CreateAsync(ServiceEndpoint endpoint = null, FirestoreSettings settings = null)
+        public static async stt::Task<FirestoreClient> CreateAsync(gaxgrpc::ServiceEndpoint endpoint = null, FirestoreSettings settings = null)
         {
-            Channel channel = await s_channelPool.GetChannelAsync(endpoint ?? DefaultEndpoint).ConfigureAwait(false);
+            grpccore::Channel channel = await s_channelPool.GetChannelAsync(endpoint ?? DefaultEndpoint).ConfigureAwait(false);
             return Create(channel, settings);
         }
 
@@ -556,45 +556,45 @@ namespace Google.Cloud.Firestore.V1Beta1
         /// and creating a channel connecting to the given endpoint with application default credentials where
         /// necessary.
         /// </summary>
-        /// <param name="endpoint">Optional <see cref="ServiceEndpoint"/>.</param>
+        /// <param name="endpoint">Optional <see cref="gaxgrpc::ServiceEndpoint"/>.</param>
         /// <param name="settings">Optional <see cref="FirestoreSettings"/>.</param>
         /// <returns>The created <see cref="FirestoreClient"/>.</returns>
-        public static FirestoreClient Create(ServiceEndpoint endpoint = null, FirestoreSettings settings = null)
+        public static FirestoreClient Create(gaxgrpc::ServiceEndpoint endpoint = null, FirestoreSettings settings = null)
         {
-            Channel channel = s_channelPool.GetChannel(endpoint ?? DefaultEndpoint);
+            grpccore::Channel channel = s_channelPool.GetChannel(endpoint ?? DefaultEndpoint);
             return Create(channel, settings);
         }
 
         /// <summary>
         /// Creates a <see cref="FirestoreClient"/> which uses the specified channel for remote operations.
         /// </summary>
-        /// <param name="channel">The <see cref="Channel"/> for remote operations. Must not be null.</param>
+        /// <param name="channel">The <see cref="grpccore::Channel"/> for remote operations. Must not be null.</param>
         /// <param name="settings">Optional <see cref="FirestoreSettings"/>.</param>
         /// <returns>The created <see cref="FirestoreClient"/>.</returns>
-        public static FirestoreClient Create(Channel channel, FirestoreSettings settings = null)
+        public static FirestoreClient Create(grpccore::Channel channel, FirestoreSettings settings = null)
         {
-            GaxPreconditions.CheckNotNull(channel, nameof(channel));
+            gax::GaxPreconditions.CheckNotNull(channel, nameof(channel));
             Firestore.FirestoreClient grpcClient = new Firestore.FirestoreClient(channel);
             return new FirestoreClientImpl(grpcClient, settings);
         }
 
         /// <summary>
-        /// Shuts down any channels automatically created by <see cref="Create(ServiceEndpoint, FirestoreSettings)"/>
-        /// and <see cref="CreateAsync(ServiceEndpoint, FirestoreSettings)"/>. Channels which weren't automatically
+        /// Shuts down any channels automatically created by <see cref="Create(gaxgrpc::ServiceEndpoint, FirestoreSettings)"/>
+        /// and <see cref="CreateAsync(gaxgrpc::ServiceEndpoint, FirestoreSettings)"/>. Channels which weren't automatically
         /// created are not affected.
         /// </summary>
-        /// <remarks>After calling this method, further calls to <see cref="Create(ServiceEndpoint, FirestoreSettings)"/>
-        /// and <see cref="CreateAsync(ServiceEndpoint, FirestoreSettings)"/> will create new channels, which could
+        /// <remarks>After calling this method, further calls to <see cref="Create(gaxgrpc::ServiceEndpoint, FirestoreSettings)"/>
+        /// and <see cref="CreateAsync(gaxgrpc::ServiceEndpoint, FirestoreSettings)"/> will create new channels, which could
         /// in turn be shut down by another call to this method.</remarks>
         /// <returns>A task representing the asynchronous shutdown operation.</returns>
-        public static Task ShutdownDefaultChannelsAsync() => s_channelPool.ShutdownChannelsAsync();
+        public static stt::Task ShutdownDefaultChannelsAsync() => s_channelPool.ShutdownChannelsAsync();
 
         /// <summary>
         /// The underlying gRPC Firestore client.
         /// </summary>
         public virtual Firestore.FirestoreClient GrpcClient
         {
-            get { throw new NotImplementedException(); }
+            get { throw new s::NotImplementedException(); }
         }
 
         /// <summary>
@@ -609,11 +609,11 @@ namespace Google.Cloud.Firestore.V1Beta1
         /// <returns>
         /// A Task containing the RPC response.
         /// </returns>
-        public virtual Task<Document> GetDocumentAsync(
+        public virtual stt::Task<Document> GetDocumentAsync(
             GetDocumentRequest request,
-            CallSettings callSettings = null)
+            gaxgrpc::CallSettings callSettings = null)
         {
-            throw new NotImplementedException();
+            throw new s::NotImplementedException();
         }
 
         /// <summary>
@@ -623,16 +623,16 @@ namespace Google.Cloud.Firestore.V1Beta1
         /// The request object containing all of the parameters for the API call.
         /// </param>
         /// <param name="cancellationToken">
-        /// A <see cref="CancellationToken"/> to use for this RPC.
+        /// A <see cref="st::CancellationToken"/> to use for this RPC.
         /// </param>
         /// <returns>
         /// A Task containing the RPC response.
         /// </returns>
-        public virtual Task<Document> GetDocumentAsync(
+        public virtual stt::Task<Document> GetDocumentAsync(
             GetDocumentRequest request,
-            CancellationToken cancellationToken) => GetDocumentAsync(
+            st::CancellationToken cancellationToken) => GetDocumentAsync(
                 request,
-                CallSettings.FromCancellationToken(cancellationToken));
+                gaxgrpc::CallSettings.FromCancellationToken(cancellationToken));
 
         /// <summary>
         /// Gets a single document.
@@ -648,9 +648,9 @@ namespace Google.Cloud.Firestore.V1Beta1
         /// </returns>
         public virtual Document GetDocument(
             GetDocumentRequest request,
-            CallSettings callSettings = null)
+            gaxgrpc::CallSettings callSettings = null)
         {
-            throw new NotImplementedException();
+            throw new s::NotImplementedException();
         }
 
         /// <summary>
@@ -665,11 +665,11 @@ namespace Google.Cloud.Firestore.V1Beta1
         /// <returns>
         /// A pageable asynchronous sequence of <see cref="Document"/> resources.
         /// </returns>
-        public virtual PagedAsyncEnumerable<ListDocumentsResponse, Document> ListDocumentsAsync(
+        public virtual gax::PagedAsyncEnumerable<ListDocumentsResponse, Document> ListDocumentsAsync(
             ListDocumentsRequest request,
-            CallSettings callSettings = null)
+            gaxgrpc::CallSettings callSettings = null)
         {
-            throw new NotImplementedException();
+            throw new s::NotImplementedException();
         }
 
         /// <summary>
@@ -684,11 +684,11 @@ namespace Google.Cloud.Firestore.V1Beta1
         /// <returns>
         /// A pageable sequence of <see cref="Document"/> resources.
         /// </returns>
-        public virtual PagedEnumerable<ListDocumentsResponse, Document> ListDocuments(
+        public virtual gax::PagedEnumerable<ListDocumentsResponse, Document> ListDocuments(
             ListDocumentsRequest request,
-            CallSettings callSettings = null)
+            gaxgrpc::CallSettings callSettings = null)
         {
-            throw new NotImplementedException();
+            throw new s::NotImplementedException();
         }
 
         /// <summary>
@@ -703,11 +703,11 @@ namespace Google.Cloud.Firestore.V1Beta1
         /// <returns>
         /// A Task containing the RPC response.
         /// </returns>
-        public virtual Task<Document> CreateDocumentAsync(
+        public virtual stt::Task<Document> CreateDocumentAsync(
             CreateDocumentRequest request,
-            CallSettings callSettings = null)
+            gaxgrpc::CallSettings callSettings = null)
         {
-            throw new NotImplementedException();
+            throw new s::NotImplementedException();
         }
 
         /// <summary>
@@ -717,16 +717,16 @@ namespace Google.Cloud.Firestore.V1Beta1
         /// The request object containing all of the parameters for the API call.
         /// </param>
         /// <param name="cancellationToken">
-        /// A <see cref="CancellationToken"/> to use for this RPC.
+        /// A <see cref="st::CancellationToken"/> to use for this RPC.
         /// </param>
         /// <returns>
         /// A Task containing the RPC response.
         /// </returns>
-        public virtual Task<Document> CreateDocumentAsync(
+        public virtual stt::Task<Document> CreateDocumentAsync(
             CreateDocumentRequest request,
-            CancellationToken cancellationToken) => CreateDocumentAsync(
+            st::CancellationToken cancellationToken) => CreateDocumentAsync(
                 request,
-                CallSettings.FromCancellationToken(cancellationToken));
+                gaxgrpc::CallSettings.FromCancellationToken(cancellationToken));
 
         /// <summary>
         /// Creates a new document.
@@ -742,9 +742,9 @@ namespace Google.Cloud.Firestore.V1Beta1
         /// </returns>
         public virtual Document CreateDocument(
             CreateDocumentRequest request,
-            CallSettings callSettings = null)
+            gaxgrpc::CallSettings callSettings = null)
         {
-            throw new NotImplementedException();
+            throw new s::NotImplementedException();
         }
 
         /// <summary>
@@ -769,14 +769,14 @@ namespace Google.Cloud.Firestore.V1Beta1
         /// <returns>
         /// A Task containing the RPC response.
         /// </returns>
-        public virtual Task<Document> UpdateDocumentAsync(
+        public virtual stt::Task<Document> UpdateDocumentAsync(
             Document document,
             DocumentMask updateMask,
-            CallSettings callSettings = null) => UpdateDocumentAsync(
+            gaxgrpc::CallSettings callSettings = null) => UpdateDocumentAsync(
                 new UpdateDocumentRequest
                 {
-                    Document = GaxPreconditions.CheckNotNull(document, nameof(document)),
-                    UpdateMask = GaxPreconditions.CheckNotNull(updateMask, nameof(updateMask)),
+                    Document = gax::GaxPreconditions.CheckNotNull(document, nameof(document)),
+                    UpdateMask = gax::GaxPreconditions.CheckNotNull(updateMask, nameof(updateMask)),
                 },
                 callSettings);
 
@@ -797,18 +797,18 @@ namespace Google.Cloud.Firestore.V1Beta1
         /// deleted from the document on the server.
         /// </param>
         /// <param name="cancellationToken">
-        /// A <see cref="CancellationToken"/> to use for this RPC.
+        /// A <see cref="st::CancellationToken"/> to use for this RPC.
         /// </param>
         /// <returns>
         /// A Task containing the RPC response.
         /// </returns>
-        public virtual Task<Document> UpdateDocumentAsync(
+        public virtual stt::Task<Document> UpdateDocumentAsync(
             Document document,
             DocumentMask updateMask,
-            CancellationToken cancellationToken) => UpdateDocumentAsync(
+            st::CancellationToken cancellationToken) => UpdateDocumentAsync(
                 document,
                 updateMask,
-                CallSettings.FromCancellationToken(cancellationToken));
+                gaxgrpc::CallSettings.FromCancellationToken(cancellationToken));
 
         /// <summary>
         /// Updates or inserts a document.
@@ -835,11 +835,11 @@ namespace Google.Cloud.Firestore.V1Beta1
         public virtual Document UpdateDocument(
             Document document,
             DocumentMask updateMask,
-            CallSettings callSettings = null) => UpdateDocument(
+            gaxgrpc::CallSettings callSettings = null) => UpdateDocument(
                 new UpdateDocumentRequest
                 {
-                    Document = GaxPreconditions.CheckNotNull(document, nameof(document)),
-                    UpdateMask = GaxPreconditions.CheckNotNull(updateMask, nameof(updateMask)),
+                    Document = gax::GaxPreconditions.CheckNotNull(document, nameof(document)),
+                    UpdateMask = gax::GaxPreconditions.CheckNotNull(updateMask, nameof(updateMask)),
                 },
                 callSettings);
 
@@ -855,11 +855,11 @@ namespace Google.Cloud.Firestore.V1Beta1
         /// <returns>
         /// A Task containing the RPC response.
         /// </returns>
-        public virtual Task<Document> UpdateDocumentAsync(
+        public virtual stt::Task<Document> UpdateDocumentAsync(
             UpdateDocumentRequest request,
-            CallSettings callSettings = null)
+            gaxgrpc::CallSettings callSettings = null)
         {
-            throw new NotImplementedException();
+            throw new s::NotImplementedException();
         }
 
         /// <summary>
@@ -869,16 +869,16 @@ namespace Google.Cloud.Firestore.V1Beta1
         /// The request object containing all of the parameters for the API call.
         /// </param>
         /// <param name="cancellationToken">
-        /// A <see cref="CancellationToken"/> to use for this RPC.
+        /// A <see cref="st::CancellationToken"/> to use for this RPC.
         /// </param>
         /// <returns>
         /// A Task containing the RPC response.
         /// </returns>
-        public virtual Task<Document> UpdateDocumentAsync(
+        public virtual stt::Task<Document> UpdateDocumentAsync(
             UpdateDocumentRequest request,
-            CancellationToken cancellationToken) => UpdateDocumentAsync(
+            st::CancellationToken cancellationToken) => UpdateDocumentAsync(
                 request,
-                CallSettings.FromCancellationToken(cancellationToken));
+                gaxgrpc::CallSettings.FromCancellationToken(cancellationToken));
 
         /// <summary>
         /// Updates or inserts a document.
@@ -894,9 +894,9 @@ namespace Google.Cloud.Firestore.V1Beta1
         /// </returns>
         public virtual Document UpdateDocument(
             UpdateDocumentRequest request,
-            CallSettings callSettings = null)
+            gaxgrpc::CallSettings callSettings = null)
         {
-            throw new NotImplementedException();
+            throw new s::NotImplementedException();
         }
 
         /// <summary>
@@ -912,12 +912,12 @@ namespace Google.Cloud.Firestore.V1Beta1
         /// <returns>
         /// A Task that completes when the RPC has completed.
         /// </returns>
-        public virtual Task DeleteDocumentAsync(
+        public virtual stt::Task DeleteDocumentAsync(
             string name,
-            CallSettings callSettings = null) => DeleteDocumentAsync(
+            gaxgrpc::CallSettings callSettings = null) => DeleteDocumentAsync(
                 new DeleteDocumentRequest
                 {
-                    Name = GaxPreconditions.CheckNotNullOrEmpty(name, nameof(name)),
+                    Name = gax::GaxPreconditions.CheckNotNullOrEmpty(name, nameof(name)),
                 },
                 callSettings);
 
@@ -929,16 +929,16 @@ namespace Google.Cloud.Firestore.V1Beta1
         /// `projects/{project_id}/databases/{database_id}/documents/{document_path}`.
         /// </param>
         /// <param name="cancellationToken">
-        /// A <see cref="CancellationToken"/> to use for this RPC.
+        /// A <see cref="st::CancellationToken"/> to use for this RPC.
         /// </param>
         /// <returns>
         /// A Task that completes when the RPC has completed.
         /// </returns>
-        public virtual Task DeleteDocumentAsync(
+        public virtual stt::Task DeleteDocumentAsync(
             string name,
-            CancellationToken cancellationToken) => DeleteDocumentAsync(
+            st::CancellationToken cancellationToken) => DeleteDocumentAsync(
                 name,
-                CallSettings.FromCancellationToken(cancellationToken));
+                gaxgrpc::CallSettings.FromCancellationToken(cancellationToken));
 
         /// <summary>
         /// Deletes a document.
@@ -952,10 +952,10 @@ namespace Google.Cloud.Firestore.V1Beta1
         /// </param>
         public virtual void DeleteDocument(
             string name,
-            CallSettings callSettings = null) => DeleteDocument(
+            gaxgrpc::CallSettings callSettings = null) => DeleteDocument(
                 new DeleteDocumentRequest
                 {
-                    Name = GaxPreconditions.CheckNotNullOrEmpty(name, nameof(name)),
+                    Name = gax::GaxPreconditions.CheckNotNullOrEmpty(name, nameof(name)),
                 },
                 callSettings);
 
@@ -971,11 +971,11 @@ namespace Google.Cloud.Firestore.V1Beta1
         /// <returns>
         /// A Task that completes when the RPC has completed.
         /// </returns>
-        public virtual Task DeleteDocumentAsync(
+        public virtual stt::Task DeleteDocumentAsync(
             DeleteDocumentRequest request,
-            CallSettings callSettings = null)
+            gaxgrpc::CallSettings callSettings = null)
         {
-            throw new NotImplementedException();
+            throw new s::NotImplementedException();
         }
 
         /// <summary>
@@ -985,16 +985,16 @@ namespace Google.Cloud.Firestore.V1Beta1
         /// The request object containing all of the parameters for the API call.
         /// </param>
         /// <param name="cancellationToken">
-        /// A <see cref="CancellationToken"/> to use for this RPC.
+        /// A <see cref="st::CancellationToken"/> to use for this RPC.
         /// </param>
         /// <returns>
         /// A Task that completes when the RPC has completed.
         /// </returns>
-        public virtual Task DeleteDocumentAsync(
+        public virtual stt::Task DeleteDocumentAsync(
             DeleteDocumentRequest request,
-            CancellationToken cancellationToken) => DeleteDocumentAsync(
+            st::CancellationToken cancellationToken) => DeleteDocumentAsync(
                 request,
-                CallSettings.FromCancellationToken(cancellationToken));
+                gaxgrpc::CallSettings.FromCancellationToken(cancellationToken));
 
         /// <summary>
         /// Deletes a document.
@@ -1007,9 +1007,9 @@ namespace Google.Cloud.Firestore.V1Beta1
         /// </param>
         public virtual void DeleteDocument(
             DeleteDocumentRequest request,
-            CallSettings callSettings = null)
+            gaxgrpc::CallSettings callSettings = null)
         {
-            throw new NotImplementedException();
+            throw new s::NotImplementedException();
         }
 
         /// <summary>
@@ -1029,15 +1029,15 @@ namespace Google.Cloud.Firestore.V1Beta1
         /// </returns>
         public virtual BatchGetDocumentsStream BatchGetDocuments(
             BatchGetDocumentsRequest request,
-            CallSettings callSettings = null)
+            gaxgrpc::CallSettings callSettings = null)
         {
-            throw new NotImplementedException();
+            throw new s::NotImplementedException();
         }
 
         /// <summary>
         /// Server streaming methods for <c>BatchGetDocuments</c>.
         /// </summary>
-        public abstract partial class BatchGetDocumentsStream : ServerStreamingBase<BatchGetDocumentsResponse>
+        public abstract partial class BatchGetDocumentsStream : gaxgrpc::ServerStreamingBase<BatchGetDocumentsResponse>
         {
         }
 
@@ -1054,12 +1054,12 @@ namespace Google.Cloud.Firestore.V1Beta1
         /// <returns>
         /// A Task containing the RPC response.
         /// </returns>
-        public virtual Task<BeginTransactionResponse> BeginTransactionAsync(
+        public virtual stt::Task<BeginTransactionResponse> BeginTransactionAsync(
             string database,
-            CallSettings callSettings = null) => BeginTransactionAsync(
+            gaxgrpc::CallSettings callSettings = null) => BeginTransactionAsync(
                 new BeginTransactionRequest
                 {
-                    Database = GaxPreconditions.CheckNotNullOrEmpty(database, nameof(database)),
+                    Database = gax::GaxPreconditions.CheckNotNullOrEmpty(database, nameof(database)),
                 },
                 callSettings);
 
@@ -1071,16 +1071,16 @@ namespace Google.Cloud.Firestore.V1Beta1
         /// `projects/{project_id}/databases/{database_id}`.
         /// </param>
         /// <param name="cancellationToken">
-        /// A <see cref="CancellationToken"/> to use for this RPC.
+        /// A <see cref="st::CancellationToken"/> to use for this RPC.
         /// </param>
         /// <returns>
         /// A Task containing the RPC response.
         /// </returns>
-        public virtual Task<BeginTransactionResponse> BeginTransactionAsync(
+        public virtual stt::Task<BeginTransactionResponse> BeginTransactionAsync(
             string database,
-            CancellationToken cancellationToken) => BeginTransactionAsync(
+            st::CancellationToken cancellationToken) => BeginTransactionAsync(
                 database,
-                CallSettings.FromCancellationToken(cancellationToken));
+                gaxgrpc::CallSettings.FromCancellationToken(cancellationToken));
 
         /// <summary>
         /// Starts a new transaction.
@@ -1097,10 +1097,10 @@ namespace Google.Cloud.Firestore.V1Beta1
         /// </returns>
         public virtual BeginTransactionResponse BeginTransaction(
             string database,
-            CallSettings callSettings = null) => BeginTransaction(
+            gaxgrpc::CallSettings callSettings = null) => BeginTransaction(
                 new BeginTransactionRequest
                 {
-                    Database = GaxPreconditions.CheckNotNullOrEmpty(database, nameof(database)),
+                    Database = gax::GaxPreconditions.CheckNotNullOrEmpty(database, nameof(database)),
                 },
                 callSettings);
 
@@ -1116,11 +1116,11 @@ namespace Google.Cloud.Firestore.V1Beta1
         /// <returns>
         /// A Task containing the RPC response.
         /// </returns>
-        public virtual Task<BeginTransactionResponse> BeginTransactionAsync(
+        public virtual stt::Task<BeginTransactionResponse> BeginTransactionAsync(
             BeginTransactionRequest request,
-            CallSettings callSettings = null)
+            gaxgrpc::CallSettings callSettings = null)
         {
-            throw new NotImplementedException();
+            throw new s::NotImplementedException();
         }
 
         /// <summary>
@@ -1130,16 +1130,16 @@ namespace Google.Cloud.Firestore.V1Beta1
         /// The request object containing all of the parameters for the API call.
         /// </param>
         /// <param name="cancellationToken">
-        /// A <see cref="CancellationToken"/> to use for this RPC.
+        /// A <see cref="st::CancellationToken"/> to use for this RPC.
         /// </param>
         /// <returns>
         /// A Task containing the RPC response.
         /// </returns>
-        public virtual Task<BeginTransactionResponse> BeginTransactionAsync(
+        public virtual stt::Task<BeginTransactionResponse> BeginTransactionAsync(
             BeginTransactionRequest request,
-            CancellationToken cancellationToken) => BeginTransactionAsync(
+            st::CancellationToken cancellationToken) => BeginTransactionAsync(
                 request,
-                CallSettings.FromCancellationToken(cancellationToken));
+                gaxgrpc::CallSettings.FromCancellationToken(cancellationToken));
 
         /// <summary>
         /// Starts a new transaction.
@@ -1155,9 +1155,9 @@ namespace Google.Cloud.Firestore.V1Beta1
         /// </returns>
         public virtual BeginTransactionResponse BeginTransaction(
             BeginTransactionRequest request,
-            CallSettings callSettings = null)
+            gaxgrpc::CallSettings callSettings = null)
         {
-            throw new NotImplementedException();
+            throw new s::NotImplementedException();
         }
 
         /// <summary>
@@ -1178,14 +1178,14 @@ namespace Google.Cloud.Firestore.V1Beta1
         /// <returns>
         /// A Task containing the RPC response.
         /// </returns>
-        public virtual Task<CommitResponse> CommitAsync(
+        public virtual stt::Task<CommitResponse> CommitAsync(
             string database,
-            IEnumerable<Write> writes,
-            CallSettings callSettings = null) => CommitAsync(
+            scg::IEnumerable<Write> writes,
+            gaxgrpc::CallSettings callSettings = null) => CommitAsync(
                 new CommitRequest
                 {
-                    Database = GaxPreconditions.CheckNotNullOrEmpty(database, nameof(database)),
-                    Writes = { GaxPreconditions.CheckNotNull(writes, nameof(writes)) },
+                    Database = gax::GaxPreconditions.CheckNotNullOrEmpty(database, nameof(database)),
+                    Writes = { gax::GaxPreconditions.CheckNotNull(writes, nameof(writes)) },
                 },
                 callSettings);
 
@@ -1202,18 +1202,18 @@ namespace Google.Cloud.Firestore.V1Beta1
         /// Always executed atomically and in order.
         /// </param>
         /// <param name="cancellationToken">
-        /// A <see cref="CancellationToken"/> to use for this RPC.
+        /// A <see cref="st::CancellationToken"/> to use for this RPC.
         /// </param>
         /// <returns>
         /// A Task containing the RPC response.
         /// </returns>
-        public virtual Task<CommitResponse> CommitAsync(
+        public virtual stt::Task<CommitResponse> CommitAsync(
             string database,
-            IEnumerable<Write> writes,
-            CancellationToken cancellationToken) => CommitAsync(
+            scg::IEnumerable<Write> writes,
+            st::CancellationToken cancellationToken) => CommitAsync(
                 database,
                 writes,
-                CallSettings.FromCancellationToken(cancellationToken));
+                gaxgrpc::CallSettings.FromCancellationToken(cancellationToken));
 
         /// <summary>
         /// Commits a transaction, while optionally updating documents.
@@ -1235,12 +1235,12 @@ namespace Google.Cloud.Firestore.V1Beta1
         /// </returns>
         public virtual CommitResponse Commit(
             string database,
-            IEnumerable<Write> writes,
-            CallSettings callSettings = null) => Commit(
+            scg::IEnumerable<Write> writes,
+            gaxgrpc::CallSettings callSettings = null) => Commit(
                 new CommitRequest
                 {
-                    Database = GaxPreconditions.CheckNotNullOrEmpty(database, nameof(database)),
-                    Writes = { GaxPreconditions.CheckNotNull(writes, nameof(writes)) },
+                    Database = gax::GaxPreconditions.CheckNotNullOrEmpty(database, nameof(database)),
+                    Writes = { gax::GaxPreconditions.CheckNotNull(writes, nameof(writes)) },
                 },
                 callSettings);
 
@@ -1256,11 +1256,11 @@ namespace Google.Cloud.Firestore.V1Beta1
         /// <returns>
         /// A Task containing the RPC response.
         /// </returns>
-        public virtual Task<CommitResponse> CommitAsync(
+        public virtual stt::Task<CommitResponse> CommitAsync(
             CommitRequest request,
-            CallSettings callSettings = null)
+            gaxgrpc::CallSettings callSettings = null)
         {
-            throw new NotImplementedException();
+            throw new s::NotImplementedException();
         }
 
         /// <summary>
@@ -1270,16 +1270,16 @@ namespace Google.Cloud.Firestore.V1Beta1
         /// The request object containing all of the parameters for the API call.
         /// </param>
         /// <param name="cancellationToken">
-        /// A <see cref="CancellationToken"/> to use for this RPC.
+        /// A <see cref="st::CancellationToken"/> to use for this RPC.
         /// </param>
         /// <returns>
         /// A Task containing the RPC response.
         /// </returns>
-        public virtual Task<CommitResponse> CommitAsync(
+        public virtual stt::Task<CommitResponse> CommitAsync(
             CommitRequest request,
-            CancellationToken cancellationToken) => CommitAsync(
+            st::CancellationToken cancellationToken) => CommitAsync(
                 request,
-                CallSettings.FromCancellationToken(cancellationToken));
+                gaxgrpc::CallSettings.FromCancellationToken(cancellationToken));
 
         /// <summary>
         /// Commits a transaction, while optionally updating documents.
@@ -1295,9 +1295,9 @@ namespace Google.Cloud.Firestore.V1Beta1
         /// </returns>
         public virtual CommitResponse Commit(
             CommitRequest request,
-            CallSettings callSettings = null)
+            gaxgrpc::CallSettings callSettings = null)
         {
-            throw new NotImplementedException();
+            throw new s::NotImplementedException();
         }
 
         /// <summary>
@@ -1316,14 +1316,14 @@ namespace Google.Cloud.Firestore.V1Beta1
         /// <returns>
         /// A Task that completes when the RPC has completed.
         /// </returns>
-        public virtual Task RollbackAsync(
+        public virtual stt::Task RollbackAsync(
             string database,
-            ByteString transaction,
-            CallSettings callSettings = null) => RollbackAsync(
+            proto::ByteString transaction,
+            gaxgrpc::CallSettings callSettings = null) => RollbackAsync(
                 new RollbackRequest
                 {
-                    Database = GaxPreconditions.CheckNotNullOrEmpty(database, nameof(database)),
-                    Transaction = GaxPreconditions.CheckNotNull(transaction, nameof(transaction)),
+                    Database = gax::GaxPreconditions.CheckNotNullOrEmpty(database, nameof(database)),
+                    Transaction = gax::GaxPreconditions.CheckNotNull(transaction, nameof(transaction)),
                 },
                 callSettings);
 
@@ -1338,18 +1338,18 @@ namespace Google.Cloud.Firestore.V1Beta1
         /// The transaction to roll back.
         /// </param>
         /// <param name="cancellationToken">
-        /// A <see cref="CancellationToken"/> to use for this RPC.
+        /// A <see cref="st::CancellationToken"/> to use for this RPC.
         /// </param>
         /// <returns>
         /// A Task that completes when the RPC has completed.
         /// </returns>
-        public virtual Task RollbackAsync(
+        public virtual stt::Task RollbackAsync(
             string database,
-            ByteString transaction,
-            CancellationToken cancellationToken) => RollbackAsync(
+            proto::ByteString transaction,
+            st::CancellationToken cancellationToken) => RollbackAsync(
                 database,
                 transaction,
-                CallSettings.FromCancellationToken(cancellationToken));
+                gaxgrpc::CallSettings.FromCancellationToken(cancellationToken));
 
         /// <summary>
         /// Rolls back a transaction.
@@ -1366,12 +1366,12 @@ namespace Google.Cloud.Firestore.V1Beta1
         /// </param>
         public virtual void Rollback(
             string database,
-            ByteString transaction,
-            CallSettings callSettings = null) => Rollback(
+            proto::ByteString transaction,
+            gaxgrpc::CallSettings callSettings = null) => Rollback(
                 new RollbackRequest
                 {
-                    Database = GaxPreconditions.CheckNotNullOrEmpty(database, nameof(database)),
-                    Transaction = GaxPreconditions.CheckNotNull(transaction, nameof(transaction)),
+                    Database = gax::GaxPreconditions.CheckNotNullOrEmpty(database, nameof(database)),
+                    Transaction = gax::GaxPreconditions.CheckNotNull(transaction, nameof(transaction)),
                 },
                 callSettings);
 
@@ -1387,11 +1387,11 @@ namespace Google.Cloud.Firestore.V1Beta1
         /// <returns>
         /// A Task that completes when the RPC has completed.
         /// </returns>
-        public virtual Task RollbackAsync(
+        public virtual stt::Task RollbackAsync(
             RollbackRequest request,
-            CallSettings callSettings = null)
+            gaxgrpc::CallSettings callSettings = null)
         {
-            throw new NotImplementedException();
+            throw new s::NotImplementedException();
         }
 
         /// <summary>
@@ -1401,16 +1401,16 @@ namespace Google.Cloud.Firestore.V1Beta1
         /// The request object containing all of the parameters for the API call.
         /// </param>
         /// <param name="cancellationToken">
-        /// A <see cref="CancellationToken"/> to use for this RPC.
+        /// A <see cref="st::CancellationToken"/> to use for this RPC.
         /// </param>
         /// <returns>
         /// A Task that completes when the RPC has completed.
         /// </returns>
-        public virtual Task RollbackAsync(
+        public virtual stt::Task RollbackAsync(
             RollbackRequest request,
-            CancellationToken cancellationToken) => RollbackAsync(
+            st::CancellationToken cancellationToken) => RollbackAsync(
                 request,
-                CallSettings.FromCancellationToken(cancellationToken));
+                gaxgrpc::CallSettings.FromCancellationToken(cancellationToken));
 
         /// <summary>
         /// Rolls back a transaction.
@@ -1423,9 +1423,9 @@ namespace Google.Cloud.Firestore.V1Beta1
         /// </param>
         public virtual void Rollback(
             RollbackRequest request,
-            CallSettings callSettings = null)
+            gaxgrpc::CallSettings callSettings = null)
         {
-            throw new NotImplementedException();
+            throw new s::NotImplementedException();
         }
 
         /// <summary>
@@ -1442,15 +1442,15 @@ namespace Google.Cloud.Firestore.V1Beta1
         /// </returns>
         public virtual RunQueryStream RunQuery(
             RunQueryRequest request,
-            CallSettings callSettings = null)
+            gaxgrpc::CallSettings callSettings = null)
         {
-            throw new NotImplementedException();
+            throw new s::NotImplementedException();
         }
 
         /// <summary>
         /// Server streaming methods for <c>RunQuery</c>.
         /// </summary>
-        public abstract partial class RunQueryStream : ServerStreamingBase<RunQueryResponse>
+        public abstract partial class RunQueryStream : gaxgrpc::ServerStreamingBase<RunQueryResponse>
         {
         }
 
@@ -1467,16 +1467,16 @@ namespace Google.Cloud.Firestore.V1Beta1
         /// The client-server stream.
         /// </returns>
         public virtual WriteStream Write(
-            CallSettings callSettings = null,
-            BidirectionalStreamingSettings streamingSettings = null)
+            gaxgrpc::CallSettings callSettings = null,
+            gaxgrpc::BidirectionalStreamingSettings streamingSettings = null)
         {
-            throw new NotImplementedException();
+            throw new s::NotImplementedException();
         }
 
         /// <summary>
         /// Bidirectional streaming methods for <c>Write</c>.
         /// </summary>
-        public abstract partial class WriteStream : BidirectionalStreamingBase<WriteRequest, WriteResponse>
+        public abstract partial class WriteStream : gaxgrpc::BidirectionalStreamingBase<WriteRequest, WriteResponse>
         {
         }
 
@@ -1493,16 +1493,16 @@ namespace Google.Cloud.Firestore.V1Beta1
         /// The client-server stream.
         /// </returns>
         public virtual ListenStream Listen(
-            CallSettings callSettings = null,
-            BidirectionalStreamingSettings streamingSettings = null)
+            gaxgrpc::CallSettings callSettings = null,
+            gaxgrpc::BidirectionalStreamingSettings streamingSettings = null)
         {
-            throw new NotImplementedException();
+            throw new s::NotImplementedException();
         }
 
         /// <summary>
         /// Bidirectional streaming methods for <c>Listen</c>.
         /// </summary>
-        public abstract partial class ListenStream : BidirectionalStreamingBase<ListenRequest, ListenResponse>
+        public abstract partial class ListenStream : gaxgrpc::BidirectionalStreamingBase<ListenRequest, ListenResponse>
         {
         }
 
@@ -1529,14 +1529,14 @@ namespace Google.Cloud.Firestore.V1Beta1
         /// <returns>
         /// A pageable asynchronous sequence of <see cref="string"/> resources.
         /// </returns>
-        public virtual PagedAsyncEnumerable<ListCollectionIdsResponse, string> ListCollectionIdsAsync(
+        public virtual gax::PagedAsyncEnumerable<ListCollectionIdsResponse, string> ListCollectionIdsAsync(
             string parent,
             string pageToken = null,
             int? pageSize = null,
-            CallSettings callSettings = null) => ListCollectionIdsAsync(
+            gaxgrpc::CallSettings callSettings = null) => ListCollectionIdsAsync(
                 new ListCollectionIdsRequest
                 {
-                    Parent = GaxPreconditions.CheckNotNullOrEmpty(parent, nameof(parent)),
+                    Parent = gax::GaxPreconditions.CheckNotNullOrEmpty(parent, nameof(parent)),
                     PageToken = pageToken ?? "",
                     PageSize = pageSize ?? 0,
                 },
@@ -1565,14 +1565,14 @@ namespace Google.Cloud.Firestore.V1Beta1
         /// <returns>
         /// A pageable sequence of <see cref="string"/> resources.
         /// </returns>
-        public virtual PagedEnumerable<ListCollectionIdsResponse, string> ListCollectionIds(
+        public virtual gax::PagedEnumerable<ListCollectionIdsResponse, string> ListCollectionIds(
             string parent,
             string pageToken = null,
             int? pageSize = null,
-            CallSettings callSettings = null) => ListCollectionIds(
+            gaxgrpc::CallSettings callSettings = null) => ListCollectionIds(
                 new ListCollectionIdsRequest
                 {
-                    Parent = GaxPreconditions.CheckNotNullOrEmpty(parent, nameof(parent)),
+                    Parent = gax::GaxPreconditions.CheckNotNullOrEmpty(parent, nameof(parent)),
                     PageToken = pageToken ?? "",
                     PageSize = pageSize ?? 0,
                 },
@@ -1590,11 +1590,11 @@ namespace Google.Cloud.Firestore.V1Beta1
         /// <returns>
         /// A pageable asynchronous sequence of <see cref="string"/> resources.
         /// </returns>
-        public virtual PagedAsyncEnumerable<ListCollectionIdsResponse, string> ListCollectionIdsAsync(
+        public virtual gax::PagedAsyncEnumerable<ListCollectionIdsResponse, string> ListCollectionIdsAsync(
             ListCollectionIdsRequest request,
-            CallSettings callSettings = null)
+            gaxgrpc::CallSettings callSettings = null)
         {
-            throw new NotImplementedException();
+            throw new s::NotImplementedException();
         }
 
         /// <summary>
@@ -1609,11 +1609,11 @@ namespace Google.Cloud.Firestore.V1Beta1
         /// <returns>
         /// A pageable sequence of <see cref="string"/> resources.
         /// </returns>
-        public virtual PagedEnumerable<ListCollectionIdsResponse, string> ListCollectionIds(
+        public virtual gax::PagedEnumerable<ListCollectionIdsResponse, string> ListCollectionIds(
             ListCollectionIdsRequest request,
-            CallSettings callSettings = null)
+            gaxgrpc::CallSettings callSettings = null)
         {
-            throw new NotImplementedException();
+            throw new s::NotImplementedException();
         }
 
     }
@@ -1623,19 +1623,19 @@ namespace Google.Cloud.Firestore.V1Beta1
     /// </summary>
     public sealed partial class FirestoreClientImpl : FirestoreClient
     {
-        private readonly ApiCall<GetDocumentRequest, Document> _callGetDocument;
-        private readonly ApiCall<ListDocumentsRequest, ListDocumentsResponse> _callListDocuments;
-        private readonly ApiCall<CreateDocumentRequest, Document> _callCreateDocument;
-        private readonly ApiCall<UpdateDocumentRequest, Document> _callUpdateDocument;
-        private readonly ApiCall<DeleteDocumentRequest, Empty> _callDeleteDocument;
-        private readonly ApiServerStreamingCall<BatchGetDocumentsRequest, BatchGetDocumentsResponse> _callBatchGetDocuments;
-        private readonly ApiCall<BeginTransactionRequest, BeginTransactionResponse> _callBeginTransaction;
-        private readonly ApiCall<CommitRequest, CommitResponse> _callCommit;
-        private readonly ApiCall<RollbackRequest, Empty> _callRollback;
-        private readonly ApiServerStreamingCall<RunQueryRequest, RunQueryResponse> _callRunQuery;
-        private readonly ApiBidirectionalStreamingCall<WriteRequest, WriteResponse> _callWrite;
-        private readonly ApiBidirectionalStreamingCall<ListenRequest, ListenResponse> _callListen;
-        private readonly ApiCall<ListCollectionIdsRequest, ListCollectionIdsResponse> _callListCollectionIds;
+        private readonly gaxgrpc::ApiCall<GetDocumentRequest, Document> _callGetDocument;
+        private readonly gaxgrpc::ApiCall<ListDocumentsRequest, ListDocumentsResponse> _callListDocuments;
+        private readonly gaxgrpc::ApiCall<CreateDocumentRequest, Document> _callCreateDocument;
+        private readonly gaxgrpc::ApiCall<UpdateDocumentRequest, Document> _callUpdateDocument;
+        private readonly gaxgrpc::ApiCall<DeleteDocumentRequest, protowkt::Empty> _callDeleteDocument;
+        private readonly gaxgrpc::ApiServerStreamingCall<BatchGetDocumentsRequest, BatchGetDocumentsResponse> _callBatchGetDocuments;
+        private readonly gaxgrpc::ApiCall<BeginTransactionRequest, BeginTransactionResponse> _callBeginTransaction;
+        private readonly gaxgrpc::ApiCall<CommitRequest, CommitResponse> _callCommit;
+        private readonly gaxgrpc::ApiCall<RollbackRequest, protowkt::Empty> _callRollback;
+        private readonly gaxgrpc::ApiServerStreamingCall<RunQueryRequest, RunQueryResponse> _callRunQuery;
+        private readonly gaxgrpc::ApiBidirectionalStreamingCall<WriteRequest, WriteResponse> _callWrite;
+        private readonly gaxgrpc::ApiBidirectionalStreamingCall<ListenRequest, ListenResponse> _callListen;
+        private readonly gaxgrpc::ApiCall<ListCollectionIdsRequest, ListCollectionIdsResponse> _callListCollectionIds;
 
         /// <summary>
         /// Constructs a client wrapper for the Firestore service, with the specified gRPC client and settings.
@@ -1646,7 +1646,7 @@ namespace Google.Cloud.Firestore.V1Beta1
         {
             GrpcClient = grpcClient;
             FirestoreSettings effectiveSettings = settings ?? FirestoreSettings.GetDefault();
-            ClientHelper clientHelper = new ClientHelper(effectiveSettings);
+            gaxgrpc::ClientHelper clientHelper = new gaxgrpc::ClientHelper(effectiveSettings);
             _callGetDocument = clientHelper.BuildApiCall<GetDocumentRequest, Document>(
                 GrpcClient.GetDocumentAsync, GrpcClient.GetDocument, effectiveSettings.GetDocumentSettings);
             _callListDocuments = clientHelper.BuildApiCall<ListDocumentsRequest, ListDocumentsResponse>(
@@ -1655,7 +1655,7 @@ namespace Google.Cloud.Firestore.V1Beta1
                 GrpcClient.CreateDocumentAsync, GrpcClient.CreateDocument, effectiveSettings.CreateDocumentSettings);
             _callUpdateDocument = clientHelper.BuildApiCall<UpdateDocumentRequest, Document>(
                 GrpcClient.UpdateDocumentAsync, GrpcClient.UpdateDocument, effectiveSettings.UpdateDocumentSettings);
-            _callDeleteDocument = clientHelper.BuildApiCall<DeleteDocumentRequest, Empty>(
+            _callDeleteDocument = clientHelper.BuildApiCall<DeleteDocumentRequest, protowkt::Empty>(
                 GrpcClient.DeleteDocumentAsync, GrpcClient.DeleteDocument, effectiveSettings.DeleteDocumentSettings);
             _callBatchGetDocuments = clientHelper.BuildApiCall<BatchGetDocumentsRequest, BatchGetDocumentsResponse>(
                 GrpcClient.BatchGetDocuments, effectiveSettings.BatchGetDocumentsSettings);
@@ -1663,7 +1663,7 @@ namespace Google.Cloud.Firestore.V1Beta1
                 GrpcClient.BeginTransactionAsync, GrpcClient.BeginTransaction, effectiveSettings.BeginTransactionSettings);
             _callCommit = clientHelper.BuildApiCall<CommitRequest, CommitResponse>(
                 GrpcClient.CommitAsync, GrpcClient.Commit, effectiveSettings.CommitSettings);
-            _callRollback = clientHelper.BuildApiCall<RollbackRequest, Empty>(
+            _callRollback = clientHelper.BuildApiCall<RollbackRequest, protowkt::Empty>(
                 GrpcClient.RollbackAsync, GrpcClient.Rollback, effectiveSettings.RollbackSettings);
             _callRunQuery = clientHelper.BuildApiCall<RunQueryRequest, RunQueryResponse>(
                 GrpcClient.RunQuery, effectiveSettings.RunQuerySettings);
@@ -1706,32 +1706,32 @@ namespace Google.Cloud.Firestore.V1Beta1
 
         // Partial methods called for every ApiCall on construction.
         // Allows modification of all the underlying ApiCall objects.
-        partial void Modify_ApiCall<TRequest, TResponse>(ref ApiCall<TRequest, TResponse> call)
-            where TRequest : class, IMessage<TRequest>
-            where TResponse : class, IMessage<TResponse>;
-        partial void Modify_ApiCall<TRequest, TResponse>(ref ApiServerStreamingCall<TRequest, TResponse> call)
-            where TRequest : class, IMessage<TRequest>
-            where TResponse : class, IMessage<TResponse>;
-        partial void Modify_ApiCall<TRequest, TResponse>(ref ApiBidirectionalStreamingCall<TRequest, TResponse> call)
-            where TRequest : class, IMessage<TRequest>
-            where TResponse : class, IMessage<TResponse>;
+        partial void Modify_ApiCall<TRequest, TResponse>(ref gaxgrpc::ApiCall<TRequest, TResponse> call)
+            where TRequest : class, proto::IMessage<TRequest>
+            where TResponse : class, proto::IMessage<TResponse>;
+        partial void Modify_ApiCall<TRequest, TResponse>(ref gaxgrpc::ApiServerStreamingCall<TRequest, TResponse> call)
+            where TRequest : class, proto::IMessage<TRequest>
+            where TResponse : class, proto::IMessage<TResponse>;
+        partial void Modify_ApiCall<TRequest, TResponse>(ref gaxgrpc::ApiBidirectionalStreamingCall<TRequest, TResponse> call)
+            where TRequest : class, proto::IMessage<TRequest>
+            where TResponse : class, proto::IMessage<TResponse>;
 
         // Partial methods called for each ApiCall on construction.
         // Allows per-RPC-method modification of the underlying ApiCall object.
-        partial void Modify_GetDocumentApiCall(ref ApiCall<GetDocumentRequest, Document> call);
-        partial void Modify_ListDocumentsApiCall(ref ApiCall<ListDocumentsRequest, ListDocumentsResponse> call);
-        partial void Modify_CreateDocumentApiCall(ref ApiCall<CreateDocumentRequest, Document> call);
-        partial void Modify_UpdateDocumentApiCall(ref ApiCall<UpdateDocumentRequest, Document> call);
-        partial void Modify_DeleteDocumentApiCall(ref ApiCall<DeleteDocumentRequest, Empty> call);
-        partial void Modify_BatchGetDocumentsApiCall(ref ApiServerStreamingCall<BatchGetDocumentsRequest, BatchGetDocumentsResponse> call);
-        partial void Modify_BeginTransactionApiCall(ref ApiCall<BeginTransactionRequest, BeginTransactionResponse> call);
-        partial void Modify_CommitApiCall(ref ApiCall<CommitRequest, CommitResponse> call);
-        partial void Modify_RollbackApiCall(ref ApiCall<RollbackRequest, Empty> call);
-        partial void Modify_RunQueryApiCall(ref ApiServerStreamingCall<RunQueryRequest, RunQueryResponse> call);
-        partial void Modify_WriteApiCall(ref ApiBidirectionalStreamingCall<WriteRequest, WriteResponse> call);
-        partial void Modify_ListenApiCall(ref ApiBidirectionalStreamingCall<ListenRequest, ListenResponse> call);
-        partial void Modify_ListCollectionIdsApiCall(ref ApiCall<ListCollectionIdsRequest, ListCollectionIdsResponse> call);
-        partial void OnConstruction(Firestore.FirestoreClient grpcClient, FirestoreSettings effectiveSettings, ClientHelper clientHelper);
+        partial void Modify_GetDocumentApiCall(ref gaxgrpc::ApiCall<GetDocumentRequest, Document> call);
+        partial void Modify_ListDocumentsApiCall(ref gaxgrpc::ApiCall<ListDocumentsRequest, ListDocumentsResponse> call);
+        partial void Modify_CreateDocumentApiCall(ref gaxgrpc::ApiCall<CreateDocumentRequest, Document> call);
+        partial void Modify_UpdateDocumentApiCall(ref gaxgrpc::ApiCall<UpdateDocumentRequest, Document> call);
+        partial void Modify_DeleteDocumentApiCall(ref gaxgrpc::ApiCall<DeleteDocumentRequest, protowkt::Empty> call);
+        partial void Modify_BatchGetDocumentsApiCall(ref gaxgrpc::ApiServerStreamingCall<BatchGetDocumentsRequest, BatchGetDocumentsResponse> call);
+        partial void Modify_BeginTransactionApiCall(ref gaxgrpc::ApiCall<BeginTransactionRequest, BeginTransactionResponse> call);
+        partial void Modify_CommitApiCall(ref gaxgrpc::ApiCall<CommitRequest, CommitResponse> call);
+        partial void Modify_RollbackApiCall(ref gaxgrpc::ApiCall<RollbackRequest, protowkt::Empty> call);
+        partial void Modify_RunQueryApiCall(ref gaxgrpc::ApiServerStreamingCall<RunQueryRequest, RunQueryResponse> call);
+        partial void Modify_WriteApiCall(ref gaxgrpc::ApiBidirectionalStreamingCall<WriteRequest, WriteResponse> call);
+        partial void Modify_ListenApiCall(ref gaxgrpc::ApiBidirectionalStreamingCall<ListenRequest, ListenResponse> call);
+        partial void Modify_ListCollectionIdsApiCall(ref gaxgrpc::ApiCall<ListCollectionIdsRequest, ListCollectionIdsResponse> call);
+        partial void OnConstruction(Firestore.FirestoreClient grpcClient, FirestoreSettings effectiveSettings, gaxgrpc::ClientHelper clientHelper);
 
         /// <summary>
         /// The underlying gRPC Firestore client.
@@ -1741,21 +1741,21 @@ namespace Google.Cloud.Firestore.V1Beta1
         // Partial methods called on each request.
         // Allows per-RPC-call modification to the request and CallSettings objects,
         // before the underlying RPC is performed.
-        partial void Modify_GetDocumentRequest(ref GetDocumentRequest request, ref CallSettings settings);
-        partial void Modify_ListDocumentsRequest(ref ListDocumentsRequest request, ref CallSettings settings);
-        partial void Modify_CreateDocumentRequest(ref CreateDocumentRequest request, ref CallSettings settings);
-        partial void Modify_UpdateDocumentRequest(ref UpdateDocumentRequest request, ref CallSettings settings);
-        partial void Modify_DeleteDocumentRequest(ref DeleteDocumentRequest request, ref CallSettings settings);
-        partial void Modify_BatchGetDocumentsRequest(ref BatchGetDocumentsRequest request, ref CallSettings settings);
-        partial void Modify_BeginTransactionRequest(ref BeginTransactionRequest request, ref CallSettings settings);
-        partial void Modify_CommitRequest(ref CommitRequest request, ref CallSettings settings);
-        partial void Modify_RollbackRequest(ref RollbackRequest request, ref CallSettings settings);
-        partial void Modify_RunQueryRequest(ref RunQueryRequest request, ref CallSettings settings);
-        partial void Modify_WriteRequestCallSettings(ref CallSettings settings);
+        partial void Modify_GetDocumentRequest(ref GetDocumentRequest request, ref gaxgrpc::CallSettings settings);
+        partial void Modify_ListDocumentsRequest(ref ListDocumentsRequest request, ref gaxgrpc::CallSettings settings);
+        partial void Modify_CreateDocumentRequest(ref CreateDocumentRequest request, ref gaxgrpc::CallSettings settings);
+        partial void Modify_UpdateDocumentRequest(ref UpdateDocumentRequest request, ref gaxgrpc::CallSettings settings);
+        partial void Modify_DeleteDocumentRequest(ref DeleteDocumentRequest request, ref gaxgrpc::CallSettings settings);
+        partial void Modify_BatchGetDocumentsRequest(ref BatchGetDocumentsRequest request, ref gaxgrpc::CallSettings settings);
+        partial void Modify_BeginTransactionRequest(ref BeginTransactionRequest request, ref gaxgrpc::CallSettings settings);
+        partial void Modify_CommitRequest(ref CommitRequest request, ref gaxgrpc::CallSettings settings);
+        partial void Modify_RollbackRequest(ref RollbackRequest request, ref gaxgrpc::CallSettings settings);
+        partial void Modify_RunQueryRequest(ref RunQueryRequest request, ref gaxgrpc::CallSettings settings);
+        partial void Modify_WriteRequestCallSettings(ref gaxgrpc::CallSettings settings);
         partial void Modify_WriteRequestRequest(ref WriteRequest request);
-        partial void Modify_ListenRequestCallSettings(ref CallSettings settings);
+        partial void Modify_ListenRequestCallSettings(ref gaxgrpc::CallSettings settings);
         partial void Modify_ListenRequestRequest(ref ListenRequest request);
-        partial void Modify_ListCollectionIdsRequest(ref ListCollectionIdsRequest request, ref CallSettings settings);
+        partial void Modify_ListCollectionIdsRequest(ref ListCollectionIdsRequest request, ref gaxgrpc::CallSettings settings);
 
         /// <summary>
         /// Gets a single document.
@@ -1769,9 +1769,9 @@ namespace Google.Cloud.Firestore.V1Beta1
         /// <returns>
         /// A Task containing the RPC response.
         /// </returns>
-        public override Task<Document> GetDocumentAsync(
+        public override stt::Task<Document> GetDocumentAsync(
             GetDocumentRequest request,
-            CallSettings callSettings = null)
+            gaxgrpc::CallSettings callSettings = null)
         {
             Modify_GetDocumentRequest(ref request, ref callSettings);
             return _callGetDocument.Async(request, callSettings);
@@ -1791,7 +1791,7 @@ namespace Google.Cloud.Firestore.V1Beta1
         /// </returns>
         public override Document GetDocument(
             GetDocumentRequest request,
-            CallSettings callSettings = null)
+            gaxgrpc::CallSettings callSettings = null)
         {
             Modify_GetDocumentRequest(ref request, ref callSettings);
             return _callGetDocument.Sync(request, callSettings);
@@ -1809,12 +1809,12 @@ namespace Google.Cloud.Firestore.V1Beta1
         /// <returns>
         /// A pageable asynchronous sequence of <see cref="Document"/> resources.
         /// </returns>
-        public override PagedAsyncEnumerable<ListDocumentsResponse, Document> ListDocumentsAsync(
+        public override gax::PagedAsyncEnumerable<ListDocumentsResponse, Document> ListDocumentsAsync(
             ListDocumentsRequest request,
-            CallSettings callSettings = null)
+            gaxgrpc::CallSettings callSettings = null)
         {
             Modify_ListDocumentsRequest(ref request, ref callSettings);
-            return new GrpcPagedAsyncEnumerable<ListDocumentsRequest, ListDocumentsResponse, Document>(_callListDocuments, request, callSettings);
+            return new gaxgrpc::GrpcPagedAsyncEnumerable<ListDocumentsRequest, ListDocumentsResponse, Document>(_callListDocuments, request, callSettings);
         }
 
         /// <summary>
@@ -1829,12 +1829,12 @@ namespace Google.Cloud.Firestore.V1Beta1
         /// <returns>
         /// A pageable sequence of <see cref="Document"/> resources.
         /// </returns>
-        public override PagedEnumerable<ListDocumentsResponse, Document> ListDocuments(
+        public override gax::PagedEnumerable<ListDocumentsResponse, Document> ListDocuments(
             ListDocumentsRequest request,
-            CallSettings callSettings = null)
+            gaxgrpc::CallSettings callSettings = null)
         {
             Modify_ListDocumentsRequest(ref request, ref callSettings);
-            return new GrpcPagedEnumerable<ListDocumentsRequest, ListDocumentsResponse, Document>(_callListDocuments, request, callSettings);
+            return new gaxgrpc::GrpcPagedEnumerable<ListDocumentsRequest, ListDocumentsResponse, Document>(_callListDocuments, request, callSettings);
         }
 
         /// <summary>
@@ -1849,9 +1849,9 @@ namespace Google.Cloud.Firestore.V1Beta1
         /// <returns>
         /// A Task containing the RPC response.
         /// </returns>
-        public override Task<Document> CreateDocumentAsync(
+        public override stt::Task<Document> CreateDocumentAsync(
             CreateDocumentRequest request,
-            CallSettings callSettings = null)
+            gaxgrpc::CallSettings callSettings = null)
         {
             Modify_CreateDocumentRequest(ref request, ref callSettings);
             return _callCreateDocument.Async(request, callSettings);
@@ -1871,7 +1871,7 @@ namespace Google.Cloud.Firestore.V1Beta1
         /// </returns>
         public override Document CreateDocument(
             CreateDocumentRequest request,
-            CallSettings callSettings = null)
+            gaxgrpc::CallSettings callSettings = null)
         {
             Modify_CreateDocumentRequest(ref request, ref callSettings);
             return _callCreateDocument.Sync(request, callSettings);
@@ -1889,9 +1889,9 @@ namespace Google.Cloud.Firestore.V1Beta1
         /// <returns>
         /// A Task containing the RPC response.
         /// </returns>
-        public override Task<Document> UpdateDocumentAsync(
+        public override stt::Task<Document> UpdateDocumentAsync(
             UpdateDocumentRequest request,
-            CallSettings callSettings = null)
+            gaxgrpc::CallSettings callSettings = null)
         {
             Modify_UpdateDocumentRequest(ref request, ref callSettings);
             return _callUpdateDocument.Async(request, callSettings);
@@ -1911,7 +1911,7 @@ namespace Google.Cloud.Firestore.V1Beta1
         /// </returns>
         public override Document UpdateDocument(
             UpdateDocumentRequest request,
-            CallSettings callSettings = null)
+            gaxgrpc::CallSettings callSettings = null)
         {
             Modify_UpdateDocumentRequest(ref request, ref callSettings);
             return _callUpdateDocument.Sync(request, callSettings);
@@ -1929,9 +1929,9 @@ namespace Google.Cloud.Firestore.V1Beta1
         /// <returns>
         /// A Task that completes when the RPC has completed.
         /// </returns>
-        public override Task DeleteDocumentAsync(
+        public override stt::Task DeleteDocumentAsync(
             DeleteDocumentRequest request,
-            CallSettings callSettings = null)
+            gaxgrpc::CallSettings callSettings = null)
         {
             Modify_DeleteDocumentRequest(ref request, ref callSettings);
             return _callDeleteDocument.Async(request, callSettings);
@@ -1948,7 +1948,7 @@ namespace Google.Cloud.Firestore.V1Beta1
         /// </param>
         public override void DeleteDocument(
             DeleteDocumentRequest request,
-            CallSettings callSettings = null)
+            gaxgrpc::CallSettings callSettings = null)
         {
             Modify_DeleteDocumentRequest(ref request, ref callSettings);
             _callDeleteDocument.Sync(request, callSettings);
@@ -1971,7 +1971,7 @@ namespace Google.Cloud.Firestore.V1Beta1
         /// </returns>
         public override BatchGetDocumentsStream BatchGetDocuments(
             BatchGetDocumentsRequest request,
-            CallSettings callSettings = null)
+            gaxgrpc::CallSettings callSettings = null)
         {
             Modify_BatchGetDocumentsRequest(ref request, ref callSettings);
             return new BatchGetDocumentsStreamImpl(_callBatchGetDocuments.Call(request, callSettings));
@@ -1983,16 +1983,16 @@ namespace Google.Cloud.Firestore.V1Beta1
             /// Construct the server-streaming method for <c>BatchGetDocuments</c>.
             /// </summary>
             /// <param name="call">The underlying gRPC server-streaming call.</param>
-            internal BatchGetDocumentsStreamImpl(AsyncServerStreamingCall<BatchGetDocumentsResponse> call)
+            internal BatchGetDocumentsStreamImpl(grpccore::AsyncServerStreamingCall<BatchGetDocumentsResponse> call)
             {
                 GrpcCall = call;
             }
 
             /// <inheritdoc/>
-            public override AsyncServerStreamingCall<BatchGetDocumentsResponse> GrpcCall { get; }
+            public override grpccore::AsyncServerStreamingCall<BatchGetDocumentsResponse> GrpcCall { get; }
 
             /// <inheritdoc/>
-            public override IAsyncEnumerator<BatchGetDocumentsResponse> ResponseStream => GrpcCall.ResponseStream;
+            public override scg::IAsyncEnumerator<BatchGetDocumentsResponse> ResponseStream => GrpcCall.ResponseStream;
         }
 
         /// <summary>
@@ -2007,9 +2007,9 @@ namespace Google.Cloud.Firestore.V1Beta1
         /// <returns>
         /// A Task containing the RPC response.
         /// </returns>
-        public override Task<BeginTransactionResponse> BeginTransactionAsync(
+        public override stt::Task<BeginTransactionResponse> BeginTransactionAsync(
             BeginTransactionRequest request,
-            CallSettings callSettings = null)
+            gaxgrpc::CallSettings callSettings = null)
         {
             Modify_BeginTransactionRequest(ref request, ref callSettings);
             return _callBeginTransaction.Async(request, callSettings);
@@ -2029,7 +2029,7 @@ namespace Google.Cloud.Firestore.V1Beta1
         /// </returns>
         public override BeginTransactionResponse BeginTransaction(
             BeginTransactionRequest request,
-            CallSettings callSettings = null)
+            gaxgrpc::CallSettings callSettings = null)
         {
             Modify_BeginTransactionRequest(ref request, ref callSettings);
             return _callBeginTransaction.Sync(request, callSettings);
@@ -2047,9 +2047,9 @@ namespace Google.Cloud.Firestore.V1Beta1
         /// <returns>
         /// A Task containing the RPC response.
         /// </returns>
-        public override Task<CommitResponse> CommitAsync(
+        public override stt::Task<CommitResponse> CommitAsync(
             CommitRequest request,
-            CallSettings callSettings = null)
+            gaxgrpc::CallSettings callSettings = null)
         {
             Modify_CommitRequest(ref request, ref callSettings);
             return _callCommit.Async(request, callSettings);
@@ -2069,7 +2069,7 @@ namespace Google.Cloud.Firestore.V1Beta1
         /// </returns>
         public override CommitResponse Commit(
             CommitRequest request,
-            CallSettings callSettings = null)
+            gaxgrpc::CallSettings callSettings = null)
         {
             Modify_CommitRequest(ref request, ref callSettings);
             return _callCommit.Sync(request, callSettings);
@@ -2087,9 +2087,9 @@ namespace Google.Cloud.Firestore.V1Beta1
         /// <returns>
         /// A Task that completes when the RPC has completed.
         /// </returns>
-        public override Task RollbackAsync(
+        public override stt::Task RollbackAsync(
             RollbackRequest request,
-            CallSettings callSettings = null)
+            gaxgrpc::CallSettings callSettings = null)
         {
             Modify_RollbackRequest(ref request, ref callSettings);
             return _callRollback.Async(request, callSettings);
@@ -2106,7 +2106,7 @@ namespace Google.Cloud.Firestore.V1Beta1
         /// </param>
         public override void Rollback(
             RollbackRequest request,
-            CallSettings callSettings = null)
+            gaxgrpc::CallSettings callSettings = null)
         {
             Modify_RollbackRequest(ref request, ref callSettings);
             _callRollback.Sync(request, callSettings);
@@ -2126,7 +2126,7 @@ namespace Google.Cloud.Firestore.V1Beta1
         /// </returns>
         public override RunQueryStream RunQuery(
             RunQueryRequest request,
-            CallSettings callSettings = null)
+            gaxgrpc::CallSettings callSettings = null)
         {
             Modify_RunQueryRequest(ref request, ref callSettings);
             return new RunQueryStreamImpl(_callRunQuery.Call(request, callSettings));
@@ -2138,16 +2138,16 @@ namespace Google.Cloud.Firestore.V1Beta1
             /// Construct the server-streaming method for <c>RunQuery</c>.
             /// </summary>
             /// <param name="call">The underlying gRPC server-streaming call.</param>
-            internal RunQueryStreamImpl(AsyncServerStreamingCall<RunQueryResponse> call)
+            internal RunQueryStreamImpl(grpccore::AsyncServerStreamingCall<RunQueryResponse> call)
             {
                 GrpcCall = call;
             }
 
             /// <inheritdoc/>
-            public override AsyncServerStreamingCall<RunQueryResponse> GrpcCall { get; }
+            public override grpccore::AsyncServerStreamingCall<RunQueryResponse> GrpcCall { get; }
 
             /// <inheritdoc/>
-            public override IAsyncEnumerator<RunQueryResponse> ResponseStream => GrpcCall.ResponseStream;
+            public override scg::IAsyncEnumerator<RunQueryResponse> ResponseStream => GrpcCall.ResponseStream;
         }
 
         /// <summary>
@@ -2163,16 +2163,16 @@ namespace Google.Cloud.Firestore.V1Beta1
         /// The client-server stream.
         /// </returns>
         public override WriteStream Write(
-            CallSettings callSettings = null,
-            BidirectionalStreamingSettings streamingSettings = null)
+            gaxgrpc::CallSettings callSettings = null,
+            gaxgrpc::BidirectionalStreamingSettings streamingSettings = null)
         {
             Modify_WriteRequestCallSettings(ref callSettings);
-            BidirectionalStreamingSettings effectiveStreamingSettings =
+            gaxgrpc::BidirectionalStreamingSettings effectiveStreamingSettings =
                 streamingSettings ?? _callWrite.StreamingSettings;
-            AsyncDuplexStreamingCall<WriteRequest, WriteResponse> call =
+            grpccore::AsyncDuplexStreamingCall<WriteRequest, WriteResponse> call =
                 _callWrite.Call(callSettings);
-            BufferedClientStreamWriter<WriteRequest> writeBuffer =
-                new BufferedClientStreamWriter<WriteRequest>(
+            gaxgrpc::BufferedClientStreamWriter<WriteRequest> writeBuffer =
+                new gaxgrpc::BufferedClientStreamWriter<WriteRequest>(
                     call.RequestStream, effectiveStreamingSettings.BufferedClientWriterCapacity);
             return new WriteStreamImpl(this, call, writeBuffer);
         }
@@ -2184,12 +2184,12 @@ namespace Google.Cloud.Firestore.V1Beta1
             /// </summary>
             /// <param name="service">The service containing this streaming method.</param>
             /// <param name="call">The underlying gRPC duplex streaming call.</param>
-            /// <param name="writeBuffer">The <see cref="BufferedClientStreamWriter{WriteRequest}"/>
+            /// <param name="writeBuffer">The <see cref="gaxgrpc::BufferedClientStreamWriter{WriteRequest}"/>
             /// instance associated with this streaming call.</param>
             public WriteStreamImpl(
                 FirestoreClientImpl service,
-                AsyncDuplexStreamingCall<WriteRequest, WriteResponse> call,
-                BufferedClientStreamWriter<WriteRequest> writeBuffer)
+                grpccore::AsyncDuplexStreamingCall<WriteRequest, WriteResponse> call,
+                gaxgrpc::BufferedClientStreamWriter<WriteRequest> writeBuffer)
             {
                 _service = service;
                 GrpcCall = call;
@@ -2197,7 +2197,7 @@ namespace Google.Cloud.Firestore.V1Beta1
             }
 
             private FirestoreClientImpl _service;
-            private BufferedClientStreamWriter<WriteRequest> _writeBuffer;
+            private gaxgrpc::BufferedClientStreamWriter<WriteRequest> _writeBuffer;
 
             private WriteRequest ModifyRequest(WriteRequest request)
             {
@@ -2206,34 +2206,34 @@ namespace Google.Cloud.Firestore.V1Beta1
             }
 
             /// <inheritdoc/>
-            public override AsyncDuplexStreamingCall<WriteRequest, WriteResponse> GrpcCall { get; }
+            public override grpccore::AsyncDuplexStreamingCall<WriteRequest, WriteResponse> GrpcCall { get; }
 
             /// <inheritdoc/>
-            public override Task TryWriteAsync(WriteRequest message) =>
+            public override stt::Task TryWriteAsync(WriteRequest message) =>
                 _writeBuffer.TryWriteAsync(ModifyRequest(message));
 
             /// <inheritdoc/>
-            public override Task WriteAsync(WriteRequest message) =>
+            public override stt::Task WriteAsync(WriteRequest message) =>
                 _writeBuffer.WriteAsync(ModifyRequest(message));
 
             /// <inheritdoc/>
-            public override Task TryWriteAsync(WriteRequest message, WriteOptions options) =>
+            public override stt::Task TryWriteAsync(WriteRequest message, grpccore::WriteOptions options) =>
                 _writeBuffer.TryWriteAsync(ModifyRequest(message), options);
 
             /// <inheritdoc/>
-            public override Task WriteAsync(WriteRequest message, WriteOptions options) =>
+            public override stt::Task WriteAsync(WriteRequest message, grpccore::WriteOptions options) =>
                 _writeBuffer.WriteAsync(ModifyRequest(message), options);
 
             /// <inheritdoc/>
-            public override Task TryWriteCompleteAsync() =>
+            public override stt::Task TryWriteCompleteAsync() =>
                 _writeBuffer.TryWriteCompleteAsync();
 
             /// <inheritdoc/>
-            public override Task WriteCompleteAsync() =>
+            public override stt::Task WriteCompleteAsync() =>
                 _writeBuffer.WriteCompleteAsync();
 
             /// <inheritdoc/>
-            public override IAsyncEnumerator<WriteResponse> ResponseStream =>
+            public override scg::IAsyncEnumerator<WriteResponse> ResponseStream =>
                 GrpcCall.ResponseStream;
         }
 
@@ -2250,16 +2250,16 @@ namespace Google.Cloud.Firestore.V1Beta1
         /// The client-server stream.
         /// </returns>
         public override ListenStream Listen(
-            CallSettings callSettings = null,
-            BidirectionalStreamingSettings streamingSettings = null)
+            gaxgrpc::CallSettings callSettings = null,
+            gaxgrpc::BidirectionalStreamingSettings streamingSettings = null)
         {
             Modify_ListenRequestCallSettings(ref callSettings);
-            BidirectionalStreamingSettings effectiveStreamingSettings =
+            gaxgrpc::BidirectionalStreamingSettings effectiveStreamingSettings =
                 streamingSettings ?? _callListen.StreamingSettings;
-            AsyncDuplexStreamingCall<ListenRequest, ListenResponse> call =
+            grpccore::AsyncDuplexStreamingCall<ListenRequest, ListenResponse> call =
                 _callListen.Call(callSettings);
-            BufferedClientStreamWriter<ListenRequest> writeBuffer =
-                new BufferedClientStreamWriter<ListenRequest>(
+            gaxgrpc::BufferedClientStreamWriter<ListenRequest> writeBuffer =
+                new gaxgrpc::BufferedClientStreamWriter<ListenRequest>(
                     call.RequestStream, effectiveStreamingSettings.BufferedClientWriterCapacity);
             return new ListenStreamImpl(this, call, writeBuffer);
         }
@@ -2271,12 +2271,12 @@ namespace Google.Cloud.Firestore.V1Beta1
             /// </summary>
             /// <param name="service">The service containing this streaming method.</param>
             /// <param name="call">The underlying gRPC duplex streaming call.</param>
-            /// <param name="writeBuffer">The <see cref="BufferedClientStreamWriter{ListenRequest}"/>
+            /// <param name="writeBuffer">The <see cref="gaxgrpc::BufferedClientStreamWriter{ListenRequest}"/>
             /// instance associated with this streaming call.</param>
             public ListenStreamImpl(
                 FirestoreClientImpl service,
-                AsyncDuplexStreamingCall<ListenRequest, ListenResponse> call,
-                BufferedClientStreamWriter<ListenRequest> writeBuffer)
+                grpccore::AsyncDuplexStreamingCall<ListenRequest, ListenResponse> call,
+                gaxgrpc::BufferedClientStreamWriter<ListenRequest> writeBuffer)
             {
                 _service = service;
                 GrpcCall = call;
@@ -2284,7 +2284,7 @@ namespace Google.Cloud.Firestore.V1Beta1
             }
 
             private FirestoreClientImpl _service;
-            private BufferedClientStreamWriter<ListenRequest> _writeBuffer;
+            private gaxgrpc::BufferedClientStreamWriter<ListenRequest> _writeBuffer;
 
             private ListenRequest ModifyRequest(ListenRequest request)
             {
@@ -2293,34 +2293,34 @@ namespace Google.Cloud.Firestore.V1Beta1
             }
 
             /// <inheritdoc/>
-            public override AsyncDuplexStreamingCall<ListenRequest, ListenResponse> GrpcCall { get; }
+            public override grpccore::AsyncDuplexStreamingCall<ListenRequest, ListenResponse> GrpcCall { get; }
 
             /// <inheritdoc/>
-            public override Task TryWriteAsync(ListenRequest message) =>
+            public override stt::Task TryWriteAsync(ListenRequest message) =>
                 _writeBuffer.TryWriteAsync(ModifyRequest(message));
 
             /// <inheritdoc/>
-            public override Task WriteAsync(ListenRequest message) =>
+            public override stt::Task WriteAsync(ListenRequest message) =>
                 _writeBuffer.WriteAsync(ModifyRequest(message));
 
             /// <inheritdoc/>
-            public override Task TryWriteAsync(ListenRequest message, WriteOptions options) =>
+            public override stt::Task TryWriteAsync(ListenRequest message, grpccore::WriteOptions options) =>
                 _writeBuffer.TryWriteAsync(ModifyRequest(message), options);
 
             /// <inheritdoc/>
-            public override Task WriteAsync(ListenRequest message, WriteOptions options) =>
+            public override stt::Task WriteAsync(ListenRequest message, grpccore::WriteOptions options) =>
                 _writeBuffer.WriteAsync(ModifyRequest(message), options);
 
             /// <inheritdoc/>
-            public override Task TryWriteCompleteAsync() =>
+            public override stt::Task TryWriteCompleteAsync() =>
                 _writeBuffer.TryWriteCompleteAsync();
 
             /// <inheritdoc/>
-            public override Task WriteCompleteAsync() =>
+            public override stt::Task WriteCompleteAsync() =>
                 _writeBuffer.WriteCompleteAsync();
 
             /// <inheritdoc/>
-            public override IAsyncEnumerator<ListenResponse> ResponseStream =>
+            public override scg::IAsyncEnumerator<ListenResponse> ResponseStream =>
                 GrpcCall.ResponseStream;
         }
 
@@ -2336,12 +2336,12 @@ namespace Google.Cloud.Firestore.V1Beta1
         /// <returns>
         /// A pageable asynchronous sequence of <see cref="string"/> resources.
         /// </returns>
-        public override PagedAsyncEnumerable<ListCollectionIdsResponse, string> ListCollectionIdsAsync(
+        public override gax::PagedAsyncEnumerable<ListCollectionIdsResponse, string> ListCollectionIdsAsync(
             ListCollectionIdsRequest request,
-            CallSettings callSettings = null)
+            gaxgrpc::CallSettings callSettings = null)
         {
             Modify_ListCollectionIdsRequest(ref request, ref callSettings);
-            return new GrpcPagedAsyncEnumerable<ListCollectionIdsRequest, ListCollectionIdsResponse, string>(_callListCollectionIds, request, callSettings);
+            return new gaxgrpc::GrpcPagedAsyncEnumerable<ListCollectionIdsRequest, ListCollectionIdsResponse, string>(_callListCollectionIds, request, callSettings);
         }
 
         /// <summary>
@@ -2356,40 +2356,40 @@ namespace Google.Cloud.Firestore.V1Beta1
         /// <returns>
         /// A pageable sequence of <see cref="string"/> resources.
         /// </returns>
-        public override PagedEnumerable<ListCollectionIdsResponse, string> ListCollectionIds(
+        public override gax::PagedEnumerable<ListCollectionIdsResponse, string> ListCollectionIds(
             ListCollectionIdsRequest request,
-            CallSettings callSettings = null)
+            gaxgrpc::CallSettings callSettings = null)
         {
             Modify_ListCollectionIdsRequest(ref request, ref callSettings);
-            return new GrpcPagedEnumerable<ListCollectionIdsRequest, ListCollectionIdsResponse, string>(_callListCollectionIds, request, callSettings);
+            return new gaxgrpc::GrpcPagedEnumerable<ListCollectionIdsRequest, ListCollectionIdsResponse, string>(_callListCollectionIds, request, callSettings);
         }
 
     }
 
     // Partial classes to enable page-streaming
 
-    public partial class ListDocumentsRequest : IPageRequest { }
-    public partial class ListDocumentsResponse : IPageResponse<Document>
+    public partial class ListDocumentsRequest : gaxgrpc::IPageRequest { }
+    public partial class ListDocumentsResponse : gaxgrpc::IPageResponse<Document>
     {
         /// <summary>
         /// Returns an enumerator that iterates through the resources in this response.
         /// </summary>
-        public IEnumerator<Document> GetEnumerator() => Documents.GetEnumerator();
+        public scg::IEnumerator<Document> GetEnumerator() => Documents.GetEnumerator();
 
         /// <inheritdoc/>
-        IEnumerator IEnumerable.GetEnumerator() => GetEnumerator();
+        sc::IEnumerator sc::IEnumerable.GetEnumerator() => GetEnumerator();
     }
 
-    public partial class ListCollectionIdsRequest : IPageRequest { }
-    public partial class ListCollectionIdsResponse : IPageResponse<string>
+    public partial class ListCollectionIdsRequest : gaxgrpc::IPageRequest { }
+    public partial class ListCollectionIdsResponse : gaxgrpc::IPageResponse<string>
     {
         /// <summary>
         /// Returns an enumerator that iterates through the resources in this response.
         /// </summary>
-        public IEnumerator<string> GetEnumerator() => CollectionIds.GetEnumerator();
+        public scg::IEnumerator<string> GetEnumerator() => CollectionIds.GetEnumerator();
 
         /// <inheritdoc/>
-        IEnumerator IEnumerable.GetEnumerator() => GetEnumerator();
+        sc::IEnumerator sc::IEnumerable.GetEnumerator() => GetEnumerator();
     }
 
 

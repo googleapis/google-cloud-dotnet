@@ -15,24 +15,24 @@
 // Generated code. DO NOT EDIT!
 
 using Google.Api;
-using Google.Api.Gax;
-using Google.Api.Gax.Grpc;
-using Google.Protobuf;
-using Google.Protobuf.WellKnownTypes;
-using Grpc.Core;
-using System;
-using System.Collections;
-using System.Collections.Generic;
-using System.Collections.ObjectModel;
-using System.Threading;
-using System.Threading.Tasks;
+using gax = Google.Api.Gax;
+using gaxgrpc = Google.Api.Gax.Grpc;
+using proto = Google.Protobuf;
+using protowkt = Google.Protobuf.WellKnownTypes;
+using grpccore = Grpc.Core;
+using s = System;
+using sc = System.Collections;
+using scg = System.Collections.Generic;
+using sco = System.Collections.ObjectModel;
+using st = System.Threading;
+using stt = System.Threading.Tasks;
 
 namespace Google.Cloud.Monitoring.V3
 {
     /// <summary>
     /// Settings for a <see cref="MetricServiceClient"/>.
     /// </summary>
-    public sealed partial class MetricServiceSettings : ServiceSettingsBase
+    public sealed partial class MetricServiceSettings : gaxgrpc::ServiceSettingsBase
     {
         /// <summary>
         /// Get a new instance of the default <see cref="MetricServiceSettings"/>.
@@ -49,7 +49,7 @@ namespace Google.Cloud.Monitoring.V3
 
         private MetricServiceSettings(MetricServiceSettings existing) : base(existing)
         {
-            GaxPreconditions.CheckNotNull(existing, nameof(existing));
+            gax::GaxPreconditions.CheckNotNull(existing, nameof(existing));
             ListMonitoredResourceDescriptorsSettings = existing.ListMonitoredResourceDescriptorsSettings;
             GetMonitoredResourceDescriptorSettings = existing.GetMonitoredResourceDescriptorSettings;
             ListMetricDescriptorsSettings = existing.ListMetricDescriptorsSettings;
@@ -64,28 +64,28 @@ namespace Google.Cloud.Monitoring.V3
         partial void OnCopy(MetricServiceSettings existing);
 
         /// <summary>
-        /// The filter specifying which RPC <see cref="StatusCode"/>s are eligible for retry
+        /// The filter specifying which RPC <see cref="grpccore::StatusCode"/>s are eligible for retry
         /// for "Idempotent" <see cref="MetricServiceClient"/> RPC methods.
         /// </summary>
         /// <remarks>
-        /// The eligible RPC <see cref="StatusCode"/>s for retry for "Idempotent" RPC methods are:
+        /// The eligible RPC <see cref="grpccore::StatusCode"/>s for retry for "Idempotent" RPC methods are:
         /// <list type="bullet">
-        /// <item><description><see cref="StatusCode.DeadlineExceeded"/></description></item>
-        /// <item><description><see cref="StatusCode.Unavailable"/></description></item>
+        /// <item><description><see cref="grpccore::StatusCode.DeadlineExceeded"/></description></item>
+        /// <item><description><see cref="grpccore::StatusCode.Unavailable"/></description></item>
         /// </list>
         /// </remarks>
-        public static Predicate<RpcException> IdempotentRetryFilter { get; } =
-            RetrySettings.FilterForStatusCodes(StatusCode.DeadlineExceeded, StatusCode.Unavailable);
+        public static s::Predicate<grpccore::RpcException> IdempotentRetryFilter { get; } =
+            gaxgrpc::RetrySettings.FilterForStatusCodes(grpccore::StatusCode.DeadlineExceeded, grpccore::StatusCode.Unavailable);
 
         /// <summary>
-        /// The filter specifying which RPC <see cref="StatusCode"/>s are eligible for retry
+        /// The filter specifying which RPC <see cref="grpccore::StatusCode"/>s are eligible for retry
         /// for "NonIdempotent" <see cref="MetricServiceClient"/> RPC methods.
         /// </summary>
         /// <remarks>
-        /// There are no RPC <see cref="StatusCode"/>s eligible for retry for "NonIdempotent" RPC methods.
+        /// There are no RPC <see cref="grpccore::StatusCode"/>s eligible for retry for "NonIdempotent" RPC methods.
         /// </remarks>
-        public static Predicate<RpcException> NonIdempotentRetryFilter { get; } =
-            RetrySettings.FilterForStatusCodes();
+        public static s::Predicate<grpccore::RpcException> NonIdempotentRetryFilter { get; } =
+            gaxgrpc::RetrySettings.FilterForStatusCodes();
 
         /// <summary>
         /// "Default" retry backoff for <see cref="MetricServiceClient"/> RPC methods.
@@ -101,9 +101,9 @@ namespace Google.Cloud.Monitoring.V3
         /// <item><description>Delay multiplier: 1.3</description></item>
         /// </list>
         /// </remarks>
-        public static BackoffSettings GetDefaultRetryBackoff() => new BackoffSettings(
-            delay: TimeSpan.FromMilliseconds(100),
-            maxDelay: TimeSpan.FromMilliseconds(60000),
+        public static gaxgrpc::BackoffSettings GetDefaultRetryBackoff() => new gaxgrpc::BackoffSettings(
+            delay: s::TimeSpan.FromMilliseconds(100),
+            maxDelay: s::TimeSpan.FromMilliseconds(60000),
             delayMultiplier: 1.3
         );
 
@@ -121,19 +121,19 @@ namespace Google.Cloud.Monitoring.V3
         /// <item><description>Maximum timeout: 20000 milliseconds</description></item>
         /// </list>
         /// </remarks>
-        public static BackoffSettings GetDefaultTimeoutBackoff() => new BackoffSettings(
-            delay: TimeSpan.FromMilliseconds(20000),
-            maxDelay: TimeSpan.FromMilliseconds(20000),
+        public static gaxgrpc::BackoffSettings GetDefaultTimeoutBackoff() => new gaxgrpc::BackoffSettings(
+            delay: s::TimeSpan.FromMilliseconds(20000),
+            maxDelay: s::TimeSpan.FromMilliseconds(20000),
             delayMultiplier: 1.0
         );
 
         /// <summary>
-        /// <see cref="CallSettings"/> for synchronous and asynchronous calls to
+        /// <see cref="gaxgrpc::CallSettings"/> for synchronous and asynchronous calls to
         /// <c>MetricServiceClient.ListMonitoredResourceDescriptors</c> and <c>MetricServiceClient.ListMonitoredResourceDescriptorsAsync</c>.
         /// </summary>
         /// <remarks>
         /// The default <c>MetricServiceClient.ListMonitoredResourceDescriptors</c> and
-        /// <c>MetricServiceClient.ListMonitoredResourceDescriptorsAsync</c> <see cref="RetrySettings"/> are:
+        /// <c>MetricServiceClient.ListMonitoredResourceDescriptorsAsync</c> <see cref="gaxgrpc::RetrySettings"/> are:
         /// <list type="bullet">
         /// <item><description>Initial retry delay: 100 milliseconds</description></item>
         /// <item><description>Retry delay multiplier: 1.3</description></item>
@@ -144,26 +144,26 @@ namespace Google.Cloud.Monitoring.V3
         /// </list>
         /// Retry will be attempted on the following response status codes:
         /// <list>
-        /// <item><description><see cref="StatusCode.DeadlineExceeded"/></description></item>
-        /// <item><description><see cref="StatusCode.Unavailable"/></description></item>
+        /// <item><description><see cref="grpccore::StatusCode.DeadlineExceeded"/></description></item>
+        /// <item><description><see cref="grpccore::StatusCode.Unavailable"/></description></item>
         /// </list>
         /// Default RPC expiration is 600000 milliseconds.
         /// </remarks>
-        public CallSettings ListMonitoredResourceDescriptorsSettings { get; set; } = CallSettings.FromCallTiming(
-            CallTiming.FromRetry(new RetrySettings(
+        public gaxgrpc::CallSettings ListMonitoredResourceDescriptorsSettings { get; set; } = gaxgrpc::CallSettings.FromCallTiming(
+            gaxgrpc::CallTiming.FromRetry(new gaxgrpc::RetrySettings(
                 retryBackoff: GetDefaultRetryBackoff(),
                 timeoutBackoff: GetDefaultTimeoutBackoff(),
-                totalExpiration: Expiration.FromTimeout(TimeSpan.FromMilliseconds(600000)),
+                totalExpiration: gax::Expiration.FromTimeout(s::TimeSpan.FromMilliseconds(600000)),
                 retryFilter: IdempotentRetryFilter
             )));
 
         /// <summary>
-        /// <see cref="CallSettings"/> for synchronous and asynchronous calls to
+        /// <see cref="gaxgrpc::CallSettings"/> for synchronous and asynchronous calls to
         /// <c>MetricServiceClient.GetMonitoredResourceDescriptor</c> and <c>MetricServiceClient.GetMonitoredResourceDescriptorAsync</c>.
         /// </summary>
         /// <remarks>
         /// The default <c>MetricServiceClient.GetMonitoredResourceDescriptor</c> and
-        /// <c>MetricServiceClient.GetMonitoredResourceDescriptorAsync</c> <see cref="RetrySettings"/> are:
+        /// <c>MetricServiceClient.GetMonitoredResourceDescriptorAsync</c> <see cref="gaxgrpc::RetrySettings"/> are:
         /// <list type="bullet">
         /// <item><description>Initial retry delay: 100 milliseconds</description></item>
         /// <item><description>Retry delay multiplier: 1.3</description></item>
@@ -174,26 +174,26 @@ namespace Google.Cloud.Monitoring.V3
         /// </list>
         /// Retry will be attempted on the following response status codes:
         /// <list>
-        /// <item><description><see cref="StatusCode.DeadlineExceeded"/></description></item>
-        /// <item><description><see cref="StatusCode.Unavailable"/></description></item>
+        /// <item><description><see cref="grpccore::StatusCode.DeadlineExceeded"/></description></item>
+        /// <item><description><see cref="grpccore::StatusCode.Unavailable"/></description></item>
         /// </list>
         /// Default RPC expiration is 600000 milliseconds.
         /// </remarks>
-        public CallSettings GetMonitoredResourceDescriptorSettings { get; set; } = CallSettings.FromCallTiming(
-            CallTiming.FromRetry(new RetrySettings(
+        public gaxgrpc::CallSettings GetMonitoredResourceDescriptorSettings { get; set; } = gaxgrpc::CallSettings.FromCallTiming(
+            gaxgrpc::CallTiming.FromRetry(new gaxgrpc::RetrySettings(
                 retryBackoff: GetDefaultRetryBackoff(),
                 timeoutBackoff: GetDefaultTimeoutBackoff(),
-                totalExpiration: Expiration.FromTimeout(TimeSpan.FromMilliseconds(600000)),
+                totalExpiration: gax::Expiration.FromTimeout(s::TimeSpan.FromMilliseconds(600000)),
                 retryFilter: IdempotentRetryFilter
             )));
 
         /// <summary>
-        /// <see cref="CallSettings"/> for synchronous and asynchronous calls to
+        /// <see cref="gaxgrpc::CallSettings"/> for synchronous and asynchronous calls to
         /// <c>MetricServiceClient.ListMetricDescriptors</c> and <c>MetricServiceClient.ListMetricDescriptorsAsync</c>.
         /// </summary>
         /// <remarks>
         /// The default <c>MetricServiceClient.ListMetricDescriptors</c> and
-        /// <c>MetricServiceClient.ListMetricDescriptorsAsync</c> <see cref="RetrySettings"/> are:
+        /// <c>MetricServiceClient.ListMetricDescriptorsAsync</c> <see cref="gaxgrpc::RetrySettings"/> are:
         /// <list type="bullet">
         /// <item><description>Initial retry delay: 100 milliseconds</description></item>
         /// <item><description>Retry delay multiplier: 1.3</description></item>
@@ -204,26 +204,26 @@ namespace Google.Cloud.Monitoring.V3
         /// </list>
         /// Retry will be attempted on the following response status codes:
         /// <list>
-        /// <item><description><see cref="StatusCode.DeadlineExceeded"/></description></item>
-        /// <item><description><see cref="StatusCode.Unavailable"/></description></item>
+        /// <item><description><see cref="grpccore::StatusCode.DeadlineExceeded"/></description></item>
+        /// <item><description><see cref="grpccore::StatusCode.Unavailable"/></description></item>
         /// </list>
         /// Default RPC expiration is 600000 milliseconds.
         /// </remarks>
-        public CallSettings ListMetricDescriptorsSettings { get; set; } = CallSettings.FromCallTiming(
-            CallTiming.FromRetry(new RetrySettings(
+        public gaxgrpc::CallSettings ListMetricDescriptorsSettings { get; set; } = gaxgrpc::CallSettings.FromCallTiming(
+            gaxgrpc::CallTiming.FromRetry(new gaxgrpc::RetrySettings(
                 retryBackoff: GetDefaultRetryBackoff(),
                 timeoutBackoff: GetDefaultTimeoutBackoff(),
-                totalExpiration: Expiration.FromTimeout(TimeSpan.FromMilliseconds(600000)),
+                totalExpiration: gax::Expiration.FromTimeout(s::TimeSpan.FromMilliseconds(600000)),
                 retryFilter: IdempotentRetryFilter
             )));
 
         /// <summary>
-        /// <see cref="CallSettings"/> for synchronous and asynchronous calls to
+        /// <see cref="gaxgrpc::CallSettings"/> for synchronous and asynchronous calls to
         /// <c>MetricServiceClient.GetMetricDescriptor</c> and <c>MetricServiceClient.GetMetricDescriptorAsync</c>.
         /// </summary>
         /// <remarks>
         /// The default <c>MetricServiceClient.GetMetricDescriptor</c> and
-        /// <c>MetricServiceClient.GetMetricDescriptorAsync</c> <see cref="RetrySettings"/> are:
+        /// <c>MetricServiceClient.GetMetricDescriptorAsync</c> <see cref="gaxgrpc::RetrySettings"/> are:
         /// <list type="bullet">
         /// <item><description>Initial retry delay: 100 milliseconds</description></item>
         /// <item><description>Retry delay multiplier: 1.3</description></item>
@@ -234,26 +234,26 @@ namespace Google.Cloud.Monitoring.V3
         /// </list>
         /// Retry will be attempted on the following response status codes:
         /// <list>
-        /// <item><description><see cref="StatusCode.DeadlineExceeded"/></description></item>
-        /// <item><description><see cref="StatusCode.Unavailable"/></description></item>
+        /// <item><description><see cref="grpccore::StatusCode.DeadlineExceeded"/></description></item>
+        /// <item><description><see cref="grpccore::StatusCode.Unavailable"/></description></item>
         /// </list>
         /// Default RPC expiration is 600000 milliseconds.
         /// </remarks>
-        public CallSettings GetMetricDescriptorSettings { get; set; } = CallSettings.FromCallTiming(
-            CallTiming.FromRetry(new RetrySettings(
+        public gaxgrpc::CallSettings GetMetricDescriptorSettings { get; set; } = gaxgrpc::CallSettings.FromCallTiming(
+            gaxgrpc::CallTiming.FromRetry(new gaxgrpc::RetrySettings(
                 retryBackoff: GetDefaultRetryBackoff(),
                 timeoutBackoff: GetDefaultTimeoutBackoff(),
-                totalExpiration: Expiration.FromTimeout(TimeSpan.FromMilliseconds(600000)),
+                totalExpiration: gax::Expiration.FromTimeout(s::TimeSpan.FromMilliseconds(600000)),
                 retryFilter: IdempotentRetryFilter
             )));
 
         /// <summary>
-        /// <see cref="CallSettings"/> for synchronous and asynchronous calls to
+        /// <see cref="gaxgrpc::CallSettings"/> for synchronous and asynchronous calls to
         /// <c>MetricServiceClient.CreateMetricDescriptor</c> and <c>MetricServiceClient.CreateMetricDescriptorAsync</c>.
         /// </summary>
         /// <remarks>
         /// The default <c>MetricServiceClient.CreateMetricDescriptor</c> and
-        /// <c>MetricServiceClient.CreateMetricDescriptorAsync</c> <see cref="RetrySettings"/> are:
+        /// <c>MetricServiceClient.CreateMetricDescriptorAsync</c> <see cref="gaxgrpc::RetrySettings"/> are:
         /// <list type="bullet">
         /// <item><description>Initial retry delay: 100 milliseconds</description></item>
         /// <item><description>Retry delay multiplier: 1.3</description></item>
@@ -268,21 +268,21 @@ namespace Google.Cloud.Monitoring.V3
         /// </list>
         /// Default RPC expiration is 600000 milliseconds.
         /// </remarks>
-        public CallSettings CreateMetricDescriptorSettings { get; set; } = CallSettings.FromCallTiming(
-            CallTiming.FromRetry(new RetrySettings(
+        public gaxgrpc::CallSettings CreateMetricDescriptorSettings { get; set; } = gaxgrpc::CallSettings.FromCallTiming(
+            gaxgrpc::CallTiming.FromRetry(new gaxgrpc::RetrySettings(
                 retryBackoff: GetDefaultRetryBackoff(),
                 timeoutBackoff: GetDefaultTimeoutBackoff(),
-                totalExpiration: Expiration.FromTimeout(TimeSpan.FromMilliseconds(600000)),
+                totalExpiration: gax::Expiration.FromTimeout(s::TimeSpan.FromMilliseconds(600000)),
                 retryFilter: NonIdempotentRetryFilter
             )));
 
         /// <summary>
-        /// <see cref="CallSettings"/> for synchronous and asynchronous calls to
+        /// <see cref="gaxgrpc::CallSettings"/> for synchronous and asynchronous calls to
         /// <c>MetricServiceClient.DeleteMetricDescriptor</c> and <c>MetricServiceClient.DeleteMetricDescriptorAsync</c>.
         /// </summary>
         /// <remarks>
         /// The default <c>MetricServiceClient.DeleteMetricDescriptor</c> and
-        /// <c>MetricServiceClient.DeleteMetricDescriptorAsync</c> <see cref="RetrySettings"/> are:
+        /// <c>MetricServiceClient.DeleteMetricDescriptorAsync</c> <see cref="gaxgrpc::RetrySettings"/> are:
         /// <list type="bullet">
         /// <item><description>Initial retry delay: 100 milliseconds</description></item>
         /// <item><description>Retry delay multiplier: 1.3</description></item>
@@ -293,26 +293,26 @@ namespace Google.Cloud.Monitoring.V3
         /// </list>
         /// Retry will be attempted on the following response status codes:
         /// <list>
-        /// <item><description><see cref="StatusCode.DeadlineExceeded"/></description></item>
-        /// <item><description><see cref="StatusCode.Unavailable"/></description></item>
+        /// <item><description><see cref="grpccore::StatusCode.DeadlineExceeded"/></description></item>
+        /// <item><description><see cref="grpccore::StatusCode.Unavailable"/></description></item>
         /// </list>
         /// Default RPC expiration is 600000 milliseconds.
         /// </remarks>
-        public CallSettings DeleteMetricDescriptorSettings { get; set; } = CallSettings.FromCallTiming(
-            CallTiming.FromRetry(new RetrySettings(
+        public gaxgrpc::CallSettings DeleteMetricDescriptorSettings { get; set; } = gaxgrpc::CallSettings.FromCallTiming(
+            gaxgrpc::CallTiming.FromRetry(new gaxgrpc::RetrySettings(
                 retryBackoff: GetDefaultRetryBackoff(),
                 timeoutBackoff: GetDefaultTimeoutBackoff(),
-                totalExpiration: Expiration.FromTimeout(TimeSpan.FromMilliseconds(600000)),
+                totalExpiration: gax::Expiration.FromTimeout(s::TimeSpan.FromMilliseconds(600000)),
                 retryFilter: IdempotentRetryFilter
             )));
 
         /// <summary>
-        /// <see cref="CallSettings"/> for synchronous and asynchronous calls to
+        /// <see cref="gaxgrpc::CallSettings"/> for synchronous and asynchronous calls to
         /// <c>MetricServiceClient.ListTimeSeries</c> and <c>MetricServiceClient.ListTimeSeriesAsync</c>.
         /// </summary>
         /// <remarks>
         /// The default <c>MetricServiceClient.ListTimeSeries</c> and
-        /// <c>MetricServiceClient.ListTimeSeriesAsync</c> <see cref="RetrySettings"/> are:
+        /// <c>MetricServiceClient.ListTimeSeriesAsync</c> <see cref="gaxgrpc::RetrySettings"/> are:
         /// <list type="bullet">
         /// <item><description>Initial retry delay: 100 milliseconds</description></item>
         /// <item><description>Retry delay multiplier: 1.3</description></item>
@@ -323,26 +323,26 @@ namespace Google.Cloud.Monitoring.V3
         /// </list>
         /// Retry will be attempted on the following response status codes:
         /// <list>
-        /// <item><description><see cref="StatusCode.DeadlineExceeded"/></description></item>
-        /// <item><description><see cref="StatusCode.Unavailable"/></description></item>
+        /// <item><description><see cref="grpccore::StatusCode.DeadlineExceeded"/></description></item>
+        /// <item><description><see cref="grpccore::StatusCode.Unavailable"/></description></item>
         /// </list>
         /// Default RPC expiration is 600000 milliseconds.
         /// </remarks>
-        public CallSettings ListTimeSeriesSettings { get; set; } = CallSettings.FromCallTiming(
-            CallTiming.FromRetry(new RetrySettings(
+        public gaxgrpc::CallSettings ListTimeSeriesSettings { get; set; } = gaxgrpc::CallSettings.FromCallTiming(
+            gaxgrpc::CallTiming.FromRetry(new gaxgrpc::RetrySettings(
                 retryBackoff: GetDefaultRetryBackoff(),
                 timeoutBackoff: GetDefaultTimeoutBackoff(),
-                totalExpiration: Expiration.FromTimeout(TimeSpan.FromMilliseconds(600000)),
+                totalExpiration: gax::Expiration.FromTimeout(s::TimeSpan.FromMilliseconds(600000)),
                 retryFilter: IdempotentRetryFilter
             )));
 
         /// <summary>
-        /// <see cref="CallSettings"/> for synchronous and asynchronous calls to
+        /// <see cref="gaxgrpc::CallSettings"/> for synchronous and asynchronous calls to
         /// <c>MetricServiceClient.CreateTimeSeries</c> and <c>MetricServiceClient.CreateTimeSeriesAsync</c>.
         /// </summary>
         /// <remarks>
         /// The default <c>MetricServiceClient.CreateTimeSeries</c> and
-        /// <c>MetricServiceClient.CreateTimeSeriesAsync</c> <see cref="RetrySettings"/> are:
+        /// <c>MetricServiceClient.CreateTimeSeriesAsync</c> <see cref="gaxgrpc::RetrySettings"/> are:
         /// <list type="bullet">
         /// <item><description>Initial retry delay: 100 milliseconds</description></item>
         /// <item><description>Retry delay multiplier: 1.3</description></item>
@@ -357,11 +357,11 @@ namespace Google.Cloud.Monitoring.V3
         /// </list>
         /// Default RPC expiration is 600000 milliseconds.
         /// </remarks>
-        public CallSettings CreateTimeSeriesSettings { get; set; } = CallSettings.FromCallTiming(
-            CallTiming.FromRetry(new RetrySettings(
+        public gaxgrpc::CallSettings CreateTimeSeriesSettings { get; set; } = gaxgrpc::CallSettings.FromCallTiming(
+            gaxgrpc::CallTiming.FromRetry(new gaxgrpc::RetrySettings(
                 retryBackoff: GetDefaultRetryBackoff(),
                 timeoutBackoff: GetDefaultTimeoutBackoff(),
-                totalExpiration: Expiration.FromTimeout(TimeSpan.FromMilliseconds(600000)),
+                totalExpiration: gax::Expiration.FromTimeout(s::TimeSpan.FromMilliseconds(600000)),
                 retryFilter: NonIdempotentRetryFilter
             )));
 
@@ -380,7 +380,7 @@ namespace Google.Cloud.Monitoring.V3
         /// <summary>
         /// The default endpoint for the MetricService service, which is a host of "monitoring.googleapis.com" and a port of 443.
         /// </summary>
-        public static ServiceEndpoint DefaultEndpoint { get; } = new ServiceEndpoint("monitoring.googleapis.com", 443);
+        public static gaxgrpc::ServiceEndpoint DefaultEndpoint { get; } = new gaxgrpc::ServiceEndpoint("monitoring.googleapis.com", 443);
 
         /// <summary>
         /// The default MetricService scopes.
@@ -394,14 +394,14 @@ namespace Google.Cloud.Monitoring.V3
         /// <item><description>"https://www.googleapis.com/auth/monitoring.write"</description></item>
         /// </list>
         /// </remarks>
-        public static IReadOnlyList<string> DefaultScopes { get; } = new ReadOnlyCollection<string>(new string[] {
+        public static scg::IReadOnlyList<string> DefaultScopes { get; } = new sco::ReadOnlyCollection<string>(new string[] {
             "https://www.googleapis.com/auth/cloud-platform",
             "https://www.googleapis.com/auth/monitoring",
             "https://www.googleapis.com/auth/monitoring.read",
             "https://www.googleapis.com/auth/monitoring.write",
         });
 
-        private static readonly ChannelPool s_channelPool = new ChannelPool(DefaultScopes);
+        private static readonly gaxgrpc::ChannelPool s_channelPool = new gaxgrpc::ChannelPool(DefaultScopes);
 
         // Note: we could have parameterless overloads of Create and CreateAsync,
         // documented to just use the default endpoint, settings and credentials.
@@ -415,12 +415,12 @@ namespace Google.Cloud.Monitoring.V3
         /// and creating a channel connecting to the given endpoint with application default credentials where
         /// necessary.
         /// </summary>
-        /// <param name="endpoint">Optional <see cref="ServiceEndpoint"/>.</param>
+        /// <param name="endpoint">Optional <see cref="gaxgrpc::ServiceEndpoint"/>.</param>
         /// <param name="settings">Optional <see cref="MetricServiceSettings"/>.</param>
         /// <returns>The task representing the created <see cref="MetricServiceClient"/>.</returns>
-        public static async Task<MetricServiceClient> CreateAsync(ServiceEndpoint endpoint = null, MetricServiceSettings settings = null)
+        public static async stt::Task<MetricServiceClient> CreateAsync(gaxgrpc::ServiceEndpoint endpoint = null, MetricServiceSettings settings = null)
         {
-            Channel channel = await s_channelPool.GetChannelAsync(endpoint ?? DefaultEndpoint).ConfigureAwait(false);
+            grpccore::Channel channel = await s_channelPool.GetChannelAsync(endpoint ?? DefaultEndpoint).ConfigureAwait(false);
             return Create(channel, settings);
         }
 
@@ -429,45 +429,45 @@ namespace Google.Cloud.Monitoring.V3
         /// and creating a channel connecting to the given endpoint with application default credentials where
         /// necessary.
         /// </summary>
-        /// <param name="endpoint">Optional <see cref="ServiceEndpoint"/>.</param>
+        /// <param name="endpoint">Optional <see cref="gaxgrpc::ServiceEndpoint"/>.</param>
         /// <param name="settings">Optional <see cref="MetricServiceSettings"/>.</param>
         /// <returns>The created <see cref="MetricServiceClient"/>.</returns>
-        public static MetricServiceClient Create(ServiceEndpoint endpoint = null, MetricServiceSettings settings = null)
+        public static MetricServiceClient Create(gaxgrpc::ServiceEndpoint endpoint = null, MetricServiceSettings settings = null)
         {
-            Channel channel = s_channelPool.GetChannel(endpoint ?? DefaultEndpoint);
+            grpccore::Channel channel = s_channelPool.GetChannel(endpoint ?? DefaultEndpoint);
             return Create(channel, settings);
         }
 
         /// <summary>
         /// Creates a <see cref="MetricServiceClient"/> which uses the specified channel for remote operations.
         /// </summary>
-        /// <param name="channel">The <see cref="Channel"/> for remote operations. Must not be null.</param>
+        /// <param name="channel">The <see cref="grpccore::Channel"/> for remote operations. Must not be null.</param>
         /// <param name="settings">Optional <see cref="MetricServiceSettings"/>.</param>
         /// <returns>The created <see cref="MetricServiceClient"/>.</returns>
-        public static MetricServiceClient Create(Channel channel, MetricServiceSettings settings = null)
+        public static MetricServiceClient Create(grpccore::Channel channel, MetricServiceSettings settings = null)
         {
-            GaxPreconditions.CheckNotNull(channel, nameof(channel));
+            gax::GaxPreconditions.CheckNotNull(channel, nameof(channel));
             MetricService.MetricServiceClient grpcClient = new MetricService.MetricServiceClient(channel);
             return new MetricServiceClientImpl(grpcClient, settings);
         }
 
         /// <summary>
-        /// Shuts down any channels automatically created by <see cref="Create(ServiceEndpoint, MetricServiceSettings)"/>
-        /// and <see cref="CreateAsync(ServiceEndpoint, MetricServiceSettings)"/>. Channels which weren't automatically
+        /// Shuts down any channels automatically created by <see cref="Create(gaxgrpc::ServiceEndpoint, MetricServiceSettings)"/>
+        /// and <see cref="CreateAsync(gaxgrpc::ServiceEndpoint, MetricServiceSettings)"/>. Channels which weren't automatically
         /// created are not affected.
         /// </summary>
-        /// <remarks>After calling this method, further calls to <see cref="Create(ServiceEndpoint, MetricServiceSettings)"/>
-        /// and <see cref="CreateAsync(ServiceEndpoint, MetricServiceSettings)"/> will create new channels, which could
+        /// <remarks>After calling this method, further calls to <see cref="Create(gaxgrpc::ServiceEndpoint, MetricServiceSettings)"/>
+        /// and <see cref="CreateAsync(gaxgrpc::ServiceEndpoint, MetricServiceSettings)"/> will create new channels, which could
         /// in turn be shut down by another call to this method.</remarks>
         /// <returns>A task representing the asynchronous shutdown operation.</returns>
-        public static Task ShutdownDefaultChannelsAsync() => s_channelPool.ShutdownChannelsAsync();
+        public static stt::Task ShutdownDefaultChannelsAsync() => s_channelPool.ShutdownChannelsAsync();
 
         /// <summary>
         /// The underlying gRPC MetricService client.
         /// </summary>
         public virtual MetricService.MetricServiceClient GrpcClient
         {
-            get { throw new NotImplementedException(); }
+            get { throw new s::NotImplementedException(); }
         }
 
         /// <summary>
@@ -491,14 +491,14 @@ namespace Google.Cloud.Monitoring.V3
         /// <returns>
         /// A pageable asynchronous sequence of <see cref="MonitoredResourceDescriptor"/> resources.
         /// </returns>
-        public virtual PagedAsyncEnumerable<ListMonitoredResourceDescriptorsResponse, MonitoredResourceDescriptor> ListMonitoredResourceDescriptorsAsync(
+        public virtual gax::PagedAsyncEnumerable<ListMonitoredResourceDescriptorsResponse, MonitoredResourceDescriptor> ListMonitoredResourceDescriptorsAsync(
             ProjectName name,
             string pageToken = null,
             int? pageSize = null,
-            CallSettings callSettings = null) => ListMonitoredResourceDescriptorsAsync(
+            gaxgrpc::CallSettings callSettings = null) => ListMonitoredResourceDescriptorsAsync(
                 new ListMonitoredResourceDescriptorsRequest
                 {
-                    ProjectName = GaxPreconditions.CheckNotNull(name, nameof(name)),
+                    ProjectName = gax::GaxPreconditions.CheckNotNull(name, nameof(name)),
                     PageToken = pageToken ?? "",
                     PageSize = pageSize ?? 0,
                 },
@@ -525,14 +525,14 @@ namespace Google.Cloud.Monitoring.V3
         /// <returns>
         /// A pageable sequence of <see cref="MonitoredResourceDescriptor"/> resources.
         /// </returns>
-        public virtual PagedEnumerable<ListMonitoredResourceDescriptorsResponse, MonitoredResourceDescriptor> ListMonitoredResourceDescriptors(
+        public virtual gax::PagedEnumerable<ListMonitoredResourceDescriptorsResponse, MonitoredResourceDescriptor> ListMonitoredResourceDescriptors(
             ProjectName name,
             string pageToken = null,
             int? pageSize = null,
-            CallSettings callSettings = null) => ListMonitoredResourceDescriptors(
+            gaxgrpc::CallSettings callSettings = null) => ListMonitoredResourceDescriptors(
                 new ListMonitoredResourceDescriptorsRequest
                 {
-                    ProjectName = GaxPreconditions.CheckNotNull(name, nameof(name)),
+                    ProjectName = gax::GaxPreconditions.CheckNotNull(name, nameof(name)),
                     PageToken = pageToken ?? "",
                     PageSize = pageSize ?? 0,
                 },
@@ -550,11 +550,11 @@ namespace Google.Cloud.Monitoring.V3
         /// <returns>
         /// A pageable asynchronous sequence of <see cref="MonitoredResourceDescriptor"/> resources.
         /// </returns>
-        public virtual PagedAsyncEnumerable<ListMonitoredResourceDescriptorsResponse, MonitoredResourceDescriptor> ListMonitoredResourceDescriptorsAsync(
+        public virtual gax::PagedAsyncEnumerable<ListMonitoredResourceDescriptorsResponse, MonitoredResourceDescriptor> ListMonitoredResourceDescriptorsAsync(
             ListMonitoredResourceDescriptorsRequest request,
-            CallSettings callSettings = null)
+            gaxgrpc::CallSettings callSettings = null)
         {
-            throw new NotImplementedException();
+            throw new s::NotImplementedException();
         }
 
         /// <summary>
@@ -569,11 +569,11 @@ namespace Google.Cloud.Monitoring.V3
         /// <returns>
         /// A pageable sequence of <see cref="MonitoredResourceDescriptor"/> resources.
         /// </returns>
-        public virtual PagedEnumerable<ListMonitoredResourceDescriptorsResponse, MonitoredResourceDescriptor> ListMonitoredResourceDescriptors(
+        public virtual gax::PagedEnumerable<ListMonitoredResourceDescriptorsResponse, MonitoredResourceDescriptor> ListMonitoredResourceDescriptors(
             ListMonitoredResourceDescriptorsRequest request,
-            CallSettings callSettings = null)
+            gaxgrpc::CallSettings callSettings = null)
         {
-            throw new NotImplementedException();
+            throw new s::NotImplementedException();
         }
 
         /// <summary>
@@ -591,12 +591,12 @@ namespace Google.Cloud.Monitoring.V3
         /// <returns>
         /// A Task containing the RPC response.
         /// </returns>
-        public virtual Task<MonitoredResourceDescriptor> GetMonitoredResourceDescriptorAsync(
+        public virtual stt::Task<MonitoredResourceDescriptor> GetMonitoredResourceDescriptorAsync(
             MonitoredResourceDescriptorName name,
-            CallSettings callSettings = null) => GetMonitoredResourceDescriptorAsync(
+            gaxgrpc::CallSettings callSettings = null) => GetMonitoredResourceDescriptorAsync(
                 new GetMonitoredResourceDescriptorRequest
                 {
-                    MonitoredResourceDescriptorName = GaxPreconditions.CheckNotNull(name, nameof(name)),
+                    MonitoredResourceDescriptorName = gax::GaxPreconditions.CheckNotNull(name, nameof(name)),
                 },
                 callSettings);
 
@@ -610,16 +610,16 @@ namespace Google.Cloud.Monitoring.V3
         /// `cloudsql_database`.
         /// </param>
         /// <param name="cancellationToken">
-        /// A <see cref="CancellationToken"/> to use for this RPC.
+        /// A <see cref="st::CancellationToken"/> to use for this RPC.
         /// </param>
         /// <returns>
         /// A Task containing the RPC response.
         /// </returns>
-        public virtual Task<MonitoredResourceDescriptor> GetMonitoredResourceDescriptorAsync(
+        public virtual stt::Task<MonitoredResourceDescriptor> GetMonitoredResourceDescriptorAsync(
             MonitoredResourceDescriptorName name,
-            CancellationToken cancellationToken) => GetMonitoredResourceDescriptorAsync(
+            st::CancellationToken cancellationToken) => GetMonitoredResourceDescriptorAsync(
                 name,
-                CallSettings.FromCancellationToken(cancellationToken));
+                gaxgrpc::CallSettings.FromCancellationToken(cancellationToken));
 
         /// <summary>
         /// Gets a single monitored resource descriptor. This method does not require a Stackdriver account.
@@ -638,10 +638,10 @@ namespace Google.Cloud.Monitoring.V3
         /// </returns>
         public virtual MonitoredResourceDescriptor GetMonitoredResourceDescriptor(
             MonitoredResourceDescriptorName name,
-            CallSettings callSettings = null) => GetMonitoredResourceDescriptor(
+            gaxgrpc::CallSettings callSettings = null) => GetMonitoredResourceDescriptor(
                 new GetMonitoredResourceDescriptorRequest
                 {
-                    MonitoredResourceDescriptorName = GaxPreconditions.CheckNotNull(name, nameof(name)),
+                    MonitoredResourceDescriptorName = gax::GaxPreconditions.CheckNotNull(name, nameof(name)),
                 },
                 callSettings);
 
@@ -657,11 +657,11 @@ namespace Google.Cloud.Monitoring.V3
         /// <returns>
         /// A Task containing the RPC response.
         /// </returns>
-        public virtual Task<MonitoredResourceDescriptor> GetMonitoredResourceDescriptorAsync(
+        public virtual stt::Task<MonitoredResourceDescriptor> GetMonitoredResourceDescriptorAsync(
             GetMonitoredResourceDescriptorRequest request,
-            CallSettings callSettings = null)
+            gaxgrpc::CallSettings callSettings = null)
         {
-            throw new NotImplementedException();
+            throw new s::NotImplementedException();
         }
 
         /// <summary>
@@ -671,16 +671,16 @@ namespace Google.Cloud.Monitoring.V3
         /// The request object containing all of the parameters for the API call.
         /// </param>
         /// <param name="cancellationToken">
-        /// A <see cref="CancellationToken"/> to use for this RPC.
+        /// A <see cref="st::CancellationToken"/> to use for this RPC.
         /// </param>
         /// <returns>
         /// A Task containing the RPC response.
         /// </returns>
-        public virtual Task<MonitoredResourceDescriptor> GetMonitoredResourceDescriptorAsync(
+        public virtual stt::Task<MonitoredResourceDescriptor> GetMonitoredResourceDescriptorAsync(
             GetMonitoredResourceDescriptorRequest request,
-            CancellationToken cancellationToken) => GetMonitoredResourceDescriptorAsync(
+            st::CancellationToken cancellationToken) => GetMonitoredResourceDescriptorAsync(
                 request,
-                CallSettings.FromCancellationToken(cancellationToken));
+                gaxgrpc::CallSettings.FromCancellationToken(cancellationToken));
 
         /// <summary>
         /// Gets a single monitored resource descriptor. This method does not require a Stackdriver account.
@@ -696,9 +696,9 @@ namespace Google.Cloud.Monitoring.V3
         /// </returns>
         public virtual MonitoredResourceDescriptor GetMonitoredResourceDescriptor(
             GetMonitoredResourceDescriptorRequest request,
-            CallSettings callSettings = null)
+            gaxgrpc::CallSettings callSettings = null)
         {
-            throw new NotImplementedException();
+            throw new s::NotImplementedException();
         }
 
         /// <summary>
@@ -722,14 +722,14 @@ namespace Google.Cloud.Monitoring.V3
         /// <returns>
         /// A pageable asynchronous sequence of <see cref="MetricDescriptor"/> resources.
         /// </returns>
-        public virtual PagedAsyncEnumerable<ListMetricDescriptorsResponse, MetricDescriptor> ListMetricDescriptorsAsync(
+        public virtual gax::PagedAsyncEnumerable<ListMetricDescriptorsResponse, MetricDescriptor> ListMetricDescriptorsAsync(
             ProjectName name,
             string pageToken = null,
             int? pageSize = null,
-            CallSettings callSettings = null) => ListMetricDescriptorsAsync(
+            gaxgrpc::CallSettings callSettings = null) => ListMetricDescriptorsAsync(
                 new ListMetricDescriptorsRequest
                 {
-                    ProjectName = GaxPreconditions.CheckNotNull(name, nameof(name)),
+                    ProjectName = gax::GaxPreconditions.CheckNotNull(name, nameof(name)),
                     PageToken = pageToken ?? "",
                     PageSize = pageSize ?? 0,
                 },
@@ -756,14 +756,14 @@ namespace Google.Cloud.Monitoring.V3
         /// <returns>
         /// A pageable sequence of <see cref="MetricDescriptor"/> resources.
         /// </returns>
-        public virtual PagedEnumerable<ListMetricDescriptorsResponse, MetricDescriptor> ListMetricDescriptors(
+        public virtual gax::PagedEnumerable<ListMetricDescriptorsResponse, MetricDescriptor> ListMetricDescriptors(
             ProjectName name,
             string pageToken = null,
             int? pageSize = null,
-            CallSettings callSettings = null) => ListMetricDescriptors(
+            gaxgrpc::CallSettings callSettings = null) => ListMetricDescriptors(
                 new ListMetricDescriptorsRequest
                 {
-                    ProjectName = GaxPreconditions.CheckNotNull(name, nameof(name)),
+                    ProjectName = gax::GaxPreconditions.CheckNotNull(name, nameof(name)),
                     PageToken = pageToken ?? "",
                     PageSize = pageSize ?? 0,
                 },
@@ -781,11 +781,11 @@ namespace Google.Cloud.Monitoring.V3
         /// <returns>
         /// A pageable asynchronous sequence of <see cref="MetricDescriptor"/> resources.
         /// </returns>
-        public virtual PagedAsyncEnumerable<ListMetricDescriptorsResponse, MetricDescriptor> ListMetricDescriptorsAsync(
+        public virtual gax::PagedAsyncEnumerable<ListMetricDescriptorsResponse, MetricDescriptor> ListMetricDescriptorsAsync(
             ListMetricDescriptorsRequest request,
-            CallSettings callSettings = null)
+            gaxgrpc::CallSettings callSettings = null)
         {
-            throw new NotImplementedException();
+            throw new s::NotImplementedException();
         }
 
         /// <summary>
@@ -800,11 +800,11 @@ namespace Google.Cloud.Monitoring.V3
         /// <returns>
         /// A pageable sequence of <see cref="MetricDescriptor"/> resources.
         /// </returns>
-        public virtual PagedEnumerable<ListMetricDescriptorsResponse, MetricDescriptor> ListMetricDescriptors(
+        public virtual gax::PagedEnumerable<ListMetricDescriptorsResponse, MetricDescriptor> ListMetricDescriptors(
             ListMetricDescriptorsRequest request,
-            CallSettings callSettings = null)
+            gaxgrpc::CallSettings callSettings = null)
         {
-            throw new NotImplementedException();
+            throw new s::NotImplementedException();
         }
 
         /// <summary>
@@ -822,12 +822,12 @@ namespace Google.Cloud.Monitoring.V3
         /// <returns>
         /// A Task containing the RPC response.
         /// </returns>
-        public virtual Task<MetricDescriptor> GetMetricDescriptorAsync(
+        public virtual stt::Task<MetricDescriptor> GetMetricDescriptorAsync(
             MetricDescriptorName name,
-            CallSettings callSettings = null) => GetMetricDescriptorAsync(
+            gaxgrpc::CallSettings callSettings = null) => GetMetricDescriptorAsync(
                 new GetMetricDescriptorRequest
                 {
-                    MetricDescriptorName = GaxPreconditions.CheckNotNull(name, nameof(name)),
+                    MetricDescriptorName = gax::GaxPreconditions.CheckNotNull(name, nameof(name)),
                 },
                 callSettings);
 
@@ -841,16 +841,16 @@ namespace Google.Cloud.Monitoring.V3
         /// `"compute.googleapis.com/instance/disk/read_bytes_count"`.
         /// </param>
         /// <param name="cancellationToken">
-        /// A <see cref="CancellationToken"/> to use for this RPC.
+        /// A <see cref="st::CancellationToken"/> to use for this RPC.
         /// </param>
         /// <returns>
         /// A Task containing the RPC response.
         /// </returns>
-        public virtual Task<MetricDescriptor> GetMetricDescriptorAsync(
+        public virtual stt::Task<MetricDescriptor> GetMetricDescriptorAsync(
             MetricDescriptorName name,
-            CancellationToken cancellationToken) => GetMetricDescriptorAsync(
+            st::CancellationToken cancellationToken) => GetMetricDescriptorAsync(
                 name,
-                CallSettings.FromCancellationToken(cancellationToken));
+                gaxgrpc::CallSettings.FromCancellationToken(cancellationToken));
 
         /// <summary>
         /// Gets a single metric descriptor. This method does not require a Stackdriver account.
@@ -869,10 +869,10 @@ namespace Google.Cloud.Monitoring.V3
         /// </returns>
         public virtual MetricDescriptor GetMetricDescriptor(
             MetricDescriptorName name,
-            CallSettings callSettings = null) => GetMetricDescriptor(
+            gaxgrpc::CallSettings callSettings = null) => GetMetricDescriptor(
                 new GetMetricDescriptorRequest
                 {
-                    MetricDescriptorName = GaxPreconditions.CheckNotNull(name, nameof(name)),
+                    MetricDescriptorName = gax::GaxPreconditions.CheckNotNull(name, nameof(name)),
                 },
                 callSettings);
 
@@ -888,11 +888,11 @@ namespace Google.Cloud.Monitoring.V3
         /// <returns>
         /// A Task containing the RPC response.
         /// </returns>
-        public virtual Task<MetricDescriptor> GetMetricDescriptorAsync(
+        public virtual stt::Task<MetricDescriptor> GetMetricDescriptorAsync(
             GetMetricDescriptorRequest request,
-            CallSettings callSettings = null)
+            gaxgrpc::CallSettings callSettings = null)
         {
-            throw new NotImplementedException();
+            throw new s::NotImplementedException();
         }
 
         /// <summary>
@@ -902,16 +902,16 @@ namespace Google.Cloud.Monitoring.V3
         /// The request object containing all of the parameters for the API call.
         /// </param>
         /// <param name="cancellationToken">
-        /// A <see cref="CancellationToken"/> to use for this RPC.
+        /// A <see cref="st::CancellationToken"/> to use for this RPC.
         /// </param>
         /// <returns>
         /// A Task containing the RPC response.
         /// </returns>
-        public virtual Task<MetricDescriptor> GetMetricDescriptorAsync(
+        public virtual stt::Task<MetricDescriptor> GetMetricDescriptorAsync(
             GetMetricDescriptorRequest request,
-            CancellationToken cancellationToken) => GetMetricDescriptorAsync(
+            st::CancellationToken cancellationToken) => GetMetricDescriptorAsync(
                 request,
-                CallSettings.FromCancellationToken(cancellationToken));
+                gaxgrpc::CallSettings.FromCancellationToken(cancellationToken));
 
         /// <summary>
         /// Gets a single metric descriptor. This method does not require a Stackdriver account.
@@ -927,9 +927,9 @@ namespace Google.Cloud.Monitoring.V3
         /// </returns>
         public virtual MetricDescriptor GetMetricDescriptor(
             GetMetricDescriptorRequest request,
-            CallSettings callSettings = null)
+            gaxgrpc::CallSettings callSettings = null)
         {
-            throw new NotImplementedException();
+            throw new s::NotImplementedException();
         }
 
         /// <summary>
@@ -951,14 +951,14 @@ namespace Google.Cloud.Monitoring.V3
         /// <returns>
         /// A Task containing the RPC response.
         /// </returns>
-        public virtual Task<MetricDescriptor> CreateMetricDescriptorAsync(
+        public virtual stt::Task<MetricDescriptor> CreateMetricDescriptorAsync(
             ProjectName name,
             MetricDescriptor metricDescriptor,
-            CallSettings callSettings = null) => CreateMetricDescriptorAsync(
+            gaxgrpc::CallSettings callSettings = null) => CreateMetricDescriptorAsync(
                 new CreateMetricDescriptorRequest
                 {
-                    ProjectName = GaxPreconditions.CheckNotNull(name, nameof(name)),
-                    MetricDescriptor = GaxPreconditions.CheckNotNull(metricDescriptor, nameof(metricDescriptor)),
+                    ProjectName = gax::GaxPreconditions.CheckNotNull(name, nameof(name)),
+                    MetricDescriptor = gax::GaxPreconditions.CheckNotNull(metricDescriptor, nameof(metricDescriptor)),
                 },
                 callSettings);
 
@@ -976,18 +976,18 @@ namespace Google.Cloud.Monitoring.V3
         /// descriptor.
         /// </param>
         /// <param name="cancellationToken">
-        /// A <see cref="CancellationToken"/> to use for this RPC.
+        /// A <see cref="st::CancellationToken"/> to use for this RPC.
         /// </param>
         /// <returns>
         /// A Task containing the RPC response.
         /// </returns>
-        public virtual Task<MetricDescriptor> CreateMetricDescriptorAsync(
+        public virtual stt::Task<MetricDescriptor> CreateMetricDescriptorAsync(
             ProjectName name,
             MetricDescriptor metricDescriptor,
-            CancellationToken cancellationToken) => CreateMetricDescriptorAsync(
+            st::CancellationToken cancellationToken) => CreateMetricDescriptorAsync(
                 name,
                 metricDescriptor,
-                CallSettings.FromCancellationToken(cancellationToken));
+                gaxgrpc::CallSettings.FromCancellationToken(cancellationToken));
 
         /// <summary>
         /// Creates a new metric descriptor.
@@ -1011,11 +1011,11 @@ namespace Google.Cloud.Monitoring.V3
         public virtual MetricDescriptor CreateMetricDescriptor(
             ProjectName name,
             MetricDescriptor metricDescriptor,
-            CallSettings callSettings = null) => CreateMetricDescriptor(
+            gaxgrpc::CallSettings callSettings = null) => CreateMetricDescriptor(
                 new CreateMetricDescriptorRequest
                 {
-                    ProjectName = GaxPreconditions.CheckNotNull(name, nameof(name)),
-                    MetricDescriptor = GaxPreconditions.CheckNotNull(metricDescriptor, nameof(metricDescriptor)),
+                    ProjectName = gax::GaxPreconditions.CheckNotNull(name, nameof(name)),
+                    MetricDescriptor = gax::GaxPreconditions.CheckNotNull(metricDescriptor, nameof(metricDescriptor)),
                 },
                 callSettings);
 
@@ -1033,11 +1033,11 @@ namespace Google.Cloud.Monitoring.V3
         /// <returns>
         /// A Task containing the RPC response.
         /// </returns>
-        public virtual Task<MetricDescriptor> CreateMetricDescriptorAsync(
+        public virtual stt::Task<MetricDescriptor> CreateMetricDescriptorAsync(
             CreateMetricDescriptorRequest request,
-            CallSettings callSettings = null)
+            gaxgrpc::CallSettings callSettings = null)
         {
-            throw new NotImplementedException();
+            throw new s::NotImplementedException();
         }
 
         /// <summary>
@@ -1049,16 +1049,16 @@ namespace Google.Cloud.Monitoring.V3
         /// The request object containing all of the parameters for the API call.
         /// </param>
         /// <param name="cancellationToken">
-        /// A <see cref="CancellationToken"/> to use for this RPC.
+        /// A <see cref="st::CancellationToken"/> to use for this RPC.
         /// </param>
         /// <returns>
         /// A Task containing the RPC response.
         /// </returns>
-        public virtual Task<MetricDescriptor> CreateMetricDescriptorAsync(
+        public virtual stt::Task<MetricDescriptor> CreateMetricDescriptorAsync(
             CreateMetricDescriptorRequest request,
-            CancellationToken cancellationToken) => CreateMetricDescriptorAsync(
+            st::CancellationToken cancellationToken) => CreateMetricDescriptorAsync(
                 request,
-                CallSettings.FromCancellationToken(cancellationToken));
+                gaxgrpc::CallSettings.FromCancellationToken(cancellationToken));
 
         /// <summary>
         /// Creates a new metric descriptor.
@@ -1076,9 +1076,9 @@ namespace Google.Cloud.Monitoring.V3
         /// </returns>
         public virtual MetricDescriptor CreateMetricDescriptor(
             CreateMetricDescriptorRequest request,
-            CallSettings callSettings = null)
+            gaxgrpc::CallSettings callSettings = null)
         {
-            throw new NotImplementedException();
+            throw new s::NotImplementedException();
         }
 
         /// <summary>
@@ -1097,12 +1097,12 @@ namespace Google.Cloud.Monitoring.V3
         /// <returns>
         /// A Task that completes when the RPC has completed.
         /// </returns>
-        public virtual Task DeleteMetricDescriptorAsync(
+        public virtual stt::Task DeleteMetricDescriptorAsync(
             MetricDescriptorName name,
-            CallSettings callSettings = null) => DeleteMetricDescriptorAsync(
+            gaxgrpc::CallSettings callSettings = null) => DeleteMetricDescriptorAsync(
                 new DeleteMetricDescriptorRequest
                 {
-                    MetricDescriptorName = GaxPreconditions.CheckNotNull(name, nameof(name)),
+                    MetricDescriptorName = gax::GaxPreconditions.CheckNotNull(name, nameof(name)),
                 },
                 callSettings);
 
@@ -1117,16 +1117,16 @@ namespace Google.Cloud.Monitoring.V3
         /// `"custom.googleapis.com/my_test_metric"`.
         /// </param>
         /// <param name="cancellationToken">
-        /// A <see cref="CancellationToken"/> to use for this RPC.
+        /// A <see cref="st::CancellationToken"/> to use for this RPC.
         /// </param>
         /// <returns>
         /// A Task that completes when the RPC has completed.
         /// </returns>
-        public virtual Task DeleteMetricDescriptorAsync(
+        public virtual stt::Task DeleteMetricDescriptorAsync(
             MetricDescriptorName name,
-            CancellationToken cancellationToken) => DeleteMetricDescriptorAsync(
+            st::CancellationToken cancellationToken) => DeleteMetricDescriptorAsync(
                 name,
-                CallSettings.FromCancellationToken(cancellationToken));
+                gaxgrpc::CallSettings.FromCancellationToken(cancellationToken));
 
         /// <summary>
         /// Deletes a metric descriptor. Only user-created
@@ -1143,10 +1143,10 @@ namespace Google.Cloud.Monitoring.V3
         /// </param>
         public virtual void DeleteMetricDescriptor(
             MetricDescriptorName name,
-            CallSettings callSettings = null) => DeleteMetricDescriptor(
+            gaxgrpc::CallSettings callSettings = null) => DeleteMetricDescriptor(
                 new DeleteMetricDescriptorRequest
                 {
-                    MetricDescriptorName = GaxPreconditions.CheckNotNull(name, nameof(name)),
+                    MetricDescriptorName = gax::GaxPreconditions.CheckNotNull(name, nameof(name)),
                 },
                 callSettings);
 
@@ -1163,11 +1163,11 @@ namespace Google.Cloud.Monitoring.V3
         /// <returns>
         /// A Task that completes when the RPC has completed.
         /// </returns>
-        public virtual Task DeleteMetricDescriptorAsync(
+        public virtual stt::Task DeleteMetricDescriptorAsync(
             DeleteMetricDescriptorRequest request,
-            CallSettings callSettings = null)
+            gaxgrpc::CallSettings callSettings = null)
         {
-            throw new NotImplementedException();
+            throw new s::NotImplementedException();
         }
 
         /// <summary>
@@ -1178,16 +1178,16 @@ namespace Google.Cloud.Monitoring.V3
         /// The request object containing all of the parameters for the API call.
         /// </param>
         /// <param name="cancellationToken">
-        /// A <see cref="CancellationToken"/> to use for this RPC.
+        /// A <see cref="st::CancellationToken"/> to use for this RPC.
         /// </param>
         /// <returns>
         /// A Task that completes when the RPC has completed.
         /// </returns>
-        public virtual Task DeleteMetricDescriptorAsync(
+        public virtual stt::Task DeleteMetricDescriptorAsync(
             DeleteMetricDescriptorRequest request,
-            CancellationToken cancellationToken) => DeleteMetricDescriptorAsync(
+            st::CancellationToken cancellationToken) => DeleteMetricDescriptorAsync(
                 request,
-                CallSettings.FromCancellationToken(cancellationToken));
+                gaxgrpc::CallSettings.FromCancellationToken(cancellationToken));
 
         /// <summary>
         /// Deletes a metric descriptor. Only user-created
@@ -1201,9 +1201,9 @@ namespace Google.Cloud.Monitoring.V3
         /// </param>
         public virtual void DeleteMetricDescriptor(
             DeleteMetricDescriptorRequest request,
-            CallSettings callSettings = null)
+            gaxgrpc::CallSettings callSettings = null)
         {
-            throw new NotImplementedException();
+            throw new s::NotImplementedException();
         }
 
         /// <summary>
@@ -1244,19 +1244,19 @@ namespace Google.Cloud.Monitoring.V3
         /// <returns>
         /// A pageable asynchronous sequence of <see cref="TimeSeries"/> resources.
         /// </returns>
-        public virtual PagedAsyncEnumerable<ListTimeSeriesResponse, TimeSeries> ListTimeSeriesAsync(
+        public virtual gax::PagedAsyncEnumerable<ListTimeSeriesResponse, TimeSeries> ListTimeSeriesAsync(
             ProjectName name,
             string filter,
             TimeInterval interval,
             ListTimeSeriesRequest.Types.TimeSeriesView view,
             string pageToken = null,
             int? pageSize = null,
-            CallSettings callSettings = null) => ListTimeSeriesAsync(
+            gaxgrpc::CallSettings callSettings = null) => ListTimeSeriesAsync(
                 new ListTimeSeriesRequest
                 {
-                    ProjectName = GaxPreconditions.CheckNotNull(name, nameof(name)),
-                    Filter = GaxPreconditions.CheckNotNullOrEmpty(filter, nameof(filter)),
-                    Interval = GaxPreconditions.CheckNotNull(interval, nameof(interval)),
+                    ProjectName = gax::GaxPreconditions.CheckNotNull(name, nameof(name)),
+                    Filter = gax::GaxPreconditions.CheckNotNullOrEmpty(filter, nameof(filter)),
+                    Interval = gax::GaxPreconditions.CheckNotNull(interval, nameof(interval)),
                     View = view,
                     PageToken = pageToken ?? "",
                     PageSize = pageSize ?? 0,
@@ -1301,19 +1301,19 @@ namespace Google.Cloud.Monitoring.V3
         /// <returns>
         /// A pageable sequence of <see cref="TimeSeries"/> resources.
         /// </returns>
-        public virtual PagedEnumerable<ListTimeSeriesResponse, TimeSeries> ListTimeSeries(
+        public virtual gax::PagedEnumerable<ListTimeSeriesResponse, TimeSeries> ListTimeSeries(
             ProjectName name,
             string filter,
             TimeInterval interval,
             ListTimeSeriesRequest.Types.TimeSeriesView view,
             string pageToken = null,
             int? pageSize = null,
-            CallSettings callSettings = null) => ListTimeSeries(
+            gaxgrpc::CallSettings callSettings = null) => ListTimeSeries(
                 new ListTimeSeriesRequest
                 {
-                    ProjectName = GaxPreconditions.CheckNotNull(name, nameof(name)),
-                    Filter = GaxPreconditions.CheckNotNullOrEmpty(filter, nameof(filter)),
-                    Interval = GaxPreconditions.CheckNotNull(interval, nameof(interval)),
+                    ProjectName = gax::GaxPreconditions.CheckNotNull(name, nameof(name)),
+                    Filter = gax::GaxPreconditions.CheckNotNullOrEmpty(filter, nameof(filter)),
+                    Interval = gax::GaxPreconditions.CheckNotNull(interval, nameof(interval)),
                     View = view,
                     PageToken = pageToken ?? "",
                     PageSize = pageSize ?? 0,
@@ -1332,11 +1332,11 @@ namespace Google.Cloud.Monitoring.V3
         /// <returns>
         /// A pageable asynchronous sequence of <see cref="TimeSeries"/> resources.
         /// </returns>
-        public virtual PagedAsyncEnumerable<ListTimeSeriesResponse, TimeSeries> ListTimeSeriesAsync(
+        public virtual gax::PagedAsyncEnumerable<ListTimeSeriesResponse, TimeSeries> ListTimeSeriesAsync(
             ListTimeSeriesRequest request,
-            CallSettings callSettings = null)
+            gaxgrpc::CallSettings callSettings = null)
         {
-            throw new NotImplementedException();
+            throw new s::NotImplementedException();
         }
 
         /// <summary>
@@ -1351,11 +1351,11 @@ namespace Google.Cloud.Monitoring.V3
         /// <returns>
         /// A pageable sequence of <see cref="TimeSeries"/> resources.
         /// </returns>
-        public virtual PagedEnumerable<ListTimeSeriesResponse, TimeSeries> ListTimeSeries(
+        public virtual gax::PagedEnumerable<ListTimeSeriesResponse, TimeSeries> ListTimeSeries(
             ListTimeSeriesRequest request,
-            CallSettings callSettings = null)
+            gaxgrpc::CallSettings callSettings = null)
         {
-            throw new NotImplementedException();
+            throw new s::NotImplementedException();
         }
 
         /// <summary>
@@ -1381,14 +1381,14 @@ namespace Google.Cloud.Monitoring.V3
         /// <returns>
         /// A Task that completes when the RPC has completed.
         /// </returns>
-        public virtual Task CreateTimeSeriesAsync(
+        public virtual stt::Task CreateTimeSeriesAsync(
             ProjectName name,
-            IEnumerable<TimeSeries> timeSeries,
-            CallSettings callSettings = null) => CreateTimeSeriesAsync(
+            scg::IEnumerable<TimeSeries> timeSeries,
+            gaxgrpc::CallSettings callSettings = null) => CreateTimeSeriesAsync(
                 new CreateTimeSeriesRequest
                 {
-                    ProjectName = GaxPreconditions.CheckNotNull(name, nameof(name)),
-                    TimeSeries = { GaxPreconditions.CheckNotNull(timeSeries, nameof(timeSeries)) },
+                    ProjectName = gax::GaxPreconditions.CheckNotNull(name, nameof(name)),
+                    TimeSeries = { gax::GaxPreconditions.CheckNotNull(timeSeries, nameof(timeSeries)) },
                 },
                 callSettings);
 
@@ -1410,18 +1410,18 @@ namespace Google.Cloud.Monitoring.V3
         /// all label values for the metric and the monitored resource.
         /// </param>
         /// <param name="cancellationToken">
-        /// A <see cref="CancellationToken"/> to use for this RPC.
+        /// A <see cref="st::CancellationToken"/> to use for this RPC.
         /// </param>
         /// <returns>
         /// A Task that completes when the RPC has completed.
         /// </returns>
-        public virtual Task CreateTimeSeriesAsync(
+        public virtual stt::Task CreateTimeSeriesAsync(
             ProjectName name,
-            IEnumerable<TimeSeries> timeSeries,
-            CancellationToken cancellationToken) => CreateTimeSeriesAsync(
+            scg::IEnumerable<TimeSeries> timeSeries,
+            st::CancellationToken cancellationToken) => CreateTimeSeriesAsync(
                 name,
                 timeSeries,
-                CallSettings.FromCancellationToken(cancellationToken));
+                gaxgrpc::CallSettings.FromCancellationToken(cancellationToken));
 
         /// <summary>
         /// Creates or adds data to one or more time series.
@@ -1445,12 +1445,12 @@ namespace Google.Cloud.Monitoring.V3
         /// </param>
         public virtual void CreateTimeSeries(
             ProjectName name,
-            IEnumerable<TimeSeries> timeSeries,
-            CallSettings callSettings = null) => CreateTimeSeries(
+            scg::IEnumerable<TimeSeries> timeSeries,
+            gaxgrpc::CallSettings callSettings = null) => CreateTimeSeries(
                 new CreateTimeSeriesRequest
                 {
-                    ProjectName = GaxPreconditions.CheckNotNull(name, nameof(name)),
-                    TimeSeries = { GaxPreconditions.CheckNotNull(timeSeries, nameof(timeSeries)) },
+                    ProjectName = gax::GaxPreconditions.CheckNotNull(name, nameof(name)),
+                    TimeSeries = { gax::GaxPreconditions.CheckNotNull(timeSeries, nameof(timeSeries)) },
                 },
                 callSettings);
 
@@ -1469,11 +1469,11 @@ namespace Google.Cloud.Monitoring.V3
         /// <returns>
         /// A Task that completes when the RPC has completed.
         /// </returns>
-        public virtual Task CreateTimeSeriesAsync(
+        public virtual stt::Task CreateTimeSeriesAsync(
             CreateTimeSeriesRequest request,
-            CallSettings callSettings = null)
+            gaxgrpc::CallSettings callSettings = null)
         {
-            throw new NotImplementedException();
+            throw new s::NotImplementedException();
         }
 
         /// <summary>
@@ -1486,16 +1486,16 @@ namespace Google.Cloud.Monitoring.V3
         /// The request object containing all of the parameters for the API call.
         /// </param>
         /// <param name="cancellationToken">
-        /// A <see cref="CancellationToken"/> to use for this RPC.
+        /// A <see cref="st::CancellationToken"/> to use for this RPC.
         /// </param>
         /// <returns>
         /// A Task that completes when the RPC has completed.
         /// </returns>
-        public virtual Task CreateTimeSeriesAsync(
+        public virtual stt::Task CreateTimeSeriesAsync(
             CreateTimeSeriesRequest request,
-            CancellationToken cancellationToken) => CreateTimeSeriesAsync(
+            st::CancellationToken cancellationToken) => CreateTimeSeriesAsync(
                 request,
-                CallSettings.FromCancellationToken(cancellationToken));
+                gaxgrpc::CallSettings.FromCancellationToken(cancellationToken));
 
         /// <summary>
         /// Creates or adds data to one or more time series.
@@ -1511,9 +1511,9 @@ namespace Google.Cloud.Monitoring.V3
         /// </param>
         public virtual void CreateTimeSeries(
             CreateTimeSeriesRequest request,
-            CallSettings callSettings = null)
+            gaxgrpc::CallSettings callSettings = null)
         {
-            throw new NotImplementedException();
+            throw new s::NotImplementedException();
         }
 
     }
@@ -1523,14 +1523,14 @@ namespace Google.Cloud.Monitoring.V3
     /// </summary>
     public sealed partial class MetricServiceClientImpl : MetricServiceClient
     {
-        private readonly ApiCall<ListMonitoredResourceDescriptorsRequest, ListMonitoredResourceDescriptorsResponse> _callListMonitoredResourceDescriptors;
-        private readonly ApiCall<GetMonitoredResourceDescriptorRequest, MonitoredResourceDescriptor> _callGetMonitoredResourceDescriptor;
-        private readonly ApiCall<ListMetricDescriptorsRequest, ListMetricDescriptorsResponse> _callListMetricDescriptors;
-        private readonly ApiCall<GetMetricDescriptorRequest, MetricDescriptor> _callGetMetricDescriptor;
-        private readonly ApiCall<CreateMetricDescriptorRequest, MetricDescriptor> _callCreateMetricDescriptor;
-        private readonly ApiCall<DeleteMetricDescriptorRequest, Empty> _callDeleteMetricDescriptor;
-        private readonly ApiCall<ListTimeSeriesRequest, ListTimeSeriesResponse> _callListTimeSeries;
-        private readonly ApiCall<CreateTimeSeriesRequest, Empty> _callCreateTimeSeries;
+        private readonly gaxgrpc::ApiCall<ListMonitoredResourceDescriptorsRequest, ListMonitoredResourceDescriptorsResponse> _callListMonitoredResourceDescriptors;
+        private readonly gaxgrpc::ApiCall<GetMonitoredResourceDescriptorRequest, MonitoredResourceDescriptor> _callGetMonitoredResourceDescriptor;
+        private readonly gaxgrpc::ApiCall<ListMetricDescriptorsRequest, ListMetricDescriptorsResponse> _callListMetricDescriptors;
+        private readonly gaxgrpc::ApiCall<GetMetricDescriptorRequest, MetricDescriptor> _callGetMetricDescriptor;
+        private readonly gaxgrpc::ApiCall<CreateMetricDescriptorRequest, MetricDescriptor> _callCreateMetricDescriptor;
+        private readonly gaxgrpc::ApiCall<DeleteMetricDescriptorRequest, protowkt::Empty> _callDeleteMetricDescriptor;
+        private readonly gaxgrpc::ApiCall<ListTimeSeriesRequest, ListTimeSeriesResponse> _callListTimeSeries;
+        private readonly gaxgrpc::ApiCall<CreateTimeSeriesRequest, protowkt::Empty> _callCreateTimeSeries;
 
         /// <summary>
         /// Constructs a client wrapper for the MetricService service, with the specified gRPC client and settings.
@@ -1541,7 +1541,7 @@ namespace Google.Cloud.Monitoring.V3
         {
             GrpcClient = grpcClient;
             MetricServiceSettings effectiveSettings = settings ?? MetricServiceSettings.GetDefault();
-            ClientHelper clientHelper = new ClientHelper(effectiveSettings);
+            gaxgrpc::ClientHelper clientHelper = new gaxgrpc::ClientHelper(effectiveSettings);
             _callListMonitoredResourceDescriptors = clientHelper.BuildApiCall<ListMonitoredResourceDescriptorsRequest, ListMonitoredResourceDescriptorsResponse>(
                 GrpcClient.ListMonitoredResourceDescriptorsAsync, GrpcClient.ListMonitoredResourceDescriptors, effectiveSettings.ListMonitoredResourceDescriptorsSettings);
             _callGetMonitoredResourceDescriptor = clientHelper.BuildApiCall<GetMonitoredResourceDescriptorRequest, MonitoredResourceDescriptor>(
@@ -1552,11 +1552,11 @@ namespace Google.Cloud.Monitoring.V3
                 GrpcClient.GetMetricDescriptorAsync, GrpcClient.GetMetricDescriptor, effectiveSettings.GetMetricDescriptorSettings);
             _callCreateMetricDescriptor = clientHelper.BuildApiCall<CreateMetricDescriptorRequest, MetricDescriptor>(
                 GrpcClient.CreateMetricDescriptorAsync, GrpcClient.CreateMetricDescriptor, effectiveSettings.CreateMetricDescriptorSettings);
-            _callDeleteMetricDescriptor = clientHelper.BuildApiCall<DeleteMetricDescriptorRequest, Empty>(
+            _callDeleteMetricDescriptor = clientHelper.BuildApiCall<DeleteMetricDescriptorRequest, protowkt::Empty>(
                 GrpcClient.DeleteMetricDescriptorAsync, GrpcClient.DeleteMetricDescriptor, effectiveSettings.DeleteMetricDescriptorSettings);
             _callListTimeSeries = clientHelper.BuildApiCall<ListTimeSeriesRequest, ListTimeSeriesResponse>(
                 GrpcClient.ListTimeSeriesAsync, GrpcClient.ListTimeSeries, effectiveSettings.ListTimeSeriesSettings);
-            _callCreateTimeSeries = clientHelper.BuildApiCall<CreateTimeSeriesRequest, Empty>(
+            _callCreateTimeSeries = clientHelper.BuildApiCall<CreateTimeSeriesRequest, protowkt::Empty>(
                 GrpcClient.CreateTimeSeriesAsync, GrpcClient.CreateTimeSeries, effectiveSettings.CreateTimeSeriesSettings);
             Modify_ApiCall(ref _callListMonitoredResourceDescriptors);
             Modify_ListMonitoredResourceDescriptorsApiCall(ref _callListMonitoredResourceDescriptors);
@@ -1581,21 +1581,21 @@ namespace Google.Cloud.Monitoring.V3
 
         // Partial methods called for every ApiCall on construction.
         // Allows modification of all the underlying ApiCall objects.
-        partial void Modify_ApiCall<TRequest, TResponse>(ref ApiCall<TRequest, TResponse> call)
-            where TRequest : class, IMessage<TRequest>
-            where TResponse : class, IMessage<TResponse>;
+        partial void Modify_ApiCall<TRequest, TResponse>(ref gaxgrpc::ApiCall<TRequest, TResponse> call)
+            where TRequest : class, proto::IMessage<TRequest>
+            where TResponse : class, proto::IMessage<TResponse>;
 
         // Partial methods called for each ApiCall on construction.
         // Allows per-RPC-method modification of the underlying ApiCall object.
-        partial void Modify_ListMonitoredResourceDescriptorsApiCall(ref ApiCall<ListMonitoredResourceDescriptorsRequest, ListMonitoredResourceDescriptorsResponse> call);
-        partial void Modify_GetMonitoredResourceDescriptorApiCall(ref ApiCall<GetMonitoredResourceDescriptorRequest, MonitoredResourceDescriptor> call);
-        partial void Modify_ListMetricDescriptorsApiCall(ref ApiCall<ListMetricDescriptorsRequest, ListMetricDescriptorsResponse> call);
-        partial void Modify_GetMetricDescriptorApiCall(ref ApiCall<GetMetricDescriptorRequest, MetricDescriptor> call);
-        partial void Modify_CreateMetricDescriptorApiCall(ref ApiCall<CreateMetricDescriptorRequest, MetricDescriptor> call);
-        partial void Modify_DeleteMetricDescriptorApiCall(ref ApiCall<DeleteMetricDescriptorRequest, Empty> call);
-        partial void Modify_ListTimeSeriesApiCall(ref ApiCall<ListTimeSeriesRequest, ListTimeSeriesResponse> call);
-        partial void Modify_CreateTimeSeriesApiCall(ref ApiCall<CreateTimeSeriesRequest, Empty> call);
-        partial void OnConstruction(MetricService.MetricServiceClient grpcClient, MetricServiceSettings effectiveSettings, ClientHelper clientHelper);
+        partial void Modify_ListMonitoredResourceDescriptorsApiCall(ref gaxgrpc::ApiCall<ListMonitoredResourceDescriptorsRequest, ListMonitoredResourceDescriptorsResponse> call);
+        partial void Modify_GetMonitoredResourceDescriptorApiCall(ref gaxgrpc::ApiCall<GetMonitoredResourceDescriptorRequest, MonitoredResourceDescriptor> call);
+        partial void Modify_ListMetricDescriptorsApiCall(ref gaxgrpc::ApiCall<ListMetricDescriptorsRequest, ListMetricDescriptorsResponse> call);
+        partial void Modify_GetMetricDescriptorApiCall(ref gaxgrpc::ApiCall<GetMetricDescriptorRequest, MetricDescriptor> call);
+        partial void Modify_CreateMetricDescriptorApiCall(ref gaxgrpc::ApiCall<CreateMetricDescriptorRequest, MetricDescriptor> call);
+        partial void Modify_DeleteMetricDescriptorApiCall(ref gaxgrpc::ApiCall<DeleteMetricDescriptorRequest, protowkt::Empty> call);
+        partial void Modify_ListTimeSeriesApiCall(ref gaxgrpc::ApiCall<ListTimeSeriesRequest, ListTimeSeriesResponse> call);
+        partial void Modify_CreateTimeSeriesApiCall(ref gaxgrpc::ApiCall<CreateTimeSeriesRequest, protowkt::Empty> call);
+        partial void OnConstruction(MetricService.MetricServiceClient grpcClient, MetricServiceSettings effectiveSettings, gaxgrpc::ClientHelper clientHelper);
 
         /// <summary>
         /// The underlying gRPC MetricService client.
@@ -1605,14 +1605,14 @@ namespace Google.Cloud.Monitoring.V3
         // Partial methods called on each request.
         // Allows per-RPC-call modification to the request and CallSettings objects,
         // before the underlying RPC is performed.
-        partial void Modify_ListMonitoredResourceDescriptorsRequest(ref ListMonitoredResourceDescriptorsRequest request, ref CallSettings settings);
-        partial void Modify_GetMonitoredResourceDescriptorRequest(ref GetMonitoredResourceDescriptorRequest request, ref CallSettings settings);
-        partial void Modify_ListMetricDescriptorsRequest(ref ListMetricDescriptorsRequest request, ref CallSettings settings);
-        partial void Modify_GetMetricDescriptorRequest(ref GetMetricDescriptorRequest request, ref CallSettings settings);
-        partial void Modify_CreateMetricDescriptorRequest(ref CreateMetricDescriptorRequest request, ref CallSettings settings);
-        partial void Modify_DeleteMetricDescriptorRequest(ref DeleteMetricDescriptorRequest request, ref CallSettings settings);
-        partial void Modify_ListTimeSeriesRequest(ref ListTimeSeriesRequest request, ref CallSettings settings);
-        partial void Modify_CreateTimeSeriesRequest(ref CreateTimeSeriesRequest request, ref CallSettings settings);
+        partial void Modify_ListMonitoredResourceDescriptorsRequest(ref ListMonitoredResourceDescriptorsRequest request, ref gaxgrpc::CallSettings settings);
+        partial void Modify_GetMonitoredResourceDescriptorRequest(ref GetMonitoredResourceDescriptorRequest request, ref gaxgrpc::CallSettings settings);
+        partial void Modify_ListMetricDescriptorsRequest(ref ListMetricDescriptorsRequest request, ref gaxgrpc::CallSettings settings);
+        partial void Modify_GetMetricDescriptorRequest(ref GetMetricDescriptorRequest request, ref gaxgrpc::CallSettings settings);
+        partial void Modify_CreateMetricDescriptorRequest(ref CreateMetricDescriptorRequest request, ref gaxgrpc::CallSettings settings);
+        partial void Modify_DeleteMetricDescriptorRequest(ref DeleteMetricDescriptorRequest request, ref gaxgrpc::CallSettings settings);
+        partial void Modify_ListTimeSeriesRequest(ref ListTimeSeriesRequest request, ref gaxgrpc::CallSettings settings);
+        partial void Modify_CreateTimeSeriesRequest(ref CreateTimeSeriesRequest request, ref gaxgrpc::CallSettings settings);
 
         /// <summary>
         /// Lists monitored resource descriptors that match a filter. This method does not require a Stackdriver account.
@@ -1626,12 +1626,12 @@ namespace Google.Cloud.Monitoring.V3
         /// <returns>
         /// A pageable asynchronous sequence of <see cref="MonitoredResourceDescriptor"/> resources.
         /// </returns>
-        public override PagedAsyncEnumerable<ListMonitoredResourceDescriptorsResponse, MonitoredResourceDescriptor> ListMonitoredResourceDescriptorsAsync(
+        public override gax::PagedAsyncEnumerable<ListMonitoredResourceDescriptorsResponse, MonitoredResourceDescriptor> ListMonitoredResourceDescriptorsAsync(
             ListMonitoredResourceDescriptorsRequest request,
-            CallSettings callSettings = null)
+            gaxgrpc::CallSettings callSettings = null)
         {
             Modify_ListMonitoredResourceDescriptorsRequest(ref request, ref callSettings);
-            return new GrpcPagedAsyncEnumerable<ListMonitoredResourceDescriptorsRequest, ListMonitoredResourceDescriptorsResponse, MonitoredResourceDescriptor>(_callListMonitoredResourceDescriptors, request, callSettings);
+            return new gaxgrpc::GrpcPagedAsyncEnumerable<ListMonitoredResourceDescriptorsRequest, ListMonitoredResourceDescriptorsResponse, MonitoredResourceDescriptor>(_callListMonitoredResourceDescriptors, request, callSettings);
         }
 
         /// <summary>
@@ -1646,12 +1646,12 @@ namespace Google.Cloud.Monitoring.V3
         /// <returns>
         /// A pageable sequence of <see cref="MonitoredResourceDescriptor"/> resources.
         /// </returns>
-        public override PagedEnumerable<ListMonitoredResourceDescriptorsResponse, MonitoredResourceDescriptor> ListMonitoredResourceDescriptors(
+        public override gax::PagedEnumerable<ListMonitoredResourceDescriptorsResponse, MonitoredResourceDescriptor> ListMonitoredResourceDescriptors(
             ListMonitoredResourceDescriptorsRequest request,
-            CallSettings callSettings = null)
+            gaxgrpc::CallSettings callSettings = null)
         {
             Modify_ListMonitoredResourceDescriptorsRequest(ref request, ref callSettings);
-            return new GrpcPagedEnumerable<ListMonitoredResourceDescriptorsRequest, ListMonitoredResourceDescriptorsResponse, MonitoredResourceDescriptor>(_callListMonitoredResourceDescriptors, request, callSettings);
+            return new gaxgrpc::GrpcPagedEnumerable<ListMonitoredResourceDescriptorsRequest, ListMonitoredResourceDescriptorsResponse, MonitoredResourceDescriptor>(_callListMonitoredResourceDescriptors, request, callSettings);
         }
 
         /// <summary>
@@ -1666,9 +1666,9 @@ namespace Google.Cloud.Monitoring.V3
         /// <returns>
         /// A Task containing the RPC response.
         /// </returns>
-        public override Task<MonitoredResourceDescriptor> GetMonitoredResourceDescriptorAsync(
+        public override stt::Task<MonitoredResourceDescriptor> GetMonitoredResourceDescriptorAsync(
             GetMonitoredResourceDescriptorRequest request,
-            CallSettings callSettings = null)
+            gaxgrpc::CallSettings callSettings = null)
         {
             Modify_GetMonitoredResourceDescriptorRequest(ref request, ref callSettings);
             return _callGetMonitoredResourceDescriptor.Async(request, callSettings);
@@ -1688,7 +1688,7 @@ namespace Google.Cloud.Monitoring.V3
         /// </returns>
         public override MonitoredResourceDescriptor GetMonitoredResourceDescriptor(
             GetMonitoredResourceDescriptorRequest request,
-            CallSettings callSettings = null)
+            gaxgrpc::CallSettings callSettings = null)
         {
             Modify_GetMonitoredResourceDescriptorRequest(ref request, ref callSettings);
             return _callGetMonitoredResourceDescriptor.Sync(request, callSettings);
@@ -1706,12 +1706,12 @@ namespace Google.Cloud.Monitoring.V3
         /// <returns>
         /// A pageable asynchronous sequence of <see cref="MetricDescriptor"/> resources.
         /// </returns>
-        public override PagedAsyncEnumerable<ListMetricDescriptorsResponse, MetricDescriptor> ListMetricDescriptorsAsync(
+        public override gax::PagedAsyncEnumerable<ListMetricDescriptorsResponse, MetricDescriptor> ListMetricDescriptorsAsync(
             ListMetricDescriptorsRequest request,
-            CallSettings callSettings = null)
+            gaxgrpc::CallSettings callSettings = null)
         {
             Modify_ListMetricDescriptorsRequest(ref request, ref callSettings);
-            return new GrpcPagedAsyncEnumerable<ListMetricDescriptorsRequest, ListMetricDescriptorsResponse, MetricDescriptor>(_callListMetricDescriptors, request, callSettings);
+            return new gaxgrpc::GrpcPagedAsyncEnumerable<ListMetricDescriptorsRequest, ListMetricDescriptorsResponse, MetricDescriptor>(_callListMetricDescriptors, request, callSettings);
         }
 
         /// <summary>
@@ -1726,12 +1726,12 @@ namespace Google.Cloud.Monitoring.V3
         /// <returns>
         /// A pageable sequence of <see cref="MetricDescriptor"/> resources.
         /// </returns>
-        public override PagedEnumerable<ListMetricDescriptorsResponse, MetricDescriptor> ListMetricDescriptors(
+        public override gax::PagedEnumerable<ListMetricDescriptorsResponse, MetricDescriptor> ListMetricDescriptors(
             ListMetricDescriptorsRequest request,
-            CallSettings callSettings = null)
+            gaxgrpc::CallSettings callSettings = null)
         {
             Modify_ListMetricDescriptorsRequest(ref request, ref callSettings);
-            return new GrpcPagedEnumerable<ListMetricDescriptorsRequest, ListMetricDescriptorsResponse, MetricDescriptor>(_callListMetricDescriptors, request, callSettings);
+            return new gaxgrpc::GrpcPagedEnumerable<ListMetricDescriptorsRequest, ListMetricDescriptorsResponse, MetricDescriptor>(_callListMetricDescriptors, request, callSettings);
         }
 
         /// <summary>
@@ -1746,9 +1746,9 @@ namespace Google.Cloud.Monitoring.V3
         /// <returns>
         /// A Task containing the RPC response.
         /// </returns>
-        public override Task<MetricDescriptor> GetMetricDescriptorAsync(
+        public override stt::Task<MetricDescriptor> GetMetricDescriptorAsync(
             GetMetricDescriptorRequest request,
-            CallSettings callSettings = null)
+            gaxgrpc::CallSettings callSettings = null)
         {
             Modify_GetMetricDescriptorRequest(ref request, ref callSettings);
             return _callGetMetricDescriptor.Async(request, callSettings);
@@ -1768,7 +1768,7 @@ namespace Google.Cloud.Monitoring.V3
         /// </returns>
         public override MetricDescriptor GetMetricDescriptor(
             GetMetricDescriptorRequest request,
-            CallSettings callSettings = null)
+            gaxgrpc::CallSettings callSettings = null)
         {
             Modify_GetMetricDescriptorRequest(ref request, ref callSettings);
             return _callGetMetricDescriptor.Sync(request, callSettings);
@@ -1788,9 +1788,9 @@ namespace Google.Cloud.Monitoring.V3
         /// <returns>
         /// A Task containing the RPC response.
         /// </returns>
-        public override Task<MetricDescriptor> CreateMetricDescriptorAsync(
+        public override stt::Task<MetricDescriptor> CreateMetricDescriptorAsync(
             CreateMetricDescriptorRequest request,
-            CallSettings callSettings = null)
+            gaxgrpc::CallSettings callSettings = null)
         {
             Modify_CreateMetricDescriptorRequest(ref request, ref callSettings);
             return _callCreateMetricDescriptor.Async(request, callSettings);
@@ -1812,7 +1812,7 @@ namespace Google.Cloud.Monitoring.V3
         /// </returns>
         public override MetricDescriptor CreateMetricDescriptor(
             CreateMetricDescriptorRequest request,
-            CallSettings callSettings = null)
+            gaxgrpc::CallSettings callSettings = null)
         {
             Modify_CreateMetricDescriptorRequest(ref request, ref callSettings);
             return _callCreateMetricDescriptor.Sync(request, callSettings);
@@ -1831,9 +1831,9 @@ namespace Google.Cloud.Monitoring.V3
         /// <returns>
         /// A Task that completes when the RPC has completed.
         /// </returns>
-        public override Task DeleteMetricDescriptorAsync(
+        public override stt::Task DeleteMetricDescriptorAsync(
             DeleteMetricDescriptorRequest request,
-            CallSettings callSettings = null)
+            gaxgrpc::CallSettings callSettings = null)
         {
             Modify_DeleteMetricDescriptorRequest(ref request, ref callSettings);
             return _callDeleteMetricDescriptor.Async(request, callSettings);
@@ -1851,7 +1851,7 @@ namespace Google.Cloud.Monitoring.V3
         /// </param>
         public override void DeleteMetricDescriptor(
             DeleteMetricDescriptorRequest request,
-            CallSettings callSettings = null)
+            gaxgrpc::CallSettings callSettings = null)
         {
             Modify_DeleteMetricDescriptorRequest(ref request, ref callSettings);
             _callDeleteMetricDescriptor.Sync(request, callSettings);
@@ -1869,12 +1869,12 @@ namespace Google.Cloud.Monitoring.V3
         /// <returns>
         /// A pageable asynchronous sequence of <see cref="TimeSeries"/> resources.
         /// </returns>
-        public override PagedAsyncEnumerable<ListTimeSeriesResponse, TimeSeries> ListTimeSeriesAsync(
+        public override gax::PagedAsyncEnumerable<ListTimeSeriesResponse, TimeSeries> ListTimeSeriesAsync(
             ListTimeSeriesRequest request,
-            CallSettings callSettings = null)
+            gaxgrpc::CallSettings callSettings = null)
         {
             Modify_ListTimeSeriesRequest(ref request, ref callSettings);
-            return new GrpcPagedAsyncEnumerable<ListTimeSeriesRequest, ListTimeSeriesResponse, TimeSeries>(_callListTimeSeries, request, callSettings);
+            return new gaxgrpc::GrpcPagedAsyncEnumerable<ListTimeSeriesRequest, ListTimeSeriesResponse, TimeSeries>(_callListTimeSeries, request, callSettings);
         }
 
         /// <summary>
@@ -1889,12 +1889,12 @@ namespace Google.Cloud.Monitoring.V3
         /// <returns>
         /// A pageable sequence of <see cref="TimeSeries"/> resources.
         /// </returns>
-        public override PagedEnumerable<ListTimeSeriesResponse, TimeSeries> ListTimeSeries(
+        public override gax::PagedEnumerable<ListTimeSeriesResponse, TimeSeries> ListTimeSeries(
             ListTimeSeriesRequest request,
-            CallSettings callSettings = null)
+            gaxgrpc::CallSettings callSettings = null)
         {
             Modify_ListTimeSeriesRequest(ref request, ref callSettings);
-            return new GrpcPagedEnumerable<ListTimeSeriesRequest, ListTimeSeriesResponse, TimeSeries>(_callListTimeSeries, request, callSettings);
+            return new gaxgrpc::GrpcPagedEnumerable<ListTimeSeriesRequest, ListTimeSeriesResponse, TimeSeries>(_callListTimeSeries, request, callSettings);
         }
 
         /// <summary>
@@ -1912,9 +1912,9 @@ namespace Google.Cloud.Monitoring.V3
         /// <returns>
         /// A Task that completes when the RPC has completed.
         /// </returns>
-        public override Task CreateTimeSeriesAsync(
+        public override stt::Task CreateTimeSeriesAsync(
             CreateTimeSeriesRequest request,
-            CallSettings callSettings = null)
+            gaxgrpc::CallSettings callSettings = null)
         {
             Modify_CreateTimeSeriesRequest(ref request, ref callSettings);
             return _callCreateTimeSeries.Async(request, callSettings);
@@ -1934,7 +1934,7 @@ namespace Google.Cloud.Monitoring.V3
         /// </param>
         public override void CreateTimeSeries(
             CreateTimeSeriesRequest request,
-            CallSettings callSettings = null)
+            gaxgrpc::CallSettings callSettings = null)
         {
             Modify_CreateTimeSeriesRequest(ref request, ref callSettings);
             _callCreateTimeSeries.Sync(request, callSettings);
@@ -1944,40 +1944,40 @@ namespace Google.Cloud.Monitoring.V3
 
     // Partial classes to enable page-streaming
 
-    public partial class ListMonitoredResourceDescriptorsRequest : IPageRequest { }
-    public partial class ListMonitoredResourceDescriptorsResponse : IPageResponse<MonitoredResourceDescriptor>
+    public partial class ListMonitoredResourceDescriptorsRequest : gaxgrpc::IPageRequest { }
+    public partial class ListMonitoredResourceDescriptorsResponse : gaxgrpc::IPageResponse<MonitoredResourceDescriptor>
     {
         /// <summary>
         /// Returns an enumerator that iterates through the resources in this response.
         /// </summary>
-        public IEnumerator<MonitoredResourceDescriptor> GetEnumerator() => ResourceDescriptors.GetEnumerator();
+        public scg::IEnumerator<MonitoredResourceDescriptor> GetEnumerator() => ResourceDescriptors.GetEnumerator();
 
         /// <inheritdoc/>
-        IEnumerator IEnumerable.GetEnumerator() => GetEnumerator();
+        sc::IEnumerator sc::IEnumerable.GetEnumerator() => GetEnumerator();
     }
 
-    public partial class ListMetricDescriptorsRequest : IPageRequest { }
-    public partial class ListMetricDescriptorsResponse : IPageResponse<MetricDescriptor>
+    public partial class ListMetricDescriptorsRequest : gaxgrpc::IPageRequest { }
+    public partial class ListMetricDescriptorsResponse : gaxgrpc::IPageResponse<MetricDescriptor>
     {
         /// <summary>
         /// Returns an enumerator that iterates through the resources in this response.
         /// </summary>
-        public IEnumerator<MetricDescriptor> GetEnumerator() => MetricDescriptors.GetEnumerator();
+        public scg::IEnumerator<MetricDescriptor> GetEnumerator() => MetricDescriptors.GetEnumerator();
 
         /// <inheritdoc/>
-        IEnumerator IEnumerable.GetEnumerator() => GetEnumerator();
+        sc::IEnumerator sc::IEnumerable.GetEnumerator() => GetEnumerator();
     }
 
-    public partial class ListTimeSeriesRequest : IPageRequest { }
-    public partial class ListTimeSeriesResponse : IPageResponse<TimeSeries>
+    public partial class ListTimeSeriesRequest : gaxgrpc::IPageRequest { }
+    public partial class ListTimeSeriesResponse : gaxgrpc::IPageResponse<TimeSeries>
     {
         /// <summary>
         /// Returns an enumerator that iterates through the resources in this response.
         /// </summary>
-        public IEnumerator<TimeSeries> GetEnumerator() => TimeSeries.GetEnumerator();
+        public scg::IEnumerator<TimeSeries> GetEnumerator() => TimeSeries.GetEnumerator();
 
         /// <inheritdoc/>
-        IEnumerator IEnumerable.GetEnumerator() => GetEnumerator();
+        sc::IEnumerator sc::IEnumerable.GetEnumerator() => GetEnumerator();
     }
 
 

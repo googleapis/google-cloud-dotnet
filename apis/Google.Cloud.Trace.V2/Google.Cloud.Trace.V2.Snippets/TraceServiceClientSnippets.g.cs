@@ -14,35 +14,35 @@
 
 // Generated code. DO NOT EDIT!
 
-using Google.Api.Gax;
-using Google.Api.Gax.Grpc;
-using Google.Cloud.Trace.V2;
-using Google.Protobuf;
-using Google.Protobuf.WellKnownTypes;
-using Grpc.Core;
-using System;
-using System.Collections;
-using System.Collections.Generic;
-using System.Collections.ObjectModel;
-using System.Linq;
-using System.Threading;
-using System.Threading.Tasks;
-
 namespace Google.Cloud.Trace.V2.Snippets
 {
+    using Google.Api.Gax;
+    using Google.Api.Gax.Grpc;
+    using apis = Google.Cloud.Trace.V2;
+    using Google.Protobuf;
+    using Google.Protobuf.WellKnownTypes;
+    using Grpc.Core;
+    using System;
+    using System.Collections;
+    using System.Collections.Generic;
+    using System.Collections.ObjectModel;
+    using System.Linq;
+    using System.Threading;
+    using System.Threading.Tasks;
+
     /// <summary>Generated snippets</summary>
     public class GeneratedTraceServiceClientSnippets
     {
         /// <summary>Snippet for BatchWriteSpansAsync</summary>
         public async Task BatchWriteSpansAsync()
         {
-            // Snippet: BatchWriteSpansAsync(ProjectName,IEnumerable<Span>,CallSettings)
-            // Additional: BatchWriteSpansAsync(ProjectName,IEnumerable<Span>,CancellationToken)
+            // Snippet: BatchWriteSpansAsync(ProjectName,IEnumerable<apis::Span>,CallSettings)
+            // Additional: BatchWriteSpansAsync(ProjectName,IEnumerable<apis::Span>,CancellationToken)
             // Create client
             TraceServiceClient traceServiceClient = await TraceServiceClient.CreateAsync();
             // Initialize request argument(s)
             ProjectName name = new ProjectName("[PROJECT]");
-            IEnumerable<Span> spans = new List<Span>();
+            IEnumerable<apis::Span> spans = new List<apis::Span>();
             // Make the request
             await traceServiceClient.BatchWriteSpansAsync(name, spans);
             // End snippet
@@ -51,12 +51,12 @@ namespace Google.Cloud.Trace.V2.Snippets
         /// <summary>Snippet for BatchWriteSpans</summary>
         public void BatchWriteSpans()
         {
-            // Snippet: BatchWriteSpans(ProjectName,IEnumerable<Span>,CallSettings)
+            // Snippet: BatchWriteSpans(ProjectName,IEnumerable<apis::Span>,CallSettings)
             // Create client
             TraceServiceClient traceServiceClient = TraceServiceClient.Create();
             // Initialize request argument(s)
             ProjectName name = new ProjectName("[PROJECT]");
-            IEnumerable<Span> spans = new List<Span>();
+            IEnumerable<apis::Span> spans = new List<apis::Span>();
             // Make the request
             traceServiceClient.BatchWriteSpans(name, spans);
             // End snippet
@@ -100,12 +100,12 @@ namespace Google.Cloud.Trace.V2.Snippets
         /// <summary>Snippet for CreateSpanAsync</summary>
         public async Task CreateSpanAsync_RequestObject()
         {
-            // Snippet: CreateSpanAsync(Span,CallSettings)
-            // Additional: CreateSpanAsync(Span,CancellationToken)
+            // Snippet: CreateSpanAsync(apis::Span,CallSettings)
+            // Additional: CreateSpanAsync(apis::Span,CancellationToken)
             // Create client
             TraceServiceClient traceServiceClient = await TraceServiceClient.CreateAsync();
             // Initialize request argument(s)
-            Span request = new Span
+            apis::Span request = new apis::Span
             {
                 SpanName = new SpanName("[PROJECT]", "[TRACE]", "[SPAN]"),
                 SpanId = "",
@@ -114,18 +114,18 @@ namespace Google.Cloud.Trace.V2.Snippets
                 EndTime = new Timestamp(),
             };
             // Make the request
-            Span response = await traceServiceClient.CreateSpanAsync(request);
+            apis::Span response = await traceServiceClient.CreateSpanAsync(request);
             // End snippet
         }
 
         /// <summary>Snippet for CreateSpan</summary>
         public void CreateSpan_RequestObject()
         {
-            // Snippet: CreateSpan(Span,CallSettings)
+            // Snippet: CreateSpan(apis::Span,CallSettings)
             // Create client
             TraceServiceClient traceServiceClient = TraceServiceClient.Create();
             // Initialize request argument(s)
-            Span request = new Span
+            apis::Span request = new apis::Span
             {
                 SpanName = new SpanName("[PROJECT]", "[TRACE]", "[SPAN]"),
                 SpanId = "",
@@ -134,7 +134,7 @@ namespace Google.Cloud.Trace.V2.Snippets
                 EndTime = new Timestamp(),
             };
             // Make the request
-            Span response = traceServiceClient.CreateSpan(request);
+            apis::Span response = traceServiceClient.CreateSpan(request);
             // End snippet
         }
 

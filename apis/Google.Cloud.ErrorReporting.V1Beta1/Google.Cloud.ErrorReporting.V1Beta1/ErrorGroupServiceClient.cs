@@ -14,24 +14,24 @@
 
 // Generated code. DO NOT EDIT!
 
-using Google.Api.Gax;
-using Google.Api.Gax.Grpc;
-using Google.Protobuf;
-using Google.Protobuf.WellKnownTypes;
-using Grpc.Core;
-using System;
-using System.Collections;
-using System.Collections.Generic;
-using System.Collections.ObjectModel;
-using System.Threading;
-using System.Threading.Tasks;
+using gax = Google.Api.Gax;
+using gaxgrpc = Google.Api.Gax.Grpc;
+using proto = Google.Protobuf;
+using protowkt = Google.Protobuf.WellKnownTypes;
+using grpccore = Grpc.Core;
+using s = System;
+using sc = System.Collections;
+using scg = System.Collections.Generic;
+using sco = System.Collections.ObjectModel;
+using st = System.Threading;
+using stt = System.Threading.Tasks;
 
 namespace Google.Cloud.ErrorReporting.V1Beta1
 {
     /// <summary>
     /// Settings for a <see cref="ErrorGroupServiceClient"/>.
     /// </summary>
-    public sealed partial class ErrorGroupServiceSettings : ServiceSettingsBase
+    public sealed partial class ErrorGroupServiceSettings : gaxgrpc::ServiceSettingsBase
     {
         /// <summary>
         /// Get a new instance of the default <see cref="ErrorGroupServiceSettings"/>.
@@ -48,7 +48,7 @@ namespace Google.Cloud.ErrorReporting.V1Beta1
 
         private ErrorGroupServiceSettings(ErrorGroupServiceSettings existing) : base(existing)
         {
-            GaxPreconditions.CheckNotNull(existing, nameof(existing));
+            gax::GaxPreconditions.CheckNotNull(existing, nameof(existing));
             GetGroupSettings = existing.GetGroupSettings;
             UpdateGroupSettings = existing.UpdateGroupSettings;
             OnCopy(existing);
@@ -57,28 +57,28 @@ namespace Google.Cloud.ErrorReporting.V1Beta1
         partial void OnCopy(ErrorGroupServiceSettings existing);
 
         /// <summary>
-        /// The filter specifying which RPC <see cref="StatusCode"/>s are eligible for retry
+        /// The filter specifying which RPC <see cref="grpccore::StatusCode"/>s are eligible for retry
         /// for "Idempotent" <see cref="ErrorGroupServiceClient"/> RPC methods.
         /// </summary>
         /// <remarks>
-        /// The eligible RPC <see cref="StatusCode"/>s for retry for "Idempotent" RPC methods are:
+        /// The eligible RPC <see cref="grpccore::StatusCode"/>s for retry for "Idempotent" RPC methods are:
         /// <list type="bullet">
-        /// <item><description><see cref="StatusCode.DeadlineExceeded"/></description></item>
-        /// <item><description><see cref="StatusCode.Unavailable"/></description></item>
+        /// <item><description><see cref="grpccore::StatusCode.DeadlineExceeded"/></description></item>
+        /// <item><description><see cref="grpccore::StatusCode.Unavailable"/></description></item>
         /// </list>
         /// </remarks>
-        public static Predicate<RpcException> IdempotentRetryFilter { get; } =
-            RetrySettings.FilterForStatusCodes(StatusCode.DeadlineExceeded, StatusCode.Unavailable);
+        public static s::Predicate<grpccore::RpcException> IdempotentRetryFilter { get; } =
+            gaxgrpc::RetrySettings.FilterForStatusCodes(grpccore::StatusCode.DeadlineExceeded, grpccore::StatusCode.Unavailable);
 
         /// <summary>
-        /// The filter specifying which RPC <see cref="StatusCode"/>s are eligible for retry
+        /// The filter specifying which RPC <see cref="grpccore::StatusCode"/>s are eligible for retry
         /// for "NonIdempotent" <see cref="ErrorGroupServiceClient"/> RPC methods.
         /// </summary>
         /// <remarks>
-        /// There are no RPC <see cref="StatusCode"/>s eligible for retry for "NonIdempotent" RPC methods.
+        /// There are no RPC <see cref="grpccore::StatusCode"/>s eligible for retry for "NonIdempotent" RPC methods.
         /// </remarks>
-        public static Predicate<RpcException> NonIdempotentRetryFilter { get; } =
-            RetrySettings.FilterForStatusCodes();
+        public static s::Predicate<grpccore::RpcException> NonIdempotentRetryFilter { get; } =
+            gaxgrpc::RetrySettings.FilterForStatusCodes();
 
         /// <summary>
         /// "Default" retry backoff for <see cref="ErrorGroupServiceClient"/> RPC methods.
@@ -94,9 +94,9 @@ namespace Google.Cloud.ErrorReporting.V1Beta1
         /// <item><description>Delay multiplier: 1.3</description></item>
         /// </list>
         /// </remarks>
-        public static BackoffSettings GetDefaultRetryBackoff() => new BackoffSettings(
-            delay: TimeSpan.FromMilliseconds(100),
-            maxDelay: TimeSpan.FromMilliseconds(60000),
+        public static gaxgrpc::BackoffSettings GetDefaultRetryBackoff() => new gaxgrpc::BackoffSettings(
+            delay: s::TimeSpan.FromMilliseconds(100),
+            maxDelay: s::TimeSpan.FromMilliseconds(60000),
             delayMultiplier: 1.3
         );
 
@@ -114,19 +114,19 @@ namespace Google.Cloud.ErrorReporting.V1Beta1
         /// <item><description>Maximum timeout: 20000 milliseconds</description></item>
         /// </list>
         /// </remarks>
-        public static BackoffSettings GetDefaultTimeoutBackoff() => new BackoffSettings(
-            delay: TimeSpan.FromMilliseconds(20000),
-            maxDelay: TimeSpan.FromMilliseconds(20000),
+        public static gaxgrpc::BackoffSettings GetDefaultTimeoutBackoff() => new gaxgrpc::BackoffSettings(
+            delay: s::TimeSpan.FromMilliseconds(20000),
+            maxDelay: s::TimeSpan.FromMilliseconds(20000),
             delayMultiplier: 1.0
         );
 
         /// <summary>
-        /// <see cref="CallSettings"/> for synchronous and asynchronous calls to
+        /// <see cref="gaxgrpc::CallSettings"/> for synchronous and asynchronous calls to
         /// <c>ErrorGroupServiceClient.GetGroup</c> and <c>ErrorGroupServiceClient.GetGroupAsync</c>.
         /// </summary>
         /// <remarks>
         /// The default <c>ErrorGroupServiceClient.GetGroup</c> and
-        /// <c>ErrorGroupServiceClient.GetGroupAsync</c> <see cref="RetrySettings"/> are:
+        /// <c>ErrorGroupServiceClient.GetGroupAsync</c> <see cref="gaxgrpc::RetrySettings"/> are:
         /// <list type="bullet">
         /// <item><description>Initial retry delay: 100 milliseconds</description></item>
         /// <item><description>Retry delay multiplier: 1.3</description></item>
@@ -137,26 +137,26 @@ namespace Google.Cloud.ErrorReporting.V1Beta1
         /// </list>
         /// Retry will be attempted on the following response status codes:
         /// <list>
-        /// <item><description><see cref="StatusCode.DeadlineExceeded"/></description></item>
-        /// <item><description><see cref="StatusCode.Unavailable"/></description></item>
+        /// <item><description><see cref="grpccore::StatusCode.DeadlineExceeded"/></description></item>
+        /// <item><description><see cref="grpccore::StatusCode.Unavailable"/></description></item>
         /// </list>
         /// Default RPC expiration is 600000 milliseconds.
         /// </remarks>
-        public CallSettings GetGroupSettings { get; set; } = CallSettings.FromCallTiming(
-            CallTiming.FromRetry(new RetrySettings(
+        public gaxgrpc::CallSettings GetGroupSettings { get; set; } = gaxgrpc::CallSettings.FromCallTiming(
+            gaxgrpc::CallTiming.FromRetry(new gaxgrpc::RetrySettings(
                 retryBackoff: GetDefaultRetryBackoff(),
                 timeoutBackoff: GetDefaultTimeoutBackoff(),
-                totalExpiration: Expiration.FromTimeout(TimeSpan.FromMilliseconds(600000)),
+                totalExpiration: gax::Expiration.FromTimeout(s::TimeSpan.FromMilliseconds(600000)),
                 retryFilter: IdempotentRetryFilter
             )));
 
         /// <summary>
-        /// <see cref="CallSettings"/> for synchronous and asynchronous calls to
+        /// <see cref="gaxgrpc::CallSettings"/> for synchronous and asynchronous calls to
         /// <c>ErrorGroupServiceClient.UpdateGroup</c> and <c>ErrorGroupServiceClient.UpdateGroupAsync</c>.
         /// </summary>
         /// <remarks>
         /// The default <c>ErrorGroupServiceClient.UpdateGroup</c> and
-        /// <c>ErrorGroupServiceClient.UpdateGroupAsync</c> <see cref="RetrySettings"/> are:
+        /// <c>ErrorGroupServiceClient.UpdateGroupAsync</c> <see cref="gaxgrpc::RetrySettings"/> are:
         /// <list type="bullet">
         /// <item><description>Initial retry delay: 100 milliseconds</description></item>
         /// <item><description>Retry delay multiplier: 1.3</description></item>
@@ -167,16 +167,16 @@ namespace Google.Cloud.ErrorReporting.V1Beta1
         /// </list>
         /// Retry will be attempted on the following response status codes:
         /// <list>
-        /// <item><description><see cref="StatusCode.DeadlineExceeded"/></description></item>
-        /// <item><description><see cref="StatusCode.Unavailable"/></description></item>
+        /// <item><description><see cref="grpccore::StatusCode.DeadlineExceeded"/></description></item>
+        /// <item><description><see cref="grpccore::StatusCode.Unavailable"/></description></item>
         /// </list>
         /// Default RPC expiration is 600000 milliseconds.
         /// </remarks>
-        public CallSettings UpdateGroupSettings { get; set; } = CallSettings.FromCallTiming(
-            CallTiming.FromRetry(new RetrySettings(
+        public gaxgrpc::CallSettings UpdateGroupSettings { get; set; } = gaxgrpc::CallSettings.FromCallTiming(
+            gaxgrpc::CallTiming.FromRetry(new gaxgrpc::RetrySettings(
                 retryBackoff: GetDefaultRetryBackoff(),
                 timeoutBackoff: GetDefaultTimeoutBackoff(),
-                totalExpiration: Expiration.FromTimeout(TimeSpan.FromMilliseconds(600000)),
+                totalExpiration: gax::Expiration.FromTimeout(s::TimeSpan.FromMilliseconds(600000)),
                 retryFilter: IdempotentRetryFilter
             )));
 
@@ -195,7 +195,7 @@ namespace Google.Cloud.ErrorReporting.V1Beta1
         /// <summary>
         /// The default endpoint for the ErrorGroupService service, which is a host of "clouderrorreporting.googleapis.com" and a port of 443.
         /// </summary>
-        public static ServiceEndpoint DefaultEndpoint { get; } = new ServiceEndpoint("clouderrorreporting.googleapis.com", 443);
+        public static gaxgrpc::ServiceEndpoint DefaultEndpoint { get; } = new gaxgrpc::ServiceEndpoint("clouderrorreporting.googleapis.com", 443);
 
         /// <summary>
         /// The default ErrorGroupService scopes.
@@ -206,11 +206,11 @@ namespace Google.Cloud.ErrorReporting.V1Beta1
         /// <item><description>"https://www.googleapis.com/auth/cloud-platform"</description></item>
         /// </list>
         /// </remarks>
-        public static IReadOnlyList<string> DefaultScopes { get; } = new ReadOnlyCollection<string>(new string[] {
+        public static scg::IReadOnlyList<string> DefaultScopes { get; } = new sco::ReadOnlyCollection<string>(new string[] {
             "https://www.googleapis.com/auth/cloud-platform",
         });
 
-        private static readonly ChannelPool s_channelPool = new ChannelPool(DefaultScopes);
+        private static readonly gaxgrpc::ChannelPool s_channelPool = new gaxgrpc::ChannelPool(DefaultScopes);
 
         // Note: we could have parameterless overloads of Create and CreateAsync,
         // documented to just use the default endpoint, settings and credentials.
@@ -224,12 +224,12 @@ namespace Google.Cloud.ErrorReporting.V1Beta1
         /// and creating a channel connecting to the given endpoint with application default credentials where
         /// necessary.
         /// </summary>
-        /// <param name="endpoint">Optional <see cref="ServiceEndpoint"/>.</param>
+        /// <param name="endpoint">Optional <see cref="gaxgrpc::ServiceEndpoint"/>.</param>
         /// <param name="settings">Optional <see cref="ErrorGroupServiceSettings"/>.</param>
         /// <returns>The task representing the created <see cref="ErrorGroupServiceClient"/>.</returns>
-        public static async Task<ErrorGroupServiceClient> CreateAsync(ServiceEndpoint endpoint = null, ErrorGroupServiceSettings settings = null)
+        public static async stt::Task<ErrorGroupServiceClient> CreateAsync(gaxgrpc::ServiceEndpoint endpoint = null, ErrorGroupServiceSettings settings = null)
         {
-            Channel channel = await s_channelPool.GetChannelAsync(endpoint ?? DefaultEndpoint).ConfigureAwait(false);
+            grpccore::Channel channel = await s_channelPool.GetChannelAsync(endpoint ?? DefaultEndpoint).ConfigureAwait(false);
             return Create(channel, settings);
         }
 
@@ -238,45 +238,45 @@ namespace Google.Cloud.ErrorReporting.V1Beta1
         /// and creating a channel connecting to the given endpoint with application default credentials where
         /// necessary.
         /// </summary>
-        /// <param name="endpoint">Optional <see cref="ServiceEndpoint"/>.</param>
+        /// <param name="endpoint">Optional <see cref="gaxgrpc::ServiceEndpoint"/>.</param>
         /// <param name="settings">Optional <see cref="ErrorGroupServiceSettings"/>.</param>
         /// <returns>The created <see cref="ErrorGroupServiceClient"/>.</returns>
-        public static ErrorGroupServiceClient Create(ServiceEndpoint endpoint = null, ErrorGroupServiceSettings settings = null)
+        public static ErrorGroupServiceClient Create(gaxgrpc::ServiceEndpoint endpoint = null, ErrorGroupServiceSettings settings = null)
         {
-            Channel channel = s_channelPool.GetChannel(endpoint ?? DefaultEndpoint);
+            grpccore::Channel channel = s_channelPool.GetChannel(endpoint ?? DefaultEndpoint);
             return Create(channel, settings);
         }
 
         /// <summary>
         /// Creates a <see cref="ErrorGroupServiceClient"/> which uses the specified channel for remote operations.
         /// </summary>
-        /// <param name="channel">The <see cref="Channel"/> for remote operations. Must not be null.</param>
+        /// <param name="channel">The <see cref="grpccore::Channel"/> for remote operations. Must not be null.</param>
         /// <param name="settings">Optional <see cref="ErrorGroupServiceSettings"/>.</param>
         /// <returns>The created <see cref="ErrorGroupServiceClient"/>.</returns>
-        public static ErrorGroupServiceClient Create(Channel channel, ErrorGroupServiceSettings settings = null)
+        public static ErrorGroupServiceClient Create(grpccore::Channel channel, ErrorGroupServiceSettings settings = null)
         {
-            GaxPreconditions.CheckNotNull(channel, nameof(channel));
+            gax::GaxPreconditions.CheckNotNull(channel, nameof(channel));
             ErrorGroupService.ErrorGroupServiceClient grpcClient = new ErrorGroupService.ErrorGroupServiceClient(channel);
             return new ErrorGroupServiceClientImpl(grpcClient, settings);
         }
 
         /// <summary>
-        /// Shuts down any channels automatically created by <see cref="Create(ServiceEndpoint, ErrorGroupServiceSettings)"/>
-        /// and <see cref="CreateAsync(ServiceEndpoint, ErrorGroupServiceSettings)"/>. Channels which weren't automatically
+        /// Shuts down any channels automatically created by <see cref="Create(gaxgrpc::ServiceEndpoint, ErrorGroupServiceSettings)"/>
+        /// and <see cref="CreateAsync(gaxgrpc::ServiceEndpoint, ErrorGroupServiceSettings)"/>. Channels which weren't automatically
         /// created are not affected.
         /// </summary>
-        /// <remarks>After calling this method, further calls to <see cref="Create(ServiceEndpoint, ErrorGroupServiceSettings)"/>
-        /// and <see cref="CreateAsync(ServiceEndpoint, ErrorGroupServiceSettings)"/> will create new channels, which could
+        /// <remarks>After calling this method, further calls to <see cref="Create(gaxgrpc::ServiceEndpoint, ErrorGroupServiceSettings)"/>
+        /// and <see cref="CreateAsync(gaxgrpc::ServiceEndpoint, ErrorGroupServiceSettings)"/> will create new channels, which could
         /// in turn be shut down by another call to this method.</remarks>
         /// <returns>A task representing the asynchronous shutdown operation.</returns>
-        public static Task ShutdownDefaultChannelsAsync() => s_channelPool.ShutdownChannelsAsync();
+        public static stt::Task ShutdownDefaultChannelsAsync() => s_channelPool.ShutdownChannelsAsync();
 
         /// <summary>
         /// The underlying gRPC ErrorGroupService client.
         /// </summary>
         public virtual ErrorGroupService.ErrorGroupServiceClient GrpcClient
         {
-            get { throw new NotImplementedException(); }
+            get { throw new s::NotImplementedException(); }
         }
 
         /// <summary>
@@ -298,12 +298,12 @@ namespace Google.Cloud.ErrorReporting.V1Beta1
         /// <returns>
         /// A Task containing the RPC response.
         /// </returns>
-        public virtual Task<ErrorGroup> GetGroupAsync(
+        public virtual stt::Task<ErrorGroup> GetGroupAsync(
             GroupName groupName,
-            CallSettings callSettings = null) => GetGroupAsync(
+            gaxgrpc::CallSettings callSettings = null) => GetGroupAsync(
                 new GetGroupRequest
                 {
-                    GroupNameAsGroupName = GaxPreconditions.CheckNotNull(groupName, nameof(groupName)),
+                    GroupNameAsGroupName = gax::GaxPreconditions.CheckNotNull(groupName, nameof(groupName)),
                 },
                 callSettings);
 
@@ -321,16 +321,16 @@ namespace Google.Cloud.ErrorReporting.V1Beta1
         /// Example: &lt;code&gt;projects/my-project-123/groups/my-group&lt;/code&gt;
         /// </param>
         /// <param name="cancellationToken">
-        /// A <see cref="CancellationToken"/> to use for this RPC.
+        /// A <see cref="st::CancellationToken"/> to use for this RPC.
         /// </param>
         /// <returns>
         /// A Task containing the RPC response.
         /// </returns>
-        public virtual Task<ErrorGroup> GetGroupAsync(
+        public virtual stt::Task<ErrorGroup> GetGroupAsync(
             GroupName groupName,
-            CancellationToken cancellationToken) => GetGroupAsync(
+            st::CancellationToken cancellationToken) => GetGroupAsync(
                 groupName,
-                CallSettings.FromCancellationToken(cancellationToken));
+                gaxgrpc::CallSettings.FromCancellationToken(cancellationToken));
 
         /// <summary>
         /// Get the specified group.
@@ -353,10 +353,10 @@ namespace Google.Cloud.ErrorReporting.V1Beta1
         /// </returns>
         public virtual ErrorGroup GetGroup(
             GroupName groupName,
-            CallSettings callSettings = null) => GetGroup(
+            gaxgrpc::CallSettings callSettings = null) => GetGroup(
                 new GetGroupRequest
                 {
-                    GroupNameAsGroupName = GaxPreconditions.CheckNotNull(groupName, nameof(groupName)),
+                    GroupNameAsGroupName = gax::GaxPreconditions.CheckNotNull(groupName, nameof(groupName)),
                 },
                 callSettings);
 
@@ -372,11 +372,11 @@ namespace Google.Cloud.ErrorReporting.V1Beta1
         /// <returns>
         /// A Task containing the RPC response.
         /// </returns>
-        public virtual Task<ErrorGroup> GetGroupAsync(
+        public virtual stt::Task<ErrorGroup> GetGroupAsync(
             GetGroupRequest request,
-            CallSettings callSettings = null)
+            gaxgrpc::CallSettings callSettings = null)
         {
-            throw new NotImplementedException();
+            throw new s::NotImplementedException();
         }
 
         /// <summary>
@@ -386,16 +386,16 @@ namespace Google.Cloud.ErrorReporting.V1Beta1
         /// The request object containing all of the parameters for the API call.
         /// </param>
         /// <param name="cancellationToken">
-        /// A <see cref="CancellationToken"/> to use for this RPC.
+        /// A <see cref="st::CancellationToken"/> to use for this RPC.
         /// </param>
         /// <returns>
         /// A Task containing the RPC response.
         /// </returns>
-        public virtual Task<ErrorGroup> GetGroupAsync(
+        public virtual stt::Task<ErrorGroup> GetGroupAsync(
             GetGroupRequest request,
-            CancellationToken cancellationToken) => GetGroupAsync(
+            st::CancellationToken cancellationToken) => GetGroupAsync(
                 request,
-                CallSettings.FromCancellationToken(cancellationToken));
+                gaxgrpc::CallSettings.FromCancellationToken(cancellationToken));
 
         /// <summary>
         /// Get the specified group.
@@ -411,9 +411,9 @@ namespace Google.Cloud.ErrorReporting.V1Beta1
         /// </returns>
         public virtual ErrorGroup GetGroup(
             GetGroupRequest request,
-            CallSettings callSettings = null)
+            gaxgrpc::CallSettings callSettings = null)
         {
-            throw new NotImplementedException();
+            throw new s::NotImplementedException();
         }
 
         /// <summary>
@@ -429,12 +429,12 @@ namespace Google.Cloud.ErrorReporting.V1Beta1
         /// <returns>
         /// A Task containing the RPC response.
         /// </returns>
-        public virtual Task<ErrorGroup> UpdateGroupAsync(
+        public virtual stt::Task<ErrorGroup> UpdateGroupAsync(
             ErrorGroup group,
-            CallSettings callSettings = null) => UpdateGroupAsync(
+            gaxgrpc::CallSettings callSettings = null) => UpdateGroupAsync(
                 new UpdateGroupRequest
                 {
-                    Group = GaxPreconditions.CheckNotNull(group, nameof(group)),
+                    Group = gax::GaxPreconditions.CheckNotNull(group, nameof(group)),
                 },
                 callSettings);
 
@@ -446,16 +446,16 @@ namespace Google.Cloud.ErrorReporting.V1Beta1
         /// [Required] The group which replaces the resource on the server.
         /// </param>
         /// <param name="cancellationToken">
-        /// A <see cref="CancellationToken"/> to use for this RPC.
+        /// A <see cref="st::CancellationToken"/> to use for this RPC.
         /// </param>
         /// <returns>
         /// A Task containing the RPC response.
         /// </returns>
-        public virtual Task<ErrorGroup> UpdateGroupAsync(
+        public virtual stt::Task<ErrorGroup> UpdateGroupAsync(
             ErrorGroup group,
-            CancellationToken cancellationToken) => UpdateGroupAsync(
+            st::CancellationToken cancellationToken) => UpdateGroupAsync(
                 group,
-                CallSettings.FromCancellationToken(cancellationToken));
+                gaxgrpc::CallSettings.FromCancellationToken(cancellationToken));
 
         /// <summary>
         /// Replace the data for the specified group.
@@ -472,10 +472,10 @@ namespace Google.Cloud.ErrorReporting.V1Beta1
         /// </returns>
         public virtual ErrorGroup UpdateGroup(
             ErrorGroup group,
-            CallSettings callSettings = null) => UpdateGroup(
+            gaxgrpc::CallSettings callSettings = null) => UpdateGroup(
                 new UpdateGroupRequest
                 {
-                    Group = GaxPreconditions.CheckNotNull(group, nameof(group)),
+                    Group = gax::GaxPreconditions.CheckNotNull(group, nameof(group)),
                 },
                 callSettings);
 
@@ -492,11 +492,11 @@ namespace Google.Cloud.ErrorReporting.V1Beta1
         /// <returns>
         /// A Task containing the RPC response.
         /// </returns>
-        public virtual Task<ErrorGroup> UpdateGroupAsync(
+        public virtual stt::Task<ErrorGroup> UpdateGroupAsync(
             UpdateGroupRequest request,
-            CallSettings callSettings = null)
+            gaxgrpc::CallSettings callSettings = null)
         {
-            throw new NotImplementedException();
+            throw new s::NotImplementedException();
         }
 
         /// <summary>
@@ -507,16 +507,16 @@ namespace Google.Cloud.ErrorReporting.V1Beta1
         /// The request object containing all of the parameters for the API call.
         /// </param>
         /// <param name="cancellationToken">
-        /// A <see cref="CancellationToken"/> to use for this RPC.
+        /// A <see cref="st::CancellationToken"/> to use for this RPC.
         /// </param>
         /// <returns>
         /// A Task containing the RPC response.
         /// </returns>
-        public virtual Task<ErrorGroup> UpdateGroupAsync(
+        public virtual stt::Task<ErrorGroup> UpdateGroupAsync(
             UpdateGroupRequest request,
-            CancellationToken cancellationToken) => UpdateGroupAsync(
+            st::CancellationToken cancellationToken) => UpdateGroupAsync(
                 request,
-                CallSettings.FromCancellationToken(cancellationToken));
+                gaxgrpc::CallSettings.FromCancellationToken(cancellationToken));
 
         /// <summary>
         /// Replace the data for the specified group.
@@ -533,9 +533,9 @@ namespace Google.Cloud.ErrorReporting.V1Beta1
         /// </returns>
         public virtual ErrorGroup UpdateGroup(
             UpdateGroupRequest request,
-            CallSettings callSettings = null)
+            gaxgrpc::CallSettings callSettings = null)
         {
-            throw new NotImplementedException();
+            throw new s::NotImplementedException();
         }
 
     }
@@ -545,8 +545,8 @@ namespace Google.Cloud.ErrorReporting.V1Beta1
     /// </summary>
     public sealed partial class ErrorGroupServiceClientImpl : ErrorGroupServiceClient
     {
-        private readonly ApiCall<GetGroupRequest, ErrorGroup> _callGetGroup;
-        private readonly ApiCall<UpdateGroupRequest, ErrorGroup> _callUpdateGroup;
+        private readonly gaxgrpc::ApiCall<GetGroupRequest, ErrorGroup> _callGetGroup;
+        private readonly gaxgrpc::ApiCall<UpdateGroupRequest, ErrorGroup> _callUpdateGroup;
 
         /// <summary>
         /// Constructs a client wrapper for the ErrorGroupService service, with the specified gRPC client and settings.
@@ -557,7 +557,7 @@ namespace Google.Cloud.ErrorReporting.V1Beta1
         {
             GrpcClient = grpcClient;
             ErrorGroupServiceSettings effectiveSettings = settings ?? ErrorGroupServiceSettings.GetDefault();
-            ClientHelper clientHelper = new ClientHelper(effectiveSettings);
+            gaxgrpc::ClientHelper clientHelper = new gaxgrpc::ClientHelper(effectiveSettings);
             _callGetGroup = clientHelper.BuildApiCall<GetGroupRequest, ErrorGroup>(
                 GrpcClient.GetGroupAsync, GrpcClient.GetGroup, effectiveSettings.GetGroupSettings);
             _callUpdateGroup = clientHelper.BuildApiCall<UpdateGroupRequest, ErrorGroup>(
@@ -573,15 +573,15 @@ namespace Google.Cloud.ErrorReporting.V1Beta1
 
         // Partial methods called for every ApiCall on construction.
         // Allows modification of all the underlying ApiCall objects.
-        partial void Modify_ApiCall<TRequest, TResponse>(ref ApiCall<TRequest, TResponse> call)
-            where TRequest : class, IMessage<TRequest>
-            where TResponse : class, IMessage<TResponse>;
+        partial void Modify_ApiCall<TRequest, TResponse>(ref gaxgrpc::ApiCall<TRequest, TResponse> call)
+            where TRequest : class, proto::IMessage<TRequest>
+            where TResponse : class, proto::IMessage<TResponse>;
 
         // Partial methods called for each ApiCall on construction.
         // Allows per-RPC-method modification of the underlying ApiCall object.
-        partial void Modify_GetGroupApiCall(ref ApiCall<GetGroupRequest, ErrorGroup> call);
-        partial void Modify_UpdateGroupApiCall(ref ApiCall<UpdateGroupRequest, ErrorGroup> call);
-        partial void OnConstruction(ErrorGroupService.ErrorGroupServiceClient grpcClient, ErrorGroupServiceSettings effectiveSettings, ClientHelper clientHelper);
+        partial void Modify_GetGroupApiCall(ref gaxgrpc::ApiCall<GetGroupRequest, ErrorGroup> call);
+        partial void Modify_UpdateGroupApiCall(ref gaxgrpc::ApiCall<UpdateGroupRequest, ErrorGroup> call);
+        partial void OnConstruction(ErrorGroupService.ErrorGroupServiceClient grpcClient, ErrorGroupServiceSettings effectiveSettings, gaxgrpc::ClientHelper clientHelper);
 
         /// <summary>
         /// The underlying gRPC ErrorGroupService client.
@@ -591,8 +591,8 @@ namespace Google.Cloud.ErrorReporting.V1Beta1
         // Partial methods called on each request.
         // Allows per-RPC-call modification to the request and CallSettings objects,
         // before the underlying RPC is performed.
-        partial void Modify_GetGroupRequest(ref GetGroupRequest request, ref CallSettings settings);
-        partial void Modify_UpdateGroupRequest(ref UpdateGroupRequest request, ref CallSettings settings);
+        partial void Modify_GetGroupRequest(ref GetGroupRequest request, ref gaxgrpc::CallSettings settings);
+        partial void Modify_UpdateGroupRequest(ref UpdateGroupRequest request, ref gaxgrpc::CallSettings settings);
 
         /// <summary>
         /// Get the specified group.
@@ -606,9 +606,9 @@ namespace Google.Cloud.ErrorReporting.V1Beta1
         /// <returns>
         /// A Task containing the RPC response.
         /// </returns>
-        public override Task<ErrorGroup> GetGroupAsync(
+        public override stt::Task<ErrorGroup> GetGroupAsync(
             GetGroupRequest request,
-            CallSettings callSettings = null)
+            gaxgrpc::CallSettings callSettings = null)
         {
             Modify_GetGroupRequest(ref request, ref callSettings);
             return _callGetGroup.Async(request, callSettings);
@@ -628,7 +628,7 @@ namespace Google.Cloud.ErrorReporting.V1Beta1
         /// </returns>
         public override ErrorGroup GetGroup(
             GetGroupRequest request,
-            CallSettings callSettings = null)
+            gaxgrpc::CallSettings callSettings = null)
         {
             Modify_GetGroupRequest(ref request, ref callSettings);
             return _callGetGroup.Sync(request, callSettings);
@@ -647,9 +647,9 @@ namespace Google.Cloud.ErrorReporting.V1Beta1
         /// <returns>
         /// A Task containing the RPC response.
         /// </returns>
-        public override Task<ErrorGroup> UpdateGroupAsync(
+        public override stt::Task<ErrorGroup> UpdateGroupAsync(
             UpdateGroupRequest request,
-            CallSettings callSettings = null)
+            gaxgrpc::CallSettings callSettings = null)
         {
             Modify_UpdateGroupRequest(ref request, ref callSettings);
             return _callUpdateGroup.Async(request, callSettings);
@@ -670,7 +670,7 @@ namespace Google.Cloud.ErrorReporting.V1Beta1
         /// </returns>
         public override ErrorGroup UpdateGroup(
             UpdateGroupRequest request,
-            CallSettings callSettings = null)
+            gaxgrpc::CallSettings callSettings = null)
         {
             Modify_UpdateGroupRequest(ref request, ref callSettings);
             return _callUpdateGroup.Sync(request, callSettings);

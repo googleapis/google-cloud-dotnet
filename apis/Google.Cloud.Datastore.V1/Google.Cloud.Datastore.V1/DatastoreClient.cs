@@ -14,24 +14,24 @@
 
 // Generated code. DO NOT EDIT!
 
-using Google.Api.Gax;
-using Google.Api.Gax.Grpc;
-using Google.Protobuf;
-using Google.Protobuf.WellKnownTypes;
-using Grpc.Core;
-using System;
-using System.Collections;
-using System.Collections.Generic;
-using System.Collections.ObjectModel;
-using System.Threading;
-using System.Threading.Tasks;
+using gax = Google.Api.Gax;
+using gaxgrpc = Google.Api.Gax.Grpc;
+using proto = Google.Protobuf;
+using protowkt = Google.Protobuf.WellKnownTypes;
+using grpccore = Grpc.Core;
+using s = System;
+using sc = System.Collections;
+using scg = System.Collections.Generic;
+using sco = System.Collections.ObjectModel;
+using st = System.Threading;
+using stt = System.Threading.Tasks;
 
 namespace Google.Cloud.Datastore.V1
 {
     /// <summary>
     /// Settings for a <see cref="DatastoreClient"/>.
     /// </summary>
-    public sealed partial class DatastoreSettings : ServiceSettingsBase
+    public sealed partial class DatastoreSettings : gaxgrpc::ServiceSettingsBase
     {
         /// <summary>
         /// Get a new instance of the default <see cref="DatastoreSettings"/>.
@@ -48,7 +48,7 @@ namespace Google.Cloud.Datastore.V1
 
         private DatastoreSettings(DatastoreSettings existing) : base(existing)
         {
-            GaxPreconditions.CheckNotNull(existing, nameof(existing));
+            gax::GaxPreconditions.CheckNotNull(existing, nameof(existing));
             LookupSettings = existing.LookupSettings;
             RunQuerySettings = existing.RunQuerySettings;
             BeginTransactionSettings = existing.BeginTransactionSettings;
@@ -62,28 +62,28 @@ namespace Google.Cloud.Datastore.V1
         partial void OnCopy(DatastoreSettings existing);
 
         /// <summary>
-        /// The filter specifying which RPC <see cref="StatusCode"/>s are eligible for retry
+        /// The filter specifying which RPC <see cref="grpccore::StatusCode"/>s are eligible for retry
         /// for "Idempotent" <see cref="DatastoreClient"/> RPC methods.
         /// </summary>
         /// <remarks>
-        /// The eligible RPC <see cref="StatusCode"/>s for retry for "Idempotent" RPC methods are:
+        /// The eligible RPC <see cref="grpccore::StatusCode"/>s for retry for "Idempotent" RPC methods are:
         /// <list type="bullet">
-        /// <item><description><see cref="StatusCode.DeadlineExceeded"/></description></item>
-        /// <item><description><see cref="StatusCode.Unavailable"/></description></item>
+        /// <item><description><see cref="grpccore::StatusCode.DeadlineExceeded"/></description></item>
+        /// <item><description><see cref="grpccore::StatusCode.Unavailable"/></description></item>
         /// </list>
         /// </remarks>
-        public static Predicate<RpcException> IdempotentRetryFilter { get; } =
-            RetrySettings.FilterForStatusCodes(StatusCode.DeadlineExceeded, StatusCode.Unavailable);
+        public static s::Predicate<grpccore::RpcException> IdempotentRetryFilter { get; } =
+            gaxgrpc::RetrySettings.FilterForStatusCodes(grpccore::StatusCode.DeadlineExceeded, grpccore::StatusCode.Unavailable);
 
         /// <summary>
-        /// The filter specifying which RPC <see cref="StatusCode"/>s are eligible for retry
+        /// The filter specifying which RPC <see cref="grpccore::StatusCode"/>s are eligible for retry
         /// for "NonIdempotent" <see cref="DatastoreClient"/> RPC methods.
         /// </summary>
         /// <remarks>
-        /// There are no RPC <see cref="StatusCode"/>s eligible for retry for "NonIdempotent" RPC methods.
+        /// There are no RPC <see cref="grpccore::StatusCode"/>s eligible for retry for "NonIdempotent" RPC methods.
         /// </remarks>
-        public static Predicate<RpcException> NonIdempotentRetryFilter { get; } =
-            RetrySettings.FilterForStatusCodes();
+        public static s::Predicate<grpccore::RpcException> NonIdempotentRetryFilter { get; } =
+            gaxgrpc::RetrySettings.FilterForStatusCodes();
 
         /// <summary>
         /// "Default" retry backoff for <see cref="DatastoreClient"/> RPC methods.
@@ -99,9 +99,9 @@ namespace Google.Cloud.Datastore.V1
         /// <item><description>Delay multiplier: 1.3</description></item>
         /// </list>
         /// </remarks>
-        public static BackoffSettings GetDefaultRetryBackoff() => new BackoffSettings(
-            delay: TimeSpan.FromMilliseconds(100),
-            maxDelay: TimeSpan.FromMilliseconds(60000),
+        public static gaxgrpc::BackoffSettings GetDefaultRetryBackoff() => new gaxgrpc::BackoffSettings(
+            delay: s::TimeSpan.FromMilliseconds(100),
+            maxDelay: s::TimeSpan.FromMilliseconds(60000),
             delayMultiplier: 1.3
         );
 
@@ -119,19 +119,19 @@ namespace Google.Cloud.Datastore.V1
         /// <item><description>Maximum timeout: 60000 milliseconds</description></item>
         /// </list>
         /// </remarks>
-        public static BackoffSettings GetDefaultTimeoutBackoff() => new BackoffSettings(
-            delay: TimeSpan.FromMilliseconds(60000),
-            maxDelay: TimeSpan.FromMilliseconds(60000),
+        public static gaxgrpc::BackoffSettings GetDefaultTimeoutBackoff() => new gaxgrpc::BackoffSettings(
+            delay: s::TimeSpan.FromMilliseconds(60000),
+            maxDelay: s::TimeSpan.FromMilliseconds(60000),
             delayMultiplier: 1.0
         );
 
         /// <summary>
-        /// <see cref="CallSettings"/> for synchronous and asynchronous calls to
+        /// <see cref="gaxgrpc::CallSettings"/> for synchronous and asynchronous calls to
         /// <c>DatastoreClient.Lookup</c> and <c>DatastoreClient.LookupAsync</c>.
         /// </summary>
         /// <remarks>
         /// The default <c>DatastoreClient.Lookup</c> and
-        /// <c>DatastoreClient.LookupAsync</c> <see cref="RetrySettings"/> are:
+        /// <c>DatastoreClient.LookupAsync</c> <see cref="gaxgrpc::RetrySettings"/> are:
         /// <list type="bullet">
         /// <item><description>Initial retry delay: 100 milliseconds</description></item>
         /// <item><description>Retry delay multiplier: 1.3</description></item>
@@ -142,26 +142,26 @@ namespace Google.Cloud.Datastore.V1
         /// </list>
         /// Retry will be attempted on the following response status codes:
         /// <list>
-        /// <item><description><see cref="StatusCode.DeadlineExceeded"/></description></item>
-        /// <item><description><see cref="StatusCode.Unavailable"/></description></item>
+        /// <item><description><see cref="grpccore::StatusCode.DeadlineExceeded"/></description></item>
+        /// <item><description><see cref="grpccore::StatusCode.Unavailable"/></description></item>
         /// </list>
         /// Default RPC expiration is 600000 milliseconds.
         /// </remarks>
-        public CallSettings LookupSettings { get; set; } = CallSettings.FromCallTiming(
-            CallTiming.FromRetry(new RetrySettings(
+        public gaxgrpc::CallSettings LookupSettings { get; set; } = gaxgrpc::CallSettings.FromCallTiming(
+            gaxgrpc::CallTiming.FromRetry(new gaxgrpc::RetrySettings(
                 retryBackoff: GetDefaultRetryBackoff(),
                 timeoutBackoff: GetDefaultTimeoutBackoff(),
-                totalExpiration: Expiration.FromTimeout(TimeSpan.FromMilliseconds(600000)),
+                totalExpiration: gax::Expiration.FromTimeout(s::TimeSpan.FromMilliseconds(600000)),
                 retryFilter: IdempotentRetryFilter
             )));
 
         /// <summary>
-        /// <see cref="CallSettings"/> for synchronous and asynchronous calls to
+        /// <see cref="gaxgrpc::CallSettings"/> for synchronous and asynchronous calls to
         /// <c>DatastoreClient.RunQuery</c> and <c>DatastoreClient.RunQueryAsync</c>.
         /// </summary>
         /// <remarks>
         /// The default <c>DatastoreClient.RunQuery</c> and
-        /// <c>DatastoreClient.RunQueryAsync</c> <see cref="RetrySettings"/> are:
+        /// <c>DatastoreClient.RunQueryAsync</c> <see cref="gaxgrpc::RetrySettings"/> are:
         /// <list type="bullet">
         /// <item><description>Initial retry delay: 100 milliseconds</description></item>
         /// <item><description>Retry delay multiplier: 1.3</description></item>
@@ -172,26 +172,26 @@ namespace Google.Cloud.Datastore.V1
         /// </list>
         /// Retry will be attempted on the following response status codes:
         /// <list>
-        /// <item><description><see cref="StatusCode.DeadlineExceeded"/></description></item>
-        /// <item><description><see cref="StatusCode.Unavailable"/></description></item>
+        /// <item><description><see cref="grpccore::StatusCode.DeadlineExceeded"/></description></item>
+        /// <item><description><see cref="grpccore::StatusCode.Unavailable"/></description></item>
         /// </list>
         /// Default RPC expiration is 600000 milliseconds.
         /// </remarks>
-        public CallSettings RunQuerySettings { get; set; } = CallSettings.FromCallTiming(
-            CallTiming.FromRetry(new RetrySettings(
+        public gaxgrpc::CallSettings RunQuerySettings { get; set; } = gaxgrpc::CallSettings.FromCallTiming(
+            gaxgrpc::CallTiming.FromRetry(new gaxgrpc::RetrySettings(
                 retryBackoff: GetDefaultRetryBackoff(),
                 timeoutBackoff: GetDefaultTimeoutBackoff(),
-                totalExpiration: Expiration.FromTimeout(TimeSpan.FromMilliseconds(600000)),
+                totalExpiration: gax::Expiration.FromTimeout(s::TimeSpan.FromMilliseconds(600000)),
                 retryFilter: IdempotentRetryFilter
             )));
 
         /// <summary>
-        /// <see cref="CallSettings"/> for synchronous and asynchronous calls to
+        /// <see cref="gaxgrpc::CallSettings"/> for synchronous and asynchronous calls to
         /// <c>DatastoreClient.BeginTransaction</c> and <c>DatastoreClient.BeginTransactionAsync</c>.
         /// </summary>
         /// <remarks>
         /// The default <c>DatastoreClient.BeginTransaction</c> and
-        /// <c>DatastoreClient.BeginTransactionAsync</c> <see cref="RetrySettings"/> are:
+        /// <c>DatastoreClient.BeginTransactionAsync</c> <see cref="gaxgrpc::RetrySettings"/> are:
         /// <list type="bullet">
         /// <item><description>Initial retry delay: 100 milliseconds</description></item>
         /// <item><description>Retry delay multiplier: 1.3</description></item>
@@ -206,21 +206,21 @@ namespace Google.Cloud.Datastore.V1
         /// </list>
         /// Default RPC expiration is 600000 milliseconds.
         /// </remarks>
-        public CallSettings BeginTransactionSettings { get; set; } = CallSettings.FromCallTiming(
-            CallTiming.FromRetry(new RetrySettings(
+        public gaxgrpc::CallSettings BeginTransactionSettings { get; set; } = gaxgrpc::CallSettings.FromCallTiming(
+            gaxgrpc::CallTiming.FromRetry(new gaxgrpc::RetrySettings(
                 retryBackoff: GetDefaultRetryBackoff(),
                 timeoutBackoff: GetDefaultTimeoutBackoff(),
-                totalExpiration: Expiration.FromTimeout(TimeSpan.FromMilliseconds(600000)),
+                totalExpiration: gax::Expiration.FromTimeout(s::TimeSpan.FromMilliseconds(600000)),
                 retryFilter: NonIdempotentRetryFilter
             )));
 
         /// <summary>
-        /// <see cref="CallSettings"/> for synchronous and asynchronous calls to
+        /// <see cref="gaxgrpc::CallSettings"/> for synchronous and asynchronous calls to
         /// <c>DatastoreClient.Commit</c> and <c>DatastoreClient.CommitAsync</c>.
         /// </summary>
         /// <remarks>
         /// The default <c>DatastoreClient.Commit</c> and
-        /// <c>DatastoreClient.CommitAsync</c> <see cref="RetrySettings"/> are:
+        /// <c>DatastoreClient.CommitAsync</c> <see cref="gaxgrpc::RetrySettings"/> are:
         /// <list type="bullet">
         /// <item><description>Initial retry delay: 100 milliseconds</description></item>
         /// <item><description>Retry delay multiplier: 1.3</description></item>
@@ -235,21 +235,21 @@ namespace Google.Cloud.Datastore.V1
         /// </list>
         /// Default RPC expiration is 600000 milliseconds.
         /// </remarks>
-        public CallSettings CommitSettings { get; set; } = CallSettings.FromCallTiming(
-            CallTiming.FromRetry(new RetrySettings(
+        public gaxgrpc::CallSettings CommitSettings { get; set; } = gaxgrpc::CallSettings.FromCallTiming(
+            gaxgrpc::CallTiming.FromRetry(new gaxgrpc::RetrySettings(
                 retryBackoff: GetDefaultRetryBackoff(),
                 timeoutBackoff: GetDefaultTimeoutBackoff(),
-                totalExpiration: Expiration.FromTimeout(TimeSpan.FromMilliseconds(600000)),
+                totalExpiration: gax::Expiration.FromTimeout(s::TimeSpan.FromMilliseconds(600000)),
                 retryFilter: NonIdempotentRetryFilter
             )));
 
         /// <summary>
-        /// <see cref="CallSettings"/> for synchronous and asynchronous calls to
+        /// <see cref="gaxgrpc::CallSettings"/> for synchronous and asynchronous calls to
         /// <c>DatastoreClient.Rollback</c> and <c>DatastoreClient.RollbackAsync</c>.
         /// </summary>
         /// <remarks>
         /// The default <c>DatastoreClient.Rollback</c> and
-        /// <c>DatastoreClient.RollbackAsync</c> <see cref="RetrySettings"/> are:
+        /// <c>DatastoreClient.RollbackAsync</c> <see cref="gaxgrpc::RetrySettings"/> are:
         /// <list type="bullet">
         /// <item><description>Initial retry delay: 100 milliseconds</description></item>
         /// <item><description>Retry delay multiplier: 1.3</description></item>
@@ -264,21 +264,21 @@ namespace Google.Cloud.Datastore.V1
         /// </list>
         /// Default RPC expiration is 600000 milliseconds.
         /// </remarks>
-        public CallSettings RollbackSettings { get; set; } = CallSettings.FromCallTiming(
-            CallTiming.FromRetry(new RetrySettings(
+        public gaxgrpc::CallSettings RollbackSettings { get; set; } = gaxgrpc::CallSettings.FromCallTiming(
+            gaxgrpc::CallTiming.FromRetry(new gaxgrpc::RetrySettings(
                 retryBackoff: GetDefaultRetryBackoff(),
                 timeoutBackoff: GetDefaultTimeoutBackoff(),
-                totalExpiration: Expiration.FromTimeout(TimeSpan.FromMilliseconds(600000)),
+                totalExpiration: gax::Expiration.FromTimeout(s::TimeSpan.FromMilliseconds(600000)),
                 retryFilter: NonIdempotentRetryFilter
             )));
 
         /// <summary>
-        /// <see cref="CallSettings"/> for synchronous and asynchronous calls to
+        /// <see cref="gaxgrpc::CallSettings"/> for synchronous and asynchronous calls to
         /// <c>DatastoreClient.AllocateIds</c> and <c>DatastoreClient.AllocateIdsAsync</c>.
         /// </summary>
         /// <remarks>
         /// The default <c>DatastoreClient.AllocateIds</c> and
-        /// <c>DatastoreClient.AllocateIdsAsync</c> <see cref="RetrySettings"/> are:
+        /// <c>DatastoreClient.AllocateIdsAsync</c> <see cref="gaxgrpc::RetrySettings"/> are:
         /// <list type="bullet">
         /// <item><description>Initial retry delay: 100 milliseconds</description></item>
         /// <item><description>Retry delay multiplier: 1.3</description></item>
@@ -293,21 +293,21 @@ namespace Google.Cloud.Datastore.V1
         /// </list>
         /// Default RPC expiration is 600000 milliseconds.
         /// </remarks>
-        public CallSettings AllocateIdsSettings { get; set; } = CallSettings.FromCallTiming(
-            CallTiming.FromRetry(new RetrySettings(
+        public gaxgrpc::CallSettings AllocateIdsSettings { get; set; } = gaxgrpc::CallSettings.FromCallTiming(
+            gaxgrpc::CallTiming.FromRetry(new gaxgrpc::RetrySettings(
                 retryBackoff: GetDefaultRetryBackoff(),
                 timeoutBackoff: GetDefaultTimeoutBackoff(),
-                totalExpiration: Expiration.FromTimeout(TimeSpan.FromMilliseconds(600000)),
+                totalExpiration: gax::Expiration.FromTimeout(s::TimeSpan.FromMilliseconds(600000)),
                 retryFilter: NonIdempotentRetryFilter
             )));
 
         /// <summary>
-        /// <see cref="CallSettings"/> for synchronous and asynchronous calls to
+        /// <see cref="gaxgrpc::CallSettings"/> for synchronous and asynchronous calls to
         /// <c>DatastoreClient.ReserveIds</c> and <c>DatastoreClient.ReserveIdsAsync</c>.
         /// </summary>
         /// <remarks>
         /// The default <c>DatastoreClient.ReserveIds</c> and
-        /// <c>DatastoreClient.ReserveIdsAsync</c> <see cref="RetrySettings"/> are:
+        /// <c>DatastoreClient.ReserveIdsAsync</c> <see cref="gaxgrpc::RetrySettings"/> are:
         /// <list type="bullet">
         /// <item><description>Initial retry delay: 100 milliseconds</description></item>
         /// <item><description>Retry delay multiplier: 1.3</description></item>
@@ -318,16 +318,16 @@ namespace Google.Cloud.Datastore.V1
         /// </list>
         /// Retry will be attempted on the following response status codes:
         /// <list>
-        /// <item><description><see cref="StatusCode.DeadlineExceeded"/></description></item>
-        /// <item><description><see cref="StatusCode.Unavailable"/></description></item>
+        /// <item><description><see cref="grpccore::StatusCode.DeadlineExceeded"/></description></item>
+        /// <item><description><see cref="grpccore::StatusCode.Unavailable"/></description></item>
         /// </list>
         /// Default RPC expiration is 600000 milliseconds.
         /// </remarks>
-        public CallSettings ReserveIdsSettings { get; set; } = CallSettings.FromCallTiming(
-            CallTiming.FromRetry(new RetrySettings(
+        public gaxgrpc::CallSettings ReserveIdsSettings { get; set; } = gaxgrpc::CallSettings.FromCallTiming(
+            gaxgrpc::CallTiming.FromRetry(new gaxgrpc::RetrySettings(
                 retryBackoff: GetDefaultRetryBackoff(),
                 timeoutBackoff: GetDefaultTimeoutBackoff(),
-                totalExpiration: Expiration.FromTimeout(TimeSpan.FromMilliseconds(600000)),
+                totalExpiration: gax::Expiration.FromTimeout(s::TimeSpan.FromMilliseconds(600000)),
                 retryFilter: IdempotentRetryFilter
             )));
 
@@ -346,7 +346,7 @@ namespace Google.Cloud.Datastore.V1
         /// <summary>
         /// The default endpoint for the Datastore service, which is a host of "datastore.googleapis.com" and a port of 443.
         /// </summary>
-        public static ServiceEndpoint DefaultEndpoint { get; } = new ServiceEndpoint("datastore.googleapis.com", 443);
+        public static gaxgrpc::ServiceEndpoint DefaultEndpoint { get; } = new gaxgrpc::ServiceEndpoint("datastore.googleapis.com", 443);
 
         /// <summary>
         /// The default Datastore scopes.
@@ -358,12 +358,12 @@ namespace Google.Cloud.Datastore.V1
         /// <item><description>"https://www.googleapis.com/auth/datastore"</description></item>
         /// </list>
         /// </remarks>
-        public static IReadOnlyList<string> DefaultScopes { get; } = new ReadOnlyCollection<string>(new string[] {
+        public static scg::IReadOnlyList<string> DefaultScopes { get; } = new sco::ReadOnlyCollection<string>(new string[] {
             "https://www.googleapis.com/auth/cloud-platform",
             "https://www.googleapis.com/auth/datastore",
         });
 
-        private static readonly ChannelPool s_channelPool = new ChannelPool(DefaultScopes);
+        private static readonly gaxgrpc::ChannelPool s_channelPool = new gaxgrpc::ChannelPool(DefaultScopes);
 
         // Note: we could have parameterless overloads of Create and CreateAsync,
         // documented to just use the default endpoint, settings and credentials.
@@ -377,12 +377,12 @@ namespace Google.Cloud.Datastore.V1
         /// and creating a channel connecting to the given endpoint with application default credentials where
         /// necessary.
         /// </summary>
-        /// <param name="endpoint">Optional <see cref="ServiceEndpoint"/>.</param>
+        /// <param name="endpoint">Optional <see cref="gaxgrpc::ServiceEndpoint"/>.</param>
         /// <param name="settings">Optional <see cref="DatastoreSettings"/>.</param>
         /// <returns>The task representing the created <see cref="DatastoreClient"/>.</returns>
-        public static async Task<DatastoreClient> CreateAsync(ServiceEndpoint endpoint = null, DatastoreSettings settings = null)
+        public static async stt::Task<DatastoreClient> CreateAsync(gaxgrpc::ServiceEndpoint endpoint = null, DatastoreSettings settings = null)
         {
-            Channel channel = await s_channelPool.GetChannelAsync(endpoint ?? DefaultEndpoint).ConfigureAwait(false);
+            grpccore::Channel channel = await s_channelPool.GetChannelAsync(endpoint ?? DefaultEndpoint).ConfigureAwait(false);
             return Create(channel, settings);
         }
 
@@ -391,45 +391,45 @@ namespace Google.Cloud.Datastore.V1
         /// and creating a channel connecting to the given endpoint with application default credentials where
         /// necessary.
         /// </summary>
-        /// <param name="endpoint">Optional <see cref="ServiceEndpoint"/>.</param>
+        /// <param name="endpoint">Optional <see cref="gaxgrpc::ServiceEndpoint"/>.</param>
         /// <param name="settings">Optional <see cref="DatastoreSettings"/>.</param>
         /// <returns>The created <see cref="DatastoreClient"/>.</returns>
-        public static DatastoreClient Create(ServiceEndpoint endpoint = null, DatastoreSettings settings = null)
+        public static DatastoreClient Create(gaxgrpc::ServiceEndpoint endpoint = null, DatastoreSettings settings = null)
         {
-            Channel channel = s_channelPool.GetChannel(endpoint ?? DefaultEndpoint);
+            grpccore::Channel channel = s_channelPool.GetChannel(endpoint ?? DefaultEndpoint);
             return Create(channel, settings);
         }
 
         /// <summary>
         /// Creates a <see cref="DatastoreClient"/> which uses the specified channel for remote operations.
         /// </summary>
-        /// <param name="channel">The <see cref="Channel"/> for remote operations. Must not be null.</param>
+        /// <param name="channel">The <see cref="grpccore::Channel"/> for remote operations. Must not be null.</param>
         /// <param name="settings">Optional <see cref="DatastoreSettings"/>.</param>
         /// <returns>The created <see cref="DatastoreClient"/>.</returns>
-        public static DatastoreClient Create(Channel channel, DatastoreSettings settings = null)
+        public static DatastoreClient Create(grpccore::Channel channel, DatastoreSettings settings = null)
         {
-            GaxPreconditions.CheckNotNull(channel, nameof(channel));
+            gax::GaxPreconditions.CheckNotNull(channel, nameof(channel));
             Datastore.DatastoreClient grpcClient = new Datastore.DatastoreClient(channel);
             return new DatastoreClientImpl(grpcClient, settings);
         }
 
         /// <summary>
-        /// Shuts down any channels automatically created by <see cref="Create(ServiceEndpoint, DatastoreSettings)"/>
-        /// and <see cref="CreateAsync(ServiceEndpoint, DatastoreSettings)"/>. Channels which weren't automatically
+        /// Shuts down any channels automatically created by <see cref="Create(gaxgrpc::ServiceEndpoint, DatastoreSettings)"/>
+        /// and <see cref="CreateAsync(gaxgrpc::ServiceEndpoint, DatastoreSettings)"/>. Channels which weren't automatically
         /// created are not affected.
         /// </summary>
-        /// <remarks>After calling this method, further calls to <see cref="Create(ServiceEndpoint, DatastoreSettings)"/>
-        /// and <see cref="CreateAsync(ServiceEndpoint, DatastoreSettings)"/> will create new channels, which could
+        /// <remarks>After calling this method, further calls to <see cref="Create(gaxgrpc::ServiceEndpoint, DatastoreSettings)"/>
+        /// and <see cref="CreateAsync(gaxgrpc::ServiceEndpoint, DatastoreSettings)"/> will create new channels, which could
         /// in turn be shut down by another call to this method.</remarks>
         /// <returns>A task representing the asynchronous shutdown operation.</returns>
-        public static Task ShutdownDefaultChannelsAsync() => s_channelPool.ShutdownChannelsAsync();
+        public static stt::Task ShutdownDefaultChannelsAsync() => s_channelPool.ShutdownChannelsAsync();
 
         /// <summary>
         /// The underlying gRPC Datastore client.
         /// </summary>
         public virtual Datastore.DatastoreClient GrpcClient
         {
-            get { throw new NotImplementedException(); }
+            get { throw new s::NotImplementedException(); }
         }
 
         /// <summary>
@@ -450,16 +450,16 @@ namespace Google.Cloud.Datastore.V1
         /// <returns>
         /// A Task containing the RPC response.
         /// </returns>
-        public virtual Task<LookupResponse> LookupAsync(
+        public virtual stt::Task<LookupResponse> LookupAsync(
             string projectId,
             ReadOptions readOptions,
-            IEnumerable<Key> keys,
-            CallSettings callSettings = null) => LookupAsync(
+            scg::IEnumerable<Key> keys,
+            gaxgrpc::CallSettings callSettings = null) => LookupAsync(
                 new LookupRequest
                 {
-                    ProjectId = GaxPreconditions.CheckNotNullOrEmpty(projectId, nameof(projectId)),
+                    ProjectId = gax::GaxPreconditions.CheckNotNullOrEmpty(projectId, nameof(projectId)),
                     ReadOptions = readOptions, // Optional
-                    Keys = { GaxPreconditions.CheckNotNull(keys, nameof(keys)) },
+                    Keys = { gax::GaxPreconditions.CheckNotNull(keys, nameof(keys)) },
                 },
                 callSettings);
 
@@ -476,20 +476,20 @@ namespace Google.Cloud.Datastore.V1
         /// Keys of entities to look up.
         /// </param>
         /// <param name="cancellationToken">
-        /// A <see cref="CancellationToken"/> to use for this RPC.
+        /// A <see cref="st::CancellationToken"/> to use for this RPC.
         /// </param>
         /// <returns>
         /// A Task containing the RPC response.
         /// </returns>
-        public virtual Task<LookupResponse> LookupAsync(
+        public virtual stt::Task<LookupResponse> LookupAsync(
             string projectId,
             ReadOptions readOptions,
-            IEnumerable<Key> keys,
-            CancellationToken cancellationToken) => LookupAsync(
+            scg::IEnumerable<Key> keys,
+            st::CancellationToken cancellationToken) => LookupAsync(
                 projectId,
                 readOptions,
                 keys,
-                CallSettings.FromCancellationToken(cancellationToken));
+                gaxgrpc::CallSettings.FromCancellationToken(cancellationToken));
 
         /// <summary>
         /// Looks up entities by key.
@@ -512,13 +512,13 @@ namespace Google.Cloud.Datastore.V1
         public virtual LookupResponse Lookup(
             string projectId,
             ReadOptions readOptions,
-            IEnumerable<Key> keys,
-            CallSettings callSettings = null) => Lookup(
+            scg::IEnumerable<Key> keys,
+            gaxgrpc::CallSettings callSettings = null) => Lookup(
                 new LookupRequest
                 {
-                    ProjectId = GaxPreconditions.CheckNotNullOrEmpty(projectId, nameof(projectId)),
+                    ProjectId = gax::GaxPreconditions.CheckNotNullOrEmpty(projectId, nameof(projectId)),
                     ReadOptions = readOptions, // Optional
-                    Keys = { GaxPreconditions.CheckNotNull(keys, nameof(keys)) },
+                    Keys = { gax::GaxPreconditions.CheckNotNull(keys, nameof(keys)) },
                 },
                 callSettings);
 
@@ -534,11 +534,11 @@ namespace Google.Cloud.Datastore.V1
         /// <returns>
         /// A Task containing the RPC response.
         /// </returns>
-        public virtual Task<LookupResponse> LookupAsync(
+        public virtual stt::Task<LookupResponse> LookupAsync(
             LookupRequest request,
-            CallSettings callSettings = null)
+            gaxgrpc::CallSettings callSettings = null)
         {
-            throw new NotImplementedException();
+            throw new s::NotImplementedException();
         }
 
         /// <summary>
@@ -548,16 +548,16 @@ namespace Google.Cloud.Datastore.V1
         /// The request object containing all of the parameters for the API call.
         /// </param>
         /// <param name="cancellationToken">
-        /// A <see cref="CancellationToken"/> to use for this RPC.
+        /// A <see cref="st::CancellationToken"/> to use for this RPC.
         /// </param>
         /// <returns>
         /// A Task containing the RPC response.
         /// </returns>
-        public virtual Task<LookupResponse> LookupAsync(
+        public virtual stt::Task<LookupResponse> LookupAsync(
             LookupRequest request,
-            CancellationToken cancellationToken) => LookupAsync(
+            st::CancellationToken cancellationToken) => LookupAsync(
                 request,
-                CallSettings.FromCancellationToken(cancellationToken));
+                gaxgrpc::CallSettings.FromCancellationToken(cancellationToken));
 
         /// <summary>
         /// Looks up entities by key.
@@ -573,9 +573,9 @@ namespace Google.Cloud.Datastore.V1
         /// </returns>
         public virtual LookupResponse Lookup(
             LookupRequest request,
-            CallSettings callSettings = null)
+            gaxgrpc::CallSettings callSettings = null)
         {
-            throw new NotImplementedException();
+            throw new s::NotImplementedException();
         }
 
         /// <summary>
@@ -590,11 +590,11 @@ namespace Google.Cloud.Datastore.V1
         /// <returns>
         /// A Task containing the RPC response.
         /// </returns>
-        public virtual Task<RunQueryResponse> RunQueryAsync(
+        public virtual stt::Task<RunQueryResponse> RunQueryAsync(
             RunQueryRequest request,
-            CallSettings callSettings = null)
+            gaxgrpc::CallSettings callSettings = null)
         {
-            throw new NotImplementedException();
+            throw new s::NotImplementedException();
         }
 
         /// <summary>
@@ -604,16 +604,16 @@ namespace Google.Cloud.Datastore.V1
         /// The request object containing all of the parameters for the API call.
         /// </param>
         /// <param name="cancellationToken">
-        /// A <see cref="CancellationToken"/> to use for this RPC.
+        /// A <see cref="st::CancellationToken"/> to use for this RPC.
         /// </param>
         /// <returns>
         /// A Task containing the RPC response.
         /// </returns>
-        public virtual Task<RunQueryResponse> RunQueryAsync(
+        public virtual stt::Task<RunQueryResponse> RunQueryAsync(
             RunQueryRequest request,
-            CancellationToken cancellationToken) => RunQueryAsync(
+            st::CancellationToken cancellationToken) => RunQueryAsync(
                 request,
-                CallSettings.FromCancellationToken(cancellationToken));
+                gaxgrpc::CallSettings.FromCancellationToken(cancellationToken));
 
         /// <summary>
         /// Queries for entities.
@@ -629,9 +629,9 @@ namespace Google.Cloud.Datastore.V1
         /// </returns>
         public virtual RunQueryResponse RunQuery(
             RunQueryRequest request,
-            CallSettings callSettings = null)
+            gaxgrpc::CallSettings callSettings = null)
         {
-            throw new NotImplementedException();
+            throw new s::NotImplementedException();
         }
 
         /// <summary>
@@ -646,12 +646,12 @@ namespace Google.Cloud.Datastore.V1
         /// <returns>
         /// A Task containing the RPC response.
         /// </returns>
-        public virtual Task<BeginTransactionResponse> BeginTransactionAsync(
+        public virtual stt::Task<BeginTransactionResponse> BeginTransactionAsync(
             string projectId,
-            CallSettings callSettings = null) => BeginTransactionAsync(
+            gaxgrpc::CallSettings callSettings = null) => BeginTransactionAsync(
                 new BeginTransactionRequest
                 {
-                    ProjectId = GaxPreconditions.CheckNotNullOrEmpty(projectId, nameof(projectId)),
+                    ProjectId = gax::GaxPreconditions.CheckNotNullOrEmpty(projectId, nameof(projectId)),
                 },
                 callSettings);
 
@@ -662,16 +662,16 @@ namespace Google.Cloud.Datastore.V1
         /// The ID of the project against which to make the request.
         /// </param>
         /// <param name="cancellationToken">
-        /// A <see cref="CancellationToken"/> to use for this RPC.
+        /// A <see cref="st::CancellationToken"/> to use for this RPC.
         /// </param>
         /// <returns>
         /// A Task containing the RPC response.
         /// </returns>
-        public virtual Task<BeginTransactionResponse> BeginTransactionAsync(
+        public virtual stt::Task<BeginTransactionResponse> BeginTransactionAsync(
             string projectId,
-            CancellationToken cancellationToken) => BeginTransactionAsync(
+            st::CancellationToken cancellationToken) => BeginTransactionAsync(
                 projectId,
-                CallSettings.FromCancellationToken(cancellationToken));
+                gaxgrpc::CallSettings.FromCancellationToken(cancellationToken));
 
         /// <summary>
         /// Begins a new transaction.
@@ -687,10 +687,10 @@ namespace Google.Cloud.Datastore.V1
         /// </returns>
         public virtual BeginTransactionResponse BeginTransaction(
             string projectId,
-            CallSettings callSettings = null) => BeginTransaction(
+            gaxgrpc::CallSettings callSettings = null) => BeginTransaction(
                 new BeginTransactionRequest
                 {
-                    ProjectId = GaxPreconditions.CheckNotNullOrEmpty(projectId, nameof(projectId)),
+                    ProjectId = gax::GaxPreconditions.CheckNotNullOrEmpty(projectId, nameof(projectId)),
                 },
                 callSettings);
 
@@ -706,11 +706,11 @@ namespace Google.Cloud.Datastore.V1
         /// <returns>
         /// A Task containing the RPC response.
         /// </returns>
-        public virtual Task<BeginTransactionResponse> BeginTransactionAsync(
+        public virtual stt::Task<BeginTransactionResponse> BeginTransactionAsync(
             BeginTransactionRequest request,
-            CallSettings callSettings = null)
+            gaxgrpc::CallSettings callSettings = null)
         {
-            throw new NotImplementedException();
+            throw new s::NotImplementedException();
         }
 
         /// <summary>
@@ -720,16 +720,16 @@ namespace Google.Cloud.Datastore.V1
         /// The request object containing all of the parameters for the API call.
         /// </param>
         /// <param name="cancellationToken">
-        /// A <see cref="CancellationToken"/> to use for this RPC.
+        /// A <see cref="st::CancellationToken"/> to use for this RPC.
         /// </param>
         /// <returns>
         /// A Task containing the RPC response.
         /// </returns>
-        public virtual Task<BeginTransactionResponse> BeginTransactionAsync(
+        public virtual stt::Task<BeginTransactionResponse> BeginTransactionAsync(
             BeginTransactionRequest request,
-            CancellationToken cancellationToken) => BeginTransactionAsync(
+            st::CancellationToken cancellationToken) => BeginTransactionAsync(
                 request,
-                CallSettings.FromCancellationToken(cancellationToken));
+                gaxgrpc::CallSettings.FromCancellationToken(cancellationToken));
 
         /// <summary>
         /// Begins a new transaction.
@@ -745,9 +745,9 @@ namespace Google.Cloud.Datastore.V1
         /// </returns>
         public virtual BeginTransactionResponse BeginTransaction(
             BeginTransactionRequest request,
-            CallSettings callSettings = null)
+            gaxgrpc::CallSettings callSettings = null)
         {
-            throw new NotImplementedException();
+            throw new s::NotImplementedException();
         }
 
         /// <summary>
@@ -786,18 +786,18 @@ namespace Google.Cloud.Datastore.V1
         /// <returns>
         /// A Task containing the RPC response.
         /// </returns>
-        public virtual Task<CommitResponse> CommitAsync(
+        public virtual stt::Task<CommitResponse> CommitAsync(
             string projectId,
             CommitRequest.Types.Mode mode,
-            ByteString transaction,
-            IEnumerable<Mutation> mutations,
-            CallSettings callSettings = null) => CommitAsync(
+            proto::ByteString transaction,
+            scg::IEnumerable<Mutation> mutations,
+            gaxgrpc::CallSettings callSettings = null) => CommitAsync(
                 new CommitRequest
                 {
-                    ProjectId = GaxPreconditions.CheckNotNullOrEmpty(projectId, nameof(projectId)),
+                    ProjectId = gax::GaxPreconditions.CheckNotNullOrEmpty(projectId, nameof(projectId)),
                     Mode = mode,
-                    Transaction = transaction ?? ByteString.Empty, // Optional
-                    Mutations = { GaxPreconditions.CheckNotNull(mutations, nameof(mutations)) },
+                    Transaction = transaction ?? Google.Protobuf.ByteString.Empty, // Optional
+                    Mutations = { gax::GaxPreconditions.CheckNotNull(mutations, nameof(mutations)) },
                 },
                 callSettings);
 
@@ -832,22 +832,22 @@ namespace Google.Cloud.Datastore.V1
         /// entity.
         /// </param>
         /// <param name="cancellationToken">
-        /// A <see cref="CancellationToken"/> to use for this RPC.
+        /// A <see cref="st::CancellationToken"/> to use for this RPC.
         /// </param>
         /// <returns>
         /// A Task containing the RPC response.
         /// </returns>
-        public virtual Task<CommitResponse> CommitAsync(
+        public virtual stt::Task<CommitResponse> CommitAsync(
             string projectId,
             CommitRequest.Types.Mode mode,
-            ByteString transaction,
-            IEnumerable<Mutation> mutations,
-            CancellationToken cancellationToken) => CommitAsync(
+            proto::ByteString transaction,
+            scg::IEnumerable<Mutation> mutations,
+            st::CancellationToken cancellationToken) => CommitAsync(
                 projectId,
                 mode,
                 transaction,
                 mutations,
-                CallSettings.FromCancellationToken(cancellationToken));
+                gaxgrpc::CallSettings.FromCancellationToken(cancellationToken));
 
         /// <summary>
         /// Commits a transaction, optionally creating, deleting or modifying some
@@ -888,15 +888,15 @@ namespace Google.Cloud.Datastore.V1
         public virtual CommitResponse Commit(
             string projectId,
             CommitRequest.Types.Mode mode,
-            ByteString transaction,
-            IEnumerable<Mutation> mutations,
-            CallSettings callSettings = null) => Commit(
+            proto::ByteString transaction,
+            scg::IEnumerable<Mutation> mutations,
+            gaxgrpc::CallSettings callSettings = null) => Commit(
                 new CommitRequest
                 {
-                    ProjectId = GaxPreconditions.CheckNotNullOrEmpty(projectId, nameof(projectId)),
+                    ProjectId = gax::GaxPreconditions.CheckNotNullOrEmpty(projectId, nameof(projectId)),
                     Mode = mode,
-                    Transaction = transaction ?? ByteString.Empty, // Optional
-                    Mutations = { GaxPreconditions.CheckNotNull(mutations, nameof(mutations)) },
+                    Transaction = transaction ?? Google.Protobuf.ByteString.Empty, // Optional
+                    Mutations = { gax::GaxPreconditions.CheckNotNull(mutations, nameof(mutations)) },
                 },
                 callSettings);
 
@@ -931,16 +931,16 @@ namespace Google.Cloud.Datastore.V1
         /// <returns>
         /// A Task containing the RPC response.
         /// </returns>
-        public virtual Task<CommitResponse> CommitAsync(
+        public virtual stt::Task<CommitResponse> CommitAsync(
             string projectId,
             CommitRequest.Types.Mode mode,
-            IEnumerable<Mutation> mutations,
-            CallSettings callSettings = null) => CommitAsync(
+            scg::IEnumerable<Mutation> mutations,
+            gaxgrpc::CallSettings callSettings = null) => CommitAsync(
                 new CommitRequest
                 {
-                    ProjectId = GaxPreconditions.CheckNotNullOrEmpty(projectId, nameof(projectId)),
+                    ProjectId = gax::GaxPreconditions.CheckNotNullOrEmpty(projectId, nameof(projectId)),
                     Mode = mode,
-                    Mutations = { GaxPreconditions.CheckNotNull(mutations, nameof(mutations)) },
+                    Mutations = { gax::GaxPreconditions.CheckNotNull(mutations, nameof(mutations)) },
                 },
                 callSettings);
 
@@ -970,20 +970,20 @@ namespace Google.Cloud.Datastore.V1
         /// entity.
         /// </param>
         /// <param name="cancellationToken">
-        /// A <see cref="CancellationToken"/> to use for this RPC.
+        /// A <see cref="st::CancellationToken"/> to use for this RPC.
         /// </param>
         /// <returns>
         /// A Task containing the RPC response.
         /// </returns>
-        public virtual Task<CommitResponse> CommitAsync(
+        public virtual stt::Task<CommitResponse> CommitAsync(
             string projectId,
             CommitRequest.Types.Mode mode,
-            IEnumerable<Mutation> mutations,
-            CancellationToken cancellationToken) => CommitAsync(
+            scg::IEnumerable<Mutation> mutations,
+            st::CancellationToken cancellationToken) => CommitAsync(
                 projectId,
                 mode,
                 mutations,
-                CallSettings.FromCancellationToken(cancellationToken));
+                gaxgrpc::CallSettings.FromCancellationToken(cancellationToken));
 
         /// <summary>
         /// Commits a transaction, optionally creating, deleting or modifying some
@@ -1019,13 +1019,13 @@ namespace Google.Cloud.Datastore.V1
         public virtual CommitResponse Commit(
             string projectId,
             CommitRequest.Types.Mode mode,
-            IEnumerable<Mutation> mutations,
-            CallSettings callSettings = null) => Commit(
+            scg::IEnumerable<Mutation> mutations,
+            gaxgrpc::CallSettings callSettings = null) => Commit(
                 new CommitRequest
                 {
-                    ProjectId = GaxPreconditions.CheckNotNullOrEmpty(projectId, nameof(projectId)),
+                    ProjectId = gax::GaxPreconditions.CheckNotNullOrEmpty(projectId, nameof(projectId)),
                     Mode = mode,
-                    Mutations = { GaxPreconditions.CheckNotNull(mutations, nameof(mutations)) },
+                    Mutations = { gax::GaxPreconditions.CheckNotNull(mutations, nameof(mutations)) },
                 },
                 callSettings);
 
@@ -1042,11 +1042,11 @@ namespace Google.Cloud.Datastore.V1
         /// <returns>
         /// A Task containing the RPC response.
         /// </returns>
-        public virtual Task<CommitResponse> CommitAsync(
+        public virtual stt::Task<CommitResponse> CommitAsync(
             CommitRequest request,
-            CallSettings callSettings = null)
+            gaxgrpc::CallSettings callSettings = null)
         {
-            throw new NotImplementedException();
+            throw new s::NotImplementedException();
         }
 
         /// <summary>
@@ -1057,16 +1057,16 @@ namespace Google.Cloud.Datastore.V1
         /// The request object containing all of the parameters for the API call.
         /// </param>
         /// <param name="cancellationToken">
-        /// A <see cref="CancellationToken"/> to use for this RPC.
+        /// A <see cref="st::CancellationToken"/> to use for this RPC.
         /// </param>
         /// <returns>
         /// A Task containing the RPC response.
         /// </returns>
-        public virtual Task<CommitResponse> CommitAsync(
+        public virtual stt::Task<CommitResponse> CommitAsync(
             CommitRequest request,
-            CancellationToken cancellationToken) => CommitAsync(
+            st::CancellationToken cancellationToken) => CommitAsync(
                 request,
-                CallSettings.FromCancellationToken(cancellationToken));
+                gaxgrpc::CallSettings.FromCancellationToken(cancellationToken));
 
         /// <summary>
         /// Commits a transaction, optionally creating, deleting or modifying some
@@ -1083,9 +1083,9 @@ namespace Google.Cloud.Datastore.V1
         /// </returns>
         public virtual CommitResponse Commit(
             CommitRequest request,
-            CallSettings callSettings = null)
+            gaxgrpc::CallSettings callSettings = null)
         {
-            throw new NotImplementedException();
+            throw new s::NotImplementedException();
         }
 
         /// <summary>
@@ -1104,14 +1104,14 @@ namespace Google.Cloud.Datastore.V1
         /// <returns>
         /// A Task containing the RPC response.
         /// </returns>
-        public virtual Task<RollbackResponse> RollbackAsync(
+        public virtual stt::Task<RollbackResponse> RollbackAsync(
             string projectId,
-            ByteString transaction,
-            CallSettings callSettings = null) => RollbackAsync(
+            proto::ByteString transaction,
+            gaxgrpc::CallSettings callSettings = null) => RollbackAsync(
                 new RollbackRequest
                 {
-                    ProjectId = GaxPreconditions.CheckNotNullOrEmpty(projectId, nameof(projectId)),
-                    Transaction = GaxPreconditions.CheckNotNull(transaction, nameof(transaction)),
+                    ProjectId = gax::GaxPreconditions.CheckNotNullOrEmpty(projectId, nameof(projectId)),
+                    Transaction = gax::GaxPreconditions.CheckNotNull(transaction, nameof(transaction)),
                 },
                 callSettings);
 
@@ -1126,18 +1126,18 @@ namespace Google.Cloud.Datastore.V1
         /// [Datastore.BeginTransaction][google.datastore.v1.Datastore.BeginTransaction].
         /// </param>
         /// <param name="cancellationToken">
-        /// A <see cref="CancellationToken"/> to use for this RPC.
+        /// A <see cref="st::CancellationToken"/> to use for this RPC.
         /// </param>
         /// <returns>
         /// A Task containing the RPC response.
         /// </returns>
-        public virtual Task<RollbackResponse> RollbackAsync(
+        public virtual stt::Task<RollbackResponse> RollbackAsync(
             string projectId,
-            ByteString transaction,
-            CancellationToken cancellationToken) => RollbackAsync(
+            proto::ByteString transaction,
+            st::CancellationToken cancellationToken) => RollbackAsync(
                 projectId,
                 transaction,
-                CallSettings.FromCancellationToken(cancellationToken));
+                gaxgrpc::CallSettings.FromCancellationToken(cancellationToken));
 
         /// <summary>
         /// Rolls back a transaction.
@@ -1157,12 +1157,12 @@ namespace Google.Cloud.Datastore.V1
         /// </returns>
         public virtual RollbackResponse Rollback(
             string projectId,
-            ByteString transaction,
-            CallSettings callSettings = null) => Rollback(
+            proto::ByteString transaction,
+            gaxgrpc::CallSettings callSettings = null) => Rollback(
                 new RollbackRequest
                 {
-                    ProjectId = GaxPreconditions.CheckNotNullOrEmpty(projectId, nameof(projectId)),
-                    Transaction = GaxPreconditions.CheckNotNull(transaction, nameof(transaction)),
+                    ProjectId = gax::GaxPreconditions.CheckNotNullOrEmpty(projectId, nameof(projectId)),
+                    Transaction = gax::GaxPreconditions.CheckNotNull(transaction, nameof(transaction)),
                 },
                 callSettings);
 
@@ -1178,11 +1178,11 @@ namespace Google.Cloud.Datastore.V1
         /// <returns>
         /// A Task containing the RPC response.
         /// </returns>
-        public virtual Task<RollbackResponse> RollbackAsync(
+        public virtual stt::Task<RollbackResponse> RollbackAsync(
             RollbackRequest request,
-            CallSettings callSettings = null)
+            gaxgrpc::CallSettings callSettings = null)
         {
-            throw new NotImplementedException();
+            throw new s::NotImplementedException();
         }
 
         /// <summary>
@@ -1192,16 +1192,16 @@ namespace Google.Cloud.Datastore.V1
         /// The request object containing all of the parameters for the API call.
         /// </param>
         /// <param name="cancellationToken">
-        /// A <see cref="CancellationToken"/> to use for this RPC.
+        /// A <see cref="st::CancellationToken"/> to use for this RPC.
         /// </param>
         /// <returns>
         /// A Task containing the RPC response.
         /// </returns>
-        public virtual Task<RollbackResponse> RollbackAsync(
+        public virtual stt::Task<RollbackResponse> RollbackAsync(
             RollbackRequest request,
-            CancellationToken cancellationToken) => RollbackAsync(
+            st::CancellationToken cancellationToken) => RollbackAsync(
                 request,
-                CallSettings.FromCancellationToken(cancellationToken));
+                gaxgrpc::CallSettings.FromCancellationToken(cancellationToken));
 
         /// <summary>
         /// Rolls back a transaction.
@@ -1217,9 +1217,9 @@ namespace Google.Cloud.Datastore.V1
         /// </returns>
         public virtual RollbackResponse Rollback(
             RollbackRequest request,
-            CallSettings callSettings = null)
+            gaxgrpc::CallSettings callSettings = null)
         {
-            throw new NotImplementedException();
+            throw new s::NotImplementedException();
         }
 
         /// <summary>
@@ -1239,14 +1239,14 @@ namespace Google.Cloud.Datastore.V1
         /// <returns>
         /// A Task containing the RPC response.
         /// </returns>
-        public virtual Task<AllocateIdsResponse> AllocateIdsAsync(
+        public virtual stt::Task<AllocateIdsResponse> AllocateIdsAsync(
             string projectId,
-            IEnumerable<Key> keys,
-            CallSettings callSettings = null) => AllocateIdsAsync(
+            scg::IEnumerable<Key> keys,
+            gaxgrpc::CallSettings callSettings = null) => AllocateIdsAsync(
                 new AllocateIdsRequest
                 {
-                    ProjectId = GaxPreconditions.CheckNotNullOrEmpty(projectId, nameof(projectId)),
-                    Keys = { GaxPreconditions.CheckNotNull(keys, nameof(keys)) },
+                    ProjectId = gax::GaxPreconditions.CheckNotNullOrEmpty(projectId, nameof(projectId)),
+                    Keys = { gax::GaxPreconditions.CheckNotNull(keys, nameof(keys)) },
                 },
                 callSettings);
 
@@ -1262,18 +1262,18 @@ namespace Google.Cloud.Datastore.V1
         /// No key may be reserved/read-only.
         /// </param>
         /// <param name="cancellationToken">
-        /// A <see cref="CancellationToken"/> to use for this RPC.
+        /// A <see cref="st::CancellationToken"/> to use for this RPC.
         /// </param>
         /// <returns>
         /// A Task containing the RPC response.
         /// </returns>
-        public virtual Task<AllocateIdsResponse> AllocateIdsAsync(
+        public virtual stt::Task<AllocateIdsResponse> AllocateIdsAsync(
             string projectId,
-            IEnumerable<Key> keys,
-            CancellationToken cancellationToken) => AllocateIdsAsync(
+            scg::IEnumerable<Key> keys,
+            st::CancellationToken cancellationToken) => AllocateIdsAsync(
                 projectId,
                 keys,
-                CallSettings.FromCancellationToken(cancellationToken));
+                gaxgrpc::CallSettings.FromCancellationToken(cancellationToken));
 
         /// <summary>
         /// Allocates IDs for the given keys, which is useful for referencing an entity
@@ -1294,12 +1294,12 @@ namespace Google.Cloud.Datastore.V1
         /// </returns>
         public virtual AllocateIdsResponse AllocateIds(
             string projectId,
-            IEnumerable<Key> keys,
-            CallSettings callSettings = null) => AllocateIds(
+            scg::IEnumerable<Key> keys,
+            gaxgrpc::CallSettings callSettings = null) => AllocateIds(
                 new AllocateIdsRequest
                 {
-                    ProjectId = GaxPreconditions.CheckNotNullOrEmpty(projectId, nameof(projectId)),
-                    Keys = { GaxPreconditions.CheckNotNull(keys, nameof(keys)) },
+                    ProjectId = gax::GaxPreconditions.CheckNotNullOrEmpty(projectId, nameof(projectId)),
+                    Keys = { gax::GaxPreconditions.CheckNotNull(keys, nameof(keys)) },
                 },
                 callSettings);
 
@@ -1316,11 +1316,11 @@ namespace Google.Cloud.Datastore.V1
         /// <returns>
         /// A Task containing the RPC response.
         /// </returns>
-        public virtual Task<AllocateIdsResponse> AllocateIdsAsync(
+        public virtual stt::Task<AllocateIdsResponse> AllocateIdsAsync(
             AllocateIdsRequest request,
-            CallSettings callSettings = null)
+            gaxgrpc::CallSettings callSettings = null)
         {
-            throw new NotImplementedException();
+            throw new s::NotImplementedException();
         }
 
         /// <summary>
@@ -1331,16 +1331,16 @@ namespace Google.Cloud.Datastore.V1
         /// The request object containing all of the parameters for the API call.
         /// </param>
         /// <param name="cancellationToken">
-        /// A <see cref="CancellationToken"/> to use for this RPC.
+        /// A <see cref="st::CancellationToken"/> to use for this RPC.
         /// </param>
         /// <returns>
         /// A Task containing the RPC response.
         /// </returns>
-        public virtual Task<AllocateIdsResponse> AllocateIdsAsync(
+        public virtual stt::Task<AllocateIdsResponse> AllocateIdsAsync(
             AllocateIdsRequest request,
-            CancellationToken cancellationToken) => AllocateIdsAsync(
+            st::CancellationToken cancellationToken) => AllocateIdsAsync(
                 request,
-                CallSettings.FromCancellationToken(cancellationToken));
+                gaxgrpc::CallSettings.FromCancellationToken(cancellationToken));
 
         /// <summary>
         /// Allocates IDs for the given keys, which is useful for referencing an entity
@@ -1357,9 +1357,9 @@ namespace Google.Cloud.Datastore.V1
         /// </returns>
         public virtual AllocateIdsResponse AllocateIds(
             AllocateIdsRequest request,
-            CallSettings callSettings = null)
+            gaxgrpc::CallSettings callSettings = null)
         {
-            throw new NotImplementedException();
+            throw new s::NotImplementedException();
         }
 
         /// <summary>
@@ -1379,14 +1379,14 @@ namespace Google.Cloud.Datastore.V1
         /// <returns>
         /// A Task containing the RPC response.
         /// </returns>
-        public virtual Task<ReserveIdsResponse> ReserveIdsAsync(
+        public virtual stt::Task<ReserveIdsResponse> ReserveIdsAsync(
             string projectId,
-            IEnumerable<Key> keys,
-            CallSettings callSettings = null) => ReserveIdsAsync(
+            scg::IEnumerable<Key> keys,
+            gaxgrpc::CallSettings callSettings = null) => ReserveIdsAsync(
                 new ReserveIdsRequest
                 {
-                    ProjectId = GaxPreconditions.CheckNotNullOrEmpty(projectId, nameof(projectId)),
-                    Keys = { GaxPreconditions.CheckNotNull(keys, nameof(keys)) },
+                    ProjectId = gax::GaxPreconditions.CheckNotNullOrEmpty(projectId, nameof(projectId)),
+                    Keys = { gax::GaxPreconditions.CheckNotNull(keys, nameof(keys)) },
                 },
                 callSettings);
 
@@ -1402,18 +1402,18 @@ namespace Google.Cloud.Datastore.V1
         /// auto-allocated.
         /// </param>
         /// <param name="cancellationToken">
-        /// A <see cref="CancellationToken"/> to use for this RPC.
+        /// A <see cref="st::CancellationToken"/> to use for this RPC.
         /// </param>
         /// <returns>
         /// A Task containing the RPC response.
         /// </returns>
-        public virtual Task<ReserveIdsResponse> ReserveIdsAsync(
+        public virtual stt::Task<ReserveIdsResponse> ReserveIdsAsync(
             string projectId,
-            IEnumerable<Key> keys,
-            CancellationToken cancellationToken) => ReserveIdsAsync(
+            scg::IEnumerable<Key> keys,
+            st::CancellationToken cancellationToken) => ReserveIdsAsync(
                 projectId,
                 keys,
-                CallSettings.FromCancellationToken(cancellationToken));
+                gaxgrpc::CallSettings.FromCancellationToken(cancellationToken));
 
         /// <summary>
         /// Prevents the supplied keys' IDs from being auto-allocated by Cloud
@@ -1434,12 +1434,12 @@ namespace Google.Cloud.Datastore.V1
         /// </returns>
         public virtual ReserveIdsResponse ReserveIds(
             string projectId,
-            IEnumerable<Key> keys,
-            CallSettings callSettings = null) => ReserveIds(
+            scg::IEnumerable<Key> keys,
+            gaxgrpc::CallSettings callSettings = null) => ReserveIds(
                 new ReserveIdsRequest
                 {
-                    ProjectId = GaxPreconditions.CheckNotNullOrEmpty(projectId, nameof(projectId)),
-                    Keys = { GaxPreconditions.CheckNotNull(keys, nameof(keys)) },
+                    ProjectId = gax::GaxPreconditions.CheckNotNullOrEmpty(projectId, nameof(projectId)),
+                    Keys = { gax::GaxPreconditions.CheckNotNull(keys, nameof(keys)) },
                 },
                 callSettings);
 
@@ -1456,11 +1456,11 @@ namespace Google.Cloud.Datastore.V1
         /// <returns>
         /// A Task containing the RPC response.
         /// </returns>
-        public virtual Task<ReserveIdsResponse> ReserveIdsAsync(
+        public virtual stt::Task<ReserveIdsResponse> ReserveIdsAsync(
             ReserveIdsRequest request,
-            CallSettings callSettings = null)
+            gaxgrpc::CallSettings callSettings = null)
         {
-            throw new NotImplementedException();
+            throw new s::NotImplementedException();
         }
 
         /// <summary>
@@ -1471,16 +1471,16 @@ namespace Google.Cloud.Datastore.V1
         /// The request object containing all of the parameters for the API call.
         /// </param>
         /// <param name="cancellationToken">
-        /// A <see cref="CancellationToken"/> to use for this RPC.
+        /// A <see cref="st::CancellationToken"/> to use for this RPC.
         /// </param>
         /// <returns>
         /// A Task containing the RPC response.
         /// </returns>
-        public virtual Task<ReserveIdsResponse> ReserveIdsAsync(
+        public virtual stt::Task<ReserveIdsResponse> ReserveIdsAsync(
             ReserveIdsRequest request,
-            CancellationToken cancellationToken) => ReserveIdsAsync(
+            st::CancellationToken cancellationToken) => ReserveIdsAsync(
                 request,
-                CallSettings.FromCancellationToken(cancellationToken));
+                gaxgrpc::CallSettings.FromCancellationToken(cancellationToken));
 
         /// <summary>
         /// Prevents the supplied keys' IDs from being auto-allocated by Cloud
@@ -1497,9 +1497,9 @@ namespace Google.Cloud.Datastore.V1
         /// </returns>
         public virtual ReserveIdsResponse ReserveIds(
             ReserveIdsRequest request,
-            CallSettings callSettings = null)
+            gaxgrpc::CallSettings callSettings = null)
         {
-            throw new NotImplementedException();
+            throw new s::NotImplementedException();
         }
 
     }
@@ -1509,13 +1509,13 @@ namespace Google.Cloud.Datastore.V1
     /// </summary>
     public sealed partial class DatastoreClientImpl : DatastoreClient
     {
-        private readonly ApiCall<LookupRequest, LookupResponse> _callLookup;
-        private readonly ApiCall<RunQueryRequest, RunQueryResponse> _callRunQuery;
-        private readonly ApiCall<BeginTransactionRequest, BeginTransactionResponse> _callBeginTransaction;
-        private readonly ApiCall<CommitRequest, CommitResponse> _callCommit;
-        private readonly ApiCall<RollbackRequest, RollbackResponse> _callRollback;
-        private readonly ApiCall<AllocateIdsRequest, AllocateIdsResponse> _callAllocateIds;
-        private readonly ApiCall<ReserveIdsRequest, ReserveIdsResponse> _callReserveIds;
+        private readonly gaxgrpc::ApiCall<LookupRequest, LookupResponse> _callLookup;
+        private readonly gaxgrpc::ApiCall<RunQueryRequest, RunQueryResponse> _callRunQuery;
+        private readonly gaxgrpc::ApiCall<BeginTransactionRequest, BeginTransactionResponse> _callBeginTransaction;
+        private readonly gaxgrpc::ApiCall<CommitRequest, CommitResponse> _callCommit;
+        private readonly gaxgrpc::ApiCall<RollbackRequest, RollbackResponse> _callRollback;
+        private readonly gaxgrpc::ApiCall<AllocateIdsRequest, AllocateIdsResponse> _callAllocateIds;
+        private readonly gaxgrpc::ApiCall<ReserveIdsRequest, ReserveIdsResponse> _callReserveIds;
 
         /// <summary>
         /// Constructs a client wrapper for the Datastore service, with the specified gRPC client and settings.
@@ -1526,7 +1526,7 @@ namespace Google.Cloud.Datastore.V1
         {
             GrpcClient = grpcClient;
             DatastoreSettings effectiveSettings = settings ?? DatastoreSettings.GetDefault();
-            ClientHelper clientHelper = new ClientHelper(effectiveSettings);
+            gaxgrpc::ClientHelper clientHelper = new gaxgrpc::ClientHelper(effectiveSettings);
             _callLookup = clientHelper.BuildApiCall<LookupRequest, LookupResponse>(
                 GrpcClient.LookupAsync, GrpcClient.Lookup, effectiveSettings.LookupSettings);
             _callRunQuery = clientHelper.BuildApiCall<RunQueryRequest, RunQueryResponse>(
@@ -1562,20 +1562,20 @@ namespace Google.Cloud.Datastore.V1
 
         // Partial methods called for every ApiCall on construction.
         // Allows modification of all the underlying ApiCall objects.
-        partial void Modify_ApiCall<TRequest, TResponse>(ref ApiCall<TRequest, TResponse> call)
-            where TRequest : class, IMessage<TRequest>
-            where TResponse : class, IMessage<TResponse>;
+        partial void Modify_ApiCall<TRequest, TResponse>(ref gaxgrpc::ApiCall<TRequest, TResponse> call)
+            where TRequest : class, proto::IMessage<TRequest>
+            where TResponse : class, proto::IMessage<TResponse>;
 
         // Partial methods called for each ApiCall on construction.
         // Allows per-RPC-method modification of the underlying ApiCall object.
-        partial void Modify_LookupApiCall(ref ApiCall<LookupRequest, LookupResponse> call);
-        partial void Modify_RunQueryApiCall(ref ApiCall<RunQueryRequest, RunQueryResponse> call);
-        partial void Modify_BeginTransactionApiCall(ref ApiCall<BeginTransactionRequest, BeginTransactionResponse> call);
-        partial void Modify_CommitApiCall(ref ApiCall<CommitRequest, CommitResponse> call);
-        partial void Modify_RollbackApiCall(ref ApiCall<RollbackRequest, RollbackResponse> call);
-        partial void Modify_AllocateIdsApiCall(ref ApiCall<AllocateIdsRequest, AllocateIdsResponse> call);
-        partial void Modify_ReserveIdsApiCall(ref ApiCall<ReserveIdsRequest, ReserveIdsResponse> call);
-        partial void OnConstruction(Datastore.DatastoreClient grpcClient, DatastoreSettings effectiveSettings, ClientHelper clientHelper);
+        partial void Modify_LookupApiCall(ref gaxgrpc::ApiCall<LookupRequest, LookupResponse> call);
+        partial void Modify_RunQueryApiCall(ref gaxgrpc::ApiCall<RunQueryRequest, RunQueryResponse> call);
+        partial void Modify_BeginTransactionApiCall(ref gaxgrpc::ApiCall<BeginTransactionRequest, BeginTransactionResponse> call);
+        partial void Modify_CommitApiCall(ref gaxgrpc::ApiCall<CommitRequest, CommitResponse> call);
+        partial void Modify_RollbackApiCall(ref gaxgrpc::ApiCall<RollbackRequest, RollbackResponse> call);
+        partial void Modify_AllocateIdsApiCall(ref gaxgrpc::ApiCall<AllocateIdsRequest, AllocateIdsResponse> call);
+        partial void Modify_ReserveIdsApiCall(ref gaxgrpc::ApiCall<ReserveIdsRequest, ReserveIdsResponse> call);
+        partial void OnConstruction(Datastore.DatastoreClient grpcClient, DatastoreSettings effectiveSettings, gaxgrpc::ClientHelper clientHelper);
 
         /// <summary>
         /// The underlying gRPC Datastore client.
@@ -1585,13 +1585,13 @@ namespace Google.Cloud.Datastore.V1
         // Partial methods called on each request.
         // Allows per-RPC-call modification to the request and CallSettings objects,
         // before the underlying RPC is performed.
-        partial void Modify_LookupRequest(ref LookupRequest request, ref CallSettings settings);
-        partial void Modify_RunQueryRequest(ref RunQueryRequest request, ref CallSettings settings);
-        partial void Modify_BeginTransactionRequest(ref BeginTransactionRequest request, ref CallSettings settings);
-        partial void Modify_CommitRequest(ref CommitRequest request, ref CallSettings settings);
-        partial void Modify_RollbackRequest(ref RollbackRequest request, ref CallSettings settings);
-        partial void Modify_AllocateIdsRequest(ref AllocateIdsRequest request, ref CallSettings settings);
-        partial void Modify_ReserveIdsRequest(ref ReserveIdsRequest request, ref CallSettings settings);
+        partial void Modify_LookupRequest(ref LookupRequest request, ref gaxgrpc::CallSettings settings);
+        partial void Modify_RunQueryRequest(ref RunQueryRequest request, ref gaxgrpc::CallSettings settings);
+        partial void Modify_BeginTransactionRequest(ref BeginTransactionRequest request, ref gaxgrpc::CallSettings settings);
+        partial void Modify_CommitRequest(ref CommitRequest request, ref gaxgrpc::CallSettings settings);
+        partial void Modify_RollbackRequest(ref RollbackRequest request, ref gaxgrpc::CallSettings settings);
+        partial void Modify_AllocateIdsRequest(ref AllocateIdsRequest request, ref gaxgrpc::CallSettings settings);
+        partial void Modify_ReserveIdsRequest(ref ReserveIdsRequest request, ref gaxgrpc::CallSettings settings);
 
         /// <summary>
         /// Looks up entities by key.
@@ -1605,9 +1605,9 @@ namespace Google.Cloud.Datastore.V1
         /// <returns>
         /// A Task containing the RPC response.
         /// </returns>
-        public override Task<LookupResponse> LookupAsync(
+        public override stt::Task<LookupResponse> LookupAsync(
             LookupRequest request,
-            CallSettings callSettings = null)
+            gaxgrpc::CallSettings callSettings = null)
         {
             Modify_LookupRequest(ref request, ref callSettings);
             return _callLookup.Async(request, callSettings);
@@ -1627,7 +1627,7 @@ namespace Google.Cloud.Datastore.V1
         /// </returns>
         public override LookupResponse Lookup(
             LookupRequest request,
-            CallSettings callSettings = null)
+            gaxgrpc::CallSettings callSettings = null)
         {
             Modify_LookupRequest(ref request, ref callSettings);
             return _callLookup.Sync(request, callSettings);
@@ -1645,9 +1645,9 @@ namespace Google.Cloud.Datastore.V1
         /// <returns>
         /// A Task containing the RPC response.
         /// </returns>
-        public override Task<RunQueryResponse> RunQueryAsync(
+        public override stt::Task<RunQueryResponse> RunQueryAsync(
             RunQueryRequest request,
-            CallSettings callSettings = null)
+            gaxgrpc::CallSettings callSettings = null)
         {
             Modify_RunQueryRequest(ref request, ref callSettings);
             return _callRunQuery.Async(request, callSettings);
@@ -1667,7 +1667,7 @@ namespace Google.Cloud.Datastore.V1
         /// </returns>
         public override RunQueryResponse RunQuery(
             RunQueryRequest request,
-            CallSettings callSettings = null)
+            gaxgrpc::CallSettings callSettings = null)
         {
             Modify_RunQueryRequest(ref request, ref callSettings);
             return _callRunQuery.Sync(request, callSettings);
@@ -1685,9 +1685,9 @@ namespace Google.Cloud.Datastore.V1
         /// <returns>
         /// A Task containing the RPC response.
         /// </returns>
-        public override Task<BeginTransactionResponse> BeginTransactionAsync(
+        public override stt::Task<BeginTransactionResponse> BeginTransactionAsync(
             BeginTransactionRequest request,
-            CallSettings callSettings = null)
+            gaxgrpc::CallSettings callSettings = null)
         {
             Modify_BeginTransactionRequest(ref request, ref callSettings);
             return _callBeginTransaction.Async(request, callSettings);
@@ -1707,7 +1707,7 @@ namespace Google.Cloud.Datastore.V1
         /// </returns>
         public override BeginTransactionResponse BeginTransaction(
             BeginTransactionRequest request,
-            CallSettings callSettings = null)
+            gaxgrpc::CallSettings callSettings = null)
         {
             Modify_BeginTransactionRequest(ref request, ref callSettings);
             return _callBeginTransaction.Sync(request, callSettings);
@@ -1726,9 +1726,9 @@ namespace Google.Cloud.Datastore.V1
         /// <returns>
         /// A Task containing the RPC response.
         /// </returns>
-        public override Task<CommitResponse> CommitAsync(
+        public override stt::Task<CommitResponse> CommitAsync(
             CommitRequest request,
-            CallSettings callSettings = null)
+            gaxgrpc::CallSettings callSettings = null)
         {
             Modify_CommitRequest(ref request, ref callSettings);
             return _callCommit.Async(request, callSettings);
@@ -1749,7 +1749,7 @@ namespace Google.Cloud.Datastore.V1
         /// </returns>
         public override CommitResponse Commit(
             CommitRequest request,
-            CallSettings callSettings = null)
+            gaxgrpc::CallSettings callSettings = null)
         {
             Modify_CommitRequest(ref request, ref callSettings);
             return _callCommit.Sync(request, callSettings);
@@ -1767,9 +1767,9 @@ namespace Google.Cloud.Datastore.V1
         /// <returns>
         /// A Task containing the RPC response.
         /// </returns>
-        public override Task<RollbackResponse> RollbackAsync(
+        public override stt::Task<RollbackResponse> RollbackAsync(
             RollbackRequest request,
-            CallSettings callSettings = null)
+            gaxgrpc::CallSettings callSettings = null)
         {
             Modify_RollbackRequest(ref request, ref callSettings);
             return _callRollback.Async(request, callSettings);
@@ -1789,7 +1789,7 @@ namespace Google.Cloud.Datastore.V1
         /// </returns>
         public override RollbackResponse Rollback(
             RollbackRequest request,
-            CallSettings callSettings = null)
+            gaxgrpc::CallSettings callSettings = null)
         {
             Modify_RollbackRequest(ref request, ref callSettings);
             return _callRollback.Sync(request, callSettings);
@@ -1808,9 +1808,9 @@ namespace Google.Cloud.Datastore.V1
         /// <returns>
         /// A Task containing the RPC response.
         /// </returns>
-        public override Task<AllocateIdsResponse> AllocateIdsAsync(
+        public override stt::Task<AllocateIdsResponse> AllocateIdsAsync(
             AllocateIdsRequest request,
-            CallSettings callSettings = null)
+            gaxgrpc::CallSettings callSettings = null)
         {
             Modify_AllocateIdsRequest(ref request, ref callSettings);
             return _callAllocateIds.Async(request, callSettings);
@@ -1831,7 +1831,7 @@ namespace Google.Cloud.Datastore.V1
         /// </returns>
         public override AllocateIdsResponse AllocateIds(
             AllocateIdsRequest request,
-            CallSettings callSettings = null)
+            gaxgrpc::CallSettings callSettings = null)
         {
             Modify_AllocateIdsRequest(ref request, ref callSettings);
             return _callAllocateIds.Sync(request, callSettings);
@@ -1850,9 +1850,9 @@ namespace Google.Cloud.Datastore.V1
         /// <returns>
         /// A Task containing the RPC response.
         /// </returns>
-        public override Task<ReserveIdsResponse> ReserveIdsAsync(
+        public override stt::Task<ReserveIdsResponse> ReserveIdsAsync(
             ReserveIdsRequest request,
-            CallSettings callSettings = null)
+            gaxgrpc::CallSettings callSettings = null)
         {
             Modify_ReserveIdsRequest(ref request, ref callSettings);
             return _callReserveIds.Async(request, callSettings);
@@ -1873,7 +1873,7 @@ namespace Google.Cloud.Datastore.V1
         /// </returns>
         public override ReserveIdsResponse ReserveIds(
             ReserveIdsRequest request,
-            CallSettings callSettings = null)
+            gaxgrpc::CallSettings callSettings = null)
         {
             Modify_ReserveIdsRequest(ref request, ref callSettings);
             return _callReserveIds.Sync(request, callSettings);

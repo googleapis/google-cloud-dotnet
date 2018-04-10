@@ -14,24 +14,24 @@
 
 // Generated code. DO NOT EDIT!
 
-using Google.Api.Gax;
-using Google.Api.Gax.Grpc;
-using Google.Protobuf;
-using Google.Protobuf.WellKnownTypes;
-using Grpc.Core;
-using System;
-using System.Collections;
-using System.Collections.Generic;
-using System.Collections.ObjectModel;
-using System.Threading;
-using System.Threading.Tasks;
+using gax = Google.Api.Gax;
+using gaxgrpc = Google.Api.Gax.Grpc;
+using proto = Google.Protobuf;
+using protowkt = Google.Protobuf.WellKnownTypes;
+using grpccore = Grpc.Core;
+using s = System;
+using sc = System.Collections;
+using scg = System.Collections.Generic;
+using sco = System.Collections.ObjectModel;
+using st = System.Threading;
+using stt = System.Threading.Tasks;
 
 namespace Google.Cloud.Logging.V2
 {
     /// <summary>
     /// Settings for a <see cref="ConfigServiceV2Client"/>.
     /// </summary>
-    public sealed partial class ConfigServiceV2Settings : ServiceSettingsBase
+    public sealed partial class ConfigServiceV2Settings : gaxgrpc::ServiceSettingsBase
     {
         /// <summary>
         /// Get a new instance of the default <see cref="ConfigServiceV2Settings"/>.
@@ -48,7 +48,7 @@ namespace Google.Cloud.Logging.V2
 
         private ConfigServiceV2Settings(ConfigServiceV2Settings existing) : base(existing)
         {
-            GaxPreconditions.CheckNotNull(existing, nameof(existing));
+            gax::GaxPreconditions.CheckNotNull(existing, nameof(existing));
             ListSinksSettings = existing.ListSinksSettings;
             GetSinkSettings = existing.GetSinkSettings;
             CreateSinkSettings = existing.CreateSinkSettings;
@@ -65,29 +65,29 @@ namespace Google.Cloud.Logging.V2
         partial void OnCopy(ConfigServiceV2Settings existing);
 
         /// <summary>
-        /// The filter specifying which RPC <see cref="StatusCode"/>s are eligible for retry
+        /// The filter specifying which RPC <see cref="grpccore::StatusCode"/>s are eligible for retry
         /// for "Idempotent" <see cref="ConfigServiceV2Client"/> RPC methods.
         /// </summary>
         /// <remarks>
-        /// The eligible RPC <see cref="StatusCode"/>s for retry for "Idempotent" RPC methods are:
+        /// The eligible RPC <see cref="grpccore::StatusCode"/>s for retry for "Idempotent" RPC methods are:
         /// <list type="bullet">
-        /// <item><description><see cref="StatusCode.DeadlineExceeded"/></description></item>
-        /// <item><description><see cref="StatusCode.Internal"/></description></item>
-        /// <item><description><see cref="StatusCode.Unavailable"/></description></item>
+        /// <item><description><see cref="grpccore::StatusCode.DeadlineExceeded"/></description></item>
+        /// <item><description><see cref="grpccore::StatusCode.Internal"/></description></item>
+        /// <item><description><see cref="grpccore::StatusCode.Unavailable"/></description></item>
         /// </list>
         /// </remarks>
-        public static Predicate<RpcException> IdempotentRetryFilter { get; } =
-            RetrySettings.FilterForStatusCodes(StatusCode.DeadlineExceeded, StatusCode.Internal, StatusCode.Unavailable);
+        public static s::Predicate<grpccore::RpcException> IdempotentRetryFilter { get; } =
+            gaxgrpc::RetrySettings.FilterForStatusCodes(grpccore::StatusCode.DeadlineExceeded, grpccore::StatusCode.Internal, grpccore::StatusCode.Unavailable);
 
         /// <summary>
-        /// The filter specifying which RPC <see cref="StatusCode"/>s are eligible for retry
+        /// The filter specifying which RPC <see cref="grpccore::StatusCode"/>s are eligible for retry
         /// for "NonIdempotent" <see cref="ConfigServiceV2Client"/> RPC methods.
         /// </summary>
         /// <remarks>
-        /// There are no RPC <see cref="StatusCode"/>s eligible for retry for "NonIdempotent" RPC methods.
+        /// There are no RPC <see cref="grpccore::StatusCode"/>s eligible for retry for "NonIdempotent" RPC methods.
         /// </remarks>
-        public static Predicate<RpcException> NonIdempotentRetryFilter { get; } =
-            RetrySettings.FilterForStatusCodes();
+        public static s::Predicate<grpccore::RpcException> NonIdempotentRetryFilter { get; } =
+            gaxgrpc::RetrySettings.FilterForStatusCodes();
 
         /// <summary>
         /// "Default" retry backoff for <see cref="ConfigServiceV2Client"/> RPC methods.
@@ -103,9 +103,9 @@ namespace Google.Cloud.Logging.V2
         /// <item><description>Delay multiplier: 1.2</description></item>
         /// </list>
         /// </remarks>
-        public static BackoffSettings GetDefaultRetryBackoff() => new BackoffSettings(
-            delay: TimeSpan.FromMilliseconds(100),
-            maxDelay: TimeSpan.FromMilliseconds(1000),
+        public static gaxgrpc::BackoffSettings GetDefaultRetryBackoff() => new gaxgrpc::BackoffSettings(
+            delay: s::TimeSpan.FromMilliseconds(100),
+            maxDelay: s::TimeSpan.FromMilliseconds(1000),
             delayMultiplier: 1.2
         );
 
@@ -123,9 +123,9 @@ namespace Google.Cloud.Logging.V2
         /// <item><description>Maximum timeout: 60000 milliseconds</description></item>
         /// </list>
         /// </remarks>
-        public static BackoffSettings GetDefaultTimeoutBackoff() => new BackoffSettings(
-            delay: TimeSpan.FromMilliseconds(30000),
-            maxDelay: TimeSpan.FromMilliseconds(60000),
+        public static gaxgrpc::BackoffSettings GetDefaultTimeoutBackoff() => new gaxgrpc::BackoffSettings(
+            delay: s::TimeSpan.FromMilliseconds(30000),
+            maxDelay: s::TimeSpan.FromMilliseconds(60000),
             delayMultiplier: 1.5
         );
 
@@ -143,9 +143,9 @@ namespace Google.Cloud.Logging.V2
         /// <item><description>Delay multiplier: 1.2</description></item>
         /// </list>
         /// </remarks>
-        public static BackoffSettings GetWriteSinkRetryBackoff() => new BackoffSettings(
-            delay: TimeSpan.FromMilliseconds(100),
-            maxDelay: TimeSpan.FromMilliseconds(1000),
+        public static gaxgrpc::BackoffSettings GetWriteSinkRetryBackoff() => new gaxgrpc::BackoffSettings(
+            delay: s::TimeSpan.FromMilliseconds(100),
+            maxDelay: s::TimeSpan.FromMilliseconds(1000),
             delayMultiplier: 1.2
         );
 
@@ -163,19 +163,19 @@ namespace Google.Cloud.Logging.V2
         /// <item><description>Maximum timeout: 60000 milliseconds</description></item>
         /// </list>
         /// </remarks>
-        public static BackoffSettings GetWriteSinkTimeoutBackoff() => new BackoffSettings(
-            delay: TimeSpan.FromMilliseconds(30000),
-            maxDelay: TimeSpan.FromMilliseconds(60000),
+        public static gaxgrpc::BackoffSettings GetWriteSinkTimeoutBackoff() => new gaxgrpc::BackoffSettings(
+            delay: s::TimeSpan.FromMilliseconds(30000),
+            maxDelay: s::TimeSpan.FromMilliseconds(60000),
             delayMultiplier: 1.5
         );
 
         /// <summary>
-        /// <see cref="CallSettings"/> for synchronous and asynchronous calls to
+        /// <see cref="gaxgrpc::CallSettings"/> for synchronous and asynchronous calls to
         /// <c>ConfigServiceV2Client.ListSinks</c> and <c>ConfigServiceV2Client.ListSinksAsync</c>.
         /// </summary>
         /// <remarks>
         /// The default <c>ConfigServiceV2Client.ListSinks</c> and
-        /// <c>ConfigServiceV2Client.ListSinksAsync</c> <see cref="RetrySettings"/> are:
+        /// <c>ConfigServiceV2Client.ListSinksAsync</c> <see cref="gaxgrpc::RetrySettings"/> are:
         /// <list type="bullet">
         /// <item><description>Initial retry delay: 100 milliseconds</description></item>
         /// <item><description>Retry delay multiplier: 1.2</description></item>
@@ -186,27 +186,27 @@ namespace Google.Cloud.Logging.V2
         /// </list>
         /// Retry will be attempted on the following response status codes:
         /// <list>
-        /// <item><description><see cref="StatusCode.DeadlineExceeded"/></description></item>
-        /// <item><description><see cref="StatusCode.Internal"/></description></item>
-        /// <item><description><see cref="StatusCode.Unavailable"/></description></item>
+        /// <item><description><see cref="grpccore::StatusCode.DeadlineExceeded"/></description></item>
+        /// <item><description><see cref="grpccore::StatusCode.Internal"/></description></item>
+        /// <item><description><see cref="grpccore::StatusCode.Unavailable"/></description></item>
         /// </list>
         /// Default RPC expiration is 90000 milliseconds.
         /// </remarks>
-        public CallSettings ListSinksSettings { get; set; } = CallSettings.FromCallTiming(
-            CallTiming.FromRetry(new RetrySettings(
+        public gaxgrpc::CallSettings ListSinksSettings { get; set; } = gaxgrpc::CallSettings.FromCallTiming(
+            gaxgrpc::CallTiming.FromRetry(new gaxgrpc::RetrySettings(
                 retryBackoff: GetDefaultRetryBackoff(),
                 timeoutBackoff: GetDefaultTimeoutBackoff(),
-                totalExpiration: Expiration.FromTimeout(TimeSpan.FromMilliseconds(90000)),
+                totalExpiration: gax::Expiration.FromTimeout(s::TimeSpan.FromMilliseconds(90000)),
                 retryFilter: IdempotentRetryFilter
             )));
 
         /// <summary>
-        /// <see cref="CallSettings"/> for synchronous and asynchronous calls to
+        /// <see cref="gaxgrpc::CallSettings"/> for synchronous and asynchronous calls to
         /// <c>ConfigServiceV2Client.GetSink</c> and <c>ConfigServiceV2Client.GetSinkAsync</c>.
         /// </summary>
         /// <remarks>
         /// The default <c>ConfigServiceV2Client.GetSink</c> and
-        /// <c>ConfigServiceV2Client.GetSinkAsync</c> <see cref="RetrySettings"/> are:
+        /// <c>ConfigServiceV2Client.GetSinkAsync</c> <see cref="gaxgrpc::RetrySettings"/> are:
         /// <list type="bullet">
         /// <item><description>Initial retry delay: 100 milliseconds</description></item>
         /// <item><description>Retry delay multiplier: 1.2</description></item>
@@ -217,27 +217,27 @@ namespace Google.Cloud.Logging.V2
         /// </list>
         /// Retry will be attempted on the following response status codes:
         /// <list>
-        /// <item><description><see cref="StatusCode.DeadlineExceeded"/></description></item>
-        /// <item><description><see cref="StatusCode.Internal"/></description></item>
-        /// <item><description><see cref="StatusCode.Unavailable"/></description></item>
+        /// <item><description><see cref="grpccore::StatusCode.DeadlineExceeded"/></description></item>
+        /// <item><description><see cref="grpccore::StatusCode.Internal"/></description></item>
+        /// <item><description><see cref="grpccore::StatusCode.Unavailable"/></description></item>
         /// </list>
         /// Default RPC expiration is 90000 milliseconds.
         /// </remarks>
-        public CallSettings GetSinkSettings { get; set; } = CallSettings.FromCallTiming(
-            CallTiming.FromRetry(new RetrySettings(
+        public gaxgrpc::CallSettings GetSinkSettings { get; set; } = gaxgrpc::CallSettings.FromCallTiming(
+            gaxgrpc::CallTiming.FromRetry(new gaxgrpc::RetrySettings(
                 retryBackoff: GetDefaultRetryBackoff(),
                 timeoutBackoff: GetDefaultTimeoutBackoff(),
-                totalExpiration: Expiration.FromTimeout(TimeSpan.FromMilliseconds(90000)),
+                totalExpiration: gax::Expiration.FromTimeout(s::TimeSpan.FromMilliseconds(90000)),
                 retryFilter: IdempotentRetryFilter
             )));
 
         /// <summary>
-        /// <see cref="CallSettings"/> for synchronous and asynchronous calls to
+        /// <see cref="gaxgrpc::CallSettings"/> for synchronous and asynchronous calls to
         /// <c>ConfigServiceV2Client.CreateSink</c> and <c>ConfigServiceV2Client.CreateSinkAsync</c>.
         /// </summary>
         /// <remarks>
         /// The default <c>ConfigServiceV2Client.CreateSink</c> and
-        /// <c>ConfigServiceV2Client.CreateSinkAsync</c> <see cref="RetrySettings"/> are:
+        /// <c>ConfigServiceV2Client.CreateSinkAsync</c> <see cref="gaxgrpc::RetrySettings"/> are:
         /// <list type="bullet">
         /// <item><description>Initial retry delay: 100 milliseconds</description></item>
         /// <item><description>Retry delay multiplier: 1.2</description></item>
@@ -252,21 +252,21 @@ namespace Google.Cloud.Logging.V2
         /// </list>
         /// Default RPC expiration is 90000 milliseconds.
         /// </remarks>
-        public CallSettings CreateSinkSettings { get; set; } = CallSettings.FromCallTiming(
-            CallTiming.FromRetry(new RetrySettings(
+        public gaxgrpc::CallSettings CreateSinkSettings { get; set; } = gaxgrpc::CallSettings.FromCallTiming(
+            gaxgrpc::CallTiming.FromRetry(new gaxgrpc::RetrySettings(
                 retryBackoff: GetDefaultRetryBackoff(),
                 timeoutBackoff: GetDefaultTimeoutBackoff(),
-                totalExpiration: Expiration.FromTimeout(TimeSpan.FromMilliseconds(90000)),
+                totalExpiration: gax::Expiration.FromTimeout(s::TimeSpan.FromMilliseconds(90000)),
                 retryFilter: NonIdempotentRetryFilter
             )));
 
         /// <summary>
-        /// <see cref="CallSettings"/> for synchronous and asynchronous calls to
+        /// <see cref="gaxgrpc::CallSettings"/> for synchronous and asynchronous calls to
         /// <c>ConfigServiceV2Client.UpdateSink</c> and <c>ConfigServiceV2Client.UpdateSinkAsync</c>.
         /// </summary>
         /// <remarks>
         /// The default <c>ConfigServiceV2Client.UpdateSink</c> and
-        /// <c>ConfigServiceV2Client.UpdateSinkAsync</c> <see cref="RetrySettings"/> are:
+        /// <c>ConfigServiceV2Client.UpdateSinkAsync</c> <see cref="gaxgrpc::RetrySettings"/> are:
         /// <list type="bullet">
         /// <item><description>Initial retry delay: 100 milliseconds</description></item>
         /// <item><description>Retry delay multiplier: 1.2</description></item>
@@ -281,21 +281,21 @@ namespace Google.Cloud.Logging.V2
         /// </list>
         /// Default RPC expiration is 90000 milliseconds.
         /// </remarks>
-        public CallSettings UpdateSinkSettings { get; set; } = CallSettings.FromCallTiming(
-            CallTiming.FromRetry(new RetrySettings(
+        public gaxgrpc::CallSettings UpdateSinkSettings { get; set; } = gaxgrpc::CallSettings.FromCallTiming(
+            gaxgrpc::CallTiming.FromRetry(new gaxgrpc::RetrySettings(
                 retryBackoff: GetDefaultRetryBackoff(),
                 timeoutBackoff: GetDefaultTimeoutBackoff(),
-                totalExpiration: Expiration.FromTimeout(TimeSpan.FromMilliseconds(90000)),
+                totalExpiration: gax::Expiration.FromTimeout(s::TimeSpan.FromMilliseconds(90000)),
                 retryFilter: NonIdempotentRetryFilter
             )));
 
         /// <summary>
-        /// <see cref="CallSettings"/> for synchronous and asynchronous calls to
+        /// <see cref="gaxgrpc::CallSettings"/> for synchronous and asynchronous calls to
         /// <c>ConfigServiceV2Client.DeleteSink</c> and <c>ConfigServiceV2Client.DeleteSinkAsync</c>.
         /// </summary>
         /// <remarks>
         /// The default <c>ConfigServiceV2Client.DeleteSink</c> and
-        /// <c>ConfigServiceV2Client.DeleteSinkAsync</c> <see cref="RetrySettings"/> are:
+        /// <c>ConfigServiceV2Client.DeleteSinkAsync</c> <see cref="gaxgrpc::RetrySettings"/> are:
         /// <list type="bullet">
         /// <item><description>Initial retry delay: 100 milliseconds</description></item>
         /// <item><description>Retry delay multiplier: 1.2</description></item>
@@ -306,27 +306,27 @@ namespace Google.Cloud.Logging.V2
         /// </list>
         /// Retry will be attempted on the following response status codes:
         /// <list>
-        /// <item><description><see cref="StatusCode.DeadlineExceeded"/></description></item>
-        /// <item><description><see cref="StatusCode.Internal"/></description></item>
-        /// <item><description><see cref="StatusCode.Unavailable"/></description></item>
+        /// <item><description><see cref="grpccore::StatusCode.DeadlineExceeded"/></description></item>
+        /// <item><description><see cref="grpccore::StatusCode.Internal"/></description></item>
+        /// <item><description><see cref="grpccore::StatusCode.Unavailable"/></description></item>
         /// </list>
         /// Default RPC expiration is 90000 milliseconds.
         /// </remarks>
-        public CallSettings DeleteSinkSettings { get; set; } = CallSettings.FromCallTiming(
-            CallTiming.FromRetry(new RetrySettings(
+        public gaxgrpc::CallSettings DeleteSinkSettings { get; set; } = gaxgrpc::CallSettings.FromCallTiming(
+            gaxgrpc::CallTiming.FromRetry(new gaxgrpc::RetrySettings(
                 retryBackoff: GetDefaultRetryBackoff(),
                 timeoutBackoff: GetDefaultTimeoutBackoff(),
-                totalExpiration: Expiration.FromTimeout(TimeSpan.FromMilliseconds(90000)),
+                totalExpiration: gax::Expiration.FromTimeout(s::TimeSpan.FromMilliseconds(90000)),
                 retryFilter: IdempotentRetryFilter
             )));
 
         /// <summary>
-        /// <see cref="CallSettings"/> for synchronous and asynchronous calls to
+        /// <see cref="gaxgrpc::CallSettings"/> for synchronous and asynchronous calls to
         /// <c>ConfigServiceV2Client.ListExclusions</c> and <c>ConfigServiceV2Client.ListExclusionsAsync</c>.
         /// </summary>
         /// <remarks>
         /// The default <c>ConfigServiceV2Client.ListExclusions</c> and
-        /// <c>ConfigServiceV2Client.ListExclusionsAsync</c> <see cref="RetrySettings"/> are:
+        /// <c>ConfigServiceV2Client.ListExclusionsAsync</c> <see cref="gaxgrpc::RetrySettings"/> are:
         /// <list type="bullet">
         /// <item><description>Initial retry delay: 100 milliseconds</description></item>
         /// <item><description>Retry delay multiplier: 1.2</description></item>
@@ -337,27 +337,27 @@ namespace Google.Cloud.Logging.V2
         /// </list>
         /// Retry will be attempted on the following response status codes:
         /// <list>
-        /// <item><description><see cref="StatusCode.DeadlineExceeded"/></description></item>
-        /// <item><description><see cref="StatusCode.Internal"/></description></item>
-        /// <item><description><see cref="StatusCode.Unavailable"/></description></item>
+        /// <item><description><see cref="grpccore::StatusCode.DeadlineExceeded"/></description></item>
+        /// <item><description><see cref="grpccore::StatusCode.Internal"/></description></item>
+        /// <item><description><see cref="grpccore::StatusCode.Unavailable"/></description></item>
         /// </list>
         /// Default RPC expiration is 90000 milliseconds.
         /// </remarks>
-        public CallSettings ListExclusionsSettings { get; set; } = CallSettings.FromCallTiming(
-            CallTiming.FromRetry(new RetrySettings(
+        public gaxgrpc::CallSettings ListExclusionsSettings { get; set; } = gaxgrpc::CallSettings.FromCallTiming(
+            gaxgrpc::CallTiming.FromRetry(new gaxgrpc::RetrySettings(
                 retryBackoff: GetDefaultRetryBackoff(),
                 timeoutBackoff: GetDefaultTimeoutBackoff(),
-                totalExpiration: Expiration.FromTimeout(TimeSpan.FromMilliseconds(90000)),
+                totalExpiration: gax::Expiration.FromTimeout(s::TimeSpan.FromMilliseconds(90000)),
                 retryFilter: IdempotentRetryFilter
             )));
 
         /// <summary>
-        /// <see cref="CallSettings"/> for synchronous and asynchronous calls to
+        /// <see cref="gaxgrpc::CallSettings"/> for synchronous and asynchronous calls to
         /// <c>ConfigServiceV2Client.GetExclusion</c> and <c>ConfigServiceV2Client.GetExclusionAsync</c>.
         /// </summary>
         /// <remarks>
         /// The default <c>ConfigServiceV2Client.GetExclusion</c> and
-        /// <c>ConfigServiceV2Client.GetExclusionAsync</c> <see cref="RetrySettings"/> are:
+        /// <c>ConfigServiceV2Client.GetExclusionAsync</c> <see cref="gaxgrpc::RetrySettings"/> are:
         /// <list type="bullet">
         /// <item><description>Initial retry delay: 100 milliseconds</description></item>
         /// <item><description>Retry delay multiplier: 1.2</description></item>
@@ -368,27 +368,27 @@ namespace Google.Cloud.Logging.V2
         /// </list>
         /// Retry will be attempted on the following response status codes:
         /// <list>
-        /// <item><description><see cref="StatusCode.DeadlineExceeded"/></description></item>
-        /// <item><description><see cref="StatusCode.Internal"/></description></item>
-        /// <item><description><see cref="StatusCode.Unavailable"/></description></item>
+        /// <item><description><see cref="grpccore::StatusCode.DeadlineExceeded"/></description></item>
+        /// <item><description><see cref="grpccore::StatusCode.Internal"/></description></item>
+        /// <item><description><see cref="grpccore::StatusCode.Unavailable"/></description></item>
         /// </list>
         /// Default RPC expiration is 90000 milliseconds.
         /// </remarks>
-        public CallSettings GetExclusionSettings { get; set; } = CallSettings.FromCallTiming(
-            CallTiming.FromRetry(new RetrySettings(
+        public gaxgrpc::CallSettings GetExclusionSettings { get; set; } = gaxgrpc::CallSettings.FromCallTiming(
+            gaxgrpc::CallTiming.FromRetry(new gaxgrpc::RetrySettings(
                 retryBackoff: GetDefaultRetryBackoff(),
                 timeoutBackoff: GetDefaultTimeoutBackoff(),
-                totalExpiration: Expiration.FromTimeout(TimeSpan.FromMilliseconds(90000)),
+                totalExpiration: gax::Expiration.FromTimeout(s::TimeSpan.FromMilliseconds(90000)),
                 retryFilter: IdempotentRetryFilter
             )));
 
         /// <summary>
-        /// <see cref="CallSettings"/> for synchronous and asynchronous calls to
+        /// <see cref="gaxgrpc::CallSettings"/> for synchronous and asynchronous calls to
         /// <c>ConfigServiceV2Client.CreateExclusion</c> and <c>ConfigServiceV2Client.CreateExclusionAsync</c>.
         /// </summary>
         /// <remarks>
         /// The default <c>ConfigServiceV2Client.CreateExclusion</c> and
-        /// <c>ConfigServiceV2Client.CreateExclusionAsync</c> <see cref="RetrySettings"/> are:
+        /// <c>ConfigServiceV2Client.CreateExclusionAsync</c> <see cref="gaxgrpc::RetrySettings"/> are:
         /// <list type="bullet">
         /// <item><description>Initial retry delay: 100 milliseconds</description></item>
         /// <item><description>Retry delay multiplier: 1.2</description></item>
@@ -403,21 +403,21 @@ namespace Google.Cloud.Logging.V2
         /// </list>
         /// Default RPC expiration is 90000 milliseconds.
         /// </remarks>
-        public CallSettings CreateExclusionSettings { get; set; } = CallSettings.FromCallTiming(
-            CallTiming.FromRetry(new RetrySettings(
+        public gaxgrpc::CallSettings CreateExclusionSettings { get; set; } = gaxgrpc::CallSettings.FromCallTiming(
+            gaxgrpc::CallTiming.FromRetry(new gaxgrpc::RetrySettings(
                 retryBackoff: GetDefaultRetryBackoff(),
                 timeoutBackoff: GetDefaultTimeoutBackoff(),
-                totalExpiration: Expiration.FromTimeout(TimeSpan.FromMilliseconds(90000)),
+                totalExpiration: gax::Expiration.FromTimeout(s::TimeSpan.FromMilliseconds(90000)),
                 retryFilter: NonIdempotentRetryFilter
             )));
 
         /// <summary>
-        /// <see cref="CallSettings"/> for synchronous and asynchronous calls to
+        /// <see cref="gaxgrpc::CallSettings"/> for synchronous and asynchronous calls to
         /// <c>ConfigServiceV2Client.UpdateExclusion</c> and <c>ConfigServiceV2Client.UpdateExclusionAsync</c>.
         /// </summary>
         /// <remarks>
         /// The default <c>ConfigServiceV2Client.UpdateExclusion</c> and
-        /// <c>ConfigServiceV2Client.UpdateExclusionAsync</c> <see cref="RetrySettings"/> are:
+        /// <c>ConfigServiceV2Client.UpdateExclusionAsync</c> <see cref="gaxgrpc::RetrySettings"/> are:
         /// <list type="bullet">
         /// <item><description>Initial retry delay: 100 milliseconds</description></item>
         /// <item><description>Retry delay multiplier: 1.2</description></item>
@@ -432,21 +432,21 @@ namespace Google.Cloud.Logging.V2
         /// </list>
         /// Default RPC expiration is 90000 milliseconds.
         /// </remarks>
-        public CallSettings UpdateExclusionSettings { get; set; } = CallSettings.FromCallTiming(
-            CallTiming.FromRetry(new RetrySettings(
+        public gaxgrpc::CallSettings UpdateExclusionSettings { get; set; } = gaxgrpc::CallSettings.FromCallTiming(
+            gaxgrpc::CallTiming.FromRetry(new gaxgrpc::RetrySettings(
                 retryBackoff: GetDefaultRetryBackoff(),
                 timeoutBackoff: GetDefaultTimeoutBackoff(),
-                totalExpiration: Expiration.FromTimeout(TimeSpan.FromMilliseconds(90000)),
+                totalExpiration: gax::Expiration.FromTimeout(s::TimeSpan.FromMilliseconds(90000)),
                 retryFilter: NonIdempotentRetryFilter
             )));
 
         /// <summary>
-        /// <see cref="CallSettings"/> for synchronous and asynchronous calls to
+        /// <see cref="gaxgrpc::CallSettings"/> for synchronous and asynchronous calls to
         /// <c>ConfigServiceV2Client.DeleteExclusion</c> and <c>ConfigServiceV2Client.DeleteExclusionAsync</c>.
         /// </summary>
         /// <remarks>
         /// The default <c>ConfigServiceV2Client.DeleteExclusion</c> and
-        /// <c>ConfigServiceV2Client.DeleteExclusionAsync</c> <see cref="RetrySettings"/> are:
+        /// <c>ConfigServiceV2Client.DeleteExclusionAsync</c> <see cref="gaxgrpc::RetrySettings"/> are:
         /// <list type="bullet">
         /// <item><description>Initial retry delay: 100 milliseconds</description></item>
         /// <item><description>Retry delay multiplier: 1.2</description></item>
@@ -457,17 +457,17 @@ namespace Google.Cloud.Logging.V2
         /// </list>
         /// Retry will be attempted on the following response status codes:
         /// <list>
-        /// <item><description><see cref="StatusCode.DeadlineExceeded"/></description></item>
-        /// <item><description><see cref="StatusCode.Internal"/></description></item>
-        /// <item><description><see cref="StatusCode.Unavailable"/></description></item>
+        /// <item><description><see cref="grpccore::StatusCode.DeadlineExceeded"/></description></item>
+        /// <item><description><see cref="grpccore::StatusCode.Internal"/></description></item>
+        /// <item><description><see cref="grpccore::StatusCode.Unavailable"/></description></item>
         /// </list>
         /// Default RPC expiration is 90000 milliseconds.
         /// </remarks>
-        public CallSettings DeleteExclusionSettings { get; set; } = CallSettings.FromCallTiming(
-            CallTiming.FromRetry(new RetrySettings(
+        public gaxgrpc::CallSettings DeleteExclusionSettings { get; set; } = gaxgrpc::CallSettings.FromCallTiming(
+            gaxgrpc::CallTiming.FromRetry(new gaxgrpc::RetrySettings(
                 retryBackoff: GetDefaultRetryBackoff(),
                 timeoutBackoff: GetDefaultTimeoutBackoff(),
-                totalExpiration: Expiration.FromTimeout(TimeSpan.FromMilliseconds(90000)),
+                totalExpiration: gax::Expiration.FromTimeout(s::TimeSpan.FromMilliseconds(90000)),
                 retryFilter: IdempotentRetryFilter
             )));
 
@@ -486,7 +486,7 @@ namespace Google.Cloud.Logging.V2
         /// <summary>
         /// The default endpoint for the ConfigServiceV2 service, which is a host of "logging.googleapis.com" and a port of 443.
         /// </summary>
-        public static ServiceEndpoint DefaultEndpoint { get; } = new ServiceEndpoint("logging.googleapis.com", 443);
+        public static gaxgrpc::ServiceEndpoint DefaultEndpoint { get; } = new gaxgrpc::ServiceEndpoint("logging.googleapis.com", 443);
 
         /// <summary>
         /// The default ConfigServiceV2 scopes.
@@ -501,7 +501,7 @@ namespace Google.Cloud.Logging.V2
         /// <item><description>"https://www.googleapis.com/auth/logging.write"</description></item>
         /// </list>
         /// </remarks>
-        public static IReadOnlyList<string> DefaultScopes { get; } = new ReadOnlyCollection<string>(new string[] {
+        public static scg::IReadOnlyList<string> DefaultScopes { get; } = new sco::ReadOnlyCollection<string>(new string[] {
             "https://www.googleapis.com/auth/cloud-platform",
             "https://www.googleapis.com/auth/cloud-platform.read-only",
             "https://www.googleapis.com/auth/logging.admin",
@@ -509,7 +509,7 @@ namespace Google.Cloud.Logging.V2
             "https://www.googleapis.com/auth/logging.write",
         });
 
-        private static readonly ChannelPool s_channelPool = new ChannelPool(DefaultScopes);
+        private static readonly gaxgrpc::ChannelPool s_channelPool = new gaxgrpc::ChannelPool(DefaultScopes);
 
         // Note: we could have parameterless overloads of Create and CreateAsync,
         // documented to just use the default endpoint, settings and credentials.
@@ -523,12 +523,12 @@ namespace Google.Cloud.Logging.V2
         /// and creating a channel connecting to the given endpoint with application default credentials where
         /// necessary.
         /// </summary>
-        /// <param name="endpoint">Optional <see cref="ServiceEndpoint"/>.</param>
+        /// <param name="endpoint">Optional <see cref="gaxgrpc::ServiceEndpoint"/>.</param>
         /// <param name="settings">Optional <see cref="ConfigServiceV2Settings"/>.</param>
         /// <returns>The task representing the created <see cref="ConfigServiceV2Client"/>.</returns>
-        public static async Task<ConfigServiceV2Client> CreateAsync(ServiceEndpoint endpoint = null, ConfigServiceV2Settings settings = null)
+        public static async stt::Task<ConfigServiceV2Client> CreateAsync(gaxgrpc::ServiceEndpoint endpoint = null, ConfigServiceV2Settings settings = null)
         {
-            Channel channel = await s_channelPool.GetChannelAsync(endpoint ?? DefaultEndpoint).ConfigureAwait(false);
+            grpccore::Channel channel = await s_channelPool.GetChannelAsync(endpoint ?? DefaultEndpoint).ConfigureAwait(false);
             return Create(channel, settings);
         }
 
@@ -537,45 +537,45 @@ namespace Google.Cloud.Logging.V2
         /// and creating a channel connecting to the given endpoint with application default credentials where
         /// necessary.
         /// </summary>
-        /// <param name="endpoint">Optional <see cref="ServiceEndpoint"/>.</param>
+        /// <param name="endpoint">Optional <see cref="gaxgrpc::ServiceEndpoint"/>.</param>
         /// <param name="settings">Optional <see cref="ConfigServiceV2Settings"/>.</param>
         /// <returns>The created <see cref="ConfigServiceV2Client"/>.</returns>
-        public static ConfigServiceV2Client Create(ServiceEndpoint endpoint = null, ConfigServiceV2Settings settings = null)
+        public static ConfigServiceV2Client Create(gaxgrpc::ServiceEndpoint endpoint = null, ConfigServiceV2Settings settings = null)
         {
-            Channel channel = s_channelPool.GetChannel(endpoint ?? DefaultEndpoint);
+            grpccore::Channel channel = s_channelPool.GetChannel(endpoint ?? DefaultEndpoint);
             return Create(channel, settings);
         }
 
         /// <summary>
         /// Creates a <see cref="ConfigServiceV2Client"/> which uses the specified channel for remote operations.
         /// </summary>
-        /// <param name="channel">The <see cref="Channel"/> for remote operations. Must not be null.</param>
+        /// <param name="channel">The <see cref="grpccore::Channel"/> for remote operations. Must not be null.</param>
         /// <param name="settings">Optional <see cref="ConfigServiceV2Settings"/>.</param>
         /// <returns>The created <see cref="ConfigServiceV2Client"/>.</returns>
-        public static ConfigServiceV2Client Create(Channel channel, ConfigServiceV2Settings settings = null)
+        public static ConfigServiceV2Client Create(grpccore::Channel channel, ConfigServiceV2Settings settings = null)
         {
-            GaxPreconditions.CheckNotNull(channel, nameof(channel));
+            gax::GaxPreconditions.CheckNotNull(channel, nameof(channel));
             ConfigServiceV2.ConfigServiceV2Client grpcClient = new ConfigServiceV2.ConfigServiceV2Client(channel);
             return new ConfigServiceV2ClientImpl(grpcClient, settings);
         }
 
         /// <summary>
-        /// Shuts down any channels automatically created by <see cref="Create(ServiceEndpoint, ConfigServiceV2Settings)"/>
-        /// and <see cref="CreateAsync(ServiceEndpoint, ConfigServiceV2Settings)"/>. Channels which weren't automatically
+        /// Shuts down any channels automatically created by <see cref="Create(gaxgrpc::ServiceEndpoint, ConfigServiceV2Settings)"/>
+        /// and <see cref="CreateAsync(gaxgrpc::ServiceEndpoint, ConfigServiceV2Settings)"/>. Channels which weren't automatically
         /// created are not affected.
         /// </summary>
-        /// <remarks>After calling this method, further calls to <see cref="Create(ServiceEndpoint, ConfigServiceV2Settings)"/>
-        /// and <see cref="CreateAsync(ServiceEndpoint, ConfigServiceV2Settings)"/> will create new channels, which could
+        /// <remarks>After calling this method, further calls to <see cref="Create(gaxgrpc::ServiceEndpoint, ConfigServiceV2Settings)"/>
+        /// and <see cref="CreateAsync(gaxgrpc::ServiceEndpoint, ConfigServiceV2Settings)"/> will create new channels, which could
         /// in turn be shut down by another call to this method.</remarks>
         /// <returns>A task representing the asynchronous shutdown operation.</returns>
-        public static Task ShutdownDefaultChannelsAsync() => s_channelPool.ShutdownChannelsAsync();
+        public static stt::Task ShutdownDefaultChannelsAsync() => s_channelPool.ShutdownChannelsAsync();
 
         /// <summary>
         /// The underlying gRPC ConfigServiceV2 client.
         /// </summary>
         public virtual ConfigServiceV2.ConfigServiceV2Client GrpcClient
         {
-            get { throw new NotImplementedException(); }
+            get { throw new s::NotImplementedException(); }
         }
 
         /// <summary>
@@ -603,14 +603,14 @@ namespace Google.Cloud.Logging.V2
         /// <returns>
         /// A pageable asynchronous sequence of <see cref="LogSink"/> resources.
         /// </returns>
-        public virtual PagedAsyncEnumerable<ListSinksResponse, LogSink> ListSinksAsync(
+        public virtual gax::PagedAsyncEnumerable<ListSinksResponse, LogSink> ListSinksAsync(
             ParentNameOneof parent,
             string pageToken = null,
             int? pageSize = null,
-            CallSettings callSettings = null) => ListSinksAsync(
+            gaxgrpc::CallSettings callSettings = null) => ListSinksAsync(
                 new ListSinksRequest
                 {
-                    ParentAsParentNameOneof = GaxPreconditions.CheckNotNull(parent, nameof(parent)),
+                    ParentAsParentNameOneof = gax::GaxPreconditions.CheckNotNull(parent, nameof(parent)),
                     PageToken = pageToken ?? "",
                     PageSize = pageSize ?? 0,
                 },
@@ -641,14 +641,14 @@ namespace Google.Cloud.Logging.V2
         /// <returns>
         /// A pageable sequence of <see cref="LogSink"/> resources.
         /// </returns>
-        public virtual PagedEnumerable<ListSinksResponse, LogSink> ListSinks(
+        public virtual gax::PagedEnumerable<ListSinksResponse, LogSink> ListSinks(
             ParentNameOneof parent,
             string pageToken = null,
             int? pageSize = null,
-            CallSettings callSettings = null) => ListSinks(
+            gaxgrpc::CallSettings callSettings = null) => ListSinks(
                 new ListSinksRequest
                 {
-                    ParentAsParentNameOneof = GaxPreconditions.CheckNotNull(parent, nameof(parent)),
+                    ParentAsParentNameOneof = gax::GaxPreconditions.CheckNotNull(parent, nameof(parent)),
                     PageToken = pageToken ?? "",
                     PageSize = pageSize ?? 0,
                 },
@@ -666,11 +666,11 @@ namespace Google.Cloud.Logging.V2
         /// <returns>
         /// A pageable asynchronous sequence of <see cref="LogSink"/> resources.
         /// </returns>
-        public virtual PagedAsyncEnumerable<ListSinksResponse, LogSink> ListSinksAsync(
+        public virtual gax::PagedAsyncEnumerable<ListSinksResponse, LogSink> ListSinksAsync(
             ListSinksRequest request,
-            CallSettings callSettings = null)
+            gaxgrpc::CallSettings callSettings = null)
         {
-            throw new NotImplementedException();
+            throw new s::NotImplementedException();
         }
 
         /// <summary>
@@ -685,11 +685,11 @@ namespace Google.Cloud.Logging.V2
         /// <returns>
         /// A pageable sequence of <see cref="LogSink"/> resources.
         /// </returns>
-        public virtual PagedEnumerable<ListSinksResponse, LogSink> ListSinks(
+        public virtual gax::PagedEnumerable<ListSinksResponse, LogSink> ListSinks(
             ListSinksRequest request,
-            CallSettings callSettings = null)
+            gaxgrpc::CallSettings callSettings = null)
         {
-            throw new NotImplementedException();
+            throw new s::NotImplementedException();
         }
 
         /// <summary>
@@ -711,12 +711,12 @@ namespace Google.Cloud.Logging.V2
         /// <returns>
         /// A Task containing the RPC response.
         /// </returns>
-        public virtual Task<LogSink> GetSinkAsync(
+        public virtual stt::Task<LogSink> GetSinkAsync(
             SinkNameOneof sinkName,
-            CallSettings callSettings = null) => GetSinkAsync(
+            gaxgrpc::CallSettings callSettings = null) => GetSinkAsync(
                 new GetSinkRequest
                 {
-                    SinkNameAsSinkNameOneof = GaxPreconditions.CheckNotNull(sinkName, nameof(sinkName)),
+                    SinkNameAsSinkNameOneof = gax::GaxPreconditions.CheckNotNull(sinkName, nameof(sinkName)),
                 },
                 callSettings);
 
@@ -734,16 +734,16 @@ namespace Google.Cloud.Logging.V2
         /// Example: `"projects/my-project-id/sinks/my-sink-id"`.
         /// </param>
         /// <param name="cancellationToken">
-        /// A <see cref="CancellationToken"/> to use for this RPC.
+        /// A <see cref="st::CancellationToken"/> to use for this RPC.
         /// </param>
         /// <returns>
         /// A Task containing the RPC response.
         /// </returns>
-        public virtual Task<LogSink> GetSinkAsync(
+        public virtual stt::Task<LogSink> GetSinkAsync(
             SinkNameOneof sinkName,
-            CancellationToken cancellationToken) => GetSinkAsync(
+            st::CancellationToken cancellationToken) => GetSinkAsync(
                 sinkName,
-                CallSettings.FromCancellationToken(cancellationToken));
+                gaxgrpc::CallSettings.FromCancellationToken(cancellationToken));
 
         /// <summary>
         /// Gets a sink.
@@ -766,10 +766,10 @@ namespace Google.Cloud.Logging.V2
         /// </returns>
         public virtual LogSink GetSink(
             SinkNameOneof sinkName,
-            CallSettings callSettings = null) => GetSink(
+            gaxgrpc::CallSettings callSettings = null) => GetSink(
                 new GetSinkRequest
                 {
-                    SinkNameAsSinkNameOneof = GaxPreconditions.CheckNotNull(sinkName, nameof(sinkName)),
+                    SinkNameAsSinkNameOneof = gax::GaxPreconditions.CheckNotNull(sinkName, nameof(sinkName)),
                 },
                 callSettings);
 
@@ -785,11 +785,11 @@ namespace Google.Cloud.Logging.V2
         /// <returns>
         /// A Task containing the RPC response.
         /// </returns>
-        public virtual Task<LogSink> GetSinkAsync(
+        public virtual stt::Task<LogSink> GetSinkAsync(
             GetSinkRequest request,
-            CallSettings callSettings = null)
+            gaxgrpc::CallSettings callSettings = null)
         {
-            throw new NotImplementedException();
+            throw new s::NotImplementedException();
         }
 
         /// <summary>
@@ -799,16 +799,16 @@ namespace Google.Cloud.Logging.V2
         /// The request object containing all of the parameters for the API call.
         /// </param>
         /// <param name="cancellationToken">
-        /// A <see cref="CancellationToken"/> to use for this RPC.
+        /// A <see cref="st::CancellationToken"/> to use for this RPC.
         /// </param>
         /// <returns>
         /// A Task containing the RPC response.
         /// </returns>
-        public virtual Task<LogSink> GetSinkAsync(
+        public virtual stt::Task<LogSink> GetSinkAsync(
             GetSinkRequest request,
-            CancellationToken cancellationToken) => GetSinkAsync(
+            st::CancellationToken cancellationToken) => GetSinkAsync(
                 request,
-                CallSettings.FromCancellationToken(cancellationToken));
+                gaxgrpc::CallSettings.FromCancellationToken(cancellationToken));
 
         /// <summary>
         /// Gets a sink.
@@ -824,9 +824,9 @@ namespace Google.Cloud.Logging.V2
         /// </returns>
         public virtual LogSink GetSink(
             GetSinkRequest request,
-            CallSettings callSettings = null)
+            gaxgrpc::CallSettings callSettings = null)
         {
-            throw new NotImplementedException();
+            throw new s::NotImplementedException();
         }
 
         /// <summary>
@@ -855,14 +855,14 @@ namespace Google.Cloud.Logging.V2
         /// <returns>
         /// A Task containing the RPC response.
         /// </returns>
-        public virtual Task<LogSink> CreateSinkAsync(
+        public virtual stt::Task<LogSink> CreateSinkAsync(
             ParentNameOneof parent,
             LogSink sink,
-            CallSettings callSettings = null) => CreateSinkAsync(
+            gaxgrpc::CallSettings callSettings = null) => CreateSinkAsync(
                 new CreateSinkRequest
                 {
-                    ParentAsParentNameOneof = GaxPreconditions.CheckNotNull(parent, nameof(parent)),
-                    Sink = GaxPreconditions.CheckNotNull(sink, nameof(sink)),
+                    ParentAsParentNameOneof = gax::GaxPreconditions.CheckNotNull(parent, nameof(parent)),
+                    Sink = gax::GaxPreconditions.CheckNotNull(sink, nameof(sink)),
                 },
                 callSettings);
 
@@ -887,18 +887,18 @@ namespace Google.Cloud.Logging.V2
         /// is not already in use.
         /// </param>
         /// <param name="cancellationToken">
-        /// A <see cref="CancellationToken"/> to use for this RPC.
+        /// A <see cref="st::CancellationToken"/> to use for this RPC.
         /// </param>
         /// <returns>
         /// A Task containing the RPC response.
         /// </returns>
-        public virtual Task<LogSink> CreateSinkAsync(
+        public virtual stt::Task<LogSink> CreateSinkAsync(
             ParentNameOneof parent,
             LogSink sink,
-            CancellationToken cancellationToken) => CreateSinkAsync(
+            st::CancellationToken cancellationToken) => CreateSinkAsync(
                 parent,
                 sink,
-                CallSettings.FromCancellationToken(cancellationToken));
+                gaxgrpc::CallSettings.FromCancellationToken(cancellationToken));
 
         /// <summary>
         /// Creates a sink that exports specified log entries to a destination.  The
@@ -929,11 +929,11 @@ namespace Google.Cloud.Logging.V2
         public virtual LogSink CreateSink(
             ParentNameOneof parent,
             LogSink sink,
-            CallSettings callSettings = null) => CreateSink(
+            gaxgrpc::CallSettings callSettings = null) => CreateSink(
                 new CreateSinkRequest
                 {
-                    ParentAsParentNameOneof = GaxPreconditions.CheckNotNull(parent, nameof(parent)),
-                    Sink = GaxPreconditions.CheckNotNull(sink, nameof(sink)),
+                    ParentAsParentNameOneof = gax::GaxPreconditions.CheckNotNull(parent, nameof(parent)),
+                    Sink = gax::GaxPreconditions.CheckNotNull(sink, nameof(sink)),
                 },
                 callSettings);
 
@@ -952,11 +952,11 @@ namespace Google.Cloud.Logging.V2
         /// <returns>
         /// A Task containing the RPC response.
         /// </returns>
-        public virtual Task<LogSink> CreateSinkAsync(
+        public virtual stt::Task<LogSink> CreateSinkAsync(
             CreateSinkRequest request,
-            CallSettings callSettings = null)
+            gaxgrpc::CallSettings callSettings = null)
         {
-            throw new NotImplementedException();
+            throw new s::NotImplementedException();
         }
 
         /// <summary>
@@ -969,16 +969,16 @@ namespace Google.Cloud.Logging.V2
         /// The request object containing all of the parameters for the API call.
         /// </param>
         /// <param name="cancellationToken">
-        /// A <see cref="CancellationToken"/> to use for this RPC.
+        /// A <see cref="st::CancellationToken"/> to use for this RPC.
         /// </param>
         /// <returns>
         /// A Task containing the RPC response.
         /// </returns>
-        public virtual Task<LogSink> CreateSinkAsync(
+        public virtual stt::Task<LogSink> CreateSinkAsync(
             CreateSinkRequest request,
-            CancellationToken cancellationToken) => CreateSinkAsync(
+            st::CancellationToken cancellationToken) => CreateSinkAsync(
                 request,
-                CallSettings.FromCancellationToken(cancellationToken));
+                gaxgrpc::CallSettings.FromCancellationToken(cancellationToken));
 
         /// <summary>
         /// Creates a sink that exports specified log entries to a destination.  The
@@ -997,9 +997,9 @@ namespace Google.Cloud.Logging.V2
         /// </returns>
         public virtual LogSink CreateSink(
             CreateSinkRequest request,
-            CallSettings callSettings = null)
+            gaxgrpc::CallSettings callSettings = null)
         {
-            throw new NotImplementedException();
+            throw new s::NotImplementedException();
         }
 
         /// <summary>
@@ -1029,14 +1029,14 @@ namespace Google.Cloud.Logging.V2
         /// <returns>
         /// A Task containing the RPC response.
         /// </returns>
-        public virtual Task<LogSink> UpdateSinkAsync(
+        public virtual stt::Task<LogSink> UpdateSinkAsync(
             SinkNameOneof sinkName,
             LogSink sink,
-            CallSettings callSettings = null) => UpdateSinkAsync(
+            gaxgrpc::CallSettings callSettings = null) => UpdateSinkAsync(
                 new UpdateSinkRequest
                 {
-                    SinkNameAsSinkNameOneof = GaxPreconditions.CheckNotNull(sinkName, nameof(sinkName)),
-                    Sink = GaxPreconditions.CheckNotNull(sink, nameof(sink)),
+                    SinkNameAsSinkNameOneof = gax::GaxPreconditions.CheckNotNull(sinkName, nameof(sinkName)),
+                    Sink = gax::GaxPreconditions.CheckNotNull(sink, nameof(sink)),
                 },
                 callSettings);
 
@@ -1062,18 +1062,18 @@ namespace Google.Cloud.Logging.V2
         /// as part of `sink_name`.
         /// </param>
         /// <param name="cancellationToken">
-        /// A <see cref="CancellationToken"/> to use for this RPC.
+        /// A <see cref="st::CancellationToken"/> to use for this RPC.
         /// </param>
         /// <returns>
         /// A Task containing the RPC response.
         /// </returns>
-        public virtual Task<LogSink> UpdateSinkAsync(
+        public virtual stt::Task<LogSink> UpdateSinkAsync(
             SinkNameOneof sinkName,
             LogSink sink,
-            CancellationToken cancellationToken) => UpdateSinkAsync(
+            st::CancellationToken cancellationToken) => UpdateSinkAsync(
                 sinkName,
                 sink,
-                CallSettings.FromCancellationToken(cancellationToken));
+                gaxgrpc::CallSettings.FromCancellationToken(cancellationToken));
 
         /// <summary>
         /// Updates a sink.  This method replaces the following fields in the existing
@@ -1105,11 +1105,11 @@ namespace Google.Cloud.Logging.V2
         public virtual LogSink UpdateSink(
             SinkNameOneof sinkName,
             LogSink sink,
-            CallSettings callSettings = null) => UpdateSink(
+            gaxgrpc::CallSettings callSettings = null) => UpdateSink(
                 new UpdateSinkRequest
                 {
-                    SinkNameAsSinkNameOneof = GaxPreconditions.CheckNotNull(sinkName, nameof(sinkName)),
-                    Sink = GaxPreconditions.CheckNotNull(sink, nameof(sink)),
+                    SinkNameAsSinkNameOneof = gax::GaxPreconditions.CheckNotNull(sinkName, nameof(sinkName)),
+                    Sink = gax::GaxPreconditions.CheckNotNull(sink, nameof(sink)),
                 },
                 callSettings);
 
@@ -1128,11 +1128,11 @@ namespace Google.Cloud.Logging.V2
         /// <returns>
         /// A Task containing the RPC response.
         /// </returns>
-        public virtual Task<LogSink> UpdateSinkAsync(
+        public virtual stt::Task<LogSink> UpdateSinkAsync(
             UpdateSinkRequest request,
-            CallSettings callSettings = null)
+            gaxgrpc::CallSettings callSettings = null)
         {
-            throw new NotImplementedException();
+            throw new s::NotImplementedException();
         }
 
         /// <summary>
@@ -1145,16 +1145,16 @@ namespace Google.Cloud.Logging.V2
         /// The request object containing all of the parameters for the API call.
         /// </param>
         /// <param name="cancellationToken">
-        /// A <see cref="CancellationToken"/> to use for this RPC.
+        /// A <see cref="st::CancellationToken"/> to use for this RPC.
         /// </param>
         /// <returns>
         /// A Task containing the RPC response.
         /// </returns>
-        public virtual Task<LogSink> UpdateSinkAsync(
+        public virtual stt::Task<LogSink> UpdateSinkAsync(
             UpdateSinkRequest request,
-            CancellationToken cancellationToken) => UpdateSinkAsync(
+            st::CancellationToken cancellationToken) => UpdateSinkAsync(
                 request,
-                CallSettings.FromCancellationToken(cancellationToken));
+                gaxgrpc::CallSettings.FromCancellationToken(cancellationToken));
 
         /// <summary>
         /// Updates a sink.  This method replaces the following fields in the existing
@@ -1173,9 +1173,9 @@ namespace Google.Cloud.Logging.V2
         /// </returns>
         public virtual LogSink UpdateSink(
             UpdateSinkRequest request,
-            CallSettings callSettings = null)
+            gaxgrpc::CallSettings callSettings = null)
         {
-            throw new NotImplementedException();
+            throw new s::NotImplementedException();
         }
 
         /// <summary>
@@ -1199,12 +1199,12 @@ namespace Google.Cloud.Logging.V2
         /// <returns>
         /// A Task that completes when the RPC has completed.
         /// </returns>
-        public virtual Task DeleteSinkAsync(
+        public virtual stt::Task DeleteSinkAsync(
             SinkNameOneof sinkName,
-            CallSettings callSettings = null) => DeleteSinkAsync(
+            gaxgrpc::CallSettings callSettings = null) => DeleteSinkAsync(
                 new DeleteSinkRequest
                 {
-                    SinkNameAsSinkNameOneof = GaxPreconditions.CheckNotNull(sinkName, nameof(sinkName)),
+                    SinkNameAsSinkNameOneof = gax::GaxPreconditions.CheckNotNull(sinkName, nameof(sinkName)),
                 },
                 callSettings);
 
@@ -1224,16 +1224,16 @@ namespace Google.Cloud.Logging.V2
         /// Example: `"projects/my-project-id/sinks/my-sink-id"`.
         /// </param>
         /// <param name="cancellationToken">
-        /// A <see cref="CancellationToken"/> to use for this RPC.
+        /// A <see cref="st::CancellationToken"/> to use for this RPC.
         /// </param>
         /// <returns>
         /// A Task that completes when the RPC has completed.
         /// </returns>
-        public virtual Task DeleteSinkAsync(
+        public virtual stt::Task DeleteSinkAsync(
             SinkNameOneof sinkName,
-            CancellationToken cancellationToken) => DeleteSinkAsync(
+            st::CancellationToken cancellationToken) => DeleteSinkAsync(
                 sinkName,
-                CallSettings.FromCancellationToken(cancellationToken));
+                gaxgrpc::CallSettings.FromCancellationToken(cancellationToken));
 
         /// <summary>
         /// Deletes a sink. If the sink has a unique `writer_identity`, then that
@@ -1255,10 +1255,10 @@ namespace Google.Cloud.Logging.V2
         /// </param>
         public virtual void DeleteSink(
             SinkNameOneof sinkName,
-            CallSettings callSettings = null) => DeleteSink(
+            gaxgrpc::CallSettings callSettings = null) => DeleteSink(
                 new DeleteSinkRequest
                 {
-                    SinkNameAsSinkNameOneof = GaxPreconditions.CheckNotNull(sinkName, nameof(sinkName)),
+                    SinkNameAsSinkNameOneof = gax::GaxPreconditions.CheckNotNull(sinkName, nameof(sinkName)),
                 },
                 callSettings);
 
@@ -1275,11 +1275,11 @@ namespace Google.Cloud.Logging.V2
         /// <returns>
         /// A Task that completes when the RPC has completed.
         /// </returns>
-        public virtual Task DeleteSinkAsync(
+        public virtual stt::Task DeleteSinkAsync(
             DeleteSinkRequest request,
-            CallSettings callSettings = null)
+            gaxgrpc::CallSettings callSettings = null)
         {
-            throw new NotImplementedException();
+            throw new s::NotImplementedException();
         }
 
         /// <summary>
@@ -1290,16 +1290,16 @@ namespace Google.Cloud.Logging.V2
         /// The request object containing all of the parameters for the API call.
         /// </param>
         /// <param name="cancellationToken">
-        /// A <see cref="CancellationToken"/> to use for this RPC.
+        /// A <see cref="st::CancellationToken"/> to use for this RPC.
         /// </param>
         /// <returns>
         /// A Task that completes when the RPC has completed.
         /// </returns>
-        public virtual Task DeleteSinkAsync(
+        public virtual stt::Task DeleteSinkAsync(
             DeleteSinkRequest request,
-            CancellationToken cancellationToken) => DeleteSinkAsync(
+            st::CancellationToken cancellationToken) => DeleteSinkAsync(
                 request,
-                CallSettings.FromCancellationToken(cancellationToken));
+                gaxgrpc::CallSettings.FromCancellationToken(cancellationToken));
 
         /// <summary>
         /// Deletes a sink. If the sink has a unique `writer_identity`, then that
@@ -1313,9 +1313,9 @@ namespace Google.Cloud.Logging.V2
         /// </param>
         public virtual void DeleteSink(
             DeleteSinkRequest request,
-            CallSettings callSettings = null)
+            gaxgrpc::CallSettings callSettings = null)
         {
-            throw new NotImplementedException();
+            throw new s::NotImplementedException();
         }
 
         /// <summary>
@@ -1343,14 +1343,14 @@ namespace Google.Cloud.Logging.V2
         /// <returns>
         /// A pageable asynchronous sequence of <see cref="LogExclusion"/> resources.
         /// </returns>
-        public virtual PagedAsyncEnumerable<ListExclusionsResponse, LogExclusion> ListExclusionsAsync(
+        public virtual gax::PagedAsyncEnumerable<ListExclusionsResponse, LogExclusion> ListExclusionsAsync(
             ParentNameOneof parent,
             string pageToken = null,
             int? pageSize = null,
-            CallSettings callSettings = null) => ListExclusionsAsync(
+            gaxgrpc::CallSettings callSettings = null) => ListExclusionsAsync(
                 new ListExclusionsRequest
                 {
-                    ParentAsParentNameOneof = GaxPreconditions.CheckNotNull(parent, nameof(parent)),
+                    ParentAsParentNameOneof = gax::GaxPreconditions.CheckNotNull(parent, nameof(parent)),
                     PageToken = pageToken ?? "",
                     PageSize = pageSize ?? 0,
                 },
@@ -1381,14 +1381,14 @@ namespace Google.Cloud.Logging.V2
         /// <returns>
         /// A pageable sequence of <see cref="LogExclusion"/> resources.
         /// </returns>
-        public virtual PagedEnumerable<ListExclusionsResponse, LogExclusion> ListExclusions(
+        public virtual gax::PagedEnumerable<ListExclusionsResponse, LogExclusion> ListExclusions(
             ParentNameOneof parent,
             string pageToken = null,
             int? pageSize = null,
-            CallSettings callSettings = null) => ListExclusions(
+            gaxgrpc::CallSettings callSettings = null) => ListExclusions(
                 new ListExclusionsRequest
                 {
-                    ParentAsParentNameOneof = GaxPreconditions.CheckNotNull(parent, nameof(parent)),
+                    ParentAsParentNameOneof = gax::GaxPreconditions.CheckNotNull(parent, nameof(parent)),
                     PageToken = pageToken ?? "",
                     PageSize = pageSize ?? 0,
                 },
@@ -1406,11 +1406,11 @@ namespace Google.Cloud.Logging.V2
         /// <returns>
         /// A pageable asynchronous sequence of <see cref="LogExclusion"/> resources.
         /// </returns>
-        public virtual PagedAsyncEnumerable<ListExclusionsResponse, LogExclusion> ListExclusionsAsync(
+        public virtual gax::PagedAsyncEnumerable<ListExclusionsResponse, LogExclusion> ListExclusionsAsync(
             ListExclusionsRequest request,
-            CallSettings callSettings = null)
+            gaxgrpc::CallSettings callSettings = null)
         {
-            throw new NotImplementedException();
+            throw new s::NotImplementedException();
         }
 
         /// <summary>
@@ -1425,11 +1425,11 @@ namespace Google.Cloud.Logging.V2
         /// <returns>
         /// A pageable sequence of <see cref="LogExclusion"/> resources.
         /// </returns>
-        public virtual PagedEnumerable<ListExclusionsResponse, LogExclusion> ListExclusions(
+        public virtual gax::PagedEnumerable<ListExclusionsResponse, LogExclusion> ListExclusions(
             ListExclusionsRequest request,
-            CallSettings callSettings = null)
+            gaxgrpc::CallSettings callSettings = null)
         {
-            throw new NotImplementedException();
+            throw new s::NotImplementedException();
         }
 
         /// <summary>
@@ -1451,12 +1451,12 @@ namespace Google.Cloud.Logging.V2
         /// <returns>
         /// A Task containing the RPC response.
         /// </returns>
-        public virtual Task<LogExclusion> GetExclusionAsync(
+        public virtual stt::Task<LogExclusion> GetExclusionAsync(
             ExclusionNameOneof name,
-            CallSettings callSettings = null) => GetExclusionAsync(
+            gaxgrpc::CallSettings callSettings = null) => GetExclusionAsync(
                 new GetExclusionRequest
                 {
-                    ExclusionNameOneof = GaxPreconditions.CheckNotNull(name, nameof(name)),
+                    ExclusionNameOneof = gax::GaxPreconditions.CheckNotNull(name, nameof(name)),
                 },
                 callSettings);
 
@@ -1474,16 +1474,16 @@ namespace Google.Cloud.Logging.V2
         /// Example: `"projects/my-project-id/exclusions/my-exclusion-id"`.
         /// </param>
         /// <param name="cancellationToken">
-        /// A <see cref="CancellationToken"/> to use for this RPC.
+        /// A <see cref="st::CancellationToken"/> to use for this RPC.
         /// </param>
         /// <returns>
         /// A Task containing the RPC response.
         /// </returns>
-        public virtual Task<LogExclusion> GetExclusionAsync(
+        public virtual stt::Task<LogExclusion> GetExclusionAsync(
             ExclusionNameOneof name,
-            CancellationToken cancellationToken) => GetExclusionAsync(
+            st::CancellationToken cancellationToken) => GetExclusionAsync(
                 name,
-                CallSettings.FromCancellationToken(cancellationToken));
+                gaxgrpc::CallSettings.FromCancellationToken(cancellationToken));
 
         /// <summary>
         /// Gets the description of an exclusion.
@@ -1506,10 +1506,10 @@ namespace Google.Cloud.Logging.V2
         /// </returns>
         public virtual LogExclusion GetExclusion(
             ExclusionNameOneof name,
-            CallSettings callSettings = null) => GetExclusion(
+            gaxgrpc::CallSettings callSettings = null) => GetExclusion(
                 new GetExclusionRequest
                 {
-                    ExclusionNameOneof = GaxPreconditions.CheckNotNull(name, nameof(name)),
+                    ExclusionNameOneof = gax::GaxPreconditions.CheckNotNull(name, nameof(name)),
                 },
                 callSettings);
 
@@ -1525,11 +1525,11 @@ namespace Google.Cloud.Logging.V2
         /// <returns>
         /// A Task containing the RPC response.
         /// </returns>
-        public virtual Task<LogExclusion> GetExclusionAsync(
+        public virtual stt::Task<LogExclusion> GetExclusionAsync(
             GetExclusionRequest request,
-            CallSettings callSettings = null)
+            gaxgrpc::CallSettings callSettings = null)
         {
-            throw new NotImplementedException();
+            throw new s::NotImplementedException();
         }
 
         /// <summary>
@@ -1539,16 +1539,16 @@ namespace Google.Cloud.Logging.V2
         /// The request object containing all of the parameters for the API call.
         /// </param>
         /// <param name="cancellationToken">
-        /// A <see cref="CancellationToken"/> to use for this RPC.
+        /// A <see cref="st::CancellationToken"/> to use for this RPC.
         /// </param>
         /// <returns>
         /// A Task containing the RPC response.
         /// </returns>
-        public virtual Task<LogExclusion> GetExclusionAsync(
+        public virtual stt::Task<LogExclusion> GetExclusionAsync(
             GetExclusionRequest request,
-            CancellationToken cancellationToken) => GetExclusionAsync(
+            st::CancellationToken cancellationToken) => GetExclusionAsync(
                 request,
-                CallSettings.FromCancellationToken(cancellationToken));
+                gaxgrpc::CallSettings.FromCancellationToken(cancellationToken));
 
         /// <summary>
         /// Gets the description of an exclusion.
@@ -1564,9 +1564,9 @@ namespace Google.Cloud.Logging.V2
         /// </returns>
         public virtual LogExclusion GetExclusion(
             GetExclusionRequest request,
-            CallSettings callSettings = null)
+            gaxgrpc::CallSettings callSettings = null)
         {
-            throw new NotImplementedException();
+            throw new s::NotImplementedException();
         }
 
         /// <summary>
@@ -1594,14 +1594,14 @@ namespace Google.Cloud.Logging.V2
         /// <returns>
         /// A Task containing the RPC response.
         /// </returns>
-        public virtual Task<LogExclusion> CreateExclusionAsync(
+        public virtual stt::Task<LogExclusion> CreateExclusionAsync(
             ParentNameOneof parent,
             LogExclusion exclusion,
-            CallSettings callSettings = null) => CreateExclusionAsync(
+            gaxgrpc::CallSettings callSettings = null) => CreateExclusionAsync(
                 new CreateExclusionRequest
                 {
-                    ParentAsParentNameOneof = GaxPreconditions.CheckNotNull(parent, nameof(parent)),
-                    Exclusion = GaxPreconditions.CheckNotNull(exclusion, nameof(exclusion)),
+                    ParentAsParentNameOneof = gax::GaxPreconditions.CheckNotNull(parent, nameof(parent)),
+                    Exclusion = gax::GaxPreconditions.CheckNotNull(exclusion, nameof(exclusion)),
                 },
                 callSettings);
 
@@ -1625,18 +1625,18 @@ namespace Google.Cloud.Logging.V2
         /// that is not already used in the parent resource.
         /// </param>
         /// <param name="cancellationToken">
-        /// A <see cref="CancellationToken"/> to use for this RPC.
+        /// A <see cref="st::CancellationToken"/> to use for this RPC.
         /// </param>
         /// <returns>
         /// A Task containing the RPC response.
         /// </returns>
-        public virtual Task<LogExclusion> CreateExclusionAsync(
+        public virtual stt::Task<LogExclusion> CreateExclusionAsync(
             ParentNameOneof parent,
             LogExclusion exclusion,
-            CancellationToken cancellationToken) => CreateExclusionAsync(
+            st::CancellationToken cancellationToken) => CreateExclusionAsync(
                 parent,
                 exclusion,
-                CallSettings.FromCancellationToken(cancellationToken));
+                gaxgrpc::CallSettings.FromCancellationToken(cancellationToken));
 
         /// <summary>
         /// Creates a new exclusion in a specified parent resource.
@@ -1666,11 +1666,11 @@ namespace Google.Cloud.Logging.V2
         public virtual LogExclusion CreateExclusion(
             ParentNameOneof parent,
             LogExclusion exclusion,
-            CallSettings callSettings = null) => CreateExclusion(
+            gaxgrpc::CallSettings callSettings = null) => CreateExclusion(
                 new CreateExclusionRequest
                 {
-                    ParentAsParentNameOneof = GaxPreconditions.CheckNotNull(parent, nameof(parent)),
-                    Exclusion = GaxPreconditions.CheckNotNull(exclusion, nameof(exclusion)),
+                    ParentAsParentNameOneof = gax::GaxPreconditions.CheckNotNull(parent, nameof(parent)),
+                    Exclusion = gax::GaxPreconditions.CheckNotNull(exclusion, nameof(exclusion)),
                 },
                 callSettings);
 
@@ -1688,11 +1688,11 @@ namespace Google.Cloud.Logging.V2
         /// <returns>
         /// A Task containing the RPC response.
         /// </returns>
-        public virtual Task<LogExclusion> CreateExclusionAsync(
+        public virtual stt::Task<LogExclusion> CreateExclusionAsync(
             CreateExclusionRequest request,
-            CallSettings callSettings = null)
+            gaxgrpc::CallSettings callSettings = null)
         {
-            throw new NotImplementedException();
+            throw new s::NotImplementedException();
         }
 
         /// <summary>
@@ -1704,16 +1704,16 @@ namespace Google.Cloud.Logging.V2
         /// The request object containing all of the parameters for the API call.
         /// </param>
         /// <param name="cancellationToken">
-        /// A <see cref="CancellationToken"/> to use for this RPC.
+        /// A <see cref="st::CancellationToken"/> to use for this RPC.
         /// </param>
         /// <returns>
         /// A Task containing the RPC response.
         /// </returns>
-        public virtual Task<LogExclusion> CreateExclusionAsync(
+        public virtual stt::Task<LogExclusion> CreateExclusionAsync(
             CreateExclusionRequest request,
-            CancellationToken cancellationToken) => CreateExclusionAsync(
+            st::CancellationToken cancellationToken) => CreateExclusionAsync(
                 request,
-                CallSettings.FromCancellationToken(cancellationToken));
+                gaxgrpc::CallSettings.FromCancellationToken(cancellationToken));
 
         /// <summary>
         /// Creates a new exclusion in a specified parent resource.
@@ -1731,9 +1731,9 @@ namespace Google.Cloud.Logging.V2
         /// </returns>
         public virtual LogExclusion CreateExclusion(
             CreateExclusionRequest request,
-            CallSettings callSettings = null)
+            gaxgrpc::CallSettings callSettings = null)
         {
-            throw new NotImplementedException();
+            throw new s::NotImplementedException();
         }
 
         /// <summary>
@@ -1768,16 +1768,16 @@ namespace Google.Cloud.Logging.V2
         /// <returns>
         /// A Task containing the RPC response.
         /// </returns>
-        public virtual Task<LogExclusion> UpdateExclusionAsync(
+        public virtual stt::Task<LogExclusion> UpdateExclusionAsync(
             ExclusionNameOneof name,
             LogExclusion exclusion,
-            FieldMask updateMask,
-            CallSettings callSettings = null) => UpdateExclusionAsync(
+            protowkt::FieldMask updateMask,
+            gaxgrpc::CallSettings callSettings = null) => UpdateExclusionAsync(
                 new UpdateExclusionRequest
                 {
-                    ExclusionNameOneof = GaxPreconditions.CheckNotNull(name, nameof(name)),
-                    Exclusion = GaxPreconditions.CheckNotNull(exclusion, nameof(exclusion)),
-                    UpdateMask = GaxPreconditions.CheckNotNull(updateMask, nameof(updateMask)),
+                    ExclusionNameOneof = gax::GaxPreconditions.CheckNotNull(name, nameof(name)),
+                    Exclusion = gax::GaxPreconditions.CheckNotNull(exclusion, nameof(exclusion)),
+                    UpdateMask = gax::GaxPreconditions.CheckNotNull(updateMask, nameof(updateMask)),
                 },
                 callSettings);
 
@@ -1808,20 +1808,20 @@ namespace Google.Cloud.Logging.V2
         /// specify an `update_mask` of `"filter,description"`.
         /// </param>
         /// <param name="cancellationToken">
-        /// A <see cref="CancellationToken"/> to use for this RPC.
+        /// A <see cref="st::CancellationToken"/> to use for this RPC.
         /// </param>
         /// <returns>
         /// A Task containing the RPC response.
         /// </returns>
-        public virtual Task<LogExclusion> UpdateExclusionAsync(
+        public virtual stt::Task<LogExclusion> UpdateExclusionAsync(
             ExclusionNameOneof name,
             LogExclusion exclusion,
-            FieldMask updateMask,
-            CancellationToken cancellationToken) => UpdateExclusionAsync(
+            protowkt::FieldMask updateMask,
+            st::CancellationToken cancellationToken) => UpdateExclusionAsync(
                 name,
                 exclusion,
                 updateMask,
-                CallSettings.FromCancellationToken(cancellationToken));
+                gaxgrpc::CallSettings.FromCancellationToken(cancellationToken));
 
         /// <summary>
         /// Changes one or more properties of an existing exclusion.
@@ -1858,13 +1858,13 @@ namespace Google.Cloud.Logging.V2
         public virtual LogExclusion UpdateExclusion(
             ExclusionNameOneof name,
             LogExclusion exclusion,
-            FieldMask updateMask,
-            CallSettings callSettings = null) => UpdateExclusion(
+            protowkt::FieldMask updateMask,
+            gaxgrpc::CallSettings callSettings = null) => UpdateExclusion(
                 new UpdateExclusionRequest
                 {
-                    ExclusionNameOneof = GaxPreconditions.CheckNotNull(name, nameof(name)),
-                    Exclusion = GaxPreconditions.CheckNotNull(exclusion, nameof(exclusion)),
-                    UpdateMask = GaxPreconditions.CheckNotNull(updateMask, nameof(updateMask)),
+                    ExclusionNameOneof = gax::GaxPreconditions.CheckNotNull(name, nameof(name)),
+                    Exclusion = gax::GaxPreconditions.CheckNotNull(exclusion, nameof(exclusion)),
+                    UpdateMask = gax::GaxPreconditions.CheckNotNull(updateMask, nameof(updateMask)),
                 },
                 callSettings);
 
@@ -1880,11 +1880,11 @@ namespace Google.Cloud.Logging.V2
         /// <returns>
         /// A Task containing the RPC response.
         /// </returns>
-        public virtual Task<LogExclusion> UpdateExclusionAsync(
+        public virtual stt::Task<LogExclusion> UpdateExclusionAsync(
             UpdateExclusionRequest request,
-            CallSettings callSettings = null)
+            gaxgrpc::CallSettings callSettings = null)
         {
-            throw new NotImplementedException();
+            throw new s::NotImplementedException();
         }
 
         /// <summary>
@@ -1894,16 +1894,16 @@ namespace Google.Cloud.Logging.V2
         /// The request object containing all of the parameters for the API call.
         /// </param>
         /// <param name="cancellationToken">
-        /// A <see cref="CancellationToken"/> to use for this RPC.
+        /// A <see cref="st::CancellationToken"/> to use for this RPC.
         /// </param>
         /// <returns>
         /// A Task containing the RPC response.
         /// </returns>
-        public virtual Task<LogExclusion> UpdateExclusionAsync(
+        public virtual stt::Task<LogExclusion> UpdateExclusionAsync(
             UpdateExclusionRequest request,
-            CancellationToken cancellationToken) => UpdateExclusionAsync(
+            st::CancellationToken cancellationToken) => UpdateExclusionAsync(
                 request,
-                CallSettings.FromCancellationToken(cancellationToken));
+                gaxgrpc::CallSettings.FromCancellationToken(cancellationToken));
 
         /// <summary>
         /// Changes one or more properties of an existing exclusion.
@@ -1919,9 +1919,9 @@ namespace Google.Cloud.Logging.V2
         /// </returns>
         public virtual LogExclusion UpdateExclusion(
             UpdateExclusionRequest request,
-            CallSettings callSettings = null)
+            gaxgrpc::CallSettings callSettings = null)
         {
-            throw new NotImplementedException();
+            throw new s::NotImplementedException();
         }
 
         /// <summary>
@@ -1943,12 +1943,12 @@ namespace Google.Cloud.Logging.V2
         /// <returns>
         /// A Task that completes when the RPC has completed.
         /// </returns>
-        public virtual Task DeleteExclusionAsync(
+        public virtual stt::Task DeleteExclusionAsync(
             ExclusionNameOneof name,
-            CallSettings callSettings = null) => DeleteExclusionAsync(
+            gaxgrpc::CallSettings callSettings = null) => DeleteExclusionAsync(
                 new DeleteExclusionRequest
                 {
-                    ExclusionNameOneof = GaxPreconditions.CheckNotNull(name, nameof(name)),
+                    ExclusionNameOneof = gax::GaxPreconditions.CheckNotNull(name, nameof(name)),
                 },
                 callSettings);
 
@@ -1966,16 +1966,16 @@ namespace Google.Cloud.Logging.V2
         /// Example: `"projects/my-project-id/exclusions/my-exclusion-id"`.
         /// </param>
         /// <param name="cancellationToken">
-        /// A <see cref="CancellationToken"/> to use for this RPC.
+        /// A <see cref="st::CancellationToken"/> to use for this RPC.
         /// </param>
         /// <returns>
         /// A Task that completes when the RPC has completed.
         /// </returns>
-        public virtual Task DeleteExclusionAsync(
+        public virtual stt::Task DeleteExclusionAsync(
             ExclusionNameOneof name,
-            CancellationToken cancellationToken) => DeleteExclusionAsync(
+            st::CancellationToken cancellationToken) => DeleteExclusionAsync(
                 name,
-                CallSettings.FromCancellationToken(cancellationToken));
+                gaxgrpc::CallSettings.FromCancellationToken(cancellationToken));
 
         /// <summary>
         /// Deletes an exclusion.
@@ -1995,10 +1995,10 @@ namespace Google.Cloud.Logging.V2
         /// </param>
         public virtual void DeleteExclusion(
             ExclusionNameOneof name,
-            CallSettings callSettings = null) => DeleteExclusion(
+            gaxgrpc::CallSettings callSettings = null) => DeleteExclusion(
                 new DeleteExclusionRequest
                 {
-                    ExclusionNameOneof = GaxPreconditions.CheckNotNull(name, nameof(name)),
+                    ExclusionNameOneof = gax::GaxPreconditions.CheckNotNull(name, nameof(name)),
                 },
                 callSettings);
 
@@ -2014,11 +2014,11 @@ namespace Google.Cloud.Logging.V2
         /// <returns>
         /// A Task that completes when the RPC has completed.
         /// </returns>
-        public virtual Task DeleteExclusionAsync(
+        public virtual stt::Task DeleteExclusionAsync(
             DeleteExclusionRequest request,
-            CallSettings callSettings = null)
+            gaxgrpc::CallSettings callSettings = null)
         {
-            throw new NotImplementedException();
+            throw new s::NotImplementedException();
         }
 
         /// <summary>
@@ -2028,16 +2028,16 @@ namespace Google.Cloud.Logging.V2
         /// The request object containing all of the parameters for the API call.
         /// </param>
         /// <param name="cancellationToken">
-        /// A <see cref="CancellationToken"/> to use for this RPC.
+        /// A <see cref="st::CancellationToken"/> to use for this RPC.
         /// </param>
         /// <returns>
         /// A Task that completes when the RPC has completed.
         /// </returns>
-        public virtual Task DeleteExclusionAsync(
+        public virtual stt::Task DeleteExclusionAsync(
             DeleteExclusionRequest request,
-            CancellationToken cancellationToken) => DeleteExclusionAsync(
+            st::CancellationToken cancellationToken) => DeleteExclusionAsync(
                 request,
-                CallSettings.FromCancellationToken(cancellationToken));
+                gaxgrpc::CallSettings.FromCancellationToken(cancellationToken));
 
         /// <summary>
         /// Deletes an exclusion.
@@ -2050,9 +2050,9 @@ namespace Google.Cloud.Logging.V2
         /// </param>
         public virtual void DeleteExclusion(
             DeleteExclusionRequest request,
-            CallSettings callSettings = null)
+            gaxgrpc::CallSettings callSettings = null)
         {
-            throw new NotImplementedException();
+            throw new s::NotImplementedException();
         }
 
     }
@@ -2062,16 +2062,16 @@ namespace Google.Cloud.Logging.V2
     /// </summary>
     public sealed partial class ConfigServiceV2ClientImpl : ConfigServiceV2Client
     {
-        private readonly ApiCall<ListSinksRequest, ListSinksResponse> _callListSinks;
-        private readonly ApiCall<GetSinkRequest, LogSink> _callGetSink;
-        private readonly ApiCall<CreateSinkRequest, LogSink> _callCreateSink;
-        private readonly ApiCall<UpdateSinkRequest, LogSink> _callUpdateSink;
-        private readonly ApiCall<DeleteSinkRequest, Empty> _callDeleteSink;
-        private readonly ApiCall<ListExclusionsRequest, ListExclusionsResponse> _callListExclusions;
-        private readonly ApiCall<GetExclusionRequest, LogExclusion> _callGetExclusion;
-        private readonly ApiCall<CreateExclusionRequest, LogExclusion> _callCreateExclusion;
-        private readonly ApiCall<UpdateExclusionRequest, LogExclusion> _callUpdateExclusion;
-        private readonly ApiCall<DeleteExclusionRequest, Empty> _callDeleteExclusion;
+        private readonly gaxgrpc::ApiCall<ListSinksRequest, ListSinksResponse> _callListSinks;
+        private readonly gaxgrpc::ApiCall<GetSinkRequest, LogSink> _callGetSink;
+        private readonly gaxgrpc::ApiCall<CreateSinkRequest, LogSink> _callCreateSink;
+        private readonly gaxgrpc::ApiCall<UpdateSinkRequest, LogSink> _callUpdateSink;
+        private readonly gaxgrpc::ApiCall<DeleteSinkRequest, protowkt::Empty> _callDeleteSink;
+        private readonly gaxgrpc::ApiCall<ListExclusionsRequest, ListExclusionsResponse> _callListExclusions;
+        private readonly gaxgrpc::ApiCall<GetExclusionRequest, LogExclusion> _callGetExclusion;
+        private readonly gaxgrpc::ApiCall<CreateExclusionRequest, LogExclusion> _callCreateExclusion;
+        private readonly gaxgrpc::ApiCall<UpdateExclusionRequest, LogExclusion> _callUpdateExclusion;
+        private readonly gaxgrpc::ApiCall<DeleteExclusionRequest, protowkt::Empty> _callDeleteExclusion;
 
         /// <summary>
         /// Constructs a client wrapper for the ConfigServiceV2 service, with the specified gRPC client and settings.
@@ -2082,7 +2082,7 @@ namespace Google.Cloud.Logging.V2
         {
             GrpcClient = grpcClient;
             ConfigServiceV2Settings effectiveSettings = settings ?? ConfigServiceV2Settings.GetDefault();
-            ClientHelper clientHelper = new ClientHelper(effectiveSettings);
+            gaxgrpc::ClientHelper clientHelper = new gaxgrpc::ClientHelper(effectiveSettings);
             _callListSinks = clientHelper.BuildApiCall<ListSinksRequest, ListSinksResponse>(
                 GrpcClient.ListSinksAsync, GrpcClient.ListSinks, effectiveSettings.ListSinksSettings);
             _callGetSink = clientHelper.BuildApiCall<GetSinkRequest, LogSink>(
@@ -2091,7 +2091,7 @@ namespace Google.Cloud.Logging.V2
                 GrpcClient.CreateSinkAsync, GrpcClient.CreateSink, effectiveSettings.CreateSinkSettings);
             _callUpdateSink = clientHelper.BuildApiCall<UpdateSinkRequest, LogSink>(
                 GrpcClient.UpdateSinkAsync, GrpcClient.UpdateSink, effectiveSettings.UpdateSinkSettings);
-            _callDeleteSink = clientHelper.BuildApiCall<DeleteSinkRequest, Empty>(
+            _callDeleteSink = clientHelper.BuildApiCall<DeleteSinkRequest, protowkt::Empty>(
                 GrpcClient.DeleteSinkAsync, GrpcClient.DeleteSink, effectiveSettings.DeleteSinkSettings);
             _callListExclusions = clientHelper.BuildApiCall<ListExclusionsRequest, ListExclusionsResponse>(
                 GrpcClient.ListExclusionsAsync, GrpcClient.ListExclusions, effectiveSettings.ListExclusionsSettings);
@@ -2101,7 +2101,7 @@ namespace Google.Cloud.Logging.V2
                 GrpcClient.CreateExclusionAsync, GrpcClient.CreateExclusion, effectiveSettings.CreateExclusionSettings);
             _callUpdateExclusion = clientHelper.BuildApiCall<UpdateExclusionRequest, LogExclusion>(
                 GrpcClient.UpdateExclusionAsync, GrpcClient.UpdateExclusion, effectiveSettings.UpdateExclusionSettings);
-            _callDeleteExclusion = clientHelper.BuildApiCall<DeleteExclusionRequest, Empty>(
+            _callDeleteExclusion = clientHelper.BuildApiCall<DeleteExclusionRequest, protowkt::Empty>(
                 GrpcClient.DeleteExclusionAsync, GrpcClient.DeleteExclusion, effectiveSettings.DeleteExclusionSettings);
             Modify_ApiCall(ref _callListSinks);
             Modify_ListSinksApiCall(ref _callListSinks);
@@ -2130,23 +2130,23 @@ namespace Google.Cloud.Logging.V2
 
         // Partial methods called for every ApiCall on construction.
         // Allows modification of all the underlying ApiCall objects.
-        partial void Modify_ApiCall<TRequest, TResponse>(ref ApiCall<TRequest, TResponse> call)
-            where TRequest : class, IMessage<TRequest>
-            where TResponse : class, IMessage<TResponse>;
+        partial void Modify_ApiCall<TRequest, TResponse>(ref gaxgrpc::ApiCall<TRequest, TResponse> call)
+            where TRequest : class, proto::IMessage<TRequest>
+            where TResponse : class, proto::IMessage<TResponse>;
 
         // Partial methods called for each ApiCall on construction.
         // Allows per-RPC-method modification of the underlying ApiCall object.
-        partial void Modify_ListSinksApiCall(ref ApiCall<ListSinksRequest, ListSinksResponse> call);
-        partial void Modify_GetSinkApiCall(ref ApiCall<GetSinkRequest, LogSink> call);
-        partial void Modify_CreateSinkApiCall(ref ApiCall<CreateSinkRequest, LogSink> call);
-        partial void Modify_UpdateSinkApiCall(ref ApiCall<UpdateSinkRequest, LogSink> call);
-        partial void Modify_DeleteSinkApiCall(ref ApiCall<DeleteSinkRequest, Empty> call);
-        partial void Modify_ListExclusionsApiCall(ref ApiCall<ListExclusionsRequest, ListExclusionsResponse> call);
-        partial void Modify_GetExclusionApiCall(ref ApiCall<GetExclusionRequest, LogExclusion> call);
-        partial void Modify_CreateExclusionApiCall(ref ApiCall<CreateExclusionRequest, LogExclusion> call);
-        partial void Modify_UpdateExclusionApiCall(ref ApiCall<UpdateExclusionRequest, LogExclusion> call);
-        partial void Modify_DeleteExclusionApiCall(ref ApiCall<DeleteExclusionRequest, Empty> call);
-        partial void OnConstruction(ConfigServiceV2.ConfigServiceV2Client grpcClient, ConfigServiceV2Settings effectiveSettings, ClientHelper clientHelper);
+        partial void Modify_ListSinksApiCall(ref gaxgrpc::ApiCall<ListSinksRequest, ListSinksResponse> call);
+        partial void Modify_GetSinkApiCall(ref gaxgrpc::ApiCall<GetSinkRequest, LogSink> call);
+        partial void Modify_CreateSinkApiCall(ref gaxgrpc::ApiCall<CreateSinkRequest, LogSink> call);
+        partial void Modify_UpdateSinkApiCall(ref gaxgrpc::ApiCall<UpdateSinkRequest, LogSink> call);
+        partial void Modify_DeleteSinkApiCall(ref gaxgrpc::ApiCall<DeleteSinkRequest, protowkt::Empty> call);
+        partial void Modify_ListExclusionsApiCall(ref gaxgrpc::ApiCall<ListExclusionsRequest, ListExclusionsResponse> call);
+        partial void Modify_GetExclusionApiCall(ref gaxgrpc::ApiCall<GetExclusionRequest, LogExclusion> call);
+        partial void Modify_CreateExclusionApiCall(ref gaxgrpc::ApiCall<CreateExclusionRequest, LogExclusion> call);
+        partial void Modify_UpdateExclusionApiCall(ref gaxgrpc::ApiCall<UpdateExclusionRequest, LogExclusion> call);
+        partial void Modify_DeleteExclusionApiCall(ref gaxgrpc::ApiCall<DeleteExclusionRequest, protowkt::Empty> call);
+        partial void OnConstruction(ConfigServiceV2.ConfigServiceV2Client grpcClient, ConfigServiceV2Settings effectiveSettings, gaxgrpc::ClientHelper clientHelper);
 
         /// <summary>
         /// The underlying gRPC ConfigServiceV2 client.
@@ -2156,16 +2156,16 @@ namespace Google.Cloud.Logging.V2
         // Partial methods called on each request.
         // Allows per-RPC-call modification to the request and CallSettings objects,
         // before the underlying RPC is performed.
-        partial void Modify_ListSinksRequest(ref ListSinksRequest request, ref CallSettings settings);
-        partial void Modify_GetSinkRequest(ref GetSinkRequest request, ref CallSettings settings);
-        partial void Modify_CreateSinkRequest(ref CreateSinkRequest request, ref CallSettings settings);
-        partial void Modify_UpdateSinkRequest(ref UpdateSinkRequest request, ref CallSettings settings);
-        partial void Modify_DeleteSinkRequest(ref DeleteSinkRequest request, ref CallSettings settings);
-        partial void Modify_ListExclusionsRequest(ref ListExclusionsRequest request, ref CallSettings settings);
-        partial void Modify_GetExclusionRequest(ref GetExclusionRequest request, ref CallSettings settings);
-        partial void Modify_CreateExclusionRequest(ref CreateExclusionRequest request, ref CallSettings settings);
-        partial void Modify_UpdateExclusionRequest(ref UpdateExclusionRequest request, ref CallSettings settings);
-        partial void Modify_DeleteExclusionRequest(ref DeleteExclusionRequest request, ref CallSettings settings);
+        partial void Modify_ListSinksRequest(ref ListSinksRequest request, ref gaxgrpc::CallSettings settings);
+        partial void Modify_GetSinkRequest(ref GetSinkRequest request, ref gaxgrpc::CallSettings settings);
+        partial void Modify_CreateSinkRequest(ref CreateSinkRequest request, ref gaxgrpc::CallSettings settings);
+        partial void Modify_UpdateSinkRequest(ref UpdateSinkRequest request, ref gaxgrpc::CallSettings settings);
+        partial void Modify_DeleteSinkRequest(ref DeleteSinkRequest request, ref gaxgrpc::CallSettings settings);
+        partial void Modify_ListExclusionsRequest(ref ListExclusionsRequest request, ref gaxgrpc::CallSettings settings);
+        partial void Modify_GetExclusionRequest(ref GetExclusionRequest request, ref gaxgrpc::CallSettings settings);
+        partial void Modify_CreateExclusionRequest(ref CreateExclusionRequest request, ref gaxgrpc::CallSettings settings);
+        partial void Modify_UpdateExclusionRequest(ref UpdateExclusionRequest request, ref gaxgrpc::CallSettings settings);
+        partial void Modify_DeleteExclusionRequest(ref DeleteExclusionRequest request, ref gaxgrpc::CallSettings settings);
 
         /// <summary>
         /// Lists sinks.
@@ -2179,12 +2179,12 @@ namespace Google.Cloud.Logging.V2
         /// <returns>
         /// A pageable asynchronous sequence of <see cref="LogSink"/> resources.
         /// </returns>
-        public override PagedAsyncEnumerable<ListSinksResponse, LogSink> ListSinksAsync(
+        public override gax::PagedAsyncEnumerable<ListSinksResponse, LogSink> ListSinksAsync(
             ListSinksRequest request,
-            CallSettings callSettings = null)
+            gaxgrpc::CallSettings callSettings = null)
         {
             Modify_ListSinksRequest(ref request, ref callSettings);
-            return new GrpcPagedAsyncEnumerable<ListSinksRequest, ListSinksResponse, LogSink>(_callListSinks, request, callSettings);
+            return new gaxgrpc::GrpcPagedAsyncEnumerable<ListSinksRequest, ListSinksResponse, LogSink>(_callListSinks, request, callSettings);
         }
 
         /// <summary>
@@ -2199,12 +2199,12 @@ namespace Google.Cloud.Logging.V2
         /// <returns>
         /// A pageable sequence of <see cref="LogSink"/> resources.
         /// </returns>
-        public override PagedEnumerable<ListSinksResponse, LogSink> ListSinks(
+        public override gax::PagedEnumerable<ListSinksResponse, LogSink> ListSinks(
             ListSinksRequest request,
-            CallSettings callSettings = null)
+            gaxgrpc::CallSettings callSettings = null)
         {
             Modify_ListSinksRequest(ref request, ref callSettings);
-            return new GrpcPagedEnumerable<ListSinksRequest, ListSinksResponse, LogSink>(_callListSinks, request, callSettings);
+            return new gaxgrpc::GrpcPagedEnumerable<ListSinksRequest, ListSinksResponse, LogSink>(_callListSinks, request, callSettings);
         }
 
         /// <summary>
@@ -2219,9 +2219,9 @@ namespace Google.Cloud.Logging.V2
         /// <returns>
         /// A Task containing the RPC response.
         /// </returns>
-        public override Task<LogSink> GetSinkAsync(
+        public override stt::Task<LogSink> GetSinkAsync(
             GetSinkRequest request,
-            CallSettings callSettings = null)
+            gaxgrpc::CallSettings callSettings = null)
         {
             Modify_GetSinkRequest(ref request, ref callSettings);
             return _callGetSink.Async(request, callSettings);
@@ -2241,7 +2241,7 @@ namespace Google.Cloud.Logging.V2
         /// </returns>
         public override LogSink GetSink(
             GetSinkRequest request,
-            CallSettings callSettings = null)
+            gaxgrpc::CallSettings callSettings = null)
         {
             Modify_GetSinkRequest(ref request, ref callSettings);
             return _callGetSink.Sync(request, callSettings);
@@ -2262,9 +2262,9 @@ namespace Google.Cloud.Logging.V2
         /// <returns>
         /// A Task containing the RPC response.
         /// </returns>
-        public override Task<LogSink> CreateSinkAsync(
+        public override stt::Task<LogSink> CreateSinkAsync(
             CreateSinkRequest request,
-            CallSettings callSettings = null)
+            gaxgrpc::CallSettings callSettings = null)
         {
             Modify_CreateSinkRequest(ref request, ref callSettings);
             return _callCreateSink.Async(request, callSettings);
@@ -2287,7 +2287,7 @@ namespace Google.Cloud.Logging.V2
         /// </returns>
         public override LogSink CreateSink(
             CreateSinkRequest request,
-            CallSettings callSettings = null)
+            gaxgrpc::CallSettings callSettings = null)
         {
             Modify_CreateSinkRequest(ref request, ref callSettings);
             return _callCreateSink.Sync(request, callSettings);
@@ -2308,9 +2308,9 @@ namespace Google.Cloud.Logging.V2
         /// <returns>
         /// A Task containing the RPC response.
         /// </returns>
-        public override Task<LogSink> UpdateSinkAsync(
+        public override stt::Task<LogSink> UpdateSinkAsync(
             UpdateSinkRequest request,
-            CallSettings callSettings = null)
+            gaxgrpc::CallSettings callSettings = null)
         {
             Modify_UpdateSinkRequest(ref request, ref callSettings);
             return _callUpdateSink.Async(request, callSettings);
@@ -2333,7 +2333,7 @@ namespace Google.Cloud.Logging.V2
         /// </returns>
         public override LogSink UpdateSink(
             UpdateSinkRequest request,
-            CallSettings callSettings = null)
+            gaxgrpc::CallSettings callSettings = null)
         {
             Modify_UpdateSinkRequest(ref request, ref callSettings);
             return _callUpdateSink.Sync(request, callSettings);
@@ -2352,9 +2352,9 @@ namespace Google.Cloud.Logging.V2
         /// <returns>
         /// A Task that completes when the RPC has completed.
         /// </returns>
-        public override Task DeleteSinkAsync(
+        public override stt::Task DeleteSinkAsync(
             DeleteSinkRequest request,
-            CallSettings callSettings = null)
+            gaxgrpc::CallSettings callSettings = null)
         {
             Modify_DeleteSinkRequest(ref request, ref callSettings);
             return _callDeleteSink.Async(request, callSettings);
@@ -2372,7 +2372,7 @@ namespace Google.Cloud.Logging.V2
         /// </param>
         public override void DeleteSink(
             DeleteSinkRequest request,
-            CallSettings callSettings = null)
+            gaxgrpc::CallSettings callSettings = null)
         {
             Modify_DeleteSinkRequest(ref request, ref callSettings);
             _callDeleteSink.Sync(request, callSettings);
@@ -2390,12 +2390,12 @@ namespace Google.Cloud.Logging.V2
         /// <returns>
         /// A pageable asynchronous sequence of <see cref="LogExclusion"/> resources.
         /// </returns>
-        public override PagedAsyncEnumerable<ListExclusionsResponse, LogExclusion> ListExclusionsAsync(
+        public override gax::PagedAsyncEnumerable<ListExclusionsResponse, LogExclusion> ListExclusionsAsync(
             ListExclusionsRequest request,
-            CallSettings callSettings = null)
+            gaxgrpc::CallSettings callSettings = null)
         {
             Modify_ListExclusionsRequest(ref request, ref callSettings);
-            return new GrpcPagedAsyncEnumerable<ListExclusionsRequest, ListExclusionsResponse, LogExclusion>(_callListExclusions, request, callSettings);
+            return new gaxgrpc::GrpcPagedAsyncEnumerable<ListExclusionsRequest, ListExclusionsResponse, LogExclusion>(_callListExclusions, request, callSettings);
         }
 
         /// <summary>
@@ -2410,12 +2410,12 @@ namespace Google.Cloud.Logging.V2
         /// <returns>
         /// A pageable sequence of <see cref="LogExclusion"/> resources.
         /// </returns>
-        public override PagedEnumerable<ListExclusionsResponse, LogExclusion> ListExclusions(
+        public override gax::PagedEnumerable<ListExclusionsResponse, LogExclusion> ListExclusions(
             ListExclusionsRequest request,
-            CallSettings callSettings = null)
+            gaxgrpc::CallSettings callSettings = null)
         {
             Modify_ListExclusionsRequest(ref request, ref callSettings);
-            return new GrpcPagedEnumerable<ListExclusionsRequest, ListExclusionsResponse, LogExclusion>(_callListExclusions, request, callSettings);
+            return new gaxgrpc::GrpcPagedEnumerable<ListExclusionsRequest, ListExclusionsResponse, LogExclusion>(_callListExclusions, request, callSettings);
         }
 
         /// <summary>
@@ -2430,9 +2430,9 @@ namespace Google.Cloud.Logging.V2
         /// <returns>
         /// A Task containing the RPC response.
         /// </returns>
-        public override Task<LogExclusion> GetExclusionAsync(
+        public override stt::Task<LogExclusion> GetExclusionAsync(
             GetExclusionRequest request,
-            CallSettings callSettings = null)
+            gaxgrpc::CallSettings callSettings = null)
         {
             Modify_GetExclusionRequest(ref request, ref callSettings);
             return _callGetExclusion.Async(request, callSettings);
@@ -2452,7 +2452,7 @@ namespace Google.Cloud.Logging.V2
         /// </returns>
         public override LogExclusion GetExclusion(
             GetExclusionRequest request,
-            CallSettings callSettings = null)
+            gaxgrpc::CallSettings callSettings = null)
         {
             Modify_GetExclusionRequest(ref request, ref callSettings);
             return _callGetExclusion.Sync(request, callSettings);
@@ -2472,9 +2472,9 @@ namespace Google.Cloud.Logging.V2
         /// <returns>
         /// A Task containing the RPC response.
         /// </returns>
-        public override Task<LogExclusion> CreateExclusionAsync(
+        public override stt::Task<LogExclusion> CreateExclusionAsync(
             CreateExclusionRequest request,
-            CallSettings callSettings = null)
+            gaxgrpc::CallSettings callSettings = null)
         {
             Modify_CreateExclusionRequest(ref request, ref callSettings);
             return _callCreateExclusion.Async(request, callSettings);
@@ -2496,7 +2496,7 @@ namespace Google.Cloud.Logging.V2
         /// </returns>
         public override LogExclusion CreateExclusion(
             CreateExclusionRequest request,
-            CallSettings callSettings = null)
+            gaxgrpc::CallSettings callSettings = null)
         {
             Modify_CreateExclusionRequest(ref request, ref callSettings);
             return _callCreateExclusion.Sync(request, callSettings);
@@ -2514,9 +2514,9 @@ namespace Google.Cloud.Logging.V2
         /// <returns>
         /// A Task containing the RPC response.
         /// </returns>
-        public override Task<LogExclusion> UpdateExclusionAsync(
+        public override stt::Task<LogExclusion> UpdateExclusionAsync(
             UpdateExclusionRequest request,
-            CallSettings callSettings = null)
+            gaxgrpc::CallSettings callSettings = null)
         {
             Modify_UpdateExclusionRequest(ref request, ref callSettings);
             return _callUpdateExclusion.Async(request, callSettings);
@@ -2536,7 +2536,7 @@ namespace Google.Cloud.Logging.V2
         /// </returns>
         public override LogExclusion UpdateExclusion(
             UpdateExclusionRequest request,
-            CallSettings callSettings = null)
+            gaxgrpc::CallSettings callSettings = null)
         {
             Modify_UpdateExclusionRequest(ref request, ref callSettings);
             return _callUpdateExclusion.Sync(request, callSettings);
@@ -2554,9 +2554,9 @@ namespace Google.Cloud.Logging.V2
         /// <returns>
         /// A Task that completes when the RPC has completed.
         /// </returns>
-        public override Task DeleteExclusionAsync(
+        public override stt::Task DeleteExclusionAsync(
             DeleteExclusionRequest request,
-            CallSettings callSettings = null)
+            gaxgrpc::CallSettings callSettings = null)
         {
             Modify_DeleteExclusionRequest(ref request, ref callSettings);
             return _callDeleteExclusion.Async(request, callSettings);
@@ -2573,7 +2573,7 @@ namespace Google.Cloud.Logging.V2
         /// </param>
         public override void DeleteExclusion(
             DeleteExclusionRequest request,
-            CallSettings callSettings = null)
+            gaxgrpc::CallSettings callSettings = null)
         {
             Modify_DeleteExclusionRequest(ref request, ref callSettings);
             _callDeleteExclusion.Sync(request, callSettings);
@@ -2583,28 +2583,28 @@ namespace Google.Cloud.Logging.V2
 
     // Partial classes to enable page-streaming
 
-    public partial class ListSinksRequest : IPageRequest { }
-    public partial class ListSinksResponse : IPageResponse<LogSink>
+    public partial class ListSinksRequest : gaxgrpc::IPageRequest { }
+    public partial class ListSinksResponse : gaxgrpc::IPageResponse<LogSink>
     {
         /// <summary>
         /// Returns an enumerator that iterates through the resources in this response.
         /// </summary>
-        public IEnumerator<LogSink> GetEnumerator() => Sinks.GetEnumerator();
+        public scg::IEnumerator<LogSink> GetEnumerator() => Sinks.GetEnumerator();
 
         /// <inheritdoc/>
-        IEnumerator IEnumerable.GetEnumerator() => GetEnumerator();
+        sc::IEnumerator sc::IEnumerable.GetEnumerator() => GetEnumerator();
     }
 
-    public partial class ListExclusionsRequest : IPageRequest { }
-    public partial class ListExclusionsResponse : IPageResponse<LogExclusion>
+    public partial class ListExclusionsRequest : gaxgrpc::IPageRequest { }
+    public partial class ListExclusionsResponse : gaxgrpc::IPageResponse<LogExclusion>
     {
         /// <summary>
         /// Returns an enumerator that iterates through the resources in this response.
         /// </summary>
-        public IEnumerator<LogExclusion> GetEnumerator() => Exclusions.GetEnumerator();
+        public scg::IEnumerator<LogExclusion> GetEnumerator() => Exclusions.GetEnumerator();
 
         /// <inheritdoc/>
-        IEnumerator IEnumerable.GetEnumerator() => GetEnumerator();
+        sc::IEnumerator sc::IEnumerable.GetEnumerator() => GetEnumerator();
     }
 
 

@@ -14,21 +14,22 @@
 
 // Generated code. DO NOT EDIT!
 
-using Google.Api.Gax;
-using Google.Api.Gax.Grpc;
-using Google.Protobuf.WellKnownTypes;
-using Grpc.Core;
-using Moq;
-using System;
-using System.Collections;
-using System.Collections.Generic;
-using System.Collections.ObjectModel;
-using System.Threading;
-using System.Threading.Tasks;
-using Xunit;
-
 namespace Google.Cloud.Trace.V2.Tests
 {
+    using Google.Api.Gax;
+    using Google.Api.Gax.Grpc;
+    using apis = Google.Cloud.Trace.V2;
+    using Google.Protobuf.WellKnownTypes;
+    using Grpc.Core;
+    using Moq;
+    using System;
+    using System.Collections;
+    using System.Collections.Generic;
+    using System.Collections.ObjectModel;
+    using System.Threading;
+    using System.Threading.Tasks;
+    using Xunit;
+
     /// <summary>Generated unit tests</summary>
     public class GeneratedTraceServiceClientTest
     {
@@ -46,7 +47,7 @@ namespace Google.Cloud.Trace.V2.Tests
                 .Returns(expectedResponse);
             TraceServiceClient client = new TraceServiceClientImpl(mockGrpcClient.Object, null);
             ProjectName name = new ProjectName("[PROJECT]");
-            IEnumerable<Span> spans = new List<Span>();
+            IEnumerable<apis::Span> spans = new List<apis::Span>();
             client.BatchWriteSpans(name, spans);
             mockGrpcClient.VerifyAll();
         }
@@ -65,7 +66,7 @@ namespace Google.Cloud.Trace.V2.Tests
                 .Returns(new Grpc.Core.AsyncUnaryCall<Empty>(Task.FromResult(expectedResponse), null, null, null, null));
             TraceServiceClient client = new TraceServiceClientImpl(mockGrpcClient.Object, null);
             ProjectName name = new ProjectName("[PROJECT]");
-            IEnumerable<Span> spans = new List<Span>();
+            IEnumerable<apis::Span> spans = new List<apis::Span>();
             await client.BatchWriteSpansAsync(name, spans);
             mockGrpcClient.VerifyAll();
         }
@@ -108,7 +109,7 @@ namespace Google.Cloud.Trace.V2.Tests
         public void CreateSpan()
         {
             Mock<TraceService.TraceServiceClient> mockGrpcClient = new Mock<TraceService.TraceServiceClient>(MockBehavior.Strict);
-            Span request = new Span
+            apis::Span request = new apis::Span
             {
                 SpanName = new SpanName("[PROJECT]", "[TRACE]", "[SPAN]"),
                 SpanId = "spanId-2011840976",
@@ -116,7 +117,7 @@ namespace Google.Cloud.Trace.V2.Tests
                 StartTime = new Timestamp(),
                 EndTime = new Timestamp(),
             };
-            Span expectedResponse = new Span
+            apis::Span expectedResponse = new apis::Span
             {
                 SpanName = new SpanName("[PROJECT]", "[TRACE]", "[SPAN]"),
                 SpanId = "spanId2-643891741",
@@ -125,7 +126,7 @@ namespace Google.Cloud.Trace.V2.Tests
             mockGrpcClient.Setup(x => x.CreateSpan(request, It.IsAny<CallOptions>()))
                 .Returns(expectedResponse);
             TraceServiceClient client = new TraceServiceClientImpl(mockGrpcClient.Object, null);
-            Span response = client.CreateSpan(request);
+            apis::Span response = client.CreateSpan(request);
             Assert.Same(expectedResponse, response);
             mockGrpcClient.VerifyAll();
         }
@@ -134,7 +135,7 @@ namespace Google.Cloud.Trace.V2.Tests
         public async Task CreateSpanAsync()
         {
             Mock<TraceService.TraceServiceClient> mockGrpcClient = new Mock<TraceService.TraceServiceClient>(MockBehavior.Strict);
-            Span request = new Span
+            apis::Span request = new apis::Span
             {
                 SpanName = new SpanName("[PROJECT]", "[TRACE]", "[SPAN]"),
                 SpanId = "spanId-2011840976",
@@ -142,16 +143,16 @@ namespace Google.Cloud.Trace.V2.Tests
                 StartTime = new Timestamp(),
                 EndTime = new Timestamp(),
             };
-            Span expectedResponse = new Span
+            apis::Span expectedResponse = new apis::Span
             {
                 SpanName = new SpanName("[PROJECT]", "[TRACE]", "[SPAN]"),
                 SpanId = "spanId2-643891741",
                 ParentSpanId = "parentSpanId-1757797477",
             };
             mockGrpcClient.Setup(x => x.CreateSpanAsync(request, It.IsAny<CallOptions>()))
-                .Returns(new Grpc.Core.AsyncUnaryCall<Span>(Task.FromResult(expectedResponse), null, null, null, null));
+                .Returns(new Grpc.Core.AsyncUnaryCall<apis::Span>(Task.FromResult(expectedResponse), null, null, null, null));
             TraceServiceClient client = new TraceServiceClientImpl(mockGrpcClient.Object, null);
-            Span response = await client.CreateSpanAsync(request);
+            apis::Span response = await client.CreateSpanAsync(request);
             Assert.Same(expectedResponse, response);
             mockGrpcClient.VerifyAll();
         }

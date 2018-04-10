@@ -14,22 +14,23 @@
 
 // Generated code. DO NOT EDIT!
 
-using Google.Api.Gax;
-using Google.Api.Gax.Grpc;
-using Google.Cloud.OsLogin.Common;
-using Google.Protobuf.WellKnownTypes;
-using Grpc.Core;
-using Moq;
-using System;
-using System.Collections;
-using System.Collections.Generic;
-using System.Collections.ObjectModel;
-using System.Threading;
-using System.Threading.Tasks;
-using Xunit;
-
 namespace Google.Cloud.OsLogin.V1Beta.Tests
 {
+    using Google.Api.Gax;
+    using Google.Api.Gax.Grpc;
+    using Google.Cloud.OsLogin.Common;
+    using apis = Google.Cloud.OsLogin.V1Beta;
+    using Google.Protobuf.WellKnownTypes;
+    using Grpc.Core;
+    using Moq;
+    using System;
+    using System.Collections;
+    using System.Collections.Generic;
+    using System.Collections.ObjectModel;
+    using System.Threading;
+    using System.Threading.Tasks;
+    using Xunit;
+
     /// <summary>Generated unit tests</summary>
     public class GeneratedOsLoginServiceClientTest
     {

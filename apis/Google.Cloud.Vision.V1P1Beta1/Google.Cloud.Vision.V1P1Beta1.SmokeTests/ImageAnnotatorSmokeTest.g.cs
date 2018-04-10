@@ -14,19 +14,19 @@
 
 // Generated code. DO NOT EDIT!
 
-using Google.Api.Gax;
-using Google.Api.Gax.Grpc;
-using Google.Protobuf.WellKnownTypes;
-using Grpc.Core;
-using System;
-using System.Collections;
-using System.Collections.Generic;
-using System.Collections.ObjectModel;
-using System.Threading;
-using System.Threading.Tasks;
-
 namespace Google.Cloud.Vision.V1P1Beta1.SmokeTests
 {
+    using Google.Api.Gax;
+    using Google.Api.Gax.Grpc;
+    using Google.Protobuf.WellKnownTypes;
+    using Grpc.Core;
+    using System;
+    using System.Collections;
+    using System.Collections.Generic;
+    using System.Collections.ObjectModel;
+    using System.Threading;
+    using System.Threading.Tasks;
+
     public class ImageAnnotatorSmokeTest
     {
         public static int Main(string[] args)

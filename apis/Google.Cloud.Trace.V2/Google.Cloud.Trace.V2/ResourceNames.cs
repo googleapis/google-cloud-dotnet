@@ -14,8 +14,8 @@
 
 // Generated code. DO NOT EDIT!
 
-using Google.Api.Gax;
-using System;
+using gax = Google.Api.Gax;
+using s = System;
 using System.Linq;
 
 namespace Google.Cloud.Trace.V2
@@ -23,9 +23,9 @@ namespace Google.Cloud.Trace.V2
     /// <summary>
     /// Resource name for the 'project' resource.
     /// </summary>
-    public sealed partial class ProjectName : IResourceName, IEquatable<ProjectName>
+    public sealed partial class ProjectName : gax::IResourceName, s::IEquatable<ProjectName>
     {
-        private static readonly PathTemplate s_template = new PathTemplate("projects/{project}");
+        private static readonly gax::PathTemplate s_template = new gax::PathTemplate("projects/{project}");
 
         /// <summary>
         /// Parses the given project resource name in string form into a new
@@ -35,8 +35,8 @@ namespace Google.Cloud.Trace.V2
         /// <returns>The parsed <see cref="ProjectName"/> if successful.</returns>
         public static ProjectName Parse(string projectName)
         {
-            GaxPreconditions.CheckNotNull(projectName, nameof(projectName));
-            TemplatedResourceName resourceName = s_template.ParseName(projectName);
+            gax::GaxPreconditions.CheckNotNull(projectName, nameof(projectName));
+            gax::TemplatedResourceName resourceName = s_template.ParseName(projectName);
             return new ProjectName(resourceName[0]);
         }
 
@@ -45,7 +45,7 @@ namespace Google.Cloud.Trace.V2
         /// <see cref="ProjectName"/> instance.
         /// </summary>
         /// <remarks>
-        /// This method still throws <see cref="ArgumentNullException"/> if <paramref name="projectName"/> is null,
+        /// This method still throws <see cref="s::ArgumentNullException"/> if <paramref name="projectName"/> is null,
         /// as this would usually indicate a programming error rather than a data error.
         /// </remarks>
         /// <param name="projectName">The project resource name in string form. Must not be <c>null</c>.</param>
@@ -54,8 +54,8 @@ namespace Google.Cloud.Trace.V2
         /// <returns><c>true</c> if the name was parsed succssfully; <c>false</c> otherwise.</returns>
         public static bool TryParse(string projectName, out ProjectName result)
         {
-            GaxPreconditions.CheckNotNull(projectName, nameof(projectName));
-            TemplatedResourceName resourceName;
+            gax::GaxPreconditions.CheckNotNull(projectName, nameof(projectName));
+            gax::TemplatedResourceName resourceName;
             if (s_template.TryParseName(projectName, out resourceName))
             {
                 result = new ProjectName(resourceName[0]);
@@ -75,7 +75,7 @@ namespace Google.Cloud.Trace.V2
         /// <param name="projectId">The project ID. Must not be <c>null</c>.</param>
         public ProjectName(string projectId)
         {
-            ProjectId = GaxPreconditions.CheckNotNull(projectId, nameof(projectId));
+            ProjectId = gax::GaxPreconditions.CheckNotNull(projectId, nameof(projectId));
         }
 
         /// <summary>
@@ -84,7 +84,7 @@ namespace Google.Cloud.Trace.V2
         public string ProjectId { get; }
 
         /// <inheritdoc />
-        public ResourceNameKind Kind => ResourceNameKind.Simple;
+        public gax::ResourceNameKind Kind => gax::ResourceNameKind.Simple;
 
         /// <inheritdoc />
         public override string ToString() => s_template.Expand(ProjectId);
@@ -108,9 +108,9 @@ namespace Google.Cloud.Trace.V2
     /// <summary>
     /// Resource name for the 'span' resource.
     /// </summary>
-    public sealed partial class SpanName : IResourceName, IEquatable<SpanName>
+    public sealed partial class SpanName : gax::IResourceName, s::IEquatable<SpanName>
     {
-        private static readonly PathTemplate s_template = new PathTemplate("projects/{project}/traces/{trace}/spans/{span}");
+        private static readonly gax::PathTemplate s_template = new gax::PathTemplate("projects/{project}/traces/{trace}/spans/{span}");
 
         /// <summary>
         /// Parses the given span resource name in string form into a new
@@ -120,8 +120,8 @@ namespace Google.Cloud.Trace.V2
         /// <returns>The parsed <see cref="SpanName"/> if successful.</returns>
         public static SpanName Parse(string spanName)
         {
-            GaxPreconditions.CheckNotNull(spanName, nameof(spanName));
-            TemplatedResourceName resourceName = s_template.ParseName(spanName);
+            gax::GaxPreconditions.CheckNotNull(spanName, nameof(spanName));
+            gax::TemplatedResourceName resourceName = s_template.ParseName(spanName);
             return new SpanName(resourceName[0], resourceName[1], resourceName[2]);
         }
 
@@ -130,7 +130,7 @@ namespace Google.Cloud.Trace.V2
         /// <see cref="SpanName"/> instance.
         /// </summary>
         /// <remarks>
-        /// This method still throws <see cref="ArgumentNullException"/> if <paramref name="spanName"/> is null,
+        /// This method still throws <see cref="s::ArgumentNullException"/> if <paramref name="spanName"/> is null,
         /// as this would usually indicate a programming error rather than a data error.
         /// </remarks>
         /// <param name="spanName">The span resource name in string form. Must not be <c>null</c>.</param>
@@ -139,8 +139,8 @@ namespace Google.Cloud.Trace.V2
         /// <returns><c>true</c> if the name was parsed succssfully; <c>false</c> otherwise.</returns>
         public static bool TryParse(string spanName, out SpanName result)
         {
-            GaxPreconditions.CheckNotNull(spanName, nameof(spanName));
-            TemplatedResourceName resourceName;
+            gax::GaxPreconditions.CheckNotNull(spanName, nameof(spanName));
+            gax::TemplatedResourceName resourceName;
             if (s_template.TryParseName(spanName, out resourceName))
             {
                 result = new SpanName(resourceName[0], resourceName[1], resourceName[2]);
@@ -162,9 +162,9 @@ namespace Google.Cloud.Trace.V2
         /// <param name="spanId">The span ID. Must not be <c>null</c>.</param>
         public SpanName(string projectId, string traceId, string spanId)
         {
-            ProjectId = GaxPreconditions.CheckNotNull(projectId, nameof(projectId));
-            TraceId = GaxPreconditions.CheckNotNull(traceId, nameof(traceId));
-            SpanId = GaxPreconditions.CheckNotNull(spanId, nameof(spanId));
+            ProjectId = gax::GaxPreconditions.CheckNotNull(projectId, nameof(projectId));
+            TraceId = gax::GaxPreconditions.CheckNotNull(traceId, nameof(traceId));
+            SpanId = gax::GaxPreconditions.CheckNotNull(spanId, nameof(spanId));
         }
 
         /// <summary>
@@ -183,7 +183,7 @@ namespace Google.Cloud.Trace.V2
         public string SpanId { get; }
 
         /// <inheritdoc />
-        public ResourceNameKind Kind => ResourceNameKind.Simple;
+        public gax::ResourceNameKind Kind => gax::ResourceNameKind.Simple;
 
         /// <inheritdoc />
         public override string ToString() => s_template.Expand(ProjectId, TraceId, SpanId);

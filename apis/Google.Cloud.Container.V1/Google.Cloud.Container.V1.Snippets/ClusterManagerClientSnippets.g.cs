@@ -14,22 +14,22 @@
 
 // Generated code. DO NOT EDIT!
 
-using Google.Api.Gax;
-using Google.Api.Gax.Grpc;
-using Google.Cloud.Container.V1;
-using Google.Protobuf;
-using Google.Protobuf.WellKnownTypes;
-using Grpc.Core;
-using System;
-using System.Collections;
-using System.Collections.Generic;
-using System.Collections.ObjectModel;
-using System.Linq;
-using System.Threading;
-using System.Threading.Tasks;
-
 namespace Google.Cloud.Container.V1.Snippets
 {
+    using Google.Api.Gax;
+    using Google.Api.Gax.Grpc;
+    using apis = Google.Cloud.Container.V1;
+    using Google.Protobuf;
+    using Google.Protobuf.WellKnownTypes;
+    using Grpc.Core;
+    using System;
+    using System.Collections;
+    using System.Collections.Generic;
+    using System.Collections.ObjectModel;
+    using System.Linq;
+    using System.Threading;
+    using System.Threading.Tasks;
+
     /// <summary>Generated snippets</summary>
     public class GeneratedClusterManagerClientSnippets
     {
@@ -177,7 +177,7 @@ namespace Google.Cloud.Container.V1.Snippets
             string zone = "";
             Cluster cluster = new Cluster();
             // Make the request
-            Operation response = await clusterManagerClient.CreateClusterAsync(projectId, zone, cluster);
+            apis::Operation response = await clusterManagerClient.CreateClusterAsync(projectId, zone, cluster);
             // End snippet
         }
 
@@ -192,7 +192,7 @@ namespace Google.Cloud.Container.V1.Snippets
             string zone = "";
             Cluster cluster = new Cluster();
             // Make the request
-            Operation response = clusterManagerClient.CreateCluster(projectId, zone, cluster);
+            apis::Operation response = clusterManagerClient.CreateCluster(projectId, zone, cluster);
             // End snippet
         }
 
@@ -211,7 +211,7 @@ namespace Google.Cloud.Container.V1.Snippets
                 Cluster = new Cluster(),
             };
             // Make the request
-            Operation response = await clusterManagerClient.CreateClusterAsync(request);
+            apis::Operation response = await clusterManagerClient.CreateClusterAsync(request);
             // End snippet
         }
 
@@ -229,7 +229,7 @@ namespace Google.Cloud.Container.V1.Snippets
                 Cluster = new Cluster(),
             };
             // Make the request
-            Operation response = clusterManagerClient.CreateCluster(request);
+            apis::Operation response = clusterManagerClient.CreateCluster(request);
             // End snippet
         }
 
@@ -246,7 +246,7 @@ namespace Google.Cloud.Container.V1.Snippets
             string clusterId = "";
             ClusterUpdate update = new ClusterUpdate();
             // Make the request
-            Operation response = await clusterManagerClient.UpdateClusterAsync(projectId, zone, clusterId, update);
+            apis::Operation response = await clusterManagerClient.UpdateClusterAsync(projectId, zone, clusterId, update);
             // End snippet
         }
 
@@ -262,7 +262,7 @@ namespace Google.Cloud.Container.V1.Snippets
             string clusterId = "";
             ClusterUpdate update = new ClusterUpdate();
             // Make the request
-            Operation response = clusterManagerClient.UpdateCluster(projectId, zone, clusterId, update);
+            apis::Operation response = clusterManagerClient.UpdateCluster(projectId, zone, clusterId, update);
             // End snippet
         }
 
@@ -282,7 +282,7 @@ namespace Google.Cloud.Container.V1.Snippets
                 Update = new ClusterUpdate(),
             };
             // Make the request
-            Operation response = await clusterManagerClient.UpdateClusterAsync(request);
+            apis::Operation response = await clusterManagerClient.UpdateClusterAsync(request);
             // End snippet
         }
 
@@ -301,7 +301,7 @@ namespace Google.Cloud.Container.V1.Snippets
                 Update = new ClusterUpdate(),
             };
             // Make the request
-            Operation response = clusterManagerClient.UpdateCluster(request);
+            apis::Operation response = clusterManagerClient.UpdateCluster(request);
             // End snippet
         }
 
@@ -323,7 +323,7 @@ namespace Google.Cloud.Container.V1.Snippets
                 ImageType = "",
             };
             // Make the request
-            Operation response = await clusterManagerClient.UpdateNodePoolAsync(request);
+            apis::Operation response = await clusterManagerClient.UpdateNodePoolAsync(request);
             // End snippet
         }
 
@@ -344,7 +344,7 @@ namespace Google.Cloud.Container.V1.Snippets
                 ImageType = "",
             };
             // Make the request
-            Operation response = clusterManagerClient.UpdateNodePool(request);
+            apis::Operation response = clusterManagerClient.UpdateNodePool(request);
             // End snippet
         }
 
@@ -365,7 +365,7 @@ namespace Google.Cloud.Container.V1.Snippets
                 Autoscaling = new NodePoolAutoscaling(),
             };
             // Make the request
-            Operation response = await clusterManagerClient.SetNodePoolAutoscalingAsync(request);
+            apis::Operation response = await clusterManagerClient.SetNodePoolAutoscalingAsync(request);
             // End snippet
         }
 
@@ -385,7 +385,7 @@ namespace Google.Cloud.Container.V1.Snippets
                 Autoscaling = new NodePoolAutoscaling(),
             };
             // Make the request
-            Operation response = clusterManagerClient.SetNodePoolAutoscaling(request);
+            apis::Operation response = clusterManagerClient.SetNodePoolAutoscaling(request);
             // End snippet
         }
 
@@ -402,7 +402,7 @@ namespace Google.Cloud.Container.V1.Snippets
             string clusterId = "";
             string loggingService = "";
             // Make the request
-            Operation response = await clusterManagerClient.SetLoggingServiceAsync(projectId, zone, clusterId, loggingService);
+            apis::Operation response = await clusterManagerClient.SetLoggingServiceAsync(projectId, zone, clusterId, loggingService);
             // End snippet
         }
 
@@ -418,7 +418,7 @@ namespace Google.Cloud.Container.V1.Snippets
             string clusterId = "";
             string loggingService = "";
             // Make the request
-            Operation response = clusterManagerClient.SetLoggingService(projectId, zone, clusterId, loggingService);
+            apis::Operation response = clusterManagerClient.SetLoggingService(projectId, zone, clusterId, loggingService);
             // End snippet
         }
 
@@ -438,7 +438,7 @@ namespace Google.Cloud.Container.V1.Snippets
                 LoggingService = "",
             };
             // Make the request
-            Operation response = await clusterManagerClient.SetLoggingServiceAsync(request);
+            apis::Operation response = await clusterManagerClient.SetLoggingServiceAsync(request);
             // End snippet
         }
 
@@ -457,7 +457,7 @@ namespace Google.Cloud.Container.V1.Snippets
                 LoggingService = "",
             };
             // Make the request
-            Operation response = clusterManagerClient.SetLoggingService(request);
+            apis::Operation response = clusterManagerClient.SetLoggingService(request);
             // End snippet
         }
 
@@ -474,7 +474,7 @@ namespace Google.Cloud.Container.V1.Snippets
             string clusterId = "";
             string monitoringService = "";
             // Make the request
-            Operation response = await clusterManagerClient.SetMonitoringServiceAsync(projectId, zone, clusterId, monitoringService);
+            apis::Operation response = await clusterManagerClient.SetMonitoringServiceAsync(projectId, zone, clusterId, monitoringService);
             // End snippet
         }
 
@@ -490,7 +490,7 @@ namespace Google.Cloud.Container.V1.Snippets
             string clusterId = "";
             string monitoringService = "";
             // Make the request
-            Operation response = clusterManagerClient.SetMonitoringService(projectId, zone, clusterId, monitoringService);
+            apis::Operation response = clusterManagerClient.SetMonitoringService(projectId, zone, clusterId, monitoringService);
             // End snippet
         }
 
@@ -510,7 +510,7 @@ namespace Google.Cloud.Container.V1.Snippets
                 MonitoringService = "",
             };
             // Make the request
-            Operation response = await clusterManagerClient.SetMonitoringServiceAsync(request);
+            apis::Operation response = await clusterManagerClient.SetMonitoringServiceAsync(request);
             // End snippet
         }
 
@@ -529,7 +529,7 @@ namespace Google.Cloud.Container.V1.Snippets
                 MonitoringService = "",
             };
             // Make the request
-            Operation response = clusterManagerClient.SetMonitoringService(request);
+            apis::Operation response = clusterManagerClient.SetMonitoringService(request);
             // End snippet
         }
 
@@ -546,7 +546,7 @@ namespace Google.Cloud.Container.V1.Snippets
             string clusterId = "";
             AddonsConfig addonsConfig = new AddonsConfig();
             // Make the request
-            Operation response = await clusterManagerClient.SetAddonsConfigAsync(projectId, zone, clusterId, addonsConfig);
+            apis::Operation response = await clusterManagerClient.SetAddonsConfigAsync(projectId, zone, clusterId, addonsConfig);
             // End snippet
         }
 
@@ -562,7 +562,7 @@ namespace Google.Cloud.Container.V1.Snippets
             string clusterId = "";
             AddonsConfig addonsConfig = new AddonsConfig();
             // Make the request
-            Operation response = clusterManagerClient.SetAddonsConfig(projectId, zone, clusterId, addonsConfig);
+            apis::Operation response = clusterManagerClient.SetAddonsConfig(projectId, zone, clusterId, addonsConfig);
             // End snippet
         }
 
@@ -582,7 +582,7 @@ namespace Google.Cloud.Container.V1.Snippets
                 AddonsConfig = new AddonsConfig(),
             };
             // Make the request
-            Operation response = await clusterManagerClient.SetAddonsConfigAsync(request);
+            apis::Operation response = await clusterManagerClient.SetAddonsConfigAsync(request);
             // End snippet
         }
 
@@ -601,7 +601,7 @@ namespace Google.Cloud.Container.V1.Snippets
                 AddonsConfig = new AddonsConfig(),
             };
             // Make the request
-            Operation response = clusterManagerClient.SetAddonsConfig(request);
+            apis::Operation response = clusterManagerClient.SetAddonsConfig(request);
             // End snippet
         }
 
@@ -618,7 +618,7 @@ namespace Google.Cloud.Container.V1.Snippets
             string clusterId = "";
             IEnumerable<string> locations = new List<string>();
             // Make the request
-            Operation response = await clusterManagerClient.SetLocationsAsync(projectId, zone, clusterId, locations);
+            apis::Operation response = await clusterManagerClient.SetLocationsAsync(projectId, zone, clusterId, locations);
             // End snippet
         }
 
@@ -634,7 +634,7 @@ namespace Google.Cloud.Container.V1.Snippets
             string clusterId = "";
             IEnumerable<string> locations = new List<string>();
             // Make the request
-            Operation response = clusterManagerClient.SetLocations(projectId, zone, clusterId, locations);
+            apis::Operation response = clusterManagerClient.SetLocations(projectId, zone, clusterId, locations);
             // End snippet
         }
 
@@ -654,7 +654,7 @@ namespace Google.Cloud.Container.V1.Snippets
                 Locations = { },
             };
             // Make the request
-            Operation response = await clusterManagerClient.SetLocationsAsync(request);
+            apis::Operation response = await clusterManagerClient.SetLocationsAsync(request);
             // End snippet
         }
 
@@ -673,7 +673,7 @@ namespace Google.Cloud.Container.V1.Snippets
                 Locations = { },
             };
             // Make the request
-            Operation response = clusterManagerClient.SetLocations(request);
+            apis::Operation response = clusterManagerClient.SetLocations(request);
             // End snippet
         }
 
@@ -690,7 +690,7 @@ namespace Google.Cloud.Container.V1.Snippets
             string clusterId = "";
             string masterVersion = "";
             // Make the request
-            Operation response = await clusterManagerClient.UpdateMasterAsync(projectId, zone, clusterId, masterVersion);
+            apis::Operation response = await clusterManagerClient.UpdateMasterAsync(projectId, zone, clusterId, masterVersion);
             // End snippet
         }
 
@@ -706,7 +706,7 @@ namespace Google.Cloud.Container.V1.Snippets
             string clusterId = "";
             string masterVersion = "";
             // Make the request
-            Operation response = clusterManagerClient.UpdateMaster(projectId, zone, clusterId, masterVersion);
+            apis::Operation response = clusterManagerClient.UpdateMaster(projectId, zone, clusterId, masterVersion);
             // End snippet
         }
 
@@ -726,7 +726,7 @@ namespace Google.Cloud.Container.V1.Snippets
                 MasterVersion = "",
             };
             // Make the request
-            Operation response = await clusterManagerClient.UpdateMasterAsync(request);
+            apis::Operation response = await clusterManagerClient.UpdateMasterAsync(request);
             // End snippet
         }
 
@@ -745,7 +745,7 @@ namespace Google.Cloud.Container.V1.Snippets
                 MasterVersion = "",
             };
             // Make the request
-            Operation response = clusterManagerClient.UpdateMaster(request);
+            apis::Operation response = clusterManagerClient.UpdateMaster(request);
             // End snippet
         }
 
@@ -766,7 +766,7 @@ namespace Google.Cloud.Container.V1.Snippets
                 Update = new MasterAuth(),
             };
             // Make the request
-            Operation response = await clusterManagerClient.SetMasterAuthAsync(request);
+            apis::Operation response = await clusterManagerClient.SetMasterAuthAsync(request);
             // End snippet
         }
 
@@ -786,7 +786,7 @@ namespace Google.Cloud.Container.V1.Snippets
                 Update = new MasterAuth(),
             };
             // Make the request
-            Operation response = clusterManagerClient.SetMasterAuth(request);
+            apis::Operation response = clusterManagerClient.SetMasterAuth(request);
             // End snippet
         }
 
@@ -802,7 +802,7 @@ namespace Google.Cloud.Container.V1.Snippets
             string zone = "";
             string clusterId = "";
             // Make the request
-            Operation response = await clusterManagerClient.DeleteClusterAsync(projectId, zone, clusterId);
+            apis::Operation response = await clusterManagerClient.DeleteClusterAsync(projectId, zone, clusterId);
             // End snippet
         }
 
@@ -817,7 +817,7 @@ namespace Google.Cloud.Container.V1.Snippets
             string zone = "";
             string clusterId = "";
             // Make the request
-            Operation response = clusterManagerClient.DeleteCluster(projectId, zone, clusterId);
+            apis::Operation response = clusterManagerClient.DeleteCluster(projectId, zone, clusterId);
             // End snippet
         }
 
@@ -836,7 +836,7 @@ namespace Google.Cloud.Container.V1.Snippets
                 ClusterId = "",
             };
             // Make the request
-            Operation response = await clusterManagerClient.DeleteClusterAsync(request);
+            apis::Operation response = await clusterManagerClient.DeleteClusterAsync(request);
             // End snippet
         }
 
@@ -854,7 +854,7 @@ namespace Google.Cloud.Container.V1.Snippets
                 ClusterId = "",
             };
             // Make the request
-            Operation response = clusterManagerClient.DeleteCluster(request);
+            apis::Operation response = clusterManagerClient.DeleteCluster(request);
             // End snippet
         }
 
@@ -869,7 +869,7 @@ namespace Google.Cloud.Container.V1.Snippets
             string projectId = "";
             string zone = "";
             // Make the request
-            ListOperationsResponse response = await clusterManagerClient.ListOperationsAsync(projectId, zone);
+            apis::ListOperationsResponse response = await clusterManagerClient.ListOperationsAsync(projectId, zone);
             // End snippet
         }
 
@@ -883,42 +883,42 @@ namespace Google.Cloud.Container.V1.Snippets
             string projectId = "";
             string zone = "";
             // Make the request
-            ListOperationsResponse response = clusterManagerClient.ListOperations(projectId, zone);
+            apis::ListOperationsResponse response = clusterManagerClient.ListOperations(projectId, zone);
             // End snippet
         }
 
         /// <summary>Snippet for ListOperationsAsync</summary>
         public async Task ListOperationsAsync_RequestObject()
         {
-            // Snippet: ListOperationsAsync(ListOperationsRequest,CallSettings)
-            // Additional: ListOperationsAsync(ListOperationsRequest,CancellationToken)
+            // Snippet: ListOperationsAsync(apis::ListOperationsRequest,CallSettings)
+            // Additional: ListOperationsAsync(apis::ListOperationsRequest,CancellationToken)
             // Create client
             ClusterManagerClient clusterManagerClient = await ClusterManagerClient.CreateAsync();
             // Initialize request argument(s)
-            ListOperationsRequest request = new ListOperationsRequest
+            apis::ListOperationsRequest request = new apis::ListOperationsRequest
             {
                 ProjectId = "",
                 Zone = "",
             };
             // Make the request
-            ListOperationsResponse response = await clusterManagerClient.ListOperationsAsync(request);
+            apis::ListOperationsResponse response = await clusterManagerClient.ListOperationsAsync(request);
             // End snippet
         }
 
         /// <summary>Snippet for ListOperations</summary>
         public void ListOperations_RequestObject()
         {
-            // Snippet: ListOperations(ListOperationsRequest,CallSettings)
+            // Snippet: ListOperations(apis::ListOperationsRequest,CallSettings)
             // Create client
             ClusterManagerClient clusterManagerClient = ClusterManagerClient.Create();
             // Initialize request argument(s)
-            ListOperationsRequest request = new ListOperationsRequest
+            apis::ListOperationsRequest request = new apis::ListOperationsRequest
             {
                 ProjectId = "",
                 Zone = "",
             };
             // Make the request
-            ListOperationsResponse response = clusterManagerClient.ListOperations(request);
+            apis::ListOperationsResponse response = clusterManagerClient.ListOperations(request);
             // End snippet
         }
 
@@ -934,7 +934,7 @@ namespace Google.Cloud.Container.V1.Snippets
             string zone = "";
             string operationId = "";
             // Make the request
-            Operation response = await clusterManagerClient.GetOperationAsync(projectId, zone, operationId);
+            apis::Operation response = await clusterManagerClient.GetOperationAsync(projectId, zone, operationId);
             // End snippet
         }
 
@@ -949,44 +949,44 @@ namespace Google.Cloud.Container.V1.Snippets
             string zone = "";
             string operationId = "";
             // Make the request
-            Operation response = clusterManagerClient.GetOperation(projectId, zone, operationId);
+            apis::Operation response = clusterManagerClient.GetOperation(projectId, zone, operationId);
             // End snippet
         }
 
         /// <summary>Snippet for GetOperationAsync</summary>
         public async Task GetOperationAsync_RequestObject()
         {
-            // Snippet: GetOperationAsync(GetOperationRequest,CallSettings)
-            // Additional: GetOperationAsync(GetOperationRequest,CancellationToken)
+            // Snippet: GetOperationAsync(apis::GetOperationRequest,CallSettings)
+            // Additional: GetOperationAsync(apis::GetOperationRequest,CancellationToken)
             // Create client
             ClusterManagerClient clusterManagerClient = await ClusterManagerClient.CreateAsync();
             // Initialize request argument(s)
-            GetOperationRequest request = new GetOperationRequest
+            apis::GetOperationRequest request = new apis::GetOperationRequest
             {
                 ProjectId = "",
                 Zone = "",
                 OperationId = "",
             };
             // Make the request
-            Operation response = await clusterManagerClient.GetOperationAsync(request);
+            apis::Operation response = await clusterManagerClient.GetOperationAsync(request);
             // End snippet
         }
 
         /// <summary>Snippet for GetOperation</summary>
         public void GetOperation_RequestObject()
         {
-            // Snippet: GetOperation(GetOperationRequest,CallSettings)
+            // Snippet: GetOperation(apis::GetOperationRequest,CallSettings)
             // Create client
             ClusterManagerClient clusterManagerClient = ClusterManagerClient.Create();
             // Initialize request argument(s)
-            GetOperationRequest request = new GetOperationRequest
+            apis::GetOperationRequest request = new apis::GetOperationRequest
             {
                 ProjectId = "",
                 Zone = "",
                 OperationId = "",
             };
             // Make the request
-            Operation response = clusterManagerClient.GetOperation(request);
+            apis::Operation response = clusterManagerClient.GetOperation(request);
             // End snippet
         }
 
@@ -1024,12 +1024,12 @@ namespace Google.Cloud.Container.V1.Snippets
         /// <summary>Snippet for CancelOperationAsync</summary>
         public async Task CancelOperationAsync_RequestObject()
         {
-            // Snippet: CancelOperationAsync(CancelOperationRequest,CallSettings)
-            // Additional: CancelOperationAsync(CancelOperationRequest,CancellationToken)
+            // Snippet: CancelOperationAsync(apis::CancelOperationRequest,CallSettings)
+            // Additional: CancelOperationAsync(apis::CancelOperationRequest,CancellationToken)
             // Create client
             ClusterManagerClient clusterManagerClient = await ClusterManagerClient.CreateAsync();
             // Initialize request argument(s)
-            CancelOperationRequest request = new CancelOperationRequest
+            apis::CancelOperationRequest request = new apis::CancelOperationRequest
             {
                 ProjectId = "",
                 Zone = "",
@@ -1043,11 +1043,11 @@ namespace Google.Cloud.Container.V1.Snippets
         /// <summary>Snippet for CancelOperation</summary>
         public void CancelOperation_RequestObject()
         {
-            // Snippet: CancelOperation(CancelOperationRequest,CallSettings)
+            // Snippet: CancelOperation(apis::CancelOperationRequest,CallSettings)
             // Create client
             ClusterManagerClient clusterManagerClient = ClusterManagerClient.Create();
             // Initialize request argument(s)
-            CancelOperationRequest request = new CancelOperationRequest
+            apis::CancelOperationRequest request = new apis::CancelOperationRequest
             {
                 ProjectId = "",
                 Zone = "",
@@ -1275,7 +1275,7 @@ namespace Google.Cloud.Container.V1.Snippets
             string clusterId = "";
             NodePool nodePool = new NodePool();
             // Make the request
-            Operation response = await clusterManagerClient.CreateNodePoolAsync(projectId, zone, clusterId, nodePool);
+            apis::Operation response = await clusterManagerClient.CreateNodePoolAsync(projectId, zone, clusterId, nodePool);
             // End snippet
         }
 
@@ -1291,7 +1291,7 @@ namespace Google.Cloud.Container.V1.Snippets
             string clusterId = "";
             NodePool nodePool = new NodePool();
             // Make the request
-            Operation response = clusterManagerClient.CreateNodePool(projectId, zone, clusterId, nodePool);
+            apis::Operation response = clusterManagerClient.CreateNodePool(projectId, zone, clusterId, nodePool);
             // End snippet
         }
 
@@ -1311,7 +1311,7 @@ namespace Google.Cloud.Container.V1.Snippets
                 NodePool = new NodePool(),
             };
             // Make the request
-            Operation response = await clusterManagerClient.CreateNodePoolAsync(request);
+            apis::Operation response = await clusterManagerClient.CreateNodePoolAsync(request);
             // End snippet
         }
 
@@ -1330,7 +1330,7 @@ namespace Google.Cloud.Container.V1.Snippets
                 NodePool = new NodePool(),
             };
             // Make the request
-            Operation response = clusterManagerClient.CreateNodePool(request);
+            apis::Operation response = clusterManagerClient.CreateNodePool(request);
             // End snippet
         }
 
@@ -1347,7 +1347,7 @@ namespace Google.Cloud.Container.V1.Snippets
             string clusterId = "";
             string nodePoolId = "";
             // Make the request
-            Operation response = await clusterManagerClient.DeleteNodePoolAsync(projectId, zone, clusterId, nodePoolId);
+            apis::Operation response = await clusterManagerClient.DeleteNodePoolAsync(projectId, zone, clusterId, nodePoolId);
             // End snippet
         }
 
@@ -1363,7 +1363,7 @@ namespace Google.Cloud.Container.V1.Snippets
             string clusterId = "";
             string nodePoolId = "";
             // Make the request
-            Operation response = clusterManagerClient.DeleteNodePool(projectId, zone, clusterId, nodePoolId);
+            apis::Operation response = clusterManagerClient.DeleteNodePool(projectId, zone, clusterId, nodePoolId);
             // End snippet
         }
 
@@ -1383,7 +1383,7 @@ namespace Google.Cloud.Container.V1.Snippets
                 NodePoolId = "",
             };
             // Make the request
-            Operation response = await clusterManagerClient.DeleteNodePoolAsync(request);
+            apis::Operation response = await clusterManagerClient.DeleteNodePoolAsync(request);
             // End snippet
         }
 
@@ -1402,7 +1402,7 @@ namespace Google.Cloud.Container.V1.Snippets
                 NodePoolId = "",
             };
             // Make the request
-            Operation response = clusterManagerClient.DeleteNodePool(request);
+            apis::Operation response = clusterManagerClient.DeleteNodePool(request);
             // End snippet
         }
 
@@ -1419,7 +1419,7 @@ namespace Google.Cloud.Container.V1.Snippets
             string clusterId = "";
             string nodePoolId = "";
             // Make the request
-            Operation response = await clusterManagerClient.RollbackNodePoolUpgradeAsync(projectId, zone, clusterId, nodePoolId);
+            apis::Operation response = await clusterManagerClient.RollbackNodePoolUpgradeAsync(projectId, zone, clusterId, nodePoolId);
             // End snippet
         }
 
@@ -1435,7 +1435,7 @@ namespace Google.Cloud.Container.V1.Snippets
             string clusterId = "";
             string nodePoolId = "";
             // Make the request
-            Operation response = clusterManagerClient.RollbackNodePoolUpgrade(projectId, zone, clusterId, nodePoolId);
+            apis::Operation response = clusterManagerClient.RollbackNodePoolUpgrade(projectId, zone, clusterId, nodePoolId);
             // End snippet
         }
 
@@ -1455,7 +1455,7 @@ namespace Google.Cloud.Container.V1.Snippets
                 NodePoolId = "",
             };
             // Make the request
-            Operation response = await clusterManagerClient.RollbackNodePoolUpgradeAsync(request);
+            apis::Operation response = await clusterManagerClient.RollbackNodePoolUpgradeAsync(request);
             // End snippet
         }
 
@@ -1474,7 +1474,7 @@ namespace Google.Cloud.Container.V1.Snippets
                 NodePoolId = "",
             };
             // Make the request
-            Operation response = clusterManagerClient.RollbackNodePoolUpgrade(request);
+            apis::Operation response = clusterManagerClient.RollbackNodePoolUpgrade(request);
             // End snippet
         }
 
@@ -1495,7 +1495,7 @@ namespace Google.Cloud.Container.V1.Snippets
                 Management = new NodeManagement(),
             };
             // Make the request
-            Operation response = await clusterManagerClient.SetNodePoolManagementAsync(request);
+            apis::Operation response = await clusterManagerClient.SetNodePoolManagementAsync(request);
             // End snippet
         }
 
@@ -1515,7 +1515,7 @@ namespace Google.Cloud.Container.V1.Snippets
                 Management = new NodeManagement(),
             };
             // Make the request
-            Operation response = clusterManagerClient.SetNodePoolManagement(request);
+            apis::Operation response = clusterManagerClient.SetNodePoolManagement(request);
             // End snippet
         }
 
@@ -1536,7 +1536,7 @@ namespace Google.Cloud.Container.V1.Snippets
                 LabelFingerprint = "",
             };
             // Make the request
-            Operation response = await clusterManagerClient.SetLabelsAsync(request);
+            apis::Operation response = await clusterManagerClient.SetLabelsAsync(request);
             // End snippet
         }
 
@@ -1556,7 +1556,7 @@ namespace Google.Cloud.Container.V1.Snippets
                 LabelFingerprint = "",
             };
             // Make the request
-            Operation response = clusterManagerClient.SetLabels(request);
+            apis::Operation response = clusterManagerClient.SetLabels(request);
             // End snippet
         }
 
@@ -1573,7 +1573,7 @@ namespace Google.Cloud.Container.V1.Snippets
             string clusterId = "";
             bool enabled = false;
             // Make the request
-            Operation response = await clusterManagerClient.SetLegacyAbacAsync(projectId, zone, clusterId, enabled);
+            apis::Operation response = await clusterManagerClient.SetLegacyAbacAsync(projectId, zone, clusterId, enabled);
             // End snippet
         }
 
@@ -1589,7 +1589,7 @@ namespace Google.Cloud.Container.V1.Snippets
             string clusterId = "";
             bool enabled = false;
             // Make the request
-            Operation response = clusterManagerClient.SetLegacyAbac(projectId, zone, clusterId, enabled);
+            apis::Operation response = clusterManagerClient.SetLegacyAbac(projectId, zone, clusterId, enabled);
             // End snippet
         }
 
@@ -1609,7 +1609,7 @@ namespace Google.Cloud.Container.V1.Snippets
                 Enabled = false,
             };
             // Make the request
-            Operation response = await clusterManagerClient.SetLegacyAbacAsync(request);
+            apis::Operation response = await clusterManagerClient.SetLegacyAbacAsync(request);
             // End snippet
         }
 
@@ -1628,7 +1628,7 @@ namespace Google.Cloud.Container.V1.Snippets
                 Enabled = false,
             };
             // Make the request
-            Operation response = clusterManagerClient.SetLegacyAbac(request);
+            apis::Operation response = clusterManagerClient.SetLegacyAbac(request);
             // End snippet
         }
 
@@ -1644,7 +1644,7 @@ namespace Google.Cloud.Container.V1.Snippets
             string zone = "";
             string clusterId = "";
             // Make the request
-            Operation response = await clusterManagerClient.StartIPRotationAsync(projectId, zone, clusterId);
+            apis::Operation response = await clusterManagerClient.StartIPRotationAsync(projectId, zone, clusterId);
             // End snippet
         }
 
@@ -1659,7 +1659,7 @@ namespace Google.Cloud.Container.V1.Snippets
             string zone = "";
             string clusterId = "";
             // Make the request
-            Operation response = clusterManagerClient.StartIPRotation(projectId, zone, clusterId);
+            apis::Operation response = clusterManagerClient.StartIPRotation(projectId, zone, clusterId);
             // End snippet
         }
 
@@ -1678,7 +1678,7 @@ namespace Google.Cloud.Container.V1.Snippets
                 ClusterId = "",
             };
             // Make the request
-            Operation response = await clusterManagerClient.StartIPRotationAsync(request);
+            apis::Operation response = await clusterManagerClient.StartIPRotationAsync(request);
             // End snippet
         }
 
@@ -1696,7 +1696,7 @@ namespace Google.Cloud.Container.V1.Snippets
                 ClusterId = "",
             };
             // Make the request
-            Operation response = clusterManagerClient.StartIPRotation(request);
+            apis::Operation response = clusterManagerClient.StartIPRotation(request);
             // End snippet
         }
 
@@ -1712,7 +1712,7 @@ namespace Google.Cloud.Container.V1.Snippets
             string zone = "";
             string clusterId = "";
             // Make the request
-            Operation response = await clusterManagerClient.CompleteIPRotationAsync(projectId, zone, clusterId);
+            apis::Operation response = await clusterManagerClient.CompleteIPRotationAsync(projectId, zone, clusterId);
             // End snippet
         }
 
@@ -1727,7 +1727,7 @@ namespace Google.Cloud.Container.V1.Snippets
             string zone = "";
             string clusterId = "";
             // Make the request
-            Operation response = clusterManagerClient.CompleteIPRotation(projectId, zone, clusterId);
+            apis::Operation response = clusterManagerClient.CompleteIPRotation(projectId, zone, clusterId);
             // End snippet
         }
 
@@ -1746,7 +1746,7 @@ namespace Google.Cloud.Container.V1.Snippets
                 ClusterId = "",
             };
             // Make the request
-            Operation response = await clusterManagerClient.CompleteIPRotationAsync(request);
+            apis::Operation response = await clusterManagerClient.CompleteIPRotationAsync(request);
             // End snippet
         }
 
@@ -1764,7 +1764,7 @@ namespace Google.Cloud.Container.V1.Snippets
                 ClusterId = "",
             };
             // Make the request
-            Operation response = clusterManagerClient.CompleteIPRotation(request);
+            apis::Operation response = clusterManagerClient.CompleteIPRotation(request);
             // End snippet
         }
 
@@ -1785,7 +1785,7 @@ namespace Google.Cloud.Container.V1.Snippets
                 NodeCount = 0,
             };
             // Make the request
-            Operation response = await clusterManagerClient.SetNodePoolSizeAsync(request);
+            apis::Operation response = await clusterManagerClient.SetNodePoolSizeAsync(request);
             // End snippet
         }
 
@@ -1805,7 +1805,7 @@ namespace Google.Cloud.Container.V1.Snippets
                 NodeCount = 0,
             };
             // Make the request
-            Operation response = clusterManagerClient.SetNodePoolSize(request);
+            apis::Operation response = clusterManagerClient.SetNodePoolSize(request);
             // End snippet
         }
 
@@ -1822,7 +1822,7 @@ namespace Google.Cloud.Container.V1.Snippets
             string clusterId = "";
             NetworkPolicy networkPolicy = new NetworkPolicy();
             // Make the request
-            Operation response = await clusterManagerClient.SetNetworkPolicyAsync(projectId, zone, clusterId, networkPolicy);
+            apis::Operation response = await clusterManagerClient.SetNetworkPolicyAsync(projectId, zone, clusterId, networkPolicy);
             // End snippet
         }
 
@@ -1838,7 +1838,7 @@ namespace Google.Cloud.Container.V1.Snippets
             string clusterId = "";
             NetworkPolicy networkPolicy = new NetworkPolicy();
             // Make the request
-            Operation response = clusterManagerClient.SetNetworkPolicy(projectId, zone, clusterId, networkPolicy);
+            apis::Operation response = clusterManagerClient.SetNetworkPolicy(projectId, zone, clusterId, networkPolicy);
             // End snippet
         }
 
@@ -1858,7 +1858,7 @@ namespace Google.Cloud.Container.V1.Snippets
                 NetworkPolicy = new NetworkPolicy(),
             };
             // Make the request
-            Operation response = await clusterManagerClient.SetNetworkPolicyAsync(request);
+            apis::Operation response = await clusterManagerClient.SetNetworkPolicyAsync(request);
             // End snippet
         }
 
@@ -1877,7 +1877,7 @@ namespace Google.Cloud.Container.V1.Snippets
                 NetworkPolicy = new NetworkPolicy(),
             };
             // Make the request
-            Operation response = clusterManagerClient.SetNetworkPolicy(request);
+            apis::Operation response = clusterManagerClient.SetNetworkPolicy(request);
             // End snippet
         }
 
@@ -1894,7 +1894,7 @@ namespace Google.Cloud.Container.V1.Snippets
             string clusterId = "";
             MaintenancePolicy maintenancePolicy = new MaintenancePolicy();
             // Make the request
-            Operation response = await clusterManagerClient.SetMaintenancePolicyAsync(projectId, zone, clusterId, maintenancePolicy);
+            apis::Operation response = await clusterManagerClient.SetMaintenancePolicyAsync(projectId, zone, clusterId, maintenancePolicy);
             // End snippet
         }
 
@@ -1910,7 +1910,7 @@ namespace Google.Cloud.Container.V1.Snippets
             string clusterId = "";
             MaintenancePolicy maintenancePolicy = new MaintenancePolicy();
             // Make the request
-            Operation response = clusterManagerClient.SetMaintenancePolicy(projectId, zone, clusterId, maintenancePolicy);
+            apis::Operation response = clusterManagerClient.SetMaintenancePolicy(projectId, zone, clusterId, maintenancePolicy);
             // End snippet
         }
 
@@ -1930,7 +1930,7 @@ namespace Google.Cloud.Container.V1.Snippets
                 MaintenancePolicy = new MaintenancePolicy(),
             };
             // Make the request
-            Operation response = await clusterManagerClient.SetMaintenancePolicyAsync(request);
+            apis::Operation response = await clusterManagerClient.SetMaintenancePolicyAsync(request);
             // End snippet
         }
 
@@ -1949,7 +1949,7 @@ namespace Google.Cloud.Container.V1.Snippets
                 MaintenancePolicy = new MaintenancePolicy(),
             };
             // Make the request
-            Operation response = clusterManagerClient.SetMaintenancePolicy(request);
+            apis::Operation response = clusterManagerClient.SetMaintenancePolicy(request);
             // End snippet
         }
 

@@ -14,8 +14,8 @@
 
 // Generated code. DO NOT EDIT!
 
-using Google.Api.Gax;
-using System;
+using gax = Google.Api.Gax;
+using s = System;
 using System.Linq;
 
 namespace Google.Cloud.Monitoring.V3
@@ -23,9 +23,9 @@ namespace Google.Cloud.Monitoring.V3
     /// <summary>
     /// Resource name for the 'project' resource.
     /// </summary>
-    public sealed partial class ProjectName : IResourceName, IEquatable<ProjectName>
+    public sealed partial class ProjectName : gax::IResourceName, s::IEquatable<ProjectName>
     {
-        private static readonly PathTemplate s_template = new PathTemplate("projects/{project}");
+        private static readonly gax::PathTemplate s_template = new gax::PathTemplate("projects/{project}");
 
         /// <summary>
         /// Parses the given project resource name in string form into a new
@@ -35,8 +35,8 @@ namespace Google.Cloud.Monitoring.V3
         /// <returns>The parsed <see cref="ProjectName"/> if successful.</returns>
         public static ProjectName Parse(string projectName)
         {
-            GaxPreconditions.CheckNotNull(projectName, nameof(projectName));
-            TemplatedResourceName resourceName = s_template.ParseName(projectName);
+            gax::GaxPreconditions.CheckNotNull(projectName, nameof(projectName));
+            gax::TemplatedResourceName resourceName = s_template.ParseName(projectName);
             return new ProjectName(resourceName[0]);
         }
 
@@ -45,7 +45,7 @@ namespace Google.Cloud.Monitoring.V3
         /// <see cref="ProjectName"/> instance.
         /// </summary>
         /// <remarks>
-        /// This method still throws <see cref="ArgumentNullException"/> if <paramref name="projectName"/> is null,
+        /// This method still throws <see cref="s::ArgumentNullException"/> if <paramref name="projectName"/> is null,
         /// as this would usually indicate a programming error rather than a data error.
         /// </remarks>
         /// <param name="projectName">The project resource name in string form. Must not be <c>null</c>.</param>
@@ -54,8 +54,8 @@ namespace Google.Cloud.Monitoring.V3
         /// <returns><c>true</c> if the name was parsed succssfully; <c>false</c> otherwise.</returns>
         public static bool TryParse(string projectName, out ProjectName result)
         {
-            GaxPreconditions.CheckNotNull(projectName, nameof(projectName));
-            TemplatedResourceName resourceName;
+            gax::GaxPreconditions.CheckNotNull(projectName, nameof(projectName));
+            gax::TemplatedResourceName resourceName;
             if (s_template.TryParseName(projectName, out resourceName))
             {
                 result = new ProjectName(resourceName[0]);
@@ -75,7 +75,7 @@ namespace Google.Cloud.Monitoring.V3
         /// <param name="projectId">The project ID. Must not be <c>null</c>.</param>
         public ProjectName(string projectId)
         {
-            ProjectId = GaxPreconditions.CheckNotNull(projectId, nameof(projectId));
+            ProjectId = gax::GaxPreconditions.CheckNotNull(projectId, nameof(projectId));
         }
 
         /// <summary>
@@ -84,7 +84,7 @@ namespace Google.Cloud.Monitoring.V3
         public string ProjectId { get; }
 
         /// <inheritdoc />
-        public ResourceNameKind Kind => ResourceNameKind.Simple;
+        public gax::ResourceNameKind Kind => gax::ResourceNameKind.Simple;
 
         /// <inheritdoc />
         public override string ToString() => s_template.Expand(ProjectId);
@@ -108,9 +108,9 @@ namespace Google.Cloud.Monitoring.V3
     /// <summary>
     /// Resource name for the 'alert_policy' resource.
     /// </summary>
-    public sealed partial class AlertPolicyName : IResourceName, IEquatable<AlertPolicyName>
+    public sealed partial class AlertPolicyName : gax::IResourceName, s::IEquatable<AlertPolicyName>
     {
-        private static readonly PathTemplate s_template = new PathTemplate("projects/{project}/alertPolicies/{alert_policy}");
+        private static readonly gax::PathTemplate s_template = new gax::PathTemplate("projects/{project}/alertPolicies/{alert_policy}");
 
         /// <summary>
         /// Parses the given alert_policy resource name in string form into a new
@@ -120,8 +120,8 @@ namespace Google.Cloud.Monitoring.V3
         /// <returns>The parsed <see cref="AlertPolicyName"/> if successful.</returns>
         public static AlertPolicyName Parse(string alertPolicyName)
         {
-            GaxPreconditions.CheckNotNull(alertPolicyName, nameof(alertPolicyName));
-            TemplatedResourceName resourceName = s_template.ParseName(alertPolicyName);
+            gax::GaxPreconditions.CheckNotNull(alertPolicyName, nameof(alertPolicyName));
+            gax::TemplatedResourceName resourceName = s_template.ParseName(alertPolicyName);
             return new AlertPolicyName(resourceName[0], resourceName[1]);
         }
 
@@ -130,7 +130,7 @@ namespace Google.Cloud.Monitoring.V3
         /// <see cref="AlertPolicyName"/> instance.
         /// </summary>
         /// <remarks>
-        /// This method still throws <see cref="ArgumentNullException"/> if <paramref name="alertPolicyName"/> is null,
+        /// This method still throws <see cref="s::ArgumentNullException"/> if <paramref name="alertPolicyName"/> is null,
         /// as this would usually indicate a programming error rather than a data error.
         /// </remarks>
         /// <param name="alertPolicyName">The alert_policy resource name in string form. Must not be <c>null</c>.</param>
@@ -139,8 +139,8 @@ namespace Google.Cloud.Monitoring.V3
         /// <returns><c>true</c> if the name was parsed succssfully; <c>false</c> otherwise.</returns>
         public static bool TryParse(string alertPolicyName, out AlertPolicyName result)
         {
-            GaxPreconditions.CheckNotNull(alertPolicyName, nameof(alertPolicyName));
-            TemplatedResourceName resourceName;
+            gax::GaxPreconditions.CheckNotNull(alertPolicyName, nameof(alertPolicyName));
+            gax::TemplatedResourceName resourceName;
             if (s_template.TryParseName(alertPolicyName, out resourceName))
             {
                 result = new AlertPolicyName(resourceName[0], resourceName[1]);
@@ -161,8 +161,8 @@ namespace Google.Cloud.Monitoring.V3
         /// <param name="alertPolicyId">The alertPolicy ID. Must not be <c>null</c>.</param>
         public AlertPolicyName(string projectId, string alertPolicyId)
         {
-            ProjectId = GaxPreconditions.CheckNotNull(projectId, nameof(projectId));
-            AlertPolicyId = GaxPreconditions.CheckNotNull(alertPolicyId, nameof(alertPolicyId));
+            ProjectId = gax::GaxPreconditions.CheckNotNull(projectId, nameof(projectId));
+            AlertPolicyId = gax::GaxPreconditions.CheckNotNull(alertPolicyId, nameof(alertPolicyId));
         }
 
         /// <summary>
@@ -176,7 +176,7 @@ namespace Google.Cloud.Monitoring.V3
         public string AlertPolicyId { get; }
 
         /// <inheritdoc />
-        public ResourceNameKind Kind => ResourceNameKind.Simple;
+        public gax::ResourceNameKind Kind => gax::ResourceNameKind.Simple;
 
         /// <inheritdoc />
         public override string ToString() => s_template.Expand(ProjectId, AlertPolicyId);
@@ -200,9 +200,9 @@ namespace Google.Cloud.Monitoring.V3
     /// <summary>
     /// Resource name for the 'alert_policy_condition' resource.
     /// </summary>
-    public sealed partial class AlertPolicyConditionName : IResourceName, IEquatable<AlertPolicyConditionName>
+    public sealed partial class AlertPolicyConditionName : gax::IResourceName, s::IEquatable<AlertPolicyConditionName>
     {
-        private static readonly PathTemplate s_template = new PathTemplate("projects/{project}/alertPolicies/{alert_policy}/conditions/{condition}");
+        private static readonly gax::PathTemplate s_template = new gax::PathTemplate("projects/{project}/alertPolicies/{alert_policy}/conditions/{condition}");
 
         /// <summary>
         /// Parses the given alert_policy_condition resource name in string form into a new
@@ -212,8 +212,8 @@ namespace Google.Cloud.Monitoring.V3
         /// <returns>The parsed <see cref="AlertPolicyConditionName"/> if successful.</returns>
         public static AlertPolicyConditionName Parse(string alertPolicyConditionName)
         {
-            GaxPreconditions.CheckNotNull(alertPolicyConditionName, nameof(alertPolicyConditionName));
-            TemplatedResourceName resourceName = s_template.ParseName(alertPolicyConditionName);
+            gax::GaxPreconditions.CheckNotNull(alertPolicyConditionName, nameof(alertPolicyConditionName));
+            gax::TemplatedResourceName resourceName = s_template.ParseName(alertPolicyConditionName);
             return new AlertPolicyConditionName(resourceName[0], resourceName[1], resourceName[2]);
         }
 
@@ -222,7 +222,7 @@ namespace Google.Cloud.Monitoring.V3
         /// <see cref="AlertPolicyConditionName"/> instance.
         /// </summary>
         /// <remarks>
-        /// This method still throws <see cref="ArgumentNullException"/> if <paramref name="alertPolicyConditionName"/> is null,
+        /// This method still throws <see cref="s::ArgumentNullException"/> if <paramref name="alertPolicyConditionName"/> is null,
         /// as this would usually indicate a programming error rather than a data error.
         /// </remarks>
         /// <param name="alertPolicyConditionName">The alert_policy_condition resource name in string form. Must not be <c>null</c>.</param>
@@ -231,8 +231,8 @@ namespace Google.Cloud.Monitoring.V3
         /// <returns><c>true</c> if the name was parsed succssfully; <c>false</c> otherwise.</returns>
         public static bool TryParse(string alertPolicyConditionName, out AlertPolicyConditionName result)
         {
-            GaxPreconditions.CheckNotNull(alertPolicyConditionName, nameof(alertPolicyConditionName));
-            TemplatedResourceName resourceName;
+            gax::GaxPreconditions.CheckNotNull(alertPolicyConditionName, nameof(alertPolicyConditionName));
+            gax::TemplatedResourceName resourceName;
             if (s_template.TryParseName(alertPolicyConditionName, out resourceName))
             {
                 result = new AlertPolicyConditionName(resourceName[0], resourceName[1], resourceName[2]);
@@ -254,9 +254,9 @@ namespace Google.Cloud.Monitoring.V3
         /// <param name="conditionId">The condition ID. Must not be <c>null</c>.</param>
         public AlertPolicyConditionName(string projectId, string alertPolicyId, string conditionId)
         {
-            ProjectId = GaxPreconditions.CheckNotNull(projectId, nameof(projectId));
-            AlertPolicyId = GaxPreconditions.CheckNotNull(alertPolicyId, nameof(alertPolicyId));
-            ConditionId = GaxPreconditions.CheckNotNull(conditionId, nameof(conditionId));
+            ProjectId = gax::GaxPreconditions.CheckNotNull(projectId, nameof(projectId));
+            AlertPolicyId = gax::GaxPreconditions.CheckNotNull(alertPolicyId, nameof(alertPolicyId));
+            ConditionId = gax::GaxPreconditions.CheckNotNull(conditionId, nameof(conditionId));
         }
 
         /// <summary>
@@ -275,7 +275,7 @@ namespace Google.Cloud.Monitoring.V3
         public string ConditionId { get; }
 
         /// <inheritdoc />
-        public ResourceNameKind Kind => ResourceNameKind.Simple;
+        public gax::ResourceNameKind Kind => gax::ResourceNameKind.Simple;
 
         /// <inheritdoc />
         public override string ToString() => s_template.Expand(ProjectId, AlertPolicyId, ConditionId);
@@ -299,9 +299,9 @@ namespace Google.Cloud.Monitoring.V3
     /// <summary>
     /// Resource name for the 'group' resource.
     /// </summary>
-    public sealed partial class GroupName : IResourceName, IEquatable<GroupName>
+    public sealed partial class GroupName : gax::IResourceName, s::IEquatable<GroupName>
     {
-        private static readonly PathTemplate s_template = new PathTemplate("projects/{project}/groups/{group}");
+        private static readonly gax::PathTemplate s_template = new gax::PathTemplate("projects/{project}/groups/{group}");
 
         /// <summary>
         /// Parses the given group resource name in string form into a new
@@ -311,8 +311,8 @@ namespace Google.Cloud.Monitoring.V3
         /// <returns>The parsed <see cref="GroupName"/> if successful.</returns>
         public static GroupName Parse(string groupName)
         {
-            GaxPreconditions.CheckNotNull(groupName, nameof(groupName));
-            TemplatedResourceName resourceName = s_template.ParseName(groupName);
+            gax::GaxPreconditions.CheckNotNull(groupName, nameof(groupName));
+            gax::TemplatedResourceName resourceName = s_template.ParseName(groupName);
             return new GroupName(resourceName[0], resourceName[1]);
         }
 
@@ -321,7 +321,7 @@ namespace Google.Cloud.Monitoring.V3
         /// <see cref="GroupName"/> instance.
         /// </summary>
         /// <remarks>
-        /// This method still throws <see cref="ArgumentNullException"/> if <paramref name="groupName"/> is null,
+        /// This method still throws <see cref="s::ArgumentNullException"/> if <paramref name="groupName"/> is null,
         /// as this would usually indicate a programming error rather than a data error.
         /// </remarks>
         /// <param name="groupName">The group resource name in string form. Must not be <c>null</c>.</param>
@@ -330,8 +330,8 @@ namespace Google.Cloud.Monitoring.V3
         /// <returns><c>true</c> if the name was parsed succssfully; <c>false</c> otherwise.</returns>
         public static bool TryParse(string groupName, out GroupName result)
         {
-            GaxPreconditions.CheckNotNull(groupName, nameof(groupName));
-            TemplatedResourceName resourceName;
+            gax::GaxPreconditions.CheckNotNull(groupName, nameof(groupName));
+            gax::TemplatedResourceName resourceName;
             if (s_template.TryParseName(groupName, out resourceName))
             {
                 result = new GroupName(resourceName[0], resourceName[1]);
@@ -352,8 +352,8 @@ namespace Google.Cloud.Monitoring.V3
         /// <param name="groupId">The group ID. Must not be <c>null</c>.</param>
         public GroupName(string projectId, string groupId)
         {
-            ProjectId = GaxPreconditions.CheckNotNull(projectId, nameof(projectId));
-            GroupId = GaxPreconditions.CheckNotNull(groupId, nameof(groupId));
+            ProjectId = gax::GaxPreconditions.CheckNotNull(projectId, nameof(projectId));
+            GroupId = gax::GaxPreconditions.CheckNotNull(groupId, nameof(groupId));
         }
 
         /// <summary>
@@ -367,7 +367,7 @@ namespace Google.Cloud.Monitoring.V3
         public string GroupId { get; }
 
         /// <inheritdoc />
-        public ResourceNameKind Kind => ResourceNameKind.Simple;
+        public gax::ResourceNameKind Kind => gax::ResourceNameKind.Simple;
 
         /// <inheritdoc />
         public override string ToString() => s_template.Expand(ProjectId, GroupId);
@@ -391,9 +391,9 @@ namespace Google.Cloud.Monitoring.V3
     /// <summary>
     /// Resource name for the 'metric_descriptor' resource.
     /// </summary>
-    public sealed partial class MetricDescriptorName : IResourceName, IEquatable<MetricDescriptorName>
+    public sealed partial class MetricDescriptorName : gax::IResourceName, s::IEquatable<MetricDescriptorName>
     {
-        private static readonly PathTemplate s_template = new PathTemplate("projects/{project}/metricDescriptors/{metric_descriptor=**}");
+        private static readonly gax::PathTemplate s_template = new gax::PathTemplate("projects/{project}/metricDescriptors/{metric_descriptor=**}");
 
         /// <summary>
         /// Parses the given metric_descriptor resource name in string form into a new
@@ -403,8 +403,8 @@ namespace Google.Cloud.Monitoring.V3
         /// <returns>The parsed <see cref="MetricDescriptorName"/> if successful.</returns>
         public static MetricDescriptorName Parse(string metricDescriptorName)
         {
-            GaxPreconditions.CheckNotNull(metricDescriptorName, nameof(metricDescriptorName));
-            TemplatedResourceName resourceName = s_template.ParseName(metricDescriptorName);
+            gax::GaxPreconditions.CheckNotNull(metricDescriptorName, nameof(metricDescriptorName));
+            gax::TemplatedResourceName resourceName = s_template.ParseName(metricDescriptorName);
             return new MetricDescriptorName(resourceName[0], resourceName[1]);
         }
 
@@ -413,7 +413,7 @@ namespace Google.Cloud.Monitoring.V3
         /// <see cref="MetricDescriptorName"/> instance.
         /// </summary>
         /// <remarks>
-        /// This method still throws <see cref="ArgumentNullException"/> if <paramref name="metricDescriptorName"/> is null,
+        /// This method still throws <see cref="s::ArgumentNullException"/> if <paramref name="metricDescriptorName"/> is null,
         /// as this would usually indicate a programming error rather than a data error.
         /// </remarks>
         /// <param name="metricDescriptorName">The metric_descriptor resource name in string form. Must not be <c>null</c>.</param>
@@ -422,8 +422,8 @@ namespace Google.Cloud.Monitoring.V3
         /// <returns><c>true</c> if the name was parsed succssfully; <c>false</c> otherwise.</returns>
         public static bool TryParse(string metricDescriptorName, out MetricDescriptorName result)
         {
-            GaxPreconditions.CheckNotNull(metricDescriptorName, nameof(metricDescriptorName));
-            TemplatedResourceName resourceName;
+            gax::GaxPreconditions.CheckNotNull(metricDescriptorName, nameof(metricDescriptorName));
+            gax::TemplatedResourceName resourceName;
             if (s_template.TryParseName(metricDescriptorName, out resourceName))
             {
                 result = new MetricDescriptorName(resourceName[0], resourceName[1]);
@@ -444,8 +444,8 @@ namespace Google.Cloud.Monitoring.V3
         /// <param name="metricDescriptorId">The metricDescriptor ID. Must not be <c>null</c>.</param>
         public MetricDescriptorName(string projectId, string metricDescriptorId)
         {
-            ProjectId = GaxPreconditions.CheckNotNull(projectId, nameof(projectId));
-            MetricDescriptorId = GaxPreconditions.CheckNotNull(metricDescriptorId, nameof(metricDescriptorId));
+            ProjectId = gax::GaxPreconditions.CheckNotNull(projectId, nameof(projectId));
+            MetricDescriptorId = gax::GaxPreconditions.CheckNotNull(metricDescriptorId, nameof(metricDescriptorId));
         }
 
         /// <summary>
@@ -459,7 +459,7 @@ namespace Google.Cloud.Monitoring.V3
         public string MetricDescriptorId { get; }
 
         /// <inheritdoc />
-        public ResourceNameKind Kind => ResourceNameKind.Simple;
+        public gax::ResourceNameKind Kind => gax::ResourceNameKind.Simple;
 
         /// <inheritdoc />
         public override string ToString() => s_template.Expand(ProjectId, MetricDescriptorId);
@@ -483,9 +483,9 @@ namespace Google.Cloud.Monitoring.V3
     /// <summary>
     /// Resource name for the 'monitored_resource_descriptor' resource.
     /// </summary>
-    public sealed partial class MonitoredResourceDescriptorName : IResourceName, IEquatable<MonitoredResourceDescriptorName>
+    public sealed partial class MonitoredResourceDescriptorName : gax::IResourceName, s::IEquatable<MonitoredResourceDescriptorName>
     {
-        private static readonly PathTemplate s_template = new PathTemplate("projects/{project}/monitoredResourceDescriptors/{monitored_resource_descriptor}");
+        private static readonly gax::PathTemplate s_template = new gax::PathTemplate("projects/{project}/monitoredResourceDescriptors/{monitored_resource_descriptor}");
 
         /// <summary>
         /// Parses the given monitored_resource_descriptor resource name in string form into a new
@@ -495,8 +495,8 @@ namespace Google.Cloud.Monitoring.V3
         /// <returns>The parsed <see cref="MonitoredResourceDescriptorName"/> if successful.</returns>
         public static MonitoredResourceDescriptorName Parse(string monitoredResourceDescriptorName)
         {
-            GaxPreconditions.CheckNotNull(monitoredResourceDescriptorName, nameof(monitoredResourceDescriptorName));
-            TemplatedResourceName resourceName = s_template.ParseName(monitoredResourceDescriptorName);
+            gax::GaxPreconditions.CheckNotNull(monitoredResourceDescriptorName, nameof(monitoredResourceDescriptorName));
+            gax::TemplatedResourceName resourceName = s_template.ParseName(monitoredResourceDescriptorName);
             return new MonitoredResourceDescriptorName(resourceName[0], resourceName[1]);
         }
 
@@ -505,7 +505,7 @@ namespace Google.Cloud.Monitoring.V3
         /// <see cref="MonitoredResourceDescriptorName"/> instance.
         /// </summary>
         /// <remarks>
-        /// This method still throws <see cref="ArgumentNullException"/> if <paramref name="monitoredResourceDescriptorName"/> is null,
+        /// This method still throws <see cref="s::ArgumentNullException"/> if <paramref name="monitoredResourceDescriptorName"/> is null,
         /// as this would usually indicate a programming error rather than a data error.
         /// </remarks>
         /// <param name="monitoredResourceDescriptorName">The monitored_resource_descriptor resource name in string form. Must not be <c>null</c>.</param>
@@ -514,8 +514,8 @@ namespace Google.Cloud.Monitoring.V3
         /// <returns><c>true</c> if the name was parsed succssfully; <c>false</c> otherwise.</returns>
         public static bool TryParse(string monitoredResourceDescriptorName, out MonitoredResourceDescriptorName result)
         {
-            GaxPreconditions.CheckNotNull(monitoredResourceDescriptorName, nameof(monitoredResourceDescriptorName));
-            TemplatedResourceName resourceName;
+            gax::GaxPreconditions.CheckNotNull(monitoredResourceDescriptorName, nameof(monitoredResourceDescriptorName));
+            gax::TemplatedResourceName resourceName;
             if (s_template.TryParseName(monitoredResourceDescriptorName, out resourceName))
             {
                 result = new MonitoredResourceDescriptorName(resourceName[0], resourceName[1]);
@@ -536,8 +536,8 @@ namespace Google.Cloud.Monitoring.V3
         /// <param name="monitoredResourceDescriptorId">The monitoredResourceDescriptor ID. Must not be <c>null</c>.</param>
         public MonitoredResourceDescriptorName(string projectId, string monitoredResourceDescriptorId)
         {
-            ProjectId = GaxPreconditions.CheckNotNull(projectId, nameof(projectId));
-            MonitoredResourceDescriptorId = GaxPreconditions.CheckNotNull(monitoredResourceDescriptorId, nameof(monitoredResourceDescriptorId));
+            ProjectId = gax::GaxPreconditions.CheckNotNull(projectId, nameof(projectId));
+            MonitoredResourceDescriptorId = gax::GaxPreconditions.CheckNotNull(monitoredResourceDescriptorId, nameof(monitoredResourceDescriptorId));
         }
 
         /// <summary>
@@ -551,7 +551,7 @@ namespace Google.Cloud.Monitoring.V3
         public string MonitoredResourceDescriptorId { get; }
 
         /// <inheritdoc />
-        public ResourceNameKind Kind => ResourceNameKind.Simple;
+        public gax::ResourceNameKind Kind => gax::ResourceNameKind.Simple;
 
         /// <inheritdoc />
         public override string ToString() => s_template.Expand(ProjectId, MonitoredResourceDescriptorId);
@@ -575,9 +575,9 @@ namespace Google.Cloud.Monitoring.V3
     /// <summary>
     /// Resource name for the 'notification_channel' resource.
     /// </summary>
-    public sealed partial class NotificationChannelName : IResourceName, IEquatable<NotificationChannelName>
+    public sealed partial class NotificationChannelName : gax::IResourceName, s::IEquatable<NotificationChannelName>
     {
-        private static readonly PathTemplate s_template = new PathTemplate("projects/{project}/notificationChannels/{notification_channel}");
+        private static readonly gax::PathTemplate s_template = new gax::PathTemplate("projects/{project}/notificationChannels/{notification_channel}");
 
         /// <summary>
         /// Parses the given notification_channel resource name in string form into a new
@@ -587,8 +587,8 @@ namespace Google.Cloud.Monitoring.V3
         /// <returns>The parsed <see cref="NotificationChannelName"/> if successful.</returns>
         public static NotificationChannelName Parse(string notificationChannelName)
         {
-            GaxPreconditions.CheckNotNull(notificationChannelName, nameof(notificationChannelName));
-            TemplatedResourceName resourceName = s_template.ParseName(notificationChannelName);
+            gax::GaxPreconditions.CheckNotNull(notificationChannelName, nameof(notificationChannelName));
+            gax::TemplatedResourceName resourceName = s_template.ParseName(notificationChannelName);
             return new NotificationChannelName(resourceName[0], resourceName[1]);
         }
 
@@ -597,7 +597,7 @@ namespace Google.Cloud.Monitoring.V3
         /// <see cref="NotificationChannelName"/> instance.
         /// </summary>
         /// <remarks>
-        /// This method still throws <see cref="ArgumentNullException"/> if <paramref name="notificationChannelName"/> is null,
+        /// This method still throws <see cref="s::ArgumentNullException"/> if <paramref name="notificationChannelName"/> is null,
         /// as this would usually indicate a programming error rather than a data error.
         /// </remarks>
         /// <param name="notificationChannelName">The notification_channel resource name in string form. Must not be <c>null</c>.</param>
@@ -606,8 +606,8 @@ namespace Google.Cloud.Monitoring.V3
         /// <returns><c>true</c> if the name was parsed succssfully; <c>false</c> otherwise.</returns>
         public static bool TryParse(string notificationChannelName, out NotificationChannelName result)
         {
-            GaxPreconditions.CheckNotNull(notificationChannelName, nameof(notificationChannelName));
-            TemplatedResourceName resourceName;
+            gax::GaxPreconditions.CheckNotNull(notificationChannelName, nameof(notificationChannelName));
+            gax::TemplatedResourceName resourceName;
             if (s_template.TryParseName(notificationChannelName, out resourceName))
             {
                 result = new NotificationChannelName(resourceName[0], resourceName[1]);
@@ -628,8 +628,8 @@ namespace Google.Cloud.Monitoring.V3
         /// <param name="notificationChannelId">The notificationChannel ID. Must not be <c>null</c>.</param>
         public NotificationChannelName(string projectId, string notificationChannelId)
         {
-            ProjectId = GaxPreconditions.CheckNotNull(projectId, nameof(projectId));
-            NotificationChannelId = GaxPreconditions.CheckNotNull(notificationChannelId, nameof(notificationChannelId));
+            ProjectId = gax::GaxPreconditions.CheckNotNull(projectId, nameof(projectId));
+            NotificationChannelId = gax::GaxPreconditions.CheckNotNull(notificationChannelId, nameof(notificationChannelId));
         }
 
         /// <summary>
@@ -643,7 +643,7 @@ namespace Google.Cloud.Monitoring.V3
         public string NotificationChannelId { get; }
 
         /// <inheritdoc />
-        public ResourceNameKind Kind => ResourceNameKind.Simple;
+        public gax::ResourceNameKind Kind => gax::ResourceNameKind.Simple;
 
         /// <inheritdoc />
         public override string ToString() => s_template.Expand(ProjectId, NotificationChannelId);
@@ -667,9 +667,9 @@ namespace Google.Cloud.Monitoring.V3
     /// <summary>
     /// Resource name for the 'notification_channel_descriptor' resource.
     /// </summary>
-    public sealed partial class NotificationChannelDescriptorName : IResourceName, IEquatable<NotificationChannelDescriptorName>
+    public sealed partial class NotificationChannelDescriptorName : gax::IResourceName, s::IEquatable<NotificationChannelDescriptorName>
     {
-        private static readonly PathTemplate s_template = new PathTemplate("projects/{project}/notificationChannelDescriptors/{channel_descriptor}");
+        private static readonly gax::PathTemplate s_template = new gax::PathTemplate("projects/{project}/notificationChannelDescriptors/{channel_descriptor}");
 
         /// <summary>
         /// Parses the given notification_channel_descriptor resource name in string form into a new
@@ -679,8 +679,8 @@ namespace Google.Cloud.Monitoring.V3
         /// <returns>The parsed <see cref="NotificationChannelDescriptorName"/> if successful.</returns>
         public static NotificationChannelDescriptorName Parse(string notificationChannelDescriptorName)
         {
-            GaxPreconditions.CheckNotNull(notificationChannelDescriptorName, nameof(notificationChannelDescriptorName));
-            TemplatedResourceName resourceName = s_template.ParseName(notificationChannelDescriptorName);
+            gax::GaxPreconditions.CheckNotNull(notificationChannelDescriptorName, nameof(notificationChannelDescriptorName));
+            gax::TemplatedResourceName resourceName = s_template.ParseName(notificationChannelDescriptorName);
             return new NotificationChannelDescriptorName(resourceName[0], resourceName[1]);
         }
 
@@ -689,7 +689,7 @@ namespace Google.Cloud.Monitoring.V3
         /// <see cref="NotificationChannelDescriptorName"/> instance.
         /// </summary>
         /// <remarks>
-        /// This method still throws <see cref="ArgumentNullException"/> if <paramref name="notificationChannelDescriptorName"/> is null,
+        /// This method still throws <see cref="s::ArgumentNullException"/> if <paramref name="notificationChannelDescriptorName"/> is null,
         /// as this would usually indicate a programming error rather than a data error.
         /// </remarks>
         /// <param name="notificationChannelDescriptorName">The notification_channel_descriptor resource name in string form. Must not be <c>null</c>.</param>
@@ -698,8 +698,8 @@ namespace Google.Cloud.Monitoring.V3
         /// <returns><c>true</c> if the name was parsed succssfully; <c>false</c> otherwise.</returns>
         public static bool TryParse(string notificationChannelDescriptorName, out NotificationChannelDescriptorName result)
         {
-            GaxPreconditions.CheckNotNull(notificationChannelDescriptorName, nameof(notificationChannelDescriptorName));
-            TemplatedResourceName resourceName;
+            gax::GaxPreconditions.CheckNotNull(notificationChannelDescriptorName, nameof(notificationChannelDescriptorName));
+            gax::TemplatedResourceName resourceName;
             if (s_template.TryParseName(notificationChannelDescriptorName, out resourceName))
             {
                 result = new NotificationChannelDescriptorName(resourceName[0], resourceName[1]);
@@ -720,8 +720,8 @@ namespace Google.Cloud.Monitoring.V3
         /// <param name="channelDescriptorId">The channelDescriptor ID. Must not be <c>null</c>.</param>
         public NotificationChannelDescriptorName(string projectId, string channelDescriptorId)
         {
-            ProjectId = GaxPreconditions.CheckNotNull(projectId, nameof(projectId));
-            ChannelDescriptorId = GaxPreconditions.CheckNotNull(channelDescriptorId, nameof(channelDescriptorId));
+            ProjectId = gax::GaxPreconditions.CheckNotNull(projectId, nameof(projectId));
+            ChannelDescriptorId = gax::GaxPreconditions.CheckNotNull(channelDescriptorId, nameof(channelDescriptorId));
         }
 
         /// <summary>
@@ -735,7 +735,7 @@ namespace Google.Cloud.Monitoring.V3
         public string ChannelDescriptorId { get; }
 
         /// <inheritdoc />
-        public ResourceNameKind Kind => ResourceNameKind.Simple;
+        public gax::ResourceNameKind Kind => gax::ResourceNameKind.Simple;
 
         /// <inheritdoc />
         public override string ToString() => s_template.Expand(ProjectId, ChannelDescriptorId);
@@ -759,9 +759,9 @@ namespace Google.Cloud.Monitoring.V3
     /// <summary>
     /// Resource name for the 'uptime_check_config' resource.
     /// </summary>
-    public sealed partial class UptimeCheckConfigName : IResourceName, IEquatable<UptimeCheckConfigName>
+    public sealed partial class UptimeCheckConfigName : gax::IResourceName, s::IEquatable<UptimeCheckConfigName>
     {
-        private static readonly PathTemplate s_template = new PathTemplate("projects/{project}/uptimeCheckConfigs/{uptime_check_config}");
+        private static readonly gax::PathTemplate s_template = new gax::PathTemplate("projects/{project}/uptimeCheckConfigs/{uptime_check_config}");
 
         /// <summary>
         /// Parses the given uptime_check_config resource name in string form into a new
@@ -771,8 +771,8 @@ namespace Google.Cloud.Monitoring.V3
         /// <returns>The parsed <see cref="UptimeCheckConfigName"/> if successful.</returns>
         public static UptimeCheckConfigName Parse(string uptimeCheckConfigName)
         {
-            GaxPreconditions.CheckNotNull(uptimeCheckConfigName, nameof(uptimeCheckConfigName));
-            TemplatedResourceName resourceName = s_template.ParseName(uptimeCheckConfigName);
+            gax::GaxPreconditions.CheckNotNull(uptimeCheckConfigName, nameof(uptimeCheckConfigName));
+            gax::TemplatedResourceName resourceName = s_template.ParseName(uptimeCheckConfigName);
             return new UptimeCheckConfigName(resourceName[0], resourceName[1]);
         }
 
@@ -781,7 +781,7 @@ namespace Google.Cloud.Monitoring.V3
         /// <see cref="UptimeCheckConfigName"/> instance.
         /// </summary>
         /// <remarks>
-        /// This method still throws <see cref="ArgumentNullException"/> if <paramref name="uptimeCheckConfigName"/> is null,
+        /// This method still throws <see cref="s::ArgumentNullException"/> if <paramref name="uptimeCheckConfigName"/> is null,
         /// as this would usually indicate a programming error rather than a data error.
         /// </remarks>
         /// <param name="uptimeCheckConfigName">The uptime_check_config resource name in string form. Must not be <c>null</c>.</param>
@@ -790,8 +790,8 @@ namespace Google.Cloud.Monitoring.V3
         /// <returns><c>true</c> if the name was parsed succssfully; <c>false</c> otherwise.</returns>
         public static bool TryParse(string uptimeCheckConfigName, out UptimeCheckConfigName result)
         {
-            GaxPreconditions.CheckNotNull(uptimeCheckConfigName, nameof(uptimeCheckConfigName));
-            TemplatedResourceName resourceName;
+            gax::GaxPreconditions.CheckNotNull(uptimeCheckConfigName, nameof(uptimeCheckConfigName));
+            gax::TemplatedResourceName resourceName;
             if (s_template.TryParseName(uptimeCheckConfigName, out resourceName))
             {
                 result = new UptimeCheckConfigName(resourceName[0], resourceName[1]);
@@ -812,8 +812,8 @@ namespace Google.Cloud.Monitoring.V3
         /// <param name="uptimeCheckConfigId">The uptimeCheckConfig ID. Must not be <c>null</c>.</param>
         public UptimeCheckConfigName(string projectId, string uptimeCheckConfigId)
         {
-            ProjectId = GaxPreconditions.CheckNotNull(projectId, nameof(projectId));
-            UptimeCheckConfigId = GaxPreconditions.CheckNotNull(uptimeCheckConfigId, nameof(uptimeCheckConfigId));
+            ProjectId = gax::GaxPreconditions.CheckNotNull(projectId, nameof(projectId));
+            UptimeCheckConfigId = gax::GaxPreconditions.CheckNotNull(uptimeCheckConfigId, nameof(uptimeCheckConfigId));
         }
 
         /// <summary>
@@ -827,7 +827,7 @@ namespace Google.Cloud.Monitoring.V3
         public string UptimeCheckConfigId { get; }
 
         /// <inheritdoc />
-        public ResourceNameKind Kind => ResourceNameKind.Simple;
+        public gax::ResourceNameKind Kind => gax::ResourceNameKind.Simple;
 
         /// <inheritdoc />
         public override string ToString() => s_template.Expand(ProjectId, UptimeCheckConfigId);
