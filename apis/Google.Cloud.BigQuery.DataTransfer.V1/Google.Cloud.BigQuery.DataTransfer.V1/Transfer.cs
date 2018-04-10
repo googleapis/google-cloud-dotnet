@@ -79,7 +79,7 @@ namespace Google.Cloud.BigQuery.DataTransfer.V1 {
   }
   #region Enums
   /// <summary>
-  /// Represents data transfer type.
+  /// DEPRECATED. Represents data transfer type.
   /// </summary>
   public enum TransferType {
     /// <summary>
@@ -138,7 +138,6 @@ namespace Google.Cloud.BigQuery.DataTransfer.V1 {
   /// When a new transfer configuration is created, the specified
   /// `destination_dataset_id` is created when needed and shared with the
   /// appropriate data source service account.
-  /// Next id: 20
   /// </summary>
   public sealed partial class TransferConfig : pb::IMessage<TransferConfig> {
     private static readonly pb::MessageParser<TransferConfig> _parser = new pb::MessageParser<TransferConfig>(() => new TransferConfig());
@@ -690,7 +689,6 @@ namespace Google.Cloud.BigQuery.DataTransfer.V1 {
 
   /// <summary>
   /// Represents a data transfer run.
-  /// Next id: 27
   /// </summary>
   public sealed partial class TransferRun : pb::IMessage<TransferRun> {
     private static readonly pb::MessageParser<TransferRun> _parser = new pb::MessageParser<TransferRun>(() => new TransferRun());

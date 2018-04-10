@@ -1292,7 +1292,7 @@ namespace Google.Cloud.Dlp.V2
         }
 
         /// <summary>
-        /// Creates an inspect template for re-using frequently used configuration
+        /// Creates an InspectTemplate for re-using frequently used configuration
         /// for inspecting content, images, and storage.
         /// </summary>
         /// <param name="request">
@@ -1312,7 +1312,7 @@ namespace Google.Cloud.Dlp.V2
         }
 
         /// <summary>
-        /// Creates an inspect template for re-using frequently used configuration
+        /// Creates an InspectTemplate for re-using frequently used configuration
         /// for inspecting content, images, and storage.
         /// </summary>
         /// <param name="request">
@@ -1331,7 +1331,7 @@ namespace Google.Cloud.Dlp.V2
                 CallSettings.FromCancellationToken(cancellationToken));
 
         /// <summary>
-        /// Creates an inspect template for re-using frequently used configuration
+        /// Creates an InspectTemplate for re-using frequently used configuration
         /// for inspecting content, images, and storage.
         /// </summary>
         /// <param name="request">
@@ -1351,7 +1351,7 @@ namespace Google.Cloud.Dlp.V2
         }
 
         /// <summary>
-        /// Updates the inspect template.
+        /// Updates the InspectTemplate.
         /// </summary>
         /// <param name="request">
         /// The request object containing all of the parameters for the API call.
@@ -1370,7 +1370,7 @@ namespace Google.Cloud.Dlp.V2
         }
 
         /// <summary>
-        /// Updates the inspect template.
+        /// Updates the InspectTemplate.
         /// </summary>
         /// <param name="request">
         /// The request object containing all of the parameters for the API call.
@@ -1388,7 +1388,7 @@ namespace Google.Cloud.Dlp.V2
                 CallSettings.FromCancellationToken(cancellationToken));
 
         /// <summary>
-        /// Updates the inspect template.
+        /// Updates the InspectTemplate.
         /// </summary>
         /// <param name="request">
         /// The request object containing all of the parameters for the API call.
@@ -1407,7 +1407,7 @@ namespace Google.Cloud.Dlp.V2
         }
 
         /// <summary>
-        /// Gets an inspect template.
+        /// Gets an InspectTemplate.
         /// </summary>
         /// <param name="request">
         /// The request object containing all of the parameters for the API call.
@@ -1426,7 +1426,7 @@ namespace Google.Cloud.Dlp.V2
         }
 
         /// <summary>
-        /// Gets an inspect template.
+        /// Gets an InspectTemplate.
         /// </summary>
         /// <param name="request">
         /// The request object containing all of the parameters for the API call.
@@ -1444,7 +1444,7 @@ namespace Google.Cloud.Dlp.V2
                 CallSettings.FromCancellationToken(cancellationToken));
 
         /// <summary>
-        /// Gets an inspect template.
+        /// Gets an InspectTemplate.
         /// </summary>
         /// <param name="request">
         /// The request object containing all of the parameters for the API call.
@@ -1463,7 +1463,7 @@ namespace Google.Cloud.Dlp.V2
         }
 
         /// <summary>
-        /// Lists inspect templates.
+        /// Lists InspectTemplates.
         /// </summary>
         /// <param name="request">
         /// The request object containing all of the parameters for the API call.
@@ -1482,7 +1482,7 @@ namespace Google.Cloud.Dlp.V2
         }
 
         /// <summary>
-        /// Lists inspect templates.
+        /// Lists InspectTemplates.
         /// </summary>
         /// <param name="request">
         /// The request object containing all of the parameters for the API call.
@@ -1501,7 +1501,7 @@ namespace Google.Cloud.Dlp.V2
         }
 
         /// <summary>
-        /// Deletes an inspect template.
+        /// Deletes an InspectTemplate.
         /// </summary>
         /// <param name="request">
         /// The request object containing all of the parameters for the API call.
@@ -1520,7 +1520,7 @@ namespace Google.Cloud.Dlp.V2
         }
 
         /// <summary>
-        /// Deletes an inspect template.
+        /// Deletes an InspectTemplate.
         /// </summary>
         /// <param name="request">
         /// The request object containing all of the parameters for the API call.
@@ -1538,7 +1538,7 @@ namespace Google.Cloud.Dlp.V2
                 CallSettings.FromCancellationToken(cancellationToken));
 
         /// <summary>
-        /// Deletes an inspect template.
+        /// Deletes an InspectTemplate.
         /// </summary>
         /// <param name="request">
         /// The request object containing all of the parameters for the API call.
@@ -1554,8 +1554,8 @@ namespace Google.Cloud.Dlp.V2
         }
 
         /// <summary>
-        /// Creates a de-identify template for re-using frequently used configuration
-        /// for Deidentifying content, images, and storage.
+        /// Creates a DeidentifyTemplate for re-using frequently used configuration
+        /// for de-identifying content, images, and storage.
         /// </summary>
         /// <param name="request">
         /// The request object containing all of the parameters for the API call.
@@ -1574,8 +1574,8 @@ namespace Google.Cloud.Dlp.V2
         }
 
         /// <summary>
-        /// Creates a de-identify template for re-using frequently used configuration
-        /// for Deidentifying content, images, and storage.
+        /// Creates a DeidentifyTemplate for re-using frequently used configuration
+        /// for de-identifying content, images, and storage.
         /// </summary>
         /// <param name="request">
         /// The request object containing all of the parameters for the API call.
@@ -1593,8 +1593,8 @@ namespace Google.Cloud.Dlp.V2
                 CallSettings.FromCancellationToken(cancellationToken));
 
         /// <summary>
-        /// Creates a de-identify template for re-using frequently used configuration
-        /// for Deidentifying content, images, and storage.
+        /// Creates a DeidentifyTemplate for re-using frequently used configuration
+        /// for de-identifying content, images, and storage.
         /// </summary>
         /// <param name="request">
         /// The request object containing all of the parameters for the API call.
@@ -1613,7 +1613,7 @@ namespace Google.Cloud.Dlp.V2
         }
 
         /// <summary>
-        /// Updates the de-identify template.
+        /// Updates the DeidentifyTemplate.
         /// </summary>
         /// <param name="request">
         /// The request object containing all of the parameters for the API call.
@@ -1632,7 +1632,7 @@ namespace Google.Cloud.Dlp.V2
         }
 
         /// <summary>
-        /// Updates the de-identify template.
+        /// Updates the DeidentifyTemplate.
         /// </summary>
         /// <param name="request">
         /// The request object containing all of the parameters for the API call.
@@ -1650,7 +1650,7 @@ namespace Google.Cloud.Dlp.V2
                 CallSettings.FromCancellationToken(cancellationToken));
 
         /// <summary>
-        /// Updates the de-identify template.
+        /// Updates the DeidentifyTemplate.
         /// </summary>
         /// <param name="request">
         /// The request object containing all of the parameters for the API call.
@@ -1669,7 +1669,7 @@ namespace Google.Cloud.Dlp.V2
         }
 
         /// <summary>
-        /// Gets a de-identify template.
+        /// Gets a DeidentifyTemplate.
         /// </summary>
         /// <param name="request">
         /// The request object containing all of the parameters for the API call.
@@ -1688,7 +1688,7 @@ namespace Google.Cloud.Dlp.V2
         }
 
         /// <summary>
-        /// Gets a de-identify template.
+        /// Gets a DeidentifyTemplate.
         /// </summary>
         /// <param name="request">
         /// The request object containing all of the parameters for the API call.
@@ -1706,7 +1706,7 @@ namespace Google.Cloud.Dlp.V2
                 CallSettings.FromCancellationToken(cancellationToken));
 
         /// <summary>
-        /// Gets a de-identify template.
+        /// Gets a DeidentifyTemplate.
         /// </summary>
         /// <param name="request">
         /// The request object containing all of the parameters for the API call.
@@ -1725,7 +1725,7 @@ namespace Google.Cloud.Dlp.V2
         }
 
         /// <summary>
-        /// Lists de-identify templates.
+        /// Lists DeidentifyTemplates.
         /// </summary>
         /// <param name="request">
         /// The request object containing all of the parameters for the API call.
@@ -1744,7 +1744,7 @@ namespace Google.Cloud.Dlp.V2
         }
 
         /// <summary>
-        /// Lists de-identify templates.
+        /// Lists DeidentifyTemplates.
         /// </summary>
         /// <param name="request">
         /// The request object containing all of the parameters for the API call.
@@ -1763,7 +1763,7 @@ namespace Google.Cloud.Dlp.V2
         }
 
         /// <summary>
-        /// Deletes a de-identify template.
+        /// Deletes a DeidentifyTemplate.
         /// </summary>
         /// <param name="request">
         /// The request object containing all of the parameters for the API call.
@@ -1782,7 +1782,7 @@ namespace Google.Cloud.Dlp.V2
         }
 
         /// <summary>
-        /// Deletes a de-identify template.
+        /// Deletes a DeidentifyTemplate.
         /// </summary>
         /// <param name="request">
         /// The request object containing all of the parameters for the API call.
@@ -1800,7 +1800,7 @@ namespace Google.Cloud.Dlp.V2
                 CallSettings.FromCancellationToken(cancellationToken));
 
         /// <summary>
-        /// Deletes a de-identify template.
+        /// Deletes a DeidentifyTemplate.
         /// </summary>
         /// <param name="request">
         /// The request object containing all of the parameters for the API call.
@@ -1816,8 +1816,8 @@ namespace Google.Cloud.Dlp.V2
         }
 
         /// <summary>
-        /// Creates a new job to inspect storage or calculate risk metrics [How-to
-        /// guide](/dlp/docs/compute-risk-analysis).
+        /// Creates a new job to inspect storage or calculate risk metrics.
+        /// [How-to guide](/dlp/docs/compute-risk-analysis).
         /// </summary>
         /// <param name="request">
         /// The request object containing all of the parameters for the API call.
@@ -1836,8 +1836,8 @@ namespace Google.Cloud.Dlp.V2
         }
 
         /// <summary>
-        /// Creates a new job to inspect storage or calculate risk metrics [How-to
-        /// guide](/dlp/docs/compute-risk-analysis).
+        /// Creates a new job to inspect storage or calculate risk metrics.
+        /// [How-to guide](/dlp/docs/compute-risk-analysis).
         /// </summary>
         /// <param name="request">
         /// The request object containing all of the parameters for the API call.
@@ -1855,8 +1855,8 @@ namespace Google.Cloud.Dlp.V2
                 CallSettings.FromCancellationToken(cancellationToken));
 
         /// <summary>
-        /// Creates a new job to inspect storage or calculate risk metrics [How-to
-        /// guide](/dlp/docs/compute-risk-analysis).
+        /// Creates a new job to inspect storage or calculate risk metrics.
+        /// [How-to guide](/dlp/docs/compute-risk-analysis).
         /// </summary>
         /// <param name="request">
         /// The request object containing all of the parameters for the API call.
@@ -2784,7 +2784,7 @@ namespace Google.Cloud.Dlp.V2
         }
 
         /// <summary>
-        /// Creates an inspect template for re-using frequently used configuration
+        /// Creates an InspectTemplate for re-using frequently used configuration
         /// for inspecting content, images, and storage.
         /// </summary>
         /// <param name="request">
@@ -2805,7 +2805,7 @@ namespace Google.Cloud.Dlp.V2
         }
 
         /// <summary>
-        /// Creates an inspect template for re-using frequently used configuration
+        /// Creates an InspectTemplate for re-using frequently used configuration
         /// for inspecting content, images, and storage.
         /// </summary>
         /// <param name="request">
@@ -2826,7 +2826,7 @@ namespace Google.Cloud.Dlp.V2
         }
 
         /// <summary>
-        /// Updates the inspect template.
+        /// Updates the InspectTemplate.
         /// </summary>
         /// <param name="request">
         /// The request object containing all of the parameters for the API call.
@@ -2846,7 +2846,7 @@ namespace Google.Cloud.Dlp.V2
         }
 
         /// <summary>
-        /// Updates the inspect template.
+        /// Updates the InspectTemplate.
         /// </summary>
         /// <param name="request">
         /// The request object containing all of the parameters for the API call.
@@ -2866,7 +2866,7 @@ namespace Google.Cloud.Dlp.V2
         }
 
         /// <summary>
-        /// Gets an inspect template.
+        /// Gets an InspectTemplate.
         /// </summary>
         /// <param name="request">
         /// The request object containing all of the parameters for the API call.
@@ -2886,7 +2886,7 @@ namespace Google.Cloud.Dlp.V2
         }
 
         /// <summary>
-        /// Gets an inspect template.
+        /// Gets an InspectTemplate.
         /// </summary>
         /// <param name="request">
         /// The request object containing all of the parameters for the API call.
@@ -2906,7 +2906,7 @@ namespace Google.Cloud.Dlp.V2
         }
 
         /// <summary>
-        /// Lists inspect templates.
+        /// Lists InspectTemplates.
         /// </summary>
         /// <param name="request">
         /// The request object containing all of the parameters for the API call.
@@ -2926,7 +2926,7 @@ namespace Google.Cloud.Dlp.V2
         }
 
         /// <summary>
-        /// Lists inspect templates.
+        /// Lists InspectTemplates.
         /// </summary>
         /// <param name="request">
         /// The request object containing all of the parameters for the API call.
@@ -2946,7 +2946,7 @@ namespace Google.Cloud.Dlp.V2
         }
 
         /// <summary>
-        /// Deletes an inspect template.
+        /// Deletes an InspectTemplate.
         /// </summary>
         /// <param name="request">
         /// The request object containing all of the parameters for the API call.
@@ -2966,7 +2966,7 @@ namespace Google.Cloud.Dlp.V2
         }
 
         /// <summary>
-        /// Deletes an inspect template.
+        /// Deletes an InspectTemplate.
         /// </summary>
         /// <param name="request">
         /// The request object containing all of the parameters for the API call.
@@ -2983,8 +2983,8 @@ namespace Google.Cloud.Dlp.V2
         }
 
         /// <summary>
-        /// Creates a de-identify template for re-using frequently used configuration
-        /// for Deidentifying content, images, and storage.
+        /// Creates a DeidentifyTemplate for re-using frequently used configuration
+        /// for de-identifying content, images, and storage.
         /// </summary>
         /// <param name="request">
         /// The request object containing all of the parameters for the API call.
@@ -3004,8 +3004,8 @@ namespace Google.Cloud.Dlp.V2
         }
 
         /// <summary>
-        /// Creates a de-identify template for re-using frequently used configuration
-        /// for Deidentifying content, images, and storage.
+        /// Creates a DeidentifyTemplate for re-using frequently used configuration
+        /// for de-identifying content, images, and storage.
         /// </summary>
         /// <param name="request">
         /// The request object containing all of the parameters for the API call.
@@ -3025,7 +3025,7 @@ namespace Google.Cloud.Dlp.V2
         }
 
         /// <summary>
-        /// Updates the de-identify template.
+        /// Updates the DeidentifyTemplate.
         /// </summary>
         /// <param name="request">
         /// The request object containing all of the parameters for the API call.
@@ -3045,7 +3045,7 @@ namespace Google.Cloud.Dlp.V2
         }
 
         /// <summary>
-        /// Updates the de-identify template.
+        /// Updates the DeidentifyTemplate.
         /// </summary>
         /// <param name="request">
         /// The request object containing all of the parameters for the API call.
@@ -3065,7 +3065,7 @@ namespace Google.Cloud.Dlp.V2
         }
 
         /// <summary>
-        /// Gets a de-identify template.
+        /// Gets a DeidentifyTemplate.
         /// </summary>
         /// <param name="request">
         /// The request object containing all of the parameters for the API call.
@@ -3085,7 +3085,7 @@ namespace Google.Cloud.Dlp.V2
         }
 
         /// <summary>
-        /// Gets a de-identify template.
+        /// Gets a DeidentifyTemplate.
         /// </summary>
         /// <param name="request">
         /// The request object containing all of the parameters for the API call.
@@ -3105,7 +3105,7 @@ namespace Google.Cloud.Dlp.V2
         }
 
         /// <summary>
-        /// Lists de-identify templates.
+        /// Lists DeidentifyTemplates.
         /// </summary>
         /// <param name="request">
         /// The request object containing all of the parameters for the API call.
@@ -3125,7 +3125,7 @@ namespace Google.Cloud.Dlp.V2
         }
 
         /// <summary>
-        /// Lists de-identify templates.
+        /// Lists DeidentifyTemplates.
         /// </summary>
         /// <param name="request">
         /// The request object containing all of the parameters for the API call.
@@ -3145,7 +3145,7 @@ namespace Google.Cloud.Dlp.V2
         }
 
         /// <summary>
-        /// Deletes a de-identify template.
+        /// Deletes a DeidentifyTemplate.
         /// </summary>
         /// <param name="request">
         /// The request object containing all of the parameters for the API call.
@@ -3165,7 +3165,7 @@ namespace Google.Cloud.Dlp.V2
         }
 
         /// <summary>
-        /// Deletes a de-identify template.
+        /// Deletes a DeidentifyTemplate.
         /// </summary>
         /// <param name="request">
         /// The request object containing all of the parameters for the API call.
@@ -3182,8 +3182,8 @@ namespace Google.Cloud.Dlp.V2
         }
 
         /// <summary>
-        /// Creates a new job to inspect storage or calculate risk metrics [How-to
-        /// guide](/dlp/docs/compute-risk-analysis).
+        /// Creates a new job to inspect storage or calculate risk metrics.
+        /// [How-to guide](/dlp/docs/compute-risk-analysis).
         /// </summary>
         /// <param name="request">
         /// The request object containing all of the parameters for the API call.
@@ -3203,8 +3203,8 @@ namespace Google.Cloud.Dlp.V2
         }
 
         /// <summary>
-        /// Creates a new job to inspect storage or calculate risk metrics [How-to
-        /// guide](/dlp/docs/compute-risk-analysis).
+        /// Creates a new job to inspect storage or calculate risk metrics.
+        /// [How-to guide](/dlp/docs/compute-risk-analysis).
         /// </summary>
         /// <param name="request">
         /// The request object containing all of the parameters for the API call.
