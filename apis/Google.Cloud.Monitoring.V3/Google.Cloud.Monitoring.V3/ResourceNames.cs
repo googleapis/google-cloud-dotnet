@@ -106,282 +106,6 @@ namespace Google.Cloud.Monitoring.V3
     }
 
     /// <summary>
-    /// Resource name for the 'metric_descriptor' resource.
-    /// </summary>
-    public sealed partial class MetricDescriptorName : IResourceName, IEquatable<MetricDescriptorName>
-    {
-        private static readonly PathTemplate s_template = new PathTemplate("projects/{project}/metricDescriptors/{metric_descriptor=**}");
-
-        /// <summary>
-        /// Parses the given metric_descriptor resource name in string form into a new
-        /// <see cref="MetricDescriptorName"/> instance.
-        /// </summary>
-        /// <param name="metricDescriptorName">The metric_descriptor resource name in string form. Must not be <c>null</c>.</param>
-        /// <returns>The parsed <see cref="MetricDescriptorName"/> if successful.</returns>
-        public static MetricDescriptorName Parse(string metricDescriptorName)
-        {
-            GaxPreconditions.CheckNotNull(metricDescriptorName, nameof(metricDescriptorName));
-            TemplatedResourceName resourceName = s_template.ParseName(metricDescriptorName);
-            return new MetricDescriptorName(resourceName[0], resourceName[1]);
-        }
-
-        /// <summary>
-        /// Tries to parse the given metric_descriptor resource name in string form into a new
-        /// <see cref="MetricDescriptorName"/> instance.
-        /// </summary>
-        /// <remarks>
-        /// This method still throws <see cref="ArgumentNullException"/> if <paramref name="metricDescriptorName"/> is null,
-        /// as this would usually indicate a programming error rather than a data error.
-        /// </remarks>
-        /// <param name="metricDescriptorName">The metric_descriptor resource name in string form. Must not be <c>null</c>.</param>
-        /// <param name="result">When this method returns, the parsed <see cref="MetricDescriptorName"/>,
-        /// or <c>null</c> if parsing fails.</param>
-        /// <returns><c>true</c> if the name was parsed succssfully; <c>false</c> otherwise.</returns>
-        public static bool TryParse(string metricDescriptorName, out MetricDescriptorName result)
-        {
-            GaxPreconditions.CheckNotNull(metricDescriptorName, nameof(metricDescriptorName));
-            TemplatedResourceName resourceName;
-            if (s_template.TryParseName(metricDescriptorName, out resourceName))
-            {
-                result = new MetricDescriptorName(resourceName[0], resourceName[1]);
-                return true;
-            }
-            else
-            {
-                result = null;
-                return false;
-            }
-        }
-
-        /// <summary>
-        /// Constructs a new instance of the <see cref="MetricDescriptorName"/> resource name class
-        /// from its component parts.
-        /// </summary>
-        /// <param name="projectId">The project ID. Must not be <c>null</c>.</param>
-        /// <param name="metricDescriptorId">The metricDescriptor ID. Must not be <c>null</c>.</param>
-        public MetricDescriptorName(string projectId, string metricDescriptorId)
-        {
-            ProjectId = GaxPreconditions.CheckNotNull(projectId, nameof(projectId));
-            MetricDescriptorId = GaxPreconditions.CheckNotNull(metricDescriptorId, nameof(metricDescriptorId));
-        }
-
-        /// <summary>
-        /// The project ID. Never <c>null</c>.
-        /// </summary>
-        public string ProjectId { get; }
-
-        /// <summary>
-        /// The metricDescriptor ID. Never <c>null</c>.
-        /// </summary>
-        public string MetricDescriptorId { get; }
-
-        /// <inheritdoc />
-        public ResourceNameKind Kind => ResourceNameKind.Simple;
-
-        /// <inheritdoc />
-        public override string ToString() => s_template.Expand(ProjectId, MetricDescriptorId);
-
-        /// <inheritdoc />
-        public override int GetHashCode() => ToString().GetHashCode();
-
-        /// <inheritdoc />
-        public override bool Equals(object obj) => Equals(obj as MetricDescriptorName);
-
-        /// <inheritdoc />
-        public bool Equals(MetricDescriptorName other) => ToString() == other?.ToString();
-
-        /// <inheritdoc />
-        public static bool operator ==(MetricDescriptorName a, MetricDescriptorName b) => ReferenceEquals(a, b) || (a?.Equals(b) ?? false);
-
-        /// <inheritdoc />
-        public static bool operator !=(MetricDescriptorName a, MetricDescriptorName b) => !(a == b);
-    }
-
-    /// <summary>
-    /// Resource name for the 'monitored_resource_descriptor' resource.
-    /// </summary>
-    public sealed partial class MonitoredResourceDescriptorName : IResourceName, IEquatable<MonitoredResourceDescriptorName>
-    {
-        private static readonly PathTemplate s_template = new PathTemplate("projects/{project}/monitoredResourceDescriptors/{monitored_resource_descriptor}");
-
-        /// <summary>
-        /// Parses the given monitored_resource_descriptor resource name in string form into a new
-        /// <see cref="MonitoredResourceDescriptorName"/> instance.
-        /// </summary>
-        /// <param name="monitoredResourceDescriptorName">The monitored_resource_descriptor resource name in string form. Must not be <c>null</c>.</param>
-        /// <returns>The parsed <see cref="MonitoredResourceDescriptorName"/> if successful.</returns>
-        public static MonitoredResourceDescriptorName Parse(string monitoredResourceDescriptorName)
-        {
-            GaxPreconditions.CheckNotNull(monitoredResourceDescriptorName, nameof(monitoredResourceDescriptorName));
-            TemplatedResourceName resourceName = s_template.ParseName(monitoredResourceDescriptorName);
-            return new MonitoredResourceDescriptorName(resourceName[0], resourceName[1]);
-        }
-
-        /// <summary>
-        /// Tries to parse the given monitored_resource_descriptor resource name in string form into a new
-        /// <see cref="MonitoredResourceDescriptorName"/> instance.
-        /// </summary>
-        /// <remarks>
-        /// This method still throws <see cref="ArgumentNullException"/> if <paramref name="monitoredResourceDescriptorName"/> is null,
-        /// as this would usually indicate a programming error rather than a data error.
-        /// </remarks>
-        /// <param name="monitoredResourceDescriptorName">The monitored_resource_descriptor resource name in string form. Must not be <c>null</c>.</param>
-        /// <param name="result">When this method returns, the parsed <see cref="MonitoredResourceDescriptorName"/>,
-        /// or <c>null</c> if parsing fails.</param>
-        /// <returns><c>true</c> if the name was parsed succssfully; <c>false</c> otherwise.</returns>
-        public static bool TryParse(string monitoredResourceDescriptorName, out MonitoredResourceDescriptorName result)
-        {
-            GaxPreconditions.CheckNotNull(monitoredResourceDescriptorName, nameof(monitoredResourceDescriptorName));
-            TemplatedResourceName resourceName;
-            if (s_template.TryParseName(monitoredResourceDescriptorName, out resourceName))
-            {
-                result = new MonitoredResourceDescriptorName(resourceName[0], resourceName[1]);
-                return true;
-            }
-            else
-            {
-                result = null;
-                return false;
-            }
-        }
-
-        /// <summary>
-        /// Constructs a new instance of the <see cref="MonitoredResourceDescriptorName"/> resource name class
-        /// from its component parts.
-        /// </summary>
-        /// <param name="projectId">The project ID. Must not be <c>null</c>.</param>
-        /// <param name="monitoredResourceDescriptorId">The monitoredResourceDescriptor ID. Must not be <c>null</c>.</param>
-        public MonitoredResourceDescriptorName(string projectId, string monitoredResourceDescriptorId)
-        {
-            ProjectId = GaxPreconditions.CheckNotNull(projectId, nameof(projectId));
-            MonitoredResourceDescriptorId = GaxPreconditions.CheckNotNull(monitoredResourceDescriptorId, nameof(monitoredResourceDescriptorId));
-        }
-
-        /// <summary>
-        /// The project ID. Never <c>null</c>.
-        /// </summary>
-        public string ProjectId { get; }
-
-        /// <summary>
-        /// The monitoredResourceDescriptor ID. Never <c>null</c>.
-        /// </summary>
-        public string MonitoredResourceDescriptorId { get; }
-
-        /// <inheritdoc />
-        public ResourceNameKind Kind => ResourceNameKind.Simple;
-
-        /// <inheritdoc />
-        public override string ToString() => s_template.Expand(ProjectId, MonitoredResourceDescriptorId);
-
-        /// <inheritdoc />
-        public override int GetHashCode() => ToString().GetHashCode();
-
-        /// <inheritdoc />
-        public override bool Equals(object obj) => Equals(obj as MonitoredResourceDescriptorName);
-
-        /// <inheritdoc />
-        public bool Equals(MonitoredResourceDescriptorName other) => ToString() == other?.ToString();
-
-        /// <inheritdoc />
-        public static bool operator ==(MonitoredResourceDescriptorName a, MonitoredResourceDescriptorName b) => ReferenceEquals(a, b) || (a?.Equals(b) ?? false);
-
-        /// <inheritdoc />
-        public static bool operator !=(MonitoredResourceDescriptorName a, MonitoredResourceDescriptorName b) => !(a == b);
-    }
-
-    /// <summary>
-    /// Resource name for the 'group' resource.
-    /// </summary>
-    public sealed partial class GroupName : IResourceName, IEquatable<GroupName>
-    {
-        private static readonly PathTemplate s_template = new PathTemplate("projects/{project}/groups/{group}");
-
-        /// <summary>
-        /// Parses the given group resource name in string form into a new
-        /// <see cref="GroupName"/> instance.
-        /// </summary>
-        /// <param name="groupName">The group resource name in string form. Must not be <c>null</c>.</param>
-        /// <returns>The parsed <see cref="GroupName"/> if successful.</returns>
-        public static GroupName Parse(string groupName)
-        {
-            GaxPreconditions.CheckNotNull(groupName, nameof(groupName));
-            TemplatedResourceName resourceName = s_template.ParseName(groupName);
-            return new GroupName(resourceName[0], resourceName[1]);
-        }
-
-        /// <summary>
-        /// Tries to parse the given group resource name in string form into a new
-        /// <see cref="GroupName"/> instance.
-        /// </summary>
-        /// <remarks>
-        /// This method still throws <see cref="ArgumentNullException"/> if <paramref name="groupName"/> is null,
-        /// as this would usually indicate a programming error rather than a data error.
-        /// </remarks>
-        /// <param name="groupName">The group resource name in string form. Must not be <c>null</c>.</param>
-        /// <param name="result">When this method returns, the parsed <see cref="GroupName"/>,
-        /// or <c>null</c> if parsing fails.</param>
-        /// <returns><c>true</c> if the name was parsed succssfully; <c>false</c> otherwise.</returns>
-        public static bool TryParse(string groupName, out GroupName result)
-        {
-            GaxPreconditions.CheckNotNull(groupName, nameof(groupName));
-            TemplatedResourceName resourceName;
-            if (s_template.TryParseName(groupName, out resourceName))
-            {
-                result = new GroupName(resourceName[0], resourceName[1]);
-                return true;
-            }
-            else
-            {
-                result = null;
-                return false;
-            }
-        }
-
-        /// <summary>
-        /// Constructs a new instance of the <see cref="GroupName"/> resource name class
-        /// from its component parts.
-        /// </summary>
-        /// <param name="projectId">The project ID. Must not be <c>null</c>.</param>
-        /// <param name="groupId">The group ID. Must not be <c>null</c>.</param>
-        public GroupName(string projectId, string groupId)
-        {
-            ProjectId = GaxPreconditions.CheckNotNull(projectId, nameof(projectId));
-            GroupId = GaxPreconditions.CheckNotNull(groupId, nameof(groupId));
-        }
-
-        /// <summary>
-        /// The project ID. Never <c>null</c>.
-        /// </summary>
-        public string ProjectId { get; }
-
-        /// <summary>
-        /// The group ID. Never <c>null</c>.
-        /// </summary>
-        public string GroupId { get; }
-
-        /// <inheritdoc />
-        public ResourceNameKind Kind => ResourceNameKind.Simple;
-
-        /// <inheritdoc />
-        public override string ToString() => s_template.Expand(ProjectId, GroupId);
-
-        /// <inheritdoc />
-        public override int GetHashCode() => ToString().GetHashCode();
-
-        /// <inheritdoc />
-        public override bool Equals(object obj) => Equals(obj as GroupName);
-
-        /// <inheritdoc />
-        public bool Equals(GroupName other) => ToString() == other?.ToString();
-
-        /// <inheritdoc />
-        public static bool operator ==(GroupName a, GroupName b) => ReferenceEquals(a, b) || (a?.Equals(b) ?? false);
-
-        /// <inheritdoc />
-        public static bool operator !=(GroupName a, GroupName b) => !(a == b);
-    }
-
-    /// <summary>
     /// Resource name for the 'alert_policy' resource.
     /// </summary>
     public sealed partial class AlertPolicyName : IResourceName, IEquatable<AlertPolicyName>
@@ -570,6 +294,282 @@ namespace Google.Cloud.Monitoring.V3
 
         /// <inheritdoc />
         public static bool operator !=(AlertPolicyConditionName a, AlertPolicyConditionName b) => !(a == b);
+    }
+
+    /// <summary>
+    /// Resource name for the 'group' resource.
+    /// </summary>
+    public sealed partial class GroupName : IResourceName, IEquatable<GroupName>
+    {
+        private static readonly PathTemplate s_template = new PathTemplate("projects/{project}/groups/{group}");
+
+        /// <summary>
+        /// Parses the given group resource name in string form into a new
+        /// <see cref="GroupName"/> instance.
+        /// </summary>
+        /// <param name="groupName">The group resource name in string form. Must not be <c>null</c>.</param>
+        /// <returns>The parsed <see cref="GroupName"/> if successful.</returns>
+        public static GroupName Parse(string groupName)
+        {
+            GaxPreconditions.CheckNotNull(groupName, nameof(groupName));
+            TemplatedResourceName resourceName = s_template.ParseName(groupName);
+            return new GroupName(resourceName[0], resourceName[1]);
+        }
+
+        /// <summary>
+        /// Tries to parse the given group resource name in string form into a new
+        /// <see cref="GroupName"/> instance.
+        /// </summary>
+        /// <remarks>
+        /// This method still throws <see cref="ArgumentNullException"/> if <paramref name="groupName"/> is null,
+        /// as this would usually indicate a programming error rather than a data error.
+        /// </remarks>
+        /// <param name="groupName">The group resource name in string form. Must not be <c>null</c>.</param>
+        /// <param name="result">When this method returns, the parsed <see cref="GroupName"/>,
+        /// or <c>null</c> if parsing fails.</param>
+        /// <returns><c>true</c> if the name was parsed succssfully; <c>false</c> otherwise.</returns>
+        public static bool TryParse(string groupName, out GroupName result)
+        {
+            GaxPreconditions.CheckNotNull(groupName, nameof(groupName));
+            TemplatedResourceName resourceName;
+            if (s_template.TryParseName(groupName, out resourceName))
+            {
+                result = new GroupName(resourceName[0], resourceName[1]);
+                return true;
+            }
+            else
+            {
+                result = null;
+                return false;
+            }
+        }
+
+        /// <summary>
+        /// Constructs a new instance of the <see cref="GroupName"/> resource name class
+        /// from its component parts.
+        /// </summary>
+        /// <param name="projectId">The project ID. Must not be <c>null</c>.</param>
+        /// <param name="groupId">The group ID. Must not be <c>null</c>.</param>
+        public GroupName(string projectId, string groupId)
+        {
+            ProjectId = GaxPreconditions.CheckNotNull(projectId, nameof(projectId));
+            GroupId = GaxPreconditions.CheckNotNull(groupId, nameof(groupId));
+        }
+
+        /// <summary>
+        /// The project ID. Never <c>null</c>.
+        /// </summary>
+        public string ProjectId { get; }
+
+        /// <summary>
+        /// The group ID. Never <c>null</c>.
+        /// </summary>
+        public string GroupId { get; }
+
+        /// <inheritdoc />
+        public ResourceNameKind Kind => ResourceNameKind.Simple;
+
+        /// <inheritdoc />
+        public override string ToString() => s_template.Expand(ProjectId, GroupId);
+
+        /// <inheritdoc />
+        public override int GetHashCode() => ToString().GetHashCode();
+
+        /// <inheritdoc />
+        public override bool Equals(object obj) => Equals(obj as GroupName);
+
+        /// <inheritdoc />
+        public bool Equals(GroupName other) => ToString() == other?.ToString();
+
+        /// <inheritdoc />
+        public static bool operator ==(GroupName a, GroupName b) => ReferenceEquals(a, b) || (a?.Equals(b) ?? false);
+
+        /// <inheritdoc />
+        public static bool operator !=(GroupName a, GroupName b) => !(a == b);
+    }
+
+    /// <summary>
+    /// Resource name for the 'metric_descriptor' resource.
+    /// </summary>
+    public sealed partial class MetricDescriptorName : IResourceName, IEquatable<MetricDescriptorName>
+    {
+        private static readonly PathTemplate s_template = new PathTemplate("projects/{project}/metricDescriptors/{metric_descriptor=**}");
+
+        /// <summary>
+        /// Parses the given metric_descriptor resource name in string form into a new
+        /// <see cref="MetricDescriptorName"/> instance.
+        /// </summary>
+        /// <param name="metricDescriptorName">The metric_descriptor resource name in string form. Must not be <c>null</c>.</param>
+        /// <returns>The parsed <see cref="MetricDescriptorName"/> if successful.</returns>
+        public static MetricDescriptorName Parse(string metricDescriptorName)
+        {
+            GaxPreconditions.CheckNotNull(metricDescriptorName, nameof(metricDescriptorName));
+            TemplatedResourceName resourceName = s_template.ParseName(metricDescriptorName);
+            return new MetricDescriptorName(resourceName[0], resourceName[1]);
+        }
+
+        /// <summary>
+        /// Tries to parse the given metric_descriptor resource name in string form into a new
+        /// <see cref="MetricDescriptorName"/> instance.
+        /// </summary>
+        /// <remarks>
+        /// This method still throws <see cref="ArgumentNullException"/> if <paramref name="metricDescriptorName"/> is null,
+        /// as this would usually indicate a programming error rather than a data error.
+        /// </remarks>
+        /// <param name="metricDescriptorName">The metric_descriptor resource name in string form. Must not be <c>null</c>.</param>
+        /// <param name="result">When this method returns, the parsed <see cref="MetricDescriptorName"/>,
+        /// or <c>null</c> if parsing fails.</param>
+        /// <returns><c>true</c> if the name was parsed succssfully; <c>false</c> otherwise.</returns>
+        public static bool TryParse(string metricDescriptorName, out MetricDescriptorName result)
+        {
+            GaxPreconditions.CheckNotNull(metricDescriptorName, nameof(metricDescriptorName));
+            TemplatedResourceName resourceName;
+            if (s_template.TryParseName(metricDescriptorName, out resourceName))
+            {
+                result = new MetricDescriptorName(resourceName[0], resourceName[1]);
+                return true;
+            }
+            else
+            {
+                result = null;
+                return false;
+            }
+        }
+
+        /// <summary>
+        /// Constructs a new instance of the <see cref="MetricDescriptorName"/> resource name class
+        /// from its component parts.
+        /// </summary>
+        /// <param name="projectId">The project ID. Must not be <c>null</c>.</param>
+        /// <param name="metricDescriptorId">The metricDescriptor ID. Must not be <c>null</c>.</param>
+        public MetricDescriptorName(string projectId, string metricDescriptorId)
+        {
+            ProjectId = GaxPreconditions.CheckNotNull(projectId, nameof(projectId));
+            MetricDescriptorId = GaxPreconditions.CheckNotNull(metricDescriptorId, nameof(metricDescriptorId));
+        }
+
+        /// <summary>
+        /// The project ID. Never <c>null</c>.
+        /// </summary>
+        public string ProjectId { get; }
+
+        /// <summary>
+        /// The metricDescriptor ID. Never <c>null</c>.
+        /// </summary>
+        public string MetricDescriptorId { get; }
+
+        /// <inheritdoc />
+        public ResourceNameKind Kind => ResourceNameKind.Simple;
+
+        /// <inheritdoc />
+        public override string ToString() => s_template.Expand(ProjectId, MetricDescriptorId);
+
+        /// <inheritdoc />
+        public override int GetHashCode() => ToString().GetHashCode();
+
+        /// <inheritdoc />
+        public override bool Equals(object obj) => Equals(obj as MetricDescriptorName);
+
+        /// <inheritdoc />
+        public bool Equals(MetricDescriptorName other) => ToString() == other?.ToString();
+
+        /// <inheritdoc />
+        public static bool operator ==(MetricDescriptorName a, MetricDescriptorName b) => ReferenceEquals(a, b) || (a?.Equals(b) ?? false);
+
+        /// <inheritdoc />
+        public static bool operator !=(MetricDescriptorName a, MetricDescriptorName b) => !(a == b);
+    }
+
+    /// <summary>
+    /// Resource name for the 'monitored_resource_descriptor' resource.
+    /// </summary>
+    public sealed partial class MonitoredResourceDescriptorName : IResourceName, IEquatable<MonitoredResourceDescriptorName>
+    {
+        private static readonly PathTemplate s_template = new PathTemplate("projects/{project}/monitoredResourceDescriptors/{monitored_resource_descriptor}");
+
+        /// <summary>
+        /// Parses the given monitored_resource_descriptor resource name in string form into a new
+        /// <see cref="MonitoredResourceDescriptorName"/> instance.
+        /// </summary>
+        /// <param name="monitoredResourceDescriptorName">The monitored_resource_descriptor resource name in string form. Must not be <c>null</c>.</param>
+        /// <returns>The parsed <see cref="MonitoredResourceDescriptorName"/> if successful.</returns>
+        public static MonitoredResourceDescriptorName Parse(string monitoredResourceDescriptorName)
+        {
+            GaxPreconditions.CheckNotNull(monitoredResourceDescriptorName, nameof(monitoredResourceDescriptorName));
+            TemplatedResourceName resourceName = s_template.ParseName(monitoredResourceDescriptorName);
+            return new MonitoredResourceDescriptorName(resourceName[0], resourceName[1]);
+        }
+
+        /// <summary>
+        /// Tries to parse the given monitored_resource_descriptor resource name in string form into a new
+        /// <see cref="MonitoredResourceDescriptorName"/> instance.
+        /// </summary>
+        /// <remarks>
+        /// This method still throws <see cref="ArgumentNullException"/> if <paramref name="monitoredResourceDescriptorName"/> is null,
+        /// as this would usually indicate a programming error rather than a data error.
+        /// </remarks>
+        /// <param name="monitoredResourceDescriptorName">The monitored_resource_descriptor resource name in string form. Must not be <c>null</c>.</param>
+        /// <param name="result">When this method returns, the parsed <see cref="MonitoredResourceDescriptorName"/>,
+        /// or <c>null</c> if parsing fails.</param>
+        /// <returns><c>true</c> if the name was parsed succssfully; <c>false</c> otherwise.</returns>
+        public static bool TryParse(string monitoredResourceDescriptorName, out MonitoredResourceDescriptorName result)
+        {
+            GaxPreconditions.CheckNotNull(monitoredResourceDescriptorName, nameof(monitoredResourceDescriptorName));
+            TemplatedResourceName resourceName;
+            if (s_template.TryParseName(monitoredResourceDescriptorName, out resourceName))
+            {
+                result = new MonitoredResourceDescriptorName(resourceName[0], resourceName[1]);
+                return true;
+            }
+            else
+            {
+                result = null;
+                return false;
+            }
+        }
+
+        /// <summary>
+        /// Constructs a new instance of the <see cref="MonitoredResourceDescriptorName"/> resource name class
+        /// from its component parts.
+        /// </summary>
+        /// <param name="projectId">The project ID. Must not be <c>null</c>.</param>
+        /// <param name="monitoredResourceDescriptorId">The monitoredResourceDescriptor ID. Must not be <c>null</c>.</param>
+        public MonitoredResourceDescriptorName(string projectId, string monitoredResourceDescriptorId)
+        {
+            ProjectId = GaxPreconditions.CheckNotNull(projectId, nameof(projectId));
+            MonitoredResourceDescriptorId = GaxPreconditions.CheckNotNull(monitoredResourceDescriptorId, nameof(monitoredResourceDescriptorId));
+        }
+
+        /// <summary>
+        /// The project ID. Never <c>null</c>.
+        /// </summary>
+        public string ProjectId { get; }
+
+        /// <summary>
+        /// The monitoredResourceDescriptor ID. Never <c>null</c>.
+        /// </summary>
+        public string MonitoredResourceDescriptorId { get; }
+
+        /// <inheritdoc />
+        public ResourceNameKind Kind => ResourceNameKind.Simple;
+
+        /// <inheritdoc />
+        public override string ToString() => s_template.Expand(ProjectId, MonitoredResourceDescriptorId);
+
+        /// <inheritdoc />
+        public override int GetHashCode() => ToString().GetHashCode();
+
+        /// <inheritdoc />
+        public override bool Equals(object obj) => Equals(obj as MonitoredResourceDescriptorName);
+
+        /// <inheritdoc />
+        public bool Equals(MonitoredResourceDescriptorName other) => ToString() == other?.ToString();
+
+        /// <inheritdoc />
+        public static bool operator ==(MonitoredResourceDescriptorName a, MonitoredResourceDescriptorName b) => ReferenceEquals(a, b) || (a?.Equals(b) ?? false);
+
+        /// <inheritdoc />
+        public static bool operator !=(MonitoredResourceDescriptorName a, MonitoredResourceDescriptorName b) => !(a == b);
     }
 
     /// <summary>
