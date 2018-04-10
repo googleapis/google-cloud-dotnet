@@ -840,6 +840,11 @@ namespace Google.Cloud.Tools.GenerateSnippetMarkdown
         // TODO: Unit tests for this...
         private static bool IsParameterMatch(string memberParameter, string snippetParameter)
         {
+            // Remove any namespace qualifiers.
+            if (snippetParameter.Contains("::"))
+            {
+                snippetParameter = snippetParameter.Split(':').Last();
+            }
             snippetParameter = snippetParameter.Trim();
             if (snippetParameter == "*")
             {
