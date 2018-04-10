@@ -96,7 +96,8 @@ namespace Google.Cloud.Bigtable.V2.GenerateClient
         internal static XmlEmptyElementSyntax SeeTag(CrefSyntax cref) =>
             XmlEmptyElement("see").AddAttributes(XmlCrefAttribute(cref));
 
-        internal static SyntaxToken Task() => Identifier("Task");
+        // TODO: Use ParseName given that it's not a simple identifier.
+        internal static SyntaxToken Task() => Identifier("stt::Task");
 
         internal static MethodDeclarationSyntax ToAsync(this MethodDeclarationSyntax method) =>
             method.WithReturnType(Task().Of(method.ReturnType)).WithIdentifier(Identifier(method.Identifier.ToString() + "Async"));

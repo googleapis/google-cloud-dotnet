@@ -28,6 +28,7 @@ using System.Threading.Tasks;
 
 using static Google.Cloud.Bigtable.V2.GenerateClient.RoslynHelpers;
 using static Microsoft.CodeAnalysis.CSharp.SyntaxFactory;
+using gax = Google.Api.Gax;
 
 namespace Google.Cloud.Bigtable.V2.GenerateClient
 {
@@ -189,7 +190,7 @@ namespace Google.Cloud.Bigtable.V2.GenerateClient
                     var clientMethod = (MethodDeclarationSyntax)requestMethodRewriter.Visit(methodSyntax);
                     userClientSyntax = userClientSyntax.AddMembers(clientMethod);
 
-                    if (method.Parameters[1].Type.Name.EndsWith("CallSettings"))
+                    if (method.Parameters[1].Type.Name.EndsWith(nameof(CallSettings)))
                     {
                         var clientImplMethod = (MethodDeclarationSyntax)requestMethodToImplRewriter.Visit(clientMethod);
 
@@ -203,9 +204,9 @@ namespace Google.Cloud.Bigtable.V2.GenerateClient
                             userClientSyntax = userClientSyntax.AddMembers(asyncMethodWithCancellationToken);
 
                             var clientImplSyncMethod = clientImplMethod.WithBodySafe(
-                                Task().Member("Run")
+                                Task().Member(nameof(System.Threading.Tasks.Task.Run))
                                     .Invoke(Lambda(asyncMethod.Invoke(clientImplMethod.ParameterList.AsArguments())))
-                                    .Member("ResultWithUnwrappedExceptions").Invoke());
+                                    .Member(nameof(gax::TaskExtensions.ResultWithUnwrappedExceptions)).Invoke());
                             userClientImplSyntax = userClientImplSyntax.AddMembers(clientImplSyncMethod);
 
                             var clientImplAsyncMethod = clientImplMethod.ToAsync();
@@ -221,8 +222,10 @@ namespace Google.Cloud.Bigtable.V2.GenerateClient
 
             // Create a CompilationUnitSyntax from the Usings node of the original file, which will also contain the
             // copyright notice and generated code warnings in its leading trivia.
-            var compilationUnit =
-                CompilationUnit().WithUsings(syntaxTree.GetCompilationUnitRoot().Usings);
+            // We also need a using directive for GAX, so that we can use ResultWithUnwrappedExceptions.
+            var usings = syntaxTree.GetCompilationUnitRoot().Usings
+                .Add(UsingDirective(ParseName(typeof(gax::TaskExtensions).Namespace)));
+            var compilationUnit = CompilationUnit().WithUsings(usings);
 
             // Add in the namespace with the ...Client and ...ClientImpl classes.
             compilationUnit = compilationUnit.AddMembers(
@@ -275,7 +278,7 @@ namespace Google.Cloud.Bigtable.V2.GenerateClient
                 node = node.WithBodySafe(
                     node.Invoke(
                         IdentifierName(requestParameterSyntax.Identifier),
-                        IdentifierName(nameof(CallSettings)).Member(nameof(CallSettings.FromCancellationToken)).Invoke(IdentifierName(CancellationTokenParameterName))));
+                        ParseName($"gaxgrpc::{nameof(CallSettings)}").Member(Identifier(nameof(CallSettings.FromCancellationToken))).Invoke(IdentifierName(CancellationTokenParameterName))));
 
                 return node;
             }
@@ -288,7 +291,7 @@ namespace Google.Cloud.Bigtable.V2.GenerateClient
                 {
                     // Replace the CallSettings parameter with a CancellationToken parameter which doesn't have a default value.
                     node = node
-                        .WithType(ParseTypeName(nameof(CancellationToken))).WithLeadingTrivia(node.Type.GetLeadingTrivia())
+                        .WithType(ParseTypeName($"st::{nameof(CancellationToken)}")).WithLeadingTrivia(node.Type.GetLeadingTrivia())
                         .WithIdentifier(Identifier(CancellationTokenParameterName))
                         .WithDefault(null);
                 }
@@ -307,7 +310,7 @@ namespace Google.Cloud.Bigtable.V2.GenerateClient
                     // Replace the parameter doc comments for the cancellation token.
                     node = node.WithContent(List(new XmlNodeSyntax[] {
                         XmlText("A "),
-                        SeeTag(TypeCref(ParseTypeName(nameof(CancellationToken)))),
+                        SeeTag(TypeCref(ParseTypeName($"st::{nameof(CancellationToken)}"))),
                         XmlText(XmlTextLiteral(" to use for this RPC.")) }));
                 }
 
