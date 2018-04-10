@@ -97,7 +97,7 @@ namespace Google.Cloud.Bigtable.Admin.V2.Tests
                     tableName, rowKeyPrefix, CallSettings.FromCancellationToken(default)));
         }
 
-
+        //TODO: Remove ListTables() tests once the unit test auto-gen is extended to support paged response methods.
         [Fact]
         public void ListTables()
         {
@@ -115,7 +115,7 @@ namespace Google.Cloud.Bigtable.Admin.V2.Tests
             };
             ListTablesResponse expextedListTablesResponse = new ListTablesResponse
             {
-                Tables = { expectedTableResponse }
+                Tables = {expectedTableResponse}
             };
             mockGrpcClient.Setup(x => x.ListTables(expectedRequest, It.IsAny<CallOptions>()))
                 .Returns(expextedListTablesResponse);

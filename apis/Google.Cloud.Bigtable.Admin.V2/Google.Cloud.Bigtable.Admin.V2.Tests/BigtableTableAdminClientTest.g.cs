@@ -24,10 +24,8 @@ using System;
 using System.Collections;
 using System.Collections.Generic;
 using System.Collections.ObjectModel;
-using System.Linq;
 using System.Threading;
 using System.Threading.Tasks;
-using Google.Apis.Auth.OAuth2.Requests;
 using Xunit;
 
 namespace Google.Cloud.Bigtable.Admin.V2.Tests
@@ -790,5 +788,6 @@ namespace Google.Cloud.Bigtable.Admin.V2.Tests
             await client.DeleteSnapshotAsync(request);
             mockGrpcClient.VerifyAll();
         }
+
     }
 }
