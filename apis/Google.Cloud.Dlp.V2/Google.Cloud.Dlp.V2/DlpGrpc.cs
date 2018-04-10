@@ -327,7 +327,7 @@ namespace Google.Cloud.Dlp.V2 {
       }
 
       /// <summary>
-      /// Creates an inspect template for re-using frequently used configuration
+      /// Creates an InspectTemplate for re-using frequently used configuration
       /// for inspecting content, images, and storage.
       /// </summary>
       /// <param name="request">The request received from the client.</param>
@@ -339,7 +339,7 @@ namespace Google.Cloud.Dlp.V2 {
       }
 
       /// <summary>
-      /// Updates the inspect template.
+      /// Updates the InspectTemplate.
       /// </summary>
       /// <param name="request">The request received from the client.</param>
       /// <param name="context">The context of the server-side call handler being invoked.</param>
@@ -350,7 +350,7 @@ namespace Google.Cloud.Dlp.V2 {
       }
 
       /// <summary>
-      /// Gets an inspect template.
+      /// Gets an InspectTemplate.
       /// </summary>
       /// <param name="request">The request received from the client.</param>
       /// <param name="context">The context of the server-side call handler being invoked.</param>
@@ -361,7 +361,7 @@ namespace Google.Cloud.Dlp.V2 {
       }
 
       /// <summary>
-      /// Lists inspect templates.
+      /// Lists InspectTemplates.
       /// </summary>
       /// <param name="request">The request received from the client.</param>
       /// <param name="context">The context of the server-side call handler being invoked.</param>
@@ -372,7 +372,7 @@ namespace Google.Cloud.Dlp.V2 {
       }
 
       /// <summary>
-      /// Deletes an inspect template.
+      /// Deletes an InspectTemplate.
       /// </summary>
       /// <param name="request">The request received from the client.</param>
       /// <param name="context">The context of the server-side call handler being invoked.</param>
@@ -383,8 +383,8 @@ namespace Google.Cloud.Dlp.V2 {
       }
 
       /// <summary>
-      /// Creates a de-identify template for re-using frequently used configuration
-      /// for Deidentifying content, images, and storage.
+      /// Creates a DeidentifyTemplate for re-using frequently used configuration
+      /// for de-identifying content, images, and storage.
       /// </summary>
       /// <param name="request">The request received from the client.</param>
       /// <param name="context">The context of the server-side call handler being invoked.</param>
@@ -395,7 +395,7 @@ namespace Google.Cloud.Dlp.V2 {
       }
 
       /// <summary>
-      /// Updates the de-identify template.
+      /// Updates the DeidentifyTemplate.
       /// </summary>
       /// <param name="request">The request received from the client.</param>
       /// <param name="context">The context of the server-side call handler being invoked.</param>
@@ -406,7 +406,7 @@ namespace Google.Cloud.Dlp.V2 {
       }
 
       /// <summary>
-      /// Gets a de-identify template.
+      /// Gets a DeidentifyTemplate.
       /// </summary>
       /// <param name="request">The request received from the client.</param>
       /// <param name="context">The context of the server-side call handler being invoked.</param>
@@ -417,7 +417,7 @@ namespace Google.Cloud.Dlp.V2 {
       }
 
       /// <summary>
-      /// Lists de-identify templates.
+      /// Lists DeidentifyTemplates.
       /// </summary>
       /// <param name="request">The request received from the client.</param>
       /// <param name="context">The context of the server-side call handler being invoked.</param>
@@ -428,7 +428,7 @@ namespace Google.Cloud.Dlp.V2 {
       }
 
       /// <summary>
-      /// Deletes a de-identify template.
+      /// Deletes a DeidentifyTemplate.
       /// </summary>
       /// <param name="request">The request received from the client.</param>
       /// <param name="context">The context of the server-side call handler being invoked.</param>
@@ -495,8 +495,8 @@ namespace Google.Cloud.Dlp.V2 {
       }
 
       /// <summary>
-      /// Creates a new job to inspect storage or calculate risk metrics [How-to
-      /// guide](/dlp/docs/compute-risk-analysis).
+      /// Creates a new job to inspect storage or calculate risk metrics.
+      /// [How-to guide](/dlp/docs/compute-risk-analysis).
       /// </summary>
       /// <param name="request">The request received from the client.</param>
       /// <param name="context">The context of the server-side call handler being invoked.</param>
@@ -836,7 +836,7 @@ namespace Google.Cloud.Dlp.V2 {
         return CallInvoker.AsyncUnaryCall(__Method_ListInfoTypes, null, options, request);
       }
       /// <summary>
-      /// Creates an inspect template for re-using frequently used configuration
+      /// Creates an InspectTemplate for re-using frequently used configuration
       /// for inspecting content, images, and storage.
       /// </summary>
       /// <param name="request">The request to send to the server.</param>
@@ -849,7 +849,7 @@ namespace Google.Cloud.Dlp.V2 {
         return CreateInspectTemplate(request, new grpc::CallOptions(headers, deadline, cancellationToken));
       }
       /// <summary>
-      /// Creates an inspect template for re-using frequently used configuration
+      /// Creates an InspectTemplate for re-using frequently used configuration
       /// for inspecting content, images, and storage.
       /// </summary>
       /// <param name="request">The request to send to the server.</param>
@@ -860,7 +860,7 @@ namespace Google.Cloud.Dlp.V2 {
         return CallInvoker.BlockingUnaryCall(__Method_CreateInspectTemplate, null, options, request);
       }
       /// <summary>
-      /// Creates an inspect template for re-using frequently used configuration
+      /// Creates an InspectTemplate for re-using frequently used configuration
       /// for inspecting content, images, and storage.
       /// </summary>
       /// <param name="request">The request to send to the server.</param>
@@ -873,7 +873,7 @@ namespace Google.Cloud.Dlp.V2 {
         return CreateInspectTemplateAsync(request, new grpc::CallOptions(headers, deadline, cancellationToken));
       }
       /// <summary>
-      /// Creates an inspect template for re-using frequently used configuration
+      /// Creates an InspectTemplate for re-using frequently used configuration
       /// for inspecting content, images, and storage.
       /// </summary>
       /// <param name="request">The request to send to the server.</param>
@@ -884,7 +884,7 @@ namespace Google.Cloud.Dlp.V2 {
         return CallInvoker.AsyncUnaryCall(__Method_CreateInspectTemplate, null, options, request);
       }
       /// <summary>
-      /// Updates the inspect template.
+      /// Updates the InspectTemplate.
       /// </summary>
       /// <param name="request">The request to send to the server.</param>
       /// <param name="headers">The initial metadata to send with the call. This parameter is optional.</param>
@@ -896,7 +896,7 @@ namespace Google.Cloud.Dlp.V2 {
         return UpdateInspectTemplate(request, new grpc::CallOptions(headers, deadline, cancellationToken));
       }
       /// <summary>
-      /// Updates the inspect template.
+      /// Updates the InspectTemplate.
       /// </summary>
       /// <param name="request">The request to send to the server.</param>
       /// <param name="options">The options for the call.</param>
@@ -906,7 +906,7 @@ namespace Google.Cloud.Dlp.V2 {
         return CallInvoker.BlockingUnaryCall(__Method_UpdateInspectTemplate, null, options, request);
       }
       /// <summary>
-      /// Updates the inspect template.
+      /// Updates the InspectTemplate.
       /// </summary>
       /// <param name="request">The request to send to the server.</param>
       /// <param name="headers">The initial metadata to send with the call. This parameter is optional.</param>
@@ -918,7 +918,7 @@ namespace Google.Cloud.Dlp.V2 {
         return UpdateInspectTemplateAsync(request, new grpc::CallOptions(headers, deadline, cancellationToken));
       }
       /// <summary>
-      /// Updates the inspect template.
+      /// Updates the InspectTemplate.
       /// </summary>
       /// <param name="request">The request to send to the server.</param>
       /// <param name="options">The options for the call.</param>
@@ -928,7 +928,7 @@ namespace Google.Cloud.Dlp.V2 {
         return CallInvoker.AsyncUnaryCall(__Method_UpdateInspectTemplate, null, options, request);
       }
       /// <summary>
-      /// Gets an inspect template.
+      /// Gets an InspectTemplate.
       /// </summary>
       /// <param name="request">The request to send to the server.</param>
       /// <param name="headers">The initial metadata to send with the call. This parameter is optional.</param>
@@ -940,7 +940,7 @@ namespace Google.Cloud.Dlp.V2 {
         return GetInspectTemplate(request, new grpc::CallOptions(headers, deadline, cancellationToken));
       }
       /// <summary>
-      /// Gets an inspect template.
+      /// Gets an InspectTemplate.
       /// </summary>
       /// <param name="request">The request to send to the server.</param>
       /// <param name="options">The options for the call.</param>
@@ -950,7 +950,7 @@ namespace Google.Cloud.Dlp.V2 {
         return CallInvoker.BlockingUnaryCall(__Method_GetInspectTemplate, null, options, request);
       }
       /// <summary>
-      /// Gets an inspect template.
+      /// Gets an InspectTemplate.
       /// </summary>
       /// <param name="request">The request to send to the server.</param>
       /// <param name="headers">The initial metadata to send with the call. This parameter is optional.</param>
@@ -962,7 +962,7 @@ namespace Google.Cloud.Dlp.V2 {
         return GetInspectTemplateAsync(request, new grpc::CallOptions(headers, deadline, cancellationToken));
       }
       /// <summary>
-      /// Gets an inspect template.
+      /// Gets an InspectTemplate.
       /// </summary>
       /// <param name="request">The request to send to the server.</param>
       /// <param name="options">The options for the call.</param>
@@ -972,7 +972,7 @@ namespace Google.Cloud.Dlp.V2 {
         return CallInvoker.AsyncUnaryCall(__Method_GetInspectTemplate, null, options, request);
       }
       /// <summary>
-      /// Lists inspect templates.
+      /// Lists InspectTemplates.
       /// </summary>
       /// <param name="request">The request to send to the server.</param>
       /// <param name="headers">The initial metadata to send with the call. This parameter is optional.</param>
@@ -984,7 +984,7 @@ namespace Google.Cloud.Dlp.V2 {
         return ListInspectTemplates(request, new grpc::CallOptions(headers, deadline, cancellationToken));
       }
       /// <summary>
-      /// Lists inspect templates.
+      /// Lists InspectTemplates.
       /// </summary>
       /// <param name="request">The request to send to the server.</param>
       /// <param name="options">The options for the call.</param>
@@ -994,7 +994,7 @@ namespace Google.Cloud.Dlp.V2 {
         return CallInvoker.BlockingUnaryCall(__Method_ListInspectTemplates, null, options, request);
       }
       /// <summary>
-      /// Lists inspect templates.
+      /// Lists InspectTemplates.
       /// </summary>
       /// <param name="request">The request to send to the server.</param>
       /// <param name="headers">The initial metadata to send with the call. This parameter is optional.</param>
@@ -1006,7 +1006,7 @@ namespace Google.Cloud.Dlp.V2 {
         return ListInspectTemplatesAsync(request, new grpc::CallOptions(headers, deadline, cancellationToken));
       }
       /// <summary>
-      /// Lists inspect templates.
+      /// Lists InspectTemplates.
       /// </summary>
       /// <param name="request">The request to send to the server.</param>
       /// <param name="options">The options for the call.</param>
@@ -1016,7 +1016,7 @@ namespace Google.Cloud.Dlp.V2 {
         return CallInvoker.AsyncUnaryCall(__Method_ListInspectTemplates, null, options, request);
       }
       /// <summary>
-      /// Deletes an inspect template.
+      /// Deletes an InspectTemplate.
       /// </summary>
       /// <param name="request">The request to send to the server.</param>
       /// <param name="headers">The initial metadata to send with the call. This parameter is optional.</param>
@@ -1028,7 +1028,7 @@ namespace Google.Cloud.Dlp.V2 {
         return DeleteInspectTemplate(request, new grpc::CallOptions(headers, deadline, cancellationToken));
       }
       /// <summary>
-      /// Deletes an inspect template.
+      /// Deletes an InspectTemplate.
       /// </summary>
       /// <param name="request">The request to send to the server.</param>
       /// <param name="options">The options for the call.</param>
@@ -1038,7 +1038,7 @@ namespace Google.Cloud.Dlp.V2 {
         return CallInvoker.BlockingUnaryCall(__Method_DeleteInspectTemplate, null, options, request);
       }
       /// <summary>
-      /// Deletes an inspect template.
+      /// Deletes an InspectTemplate.
       /// </summary>
       /// <param name="request">The request to send to the server.</param>
       /// <param name="headers">The initial metadata to send with the call. This parameter is optional.</param>
@@ -1050,7 +1050,7 @@ namespace Google.Cloud.Dlp.V2 {
         return DeleteInspectTemplateAsync(request, new grpc::CallOptions(headers, deadline, cancellationToken));
       }
       /// <summary>
-      /// Deletes an inspect template.
+      /// Deletes an InspectTemplate.
       /// </summary>
       /// <param name="request">The request to send to the server.</param>
       /// <param name="options">The options for the call.</param>
@@ -1060,8 +1060,8 @@ namespace Google.Cloud.Dlp.V2 {
         return CallInvoker.AsyncUnaryCall(__Method_DeleteInspectTemplate, null, options, request);
       }
       /// <summary>
-      /// Creates a de-identify template for re-using frequently used configuration
-      /// for Deidentifying content, images, and storage.
+      /// Creates a DeidentifyTemplate for re-using frequently used configuration
+      /// for de-identifying content, images, and storage.
       /// </summary>
       /// <param name="request">The request to send to the server.</param>
       /// <param name="headers">The initial metadata to send with the call. This parameter is optional.</param>
@@ -1073,8 +1073,8 @@ namespace Google.Cloud.Dlp.V2 {
         return CreateDeidentifyTemplate(request, new grpc::CallOptions(headers, deadline, cancellationToken));
       }
       /// <summary>
-      /// Creates a de-identify template for re-using frequently used configuration
-      /// for Deidentifying content, images, and storage.
+      /// Creates a DeidentifyTemplate for re-using frequently used configuration
+      /// for de-identifying content, images, and storage.
       /// </summary>
       /// <param name="request">The request to send to the server.</param>
       /// <param name="options">The options for the call.</param>
@@ -1084,8 +1084,8 @@ namespace Google.Cloud.Dlp.V2 {
         return CallInvoker.BlockingUnaryCall(__Method_CreateDeidentifyTemplate, null, options, request);
       }
       /// <summary>
-      /// Creates a de-identify template for re-using frequently used configuration
-      /// for Deidentifying content, images, and storage.
+      /// Creates a DeidentifyTemplate for re-using frequently used configuration
+      /// for de-identifying content, images, and storage.
       /// </summary>
       /// <param name="request">The request to send to the server.</param>
       /// <param name="headers">The initial metadata to send with the call. This parameter is optional.</param>
@@ -1097,8 +1097,8 @@ namespace Google.Cloud.Dlp.V2 {
         return CreateDeidentifyTemplateAsync(request, new grpc::CallOptions(headers, deadline, cancellationToken));
       }
       /// <summary>
-      /// Creates a de-identify template for re-using frequently used configuration
-      /// for Deidentifying content, images, and storage.
+      /// Creates a DeidentifyTemplate for re-using frequently used configuration
+      /// for de-identifying content, images, and storage.
       /// </summary>
       /// <param name="request">The request to send to the server.</param>
       /// <param name="options">The options for the call.</param>
@@ -1108,7 +1108,7 @@ namespace Google.Cloud.Dlp.V2 {
         return CallInvoker.AsyncUnaryCall(__Method_CreateDeidentifyTemplate, null, options, request);
       }
       /// <summary>
-      /// Updates the de-identify template.
+      /// Updates the DeidentifyTemplate.
       /// </summary>
       /// <param name="request">The request to send to the server.</param>
       /// <param name="headers">The initial metadata to send with the call. This parameter is optional.</param>
@@ -1120,7 +1120,7 @@ namespace Google.Cloud.Dlp.V2 {
         return UpdateDeidentifyTemplate(request, new grpc::CallOptions(headers, deadline, cancellationToken));
       }
       /// <summary>
-      /// Updates the de-identify template.
+      /// Updates the DeidentifyTemplate.
       /// </summary>
       /// <param name="request">The request to send to the server.</param>
       /// <param name="options">The options for the call.</param>
@@ -1130,7 +1130,7 @@ namespace Google.Cloud.Dlp.V2 {
         return CallInvoker.BlockingUnaryCall(__Method_UpdateDeidentifyTemplate, null, options, request);
       }
       /// <summary>
-      /// Updates the de-identify template.
+      /// Updates the DeidentifyTemplate.
       /// </summary>
       /// <param name="request">The request to send to the server.</param>
       /// <param name="headers">The initial metadata to send with the call. This parameter is optional.</param>
@@ -1142,7 +1142,7 @@ namespace Google.Cloud.Dlp.V2 {
         return UpdateDeidentifyTemplateAsync(request, new grpc::CallOptions(headers, deadline, cancellationToken));
       }
       /// <summary>
-      /// Updates the de-identify template.
+      /// Updates the DeidentifyTemplate.
       /// </summary>
       /// <param name="request">The request to send to the server.</param>
       /// <param name="options">The options for the call.</param>
@@ -1152,7 +1152,7 @@ namespace Google.Cloud.Dlp.V2 {
         return CallInvoker.AsyncUnaryCall(__Method_UpdateDeidentifyTemplate, null, options, request);
       }
       /// <summary>
-      /// Gets a de-identify template.
+      /// Gets a DeidentifyTemplate.
       /// </summary>
       /// <param name="request">The request to send to the server.</param>
       /// <param name="headers">The initial metadata to send with the call. This parameter is optional.</param>
@@ -1164,7 +1164,7 @@ namespace Google.Cloud.Dlp.V2 {
         return GetDeidentifyTemplate(request, new grpc::CallOptions(headers, deadline, cancellationToken));
       }
       /// <summary>
-      /// Gets a de-identify template.
+      /// Gets a DeidentifyTemplate.
       /// </summary>
       /// <param name="request">The request to send to the server.</param>
       /// <param name="options">The options for the call.</param>
@@ -1174,7 +1174,7 @@ namespace Google.Cloud.Dlp.V2 {
         return CallInvoker.BlockingUnaryCall(__Method_GetDeidentifyTemplate, null, options, request);
       }
       /// <summary>
-      /// Gets a de-identify template.
+      /// Gets a DeidentifyTemplate.
       /// </summary>
       /// <param name="request">The request to send to the server.</param>
       /// <param name="headers">The initial metadata to send with the call. This parameter is optional.</param>
@@ -1186,7 +1186,7 @@ namespace Google.Cloud.Dlp.V2 {
         return GetDeidentifyTemplateAsync(request, new grpc::CallOptions(headers, deadline, cancellationToken));
       }
       /// <summary>
-      /// Gets a de-identify template.
+      /// Gets a DeidentifyTemplate.
       /// </summary>
       /// <param name="request">The request to send to the server.</param>
       /// <param name="options">The options for the call.</param>
@@ -1196,7 +1196,7 @@ namespace Google.Cloud.Dlp.V2 {
         return CallInvoker.AsyncUnaryCall(__Method_GetDeidentifyTemplate, null, options, request);
       }
       /// <summary>
-      /// Lists de-identify templates.
+      /// Lists DeidentifyTemplates.
       /// </summary>
       /// <param name="request">The request to send to the server.</param>
       /// <param name="headers">The initial metadata to send with the call. This parameter is optional.</param>
@@ -1208,7 +1208,7 @@ namespace Google.Cloud.Dlp.V2 {
         return ListDeidentifyTemplates(request, new grpc::CallOptions(headers, deadline, cancellationToken));
       }
       /// <summary>
-      /// Lists de-identify templates.
+      /// Lists DeidentifyTemplates.
       /// </summary>
       /// <param name="request">The request to send to the server.</param>
       /// <param name="options">The options for the call.</param>
@@ -1218,7 +1218,7 @@ namespace Google.Cloud.Dlp.V2 {
         return CallInvoker.BlockingUnaryCall(__Method_ListDeidentifyTemplates, null, options, request);
       }
       /// <summary>
-      /// Lists de-identify templates.
+      /// Lists DeidentifyTemplates.
       /// </summary>
       /// <param name="request">The request to send to the server.</param>
       /// <param name="headers">The initial metadata to send with the call. This parameter is optional.</param>
@@ -1230,7 +1230,7 @@ namespace Google.Cloud.Dlp.V2 {
         return ListDeidentifyTemplatesAsync(request, new grpc::CallOptions(headers, deadline, cancellationToken));
       }
       /// <summary>
-      /// Lists de-identify templates.
+      /// Lists DeidentifyTemplates.
       /// </summary>
       /// <param name="request">The request to send to the server.</param>
       /// <param name="options">The options for the call.</param>
@@ -1240,7 +1240,7 @@ namespace Google.Cloud.Dlp.V2 {
         return CallInvoker.AsyncUnaryCall(__Method_ListDeidentifyTemplates, null, options, request);
       }
       /// <summary>
-      /// Deletes a de-identify template.
+      /// Deletes a DeidentifyTemplate.
       /// </summary>
       /// <param name="request">The request to send to the server.</param>
       /// <param name="headers">The initial metadata to send with the call. This parameter is optional.</param>
@@ -1252,7 +1252,7 @@ namespace Google.Cloud.Dlp.V2 {
         return DeleteDeidentifyTemplate(request, new grpc::CallOptions(headers, deadline, cancellationToken));
       }
       /// <summary>
-      /// Deletes a de-identify template.
+      /// Deletes a DeidentifyTemplate.
       /// </summary>
       /// <param name="request">The request to send to the server.</param>
       /// <param name="options">The options for the call.</param>
@@ -1262,7 +1262,7 @@ namespace Google.Cloud.Dlp.V2 {
         return CallInvoker.BlockingUnaryCall(__Method_DeleteDeidentifyTemplate, null, options, request);
       }
       /// <summary>
-      /// Deletes a de-identify template.
+      /// Deletes a DeidentifyTemplate.
       /// </summary>
       /// <param name="request">The request to send to the server.</param>
       /// <param name="headers">The initial metadata to send with the call. This parameter is optional.</param>
@@ -1274,7 +1274,7 @@ namespace Google.Cloud.Dlp.V2 {
         return DeleteDeidentifyTemplateAsync(request, new grpc::CallOptions(headers, deadline, cancellationToken));
       }
       /// <summary>
-      /// Deletes a de-identify template.
+      /// Deletes a DeidentifyTemplate.
       /// </summary>
       /// <param name="request">The request to send to the server.</param>
       /// <param name="options">The options for the call.</param>
@@ -1508,8 +1508,8 @@ namespace Google.Cloud.Dlp.V2 {
         return CallInvoker.AsyncUnaryCall(__Method_DeleteJobTrigger, null, options, request);
       }
       /// <summary>
-      /// Creates a new job to inspect storage or calculate risk metrics [How-to
-      /// guide](/dlp/docs/compute-risk-analysis).
+      /// Creates a new job to inspect storage or calculate risk metrics.
+      /// [How-to guide](/dlp/docs/compute-risk-analysis).
       /// </summary>
       /// <param name="request">The request to send to the server.</param>
       /// <param name="headers">The initial metadata to send with the call. This parameter is optional.</param>
@@ -1521,8 +1521,8 @@ namespace Google.Cloud.Dlp.V2 {
         return CreateDlpJob(request, new grpc::CallOptions(headers, deadline, cancellationToken));
       }
       /// <summary>
-      /// Creates a new job to inspect storage or calculate risk metrics [How-to
-      /// guide](/dlp/docs/compute-risk-analysis).
+      /// Creates a new job to inspect storage or calculate risk metrics.
+      /// [How-to guide](/dlp/docs/compute-risk-analysis).
       /// </summary>
       /// <param name="request">The request to send to the server.</param>
       /// <param name="options">The options for the call.</param>
@@ -1532,8 +1532,8 @@ namespace Google.Cloud.Dlp.V2 {
         return CallInvoker.BlockingUnaryCall(__Method_CreateDlpJob, null, options, request);
       }
       /// <summary>
-      /// Creates a new job to inspect storage or calculate risk metrics [How-to
-      /// guide](/dlp/docs/compute-risk-analysis).
+      /// Creates a new job to inspect storage or calculate risk metrics.
+      /// [How-to guide](/dlp/docs/compute-risk-analysis).
       /// </summary>
       /// <param name="request">The request to send to the server.</param>
       /// <param name="headers">The initial metadata to send with the call. This parameter is optional.</param>
@@ -1545,8 +1545,8 @@ namespace Google.Cloud.Dlp.V2 {
         return CreateDlpJobAsync(request, new grpc::CallOptions(headers, deadline, cancellationToken));
       }
       /// <summary>
-      /// Creates a new job to inspect storage or calculate risk metrics [How-to
-      /// guide](/dlp/docs/compute-risk-analysis).
+      /// Creates a new job to inspect storage or calculate risk metrics.
+      /// [How-to guide](/dlp/docs/compute-risk-analysis).
       /// </summary>
       /// <param name="request">The request to send to the server.</param>
       /// <param name="options">The options for the call.</param>

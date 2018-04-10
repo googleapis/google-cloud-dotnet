@@ -7148,7 +7148,7 @@ namespace Google.Cloud.Dlp.V2 {
         public const int SnapshotInspectTemplateFieldNumber = 1;
         private global::Google.Cloud.Dlp.V2.InspectTemplate snapshotInspectTemplate_;
         /// <summary>
-        /// If run with an inspect template, a snapshot of it's state at the time of
+        /// If run with an InspectTemplate, a snapshot of its state at the time of
         /// this run.
         /// </summary>
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
@@ -21888,7 +21888,7 @@ namespace Google.Cloud.Dlp.V2 {
 
       /// <summary>
       /// Publish the results of a DlpJob to a pub sub channel.
-      /// Compatible with: Inpect, Risk
+      /// Compatible with: Inspect, Risk
       /// </summary>
       public sealed partial class PublishToPubSub : pb::IMessage<PublishToPubSub> {
         private static readonly pb::MessageParser<PublishToPubSub> _parser = new pb::MessageParser<PublishToPubSub>(() => new PublishToPubSub());
