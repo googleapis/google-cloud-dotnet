@@ -14,26 +14,26 @@
 
 // Generated code. DO NOT EDIT!
 
-using Google.Api.Gax;
-using Google.Api.Gax.Grpc;
-using Google.Cloud.Iam.V1;
-using Google.LongRunning;
-using Google.Protobuf;
-using Google.Protobuf.WellKnownTypes;
-using Grpc.Core;
-using System;
-using System.Collections;
-using System.Collections.Generic;
-using System.Collections.ObjectModel;
-using System.Threading;
-using System.Threading.Tasks;
+using gax = Google.Api.Gax;
+using gaxgrpc = Google.Api.Gax.Grpc;
+using iam = Google.Cloud.Iam.V1;
+using lro = Google.LongRunning;
+using proto = Google.Protobuf;
+using protowkt = Google.Protobuf.WellKnownTypes;
+using grpccore = Grpc.Core;
+using s = System;
+using sc = System.Collections;
+using scg = System.Collections.Generic;
+using sco = System.Collections.ObjectModel;
+using st = System.Threading;
+using stt = System.Threading.Tasks;
 
 namespace Google.Cloud.Spanner.Admin.Instance.V1
 {
     /// <summary>
     /// Settings for a <see cref="InstanceAdminClient"/>.
     /// </summary>
-    public sealed partial class InstanceAdminSettings : ServiceSettingsBase
+    public sealed partial class InstanceAdminSettings : gaxgrpc::ServiceSettingsBase
     {
         /// <summary>
         /// Get a new instance of the default <see cref="InstanceAdminSettings"/>.
@@ -50,7 +50,7 @@ namespace Google.Cloud.Spanner.Admin.Instance.V1
 
         private InstanceAdminSettings(InstanceAdminSettings existing) : base(existing)
         {
-            GaxPreconditions.CheckNotNull(existing, nameof(existing));
+            gax::GaxPreconditions.CheckNotNull(existing, nameof(existing));
             ListInstanceConfigsSettings = existing.ListInstanceConfigsSettings;
             GetInstanceConfigSettings = existing.GetInstanceConfigSettings;
             ListInstancesSettings = existing.ListInstancesSettings;
@@ -69,28 +69,28 @@ namespace Google.Cloud.Spanner.Admin.Instance.V1
         partial void OnCopy(InstanceAdminSettings existing);
 
         /// <summary>
-        /// The filter specifying which RPC <see cref="StatusCode"/>s are eligible for retry
+        /// The filter specifying which RPC <see cref="grpccore::StatusCode"/>s are eligible for retry
         /// for "Idempotent" <see cref="InstanceAdminClient"/> RPC methods.
         /// </summary>
         /// <remarks>
-        /// The eligible RPC <see cref="StatusCode"/>s for retry for "Idempotent" RPC methods are:
+        /// The eligible RPC <see cref="grpccore::StatusCode"/>s for retry for "Idempotent" RPC methods are:
         /// <list type="bullet">
-        /// <item><description><see cref="StatusCode.DeadlineExceeded"/></description></item>
-        /// <item><description><see cref="StatusCode.Unavailable"/></description></item>
+        /// <item><description><see cref="grpccore::StatusCode.DeadlineExceeded"/></description></item>
+        /// <item><description><see cref="grpccore::StatusCode.Unavailable"/></description></item>
         /// </list>
         /// </remarks>
-        public static Predicate<RpcException> IdempotentRetryFilter { get; } =
-            RetrySettings.FilterForStatusCodes(StatusCode.DeadlineExceeded, StatusCode.Unavailable);
+        public static s::Predicate<grpccore::RpcException> IdempotentRetryFilter { get; } =
+            gaxgrpc::RetrySettings.FilterForStatusCodes(grpccore::StatusCode.DeadlineExceeded, grpccore::StatusCode.Unavailable);
 
         /// <summary>
-        /// The filter specifying which RPC <see cref="StatusCode"/>s are eligible for retry
+        /// The filter specifying which RPC <see cref="grpccore::StatusCode"/>s are eligible for retry
         /// for "NonIdempotent" <see cref="InstanceAdminClient"/> RPC methods.
         /// </summary>
         /// <remarks>
-        /// There are no RPC <see cref="StatusCode"/>s eligible for retry for "NonIdempotent" RPC methods.
+        /// There are no RPC <see cref="grpccore::StatusCode"/>s eligible for retry for "NonIdempotent" RPC methods.
         /// </remarks>
-        public static Predicate<RpcException> NonIdempotentRetryFilter { get; } =
-            RetrySettings.FilterForStatusCodes();
+        public static s::Predicate<grpccore::RpcException> NonIdempotentRetryFilter { get; } =
+            gaxgrpc::RetrySettings.FilterForStatusCodes();
 
         /// <summary>
         /// "Default" retry backoff for <see cref="InstanceAdminClient"/> RPC methods.
@@ -106,9 +106,9 @@ namespace Google.Cloud.Spanner.Admin.Instance.V1
         /// <item><description>Delay multiplier: 1.3</description></item>
         /// </list>
         /// </remarks>
-        public static BackoffSettings GetDefaultRetryBackoff() => new BackoffSettings(
-            delay: TimeSpan.FromMilliseconds(1000),
-            maxDelay: TimeSpan.FromMilliseconds(32000),
+        public static gaxgrpc::BackoffSettings GetDefaultRetryBackoff() => new gaxgrpc::BackoffSettings(
+            delay: s::TimeSpan.FromMilliseconds(1000),
+            maxDelay: s::TimeSpan.FromMilliseconds(32000),
             delayMultiplier: 1.3
         );
 
@@ -126,19 +126,19 @@ namespace Google.Cloud.Spanner.Admin.Instance.V1
         /// <item><description>Maximum timeout: 60000 milliseconds</description></item>
         /// </list>
         /// </remarks>
-        public static BackoffSettings GetDefaultTimeoutBackoff() => new BackoffSettings(
-            delay: TimeSpan.FromMilliseconds(60000),
-            maxDelay: TimeSpan.FromMilliseconds(60000),
+        public static gaxgrpc::BackoffSettings GetDefaultTimeoutBackoff() => new gaxgrpc::BackoffSettings(
+            delay: s::TimeSpan.FromMilliseconds(60000),
+            maxDelay: s::TimeSpan.FromMilliseconds(60000),
             delayMultiplier: 1.0
         );
 
         /// <summary>
-        /// <see cref="CallSettings"/> for synchronous and asynchronous calls to
+        /// <see cref="gaxgrpc::CallSettings"/> for synchronous and asynchronous calls to
         /// <c>InstanceAdminClient.ListInstanceConfigs</c> and <c>InstanceAdminClient.ListInstanceConfigsAsync</c>.
         /// </summary>
         /// <remarks>
         /// The default <c>InstanceAdminClient.ListInstanceConfigs</c> and
-        /// <c>InstanceAdminClient.ListInstanceConfigsAsync</c> <see cref="RetrySettings"/> are:
+        /// <c>InstanceAdminClient.ListInstanceConfigsAsync</c> <see cref="gaxgrpc::RetrySettings"/> are:
         /// <list type="bullet">
         /// <item><description>Initial retry delay: 1000 milliseconds</description></item>
         /// <item><description>Retry delay multiplier: 1.3</description></item>
@@ -149,26 +149,26 @@ namespace Google.Cloud.Spanner.Admin.Instance.V1
         /// </list>
         /// Retry will be attempted on the following response status codes:
         /// <list>
-        /// <item><description><see cref="StatusCode.DeadlineExceeded"/></description></item>
-        /// <item><description><see cref="StatusCode.Unavailable"/></description></item>
+        /// <item><description><see cref="grpccore::StatusCode.DeadlineExceeded"/></description></item>
+        /// <item><description><see cref="grpccore::StatusCode.Unavailable"/></description></item>
         /// </list>
         /// Default RPC expiration is 600000 milliseconds.
         /// </remarks>
-        public CallSettings ListInstanceConfigsSettings { get; set; } = CallSettings.FromCallTiming(
-            CallTiming.FromRetry(new RetrySettings(
+        public gaxgrpc::CallSettings ListInstanceConfigsSettings { get; set; } = gaxgrpc::CallSettings.FromCallTiming(
+            gaxgrpc::CallTiming.FromRetry(new gaxgrpc::RetrySettings(
                 retryBackoff: GetDefaultRetryBackoff(),
                 timeoutBackoff: GetDefaultTimeoutBackoff(),
-                totalExpiration: Expiration.FromTimeout(TimeSpan.FromMilliseconds(600000)),
+                totalExpiration: gax::Expiration.FromTimeout(s::TimeSpan.FromMilliseconds(600000)),
                 retryFilter: IdempotentRetryFilter
             )));
 
         /// <summary>
-        /// <see cref="CallSettings"/> for synchronous and asynchronous calls to
+        /// <see cref="gaxgrpc::CallSettings"/> for synchronous and asynchronous calls to
         /// <c>InstanceAdminClient.GetInstanceConfig</c> and <c>InstanceAdminClient.GetInstanceConfigAsync</c>.
         /// </summary>
         /// <remarks>
         /// The default <c>InstanceAdminClient.GetInstanceConfig</c> and
-        /// <c>InstanceAdminClient.GetInstanceConfigAsync</c> <see cref="RetrySettings"/> are:
+        /// <c>InstanceAdminClient.GetInstanceConfigAsync</c> <see cref="gaxgrpc::RetrySettings"/> are:
         /// <list type="bullet">
         /// <item><description>Initial retry delay: 1000 milliseconds</description></item>
         /// <item><description>Retry delay multiplier: 1.3</description></item>
@@ -179,26 +179,26 @@ namespace Google.Cloud.Spanner.Admin.Instance.V1
         /// </list>
         /// Retry will be attempted on the following response status codes:
         /// <list>
-        /// <item><description><see cref="StatusCode.DeadlineExceeded"/></description></item>
-        /// <item><description><see cref="StatusCode.Unavailable"/></description></item>
+        /// <item><description><see cref="grpccore::StatusCode.DeadlineExceeded"/></description></item>
+        /// <item><description><see cref="grpccore::StatusCode.Unavailable"/></description></item>
         /// </list>
         /// Default RPC expiration is 600000 milliseconds.
         /// </remarks>
-        public CallSettings GetInstanceConfigSettings { get; set; } = CallSettings.FromCallTiming(
-            CallTiming.FromRetry(new RetrySettings(
+        public gaxgrpc::CallSettings GetInstanceConfigSettings { get; set; } = gaxgrpc::CallSettings.FromCallTiming(
+            gaxgrpc::CallTiming.FromRetry(new gaxgrpc::RetrySettings(
                 retryBackoff: GetDefaultRetryBackoff(),
                 timeoutBackoff: GetDefaultTimeoutBackoff(),
-                totalExpiration: Expiration.FromTimeout(TimeSpan.FromMilliseconds(600000)),
+                totalExpiration: gax::Expiration.FromTimeout(s::TimeSpan.FromMilliseconds(600000)),
                 retryFilter: IdempotentRetryFilter
             )));
 
         /// <summary>
-        /// <see cref="CallSettings"/> for synchronous and asynchronous calls to
+        /// <see cref="gaxgrpc::CallSettings"/> for synchronous and asynchronous calls to
         /// <c>InstanceAdminClient.ListInstances</c> and <c>InstanceAdminClient.ListInstancesAsync</c>.
         /// </summary>
         /// <remarks>
         /// The default <c>InstanceAdminClient.ListInstances</c> and
-        /// <c>InstanceAdminClient.ListInstancesAsync</c> <see cref="RetrySettings"/> are:
+        /// <c>InstanceAdminClient.ListInstancesAsync</c> <see cref="gaxgrpc::RetrySettings"/> are:
         /// <list type="bullet">
         /// <item><description>Initial retry delay: 1000 milliseconds</description></item>
         /// <item><description>Retry delay multiplier: 1.3</description></item>
@@ -209,26 +209,26 @@ namespace Google.Cloud.Spanner.Admin.Instance.V1
         /// </list>
         /// Retry will be attempted on the following response status codes:
         /// <list>
-        /// <item><description><see cref="StatusCode.DeadlineExceeded"/></description></item>
-        /// <item><description><see cref="StatusCode.Unavailable"/></description></item>
+        /// <item><description><see cref="grpccore::StatusCode.DeadlineExceeded"/></description></item>
+        /// <item><description><see cref="grpccore::StatusCode.Unavailable"/></description></item>
         /// </list>
         /// Default RPC expiration is 600000 milliseconds.
         /// </remarks>
-        public CallSettings ListInstancesSettings { get; set; } = CallSettings.FromCallTiming(
-            CallTiming.FromRetry(new RetrySettings(
+        public gaxgrpc::CallSettings ListInstancesSettings { get; set; } = gaxgrpc::CallSettings.FromCallTiming(
+            gaxgrpc::CallTiming.FromRetry(new gaxgrpc::RetrySettings(
                 retryBackoff: GetDefaultRetryBackoff(),
                 timeoutBackoff: GetDefaultTimeoutBackoff(),
-                totalExpiration: Expiration.FromTimeout(TimeSpan.FromMilliseconds(600000)),
+                totalExpiration: gax::Expiration.FromTimeout(s::TimeSpan.FromMilliseconds(600000)),
                 retryFilter: IdempotentRetryFilter
             )));
 
         /// <summary>
-        /// <see cref="CallSettings"/> for synchronous and asynchronous calls to
+        /// <see cref="gaxgrpc::CallSettings"/> for synchronous and asynchronous calls to
         /// <c>InstanceAdminClient.GetInstance</c> and <c>InstanceAdminClient.GetInstanceAsync</c>.
         /// </summary>
         /// <remarks>
         /// The default <c>InstanceAdminClient.GetInstance</c> and
-        /// <c>InstanceAdminClient.GetInstanceAsync</c> <see cref="RetrySettings"/> are:
+        /// <c>InstanceAdminClient.GetInstanceAsync</c> <see cref="gaxgrpc::RetrySettings"/> are:
         /// <list type="bullet">
         /// <item><description>Initial retry delay: 1000 milliseconds</description></item>
         /// <item><description>Retry delay multiplier: 1.3</description></item>
@@ -239,26 +239,26 @@ namespace Google.Cloud.Spanner.Admin.Instance.V1
         /// </list>
         /// Retry will be attempted on the following response status codes:
         /// <list>
-        /// <item><description><see cref="StatusCode.DeadlineExceeded"/></description></item>
-        /// <item><description><see cref="StatusCode.Unavailable"/></description></item>
+        /// <item><description><see cref="grpccore::StatusCode.DeadlineExceeded"/></description></item>
+        /// <item><description><see cref="grpccore::StatusCode.Unavailable"/></description></item>
         /// </list>
         /// Default RPC expiration is 600000 milliseconds.
         /// </remarks>
-        public CallSettings GetInstanceSettings { get; set; } = CallSettings.FromCallTiming(
-            CallTiming.FromRetry(new RetrySettings(
+        public gaxgrpc::CallSettings GetInstanceSettings { get; set; } = gaxgrpc::CallSettings.FromCallTiming(
+            gaxgrpc::CallTiming.FromRetry(new gaxgrpc::RetrySettings(
                 retryBackoff: GetDefaultRetryBackoff(),
                 timeoutBackoff: GetDefaultTimeoutBackoff(),
-                totalExpiration: Expiration.FromTimeout(TimeSpan.FromMilliseconds(600000)),
+                totalExpiration: gax::Expiration.FromTimeout(s::TimeSpan.FromMilliseconds(600000)),
                 retryFilter: IdempotentRetryFilter
             )));
 
         /// <summary>
-        /// <see cref="CallSettings"/> for synchronous and asynchronous calls to
+        /// <see cref="gaxgrpc::CallSettings"/> for synchronous and asynchronous calls to
         /// <c>InstanceAdminClient.CreateInstance</c> and <c>InstanceAdminClient.CreateInstanceAsync</c>.
         /// </summary>
         /// <remarks>
         /// The default <c>InstanceAdminClient.CreateInstance</c> and
-        /// <c>InstanceAdminClient.CreateInstanceAsync</c> <see cref="RetrySettings"/> are:
+        /// <c>InstanceAdminClient.CreateInstanceAsync</c> <see cref="gaxgrpc::RetrySettings"/> are:
         /// <list type="bullet">
         /// <item><description>Initial retry delay: 1000 milliseconds</description></item>
         /// <item><description>Retry delay multiplier: 1.3</description></item>
@@ -273,11 +273,11 @@ namespace Google.Cloud.Spanner.Admin.Instance.V1
         /// </list>
         /// Default RPC expiration is 600000 milliseconds.
         /// </remarks>
-        public CallSettings CreateInstanceSettings { get; set; } = CallSettings.FromCallTiming(
-            CallTiming.FromRetry(new RetrySettings(
+        public gaxgrpc::CallSettings CreateInstanceSettings { get; set; } = gaxgrpc::CallSettings.FromCallTiming(
+            gaxgrpc::CallTiming.FromRetry(new gaxgrpc::RetrySettings(
                 retryBackoff: GetDefaultRetryBackoff(),
                 timeoutBackoff: GetDefaultTimeoutBackoff(),
-                totalExpiration: Expiration.FromTimeout(TimeSpan.FromMilliseconds(600000)),
+                totalExpiration: gax::Expiration.FromTimeout(s::TimeSpan.FromMilliseconds(600000)),
                 retryFilter: NonIdempotentRetryFilter
             )));
 
@@ -285,7 +285,7 @@ namespace Google.Cloud.Spanner.Admin.Instance.V1
         /// Long Running Operation settings for calls to <c>InstanceAdminClient.CreateInstance</c>.
         /// </summary>
         /// <remarks>
-        /// Uses default <see cref="PollSettings"/> of:
+        /// Uses default <see cref="gax::PollSettings"/> of:
         /// <list type="bullet">
         /// <item><description>Initial delay: 20000 milliseconds</description></item>
         /// <item><description>Delay multiplier: 1.5</description></item>
@@ -293,22 +293,22 @@ namespace Google.Cloud.Spanner.Admin.Instance.V1
         /// <item><description>Total timeout: 86400000 milliseconds</description></item>
         /// </list>
         /// </remarks>
-        public OperationsSettings CreateInstanceOperationsSettings { get; set; } = new OperationsSettings
+        public lro::OperationsSettings CreateInstanceOperationsSettings { get; set; } = new lro::OperationsSettings
         {
-            DefaultPollSettings = new PollSettings(
-                Expiration.FromTimeout(TimeSpan.FromMilliseconds(86400000L)),
-                TimeSpan.FromMilliseconds(20000L),
+            DefaultPollSettings = new gax::PollSettings(
+                gax::Expiration.FromTimeout(s::TimeSpan.FromMilliseconds(86400000L)),
+                s::TimeSpan.FromMilliseconds(20000L),
                 1.5,
-                TimeSpan.FromMilliseconds(45000L))
+                s::TimeSpan.FromMilliseconds(45000L))
         };
 
         /// <summary>
-        /// <see cref="CallSettings"/> for synchronous and asynchronous calls to
+        /// <see cref="gaxgrpc::CallSettings"/> for synchronous and asynchronous calls to
         /// <c>InstanceAdminClient.UpdateInstance</c> and <c>InstanceAdminClient.UpdateInstanceAsync</c>.
         /// </summary>
         /// <remarks>
         /// The default <c>InstanceAdminClient.UpdateInstance</c> and
-        /// <c>InstanceAdminClient.UpdateInstanceAsync</c> <see cref="RetrySettings"/> are:
+        /// <c>InstanceAdminClient.UpdateInstanceAsync</c> <see cref="gaxgrpc::RetrySettings"/> are:
         /// <list type="bullet">
         /// <item><description>Initial retry delay: 1000 milliseconds</description></item>
         /// <item><description>Retry delay multiplier: 1.3</description></item>
@@ -323,11 +323,11 @@ namespace Google.Cloud.Spanner.Admin.Instance.V1
         /// </list>
         /// Default RPC expiration is 600000 milliseconds.
         /// </remarks>
-        public CallSettings UpdateInstanceSettings { get; set; } = CallSettings.FromCallTiming(
-            CallTiming.FromRetry(new RetrySettings(
+        public gaxgrpc::CallSettings UpdateInstanceSettings { get; set; } = gaxgrpc::CallSettings.FromCallTiming(
+            gaxgrpc::CallTiming.FromRetry(new gaxgrpc::RetrySettings(
                 retryBackoff: GetDefaultRetryBackoff(),
                 timeoutBackoff: GetDefaultTimeoutBackoff(),
-                totalExpiration: Expiration.FromTimeout(TimeSpan.FromMilliseconds(600000)),
+                totalExpiration: gax::Expiration.FromTimeout(s::TimeSpan.FromMilliseconds(600000)),
                 retryFilter: NonIdempotentRetryFilter
             )));
 
@@ -335,7 +335,7 @@ namespace Google.Cloud.Spanner.Admin.Instance.V1
         /// Long Running Operation settings for calls to <c>InstanceAdminClient.UpdateInstance</c>.
         /// </summary>
         /// <remarks>
-        /// Uses default <see cref="PollSettings"/> of:
+        /// Uses default <see cref="gax::PollSettings"/> of:
         /// <list type="bullet">
         /// <item><description>Initial delay: 20000 milliseconds</description></item>
         /// <item><description>Delay multiplier: 1.5</description></item>
@@ -343,22 +343,22 @@ namespace Google.Cloud.Spanner.Admin.Instance.V1
         /// <item><description>Total timeout: 86400000 milliseconds</description></item>
         /// </list>
         /// </remarks>
-        public OperationsSettings UpdateInstanceOperationsSettings { get; set; } = new OperationsSettings
+        public lro::OperationsSettings UpdateInstanceOperationsSettings { get; set; } = new lro::OperationsSettings
         {
-            DefaultPollSettings = new PollSettings(
-                Expiration.FromTimeout(TimeSpan.FromMilliseconds(86400000L)),
-                TimeSpan.FromMilliseconds(20000L),
+            DefaultPollSettings = new gax::PollSettings(
+                gax::Expiration.FromTimeout(s::TimeSpan.FromMilliseconds(86400000L)),
+                s::TimeSpan.FromMilliseconds(20000L),
                 1.5,
-                TimeSpan.FromMilliseconds(45000L))
+                s::TimeSpan.FromMilliseconds(45000L))
         };
 
         /// <summary>
-        /// <see cref="CallSettings"/> for synchronous and asynchronous calls to
+        /// <see cref="gaxgrpc::CallSettings"/> for synchronous and asynchronous calls to
         /// <c>InstanceAdminClient.DeleteInstance</c> and <c>InstanceAdminClient.DeleteInstanceAsync</c>.
         /// </summary>
         /// <remarks>
         /// The default <c>InstanceAdminClient.DeleteInstance</c> and
-        /// <c>InstanceAdminClient.DeleteInstanceAsync</c> <see cref="RetrySettings"/> are:
+        /// <c>InstanceAdminClient.DeleteInstanceAsync</c> <see cref="gaxgrpc::RetrySettings"/> are:
         /// <list type="bullet">
         /// <item><description>Initial retry delay: 1000 milliseconds</description></item>
         /// <item><description>Retry delay multiplier: 1.3</description></item>
@@ -369,26 +369,26 @@ namespace Google.Cloud.Spanner.Admin.Instance.V1
         /// </list>
         /// Retry will be attempted on the following response status codes:
         /// <list>
-        /// <item><description><see cref="StatusCode.DeadlineExceeded"/></description></item>
-        /// <item><description><see cref="StatusCode.Unavailable"/></description></item>
+        /// <item><description><see cref="grpccore::StatusCode.DeadlineExceeded"/></description></item>
+        /// <item><description><see cref="grpccore::StatusCode.Unavailable"/></description></item>
         /// </list>
         /// Default RPC expiration is 600000 milliseconds.
         /// </remarks>
-        public CallSettings DeleteInstanceSettings { get; set; } = CallSettings.FromCallTiming(
-            CallTiming.FromRetry(new RetrySettings(
+        public gaxgrpc::CallSettings DeleteInstanceSettings { get; set; } = gaxgrpc::CallSettings.FromCallTiming(
+            gaxgrpc::CallTiming.FromRetry(new gaxgrpc::RetrySettings(
                 retryBackoff: GetDefaultRetryBackoff(),
                 timeoutBackoff: GetDefaultTimeoutBackoff(),
-                totalExpiration: Expiration.FromTimeout(TimeSpan.FromMilliseconds(600000)),
+                totalExpiration: gax::Expiration.FromTimeout(s::TimeSpan.FromMilliseconds(600000)),
                 retryFilter: IdempotentRetryFilter
             )));
 
         /// <summary>
-        /// <see cref="CallSettings"/> for synchronous and asynchronous calls to
+        /// <see cref="gaxgrpc::CallSettings"/> for synchronous and asynchronous calls to
         /// <c>InstanceAdminClient.SetIamPolicy</c> and <c>InstanceAdminClient.SetIamPolicyAsync</c>.
         /// </summary>
         /// <remarks>
         /// The default <c>InstanceAdminClient.SetIamPolicy</c> and
-        /// <c>InstanceAdminClient.SetIamPolicyAsync</c> <see cref="RetrySettings"/> are:
+        /// <c>InstanceAdminClient.SetIamPolicyAsync</c> <see cref="gaxgrpc::RetrySettings"/> are:
         /// <list type="bullet">
         /// <item><description>Initial retry delay: 1000 milliseconds</description></item>
         /// <item><description>Retry delay multiplier: 1.3</description></item>
@@ -403,21 +403,21 @@ namespace Google.Cloud.Spanner.Admin.Instance.V1
         /// </list>
         /// Default RPC expiration is 600000 milliseconds.
         /// </remarks>
-        public CallSettings SetIamPolicySettings { get; set; } = CallSettings.FromCallTiming(
-            CallTiming.FromRetry(new RetrySettings(
+        public gaxgrpc::CallSettings SetIamPolicySettings { get; set; } = gaxgrpc::CallSettings.FromCallTiming(
+            gaxgrpc::CallTiming.FromRetry(new gaxgrpc::RetrySettings(
                 retryBackoff: GetDefaultRetryBackoff(),
                 timeoutBackoff: GetDefaultTimeoutBackoff(),
-                totalExpiration: Expiration.FromTimeout(TimeSpan.FromMilliseconds(600000)),
+                totalExpiration: gax::Expiration.FromTimeout(s::TimeSpan.FromMilliseconds(600000)),
                 retryFilter: NonIdempotentRetryFilter
             )));
 
         /// <summary>
-        /// <see cref="CallSettings"/> for synchronous and asynchronous calls to
+        /// <see cref="gaxgrpc::CallSettings"/> for synchronous and asynchronous calls to
         /// <c>InstanceAdminClient.GetIamPolicy</c> and <c>InstanceAdminClient.GetIamPolicyAsync</c>.
         /// </summary>
         /// <remarks>
         /// The default <c>InstanceAdminClient.GetIamPolicy</c> and
-        /// <c>InstanceAdminClient.GetIamPolicyAsync</c> <see cref="RetrySettings"/> are:
+        /// <c>InstanceAdminClient.GetIamPolicyAsync</c> <see cref="gaxgrpc::RetrySettings"/> are:
         /// <list type="bullet">
         /// <item><description>Initial retry delay: 1000 milliseconds</description></item>
         /// <item><description>Retry delay multiplier: 1.3</description></item>
@@ -428,26 +428,26 @@ namespace Google.Cloud.Spanner.Admin.Instance.V1
         /// </list>
         /// Retry will be attempted on the following response status codes:
         /// <list>
-        /// <item><description><see cref="StatusCode.DeadlineExceeded"/></description></item>
-        /// <item><description><see cref="StatusCode.Unavailable"/></description></item>
+        /// <item><description><see cref="grpccore::StatusCode.DeadlineExceeded"/></description></item>
+        /// <item><description><see cref="grpccore::StatusCode.Unavailable"/></description></item>
         /// </list>
         /// Default RPC expiration is 600000 milliseconds.
         /// </remarks>
-        public CallSettings GetIamPolicySettings { get; set; } = CallSettings.FromCallTiming(
-            CallTiming.FromRetry(new RetrySettings(
+        public gaxgrpc::CallSettings GetIamPolicySettings { get; set; } = gaxgrpc::CallSettings.FromCallTiming(
+            gaxgrpc::CallTiming.FromRetry(new gaxgrpc::RetrySettings(
                 retryBackoff: GetDefaultRetryBackoff(),
                 timeoutBackoff: GetDefaultTimeoutBackoff(),
-                totalExpiration: Expiration.FromTimeout(TimeSpan.FromMilliseconds(600000)),
+                totalExpiration: gax::Expiration.FromTimeout(s::TimeSpan.FromMilliseconds(600000)),
                 retryFilter: IdempotentRetryFilter
             )));
 
         /// <summary>
-        /// <see cref="CallSettings"/> for synchronous and asynchronous calls to
+        /// <see cref="gaxgrpc::CallSettings"/> for synchronous and asynchronous calls to
         /// <c>InstanceAdminClient.TestIamPermissions</c> and <c>InstanceAdminClient.TestIamPermissionsAsync</c>.
         /// </summary>
         /// <remarks>
         /// The default <c>InstanceAdminClient.TestIamPermissions</c> and
-        /// <c>InstanceAdminClient.TestIamPermissionsAsync</c> <see cref="RetrySettings"/> are:
+        /// <c>InstanceAdminClient.TestIamPermissionsAsync</c> <see cref="gaxgrpc::RetrySettings"/> are:
         /// <list type="bullet">
         /// <item><description>Initial retry delay: 1000 milliseconds</description></item>
         /// <item><description>Retry delay multiplier: 1.3</description></item>
@@ -462,11 +462,11 @@ namespace Google.Cloud.Spanner.Admin.Instance.V1
         /// </list>
         /// Default RPC expiration is 600000 milliseconds.
         /// </remarks>
-        public CallSettings TestIamPermissionsSettings { get; set; } = CallSettings.FromCallTiming(
-            CallTiming.FromRetry(new RetrySettings(
+        public gaxgrpc::CallSettings TestIamPermissionsSettings { get; set; } = gaxgrpc::CallSettings.FromCallTiming(
+            gaxgrpc::CallTiming.FromRetry(new gaxgrpc::RetrySettings(
                 retryBackoff: GetDefaultRetryBackoff(),
                 timeoutBackoff: GetDefaultTimeoutBackoff(),
-                totalExpiration: Expiration.FromTimeout(TimeSpan.FromMilliseconds(600000)),
+                totalExpiration: gax::Expiration.FromTimeout(s::TimeSpan.FromMilliseconds(600000)),
                 retryFilter: NonIdempotentRetryFilter
             )));
 
@@ -485,7 +485,7 @@ namespace Google.Cloud.Spanner.Admin.Instance.V1
         /// <summary>
         /// The default endpoint for the InstanceAdmin service, which is a host of "spanner.googleapis.com" and a port of 443.
         /// </summary>
-        public static ServiceEndpoint DefaultEndpoint { get; } = new ServiceEndpoint("spanner.googleapis.com", 443);
+        public static gaxgrpc::ServiceEndpoint DefaultEndpoint { get; } = new gaxgrpc::ServiceEndpoint("spanner.googleapis.com", 443);
 
         /// <summary>
         /// The default InstanceAdmin scopes.
@@ -497,12 +497,12 @@ namespace Google.Cloud.Spanner.Admin.Instance.V1
         /// <item><description>"https://www.googleapis.com/auth/spanner.admin"</description></item>
         /// </list>
         /// </remarks>
-        public static IReadOnlyList<string> DefaultScopes { get; } = new ReadOnlyCollection<string>(new string[] {
+        public static scg::IReadOnlyList<string> DefaultScopes { get; } = new sco::ReadOnlyCollection<string>(new string[] {
             "https://www.googleapis.com/auth/cloud-platform",
             "https://www.googleapis.com/auth/spanner.admin",
         });
 
-        private static readonly ChannelPool s_channelPool = new ChannelPool(DefaultScopes);
+        private static readonly gaxgrpc::ChannelPool s_channelPool = new gaxgrpc::ChannelPool(DefaultScopes);
 
         // Note: we could have parameterless overloads of Create and CreateAsync,
         // documented to just use the default endpoint, settings and credentials.
@@ -516,12 +516,12 @@ namespace Google.Cloud.Spanner.Admin.Instance.V1
         /// and creating a channel connecting to the given endpoint with application default credentials where
         /// necessary.
         /// </summary>
-        /// <param name="endpoint">Optional <see cref="ServiceEndpoint"/>.</param>
+        /// <param name="endpoint">Optional <see cref="gaxgrpc::ServiceEndpoint"/>.</param>
         /// <param name="settings">Optional <see cref="InstanceAdminSettings"/>.</param>
         /// <returns>The task representing the created <see cref="InstanceAdminClient"/>.</returns>
-        public static async Task<InstanceAdminClient> CreateAsync(ServiceEndpoint endpoint = null, InstanceAdminSettings settings = null)
+        public static async stt::Task<InstanceAdminClient> CreateAsync(gaxgrpc::ServiceEndpoint endpoint = null, InstanceAdminSettings settings = null)
         {
-            Channel channel = await s_channelPool.GetChannelAsync(endpoint ?? DefaultEndpoint).ConfigureAwait(false);
+            grpccore::Channel channel = await s_channelPool.GetChannelAsync(endpoint ?? DefaultEndpoint).ConfigureAwait(false);
             return Create(channel, settings);
         }
 
@@ -530,45 +530,45 @@ namespace Google.Cloud.Spanner.Admin.Instance.V1
         /// and creating a channel connecting to the given endpoint with application default credentials where
         /// necessary.
         /// </summary>
-        /// <param name="endpoint">Optional <see cref="ServiceEndpoint"/>.</param>
+        /// <param name="endpoint">Optional <see cref="gaxgrpc::ServiceEndpoint"/>.</param>
         /// <param name="settings">Optional <see cref="InstanceAdminSettings"/>.</param>
         /// <returns>The created <see cref="InstanceAdminClient"/>.</returns>
-        public static InstanceAdminClient Create(ServiceEndpoint endpoint = null, InstanceAdminSettings settings = null)
+        public static InstanceAdminClient Create(gaxgrpc::ServiceEndpoint endpoint = null, InstanceAdminSettings settings = null)
         {
-            Channel channel = s_channelPool.GetChannel(endpoint ?? DefaultEndpoint);
+            grpccore::Channel channel = s_channelPool.GetChannel(endpoint ?? DefaultEndpoint);
             return Create(channel, settings);
         }
 
         /// <summary>
         /// Creates a <see cref="InstanceAdminClient"/> which uses the specified channel for remote operations.
         /// </summary>
-        /// <param name="channel">The <see cref="Channel"/> for remote operations. Must not be null.</param>
+        /// <param name="channel">The <see cref="grpccore::Channel"/> for remote operations. Must not be null.</param>
         /// <param name="settings">Optional <see cref="InstanceAdminSettings"/>.</param>
         /// <returns>The created <see cref="InstanceAdminClient"/>.</returns>
-        public static InstanceAdminClient Create(Channel channel, InstanceAdminSettings settings = null)
+        public static InstanceAdminClient Create(grpccore::Channel channel, InstanceAdminSettings settings = null)
         {
-            GaxPreconditions.CheckNotNull(channel, nameof(channel));
+            gax::GaxPreconditions.CheckNotNull(channel, nameof(channel));
             InstanceAdmin.InstanceAdminClient grpcClient = new InstanceAdmin.InstanceAdminClient(channel);
             return new InstanceAdminClientImpl(grpcClient, settings);
         }
 
         /// <summary>
-        /// Shuts down any channels automatically created by <see cref="Create(ServiceEndpoint, InstanceAdminSettings)"/>
-        /// and <see cref="CreateAsync(ServiceEndpoint, InstanceAdminSettings)"/>. Channels which weren't automatically
+        /// Shuts down any channels automatically created by <see cref="Create(gaxgrpc::ServiceEndpoint, InstanceAdminSettings)"/>
+        /// and <see cref="CreateAsync(gaxgrpc::ServiceEndpoint, InstanceAdminSettings)"/>. Channels which weren't automatically
         /// created are not affected.
         /// </summary>
-        /// <remarks>After calling this method, further calls to <see cref="Create(ServiceEndpoint, InstanceAdminSettings)"/>
-        /// and <see cref="CreateAsync(ServiceEndpoint, InstanceAdminSettings)"/> will create new channels, which could
+        /// <remarks>After calling this method, further calls to <see cref="Create(gaxgrpc::ServiceEndpoint, InstanceAdminSettings)"/>
+        /// and <see cref="CreateAsync(gaxgrpc::ServiceEndpoint, InstanceAdminSettings)"/> will create new channels, which could
         /// in turn be shut down by another call to this method.</remarks>
         /// <returns>A task representing the asynchronous shutdown operation.</returns>
-        public static Task ShutdownDefaultChannelsAsync() => s_channelPool.ShutdownChannelsAsync();
+        public static stt::Task ShutdownDefaultChannelsAsync() => s_channelPool.ShutdownChannelsAsync();
 
         /// <summary>
         /// The underlying gRPC InstanceAdmin client.
         /// </summary>
         public virtual InstanceAdmin.InstanceAdminClient GrpcClient
         {
-            get { throw new NotImplementedException(); }
+            get { throw new s::NotImplementedException(); }
         }
 
         /// <summary>
@@ -593,14 +593,14 @@ namespace Google.Cloud.Spanner.Admin.Instance.V1
         /// <returns>
         /// A pageable asynchronous sequence of <see cref="InstanceConfig"/> resources.
         /// </returns>
-        public virtual PagedAsyncEnumerable<ListInstanceConfigsResponse, InstanceConfig> ListInstanceConfigsAsync(
+        public virtual gax::PagedAsyncEnumerable<ListInstanceConfigsResponse, InstanceConfig> ListInstanceConfigsAsync(
             ProjectName parent,
             string pageToken = null,
             int? pageSize = null,
-            CallSettings callSettings = null) => ListInstanceConfigsAsync(
+            gaxgrpc::CallSettings callSettings = null) => ListInstanceConfigsAsync(
                 new ListInstanceConfigsRequest
                 {
-                    ParentAsProjectName = GaxPreconditions.CheckNotNull(parent, nameof(parent)),
+                    ParentAsProjectName = gax::GaxPreconditions.CheckNotNull(parent, nameof(parent)),
                     PageToken = pageToken ?? "",
                     PageSize = pageSize ?? 0,
                 },
@@ -628,14 +628,14 @@ namespace Google.Cloud.Spanner.Admin.Instance.V1
         /// <returns>
         /// A pageable sequence of <see cref="InstanceConfig"/> resources.
         /// </returns>
-        public virtual PagedEnumerable<ListInstanceConfigsResponse, InstanceConfig> ListInstanceConfigs(
+        public virtual gax::PagedEnumerable<ListInstanceConfigsResponse, InstanceConfig> ListInstanceConfigs(
             ProjectName parent,
             string pageToken = null,
             int? pageSize = null,
-            CallSettings callSettings = null) => ListInstanceConfigs(
+            gaxgrpc::CallSettings callSettings = null) => ListInstanceConfigs(
                 new ListInstanceConfigsRequest
                 {
-                    ParentAsProjectName = GaxPreconditions.CheckNotNull(parent, nameof(parent)),
+                    ParentAsProjectName = gax::GaxPreconditions.CheckNotNull(parent, nameof(parent)),
                     PageToken = pageToken ?? "",
                     PageSize = pageSize ?? 0,
                 },
@@ -653,11 +653,11 @@ namespace Google.Cloud.Spanner.Admin.Instance.V1
         /// <returns>
         /// A pageable asynchronous sequence of <see cref="InstanceConfig"/> resources.
         /// </returns>
-        public virtual PagedAsyncEnumerable<ListInstanceConfigsResponse, InstanceConfig> ListInstanceConfigsAsync(
+        public virtual gax::PagedAsyncEnumerable<ListInstanceConfigsResponse, InstanceConfig> ListInstanceConfigsAsync(
             ListInstanceConfigsRequest request,
-            CallSettings callSettings = null)
+            gaxgrpc::CallSettings callSettings = null)
         {
-            throw new NotImplementedException();
+            throw new s::NotImplementedException();
         }
 
         /// <summary>
@@ -672,11 +672,11 @@ namespace Google.Cloud.Spanner.Admin.Instance.V1
         /// <returns>
         /// A pageable sequence of <see cref="InstanceConfig"/> resources.
         /// </returns>
-        public virtual PagedEnumerable<ListInstanceConfigsResponse, InstanceConfig> ListInstanceConfigs(
+        public virtual gax::PagedEnumerable<ListInstanceConfigsResponse, InstanceConfig> ListInstanceConfigs(
             ListInstanceConfigsRequest request,
-            CallSettings callSettings = null)
+            gaxgrpc::CallSettings callSettings = null)
         {
-            throw new NotImplementedException();
+            throw new s::NotImplementedException();
         }
 
         /// <summary>
@@ -692,12 +692,12 @@ namespace Google.Cloud.Spanner.Admin.Instance.V1
         /// <returns>
         /// A Task containing the RPC response.
         /// </returns>
-        public virtual Task<InstanceConfig> GetInstanceConfigAsync(
+        public virtual stt::Task<InstanceConfig> GetInstanceConfigAsync(
             InstanceConfigName name,
-            CallSettings callSettings = null) => GetInstanceConfigAsync(
+            gaxgrpc::CallSettings callSettings = null) => GetInstanceConfigAsync(
                 new GetInstanceConfigRequest
                 {
-                    InstanceConfigName = GaxPreconditions.CheckNotNull(name, nameof(name)),
+                    InstanceConfigName = gax::GaxPreconditions.CheckNotNull(name, nameof(name)),
                 },
                 callSettings);
 
@@ -709,16 +709,16 @@ namespace Google.Cloud.Spanner.Admin.Instance.V1
         /// the form `projects/&lt;project&gt;/instanceConfigs/&lt;config&gt;`.
         /// </param>
         /// <param name="cancellationToken">
-        /// A <see cref="CancellationToken"/> to use for this RPC.
+        /// A <see cref="st::CancellationToken"/> to use for this RPC.
         /// </param>
         /// <returns>
         /// A Task containing the RPC response.
         /// </returns>
-        public virtual Task<InstanceConfig> GetInstanceConfigAsync(
+        public virtual stt::Task<InstanceConfig> GetInstanceConfigAsync(
             InstanceConfigName name,
-            CancellationToken cancellationToken) => GetInstanceConfigAsync(
+            st::CancellationToken cancellationToken) => GetInstanceConfigAsync(
                 name,
-                CallSettings.FromCancellationToken(cancellationToken));
+                gaxgrpc::CallSettings.FromCancellationToken(cancellationToken));
 
         /// <summary>
         /// Gets information about a particular instance configuration.
@@ -735,10 +735,10 @@ namespace Google.Cloud.Spanner.Admin.Instance.V1
         /// </returns>
         public virtual InstanceConfig GetInstanceConfig(
             InstanceConfigName name,
-            CallSettings callSettings = null) => GetInstanceConfig(
+            gaxgrpc::CallSettings callSettings = null) => GetInstanceConfig(
                 new GetInstanceConfigRequest
                 {
-                    InstanceConfigName = GaxPreconditions.CheckNotNull(name, nameof(name)),
+                    InstanceConfigName = gax::GaxPreconditions.CheckNotNull(name, nameof(name)),
                 },
                 callSettings);
 
@@ -754,11 +754,11 @@ namespace Google.Cloud.Spanner.Admin.Instance.V1
         /// <returns>
         /// A Task containing the RPC response.
         /// </returns>
-        public virtual Task<InstanceConfig> GetInstanceConfigAsync(
+        public virtual stt::Task<InstanceConfig> GetInstanceConfigAsync(
             GetInstanceConfigRequest request,
-            CallSettings callSettings = null)
+            gaxgrpc::CallSettings callSettings = null)
         {
-            throw new NotImplementedException();
+            throw new s::NotImplementedException();
         }
 
         /// <summary>
@@ -768,16 +768,16 @@ namespace Google.Cloud.Spanner.Admin.Instance.V1
         /// The request object containing all of the parameters for the API call.
         /// </param>
         /// <param name="cancellationToken">
-        /// A <see cref="CancellationToken"/> to use for this RPC.
+        /// A <see cref="st::CancellationToken"/> to use for this RPC.
         /// </param>
         /// <returns>
         /// A Task containing the RPC response.
         /// </returns>
-        public virtual Task<InstanceConfig> GetInstanceConfigAsync(
+        public virtual stt::Task<InstanceConfig> GetInstanceConfigAsync(
             GetInstanceConfigRequest request,
-            CancellationToken cancellationToken) => GetInstanceConfigAsync(
+            st::CancellationToken cancellationToken) => GetInstanceConfigAsync(
                 request,
-                CallSettings.FromCancellationToken(cancellationToken));
+                gaxgrpc::CallSettings.FromCancellationToken(cancellationToken));
 
         /// <summary>
         /// Gets information about a particular instance configuration.
@@ -793,9 +793,9 @@ namespace Google.Cloud.Spanner.Admin.Instance.V1
         /// </returns>
         public virtual InstanceConfig GetInstanceConfig(
             GetInstanceConfigRequest request,
-            CallSettings callSettings = null)
+            gaxgrpc::CallSettings callSettings = null)
         {
-            throw new NotImplementedException();
+            throw new s::NotImplementedException();
         }
 
         /// <summary>
@@ -819,14 +819,14 @@ namespace Google.Cloud.Spanner.Admin.Instance.V1
         /// <returns>
         /// A pageable asynchronous sequence of <see cref="Instance"/> resources.
         /// </returns>
-        public virtual PagedAsyncEnumerable<ListInstancesResponse, Instance> ListInstancesAsync(
+        public virtual gax::PagedAsyncEnumerable<ListInstancesResponse, Instance> ListInstancesAsync(
             ProjectName parent,
             string pageToken = null,
             int? pageSize = null,
-            CallSettings callSettings = null) => ListInstancesAsync(
+            gaxgrpc::CallSettings callSettings = null) => ListInstancesAsync(
                 new ListInstancesRequest
                 {
-                    ParentAsProjectName = GaxPreconditions.CheckNotNull(parent, nameof(parent)),
+                    ParentAsProjectName = gax::GaxPreconditions.CheckNotNull(parent, nameof(parent)),
                     PageToken = pageToken ?? "",
                     PageSize = pageSize ?? 0,
                 },
@@ -853,14 +853,14 @@ namespace Google.Cloud.Spanner.Admin.Instance.V1
         /// <returns>
         /// A pageable sequence of <see cref="Instance"/> resources.
         /// </returns>
-        public virtual PagedEnumerable<ListInstancesResponse, Instance> ListInstances(
+        public virtual gax::PagedEnumerable<ListInstancesResponse, Instance> ListInstances(
             ProjectName parent,
             string pageToken = null,
             int? pageSize = null,
-            CallSettings callSettings = null) => ListInstances(
+            gaxgrpc::CallSettings callSettings = null) => ListInstances(
                 new ListInstancesRequest
                 {
-                    ParentAsProjectName = GaxPreconditions.CheckNotNull(parent, nameof(parent)),
+                    ParentAsProjectName = gax::GaxPreconditions.CheckNotNull(parent, nameof(parent)),
                     PageToken = pageToken ?? "",
                     PageSize = pageSize ?? 0,
                 },
@@ -878,11 +878,11 @@ namespace Google.Cloud.Spanner.Admin.Instance.V1
         /// <returns>
         /// A pageable asynchronous sequence of <see cref="Instance"/> resources.
         /// </returns>
-        public virtual PagedAsyncEnumerable<ListInstancesResponse, Instance> ListInstancesAsync(
+        public virtual gax::PagedAsyncEnumerable<ListInstancesResponse, Instance> ListInstancesAsync(
             ListInstancesRequest request,
-            CallSettings callSettings = null)
+            gaxgrpc::CallSettings callSettings = null)
         {
-            throw new NotImplementedException();
+            throw new s::NotImplementedException();
         }
 
         /// <summary>
@@ -897,11 +897,11 @@ namespace Google.Cloud.Spanner.Admin.Instance.V1
         /// <returns>
         /// A pageable sequence of <see cref="Instance"/> resources.
         /// </returns>
-        public virtual PagedEnumerable<ListInstancesResponse, Instance> ListInstances(
+        public virtual gax::PagedEnumerable<ListInstancesResponse, Instance> ListInstances(
             ListInstancesRequest request,
-            CallSettings callSettings = null)
+            gaxgrpc::CallSettings callSettings = null)
         {
-            throw new NotImplementedException();
+            throw new s::NotImplementedException();
         }
 
         /// <summary>
@@ -917,12 +917,12 @@ namespace Google.Cloud.Spanner.Admin.Instance.V1
         /// <returns>
         /// A Task containing the RPC response.
         /// </returns>
-        public virtual Task<Instance> GetInstanceAsync(
+        public virtual stt::Task<Instance> GetInstanceAsync(
             InstanceName name,
-            CallSettings callSettings = null) => GetInstanceAsync(
+            gaxgrpc::CallSettings callSettings = null) => GetInstanceAsync(
                 new GetInstanceRequest
                 {
-                    InstanceName = GaxPreconditions.CheckNotNull(name, nameof(name)),
+                    InstanceName = gax::GaxPreconditions.CheckNotNull(name, nameof(name)),
                 },
                 callSettings);
 
@@ -934,16 +934,16 @@ namespace Google.Cloud.Spanner.Admin.Instance.V1
         /// `projects/&lt;project&gt;/instances/&lt;instance&gt;`.
         /// </param>
         /// <param name="cancellationToken">
-        /// A <see cref="CancellationToken"/> to use for this RPC.
+        /// A <see cref="st::CancellationToken"/> to use for this RPC.
         /// </param>
         /// <returns>
         /// A Task containing the RPC response.
         /// </returns>
-        public virtual Task<Instance> GetInstanceAsync(
+        public virtual stt::Task<Instance> GetInstanceAsync(
             InstanceName name,
-            CancellationToken cancellationToken) => GetInstanceAsync(
+            st::CancellationToken cancellationToken) => GetInstanceAsync(
                 name,
-                CallSettings.FromCancellationToken(cancellationToken));
+                gaxgrpc::CallSettings.FromCancellationToken(cancellationToken));
 
         /// <summary>
         /// Gets information about a particular instance.
@@ -960,10 +960,10 @@ namespace Google.Cloud.Spanner.Admin.Instance.V1
         /// </returns>
         public virtual Instance GetInstance(
             InstanceName name,
-            CallSettings callSettings = null) => GetInstance(
+            gaxgrpc::CallSettings callSettings = null) => GetInstance(
                 new GetInstanceRequest
                 {
-                    InstanceName = GaxPreconditions.CheckNotNull(name, nameof(name)),
+                    InstanceName = gax::GaxPreconditions.CheckNotNull(name, nameof(name)),
                 },
                 callSettings);
 
@@ -979,11 +979,11 @@ namespace Google.Cloud.Spanner.Admin.Instance.V1
         /// <returns>
         /// A Task containing the RPC response.
         /// </returns>
-        public virtual Task<Instance> GetInstanceAsync(
+        public virtual stt::Task<Instance> GetInstanceAsync(
             GetInstanceRequest request,
-            CallSettings callSettings = null)
+            gaxgrpc::CallSettings callSettings = null)
         {
-            throw new NotImplementedException();
+            throw new s::NotImplementedException();
         }
 
         /// <summary>
@@ -993,16 +993,16 @@ namespace Google.Cloud.Spanner.Admin.Instance.V1
         /// The request object containing all of the parameters for the API call.
         /// </param>
         /// <param name="cancellationToken">
-        /// A <see cref="CancellationToken"/> to use for this RPC.
+        /// A <see cref="st::CancellationToken"/> to use for this RPC.
         /// </param>
         /// <returns>
         /// A Task containing the RPC response.
         /// </returns>
-        public virtual Task<Instance> GetInstanceAsync(
+        public virtual stt::Task<Instance> GetInstanceAsync(
             GetInstanceRequest request,
-            CancellationToken cancellationToken) => GetInstanceAsync(
+            st::CancellationToken cancellationToken) => GetInstanceAsync(
                 request,
-                CallSettings.FromCancellationToken(cancellationToken));
+                gaxgrpc::CallSettings.FromCancellationToken(cancellationToken));
 
         /// <summary>
         /// Gets information about a particular instance.
@@ -1018,9 +1018,9 @@ namespace Google.Cloud.Spanner.Admin.Instance.V1
         /// </returns>
         public virtual Instance GetInstance(
             GetInstanceRequest request,
-            CallSettings callSettings = null)
+            gaxgrpc::CallSettings callSettings = null)
         {
-            throw new NotImplementedException();
+            throw new s::NotImplementedException();
         }
 
         /// <summary>
@@ -1078,16 +1078,16 @@ namespace Google.Cloud.Spanner.Admin.Instance.V1
         /// <returns>
         /// A Task containing the RPC response.
         /// </returns>
-        public virtual Task<Operation<Instance, CreateInstanceMetadata>> CreateInstanceAsync(
+        public virtual stt::Task<lro::Operation<Instance, CreateInstanceMetadata>> CreateInstanceAsync(
             ProjectName parent,
             InstanceName instanceId,
             Instance instance,
-            CallSettings callSettings = null) => CreateInstanceAsync(
+            gaxgrpc::CallSettings callSettings = null) => CreateInstanceAsync(
                 new CreateInstanceRequest
                 {
-                    ParentAsProjectName = GaxPreconditions.CheckNotNull(parent, nameof(parent)),
-                    InstanceIdAsInstanceName = GaxPreconditions.CheckNotNull(instanceId, nameof(instanceId)),
-                    Instance = GaxPreconditions.CheckNotNull(instance, nameof(instance)),
+                    ParentAsProjectName = gax::GaxPreconditions.CheckNotNull(parent, nameof(parent)),
+                    InstanceIdAsInstanceName = gax::GaxPreconditions.CheckNotNull(instanceId, nameof(instanceId)),
+                    Instance = gax::GaxPreconditions.CheckNotNull(instance, nameof(instance)),
                 },
                 callSettings);
 
@@ -1141,20 +1141,20 @@ namespace Google.Cloud.Spanner.Admin.Instance.V1
         /// specified must be `&lt;parent&gt;/instances/&lt;instance_id&gt;`.
         /// </param>
         /// <param name="cancellationToken">
-        /// A <see cref="CancellationToken"/> to use for this RPC.
+        /// A <see cref="st::CancellationToken"/> to use for this RPC.
         /// </param>
         /// <returns>
         /// A Task containing the RPC response.
         /// </returns>
-        public virtual Task<Operation<Instance, CreateInstanceMetadata>> CreateInstanceAsync(
+        public virtual stt::Task<lro::Operation<Instance, CreateInstanceMetadata>> CreateInstanceAsync(
             ProjectName parent,
             InstanceName instanceId,
             Instance instance,
-            CancellationToken cancellationToken) => CreateInstanceAsync(
+            st::CancellationToken cancellationToken) => CreateInstanceAsync(
                 parent,
                 instanceId,
                 instance,
-                CallSettings.FromCancellationToken(cancellationToken));
+                gaxgrpc::CallSettings.FromCancellationToken(cancellationToken));
 
         /// <summary>
         /// Creates an instance and begins preparing it to begin serving. The
@@ -1211,16 +1211,16 @@ namespace Google.Cloud.Spanner.Admin.Instance.V1
         /// <returns>
         /// The RPC response.
         /// </returns>
-        public virtual Operation<Instance, CreateInstanceMetadata> CreateInstance(
+        public virtual lro::Operation<Instance, CreateInstanceMetadata> CreateInstance(
             ProjectName parent,
             InstanceName instanceId,
             Instance instance,
-            CallSettings callSettings = null) => CreateInstance(
+            gaxgrpc::CallSettings callSettings = null) => CreateInstance(
                 new CreateInstanceRequest
                 {
-                    ParentAsProjectName = GaxPreconditions.CheckNotNull(parent, nameof(parent)),
-                    InstanceIdAsInstanceName = GaxPreconditions.CheckNotNull(instanceId, nameof(instanceId)),
-                    Instance = GaxPreconditions.CheckNotNull(instance, nameof(instance)),
+                    ParentAsProjectName = gax::GaxPreconditions.CheckNotNull(parent, nameof(parent)),
+                    InstanceIdAsInstanceName = gax::GaxPreconditions.CheckNotNull(instanceId, nameof(instanceId)),
+                    Instance = gax::GaxPreconditions.CheckNotNull(instance, nameof(instance)),
                 },
                 callSettings);
 
@@ -1269,11 +1269,11 @@ namespace Google.Cloud.Spanner.Admin.Instance.V1
         /// <returns>
         /// A Task containing the RPC response.
         /// </returns>
-        public virtual Task<Operation<Instance, CreateInstanceMetadata>> CreateInstanceAsync(
+        public virtual stt::Task<lro::Operation<Instance, CreateInstanceMetadata>> CreateInstanceAsync(
             CreateInstanceRequest request,
-            CallSettings callSettings = null)
+            gaxgrpc::CallSettings callSettings = null)
         {
-            throw new NotImplementedException();
+            throw new s::NotImplementedException();
         }
 
         /// <summary>
@@ -1282,10 +1282,10 @@ namespace Google.Cloud.Spanner.Admin.Instance.V1
         /// <param name="operationName">The name of a previously invoked operation. Must not be <c>null</c> or empty.</param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
         /// <returns>A task representing the result of polling the operation.</returns>
-        public virtual Task<Operation<Instance, CreateInstanceMetadata>> PollOnceCreateInstanceAsync(
+        public virtual stt::Task<lro::Operation<Instance, CreateInstanceMetadata>> PollOnceCreateInstanceAsync(
             string operationName,
-            CallSettings callSettings = null) => Operation<Instance, CreateInstanceMetadata>.PollOnceFromNameAsync(
-                GaxPreconditions.CheckNotNullOrEmpty(operationName, nameof(operationName)),
+            gaxgrpc::CallSettings callSettings = null) => lro::Operation<Instance, CreateInstanceMetadata>.PollOnceFromNameAsync(
+                gax::GaxPreconditions.CheckNotNullOrEmpty(operationName, nameof(operationName)),
                 CreateInstanceOperationsClient,
                 callSettings);
 
@@ -1334,19 +1334,19 @@ namespace Google.Cloud.Spanner.Admin.Instance.V1
         /// <returns>
         /// The RPC response.
         /// </returns>
-        public virtual Operation<Instance, CreateInstanceMetadata> CreateInstance(
+        public virtual lro::Operation<Instance, CreateInstanceMetadata> CreateInstance(
             CreateInstanceRequest request,
-            CallSettings callSettings = null)
+            gaxgrpc::CallSettings callSettings = null)
         {
-            throw new NotImplementedException();
+            throw new s::NotImplementedException();
         }
 
         /// <summary>
         /// The long-running operations client for <c>CreateInstance</c>.
         /// </summary>
-        public virtual OperationsClient CreateInstanceOperationsClient
+        public virtual lro::OperationsClient CreateInstanceOperationsClient
         {
-            get { throw new NotImplementedException(); }
+            get { throw new s::NotImplementedException(); }
         }
 
         /// <summary>
@@ -1355,10 +1355,10 @@ namespace Google.Cloud.Spanner.Admin.Instance.V1
         /// <param name="operationName">The name of a previously invoked operation. Must not be <c>null</c> or empty.</param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
         /// <returns>The result of polling the operation.</returns>
-        public virtual Operation<Instance, CreateInstanceMetadata> PollOnceCreateInstance(
+        public virtual lro::Operation<Instance, CreateInstanceMetadata> PollOnceCreateInstance(
             string operationName,
-            CallSettings callSettings = null) => Operation<Instance, CreateInstanceMetadata>.PollOnceFromName(
-                GaxPreconditions.CheckNotNullOrEmpty(operationName, nameof(operationName)),
+            gaxgrpc::CallSettings callSettings = null) => lro::Operation<Instance, CreateInstanceMetadata>.PollOnceFromName(
+                gax::GaxPreconditions.CheckNotNullOrEmpty(operationName, nameof(operationName)),
                 CreateInstanceOperationsClient,
                 callSettings);
 
@@ -1420,14 +1420,14 @@ namespace Google.Cloud.Spanner.Admin.Instance.V1
         /// <returns>
         /// A Task containing the RPC response.
         /// </returns>
-        public virtual Task<Operation<Instance, UpdateInstanceMetadata>> UpdateInstanceAsync(
+        public virtual stt::Task<lro::Operation<Instance, UpdateInstanceMetadata>> UpdateInstanceAsync(
             Instance instance,
-            FieldMask fieldMask,
-            CallSettings callSettings = null) => UpdateInstanceAsync(
+            protowkt::FieldMask fieldMask,
+            gaxgrpc::CallSettings callSettings = null) => UpdateInstanceAsync(
                 new UpdateInstanceRequest
                 {
-                    Instance = GaxPreconditions.CheckNotNull(instance, nameof(instance)),
-                    FieldMask = GaxPreconditions.CheckNotNull(fieldMask, nameof(fieldMask)),
+                    Instance = gax::GaxPreconditions.CheckNotNull(instance, nameof(instance)),
+                    FieldMask = gax::GaxPreconditions.CheckNotNull(fieldMask, nameof(fieldMask)),
                 },
                 callSettings);
 
@@ -1484,18 +1484,18 @@ namespace Google.Cloud.Spanner.Admin.Instance.V1
         /// about them.
         /// </param>
         /// <param name="cancellationToken">
-        /// A <see cref="CancellationToken"/> to use for this RPC.
+        /// A <see cref="st::CancellationToken"/> to use for this RPC.
         /// </param>
         /// <returns>
         /// A Task containing the RPC response.
         /// </returns>
-        public virtual Task<Operation<Instance, UpdateInstanceMetadata>> UpdateInstanceAsync(
+        public virtual stt::Task<lro::Operation<Instance, UpdateInstanceMetadata>> UpdateInstanceAsync(
             Instance instance,
-            FieldMask fieldMask,
-            CancellationToken cancellationToken) => UpdateInstanceAsync(
+            protowkt::FieldMask fieldMask,
+            st::CancellationToken cancellationToken) => UpdateInstanceAsync(
                 instance,
                 fieldMask,
-                CallSettings.FromCancellationToken(cancellationToken));
+                gaxgrpc::CallSettings.FromCancellationToken(cancellationToken));
 
         /// <summary>
         /// Updates an instance, and begins allocating or releasing resources
@@ -1555,14 +1555,14 @@ namespace Google.Cloud.Spanner.Admin.Instance.V1
         /// <returns>
         /// The RPC response.
         /// </returns>
-        public virtual Operation<Instance, UpdateInstanceMetadata> UpdateInstance(
+        public virtual lro::Operation<Instance, UpdateInstanceMetadata> UpdateInstance(
             Instance instance,
-            FieldMask fieldMask,
-            CallSettings callSettings = null) => UpdateInstance(
+            protowkt::FieldMask fieldMask,
+            gaxgrpc::CallSettings callSettings = null) => UpdateInstance(
                 new UpdateInstanceRequest
                 {
-                    Instance = GaxPreconditions.CheckNotNull(instance, nameof(instance)),
-                    FieldMask = GaxPreconditions.CheckNotNull(fieldMask, nameof(fieldMask)),
+                    Instance = gax::GaxPreconditions.CheckNotNull(instance, nameof(instance)),
+                    FieldMask = gax::GaxPreconditions.CheckNotNull(fieldMask, nameof(fieldMask)),
                 },
                 callSettings);
 
@@ -1617,11 +1617,11 @@ namespace Google.Cloud.Spanner.Admin.Instance.V1
         /// <returns>
         /// A Task containing the RPC response.
         /// </returns>
-        public virtual Task<Operation<Instance, UpdateInstanceMetadata>> UpdateInstanceAsync(
+        public virtual stt::Task<lro::Operation<Instance, UpdateInstanceMetadata>> UpdateInstanceAsync(
             UpdateInstanceRequest request,
-            CallSettings callSettings = null)
+            gaxgrpc::CallSettings callSettings = null)
         {
-            throw new NotImplementedException();
+            throw new s::NotImplementedException();
         }
 
         /// <summary>
@@ -1630,10 +1630,10 @@ namespace Google.Cloud.Spanner.Admin.Instance.V1
         /// <param name="operationName">The name of a previously invoked operation. Must not be <c>null</c> or empty.</param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
         /// <returns>A task representing the result of polling the operation.</returns>
-        public virtual Task<Operation<Instance, UpdateInstanceMetadata>> PollOnceUpdateInstanceAsync(
+        public virtual stt::Task<lro::Operation<Instance, UpdateInstanceMetadata>> PollOnceUpdateInstanceAsync(
             string operationName,
-            CallSettings callSettings = null) => Operation<Instance, UpdateInstanceMetadata>.PollOnceFromNameAsync(
-                GaxPreconditions.CheckNotNullOrEmpty(operationName, nameof(operationName)),
+            gaxgrpc::CallSettings callSettings = null) => lro::Operation<Instance, UpdateInstanceMetadata>.PollOnceFromNameAsync(
+                gax::GaxPreconditions.CheckNotNullOrEmpty(operationName, nameof(operationName)),
                 UpdateInstanceOperationsClient,
                 callSettings);
 
@@ -1688,19 +1688,19 @@ namespace Google.Cloud.Spanner.Admin.Instance.V1
         /// <returns>
         /// The RPC response.
         /// </returns>
-        public virtual Operation<Instance, UpdateInstanceMetadata> UpdateInstance(
+        public virtual lro::Operation<Instance, UpdateInstanceMetadata> UpdateInstance(
             UpdateInstanceRequest request,
-            CallSettings callSettings = null)
+            gaxgrpc::CallSettings callSettings = null)
         {
-            throw new NotImplementedException();
+            throw new s::NotImplementedException();
         }
 
         /// <summary>
         /// The long-running operations client for <c>UpdateInstance</c>.
         /// </summary>
-        public virtual OperationsClient UpdateInstanceOperationsClient
+        public virtual lro::OperationsClient UpdateInstanceOperationsClient
         {
-            get { throw new NotImplementedException(); }
+            get { throw new s::NotImplementedException(); }
         }
 
         /// <summary>
@@ -1709,10 +1709,10 @@ namespace Google.Cloud.Spanner.Admin.Instance.V1
         /// <param name="operationName">The name of a previously invoked operation. Must not be <c>null</c> or empty.</param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
         /// <returns>The result of polling the operation.</returns>
-        public virtual Operation<Instance, UpdateInstanceMetadata> PollOnceUpdateInstance(
+        public virtual lro::Operation<Instance, UpdateInstanceMetadata> PollOnceUpdateInstance(
             string operationName,
-            CallSettings callSettings = null) => Operation<Instance, UpdateInstanceMetadata>.PollOnceFromName(
-                GaxPreconditions.CheckNotNullOrEmpty(operationName, nameof(operationName)),
+            gaxgrpc::CallSettings callSettings = null) => lro::Operation<Instance, UpdateInstanceMetadata>.PollOnceFromName(
+                gax::GaxPreconditions.CheckNotNullOrEmpty(operationName, nameof(operationName)),
                 UpdateInstanceOperationsClient,
                 callSettings);
 
@@ -1739,12 +1739,12 @@ namespace Google.Cloud.Spanner.Admin.Instance.V1
         /// <returns>
         /// A Task that completes when the RPC has completed.
         /// </returns>
-        public virtual Task DeleteInstanceAsync(
+        public virtual stt::Task DeleteInstanceAsync(
             InstanceName name,
-            CallSettings callSettings = null) => DeleteInstanceAsync(
+            gaxgrpc::CallSettings callSettings = null) => DeleteInstanceAsync(
                 new DeleteInstanceRequest
                 {
-                    InstanceName = GaxPreconditions.CheckNotNull(name, nameof(name)),
+                    InstanceName = gax::GaxPreconditions.CheckNotNull(name, nameof(name)),
                 },
                 callSettings);
 
@@ -1766,16 +1766,16 @@ namespace Google.Cloud.Spanner.Admin.Instance.V1
         /// `projects/&lt;project&gt;/instances/&lt;instance&gt;`
         /// </param>
         /// <param name="cancellationToken">
-        /// A <see cref="CancellationToken"/> to use for this RPC.
+        /// A <see cref="st::CancellationToken"/> to use for this RPC.
         /// </param>
         /// <returns>
         /// A Task that completes when the RPC has completed.
         /// </returns>
-        public virtual Task DeleteInstanceAsync(
+        public virtual stt::Task DeleteInstanceAsync(
             InstanceName name,
-            CancellationToken cancellationToken) => DeleteInstanceAsync(
+            st::CancellationToken cancellationToken) => DeleteInstanceAsync(
                 name,
-                CallSettings.FromCancellationToken(cancellationToken));
+                gaxgrpc::CallSettings.FromCancellationToken(cancellationToken));
 
         /// <summary>
         /// Deletes an instance.
@@ -1799,10 +1799,10 @@ namespace Google.Cloud.Spanner.Admin.Instance.V1
         /// </param>
         public virtual void DeleteInstance(
             InstanceName name,
-            CallSettings callSettings = null) => DeleteInstance(
+            gaxgrpc::CallSettings callSettings = null) => DeleteInstance(
                 new DeleteInstanceRequest
                 {
-                    InstanceName = GaxPreconditions.CheckNotNull(name, nameof(name)),
+                    InstanceName = gax::GaxPreconditions.CheckNotNull(name, nameof(name)),
                 },
                 callSettings);
 
@@ -1828,11 +1828,11 @@ namespace Google.Cloud.Spanner.Admin.Instance.V1
         /// <returns>
         /// A Task that completes when the RPC has completed.
         /// </returns>
-        public virtual Task DeleteInstanceAsync(
+        public virtual stt::Task DeleteInstanceAsync(
             DeleteInstanceRequest request,
-            CallSettings callSettings = null)
+            gaxgrpc::CallSettings callSettings = null)
         {
-            throw new NotImplementedException();
+            throw new s::NotImplementedException();
         }
 
         /// <summary>
@@ -1852,16 +1852,16 @@ namespace Google.Cloud.Spanner.Admin.Instance.V1
         /// The request object containing all of the parameters for the API call.
         /// </param>
         /// <param name="cancellationToken">
-        /// A <see cref="CancellationToken"/> to use for this RPC.
+        /// A <see cref="st::CancellationToken"/> to use for this RPC.
         /// </param>
         /// <returns>
         /// A Task that completes when the RPC has completed.
         /// </returns>
-        public virtual Task DeleteInstanceAsync(
+        public virtual stt::Task DeleteInstanceAsync(
             DeleteInstanceRequest request,
-            CancellationToken cancellationToken) => DeleteInstanceAsync(
+            st::CancellationToken cancellationToken) => DeleteInstanceAsync(
                 request,
-                CallSettings.FromCancellationToken(cancellationToken));
+                gaxgrpc::CallSettings.FromCancellationToken(cancellationToken));
 
         /// <summary>
         /// Deletes an instance.
@@ -1884,9 +1884,9 @@ namespace Google.Cloud.Spanner.Admin.Instance.V1
         /// </param>
         public virtual void DeleteInstance(
             DeleteInstanceRequest request,
-            CallSettings callSettings = null)
+            gaxgrpc::CallSettings callSettings = null)
         {
-            throw new NotImplementedException();
+            throw new s::NotImplementedException();
         }
 
         /// <summary>
@@ -1913,14 +1913,14 @@ namespace Google.Cloud.Spanner.Admin.Instance.V1
         /// <returns>
         /// A Task containing the RPC response.
         /// </returns>
-        public virtual Task<Policy> SetIamPolicyAsync(
+        public virtual stt::Task<iam::Policy> SetIamPolicyAsync(
             string resource,
-            Policy policy,
-            CallSettings callSettings = null) => SetIamPolicyAsync(
-                new SetIamPolicyRequest
+            iam::Policy policy,
+            gaxgrpc::CallSettings callSettings = null) => SetIamPolicyAsync(
+                new iam::SetIamPolicyRequest
                 {
-                    Resource = GaxPreconditions.CheckNotNullOrEmpty(resource, nameof(resource)),
-                    Policy = GaxPreconditions.CheckNotNull(policy, nameof(policy)),
+                    Resource = gax::GaxPreconditions.CheckNotNullOrEmpty(resource, nameof(resource)),
+                    Policy = gax::GaxPreconditions.CheckNotNull(policy, nameof(policy)),
                 },
                 callSettings);
 
@@ -1943,18 +1943,18 @@ namespace Google.Cloud.Spanner.Admin.Instance.V1
         /// might reject them.
         /// </param>
         /// <param name="cancellationToken">
-        /// A <see cref="CancellationToken"/> to use for this RPC.
+        /// A <see cref="st::CancellationToken"/> to use for this RPC.
         /// </param>
         /// <returns>
         /// A Task containing the RPC response.
         /// </returns>
-        public virtual Task<Policy> SetIamPolicyAsync(
+        public virtual stt::Task<iam::Policy> SetIamPolicyAsync(
             string resource,
-            Policy policy,
-            CancellationToken cancellationToken) => SetIamPolicyAsync(
+            iam::Policy policy,
+            st::CancellationToken cancellationToken) => SetIamPolicyAsync(
                 resource,
                 policy,
-                CallSettings.FromCancellationToken(cancellationToken));
+                gaxgrpc::CallSettings.FromCancellationToken(cancellationToken));
 
         /// <summary>
         /// Sets the access control policy on an instance resource. Replaces any
@@ -1980,14 +1980,14 @@ namespace Google.Cloud.Spanner.Admin.Instance.V1
         /// <returns>
         /// The RPC response.
         /// </returns>
-        public virtual Policy SetIamPolicy(
+        public virtual iam::Policy SetIamPolicy(
             string resource,
-            Policy policy,
-            CallSettings callSettings = null) => SetIamPolicy(
-                new SetIamPolicyRequest
+            iam::Policy policy,
+            gaxgrpc::CallSettings callSettings = null) => SetIamPolicy(
+                new iam::SetIamPolicyRequest
                 {
-                    Resource = GaxPreconditions.CheckNotNullOrEmpty(resource, nameof(resource)),
-                    Policy = GaxPreconditions.CheckNotNull(policy, nameof(policy)),
+                    Resource = gax::GaxPreconditions.CheckNotNullOrEmpty(resource, nameof(resource)),
+                    Policy = gax::GaxPreconditions.CheckNotNull(policy, nameof(policy)),
                 },
                 callSettings);
 
@@ -2007,11 +2007,11 @@ namespace Google.Cloud.Spanner.Admin.Instance.V1
         /// <returns>
         /// A Task containing the RPC response.
         /// </returns>
-        public virtual Task<Policy> SetIamPolicyAsync(
-            SetIamPolicyRequest request,
-            CallSettings callSettings = null)
+        public virtual stt::Task<iam::Policy> SetIamPolicyAsync(
+            iam::SetIamPolicyRequest request,
+            gaxgrpc::CallSettings callSettings = null)
         {
-            throw new NotImplementedException();
+            throw new s::NotImplementedException();
         }
 
         /// <summary>
@@ -2025,16 +2025,16 @@ namespace Google.Cloud.Spanner.Admin.Instance.V1
         /// The request object containing all of the parameters for the API call.
         /// </param>
         /// <param name="cancellationToken">
-        /// A <see cref="CancellationToken"/> to use for this RPC.
+        /// A <see cref="st::CancellationToken"/> to use for this RPC.
         /// </param>
         /// <returns>
         /// A Task containing the RPC response.
         /// </returns>
-        public virtual Task<Policy> SetIamPolicyAsync(
-            SetIamPolicyRequest request,
-            CancellationToken cancellationToken) => SetIamPolicyAsync(
+        public virtual stt::Task<iam::Policy> SetIamPolicyAsync(
+            iam::SetIamPolicyRequest request,
+            st::CancellationToken cancellationToken) => SetIamPolicyAsync(
                 request,
-                CallSettings.FromCancellationToken(cancellationToken));
+                gaxgrpc::CallSettings.FromCancellationToken(cancellationToken));
 
         /// <summary>
         /// Sets the access control policy on an instance resource. Replaces any
@@ -2052,11 +2052,11 @@ namespace Google.Cloud.Spanner.Admin.Instance.V1
         /// <returns>
         /// The RPC response.
         /// </returns>
-        public virtual Policy SetIamPolicy(
-            SetIamPolicyRequest request,
-            CallSettings callSettings = null)
+        public virtual iam::Policy SetIamPolicy(
+            iam::SetIamPolicyRequest request,
+            gaxgrpc::CallSettings callSettings = null)
         {
-            throw new NotImplementedException();
+            throw new s::NotImplementedException();
         }
 
         /// <summary>
@@ -2077,12 +2077,12 @@ namespace Google.Cloud.Spanner.Admin.Instance.V1
         /// <returns>
         /// A Task containing the RPC response.
         /// </returns>
-        public virtual Task<Policy> GetIamPolicyAsync(
+        public virtual stt::Task<iam::Policy> GetIamPolicyAsync(
             string resource,
-            CallSettings callSettings = null) => GetIamPolicyAsync(
-                new GetIamPolicyRequest
+            gaxgrpc::CallSettings callSettings = null) => GetIamPolicyAsync(
+                new iam::GetIamPolicyRequest
                 {
-                    Resource = GaxPreconditions.CheckNotNullOrEmpty(resource, nameof(resource)),
+                    Resource = gax::GaxPreconditions.CheckNotNullOrEmpty(resource, nameof(resource)),
                 },
                 callSettings);
 
@@ -2099,16 +2099,16 @@ namespace Google.Cloud.Spanner.Admin.Instance.V1
         /// resource is specified as `projects/{project}`.
         /// </param>
         /// <param name="cancellationToken">
-        /// A <see cref="CancellationToken"/> to use for this RPC.
+        /// A <see cref="st::CancellationToken"/> to use for this RPC.
         /// </param>
         /// <returns>
         /// A Task containing the RPC response.
         /// </returns>
-        public virtual Task<Policy> GetIamPolicyAsync(
+        public virtual stt::Task<iam::Policy> GetIamPolicyAsync(
             string resource,
-            CancellationToken cancellationToken) => GetIamPolicyAsync(
+            st::CancellationToken cancellationToken) => GetIamPolicyAsync(
                 resource,
-                CallSettings.FromCancellationToken(cancellationToken));
+                gaxgrpc::CallSettings.FromCancellationToken(cancellationToken));
 
         /// <summary>
         /// Gets the access control policy for an instance resource. Returns an empty
@@ -2128,12 +2128,12 @@ namespace Google.Cloud.Spanner.Admin.Instance.V1
         /// <returns>
         /// The RPC response.
         /// </returns>
-        public virtual Policy GetIamPolicy(
+        public virtual iam::Policy GetIamPolicy(
             string resource,
-            CallSettings callSettings = null) => GetIamPolicy(
-                new GetIamPolicyRequest
+            gaxgrpc::CallSettings callSettings = null) => GetIamPolicy(
+                new iam::GetIamPolicyRequest
                 {
-                    Resource = GaxPreconditions.CheckNotNullOrEmpty(resource, nameof(resource)),
+                    Resource = gax::GaxPreconditions.CheckNotNullOrEmpty(resource, nameof(resource)),
                 },
                 callSettings);
 
@@ -2153,11 +2153,11 @@ namespace Google.Cloud.Spanner.Admin.Instance.V1
         /// <returns>
         /// A Task containing the RPC response.
         /// </returns>
-        public virtual Task<Policy> GetIamPolicyAsync(
-            GetIamPolicyRequest request,
-            CallSettings callSettings = null)
+        public virtual stt::Task<iam::Policy> GetIamPolicyAsync(
+            iam::GetIamPolicyRequest request,
+            gaxgrpc::CallSettings callSettings = null)
         {
-            throw new NotImplementedException();
+            throw new s::NotImplementedException();
         }
 
         /// <summary>
@@ -2171,16 +2171,16 @@ namespace Google.Cloud.Spanner.Admin.Instance.V1
         /// The request object containing all of the parameters for the API call.
         /// </param>
         /// <param name="cancellationToken">
-        /// A <see cref="CancellationToken"/> to use for this RPC.
+        /// A <see cref="st::CancellationToken"/> to use for this RPC.
         /// </param>
         /// <returns>
         /// A Task containing the RPC response.
         /// </returns>
-        public virtual Task<Policy> GetIamPolicyAsync(
-            GetIamPolicyRequest request,
-            CancellationToken cancellationToken) => GetIamPolicyAsync(
+        public virtual stt::Task<iam::Policy> GetIamPolicyAsync(
+            iam::GetIamPolicyRequest request,
+            st::CancellationToken cancellationToken) => GetIamPolicyAsync(
                 request,
-                CallSettings.FromCancellationToken(cancellationToken));
+                gaxgrpc::CallSettings.FromCancellationToken(cancellationToken));
 
         /// <summary>
         /// Gets the access control policy for an instance resource. Returns an empty
@@ -2198,11 +2198,11 @@ namespace Google.Cloud.Spanner.Admin.Instance.V1
         /// <returns>
         /// The RPC response.
         /// </returns>
-        public virtual Policy GetIamPolicy(
-            GetIamPolicyRequest request,
-            CallSettings callSettings = null)
+        public virtual iam::Policy GetIamPolicy(
+            iam::GetIamPolicyRequest request,
+            gaxgrpc::CallSettings callSettings = null)
         {
-            throw new NotImplementedException();
+            throw new s::NotImplementedException();
         }
 
         /// <summary>
@@ -2230,14 +2230,14 @@ namespace Google.Cloud.Spanner.Admin.Instance.V1
         /// <returns>
         /// A Task containing the RPC response.
         /// </returns>
-        public virtual Task<TestIamPermissionsResponse> TestIamPermissionsAsync(
+        public virtual stt::Task<iam::TestIamPermissionsResponse> TestIamPermissionsAsync(
             string resource,
-            IEnumerable<string> permissions,
-            CallSettings callSettings = null) => TestIamPermissionsAsync(
-                new TestIamPermissionsRequest
+            scg::IEnumerable<string> permissions,
+            gaxgrpc::CallSettings callSettings = null) => TestIamPermissionsAsync(
+                new iam::TestIamPermissionsRequest
                 {
-                    Resource = GaxPreconditions.CheckNotNullOrEmpty(resource, nameof(resource)),
-                    Permissions = { GaxPreconditions.CheckNotNull(permissions, nameof(permissions)) },
+                    Resource = gax::GaxPreconditions.CheckNotNullOrEmpty(resource, nameof(resource)),
+                    Permissions = { gax::GaxPreconditions.CheckNotNull(permissions, nameof(permissions)) },
                 },
                 callSettings);
 
@@ -2261,18 +2261,18 @@ namespace Google.Cloud.Spanner.Admin.Instance.V1
         /// [IAM Overview](https://cloud.google.com/iam/docs/overview#permissions).
         /// </param>
         /// <param name="cancellationToken">
-        /// A <see cref="CancellationToken"/> to use for this RPC.
+        /// A <see cref="st::CancellationToken"/> to use for this RPC.
         /// </param>
         /// <returns>
         /// A Task containing the RPC response.
         /// </returns>
-        public virtual Task<TestIamPermissionsResponse> TestIamPermissionsAsync(
+        public virtual stt::Task<iam::TestIamPermissionsResponse> TestIamPermissionsAsync(
             string resource,
-            IEnumerable<string> permissions,
-            CancellationToken cancellationToken) => TestIamPermissionsAsync(
+            scg::IEnumerable<string> permissions,
+            st::CancellationToken cancellationToken) => TestIamPermissionsAsync(
                 resource,
                 permissions,
-                CallSettings.FromCancellationToken(cancellationToken));
+                gaxgrpc::CallSettings.FromCancellationToken(cancellationToken));
 
         /// <summary>
         /// Returns permissions that the caller has on the specified instance resource.
@@ -2299,14 +2299,14 @@ namespace Google.Cloud.Spanner.Admin.Instance.V1
         /// <returns>
         /// The RPC response.
         /// </returns>
-        public virtual TestIamPermissionsResponse TestIamPermissions(
+        public virtual iam::TestIamPermissionsResponse TestIamPermissions(
             string resource,
-            IEnumerable<string> permissions,
-            CallSettings callSettings = null) => TestIamPermissions(
-                new TestIamPermissionsRequest
+            scg::IEnumerable<string> permissions,
+            gaxgrpc::CallSettings callSettings = null) => TestIamPermissions(
+                new iam::TestIamPermissionsRequest
                 {
-                    Resource = GaxPreconditions.CheckNotNullOrEmpty(resource, nameof(resource)),
-                    Permissions = { GaxPreconditions.CheckNotNull(permissions, nameof(permissions)) },
+                    Resource = gax::GaxPreconditions.CheckNotNullOrEmpty(resource, nameof(resource)),
+                    Permissions = { gax::GaxPreconditions.CheckNotNull(permissions, nameof(permissions)) },
                 },
                 callSettings);
 
@@ -2327,11 +2327,11 @@ namespace Google.Cloud.Spanner.Admin.Instance.V1
         /// <returns>
         /// A Task containing the RPC response.
         /// </returns>
-        public virtual Task<TestIamPermissionsResponse> TestIamPermissionsAsync(
-            TestIamPermissionsRequest request,
-            CallSettings callSettings = null)
+        public virtual stt::Task<iam::TestIamPermissionsResponse> TestIamPermissionsAsync(
+            iam::TestIamPermissionsRequest request,
+            gaxgrpc::CallSettings callSettings = null)
         {
-            throw new NotImplementedException();
+            throw new s::NotImplementedException();
         }
 
         /// <summary>
@@ -2346,16 +2346,16 @@ namespace Google.Cloud.Spanner.Admin.Instance.V1
         /// The request object containing all of the parameters for the API call.
         /// </param>
         /// <param name="cancellationToken">
-        /// A <see cref="CancellationToken"/> to use for this RPC.
+        /// A <see cref="st::CancellationToken"/> to use for this RPC.
         /// </param>
         /// <returns>
         /// A Task containing the RPC response.
         /// </returns>
-        public virtual Task<TestIamPermissionsResponse> TestIamPermissionsAsync(
-            TestIamPermissionsRequest request,
-            CancellationToken cancellationToken) => TestIamPermissionsAsync(
+        public virtual stt::Task<iam::TestIamPermissionsResponse> TestIamPermissionsAsync(
+            iam::TestIamPermissionsRequest request,
+            st::CancellationToken cancellationToken) => TestIamPermissionsAsync(
                 request,
-                CallSettings.FromCancellationToken(cancellationToken));
+                gaxgrpc::CallSettings.FromCancellationToken(cancellationToken));
 
         /// <summary>
         /// Returns permissions that the caller has on the specified instance resource.
@@ -2374,11 +2374,11 @@ namespace Google.Cloud.Spanner.Admin.Instance.V1
         /// <returns>
         /// The RPC response.
         /// </returns>
-        public virtual TestIamPermissionsResponse TestIamPermissions(
-            TestIamPermissionsRequest request,
-            CallSettings callSettings = null)
+        public virtual iam::TestIamPermissionsResponse TestIamPermissions(
+            iam::TestIamPermissionsRequest request,
+            gaxgrpc::CallSettings callSettings = null)
         {
-            throw new NotImplementedException();
+            throw new s::NotImplementedException();
         }
 
     }
@@ -2388,16 +2388,16 @@ namespace Google.Cloud.Spanner.Admin.Instance.V1
     /// </summary>
     public sealed partial class InstanceAdminClientImpl : InstanceAdminClient
     {
-        private readonly ApiCall<ListInstanceConfigsRequest, ListInstanceConfigsResponse> _callListInstanceConfigs;
-        private readonly ApiCall<GetInstanceConfigRequest, InstanceConfig> _callGetInstanceConfig;
-        private readonly ApiCall<ListInstancesRequest, ListInstancesResponse> _callListInstances;
-        private readonly ApiCall<GetInstanceRequest, Instance> _callGetInstance;
-        private readonly ApiCall<CreateInstanceRequest, Operation> _callCreateInstance;
-        private readonly ApiCall<UpdateInstanceRequest, Operation> _callUpdateInstance;
-        private readonly ApiCall<DeleteInstanceRequest, Empty> _callDeleteInstance;
-        private readonly ApiCall<SetIamPolicyRequest, Policy> _callSetIamPolicy;
-        private readonly ApiCall<GetIamPolicyRequest, Policy> _callGetIamPolicy;
-        private readonly ApiCall<TestIamPermissionsRequest, TestIamPermissionsResponse> _callTestIamPermissions;
+        private readonly gaxgrpc::ApiCall<ListInstanceConfigsRequest, ListInstanceConfigsResponse> _callListInstanceConfigs;
+        private readonly gaxgrpc::ApiCall<GetInstanceConfigRequest, InstanceConfig> _callGetInstanceConfig;
+        private readonly gaxgrpc::ApiCall<ListInstancesRequest, ListInstancesResponse> _callListInstances;
+        private readonly gaxgrpc::ApiCall<GetInstanceRequest, Instance> _callGetInstance;
+        private readonly gaxgrpc::ApiCall<CreateInstanceRequest, lro::Operation> _callCreateInstance;
+        private readonly gaxgrpc::ApiCall<UpdateInstanceRequest, lro::Operation> _callUpdateInstance;
+        private readonly gaxgrpc::ApiCall<DeleteInstanceRequest, protowkt::Empty> _callDeleteInstance;
+        private readonly gaxgrpc::ApiCall<iam::SetIamPolicyRequest, iam::Policy> _callSetIamPolicy;
+        private readonly gaxgrpc::ApiCall<iam::GetIamPolicyRequest, iam::Policy> _callGetIamPolicy;
+        private readonly gaxgrpc::ApiCall<iam::TestIamPermissionsRequest, iam::TestIamPermissionsResponse> _callTestIamPermissions;
 
         /// <summary>
         /// Constructs a client wrapper for the InstanceAdmin service, with the specified gRPC client and settings.
@@ -2408,10 +2408,10 @@ namespace Google.Cloud.Spanner.Admin.Instance.V1
         {
             GrpcClient = grpcClient;
             InstanceAdminSettings effectiveSettings = settings ?? InstanceAdminSettings.GetDefault();
-            ClientHelper clientHelper = new ClientHelper(effectiveSettings);
-            CreateInstanceOperationsClient = new OperationsClientImpl(
+            gaxgrpc::ClientHelper clientHelper = new gaxgrpc::ClientHelper(effectiveSettings);
+            CreateInstanceOperationsClient = new lro::OperationsClientImpl(
                 grpcClient.CreateOperationsClient(), effectiveSettings.CreateInstanceOperationsSettings);
-            UpdateInstanceOperationsClient = new OperationsClientImpl(
+            UpdateInstanceOperationsClient = new lro::OperationsClientImpl(
                 grpcClient.CreateOperationsClient(), effectiveSettings.UpdateInstanceOperationsSettings);
             _callListInstanceConfigs = clientHelper.BuildApiCall<ListInstanceConfigsRequest, ListInstanceConfigsResponse>(
                 GrpcClient.ListInstanceConfigsAsync, GrpcClient.ListInstanceConfigs, effectiveSettings.ListInstanceConfigsSettings);
@@ -2421,17 +2421,17 @@ namespace Google.Cloud.Spanner.Admin.Instance.V1
                 GrpcClient.ListInstancesAsync, GrpcClient.ListInstances, effectiveSettings.ListInstancesSettings);
             _callGetInstance = clientHelper.BuildApiCall<GetInstanceRequest, Instance>(
                 GrpcClient.GetInstanceAsync, GrpcClient.GetInstance, effectiveSettings.GetInstanceSettings);
-            _callCreateInstance = clientHelper.BuildApiCall<CreateInstanceRequest, Operation>(
+            _callCreateInstance = clientHelper.BuildApiCall<CreateInstanceRequest, lro::Operation>(
                 GrpcClient.CreateInstanceAsync, GrpcClient.CreateInstance, effectiveSettings.CreateInstanceSettings);
-            _callUpdateInstance = clientHelper.BuildApiCall<UpdateInstanceRequest, Operation>(
+            _callUpdateInstance = clientHelper.BuildApiCall<UpdateInstanceRequest, lro::Operation>(
                 GrpcClient.UpdateInstanceAsync, GrpcClient.UpdateInstance, effectiveSettings.UpdateInstanceSettings);
-            _callDeleteInstance = clientHelper.BuildApiCall<DeleteInstanceRequest, Empty>(
+            _callDeleteInstance = clientHelper.BuildApiCall<DeleteInstanceRequest, protowkt::Empty>(
                 GrpcClient.DeleteInstanceAsync, GrpcClient.DeleteInstance, effectiveSettings.DeleteInstanceSettings);
-            _callSetIamPolicy = clientHelper.BuildApiCall<SetIamPolicyRequest, Policy>(
+            _callSetIamPolicy = clientHelper.BuildApiCall<iam::SetIamPolicyRequest, iam::Policy>(
                 GrpcClient.SetIamPolicyAsync, GrpcClient.SetIamPolicy, effectiveSettings.SetIamPolicySettings);
-            _callGetIamPolicy = clientHelper.BuildApiCall<GetIamPolicyRequest, Policy>(
+            _callGetIamPolicy = clientHelper.BuildApiCall<iam::GetIamPolicyRequest, iam::Policy>(
                 GrpcClient.GetIamPolicyAsync, GrpcClient.GetIamPolicy, effectiveSettings.GetIamPolicySettings);
-            _callTestIamPermissions = clientHelper.BuildApiCall<TestIamPermissionsRequest, TestIamPermissionsResponse>(
+            _callTestIamPermissions = clientHelper.BuildApiCall<iam::TestIamPermissionsRequest, iam::TestIamPermissionsResponse>(
                 GrpcClient.TestIamPermissionsAsync, GrpcClient.TestIamPermissions, effectiveSettings.TestIamPermissionsSettings);
             Modify_ApiCall(ref _callListInstanceConfigs);
             Modify_ListInstanceConfigsApiCall(ref _callListInstanceConfigs);
@@ -2460,23 +2460,23 @@ namespace Google.Cloud.Spanner.Admin.Instance.V1
 
         // Partial methods called for every ApiCall on construction.
         // Allows modification of all the underlying ApiCall objects.
-        partial void Modify_ApiCall<TRequest, TResponse>(ref ApiCall<TRequest, TResponse> call)
-            where TRequest : class, IMessage<TRequest>
-            where TResponse : class, IMessage<TResponse>;
+        partial void Modify_ApiCall<TRequest, TResponse>(ref gaxgrpc::ApiCall<TRequest, TResponse> call)
+            where TRequest : class, proto::IMessage<TRequest>
+            where TResponse : class, proto::IMessage<TResponse>;
 
         // Partial methods called for each ApiCall on construction.
         // Allows per-RPC-method modification of the underlying ApiCall object.
-        partial void Modify_ListInstanceConfigsApiCall(ref ApiCall<ListInstanceConfigsRequest, ListInstanceConfigsResponse> call);
-        partial void Modify_GetInstanceConfigApiCall(ref ApiCall<GetInstanceConfigRequest, InstanceConfig> call);
-        partial void Modify_ListInstancesApiCall(ref ApiCall<ListInstancesRequest, ListInstancesResponse> call);
-        partial void Modify_GetInstanceApiCall(ref ApiCall<GetInstanceRequest, Instance> call);
-        partial void Modify_CreateInstanceApiCall(ref ApiCall<CreateInstanceRequest, Operation> call);
-        partial void Modify_UpdateInstanceApiCall(ref ApiCall<UpdateInstanceRequest, Operation> call);
-        partial void Modify_DeleteInstanceApiCall(ref ApiCall<DeleteInstanceRequest, Empty> call);
-        partial void Modify_SetIamPolicyApiCall(ref ApiCall<SetIamPolicyRequest, Policy> call);
-        partial void Modify_GetIamPolicyApiCall(ref ApiCall<GetIamPolicyRequest, Policy> call);
-        partial void Modify_TestIamPermissionsApiCall(ref ApiCall<TestIamPermissionsRequest, TestIamPermissionsResponse> call);
-        partial void OnConstruction(InstanceAdmin.InstanceAdminClient grpcClient, InstanceAdminSettings effectiveSettings, ClientHelper clientHelper);
+        partial void Modify_ListInstanceConfigsApiCall(ref gaxgrpc::ApiCall<ListInstanceConfigsRequest, ListInstanceConfigsResponse> call);
+        partial void Modify_GetInstanceConfigApiCall(ref gaxgrpc::ApiCall<GetInstanceConfigRequest, InstanceConfig> call);
+        partial void Modify_ListInstancesApiCall(ref gaxgrpc::ApiCall<ListInstancesRequest, ListInstancesResponse> call);
+        partial void Modify_GetInstanceApiCall(ref gaxgrpc::ApiCall<GetInstanceRequest, Instance> call);
+        partial void Modify_CreateInstanceApiCall(ref gaxgrpc::ApiCall<CreateInstanceRequest, lro::Operation> call);
+        partial void Modify_UpdateInstanceApiCall(ref gaxgrpc::ApiCall<UpdateInstanceRequest, lro::Operation> call);
+        partial void Modify_DeleteInstanceApiCall(ref gaxgrpc::ApiCall<DeleteInstanceRequest, protowkt::Empty> call);
+        partial void Modify_SetIamPolicyApiCall(ref gaxgrpc::ApiCall<iam::SetIamPolicyRequest, iam::Policy> call);
+        partial void Modify_GetIamPolicyApiCall(ref gaxgrpc::ApiCall<iam::GetIamPolicyRequest, iam::Policy> call);
+        partial void Modify_TestIamPermissionsApiCall(ref gaxgrpc::ApiCall<iam::TestIamPermissionsRequest, iam::TestIamPermissionsResponse> call);
+        partial void OnConstruction(InstanceAdmin.InstanceAdminClient grpcClient, InstanceAdminSettings effectiveSettings, gaxgrpc::ClientHelper clientHelper);
 
         /// <summary>
         /// The underlying gRPC InstanceAdmin client.
@@ -2486,16 +2486,16 @@ namespace Google.Cloud.Spanner.Admin.Instance.V1
         // Partial methods called on each request.
         // Allows per-RPC-call modification to the request and CallSettings objects,
         // before the underlying RPC is performed.
-        partial void Modify_ListInstanceConfigsRequest(ref ListInstanceConfigsRequest request, ref CallSettings settings);
-        partial void Modify_GetInstanceConfigRequest(ref GetInstanceConfigRequest request, ref CallSettings settings);
-        partial void Modify_ListInstancesRequest(ref ListInstancesRequest request, ref CallSettings settings);
-        partial void Modify_GetInstanceRequest(ref GetInstanceRequest request, ref CallSettings settings);
-        partial void Modify_CreateInstanceRequest(ref CreateInstanceRequest request, ref CallSettings settings);
-        partial void Modify_UpdateInstanceRequest(ref UpdateInstanceRequest request, ref CallSettings settings);
-        partial void Modify_DeleteInstanceRequest(ref DeleteInstanceRequest request, ref CallSettings settings);
-        partial void Modify_SetIamPolicyRequest(ref SetIamPolicyRequest request, ref CallSettings settings);
-        partial void Modify_GetIamPolicyRequest(ref GetIamPolicyRequest request, ref CallSettings settings);
-        partial void Modify_TestIamPermissionsRequest(ref TestIamPermissionsRequest request, ref CallSettings settings);
+        partial void Modify_ListInstanceConfigsRequest(ref ListInstanceConfigsRequest request, ref gaxgrpc::CallSettings settings);
+        partial void Modify_GetInstanceConfigRequest(ref GetInstanceConfigRequest request, ref gaxgrpc::CallSettings settings);
+        partial void Modify_ListInstancesRequest(ref ListInstancesRequest request, ref gaxgrpc::CallSettings settings);
+        partial void Modify_GetInstanceRequest(ref GetInstanceRequest request, ref gaxgrpc::CallSettings settings);
+        partial void Modify_CreateInstanceRequest(ref CreateInstanceRequest request, ref gaxgrpc::CallSettings settings);
+        partial void Modify_UpdateInstanceRequest(ref UpdateInstanceRequest request, ref gaxgrpc::CallSettings settings);
+        partial void Modify_DeleteInstanceRequest(ref DeleteInstanceRequest request, ref gaxgrpc::CallSettings settings);
+        partial void Modify_SetIamPolicyRequest(ref iam::SetIamPolicyRequest request, ref gaxgrpc::CallSettings settings);
+        partial void Modify_GetIamPolicyRequest(ref iam::GetIamPolicyRequest request, ref gaxgrpc::CallSettings settings);
+        partial void Modify_TestIamPermissionsRequest(ref iam::TestIamPermissionsRequest request, ref gaxgrpc::CallSettings settings);
 
         /// <summary>
         /// Lists the supported instance configurations for a given project.
@@ -2509,12 +2509,12 @@ namespace Google.Cloud.Spanner.Admin.Instance.V1
         /// <returns>
         /// A pageable asynchronous sequence of <see cref="InstanceConfig"/> resources.
         /// </returns>
-        public override PagedAsyncEnumerable<ListInstanceConfigsResponse, InstanceConfig> ListInstanceConfigsAsync(
+        public override gax::PagedAsyncEnumerable<ListInstanceConfigsResponse, InstanceConfig> ListInstanceConfigsAsync(
             ListInstanceConfigsRequest request,
-            CallSettings callSettings = null)
+            gaxgrpc::CallSettings callSettings = null)
         {
             Modify_ListInstanceConfigsRequest(ref request, ref callSettings);
-            return new GrpcPagedAsyncEnumerable<ListInstanceConfigsRequest, ListInstanceConfigsResponse, InstanceConfig>(_callListInstanceConfigs, request, callSettings);
+            return new gaxgrpc::GrpcPagedAsyncEnumerable<ListInstanceConfigsRequest, ListInstanceConfigsResponse, InstanceConfig>(_callListInstanceConfigs, request, callSettings);
         }
 
         /// <summary>
@@ -2529,12 +2529,12 @@ namespace Google.Cloud.Spanner.Admin.Instance.V1
         /// <returns>
         /// A pageable sequence of <see cref="InstanceConfig"/> resources.
         /// </returns>
-        public override PagedEnumerable<ListInstanceConfigsResponse, InstanceConfig> ListInstanceConfigs(
+        public override gax::PagedEnumerable<ListInstanceConfigsResponse, InstanceConfig> ListInstanceConfigs(
             ListInstanceConfigsRequest request,
-            CallSettings callSettings = null)
+            gaxgrpc::CallSettings callSettings = null)
         {
             Modify_ListInstanceConfigsRequest(ref request, ref callSettings);
-            return new GrpcPagedEnumerable<ListInstanceConfigsRequest, ListInstanceConfigsResponse, InstanceConfig>(_callListInstanceConfigs, request, callSettings);
+            return new gaxgrpc::GrpcPagedEnumerable<ListInstanceConfigsRequest, ListInstanceConfigsResponse, InstanceConfig>(_callListInstanceConfigs, request, callSettings);
         }
 
         /// <summary>
@@ -2549,9 +2549,9 @@ namespace Google.Cloud.Spanner.Admin.Instance.V1
         /// <returns>
         /// A Task containing the RPC response.
         /// </returns>
-        public override Task<InstanceConfig> GetInstanceConfigAsync(
+        public override stt::Task<InstanceConfig> GetInstanceConfigAsync(
             GetInstanceConfigRequest request,
-            CallSettings callSettings = null)
+            gaxgrpc::CallSettings callSettings = null)
         {
             Modify_GetInstanceConfigRequest(ref request, ref callSettings);
             return _callGetInstanceConfig.Async(request, callSettings);
@@ -2571,7 +2571,7 @@ namespace Google.Cloud.Spanner.Admin.Instance.V1
         /// </returns>
         public override InstanceConfig GetInstanceConfig(
             GetInstanceConfigRequest request,
-            CallSettings callSettings = null)
+            gaxgrpc::CallSettings callSettings = null)
         {
             Modify_GetInstanceConfigRequest(ref request, ref callSettings);
             return _callGetInstanceConfig.Sync(request, callSettings);
@@ -2589,12 +2589,12 @@ namespace Google.Cloud.Spanner.Admin.Instance.V1
         /// <returns>
         /// A pageable asynchronous sequence of <see cref="Instance"/> resources.
         /// </returns>
-        public override PagedAsyncEnumerable<ListInstancesResponse, Instance> ListInstancesAsync(
+        public override gax::PagedAsyncEnumerable<ListInstancesResponse, Instance> ListInstancesAsync(
             ListInstancesRequest request,
-            CallSettings callSettings = null)
+            gaxgrpc::CallSettings callSettings = null)
         {
             Modify_ListInstancesRequest(ref request, ref callSettings);
-            return new GrpcPagedAsyncEnumerable<ListInstancesRequest, ListInstancesResponse, Instance>(_callListInstances, request, callSettings);
+            return new gaxgrpc::GrpcPagedAsyncEnumerable<ListInstancesRequest, ListInstancesResponse, Instance>(_callListInstances, request, callSettings);
         }
 
         /// <summary>
@@ -2609,12 +2609,12 @@ namespace Google.Cloud.Spanner.Admin.Instance.V1
         /// <returns>
         /// A pageable sequence of <see cref="Instance"/> resources.
         /// </returns>
-        public override PagedEnumerable<ListInstancesResponse, Instance> ListInstances(
+        public override gax::PagedEnumerable<ListInstancesResponse, Instance> ListInstances(
             ListInstancesRequest request,
-            CallSettings callSettings = null)
+            gaxgrpc::CallSettings callSettings = null)
         {
             Modify_ListInstancesRequest(ref request, ref callSettings);
-            return new GrpcPagedEnumerable<ListInstancesRequest, ListInstancesResponse, Instance>(_callListInstances, request, callSettings);
+            return new gaxgrpc::GrpcPagedEnumerable<ListInstancesRequest, ListInstancesResponse, Instance>(_callListInstances, request, callSettings);
         }
 
         /// <summary>
@@ -2629,9 +2629,9 @@ namespace Google.Cloud.Spanner.Admin.Instance.V1
         /// <returns>
         /// A Task containing the RPC response.
         /// </returns>
-        public override Task<Instance> GetInstanceAsync(
+        public override stt::Task<Instance> GetInstanceAsync(
             GetInstanceRequest request,
-            CallSettings callSettings = null)
+            gaxgrpc::CallSettings callSettings = null)
         {
             Modify_GetInstanceRequest(ref request, ref callSettings);
             return _callGetInstance.Async(request, callSettings);
@@ -2651,7 +2651,7 @@ namespace Google.Cloud.Spanner.Admin.Instance.V1
         /// </returns>
         public override Instance GetInstance(
             GetInstanceRequest request,
-            CallSettings callSettings = null)
+            gaxgrpc::CallSettings callSettings = null)
         {
             Modify_GetInstanceRequest(ref request, ref callSettings);
             return _callGetInstance.Sync(request, callSettings);
@@ -2702,12 +2702,12 @@ namespace Google.Cloud.Spanner.Admin.Instance.V1
         /// <returns>
         /// A Task containing the RPC response.
         /// </returns>
-        public override async Task<Operation<Instance, CreateInstanceMetadata>> CreateInstanceAsync(
+        public override async stt::Task<lro::Operation<Instance, CreateInstanceMetadata>> CreateInstanceAsync(
             CreateInstanceRequest request,
-            CallSettings callSettings = null)
+            gaxgrpc::CallSettings callSettings = null)
         {
             Modify_CreateInstanceRequest(ref request, ref callSettings);
-            return new Operation<Instance, CreateInstanceMetadata>(
+            return new lro::Operation<Instance, CreateInstanceMetadata>(
                 await _callCreateInstance.Async(request, callSettings).ConfigureAwait(false), CreateInstanceOperationsClient);
         }
 
@@ -2756,19 +2756,19 @@ namespace Google.Cloud.Spanner.Admin.Instance.V1
         /// <returns>
         /// The RPC response.
         /// </returns>
-        public override Operation<Instance, CreateInstanceMetadata> CreateInstance(
+        public override lro::Operation<Instance, CreateInstanceMetadata> CreateInstance(
             CreateInstanceRequest request,
-            CallSettings callSettings = null)
+            gaxgrpc::CallSettings callSettings = null)
         {
             Modify_CreateInstanceRequest(ref request, ref callSettings);
-            return new Operation<Instance, CreateInstanceMetadata>(
+            return new lro::Operation<Instance, CreateInstanceMetadata>(
                 _callCreateInstance.Sync(request, callSettings), CreateInstanceOperationsClient);
         }
 
         /// <summary>
         /// The long-running operations client for <c>CreateInstance</c>.
         /// </summary>
-        public override OperationsClient CreateInstanceOperationsClient { get; }
+        public override lro::OperationsClient CreateInstanceOperationsClient { get; }
 
         /// <summary>
         /// Updates an instance, and begins allocating or releasing resources
@@ -2821,12 +2821,12 @@ namespace Google.Cloud.Spanner.Admin.Instance.V1
         /// <returns>
         /// A Task containing the RPC response.
         /// </returns>
-        public override async Task<Operation<Instance, UpdateInstanceMetadata>> UpdateInstanceAsync(
+        public override async stt::Task<lro::Operation<Instance, UpdateInstanceMetadata>> UpdateInstanceAsync(
             UpdateInstanceRequest request,
-            CallSettings callSettings = null)
+            gaxgrpc::CallSettings callSettings = null)
         {
             Modify_UpdateInstanceRequest(ref request, ref callSettings);
-            return new Operation<Instance, UpdateInstanceMetadata>(
+            return new lro::Operation<Instance, UpdateInstanceMetadata>(
                 await _callUpdateInstance.Async(request, callSettings).ConfigureAwait(false), UpdateInstanceOperationsClient);
         }
 
@@ -2881,19 +2881,19 @@ namespace Google.Cloud.Spanner.Admin.Instance.V1
         /// <returns>
         /// The RPC response.
         /// </returns>
-        public override Operation<Instance, UpdateInstanceMetadata> UpdateInstance(
+        public override lro::Operation<Instance, UpdateInstanceMetadata> UpdateInstance(
             UpdateInstanceRequest request,
-            CallSettings callSettings = null)
+            gaxgrpc::CallSettings callSettings = null)
         {
             Modify_UpdateInstanceRequest(ref request, ref callSettings);
-            return new Operation<Instance, UpdateInstanceMetadata>(
+            return new lro::Operation<Instance, UpdateInstanceMetadata>(
                 _callUpdateInstance.Sync(request, callSettings), UpdateInstanceOperationsClient);
         }
 
         /// <summary>
         /// The long-running operations client for <c>UpdateInstance</c>.
         /// </summary>
-        public override OperationsClient UpdateInstanceOperationsClient { get; }
+        public override lro::OperationsClient UpdateInstanceOperationsClient { get; }
 
         /// <summary>
         /// Deletes an instance.
@@ -2917,9 +2917,9 @@ namespace Google.Cloud.Spanner.Admin.Instance.V1
         /// <returns>
         /// A Task that completes when the RPC has completed.
         /// </returns>
-        public override Task DeleteInstanceAsync(
+        public override stt::Task DeleteInstanceAsync(
             DeleteInstanceRequest request,
-            CallSettings callSettings = null)
+            gaxgrpc::CallSettings callSettings = null)
         {
             Modify_DeleteInstanceRequest(ref request, ref callSettings);
             return _callDeleteInstance.Async(request, callSettings);
@@ -2946,7 +2946,7 @@ namespace Google.Cloud.Spanner.Admin.Instance.V1
         /// </param>
         public override void DeleteInstance(
             DeleteInstanceRequest request,
-            CallSettings callSettings = null)
+            gaxgrpc::CallSettings callSettings = null)
         {
             Modify_DeleteInstanceRequest(ref request, ref callSettings);
             _callDeleteInstance.Sync(request, callSettings);
@@ -2968,9 +2968,9 @@ namespace Google.Cloud.Spanner.Admin.Instance.V1
         /// <returns>
         /// A Task containing the RPC response.
         /// </returns>
-        public override Task<Policy> SetIamPolicyAsync(
-            SetIamPolicyRequest request,
-            CallSettings callSettings = null)
+        public override stt::Task<iam::Policy> SetIamPolicyAsync(
+            iam::SetIamPolicyRequest request,
+            gaxgrpc::CallSettings callSettings = null)
         {
             Modify_SetIamPolicyRequest(ref request, ref callSettings);
             return _callSetIamPolicy.Async(request, callSettings);
@@ -2992,9 +2992,9 @@ namespace Google.Cloud.Spanner.Admin.Instance.V1
         /// <returns>
         /// The RPC response.
         /// </returns>
-        public override Policy SetIamPolicy(
-            SetIamPolicyRequest request,
-            CallSettings callSettings = null)
+        public override iam::Policy SetIamPolicy(
+            iam::SetIamPolicyRequest request,
+            gaxgrpc::CallSettings callSettings = null)
         {
             Modify_SetIamPolicyRequest(ref request, ref callSettings);
             return _callSetIamPolicy.Sync(request, callSettings);
@@ -3016,9 +3016,9 @@ namespace Google.Cloud.Spanner.Admin.Instance.V1
         /// <returns>
         /// A Task containing the RPC response.
         /// </returns>
-        public override Task<Policy> GetIamPolicyAsync(
-            GetIamPolicyRequest request,
-            CallSettings callSettings = null)
+        public override stt::Task<iam::Policy> GetIamPolicyAsync(
+            iam::GetIamPolicyRequest request,
+            gaxgrpc::CallSettings callSettings = null)
         {
             Modify_GetIamPolicyRequest(ref request, ref callSettings);
             return _callGetIamPolicy.Async(request, callSettings);
@@ -3040,9 +3040,9 @@ namespace Google.Cloud.Spanner.Admin.Instance.V1
         /// <returns>
         /// The RPC response.
         /// </returns>
-        public override Policy GetIamPolicy(
-            GetIamPolicyRequest request,
-            CallSettings callSettings = null)
+        public override iam::Policy GetIamPolicy(
+            iam::GetIamPolicyRequest request,
+            gaxgrpc::CallSettings callSettings = null)
         {
             Modify_GetIamPolicyRequest(ref request, ref callSettings);
             return _callGetIamPolicy.Sync(request, callSettings);
@@ -3065,9 +3065,9 @@ namespace Google.Cloud.Spanner.Admin.Instance.V1
         /// <returns>
         /// A Task containing the RPC response.
         /// </returns>
-        public override Task<TestIamPermissionsResponse> TestIamPermissionsAsync(
-            TestIamPermissionsRequest request,
-            CallSettings callSettings = null)
+        public override stt::Task<iam::TestIamPermissionsResponse> TestIamPermissionsAsync(
+            iam::TestIamPermissionsRequest request,
+            gaxgrpc::CallSettings callSettings = null)
         {
             Modify_TestIamPermissionsRequest(ref request, ref callSettings);
             return _callTestIamPermissions.Async(request, callSettings);
@@ -3090,9 +3090,9 @@ namespace Google.Cloud.Spanner.Admin.Instance.V1
         /// <returns>
         /// The RPC response.
         /// </returns>
-        public override TestIamPermissionsResponse TestIamPermissions(
-            TestIamPermissionsRequest request,
-            CallSettings callSettings = null)
+        public override iam::TestIamPermissionsResponse TestIamPermissions(
+            iam::TestIamPermissionsRequest request,
+            gaxgrpc::CallSettings callSettings = null)
         {
             Modify_TestIamPermissionsRequest(ref request, ref callSettings);
             return _callTestIamPermissions.Sync(request, callSettings);
@@ -3102,28 +3102,28 @@ namespace Google.Cloud.Spanner.Admin.Instance.V1
 
     // Partial classes to enable page-streaming
 
-    public partial class ListInstanceConfigsRequest : IPageRequest { }
-    public partial class ListInstanceConfigsResponse : IPageResponse<InstanceConfig>
+    public partial class ListInstanceConfigsRequest : gaxgrpc::IPageRequest { }
+    public partial class ListInstanceConfigsResponse : gaxgrpc::IPageResponse<InstanceConfig>
     {
         /// <summary>
         /// Returns an enumerator that iterates through the resources in this response.
         /// </summary>
-        public IEnumerator<InstanceConfig> GetEnumerator() => InstanceConfigs.GetEnumerator();
+        public scg::IEnumerator<InstanceConfig> GetEnumerator() => InstanceConfigs.GetEnumerator();
 
         /// <inheritdoc/>
-        IEnumerator IEnumerable.GetEnumerator() => GetEnumerator();
+        sc::IEnumerator sc::IEnumerable.GetEnumerator() => GetEnumerator();
     }
 
-    public partial class ListInstancesRequest : IPageRequest { }
-    public partial class ListInstancesResponse : IPageResponse<Instance>
+    public partial class ListInstancesRequest : gaxgrpc::IPageRequest { }
+    public partial class ListInstancesResponse : gaxgrpc::IPageResponse<Instance>
     {
         /// <summary>
         /// Returns an enumerator that iterates through the resources in this response.
         /// </summary>
-        public IEnumerator<Instance> GetEnumerator() => Instances.GetEnumerator();
+        public scg::IEnumerator<Instance> GetEnumerator() => Instances.GetEnumerator();
 
         /// <inheritdoc/>
-        IEnumerator IEnumerable.GetEnumerator() => GetEnumerator();
+        sc::IEnumerator sc::IEnumerable.GetEnumerator() => GetEnumerator();
     }
 
     // Partial Grpc class to enable LRO client creation
@@ -3132,10 +3132,10 @@ namespace Google.Cloud.Spanner.Admin.Instance.V1
         public partial class InstanceAdminClient
         {
             /// <summary>
-            /// Creates a new instance of <see cref="Operations.OperationsClient"/> using the same call invoker as this client.
+            /// Creates a new instance of <see cref="lro::Operations.OperationsClient"/> using the same call invoker as this client.
             /// </summary>
             /// <returns>A new Operations client for the same target as this client.</returns>
-            public virtual Operations.OperationsClient CreateOperationsClient() => new Operations.OperationsClient(CallInvoker);
+            public virtual lro::Operations.OperationsClient CreateOperationsClient() => new lro::Operations.OperationsClient(CallInvoker);
         }
     }
 

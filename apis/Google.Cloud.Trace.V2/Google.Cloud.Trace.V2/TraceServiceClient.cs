@@ -14,24 +14,24 @@
 
 // Generated code. DO NOT EDIT!
 
-using Google.Api.Gax;
-using Google.Api.Gax.Grpc;
-using Google.Protobuf;
-using Google.Protobuf.WellKnownTypes;
-using Grpc.Core;
-using System;
-using System.Collections;
-using System.Collections.Generic;
-using System.Collections.ObjectModel;
-using System.Threading;
-using System.Threading.Tasks;
+using gax = Google.Api.Gax;
+using gaxgrpc = Google.Api.Gax.Grpc;
+using proto = Google.Protobuf;
+using protowkt = Google.Protobuf.WellKnownTypes;
+using grpccore = Grpc.Core;
+using s = System;
+using sc = System.Collections;
+using scg = System.Collections.Generic;
+using sco = System.Collections.ObjectModel;
+using st = System.Threading;
+using stt = System.Threading.Tasks;
 
 namespace Google.Cloud.Trace.V2
 {
     /// <summary>
     /// Settings for a <see cref="TraceServiceClient"/>.
     /// </summary>
-    public sealed partial class TraceServiceSettings : ServiceSettingsBase
+    public sealed partial class TraceServiceSettings : gaxgrpc::ServiceSettingsBase
     {
         /// <summary>
         /// Get a new instance of the default <see cref="TraceServiceSettings"/>.
@@ -48,7 +48,7 @@ namespace Google.Cloud.Trace.V2
 
         private TraceServiceSettings(TraceServiceSettings existing) : base(existing)
         {
-            GaxPreconditions.CheckNotNull(existing, nameof(existing));
+            gax::GaxPreconditions.CheckNotNull(existing, nameof(existing));
             BatchWriteSpansSettings = existing.BatchWriteSpansSettings;
             CreateSpanSettings = existing.CreateSpanSettings;
             OnCopy(existing);
@@ -57,28 +57,28 @@ namespace Google.Cloud.Trace.V2
         partial void OnCopy(TraceServiceSettings existing);
 
         /// <summary>
-        /// The filter specifying which RPC <see cref="StatusCode"/>s are eligible for retry
+        /// The filter specifying which RPC <see cref="grpccore::StatusCode"/>s are eligible for retry
         /// for "Idempotent" <see cref="TraceServiceClient"/> RPC methods.
         /// </summary>
         /// <remarks>
-        /// The eligible RPC <see cref="StatusCode"/>s for retry for "Idempotent" RPC methods are:
+        /// The eligible RPC <see cref="grpccore::StatusCode"/>s for retry for "Idempotent" RPC methods are:
         /// <list type="bullet">
-        /// <item><description><see cref="StatusCode.DeadlineExceeded"/></description></item>
-        /// <item><description><see cref="StatusCode.Unavailable"/></description></item>
+        /// <item><description><see cref="grpccore::StatusCode.DeadlineExceeded"/></description></item>
+        /// <item><description><see cref="grpccore::StatusCode.Unavailable"/></description></item>
         /// </list>
         /// </remarks>
-        public static Predicate<RpcException> IdempotentRetryFilter { get; } =
-            RetrySettings.FilterForStatusCodes(StatusCode.DeadlineExceeded, StatusCode.Unavailable);
+        public static s::Predicate<grpccore::RpcException> IdempotentRetryFilter { get; } =
+            gaxgrpc::RetrySettings.FilterForStatusCodes(grpccore::StatusCode.DeadlineExceeded, grpccore::StatusCode.Unavailable);
 
         /// <summary>
-        /// The filter specifying which RPC <see cref="StatusCode"/>s are eligible for retry
+        /// The filter specifying which RPC <see cref="grpccore::StatusCode"/>s are eligible for retry
         /// for "NonIdempotent" <see cref="TraceServiceClient"/> RPC methods.
         /// </summary>
         /// <remarks>
-        /// There are no RPC <see cref="StatusCode"/>s eligible for retry for "NonIdempotent" RPC methods.
+        /// There are no RPC <see cref="grpccore::StatusCode"/>s eligible for retry for "NonIdempotent" RPC methods.
         /// </remarks>
-        public static Predicate<RpcException> NonIdempotentRetryFilter { get; } =
-            RetrySettings.FilterForStatusCodes();
+        public static s::Predicate<grpccore::RpcException> NonIdempotentRetryFilter { get; } =
+            gaxgrpc::RetrySettings.FilterForStatusCodes();
 
         /// <summary>
         /// "Default" retry backoff for <see cref="TraceServiceClient"/> RPC methods.
@@ -94,9 +94,9 @@ namespace Google.Cloud.Trace.V2
         /// <item><description>Delay multiplier: 1.2</description></item>
         /// </list>
         /// </remarks>
-        public static BackoffSettings GetDefaultRetryBackoff() => new BackoffSettings(
-            delay: TimeSpan.FromMilliseconds(100),
-            maxDelay: TimeSpan.FromMilliseconds(1000),
+        public static gaxgrpc::BackoffSettings GetDefaultRetryBackoff() => new gaxgrpc::BackoffSettings(
+            delay: s::TimeSpan.FromMilliseconds(100),
+            maxDelay: s::TimeSpan.FromMilliseconds(1000),
             delayMultiplier: 1.2
         );
 
@@ -114,19 +114,19 @@ namespace Google.Cloud.Trace.V2
         /// <item><description>Maximum timeout: 60000 milliseconds</description></item>
         /// </list>
         /// </remarks>
-        public static BackoffSettings GetDefaultTimeoutBackoff() => new BackoffSettings(
-            delay: TimeSpan.FromMilliseconds(30000),
-            maxDelay: TimeSpan.FromMilliseconds(60000),
+        public static gaxgrpc::BackoffSettings GetDefaultTimeoutBackoff() => new gaxgrpc::BackoffSettings(
+            delay: s::TimeSpan.FromMilliseconds(30000),
+            maxDelay: s::TimeSpan.FromMilliseconds(60000),
             delayMultiplier: 1.5
         );
 
         /// <summary>
-        /// <see cref="CallSettings"/> for synchronous and asynchronous calls to
+        /// <see cref="gaxgrpc::CallSettings"/> for synchronous and asynchronous calls to
         /// <c>TraceServiceClient.BatchWriteSpans</c> and <c>TraceServiceClient.BatchWriteSpansAsync</c>.
         /// </summary>
         /// <remarks>
         /// The default <c>TraceServiceClient.BatchWriteSpans</c> and
-        /// <c>TraceServiceClient.BatchWriteSpansAsync</c> <see cref="RetrySettings"/> are:
+        /// <c>TraceServiceClient.BatchWriteSpansAsync</c> <see cref="gaxgrpc::RetrySettings"/> are:
         /// <list type="bullet">
         /// <item><description>Initial retry delay: 100 milliseconds</description></item>
         /// <item><description>Retry delay multiplier: 1.2</description></item>
@@ -141,21 +141,21 @@ namespace Google.Cloud.Trace.V2
         /// </list>
         /// Default RPC expiration is 120000 milliseconds.
         /// </remarks>
-        public CallSettings BatchWriteSpansSettings { get; set; } = CallSettings.FromCallTiming(
-            CallTiming.FromRetry(new RetrySettings(
+        public gaxgrpc::CallSettings BatchWriteSpansSettings { get; set; } = gaxgrpc::CallSettings.FromCallTiming(
+            gaxgrpc::CallTiming.FromRetry(new gaxgrpc::RetrySettings(
                 retryBackoff: GetDefaultRetryBackoff(),
                 timeoutBackoff: GetDefaultTimeoutBackoff(),
-                totalExpiration: Expiration.FromTimeout(TimeSpan.FromMilliseconds(120000)),
+                totalExpiration: gax::Expiration.FromTimeout(s::TimeSpan.FromMilliseconds(120000)),
                 retryFilter: NonIdempotentRetryFilter
             )));
 
         /// <summary>
-        /// <see cref="CallSettings"/> for synchronous and asynchronous calls to
+        /// <see cref="gaxgrpc::CallSettings"/> for synchronous and asynchronous calls to
         /// <c>TraceServiceClient.CreateSpan</c> and <c>TraceServiceClient.CreateSpanAsync</c>.
         /// </summary>
         /// <remarks>
         /// The default <c>TraceServiceClient.CreateSpan</c> and
-        /// <c>TraceServiceClient.CreateSpanAsync</c> <see cref="RetrySettings"/> are:
+        /// <c>TraceServiceClient.CreateSpanAsync</c> <see cref="gaxgrpc::RetrySettings"/> are:
         /// <list type="bullet">
         /// <item><description>Initial retry delay: 100 milliseconds</description></item>
         /// <item><description>Retry delay multiplier: 1.2</description></item>
@@ -166,16 +166,16 @@ namespace Google.Cloud.Trace.V2
         /// </list>
         /// Retry will be attempted on the following response status codes:
         /// <list>
-        /// <item><description><see cref="StatusCode.DeadlineExceeded"/></description></item>
-        /// <item><description><see cref="StatusCode.Unavailable"/></description></item>
+        /// <item><description><see cref="grpccore::StatusCode.DeadlineExceeded"/></description></item>
+        /// <item><description><see cref="grpccore::StatusCode.Unavailable"/></description></item>
         /// </list>
         /// Default RPC expiration is 120000 milliseconds.
         /// </remarks>
-        public CallSettings CreateSpanSettings { get; set; } = CallSettings.FromCallTiming(
-            CallTiming.FromRetry(new RetrySettings(
+        public gaxgrpc::CallSettings CreateSpanSettings { get; set; } = gaxgrpc::CallSettings.FromCallTiming(
+            gaxgrpc::CallTiming.FromRetry(new gaxgrpc::RetrySettings(
                 retryBackoff: GetDefaultRetryBackoff(),
                 timeoutBackoff: GetDefaultTimeoutBackoff(),
-                totalExpiration: Expiration.FromTimeout(TimeSpan.FromMilliseconds(120000)),
+                totalExpiration: gax::Expiration.FromTimeout(s::TimeSpan.FromMilliseconds(120000)),
                 retryFilter: IdempotentRetryFilter
             )));
 
@@ -194,7 +194,7 @@ namespace Google.Cloud.Trace.V2
         /// <summary>
         /// The default endpoint for the TraceService service, which is a host of "cloudtrace.googleapis.com" and a port of 443.
         /// </summary>
-        public static ServiceEndpoint DefaultEndpoint { get; } = new ServiceEndpoint("cloudtrace.googleapis.com", 443);
+        public static gaxgrpc::ServiceEndpoint DefaultEndpoint { get; } = new gaxgrpc::ServiceEndpoint("cloudtrace.googleapis.com", 443);
 
         /// <summary>
         /// The default TraceService scopes.
@@ -206,12 +206,12 @@ namespace Google.Cloud.Trace.V2
         /// <item><description>"https://www.googleapis.com/auth/trace.append"</description></item>
         /// </list>
         /// </remarks>
-        public static IReadOnlyList<string> DefaultScopes { get; } = new ReadOnlyCollection<string>(new string[] {
+        public static scg::IReadOnlyList<string> DefaultScopes { get; } = new sco::ReadOnlyCollection<string>(new string[] {
             "https://www.googleapis.com/auth/cloud-platform",
             "https://www.googleapis.com/auth/trace.append",
         });
 
-        private static readonly ChannelPool s_channelPool = new ChannelPool(DefaultScopes);
+        private static readonly gaxgrpc::ChannelPool s_channelPool = new gaxgrpc::ChannelPool(DefaultScopes);
 
         // Note: we could have parameterless overloads of Create and CreateAsync,
         // documented to just use the default endpoint, settings and credentials.
@@ -225,12 +225,12 @@ namespace Google.Cloud.Trace.V2
         /// and creating a channel connecting to the given endpoint with application default credentials where
         /// necessary.
         /// </summary>
-        /// <param name="endpoint">Optional <see cref="ServiceEndpoint"/>.</param>
+        /// <param name="endpoint">Optional <see cref="gaxgrpc::ServiceEndpoint"/>.</param>
         /// <param name="settings">Optional <see cref="TraceServiceSettings"/>.</param>
         /// <returns>The task representing the created <see cref="TraceServiceClient"/>.</returns>
-        public static async Task<TraceServiceClient> CreateAsync(ServiceEndpoint endpoint = null, TraceServiceSettings settings = null)
+        public static async stt::Task<TraceServiceClient> CreateAsync(gaxgrpc::ServiceEndpoint endpoint = null, TraceServiceSettings settings = null)
         {
-            Channel channel = await s_channelPool.GetChannelAsync(endpoint ?? DefaultEndpoint).ConfigureAwait(false);
+            grpccore::Channel channel = await s_channelPool.GetChannelAsync(endpoint ?? DefaultEndpoint).ConfigureAwait(false);
             return Create(channel, settings);
         }
 
@@ -239,45 +239,45 @@ namespace Google.Cloud.Trace.V2
         /// and creating a channel connecting to the given endpoint with application default credentials where
         /// necessary.
         /// </summary>
-        /// <param name="endpoint">Optional <see cref="ServiceEndpoint"/>.</param>
+        /// <param name="endpoint">Optional <see cref="gaxgrpc::ServiceEndpoint"/>.</param>
         /// <param name="settings">Optional <see cref="TraceServiceSettings"/>.</param>
         /// <returns>The created <see cref="TraceServiceClient"/>.</returns>
-        public static TraceServiceClient Create(ServiceEndpoint endpoint = null, TraceServiceSettings settings = null)
+        public static TraceServiceClient Create(gaxgrpc::ServiceEndpoint endpoint = null, TraceServiceSettings settings = null)
         {
-            Channel channel = s_channelPool.GetChannel(endpoint ?? DefaultEndpoint);
+            grpccore::Channel channel = s_channelPool.GetChannel(endpoint ?? DefaultEndpoint);
             return Create(channel, settings);
         }
 
         /// <summary>
         /// Creates a <see cref="TraceServiceClient"/> which uses the specified channel for remote operations.
         /// </summary>
-        /// <param name="channel">The <see cref="Channel"/> for remote operations. Must not be null.</param>
+        /// <param name="channel">The <see cref="grpccore::Channel"/> for remote operations. Must not be null.</param>
         /// <param name="settings">Optional <see cref="TraceServiceSettings"/>.</param>
         /// <returns>The created <see cref="TraceServiceClient"/>.</returns>
-        public static TraceServiceClient Create(Channel channel, TraceServiceSettings settings = null)
+        public static TraceServiceClient Create(grpccore::Channel channel, TraceServiceSettings settings = null)
         {
-            GaxPreconditions.CheckNotNull(channel, nameof(channel));
+            gax::GaxPreconditions.CheckNotNull(channel, nameof(channel));
             TraceService.TraceServiceClient grpcClient = new TraceService.TraceServiceClient(channel);
             return new TraceServiceClientImpl(grpcClient, settings);
         }
 
         /// <summary>
-        /// Shuts down any channels automatically created by <see cref="Create(ServiceEndpoint, TraceServiceSettings)"/>
-        /// and <see cref="CreateAsync(ServiceEndpoint, TraceServiceSettings)"/>. Channels which weren't automatically
+        /// Shuts down any channels automatically created by <see cref="Create(gaxgrpc::ServiceEndpoint, TraceServiceSettings)"/>
+        /// and <see cref="CreateAsync(gaxgrpc::ServiceEndpoint, TraceServiceSettings)"/>. Channels which weren't automatically
         /// created are not affected.
         /// </summary>
-        /// <remarks>After calling this method, further calls to <see cref="Create(ServiceEndpoint, TraceServiceSettings)"/>
-        /// and <see cref="CreateAsync(ServiceEndpoint, TraceServiceSettings)"/> will create new channels, which could
+        /// <remarks>After calling this method, further calls to <see cref="Create(gaxgrpc::ServiceEndpoint, TraceServiceSettings)"/>
+        /// and <see cref="CreateAsync(gaxgrpc::ServiceEndpoint, TraceServiceSettings)"/> will create new channels, which could
         /// in turn be shut down by another call to this method.</remarks>
         /// <returns>A task representing the asynchronous shutdown operation.</returns>
-        public static Task ShutdownDefaultChannelsAsync() => s_channelPool.ShutdownChannelsAsync();
+        public static stt::Task ShutdownDefaultChannelsAsync() => s_channelPool.ShutdownChannelsAsync();
 
         /// <summary>
         /// The underlying gRPC TraceService client.
         /// </summary>
         public virtual TraceService.TraceServiceClient GrpcClient
         {
-            get { throw new NotImplementedException(); }
+            get { throw new s::NotImplementedException(); }
         }
 
         /// <summary>
@@ -298,14 +298,14 @@ namespace Google.Cloud.Trace.V2
         /// <returns>
         /// A Task that completes when the RPC has completed.
         /// </returns>
-        public virtual Task BatchWriteSpansAsync(
+        public virtual stt::Task BatchWriteSpansAsync(
             ProjectName name,
-            IEnumerable<Span> spans,
-            CallSettings callSettings = null) => BatchWriteSpansAsync(
+            scg::IEnumerable<Span> spans,
+            gaxgrpc::CallSettings callSettings = null) => BatchWriteSpansAsync(
                 new BatchWriteSpansRequest
                 {
-                    ProjectName = GaxPreconditions.CheckNotNull(name, nameof(name)),
-                    Spans = { GaxPreconditions.CheckNotNull(spans, nameof(spans)) },
+                    ProjectName = gax::GaxPreconditions.CheckNotNull(name, nameof(name)),
+                    Spans = { gax::GaxPreconditions.CheckNotNull(spans, nameof(spans)) },
                 },
                 callSettings);
 
@@ -322,18 +322,18 @@ namespace Google.Cloud.Trace.V2
         /// spans, or the results are undefined.
         /// </param>
         /// <param name="cancellationToken">
-        /// A <see cref="CancellationToken"/> to use for this RPC.
+        /// A <see cref="st::CancellationToken"/> to use for this RPC.
         /// </param>
         /// <returns>
         /// A Task that completes when the RPC has completed.
         /// </returns>
-        public virtual Task BatchWriteSpansAsync(
+        public virtual stt::Task BatchWriteSpansAsync(
             ProjectName name,
-            IEnumerable<Span> spans,
-            CancellationToken cancellationToken) => BatchWriteSpansAsync(
+            scg::IEnumerable<Span> spans,
+            st::CancellationToken cancellationToken) => BatchWriteSpansAsync(
                 name,
                 spans,
-                CallSettings.FromCancellationToken(cancellationToken));
+                gaxgrpc::CallSettings.FromCancellationToken(cancellationToken));
 
         /// <summary>
         /// Sends new spans to new or existing traces. You cannot update
@@ -352,12 +352,12 @@ namespace Google.Cloud.Trace.V2
         /// </param>
         public virtual void BatchWriteSpans(
             ProjectName name,
-            IEnumerable<Span> spans,
-            CallSettings callSettings = null) => BatchWriteSpans(
+            scg::IEnumerable<Span> spans,
+            gaxgrpc::CallSettings callSettings = null) => BatchWriteSpans(
                 new BatchWriteSpansRequest
                 {
-                    ProjectName = GaxPreconditions.CheckNotNull(name, nameof(name)),
-                    Spans = { GaxPreconditions.CheckNotNull(spans, nameof(spans)) },
+                    ProjectName = gax::GaxPreconditions.CheckNotNull(name, nameof(name)),
+                    Spans = { gax::GaxPreconditions.CheckNotNull(spans, nameof(spans)) },
                 },
                 callSettings);
 
@@ -374,11 +374,11 @@ namespace Google.Cloud.Trace.V2
         /// <returns>
         /// A Task that completes when the RPC has completed.
         /// </returns>
-        public virtual Task BatchWriteSpansAsync(
+        public virtual stt::Task BatchWriteSpansAsync(
             BatchWriteSpansRequest request,
-            CallSettings callSettings = null)
+            gaxgrpc::CallSettings callSettings = null)
         {
-            throw new NotImplementedException();
+            throw new s::NotImplementedException();
         }
 
         /// <summary>
@@ -389,16 +389,16 @@ namespace Google.Cloud.Trace.V2
         /// The request object containing all of the parameters for the API call.
         /// </param>
         /// <param name="cancellationToken">
-        /// A <see cref="CancellationToken"/> to use for this RPC.
+        /// A <see cref="st::CancellationToken"/> to use for this RPC.
         /// </param>
         /// <returns>
         /// A Task that completes when the RPC has completed.
         /// </returns>
-        public virtual Task BatchWriteSpansAsync(
+        public virtual stt::Task BatchWriteSpansAsync(
             BatchWriteSpansRequest request,
-            CancellationToken cancellationToken) => BatchWriteSpansAsync(
+            st::CancellationToken cancellationToken) => BatchWriteSpansAsync(
                 request,
-                CallSettings.FromCancellationToken(cancellationToken));
+                gaxgrpc::CallSettings.FromCancellationToken(cancellationToken));
 
         /// <summary>
         /// Sends new spans to new or existing traces. You cannot update
@@ -412,9 +412,9 @@ namespace Google.Cloud.Trace.V2
         /// </param>
         public virtual void BatchWriteSpans(
             BatchWriteSpansRequest request,
-            CallSettings callSettings = null)
+            gaxgrpc::CallSettings callSettings = null)
         {
-            throw new NotImplementedException();
+            throw new s::NotImplementedException();
         }
 
         /// <summary>
@@ -429,11 +429,11 @@ namespace Google.Cloud.Trace.V2
         /// <returns>
         /// A Task containing the RPC response.
         /// </returns>
-        public virtual Task<Span> CreateSpanAsync(
+        public virtual stt::Task<Span> CreateSpanAsync(
             Span request,
-            CallSettings callSettings = null)
+            gaxgrpc::CallSettings callSettings = null)
         {
-            throw new NotImplementedException();
+            throw new s::NotImplementedException();
         }
 
         /// <summary>
@@ -443,16 +443,16 @@ namespace Google.Cloud.Trace.V2
         /// The request object containing all of the parameters for the API call.
         /// </param>
         /// <param name="cancellationToken">
-        /// A <see cref="CancellationToken"/> to use for this RPC.
+        /// A <see cref="st::CancellationToken"/> to use for this RPC.
         /// </param>
         /// <returns>
         /// A Task containing the RPC response.
         /// </returns>
-        public virtual Task<Span> CreateSpanAsync(
+        public virtual stt::Task<Span> CreateSpanAsync(
             Span request,
-            CancellationToken cancellationToken) => CreateSpanAsync(
+            st::CancellationToken cancellationToken) => CreateSpanAsync(
                 request,
-                CallSettings.FromCancellationToken(cancellationToken));
+                gaxgrpc::CallSettings.FromCancellationToken(cancellationToken));
 
         /// <summary>
         /// Creates a new span.
@@ -468,9 +468,9 @@ namespace Google.Cloud.Trace.V2
         /// </returns>
         public virtual Span CreateSpan(
             Span request,
-            CallSettings callSettings = null)
+            gaxgrpc::CallSettings callSettings = null)
         {
-            throw new NotImplementedException();
+            throw new s::NotImplementedException();
         }
 
     }
@@ -480,8 +480,8 @@ namespace Google.Cloud.Trace.V2
     /// </summary>
     public sealed partial class TraceServiceClientImpl : TraceServiceClient
     {
-        private readonly ApiCall<BatchWriteSpansRequest, Empty> _callBatchWriteSpans;
-        private readonly ApiCall<Span, Span> _callCreateSpan;
+        private readonly gaxgrpc::ApiCall<BatchWriteSpansRequest, protowkt::Empty> _callBatchWriteSpans;
+        private readonly gaxgrpc::ApiCall<Span, Span> _callCreateSpan;
 
         /// <summary>
         /// Constructs a client wrapper for the TraceService service, with the specified gRPC client and settings.
@@ -492,8 +492,8 @@ namespace Google.Cloud.Trace.V2
         {
             GrpcClient = grpcClient;
             TraceServiceSettings effectiveSettings = settings ?? TraceServiceSettings.GetDefault();
-            ClientHelper clientHelper = new ClientHelper(effectiveSettings);
-            _callBatchWriteSpans = clientHelper.BuildApiCall<BatchWriteSpansRequest, Empty>(
+            gaxgrpc::ClientHelper clientHelper = new gaxgrpc::ClientHelper(effectiveSettings);
+            _callBatchWriteSpans = clientHelper.BuildApiCall<BatchWriteSpansRequest, protowkt::Empty>(
                 GrpcClient.BatchWriteSpansAsync, GrpcClient.BatchWriteSpans, effectiveSettings.BatchWriteSpansSettings);
             _callCreateSpan = clientHelper.BuildApiCall<Span, Span>(
                 GrpcClient.CreateSpanAsync, GrpcClient.CreateSpan, effectiveSettings.CreateSpanSettings);
@@ -508,15 +508,15 @@ namespace Google.Cloud.Trace.V2
 
         // Partial methods called for every ApiCall on construction.
         // Allows modification of all the underlying ApiCall objects.
-        partial void Modify_ApiCall<TRequest, TResponse>(ref ApiCall<TRequest, TResponse> call)
-            where TRequest : class, IMessage<TRequest>
-            where TResponse : class, IMessage<TResponse>;
+        partial void Modify_ApiCall<TRequest, TResponse>(ref gaxgrpc::ApiCall<TRequest, TResponse> call)
+            where TRequest : class, proto::IMessage<TRequest>
+            where TResponse : class, proto::IMessage<TResponse>;
 
         // Partial methods called for each ApiCall on construction.
         // Allows per-RPC-method modification of the underlying ApiCall object.
-        partial void Modify_BatchWriteSpansApiCall(ref ApiCall<BatchWriteSpansRequest, Empty> call);
-        partial void Modify_CreateSpanApiCall(ref ApiCall<Span, Span> call);
-        partial void OnConstruction(TraceService.TraceServiceClient grpcClient, TraceServiceSettings effectiveSettings, ClientHelper clientHelper);
+        partial void Modify_BatchWriteSpansApiCall(ref gaxgrpc::ApiCall<BatchWriteSpansRequest, protowkt::Empty> call);
+        partial void Modify_CreateSpanApiCall(ref gaxgrpc::ApiCall<Span, Span> call);
+        partial void OnConstruction(TraceService.TraceServiceClient grpcClient, TraceServiceSettings effectiveSettings, gaxgrpc::ClientHelper clientHelper);
 
         /// <summary>
         /// The underlying gRPC TraceService client.
@@ -526,8 +526,8 @@ namespace Google.Cloud.Trace.V2
         // Partial methods called on each request.
         // Allows per-RPC-call modification to the request and CallSettings objects,
         // before the underlying RPC is performed.
-        partial void Modify_BatchWriteSpansRequest(ref BatchWriteSpansRequest request, ref CallSettings settings);
-        partial void Modify_Span(ref Span request, ref CallSettings settings);
+        partial void Modify_BatchWriteSpansRequest(ref BatchWriteSpansRequest request, ref gaxgrpc::CallSettings settings);
+        partial void Modify_Span(ref Span request, ref gaxgrpc::CallSettings settings);
 
         /// <summary>
         /// Sends new spans to new or existing traces. You cannot update
@@ -542,9 +542,9 @@ namespace Google.Cloud.Trace.V2
         /// <returns>
         /// A Task that completes when the RPC has completed.
         /// </returns>
-        public override Task BatchWriteSpansAsync(
+        public override stt::Task BatchWriteSpansAsync(
             BatchWriteSpansRequest request,
-            CallSettings callSettings = null)
+            gaxgrpc::CallSettings callSettings = null)
         {
             Modify_BatchWriteSpansRequest(ref request, ref callSettings);
             return _callBatchWriteSpans.Async(request, callSettings);
@@ -562,7 +562,7 @@ namespace Google.Cloud.Trace.V2
         /// </param>
         public override void BatchWriteSpans(
             BatchWriteSpansRequest request,
-            CallSettings callSettings = null)
+            gaxgrpc::CallSettings callSettings = null)
         {
             Modify_BatchWriteSpansRequest(ref request, ref callSettings);
             _callBatchWriteSpans.Sync(request, callSettings);
@@ -580,9 +580,9 @@ namespace Google.Cloud.Trace.V2
         /// <returns>
         /// A Task containing the RPC response.
         /// </returns>
-        public override Task<Span> CreateSpanAsync(
+        public override stt::Task<Span> CreateSpanAsync(
             Span request,
-            CallSettings callSettings = null)
+            gaxgrpc::CallSettings callSettings = null)
         {
             Modify_Span(ref request, ref callSettings);
             return _callCreateSpan.Async(request, callSettings);
@@ -602,7 +602,7 @@ namespace Google.Cloud.Trace.V2
         /// </returns>
         public override Span CreateSpan(
             Span request,
-            CallSettings callSettings = null)
+            gaxgrpc::CallSettings callSettings = null)
         {
             Modify_Span(ref request, ref callSettings);
             return _callCreateSpan.Sync(request, callSettings);

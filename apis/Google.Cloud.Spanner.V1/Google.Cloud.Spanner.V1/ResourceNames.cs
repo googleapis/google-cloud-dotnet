@@ -14,8 +14,8 @@
 
 // Generated code. DO NOT EDIT!
 
-using Google.Api.Gax;
-using System;
+using gax = Google.Api.Gax;
+using s = System;
 using System.Linq;
 
 namespace Google.Cloud.Spanner.V1
@@ -23,9 +23,9 @@ namespace Google.Cloud.Spanner.V1
     /// <summary>
     /// Resource name for the 'database' resource.
     /// </summary>
-    public sealed partial class DatabaseName : IResourceName, IEquatable<DatabaseName>
+    public sealed partial class DatabaseName : gax::IResourceName, s::IEquatable<DatabaseName>
     {
-        private static readonly PathTemplate s_template = new PathTemplate("projects/{project}/instances/{instance}/databases/{database}");
+        private static readonly gax::PathTemplate s_template = new gax::PathTemplate("projects/{project}/instances/{instance}/databases/{database}");
 
         /// <summary>
         /// Parses the given database resource name in string form into a new
@@ -35,8 +35,8 @@ namespace Google.Cloud.Spanner.V1
         /// <returns>The parsed <see cref="DatabaseName"/> if successful.</returns>
         public static DatabaseName Parse(string databaseName)
         {
-            GaxPreconditions.CheckNotNull(databaseName, nameof(databaseName));
-            TemplatedResourceName resourceName = s_template.ParseName(databaseName);
+            gax::GaxPreconditions.CheckNotNull(databaseName, nameof(databaseName));
+            gax::TemplatedResourceName resourceName = s_template.ParseName(databaseName);
             return new DatabaseName(resourceName[0], resourceName[1], resourceName[2]);
         }
 
@@ -45,7 +45,7 @@ namespace Google.Cloud.Spanner.V1
         /// <see cref="DatabaseName"/> instance.
         /// </summary>
         /// <remarks>
-        /// This method still throws <see cref="ArgumentNullException"/> if <paramref name="databaseName"/> is null,
+        /// This method still throws <see cref="s::ArgumentNullException"/> if <paramref name="databaseName"/> is null,
         /// as this would usually indicate a programming error rather than a data error.
         /// </remarks>
         /// <param name="databaseName">The database resource name in string form. Must not be <c>null</c>.</param>
@@ -54,8 +54,8 @@ namespace Google.Cloud.Spanner.V1
         /// <returns><c>true</c> if the name was parsed succssfully; <c>false</c> otherwise.</returns>
         public static bool TryParse(string databaseName, out DatabaseName result)
         {
-            GaxPreconditions.CheckNotNull(databaseName, nameof(databaseName));
-            TemplatedResourceName resourceName;
+            gax::GaxPreconditions.CheckNotNull(databaseName, nameof(databaseName));
+            gax::TemplatedResourceName resourceName;
             if (s_template.TryParseName(databaseName, out resourceName))
             {
                 result = new DatabaseName(resourceName[0], resourceName[1], resourceName[2]);
@@ -77,9 +77,9 @@ namespace Google.Cloud.Spanner.V1
         /// <param name="databaseId">The database ID. Must not be <c>null</c>.</param>
         public DatabaseName(string projectId, string instanceId, string databaseId)
         {
-            ProjectId = GaxPreconditions.CheckNotNull(projectId, nameof(projectId));
-            InstanceId = GaxPreconditions.CheckNotNull(instanceId, nameof(instanceId));
-            DatabaseId = GaxPreconditions.CheckNotNull(databaseId, nameof(databaseId));
+            ProjectId = gax::GaxPreconditions.CheckNotNull(projectId, nameof(projectId));
+            InstanceId = gax::GaxPreconditions.CheckNotNull(instanceId, nameof(instanceId));
+            DatabaseId = gax::GaxPreconditions.CheckNotNull(databaseId, nameof(databaseId));
         }
 
         /// <summary>
@@ -98,7 +98,7 @@ namespace Google.Cloud.Spanner.V1
         public string DatabaseId { get; }
 
         /// <inheritdoc />
-        public ResourceNameKind Kind => ResourceNameKind.Simple;
+        public gax::ResourceNameKind Kind => gax::ResourceNameKind.Simple;
 
         /// <inheritdoc />
         public override string ToString() => s_template.Expand(ProjectId, InstanceId, DatabaseId);
@@ -122,9 +122,9 @@ namespace Google.Cloud.Spanner.V1
     /// <summary>
     /// Resource name for the 'session' resource.
     /// </summary>
-    public sealed partial class SessionName : IResourceName, IEquatable<SessionName>
+    public sealed partial class SessionName : gax::IResourceName, s::IEquatable<SessionName>
     {
-        private static readonly PathTemplate s_template = new PathTemplate("projects/{project}/instances/{instance}/databases/{database}/sessions/{session}");
+        private static readonly gax::PathTemplate s_template = new gax::PathTemplate("projects/{project}/instances/{instance}/databases/{database}/sessions/{session}");
 
         /// <summary>
         /// Parses the given session resource name in string form into a new
@@ -134,8 +134,8 @@ namespace Google.Cloud.Spanner.V1
         /// <returns>The parsed <see cref="SessionName"/> if successful.</returns>
         public static SessionName Parse(string sessionName)
         {
-            GaxPreconditions.CheckNotNull(sessionName, nameof(sessionName));
-            TemplatedResourceName resourceName = s_template.ParseName(sessionName);
+            gax::GaxPreconditions.CheckNotNull(sessionName, nameof(sessionName));
+            gax::TemplatedResourceName resourceName = s_template.ParseName(sessionName);
             return new SessionName(resourceName[0], resourceName[1], resourceName[2], resourceName[3]);
         }
 
@@ -144,7 +144,7 @@ namespace Google.Cloud.Spanner.V1
         /// <see cref="SessionName"/> instance.
         /// </summary>
         /// <remarks>
-        /// This method still throws <see cref="ArgumentNullException"/> if <paramref name="sessionName"/> is null,
+        /// This method still throws <see cref="s::ArgumentNullException"/> if <paramref name="sessionName"/> is null,
         /// as this would usually indicate a programming error rather than a data error.
         /// </remarks>
         /// <param name="sessionName">The session resource name in string form. Must not be <c>null</c>.</param>
@@ -153,8 +153,8 @@ namespace Google.Cloud.Spanner.V1
         /// <returns><c>true</c> if the name was parsed succssfully; <c>false</c> otherwise.</returns>
         public static bool TryParse(string sessionName, out SessionName result)
         {
-            GaxPreconditions.CheckNotNull(sessionName, nameof(sessionName));
-            TemplatedResourceName resourceName;
+            gax::GaxPreconditions.CheckNotNull(sessionName, nameof(sessionName));
+            gax::TemplatedResourceName resourceName;
             if (s_template.TryParseName(sessionName, out resourceName))
             {
                 result = new SessionName(resourceName[0], resourceName[1], resourceName[2], resourceName[3]);
@@ -177,10 +177,10 @@ namespace Google.Cloud.Spanner.V1
         /// <param name="sessionId">The session ID. Must not be <c>null</c>.</param>
         public SessionName(string projectId, string instanceId, string databaseId, string sessionId)
         {
-            ProjectId = GaxPreconditions.CheckNotNull(projectId, nameof(projectId));
-            InstanceId = GaxPreconditions.CheckNotNull(instanceId, nameof(instanceId));
-            DatabaseId = GaxPreconditions.CheckNotNull(databaseId, nameof(databaseId));
-            SessionId = GaxPreconditions.CheckNotNull(sessionId, nameof(sessionId));
+            ProjectId = gax::GaxPreconditions.CheckNotNull(projectId, nameof(projectId));
+            InstanceId = gax::GaxPreconditions.CheckNotNull(instanceId, nameof(instanceId));
+            DatabaseId = gax::GaxPreconditions.CheckNotNull(databaseId, nameof(databaseId));
+            SessionId = gax::GaxPreconditions.CheckNotNull(sessionId, nameof(sessionId));
         }
 
         /// <summary>
@@ -204,7 +204,7 @@ namespace Google.Cloud.Spanner.V1
         public string SessionId { get; }
 
         /// <inheritdoc />
-        public ResourceNameKind Kind => ResourceNameKind.Simple;
+        public gax::ResourceNameKind Kind => gax::ResourceNameKind.Simple;
 
         /// <inheritdoc />
         public override string ToString() => s_template.Expand(ProjectId, InstanceId, DatabaseId, SessionId);

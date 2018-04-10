@@ -14,21 +14,22 @@
 
 // Generated code. DO NOT EDIT!
 
-using Google.Api.Gax;
-using Google.Api.Gax.Grpc;
-using Google.Protobuf.WellKnownTypes;
-using Grpc.Core;
-using Moq;
-using System;
-using System.Collections;
-using System.Collections.Generic;
-using System.Collections.ObjectModel;
-using System.Threading;
-using System.Threading.Tasks;
-using Xunit;
-
 namespace Google.Cloud.Container.V1.Tests
 {
+    using Google.Api.Gax;
+    using Google.Api.Gax.Grpc;
+    using apis = Google.Cloud.Container.V1;
+    using Google.Protobuf.WellKnownTypes;
+    using Grpc.Core;
+    using Moq;
+    using System;
+    using System.Collections;
+    using System.Collections.Generic;
+    using System.Collections.ObjectModel;
+    using System.Threading;
+    using System.Threading.Tasks;
+    using Xunit;
+
     /// <summary>Generated unit tests</summary>
     public class GeneratedClusterManagerClientTest
     {
@@ -296,7 +297,7 @@ namespace Google.Cloud.Container.V1.Tests
                 Zone = "zone3744684",
                 Cluster = new Cluster(),
             };
-            Operation expectedResponse = new Operation
+            apis::Operation expectedResponse = new apis::Operation
             {
                 Name = "name3373707",
                 Zone = "zone2-696322977",
@@ -313,7 +314,7 @@ namespace Google.Cloud.Container.V1.Tests
             string projectId = "projectId-1969970175";
             string zone = "zone3744684";
             Cluster cluster = new Cluster();
-            Operation response = client.CreateCluster(projectId, zone, cluster);
+            apis::Operation response = client.CreateCluster(projectId, zone, cluster);
             Assert.Same(expectedResponse, response);
             mockGrpcClient.VerifyAll();
         }
@@ -328,7 +329,7 @@ namespace Google.Cloud.Container.V1.Tests
                 Zone = "zone3744684",
                 Cluster = new Cluster(),
             };
-            Operation expectedResponse = new Operation
+            apis::Operation expectedResponse = new apis::Operation
             {
                 Name = "name3373707",
                 Zone = "zone2-696322977",
@@ -340,12 +341,12 @@ namespace Google.Cloud.Container.V1.Tests
                 EndTime = "endTime1725551537",
             };
             mockGrpcClient.Setup(x => x.CreateClusterAsync(expectedRequest, It.IsAny<CallOptions>()))
-                .Returns(new Grpc.Core.AsyncUnaryCall<Operation>(Task.FromResult(expectedResponse), null, null, null, null));
+                .Returns(new Grpc.Core.AsyncUnaryCall<apis::Operation>(Task.FromResult(expectedResponse), null, null, null, null));
             ClusterManagerClient client = new ClusterManagerClientImpl(mockGrpcClient.Object, null);
             string projectId = "projectId-1969970175";
             string zone = "zone3744684";
             Cluster cluster = new Cluster();
-            Operation response = await client.CreateClusterAsync(projectId, zone, cluster);
+            apis::Operation response = await client.CreateClusterAsync(projectId, zone, cluster);
             Assert.Same(expectedResponse, response);
             mockGrpcClient.VerifyAll();
         }
@@ -360,7 +361,7 @@ namespace Google.Cloud.Container.V1.Tests
                 Zone = "zone3744684",
                 Cluster = new Cluster(),
             };
-            Operation expectedResponse = new Operation
+            apis::Operation expectedResponse = new apis::Operation
             {
                 Name = "name3373707",
                 Zone = "zone2-696322977",
@@ -374,7 +375,7 @@ namespace Google.Cloud.Container.V1.Tests
             mockGrpcClient.Setup(x => x.CreateCluster(request, It.IsAny<CallOptions>()))
                 .Returns(expectedResponse);
             ClusterManagerClient client = new ClusterManagerClientImpl(mockGrpcClient.Object, null);
-            Operation response = client.CreateCluster(request);
+            apis::Operation response = client.CreateCluster(request);
             Assert.Same(expectedResponse, response);
             mockGrpcClient.VerifyAll();
         }
@@ -389,7 +390,7 @@ namespace Google.Cloud.Container.V1.Tests
                 Zone = "zone3744684",
                 Cluster = new Cluster(),
             };
-            Operation expectedResponse = new Operation
+            apis::Operation expectedResponse = new apis::Operation
             {
                 Name = "name3373707",
                 Zone = "zone2-696322977",
@@ -401,9 +402,9 @@ namespace Google.Cloud.Container.V1.Tests
                 EndTime = "endTime1725551537",
             };
             mockGrpcClient.Setup(x => x.CreateClusterAsync(request, It.IsAny<CallOptions>()))
-                .Returns(new Grpc.Core.AsyncUnaryCall<Operation>(Task.FromResult(expectedResponse), null, null, null, null));
+                .Returns(new Grpc.Core.AsyncUnaryCall<apis::Operation>(Task.FromResult(expectedResponse), null, null, null, null));
             ClusterManagerClient client = new ClusterManagerClientImpl(mockGrpcClient.Object, null);
-            Operation response = await client.CreateClusterAsync(request);
+            apis::Operation response = await client.CreateClusterAsync(request);
             Assert.Same(expectedResponse, response);
             mockGrpcClient.VerifyAll();
         }
@@ -419,7 +420,7 @@ namespace Google.Cloud.Container.V1.Tests
                 ClusterId = "clusterId240280960",
                 Update = new ClusterUpdate(),
             };
-            Operation expectedResponse = new Operation
+            apis::Operation expectedResponse = new apis::Operation
             {
                 Name = "name3373707",
                 Zone = "zone2-696322977",
@@ -437,7 +438,7 @@ namespace Google.Cloud.Container.V1.Tests
             string zone = "zone3744684";
             string clusterId = "clusterId240280960";
             ClusterUpdate update = new ClusterUpdate();
-            Operation response = client.UpdateCluster(projectId, zone, clusterId, update);
+            apis::Operation response = client.UpdateCluster(projectId, zone, clusterId, update);
             Assert.Same(expectedResponse, response);
             mockGrpcClient.VerifyAll();
         }
@@ -453,7 +454,7 @@ namespace Google.Cloud.Container.V1.Tests
                 ClusterId = "clusterId240280960",
                 Update = new ClusterUpdate(),
             };
-            Operation expectedResponse = new Operation
+            apis::Operation expectedResponse = new apis::Operation
             {
                 Name = "name3373707",
                 Zone = "zone2-696322977",
@@ -465,13 +466,13 @@ namespace Google.Cloud.Container.V1.Tests
                 EndTime = "endTime1725551537",
             };
             mockGrpcClient.Setup(x => x.UpdateClusterAsync(expectedRequest, It.IsAny<CallOptions>()))
-                .Returns(new Grpc.Core.AsyncUnaryCall<Operation>(Task.FromResult(expectedResponse), null, null, null, null));
+                .Returns(new Grpc.Core.AsyncUnaryCall<apis::Operation>(Task.FromResult(expectedResponse), null, null, null, null));
             ClusterManagerClient client = new ClusterManagerClientImpl(mockGrpcClient.Object, null);
             string projectId = "projectId-1969970175";
             string zone = "zone3744684";
             string clusterId = "clusterId240280960";
             ClusterUpdate update = new ClusterUpdate();
-            Operation response = await client.UpdateClusterAsync(projectId, zone, clusterId, update);
+            apis::Operation response = await client.UpdateClusterAsync(projectId, zone, clusterId, update);
             Assert.Same(expectedResponse, response);
             mockGrpcClient.VerifyAll();
         }
@@ -487,7 +488,7 @@ namespace Google.Cloud.Container.V1.Tests
                 ClusterId = "clusterId240280960",
                 Update = new ClusterUpdate(),
             };
-            Operation expectedResponse = new Operation
+            apis::Operation expectedResponse = new apis::Operation
             {
                 Name = "name3373707",
                 Zone = "zone2-696322977",
@@ -501,7 +502,7 @@ namespace Google.Cloud.Container.V1.Tests
             mockGrpcClient.Setup(x => x.UpdateCluster(request, It.IsAny<CallOptions>()))
                 .Returns(expectedResponse);
             ClusterManagerClient client = new ClusterManagerClientImpl(mockGrpcClient.Object, null);
-            Operation response = client.UpdateCluster(request);
+            apis::Operation response = client.UpdateCluster(request);
             Assert.Same(expectedResponse, response);
             mockGrpcClient.VerifyAll();
         }
@@ -517,7 +518,7 @@ namespace Google.Cloud.Container.V1.Tests
                 ClusterId = "clusterId240280960",
                 Update = new ClusterUpdate(),
             };
-            Operation expectedResponse = new Operation
+            apis::Operation expectedResponse = new apis::Operation
             {
                 Name = "name3373707",
                 Zone = "zone2-696322977",
@@ -529,9 +530,9 @@ namespace Google.Cloud.Container.V1.Tests
                 EndTime = "endTime1725551537",
             };
             mockGrpcClient.Setup(x => x.UpdateClusterAsync(request, It.IsAny<CallOptions>()))
-                .Returns(new Grpc.Core.AsyncUnaryCall<Operation>(Task.FromResult(expectedResponse), null, null, null, null));
+                .Returns(new Grpc.Core.AsyncUnaryCall<apis::Operation>(Task.FromResult(expectedResponse), null, null, null, null));
             ClusterManagerClient client = new ClusterManagerClientImpl(mockGrpcClient.Object, null);
-            Operation response = await client.UpdateClusterAsync(request);
+            apis::Operation response = await client.UpdateClusterAsync(request);
             Assert.Same(expectedResponse, response);
             mockGrpcClient.VerifyAll();
         }
@@ -549,7 +550,7 @@ namespace Google.Cloud.Container.V1.Tests
                 NodeVersion = "nodeVersion1790136219",
                 ImageType = "imageType-1442758754",
             };
-            Operation expectedResponse = new Operation
+            apis::Operation expectedResponse = new apis::Operation
             {
                 Name = "name3373707",
                 Zone = "zone2-696322977",
@@ -563,7 +564,7 @@ namespace Google.Cloud.Container.V1.Tests
             mockGrpcClient.Setup(x => x.UpdateNodePool(request, It.IsAny<CallOptions>()))
                 .Returns(expectedResponse);
             ClusterManagerClient client = new ClusterManagerClientImpl(mockGrpcClient.Object, null);
-            Operation response = client.UpdateNodePool(request);
+            apis::Operation response = client.UpdateNodePool(request);
             Assert.Same(expectedResponse, response);
             mockGrpcClient.VerifyAll();
         }
@@ -581,7 +582,7 @@ namespace Google.Cloud.Container.V1.Tests
                 NodeVersion = "nodeVersion1790136219",
                 ImageType = "imageType-1442758754",
             };
-            Operation expectedResponse = new Operation
+            apis::Operation expectedResponse = new apis::Operation
             {
                 Name = "name3373707",
                 Zone = "zone2-696322977",
@@ -593,9 +594,9 @@ namespace Google.Cloud.Container.V1.Tests
                 EndTime = "endTime1725551537",
             };
             mockGrpcClient.Setup(x => x.UpdateNodePoolAsync(request, It.IsAny<CallOptions>()))
-                .Returns(new Grpc.Core.AsyncUnaryCall<Operation>(Task.FromResult(expectedResponse), null, null, null, null));
+                .Returns(new Grpc.Core.AsyncUnaryCall<apis::Operation>(Task.FromResult(expectedResponse), null, null, null, null));
             ClusterManagerClient client = new ClusterManagerClientImpl(mockGrpcClient.Object, null);
-            Operation response = await client.UpdateNodePoolAsync(request);
+            apis::Operation response = await client.UpdateNodePoolAsync(request);
             Assert.Same(expectedResponse, response);
             mockGrpcClient.VerifyAll();
         }
@@ -612,7 +613,7 @@ namespace Google.Cloud.Container.V1.Tests
                 NodePoolId = "nodePoolId1043384033",
                 Autoscaling = new NodePoolAutoscaling(),
             };
-            Operation expectedResponse = new Operation
+            apis::Operation expectedResponse = new apis::Operation
             {
                 Name = "name3373707",
                 Zone = "zone2-696322977",
@@ -626,7 +627,7 @@ namespace Google.Cloud.Container.V1.Tests
             mockGrpcClient.Setup(x => x.SetNodePoolAutoscaling(request, It.IsAny<CallOptions>()))
                 .Returns(expectedResponse);
             ClusterManagerClient client = new ClusterManagerClientImpl(mockGrpcClient.Object, null);
-            Operation response = client.SetNodePoolAutoscaling(request);
+            apis::Operation response = client.SetNodePoolAutoscaling(request);
             Assert.Same(expectedResponse, response);
             mockGrpcClient.VerifyAll();
         }
@@ -643,7 +644,7 @@ namespace Google.Cloud.Container.V1.Tests
                 NodePoolId = "nodePoolId1043384033",
                 Autoscaling = new NodePoolAutoscaling(),
             };
-            Operation expectedResponse = new Operation
+            apis::Operation expectedResponse = new apis::Operation
             {
                 Name = "name3373707",
                 Zone = "zone2-696322977",
@@ -655,9 +656,9 @@ namespace Google.Cloud.Container.V1.Tests
                 EndTime = "endTime1725551537",
             };
             mockGrpcClient.Setup(x => x.SetNodePoolAutoscalingAsync(request, It.IsAny<CallOptions>()))
-                .Returns(new Grpc.Core.AsyncUnaryCall<Operation>(Task.FromResult(expectedResponse), null, null, null, null));
+                .Returns(new Grpc.Core.AsyncUnaryCall<apis::Operation>(Task.FromResult(expectedResponse), null, null, null, null));
             ClusterManagerClient client = new ClusterManagerClientImpl(mockGrpcClient.Object, null);
-            Operation response = await client.SetNodePoolAutoscalingAsync(request);
+            apis::Operation response = await client.SetNodePoolAutoscalingAsync(request);
             Assert.Same(expectedResponse, response);
             mockGrpcClient.VerifyAll();
         }
@@ -673,7 +674,7 @@ namespace Google.Cloud.Container.V1.Tests
                 ClusterId = "clusterId240280960",
                 LoggingService = "loggingService-1700501035",
             };
-            Operation expectedResponse = new Operation
+            apis::Operation expectedResponse = new apis::Operation
             {
                 Name = "name3373707",
                 Zone = "zone2-696322977",
@@ -691,7 +692,7 @@ namespace Google.Cloud.Container.V1.Tests
             string zone = "zone3744684";
             string clusterId = "clusterId240280960";
             string loggingService = "loggingService-1700501035";
-            Operation response = client.SetLoggingService(projectId, zone, clusterId, loggingService);
+            apis::Operation response = client.SetLoggingService(projectId, zone, clusterId, loggingService);
             Assert.Same(expectedResponse, response);
             mockGrpcClient.VerifyAll();
         }
@@ -707,7 +708,7 @@ namespace Google.Cloud.Container.V1.Tests
                 ClusterId = "clusterId240280960",
                 LoggingService = "loggingService-1700501035",
             };
-            Operation expectedResponse = new Operation
+            apis::Operation expectedResponse = new apis::Operation
             {
                 Name = "name3373707",
                 Zone = "zone2-696322977",
@@ -719,13 +720,13 @@ namespace Google.Cloud.Container.V1.Tests
                 EndTime = "endTime1725551537",
             };
             mockGrpcClient.Setup(x => x.SetLoggingServiceAsync(expectedRequest, It.IsAny<CallOptions>()))
-                .Returns(new Grpc.Core.AsyncUnaryCall<Operation>(Task.FromResult(expectedResponse), null, null, null, null));
+                .Returns(new Grpc.Core.AsyncUnaryCall<apis::Operation>(Task.FromResult(expectedResponse), null, null, null, null));
             ClusterManagerClient client = new ClusterManagerClientImpl(mockGrpcClient.Object, null);
             string projectId = "projectId-1969970175";
             string zone = "zone3744684";
             string clusterId = "clusterId240280960";
             string loggingService = "loggingService-1700501035";
-            Operation response = await client.SetLoggingServiceAsync(projectId, zone, clusterId, loggingService);
+            apis::Operation response = await client.SetLoggingServiceAsync(projectId, zone, clusterId, loggingService);
             Assert.Same(expectedResponse, response);
             mockGrpcClient.VerifyAll();
         }
@@ -741,7 +742,7 @@ namespace Google.Cloud.Container.V1.Tests
                 ClusterId = "clusterId240280960",
                 LoggingService = "loggingService-1700501035",
             };
-            Operation expectedResponse = new Operation
+            apis::Operation expectedResponse = new apis::Operation
             {
                 Name = "name3373707",
                 Zone = "zone2-696322977",
@@ -755,7 +756,7 @@ namespace Google.Cloud.Container.V1.Tests
             mockGrpcClient.Setup(x => x.SetLoggingService(request, It.IsAny<CallOptions>()))
                 .Returns(expectedResponse);
             ClusterManagerClient client = new ClusterManagerClientImpl(mockGrpcClient.Object, null);
-            Operation response = client.SetLoggingService(request);
+            apis::Operation response = client.SetLoggingService(request);
             Assert.Same(expectedResponse, response);
             mockGrpcClient.VerifyAll();
         }
@@ -771,7 +772,7 @@ namespace Google.Cloud.Container.V1.Tests
                 ClusterId = "clusterId240280960",
                 LoggingService = "loggingService-1700501035",
             };
-            Operation expectedResponse = new Operation
+            apis::Operation expectedResponse = new apis::Operation
             {
                 Name = "name3373707",
                 Zone = "zone2-696322977",
@@ -783,9 +784,9 @@ namespace Google.Cloud.Container.V1.Tests
                 EndTime = "endTime1725551537",
             };
             mockGrpcClient.Setup(x => x.SetLoggingServiceAsync(request, It.IsAny<CallOptions>()))
-                .Returns(new Grpc.Core.AsyncUnaryCall<Operation>(Task.FromResult(expectedResponse), null, null, null, null));
+                .Returns(new Grpc.Core.AsyncUnaryCall<apis::Operation>(Task.FromResult(expectedResponse), null, null, null, null));
             ClusterManagerClient client = new ClusterManagerClientImpl(mockGrpcClient.Object, null);
-            Operation response = await client.SetLoggingServiceAsync(request);
+            apis::Operation response = await client.SetLoggingServiceAsync(request);
             Assert.Same(expectedResponse, response);
             mockGrpcClient.VerifyAll();
         }
@@ -801,7 +802,7 @@ namespace Google.Cloud.Container.V1.Tests
                 ClusterId = "clusterId240280960",
                 MonitoringService = "monitoringService1469270462",
             };
-            Operation expectedResponse = new Operation
+            apis::Operation expectedResponse = new apis::Operation
             {
                 Name = "name3373707",
                 Zone = "zone2-696322977",
@@ -819,7 +820,7 @@ namespace Google.Cloud.Container.V1.Tests
             string zone = "zone3744684";
             string clusterId = "clusterId240280960";
             string monitoringService = "monitoringService1469270462";
-            Operation response = client.SetMonitoringService(projectId, zone, clusterId, monitoringService);
+            apis::Operation response = client.SetMonitoringService(projectId, zone, clusterId, monitoringService);
             Assert.Same(expectedResponse, response);
             mockGrpcClient.VerifyAll();
         }
@@ -835,7 +836,7 @@ namespace Google.Cloud.Container.V1.Tests
                 ClusterId = "clusterId240280960",
                 MonitoringService = "monitoringService1469270462",
             };
-            Operation expectedResponse = new Operation
+            apis::Operation expectedResponse = new apis::Operation
             {
                 Name = "name3373707",
                 Zone = "zone2-696322977",
@@ -847,13 +848,13 @@ namespace Google.Cloud.Container.V1.Tests
                 EndTime = "endTime1725551537",
             };
             mockGrpcClient.Setup(x => x.SetMonitoringServiceAsync(expectedRequest, It.IsAny<CallOptions>()))
-                .Returns(new Grpc.Core.AsyncUnaryCall<Operation>(Task.FromResult(expectedResponse), null, null, null, null));
+                .Returns(new Grpc.Core.AsyncUnaryCall<apis::Operation>(Task.FromResult(expectedResponse), null, null, null, null));
             ClusterManagerClient client = new ClusterManagerClientImpl(mockGrpcClient.Object, null);
             string projectId = "projectId-1969970175";
             string zone = "zone3744684";
             string clusterId = "clusterId240280960";
             string monitoringService = "monitoringService1469270462";
-            Operation response = await client.SetMonitoringServiceAsync(projectId, zone, clusterId, monitoringService);
+            apis::Operation response = await client.SetMonitoringServiceAsync(projectId, zone, clusterId, monitoringService);
             Assert.Same(expectedResponse, response);
             mockGrpcClient.VerifyAll();
         }
@@ -869,7 +870,7 @@ namespace Google.Cloud.Container.V1.Tests
                 ClusterId = "clusterId240280960",
                 MonitoringService = "monitoringService1469270462",
             };
-            Operation expectedResponse = new Operation
+            apis::Operation expectedResponse = new apis::Operation
             {
                 Name = "name3373707",
                 Zone = "zone2-696322977",
@@ -883,7 +884,7 @@ namespace Google.Cloud.Container.V1.Tests
             mockGrpcClient.Setup(x => x.SetMonitoringService(request, It.IsAny<CallOptions>()))
                 .Returns(expectedResponse);
             ClusterManagerClient client = new ClusterManagerClientImpl(mockGrpcClient.Object, null);
-            Operation response = client.SetMonitoringService(request);
+            apis::Operation response = client.SetMonitoringService(request);
             Assert.Same(expectedResponse, response);
             mockGrpcClient.VerifyAll();
         }
@@ -899,7 +900,7 @@ namespace Google.Cloud.Container.V1.Tests
                 ClusterId = "clusterId240280960",
                 MonitoringService = "monitoringService1469270462",
             };
-            Operation expectedResponse = new Operation
+            apis::Operation expectedResponse = new apis::Operation
             {
                 Name = "name3373707",
                 Zone = "zone2-696322977",
@@ -911,9 +912,9 @@ namespace Google.Cloud.Container.V1.Tests
                 EndTime = "endTime1725551537",
             };
             mockGrpcClient.Setup(x => x.SetMonitoringServiceAsync(request, It.IsAny<CallOptions>()))
-                .Returns(new Grpc.Core.AsyncUnaryCall<Operation>(Task.FromResult(expectedResponse), null, null, null, null));
+                .Returns(new Grpc.Core.AsyncUnaryCall<apis::Operation>(Task.FromResult(expectedResponse), null, null, null, null));
             ClusterManagerClient client = new ClusterManagerClientImpl(mockGrpcClient.Object, null);
-            Operation response = await client.SetMonitoringServiceAsync(request);
+            apis::Operation response = await client.SetMonitoringServiceAsync(request);
             Assert.Same(expectedResponse, response);
             mockGrpcClient.VerifyAll();
         }
@@ -929,7 +930,7 @@ namespace Google.Cloud.Container.V1.Tests
                 ClusterId = "clusterId240280960",
                 AddonsConfig = new AddonsConfig(),
             };
-            Operation expectedResponse = new Operation
+            apis::Operation expectedResponse = new apis::Operation
             {
                 Name = "name3373707",
                 Zone = "zone2-696322977",
@@ -947,7 +948,7 @@ namespace Google.Cloud.Container.V1.Tests
             string zone = "zone3744684";
             string clusterId = "clusterId240280960";
             AddonsConfig addonsConfig = new AddonsConfig();
-            Operation response = client.SetAddonsConfig(projectId, zone, clusterId, addonsConfig);
+            apis::Operation response = client.SetAddonsConfig(projectId, zone, clusterId, addonsConfig);
             Assert.Same(expectedResponse, response);
             mockGrpcClient.VerifyAll();
         }
@@ -963,7 +964,7 @@ namespace Google.Cloud.Container.V1.Tests
                 ClusterId = "clusterId240280960",
                 AddonsConfig = new AddonsConfig(),
             };
-            Operation expectedResponse = new Operation
+            apis::Operation expectedResponse = new apis::Operation
             {
                 Name = "name3373707",
                 Zone = "zone2-696322977",
@@ -975,13 +976,13 @@ namespace Google.Cloud.Container.V1.Tests
                 EndTime = "endTime1725551537",
             };
             mockGrpcClient.Setup(x => x.SetAddonsConfigAsync(expectedRequest, It.IsAny<CallOptions>()))
-                .Returns(new Grpc.Core.AsyncUnaryCall<Operation>(Task.FromResult(expectedResponse), null, null, null, null));
+                .Returns(new Grpc.Core.AsyncUnaryCall<apis::Operation>(Task.FromResult(expectedResponse), null, null, null, null));
             ClusterManagerClient client = new ClusterManagerClientImpl(mockGrpcClient.Object, null);
             string projectId = "projectId-1969970175";
             string zone = "zone3744684";
             string clusterId = "clusterId240280960";
             AddonsConfig addonsConfig = new AddonsConfig();
-            Operation response = await client.SetAddonsConfigAsync(projectId, zone, clusterId, addonsConfig);
+            apis::Operation response = await client.SetAddonsConfigAsync(projectId, zone, clusterId, addonsConfig);
             Assert.Same(expectedResponse, response);
             mockGrpcClient.VerifyAll();
         }
@@ -997,7 +998,7 @@ namespace Google.Cloud.Container.V1.Tests
                 ClusterId = "clusterId240280960",
                 AddonsConfig = new AddonsConfig(),
             };
-            Operation expectedResponse = new Operation
+            apis::Operation expectedResponse = new apis::Operation
             {
                 Name = "name3373707",
                 Zone = "zone2-696322977",
@@ -1011,7 +1012,7 @@ namespace Google.Cloud.Container.V1.Tests
             mockGrpcClient.Setup(x => x.SetAddonsConfig(request, It.IsAny<CallOptions>()))
                 .Returns(expectedResponse);
             ClusterManagerClient client = new ClusterManagerClientImpl(mockGrpcClient.Object, null);
-            Operation response = client.SetAddonsConfig(request);
+            apis::Operation response = client.SetAddonsConfig(request);
             Assert.Same(expectedResponse, response);
             mockGrpcClient.VerifyAll();
         }
@@ -1027,7 +1028,7 @@ namespace Google.Cloud.Container.V1.Tests
                 ClusterId = "clusterId240280960",
                 AddonsConfig = new AddonsConfig(),
             };
-            Operation expectedResponse = new Operation
+            apis::Operation expectedResponse = new apis::Operation
             {
                 Name = "name3373707",
                 Zone = "zone2-696322977",
@@ -1039,9 +1040,9 @@ namespace Google.Cloud.Container.V1.Tests
                 EndTime = "endTime1725551537",
             };
             mockGrpcClient.Setup(x => x.SetAddonsConfigAsync(request, It.IsAny<CallOptions>()))
-                .Returns(new Grpc.Core.AsyncUnaryCall<Operation>(Task.FromResult(expectedResponse), null, null, null, null));
+                .Returns(new Grpc.Core.AsyncUnaryCall<apis::Operation>(Task.FromResult(expectedResponse), null, null, null, null));
             ClusterManagerClient client = new ClusterManagerClientImpl(mockGrpcClient.Object, null);
-            Operation response = await client.SetAddonsConfigAsync(request);
+            apis::Operation response = await client.SetAddonsConfigAsync(request);
             Assert.Same(expectedResponse, response);
             mockGrpcClient.VerifyAll();
         }
@@ -1057,7 +1058,7 @@ namespace Google.Cloud.Container.V1.Tests
                 ClusterId = "clusterId240280960",
                 Locations = { },
             };
-            Operation expectedResponse = new Operation
+            apis::Operation expectedResponse = new apis::Operation
             {
                 Name = "name3373707",
                 Zone = "zone2-696322977",
@@ -1075,7 +1076,7 @@ namespace Google.Cloud.Container.V1.Tests
             string zone = "zone3744684";
             string clusterId = "clusterId240280960";
             IEnumerable<string> locations = new List<string>();
-            Operation response = client.SetLocations(projectId, zone, clusterId, locations);
+            apis::Operation response = client.SetLocations(projectId, zone, clusterId, locations);
             Assert.Same(expectedResponse, response);
             mockGrpcClient.VerifyAll();
         }
@@ -1091,7 +1092,7 @@ namespace Google.Cloud.Container.V1.Tests
                 ClusterId = "clusterId240280960",
                 Locations = { },
             };
-            Operation expectedResponse = new Operation
+            apis::Operation expectedResponse = new apis::Operation
             {
                 Name = "name3373707",
                 Zone = "zone2-696322977",
@@ -1103,13 +1104,13 @@ namespace Google.Cloud.Container.V1.Tests
                 EndTime = "endTime1725551537",
             };
             mockGrpcClient.Setup(x => x.SetLocationsAsync(expectedRequest, It.IsAny<CallOptions>()))
-                .Returns(new Grpc.Core.AsyncUnaryCall<Operation>(Task.FromResult(expectedResponse), null, null, null, null));
+                .Returns(new Grpc.Core.AsyncUnaryCall<apis::Operation>(Task.FromResult(expectedResponse), null, null, null, null));
             ClusterManagerClient client = new ClusterManagerClientImpl(mockGrpcClient.Object, null);
             string projectId = "projectId-1969970175";
             string zone = "zone3744684";
             string clusterId = "clusterId240280960";
             IEnumerable<string> locations = new List<string>();
-            Operation response = await client.SetLocationsAsync(projectId, zone, clusterId, locations);
+            apis::Operation response = await client.SetLocationsAsync(projectId, zone, clusterId, locations);
             Assert.Same(expectedResponse, response);
             mockGrpcClient.VerifyAll();
         }
@@ -1125,7 +1126,7 @@ namespace Google.Cloud.Container.V1.Tests
                 ClusterId = "clusterId240280960",
                 Locations = { },
             };
-            Operation expectedResponse = new Operation
+            apis::Operation expectedResponse = new apis::Operation
             {
                 Name = "name3373707",
                 Zone = "zone2-696322977",
@@ -1139,7 +1140,7 @@ namespace Google.Cloud.Container.V1.Tests
             mockGrpcClient.Setup(x => x.SetLocations(request, It.IsAny<CallOptions>()))
                 .Returns(expectedResponse);
             ClusterManagerClient client = new ClusterManagerClientImpl(mockGrpcClient.Object, null);
-            Operation response = client.SetLocations(request);
+            apis::Operation response = client.SetLocations(request);
             Assert.Same(expectedResponse, response);
             mockGrpcClient.VerifyAll();
         }
@@ -1155,7 +1156,7 @@ namespace Google.Cloud.Container.V1.Tests
                 ClusterId = "clusterId240280960",
                 Locations = { },
             };
-            Operation expectedResponse = new Operation
+            apis::Operation expectedResponse = new apis::Operation
             {
                 Name = "name3373707",
                 Zone = "zone2-696322977",
@@ -1167,9 +1168,9 @@ namespace Google.Cloud.Container.V1.Tests
                 EndTime = "endTime1725551537",
             };
             mockGrpcClient.Setup(x => x.SetLocationsAsync(request, It.IsAny<CallOptions>()))
-                .Returns(new Grpc.Core.AsyncUnaryCall<Operation>(Task.FromResult(expectedResponse), null, null, null, null));
+                .Returns(new Grpc.Core.AsyncUnaryCall<apis::Operation>(Task.FromResult(expectedResponse), null, null, null, null));
             ClusterManagerClient client = new ClusterManagerClientImpl(mockGrpcClient.Object, null);
-            Operation response = await client.SetLocationsAsync(request);
+            apis::Operation response = await client.SetLocationsAsync(request);
             Assert.Same(expectedResponse, response);
             mockGrpcClient.VerifyAll();
         }
@@ -1185,7 +1186,7 @@ namespace Google.Cloud.Container.V1.Tests
                 ClusterId = "clusterId240280960",
                 MasterVersion = "masterVersion-2139460613",
             };
-            Operation expectedResponse = new Operation
+            apis::Operation expectedResponse = new apis::Operation
             {
                 Name = "name3373707",
                 Zone = "zone2-696322977",
@@ -1203,7 +1204,7 @@ namespace Google.Cloud.Container.V1.Tests
             string zone = "zone3744684";
             string clusterId = "clusterId240280960";
             string masterVersion = "masterVersion-2139460613";
-            Operation response = client.UpdateMaster(projectId, zone, clusterId, masterVersion);
+            apis::Operation response = client.UpdateMaster(projectId, zone, clusterId, masterVersion);
             Assert.Same(expectedResponse, response);
             mockGrpcClient.VerifyAll();
         }
@@ -1219,7 +1220,7 @@ namespace Google.Cloud.Container.V1.Tests
                 ClusterId = "clusterId240280960",
                 MasterVersion = "masterVersion-2139460613",
             };
-            Operation expectedResponse = new Operation
+            apis::Operation expectedResponse = new apis::Operation
             {
                 Name = "name3373707",
                 Zone = "zone2-696322977",
@@ -1231,13 +1232,13 @@ namespace Google.Cloud.Container.V1.Tests
                 EndTime = "endTime1725551537",
             };
             mockGrpcClient.Setup(x => x.UpdateMasterAsync(expectedRequest, It.IsAny<CallOptions>()))
-                .Returns(new Grpc.Core.AsyncUnaryCall<Operation>(Task.FromResult(expectedResponse), null, null, null, null));
+                .Returns(new Grpc.Core.AsyncUnaryCall<apis::Operation>(Task.FromResult(expectedResponse), null, null, null, null));
             ClusterManagerClient client = new ClusterManagerClientImpl(mockGrpcClient.Object, null);
             string projectId = "projectId-1969970175";
             string zone = "zone3744684";
             string clusterId = "clusterId240280960";
             string masterVersion = "masterVersion-2139460613";
-            Operation response = await client.UpdateMasterAsync(projectId, zone, clusterId, masterVersion);
+            apis::Operation response = await client.UpdateMasterAsync(projectId, zone, clusterId, masterVersion);
             Assert.Same(expectedResponse, response);
             mockGrpcClient.VerifyAll();
         }
@@ -1253,7 +1254,7 @@ namespace Google.Cloud.Container.V1.Tests
                 ClusterId = "clusterId240280960",
                 MasterVersion = "masterVersion-2139460613",
             };
-            Operation expectedResponse = new Operation
+            apis::Operation expectedResponse = new apis::Operation
             {
                 Name = "name3373707",
                 Zone = "zone2-696322977",
@@ -1267,7 +1268,7 @@ namespace Google.Cloud.Container.V1.Tests
             mockGrpcClient.Setup(x => x.UpdateMaster(request, It.IsAny<CallOptions>()))
                 .Returns(expectedResponse);
             ClusterManagerClient client = new ClusterManagerClientImpl(mockGrpcClient.Object, null);
-            Operation response = client.UpdateMaster(request);
+            apis::Operation response = client.UpdateMaster(request);
             Assert.Same(expectedResponse, response);
             mockGrpcClient.VerifyAll();
         }
@@ -1283,7 +1284,7 @@ namespace Google.Cloud.Container.V1.Tests
                 ClusterId = "clusterId240280960",
                 MasterVersion = "masterVersion-2139460613",
             };
-            Operation expectedResponse = new Operation
+            apis::Operation expectedResponse = new apis::Operation
             {
                 Name = "name3373707",
                 Zone = "zone2-696322977",
@@ -1295,9 +1296,9 @@ namespace Google.Cloud.Container.V1.Tests
                 EndTime = "endTime1725551537",
             };
             mockGrpcClient.Setup(x => x.UpdateMasterAsync(request, It.IsAny<CallOptions>()))
-                .Returns(new Grpc.Core.AsyncUnaryCall<Operation>(Task.FromResult(expectedResponse), null, null, null, null));
+                .Returns(new Grpc.Core.AsyncUnaryCall<apis::Operation>(Task.FromResult(expectedResponse), null, null, null, null));
             ClusterManagerClient client = new ClusterManagerClientImpl(mockGrpcClient.Object, null);
-            Operation response = await client.UpdateMasterAsync(request);
+            apis::Operation response = await client.UpdateMasterAsync(request);
             Assert.Same(expectedResponse, response);
             mockGrpcClient.VerifyAll();
         }
@@ -1314,7 +1315,7 @@ namespace Google.Cloud.Container.V1.Tests
                 Action = SetMasterAuthRequest.Types.Action.Unknown,
                 Update = new MasterAuth(),
             };
-            Operation expectedResponse = new Operation
+            apis::Operation expectedResponse = new apis::Operation
             {
                 Name = "name3373707",
                 Zone = "zone2-696322977",
@@ -1328,7 +1329,7 @@ namespace Google.Cloud.Container.V1.Tests
             mockGrpcClient.Setup(x => x.SetMasterAuth(request, It.IsAny<CallOptions>()))
                 .Returns(expectedResponse);
             ClusterManagerClient client = new ClusterManagerClientImpl(mockGrpcClient.Object, null);
-            Operation response = client.SetMasterAuth(request);
+            apis::Operation response = client.SetMasterAuth(request);
             Assert.Same(expectedResponse, response);
             mockGrpcClient.VerifyAll();
         }
@@ -1345,7 +1346,7 @@ namespace Google.Cloud.Container.V1.Tests
                 Action = SetMasterAuthRequest.Types.Action.Unknown,
                 Update = new MasterAuth(),
             };
-            Operation expectedResponse = new Operation
+            apis::Operation expectedResponse = new apis::Operation
             {
                 Name = "name3373707",
                 Zone = "zone2-696322977",
@@ -1357,9 +1358,9 @@ namespace Google.Cloud.Container.V1.Tests
                 EndTime = "endTime1725551537",
             };
             mockGrpcClient.Setup(x => x.SetMasterAuthAsync(request, It.IsAny<CallOptions>()))
-                .Returns(new Grpc.Core.AsyncUnaryCall<Operation>(Task.FromResult(expectedResponse), null, null, null, null));
+                .Returns(new Grpc.Core.AsyncUnaryCall<apis::Operation>(Task.FromResult(expectedResponse), null, null, null, null));
             ClusterManagerClient client = new ClusterManagerClientImpl(mockGrpcClient.Object, null);
-            Operation response = await client.SetMasterAuthAsync(request);
+            apis::Operation response = await client.SetMasterAuthAsync(request);
             Assert.Same(expectedResponse, response);
             mockGrpcClient.VerifyAll();
         }
@@ -1374,7 +1375,7 @@ namespace Google.Cloud.Container.V1.Tests
                 Zone = "zone3744684",
                 ClusterId = "clusterId240280960",
             };
-            Operation expectedResponse = new Operation
+            apis::Operation expectedResponse = new apis::Operation
             {
                 Name = "name3373707",
                 Zone = "zone2-696322977",
@@ -1391,7 +1392,7 @@ namespace Google.Cloud.Container.V1.Tests
             string projectId = "projectId-1969970175";
             string zone = "zone3744684";
             string clusterId = "clusterId240280960";
-            Operation response = client.DeleteCluster(projectId, zone, clusterId);
+            apis::Operation response = client.DeleteCluster(projectId, zone, clusterId);
             Assert.Same(expectedResponse, response);
             mockGrpcClient.VerifyAll();
         }
@@ -1406,7 +1407,7 @@ namespace Google.Cloud.Container.V1.Tests
                 Zone = "zone3744684",
                 ClusterId = "clusterId240280960",
             };
-            Operation expectedResponse = new Operation
+            apis::Operation expectedResponse = new apis::Operation
             {
                 Name = "name3373707",
                 Zone = "zone2-696322977",
@@ -1418,12 +1419,12 @@ namespace Google.Cloud.Container.V1.Tests
                 EndTime = "endTime1725551537",
             };
             mockGrpcClient.Setup(x => x.DeleteClusterAsync(expectedRequest, It.IsAny<CallOptions>()))
-                .Returns(new Grpc.Core.AsyncUnaryCall<Operation>(Task.FromResult(expectedResponse), null, null, null, null));
+                .Returns(new Grpc.Core.AsyncUnaryCall<apis::Operation>(Task.FromResult(expectedResponse), null, null, null, null));
             ClusterManagerClient client = new ClusterManagerClientImpl(mockGrpcClient.Object, null);
             string projectId = "projectId-1969970175";
             string zone = "zone3744684";
             string clusterId = "clusterId240280960";
-            Operation response = await client.DeleteClusterAsync(projectId, zone, clusterId);
+            apis::Operation response = await client.DeleteClusterAsync(projectId, zone, clusterId);
             Assert.Same(expectedResponse, response);
             mockGrpcClient.VerifyAll();
         }
@@ -1438,7 +1439,7 @@ namespace Google.Cloud.Container.V1.Tests
                 Zone = "zone3744684",
                 ClusterId = "clusterId240280960",
             };
-            Operation expectedResponse = new Operation
+            apis::Operation expectedResponse = new apis::Operation
             {
                 Name = "name3373707",
                 Zone = "zone2-696322977",
@@ -1452,7 +1453,7 @@ namespace Google.Cloud.Container.V1.Tests
             mockGrpcClient.Setup(x => x.DeleteCluster(request, It.IsAny<CallOptions>()))
                 .Returns(expectedResponse);
             ClusterManagerClient client = new ClusterManagerClientImpl(mockGrpcClient.Object, null);
-            Operation response = client.DeleteCluster(request);
+            apis::Operation response = client.DeleteCluster(request);
             Assert.Same(expectedResponse, response);
             mockGrpcClient.VerifyAll();
         }
@@ -1467,7 +1468,7 @@ namespace Google.Cloud.Container.V1.Tests
                 Zone = "zone3744684",
                 ClusterId = "clusterId240280960",
             };
-            Operation expectedResponse = new Operation
+            apis::Operation expectedResponse = new apis::Operation
             {
                 Name = "name3373707",
                 Zone = "zone2-696322977",
@@ -1479,9 +1480,9 @@ namespace Google.Cloud.Container.V1.Tests
                 EndTime = "endTime1725551537",
             };
             mockGrpcClient.Setup(x => x.DeleteClusterAsync(request, It.IsAny<CallOptions>()))
-                .Returns(new Grpc.Core.AsyncUnaryCall<Operation>(Task.FromResult(expectedResponse), null, null, null, null));
+                .Returns(new Grpc.Core.AsyncUnaryCall<apis::Operation>(Task.FromResult(expectedResponse), null, null, null, null));
             ClusterManagerClient client = new ClusterManagerClientImpl(mockGrpcClient.Object, null);
-            Operation response = await client.DeleteClusterAsync(request);
+            apis::Operation response = await client.DeleteClusterAsync(request);
             Assert.Same(expectedResponse, response);
             mockGrpcClient.VerifyAll();
         }
@@ -1490,18 +1491,18 @@ namespace Google.Cloud.Container.V1.Tests
         public void ListOperations()
         {
             Mock<ClusterManager.ClusterManagerClient> mockGrpcClient = new Mock<ClusterManager.ClusterManagerClient>(MockBehavior.Strict);
-            ListOperationsRequest expectedRequest = new ListOperationsRequest
+            apis::ListOperationsRequest expectedRequest = new apis::ListOperationsRequest
             {
                 ProjectId = "projectId-1969970175",
                 Zone = "zone3744684",
             };
-            ListOperationsResponse expectedResponse = new ListOperationsResponse();
+            apis::ListOperationsResponse expectedResponse = new apis::ListOperationsResponse();
             mockGrpcClient.Setup(x => x.ListOperations(expectedRequest, It.IsAny<CallOptions>()))
                 .Returns(expectedResponse);
             ClusterManagerClient client = new ClusterManagerClientImpl(mockGrpcClient.Object, null);
             string projectId = "projectId-1969970175";
             string zone = "zone3744684";
-            ListOperationsResponse response = client.ListOperations(projectId, zone);
+            apis::ListOperationsResponse response = client.ListOperations(projectId, zone);
             Assert.Same(expectedResponse, response);
             mockGrpcClient.VerifyAll();
         }
@@ -1510,18 +1511,18 @@ namespace Google.Cloud.Container.V1.Tests
         public async Task ListOperationsAsync()
         {
             Mock<ClusterManager.ClusterManagerClient> mockGrpcClient = new Mock<ClusterManager.ClusterManagerClient>(MockBehavior.Strict);
-            ListOperationsRequest expectedRequest = new ListOperationsRequest
+            apis::ListOperationsRequest expectedRequest = new apis::ListOperationsRequest
             {
                 ProjectId = "projectId-1969970175",
                 Zone = "zone3744684",
             };
-            ListOperationsResponse expectedResponse = new ListOperationsResponse();
+            apis::ListOperationsResponse expectedResponse = new apis::ListOperationsResponse();
             mockGrpcClient.Setup(x => x.ListOperationsAsync(expectedRequest, It.IsAny<CallOptions>()))
-                .Returns(new Grpc.Core.AsyncUnaryCall<ListOperationsResponse>(Task.FromResult(expectedResponse), null, null, null, null));
+                .Returns(new Grpc.Core.AsyncUnaryCall<apis::ListOperationsResponse>(Task.FromResult(expectedResponse), null, null, null, null));
             ClusterManagerClient client = new ClusterManagerClientImpl(mockGrpcClient.Object, null);
             string projectId = "projectId-1969970175";
             string zone = "zone3744684";
-            ListOperationsResponse response = await client.ListOperationsAsync(projectId, zone);
+            apis::ListOperationsResponse response = await client.ListOperationsAsync(projectId, zone);
             Assert.Same(expectedResponse, response);
             mockGrpcClient.VerifyAll();
         }
@@ -1530,16 +1531,16 @@ namespace Google.Cloud.Container.V1.Tests
         public void ListOperations2()
         {
             Mock<ClusterManager.ClusterManagerClient> mockGrpcClient = new Mock<ClusterManager.ClusterManagerClient>(MockBehavior.Strict);
-            ListOperationsRequest request = new ListOperationsRequest
+            apis::ListOperationsRequest request = new apis::ListOperationsRequest
             {
                 ProjectId = "projectId-1969970175",
                 Zone = "zone3744684",
             };
-            ListOperationsResponse expectedResponse = new ListOperationsResponse();
+            apis::ListOperationsResponse expectedResponse = new apis::ListOperationsResponse();
             mockGrpcClient.Setup(x => x.ListOperations(request, It.IsAny<CallOptions>()))
                 .Returns(expectedResponse);
             ClusterManagerClient client = new ClusterManagerClientImpl(mockGrpcClient.Object, null);
-            ListOperationsResponse response = client.ListOperations(request);
+            apis::ListOperationsResponse response = client.ListOperations(request);
             Assert.Same(expectedResponse, response);
             mockGrpcClient.VerifyAll();
         }
@@ -1548,16 +1549,16 @@ namespace Google.Cloud.Container.V1.Tests
         public async Task ListOperationsAsync2()
         {
             Mock<ClusterManager.ClusterManagerClient> mockGrpcClient = new Mock<ClusterManager.ClusterManagerClient>(MockBehavior.Strict);
-            ListOperationsRequest request = new ListOperationsRequest
+            apis::ListOperationsRequest request = new apis::ListOperationsRequest
             {
                 ProjectId = "projectId-1969970175",
                 Zone = "zone3744684",
             };
-            ListOperationsResponse expectedResponse = new ListOperationsResponse();
+            apis::ListOperationsResponse expectedResponse = new apis::ListOperationsResponse();
             mockGrpcClient.Setup(x => x.ListOperationsAsync(request, It.IsAny<CallOptions>()))
-                .Returns(new Grpc.Core.AsyncUnaryCall<ListOperationsResponse>(Task.FromResult(expectedResponse), null, null, null, null));
+                .Returns(new Grpc.Core.AsyncUnaryCall<apis::ListOperationsResponse>(Task.FromResult(expectedResponse), null, null, null, null));
             ClusterManagerClient client = new ClusterManagerClientImpl(mockGrpcClient.Object, null);
-            ListOperationsResponse response = await client.ListOperationsAsync(request);
+            apis::ListOperationsResponse response = await client.ListOperationsAsync(request);
             Assert.Same(expectedResponse, response);
             mockGrpcClient.VerifyAll();
         }
@@ -1566,13 +1567,13 @@ namespace Google.Cloud.Container.V1.Tests
         public void GetOperation()
         {
             Mock<ClusterManager.ClusterManagerClient> mockGrpcClient = new Mock<ClusterManager.ClusterManagerClient>(MockBehavior.Strict);
-            GetOperationRequest expectedRequest = new GetOperationRequest
+            apis::GetOperationRequest expectedRequest = new apis::GetOperationRequest
             {
                 ProjectId = "projectId-1969970175",
                 Zone = "zone3744684",
                 OperationId = "operationId-274116877",
             };
-            Operation expectedResponse = new Operation
+            apis::Operation expectedResponse = new apis::Operation
             {
                 Name = "name3373707",
                 Zone = "zone2-696322977",
@@ -1589,7 +1590,7 @@ namespace Google.Cloud.Container.V1.Tests
             string projectId = "projectId-1969970175";
             string zone = "zone3744684";
             string operationId = "operationId-274116877";
-            Operation response = client.GetOperation(projectId, zone, operationId);
+            apis::Operation response = client.GetOperation(projectId, zone, operationId);
             Assert.Same(expectedResponse, response);
             mockGrpcClient.VerifyAll();
         }
@@ -1598,13 +1599,13 @@ namespace Google.Cloud.Container.V1.Tests
         public async Task GetOperationAsync()
         {
             Mock<ClusterManager.ClusterManagerClient> mockGrpcClient = new Mock<ClusterManager.ClusterManagerClient>(MockBehavior.Strict);
-            GetOperationRequest expectedRequest = new GetOperationRequest
+            apis::GetOperationRequest expectedRequest = new apis::GetOperationRequest
             {
                 ProjectId = "projectId-1969970175",
                 Zone = "zone3744684",
                 OperationId = "operationId-274116877",
             };
-            Operation expectedResponse = new Operation
+            apis::Operation expectedResponse = new apis::Operation
             {
                 Name = "name3373707",
                 Zone = "zone2-696322977",
@@ -1616,12 +1617,12 @@ namespace Google.Cloud.Container.V1.Tests
                 EndTime = "endTime1725551537",
             };
             mockGrpcClient.Setup(x => x.GetOperationAsync(expectedRequest, It.IsAny<CallOptions>()))
-                .Returns(new Grpc.Core.AsyncUnaryCall<Operation>(Task.FromResult(expectedResponse), null, null, null, null));
+                .Returns(new Grpc.Core.AsyncUnaryCall<apis::Operation>(Task.FromResult(expectedResponse), null, null, null, null));
             ClusterManagerClient client = new ClusterManagerClientImpl(mockGrpcClient.Object, null);
             string projectId = "projectId-1969970175";
             string zone = "zone3744684";
             string operationId = "operationId-274116877";
-            Operation response = await client.GetOperationAsync(projectId, zone, operationId);
+            apis::Operation response = await client.GetOperationAsync(projectId, zone, operationId);
             Assert.Same(expectedResponse, response);
             mockGrpcClient.VerifyAll();
         }
@@ -1630,13 +1631,13 @@ namespace Google.Cloud.Container.V1.Tests
         public void GetOperation2()
         {
             Mock<ClusterManager.ClusterManagerClient> mockGrpcClient = new Mock<ClusterManager.ClusterManagerClient>(MockBehavior.Strict);
-            GetOperationRequest request = new GetOperationRequest
+            apis::GetOperationRequest request = new apis::GetOperationRequest
             {
                 ProjectId = "projectId-1969970175",
                 Zone = "zone3744684",
                 OperationId = "operationId-274116877",
             };
-            Operation expectedResponse = new Operation
+            apis::Operation expectedResponse = new apis::Operation
             {
                 Name = "name3373707",
                 Zone = "zone2-696322977",
@@ -1650,7 +1651,7 @@ namespace Google.Cloud.Container.V1.Tests
             mockGrpcClient.Setup(x => x.GetOperation(request, It.IsAny<CallOptions>()))
                 .Returns(expectedResponse);
             ClusterManagerClient client = new ClusterManagerClientImpl(mockGrpcClient.Object, null);
-            Operation response = client.GetOperation(request);
+            apis::Operation response = client.GetOperation(request);
             Assert.Same(expectedResponse, response);
             mockGrpcClient.VerifyAll();
         }
@@ -1659,13 +1660,13 @@ namespace Google.Cloud.Container.V1.Tests
         public async Task GetOperationAsync2()
         {
             Mock<ClusterManager.ClusterManagerClient> mockGrpcClient = new Mock<ClusterManager.ClusterManagerClient>(MockBehavior.Strict);
-            GetOperationRequest request = new GetOperationRequest
+            apis::GetOperationRequest request = new apis::GetOperationRequest
             {
                 ProjectId = "projectId-1969970175",
                 Zone = "zone3744684",
                 OperationId = "operationId-274116877",
             };
-            Operation expectedResponse = new Operation
+            apis::Operation expectedResponse = new apis::Operation
             {
                 Name = "name3373707",
                 Zone = "zone2-696322977",
@@ -1677,9 +1678,9 @@ namespace Google.Cloud.Container.V1.Tests
                 EndTime = "endTime1725551537",
             };
             mockGrpcClient.Setup(x => x.GetOperationAsync(request, It.IsAny<CallOptions>()))
-                .Returns(new Grpc.Core.AsyncUnaryCall<Operation>(Task.FromResult(expectedResponse), null, null, null, null));
+                .Returns(new Grpc.Core.AsyncUnaryCall<apis::Operation>(Task.FromResult(expectedResponse), null, null, null, null));
             ClusterManagerClient client = new ClusterManagerClientImpl(mockGrpcClient.Object, null);
-            Operation response = await client.GetOperationAsync(request);
+            apis::Operation response = await client.GetOperationAsync(request);
             Assert.Same(expectedResponse, response);
             mockGrpcClient.VerifyAll();
         }
@@ -1688,7 +1689,7 @@ namespace Google.Cloud.Container.V1.Tests
         public void CancelOperation()
         {
             Mock<ClusterManager.ClusterManagerClient> mockGrpcClient = new Mock<ClusterManager.ClusterManagerClient>(MockBehavior.Strict);
-            CancelOperationRequest expectedRequest = new CancelOperationRequest
+            apis::CancelOperationRequest expectedRequest = new apis::CancelOperationRequest
             {
                 ProjectId = "projectId-1969970175",
                 Zone = "zone3744684",
@@ -1709,7 +1710,7 @@ namespace Google.Cloud.Container.V1.Tests
         public async Task CancelOperationAsync()
         {
             Mock<ClusterManager.ClusterManagerClient> mockGrpcClient = new Mock<ClusterManager.ClusterManagerClient>(MockBehavior.Strict);
-            CancelOperationRequest expectedRequest = new CancelOperationRequest
+            apis::CancelOperationRequest expectedRequest = new apis::CancelOperationRequest
             {
                 ProjectId = "projectId-1969970175",
                 Zone = "zone3744684",
@@ -1730,7 +1731,7 @@ namespace Google.Cloud.Container.V1.Tests
         public void CancelOperation2()
         {
             Mock<ClusterManager.ClusterManagerClient> mockGrpcClient = new Mock<ClusterManager.ClusterManagerClient>(MockBehavior.Strict);
-            CancelOperationRequest request = new CancelOperationRequest
+            apis::CancelOperationRequest request = new apis::CancelOperationRequest
             {
                 ProjectId = "projectId-1969970175",
                 Zone = "zone3744684",
@@ -1748,7 +1749,7 @@ namespace Google.Cloud.Container.V1.Tests
         public async Task CancelOperationAsync2()
         {
             Mock<ClusterManager.ClusterManagerClient> mockGrpcClient = new Mock<ClusterManager.ClusterManagerClient>(MockBehavior.Strict);
-            CancelOperationRequest request = new CancelOperationRequest
+            apis::CancelOperationRequest request = new apis::CancelOperationRequest
             {
                 ProjectId = "projectId-1969970175",
                 Zone = "zone3744684",
@@ -2063,7 +2064,7 @@ namespace Google.Cloud.Container.V1.Tests
                 ClusterId = "clusterId240280960",
                 NodePool = new NodePool(),
             };
-            Operation expectedResponse = new Operation
+            apis::Operation expectedResponse = new apis::Operation
             {
                 Name = "name3373707",
                 Zone = "zone2-696322977",
@@ -2081,7 +2082,7 @@ namespace Google.Cloud.Container.V1.Tests
             string zone = "zone3744684";
             string clusterId = "clusterId240280960";
             NodePool nodePool = new NodePool();
-            Operation response = client.CreateNodePool(projectId, zone, clusterId, nodePool);
+            apis::Operation response = client.CreateNodePool(projectId, zone, clusterId, nodePool);
             Assert.Same(expectedResponse, response);
             mockGrpcClient.VerifyAll();
         }
@@ -2097,7 +2098,7 @@ namespace Google.Cloud.Container.V1.Tests
                 ClusterId = "clusterId240280960",
                 NodePool = new NodePool(),
             };
-            Operation expectedResponse = new Operation
+            apis::Operation expectedResponse = new apis::Operation
             {
                 Name = "name3373707",
                 Zone = "zone2-696322977",
@@ -2109,13 +2110,13 @@ namespace Google.Cloud.Container.V1.Tests
                 EndTime = "endTime1725551537",
             };
             mockGrpcClient.Setup(x => x.CreateNodePoolAsync(expectedRequest, It.IsAny<CallOptions>()))
-                .Returns(new Grpc.Core.AsyncUnaryCall<Operation>(Task.FromResult(expectedResponse), null, null, null, null));
+                .Returns(new Grpc.Core.AsyncUnaryCall<apis::Operation>(Task.FromResult(expectedResponse), null, null, null, null));
             ClusterManagerClient client = new ClusterManagerClientImpl(mockGrpcClient.Object, null);
             string projectId = "projectId-1969970175";
             string zone = "zone3744684";
             string clusterId = "clusterId240280960";
             NodePool nodePool = new NodePool();
-            Operation response = await client.CreateNodePoolAsync(projectId, zone, clusterId, nodePool);
+            apis::Operation response = await client.CreateNodePoolAsync(projectId, zone, clusterId, nodePool);
             Assert.Same(expectedResponse, response);
             mockGrpcClient.VerifyAll();
         }
@@ -2131,7 +2132,7 @@ namespace Google.Cloud.Container.V1.Tests
                 ClusterId = "clusterId240280960",
                 NodePool = new NodePool(),
             };
-            Operation expectedResponse = new Operation
+            apis::Operation expectedResponse = new apis::Operation
             {
                 Name = "name3373707",
                 Zone = "zone2-696322977",
@@ -2145,7 +2146,7 @@ namespace Google.Cloud.Container.V1.Tests
             mockGrpcClient.Setup(x => x.CreateNodePool(request, It.IsAny<CallOptions>()))
                 .Returns(expectedResponse);
             ClusterManagerClient client = new ClusterManagerClientImpl(mockGrpcClient.Object, null);
-            Operation response = client.CreateNodePool(request);
+            apis::Operation response = client.CreateNodePool(request);
             Assert.Same(expectedResponse, response);
             mockGrpcClient.VerifyAll();
         }
@@ -2161,7 +2162,7 @@ namespace Google.Cloud.Container.V1.Tests
                 ClusterId = "clusterId240280960",
                 NodePool = new NodePool(),
             };
-            Operation expectedResponse = new Operation
+            apis::Operation expectedResponse = new apis::Operation
             {
                 Name = "name3373707",
                 Zone = "zone2-696322977",
@@ -2173,9 +2174,9 @@ namespace Google.Cloud.Container.V1.Tests
                 EndTime = "endTime1725551537",
             };
             mockGrpcClient.Setup(x => x.CreateNodePoolAsync(request, It.IsAny<CallOptions>()))
-                .Returns(new Grpc.Core.AsyncUnaryCall<Operation>(Task.FromResult(expectedResponse), null, null, null, null));
+                .Returns(new Grpc.Core.AsyncUnaryCall<apis::Operation>(Task.FromResult(expectedResponse), null, null, null, null));
             ClusterManagerClient client = new ClusterManagerClientImpl(mockGrpcClient.Object, null);
-            Operation response = await client.CreateNodePoolAsync(request);
+            apis::Operation response = await client.CreateNodePoolAsync(request);
             Assert.Same(expectedResponse, response);
             mockGrpcClient.VerifyAll();
         }
@@ -2191,7 +2192,7 @@ namespace Google.Cloud.Container.V1.Tests
                 ClusterId = "clusterId240280960",
                 NodePoolId = "nodePoolId1043384033",
             };
-            Operation expectedResponse = new Operation
+            apis::Operation expectedResponse = new apis::Operation
             {
                 Name = "name3373707",
                 Zone = "zone2-696322977",
@@ -2209,7 +2210,7 @@ namespace Google.Cloud.Container.V1.Tests
             string zone = "zone3744684";
             string clusterId = "clusterId240280960";
             string nodePoolId = "nodePoolId1043384033";
-            Operation response = client.DeleteNodePool(projectId, zone, clusterId, nodePoolId);
+            apis::Operation response = client.DeleteNodePool(projectId, zone, clusterId, nodePoolId);
             Assert.Same(expectedResponse, response);
             mockGrpcClient.VerifyAll();
         }
@@ -2225,7 +2226,7 @@ namespace Google.Cloud.Container.V1.Tests
                 ClusterId = "clusterId240280960",
                 NodePoolId = "nodePoolId1043384033",
             };
-            Operation expectedResponse = new Operation
+            apis::Operation expectedResponse = new apis::Operation
             {
                 Name = "name3373707",
                 Zone = "zone2-696322977",
@@ -2237,13 +2238,13 @@ namespace Google.Cloud.Container.V1.Tests
                 EndTime = "endTime1725551537",
             };
             mockGrpcClient.Setup(x => x.DeleteNodePoolAsync(expectedRequest, It.IsAny<CallOptions>()))
-                .Returns(new Grpc.Core.AsyncUnaryCall<Operation>(Task.FromResult(expectedResponse), null, null, null, null));
+                .Returns(new Grpc.Core.AsyncUnaryCall<apis::Operation>(Task.FromResult(expectedResponse), null, null, null, null));
             ClusterManagerClient client = new ClusterManagerClientImpl(mockGrpcClient.Object, null);
             string projectId = "projectId-1969970175";
             string zone = "zone3744684";
             string clusterId = "clusterId240280960";
             string nodePoolId = "nodePoolId1043384033";
-            Operation response = await client.DeleteNodePoolAsync(projectId, zone, clusterId, nodePoolId);
+            apis::Operation response = await client.DeleteNodePoolAsync(projectId, zone, clusterId, nodePoolId);
             Assert.Same(expectedResponse, response);
             mockGrpcClient.VerifyAll();
         }
@@ -2259,7 +2260,7 @@ namespace Google.Cloud.Container.V1.Tests
                 ClusterId = "clusterId240280960",
                 NodePoolId = "nodePoolId1043384033",
             };
-            Operation expectedResponse = new Operation
+            apis::Operation expectedResponse = new apis::Operation
             {
                 Name = "name3373707",
                 Zone = "zone2-696322977",
@@ -2273,7 +2274,7 @@ namespace Google.Cloud.Container.V1.Tests
             mockGrpcClient.Setup(x => x.DeleteNodePool(request, It.IsAny<CallOptions>()))
                 .Returns(expectedResponse);
             ClusterManagerClient client = new ClusterManagerClientImpl(mockGrpcClient.Object, null);
-            Operation response = client.DeleteNodePool(request);
+            apis::Operation response = client.DeleteNodePool(request);
             Assert.Same(expectedResponse, response);
             mockGrpcClient.VerifyAll();
         }
@@ -2289,7 +2290,7 @@ namespace Google.Cloud.Container.V1.Tests
                 ClusterId = "clusterId240280960",
                 NodePoolId = "nodePoolId1043384033",
             };
-            Operation expectedResponse = new Operation
+            apis::Operation expectedResponse = new apis::Operation
             {
                 Name = "name3373707",
                 Zone = "zone2-696322977",
@@ -2301,9 +2302,9 @@ namespace Google.Cloud.Container.V1.Tests
                 EndTime = "endTime1725551537",
             };
             mockGrpcClient.Setup(x => x.DeleteNodePoolAsync(request, It.IsAny<CallOptions>()))
-                .Returns(new Grpc.Core.AsyncUnaryCall<Operation>(Task.FromResult(expectedResponse), null, null, null, null));
+                .Returns(new Grpc.Core.AsyncUnaryCall<apis::Operation>(Task.FromResult(expectedResponse), null, null, null, null));
             ClusterManagerClient client = new ClusterManagerClientImpl(mockGrpcClient.Object, null);
-            Operation response = await client.DeleteNodePoolAsync(request);
+            apis::Operation response = await client.DeleteNodePoolAsync(request);
             Assert.Same(expectedResponse, response);
             mockGrpcClient.VerifyAll();
         }
@@ -2319,7 +2320,7 @@ namespace Google.Cloud.Container.V1.Tests
                 ClusterId = "clusterId240280960",
                 NodePoolId = "nodePoolId1043384033",
             };
-            Operation expectedResponse = new Operation
+            apis::Operation expectedResponse = new apis::Operation
             {
                 Name = "name3373707",
                 Zone = "zone2-696322977",
@@ -2337,7 +2338,7 @@ namespace Google.Cloud.Container.V1.Tests
             string zone = "zone3744684";
             string clusterId = "clusterId240280960";
             string nodePoolId = "nodePoolId1043384033";
-            Operation response = client.RollbackNodePoolUpgrade(projectId, zone, clusterId, nodePoolId);
+            apis::Operation response = client.RollbackNodePoolUpgrade(projectId, zone, clusterId, nodePoolId);
             Assert.Same(expectedResponse, response);
             mockGrpcClient.VerifyAll();
         }
@@ -2353,7 +2354,7 @@ namespace Google.Cloud.Container.V1.Tests
                 ClusterId = "clusterId240280960",
                 NodePoolId = "nodePoolId1043384033",
             };
-            Operation expectedResponse = new Operation
+            apis::Operation expectedResponse = new apis::Operation
             {
                 Name = "name3373707",
                 Zone = "zone2-696322977",
@@ -2365,13 +2366,13 @@ namespace Google.Cloud.Container.V1.Tests
                 EndTime = "endTime1725551537",
             };
             mockGrpcClient.Setup(x => x.RollbackNodePoolUpgradeAsync(expectedRequest, It.IsAny<CallOptions>()))
-                .Returns(new Grpc.Core.AsyncUnaryCall<Operation>(Task.FromResult(expectedResponse), null, null, null, null));
+                .Returns(new Grpc.Core.AsyncUnaryCall<apis::Operation>(Task.FromResult(expectedResponse), null, null, null, null));
             ClusterManagerClient client = new ClusterManagerClientImpl(mockGrpcClient.Object, null);
             string projectId = "projectId-1969970175";
             string zone = "zone3744684";
             string clusterId = "clusterId240280960";
             string nodePoolId = "nodePoolId1043384033";
-            Operation response = await client.RollbackNodePoolUpgradeAsync(projectId, zone, clusterId, nodePoolId);
+            apis::Operation response = await client.RollbackNodePoolUpgradeAsync(projectId, zone, clusterId, nodePoolId);
             Assert.Same(expectedResponse, response);
             mockGrpcClient.VerifyAll();
         }
@@ -2387,7 +2388,7 @@ namespace Google.Cloud.Container.V1.Tests
                 ClusterId = "clusterId240280960",
                 NodePoolId = "nodePoolId1043384033",
             };
-            Operation expectedResponse = new Operation
+            apis::Operation expectedResponse = new apis::Operation
             {
                 Name = "name3373707",
                 Zone = "zone2-696322977",
@@ -2401,7 +2402,7 @@ namespace Google.Cloud.Container.V1.Tests
             mockGrpcClient.Setup(x => x.RollbackNodePoolUpgrade(request, It.IsAny<CallOptions>()))
                 .Returns(expectedResponse);
             ClusterManagerClient client = new ClusterManagerClientImpl(mockGrpcClient.Object, null);
-            Operation response = client.RollbackNodePoolUpgrade(request);
+            apis::Operation response = client.RollbackNodePoolUpgrade(request);
             Assert.Same(expectedResponse, response);
             mockGrpcClient.VerifyAll();
         }
@@ -2417,7 +2418,7 @@ namespace Google.Cloud.Container.V1.Tests
                 ClusterId = "clusterId240280960",
                 NodePoolId = "nodePoolId1043384033",
             };
-            Operation expectedResponse = new Operation
+            apis::Operation expectedResponse = new apis::Operation
             {
                 Name = "name3373707",
                 Zone = "zone2-696322977",
@@ -2429,9 +2430,9 @@ namespace Google.Cloud.Container.V1.Tests
                 EndTime = "endTime1725551537",
             };
             mockGrpcClient.Setup(x => x.RollbackNodePoolUpgradeAsync(request, It.IsAny<CallOptions>()))
-                .Returns(new Grpc.Core.AsyncUnaryCall<Operation>(Task.FromResult(expectedResponse), null, null, null, null));
+                .Returns(new Grpc.Core.AsyncUnaryCall<apis::Operation>(Task.FromResult(expectedResponse), null, null, null, null));
             ClusterManagerClient client = new ClusterManagerClientImpl(mockGrpcClient.Object, null);
-            Operation response = await client.RollbackNodePoolUpgradeAsync(request);
+            apis::Operation response = await client.RollbackNodePoolUpgradeAsync(request);
             Assert.Same(expectedResponse, response);
             mockGrpcClient.VerifyAll();
         }
@@ -2448,7 +2449,7 @@ namespace Google.Cloud.Container.V1.Tests
                 NodePoolId = "nodePoolId1043384033",
                 Management = new NodeManagement(),
             };
-            Operation expectedResponse = new Operation
+            apis::Operation expectedResponse = new apis::Operation
             {
                 Name = "name3373707",
                 Zone = "zone2-696322977",
@@ -2462,7 +2463,7 @@ namespace Google.Cloud.Container.V1.Tests
             mockGrpcClient.Setup(x => x.SetNodePoolManagement(request, It.IsAny<CallOptions>()))
                 .Returns(expectedResponse);
             ClusterManagerClient client = new ClusterManagerClientImpl(mockGrpcClient.Object, null);
-            Operation response = client.SetNodePoolManagement(request);
+            apis::Operation response = client.SetNodePoolManagement(request);
             Assert.Same(expectedResponse, response);
             mockGrpcClient.VerifyAll();
         }
@@ -2479,7 +2480,7 @@ namespace Google.Cloud.Container.V1.Tests
                 NodePoolId = "nodePoolId1043384033",
                 Management = new NodeManagement(),
             };
-            Operation expectedResponse = new Operation
+            apis::Operation expectedResponse = new apis::Operation
             {
                 Name = "name3373707",
                 Zone = "zone2-696322977",
@@ -2491,9 +2492,9 @@ namespace Google.Cloud.Container.V1.Tests
                 EndTime = "endTime1725551537",
             };
             mockGrpcClient.Setup(x => x.SetNodePoolManagementAsync(request, It.IsAny<CallOptions>()))
-                .Returns(new Grpc.Core.AsyncUnaryCall<Operation>(Task.FromResult(expectedResponse), null, null, null, null));
+                .Returns(new Grpc.Core.AsyncUnaryCall<apis::Operation>(Task.FromResult(expectedResponse), null, null, null, null));
             ClusterManagerClient client = new ClusterManagerClientImpl(mockGrpcClient.Object, null);
-            Operation response = await client.SetNodePoolManagementAsync(request);
+            apis::Operation response = await client.SetNodePoolManagementAsync(request);
             Assert.Same(expectedResponse, response);
             mockGrpcClient.VerifyAll();
         }
@@ -2510,7 +2511,7 @@ namespace Google.Cloud.Container.V1.Tests
                 ResourceLabels = { },
                 LabelFingerprint = "labelFingerprint714995737",
             };
-            Operation expectedResponse = new Operation
+            apis::Operation expectedResponse = new apis::Operation
             {
                 Name = "name3373707",
                 Zone = "zone2-696322977",
@@ -2524,7 +2525,7 @@ namespace Google.Cloud.Container.V1.Tests
             mockGrpcClient.Setup(x => x.SetLabels(request, It.IsAny<CallOptions>()))
                 .Returns(expectedResponse);
             ClusterManagerClient client = new ClusterManagerClientImpl(mockGrpcClient.Object, null);
-            Operation response = client.SetLabels(request);
+            apis::Operation response = client.SetLabels(request);
             Assert.Same(expectedResponse, response);
             mockGrpcClient.VerifyAll();
         }
@@ -2541,7 +2542,7 @@ namespace Google.Cloud.Container.V1.Tests
                 ResourceLabels = { },
                 LabelFingerprint = "labelFingerprint714995737",
             };
-            Operation expectedResponse = new Operation
+            apis::Operation expectedResponse = new apis::Operation
             {
                 Name = "name3373707",
                 Zone = "zone2-696322977",
@@ -2553,9 +2554,9 @@ namespace Google.Cloud.Container.V1.Tests
                 EndTime = "endTime1725551537",
             };
             mockGrpcClient.Setup(x => x.SetLabelsAsync(request, It.IsAny<CallOptions>()))
-                .Returns(new Grpc.Core.AsyncUnaryCall<Operation>(Task.FromResult(expectedResponse), null, null, null, null));
+                .Returns(new Grpc.Core.AsyncUnaryCall<apis::Operation>(Task.FromResult(expectedResponse), null, null, null, null));
             ClusterManagerClient client = new ClusterManagerClientImpl(mockGrpcClient.Object, null);
-            Operation response = await client.SetLabelsAsync(request);
+            apis::Operation response = await client.SetLabelsAsync(request);
             Assert.Same(expectedResponse, response);
             mockGrpcClient.VerifyAll();
         }
@@ -2571,7 +2572,7 @@ namespace Google.Cloud.Container.V1.Tests
                 ClusterId = "clusterId240280960",
                 Enabled = false,
             };
-            Operation expectedResponse = new Operation
+            apis::Operation expectedResponse = new apis::Operation
             {
                 Name = "name3373707",
                 Zone = "zone2-696322977",
@@ -2589,7 +2590,7 @@ namespace Google.Cloud.Container.V1.Tests
             string zone = "zone3744684";
             string clusterId = "clusterId240280960";
             bool enabled = false;
-            Operation response = client.SetLegacyAbac(projectId, zone, clusterId, enabled);
+            apis::Operation response = client.SetLegacyAbac(projectId, zone, clusterId, enabled);
             Assert.Same(expectedResponse, response);
             mockGrpcClient.VerifyAll();
         }
@@ -2605,7 +2606,7 @@ namespace Google.Cloud.Container.V1.Tests
                 ClusterId = "clusterId240280960",
                 Enabled = false,
             };
-            Operation expectedResponse = new Operation
+            apis::Operation expectedResponse = new apis::Operation
             {
                 Name = "name3373707",
                 Zone = "zone2-696322977",
@@ -2617,13 +2618,13 @@ namespace Google.Cloud.Container.V1.Tests
                 EndTime = "endTime1725551537",
             };
             mockGrpcClient.Setup(x => x.SetLegacyAbacAsync(expectedRequest, It.IsAny<CallOptions>()))
-                .Returns(new Grpc.Core.AsyncUnaryCall<Operation>(Task.FromResult(expectedResponse), null, null, null, null));
+                .Returns(new Grpc.Core.AsyncUnaryCall<apis::Operation>(Task.FromResult(expectedResponse), null, null, null, null));
             ClusterManagerClient client = new ClusterManagerClientImpl(mockGrpcClient.Object, null);
             string projectId = "projectId-1969970175";
             string zone = "zone3744684";
             string clusterId = "clusterId240280960";
             bool enabled = false;
-            Operation response = await client.SetLegacyAbacAsync(projectId, zone, clusterId, enabled);
+            apis::Operation response = await client.SetLegacyAbacAsync(projectId, zone, clusterId, enabled);
             Assert.Same(expectedResponse, response);
             mockGrpcClient.VerifyAll();
         }
@@ -2639,7 +2640,7 @@ namespace Google.Cloud.Container.V1.Tests
                 ClusterId = "clusterId240280960",
                 Enabled = false,
             };
-            Operation expectedResponse = new Operation
+            apis::Operation expectedResponse = new apis::Operation
             {
                 Name = "name3373707",
                 Zone = "zone2-696322977",
@@ -2653,7 +2654,7 @@ namespace Google.Cloud.Container.V1.Tests
             mockGrpcClient.Setup(x => x.SetLegacyAbac(request, It.IsAny<CallOptions>()))
                 .Returns(expectedResponse);
             ClusterManagerClient client = new ClusterManagerClientImpl(mockGrpcClient.Object, null);
-            Operation response = client.SetLegacyAbac(request);
+            apis::Operation response = client.SetLegacyAbac(request);
             Assert.Same(expectedResponse, response);
             mockGrpcClient.VerifyAll();
         }
@@ -2669,7 +2670,7 @@ namespace Google.Cloud.Container.V1.Tests
                 ClusterId = "clusterId240280960",
                 Enabled = false,
             };
-            Operation expectedResponse = new Operation
+            apis::Operation expectedResponse = new apis::Operation
             {
                 Name = "name3373707",
                 Zone = "zone2-696322977",
@@ -2681,9 +2682,9 @@ namespace Google.Cloud.Container.V1.Tests
                 EndTime = "endTime1725551537",
             };
             mockGrpcClient.Setup(x => x.SetLegacyAbacAsync(request, It.IsAny<CallOptions>()))
-                .Returns(new Grpc.Core.AsyncUnaryCall<Operation>(Task.FromResult(expectedResponse), null, null, null, null));
+                .Returns(new Grpc.Core.AsyncUnaryCall<apis::Operation>(Task.FromResult(expectedResponse), null, null, null, null));
             ClusterManagerClient client = new ClusterManagerClientImpl(mockGrpcClient.Object, null);
-            Operation response = await client.SetLegacyAbacAsync(request);
+            apis::Operation response = await client.SetLegacyAbacAsync(request);
             Assert.Same(expectedResponse, response);
             mockGrpcClient.VerifyAll();
         }
@@ -2698,7 +2699,7 @@ namespace Google.Cloud.Container.V1.Tests
                 Zone = "zone3744684",
                 ClusterId = "clusterId240280960",
             };
-            Operation expectedResponse = new Operation
+            apis::Operation expectedResponse = new apis::Operation
             {
                 Name = "name3373707",
                 Zone = "zone2-696322977",
@@ -2715,7 +2716,7 @@ namespace Google.Cloud.Container.V1.Tests
             string projectId = "projectId-1969970175";
             string zone = "zone3744684";
             string clusterId = "clusterId240280960";
-            Operation response = client.StartIPRotation(projectId, zone, clusterId);
+            apis::Operation response = client.StartIPRotation(projectId, zone, clusterId);
             Assert.Same(expectedResponse, response);
             mockGrpcClient.VerifyAll();
         }
@@ -2730,7 +2731,7 @@ namespace Google.Cloud.Container.V1.Tests
                 Zone = "zone3744684",
                 ClusterId = "clusterId240280960",
             };
-            Operation expectedResponse = new Operation
+            apis::Operation expectedResponse = new apis::Operation
             {
                 Name = "name3373707",
                 Zone = "zone2-696322977",
@@ -2742,12 +2743,12 @@ namespace Google.Cloud.Container.V1.Tests
                 EndTime = "endTime1725551537",
             };
             mockGrpcClient.Setup(x => x.StartIPRotationAsync(expectedRequest, It.IsAny<CallOptions>()))
-                .Returns(new Grpc.Core.AsyncUnaryCall<Operation>(Task.FromResult(expectedResponse), null, null, null, null));
+                .Returns(new Grpc.Core.AsyncUnaryCall<apis::Operation>(Task.FromResult(expectedResponse), null, null, null, null));
             ClusterManagerClient client = new ClusterManagerClientImpl(mockGrpcClient.Object, null);
             string projectId = "projectId-1969970175";
             string zone = "zone3744684";
             string clusterId = "clusterId240280960";
-            Operation response = await client.StartIPRotationAsync(projectId, zone, clusterId);
+            apis::Operation response = await client.StartIPRotationAsync(projectId, zone, clusterId);
             Assert.Same(expectedResponse, response);
             mockGrpcClient.VerifyAll();
         }
@@ -2762,7 +2763,7 @@ namespace Google.Cloud.Container.V1.Tests
                 Zone = "zone3744684",
                 ClusterId = "clusterId240280960",
             };
-            Operation expectedResponse = new Operation
+            apis::Operation expectedResponse = new apis::Operation
             {
                 Name = "name3373707",
                 Zone = "zone2-696322977",
@@ -2776,7 +2777,7 @@ namespace Google.Cloud.Container.V1.Tests
             mockGrpcClient.Setup(x => x.StartIPRotation(request, It.IsAny<CallOptions>()))
                 .Returns(expectedResponse);
             ClusterManagerClient client = new ClusterManagerClientImpl(mockGrpcClient.Object, null);
-            Operation response = client.StartIPRotation(request);
+            apis::Operation response = client.StartIPRotation(request);
             Assert.Same(expectedResponse, response);
             mockGrpcClient.VerifyAll();
         }
@@ -2791,7 +2792,7 @@ namespace Google.Cloud.Container.V1.Tests
                 Zone = "zone3744684",
                 ClusterId = "clusterId240280960",
             };
-            Operation expectedResponse = new Operation
+            apis::Operation expectedResponse = new apis::Operation
             {
                 Name = "name3373707",
                 Zone = "zone2-696322977",
@@ -2803,9 +2804,9 @@ namespace Google.Cloud.Container.V1.Tests
                 EndTime = "endTime1725551537",
             };
             mockGrpcClient.Setup(x => x.StartIPRotationAsync(request, It.IsAny<CallOptions>()))
-                .Returns(new Grpc.Core.AsyncUnaryCall<Operation>(Task.FromResult(expectedResponse), null, null, null, null));
+                .Returns(new Grpc.Core.AsyncUnaryCall<apis::Operation>(Task.FromResult(expectedResponse), null, null, null, null));
             ClusterManagerClient client = new ClusterManagerClientImpl(mockGrpcClient.Object, null);
-            Operation response = await client.StartIPRotationAsync(request);
+            apis::Operation response = await client.StartIPRotationAsync(request);
             Assert.Same(expectedResponse, response);
             mockGrpcClient.VerifyAll();
         }
@@ -2820,7 +2821,7 @@ namespace Google.Cloud.Container.V1.Tests
                 Zone = "zone3744684",
                 ClusterId = "clusterId240280960",
             };
-            Operation expectedResponse = new Operation
+            apis::Operation expectedResponse = new apis::Operation
             {
                 Name = "name3373707",
                 Zone = "zone2-696322977",
@@ -2837,7 +2838,7 @@ namespace Google.Cloud.Container.V1.Tests
             string projectId = "projectId-1969970175";
             string zone = "zone3744684";
             string clusterId = "clusterId240280960";
-            Operation response = client.CompleteIPRotation(projectId, zone, clusterId);
+            apis::Operation response = client.CompleteIPRotation(projectId, zone, clusterId);
             Assert.Same(expectedResponse, response);
             mockGrpcClient.VerifyAll();
         }
@@ -2852,7 +2853,7 @@ namespace Google.Cloud.Container.V1.Tests
                 Zone = "zone3744684",
                 ClusterId = "clusterId240280960",
             };
-            Operation expectedResponse = new Operation
+            apis::Operation expectedResponse = new apis::Operation
             {
                 Name = "name3373707",
                 Zone = "zone2-696322977",
@@ -2864,12 +2865,12 @@ namespace Google.Cloud.Container.V1.Tests
                 EndTime = "endTime1725551537",
             };
             mockGrpcClient.Setup(x => x.CompleteIPRotationAsync(expectedRequest, It.IsAny<CallOptions>()))
-                .Returns(new Grpc.Core.AsyncUnaryCall<Operation>(Task.FromResult(expectedResponse), null, null, null, null));
+                .Returns(new Grpc.Core.AsyncUnaryCall<apis::Operation>(Task.FromResult(expectedResponse), null, null, null, null));
             ClusterManagerClient client = new ClusterManagerClientImpl(mockGrpcClient.Object, null);
             string projectId = "projectId-1969970175";
             string zone = "zone3744684";
             string clusterId = "clusterId240280960";
-            Operation response = await client.CompleteIPRotationAsync(projectId, zone, clusterId);
+            apis::Operation response = await client.CompleteIPRotationAsync(projectId, zone, clusterId);
             Assert.Same(expectedResponse, response);
             mockGrpcClient.VerifyAll();
         }
@@ -2884,7 +2885,7 @@ namespace Google.Cloud.Container.V1.Tests
                 Zone = "zone3744684",
                 ClusterId = "clusterId240280960",
             };
-            Operation expectedResponse = new Operation
+            apis::Operation expectedResponse = new apis::Operation
             {
                 Name = "name3373707",
                 Zone = "zone2-696322977",
@@ -2898,7 +2899,7 @@ namespace Google.Cloud.Container.V1.Tests
             mockGrpcClient.Setup(x => x.CompleteIPRotation(request, It.IsAny<CallOptions>()))
                 .Returns(expectedResponse);
             ClusterManagerClient client = new ClusterManagerClientImpl(mockGrpcClient.Object, null);
-            Operation response = client.CompleteIPRotation(request);
+            apis::Operation response = client.CompleteIPRotation(request);
             Assert.Same(expectedResponse, response);
             mockGrpcClient.VerifyAll();
         }
@@ -2913,7 +2914,7 @@ namespace Google.Cloud.Container.V1.Tests
                 Zone = "zone3744684",
                 ClusterId = "clusterId240280960",
             };
-            Operation expectedResponse = new Operation
+            apis::Operation expectedResponse = new apis::Operation
             {
                 Name = "name3373707",
                 Zone = "zone2-696322977",
@@ -2925,9 +2926,9 @@ namespace Google.Cloud.Container.V1.Tests
                 EndTime = "endTime1725551537",
             };
             mockGrpcClient.Setup(x => x.CompleteIPRotationAsync(request, It.IsAny<CallOptions>()))
-                .Returns(new Grpc.Core.AsyncUnaryCall<Operation>(Task.FromResult(expectedResponse), null, null, null, null));
+                .Returns(new Grpc.Core.AsyncUnaryCall<apis::Operation>(Task.FromResult(expectedResponse), null, null, null, null));
             ClusterManagerClient client = new ClusterManagerClientImpl(mockGrpcClient.Object, null);
-            Operation response = await client.CompleteIPRotationAsync(request);
+            apis::Operation response = await client.CompleteIPRotationAsync(request);
             Assert.Same(expectedResponse, response);
             mockGrpcClient.VerifyAll();
         }
@@ -2944,7 +2945,7 @@ namespace Google.Cloud.Container.V1.Tests
                 NodePoolId = "nodePoolId1043384033",
                 NodeCount = 1539922066,
             };
-            Operation expectedResponse = new Operation
+            apis::Operation expectedResponse = new apis::Operation
             {
                 Name = "name3373707",
                 Zone = "zone2-696322977",
@@ -2958,7 +2959,7 @@ namespace Google.Cloud.Container.V1.Tests
             mockGrpcClient.Setup(x => x.SetNodePoolSize(request, It.IsAny<CallOptions>()))
                 .Returns(expectedResponse);
             ClusterManagerClient client = new ClusterManagerClientImpl(mockGrpcClient.Object, null);
-            Operation response = client.SetNodePoolSize(request);
+            apis::Operation response = client.SetNodePoolSize(request);
             Assert.Same(expectedResponse, response);
             mockGrpcClient.VerifyAll();
         }
@@ -2975,7 +2976,7 @@ namespace Google.Cloud.Container.V1.Tests
                 NodePoolId = "nodePoolId1043384033",
                 NodeCount = 1539922066,
             };
-            Operation expectedResponse = new Operation
+            apis::Operation expectedResponse = new apis::Operation
             {
                 Name = "name3373707",
                 Zone = "zone2-696322977",
@@ -2987,9 +2988,9 @@ namespace Google.Cloud.Container.V1.Tests
                 EndTime = "endTime1725551537",
             };
             mockGrpcClient.Setup(x => x.SetNodePoolSizeAsync(request, It.IsAny<CallOptions>()))
-                .Returns(new Grpc.Core.AsyncUnaryCall<Operation>(Task.FromResult(expectedResponse), null, null, null, null));
+                .Returns(new Grpc.Core.AsyncUnaryCall<apis::Operation>(Task.FromResult(expectedResponse), null, null, null, null));
             ClusterManagerClient client = new ClusterManagerClientImpl(mockGrpcClient.Object, null);
-            Operation response = await client.SetNodePoolSizeAsync(request);
+            apis::Operation response = await client.SetNodePoolSizeAsync(request);
             Assert.Same(expectedResponse, response);
             mockGrpcClient.VerifyAll();
         }
@@ -3005,7 +3006,7 @@ namespace Google.Cloud.Container.V1.Tests
                 ClusterId = "clusterId240280960",
                 NetworkPolicy = new NetworkPolicy(),
             };
-            Operation expectedResponse = new Operation
+            apis::Operation expectedResponse = new apis::Operation
             {
                 Name = "name3373707",
                 Zone = "zone2-696322977",
@@ -3023,7 +3024,7 @@ namespace Google.Cloud.Container.V1.Tests
             string zone = "zone3744684";
             string clusterId = "clusterId240280960";
             NetworkPolicy networkPolicy = new NetworkPolicy();
-            Operation response = client.SetNetworkPolicy(projectId, zone, clusterId, networkPolicy);
+            apis::Operation response = client.SetNetworkPolicy(projectId, zone, clusterId, networkPolicy);
             Assert.Same(expectedResponse, response);
             mockGrpcClient.VerifyAll();
         }
@@ -3039,7 +3040,7 @@ namespace Google.Cloud.Container.V1.Tests
                 ClusterId = "clusterId240280960",
                 NetworkPolicy = new NetworkPolicy(),
             };
-            Operation expectedResponse = new Operation
+            apis::Operation expectedResponse = new apis::Operation
             {
                 Name = "name3373707",
                 Zone = "zone2-696322977",
@@ -3051,13 +3052,13 @@ namespace Google.Cloud.Container.V1.Tests
                 EndTime = "endTime1725551537",
             };
             mockGrpcClient.Setup(x => x.SetNetworkPolicyAsync(expectedRequest, It.IsAny<CallOptions>()))
-                .Returns(new Grpc.Core.AsyncUnaryCall<Operation>(Task.FromResult(expectedResponse), null, null, null, null));
+                .Returns(new Grpc.Core.AsyncUnaryCall<apis::Operation>(Task.FromResult(expectedResponse), null, null, null, null));
             ClusterManagerClient client = new ClusterManagerClientImpl(mockGrpcClient.Object, null);
             string projectId = "projectId-1969970175";
             string zone = "zone3744684";
             string clusterId = "clusterId240280960";
             NetworkPolicy networkPolicy = new NetworkPolicy();
-            Operation response = await client.SetNetworkPolicyAsync(projectId, zone, clusterId, networkPolicy);
+            apis::Operation response = await client.SetNetworkPolicyAsync(projectId, zone, clusterId, networkPolicy);
             Assert.Same(expectedResponse, response);
             mockGrpcClient.VerifyAll();
         }
@@ -3073,7 +3074,7 @@ namespace Google.Cloud.Container.V1.Tests
                 ClusterId = "clusterId240280960",
                 NetworkPolicy = new NetworkPolicy(),
             };
-            Operation expectedResponse = new Operation
+            apis::Operation expectedResponse = new apis::Operation
             {
                 Name = "name3373707",
                 Zone = "zone2-696322977",
@@ -3087,7 +3088,7 @@ namespace Google.Cloud.Container.V1.Tests
             mockGrpcClient.Setup(x => x.SetNetworkPolicy(request, It.IsAny<CallOptions>()))
                 .Returns(expectedResponse);
             ClusterManagerClient client = new ClusterManagerClientImpl(mockGrpcClient.Object, null);
-            Operation response = client.SetNetworkPolicy(request);
+            apis::Operation response = client.SetNetworkPolicy(request);
             Assert.Same(expectedResponse, response);
             mockGrpcClient.VerifyAll();
         }
@@ -3103,7 +3104,7 @@ namespace Google.Cloud.Container.V1.Tests
                 ClusterId = "clusterId240280960",
                 NetworkPolicy = new NetworkPolicy(),
             };
-            Operation expectedResponse = new Operation
+            apis::Operation expectedResponse = new apis::Operation
             {
                 Name = "name3373707",
                 Zone = "zone2-696322977",
@@ -3115,9 +3116,9 @@ namespace Google.Cloud.Container.V1.Tests
                 EndTime = "endTime1725551537",
             };
             mockGrpcClient.Setup(x => x.SetNetworkPolicyAsync(request, It.IsAny<CallOptions>()))
-                .Returns(new Grpc.Core.AsyncUnaryCall<Operation>(Task.FromResult(expectedResponse), null, null, null, null));
+                .Returns(new Grpc.Core.AsyncUnaryCall<apis::Operation>(Task.FromResult(expectedResponse), null, null, null, null));
             ClusterManagerClient client = new ClusterManagerClientImpl(mockGrpcClient.Object, null);
-            Operation response = await client.SetNetworkPolicyAsync(request);
+            apis::Operation response = await client.SetNetworkPolicyAsync(request);
             Assert.Same(expectedResponse, response);
             mockGrpcClient.VerifyAll();
         }
@@ -3133,7 +3134,7 @@ namespace Google.Cloud.Container.V1.Tests
                 ClusterId = "clusterId240280960",
                 MaintenancePolicy = new MaintenancePolicy(),
             };
-            Operation expectedResponse = new Operation
+            apis::Operation expectedResponse = new apis::Operation
             {
                 Name = "name3373707",
                 Zone = "zone2-696322977",
@@ -3151,7 +3152,7 @@ namespace Google.Cloud.Container.V1.Tests
             string zone = "zone3744684";
             string clusterId = "clusterId240280960";
             MaintenancePolicy maintenancePolicy = new MaintenancePolicy();
-            Operation response = client.SetMaintenancePolicy(projectId, zone, clusterId, maintenancePolicy);
+            apis::Operation response = client.SetMaintenancePolicy(projectId, zone, clusterId, maintenancePolicy);
             Assert.Same(expectedResponse, response);
             mockGrpcClient.VerifyAll();
         }
@@ -3167,7 +3168,7 @@ namespace Google.Cloud.Container.V1.Tests
                 ClusterId = "clusterId240280960",
                 MaintenancePolicy = new MaintenancePolicy(),
             };
-            Operation expectedResponse = new Operation
+            apis::Operation expectedResponse = new apis::Operation
             {
                 Name = "name3373707",
                 Zone = "zone2-696322977",
@@ -3179,13 +3180,13 @@ namespace Google.Cloud.Container.V1.Tests
                 EndTime = "endTime1725551537",
             };
             mockGrpcClient.Setup(x => x.SetMaintenancePolicyAsync(expectedRequest, It.IsAny<CallOptions>()))
-                .Returns(new Grpc.Core.AsyncUnaryCall<Operation>(Task.FromResult(expectedResponse), null, null, null, null));
+                .Returns(new Grpc.Core.AsyncUnaryCall<apis::Operation>(Task.FromResult(expectedResponse), null, null, null, null));
             ClusterManagerClient client = new ClusterManagerClientImpl(mockGrpcClient.Object, null);
             string projectId = "projectId-1969970175";
             string zone = "zone3744684";
             string clusterId = "clusterId240280960";
             MaintenancePolicy maintenancePolicy = new MaintenancePolicy();
-            Operation response = await client.SetMaintenancePolicyAsync(projectId, zone, clusterId, maintenancePolicy);
+            apis::Operation response = await client.SetMaintenancePolicyAsync(projectId, zone, clusterId, maintenancePolicy);
             Assert.Same(expectedResponse, response);
             mockGrpcClient.VerifyAll();
         }
@@ -3201,7 +3202,7 @@ namespace Google.Cloud.Container.V1.Tests
                 ClusterId = "clusterId240280960",
                 MaintenancePolicy = new MaintenancePolicy(),
             };
-            Operation expectedResponse = new Operation
+            apis::Operation expectedResponse = new apis::Operation
             {
                 Name = "name3373707",
                 Zone = "zone2-696322977",
@@ -3215,7 +3216,7 @@ namespace Google.Cloud.Container.V1.Tests
             mockGrpcClient.Setup(x => x.SetMaintenancePolicy(request, It.IsAny<CallOptions>()))
                 .Returns(expectedResponse);
             ClusterManagerClient client = new ClusterManagerClientImpl(mockGrpcClient.Object, null);
-            Operation response = client.SetMaintenancePolicy(request);
+            apis::Operation response = client.SetMaintenancePolicy(request);
             Assert.Same(expectedResponse, response);
             mockGrpcClient.VerifyAll();
         }
@@ -3231,7 +3232,7 @@ namespace Google.Cloud.Container.V1.Tests
                 ClusterId = "clusterId240280960",
                 MaintenancePolicy = new MaintenancePolicy(),
             };
-            Operation expectedResponse = new Operation
+            apis::Operation expectedResponse = new apis::Operation
             {
                 Name = "name3373707",
                 Zone = "zone2-696322977",
@@ -3243,9 +3244,9 @@ namespace Google.Cloud.Container.V1.Tests
                 EndTime = "endTime1725551537",
             };
             mockGrpcClient.Setup(x => x.SetMaintenancePolicyAsync(request, It.IsAny<CallOptions>()))
-                .Returns(new Grpc.Core.AsyncUnaryCall<Operation>(Task.FromResult(expectedResponse), null, null, null, null));
+                .Returns(new Grpc.Core.AsyncUnaryCall<apis::Operation>(Task.FromResult(expectedResponse), null, null, null, null));
             ClusterManagerClient client = new ClusterManagerClientImpl(mockGrpcClient.Object, null);
-            Operation response = await client.SetMaintenancePolicyAsync(request);
+            apis::Operation response = await client.SetMaintenancePolicyAsync(request);
             Assert.Same(expectedResponse, response);
             mockGrpcClient.VerifyAll();
         }

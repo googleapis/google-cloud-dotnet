@@ -14,22 +14,22 @@
 
 // Generated code. DO NOT EDIT!
 
-using Google.Api.Gax;
-using Google.Api.Gax.Grpc;
-using Google.Cloud.Firestore.V1Beta1;
-using Google.Protobuf;
-using Google.Protobuf.WellKnownTypes;
-using Grpc.Core;
-using System;
-using System.Collections;
-using System.Collections.Generic;
-using System.Collections.ObjectModel;
-using System.Linq;
-using System.Threading;
-using System.Threading.Tasks;
-
 namespace Google.Cloud.Firestore.V1Beta1.Snippets
 {
+    using Google.Api.Gax;
+    using Google.Api.Gax.Grpc;
+    using apis = Google.Cloud.Firestore.V1Beta1;
+    using Google.Protobuf;
+    using Google.Protobuf.WellKnownTypes;
+    using Grpc.Core;
+    using System;
+    using System.Collections;
+    using System.Collections.Generic;
+    using System.Collections.ObjectModel;
+    using System.Linq;
+    using System.Threading;
+    using System.Threading.Tasks;
+
     /// <summary>Generated snippets</summary>
     public class GeneratedFirestoreClientSnippets
     {
@@ -484,7 +484,7 @@ namespace Google.Cloud.Firestore.V1Beta1.Snippets
             FirestoreClient firestoreClient = await FirestoreClient.CreateAsync();
             // Initialize request argument(s)
             string formattedDatabase = new DatabaseRootName("[PROJECT]", "[DATABASE]").ToString();
-            ByteString transaction = ByteString.CopyFromUtf8("");
+            ByteString transaction = Google.Protobuf.ByteString.CopyFromUtf8("");
             // Make the request
             await firestoreClient.RollbackAsync(formattedDatabase, transaction);
             // End snippet
@@ -498,7 +498,7 @@ namespace Google.Cloud.Firestore.V1Beta1.Snippets
             FirestoreClient firestoreClient = FirestoreClient.Create();
             // Initialize request argument(s)
             string formattedDatabase = new DatabaseRootName("[PROJECT]", "[DATABASE]").ToString();
-            ByteString transaction = ByteString.CopyFromUtf8("");
+            ByteString transaction = Google.Protobuf.ByteString.CopyFromUtf8("");
             // Make the request
             firestoreClient.Rollback(formattedDatabase, transaction);
             // End snippet
@@ -515,7 +515,7 @@ namespace Google.Cloud.Firestore.V1Beta1.Snippets
             RollbackRequest request = new RollbackRequest
             {
                 Database = new DatabaseRootName("[PROJECT]", "[DATABASE]").ToString(),
-                Transaction = ByteString.CopyFromUtf8(""),
+                Transaction = Google.Protobuf.ByteString.CopyFromUtf8(""),
             };
             // Make the request
             await firestoreClient.RollbackAsync(request);
@@ -532,7 +532,7 @@ namespace Google.Cloud.Firestore.V1Beta1.Snippets
             RollbackRequest request = new RollbackRequest
             {
                 Database = new DatabaseRootName("[PROJECT]", "[DATABASE]").ToString(),
-                Transaction = ByteString.CopyFromUtf8(""),
+                Transaction = Google.Protobuf.ByteString.CopyFromUtf8(""),
             };
             // Make the request
             firestoreClient.Rollback(request);

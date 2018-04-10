@@ -14,24 +14,24 @@
 
 // Generated code. DO NOT EDIT!
 
-using Google.Api.Gax;
-using Google.Api.Gax.Grpc;
-using Google.Protobuf;
-using Google.Protobuf.WellKnownTypes;
-using Grpc.Core;
-using System;
-using System.Collections;
-using System.Collections.Generic;
-using System.Collections.ObjectModel;
-using System.Threading;
-using System.Threading.Tasks;
+using gax = Google.Api.Gax;
+using gaxgrpc = Google.Api.Gax.Grpc;
+using proto = Google.Protobuf;
+using protowkt = Google.Protobuf.WellKnownTypes;
+using grpccore = Grpc.Core;
+using s = System;
+using sc = System.Collections;
+using scg = System.Collections.Generic;
+using sco = System.Collections.ObjectModel;
+using st = System.Threading;
+using stt = System.Threading.Tasks;
 
 namespace Google.Cloud.Spanner.V1
 {
     /// <summary>
     /// Settings for a <see cref="SpannerClient"/>.
     /// </summary>
-    public sealed partial class SpannerSettings : ServiceSettingsBase
+    public sealed partial class SpannerSettings : gaxgrpc::ServiceSettingsBase
     {
         /// <summary>
         /// Get a new instance of the default <see cref="SpannerSettings"/>.
@@ -48,7 +48,7 @@ namespace Google.Cloud.Spanner.V1
 
         private SpannerSettings(SpannerSettings existing) : base(existing)
         {
-            GaxPreconditions.CheckNotNull(existing, nameof(existing));
+            gax::GaxPreconditions.CheckNotNull(existing, nameof(existing));
             CreateSessionSettings = existing.CreateSessionSettings;
             GetSessionSettings = existing.GetSessionSettings;
             ListSessionsSettings = existing.ListSessionsSettings;
@@ -68,41 +68,41 @@ namespace Google.Cloud.Spanner.V1
         partial void OnCopy(SpannerSettings existing);
 
         /// <summary>
-        /// The filter specifying which RPC <see cref="StatusCode"/>s are eligible for retry
+        /// The filter specifying which RPC <see cref="grpccore::StatusCode"/>s are eligible for retry
         /// for "Idempotent" <see cref="SpannerClient"/> RPC methods.
         /// </summary>
         /// <remarks>
-        /// The eligible RPC <see cref="StatusCode"/>s for retry for "Idempotent" RPC methods are:
+        /// The eligible RPC <see cref="grpccore::StatusCode"/>s for retry for "Idempotent" RPC methods are:
         /// <list type="bullet">
-        /// <item><description><see cref="StatusCode.DeadlineExceeded"/></description></item>
-        /// <item><description><see cref="StatusCode.Unavailable"/></description></item>
+        /// <item><description><see cref="grpccore::StatusCode.DeadlineExceeded"/></description></item>
+        /// <item><description><see cref="grpccore::StatusCode.Unavailable"/></description></item>
         /// </list>
         /// </remarks>
-        public static Predicate<RpcException> IdempotentRetryFilter { get; } =
-            RetrySettings.FilterForStatusCodes(StatusCode.DeadlineExceeded, StatusCode.Unavailable);
+        public static s::Predicate<grpccore::RpcException> IdempotentRetryFilter { get; } =
+            gaxgrpc::RetrySettings.FilterForStatusCodes(grpccore::StatusCode.DeadlineExceeded, grpccore::StatusCode.Unavailable);
 
         /// <summary>
-        /// The filter specifying which RPC <see cref="StatusCode"/>s are eligible for retry
+        /// The filter specifying which RPC <see cref="grpccore::StatusCode"/>s are eligible for retry
         /// for "NonIdempotent" <see cref="SpannerClient"/> RPC methods.
         /// </summary>
         /// <remarks>
-        /// There are no RPC <see cref="StatusCode"/>s eligible for retry for "NonIdempotent" RPC methods.
+        /// There are no RPC <see cref="grpccore::StatusCode"/>s eligible for retry for "NonIdempotent" RPC methods.
         /// </remarks>
-        public static Predicate<RpcException> NonIdempotentRetryFilter { get; } =
-            RetrySettings.FilterForStatusCodes();
+        public static s::Predicate<grpccore::RpcException> NonIdempotentRetryFilter { get; } =
+            gaxgrpc::RetrySettings.FilterForStatusCodes();
 
         /// <summary>
-        /// The filter specifying which RPC <see cref="StatusCode"/>s are eligible for retry
+        /// The filter specifying which RPC <see cref="grpccore::StatusCode"/>s are eligible for retry
         /// for "LongRunning" <see cref="SpannerClient"/> RPC methods.
         /// </summary>
         /// <remarks>
-        /// The eligible RPC <see cref="StatusCode"/>s for retry for "LongRunning" RPC methods are:
+        /// The eligible RPC <see cref="grpccore::StatusCode"/>s for retry for "LongRunning" RPC methods are:
         /// <list type="bullet">
-        /// <item><description><see cref="StatusCode.Unavailable"/></description></item>
+        /// <item><description><see cref="grpccore::StatusCode.Unavailable"/></description></item>
         /// </list>
         /// </remarks>
-        public static Predicate<RpcException> LongRunningRetryFilter { get; } =
-            RetrySettings.FilterForStatusCodes(StatusCode.Unavailable);
+        public static s::Predicate<grpccore::RpcException> LongRunningRetryFilter { get; } =
+            gaxgrpc::RetrySettings.FilterForStatusCodes(grpccore::StatusCode.Unavailable);
 
         /// <summary>
         /// "Default" retry backoff for <see cref="SpannerClient"/> RPC methods.
@@ -118,9 +118,9 @@ namespace Google.Cloud.Spanner.V1
         /// <item><description>Delay multiplier: 1.3</description></item>
         /// </list>
         /// </remarks>
-        public static BackoffSettings GetDefaultRetryBackoff() => new BackoffSettings(
-            delay: TimeSpan.FromMilliseconds(1000),
-            maxDelay: TimeSpan.FromMilliseconds(32000),
+        public static gaxgrpc::BackoffSettings GetDefaultRetryBackoff() => new gaxgrpc::BackoffSettings(
+            delay: s::TimeSpan.FromMilliseconds(1000),
+            maxDelay: s::TimeSpan.FromMilliseconds(32000),
             delayMultiplier: 1.3
         );
 
@@ -138,9 +138,9 @@ namespace Google.Cloud.Spanner.V1
         /// <item><description>Maximum timeout: 60000 milliseconds</description></item>
         /// </list>
         /// </remarks>
-        public static BackoffSettings GetDefaultTimeoutBackoff() => new BackoffSettings(
-            delay: TimeSpan.FromMilliseconds(60000),
-            maxDelay: TimeSpan.FromMilliseconds(60000),
+        public static gaxgrpc::BackoffSettings GetDefaultTimeoutBackoff() => new gaxgrpc::BackoffSettings(
+            delay: s::TimeSpan.FromMilliseconds(60000),
+            maxDelay: s::TimeSpan.FromMilliseconds(60000),
             delayMultiplier: 1.0
         );
 
@@ -158,9 +158,9 @@ namespace Google.Cloud.Spanner.V1
         /// <item><description>Delay multiplier: 1.3</description></item>
         /// </list>
         /// </remarks>
-        public static BackoffSettings GetLongRunningRetryBackoff() => new BackoffSettings(
-            delay: TimeSpan.FromMilliseconds(1000),
-            maxDelay: TimeSpan.FromMilliseconds(32000),
+        public static gaxgrpc::BackoffSettings GetLongRunningRetryBackoff() => new gaxgrpc::BackoffSettings(
+            delay: s::TimeSpan.FromMilliseconds(1000),
+            maxDelay: s::TimeSpan.FromMilliseconds(32000),
             delayMultiplier: 1.3
         );
 
@@ -178,19 +178,19 @@ namespace Google.Cloud.Spanner.V1
         /// <item><description>Maximum timeout: 3600000 milliseconds</description></item>
         /// </list>
         /// </remarks>
-        public static BackoffSettings GetLongRunningTimeoutBackoff() => new BackoffSettings(
-            delay: TimeSpan.FromMilliseconds(3600000),
-            maxDelay: TimeSpan.FromMilliseconds(3600000),
+        public static gaxgrpc::BackoffSettings GetLongRunningTimeoutBackoff() => new gaxgrpc::BackoffSettings(
+            delay: s::TimeSpan.FromMilliseconds(3600000),
+            maxDelay: s::TimeSpan.FromMilliseconds(3600000),
             delayMultiplier: 1.0
         );
 
         /// <summary>
-        /// <see cref="CallSettings"/> for synchronous and asynchronous calls to
+        /// <see cref="gaxgrpc::CallSettings"/> for synchronous and asynchronous calls to
         /// <c>SpannerClient.CreateSession</c> and <c>SpannerClient.CreateSessionAsync</c>.
         /// </summary>
         /// <remarks>
         /// The default <c>SpannerClient.CreateSession</c> and
-        /// <c>SpannerClient.CreateSessionAsync</c> <see cref="RetrySettings"/> are:
+        /// <c>SpannerClient.CreateSessionAsync</c> <see cref="gaxgrpc::RetrySettings"/> are:
         /// <list type="bullet">
         /// <item><description>Initial retry delay: 1000 milliseconds</description></item>
         /// <item><description>Retry delay multiplier: 1.3</description></item>
@@ -201,26 +201,26 @@ namespace Google.Cloud.Spanner.V1
         /// </list>
         /// Retry will be attempted on the following response status codes:
         /// <list>
-        /// <item><description><see cref="StatusCode.DeadlineExceeded"/></description></item>
-        /// <item><description><see cref="StatusCode.Unavailable"/></description></item>
+        /// <item><description><see cref="grpccore::StatusCode.DeadlineExceeded"/></description></item>
+        /// <item><description><see cref="grpccore::StatusCode.Unavailable"/></description></item>
         /// </list>
         /// Default RPC expiration is 600000 milliseconds.
         /// </remarks>
-        public CallSettings CreateSessionSettings { get; set; } = CallSettings.FromCallTiming(
-            CallTiming.FromRetry(new RetrySettings(
+        public gaxgrpc::CallSettings CreateSessionSettings { get; set; } = gaxgrpc::CallSettings.FromCallTiming(
+            gaxgrpc::CallTiming.FromRetry(new gaxgrpc::RetrySettings(
                 retryBackoff: GetDefaultRetryBackoff(),
                 timeoutBackoff: GetDefaultTimeoutBackoff(),
-                totalExpiration: Expiration.FromTimeout(TimeSpan.FromMilliseconds(600000)),
+                totalExpiration: gax::Expiration.FromTimeout(s::TimeSpan.FromMilliseconds(600000)),
                 retryFilter: IdempotentRetryFilter
             )));
 
         /// <summary>
-        /// <see cref="CallSettings"/> for synchronous and asynchronous calls to
+        /// <see cref="gaxgrpc::CallSettings"/> for synchronous and asynchronous calls to
         /// <c>SpannerClient.GetSession</c> and <c>SpannerClient.GetSessionAsync</c>.
         /// </summary>
         /// <remarks>
         /// The default <c>SpannerClient.GetSession</c> and
-        /// <c>SpannerClient.GetSessionAsync</c> <see cref="RetrySettings"/> are:
+        /// <c>SpannerClient.GetSessionAsync</c> <see cref="gaxgrpc::RetrySettings"/> are:
         /// <list type="bullet">
         /// <item><description>Initial retry delay: 1000 milliseconds</description></item>
         /// <item><description>Retry delay multiplier: 1.3</description></item>
@@ -231,26 +231,26 @@ namespace Google.Cloud.Spanner.V1
         /// </list>
         /// Retry will be attempted on the following response status codes:
         /// <list>
-        /// <item><description><see cref="StatusCode.DeadlineExceeded"/></description></item>
-        /// <item><description><see cref="StatusCode.Unavailable"/></description></item>
+        /// <item><description><see cref="grpccore::StatusCode.DeadlineExceeded"/></description></item>
+        /// <item><description><see cref="grpccore::StatusCode.Unavailable"/></description></item>
         /// </list>
         /// Default RPC expiration is 600000 milliseconds.
         /// </remarks>
-        public CallSettings GetSessionSettings { get; set; } = CallSettings.FromCallTiming(
-            CallTiming.FromRetry(new RetrySettings(
+        public gaxgrpc::CallSettings GetSessionSettings { get; set; } = gaxgrpc::CallSettings.FromCallTiming(
+            gaxgrpc::CallTiming.FromRetry(new gaxgrpc::RetrySettings(
                 retryBackoff: GetDefaultRetryBackoff(),
                 timeoutBackoff: GetDefaultTimeoutBackoff(),
-                totalExpiration: Expiration.FromTimeout(TimeSpan.FromMilliseconds(600000)),
+                totalExpiration: gax::Expiration.FromTimeout(s::TimeSpan.FromMilliseconds(600000)),
                 retryFilter: IdempotentRetryFilter
             )));
 
         /// <summary>
-        /// <see cref="CallSettings"/> for synchronous and asynchronous calls to
+        /// <see cref="gaxgrpc::CallSettings"/> for synchronous and asynchronous calls to
         /// <c>SpannerClient.ListSessions</c> and <c>SpannerClient.ListSessionsAsync</c>.
         /// </summary>
         /// <remarks>
         /// The default <c>SpannerClient.ListSessions</c> and
-        /// <c>SpannerClient.ListSessionsAsync</c> <see cref="RetrySettings"/> are:
+        /// <c>SpannerClient.ListSessionsAsync</c> <see cref="gaxgrpc::RetrySettings"/> are:
         /// <list type="bullet">
         /// <item><description>Initial retry delay: 1000 milliseconds</description></item>
         /// <item><description>Retry delay multiplier: 1.3</description></item>
@@ -261,26 +261,26 @@ namespace Google.Cloud.Spanner.V1
         /// </list>
         /// Retry will be attempted on the following response status codes:
         /// <list>
-        /// <item><description><see cref="StatusCode.DeadlineExceeded"/></description></item>
-        /// <item><description><see cref="StatusCode.Unavailable"/></description></item>
+        /// <item><description><see cref="grpccore::StatusCode.DeadlineExceeded"/></description></item>
+        /// <item><description><see cref="grpccore::StatusCode.Unavailable"/></description></item>
         /// </list>
         /// Default RPC expiration is 600000 milliseconds.
         /// </remarks>
-        public CallSettings ListSessionsSettings { get; set; } = CallSettings.FromCallTiming(
-            CallTiming.FromRetry(new RetrySettings(
+        public gaxgrpc::CallSettings ListSessionsSettings { get; set; } = gaxgrpc::CallSettings.FromCallTiming(
+            gaxgrpc::CallTiming.FromRetry(new gaxgrpc::RetrySettings(
                 retryBackoff: GetDefaultRetryBackoff(),
                 timeoutBackoff: GetDefaultTimeoutBackoff(),
-                totalExpiration: Expiration.FromTimeout(TimeSpan.FromMilliseconds(600000)),
+                totalExpiration: gax::Expiration.FromTimeout(s::TimeSpan.FromMilliseconds(600000)),
                 retryFilter: IdempotentRetryFilter
             )));
 
         /// <summary>
-        /// <see cref="CallSettings"/> for synchronous and asynchronous calls to
+        /// <see cref="gaxgrpc::CallSettings"/> for synchronous and asynchronous calls to
         /// <c>SpannerClient.DeleteSession</c> and <c>SpannerClient.DeleteSessionAsync</c>.
         /// </summary>
         /// <remarks>
         /// The default <c>SpannerClient.DeleteSession</c> and
-        /// <c>SpannerClient.DeleteSessionAsync</c> <see cref="RetrySettings"/> are:
+        /// <c>SpannerClient.DeleteSessionAsync</c> <see cref="gaxgrpc::RetrySettings"/> are:
         /// <list type="bullet">
         /// <item><description>Initial retry delay: 1000 milliseconds</description></item>
         /// <item><description>Retry delay multiplier: 1.3</description></item>
@@ -291,26 +291,26 @@ namespace Google.Cloud.Spanner.V1
         /// </list>
         /// Retry will be attempted on the following response status codes:
         /// <list>
-        /// <item><description><see cref="StatusCode.DeadlineExceeded"/></description></item>
-        /// <item><description><see cref="StatusCode.Unavailable"/></description></item>
+        /// <item><description><see cref="grpccore::StatusCode.DeadlineExceeded"/></description></item>
+        /// <item><description><see cref="grpccore::StatusCode.Unavailable"/></description></item>
         /// </list>
         /// Default RPC expiration is 600000 milliseconds.
         /// </remarks>
-        public CallSettings DeleteSessionSettings { get; set; } = CallSettings.FromCallTiming(
-            CallTiming.FromRetry(new RetrySettings(
+        public gaxgrpc::CallSettings DeleteSessionSettings { get; set; } = gaxgrpc::CallSettings.FromCallTiming(
+            gaxgrpc::CallTiming.FromRetry(new gaxgrpc::RetrySettings(
                 retryBackoff: GetDefaultRetryBackoff(),
                 timeoutBackoff: GetDefaultTimeoutBackoff(),
-                totalExpiration: Expiration.FromTimeout(TimeSpan.FromMilliseconds(600000)),
+                totalExpiration: gax::Expiration.FromTimeout(s::TimeSpan.FromMilliseconds(600000)),
                 retryFilter: IdempotentRetryFilter
             )));
 
         /// <summary>
-        /// <see cref="CallSettings"/> for synchronous and asynchronous calls to
+        /// <see cref="gaxgrpc::CallSettings"/> for synchronous and asynchronous calls to
         /// <c>SpannerClient.ExecuteSql</c> and <c>SpannerClient.ExecuteSqlAsync</c>.
         /// </summary>
         /// <remarks>
         /// The default <c>SpannerClient.ExecuteSql</c> and
-        /// <c>SpannerClient.ExecuteSqlAsync</c> <see cref="RetrySettings"/> are:
+        /// <c>SpannerClient.ExecuteSqlAsync</c> <see cref="gaxgrpc::RetrySettings"/> are:
         /// <list type="bullet">
         /// <item><description>Initial retry delay: 1000 milliseconds</description></item>
         /// <item><description>Retry delay multiplier: 1.3</description></item>
@@ -321,35 +321,35 @@ namespace Google.Cloud.Spanner.V1
         /// </list>
         /// Retry will be attempted on the following response status codes:
         /// <list>
-        /// <item><description><see cref="StatusCode.DeadlineExceeded"/></description></item>
-        /// <item><description><see cref="StatusCode.Unavailable"/></description></item>
+        /// <item><description><see cref="grpccore::StatusCode.DeadlineExceeded"/></description></item>
+        /// <item><description><see cref="grpccore::StatusCode.Unavailable"/></description></item>
         /// </list>
         /// Default RPC expiration is 600000 milliseconds.
         /// </remarks>
-        public CallSettings ExecuteSqlSettings { get; set; } = CallSettings.FromCallTiming(
-            CallTiming.FromRetry(new RetrySettings(
+        public gaxgrpc::CallSettings ExecuteSqlSettings { get; set; } = gaxgrpc::CallSettings.FromCallTiming(
+            gaxgrpc::CallTiming.FromRetry(new gaxgrpc::RetrySettings(
                 retryBackoff: GetDefaultRetryBackoff(),
                 timeoutBackoff: GetDefaultTimeoutBackoff(),
-                totalExpiration: Expiration.FromTimeout(TimeSpan.FromMilliseconds(600000)),
+                totalExpiration: gax::Expiration.FromTimeout(s::TimeSpan.FromMilliseconds(600000)),
                 retryFilter: IdempotentRetryFilter
             )));
 
         /// <summary>
-        /// <see cref="CallSettings"/> for calls to <c>SpannerClient.ExecuteStreamingSql</c>.
+        /// <see cref="gaxgrpc::CallSettings"/> for calls to <c>SpannerClient.ExecuteStreamingSql</c>.
         /// </summary>
         /// <remarks>
         /// Default RPC expiration is 600000 milliseconds.
         /// </remarks>
-        public CallSettings ExecuteStreamingSqlSettings { get; set; } = CallSettings.FromCallTiming(
-            CallTiming.FromTimeout(TimeSpan.FromMilliseconds(600000)));
+        public gaxgrpc::CallSettings ExecuteStreamingSqlSettings { get; set; } = gaxgrpc::CallSettings.FromCallTiming(
+            gaxgrpc::CallTiming.FromTimeout(s::TimeSpan.FromMilliseconds(600000)));
 
         /// <summary>
-        /// <see cref="CallSettings"/> for synchronous and asynchronous calls to
+        /// <see cref="gaxgrpc::CallSettings"/> for synchronous and asynchronous calls to
         /// <c>SpannerClient.Read</c> and <c>SpannerClient.ReadAsync</c>.
         /// </summary>
         /// <remarks>
         /// The default <c>SpannerClient.Read</c> and
-        /// <c>SpannerClient.ReadAsync</c> <see cref="RetrySettings"/> are:
+        /// <c>SpannerClient.ReadAsync</c> <see cref="gaxgrpc::RetrySettings"/> are:
         /// <list type="bullet">
         /// <item><description>Initial retry delay: 1000 milliseconds</description></item>
         /// <item><description>Retry delay multiplier: 1.3</description></item>
@@ -360,35 +360,35 @@ namespace Google.Cloud.Spanner.V1
         /// </list>
         /// Retry will be attempted on the following response status codes:
         /// <list>
-        /// <item><description><see cref="StatusCode.DeadlineExceeded"/></description></item>
-        /// <item><description><see cref="StatusCode.Unavailable"/></description></item>
+        /// <item><description><see cref="grpccore::StatusCode.DeadlineExceeded"/></description></item>
+        /// <item><description><see cref="grpccore::StatusCode.Unavailable"/></description></item>
         /// </list>
         /// Default RPC expiration is 600000 milliseconds.
         /// </remarks>
-        public CallSettings ReadSettings { get; set; } = CallSettings.FromCallTiming(
-            CallTiming.FromRetry(new RetrySettings(
+        public gaxgrpc::CallSettings ReadSettings { get; set; } = gaxgrpc::CallSettings.FromCallTiming(
+            gaxgrpc::CallTiming.FromRetry(new gaxgrpc::RetrySettings(
                 retryBackoff: GetDefaultRetryBackoff(),
                 timeoutBackoff: GetDefaultTimeoutBackoff(),
-                totalExpiration: Expiration.FromTimeout(TimeSpan.FromMilliseconds(600000)),
+                totalExpiration: gax::Expiration.FromTimeout(s::TimeSpan.FromMilliseconds(600000)),
                 retryFilter: IdempotentRetryFilter
             )));
 
         /// <summary>
-        /// <see cref="CallSettings"/> for calls to <c>SpannerClient.StreamingRead</c>.
+        /// <see cref="gaxgrpc::CallSettings"/> for calls to <c>SpannerClient.StreamingRead</c>.
         /// </summary>
         /// <remarks>
         /// Default RPC expiration is 600000 milliseconds.
         /// </remarks>
-        public CallSettings StreamingReadSettings { get; set; } = CallSettings.FromCallTiming(
-            CallTiming.FromTimeout(TimeSpan.FromMilliseconds(600000)));
+        public gaxgrpc::CallSettings StreamingReadSettings { get; set; } = gaxgrpc::CallSettings.FromCallTiming(
+            gaxgrpc::CallTiming.FromTimeout(s::TimeSpan.FromMilliseconds(600000)));
 
         /// <summary>
-        /// <see cref="CallSettings"/> for synchronous and asynchronous calls to
+        /// <see cref="gaxgrpc::CallSettings"/> for synchronous and asynchronous calls to
         /// <c>SpannerClient.BeginTransaction</c> and <c>SpannerClient.BeginTransactionAsync</c>.
         /// </summary>
         /// <remarks>
         /// The default <c>SpannerClient.BeginTransaction</c> and
-        /// <c>SpannerClient.BeginTransactionAsync</c> <see cref="RetrySettings"/> are:
+        /// <c>SpannerClient.BeginTransactionAsync</c> <see cref="gaxgrpc::RetrySettings"/> are:
         /// <list type="bullet">
         /// <item><description>Initial retry delay: 1000 milliseconds</description></item>
         /// <item><description>Retry delay multiplier: 1.3</description></item>
@@ -399,26 +399,26 @@ namespace Google.Cloud.Spanner.V1
         /// </list>
         /// Retry will be attempted on the following response status codes:
         /// <list>
-        /// <item><description><see cref="StatusCode.DeadlineExceeded"/></description></item>
-        /// <item><description><see cref="StatusCode.Unavailable"/></description></item>
+        /// <item><description><see cref="grpccore::StatusCode.DeadlineExceeded"/></description></item>
+        /// <item><description><see cref="grpccore::StatusCode.Unavailable"/></description></item>
         /// </list>
         /// Default RPC expiration is 600000 milliseconds.
         /// </remarks>
-        public CallSettings BeginTransactionSettings { get; set; } = CallSettings.FromCallTiming(
-            CallTiming.FromRetry(new RetrySettings(
+        public gaxgrpc::CallSettings BeginTransactionSettings { get; set; } = gaxgrpc::CallSettings.FromCallTiming(
+            gaxgrpc::CallTiming.FromRetry(new gaxgrpc::RetrySettings(
                 retryBackoff: GetDefaultRetryBackoff(),
                 timeoutBackoff: GetDefaultTimeoutBackoff(),
-                totalExpiration: Expiration.FromTimeout(TimeSpan.FromMilliseconds(600000)),
+                totalExpiration: gax::Expiration.FromTimeout(s::TimeSpan.FromMilliseconds(600000)),
                 retryFilter: IdempotentRetryFilter
             )));
 
         /// <summary>
-        /// <see cref="CallSettings"/> for synchronous and asynchronous calls to
+        /// <see cref="gaxgrpc::CallSettings"/> for synchronous and asynchronous calls to
         /// <c>SpannerClient.Commit</c> and <c>SpannerClient.CommitAsync</c>.
         /// </summary>
         /// <remarks>
         /// The default <c>SpannerClient.Commit</c> and
-        /// <c>SpannerClient.CommitAsync</c> <see cref="RetrySettings"/> are:
+        /// <c>SpannerClient.CommitAsync</c> <see cref="gaxgrpc::RetrySettings"/> are:
         /// <list type="bullet">
         /// <item><description>Initial retry delay: 1000 milliseconds</description></item>
         /// <item><description>Retry delay multiplier: 1.3</description></item>
@@ -429,25 +429,25 @@ namespace Google.Cloud.Spanner.V1
         /// </list>
         /// Retry will be attempted on the following response status codes:
         /// <list>
-        /// <item><description><see cref="StatusCode.Unavailable"/></description></item>
+        /// <item><description><see cref="grpccore::StatusCode.Unavailable"/></description></item>
         /// </list>
         /// Default RPC expiration is 3600000 milliseconds.
         /// </remarks>
-        public CallSettings CommitSettings { get; set; } = CallSettings.FromCallTiming(
-            CallTiming.FromRetry(new RetrySettings(
+        public gaxgrpc::CallSettings CommitSettings { get; set; } = gaxgrpc::CallSettings.FromCallTiming(
+            gaxgrpc::CallTiming.FromRetry(new gaxgrpc::RetrySettings(
                 retryBackoff: GetLongRunningRetryBackoff(),
                 timeoutBackoff: GetLongRunningTimeoutBackoff(),
-                totalExpiration: Expiration.FromTimeout(TimeSpan.FromMilliseconds(3600000)),
+                totalExpiration: gax::Expiration.FromTimeout(s::TimeSpan.FromMilliseconds(3600000)),
                 retryFilter: LongRunningRetryFilter
             )));
 
         /// <summary>
-        /// <see cref="CallSettings"/> for synchronous and asynchronous calls to
+        /// <see cref="gaxgrpc::CallSettings"/> for synchronous and asynchronous calls to
         /// <c>SpannerClient.Rollback</c> and <c>SpannerClient.RollbackAsync</c>.
         /// </summary>
         /// <remarks>
         /// The default <c>SpannerClient.Rollback</c> and
-        /// <c>SpannerClient.RollbackAsync</c> <see cref="RetrySettings"/> are:
+        /// <c>SpannerClient.RollbackAsync</c> <see cref="gaxgrpc::RetrySettings"/> are:
         /// <list type="bullet">
         /// <item><description>Initial retry delay: 1000 milliseconds</description></item>
         /// <item><description>Retry delay multiplier: 1.3</description></item>
@@ -458,26 +458,26 @@ namespace Google.Cloud.Spanner.V1
         /// </list>
         /// Retry will be attempted on the following response status codes:
         /// <list>
-        /// <item><description><see cref="StatusCode.DeadlineExceeded"/></description></item>
-        /// <item><description><see cref="StatusCode.Unavailable"/></description></item>
+        /// <item><description><see cref="grpccore::StatusCode.DeadlineExceeded"/></description></item>
+        /// <item><description><see cref="grpccore::StatusCode.Unavailable"/></description></item>
         /// </list>
         /// Default RPC expiration is 600000 milliseconds.
         /// </remarks>
-        public CallSettings RollbackSettings { get; set; } = CallSettings.FromCallTiming(
-            CallTiming.FromRetry(new RetrySettings(
+        public gaxgrpc::CallSettings RollbackSettings { get; set; } = gaxgrpc::CallSettings.FromCallTiming(
+            gaxgrpc::CallTiming.FromRetry(new gaxgrpc::RetrySettings(
                 retryBackoff: GetDefaultRetryBackoff(),
                 timeoutBackoff: GetDefaultTimeoutBackoff(),
-                totalExpiration: Expiration.FromTimeout(TimeSpan.FromMilliseconds(600000)),
+                totalExpiration: gax::Expiration.FromTimeout(s::TimeSpan.FromMilliseconds(600000)),
                 retryFilter: IdempotentRetryFilter
             )));
 
         /// <summary>
-        /// <see cref="CallSettings"/> for synchronous and asynchronous calls to
+        /// <see cref="gaxgrpc::CallSettings"/> for synchronous and asynchronous calls to
         /// <c>SpannerClient.PartitionQuery</c> and <c>SpannerClient.PartitionQueryAsync</c>.
         /// </summary>
         /// <remarks>
         /// The default <c>SpannerClient.PartitionQuery</c> and
-        /// <c>SpannerClient.PartitionQueryAsync</c> <see cref="RetrySettings"/> are:
+        /// <c>SpannerClient.PartitionQueryAsync</c> <see cref="gaxgrpc::RetrySettings"/> are:
         /// <list type="bullet">
         /// <item><description>Initial retry delay: 1000 milliseconds</description></item>
         /// <item><description>Retry delay multiplier: 1.3</description></item>
@@ -488,26 +488,26 @@ namespace Google.Cloud.Spanner.V1
         /// </list>
         /// Retry will be attempted on the following response status codes:
         /// <list>
-        /// <item><description><see cref="StatusCode.DeadlineExceeded"/></description></item>
-        /// <item><description><see cref="StatusCode.Unavailable"/></description></item>
+        /// <item><description><see cref="grpccore::StatusCode.DeadlineExceeded"/></description></item>
+        /// <item><description><see cref="grpccore::StatusCode.Unavailable"/></description></item>
         /// </list>
         /// Default RPC expiration is 600000 milliseconds.
         /// </remarks>
-        public CallSettings PartitionQuerySettings { get; set; } = CallSettings.FromCallTiming(
-            CallTiming.FromRetry(new RetrySettings(
+        public gaxgrpc::CallSettings PartitionQuerySettings { get; set; } = gaxgrpc::CallSettings.FromCallTiming(
+            gaxgrpc::CallTiming.FromRetry(new gaxgrpc::RetrySettings(
                 retryBackoff: GetDefaultRetryBackoff(),
                 timeoutBackoff: GetDefaultTimeoutBackoff(),
-                totalExpiration: Expiration.FromTimeout(TimeSpan.FromMilliseconds(600000)),
+                totalExpiration: gax::Expiration.FromTimeout(s::TimeSpan.FromMilliseconds(600000)),
                 retryFilter: IdempotentRetryFilter
             )));
 
         /// <summary>
-        /// <see cref="CallSettings"/> for synchronous and asynchronous calls to
+        /// <see cref="gaxgrpc::CallSettings"/> for synchronous and asynchronous calls to
         /// <c>SpannerClient.PartitionRead</c> and <c>SpannerClient.PartitionReadAsync</c>.
         /// </summary>
         /// <remarks>
         /// The default <c>SpannerClient.PartitionRead</c> and
-        /// <c>SpannerClient.PartitionReadAsync</c> <see cref="RetrySettings"/> are:
+        /// <c>SpannerClient.PartitionReadAsync</c> <see cref="gaxgrpc::RetrySettings"/> are:
         /// <list type="bullet">
         /// <item><description>Initial retry delay: 1000 milliseconds</description></item>
         /// <item><description>Retry delay multiplier: 1.3</description></item>
@@ -518,16 +518,16 @@ namespace Google.Cloud.Spanner.V1
         /// </list>
         /// Retry will be attempted on the following response status codes:
         /// <list>
-        /// <item><description><see cref="StatusCode.DeadlineExceeded"/></description></item>
-        /// <item><description><see cref="StatusCode.Unavailable"/></description></item>
+        /// <item><description><see cref="grpccore::StatusCode.DeadlineExceeded"/></description></item>
+        /// <item><description><see cref="grpccore::StatusCode.Unavailable"/></description></item>
         /// </list>
         /// Default RPC expiration is 600000 milliseconds.
         /// </remarks>
-        public CallSettings PartitionReadSettings { get; set; } = CallSettings.FromCallTiming(
-            CallTiming.FromRetry(new RetrySettings(
+        public gaxgrpc::CallSettings PartitionReadSettings { get; set; } = gaxgrpc::CallSettings.FromCallTiming(
+            gaxgrpc::CallTiming.FromRetry(new gaxgrpc::RetrySettings(
                 retryBackoff: GetDefaultRetryBackoff(),
                 timeoutBackoff: GetDefaultTimeoutBackoff(),
-                totalExpiration: Expiration.FromTimeout(TimeSpan.FromMilliseconds(600000)),
+                totalExpiration: gax::Expiration.FromTimeout(s::TimeSpan.FromMilliseconds(600000)),
                 retryFilter: IdempotentRetryFilter
             )));
 
@@ -546,7 +546,7 @@ namespace Google.Cloud.Spanner.V1
         /// <summary>
         /// The default endpoint for the Spanner service, which is a host of "spanner.googleapis.com" and a port of 443.
         /// </summary>
-        public static ServiceEndpoint DefaultEndpoint { get; } = new ServiceEndpoint("spanner.googleapis.com", 443);
+        public static gaxgrpc::ServiceEndpoint DefaultEndpoint { get; } = new gaxgrpc::ServiceEndpoint("spanner.googleapis.com", 443);
 
         /// <summary>
         /// The default Spanner scopes.
@@ -558,12 +558,12 @@ namespace Google.Cloud.Spanner.V1
         /// <item><description>"https://www.googleapis.com/auth/spanner.data"</description></item>
         /// </list>
         /// </remarks>
-        public static IReadOnlyList<string> DefaultScopes { get; } = new ReadOnlyCollection<string>(new string[] {
+        public static scg::IReadOnlyList<string> DefaultScopes { get; } = new sco::ReadOnlyCollection<string>(new string[] {
             "https://www.googleapis.com/auth/cloud-platform",
             "https://www.googleapis.com/auth/spanner.data",
         });
 
-        private static readonly ChannelPool s_channelPool = new ChannelPool(DefaultScopes);
+        private static readonly gaxgrpc::ChannelPool s_channelPool = new gaxgrpc::ChannelPool(DefaultScopes);
 
         // Note: we could have parameterless overloads of Create and CreateAsync,
         // documented to just use the default endpoint, settings and credentials.
@@ -577,12 +577,12 @@ namespace Google.Cloud.Spanner.V1
         /// and creating a channel connecting to the given endpoint with application default credentials where
         /// necessary.
         /// </summary>
-        /// <param name="endpoint">Optional <see cref="ServiceEndpoint"/>.</param>
+        /// <param name="endpoint">Optional <see cref="gaxgrpc::ServiceEndpoint"/>.</param>
         /// <param name="settings">Optional <see cref="SpannerSettings"/>.</param>
         /// <returns>The task representing the created <see cref="SpannerClient"/>.</returns>
-        public static async Task<SpannerClient> CreateAsync(ServiceEndpoint endpoint = null, SpannerSettings settings = null)
+        public static async stt::Task<SpannerClient> CreateAsync(gaxgrpc::ServiceEndpoint endpoint = null, SpannerSettings settings = null)
         {
-            Channel channel = await s_channelPool.GetChannelAsync(endpoint ?? DefaultEndpoint).ConfigureAwait(false);
+            grpccore::Channel channel = await s_channelPool.GetChannelAsync(endpoint ?? DefaultEndpoint).ConfigureAwait(false);
             return Create(channel, settings);
         }
 
@@ -591,45 +591,45 @@ namespace Google.Cloud.Spanner.V1
         /// and creating a channel connecting to the given endpoint with application default credentials where
         /// necessary.
         /// </summary>
-        /// <param name="endpoint">Optional <see cref="ServiceEndpoint"/>.</param>
+        /// <param name="endpoint">Optional <see cref="gaxgrpc::ServiceEndpoint"/>.</param>
         /// <param name="settings">Optional <see cref="SpannerSettings"/>.</param>
         /// <returns>The created <see cref="SpannerClient"/>.</returns>
-        public static SpannerClient Create(ServiceEndpoint endpoint = null, SpannerSettings settings = null)
+        public static SpannerClient Create(gaxgrpc::ServiceEndpoint endpoint = null, SpannerSettings settings = null)
         {
-            Channel channel = s_channelPool.GetChannel(endpoint ?? DefaultEndpoint);
+            grpccore::Channel channel = s_channelPool.GetChannel(endpoint ?? DefaultEndpoint);
             return Create(channel, settings);
         }
 
         /// <summary>
         /// Creates a <see cref="SpannerClient"/> which uses the specified channel for remote operations.
         /// </summary>
-        /// <param name="channel">The <see cref="Channel"/> for remote operations. Must not be null.</param>
+        /// <param name="channel">The <see cref="grpccore::Channel"/> for remote operations. Must not be null.</param>
         /// <param name="settings">Optional <see cref="SpannerSettings"/>.</param>
         /// <returns>The created <see cref="SpannerClient"/>.</returns>
-        public static SpannerClient Create(Channel channel, SpannerSettings settings = null)
+        public static SpannerClient Create(grpccore::Channel channel, SpannerSettings settings = null)
         {
-            GaxPreconditions.CheckNotNull(channel, nameof(channel));
+            gax::GaxPreconditions.CheckNotNull(channel, nameof(channel));
             Spanner.SpannerClient grpcClient = new Spanner.SpannerClient(channel);
             return new SpannerClientImpl(grpcClient, settings);
         }
 
         /// <summary>
-        /// Shuts down any channels automatically created by <see cref="Create(ServiceEndpoint, SpannerSettings)"/>
-        /// and <see cref="CreateAsync(ServiceEndpoint, SpannerSettings)"/>. Channels which weren't automatically
+        /// Shuts down any channels automatically created by <see cref="Create(gaxgrpc::ServiceEndpoint, SpannerSettings)"/>
+        /// and <see cref="CreateAsync(gaxgrpc::ServiceEndpoint, SpannerSettings)"/>. Channels which weren't automatically
         /// created are not affected.
         /// </summary>
-        /// <remarks>After calling this method, further calls to <see cref="Create(ServiceEndpoint, SpannerSettings)"/>
-        /// and <see cref="CreateAsync(ServiceEndpoint, SpannerSettings)"/> will create new channels, which could
+        /// <remarks>After calling this method, further calls to <see cref="Create(gaxgrpc::ServiceEndpoint, SpannerSettings)"/>
+        /// and <see cref="CreateAsync(gaxgrpc::ServiceEndpoint, SpannerSettings)"/> will create new channels, which could
         /// in turn be shut down by another call to this method.</remarks>
         /// <returns>A task representing the asynchronous shutdown operation.</returns>
-        public static Task ShutdownDefaultChannelsAsync() => s_channelPool.ShutdownChannelsAsync();
+        public static stt::Task ShutdownDefaultChannelsAsync() => s_channelPool.ShutdownChannelsAsync();
 
         /// <summary>
         /// The underlying gRPC Spanner client.
         /// </summary>
         public virtual Spanner.SpannerClient GrpcClient
         {
-            get { throw new NotImplementedException(); }
+            get { throw new s::NotImplementedException(); }
         }
 
         /// <summary>
@@ -662,12 +662,12 @@ namespace Google.Cloud.Spanner.V1
         /// <returns>
         /// A Task containing the RPC response.
         /// </returns>
-        public virtual Task<Session> CreateSessionAsync(
+        public virtual stt::Task<Session> CreateSessionAsync(
             DatabaseName database,
-            CallSettings callSettings = null) => CreateSessionAsync(
+            gaxgrpc::CallSettings callSettings = null) => CreateSessionAsync(
                 new CreateSessionRequest
                 {
-                    DatabaseAsDatabaseName = GaxPreconditions.CheckNotNull(database, nameof(database)),
+                    DatabaseAsDatabaseName = gax::GaxPreconditions.CheckNotNull(database, nameof(database)),
                 },
                 callSettings);
 
@@ -696,16 +696,16 @@ namespace Google.Cloud.Spanner.V1
         /// Required. The database in which the new session is created.
         /// </param>
         /// <param name="cancellationToken">
-        /// A <see cref="CancellationToken"/> to use for this RPC.
+        /// A <see cref="st::CancellationToken"/> to use for this RPC.
         /// </param>
         /// <returns>
         /// A Task containing the RPC response.
         /// </returns>
-        public virtual Task<Session> CreateSessionAsync(
+        public virtual stt::Task<Session> CreateSessionAsync(
             DatabaseName database,
-            CancellationToken cancellationToken) => CreateSessionAsync(
+            st::CancellationToken cancellationToken) => CreateSessionAsync(
                 database,
-                CallSettings.FromCancellationToken(cancellationToken));
+                gaxgrpc::CallSettings.FromCancellationToken(cancellationToken));
 
         /// <summary>
         /// Creates a new session. A session can be used to perform
@@ -739,10 +739,10 @@ namespace Google.Cloud.Spanner.V1
         /// </returns>
         public virtual Session CreateSession(
             DatabaseName database,
-            CallSettings callSettings = null) => CreateSession(
+            gaxgrpc::CallSettings callSettings = null) => CreateSession(
                 new CreateSessionRequest
                 {
-                    DatabaseAsDatabaseName = GaxPreconditions.CheckNotNull(database, nameof(database)),
+                    DatabaseAsDatabaseName = gax::GaxPreconditions.CheckNotNull(database, nameof(database)),
                 },
                 callSettings);
 
@@ -776,11 +776,11 @@ namespace Google.Cloud.Spanner.V1
         /// <returns>
         /// A Task containing the RPC response.
         /// </returns>
-        public virtual Task<Session> CreateSessionAsync(
+        public virtual stt::Task<Session> CreateSessionAsync(
             CreateSessionRequest request,
-            CallSettings callSettings = null)
+            gaxgrpc::CallSettings callSettings = null)
         {
-            throw new NotImplementedException();
+            throw new s::NotImplementedException();
         }
 
         /// <summary>
@@ -808,16 +808,16 @@ namespace Google.Cloud.Spanner.V1
         /// The request object containing all of the parameters for the API call.
         /// </param>
         /// <param name="cancellationToken">
-        /// A <see cref="CancellationToken"/> to use for this RPC.
+        /// A <see cref="st::CancellationToken"/> to use for this RPC.
         /// </param>
         /// <returns>
         /// A Task containing the RPC response.
         /// </returns>
-        public virtual Task<Session> CreateSessionAsync(
+        public virtual stt::Task<Session> CreateSessionAsync(
             CreateSessionRequest request,
-            CancellationToken cancellationToken) => CreateSessionAsync(
+            st::CancellationToken cancellationToken) => CreateSessionAsync(
                 request,
-                CallSettings.FromCancellationToken(cancellationToken));
+                gaxgrpc::CallSettings.FromCancellationToken(cancellationToken));
 
         /// <summary>
         /// Creates a new session. A session can be used to perform
@@ -851,9 +851,9 @@ namespace Google.Cloud.Spanner.V1
         /// </returns>
         public virtual Session CreateSession(
             CreateSessionRequest request,
-            CallSettings callSettings = null)
+            gaxgrpc::CallSettings callSettings = null)
         {
-            throw new NotImplementedException();
+            throw new s::NotImplementedException();
         }
 
         /// <summary>
@@ -870,12 +870,12 @@ namespace Google.Cloud.Spanner.V1
         /// <returns>
         /// A Task containing the RPC response.
         /// </returns>
-        public virtual Task<Session> GetSessionAsync(
+        public virtual stt::Task<Session> GetSessionAsync(
             SessionName name,
-            CallSettings callSettings = null) => GetSessionAsync(
+            gaxgrpc::CallSettings callSettings = null) => GetSessionAsync(
                 new GetSessionRequest
                 {
-                    SessionName = GaxPreconditions.CheckNotNull(name, nameof(name)),
+                    SessionName = gax::GaxPreconditions.CheckNotNull(name, nameof(name)),
                 },
                 callSettings);
 
@@ -888,16 +888,16 @@ namespace Google.Cloud.Spanner.V1
         /// Required. The name of the session to retrieve.
         /// </param>
         /// <param name="cancellationToken">
-        /// A <see cref="CancellationToken"/> to use for this RPC.
+        /// A <see cref="st::CancellationToken"/> to use for this RPC.
         /// </param>
         /// <returns>
         /// A Task containing the RPC response.
         /// </returns>
-        public virtual Task<Session> GetSessionAsync(
+        public virtual stt::Task<Session> GetSessionAsync(
             SessionName name,
-            CancellationToken cancellationToken) => GetSessionAsync(
+            st::CancellationToken cancellationToken) => GetSessionAsync(
                 name,
-                CallSettings.FromCancellationToken(cancellationToken));
+                gaxgrpc::CallSettings.FromCancellationToken(cancellationToken));
 
         /// <summary>
         /// Gets a session. Returns `NOT_FOUND` if the session does not exist.
@@ -915,10 +915,10 @@ namespace Google.Cloud.Spanner.V1
         /// </returns>
         public virtual Session GetSession(
             SessionName name,
-            CallSettings callSettings = null) => GetSession(
+            gaxgrpc::CallSettings callSettings = null) => GetSession(
                 new GetSessionRequest
                 {
-                    SessionName = GaxPreconditions.CheckNotNull(name, nameof(name)),
+                    SessionName = gax::GaxPreconditions.CheckNotNull(name, nameof(name)),
                 },
                 callSettings);
 
@@ -936,11 +936,11 @@ namespace Google.Cloud.Spanner.V1
         /// <returns>
         /// A Task containing the RPC response.
         /// </returns>
-        public virtual Task<Session> GetSessionAsync(
+        public virtual stt::Task<Session> GetSessionAsync(
             GetSessionRequest request,
-            CallSettings callSettings = null)
+            gaxgrpc::CallSettings callSettings = null)
         {
-            throw new NotImplementedException();
+            throw new s::NotImplementedException();
         }
 
         /// <summary>
@@ -952,16 +952,16 @@ namespace Google.Cloud.Spanner.V1
         /// The request object containing all of the parameters for the API call.
         /// </param>
         /// <param name="cancellationToken">
-        /// A <see cref="CancellationToken"/> to use for this RPC.
+        /// A <see cref="st::CancellationToken"/> to use for this RPC.
         /// </param>
         /// <returns>
         /// A Task containing the RPC response.
         /// </returns>
-        public virtual Task<Session> GetSessionAsync(
+        public virtual stt::Task<Session> GetSessionAsync(
             GetSessionRequest request,
-            CancellationToken cancellationToken) => GetSessionAsync(
+            st::CancellationToken cancellationToken) => GetSessionAsync(
                 request,
-                CallSettings.FromCancellationToken(cancellationToken));
+                gaxgrpc::CallSettings.FromCancellationToken(cancellationToken));
 
         /// <summary>
         /// Gets a session. Returns `NOT_FOUND` if the session does not exist.
@@ -979,9 +979,9 @@ namespace Google.Cloud.Spanner.V1
         /// </returns>
         public virtual Session GetSession(
             GetSessionRequest request,
-            CallSettings callSettings = null)
+            gaxgrpc::CallSettings callSettings = null)
         {
-            throw new NotImplementedException();
+            throw new s::NotImplementedException();
         }
 
         /// <summary>
@@ -1004,14 +1004,14 @@ namespace Google.Cloud.Spanner.V1
         /// <returns>
         /// A pageable asynchronous sequence of <see cref="Session"/> resources.
         /// </returns>
-        public virtual PagedAsyncEnumerable<ListSessionsResponse, Session> ListSessionsAsync(
+        public virtual gax::PagedAsyncEnumerable<ListSessionsResponse, Session> ListSessionsAsync(
             string database,
             string pageToken = null,
             int? pageSize = null,
-            CallSettings callSettings = null) => ListSessionsAsync(
+            gaxgrpc::CallSettings callSettings = null) => ListSessionsAsync(
                 new ListSessionsRequest
                 {
-                    Database = GaxPreconditions.CheckNotNullOrEmpty(database, nameof(database)),
+                    Database = gax::GaxPreconditions.CheckNotNullOrEmpty(database, nameof(database)),
                     PageToken = pageToken ?? "",
                     PageSize = pageSize ?? 0,
                 },
@@ -1037,14 +1037,14 @@ namespace Google.Cloud.Spanner.V1
         /// <returns>
         /// A pageable sequence of <see cref="Session"/> resources.
         /// </returns>
-        public virtual PagedEnumerable<ListSessionsResponse, Session> ListSessions(
+        public virtual gax::PagedEnumerable<ListSessionsResponse, Session> ListSessions(
             string database,
             string pageToken = null,
             int? pageSize = null,
-            CallSettings callSettings = null) => ListSessions(
+            gaxgrpc::CallSettings callSettings = null) => ListSessions(
                 new ListSessionsRequest
                 {
-                    Database = GaxPreconditions.CheckNotNullOrEmpty(database, nameof(database)),
+                    Database = gax::GaxPreconditions.CheckNotNullOrEmpty(database, nameof(database)),
                     PageToken = pageToken ?? "",
                     PageSize = pageSize ?? 0,
                 },
@@ -1062,11 +1062,11 @@ namespace Google.Cloud.Spanner.V1
         /// <returns>
         /// A pageable asynchronous sequence of <see cref="Session"/> resources.
         /// </returns>
-        public virtual PagedAsyncEnumerable<ListSessionsResponse, Session> ListSessionsAsync(
+        public virtual gax::PagedAsyncEnumerable<ListSessionsResponse, Session> ListSessionsAsync(
             ListSessionsRequest request,
-            CallSettings callSettings = null)
+            gaxgrpc::CallSettings callSettings = null)
         {
-            throw new NotImplementedException();
+            throw new s::NotImplementedException();
         }
 
         /// <summary>
@@ -1081,11 +1081,11 @@ namespace Google.Cloud.Spanner.V1
         /// <returns>
         /// A pageable sequence of <see cref="Session"/> resources.
         /// </returns>
-        public virtual PagedEnumerable<ListSessionsResponse, Session> ListSessions(
+        public virtual gax::PagedEnumerable<ListSessionsResponse, Session> ListSessions(
             ListSessionsRequest request,
-            CallSettings callSettings = null)
+            gaxgrpc::CallSettings callSettings = null)
         {
-            throw new NotImplementedException();
+            throw new s::NotImplementedException();
         }
 
         /// <summary>
@@ -1100,12 +1100,12 @@ namespace Google.Cloud.Spanner.V1
         /// <returns>
         /// A Task that completes when the RPC has completed.
         /// </returns>
-        public virtual Task DeleteSessionAsync(
+        public virtual stt::Task DeleteSessionAsync(
             SessionName name,
-            CallSettings callSettings = null) => DeleteSessionAsync(
+            gaxgrpc::CallSettings callSettings = null) => DeleteSessionAsync(
                 new DeleteSessionRequest
                 {
-                    SessionName = GaxPreconditions.CheckNotNull(name, nameof(name)),
+                    SessionName = gax::GaxPreconditions.CheckNotNull(name, nameof(name)),
                 },
                 callSettings);
 
@@ -1116,16 +1116,16 @@ namespace Google.Cloud.Spanner.V1
         /// Required. The name of the session to delete.
         /// </param>
         /// <param name="cancellationToken">
-        /// A <see cref="CancellationToken"/> to use for this RPC.
+        /// A <see cref="st::CancellationToken"/> to use for this RPC.
         /// </param>
         /// <returns>
         /// A Task that completes when the RPC has completed.
         /// </returns>
-        public virtual Task DeleteSessionAsync(
+        public virtual stt::Task DeleteSessionAsync(
             SessionName name,
-            CancellationToken cancellationToken) => DeleteSessionAsync(
+            st::CancellationToken cancellationToken) => DeleteSessionAsync(
                 name,
-                CallSettings.FromCancellationToken(cancellationToken));
+                gaxgrpc::CallSettings.FromCancellationToken(cancellationToken));
 
         /// <summary>
         /// Ends a session, releasing server resources associated with it.
@@ -1138,10 +1138,10 @@ namespace Google.Cloud.Spanner.V1
         /// </param>
         public virtual void DeleteSession(
             SessionName name,
-            CallSettings callSettings = null) => DeleteSession(
+            gaxgrpc::CallSettings callSettings = null) => DeleteSession(
                 new DeleteSessionRequest
                 {
-                    SessionName = GaxPreconditions.CheckNotNull(name, nameof(name)),
+                    SessionName = gax::GaxPreconditions.CheckNotNull(name, nameof(name)),
                 },
                 callSettings);
 
@@ -1157,11 +1157,11 @@ namespace Google.Cloud.Spanner.V1
         /// <returns>
         /// A Task that completes when the RPC has completed.
         /// </returns>
-        public virtual Task DeleteSessionAsync(
+        public virtual stt::Task DeleteSessionAsync(
             DeleteSessionRequest request,
-            CallSettings callSettings = null)
+            gaxgrpc::CallSettings callSettings = null)
         {
-            throw new NotImplementedException();
+            throw new s::NotImplementedException();
         }
 
         /// <summary>
@@ -1171,16 +1171,16 @@ namespace Google.Cloud.Spanner.V1
         /// The request object containing all of the parameters for the API call.
         /// </param>
         /// <param name="cancellationToken">
-        /// A <see cref="CancellationToken"/> to use for this RPC.
+        /// A <see cref="st::CancellationToken"/> to use for this RPC.
         /// </param>
         /// <returns>
         /// A Task that completes when the RPC has completed.
         /// </returns>
-        public virtual Task DeleteSessionAsync(
+        public virtual stt::Task DeleteSessionAsync(
             DeleteSessionRequest request,
-            CancellationToken cancellationToken) => DeleteSessionAsync(
+            st::CancellationToken cancellationToken) => DeleteSessionAsync(
                 request,
-                CallSettings.FromCancellationToken(cancellationToken));
+                gaxgrpc::CallSettings.FromCancellationToken(cancellationToken));
 
         /// <summary>
         /// Ends a session, releasing server resources associated with it.
@@ -1193,9 +1193,9 @@ namespace Google.Cloud.Spanner.V1
         /// </param>
         public virtual void DeleteSession(
             DeleteSessionRequest request,
-            CallSettings callSettings = null)
+            gaxgrpc::CallSettings callSettings = null)
         {
-            throw new NotImplementedException();
+            throw new s::NotImplementedException();
         }
 
         /// <summary>
@@ -1220,11 +1220,11 @@ namespace Google.Cloud.Spanner.V1
         /// <returns>
         /// A Task containing the RPC response.
         /// </returns>
-        public virtual Task<ResultSet> ExecuteSqlAsync(
+        public virtual stt::Task<ResultSet> ExecuteSqlAsync(
             ExecuteSqlRequest request,
-            CallSettings callSettings = null)
+            gaxgrpc::CallSettings callSettings = null)
         {
-            throw new NotImplementedException();
+            throw new s::NotImplementedException();
         }
 
         /// <summary>
@@ -1244,16 +1244,16 @@ namespace Google.Cloud.Spanner.V1
         /// The request object containing all of the parameters for the API call.
         /// </param>
         /// <param name="cancellationToken">
-        /// A <see cref="CancellationToken"/> to use for this RPC.
+        /// A <see cref="st::CancellationToken"/> to use for this RPC.
         /// </param>
         /// <returns>
         /// A Task containing the RPC response.
         /// </returns>
-        public virtual Task<ResultSet> ExecuteSqlAsync(
+        public virtual stt::Task<ResultSet> ExecuteSqlAsync(
             ExecuteSqlRequest request,
-            CancellationToken cancellationToken) => ExecuteSqlAsync(
+            st::CancellationToken cancellationToken) => ExecuteSqlAsync(
                 request,
-                CallSettings.FromCancellationToken(cancellationToken));
+                gaxgrpc::CallSettings.FromCancellationToken(cancellationToken));
 
         /// <summary>
         /// Executes an SQL query, returning all rows in a single reply. This
@@ -1279,9 +1279,9 @@ namespace Google.Cloud.Spanner.V1
         /// </returns>
         public virtual ResultSet ExecuteSql(
             ExecuteSqlRequest request,
-            CallSettings callSettings = null)
+            gaxgrpc::CallSettings callSettings = null)
         {
-            throw new NotImplementedException();
+            throw new s::NotImplementedException();
         }
 
         /// <summary>
@@ -1302,15 +1302,15 @@ namespace Google.Cloud.Spanner.V1
         /// </returns>
         public virtual ExecuteStreamingSqlStream ExecuteStreamingSql(
             ExecuteSqlRequest request,
-            CallSettings callSettings = null)
+            gaxgrpc::CallSettings callSettings = null)
         {
-            throw new NotImplementedException();
+            throw new s::NotImplementedException();
         }
 
         /// <summary>
         /// Server streaming methods for <c>ExecuteStreamingSql</c>.
         /// </summary>
-        public abstract partial class ExecuteStreamingSqlStream : ServerStreamingBase<PartialResultSet>
+        public abstract partial class ExecuteStreamingSqlStream : gaxgrpc::ServerStreamingBase<PartialResultSet>
         {
         }
 
@@ -1338,11 +1338,11 @@ namespace Google.Cloud.Spanner.V1
         /// <returns>
         /// A Task containing the RPC response.
         /// </returns>
-        public virtual Task<ResultSet> ReadAsync(
+        public virtual stt::Task<ResultSet> ReadAsync(
             ReadRequest request,
-            CallSettings callSettings = null)
+            gaxgrpc::CallSettings callSettings = null)
         {
-            throw new NotImplementedException();
+            throw new s::NotImplementedException();
         }
 
         /// <summary>
@@ -1364,16 +1364,16 @@ namespace Google.Cloud.Spanner.V1
         /// The request object containing all of the parameters for the API call.
         /// </param>
         /// <param name="cancellationToken">
-        /// A <see cref="CancellationToken"/> to use for this RPC.
+        /// A <see cref="st::CancellationToken"/> to use for this RPC.
         /// </param>
         /// <returns>
         /// A Task containing the RPC response.
         /// </returns>
-        public virtual Task<ResultSet> ReadAsync(
+        public virtual stt::Task<ResultSet> ReadAsync(
             ReadRequest request,
-            CancellationToken cancellationToken) => ReadAsync(
+            st::CancellationToken cancellationToken) => ReadAsync(
                 request,
-                CallSettings.FromCancellationToken(cancellationToken));
+                gaxgrpc::CallSettings.FromCancellationToken(cancellationToken));
 
         /// <summary>
         /// Reads rows from the database using key lookups and scans, as a
@@ -1401,9 +1401,9 @@ namespace Google.Cloud.Spanner.V1
         /// </returns>
         public virtual ResultSet Read(
             ReadRequest request,
-            CallSettings callSettings = null)
+            gaxgrpc::CallSettings callSettings = null)
         {
-            throw new NotImplementedException();
+            throw new s::NotImplementedException();
         }
 
         /// <summary>
@@ -1424,15 +1424,15 @@ namespace Google.Cloud.Spanner.V1
         /// </returns>
         public virtual StreamingReadStream StreamingRead(
             ReadRequest request,
-            CallSettings callSettings = null)
+            gaxgrpc::CallSettings callSettings = null)
         {
-            throw new NotImplementedException();
+            throw new s::NotImplementedException();
         }
 
         /// <summary>
         /// Server streaming methods for <c>StreamingRead</c>.
         /// </summary>
-        public abstract partial class StreamingReadStream : ServerStreamingBase<PartialResultSet>
+        public abstract partial class StreamingReadStream : gaxgrpc::ServerStreamingBase<PartialResultSet>
         {
         }
 
@@ -1454,14 +1454,14 @@ namespace Google.Cloud.Spanner.V1
         /// <returns>
         /// A Task containing the RPC response.
         /// </returns>
-        public virtual Task<Transaction> BeginTransactionAsync(
+        public virtual stt::Task<Transaction> BeginTransactionAsync(
             SessionName session,
             TransactionOptions options,
-            CallSettings callSettings = null) => BeginTransactionAsync(
+            gaxgrpc::CallSettings callSettings = null) => BeginTransactionAsync(
                 new BeginTransactionRequest
                 {
-                    SessionAsSessionName = GaxPreconditions.CheckNotNull(session, nameof(session)),
-                    Options = GaxPreconditions.CheckNotNull(options, nameof(options)),
+                    SessionAsSessionName = gax::GaxPreconditions.CheckNotNull(session, nameof(session)),
+                    Options = gax::GaxPreconditions.CheckNotNull(options, nameof(options)),
                 },
                 callSettings);
 
@@ -1478,18 +1478,18 @@ namespace Google.Cloud.Spanner.V1
         /// Required. Options for the new transaction.
         /// </param>
         /// <param name="cancellationToken">
-        /// A <see cref="CancellationToken"/> to use for this RPC.
+        /// A <see cref="st::CancellationToken"/> to use for this RPC.
         /// </param>
         /// <returns>
         /// A Task containing the RPC response.
         /// </returns>
-        public virtual Task<Transaction> BeginTransactionAsync(
+        public virtual stt::Task<Transaction> BeginTransactionAsync(
             SessionName session,
             TransactionOptions options,
-            CancellationToken cancellationToken) => BeginTransactionAsync(
+            st::CancellationToken cancellationToken) => BeginTransactionAsync(
                 session,
                 options,
-                CallSettings.FromCancellationToken(cancellationToken));
+                gaxgrpc::CallSettings.FromCancellationToken(cancellationToken));
 
         /// <summary>
         /// Begins a new transaction. This step can often be skipped:
@@ -1512,11 +1512,11 @@ namespace Google.Cloud.Spanner.V1
         public virtual Transaction BeginTransaction(
             SessionName session,
             TransactionOptions options,
-            CallSettings callSettings = null) => BeginTransaction(
+            gaxgrpc::CallSettings callSettings = null) => BeginTransaction(
                 new BeginTransactionRequest
                 {
-                    SessionAsSessionName = GaxPreconditions.CheckNotNull(session, nameof(session)),
-                    Options = GaxPreconditions.CheckNotNull(options, nameof(options)),
+                    SessionAsSessionName = gax::GaxPreconditions.CheckNotNull(session, nameof(session)),
+                    Options = gax::GaxPreconditions.CheckNotNull(options, nameof(options)),
                 },
                 callSettings);
 
@@ -1535,11 +1535,11 @@ namespace Google.Cloud.Spanner.V1
         /// <returns>
         /// A Task containing the RPC response.
         /// </returns>
-        public virtual Task<Transaction> BeginTransactionAsync(
+        public virtual stt::Task<Transaction> BeginTransactionAsync(
             BeginTransactionRequest request,
-            CallSettings callSettings = null)
+            gaxgrpc::CallSettings callSettings = null)
         {
-            throw new NotImplementedException();
+            throw new s::NotImplementedException();
         }
 
         /// <summary>
@@ -1552,16 +1552,16 @@ namespace Google.Cloud.Spanner.V1
         /// The request object containing all of the parameters for the API call.
         /// </param>
         /// <param name="cancellationToken">
-        /// A <see cref="CancellationToken"/> to use for this RPC.
+        /// A <see cref="st::CancellationToken"/> to use for this RPC.
         /// </param>
         /// <returns>
         /// A Task containing the RPC response.
         /// </returns>
-        public virtual Task<Transaction> BeginTransactionAsync(
+        public virtual stt::Task<Transaction> BeginTransactionAsync(
             BeginTransactionRequest request,
-            CancellationToken cancellationToken) => BeginTransactionAsync(
+            st::CancellationToken cancellationToken) => BeginTransactionAsync(
                 request,
-                CallSettings.FromCancellationToken(cancellationToken));
+                gaxgrpc::CallSettings.FromCancellationToken(cancellationToken));
 
         /// <summary>
         /// Begins a new transaction. This step can often be skipped:
@@ -1580,9 +1580,9 @@ namespace Google.Cloud.Spanner.V1
         /// </returns>
         public virtual Transaction BeginTransaction(
             BeginTransactionRequest request,
-            CallSettings callSettings = null)
+            gaxgrpc::CallSettings callSettings = null)
         {
-            throw new NotImplementedException();
+            throw new s::NotImplementedException();
         }
 
         /// <summary>
@@ -1612,16 +1612,16 @@ namespace Google.Cloud.Spanner.V1
         /// <returns>
         /// A Task containing the RPC response.
         /// </returns>
-        public virtual Task<CommitResponse> CommitAsync(
+        public virtual stt::Task<CommitResponse> CommitAsync(
             SessionName session,
-            ByteString transactionId,
-            IEnumerable<Mutation> mutations,
-            CallSettings callSettings = null) => CommitAsync(
+            proto::ByteString transactionId,
+            scg::IEnumerable<Mutation> mutations,
+            gaxgrpc::CallSettings callSettings = null) => CommitAsync(
                 new CommitRequest
                 {
-                    SessionAsSessionName = GaxPreconditions.CheckNotNull(session, nameof(session)),
-                    TransactionId = transactionId ?? ByteString.Empty, // Optional
-                    Mutations = { GaxPreconditions.CheckNotNull(mutations, nameof(mutations)) },
+                    SessionAsSessionName = gax::GaxPreconditions.CheckNotNull(session, nameof(session)),
+                    TransactionId = transactionId ?? Google.Protobuf.ByteString.Empty, // Optional
+                    Mutations = { gax::GaxPreconditions.CheckNotNull(mutations, nameof(mutations)) },
                 },
                 callSettings);
 
@@ -1647,20 +1647,20 @@ namespace Google.Cloud.Spanner.V1
         /// this list.
         /// </param>
         /// <param name="cancellationToken">
-        /// A <see cref="CancellationToken"/> to use for this RPC.
+        /// A <see cref="st::CancellationToken"/> to use for this RPC.
         /// </param>
         /// <returns>
         /// A Task containing the RPC response.
         /// </returns>
-        public virtual Task<CommitResponse> CommitAsync(
+        public virtual stt::Task<CommitResponse> CommitAsync(
             SessionName session,
-            ByteString transactionId,
-            IEnumerable<Mutation> mutations,
-            CancellationToken cancellationToken) => CommitAsync(
+            proto::ByteString transactionId,
+            scg::IEnumerable<Mutation> mutations,
+            st::CancellationToken cancellationToken) => CommitAsync(
                 session,
                 transactionId,
                 mutations,
-                CallSettings.FromCancellationToken(cancellationToken));
+                gaxgrpc::CallSettings.FromCancellationToken(cancellationToken));
 
         /// <summary>
         /// Commits a transaction. The request includes the mutations to be
@@ -1691,14 +1691,14 @@ namespace Google.Cloud.Spanner.V1
         /// </returns>
         public virtual CommitResponse Commit(
             SessionName session,
-            ByteString transactionId,
-            IEnumerable<Mutation> mutations,
-            CallSettings callSettings = null) => Commit(
+            proto::ByteString transactionId,
+            scg::IEnumerable<Mutation> mutations,
+            gaxgrpc::CallSettings callSettings = null) => Commit(
                 new CommitRequest
                 {
-                    SessionAsSessionName = GaxPreconditions.CheckNotNull(session, nameof(session)),
-                    TransactionId = transactionId ?? ByteString.Empty, // Optional
-                    Mutations = { GaxPreconditions.CheckNotNull(mutations, nameof(mutations)) },
+                    SessionAsSessionName = gax::GaxPreconditions.CheckNotNull(session, nameof(session)),
+                    TransactionId = transactionId ?? Google.Protobuf.ByteString.Empty, // Optional
+                    Mutations = { gax::GaxPreconditions.CheckNotNull(mutations, nameof(mutations)) },
                 },
                 callSettings);
 
@@ -1737,16 +1737,16 @@ namespace Google.Cloud.Spanner.V1
         /// <returns>
         /// A Task containing the RPC response.
         /// </returns>
-        public virtual Task<CommitResponse> CommitAsync(
+        public virtual stt::Task<CommitResponse> CommitAsync(
             SessionName session,
             TransactionOptions singleUseTransaction,
-            IEnumerable<Mutation> mutations,
-            CallSettings callSettings = null) => CommitAsync(
+            scg::IEnumerable<Mutation> mutations,
+            gaxgrpc::CallSettings callSettings = null) => CommitAsync(
                 new CommitRequest
                 {
-                    SessionAsSessionName = GaxPreconditions.CheckNotNull(session, nameof(session)),
+                    SessionAsSessionName = gax::GaxPreconditions.CheckNotNull(session, nameof(session)),
                     SingleUseTransaction = singleUseTransaction, // Optional
-                    Mutations = { GaxPreconditions.CheckNotNull(mutations, nameof(mutations)) },
+                    Mutations = { gax::GaxPreconditions.CheckNotNull(mutations, nameof(mutations)) },
                 },
                 callSettings);
 
@@ -1780,20 +1780,20 @@ namespace Google.Cloud.Spanner.V1
         /// this list.
         /// </param>
         /// <param name="cancellationToken">
-        /// A <see cref="CancellationToken"/> to use for this RPC.
+        /// A <see cref="st::CancellationToken"/> to use for this RPC.
         /// </param>
         /// <returns>
         /// A Task containing the RPC response.
         /// </returns>
-        public virtual Task<CommitResponse> CommitAsync(
+        public virtual stt::Task<CommitResponse> CommitAsync(
             SessionName session,
             TransactionOptions singleUseTransaction,
-            IEnumerable<Mutation> mutations,
-            CancellationToken cancellationToken) => CommitAsync(
+            scg::IEnumerable<Mutation> mutations,
+            st::CancellationToken cancellationToken) => CommitAsync(
                 session,
                 singleUseTransaction,
                 mutations,
-                CallSettings.FromCancellationToken(cancellationToken));
+                gaxgrpc::CallSettings.FromCancellationToken(cancellationToken));
 
         /// <summary>
         /// Commits a transaction. The request includes the mutations to be
@@ -1833,13 +1833,13 @@ namespace Google.Cloud.Spanner.V1
         public virtual CommitResponse Commit(
             SessionName session,
             TransactionOptions singleUseTransaction,
-            IEnumerable<Mutation> mutations,
-            CallSettings callSettings = null) => Commit(
+            scg::IEnumerable<Mutation> mutations,
+            gaxgrpc::CallSettings callSettings = null) => Commit(
                 new CommitRequest
                 {
-                    SessionAsSessionName = GaxPreconditions.CheckNotNull(session, nameof(session)),
+                    SessionAsSessionName = gax::GaxPreconditions.CheckNotNull(session, nameof(session)),
                     SingleUseTransaction = singleUseTransaction, // Optional
-                    Mutations = { GaxPreconditions.CheckNotNull(mutations, nameof(mutations)) },
+                    Mutations = { gax::GaxPreconditions.CheckNotNull(mutations, nameof(mutations)) },
                 },
                 callSettings);
 
@@ -1862,11 +1862,11 @@ namespace Google.Cloud.Spanner.V1
         /// <returns>
         /// A Task containing the RPC response.
         /// </returns>
-        public virtual Task<CommitResponse> CommitAsync(
+        public virtual stt::Task<CommitResponse> CommitAsync(
             CommitRequest request,
-            CallSettings callSettings = null)
+            gaxgrpc::CallSettings callSettings = null)
         {
-            throw new NotImplementedException();
+            throw new s::NotImplementedException();
         }
 
         /// <summary>
@@ -1883,16 +1883,16 @@ namespace Google.Cloud.Spanner.V1
         /// The request object containing all of the parameters for the API call.
         /// </param>
         /// <param name="cancellationToken">
-        /// A <see cref="CancellationToken"/> to use for this RPC.
+        /// A <see cref="st::CancellationToken"/> to use for this RPC.
         /// </param>
         /// <returns>
         /// A Task containing the RPC response.
         /// </returns>
-        public virtual Task<CommitResponse> CommitAsync(
+        public virtual stt::Task<CommitResponse> CommitAsync(
             CommitRequest request,
-            CancellationToken cancellationToken) => CommitAsync(
+            st::CancellationToken cancellationToken) => CommitAsync(
                 request,
-                CallSettings.FromCancellationToken(cancellationToken));
+                gaxgrpc::CallSettings.FromCancellationToken(cancellationToken));
 
         /// <summary>
         /// Commits a transaction. The request includes the mutations to be
@@ -1915,9 +1915,9 @@ namespace Google.Cloud.Spanner.V1
         /// </returns>
         public virtual CommitResponse Commit(
             CommitRequest request,
-            CallSettings callSettings = null)
+            gaxgrpc::CallSettings callSettings = null)
         {
-            throw new NotImplementedException();
+            throw new s::NotImplementedException();
         }
 
         /// <summary>
@@ -1942,14 +1942,14 @@ namespace Google.Cloud.Spanner.V1
         /// <returns>
         /// A Task that completes when the RPC has completed.
         /// </returns>
-        public virtual Task RollbackAsync(
+        public virtual stt::Task RollbackAsync(
             SessionName session,
-            ByteString transactionId,
-            CallSettings callSettings = null) => RollbackAsync(
+            proto::ByteString transactionId,
+            gaxgrpc::CallSettings callSettings = null) => RollbackAsync(
                 new RollbackRequest
                 {
-                    SessionAsSessionName = GaxPreconditions.CheckNotNull(session, nameof(session)),
-                    TransactionId = GaxPreconditions.CheckNotNull(transactionId, nameof(transactionId)),
+                    SessionAsSessionName = gax::GaxPreconditions.CheckNotNull(session, nameof(session)),
+                    TransactionId = gax::GaxPreconditions.CheckNotNull(transactionId, nameof(transactionId)),
                 },
                 callSettings);
 
@@ -1970,18 +1970,18 @@ namespace Google.Cloud.Spanner.V1
         /// Required. The transaction to roll back.
         /// </param>
         /// <param name="cancellationToken">
-        /// A <see cref="CancellationToken"/> to use for this RPC.
+        /// A <see cref="st::CancellationToken"/> to use for this RPC.
         /// </param>
         /// <returns>
         /// A Task that completes when the RPC has completed.
         /// </returns>
-        public virtual Task RollbackAsync(
+        public virtual stt::Task RollbackAsync(
             SessionName session,
-            ByteString transactionId,
-            CancellationToken cancellationToken) => RollbackAsync(
+            proto::ByteString transactionId,
+            st::CancellationToken cancellationToken) => RollbackAsync(
                 session,
                 transactionId,
-                CallSettings.FromCancellationToken(cancellationToken));
+                gaxgrpc::CallSettings.FromCancellationToken(cancellationToken));
 
         /// <summary>
         /// Rolls back a transaction, releasing any locks it holds. It is a good
@@ -2004,12 +2004,12 @@ namespace Google.Cloud.Spanner.V1
         /// </param>
         public virtual void Rollback(
             SessionName session,
-            ByteString transactionId,
-            CallSettings callSettings = null) => Rollback(
+            proto::ByteString transactionId,
+            gaxgrpc::CallSettings callSettings = null) => Rollback(
                 new RollbackRequest
                 {
-                    SessionAsSessionName = GaxPreconditions.CheckNotNull(session, nameof(session)),
-                    TransactionId = GaxPreconditions.CheckNotNull(transactionId, nameof(transactionId)),
+                    SessionAsSessionName = gax::GaxPreconditions.CheckNotNull(session, nameof(session)),
+                    TransactionId = gax::GaxPreconditions.CheckNotNull(transactionId, nameof(transactionId)),
                 },
                 callSettings);
 
@@ -2032,11 +2032,11 @@ namespace Google.Cloud.Spanner.V1
         /// <returns>
         /// A Task that completes when the RPC has completed.
         /// </returns>
-        public virtual Task RollbackAsync(
+        public virtual stt::Task RollbackAsync(
             RollbackRequest request,
-            CallSettings callSettings = null)
+            gaxgrpc::CallSettings callSettings = null)
         {
-            throw new NotImplementedException();
+            throw new s::NotImplementedException();
         }
 
         /// <summary>
@@ -2053,16 +2053,16 @@ namespace Google.Cloud.Spanner.V1
         /// The request object containing all of the parameters for the API call.
         /// </param>
         /// <param name="cancellationToken">
-        /// A <see cref="CancellationToken"/> to use for this RPC.
+        /// A <see cref="st::CancellationToken"/> to use for this RPC.
         /// </param>
         /// <returns>
         /// A Task that completes when the RPC has completed.
         /// </returns>
-        public virtual Task RollbackAsync(
+        public virtual stt::Task RollbackAsync(
             RollbackRequest request,
-            CancellationToken cancellationToken) => RollbackAsync(
+            st::CancellationToken cancellationToken) => RollbackAsync(
                 request,
-                CallSettings.FromCancellationToken(cancellationToken));
+                gaxgrpc::CallSettings.FromCancellationToken(cancellationToken));
 
         /// <summary>
         /// Rolls back a transaction, releasing any locks it holds. It is a good
@@ -2082,9 +2082,9 @@ namespace Google.Cloud.Spanner.V1
         /// </param>
         public virtual void Rollback(
             RollbackRequest request,
-            CallSettings callSettings = null)
+            gaxgrpc::CallSettings callSettings = null)
         {
-            throw new NotImplementedException();
+            throw new s::NotImplementedException();
         }
 
         /// <summary>
@@ -2106,11 +2106,11 @@ namespace Google.Cloud.Spanner.V1
         /// <returns>
         /// A Task containing the RPC response.
         /// </returns>
-        public virtual Task<PartitionResponse> PartitionQueryAsync(
+        public virtual stt::Task<PartitionResponse> PartitionQueryAsync(
             PartitionQueryRequest request,
-            CallSettings callSettings = null)
+            gaxgrpc::CallSettings callSettings = null)
         {
-            throw new NotImplementedException();
+            throw new s::NotImplementedException();
         }
 
         /// <summary>
@@ -2127,16 +2127,16 @@ namespace Google.Cloud.Spanner.V1
         /// The request object containing all of the parameters for the API call.
         /// </param>
         /// <param name="cancellationToken">
-        /// A <see cref="CancellationToken"/> to use for this RPC.
+        /// A <see cref="st::CancellationToken"/> to use for this RPC.
         /// </param>
         /// <returns>
         /// A Task containing the RPC response.
         /// </returns>
-        public virtual Task<PartitionResponse> PartitionQueryAsync(
+        public virtual stt::Task<PartitionResponse> PartitionQueryAsync(
             PartitionQueryRequest request,
-            CancellationToken cancellationToken) => PartitionQueryAsync(
+            st::CancellationToken cancellationToken) => PartitionQueryAsync(
                 request,
-                CallSettings.FromCancellationToken(cancellationToken));
+                gaxgrpc::CallSettings.FromCancellationToken(cancellationToken));
 
         /// <summary>
         /// Creates a set of partition tokens that can be used to execute a query
@@ -2159,9 +2159,9 @@ namespace Google.Cloud.Spanner.V1
         /// </returns>
         public virtual PartitionResponse PartitionQuery(
             PartitionQueryRequest request,
-            CallSettings callSettings = null)
+            gaxgrpc::CallSettings callSettings = null)
         {
-            throw new NotImplementedException();
+            throw new s::NotImplementedException();
         }
 
         /// <summary>
@@ -2183,11 +2183,11 @@ namespace Google.Cloud.Spanner.V1
         /// <returns>
         /// A Task containing the RPC response.
         /// </returns>
-        public virtual Task<PartitionResponse> PartitionReadAsync(
+        public virtual stt::Task<PartitionResponse> PartitionReadAsync(
             PartitionReadRequest request,
-            CallSettings callSettings = null)
+            gaxgrpc::CallSettings callSettings = null)
         {
-            throw new NotImplementedException();
+            throw new s::NotImplementedException();
         }
 
         /// <summary>
@@ -2204,16 +2204,16 @@ namespace Google.Cloud.Spanner.V1
         /// The request object containing all of the parameters for the API call.
         /// </param>
         /// <param name="cancellationToken">
-        /// A <see cref="CancellationToken"/> to use for this RPC.
+        /// A <see cref="st::CancellationToken"/> to use for this RPC.
         /// </param>
         /// <returns>
         /// A Task containing the RPC response.
         /// </returns>
-        public virtual Task<PartitionResponse> PartitionReadAsync(
+        public virtual stt::Task<PartitionResponse> PartitionReadAsync(
             PartitionReadRequest request,
-            CancellationToken cancellationToken) => PartitionReadAsync(
+            st::CancellationToken cancellationToken) => PartitionReadAsync(
                 request,
-                CallSettings.FromCancellationToken(cancellationToken));
+                gaxgrpc::CallSettings.FromCancellationToken(cancellationToken));
 
         /// <summary>
         /// Creates a set of partition tokens that can be used to execute a read
@@ -2236,9 +2236,9 @@ namespace Google.Cloud.Spanner.V1
         /// </returns>
         public virtual PartitionResponse PartitionRead(
             PartitionReadRequest request,
-            CallSettings callSettings = null)
+            gaxgrpc::CallSettings callSettings = null)
         {
-            throw new NotImplementedException();
+            throw new s::NotImplementedException();
         }
 
     }
@@ -2248,19 +2248,19 @@ namespace Google.Cloud.Spanner.V1
     /// </summary>
     public sealed partial class SpannerClientImpl : SpannerClient
     {
-        private readonly ApiCall<CreateSessionRequest, Session> _callCreateSession;
-        private readonly ApiCall<GetSessionRequest, Session> _callGetSession;
-        private readonly ApiCall<ListSessionsRequest, ListSessionsResponse> _callListSessions;
-        private readonly ApiCall<DeleteSessionRequest, Empty> _callDeleteSession;
-        private readonly ApiCall<ExecuteSqlRequest, ResultSet> _callExecuteSql;
-        private readonly ApiServerStreamingCall<ExecuteSqlRequest, PartialResultSet> _callExecuteStreamingSql;
-        private readonly ApiCall<ReadRequest, ResultSet> _callRead;
-        private readonly ApiServerStreamingCall<ReadRequest, PartialResultSet> _callStreamingRead;
-        private readonly ApiCall<BeginTransactionRequest, Transaction> _callBeginTransaction;
-        private readonly ApiCall<CommitRequest, CommitResponse> _callCommit;
-        private readonly ApiCall<RollbackRequest, Empty> _callRollback;
-        private readonly ApiCall<PartitionQueryRequest, PartitionResponse> _callPartitionQuery;
-        private readonly ApiCall<PartitionReadRequest, PartitionResponse> _callPartitionRead;
+        private readonly gaxgrpc::ApiCall<CreateSessionRequest, Session> _callCreateSession;
+        private readonly gaxgrpc::ApiCall<GetSessionRequest, Session> _callGetSession;
+        private readonly gaxgrpc::ApiCall<ListSessionsRequest, ListSessionsResponse> _callListSessions;
+        private readonly gaxgrpc::ApiCall<DeleteSessionRequest, protowkt::Empty> _callDeleteSession;
+        private readonly gaxgrpc::ApiCall<ExecuteSqlRequest, ResultSet> _callExecuteSql;
+        private readonly gaxgrpc::ApiServerStreamingCall<ExecuteSqlRequest, PartialResultSet> _callExecuteStreamingSql;
+        private readonly gaxgrpc::ApiCall<ReadRequest, ResultSet> _callRead;
+        private readonly gaxgrpc::ApiServerStreamingCall<ReadRequest, PartialResultSet> _callStreamingRead;
+        private readonly gaxgrpc::ApiCall<BeginTransactionRequest, Transaction> _callBeginTransaction;
+        private readonly gaxgrpc::ApiCall<CommitRequest, CommitResponse> _callCommit;
+        private readonly gaxgrpc::ApiCall<RollbackRequest, protowkt::Empty> _callRollback;
+        private readonly gaxgrpc::ApiCall<PartitionQueryRequest, PartitionResponse> _callPartitionQuery;
+        private readonly gaxgrpc::ApiCall<PartitionReadRequest, PartitionResponse> _callPartitionRead;
 
         /// <summary>
         /// Constructs a client wrapper for the Spanner service, with the specified gRPC client and settings.
@@ -2271,14 +2271,14 @@ namespace Google.Cloud.Spanner.V1
         {
             GrpcClient = grpcClient;
             SpannerSettings effectiveSettings = settings ?? SpannerSettings.GetDefault();
-            ClientHelper clientHelper = new ClientHelper(effectiveSettings);
+            gaxgrpc::ClientHelper clientHelper = new gaxgrpc::ClientHelper(effectiveSettings);
             _callCreateSession = clientHelper.BuildApiCall<CreateSessionRequest, Session>(
                 GrpcClient.CreateSessionAsync, GrpcClient.CreateSession, effectiveSettings.CreateSessionSettings);
             _callGetSession = clientHelper.BuildApiCall<GetSessionRequest, Session>(
                 GrpcClient.GetSessionAsync, GrpcClient.GetSession, effectiveSettings.GetSessionSettings);
             _callListSessions = clientHelper.BuildApiCall<ListSessionsRequest, ListSessionsResponse>(
                 GrpcClient.ListSessionsAsync, GrpcClient.ListSessions, effectiveSettings.ListSessionsSettings);
-            _callDeleteSession = clientHelper.BuildApiCall<DeleteSessionRequest, Empty>(
+            _callDeleteSession = clientHelper.BuildApiCall<DeleteSessionRequest, protowkt::Empty>(
                 GrpcClient.DeleteSessionAsync, GrpcClient.DeleteSession, effectiveSettings.DeleteSessionSettings);
             _callExecuteSql = clientHelper.BuildApiCall<ExecuteSqlRequest, ResultSet>(
                 GrpcClient.ExecuteSqlAsync, GrpcClient.ExecuteSql, effectiveSettings.ExecuteSqlSettings);
@@ -2292,7 +2292,7 @@ namespace Google.Cloud.Spanner.V1
                 GrpcClient.BeginTransactionAsync, GrpcClient.BeginTransaction, effectiveSettings.BeginTransactionSettings);
             _callCommit = clientHelper.BuildApiCall<CommitRequest, CommitResponse>(
                 GrpcClient.CommitAsync, GrpcClient.Commit, effectiveSettings.CommitSettings);
-            _callRollback = clientHelper.BuildApiCall<RollbackRequest, Empty>(
+            _callRollback = clientHelper.BuildApiCall<RollbackRequest, protowkt::Empty>(
                 GrpcClient.RollbackAsync, GrpcClient.Rollback, effectiveSettings.RollbackSettings);
             _callPartitionQuery = clientHelper.BuildApiCall<PartitionQueryRequest, PartitionResponse>(
                 GrpcClient.PartitionQueryAsync, GrpcClient.PartitionQuery, effectiveSettings.PartitionQuerySettings);
@@ -2331,29 +2331,29 @@ namespace Google.Cloud.Spanner.V1
 
         // Partial methods called for every ApiCall on construction.
         // Allows modification of all the underlying ApiCall objects.
-        partial void Modify_ApiCall<TRequest, TResponse>(ref ApiCall<TRequest, TResponse> call)
-            where TRequest : class, IMessage<TRequest>
-            where TResponse : class, IMessage<TResponse>;
-        partial void Modify_ApiCall<TRequest, TResponse>(ref ApiServerStreamingCall<TRequest, TResponse> call)
-            where TRequest : class, IMessage<TRequest>
-            where TResponse : class, IMessage<TResponse>;
+        partial void Modify_ApiCall<TRequest, TResponse>(ref gaxgrpc::ApiCall<TRequest, TResponse> call)
+            where TRequest : class, proto::IMessage<TRequest>
+            where TResponse : class, proto::IMessage<TResponse>;
+        partial void Modify_ApiCall<TRequest, TResponse>(ref gaxgrpc::ApiServerStreamingCall<TRequest, TResponse> call)
+            where TRequest : class, proto::IMessage<TRequest>
+            where TResponse : class, proto::IMessage<TResponse>;
 
         // Partial methods called for each ApiCall on construction.
         // Allows per-RPC-method modification of the underlying ApiCall object.
-        partial void Modify_CreateSessionApiCall(ref ApiCall<CreateSessionRequest, Session> call);
-        partial void Modify_GetSessionApiCall(ref ApiCall<GetSessionRequest, Session> call);
-        partial void Modify_ListSessionsApiCall(ref ApiCall<ListSessionsRequest, ListSessionsResponse> call);
-        partial void Modify_DeleteSessionApiCall(ref ApiCall<DeleteSessionRequest, Empty> call);
-        partial void Modify_ExecuteSqlApiCall(ref ApiCall<ExecuteSqlRequest, ResultSet> call);
-        partial void Modify_ExecuteStreamingSqlApiCall(ref ApiServerStreamingCall<ExecuteSqlRequest, PartialResultSet> call);
-        partial void Modify_ReadApiCall(ref ApiCall<ReadRequest, ResultSet> call);
-        partial void Modify_StreamingReadApiCall(ref ApiServerStreamingCall<ReadRequest, PartialResultSet> call);
-        partial void Modify_BeginTransactionApiCall(ref ApiCall<BeginTransactionRequest, Transaction> call);
-        partial void Modify_CommitApiCall(ref ApiCall<CommitRequest, CommitResponse> call);
-        partial void Modify_RollbackApiCall(ref ApiCall<RollbackRequest, Empty> call);
-        partial void Modify_PartitionQueryApiCall(ref ApiCall<PartitionQueryRequest, PartitionResponse> call);
-        partial void Modify_PartitionReadApiCall(ref ApiCall<PartitionReadRequest, PartitionResponse> call);
-        partial void OnConstruction(Spanner.SpannerClient grpcClient, SpannerSettings effectiveSettings, ClientHelper clientHelper);
+        partial void Modify_CreateSessionApiCall(ref gaxgrpc::ApiCall<CreateSessionRequest, Session> call);
+        partial void Modify_GetSessionApiCall(ref gaxgrpc::ApiCall<GetSessionRequest, Session> call);
+        partial void Modify_ListSessionsApiCall(ref gaxgrpc::ApiCall<ListSessionsRequest, ListSessionsResponse> call);
+        partial void Modify_DeleteSessionApiCall(ref gaxgrpc::ApiCall<DeleteSessionRequest, protowkt::Empty> call);
+        partial void Modify_ExecuteSqlApiCall(ref gaxgrpc::ApiCall<ExecuteSqlRequest, ResultSet> call);
+        partial void Modify_ExecuteStreamingSqlApiCall(ref gaxgrpc::ApiServerStreamingCall<ExecuteSqlRequest, PartialResultSet> call);
+        partial void Modify_ReadApiCall(ref gaxgrpc::ApiCall<ReadRequest, ResultSet> call);
+        partial void Modify_StreamingReadApiCall(ref gaxgrpc::ApiServerStreamingCall<ReadRequest, PartialResultSet> call);
+        partial void Modify_BeginTransactionApiCall(ref gaxgrpc::ApiCall<BeginTransactionRequest, Transaction> call);
+        partial void Modify_CommitApiCall(ref gaxgrpc::ApiCall<CommitRequest, CommitResponse> call);
+        partial void Modify_RollbackApiCall(ref gaxgrpc::ApiCall<RollbackRequest, protowkt::Empty> call);
+        partial void Modify_PartitionQueryApiCall(ref gaxgrpc::ApiCall<PartitionQueryRequest, PartitionResponse> call);
+        partial void Modify_PartitionReadApiCall(ref gaxgrpc::ApiCall<PartitionReadRequest, PartitionResponse> call);
+        partial void OnConstruction(Spanner.SpannerClient grpcClient, SpannerSettings effectiveSettings, gaxgrpc::ClientHelper clientHelper);
 
         /// <summary>
         /// The underlying gRPC Spanner client.
@@ -2363,17 +2363,17 @@ namespace Google.Cloud.Spanner.V1
         // Partial methods called on each request.
         // Allows per-RPC-call modification to the request and CallSettings objects,
         // before the underlying RPC is performed.
-        partial void Modify_CreateSessionRequest(ref CreateSessionRequest request, ref CallSettings settings);
-        partial void Modify_GetSessionRequest(ref GetSessionRequest request, ref CallSettings settings);
-        partial void Modify_ListSessionsRequest(ref ListSessionsRequest request, ref CallSettings settings);
-        partial void Modify_DeleteSessionRequest(ref DeleteSessionRequest request, ref CallSettings settings);
-        partial void Modify_ExecuteSqlRequest(ref ExecuteSqlRequest request, ref CallSettings settings);
-        partial void Modify_ReadRequest(ref ReadRequest request, ref CallSettings settings);
-        partial void Modify_BeginTransactionRequest(ref BeginTransactionRequest request, ref CallSettings settings);
-        partial void Modify_CommitRequest(ref CommitRequest request, ref CallSettings settings);
-        partial void Modify_RollbackRequest(ref RollbackRequest request, ref CallSettings settings);
-        partial void Modify_PartitionQueryRequest(ref PartitionQueryRequest request, ref CallSettings settings);
-        partial void Modify_PartitionReadRequest(ref PartitionReadRequest request, ref CallSettings settings);
+        partial void Modify_CreateSessionRequest(ref CreateSessionRequest request, ref gaxgrpc::CallSettings settings);
+        partial void Modify_GetSessionRequest(ref GetSessionRequest request, ref gaxgrpc::CallSettings settings);
+        partial void Modify_ListSessionsRequest(ref ListSessionsRequest request, ref gaxgrpc::CallSettings settings);
+        partial void Modify_DeleteSessionRequest(ref DeleteSessionRequest request, ref gaxgrpc::CallSettings settings);
+        partial void Modify_ExecuteSqlRequest(ref ExecuteSqlRequest request, ref gaxgrpc::CallSettings settings);
+        partial void Modify_ReadRequest(ref ReadRequest request, ref gaxgrpc::CallSettings settings);
+        partial void Modify_BeginTransactionRequest(ref BeginTransactionRequest request, ref gaxgrpc::CallSettings settings);
+        partial void Modify_CommitRequest(ref CommitRequest request, ref gaxgrpc::CallSettings settings);
+        partial void Modify_RollbackRequest(ref RollbackRequest request, ref gaxgrpc::CallSettings settings);
+        partial void Modify_PartitionQueryRequest(ref PartitionQueryRequest request, ref gaxgrpc::CallSettings settings);
+        partial void Modify_PartitionReadRequest(ref PartitionReadRequest request, ref gaxgrpc::CallSettings settings);
 
         /// <summary>
         /// Creates a new session. A session can be used to perform
@@ -2405,9 +2405,9 @@ namespace Google.Cloud.Spanner.V1
         /// <returns>
         /// A Task containing the RPC response.
         /// </returns>
-        public override Task<Session> CreateSessionAsync(
+        public override stt::Task<Session> CreateSessionAsync(
             CreateSessionRequest request,
-            CallSettings callSettings = null)
+            gaxgrpc::CallSettings callSettings = null)
         {
             Modify_CreateSessionRequest(ref request, ref callSettings);
             return _callCreateSession.Async(request, callSettings);
@@ -2445,7 +2445,7 @@ namespace Google.Cloud.Spanner.V1
         /// </returns>
         public override Session CreateSession(
             CreateSessionRequest request,
-            CallSettings callSettings = null)
+            gaxgrpc::CallSettings callSettings = null)
         {
             Modify_CreateSessionRequest(ref request, ref callSettings);
             return _callCreateSession.Sync(request, callSettings);
@@ -2465,9 +2465,9 @@ namespace Google.Cloud.Spanner.V1
         /// <returns>
         /// A Task containing the RPC response.
         /// </returns>
-        public override Task<Session> GetSessionAsync(
+        public override stt::Task<Session> GetSessionAsync(
             GetSessionRequest request,
-            CallSettings callSettings = null)
+            gaxgrpc::CallSettings callSettings = null)
         {
             Modify_GetSessionRequest(ref request, ref callSettings);
             return _callGetSession.Async(request, callSettings);
@@ -2489,7 +2489,7 @@ namespace Google.Cloud.Spanner.V1
         /// </returns>
         public override Session GetSession(
             GetSessionRequest request,
-            CallSettings callSettings = null)
+            gaxgrpc::CallSettings callSettings = null)
         {
             Modify_GetSessionRequest(ref request, ref callSettings);
             return _callGetSession.Sync(request, callSettings);
@@ -2507,12 +2507,12 @@ namespace Google.Cloud.Spanner.V1
         /// <returns>
         /// A pageable asynchronous sequence of <see cref="Session"/> resources.
         /// </returns>
-        public override PagedAsyncEnumerable<ListSessionsResponse, Session> ListSessionsAsync(
+        public override gax::PagedAsyncEnumerable<ListSessionsResponse, Session> ListSessionsAsync(
             ListSessionsRequest request,
-            CallSettings callSettings = null)
+            gaxgrpc::CallSettings callSettings = null)
         {
             Modify_ListSessionsRequest(ref request, ref callSettings);
-            return new GrpcPagedAsyncEnumerable<ListSessionsRequest, ListSessionsResponse, Session>(_callListSessions, request, callSettings);
+            return new gaxgrpc::GrpcPagedAsyncEnumerable<ListSessionsRequest, ListSessionsResponse, Session>(_callListSessions, request, callSettings);
         }
 
         /// <summary>
@@ -2527,12 +2527,12 @@ namespace Google.Cloud.Spanner.V1
         /// <returns>
         /// A pageable sequence of <see cref="Session"/> resources.
         /// </returns>
-        public override PagedEnumerable<ListSessionsResponse, Session> ListSessions(
+        public override gax::PagedEnumerable<ListSessionsResponse, Session> ListSessions(
             ListSessionsRequest request,
-            CallSettings callSettings = null)
+            gaxgrpc::CallSettings callSettings = null)
         {
             Modify_ListSessionsRequest(ref request, ref callSettings);
-            return new GrpcPagedEnumerable<ListSessionsRequest, ListSessionsResponse, Session>(_callListSessions, request, callSettings);
+            return new gaxgrpc::GrpcPagedEnumerable<ListSessionsRequest, ListSessionsResponse, Session>(_callListSessions, request, callSettings);
         }
 
         /// <summary>
@@ -2547,9 +2547,9 @@ namespace Google.Cloud.Spanner.V1
         /// <returns>
         /// A Task that completes when the RPC has completed.
         /// </returns>
-        public override Task DeleteSessionAsync(
+        public override stt::Task DeleteSessionAsync(
             DeleteSessionRequest request,
-            CallSettings callSettings = null)
+            gaxgrpc::CallSettings callSettings = null)
         {
             Modify_DeleteSessionRequest(ref request, ref callSettings);
             return _callDeleteSession.Async(request, callSettings);
@@ -2566,7 +2566,7 @@ namespace Google.Cloud.Spanner.V1
         /// </param>
         public override void DeleteSession(
             DeleteSessionRequest request,
-            CallSettings callSettings = null)
+            gaxgrpc::CallSettings callSettings = null)
         {
             Modify_DeleteSessionRequest(ref request, ref callSettings);
             _callDeleteSession.Sync(request, callSettings);
@@ -2594,9 +2594,9 @@ namespace Google.Cloud.Spanner.V1
         /// <returns>
         /// A Task containing the RPC response.
         /// </returns>
-        public override Task<ResultSet> ExecuteSqlAsync(
+        public override stt::Task<ResultSet> ExecuteSqlAsync(
             ExecuteSqlRequest request,
-            CallSettings callSettings = null)
+            gaxgrpc::CallSettings callSettings = null)
         {
             Modify_ExecuteSqlRequest(ref request, ref callSettings);
             return _callExecuteSql.Async(request, callSettings);
@@ -2626,7 +2626,7 @@ namespace Google.Cloud.Spanner.V1
         /// </returns>
         public override ResultSet ExecuteSql(
             ExecuteSqlRequest request,
-            CallSettings callSettings = null)
+            gaxgrpc::CallSettings callSettings = null)
         {
             Modify_ExecuteSqlRequest(ref request, ref callSettings);
             return _callExecuteSql.Sync(request, callSettings);
@@ -2650,7 +2650,7 @@ namespace Google.Cloud.Spanner.V1
         /// </returns>
         public override ExecuteStreamingSqlStream ExecuteStreamingSql(
             ExecuteSqlRequest request,
-            CallSettings callSettings = null)
+            gaxgrpc::CallSettings callSettings = null)
         {
             Modify_ExecuteSqlRequest(ref request, ref callSettings);
             return new ExecuteStreamingSqlStreamImpl(_callExecuteStreamingSql.Call(request, callSettings));
@@ -2662,16 +2662,16 @@ namespace Google.Cloud.Spanner.V1
             /// Construct the server-streaming method for <c>ExecuteStreamingSql</c>.
             /// </summary>
             /// <param name="call">The underlying gRPC server-streaming call.</param>
-            internal ExecuteStreamingSqlStreamImpl(AsyncServerStreamingCall<PartialResultSet> call)
+            internal ExecuteStreamingSqlStreamImpl(grpccore::AsyncServerStreamingCall<PartialResultSet> call)
             {
                 GrpcCall = call;
             }
 
             /// <inheritdoc/>
-            public override AsyncServerStreamingCall<PartialResultSet> GrpcCall { get; }
+            public override grpccore::AsyncServerStreamingCall<PartialResultSet> GrpcCall { get; }
 
             /// <inheritdoc/>
-            public override IAsyncEnumerator<PartialResultSet> ResponseStream => GrpcCall.ResponseStream;
+            public override scg::IAsyncEnumerator<PartialResultSet> ResponseStream => GrpcCall.ResponseStream;
         }
 
         /// <summary>
@@ -2698,9 +2698,9 @@ namespace Google.Cloud.Spanner.V1
         /// <returns>
         /// A Task containing the RPC response.
         /// </returns>
-        public override Task<ResultSet> ReadAsync(
+        public override stt::Task<ResultSet> ReadAsync(
             ReadRequest request,
-            CallSettings callSettings = null)
+            gaxgrpc::CallSettings callSettings = null)
         {
             Modify_ReadRequest(ref request, ref callSettings);
             return _callRead.Async(request, callSettings);
@@ -2732,7 +2732,7 @@ namespace Google.Cloud.Spanner.V1
         /// </returns>
         public override ResultSet Read(
             ReadRequest request,
-            CallSettings callSettings = null)
+            gaxgrpc::CallSettings callSettings = null)
         {
             Modify_ReadRequest(ref request, ref callSettings);
             return _callRead.Sync(request, callSettings);
@@ -2756,7 +2756,7 @@ namespace Google.Cloud.Spanner.V1
         /// </returns>
         public override StreamingReadStream StreamingRead(
             ReadRequest request,
-            CallSettings callSettings = null)
+            gaxgrpc::CallSettings callSettings = null)
         {
             Modify_ReadRequest(ref request, ref callSettings);
             return new StreamingReadStreamImpl(_callStreamingRead.Call(request, callSettings));
@@ -2768,16 +2768,16 @@ namespace Google.Cloud.Spanner.V1
             /// Construct the server-streaming method for <c>StreamingRead</c>.
             /// </summary>
             /// <param name="call">The underlying gRPC server-streaming call.</param>
-            internal StreamingReadStreamImpl(AsyncServerStreamingCall<PartialResultSet> call)
+            internal StreamingReadStreamImpl(grpccore::AsyncServerStreamingCall<PartialResultSet> call)
             {
                 GrpcCall = call;
             }
 
             /// <inheritdoc/>
-            public override AsyncServerStreamingCall<PartialResultSet> GrpcCall { get; }
+            public override grpccore::AsyncServerStreamingCall<PartialResultSet> GrpcCall { get; }
 
             /// <inheritdoc/>
-            public override IAsyncEnumerator<PartialResultSet> ResponseStream => GrpcCall.ResponseStream;
+            public override scg::IAsyncEnumerator<PartialResultSet> ResponseStream => GrpcCall.ResponseStream;
         }
 
         /// <summary>
@@ -2795,9 +2795,9 @@ namespace Google.Cloud.Spanner.V1
         /// <returns>
         /// A Task containing the RPC response.
         /// </returns>
-        public override Task<Transaction> BeginTransactionAsync(
+        public override stt::Task<Transaction> BeginTransactionAsync(
             BeginTransactionRequest request,
-            CallSettings callSettings = null)
+            gaxgrpc::CallSettings callSettings = null)
         {
             Modify_BeginTransactionRequest(ref request, ref callSettings);
             return _callBeginTransaction.Async(request, callSettings);
@@ -2820,7 +2820,7 @@ namespace Google.Cloud.Spanner.V1
         /// </returns>
         public override Transaction BeginTransaction(
             BeginTransactionRequest request,
-            CallSettings callSettings = null)
+            gaxgrpc::CallSettings callSettings = null)
         {
             Modify_BeginTransactionRequest(ref request, ref callSettings);
             return _callBeginTransaction.Sync(request, callSettings);
@@ -2845,9 +2845,9 @@ namespace Google.Cloud.Spanner.V1
         /// <returns>
         /// A Task containing the RPC response.
         /// </returns>
-        public override Task<CommitResponse> CommitAsync(
+        public override stt::Task<CommitResponse> CommitAsync(
             CommitRequest request,
-            CallSettings callSettings = null)
+            gaxgrpc::CallSettings callSettings = null)
         {
             Modify_CommitRequest(ref request, ref callSettings);
             return _callCommit.Async(request, callSettings);
@@ -2874,7 +2874,7 @@ namespace Google.Cloud.Spanner.V1
         /// </returns>
         public override CommitResponse Commit(
             CommitRequest request,
-            CallSettings callSettings = null)
+            gaxgrpc::CallSettings callSettings = null)
         {
             Modify_CommitRequest(ref request, ref callSettings);
             return _callCommit.Sync(request, callSettings);
@@ -2899,9 +2899,9 @@ namespace Google.Cloud.Spanner.V1
         /// <returns>
         /// A Task that completes when the RPC has completed.
         /// </returns>
-        public override Task RollbackAsync(
+        public override stt::Task RollbackAsync(
             RollbackRequest request,
-            CallSettings callSettings = null)
+            gaxgrpc::CallSettings callSettings = null)
         {
             Modify_RollbackRequest(ref request, ref callSettings);
             return _callRollback.Async(request, callSettings);
@@ -2925,7 +2925,7 @@ namespace Google.Cloud.Spanner.V1
         /// </param>
         public override void Rollback(
             RollbackRequest request,
-            CallSettings callSettings = null)
+            gaxgrpc::CallSettings callSettings = null)
         {
             Modify_RollbackRequest(ref request, ref callSettings);
             _callRollback.Sync(request, callSettings);
@@ -2950,9 +2950,9 @@ namespace Google.Cloud.Spanner.V1
         /// <returns>
         /// A Task containing the RPC response.
         /// </returns>
-        public override Task<PartitionResponse> PartitionQueryAsync(
+        public override stt::Task<PartitionResponse> PartitionQueryAsync(
             PartitionQueryRequest request,
-            CallSettings callSettings = null)
+            gaxgrpc::CallSettings callSettings = null)
         {
             Modify_PartitionQueryRequest(ref request, ref callSettings);
             return _callPartitionQuery.Async(request, callSettings);
@@ -2979,7 +2979,7 @@ namespace Google.Cloud.Spanner.V1
         /// </returns>
         public override PartitionResponse PartitionQuery(
             PartitionQueryRequest request,
-            CallSettings callSettings = null)
+            gaxgrpc::CallSettings callSettings = null)
         {
             Modify_PartitionQueryRequest(ref request, ref callSettings);
             return _callPartitionQuery.Sync(request, callSettings);
@@ -3004,9 +3004,9 @@ namespace Google.Cloud.Spanner.V1
         /// <returns>
         /// A Task containing the RPC response.
         /// </returns>
-        public override Task<PartitionResponse> PartitionReadAsync(
+        public override stt::Task<PartitionResponse> PartitionReadAsync(
             PartitionReadRequest request,
-            CallSettings callSettings = null)
+            gaxgrpc::CallSettings callSettings = null)
         {
             Modify_PartitionReadRequest(ref request, ref callSettings);
             return _callPartitionRead.Async(request, callSettings);
@@ -3033,7 +3033,7 @@ namespace Google.Cloud.Spanner.V1
         /// </returns>
         public override PartitionResponse PartitionRead(
             PartitionReadRequest request,
-            CallSettings callSettings = null)
+            gaxgrpc::CallSettings callSettings = null)
         {
             Modify_PartitionReadRequest(ref request, ref callSettings);
             return _callPartitionRead.Sync(request, callSettings);
@@ -3043,16 +3043,16 @@ namespace Google.Cloud.Spanner.V1
 
     // Partial classes to enable page-streaming
 
-    public partial class ListSessionsRequest : IPageRequest { }
-    public partial class ListSessionsResponse : IPageResponse<Session>
+    public partial class ListSessionsRequest : gaxgrpc::IPageRequest { }
+    public partial class ListSessionsResponse : gaxgrpc::IPageResponse<Session>
     {
         /// <summary>
         /// Returns an enumerator that iterates through the resources in this response.
         /// </summary>
-        public IEnumerator<Session> GetEnumerator() => Sessions.GetEnumerator();
+        public scg::IEnumerator<Session> GetEnumerator() => Sessions.GetEnumerator();
 
         /// <inheritdoc/>
-        IEnumerator IEnumerable.GetEnumerator() => GetEnumerator();
+        sc::IEnumerator sc::IEnumerable.GetEnumerator() => GetEnumerator();
     }
 
 

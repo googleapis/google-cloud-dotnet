@@ -14,26 +14,26 @@
 
 // Generated code. DO NOT EDIT!
 
-using Google.Api.Gax;
-using Google.Api.Gax.Grpc;
-using Google.Cloud.Iam.V1;
-using Google.LongRunning;
-using Google.Protobuf;
-using Google.Protobuf.WellKnownTypes;
-using Grpc.Core;
-using System;
-using System.Collections;
-using System.Collections.Generic;
-using System.Collections.ObjectModel;
-using System.Threading;
-using System.Threading.Tasks;
+using gax = Google.Api.Gax;
+using gaxgrpc = Google.Api.Gax.Grpc;
+using iam = Google.Cloud.Iam.V1;
+using lro = Google.LongRunning;
+using proto = Google.Protobuf;
+using protowkt = Google.Protobuf.WellKnownTypes;
+using grpccore = Grpc.Core;
+using s = System;
+using sc = System.Collections;
+using scg = System.Collections.Generic;
+using sco = System.Collections.ObjectModel;
+using st = System.Threading;
+using stt = System.Threading.Tasks;
 
 namespace Google.Cloud.Bigtable.Admin.V2
 {
     /// <summary>
     /// Settings for a <see cref="BigtableInstanceAdminClient"/>.
     /// </summary>
-    public sealed partial class BigtableInstanceAdminSettings : ServiceSettingsBase
+    public sealed partial class BigtableInstanceAdminSettings : gaxgrpc::ServiceSettingsBase
     {
         /// <summary>
         /// Get a new instance of the default <see cref="BigtableInstanceAdminSettings"/>.
@@ -50,7 +50,7 @@ namespace Google.Cloud.Bigtable.Admin.V2
 
         private BigtableInstanceAdminSettings(BigtableInstanceAdminSettings existing) : base(existing)
         {
-            GaxPreconditions.CheckNotNull(existing, nameof(existing));
+            gax::GaxPreconditions.CheckNotNull(existing, nameof(existing));
             CreateInstanceSettings = existing.CreateInstanceSettings;
             CreateInstanceOperationsSettings = existing.CreateInstanceOperationsSettings?.Clone();
             GetInstanceSettings = existing.GetInstanceSettings;
@@ -80,31 +80,31 @@ namespace Google.Cloud.Bigtable.Admin.V2
         partial void OnCopy(BigtableInstanceAdminSettings existing);
 
         /// <summary>
-        /// The filter specifying which RPC <see cref="StatusCode"/>s are eligible for retry
+        /// The filter specifying which RPC <see cref="grpccore::StatusCode"/>s are eligible for retry
         /// for "Idempotent" <see cref="BigtableInstanceAdminClient"/> RPC methods.
         /// </summary>
         /// <remarks>
-        /// The eligible RPC <see cref="StatusCode"/>s for retry for "Idempotent" RPC methods are:
+        /// The eligible RPC <see cref="grpccore::StatusCode"/>s for retry for "Idempotent" RPC methods are:
         /// <list type="bullet">
-        /// <item><description><see cref="StatusCode.DeadlineExceeded"/></description></item>
-        /// <item><description><see cref="StatusCode.Unavailable"/></description></item>
+        /// <item><description><see cref="grpccore::StatusCode.DeadlineExceeded"/></description></item>
+        /// <item><description><see cref="grpccore::StatusCode.Unavailable"/></description></item>
         /// </list>
         /// </remarks>
-        public static Predicate<RpcException> IdempotentRetryFilter { get; } =
-            RetrySettings.FilterForStatusCodes(StatusCode.DeadlineExceeded, StatusCode.Unavailable);
+        public static s::Predicate<grpccore::RpcException> IdempotentRetryFilter { get; } =
+            gaxgrpc::RetrySettings.FilterForStatusCodes(grpccore::StatusCode.DeadlineExceeded, grpccore::StatusCode.Unavailable);
 
         /// <summary>
-        /// The filter specifying which RPC <see cref="StatusCode"/>s are eligible for retry
+        /// The filter specifying which RPC <see cref="grpccore::StatusCode"/>s are eligible for retry
         /// for "NonIdempotent" <see cref="BigtableInstanceAdminClient"/> RPC methods.
         /// </summary>
         /// <remarks>
-        /// The eligible RPC <see cref="StatusCode"/>s for retry for "NonIdempotent" RPC methods are:
+        /// The eligible RPC <see cref="grpccore::StatusCode"/>s for retry for "NonIdempotent" RPC methods are:
         /// <list type="bullet">
-        /// <item><description><see cref="StatusCode.Unavailable"/></description></item>
+        /// <item><description><see cref="grpccore::StatusCode.Unavailable"/></description></item>
         /// </list>
         /// </remarks>
-        public static Predicate<RpcException> NonIdempotentRetryFilter { get; } =
-            RetrySettings.FilterForStatusCodes(StatusCode.Unavailable);
+        public static s::Predicate<grpccore::RpcException> NonIdempotentRetryFilter { get; } =
+            gaxgrpc::RetrySettings.FilterForStatusCodes(grpccore::StatusCode.Unavailable);
 
         /// <summary>
         /// "Default" retry backoff for <see cref="BigtableInstanceAdminClient"/> RPC methods.
@@ -120,9 +120,9 @@ namespace Google.Cloud.Bigtable.Admin.V2
         /// <item><description>Delay multiplier: 2.0</description></item>
         /// </list>
         /// </remarks>
-        public static BackoffSettings GetDefaultRetryBackoff() => new BackoffSettings(
-            delay: TimeSpan.FromMilliseconds(5),
-            maxDelay: TimeSpan.FromMilliseconds(60000),
+        public static gaxgrpc::BackoffSettings GetDefaultRetryBackoff() => new gaxgrpc::BackoffSettings(
+            delay: s::TimeSpan.FromMilliseconds(5),
+            maxDelay: s::TimeSpan.FromMilliseconds(60000),
             delayMultiplier: 2.0
         );
 
@@ -140,19 +140,19 @@ namespace Google.Cloud.Bigtable.Admin.V2
         /// <item><description>Maximum timeout: 60000 milliseconds</description></item>
         /// </list>
         /// </remarks>
-        public static BackoffSettings GetDefaultTimeoutBackoff() => new BackoffSettings(
-            delay: TimeSpan.FromMilliseconds(60000),
-            maxDelay: TimeSpan.FromMilliseconds(60000),
+        public static gaxgrpc::BackoffSettings GetDefaultTimeoutBackoff() => new gaxgrpc::BackoffSettings(
+            delay: s::TimeSpan.FromMilliseconds(60000),
+            maxDelay: s::TimeSpan.FromMilliseconds(60000),
             delayMultiplier: 1.0
         );
 
         /// <summary>
-        /// <see cref="CallSettings"/> for synchronous and asynchronous calls to
+        /// <see cref="gaxgrpc::CallSettings"/> for synchronous and asynchronous calls to
         /// <c>BigtableInstanceAdminClient.CreateInstance</c> and <c>BigtableInstanceAdminClient.CreateInstanceAsync</c>.
         /// </summary>
         /// <remarks>
         /// The default <c>BigtableInstanceAdminClient.CreateInstance</c> and
-        /// <c>BigtableInstanceAdminClient.CreateInstanceAsync</c> <see cref="RetrySettings"/> are:
+        /// <c>BigtableInstanceAdminClient.CreateInstanceAsync</c> <see cref="gaxgrpc::RetrySettings"/> are:
         /// <list type="bullet">
         /// <item><description>Initial retry delay: 5 milliseconds</description></item>
         /// <item><description>Retry delay multiplier: 2.0</description></item>
@@ -163,15 +163,15 @@ namespace Google.Cloud.Bigtable.Admin.V2
         /// </list>
         /// Retry will be attempted on the following response status codes:
         /// <list>
-        /// <item><description><see cref="StatusCode.Unavailable"/></description></item>
+        /// <item><description><see cref="grpccore::StatusCode.Unavailable"/></description></item>
         /// </list>
         /// Default RPC expiration is 600000 milliseconds.
         /// </remarks>
-        public CallSettings CreateInstanceSettings { get; set; } = CallSettings.FromCallTiming(
-            CallTiming.FromRetry(new RetrySettings(
+        public gaxgrpc::CallSettings CreateInstanceSettings { get; set; } = gaxgrpc::CallSettings.FromCallTiming(
+            gaxgrpc::CallTiming.FromRetry(new gaxgrpc::RetrySettings(
                 retryBackoff: GetDefaultRetryBackoff(),
                 timeoutBackoff: GetDefaultTimeoutBackoff(),
-                totalExpiration: Expiration.FromTimeout(TimeSpan.FromMilliseconds(600000)),
+                totalExpiration: gax::Expiration.FromTimeout(s::TimeSpan.FromMilliseconds(600000)),
                 retryFilter: NonIdempotentRetryFilter
             )));
 
@@ -179,7 +179,7 @@ namespace Google.Cloud.Bigtable.Admin.V2
         /// Long Running Operation settings for calls to <c>BigtableInstanceAdminClient.CreateInstance</c>.
         /// </summary>
         /// <remarks>
-        /// Uses default <see cref="PollSettings"/> of:
+        /// Uses default <see cref="gax::PollSettings"/> of:
         /// <list type="bullet">
         /// <item><description>Initial delay: 500 milliseconds</description></item>
         /// <item><description>Delay multiplier: 1.5</description></item>
@@ -187,22 +187,22 @@ namespace Google.Cloud.Bigtable.Admin.V2
         /// <item><description>Total timeout: 300000 milliseconds</description></item>
         /// </list>
         /// </remarks>
-        public OperationsSettings CreateInstanceOperationsSettings { get; set; } = new OperationsSettings
+        public lro::OperationsSettings CreateInstanceOperationsSettings { get; set; } = new lro::OperationsSettings
         {
-            DefaultPollSettings = new PollSettings(
-                Expiration.FromTimeout(TimeSpan.FromMilliseconds(300000L)),
-                TimeSpan.FromMilliseconds(500L),
+            DefaultPollSettings = new gax::PollSettings(
+                gax::Expiration.FromTimeout(s::TimeSpan.FromMilliseconds(300000L)),
+                s::TimeSpan.FromMilliseconds(500L),
                 1.5,
-                TimeSpan.FromMilliseconds(5000L))
+                s::TimeSpan.FromMilliseconds(5000L))
         };
 
         /// <summary>
-        /// <see cref="CallSettings"/> for synchronous and asynchronous calls to
+        /// <see cref="gaxgrpc::CallSettings"/> for synchronous and asynchronous calls to
         /// <c>BigtableInstanceAdminClient.GetInstance</c> and <c>BigtableInstanceAdminClient.GetInstanceAsync</c>.
         /// </summary>
         /// <remarks>
         /// The default <c>BigtableInstanceAdminClient.GetInstance</c> and
-        /// <c>BigtableInstanceAdminClient.GetInstanceAsync</c> <see cref="RetrySettings"/> are:
+        /// <c>BigtableInstanceAdminClient.GetInstanceAsync</c> <see cref="gaxgrpc::RetrySettings"/> are:
         /// <list type="bullet">
         /// <item><description>Initial retry delay: 5 milliseconds</description></item>
         /// <item><description>Retry delay multiplier: 2.0</description></item>
@@ -213,26 +213,26 @@ namespace Google.Cloud.Bigtable.Admin.V2
         /// </list>
         /// Retry will be attempted on the following response status codes:
         /// <list>
-        /// <item><description><see cref="StatusCode.DeadlineExceeded"/></description></item>
-        /// <item><description><see cref="StatusCode.Unavailable"/></description></item>
+        /// <item><description><see cref="grpccore::StatusCode.DeadlineExceeded"/></description></item>
+        /// <item><description><see cref="grpccore::StatusCode.Unavailable"/></description></item>
         /// </list>
         /// Default RPC expiration is 600000 milliseconds.
         /// </remarks>
-        public CallSettings GetInstanceSettings { get; set; } = CallSettings.FromCallTiming(
-            CallTiming.FromRetry(new RetrySettings(
+        public gaxgrpc::CallSettings GetInstanceSettings { get; set; } = gaxgrpc::CallSettings.FromCallTiming(
+            gaxgrpc::CallTiming.FromRetry(new gaxgrpc::RetrySettings(
                 retryBackoff: GetDefaultRetryBackoff(),
                 timeoutBackoff: GetDefaultTimeoutBackoff(),
-                totalExpiration: Expiration.FromTimeout(TimeSpan.FromMilliseconds(600000)),
+                totalExpiration: gax::Expiration.FromTimeout(s::TimeSpan.FromMilliseconds(600000)),
                 retryFilter: IdempotentRetryFilter
             )));
 
         /// <summary>
-        /// <see cref="CallSettings"/> for synchronous and asynchronous calls to
+        /// <see cref="gaxgrpc::CallSettings"/> for synchronous and asynchronous calls to
         /// <c>BigtableInstanceAdminClient.ListInstances</c> and <c>BigtableInstanceAdminClient.ListInstancesAsync</c>.
         /// </summary>
         /// <remarks>
         /// The default <c>BigtableInstanceAdminClient.ListInstances</c> and
-        /// <c>BigtableInstanceAdminClient.ListInstancesAsync</c> <see cref="RetrySettings"/> are:
+        /// <c>BigtableInstanceAdminClient.ListInstancesAsync</c> <see cref="gaxgrpc::RetrySettings"/> are:
         /// <list type="bullet">
         /// <item><description>Initial retry delay: 5 milliseconds</description></item>
         /// <item><description>Retry delay multiplier: 2.0</description></item>
@@ -243,26 +243,26 @@ namespace Google.Cloud.Bigtable.Admin.V2
         /// </list>
         /// Retry will be attempted on the following response status codes:
         /// <list>
-        /// <item><description><see cref="StatusCode.DeadlineExceeded"/></description></item>
-        /// <item><description><see cref="StatusCode.Unavailable"/></description></item>
+        /// <item><description><see cref="grpccore::StatusCode.DeadlineExceeded"/></description></item>
+        /// <item><description><see cref="grpccore::StatusCode.Unavailable"/></description></item>
         /// </list>
         /// Default RPC expiration is 600000 milliseconds.
         /// </remarks>
-        public CallSettings ListInstancesSettings { get; set; } = CallSettings.FromCallTiming(
-            CallTiming.FromRetry(new RetrySettings(
+        public gaxgrpc::CallSettings ListInstancesSettings { get; set; } = gaxgrpc::CallSettings.FromCallTiming(
+            gaxgrpc::CallTiming.FromRetry(new gaxgrpc::RetrySettings(
                 retryBackoff: GetDefaultRetryBackoff(),
                 timeoutBackoff: GetDefaultTimeoutBackoff(),
-                totalExpiration: Expiration.FromTimeout(TimeSpan.FromMilliseconds(600000)),
+                totalExpiration: gax::Expiration.FromTimeout(s::TimeSpan.FromMilliseconds(600000)),
                 retryFilter: IdempotentRetryFilter
             )));
 
         /// <summary>
-        /// <see cref="CallSettings"/> for synchronous and asynchronous calls to
+        /// <see cref="gaxgrpc::CallSettings"/> for synchronous and asynchronous calls to
         /// <c>BigtableInstanceAdminClient.PartialUpdateInstance</c> and <c>BigtableInstanceAdminClient.PartialUpdateInstanceAsync</c>.
         /// </summary>
         /// <remarks>
         /// The default <c>BigtableInstanceAdminClient.PartialUpdateInstance</c> and
-        /// <c>BigtableInstanceAdminClient.PartialUpdateInstanceAsync</c> <see cref="RetrySettings"/> are:
+        /// <c>BigtableInstanceAdminClient.PartialUpdateInstanceAsync</c> <see cref="gaxgrpc::RetrySettings"/> are:
         /// <list type="bullet">
         /// <item><description>Initial retry delay: 5 milliseconds</description></item>
         /// <item><description>Retry delay multiplier: 2.0</description></item>
@@ -273,16 +273,16 @@ namespace Google.Cloud.Bigtable.Admin.V2
         /// </list>
         /// Retry will be attempted on the following response status codes:
         /// <list>
-        /// <item><description><see cref="StatusCode.DeadlineExceeded"/></description></item>
-        /// <item><description><see cref="StatusCode.Unavailable"/></description></item>
+        /// <item><description><see cref="grpccore::StatusCode.DeadlineExceeded"/></description></item>
+        /// <item><description><see cref="grpccore::StatusCode.Unavailable"/></description></item>
         /// </list>
         /// Default RPC expiration is 600000 milliseconds.
         /// </remarks>
-        public CallSettings PartialUpdateInstanceSettings { get; set; } = CallSettings.FromCallTiming(
-            CallTiming.FromRetry(new RetrySettings(
+        public gaxgrpc::CallSettings PartialUpdateInstanceSettings { get; set; } = gaxgrpc::CallSettings.FromCallTiming(
+            gaxgrpc::CallTiming.FromRetry(new gaxgrpc::RetrySettings(
                 retryBackoff: GetDefaultRetryBackoff(),
                 timeoutBackoff: GetDefaultTimeoutBackoff(),
-                totalExpiration: Expiration.FromTimeout(TimeSpan.FromMilliseconds(600000)),
+                totalExpiration: gax::Expiration.FromTimeout(s::TimeSpan.FromMilliseconds(600000)),
                 retryFilter: IdempotentRetryFilter
             )));
 
@@ -290,7 +290,7 @@ namespace Google.Cloud.Bigtable.Admin.V2
         /// Long Running Operation settings for calls to <c>BigtableInstanceAdminClient.PartialUpdateInstance</c>.
         /// </summary>
         /// <remarks>
-        /// Uses default <see cref="PollSettings"/> of:
+        /// Uses default <see cref="gax::PollSettings"/> of:
         /// <list type="bullet">
         /// <item><description>Initial delay: 500 milliseconds</description></item>
         /// <item><description>Delay multiplier: 1.5</description></item>
@@ -298,22 +298,22 @@ namespace Google.Cloud.Bigtable.Admin.V2
         /// <item><description>Total timeout: 300000 milliseconds</description></item>
         /// </list>
         /// </remarks>
-        public OperationsSettings PartialUpdateInstanceOperationsSettings { get; set; } = new OperationsSettings
+        public lro::OperationsSettings PartialUpdateInstanceOperationsSettings { get; set; } = new lro::OperationsSettings
         {
-            DefaultPollSettings = new PollSettings(
-                Expiration.FromTimeout(TimeSpan.FromMilliseconds(300000L)),
-                TimeSpan.FromMilliseconds(500L),
+            DefaultPollSettings = new gax::PollSettings(
+                gax::Expiration.FromTimeout(s::TimeSpan.FromMilliseconds(300000L)),
+                s::TimeSpan.FromMilliseconds(500L),
                 1.5,
-                TimeSpan.FromMilliseconds(5000L))
+                s::TimeSpan.FromMilliseconds(5000L))
         };
 
         /// <summary>
-        /// <see cref="CallSettings"/> for synchronous and asynchronous calls to
+        /// <see cref="gaxgrpc::CallSettings"/> for synchronous and asynchronous calls to
         /// <c>BigtableInstanceAdminClient.DeleteInstance</c> and <c>BigtableInstanceAdminClient.DeleteInstanceAsync</c>.
         /// </summary>
         /// <remarks>
         /// The default <c>BigtableInstanceAdminClient.DeleteInstance</c> and
-        /// <c>BigtableInstanceAdminClient.DeleteInstanceAsync</c> <see cref="RetrySettings"/> are:
+        /// <c>BigtableInstanceAdminClient.DeleteInstanceAsync</c> <see cref="gaxgrpc::RetrySettings"/> are:
         /// <list type="bullet">
         /// <item><description>Initial retry delay: 5 milliseconds</description></item>
         /// <item><description>Retry delay multiplier: 2.0</description></item>
@@ -324,26 +324,26 @@ namespace Google.Cloud.Bigtable.Admin.V2
         /// </list>
         /// Retry will be attempted on the following response status codes:
         /// <list>
-        /// <item><description><see cref="StatusCode.DeadlineExceeded"/></description></item>
-        /// <item><description><see cref="StatusCode.Unavailable"/></description></item>
+        /// <item><description><see cref="grpccore::StatusCode.DeadlineExceeded"/></description></item>
+        /// <item><description><see cref="grpccore::StatusCode.Unavailable"/></description></item>
         /// </list>
         /// Default RPC expiration is 600000 milliseconds.
         /// </remarks>
-        public CallSettings DeleteInstanceSettings { get; set; } = CallSettings.FromCallTiming(
-            CallTiming.FromRetry(new RetrySettings(
+        public gaxgrpc::CallSettings DeleteInstanceSettings { get; set; } = gaxgrpc::CallSettings.FromCallTiming(
+            gaxgrpc::CallTiming.FromRetry(new gaxgrpc::RetrySettings(
                 retryBackoff: GetDefaultRetryBackoff(),
                 timeoutBackoff: GetDefaultTimeoutBackoff(),
-                totalExpiration: Expiration.FromTimeout(TimeSpan.FromMilliseconds(600000)),
+                totalExpiration: gax::Expiration.FromTimeout(s::TimeSpan.FromMilliseconds(600000)),
                 retryFilter: IdempotentRetryFilter
             )));
 
         /// <summary>
-        /// <see cref="CallSettings"/> for synchronous and asynchronous calls to
+        /// <see cref="gaxgrpc::CallSettings"/> for synchronous and asynchronous calls to
         /// <c>BigtableInstanceAdminClient.CreateCluster</c> and <c>BigtableInstanceAdminClient.CreateClusterAsync</c>.
         /// </summary>
         /// <remarks>
         /// The default <c>BigtableInstanceAdminClient.CreateCluster</c> and
-        /// <c>BigtableInstanceAdminClient.CreateClusterAsync</c> <see cref="RetrySettings"/> are:
+        /// <c>BigtableInstanceAdminClient.CreateClusterAsync</c> <see cref="gaxgrpc::RetrySettings"/> are:
         /// <list type="bullet">
         /// <item><description>Initial retry delay: 5 milliseconds</description></item>
         /// <item><description>Retry delay multiplier: 2.0</description></item>
@@ -354,15 +354,15 @@ namespace Google.Cloud.Bigtable.Admin.V2
         /// </list>
         /// Retry will be attempted on the following response status codes:
         /// <list>
-        /// <item><description><see cref="StatusCode.Unavailable"/></description></item>
+        /// <item><description><see cref="grpccore::StatusCode.Unavailable"/></description></item>
         /// </list>
         /// Default RPC expiration is 600000 milliseconds.
         /// </remarks>
-        public CallSettings CreateClusterSettings { get; set; } = CallSettings.FromCallTiming(
-            CallTiming.FromRetry(new RetrySettings(
+        public gaxgrpc::CallSettings CreateClusterSettings { get; set; } = gaxgrpc::CallSettings.FromCallTiming(
+            gaxgrpc::CallTiming.FromRetry(new gaxgrpc::RetrySettings(
                 retryBackoff: GetDefaultRetryBackoff(),
                 timeoutBackoff: GetDefaultTimeoutBackoff(),
-                totalExpiration: Expiration.FromTimeout(TimeSpan.FromMilliseconds(600000)),
+                totalExpiration: gax::Expiration.FromTimeout(s::TimeSpan.FromMilliseconds(600000)),
                 retryFilter: NonIdempotentRetryFilter
             )));
 
@@ -370,7 +370,7 @@ namespace Google.Cloud.Bigtable.Admin.V2
         /// Long Running Operation settings for calls to <c>BigtableInstanceAdminClient.CreateCluster</c>.
         /// </summary>
         /// <remarks>
-        /// Uses default <see cref="PollSettings"/> of:
+        /// Uses default <see cref="gax::PollSettings"/> of:
         /// <list type="bullet">
         /// <item><description>Initial delay: 500 milliseconds</description></item>
         /// <item><description>Delay multiplier: 1.5</description></item>
@@ -378,22 +378,22 @@ namespace Google.Cloud.Bigtable.Admin.V2
         /// <item><description>Total timeout: 300000 milliseconds</description></item>
         /// </list>
         /// </remarks>
-        public OperationsSettings CreateClusterOperationsSettings { get; set; } = new OperationsSettings
+        public lro::OperationsSettings CreateClusterOperationsSettings { get; set; } = new lro::OperationsSettings
         {
-            DefaultPollSettings = new PollSettings(
-                Expiration.FromTimeout(TimeSpan.FromMilliseconds(300000L)),
-                TimeSpan.FromMilliseconds(500L),
+            DefaultPollSettings = new gax::PollSettings(
+                gax::Expiration.FromTimeout(s::TimeSpan.FromMilliseconds(300000L)),
+                s::TimeSpan.FromMilliseconds(500L),
                 1.5,
-                TimeSpan.FromMilliseconds(5000L))
+                s::TimeSpan.FromMilliseconds(5000L))
         };
 
         /// <summary>
-        /// <see cref="CallSettings"/> for synchronous and asynchronous calls to
+        /// <see cref="gaxgrpc::CallSettings"/> for synchronous and asynchronous calls to
         /// <c>BigtableInstanceAdminClient.GetCluster</c> and <c>BigtableInstanceAdminClient.GetClusterAsync</c>.
         /// </summary>
         /// <remarks>
         /// The default <c>BigtableInstanceAdminClient.GetCluster</c> and
-        /// <c>BigtableInstanceAdminClient.GetClusterAsync</c> <see cref="RetrySettings"/> are:
+        /// <c>BigtableInstanceAdminClient.GetClusterAsync</c> <see cref="gaxgrpc::RetrySettings"/> are:
         /// <list type="bullet">
         /// <item><description>Initial retry delay: 5 milliseconds</description></item>
         /// <item><description>Retry delay multiplier: 2.0</description></item>
@@ -404,26 +404,26 @@ namespace Google.Cloud.Bigtable.Admin.V2
         /// </list>
         /// Retry will be attempted on the following response status codes:
         /// <list>
-        /// <item><description><see cref="StatusCode.DeadlineExceeded"/></description></item>
-        /// <item><description><see cref="StatusCode.Unavailable"/></description></item>
+        /// <item><description><see cref="grpccore::StatusCode.DeadlineExceeded"/></description></item>
+        /// <item><description><see cref="grpccore::StatusCode.Unavailable"/></description></item>
         /// </list>
         /// Default RPC expiration is 600000 milliseconds.
         /// </remarks>
-        public CallSettings GetClusterSettings { get; set; } = CallSettings.FromCallTiming(
-            CallTiming.FromRetry(new RetrySettings(
+        public gaxgrpc::CallSettings GetClusterSettings { get; set; } = gaxgrpc::CallSettings.FromCallTiming(
+            gaxgrpc::CallTiming.FromRetry(new gaxgrpc::RetrySettings(
                 retryBackoff: GetDefaultRetryBackoff(),
                 timeoutBackoff: GetDefaultTimeoutBackoff(),
-                totalExpiration: Expiration.FromTimeout(TimeSpan.FromMilliseconds(600000)),
+                totalExpiration: gax::Expiration.FromTimeout(s::TimeSpan.FromMilliseconds(600000)),
                 retryFilter: IdempotentRetryFilter
             )));
 
         /// <summary>
-        /// <see cref="CallSettings"/> for synchronous and asynchronous calls to
+        /// <see cref="gaxgrpc::CallSettings"/> for synchronous and asynchronous calls to
         /// <c>BigtableInstanceAdminClient.ListClusters</c> and <c>BigtableInstanceAdminClient.ListClustersAsync</c>.
         /// </summary>
         /// <remarks>
         /// The default <c>BigtableInstanceAdminClient.ListClusters</c> and
-        /// <c>BigtableInstanceAdminClient.ListClustersAsync</c> <see cref="RetrySettings"/> are:
+        /// <c>BigtableInstanceAdminClient.ListClustersAsync</c> <see cref="gaxgrpc::RetrySettings"/> are:
         /// <list type="bullet">
         /// <item><description>Initial retry delay: 5 milliseconds</description></item>
         /// <item><description>Retry delay multiplier: 2.0</description></item>
@@ -434,26 +434,26 @@ namespace Google.Cloud.Bigtable.Admin.V2
         /// </list>
         /// Retry will be attempted on the following response status codes:
         /// <list>
-        /// <item><description><see cref="StatusCode.DeadlineExceeded"/></description></item>
-        /// <item><description><see cref="StatusCode.Unavailable"/></description></item>
+        /// <item><description><see cref="grpccore::StatusCode.DeadlineExceeded"/></description></item>
+        /// <item><description><see cref="grpccore::StatusCode.Unavailable"/></description></item>
         /// </list>
         /// Default RPC expiration is 600000 milliseconds.
         /// </remarks>
-        public CallSettings ListClustersSettings { get; set; } = CallSettings.FromCallTiming(
-            CallTiming.FromRetry(new RetrySettings(
+        public gaxgrpc::CallSettings ListClustersSettings { get; set; } = gaxgrpc::CallSettings.FromCallTiming(
+            gaxgrpc::CallTiming.FromRetry(new gaxgrpc::RetrySettings(
                 retryBackoff: GetDefaultRetryBackoff(),
                 timeoutBackoff: GetDefaultTimeoutBackoff(),
-                totalExpiration: Expiration.FromTimeout(TimeSpan.FromMilliseconds(600000)),
+                totalExpiration: gax::Expiration.FromTimeout(s::TimeSpan.FromMilliseconds(600000)),
                 retryFilter: IdempotentRetryFilter
             )));
 
         /// <summary>
-        /// <see cref="CallSettings"/> for synchronous and asynchronous calls to
+        /// <see cref="gaxgrpc::CallSettings"/> for synchronous and asynchronous calls to
         /// <c>BigtableInstanceAdminClient.UpdateCluster</c> and <c>BigtableInstanceAdminClient.UpdateClusterAsync</c>.
         /// </summary>
         /// <remarks>
         /// The default <c>BigtableInstanceAdminClient.UpdateCluster</c> and
-        /// <c>BigtableInstanceAdminClient.UpdateClusterAsync</c> <see cref="RetrySettings"/> are:
+        /// <c>BigtableInstanceAdminClient.UpdateClusterAsync</c> <see cref="gaxgrpc::RetrySettings"/> are:
         /// <list type="bullet">
         /// <item><description>Initial retry delay: 5 milliseconds</description></item>
         /// <item><description>Retry delay multiplier: 2.0</description></item>
@@ -464,16 +464,16 @@ namespace Google.Cloud.Bigtable.Admin.V2
         /// </list>
         /// Retry will be attempted on the following response status codes:
         /// <list>
-        /// <item><description><see cref="StatusCode.DeadlineExceeded"/></description></item>
-        /// <item><description><see cref="StatusCode.Unavailable"/></description></item>
+        /// <item><description><see cref="grpccore::StatusCode.DeadlineExceeded"/></description></item>
+        /// <item><description><see cref="grpccore::StatusCode.Unavailable"/></description></item>
         /// </list>
         /// Default RPC expiration is 600000 milliseconds.
         /// </remarks>
-        public CallSettings UpdateClusterSettings { get; set; } = CallSettings.FromCallTiming(
-            CallTiming.FromRetry(new RetrySettings(
+        public gaxgrpc::CallSettings UpdateClusterSettings { get; set; } = gaxgrpc::CallSettings.FromCallTiming(
+            gaxgrpc::CallTiming.FromRetry(new gaxgrpc::RetrySettings(
                 retryBackoff: GetDefaultRetryBackoff(),
                 timeoutBackoff: GetDefaultTimeoutBackoff(),
-                totalExpiration: Expiration.FromTimeout(TimeSpan.FromMilliseconds(600000)),
+                totalExpiration: gax::Expiration.FromTimeout(s::TimeSpan.FromMilliseconds(600000)),
                 retryFilter: IdempotentRetryFilter
             )));
 
@@ -481,7 +481,7 @@ namespace Google.Cloud.Bigtable.Admin.V2
         /// Long Running Operation settings for calls to <c>BigtableInstanceAdminClient.UpdateCluster</c>.
         /// </summary>
         /// <remarks>
-        /// Uses default <see cref="PollSettings"/> of:
+        /// Uses default <see cref="gax::PollSettings"/> of:
         /// <list type="bullet">
         /// <item><description>Initial delay: 500 milliseconds</description></item>
         /// <item><description>Delay multiplier: 1.5</description></item>
@@ -489,22 +489,22 @@ namespace Google.Cloud.Bigtable.Admin.V2
         /// <item><description>Total timeout: 300000 milliseconds</description></item>
         /// </list>
         /// </remarks>
-        public OperationsSettings UpdateClusterOperationsSettings { get; set; } = new OperationsSettings
+        public lro::OperationsSettings UpdateClusterOperationsSettings { get; set; } = new lro::OperationsSettings
         {
-            DefaultPollSettings = new PollSettings(
-                Expiration.FromTimeout(TimeSpan.FromMilliseconds(300000L)),
-                TimeSpan.FromMilliseconds(500L),
+            DefaultPollSettings = new gax::PollSettings(
+                gax::Expiration.FromTimeout(s::TimeSpan.FromMilliseconds(300000L)),
+                s::TimeSpan.FromMilliseconds(500L),
                 1.5,
-                TimeSpan.FromMilliseconds(5000L))
+                s::TimeSpan.FromMilliseconds(5000L))
         };
 
         /// <summary>
-        /// <see cref="CallSettings"/> for synchronous and asynchronous calls to
+        /// <see cref="gaxgrpc::CallSettings"/> for synchronous and asynchronous calls to
         /// <c>BigtableInstanceAdminClient.DeleteCluster</c> and <c>BigtableInstanceAdminClient.DeleteClusterAsync</c>.
         /// </summary>
         /// <remarks>
         /// The default <c>BigtableInstanceAdminClient.DeleteCluster</c> and
-        /// <c>BigtableInstanceAdminClient.DeleteClusterAsync</c> <see cref="RetrySettings"/> are:
+        /// <c>BigtableInstanceAdminClient.DeleteClusterAsync</c> <see cref="gaxgrpc::RetrySettings"/> are:
         /// <list type="bullet">
         /// <item><description>Initial retry delay: 5 milliseconds</description></item>
         /// <item><description>Retry delay multiplier: 2.0</description></item>
@@ -515,26 +515,26 @@ namespace Google.Cloud.Bigtable.Admin.V2
         /// </list>
         /// Retry will be attempted on the following response status codes:
         /// <list>
-        /// <item><description><see cref="StatusCode.DeadlineExceeded"/></description></item>
-        /// <item><description><see cref="StatusCode.Unavailable"/></description></item>
+        /// <item><description><see cref="grpccore::StatusCode.DeadlineExceeded"/></description></item>
+        /// <item><description><see cref="grpccore::StatusCode.Unavailable"/></description></item>
         /// </list>
         /// Default RPC expiration is 600000 milliseconds.
         /// </remarks>
-        public CallSettings DeleteClusterSettings { get; set; } = CallSettings.FromCallTiming(
-            CallTiming.FromRetry(new RetrySettings(
+        public gaxgrpc::CallSettings DeleteClusterSettings { get; set; } = gaxgrpc::CallSettings.FromCallTiming(
+            gaxgrpc::CallTiming.FromRetry(new gaxgrpc::RetrySettings(
                 retryBackoff: GetDefaultRetryBackoff(),
                 timeoutBackoff: GetDefaultTimeoutBackoff(),
-                totalExpiration: Expiration.FromTimeout(TimeSpan.FromMilliseconds(600000)),
+                totalExpiration: gax::Expiration.FromTimeout(s::TimeSpan.FromMilliseconds(600000)),
                 retryFilter: IdempotentRetryFilter
             )));
 
         /// <summary>
-        /// <see cref="CallSettings"/> for synchronous and asynchronous calls to
+        /// <see cref="gaxgrpc::CallSettings"/> for synchronous and asynchronous calls to
         /// <c>BigtableInstanceAdminClient.CreateAppProfile</c> and <c>BigtableInstanceAdminClient.CreateAppProfileAsync</c>.
         /// </summary>
         /// <remarks>
         /// The default <c>BigtableInstanceAdminClient.CreateAppProfile</c> and
-        /// <c>BigtableInstanceAdminClient.CreateAppProfileAsync</c> <see cref="RetrySettings"/> are:
+        /// <c>BigtableInstanceAdminClient.CreateAppProfileAsync</c> <see cref="gaxgrpc::RetrySettings"/> are:
         /// <list type="bullet">
         /// <item><description>Initial retry delay: 5 milliseconds</description></item>
         /// <item><description>Retry delay multiplier: 2.0</description></item>
@@ -545,25 +545,25 @@ namespace Google.Cloud.Bigtable.Admin.V2
         /// </list>
         /// Retry will be attempted on the following response status codes:
         /// <list>
-        /// <item><description><see cref="StatusCode.Unavailable"/></description></item>
+        /// <item><description><see cref="grpccore::StatusCode.Unavailable"/></description></item>
         /// </list>
         /// Default RPC expiration is 600000 milliseconds.
         /// </remarks>
-        public CallSettings CreateAppProfileSettings { get; set; } = CallSettings.FromCallTiming(
-            CallTiming.FromRetry(new RetrySettings(
+        public gaxgrpc::CallSettings CreateAppProfileSettings { get; set; } = gaxgrpc::CallSettings.FromCallTiming(
+            gaxgrpc::CallTiming.FromRetry(new gaxgrpc::RetrySettings(
                 retryBackoff: GetDefaultRetryBackoff(),
                 timeoutBackoff: GetDefaultTimeoutBackoff(),
-                totalExpiration: Expiration.FromTimeout(TimeSpan.FromMilliseconds(600000)),
+                totalExpiration: gax::Expiration.FromTimeout(s::TimeSpan.FromMilliseconds(600000)),
                 retryFilter: NonIdempotentRetryFilter
             )));
 
         /// <summary>
-        /// <see cref="CallSettings"/> for synchronous and asynchronous calls to
+        /// <see cref="gaxgrpc::CallSettings"/> for synchronous and asynchronous calls to
         /// <c>BigtableInstanceAdminClient.GetAppProfile</c> and <c>BigtableInstanceAdminClient.GetAppProfileAsync</c>.
         /// </summary>
         /// <remarks>
         /// The default <c>BigtableInstanceAdminClient.GetAppProfile</c> and
-        /// <c>BigtableInstanceAdminClient.GetAppProfileAsync</c> <see cref="RetrySettings"/> are:
+        /// <c>BigtableInstanceAdminClient.GetAppProfileAsync</c> <see cref="gaxgrpc::RetrySettings"/> are:
         /// <list type="bullet">
         /// <item><description>Initial retry delay: 5 milliseconds</description></item>
         /// <item><description>Retry delay multiplier: 2.0</description></item>
@@ -574,26 +574,26 @@ namespace Google.Cloud.Bigtable.Admin.V2
         /// </list>
         /// Retry will be attempted on the following response status codes:
         /// <list>
-        /// <item><description><see cref="StatusCode.DeadlineExceeded"/></description></item>
-        /// <item><description><see cref="StatusCode.Unavailable"/></description></item>
+        /// <item><description><see cref="grpccore::StatusCode.DeadlineExceeded"/></description></item>
+        /// <item><description><see cref="grpccore::StatusCode.Unavailable"/></description></item>
         /// </list>
         /// Default RPC expiration is 600000 milliseconds.
         /// </remarks>
-        public CallSettings GetAppProfileSettings { get; set; } = CallSettings.FromCallTiming(
-            CallTiming.FromRetry(new RetrySettings(
+        public gaxgrpc::CallSettings GetAppProfileSettings { get; set; } = gaxgrpc::CallSettings.FromCallTiming(
+            gaxgrpc::CallTiming.FromRetry(new gaxgrpc::RetrySettings(
                 retryBackoff: GetDefaultRetryBackoff(),
                 timeoutBackoff: GetDefaultTimeoutBackoff(),
-                totalExpiration: Expiration.FromTimeout(TimeSpan.FromMilliseconds(600000)),
+                totalExpiration: gax::Expiration.FromTimeout(s::TimeSpan.FromMilliseconds(600000)),
                 retryFilter: IdempotentRetryFilter
             )));
 
         /// <summary>
-        /// <see cref="CallSettings"/> for synchronous and asynchronous calls to
+        /// <see cref="gaxgrpc::CallSettings"/> for synchronous and asynchronous calls to
         /// <c>BigtableInstanceAdminClient.ListAppProfiles</c> and <c>BigtableInstanceAdminClient.ListAppProfilesAsync</c>.
         /// </summary>
         /// <remarks>
         /// The default <c>BigtableInstanceAdminClient.ListAppProfiles</c> and
-        /// <c>BigtableInstanceAdminClient.ListAppProfilesAsync</c> <see cref="RetrySettings"/> are:
+        /// <c>BigtableInstanceAdminClient.ListAppProfilesAsync</c> <see cref="gaxgrpc::RetrySettings"/> are:
         /// <list type="bullet">
         /// <item><description>Initial retry delay: 5 milliseconds</description></item>
         /// <item><description>Retry delay multiplier: 2.0</description></item>
@@ -604,26 +604,26 @@ namespace Google.Cloud.Bigtable.Admin.V2
         /// </list>
         /// Retry will be attempted on the following response status codes:
         /// <list>
-        /// <item><description><see cref="StatusCode.DeadlineExceeded"/></description></item>
-        /// <item><description><see cref="StatusCode.Unavailable"/></description></item>
+        /// <item><description><see cref="grpccore::StatusCode.DeadlineExceeded"/></description></item>
+        /// <item><description><see cref="grpccore::StatusCode.Unavailable"/></description></item>
         /// </list>
         /// Default RPC expiration is 600000 milliseconds.
         /// </remarks>
-        public CallSettings ListAppProfilesSettings { get; set; } = CallSettings.FromCallTiming(
-            CallTiming.FromRetry(new RetrySettings(
+        public gaxgrpc::CallSettings ListAppProfilesSettings { get; set; } = gaxgrpc::CallSettings.FromCallTiming(
+            gaxgrpc::CallTiming.FromRetry(new gaxgrpc::RetrySettings(
                 retryBackoff: GetDefaultRetryBackoff(),
                 timeoutBackoff: GetDefaultTimeoutBackoff(),
-                totalExpiration: Expiration.FromTimeout(TimeSpan.FromMilliseconds(600000)),
+                totalExpiration: gax::Expiration.FromTimeout(s::TimeSpan.FromMilliseconds(600000)),
                 retryFilter: IdempotentRetryFilter
             )));
 
         /// <summary>
-        /// <see cref="CallSettings"/> for synchronous and asynchronous calls to
+        /// <see cref="gaxgrpc::CallSettings"/> for synchronous and asynchronous calls to
         /// <c>BigtableInstanceAdminClient.UpdateAppProfile</c> and <c>BigtableInstanceAdminClient.UpdateAppProfileAsync</c>.
         /// </summary>
         /// <remarks>
         /// The default <c>BigtableInstanceAdminClient.UpdateAppProfile</c> and
-        /// <c>BigtableInstanceAdminClient.UpdateAppProfileAsync</c> <see cref="RetrySettings"/> are:
+        /// <c>BigtableInstanceAdminClient.UpdateAppProfileAsync</c> <see cref="gaxgrpc::RetrySettings"/> are:
         /// <list type="bullet">
         /// <item><description>Initial retry delay: 5 milliseconds</description></item>
         /// <item><description>Retry delay multiplier: 2.0</description></item>
@@ -634,16 +634,16 @@ namespace Google.Cloud.Bigtable.Admin.V2
         /// </list>
         /// Retry will be attempted on the following response status codes:
         /// <list>
-        /// <item><description><see cref="StatusCode.DeadlineExceeded"/></description></item>
-        /// <item><description><see cref="StatusCode.Unavailable"/></description></item>
+        /// <item><description><see cref="grpccore::StatusCode.DeadlineExceeded"/></description></item>
+        /// <item><description><see cref="grpccore::StatusCode.Unavailable"/></description></item>
         /// </list>
         /// Default RPC expiration is 600000 milliseconds.
         /// </remarks>
-        public CallSettings UpdateAppProfileSettings { get; set; } = CallSettings.FromCallTiming(
-            CallTiming.FromRetry(new RetrySettings(
+        public gaxgrpc::CallSettings UpdateAppProfileSettings { get; set; } = gaxgrpc::CallSettings.FromCallTiming(
+            gaxgrpc::CallTiming.FromRetry(new gaxgrpc::RetrySettings(
                 retryBackoff: GetDefaultRetryBackoff(),
                 timeoutBackoff: GetDefaultTimeoutBackoff(),
-                totalExpiration: Expiration.FromTimeout(TimeSpan.FromMilliseconds(600000)),
+                totalExpiration: gax::Expiration.FromTimeout(s::TimeSpan.FromMilliseconds(600000)),
                 retryFilter: IdempotentRetryFilter
             )));
 
@@ -651,7 +651,7 @@ namespace Google.Cloud.Bigtable.Admin.V2
         /// Long Running Operation settings for calls to <c>BigtableInstanceAdminClient.UpdateAppProfile</c>.
         /// </summary>
         /// <remarks>
-        /// Uses default <see cref="PollSettings"/> of:
+        /// Uses default <see cref="gax::PollSettings"/> of:
         /// <list type="bullet">
         /// <item><description>Initial delay: 5 milliseconds</description></item>
         /// <item><description>Delay multiplier: 1.5</description></item>
@@ -659,22 +659,22 @@ namespace Google.Cloud.Bigtable.Admin.V2
         /// <item><description>Total timeout: 300000 milliseconds</description></item>
         /// </list>
         /// </remarks>
-        public OperationsSettings UpdateAppProfileOperationsSettings { get; set; } = new OperationsSettings
+        public lro::OperationsSettings UpdateAppProfileOperationsSettings { get; set; } = new lro::OperationsSettings
         {
-            DefaultPollSettings = new PollSettings(
-                Expiration.FromTimeout(TimeSpan.FromMilliseconds(300000L)),
-                TimeSpan.FromMilliseconds(5L),
+            DefaultPollSettings = new gax::PollSettings(
+                gax::Expiration.FromTimeout(s::TimeSpan.FromMilliseconds(300000L)),
+                s::TimeSpan.FromMilliseconds(5L),
                 1.5,
-                TimeSpan.FromMilliseconds(5000L))
+                s::TimeSpan.FromMilliseconds(5000L))
         };
 
         /// <summary>
-        /// <see cref="CallSettings"/> for synchronous and asynchronous calls to
+        /// <see cref="gaxgrpc::CallSettings"/> for synchronous and asynchronous calls to
         /// <c>BigtableInstanceAdminClient.DeleteAppProfile</c> and <c>BigtableInstanceAdminClient.DeleteAppProfileAsync</c>.
         /// </summary>
         /// <remarks>
         /// The default <c>BigtableInstanceAdminClient.DeleteAppProfile</c> and
-        /// <c>BigtableInstanceAdminClient.DeleteAppProfileAsync</c> <see cref="RetrySettings"/> are:
+        /// <c>BigtableInstanceAdminClient.DeleteAppProfileAsync</c> <see cref="gaxgrpc::RetrySettings"/> are:
         /// <list type="bullet">
         /// <item><description>Initial retry delay: 5 milliseconds</description></item>
         /// <item><description>Retry delay multiplier: 2.0</description></item>
@@ -685,25 +685,25 @@ namespace Google.Cloud.Bigtable.Admin.V2
         /// </list>
         /// Retry will be attempted on the following response status codes:
         /// <list>
-        /// <item><description><see cref="StatusCode.Unavailable"/></description></item>
+        /// <item><description><see cref="grpccore::StatusCode.Unavailable"/></description></item>
         /// </list>
         /// Default RPC expiration is 600000 milliseconds.
         /// </remarks>
-        public CallSettings DeleteAppProfileSettings { get; set; } = CallSettings.FromCallTiming(
-            CallTiming.FromRetry(new RetrySettings(
+        public gaxgrpc::CallSettings DeleteAppProfileSettings { get; set; } = gaxgrpc::CallSettings.FromCallTiming(
+            gaxgrpc::CallTiming.FromRetry(new gaxgrpc::RetrySettings(
                 retryBackoff: GetDefaultRetryBackoff(),
                 timeoutBackoff: GetDefaultTimeoutBackoff(),
-                totalExpiration: Expiration.FromTimeout(TimeSpan.FromMilliseconds(600000)),
+                totalExpiration: gax::Expiration.FromTimeout(s::TimeSpan.FromMilliseconds(600000)),
                 retryFilter: NonIdempotentRetryFilter
             )));
 
         /// <summary>
-        /// <see cref="CallSettings"/> for synchronous and asynchronous calls to
+        /// <see cref="gaxgrpc::CallSettings"/> for synchronous and asynchronous calls to
         /// <c>BigtableInstanceAdminClient.GetIamPolicy</c> and <c>BigtableInstanceAdminClient.GetIamPolicyAsync</c>.
         /// </summary>
         /// <remarks>
         /// The default <c>BigtableInstanceAdminClient.GetIamPolicy</c> and
-        /// <c>BigtableInstanceAdminClient.GetIamPolicyAsync</c> <see cref="RetrySettings"/> are:
+        /// <c>BigtableInstanceAdminClient.GetIamPolicyAsync</c> <see cref="gaxgrpc::RetrySettings"/> are:
         /// <list type="bullet">
         /// <item><description>Initial retry delay: 5 milliseconds</description></item>
         /// <item><description>Retry delay multiplier: 2.0</description></item>
@@ -714,26 +714,26 @@ namespace Google.Cloud.Bigtable.Admin.V2
         /// </list>
         /// Retry will be attempted on the following response status codes:
         /// <list>
-        /// <item><description><see cref="StatusCode.DeadlineExceeded"/></description></item>
-        /// <item><description><see cref="StatusCode.Unavailable"/></description></item>
+        /// <item><description><see cref="grpccore::StatusCode.DeadlineExceeded"/></description></item>
+        /// <item><description><see cref="grpccore::StatusCode.Unavailable"/></description></item>
         /// </list>
         /// Default RPC expiration is 600000 milliseconds.
         /// </remarks>
-        public CallSettings GetIamPolicySettings { get; set; } = CallSettings.FromCallTiming(
-            CallTiming.FromRetry(new RetrySettings(
+        public gaxgrpc::CallSettings GetIamPolicySettings { get; set; } = gaxgrpc::CallSettings.FromCallTiming(
+            gaxgrpc::CallTiming.FromRetry(new gaxgrpc::RetrySettings(
                 retryBackoff: GetDefaultRetryBackoff(),
                 timeoutBackoff: GetDefaultTimeoutBackoff(),
-                totalExpiration: Expiration.FromTimeout(TimeSpan.FromMilliseconds(600000)),
+                totalExpiration: gax::Expiration.FromTimeout(s::TimeSpan.FromMilliseconds(600000)),
                 retryFilter: IdempotentRetryFilter
             )));
 
         /// <summary>
-        /// <see cref="CallSettings"/> for synchronous and asynchronous calls to
+        /// <see cref="gaxgrpc::CallSettings"/> for synchronous and asynchronous calls to
         /// <c>BigtableInstanceAdminClient.SetIamPolicy</c> and <c>BigtableInstanceAdminClient.SetIamPolicyAsync</c>.
         /// </summary>
         /// <remarks>
         /// The default <c>BigtableInstanceAdminClient.SetIamPolicy</c> and
-        /// <c>BigtableInstanceAdminClient.SetIamPolicyAsync</c> <see cref="RetrySettings"/> are:
+        /// <c>BigtableInstanceAdminClient.SetIamPolicyAsync</c> <see cref="gaxgrpc::RetrySettings"/> are:
         /// <list type="bullet">
         /// <item><description>Initial retry delay: 5 milliseconds</description></item>
         /// <item><description>Retry delay multiplier: 2.0</description></item>
@@ -744,25 +744,25 @@ namespace Google.Cloud.Bigtable.Admin.V2
         /// </list>
         /// Retry will be attempted on the following response status codes:
         /// <list>
-        /// <item><description><see cref="StatusCode.Unavailable"/></description></item>
+        /// <item><description><see cref="grpccore::StatusCode.Unavailable"/></description></item>
         /// </list>
         /// Default RPC expiration is 600000 milliseconds.
         /// </remarks>
-        public CallSettings SetIamPolicySettings { get; set; } = CallSettings.FromCallTiming(
-            CallTiming.FromRetry(new RetrySettings(
+        public gaxgrpc::CallSettings SetIamPolicySettings { get; set; } = gaxgrpc::CallSettings.FromCallTiming(
+            gaxgrpc::CallTiming.FromRetry(new gaxgrpc::RetrySettings(
                 retryBackoff: GetDefaultRetryBackoff(),
                 timeoutBackoff: GetDefaultTimeoutBackoff(),
-                totalExpiration: Expiration.FromTimeout(TimeSpan.FromMilliseconds(600000)),
+                totalExpiration: gax::Expiration.FromTimeout(s::TimeSpan.FromMilliseconds(600000)),
                 retryFilter: NonIdempotentRetryFilter
             )));
 
         /// <summary>
-        /// <see cref="CallSettings"/> for synchronous and asynchronous calls to
+        /// <see cref="gaxgrpc::CallSettings"/> for synchronous and asynchronous calls to
         /// <c>BigtableInstanceAdminClient.TestIamPermissions</c> and <c>BigtableInstanceAdminClient.TestIamPermissionsAsync</c>.
         /// </summary>
         /// <remarks>
         /// The default <c>BigtableInstanceAdminClient.TestIamPermissions</c> and
-        /// <c>BigtableInstanceAdminClient.TestIamPermissionsAsync</c> <see cref="RetrySettings"/> are:
+        /// <c>BigtableInstanceAdminClient.TestIamPermissionsAsync</c> <see cref="gaxgrpc::RetrySettings"/> are:
         /// <list type="bullet">
         /// <item><description>Initial retry delay: 5 milliseconds</description></item>
         /// <item><description>Retry delay multiplier: 2.0</description></item>
@@ -773,16 +773,16 @@ namespace Google.Cloud.Bigtable.Admin.V2
         /// </list>
         /// Retry will be attempted on the following response status codes:
         /// <list>
-        /// <item><description><see cref="StatusCode.DeadlineExceeded"/></description></item>
-        /// <item><description><see cref="StatusCode.Unavailable"/></description></item>
+        /// <item><description><see cref="grpccore::StatusCode.DeadlineExceeded"/></description></item>
+        /// <item><description><see cref="grpccore::StatusCode.Unavailable"/></description></item>
         /// </list>
         /// Default RPC expiration is 600000 milliseconds.
         /// </remarks>
-        public CallSettings TestIamPermissionsSettings { get; set; } = CallSettings.FromCallTiming(
-            CallTiming.FromRetry(new RetrySettings(
+        public gaxgrpc::CallSettings TestIamPermissionsSettings { get; set; } = gaxgrpc::CallSettings.FromCallTiming(
+            gaxgrpc::CallTiming.FromRetry(new gaxgrpc::RetrySettings(
                 retryBackoff: GetDefaultRetryBackoff(),
                 timeoutBackoff: GetDefaultTimeoutBackoff(),
-                totalExpiration: Expiration.FromTimeout(TimeSpan.FromMilliseconds(600000)),
+                totalExpiration: gax::Expiration.FromTimeout(s::TimeSpan.FromMilliseconds(600000)),
                 retryFilter: IdempotentRetryFilter
             )));
 
@@ -801,7 +801,7 @@ namespace Google.Cloud.Bigtable.Admin.V2
         /// <summary>
         /// The default endpoint for the BigtableInstanceAdmin service, which is a host of "bigtableadmin.googleapis.com" and a port of 443.
         /// </summary>
-        public static ServiceEndpoint DefaultEndpoint { get; } = new ServiceEndpoint("bigtableadmin.googleapis.com", 443);
+        public static gaxgrpc::ServiceEndpoint DefaultEndpoint { get; } = new gaxgrpc::ServiceEndpoint("bigtableadmin.googleapis.com", 443);
 
         /// <summary>
         /// The default BigtableInstanceAdmin scopes.
@@ -820,7 +820,7 @@ namespace Google.Cloud.Bigtable.Admin.V2
         /// <item><description>"https://www.googleapis.com/auth/cloud-platform.read-only"</description></item>
         /// </list>
         /// </remarks>
-        public static IReadOnlyList<string> DefaultScopes { get; } = new ReadOnlyCollection<string>(new string[] {
+        public static scg::IReadOnlyList<string> DefaultScopes { get; } = new sco::ReadOnlyCollection<string>(new string[] {
             "https://www.googleapis.com/auth/bigtable.admin",
             "https://www.googleapis.com/auth/bigtable.admin.cluster",
             "https://www.googleapis.com/auth/bigtable.admin.instance",
@@ -832,7 +832,7 @@ namespace Google.Cloud.Bigtable.Admin.V2
             "https://www.googleapis.com/auth/cloud-platform.read-only",
         });
 
-        private static readonly ChannelPool s_channelPool = new ChannelPool(DefaultScopes);
+        private static readonly gaxgrpc::ChannelPool s_channelPool = new gaxgrpc::ChannelPool(DefaultScopes);
 
         // Note: we could have parameterless overloads of Create and CreateAsync,
         // documented to just use the default endpoint, settings and credentials.
@@ -846,12 +846,12 @@ namespace Google.Cloud.Bigtable.Admin.V2
         /// and creating a channel connecting to the given endpoint with application default credentials where
         /// necessary.
         /// </summary>
-        /// <param name="endpoint">Optional <see cref="ServiceEndpoint"/>.</param>
+        /// <param name="endpoint">Optional <see cref="gaxgrpc::ServiceEndpoint"/>.</param>
         /// <param name="settings">Optional <see cref="BigtableInstanceAdminSettings"/>.</param>
         /// <returns>The task representing the created <see cref="BigtableInstanceAdminClient"/>.</returns>
-        public static async Task<BigtableInstanceAdminClient> CreateAsync(ServiceEndpoint endpoint = null, BigtableInstanceAdminSettings settings = null)
+        public static async stt::Task<BigtableInstanceAdminClient> CreateAsync(gaxgrpc::ServiceEndpoint endpoint = null, BigtableInstanceAdminSettings settings = null)
         {
-            Channel channel = await s_channelPool.GetChannelAsync(endpoint ?? DefaultEndpoint).ConfigureAwait(false);
+            grpccore::Channel channel = await s_channelPool.GetChannelAsync(endpoint ?? DefaultEndpoint).ConfigureAwait(false);
             return Create(channel, settings);
         }
 
@@ -860,45 +860,45 @@ namespace Google.Cloud.Bigtable.Admin.V2
         /// and creating a channel connecting to the given endpoint with application default credentials where
         /// necessary.
         /// </summary>
-        /// <param name="endpoint">Optional <see cref="ServiceEndpoint"/>.</param>
+        /// <param name="endpoint">Optional <see cref="gaxgrpc::ServiceEndpoint"/>.</param>
         /// <param name="settings">Optional <see cref="BigtableInstanceAdminSettings"/>.</param>
         /// <returns>The created <see cref="BigtableInstanceAdminClient"/>.</returns>
-        public static BigtableInstanceAdminClient Create(ServiceEndpoint endpoint = null, BigtableInstanceAdminSettings settings = null)
+        public static BigtableInstanceAdminClient Create(gaxgrpc::ServiceEndpoint endpoint = null, BigtableInstanceAdminSettings settings = null)
         {
-            Channel channel = s_channelPool.GetChannel(endpoint ?? DefaultEndpoint);
+            grpccore::Channel channel = s_channelPool.GetChannel(endpoint ?? DefaultEndpoint);
             return Create(channel, settings);
         }
 
         /// <summary>
         /// Creates a <see cref="BigtableInstanceAdminClient"/> which uses the specified channel for remote operations.
         /// </summary>
-        /// <param name="channel">The <see cref="Channel"/> for remote operations. Must not be null.</param>
+        /// <param name="channel">The <see cref="grpccore::Channel"/> for remote operations. Must not be null.</param>
         /// <param name="settings">Optional <see cref="BigtableInstanceAdminSettings"/>.</param>
         /// <returns>The created <see cref="BigtableInstanceAdminClient"/>.</returns>
-        public static BigtableInstanceAdminClient Create(Channel channel, BigtableInstanceAdminSettings settings = null)
+        public static BigtableInstanceAdminClient Create(grpccore::Channel channel, BigtableInstanceAdminSettings settings = null)
         {
-            GaxPreconditions.CheckNotNull(channel, nameof(channel));
+            gax::GaxPreconditions.CheckNotNull(channel, nameof(channel));
             BigtableInstanceAdmin.BigtableInstanceAdminClient grpcClient = new BigtableInstanceAdmin.BigtableInstanceAdminClient(channel);
             return new BigtableInstanceAdminClientImpl(grpcClient, settings);
         }
 
         /// <summary>
-        /// Shuts down any channels automatically created by <see cref="Create(ServiceEndpoint, BigtableInstanceAdminSettings)"/>
-        /// and <see cref="CreateAsync(ServiceEndpoint, BigtableInstanceAdminSettings)"/>. Channels which weren't automatically
+        /// Shuts down any channels automatically created by <see cref="Create(gaxgrpc::ServiceEndpoint, BigtableInstanceAdminSettings)"/>
+        /// and <see cref="CreateAsync(gaxgrpc::ServiceEndpoint, BigtableInstanceAdminSettings)"/>. Channels which weren't automatically
         /// created are not affected.
         /// </summary>
-        /// <remarks>After calling this method, further calls to <see cref="Create(ServiceEndpoint, BigtableInstanceAdminSettings)"/>
-        /// and <see cref="CreateAsync(ServiceEndpoint, BigtableInstanceAdminSettings)"/> will create new channels, which could
+        /// <remarks>After calling this method, further calls to <see cref="Create(gaxgrpc::ServiceEndpoint, BigtableInstanceAdminSettings)"/>
+        /// and <see cref="CreateAsync(gaxgrpc::ServiceEndpoint, BigtableInstanceAdminSettings)"/> will create new channels, which could
         /// in turn be shut down by another call to this method.</remarks>
         /// <returns>A task representing the asynchronous shutdown operation.</returns>
-        public static Task ShutdownDefaultChannelsAsync() => s_channelPool.ShutdownChannelsAsync();
+        public static stt::Task ShutdownDefaultChannelsAsync() => s_channelPool.ShutdownChannelsAsync();
 
         /// <summary>
         /// The underlying gRPC BigtableInstanceAdmin client.
         /// </summary>
         public virtual BigtableInstanceAdmin.BigtableInstanceAdminClient GrpcClient
         {
-            get { throw new NotImplementedException(); }
+            get { throw new s::NotImplementedException(); }
         }
 
         /// <summary>
@@ -930,18 +930,18 @@ namespace Google.Cloud.Bigtable.Admin.V2
         /// <returns>
         /// A Task containing the RPC response.
         /// </returns>
-        public virtual Task<Operation<Instance, CreateInstanceMetadata>> CreateInstanceAsync(
+        public virtual stt::Task<lro::Operation<Instance, CreateInstanceMetadata>> CreateInstanceAsync(
             ProjectName parent,
             string instanceId,
             Instance instance,
-            IDictionary<string, Cluster> clusters,
-            CallSettings callSettings = null) => CreateInstanceAsync(
+            scg::IDictionary<string, Cluster> clusters,
+            gaxgrpc::CallSettings callSettings = null) => CreateInstanceAsync(
                 new CreateInstanceRequest
                 {
-                    ParentAsProjectName = GaxPreconditions.CheckNotNull(parent, nameof(parent)),
-                    InstanceId = GaxPreconditions.CheckNotNullOrEmpty(instanceId, nameof(instanceId)),
-                    Instance = GaxPreconditions.CheckNotNull(instance, nameof(instance)),
-                    Clusters = { GaxPreconditions.CheckNotNull(clusters, nameof(clusters)) },
+                    ParentAsProjectName = gax::GaxPreconditions.CheckNotNull(parent, nameof(parent)),
+                    InstanceId = gax::GaxPreconditions.CheckNotNullOrEmpty(instanceId, nameof(instanceId)),
+                    Instance = gax::GaxPreconditions.CheckNotNull(instance, nameof(instance)),
+                    Clusters = { gax::GaxPreconditions.CheckNotNull(clusters, nameof(clusters)) },
                 },
                 callSettings);
 
@@ -969,22 +969,22 @@ namespace Google.Cloud.Bigtable.Admin.V2
         /// Currently exactly one cluster must be specified.
         /// </param>
         /// <param name="cancellationToken">
-        /// A <see cref="CancellationToken"/> to use for this RPC.
+        /// A <see cref="st::CancellationToken"/> to use for this RPC.
         /// </param>
         /// <returns>
         /// A Task containing the RPC response.
         /// </returns>
-        public virtual Task<Operation<Instance, CreateInstanceMetadata>> CreateInstanceAsync(
+        public virtual stt::Task<lro::Operation<Instance, CreateInstanceMetadata>> CreateInstanceAsync(
             ProjectName parent,
             string instanceId,
             Instance instance,
-            IDictionary<string, Cluster> clusters,
-            CancellationToken cancellationToken) => CreateInstanceAsync(
+            scg::IDictionary<string, Cluster> clusters,
+            st::CancellationToken cancellationToken) => CreateInstanceAsync(
                 parent,
                 instanceId,
                 instance,
                 clusters,
-                CallSettings.FromCancellationToken(cancellationToken));
+                gaxgrpc::CallSettings.FromCancellationToken(cancellationToken));
 
         /// <summary>
         /// Create an instance within a project.
@@ -1015,18 +1015,18 @@ namespace Google.Cloud.Bigtable.Admin.V2
         /// <returns>
         /// The RPC response.
         /// </returns>
-        public virtual Operation<Instance, CreateInstanceMetadata> CreateInstance(
+        public virtual lro::Operation<Instance, CreateInstanceMetadata> CreateInstance(
             ProjectName parent,
             string instanceId,
             Instance instance,
-            IDictionary<string, Cluster> clusters,
-            CallSettings callSettings = null) => CreateInstance(
+            scg::IDictionary<string, Cluster> clusters,
+            gaxgrpc::CallSettings callSettings = null) => CreateInstance(
                 new CreateInstanceRequest
                 {
-                    ParentAsProjectName = GaxPreconditions.CheckNotNull(parent, nameof(parent)),
-                    InstanceId = GaxPreconditions.CheckNotNullOrEmpty(instanceId, nameof(instanceId)),
-                    Instance = GaxPreconditions.CheckNotNull(instance, nameof(instance)),
-                    Clusters = { GaxPreconditions.CheckNotNull(clusters, nameof(clusters)) },
+                    ParentAsProjectName = gax::GaxPreconditions.CheckNotNull(parent, nameof(parent)),
+                    InstanceId = gax::GaxPreconditions.CheckNotNullOrEmpty(instanceId, nameof(instanceId)),
+                    Instance = gax::GaxPreconditions.CheckNotNull(instance, nameof(instance)),
+                    Clusters = { gax::GaxPreconditions.CheckNotNull(clusters, nameof(clusters)) },
                 },
                 callSettings);
 
@@ -1042,11 +1042,11 @@ namespace Google.Cloud.Bigtable.Admin.V2
         /// <returns>
         /// A Task containing the RPC response.
         /// </returns>
-        public virtual Task<Operation<Instance, CreateInstanceMetadata>> CreateInstanceAsync(
+        public virtual stt::Task<lro::Operation<Instance, CreateInstanceMetadata>> CreateInstanceAsync(
             CreateInstanceRequest request,
-            CallSettings callSettings = null)
+            gaxgrpc::CallSettings callSettings = null)
         {
-            throw new NotImplementedException();
+            throw new s::NotImplementedException();
         }
 
         /// <summary>
@@ -1055,10 +1055,10 @@ namespace Google.Cloud.Bigtable.Admin.V2
         /// <param name="operationName">The name of a previously invoked operation. Must not be <c>null</c> or empty.</param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
         /// <returns>A task representing the result of polling the operation.</returns>
-        public virtual Task<Operation<Instance, CreateInstanceMetadata>> PollOnceCreateInstanceAsync(
+        public virtual stt::Task<lro::Operation<Instance, CreateInstanceMetadata>> PollOnceCreateInstanceAsync(
             string operationName,
-            CallSettings callSettings = null) => Operation<Instance, CreateInstanceMetadata>.PollOnceFromNameAsync(
-                GaxPreconditions.CheckNotNullOrEmpty(operationName, nameof(operationName)),
+            gaxgrpc::CallSettings callSettings = null) => lro::Operation<Instance, CreateInstanceMetadata>.PollOnceFromNameAsync(
+                gax::GaxPreconditions.CheckNotNullOrEmpty(operationName, nameof(operationName)),
                 CreateInstanceOperationsClient,
                 callSettings);
 
@@ -1074,19 +1074,19 @@ namespace Google.Cloud.Bigtable.Admin.V2
         /// <returns>
         /// The RPC response.
         /// </returns>
-        public virtual Operation<Instance, CreateInstanceMetadata> CreateInstance(
+        public virtual lro::Operation<Instance, CreateInstanceMetadata> CreateInstance(
             CreateInstanceRequest request,
-            CallSettings callSettings = null)
+            gaxgrpc::CallSettings callSettings = null)
         {
-            throw new NotImplementedException();
+            throw new s::NotImplementedException();
         }
 
         /// <summary>
         /// The long-running operations client for <c>CreateInstance</c>.
         /// </summary>
-        public virtual OperationsClient CreateInstanceOperationsClient
+        public virtual lro::OperationsClient CreateInstanceOperationsClient
         {
-            get { throw new NotImplementedException(); }
+            get { throw new s::NotImplementedException(); }
         }
 
         /// <summary>
@@ -1095,10 +1095,10 @@ namespace Google.Cloud.Bigtable.Admin.V2
         /// <param name="operationName">The name of a previously invoked operation. Must not be <c>null</c> or empty.</param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
         /// <returns>The result of polling the operation.</returns>
-        public virtual Operation<Instance, CreateInstanceMetadata> PollOnceCreateInstance(
+        public virtual lro::Operation<Instance, CreateInstanceMetadata> PollOnceCreateInstance(
             string operationName,
-            CallSettings callSettings = null) => Operation<Instance, CreateInstanceMetadata>.PollOnceFromName(
-                GaxPreconditions.CheckNotNullOrEmpty(operationName, nameof(operationName)),
+            gaxgrpc::CallSettings callSettings = null) => lro::Operation<Instance, CreateInstanceMetadata>.PollOnceFromName(
+                gax::GaxPreconditions.CheckNotNullOrEmpty(operationName, nameof(operationName)),
                 CreateInstanceOperationsClient,
                 callSettings);
 
@@ -1115,12 +1115,12 @@ namespace Google.Cloud.Bigtable.Admin.V2
         /// <returns>
         /// A Task containing the RPC response.
         /// </returns>
-        public virtual Task<Instance> GetInstanceAsync(
+        public virtual stt::Task<Instance> GetInstanceAsync(
             InstanceName name,
-            CallSettings callSettings = null) => GetInstanceAsync(
+            gaxgrpc::CallSettings callSettings = null) => GetInstanceAsync(
                 new GetInstanceRequest
                 {
-                    InstanceName = GaxPreconditions.CheckNotNull(name, nameof(name)),
+                    InstanceName = gax::GaxPreconditions.CheckNotNull(name, nameof(name)),
                 },
                 callSettings);
 
@@ -1132,16 +1132,16 @@ namespace Google.Cloud.Bigtable.Admin.V2
         /// `projects/&lt;project&gt;/instances/&lt;instance&gt;`.
         /// </param>
         /// <param name="cancellationToken">
-        /// A <see cref="CancellationToken"/> to use for this RPC.
+        /// A <see cref="st::CancellationToken"/> to use for this RPC.
         /// </param>
         /// <returns>
         /// A Task containing the RPC response.
         /// </returns>
-        public virtual Task<Instance> GetInstanceAsync(
+        public virtual stt::Task<Instance> GetInstanceAsync(
             InstanceName name,
-            CancellationToken cancellationToken) => GetInstanceAsync(
+            st::CancellationToken cancellationToken) => GetInstanceAsync(
                 name,
-                CallSettings.FromCancellationToken(cancellationToken));
+                gaxgrpc::CallSettings.FromCancellationToken(cancellationToken));
 
         /// <summary>
         /// Gets information about an instance.
@@ -1158,10 +1158,10 @@ namespace Google.Cloud.Bigtable.Admin.V2
         /// </returns>
         public virtual Instance GetInstance(
             InstanceName name,
-            CallSettings callSettings = null) => GetInstance(
+            gaxgrpc::CallSettings callSettings = null) => GetInstance(
                 new GetInstanceRequest
                 {
-                    InstanceName = GaxPreconditions.CheckNotNull(name, nameof(name)),
+                    InstanceName = gax::GaxPreconditions.CheckNotNull(name, nameof(name)),
                 },
                 callSettings);
 
@@ -1177,11 +1177,11 @@ namespace Google.Cloud.Bigtable.Admin.V2
         /// <returns>
         /// A Task containing the RPC response.
         /// </returns>
-        public virtual Task<Instance> GetInstanceAsync(
+        public virtual stt::Task<Instance> GetInstanceAsync(
             GetInstanceRequest request,
-            CallSettings callSettings = null)
+            gaxgrpc::CallSettings callSettings = null)
         {
-            throw new NotImplementedException();
+            throw new s::NotImplementedException();
         }
 
         /// <summary>
@@ -1191,16 +1191,16 @@ namespace Google.Cloud.Bigtable.Admin.V2
         /// The request object containing all of the parameters for the API call.
         /// </param>
         /// <param name="cancellationToken">
-        /// A <see cref="CancellationToken"/> to use for this RPC.
+        /// A <see cref="st::CancellationToken"/> to use for this RPC.
         /// </param>
         /// <returns>
         /// A Task containing the RPC response.
         /// </returns>
-        public virtual Task<Instance> GetInstanceAsync(
+        public virtual stt::Task<Instance> GetInstanceAsync(
             GetInstanceRequest request,
-            CancellationToken cancellationToken) => GetInstanceAsync(
+            st::CancellationToken cancellationToken) => GetInstanceAsync(
                 request,
-                CallSettings.FromCancellationToken(cancellationToken));
+                gaxgrpc::CallSettings.FromCancellationToken(cancellationToken));
 
         /// <summary>
         /// Gets information about an instance.
@@ -1216,9 +1216,9 @@ namespace Google.Cloud.Bigtable.Admin.V2
         /// </returns>
         public virtual Instance GetInstance(
             GetInstanceRequest request,
-            CallSettings callSettings = null)
+            gaxgrpc::CallSettings callSettings = null)
         {
-            throw new NotImplementedException();
+            throw new s::NotImplementedException();
         }
 
         /// <summary>
@@ -1234,12 +1234,12 @@ namespace Google.Cloud.Bigtable.Admin.V2
         /// <returns>
         /// A Task containing the RPC response.
         /// </returns>
-        public virtual Task<ListInstancesResponse> ListInstancesAsync(
+        public virtual stt::Task<ListInstancesResponse> ListInstancesAsync(
             ProjectName parent,
-            CallSettings callSettings = null) => ListInstancesAsync(
+            gaxgrpc::CallSettings callSettings = null) => ListInstancesAsync(
                 new ListInstancesRequest
                 {
-                    ParentAsProjectName = GaxPreconditions.CheckNotNull(parent, nameof(parent)),
+                    ParentAsProjectName = gax::GaxPreconditions.CheckNotNull(parent, nameof(parent)),
                 },
                 callSettings);
 
@@ -1251,16 +1251,16 @@ namespace Google.Cloud.Bigtable.Admin.V2
         /// Values are of the form `projects/&lt;project&gt;`.
         /// </param>
         /// <param name="cancellationToken">
-        /// A <see cref="CancellationToken"/> to use for this RPC.
+        /// A <see cref="st::CancellationToken"/> to use for this RPC.
         /// </param>
         /// <returns>
         /// A Task containing the RPC response.
         /// </returns>
-        public virtual Task<ListInstancesResponse> ListInstancesAsync(
+        public virtual stt::Task<ListInstancesResponse> ListInstancesAsync(
             ProjectName parent,
-            CancellationToken cancellationToken) => ListInstancesAsync(
+            st::CancellationToken cancellationToken) => ListInstancesAsync(
                 parent,
-                CallSettings.FromCancellationToken(cancellationToken));
+                gaxgrpc::CallSettings.FromCancellationToken(cancellationToken));
 
         /// <summary>
         /// Lists information about instances in a project.
@@ -1277,10 +1277,10 @@ namespace Google.Cloud.Bigtable.Admin.V2
         /// </returns>
         public virtual ListInstancesResponse ListInstances(
             ProjectName parent,
-            CallSettings callSettings = null) => ListInstances(
+            gaxgrpc::CallSettings callSettings = null) => ListInstances(
                 new ListInstancesRequest
                 {
-                    ParentAsProjectName = GaxPreconditions.CheckNotNull(parent, nameof(parent)),
+                    ParentAsProjectName = gax::GaxPreconditions.CheckNotNull(parent, nameof(parent)),
                 },
                 callSettings);
 
@@ -1296,11 +1296,11 @@ namespace Google.Cloud.Bigtable.Admin.V2
         /// <returns>
         /// A Task containing the RPC response.
         /// </returns>
-        public virtual Task<ListInstancesResponse> ListInstancesAsync(
+        public virtual stt::Task<ListInstancesResponse> ListInstancesAsync(
             ListInstancesRequest request,
-            CallSettings callSettings = null)
+            gaxgrpc::CallSettings callSettings = null)
         {
-            throw new NotImplementedException();
+            throw new s::NotImplementedException();
         }
 
         /// <summary>
@@ -1310,16 +1310,16 @@ namespace Google.Cloud.Bigtable.Admin.V2
         /// The request object containing all of the parameters for the API call.
         /// </param>
         /// <param name="cancellationToken">
-        /// A <see cref="CancellationToken"/> to use for this RPC.
+        /// A <see cref="st::CancellationToken"/> to use for this RPC.
         /// </param>
         /// <returns>
         /// A Task containing the RPC response.
         /// </returns>
-        public virtual Task<ListInstancesResponse> ListInstancesAsync(
+        public virtual stt::Task<ListInstancesResponse> ListInstancesAsync(
             ListInstancesRequest request,
-            CancellationToken cancellationToken) => ListInstancesAsync(
+            st::CancellationToken cancellationToken) => ListInstancesAsync(
                 request,
-                CallSettings.FromCancellationToken(cancellationToken));
+                gaxgrpc::CallSettings.FromCancellationToken(cancellationToken));
 
         /// <summary>
         /// Lists information about instances in a project.
@@ -1335,9 +1335,9 @@ namespace Google.Cloud.Bigtable.Admin.V2
         /// </returns>
         public virtual ListInstancesResponse ListInstances(
             ListInstancesRequest request,
-            CallSettings callSettings = null)
+            gaxgrpc::CallSettings callSettings = null)
         {
-            throw new NotImplementedException();
+            throw new s::NotImplementedException();
         }
 
         /// <summary>
@@ -1356,14 +1356,14 @@ namespace Google.Cloud.Bigtable.Admin.V2
         /// <returns>
         /// A Task containing the RPC response.
         /// </returns>
-        public virtual Task<Operation<Instance, UpdateInstanceMetadata>> PartialUpdateInstanceAsync(
+        public virtual stt::Task<lro::Operation<Instance, UpdateInstanceMetadata>> PartialUpdateInstanceAsync(
             Instance instance,
-            FieldMask updateMask,
-            CallSettings callSettings = null) => PartialUpdateInstanceAsync(
+            protowkt::FieldMask updateMask,
+            gaxgrpc::CallSettings callSettings = null) => PartialUpdateInstanceAsync(
                 new PartialUpdateInstanceRequest
                 {
-                    Instance = GaxPreconditions.CheckNotNull(instance, nameof(instance)),
-                    UpdateMask = GaxPreconditions.CheckNotNull(updateMask, nameof(updateMask)),
+                    Instance = gax::GaxPreconditions.CheckNotNull(instance, nameof(instance)),
+                    UpdateMask = gax::GaxPreconditions.CheckNotNull(updateMask, nameof(updateMask)),
                 },
                 callSettings);
 
@@ -1378,18 +1378,18 @@ namespace Google.Cloud.Bigtable.Admin.V2
         /// Must be explicitly set.
         /// </param>
         /// <param name="cancellationToken">
-        /// A <see cref="CancellationToken"/> to use for this RPC.
+        /// A <see cref="st::CancellationToken"/> to use for this RPC.
         /// </param>
         /// <returns>
         /// A Task containing the RPC response.
         /// </returns>
-        public virtual Task<Operation<Instance, UpdateInstanceMetadata>> PartialUpdateInstanceAsync(
+        public virtual stt::Task<lro::Operation<Instance, UpdateInstanceMetadata>> PartialUpdateInstanceAsync(
             Instance instance,
-            FieldMask updateMask,
-            CancellationToken cancellationToken) => PartialUpdateInstanceAsync(
+            protowkt::FieldMask updateMask,
+            st::CancellationToken cancellationToken) => PartialUpdateInstanceAsync(
                 instance,
                 updateMask,
-                CallSettings.FromCancellationToken(cancellationToken));
+                gaxgrpc::CallSettings.FromCancellationToken(cancellationToken));
 
         /// <summary>
         /// Partially updates an instance within a project.
@@ -1407,14 +1407,14 @@ namespace Google.Cloud.Bigtable.Admin.V2
         /// <returns>
         /// The RPC response.
         /// </returns>
-        public virtual Operation<Instance, UpdateInstanceMetadata> PartialUpdateInstance(
+        public virtual lro::Operation<Instance, UpdateInstanceMetadata> PartialUpdateInstance(
             Instance instance,
-            FieldMask updateMask,
-            CallSettings callSettings = null) => PartialUpdateInstance(
+            protowkt::FieldMask updateMask,
+            gaxgrpc::CallSettings callSettings = null) => PartialUpdateInstance(
                 new PartialUpdateInstanceRequest
                 {
-                    Instance = GaxPreconditions.CheckNotNull(instance, nameof(instance)),
-                    UpdateMask = GaxPreconditions.CheckNotNull(updateMask, nameof(updateMask)),
+                    Instance = gax::GaxPreconditions.CheckNotNull(instance, nameof(instance)),
+                    UpdateMask = gax::GaxPreconditions.CheckNotNull(updateMask, nameof(updateMask)),
                 },
                 callSettings);
 
@@ -1430,11 +1430,11 @@ namespace Google.Cloud.Bigtable.Admin.V2
         /// <returns>
         /// A Task containing the RPC response.
         /// </returns>
-        public virtual Task<Operation<Instance, UpdateInstanceMetadata>> PartialUpdateInstanceAsync(
+        public virtual stt::Task<lro::Operation<Instance, UpdateInstanceMetadata>> PartialUpdateInstanceAsync(
             PartialUpdateInstanceRequest request,
-            CallSettings callSettings = null)
+            gaxgrpc::CallSettings callSettings = null)
         {
-            throw new NotImplementedException();
+            throw new s::NotImplementedException();
         }
 
         /// <summary>
@@ -1443,10 +1443,10 @@ namespace Google.Cloud.Bigtable.Admin.V2
         /// <param name="operationName">The name of a previously invoked operation. Must not be <c>null</c> or empty.</param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
         /// <returns>A task representing the result of polling the operation.</returns>
-        public virtual Task<Operation<Instance, UpdateInstanceMetadata>> PollOncePartialUpdateInstanceAsync(
+        public virtual stt::Task<lro::Operation<Instance, UpdateInstanceMetadata>> PollOncePartialUpdateInstanceAsync(
             string operationName,
-            CallSettings callSettings = null) => Operation<Instance, UpdateInstanceMetadata>.PollOnceFromNameAsync(
-                GaxPreconditions.CheckNotNullOrEmpty(operationName, nameof(operationName)),
+            gaxgrpc::CallSettings callSettings = null) => lro::Operation<Instance, UpdateInstanceMetadata>.PollOnceFromNameAsync(
+                gax::GaxPreconditions.CheckNotNullOrEmpty(operationName, nameof(operationName)),
                 PartialUpdateInstanceOperationsClient,
                 callSettings);
 
@@ -1462,19 +1462,19 @@ namespace Google.Cloud.Bigtable.Admin.V2
         /// <returns>
         /// The RPC response.
         /// </returns>
-        public virtual Operation<Instance, UpdateInstanceMetadata> PartialUpdateInstance(
+        public virtual lro::Operation<Instance, UpdateInstanceMetadata> PartialUpdateInstance(
             PartialUpdateInstanceRequest request,
-            CallSettings callSettings = null)
+            gaxgrpc::CallSettings callSettings = null)
         {
-            throw new NotImplementedException();
+            throw new s::NotImplementedException();
         }
 
         /// <summary>
         /// The long-running operations client for <c>PartialUpdateInstance</c>.
         /// </summary>
-        public virtual OperationsClient PartialUpdateInstanceOperationsClient
+        public virtual lro::OperationsClient PartialUpdateInstanceOperationsClient
         {
-            get { throw new NotImplementedException(); }
+            get { throw new s::NotImplementedException(); }
         }
 
         /// <summary>
@@ -1483,10 +1483,10 @@ namespace Google.Cloud.Bigtable.Admin.V2
         /// <param name="operationName">The name of a previously invoked operation. Must not be <c>null</c> or empty.</param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
         /// <returns>The result of polling the operation.</returns>
-        public virtual Operation<Instance, UpdateInstanceMetadata> PollOncePartialUpdateInstance(
+        public virtual lro::Operation<Instance, UpdateInstanceMetadata> PollOncePartialUpdateInstance(
             string operationName,
-            CallSettings callSettings = null) => Operation<Instance, UpdateInstanceMetadata>.PollOnceFromName(
-                GaxPreconditions.CheckNotNullOrEmpty(operationName, nameof(operationName)),
+            gaxgrpc::CallSettings callSettings = null) => lro::Operation<Instance, UpdateInstanceMetadata>.PollOnceFromName(
+                gax::GaxPreconditions.CheckNotNullOrEmpty(operationName, nameof(operationName)),
                 PartialUpdateInstanceOperationsClient,
                 callSettings);
 
@@ -1503,12 +1503,12 @@ namespace Google.Cloud.Bigtable.Admin.V2
         /// <returns>
         /// A Task that completes when the RPC has completed.
         /// </returns>
-        public virtual Task DeleteInstanceAsync(
+        public virtual stt::Task DeleteInstanceAsync(
             InstanceName name,
-            CallSettings callSettings = null) => DeleteInstanceAsync(
+            gaxgrpc::CallSettings callSettings = null) => DeleteInstanceAsync(
                 new DeleteInstanceRequest
                 {
-                    InstanceName = GaxPreconditions.CheckNotNull(name, nameof(name)),
+                    InstanceName = gax::GaxPreconditions.CheckNotNull(name, nameof(name)),
                 },
                 callSettings);
 
@@ -1520,16 +1520,16 @@ namespace Google.Cloud.Bigtable.Admin.V2
         /// Values are of the form `projects/&lt;project&gt;/instances/&lt;instance&gt;`.
         /// </param>
         /// <param name="cancellationToken">
-        /// A <see cref="CancellationToken"/> to use for this RPC.
+        /// A <see cref="st::CancellationToken"/> to use for this RPC.
         /// </param>
         /// <returns>
         /// A Task that completes when the RPC has completed.
         /// </returns>
-        public virtual Task DeleteInstanceAsync(
+        public virtual stt::Task DeleteInstanceAsync(
             InstanceName name,
-            CancellationToken cancellationToken) => DeleteInstanceAsync(
+            st::CancellationToken cancellationToken) => DeleteInstanceAsync(
                 name,
-                CallSettings.FromCancellationToken(cancellationToken));
+                gaxgrpc::CallSettings.FromCancellationToken(cancellationToken));
 
         /// <summary>
         /// Delete an instance from a project.
@@ -1543,10 +1543,10 @@ namespace Google.Cloud.Bigtable.Admin.V2
         /// </param>
         public virtual void DeleteInstance(
             InstanceName name,
-            CallSettings callSettings = null) => DeleteInstance(
+            gaxgrpc::CallSettings callSettings = null) => DeleteInstance(
                 new DeleteInstanceRequest
                 {
-                    InstanceName = GaxPreconditions.CheckNotNull(name, nameof(name)),
+                    InstanceName = gax::GaxPreconditions.CheckNotNull(name, nameof(name)),
                 },
                 callSettings);
 
@@ -1562,11 +1562,11 @@ namespace Google.Cloud.Bigtable.Admin.V2
         /// <returns>
         /// A Task that completes when the RPC has completed.
         /// </returns>
-        public virtual Task DeleteInstanceAsync(
+        public virtual stt::Task DeleteInstanceAsync(
             DeleteInstanceRequest request,
-            CallSettings callSettings = null)
+            gaxgrpc::CallSettings callSettings = null)
         {
-            throw new NotImplementedException();
+            throw new s::NotImplementedException();
         }
 
         /// <summary>
@@ -1576,16 +1576,16 @@ namespace Google.Cloud.Bigtable.Admin.V2
         /// The request object containing all of the parameters for the API call.
         /// </param>
         /// <param name="cancellationToken">
-        /// A <see cref="CancellationToken"/> to use for this RPC.
+        /// A <see cref="st::CancellationToken"/> to use for this RPC.
         /// </param>
         /// <returns>
         /// A Task that completes when the RPC has completed.
         /// </returns>
-        public virtual Task DeleteInstanceAsync(
+        public virtual stt::Task DeleteInstanceAsync(
             DeleteInstanceRequest request,
-            CancellationToken cancellationToken) => DeleteInstanceAsync(
+            st::CancellationToken cancellationToken) => DeleteInstanceAsync(
                 request,
-                CallSettings.FromCancellationToken(cancellationToken));
+                gaxgrpc::CallSettings.FromCancellationToken(cancellationToken));
 
         /// <summary>
         /// Delete an instance from a project.
@@ -1598,9 +1598,9 @@ namespace Google.Cloud.Bigtable.Admin.V2
         /// </param>
         public virtual void DeleteInstance(
             DeleteInstanceRequest request,
-            CallSettings callSettings = null)
+            gaxgrpc::CallSettings callSettings = null)
         {
-            throw new NotImplementedException();
+            throw new s::NotImplementedException();
         }
 
         /// <summary>
@@ -1626,16 +1626,16 @@ namespace Google.Cloud.Bigtable.Admin.V2
         /// <returns>
         /// A Task containing the RPC response.
         /// </returns>
-        public virtual Task<Operation<Cluster, CreateClusterMetadata>> CreateClusterAsync(
+        public virtual stt::Task<lro::Operation<Cluster, CreateClusterMetadata>> CreateClusterAsync(
             InstanceName parent,
             string clusterId,
             Cluster cluster,
-            CallSettings callSettings = null) => CreateClusterAsync(
+            gaxgrpc::CallSettings callSettings = null) => CreateClusterAsync(
                 new CreateClusterRequest
                 {
-                    ParentAsInstanceName = GaxPreconditions.CheckNotNull(parent, nameof(parent)),
-                    ClusterId = GaxPreconditions.CheckNotNullOrEmpty(clusterId, nameof(clusterId)),
-                    Cluster = GaxPreconditions.CheckNotNull(cluster, nameof(cluster)),
+                    ParentAsInstanceName = gax::GaxPreconditions.CheckNotNull(parent, nameof(parent)),
+                    ClusterId = gax::GaxPreconditions.CheckNotNullOrEmpty(clusterId, nameof(clusterId)),
+                    Cluster = gax::GaxPreconditions.CheckNotNull(cluster, nameof(cluster)),
                 },
                 callSettings);
 
@@ -1657,20 +1657,20 @@ namespace Google.Cloud.Bigtable.Admin.V2
         /// Fields marked `OutputOnly` must be left blank.
         /// </param>
         /// <param name="cancellationToken">
-        /// A <see cref="CancellationToken"/> to use for this RPC.
+        /// A <see cref="st::CancellationToken"/> to use for this RPC.
         /// </param>
         /// <returns>
         /// A Task containing the RPC response.
         /// </returns>
-        public virtual Task<Operation<Cluster, CreateClusterMetadata>> CreateClusterAsync(
+        public virtual stt::Task<lro::Operation<Cluster, CreateClusterMetadata>> CreateClusterAsync(
             InstanceName parent,
             string clusterId,
             Cluster cluster,
-            CancellationToken cancellationToken) => CreateClusterAsync(
+            st::CancellationToken cancellationToken) => CreateClusterAsync(
                 parent,
                 clusterId,
                 cluster,
-                CallSettings.FromCancellationToken(cancellationToken));
+                gaxgrpc::CallSettings.FromCancellationToken(cancellationToken));
 
         /// <summary>
         /// Creates a cluster within an instance.
@@ -1695,16 +1695,16 @@ namespace Google.Cloud.Bigtable.Admin.V2
         /// <returns>
         /// The RPC response.
         /// </returns>
-        public virtual Operation<Cluster, CreateClusterMetadata> CreateCluster(
+        public virtual lro::Operation<Cluster, CreateClusterMetadata> CreateCluster(
             InstanceName parent,
             string clusterId,
             Cluster cluster,
-            CallSettings callSettings = null) => CreateCluster(
+            gaxgrpc::CallSettings callSettings = null) => CreateCluster(
                 new CreateClusterRequest
                 {
-                    ParentAsInstanceName = GaxPreconditions.CheckNotNull(parent, nameof(parent)),
-                    ClusterId = GaxPreconditions.CheckNotNullOrEmpty(clusterId, nameof(clusterId)),
-                    Cluster = GaxPreconditions.CheckNotNull(cluster, nameof(cluster)),
+                    ParentAsInstanceName = gax::GaxPreconditions.CheckNotNull(parent, nameof(parent)),
+                    ClusterId = gax::GaxPreconditions.CheckNotNullOrEmpty(clusterId, nameof(clusterId)),
+                    Cluster = gax::GaxPreconditions.CheckNotNull(cluster, nameof(cluster)),
                 },
                 callSettings);
 
@@ -1720,11 +1720,11 @@ namespace Google.Cloud.Bigtable.Admin.V2
         /// <returns>
         /// A Task containing the RPC response.
         /// </returns>
-        public virtual Task<Operation<Cluster, CreateClusterMetadata>> CreateClusterAsync(
+        public virtual stt::Task<lro::Operation<Cluster, CreateClusterMetadata>> CreateClusterAsync(
             CreateClusterRequest request,
-            CallSettings callSettings = null)
+            gaxgrpc::CallSettings callSettings = null)
         {
-            throw new NotImplementedException();
+            throw new s::NotImplementedException();
         }
 
         /// <summary>
@@ -1733,10 +1733,10 @@ namespace Google.Cloud.Bigtable.Admin.V2
         /// <param name="operationName">The name of a previously invoked operation. Must not be <c>null</c> or empty.</param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
         /// <returns>A task representing the result of polling the operation.</returns>
-        public virtual Task<Operation<Cluster, CreateClusterMetadata>> PollOnceCreateClusterAsync(
+        public virtual stt::Task<lro::Operation<Cluster, CreateClusterMetadata>> PollOnceCreateClusterAsync(
             string operationName,
-            CallSettings callSettings = null) => Operation<Cluster, CreateClusterMetadata>.PollOnceFromNameAsync(
-                GaxPreconditions.CheckNotNullOrEmpty(operationName, nameof(operationName)),
+            gaxgrpc::CallSettings callSettings = null) => lro::Operation<Cluster, CreateClusterMetadata>.PollOnceFromNameAsync(
+                gax::GaxPreconditions.CheckNotNullOrEmpty(operationName, nameof(operationName)),
                 CreateClusterOperationsClient,
                 callSettings);
 
@@ -1752,19 +1752,19 @@ namespace Google.Cloud.Bigtable.Admin.V2
         /// <returns>
         /// The RPC response.
         /// </returns>
-        public virtual Operation<Cluster, CreateClusterMetadata> CreateCluster(
+        public virtual lro::Operation<Cluster, CreateClusterMetadata> CreateCluster(
             CreateClusterRequest request,
-            CallSettings callSettings = null)
+            gaxgrpc::CallSettings callSettings = null)
         {
-            throw new NotImplementedException();
+            throw new s::NotImplementedException();
         }
 
         /// <summary>
         /// The long-running operations client for <c>CreateCluster</c>.
         /// </summary>
-        public virtual OperationsClient CreateClusterOperationsClient
+        public virtual lro::OperationsClient CreateClusterOperationsClient
         {
-            get { throw new NotImplementedException(); }
+            get { throw new s::NotImplementedException(); }
         }
 
         /// <summary>
@@ -1773,10 +1773,10 @@ namespace Google.Cloud.Bigtable.Admin.V2
         /// <param name="operationName">The name of a previously invoked operation. Must not be <c>null</c> or empty.</param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
         /// <returns>The result of polling the operation.</returns>
-        public virtual Operation<Cluster, CreateClusterMetadata> PollOnceCreateCluster(
+        public virtual lro::Operation<Cluster, CreateClusterMetadata> PollOnceCreateCluster(
             string operationName,
-            CallSettings callSettings = null) => Operation<Cluster, CreateClusterMetadata>.PollOnceFromName(
-                GaxPreconditions.CheckNotNullOrEmpty(operationName, nameof(operationName)),
+            gaxgrpc::CallSettings callSettings = null) => lro::Operation<Cluster, CreateClusterMetadata>.PollOnceFromName(
+                gax::GaxPreconditions.CheckNotNullOrEmpty(operationName, nameof(operationName)),
                 CreateClusterOperationsClient,
                 callSettings);
 
@@ -1793,12 +1793,12 @@ namespace Google.Cloud.Bigtable.Admin.V2
         /// <returns>
         /// A Task containing the RPC response.
         /// </returns>
-        public virtual Task<Cluster> GetClusterAsync(
+        public virtual stt::Task<Cluster> GetClusterAsync(
             ClusterName name,
-            CallSettings callSettings = null) => GetClusterAsync(
+            gaxgrpc::CallSettings callSettings = null) => GetClusterAsync(
                 new GetClusterRequest
                 {
-                    ClusterName = GaxPreconditions.CheckNotNull(name, nameof(name)),
+                    ClusterName = gax::GaxPreconditions.CheckNotNull(name, nameof(name)),
                 },
                 callSettings);
 
@@ -1810,16 +1810,16 @@ namespace Google.Cloud.Bigtable.Admin.V2
         /// `projects/&lt;project&gt;/instances/&lt;instance&gt;/clusters/&lt;cluster&gt;`.
         /// </param>
         /// <param name="cancellationToken">
-        /// A <see cref="CancellationToken"/> to use for this RPC.
+        /// A <see cref="st::CancellationToken"/> to use for this RPC.
         /// </param>
         /// <returns>
         /// A Task containing the RPC response.
         /// </returns>
-        public virtual Task<Cluster> GetClusterAsync(
+        public virtual stt::Task<Cluster> GetClusterAsync(
             ClusterName name,
-            CancellationToken cancellationToken) => GetClusterAsync(
+            st::CancellationToken cancellationToken) => GetClusterAsync(
                 name,
-                CallSettings.FromCancellationToken(cancellationToken));
+                gaxgrpc::CallSettings.FromCancellationToken(cancellationToken));
 
         /// <summary>
         /// Gets information about a cluster.
@@ -1836,10 +1836,10 @@ namespace Google.Cloud.Bigtable.Admin.V2
         /// </returns>
         public virtual Cluster GetCluster(
             ClusterName name,
-            CallSettings callSettings = null) => GetCluster(
+            gaxgrpc::CallSettings callSettings = null) => GetCluster(
                 new GetClusterRequest
                 {
-                    ClusterName = GaxPreconditions.CheckNotNull(name, nameof(name)),
+                    ClusterName = gax::GaxPreconditions.CheckNotNull(name, nameof(name)),
                 },
                 callSettings);
 
@@ -1855,11 +1855,11 @@ namespace Google.Cloud.Bigtable.Admin.V2
         /// <returns>
         /// A Task containing the RPC response.
         /// </returns>
-        public virtual Task<Cluster> GetClusterAsync(
+        public virtual stt::Task<Cluster> GetClusterAsync(
             GetClusterRequest request,
-            CallSettings callSettings = null)
+            gaxgrpc::CallSettings callSettings = null)
         {
-            throw new NotImplementedException();
+            throw new s::NotImplementedException();
         }
 
         /// <summary>
@@ -1869,16 +1869,16 @@ namespace Google.Cloud.Bigtable.Admin.V2
         /// The request object containing all of the parameters for the API call.
         /// </param>
         /// <param name="cancellationToken">
-        /// A <see cref="CancellationToken"/> to use for this RPC.
+        /// A <see cref="st::CancellationToken"/> to use for this RPC.
         /// </param>
         /// <returns>
         /// A Task containing the RPC response.
         /// </returns>
-        public virtual Task<Cluster> GetClusterAsync(
+        public virtual stt::Task<Cluster> GetClusterAsync(
             GetClusterRequest request,
-            CancellationToken cancellationToken) => GetClusterAsync(
+            st::CancellationToken cancellationToken) => GetClusterAsync(
                 request,
-                CallSettings.FromCancellationToken(cancellationToken));
+                gaxgrpc::CallSettings.FromCancellationToken(cancellationToken));
 
         /// <summary>
         /// Gets information about a cluster.
@@ -1894,9 +1894,9 @@ namespace Google.Cloud.Bigtable.Admin.V2
         /// </returns>
         public virtual Cluster GetCluster(
             GetClusterRequest request,
-            CallSettings callSettings = null)
+            gaxgrpc::CallSettings callSettings = null)
         {
-            throw new NotImplementedException();
+            throw new s::NotImplementedException();
         }
 
         /// <summary>
@@ -1914,12 +1914,12 @@ namespace Google.Cloud.Bigtable.Admin.V2
         /// <returns>
         /// A Task containing the RPC response.
         /// </returns>
-        public virtual Task<ListClustersResponse> ListClustersAsync(
+        public virtual stt::Task<ListClustersResponse> ListClustersAsync(
             InstanceName parent,
-            CallSettings callSettings = null) => ListClustersAsync(
+            gaxgrpc::CallSettings callSettings = null) => ListClustersAsync(
                 new ListClustersRequest
                 {
-                    ParentAsInstanceName = GaxPreconditions.CheckNotNull(parent, nameof(parent)),
+                    ParentAsInstanceName = gax::GaxPreconditions.CheckNotNull(parent, nameof(parent)),
                 },
                 callSettings);
 
@@ -1933,16 +1933,16 @@ namespace Google.Cloud.Bigtable.Admin.V2
         /// e.g., `projects/myproject/instances/-`.
         /// </param>
         /// <param name="cancellationToken">
-        /// A <see cref="CancellationToken"/> to use for this RPC.
+        /// A <see cref="st::CancellationToken"/> to use for this RPC.
         /// </param>
         /// <returns>
         /// A Task containing the RPC response.
         /// </returns>
-        public virtual Task<ListClustersResponse> ListClustersAsync(
+        public virtual stt::Task<ListClustersResponse> ListClustersAsync(
             InstanceName parent,
-            CancellationToken cancellationToken) => ListClustersAsync(
+            st::CancellationToken cancellationToken) => ListClustersAsync(
                 parent,
-                CallSettings.FromCancellationToken(cancellationToken));
+                gaxgrpc::CallSettings.FromCancellationToken(cancellationToken));
 
         /// <summary>
         /// Lists information about clusters in an instance.
@@ -1961,10 +1961,10 @@ namespace Google.Cloud.Bigtable.Admin.V2
         /// </returns>
         public virtual ListClustersResponse ListClusters(
             InstanceName parent,
-            CallSettings callSettings = null) => ListClusters(
+            gaxgrpc::CallSettings callSettings = null) => ListClusters(
                 new ListClustersRequest
                 {
-                    ParentAsInstanceName = GaxPreconditions.CheckNotNull(parent, nameof(parent)),
+                    ParentAsInstanceName = gax::GaxPreconditions.CheckNotNull(parent, nameof(parent)),
                 },
                 callSettings);
 
@@ -1980,11 +1980,11 @@ namespace Google.Cloud.Bigtable.Admin.V2
         /// <returns>
         /// A Task containing the RPC response.
         /// </returns>
-        public virtual Task<ListClustersResponse> ListClustersAsync(
+        public virtual stt::Task<ListClustersResponse> ListClustersAsync(
             ListClustersRequest request,
-            CallSettings callSettings = null)
+            gaxgrpc::CallSettings callSettings = null)
         {
-            throw new NotImplementedException();
+            throw new s::NotImplementedException();
         }
 
         /// <summary>
@@ -1994,16 +1994,16 @@ namespace Google.Cloud.Bigtable.Admin.V2
         /// The request object containing all of the parameters for the API call.
         /// </param>
         /// <param name="cancellationToken">
-        /// A <see cref="CancellationToken"/> to use for this RPC.
+        /// A <see cref="st::CancellationToken"/> to use for this RPC.
         /// </param>
         /// <returns>
         /// A Task containing the RPC response.
         /// </returns>
-        public virtual Task<ListClustersResponse> ListClustersAsync(
+        public virtual stt::Task<ListClustersResponse> ListClustersAsync(
             ListClustersRequest request,
-            CancellationToken cancellationToken) => ListClustersAsync(
+            st::CancellationToken cancellationToken) => ListClustersAsync(
                 request,
-                CallSettings.FromCancellationToken(cancellationToken));
+                gaxgrpc::CallSettings.FromCancellationToken(cancellationToken));
 
         /// <summary>
         /// Lists information about clusters in an instance.
@@ -2019,9 +2019,9 @@ namespace Google.Cloud.Bigtable.Admin.V2
         /// </returns>
         public virtual ListClustersResponse ListClusters(
             ListClustersRequest request,
-            CallSettings callSettings = null)
+            gaxgrpc::CallSettings callSettings = null)
         {
-            throw new NotImplementedException();
+            throw new s::NotImplementedException();
         }
 
         /// <summary>
@@ -2036,11 +2036,11 @@ namespace Google.Cloud.Bigtable.Admin.V2
         /// <returns>
         /// A Task containing the RPC response.
         /// </returns>
-        public virtual Task<Operation<Cluster, UpdateClusterMetadata>> UpdateClusterAsync(
+        public virtual stt::Task<lro::Operation<Cluster, UpdateClusterMetadata>> UpdateClusterAsync(
             Cluster request,
-            CallSettings callSettings = null)
+            gaxgrpc::CallSettings callSettings = null)
         {
-            throw new NotImplementedException();
+            throw new s::NotImplementedException();
         }
 
         /// <summary>
@@ -2049,10 +2049,10 @@ namespace Google.Cloud.Bigtable.Admin.V2
         /// <param name="operationName">The name of a previously invoked operation. Must not be <c>null</c> or empty.</param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
         /// <returns>A task representing the result of polling the operation.</returns>
-        public virtual Task<Operation<Cluster, UpdateClusterMetadata>> PollOnceUpdateClusterAsync(
+        public virtual stt::Task<lro::Operation<Cluster, UpdateClusterMetadata>> PollOnceUpdateClusterAsync(
             string operationName,
-            CallSettings callSettings = null) => Operation<Cluster, UpdateClusterMetadata>.PollOnceFromNameAsync(
-                GaxPreconditions.CheckNotNullOrEmpty(operationName, nameof(operationName)),
+            gaxgrpc::CallSettings callSettings = null) => lro::Operation<Cluster, UpdateClusterMetadata>.PollOnceFromNameAsync(
+                gax::GaxPreconditions.CheckNotNullOrEmpty(operationName, nameof(operationName)),
                 UpdateClusterOperationsClient,
                 callSettings);
 
@@ -2068,19 +2068,19 @@ namespace Google.Cloud.Bigtable.Admin.V2
         /// <returns>
         /// The RPC response.
         /// </returns>
-        public virtual Operation<Cluster, UpdateClusterMetadata> UpdateCluster(
+        public virtual lro::Operation<Cluster, UpdateClusterMetadata> UpdateCluster(
             Cluster request,
-            CallSettings callSettings = null)
+            gaxgrpc::CallSettings callSettings = null)
         {
-            throw new NotImplementedException();
+            throw new s::NotImplementedException();
         }
 
         /// <summary>
         /// The long-running operations client for <c>UpdateCluster</c>.
         /// </summary>
-        public virtual OperationsClient UpdateClusterOperationsClient
+        public virtual lro::OperationsClient UpdateClusterOperationsClient
         {
-            get { throw new NotImplementedException(); }
+            get { throw new s::NotImplementedException(); }
         }
 
         /// <summary>
@@ -2089,10 +2089,10 @@ namespace Google.Cloud.Bigtable.Admin.V2
         /// <param name="operationName">The name of a previously invoked operation. Must not be <c>null</c> or empty.</param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
         /// <returns>The result of polling the operation.</returns>
-        public virtual Operation<Cluster, UpdateClusterMetadata> PollOnceUpdateCluster(
+        public virtual lro::Operation<Cluster, UpdateClusterMetadata> PollOnceUpdateCluster(
             string operationName,
-            CallSettings callSettings = null) => Operation<Cluster, UpdateClusterMetadata>.PollOnceFromName(
-                GaxPreconditions.CheckNotNullOrEmpty(operationName, nameof(operationName)),
+            gaxgrpc::CallSettings callSettings = null) => lro::Operation<Cluster, UpdateClusterMetadata>.PollOnceFromName(
+                gax::GaxPreconditions.CheckNotNullOrEmpty(operationName, nameof(operationName)),
                 UpdateClusterOperationsClient,
                 callSettings);
 
@@ -2109,12 +2109,12 @@ namespace Google.Cloud.Bigtable.Admin.V2
         /// <returns>
         /// A Task that completes when the RPC has completed.
         /// </returns>
-        public virtual Task DeleteClusterAsync(
+        public virtual stt::Task DeleteClusterAsync(
             ClusterName name,
-            CallSettings callSettings = null) => DeleteClusterAsync(
+            gaxgrpc::CallSettings callSettings = null) => DeleteClusterAsync(
                 new DeleteClusterRequest
                 {
-                    ClusterName = GaxPreconditions.CheckNotNull(name, nameof(name)),
+                    ClusterName = gax::GaxPreconditions.CheckNotNull(name, nameof(name)),
                 },
                 callSettings);
 
@@ -2126,16 +2126,16 @@ namespace Google.Cloud.Bigtable.Admin.V2
         /// `projects/&lt;project&gt;/instances/&lt;instance&gt;/clusters/&lt;cluster&gt;`.
         /// </param>
         /// <param name="cancellationToken">
-        /// A <see cref="CancellationToken"/> to use for this RPC.
+        /// A <see cref="st::CancellationToken"/> to use for this RPC.
         /// </param>
         /// <returns>
         /// A Task that completes when the RPC has completed.
         /// </returns>
-        public virtual Task DeleteClusterAsync(
+        public virtual stt::Task DeleteClusterAsync(
             ClusterName name,
-            CancellationToken cancellationToken) => DeleteClusterAsync(
+            st::CancellationToken cancellationToken) => DeleteClusterAsync(
                 name,
-                CallSettings.FromCancellationToken(cancellationToken));
+                gaxgrpc::CallSettings.FromCancellationToken(cancellationToken));
 
         /// <summary>
         /// Deletes a cluster from an instance.
@@ -2149,10 +2149,10 @@ namespace Google.Cloud.Bigtable.Admin.V2
         /// </param>
         public virtual void DeleteCluster(
             ClusterName name,
-            CallSettings callSettings = null) => DeleteCluster(
+            gaxgrpc::CallSettings callSettings = null) => DeleteCluster(
                 new DeleteClusterRequest
                 {
-                    ClusterName = GaxPreconditions.CheckNotNull(name, nameof(name)),
+                    ClusterName = gax::GaxPreconditions.CheckNotNull(name, nameof(name)),
                 },
                 callSettings);
 
@@ -2168,11 +2168,11 @@ namespace Google.Cloud.Bigtable.Admin.V2
         /// <returns>
         /// A Task that completes when the RPC has completed.
         /// </returns>
-        public virtual Task DeleteClusterAsync(
+        public virtual stt::Task DeleteClusterAsync(
             DeleteClusterRequest request,
-            CallSettings callSettings = null)
+            gaxgrpc::CallSettings callSettings = null)
         {
-            throw new NotImplementedException();
+            throw new s::NotImplementedException();
         }
 
         /// <summary>
@@ -2182,16 +2182,16 @@ namespace Google.Cloud.Bigtable.Admin.V2
         /// The request object containing all of the parameters for the API call.
         /// </param>
         /// <param name="cancellationToken">
-        /// A <see cref="CancellationToken"/> to use for this RPC.
+        /// A <see cref="st::CancellationToken"/> to use for this RPC.
         /// </param>
         /// <returns>
         /// A Task that completes when the RPC has completed.
         /// </returns>
-        public virtual Task DeleteClusterAsync(
+        public virtual stt::Task DeleteClusterAsync(
             DeleteClusterRequest request,
-            CancellationToken cancellationToken) => DeleteClusterAsync(
+            st::CancellationToken cancellationToken) => DeleteClusterAsync(
                 request,
-                CallSettings.FromCancellationToken(cancellationToken));
+                gaxgrpc::CallSettings.FromCancellationToken(cancellationToken));
 
         /// <summary>
         /// Deletes a cluster from an instance.
@@ -2204,9 +2204,9 @@ namespace Google.Cloud.Bigtable.Admin.V2
         /// </param>
         public virtual void DeleteCluster(
             DeleteClusterRequest request,
-            CallSettings callSettings = null)
+            gaxgrpc::CallSettings callSettings = null)
         {
-            throw new NotImplementedException();
+            throw new s::NotImplementedException();
         }
 
         /// <summary>
@@ -2237,16 +2237,16 @@ namespace Google.Cloud.Bigtable.Admin.V2
         /// <returns>
         /// A Task containing the RPC response.
         /// </returns>
-        public virtual Task<AppProfile> CreateAppProfileAsync(
+        public virtual stt::Task<AppProfile> CreateAppProfileAsync(
             InstanceName parent,
             string appProfileId,
             AppProfile appProfile,
-            CallSettings callSettings = null) => CreateAppProfileAsync(
+            gaxgrpc::CallSettings callSettings = null) => CreateAppProfileAsync(
                 new CreateAppProfileRequest
                 {
-                    ParentAsInstanceName = GaxPreconditions.CheckNotNull(parent, nameof(parent)),
-                    AppProfileId = GaxPreconditions.CheckNotNullOrEmpty(appProfileId, nameof(appProfileId)),
-                    AppProfile = GaxPreconditions.CheckNotNull(appProfile, nameof(appProfile)),
+                    ParentAsInstanceName = gax::GaxPreconditions.CheckNotNull(parent, nameof(parent)),
+                    AppProfileId = gax::GaxPreconditions.CheckNotNullOrEmpty(appProfileId, nameof(appProfileId)),
+                    AppProfile = gax::GaxPreconditions.CheckNotNull(appProfile, nameof(appProfile)),
                 },
                 callSettings);
 
@@ -2273,20 +2273,20 @@ namespace Google.Cloud.Bigtable.Admin.V2
         /// Fields marked `OutputOnly` will be ignored.
         /// </param>
         /// <param name="cancellationToken">
-        /// A <see cref="CancellationToken"/> to use for this RPC.
+        /// A <see cref="st::CancellationToken"/> to use for this RPC.
         /// </param>
         /// <returns>
         /// A Task containing the RPC response.
         /// </returns>
-        public virtual Task<AppProfile> CreateAppProfileAsync(
+        public virtual stt::Task<AppProfile> CreateAppProfileAsync(
             InstanceName parent,
             string appProfileId,
             AppProfile appProfile,
-            CancellationToken cancellationToken) => CreateAppProfileAsync(
+            st::CancellationToken cancellationToken) => CreateAppProfileAsync(
                 parent,
                 appProfileId,
                 appProfile,
-                CallSettings.FromCancellationToken(cancellationToken));
+                gaxgrpc::CallSettings.FromCancellationToken(cancellationToken));
 
         /// <summary>
         /// This is a private alpha release of Cloud Bigtable replication. This feature
@@ -2320,12 +2320,12 @@ namespace Google.Cloud.Bigtable.Admin.V2
             InstanceName parent,
             string appProfileId,
             AppProfile appProfile,
-            CallSettings callSettings = null) => CreateAppProfile(
+            gaxgrpc::CallSettings callSettings = null) => CreateAppProfile(
                 new CreateAppProfileRequest
                 {
-                    ParentAsInstanceName = GaxPreconditions.CheckNotNull(parent, nameof(parent)),
-                    AppProfileId = GaxPreconditions.CheckNotNullOrEmpty(appProfileId, nameof(appProfileId)),
-                    AppProfile = GaxPreconditions.CheckNotNull(appProfile, nameof(appProfile)),
+                    ParentAsInstanceName = gax::GaxPreconditions.CheckNotNull(parent, nameof(parent)),
+                    AppProfileId = gax::GaxPreconditions.CheckNotNullOrEmpty(appProfileId, nameof(appProfileId)),
+                    AppProfile = gax::GaxPreconditions.CheckNotNull(appProfile, nameof(appProfile)),
                 },
                 callSettings);
 
@@ -2346,11 +2346,11 @@ namespace Google.Cloud.Bigtable.Admin.V2
         /// <returns>
         /// A Task containing the RPC response.
         /// </returns>
-        public virtual Task<AppProfile> CreateAppProfileAsync(
+        public virtual stt::Task<AppProfile> CreateAppProfileAsync(
             CreateAppProfileRequest request,
-            CallSettings callSettings = null)
+            gaxgrpc::CallSettings callSettings = null)
         {
-            throw new NotImplementedException();
+            throw new s::NotImplementedException();
         }
 
         /// <summary>
@@ -2365,16 +2365,16 @@ namespace Google.Cloud.Bigtable.Admin.V2
         /// The request object containing all of the parameters for the API call.
         /// </param>
         /// <param name="cancellationToken">
-        /// A <see cref="CancellationToken"/> to use for this RPC.
+        /// A <see cref="st::CancellationToken"/> to use for this RPC.
         /// </param>
         /// <returns>
         /// A Task containing the RPC response.
         /// </returns>
-        public virtual Task<AppProfile> CreateAppProfileAsync(
+        public virtual stt::Task<AppProfile> CreateAppProfileAsync(
             CreateAppProfileRequest request,
-            CancellationToken cancellationToken) => CreateAppProfileAsync(
+            st::CancellationToken cancellationToken) => CreateAppProfileAsync(
                 request,
-                CallSettings.FromCancellationToken(cancellationToken));
+                gaxgrpc::CallSettings.FromCancellationToken(cancellationToken));
 
         /// <summary>
         /// This is a private alpha release of Cloud Bigtable replication. This feature
@@ -2395,9 +2395,9 @@ namespace Google.Cloud.Bigtable.Admin.V2
         /// </returns>
         public virtual AppProfile CreateAppProfile(
             CreateAppProfileRequest request,
-            CallSettings callSettings = null)
+            gaxgrpc::CallSettings callSettings = null)
         {
-            throw new NotImplementedException();
+            throw new s::NotImplementedException();
         }
 
         /// <summary>
@@ -2418,12 +2418,12 @@ namespace Google.Cloud.Bigtable.Admin.V2
         /// <returns>
         /// A Task containing the RPC response.
         /// </returns>
-        public virtual Task<AppProfile> GetAppProfileAsync(
+        public virtual stt::Task<AppProfile> GetAppProfileAsync(
             AppProfileName name,
-            CallSettings callSettings = null) => GetAppProfileAsync(
+            gaxgrpc::CallSettings callSettings = null) => GetAppProfileAsync(
                 new GetAppProfileRequest
                 {
-                    AppProfileName = GaxPreconditions.CheckNotNull(name, nameof(name)),
+                    AppProfileName = gax::GaxPreconditions.CheckNotNull(name, nameof(name)),
                 },
                 callSettings);
 
@@ -2440,16 +2440,16 @@ namespace Google.Cloud.Bigtable.Admin.V2
         /// `projects/&lt;project&gt;/instances/&lt;instance&gt;/appProfiles/&lt;app_profile&gt;`.
         /// </param>
         /// <param name="cancellationToken">
-        /// A <see cref="CancellationToken"/> to use for this RPC.
+        /// A <see cref="st::CancellationToken"/> to use for this RPC.
         /// </param>
         /// <returns>
         /// A Task containing the RPC response.
         /// </returns>
-        public virtual Task<AppProfile> GetAppProfileAsync(
+        public virtual stt::Task<AppProfile> GetAppProfileAsync(
             AppProfileName name,
-            CancellationToken cancellationToken) => GetAppProfileAsync(
+            st::CancellationToken cancellationToken) => GetAppProfileAsync(
                 name,
-                CallSettings.FromCancellationToken(cancellationToken));
+                gaxgrpc::CallSettings.FromCancellationToken(cancellationToken));
 
         /// <summary>
         /// This is a private alpha release of Cloud Bigtable replication. This feature
@@ -2471,10 +2471,10 @@ namespace Google.Cloud.Bigtable.Admin.V2
         /// </returns>
         public virtual AppProfile GetAppProfile(
             AppProfileName name,
-            CallSettings callSettings = null) => GetAppProfile(
+            gaxgrpc::CallSettings callSettings = null) => GetAppProfile(
                 new GetAppProfileRequest
                 {
-                    AppProfileName = GaxPreconditions.CheckNotNull(name, nameof(name)),
+                    AppProfileName = gax::GaxPreconditions.CheckNotNull(name, nameof(name)),
                 },
                 callSettings);
 
@@ -2495,11 +2495,11 @@ namespace Google.Cloud.Bigtable.Admin.V2
         /// <returns>
         /// A Task containing the RPC response.
         /// </returns>
-        public virtual Task<AppProfile> GetAppProfileAsync(
+        public virtual stt::Task<AppProfile> GetAppProfileAsync(
             GetAppProfileRequest request,
-            CallSettings callSettings = null)
+            gaxgrpc::CallSettings callSettings = null)
         {
-            throw new NotImplementedException();
+            throw new s::NotImplementedException();
         }
 
         /// <summary>
@@ -2514,16 +2514,16 @@ namespace Google.Cloud.Bigtable.Admin.V2
         /// The request object containing all of the parameters for the API call.
         /// </param>
         /// <param name="cancellationToken">
-        /// A <see cref="CancellationToken"/> to use for this RPC.
+        /// A <see cref="st::CancellationToken"/> to use for this RPC.
         /// </param>
         /// <returns>
         /// A Task containing the RPC response.
         /// </returns>
-        public virtual Task<AppProfile> GetAppProfileAsync(
+        public virtual stt::Task<AppProfile> GetAppProfileAsync(
             GetAppProfileRequest request,
-            CancellationToken cancellationToken) => GetAppProfileAsync(
+            st::CancellationToken cancellationToken) => GetAppProfileAsync(
                 request,
-                CallSettings.FromCancellationToken(cancellationToken));
+                gaxgrpc::CallSettings.FromCancellationToken(cancellationToken));
 
         /// <summary>
         /// This is a private alpha release of Cloud Bigtable replication. This feature
@@ -2544,9 +2544,9 @@ namespace Google.Cloud.Bigtable.Admin.V2
         /// </returns>
         public virtual AppProfile GetAppProfile(
             GetAppProfileRequest request,
-            CallSettings callSettings = null)
+            gaxgrpc::CallSettings callSettings = null)
         {
-            throw new NotImplementedException();
+            throw new s::NotImplementedException();
         }
 
         /// <summary>
@@ -2576,14 +2576,14 @@ namespace Google.Cloud.Bigtable.Admin.V2
         /// <returns>
         /// A pageable asynchronous sequence of <see cref="AppProfile"/> resources.
         /// </returns>
-        public virtual PagedAsyncEnumerable<ListAppProfilesResponse, AppProfile> ListAppProfilesAsync(
+        public virtual gax::PagedAsyncEnumerable<ListAppProfilesResponse, AppProfile> ListAppProfilesAsync(
             InstanceName parent,
             string pageToken = null,
             int? pageSize = null,
-            CallSettings callSettings = null) => ListAppProfilesAsync(
+            gaxgrpc::CallSettings callSettings = null) => ListAppProfilesAsync(
                 new ListAppProfilesRequest
                 {
-                    ParentAsInstanceName = GaxPreconditions.CheckNotNull(parent, nameof(parent)),
+                    ParentAsInstanceName = gax::GaxPreconditions.CheckNotNull(parent, nameof(parent)),
                     PageToken = pageToken ?? "",
                     PageSize = pageSize ?? 0,
                 },
@@ -2616,14 +2616,14 @@ namespace Google.Cloud.Bigtable.Admin.V2
         /// <returns>
         /// A pageable sequence of <see cref="AppProfile"/> resources.
         /// </returns>
-        public virtual PagedEnumerable<ListAppProfilesResponse, AppProfile> ListAppProfiles(
+        public virtual gax::PagedEnumerable<ListAppProfilesResponse, AppProfile> ListAppProfiles(
             InstanceName parent,
             string pageToken = null,
             int? pageSize = null,
-            CallSettings callSettings = null) => ListAppProfiles(
+            gaxgrpc::CallSettings callSettings = null) => ListAppProfiles(
                 new ListAppProfilesRequest
                 {
-                    ParentAsInstanceName = GaxPreconditions.CheckNotNull(parent, nameof(parent)),
+                    ParentAsInstanceName = gax::GaxPreconditions.CheckNotNull(parent, nameof(parent)),
                     PageToken = pageToken ?? "",
                     PageSize = pageSize ?? 0,
                 },
@@ -2646,11 +2646,11 @@ namespace Google.Cloud.Bigtable.Admin.V2
         /// <returns>
         /// A pageable asynchronous sequence of <see cref="AppProfile"/> resources.
         /// </returns>
-        public virtual PagedAsyncEnumerable<ListAppProfilesResponse, AppProfile> ListAppProfilesAsync(
+        public virtual gax::PagedAsyncEnumerable<ListAppProfilesResponse, AppProfile> ListAppProfilesAsync(
             ListAppProfilesRequest request,
-            CallSettings callSettings = null)
+            gaxgrpc::CallSettings callSettings = null)
         {
-            throw new NotImplementedException();
+            throw new s::NotImplementedException();
         }
 
         /// <summary>
@@ -2670,11 +2670,11 @@ namespace Google.Cloud.Bigtable.Admin.V2
         /// <returns>
         /// A pageable sequence of <see cref="AppProfile"/> resources.
         /// </returns>
-        public virtual PagedEnumerable<ListAppProfilesResponse, AppProfile> ListAppProfiles(
+        public virtual gax::PagedEnumerable<ListAppProfilesResponse, AppProfile> ListAppProfiles(
             ListAppProfilesRequest request,
-            CallSettings callSettings = null)
+            gaxgrpc::CallSettings callSettings = null)
         {
-            throw new NotImplementedException();
+            throw new s::NotImplementedException();
         }
 
         /// <summary>
@@ -2698,14 +2698,14 @@ namespace Google.Cloud.Bigtable.Admin.V2
         /// <returns>
         /// A Task containing the RPC response.
         /// </returns>
-        public virtual Task<Operation<AppProfile, UpdateAppProfileMetadata>> UpdateAppProfileAsync(
+        public virtual stt::Task<lro::Operation<AppProfile, UpdateAppProfileMetadata>> UpdateAppProfileAsync(
             AppProfile appProfile,
-            FieldMask updateMask,
-            CallSettings callSettings = null) => UpdateAppProfileAsync(
+            protowkt::FieldMask updateMask,
+            gaxgrpc::CallSettings callSettings = null) => UpdateAppProfileAsync(
                 new UpdateAppProfileRequest
                 {
-                    AppProfile = GaxPreconditions.CheckNotNull(appProfile, nameof(appProfile)),
-                    UpdateMask = GaxPreconditions.CheckNotNull(updateMask, nameof(updateMask)),
+                    AppProfile = gax::GaxPreconditions.CheckNotNull(appProfile, nameof(appProfile)),
+                    UpdateMask = gax::GaxPreconditions.CheckNotNull(updateMask, nameof(updateMask)),
                 },
                 callSettings);
 
@@ -2725,18 +2725,18 @@ namespace Google.Cloud.Bigtable.Admin.V2
         /// If unset, all fields will be replaced.
         /// </param>
         /// <param name="cancellationToken">
-        /// A <see cref="CancellationToken"/> to use for this RPC.
+        /// A <see cref="st::CancellationToken"/> to use for this RPC.
         /// </param>
         /// <returns>
         /// A Task containing the RPC response.
         /// </returns>
-        public virtual Task<Operation<AppProfile, UpdateAppProfileMetadata>> UpdateAppProfileAsync(
+        public virtual stt::Task<lro::Operation<AppProfile, UpdateAppProfileMetadata>> UpdateAppProfileAsync(
             AppProfile appProfile,
-            FieldMask updateMask,
-            CancellationToken cancellationToken) => UpdateAppProfileAsync(
+            protowkt::FieldMask updateMask,
+            st::CancellationToken cancellationToken) => UpdateAppProfileAsync(
                 appProfile,
                 updateMask,
-                CallSettings.FromCancellationToken(cancellationToken));
+                gaxgrpc::CallSettings.FromCancellationToken(cancellationToken));
 
         /// <summary>
         /// This is a private alpha release of Cloud Bigtable replication. This feature
@@ -2759,14 +2759,14 @@ namespace Google.Cloud.Bigtable.Admin.V2
         /// <returns>
         /// The RPC response.
         /// </returns>
-        public virtual Operation<AppProfile, UpdateAppProfileMetadata> UpdateAppProfile(
+        public virtual lro::Operation<AppProfile, UpdateAppProfileMetadata> UpdateAppProfile(
             AppProfile appProfile,
-            FieldMask updateMask,
-            CallSettings callSettings = null) => UpdateAppProfile(
+            protowkt::FieldMask updateMask,
+            gaxgrpc::CallSettings callSettings = null) => UpdateAppProfile(
                 new UpdateAppProfileRequest
                 {
-                    AppProfile = GaxPreconditions.CheckNotNull(appProfile, nameof(appProfile)),
-                    UpdateMask = GaxPreconditions.CheckNotNull(updateMask, nameof(updateMask)),
+                    AppProfile = gax::GaxPreconditions.CheckNotNull(appProfile, nameof(appProfile)),
+                    UpdateMask = gax::GaxPreconditions.CheckNotNull(updateMask, nameof(updateMask)),
                 },
                 callSettings);
 
@@ -2787,11 +2787,11 @@ namespace Google.Cloud.Bigtable.Admin.V2
         /// <returns>
         /// A Task containing the RPC response.
         /// </returns>
-        public virtual Task<Operation<AppProfile, UpdateAppProfileMetadata>> UpdateAppProfileAsync(
+        public virtual stt::Task<lro::Operation<AppProfile, UpdateAppProfileMetadata>> UpdateAppProfileAsync(
             UpdateAppProfileRequest request,
-            CallSettings callSettings = null)
+            gaxgrpc::CallSettings callSettings = null)
         {
-            throw new NotImplementedException();
+            throw new s::NotImplementedException();
         }
 
         /// <summary>
@@ -2800,10 +2800,10 @@ namespace Google.Cloud.Bigtable.Admin.V2
         /// <param name="operationName">The name of a previously invoked operation. Must not be <c>null</c> or empty.</param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
         /// <returns>A task representing the result of polling the operation.</returns>
-        public virtual Task<Operation<AppProfile, UpdateAppProfileMetadata>> PollOnceUpdateAppProfileAsync(
+        public virtual stt::Task<lro::Operation<AppProfile, UpdateAppProfileMetadata>> PollOnceUpdateAppProfileAsync(
             string operationName,
-            CallSettings callSettings = null) => Operation<AppProfile, UpdateAppProfileMetadata>.PollOnceFromNameAsync(
-                GaxPreconditions.CheckNotNullOrEmpty(operationName, nameof(operationName)),
+            gaxgrpc::CallSettings callSettings = null) => lro::Operation<AppProfile, UpdateAppProfileMetadata>.PollOnceFromNameAsync(
+                gax::GaxPreconditions.CheckNotNullOrEmpty(operationName, nameof(operationName)),
                 UpdateAppProfileOperationsClient,
                 callSettings);
 
@@ -2824,19 +2824,19 @@ namespace Google.Cloud.Bigtable.Admin.V2
         /// <returns>
         /// The RPC response.
         /// </returns>
-        public virtual Operation<AppProfile, UpdateAppProfileMetadata> UpdateAppProfile(
+        public virtual lro::Operation<AppProfile, UpdateAppProfileMetadata> UpdateAppProfile(
             UpdateAppProfileRequest request,
-            CallSettings callSettings = null)
+            gaxgrpc::CallSettings callSettings = null)
         {
-            throw new NotImplementedException();
+            throw new s::NotImplementedException();
         }
 
         /// <summary>
         /// The long-running operations client for <c>UpdateAppProfile</c>.
         /// </summary>
-        public virtual OperationsClient UpdateAppProfileOperationsClient
+        public virtual lro::OperationsClient UpdateAppProfileOperationsClient
         {
-            get { throw new NotImplementedException(); }
+            get { throw new s::NotImplementedException(); }
         }
 
         /// <summary>
@@ -2845,10 +2845,10 @@ namespace Google.Cloud.Bigtable.Admin.V2
         /// <param name="operationName">The name of a previously invoked operation. Must not be <c>null</c> or empty.</param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
         /// <returns>The result of polling the operation.</returns>
-        public virtual Operation<AppProfile, UpdateAppProfileMetadata> PollOnceUpdateAppProfile(
+        public virtual lro::Operation<AppProfile, UpdateAppProfileMetadata> PollOnceUpdateAppProfile(
             string operationName,
-            CallSettings callSettings = null) => Operation<AppProfile, UpdateAppProfileMetadata>.PollOnceFromName(
-                GaxPreconditions.CheckNotNullOrEmpty(operationName, nameof(operationName)),
+            gaxgrpc::CallSettings callSettings = null) => lro::Operation<AppProfile, UpdateAppProfileMetadata>.PollOnceFromName(
+                gax::GaxPreconditions.CheckNotNullOrEmpty(operationName, nameof(operationName)),
                 UpdateAppProfileOperationsClient,
                 callSettings);
 
@@ -2870,12 +2870,12 @@ namespace Google.Cloud.Bigtable.Admin.V2
         /// <returns>
         /// A Task that completes when the RPC has completed.
         /// </returns>
-        public virtual Task DeleteAppProfileAsync(
+        public virtual stt::Task DeleteAppProfileAsync(
             AppProfileName name,
-            CallSettings callSettings = null) => DeleteAppProfileAsync(
+            gaxgrpc::CallSettings callSettings = null) => DeleteAppProfileAsync(
                 new DeleteAppProfileRequest
                 {
-                    AppProfileName = GaxPreconditions.CheckNotNull(name, nameof(name)),
+                    AppProfileName = gax::GaxPreconditions.CheckNotNull(name, nameof(name)),
                 },
                 callSettings);
 
@@ -2892,16 +2892,16 @@ namespace Google.Cloud.Bigtable.Admin.V2
         /// `projects/&lt;project&gt;/instances/&lt;instance&gt;/appProfiles/&lt;app_profile&gt;`.
         /// </param>
         /// <param name="cancellationToken">
-        /// A <see cref="CancellationToken"/> to use for this RPC.
+        /// A <see cref="st::CancellationToken"/> to use for this RPC.
         /// </param>
         /// <returns>
         /// A Task that completes when the RPC has completed.
         /// </returns>
-        public virtual Task DeleteAppProfileAsync(
+        public virtual stt::Task DeleteAppProfileAsync(
             AppProfileName name,
-            CancellationToken cancellationToken) => DeleteAppProfileAsync(
+            st::CancellationToken cancellationToken) => DeleteAppProfileAsync(
                 name,
-                CallSettings.FromCancellationToken(cancellationToken));
+                gaxgrpc::CallSettings.FromCancellationToken(cancellationToken));
 
         /// <summary>
         /// This is a private alpha release of Cloud Bigtable replication. This feature
@@ -2920,10 +2920,10 @@ namespace Google.Cloud.Bigtable.Admin.V2
         /// </param>
         public virtual void DeleteAppProfile(
             AppProfileName name,
-            CallSettings callSettings = null) => DeleteAppProfile(
+            gaxgrpc::CallSettings callSettings = null) => DeleteAppProfile(
                 new DeleteAppProfileRequest
                 {
-                    AppProfileName = GaxPreconditions.CheckNotNull(name, nameof(name)),
+                    AppProfileName = gax::GaxPreconditions.CheckNotNull(name, nameof(name)),
                 },
                 callSettings);
 
@@ -2944,11 +2944,11 @@ namespace Google.Cloud.Bigtable.Admin.V2
         /// <returns>
         /// A Task that completes when the RPC has completed.
         /// </returns>
-        public virtual Task DeleteAppProfileAsync(
+        public virtual stt::Task DeleteAppProfileAsync(
             DeleteAppProfileRequest request,
-            CallSettings callSettings = null)
+            gaxgrpc::CallSettings callSettings = null)
         {
-            throw new NotImplementedException();
+            throw new s::NotImplementedException();
         }
 
         /// <summary>
@@ -2963,16 +2963,16 @@ namespace Google.Cloud.Bigtable.Admin.V2
         /// The request object containing all of the parameters for the API call.
         /// </param>
         /// <param name="cancellationToken">
-        /// A <see cref="CancellationToken"/> to use for this RPC.
+        /// A <see cref="st::CancellationToken"/> to use for this RPC.
         /// </param>
         /// <returns>
         /// A Task that completes when the RPC has completed.
         /// </returns>
-        public virtual Task DeleteAppProfileAsync(
+        public virtual stt::Task DeleteAppProfileAsync(
             DeleteAppProfileRequest request,
-            CancellationToken cancellationToken) => DeleteAppProfileAsync(
+            st::CancellationToken cancellationToken) => DeleteAppProfileAsync(
                 request,
-                CallSettings.FromCancellationToken(cancellationToken));
+                gaxgrpc::CallSettings.FromCancellationToken(cancellationToken));
 
         /// <summary>
         /// This is a private alpha release of Cloud Bigtable replication. This feature
@@ -2990,9 +2990,9 @@ namespace Google.Cloud.Bigtable.Admin.V2
         /// </param>
         public virtual void DeleteAppProfile(
             DeleteAppProfileRequest request,
-            CallSettings callSettings = null)
+            gaxgrpc::CallSettings callSettings = null)
         {
-            throw new NotImplementedException();
+            throw new s::NotImplementedException();
         }
 
         /// <summary>
@@ -3016,12 +3016,12 @@ namespace Google.Cloud.Bigtable.Admin.V2
         /// <returns>
         /// A Task containing the RPC response.
         /// </returns>
-        public virtual Task<Policy> GetIamPolicyAsync(
+        public virtual stt::Task<iam::Policy> GetIamPolicyAsync(
             string resource,
-            CallSettings callSettings = null) => GetIamPolicyAsync(
-                new GetIamPolicyRequest
+            gaxgrpc::CallSettings callSettings = null) => GetIamPolicyAsync(
+                new iam::GetIamPolicyRequest
                 {
-                    Resource = GaxPreconditions.CheckNotNullOrEmpty(resource, nameof(resource)),
+                    Resource = gax::GaxPreconditions.CheckNotNullOrEmpty(resource, nameof(resource)),
                 },
                 callSettings);
 
@@ -3041,16 +3041,16 @@ namespace Google.Cloud.Bigtable.Admin.V2
         /// resource is specified as `projects/{project}`.
         /// </param>
         /// <param name="cancellationToken">
-        /// A <see cref="CancellationToken"/> to use for this RPC.
+        /// A <see cref="st::CancellationToken"/> to use for this RPC.
         /// </param>
         /// <returns>
         /// A Task containing the RPC response.
         /// </returns>
-        public virtual Task<Policy> GetIamPolicyAsync(
+        public virtual stt::Task<iam::Policy> GetIamPolicyAsync(
             string resource,
-            CancellationToken cancellationToken) => GetIamPolicyAsync(
+            st::CancellationToken cancellationToken) => GetIamPolicyAsync(
                 resource,
-                CallSettings.FromCancellationToken(cancellationToken));
+                gaxgrpc::CallSettings.FromCancellationToken(cancellationToken));
 
         /// <summary>
         /// This is a private alpha release of Cloud Bigtable instance level
@@ -3073,12 +3073,12 @@ namespace Google.Cloud.Bigtable.Admin.V2
         /// <returns>
         /// The RPC response.
         /// </returns>
-        public virtual Policy GetIamPolicy(
+        public virtual iam::Policy GetIamPolicy(
             string resource,
-            CallSettings callSettings = null) => GetIamPolicy(
-                new GetIamPolicyRequest
+            gaxgrpc::CallSettings callSettings = null) => GetIamPolicy(
+                new iam::GetIamPolicyRequest
                 {
-                    Resource = GaxPreconditions.CheckNotNullOrEmpty(resource, nameof(resource)),
+                    Resource = gax::GaxPreconditions.CheckNotNullOrEmpty(resource, nameof(resource)),
                 },
                 callSettings);
 
@@ -3101,11 +3101,11 @@ namespace Google.Cloud.Bigtable.Admin.V2
         /// <returns>
         /// A Task containing the RPC response.
         /// </returns>
-        public virtual Task<Policy> GetIamPolicyAsync(
-            GetIamPolicyRequest request,
-            CallSettings callSettings = null)
+        public virtual stt::Task<iam::Policy> GetIamPolicyAsync(
+            iam::GetIamPolicyRequest request,
+            gaxgrpc::CallSettings callSettings = null)
         {
-            throw new NotImplementedException();
+            throw new s::NotImplementedException();
         }
 
         /// <summary>
@@ -3122,16 +3122,16 @@ namespace Google.Cloud.Bigtable.Admin.V2
         /// The request object containing all of the parameters for the API call.
         /// </param>
         /// <param name="cancellationToken">
-        /// A <see cref="CancellationToken"/> to use for this RPC.
+        /// A <see cref="st::CancellationToken"/> to use for this RPC.
         /// </param>
         /// <returns>
         /// A Task containing the RPC response.
         /// </returns>
-        public virtual Task<Policy> GetIamPolicyAsync(
-            GetIamPolicyRequest request,
-            CancellationToken cancellationToken) => GetIamPolicyAsync(
+        public virtual stt::Task<iam::Policy> GetIamPolicyAsync(
+            iam::GetIamPolicyRequest request,
+            st::CancellationToken cancellationToken) => GetIamPolicyAsync(
                 request,
-                CallSettings.FromCancellationToken(cancellationToken));
+                gaxgrpc::CallSettings.FromCancellationToken(cancellationToken));
 
         /// <summary>
         /// This is a private alpha release of Cloud Bigtable instance level
@@ -3152,11 +3152,11 @@ namespace Google.Cloud.Bigtable.Admin.V2
         /// <returns>
         /// The RPC response.
         /// </returns>
-        public virtual Policy GetIamPolicy(
-            GetIamPolicyRequest request,
-            CallSettings callSettings = null)
+        public virtual iam::Policy GetIamPolicy(
+            iam::GetIamPolicyRequest request,
+            gaxgrpc::CallSettings callSettings = null)
         {
-            throw new NotImplementedException();
+            throw new s::NotImplementedException();
         }
 
         /// <summary>
@@ -3186,14 +3186,14 @@ namespace Google.Cloud.Bigtable.Admin.V2
         /// <returns>
         /// A Task containing the RPC response.
         /// </returns>
-        public virtual Task<Policy> SetIamPolicyAsync(
+        public virtual stt::Task<iam::Policy> SetIamPolicyAsync(
             string resource,
-            Policy policy,
-            CallSettings callSettings = null) => SetIamPolicyAsync(
-                new SetIamPolicyRequest
+            iam::Policy policy,
+            gaxgrpc::CallSettings callSettings = null) => SetIamPolicyAsync(
+                new iam::SetIamPolicyRequest
                 {
-                    Resource = GaxPreconditions.CheckNotNullOrEmpty(resource, nameof(resource)),
-                    Policy = GaxPreconditions.CheckNotNull(policy, nameof(policy)),
+                    Resource = gax::GaxPreconditions.CheckNotNullOrEmpty(resource, nameof(resource)),
+                    Policy = gax::GaxPreconditions.CheckNotNull(policy, nameof(policy)),
                 },
                 callSettings);
 
@@ -3219,18 +3219,18 @@ namespace Google.Cloud.Bigtable.Admin.V2
         /// might reject them.
         /// </param>
         /// <param name="cancellationToken">
-        /// A <see cref="CancellationToken"/> to use for this RPC.
+        /// A <see cref="st::CancellationToken"/> to use for this RPC.
         /// </param>
         /// <returns>
         /// A Task containing the RPC response.
         /// </returns>
-        public virtual Task<Policy> SetIamPolicyAsync(
+        public virtual stt::Task<iam::Policy> SetIamPolicyAsync(
             string resource,
-            Policy policy,
-            CancellationToken cancellationToken) => SetIamPolicyAsync(
+            iam::Policy policy,
+            st::CancellationToken cancellationToken) => SetIamPolicyAsync(
                 resource,
                 policy,
-                CallSettings.FromCancellationToken(cancellationToken));
+                gaxgrpc::CallSettings.FromCancellationToken(cancellationToken));
 
         /// <summary>
         /// This is a private alpha release of Cloud Bigtable instance level
@@ -3259,14 +3259,14 @@ namespace Google.Cloud.Bigtable.Admin.V2
         /// <returns>
         /// The RPC response.
         /// </returns>
-        public virtual Policy SetIamPolicy(
+        public virtual iam::Policy SetIamPolicy(
             string resource,
-            Policy policy,
-            CallSettings callSettings = null) => SetIamPolicy(
-                new SetIamPolicyRequest
+            iam::Policy policy,
+            gaxgrpc::CallSettings callSettings = null) => SetIamPolicy(
+                new iam::SetIamPolicyRequest
                 {
-                    Resource = GaxPreconditions.CheckNotNullOrEmpty(resource, nameof(resource)),
-                    Policy = GaxPreconditions.CheckNotNull(policy, nameof(policy)),
+                    Resource = gax::GaxPreconditions.CheckNotNullOrEmpty(resource, nameof(resource)),
+                    Policy = gax::GaxPreconditions.CheckNotNull(policy, nameof(policy)),
                 },
                 callSettings);
 
@@ -3289,11 +3289,11 @@ namespace Google.Cloud.Bigtable.Admin.V2
         /// <returns>
         /// A Task containing the RPC response.
         /// </returns>
-        public virtual Task<Policy> SetIamPolicyAsync(
-            SetIamPolicyRequest request,
-            CallSettings callSettings = null)
+        public virtual stt::Task<iam::Policy> SetIamPolicyAsync(
+            iam::SetIamPolicyRequest request,
+            gaxgrpc::CallSettings callSettings = null)
         {
-            throw new NotImplementedException();
+            throw new s::NotImplementedException();
         }
 
         /// <summary>
@@ -3310,16 +3310,16 @@ namespace Google.Cloud.Bigtable.Admin.V2
         /// The request object containing all of the parameters for the API call.
         /// </param>
         /// <param name="cancellationToken">
-        /// A <see cref="CancellationToken"/> to use for this RPC.
+        /// A <see cref="st::CancellationToken"/> to use for this RPC.
         /// </param>
         /// <returns>
         /// A Task containing the RPC response.
         /// </returns>
-        public virtual Task<Policy> SetIamPolicyAsync(
-            SetIamPolicyRequest request,
-            CancellationToken cancellationToken) => SetIamPolicyAsync(
+        public virtual stt::Task<iam::Policy> SetIamPolicyAsync(
+            iam::SetIamPolicyRequest request,
+            st::CancellationToken cancellationToken) => SetIamPolicyAsync(
                 request,
-                CallSettings.FromCancellationToken(cancellationToken));
+                gaxgrpc::CallSettings.FromCancellationToken(cancellationToken));
 
         /// <summary>
         /// This is a private alpha release of Cloud Bigtable instance level
@@ -3340,11 +3340,11 @@ namespace Google.Cloud.Bigtable.Admin.V2
         /// <returns>
         /// The RPC response.
         /// </returns>
-        public virtual Policy SetIamPolicy(
-            SetIamPolicyRequest request,
-            CallSettings callSettings = null)
+        public virtual iam::Policy SetIamPolicy(
+            iam::SetIamPolicyRequest request,
+            gaxgrpc::CallSettings callSettings = null)
         {
-            throw new NotImplementedException();
+            throw new s::NotImplementedException();
         }
 
         /// <summary>
@@ -3373,14 +3373,14 @@ namespace Google.Cloud.Bigtable.Admin.V2
         /// <returns>
         /// A Task containing the RPC response.
         /// </returns>
-        public virtual Task<TestIamPermissionsResponse> TestIamPermissionsAsync(
+        public virtual stt::Task<iam::TestIamPermissionsResponse> TestIamPermissionsAsync(
             string resource,
-            IEnumerable<string> permissions,
-            CallSettings callSettings = null) => TestIamPermissionsAsync(
-                new TestIamPermissionsRequest
+            scg::IEnumerable<string> permissions,
+            gaxgrpc::CallSettings callSettings = null) => TestIamPermissionsAsync(
+                new iam::TestIamPermissionsRequest
                 {
-                    Resource = GaxPreconditions.CheckNotNullOrEmpty(resource, nameof(resource)),
-                    Permissions = { GaxPreconditions.CheckNotNull(permissions, nameof(permissions)) },
+                    Resource = gax::GaxPreconditions.CheckNotNullOrEmpty(resource, nameof(resource)),
+                    Permissions = { gax::GaxPreconditions.CheckNotNull(permissions, nameof(permissions)) },
                 },
                 callSettings);
 
@@ -3405,18 +3405,18 @@ namespace Google.Cloud.Bigtable.Admin.V2
         /// [IAM Overview](https://cloud.google.com/iam/docs/overview#permissions).
         /// </param>
         /// <param name="cancellationToken">
-        /// A <see cref="CancellationToken"/> to use for this RPC.
+        /// A <see cref="st::CancellationToken"/> to use for this RPC.
         /// </param>
         /// <returns>
         /// A Task containing the RPC response.
         /// </returns>
-        public virtual Task<TestIamPermissionsResponse> TestIamPermissionsAsync(
+        public virtual stt::Task<iam::TestIamPermissionsResponse> TestIamPermissionsAsync(
             string resource,
-            IEnumerable<string> permissions,
-            CancellationToken cancellationToken) => TestIamPermissionsAsync(
+            scg::IEnumerable<string> permissions,
+            st::CancellationToken cancellationToken) => TestIamPermissionsAsync(
                 resource,
                 permissions,
-                CallSettings.FromCancellationToken(cancellationToken));
+                gaxgrpc::CallSettings.FromCancellationToken(cancellationToken));
 
         /// <summary>
         /// This is a private alpha release of Cloud Bigtable instance level
@@ -3444,14 +3444,14 @@ namespace Google.Cloud.Bigtable.Admin.V2
         /// <returns>
         /// The RPC response.
         /// </returns>
-        public virtual TestIamPermissionsResponse TestIamPermissions(
+        public virtual iam::TestIamPermissionsResponse TestIamPermissions(
             string resource,
-            IEnumerable<string> permissions,
-            CallSettings callSettings = null) => TestIamPermissions(
-                new TestIamPermissionsRequest
+            scg::IEnumerable<string> permissions,
+            gaxgrpc::CallSettings callSettings = null) => TestIamPermissions(
+                new iam::TestIamPermissionsRequest
                 {
-                    Resource = GaxPreconditions.CheckNotNullOrEmpty(resource, nameof(resource)),
-                    Permissions = { GaxPreconditions.CheckNotNull(permissions, nameof(permissions)) },
+                    Resource = gax::GaxPreconditions.CheckNotNullOrEmpty(resource, nameof(resource)),
+                    Permissions = { gax::GaxPreconditions.CheckNotNull(permissions, nameof(permissions)) },
                 },
                 callSettings);
 
@@ -3473,11 +3473,11 @@ namespace Google.Cloud.Bigtable.Admin.V2
         /// <returns>
         /// A Task containing the RPC response.
         /// </returns>
-        public virtual Task<TestIamPermissionsResponse> TestIamPermissionsAsync(
-            TestIamPermissionsRequest request,
-            CallSettings callSettings = null)
+        public virtual stt::Task<iam::TestIamPermissionsResponse> TestIamPermissionsAsync(
+            iam::TestIamPermissionsRequest request,
+            gaxgrpc::CallSettings callSettings = null)
         {
-            throw new NotImplementedException();
+            throw new s::NotImplementedException();
         }
 
         /// <summary>
@@ -3493,16 +3493,16 @@ namespace Google.Cloud.Bigtable.Admin.V2
         /// The request object containing all of the parameters for the API call.
         /// </param>
         /// <param name="cancellationToken">
-        /// A <see cref="CancellationToken"/> to use for this RPC.
+        /// A <see cref="st::CancellationToken"/> to use for this RPC.
         /// </param>
         /// <returns>
         /// A Task containing the RPC response.
         /// </returns>
-        public virtual Task<TestIamPermissionsResponse> TestIamPermissionsAsync(
-            TestIamPermissionsRequest request,
-            CancellationToken cancellationToken) => TestIamPermissionsAsync(
+        public virtual stt::Task<iam::TestIamPermissionsResponse> TestIamPermissionsAsync(
+            iam::TestIamPermissionsRequest request,
+            st::CancellationToken cancellationToken) => TestIamPermissionsAsync(
                 request,
-                CallSettings.FromCancellationToken(cancellationToken));
+                gaxgrpc::CallSettings.FromCancellationToken(cancellationToken));
 
         /// <summary>
         /// This is a private alpha release of Cloud Bigtable instance level
@@ -3522,11 +3522,11 @@ namespace Google.Cloud.Bigtable.Admin.V2
         /// <returns>
         /// The RPC response.
         /// </returns>
-        public virtual TestIamPermissionsResponse TestIamPermissions(
-            TestIamPermissionsRequest request,
-            CallSettings callSettings = null)
+        public virtual iam::TestIamPermissionsResponse TestIamPermissions(
+            iam::TestIamPermissionsRequest request,
+            gaxgrpc::CallSettings callSettings = null)
         {
-            throw new NotImplementedException();
+            throw new s::NotImplementedException();
         }
 
     }
@@ -3536,24 +3536,24 @@ namespace Google.Cloud.Bigtable.Admin.V2
     /// </summary>
     public sealed partial class BigtableInstanceAdminClientImpl : BigtableInstanceAdminClient
     {
-        private readonly ApiCall<CreateInstanceRequest, Operation> _callCreateInstance;
-        private readonly ApiCall<GetInstanceRequest, Instance> _callGetInstance;
-        private readonly ApiCall<ListInstancesRequest, ListInstancesResponse> _callListInstances;
-        private readonly ApiCall<PartialUpdateInstanceRequest, Operation> _callPartialUpdateInstance;
-        private readonly ApiCall<DeleteInstanceRequest, Empty> _callDeleteInstance;
-        private readonly ApiCall<CreateClusterRequest, Operation> _callCreateCluster;
-        private readonly ApiCall<GetClusterRequest, Cluster> _callGetCluster;
-        private readonly ApiCall<ListClustersRequest, ListClustersResponse> _callListClusters;
-        private readonly ApiCall<Cluster, Operation> _callUpdateCluster;
-        private readonly ApiCall<DeleteClusterRequest, Empty> _callDeleteCluster;
-        private readonly ApiCall<CreateAppProfileRequest, AppProfile> _callCreateAppProfile;
-        private readonly ApiCall<GetAppProfileRequest, AppProfile> _callGetAppProfile;
-        private readonly ApiCall<ListAppProfilesRequest, ListAppProfilesResponse> _callListAppProfiles;
-        private readonly ApiCall<UpdateAppProfileRequest, Operation> _callUpdateAppProfile;
-        private readonly ApiCall<DeleteAppProfileRequest, Empty> _callDeleteAppProfile;
-        private readonly ApiCall<GetIamPolicyRequest, Policy> _callGetIamPolicy;
-        private readonly ApiCall<SetIamPolicyRequest, Policy> _callSetIamPolicy;
-        private readonly ApiCall<TestIamPermissionsRequest, TestIamPermissionsResponse> _callTestIamPermissions;
+        private readonly gaxgrpc::ApiCall<CreateInstanceRequest, lro::Operation> _callCreateInstance;
+        private readonly gaxgrpc::ApiCall<GetInstanceRequest, Instance> _callGetInstance;
+        private readonly gaxgrpc::ApiCall<ListInstancesRequest, ListInstancesResponse> _callListInstances;
+        private readonly gaxgrpc::ApiCall<PartialUpdateInstanceRequest, lro::Operation> _callPartialUpdateInstance;
+        private readonly gaxgrpc::ApiCall<DeleteInstanceRequest, protowkt::Empty> _callDeleteInstance;
+        private readonly gaxgrpc::ApiCall<CreateClusterRequest, lro::Operation> _callCreateCluster;
+        private readonly gaxgrpc::ApiCall<GetClusterRequest, Cluster> _callGetCluster;
+        private readonly gaxgrpc::ApiCall<ListClustersRequest, ListClustersResponse> _callListClusters;
+        private readonly gaxgrpc::ApiCall<Cluster, lro::Operation> _callUpdateCluster;
+        private readonly gaxgrpc::ApiCall<DeleteClusterRequest, protowkt::Empty> _callDeleteCluster;
+        private readonly gaxgrpc::ApiCall<CreateAppProfileRequest, AppProfile> _callCreateAppProfile;
+        private readonly gaxgrpc::ApiCall<GetAppProfileRequest, AppProfile> _callGetAppProfile;
+        private readonly gaxgrpc::ApiCall<ListAppProfilesRequest, ListAppProfilesResponse> _callListAppProfiles;
+        private readonly gaxgrpc::ApiCall<UpdateAppProfileRequest, lro::Operation> _callUpdateAppProfile;
+        private readonly gaxgrpc::ApiCall<DeleteAppProfileRequest, protowkt::Empty> _callDeleteAppProfile;
+        private readonly gaxgrpc::ApiCall<iam::GetIamPolicyRequest, iam::Policy> _callGetIamPolicy;
+        private readonly gaxgrpc::ApiCall<iam::SetIamPolicyRequest, iam::Policy> _callSetIamPolicy;
+        private readonly gaxgrpc::ApiCall<iam::TestIamPermissionsRequest, iam::TestIamPermissionsResponse> _callTestIamPermissions;
 
         /// <summary>
         /// Constructs a client wrapper for the BigtableInstanceAdmin service, with the specified gRPC client and settings.
@@ -3564,71 +3564,71 @@ namespace Google.Cloud.Bigtable.Admin.V2
         {
             GrpcClient = grpcClient;
             BigtableInstanceAdminSettings effectiveSettings = settings ?? BigtableInstanceAdminSettings.GetDefault();
-            ClientHelper clientHelper = new ClientHelper(effectiveSettings);
-            CreateInstanceOperationsClient = new OperationsClientImpl(
+            gaxgrpc::ClientHelper clientHelper = new gaxgrpc::ClientHelper(effectiveSettings);
+            CreateInstanceOperationsClient = new lro::OperationsClientImpl(
                 grpcClient.CreateOperationsClient(), effectiveSettings.CreateInstanceOperationsSettings);
-            PartialUpdateInstanceOperationsClient = new OperationsClientImpl(
+            PartialUpdateInstanceOperationsClient = new lro::OperationsClientImpl(
                 grpcClient.CreateOperationsClient(), effectiveSettings.PartialUpdateInstanceOperationsSettings);
-            CreateClusterOperationsClient = new OperationsClientImpl(
+            CreateClusterOperationsClient = new lro::OperationsClientImpl(
                 grpcClient.CreateOperationsClient(), effectiveSettings.CreateClusterOperationsSettings);
-            UpdateClusterOperationsClient = new OperationsClientImpl(
+            UpdateClusterOperationsClient = new lro::OperationsClientImpl(
                 grpcClient.CreateOperationsClient(), effectiveSettings.UpdateClusterOperationsSettings);
-            UpdateAppProfileOperationsClient = new OperationsClientImpl(
+            UpdateAppProfileOperationsClient = new lro::OperationsClientImpl(
                 grpcClient.CreateOperationsClient(), effectiveSettings.UpdateAppProfileOperationsSettings);
-            _callCreateInstance = clientHelper.BuildApiCall<CreateInstanceRequest, Operation>(
+            _callCreateInstance = clientHelper.BuildApiCall<CreateInstanceRequest, lro::Operation>(
                 GrpcClient.CreateInstanceAsync, GrpcClient.CreateInstance, effectiveSettings.CreateInstanceSettings)
-                .WithCallSettingsOverlay(request => CallSettings.FromHeader("x-goog-request-params", $"parent={request.Parent}"));
+                .WithCallSettingsOverlay(request => gaxgrpc::CallSettings.FromHeader("x-goog-request-params", $"parent={request.Parent}"));
             _callGetInstance = clientHelper.BuildApiCall<GetInstanceRequest, Instance>(
                 GrpcClient.GetInstanceAsync, GrpcClient.GetInstance, effectiveSettings.GetInstanceSettings)
-                .WithCallSettingsOverlay(request => CallSettings.FromHeader("x-goog-request-params", $"name={request.Name}"));
+                .WithCallSettingsOverlay(request => gaxgrpc::CallSettings.FromHeader("x-goog-request-params", $"name={request.Name}"));
             _callListInstances = clientHelper.BuildApiCall<ListInstancesRequest, ListInstancesResponse>(
                 GrpcClient.ListInstancesAsync, GrpcClient.ListInstances, effectiveSettings.ListInstancesSettings)
-                .WithCallSettingsOverlay(request => CallSettings.FromHeader("x-goog-request-params", $"parent={request.Parent}"));
-            _callPartialUpdateInstance = clientHelper.BuildApiCall<PartialUpdateInstanceRequest, Operation>(
+                .WithCallSettingsOverlay(request => gaxgrpc::CallSettings.FromHeader("x-goog-request-params", $"parent={request.Parent}"));
+            _callPartialUpdateInstance = clientHelper.BuildApiCall<PartialUpdateInstanceRequest, lro::Operation>(
                 GrpcClient.PartialUpdateInstanceAsync, GrpcClient.PartialUpdateInstance, effectiveSettings.PartialUpdateInstanceSettings)
-                .WithCallSettingsOverlay(request => CallSettings.FromHeader("x-goog-request-params", $"instance.name={request.Instance.Name}"));
-            _callDeleteInstance = clientHelper.BuildApiCall<DeleteInstanceRequest, Empty>(
+                .WithCallSettingsOverlay(request => gaxgrpc::CallSettings.FromHeader("x-goog-request-params", $"instance.name={request.Instance.Name}"));
+            _callDeleteInstance = clientHelper.BuildApiCall<DeleteInstanceRequest, protowkt::Empty>(
                 GrpcClient.DeleteInstanceAsync, GrpcClient.DeleteInstance, effectiveSettings.DeleteInstanceSettings)
-                .WithCallSettingsOverlay(request => CallSettings.FromHeader("x-goog-request-params", $"name={request.Name}"));
-            _callCreateCluster = clientHelper.BuildApiCall<CreateClusterRequest, Operation>(
+                .WithCallSettingsOverlay(request => gaxgrpc::CallSettings.FromHeader("x-goog-request-params", $"name={request.Name}"));
+            _callCreateCluster = clientHelper.BuildApiCall<CreateClusterRequest, lro::Operation>(
                 GrpcClient.CreateClusterAsync, GrpcClient.CreateCluster, effectiveSettings.CreateClusterSettings)
-                .WithCallSettingsOverlay(request => CallSettings.FromHeader("x-goog-request-params", $"parent={request.Parent}"));
+                .WithCallSettingsOverlay(request => gaxgrpc::CallSettings.FromHeader("x-goog-request-params", $"parent={request.Parent}"));
             _callGetCluster = clientHelper.BuildApiCall<GetClusterRequest, Cluster>(
                 GrpcClient.GetClusterAsync, GrpcClient.GetCluster, effectiveSettings.GetClusterSettings)
-                .WithCallSettingsOverlay(request => CallSettings.FromHeader("x-goog-request-params", $"name={request.Name}"));
+                .WithCallSettingsOverlay(request => gaxgrpc::CallSettings.FromHeader("x-goog-request-params", $"name={request.Name}"));
             _callListClusters = clientHelper.BuildApiCall<ListClustersRequest, ListClustersResponse>(
                 GrpcClient.ListClustersAsync, GrpcClient.ListClusters, effectiveSettings.ListClustersSettings)
-                .WithCallSettingsOverlay(request => CallSettings.FromHeader("x-goog-request-params", $"parent={request.Parent}"));
-            _callUpdateCluster = clientHelper.BuildApiCall<Cluster, Operation>(
+                .WithCallSettingsOverlay(request => gaxgrpc::CallSettings.FromHeader("x-goog-request-params", $"parent={request.Parent}"));
+            _callUpdateCluster = clientHelper.BuildApiCall<Cluster, lro::Operation>(
                 GrpcClient.UpdateClusterAsync, GrpcClient.UpdateCluster, effectiveSettings.UpdateClusterSettings)
-                .WithCallSettingsOverlay(request => CallSettings.FromHeader("x-goog-request-params", $"name={request.Name}"));
-            _callDeleteCluster = clientHelper.BuildApiCall<DeleteClusterRequest, Empty>(
+                .WithCallSettingsOverlay(request => gaxgrpc::CallSettings.FromHeader("x-goog-request-params", $"name={request.Name}"));
+            _callDeleteCluster = clientHelper.BuildApiCall<DeleteClusterRequest, protowkt::Empty>(
                 GrpcClient.DeleteClusterAsync, GrpcClient.DeleteCluster, effectiveSettings.DeleteClusterSettings)
-                .WithCallSettingsOverlay(request => CallSettings.FromHeader("x-goog-request-params", $"name={request.Name}"));
+                .WithCallSettingsOverlay(request => gaxgrpc::CallSettings.FromHeader("x-goog-request-params", $"name={request.Name}"));
             _callCreateAppProfile = clientHelper.BuildApiCall<CreateAppProfileRequest, AppProfile>(
                 GrpcClient.CreateAppProfileAsync, GrpcClient.CreateAppProfile, effectiveSettings.CreateAppProfileSettings)
-                .WithCallSettingsOverlay(request => CallSettings.FromHeader("x-goog-request-params", $"parent={request.Parent}"));
+                .WithCallSettingsOverlay(request => gaxgrpc::CallSettings.FromHeader("x-goog-request-params", $"parent={request.Parent}"));
             _callGetAppProfile = clientHelper.BuildApiCall<GetAppProfileRequest, AppProfile>(
                 GrpcClient.GetAppProfileAsync, GrpcClient.GetAppProfile, effectiveSettings.GetAppProfileSettings)
-                .WithCallSettingsOverlay(request => CallSettings.FromHeader("x-goog-request-params", $"name={request.Name}"));
+                .WithCallSettingsOverlay(request => gaxgrpc::CallSettings.FromHeader("x-goog-request-params", $"name={request.Name}"));
             _callListAppProfiles = clientHelper.BuildApiCall<ListAppProfilesRequest, ListAppProfilesResponse>(
                 GrpcClient.ListAppProfilesAsync, GrpcClient.ListAppProfiles, effectiveSettings.ListAppProfilesSettings)
-                .WithCallSettingsOverlay(request => CallSettings.FromHeader("x-goog-request-params", $"parent={request.Parent}"));
-            _callUpdateAppProfile = clientHelper.BuildApiCall<UpdateAppProfileRequest, Operation>(
+                .WithCallSettingsOverlay(request => gaxgrpc::CallSettings.FromHeader("x-goog-request-params", $"parent={request.Parent}"));
+            _callUpdateAppProfile = clientHelper.BuildApiCall<UpdateAppProfileRequest, lro::Operation>(
                 GrpcClient.UpdateAppProfileAsync, GrpcClient.UpdateAppProfile, effectiveSettings.UpdateAppProfileSettings)
-                .WithCallSettingsOverlay(request => CallSettings.FromHeader("x-goog-request-params", $"app_profile.name={request.AppProfile.Name}"));
-            _callDeleteAppProfile = clientHelper.BuildApiCall<DeleteAppProfileRequest, Empty>(
+                .WithCallSettingsOverlay(request => gaxgrpc::CallSettings.FromHeader("x-goog-request-params", $"app_profile.name={request.AppProfile.Name}"));
+            _callDeleteAppProfile = clientHelper.BuildApiCall<DeleteAppProfileRequest, protowkt::Empty>(
                 GrpcClient.DeleteAppProfileAsync, GrpcClient.DeleteAppProfile, effectiveSettings.DeleteAppProfileSettings)
-                .WithCallSettingsOverlay(request => CallSettings.FromHeader("x-goog-request-params", $"name={request.Name}"));
-            _callGetIamPolicy = clientHelper.BuildApiCall<GetIamPolicyRequest, Policy>(
+                .WithCallSettingsOverlay(request => gaxgrpc::CallSettings.FromHeader("x-goog-request-params", $"name={request.Name}"));
+            _callGetIamPolicy = clientHelper.BuildApiCall<iam::GetIamPolicyRequest, iam::Policy>(
                 GrpcClient.GetIamPolicyAsync, GrpcClient.GetIamPolicy, effectiveSettings.GetIamPolicySettings)
-                .WithCallSettingsOverlay(request => CallSettings.FromHeader("x-goog-request-params", $"resource={request.Resource}"));
-            _callSetIamPolicy = clientHelper.BuildApiCall<SetIamPolicyRequest, Policy>(
+                .WithCallSettingsOverlay(request => gaxgrpc::CallSettings.FromHeader("x-goog-request-params", $"resource={request.Resource}"));
+            _callSetIamPolicy = clientHelper.BuildApiCall<iam::SetIamPolicyRequest, iam::Policy>(
                 GrpcClient.SetIamPolicyAsync, GrpcClient.SetIamPolicy, effectiveSettings.SetIamPolicySettings)
-                .WithCallSettingsOverlay(request => CallSettings.FromHeader("x-goog-request-params", $"resource={request.Resource}"));
-            _callTestIamPermissions = clientHelper.BuildApiCall<TestIamPermissionsRequest, TestIamPermissionsResponse>(
+                .WithCallSettingsOverlay(request => gaxgrpc::CallSettings.FromHeader("x-goog-request-params", $"resource={request.Resource}"));
+            _callTestIamPermissions = clientHelper.BuildApiCall<iam::TestIamPermissionsRequest, iam::TestIamPermissionsResponse>(
                 GrpcClient.TestIamPermissionsAsync, GrpcClient.TestIamPermissions, effectiveSettings.TestIamPermissionsSettings)
-                .WithCallSettingsOverlay(request => CallSettings.FromHeader("x-goog-request-params", $"resource={request.Resource}"));
+                .WithCallSettingsOverlay(request => gaxgrpc::CallSettings.FromHeader("x-goog-request-params", $"resource={request.Resource}"));
             Modify_ApiCall(ref _callCreateInstance);
             Modify_CreateInstanceApiCall(ref _callCreateInstance);
             Modify_ApiCall(ref _callGetInstance);
@@ -3672,31 +3672,31 @@ namespace Google.Cloud.Bigtable.Admin.V2
 
         // Partial methods called for every ApiCall on construction.
         // Allows modification of all the underlying ApiCall objects.
-        partial void Modify_ApiCall<TRequest, TResponse>(ref ApiCall<TRequest, TResponse> call)
-            where TRequest : class, IMessage<TRequest>
-            where TResponse : class, IMessage<TResponse>;
+        partial void Modify_ApiCall<TRequest, TResponse>(ref gaxgrpc::ApiCall<TRequest, TResponse> call)
+            where TRequest : class, proto::IMessage<TRequest>
+            where TResponse : class, proto::IMessage<TResponse>;
 
         // Partial methods called for each ApiCall on construction.
         // Allows per-RPC-method modification of the underlying ApiCall object.
-        partial void Modify_CreateInstanceApiCall(ref ApiCall<CreateInstanceRequest, Operation> call);
-        partial void Modify_GetInstanceApiCall(ref ApiCall<GetInstanceRequest, Instance> call);
-        partial void Modify_ListInstancesApiCall(ref ApiCall<ListInstancesRequest, ListInstancesResponse> call);
-        partial void Modify_PartialUpdateInstanceApiCall(ref ApiCall<PartialUpdateInstanceRequest, Operation> call);
-        partial void Modify_DeleteInstanceApiCall(ref ApiCall<DeleteInstanceRequest, Empty> call);
-        partial void Modify_CreateClusterApiCall(ref ApiCall<CreateClusterRequest, Operation> call);
-        partial void Modify_GetClusterApiCall(ref ApiCall<GetClusterRequest, Cluster> call);
-        partial void Modify_ListClustersApiCall(ref ApiCall<ListClustersRequest, ListClustersResponse> call);
-        partial void Modify_UpdateClusterApiCall(ref ApiCall<Cluster, Operation> call);
-        partial void Modify_DeleteClusterApiCall(ref ApiCall<DeleteClusterRequest, Empty> call);
-        partial void Modify_CreateAppProfileApiCall(ref ApiCall<CreateAppProfileRequest, AppProfile> call);
-        partial void Modify_GetAppProfileApiCall(ref ApiCall<GetAppProfileRequest, AppProfile> call);
-        partial void Modify_ListAppProfilesApiCall(ref ApiCall<ListAppProfilesRequest, ListAppProfilesResponse> call);
-        partial void Modify_UpdateAppProfileApiCall(ref ApiCall<UpdateAppProfileRequest, Operation> call);
-        partial void Modify_DeleteAppProfileApiCall(ref ApiCall<DeleteAppProfileRequest, Empty> call);
-        partial void Modify_GetIamPolicyApiCall(ref ApiCall<GetIamPolicyRequest, Policy> call);
-        partial void Modify_SetIamPolicyApiCall(ref ApiCall<SetIamPolicyRequest, Policy> call);
-        partial void Modify_TestIamPermissionsApiCall(ref ApiCall<TestIamPermissionsRequest, TestIamPermissionsResponse> call);
-        partial void OnConstruction(BigtableInstanceAdmin.BigtableInstanceAdminClient grpcClient, BigtableInstanceAdminSettings effectiveSettings, ClientHelper clientHelper);
+        partial void Modify_CreateInstanceApiCall(ref gaxgrpc::ApiCall<CreateInstanceRequest, lro::Operation> call);
+        partial void Modify_GetInstanceApiCall(ref gaxgrpc::ApiCall<GetInstanceRequest, Instance> call);
+        partial void Modify_ListInstancesApiCall(ref gaxgrpc::ApiCall<ListInstancesRequest, ListInstancesResponse> call);
+        partial void Modify_PartialUpdateInstanceApiCall(ref gaxgrpc::ApiCall<PartialUpdateInstanceRequest, lro::Operation> call);
+        partial void Modify_DeleteInstanceApiCall(ref gaxgrpc::ApiCall<DeleteInstanceRequest, protowkt::Empty> call);
+        partial void Modify_CreateClusterApiCall(ref gaxgrpc::ApiCall<CreateClusterRequest, lro::Operation> call);
+        partial void Modify_GetClusterApiCall(ref gaxgrpc::ApiCall<GetClusterRequest, Cluster> call);
+        partial void Modify_ListClustersApiCall(ref gaxgrpc::ApiCall<ListClustersRequest, ListClustersResponse> call);
+        partial void Modify_UpdateClusterApiCall(ref gaxgrpc::ApiCall<Cluster, lro::Operation> call);
+        partial void Modify_DeleteClusterApiCall(ref gaxgrpc::ApiCall<DeleteClusterRequest, protowkt::Empty> call);
+        partial void Modify_CreateAppProfileApiCall(ref gaxgrpc::ApiCall<CreateAppProfileRequest, AppProfile> call);
+        partial void Modify_GetAppProfileApiCall(ref gaxgrpc::ApiCall<GetAppProfileRequest, AppProfile> call);
+        partial void Modify_ListAppProfilesApiCall(ref gaxgrpc::ApiCall<ListAppProfilesRequest, ListAppProfilesResponse> call);
+        partial void Modify_UpdateAppProfileApiCall(ref gaxgrpc::ApiCall<UpdateAppProfileRequest, lro::Operation> call);
+        partial void Modify_DeleteAppProfileApiCall(ref gaxgrpc::ApiCall<DeleteAppProfileRequest, protowkt::Empty> call);
+        partial void Modify_GetIamPolicyApiCall(ref gaxgrpc::ApiCall<iam::GetIamPolicyRequest, iam::Policy> call);
+        partial void Modify_SetIamPolicyApiCall(ref gaxgrpc::ApiCall<iam::SetIamPolicyRequest, iam::Policy> call);
+        partial void Modify_TestIamPermissionsApiCall(ref gaxgrpc::ApiCall<iam::TestIamPermissionsRequest, iam::TestIamPermissionsResponse> call);
+        partial void OnConstruction(BigtableInstanceAdmin.BigtableInstanceAdminClient grpcClient, BigtableInstanceAdminSettings effectiveSettings, gaxgrpc::ClientHelper clientHelper);
 
         /// <summary>
         /// The underlying gRPC BigtableInstanceAdmin client.
@@ -3706,24 +3706,24 @@ namespace Google.Cloud.Bigtable.Admin.V2
         // Partial methods called on each request.
         // Allows per-RPC-call modification to the request and CallSettings objects,
         // before the underlying RPC is performed.
-        partial void Modify_CreateInstanceRequest(ref CreateInstanceRequest request, ref CallSettings settings);
-        partial void Modify_GetInstanceRequest(ref GetInstanceRequest request, ref CallSettings settings);
-        partial void Modify_ListInstancesRequest(ref ListInstancesRequest request, ref CallSettings settings);
-        partial void Modify_PartialUpdateInstanceRequest(ref PartialUpdateInstanceRequest request, ref CallSettings settings);
-        partial void Modify_DeleteInstanceRequest(ref DeleteInstanceRequest request, ref CallSettings settings);
-        partial void Modify_CreateClusterRequest(ref CreateClusterRequest request, ref CallSettings settings);
-        partial void Modify_GetClusterRequest(ref GetClusterRequest request, ref CallSettings settings);
-        partial void Modify_ListClustersRequest(ref ListClustersRequest request, ref CallSettings settings);
-        partial void Modify_Cluster(ref Cluster request, ref CallSettings settings);
-        partial void Modify_DeleteClusterRequest(ref DeleteClusterRequest request, ref CallSettings settings);
-        partial void Modify_CreateAppProfileRequest(ref CreateAppProfileRequest request, ref CallSettings settings);
-        partial void Modify_GetAppProfileRequest(ref GetAppProfileRequest request, ref CallSettings settings);
-        partial void Modify_ListAppProfilesRequest(ref ListAppProfilesRequest request, ref CallSettings settings);
-        partial void Modify_UpdateAppProfileRequest(ref UpdateAppProfileRequest request, ref CallSettings settings);
-        partial void Modify_DeleteAppProfileRequest(ref DeleteAppProfileRequest request, ref CallSettings settings);
-        partial void Modify_GetIamPolicyRequest(ref GetIamPolicyRequest request, ref CallSettings settings);
-        partial void Modify_SetIamPolicyRequest(ref SetIamPolicyRequest request, ref CallSettings settings);
-        partial void Modify_TestIamPermissionsRequest(ref TestIamPermissionsRequest request, ref CallSettings settings);
+        partial void Modify_CreateInstanceRequest(ref CreateInstanceRequest request, ref gaxgrpc::CallSettings settings);
+        partial void Modify_GetInstanceRequest(ref GetInstanceRequest request, ref gaxgrpc::CallSettings settings);
+        partial void Modify_ListInstancesRequest(ref ListInstancesRequest request, ref gaxgrpc::CallSettings settings);
+        partial void Modify_PartialUpdateInstanceRequest(ref PartialUpdateInstanceRequest request, ref gaxgrpc::CallSettings settings);
+        partial void Modify_DeleteInstanceRequest(ref DeleteInstanceRequest request, ref gaxgrpc::CallSettings settings);
+        partial void Modify_CreateClusterRequest(ref CreateClusterRequest request, ref gaxgrpc::CallSettings settings);
+        partial void Modify_GetClusterRequest(ref GetClusterRequest request, ref gaxgrpc::CallSettings settings);
+        partial void Modify_ListClustersRequest(ref ListClustersRequest request, ref gaxgrpc::CallSettings settings);
+        partial void Modify_Cluster(ref Cluster request, ref gaxgrpc::CallSettings settings);
+        partial void Modify_DeleteClusterRequest(ref DeleteClusterRequest request, ref gaxgrpc::CallSettings settings);
+        partial void Modify_CreateAppProfileRequest(ref CreateAppProfileRequest request, ref gaxgrpc::CallSettings settings);
+        partial void Modify_GetAppProfileRequest(ref GetAppProfileRequest request, ref gaxgrpc::CallSettings settings);
+        partial void Modify_ListAppProfilesRequest(ref ListAppProfilesRequest request, ref gaxgrpc::CallSettings settings);
+        partial void Modify_UpdateAppProfileRequest(ref UpdateAppProfileRequest request, ref gaxgrpc::CallSettings settings);
+        partial void Modify_DeleteAppProfileRequest(ref DeleteAppProfileRequest request, ref gaxgrpc::CallSettings settings);
+        partial void Modify_GetIamPolicyRequest(ref iam::GetIamPolicyRequest request, ref gaxgrpc::CallSettings settings);
+        partial void Modify_SetIamPolicyRequest(ref iam::SetIamPolicyRequest request, ref gaxgrpc::CallSettings settings);
+        partial void Modify_TestIamPermissionsRequest(ref iam::TestIamPermissionsRequest request, ref gaxgrpc::CallSettings settings);
 
         /// <summary>
         /// Create an instance within a project.
@@ -3737,12 +3737,12 @@ namespace Google.Cloud.Bigtable.Admin.V2
         /// <returns>
         /// A Task containing the RPC response.
         /// </returns>
-        public override async Task<Operation<Instance, CreateInstanceMetadata>> CreateInstanceAsync(
+        public override async stt::Task<lro::Operation<Instance, CreateInstanceMetadata>> CreateInstanceAsync(
             CreateInstanceRequest request,
-            CallSettings callSettings = null)
+            gaxgrpc::CallSettings callSettings = null)
         {
             Modify_CreateInstanceRequest(ref request, ref callSettings);
-            return new Operation<Instance, CreateInstanceMetadata>(
+            return new lro::Operation<Instance, CreateInstanceMetadata>(
                 await _callCreateInstance.Async(request, callSettings).ConfigureAwait(false), CreateInstanceOperationsClient);
         }
 
@@ -3758,19 +3758,19 @@ namespace Google.Cloud.Bigtable.Admin.V2
         /// <returns>
         /// The RPC response.
         /// </returns>
-        public override Operation<Instance, CreateInstanceMetadata> CreateInstance(
+        public override lro::Operation<Instance, CreateInstanceMetadata> CreateInstance(
             CreateInstanceRequest request,
-            CallSettings callSettings = null)
+            gaxgrpc::CallSettings callSettings = null)
         {
             Modify_CreateInstanceRequest(ref request, ref callSettings);
-            return new Operation<Instance, CreateInstanceMetadata>(
+            return new lro::Operation<Instance, CreateInstanceMetadata>(
                 _callCreateInstance.Sync(request, callSettings), CreateInstanceOperationsClient);
         }
 
         /// <summary>
         /// The long-running operations client for <c>CreateInstance</c>.
         /// </summary>
-        public override OperationsClient CreateInstanceOperationsClient { get; }
+        public override lro::OperationsClient CreateInstanceOperationsClient { get; }
 
         /// <summary>
         /// Gets information about an instance.
@@ -3784,9 +3784,9 @@ namespace Google.Cloud.Bigtable.Admin.V2
         /// <returns>
         /// A Task containing the RPC response.
         /// </returns>
-        public override Task<Instance> GetInstanceAsync(
+        public override stt::Task<Instance> GetInstanceAsync(
             GetInstanceRequest request,
-            CallSettings callSettings = null)
+            gaxgrpc::CallSettings callSettings = null)
         {
             Modify_GetInstanceRequest(ref request, ref callSettings);
             return _callGetInstance.Async(request, callSettings);
@@ -3806,7 +3806,7 @@ namespace Google.Cloud.Bigtable.Admin.V2
         /// </returns>
         public override Instance GetInstance(
             GetInstanceRequest request,
-            CallSettings callSettings = null)
+            gaxgrpc::CallSettings callSettings = null)
         {
             Modify_GetInstanceRequest(ref request, ref callSettings);
             return _callGetInstance.Sync(request, callSettings);
@@ -3824,9 +3824,9 @@ namespace Google.Cloud.Bigtable.Admin.V2
         /// <returns>
         /// A Task containing the RPC response.
         /// </returns>
-        public override Task<ListInstancesResponse> ListInstancesAsync(
+        public override stt::Task<ListInstancesResponse> ListInstancesAsync(
             ListInstancesRequest request,
-            CallSettings callSettings = null)
+            gaxgrpc::CallSettings callSettings = null)
         {
             Modify_ListInstancesRequest(ref request, ref callSettings);
             return _callListInstances.Async(request, callSettings);
@@ -3846,7 +3846,7 @@ namespace Google.Cloud.Bigtable.Admin.V2
         /// </returns>
         public override ListInstancesResponse ListInstances(
             ListInstancesRequest request,
-            CallSettings callSettings = null)
+            gaxgrpc::CallSettings callSettings = null)
         {
             Modify_ListInstancesRequest(ref request, ref callSettings);
             return _callListInstances.Sync(request, callSettings);
@@ -3864,12 +3864,12 @@ namespace Google.Cloud.Bigtable.Admin.V2
         /// <returns>
         /// A Task containing the RPC response.
         /// </returns>
-        public override async Task<Operation<Instance, UpdateInstanceMetadata>> PartialUpdateInstanceAsync(
+        public override async stt::Task<lro::Operation<Instance, UpdateInstanceMetadata>> PartialUpdateInstanceAsync(
             PartialUpdateInstanceRequest request,
-            CallSettings callSettings = null)
+            gaxgrpc::CallSettings callSettings = null)
         {
             Modify_PartialUpdateInstanceRequest(ref request, ref callSettings);
-            return new Operation<Instance, UpdateInstanceMetadata>(
+            return new lro::Operation<Instance, UpdateInstanceMetadata>(
                 await _callPartialUpdateInstance.Async(request, callSettings).ConfigureAwait(false), PartialUpdateInstanceOperationsClient);
         }
 
@@ -3885,19 +3885,19 @@ namespace Google.Cloud.Bigtable.Admin.V2
         /// <returns>
         /// The RPC response.
         /// </returns>
-        public override Operation<Instance, UpdateInstanceMetadata> PartialUpdateInstance(
+        public override lro::Operation<Instance, UpdateInstanceMetadata> PartialUpdateInstance(
             PartialUpdateInstanceRequest request,
-            CallSettings callSettings = null)
+            gaxgrpc::CallSettings callSettings = null)
         {
             Modify_PartialUpdateInstanceRequest(ref request, ref callSettings);
-            return new Operation<Instance, UpdateInstanceMetadata>(
+            return new lro::Operation<Instance, UpdateInstanceMetadata>(
                 _callPartialUpdateInstance.Sync(request, callSettings), PartialUpdateInstanceOperationsClient);
         }
 
         /// <summary>
         /// The long-running operations client for <c>PartialUpdateInstance</c>.
         /// </summary>
-        public override OperationsClient PartialUpdateInstanceOperationsClient { get; }
+        public override lro::OperationsClient PartialUpdateInstanceOperationsClient { get; }
 
         /// <summary>
         /// Delete an instance from a project.
@@ -3911,9 +3911,9 @@ namespace Google.Cloud.Bigtable.Admin.V2
         /// <returns>
         /// A Task that completes when the RPC has completed.
         /// </returns>
-        public override Task DeleteInstanceAsync(
+        public override stt::Task DeleteInstanceAsync(
             DeleteInstanceRequest request,
-            CallSettings callSettings = null)
+            gaxgrpc::CallSettings callSettings = null)
         {
             Modify_DeleteInstanceRequest(ref request, ref callSettings);
             return _callDeleteInstance.Async(request, callSettings);
@@ -3930,7 +3930,7 @@ namespace Google.Cloud.Bigtable.Admin.V2
         /// </param>
         public override void DeleteInstance(
             DeleteInstanceRequest request,
-            CallSettings callSettings = null)
+            gaxgrpc::CallSettings callSettings = null)
         {
             Modify_DeleteInstanceRequest(ref request, ref callSettings);
             _callDeleteInstance.Sync(request, callSettings);
@@ -3948,12 +3948,12 @@ namespace Google.Cloud.Bigtable.Admin.V2
         /// <returns>
         /// A Task containing the RPC response.
         /// </returns>
-        public override async Task<Operation<Cluster, CreateClusterMetadata>> CreateClusterAsync(
+        public override async stt::Task<lro::Operation<Cluster, CreateClusterMetadata>> CreateClusterAsync(
             CreateClusterRequest request,
-            CallSettings callSettings = null)
+            gaxgrpc::CallSettings callSettings = null)
         {
             Modify_CreateClusterRequest(ref request, ref callSettings);
-            return new Operation<Cluster, CreateClusterMetadata>(
+            return new lro::Operation<Cluster, CreateClusterMetadata>(
                 await _callCreateCluster.Async(request, callSettings).ConfigureAwait(false), CreateClusterOperationsClient);
         }
 
@@ -3969,19 +3969,19 @@ namespace Google.Cloud.Bigtable.Admin.V2
         /// <returns>
         /// The RPC response.
         /// </returns>
-        public override Operation<Cluster, CreateClusterMetadata> CreateCluster(
+        public override lro::Operation<Cluster, CreateClusterMetadata> CreateCluster(
             CreateClusterRequest request,
-            CallSettings callSettings = null)
+            gaxgrpc::CallSettings callSettings = null)
         {
             Modify_CreateClusterRequest(ref request, ref callSettings);
-            return new Operation<Cluster, CreateClusterMetadata>(
+            return new lro::Operation<Cluster, CreateClusterMetadata>(
                 _callCreateCluster.Sync(request, callSettings), CreateClusterOperationsClient);
         }
 
         /// <summary>
         /// The long-running operations client for <c>CreateCluster</c>.
         /// </summary>
-        public override OperationsClient CreateClusterOperationsClient { get; }
+        public override lro::OperationsClient CreateClusterOperationsClient { get; }
 
         /// <summary>
         /// Gets information about a cluster.
@@ -3995,9 +3995,9 @@ namespace Google.Cloud.Bigtable.Admin.V2
         /// <returns>
         /// A Task containing the RPC response.
         /// </returns>
-        public override Task<Cluster> GetClusterAsync(
+        public override stt::Task<Cluster> GetClusterAsync(
             GetClusterRequest request,
-            CallSettings callSettings = null)
+            gaxgrpc::CallSettings callSettings = null)
         {
             Modify_GetClusterRequest(ref request, ref callSettings);
             return _callGetCluster.Async(request, callSettings);
@@ -4017,7 +4017,7 @@ namespace Google.Cloud.Bigtable.Admin.V2
         /// </returns>
         public override Cluster GetCluster(
             GetClusterRequest request,
-            CallSettings callSettings = null)
+            gaxgrpc::CallSettings callSettings = null)
         {
             Modify_GetClusterRequest(ref request, ref callSettings);
             return _callGetCluster.Sync(request, callSettings);
@@ -4035,9 +4035,9 @@ namespace Google.Cloud.Bigtable.Admin.V2
         /// <returns>
         /// A Task containing the RPC response.
         /// </returns>
-        public override Task<ListClustersResponse> ListClustersAsync(
+        public override stt::Task<ListClustersResponse> ListClustersAsync(
             ListClustersRequest request,
-            CallSettings callSettings = null)
+            gaxgrpc::CallSettings callSettings = null)
         {
             Modify_ListClustersRequest(ref request, ref callSettings);
             return _callListClusters.Async(request, callSettings);
@@ -4057,7 +4057,7 @@ namespace Google.Cloud.Bigtable.Admin.V2
         /// </returns>
         public override ListClustersResponse ListClusters(
             ListClustersRequest request,
-            CallSettings callSettings = null)
+            gaxgrpc::CallSettings callSettings = null)
         {
             Modify_ListClustersRequest(ref request, ref callSettings);
             return _callListClusters.Sync(request, callSettings);
@@ -4075,12 +4075,12 @@ namespace Google.Cloud.Bigtable.Admin.V2
         /// <returns>
         /// A Task containing the RPC response.
         /// </returns>
-        public override async Task<Operation<Cluster, UpdateClusterMetadata>> UpdateClusterAsync(
+        public override async stt::Task<lro::Operation<Cluster, UpdateClusterMetadata>> UpdateClusterAsync(
             Cluster request,
-            CallSettings callSettings = null)
+            gaxgrpc::CallSettings callSettings = null)
         {
             Modify_Cluster(ref request, ref callSettings);
-            return new Operation<Cluster, UpdateClusterMetadata>(
+            return new lro::Operation<Cluster, UpdateClusterMetadata>(
                 await _callUpdateCluster.Async(request, callSettings).ConfigureAwait(false), UpdateClusterOperationsClient);
         }
 
@@ -4096,19 +4096,19 @@ namespace Google.Cloud.Bigtable.Admin.V2
         /// <returns>
         /// The RPC response.
         /// </returns>
-        public override Operation<Cluster, UpdateClusterMetadata> UpdateCluster(
+        public override lro::Operation<Cluster, UpdateClusterMetadata> UpdateCluster(
             Cluster request,
-            CallSettings callSettings = null)
+            gaxgrpc::CallSettings callSettings = null)
         {
             Modify_Cluster(ref request, ref callSettings);
-            return new Operation<Cluster, UpdateClusterMetadata>(
+            return new lro::Operation<Cluster, UpdateClusterMetadata>(
                 _callUpdateCluster.Sync(request, callSettings), UpdateClusterOperationsClient);
         }
 
         /// <summary>
         /// The long-running operations client for <c>UpdateCluster</c>.
         /// </summary>
-        public override OperationsClient UpdateClusterOperationsClient { get; }
+        public override lro::OperationsClient UpdateClusterOperationsClient { get; }
 
         /// <summary>
         /// Deletes a cluster from an instance.
@@ -4122,9 +4122,9 @@ namespace Google.Cloud.Bigtable.Admin.V2
         /// <returns>
         /// A Task that completes when the RPC has completed.
         /// </returns>
-        public override Task DeleteClusterAsync(
+        public override stt::Task DeleteClusterAsync(
             DeleteClusterRequest request,
-            CallSettings callSettings = null)
+            gaxgrpc::CallSettings callSettings = null)
         {
             Modify_DeleteClusterRequest(ref request, ref callSettings);
             return _callDeleteCluster.Async(request, callSettings);
@@ -4141,7 +4141,7 @@ namespace Google.Cloud.Bigtable.Admin.V2
         /// </param>
         public override void DeleteCluster(
             DeleteClusterRequest request,
-            CallSettings callSettings = null)
+            gaxgrpc::CallSettings callSettings = null)
         {
             Modify_DeleteClusterRequest(ref request, ref callSettings);
             _callDeleteCluster.Sync(request, callSettings);
@@ -4164,9 +4164,9 @@ namespace Google.Cloud.Bigtable.Admin.V2
         /// <returns>
         /// A Task containing the RPC response.
         /// </returns>
-        public override Task<AppProfile> CreateAppProfileAsync(
+        public override stt::Task<AppProfile> CreateAppProfileAsync(
             CreateAppProfileRequest request,
-            CallSettings callSettings = null)
+            gaxgrpc::CallSettings callSettings = null)
         {
             Modify_CreateAppProfileRequest(ref request, ref callSettings);
             return _callCreateAppProfile.Async(request, callSettings);
@@ -4191,7 +4191,7 @@ namespace Google.Cloud.Bigtable.Admin.V2
         /// </returns>
         public override AppProfile CreateAppProfile(
             CreateAppProfileRequest request,
-            CallSettings callSettings = null)
+            gaxgrpc::CallSettings callSettings = null)
         {
             Modify_CreateAppProfileRequest(ref request, ref callSettings);
             return _callCreateAppProfile.Sync(request, callSettings);
@@ -4214,9 +4214,9 @@ namespace Google.Cloud.Bigtable.Admin.V2
         /// <returns>
         /// A Task containing the RPC response.
         /// </returns>
-        public override Task<AppProfile> GetAppProfileAsync(
+        public override stt::Task<AppProfile> GetAppProfileAsync(
             GetAppProfileRequest request,
-            CallSettings callSettings = null)
+            gaxgrpc::CallSettings callSettings = null)
         {
             Modify_GetAppProfileRequest(ref request, ref callSettings);
             return _callGetAppProfile.Async(request, callSettings);
@@ -4241,7 +4241,7 @@ namespace Google.Cloud.Bigtable.Admin.V2
         /// </returns>
         public override AppProfile GetAppProfile(
             GetAppProfileRequest request,
-            CallSettings callSettings = null)
+            gaxgrpc::CallSettings callSettings = null)
         {
             Modify_GetAppProfileRequest(ref request, ref callSettings);
             return _callGetAppProfile.Sync(request, callSettings);
@@ -4264,12 +4264,12 @@ namespace Google.Cloud.Bigtable.Admin.V2
         /// <returns>
         /// A pageable asynchronous sequence of <see cref="AppProfile"/> resources.
         /// </returns>
-        public override PagedAsyncEnumerable<ListAppProfilesResponse, AppProfile> ListAppProfilesAsync(
+        public override gax::PagedAsyncEnumerable<ListAppProfilesResponse, AppProfile> ListAppProfilesAsync(
             ListAppProfilesRequest request,
-            CallSettings callSettings = null)
+            gaxgrpc::CallSettings callSettings = null)
         {
             Modify_ListAppProfilesRequest(ref request, ref callSettings);
-            return new GrpcPagedAsyncEnumerable<ListAppProfilesRequest, ListAppProfilesResponse, AppProfile>(_callListAppProfiles, request, callSettings);
+            return new gaxgrpc::GrpcPagedAsyncEnumerable<ListAppProfilesRequest, ListAppProfilesResponse, AppProfile>(_callListAppProfiles, request, callSettings);
         }
 
         /// <summary>
@@ -4289,12 +4289,12 @@ namespace Google.Cloud.Bigtable.Admin.V2
         /// <returns>
         /// A pageable sequence of <see cref="AppProfile"/> resources.
         /// </returns>
-        public override PagedEnumerable<ListAppProfilesResponse, AppProfile> ListAppProfiles(
+        public override gax::PagedEnumerable<ListAppProfilesResponse, AppProfile> ListAppProfiles(
             ListAppProfilesRequest request,
-            CallSettings callSettings = null)
+            gaxgrpc::CallSettings callSettings = null)
         {
             Modify_ListAppProfilesRequest(ref request, ref callSettings);
-            return new GrpcPagedEnumerable<ListAppProfilesRequest, ListAppProfilesResponse, AppProfile>(_callListAppProfiles, request, callSettings);
+            return new gaxgrpc::GrpcPagedEnumerable<ListAppProfilesRequest, ListAppProfilesResponse, AppProfile>(_callListAppProfiles, request, callSettings);
         }
 
         /// <summary>
@@ -4314,12 +4314,12 @@ namespace Google.Cloud.Bigtable.Admin.V2
         /// <returns>
         /// A Task containing the RPC response.
         /// </returns>
-        public override async Task<Operation<AppProfile, UpdateAppProfileMetadata>> UpdateAppProfileAsync(
+        public override async stt::Task<lro::Operation<AppProfile, UpdateAppProfileMetadata>> UpdateAppProfileAsync(
             UpdateAppProfileRequest request,
-            CallSettings callSettings = null)
+            gaxgrpc::CallSettings callSettings = null)
         {
             Modify_UpdateAppProfileRequest(ref request, ref callSettings);
-            return new Operation<AppProfile, UpdateAppProfileMetadata>(
+            return new lro::Operation<AppProfile, UpdateAppProfileMetadata>(
                 await _callUpdateAppProfile.Async(request, callSettings).ConfigureAwait(false), UpdateAppProfileOperationsClient);
         }
 
@@ -4340,19 +4340,19 @@ namespace Google.Cloud.Bigtable.Admin.V2
         /// <returns>
         /// The RPC response.
         /// </returns>
-        public override Operation<AppProfile, UpdateAppProfileMetadata> UpdateAppProfile(
+        public override lro::Operation<AppProfile, UpdateAppProfileMetadata> UpdateAppProfile(
             UpdateAppProfileRequest request,
-            CallSettings callSettings = null)
+            gaxgrpc::CallSettings callSettings = null)
         {
             Modify_UpdateAppProfileRequest(ref request, ref callSettings);
-            return new Operation<AppProfile, UpdateAppProfileMetadata>(
+            return new lro::Operation<AppProfile, UpdateAppProfileMetadata>(
                 _callUpdateAppProfile.Sync(request, callSettings), UpdateAppProfileOperationsClient);
         }
 
         /// <summary>
         /// The long-running operations client for <c>UpdateAppProfile</c>.
         /// </summary>
-        public override OperationsClient UpdateAppProfileOperationsClient { get; }
+        public override lro::OperationsClient UpdateAppProfileOperationsClient { get; }
 
         /// <summary>
         /// This is a private alpha release of Cloud Bigtable replication. This feature
@@ -4371,9 +4371,9 @@ namespace Google.Cloud.Bigtable.Admin.V2
         /// <returns>
         /// A Task that completes when the RPC has completed.
         /// </returns>
-        public override Task DeleteAppProfileAsync(
+        public override stt::Task DeleteAppProfileAsync(
             DeleteAppProfileRequest request,
-            CallSettings callSettings = null)
+            gaxgrpc::CallSettings callSettings = null)
         {
             Modify_DeleteAppProfileRequest(ref request, ref callSettings);
             return _callDeleteAppProfile.Async(request, callSettings);
@@ -4395,7 +4395,7 @@ namespace Google.Cloud.Bigtable.Admin.V2
         /// </param>
         public override void DeleteAppProfile(
             DeleteAppProfileRequest request,
-            CallSettings callSettings = null)
+            gaxgrpc::CallSettings callSettings = null)
         {
             Modify_DeleteAppProfileRequest(ref request, ref callSettings);
             _callDeleteAppProfile.Sync(request, callSettings);
@@ -4420,9 +4420,9 @@ namespace Google.Cloud.Bigtable.Admin.V2
         /// <returns>
         /// A Task containing the RPC response.
         /// </returns>
-        public override Task<Policy> GetIamPolicyAsync(
-            GetIamPolicyRequest request,
-            CallSettings callSettings = null)
+        public override stt::Task<iam::Policy> GetIamPolicyAsync(
+            iam::GetIamPolicyRequest request,
+            gaxgrpc::CallSettings callSettings = null)
         {
             Modify_GetIamPolicyRequest(ref request, ref callSettings);
             return _callGetIamPolicy.Async(request, callSettings);
@@ -4447,9 +4447,9 @@ namespace Google.Cloud.Bigtable.Admin.V2
         /// <returns>
         /// The RPC response.
         /// </returns>
-        public override Policy GetIamPolicy(
-            GetIamPolicyRequest request,
-            CallSettings callSettings = null)
+        public override iam::Policy GetIamPolicy(
+            iam::GetIamPolicyRequest request,
+            gaxgrpc::CallSettings callSettings = null)
         {
             Modify_GetIamPolicyRequest(ref request, ref callSettings);
             return _callGetIamPolicy.Sync(request, callSettings);
@@ -4474,9 +4474,9 @@ namespace Google.Cloud.Bigtable.Admin.V2
         /// <returns>
         /// A Task containing the RPC response.
         /// </returns>
-        public override Task<Policy> SetIamPolicyAsync(
-            SetIamPolicyRequest request,
-            CallSettings callSettings = null)
+        public override stt::Task<iam::Policy> SetIamPolicyAsync(
+            iam::SetIamPolicyRequest request,
+            gaxgrpc::CallSettings callSettings = null)
         {
             Modify_SetIamPolicyRequest(ref request, ref callSettings);
             return _callSetIamPolicy.Async(request, callSettings);
@@ -4501,9 +4501,9 @@ namespace Google.Cloud.Bigtable.Admin.V2
         /// <returns>
         /// The RPC response.
         /// </returns>
-        public override Policy SetIamPolicy(
-            SetIamPolicyRequest request,
-            CallSettings callSettings = null)
+        public override iam::Policy SetIamPolicy(
+            iam::SetIamPolicyRequest request,
+            gaxgrpc::CallSettings callSettings = null)
         {
             Modify_SetIamPolicyRequest(ref request, ref callSettings);
             return _callSetIamPolicy.Sync(request, callSettings);
@@ -4527,9 +4527,9 @@ namespace Google.Cloud.Bigtable.Admin.V2
         /// <returns>
         /// A Task containing the RPC response.
         /// </returns>
-        public override Task<TestIamPermissionsResponse> TestIamPermissionsAsync(
-            TestIamPermissionsRequest request,
-            CallSettings callSettings = null)
+        public override stt::Task<iam::TestIamPermissionsResponse> TestIamPermissionsAsync(
+            iam::TestIamPermissionsRequest request,
+            gaxgrpc::CallSettings callSettings = null)
         {
             Modify_TestIamPermissionsRequest(ref request, ref callSettings);
             return _callTestIamPermissions.Async(request, callSettings);
@@ -4553,9 +4553,9 @@ namespace Google.Cloud.Bigtable.Admin.V2
         /// <returns>
         /// The RPC response.
         /// </returns>
-        public override TestIamPermissionsResponse TestIamPermissions(
-            TestIamPermissionsRequest request,
-            CallSettings callSettings = null)
+        public override iam::TestIamPermissionsResponse TestIamPermissions(
+            iam::TestIamPermissionsRequest request,
+            gaxgrpc::CallSettings callSettings = null)
         {
             Modify_TestIamPermissionsRequest(ref request, ref callSettings);
             return _callTestIamPermissions.Sync(request, callSettings);
@@ -4565,16 +4565,16 @@ namespace Google.Cloud.Bigtable.Admin.V2
 
     // Partial classes to enable page-streaming
 
-    public partial class ListAppProfilesRequest : IPageRequest { }
-    public partial class ListAppProfilesResponse : IPageResponse<AppProfile>
+    public partial class ListAppProfilesRequest : gaxgrpc::IPageRequest { }
+    public partial class ListAppProfilesResponse : gaxgrpc::IPageResponse<AppProfile>
     {
         /// <summary>
         /// Returns an enumerator that iterates through the resources in this response.
         /// </summary>
-        public IEnumerator<AppProfile> GetEnumerator() => AppProfiles.GetEnumerator();
+        public scg::IEnumerator<AppProfile> GetEnumerator() => AppProfiles.GetEnumerator();
 
         /// <inheritdoc/>
-        IEnumerator IEnumerable.GetEnumerator() => GetEnumerator();
+        sc::IEnumerator sc::IEnumerable.GetEnumerator() => GetEnumerator();
     }
 
     // Partial Grpc class to enable LRO client creation
@@ -4583,10 +4583,10 @@ namespace Google.Cloud.Bigtable.Admin.V2
         public partial class BigtableInstanceAdminClient
         {
             /// <summary>
-            /// Creates a new instance of <see cref="Operations.OperationsClient"/> using the same call invoker as this client.
+            /// Creates a new instance of <see cref="lro::Operations.OperationsClient"/> using the same call invoker as this client.
             /// </summary>
             /// <returns>A new Operations client for the same target as this client.</returns>
-            public virtual Operations.OperationsClient CreateOperationsClient() => new Operations.OperationsClient(CallInvoker);
+            public virtual lro::Operations.OperationsClient CreateOperationsClient() => new lro::Operations.OperationsClient(CallInvoker);
         }
     }
 

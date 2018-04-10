@@ -14,24 +14,24 @@
 
 // Generated code. DO NOT EDIT!
 
-using Google.Api.Gax;
-using Google.Api.Gax.Grpc;
-using Google.Protobuf;
-using Google.Protobuf.WellKnownTypes;
-using Grpc.Core;
-using System;
-using System.Collections;
-using System.Collections.Generic;
-using System.Collections.ObjectModel;
-using System.Threading;
-using System.Threading.Tasks;
+using gax = Google.Api.Gax;
+using gaxgrpc = Google.Api.Gax.Grpc;
+using proto = Google.Protobuf;
+using protowkt = Google.Protobuf.WellKnownTypes;
+using grpccore = Grpc.Core;
+using s = System;
+using sc = System.Collections;
+using scg = System.Collections.Generic;
+using sco = System.Collections.ObjectModel;
+using st = System.Threading;
+using stt = System.Threading.Tasks;
 
 namespace Google.Cloud.Monitoring.V3
 {
     /// <summary>
     /// Settings for a <see cref="AlertPolicyServiceClient"/>.
     /// </summary>
-    public sealed partial class AlertPolicyServiceSettings : ServiceSettingsBase
+    public sealed partial class AlertPolicyServiceSettings : gaxgrpc::ServiceSettingsBase
     {
         /// <summary>
         /// Get a new instance of the default <see cref="AlertPolicyServiceSettings"/>.
@@ -48,7 +48,7 @@ namespace Google.Cloud.Monitoring.V3
 
         private AlertPolicyServiceSettings(AlertPolicyServiceSettings existing) : base(existing)
         {
-            GaxPreconditions.CheckNotNull(existing, nameof(existing));
+            gax::GaxPreconditions.CheckNotNull(existing, nameof(existing));
             ListAlertPoliciesSettings = existing.ListAlertPoliciesSettings;
             GetAlertPolicySettings = existing.GetAlertPolicySettings;
             CreateAlertPolicySettings = existing.CreateAlertPolicySettings;
@@ -60,28 +60,28 @@ namespace Google.Cloud.Monitoring.V3
         partial void OnCopy(AlertPolicyServiceSettings existing);
 
         /// <summary>
-        /// The filter specifying which RPC <see cref="StatusCode"/>s are eligible for retry
+        /// The filter specifying which RPC <see cref="grpccore::StatusCode"/>s are eligible for retry
         /// for "Idempotent" <see cref="AlertPolicyServiceClient"/> RPC methods.
         /// </summary>
         /// <remarks>
-        /// The eligible RPC <see cref="StatusCode"/>s for retry for "Idempotent" RPC methods are:
+        /// The eligible RPC <see cref="grpccore::StatusCode"/>s for retry for "Idempotent" RPC methods are:
         /// <list type="bullet">
-        /// <item><description><see cref="StatusCode.DeadlineExceeded"/></description></item>
-        /// <item><description><see cref="StatusCode.Unavailable"/></description></item>
+        /// <item><description><see cref="grpccore::StatusCode.DeadlineExceeded"/></description></item>
+        /// <item><description><see cref="grpccore::StatusCode.Unavailable"/></description></item>
         /// </list>
         /// </remarks>
-        public static Predicate<RpcException> IdempotentRetryFilter { get; } =
-            RetrySettings.FilterForStatusCodes(StatusCode.DeadlineExceeded, StatusCode.Unavailable);
+        public static s::Predicate<grpccore::RpcException> IdempotentRetryFilter { get; } =
+            gaxgrpc::RetrySettings.FilterForStatusCodes(grpccore::StatusCode.DeadlineExceeded, grpccore::StatusCode.Unavailable);
 
         /// <summary>
-        /// The filter specifying which RPC <see cref="StatusCode"/>s are eligible for retry
+        /// The filter specifying which RPC <see cref="grpccore::StatusCode"/>s are eligible for retry
         /// for "NonIdempotent" <see cref="AlertPolicyServiceClient"/> RPC methods.
         /// </summary>
         /// <remarks>
-        /// There are no RPC <see cref="StatusCode"/>s eligible for retry for "NonIdempotent" RPC methods.
+        /// There are no RPC <see cref="grpccore::StatusCode"/>s eligible for retry for "NonIdempotent" RPC methods.
         /// </remarks>
-        public static Predicate<RpcException> NonIdempotentRetryFilter { get; } =
-            RetrySettings.FilterForStatusCodes();
+        public static s::Predicate<grpccore::RpcException> NonIdempotentRetryFilter { get; } =
+            gaxgrpc::RetrySettings.FilterForStatusCodes();
 
         /// <summary>
         /// "Default" retry backoff for <see cref="AlertPolicyServiceClient"/> RPC methods.
@@ -97,9 +97,9 @@ namespace Google.Cloud.Monitoring.V3
         /// <item><description>Delay multiplier: 1.3</description></item>
         /// </list>
         /// </remarks>
-        public static BackoffSettings GetDefaultRetryBackoff() => new BackoffSettings(
-            delay: TimeSpan.FromMilliseconds(100),
-            maxDelay: TimeSpan.FromMilliseconds(60000),
+        public static gaxgrpc::BackoffSettings GetDefaultRetryBackoff() => new gaxgrpc::BackoffSettings(
+            delay: s::TimeSpan.FromMilliseconds(100),
+            maxDelay: s::TimeSpan.FromMilliseconds(60000),
             delayMultiplier: 1.3
         );
 
@@ -117,19 +117,19 @@ namespace Google.Cloud.Monitoring.V3
         /// <item><description>Maximum timeout: 20000 milliseconds</description></item>
         /// </list>
         /// </remarks>
-        public static BackoffSettings GetDefaultTimeoutBackoff() => new BackoffSettings(
-            delay: TimeSpan.FromMilliseconds(20000),
-            maxDelay: TimeSpan.FromMilliseconds(20000),
+        public static gaxgrpc::BackoffSettings GetDefaultTimeoutBackoff() => new gaxgrpc::BackoffSettings(
+            delay: s::TimeSpan.FromMilliseconds(20000),
+            maxDelay: s::TimeSpan.FromMilliseconds(20000),
             delayMultiplier: 1.0
         );
 
         /// <summary>
-        /// <see cref="CallSettings"/> for synchronous and asynchronous calls to
+        /// <see cref="gaxgrpc::CallSettings"/> for synchronous and asynchronous calls to
         /// <c>AlertPolicyServiceClient.ListAlertPolicies</c> and <c>AlertPolicyServiceClient.ListAlertPoliciesAsync</c>.
         /// </summary>
         /// <remarks>
         /// The default <c>AlertPolicyServiceClient.ListAlertPolicies</c> and
-        /// <c>AlertPolicyServiceClient.ListAlertPoliciesAsync</c> <see cref="RetrySettings"/> are:
+        /// <c>AlertPolicyServiceClient.ListAlertPoliciesAsync</c> <see cref="gaxgrpc::RetrySettings"/> are:
         /// <list type="bullet">
         /// <item><description>Initial retry delay: 100 milliseconds</description></item>
         /// <item><description>Retry delay multiplier: 1.3</description></item>
@@ -140,26 +140,26 @@ namespace Google.Cloud.Monitoring.V3
         /// </list>
         /// Retry will be attempted on the following response status codes:
         /// <list>
-        /// <item><description><see cref="StatusCode.DeadlineExceeded"/></description></item>
-        /// <item><description><see cref="StatusCode.Unavailable"/></description></item>
+        /// <item><description><see cref="grpccore::StatusCode.DeadlineExceeded"/></description></item>
+        /// <item><description><see cref="grpccore::StatusCode.Unavailable"/></description></item>
         /// </list>
         /// Default RPC expiration is 600000 milliseconds.
         /// </remarks>
-        public CallSettings ListAlertPoliciesSettings { get; set; } = CallSettings.FromCallTiming(
-            CallTiming.FromRetry(new RetrySettings(
+        public gaxgrpc::CallSettings ListAlertPoliciesSettings { get; set; } = gaxgrpc::CallSettings.FromCallTiming(
+            gaxgrpc::CallTiming.FromRetry(new gaxgrpc::RetrySettings(
                 retryBackoff: GetDefaultRetryBackoff(),
                 timeoutBackoff: GetDefaultTimeoutBackoff(),
-                totalExpiration: Expiration.FromTimeout(TimeSpan.FromMilliseconds(600000)),
+                totalExpiration: gax::Expiration.FromTimeout(s::TimeSpan.FromMilliseconds(600000)),
                 retryFilter: IdempotentRetryFilter
             )));
 
         /// <summary>
-        /// <see cref="CallSettings"/> for synchronous and asynchronous calls to
+        /// <see cref="gaxgrpc::CallSettings"/> for synchronous and asynchronous calls to
         /// <c>AlertPolicyServiceClient.GetAlertPolicy</c> and <c>AlertPolicyServiceClient.GetAlertPolicyAsync</c>.
         /// </summary>
         /// <remarks>
         /// The default <c>AlertPolicyServiceClient.GetAlertPolicy</c> and
-        /// <c>AlertPolicyServiceClient.GetAlertPolicyAsync</c> <see cref="RetrySettings"/> are:
+        /// <c>AlertPolicyServiceClient.GetAlertPolicyAsync</c> <see cref="gaxgrpc::RetrySettings"/> are:
         /// <list type="bullet">
         /// <item><description>Initial retry delay: 100 milliseconds</description></item>
         /// <item><description>Retry delay multiplier: 1.3</description></item>
@@ -170,26 +170,26 @@ namespace Google.Cloud.Monitoring.V3
         /// </list>
         /// Retry will be attempted on the following response status codes:
         /// <list>
-        /// <item><description><see cref="StatusCode.DeadlineExceeded"/></description></item>
-        /// <item><description><see cref="StatusCode.Unavailable"/></description></item>
+        /// <item><description><see cref="grpccore::StatusCode.DeadlineExceeded"/></description></item>
+        /// <item><description><see cref="grpccore::StatusCode.Unavailable"/></description></item>
         /// </list>
         /// Default RPC expiration is 600000 milliseconds.
         /// </remarks>
-        public CallSettings GetAlertPolicySettings { get; set; } = CallSettings.FromCallTiming(
-            CallTiming.FromRetry(new RetrySettings(
+        public gaxgrpc::CallSettings GetAlertPolicySettings { get; set; } = gaxgrpc::CallSettings.FromCallTiming(
+            gaxgrpc::CallTiming.FromRetry(new gaxgrpc::RetrySettings(
                 retryBackoff: GetDefaultRetryBackoff(),
                 timeoutBackoff: GetDefaultTimeoutBackoff(),
-                totalExpiration: Expiration.FromTimeout(TimeSpan.FromMilliseconds(600000)),
+                totalExpiration: gax::Expiration.FromTimeout(s::TimeSpan.FromMilliseconds(600000)),
                 retryFilter: IdempotentRetryFilter
             )));
 
         /// <summary>
-        /// <see cref="CallSettings"/> for synchronous and asynchronous calls to
+        /// <see cref="gaxgrpc::CallSettings"/> for synchronous and asynchronous calls to
         /// <c>AlertPolicyServiceClient.CreateAlertPolicy</c> and <c>AlertPolicyServiceClient.CreateAlertPolicyAsync</c>.
         /// </summary>
         /// <remarks>
         /// The default <c>AlertPolicyServiceClient.CreateAlertPolicy</c> and
-        /// <c>AlertPolicyServiceClient.CreateAlertPolicyAsync</c> <see cref="RetrySettings"/> are:
+        /// <c>AlertPolicyServiceClient.CreateAlertPolicyAsync</c> <see cref="gaxgrpc::RetrySettings"/> are:
         /// <list type="bullet">
         /// <item><description>Initial retry delay: 100 milliseconds</description></item>
         /// <item><description>Retry delay multiplier: 1.3</description></item>
@@ -204,21 +204,21 @@ namespace Google.Cloud.Monitoring.V3
         /// </list>
         /// Default RPC expiration is 600000 milliseconds.
         /// </remarks>
-        public CallSettings CreateAlertPolicySettings { get; set; } = CallSettings.FromCallTiming(
-            CallTiming.FromRetry(new RetrySettings(
+        public gaxgrpc::CallSettings CreateAlertPolicySettings { get; set; } = gaxgrpc::CallSettings.FromCallTiming(
+            gaxgrpc::CallTiming.FromRetry(new gaxgrpc::RetrySettings(
                 retryBackoff: GetDefaultRetryBackoff(),
                 timeoutBackoff: GetDefaultTimeoutBackoff(),
-                totalExpiration: Expiration.FromTimeout(TimeSpan.FromMilliseconds(600000)),
+                totalExpiration: gax::Expiration.FromTimeout(s::TimeSpan.FromMilliseconds(600000)),
                 retryFilter: NonIdempotentRetryFilter
             )));
 
         /// <summary>
-        /// <see cref="CallSettings"/> for synchronous and asynchronous calls to
+        /// <see cref="gaxgrpc::CallSettings"/> for synchronous and asynchronous calls to
         /// <c>AlertPolicyServiceClient.DeleteAlertPolicy</c> and <c>AlertPolicyServiceClient.DeleteAlertPolicyAsync</c>.
         /// </summary>
         /// <remarks>
         /// The default <c>AlertPolicyServiceClient.DeleteAlertPolicy</c> and
-        /// <c>AlertPolicyServiceClient.DeleteAlertPolicyAsync</c> <see cref="RetrySettings"/> are:
+        /// <c>AlertPolicyServiceClient.DeleteAlertPolicyAsync</c> <see cref="gaxgrpc::RetrySettings"/> are:
         /// <list type="bullet">
         /// <item><description>Initial retry delay: 100 milliseconds</description></item>
         /// <item><description>Retry delay multiplier: 1.3</description></item>
@@ -229,26 +229,26 @@ namespace Google.Cloud.Monitoring.V3
         /// </list>
         /// Retry will be attempted on the following response status codes:
         /// <list>
-        /// <item><description><see cref="StatusCode.DeadlineExceeded"/></description></item>
-        /// <item><description><see cref="StatusCode.Unavailable"/></description></item>
+        /// <item><description><see cref="grpccore::StatusCode.DeadlineExceeded"/></description></item>
+        /// <item><description><see cref="grpccore::StatusCode.Unavailable"/></description></item>
         /// </list>
         /// Default RPC expiration is 600000 milliseconds.
         /// </remarks>
-        public CallSettings DeleteAlertPolicySettings { get; set; } = CallSettings.FromCallTiming(
-            CallTiming.FromRetry(new RetrySettings(
+        public gaxgrpc::CallSettings DeleteAlertPolicySettings { get; set; } = gaxgrpc::CallSettings.FromCallTiming(
+            gaxgrpc::CallTiming.FromRetry(new gaxgrpc::RetrySettings(
                 retryBackoff: GetDefaultRetryBackoff(),
                 timeoutBackoff: GetDefaultTimeoutBackoff(),
-                totalExpiration: Expiration.FromTimeout(TimeSpan.FromMilliseconds(600000)),
+                totalExpiration: gax::Expiration.FromTimeout(s::TimeSpan.FromMilliseconds(600000)),
                 retryFilter: IdempotentRetryFilter
             )));
 
         /// <summary>
-        /// <see cref="CallSettings"/> for synchronous and asynchronous calls to
+        /// <see cref="gaxgrpc::CallSettings"/> for synchronous and asynchronous calls to
         /// <c>AlertPolicyServiceClient.UpdateAlertPolicy</c> and <c>AlertPolicyServiceClient.UpdateAlertPolicyAsync</c>.
         /// </summary>
         /// <remarks>
         /// The default <c>AlertPolicyServiceClient.UpdateAlertPolicy</c> and
-        /// <c>AlertPolicyServiceClient.UpdateAlertPolicyAsync</c> <see cref="RetrySettings"/> are:
+        /// <c>AlertPolicyServiceClient.UpdateAlertPolicyAsync</c> <see cref="gaxgrpc::RetrySettings"/> are:
         /// <list type="bullet">
         /// <item><description>Initial retry delay: 100 milliseconds</description></item>
         /// <item><description>Retry delay multiplier: 1.3</description></item>
@@ -263,11 +263,11 @@ namespace Google.Cloud.Monitoring.V3
         /// </list>
         /// Default RPC expiration is 600000 milliseconds.
         /// </remarks>
-        public CallSettings UpdateAlertPolicySettings { get; set; } = CallSettings.FromCallTiming(
-            CallTiming.FromRetry(new RetrySettings(
+        public gaxgrpc::CallSettings UpdateAlertPolicySettings { get; set; } = gaxgrpc::CallSettings.FromCallTiming(
+            gaxgrpc::CallTiming.FromRetry(new gaxgrpc::RetrySettings(
                 retryBackoff: GetDefaultRetryBackoff(),
                 timeoutBackoff: GetDefaultTimeoutBackoff(),
-                totalExpiration: Expiration.FromTimeout(TimeSpan.FromMilliseconds(600000)),
+                totalExpiration: gax::Expiration.FromTimeout(s::TimeSpan.FromMilliseconds(600000)),
                 retryFilter: NonIdempotentRetryFilter
             )));
 
@@ -286,7 +286,7 @@ namespace Google.Cloud.Monitoring.V3
         /// <summary>
         /// The default endpoint for the AlertPolicyService service, which is a host of "monitoring.googleapis.com" and a port of 443.
         /// </summary>
-        public static ServiceEndpoint DefaultEndpoint { get; } = new ServiceEndpoint("monitoring.googleapis.com", 443);
+        public static gaxgrpc::ServiceEndpoint DefaultEndpoint { get; } = new gaxgrpc::ServiceEndpoint("monitoring.googleapis.com", 443);
 
         /// <summary>
         /// The default AlertPolicyService scopes.
@@ -300,14 +300,14 @@ namespace Google.Cloud.Monitoring.V3
         /// <item><description>"https://www.googleapis.com/auth/monitoring.write"</description></item>
         /// </list>
         /// </remarks>
-        public static IReadOnlyList<string> DefaultScopes { get; } = new ReadOnlyCollection<string>(new string[] {
+        public static scg::IReadOnlyList<string> DefaultScopes { get; } = new sco::ReadOnlyCollection<string>(new string[] {
             "https://www.googleapis.com/auth/cloud-platform",
             "https://www.googleapis.com/auth/monitoring",
             "https://www.googleapis.com/auth/monitoring.read",
             "https://www.googleapis.com/auth/monitoring.write",
         });
 
-        private static readonly ChannelPool s_channelPool = new ChannelPool(DefaultScopes);
+        private static readonly gaxgrpc::ChannelPool s_channelPool = new gaxgrpc::ChannelPool(DefaultScopes);
 
         // Note: we could have parameterless overloads of Create and CreateAsync,
         // documented to just use the default endpoint, settings and credentials.
@@ -321,12 +321,12 @@ namespace Google.Cloud.Monitoring.V3
         /// and creating a channel connecting to the given endpoint with application default credentials where
         /// necessary.
         /// </summary>
-        /// <param name="endpoint">Optional <see cref="ServiceEndpoint"/>.</param>
+        /// <param name="endpoint">Optional <see cref="gaxgrpc::ServiceEndpoint"/>.</param>
         /// <param name="settings">Optional <see cref="AlertPolicyServiceSettings"/>.</param>
         /// <returns>The task representing the created <see cref="AlertPolicyServiceClient"/>.</returns>
-        public static async Task<AlertPolicyServiceClient> CreateAsync(ServiceEndpoint endpoint = null, AlertPolicyServiceSettings settings = null)
+        public static async stt::Task<AlertPolicyServiceClient> CreateAsync(gaxgrpc::ServiceEndpoint endpoint = null, AlertPolicyServiceSettings settings = null)
         {
-            Channel channel = await s_channelPool.GetChannelAsync(endpoint ?? DefaultEndpoint).ConfigureAwait(false);
+            grpccore::Channel channel = await s_channelPool.GetChannelAsync(endpoint ?? DefaultEndpoint).ConfigureAwait(false);
             return Create(channel, settings);
         }
 
@@ -335,45 +335,45 @@ namespace Google.Cloud.Monitoring.V3
         /// and creating a channel connecting to the given endpoint with application default credentials where
         /// necessary.
         /// </summary>
-        /// <param name="endpoint">Optional <see cref="ServiceEndpoint"/>.</param>
+        /// <param name="endpoint">Optional <see cref="gaxgrpc::ServiceEndpoint"/>.</param>
         /// <param name="settings">Optional <see cref="AlertPolicyServiceSettings"/>.</param>
         /// <returns>The created <see cref="AlertPolicyServiceClient"/>.</returns>
-        public static AlertPolicyServiceClient Create(ServiceEndpoint endpoint = null, AlertPolicyServiceSettings settings = null)
+        public static AlertPolicyServiceClient Create(gaxgrpc::ServiceEndpoint endpoint = null, AlertPolicyServiceSettings settings = null)
         {
-            Channel channel = s_channelPool.GetChannel(endpoint ?? DefaultEndpoint);
+            grpccore::Channel channel = s_channelPool.GetChannel(endpoint ?? DefaultEndpoint);
             return Create(channel, settings);
         }
 
         /// <summary>
         /// Creates a <see cref="AlertPolicyServiceClient"/> which uses the specified channel for remote operations.
         /// </summary>
-        /// <param name="channel">The <see cref="Channel"/> for remote operations. Must not be null.</param>
+        /// <param name="channel">The <see cref="grpccore::Channel"/> for remote operations. Must not be null.</param>
         /// <param name="settings">Optional <see cref="AlertPolicyServiceSettings"/>.</param>
         /// <returns>The created <see cref="AlertPolicyServiceClient"/>.</returns>
-        public static AlertPolicyServiceClient Create(Channel channel, AlertPolicyServiceSettings settings = null)
+        public static AlertPolicyServiceClient Create(grpccore::Channel channel, AlertPolicyServiceSettings settings = null)
         {
-            GaxPreconditions.CheckNotNull(channel, nameof(channel));
+            gax::GaxPreconditions.CheckNotNull(channel, nameof(channel));
             AlertPolicyService.AlertPolicyServiceClient grpcClient = new AlertPolicyService.AlertPolicyServiceClient(channel);
             return new AlertPolicyServiceClientImpl(grpcClient, settings);
         }
 
         /// <summary>
-        /// Shuts down any channels automatically created by <see cref="Create(ServiceEndpoint, AlertPolicyServiceSettings)"/>
-        /// and <see cref="CreateAsync(ServiceEndpoint, AlertPolicyServiceSettings)"/>. Channels which weren't automatically
+        /// Shuts down any channels automatically created by <see cref="Create(gaxgrpc::ServiceEndpoint, AlertPolicyServiceSettings)"/>
+        /// and <see cref="CreateAsync(gaxgrpc::ServiceEndpoint, AlertPolicyServiceSettings)"/>. Channels which weren't automatically
         /// created are not affected.
         /// </summary>
-        /// <remarks>After calling this method, further calls to <see cref="Create(ServiceEndpoint, AlertPolicyServiceSettings)"/>
-        /// and <see cref="CreateAsync(ServiceEndpoint, AlertPolicyServiceSettings)"/> will create new channels, which could
+        /// <remarks>After calling this method, further calls to <see cref="Create(gaxgrpc::ServiceEndpoint, AlertPolicyServiceSettings)"/>
+        /// and <see cref="CreateAsync(gaxgrpc::ServiceEndpoint, AlertPolicyServiceSettings)"/> will create new channels, which could
         /// in turn be shut down by another call to this method.</remarks>
         /// <returns>A task representing the asynchronous shutdown operation.</returns>
-        public static Task ShutdownDefaultChannelsAsync() => s_channelPool.ShutdownChannelsAsync();
+        public static stt::Task ShutdownDefaultChannelsAsync() => s_channelPool.ShutdownChannelsAsync();
 
         /// <summary>
         /// The underlying gRPC AlertPolicyService client.
         /// </summary>
         public virtual AlertPolicyService.AlertPolicyServiceClient GrpcClient
         {
-            get { throw new NotImplementedException(); }
+            get { throw new s::NotImplementedException(); }
         }
 
         /// <summary>
@@ -404,14 +404,14 @@ namespace Google.Cloud.Monitoring.V3
         /// <returns>
         /// A pageable asynchronous sequence of <see cref="AlertPolicy"/> resources.
         /// </returns>
-        public virtual PagedAsyncEnumerable<ListAlertPoliciesResponse, AlertPolicy> ListAlertPoliciesAsync(
+        public virtual gax::PagedAsyncEnumerable<ListAlertPoliciesResponse, AlertPolicy> ListAlertPoliciesAsync(
             ProjectName name,
             string pageToken = null,
             int? pageSize = null,
-            CallSettings callSettings = null) => ListAlertPoliciesAsync(
+            gaxgrpc::CallSettings callSettings = null) => ListAlertPoliciesAsync(
                 new ListAlertPoliciesRequest
                 {
-                    ProjectName = GaxPreconditions.CheckNotNull(name, nameof(name)),
+                    ProjectName = gax::GaxPreconditions.CheckNotNull(name, nameof(name)),
                     PageToken = pageToken ?? "",
                     PageSize = pageSize ?? 0,
                 },
@@ -445,14 +445,14 @@ namespace Google.Cloud.Monitoring.V3
         /// <returns>
         /// A pageable sequence of <see cref="AlertPolicy"/> resources.
         /// </returns>
-        public virtual PagedEnumerable<ListAlertPoliciesResponse, AlertPolicy> ListAlertPolicies(
+        public virtual gax::PagedEnumerable<ListAlertPoliciesResponse, AlertPolicy> ListAlertPolicies(
             ProjectName name,
             string pageToken = null,
             int? pageSize = null,
-            CallSettings callSettings = null) => ListAlertPolicies(
+            gaxgrpc::CallSettings callSettings = null) => ListAlertPolicies(
                 new ListAlertPoliciesRequest
                 {
-                    ProjectName = GaxPreconditions.CheckNotNull(name, nameof(name)),
+                    ProjectName = gax::GaxPreconditions.CheckNotNull(name, nameof(name)),
                     PageToken = pageToken ?? "",
                     PageSize = pageSize ?? 0,
                 },
@@ -470,11 +470,11 @@ namespace Google.Cloud.Monitoring.V3
         /// <returns>
         /// A pageable asynchronous sequence of <see cref="AlertPolicy"/> resources.
         /// </returns>
-        public virtual PagedAsyncEnumerable<ListAlertPoliciesResponse, AlertPolicy> ListAlertPoliciesAsync(
+        public virtual gax::PagedAsyncEnumerable<ListAlertPoliciesResponse, AlertPolicy> ListAlertPoliciesAsync(
             ListAlertPoliciesRequest request,
-            CallSettings callSettings = null)
+            gaxgrpc::CallSettings callSettings = null)
         {
-            throw new NotImplementedException();
+            throw new s::NotImplementedException();
         }
 
         /// <summary>
@@ -489,11 +489,11 @@ namespace Google.Cloud.Monitoring.V3
         /// <returns>
         /// A pageable sequence of <see cref="AlertPolicy"/> resources.
         /// </returns>
-        public virtual PagedEnumerable<ListAlertPoliciesResponse, AlertPolicy> ListAlertPolicies(
+        public virtual gax::PagedEnumerable<ListAlertPoliciesResponse, AlertPolicy> ListAlertPolicies(
             ListAlertPoliciesRequest request,
-            CallSettings callSettings = null)
+            gaxgrpc::CallSettings callSettings = null)
         {
-            throw new NotImplementedException();
+            throw new s::NotImplementedException();
         }
 
         /// <summary>
@@ -510,12 +510,12 @@ namespace Google.Cloud.Monitoring.V3
         /// <returns>
         /// A Task containing the RPC response.
         /// </returns>
-        public virtual Task<AlertPolicy> GetAlertPolicyAsync(
+        public virtual stt::Task<AlertPolicy> GetAlertPolicyAsync(
             AlertPolicyName name,
-            CallSettings callSettings = null) => GetAlertPolicyAsync(
+            gaxgrpc::CallSettings callSettings = null) => GetAlertPolicyAsync(
                 new GetAlertPolicyRequest
                 {
-                    AlertPolicyName = GaxPreconditions.CheckNotNull(name, nameof(name)),
+                    AlertPolicyName = gax::GaxPreconditions.CheckNotNull(name, nameof(name)),
                 },
                 callSettings);
 
@@ -528,16 +528,16 @@ namespace Google.Cloud.Monitoring.V3
         ///     projects/[PROJECT_ID]/alertPolicies/[ALERT_POLICY_ID]
         /// </param>
         /// <param name="cancellationToken">
-        /// A <see cref="CancellationToken"/> to use for this RPC.
+        /// A <see cref="st::CancellationToken"/> to use for this RPC.
         /// </param>
         /// <returns>
         /// A Task containing the RPC response.
         /// </returns>
-        public virtual Task<AlertPolicy> GetAlertPolicyAsync(
+        public virtual stt::Task<AlertPolicy> GetAlertPolicyAsync(
             AlertPolicyName name,
-            CancellationToken cancellationToken) => GetAlertPolicyAsync(
+            st::CancellationToken cancellationToken) => GetAlertPolicyAsync(
                 name,
-                CallSettings.FromCancellationToken(cancellationToken));
+                gaxgrpc::CallSettings.FromCancellationToken(cancellationToken));
 
         /// <summary>
         /// Gets a single alerting policy.
@@ -555,10 +555,10 @@ namespace Google.Cloud.Monitoring.V3
         /// </returns>
         public virtual AlertPolicy GetAlertPolicy(
             AlertPolicyName name,
-            CallSettings callSettings = null) => GetAlertPolicy(
+            gaxgrpc::CallSettings callSettings = null) => GetAlertPolicy(
                 new GetAlertPolicyRequest
                 {
-                    AlertPolicyName = GaxPreconditions.CheckNotNull(name, nameof(name)),
+                    AlertPolicyName = gax::GaxPreconditions.CheckNotNull(name, nameof(name)),
                 },
                 callSettings);
 
@@ -574,11 +574,11 @@ namespace Google.Cloud.Monitoring.V3
         /// <returns>
         /// A Task containing the RPC response.
         /// </returns>
-        public virtual Task<AlertPolicy> GetAlertPolicyAsync(
+        public virtual stt::Task<AlertPolicy> GetAlertPolicyAsync(
             GetAlertPolicyRequest request,
-            CallSettings callSettings = null)
+            gaxgrpc::CallSettings callSettings = null)
         {
-            throw new NotImplementedException();
+            throw new s::NotImplementedException();
         }
 
         /// <summary>
@@ -588,16 +588,16 @@ namespace Google.Cloud.Monitoring.V3
         /// The request object containing all of the parameters for the API call.
         /// </param>
         /// <param name="cancellationToken">
-        /// A <see cref="CancellationToken"/> to use for this RPC.
+        /// A <see cref="st::CancellationToken"/> to use for this RPC.
         /// </param>
         /// <returns>
         /// A Task containing the RPC response.
         /// </returns>
-        public virtual Task<AlertPolicy> GetAlertPolicyAsync(
+        public virtual stt::Task<AlertPolicy> GetAlertPolicyAsync(
             GetAlertPolicyRequest request,
-            CancellationToken cancellationToken) => GetAlertPolicyAsync(
+            st::CancellationToken cancellationToken) => GetAlertPolicyAsync(
                 request,
-                CallSettings.FromCancellationToken(cancellationToken));
+                gaxgrpc::CallSettings.FromCancellationToken(cancellationToken));
 
         /// <summary>
         /// Gets a single alerting policy.
@@ -613,9 +613,9 @@ namespace Google.Cloud.Monitoring.V3
         /// </returns>
         public virtual AlertPolicy GetAlertPolicy(
             GetAlertPolicyRequest request,
-            CallSettings callSettings = null)
+            gaxgrpc::CallSettings callSettings = null)
         {
-            throw new NotImplementedException();
+            throw new s::NotImplementedException();
         }
 
         /// <summary>
@@ -642,14 +642,14 @@ namespace Google.Cloud.Monitoring.V3
         /// <returns>
         /// A Task containing the RPC response.
         /// </returns>
-        public virtual Task<AlertPolicy> CreateAlertPolicyAsync(
+        public virtual stt::Task<AlertPolicy> CreateAlertPolicyAsync(
             ProjectName name,
             AlertPolicy alertPolicy,
-            CallSettings callSettings = null) => CreateAlertPolicyAsync(
+            gaxgrpc::CallSettings callSettings = null) => CreateAlertPolicyAsync(
                 new CreateAlertPolicyRequest
                 {
-                    ProjectName = GaxPreconditions.CheckNotNull(name, nameof(name)),
-                    AlertPolicy = GaxPreconditions.CheckNotNull(alertPolicy, nameof(alertPolicy)),
+                    ProjectName = gax::GaxPreconditions.CheckNotNull(name, nameof(name)),
+                    AlertPolicy = gax::GaxPreconditions.CheckNotNull(alertPolicy, nameof(alertPolicy)),
                 },
                 callSettings);
 
@@ -672,18 +672,18 @@ namespace Google.Cloud.Monitoring.V3
         /// a new [ALERT_POLICY_ID] value.
         /// </param>
         /// <param name="cancellationToken">
-        /// A <see cref="CancellationToken"/> to use for this RPC.
+        /// A <see cref="st::CancellationToken"/> to use for this RPC.
         /// </param>
         /// <returns>
         /// A Task containing the RPC response.
         /// </returns>
-        public virtual Task<AlertPolicy> CreateAlertPolicyAsync(
+        public virtual stt::Task<AlertPolicy> CreateAlertPolicyAsync(
             ProjectName name,
             AlertPolicy alertPolicy,
-            CancellationToken cancellationToken) => CreateAlertPolicyAsync(
+            st::CancellationToken cancellationToken) => CreateAlertPolicyAsync(
                 name,
                 alertPolicy,
-                CallSettings.FromCancellationToken(cancellationToken));
+                gaxgrpc::CallSettings.FromCancellationToken(cancellationToken));
 
         /// <summary>
         /// Creates a new alerting policy.
@@ -712,11 +712,11 @@ namespace Google.Cloud.Monitoring.V3
         public virtual AlertPolicy CreateAlertPolicy(
             ProjectName name,
             AlertPolicy alertPolicy,
-            CallSettings callSettings = null) => CreateAlertPolicy(
+            gaxgrpc::CallSettings callSettings = null) => CreateAlertPolicy(
                 new CreateAlertPolicyRequest
                 {
-                    ProjectName = GaxPreconditions.CheckNotNull(name, nameof(name)),
-                    AlertPolicy = GaxPreconditions.CheckNotNull(alertPolicy, nameof(alertPolicy)),
+                    ProjectName = gax::GaxPreconditions.CheckNotNull(name, nameof(name)),
+                    AlertPolicy = gax::GaxPreconditions.CheckNotNull(alertPolicy, nameof(alertPolicy)),
                 },
                 callSettings);
 
@@ -732,11 +732,11 @@ namespace Google.Cloud.Monitoring.V3
         /// <returns>
         /// A Task containing the RPC response.
         /// </returns>
-        public virtual Task<AlertPolicy> CreateAlertPolicyAsync(
+        public virtual stt::Task<AlertPolicy> CreateAlertPolicyAsync(
             CreateAlertPolicyRequest request,
-            CallSettings callSettings = null)
+            gaxgrpc::CallSettings callSettings = null)
         {
-            throw new NotImplementedException();
+            throw new s::NotImplementedException();
         }
 
         /// <summary>
@@ -746,16 +746,16 @@ namespace Google.Cloud.Monitoring.V3
         /// The request object containing all of the parameters for the API call.
         /// </param>
         /// <param name="cancellationToken">
-        /// A <see cref="CancellationToken"/> to use for this RPC.
+        /// A <see cref="st::CancellationToken"/> to use for this RPC.
         /// </param>
         /// <returns>
         /// A Task containing the RPC response.
         /// </returns>
-        public virtual Task<AlertPolicy> CreateAlertPolicyAsync(
+        public virtual stt::Task<AlertPolicy> CreateAlertPolicyAsync(
             CreateAlertPolicyRequest request,
-            CancellationToken cancellationToken) => CreateAlertPolicyAsync(
+            st::CancellationToken cancellationToken) => CreateAlertPolicyAsync(
                 request,
-                CallSettings.FromCancellationToken(cancellationToken));
+                gaxgrpc::CallSettings.FromCancellationToken(cancellationToken));
 
         /// <summary>
         /// Creates a new alerting policy.
@@ -771,9 +771,9 @@ namespace Google.Cloud.Monitoring.V3
         /// </returns>
         public virtual AlertPolicy CreateAlertPolicy(
             CreateAlertPolicyRequest request,
-            CallSettings callSettings = null)
+            gaxgrpc::CallSettings callSettings = null)
         {
-            throw new NotImplementedException();
+            throw new s::NotImplementedException();
         }
 
         /// <summary>
@@ -792,12 +792,12 @@ namespace Google.Cloud.Monitoring.V3
         /// <returns>
         /// A Task that completes when the RPC has completed.
         /// </returns>
-        public virtual Task DeleteAlertPolicyAsync(
+        public virtual stt::Task DeleteAlertPolicyAsync(
             AlertPolicyName name,
-            CallSettings callSettings = null) => DeleteAlertPolicyAsync(
+            gaxgrpc::CallSettings callSettings = null) => DeleteAlertPolicyAsync(
                 new DeleteAlertPolicyRequest
                 {
-                    AlertPolicyName = GaxPreconditions.CheckNotNull(name, nameof(name)),
+                    AlertPolicyName = gax::GaxPreconditions.CheckNotNull(name, nameof(name)),
                 },
                 callSettings);
 
@@ -812,16 +812,16 @@ namespace Google.Cloud.Monitoring.V3
         /// For more information, see [AlertPolicy][google.monitoring.v3.AlertPolicy].
         /// </param>
         /// <param name="cancellationToken">
-        /// A <see cref="CancellationToken"/> to use for this RPC.
+        /// A <see cref="st::CancellationToken"/> to use for this RPC.
         /// </param>
         /// <returns>
         /// A Task that completes when the RPC has completed.
         /// </returns>
-        public virtual Task DeleteAlertPolicyAsync(
+        public virtual stt::Task DeleteAlertPolicyAsync(
             AlertPolicyName name,
-            CancellationToken cancellationToken) => DeleteAlertPolicyAsync(
+            st::CancellationToken cancellationToken) => DeleteAlertPolicyAsync(
                 name,
-                CallSettings.FromCancellationToken(cancellationToken));
+                gaxgrpc::CallSettings.FromCancellationToken(cancellationToken));
 
         /// <summary>
         /// Deletes an alerting policy.
@@ -838,10 +838,10 @@ namespace Google.Cloud.Monitoring.V3
         /// </param>
         public virtual void DeleteAlertPolicy(
             AlertPolicyName name,
-            CallSettings callSettings = null) => DeleteAlertPolicy(
+            gaxgrpc::CallSettings callSettings = null) => DeleteAlertPolicy(
                 new DeleteAlertPolicyRequest
                 {
-                    AlertPolicyName = GaxPreconditions.CheckNotNull(name, nameof(name)),
+                    AlertPolicyName = gax::GaxPreconditions.CheckNotNull(name, nameof(name)),
                 },
                 callSettings);
 
@@ -857,11 +857,11 @@ namespace Google.Cloud.Monitoring.V3
         /// <returns>
         /// A Task that completes when the RPC has completed.
         /// </returns>
-        public virtual Task DeleteAlertPolicyAsync(
+        public virtual stt::Task DeleteAlertPolicyAsync(
             DeleteAlertPolicyRequest request,
-            CallSettings callSettings = null)
+            gaxgrpc::CallSettings callSettings = null)
         {
-            throw new NotImplementedException();
+            throw new s::NotImplementedException();
         }
 
         /// <summary>
@@ -871,16 +871,16 @@ namespace Google.Cloud.Monitoring.V3
         /// The request object containing all of the parameters for the API call.
         /// </param>
         /// <param name="cancellationToken">
-        /// A <see cref="CancellationToken"/> to use for this RPC.
+        /// A <see cref="st::CancellationToken"/> to use for this RPC.
         /// </param>
         /// <returns>
         /// A Task that completes when the RPC has completed.
         /// </returns>
-        public virtual Task DeleteAlertPolicyAsync(
+        public virtual stt::Task DeleteAlertPolicyAsync(
             DeleteAlertPolicyRequest request,
-            CancellationToken cancellationToken) => DeleteAlertPolicyAsync(
+            st::CancellationToken cancellationToken) => DeleteAlertPolicyAsync(
                 request,
-                CallSettings.FromCancellationToken(cancellationToken));
+                gaxgrpc::CallSettings.FromCancellationToken(cancellationToken));
 
         /// <summary>
         /// Deletes an alerting policy.
@@ -893,9 +893,9 @@ namespace Google.Cloud.Monitoring.V3
         /// </param>
         public virtual void DeleteAlertPolicy(
             DeleteAlertPolicyRequest request,
-            CallSettings callSettings = null)
+            gaxgrpc::CallSettings callSettings = null)
         {
-            throw new NotImplementedException();
+            throw new s::NotImplementedException();
         }
 
         /// <summary>
@@ -939,14 +939,14 @@ namespace Google.Cloud.Monitoring.V3
         /// <returns>
         /// A Task containing the RPC response.
         /// </returns>
-        public virtual Task<AlertPolicy> UpdateAlertPolicyAsync(
-            FieldMask updateMask,
+        public virtual stt::Task<AlertPolicy> UpdateAlertPolicyAsync(
+            protowkt::FieldMask updateMask,
             AlertPolicy alertPolicy,
-            CallSettings callSettings = null) => UpdateAlertPolicyAsync(
+            gaxgrpc::CallSettings callSettings = null) => UpdateAlertPolicyAsync(
                 new UpdateAlertPolicyRequest
                 {
                     UpdateMask = updateMask, // Optional
-                    AlertPolicy = GaxPreconditions.CheckNotNull(alertPolicy, nameof(alertPolicy)),
+                    AlertPolicy = gax::GaxPreconditions.CheckNotNull(alertPolicy, nameof(alertPolicy)),
                 },
                 callSettings);
 
@@ -986,18 +986,18 @@ namespace Google.Cloud.Monitoring.V3
         /// not in `update_mask` are ignored.
         /// </param>
         /// <param name="cancellationToken">
-        /// A <see cref="CancellationToken"/> to use for this RPC.
+        /// A <see cref="st::CancellationToken"/> to use for this RPC.
         /// </param>
         /// <returns>
         /// A Task containing the RPC response.
         /// </returns>
-        public virtual Task<AlertPolicy> UpdateAlertPolicyAsync(
-            FieldMask updateMask,
+        public virtual stt::Task<AlertPolicy> UpdateAlertPolicyAsync(
+            protowkt::FieldMask updateMask,
             AlertPolicy alertPolicy,
-            CancellationToken cancellationToken) => UpdateAlertPolicyAsync(
+            st::CancellationToken cancellationToken) => UpdateAlertPolicyAsync(
                 updateMask,
                 alertPolicy,
-                CallSettings.FromCancellationToken(cancellationToken));
+                gaxgrpc::CallSettings.FromCancellationToken(cancellationToken));
 
         /// <summary>
         /// Updates an alerting policy. You can either replace the entire policy with
@@ -1041,13 +1041,13 @@ namespace Google.Cloud.Monitoring.V3
         /// The RPC response.
         /// </returns>
         public virtual AlertPolicy UpdateAlertPolicy(
-            FieldMask updateMask,
+            protowkt::FieldMask updateMask,
             AlertPolicy alertPolicy,
-            CallSettings callSettings = null) => UpdateAlertPolicy(
+            gaxgrpc::CallSettings callSettings = null) => UpdateAlertPolicy(
                 new UpdateAlertPolicyRequest
                 {
                     UpdateMask = updateMask, // Optional
-                    AlertPolicy = GaxPreconditions.CheckNotNull(alertPolicy, nameof(alertPolicy)),
+                    AlertPolicy = gax::GaxPreconditions.CheckNotNull(alertPolicy, nameof(alertPolicy)),
                 },
                 callSettings);
 
@@ -1066,11 +1066,11 @@ namespace Google.Cloud.Monitoring.V3
         /// <returns>
         /// A Task containing the RPC response.
         /// </returns>
-        public virtual Task<AlertPolicy> UpdateAlertPolicyAsync(
+        public virtual stt::Task<AlertPolicy> UpdateAlertPolicyAsync(
             UpdateAlertPolicyRequest request,
-            CallSettings callSettings = null)
+            gaxgrpc::CallSettings callSettings = null)
         {
-            throw new NotImplementedException();
+            throw new s::NotImplementedException();
         }
 
         /// <summary>
@@ -1083,16 +1083,16 @@ namespace Google.Cloud.Monitoring.V3
         /// The request object containing all of the parameters for the API call.
         /// </param>
         /// <param name="cancellationToken">
-        /// A <see cref="CancellationToken"/> to use for this RPC.
+        /// A <see cref="st::CancellationToken"/> to use for this RPC.
         /// </param>
         /// <returns>
         /// A Task containing the RPC response.
         /// </returns>
-        public virtual Task<AlertPolicy> UpdateAlertPolicyAsync(
+        public virtual stt::Task<AlertPolicy> UpdateAlertPolicyAsync(
             UpdateAlertPolicyRequest request,
-            CancellationToken cancellationToken) => UpdateAlertPolicyAsync(
+            st::CancellationToken cancellationToken) => UpdateAlertPolicyAsync(
                 request,
-                CallSettings.FromCancellationToken(cancellationToken));
+                gaxgrpc::CallSettings.FromCancellationToken(cancellationToken));
 
         /// <summary>
         /// Updates an alerting policy. You can either replace the entire policy with
@@ -1111,9 +1111,9 @@ namespace Google.Cloud.Monitoring.V3
         /// </returns>
         public virtual AlertPolicy UpdateAlertPolicy(
             UpdateAlertPolicyRequest request,
-            CallSettings callSettings = null)
+            gaxgrpc::CallSettings callSettings = null)
         {
-            throw new NotImplementedException();
+            throw new s::NotImplementedException();
         }
 
     }
@@ -1123,11 +1123,11 @@ namespace Google.Cloud.Monitoring.V3
     /// </summary>
     public sealed partial class AlertPolicyServiceClientImpl : AlertPolicyServiceClient
     {
-        private readonly ApiCall<ListAlertPoliciesRequest, ListAlertPoliciesResponse> _callListAlertPolicies;
-        private readonly ApiCall<GetAlertPolicyRequest, AlertPolicy> _callGetAlertPolicy;
-        private readonly ApiCall<CreateAlertPolicyRequest, AlertPolicy> _callCreateAlertPolicy;
-        private readonly ApiCall<DeleteAlertPolicyRequest, Empty> _callDeleteAlertPolicy;
-        private readonly ApiCall<UpdateAlertPolicyRequest, AlertPolicy> _callUpdateAlertPolicy;
+        private readonly gaxgrpc::ApiCall<ListAlertPoliciesRequest, ListAlertPoliciesResponse> _callListAlertPolicies;
+        private readonly gaxgrpc::ApiCall<GetAlertPolicyRequest, AlertPolicy> _callGetAlertPolicy;
+        private readonly gaxgrpc::ApiCall<CreateAlertPolicyRequest, AlertPolicy> _callCreateAlertPolicy;
+        private readonly gaxgrpc::ApiCall<DeleteAlertPolicyRequest, protowkt::Empty> _callDeleteAlertPolicy;
+        private readonly gaxgrpc::ApiCall<UpdateAlertPolicyRequest, AlertPolicy> _callUpdateAlertPolicy;
 
         /// <summary>
         /// Constructs a client wrapper for the AlertPolicyService service, with the specified gRPC client and settings.
@@ -1138,14 +1138,14 @@ namespace Google.Cloud.Monitoring.V3
         {
             GrpcClient = grpcClient;
             AlertPolicyServiceSettings effectiveSettings = settings ?? AlertPolicyServiceSettings.GetDefault();
-            ClientHelper clientHelper = new ClientHelper(effectiveSettings);
+            gaxgrpc::ClientHelper clientHelper = new gaxgrpc::ClientHelper(effectiveSettings);
             _callListAlertPolicies = clientHelper.BuildApiCall<ListAlertPoliciesRequest, ListAlertPoliciesResponse>(
                 GrpcClient.ListAlertPoliciesAsync, GrpcClient.ListAlertPolicies, effectiveSettings.ListAlertPoliciesSettings);
             _callGetAlertPolicy = clientHelper.BuildApiCall<GetAlertPolicyRequest, AlertPolicy>(
                 GrpcClient.GetAlertPolicyAsync, GrpcClient.GetAlertPolicy, effectiveSettings.GetAlertPolicySettings);
             _callCreateAlertPolicy = clientHelper.BuildApiCall<CreateAlertPolicyRequest, AlertPolicy>(
                 GrpcClient.CreateAlertPolicyAsync, GrpcClient.CreateAlertPolicy, effectiveSettings.CreateAlertPolicySettings);
-            _callDeleteAlertPolicy = clientHelper.BuildApiCall<DeleteAlertPolicyRequest, Empty>(
+            _callDeleteAlertPolicy = clientHelper.BuildApiCall<DeleteAlertPolicyRequest, protowkt::Empty>(
                 GrpcClient.DeleteAlertPolicyAsync, GrpcClient.DeleteAlertPolicy, effectiveSettings.DeleteAlertPolicySettings);
             _callUpdateAlertPolicy = clientHelper.BuildApiCall<UpdateAlertPolicyRequest, AlertPolicy>(
                 GrpcClient.UpdateAlertPolicyAsync, GrpcClient.UpdateAlertPolicy, effectiveSettings.UpdateAlertPolicySettings);
@@ -1166,18 +1166,18 @@ namespace Google.Cloud.Monitoring.V3
 
         // Partial methods called for every ApiCall on construction.
         // Allows modification of all the underlying ApiCall objects.
-        partial void Modify_ApiCall<TRequest, TResponse>(ref ApiCall<TRequest, TResponse> call)
-            where TRequest : class, IMessage<TRequest>
-            where TResponse : class, IMessage<TResponse>;
+        partial void Modify_ApiCall<TRequest, TResponse>(ref gaxgrpc::ApiCall<TRequest, TResponse> call)
+            where TRequest : class, proto::IMessage<TRequest>
+            where TResponse : class, proto::IMessage<TResponse>;
 
         // Partial methods called for each ApiCall on construction.
         // Allows per-RPC-method modification of the underlying ApiCall object.
-        partial void Modify_ListAlertPoliciesApiCall(ref ApiCall<ListAlertPoliciesRequest, ListAlertPoliciesResponse> call);
-        partial void Modify_GetAlertPolicyApiCall(ref ApiCall<GetAlertPolicyRequest, AlertPolicy> call);
-        partial void Modify_CreateAlertPolicyApiCall(ref ApiCall<CreateAlertPolicyRequest, AlertPolicy> call);
-        partial void Modify_DeleteAlertPolicyApiCall(ref ApiCall<DeleteAlertPolicyRequest, Empty> call);
-        partial void Modify_UpdateAlertPolicyApiCall(ref ApiCall<UpdateAlertPolicyRequest, AlertPolicy> call);
-        partial void OnConstruction(AlertPolicyService.AlertPolicyServiceClient grpcClient, AlertPolicyServiceSettings effectiveSettings, ClientHelper clientHelper);
+        partial void Modify_ListAlertPoliciesApiCall(ref gaxgrpc::ApiCall<ListAlertPoliciesRequest, ListAlertPoliciesResponse> call);
+        partial void Modify_GetAlertPolicyApiCall(ref gaxgrpc::ApiCall<GetAlertPolicyRequest, AlertPolicy> call);
+        partial void Modify_CreateAlertPolicyApiCall(ref gaxgrpc::ApiCall<CreateAlertPolicyRequest, AlertPolicy> call);
+        partial void Modify_DeleteAlertPolicyApiCall(ref gaxgrpc::ApiCall<DeleteAlertPolicyRequest, protowkt::Empty> call);
+        partial void Modify_UpdateAlertPolicyApiCall(ref gaxgrpc::ApiCall<UpdateAlertPolicyRequest, AlertPolicy> call);
+        partial void OnConstruction(AlertPolicyService.AlertPolicyServiceClient grpcClient, AlertPolicyServiceSettings effectiveSettings, gaxgrpc::ClientHelper clientHelper);
 
         /// <summary>
         /// The underlying gRPC AlertPolicyService client.
@@ -1187,11 +1187,11 @@ namespace Google.Cloud.Monitoring.V3
         // Partial methods called on each request.
         // Allows per-RPC-call modification to the request and CallSettings objects,
         // before the underlying RPC is performed.
-        partial void Modify_ListAlertPoliciesRequest(ref ListAlertPoliciesRequest request, ref CallSettings settings);
-        partial void Modify_GetAlertPolicyRequest(ref GetAlertPolicyRequest request, ref CallSettings settings);
-        partial void Modify_CreateAlertPolicyRequest(ref CreateAlertPolicyRequest request, ref CallSettings settings);
-        partial void Modify_DeleteAlertPolicyRequest(ref DeleteAlertPolicyRequest request, ref CallSettings settings);
-        partial void Modify_UpdateAlertPolicyRequest(ref UpdateAlertPolicyRequest request, ref CallSettings settings);
+        partial void Modify_ListAlertPoliciesRequest(ref ListAlertPoliciesRequest request, ref gaxgrpc::CallSettings settings);
+        partial void Modify_GetAlertPolicyRequest(ref GetAlertPolicyRequest request, ref gaxgrpc::CallSettings settings);
+        partial void Modify_CreateAlertPolicyRequest(ref CreateAlertPolicyRequest request, ref gaxgrpc::CallSettings settings);
+        partial void Modify_DeleteAlertPolicyRequest(ref DeleteAlertPolicyRequest request, ref gaxgrpc::CallSettings settings);
+        partial void Modify_UpdateAlertPolicyRequest(ref UpdateAlertPolicyRequest request, ref gaxgrpc::CallSettings settings);
 
         /// <summary>
         /// Lists the existing alerting policies for the project.
@@ -1205,12 +1205,12 @@ namespace Google.Cloud.Monitoring.V3
         /// <returns>
         /// A pageable asynchronous sequence of <see cref="AlertPolicy"/> resources.
         /// </returns>
-        public override PagedAsyncEnumerable<ListAlertPoliciesResponse, AlertPolicy> ListAlertPoliciesAsync(
+        public override gax::PagedAsyncEnumerable<ListAlertPoliciesResponse, AlertPolicy> ListAlertPoliciesAsync(
             ListAlertPoliciesRequest request,
-            CallSettings callSettings = null)
+            gaxgrpc::CallSettings callSettings = null)
         {
             Modify_ListAlertPoliciesRequest(ref request, ref callSettings);
-            return new GrpcPagedAsyncEnumerable<ListAlertPoliciesRequest, ListAlertPoliciesResponse, AlertPolicy>(_callListAlertPolicies, request, callSettings);
+            return new gaxgrpc::GrpcPagedAsyncEnumerable<ListAlertPoliciesRequest, ListAlertPoliciesResponse, AlertPolicy>(_callListAlertPolicies, request, callSettings);
         }
 
         /// <summary>
@@ -1225,12 +1225,12 @@ namespace Google.Cloud.Monitoring.V3
         /// <returns>
         /// A pageable sequence of <see cref="AlertPolicy"/> resources.
         /// </returns>
-        public override PagedEnumerable<ListAlertPoliciesResponse, AlertPolicy> ListAlertPolicies(
+        public override gax::PagedEnumerable<ListAlertPoliciesResponse, AlertPolicy> ListAlertPolicies(
             ListAlertPoliciesRequest request,
-            CallSettings callSettings = null)
+            gaxgrpc::CallSettings callSettings = null)
         {
             Modify_ListAlertPoliciesRequest(ref request, ref callSettings);
-            return new GrpcPagedEnumerable<ListAlertPoliciesRequest, ListAlertPoliciesResponse, AlertPolicy>(_callListAlertPolicies, request, callSettings);
+            return new gaxgrpc::GrpcPagedEnumerable<ListAlertPoliciesRequest, ListAlertPoliciesResponse, AlertPolicy>(_callListAlertPolicies, request, callSettings);
         }
 
         /// <summary>
@@ -1245,9 +1245,9 @@ namespace Google.Cloud.Monitoring.V3
         /// <returns>
         /// A Task containing the RPC response.
         /// </returns>
-        public override Task<AlertPolicy> GetAlertPolicyAsync(
+        public override stt::Task<AlertPolicy> GetAlertPolicyAsync(
             GetAlertPolicyRequest request,
-            CallSettings callSettings = null)
+            gaxgrpc::CallSettings callSettings = null)
         {
             Modify_GetAlertPolicyRequest(ref request, ref callSettings);
             return _callGetAlertPolicy.Async(request, callSettings);
@@ -1267,7 +1267,7 @@ namespace Google.Cloud.Monitoring.V3
         /// </returns>
         public override AlertPolicy GetAlertPolicy(
             GetAlertPolicyRequest request,
-            CallSettings callSettings = null)
+            gaxgrpc::CallSettings callSettings = null)
         {
             Modify_GetAlertPolicyRequest(ref request, ref callSettings);
             return _callGetAlertPolicy.Sync(request, callSettings);
@@ -1285,9 +1285,9 @@ namespace Google.Cloud.Monitoring.V3
         /// <returns>
         /// A Task containing the RPC response.
         /// </returns>
-        public override Task<AlertPolicy> CreateAlertPolicyAsync(
+        public override stt::Task<AlertPolicy> CreateAlertPolicyAsync(
             CreateAlertPolicyRequest request,
-            CallSettings callSettings = null)
+            gaxgrpc::CallSettings callSettings = null)
         {
             Modify_CreateAlertPolicyRequest(ref request, ref callSettings);
             return _callCreateAlertPolicy.Async(request, callSettings);
@@ -1307,7 +1307,7 @@ namespace Google.Cloud.Monitoring.V3
         /// </returns>
         public override AlertPolicy CreateAlertPolicy(
             CreateAlertPolicyRequest request,
-            CallSettings callSettings = null)
+            gaxgrpc::CallSettings callSettings = null)
         {
             Modify_CreateAlertPolicyRequest(ref request, ref callSettings);
             return _callCreateAlertPolicy.Sync(request, callSettings);
@@ -1325,9 +1325,9 @@ namespace Google.Cloud.Monitoring.V3
         /// <returns>
         /// A Task that completes when the RPC has completed.
         /// </returns>
-        public override Task DeleteAlertPolicyAsync(
+        public override stt::Task DeleteAlertPolicyAsync(
             DeleteAlertPolicyRequest request,
-            CallSettings callSettings = null)
+            gaxgrpc::CallSettings callSettings = null)
         {
             Modify_DeleteAlertPolicyRequest(ref request, ref callSettings);
             return _callDeleteAlertPolicy.Async(request, callSettings);
@@ -1344,7 +1344,7 @@ namespace Google.Cloud.Monitoring.V3
         /// </param>
         public override void DeleteAlertPolicy(
             DeleteAlertPolicyRequest request,
-            CallSettings callSettings = null)
+            gaxgrpc::CallSettings callSettings = null)
         {
             Modify_DeleteAlertPolicyRequest(ref request, ref callSettings);
             _callDeleteAlertPolicy.Sync(request, callSettings);
@@ -1365,9 +1365,9 @@ namespace Google.Cloud.Monitoring.V3
         /// <returns>
         /// A Task containing the RPC response.
         /// </returns>
-        public override Task<AlertPolicy> UpdateAlertPolicyAsync(
+        public override stt::Task<AlertPolicy> UpdateAlertPolicyAsync(
             UpdateAlertPolicyRequest request,
-            CallSettings callSettings = null)
+            gaxgrpc::CallSettings callSettings = null)
         {
             Modify_UpdateAlertPolicyRequest(ref request, ref callSettings);
             return _callUpdateAlertPolicy.Async(request, callSettings);
@@ -1390,7 +1390,7 @@ namespace Google.Cloud.Monitoring.V3
         /// </returns>
         public override AlertPolicy UpdateAlertPolicy(
             UpdateAlertPolicyRequest request,
-            CallSettings callSettings = null)
+            gaxgrpc::CallSettings callSettings = null)
         {
             Modify_UpdateAlertPolicyRequest(ref request, ref callSettings);
             return _callUpdateAlertPolicy.Sync(request, callSettings);
@@ -1400,16 +1400,16 @@ namespace Google.Cloud.Monitoring.V3
 
     // Partial classes to enable page-streaming
 
-    public partial class ListAlertPoliciesRequest : IPageRequest { }
-    public partial class ListAlertPoliciesResponse : IPageResponse<AlertPolicy>
+    public partial class ListAlertPoliciesRequest : gaxgrpc::IPageRequest { }
+    public partial class ListAlertPoliciesResponse : gaxgrpc::IPageResponse<AlertPolicy>
     {
         /// <summary>
         /// Returns an enumerator that iterates through the resources in this response.
         /// </summary>
-        public IEnumerator<AlertPolicy> GetEnumerator() => AlertPolicies.GetEnumerator();
+        public scg::IEnumerator<AlertPolicy> GetEnumerator() => AlertPolicies.GetEnumerator();
 
         /// <inheritdoc/>
-        IEnumerator IEnumerable.GetEnumerator() => GetEnumerator();
+        sc::IEnumerator sc::IEnumerable.GetEnumerator() => GetEnumerator();
     }
 
 

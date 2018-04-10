@@ -14,8 +14,8 @@
 
 // Generated code. DO NOT EDIT!
 
-using Google.Api.Gax;
-using System;
+using gax = Google.Api.Gax;
+using s = System;
 using System.Linq;
 
 namespace Google.Cloud.Bigtable.V2
@@ -23,9 +23,9 @@ namespace Google.Cloud.Bigtable.V2
     /// <summary>
     /// Resource name for the 'table' resource.
     /// </summary>
-    public sealed partial class TableName : IResourceName, IEquatable<TableName>
+    public sealed partial class TableName : gax::IResourceName, s::IEquatable<TableName>
     {
-        private static readonly PathTemplate s_template = new PathTemplate("projects/{project}/instances/{instance}/tables/{table}");
+        private static readonly gax::PathTemplate s_template = new gax::PathTemplate("projects/{project}/instances/{instance}/tables/{table}");
 
         /// <summary>
         /// Parses the given table resource name in string form into a new
@@ -35,8 +35,8 @@ namespace Google.Cloud.Bigtable.V2
         /// <returns>The parsed <see cref="TableName"/> if successful.</returns>
         public static TableName Parse(string tableName)
         {
-            GaxPreconditions.CheckNotNull(tableName, nameof(tableName));
-            TemplatedResourceName resourceName = s_template.ParseName(tableName);
+            gax::GaxPreconditions.CheckNotNull(tableName, nameof(tableName));
+            gax::TemplatedResourceName resourceName = s_template.ParseName(tableName);
             return new TableName(resourceName[0], resourceName[1], resourceName[2]);
         }
 
@@ -45,7 +45,7 @@ namespace Google.Cloud.Bigtable.V2
         /// <see cref="TableName"/> instance.
         /// </summary>
         /// <remarks>
-        /// This method still throws <see cref="ArgumentNullException"/> if <paramref name="tableName"/> is null,
+        /// This method still throws <see cref="s::ArgumentNullException"/> if <paramref name="tableName"/> is null,
         /// as this would usually indicate a programming error rather than a data error.
         /// </remarks>
         /// <param name="tableName">The table resource name in string form. Must not be <c>null</c>.</param>
@@ -54,8 +54,8 @@ namespace Google.Cloud.Bigtable.V2
         /// <returns><c>true</c> if the name was parsed succssfully; <c>false</c> otherwise.</returns>
         public static bool TryParse(string tableName, out TableName result)
         {
-            GaxPreconditions.CheckNotNull(tableName, nameof(tableName));
-            TemplatedResourceName resourceName;
+            gax::GaxPreconditions.CheckNotNull(tableName, nameof(tableName));
+            gax::TemplatedResourceName resourceName;
             if (s_template.TryParseName(tableName, out resourceName))
             {
                 result = new TableName(resourceName[0], resourceName[1], resourceName[2]);
@@ -77,9 +77,9 @@ namespace Google.Cloud.Bigtable.V2
         /// <param name="tableId">The table ID. Must not be <c>null</c>.</param>
         public TableName(string projectId, string instanceId, string tableId)
         {
-            ProjectId = GaxPreconditions.CheckNotNull(projectId, nameof(projectId));
-            InstanceId = GaxPreconditions.CheckNotNull(instanceId, nameof(instanceId));
-            TableId = GaxPreconditions.CheckNotNull(tableId, nameof(tableId));
+            ProjectId = gax::GaxPreconditions.CheckNotNull(projectId, nameof(projectId));
+            InstanceId = gax::GaxPreconditions.CheckNotNull(instanceId, nameof(instanceId));
+            TableId = gax::GaxPreconditions.CheckNotNull(tableId, nameof(tableId));
         }
 
         /// <summary>
@@ -98,7 +98,7 @@ namespace Google.Cloud.Bigtable.V2
         public string TableId { get; }
 
         /// <inheritdoc />
-        public ResourceNameKind Kind => ResourceNameKind.Simple;
+        public gax::ResourceNameKind Kind => gax::ResourceNameKind.Simple;
 
         /// <inheritdoc />
         public override string ToString() => s_template.Expand(ProjectId, InstanceId, TableId);

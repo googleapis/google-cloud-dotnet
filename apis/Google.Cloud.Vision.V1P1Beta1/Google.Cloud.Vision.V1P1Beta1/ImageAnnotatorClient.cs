@@ -14,24 +14,24 @@
 
 // Generated code. DO NOT EDIT!
 
-using Google.Api.Gax;
-using Google.Api.Gax.Grpc;
-using Google.Protobuf;
-using Google.Protobuf.WellKnownTypes;
-using Grpc.Core;
-using System;
-using System.Collections;
-using System.Collections.Generic;
-using System.Collections.ObjectModel;
-using System.Threading;
-using System.Threading.Tasks;
+using gax = Google.Api.Gax;
+using gaxgrpc = Google.Api.Gax.Grpc;
+using proto = Google.Protobuf;
+using protowkt = Google.Protobuf.WellKnownTypes;
+using grpccore = Grpc.Core;
+using s = System;
+using sc = System.Collections;
+using scg = System.Collections.Generic;
+using sco = System.Collections.ObjectModel;
+using st = System.Threading;
+using stt = System.Threading.Tasks;
 
 namespace Google.Cloud.Vision.V1P1Beta1
 {
     /// <summary>
     /// Settings for a <see cref="ImageAnnotatorClient"/>.
     /// </summary>
-    public sealed partial class ImageAnnotatorSettings : ServiceSettingsBase
+    public sealed partial class ImageAnnotatorSettings : gaxgrpc::ServiceSettingsBase
     {
         /// <summary>
         /// Get a new instance of the default <see cref="ImageAnnotatorSettings"/>.
@@ -48,7 +48,7 @@ namespace Google.Cloud.Vision.V1P1Beta1
 
         private ImageAnnotatorSettings(ImageAnnotatorSettings existing) : base(existing)
         {
-            GaxPreconditions.CheckNotNull(existing, nameof(existing));
+            gax::GaxPreconditions.CheckNotNull(existing, nameof(existing));
             BatchAnnotateImagesSettings = existing.BatchAnnotateImagesSettings;
             OnCopy(existing);
         }
@@ -56,28 +56,28 @@ namespace Google.Cloud.Vision.V1P1Beta1
         partial void OnCopy(ImageAnnotatorSettings existing);
 
         /// <summary>
-        /// The filter specifying which RPC <see cref="StatusCode"/>s are eligible for retry
+        /// The filter specifying which RPC <see cref="grpccore::StatusCode"/>s are eligible for retry
         /// for "Idempotent" <see cref="ImageAnnotatorClient"/> RPC methods.
         /// </summary>
         /// <remarks>
-        /// The eligible RPC <see cref="StatusCode"/>s for retry for "Idempotent" RPC methods are:
+        /// The eligible RPC <see cref="grpccore::StatusCode"/>s for retry for "Idempotent" RPC methods are:
         /// <list type="bullet">
-        /// <item><description><see cref="StatusCode.DeadlineExceeded"/></description></item>
-        /// <item><description><see cref="StatusCode.Unavailable"/></description></item>
+        /// <item><description><see cref="grpccore::StatusCode.DeadlineExceeded"/></description></item>
+        /// <item><description><see cref="grpccore::StatusCode.Unavailable"/></description></item>
         /// </list>
         /// </remarks>
-        public static Predicate<RpcException> IdempotentRetryFilter { get; } =
-            RetrySettings.FilterForStatusCodes(StatusCode.DeadlineExceeded, StatusCode.Unavailable);
+        public static s::Predicate<grpccore::RpcException> IdempotentRetryFilter { get; } =
+            gaxgrpc::RetrySettings.FilterForStatusCodes(grpccore::StatusCode.DeadlineExceeded, grpccore::StatusCode.Unavailable);
 
         /// <summary>
-        /// The filter specifying which RPC <see cref="StatusCode"/>s are eligible for retry
+        /// The filter specifying which RPC <see cref="grpccore::StatusCode"/>s are eligible for retry
         /// for "NonIdempotent" <see cref="ImageAnnotatorClient"/> RPC methods.
         /// </summary>
         /// <remarks>
-        /// There are no RPC <see cref="StatusCode"/>s eligible for retry for "NonIdempotent" RPC methods.
+        /// There are no RPC <see cref="grpccore::StatusCode"/>s eligible for retry for "NonIdempotent" RPC methods.
         /// </remarks>
-        public static Predicate<RpcException> NonIdempotentRetryFilter { get; } =
-            RetrySettings.FilterForStatusCodes();
+        public static s::Predicate<grpccore::RpcException> NonIdempotentRetryFilter { get; } =
+            gaxgrpc::RetrySettings.FilterForStatusCodes();
 
         /// <summary>
         /// "Default" retry backoff for <see cref="ImageAnnotatorClient"/> RPC methods.
@@ -93,9 +93,9 @@ namespace Google.Cloud.Vision.V1P1Beta1
         /// <item><description>Delay multiplier: 1.3</description></item>
         /// </list>
         /// </remarks>
-        public static BackoffSettings GetDefaultRetryBackoff() => new BackoffSettings(
-            delay: TimeSpan.FromMilliseconds(100),
-            maxDelay: TimeSpan.FromMilliseconds(60000),
+        public static gaxgrpc::BackoffSettings GetDefaultRetryBackoff() => new gaxgrpc::BackoffSettings(
+            delay: s::TimeSpan.FromMilliseconds(100),
+            maxDelay: s::TimeSpan.FromMilliseconds(60000),
             delayMultiplier: 1.3
         );
 
@@ -113,19 +113,19 @@ namespace Google.Cloud.Vision.V1P1Beta1
         /// <item><description>Maximum timeout: 60000 milliseconds</description></item>
         /// </list>
         /// </remarks>
-        public static BackoffSettings GetDefaultTimeoutBackoff() => new BackoffSettings(
-            delay: TimeSpan.FromMilliseconds(60000),
-            maxDelay: TimeSpan.FromMilliseconds(60000),
+        public static gaxgrpc::BackoffSettings GetDefaultTimeoutBackoff() => new gaxgrpc::BackoffSettings(
+            delay: s::TimeSpan.FromMilliseconds(60000),
+            maxDelay: s::TimeSpan.FromMilliseconds(60000),
             delayMultiplier: 1.0
         );
 
         /// <summary>
-        /// <see cref="CallSettings"/> for synchronous and asynchronous calls to
+        /// <see cref="gaxgrpc::CallSettings"/> for synchronous and asynchronous calls to
         /// <c>ImageAnnotatorClient.BatchAnnotateImages</c> and <c>ImageAnnotatorClient.BatchAnnotateImagesAsync</c>.
         /// </summary>
         /// <remarks>
         /// The default <c>ImageAnnotatorClient.BatchAnnotateImages</c> and
-        /// <c>ImageAnnotatorClient.BatchAnnotateImagesAsync</c> <see cref="RetrySettings"/> are:
+        /// <c>ImageAnnotatorClient.BatchAnnotateImagesAsync</c> <see cref="gaxgrpc::RetrySettings"/> are:
         /// <list type="bullet">
         /// <item><description>Initial retry delay: 100 milliseconds</description></item>
         /// <item><description>Retry delay multiplier: 1.3</description></item>
@@ -136,16 +136,16 @@ namespace Google.Cloud.Vision.V1P1Beta1
         /// </list>
         /// Retry will be attempted on the following response status codes:
         /// <list>
-        /// <item><description><see cref="StatusCode.DeadlineExceeded"/></description></item>
-        /// <item><description><see cref="StatusCode.Unavailable"/></description></item>
+        /// <item><description><see cref="grpccore::StatusCode.DeadlineExceeded"/></description></item>
+        /// <item><description><see cref="grpccore::StatusCode.Unavailable"/></description></item>
         /// </list>
         /// Default RPC expiration is 600000 milliseconds.
         /// </remarks>
-        public CallSettings BatchAnnotateImagesSettings { get; set; } = CallSettings.FromCallTiming(
-            CallTiming.FromRetry(new RetrySettings(
+        public gaxgrpc::CallSettings BatchAnnotateImagesSettings { get; set; } = gaxgrpc::CallSettings.FromCallTiming(
+            gaxgrpc::CallTiming.FromRetry(new gaxgrpc::RetrySettings(
                 retryBackoff: GetDefaultRetryBackoff(),
                 timeoutBackoff: GetDefaultTimeoutBackoff(),
-                totalExpiration: Expiration.FromTimeout(TimeSpan.FromMilliseconds(600000)),
+                totalExpiration: gax::Expiration.FromTimeout(s::TimeSpan.FromMilliseconds(600000)),
                 retryFilter: IdempotentRetryFilter
             )));
 
@@ -164,7 +164,7 @@ namespace Google.Cloud.Vision.V1P1Beta1
         /// <summary>
         /// The default endpoint for the ImageAnnotator service, which is a host of "vision.googleapis.com" and a port of 443.
         /// </summary>
-        public static ServiceEndpoint DefaultEndpoint { get; } = new ServiceEndpoint("vision.googleapis.com", 443);
+        public static gaxgrpc::ServiceEndpoint DefaultEndpoint { get; } = new gaxgrpc::ServiceEndpoint("vision.googleapis.com", 443);
 
         /// <summary>
         /// The default ImageAnnotator scopes.
@@ -176,12 +176,12 @@ namespace Google.Cloud.Vision.V1P1Beta1
         /// <item><description>"https://www.googleapis.com/auth/cloud-vision"</description></item>
         /// </list>
         /// </remarks>
-        public static IReadOnlyList<string> DefaultScopes { get; } = new ReadOnlyCollection<string>(new string[] {
+        public static scg::IReadOnlyList<string> DefaultScopes { get; } = new sco::ReadOnlyCollection<string>(new string[] {
             "https://www.googleapis.com/auth/cloud-platform",
             "https://www.googleapis.com/auth/cloud-vision",
         });
 
-        private static readonly ChannelPool s_channelPool = new ChannelPool(DefaultScopes);
+        private static readonly gaxgrpc::ChannelPool s_channelPool = new gaxgrpc::ChannelPool(DefaultScopes);
 
         // Note: we could have parameterless overloads of Create and CreateAsync,
         // documented to just use the default endpoint, settings and credentials.
@@ -195,12 +195,12 @@ namespace Google.Cloud.Vision.V1P1Beta1
         /// and creating a channel connecting to the given endpoint with application default credentials where
         /// necessary.
         /// </summary>
-        /// <param name="endpoint">Optional <see cref="ServiceEndpoint"/>.</param>
+        /// <param name="endpoint">Optional <see cref="gaxgrpc::ServiceEndpoint"/>.</param>
         /// <param name="settings">Optional <see cref="ImageAnnotatorSettings"/>.</param>
         /// <returns>The task representing the created <see cref="ImageAnnotatorClient"/>.</returns>
-        public static async Task<ImageAnnotatorClient> CreateAsync(ServiceEndpoint endpoint = null, ImageAnnotatorSettings settings = null)
+        public static async stt::Task<ImageAnnotatorClient> CreateAsync(gaxgrpc::ServiceEndpoint endpoint = null, ImageAnnotatorSettings settings = null)
         {
-            Channel channel = await s_channelPool.GetChannelAsync(endpoint ?? DefaultEndpoint).ConfigureAwait(false);
+            grpccore::Channel channel = await s_channelPool.GetChannelAsync(endpoint ?? DefaultEndpoint).ConfigureAwait(false);
             return Create(channel, settings);
         }
 
@@ -209,45 +209,45 @@ namespace Google.Cloud.Vision.V1P1Beta1
         /// and creating a channel connecting to the given endpoint with application default credentials where
         /// necessary.
         /// </summary>
-        /// <param name="endpoint">Optional <see cref="ServiceEndpoint"/>.</param>
+        /// <param name="endpoint">Optional <see cref="gaxgrpc::ServiceEndpoint"/>.</param>
         /// <param name="settings">Optional <see cref="ImageAnnotatorSettings"/>.</param>
         /// <returns>The created <see cref="ImageAnnotatorClient"/>.</returns>
-        public static ImageAnnotatorClient Create(ServiceEndpoint endpoint = null, ImageAnnotatorSettings settings = null)
+        public static ImageAnnotatorClient Create(gaxgrpc::ServiceEndpoint endpoint = null, ImageAnnotatorSettings settings = null)
         {
-            Channel channel = s_channelPool.GetChannel(endpoint ?? DefaultEndpoint);
+            grpccore::Channel channel = s_channelPool.GetChannel(endpoint ?? DefaultEndpoint);
             return Create(channel, settings);
         }
 
         /// <summary>
         /// Creates a <see cref="ImageAnnotatorClient"/> which uses the specified channel for remote operations.
         /// </summary>
-        /// <param name="channel">The <see cref="Channel"/> for remote operations. Must not be null.</param>
+        /// <param name="channel">The <see cref="grpccore::Channel"/> for remote operations. Must not be null.</param>
         /// <param name="settings">Optional <see cref="ImageAnnotatorSettings"/>.</param>
         /// <returns>The created <see cref="ImageAnnotatorClient"/>.</returns>
-        public static ImageAnnotatorClient Create(Channel channel, ImageAnnotatorSettings settings = null)
+        public static ImageAnnotatorClient Create(grpccore::Channel channel, ImageAnnotatorSettings settings = null)
         {
-            GaxPreconditions.CheckNotNull(channel, nameof(channel));
+            gax::GaxPreconditions.CheckNotNull(channel, nameof(channel));
             ImageAnnotator.ImageAnnotatorClient grpcClient = new ImageAnnotator.ImageAnnotatorClient(channel);
             return new ImageAnnotatorClientImpl(grpcClient, settings);
         }
 
         /// <summary>
-        /// Shuts down any channels automatically created by <see cref="Create(ServiceEndpoint, ImageAnnotatorSettings)"/>
-        /// and <see cref="CreateAsync(ServiceEndpoint, ImageAnnotatorSettings)"/>. Channels which weren't automatically
+        /// Shuts down any channels automatically created by <see cref="Create(gaxgrpc::ServiceEndpoint, ImageAnnotatorSettings)"/>
+        /// and <see cref="CreateAsync(gaxgrpc::ServiceEndpoint, ImageAnnotatorSettings)"/>. Channels which weren't automatically
         /// created are not affected.
         /// </summary>
-        /// <remarks>After calling this method, further calls to <see cref="Create(ServiceEndpoint, ImageAnnotatorSettings)"/>
-        /// and <see cref="CreateAsync(ServiceEndpoint, ImageAnnotatorSettings)"/> will create new channels, which could
+        /// <remarks>After calling this method, further calls to <see cref="Create(gaxgrpc::ServiceEndpoint, ImageAnnotatorSettings)"/>
+        /// and <see cref="CreateAsync(gaxgrpc::ServiceEndpoint, ImageAnnotatorSettings)"/> will create new channels, which could
         /// in turn be shut down by another call to this method.</remarks>
         /// <returns>A task representing the asynchronous shutdown operation.</returns>
-        public static Task ShutdownDefaultChannelsAsync() => s_channelPool.ShutdownChannelsAsync();
+        public static stt::Task ShutdownDefaultChannelsAsync() => s_channelPool.ShutdownChannelsAsync();
 
         /// <summary>
         /// The underlying gRPC ImageAnnotator client.
         /// </summary>
         public virtual ImageAnnotator.ImageAnnotatorClient GrpcClient
         {
-            get { throw new NotImplementedException(); }
+            get { throw new s::NotImplementedException(); }
         }
 
         /// <summary>
@@ -262,12 +262,12 @@ namespace Google.Cloud.Vision.V1P1Beta1
         /// <returns>
         /// A Task containing the RPC response.
         /// </returns>
-        public virtual Task<BatchAnnotateImagesResponse> BatchAnnotateImagesAsync(
-            IEnumerable<AnnotateImageRequest> requests,
-            CallSettings callSettings = null) => BatchAnnotateImagesAsync(
+        public virtual stt::Task<BatchAnnotateImagesResponse> BatchAnnotateImagesAsync(
+            scg::IEnumerable<AnnotateImageRequest> requests,
+            gaxgrpc::CallSettings callSettings = null) => BatchAnnotateImagesAsync(
                 new BatchAnnotateImagesRequest
                 {
-                    Requests = { GaxPreconditions.CheckNotNull(requests, nameof(requests)) },
+                    Requests = { gax::GaxPreconditions.CheckNotNull(requests, nameof(requests)) },
                 },
                 callSettings);
 
@@ -278,16 +278,16 @@ namespace Google.Cloud.Vision.V1P1Beta1
         /// Individual image annotation requests for this batch.
         /// </param>
         /// <param name="cancellationToken">
-        /// A <see cref="CancellationToken"/> to use for this RPC.
+        /// A <see cref="st::CancellationToken"/> to use for this RPC.
         /// </param>
         /// <returns>
         /// A Task containing the RPC response.
         /// </returns>
-        public virtual Task<BatchAnnotateImagesResponse> BatchAnnotateImagesAsync(
-            IEnumerable<AnnotateImageRequest> requests,
-            CancellationToken cancellationToken) => BatchAnnotateImagesAsync(
+        public virtual stt::Task<BatchAnnotateImagesResponse> BatchAnnotateImagesAsync(
+            scg::IEnumerable<AnnotateImageRequest> requests,
+            st::CancellationToken cancellationToken) => BatchAnnotateImagesAsync(
                 requests,
-                CallSettings.FromCancellationToken(cancellationToken));
+                gaxgrpc::CallSettings.FromCancellationToken(cancellationToken));
 
         /// <summary>
         /// Run image detection and annotation for a batch of images.
@@ -302,11 +302,11 @@ namespace Google.Cloud.Vision.V1P1Beta1
         /// The RPC response.
         /// </returns>
         public virtual BatchAnnotateImagesResponse BatchAnnotateImages(
-            IEnumerable<AnnotateImageRequest> requests,
-            CallSettings callSettings = null) => BatchAnnotateImages(
+            scg::IEnumerable<AnnotateImageRequest> requests,
+            gaxgrpc::CallSettings callSettings = null) => BatchAnnotateImages(
                 new BatchAnnotateImagesRequest
                 {
-                    Requests = { GaxPreconditions.CheckNotNull(requests, nameof(requests)) },
+                    Requests = { gax::GaxPreconditions.CheckNotNull(requests, nameof(requests)) },
                 },
                 callSettings);
 
@@ -322,11 +322,11 @@ namespace Google.Cloud.Vision.V1P1Beta1
         /// <returns>
         /// A Task containing the RPC response.
         /// </returns>
-        public virtual Task<BatchAnnotateImagesResponse> BatchAnnotateImagesAsync(
+        public virtual stt::Task<BatchAnnotateImagesResponse> BatchAnnotateImagesAsync(
             BatchAnnotateImagesRequest request,
-            CallSettings callSettings = null)
+            gaxgrpc::CallSettings callSettings = null)
         {
-            throw new NotImplementedException();
+            throw new s::NotImplementedException();
         }
 
         /// <summary>
@@ -336,16 +336,16 @@ namespace Google.Cloud.Vision.V1P1Beta1
         /// The request object containing all of the parameters for the API call.
         /// </param>
         /// <param name="cancellationToken">
-        /// A <see cref="CancellationToken"/> to use for this RPC.
+        /// A <see cref="st::CancellationToken"/> to use for this RPC.
         /// </param>
         /// <returns>
         /// A Task containing the RPC response.
         /// </returns>
-        public virtual Task<BatchAnnotateImagesResponse> BatchAnnotateImagesAsync(
+        public virtual stt::Task<BatchAnnotateImagesResponse> BatchAnnotateImagesAsync(
             BatchAnnotateImagesRequest request,
-            CancellationToken cancellationToken) => BatchAnnotateImagesAsync(
+            st::CancellationToken cancellationToken) => BatchAnnotateImagesAsync(
                 request,
-                CallSettings.FromCancellationToken(cancellationToken));
+                gaxgrpc::CallSettings.FromCancellationToken(cancellationToken));
 
         /// <summary>
         /// Run image detection and annotation for a batch of images.
@@ -361,9 +361,9 @@ namespace Google.Cloud.Vision.V1P1Beta1
         /// </returns>
         public virtual BatchAnnotateImagesResponse BatchAnnotateImages(
             BatchAnnotateImagesRequest request,
-            CallSettings callSettings = null)
+            gaxgrpc::CallSettings callSettings = null)
         {
-            throw new NotImplementedException();
+            throw new s::NotImplementedException();
         }
 
     }
@@ -373,7 +373,7 @@ namespace Google.Cloud.Vision.V1P1Beta1
     /// </summary>
     public sealed partial class ImageAnnotatorClientImpl : ImageAnnotatorClient
     {
-        private readonly ApiCall<BatchAnnotateImagesRequest, BatchAnnotateImagesResponse> _callBatchAnnotateImages;
+        private readonly gaxgrpc::ApiCall<BatchAnnotateImagesRequest, BatchAnnotateImagesResponse> _callBatchAnnotateImages;
 
         /// <summary>
         /// Constructs a client wrapper for the ImageAnnotator service, with the specified gRPC client and settings.
@@ -384,7 +384,7 @@ namespace Google.Cloud.Vision.V1P1Beta1
         {
             GrpcClient = grpcClient;
             ImageAnnotatorSettings effectiveSettings = settings ?? ImageAnnotatorSettings.GetDefault();
-            ClientHelper clientHelper = new ClientHelper(effectiveSettings);
+            gaxgrpc::ClientHelper clientHelper = new gaxgrpc::ClientHelper(effectiveSettings);
             _callBatchAnnotateImages = clientHelper.BuildApiCall<BatchAnnotateImagesRequest, BatchAnnotateImagesResponse>(
                 GrpcClient.BatchAnnotateImagesAsync, GrpcClient.BatchAnnotateImages, effectiveSettings.BatchAnnotateImagesSettings);
             Modify_ApiCall(ref _callBatchAnnotateImages);
@@ -396,14 +396,14 @@ namespace Google.Cloud.Vision.V1P1Beta1
 
         // Partial methods called for every ApiCall on construction.
         // Allows modification of all the underlying ApiCall objects.
-        partial void Modify_ApiCall<TRequest, TResponse>(ref ApiCall<TRequest, TResponse> call)
-            where TRequest : class, IMessage<TRequest>
-            where TResponse : class, IMessage<TResponse>;
+        partial void Modify_ApiCall<TRequest, TResponse>(ref gaxgrpc::ApiCall<TRequest, TResponse> call)
+            where TRequest : class, proto::IMessage<TRequest>
+            where TResponse : class, proto::IMessage<TResponse>;
 
         // Partial methods called for each ApiCall on construction.
         // Allows per-RPC-method modification of the underlying ApiCall object.
-        partial void Modify_BatchAnnotateImagesApiCall(ref ApiCall<BatchAnnotateImagesRequest, BatchAnnotateImagesResponse> call);
-        partial void OnConstruction(ImageAnnotator.ImageAnnotatorClient grpcClient, ImageAnnotatorSettings effectiveSettings, ClientHelper clientHelper);
+        partial void Modify_BatchAnnotateImagesApiCall(ref gaxgrpc::ApiCall<BatchAnnotateImagesRequest, BatchAnnotateImagesResponse> call);
+        partial void OnConstruction(ImageAnnotator.ImageAnnotatorClient grpcClient, ImageAnnotatorSettings effectiveSettings, gaxgrpc::ClientHelper clientHelper);
 
         /// <summary>
         /// The underlying gRPC ImageAnnotator client.
@@ -413,7 +413,7 @@ namespace Google.Cloud.Vision.V1P1Beta1
         // Partial methods called on each request.
         // Allows per-RPC-call modification to the request and CallSettings objects,
         // before the underlying RPC is performed.
-        partial void Modify_BatchAnnotateImagesRequest(ref BatchAnnotateImagesRequest request, ref CallSettings settings);
+        partial void Modify_BatchAnnotateImagesRequest(ref BatchAnnotateImagesRequest request, ref gaxgrpc::CallSettings settings);
 
         /// <summary>
         /// Run image detection and annotation for a batch of images.
@@ -427,9 +427,9 @@ namespace Google.Cloud.Vision.V1P1Beta1
         /// <returns>
         /// A Task containing the RPC response.
         /// </returns>
-        public override Task<BatchAnnotateImagesResponse> BatchAnnotateImagesAsync(
+        public override stt::Task<BatchAnnotateImagesResponse> BatchAnnotateImagesAsync(
             BatchAnnotateImagesRequest request,
-            CallSettings callSettings = null)
+            gaxgrpc::CallSettings callSettings = null)
         {
             Modify_BatchAnnotateImagesRequest(ref request, ref callSettings);
             return _callBatchAnnotateImages.Async(request, callSettings);
@@ -449,7 +449,7 @@ namespace Google.Cloud.Vision.V1P1Beta1
         /// </returns>
         public override BatchAnnotateImagesResponse BatchAnnotateImages(
             BatchAnnotateImagesRequest request,
-            CallSettings callSettings = null)
+            gaxgrpc::CallSettings callSettings = null)
         {
             Modify_BatchAnnotateImagesRequest(ref request, ref callSettings);
             return _callBatchAnnotateImages.Sync(request, callSettings);

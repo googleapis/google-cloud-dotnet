@@ -14,24 +14,24 @@
 
 // Generated code. DO NOT EDIT!
 
-using Google.Api.Gax;
-using Google.Api.Gax.Grpc;
-using Google.Protobuf;
-using Google.Protobuf.WellKnownTypes;
-using Grpc.Core;
-using System;
-using System.Collections;
-using System.Collections.Generic;
-using System.Collections.ObjectModel;
-using System.Threading;
-using System.Threading.Tasks;
+using gax = Google.Api.Gax;
+using gaxgrpc = Google.Api.Gax.Grpc;
+using proto = Google.Protobuf;
+using protowkt = Google.Protobuf.WellKnownTypes;
+using grpccore = Grpc.Core;
+using s = System;
+using sc = System.Collections;
+using scg = System.Collections.Generic;
+using sco = System.Collections.ObjectModel;
+using st = System.Threading;
+using stt = System.Threading.Tasks;
 
 namespace Google.Cloud.Dlp.V2
 {
     /// <summary>
     /// Settings for a <see cref="DlpServiceClient"/>.
     /// </summary>
-    public sealed partial class DlpServiceSettings : ServiceSettingsBase
+    public sealed partial class DlpServiceSettings : gaxgrpc::ServiceSettingsBase
     {
         /// <summary>
         /// Get a new instance of the default <see cref="DlpServiceSettings"/>.
@@ -48,7 +48,7 @@ namespace Google.Cloud.Dlp.V2
 
         private DlpServiceSettings(DlpServiceSettings existing) : base(existing)
         {
-            GaxPreconditions.CheckNotNull(existing, nameof(existing));
+            gax::GaxPreconditions.CheckNotNull(existing, nameof(existing));
             InspectContentSettings = existing.InspectContentSettings;
             RedactImageSettings = existing.RedactImageSettings;
             DeidentifyContentSettings = existing.DeidentifyContentSettings;
@@ -80,28 +80,28 @@ namespace Google.Cloud.Dlp.V2
         partial void OnCopy(DlpServiceSettings existing);
 
         /// <summary>
-        /// The filter specifying which RPC <see cref="StatusCode"/>s are eligible for retry
+        /// The filter specifying which RPC <see cref="grpccore::StatusCode"/>s are eligible for retry
         /// for "Idempotent" <see cref="DlpServiceClient"/> RPC methods.
         /// </summary>
         /// <remarks>
-        /// The eligible RPC <see cref="StatusCode"/>s for retry for "Idempotent" RPC methods are:
+        /// The eligible RPC <see cref="grpccore::StatusCode"/>s for retry for "Idempotent" RPC methods are:
         /// <list type="bullet">
-        /// <item><description><see cref="StatusCode.DeadlineExceeded"/></description></item>
-        /// <item><description><see cref="StatusCode.Unavailable"/></description></item>
+        /// <item><description><see cref="grpccore::StatusCode.DeadlineExceeded"/></description></item>
+        /// <item><description><see cref="grpccore::StatusCode.Unavailable"/></description></item>
         /// </list>
         /// </remarks>
-        public static Predicate<RpcException> IdempotentRetryFilter { get; } =
-            RetrySettings.FilterForStatusCodes(StatusCode.DeadlineExceeded, StatusCode.Unavailable);
+        public static s::Predicate<grpccore::RpcException> IdempotentRetryFilter { get; } =
+            gaxgrpc::RetrySettings.FilterForStatusCodes(grpccore::StatusCode.DeadlineExceeded, grpccore::StatusCode.Unavailable);
 
         /// <summary>
-        /// The filter specifying which RPC <see cref="StatusCode"/>s are eligible for retry
+        /// The filter specifying which RPC <see cref="grpccore::StatusCode"/>s are eligible for retry
         /// for "NonIdempotent" <see cref="DlpServiceClient"/> RPC methods.
         /// </summary>
         /// <remarks>
-        /// There are no RPC <see cref="StatusCode"/>s eligible for retry for "NonIdempotent" RPC methods.
+        /// There are no RPC <see cref="grpccore::StatusCode"/>s eligible for retry for "NonIdempotent" RPC methods.
         /// </remarks>
-        public static Predicate<RpcException> NonIdempotentRetryFilter { get; } =
-            RetrySettings.FilterForStatusCodes();
+        public static s::Predicate<grpccore::RpcException> NonIdempotentRetryFilter { get; } =
+            gaxgrpc::RetrySettings.FilterForStatusCodes();
 
         /// <summary>
         /// "Default" retry backoff for <see cref="DlpServiceClient"/> RPC methods.
@@ -117,9 +117,9 @@ namespace Google.Cloud.Dlp.V2
         /// <item><description>Delay multiplier: 1.3</description></item>
         /// </list>
         /// </remarks>
-        public static BackoffSettings GetDefaultRetryBackoff() => new BackoffSettings(
-            delay: TimeSpan.FromMilliseconds(100),
-            maxDelay: TimeSpan.FromMilliseconds(60000),
+        public static gaxgrpc::BackoffSettings GetDefaultRetryBackoff() => new gaxgrpc::BackoffSettings(
+            delay: s::TimeSpan.FromMilliseconds(100),
+            maxDelay: s::TimeSpan.FromMilliseconds(60000),
             delayMultiplier: 1.3
         );
 
@@ -137,19 +137,19 @@ namespace Google.Cloud.Dlp.V2
         /// <item><description>Maximum timeout: 20000 milliseconds</description></item>
         /// </list>
         /// </remarks>
-        public static BackoffSettings GetDefaultTimeoutBackoff() => new BackoffSettings(
-            delay: TimeSpan.FromMilliseconds(20000),
-            maxDelay: TimeSpan.FromMilliseconds(20000),
+        public static gaxgrpc::BackoffSettings GetDefaultTimeoutBackoff() => new gaxgrpc::BackoffSettings(
+            delay: s::TimeSpan.FromMilliseconds(20000),
+            maxDelay: s::TimeSpan.FromMilliseconds(20000),
             delayMultiplier: 1.0
         );
 
         /// <summary>
-        /// <see cref="CallSettings"/> for synchronous and asynchronous calls to
+        /// <see cref="gaxgrpc::CallSettings"/> for synchronous and asynchronous calls to
         /// <c>DlpServiceClient.InspectContent</c> and <c>DlpServiceClient.InspectContentAsync</c>.
         /// </summary>
         /// <remarks>
         /// The default <c>DlpServiceClient.InspectContent</c> and
-        /// <c>DlpServiceClient.InspectContentAsync</c> <see cref="RetrySettings"/> are:
+        /// <c>DlpServiceClient.InspectContentAsync</c> <see cref="gaxgrpc::RetrySettings"/> are:
         /// <list type="bullet">
         /// <item><description>Initial retry delay: 100 milliseconds</description></item>
         /// <item><description>Retry delay multiplier: 1.3</description></item>
@@ -160,26 +160,26 @@ namespace Google.Cloud.Dlp.V2
         /// </list>
         /// Retry will be attempted on the following response status codes:
         /// <list>
-        /// <item><description><see cref="StatusCode.DeadlineExceeded"/></description></item>
-        /// <item><description><see cref="StatusCode.Unavailable"/></description></item>
+        /// <item><description><see cref="grpccore::StatusCode.DeadlineExceeded"/></description></item>
+        /// <item><description><see cref="grpccore::StatusCode.Unavailable"/></description></item>
         /// </list>
         /// Default RPC expiration is 600000 milliseconds.
         /// </remarks>
-        public CallSettings InspectContentSettings { get; set; } = CallSettings.FromCallTiming(
-            CallTiming.FromRetry(new RetrySettings(
+        public gaxgrpc::CallSettings InspectContentSettings { get; set; } = gaxgrpc::CallSettings.FromCallTiming(
+            gaxgrpc::CallTiming.FromRetry(new gaxgrpc::RetrySettings(
                 retryBackoff: GetDefaultRetryBackoff(),
                 timeoutBackoff: GetDefaultTimeoutBackoff(),
-                totalExpiration: Expiration.FromTimeout(TimeSpan.FromMilliseconds(600000)),
+                totalExpiration: gax::Expiration.FromTimeout(s::TimeSpan.FromMilliseconds(600000)),
                 retryFilter: IdempotentRetryFilter
             )));
 
         /// <summary>
-        /// <see cref="CallSettings"/> for synchronous and asynchronous calls to
+        /// <see cref="gaxgrpc::CallSettings"/> for synchronous and asynchronous calls to
         /// <c>DlpServiceClient.RedactImage</c> and <c>DlpServiceClient.RedactImageAsync</c>.
         /// </summary>
         /// <remarks>
         /// The default <c>DlpServiceClient.RedactImage</c> and
-        /// <c>DlpServiceClient.RedactImageAsync</c> <see cref="RetrySettings"/> are:
+        /// <c>DlpServiceClient.RedactImageAsync</c> <see cref="gaxgrpc::RetrySettings"/> are:
         /// <list type="bullet">
         /// <item><description>Initial retry delay: 100 milliseconds</description></item>
         /// <item><description>Retry delay multiplier: 1.3</description></item>
@@ -190,26 +190,26 @@ namespace Google.Cloud.Dlp.V2
         /// </list>
         /// Retry will be attempted on the following response status codes:
         /// <list>
-        /// <item><description><see cref="StatusCode.DeadlineExceeded"/></description></item>
-        /// <item><description><see cref="StatusCode.Unavailable"/></description></item>
+        /// <item><description><see cref="grpccore::StatusCode.DeadlineExceeded"/></description></item>
+        /// <item><description><see cref="grpccore::StatusCode.Unavailable"/></description></item>
         /// </list>
         /// Default RPC expiration is 600000 milliseconds.
         /// </remarks>
-        public CallSettings RedactImageSettings { get; set; } = CallSettings.FromCallTiming(
-            CallTiming.FromRetry(new RetrySettings(
+        public gaxgrpc::CallSettings RedactImageSettings { get; set; } = gaxgrpc::CallSettings.FromCallTiming(
+            gaxgrpc::CallTiming.FromRetry(new gaxgrpc::RetrySettings(
                 retryBackoff: GetDefaultRetryBackoff(),
                 timeoutBackoff: GetDefaultTimeoutBackoff(),
-                totalExpiration: Expiration.FromTimeout(TimeSpan.FromMilliseconds(600000)),
+                totalExpiration: gax::Expiration.FromTimeout(s::TimeSpan.FromMilliseconds(600000)),
                 retryFilter: IdempotentRetryFilter
             )));
 
         /// <summary>
-        /// <see cref="CallSettings"/> for synchronous and asynchronous calls to
+        /// <see cref="gaxgrpc::CallSettings"/> for synchronous and asynchronous calls to
         /// <c>DlpServiceClient.DeidentifyContent</c> and <c>DlpServiceClient.DeidentifyContentAsync</c>.
         /// </summary>
         /// <remarks>
         /// The default <c>DlpServiceClient.DeidentifyContent</c> and
-        /// <c>DlpServiceClient.DeidentifyContentAsync</c> <see cref="RetrySettings"/> are:
+        /// <c>DlpServiceClient.DeidentifyContentAsync</c> <see cref="gaxgrpc::RetrySettings"/> are:
         /// <list type="bullet">
         /// <item><description>Initial retry delay: 100 milliseconds</description></item>
         /// <item><description>Retry delay multiplier: 1.3</description></item>
@@ -220,26 +220,26 @@ namespace Google.Cloud.Dlp.V2
         /// </list>
         /// Retry will be attempted on the following response status codes:
         /// <list>
-        /// <item><description><see cref="StatusCode.DeadlineExceeded"/></description></item>
-        /// <item><description><see cref="StatusCode.Unavailable"/></description></item>
+        /// <item><description><see cref="grpccore::StatusCode.DeadlineExceeded"/></description></item>
+        /// <item><description><see cref="grpccore::StatusCode.Unavailable"/></description></item>
         /// </list>
         /// Default RPC expiration is 600000 milliseconds.
         /// </remarks>
-        public CallSettings DeidentifyContentSettings { get; set; } = CallSettings.FromCallTiming(
-            CallTiming.FromRetry(new RetrySettings(
+        public gaxgrpc::CallSettings DeidentifyContentSettings { get; set; } = gaxgrpc::CallSettings.FromCallTiming(
+            gaxgrpc::CallTiming.FromRetry(new gaxgrpc::RetrySettings(
                 retryBackoff: GetDefaultRetryBackoff(),
                 timeoutBackoff: GetDefaultTimeoutBackoff(),
-                totalExpiration: Expiration.FromTimeout(TimeSpan.FromMilliseconds(600000)),
+                totalExpiration: gax::Expiration.FromTimeout(s::TimeSpan.FromMilliseconds(600000)),
                 retryFilter: IdempotentRetryFilter
             )));
 
         /// <summary>
-        /// <see cref="CallSettings"/> for synchronous and asynchronous calls to
+        /// <see cref="gaxgrpc::CallSettings"/> for synchronous and asynchronous calls to
         /// <c>DlpServiceClient.ReidentifyContent</c> and <c>DlpServiceClient.ReidentifyContentAsync</c>.
         /// </summary>
         /// <remarks>
         /// The default <c>DlpServiceClient.ReidentifyContent</c> and
-        /// <c>DlpServiceClient.ReidentifyContentAsync</c> <see cref="RetrySettings"/> are:
+        /// <c>DlpServiceClient.ReidentifyContentAsync</c> <see cref="gaxgrpc::RetrySettings"/> are:
         /// <list type="bullet">
         /// <item><description>Initial retry delay: 100 milliseconds</description></item>
         /// <item><description>Retry delay multiplier: 1.3</description></item>
@@ -250,26 +250,26 @@ namespace Google.Cloud.Dlp.V2
         /// </list>
         /// Retry will be attempted on the following response status codes:
         /// <list>
-        /// <item><description><see cref="StatusCode.DeadlineExceeded"/></description></item>
-        /// <item><description><see cref="StatusCode.Unavailable"/></description></item>
+        /// <item><description><see cref="grpccore::StatusCode.DeadlineExceeded"/></description></item>
+        /// <item><description><see cref="grpccore::StatusCode.Unavailable"/></description></item>
         /// </list>
         /// Default RPC expiration is 600000 milliseconds.
         /// </remarks>
-        public CallSettings ReidentifyContentSettings { get; set; } = CallSettings.FromCallTiming(
-            CallTiming.FromRetry(new RetrySettings(
+        public gaxgrpc::CallSettings ReidentifyContentSettings { get; set; } = gaxgrpc::CallSettings.FromCallTiming(
+            gaxgrpc::CallTiming.FromRetry(new gaxgrpc::RetrySettings(
                 retryBackoff: GetDefaultRetryBackoff(),
                 timeoutBackoff: GetDefaultTimeoutBackoff(),
-                totalExpiration: Expiration.FromTimeout(TimeSpan.FromMilliseconds(600000)),
+                totalExpiration: gax::Expiration.FromTimeout(s::TimeSpan.FromMilliseconds(600000)),
                 retryFilter: IdempotentRetryFilter
             )));
 
         /// <summary>
-        /// <see cref="CallSettings"/> for synchronous and asynchronous calls to
+        /// <see cref="gaxgrpc::CallSettings"/> for synchronous and asynchronous calls to
         /// <c>DlpServiceClient.ListInfoTypes</c> and <c>DlpServiceClient.ListInfoTypesAsync</c>.
         /// </summary>
         /// <remarks>
         /// The default <c>DlpServiceClient.ListInfoTypes</c> and
-        /// <c>DlpServiceClient.ListInfoTypesAsync</c> <see cref="RetrySettings"/> are:
+        /// <c>DlpServiceClient.ListInfoTypesAsync</c> <see cref="gaxgrpc::RetrySettings"/> are:
         /// <list type="bullet">
         /// <item><description>Initial retry delay: 100 milliseconds</description></item>
         /// <item><description>Retry delay multiplier: 1.3</description></item>
@@ -280,26 +280,26 @@ namespace Google.Cloud.Dlp.V2
         /// </list>
         /// Retry will be attempted on the following response status codes:
         /// <list>
-        /// <item><description><see cref="StatusCode.DeadlineExceeded"/></description></item>
-        /// <item><description><see cref="StatusCode.Unavailable"/></description></item>
+        /// <item><description><see cref="grpccore::StatusCode.DeadlineExceeded"/></description></item>
+        /// <item><description><see cref="grpccore::StatusCode.Unavailable"/></description></item>
         /// </list>
         /// Default RPC expiration is 600000 milliseconds.
         /// </remarks>
-        public CallSettings ListInfoTypesSettings { get; set; } = CallSettings.FromCallTiming(
-            CallTiming.FromRetry(new RetrySettings(
+        public gaxgrpc::CallSettings ListInfoTypesSettings { get; set; } = gaxgrpc::CallSettings.FromCallTiming(
+            gaxgrpc::CallTiming.FromRetry(new gaxgrpc::RetrySettings(
                 retryBackoff: GetDefaultRetryBackoff(),
                 timeoutBackoff: GetDefaultTimeoutBackoff(),
-                totalExpiration: Expiration.FromTimeout(TimeSpan.FromMilliseconds(600000)),
+                totalExpiration: gax::Expiration.FromTimeout(s::TimeSpan.FromMilliseconds(600000)),
                 retryFilter: IdempotentRetryFilter
             )));
 
         /// <summary>
-        /// <see cref="CallSettings"/> for synchronous and asynchronous calls to
+        /// <see cref="gaxgrpc::CallSettings"/> for synchronous and asynchronous calls to
         /// <c>DlpServiceClient.CreateInspectTemplate</c> and <c>DlpServiceClient.CreateInspectTemplateAsync</c>.
         /// </summary>
         /// <remarks>
         /// The default <c>DlpServiceClient.CreateInspectTemplate</c> and
-        /// <c>DlpServiceClient.CreateInspectTemplateAsync</c> <see cref="RetrySettings"/> are:
+        /// <c>DlpServiceClient.CreateInspectTemplateAsync</c> <see cref="gaxgrpc::RetrySettings"/> are:
         /// <list type="bullet">
         /// <item><description>Initial retry delay: 100 milliseconds</description></item>
         /// <item><description>Retry delay multiplier: 1.3</description></item>
@@ -314,21 +314,21 @@ namespace Google.Cloud.Dlp.V2
         /// </list>
         /// Default RPC expiration is 600000 milliseconds.
         /// </remarks>
-        public CallSettings CreateInspectTemplateSettings { get; set; } = CallSettings.FromCallTiming(
-            CallTiming.FromRetry(new RetrySettings(
+        public gaxgrpc::CallSettings CreateInspectTemplateSettings { get; set; } = gaxgrpc::CallSettings.FromCallTiming(
+            gaxgrpc::CallTiming.FromRetry(new gaxgrpc::RetrySettings(
                 retryBackoff: GetDefaultRetryBackoff(),
                 timeoutBackoff: GetDefaultTimeoutBackoff(),
-                totalExpiration: Expiration.FromTimeout(TimeSpan.FromMilliseconds(600000)),
+                totalExpiration: gax::Expiration.FromTimeout(s::TimeSpan.FromMilliseconds(600000)),
                 retryFilter: NonIdempotentRetryFilter
             )));
 
         /// <summary>
-        /// <see cref="CallSettings"/> for synchronous and asynchronous calls to
+        /// <see cref="gaxgrpc::CallSettings"/> for synchronous and asynchronous calls to
         /// <c>DlpServiceClient.UpdateInspectTemplate</c> and <c>DlpServiceClient.UpdateInspectTemplateAsync</c>.
         /// </summary>
         /// <remarks>
         /// The default <c>DlpServiceClient.UpdateInspectTemplate</c> and
-        /// <c>DlpServiceClient.UpdateInspectTemplateAsync</c> <see cref="RetrySettings"/> are:
+        /// <c>DlpServiceClient.UpdateInspectTemplateAsync</c> <see cref="gaxgrpc::RetrySettings"/> are:
         /// <list type="bullet">
         /// <item><description>Initial retry delay: 100 milliseconds</description></item>
         /// <item><description>Retry delay multiplier: 1.3</description></item>
@@ -343,21 +343,21 @@ namespace Google.Cloud.Dlp.V2
         /// </list>
         /// Default RPC expiration is 600000 milliseconds.
         /// </remarks>
-        public CallSettings UpdateInspectTemplateSettings { get; set; } = CallSettings.FromCallTiming(
-            CallTiming.FromRetry(new RetrySettings(
+        public gaxgrpc::CallSettings UpdateInspectTemplateSettings { get; set; } = gaxgrpc::CallSettings.FromCallTiming(
+            gaxgrpc::CallTiming.FromRetry(new gaxgrpc::RetrySettings(
                 retryBackoff: GetDefaultRetryBackoff(),
                 timeoutBackoff: GetDefaultTimeoutBackoff(),
-                totalExpiration: Expiration.FromTimeout(TimeSpan.FromMilliseconds(600000)),
+                totalExpiration: gax::Expiration.FromTimeout(s::TimeSpan.FromMilliseconds(600000)),
                 retryFilter: NonIdempotentRetryFilter
             )));
 
         /// <summary>
-        /// <see cref="CallSettings"/> for synchronous and asynchronous calls to
+        /// <see cref="gaxgrpc::CallSettings"/> for synchronous and asynchronous calls to
         /// <c>DlpServiceClient.GetInspectTemplate</c> and <c>DlpServiceClient.GetInspectTemplateAsync</c>.
         /// </summary>
         /// <remarks>
         /// The default <c>DlpServiceClient.GetInspectTemplate</c> and
-        /// <c>DlpServiceClient.GetInspectTemplateAsync</c> <see cref="RetrySettings"/> are:
+        /// <c>DlpServiceClient.GetInspectTemplateAsync</c> <see cref="gaxgrpc::RetrySettings"/> are:
         /// <list type="bullet">
         /// <item><description>Initial retry delay: 100 milliseconds</description></item>
         /// <item><description>Retry delay multiplier: 1.3</description></item>
@@ -368,26 +368,26 @@ namespace Google.Cloud.Dlp.V2
         /// </list>
         /// Retry will be attempted on the following response status codes:
         /// <list>
-        /// <item><description><see cref="StatusCode.DeadlineExceeded"/></description></item>
-        /// <item><description><see cref="StatusCode.Unavailable"/></description></item>
+        /// <item><description><see cref="grpccore::StatusCode.DeadlineExceeded"/></description></item>
+        /// <item><description><see cref="grpccore::StatusCode.Unavailable"/></description></item>
         /// </list>
         /// Default RPC expiration is 600000 milliseconds.
         /// </remarks>
-        public CallSettings GetInspectTemplateSettings { get; set; } = CallSettings.FromCallTiming(
-            CallTiming.FromRetry(new RetrySettings(
+        public gaxgrpc::CallSettings GetInspectTemplateSettings { get; set; } = gaxgrpc::CallSettings.FromCallTiming(
+            gaxgrpc::CallTiming.FromRetry(new gaxgrpc::RetrySettings(
                 retryBackoff: GetDefaultRetryBackoff(),
                 timeoutBackoff: GetDefaultTimeoutBackoff(),
-                totalExpiration: Expiration.FromTimeout(TimeSpan.FromMilliseconds(600000)),
+                totalExpiration: gax::Expiration.FromTimeout(s::TimeSpan.FromMilliseconds(600000)),
                 retryFilter: IdempotentRetryFilter
             )));
 
         /// <summary>
-        /// <see cref="CallSettings"/> for synchronous and asynchronous calls to
+        /// <see cref="gaxgrpc::CallSettings"/> for synchronous and asynchronous calls to
         /// <c>DlpServiceClient.ListInspectTemplates</c> and <c>DlpServiceClient.ListInspectTemplatesAsync</c>.
         /// </summary>
         /// <remarks>
         /// The default <c>DlpServiceClient.ListInspectTemplates</c> and
-        /// <c>DlpServiceClient.ListInspectTemplatesAsync</c> <see cref="RetrySettings"/> are:
+        /// <c>DlpServiceClient.ListInspectTemplatesAsync</c> <see cref="gaxgrpc::RetrySettings"/> are:
         /// <list type="bullet">
         /// <item><description>Initial retry delay: 100 milliseconds</description></item>
         /// <item><description>Retry delay multiplier: 1.3</description></item>
@@ -398,26 +398,26 @@ namespace Google.Cloud.Dlp.V2
         /// </list>
         /// Retry will be attempted on the following response status codes:
         /// <list>
-        /// <item><description><see cref="StatusCode.DeadlineExceeded"/></description></item>
-        /// <item><description><see cref="StatusCode.Unavailable"/></description></item>
+        /// <item><description><see cref="grpccore::StatusCode.DeadlineExceeded"/></description></item>
+        /// <item><description><see cref="grpccore::StatusCode.Unavailable"/></description></item>
         /// </list>
         /// Default RPC expiration is 600000 milliseconds.
         /// </remarks>
-        public CallSettings ListInspectTemplatesSettings { get; set; } = CallSettings.FromCallTiming(
-            CallTiming.FromRetry(new RetrySettings(
+        public gaxgrpc::CallSettings ListInspectTemplatesSettings { get; set; } = gaxgrpc::CallSettings.FromCallTiming(
+            gaxgrpc::CallTiming.FromRetry(new gaxgrpc::RetrySettings(
                 retryBackoff: GetDefaultRetryBackoff(),
                 timeoutBackoff: GetDefaultTimeoutBackoff(),
-                totalExpiration: Expiration.FromTimeout(TimeSpan.FromMilliseconds(600000)),
+                totalExpiration: gax::Expiration.FromTimeout(s::TimeSpan.FromMilliseconds(600000)),
                 retryFilter: IdempotentRetryFilter
             )));
 
         /// <summary>
-        /// <see cref="CallSettings"/> for synchronous and asynchronous calls to
+        /// <see cref="gaxgrpc::CallSettings"/> for synchronous and asynchronous calls to
         /// <c>DlpServiceClient.DeleteInspectTemplate</c> and <c>DlpServiceClient.DeleteInspectTemplateAsync</c>.
         /// </summary>
         /// <remarks>
         /// The default <c>DlpServiceClient.DeleteInspectTemplate</c> and
-        /// <c>DlpServiceClient.DeleteInspectTemplateAsync</c> <see cref="RetrySettings"/> are:
+        /// <c>DlpServiceClient.DeleteInspectTemplateAsync</c> <see cref="gaxgrpc::RetrySettings"/> are:
         /// <list type="bullet">
         /// <item><description>Initial retry delay: 100 milliseconds</description></item>
         /// <item><description>Retry delay multiplier: 1.3</description></item>
@@ -428,26 +428,26 @@ namespace Google.Cloud.Dlp.V2
         /// </list>
         /// Retry will be attempted on the following response status codes:
         /// <list>
-        /// <item><description><see cref="StatusCode.DeadlineExceeded"/></description></item>
-        /// <item><description><see cref="StatusCode.Unavailable"/></description></item>
+        /// <item><description><see cref="grpccore::StatusCode.DeadlineExceeded"/></description></item>
+        /// <item><description><see cref="grpccore::StatusCode.Unavailable"/></description></item>
         /// </list>
         /// Default RPC expiration is 600000 milliseconds.
         /// </remarks>
-        public CallSettings DeleteInspectTemplateSettings { get; set; } = CallSettings.FromCallTiming(
-            CallTiming.FromRetry(new RetrySettings(
+        public gaxgrpc::CallSettings DeleteInspectTemplateSettings { get; set; } = gaxgrpc::CallSettings.FromCallTiming(
+            gaxgrpc::CallTiming.FromRetry(new gaxgrpc::RetrySettings(
                 retryBackoff: GetDefaultRetryBackoff(),
                 timeoutBackoff: GetDefaultTimeoutBackoff(),
-                totalExpiration: Expiration.FromTimeout(TimeSpan.FromMilliseconds(600000)),
+                totalExpiration: gax::Expiration.FromTimeout(s::TimeSpan.FromMilliseconds(600000)),
                 retryFilter: IdempotentRetryFilter
             )));
 
         /// <summary>
-        /// <see cref="CallSettings"/> for synchronous and asynchronous calls to
+        /// <see cref="gaxgrpc::CallSettings"/> for synchronous and asynchronous calls to
         /// <c>DlpServiceClient.CreateDeidentifyTemplate</c> and <c>DlpServiceClient.CreateDeidentifyTemplateAsync</c>.
         /// </summary>
         /// <remarks>
         /// The default <c>DlpServiceClient.CreateDeidentifyTemplate</c> and
-        /// <c>DlpServiceClient.CreateDeidentifyTemplateAsync</c> <see cref="RetrySettings"/> are:
+        /// <c>DlpServiceClient.CreateDeidentifyTemplateAsync</c> <see cref="gaxgrpc::RetrySettings"/> are:
         /// <list type="bullet">
         /// <item><description>Initial retry delay: 100 milliseconds</description></item>
         /// <item><description>Retry delay multiplier: 1.3</description></item>
@@ -462,21 +462,21 @@ namespace Google.Cloud.Dlp.V2
         /// </list>
         /// Default RPC expiration is 600000 milliseconds.
         /// </remarks>
-        public CallSettings CreateDeidentifyTemplateSettings { get; set; } = CallSettings.FromCallTiming(
-            CallTiming.FromRetry(new RetrySettings(
+        public gaxgrpc::CallSettings CreateDeidentifyTemplateSettings { get; set; } = gaxgrpc::CallSettings.FromCallTiming(
+            gaxgrpc::CallTiming.FromRetry(new gaxgrpc::RetrySettings(
                 retryBackoff: GetDefaultRetryBackoff(),
                 timeoutBackoff: GetDefaultTimeoutBackoff(),
-                totalExpiration: Expiration.FromTimeout(TimeSpan.FromMilliseconds(600000)),
+                totalExpiration: gax::Expiration.FromTimeout(s::TimeSpan.FromMilliseconds(600000)),
                 retryFilter: NonIdempotentRetryFilter
             )));
 
         /// <summary>
-        /// <see cref="CallSettings"/> for synchronous and asynchronous calls to
+        /// <see cref="gaxgrpc::CallSettings"/> for synchronous and asynchronous calls to
         /// <c>DlpServiceClient.UpdateDeidentifyTemplate</c> and <c>DlpServiceClient.UpdateDeidentifyTemplateAsync</c>.
         /// </summary>
         /// <remarks>
         /// The default <c>DlpServiceClient.UpdateDeidentifyTemplate</c> and
-        /// <c>DlpServiceClient.UpdateDeidentifyTemplateAsync</c> <see cref="RetrySettings"/> are:
+        /// <c>DlpServiceClient.UpdateDeidentifyTemplateAsync</c> <see cref="gaxgrpc::RetrySettings"/> are:
         /// <list type="bullet">
         /// <item><description>Initial retry delay: 100 milliseconds</description></item>
         /// <item><description>Retry delay multiplier: 1.3</description></item>
@@ -491,21 +491,21 @@ namespace Google.Cloud.Dlp.V2
         /// </list>
         /// Default RPC expiration is 600000 milliseconds.
         /// </remarks>
-        public CallSettings UpdateDeidentifyTemplateSettings { get; set; } = CallSettings.FromCallTiming(
-            CallTiming.FromRetry(new RetrySettings(
+        public gaxgrpc::CallSettings UpdateDeidentifyTemplateSettings { get; set; } = gaxgrpc::CallSettings.FromCallTiming(
+            gaxgrpc::CallTiming.FromRetry(new gaxgrpc::RetrySettings(
                 retryBackoff: GetDefaultRetryBackoff(),
                 timeoutBackoff: GetDefaultTimeoutBackoff(),
-                totalExpiration: Expiration.FromTimeout(TimeSpan.FromMilliseconds(600000)),
+                totalExpiration: gax::Expiration.FromTimeout(s::TimeSpan.FromMilliseconds(600000)),
                 retryFilter: NonIdempotentRetryFilter
             )));
 
         /// <summary>
-        /// <see cref="CallSettings"/> for synchronous and asynchronous calls to
+        /// <see cref="gaxgrpc::CallSettings"/> for synchronous and asynchronous calls to
         /// <c>DlpServiceClient.GetDeidentifyTemplate</c> and <c>DlpServiceClient.GetDeidentifyTemplateAsync</c>.
         /// </summary>
         /// <remarks>
         /// The default <c>DlpServiceClient.GetDeidentifyTemplate</c> and
-        /// <c>DlpServiceClient.GetDeidentifyTemplateAsync</c> <see cref="RetrySettings"/> are:
+        /// <c>DlpServiceClient.GetDeidentifyTemplateAsync</c> <see cref="gaxgrpc::RetrySettings"/> are:
         /// <list type="bullet">
         /// <item><description>Initial retry delay: 100 milliseconds</description></item>
         /// <item><description>Retry delay multiplier: 1.3</description></item>
@@ -516,26 +516,26 @@ namespace Google.Cloud.Dlp.V2
         /// </list>
         /// Retry will be attempted on the following response status codes:
         /// <list>
-        /// <item><description><see cref="StatusCode.DeadlineExceeded"/></description></item>
-        /// <item><description><see cref="StatusCode.Unavailable"/></description></item>
+        /// <item><description><see cref="grpccore::StatusCode.DeadlineExceeded"/></description></item>
+        /// <item><description><see cref="grpccore::StatusCode.Unavailable"/></description></item>
         /// </list>
         /// Default RPC expiration is 600000 milliseconds.
         /// </remarks>
-        public CallSettings GetDeidentifyTemplateSettings { get; set; } = CallSettings.FromCallTiming(
-            CallTiming.FromRetry(new RetrySettings(
+        public gaxgrpc::CallSettings GetDeidentifyTemplateSettings { get; set; } = gaxgrpc::CallSettings.FromCallTiming(
+            gaxgrpc::CallTiming.FromRetry(new gaxgrpc::RetrySettings(
                 retryBackoff: GetDefaultRetryBackoff(),
                 timeoutBackoff: GetDefaultTimeoutBackoff(),
-                totalExpiration: Expiration.FromTimeout(TimeSpan.FromMilliseconds(600000)),
+                totalExpiration: gax::Expiration.FromTimeout(s::TimeSpan.FromMilliseconds(600000)),
                 retryFilter: IdempotentRetryFilter
             )));
 
         /// <summary>
-        /// <see cref="CallSettings"/> for synchronous and asynchronous calls to
+        /// <see cref="gaxgrpc::CallSettings"/> for synchronous and asynchronous calls to
         /// <c>DlpServiceClient.ListDeidentifyTemplates</c> and <c>DlpServiceClient.ListDeidentifyTemplatesAsync</c>.
         /// </summary>
         /// <remarks>
         /// The default <c>DlpServiceClient.ListDeidentifyTemplates</c> and
-        /// <c>DlpServiceClient.ListDeidentifyTemplatesAsync</c> <see cref="RetrySettings"/> are:
+        /// <c>DlpServiceClient.ListDeidentifyTemplatesAsync</c> <see cref="gaxgrpc::RetrySettings"/> are:
         /// <list type="bullet">
         /// <item><description>Initial retry delay: 100 milliseconds</description></item>
         /// <item><description>Retry delay multiplier: 1.3</description></item>
@@ -546,26 +546,26 @@ namespace Google.Cloud.Dlp.V2
         /// </list>
         /// Retry will be attempted on the following response status codes:
         /// <list>
-        /// <item><description><see cref="StatusCode.DeadlineExceeded"/></description></item>
-        /// <item><description><see cref="StatusCode.Unavailable"/></description></item>
+        /// <item><description><see cref="grpccore::StatusCode.DeadlineExceeded"/></description></item>
+        /// <item><description><see cref="grpccore::StatusCode.Unavailable"/></description></item>
         /// </list>
         /// Default RPC expiration is 600000 milliseconds.
         /// </remarks>
-        public CallSettings ListDeidentifyTemplatesSettings { get; set; } = CallSettings.FromCallTiming(
-            CallTiming.FromRetry(new RetrySettings(
+        public gaxgrpc::CallSettings ListDeidentifyTemplatesSettings { get; set; } = gaxgrpc::CallSettings.FromCallTiming(
+            gaxgrpc::CallTiming.FromRetry(new gaxgrpc::RetrySettings(
                 retryBackoff: GetDefaultRetryBackoff(),
                 timeoutBackoff: GetDefaultTimeoutBackoff(),
-                totalExpiration: Expiration.FromTimeout(TimeSpan.FromMilliseconds(600000)),
+                totalExpiration: gax::Expiration.FromTimeout(s::TimeSpan.FromMilliseconds(600000)),
                 retryFilter: IdempotentRetryFilter
             )));
 
         /// <summary>
-        /// <see cref="CallSettings"/> for synchronous and asynchronous calls to
+        /// <see cref="gaxgrpc::CallSettings"/> for synchronous and asynchronous calls to
         /// <c>DlpServiceClient.DeleteDeidentifyTemplate</c> and <c>DlpServiceClient.DeleteDeidentifyTemplateAsync</c>.
         /// </summary>
         /// <remarks>
         /// The default <c>DlpServiceClient.DeleteDeidentifyTemplate</c> and
-        /// <c>DlpServiceClient.DeleteDeidentifyTemplateAsync</c> <see cref="RetrySettings"/> are:
+        /// <c>DlpServiceClient.DeleteDeidentifyTemplateAsync</c> <see cref="gaxgrpc::RetrySettings"/> are:
         /// <list type="bullet">
         /// <item><description>Initial retry delay: 100 milliseconds</description></item>
         /// <item><description>Retry delay multiplier: 1.3</description></item>
@@ -576,26 +576,26 @@ namespace Google.Cloud.Dlp.V2
         /// </list>
         /// Retry will be attempted on the following response status codes:
         /// <list>
-        /// <item><description><see cref="StatusCode.DeadlineExceeded"/></description></item>
-        /// <item><description><see cref="StatusCode.Unavailable"/></description></item>
+        /// <item><description><see cref="grpccore::StatusCode.DeadlineExceeded"/></description></item>
+        /// <item><description><see cref="grpccore::StatusCode.Unavailable"/></description></item>
         /// </list>
         /// Default RPC expiration is 600000 milliseconds.
         /// </remarks>
-        public CallSettings DeleteDeidentifyTemplateSettings { get; set; } = CallSettings.FromCallTiming(
-            CallTiming.FromRetry(new RetrySettings(
+        public gaxgrpc::CallSettings DeleteDeidentifyTemplateSettings { get; set; } = gaxgrpc::CallSettings.FromCallTiming(
+            gaxgrpc::CallTiming.FromRetry(new gaxgrpc::RetrySettings(
                 retryBackoff: GetDefaultRetryBackoff(),
                 timeoutBackoff: GetDefaultTimeoutBackoff(),
-                totalExpiration: Expiration.FromTimeout(TimeSpan.FromMilliseconds(600000)),
+                totalExpiration: gax::Expiration.FromTimeout(s::TimeSpan.FromMilliseconds(600000)),
                 retryFilter: IdempotentRetryFilter
             )));
 
         /// <summary>
-        /// <see cref="CallSettings"/> for synchronous and asynchronous calls to
+        /// <see cref="gaxgrpc::CallSettings"/> for synchronous and asynchronous calls to
         /// <c>DlpServiceClient.CreateDlpJob</c> and <c>DlpServiceClient.CreateDlpJobAsync</c>.
         /// </summary>
         /// <remarks>
         /// The default <c>DlpServiceClient.CreateDlpJob</c> and
-        /// <c>DlpServiceClient.CreateDlpJobAsync</c> <see cref="RetrySettings"/> are:
+        /// <c>DlpServiceClient.CreateDlpJobAsync</c> <see cref="gaxgrpc::RetrySettings"/> are:
         /// <list type="bullet">
         /// <item><description>Initial retry delay: 100 milliseconds</description></item>
         /// <item><description>Retry delay multiplier: 1.3</description></item>
@@ -610,21 +610,21 @@ namespace Google.Cloud.Dlp.V2
         /// </list>
         /// Default RPC expiration is 600000 milliseconds.
         /// </remarks>
-        public CallSettings CreateDlpJobSettings { get; set; } = CallSettings.FromCallTiming(
-            CallTiming.FromRetry(new RetrySettings(
+        public gaxgrpc::CallSettings CreateDlpJobSettings { get; set; } = gaxgrpc::CallSettings.FromCallTiming(
+            gaxgrpc::CallTiming.FromRetry(new gaxgrpc::RetrySettings(
                 retryBackoff: GetDefaultRetryBackoff(),
                 timeoutBackoff: GetDefaultTimeoutBackoff(),
-                totalExpiration: Expiration.FromTimeout(TimeSpan.FromMilliseconds(600000)),
+                totalExpiration: gax::Expiration.FromTimeout(s::TimeSpan.FromMilliseconds(600000)),
                 retryFilter: NonIdempotentRetryFilter
             )));
 
         /// <summary>
-        /// <see cref="CallSettings"/> for synchronous and asynchronous calls to
+        /// <see cref="gaxgrpc::CallSettings"/> for synchronous and asynchronous calls to
         /// <c>DlpServiceClient.ListDlpJobs</c> and <c>DlpServiceClient.ListDlpJobsAsync</c>.
         /// </summary>
         /// <remarks>
         /// The default <c>DlpServiceClient.ListDlpJobs</c> and
-        /// <c>DlpServiceClient.ListDlpJobsAsync</c> <see cref="RetrySettings"/> are:
+        /// <c>DlpServiceClient.ListDlpJobsAsync</c> <see cref="gaxgrpc::RetrySettings"/> are:
         /// <list type="bullet">
         /// <item><description>Initial retry delay: 100 milliseconds</description></item>
         /// <item><description>Retry delay multiplier: 1.3</description></item>
@@ -635,26 +635,26 @@ namespace Google.Cloud.Dlp.V2
         /// </list>
         /// Retry will be attempted on the following response status codes:
         /// <list>
-        /// <item><description><see cref="StatusCode.DeadlineExceeded"/></description></item>
-        /// <item><description><see cref="StatusCode.Unavailable"/></description></item>
+        /// <item><description><see cref="grpccore::StatusCode.DeadlineExceeded"/></description></item>
+        /// <item><description><see cref="grpccore::StatusCode.Unavailable"/></description></item>
         /// </list>
         /// Default RPC expiration is 600000 milliseconds.
         /// </remarks>
-        public CallSettings ListDlpJobsSettings { get; set; } = CallSettings.FromCallTiming(
-            CallTiming.FromRetry(new RetrySettings(
+        public gaxgrpc::CallSettings ListDlpJobsSettings { get; set; } = gaxgrpc::CallSettings.FromCallTiming(
+            gaxgrpc::CallTiming.FromRetry(new gaxgrpc::RetrySettings(
                 retryBackoff: GetDefaultRetryBackoff(),
                 timeoutBackoff: GetDefaultTimeoutBackoff(),
-                totalExpiration: Expiration.FromTimeout(TimeSpan.FromMilliseconds(600000)),
+                totalExpiration: gax::Expiration.FromTimeout(s::TimeSpan.FromMilliseconds(600000)),
                 retryFilter: IdempotentRetryFilter
             )));
 
         /// <summary>
-        /// <see cref="CallSettings"/> for synchronous and asynchronous calls to
+        /// <see cref="gaxgrpc::CallSettings"/> for synchronous and asynchronous calls to
         /// <c>DlpServiceClient.GetDlpJob</c> and <c>DlpServiceClient.GetDlpJobAsync</c>.
         /// </summary>
         /// <remarks>
         /// The default <c>DlpServiceClient.GetDlpJob</c> and
-        /// <c>DlpServiceClient.GetDlpJobAsync</c> <see cref="RetrySettings"/> are:
+        /// <c>DlpServiceClient.GetDlpJobAsync</c> <see cref="gaxgrpc::RetrySettings"/> are:
         /// <list type="bullet">
         /// <item><description>Initial retry delay: 100 milliseconds</description></item>
         /// <item><description>Retry delay multiplier: 1.3</description></item>
@@ -665,26 +665,26 @@ namespace Google.Cloud.Dlp.V2
         /// </list>
         /// Retry will be attempted on the following response status codes:
         /// <list>
-        /// <item><description><see cref="StatusCode.DeadlineExceeded"/></description></item>
-        /// <item><description><see cref="StatusCode.Unavailable"/></description></item>
+        /// <item><description><see cref="grpccore::StatusCode.DeadlineExceeded"/></description></item>
+        /// <item><description><see cref="grpccore::StatusCode.Unavailable"/></description></item>
         /// </list>
         /// Default RPC expiration is 600000 milliseconds.
         /// </remarks>
-        public CallSettings GetDlpJobSettings { get; set; } = CallSettings.FromCallTiming(
-            CallTiming.FromRetry(new RetrySettings(
+        public gaxgrpc::CallSettings GetDlpJobSettings { get; set; } = gaxgrpc::CallSettings.FromCallTiming(
+            gaxgrpc::CallTiming.FromRetry(new gaxgrpc::RetrySettings(
                 retryBackoff: GetDefaultRetryBackoff(),
                 timeoutBackoff: GetDefaultTimeoutBackoff(),
-                totalExpiration: Expiration.FromTimeout(TimeSpan.FromMilliseconds(600000)),
+                totalExpiration: gax::Expiration.FromTimeout(s::TimeSpan.FromMilliseconds(600000)),
                 retryFilter: IdempotentRetryFilter
             )));
 
         /// <summary>
-        /// <see cref="CallSettings"/> for synchronous and asynchronous calls to
+        /// <see cref="gaxgrpc::CallSettings"/> for synchronous and asynchronous calls to
         /// <c>DlpServiceClient.DeleteDlpJob</c> and <c>DlpServiceClient.DeleteDlpJobAsync</c>.
         /// </summary>
         /// <remarks>
         /// The default <c>DlpServiceClient.DeleteDlpJob</c> and
-        /// <c>DlpServiceClient.DeleteDlpJobAsync</c> <see cref="RetrySettings"/> are:
+        /// <c>DlpServiceClient.DeleteDlpJobAsync</c> <see cref="gaxgrpc::RetrySettings"/> are:
         /// <list type="bullet">
         /// <item><description>Initial retry delay: 100 milliseconds</description></item>
         /// <item><description>Retry delay multiplier: 1.3</description></item>
@@ -695,26 +695,26 @@ namespace Google.Cloud.Dlp.V2
         /// </list>
         /// Retry will be attempted on the following response status codes:
         /// <list>
-        /// <item><description><see cref="StatusCode.DeadlineExceeded"/></description></item>
-        /// <item><description><see cref="StatusCode.Unavailable"/></description></item>
+        /// <item><description><see cref="grpccore::StatusCode.DeadlineExceeded"/></description></item>
+        /// <item><description><see cref="grpccore::StatusCode.Unavailable"/></description></item>
         /// </list>
         /// Default RPC expiration is 600000 milliseconds.
         /// </remarks>
-        public CallSettings DeleteDlpJobSettings { get; set; } = CallSettings.FromCallTiming(
-            CallTiming.FromRetry(new RetrySettings(
+        public gaxgrpc::CallSettings DeleteDlpJobSettings { get; set; } = gaxgrpc::CallSettings.FromCallTiming(
+            gaxgrpc::CallTiming.FromRetry(new gaxgrpc::RetrySettings(
                 retryBackoff: GetDefaultRetryBackoff(),
                 timeoutBackoff: GetDefaultTimeoutBackoff(),
-                totalExpiration: Expiration.FromTimeout(TimeSpan.FromMilliseconds(600000)),
+                totalExpiration: gax::Expiration.FromTimeout(s::TimeSpan.FromMilliseconds(600000)),
                 retryFilter: IdempotentRetryFilter
             )));
 
         /// <summary>
-        /// <see cref="CallSettings"/> for synchronous and asynchronous calls to
+        /// <see cref="gaxgrpc::CallSettings"/> for synchronous and asynchronous calls to
         /// <c>DlpServiceClient.CancelDlpJob</c> and <c>DlpServiceClient.CancelDlpJobAsync</c>.
         /// </summary>
         /// <remarks>
         /// The default <c>DlpServiceClient.CancelDlpJob</c> and
-        /// <c>DlpServiceClient.CancelDlpJobAsync</c> <see cref="RetrySettings"/> are:
+        /// <c>DlpServiceClient.CancelDlpJobAsync</c> <see cref="gaxgrpc::RetrySettings"/> are:
         /// <list type="bullet">
         /// <item><description>Initial retry delay: 100 milliseconds</description></item>
         /// <item><description>Retry delay multiplier: 1.3</description></item>
@@ -729,21 +729,21 @@ namespace Google.Cloud.Dlp.V2
         /// </list>
         /// Default RPC expiration is 600000 milliseconds.
         /// </remarks>
-        public CallSettings CancelDlpJobSettings { get; set; } = CallSettings.FromCallTiming(
-            CallTiming.FromRetry(new RetrySettings(
+        public gaxgrpc::CallSettings CancelDlpJobSettings { get; set; } = gaxgrpc::CallSettings.FromCallTiming(
+            gaxgrpc::CallTiming.FromRetry(new gaxgrpc::RetrySettings(
                 retryBackoff: GetDefaultRetryBackoff(),
                 timeoutBackoff: GetDefaultTimeoutBackoff(),
-                totalExpiration: Expiration.FromTimeout(TimeSpan.FromMilliseconds(600000)),
+                totalExpiration: gax::Expiration.FromTimeout(s::TimeSpan.FromMilliseconds(600000)),
                 retryFilter: NonIdempotentRetryFilter
             )));
 
         /// <summary>
-        /// <see cref="CallSettings"/> for synchronous and asynchronous calls to
+        /// <see cref="gaxgrpc::CallSettings"/> for synchronous and asynchronous calls to
         /// <c>DlpServiceClient.ListJobTriggers</c> and <c>DlpServiceClient.ListJobTriggersAsync</c>.
         /// </summary>
         /// <remarks>
         /// The default <c>DlpServiceClient.ListJobTriggers</c> and
-        /// <c>DlpServiceClient.ListJobTriggersAsync</c> <see cref="RetrySettings"/> are:
+        /// <c>DlpServiceClient.ListJobTriggersAsync</c> <see cref="gaxgrpc::RetrySettings"/> are:
         /// <list type="bullet">
         /// <item><description>Initial retry delay: 100 milliseconds</description></item>
         /// <item><description>Retry delay multiplier: 1.3</description></item>
@@ -754,26 +754,26 @@ namespace Google.Cloud.Dlp.V2
         /// </list>
         /// Retry will be attempted on the following response status codes:
         /// <list>
-        /// <item><description><see cref="StatusCode.DeadlineExceeded"/></description></item>
-        /// <item><description><see cref="StatusCode.Unavailable"/></description></item>
+        /// <item><description><see cref="grpccore::StatusCode.DeadlineExceeded"/></description></item>
+        /// <item><description><see cref="grpccore::StatusCode.Unavailable"/></description></item>
         /// </list>
         /// Default RPC expiration is 600000 milliseconds.
         /// </remarks>
-        public CallSettings ListJobTriggersSettings { get; set; } = CallSettings.FromCallTiming(
-            CallTiming.FromRetry(new RetrySettings(
+        public gaxgrpc::CallSettings ListJobTriggersSettings { get; set; } = gaxgrpc::CallSettings.FromCallTiming(
+            gaxgrpc::CallTiming.FromRetry(new gaxgrpc::RetrySettings(
                 retryBackoff: GetDefaultRetryBackoff(),
                 timeoutBackoff: GetDefaultTimeoutBackoff(),
-                totalExpiration: Expiration.FromTimeout(TimeSpan.FromMilliseconds(600000)),
+                totalExpiration: gax::Expiration.FromTimeout(s::TimeSpan.FromMilliseconds(600000)),
                 retryFilter: IdempotentRetryFilter
             )));
 
         /// <summary>
-        /// <see cref="CallSettings"/> for synchronous and asynchronous calls to
+        /// <see cref="gaxgrpc::CallSettings"/> for synchronous and asynchronous calls to
         /// <c>DlpServiceClient.GetJobTrigger</c> and <c>DlpServiceClient.GetJobTriggerAsync</c>.
         /// </summary>
         /// <remarks>
         /// The default <c>DlpServiceClient.GetJobTrigger</c> and
-        /// <c>DlpServiceClient.GetJobTriggerAsync</c> <see cref="RetrySettings"/> are:
+        /// <c>DlpServiceClient.GetJobTriggerAsync</c> <see cref="gaxgrpc::RetrySettings"/> are:
         /// <list type="bullet">
         /// <item><description>Initial retry delay: 100 milliseconds</description></item>
         /// <item><description>Retry delay multiplier: 1.3</description></item>
@@ -784,26 +784,26 @@ namespace Google.Cloud.Dlp.V2
         /// </list>
         /// Retry will be attempted on the following response status codes:
         /// <list>
-        /// <item><description><see cref="StatusCode.DeadlineExceeded"/></description></item>
-        /// <item><description><see cref="StatusCode.Unavailable"/></description></item>
+        /// <item><description><see cref="grpccore::StatusCode.DeadlineExceeded"/></description></item>
+        /// <item><description><see cref="grpccore::StatusCode.Unavailable"/></description></item>
         /// </list>
         /// Default RPC expiration is 600000 milliseconds.
         /// </remarks>
-        public CallSettings GetJobTriggerSettings { get; set; } = CallSettings.FromCallTiming(
-            CallTiming.FromRetry(new RetrySettings(
+        public gaxgrpc::CallSettings GetJobTriggerSettings { get; set; } = gaxgrpc::CallSettings.FromCallTiming(
+            gaxgrpc::CallTiming.FromRetry(new gaxgrpc::RetrySettings(
                 retryBackoff: GetDefaultRetryBackoff(),
                 timeoutBackoff: GetDefaultTimeoutBackoff(),
-                totalExpiration: Expiration.FromTimeout(TimeSpan.FromMilliseconds(600000)),
+                totalExpiration: gax::Expiration.FromTimeout(s::TimeSpan.FromMilliseconds(600000)),
                 retryFilter: IdempotentRetryFilter
             )));
 
         /// <summary>
-        /// <see cref="CallSettings"/> for synchronous and asynchronous calls to
+        /// <see cref="gaxgrpc::CallSettings"/> for synchronous and asynchronous calls to
         /// <c>DlpServiceClient.DeleteJobTrigger</c> and <c>DlpServiceClient.DeleteJobTriggerAsync</c>.
         /// </summary>
         /// <remarks>
         /// The default <c>DlpServiceClient.DeleteJobTrigger</c> and
-        /// <c>DlpServiceClient.DeleteJobTriggerAsync</c> <see cref="RetrySettings"/> are:
+        /// <c>DlpServiceClient.DeleteJobTriggerAsync</c> <see cref="gaxgrpc::RetrySettings"/> are:
         /// <list type="bullet">
         /// <item><description>Initial retry delay: 100 milliseconds</description></item>
         /// <item><description>Retry delay multiplier: 1.3</description></item>
@@ -814,26 +814,26 @@ namespace Google.Cloud.Dlp.V2
         /// </list>
         /// Retry will be attempted on the following response status codes:
         /// <list>
-        /// <item><description><see cref="StatusCode.DeadlineExceeded"/></description></item>
-        /// <item><description><see cref="StatusCode.Unavailable"/></description></item>
+        /// <item><description><see cref="grpccore::StatusCode.DeadlineExceeded"/></description></item>
+        /// <item><description><see cref="grpccore::StatusCode.Unavailable"/></description></item>
         /// </list>
         /// Default RPC expiration is 600000 milliseconds.
         /// </remarks>
-        public CallSettings DeleteJobTriggerSettings { get; set; } = CallSettings.FromCallTiming(
-            CallTiming.FromRetry(new RetrySettings(
+        public gaxgrpc::CallSettings DeleteJobTriggerSettings { get; set; } = gaxgrpc::CallSettings.FromCallTiming(
+            gaxgrpc::CallTiming.FromRetry(new gaxgrpc::RetrySettings(
                 retryBackoff: GetDefaultRetryBackoff(),
                 timeoutBackoff: GetDefaultTimeoutBackoff(),
-                totalExpiration: Expiration.FromTimeout(TimeSpan.FromMilliseconds(600000)),
+                totalExpiration: gax::Expiration.FromTimeout(s::TimeSpan.FromMilliseconds(600000)),
                 retryFilter: IdempotentRetryFilter
             )));
 
         /// <summary>
-        /// <see cref="CallSettings"/> for synchronous and asynchronous calls to
+        /// <see cref="gaxgrpc::CallSettings"/> for synchronous and asynchronous calls to
         /// <c>DlpServiceClient.UpdateJobTrigger</c> and <c>DlpServiceClient.UpdateJobTriggerAsync</c>.
         /// </summary>
         /// <remarks>
         /// The default <c>DlpServiceClient.UpdateJobTrigger</c> and
-        /// <c>DlpServiceClient.UpdateJobTriggerAsync</c> <see cref="RetrySettings"/> are:
+        /// <c>DlpServiceClient.UpdateJobTriggerAsync</c> <see cref="gaxgrpc::RetrySettings"/> are:
         /// <list type="bullet">
         /// <item><description>Initial retry delay: 100 milliseconds</description></item>
         /// <item><description>Retry delay multiplier: 1.3</description></item>
@@ -848,21 +848,21 @@ namespace Google.Cloud.Dlp.V2
         /// </list>
         /// Default RPC expiration is 600000 milliseconds.
         /// </remarks>
-        public CallSettings UpdateJobTriggerSettings { get; set; } = CallSettings.FromCallTiming(
-            CallTiming.FromRetry(new RetrySettings(
+        public gaxgrpc::CallSettings UpdateJobTriggerSettings { get; set; } = gaxgrpc::CallSettings.FromCallTiming(
+            gaxgrpc::CallTiming.FromRetry(new gaxgrpc::RetrySettings(
                 retryBackoff: GetDefaultRetryBackoff(),
                 timeoutBackoff: GetDefaultTimeoutBackoff(),
-                totalExpiration: Expiration.FromTimeout(TimeSpan.FromMilliseconds(600000)),
+                totalExpiration: gax::Expiration.FromTimeout(s::TimeSpan.FromMilliseconds(600000)),
                 retryFilter: NonIdempotentRetryFilter
             )));
 
         /// <summary>
-        /// <see cref="CallSettings"/> for synchronous and asynchronous calls to
+        /// <see cref="gaxgrpc::CallSettings"/> for synchronous and asynchronous calls to
         /// <c>DlpServiceClient.CreateJobTrigger</c> and <c>DlpServiceClient.CreateJobTriggerAsync</c>.
         /// </summary>
         /// <remarks>
         /// The default <c>DlpServiceClient.CreateJobTrigger</c> and
-        /// <c>DlpServiceClient.CreateJobTriggerAsync</c> <see cref="RetrySettings"/> are:
+        /// <c>DlpServiceClient.CreateJobTriggerAsync</c> <see cref="gaxgrpc::RetrySettings"/> are:
         /// <list type="bullet">
         /// <item><description>Initial retry delay: 100 milliseconds</description></item>
         /// <item><description>Retry delay multiplier: 1.3</description></item>
@@ -877,11 +877,11 @@ namespace Google.Cloud.Dlp.V2
         /// </list>
         /// Default RPC expiration is 600000 milliseconds.
         /// </remarks>
-        public CallSettings CreateJobTriggerSettings { get; set; } = CallSettings.FromCallTiming(
-            CallTiming.FromRetry(new RetrySettings(
+        public gaxgrpc::CallSettings CreateJobTriggerSettings { get; set; } = gaxgrpc::CallSettings.FromCallTiming(
+            gaxgrpc::CallTiming.FromRetry(new gaxgrpc::RetrySettings(
                 retryBackoff: GetDefaultRetryBackoff(),
                 timeoutBackoff: GetDefaultTimeoutBackoff(),
-                totalExpiration: Expiration.FromTimeout(TimeSpan.FromMilliseconds(600000)),
+                totalExpiration: gax::Expiration.FromTimeout(s::TimeSpan.FromMilliseconds(600000)),
                 retryFilter: NonIdempotentRetryFilter
             )));
 
@@ -900,7 +900,7 @@ namespace Google.Cloud.Dlp.V2
         /// <summary>
         /// The default endpoint for the DlpService service, which is a host of "dlp.googleapis.com" and a port of 443.
         /// </summary>
-        public static ServiceEndpoint DefaultEndpoint { get; } = new ServiceEndpoint("dlp.googleapis.com", 443);
+        public static gaxgrpc::ServiceEndpoint DefaultEndpoint { get; } = new gaxgrpc::ServiceEndpoint("dlp.googleapis.com", 443);
 
         /// <summary>
         /// The default DlpService scopes.
@@ -911,11 +911,11 @@ namespace Google.Cloud.Dlp.V2
         /// <item><description>"https://www.googleapis.com/auth/cloud-platform"</description></item>
         /// </list>
         /// </remarks>
-        public static IReadOnlyList<string> DefaultScopes { get; } = new ReadOnlyCollection<string>(new string[] {
+        public static scg::IReadOnlyList<string> DefaultScopes { get; } = new sco::ReadOnlyCollection<string>(new string[] {
             "https://www.googleapis.com/auth/cloud-platform",
         });
 
-        private static readonly ChannelPool s_channelPool = new ChannelPool(DefaultScopes);
+        private static readonly gaxgrpc::ChannelPool s_channelPool = new gaxgrpc::ChannelPool(DefaultScopes);
 
         // Note: we could have parameterless overloads of Create and CreateAsync,
         // documented to just use the default endpoint, settings and credentials.
@@ -929,12 +929,12 @@ namespace Google.Cloud.Dlp.V2
         /// and creating a channel connecting to the given endpoint with application default credentials where
         /// necessary.
         /// </summary>
-        /// <param name="endpoint">Optional <see cref="ServiceEndpoint"/>.</param>
+        /// <param name="endpoint">Optional <see cref="gaxgrpc::ServiceEndpoint"/>.</param>
         /// <param name="settings">Optional <see cref="DlpServiceSettings"/>.</param>
         /// <returns>The task representing the created <see cref="DlpServiceClient"/>.</returns>
-        public static async Task<DlpServiceClient> CreateAsync(ServiceEndpoint endpoint = null, DlpServiceSettings settings = null)
+        public static async stt::Task<DlpServiceClient> CreateAsync(gaxgrpc::ServiceEndpoint endpoint = null, DlpServiceSettings settings = null)
         {
-            Channel channel = await s_channelPool.GetChannelAsync(endpoint ?? DefaultEndpoint).ConfigureAwait(false);
+            grpccore::Channel channel = await s_channelPool.GetChannelAsync(endpoint ?? DefaultEndpoint).ConfigureAwait(false);
             return Create(channel, settings);
         }
 
@@ -943,45 +943,45 @@ namespace Google.Cloud.Dlp.V2
         /// and creating a channel connecting to the given endpoint with application default credentials where
         /// necessary.
         /// </summary>
-        /// <param name="endpoint">Optional <see cref="ServiceEndpoint"/>.</param>
+        /// <param name="endpoint">Optional <see cref="gaxgrpc::ServiceEndpoint"/>.</param>
         /// <param name="settings">Optional <see cref="DlpServiceSettings"/>.</param>
         /// <returns>The created <see cref="DlpServiceClient"/>.</returns>
-        public static DlpServiceClient Create(ServiceEndpoint endpoint = null, DlpServiceSettings settings = null)
+        public static DlpServiceClient Create(gaxgrpc::ServiceEndpoint endpoint = null, DlpServiceSettings settings = null)
         {
-            Channel channel = s_channelPool.GetChannel(endpoint ?? DefaultEndpoint);
+            grpccore::Channel channel = s_channelPool.GetChannel(endpoint ?? DefaultEndpoint);
             return Create(channel, settings);
         }
 
         /// <summary>
         /// Creates a <see cref="DlpServiceClient"/> which uses the specified channel for remote operations.
         /// </summary>
-        /// <param name="channel">The <see cref="Channel"/> for remote operations. Must not be null.</param>
+        /// <param name="channel">The <see cref="grpccore::Channel"/> for remote operations. Must not be null.</param>
         /// <param name="settings">Optional <see cref="DlpServiceSettings"/>.</param>
         /// <returns>The created <see cref="DlpServiceClient"/>.</returns>
-        public static DlpServiceClient Create(Channel channel, DlpServiceSettings settings = null)
+        public static DlpServiceClient Create(grpccore::Channel channel, DlpServiceSettings settings = null)
         {
-            GaxPreconditions.CheckNotNull(channel, nameof(channel));
+            gax::GaxPreconditions.CheckNotNull(channel, nameof(channel));
             DlpService.DlpServiceClient grpcClient = new DlpService.DlpServiceClient(channel);
             return new DlpServiceClientImpl(grpcClient, settings);
         }
 
         /// <summary>
-        /// Shuts down any channels automatically created by <see cref="Create(ServiceEndpoint, DlpServiceSettings)"/>
-        /// and <see cref="CreateAsync(ServiceEndpoint, DlpServiceSettings)"/>. Channels which weren't automatically
+        /// Shuts down any channels automatically created by <see cref="Create(gaxgrpc::ServiceEndpoint, DlpServiceSettings)"/>
+        /// and <see cref="CreateAsync(gaxgrpc::ServiceEndpoint, DlpServiceSettings)"/>. Channels which weren't automatically
         /// created are not affected.
         /// </summary>
-        /// <remarks>After calling this method, further calls to <see cref="Create(ServiceEndpoint, DlpServiceSettings)"/>
-        /// and <see cref="CreateAsync(ServiceEndpoint, DlpServiceSettings)"/> will create new channels, which could
+        /// <remarks>After calling this method, further calls to <see cref="Create(gaxgrpc::ServiceEndpoint, DlpServiceSettings)"/>
+        /// and <see cref="CreateAsync(gaxgrpc::ServiceEndpoint, DlpServiceSettings)"/> will create new channels, which could
         /// in turn be shut down by another call to this method.</remarks>
         /// <returns>A task representing the asynchronous shutdown operation.</returns>
-        public static Task ShutdownDefaultChannelsAsync() => s_channelPool.ShutdownChannelsAsync();
+        public static stt::Task ShutdownDefaultChannelsAsync() => s_channelPool.ShutdownChannelsAsync();
 
         /// <summary>
         /// The underlying gRPC DlpService client.
         /// </summary>
         public virtual DlpService.DlpServiceClient GrpcClient
         {
-            get { throw new NotImplementedException(); }
+            get { throw new s::NotImplementedException(); }
         }
 
         /// <summary>
@@ -999,11 +999,11 @@ namespace Google.Cloud.Dlp.V2
         /// <returns>
         /// A Task containing the RPC response.
         /// </returns>
-        public virtual Task<InspectContentResponse> InspectContentAsync(
+        public virtual stt::Task<InspectContentResponse> InspectContentAsync(
             InspectContentRequest request,
-            CallSettings callSettings = null)
+            gaxgrpc::CallSettings callSettings = null)
         {
-            throw new NotImplementedException();
+            throw new s::NotImplementedException();
         }
 
         /// <summary>
@@ -1016,16 +1016,16 @@ namespace Google.Cloud.Dlp.V2
         /// The request object containing all of the parameters for the API call.
         /// </param>
         /// <param name="cancellationToken">
-        /// A <see cref="CancellationToken"/> to use for this RPC.
+        /// A <see cref="st::CancellationToken"/> to use for this RPC.
         /// </param>
         /// <returns>
         /// A Task containing the RPC response.
         /// </returns>
-        public virtual Task<InspectContentResponse> InspectContentAsync(
+        public virtual stt::Task<InspectContentResponse> InspectContentAsync(
             InspectContentRequest request,
-            CancellationToken cancellationToken) => InspectContentAsync(
+            st::CancellationToken cancellationToken) => InspectContentAsync(
                 request,
-                CallSettings.FromCancellationToken(cancellationToken));
+                gaxgrpc::CallSettings.FromCancellationToken(cancellationToken));
 
         /// <summary>
         /// Finds potentially sensitive info in content.
@@ -1044,9 +1044,9 @@ namespace Google.Cloud.Dlp.V2
         /// </returns>
         public virtual InspectContentResponse InspectContent(
             InspectContentRequest request,
-            CallSettings callSettings = null)
+            gaxgrpc::CallSettings callSettings = null)
         {
-            throw new NotImplementedException();
+            throw new s::NotImplementedException();
         }
 
         /// <summary>
@@ -1063,11 +1063,11 @@ namespace Google.Cloud.Dlp.V2
         /// <returns>
         /// A Task containing the RPC response.
         /// </returns>
-        public virtual Task<RedactImageResponse> RedactImageAsync(
+        public virtual stt::Task<RedactImageResponse> RedactImageAsync(
             RedactImageRequest request,
-            CallSettings callSettings = null)
+            gaxgrpc::CallSettings callSettings = null)
         {
-            throw new NotImplementedException();
+            throw new s::NotImplementedException();
         }
 
         /// <summary>
@@ -1079,16 +1079,16 @@ namespace Google.Cloud.Dlp.V2
         /// The request object containing all of the parameters for the API call.
         /// </param>
         /// <param name="cancellationToken">
-        /// A <see cref="CancellationToken"/> to use for this RPC.
+        /// A <see cref="st::CancellationToken"/> to use for this RPC.
         /// </param>
         /// <returns>
         /// A Task containing the RPC response.
         /// </returns>
-        public virtual Task<RedactImageResponse> RedactImageAsync(
+        public virtual stt::Task<RedactImageResponse> RedactImageAsync(
             RedactImageRequest request,
-            CancellationToken cancellationToken) => RedactImageAsync(
+            st::CancellationToken cancellationToken) => RedactImageAsync(
                 request,
-                CallSettings.FromCancellationToken(cancellationToken));
+                gaxgrpc::CallSettings.FromCancellationToken(cancellationToken));
 
         /// <summary>
         /// Redacts potentially sensitive info from an image.
@@ -1106,9 +1106,9 @@ namespace Google.Cloud.Dlp.V2
         /// </returns>
         public virtual RedactImageResponse RedactImage(
             RedactImageRequest request,
-            CallSettings callSettings = null)
+            gaxgrpc::CallSettings callSettings = null)
         {
-            throw new NotImplementedException();
+            throw new s::NotImplementedException();
         }
 
         /// <summary>
@@ -1125,11 +1125,11 @@ namespace Google.Cloud.Dlp.V2
         /// <returns>
         /// A Task containing the RPC response.
         /// </returns>
-        public virtual Task<DeidentifyContentResponse> DeidentifyContentAsync(
+        public virtual stt::Task<DeidentifyContentResponse> DeidentifyContentAsync(
             DeidentifyContentRequest request,
-            CallSettings callSettings = null)
+            gaxgrpc::CallSettings callSettings = null)
         {
-            throw new NotImplementedException();
+            throw new s::NotImplementedException();
         }
 
         /// <summary>
@@ -1141,16 +1141,16 @@ namespace Google.Cloud.Dlp.V2
         /// The request object containing all of the parameters for the API call.
         /// </param>
         /// <param name="cancellationToken">
-        /// A <see cref="CancellationToken"/> to use for this RPC.
+        /// A <see cref="st::CancellationToken"/> to use for this RPC.
         /// </param>
         /// <returns>
         /// A Task containing the RPC response.
         /// </returns>
-        public virtual Task<DeidentifyContentResponse> DeidentifyContentAsync(
+        public virtual stt::Task<DeidentifyContentResponse> DeidentifyContentAsync(
             DeidentifyContentRequest request,
-            CancellationToken cancellationToken) => DeidentifyContentAsync(
+            st::CancellationToken cancellationToken) => DeidentifyContentAsync(
                 request,
-                CallSettings.FromCancellationToken(cancellationToken));
+                gaxgrpc::CallSettings.FromCancellationToken(cancellationToken));
 
         /// <summary>
         /// De-identifies potentially sensitive info from a ContentItem.
@@ -1168,9 +1168,9 @@ namespace Google.Cloud.Dlp.V2
         /// </returns>
         public virtual DeidentifyContentResponse DeidentifyContent(
             DeidentifyContentRequest request,
-            CallSettings callSettings = null)
+            gaxgrpc::CallSettings callSettings = null)
         {
-            throw new NotImplementedException();
+            throw new s::NotImplementedException();
         }
 
         /// <summary>
@@ -1185,11 +1185,11 @@ namespace Google.Cloud.Dlp.V2
         /// <returns>
         /// A Task containing the RPC response.
         /// </returns>
-        public virtual Task<ReidentifyContentResponse> ReidentifyContentAsync(
+        public virtual stt::Task<ReidentifyContentResponse> ReidentifyContentAsync(
             ReidentifyContentRequest request,
-            CallSettings callSettings = null)
+            gaxgrpc::CallSettings callSettings = null)
         {
-            throw new NotImplementedException();
+            throw new s::NotImplementedException();
         }
 
         /// <summary>
@@ -1199,16 +1199,16 @@ namespace Google.Cloud.Dlp.V2
         /// The request object containing all of the parameters for the API call.
         /// </param>
         /// <param name="cancellationToken">
-        /// A <see cref="CancellationToken"/> to use for this RPC.
+        /// A <see cref="st::CancellationToken"/> to use for this RPC.
         /// </param>
         /// <returns>
         /// A Task containing the RPC response.
         /// </returns>
-        public virtual Task<ReidentifyContentResponse> ReidentifyContentAsync(
+        public virtual stt::Task<ReidentifyContentResponse> ReidentifyContentAsync(
             ReidentifyContentRequest request,
-            CancellationToken cancellationToken) => ReidentifyContentAsync(
+            st::CancellationToken cancellationToken) => ReidentifyContentAsync(
                 request,
-                CallSettings.FromCancellationToken(cancellationToken));
+                gaxgrpc::CallSettings.FromCancellationToken(cancellationToken));
 
         /// <summary>
         /// Re-identifies content that has been de-identified.
@@ -1224,9 +1224,9 @@ namespace Google.Cloud.Dlp.V2
         /// </returns>
         public virtual ReidentifyContentResponse ReidentifyContent(
             ReidentifyContentRequest request,
-            CallSettings callSettings = null)
+            gaxgrpc::CallSettings callSettings = null)
         {
-            throw new NotImplementedException();
+            throw new s::NotImplementedException();
         }
 
         /// <summary>
@@ -1243,11 +1243,11 @@ namespace Google.Cloud.Dlp.V2
         /// <returns>
         /// A Task containing the RPC response.
         /// </returns>
-        public virtual Task<ListInfoTypesResponse> ListInfoTypesAsync(
+        public virtual stt::Task<ListInfoTypesResponse> ListInfoTypesAsync(
             ListInfoTypesRequest request,
-            CallSettings callSettings = null)
+            gaxgrpc::CallSettings callSettings = null)
         {
-            throw new NotImplementedException();
+            throw new s::NotImplementedException();
         }
 
         /// <summary>
@@ -1259,16 +1259,16 @@ namespace Google.Cloud.Dlp.V2
         /// The request object containing all of the parameters for the API call.
         /// </param>
         /// <param name="cancellationToken">
-        /// A <see cref="CancellationToken"/> to use for this RPC.
+        /// A <see cref="st::CancellationToken"/> to use for this RPC.
         /// </param>
         /// <returns>
         /// A Task containing the RPC response.
         /// </returns>
-        public virtual Task<ListInfoTypesResponse> ListInfoTypesAsync(
+        public virtual stt::Task<ListInfoTypesResponse> ListInfoTypesAsync(
             ListInfoTypesRequest request,
-            CancellationToken cancellationToken) => ListInfoTypesAsync(
+            st::CancellationToken cancellationToken) => ListInfoTypesAsync(
                 request,
-                CallSettings.FromCancellationToken(cancellationToken));
+                gaxgrpc::CallSettings.FromCancellationToken(cancellationToken));
 
         /// <summary>
         /// Returns a list of the sensitive information types that the DLP API
@@ -1286,9 +1286,9 @@ namespace Google.Cloud.Dlp.V2
         /// </returns>
         public virtual ListInfoTypesResponse ListInfoTypes(
             ListInfoTypesRequest request,
-            CallSettings callSettings = null)
+            gaxgrpc::CallSettings callSettings = null)
         {
-            throw new NotImplementedException();
+            throw new s::NotImplementedException();
         }
 
         /// <summary>
@@ -1304,11 +1304,11 @@ namespace Google.Cloud.Dlp.V2
         /// <returns>
         /// A Task containing the RPC response.
         /// </returns>
-        public virtual Task<InspectTemplate> CreateInspectTemplateAsync(
+        public virtual stt::Task<InspectTemplate> CreateInspectTemplateAsync(
             CreateInspectTemplateRequest request,
-            CallSettings callSettings = null)
+            gaxgrpc::CallSettings callSettings = null)
         {
-            throw new NotImplementedException();
+            throw new s::NotImplementedException();
         }
 
         /// <summary>
@@ -1319,16 +1319,16 @@ namespace Google.Cloud.Dlp.V2
         /// The request object containing all of the parameters for the API call.
         /// </param>
         /// <param name="cancellationToken">
-        /// A <see cref="CancellationToken"/> to use for this RPC.
+        /// A <see cref="st::CancellationToken"/> to use for this RPC.
         /// </param>
         /// <returns>
         /// A Task containing the RPC response.
         /// </returns>
-        public virtual Task<InspectTemplate> CreateInspectTemplateAsync(
+        public virtual stt::Task<InspectTemplate> CreateInspectTemplateAsync(
             CreateInspectTemplateRequest request,
-            CancellationToken cancellationToken) => CreateInspectTemplateAsync(
+            st::CancellationToken cancellationToken) => CreateInspectTemplateAsync(
                 request,
-                CallSettings.FromCancellationToken(cancellationToken));
+                gaxgrpc::CallSettings.FromCancellationToken(cancellationToken));
 
         /// <summary>
         /// Creates an InspectTemplate for re-using frequently used configuration
@@ -1345,9 +1345,9 @@ namespace Google.Cloud.Dlp.V2
         /// </returns>
         public virtual InspectTemplate CreateInspectTemplate(
             CreateInspectTemplateRequest request,
-            CallSettings callSettings = null)
+            gaxgrpc::CallSettings callSettings = null)
         {
-            throw new NotImplementedException();
+            throw new s::NotImplementedException();
         }
 
         /// <summary>
@@ -1362,11 +1362,11 @@ namespace Google.Cloud.Dlp.V2
         /// <returns>
         /// A Task containing the RPC response.
         /// </returns>
-        public virtual Task<InspectTemplate> UpdateInspectTemplateAsync(
+        public virtual stt::Task<InspectTemplate> UpdateInspectTemplateAsync(
             UpdateInspectTemplateRequest request,
-            CallSettings callSettings = null)
+            gaxgrpc::CallSettings callSettings = null)
         {
-            throw new NotImplementedException();
+            throw new s::NotImplementedException();
         }
 
         /// <summary>
@@ -1376,16 +1376,16 @@ namespace Google.Cloud.Dlp.V2
         /// The request object containing all of the parameters for the API call.
         /// </param>
         /// <param name="cancellationToken">
-        /// A <see cref="CancellationToken"/> to use for this RPC.
+        /// A <see cref="st::CancellationToken"/> to use for this RPC.
         /// </param>
         /// <returns>
         /// A Task containing the RPC response.
         /// </returns>
-        public virtual Task<InspectTemplate> UpdateInspectTemplateAsync(
+        public virtual stt::Task<InspectTemplate> UpdateInspectTemplateAsync(
             UpdateInspectTemplateRequest request,
-            CancellationToken cancellationToken) => UpdateInspectTemplateAsync(
+            st::CancellationToken cancellationToken) => UpdateInspectTemplateAsync(
                 request,
-                CallSettings.FromCancellationToken(cancellationToken));
+                gaxgrpc::CallSettings.FromCancellationToken(cancellationToken));
 
         /// <summary>
         /// Updates the InspectTemplate.
@@ -1401,9 +1401,9 @@ namespace Google.Cloud.Dlp.V2
         /// </returns>
         public virtual InspectTemplate UpdateInspectTemplate(
             UpdateInspectTemplateRequest request,
-            CallSettings callSettings = null)
+            gaxgrpc::CallSettings callSettings = null)
         {
-            throw new NotImplementedException();
+            throw new s::NotImplementedException();
         }
 
         /// <summary>
@@ -1418,11 +1418,11 @@ namespace Google.Cloud.Dlp.V2
         /// <returns>
         /// A Task containing the RPC response.
         /// </returns>
-        public virtual Task<InspectTemplate> GetInspectTemplateAsync(
+        public virtual stt::Task<InspectTemplate> GetInspectTemplateAsync(
             GetInspectTemplateRequest request,
-            CallSettings callSettings = null)
+            gaxgrpc::CallSettings callSettings = null)
         {
-            throw new NotImplementedException();
+            throw new s::NotImplementedException();
         }
 
         /// <summary>
@@ -1432,16 +1432,16 @@ namespace Google.Cloud.Dlp.V2
         /// The request object containing all of the parameters for the API call.
         /// </param>
         /// <param name="cancellationToken">
-        /// A <see cref="CancellationToken"/> to use for this RPC.
+        /// A <see cref="st::CancellationToken"/> to use for this RPC.
         /// </param>
         /// <returns>
         /// A Task containing the RPC response.
         /// </returns>
-        public virtual Task<InspectTemplate> GetInspectTemplateAsync(
+        public virtual stt::Task<InspectTemplate> GetInspectTemplateAsync(
             GetInspectTemplateRequest request,
-            CancellationToken cancellationToken) => GetInspectTemplateAsync(
+            st::CancellationToken cancellationToken) => GetInspectTemplateAsync(
                 request,
-                CallSettings.FromCancellationToken(cancellationToken));
+                gaxgrpc::CallSettings.FromCancellationToken(cancellationToken));
 
         /// <summary>
         /// Gets an InspectTemplate.
@@ -1457,9 +1457,9 @@ namespace Google.Cloud.Dlp.V2
         /// </returns>
         public virtual InspectTemplate GetInspectTemplate(
             GetInspectTemplateRequest request,
-            CallSettings callSettings = null)
+            gaxgrpc::CallSettings callSettings = null)
         {
-            throw new NotImplementedException();
+            throw new s::NotImplementedException();
         }
 
         /// <summary>
@@ -1474,11 +1474,11 @@ namespace Google.Cloud.Dlp.V2
         /// <returns>
         /// A pageable asynchronous sequence of <see cref="InspectTemplate"/> resources.
         /// </returns>
-        public virtual PagedAsyncEnumerable<ListInspectTemplatesResponse, InspectTemplate> ListInspectTemplatesAsync(
+        public virtual gax::PagedAsyncEnumerable<ListInspectTemplatesResponse, InspectTemplate> ListInspectTemplatesAsync(
             ListInspectTemplatesRequest request,
-            CallSettings callSettings = null)
+            gaxgrpc::CallSettings callSettings = null)
         {
-            throw new NotImplementedException();
+            throw new s::NotImplementedException();
         }
 
         /// <summary>
@@ -1493,11 +1493,11 @@ namespace Google.Cloud.Dlp.V2
         /// <returns>
         /// A pageable sequence of <see cref="InspectTemplate"/> resources.
         /// </returns>
-        public virtual PagedEnumerable<ListInspectTemplatesResponse, InspectTemplate> ListInspectTemplates(
+        public virtual gax::PagedEnumerable<ListInspectTemplatesResponse, InspectTemplate> ListInspectTemplates(
             ListInspectTemplatesRequest request,
-            CallSettings callSettings = null)
+            gaxgrpc::CallSettings callSettings = null)
         {
-            throw new NotImplementedException();
+            throw new s::NotImplementedException();
         }
 
         /// <summary>
@@ -1512,11 +1512,11 @@ namespace Google.Cloud.Dlp.V2
         /// <returns>
         /// A Task that completes when the RPC has completed.
         /// </returns>
-        public virtual Task DeleteInspectTemplateAsync(
+        public virtual stt::Task DeleteInspectTemplateAsync(
             DeleteInspectTemplateRequest request,
-            CallSettings callSettings = null)
+            gaxgrpc::CallSettings callSettings = null)
         {
-            throw new NotImplementedException();
+            throw new s::NotImplementedException();
         }
 
         /// <summary>
@@ -1526,16 +1526,16 @@ namespace Google.Cloud.Dlp.V2
         /// The request object containing all of the parameters for the API call.
         /// </param>
         /// <param name="cancellationToken">
-        /// A <see cref="CancellationToken"/> to use for this RPC.
+        /// A <see cref="st::CancellationToken"/> to use for this RPC.
         /// </param>
         /// <returns>
         /// A Task that completes when the RPC has completed.
         /// </returns>
-        public virtual Task DeleteInspectTemplateAsync(
+        public virtual stt::Task DeleteInspectTemplateAsync(
             DeleteInspectTemplateRequest request,
-            CancellationToken cancellationToken) => DeleteInspectTemplateAsync(
+            st::CancellationToken cancellationToken) => DeleteInspectTemplateAsync(
                 request,
-                CallSettings.FromCancellationToken(cancellationToken));
+                gaxgrpc::CallSettings.FromCancellationToken(cancellationToken));
 
         /// <summary>
         /// Deletes an InspectTemplate.
@@ -1548,9 +1548,9 @@ namespace Google.Cloud.Dlp.V2
         /// </param>
         public virtual void DeleteInspectTemplate(
             DeleteInspectTemplateRequest request,
-            CallSettings callSettings = null)
+            gaxgrpc::CallSettings callSettings = null)
         {
-            throw new NotImplementedException();
+            throw new s::NotImplementedException();
         }
 
         /// <summary>
@@ -1566,11 +1566,11 @@ namespace Google.Cloud.Dlp.V2
         /// <returns>
         /// A Task containing the RPC response.
         /// </returns>
-        public virtual Task<DeidentifyTemplate> CreateDeidentifyTemplateAsync(
+        public virtual stt::Task<DeidentifyTemplate> CreateDeidentifyTemplateAsync(
             CreateDeidentifyTemplateRequest request,
-            CallSettings callSettings = null)
+            gaxgrpc::CallSettings callSettings = null)
         {
-            throw new NotImplementedException();
+            throw new s::NotImplementedException();
         }
 
         /// <summary>
@@ -1581,16 +1581,16 @@ namespace Google.Cloud.Dlp.V2
         /// The request object containing all of the parameters for the API call.
         /// </param>
         /// <param name="cancellationToken">
-        /// A <see cref="CancellationToken"/> to use for this RPC.
+        /// A <see cref="st::CancellationToken"/> to use for this RPC.
         /// </param>
         /// <returns>
         /// A Task containing the RPC response.
         /// </returns>
-        public virtual Task<DeidentifyTemplate> CreateDeidentifyTemplateAsync(
+        public virtual stt::Task<DeidentifyTemplate> CreateDeidentifyTemplateAsync(
             CreateDeidentifyTemplateRequest request,
-            CancellationToken cancellationToken) => CreateDeidentifyTemplateAsync(
+            st::CancellationToken cancellationToken) => CreateDeidentifyTemplateAsync(
                 request,
-                CallSettings.FromCancellationToken(cancellationToken));
+                gaxgrpc::CallSettings.FromCancellationToken(cancellationToken));
 
         /// <summary>
         /// Creates a DeidentifyTemplate for re-using frequently used configuration
@@ -1607,9 +1607,9 @@ namespace Google.Cloud.Dlp.V2
         /// </returns>
         public virtual DeidentifyTemplate CreateDeidentifyTemplate(
             CreateDeidentifyTemplateRequest request,
-            CallSettings callSettings = null)
+            gaxgrpc::CallSettings callSettings = null)
         {
-            throw new NotImplementedException();
+            throw new s::NotImplementedException();
         }
 
         /// <summary>
@@ -1624,11 +1624,11 @@ namespace Google.Cloud.Dlp.V2
         /// <returns>
         /// A Task containing the RPC response.
         /// </returns>
-        public virtual Task<DeidentifyTemplate> UpdateDeidentifyTemplateAsync(
+        public virtual stt::Task<DeidentifyTemplate> UpdateDeidentifyTemplateAsync(
             UpdateDeidentifyTemplateRequest request,
-            CallSettings callSettings = null)
+            gaxgrpc::CallSettings callSettings = null)
         {
-            throw new NotImplementedException();
+            throw new s::NotImplementedException();
         }
 
         /// <summary>
@@ -1638,16 +1638,16 @@ namespace Google.Cloud.Dlp.V2
         /// The request object containing all of the parameters for the API call.
         /// </param>
         /// <param name="cancellationToken">
-        /// A <see cref="CancellationToken"/> to use for this RPC.
+        /// A <see cref="st::CancellationToken"/> to use for this RPC.
         /// </param>
         /// <returns>
         /// A Task containing the RPC response.
         /// </returns>
-        public virtual Task<DeidentifyTemplate> UpdateDeidentifyTemplateAsync(
+        public virtual stt::Task<DeidentifyTemplate> UpdateDeidentifyTemplateAsync(
             UpdateDeidentifyTemplateRequest request,
-            CancellationToken cancellationToken) => UpdateDeidentifyTemplateAsync(
+            st::CancellationToken cancellationToken) => UpdateDeidentifyTemplateAsync(
                 request,
-                CallSettings.FromCancellationToken(cancellationToken));
+                gaxgrpc::CallSettings.FromCancellationToken(cancellationToken));
 
         /// <summary>
         /// Updates the DeidentifyTemplate.
@@ -1663,9 +1663,9 @@ namespace Google.Cloud.Dlp.V2
         /// </returns>
         public virtual DeidentifyTemplate UpdateDeidentifyTemplate(
             UpdateDeidentifyTemplateRequest request,
-            CallSettings callSettings = null)
+            gaxgrpc::CallSettings callSettings = null)
         {
-            throw new NotImplementedException();
+            throw new s::NotImplementedException();
         }
 
         /// <summary>
@@ -1680,11 +1680,11 @@ namespace Google.Cloud.Dlp.V2
         /// <returns>
         /// A Task containing the RPC response.
         /// </returns>
-        public virtual Task<DeidentifyTemplate> GetDeidentifyTemplateAsync(
+        public virtual stt::Task<DeidentifyTemplate> GetDeidentifyTemplateAsync(
             GetDeidentifyTemplateRequest request,
-            CallSettings callSettings = null)
+            gaxgrpc::CallSettings callSettings = null)
         {
-            throw new NotImplementedException();
+            throw new s::NotImplementedException();
         }
 
         /// <summary>
@@ -1694,16 +1694,16 @@ namespace Google.Cloud.Dlp.V2
         /// The request object containing all of the parameters for the API call.
         /// </param>
         /// <param name="cancellationToken">
-        /// A <see cref="CancellationToken"/> to use for this RPC.
+        /// A <see cref="st::CancellationToken"/> to use for this RPC.
         /// </param>
         /// <returns>
         /// A Task containing the RPC response.
         /// </returns>
-        public virtual Task<DeidentifyTemplate> GetDeidentifyTemplateAsync(
+        public virtual stt::Task<DeidentifyTemplate> GetDeidentifyTemplateAsync(
             GetDeidentifyTemplateRequest request,
-            CancellationToken cancellationToken) => GetDeidentifyTemplateAsync(
+            st::CancellationToken cancellationToken) => GetDeidentifyTemplateAsync(
                 request,
-                CallSettings.FromCancellationToken(cancellationToken));
+                gaxgrpc::CallSettings.FromCancellationToken(cancellationToken));
 
         /// <summary>
         /// Gets a DeidentifyTemplate.
@@ -1719,9 +1719,9 @@ namespace Google.Cloud.Dlp.V2
         /// </returns>
         public virtual DeidentifyTemplate GetDeidentifyTemplate(
             GetDeidentifyTemplateRequest request,
-            CallSettings callSettings = null)
+            gaxgrpc::CallSettings callSettings = null)
         {
-            throw new NotImplementedException();
+            throw new s::NotImplementedException();
         }
 
         /// <summary>
@@ -1736,11 +1736,11 @@ namespace Google.Cloud.Dlp.V2
         /// <returns>
         /// A pageable asynchronous sequence of <see cref="DeidentifyTemplate"/> resources.
         /// </returns>
-        public virtual PagedAsyncEnumerable<ListDeidentifyTemplatesResponse, DeidentifyTemplate> ListDeidentifyTemplatesAsync(
+        public virtual gax::PagedAsyncEnumerable<ListDeidentifyTemplatesResponse, DeidentifyTemplate> ListDeidentifyTemplatesAsync(
             ListDeidentifyTemplatesRequest request,
-            CallSettings callSettings = null)
+            gaxgrpc::CallSettings callSettings = null)
         {
-            throw new NotImplementedException();
+            throw new s::NotImplementedException();
         }
 
         /// <summary>
@@ -1755,11 +1755,11 @@ namespace Google.Cloud.Dlp.V2
         /// <returns>
         /// A pageable sequence of <see cref="DeidentifyTemplate"/> resources.
         /// </returns>
-        public virtual PagedEnumerable<ListDeidentifyTemplatesResponse, DeidentifyTemplate> ListDeidentifyTemplates(
+        public virtual gax::PagedEnumerable<ListDeidentifyTemplatesResponse, DeidentifyTemplate> ListDeidentifyTemplates(
             ListDeidentifyTemplatesRequest request,
-            CallSettings callSettings = null)
+            gaxgrpc::CallSettings callSettings = null)
         {
-            throw new NotImplementedException();
+            throw new s::NotImplementedException();
         }
 
         /// <summary>
@@ -1774,11 +1774,11 @@ namespace Google.Cloud.Dlp.V2
         /// <returns>
         /// A Task that completes when the RPC has completed.
         /// </returns>
-        public virtual Task DeleteDeidentifyTemplateAsync(
+        public virtual stt::Task DeleteDeidentifyTemplateAsync(
             DeleteDeidentifyTemplateRequest request,
-            CallSettings callSettings = null)
+            gaxgrpc::CallSettings callSettings = null)
         {
-            throw new NotImplementedException();
+            throw new s::NotImplementedException();
         }
 
         /// <summary>
@@ -1788,16 +1788,16 @@ namespace Google.Cloud.Dlp.V2
         /// The request object containing all of the parameters for the API call.
         /// </param>
         /// <param name="cancellationToken">
-        /// A <see cref="CancellationToken"/> to use for this RPC.
+        /// A <see cref="st::CancellationToken"/> to use for this RPC.
         /// </param>
         /// <returns>
         /// A Task that completes when the RPC has completed.
         /// </returns>
-        public virtual Task DeleteDeidentifyTemplateAsync(
+        public virtual stt::Task DeleteDeidentifyTemplateAsync(
             DeleteDeidentifyTemplateRequest request,
-            CancellationToken cancellationToken) => DeleteDeidentifyTemplateAsync(
+            st::CancellationToken cancellationToken) => DeleteDeidentifyTemplateAsync(
                 request,
-                CallSettings.FromCancellationToken(cancellationToken));
+                gaxgrpc::CallSettings.FromCancellationToken(cancellationToken));
 
         /// <summary>
         /// Deletes a DeidentifyTemplate.
@@ -1810,9 +1810,9 @@ namespace Google.Cloud.Dlp.V2
         /// </param>
         public virtual void DeleteDeidentifyTemplate(
             DeleteDeidentifyTemplateRequest request,
-            CallSettings callSettings = null)
+            gaxgrpc::CallSettings callSettings = null)
         {
-            throw new NotImplementedException();
+            throw new s::NotImplementedException();
         }
 
         /// <summary>
@@ -1828,11 +1828,11 @@ namespace Google.Cloud.Dlp.V2
         /// <returns>
         /// A Task containing the RPC response.
         /// </returns>
-        public virtual Task<DlpJob> CreateDlpJobAsync(
+        public virtual stt::Task<DlpJob> CreateDlpJobAsync(
             CreateDlpJobRequest request,
-            CallSettings callSettings = null)
+            gaxgrpc::CallSettings callSettings = null)
         {
-            throw new NotImplementedException();
+            throw new s::NotImplementedException();
         }
 
         /// <summary>
@@ -1843,16 +1843,16 @@ namespace Google.Cloud.Dlp.V2
         /// The request object containing all of the parameters for the API call.
         /// </param>
         /// <param name="cancellationToken">
-        /// A <see cref="CancellationToken"/> to use for this RPC.
+        /// A <see cref="st::CancellationToken"/> to use for this RPC.
         /// </param>
         /// <returns>
         /// A Task containing the RPC response.
         /// </returns>
-        public virtual Task<DlpJob> CreateDlpJobAsync(
+        public virtual stt::Task<DlpJob> CreateDlpJobAsync(
             CreateDlpJobRequest request,
-            CancellationToken cancellationToken) => CreateDlpJobAsync(
+            st::CancellationToken cancellationToken) => CreateDlpJobAsync(
                 request,
-                CallSettings.FromCancellationToken(cancellationToken));
+                gaxgrpc::CallSettings.FromCancellationToken(cancellationToken));
 
         /// <summary>
         /// Creates a new job to inspect storage or calculate risk metrics.
@@ -1869,9 +1869,9 @@ namespace Google.Cloud.Dlp.V2
         /// </returns>
         public virtual DlpJob CreateDlpJob(
             CreateDlpJobRequest request,
-            CallSettings callSettings = null)
+            gaxgrpc::CallSettings callSettings = null)
         {
-            throw new NotImplementedException();
+            throw new s::NotImplementedException();
         }
 
         /// <summary>
@@ -1886,11 +1886,11 @@ namespace Google.Cloud.Dlp.V2
         /// <returns>
         /// A pageable asynchronous sequence of <see cref="DlpJob"/> resources.
         /// </returns>
-        public virtual PagedAsyncEnumerable<ListDlpJobsResponse, DlpJob> ListDlpJobsAsync(
+        public virtual gax::PagedAsyncEnumerable<ListDlpJobsResponse, DlpJob> ListDlpJobsAsync(
             ListDlpJobsRequest request,
-            CallSettings callSettings = null)
+            gaxgrpc::CallSettings callSettings = null)
         {
-            throw new NotImplementedException();
+            throw new s::NotImplementedException();
         }
 
         /// <summary>
@@ -1905,11 +1905,11 @@ namespace Google.Cloud.Dlp.V2
         /// <returns>
         /// A pageable sequence of <see cref="DlpJob"/> resources.
         /// </returns>
-        public virtual PagedEnumerable<ListDlpJobsResponse, DlpJob> ListDlpJobs(
+        public virtual gax::PagedEnumerable<ListDlpJobsResponse, DlpJob> ListDlpJobs(
             ListDlpJobsRequest request,
-            CallSettings callSettings = null)
+            gaxgrpc::CallSettings callSettings = null)
         {
-            throw new NotImplementedException();
+            throw new s::NotImplementedException();
         }
 
         /// <summary>
@@ -1924,11 +1924,11 @@ namespace Google.Cloud.Dlp.V2
         /// <returns>
         /// A Task containing the RPC response.
         /// </returns>
-        public virtual Task<DlpJob> GetDlpJobAsync(
+        public virtual stt::Task<DlpJob> GetDlpJobAsync(
             GetDlpJobRequest request,
-            CallSettings callSettings = null)
+            gaxgrpc::CallSettings callSettings = null)
         {
-            throw new NotImplementedException();
+            throw new s::NotImplementedException();
         }
 
         /// <summary>
@@ -1938,16 +1938,16 @@ namespace Google.Cloud.Dlp.V2
         /// The request object containing all of the parameters for the API call.
         /// </param>
         /// <param name="cancellationToken">
-        /// A <see cref="CancellationToken"/> to use for this RPC.
+        /// A <see cref="st::CancellationToken"/> to use for this RPC.
         /// </param>
         /// <returns>
         /// A Task containing the RPC response.
         /// </returns>
-        public virtual Task<DlpJob> GetDlpJobAsync(
+        public virtual stt::Task<DlpJob> GetDlpJobAsync(
             GetDlpJobRequest request,
-            CancellationToken cancellationToken) => GetDlpJobAsync(
+            st::CancellationToken cancellationToken) => GetDlpJobAsync(
                 request,
-                CallSettings.FromCancellationToken(cancellationToken));
+                gaxgrpc::CallSettings.FromCancellationToken(cancellationToken));
 
         /// <summary>
         /// Gets the latest state of a long-running DlpJob.
@@ -1963,9 +1963,9 @@ namespace Google.Cloud.Dlp.V2
         /// </returns>
         public virtual DlpJob GetDlpJob(
             GetDlpJobRequest request,
-            CallSettings callSettings = null)
+            gaxgrpc::CallSettings callSettings = null)
         {
-            throw new NotImplementedException();
+            throw new s::NotImplementedException();
         }
 
         /// <summary>
@@ -1982,11 +1982,11 @@ namespace Google.Cloud.Dlp.V2
         /// <returns>
         /// A Task that completes when the RPC has completed.
         /// </returns>
-        public virtual Task DeleteDlpJobAsync(
+        public virtual stt::Task DeleteDlpJobAsync(
             DeleteDlpJobRequest request,
-            CallSettings callSettings = null)
+            gaxgrpc::CallSettings callSettings = null)
         {
-            throw new NotImplementedException();
+            throw new s::NotImplementedException();
         }
 
         /// <summary>
@@ -1998,16 +1998,16 @@ namespace Google.Cloud.Dlp.V2
         /// The request object containing all of the parameters for the API call.
         /// </param>
         /// <param name="cancellationToken">
-        /// A <see cref="CancellationToken"/> to use for this RPC.
+        /// A <see cref="st::CancellationToken"/> to use for this RPC.
         /// </param>
         /// <returns>
         /// A Task that completes when the RPC has completed.
         /// </returns>
-        public virtual Task DeleteDlpJobAsync(
+        public virtual stt::Task DeleteDlpJobAsync(
             DeleteDlpJobRequest request,
-            CancellationToken cancellationToken) => DeleteDlpJobAsync(
+            st::CancellationToken cancellationToken) => DeleteDlpJobAsync(
                 request,
-                CallSettings.FromCancellationToken(cancellationToken));
+                gaxgrpc::CallSettings.FromCancellationToken(cancellationToken));
 
         /// <summary>
         /// Deletes a long-running DlpJob. This method indicates that the client is
@@ -2022,9 +2022,9 @@ namespace Google.Cloud.Dlp.V2
         /// </param>
         public virtual void DeleteDlpJob(
             DeleteDlpJobRequest request,
-            CallSettings callSettings = null)
+            gaxgrpc::CallSettings callSettings = null)
         {
-            throw new NotImplementedException();
+            throw new s::NotImplementedException();
         }
 
         /// <summary>
@@ -2041,11 +2041,11 @@ namespace Google.Cloud.Dlp.V2
         /// <returns>
         /// A Task that completes when the RPC has completed.
         /// </returns>
-        public virtual Task CancelDlpJobAsync(
+        public virtual stt::Task CancelDlpJobAsync(
             CancelDlpJobRequest request,
-            CallSettings callSettings = null)
+            gaxgrpc::CallSettings callSettings = null)
         {
-            throw new NotImplementedException();
+            throw new s::NotImplementedException();
         }
 
         /// <summary>
@@ -2057,16 +2057,16 @@ namespace Google.Cloud.Dlp.V2
         /// The request object containing all of the parameters for the API call.
         /// </param>
         /// <param name="cancellationToken">
-        /// A <see cref="CancellationToken"/> to use for this RPC.
+        /// A <see cref="st::CancellationToken"/> to use for this RPC.
         /// </param>
         /// <returns>
         /// A Task that completes when the RPC has completed.
         /// </returns>
-        public virtual Task CancelDlpJobAsync(
+        public virtual stt::Task CancelDlpJobAsync(
             CancelDlpJobRequest request,
-            CancellationToken cancellationToken) => CancelDlpJobAsync(
+            st::CancellationToken cancellationToken) => CancelDlpJobAsync(
                 request,
-                CallSettings.FromCancellationToken(cancellationToken));
+                gaxgrpc::CallSettings.FromCancellationToken(cancellationToken));
 
         /// <summary>
         /// Starts asynchronous cancellation on a long-running DlpJob. The server
@@ -2081,9 +2081,9 @@ namespace Google.Cloud.Dlp.V2
         /// </param>
         public virtual void CancelDlpJob(
             CancelDlpJobRequest request,
-            CallSettings callSettings = null)
+            gaxgrpc::CallSettings callSettings = null)
         {
-            throw new NotImplementedException();
+            throw new s::NotImplementedException();
         }
 
         /// <summary>
@@ -2098,11 +2098,11 @@ namespace Google.Cloud.Dlp.V2
         /// <returns>
         /// A pageable asynchronous sequence of <see cref="JobTrigger"/> resources.
         /// </returns>
-        public virtual PagedAsyncEnumerable<ListJobTriggersResponse, JobTrigger> ListJobTriggersAsync(
+        public virtual gax::PagedAsyncEnumerable<ListJobTriggersResponse, JobTrigger> ListJobTriggersAsync(
             ListJobTriggersRequest request,
-            CallSettings callSettings = null)
+            gaxgrpc::CallSettings callSettings = null)
         {
-            throw new NotImplementedException();
+            throw new s::NotImplementedException();
         }
 
         /// <summary>
@@ -2117,11 +2117,11 @@ namespace Google.Cloud.Dlp.V2
         /// <returns>
         /// A pageable sequence of <see cref="JobTrigger"/> resources.
         /// </returns>
-        public virtual PagedEnumerable<ListJobTriggersResponse, JobTrigger> ListJobTriggers(
+        public virtual gax::PagedEnumerable<ListJobTriggersResponse, JobTrigger> ListJobTriggers(
             ListJobTriggersRequest request,
-            CallSettings callSettings = null)
+            gaxgrpc::CallSettings callSettings = null)
         {
-            throw new NotImplementedException();
+            throw new s::NotImplementedException();
         }
 
         /// <summary>
@@ -2136,11 +2136,11 @@ namespace Google.Cloud.Dlp.V2
         /// <returns>
         /// A Task containing the RPC response.
         /// </returns>
-        public virtual Task<JobTrigger> GetJobTriggerAsync(
+        public virtual stt::Task<JobTrigger> GetJobTriggerAsync(
             GetJobTriggerRequest request,
-            CallSettings callSettings = null)
+            gaxgrpc::CallSettings callSettings = null)
         {
-            throw new NotImplementedException();
+            throw new s::NotImplementedException();
         }
 
         /// <summary>
@@ -2150,16 +2150,16 @@ namespace Google.Cloud.Dlp.V2
         /// The request object containing all of the parameters for the API call.
         /// </param>
         /// <param name="cancellationToken">
-        /// A <see cref="CancellationToken"/> to use for this RPC.
+        /// A <see cref="st::CancellationToken"/> to use for this RPC.
         /// </param>
         /// <returns>
         /// A Task containing the RPC response.
         /// </returns>
-        public virtual Task<JobTrigger> GetJobTriggerAsync(
+        public virtual stt::Task<JobTrigger> GetJobTriggerAsync(
             GetJobTriggerRequest request,
-            CancellationToken cancellationToken) => GetJobTriggerAsync(
+            st::CancellationToken cancellationToken) => GetJobTriggerAsync(
                 request,
-                CallSettings.FromCancellationToken(cancellationToken));
+                gaxgrpc::CallSettings.FromCancellationToken(cancellationToken));
 
         /// <summary>
         /// Gets a job trigger.
@@ -2175,9 +2175,9 @@ namespace Google.Cloud.Dlp.V2
         /// </returns>
         public virtual JobTrigger GetJobTrigger(
             GetJobTriggerRequest request,
-            CallSettings callSettings = null)
+            gaxgrpc::CallSettings callSettings = null)
         {
-            throw new NotImplementedException();
+            throw new s::NotImplementedException();
         }
 
         /// <summary>
@@ -2192,11 +2192,11 @@ namespace Google.Cloud.Dlp.V2
         /// <returns>
         /// A Task that completes when the RPC has completed.
         /// </returns>
-        public virtual Task DeleteJobTriggerAsync(
+        public virtual stt::Task DeleteJobTriggerAsync(
             DeleteJobTriggerRequest request,
-            CallSettings callSettings = null)
+            gaxgrpc::CallSettings callSettings = null)
         {
-            throw new NotImplementedException();
+            throw new s::NotImplementedException();
         }
 
         /// <summary>
@@ -2206,16 +2206,16 @@ namespace Google.Cloud.Dlp.V2
         /// The request object containing all of the parameters for the API call.
         /// </param>
         /// <param name="cancellationToken">
-        /// A <see cref="CancellationToken"/> to use for this RPC.
+        /// A <see cref="st::CancellationToken"/> to use for this RPC.
         /// </param>
         /// <returns>
         /// A Task that completes when the RPC has completed.
         /// </returns>
-        public virtual Task DeleteJobTriggerAsync(
+        public virtual stt::Task DeleteJobTriggerAsync(
             DeleteJobTriggerRequest request,
-            CancellationToken cancellationToken) => DeleteJobTriggerAsync(
+            st::CancellationToken cancellationToken) => DeleteJobTriggerAsync(
                 request,
-                CallSettings.FromCancellationToken(cancellationToken));
+                gaxgrpc::CallSettings.FromCancellationToken(cancellationToken));
 
         /// <summary>
         /// Deletes a job trigger.
@@ -2228,9 +2228,9 @@ namespace Google.Cloud.Dlp.V2
         /// </param>
         public virtual void DeleteJobTrigger(
             DeleteJobTriggerRequest request,
-            CallSettings callSettings = null)
+            gaxgrpc::CallSettings callSettings = null)
         {
-            throw new NotImplementedException();
+            throw new s::NotImplementedException();
         }
 
         /// <summary>
@@ -2245,11 +2245,11 @@ namespace Google.Cloud.Dlp.V2
         /// <returns>
         /// A Task containing the RPC response.
         /// </returns>
-        public virtual Task<JobTrigger> UpdateJobTriggerAsync(
+        public virtual stt::Task<JobTrigger> UpdateJobTriggerAsync(
             UpdateJobTriggerRequest request,
-            CallSettings callSettings = null)
+            gaxgrpc::CallSettings callSettings = null)
         {
-            throw new NotImplementedException();
+            throw new s::NotImplementedException();
         }
 
         /// <summary>
@@ -2259,16 +2259,16 @@ namespace Google.Cloud.Dlp.V2
         /// The request object containing all of the parameters for the API call.
         /// </param>
         /// <param name="cancellationToken">
-        /// A <see cref="CancellationToken"/> to use for this RPC.
+        /// A <see cref="st::CancellationToken"/> to use for this RPC.
         /// </param>
         /// <returns>
         /// A Task containing the RPC response.
         /// </returns>
-        public virtual Task<JobTrigger> UpdateJobTriggerAsync(
+        public virtual stt::Task<JobTrigger> UpdateJobTriggerAsync(
             UpdateJobTriggerRequest request,
-            CancellationToken cancellationToken) => UpdateJobTriggerAsync(
+            st::CancellationToken cancellationToken) => UpdateJobTriggerAsync(
                 request,
-                CallSettings.FromCancellationToken(cancellationToken));
+                gaxgrpc::CallSettings.FromCancellationToken(cancellationToken));
 
         /// <summary>
         /// Updates a job trigger.
@@ -2284,9 +2284,9 @@ namespace Google.Cloud.Dlp.V2
         /// </returns>
         public virtual JobTrigger UpdateJobTrigger(
             UpdateJobTriggerRequest request,
-            CallSettings callSettings = null)
+            gaxgrpc::CallSettings callSettings = null)
         {
-            throw new NotImplementedException();
+            throw new s::NotImplementedException();
         }
 
         /// <summary>
@@ -2302,11 +2302,11 @@ namespace Google.Cloud.Dlp.V2
         /// <returns>
         /// A Task containing the RPC response.
         /// </returns>
-        public virtual Task<JobTrigger> CreateJobTriggerAsync(
+        public virtual stt::Task<JobTrigger> CreateJobTriggerAsync(
             CreateJobTriggerRequest request,
-            CallSettings callSettings = null)
+            gaxgrpc::CallSettings callSettings = null)
         {
-            throw new NotImplementedException();
+            throw new s::NotImplementedException();
         }
 
         /// <summary>
@@ -2317,16 +2317,16 @@ namespace Google.Cloud.Dlp.V2
         /// The request object containing all of the parameters for the API call.
         /// </param>
         /// <param name="cancellationToken">
-        /// A <see cref="CancellationToken"/> to use for this RPC.
+        /// A <see cref="st::CancellationToken"/> to use for this RPC.
         /// </param>
         /// <returns>
         /// A Task containing the RPC response.
         /// </returns>
-        public virtual Task<JobTrigger> CreateJobTriggerAsync(
+        public virtual stt::Task<JobTrigger> CreateJobTriggerAsync(
             CreateJobTriggerRequest request,
-            CancellationToken cancellationToken) => CreateJobTriggerAsync(
+            st::CancellationToken cancellationToken) => CreateJobTriggerAsync(
                 request,
-                CallSettings.FromCancellationToken(cancellationToken));
+                gaxgrpc::CallSettings.FromCancellationToken(cancellationToken));
 
         /// <summary>
         /// Creates a job trigger to run DLP actions such as scanning storage for
@@ -2343,9 +2343,9 @@ namespace Google.Cloud.Dlp.V2
         /// </returns>
         public virtual JobTrigger CreateJobTrigger(
             CreateJobTriggerRequest request,
-            CallSettings callSettings = null)
+            gaxgrpc::CallSettings callSettings = null)
         {
-            throw new NotImplementedException();
+            throw new s::NotImplementedException();
         }
 
     }
@@ -2355,31 +2355,31 @@ namespace Google.Cloud.Dlp.V2
     /// </summary>
     public sealed partial class DlpServiceClientImpl : DlpServiceClient
     {
-        private readonly ApiCall<InspectContentRequest, InspectContentResponse> _callInspectContent;
-        private readonly ApiCall<RedactImageRequest, RedactImageResponse> _callRedactImage;
-        private readonly ApiCall<DeidentifyContentRequest, DeidentifyContentResponse> _callDeidentifyContent;
-        private readonly ApiCall<ReidentifyContentRequest, ReidentifyContentResponse> _callReidentifyContent;
-        private readonly ApiCall<ListInfoTypesRequest, ListInfoTypesResponse> _callListInfoTypes;
-        private readonly ApiCall<CreateInspectTemplateRequest, InspectTemplate> _callCreateInspectTemplate;
-        private readonly ApiCall<UpdateInspectTemplateRequest, InspectTemplate> _callUpdateInspectTemplate;
-        private readonly ApiCall<GetInspectTemplateRequest, InspectTemplate> _callGetInspectTemplate;
-        private readonly ApiCall<ListInspectTemplatesRequest, ListInspectTemplatesResponse> _callListInspectTemplates;
-        private readonly ApiCall<DeleteInspectTemplateRequest, Empty> _callDeleteInspectTemplate;
-        private readonly ApiCall<CreateDeidentifyTemplateRequest, DeidentifyTemplate> _callCreateDeidentifyTemplate;
-        private readonly ApiCall<UpdateDeidentifyTemplateRequest, DeidentifyTemplate> _callUpdateDeidentifyTemplate;
-        private readonly ApiCall<GetDeidentifyTemplateRequest, DeidentifyTemplate> _callGetDeidentifyTemplate;
-        private readonly ApiCall<ListDeidentifyTemplatesRequest, ListDeidentifyTemplatesResponse> _callListDeidentifyTemplates;
-        private readonly ApiCall<DeleteDeidentifyTemplateRequest, Empty> _callDeleteDeidentifyTemplate;
-        private readonly ApiCall<CreateDlpJobRequest, DlpJob> _callCreateDlpJob;
-        private readonly ApiCall<ListDlpJobsRequest, ListDlpJobsResponse> _callListDlpJobs;
-        private readonly ApiCall<GetDlpJobRequest, DlpJob> _callGetDlpJob;
-        private readonly ApiCall<DeleteDlpJobRequest, Empty> _callDeleteDlpJob;
-        private readonly ApiCall<CancelDlpJobRequest, Empty> _callCancelDlpJob;
-        private readonly ApiCall<ListJobTriggersRequest, ListJobTriggersResponse> _callListJobTriggers;
-        private readonly ApiCall<GetJobTriggerRequest, JobTrigger> _callGetJobTrigger;
-        private readonly ApiCall<DeleteJobTriggerRequest, Empty> _callDeleteJobTrigger;
-        private readonly ApiCall<UpdateJobTriggerRequest, JobTrigger> _callUpdateJobTrigger;
-        private readonly ApiCall<CreateJobTriggerRequest, JobTrigger> _callCreateJobTrigger;
+        private readonly gaxgrpc::ApiCall<InspectContentRequest, InspectContentResponse> _callInspectContent;
+        private readonly gaxgrpc::ApiCall<RedactImageRequest, RedactImageResponse> _callRedactImage;
+        private readonly gaxgrpc::ApiCall<DeidentifyContentRequest, DeidentifyContentResponse> _callDeidentifyContent;
+        private readonly gaxgrpc::ApiCall<ReidentifyContentRequest, ReidentifyContentResponse> _callReidentifyContent;
+        private readonly gaxgrpc::ApiCall<ListInfoTypesRequest, ListInfoTypesResponse> _callListInfoTypes;
+        private readonly gaxgrpc::ApiCall<CreateInspectTemplateRequest, InspectTemplate> _callCreateInspectTemplate;
+        private readonly gaxgrpc::ApiCall<UpdateInspectTemplateRequest, InspectTemplate> _callUpdateInspectTemplate;
+        private readonly gaxgrpc::ApiCall<GetInspectTemplateRequest, InspectTemplate> _callGetInspectTemplate;
+        private readonly gaxgrpc::ApiCall<ListInspectTemplatesRequest, ListInspectTemplatesResponse> _callListInspectTemplates;
+        private readonly gaxgrpc::ApiCall<DeleteInspectTemplateRequest, protowkt::Empty> _callDeleteInspectTemplate;
+        private readonly gaxgrpc::ApiCall<CreateDeidentifyTemplateRequest, DeidentifyTemplate> _callCreateDeidentifyTemplate;
+        private readonly gaxgrpc::ApiCall<UpdateDeidentifyTemplateRequest, DeidentifyTemplate> _callUpdateDeidentifyTemplate;
+        private readonly gaxgrpc::ApiCall<GetDeidentifyTemplateRequest, DeidentifyTemplate> _callGetDeidentifyTemplate;
+        private readonly gaxgrpc::ApiCall<ListDeidentifyTemplatesRequest, ListDeidentifyTemplatesResponse> _callListDeidentifyTemplates;
+        private readonly gaxgrpc::ApiCall<DeleteDeidentifyTemplateRequest, protowkt::Empty> _callDeleteDeidentifyTemplate;
+        private readonly gaxgrpc::ApiCall<CreateDlpJobRequest, DlpJob> _callCreateDlpJob;
+        private readonly gaxgrpc::ApiCall<ListDlpJobsRequest, ListDlpJobsResponse> _callListDlpJobs;
+        private readonly gaxgrpc::ApiCall<GetDlpJobRequest, DlpJob> _callGetDlpJob;
+        private readonly gaxgrpc::ApiCall<DeleteDlpJobRequest, protowkt::Empty> _callDeleteDlpJob;
+        private readonly gaxgrpc::ApiCall<CancelDlpJobRequest, protowkt::Empty> _callCancelDlpJob;
+        private readonly gaxgrpc::ApiCall<ListJobTriggersRequest, ListJobTriggersResponse> _callListJobTriggers;
+        private readonly gaxgrpc::ApiCall<GetJobTriggerRequest, JobTrigger> _callGetJobTrigger;
+        private readonly gaxgrpc::ApiCall<DeleteJobTriggerRequest, protowkt::Empty> _callDeleteJobTrigger;
+        private readonly gaxgrpc::ApiCall<UpdateJobTriggerRequest, JobTrigger> _callUpdateJobTrigger;
+        private readonly gaxgrpc::ApiCall<CreateJobTriggerRequest, JobTrigger> _callCreateJobTrigger;
 
         /// <summary>
         /// Constructs a client wrapper for the DlpService service, with the specified gRPC client and settings.
@@ -2390,7 +2390,7 @@ namespace Google.Cloud.Dlp.V2
         {
             GrpcClient = grpcClient;
             DlpServiceSettings effectiveSettings = settings ?? DlpServiceSettings.GetDefault();
-            ClientHelper clientHelper = new ClientHelper(effectiveSettings);
+            gaxgrpc::ClientHelper clientHelper = new gaxgrpc::ClientHelper(effectiveSettings);
             _callInspectContent = clientHelper.BuildApiCall<InspectContentRequest, InspectContentResponse>(
                 GrpcClient.InspectContentAsync, GrpcClient.InspectContent, effectiveSettings.InspectContentSettings);
             _callRedactImage = clientHelper.BuildApiCall<RedactImageRequest, RedactImageResponse>(
@@ -2409,7 +2409,7 @@ namespace Google.Cloud.Dlp.V2
                 GrpcClient.GetInspectTemplateAsync, GrpcClient.GetInspectTemplate, effectiveSettings.GetInspectTemplateSettings);
             _callListInspectTemplates = clientHelper.BuildApiCall<ListInspectTemplatesRequest, ListInspectTemplatesResponse>(
                 GrpcClient.ListInspectTemplatesAsync, GrpcClient.ListInspectTemplates, effectiveSettings.ListInspectTemplatesSettings);
-            _callDeleteInspectTemplate = clientHelper.BuildApiCall<DeleteInspectTemplateRequest, Empty>(
+            _callDeleteInspectTemplate = clientHelper.BuildApiCall<DeleteInspectTemplateRequest, protowkt::Empty>(
                 GrpcClient.DeleteInspectTemplateAsync, GrpcClient.DeleteInspectTemplate, effectiveSettings.DeleteInspectTemplateSettings);
             _callCreateDeidentifyTemplate = clientHelper.BuildApiCall<CreateDeidentifyTemplateRequest, DeidentifyTemplate>(
                 GrpcClient.CreateDeidentifyTemplateAsync, GrpcClient.CreateDeidentifyTemplate, effectiveSettings.CreateDeidentifyTemplateSettings);
@@ -2419,7 +2419,7 @@ namespace Google.Cloud.Dlp.V2
                 GrpcClient.GetDeidentifyTemplateAsync, GrpcClient.GetDeidentifyTemplate, effectiveSettings.GetDeidentifyTemplateSettings);
             _callListDeidentifyTemplates = clientHelper.BuildApiCall<ListDeidentifyTemplatesRequest, ListDeidentifyTemplatesResponse>(
                 GrpcClient.ListDeidentifyTemplatesAsync, GrpcClient.ListDeidentifyTemplates, effectiveSettings.ListDeidentifyTemplatesSettings);
-            _callDeleteDeidentifyTemplate = clientHelper.BuildApiCall<DeleteDeidentifyTemplateRequest, Empty>(
+            _callDeleteDeidentifyTemplate = clientHelper.BuildApiCall<DeleteDeidentifyTemplateRequest, protowkt::Empty>(
                 GrpcClient.DeleteDeidentifyTemplateAsync, GrpcClient.DeleteDeidentifyTemplate, effectiveSettings.DeleteDeidentifyTemplateSettings);
             _callCreateDlpJob = clientHelper.BuildApiCall<CreateDlpJobRequest, DlpJob>(
                 GrpcClient.CreateDlpJobAsync, GrpcClient.CreateDlpJob, effectiveSettings.CreateDlpJobSettings);
@@ -2427,15 +2427,15 @@ namespace Google.Cloud.Dlp.V2
                 GrpcClient.ListDlpJobsAsync, GrpcClient.ListDlpJobs, effectiveSettings.ListDlpJobsSettings);
             _callGetDlpJob = clientHelper.BuildApiCall<GetDlpJobRequest, DlpJob>(
                 GrpcClient.GetDlpJobAsync, GrpcClient.GetDlpJob, effectiveSettings.GetDlpJobSettings);
-            _callDeleteDlpJob = clientHelper.BuildApiCall<DeleteDlpJobRequest, Empty>(
+            _callDeleteDlpJob = clientHelper.BuildApiCall<DeleteDlpJobRequest, protowkt::Empty>(
                 GrpcClient.DeleteDlpJobAsync, GrpcClient.DeleteDlpJob, effectiveSettings.DeleteDlpJobSettings);
-            _callCancelDlpJob = clientHelper.BuildApiCall<CancelDlpJobRequest, Empty>(
+            _callCancelDlpJob = clientHelper.BuildApiCall<CancelDlpJobRequest, protowkt::Empty>(
                 GrpcClient.CancelDlpJobAsync, GrpcClient.CancelDlpJob, effectiveSettings.CancelDlpJobSettings);
             _callListJobTriggers = clientHelper.BuildApiCall<ListJobTriggersRequest, ListJobTriggersResponse>(
                 GrpcClient.ListJobTriggersAsync, GrpcClient.ListJobTriggers, effectiveSettings.ListJobTriggersSettings);
             _callGetJobTrigger = clientHelper.BuildApiCall<GetJobTriggerRequest, JobTrigger>(
                 GrpcClient.GetJobTriggerAsync, GrpcClient.GetJobTrigger, effectiveSettings.GetJobTriggerSettings);
-            _callDeleteJobTrigger = clientHelper.BuildApiCall<DeleteJobTriggerRequest, Empty>(
+            _callDeleteJobTrigger = clientHelper.BuildApiCall<DeleteJobTriggerRequest, protowkt::Empty>(
                 GrpcClient.DeleteJobTriggerAsync, GrpcClient.DeleteJobTrigger, effectiveSettings.DeleteJobTriggerSettings);
             _callUpdateJobTrigger = clientHelper.BuildApiCall<UpdateJobTriggerRequest, JobTrigger>(
                 GrpcClient.UpdateJobTriggerAsync, GrpcClient.UpdateJobTrigger, effectiveSettings.UpdateJobTriggerSettings);
@@ -2498,38 +2498,38 @@ namespace Google.Cloud.Dlp.V2
 
         // Partial methods called for every ApiCall on construction.
         // Allows modification of all the underlying ApiCall objects.
-        partial void Modify_ApiCall<TRequest, TResponse>(ref ApiCall<TRequest, TResponse> call)
-            where TRequest : class, IMessage<TRequest>
-            where TResponse : class, IMessage<TResponse>;
+        partial void Modify_ApiCall<TRequest, TResponse>(ref gaxgrpc::ApiCall<TRequest, TResponse> call)
+            where TRequest : class, proto::IMessage<TRequest>
+            where TResponse : class, proto::IMessage<TResponse>;
 
         // Partial methods called for each ApiCall on construction.
         // Allows per-RPC-method modification of the underlying ApiCall object.
-        partial void Modify_InspectContentApiCall(ref ApiCall<InspectContentRequest, InspectContentResponse> call);
-        partial void Modify_RedactImageApiCall(ref ApiCall<RedactImageRequest, RedactImageResponse> call);
-        partial void Modify_DeidentifyContentApiCall(ref ApiCall<DeidentifyContentRequest, DeidentifyContentResponse> call);
-        partial void Modify_ReidentifyContentApiCall(ref ApiCall<ReidentifyContentRequest, ReidentifyContentResponse> call);
-        partial void Modify_ListInfoTypesApiCall(ref ApiCall<ListInfoTypesRequest, ListInfoTypesResponse> call);
-        partial void Modify_CreateInspectTemplateApiCall(ref ApiCall<CreateInspectTemplateRequest, InspectTemplate> call);
-        partial void Modify_UpdateInspectTemplateApiCall(ref ApiCall<UpdateInspectTemplateRequest, InspectTemplate> call);
-        partial void Modify_GetInspectTemplateApiCall(ref ApiCall<GetInspectTemplateRequest, InspectTemplate> call);
-        partial void Modify_ListInspectTemplatesApiCall(ref ApiCall<ListInspectTemplatesRequest, ListInspectTemplatesResponse> call);
-        partial void Modify_DeleteInspectTemplateApiCall(ref ApiCall<DeleteInspectTemplateRequest, Empty> call);
-        partial void Modify_CreateDeidentifyTemplateApiCall(ref ApiCall<CreateDeidentifyTemplateRequest, DeidentifyTemplate> call);
-        partial void Modify_UpdateDeidentifyTemplateApiCall(ref ApiCall<UpdateDeidentifyTemplateRequest, DeidentifyTemplate> call);
-        partial void Modify_GetDeidentifyTemplateApiCall(ref ApiCall<GetDeidentifyTemplateRequest, DeidentifyTemplate> call);
-        partial void Modify_ListDeidentifyTemplatesApiCall(ref ApiCall<ListDeidentifyTemplatesRequest, ListDeidentifyTemplatesResponse> call);
-        partial void Modify_DeleteDeidentifyTemplateApiCall(ref ApiCall<DeleteDeidentifyTemplateRequest, Empty> call);
-        partial void Modify_CreateDlpJobApiCall(ref ApiCall<CreateDlpJobRequest, DlpJob> call);
-        partial void Modify_ListDlpJobsApiCall(ref ApiCall<ListDlpJobsRequest, ListDlpJobsResponse> call);
-        partial void Modify_GetDlpJobApiCall(ref ApiCall<GetDlpJobRequest, DlpJob> call);
-        partial void Modify_DeleteDlpJobApiCall(ref ApiCall<DeleteDlpJobRequest, Empty> call);
-        partial void Modify_CancelDlpJobApiCall(ref ApiCall<CancelDlpJobRequest, Empty> call);
-        partial void Modify_ListJobTriggersApiCall(ref ApiCall<ListJobTriggersRequest, ListJobTriggersResponse> call);
-        partial void Modify_GetJobTriggerApiCall(ref ApiCall<GetJobTriggerRequest, JobTrigger> call);
-        partial void Modify_DeleteJobTriggerApiCall(ref ApiCall<DeleteJobTriggerRequest, Empty> call);
-        partial void Modify_UpdateJobTriggerApiCall(ref ApiCall<UpdateJobTriggerRequest, JobTrigger> call);
-        partial void Modify_CreateJobTriggerApiCall(ref ApiCall<CreateJobTriggerRequest, JobTrigger> call);
-        partial void OnConstruction(DlpService.DlpServiceClient grpcClient, DlpServiceSettings effectiveSettings, ClientHelper clientHelper);
+        partial void Modify_InspectContentApiCall(ref gaxgrpc::ApiCall<InspectContentRequest, InspectContentResponse> call);
+        partial void Modify_RedactImageApiCall(ref gaxgrpc::ApiCall<RedactImageRequest, RedactImageResponse> call);
+        partial void Modify_DeidentifyContentApiCall(ref gaxgrpc::ApiCall<DeidentifyContentRequest, DeidentifyContentResponse> call);
+        partial void Modify_ReidentifyContentApiCall(ref gaxgrpc::ApiCall<ReidentifyContentRequest, ReidentifyContentResponse> call);
+        partial void Modify_ListInfoTypesApiCall(ref gaxgrpc::ApiCall<ListInfoTypesRequest, ListInfoTypesResponse> call);
+        partial void Modify_CreateInspectTemplateApiCall(ref gaxgrpc::ApiCall<CreateInspectTemplateRequest, InspectTemplate> call);
+        partial void Modify_UpdateInspectTemplateApiCall(ref gaxgrpc::ApiCall<UpdateInspectTemplateRequest, InspectTemplate> call);
+        partial void Modify_GetInspectTemplateApiCall(ref gaxgrpc::ApiCall<GetInspectTemplateRequest, InspectTemplate> call);
+        partial void Modify_ListInspectTemplatesApiCall(ref gaxgrpc::ApiCall<ListInspectTemplatesRequest, ListInspectTemplatesResponse> call);
+        partial void Modify_DeleteInspectTemplateApiCall(ref gaxgrpc::ApiCall<DeleteInspectTemplateRequest, protowkt::Empty> call);
+        partial void Modify_CreateDeidentifyTemplateApiCall(ref gaxgrpc::ApiCall<CreateDeidentifyTemplateRequest, DeidentifyTemplate> call);
+        partial void Modify_UpdateDeidentifyTemplateApiCall(ref gaxgrpc::ApiCall<UpdateDeidentifyTemplateRequest, DeidentifyTemplate> call);
+        partial void Modify_GetDeidentifyTemplateApiCall(ref gaxgrpc::ApiCall<GetDeidentifyTemplateRequest, DeidentifyTemplate> call);
+        partial void Modify_ListDeidentifyTemplatesApiCall(ref gaxgrpc::ApiCall<ListDeidentifyTemplatesRequest, ListDeidentifyTemplatesResponse> call);
+        partial void Modify_DeleteDeidentifyTemplateApiCall(ref gaxgrpc::ApiCall<DeleteDeidentifyTemplateRequest, protowkt::Empty> call);
+        partial void Modify_CreateDlpJobApiCall(ref gaxgrpc::ApiCall<CreateDlpJobRequest, DlpJob> call);
+        partial void Modify_ListDlpJobsApiCall(ref gaxgrpc::ApiCall<ListDlpJobsRequest, ListDlpJobsResponse> call);
+        partial void Modify_GetDlpJobApiCall(ref gaxgrpc::ApiCall<GetDlpJobRequest, DlpJob> call);
+        partial void Modify_DeleteDlpJobApiCall(ref gaxgrpc::ApiCall<DeleteDlpJobRequest, protowkt::Empty> call);
+        partial void Modify_CancelDlpJobApiCall(ref gaxgrpc::ApiCall<CancelDlpJobRequest, protowkt::Empty> call);
+        partial void Modify_ListJobTriggersApiCall(ref gaxgrpc::ApiCall<ListJobTriggersRequest, ListJobTriggersResponse> call);
+        partial void Modify_GetJobTriggerApiCall(ref gaxgrpc::ApiCall<GetJobTriggerRequest, JobTrigger> call);
+        partial void Modify_DeleteJobTriggerApiCall(ref gaxgrpc::ApiCall<DeleteJobTriggerRequest, protowkt::Empty> call);
+        partial void Modify_UpdateJobTriggerApiCall(ref gaxgrpc::ApiCall<UpdateJobTriggerRequest, JobTrigger> call);
+        partial void Modify_CreateJobTriggerApiCall(ref gaxgrpc::ApiCall<CreateJobTriggerRequest, JobTrigger> call);
+        partial void OnConstruction(DlpService.DlpServiceClient grpcClient, DlpServiceSettings effectiveSettings, gaxgrpc::ClientHelper clientHelper);
 
         /// <summary>
         /// The underlying gRPC DlpService client.
@@ -2539,31 +2539,31 @@ namespace Google.Cloud.Dlp.V2
         // Partial methods called on each request.
         // Allows per-RPC-call modification to the request and CallSettings objects,
         // before the underlying RPC is performed.
-        partial void Modify_InspectContentRequest(ref InspectContentRequest request, ref CallSettings settings);
-        partial void Modify_RedactImageRequest(ref RedactImageRequest request, ref CallSettings settings);
-        partial void Modify_DeidentifyContentRequest(ref DeidentifyContentRequest request, ref CallSettings settings);
-        partial void Modify_ReidentifyContentRequest(ref ReidentifyContentRequest request, ref CallSettings settings);
-        partial void Modify_ListInfoTypesRequest(ref ListInfoTypesRequest request, ref CallSettings settings);
-        partial void Modify_CreateInspectTemplateRequest(ref CreateInspectTemplateRequest request, ref CallSettings settings);
-        partial void Modify_UpdateInspectTemplateRequest(ref UpdateInspectTemplateRequest request, ref CallSettings settings);
-        partial void Modify_GetInspectTemplateRequest(ref GetInspectTemplateRequest request, ref CallSettings settings);
-        partial void Modify_ListInspectTemplatesRequest(ref ListInspectTemplatesRequest request, ref CallSettings settings);
-        partial void Modify_DeleteInspectTemplateRequest(ref DeleteInspectTemplateRequest request, ref CallSettings settings);
-        partial void Modify_CreateDeidentifyTemplateRequest(ref CreateDeidentifyTemplateRequest request, ref CallSettings settings);
-        partial void Modify_UpdateDeidentifyTemplateRequest(ref UpdateDeidentifyTemplateRequest request, ref CallSettings settings);
-        partial void Modify_GetDeidentifyTemplateRequest(ref GetDeidentifyTemplateRequest request, ref CallSettings settings);
-        partial void Modify_ListDeidentifyTemplatesRequest(ref ListDeidentifyTemplatesRequest request, ref CallSettings settings);
-        partial void Modify_DeleteDeidentifyTemplateRequest(ref DeleteDeidentifyTemplateRequest request, ref CallSettings settings);
-        partial void Modify_CreateDlpJobRequest(ref CreateDlpJobRequest request, ref CallSettings settings);
-        partial void Modify_ListDlpJobsRequest(ref ListDlpJobsRequest request, ref CallSettings settings);
-        partial void Modify_GetDlpJobRequest(ref GetDlpJobRequest request, ref CallSettings settings);
-        partial void Modify_DeleteDlpJobRequest(ref DeleteDlpJobRequest request, ref CallSettings settings);
-        partial void Modify_CancelDlpJobRequest(ref CancelDlpJobRequest request, ref CallSettings settings);
-        partial void Modify_ListJobTriggersRequest(ref ListJobTriggersRequest request, ref CallSettings settings);
-        partial void Modify_GetJobTriggerRequest(ref GetJobTriggerRequest request, ref CallSettings settings);
-        partial void Modify_DeleteJobTriggerRequest(ref DeleteJobTriggerRequest request, ref CallSettings settings);
-        partial void Modify_UpdateJobTriggerRequest(ref UpdateJobTriggerRequest request, ref CallSettings settings);
-        partial void Modify_CreateJobTriggerRequest(ref CreateJobTriggerRequest request, ref CallSettings settings);
+        partial void Modify_InspectContentRequest(ref InspectContentRequest request, ref gaxgrpc::CallSettings settings);
+        partial void Modify_RedactImageRequest(ref RedactImageRequest request, ref gaxgrpc::CallSettings settings);
+        partial void Modify_DeidentifyContentRequest(ref DeidentifyContentRequest request, ref gaxgrpc::CallSettings settings);
+        partial void Modify_ReidentifyContentRequest(ref ReidentifyContentRequest request, ref gaxgrpc::CallSettings settings);
+        partial void Modify_ListInfoTypesRequest(ref ListInfoTypesRequest request, ref gaxgrpc::CallSettings settings);
+        partial void Modify_CreateInspectTemplateRequest(ref CreateInspectTemplateRequest request, ref gaxgrpc::CallSettings settings);
+        partial void Modify_UpdateInspectTemplateRequest(ref UpdateInspectTemplateRequest request, ref gaxgrpc::CallSettings settings);
+        partial void Modify_GetInspectTemplateRequest(ref GetInspectTemplateRequest request, ref gaxgrpc::CallSettings settings);
+        partial void Modify_ListInspectTemplatesRequest(ref ListInspectTemplatesRequest request, ref gaxgrpc::CallSettings settings);
+        partial void Modify_DeleteInspectTemplateRequest(ref DeleteInspectTemplateRequest request, ref gaxgrpc::CallSettings settings);
+        partial void Modify_CreateDeidentifyTemplateRequest(ref CreateDeidentifyTemplateRequest request, ref gaxgrpc::CallSettings settings);
+        partial void Modify_UpdateDeidentifyTemplateRequest(ref UpdateDeidentifyTemplateRequest request, ref gaxgrpc::CallSettings settings);
+        partial void Modify_GetDeidentifyTemplateRequest(ref GetDeidentifyTemplateRequest request, ref gaxgrpc::CallSettings settings);
+        partial void Modify_ListDeidentifyTemplatesRequest(ref ListDeidentifyTemplatesRequest request, ref gaxgrpc::CallSettings settings);
+        partial void Modify_DeleteDeidentifyTemplateRequest(ref DeleteDeidentifyTemplateRequest request, ref gaxgrpc::CallSettings settings);
+        partial void Modify_CreateDlpJobRequest(ref CreateDlpJobRequest request, ref gaxgrpc::CallSettings settings);
+        partial void Modify_ListDlpJobsRequest(ref ListDlpJobsRequest request, ref gaxgrpc::CallSettings settings);
+        partial void Modify_GetDlpJobRequest(ref GetDlpJobRequest request, ref gaxgrpc::CallSettings settings);
+        partial void Modify_DeleteDlpJobRequest(ref DeleteDlpJobRequest request, ref gaxgrpc::CallSettings settings);
+        partial void Modify_CancelDlpJobRequest(ref CancelDlpJobRequest request, ref gaxgrpc::CallSettings settings);
+        partial void Modify_ListJobTriggersRequest(ref ListJobTriggersRequest request, ref gaxgrpc::CallSettings settings);
+        partial void Modify_GetJobTriggerRequest(ref GetJobTriggerRequest request, ref gaxgrpc::CallSettings settings);
+        partial void Modify_DeleteJobTriggerRequest(ref DeleteJobTriggerRequest request, ref gaxgrpc::CallSettings settings);
+        partial void Modify_UpdateJobTriggerRequest(ref UpdateJobTriggerRequest request, ref gaxgrpc::CallSettings settings);
+        partial void Modify_CreateJobTriggerRequest(ref CreateJobTriggerRequest request, ref gaxgrpc::CallSettings settings);
 
         /// <summary>
         /// Finds potentially sensitive info in content.
@@ -2580,9 +2580,9 @@ namespace Google.Cloud.Dlp.V2
         /// <returns>
         /// A Task containing the RPC response.
         /// </returns>
-        public override Task<InspectContentResponse> InspectContentAsync(
+        public override stt::Task<InspectContentResponse> InspectContentAsync(
             InspectContentRequest request,
-            CallSettings callSettings = null)
+            gaxgrpc::CallSettings callSettings = null)
         {
             Modify_InspectContentRequest(ref request, ref callSettings);
             return _callInspectContent.Async(request, callSettings);
@@ -2605,7 +2605,7 @@ namespace Google.Cloud.Dlp.V2
         /// </returns>
         public override InspectContentResponse InspectContent(
             InspectContentRequest request,
-            CallSettings callSettings = null)
+            gaxgrpc::CallSettings callSettings = null)
         {
             Modify_InspectContentRequest(ref request, ref callSettings);
             return _callInspectContent.Sync(request, callSettings);
@@ -2625,9 +2625,9 @@ namespace Google.Cloud.Dlp.V2
         /// <returns>
         /// A Task containing the RPC response.
         /// </returns>
-        public override Task<RedactImageResponse> RedactImageAsync(
+        public override stt::Task<RedactImageResponse> RedactImageAsync(
             RedactImageRequest request,
-            CallSettings callSettings = null)
+            gaxgrpc::CallSettings callSettings = null)
         {
             Modify_RedactImageRequest(ref request, ref callSettings);
             return _callRedactImage.Async(request, callSettings);
@@ -2649,7 +2649,7 @@ namespace Google.Cloud.Dlp.V2
         /// </returns>
         public override RedactImageResponse RedactImage(
             RedactImageRequest request,
-            CallSettings callSettings = null)
+            gaxgrpc::CallSettings callSettings = null)
         {
             Modify_RedactImageRequest(ref request, ref callSettings);
             return _callRedactImage.Sync(request, callSettings);
@@ -2669,9 +2669,9 @@ namespace Google.Cloud.Dlp.V2
         /// <returns>
         /// A Task containing the RPC response.
         /// </returns>
-        public override Task<DeidentifyContentResponse> DeidentifyContentAsync(
+        public override stt::Task<DeidentifyContentResponse> DeidentifyContentAsync(
             DeidentifyContentRequest request,
-            CallSettings callSettings = null)
+            gaxgrpc::CallSettings callSettings = null)
         {
             Modify_DeidentifyContentRequest(ref request, ref callSettings);
             return _callDeidentifyContent.Async(request, callSettings);
@@ -2693,7 +2693,7 @@ namespace Google.Cloud.Dlp.V2
         /// </returns>
         public override DeidentifyContentResponse DeidentifyContent(
             DeidentifyContentRequest request,
-            CallSettings callSettings = null)
+            gaxgrpc::CallSettings callSettings = null)
         {
             Modify_DeidentifyContentRequest(ref request, ref callSettings);
             return _callDeidentifyContent.Sync(request, callSettings);
@@ -2711,9 +2711,9 @@ namespace Google.Cloud.Dlp.V2
         /// <returns>
         /// A Task containing the RPC response.
         /// </returns>
-        public override Task<ReidentifyContentResponse> ReidentifyContentAsync(
+        public override stt::Task<ReidentifyContentResponse> ReidentifyContentAsync(
             ReidentifyContentRequest request,
-            CallSettings callSettings = null)
+            gaxgrpc::CallSettings callSettings = null)
         {
             Modify_ReidentifyContentRequest(ref request, ref callSettings);
             return _callReidentifyContent.Async(request, callSettings);
@@ -2733,7 +2733,7 @@ namespace Google.Cloud.Dlp.V2
         /// </returns>
         public override ReidentifyContentResponse ReidentifyContent(
             ReidentifyContentRequest request,
-            CallSettings callSettings = null)
+            gaxgrpc::CallSettings callSettings = null)
         {
             Modify_ReidentifyContentRequest(ref request, ref callSettings);
             return _callReidentifyContent.Sync(request, callSettings);
@@ -2753,9 +2753,9 @@ namespace Google.Cloud.Dlp.V2
         /// <returns>
         /// A Task containing the RPC response.
         /// </returns>
-        public override Task<ListInfoTypesResponse> ListInfoTypesAsync(
+        public override stt::Task<ListInfoTypesResponse> ListInfoTypesAsync(
             ListInfoTypesRequest request,
-            CallSettings callSettings = null)
+            gaxgrpc::CallSettings callSettings = null)
         {
             Modify_ListInfoTypesRequest(ref request, ref callSettings);
             return _callListInfoTypes.Async(request, callSettings);
@@ -2777,7 +2777,7 @@ namespace Google.Cloud.Dlp.V2
         /// </returns>
         public override ListInfoTypesResponse ListInfoTypes(
             ListInfoTypesRequest request,
-            CallSettings callSettings = null)
+            gaxgrpc::CallSettings callSettings = null)
         {
             Modify_ListInfoTypesRequest(ref request, ref callSettings);
             return _callListInfoTypes.Sync(request, callSettings);
@@ -2796,9 +2796,9 @@ namespace Google.Cloud.Dlp.V2
         /// <returns>
         /// A Task containing the RPC response.
         /// </returns>
-        public override Task<InspectTemplate> CreateInspectTemplateAsync(
+        public override stt::Task<InspectTemplate> CreateInspectTemplateAsync(
             CreateInspectTemplateRequest request,
-            CallSettings callSettings = null)
+            gaxgrpc::CallSettings callSettings = null)
         {
             Modify_CreateInspectTemplateRequest(ref request, ref callSettings);
             return _callCreateInspectTemplate.Async(request, callSettings);
@@ -2819,7 +2819,7 @@ namespace Google.Cloud.Dlp.V2
         /// </returns>
         public override InspectTemplate CreateInspectTemplate(
             CreateInspectTemplateRequest request,
-            CallSettings callSettings = null)
+            gaxgrpc::CallSettings callSettings = null)
         {
             Modify_CreateInspectTemplateRequest(ref request, ref callSettings);
             return _callCreateInspectTemplate.Sync(request, callSettings);
@@ -2837,9 +2837,9 @@ namespace Google.Cloud.Dlp.V2
         /// <returns>
         /// A Task containing the RPC response.
         /// </returns>
-        public override Task<InspectTemplate> UpdateInspectTemplateAsync(
+        public override stt::Task<InspectTemplate> UpdateInspectTemplateAsync(
             UpdateInspectTemplateRequest request,
-            CallSettings callSettings = null)
+            gaxgrpc::CallSettings callSettings = null)
         {
             Modify_UpdateInspectTemplateRequest(ref request, ref callSettings);
             return _callUpdateInspectTemplate.Async(request, callSettings);
@@ -2859,7 +2859,7 @@ namespace Google.Cloud.Dlp.V2
         /// </returns>
         public override InspectTemplate UpdateInspectTemplate(
             UpdateInspectTemplateRequest request,
-            CallSettings callSettings = null)
+            gaxgrpc::CallSettings callSettings = null)
         {
             Modify_UpdateInspectTemplateRequest(ref request, ref callSettings);
             return _callUpdateInspectTemplate.Sync(request, callSettings);
@@ -2877,9 +2877,9 @@ namespace Google.Cloud.Dlp.V2
         /// <returns>
         /// A Task containing the RPC response.
         /// </returns>
-        public override Task<InspectTemplate> GetInspectTemplateAsync(
+        public override stt::Task<InspectTemplate> GetInspectTemplateAsync(
             GetInspectTemplateRequest request,
-            CallSettings callSettings = null)
+            gaxgrpc::CallSettings callSettings = null)
         {
             Modify_GetInspectTemplateRequest(ref request, ref callSettings);
             return _callGetInspectTemplate.Async(request, callSettings);
@@ -2899,7 +2899,7 @@ namespace Google.Cloud.Dlp.V2
         /// </returns>
         public override InspectTemplate GetInspectTemplate(
             GetInspectTemplateRequest request,
-            CallSettings callSettings = null)
+            gaxgrpc::CallSettings callSettings = null)
         {
             Modify_GetInspectTemplateRequest(ref request, ref callSettings);
             return _callGetInspectTemplate.Sync(request, callSettings);
@@ -2917,12 +2917,12 @@ namespace Google.Cloud.Dlp.V2
         /// <returns>
         /// A pageable asynchronous sequence of <see cref="InspectTemplate"/> resources.
         /// </returns>
-        public override PagedAsyncEnumerable<ListInspectTemplatesResponse, InspectTemplate> ListInspectTemplatesAsync(
+        public override gax::PagedAsyncEnumerable<ListInspectTemplatesResponse, InspectTemplate> ListInspectTemplatesAsync(
             ListInspectTemplatesRequest request,
-            CallSettings callSettings = null)
+            gaxgrpc::CallSettings callSettings = null)
         {
             Modify_ListInspectTemplatesRequest(ref request, ref callSettings);
-            return new GrpcPagedAsyncEnumerable<ListInspectTemplatesRequest, ListInspectTemplatesResponse, InspectTemplate>(_callListInspectTemplates, request, callSettings);
+            return new gaxgrpc::GrpcPagedAsyncEnumerable<ListInspectTemplatesRequest, ListInspectTemplatesResponse, InspectTemplate>(_callListInspectTemplates, request, callSettings);
         }
 
         /// <summary>
@@ -2937,12 +2937,12 @@ namespace Google.Cloud.Dlp.V2
         /// <returns>
         /// A pageable sequence of <see cref="InspectTemplate"/> resources.
         /// </returns>
-        public override PagedEnumerable<ListInspectTemplatesResponse, InspectTemplate> ListInspectTemplates(
+        public override gax::PagedEnumerable<ListInspectTemplatesResponse, InspectTemplate> ListInspectTemplates(
             ListInspectTemplatesRequest request,
-            CallSettings callSettings = null)
+            gaxgrpc::CallSettings callSettings = null)
         {
             Modify_ListInspectTemplatesRequest(ref request, ref callSettings);
-            return new GrpcPagedEnumerable<ListInspectTemplatesRequest, ListInspectTemplatesResponse, InspectTemplate>(_callListInspectTemplates, request, callSettings);
+            return new gaxgrpc::GrpcPagedEnumerable<ListInspectTemplatesRequest, ListInspectTemplatesResponse, InspectTemplate>(_callListInspectTemplates, request, callSettings);
         }
 
         /// <summary>
@@ -2957,9 +2957,9 @@ namespace Google.Cloud.Dlp.V2
         /// <returns>
         /// A Task that completes when the RPC has completed.
         /// </returns>
-        public override Task DeleteInspectTemplateAsync(
+        public override stt::Task DeleteInspectTemplateAsync(
             DeleteInspectTemplateRequest request,
-            CallSettings callSettings = null)
+            gaxgrpc::CallSettings callSettings = null)
         {
             Modify_DeleteInspectTemplateRequest(ref request, ref callSettings);
             return _callDeleteInspectTemplate.Async(request, callSettings);
@@ -2976,7 +2976,7 @@ namespace Google.Cloud.Dlp.V2
         /// </param>
         public override void DeleteInspectTemplate(
             DeleteInspectTemplateRequest request,
-            CallSettings callSettings = null)
+            gaxgrpc::CallSettings callSettings = null)
         {
             Modify_DeleteInspectTemplateRequest(ref request, ref callSettings);
             _callDeleteInspectTemplate.Sync(request, callSettings);
@@ -2995,9 +2995,9 @@ namespace Google.Cloud.Dlp.V2
         /// <returns>
         /// A Task containing the RPC response.
         /// </returns>
-        public override Task<DeidentifyTemplate> CreateDeidentifyTemplateAsync(
+        public override stt::Task<DeidentifyTemplate> CreateDeidentifyTemplateAsync(
             CreateDeidentifyTemplateRequest request,
-            CallSettings callSettings = null)
+            gaxgrpc::CallSettings callSettings = null)
         {
             Modify_CreateDeidentifyTemplateRequest(ref request, ref callSettings);
             return _callCreateDeidentifyTemplate.Async(request, callSettings);
@@ -3018,7 +3018,7 @@ namespace Google.Cloud.Dlp.V2
         /// </returns>
         public override DeidentifyTemplate CreateDeidentifyTemplate(
             CreateDeidentifyTemplateRequest request,
-            CallSettings callSettings = null)
+            gaxgrpc::CallSettings callSettings = null)
         {
             Modify_CreateDeidentifyTemplateRequest(ref request, ref callSettings);
             return _callCreateDeidentifyTemplate.Sync(request, callSettings);
@@ -3036,9 +3036,9 @@ namespace Google.Cloud.Dlp.V2
         /// <returns>
         /// A Task containing the RPC response.
         /// </returns>
-        public override Task<DeidentifyTemplate> UpdateDeidentifyTemplateAsync(
+        public override stt::Task<DeidentifyTemplate> UpdateDeidentifyTemplateAsync(
             UpdateDeidentifyTemplateRequest request,
-            CallSettings callSettings = null)
+            gaxgrpc::CallSettings callSettings = null)
         {
             Modify_UpdateDeidentifyTemplateRequest(ref request, ref callSettings);
             return _callUpdateDeidentifyTemplate.Async(request, callSettings);
@@ -3058,7 +3058,7 @@ namespace Google.Cloud.Dlp.V2
         /// </returns>
         public override DeidentifyTemplate UpdateDeidentifyTemplate(
             UpdateDeidentifyTemplateRequest request,
-            CallSettings callSettings = null)
+            gaxgrpc::CallSettings callSettings = null)
         {
             Modify_UpdateDeidentifyTemplateRequest(ref request, ref callSettings);
             return _callUpdateDeidentifyTemplate.Sync(request, callSettings);
@@ -3076,9 +3076,9 @@ namespace Google.Cloud.Dlp.V2
         /// <returns>
         /// A Task containing the RPC response.
         /// </returns>
-        public override Task<DeidentifyTemplate> GetDeidentifyTemplateAsync(
+        public override stt::Task<DeidentifyTemplate> GetDeidentifyTemplateAsync(
             GetDeidentifyTemplateRequest request,
-            CallSettings callSettings = null)
+            gaxgrpc::CallSettings callSettings = null)
         {
             Modify_GetDeidentifyTemplateRequest(ref request, ref callSettings);
             return _callGetDeidentifyTemplate.Async(request, callSettings);
@@ -3098,7 +3098,7 @@ namespace Google.Cloud.Dlp.V2
         /// </returns>
         public override DeidentifyTemplate GetDeidentifyTemplate(
             GetDeidentifyTemplateRequest request,
-            CallSettings callSettings = null)
+            gaxgrpc::CallSettings callSettings = null)
         {
             Modify_GetDeidentifyTemplateRequest(ref request, ref callSettings);
             return _callGetDeidentifyTemplate.Sync(request, callSettings);
@@ -3116,12 +3116,12 @@ namespace Google.Cloud.Dlp.V2
         /// <returns>
         /// A pageable asynchronous sequence of <see cref="DeidentifyTemplate"/> resources.
         /// </returns>
-        public override PagedAsyncEnumerable<ListDeidentifyTemplatesResponse, DeidentifyTemplate> ListDeidentifyTemplatesAsync(
+        public override gax::PagedAsyncEnumerable<ListDeidentifyTemplatesResponse, DeidentifyTemplate> ListDeidentifyTemplatesAsync(
             ListDeidentifyTemplatesRequest request,
-            CallSettings callSettings = null)
+            gaxgrpc::CallSettings callSettings = null)
         {
             Modify_ListDeidentifyTemplatesRequest(ref request, ref callSettings);
-            return new GrpcPagedAsyncEnumerable<ListDeidentifyTemplatesRequest, ListDeidentifyTemplatesResponse, DeidentifyTemplate>(_callListDeidentifyTemplates, request, callSettings);
+            return new gaxgrpc::GrpcPagedAsyncEnumerable<ListDeidentifyTemplatesRequest, ListDeidentifyTemplatesResponse, DeidentifyTemplate>(_callListDeidentifyTemplates, request, callSettings);
         }
 
         /// <summary>
@@ -3136,12 +3136,12 @@ namespace Google.Cloud.Dlp.V2
         /// <returns>
         /// A pageable sequence of <see cref="DeidentifyTemplate"/> resources.
         /// </returns>
-        public override PagedEnumerable<ListDeidentifyTemplatesResponse, DeidentifyTemplate> ListDeidentifyTemplates(
+        public override gax::PagedEnumerable<ListDeidentifyTemplatesResponse, DeidentifyTemplate> ListDeidentifyTemplates(
             ListDeidentifyTemplatesRequest request,
-            CallSettings callSettings = null)
+            gaxgrpc::CallSettings callSettings = null)
         {
             Modify_ListDeidentifyTemplatesRequest(ref request, ref callSettings);
-            return new GrpcPagedEnumerable<ListDeidentifyTemplatesRequest, ListDeidentifyTemplatesResponse, DeidentifyTemplate>(_callListDeidentifyTemplates, request, callSettings);
+            return new gaxgrpc::GrpcPagedEnumerable<ListDeidentifyTemplatesRequest, ListDeidentifyTemplatesResponse, DeidentifyTemplate>(_callListDeidentifyTemplates, request, callSettings);
         }
 
         /// <summary>
@@ -3156,9 +3156,9 @@ namespace Google.Cloud.Dlp.V2
         /// <returns>
         /// A Task that completes when the RPC has completed.
         /// </returns>
-        public override Task DeleteDeidentifyTemplateAsync(
+        public override stt::Task DeleteDeidentifyTemplateAsync(
             DeleteDeidentifyTemplateRequest request,
-            CallSettings callSettings = null)
+            gaxgrpc::CallSettings callSettings = null)
         {
             Modify_DeleteDeidentifyTemplateRequest(ref request, ref callSettings);
             return _callDeleteDeidentifyTemplate.Async(request, callSettings);
@@ -3175,7 +3175,7 @@ namespace Google.Cloud.Dlp.V2
         /// </param>
         public override void DeleteDeidentifyTemplate(
             DeleteDeidentifyTemplateRequest request,
-            CallSettings callSettings = null)
+            gaxgrpc::CallSettings callSettings = null)
         {
             Modify_DeleteDeidentifyTemplateRequest(ref request, ref callSettings);
             _callDeleteDeidentifyTemplate.Sync(request, callSettings);
@@ -3194,9 +3194,9 @@ namespace Google.Cloud.Dlp.V2
         /// <returns>
         /// A Task containing the RPC response.
         /// </returns>
-        public override Task<DlpJob> CreateDlpJobAsync(
+        public override stt::Task<DlpJob> CreateDlpJobAsync(
             CreateDlpJobRequest request,
-            CallSettings callSettings = null)
+            gaxgrpc::CallSettings callSettings = null)
         {
             Modify_CreateDlpJobRequest(ref request, ref callSettings);
             return _callCreateDlpJob.Async(request, callSettings);
@@ -3217,7 +3217,7 @@ namespace Google.Cloud.Dlp.V2
         /// </returns>
         public override DlpJob CreateDlpJob(
             CreateDlpJobRequest request,
-            CallSettings callSettings = null)
+            gaxgrpc::CallSettings callSettings = null)
         {
             Modify_CreateDlpJobRequest(ref request, ref callSettings);
             return _callCreateDlpJob.Sync(request, callSettings);
@@ -3235,12 +3235,12 @@ namespace Google.Cloud.Dlp.V2
         /// <returns>
         /// A pageable asynchronous sequence of <see cref="DlpJob"/> resources.
         /// </returns>
-        public override PagedAsyncEnumerable<ListDlpJobsResponse, DlpJob> ListDlpJobsAsync(
+        public override gax::PagedAsyncEnumerable<ListDlpJobsResponse, DlpJob> ListDlpJobsAsync(
             ListDlpJobsRequest request,
-            CallSettings callSettings = null)
+            gaxgrpc::CallSettings callSettings = null)
         {
             Modify_ListDlpJobsRequest(ref request, ref callSettings);
-            return new GrpcPagedAsyncEnumerable<ListDlpJobsRequest, ListDlpJobsResponse, DlpJob>(_callListDlpJobs, request, callSettings);
+            return new gaxgrpc::GrpcPagedAsyncEnumerable<ListDlpJobsRequest, ListDlpJobsResponse, DlpJob>(_callListDlpJobs, request, callSettings);
         }
 
         /// <summary>
@@ -3255,12 +3255,12 @@ namespace Google.Cloud.Dlp.V2
         /// <returns>
         /// A pageable sequence of <see cref="DlpJob"/> resources.
         /// </returns>
-        public override PagedEnumerable<ListDlpJobsResponse, DlpJob> ListDlpJobs(
+        public override gax::PagedEnumerable<ListDlpJobsResponse, DlpJob> ListDlpJobs(
             ListDlpJobsRequest request,
-            CallSettings callSettings = null)
+            gaxgrpc::CallSettings callSettings = null)
         {
             Modify_ListDlpJobsRequest(ref request, ref callSettings);
-            return new GrpcPagedEnumerable<ListDlpJobsRequest, ListDlpJobsResponse, DlpJob>(_callListDlpJobs, request, callSettings);
+            return new gaxgrpc::GrpcPagedEnumerable<ListDlpJobsRequest, ListDlpJobsResponse, DlpJob>(_callListDlpJobs, request, callSettings);
         }
 
         /// <summary>
@@ -3275,9 +3275,9 @@ namespace Google.Cloud.Dlp.V2
         /// <returns>
         /// A Task containing the RPC response.
         /// </returns>
-        public override Task<DlpJob> GetDlpJobAsync(
+        public override stt::Task<DlpJob> GetDlpJobAsync(
             GetDlpJobRequest request,
-            CallSettings callSettings = null)
+            gaxgrpc::CallSettings callSettings = null)
         {
             Modify_GetDlpJobRequest(ref request, ref callSettings);
             return _callGetDlpJob.Async(request, callSettings);
@@ -3297,7 +3297,7 @@ namespace Google.Cloud.Dlp.V2
         /// </returns>
         public override DlpJob GetDlpJob(
             GetDlpJobRequest request,
-            CallSettings callSettings = null)
+            gaxgrpc::CallSettings callSettings = null)
         {
             Modify_GetDlpJobRequest(ref request, ref callSettings);
             return _callGetDlpJob.Sync(request, callSettings);
@@ -3317,9 +3317,9 @@ namespace Google.Cloud.Dlp.V2
         /// <returns>
         /// A Task that completes when the RPC has completed.
         /// </returns>
-        public override Task DeleteDlpJobAsync(
+        public override stt::Task DeleteDlpJobAsync(
             DeleteDlpJobRequest request,
-            CallSettings callSettings = null)
+            gaxgrpc::CallSettings callSettings = null)
         {
             Modify_DeleteDlpJobRequest(ref request, ref callSettings);
             return _callDeleteDlpJob.Async(request, callSettings);
@@ -3338,7 +3338,7 @@ namespace Google.Cloud.Dlp.V2
         /// </param>
         public override void DeleteDlpJob(
             DeleteDlpJobRequest request,
-            CallSettings callSettings = null)
+            gaxgrpc::CallSettings callSettings = null)
         {
             Modify_DeleteDlpJobRequest(ref request, ref callSettings);
             _callDeleteDlpJob.Sync(request, callSettings);
@@ -3358,9 +3358,9 @@ namespace Google.Cloud.Dlp.V2
         /// <returns>
         /// A Task that completes when the RPC has completed.
         /// </returns>
-        public override Task CancelDlpJobAsync(
+        public override stt::Task CancelDlpJobAsync(
             CancelDlpJobRequest request,
-            CallSettings callSettings = null)
+            gaxgrpc::CallSettings callSettings = null)
         {
             Modify_CancelDlpJobRequest(ref request, ref callSettings);
             return _callCancelDlpJob.Async(request, callSettings);
@@ -3379,7 +3379,7 @@ namespace Google.Cloud.Dlp.V2
         /// </param>
         public override void CancelDlpJob(
             CancelDlpJobRequest request,
-            CallSettings callSettings = null)
+            gaxgrpc::CallSettings callSettings = null)
         {
             Modify_CancelDlpJobRequest(ref request, ref callSettings);
             _callCancelDlpJob.Sync(request, callSettings);
@@ -3397,12 +3397,12 @@ namespace Google.Cloud.Dlp.V2
         /// <returns>
         /// A pageable asynchronous sequence of <see cref="JobTrigger"/> resources.
         /// </returns>
-        public override PagedAsyncEnumerable<ListJobTriggersResponse, JobTrigger> ListJobTriggersAsync(
+        public override gax::PagedAsyncEnumerable<ListJobTriggersResponse, JobTrigger> ListJobTriggersAsync(
             ListJobTriggersRequest request,
-            CallSettings callSettings = null)
+            gaxgrpc::CallSettings callSettings = null)
         {
             Modify_ListJobTriggersRequest(ref request, ref callSettings);
-            return new GrpcPagedAsyncEnumerable<ListJobTriggersRequest, ListJobTriggersResponse, JobTrigger>(_callListJobTriggers, request, callSettings);
+            return new gaxgrpc::GrpcPagedAsyncEnumerable<ListJobTriggersRequest, ListJobTriggersResponse, JobTrigger>(_callListJobTriggers, request, callSettings);
         }
 
         /// <summary>
@@ -3417,12 +3417,12 @@ namespace Google.Cloud.Dlp.V2
         /// <returns>
         /// A pageable sequence of <see cref="JobTrigger"/> resources.
         /// </returns>
-        public override PagedEnumerable<ListJobTriggersResponse, JobTrigger> ListJobTriggers(
+        public override gax::PagedEnumerable<ListJobTriggersResponse, JobTrigger> ListJobTriggers(
             ListJobTriggersRequest request,
-            CallSettings callSettings = null)
+            gaxgrpc::CallSettings callSettings = null)
         {
             Modify_ListJobTriggersRequest(ref request, ref callSettings);
-            return new GrpcPagedEnumerable<ListJobTriggersRequest, ListJobTriggersResponse, JobTrigger>(_callListJobTriggers, request, callSettings);
+            return new gaxgrpc::GrpcPagedEnumerable<ListJobTriggersRequest, ListJobTriggersResponse, JobTrigger>(_callListJobTriggers, request, callSettings);
         }
 
         /// <summary>
@@ -3437,9 +3437,9 @@ namespace Google.Cloud.Dlp.V2
         /// <returns>
         /// A Task containing the RPC response.
         /// </returns>
-        public override Task<JobTrigger> GetJobTriggerAsync(
+        public override stt::Task<JobTrigger> GetJobTriggerAsync(
             GetJobTriggerRequest request,
-            CallSettings callSettings = null)
+            gaxgrpc::CallSettings callSettings = null)
         {
             Modify_GetJobTriggerRequest(ref request, ref callSettings);
             return _callGetJobTrigger.Async(request, callSettings);
@@ -3459,7 +3459,7 @@ namespace Google.Cloud.Dlp.V2
         /// </returns>
         public override JobTrigger GetJobTrigger(
             GetJobTriggerRequest request,
-            CallSettings callSettings = null)
+            gaxgrpc::CallSettings callSettings = null)
         {
             Modify_GetJobTriggerRequest(ref request, ref callSettings);
             return _callGetJobTrigger.Sync(request, callSettings);
@@ -3477,9 +3477,9 @@ namespace Google.Cloud.Dlp.V2
         /// <returns>
         /// A Task that completes when the RPC has completed.
         /// </returns>
-        public override Task DeleteJobTriggerAsync(
+        public override stt::Task DeleteJobTriggerAsync(
             DeleteJobTriggerRequest request,
-            CallSettings callSettings = null)
+            gaxgrpc::CallSettings callSettings = null)
         {
             Modify_DeleteJobTriggerRequest(ref request, ref callSettings);
             return _callDeleteJobTrigger.Async(request, callSettings);
@@ -3496,7 +3496,7 @@ namespace Google.Cloud.Dlp.V2
         /// </param>
         public override void DeleteJobTrigger(
             DeleteJobTriggerRequest request,
-            CallSettings callSettings = null)
+            gaxgrpc::CallSettings callSettings = null)
         {
             Modify_DeleteJobTriggerRequest(ref request, ref callSettings);
             _callDeleteJobTrigger.Sync(request, callSettings);
@@ -3514,9 +3514,9 @@ namespace Google.Cloud.Dlp.V2
         /// <returns>
         /// A Task containing the RPC response.
         /// </returns>
-        public override Task<JobTrigger> UpdateJobTriggerAsync(
+        public override stt::Task<JobTrigger> UpdateJobTriggerAsync(
             UpdateJobTriggerRequest request,
-            CallSettings callSettings = null)
+            gaxgrpc::CallSettings callSettings = null)
         {
             Modify_UpdateJobTriggerRequest(ref request, ref callSettings);
             return _callUpdateJobTrigger.Async(request, callSettings);
@@ -3536,7 +3536,7 @@ namespace Google.Cloud.Dlp.V2
         /// </returns>
         public override JobTrigger UpdateJobTrigger(
             UpdateJobTriggerRequest request,
-            CallSettings callSettings = null)
+            gaxgrpc::CallSettings callSettings = null)
         {
             Modify_UpdateJobTriggerRequest(ref request, ref callSettings);
             return _callUpdateJobTrigger.Sync(request, callSettings);
@@ -3555,9 +3555,9 @@ namespace Google.Cloud.Dlp.V2
         /// <returns>
         /// A Task containing the RPC response.
         /// </returns>
-        public override Task<JobTrigger> CreateJobTriggerAsync(
+        public override stt::Task<JobTrigger> CreateJobTriggerAsync(
             CreateJobTriggerRequest request,
-            CallSettings callSettings = null)
+            gaxgrpc::CallSettings callSettings = null)
         {
             Modify_CreateJobTriggerRequest(ref request, ref callSettings);
             return _callCreateJobTrigger.Async(request, callSettings);
@@ -3578,7 +3578,7 @@ namespace Google.Cloud.Dlp.V2
         /// </returns>
         public override JobTrigger CreateJobTrigger(
             CreateJobTriggerRequest request,
-            CallSettings callSettings = null)
+            gaxgrpc::CallSettings callSettings = null)
         {
             Modify_CreateJobTriggerRequest(ref request, ref callSettings);
             return _callCreateJobTrigger.Sync(request, callSettings);
@@ -3588,52 +3588,52 @@ namespace Google.Cloud.Dlp.V2
 
     // Partial classes to enable page-streaming
 
-    public partial class ListInspectTemplatesRequest : IPageRequest { }
-    public partial class ListInspectTemplatesResponse : IPageResponse<InspectTemplate>
+    public partial class ListInspectTemplatesRequest : gaxgrpc::IPageRequest { }
+    public partial class ListInspectTemplatesResponse : gaxgrpc::IPageResponse<InspectTemplate>
     {
         /// <summary>
         /// Returns an enumerator that iterates through the resources in this response.
         /// </summary>
-        public IEnumerator<InspectTemplate> GetEnumerator() => InspectTemplates.GetEnumerator();
+        public scg::IEnumerator<InspectTemplate> GetEnumerator() => InspectTemplates.GetEnumerator();
 
         /// <inheritdoc/>
-        IEnumerator IEnumerable.GetEnumerator() => GetEnumerator();
+        sc::IEnumerator sc::IEnumerable.GetEnumerator() => GetEnumerator();
     }
 
-    public partial class ListDeidentifyTemplatesRequest : IPageRequest { }
-    public partial class ListDeidentifyTemplatesResponse : IPageResponse<DeidentifyTemplate>
+    public partial class ListDeidentifyTemplatesRequest : gaxgrpc::IPageRequest { }
+    public partial class ListDeidentifyTemplatesResponse : gaxgrpc::IPageResponse<DeidentifyTemplate>
     {
         /// <summary>
         /// Returns an enumerator that iterates through the resources in this response.
         /// </summary>
-        public IEnumerator<DeidentifyTemplate> GetEnumerator() => DeidentifyTemplates.GetEnumerator();
+        public scg::IEnumerator<DeidentifyTemplate> GetEnumerator() => DeidentifyTemplates.GetEnumerator();
 
         /// <inheritdoc/>
-        IEnumerator IEnumerable.GetEnumerator() => GetEnumerator();
+        sc::IEnumerator sc::IEnumerable.GetEnumerator() => GetEnumerator();
     }
 
-    public partial class ListDlpJobsRequest : IPageRequest { }
-    public partial class ListDlpJobsResponse : IPageResponse<DlpJob>
+    public partial class ListDlpJobsRequest : gaxgrpc::IPageRequest { }
+    public partial class ListDlpJobsResponse : gaxgrpc::IPageResponse<DlpJob>
     {
         /// <summary>
         /// Returns an enumerator that iterates through the resources in this response.
         /// </summary>
-        public IEnumerator<DlpJob> GetEnumerator() => Jobs.GetEnumerator();
+        public scg::IEnumerator<DlpJob> GetEnumerator() => Jobs.GetEnumerator();
 
         /// <inheritdoc/>
-        IEnumerator IEnumerable.GetEnumerator() => GetEnumerator();
+        sc::IEnumerator sc::IEnumerable.GetEnumerator() => GetEnumerator();
     }
 
-    public partial class ListJobTriggersRequest : IPageRequest { }
-    public partial class ListJobTriggersResponse : IPageResponse<JobTrigger>
+    public partial class ListJobTriggersRequest : gaxgrpc::IPageRequest { }
+    public partial class ListJobTriggersResponse : gaxgrpc::IPageResponse<JobTrigger>
     {
         /// <summary>
         /// Returns an enumerator that iterates through the resources in this response.
         /// </summary>
-        public IEnumerator<JobTrigger> GetEnumerator() => JobTriggers.GetEnumerator();
+        public scg::IEnumerator<JobTrigger> GetEnumerator() => JobTriggers.GetEnumerator();
 
         /// <inheritdoc/>
-        IEnumerator IEnumerable.GetEnumerator() => GetEnumerator();
+        sc::IEnumerator sc::IEnumerable.GetEnumerator() => GetEnumerator();
     }
 
 

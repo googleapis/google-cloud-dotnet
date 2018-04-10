@@ -14,24 +14,24 @@
 
 // Generated code. DO NOT EDIT!
 
-using Google.Api.Gax;
-using Google.Api.Gax.Grpc;
-using Google.Protobuf;
-using Google.Protobuf.WellKnownTypes;
-using Grpc.Core;
-using System;
-using System.Collections;
-using System.Collections.Generic;
-using System.Collections.ObjectModel;
-using System.Threading;
-using System.Threading.Tasks;
+using gax = Google.Api.Gax;
+using gaxgrpc = Google.Api.Gax.Grpc;
+using proto = Google.Protobuf;
+using protowkt = Google.Protobuf.WellKnownTypes;
+using grpccore = Grpc.Core;
+using s = System;
+using sc = System.Collections;
+using scg = System.Collections.Generic;
+using sco = System.Collections.ObjectModel;
+using st = System.Threading;
+using stt = System.Threading.Tasks;
 
 namespace Google.LongRunning
 {
     /// <summary>
     /// Settings for a <see cref="OperationsClient"/>.
     /// </summary>
-    public sealed partial class OperationsSettings : ServiceSettingsBase
+    public sealed partial class OperationsSettings : gaxgrpc::ServiceSettingsBase
     {
         /// <summary>
         /// Get a new instance of the default <see cref="OperationsSettings"/>.
@@ -48,7 +48,7 @@ namespace Google.LongRunning
 
         private OperationsSettings(OperationsSettings existing) : base(existing)
         {
-            GaxPreconditions.CheckNotNull(existing, nameof(existing));
+            gax::GaxPreconditions.CheckNotNull(existing, nameof(existing));
             GetOperationSettings = existing.GetOperationSettings;
             ListOperationsSettings = existing.ListOperationsSettings;
             CancelOperationSettings = existing.CancelOperationSettings;
@@ -59,28 +59,28 @@ namespace Google.LongRunning
         partial void OnCopy(OperationsSettings existing);
 
         /// <summary>
-        /// The filter specifying which RPC <see cref="StatusCode"/>s are eligible for retry
+        /// The filter specifying which RPC <see cref="grpccore::StatusCode"/>s are eligible for retry
         /// for "Idempotent" <see cref="OperationsClient"/> RPC methods.
         /// </summary>
         /// <remarks>
-        /// The eligible RPC <see cref="StatusCode"/>s for retry for "Idempotent" RPC methods are:
+        /// The eligible RPC <see cref="grpccore::StatusCode"/>s for retry for "Idempotent" RPC methods are:
         /// <list type="bullet">
-        /// <item><description><see cref="StatusCode.DeadlineExceeded"/></description></item>
-        /// <item><description><see cref="StatusCode.Unavailable"/></description></item>
+        /// <item><description><see cref="grpccore::StatusCode.DeadlineExceeded"/></description></item>
+        /// <item><description><see cref="grpccore::StatusCode.Unavailable"/></description></item>
         /// </list>
         /// </remarks>
-        public static Predicate<RpcException> IdempotentRetryFilter { get; } =
-            RetrySettings.FilterForStatusCodes(StatusCode.DeadlineExceeded, StatusCode.Unavailable);
+        public static s::Predicate<grpccore::RpcException> IdempotentRetryFilter { get; } =
+            gaxgrpc::RetrySettings.FilterForStatusCodes(grpccore::StatusCode.DeadlineExceeded, grpccore::StatusCode.Unavailable);
 
         /// <summary>
-        /// The filter specifying which RPC <see cref="StatusCode"/>s are eligible for retry
+        /// The filter specifying which RPC <see cref="grpccore::StatusCode"/>s are eligible for retry
         /// for "NonIdempotent" <see cref="OperationsClient"/> RPC methods.
         /// </summary>
         /// <remarks>
-        /// There are no RPC <see cref="StatusCode"/>s eligible for retry for "NonIdempotent" RPC methods.
+        /// There are no RPC <see cref="grpccore::StatusCode"/>s eligible for retry for "NonIdempotent" RPC methods.
         /// </remarks>
-        public static Predicate<RpcException> NonIdempotentRetryFilter { get; } =
-            RetrySettings.FilterForStatusCodes();
+        public static s::Predicate<grpccore::RpcException> NonIdempotentRetryFilter { get; } =
+            gaxgrpc::RetrySettings.FilterForStatusCodes();
 
         /// <summary>
         /// "Default" retry backoff for <see cref="OperationsClient"/> RPC methods.
@@ -96,9 +96,9 @@ namespace Google.LongRunning
         /// <item><description>Delay multiplier: 1.3</description></item>
         /// </list>
         /// </remarks>
-        public static BackoffSettings GetDefaultRetryBackoff() => new BackoffSettings(
-            delay: TimeSpan.FromMilliseconds(100),
-            maxDelay: TimeSpan.FromMilliseconds(60000),
+        public static gaxgrpc::BackoffSettings GetDefaultRetryBackoff() => new gaxgrpc::BackoffSettings(
+            delay: s::TimeSpan.FromMilliseconds(100),
+            maxDelay: s::TimeSpan.FromMilliseconds(60000),
             delayMultiplier: 1.3
         );
 
@@ -116,19 +116,19 @@ namespace Google.LongRunning
         /// <item><description>Maximum timeout: 90000 milliseconds</description></item>
         /// </list>
         /// </remarks>
-        public static BackoffSettings GetDefaultTimeoutBackoff() => new BackoffSettings(
-            delay: TimeSpan.FromMilliseconds(90000),
-            maxDelay: TimeSpan.FromMilliseconds(90000),
+        public static gaxgrpc::BackoffSettings GetDefaultTimeoutBackoff() => new gaxgrpc::BackoffSettings(
+            delay: s::TimeSpan.FromMilliseconds(90000),
+            maxDelay: s::TimeSpan.FromMilliseconds(90000),
             delayMultiplier: 1.0
         );
 
         /// <summary>
-        /// <see cref="CallSettings"/> for synchronous and asynchronous calls to
+        /// <see cref="gaxgrpc::CallSettings"/> for synchronous and asynchronous calls to
         /// <c>OperationsClient.GetOperation</c> and <c>OperationsClient.GetOperationAsync</c>.
         /// </summary>
         /// <remarks>
         /// The default <c>OperationsClient.GetOperation</c> and
-        /// <c>OperationsClient.GetOperationAsync</c> <see cref="RetrySettings"/> are:
+        /// <c>OperationsClient.GetOperationAsync</c> <see cref="gaxgrpc::RetrySettings"/> are:
         /// <list type="bullet">
         /// <item><description>Initial retry delay: 100 milliseconds</description></item>
         /// <item><description>Retry delay multiplier: 1.3</description></item>
@@ -139,26 +139,26 @@ namespace Google.LongRunning
         /// </list>
         /// Retry will be attempted on the following response status codes:
         /// <list>
-        /// <item><description><see cref="StatusCode.DeadlineExceeded"/></description></item>
-        /// <item><description><see cref="StatusCode.Unavailable"/></description></item>
+        /// <item><description><see cref="grpccore::StatusCode.DeadlineExceeded"/></description></item>
+        /// <item><description><see cref="grpccore::StatusCode.Unavailable"/></description></item>
         /// </list>
         /// Default RPC expiration is 600000 milliseconds.
         /// </remarks>
-        public CallSettings GetOperationSettings { get; set; } = CallSettings.FromCallTiming(
-            CallTiming.FromRetry(new RetrySettings(
+        public gaxgrpc::CallSettings GetOperationSettings { get; set; } = gaxgrpc::CallSettings.FromCallTiming(
+            gaxgrpc::CallTiming.FromRetry(new gaxgrpc::RetrySettings(
                 retryBackoff: GetDefaultRetryBackoff(),
                 timeoutBackoff: GetDefaultTimeoutBackoff(),
-                totalExpiration: Expiration.FromTimeout(TimeSpan.FromMilliseconds(600000)),
+                totalExpiration: gax::Expiration.FromTimeout(s::TimeSpan.FromMilliseconds(600000)),
                 retryFilter: IdempotentRetryFilter
             )));
 
         /// <summary>
-        /// <see cref="CallSettings"/> for synchronous and asynchronous calls to
+        /// <see cref="gaxgrpc::CallSettings"/> for synchronous and asynchronous calls to
         /// <c>OperationsClient.ListOperations</c> and <c>OperationsClient.ListOperationsAsync</c>.
         /// </summary>
         /// <remarks>
         /// The default <c>OperationsClient.ListOperations</c> and
-        /// <c>OperationsClient.ListOperationsAsync</c> <see cref="RetrySettings"/> are:
+        /// <c>OperationsClient.ListOperationsAsync</c> <see cref="gaxgrpc::RetrySettings"/> are:
         /// <list type="bullet">
         /// <item><description>Initial retry delay: 100 milliseconds</description></item>
         /// <item><description>Retry delay multiplier: 1.3</description></item>
@@ -169,26 +169,26 @@ namespace Google.LongRunning
         /// </list>
         /// Retry will be attempted on the following response status codes:
         /// <list>
-        /// <item><description><see cref="StatusCode.DeadlineExceeded"/></description></item>
-        /// <item><description><see cref="StatusCode.Unavailable"/></description></item>
+        /// <item><description><see cref="grpccore::StatusCode.DeadlineExceeded"/></description></item>
+        /// <item><description><see cref="grpccore::StatusCode.Unavailable"/></description></item>
         /// </list>
         /// Default RPC expiration is 600000 milliseconds.
         /// </remarks>
-        public CallSettings ListOperationsSettings { get; set; } = CallSettings.FromCallTiming(
-            CallTiming.FromRetry(new RetrySettings(
+        public gaxgrpc::CallSettings ListOperationsSettings { get; set; } = gaxgrpc::CallSettings.FromCallTiming(
+            gaxgrpc::CallTiming.FromRetry(new gaxgrpc::RetrySettings(
                 retryBackoff: GetDefaultRetryBackoff(),
                 timeoutBackoff: GetDefaultTimeoutBackoff(),
-                totalExpiration: Expiration.FromTimeout(TimeSpan.FromMilliseconds(600000)),
+                totalExpiration: gax::Expiration.FromTimeout(s::TimeSpan.FromMilliseconds(600000)),
                 retryFilter: IdempotentRetryFilter
             )));
 
         /// <summary>
-        /// <see cref="CallSettings"/> for synchronous and asynchronous calls to
+        /// <see cref="gaxgrpc::CallSettings"/> for synchronous and asynchronous calls to
         /// <c>OperationsClient.CancelOperation</c> and <c>OperationsClient.CancelOperationAsync</c>.
         /// </summary>
         /// <remarks>
         /// The default <c>OperationsClient.CancelOperation</c> and
-        /// <c>OperationsClient.CancelOperationAsync</c> <see cref="RetrySettings"/> are:
+        /// <c>OperationsClient.CancelOperationAsync</c> <see cref="gaxgrpc::RetrySettings"/> are:
         /// <list type="bullet">
         /// <item><description>Initial retry delay: 100 milliseconds</description></item>
         /// <item><description>Retry delay multiplier: 1.3</description></item>
@@ -199,26 +199,26 @@ namespace Google.LongRunning
         /// </list>
         /// Retry will be attempted on the following response status codes:
         /// <list>
-        /// <item><description><see cref="StatusCode.DeadlineExceeded"/></description></item>
-        /// <item><description><see cref="StatusCode.Unavailable"/></description></item>
+        /// <item><description><see cref="grpccore::StatusCode.DeadlineExceeded"/></description></item>
+        /// <item><description><see cref="grpccore::StatusCode.Unavailable"/></description></item>
         /// </list>
         /// Default RPC expiration is 600000 milliseconds.
         /// </remarks>
-        public CallSettings CancelOperationSettings { get; set; } = CallSettings.FromCallTiming(
-            CallTiming.FromRetry(new RetrySettings(
+        public gaxgrpc::CallSettings CancelOperationSettings { get; set; } = gaxgrpc::CallSettings.FromCallTiming(
+            gaxgrpc::CallTiming.FromRetry(new gaxgrpc::RetrySettings(
                 retryBackoff: GetDefaultRetryBackoff(),
                 timeoutBackoff: GetDefaultTimeoutBackoff(),
-                totalExpiration: Expiration.FromTimeout(TimeSpan.FromMilliseconds(600000)),
+                totalExpiration: gax::Expiration.FromTimeout(s::TimeSpan.FromMilliseconds(600000)),
                 retryFilter: IdempotentRetryFilter
             )));
 
         /// <summary>
-        /// <see cref="CallSettings"/> for synchronous and asynchronous calls to
+        /// <see cref="gaxgrpc::CallSettings"/> for synchronous and asynchronous calls to
         /// <c>OperationsClient.DeleteOperation</c> and <c>OperationsClient.DeleteOperationAsync</c>.
         /// </summary>
         /// <remarks>
         /// The default <c>OperationsClient.DeleteOperation</c> and
-        /// <c>OperationsClient.DeleteOperationAsync</c> <see cref="RetrySettings"/> are:
+        /// <c>OperationsClient.DeleteOperationAsync</c> <see cref="gaxgrpc::RetrySettings"/> are:
         /// <list type="bullet">
         /// <item><description>Initial retry delay: 100 milliseconds</description></item>
         /// <item><description>Retry delay multiplier: 1.3</description></item>
@@ -229,16 +229,16 @@ namespace Google.LongRunning
         /// </list>
         /// Retry will be attempted on the following response status codes:
         /// <list>
-        /// <item><description><see cref="StatusCode.DeadlineExceeded"/></description></item>
-        /// <item><description><see cref="StatusCode.Unavailable"/></description></item>
+        /// <item><description><see cref="grpccore::StatusCode.DeadlineExceeded"/></description></item>
+        /// <item><description><see cref="grpccore::StatusCode.Unavailable"/></description></item>
         /// </list>
         /// Default RPC expiration is 600000 milliseconds.
         /// </remarks>
-        public CallSettings DeleteOperationSettings { get; set; } = CallSettings.FromCallTiming(
-            CallTiming.FromRetry(new RetrySettings(
+        public gaxgrpc::CallSettings DeleteOperationSettings { get; set; } = gaxgrpc::CallSettings.FromCallTiming(
+            gaxgrpc::CallTiming.FromRetry(new gaxgrpc::RetrySettings(
                 retryBackoff: GetDefaultRetryBackoff(),
                 timeoutBackoff: GetDefaultTimeoutBackoff(),
-                totalExpiration: Expiration.FromTimeout(TimeSpan.FromMilliseconds(600000)),
+                totalExpiration: gax::Expiration.FromTimeout(s::TimeSpan.FromMilliseconds(600000)),
                 retryFilter: IdempotentRetryFilter
             )));
 
@@ -257,7 +257,7 @@ namespace Google.LongRunning
         /// <summary>
         /// The default endpoint for the Operations service, which is a host of "longrunning.googleapis.com" and a port of 443.
         /// </summary>
-        public static ServiceEndpoint DefaultEndpoint { get; } = new ServiceEndpoint("longrunning.googleapis.com", 443);
+        public static gaxgrpc::ServiceEndpoint DefaultEndpoint { get; } = new gaxgrpc::ServiceEndpoint("longrunning.googleapis.com", 443);
 
         /// <summary>
         /// The default Operations scopes.
@@ -267,10 +267,10 @@ namespace Google.LongRunning
         /// <list type="bullet">
         /// </list>
         /// </remarks>
-        public static IReadOnlyList<string> DefaultScopes { get; } = new ReadOnlyCollection<string>(new string[] {
+        public static scg::IReadOnlyList<string> DefaultScopes { get; } = new sco::ReadOnlyCollection<string>(new string[] {
         });
 
-        private static readonly ChannelPool s_channelPool = new ChannelPool(DefaultScopes);
+        private static readonly gaxgrpc::ChannelPool s_channelPool = new gaxgrpc::ChannelPool(DefaultScopes);
 
         // Note: we could have parameterless overloads of Create and CreateAsync,
         // documented to just use the default endpoint, settings and credentials.
@@ -284,12 +284,12 @@ namespace Google.LongRunning
         /// and creating a channel connecting to the given endpoint with application default credentials where
         /// necessary.
         /// </summary>
-        /// <param name="endpoint">Optional <see cref="ServiceEndpoint"/>.</param>
+        /// <param name="endpoint">Optional <see cref="gaxgrpc::ServiceEndpoint"/>.</param>
         /// <param name="settings">Optional <see cref="OperationsSettings"/>.</param>
         /// <returns>The task representing the created <see cref="OperationsClient"/>.</returns>
-        public static async Task<OperationsClient> CreateAsync(ServiceEndpoint endpoint = null, OperationsSettings settings = null)
+        public static async stt::Task<OperationsClient> CreateAsync(gaxgrpc::ServiceEndpoint endpoint = null, OperationsSettings settings = null)
         {
-            Channel channel = await s_channelPool.GetChannelAsync(endpoint ?? DefaultEndpoint).ConfigureAwait(false);
+            grpccore::Channel channel = await s_channelPool.GetChannelAsync(endpoint ?? DefaultEndpoint).ConfigureAwait(false);
             return Create(channel, settings);
         }
 
@@ -298,45 +298,45 @@ namespace Google.LongRunning
         /// and creating a channel connecting to the given endpoint with application default credentials where
         /// necessary.
         /// </summary>
-        /// <param name="endpoint">Optional <see cref="ServiceEndpoint"/>.</param>
+        /// <param name="endpoint">Optional <see cref="gaxgrpc::ServiceEndpoint"/>.</param>
         /// <param name="settings">Optional <see cref="OperationsSettings"/>.</param>
         /// <returns>The created <see cref="OperationsClient"/>.</returns>
-        public static OperationsClient Create(ServiceEndpoint endpoint = null, OperationsSettings settings = null)
+        public static OperationsClient Create(gaxgrpc::ServiceEndpoint endpoint = null, OperationsSettings settings = null)
         {
-            Channel channel = s_channelPool.GetChannel(endpoint ?? DefaultEndpoint);
+            grpccore::Channel channel = s_channelPool.GetChannel(endpoint ?? DefaultEndpoint);
             return Create(channel, settings);
         }
 
         /// <summary>
         /// Creates a <see cref="OperationsClient"/> which uses the specified channel for remote operations.
         /// </summary>
-        /// <param name="channel">The <see cref="Channel"/> for remote operations. Must not be null.</param>
+        /// <param name="channel">The <see cref="grpccore::Channel"/> for remote operations. Must not be null.</param>
         /// <param name="settings">Optional <see cref="OperationsSettings"/>.</param>
         /// <returns>The created <see cref="OperationsClient"/>.</returns>
-        public static OperationsClient Create(Channel channel, OperationsSettings settings = null)
+        public static OperationsClient Create(grpccore::Channel channel, OperationsSettings settings = null)
         {
-            GaxPreconditions.CheckNotNull(channel, nameof(channel));
+            gax::GaxPreconditions.CheckNotNull(channel, nameof(channel));
             Operations.OperationsClient grpcClient = new Operations.OperationsClient(channel);
             return new OperationsClientImpl(grpcClient, settings);
         }
 
         /// <summary>
-        /// Shuts down any channels automatically created by <see cref="Create(ServiceEndpoint, OperationsSettings)"/>
-        /// and <see cref="CreateAsync(ServiceEndpoint, OperationsSettings)"/>. Channels which weren't automatically
+        /// Shuts down any channels automatically created by <see cref="Create(gaxgrpc::ServiceEndpoint, OperationsSettings)"/>
+        /// and <see cref="CreateAsync(gaxgrpc::ServiceEndpoint, OperationsSettings)"/>. Channels which weren't automatically
         /// created are not affected.
         /// </summary>
-        /// <remarks>After calling this method, further calls to <see cref="Create(ServiceEndpoint, OperationsSettings)"/>
-        /// and <see cref="CreateAsync(ServiceEndpoint, OperationsSettings)"/> will create new channels, which could
+        /// <remarks>After calling this method, further calls to <see cref="Create(gaxgrpc::ServiceEndpoint, OperationsSettings)"/>
+        /// and <see cref="CreateAsync(gaxgrpc::ServiceEndpoint, OperationsSettings)"/> will create new channels, which could
         /// in turn be shut down by another call to this method.</remarks>
         /// <returns>A task representing the asynchronous shutdown operation.</returns>
-        public static Task ShutdownDefaultChannelsAsync() => s_channelPool.ShutdownChannelsAsync();
+        public static stt::Task ShutdownDefaultChannelsAsync() => s_channelPool.ShutdownChannelsAsync();
 
         /// <summary>
         /// The underlying gRPC Operations client.
         /// </summary>
         public virtual Operations.OperationsClient GrpcClient
         {
-            get { throw new NotImplementedException(); }
+            get { throw new s::NotImplementedException(); }
         }
 
         /// <summary>
@@ -353,12 +353,12 @@ namespace Google.LongRunning
         /// <returns>
         /// A Task containing the RPC response.
         /// </returns>
-        public virtual Task<Operation> GetOperationAsync(
+        public virtual stt::Task<Operation> GetOperationAsync(
             string name,
-            CallSettings callSettings = null) => GetOperationAsync(
+            gaxgrpc::CallSettings callSettings = null) => GetOperationAsync(
                 new GetOperationRequest
                 {
-                    Name = GaxPreconditions.CheckNotNullOrEmpty(name, nameof(name)),
+                    Name = gax::GaxPreconditions.CheckNotNullOrEmpty(name, nameof(name)),
                 },
                 callSettings);
 
@@ -371,16 +371,16 @@ namespace Google.LongRunning
         /// The name of the operation resource.
         /// </param>
         /// <param name="cancellationToken">
-        /// A <see cref="CancellationToken"/> to use for this RPC.
+        /// A <see cref="st::CancellationToken"/> to use for this RPC.
         /// </param>
         /// <returns>
         /// A Task containing the RPC response.
         /// </returns>
-        public virtual Task<Operation> GetOperationAsync(
+        public virtual stt::Task<Operation> GetOperationAsync(
             string name,
-            CancellationToken cancellationToken) => GetOperationAsync(
+            st::CancellationToken cancellationToken) => GetOperationAsync(
                 name,
-                CallSettings.FromCancellationToken(cancellationToken));
+                gaxgrpc::CallSettings.FromCancellationToken(cancellationToken));
 
         /// <summary>
         /// Gets the latest state of a long-running operation.  Clients can use this
@@ -398,10 +398,10 @@ namespace Google.LongRunning
         /// </returns>
         public virtual Operation GetOperation(
             string name,
-            CallSettings callSettings = null) => GetOperation(
+            gaxgrpc::CallSettings callSettings = null) => GetOperation(
                 new GetOperationRequest
                 {
-                    Name = GaxPreconditions.CheckNotNullOrEmpty(name, nameof(name)),
+                    Name = gax::GaxPreconditions.CheckNotNullOrEmpty(name, nameof(name)),
                 },
                 callSettings);
 
@@ -419,11 +419,11 @@ namespace Google.LongRunning
         /// <returns>
         /// A Task containing the RPC response.
         /// </returns>
-        public virtual Task<Operation> GetOperationAsync(
+        public virtual stt::Task<Operation> GetOperationAsync(
             GetOperationRequest request,
-            CallSettings callSettings = null)
+            gaxgrpc::CallSettings callSettings = null)
         {
-            throw new NotImplementedException();
+            throw new s::NotImplementedException();
         }
 
         /// <summary>
@@ -435,16 +435,16 @@ namespace Google.LongRunning
         /// The request object containing all of the parameters for the API call.
         /// </param>
         /// <param name="cancellationToken">
-        /// A <see cref="CancellationToken"/> to use for this RPC.
+        /// A <see cref="st::CancellationToken"/> to use for this RPC.
         /// </param>
         /// <returns>
         /// A Task containing the RPC response.
         /// </returns>
-        public virtual Task<Operation> GetOperationAsync(
+        public virtual stt::Task<Operation> GetOperationAsync(
             GetOperationRequest request,
-            CancellationToken cancellationToken) => GetOperationAsync(
+            st::CancellationToken cancellationToken) => GetOperationAsync(
                 request,
-                CallSettings.FromCancellationToken(cancellationToken));
+                gaxgrpc::CallSettings.FromCancellationToken(cancellationToken));
 
         /// <summary>
         /// Gets the latest state of a long-running operation.  Clients can use this
@@ -462,9 +462,9 @@ namespace Google.LongRunning
         /// </returns>
         public virtual Operation GetOperation(
             GetOperationRequest request,
-            CallSettings callSettings = null)
+            gaxgrpc::CallSettings callSettings = null)
         {
-            throw new NotImplementedException();
+            throw new s::NotImplementedException();
         }
 
         /// <summary>
@@ -494,16 +494,16 @@ namespace Google.LongRunning
         /// <returns>
         /// A pageable asynchronous sequence of <see cref="Operation"/> resources.
         /// </returns>
-        public virtual PagedAsyncEnumerable<ListOperationsResponse, Operation> ListOperationsAsync(
+        public virtual gax::PagedAsyncEnumerable<ListOperationsResponse, Operation> ListOperationsAsync(
             string name,
             string filter,
             string pageToken = null,
             int? pageSize = null,
-            CallSettings callSettings = null) => ListOperationsAsync(
+            gaxgrpc::CallSettings callSettings = null) => ListOperationsAsync(
                 new ListOperationsRequest
                 {
-                    Name = GaxPreconditions.CheckNotNullOrEmpty(name, nameof(name)),
-                    Filter = GaxPreconditions.CheckNotNullOrEmpty(filter, nameof(filter)),
+                    Name = gax::GaxPreconditions.CheckNotNullOrEmpty(name, nameof(name)),
+                    Filter = gax::GaxPreconditions.CheckNotNullOrEmpty(filter, nameof(filter)),
                     PageToken = pageToken ?? "",
                     PageSize = pageSize ?? 0,
                 },
@@ -536,16 +536,16 @@ namespace Google.LongRunning
         /// <returns>
         /// A pageable sequence of <see cref="Operation"/> resources.
         /// </returns>
-        public virtual PagedEnumerable<ListOperationsResponse, Operation> ListOperations(
+        public virtual gax::PagedEnumerable<ListOperationsResponse, Operation> ListOperations(
             string name,
             string filter,
             string pageToken = null,
             int? pageSize = null,
-            CallSettings callSettings = null) => ListOperations(
+            gaxgrpc::CallSettings callSettings = null) => ListOperations(
                 new ListOperationsRequest
                 {
-                    Name = GaxPreconditions.CheckNotNullOrEmpty(name, nameof(name)),
-                    Filter = GaxPreconditions.CheckNotNullOrEmpty(filter, nameof(filter)),
+                    Name = gax::GaxPreconditions.CheckNotNullOrEmpty(name, nameof(name)),
+                    Filter = gax::GaxPreconditions.CheckNotNullOrEmpty(filter, nameof(filter)),
                     PageToken = pageToken ?? "",
                     PageSize = pageSize ?? 0,
                 },
@@ -567,11 +567,11 @@ namespace Google.LongRunning
         /// <returns>
         /// A pageable asynchronous sequence of <see cref="Operation"/> resources.
         /// </returns>
-        public virtual PagedAsyncEnumerable<ListOperationsResponse, Operation> ListOperationsAsync(
+        public virtual gax::PagedAsyncEnumerable<ListOperationsResponse, Operation> ListOperationsAsync(
             ListOperationsRequest request,
-            CallSettings callSettings = null)
+            gaxgrpc::CallSettings callSettings = null)
         {
-            throw new NotImplementedException();
+            throw new s::NotImplementedException();
         }
 
         /// <summary>
@@ -590,11 +590,11 @@ namespace Google.LongRunning
         /// <returns>
         /// A pageable sequence of <see cref="Operation"/> resources.
         /// </returns>
-        public virtual PagedEnumerable<ListOperationsResponse, Operation> ListOperations(
+        public virtual gax::PagedEnumerable<ListOperationsResponse, Operation> ListOperations(
             ListOperationsRequest request,
-            CallSettings callSettings = null)
+            gaxgrpc::CallSettings callSettings = null)
         {
-            throw new NotImplementedException();
+            throw new s::NotImplementedException();
         }
 
         /// <summary>
@@ -618,12 +618,12 @@ namespace Google.LongRunning
         /// <returns>
         /// A Task that completes when the RPC has completed.
         /// </returns>
-        public virtual Task CancelOperationAsync(
+        public virtual stt::Task CancelOperationAsync(
             string name,
-            CallSettings callSettings = null) => CancelOperationAsync(
+            gaxgrpc::CallSettings callSettings = null) => CancelOperationAsync(
                 new CancelOperationRequest
                 {
-                    Name = GaxPreconditions.CheckNotNullOrEmpty(name, nameof(name)),
+                    Name = gax::GaxPreconditions.CheckNotNullOrEmpty(name, nameof(name)),
                 },
                 callSettings);
 
@@ -643,16 +643,16 @@ namespace Google.LongRunning
         /// The name of the operation resource to be cancelled.
         /// </param>
         /// <param name="cancellationToken">
-        /// A <see cref="CancellationToken"/> to use for this RPC.
+        /// A <see cref="st::CancellationToken"/> to use for this RPC.
         /// </param>
         /// <returns>
         /// A Task that completes when the RPC has completed.
         /// </returns>
-        public virtual Task CancelOperationAsync(
+        public virtual stt::Task CancelOperationAsync(
             string name,
-            CancellationToken cancellationToken) => CancelOperationAsync(
+            st::CancellationToken cancellationToken) => CancelOperationAsync(
                 name,
-                CallSettings.FromCancellationToken(cancellationToken));
+                gaxgrpc::CallSettings.FromCancellationToken(cancellationToken));
 
         /// <summary>
         /// Starts asynchronous cancellation on a long-running operation.  The server
@@ -674,10 +674,10 @@ namespace Google.LongRunning
         /// </param>
         public virtual void CancelOperation(
             string name,
-            CallSettings callSettings = null) => CancelOperation(
+            gaxgrpc::CallSettings callSettings = null) => CancelOperation(
                 new CancelOperationRequest
                 {
-                    Name = GaxPreconditions.CheckNotNullOrEmpty(name, nameof(name)),
+                    Name = gax::GaxPreconditions.CheckNotNullOrEmpty(name, nameof(name)),
                 },
                 callSettings);
 
@@ -702,11 +702,11 @@ namespace Google.LongRunning
         /// <returns>
         /// A Task that completes when the RPC has completed.
         /// </returns>
-        public virtual Task CancelOperationAsync(
+        public virtual stt::Task CancelOperationAsync(
             CancelOperationRequest request,
-            CallSettings callSettings = null)
+            gaxgrpc::CallSettings callSettings = null)
         {
-            throw new NotImplementedException();
+            throw new s::NotImplementedException();
         }
 
         /// <summary>
@@ -725,16 +725,16 @@ namespace Google.LongRunning
         /// The request object containing all of the parameters for the API call.
         /// </param>
         /// <param name="cancellationToken">
-        /// A <see cref="CancellationToken"/> to use for this RPC.
+        /// A <see cref="st::CancellationToken"/> to use for this RPC.
         /// </param>
         /// <returns>
         /// A Task that completes when the RPC has completed.
         /// </returns>
-        public virtual Task CancelOperationAsync(
+        public virtual stt::Task CancelOperationAsync(
             CancelOperationRequest request,
-            CancellationToken cancellationToken) => CancelOperationAsync(
+            st::CancellationToken cancellationToken) => CancelOperationAsync(
                 request,
-                CallSettings.FromCancellationToken(cancellationToken));
+                gaxgrpc::CallSettings.FromCancellationToken(cancellationToken));
 
         /// <summary>
         /// Starts asynchronous cancellation on a long-running operation.  The server
@@ -756,9 +756,9 @@ namespace Google.LongRunning
         /// </param>
         public virtual void CancelOperation(
             CancelOperationRequest request,
-            CallSettings callSettings = null)
+            gaxgrpc::CallSettings callSettings = null)
         {
-            throw new NotImplementedException();
+            throw new s::NotImplementedException();
         }
 
         /// <summary>
@@ -776,12 +776,12 @@ namespace Google.LongRunning
         /// <returns>
         /// A Task that completes when the RPC has completed.
         /// </returns>
-        public virtual Task DeleteOperationAsync(
+        public virtual stt::Task DeleteOperationAsync(
             string name,
-            CallSettings callSettings = null) => DeleteOperationAsync(
+            gaxgrpc::CallSettings callSettings = null) => DeleteOperationAsync(
                 new DeleteOperationRequest
                 {
-                    Name = GaxPreconditions.CheckNotNullOrEmpty(name, nameof(name)),
+                    Name = gax::GaxPreconditions.CheckNotNullOrEmpty(name, nameof(name)),
                 },
                 callSettings);
 
@@ -795,16 +795,16 @@ namespace Google.LongRunning
         /// The name of the operation resource to be deleted.
         /// </param>
         /// <param name="cancellationToken">
-        /// A <see cref="CancellationToken"/> to use for this RPC.
+        /// A <see cref="st::CancellationToken"/> to use for this RPC.
         /// </param>
         /// <returns>
         /// A Task that completes when the RPC has completed.
         /// </returns>
-        public virtual Task DeleteOperationAsync(
+        public virtual stt::Task DeleteOperationAsync(
             string name,
-            CancellationToken cancellationToken) => DeleteOperationAsync(
+            st::CancellationToken cancellationToken) => DeleteOperationAsync(
                 name,
-                CallSettings.FromCancellationToken(cancellationToken));
+                gaxgrpc::CallSettings.FromCancellationToken(cancellationToken));
 
         /// <summary>
         /// Deletes a long-running operation. This method indicates that the client is
@@ -820,10 +820,10 @@ namespace Google.LongRunning
         /// </param>
         public virtual void DeleteOperation(
             string name,
-            CallSettings callSettings = null) => DeleteOperation(
+            gaxgrpc::CallSettings callSettings = null) => DeleteOperation(
                 new DeleteOperationRequest
                 {
-                    Name = GaxPreconditions.CheckNotNullOrEmpty(name, nameof(name)),
+                    Name = gax::GaxPreconditions.CheckNotNullOrEmpty(name, nameof(name)),
                 },
                 callSettings);
 
@@ -842,11 +842,11 @@ namespace Google.LongRunning
         /// <returns>
         /// A Task that completes when the RPC has completed.
         /// </returns>
-        public virtual Task DeleteOperationAsync(
+        public virtual stt::Task DeleteOperationAsync(
             DeleteOperationRequest request,
-            CallSettings callSettings = null)
+            gaxgrpc::CallSettings callSettings = null)
         {
-            throw new NotImplementedException();
+            throw new s::NotImplementedException();
         }
 
         /// <summary>
@@ -859,16 +859,16 @@ namespace Google.LongRunning
         /// The request object containing all of the parameters for the API call.
         /// </param>
         /// <param name="cancellationToken">
-        /// A <see cref="CancellationToken"/> to use for this RPC.
+        /// A <see cref="st::CancellationToken"/> to use for this RPC.
         /// </param>
         /// <returns>
         /// A Task that completes when the RPC has completed.
         /// </returns>
-        public virtual Task DeleteOperationAsync(
+        public virtual stt::Task DeleteOperationAsync(
             DeleteOperationRequest request,
-            CancellationToken cancellationToken) => DeleteOperationAsync(
+            st::CancellationToken cancellationToken) => DeleteOperationAsync(
                 request,
-                CallSettings.FromCancellationToken(cancellationToken));
+                gaxgrpc::CallSettings.FromCancellationToken(cancellationToken));
 
         /// <summary>
         /// Deletes a long-running operation. This method indicates that the client is
@@ -884,9 +884,9 @@ namespace Google.LongRunning
         /// </param>
         public virtual void DeleteOperation(
             DeleteOperationRequest request,
-            CallSettings callSettings = null)
+            gaxgrpc::CallSettings callSettings = null)
         {
-            throw new NotImplementedException();
+            throw new s::NotImplementedException();
         }
 
     }
@@ -896,10 +896,10 @@ namespace Google.LongRunning
     /// </summary>
     public sealed partial class OperationsClientImpl : OperationsClient
     {
-        private readonly ApiCall<GetOperationRequest, Operation> _callGetOperation;
-        private readonly ApiCall<ListOperationsRequest, ListOperationsResponse> _callListOperations;
-        private readonly ApiCall<CancelOperationRequest, Empty> _callCancelOperation;
-        private readonly ApiCall<DeleteOperationRequest, Empty> _callDeleteOperation;
+        private readonly gaxgrpc::ApiCall<GetOperationRequest, Operation> _callGetOperation;
+        private readonly gaxgrpc::ApiCall<ListOperationsRequest, ListOperationsResponse> _callListOperations;
+        private readonly gaxgrpc::ApiCall<CancelOperationRequest, protowkt::Empty> _callCancelOperation;
+        private readonly gaxgrpc::ApiCall<DeleteOperationRequest, protowkt::Empty> _callDeleteOperation;
 
         /// <summary>
         /// Constructs a client wrapper for the Operations service, with the specified gRPC client and settings.
@@ -910,14 +910,14 @@ namespace Google.LongRunning
         {
             GrpcClient = grpcClient;
             OperationsSettings effectiveSettings = settings ?? OperationsSettings.GetDefault();
-            ClientHelper clientHelper = new ClientHelper(effectiveSettings);
+            gaxgrpc::ClientHelper clientHelper = new gaxgrpc::ClientHelper(effectiveSettings);
             _callGetOperation = clientHelper.BuildApiCall<GetOperationRequest, Operation>(
                 GrpcClient.GetOperationAsync, GrpcClient.GetOperation, effectiveSettings.GetOperationSettings);
             _callListOperations = clientHelper.BuildApiCall<ListOperationsRequest, ListOperationsResponse>(
                 GrpcClient.ListOperationsAsync, GrpcClient.ListOperations, effectiveSettings.ListOperationsSettings);
-            _callCancelOperation = clientHelper.BuildApiCall<CancelOperationRequest, Empty>(
+            _callCancelOperation = clientHelper.BuildApiCall<CancelOperationRequest, protowkt::Empty>(
                 GrpcClient.CancelOperationAsync, GrpcClient.CancelOperation, effectiveSettings.CancelOperationSettings);
-            _callDeleteOperation = clientHelper.BuildApiCall<DeleteOperationRequest, Empty>(
+            _callDeleteOperation = clientHelper.BuildApiCall<DeleteOperationRequest, protowkt::Empty>(
                 GrpcClient.DeleteOperationAsync, GrpcClient.DeleteOperation, effectiveSettings.DeleteOperationSettings);
             Modify_ApiCall(ref _callGetOperation);
             Modify_GetOperationApiCall(ref _callGetOperation);
@@ -934,17 +934,17 @@ namespace Google.LongRunning
 
         // Partial methods called for every ApiCall on construction.
         // Allows modification of all the underlying ApiCall objects.
-        partial void Modify_ApiCall<TRequest, TResponse>(ref ApiCall<TRequest, TResponse> call)
-            where TRequest : class, IMessage<TRequest>
-            where TResponse : class, IMessage<TResponse>;
+        partial void Modify_ApiCall<TRequest, TResponse>(ref gaxgrpc::ApiCall<TRequest, TResponse> call)
+            where TRequest : class, proto::IMessage<TRequest>
+            where TResponse : class, proto::IMessage<TResponse>;
 
         // Partial methods called for each ApiCall on construction.
         // Allows per-RPC-method modification of the underlying ApiCall object.
-        partial void Modify_GetOperationApiCall(ref ApiCall<GetOperationRequest, Operation> call);
-        partial void Modify_ListOperationsApiCall(ref ApiCall<ListOperationsRequest, ListOperationsResponse> call);
-        partial void Modify_CancelOperationApiCall(ref ApiCall<CancelOperationRequest, Empty> call);
-        partial void Modify_DeleteOperationApiCall(ref ApiCall<DeleteOperationRequest, Empty> call);
-        partial void OnConstruction(Operations.OperationsClient grpcClient, OperationsSettings effectiveSettings, ClientHelper clientHelper);
+        partial void Modify_GetOperationApiCall(ref gaxgrpc::ApiCall<GetOperationRequest, Operation> call);
+        partial void Modify_ListOperationsApiCall(ref gaxgrpc::ApiCall<ListOperationsRequest, ListOperationsResponse> call);
+        partial void Modify_CancelOperationApiCall(ref gaxgrpc::ApiCall<CancelOperationRequest, protowkt::Empty> call);
+        partial void Modify_DeleteOperationApiCall(ref gaxgrpc::ApiCall<DeleteOperationRequest, protowkt::Empty> call);
+        partial void OnConstruction(Operations.OperationsClient grpcClient, OperationsSettings effectiveSettings, gaxgrpc::ClientHelper clientHelper);
 
         /// <summary>
         /// The underlying gRPC Operations client.
@@ -954,10 +954,10 @@ namespace Google.LongRunning
         // Partial methods called on each request.
         // Allows per-RPC-call modification to the request and CallSettings objects,
         // before the underlying RPC is performed.
-        partial void Modify_GetOperationRequest(ref GetOperationRequest request, ref CallSettings settings);
-        partial void Modify_ListOperationsRequest(ref ListOperationsRequest request, ref CallSettings settings);
-        partial void Modify_CancelOperationRequest(ref CancelOperationRequest request, ref CallSettings settings);
-        partial void Modify_DeleteOperationRequest(ref DeleteOperationRequest request, ref CallSettings settings);
+        partial void Modify_GetOperationRequest(ref GetOperationRequest request, ref gaxgrpc::CallSettings settings);
+        partial void Modify_ListOperationsRequest(ref ListOperationsRequest request, ref gaxgrpc::CallSettings settings);
+        partial void Modify_CancelOperationRequest(ref CancelOperationRequest request, ref gaxgrpc::CallSettings settings);
+        partial void Modify_DeleteOperationRequest(ref DeleteOperationRequest request, ref gaxgrpc::CallSettings settings);
 
         /// <summary>
         /// Gets the latest state of a long-running operation.  Clients can use this
@@ -973,9 +973,9 @@ namespace Google.LongRunning
         /// <returns>
         /// A Task containing the RPC response.
         /// </returns>
-        public override Task<Operation> GetOperationAsync(
+        public override stt::Task<Operation> GetOperationAsync(
             GetOperationRequest request,
-            CallSettings callSettings = null)
+            gaxgrpc::CallSettings callSettings = null)
         {
             Modify_GetOperationRequest(ref request, ref callSettings);
             return _callGetOperation.Async(request, callSettings);
@@ -997,7 +997,7 @@ namespace Google.LongRunning
         /// </returns>
         public override Operation GetOperation(
             GetOperationRequest request,
-            CallSettings callSettings = null)
+            gaxgrpc::CallSettings callSettings = null)
         {
             Modify_GetOperationRequest(ref request, ref callSettings);
             return _callGetOperation.Sync(request, callSettings);
@@ -1019,12 +1019,12 @@ namespace Google.LongRunning
         /// <returns>
         /// A pageable asynchronous sequence of <see cref="Operation"/> resources.
         /// </returns>
-        public override PagedAsyncEnumerable<ListOperationsResponse, Operation> ListOperationsAsync(
+        public override gax::PagedAsyncEnumerable<ListOperationsResponse, Operation> ListOperationsAsync(
             ListOperationsRequest request,
-            CallSettings callSettings = null)
+            gaxgrpc::CallSettings callSettings = null)
         {
             Modify_ListOperationsRequest(ref request, ref callSettings);
-            return new GrpcPagedAsyncEnumerable<ListOperationsRequest, ListOperationsResponse, Operation>(_callListOperations, request, callSettings);
+            return new gaxgrpc::GrpcPagedAsyncEnumerable<ListOperationsRequest, ListOperationsResponse, Operation>(_callListOperations, request, callSettings);
         }
 
         /// <summary>
@@ -1043,12 +1043,12 @@ namespace Google.LongRunning
         /// <returns>
         /// A pageable sequence of <see cref="Operation"/> resources.
         /// </returns>
-        public override PagedEnumerable<ListOperationsResponse, Operation> ListOperations(
+        public override gax::PagedEnumerable<ListOperationsResponse, Operation> ListOperations(
             ListOperationsRequest request,
-            CallSettings callSettings = null)
+            gaxgrpc::CallSettings callSettings = null)
         {
             Modify_ListOperationsRequest(ref request, ref callSettings);
-            return new GrpcPagedEnumerable<ListOperationsRequest, ListOperationsResponse, Operation>(_callListOperations, request, callSettings);
+            return new gaxgrpc::GrpcPagedEnumerable<ListOperationsRequest, ListOperationsResponse, Operation>(_callListOperations, request, callSettings);
         }
 
         /// <summary>
@@ -1072,9 +1072,9 @@ namespace Google.LongRunning
         /// <returns>
         /// A Task that completes when the RPC has completed.
         /// </returns>
-        public override Task CancelOperationAsync(
+        public override stt::Task CancelOperationAsync(
             CancelOperationRequest request,
-            CallSettings callSettings = null)
+            gaxgrpc::CallSettings callSettings = null)
         {
             Modify_CancelOperationRequest(ref request, ref callSettings);
             return _callCancelOperation.Async(request, callSettings);
@@ -1100,7 +1100,7 @@ namespace Google.LongRunning
         /// </param>
         public override void CancelOperation(
             CancelOperationRequest request,
-            CallSettings callSettings = null)
+            gaxgrpc::CallSettings callSettings = null)
         {
             Modify_CancelOperationRequest(ref request, ref callSettings);
             _callCancelOperation.Sync(request, callSettings);
@@ -1121,9 +1121,9 @@ namespace Google.LongRunning
         /// <returns>
         /// A Task that completes when the RPC has completed.
         /// </returns>
-        public override Task DeleteOperationAsync(
+        public override stt::Task DeleteOperationAsync(
             DeleteOperationRequest request,
-            CallSettings callSettings = null)
+            gaxgrpc::CallSettings callSettings = null)
         {
             Modify_DeleteOperationRequest(ref request, ref callSettings);
             return _callDeleteOperation.Async(request, callSettings);
@@ -1143,7 +1143,7 @@ namespace Google.LongRunning
         /// </param>
         public override void DeleteOperation(
             DeleteOperationRequest request,
-            CallSettings callSettings = null)
+            gaxgrpc::CallSettings callSettings = null)
         {
             Modify_DeleteOperationRequest(ref request, ref callSettings);
             _callDeleteOperation.Sync(request, callSettings);
@@ -1153,16 +1153,16 @@ namespace Google.LongRunning
 
     // Partial classes to enable page-streaming
 
-    public partial class ListOperationsRequest : IPageRequest { }
-    public partial class ListOperationsResponse : IPageResponse<Operation>
+    public partial class ListOperationsRequest : gaxgrpc::IPageRequest { }
+    public partial class ListOperationsResponse : gaxgrpc::IPageResponse<Operation>
     {
         /// <summary>
         /// Returns an enumerator that iterates through the resources in this response.
         /// </summary>
-        public IEnumerator<Operation> GetEnumerator() => Operations.GetEnumerator();
+        public scg::IEnumerator<Operation> GetEnumerator() => Operations.GetEnumerator();
 
         /// <inheritdoc/>
-        IEnumerator IEnumerable.GetEnumerator() => GetEnumerator();
+        sc::IEnumerator sc::IEnumerable.GetEnumerator() => GetEnumerator();
     }
 
 

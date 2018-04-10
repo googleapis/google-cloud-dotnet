@@ -14,24 +14,24 @@
 
 // Generated code. DO NOT EDIT!
 
-using Google.Api.Gax;
-using Google.Api.Gax.Grpc;
-using Google.Protobuf;
-using Google.Protobuf.WellKnownTypes;
-using Grpc.Core;
-using System;
-using System.Collections;
-using System.Collections.Generic;
-using System.Collections.ObjectModel;
-using System.Threading;
-using System.Threading.Tasks;
+using gax = Google.Api.Gax;
+using gaxgrpc = Google.Api.Gax.Grpc;
+using proto = Google.Protobuf;
+using protowkt = Google.Protobuf.WellKnownTypes;
+using grpccore = Grpc.Core;
+using s = System;
+using sc = System.Collections;
+using scg = System.Collections.Generic;
+using sco = System.Collections.ObjectModel;
+using st = System.Threading;
+using stt = System.Threading.Tasks;
 
 namespace Google.Cloud.Container.V1
 {
     /// <summary>
     /// Settings for a <see cref="ClusterManagerClient"/>.
     /// </summary>
-    public sealed partial class ClusterManagerSettings : ServiceSettingsBase
+    public sealed partial class ClusterManagerSettings : gaxgrpc::ServiceSettingsBase
     {
         /// <summary>
         /// Get a new instance of the default <see cref="ClusterManagerSettings"/>.
@@ -48,7 +48,7 @@ namespace Google.Cloud.Container.V1
 
         private ClusterManagerSettings(ClusterManagerSettings existing) : base(existing)
         {
-            GaxPreconditions.CheckNotNull(existing, nameof(existing));
+            gax::GaxPreconditions.CheckNotNull(existing, nameof(existing));
             ListClustersSettings = existing.ListClustersSettings;
             GetClusterSettings = existing.GetClusterSettings;
             CreateClusterSettings = existing.CreateClusterSettings;
@@ -85,28 +85,28 @@ namespace Google.Cloud.Container.V1
         partial void OnCopy(ClusterManagerSettings existing);
 
         /// <summary>
-        /// The filter specifying which RPC <see cref="StatusCode"/>s are eligible for retry
+        /// The filter specifying which RPC <see cref="grpccore::StatusCode"/>s are eligible for retry
         /// for "Idempotent" <see cref="ClusterManagerClient"/> RPC methods.
         /// </summary>
         /// <remarks>
-        /// The eligible RPC <see cref="StatusCode"/>s for retry for "Idempotent" RPC methods are:
+        /// The eligible RPC <see cref="grpccore::StatusCode"/>s for retry for "Idempotent" RPC methods are:
         /// <list type="bullet">
-        /// <item><description><see cref="StatusCode.DeadlineExceeded"/></description></item>
-        /// <item><description><see cref="StatusCode.Unavailable"/></description></item>
+        /// <item><description><see cref="grpccore::StatusCode.DeadlineExceeded"/></description></item>
+        /// <item><description><see cref="grpccore::StatusCode.Unavailable"/></description></item>
         /// </list>
         /// </remarks>
-        public static Predicate<RpcException> IdempotentRetryFilter { get; } =
-            RetrySettings.FilterForStatusCodes(StatusCode.DeadlineExceeded, StatusCode.Unavailable);
+        public static s::Predicate<grpccore::RpcException> IdempotentRetryFilter { get; } =
+            gaxgrpc::RetrySettings.FilterForStatusCodes(grpccore::StatusCode.DeadlineExceeded, grpccore::StatusCode.Unavailable);
 
         /// <summary>
-        /// The filter specifying which RPC <see cref="StatusCode"/>s are eligible for retry
+        /// The filter specifying which RPC <see cref="grpccore::StatusCode"/>s are eligible for retry
         /// for "NonIdempotent" <see cref="ClusterManagerClient"/> RPC methods.
         /// </summary>
         /// <remarks>
-        /// There are no RPC <see cref="StatusCode"/>s eligible for retry for "NonIdempotent" RPC methods.
+        /// There are no RPC <see cref="grpccore::StatusCode"/>s eligible for retry for "NonIdempotent" RPC methods.
         /// </remarks>
-        public static Predicate<RpcException> NonIdempotentRetryFilter { get; } =
-            RetrySettings.FilterForStatusCodes();
+        public static s::Predicate<grpccore::RpcException> NonIdempotentRetryFilter { get; } =
+            gaxgrpc::RetrySettings.FilterForStatusCodes();
 
         /// <summary>
         /// "Default" retry backoff for <see cref="ClusterManagerClient"/> RPC methods.
@@ -122,9 +122,9 @@ namespace Google.Cloud.Container.V1
         /// <item><description>Delay multiplier: 1.3</description></item>
         /// </list>
         /// </remarks>
-        public static BackoffSettings GetDefaultRetryBackoff() => new BackoffSettings(
-            delay: TimeSpan.FromMilliseconds(100),
-            maxDelay: TimeSpan.FromMilliseconds(60000),
+        public static gaxgrpc::BackoffSettings GetDefaultRetryBackoff() => new gaxgrpc::BackoffSettings(
+            delay: s::TimeSpan.FromMilliseconds(100),
+            maxDelay: s::TimeSpan.FromMilliseconds(60000),
             delayMultiplier: 1.3
         );
 
@@ -142,19 +142,19 @@ namespace Google.Cloud.Container.V1
         /// <item><description>Maximum timeout: 20000 milliseconds</description></item>
         /// </list>
         /// </remarks>
-        public static BackoffSettings GetDefaultTimeoutBackoff() => new BackoffSettings(
-            delay: TimeSpan.FromMilliseconds(20000),
-            maxDelay: TimeSpan.FromMilliseconds(20000),
+        public static gaxgrpc::BackoffSettings GetDefaultTimeoutBackoff() => new gaxgrpc::BackoffSettings(
+            delay: s::TimeSpan.FromMilliseconds(20000),
+            maxDelay: s::TimeSpan.FromMilliseconds(20000),
             delayMultiplier: 1.0
         );
 
         /// <summary>
-        /// <see cref="CallSettings"/> for synchronous and asynchronous calls to
+        /// <see cref="gaxgrpc::CallSettings"/> for synchronous and asynchronous calls to
         /// <c>ClusterManagerClient.ListClusters</c> and <c>ClusterManagerClient.ListClustersAsync</c>.
         /// </summary>
         /// <remarks>
         /// The default <c>ClusterManagerClient.ListClusters</c> and
-        /// <c>ClusterManagerClient.ListClustersAsync</c> <see cref="RetrySettings"/> are:
+        /// <c>ClusterManagerClient.ListClustersAsync</c> <see cref="gaxgrpc::RetrySettings"/> are:
         /// <list type="bullet">
         /// <item><description>Initial retry delay: 100 milliseconds</description></item>
         /// <item><description>Retry delay multiplier: 1.3</description></item>
@@ -165,26 +165,26 @@ namespace Google.Cloud.Container.V1
         /// </list>
         /// Retry will be attempted on the following response status codes:
         /// <list>
-        /// <item><description><see cref="StatusCode.DeadlineExceeded"/></description></item>
-        /// <item><description><see cref="StatusCode.Unavailable"/></description></item>
+        /// <item><description><see cref="grpccore::StatusCode.DeadlineExceeded"/></description></item>
+        /// <item><description><see cref="grpccore::StatusCode.Unavailable"/></description></item>
         /// </list>
         /// Default RPC expiration is 600000 milliseconds.
         /// </remarks>
-        public CallSettings ListClustersSettings { get; set; } = CallSettings.FromCallTiming(
-            CallTiming.FromRetry(new RetrySettings(
+        public gaxgrpc::CallSettings ListClustersSettings { get; set; } = gaxgrpc::CallSettings.FromCallTiming(
+            gaxgrpc::CallTiming.FromRetry(new gaxgrpc::RetrySettings(
                 retryBackoff: GetDefaultRetryBackoff(),
                 timeoutBackoff: GetDefaultTimeoutBackoff(),
-                totalExpiration: Expiration.FromTimeout(TimeSpan.FromMilliseconds(600000)),
+                totalExpiration: gax::Expiration.FromTimeout(s::TimeSpan.FromMilliseconds(600000)),
                 retryFilter: IdempotentRetryFilter
             )));
 
         /// <summary>
-        /// <see cref="CallSettings"/> for synchronous and asynchronous calls to
+        /// <see cref="gaxgrpc::CallSettings"/> for synchronous and asynchronous calls to
         /// <c>ClusterManagerClient.GetCluster</c> and <c>ClusterManagerClient.GetClusterAsync</c>.
         /// </summary>
         /// <remarks>
         /// The default <c>ClusterManagerClient.GetCluster</c> and
-        /// <c>ClusterManagerClient.GetClusterAsync</c> <see cref="RetrySettings"/> are:
+        /// <c>ClusterManagerClient.GetClusterAsync</c> <see cref="gaxgrpc::RetrySettings"/> are:
         /// <list type="bullet">
         /// <item><description>Initial retry delay: 100 milliseconds</description></item>
         /// <item><description>Retry delay multiplier: 1.3</description></item>
@@ -195,26 +195,26 @@ namespace Google.Cloud.Container.V1
         /// </list>
         /// Retry will be attempted on the following response status codes:
         /// <list>
-        /// <item><description><see cref="StatusCode.DeadlineExceeded"/></description></item>
-        /// <item><description><see cref="StatusCode.Unavailable"/></description></item>
+        /// <item><description><see cref="grpccore::StatusCode.DeadlineExceeded"/></description></item>
+        /// <item><description><see cref="grpccore::StatusCode.Unavailable"/></description></item>
         /// </list>
         /// Default RPC expiration is 600000 milliseconds.
         /// </remarks>
-        public CallSettings GetClusterSettings { get; set; } = CallSettings.FromCallTiming(
-            CallTiming.FromRetry(new RetrySettings(
+        public gaxgrpc::CallSettings GetClusterSettings { get; set; } = gaxgrpc::CallSettings.FromCallTiming(
+            gaxgrpc::CallTiming.FromRetry(new gaxgrpc::RetrySettings(
                 retryBackoff: GetDefaultRetryBackoff(),
                 timeoutBackoff: GetDefaultTimeoutBackoff(),
-                totalExpiration: Expiration.FromTimeout(TimeSpan.FromMilliseconds(600000)),
+                totalExpiration: gax::Expiration.FromTimeout(s::TimeSpan.FromMilliseconds(600000)),
                 retryFilter: IdempotentRetryFilter
             )));
 
         /// <summary>
-        /// <see cref="CallSettings"/> for synchronous and asynchronous calls to
+        /// <see cref="gaxgrpc::CallSettings"/> for synchronous and asynchronous calls to
         /// <c>ClusterManagerClient.CreateCluster</c> and <c>ClusterManagerClient.CreateClusterAsync</c>.
         /// </summary>
         /// <remarks>
         /// The default <c>ClusterManagerClient.CreateCluster</c> and
-        /// <c>ClusterManagerClient.CreateClusterAsync</c> <see cref="RetrySettings"/> are:
+        /// <c>ClusterManagerClient.CreateClusterAsync</c> <see cref="gaxgrpc::RetrySettings"/> are:
         /// <list type="bullet">
         /// <item><description>Initial retry delay: 100 milliseconds</description></item>
         /// <item><description>Retry delay multiplier: 1.3</description></item>
@@ -229,21 +229,21 @@ namespace Google.Cloud.Container.V1
         /// </list>
         /// Default RPC expiration is 600000 milliseconds.
         /// </remarks>
-        public CallSettings CreateClusterSettings { get; set; } = CallSettings.FromCallTiming(
-            CallTiming.FromRetry(new RetrySettings(
+        public gaxgrpc::CallSettings CreateClusterSettings { get; set; } = gaxgrpc::CallSettings.FromCallTiming(
+            gaxgrpc::CallTiming.FromRetry(new gaxgrpc::RetrySettings(
                 retryBackoff: GetDefaultRetryBackoff(),
                 timeoutBackoff: GetDefaultTimeoutBackoff(),
-                totalExpiration: Expiration.FromTimeout(TimeSpan.FromMilliseconds(600000)),
+                totalExpiration: gax::Expiration.FromTimeout(s::TimeSpan.FromMilliseconds(600000)),
                 retryFilter: NonIdempotentRetryFilter
             )));
 
         /// <summary>
-        /// <see cref="CallSettings"/> for synchronous and asynchronous calls to
+        /// <see cref="gaxgrpc::CallSettings"/> for synchronous and asynchronous calls to
         /// <c>ClusterManagerClient.UpdateCluster</c> and <c>ClusterManagerClient.UpdateClusterAsync</c>.
         /// </summary>
         /// <remarks>
         /// The default <c>ClusterManagerClient.UpdateCluster</c> and
-        /// <c>ClusterManagerClient.UpdateClusterAsync</c> <see cref="RetrySettings"/> are:
+        /// <c>ClusterManagerClient.UpdateClusterAsync</c> <see cref="gaxgrpc::RetrySettings"/> are:
         /// <list type="bullet">
         /// <item><description>Initial retry delay: 100 milliseconds</description></item>
         /// <item><description>Retry delay multiplier: 1.3</description></item>
@@ -258,21 +258,21 @@ namespace Google.Cloud.Container.V1
         /// </list>
         /// Default RPC expiration is 600000 milliseconds.
         /// </remarks>
-        public CallSettings UpdateClusterSettings { get; set; } = CallSettings.FromCallTiming(
-            CallTiming.FromRetry(new RetrySettings(
+        public gaxgrpc::CallSettings UpdateClusterSettings { get; set; } = gaxgrpc::CallSettings.FromCallTiming(
+            gaxgrpc::CallTiming.FromRetry(new gaxgrpc::RetrySettings(
                 retryBackoff: GetDefaultRetryBackoff(),
                 timeoutBackoff: GetDefaultTimeoutBackoff(),
-                totalExpiration: Expiration.FromTimeout(TimeSpan.FromMilliseconds(600000)),
+                totalExpiration: gax::Expiration.FromTimeout(s::TimeSpan.FromMilliseconds(600000)),
                 retryFilter: NonIdempotentRetryFilter
             )));
 
         /// <summary>
-        /// <see cref="CallSettings"/> for synchronous and asynchronous calls to
+        /// <see cref="gaxgrpc::CallSettings"/> for synchronous and asynchronous calls to
         /// <c>ClusterManagerClient.UpdateNodePool</c> and <c>ClusterManagerClient.UpdateNodePoolAsync</c>.
         /// </summary>
         /// <remarks>
         /// The default <c>ClusterManagerClient.UpdateNodePool</c> and
-        /// <c>ClusterManagerClient.UpdateNodePoolAsync</c> <see cref="RetrySettings"/> are:
+        /// <c>ClusterManagerClient.UpdateNodePoolAsync</c> <see cref="gaxgrpc::RetrySettings"/> are:
         /// <list type="bullet">
         /// <item><description>Initial retry delay: 100 milliseconds</description></item>
         /// <item><description>Retry delay multiplier: 1.3</description></item>
@@ -287,21 +287,21 @@ namespace Google.Cloud.Container.V1
         /// </list>
         /// Default RPC expiration is 600000 milliseconds.
         /// </remarks>
-        public CallSettings UpdateNodePoolSettings { get; set; } = CallSettings.FromCallTiming(
-            CallTiming.FromRetry(new RetrySettings(
+        public gaxgrpc::CallSettings UpdateNodePoolSettings { get; set; } = gaxgrpc::CallSettings.FromCallTiming(
+            gaxgrpc::CallTiming.FromRetry(new gaxgrpc::RetrySettings(
                 retryBackoff: GetDefaultRetryBackoff(),
                 timeoutBackoff: GetDefaultTimeoutBackoff(),
-                totalExpiration: Expiration.FromTimeout(TimeSpan.FromMilliseconds(600000)),
+                totalExpiration: gax::Expiration.FromTimeout(s::TimeSpan.FromMilliseconds(600000)),
                 retryFilter: NonIdempotentRetryFilter
             )));
 
         /// <summary>
-        /// <see cref="CallSettings"/> for synchronous and asynchronous calls to
+        /// <see cref="gaxgrpc::CallSettings"/> for synchronous and asynchronous calls to
         /// <c>ClusterManagerClient.SetNodePoolAutoscaling</c> and <c>ClusterManagerClient.SetNodePoolAutoscalingAsync</c>.
         /// </summary>
         /// <remarks>
         /// The default <c>ClusterManagerClient.SetNodePoolAutoscaling</c> and
-        /// <c>ClusterManagerClient.SetNodePoolAutoscalingAsync</c> <see cref="RetrySettings"/> are:
+        /// <c>ClusterManagerClient.SetNodePoolAutoscalingAsync</c> <see cref="gaxgrpc::RetrySettings"/> are:
         /// <list type="bullet">
         /// <item><description>Initial retry delay: 100 milliseconds</description></item>
         /// <item><description>Retry delay multiplier: 1.3</description></item>
@@ -316,21 +316,21 @@ namespace Google.Cloud.Container.V1
         /// </list>
         /// Default RPC expiration is 600000 milliseconds.
         /// </remarks>
-        public CallSettings SetNodePoolAutoscalingSettings { get; set; } = CallSettings.FromCallTiming(
-            CallTiming.FromRetry(new RetrySettings(
+        public gaxgrpc::CallSettings SetNodePoolAutoscalingSettings { get; set; } = gaxgrpc::CallSettings.FromCallTiming(
+            gaxgrpc::CallTiming.FromRetry(new gaxgrpc::RetrySettings(
                 retryBackoff: GetDefaultRetryBackoff(),
                 timeoutBackoff: GetDefaultTimeoutBackoff(),
-                totalExpiration: Expiration.FromTimeout(TimeSpan.FromMilliseconds(600000)),
+                totalExpiration: gax::Expiration.FromTimeout(s::TimeSpan.FromMilliseconds(600000)),
                 retryFilter: NonIdempotentRetryFilter
             )));
 
         /// <summary>
-        /// <see cref="CallSettings"/> for synchronous and asynchronous calls to
+        /// <see cref="gaxgrpc::CallSettings"/> for synchronous and asynchronous calls to
         /// <c>ClusterManagerClient.SetLoggingService</c> and <c>ClusterManagerClient.SetLoggingServiceAsync</c>.
         /// </summary>
         /// <remarks>
         /// The default <c>ClusterManagerClient.SetLoggingService</c> and
-        /// <c>ClusterManagerClient.SetLoggingServiceAsync</c> <see cref="RetrySettings"/> are:
+        /// <c>ClusterManagerClient.SetLoggingServiceAsync</c> <see cref="gaxgrpc::RetrySettings"/> are:
         /// <list type="bullet">
         /// <item><description>Initial retry delay: 100 milliseconds</description></item>
         /// <item><description>Retry delay multiplier: 1.3</description></item>
@@ -345,21 +345,21 @@ namespace Google.Cloud.Container.V1
         /// </list>
         /// Default RPC expiration is 600000 milliseconds.
         /// </remarks>
-        public CallSettings SetLoggingServiceSettings { get; set; } = CallSettings.FromCallTiming(
-            CallTiming.FromRetry(new RetrySettings(
+        public gaxgrpc::CallSettings SetLoggingServiceSettings { get; set; } = gaxgrpc::CallSettings.FromCallTiming(
+            gaxgrpc::CallTiming.FromRetry(new gaxgrpc::RetrySettings(
                 retryBackoff: GetDefaultRetryBackoff(),
                 timeoutBackoff: GetDefaultTimeoutBackoff(),
-                totalExpiration: Expiration.FromTimeout(TimeSpan.FromMilliseconds(600000)),
+                totalExpiration: gax::Expiration.FromTimeout(s::TimeSpan.FromMilliseconds(600000)),
                 retryFilter: NonIdempotentRetryFilter
             )));
 
         /// <summary>
-        /// <see cref="CallSettings"/> for synchronous and asynchronous calls to
+        /// <see cref="gaxgrpc::CallSettings"/> for synchronous and asynchronous calls to
         /// <c>ClusterManagerClient.SetMonitoringService</c> and <c>ClusterManagerClient.SetMonitoringServiceAsync</c>.
         /// </summary>
         /// <remarks>
         /// The default <c>ClusterManagerClient.SetMonitoringService</c> and
-        /// <c>ClusterManagerClient.SetMonitoringServiceAsync</c> <see cref="RetrySettings"/> are:
+        /// <c>ClusterManagerClient.SetMonitoringServiceAsync</c> <see cref="gaxgrpc::RetrySettings"/> are:
         /// <list type="bullet">
         /// <item><description>Initial retry delay: 100 milliseconds</description></item>
         /// <item><description>Retry delay multiplier: 1.3</description></item>
@@ -374,21 +374,21 @@ namespace Google.Cloud.Container.V1
         /// </list>
         /// Default RPC expiration is 600000 milliseconds.
         /// </remarks>
-        public CallSettings SetMonitoringServiceSettings { get; set; } = CallSettings.FromCallTiming(
-            CallTiming.FromRetry(new RetrySettings(
+        public gaxgrpc::CallSettings SetMonitoringServiceSettings { get; set; } = gaxgrpc::CallSettings.FromCallTiming(
+            gaxgrpc::CallTiming.FromRetry(new gaxgrpc::RetrySettings(
                 retryBackoff: GetDefaultRetryBackoff(),
                 timeoutBackoff: GetDefaultTimeoutBackoff(),
-                totalExpiration: Expiration.FromTimeout(TimeSpan.FromMilliseconds(600000)),
+                totalExpiration: gax::Expiration.FromTimeout(s::TimeSpan.FromMilliseconds(600000)),
                 retryFilter: NonIdempotentRetryFilter
             )));
 
         /// <summary>
-        /// <see cref="CallSettings"/> for synchronous and asynchronous calls to
+        /// <see cref="gaxgrpc::CallSettings"/> for synchronous and asynchronous calls to
         /// <c>ClusterManagerClient.SetAddonsConfig</c> and <c>ClusterManagerClient.SetAddonsConfigAsync</c>.
         /// </summary>
         /// <remarks>
         /// The default <c>ClusterManagerClient.SetAddonsConfig</c> and
-        /// <c>ClusterManagerClient.SetAddonsConfigAsync</c> <see cref="RetrySettings"/> are:
+        /// <c>ClusterManagerClient.SetAddonsConfigAsync</c> <see cref="gaxgrpc::RetrySettings"/> are:
         /// <list type="bullet">
         /// <item><description>Initial retry delay: 100 milliseconds</description></item>
         /// <item><description>Retry delay multiplier: 1.3</description></item>
@@ -403,21 +403,21 @@ namespace Google.Cloud.Container.V1
         /// </list>
         /// Default RPC expiration is 600000 milliseconds.
         /// </remarks>
-        public CallSettings SetAddonsConfigSettings { get; set; } = CallSettings.FromCallTiming(
-            CallTiming.FromRetry(new RetrySettings(
+        public gaxgrpc::CallSettings SetAddonsConfigSettings { get; set; } = gaxgrpc::CallSettings.FromCallTiming(
+            gaxgrpc::CallTiming.FromRetry(new gaxgrpc::RetrySettings(
                 retryBackoff: GetDefaultRetryBackoff(),
                 timeoutBackoff: GetDefaultTimeoutBackoff(),
-                totalExpiration: Expiration.FromTimeout(TimeSpan.FromMilliseconds(600000)),
+                totalExpiration: gax::Expiration.FromTimeout(s::TimeSpan.FromMilliseconds(600000)),
                 retryFilter: NonIdempotentRetryFilter
             )));
 
         /// <summary>
-        /// <see cref="CallSettings"/> for synchronous and asynchronous calls to
+        /// <see cref="gaxgrpc::CallSettings"/> for synchronous and asynchronous calls to
         /// <c>ClusterManagerClient.SetLocations</c> and <c>ClusterManagerClient.SetLocationsAsync</c>.
         /// </summary>
         /// <remarks>
         /// The default <c>ClusterManagerClient.SetLocations</c> and
-        /// <c>ClusterManagerClient.SetLocationsAsync</c> <see cref="RetrySettings"/> are:
+        /// <c>ClusterManagerClient.SetLocationsAsync</c> <see cref="gaxgrpc::RetrySettings"/> are:
         /// <list type="bullet">
         /// <item><description>Initial retry delay: 100 milliseconds</description></item>
         /// <item><description>Retry delay multiplier: 1.3</description></item>
@@ -432,21 +432,21 @@ namespace Google.Cloud.Container.V1
         /// </list>
         /// Default RPC expiration is 600000 milliseconds.
         /// </remarks>
-        public CallSettings SetLocationsSettings { get; set; } = CallSettings.FromCallTiming(
-            CallTiming.FromRetry(new RetrySettings(
+        public gaxgrpc::CallSettings SetLocationsSettings { get; set; } = gaxgrpc::CallSettings.FromCallTiming(
+            gaxgrpc::CallTiming.FromRetry(new gaxgrpc::RetrySettings(
                 retryBackoff: GetDefaultRetryBackoff(),
                 timeoutBackoff: GetDefaultTimeoutBackoff(),
-                totalExpiration: Expiration.FromTimeout(TimeSpan.FromMilliseconds(600000)),
+                totalExpiration: gax::Expiration.FromTimeout(s::TimeSpan.FromMilliseconds(600000)),
                 retryFilter: NonIdempotentRetryFilter
             )));
 
         /// <summary>
-        /// <see cref="CallSettings"/> for synchronous and asynchronous calls to
+        /// <see cref="gaxgrpc::CallSettings"/> for synchronous and asynchronous calls to
         /// <c>ClusterManagerClient.UpdateMaster</c> and <c>ClusterManagerClient.UpdateMasterAsync</c>.
         /// </summary>
         /// <remarks>
         /// The default <c>ClusterManagerClient.UpdateMaster</c> and
-        /// <c>ClusterManagerClient.UpdateMasterAsync</c> <see cref="RetrySettings"/> are:
+        /// <c>ClusterManagerClient.UpdateMasterAsync</c> <see cref="gaxgrpc::RetrySettings"/> are:
         /// <list type="bullet">
         /// <item><description>Initial retry delay: 100 milliseconds</description></item>
         /// <item><description>Retry delay multiplier: 1.3</description></item>
@@ -461,21 +461,21 @@ namespace Google.Cloud.Container.V1
         /// </list>
         /// Default RPC expiration is 600000 milliseconds.
         /// </remarks>
-        public CallSettings UpdateMasterSettings { get; set; } = CallSettings.FromCallTiming(
-            CallTiming.FromRetry(new RetrySettings(
+        public gaxgrpc::CallSettings UpdateMasterSettings { get; set; } = gaxgrpc::CallSettings.FromCallTiming(
+            gaxgrpc::CallTiming.FromRetry(new gaxgrpc::RetrySettings(
                 retryBackoff: GetDefaultRetryBackoff(),
                 timeoutBackoff: GetDefaultTimeoutBackoff(),
-                totalExpiration: Expiration.FromTimeout(TimeSpan.FromMilliseconds(600000)),
+                totalExpiration: gax::Expiration.FromTimeout(s::TimeSpan.FromMilliseconds(600000)),
                 retryFilter: NonIdempotentRetryFilter
             )));
 
         /// <summary>
-        /// <see cref="CallSettings"/> for synchronous and asynchronous calls to
+        /// <see cref="gaxgrpc::CallSettings"/> for synchronous and asynchronous calls to
         /// <c>ClusterManagerClient.SetMasterAuth</c> and <c>ClusterManagerClient.SetMasterAuthAsync</c>.
         /// </summary>
         /// <remarks>
         /// The default <c>ClusterManagerClient.SetMasterAuth</c> and
-        /// <c>ClusterManagerClient.SetMasterAuthAsync</c> <see cref="RetrySettings"/> are:
+        /// <c>ClusterManagerClient.SetMasterAuthAsync</c> <see cref="gaxgrpc::RetrySettings"/> are:
         /// <list type="bullet">
         /// <item><description>Initial retry delay: 100 milliseconds</description></item>
         /// <item><description>Retry delay multiplier: 1.3</description></item>
@@ -490,21 +490,21 @@ namespace Google.Cloud.Container.V1
         /// </list>
         /// Default RPC expiration is 600000 milliseconds.
         /// </remarks>
-        public CallSettings SetMasterAuthSettings { get; set; } = CallSettings.FromCallTiming(
-            CallTiming.FromRetry(new RetrySettings(
+        public gaxgrpc::CallSettings SetMasterAuthSettings { get; set; } = gaxgrpc::CallSettings.FromCallTiming(
+            gaxgrpc::CallTiming.FromRetry(new gaxgrpc::RetrySettings(
                 retryBackoff: GetDefaultRetryBackoff(),
                 timeoutBackoff: GetDefaultTimeoutBackoff(),
-                totalExpiration: Expiration.FromTimeout(TimeSpan.FromMilliseconds(600000)),
+                totalExpiration: gax::Expiration.FromTimeout(s::TimeSpan.FromMilliseconds(600000)),
                 retryFilter: NonIdempotentRetryFilter
             )));
 
         /// <summary>
-        /// <see cref="CallSettings"/> for synchronous and asynchronous calls to
+        /// <see cref="gaxgrpc::CallSettings"/> for synchronous and asynchronous calls to
         /// <c>ClusterManagerClient.DeleteCluster</c> and <c>ClusterManagerClient.DeleteClusterAsync</c>.
         /// </summary>
         /// <remarks>
         /// The default <c>ClusterManagerClient.DeleteCluster</c> and
-        /// <c>ClusterManagerClient.DeleteClusterAsync</c> <see cref="RetrySettings"/> are:
+        /// <c>ClusterManagerClient.DeleteClusterAsync</c> <see cref="gaxgrpc::RetrySettings"/> are:
         /// <list type="bullet">
         /// <item><description>Initial retry delay: 100 milliseconds</description></item>
         /// <item><description>Retry delay multiplier: 1.3</description></item>
@@ -515,26 +515,26 @@ namespace Google.Cloud.Container.V1
         /// </list>
         /// Retry will be attempted on the following response status codes:
         /// <list>
-        /// <item><description><see cref="StatusCode.DeadlineExceeded"/></description></item>
-        /// <item><description><see cref="StatusCode.Unavailable"/></description></item>
+        /// <item><description><see cref="grpccore::StatusCode.DeadlineExceeded"/></description></item>
+        /// <item><description><see cref="grpccore::StatusCode.Unavailable"/></description></item>
         /// </list>
         /// Default RPC expiration is 600000 milliseconds.
         /// </remarks>
-        public CallSettings DeleteClusterSettings { get; set; } = CallSettings.FromCallTiming(
-            CallTiming.FromRetry(new RetrySettings(
+        public gaxgrpc::CallSettings DeleteClusterSettings { get; set; } = gaxgrpc::CallSettings.FromCallTiming(
+            gaxgrpc::CallTiming.FromRetry(new gaxgrpc::RetrySettings(
                 retryBackoff: GetDefaultRetryBackoff(),
                 timeoutBackoff: GetDefaultTimeoutBackoff(),
-                totalExpiration: Expiration.FromTimeout(TimeSpan.FromMilliseconds(600000)),
+                totalExpiration: gax::Expiration.FromTimeout(s::TimeSpan.FromMilliseconds(600000)),
                 retryFilter: IdempotentRetryFilter
             )));
 
         /// <summary>
-        /// <see cref="CallSettings"/> for synchronous and asynchronous calls to
+        /// <see cref="gaxgrpc::CallSettings"/> for synchronous and asynchronous calls to
         /// <c>ClusterManagerClient.ListOperations</c> and <c>ClusterManagerClient.ListOperationsAsync</c>.
         /// </summary>
         /// <remarks>
         /// The default <c>ClusterManagerClient.ListOperations</c> and
-        /// <c>ClusterManagerClient.ListOperationsAsync</c> <see cref="RetrySettings"/> are:
+        /// <c>ClusterManagerClient.ListOperationsAsync</c> <see cref="gaxgrpc::RetrySettings"/> are:
         /// <list type="bullet">
         /// <item><description>Initial retry delay: 100 milliseconds</description></item>
         /// <item><description>Retry delay multiplier: 1.3</description></item>
@@ -545,26 +545,26 @@ namespace Google.Cloud.Container.V1
         /// </list>
         /// Retry will be attempted on the following response status codes:
         /// <list>
-        /// <item><description><see cref="StatusCode.DeadlineExceeded"/></description></item>
-        /// <item><description><see cref="StatusCode.Unavailable"/></description></item>
+        /// <item><description><see cref="grpccore::StatusCode.DeadlineExceeded"/></description></item>
+        /// <item><description><see cref="grpccore::StatusCode.Unavailable"/></description></item>
         /// </list>
         /// Default RPC expiration is 600000 milliseconds.
         /// </remarks>
-        public CallSettings ListOperationsSettings { get; set; } = CallSettings.FromCallTiming(
-            CallTiming.FromRetry(new RetrySettings(
+        public gaxgrpc::CallSettings ListOperationsSettings { get; set; } = gaxgrpc::CallSettings.FromCallTiming(
+            gaxgrpc::CallTiming.FromRetry(new gaxgrpc::RetrySettings(
                 retryBackoff: GetDefaultRetryBackoff(),
                 timeoutBackoff: GetDefaultTimeoutBackoff(),
-                totalExpiration: Expiration.FromTimeout(TimeSpan.FromMilliseconds(600000)),
+                totalExpiration: gax::Expiration.FromTimeout(s::TimeSpan.FromMilliseconds(600000)),
                 retryFilter: IdempotentRetryFilter
             )));
 
         /// <summary>
-        /// <see cref="CallSettings"/> for synchronous and asynchronous calls to
+        /// <see cref="gaxgrpc::CallSettings"/> for synchronous and asynchronous calls to
         /// <c>ClusterManagerClient.GetOperation</c> and <c>ClusterManagerClient.GetOperationAsync</c>.
         /// </summary>
         /// <remarks>
         /// The default <c>ClusterManagerClient.GetOperation</c> and
-        /// <c>ClusterManagerClient.GetOperationAsync</c> <see cref="RetrySettings"/> are:
+        /// <c>ClusterManagerClient.GetOperationAsync</c> <see cref="gaxgrpc::RetrySettings"/> are:
         /// <list type="bullet">
         /// <item><description>Initial retry delay: 100 milliseconds</description></item>
         /// <item><description>Retry delay multiplier: 1.3</description></item>
@@ -575,26 +575,26 @@ namespace Google.Cloud.Container.V1
         /// </list>
         /// Retry will be attempted on the following response status codes:
         /// <list>
-        /// <item><description><see cref="StatusCode.DeadlineExceeded"/></description></item>
-        /// <item><description><see cref="StatusCode.Unavailable"/></description></item>
+        /// <item><description><see cref="grpccore::StatusCode.DeadlineExceeded"/></description></item>
+        /// <item><description><see cref="grpccore::StatusCode.Unavailable"/></description></item>
         /// </list>
         /// Default RPC expiration is 600000 milliseconds.
         /// </remarks>
-        public CallSettings GetOperationSettings { get; set; } = CallSettings.FromCallTiming(
-            CallTiming.FromRetry(new RetrySettings(
+        public gaxgrpc::CallSettings GetOperationSettings { get; set; } = gaxgrpc::CallSettings.FromCallTiming(
+            gaxgrpc::CallTiming.FromRetry(new gaxgrpc::RetrySettings(
                 retryBackoff: GetDefaultRetryBackoff(),
                 timeoutBackoff: GetDefaultTimeoutBackoff(),
-                totalExpiration: Expiration.FromTimeout(TimeSpan.FromMilliseconds(600000)),
+                totalExpiration: gax::Expiration.FromTimeout(s::TimeSpan.FromMilliseconds(600000)),
                 retryFilter: IdempotentRetryFilter
             )));
 
         /// <summary>
-        /// <see cref="CallSettings"/> for synchronous and asynchronous calls to
+        /// <see cref="gaxgrpc::CallSettings"/> for synchronous and asynchronous calls to
         /// <c>ClusterManagerClient.CancelOperation</c> and <c>ClusterManagerClient.CancelOperationAsync</c>.
         /// </summary>
         /// <remarks>
         /// The default <c>ClusterManagerClient.CancelOperation</c> and
-        /// <c>ClusterManagerClient.CancelOperationAsync</c> <see cref="RetrySettings"/> are:
+        /// <c>ClusterManagerClient.CancelOperationAsync</c> <see cref="gaxgrpc::RetrySettings"/> are:
         /// <list type="bullet">
         /// <item><description>Initial retry delay: 100 milliseconds</description></item>
         /// <item><description>Retry delay multiplier: 1.3</description></item>
@@ -609,21 +609,21 @@ namespace Google.Cloud.Container.V1
         /// </list>
         /// Default RPC expiration is 600000 milliseconds.
         /// </remarks>
-        public CallSettings CancelOperationSettings { get; set; } = CallSettings.FromCallTiming(
-            CallTiming.FromRetry(new RetrySettings(
+        public gaxgrpc::CallSettings CancelOperationSettings { get; set; } = gaxgrpc::CallSettings.FromCallTiming(
+            gaxgrpc::CallTiming.FromRetry(new gaxgrpc::RetrySettings(
                 retryBackoff: GetDefaultRetryBackoff(),
                 timeoutBackoff: GetDefaultTimeoutBackoff(),
-                totalExpiration: Expiration.FromTimeout(TimeSpan.FromMilliseconds(600000)),
+                totalExpiration: gax::Expiration.FromTimeout(s::TimeSpan.FromMilliseconds(600000)),
                 retryFilter: NonIdempotentRetryFilter
             )));
 
         /// <summary>
-        /// <see cref="CallSettings"/> for synchronous and asynchronous calls to
+        /// <see cref="gaxgrpc::CallSettings"/> for synchronous and asynchronous calls to
         /// <c>ClusterManagerClient.GetServerConfig</c> and <c>ClusterManagerClient.GetServerConfigAsync</c>.
         /// </summary>
         /// <remarks>
         /// The default <c>ClusterManagerClient.GetServerConfig</c> and
-        /// <c>ClusterManagerClient.GetServerConfigAsync</c> <see cref="RetrySettings"/> are:
+        /// <c>ClusterManagerClient.GetServerConfigAsync</c> <see cref="gaxgrpc::RetrySettings"/> are:
         /// <list type="bullet">
         /// <item><description>Initial retry delay: 100 milliseconds</description></item>
         /// <item><description>Retry delay multiplier: 1.3</description></item>
@@ -634,26 +634,26 @@ namespace Google.Cloud.Container.V1
         /// </list>
         /// Retry will be attempted on the following response status codes:
         /// <list>
-        /// <item><description><see cref="StatusCode.DeadlineExceeded"/></description></item>
-        /// <item><description><see cref="StatusCode.Unavailable"/></description></item>
+        /// <item><description><see cref="grpccore::StatusCode.DeadlineExceeded"/></description></item>
+        /// <item><description><see cref="grpccore::StatusCode.Unavailable"/></description></item>
         /// </list>
         /// Default RPC expiration is 600000 milliseconds.
         /// </remarks>
-        public CallSettings GetServerConfigSettings { get; set; } = CallSettings.FromCallTiming(
-            CallTiming.FromRetry(new RetrySettings(
+        public gaxgrpc::CallSettings GetServerConfigSettings { get; set; } = gaxgrpc::CallSettings.FromCallTiming(
+            gaxgrpc::CallTiming.FromRetry(new gaxgrpc::RetrySettings(
                 retryBackoff: GetDefaultRetryBackoff(),
                 timeoutBackoff: GetDefaultTimeoutBackoff(),
-                totalExpiration: Expiration.FromTimeout(TimeSpan.FromMilliseconds(600000)),
+                totalExpiration: gax::Expiration.FromTimeout(s::TimeSpan.FromMilliseconds(600000)),
                 retryFilter: IdempotentRetryFilter
             )));
 
         /// <summary>
-        /// <see cref="CallSettings"/> for synchronous and asynchronous calls to
+        /// <see cref="gaxgrpc::CallSettings"/> for synchronous and asynchronous calls to
         /// <c>ClusterManagerClient.ListNodePools</c> and <c>ClusterManagerClient.ListNodePoolsAsync</c>.
         /// </summary>
         /// <remarks>
         /// The default <c>ClusterManagerClient.ListNodePools</c> and
-        /// <c>ClusterManagerClient.ListNodePoolsAsync</c> <see cref="RetrySettings"/> are:
+        /// <c>ClusterManagerClient.ListNodePoolsAsync</c> <see cref="gaxgrpc::RetrySettings"/> are:
         /// <list type="bullet">
         /// <item><description>Initial retry delay: 100 milliseconds</description></item>
         /// <item><description>Retry delay multiplier: 1.3</description></item>
@@ -664,26 +664,26 @@ namespace Google.Cloud.Container.V1
         /// </list>
         /// Retry will be attempted on the following response status codes:
         /// <list>
-        /// <item><description><see cref="StatusCode.DeadlineExceeded"/></description></item>
-        /// <item><description><see cref="StatusCode.Unavailable"/></description></item>
+        /// <item><description><see cref="grpccore::StatusCode.DeadlineExceeded"/></description></item>
+        /// <item><description><see cref="grpccore::StatusCode.Unavailable"/></description></item>
         /// </list>
         /// Default RPC expiration is 600000 milliseconds.
         /// </remarks>
-        public CallSettings ListNodePoolsSettings { get; set; } = CallSettings.FromCallTiming(
-            CallTiming.FromRetry(new RetrySettings(
+        public gaxgrpc::CallSettings ListNodePoolsSettings { get; set; } = gaxgrpc::CallSettings.FromCallTiming(
+            gaxgrpc::CallTiming.FromRetry(new gaxgrpc::RetrySettings(
                 retryBackoff: GetDefaultRetryBackoff(),
                 timeoutBackoff: GetDefaultTimeoutBackoff(),
-                totalExpiration: Expiration.FromTimeout(TimeSpan.FromMilliseconds(600000)),
+                totalExpiration: gax::Expiration.FromTimeout(s::TimeSpan.FromMilliseconds(600000)),
                 retryFilter: IdempotentRetryFilter
             )));
 
         /// <summary>
-        /// <see cref="CallSettings"/> for synchronous and asynchronous calls to
+        /// <see cref="gaxgrpc::CallSettings"/> for synchronous and asynchronous calls to
         /// <c>ClusterManagerClient.GetNodePool</c> and <c>ClusterManagerClient.GetNodePoolAsync</c>.
         /// </summary>
         /// <remarks>
         /// The default <c>ClusterManagerClient.GetNodePool</c> and
-        /// <c>ClusterManagerClient.GetNodePoolAsync</c> <see cref="RetrySettings"/> are:
+        /// <c>ClusterManagerClient.GetNodePoolAsync</c> <see cref="gaxgrpc::RetrySettings"/> are:
         /// <list type="bullet">
         /// <item><description>Initial retry delay: 100 milliseconds</description></item>
         /// <item><description>Retry delay multiplier: 1.3</description></item>
@@ -694,26 +694,26 @@ namespace Google.Cloud.Container.V1
         /// </list>
         /// Retry will be attempted on the following response status codes:
         /// <list>
-        /// <item><description><see cref="StatusCode.DeadlineExceeded"/></description></item>
-        /// <item><description><see cref="StatusCode.Unavailable"/></description></item>
+        /// <item><description><see cref="grpccore::StatusCode.DeadlineExceeded"/></description></item>
+        /// <item><description><see cref="grpccore::StatusCode.Unavailable"/></description></item>
         /// </list>
         /// Default RPC expiration is 600000 milliseconds.
         /// </remarks>
-        public CallSettings GetNodePoolSettings { get; set; } = CallSettings.FromCallTiming(
-            CallTiming.FromRetry(new RetrySettings(
+        public gaxgrpc::CallSettings GetNodePoolSettings { get; set; } = gaxgrpc::CallSettings.FromCallTiming(
+            gaxgrpc::CallTiming.FromRetry(new gaxgrpc::RetrySettings(
                 retryBackoff: GetDefaultRetryBackoff(),
                 timeoutBackoff: GetDefaultTimeoutBackoff(),
-                totalExpiration: Expiration.FromTimeout(TimeSpan.FromMilliseconds(600000)),
+                totalExpiration: gax::Expiration.FromTimeout(s::TimeSpan.FromMilliseconds(600000)),
                 retryFilter: IdempotentRetryFilter
             )));
 
         /// <summary>
-        /// <see cref="CallSettings"/> for synchronous and asynchronous calls to
+        /// <see cref="gaxgrpc::CallSettings"/> for synchronous and asynchronous calls to
         /// <c>ClusterManagerClient.CreateNodePool</c> and <c>ClusterManagerClient.CreateNodePoolAsync</c>.
         /// </summary>
         /// <remarks>
         /// The default <c>ClusterManagerClient.CreateNodePool</c> and
-        /// <c>ClusterManagerClient.CreateNodePoolAsync</c> <see cref="RetrySettings"/> are:
+        /// <c>ClusterManagerClient.CreateNodePoolAsync</c> <see cref="gaxgrpc::RetrySettings"/> are:
         /// <list type="bullet">
         /// <item><description>Initial retry delay: 100 milliseconds</description></item>
         /// <item><description>Retry delay multiplier: 1.3</description></item>
@@ -728,21 +728,21 @@ namespace Google.Cloud.Container.V1
         /// </list>
         /// Default RPC expiration is 600000 milliseconds.
         /// </remarks>
-        public CallSettings CreateNodePoolSettings { get; set; } = CallSettings.FromCallTiming(
-            CallTiming.FromRetry(new RetrySettings(
+        public gaxgrpc::CallSettings CreateNodePoolSettings { get; set; } = gaxgrpc::CallSettings.FromCallTiming(
+            gaxgrpc::CallTiming.FromRetry(new gaxgrpc::RetrySettings(
                 retryBackoff: GetDefaultRetryBackoff(),
                 timeoutBackoff: GetDefaultTimeoutBackoff(),
-                totalExpiration: Expiration.FromTimeout(TimeSpan.FromMilliseconds(600000)),
+                totalExpiration: gax::Expiration.FromTimeout(s::TimeSpan.FromMilliseconds(600000)),
                 retryFilter: NonIdempotentRetryFilter
             )));
 
         /// <summary>
-        /// <see cref="CallSettings"/> for synchronous and asynchronous calls to
+        /// <see cref="gaxgrpc::CallSettings"/> for synchronous and asynchronous calls to
         /// <c>ClusterManagerClient.DeleteNodePool</c> and <c>ClusterManagerClient.DeleteNodePoolAsync</c>.
         /// </summary>
         /// <remarks>
         /// The default <c>ClusterManagerClient.DeleteNodePool</c> and
-        /// <c>ClusterManagerClient.DeleteNodePoolAsync</c> <see cref="RetrySettings"/> are:
+        /// <c>ClusterManagerClient.DeleteNodePoolAsync</c> <see cref="gaxgrpc::RetrySettings"/> are:
         /// <list type="bullet">
         /// <item><description>Initial retry delay: 100 milliseconds</description></item>
         /// <item><description>Retry delay multiplier: 1.3</description></item>
@@ -753,26 +753,26 @@ namespace Google.Cloud.Container.V1
         /// </list>
         /// Retry will be attempted on the following response status codes:
         /// <list>
-        /// <item><description><see cref="StatusCode.DeadlineExceeded"/></description></item>
-        /// <item><description><see cref="StatusCode.Unavailable"/></description></item>
+        /// <item><description><see cref="grpccore::StatusCode.DeadlineExceeded"/></description></item>
+        /// <item><description><see cref="grpccore::StatusCode.Unavailable"/></description></item>
         /// </list>
         /// Default RPC expiration is 600000 milliseconds.
         /// </remarks>
-        public CallSettings DeleteNodePoolSettings { get; set; } = CallSettings.FromCallTiming(
-            CallTiming.FromRetry(new RetrySettings(
+        public gaxgrpc::CallSettings DeleteNodePoolSettings { get; set; } = gaxgrpc::CallSettings.FromCallTiming(
+            gaxgrpc::CallTiming.FromRetry(new gaxgrpc::RetrySettings(
                 retryBackoff: GetDefaultRetryBackoff(),
                 timeoutBackoff: GetDefaultTimeoutBackoff(),
-                totalExpiration: Expiration.FromTimeout(TimeSpan.FromMilliseconds(600000)),
+                totalExpiration: gax::Expiration.FromTimeout(s::TimeSpan.FromMilliseconds(600000)),
                 retryFilter: IdempotentRetryFilter
             )));
 
         /// <summary>
-        /// <see cref="CallSettings"/> for synchronous and asynchronous calls to
+        /// <see cref="gaxgrpc::CallSettings"/> for synchronous and asynchronous calls to
         /// <c>ClusterManagerClient.RollbackNodePoolUpgrade</c> and <c>ClusterManagerClient.RollbackNodePoolUpgradeAsync</c>.
         /// </summary>
         /// <remarks>
         /// The default <c>ClusterManagerClient.RollbackNodePoolUpgrade</c> and
-        /// <c>ClusterManagerClient.RollbackNodePoolUpgradeAsync</c> <see cref="RetrySettings"/> are:
+        /// <c>ClusterManagerClient.RollbackNodePoolUpgradeAsync</c> <see cref="gaxgrpc::RetrySettings"/> are:
         /// <list type="bullet">
         /// <item><description>Initial retry delay: 100 milliseconds</description></item>
         /// <item><description>Retry delay multiplier: 1.3</description></item>
@@ -787,21 +787,21 @@ namespace Google.Cloud.Container.V1
         /// </list>
         /// Default RPC expiration is 600000 milliseconds.
         /// </remarks>
-        public CallSettings RollbackNodePoolUpgradeSettings { get; set; } = CallSettings.FromCallTiming(
-            CallTiming.FromRetry(new RetrySettings(
+        public gaxgrpc::CallSettings RollbackNodePoolUpgradeSettings { get; set; } = gaxgrpc::CallSettings.FromCallTiming(
+            gaxgrpc::CallTiming.FromRetry(new gaxgrpc::RetrySettings(
                 retryBackoff: GetDefaultRetryBackoff(),
                 timeoutBackoff: GetDefaultTimeoutBackoff(),
-                totalExpiration: Expiration.FromTimeout(TimeSpan.FromMilliseconds(600000)),
+                totalExpiration: gax::Expiration.FromTimeout(s::TimeSpan.FromMilliseconds(600000)),
                 retryFilter: NonIdempotentRetryFilter
             )));
 
         /// <summary>
-        /// <see cref="CallSettings"/> for synchronous and asynchronous calls to
+        /// <see cref="gaxgrpc::CallSettings"/> for synchronous and asynchronous calls to
         /// <c>ClusterManagerClient.SetNodePoolManagement</c> and <c>ClusterManagerClient.SetNodePoolManagementAsync</c>.
         /// </summary>
         /// <remarks>
         /// The default <c>ClusterManagerClient.SetNodePoolManagement</c> and
-        /// <c>ClusterManagerClient.SetNodePoolManagementAsync</c> <see cref="RetrySettings"/> are:
+        /// <c>ClusterManagerClient.SetNodePoolManagementAsync</c> <see cref="gaxgrpc::RetrySettings"/> are:
         /// <list type="bullet">
         /// <item><description>Initial retry delay: 100 milliseconds</description></item>
         /// <item><description>Retry delay multiplier: 1.3</description></item>
@@ -816,21 +816,21 @@ namespace Google.Cloud.Container.V1
         /// </list>
         /// Default RPC expiration is 600000 milliseconds.
         /// </remarks>
-        public CallSettings SetNodePoolManagementSettings { get; set; } = CallSettings.FromCallTiming(
-            CallTiming.FromRetry(new RetrySettings(
+        public gaxgrpc::CallSettings SetNodePoolManagementSettings { get; set; } = gaxgrpc::CallSettings.FromCallTiming(
+            gaxgrpc::CallTiming.FromRetry(new gaxgrpc::RetrySettings(
                 retryBackoff: GetDefaultRetryBackoff(),
                 timeoutBackoff: GetDefaultTimeoutBackoff(),
-                totalExpiration: Expiration.FromTimeout(TimeSpan.FromMilliseconds(600000)),
+                totalExpiration: gax::Expiration.FromTimeout(s::TimeSpan.FromMilliseconds(600000)),
                 retryFilter: NonIdempotentRetryFilter
             )));
 
         /// <summary>
-        /// <see cref="CallSettings"/> for synchronous and asynchronous calls to
+        /// <see cref="gaxgrpc::CallSettings"/> for synchronous and asynchronous calls to
         /// <c>ClusterManagerClient.SetLabels</c> and <c>ClusterManagerClient.SetLabelsAsync</c>.
         /// </summary>
         /// <remarks>
         /// The default <c>ClusterManagerClient.SetLabels</c> and
-        /// <c>ClusterManagerClient.SetLabelsAsync</c> <see cref="RetrySettings"/> are:
+        /// <c>ClusterManagerClient.SetLabelsAsync</c> <see cref="gaxgrpc::RetrySettings"/> are:
         /// <list type="bullet">
         /// <item><description>Initial retry delay: 100 milliseconds</description></item>
         /// <item><description>Retry delay multiplier: 1.3</description></item>
@@ -845,21 +845,21 @@ namespace Google.Cloud.Container.V1
         /// </list>
         /// Default RPC expiration is 600000 milliseconds.
         /// </remarks>
-        public CallSettings SetLabelsSettings { get; set; } = CallSettings.FromCallTiming(
-            CallTiming.FromRetry(new RetrySettings(
+        public gaxgrpc::CallSettings SetLabelsSettings { get; set; } = gaxgrpc::CallSettings.FromCallTiming(
+            gaxgrpc::CallTiming.FromRetry(new gaxgrpc::RetrySettings(
                 retryBackoff: GetDefaultRetryBackoff(),
                 timeoutBackoff: GetDefaultTimeoutBackoff(),
-                totalExpiration: Expiration.FromTimeout(TimeSpan.FromMilliseconds(600000)),
+                totalExpiration: gax::Expiration.FromTimeout(s::TimeSpan.FromMilliseconds(600000)),
                 retryFilter: NonIdempotentRetryFilter
             )));
 
         /// <summary>
-        /// <see cref="CallSettings"/> for synchronous and asynchronous calls to
+        /// <see cref="gaxgrpc::CallSettings"/> for synchronous and asynchronous calls to
         /// <c>ClusterManagerClient.SetLegacyAbac</c> and <c>ClusterManagerClient.SetLegacyAbacAsync</c>.
         /// </summary>
         /// <remarks>
         /// The default <c>ClusterManagerClient.SetLegacyAbac</c> and
-        /// <c>ClusterManagerClient.SetLegacyAbacAsync</c> <see cref="RetrySettings"/> are:
+        /// <c>ClusterManagerClient.SetLegacyAbacAsync</c> <see cref="gaxgrpc::RetrySettings"/> are:
         /// <list type="bullet">
         /// <item><description>Initial retry delay: 100 milliseconds</description></item>
         /// <item><description>Retry delay multiplier: 1.3</description></item>
@@ -874,21 +874,21 @@ namespace Google.Cloud.Container.V1
         /// </list>
         /// Default RPC expiration is 600000 milliseconds.
         /// </remarks>
-        public CallSettings SetLegacyAbacSettings { get; set; } = CallSettings.FromCallTiming(
-            CallTiming.FromRetry(new RetrySettings(
+        public gaxgrpc::CallSettings SetLegacyAbacSettings { get; set; } = gaxgrpc::CallSettings.FromCallTiming(
+            gaxgrpc::CallTiming.FromRetry(new gaxgrpc::RetrySettings(
                 retryBackoff: GetDefaultRetryBackoff(),
                 timeoutBackoff: GetDefaultTimeoutBackoff(),
-                totalExpiration: Expiration.FromTimeout(TimeSpan.FromMilliseconds(600000)),
+                totalExpiration: gax::Expiration.FromTimeout(s::TimeSpan.FromMilliseconds(600000)),
                 retryFilter: NonIdempotentRetryFilter
             )));
 
         /// <summary>
-        /// <see cref="CallSettings"/> for synchronous and asynchronous calls to
+        /// <see cref="gaxgrpc::CallSettings"/> for synchronous and asynchronous calls to
         /// <c>ClusterManagerClient.StartIPRotation</c> and <c>ClusterManagerClient.StartIPRotationAsync</c>.
         /// </summary>
         /// <remarks>
         /// The default <c>ClusterManagerClient.StartIPRotation</c> and
-        /// <c>ClusterManagerClient.StartIPRotationAsync</c> <see cref="RetrySettings"/> are:
+        /// <c>ClusterManagerClient.StartIPRotationAsync</c> <see cref="gaxgrpc::RetrySettings"/> are:
         /// <list type="bullet">
         /// <item><description>Initial retry delay: 100 milliseconds</description></item>
         /// <item><description>Retry delay multiplier: 1.3</description></item>
@@ -903,21 +903,21 @@ namespace Google.Cloud.Container.V1
         /// </list>
         /// Default RPC expiration is 600000 milliseconds.
         /// </remarks>
-        public CallSettings StartIPRotationSettings { get; set; } = CallSettings.FromCallTiming(
-            CallTiming.FromRetry(new RetrySettings(
+        public gaxgrpc::CallSettings StartIPRotationSettings { get; set; } = gaxgrpc::CallSettings.FromCallTiming(
+            gaxgrpc::CallTiming.FromRetry(new gaxgrpc::RetrySettings(
                 retryBackoff: GetDefaultRetryBackoff(),
                 timeoutBackoff: GetDefaultTimeoutBackoff(),
-                totalExpiration: Expiration.FromTimeout(TimeSpan.FromMilliseconds(600000)),
+                totalExpiration: gax::Expiration.FromTimeout(s::TimeSpan.FromMilliseconds(600000)),
                 retryFilter: NonIdempotentRetryFilter
             )));
 
         /// <summary>
-        /// <see cref="CallSettings"/> for synchronous and asynchronous calls to
+        /// <see cref="gaxgrpc::CallSettings"/> for synchronous and asynchronous calls to
         /// <c>ClusterManagerClient.CompleteIPRotation</c> and <c>ClusterManagerClient.CompleteIPRotationAsync</c>.
         /// </summary>
         /// <remarks>
         /// The default <c>ClusterManagerClient.CompleteIPRotation</c> and
-        /// <c>ClusterManagerClient.CompleteIPRotationAsync</c> <see cref="RetrySettings"/> are:
+        /// <c>ClusterManagerClient.CompleteIPRotationAsync</c> <see cref="gaxgrpc::RetrySettings"/> are:
         /// <list type="bullet">
         /// <item><description>Initial retry delay: 100 milliseconds</description></item>
         /// <item><description>Retry delay multiplier: 1.3</description></item>
@@ -932,21 +932,21 @@ namespace Google.Cloud.Container.V1
         /// </list>
         /// Default RPC expiration is 600000 milliseconds.
         /// </remarks>
-        public CallSettings CompleteIPRotationSettings { get; set; } = CallSettings.FromCallTiming(
-            CallTiming.FromRetry(new RetrySettings(
+        public gaxgrpc::CallSettings CompleteIPRotationSettings { get; set; } = gaxgrpc::CallSettings.FromCallTiming(
+            gaxgrpc::CallTiming.FromRetry(new gaxgrpc::RetrySettings(
                 retryBackoff: GetDefaultRetryBackoff(),
                 timeoutBackoff: GetDefaultTimeoutBackoff(),
-                totalExpiration: Expiration.FromTimeout(TimeSpan.FromMilliseconds(600000)),
+                totalExpiration: gax::Expiration.FromTimeout(s::TimeSpan.FromMilliseconds(600000)),
                 retryFilter: NonIdempotentRetryFilter
             )));
 
         /// <summary>
-        /// <see cref="CallSettings"/> for synchronous and asynchronous calls to
+        /// <see cref="gaxgrpc::CallSettings"/> for synchronous and asynchronous calls to
         /// <c>ClusterManagerClient.SetNodePoolSize</c> and <c>ClusterManagerClient.SetNodePoolSizeAsync</c>.
         /// </summary>
         /// <remarks>
         /// The default <c>ClusterManagerClient.SetNodePoolSize</c> and
-        /// <c>ClusterManagerClient.SetNodePoolSizeAsync</c> <see cref="RetrySettings"/> are:
+        /// <c>ClusterManagerClient.SetNodePoolSizeAsync</c> <see cref="gaxgrpc::RetrySettings"/> are:
         /// <list type="bullet">
         /// <item><description>Initial retry delay: 100 milliseconds</description></item>
         /// <item><description>Retry delay multiplier: 1.3</description></item>
@@ -961,21 +961,21 @@ namespace Google.Cloud.Container.V1
         /// </list>
         /// Default RPC expiration is 600000 milliseconds.
         /// </remarks>
-        public CallSettings SetNodePoolSizeSettings { get; set; } = CallSettings.FromCallTiming(
-            CallTiming.FromRetry(new RetrySettings(
+        public gaxgrpc::CallSettings SetNodePoolSizeSettings { get; set; } = gaxgrpc::CallSettings.FromCallTiming(
+            gaxgrpc::CallTiming.FromRetry(new gaxgrpc::RetrySettings(
                 retryBackoff: GetDefaultRetryBackoff(),
                 timeoutBackoff: GetDefaultTimeoutBackoff(),
-                totalExpiration: Expiration.FromTimeout(TimeSpan.FromMilliseconds(600000)),
+                totalExpiration: gax::Expiration.FromTimeout(s::TimeSpan.FromMilliseconds(600000)),
                 retryFilter: NonIdempotentRetryFilter
             )));
 
         /// <summary>
-        /// <see cref="CallSettings"/> for synchronous and asynchronous calls to
+        /// <see cref="gaxgrpc::CallSettings"/> for synchronous and asynchronous calls to
         /// <c>ClusterManagerClient.SetNetworkPolicy</c> and <c>ClusterManagerClient.SetNetworkPolicyAsync</c>.
         /// </summary>
         /// <remarks>
         /// The default <c>ClusterManagerClient.SetNetworkPolicy</c> and
-        /// <c>ClusterManagerClient.SetNetworkPolicyAsync</c> <see cref="RetrySettings"/> are:
+        /// <c>ClusterManagerClient.SetNetworkPolicyAsync</c> <see cref="gaxgrpc::RetrySettings"/> are:
         /// <list type="bullet">
         /// <item><description>Initial retry delay: 100 milliseconds</description></item>
         /// <item><description>Retry delay multiplier: 1.3</description></item>
@@ -990,21 +990,21 @@ namespace Google.Cloud.Container.V1
         /// </list>
         /// Default RPC expiration is 600000 milliseconds.
         /// </remarks>
-        public CallSettings SetNetworkPolicySettings { get; set; } = CallSettings.FromCallTiming(
-            CallTiming.FromRetry(new RetrySettings(
+        public gaxgrpc::CallSettings SetNetworkPolicySettings { get; set; } = gaxgrpc::CallSettings.FromCallTiming(
+            gaxgrpc::CallTiming.FromRetry(new gaxgrpc::RetrySettings(
                 retryBackoff: GetDefaultRetryBackoff(),
                 timeoutBackoff: GetDefaultTimeoutBackoff(),
-                totalExpiration: Expiration.FromTimeout(TimeSpan.FromMilliseconds(600000)),
+                totalExpiration: gax::Expiration.FromTimeout(s::TimeSpan.FromMilliseconds(600000)),
                 retryFilter: NonIdempotentRetryFilter
             )));
 
         /// <summary>
-        /// <see cref="CallSettings"/> for synchronous and asynchronous calls to
+        /// <see cref="gaxgrpc::CallSettings"/> for synchronous and asynchronous calls to
         /// <c>ClusterManagerClient.SetMaintenancePolicy</c> and <c>ClusterManagerClient.SetMaintenancePolicyAsync</c>.
         /// </summary>
         /// <remarks>
         /// The default <c>ClusterManagerClient.SetMaintenancePolicy</c> and
-        /// <c>ClusterManagerClient.SetMaintenancePolicyAsync</c> <see cref="RetrySettings"/> are:
+        /// <c>ClusterManagerClient.SetMaintenancePolicyAsync</c> <see cref="gaxgrpc::RetrySettings"/> are:
         /// <list type="bullet">
         /// <item><description>Initial retry delay: 100 milliseconds</description></item>
         /// <item><description>Retry delay multiplier: 1.3</description></item>
@@ -1019,11 +1019,11 @@ namespace Google.Cloud.Container.V1
         /// </list>
         /// Default RPC expiration is 600000 milliseconds.
         /// </remarks>
-        public CallSettings SetMaintenancePolicySettings { get; set; } = CallSettings.FromCallTiming(
-            CallTiming.FromRetry(new RetrySettings(
+        public gaxgrpc::CallSettings SetMaintenancePolicySettings { get; set; } = gaxgrpc::CallSettings.FromCallTiming(
+            gaxgrpc::CallTiming.FromRetry(new gaxgrpc::RetrySettings(
                 retryBackoff: GetDefaultRetryBackoff(),
                 timeoutBackoff: GetDefaultTimeoutBackoff(),
-                totalExpiration: Expiration.FromTimeout(TimeSpan.FromMilliseconds(600000)),
+                totalExpiration: gax::Expiration.FromTimeout(s::TimeSpan.FromMilliseconds(600000)),
                 retryFilter: NonIdempotentRetryFilter
             )));
 
@@ -1042,7 +1042,7 @@ namespace Google.Cloud.Container.V1
         /// <summary>
         /// The default endpoint for the ClusterManager service, which is a host of "container.googleapis.com" and a port of 443.
         /// </summary>
-        public static ServiceEndpoint DefaultEndpoint { get; } = new ServiceEndpoint("container.googleapis.com", 443);
+        public static gaxgrpc::ServiceEndpoint DefaultEndpoint { get; } = new gaxgrpc::ServiceEndpoint("container.googleapis.com", 443);
 
         /// <summary>
         /// The default ClusterManager scopes.
@@ -1053,11 +1053,11 @@ namespace Google.Cloud.Container.V1
         /// <item><description>"https://www.googleapis.com/auth/cloud-platform"</description></item>
         /// </list>
         /// </remarks>
-        public static IReadOnlyList<string> DefaultScopes { get; } = new ReadOnlyCollection<string>(new string[] {
+        public static scg::IReadOnlyList<string> DefaultScopes { get; } = new sco::ReadOnlyCollection<string>(new string[] {
             "https://www.googleapis.com/auth/cloud-platform",
         });
 
-        private static readonly ChannelPool s_channelPool = new ChannelPool(DefaultScopes);
+        private static readonly gaxgrpc::ChannelPool s_channelPool = new gaxgrpc::ChannelPool(DefaultScopes);
 
         // Note: we could have parameterless overloads of Create and CreateAsync,
         // documented to just use the default endpoint, settings and credentials.
@@ -1071,12 +1071,12 @@ namespace Google.Cloud.Container.V1
         /// and creating a channel connecting to the given endpoint with application default credentials where
         /// necessary.
         /// </summary>
-        /// <param name="endpoint">Optional <see cref="ServiceEndpoint"/>.</param>
+        /// <param name="endpoint">Optional <see cref="gaxgrpc::ServiceEndpoint"/>.</param>
         /// <param name="settings">Optional <see cref="ClusterManagerSettings"/>.</param>
         /// <returns>The task representing the created <see cref="ClusterManagerClient"/>.</returns>
-        public static async Task<ClusterManagerClient> CreateAsync(ServiceEndpoint endpoint = null, ClusterManagerSettings settings = null)
+        public static async stt::Task<ClusterManagerClient> CreateAsync(gaxgrpc::ServiceEndpoint endpoint = null, ClusterManagerSettings settings = null)
         {
-            Channel channel = await s_channelPool.GetChannelAsync(endpoint ?? DefaultEndpoint).ConfigureAwait(false);
+            grpccore::Channel channel = await s_channelPool.GetChannelAsync(endpoint ?? DefaultEndpoint).ConfigureAwait(false);
             return Create(channel, settings);
         }
 
@@ -1085,45 +1085,45 @@ namespace Google.Cloud.Container.V1
         /// and creating a channel connecting to the given endpoint with application default credentials where
         /// necessary.
         /// </summary>
-        /// <param name="endpoint">Optional <see cref="ServiceEndpoint"/>.</param>
+        /// <param name="endpoint">Optional <see cref="gaxgrpc::ServiceEndpoint"/>.</param>
         /// <param name="settings">Optional <see cref="ClusterManagerSettings"/>.</param>
         /// <returns>The created <see cref="ClusterManagerClient"/>.</returns>
-        public static ClusterManagerClient Create(ServiceEndpoint endpoint = null, ClusterManagerSettings settings = null)
+        public static ClusterManagerClient Create(gaxgrpc::ServiceEndpoint endpoint = null, ClusterManagerSettings settings = null)
         {
-            Channel channel = s_channelPool.GetChannel(endpoint ?? DefaultEndpoint);
+            grpccore::Channel channel = s_channelPool.GetChannel(endpoint ?? DefaultEndpoint);
             return Create(channel, settings);
         }
 
         /// <summary>
         /// Creates a <see cref="ClusterManagerClient"/> which uses the specified channel for remote operations.
         /// </summary>
-        /// <param name="channel">The <see cref="Channel"/> for remote operations. Must not be null.</param>
+        /// <param name="channel">The <see cref="grpccore::Channel"/> for remote operations. Must not be null.</param>
         /// <param name="settings">Optional <see cref="ClusterManagerSettings"/>.</param>
         /// <returns>The created <see cref="ClusterManagerClient"/>.</returns>
-        public static ClusterManagerClient Create(Channel channel, ClusterManagerSettings settings = null)
+        public static ClusterManagerClient Create(grpccore::Channel channel, ClusterManagerSettings settings = null)
         {
-            GaxPreconditions.CheckNotNull(channel, nameof(channel));
+            gax::GaxPreconditions.CheckNotNull(channel, nameof(channel));
             ClusterManager.ClusterManagerClient grpcClient = new ClusterManager.ClusterManagerClient(channel);
             return new ClusterManagerClientImpl(grpcClient, settings);
         }
 
         /// <summary>
-        /// Shuts down any channels automatically created by <see cref="Create(ServiceEndpoint, ClusterManagerSettings)"/>
-        /// and <see cref="CreateAsync(ServiceEndpoint, ClusterManagerSettings)"/>. Channels which weren't automatically
+        /// Shuts down any channels automatically created by <see cref="Create(gaxgrpc::ServiceEndpoint, ClusterManagerSettings)"/>
+        /// and <see cref="CreateAsync(gaxgrpc::ServiceEndpoint, ClusterManagerSettings)"/>. Channels which weren't automatically
         /// created are not affected.
         /// </summary>
-        /// <remarks>After calling this method, further calls to <see cref="Create(ServiceEndpoint, ClusterManagerSettings)"/>
-        /// and <see cref="CreateAsync(ServiceEndpoint, ClusterManagerSettings)"/> will create new channels, which could
+        /// <remarks>After calling this method, further calls to <see cref="Create(gaxgrpc::ServiceEndpoint, ClusterManagerSettings)"/>
+        /// and <see cref="CreateAsync(gaxgrpc::ServiceEndpoint, ClusterManagerSettings)"/> will create new channels, which could
         /// in turn be shut down by another call to this method.</remarks>
         /// <returns>A task representing the asynchronous shutdown operation.</returns>
-        public static Task ShutdownDefaultChannelsAsync() => s_channelPool.ShutdownChannelsAsync();
+        public static stt::Task ShutdownDefaultChannelsAsync() => s_channelPool.ShutdownChannelsAsync();
 
         /// <summary>
         /// The underlying gRPC ClusterManager client.
         /// </summary>
         public virtual ClusterManager.ClusterManagerClient GrpcClient
         {
-            get { throw new NotImplementedException(); }
+            get { throw new s::NotImplementedException(); }
         }
 
         /// <summary>
@@ -1145,14 +1145,14 @@ namespace Google.Cloud.Container.V1
         /// <returns>
         /// A Task containing the RPC response.
         /// </returns>
-        public virtual Task<ListClustersResponse> ListClustersAsync(
+        public virtual stt::Task<ListClustersResponse> ListClustersAsync(
             string projectId,
             string zone,
-            CallSettings callSettings = null) => ListClustersAsync(
+            gaxgrpc::CallSettings callSettings = null) => ListClustersAsync(
                 new ListClustersRequest
                 {
-                    ProjectId = GaxPreconditions.CheckNotNullOrEmpty(projectId, nameof(projectId)),
-                    Zone = GaxPreconditions.CheckNotNullOrEmpty(zone, nameof(zone)),
+                    ProjectId = gax::GaxPreconditions.CheckNotNullOrEmpty(projectId, nameof(projectId)),
+                    Zone = gax::GaxPreconditions.CheckNotNullOrEmpty(zone, nameof(zone)),
                 },
                 callSettings);
 
@@ -1170,18 +1170,18 @@ namespace Google.Cloud.Container.V1
         /// resides, or "-" for all zones.
         /// </param>
         /// <param name="cancellationToken">
-        /// A <see cref="CancellationToken"/> to use for this RPC.
+        /// A <see cref="st::CancellationToken"/> to use for this RPC.
         /// </param>
         /// <returns>
         /// A Task containing the RPC response.
         /// </returns>
-        public virtual Task<ListClustersResponse> ListClustersAsync(
+        public virtual stt::Task<ListClustersResponse> ListClustersAsync(
             string projectId,
             string zone,
-            CancellationToken cancellationToken) => ListClustersAsync(
+            st::CancellationToken cancellationToken) => ListClustersAsync(
                 projectId,
                 zone,
-                CallSettings.FromCancellationToken(cancellationToken));
+                gaxgrpc::CallSettings.FromCancellationToken(cancellationToken));
 
         /// <summary>
         /// Lists all clusters owned by a project in either the specified zone or all
@@ -1205,11 +1205,11 @@ namespace Google.Cloud.Container.V1
         public virtual ListClustersResponse ListClusters(
             string projectId,
             string zone,
-            CallSettings callSettings = null) => ListClusters(
+            gaxgrpc::CallSettings callSettings = null) => ListClusters(
                 new ListClustersRequest
                 {
-                    ProjectId = GaxPreconditions.CheckNotNullOrEmpty(projectId, nameof(projectId)),
-                    Zone = GaxPreconditions.CheckNotNullOrEmpty(zone, nameof(zone)),
+                    ProjectId = gax::GaxPreconditions.CheckNotNullOrEmpty(projectId, nameof(projectId)),
+                    Zone = gax::GaxPreconditions.CheckNotNullOrEmpty(zone, nameof(zone)),
                 },
                 callSettings);
 
@@ -1226,11 +1226,11 @@ namespace Google.Cloud.Container.V1
         /// <returns>
         /// A Task containing the RPC response.
         /// </returns>
-        public virtual Task<ListClustersResponse> ListClustersAsync(
+        public virtual stt::Task<ListClustersResponse> ListClustersAsync(
             ListClustersRequest request,
-            CallSettings callSettings = null)
+            gaxgrpc::CallSettings callSettings = null)
         {
-            throw new NotImplementedException();
+            throw new s::NotImplementedException();
         }
 
         /// <summary>
@@ -1241,16 +1241,16 @@ namespace Google.Cloud.Container.V1
         /// The request object containing all of the parameters for the API call.
         /// </param>
         /// <param name="cancellationToken">
-        /// A <see cref="CancellationToken"/> to use for this RPC.
+        /// A <see cref="st::CancellationToken"/> to use for this RPC.
         /// </param>
         /// <returns>
         /// A Task containing the RPC response.
         /// </returns>
-        public virtual Task<ListClustersResponse> ListClustersAsync(
+        public virtual stt::Task<ListClustersResponse> ListClustersAsync(
             ListClustersRequest request,
-            CancellationToken cancellationToken) => ListClustersAsync(
+            st::CancellationToken cancellationToken) => ListClustersAsync(
                 request,
-                CallSettings.FromCancellationToken(cancellationToken));
+                gaxgrpc::CallSettings.FromCancellationToken(cancellationToken));
 
         /// <summary>
         /// Lists all clusters owned by a project in either the specified zone or all
@@ -1267,9 +1267,9 @@ namespace Google.Cloud.Container.V1
         /// </returns>
         public virtual ListClustersResponse ListClusters(
             ListClustersRequest request,
-            CallSettings callSettings = null)
+            gaxgrpc::CallSettings callSettings = null)
         {
-            throw new NotImplementedException();
+            throw new s::NotImplementedException();
         }
 
         /// <summary>
@@ -1293,16 +1293,16 @@ namespace Google.Cloud.Container.V1
         /// <returns>
         /// A Task containing the RPC response.
         /// </returns>
-        public virtual Task<Cluster> GetClusterAsync(
+        public virtual stt::Task<Cluster> GetClusterAsync(
             string projectId,
             string zone,
             string clusterId,
-            CallSettings callSettings = null) => GetClusterAsync(
+            gaxgrpc::CallSettings callSettings = null) => GetClusterAsync(
                 new GetClusterRequest
                 {
-                    ProjectId = GaxPreconditions.CheckNotNullOrEmpty(projectId, nameof(projectId)),
-                    Zone = GaxPreconditions.CheckNotNullOrEmpty(zone, nameof(zone)),
-                    ClusterId = GaxPreconditions.CheckNotNullOrEmpty(clusterId, nameof(clusterId)),
+                    ProjectId = gax::GaxPreconditions.CheckNotNullOrEmpty(projectId, nameof(projectId)),
+                    Zone = gax::GaxPreconditions.CheckNotNullOrEmpty(zone, nameof(zone)),
+                    ClusterId = gax::GaxPreconditions.CheckNotNullOrEmpty(clusterId, nameof(clusterId)),
                 },
                 callSettings);
 
@@ -1322,20 +1322,20 @@ namespace Google.Cloud.Container.V1
         /// The name of the cluster to retrieve.
         /// </param>
         /// <param name="cancellationToken">
-        /// A <see cref="CancellationToken"/> to use for this RPC.
+        /// A <see cref="st::CancellationToken"/> to use for this RPC.
         /// </param>
         /// <returns>
         /// A Task containing the RPC response.
         /// </returns>
-        public virtual Task<Cluster> GetClusterAsync(
+        public virtual stt::Task<Cluster> GetClusterAsync(
             string projectId,
             string zone,
             string clusterId,
-            CancellationToken cancellationToken) => GetClusterAsync(
+            st::CancellationToken cancellationToken) => GetClusterAsync(
                 projectId,
                 zone,
                 clusterId,
-                CallSettings.FromCancellationToken(cancellationToken));
+                gaxgrpc::CallSettings.FromCancellationToken(cancellationToken));
 
         /// <summary>
         /// Gets the details of a specific cluster.
@@ -1362,12 +1362,12 @@ namespace Google.Cloud.Container.V1
             string projectId,
             string zone,
             string clusterId,
-            CallSettings callSettings = null) => GetCluster(
+            gaxgrpc::CallSettings callSettings = null) => GetCluster(
                 new GetClusterRequest
                 {
-                    ProjectId = GaxPreconditions.CheckNotNullOrEmpty(projectId, nameof(projectId)),
-                    Zone = GaxPreconditions.CheckNotNullOrEmpty(zone, nameof(zone)),
-                    ClusterId = GaxPreconditions.CheckNotNullOrEmpty(clusterId, nameof(clusterId)),
+                    ProjectId = gax::GaxPreconditions.CheckNotNullOrEmpty(projectId, nameof(projectId)),
+                    Zone = gax::GaxPreconditions.CheckNotNullOrEmpty(zone, nameof(zone)),
+                    ClusterId = gax::GaxPreconditions.CheckNotNullOrEmpty(clusterId, nameof(clusterId)),
                 },
                 callSettings);
 
@@ -1383,11 +1383,11 @@ namespace Google.Cloud.Container.V1
         /// <returns>
         /// A Task containing the RPC response.
         /// </returns>
-        public virtual Task<Cluster> GetClusterAsync(
+        public virtual stt::Task<Cluster> GetClusterAsync(
             GetClusterRequest request,
-            CallSettings callSettings = null)
+            gaxgrpc::CallSettings callSettings = null)
         {
-            throw new NotImplementedException();
+            throw new s::NotImplementedException();
         }
 
         /// <summary>
@@ -1397,16 +1397,16 @@ namespace Google.Cloud.Container.V1
         /// The request object containing all of the parameters for the API call.
         /// </param>
         /// <param name="cancellationToken">
-        /// A <see cref="CancellationToken"/> to use for this RPC.
+        /// A <see cref="st::CancellationToken"/> to use for this RPC.
         /// </param>
         /// <returns>
         /// A Task containing the RPC response.
         /// </returns>
-        public virtual Task<Cluster> GetClusterAsync(
+        public virtual stt::Task<Cluster> GetClusterAsync(
             GetClusterRequest request,
-            CancellationToken cancellationToken) => GetClusterAsync(
+            st::CancellationToken cancellationToken) => GetClusterAsync(
                 request,
-                CallSettings.FromCancellationToken(cancellationToken));
+                gaxgrpc::CallSettings.FromCancellationToken(cancellationToken));
 
         /// <summary>
         /// Gets the details of a specific cluster.
@@ -1422,9 +1422,9 @@ namespace Google.Cloud.Container.V1
         /// </returns>
         public virtual Cluster GetCluster(
             GetClusterRequest request,
-            CallSettings callSettings = null)
+            gaxgrpc::CallSettings callSettings = null)
         {
-            throw new NotImplementedException();
+            throw new s::NotImplementedException();
         }
 
         /// <summary>
@@ -1461,16 +1461,16 @@ namespace Google.Cloud.Container.V1
         /// <returns>
         /// A Task containing the RPC response.
         /// </returns>
-        public virtual Task<Operation> CreateClusterAsync(
+        public virtual stt::Task<Operation> CreateClusterAsync(
             string projectId,
             string zone,
             Cluster cluster,
-            CallSettings callSettings = null) => CreateClusterAsync(
+            gaxgrpc::CallSettings callSettings = null) => CreateClusterAsync(
                 new CreateClusterRequest
                 {
-                    ProjectId = GaxPreconditions.CheckNotNullOrEmpty(projectId, nameof(projectId)),
-                    Zone = GaxPreconditions.CheckNotNullOrEmpty(zone, nameof(zone)),
-                    Cluster = GaxPreconditions.CheckNotNull(cluster, nameof(cluster)),
+                    ProjectId = gax::GaxPreconditions.CheckNotNullOrEmpty(projectId, nameof(projectId)),
+                    Zone = gax::GaxPreconditions.CheckNotNullOrEmpty(zone, nameof(zone)),
+                    Cluster = gax::GaxPreconditions.CheckNotNull(cluster, nameof(cluster)),
                 },
                 callSettings);
 
@@ -1503,20 +1503,20 @@ namespace Google.Cloud.Container.V1
         /// resource](/container-engine/reference/rest/v1/projects.zones.clusters)
         /// </param>
         /// <param name="cancellationToken">
-        /// A <see cref="CancellationToken"/> to use for this RPC.
+        /// A <see cref="st::CancellationToken"/> to use for this RPC.
         /// </param>
         /// <returns>
         /// A Task containing the RPC response.
         /// </returns>
-        public virtual Task<Operation> CreateClusterAsync(
+        public virtual stt::Task<Operation> CreateClusterAsync(
             string projectId,
             string zone,
             Cluster cluster,
-            CancellationToken cancellationToken) => CreateClusterAsync(
+            st::CancellationToken cancellationToken) => CreateClusterAsync(
                 projectId,
                 zone,
                 cluster,
-                CallSettings.FromCancellationToken(cancellationToken));
+                gaxgrpc::CallSettings.FromCancellationToken(cancellationToken));
 
         /// <summary>
         /// Creates a cluster, consisting of the specified number and type of Google
@@ -1556,12 +1556,12 @@ namespace Google.Cloud.Container.V1
             string projectId,
             string zone,
             Cluster cluster,
-            CallSettings callSettings = null) => CreateCluster(
+            gaxgrpc::CallSettings callSettings = null) => CreateCluster(
                 new CreateClusterRequest
                 {
-                    ProjectId = GaxPreconditions.CheckNotNullOrEmpty(projectId, nameof(projectId)),
-                    Zone = GaxPreconditions.CheckNotNullOrEmpty(zone, nameof(zone)),
-                    Cluster = GaxPreconditions.CheckNotNull(cluster, nameof(cluster)),
+                    ProjectId = gax::GaxPreconditions.CheckNotNullOrEmpty(projectId, nameof(projectId)),
+                    Zone = gax::GaxPreconditions.CheckNotNullOrEmpty(zone, nameof(zone)),
+                    Cluster = gax::GaxPreconditions.CheckNotNull(cluster, nameof(cluster)),
                 },
                 callSettings);
 
@@ -1589,11 +1589,11 @@ namespace Google.Cloud.Container.V1
         /// <returns>
         /// A Task containing the RPC response.
         /// </returns>
-        public virtual Task<Operation> CreateClusterAsync(
+        public virtual stt::Task<Operation> CreateClusterAsync(
             CreateClusterRequest request,
-            CallSettings callSettings = null)
+            gaxgrpc::CallSettings callSettings = null)
         {
-            throw new NotImplementedException();
+            throw new s::NotImplementedException();
         }
 
         /// <summary>
@@ -1615,16 +1615,16 @@ namespace Google.Cloud.Container.V1
         /// The request object containing all of the parameters for the API call.
         /// </param>
         /// <param name="cancellationToken">
-        /// A <see cref="CancellationToken"/> to use for this RPC.
+        /// A <see cref="st::CancellationToken"/> to use for this RPC.
         /// </param>
         /// <returns>
         /// A Task containing the RPC response.
         /// </returns>
-        public virtual Task<Operation> CreateClusterAsync(
+        public virtual stt::Task<Operation> CreateClusterAsync(
             CreateClusterRequest request,
-            CancellationToken cancellationToken) => CreateClusterAsync(
+            st::CancellationToken cancellationToken) => CreateClusterAsync(
                 request,
-                CallSettings.FromCancellationToken(cancellationToken));
+                gaxgrpc::CallSettings.FromCancellationToken(cancellationToken));
 
         /// <summary>
         /// Creates a cluster, consisting of the specified number and type of Google
@@ -1652,9 +1652,9 @@ namespace Google.Cloud.Container.V1
         /// </returns>
         public virtual Operation CreateCluster(
             CreateClusterRequest request,
-            CallSettings callSettings = null)
+            gaxgrpc::CallSettings callSettings = null)
         {
-            throw new NotImplementedException();
+            throw new s::NotImplementedException();
         }
 
         /// <summary>
@@ -1681,18 +1681,18 @@ namespace Google.Cloud.Container.V1
         /// <returns>
         /// A Task containing the RPC response.
         /// </returns>
-        public virtual Task<Operation> UpdateClusterAsync(
+        public virtual stt::Task<Operation> UpdateClusterAsync(
             string projectId,
             string zone,
             string clusterId,
             ClusterUpdate update,
-            CallSettings callSettings = null) => UpdateClusterAsync(
+            gaxgrpc::CallSettings callSettings = null) => UpdateClusterAsync(
                 new UpdateClusterRequest
                 {
-                    ProjectId = GaxPreconditions.CheckNotNullOrEmpty(projectId, nameof(projectId)),
-                    Zone = GaxPreconditions.CheckNotNullOrEmpty(zone, nameof(zone)),
-                    ClusterId = GaxPreconditions.CheckNotNullOrEmpty(clusterId, nameof(clusterId)),
-                    Update = GaxPreconditions.CheckNotNull(update, nameof(update)),
+                    ProjectId = gax::GaxPreconditions.CheckNotNullOrEmpty(projectId, nameof(projectId)),
+                    Zone = gax::GaxPreconditions.CheckNotNullOrEmpty(zone, nameof(zone)),
+                    ClusterId = gax::GaxPreconditions.CheckNotNullOrEmpty(clusterId, nameof(clusterId)),
+                    Update = gax::GaxPreconditions.CheckNotNull(update, nameof(update)),
                 },
                 callSettings);
 
@@ -1715,22 +1715,22 @@ namespace Google.Cloud.Container.V1
         /// A description of the update.
         /// </param>
         /// <param name="cancellationToken">
-        /// A <see cref="CancellationToken"/> to use for this RPC.
+        /// A <see cref="st::CancellationToken"/> to use for this RPC.
         /// </param>
         /// <returns>
         /// A Task containing the RPC response.
         /// </returns>
-        public virtual Task<Operation> UpdateClusterAsync(
+        public virtual stt::Task<Operation> UpdateClusterAsync(
             string projectId,
             string zone,
             string clusterId,
             ClusterUpdate update,
-            CancellationToken cancellationToken) => UpdateClusterAsync(
+            st::CancellationToken cancellationToken) => UpdateClusterAsync(
                 projectId,
                 zone,
                 clusterId,
                 update,
-                CallSettings.FromCancellationToken(cancellationToken));
+                gaxgrpc::CallSettings.FromCancellationToken(cancellationToken));
 
         /// <summary>
         /// Updates the settings of a specific cluster.
@@ -1761,13 +1761,13 @@ namespace Google.Cloud.Container.V1
             string zone,
             string clusterId,
             ClusterUpdate update,
-            CallSettings callSettings = null) => UpdateCluster(
+            gaxgrpc::CallSettings callSettings = null) => UpdateCluster(
                 new UpdateClusterRequest
                 {
-                    ProjectId = GaxPreconditions.CheckNotNullOrEmpty(projectId, nameof(projectId)),
-                    Zone = GaxPreconditions.CheckNotNullOrEmpty(zone, nameof(zone)),
-                    ClusterId = GaxPreconditions.CheckNotNullOrEmpty(clusterId, nameof(clusterId)),
-                    Update = GaxPreconditions.CheckNotNull(update, nameof(update)),
+                    ProjectId = gax::GaxPreconditions.CheckNotNullOrEmpty(projectId, nameof(projectId)),
+                    Zone = gax::GaxPreconditions.CheckNotNullOrEmpty(zone, nameof(zone)),
+                    ClusterId = gax::GaxPreconditions.CheckNotNullOrEmpty(clusterId, nameof(clusterId)),
+                    Update = gax::GaxPreconditions.CheckNotNull(update, nameof(update)),
                 },
                 callSettings);
 
@@ -1783,11 +1783,11 @@ namespace Google.Cloud.Container.V1
         /// <returns>
         /// A Task containing the RPC response.
         /// </returns>
-        public virtual Task<Operation> UpdateClusterAsync(
+        public virtual stt::Task<Operation> UpdateClusterAsync(
             UpdateClusterRequest request,
-            CallSettings callSettings = null)
+            gaxgrpc::CallSettings callSettings = null)
         {
-            throw new NotImplementedException();
+            throw new s::NotImplementedException();
         }
 
         /// <summary>
@@ -1797,16 +1797,16 @@ namespace Google.Cloud.Container.V1
         /// The request object containing all of the parameters for the API call.
         /// </param>
         /// <param name="cancellationToken">
-        /// A <see cref="CancellationToken"/> to use for this RPC.
+        /// A <see cref="st::CancellationToken"/> to use for this RPC.
         /// </param>
         /// <returns>
         /// A Task containing the RPC response.
         /// </returns>
-        public virtual Task<Operation> UpdateClusterAsync(
+        public virtual stt::Task<Operation> UpdateClusterAsync(
             UpdateClusterRequest request,
-            CancellationToken cancellationToken) => UpdateClusterAsync(
+            st::CancellationToken cancellationToken) => UpdateClusterAsync(
                 request,
-                CallSettings.FromCancellationToken(cancellationToken));
+                gaxgrpc::CallSettings.FromCancellationToken(cancellationToken));
 
         /// <summary>
         /// Updates the settings of a specific cluster.
@@ -1822,9 +1822,9 @@ namespace Google.Cloud.Container.V1
         /// </returns>
         public virtual Operation UpdateCluster(
             UpdateClusterRequest request,
-            CallSettings callSettings = null)
+            gaxgrpc::CallSettings callSettings = null)
         {
-            throw new NotImplementedException();
+            throw new s::NotImplementedException();
         }
 
         /// <summary>
@@ -1839,11 +1839,11 @@ namespace Google.Cloud.Container.V1
         /// <returns>
         /// A Task containing the RPC response.
         /// </returns>
-        public virtual Task<Operation> UpdateNodePoolAsync(
+        public virtual stt::Task<Operation> UpdateNodePoolAsync(
             UpdateNodePoolRequest request,
-            CallSettings callSettings = null)
+            gaxgrpc::CallSettings callSettings = null)
         {
-            throw new NotImplementedException();
+            throw new s::NotImplementedException();
         }
 
         /// <summary>
@@ -1853,16 +1853,16 @@ namespace Google.Cloud.Container.V1
         /// The request object containing all of the parameters for the API call.
         /// </param>
         /// <param name="cancellationToken">
-        /// A <see cref="CancellationToken"/> to use for this RPC.
+        /// A <see cref="st::CancellationToken"/> to use for this RPC.
         /// </param>
         /// <returns>
         /// A Task containing the RPC response.
         /// </returns>
-        public virtual Task<Operation> UpdateNodePoolAsync(
+        public virtual stt::Task<Operation> UpdateNodePoolAsync(
             UpdateNodePoolRequest request,
-            CancellationToken cancellationToken) => UpdateNodePoolAsync(
+            st::CancellationToken cancellationToken) => UpdateNodePoolAsync(
                 request,
-                CallSettings.FromCancellationToken(cancellationToken));
+                gaxgrpc::CallSettings.FromCancellationToken(cancellationToken));
 
         /// <summary>
         /// Updates the version and/or image type of a specific node pool.
@@ -1878,9 +1878,9 @@ namespace Google.Cloud.Container.V1
         /// </returns>
         public virtual Operation UpdateNodePool(
             UpdateNodePoolRequest request,
-            CallSettings callSettings = null)
+            gaxgrpc::CallSettings callSettings = null)
         {
-            throw new NotImplementedException();
+            throw new s::NotImplementedException();
         }
 
         /// <summary>
@@ -1895,11 +1895,11 @@ namespace Google.Cloud.Container.V1
         /// <returns>
         /// A Task containing the RPC response.
         /// </returns>
-        public virtual Task<Operation> SetNodePoolAutoscalingAsync(
+        public virtual stt::Task<Operation> SetNodePoolAutoscalingAsync(
             SetNodePoolAutoscalingRequest request,
-            CallSettings callSettings = null)
+            gaxgrpc::CallSettings callSettings = null)
         {
-            throw new NotImplementedException();
+            throw new s::NotImplementedException();
         }
 
         /// <summary>
@@ -1909,16 +1909,16 @@ namespace Google.Cloud.Container.V1
         /// The request object containing all of the parameters for the API call.
         /// </param>
         /// <param name="cancellationToken">
-        /// A <see cref="CancellationToken"/> to use for this RPC.
+        /// A <see cref="st::CancellationToken"/> to use for this RPC.
         /// </param>
         /// <returns>
         /// A Task containing the RPC response.
         /// </returns>
-        public virtual Task<Operation> SetNodePoolAutoscalingAsync(
+        public virtual stt::Task<Operation> SetNodePoolAutoscalingAsync(
             SetNodePoolAutoscalingRequest request,
-            CancellationToken cancellationToken) => SetNodePoolAutoscalingAsync(
+            st::CancellationToken cancellationToken) => SetNodePoolAutoscalingAsync(
                 request,
-                CallSettings.FromCancellationToken(cancellationToken));
+                gaxgrpc::CallSettings.FromCancellationToken(cancellationToken));
 
         /// <summary>
         /// Sets the autoscaling settings of a specific node pool.
@@ -1934,9 +1934,9 @@ namespace Google.Cloud.Container.V1
         /// </returns>
         public virtual Operation SetNodePoolAutoscaling(
             SetNodePoolAutoscalingRequest request,
-            CallSettings callSettings = null)
+            gaxgrpc::CallSettings callSettings = null)
         {
-            throw new NotImplementedException();
+            throw new s::NotImplementedException();
         }
 
         /// <summary>
@@ -1967,18 +1967,18 @@ namespace Google.Cloud.Container.V1
         /// <returns>
         /// A Task containing the RPC response.
         /// </returns>
-        public virtual Task<Operation> SetLoggingServiceAsync(
+        public virtual stt::Task<Operation> SetLoggingServiceAsync(
             string projectId,
             string zone,
             string clusterId,
             string loggingService,
-            CallSettings callSettings = null) => SetLoggingServiceAsync(
+            gaxgrpc::CallSettings callSettings = null) => SetLoggingServiceAsync(
                 new SetLoggingServiceRequest
                 {
-                    ProjectId = GaxPreconditions.CheckNotNullOrEmpty(projectId, nameof(projectId)),
-                    Zone = GaxPreconditions.CheckNotNullOrEmpty(zone, nameof(zone)),
-                    ClusterId = GaxPreconditions.CheckNotNullOrEmpty(clusterId, nameof(clusterId)),
-                    LoggingService = GaxPreconditions.CheckNotNullOrEmpty(loggingService, nameof(loggingService)),
+                    ProjectId = gax::GaxPreconditions.CheckNotNullOrEmpty(projectId, nameof(projectId)),
+                    Zone = gax::GaxPreconditions.CheckNotNullOrEmpty(zone, nameof(zone)),
+                    ClusterId = gax::GaxPreconditions.CheckNotNullOrEmpty(clusterId, nameof(clusterId)),
+                    LoggingService = gax::GaxPreconditions.CheckNotNullOrEmpty(loggingService, nameof(loggingService)),
                 },
                 callSettings);
 
@@ -2005,22 +2005,22 @@ namespace Google.Cloud.Container.V1
         /// * "none" - no metrics will be exported from the cluster
         /// </param>
         /// <param name="cancellationToken">
-        /// A <see cref="CancellationToken"/> to use for this RPC.
+        /// A <see cref="st::CancellationToken"/> to use for this RPC.
         /// </param>
         /// <returns>
         /// A Task containing the RPC response.
         /// </returns>
-        public virtual Task<Operation> SetLoggingServiceAsync(
+        public virtual stt::Task<Operation> SetLoggingServiceAsync(
             string projectId,
             string zone,
             string clusterId,
             string loggingService,
-            CancellationToken cancellationToken) => SetLoggingServiceAsync(
+            st::CancellationToken cancellationToken) => SetLoggingServiceAsync(
                 projectId,
                 zone,
                 clusterId,
                 loggingService,
-                CallSettings.FromCancellationToken(cancellationToken));
+                gaxgrpc::CallSettings.FromCancellationToken(cancellationToken));
 
         /// <summary>
         /// Sets the logging service of a specific cluster.
@@ -2055,13 +2055,13 @@ namespace Google.Cloud.Container.V1
             string zone,
             string clusterId,
             string loggingService,
-            CallSettings callSettings = null) => SetLoggingService(
+            gaxgrpc::CallSettings callSettings = null) => SetLoggingService(
                 new SetLoggingServiceRequest
                 {
-                    ProjectId = GaxPreconditions.CheckNotNullOrEmpty(projectId, nameof(projectId)),
-                    Zone = GaxPreconditions.CheckNotNullOrEmpty(zone, nameof(zone)),
-                    ClusterId = GaxPreconditions.CheckNotNullOrEmpty(clusterId, nameof(clusterId)),
-                    LoggingService = GaxPreconditions.CheckNotNullOrEmpty(loggingService, nameof(loggingService)),
+                    ProjectId = gax::GaxPreconditions.CheckNotNullOrEmpty(projectId, nameof(projectId)),
+                    Zone = gax::GaxPreconditions.CheckNotNullOrEmpty(zone, nameof(zone)),
+                    ClusterId = gax::GaxPreconditions.CheckNotNullOrEmpty(clusterId, nameof(clusterId)),
+                    LoggingService = gax::GaxPreconditions.CheckNotNullOrEmpty(loggingService, nameof(loggingService)),
                 },
                 callSettings);
 
@@ -2077,11 +2077,11 @@ namespace Google.Cloud.Container.V1
         /// <returns>
         /// A Task containing the RPC response.
         /// </returns>
-        public virtual Task<Operation> SetLoggingServiceAsync(
+        public virtual stt::Task<Operation> SetLoggingServiceAsync(
             SetLoggingServiceRequest request,
-            CallSettings callSettings = null)
+            gaxgrpc::CallSettings callSettings = null)
         {
-            throw new NotImplementedException();
+            throw new s::NotImplementedException();
         }
 
         /// <summary>
@@ -2091,16 +2091,16 @@ namespace Google.Cloud.Container.V1
         /// The request object containing all of the parameters for the API call.
         /// </param>
         /// <param name="cancellationToken">
-        /// A <see cref="CancellationToken"/> to use for this RPC.
+        /// A <see cref="st::CancellationToken"/> to use for this RPC.
         /// </param>
         /// <returns>
         /// A Task containing the RPC response.
         /// </returns>
-        public virtual Task<Operation> SetLoggingServiceAsync(
+        public virtual stt::Task<Operation> SetLoggingServiceAsync(
             SetLoggingServiceRequest request,
-            CancellationToken cancellationToken) => SetLoggingServiceAsync(
+            st::CancellationToken cancellationToken) => SetLoggingServiceAsync(
                 request,
-                CallSettings.FromCancellationToken(cancellationToken));
+                gaxgrpc::CallSettings.FromCancellationToken(cancellationToken));
 
         /// <summary>
         /// Sets the logging service of a specific cluster.
@@ -2116,9 +2116,9 @@ namespace Google.Cloud.Container.V1
         /// </returns>
         public virtual Operation SetLoggingService(
             SetLoggingServiceRequest request,
-            CallSettings callSettings = null)
+            gaxgrpc::CallSettings callSettings = null)
         {
-            throw new NotImplementedException();
+            throw new s::NotImplementedException();
         }
 
         /// <summary>
@@ -2149,18 +2149,18 @@ namespace Google.Cloud.Container.V1
         /// <returns>
         /// A Task containing the RPC response.
         /// </returns>
-        public virtual Task<Operation> SetMonitoringServiceAsync(
+        public virtual stt::Task<Operation> SetMonitoringServiceAsync(
             string projectId,
             string zone,
             string clusterId,
             string monitoringService,
-            CallSettings callSettings = null) => SetMonitoringServiceAsync(
+            gaxgrpc::CallSettings callSettings = null) => SetMonitoringServiceAsync(
                 new SetMonitoringServiceRequest
                 {
-                    ProjectId = GaxPreconditions.CheckNotNullOrEmpty(projectId, nameof(projectId)),
-                    Zone = GaxPreconditions.CheckNotNullOrEmpty(zone, nameof(zone)),
-                    ClusterId = GaxPreconditions.CheckNotNullOrEmpty(clusterId, nameof(clusterId)),
-                    MonitoringService = GaxPreconditions.CheckNotNullOrEmpty(monitoringService, nameof(monitoringService)),
+                    ProjectId = gax::GaxPreconditions.CheckNotNullOrEmpty(projectId, nameof(projectId)),
+                    Zone = gax::GaxPreconditions.CheckNotNullOrEmpty(zone, nameof(zone)),
+                    ClusterId = gax::GaxPreconditions.CheckNotNullOrEmpty(clusterId, nameof(clusterId)),
+                    MonitoringService = gax::GaxPreconditions.CheckNotNullOrEmpty(monitoringService, nameof(monitoringService)),
                 },
                 callSettings);
 
@@ -2187,22 +2187,22 @@ namespace Google.Cloud.Container.V1
         /// * "none" - no metrics will be exported from the cluster
         /// </param>
         /// <param name="cancellationToken">
-        /// A <see cref="CancellationToken"/> to use for this RPC.
+        /// A <see cref="st::CancellationToken"/> to use for this RPC.
         /// </param>
         /// <returns>
         /// A Task containing the RPC response.
         /// </returns>
-        public virtual Task<Operation> SetMonitoringServiceAsync(
+        public virtual stt::Task<Operation> SetMonitoringServiceAsync(
             string projectId,
             string zone,
             string clusterId,
             string monitoringService,
-            CancellationToken cancellationToken) => SetMonitoringServiceAsync(
+            st::CancellationToken cancellationToken) => SetMonitoringServiceAsync(
                 projectId,
                 zone,
                 clusterId,
                 monitoringService,
-                CallSettings.FromCancellationToken(cancellationToken));
+                gaxgrpc::CallSettings.FromCancellationToken(cancellationToken));
 
         /// <summary>
         /// Sets the monitoring service of a specific cluster.
@@ -2237,13 +2237,13 @@ namespace Google.Cloud.Container.V1
             string zone,
             string clusterId,
             string monitoringService,
-            CallSettings callSettings = null) => SetMonitoringService(
+            gaxgrpc::CallSettings callSettings = null) => SetMonitoringService(
                 new SetMonitoringServiceRequest
                 {
-                    ProjectId = GaxPreconditions.CheckNotNullOrEmpty(projectId, nameof(projectId)),
-                    Zone = GaxPreconditions.CheckNotNullOrEmpty(zone, nameof(zone)),
-                    ClusterId = GaxPreconditions.CheckNotNullOrEmpty(clusterId, nameof(clusterId)),
-                    MonitoringService = GaxPreconditions.CheckNotNullOrEmpty(monitoringService, nameof(monitoringService)),
+                    ProjectId = gax::GaxPreconditions.CheckNotNullOrEmpty(projectId, nameof(projectId)),
+                    Zone = gax::GaxPreconditions.CheckNotNullOrEmpty(zone, nameof(zone)),
+                    ClusterId = gax::GaxPreconditions.CheckNotNullOrEmpty(clusterId, nameof(clusterId)),
+                    MonitoringService = gax::GaxPreconditions.CheckNotNullOrEmpty(monitoringService, nameof(monitoringService)),
                 },
                 callSettings);
 
@@ -2259,11 +2259,11 @@ namespace Google.Cloud.Container.V1
         /// <returns>
         /// A Task containing the RPC response.
         /// </returns>
-        public virtual Task<Operation> SetMonitoringServiceAsync(
+        public virtual stt::Task<Operation> SetMonitoringServiceAsync(
             SetMonitoringServiceRequest request,
-            CallSettings callSettings = null)
+            gaxgrpc::CallSettings callSettings = null)
         {
-            throw new NotImplementedException();
+            throw new s::NotImplementedException();
         }
 
         /// <summary>
@@ -2273,16 +2273,16 @@ namespace Google.Cloud.Container.V1
         /// The request object containing all of the parameters for the API call.
         /// </param>
         /// <param name="cancellationToken">
-        /// A <see cref="CancellationToken"/> to use for this RPC.
+        /// A <see cref="st::CancellationToken"/> to use for this RPC.
         /// </param>
         /// <returns>
         /// A Task containing the RPC response.
         /// </returns>
-        public virtual Task<Operation> SetMonitoringServiceAsync(
+        public virtual stt::Task<Operation> SetMonitoringServiceAsync(
             SetMonitoringServiceRequest request,
-            CancellationToken cancellationToken) => SetMonitoringServiceAsync(
+            st::CancellationToken cancellationToken) => SetMonitoringServiceAsync(
                 request,
-                CallSettings.FromCancellationToken(cancellationToken));
+                gaxgrpc::CallSettings.FromCancellationToken(cancellationToken));
 
         /// <summary>
         /// Sets the monitoring service of a specific cluster.
@@ -2298,9 +2298,9 @@ namespace Google.Cloud.Container.V1
         /// </returns>
         public virtual Operation SetMonitoringService(
             SetMonitoringServiceRequest request,
-            CallSettings callSettings = null)
+            gaxgrpc::CallSettings callSettings = null)
         {
-            throw new NotImplementedException();
+            throw new s::NotImplementedException();
         }
 
         /// <summary>
@@ -2328,18 +2328,18 @@ namespace Google.Cloud.Container.V1
         /// <returns>
         /// A Task containing the RPC response.
         /// </returns>
-        public virtual Task<Operation> SetAddonsConfigAsync(
+        public virtual stt::Task<Operation> SetAddonsConfigAsync(
             string projectId,
             string zone,
             string clusterId,
             AddonsConfig addonsConfig,
-            CallSettings callSettings = null) => SetAddonsConfigAsync(
+            gaxgrpc::CallSettings callSettings = null) => SetAddonsConfigAsync(
                 new SetAddonsConfigRequest
                 {
-                    ProjectId = GaxPreconditions.CheckNotNullOrEmpty(projectId, nameof(projectId)),
-                    Zone = GaxPreconditions.CheckNotNullOrEmpty(zone, nameof(zone)),
-                    ClusterId = GaxPreconditions.CheckNotNullOrEmpty(clusterId, nameof(clusterId)),
-                    AddonsConfig = GaxPreconditions.CheckNotNull(addonsConfig, nameof(addonsConfig)),
+                    ProjectId = gax::GaxPreconditions.CheckNotNullOrEmpty(projectId, nameof(projectId)),
+                    Zone = gax::GaxPreconditions.CheckNotNullOrEmpty(zone, nameof(zone)),
+                    ClusterId = gax::GaxPreconditions.CheckNotNullOrEmpty(clusterId, nameof(clusterId)),
+                    AddonsConfig = gax::GaxPreconditions.CheckNotNull(addonsConfig, nameof(addonsConfig)),
                 },
                 callSettings);
 
@@ -2363,22 +2363,22 @@ namespace Google.Cloud.Container.V1
         /// cluster.
         /// </param>
         /// <param name="cancellationToken">
-        /// A <see cref="CancellationToken"/> to use for this RPC.
+        /// A <see cref="st::CancellationToken"/> to use for this RPC.
         /// </param>
         /// <returns>
         /// A Task containing the RPC response.
         /// </returns>
-        public virtual Task<Operation> SetAddonsConfigAsync(
+        public virtual stt::Task<Operation> SetAddonsConfigAsync(
             string projectId,
             string zone,
             string clusterId,
             AddonsConfig addonsConfig,
-            CancellationToken cancellationToken) => SetAddonsConfigAsync(
+            st::CancellationToken cancellationToken) => SetAddonsConfigAsync(
                 projectId,
                 zone,
                 clusterId,
                 addonsConfig,
-                CallSettings.FromCancellationToken(cancellationToken));
+                gaxgrpc::CallSettings.FromCancellationToken(cancellationToken));
 
         /// <summary>
         /// Sets the addons of a specific cluster.
@@ -2410,13 +2410,13 @@ namespace Google.Cloud.Container.V1
             string zone,
             string clusterId,
             AddonsConfig addonsConfig,
-            CallSettings callSettings = null) => SetAddonsConfig(
+            gaxgrpc::CallSettings callSettings = null) => SetAddonsConfig(
                 new SetAddonsConfigRequest
                 {
-                    ProjectId = GaxPreconditions.CheckNotNullOrEmpty(projectId, nameof(projectId)),
-                    Zone = GaxPreconditions.CheckNotNullOrEmpty(zone, nameof(zone)),
-                    ClusterId = GaxPreconditions.CheckNotNullOrEmpty(clusterId, nameof(clusterId)),
-                    AddonsConfig = GaxPreconditions.CheckNotNull(addonsConfig, nameof(addonsConfig)),
+                    ProjectId = gax::GaxPreconditions.CheckNotNullOrEmpty(projectId, nameof(projectId)),
+                    Zone = gax::GaxPreconditions.CheckNotNullOrEmpty(zone, nameof(zone)),
+                    ClusterId = gax::GaxPreconditions.CheckNotNullOrEmpty(clusterId, nameof(clusterId)),
+                    AddonsConfig = gax::GaxPreconditions.CheckNotNull(addonsConfig, nameof(addonsConfig)),
                 },
                 callSettings);
 
@@ -2432,11 +2432,11 @@ namespace Google.Cloud.Container.V1
         /// <returns>
         /// A Task containing the RPC response.
         /// </returns>
-        public virtual Task<Operation> SetAddonsConfigAsync(
+        public virtual stt::Task<Operation> SetAddonsConfigAsync(
             SetAddonsConfigRequest request,
-            CallSettings callSettings = null)
+            gaxgrpc::CallSettings callSettings = null)
         {
-            throw new NotImplementedException();
+            throw new s::NotImplementedException();
         }
 
         /// <summary>
@@ -2446,16 +2446,16 @@ namespace Google.Cloud.Container.V1
         /// The request object containing all of the parameters for the API call.
         /// </param>
         /// <param name="cancellationToken">
-        /// A <see cref="CancellationToken"/> to use for this RPC.
+        /// A <see cref="st::CancellationToken"/> to use for this RPC.
         /// </param>
         /// <returns>
         /// A Task containing the RPC response.
         /// </returns>
-        public virtual Task<Operation> SetAddonsConfigAsync(
+        public virtual stt::Task<Operation> SetAddonsConfigAsync(
             SetAddonsConfigRequest request,
-            CancellationToken cancellationToken) => SetAddonsConfigAsync(
+            st::CancellationToken cancellationToken) => SetAddonsConfigAsync(
                 request,
-                CallSettings.FromCancellationToken(cancellationToken));
+                gaxgrpc::CallSettings.FromCancellationToken(cancellationToken));
 
         /// <summary>
         /// Sets the addons of a specific cluster.
@@ -2471,9 +2471,9 @@ namespace Google.Cloud.Container.V1
         /// </returns>
         public virtual Operation SetAddonsConfig(
             SetAddonsConfigRequest request,
-            CallSettings callSettings = null)
+            gaxgrpc::CallSettings callSettings = null)
         {
-            throw new NotImplementedException();
+            throw new s::NotImplementedException();
         }
 
         /// <summary>
@@ -2506,18 +2506,18 @@ namespace Google.Cloud.Container.V1
         /// <returns>
         /// A Task containing the RPC response.
         /// </returns>
-        public virtual Task<Operation> SetLocationsAsync(
+        public virtual stt::Task<Operation> SetLocationsAsync(
             string projectId,
             string zone,
             string clusterId,
-            IEnumerable<string> locations,
-            CallSettings callSettings = null) => SetLocationsAsync(
+            scg::IEnumerable<string> locations,
+            gaxgrpc::CallSettings callSettings = null) => SetLocationsAsync(
                 new SetLocationsRequest
                 {
-                    ProjectId = GaxPreconditions.CheckNotNullOrEmpty(projectId, nameof(projectId)),
-                    Zone = GaxPreconditions.CheckNotNullOrEmpty(zone, nameof(zone)),
-                    ClusterId = GaxPreconditions.CheckNotNullOrEmpty(clusterId, nameof(clusterId)),
-                    Locations = { GaxPreconditions.CheckNotNull(locations, nameof(locations)) },
+                    ProjectId = gax::GaxPreconditions.CheckNotNullOrEmpty(projectId, nameof(projectId)),
+                    Zone = gax::GaxPreconditions.CheckNotNullOrEmpty(zone, nameof(zone)),
+                    ClusterId = gax::GaxPreconditions.CheckNotNullOrEmpty(clusterId, nameof(clusterId)),
+                    Locations = { gax::GaxPreconditions.CheckNotNull(locations, nameof(locations)) },
                 },
                 callSettings);
 
@@ -2546,22 +2546,22 @@ namespace Google.Cloud.Container.V1
         /// This list must always include the cluster's primary zone.
         /// </param>
         /// <param name="cancellationToken">
-        /// A <see cref="CancellationToken"/> to use for this RPC.
+        /// A <see cref="st::CancellationToken"/> to use for this RPC.
         /// </param>
         /// <returns>
         /// A Task containing the RPC response.
         /// </returns>
-        public virtual Task<Operation> SetLocationsAsync(
+        public virtual stt::Task<Operation> SetLocationsAsync(
             string projectId,
             string zone,
             string clusterId,
-            IEnumerable<string> locations,
-            CancellationToken cancellationToken) => SetLocationsAsync(
+            scg::IEnumerable<string> locations,
+            st::CancellationToken cancellationToken) => SetLocationsAsync(
                 projectId,
                 zone,
                 clusterId,
                 locations,
-                CallSettings.FromCancellationToken(cancellationToken));
+                gaxgrpc::CallSettings.FromCancellationToken(cancellationToken));
 
         /// <summary>
         /// Sets the locations of a specific cluster.
@@ -2597,14 +2597,14 @@ namespace Google.Cloud.Container.V1
             string projectId,
             string zone,
             string clusterId,
-            IEnumerable<string> locations,
-            CallSettings callSettings = null) => SetLocations(
+            scg::IEnumerable<string> locations,
+            gaxgrpc::CallSettings callSettings = null) => SetLocations(
                 new SetLocationsRequest
                 {
-                    ProjectId = GaxPreconditions.CheckNotNullOrEmpty(projectId, nameof(projectId)),
-                    Zone = GaxPreconditions.CheckNotNullOrEmpty(zone, nameof(zone)),
-                    ClusterId = GaxPreconditions.CheckNotNullOrEmpty(clusterId, nameof(clusterId)),
-                    Locations = { GaxPreconditions.CheckNotNull(locations, nameof(locations)) },
+                    ProjectId = gax::GaxPreconditions.CheckNotNullOrEmpty(projectId, nameof(projectId)),
+                    Zone = gax::GaxPreconditions.CheckNotNullOrEmpty(zone, nameof(zone)),
+                    ClusterId = gax::GaxPreconditions.CheckNotNullOrEmpty(clusterId, nameof(clusterId)),
+                    Locations = { gax::GaxPreconditions.CheckNotNull(locations, nameof(locations)) },
                 },
                 callSettings);
 
@@ -2620,11 +2620,11 @@ namespace Google.Cloud.Container.V1
         /// <returns>
         /// A Task containing the RPC response.
         /// </returns>
-        public virtual Task<Operation> SetLocationsAsync(
+        public virtual stt::Task<Operation> SetLocationsAsync(
             SetLocationsRequest request,
-            CallSettings callSettings = null)
+            gaxgrpc::CallSettings callSettings = null)
         {
-            throw new NotImplementedException();
+            throw new s::NotImplementedException();
         }
 
         /// <summary>
@@ -2634,16 +2634,16 @@ namespace Google.Cloud.Container.V1
         /// The request object containing all of the parameters for the API call.
         /// </param>
         /// <param name="cancellationToken">
-        /// A <see cref="CancellationToken"/> to use for this RPC.
+        /// A <see cref="st::CancellationToken"/> to use for this RPC.
         /// </param>
         /// <returns>
         /// A Task containing the RPC response.
         /// </returns>
-        public virtual Task<Operation> SetLocationsAsync(
+        public virtual stt::Task<Operation> SetLocationsAsync(
             SetLocationsRequest request,
-            CancellationToken cancellationToken) => SetLocationsAsync(
+            st::CancellationToken cancellationToken) => SetLocationsAsync(
                 request,
-                CallSettings.FromCancellationToken(cancellationToken));
+                gaxgrpc::CallSettings.FromCancellationToken(cancellationToken));
 
         /// <summary>
         /// Sets the locations of a specific cluster.
@@ -2659,9 +2659,9 @@ namespace Google.Cloud.Container.V1
         /// </returns>
         public virtual Operation SetLocations(
             SetLocationsRequest request,
-            CallSettings callSettings = null)
+            gaxgrpc::CallSettings callSettings = null)
         {
-            throw new NotImplementedException();
+            throw new s::NotImplementedException();
         }
 
         /// <summary>
@@ -2690,18 +2690,18 @@ namespace Google.Cloud.Container.V1
         /// <returns>
         /// A Task containing the RPC response.
         /// </returns>
-        public virtual Task<Operation> UpdateMasterAsync(
+        public virtual stt::Task<Operation> UpdateMasterAsync(
             string projectId,
             string zone,
             string clusterId,
             string masterVersion,
-            CallSettings callSettings = null) => UpdateMasterAsync(
+            gaxgrpc::CallSettings callSettings = null) => UpdateMasterAsync(
                 new UpdateMasterRequest
                 {
-                    ProjectId = GaxPreconditions.CheckNotNullOrEmpty(projectId, nameof(projectId)),
-                    Zone = GaxPreconditions.CheckNotNullOrEmpty(zone, nameof(zone)),
-                    ClusterId = GaxPreconditions.CheckNotNullOrEmpty(clusterId, nameof(clusterId)),
-                    MasterVersion = GaxPreconditions.CheckNotNullOrEmpty(masterVersion, nameof(masterVersion)),
+                    ProjectId = gax::GaxPreconditions.CheckNotNullOrEmpty(projectId, nameof(projectId)),
+                    Zone = gax::GaxPreconditions.CheckNotNullOrEmpty(zone, nameof(zone)),
+                    ClusterId = gax::GaxPreconditions.CheckNotNullOrEmpty(clusterId, nameof(clusterId)),
+                    MasterVersion = gax::GaxPreconditions.CheckNotNullOrEmpty(masterVersion, nameof(masterVersion)),
                 },
                 callSettings);
 
@@ -2726,22 +2726,22 @@ namespace Google.Cloud.Container.V1
         /// the latest version.
         /// </param>
         /// <param name="cancellationToken">
-        /// A <see cref="CancellationToken"/> to use for this RPC.
+        /// A <see cref="st::CancellationToken"/> to use for this RPC.
         /// </param>
         /// <returns>
         /// A Task containing the RPC response.
         /// </returns>
-        public virtual Task<Operation> UpdateMasterAsync(
+        public virtual stt::Task<Operation> UpdateMasterAsync(
             string projectId,
             string zone,
             string clusterId,
             string masterVersion,
-            CancellationToken cancellationToken) => UpdateMasterAsync(
+            st::CancellationToken cancellationToken) => UpdateMasterAsync(
                 projectId,
                 zone,
                 clusterId,
                 masterVersion,
-                CallSettings.FromCancellationToken(cancellationToken));
+                gaxgrpc::CallSettings.FromCancellationToken(cancellationToken));
 
         /// <summary>
         /// Updates the master of a specific cluster.
@@ -2774,13 +2774,13 @@ namespace Google.Cloud.Container.V1
             string zone,
             string clusterId,
             string masterVersion,
-            CallSettings callSettings = null) => UpdateMaster(
+            gaxgrpc::CallSettings callSettings = null) => UpdateMaster(
                 new UpdateMasterRequest
                 {
-                    ProjectId = GaxPreconditions.CheckNotNullOrEmpty(projectId, nameof(projectId)),
-                    Zone = GaxPreconditions.CheckNotNullOrEmpty(zone, nameof(zone)),
-                    ClusterId = GaxPreconditions.CheckNotNullOrEmpty(clusterId, nameof(clusterId)),
-                    MasterVersion = GaxPreconditions.CheckNotNullOrEmpty(masterVersion, nameof(masterVersion)),
+                    ProjectId = gax::GaxPreconditions.CheckNotNullOrEmpty(projectId, nameof(projectId)),
+                    Zone = gax::GaxPreconditions.CheckNotNullOrEmpty(zone, nameof(zone)),
+                    ClusterId = gax::GaxPreconditions.CheckNotNullOrEmpty(clusterId, nameof(clusterId)),
+                    MasterVersion = gax::GaxPreconditions.CheckNotNullOrEmpty(masterVersion, nameof(masterVersion)),
                 },
                 callSettings);
 
@@ -2796,11 +2796,11 @@ namespace Google.Cloud.Container.V1
         /// <returns>
         /// A Task containing the RPC response.
         /// </returns>
-        public virtual Task<Operation> UpdateMasterAsync(
+        public virtual stt::Task<Operation> UpdateMasterAsync(
             UpdateMasterRequest request,
-            CallSettings callSettings = null)
+            gaxgrpc::CallSettings callSettings = null)
         {
-            throw new NotImplementedException();
+            throw new s::NotImplementedException();
         }
 
         /// <summary>
@@ -2810,16 +2810,16 @@ namespace Google.Cloud.Container.V1
         /// The request object containing all of the parameters for the API call.
         /// </param>
         /// <param name="cancellationToken">
-        /// A <see cref="CancellationToken"/> to use for this RPC.
+        /// A <see cref="st::CancellationToken"/> to use for this RPC.
         /// </param>
         /// <returns>
         /// A Task containing the RPC response.
         /// </returns>
-        public virtual Task<Operation> UpdateMasterAsync(
+        public virtual stt::Task<Operation> UpdateMasterAsync(
             UpdateMasterRequest request,
-            CancellationToken cancellationToken) => UpdateMasterAsync(
+            st::CancellationToken cancellationToken) => UpdateMasterAsync(
                 request,
-                CallSettings.FromCancellationToken(cancellationToken));
+                gaxgrpc::CallSettings.FromCancellationToken(cancellationToken));
 
         /// <summary>
         /// Updates the master of a specific cluster.
@@ -2835,9 +2835,9 @@ namespace Google.Cloud.Container.V1
         /// </returns>
         public virtual Operation UpdateMaster(
             UpdateMasterRequest request,
-            CallSettings callSettings = null)
+            gaxgrpc::CallSettings callSettings = null)
         {
-            throw new NotImplementedException();
+            throw new s::NotImplementedException();
         }
 
         /// <summary>
@@ -2854,11 +2854,11 @@ namespace Google.Cloud.Container.V1
         /// <returns>
         /// A Task containing the RPC response.
         /// </returns>
-        public virtual Task<Operation> SetMasterAuthAsync(
+        public virtual stt::Task<Operation> SetMasterAuthAsync(
             SetMasterAuthRequest request,
-            CallSettings callSettings = null)
+            gaxgrpc::CallSettings callSettings = null)
         {
-            throw new NotImplementedException();
+            throw new s::NotImplementedException();
         }
 
         /// <summary>
@@ -2870,16 +2870,16 @@ namespace Google.Cloud.Container.V1
         /// The request object containing all of the parameters for the API call.
         /// </param>
         /// <param name="cancellationToken">
-        /// A <see cref="CancellationToken"/> to use for this RPC.
+        /// A <see cref="st::CancellationToken"/> to use for this RPC.
         /// </param>
         /// <returns>
         /// A Task containing the RPC response.
         /// </returns>
-        public virtual Task<Operation> SetMasterAuthAsync(
+        public virtual stt::Task<Operation> SetMasterAuthAsync(
             SetMasterAuthRequest request,
-            CancellationToken cancellationToken) => SetMasterAuthAsync(
+            st::CancellationToken cancellationToken) => SetMasterAuthAsync(
                 request,
-                CallSettings.FromCancellationToken(cancellationToken));
+                gaxgrpc::CallSettings.FromCancellationToken(cancellationToken));
 
         /// <summary>
         /// Used to set master auth materials. Currently supports :-
@@ -2897,9 +2897,9 @@ namespace Google.Cloud.Container.V1
         /// </returns>
         public virtual Operation SetMasterAuth(
             SetMasterAuthRequest request,
-            CallSettings callSettings = null)
+            gaxgrpc::CallSettings callSettings = null)
         {
-            throw new NotImplementedException();
+            throw new s::NotImplementedException();
         }
 
         /// <summary>
@@ -2931,16 +2931,16 @@ namespace Google.Cloud.Container.V1
         /// <returns>
         /// A Task containing the RPC response.
         /// </returns>
-        public virtual Task<Operation> DeleteClusterAsync(
+        public virtual stt::Task<Operation> DeleteClusterAsync(
             string projectId,
             string zone,
             string clusterId,
-            CallSettings callSettings = null) => DeleteClusterAsync(
+            gaxgrpc::CallSettings callSettings = null) => DeleteClusterAsync(
                 new DeleteClusterRequest
                 {
-                    ProjectId = GaxPreconditions.CheckNotNullOrEmpty(projectId, nameof(projectId)),
-                    Zone = GaxPreconditions.CheckNotNullOrEmpty(zone, nameof(zone)),
-                    ClusterId = GaxPreconditions.CheckNotNullOrEmpty(clusterId, nameof(clusterId)),
+                    ProjectId = gax::GaxPreconditions.CheckNotNullOrEmpty(projectId, nameof(projectId)),
+                    Zone = gax::GaxPreconditions.CheckNotNullOrEmpty(zone, nameof(zone)),
+                    ClusterId = gax::GaxPreconditions.CheckNotNullOrEmpty(clusterId, nameof(clusterId)),
                 },
                 callSettings);
 
@@ -2968,20 +2968,20 @@ namespace Google.Cloud.Container.V1
         /// The name of the cluster to delete.
         /// </param>
         /// <param name="cancellationToken">
-        /// A <see cref="CancellationToken"/> to use for this RPC.
+        /// A <see cref="st::CancellationToken"/> to use for this RPC.
         /// </param>
         /// <returns>
         /// A Task containing the RPC response.
         /// </returns>
-        public virtual Task<Operation> DeleteClusterAsync(
+        public virtual stt::Task<Operation> DeleteClusterAsync(
             string projectId,
             string zone,
             string clusterId,
-            CancellationToken cancellationToken) => DeleteClusterAsync(
+            st::CancellationToken cancellationToken) => DeleteClusterAsync(
                 projectId,
                 zone,
                 clusterId,
-                CallSettings.FromCancellationToken(cancellationToken));
+                gaxgrpc::CallSettings.FromCancellationToken(cancellationToken));
 
         /// <summary>
         /// Deletes the cluster, including the Kubernetes endpoint and all worker
@@ -3016,12 +3016,12 @@ namespace Google.Cloud.Container.V1
             string projectId,
             string zone,
             string clusterId,
-            CallSettings callSettings = null) => DeleteCluster(
+            gaxgrpc::CallSettings callSettings = null) => DeleteCluster(
                 new DeleteClusterRequest
                 {
-                    ProjectId = GaxPreconditions.CheckNotNullOrEmpty(projectId, nameof(projectId)),
-                    Zone = GaxPreconditions.CheckNotNullOrEmpty(zone, nameof(zone)),
-                    ClusterId = GaxPreconditions.CheckNotNullOrEmpty(clusterId, nameof(clusterId)),
+                    ProjectId = gax::GaxPreconditions.CheckNotNullOrEmpty(projectId, nameof(projectId)),
+                    Zone = gax::GaxPreconditions.CheckNotNullOrEmpty(zone, nameof(zone)),
+                    ClusterId = gax::GaxPreconditions.CheckNotNullOrEmpty(clusterId, nameof(clusterId)),
                 },
                 callSettings);
 
@@ -3045,11 +3045,11 @@ namespace Google.Cloud.Container.V1
         /// <returns>
         /// A Task containing the RPC response.
         /// </returns>
-        public virtual Task<Operation> DeleteClusterAsync(
+        public virtual stt::Task<Operation> DeleteClusterAsync(
             DeleteClusterRequest request,
-            CallSettings callSettings = null)
+            gaxgrpc::CallSettings callSettings = null)
         {
-            throw new NotImplementedException();
+            throw new s::NotImplementedException();
         }
 
         /// <summary>
@@ -3067,16 +3067,16 @@ namespace Google.Cloud.Container.V1
         /// The request object containing all of the parameters for the API call.
         /// </param>
         /// <param name="cancellationToken">
-        /// A <see cref="CancellationToken"/> to use for this RPC.
+        /// A <see cref="st::CancellationToken"/> to use for this RPC.
         /// </param>
         /// <returns>
         /// A Task containing the RPC response.
         /// </returns>
-        public virtual Task<Operation> DeleteClusterAsync(
+        public virtual stt::Task<Operation> DeleteClusterAsync(
             DeleteClusterRequest request,
-            CancellationToken cancellationToken) => DeleteClusterAsync(
+            st::CancellationToken cancellationToken) => DeleteClusterAsync(
                 request,
-                CallSettings.FromCancellationToken(cancellationToken));
+                gaxgrpc::CallSettings.FromCancellationToken(cancellationToken));
 
         /// <summary>
         /// Deletes the cluster, including the Kubernetes endpoint and all worker
@@ -3100,9 +3100,9 @@ namespace Google.Cloud.Container.V1
         /// </returns>
         public virtual Operation DeleteCluster(
             DeleteClusterRequest request,
-            CallSettings callSettings = null)
+            gaxgrpc::CallSettings callSettings = null)
         {
-            throw new NotImplementedException();
+            throw new s::NotImplementedException();
         }
 
         /// <summary>
@@ -3122,14 +3122,14 @@ namespace Google.Cloud.Container.V1
         /// <returns>
         /// A Task containing the RPC response.
         /// </returns>
-        public virtual Task<ListOperationsResponse> ListOperationsAsync(
+        public virtual stt::Task<ListOperationsResponse> ListOperationsAsync(
             string projectId,
             string zone,
-            CallSettings callSettings = null) => ListOperationsAsync(
+            gaxgrpc::CallSettings callSettings = null) => ListOperationsAsync(
                 new ListOperationsRequest
                 {
-                    ProjectId = GaxPreconditions.CheckNotNullOrEmpty(projectId, nameof(projectId)),
-                    Zone = GaxPreconditions.CheckNotNullOrEmpty(zone, nameof(zone)),
+                    ProjectId = gax::GaxPreconditions.CheckNotNullOrEmpty(projectId, nameof(projectId)),
+                    Zone = gax::GaxPreconditions.CheckNotNullOrEmpty(zone, nameof(zone)),
                 },
                 callSettings);
 
@@ -3145,18 +3145,18 @@ namespace Google.Cloud.Container.V1
         /// to return operations for, or `-` for all zones.
         /// </param>
         /// <param name="cancellationToken">
-        /// A <see cref="CancellationToken"/> to use for this RPC.
+        /// A <see cref="st::CancellationToken"/> to use for this RPC.
         /// </param>
         /// <returns>
         /// A Task containing the RPC response.
         /// </returns>
-        public virtual Task<ListOperationsResponse> ListOperationsAsync(
+        public virtual stt::Task<ListOperationsResponse> ListOperationsAsync(
             string projectId,
             string zone,
-            CancellationToken cancellationToken) => ListOperationsAsync(
+            st::CancellationToken cancellationToken) => ListOperationsAsync(
                 projectId,
                 zone,
-                CallSettings.FromCancellationToken(cancellationToken));
+                gaxgrpc::CallSettings.FromCancellationToken(cancellationToken));
 
         /// <summary>
         /// Lists all operations in a project in a specific zone or all zones.
@@ -3178,11 +3178,11 @@ namespace Google.Cloud.Container.V1
         public virtual ListOperationsResponse ListOperations(
             string projectId,
             string zone,
-            CallSettings callSettings = null) => ListOperations(
+            gaxgrpc::CallSettings callSettings = null) => ListOperations(
                 new ListOperationsRequest
                 {
-                    ProjectId = GaxPreconditions.CheckNotNullOrEmpty(projectId, nameof(projectId)),
-                    Zone = GaxPreconditions.CheckNotNullOrEmpty(zone, nameof(zone)),
+                    ProjectId = gax::GaxPreconditions.CheckNotNullOrEmpty(projectId, nameof(projectId)),
+                    Zone = gax::GaxPreconditions.CheckNotNullOrEmpty(zone, nameof(zone)),
                 },
                 callSettings);
 
@@ -3198,11 +3198,11 @@ namespace Google.Cloud.Container.V1
         /// <returns>
         /// A Task containing the RPC response.
         /// </returns>
-        public virtual Task<ListOperationsResponse> ListOperationsAsync(
+        public virtual stt::Task<ListOperationsResponse> ListOperationsAsync(
             ListOperationsRequest request,
-            CallSettings callSettings = null)
+            gaxgrpc::CallSettings callSettings = null)
         {
-            throw new NotImplementedException();
+            throw new s::NotImplementedException();
         }
 
         /// <summary>
@@ -3212,16 +3212,16 @@ namespace Google.Cloud.Container.V1
         /// The request object containing all of the parameters for the API call.
         /// </param>
         /// <param name="cancellationToken">
-        /// A <see cref="CancellationToken"/> to use for this RPC.
+        /// A <see cref="st::CancellationToken"/> to use for this RPC.
         /// </param>
         /// <returns>
         /// A Task containing the RPC response.
         /// </returns>
-        public virtual Task<ListOperationsResponse> ListOperationsAsync(
+        public virtual stt::Task<ListOperationsResponse> ListOperationsAsync(
             ListOperationsRequest request,
-            CancellationToken cancellationToken) => ListOperationsAsync(
+            st::CancellationToken cancellationToken) => ListOperationsAsync(
                 request,
-                CallSettings.FromCancellationToken(cancellationToken));
+                gaxgrpc::CallSettings.FromCancellationToken(cancellationToken));
 
         /// <summary>
         /// Lists all operations in a project in a specific zone or all zones.
@@ -3237,9 +3237,9 @@ namespace Google.Cloud.Container.V1
         /// </returns>
         public virtual ListOperationsResponse ListOperations(
             ListOperationsRequest request,
-            CallSettings callSettings = null)
+            gaxgrpc::CallSettings callSettings = null)
         {
-            throw new NotImplementedException();
+            throw new s::NotImplementedException();
         }
 
         /// <summary>
@@ -3263,16 +3263,16 @@ namespace Google.Cloud.Container.V1
         /// <returns>
         /// A Task containing the RPC response.
         /// </returns>
-        public virtual Task<Operation> GetOperationAsync(
+        public virtual stt::Task<Operation> GetOperationAsync(
             string projectId,
             string zone,
             string operationId,
-            CallSettings callSettings = null) => GetOperationAsync(
+            gaxgrpc::CallSettings callSettings = null) => GetOperationAsync(
                 new GetOperationRequest
                 {
-                    ProjectId = GaxPreconditions.CheckNotNullOrEmpty(projectId, nameof(projectId)),
-                    Zone = GaxPreconditions.CheckNotNullOrEmpty(zone, nameof(zone)),
-                    OperationId = GaxPreconditions.CheckNotNullOrEmpty(operationId, nameof(operationId)),
+                    ProjectId = gax::GaxPreconditions.CheckNotNullOrEmpty(projectId, nameof(projectId)),
+                    Zone = gax::GaxPreconditions.CheckNotNullOrEmpty(zone, nameof(zone)),
+                    OperationId = gax::GaxPreconditions.CheckNotNullOrEmpty(operationId, nameof(operationId)),
                 },
                 callSettings);
 
@@ -3292,20 +3292,20 @@ namespace Google.Cloud.Container.V1
         /// The server-assigned `name` of the operation.
         /// </param>
         /// <param name="cancellationToken">
-        /// A <see cref="CancellationToken"/> to use for this RPC.
+        /// A <see cref="st::CancellationToken"/> to use for this RPC.
         /// </param>
         /// <returns>
         /// A Task containing the RPC response.
         /// </returns>
-        public virtual Task<Operation> GetOperationAsync(
+        public virtual stt::Task<Operation> GetOperationAsync(
             string projectId,
             string zone,
             string operationId,
-            CancellationToken cancellationToken) => GetOperationAsync(
+            st::CancellationToken cancellationToken) => GetOperationAsync(
                 projectId,
                 zone,
                 operationId,
-                CallSettings.FromCancellationToken(cancellationToken));
+                gaxgrpc::CallSettings.FromCancellationToken(cancellationToken));
 
         /// <summary>
         /// Gets the specified operation.
@@ -3332,12 +3332,12 @@ namespace Google.Cloud.Container.V1
             string projectId,
             string zone,
             string operationId,
-            CallSettings callSettings = null) => GetOperation(
+            gaxgrpc::CallSettings callSettings = null) => GetOperation(
                 new GetOperationRequest
                 {
-                    ProjectId = GaxPreconditions.CheckNotNullOrEmpty(projectId, nameof(projectId)),
-                    Zone = GaxPreconditions.CheckNotNullOrEmpty(zone, nameof(zone)),
-                    OperationId = GaxPreconditions.CheckNotNullOrEmpty(operationId, nameof(operationId)),
+                    ProjectId = gax::GaxPreconditions.CheckNotNullOrEmpty(projectId, nameof(projectId)),
+                    Zone = gax::GaxPreconditions.CheckNotNullOrEmpty(zone, nameof(zone)),
+                    OperationId = gax::GaxPreconditions.CheckNotNullOrEmpty(operationId, nameof(operationId)),
                 },
                 callSettings);
 
@@ -3353,11 +3353,11 @@ namespace Google.Cloud.Container.V1
         /// <returns>
         /// A Task containing the RPC response.
         /// </returns>
-        public virtual Task<Operation> GetOperationAsync(
+        public virtual stt::Task<Operation> GetOperationAsync(
             GetOperationRequest request,
-            CallSettings callSettings = null)
+            gaxgrpc::CallSettings callSettings = null)
         {
-            throw new NotImplementedException();
+            throw new s::NotImplementedException();
         }
 
         /// <summary>
@@ -3367,16 +3367,16 @@ namespace Google.Cloud.Container.V1
         /// The request object containing all of the parameters for the API call.
         /// </param>
         /// <param name="cancellationToken">
-        /// A <see cref="CancellationToken"/> to use for this RPC.
+        /// A <see cref="st::CancellationToken"/> to use for this RPC.
         /// </param>
         /// <returns>
         /// A Task containing the RPC response.
         /// </returns>
-        public virtual Task<Operation> GetOperationAsync(
+        public virtual stt::Task<Operation> GetOperationAsync(
             GetOperationRequest request,
-            CancellationToken cancellationToken) => GetOperationAsync(
+            st::CancellationToken cancellationToken) => GetOperationAsync(
                 request,
-                CallSettings.FromCancellationToken(cancellationToken));
+                gaxgrpc::CallSettings.FromCancellationToken(cancellationToken));
 
         /// <summary>
         /// Gets the specified operation.
@@ -3392,9 +3392,9 @@ namespace Google.Cloud.Container.V1
         /// </returns>
         public virtual Operation GetOperation(
             GetOperationRequest request,
-            CallSettings callSettings = null)
+            gaxgrpc::CallSettings callSettings = null)
         {
-            throw new NotImplementedException();
+            throw new s::NotImplementedException();
         }
 
         /// <summary>
@@ -3417,16 +3417,16 @@ namespace Google.Cloud.Container.V1
         /// <returns>
         /// A Task that completes when the RPC has completed.
         /// </returns>
-        public virtual Task CancelOperationAsync(
+        public virtual stt::Task CancelOperationAsync(
             string projectId,
             string zone,
             string operationId,
-            CallSettings callSettings = null) => CancelOperationAsync(
+            gaxgrpc::CallSettings callSettings = null) => CancelOperationAsync(
                 new CancelOperationRequest
                 {
-                    ProjectId = GaxPreconditions.CheckNotNullOrEmpty(projectId, nameof(projectId)),
-                    Zone = GaxPreconditions.CheckNotNullOrEmpty(zone, nameof(zone)),
-                    OperationId = GaxPreconditions.CheckNotNullOrEmpty(operationId, nameof(operationId)),
+                    ProjectId = gax::GaxPreconditions.CheckNotNullOrEmpty(projectId, nameof(projectId)),
+                    Zone = gax::GaxPreconditions.CheckNotNullOrEmpty(zone, nameof(zone)),
+                    OperationId = gax::GaxPreconditions.CheckNotNullOrEmpty(operationId, nameof(operationId)),
                 },
                 callSettings);
 
@@ -3445,20 +3445,20 @@ namespace Google.Cloud.Container.V1
         /// The server-assigned `name` of the operation.
         /// </param>
         /// <param name="cancellationToken">
-        /// A <see cref="CancellationToken"/> to use for this RPC.
+        /// A <see cref="st::CancellationToken"/> to use for this RPC.
         /// </param>
         /// <returns>
         /// A Task that completes when the RPC has completed.
         /// </returns>
-        public virtual Task CancelOperationAsync(
+        public virtual stt::Task CancelOperationAsync(
             string projectId,
             string zone,
             string operationId,
-            CancellationToken cancellationToken) => CancelOperationAsync(
+            st::CancellationToken cancellationToken) => CancelOperationAsync(
                 projectId,
                 zone,
                 operationId,
-                CallSettings.FromCancellationToken(cancellationToken));
+                gaxgrpc::CallSettings.FromCancellationToken(cancellationToken));
 
         /// <summary>
         /// Cancels the specified operation.
@@ -3481,12 +3481,12 @@ namespace Google.Cloud.Container.V1
             string projectId,
             string zone,
             string operationId,
-            CallSettings callSettings = null) => CancelOperation(
+            gaxgrpc::CallSettings callSettings = null) => CancelOperation(
                 new CancelOperationRequest
                 {
-                    ProjectId = GaxPreconditions.CheckNotNullOrEmpty(projectId, nameof(projectId)),
-                    Zone = GaxPreconditions.CheckNotNullOrEmpty(zone, nameof(zone)),
-                    OperationId = GaxPreconditions.CheckNotNullOrEmpty(operationId, nameof(operationId)),
+                    ProjectId = gax::GaxPreconditions.CheckNotNullOrEmpty(projectId, nameof(projectId)),
+                    Zone = gax::GaxPreconditions.CheckNotNullOrEmpty(zone, nameof(zone)),
+                    OperationId = gax::GaxPreconditions.CheckNotNullOrEmpty(operationId, nameof(operationId)),
                 },
                 callSettings);
 
@@ -3502,11 +3502,11 @@ namespace Google.Cloud.Container.V1
         /// <returns>
         /// A Task that completes when the RPC has completed.
         /// </returns>
-        public virtual Task CancelOperationAsync(
+        public virtual stt::Task CancelOperationAsync(
             CancelOperationRequest request,
-            CallSettings callSettings = null)
+            gaxgrpc::CallSettings callSettings = null)
         {
-            throw new NotImplementedException();
+            throw new s::NotImplementedException();
         }
 
         /// <summary>
@@ -3516,16 +3516,16 @@ namespace Google.Cloud.Container.V1
         /// The request object containing all of the parameters for the API call.
         /// </param>
         /// <param name="cancellationToken">
-        /// A <see cref="CancellationToken"/> to use for this RPC.
+        /// A <see cref="st::CancellationToken"/> to use for this RPC.
         /// </param>
         /// <returns>
         /// A Task that completes when the RPC has completed.
         /// </returns>
-        public virtual Task CancelOperationAsync(
+        public virtual stt::Task CancelOperationAsync(
             CancelOperationRequest request,
-            CancellationToken cancellationToken) => CancelOperationAsync(
+            st::CancellationToken cancellationToken) => CancelOperationAsync(
                 request,
-                CallSettings.FromCancellationToken(cancellationToken));
+                gaxgrpc::CallSettings.FromCancellationToken(cancellationToken));
 
         /// <summary>
         /// Cancels the specified operation.
@@ -3538,9 +3538,9 @@ namespace Google.Cloud.Container.V1
         /// </param>
         public virtual void CancelOperation(
             CancelOperationRequest request,
-            CallSettings callSettings = null)
+            gaxgrpc::CallSettings callSettings = null)
         {
-            throw new NotImplementedException();
+            throw new s::NotImplementedException();
         }
 
         /// <summary>
@@ -3560,14 +3560,14 @@ namespace Google.Cloud.Container.V1
         /// <returns>
         /// A Task containing the RPC response.
         /// </returns>
-        public virtual Task<ServerConfig> GetServerConfigAsync(
+        public virtual stt::Task<ServerConfig> GetServerConfigAsync(
             string projectId,
             string zone,
-            CallSettings callSettings = null) => GetServerConfigAsync(
+            gaxgrpc::CallSettings callSettings = null) => GetServerConfigAsync(
                 new GetServerConfigRequest
                 {
-                    ProjectId = GaxPreconditions.CheckNotNullOrEmpty(projectId, nameof(projectId)),
-                    Zone = GaxPreconditions.CheckNotNullOrEmpty(zone, nameof(zone)),
+                    ProjectId = gax::GaxPreconditions.CheckNotNullOrEmpty(projectId, nameof(projectId)),
+                    Zone = gax::GaxPreconditions.CheckNotNullOrEmpty(zone, nameof(zone)),
                 },
                 callSettings);
 
@@ -3583,18 +3583,18 @@ namespace Google.Cloud.Container.V1
         /// to return operations for.
         /// </param>
         /// <param name="cancellationToken">
-        /// A <see cref="CancellationToken"/> to use for this RPC.
+        /// A <see cref="st::CancellationToken"/> to use for this RPC.
         /// </param>
         /// <returns>
         /// A Task containing the RPC response.
         /// </returns>
-        public virtual Task<ServerConfig> GetServerConfigAsync(
+        public virtual stt::Task<ServerConfig> GetServerConfigAsync(
             string projectId,
             string zone,
-            CancellationToken cancellationToken) => GetServerConfigAsync(
+            st::CancellationToken cancellationToken) => GetServerConfigAsync(
                 projectId,
                 zone,
-                CallSettings.FromCancellationToken(cancellationToken));
+                gaxgrpc::CallSettings.FromCancellationToken(cancellationToken));
 
         /// <summary>
         /// Returns configuration info about the Container Engine service.
@@ -3616,11 +3616,11 @@ namespace Google.Cloud.Container.V1
         public virtual ServerConfig GetServerConfig(
             string projectId,
             string zone,
-            CallSettings callSettings = null) => GetServerConfig(
+            gaxgrpc::CallSettings callSettings = null) => GetServerConfig(
                 new GetServerConfigRequest
                 {
-                    ProjectId = GaxPreconditions.CheckNotNullOrEmpty(projectId, nameof(projectId)),
-                    Zone = GaxPreconditions.CheckNotNullOrEmpty(zone, nameof(zone)),
+                    ProjectId = gax::GaxPreconditions.CheckNotNullOrEmpty(projectId, nameof(projectId)),
+                    Zone = gax::GaxPreconditions.CheckNotNullOrEmpty(zone, nameof(zone)),
                 },
                 callSettings);
 
@@ -3636,11 +3636,11 @@ namespace Google.Cloud.Container.V1
         /// <returns>
         /// A Task containing the RPC response.
         /// </returns>
-        public virtual Task<ServerConfig> GetServerConfigAsync(
+        public virtual stt::Task<ServerConfig> GetServerConfigAsync(
             GetServerConfigRequest request,
-            CallSettings callSettings = null)
+            gaxgrpc::CallSettings callSettings = null)
         {
-            throw new NotImplementedException();
+            throw new s::NotImplementedException();
         }
 
         /// <summary>
@@ -3650,16 +3650,16 @@ namespace Google.Cloud.Container.V1
         /// The request object containing all of the parameters for the API call.
         /// </param>
         /// <param name="cancellationToken">
-        /// A <see cref="CancellationToken"/> to use for this RPC.
+        /// A <see cref="st::CancellationToken"/> to use for this RPC.
         /// </param>
         /// <returns>
         /// A Task containing the RPC response.
         /// </returns>
-        public virtual Task<ServerConfig> GetServerConfigAsync(
+        public virtual stt::Task<ServerConfig> GetServerConfigAsync(
             GetServerConfigRequest request,
-            CancellationToken cancellationToken) => GetServerConfigAsync(
+            st::CancellationToken cancellationToken) => GetServerConfigAsync(
                 request,
-                CallSettings.FromCancellationToken(cancellationToken));
+                gaxgrpc::CallSettings.FromCancellationToken(cancellationToken));
 
         /// <summary>
         /// Returns configuration info about the Container Engine service.
@@ -3675,9 +3675,9 @@ namespace Google.Cloud.Container.V1
         /// </returns>
         public virtual ServerConfig GetServerConfig(
             GetServerConfigRequest request,
-            CallSettings callSettings = null)
+            gaxgrpc::CallSettings callSettings = null)
         {
-            throw new NotImplementedException();
+            throw new s::NotImplementedException();
         }
 
         /// <summary>
@@ -3701,16 +3701,16 @@ namespace Google.Cloud.Container.V1
         /// <returns>
         /// A Task containing the RPC response.
         /// </returns>
-        public virtual Task<ListNodePoolsResponse> ListNodePoolsAsync(
+        public virtual stt::Task<ListNodePoolsResponse> ListNodePoolsAsync(
             string projectId,
             string zone,
             string clusterId,
-            CallSettings callSettings = null) => ListNodePoolsAsync(
+            gaxgrpc::CallSettings callSettings = null) => ListNodePoolsAsync(
                 new ListNodePoolsRequest
                 {
-                    ProjectId = GaxPreconditions.CheckNotNullOrEmpty(projectId, nameof(projectId)),
-                    Zone = GaxPreconditions.CheckNotNullOrEmpty(zone, nameof(zone)),
-                    ClusterId = GaxPreconditions.CheckNotNullOrEmpty(clusterId, nameof(clusterId)),
+                    ProjectId = gax::GaxPreconditions.CheckNotNullOrEmpty(projectId, nameof(projectId)),
+                    Zone = gax::GaxPreconditions.CheckNotNullOrEmpty(zone, nameof(zone)),
+                    ClusterId = gax::GaxPreconditions.CheckNotNullOrEmpty(clusterId, nameof(clusterId)),
                 },
                 callSettings);
 
@@ -3730,20 +3730,20 @@ namespace Google.Cloud.Container.V1
         /// The name of the cluster.
         /// </param>
         /// <param name="cancellationToken">
-        /// A <see cref="CancellationToken"/> to use for this RPC.
+        /// A <see cref="st::CancellationToken"/> to use for this RPC.
         /// </param>
         /// <returns>
         /// A Task containing the RPC response.
         /// </returns>
-        public virtual Task<ListNodePoolsResponse> ListNodePoolsAsync(
+        public virtual stt::Task<ListNodePoolsResponse> ListNodePoolsAsync(
             string projectId,
             string zone,
             string clusterId,
-            CancellationToken cancellationToken) => ListNodePoolsAsync(
+            st::CancellationToken cancellationToken) => ListNodePoolsAsync(
                 projectId,
                 zone,
                 clusterId,
-                CallSettings.FromCancellationToken(cancellationToken));
+                gaxgrpc::CallSettings.FromCancellationToken(cancellationToken));
 
         /// <summary>
         /// Lists the node pools for a cluster.
@@ -3770,12 +3770,12 @@ namespace Google.Cloud.Container.V1
             string projectId,
             string zone,
             string clusterId,
-            CallSettings callSettings = null) => ListNodePools(
+            gaxgrpc::CallSettings callSettings = null) => ListNodePools(
                 new ListNodePoolsRequest
                 {
-                    ProjectId = GaxPreconditions.CheckNotNullOrEmpty(projectId, nameof(projectId)),
-                    Zone = GaxPreconditions.CheckNotNullOrEmpty(zone, nameof(zone)),
-                    ClusterId = GaxPreconditions.CheckNotNullOrEmpty(clusterId, nameof(clusterId)),
+                    ProjectId = gax::GaxPreconditions.CheckNotNullOrEmpty(projectId, nameof(projectId)),
+                    Zone = gax::GaxPreconditions.CheckNotNullOrEmpty(zone, nameof(zone)),
+                    ClusterId = gax::GaxPreconditions.CheckNotNullOrEmpty(clusterId, nameof(clusterId)),
                 },
                 callSettings);
 
@@ -3791,11 +3791,11 @@ namespace Google.Cloud.Container.V1
         /// <returns>
         /// A Task containing the RPC response.
         /// </returns>
-        public virtual Task<ListNodePoolsResponse> ListNodePoolsAsync(
+        public virtual stt::Task<ListNodePoolsResponse> ListNodePoolsAsync(
             ListNodePoolsRequest request,
-            CallSettings callSettings = null)
+            gaxgrpc::CallSettings callSettings = null)
         {
-            throw new NotImplementedException();
+            throw new s::NotImplementedException();
         }
 
         /// <summary>
@@ -3805,16 +3805,16 @@ namespace Google.Cloud.Container.V1
         /// The request object containing all of the parameters for the API call.
         /// </param>
         /// <param name="cancellationToken">
-        /// A <see cref="CancellationToken"/> to use for this RPC.
+        /// A <see cref="st::CancellationToken"/> to use for this RPC.
         /// </param>
         /// <returns>
         /// A Task containing the RPC response.
         /// </returns>
-        public virtual Task<ListNodePoolsResponse> ListNodePoolsAsync(
+        public virtual stt::Task<ListNodePoolsResponse> ListNodePoolsAsync(
             ListNodePoolsRequest request,
-            CancellationToken cancellationToken) => ListNodePoolsAsync(
+            st::CancellationToken cancellationToken) => ListNodePoolsAsync(
                 request,
-                CallSettings.FromCancellationToken(cancellationToken));
+                gaxgrpc::CallSettings.FromCancellationToken(cancellationToken));
 
         /// <summary>
         /// Lists the node pools for a cluster.
@@ -3830,9 +3830,9 @@ namespace Google.Cloud.Container.V1
         /// </returns>
         public virtual ListNodePoolsResponse ListNodePools(
             ListNodePoolsRequest request,
-            CallSettings callSettings = null)
+            gaxgrpc::CallSettings callSettings = null)
         {
-            throw new NotImplementedException();
+            throw new s::NotImplementedException();
         }
 
         /// <summary>
@@ -3859,18 +3859,18 @@ namespace Google.Cloud.Container.V1
         /// <returns>
         /// A Task containing the RPC response.
         /// </returns>
-        public virtual Task<NodePool> GetNodePoolAsync(
+        public virtual stt::Task<NodePool> GetNodePoolAsync(
             string projectId,
             string zone,
             string clusterId,
             string nodePoolId,
-            CallSettings callSettings = null) => GetNodePoolAsync(
+            gaxgrpc::CallSettings callSettings = null) => GetNodePoolAsync(
                 new GetNodePoolRequest
                 {
-                    ProjectId = GaxPreconditions.CheckNotNullOrEmpty(projectId, nameof(projectId)),
-                    Zone = GaxPreconditions.CheckNotNullOrEmpty(zone, nameof(zone)),
-                    ClusterId = GaxPreconditions.CheckNotNullOrEmpty(clusterId, nameof(clusterId)),
-                    NodePoolId = GaxPreconditions.CheckNotNullOrEmpty(nodePoolId, nameof(nodePoolId)),
+                    ProjectId = gax::GaxPreconditions.CheckNotNullOrEmpty(projectId, nameof(projectId)),
+                    Zone = gax::GaxPreconditions.CheckNotNullOrEmpty(zone, nameof(zone)),
+                    ClusterId = gax::GaxPreconditions.CheckNotNullOrEmpty(clusterId, nameof(clusterId)),
+                    NodePoolId = gax::GaxPreconditions.CheckNotNullOrEmpty(nodePoolId, nameof(nodePoolId)),
                 },
                 callSettings);
 
@@ -3893,22 +3893,22 @@ namespace Google.Cloud.Container.V1
         /// The name of the node pool.
         /// </param>
         /// <param name="cancellationToken">
-        /// A <see cref="CancellationToken"/> to use for this RPC.
+        /// A <see cref="st::CancellationToken"/> to use for this RPC.
         /// </param>
         /// <returns>
         /// A Task containing the RPC response.
         /// </returns>
-        public virtual Task<NodePool> GetNodePoolAsync(
+        public virtual stt::Task<NodePool> GetNodePoolAsync(
             string projectId,
             string zone,
             string clusterId,
             string nodePoolId,
-            CancellationToken cancellationToken) => GetNodePoolAsync(
+            st::CancellationToken cancellationToken) => GetNodePoolAsync(
                 projectId,
                 zone,
                 clusterId,
                 nodePoolId,
-                CallSettings.FromCancellationToken(cancellationToken));
+                gaxgrpc::CallSettings.FromCancellationToken(cancellationToken));
 
         /// <summary>
         /// Retrieves the node pool requested.
@@ -3939,13 +3939,13 @@ namespace Google.Cloud.Container.V1
             string zone,
             string clusterId,
             string nodePoolId,
-            CallSettings callSettings = null) => GetNodePool(
+            gaxgrpc::CallSettings callSettings = null) => GetNodePool(
                 new GetNodePoolRequest
                 {
-                    ProjectId = GaxPreconditions.CheckNotNullOrEmpty(projectId, nameof(projectId)),
-                    Zone = GaxPreconditions.CheckNotNullOrEmpty(zone, nameof(zone)),
-                    ClusterId = GaxPreconditions.CheckNotNullOrEmpty(clusterId, nameof(clusterId)),
-                    NodePoolId = GaxPreconditions.CheckNotNullOrEmpty(nodePoolId, nameof(nodePoolId)),
+                    ProjectId = gax::GaxPreconditions.CheckNotNullOrEmpty(projectId, nameof(projectId)),
+                    Zone = gax::GaxPreconditions.CheckNotNullOrEmpty(zone, nameof(zone)),
+                    ClusterId = gax::GaxPreconditions.CheckNotNullOrEmpty(clusterId, nameof(clusterId)),
+                    NodePoolId = gax::GaxPreconditions.CheckNotNullOrEmpty(nodePoolId, nameof(nodePoolId)),
                 },
                 callSettings);
 
@@ -3961,11 +3961,11 @@ namespace Google.Cloud.Container.V1
         /// <returns>
         /// A Task containing the RPC response.
         /// </returns>
-        public virtual Task<NodePool> GetNodePoolAsync(
+        public virtual stt::Task<NodePool> GetNodePoolAsync(
             GetNodePoolRequest request,
-            CallSettings callSettings = null)
+            gaxgrpc::CallSettings callSettings = null)
         {
-            throw new NotImplementedException();
+            throw new s::NotImplementedException();
         }
 
         /// <summary>
@@ -3975,16 +3975,16 @@ namespace Google.Cloud.Container.V1
         /// The request object containing all of the parameters for the API call.
         /// </param>
         /// <param name="cancellationToken">
-        /// A <see cref="CancellationToken"/> to use for this RPC.
+        /// A <see cref="st::CancellationToken"/> to use for this RPC.
         /// </param>
         /// <returns>
         /// A Task containing the RPC response.
         /// </returns>
-        public virtual Task<NodePool> GetNodePoolAsync(
+        public virtual stt::Task<NodePool> GetNodePoolAsync(
             GetNodePoolRequest request,
-            CancellationToken cancellationToken) => GetNodePoolAsync(
+            st::CancellationToken cancellationToken) => GetNodePoolAsync(
                 request,
-                CallSettings.FromCancellationToken(cancellationToken));
+                gaxgrpc::CallSettings.FromCancellationToken(cancellationToken));
 
         /// <summary>
         /// Retrieves the node pool requested.
@@ -4000,9 +4000,9 @@ namespace Google.Cloud.Container.V1
         /// </returns>
         public virtual NodePool GetNodePool(
             GetNodePoolRequest request,
-            CallSettings callSettings = null)
+            gaxgrpc::CallSettings callSettings = null)
         {
-            throw new NotImplementedException();
+            throw new s::NotImplementedException();
         }
 
         /// <summary>
@@ -4029,18 +4029,18 @@ namespace Google.Cloud.Container.V1
         /// <returns>
         /// A Task containing the RPC response.
         /// </returns>
-        public virtual Task<Operation> CreateNodePoolAsync(
+        public virtual stt::Task<Operation> CreateNodePoolAsync(
             string projectId,
             string zone,
             string clusterId,
             NodePool nodePool,
-            CallSettings callSettings = null) => CreateNodePoolAsync(
+            gaxgrpc::CallSettings callSettings = null) => CreateNodePoolAsync(
                 new CreateNodePoolRequest
                 {
-                    ProjectId = GaxPreconditions.CheckNotNullOrEmpty(projectId, nameof(projectId)),
-                    Zone = GaxPreconditions.CheckNotNullOrEmpty(zone, nameof(zone)),
-                    ClusterId = GaxPreconditions.CheckNotNullOrEmpty(clusterId, nameof(clusterId)),
-                    NodePool = GaxPreconditions.CheckNotNull(nodePool, nameof(nodePool)),
+                    ProjectId = gax::GaxPreconditions.CheckNotNullOrEmpty(projectId, nameof(projectId)),
+                    Zone = gax::GaxPreconditions.CheckNotNullOrEmpty(zone, nameof(zone)),
+                    ClusterId = gax::GaxPreconditions.CheckNotNullOrEmpty(clusterId, nameof(clusterId)),
+                    NodePool = gax::GaxPreconditions.CheckNotNull(nodePool, nameof(nodePool)),
                 },
                 callSettings);
 
@@ -4063,22 +4063,22 @@ namespace Google.Cloud.Container.V1
         /// The node pool to create.
         /// </param>
         /// <param name="cancellationToken">
-        /// A <see cref="CancellationToken"/> to use for this RPC.
+        /// A <see cref="st::CancellationToken"/> to use for this RPC.
         /// </param>
         /// <returns>
         /// A Task containing the RPC response.
         /// </returns>
-        public virtual Task<Operation> CreateNodePoolAsync(
+        public virtual stt::Task<Operation> CreateNodePoolAsync(
             string projectId,
             string zone,
             string clusterId,
             NodePool nodePool,
-            CancellationToken cancellationToken) => CreateNodePoolAsync(
+            st::CancellationToken cancellationToken) => CreateNodePoolAsync(
                 projectId,
                 zone,
                 clusterId,
                 nodePool,
-                CallSettings.FromCancellationToken(cancellationToken));
+                gaxgrpc::CallSettings.FromCancellationToken(cancellationToken));
 
         /// <summary>
         /// Creates a node pool for a cluster.
@@ -4109,13 +4109,13 @@ namespace Google.Cloud.Container.V1
             string zone,
             string clusterId,
             NodePool nodePool,
-            CallSettings callSettings = null) => CreateNodePool(
+            gaxgrpc::CallSettings callSettings = null) => CreateNodePool(
                 new CreateNodePoolRequest
                 {
-                    ProjectId = GaxPreconditions.CheckNotNullOrEmpty(projectId, nameof(projectId)),
-                    Zone = GaxPreconditions.CheckNotNullOrEmpty(zone, nameof(zone)),
-                    ClusterId = GaxPreconditions.CheckNotNullOrEmpty(clusterId, nameof(clusterId)),
-                    NodePool = GaxPreconditions.CheckNotNull(nodePool, nameof(nodePool)),
+                    ProjectId = gax::GaxPreconditions.CheckNotNullOrEmpty(projectId, nameof(projectId)),
+                    Zone = gax::GaxPreconditions.CheckNotNullOrEmpty(zone, nameof(zone)),
+                    ClusterId = gax::GaxPreconditions.CheckNotNullOrEmpty(clusterId, nameof(clusterId)),
+                    NodePool = gax::GaxPreconditions.CheckNotNull(nodePool, nameof(nodePool)),
                 },
                 callSettings);
 
@@ -4131,11 +4131,11 @@ namespace Google.Cloud.Container.V1
         /// <returns>
         /// A Task containing the RPC response.
         /// </returns>
-        public virtual Task<Operation> CreateNodePoolAsync(
+        public virtual stt::Task<Operation> CreateNodePoolAsync(
             CreateNodePoolRequest request,
-            CallSettings callSettings = null)
+            gaxgrpc::CallSettings callSettings = null)
         {
-            throw new NotImplementedException();
+            throw new s::NotImplementedException();
         }
 
         /// <summary>
@@ -4145,16 +4145,16 @@ namespace Google.Cloud.Container.V1
         /// The request object containing all of the parameters for the API call.
         /// </param>
         /// <param name="cancellationToken">
-        /// A <see cref="CancellationToken"/> to use for this RPC.
+        /// A <see cref="st::CancellationToken"/> to use for this RPC.
         /// </param>
         /// <returns>
         /// A Task containing the RPC response.
         /// </returns>
-        public virtual Task<Operation> CreateNodePoolAsync(
+        public virtual stt::Task<Operation> CreateNodePoolAsync(
             CreateNodePoolRequest request,
-            CancellationToken cancellationToken) => CreateNodePoolAsync(
+            st::CancellationToken cancellationToken) => CreateNodePoolAsync(
                 request,
-                CallSettings.FromCancellationToken(cancellationToken));
+                gaxgrpc::CallSettings.FromCancellationToken(cancellationToken));
 
         /// <summary>
         /// Creates a node pool for a cluster.
@@ -4170,9 +4170,9 @@ namespace Google.Cloud.Container.V1
         /// </returns>
         public virtual Operation CreateNodePool(
             CreateNodePoolRequest request,
-            CallSettings callSettings = null)
+            gaxgrpc::CallSettings callSettings = null)
         {
-            throw new NotImplementedException();
+            throw new s::NotImplementedException();
         }
 
         /// <summary>
@@ -4199,18 +4199,18 @@ namespace Google.Cloud.Container.V1
         /// <returns>
         /// A Task containing the RPC response.
         /// </returns>
-        public virtual Task<Operation> DeleteNodePoolAsync(
+        public virtual stt::Task<Operation> DeleteNodePoolAsync(
             string projectId,
             string zone,
             string clusterId,
             string nodePoolId,
-            CallSettings callSettings = null) => DeleteNodePoolAsync(
+            gaxgrpc::CallSettings callSettings = null) => DeleteNodePoolAsync(
                 new DeleteNodePoolRequest
                 {
-                    ProjectId = GaxPreconditions.CheckNotNullOrEmpty(projectId, nameof(projectId)),
-                    Zone = GaxPreconditions.CheckNotNullOrEmpty(zone, nameof(zone)),
-                    ClusterId = GaxPreconditions.CheckNotNullOrEmpty(clusterId, nameof(clusterId)),
-                    NodePoolId = GaxPreconditions.CheckNotNullOrEmpty(nodePoolId, nameof(nodePoolId)),
+                    ProjectId = gax::GaxPreconditions.CheckNotNullOrEmpty(projectId, nameof(projectId)),
+                    Zone = gax::GaxPreconditions.CheckNotNullOrEmpty(zone, nameof(zone)),
+                    ClusterId = gax::GaxPreconditions.CheckNotNullOrEmpty(clusterId, nameof(clusterId)),
+                    NodePoolId = gax::GaxPreconditions.CheckNotNullOrEmpty(nodePoolId, nameof(nodePoolId)),
                 },
                 callSettings);
 
@@ -4233,22 +4233,22 @@ namespace Google.Cloud.Container.V1
         /// The name of the node pool to delete.
         /// </param>
         /// <param name="cancellationToken">
-        /// A <see cref="CancellationToken"/> to use for this RPC.
+        /// A <see cref="st::CancellationToken"/> to use for this RPC.
         /// </param>
         /// <returns>
         /// A Task containing the RPC response.
         /// </returns>
-        public virtual Task<Operation> DeleteNodePoolAsync(
+        public virtual stt::Task<Operation> DeleteNodePoolAsync(
             string projectId,
             string zone,
             string clusterId,
             string nodePoolId,
-            CancellationToken cancellationToken) => DeleteNodePoolAsync(
+            st::CancellationToken cancellationToken) => DeleteNodePoolAsync(
                 projectId,
                 zone,
                 clusterId,
                 nodePoolId,
-                CallSettings.FromCancellationToken(cancellationToken));
+                gaxgrpc::CallSettings.FromCancellationToken(cancellationToken));
 
         /// <summary>
         /// Deletes a node pool from a cluster.
@@ -4279,13 +4279,13 @@ namespace Google.Cloud.Container.V1
             string zone,
             string clusterId,
             string nodePoolId,
-            CallSettings callSettings = null) => DeleteNodePool(
+            gaxgrpc::CallSettings callSettings = null) => DeleteNodePool(
                 new DeleteNodePoolRequest
                 {
-                    ProjectId = GaxPreconditions.CheckNotNullOrEmpty(projectId, nameof(projectId)),
-                    Zone = GaxPreconditions.CheckNotNullOrEmpty(zone, nameof(zone)),
-                    ClusterId = GaxPreconditions.CheckNotNullOrEmpty(clusterId, nameof(clusterId)),
-                    NodePoolId = GaxPreconditions.CheckNotNullOrEmpty(nodePoolId, nameof(nodePoolId)),
+                    ProjectId = gax::GaxPreconditions.CheckNotNullOrEmpty(projectId, nameof(projectId)),
+                    Zone = gax::GaxPreconditions.CheckNotNullOrEmpty(zone, nameof(zone)),
+                    ClusterId = gax::GaxPreconditions.CheckNotNullOrEmpty(clusterId, nameof(clusterId)),
+                    NodePoolId = gax::GaxPreconditions.CheckNotNullOrEmpty(nodePoolId, nameof(nodePoolId)),
                 },
                 callSettings);
 
@@ -4301,11 +4301,11 @@ namespace Google.Cloud.Container.V1
         /// <returns>
         /// A Task containing the RPC response.
         /// </returns>
-        public virtual Task<Operation> DeleteNodePoolAsync(
+        public virtual stt::Task<Operation> DeleteNodePoolAsync(
             DeleteNodePoolRequest request,
-            CallSettings callSettings = null)
+            gaxgrpc::CallSettings callSettings = null)
         {
-            throw new NotImplementedException();
+            throw new s::NotImplementedException();
         }
 
         /// <summary>
@@ -4315,16 +4315,16 @@ namespace Google.Cloud.Container.V1
         /// The request object containing all of the parameters for the API call.
         /// </param>
         /// <param name="cancellationToken">
-        /// A <see cref="CancellationToken"/> to use for this RPC.
+        /// A <see cref="st::CancellationToken"/> to use for this RPC.
         /// </param>
         /// <returns>
         /// A Task containing the RPC response.
         /// </returns>
-        public virtual Task<Operation> DeleteNodePoolAsync(
+        public virtual stt::Task<Operation> DeleteNodePoolAsync(
             DeleteNodePoolRequest request,
-            CancellationToken cancellationToken) => DeleteNodePoolAsync(
+            st::CancellationToken cancellationToken) => DeleteNodePoolAsync(
                 request,
-                CallSettings.FromCancellationToken(cancellationToken));
+                gaxgrpc::CallSettings.FromCancellationToken(cancellationToken));
 
         /// <summary>
         /// Deletes a node pool from a cluster.
@@ -4340,9 +4340,9 @@ namespace Google.Cloud.Container.V1
         /// </returns>
         public virtual Operation DeleteNodePool(
             DeleteNodePoolRequest request,
-            CallSettings callSettings = null)
+            gaxgrpc::CallSettings callSettings = null)
         {
-            throw new NotImplementedException();
+            throw new s::NotImplementedException();
         }
 
         /// <summary>
@@ -4370,18 +4370,18 @@ namespace Google.Cloud.Container.V1
         /// <returns>
         /// A Task containing the RPC response.
         /// </returns>
-        public virtual Task<Operation> RollbackNodePoolUpgradeAsync(
+        public virtual stt::Task<Operation> RollbackNodePoolUpgradeAsync(
             string projectId,
             string zone,
             string clusterId,
             string nodePoolId,
-            CallSettings callSettings = null) => RollbackNodePoolUpgradeAsync(
+            gaxgrpc::CallSettings callSettings = null) => RollbackNodePoolUpgradeAsync(
                 new RollbackNodePoolUpgradeRequest
                 {
-                    ProjectId = GaxPreconditions.CheckNotNullOrEmpty(projectId, nameof(projectId)),
-                    Zone = GaxPreconditions.CheckNotNullOrEmpty(zone, nameof(zone)),
-                    ClusterId = GaxPreconditions.CheckNotNullOrEmpty(clusterId, nameof(clusterId)),
-                    NodePoolId = GaxPreconditions.CheckNotNullOrEmpty(nodePoolId, nameof(nodePoolId)),
+                    ProjectId = gax::GaxPreconditions.CheckNotNullOrEmpty(projectId, nameof(projectId)),
+                    Zone = gax::GaxPreconditions.CheckNotNullOrEmpty(zone, nameof(zone)),
+                    ClusterId = gax::GaxPreconditions.CheckNotNullOrEmpty(clusterId, nameof(clusterId)),
+                    NodePoolId = gax::GaxPreconditions.CheckNotNullOrEmpty(nodePoolId, nameof(nodePoolId)),
                 },
                 callSettings);
 
@@ -4405,22 +4405,22 @@ namespace Google.Cloud.Container.V1
         /// The name of the node pool to rollback.
         /// </param>
         /// <param name="cancellationToken">
-        /// A <see cref="CancellationToken"/> to use for this RPC.
+        /// A <see cref="st::CancellationToken"/> to use for this RPC.
         /// </param>
         /// <returns>
         /// A Task containing the RPC response.
         /// </returns>
-        public virtual Task<Operation> RollbackNodePoolUpgradeAsync(
+        public virtual stt::Task<Operation> RollbackNodePoolUpgradeAsync(
             string projectId,
             string zone,
             string clusterId,
             string nodePoolId,
-            CancellationToken cancellationToken) => RollbackNodePoolUpgradeAsync(
+            st::CancellationToken cancellationToken) => RollbackNodePoolUpgradeAsync(
                 projectId,
                 zone,
                 clusterId,
                 nodePoolId,
-                CallSettings.FromCancellationToken(cancellationToken));
+                gaxgrpc::CallSettings.FromCancellationToken(cancellationToken));
 
         /// <summary>
         /// Roll back the previously Aborted or Failed NodePool upgrade.
@@ -4452,13 +4452,13 @@ namespace Google.Cloud.Container.V1
             string zone,
             string clusterId,
             string nodePoolId,
-            CallSettings callSettings = null) => RollbackNodePoolUpgrade(
+            gaxgrpc::CallSettings callSettings = null) => RollbackNodePoolUpgrade(
                 new RollbackNodePoolUpgradeRequest
                 {
-                    ProjectId = GaxPreconditions.CheckNotNullOrEmpty(projectId, nameof(projectId)),
-                    Zone = GaxPreconditions.CheckNotNullOrEmpty(zone, nameof(zone)),
-                    ClusterId = GaxPreconditions.CheckNotNullOrEmpty(clusterId, nameof(clusterId)),
-                    NodePoolId = GaxPreconditions.CheckNotNullOrEmpty(nodePoolId, nameof(nodePoolId)),
+                    ProjectId = gax::GaxPreconditions.CheckNotNullOrEmpty(projectId, nameof(projectId)),
+                    Zone = gax::GaxPreconditions.CheckNotNullOrEmpty(zone, nameof(zone)),
+                    ClusterId = gax::GaxPreconditions.CheckNotNullOrEmpty(clusterId, nameof(clusterId)),
+                    NodePoolId = gax::GaxPreconditions.CheckNotNullOrEmpty(nodePoolId, nameof(nodePoolId)),
                 },
                 callSettings);
 
@@ -4475,11 +4475,11 @@ namespace Google.Cloud.Container.V1
         /// <returns>
         /// A Task containing the RPC response.
         /// </returns>
-        public virtual Task<Operation> RollbackNodePoolUpgradeAsync(
+        public virtual stt::Task<Operation> RollbackNodePoolUpgradeAsync(
             RollbackNodePoolUpgradeRequest request,
-            CallSettings callSettings = null)
+            gaxgrpc::CallSettings callSettings = null)
         {
-            throw new NotImplementedException();
+            throw new s::NotImplementedException();
         }
 
         /// <summary>
@@ -4490,16 +4490,16 @@ namespace Google.Cloud.Container.V1
         /// The request object containing all of the parameters for the API call.
         /// </param>
         /// <param name="cancellationToken">
-        /// A <see cref="CancellationToken"/> to use for this RPC.
+        /// A <see cref="st::CancellationToken"/> to use for this RPC.
         /// </param>
         /// <returns>
         /// A Task containing the RPC response.
         /// </returns>
-        public virtual Task<Operation> RollbackNodePoolUpgradeAsync(
+        public virtual stt::Task<Operation> RollbackNodePoolUpgradeAsync(
             RollbackNodePoolUpgradeRequest request,
-            CancellationToken cancellationToken) => RollbackNodePoolUpgradeAsync(
+            st::CancellationToken cancellationToken) => RollbackNodePoolUpgradeAsync(
                 request,
-                CallSettings.FromCancellationToken(cancellationToken));
+                gaxgrpc::CallSettings.FromCancellationToken(cancellationToken));
 
         /// <summary>
         /// Roll back the previously Aborted or Failed NodePool upgrade.
@@ -4516,9 +4516,9 @@ namespace Google.Cloud.Container.V1
         /// </returns>
         public virtual Operation RollbackNodePoolUpgrade(
             RollbackNodePoolUpgradeRequest request,
-            CallSettings callSettings = null)
+            gaxgrpc::CallSettings callSettings = null)
         {
-            throw new NotImplementedException();
+            throw new s::NotImplementedException();
         }
 
         /// <summary>
@@ -4533,11 +4533,11 @@ namespace Google.Cloud.Container.V1
         /// <returns>
         /// A Task containing the RPC response.
         /// </returns>
-        public virtual Task<Operation> SetNodePoolManagementAsync(
+        public virtual stt::Task<Operation> SetNodePoolManagementAsync(
             SetNodePoolManagementRequest request,
-            CallSettings callSettings = null)
+            gaxgrpc::CallSettings callSettings = null)
         {
-            throw new NotImplementedException();
+            throw new s::NotImplementedException();
         }
 
         /// <summary>
@@ -4547,16 +4547,16 @@ namespace Google.Cloud.Container.V1
         /// The request object containing all of the parameters for the API call.
         /// </param>
         /// <param name="cancellationToken">
-        /// A <see cref="CancellationToken"/> to use for this RPC.
+        /// A <see cref="st::CancellationToken"/> to use for this RPC.
         /// </param>
         /// <returns>
         /// A Task containing the RPC response.
         /// </returns>
-        public virtual Task<Operation> SetNodePoolManagementAsync(
+        public virtual stt::Task<Operation> SetNodePoolManagementAsync(
             SetNodePoolManagementRequest request,
-            CancellationToken cancellationToken) => SetNodePoolManagementAsync(
+            st::CancellationToken cancellationToken) => SetNodePoolManagementAsync(
                 request,
-                CallSettings.FromCancellationToken(cancellationToken));
+                gaxgrpc::CallSettings.FromCancellationToken(cancellationToken));
 
         /// <summary>
         /// Sets the NodeManagement options for a node pool.
@@ -4572,9 +4572,9 @@ namespace Google.Cloud.Container.V1
         /// </returns>
         public virtual Operation SetNodePoolManagement(
             SetNodePoolManagementRequest request,
-            CallSettings callSettings = null)
+            gaxgrpc::CallSettings callSettings = null)
         {
-            throw new NotImplementedException();
+            throw new s::NotImplementedException();
         }
 
         /// <summary>
@@ -4589,11 +4589,11 @@ namespace Google.Cloud.Container.V1
         /// <returns>
         /// A Task containing the RPC response.
         /// </returns>
-        public virtual Task<Operation> SetLabelsAsync(
+        public virtual stt::Task<Operation> SetLabelsAsync(
             SetLabelsRequest request,
-            CallSettings callSettings = null)
+            gaxgrpc::CallSettings callSettings = null)
         {
-            throw new NotImplementedException();
+            throw new s::NotImplementedException();
         }
 
         /// <summary>
@@ -4603,16 +4603,16 @@ namespace Google.Cloud.Container.V1
         /// The request object containing all of the parameters for the API call.
         /// </param>
         /// <param name="cancellationToken">
-        /// A <see cref="CancellationToken"/> to use for this RPC.
+        /// A <see cref="st::CancellationToken"/> to use for this RPC.
         /// </param>
         /// <returns>
         /// A Task containing the RPC response.
         /// </returns>
-        public virtual Task<Operation> SetLabelsAsync(
+        public virtual stt::Task<Operation> SetLabelsAsync(
             SetLabelsRequest request,
-            CancellationToken cancellationToken) => SetLabelsAsync(
+            st::CancellationToken cancellationToken) => SetLabelsAsync(
                 request,
-                CallSettings.FromCancellationToken(cancellationToken));
+                gaxgrpc::CallSettings.FromCancellationToken(cancellationToken));
 
         /// <summary>
         /// Sets labels on a cluster.
@@ -4628,9 +4628,9 @@ namespace Google.Cloud.Container.V1
         /// </returns>
         public virtual Operation SetLabels(
             SetLabelsRequest request,
-            CallSettings callSettings = null)
+            gaxgrpc::CallSettings callSettings = null)
         {
-            throw new NotImplementedException();
+            throw new s::NotImplementedException();
         }
 
         /// <summary>
@@ -4657,17 +4657,17 @@ namespace Google.Cloud.Container.V1
         /// <returns>
         /// A Task containing the RPC response.
         /// </returns>
-        public virtual Task<Operation> SetLegacyAbacAsync(
+        public virtual stt::Task<Operation> SetLegacyAbacAsync(
             string projectId,
             string zone,
             string clusterId,
             bool enabled,
-            CallSettings callSettings = null) => SetLegacyAbacAsync(
+            gaxgrpc::CallSettings callSettings = null) => SetLegacyAbacAsync(
                 new SetLegacyAbacRequest
                 {
-                    ProjectId = GaxPreconditions.CheckNotNullOrEmpty(projectId, nameof(projectId)),
-                    Zone = GaxPreconditions.CheckNotNullOrEmpty(zone, nameof(zone)),
-                    ClusterId = GaxPreconditions.CheckNotNullOrEmpty(clusterId, nameof(clusterId)),
+                    ProjectId = gax::GaxPreconditions.CheckNotNullOrEmpty(projectId, nameof(projectId)),
+                    Zone = gax::GaxPreconditions.CheckNotNullOrEmpty(zone, nameof(zone)),
+                    ClusterId = gax::GaxPreconditions.CheckNotNullOrEmpty(clusterId, nameof(clusterId)),
                     Enabled = enabled,
                 },
                 callSettings);
@@ -4691,22 +4691,22 @@ namespace Google.Cloud.Container.V1
         /// Whether ABAC authorization will be enabled in the cluster.
         /// </param>
         /// <param name="cancellationToken">
-        /// A <see cref="CancellationToken"/> to use for this RPC.
+        /// A <see cref="st::CancellationToken"/> to use for this RPC.
         /// </param>
         /// <returns>
         /// A Task containing the RPC response.
         /// </returns>
-        public virtual Task<Operation> SetLegacyAbacAsync(
+        public virtual stt::Task<Operation> SetLegacyAbacAsync(
             string projectId,
             string zone,
             string clusterId,
             bool enabled,
-            CancellationToken cancellationToken) => SetLegacyAbacAsync(
+            st::CancellationToken cancellationToken) => SetLegacyAbacAsync(
                 projectId,
                 zone,
                 clusterId,
                 enabled,
-                CallSettings.FromCancellationToken(cancellationToken));
+                gaxgrpc::CallSettings.FromCancellationToken(cancellationToken));
 
         /// <summary>
         /// Enables or disables the ABAC authorization mechanism on a cluster.
@@ -4737,12 +4737,12 @@ namespace Google.Cloud.Container.V1
             string zone,
             string clusterId,
             bool enabled,
-            CallSettings callSettings = null) => SetLegacyAbac(
+            gaxgrpc::CallSettings callSettings = null) => SetLegacyAbac(
                 new SetLegacyAbacRequest
                 {
-                    ProjectId = GaxPreconditions.CheckNotNullOrEmpty(projectId, nameof(projectId)),
-                    Zone = GaxPreconditions.CheckNotNullOrEmpty(zone, nameof(zone)),
-                    ClusterId = GaxPreconditions.CheckNotNullOrEmpty(clusterId, nameof(clusterId)),
+                    ProjectId = gax::GaxPreconditions.CheckNotNullOrEmpty(projectId, nameof(projectId)),
+                    Zone = gax::GaxPreconditions.CheckNotNullOrEmpty(zone, nameof(zone)),
+                    ClusterId = gax::GaxPreconditions.CheckNotNullOrEmpty(clusterId, nameof(clusterId)),
                     Enabled = enabled,
                 },
                 callSettings);
@@ -4759,11 +4759,11 @@ namespace Google.Cloud.Container.V1
         /// <returns>
         /// A Task containing the RPC response.
         /// </returns>
-        public virtual Task<Operation> SetLegacyAbacAsync(
+        public virtual stt::Task<Operation> SetLegacyAbacAsync(
             SetLegacyAbacRequest request,
-            CallSettings callSettings = null)
+            gaxgrpc::CallSettings callSettings = null)
         {
-            throw new NotImplementedException();
+            throw new s::NotImplementedException();
         }
 
         /// <summary>
@@ -4773,16 +4773,16 @@ namespace Google.Cloud.Container.V1
         /// The request object containing all of the parameters for the API call.
         /// </param>
         /// <param name="cancellationToken">
-        /// A <see cref="CancellationToken"/> to use for this RPC.
+        /// A <see cref="st::CancellationToken"/> to use for this RPC.
         /// </param>
         /// <returns>
         /// A Task containing the RPC response.
         /// </returns>
-        public virtual Task<Operation> SetLegacyAbacAsync(
+        public virtual stt::Task<Operation> SetLegacyAbacAsync(
             SetLegacyAbacRequest request,
-            CancellationToken cancellationToken) => SetLegacyAbacAsync(
+            st::CancellationToken cancellationToken) => SetLegacyAbacAsync(
                 request,
-                CallSettings.FromCancellationToken(cancellationToken));
+                gaxgrpc::CallSettings.FromCancellationToken(cancellationToken));
 
         /// <summary>
         /// Enables or disables the ABAC authorization mechanism on a cluster.
@@ -4798,9 +4798,9 @@ namespace Google.Cloud.Container.V1
         /// </returns>
         public virtual Operation SetLegacyAbac(
             SetLegacyAbacRequest request,
-            CallSettings callSettings = null)
+            gaxgrpc::CallSettings callSettings = null)
         {
-            throw new NotImplementedException();
+            throw new s::NotImplementedException();
         }
 
         /// <summary>
@@ -4824,16 +4824,16 @@ namespace Google.Cloud.Container.V1
         /// <returns>
         /// A Task containing the RPC response.
         /// </returns>
-        public virtual Task<Operation> StartIPRotationAsync(
+        public virtual stt::Task<Operation> StartIPRotationAsync(
             string projectId,
             string zone,
             string clusterId,
-            CallSettings callSettings = null) => StartIPRotationAsync(
+            gaxgrpc::CallSettings callSettings = null) => StartIPRotationAsync(
                 new StartIPRotationRequest
                 {
-                    ProjectId = GaxPreconditions.CheckNotNullOrEmpty(projectId, nameof(projectId)),
-                    Zone = GaxPreconditions.CheckNotNullOrEmpty(zone, nameof(zone)),
-                    ClusterId = GaxPreconditions.CheckNotNullOrEmpty(clusterId, nameof(clusterId)),
+                    ProjectId = gax::GaxPreconditions.CheckNotNullOrEmpty(projectId, nameof(projectId)),
+                    Zone = gax::GaxPreconditions.CheckNotNullOrEmpty(zone, nameof(zone)),
+                    ClusterId = gax::GaxPreconditions.CheckNotNullOrEmpty(clusterId, nameof(clusterId)),
                 },
                 callSettings);
 
@@ -4853,20 +4853,20 @@ namespace Google.Cloud.Container.V1
         /// The name of the cluster.
         /// </param>
         /// <param name="cancellationToken">
-        /// A <see cref="CancellationToken"/> to use for this RPC.
+        /// A <see cref="st::CancellationToken"/> to use for this RPC.
         /// </param>
         /// <returns>
         /// A Task containing the RPC response.
         /// </returns>
-        public virtual Task<Operation> StartIPRotationAsync(
+        public virtual stt::Task<Operation> StartIPRotationAsync(
             string projectId,
             string zone,
             string clusterId,
-            CancellationToken cancellationToken) => StartIPRotationAsync(
+            st::CancellationToken cancellationToken) => StartIPRotationAsync(
                 projectId,
                 zone,
                 clusterId,
-                CallSettings.FromCancellationToken(cancellationToken));
+                gaxgrpc::CallSettings.FromCancellationToken(cancellationToken));
 
         /// <summary>
         /// Start master IP rotation.
@@ -4893,12 +4893,12 @@ namespace Google.Cloud.Container.V1
             string projectId,
             string zone,
             string clusterId,
-            CallSettings callSettings = null) => StartIPRotation(
+            gaxgrpc::CallSettings callSettings = null) => StartIPRotation(
                 new StartIPRotationRequest
                 {
-                    ProjectId = GaxPreconditions.CheckNotNullOrEmpty(projectId, nameof(projectId)),
-                    Zone = GaxPreconditions.CheckNotNullOrEmpty(zone, nameof(zone)),
-                    ClusterId = GaxPreconditions.CheckNotNullOrEmpty(clusterId, nameof(clusterId)),
+                    ProjectId = gax::GaxPreconditions.CheckNotNullOrEmpty(projectId, nameof(projectId)),
+                    Zone = gax::GaxPreconditions.CheckNotNullOrEmpty(zone, nameof(zone)),
+                    ClusterId = gax::GaxPreconditions.CheckNotNullOrEmpty(clusterId, nameof(clusterId)),
                 },
                 callSettings);
 
@@ -4914,11 +4914,11 @@ namespace Google.Cloud.Container.V1
         /// <returns>
         /// A Task containing the RPC response.
         /// </returns>
-        public virtual Task<Operation> StartIPRotationAsync(
+        public virtual stt::Task<Operation> StartIPRotationAsync(
             StartIPRotationRequest request,
-            CallSettings callSettings = null)
+            gaxgrpc::CallSettings callSettings = null)
         {
-            throw new NotImplementedException();
+            throw new s::NotImplementedException();
         }
 
         /// <summary>
@@ -4928,16 +4928,16 @@ namespace Google.Cloud.Container.V1
         /// The request object containing all of the parameters for the API call.
         /// </param>
         /// <param name="cancellationToken">
-        /// A <see cref="CancellationToken"/> to use for this RPC.
+        /// A <see cref="st::CancellationToken"/> to use for this RPC.
         /// </param>
         /// <returns>
         /// A Task containing the RPC response.
         /// </returns>
-        public virtual Task<Operation> StartIPRotationAsync(
+        public virtual stt::Task<Operation> StartIPRotationAsync(
             StartIPRotationRequest request,
-            CancellationToken cancellationToken) => StartIPRotationAsync(
+            st::CancellationToken cancellationToken) => StartIPRotationAsync(
                 request,
-                CallSettings.FromCancellationToken(cancellationToken));
+                gaxgrpc::CallSettings.FromCancellationToken(cancellationToken));
 
         /// <summary>
         /// Start master IP rotation.
@@ -4953,9 +4953,9 @@ namespace Google.Cloud.Container.V1
         /// </returns>
         public virtual Operation StartIPRotation(
             StartIPRotationRequest request,
-            CallSettings callSettings = null)
+            gaxgrpc::CallSettings callSettings = null)
         {
-            throw new NotImplementedException();
+            throw new s::NotImplementedException();
         }
 
         /// <summary>
@@ -4979,16 +4979,16 @@ namespace Google.Cloud.Container.V1
         /// <returns>
         /// A Task containing the RPC response.
         /// </returns>
-        public virtual Task<Operation> CompleteIPRotationAsync(
+        public virtual stt::Task<Operation> CompleteIPRotationAsync(
             string projectId,
             string zone,
             string clusterId,
-            CallSettings callSettings = null) => CompleteIPRotationAsync(
+            gaxgrpc::CallSettings callSettings = null) => CompleteIPRotationAsync(
                 new CompleteIPRotationRequest
                 {
-                    ProjectId = GaxPreconditions.CheckNotNullOrEmpty(projectId, nameof(projectId)),
-                    Zone = GaxPreconditions.CheckNotNullOrEmpty(zone, nameof(zone)),
-                    ClusterId = GaxPreconditions.CheckNotNullOrEmpty(clusterId, nameof(clusterId)),
+                    ProjectId = gax::GaxPreconditions.CheckNotNullOrEmpty(projectId, nameof(projectId)),
+                    Zone = gax::GaxPreconditions.CheckNotNullOrEmpty(zone, nameof(zone)),
+                    ClusterId = gax::GaxPreconditions.CheckNotNullOrEmpty(clusterId, nameof(clusterId)),
                 },
                 callSettings);
 
@@ -5008,20 +5008,20 @@ namespace Google.Cloud.Container.V1
         /// The name of the cluster.
         /// </param>
         /// <param name="cancellationToken">
-        /// A <see cref="CancellationToken"/> to use for this RPC.
+        /// A <see cref="st::CancellationToken"/> to use for this RPC.
         /// </param>
         /// <returns>
         /// A Task containing the RPC response.
         /// </returns>
-        public virtual Task<Operation> CompleteIPRotationAsync(
+        public virtual stt::Task<Operation> CompleteIPRotationAsync(
             string projectId,
             string zone,
             string clusterId,
-            CancellationToken cancellationToken) => CompleteIPRotationAsync(
+            st::CancellationToken cancellationToken) => CompleteIPRotationAsync(
                 projectId,
                 zone,
                 clusterId,
-                CallSettings.FromCancellationToken(cancellationToken));
+                gaxgrpc::CallSettings.FromCancellationToken(cancellationToken));
 
         /// <summary>
         /// Completes master IP rotation.
@@ -5048,12 +5048,12 @@ namespace Google.Cloud.Container.V1
             string projectId,
             string zone,
             string clusterId,
-            CallSettings callSettings = null) => CompleteIPRotation(
+            gaxgrpc::CallSettings callSettings = null) => CompleteIPRotation(
                 new CompleteIPRotationRequest
                 {
-                    ProjectId = GaxPreconditions.CheckNotNullOrEmpty(projectId, nameof(projectId)),
-                    Zone = GaxPreconditions.CheckNotNullOrEmpty(zone, nameof(zone)),
-                    ClusterId = GaxPreconditions.CheckNotNullOrEmpty(clusterId, nameof(clusterId)),
+                    ProjectId = gax::GaxPreconditions.CheckNotNullOrEmpty(projectId, nameof(projectId)),
+                    Zone = gax::GaxPreconditions.CheckNotNullOrEmpty(zone, nameof(zone)),
+                    ClusterId = gax::GaxPreconditions.CheckNotNullOrEmpty(clusterId, nameof(clusterId)),
                 },
                 callSettings);
 
@@ -5069,11 +5069,11 @@ namespace Google.Cloud.Container.V1
         /// <returns>
         /// A Task containing the RPC response.
         /// </returns>
-        public virtual Task<Operation> CompleteIPRotationAsync(
+        public virtual stt::Task<Operation> CompleteIPRotationAsync(
             CompleteIPRotationRequest request,
-            CallSettings callSettings = null)
+            gaxgrpc::CallSettings callSettings = null)
         {
-            throw new NotImplementedException();
+            throw new s::NotImplementedException();
         }
 
         /// <summary>
@@ -5083,16 +5083,16 @@ namespace Google.Cloud.Container.V1
         /// The request object containing all of the parameters for the API call.
         /// </param>
         /// <param name="cancellationToken">
-        /// A <see cref="CancellationToken"/> to use for this RPC.
+        /// A <see cref="st::CancellationToken"/> to use for this RPC.
         /// </param>
         /// <returns>
         /// A Task containing the RPC response.
         /// </returns>
-        public virtual Task<Operation> CompleteIPRotationAsync(
+        public virtual stt::Task<Operation> CompleteIPRotationAsync(
             CompleteIPRotationRequest request,
-            CancellationToken cancellationToken) => CompleteIPRotationAsync(
+            st::CancellationToken cancellationToken) => CompleteIPRotationAsync(
                 request,
-                CallSettings.FromCancellationToken(cancellationToken));
+                gaxgrpc::CallSettings.FromCancellationToken(cancellationToken));
 
         /// <summary>
         /// Completes master IP rotation.
@@ -5108,9 +5108,9 @@ namespace Google.Cloud.Container.V1
         /// </returns>
         public virtual Operation CompleteIPRotation(
             CompleteIPRotationRequest request,
-            CallSettings callSettings = null)
+            gaxgrpc::CallSettings callSettings = null)
         {
-            throw new NotImplementedException();
+            throw new s::NotImplementedException();
         }
 
         /// <summary>
@@ -5125,11 +5125,11 @@ namespace Google.Cloud.Container.V1
         /// <returns>
         /// A Task containing the RPC response.
         /// </returns>
-        public virtual Task<Operation> SetNodePoolSizeAsync(
+        public virtual stt::Task<Operation> SetNodePoolSizeAsync(
             SetNodePoolSizeRequest request,
-            CallSettings callSettings = null)
+            gaxgrpc::CallSettings callSettings = null)
         {
-            throw new NotImplementedException();
+            throw new s::NotImplementedException();
         }
 
         /// <summary>
@@ -5139,16 +5139,16 @@ namespace Google.Cloud.Container.V1
         /// The request object containing all of the parameters for the API call.
         /// </param>
         /// <param name="cancellationToken">
-        /// A <see cref="CancellationToken"/> to use for this RPC.
+        /// A <see cref="st::CancellationToken"/> to use for this RPC.
         /// </param>
         /// <returns>
         /// A Task containing the RPC response.
         /// </returns>
-        public virtual Task<Operation> SetNodePoolSizeAsync(
+        public virtual stt::Task<Operation> SetNodePoolSizeAsync(
             SetNodePoolSizeRequest request,
-            CancellationToken cancellationToken) => SetNodePoolSizeAsync(
+            st::CancellationToken cancellationToken) => SetNodePoolSizeAsync(
                 request,
-                CallSettings.FromCancellationToken(cancellationToken));
+                gaxgrpc::CallSettings.FromCancellationToken(cancellationToken));
 
         /// <summary>
         /// Sets the size of a specific node pool.
@@ -5164,9 +5164,9 @@ namespace Google.Cloud.Container.V1
         /// </returns>
         public virtual Operation SetNodePoolSize(
             SetNodePoolSizeRequest request,
-            CallSettings callSettings = null)
+            gaxgrpc::CallSettings callSettings = null)
         {
-            throw new NotImplementedException();
+            throw new s::NotImplementedException();
         }
 
         /// <summary>
@@ -5193,18 +5193,18 @@ namespace Google.Cloud.Container.V1
         /// <returns>
         /// A Task containing the RPC response.
         /// </returns>
-        public virtual Task<Operation> SetNetworkPolicyAsync(
+        public virtual stt::Task<Operation> SetNetworkPolicyAsync(
             string projectId,
             string zone,
             string clusterId,
             NetworkPolicy networkPolicy,
-            CallSettings callSettings = null) => SetNetworkPolicyAsync(
+            gaxgrpc::CallSettings callSettings = null) => SetNetworkPolicyAsync(
                 new SetNetworkPolicyRequest
                 {
-                    ProjectId = GaxPreconditions.CheckNotNullOrEmpty(projectId, nameof(projectId)),
-                    Zone = GaxPreconditions.CheckNotNullOrEmpty(zone, nameof(zone)),
-                    ClusterId = GaxPreconditions.CheckNotNullOrEmpty(clusterId, nameof(clusterId)),
-                    NetworkPolicy = GaxPreconditions.CheckNotNull(networkPolicy, nameof(networkPolicy)),
+                    ProjectId = gax::GaxPreconditions.CheckNotNullOrEmpty(projectId, nameof(projectId)),
+                    Zone = gax::GaxPreconditions.CheckNotNullOrEmpty(zone, nameof(zone)),
+                    ClusterId = gax::GaxPreconditions.CheckNotNullOrEmpty(clusterId, nameof(clusterId)),
+                    NetworkPolicy = gax::GaxPreconditions.CheckNotNull(networkPolicy, nameof(networkPolicy)),
                 },
                 callSettings);
 
@@ -5227,22 +5227,22 @@ namespace Google.Cloud.Container.V1
         /// Configuration options for the NetworkPolicy feature.
         /// </param>
         /// <param name="cancellationToken">
-        /// A <see cref="CancellationToken"/> to use for this RPC.
+        /// A <see cref="st::CancellationToken"/> to use for this RPC.
         /// </param>
         /// <returns>
         /// A Task containing the RPC response.
         /// </returns>
-        public virtual Task<Operation> SetNetworkPolicyAsync(
+        public virtual stt::Task<Operation> SetNetworkPolicyAsync(
             string projectId,
             string zone,
             string clusterId,
             NetworkPolicy networkPolicy,
-            CancellationToken cancellationToken) => SetNetworkPolicyAsync(
+            st::CancellationToken cancellationToken) => SetNetworkPolicyAsync(
                 projectId,
                 zone,
                 clusterId,
                 networkPolicy,
-                CallSettings.FromCancellationToken(cancellationToken));
+                gaxgrpc::CallSettings.FromCancellationToken(cancellationToken));
 
         /// <summary>
         /// Enables/Disables Network Policy for a cluster.
@@ -5273,13 +5273,13 @@ namespace Google.Cloud.Container.V1
             string zone,
             string clusterId,
             NetworkPolicy networkPolicy,
-            CallSettings callSettings = null) => SetNetworkPolicy(
+            gaxgrpc::CallSettings callSettings = null) => SetNetworkPolicy(
                 new SetNetworkPolicyRequest
                 {
-                    ProjectId = GaxPreconditions.CheckNotNullOrEmpty(projectId, nameof(projectId)),
-                    Zone = GaxPreconditions.CheckNotNullOrEmpty(zone, nameof(zone)),
-                    ClusterId = GaxPreconditions.CheckNotNullOrEmpty(clusterId, nameof(clusterId)),
-                    NetworkPolicy = GaxPreconditions.CheckNotNull(networkPolicy, nameof(networkPolicy)),
+                    ProjectId = gax::GaxPreconditions.CheckNotNullOrEmpty(projectId, nameof(projectId)),
+                    Zone = gax::GaxPreconditions.CheckNotNullOrEmpty(zone, nameof(zone)),
+                    ClusterId = gax::GaxPreconditions.CheckNotNullOrEmpty(clusterId, nameof(clusterId)),
+                    NetworkPolicy = gax::GaxPreconditions.CheckNotNull(networkPolicy, nameof(networkPolicy)),
                 },
                 callSettings);
 
@@ -5295,11 +5295,11 @@ namespace Google.Cloud.Container.V1
         /// <returns>
         /// A Task containing the RPC response.
         /// </returns>
-        public virtual Task<Operation> SetNetworkPolicyAsync(
+        public virtual stt::Task<Operation> SetNetworkPolicyAsync(
             SetNetworkPolicyRequest request,
-            CallSettings callSettings = null)
+            gaxgrpc::CallSettings callSettings = null)
         {
-            throw new NotImplementedException();
+            throw new s::NotImplementedException();
         }
 
         /// <summary>
@@ -5309,16 +5309,16 @@ namespace Google.Cloud.Container.V1
         /// The request object containing all of the parameters for the API call.
         /// </param>
         /// <param name="cancellationToken">
-        /// A <see cref="CancellationToken"/> to use for this RPC.
+        /// A <see cref="st::CancellationToken"/> to use for this RPC.
         /// </param>
         /// <returns>
         /// A Task containing the RPC response.
         /// </returns>
-        public virtual Task<Operation> SetNetworkPolicyAsync(
+        public virtual stt::Task<Operation> SetNetworkPolicyAsync(
             SetNetworkPolicyRequest request,
-            CancellationToken cancellationToken) => SetNetworkPolicyAsync(
+            st::CancellationToken cancellationToken) => SetNetworkPolicyAsync(
                 request,
-                CallSettings.FromCancellationToken(cancellationToken));
+                gaxgrpc::CallSettings.FromCancellationToken(cancellationToken));
 
         /// <summary>
         /// Enables/Disables Network Policy for a cluster.
@@ -5334,9 +5334,9 @@ namespace Google.Cloud.Container.V1
         /// </returns>
         public virtual Operation SetNetworkPolicy(
             SetNetworkPolicyRequest request,
-            CallSettings callSettings = null)
+            gaxgrpc::CallSettings callSettings = null)
         {
-            throw new NotImplementedException();
+            throw new s::NotImplementedException();
         }
 
         /// <summary>
@@ -5364,18 +5364,18 @@ namespace Google.Cloud.Container.V1
         /// <returns>
         /// A Task containing the RPC response.
         /// </returns>
-        public virtual Task<Operation> SetMaintenancePolicyAsync(
+        public virtual stt::Task<Operation> SetMaintenancePolicyAsync(
             string projectId,
             string zone,
             string clusterId,
             MaintenancePolicy maintenancePolicy,
-            CallSettings callSettings = null) => SetMaintenancePolicyAsync(
+            gaxgrpc::CallSettings callSettings = null) => SetMaintenancePolicyAsync(
                 new SetMaintenancePolicyRequest
                 {
-                    ProjectId = GaxPreconditions.CheckNotNullOrEmpty(projectId, nameof(projectId)),
-                    Zone = GaxPreconditions.CheckNotNullOrEmpty(zone, nameof(zone)),
-                    ClusterId = GaxPreconditions.CheckNotNullOrEmpty(clusterId, nameof(clusterId)),
-                    MaintenancePolicy = GaxPreconditions.CheckNotNull(maintenancePolicy, nameof(maintenancePolicy)),
+                    ProjectId = gax::GaxPreconditions.CheckNotNullOrEmpty(projectId, nameof(projectId)),
+                    Zone = gax::GaxPreconditions.CheckNotNullOrEmpty(zone, nameof(zone)),
+                    ClusterId = gax::GaxPreconditions.CheckNotNullOrEmpty(clusterId, nameof(clusterId)),
+                    MaintenancePolicy = gax::GaxPreconditions.CheckNotNull(maintenancePolicy, nameof(maintenancePolicy)),
                 },
                 callSettings);
 
@@ -5399,22 +5399,22 @@ namespace Google.Cloud.Container.V1
         /// clears the existing maintenance policy.
         /// </param>
         /// <param name="cancellationToken">
-        /// A <see cref="CancellationToken"/> to use for this RPC.
+        /// A <see cref="st::CancellationToken"/> to use for this RPC.
         /// </param>
         /// <returns>
         /// A Task containing the RPC response.
         /// </returns>
-        public virtual Task<Operation> SetMaintenancePolicyAsync(
+        public virtual stt::Task<Operation> SetMaintenancePolicyAsync(
             string projectId,
             string zone,
             string clusterId,
             MaintenancePolicy maintenancePolicy,
-            CancellationToken cancellationToken) => SetMaintenancePolicyAsync(
+            st::CancellationToken cancellationToken) => SetMaintenancePolicyAsync(
                 projectId,
                 zone,
                 clusterId,
                 maintenancePolicy,
-                CallSettings.FromCancellationToken(cancellationToken));
+                gaxgrpc::CallSettings.FromCancellationToken(cancellationToken));
 
         /// <summary>
         /// Sets the maintenance policy for a cluster.
@@ -5446,13 +5446,13 @@ namespace Google.Cloud.Container.V1
             string zone,
             string clusterId,
             MaintenancePolicy maintenancePolicy,
-            CallSettings callSettings = null) => SetMaintenancePolicy(
+            gaxgrpc::CallSettings callSettings = null) => SetMaintenancePolicy(
                 new SetMaintenancePolicyRequest
                 {
-                    ProjectId = GaxPreconditions.CheckNotNullOrEmpty(projectId, nameof(projectId)),
-                    Zone = GaxPreconditions.CheckNotNullOrEmpty(zone, nameof(zone)),
-                    ClusterId = GaxPreconditions.CheckNotNullOrEmpty(clusterId, nameof(clusterId)),
-                    MaintenancePolicy = GaxPreconditions.CheckNotNull(maintenancePolicy, nameof(maintenancePolicy)),
+                    ProjectId = gax::GaxPreconditions.CheckNotNullOrEmpty(projectId, nameof(projectId)),
+                    Zone = gax::GaxPreconditions.CheckNotNullOrEmpty(zone, nameof(zone)),
+                    ClusterId = gax::GaxPreconditions.CheckNotNullOrEmpty(clusterId, nameof(clusterId)),
+                    MaintenancePolicy = gax::GaxPreconditions.CheckNotNull(maintenancePolicy, nameof(maintenancePolicy)),
                 },
                 callSettings);
 
@@ -5468,11 +5468,11 @@ namespace Google.Cloud.Container.V1
         /// <returns>
         /// A Task containing the RPC response.
         /// </returns>
-        public virtual Task<Operation> SetMaintenancePolicyAsync(
+        public virtual stt::Task<Operation> SetMaintenancePolicyAsync(
             SetMaintenancePolicyRequest request,
-            CallSettings callSettings = null)
+            gaxgrpc::CallSettings callSettings = null)
         {
-            throw new NotImplementedException();
+            throw new s::NotImplementedException();
         }
 
         /// <summary>
@@ -5482,16 +5482,16 @@ namespace Google.Cloud.Container.V1
         /// The request object containing all of the parameters for the API call.
         /// </param>
         /// <param name="cancellationToken">
-        /// A <see cref="CancellationToken"/> to use for this RPC.
+        /// A <see cref="st::CancellationToken"/> to use for this RPC.
         /// </param>
         /// <returns>
         /// A Task containing the RPC response.
         /// </returns>
-        public virtual Task<Operation> SetMaintenancePolicyAsync(
+        public virtual stt::Task<Operation> SetMaintenancePolicyAsync(
             SetMaintenancePolicyRequest request,
-            CancellationToken cancellationToken) => SetMaintenancePolicyAsync(
+            st::CancellationToken cancellationToken) => SetMaintenancePolicyAsync(
                 request,
-                CallSettings.FromCancellationToken(cancellationToken));
+                gaxgrpc::CallSettings.FromCancellationToken(cancellationToken));
 
         /// <summary>
         /// Sets the maintenance policy for a cluster.
@@ -5507,9 +5507,9 @@ namespace Google.Cloud.Container.V1
         /// </returns>
         public virtual Operation SetMaintenancePolicy(
             SetMaintenancePolicyRequest request,
-            CallSettings callSettings = null)
+            gaxgrpc::CallSettings callSettings = null)
         {
-            throw new NotImplementedException();
+            throw new s::NotImplementedException();
         }
 
     }
@@ -5519,36 +5519,36 @@ namespace Google.Cloud.Container.V1
     /// </summary>
     public sealed partial class ClusterManagerClientImpl : ClusterManagerClient
     {
-        private readonly ApiCall<ListClustersRequest, ListClustersResponse> _callListClusters;
-        private readonly ApiCall<GetClusterRequest, Cluster> _callGetCluster;
-        private readonly ApiCall<CreateClusterRequest, Operation> _callCreateCluster;
-        private readonly ApiCall<UpdateClusterRequest, Operation> _callUpdateCluster;
-        private readonly ApiCall<UpdateNodePoolRequest, Operation> _callUpdateNodePool;
-        private readonly ApiCall<SetNodePoolAutoscalingRequest, Operation> _callSetNodePoolAutoscaling;
-        private readonly ApiCall<SetLoggingServiceRequest, Operation> _callSetLoggingService;
-        private readonly ApiCall<SetMonitoringServiceRequest, Operation> _callSetMonitoringService;
-        private readonly ApiCall<SetAddonsConfigRequest, Operation> _callSetAddonsConfig;
-        private readonly ApiCall<SetLocationsRequest, Operation> _callSetLocations;
-        private readonly ApiCall<UpdateMasterRequest, Operation> _callUpdateMaster;
-        private readonly ApiCall<SetMasterAuthRequest, Operation> _callSetMasterAuth;
-        private readonly ApiCall<DeleteClusterRequest, Operation> _callDeleteCluster;
-        private readonly ApiCall<ListOperationsRequest, ListOperationsResponse> _callListOperations;
-        private readonly ApiCall<GetOperationRequest, Operation> _callGetOperation;
-        private readonly ApiCall<CancelOperationRequest, Empty> _callCancelOperation;
-        private readonly ApiCall<GetServerConfigRequest, ServerConfig> _callGetServerConfig;
-        private readonly ApiCall<ListNodePoolsRequest, ListNodePoolsResponse> _callListNodePools;
-        private readonly ApiCall<GetNodePoolRequest, NodePool> _callGetNodePool;
-        private readonly ApiCall<CreateNodePoolRequest, Operation> _callCreateNodePool;
-        private readonly ApiCall<DeleteNodePoolRequest, Operation> _callDeleteNodePool;
-        private readonly ApiCall<RollbackNodePoolUpgradeRequest, Operation> _callRollbackNodePoolUpgrade;
-        private readonly ApiCall<SetNodePoolManagementRequest, Operation> _callSetNodePoolManagement;
-        private readonly ApiCall<SetLabelsRequest, Operation> _callSetLabels;
-        private readonly ApiCall<SetLegacyAbacRequest, Operation> _callSetLegacyAbac;
-        private readonly ApiCall<StartIPRotationRequest, Operation> _callStartIPRotation;
-        private readonly ApiCall<CompleteIPRotationRequest, Operation> _callCompleteIPRotation;
-        private readonly ApiCall<SetNodePoolSizeRequest, Operation> _callSetNodePoolSize;
-        private readonly ApiCall<SetNetworkPolicyRequest, Operation> _callSetNetworkPolicy;
-        private readonly ApiCall<SetMaintenancePolicyRequest, Operation> _callSetMaintenancePolicy;
+        private readonly gaxgrpc::ApiCall<ListClustersRequest, ListClustersResponse> _callListClusters;
+        private readonly gaxgrpc::ApiCall<GetClusterRequest, Cluster> _callGetCluster;
+        private readonly gaxgrpc::ApiCall<CreateClusterRequest, Operation> _callCreateCluster;
+        private readonly gaxgrpc::ApiCall<UpdateClusterRequest, Operation> _callUpdateCluster;
+        private readonly gaxgrpc::ApiCall<UpdateNodePoolRequest, Operation> _callUpdateNodePool;
+        private readonly gaxgrpc::ApiCall<SetNodePoolAutoscalingRequest, Operation> _callSetNodePoolAutoscaling;
+        private readonly gaxgrpc::ApiCall<SetLoggingServiceRequest, Operation> _callSetLoggingService;
+        private readonly gaxgrpc::ApiCall<SetMonitoringServiceRequest, Operation> _callSetMonitoringService;
+        private readonly gaxgrpc::ApiCall<SetAddonsConfigRequest, Operation> _callSetAddonsConfig;
+        private readonly gaxgrpc::ApiCall<SetLocationsRequest, Operation> _callSetLocations;
+        private readonly gaxgrpc::ApiCall<UpdateMasterRequest, Operation> _callUpdateMaster;
+        private readonly gaxgrpc::ApiCall<SetMasterAuthRequest, Operation> _callSetMasterAuth;
+        private readonly gaxgrpc::ApiCall<DeleteClusterRequest, Operation> _callDeleteCluster;
+        private readonly gaxgrpc::ApiCall<ListOperationsRequest, ListOperationsResponse> _callListOperations;
+        private readonly gaxgrpc::ApiCall<GetOperationRequest, Operation> _callGetOperation;
+        private readonly gaxgrpc::ApiCall<CancelOperationRequest, protowkt::Empty> _callCancelOperation;
+        private readonly gaxgrpc::ApiCall<GetServerConfigRequest, ServerConfig> _callGetServerConfig;
+        private readonly gaxgrpc::ApiCall<ListNodePoolsRequest, ListNodePoolsResponse> _callListNodePools;
+        private readonly gaxgrpc::ApiCall<GetNodePoolRequest, NodePool> _callGetNodePool;
+        private readonly gaxgrpc::ApiCall<CreateNodePoolRequest, Operation> _callCreateNodePool;
+        private readonly gaxgrpc::ApiCall<DeleteNodePoolRequest, Operation> _callDeleteNodePool;
+        private readonly gaxgrpc::ApiCall<RollbackNodePoolUpgradeRequest, Operation> _callRollbackNodePoolUpgrade;
+        private readonly gaxgrpc::ApiCall<SetNodePoolManagementRequest, Operation> _callSetNodePoolManagement;
+        private readonly gaxgrpc::ApiCall<SetLabelsRequest, Operation> _callSetLabels;
+        private readonly gaxgrpc::ApiCall<SetLegacyAbacRequest, Operation> _callSetLegacyAbac;
+        private readonly gaxgrpc::ApiCall<StartIPRotationRequest, Operation> _callStartIPRotation;
+        private readonly gaxgrpc::ApiCall<CompleteIPRotationRequest, Operation> _callCompleteIPRotation;
+        private readonly gaxgrpc::ApiCall<SetNodePoolSizeRequest, Operation> _callSetNodePoolSize;
+        private readonly gaxgrpc::ApiCall<SetNetworkPolicyRequest, Operation> _callSetNetworkPolicy;
+        private readonly gaxgrpc::ApiCall<SetMaintenancePolicyRequest, Operation> _callSetMaintenancePolicy;
 
         /// <summary>
         /// Constructs a client wrapper for the ClusterManager service, with the specified gRPC client and settings.
@@ -5559,7 +5559,7 @@ namespace Google.Cloud.Container.V1
         {
             GrpcClient = grpcClient;
             ClusterManagerSettings effectiveSettings = settings ?? ClusterManagerSettings.GetDefault();
-            ClientHelper clientHelper = new ClientHelper(effectiveSettings);
+            gaxgrpc::ClientHelper clientHelper = new gaxgrpc::ClientHelper(effectiveSettings);
             _callListClusters = clientHelper.BuildApiCall<ListClustersRequest, ListClustersResponse>(
                 GrpcClient.ListClustersAsync, GrpcClient.ListClusters, effectiveSettings.ListClustersSettings);
             _callGetCluster = clientHelper.BuildApiCall<GetClusterRequest, Cluster>(
@@ -5590,7 +5590,7 @@ namespace Google.Cloud.Container.V1
                 GrpcClient.ListOperationsAsync, GrpcClient.ListOperations, effectiveSettings.ListOperationsSettings);
             _callGetOperation = clientHelper.BuildApiCall<GetOperationRequest, Operation>(
                 GrpcClient.GetOperationAsync, GrpcClient.GetOperation, effectiveSettings.GetOperationSettings);
-            _callCancelOperation = clientHelper.BuildApiCall<CancelOperationRequest, Empty>(
+            _callCancelOperation = clientHelper.BuildApiCall<CancelOperationRequest, protowkt::Empty>(
                 GrpcClient.CancelOperationAsync, GrpcClient.CancelOperation, effectiveSettings.CancelOperationSettings);
             _callGetServerConfig = clientHelper.BuildApiCall<GetServerConfigRequest, ServerConfig>(
                 GrpcClient.GetServerConfigAsync, GrpcClient.GetServerConfig, effectiveSettings.GetServerConfigSettings);
@@ -5687,43 +5687,43 @@ namespace Google.Cloud.Container.V1
 
         // Partial methods called for every ApiCall on construction.
         // Allows modification of all the underlying ApiCall objects.
-        partial void Modify_ApiCall<TRequest, TResponse>(ref ApiCall<TRequest, TResponse> call)
-            where TRequest : class, IMessage<TRequest>
-            where TResponse : class, IMessage<TResponse>;
+        partial void Modify_ApiCall<TRequest, TResponse>(ref gaxgrpc::ApiCall<TRequest, TResponse> call)
+            where TRequest : class, proto::IMessage<TRequest>
+            where TResponse : class, proto::IMessage<TResponse>;
 
         // Partial methods called for each ApiCall on construction.
         // Allows per-RPC-method modification of the underlying ApiCall object.
-        partial void Modify_ListClustersApiCall(ref ApiCall<ListClustersRequest, ListClustersResponse> call);
-        partial void Modify_GetClusterApiCall(ref ApiCall<GetClusterRequest, Cluster> call);
-        partial void Modify_CreateClusterApiCall(ref ApiCall<CreateClusterRequest, Operation> call);
-        partial void Modify_UpdateClusterApiCall(ref ApiCall<UpdateClusterRequest, Operation> call);
-        partial void Modify_UpdateNodePoolApiCall(ref ApiCall<UpdateNodePoolRequest, Operation> call);
-        partial void Modify_SetNodePoolAutoscalingApiCall(ref ApiCall<SetNodePoolAutoscalingRequest, Operation> call);
-        partial void Modify_SetLoggingServiceApiCall(ref ApiCall<SetLoggingServiceRequest, Operation> call);
-        partial void Modify_SetMonitoringServiceApiCall(ref ApiCall<SetMonitoringServiceRequest, Operation> call);
-        partial void Modify_SetAddonsConfigApiCall(ref ApiCall<SetAddonsConfigRequest, Operation> call);
-        partial void Modify_SetLocationsApiCall(ref ApiCall<SetLocationsRequest, Operation> call);
-        partial void Modify_UpdateMasterApiCall(ref ApiCall<UpdateMasterRequest, Operation> call);
-        partial void Modify_SetMasterAuthApiCall(ref ApiCall<SetMasterAuthRequest, Operation> call);
-        partial void Modify_DeleteClusterApiCall(ref ApiCall<DeleteClusterRequest, Operation> call);
-        partial void Modify_ListOperationsApiCall(ref ApiCall<ListOperationsRequest, ListOperationsResponse> call);
-        partial void Modify_GetOperationApiCall(ref ApiCall<GetOperationRequest, Operation> call);
-        partial void Modify_CancelOperationApiCall(ref ApiCall<CancelOperationRequest, Empty> call);
-        partial void Modify_GetServerConfigApiCall(ref ApiCall<GetServerConfigRequest, ServerConfig> call);
-        partial void Modify_ListNodePoolsApiCall(ref ApiCall<ListNodePoolsRequest, ListNodePoolsResponse> call);
-        partial void Modify_GetNodePoolApiCall(ref ApiCall<GetNodePoolRequest, NodePool> call);
-        partial void Modify_CreateNodePoolApiCall(ref ApiCall<CreateNodePoolRequest, Operation> call);
-        partial void Modify_DeleteNodePoolApiCall(ref ApiCall<DeleteNodePoolRequest, Operation> call);
-        partial void Modify_RollbackNodePoolUpgradeApiCall(ref ApiCall<RollbackNodePoolUpgradeRequest, Operation> call);
-        partial void Modify_SetNodePoolManagementApiCall(ref ApiCall<SetNodePoolManagementRequest, Operation> call);
-        partial void Modify_SetLabelsApiCall(ref ApiCall<SetLabelsRequest, Operation> call);
-        partial void Modify_SetLegacyAbacApiCall(ref ApiCall<SetLegacyAbacRequest, Operation> call);
-        partial void Modify_StartIPRotationApiCall(ref ApiCall<StartIPRotationRequest, Operation> call);
-        partial void Modify_CompleteIPRotationApiCall(ref ApiCall<CompleteIPRotationRequest, Operation> call);
-        partial void Modify_SetNodePoolSizeApiCall(ref ApiCall<SetNodePoolSizeRequest, Operation> call);
-        partial void Modify_SetNetworkPolicyApiCall(ref ApiCall<SetNetworkPolicyRequest, Operation> call);
-        partial void Modify_SetMaintenancePolicyApiCall(ref ApiCall<SetMaintenancePolicyRequest, Operation> call);
-        partial void OnConstruction(ClusterManager.ClusterManagerClient grpcClient, ClusterManagerSettings effectiveSettings, ClientHelper clientHelper);
+        partial void Modify_ListClustersApiCall(ref gaxgrpc::ApiCall<ListClustersRequest, ListClustersResponse> call);
+        partial void Modify_GetClusterApiCall(ref gaxgrpc::ApiCall<GetClusterRequest, Cluster> call);
+        partial void Modify_CreateClusterApiCall(ref gaxgrpc::ApiCall<CreateClusterRequest, Operation> call);
+        partial void Modify_UpdateClusterApiCall(ref gaxgrpc::ApiCall<UpdateClusterRequest, Operation> call);
+        partial void Modify_UpdateNodePoolApiCall(ref gaxgrpc::ApiCall<UpdateNodePoolRequest, Operation> call);
+        partial void Modify_SetNodePoolAutoscalingApiCall(ref gaxgrpc::ApiCall<SetNodePoolAutoscalingRequest, Operation> call);
+        partial void Modify_SetLoggingServiceApiCall(ref gaxgrpc::ApiCall<SetLoggingServiceRequest, Operation> call);
+        partial void Modify_SetMonitoringServiceApiCall(ref gaxgrpc::ApiCall<SetMonitoringServiceRequest, Operation> call);
+        partial void Modify_SetAddonsConfigApiCall(ref gaxgrpc::ApiCall<SetAddonsConfigRequest, Operation> call);
+        partial void Modify_SetLocationsApiCall(ref gaxgrpc::ApiCall<SetLocationsRequest, Operation> call);
+        partial void Modify_UpdateMasterApiCall(ref gaxgrpc::ApiCall<UpdateMasterRequest, Operation> call);
+        partial void Modify_SetMasterAuthApiCall(ref gaxgrpc::ApiCall<SetMasterAuthRequest, Operation> call);
+        partial void Modify_DeleteClusterApiCall(ref gaxgrpc::ApiCall<DeleteClusterRequest, Operation> call);
+        partial void Modify_ListOperationsApiCall(ref gaxgrpc::ApiCall<ListOperationsRequest, ListOperationsResponse> call);
+        partial void Modify_GetOperationApiCall(ref gaxgrpc::ApiCall<GetOperationRequest, Operation> call);
+        partial void Modify_CancelOperationApiCall(ref gaxgrpc::ApiCall<CancelOperationRequest, protowkt::Empty> call);
+        partial void Modify_GetServerConfigApiCall(ref gaxgrpc::ApiCall<GetServerConfigRequest, ServerConfig> call);
+        partial void Modify_ListNodePoolsApiCall(ref gaxgrpc::ApiCall<ListNodePoolsRequest, ListNodePoolsResponse> call);
+        partial void Modify_GetNodePoolApiCall(ref gaxgrpc::ApiCall<GetNodePoolRequest, NodePool> call);
+        partial void Modify_CreateNodePoolApiCall(ref gaxgrpc::ApiCall<CreateNodePoolRequest, Operation> call);
+        partial void Modify_DeleteNodePoolApiCall(ref gaxgrpc::ApiCall<DeleteNodePoolRequest, Operation> call);
+        partial void Modify_RollbackNodePoolUpgradeApiCall(ref gaxgrpc::ApiCall<RollbackNodePoolUpgradeRequest, Operation> call);
+        partial void Modify_SetNodePoolManagementApiCall(ref gaxgrpc::ApiCall<SetNodePoolManagementRequest, Operation> call);
+        partial void Modify_SetLabelsApiCall(ref gaxgrpc::ApiCall<SetLabelsRequest, Operation> call);
+        partial void Modify_SetLegacyAbacApiCall(ref gaxgrpc::ApiCall<SetLegacyAbacRequest, Operation> call);
+        partial void Modify_StartIPRotationApiCall(ref gaxgrpc::ApiCall<StartIPRotationRequest, Operation> call);
+        partial void Modify_CompleteIPRotationApiCall(ref gaxgrpc::ApiCall<CompleteIPRotationRequest, Operation> call);
+        partial void Modify_SetNodePoolSizeApiCall(ref gaxgrpc::ApiCall<SetNodePoolSizeRequest, Operation> call);
+        partial void Modify_SetNetworkPolicyApiCall(ref gaxgrpc::ApiCall<SetNetworkPolicyRequest, Operation> call);
+        partial void Modify_SetMaintenancePolicyApiCall(ref gaxgrpc::ApiCall<SetMaintenancePolicyRequest, Operation> call);
+        partial void OnConstruction(ClusterManager.ClusterManagerClient grpcClient, ClusterManagerSettings effectiveSettings, gaxgrpc::ClientHelper clientHelper);
 
         /// <summary>
         /// The underlying gRPC ClusterManager client.
@@ -5733,36 +5733,36 @@ namespace Google.Cloud.Container.V1
         // Partial methods called on each request.
         // Allows per-RPC-call modification to the request and CallSettings objects,
         // before the underlying RPC is performed.
-        partial void Modify_ListClustersRequest(ref ListClustersRequest request, ref CallSettings settings);
-        partial void Modify_GetClusterRequest(ref GetClusterRequest request, ref CallSettings settings);
-        partial void Modify_CreateClusterRequest(ref CreateClusterRequest request, ref CallSettings settings);
-        partial void Modify_UpdateClusterRequest(ref UpdateClusterRequest request, ref CallSettings settings);
-        partial void Modify_UpdateNodePoolRequest(ref UpdateNodePoolRequest request, ref CallSettings settings);
-        partial void Modify_SetNodePoolAutoscalingRequest(ref SetNodePoolAutoscalingRequest request, ref CallSettings settings);
-        partial void Modify_SetLoggingServiceRequest(ref SetLoggingServiceRequest request, ref CallSettings settings);
-        partial void Modify_SetMonitoringServiceRequest(ref SetMonitoringServiceRequest request, ref CallSettings settings);
-        partial void Modify_SetAddonsConfigRequest(ref SetAddonsConfigRequest request, ref CallSettings settings);
-        partial void Modify_SetLocationsRequest(ref SetLocationsRequest request, ref CallSettings settings);
-        partial void Modify_UpdateMasterRequest(ref UpdateMasterRequest request, ref CallSettings settings);
-        partial void Modify_SetMasterAuthRequest(ref SetMasterAuthRequest request, ref CallSettings settings);
-        partial void Modify_DeleteClusterRequest(ref DeleteClusterRequest request, ref CallSettings settings);
-        partial void Modify_ListOperationsRequest(ref ListOperationsRequest request, ref CallSettings settings);
-        partial void Modify_GetOperationRequest(ref GetOperationRequest request, ref CallSettings settings);
-        partial void Modify_CancelOperationRequest(ref CancelOperationRequest request, ref CallSettings settings);
-        partial void Modify_GetServerConfigRequest(ref GetServerConfigRequest request, ref CallSettings settings);
-        partial void Modify_ListNodePoolsRequest(ref ListNodePoolsRequest request, ref CallSettings settings);
-        partial void Modify_GetNodePoolRequest(ref GetNodePoolRequest request, ref CallSettings settings);
-        partial void Modify_CreateNodePoolRequest(ref CreateNodePoolRequest request, ref CallSettings settings);
-        partial void Modify_DeleteNodePoolRequest(ref DeleteNodePoolRequest request, ref CallSettings settings);
-        partial void Modify_RollbackNodePoolUpgradeRequest(ref RollbackNodePoolUpgradeRequest request, ref CallSettings settings);
-        partial void Modify_SetNodePoolManagementRequest(ref SetNodePoolManagementRequest request, ref CallSettings settings);
-        partial void Modify_SetLabelsRequest(ref SetLabelsRequest request, ref CallSettings settings);
-        partial void Modify_SetLegacyAbacRequest(ref SetLegacyAbacRequest request, ref CallSettings settings);
-        partial void Modify_StartIPRotationRequest(ref StartIPRotationRequest request, ref CallSettings settings);
-        partial void Modify_CompleteIPRotationRequest(ref CompleteIPRotationRequest request, ref CallSettings settings);
-        partial void Modify_SetNodePoolSizeRequest(ref SetNodePoolSizeRequest request, ref CallSettings settings);
-        partial void Modify_SetNetworkPolicyRequest(ref SetNetworkPolicyRequest request, ref CallSettings settings);
-        partial void Modify_SetMaintenancePolicyRequest(ref SetMaintenancePolicyRequest request, ref CallSettings settings);
+        partial void Modify_ListClustersRequest(ref ListClustersRequest request, ref gaxgrpc::CallSettings settings);
+        partial void Modify_GetClusterRequest(ref GetClusterRequest request, ref gaxgrpc::CallSettings settings);
+        partial void Modify_CreateClusterRequest(ref CreateClusterRequest request, ref gaxgrpc::CallSettings settings);
+        partial void Modify_UpdateClusterRequest(ref UpdateClusterRequest request, ref gaxgrpc::CallSettings settings);
+        partial void Modify_UpdateNodePoolRequest(ref UpdateNodePoolRequest request, ref gaxgrpc::CallSettings settings);
+        partial void Modify_SetNodePoolAutoscalingRequest(ref SetNodePoolAutoscalingRequest request, ref gaxgrpc::CallSettings settings);
+        partial void Modify_SetLoggingServiceRequest(ref SetLoggingServiceRequest request, ref gaxgrpc::CallSettings settings);
+        partial void Modify_SetMonitoringServiceRequest(ref SetMonitoringServiceRequest request, ref gaxgrpc::CallSettings settings);
+        partial void Modify_SetAddonsConfigRequest(ref SetAddonsConfigRequest request, ref gaxgrpc::CallSettings settings);
+        partial void Modify_SetLocationsRequest(ref SetLocationsRequest request, ref gaxgrpc::CallSettings settings);
+        partial void Modify_UpdateMasterRequest(ref UpdateMasterRequest request, ref gaxgrpc::CallSettings settings);
+        partial void Modify_SetMasterAuthRequest(ref SetMasterAuthRequest request, ref gaxgrpc::CallSettings settings);
+        partial void Modify_DeleteClusterRequest(ref DeleteClusterRequest request, ref gaxgrpc::CallSettings settings);
+        partial void Modify_ListOperationsRequest(ref ListOperationsRequest request, ref gaxgrpc::CallSettings settings);
+        partial void Modify_GetOperationRequest(ref GetOperationRequest request, ref gaxgrpc::CallSettings settings);
+        partial void Modify_CancelOperationRequest(ref CancelOperationRequest request, ref gaxgrpc::CallSettings settings);
+        partial void Modify_GetServerConfigRequest(ref GetServerConfigRequest request, ref gaxgrpc::CallSettings settings);
+        partial void Modify_ListNodePoolsRequest(ref ListNodePoolsRequest request, ref gaxgrpc::CallSettings settings);
+        partial void Modify_GetNodePoolRequest(ref GetNodePoolRequest request, ref gaxgrpc::CallSettings settings);
+        partial void Modify_CreateNodePoolRequest(ref CreateNodePoolRequest request, ref gaxgrpc::CallSettings settings);
+        partial void Modify_DeleteNodePoolRequest(ref DeleteNodePoolRequest request, ref gaxgrpc::CallSettings settings);
+        partial void Modify_RollbackNodePoolUpgradeRequest(ref RollbackNodePoolUpgradeRequest request, ref gaxgrpc::CallSettings settings);
+        partial void Modify_SetNodePoolManagementRequest(ref SetNodePoolManagementRequest request, ref gaxgrpc::CallSettings settings);
+        partial void Modify_SetLabelsRequest(ref SetLabelsRequest request, ref gaxgrpc::CallSettings settings);
+        partial void Modify_SetLegacyAbacRequest(ref SetLegacyAbacRequest request, ref gaxgrpc::CallSettings settings);
+        partial void Modify_StartIPRotationRequest(ref StartIPRotationRequest request, ref gaxgrpc::CallSettings settings);
+        partial void Modify_CompleteIPRotationRequest(ref CompleteIPRotationRequest request, ref gaxgrpc::CallSettings settings);
+        partial void Modify_SetNodePoolSizeRequest(ref SetNodePoolSizeRequest request, ref gaxgrpc::CallSettings settings);
+        partial void Modify_SetNetworkPolicyRequest(ref SetNetworkPolicyRequest request, ref gaxgrpc::CallSettings settings);
+        partial void Modify_SetMaintenancePolicyRequest(ref SetMaintenancePolicyRequest request, ref gaxgrpc::CallSettings settings);
 
         /// <summary>
         /// Lists all clusters owned by a project in either the specified zone or all
@@ -5777,9 +5777,9 @@ namespace Google.Cloud.Container.V1
         /// <returns>
         /// A Task containing the RPC response.
         /// </returns>
-        public override Task<ListClustersResponse> ListClustersAsync(
+        public override stt::Task<ListClustersResponse> ListClustersAsync(
             ListClustersRequest request,
-            CallSettings callSettings = null)
+            gaxgrpc::CallSettings callSettings = null)
         {
             Modify_ListClustersRequest(ref request, ref callSettings);
             return _callListClusters.Async(request, callSettings);
@@ -5800,7 +5800,7 @@ namespace Google.Cloud.Container.V1
         /// </returns>
         public override ListClustersResponse ListClusters(
             ListClustersRequest request,
-            CallSettings callSettings = null)
+            gaxgrpc::CallSettings callSettings = null)
         {
             Modify_ListClustersRequest(ref request, ref callSettings);
             return _callListClusters.Sync(request, callSettings);
@@ -5818,9 +5818,9 @@ namespace Google.Cloud.Container.V1
         /// <returns>
         /// A Task containing the RPC response.
         /// </returns>
-        public override Task<Cluster> GetClusterAsync(
+        public override stt::Task<Cluster> GetClusterAsync(
             GetClusterRequest request,
-            CallSettings callSettings = null)
+            gaxgrpc::CallSettings callSettings = null)
         {
             Modify_GetClusterRequest(ref request, ref callSettings);
             return _callGetCluster.Async(request, callSettings);
@@ -5840,7 +5840,7 @@ namespace Google.Cloud.Container.V1
         /// </returns>
         public override Cluster GetCluster(
             GetClusterRequest request,
-            CallSettings callSettings = null)
+            gaxgrpc::CallSettings callSettings = null)
         {
             Modify_GetClusterRequest(ref request, ref callSettings);
             return _callGetCluster.Sync(request, callSettings);
@@ -5870,9 +5870,9 @@ namespace Google.Cloud.Container.V1
         /// <returns>
         /// A Task containing the RPC response.
         /// </returns>
-        public override Task<Operation> CreateClusterAsync(
+        public override stt::Task<Operation> CreateClusterAsync(
             CreateClusterRequest request,
-            CallSettings callSettings = null)
+            gaxgrpc::CallSettings callSettings = null)
         {
             Modify_CreateClusterRequest(ref request, ref callSettings);
             return _callCreateCluster.Async(request, callSettings);
@@ -5904,7 +5904,7 @@ namespace Google.Cloud.Container.V1
         /// </returns>
         public override Operation CreateCluster(
             CreateClusterRequest request,
-            CallSettings callSettings = null)
+            gaxgrpc::CallSettings callSettings = null)
         {
             Modify_CreateClusterRequest(ref request, ref callSettings);
             return _callCreateCluster.Sync(request, callSettings);
@@ -5922,9 +5922,9 @@ namespace Google.Cloud.Container.V1
         /// <returns>
         /// A Task containing the RPC response.
         /// </returns>
-        public override Task<Operation> UpdateClusterAsync(
+        public override stt::Task<Operation> UpdateClusterAsync(
             UpdateClusterRequest request,
-            CallSettings callSettings = null)
+            gaxgrpc::CallSettings callSettings = null)
         {
             Modify_UpdateClusterRequest(ref request, ref callSettings);
             return _callUpdateCluster.Async(request, callSettings);
@@ -5944,7 +5944,7 @@ namespace Google.Cloud.Container.V1
         /// </returns>
         public override Operation UpdateCluster(
             UpdateClusterRequest request,
-            CallSettings callSettings = null)
+            gaxgrpc::CallSettings callSettings = null)
         {
             Modify_UpdateClusterRequest(ref request, ref callSettings);
             return _callUpdateCluster.Sync(request, callSettings);
@@ -5962,9 +5962,9 @@ namespace Google.Cloud.Container.V1
         /// <returns>
         /// A Task containing the RPC response.
         /// </returns>
-        public override Task<Operation> UpdateNodePoolAsync(
+        public override stt::Task<Operation> UpdateNodePoolAsync(
             UpdateNodePoolRequest request,
-            CallSettings callSettings = null)
+            gaxgrpc::CallSettings callSettings = null)
         {
             Modify_UpdateNodePoolRequest(ref request, ref callSettings);
             return _callUpdateNodePool.Async(request, callSettings);
@@ -5984,7 +5984,7 @@ namespace Google.Cloud.Container.V1
         /// </returns>
         public override Operation UpdateNodePool(
             UpdateNodePoolRequest request,
-            CallSettings callSettings = null)
+            gaxgrpc::CallSettings callSettings = null)
         {
             Modify_UpdateNodePoolRequest(ref request, ref callSettings);
             return _callUpdateNodePool.Sync(request, callSettings);
@@ -6002,9 +6002,9 @@ namespace Google.Cloud.Container.V1
         /// <returns>
         /// A Task containing the RPC response.
         /// </returns>
-        public override Task<Operation> SetNodePoolAutoscalingAsync(
+        public override stt::Task<Operation> SetNodePoolAutoscalingAsync(
             SetNodePoolAutoscalingRequest request,
-            CallSettings callSettings = null)
+            gaxgrpc::CallSettings callSettings = null)
         {
             Modify_SetNodePoolAutoscalingRequest(ref request, ref callSettings);
             return _callSetNodePoolAutoscaling.Async(request, callSettings);
@@ -6024,7 +6024,7 @@ namespace Google.Cloud.Container.V1
         /// </returns>
         public override Operation SetNodePoolAutoscaling(
             SetNodePoolAutoscalingRequest request,
-            CallSettings callSettings = null)
+            gaxgrpc::CallSettings callSettings = null)
         {
             Modify_SetNodePoolAutoscalingRequest(ref request, ref callSettings);
             return _callSetNodePoolAutoscaling.Sync(request, callSettings);
@@ -6042,9 +6042,9 @@ namespace Google.Cloud.Container.V1
         /// <returns>
         /// A Task containing the RPC response.
         /// </returns>
-        public override Task<Operation> SetLoggingServiceAsync(
+        public override stt::Task<Operation> SetLoggingServiceAsync(
             SetLoggingServiceRequest request,
-            CallSettings callSettings = null)
+            gaxgrpc::CallSettings callSettings = null)
         {
             Modify_SetLoggingServiceRequest(ref request, ref callSettings);
             return _callSetLoggingService.Async(request, callSettings);
@@ -6064,7 +6064,7 @@ namespace Google.Cloud.Container.V1
         /// </returns>
         public override Operation SetLoggingService(
             SetLoggingServiceRequest request,
-            CallSettings callSettings = null)
+            gaxgrpc::CallSettings callSettings = null)
         {
             Modify_SetLoggingServiceRequest(ref request, ref callSettings);
             return _callSetLoggingService.Sync(request, callSettings);
@@ -6082,9 +6082,9 @@ namespace Google.Cloud.Container.V1
         /// <returns>
         /// A Task containing the RPC response.
         /// </returns>
-        public override Task<Operation> SetMonitoringServiceAsync(
+        public override stt::Task<Operation> SetMonitoringServiceAsync(
             SetMonitoringServiceRequest request,
-            CallSettings callSettings = null)
+            gaxgrpc::CallSettings callSettings = null)
         {
             Modify_SetMonitoringServiceRequest(ref request, ref callSettings);
             return _callSetMonitoringService.Async(request, callSettings);
@@ -6104,7 +6104,7 @@ namespace Google.Cloud.Container.V1
         /// </returns>
         public override Operation SetMonitoringService(
             SetMonitoringServiceRequest request,
-            CallSettings callSettings = null)
+            gaxgrpc::CallSettings callSettings = null)
         {
             Modify_SetMonitoringServiceRequest(ref request, ref callSettings);
             return _callSetMonitoringService.Sync(request, callSettings);
@@ -6122,9 +6122,9 @@ namespace Google.Cloud.Container.V1
         /// <returns>
         /// A Task containing the RPC response.
         /// </returns>
-        public override Task<Operation> SetAddonsConfigAsync(
+        public override stt::Task<Operation> SetAddonsConfigAsync(
             SetAddonsConfigRequest request,
-            CallSettings callSettings = null)
+            gaxgrpc::CallSettings callSettings = null)
         {
             Modify_SetAddonsConfigRequest(ref request, ref callSettings);
             return _callSetAddonsConfig.Async(request, callSettings);
@@ -6144,7 +6144,7 @@ namespace Google.Cloud.Container.V1
         /// </returns>
         public override Operation SetAddonsConfig(
             SetAddonsConfigRequest request,
-            CallSettings callSettings = null)
+            gaxgrpc::CallSettings callSettings = null)
         {
             Modify_SetAddonsConfigRequest(ref request, ref callSettings);
             return _callSetAddonsConfig.Sync(request, callSettings);
@@ -6162,9 +6162,9 @@ namespace Google.Cloud.Container.V1
         /// <returns>
         /// A Task containing the RPC response.
         /// </returns>
-        public override Task<Operation> SetLocationsAsync(
+        public override stt::Task<Operation> SetLocationsAsync(
             SetLocationsRequest request,
-            CallSettings callSettings = null)
+            gaxgrpc::CallSettings callSettings = null)
         {
             Modify_SetLocationsRequest(ref request, ref callSettings);
             return _callSetLocations.Async(request, callSettings);
@@ -6184,7 +6184,7 @@ namespace Google.Cloud.Container.V1
         /// </returns>
         public override Operation SetLocations(
             SetLocationsRequest request,
-            CallSettings callSettings = null)
+            gaxgrpc::CallSettings callSettings = null)
         {
             Modify_SetLocationsRequest(ref request, ref callSettings);
             return _callSetLocations.Sync(request, callSettings);
@@ -6202,9 +6202,9 @@ namespace Google.Cloud.Container.V1
         /// <returns>
         /// A Task containing the RPC response.
         /// </returns>
-        public override Task<Operation> UpdateMasterAsync(
+        public override stt::Task<Operation> UpdateMasterAsync(
             UpdateMasterRequest request,
-            CallSettings callSettings = null)
+            gaxgrpc::CallSettings callSettings = null)
         {
             Modify_UpdateMasterRequest(ref request, ref callSettings);
             return _callUpdateMaster.Async(request, callSettings);
@@ -6224,7 +6224,7 @@ namespace Google.Cloud.Container.V1
         /// </returns>
         public override Operation UpdateMaster(
             UpdateMasterRequest request,
-            CallSettings callSettings = null)
+            gaxgrpc::CallSettings callSettings = null)
         {
             Modify_UpdateMasterRequest(ref request, ref callSettings);
             return _callUpdateMaster.Sync(request, callSettings);
@@ -6244,9 +6244,9 @@ namespace Google.Cloud.Container.V1
         /// <returns>
         /// A Task containing the RPC response.
         /// </returns>
-        public override Task<Operation> SetMasterAuthAsync(
+        public override stt::Task<Operation> SetMasterAuthAsync(
             SetMasterAuthRequest request,
-            CallSettings callSettings = null)
+            gaxgrpc::CallSettings callSettings = null)
         {
             Modify_SetMasterAuthRequest(ref request, ref callSettings);
             return _callSetMasterAuth.Async(request, callSettings);
@@ -6268,7 +6268,7 @@ namespace Google.Cloud.Container.V1
         /// </returns>
         public override Operation SetMasterAuth(
             SetMasterAuthRequest request,
-            CallSettings callSettings = null)
+            gaxgrpc::CallSettings callSettings = null)
         {
             Modify_SetMasterAuthRequest(ref request, ref callSettings);
             return _callSetMasterAuth.Sync(request, callSettings);
@@ -6294,9 +6294,9 @@ namespace Google.Cloud.Container.V1
         /// <returns>
         /// A Task containing the RPC response.
         /// </returns>
-        public override Task<Operation> DeleteClusterAsync(
+        public override stt::Task<Operation> DeleteClusterAsync(
             DeleteClusterRequest request,
-            CallSettings callSettings = null)
+            gaxgrpc::CallSettings callSettings = null)
         {
             Modify_DeleteClusterRequest(ref request, ref callSettings);
             return _callDeleteCluster.Async(request, callSettings);
@@ -6324,7 +6324,7 @@ namespace Google.Cloud.Container.V1
         /// </returns>
         public override Operation DeleteCluster(
             DeleteClusterRequest request,
-            CallSettings callSettings = null)
+            gaxgrpc::CallSettings callSettings = null)
         {
             Modify_DeleteClusterRequest(ref request, ref callSettings);
             return _callDeleteCluster.Sync(request, callSettings);
@@ -6342,9 +6342,9 @@ namespace Google.Cloud.Container.V1
         /// <returns>
         /// A Task containing the RPC response.
         /// </returns>
-        public override Task<ListOperationsResponse> ListOperationsAsync(
+        public override stt::Task<ListOperationsResponse> ListOperationsAsync(
             ListOperationsRequest request,
-            CallSettings callSettings = null)
+            gaxgrpc::CallSettings callSettings = null)
         {
             Modify_ListOperationsRequest(ref request, ref callSettings);
             return _callListOperations.Async(request, callSettings);
@@ -6364,7 +6364,7 @@ namespace Google.Cloud.Container.V1
         /// </returns>
         public override ListOperationsResponse ListOperations(
             ListOperationsRequest request,
-            CallSettings callSettings = null)
+            gaxgrpc::CallSettings callSettings = null)
         {
             Modify_ListOperationsRequest(ref request, ref callSettings);
             return _callListOperations.Sync(request, callSettings);
@@ -6382,9 +6382,9 @@ namespace Google.Cloud.Container.V1
         /// <returns>
         /// A Task containing the RPC response.
         /// </returns>
-        public override Task<Operation> GetOperationAsync(
+        public override stt::Task<Operation> GetOperationAsync(
             GetOperationRequest request,
-            CallSettings callSettings = null)
+            gaxgrpc::CallSettings callSettings = null)
         {
             Modify_GetOperationRequest(ref request, ref callSettings);
             return _callGetOperation.Async(request, callSettings);
@@ -6404,7 +6404,7 @@ namespace Google.Cloud.Container.V1
         /// </returns>
         public override Operation GetOperation(
             GetOperationRequest request,
-            CallSettings callSettings = null)
+            gaxgrpc::CallSettings callSettings = null)
         {
             Modify_GetOperationRequest(ref request, ref callSettings);
             return _callGetOperation.Sync(request, callSettings);
@@ -6422,9 +6422,9 @@ namespace Google.Cloud.Container.V1
         /// <returns>
         /// A Task that completes when the RPC has completed.
         /// </returns>
-        public override Task CancelOperationAsync(
+        public override stt::Task CancelOperationAsync(
             CancelOperationRequest request,
-            CallSettings callSettings = null)
+            gaxgrpc::CallSettings callSettings = null)
         {
             Modify_CancelOperationRequest(ref request, ref callSettings);
             return _callCancelOperation.Async(request, callSettings);
@@ -6441,7 +6441,7 @@ namespace Google.Cloud.Container.V1
         /// </param>
         public override void CancelOperation(
             CancelOperationRequest request,
-            CallSettings callSettings = null)
+            gaxgrpc::CallSettings callSettings = null)
         {
             Modify_CancelOperationRequest(ref request, ref callSettings);
             _callCancelOperation.Sync(request, callSettings);
@@ -6459,9 +6459,9 @@ namespace Google.Cloud.Container.V1
         /// <returns>
         /// A Task containing the RPC response.
         /// </returns>
-        public override Task<ServerConfig> GetServerConfigAsync(
+        public override stt::Task<ServerConfig> GetServerConfigAsync(
             GetServerConfigRequest request,
-            CallSettings callSettings = null)
+            gaxgrpc::CallSettings callSettings = null)
         {
             Modify_GetServerConfigRequest(ref request, ref callSettings);
             return _callGetServerConfig.Async(request, callSettings);
@@ -6481,7 +6481,7 @@ namespace Google.Cloud.Container.V1
         /// </returns>
         public override ServerConfig GetServerConfig(
             GetServerConfigRequest request,
-            CallSettings callSettings = null)
+            gaxgrpc::CallSettings callSettings = null)
         {
             Modify_GetServerConfigRequest(ref request, ref callSettings);
             return _callGetServerConfig.Sync(request, callSettings);
@@ -6499,9 +6499,9 @@ namespace Google.Cloud.Container.V1
         /// <returns>
         /// A Task containing the RPC response.
         /// </returns>
-        public override Task<ListNodePoolsResponse> ListNodePoolsAsync(
+        public override stt::Task<ListNodePoolsResponse> ListNodePoolsAsync(
             ListNodePoolsRequest request,
-            CallSettings callSettings = null)
+            gaxgrpc::CallSettings callSettings = null)
         {
             Modify_ListNodePoolsRequest(ref request, ref callSettings);
             return _callListNodePools.Async(request, callSettings);
@@ -6521,7 +6521,7 @@ namespace Google.Cloud.Container.V1
         /// </returns>
         public override ListNodePoolsResponse ListNodePools(
             ListNodePoolsRequest request,
-            CallSettings callSettings = null)
+            gaxgrpc::CallSettings callSettings = null)
         {
             Modify_ListNodePoolsRequest(ref request, ref callSettings);
             return _callListNodePools.Sync(request, callSettings);
@@ -6539,9 +6539,9 @@ namespace Google.Cloud.Container.V1
         /// <returns>
         /// A Task containing the RPC response.
         /// </returns>
-        public override Task<NodePool> GetNodePoolAsync(
+        public override stt::Task<NodePool> GetNodePoolAsync(
             GetNodePoolRequest request,
-            CallSettings callSettings = null)
+            gaxgrpc::CallSettings callSettings = null)
         {
             Modify_GetNodePoolRequest(ref request, ref callSettings);
             return _callGetNodePool.Async(request, callSettings);
@@ -6561,7 +6561,7 @@ namespace Google.Cloud.Container.V1
         /// </returns>
         public override NodePool GetNodePool(
             GetNodePoolRequest request,
-            CallSettings callSettings = null)
+            gaxgrpc::CallSettings callSettings = null)
         {
             Modify_GetNodePoolRequest(ref request, ref callSettings);
             return _callGetNodePool.Sync(request, callSettings);
@@ -6579,9 +6579,9 @@ namespace Google.Cloud.Container.V1
         /// <returns>
         /// A Task containing the RPC response.
         /// </returns>
-        public override Task<Operation> CreateNodePoolAsync(
+        public override stt::Task<Operation> CreateNodePoolAsync(
             CreateNodePoolRequest request,
-            CallSettings callSettings = null)
+            gaxgrpc::CallSettings callSettings = null)
         {
             Modify_CreateNodePoolRequest(ref request, ref callSettings);
             return _callCreateNodePool.Async(request, callSettings);
@@ -6601,7 +6601,7 @@ namespace Google.Cloud.Container.V1
         /// </returns>
         public override Operation CreateNodePool(
             CreateNodePoolRequest request,
-            CallSettings callSettings = null)
+            gaxgrpc::CallSettings callSettings = null)
         {
             Modify_CreateNodePoolRequest(ref request, ref callSettings);
             return _callCreateNodePool.Sync(request, callSettings);
@@ -6619,9 +6619,9 @@ namespace Google.Cloud.Container.V1
         /// <returns>
         /// A Task containing the RPC response.
         /// </returns>
-        public override Task<Operation> DeleteNodePoolAsync(
+        public override stt::Task<Operation> DeleteNodePoolAsync(
             DeleteNodePoolRequest request,
-            CallSettings callSettings = null)
+            gaxgrpc::CallSettings callSettings = null)
         {
             Modify_DeleteNodePoolRequest(ref request, ref callSettings);
             return _callDeleteNodePool.Async(request, callSettings);
@@ -6641,7 +6641,7 @@ namespace Google.Cloud.Container.V1
         /// </returns>
         public override Operation DeleteNodePool(
             DeleteNodePoolRequest request,
-            CallSettings callSettings = null)
+            gaxgrpc::CallSettings callSettings = null)
         {
             Modify_DeleteNodePoolRequest(ref request, ref callSettings);
             return _callDeleteNodePool.Sync(request, callSettings);
@@ -6660,9 +6660,9 @@ namespace Google.Cloud.Container.V1
         /// <returns>
         /// A Task containing the RPC response.
         /// </returns>
-        public override Task<Operation> RollbackNodePoolUpgradeAsync(
+        public override stt::Task<Operation> RollbackNodePoolUpgradeAsync(
             RollbackNodePoolUpgradeRequest request,
-            CallSettings callSettings = null)
+            gaxgrpc::CallSettings callSettings = null)
         {
             Modify_RollbackNodePoolUpgradeRequest(ref request, ref callSettings);
             return _callRollbackNodePoolUpgrade.Async(request, callSettings);
@@ -6683,7 +6683,7 @@ namespace Google.Cloud.Container.V1
         /// </returns>
         public override Operation RollbackNodePoolUpgrade(
             RollbackNodePoolUpgradeRequest request,
-            CallSettings callSettings = null)
+            gaxgrpc::CallSettings callSettings = null)
         {
             Modify_RollbackNodePoolUpgradeRequest(ref request, ref callSettings);
             return _callRollbackNodePoolUpgrade.Sync(request, callSettings);
@@ -6701,9 +6701,9 @@ namespace Google.Cloud.Container.V1
         /// <returns>
         /// A Task containing the RPC response.
         /// </returns>
-        public override Task<Operation> SetNodePoolManagementAsync(
+        public override stt::Task<Operation> SetNodePoolManagementAsync(
             SetNodePoolManagementRequest request,
-            CallSettings callSettings = null)
+            gaxgrpc::CallSettings callSettings = null)
         {
             Modify_SetNodePoolManagementRequest(ref request, ref callSettings);
             return _callSetNodePoolManagement.Async(request, callSettings);
@@ -6723,7 +6723,7 @@ namespace Google.Cloud.Container.V1
         /// </returns>
         public override Operation SetNodePoolManagement(
             SetNodePoolManagementRequest request,
-            CallSettings callSettings = null)
+            gaxgrpc::CallSettings callSettings = null)
         {
             Modify_SetNodePoolManagementRequest(ref request, ref callSettings);
             return _callSetNodePoolManagement.Sync(request, callSettings);
@@ -6741,9 +6741,9 @@ namespace Google.Cloud.Container.V1
         /// <returns>
         /// A Task containing the RPC response.
         /// </returns>
-        public override Task<Operation> SetLabelsAsync(
+        public override stt::Task<Operation> SetLabelsAsync(
             SetLabelsRequest request,
-            CallSettings callSettings = null)
+            gaxgrpc::CallSettings callSettings = null)
         {
             Modify_SetLabelsRequest(ref request, ref callSettings);
             return _callSetLabels.Async(request, callSettings);
@@ -6763,7 +6763,7 @@ namespace Google.Cloud.Container.V1
         /// </returns>
         public override Operation SetLabels(
             SetLabelsRequest request,
-            CallSettings callSettings = null)
+            gaxgrpc::CallSettings callSettings = null)
         {
             Modify_SetLabelsRequest(ref request, ref callSettings);
             return _callSetLabels.Sync(request, callSettings);
@@ -6781,9 +6781,9 @@ namespace Google.Cloud.Container.V1
         /// <returns>
         /// A Task containing the RPC response.
         /// </returns>
-        public override Task<Operation> SetLegacyAbacAsync(
+        public override stt::Task<Operation> SetLegacyAbacAsync(
             SetLegacyAbacRequest request,
-            CallSettings callSettings = null)
+            gaxgrpc::CallSettings callSettings = null)
         {
             Modify_SetLegacyAbacRequest(ref request, ref callSettings);
             return _callSetLegacyAbac.Async(request, callSettings);
@@ -6803,7 +6803,7 @@ namespace Google.Cloud.Container.V1
         /// </returns>
         public override Operation SetLegacyAbac(
             SetLegacyAbacRequest request,
-            CallSettings callSettings = null)
+            gaxgrpc::CallSettings callSettings = null)
         {
             Modify_SetLegacyAbacRequest(ref request, ref callSettings);
             return _callSetLegacyAbac.Sync(request, callSettings);
@@ -6821,9 +6821,9 @@ namespace Google.Cloud.Container.V1
         /// <returns>
         /// A Task containing the RPC response.
         /// </returns>
-        public override Task<Operation> StartIPRotationAsync(
+        public override stt::Task<Operation> StartIPRotationAsync(
             StartIPRotationRequest request,
-            CallSettings callSettings = null)
+            gaxgrpc::CallSettings callSettings = null)
         {
             Modify_StartIPRotationRequest(ref request, ref callSettings);
             return _callStartIPRotation.Async(request, callSettings);
@@ -6843,7 +6843,7 @@ namespace Google.Cloud.Container.V1
         /// </returns>
         public override Operation StartIPRotation(
             StartIPRotationRequest request,
-            CallSettings callSettings = null)
+            gaxgrpc::CallSettings callSettings = null)
         {
             Modify_StartIPRotationRequest(ref request, ref callSettings);
             return _callStartIPRotation.Sync(request, callSettings);
@@ -6861,9 +6861,9 @@ namespace Google.Cloud.Container.V1
         /// <returns>
         /// A Task containing the RPC response.
         /// </returns>
-        public override Task<Operation> CompleteIPRotationAsync(
+        public override stt::Task<Operation> CompleteIPRotationAsync(
             CompleteIPRotationRequest request,
-            CallSettings callSettings = null)
+            gaxgrpc::CallSettings callSettings = null)
         {
             Modify_CompleteIPRotationRequest(ref request, ref callSettings);
             return _callCompleteIPRotation.Async(request, callSettings);
@@ -6883,7 +6883,7 @@ namespace Google.Cloud.Container.V1
         /// </returns>
         public override Operation CompleteIPRotation(
             CompleteIPRotationRequest request,
-            CallSettings callSettings = null)
+            gaxgrpc::CallSettings callSettings = null)
         {
             Modify_CompleteIPRotationRequest(ref request, ref callSettings);
             return _callCompleteIPRotation.Sync(request, callSettings);
@@ -6901,9 +6901,9 @@ namespace Google.Cloud.Container.V1
         /// <returns>
         /// A Task containing the RPC response.
         /// </returns>
-        public override Task<Operation> SetNodePoolSizeAsync(
+        public override stt::Task<Operation> SetNodePoolSizeAsync(
             SetNodePoolSizeRequest request,
-            CallSettings callSettings = null)
+            gaxgrpc::CallSettings callSettings = null)
         {
             Modify_SetNodePoolSizeRequest(ref request, ref callSettings);
             return _callSetNodePoolSize.Async(request, callSettings);
@@ -6923,7 +6923,7 @@ namespace Google.Cloud.Container.V1
         /// </returns>
         public override Operation SetNodePoolSize(
             SetNodePoolSizeRequest request,
-            CallSettings callSettings = null)
+            gaxgrpc::CallSettings callSettings = null)
         {
             Modify_SetNodePoolSizeRequest(ref request, ref callSettings);
             return _callSetNodePoolSize.Sync(request, callSettings);
@@ -6941,9 +6941,9 @@ namespace Google.Cloud.Container.V1
         /// <returns>
         /// A Task containing the RPC response.
         /// </returns>
-        public override Task<Operation> SetNetworkPolicyAsync(
+        public override stt::Task<Operation> SetNetworkPolicyAsync(
             SetNetworkPolicyRequest request,
-            CallSettings callSettings = null)
+            gaxgrpc::CallSettings callSettings = null)
         {
             Modify_SetNetworkPolicyRequest(ref request, ref callSettings);
             return _callSetNetworkPolicy.Async(request, callSettings);
@@ -6963,7 +6963,7 @@ namespace Google.Cloud.Container.V1
         /// </returns>
         public override Operation SetNetworkPolicy(
             SetNetworkPolicyRequest request,
-            CallSettings callSettings = null)
+            gaxgrpc::CallSettings callSettings = null)
         {
             Modify_SetNetworkPolicyRequest(ref request, ref callSettings);
             return _callSetNetworkPolicy.Sync(request, callSettings);
@@ -6981,9 +6981,9 @@ namespace Google.Cloud.Container.V1
         /// <returns>
         /// A Task containing the RPC response.
         /// </returns>
-        public override Task<Operation> SetMaintenancePolicyAsync(
+        public override stt::Task<Operation> SetMaintenancePolicyAsync(
             SetMaintenancePolicyRequest request,
-            CallSettings callSettings = null)
+            gaxgrpc::CallSettings callSettings = null)
         {
             Modify_SetMaintenancePolicyRequest(ref request, ref callSettings);
             return _callSetMaintenancePolicy.Async(request, callSettings);
@@ -7003,7 +7003,7 @@ namespace Google.Cloud.Container.V1
         /// </returns>
         public override Operation SetMaintenancePolicy(
             SetMaintenancePolicyRequest request,
-            CallSettings callSettings = null)
+            gaxgrpc::CallSettings callSettings = null)
         {
             Modify_SetMaintenancePolicyRequest(ref request, ref callSettings);
             return _callSetMaintenancePolicy.Sync(request, callSettings);

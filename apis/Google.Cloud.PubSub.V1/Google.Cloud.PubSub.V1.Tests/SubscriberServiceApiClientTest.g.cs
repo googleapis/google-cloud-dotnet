@@ -14,22 +14,23 @@
 
 // Generated code. DO NOT EDIT!
 
-using Google.Api.Gax;
-using Google.Api.Gax.Grpc;
-using Google.Cloud.Iam.V1;
-using Google.Protobuf.WellKnownTypes;
-using Grpc.Core;
-using Moq;
-using System;
-using System.Collections;
-using System.Collections.Generic;
-using System.Collections.ObjectModel;
-using System.Threading;
-using System.Threading.Tasks;
-using Xunit;
-
 namespace Google.Cloud.PubSub.V1.Tests
 {
+    using Google.Api.Gax;
+    using Google.Api.Gax.Grpc;
+    using Google.Cloud.Iam.V1;
+    using apis = Google.Cloud.PubSub.V1;
+    using Google.Protobuf.WellKnownTypes;
+    using Grpc.Core;
+    using Moq;
+    using System;
+    using System.Collections;
+    using System.Collections.Generic;
+    using System.Collections.ObjectModel;
+    using System.Threading;
+    using System.Threading.Tasks;
+    using Xunit;
+
     /// <summary>Generated unit tests</summary>
     public class GeneratedSubscriberServiceApiClientTest
     {

@@ -14,25 +14,25 @@
 
 // Generated code. DO NOT EDIT!
 
-using Google.Api.Gax;
-using Google.Api.Gax.Grpc;
-using Google.LongRunning;
-using Google.Protobuf;
-using Google.Protobuf.WellKnownTypes;
-using Grpc.Core;
-using System;
-using System.Collections;
-using System.Collections.Generic;
-using System.Collections.ObjectModel;
-using System.Threading;
-using System.Threading.Tasks;
+using gax = Google.Api.Gax;
+using gaxgrpc = Google.Api.Gax.Grpc;
+using lro = Google.LongRunning;
+using proto = Google.Protobuf;
+using protowkt = Google.Protobuf.WellKnownTypes;
+using grpccore = Grpc.Core;
+using s = System;
+using sc = System.Collections;
+using scg = System.Collections.Generic;
+using sco = System.Collections.ObjectModel;
+using st = System.Threading;
+using stt = System.Threading.Tasks;
 
 namespace Google.Cloud.Speech.V1
 {
     /// <summary>
     /// Settings for a <see cref="SpeechClient"/>.
     /// </summary>
-    public sealed partial class SpeechSettings : ServiceSettingsBase
+    public sealed partial class SpeechSettings : gaxgrpc::ServiceSettingsBase
     {
         /// <summary>
         /// Get a new instance of the default <see cref="SpeechSettings"/>.
@@ -49,7 +49,7 @@ namespace Google.Cloud.Speech.V1
 
         private SpeechSettings(SpeechSettings existing) : base(existing)
         {
-            GaxPreconditions.CheckNotNull(existing, nameof(existing));
+            gax::GaxPreconditions.CheckNotNull(existing, nameof(existing));
             RecognizeSettings = existing.RecognizeSettings;
             LongRunningRecognizeSettings = existing.LongRunningRecognizeSettings;
             LongRunningRecognizeOperationsSettings = existing.LongRunningRecognizeOperationsSettings?.Clone();
@@ -61,28 +61,28 @@ namespace Google.Cloud.Speech.V1
         partial void OnCopy(SpeechSettings existing);
 
         /// <summary>
-        /// The filter specifying which RPC <see cref="StatusCode"/>s are eligible for retry
+        /// The filter specifying which RPC <see cref="grpccore::StatusCode"/>s are eligible for retry
         /// for "Idempotent" <see cref="SpeechClient"/> RPC methods.
         /// </summary>
         /// <remarks>
-        /// The eligible RPC <see cref="StatusCode"/>s for retry for "Idempotent" RPC methods are:
+        /// The eligible RPC <see cref="grpccore::StatusCode"/>s for retry for "Idempotent" RPC methods are:
         /// <list type="bullet">
-        /// <item><description><see cref="StatusCode.DeadlineExceeded"/></description></item>
-        /// <item><description><see cref="StatusCode.Unavailable"/></description></item>
+        /// <item><description><see cref="grpccore::StatusCode.DeadlineExceeded"/></description></item>
+        /// <item><description><see cref="grpccore::StatusCode.Unavailable"/></description></item>
         /// </list>
         /// </remarks>
-        public static Predicate<RpcException> IdempotentRetryFilter { get; } =
-            RetrySettings.FilterForStatusCodes(StatusCode.DeadlineExceeded, StatusCode.Unavailable);
+        public static s::Predicate<grpccore::RpcException> IdempotentRetryFilter { get; } =
+            gaxgrpc::RetrySettings.FilterForStatusCodes(grpccore::StatusCode.DeadlineExceeded, grpccore::StatusCode.Unavailable);
 
         /// <summary>
-        /// The filter specifying which RPC <see cref="StatusCode"/>s are eligible for retry
+        /// The filter specifying which RPC <see cref="grpccore::StatusCode"/>s are eligible for retry
         /// for "NonIdempotent" <see cref="SpeechClient"/> RPC methods.
         /// </summary>
         /// <remarks>
-        /// There are no RPC <see cref="StatusCode"/>s eligible for retry for "NonIdempotent" RPC methods.
+        /// There are no RPC <see cref="grpccore::StatusCode"/>s eligible for retry for "NonIdempotent" RPC methods.
         /// </remarks>
-        public static Predicate<RpcException> NonIdempotentRetryFilter { get; } =
-            RetrySettings.FilterForStatusCodes();
+        public static s::Predicate<grpccore::RpcException> NonIdempotentRetryFilter { get; } =
+            gaxgrpc::RetrySettings.FilterForStatusCodes();
 
         /// <summary>
         /// "Default" retry backoff for <see cref="SpeechClient"/> RPC methods.
@@ -98,9 +98,9 @@ namespace Google.Cloud.Speech.V1
         /// <item><description>Delay multiplier: 1.3</description></item>
         /// </list>
         /// </remarks>
-        public static BackoffSettings GetDefaultRetryBackoff() => new BackoffSettings(
-            delay: TimeSpan.FromMilliseconds(100),
-            maxDelay: TimeSpan.FromMilliseconds(60000),
+        public static gaxgrpc::BackoffSettings GetDefaultRetryBackoff() => new gaxgrpc::BackoffSettings(
+            delay: s::TimeSpan.FromMilliseconds(100),
+            maxDelay: s::TimeSpan.FromMilliseconds(60000),
             delayMultiplier: 1.3
         );
 
@@ -118,19 +118,19 @@ namespace Google.Cloud.Speech.V1
         /// <item><description>Maximum timeout: 1000000 milliseconds</description></item>
         /// </list>
         /// </remarks>
-        public static BackoffSettings GetDefaultTimeoutBackoff() => new BackoffSettings(
-            delay: TimeSpan.FromMilliseconds(1000000),
-            maxDelay: TimeSpan.FromMilliseconds(1000000),
+        public static gaxgrpc::BackoffSettings GetDefaultTimeoutBackoff() => new gaxgrpc::BackoffSettings(
+            delay: s::TimeSpan.FromMilliseconds(1000000),
+            maxDelay: s::TimeSpan.FromMilliseconds(1000000),
             delayMultiplier: 1.0
         );
 
         /// <summary>
-        /// <see cref="CallSettings"/> for synchronous and asynchronous calls to
+        /// <see cref="gaxgrpc::CallSettings"/> for synchronous and asynchronous calls to
         /// <c>SpeechClient.Recognize</c> and <c>SpeechClient.RecognizeAsync</c>.
         /// </summary>
         /// <remarks>
         /// The default <c>SpeechClient.Recognize</c> and
-        /// <c>SpeechClient.RecognizeAsync</c> <see cref="RetrySettings"/> are:
+        /// <c>SpeechClient.RecognizeAsync</c> <see cref="gaxgrpc::RetrySettings"/> are:
         /// <list type="bullet">
         /// <item><description>Initial retry delay: 100 milliseconds</description></item>
         /// <item><description>Retry delay multiplier: 1.3</description></item>
@@ -141,26 +141,26 @@ namespace Google.Cloud.Speech.V1
         /// </list>
         /// Retry will be attempted on the following response status codes:
         /// <list>
-        /// <item><description><see cref="StatusCode.DeadlineExceeded"/></description></item>
-        /// <item><description><see cref="StatusCode.Unavailable"/></description></item>
+        /// <item><description><see cref="grpccore::StatusCode.DeadlineExceeded"/></description></item>
+        /// <item><description><see cref="grpccore::StatusCode.Unavailable"/></description></item>
         /// </list>
         /// Default RPC expiration is 5000000 milliseconds.
         /// </remarks>
-        public CallSettings RecognizeSettings { get; set; } = CallSettings.FromCallTiming(
-            CallTiming.FromRetry(new RetrySettings(
+        public gaxgrpc::CallSettings RecognizeSettings { get; set; } = gaxgrpc::CallSettings.FromCallTiming(
+            gaxgrpc::CallTiming.FromRetry(new gaxgrpc::RetrySettings(
                 retryBackoff: GetDefaultRetryBackoff(),
                 timeoutBackoff: GetDefaultTimeoutBackoff(),
-                totalExpiration: Expiration.FromTimeout(TimeSpan.FromMilliseconds(5000000)),
+                totalExpiration: gax::Expiration.FromTimeout(s::TimeSpan.FromMilliseconds(5000000)),
                 retryFilter: IdempotentRetryFilter
             )));
 
         /// <summary>
-        /// <see cref="CallSettings"/> for synchronous and asynchronous calls to
+        /// <see cref="gaxgrpc::CallSettings"/> for synchronous and asynchronous calls to
         /// <c>SpeechClient.LongRunningRecognize</c> and <c>SpeechClient.LongRunningRecognizeAsync</c>.
         /// </summary>
         /// <remarks>
         /// The default <c>SpeechClient.LongRunningRecognize</c> and
-        /// <c>SpeechClient.LongRunningRecognizeAsync</c> <see cref="RetrySettings"/> are:
+        /// <c>SpeechClient.LongRunningRecognizeAsync</c> <see cref="gaxgrpc::RetrySettings"/> are:
         /// <list type="bullet">
         /// <item><description>Initial retry delay: 100 milliseconds</description></item>
         /// <item><description>Retry delay multiplier: 1.3</description></item>
@@ -175,11 +175,11 @@ namespace Google.Cloud.Speech.V1
         /// </list>
         /// Default RPC expiration is 5000000 milliseconds.
         /// </remarks>
-        public CallSettings LongRunningRecognizeSettings { get; set; } = CallSettings.FromCallTiming(
-            CallTiming.FromRetry(new RetrySettings(
+        public gaxgrpc::CallSettings LongRunningRecognizeSettings { get; set; } = gaxgrpc::CallSettings.FromCallTiming(
+            gaxgrpc::CallTiming.FromRetry(new gaxgrpc::RetrySettings(
                 retryBackoff: GetDefaultRetryBackoff(),
                 timeoutBackoff: GetDefaultTimeoutBackoff(),
-                totalExpiration: Expiration.FromTimeout(TimeSpan.FromMilliseconds(5000000)),
+                totalExpiration: gax::Expiration.FromTimeout(s::TimeSpan.FromMilliseconds(5000000)),
                 retryFilter: NonIdempotentRetryFilter
             )));
 
@@ -187,7 +187,7 @@ namespace Google.Cloud.Speech.V1
         /// Long Running Operation settings for calls to <c>SpeechClient.LongRunningRecognize</c>.
         /// </summary>
         /// <remarks>
-        /// Uses default <see cref="PollSettings"/> of:
+        /// Uses default <see cref="gax::PollSettings"/> of:
         /// <list type="bullet">
         /// <item><description>Initial delay: 20000 milliseconds</description></item>
         /// <item><description>Delay multiplier: 1.5</description></item>
@@ -195,33 +195,33 @@ namespace Google.Cloud.Speech.V1
         /// <item><description>Total timeout: 86400000 milliseconds</description></item>
         /// </list>
         /// </remarks>
-        public OperationsSettings LongRunningRecognizeOperationsSettings { get; set; } = new OperationsSettings
+        public lro::OperationsSettings LongRunningRecognizeOperationsSettings { get; set; } = new lro::OperationsSettings
         {
-            DefaultPollSettings = new PollSettings(
-                Expiration.FromTimeout(TimeSpan.FromMilliseconds(86400000L)),
-                TimeSpan.FromMilliseconds(20000L),
+            DefaultPollSettings = new gax::PollSettings(
+                gax::Expiration.FromTimeout(s::TimeSpan.FromMilliseconds(86400000L)),
+                s::TimeSpan.FromMilliseconds(20000L),
                 1.5,
-                TimeSpan.FromMilliseconds(45000L))
+                s::TimeSpan.FromMilliseconds(45000L))
         };
 
         /// <summary>
-        /// <see cref="CallSettings"/> for calls to <c>SpeechClient.StreamingRecognize</c>.
+        /// <see cref="gaxgrpc::CallSettings"/> for calls to <c>SpeechClient.StreamingRecognize</c>.
         /// </summary>
         /// <remarks>
         /// Default RPC expiration is 5000000 milliseconds.
         /// </remarks>
-        public CallSettings StreamingRecognizeSettings { get; set; } = CallSettings.FromCallTiming(
-            CallTiming.FromTimeout(TimeSpan.FromMilliseconds(5000000)));
+        public gaxgrpc::CallSettings StreamingRecognizeSettings { get; set; } = gaxgrpc::CallSettings.FromCallTiming(
+            gaxgrpc::CallTiming.FromTimeout(s::TimeSpan.FromMilliseconds(5000000)));
 
         /// <summary>
-        /// <see cref="BidirectionalStreamingSettings"/> for calls to
+        /// <see cref="gaxgrpc::BidirectionalStreamingSettings"/> for calls to
         /// <c>SpeechClient.StreamingRecognize</c>.
         /// </summary>
         /// <remarks>
         /// The default local send queue size is 100.
         /// </remarks>
-        public BidirectionalStreamingSettings StreamingRecognizeStreamingSettings { get; set; } =
-            new BidirectionalStreamingSettings(100);
+        public gaxgrpc::BidirectionalStreamingSettings StreamingRecognizeStreamingSettings { get; set; } =
+            new gaxgrpc::BidirectionalStreamingSettings(100);
 
         /// <summary>
         /// Creates a deep clone of this object, with all the same property values.
@@ -238,7 +238,7 @@ namespace Google.Cloud.Speech.V1
         /// <summary>
         /// The default endpoint for the Speech service, which is a host of "speech.googleapis.com" and a port of 443.
         /// </summary>
-        public static ServiceEndpoint DefaultEndpoint { get; } = new ServiceEndpoint("speech.googleapis.com", 443);
+        public static gaxgrpc::ServiceEndpoint DefaultEndpoint { get; } = new gaxgrpc::ServiceEndpoint("speech.googleapis.com", 443);
 
         /// <summary>
         /// The default Speech scopes.
@@ -249,11 +249,11 @@ namespace Google.Cloud.Speech.V1
         /// <item><description>"https://www.googleapis.com/auth/cloud-platform"</description></item>
         /// </list>
         /// </remarks>
-        public static IReadOnlyList<string> DefaultScopes { get; } = new ReadOnlyCollection<string>(new string[] {
+        public static scg::IReadOnlyList<string> DefaultScopes { get; } = new sco::ReadOnlyCollection<string>(new string[] {
             "https://www.googleapis.com/auth/cloud-platform",
         });
 
-        private static readonly ChannelPool s_channelPool = new ChannelPool(DefaultScopes);
+        private static readonly gaxgrpc::ChannelPool s_channelPool = new gaxgrpc::ChannelPool(DefaultScopes);
 
         // Note: we could have parameterless overloads of Create and CreateAsync,
         // documented to just use the default endpoint, settings and credentials.
@@ -267,12 +267,12 @@ namespace Google.Cloud.Speech.V1
         /// and creating a channel connecting to the given endpoint with application default credentials where
         /// necessary.
         /// </summary>
-        /// <param name="endpoint">Optional <see cref="ServiceEndpoint"/>.</param>
+        /// <param name="endpoint">Optional <see cref="gaxgrpc::ServiceEndpoint"/>.</param>
         /// <param name="settings">Optional <see cref="SpeechSettings"/>.</param>
         /// <returns>The task representing the created <see cref="SpeechClient"/>.</returns>
-        public static async Task<SpeechClient> CreateAsync(ServiceEndpoint endpoint = null, SpeechSettings settings = null)
+        public static async stt::Task<SpeechClient> CreateAsync(gaxgrpc::ServiceEndpoint endpoint = null, SpeechSettings settings = null)
         {
-            Channel channel = await s_channelPool.GetChannelAsync(endpoint ?? DefaultEndpoint).ConfigureAwait(false);
+            grpccore::Channel channel = await s_channelPool.GetChannelAsync(endpoint ?? DefaultEndpoint).ConfigureAwait(false);
             return Create(channel, settings);
         }
 
@@ -281,45 +281,45 @@ namespace Google.Cloud.Speech.V1
         /// and creating a channel connecting to the given endpoint with application default credentials where
         /// necessary.
         /// </summary>
-        /// <param name="endpoint">Optional <see cref="ServiceEndpoint"/>.</param>
+        /// <param name="endpoint">Optional <see cref="gaxgrpc::ServiceEndpoint"/>.</param>
         /// <param name="settings">Optional <see cref="SpeechSettings"/>.</param>
         /// <returns>The created <see cref="SpeechClient"/>.</returns>
-        public static SpeechClient Create(ServiceEndpoint endpoint = null, SpeechSettings settings = null)
+        public static SpeechClient Create(gaxgrpc::ServiceEndpoint endpoint = null, SpeechSettings settings = null)
         {
-            Channel channel = s_channelPool.GetChannel(endpoint ?? DefaultEndpoint);
+            grpccore::Channel channel = s_channelPool.GetChannel(endpoint ?? DefaultEndpoint);
             return Create(channel, settings);
         }
 
         /// <summary>
         /// Creates a <see cref="SpeechClient"/> which uses the specified channel for remote operations.
         /// </summary>
-        /// <param name="channel">The <see cref="Channel"/> for remote operations. Must not be null.</param>
+        /// <param name="channel">The <see cref="grpccore::Channel"/> for remote operations. Must not be null.</param>
         /// <param name="settings">Optional <see cref="SpeechSettings"/>.</param>
         /// <returns>The created <see cref="SpeechClient"/>.</returns>
-        public static SpeechClient Create(Channel channel, SpeechSettings settings = null)
+        public static SpeechClient Create(grpccore::Channel channel, SpeechSettings settings = null)
         {
-            GaxPreconditions.CheckNotNull(channel, nameof(channel));
+            gax::GaxPreconditions.CheckNotNull(channel, nameof(channel));
             Speech.SpeechClient grpcClient = new Speech.SpeechClient(channel);
             return new SpeechClientImpl(grpcClient, settings);
         }
 
         /// <summary>
-        /// Shuts down any channels automatically created by <see cref="Create(ServiceEndpoint, SpeechSettings)"/>
-        /// and <see cref="CreateAsync(ServiceEndpoint, SpeechSettings)"/>. Channels which weren't automatically
+        /// Shuts down any channels automatically created by <see cref="Create(gaxgrpc::ServiceEndpoint, SpeechSettings)"/>
+        /// and <see cref="CreateAsync(gaxgrpc::ServiceEndpoint, SpeechSettings)"/>. Channels which weren't automatically
         /// created are not affected.
         /// </summary>
-        /// <remarks>After calling this method, further calls to <see cref="Create(ServiceEndpoint, SpeechSettings)"/>
-        /// and <see cref="CreateAsync(ServiceEndpoint, SpeechSettings)"/> will create new channels, which could
+        /// <remarks>After calling this method, further calls to <see cref="Create(gaxgrpc::ServiceEndpoint, SpeechSettings)"/>
+        /// and <see cref="CreateAsync(gaxgrpc::ServiceEndpoint, SpeechSettings)"/> will create new channels, which could
         /// in turn be shut down by another call to this method.</remarks>
         /// <returns>A task representing the asynchronous shutdown operation.</returns>
-        public static Task ShutdownDefaultChannelsAsync() => s_channelPool.ShutdownChannelsAsync();
+        public static stt::Task ShutdownDefaultChannelsAsync() => s_channelPool.ShutdownChannelsAsync();
 
         /// <summary>
         /// The underlying gRPC Speech client.
         /// </summary>
         public virtual Speech.SpeechClient GrpcClient
         {
-            get { throw new NotImplementedException(); }
+            get { throw new s::NotImplementedException(); }
         }
 
         /// <summary>
@@ -339,14 +339,14 @@ namespace Google.Cloud.Speech.V1
         /// <returns>
         /// A Task containing the RPC response.
         /// </returns>
-        public virtual Task<RecognizeResponse> RecognizeAsync(
+        public virtual stt::Task<RecognizeResponse> RecognizeAsync(
             RecognitionConfig config,
             RecognitionAudio audio,
-            CallSettings callSettings = null) => RecognizeAsync(
+            gaxgrpc::CallSettings callSettings = null) => RecognizeAsync(
                 new RecognizeRequest
                 {
-                    Config = GaxPreconditions.CheckNotNull(config, nameof(config)),
-                    Audio = GaxPreconditions.CheckNotNull(audio, nameof(audio)),
+                    Config = gax::GaxPreconditions.CheckNotNull(config, nameof(config)),
+                    Audio = gax::GaxPreconditions.CheckNotNull(audio, nameof(audio)),
                 },
                 callSettings);
 
@@ -362,18 +362,18 @@ namespace Google.Cloud.Speech.V1
         /// *Required* The audio data to be recognized.
         /// </param>
         /// <param name="cancellationToken">
-        /// A <see cref="CancellationToken"/> to use for this RPC.
+        /// A <see cref="st::CancellationToken"/> to use for this RPC.
         /// </param>
         /// <returns>
         /// A Task containing the RPC response.
         /// </returns>
-        public virtual Task<RecognizeResponse> RecognizeAsync(
+        public virtual stt::Task<RecognizeResponse> RecognizeAsync(
             RecognitionConfig config,
             RecognitionAudio audio,
-            CancellationToken cancellationToken) => RecognizeAsync(
+            st::CancellationToken cancellationToken) => RecognizeAsync(
                 config,
                 audio,
-                CallSettings.FromCancellationToken(cancellationToken));
+                gaxgrpc::CallSettings.FromCancellationToken(cancellationToken));
 
         /// <summary>
         /// Performs synchronous speech recognition: receive results after all audio
@@ -395,11 +395,11 @@ namespace Google.Cloud.Speech.V1
         public virtual RecognizeResponse Recognize(
             RecognitionConfig config,
             RecognitionAudio audio,
-            CallSettings callSettings = null) => Recognize(
+            gaxgrpc::CallSettings callSettings = null) => Recognize(
                 new RecognizeRequest
                 {
-                    Config = GaxPreconditions.CheckNotNull(config, nameof(config)),
-                    Audio = GaxPreconditions.CheckNotNull(audio, nameof(audio)),
+                    Config = gax::GaxPreconditions.CheckNotNull(config, nameof(config)),
+                    Audio = gax::GaxPreconditions.CheckNotNull(audio, nameof(audio)),
                 },
                 callSettings);
 
@@ -416,11 +416,11 @@ namespace Google.Cloud.Speech.V1
         /// <returns>
         /// A Task containing the RPC response.
         /// </returns>
-        public virtual Task<RecognizeResponse> RecognizeAsync(
+        public virtual stt::Task<RecognizeResponse> RecognizeAsync(
             RecognizeRequest request,
-            CallSettings callSettings = null)
+            gaxgrpc::CallSettings callSettings = null)
         {
-            throw new NotImplementedException();
+            throw new s::NotImplementedException();
         }
 
         /// <summary>
@@ -431,16 +431,16 @@ namespace Google.Cloud.Speech.V1
         /// The request object containing all of the parameters for the API call.
         /// </param>
         /// <param name="cancellationToken">
-        /// A <see cref="CancellationToken"/> to use for this RPC.
+        /// A <see cref="st::CancellationToken"/> to use for this RPC.
         /// </param>
         /// <returns>
         /// A Task containing the RPC response.
         /// </returns>
-        public virtual Task<RecognizeResponse> RecognizeAsync(
+        public virtual stt::Task<RecognizeResponse> RecognizeAsync(
             RecognizeRequest request,
-            CancellationToken cancellationToken) => RecognizeAsync(
+            st::CancellationToken cancellationToken) => RecognizeAsync(
                 request,
-                CallSettings.FromCancellationToken(cancellationToken));
+                gaxgrpc::CallSettings.FromCancellationToken(cancellationToken));
 
         /// <summary>
         /// Performs synchronous speech recognition: receive results after all audio
@@ -457,9 +457,9 @@ namespace Google.Cloud.Speech.V1
         /// </returns>
         public virtual RecognizeResponse Recognize(
             RecognizeRequest request,
-            CallSettings callSettings = null)
+            gaxgrpc::CallSettings callSettings = null)
         {
-            throw new NotImplementedException();
+            throw new s::NotImplementedException();
         }
 
         /// <summary>
@@ -481,14 +481,14 @@ namespace Google.Cloud.Speech.V1
         /// <returns>
         /// A Task containing the RPC response.
         /// </returns>
-        public virtual Task<Operation<LongRunningRecognizeResponse, LongRunningRecognizeMetadata>> LongRunningRecognizeAsync(
+        public virtual stt::Task<lro::Operation<LongRunningRecognizeResponse, LongRunningRecognizeMetadata>> LongRunningRecognizeAsync(
             RecognitionConfig config,
             RecognitionAudio audio,
-            CallSettings callSettings = null) => LongRunningRecognizeAsync(
+            gaxgrpc::CallSettings callSettings = null) => LongRunningRecognizeAsync(
                 new LongRunningRecognizeRequest
                 {
-                    Config = GaxPreconditions.CheckNotNull(config, nameof(config)),
-                    Audio = GaxPreconditions.CheckNotNull(audio, nameof(audio)),
+                    Config = gax::GaxPreconditions.CheckNotNull(config, nameof(config)),
+                    Audio = gax::GaxPreconditions.CheckNotNull(audio, nameof(audio)),
                 },
                 callSettings);
 
@@ -506,18 +506,18 @@ namespace Google.Cloud.Speech.V1
         /// *Required* The audio data to be recognized.
         /// </param>
         /// <param name="cancellationToken">
-        /// A <see cref="CancellationToken"/> to use for this RPC.
+        /// A <see cref="st::CancellationToken"/> to use for this RPC.
         /// </param>
         /// <returns>
         /// A Task containing the RPC response.
         /// </returns>
-        public virtual Task<Operation<LongRunningRecognizeResponse, LongRunningRecognizeMetadata>> LongRunningRecognizeAsync(
+        public virtual stt::Task<lro::Operation<LongRunningRecognizeResponse, LongRunningRecognizeMetadata>> LongRunningRecognizeAsync(
             RecognitionConfig config,
             RecognitionAudio audio,
-            CancellationToken cancellationToken) => LongRunningRecognizeAsync(
+            st::CancellationToken cancellationToken) => LongRunningRecognizeAsync(
                 config,
                 audio,
-                CallSettings.FromCancellationToken(cancellationToken));
+                gaxgrpc::CallSettings.FromCancellationToken(cancellationToken));
 
         /// <summary>
         /// Performs asynchronous speech recognition: receive results via the
@@ -538,14 +538,14 @@ namespace Google.Cloud.Speech.V1
         /// <returns>
         /// The RPC response.
         /// </returns>
-        public virtual Operation<LongRunningRecognizeResponse, LongRunningRecognizeMetadata> LongRunningRecognize(
+        public virtual lro::Operation<LongRunningRecognizeResponse, LongRunningRecognizeMetadata> LongRunningRecognize(
             RecognitionConfig config,
             RecognitionAudio audio,
-            CallSettings callSettings = null) => LongRunningRecognize(
+            gaxgrpc::CallSettings callSettings = null) => LongRunningRecognize(
                 new LongRunningRecognizeRequest
                 {
-                    Config = GaxPreconditions.CheckNotNull(config, nameof(config)),
-                    Audio = GaxPreconditions.CheckNotNull(audio, nameof(audio)),
+                    Config = gax::GaxPreconditions.CheckNotNull(config, nameof(config)),
+                    Audio = gax::GaxPreconditions.CheckNotNull(audio, nameof(audio)),
                 },
                 callSettings);
 
@@ -564,11 +564,11 @@ namespace Google.Cloud.Speech.V1
         /// <returns>
         /// A Task containing the RPC response.
         /// </returns>
-        public virtual Task<Operation<LongRunningRecognizeResponse, LongRunningRecognizeMetadata>> LongRunningRecognizeAsync(
+        public virtual stt::Task<lro::Operation<LongRunningRecognizeResponse, LongRunningRecognizeMetadata>> LongRunningRecognizeAsync(
             LongRunningRecognizeRequest request,
-            CallSettings callSettings = null)
+            gaxgrpc::CallSettings callSettings = null)
         {
-            throw new NotImplementedException();
+            throw new s::NotImplementedException();
         }
 
         /// <summary>
@@ -577,10 +577,10 @@ namespace Google.Cloud.Speech.V1
         /// <param name="operationName">The name of a previously invoked operation. Must not be <c>null</c> or empty.</param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
         /// <returns>A task representing the result of polling the operation.</returns>
-        public virtual Task<Operation<LongRunningRecognizeResponse, LongRunningRecognizeMetadata>> PollOnceLongRunningRecognizeAsync(
+        public virtual stt::Task<lro::Operation<LongRunningRecognizeResponse, LongRunningRecognizeMetadata>> PollOnceLongRunningRecognizeAsync(
             string operationName,
-            CallSettings callSettings = null) => Operation<LongRunningRecognizeResponse, LongRunningRecognizeMetadata>.PollOnceFromNameAsync(
-                GaxPreconditions.CheckNotNullOrEmpty(operationName, nameof(operationName)),
+            gaxgrpc::CallSettings callSettings = null) => lro::Operation<LongRunningRecognizeResponse, LongRunningRecognizeMetadata>.PollOnceFromNameAsync(
+                gax::GaxPreconditions.CheckNotNullOrEmpty(operationName, nameof(operationName)),
                 LongRunningRecognizeOperationsClient,
                 callSettings);
 
@@ -599,19 +599,19 @@ namespace Google.Cloud.Speech.V1
         /// <returns>
         /// The RPC response.
         /// </returns>
-        public virtual Operation<LongRunningRecognizeResponse, LongRunningRecognizeMetadata> LongRunningRecognize(
+        public virtual lro::Operation<LongRunningRecognizeResponse, LongRunningRecognizeMetadata> LongRunningRecognize(
             LongRunningRecognizeRequest request,
-            CallSettings callSettings = null)
+            gaxgrpc::CallSettings callSettings = null)
         {
-            throw new NotImplementedException();
+            throw new s::NotImplementedException();
         }
 
         /// <summary>
         /// The long-running operations client for <c>LongRunningRecognize</c>.
         /// </summary>
-        public virtual OperationsClient LongRunningRecognizeOperationsClient
+        public virtual lro::OperationsClient LongRunningRecognizeOperationsClient
         {
-            get { throw new NotImplementedException(); }
+            get { throw new s::NotImplementedException(); }
         }
 
         /// <summary>
@@ -620,10 +620,10 @@ namespace Google.Cloud.Speech.V1
         /// <param name="operationName">The name of a previously invoked operation. Must not be <c>null</c> or empty.</param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
         /// <returns>The result of polling the operation.</returns>
-        public virtual Operation<LongRunningRecognizeResponse, LongRunningRecognizeMetadata> PollOnceLongRunningRecognize(
+        public virtual lro::Operation<LongRunningRecognizeResponse, LongRunningRecognizeMetadata> PollOnceLongRunningRecognize(
             string operationName,
-            CallSettings callSettings = null) => Operation<LongRunningRecognizeResponse, LongRunningRecognizeMetadata>.PollOnceFromName(
-                GaxPreconditions.CheckNotNullOrEmpty(operationName, nameof(operationName)),
+            gaxgrpc::CallSettings callSettings = null) => lro::Operation<LongRunningRecognizeResponse, LongRunningRecognizeMetadata>.PollOnceFromName(
+                gax::GaxPreconditions.CheckNotNullOrEmpty(operationName, nameof(operationName)),
                 LongRunningRecognizeOperationsClient,
                 callSettings);
 
@@ -641,16 +641,16 @@ namespace Google.Cloud.Speech.V1
         /// The client-server stream.
         /// </returns>
         public virtual StreamingRecognizeStream StreamingRecognize(
-            CallSettings callSettings = null,
-            BidirectionalStreamingSettings streamingSettings = null)
+            gaxgrpc::CallSettings callSettings = null,
+            gaxgrpc::BidirectionalStreamingSettings streamingSettings = null)
         {
-            throw new NotImplementedException();
+            throw new s::NotImplementedException();
         }
 
         /// <summary>
         /// Bidirectional streaming methods for <c>StreamingRecognize</c>.
         /// </summary>
-        public abstract partial class StreamingRecognizeStream : BidirectionalStreamingBase<StreamingRecognizeRequest, StreamingRecognizeResponse>
+        public abstract partial class StreamingRecognizeStream : gaxgrpc::BidirectionalStreamingBase<StreamingRecognizeRequest, StreamingRecognizeResponse>
         {
         }
 
@@ -661,9 +661,9 @@ namespace Google.Cloud.Speech.V1
     /// </summary>
     public sealed partial class SpeechClientImpl : SpeechClient
     {
-        private readonly ApiCall<RecognizeRequest, RecognizeResponse> _callRecognize;
-        private readonly ApiCall<LongRunningRecognizeRequest, Operation> _callLongRunningRecognize;
-        private readonly ApiBidirectionalStreamingCall<StreamingRecognizeRequest, StreamingRecognizeResponse> _callStreamingRecognize;
+        private readonly gaxgrpc::ApiCall<RecognizeRequest, RecognizeResponse> _callRecognize;
+        private readonly gaxgrpc::ApiCall<LongRunningRecognizeRequest, lro::Operation> _callLongRunningRecognize;
+        private readonly gaxgrpc::ApiBidirectionalStreamingCall<StreamingRecognizeRequest, StreamingRecognizeResponse> _callStreamingRecognize;
 
         /// <summary>
         /// Constructs a client wrapper for the Speech service, with the specified gRPC client and settings.
@@ -674,12 +674,12 @@ namespace Google.Cloud.Speech.V1
         {
             GrpcClient = grpcClient;
             SpeechSettings effectiveSettings = settings ?? SpeechSettings.GetDefault();
-            ClientHelper clientHelper = new ClientHelper(effectiveSettings);
-            LongRunningRecognizeOperationsClient = new OperationsClientImpl(
+            gaxgrpc::ClientHelper clientHelper = new gaxgrpc::ClientHelper(effectiveSettings);
+            LongRunningRecognizeOperationsClient = new lro::OperationsClientImpl(
                 grpcClient.CreateOperationsClient(), effectiveSettings.LongRunningRecognizeOperationsSettings);
             _callRecognize = clientHelper.BuildApiCall<RecognizeRequest, RecognizeResponse>(
                 GrpcClient.RecognizeAsync, GrpcClient.Recognize, effectiveSettings.RecognizeSettings);
-            _callLongRunningRecognize = clientHelper.BuildApiCall<LongRunningRecognizeRequest, Operation>(
+            _callLongRunningRecognize = clientHelper.BuildApiCall<LongRunningRecognizeRequest, lro::Operation>(
                 GrpcClient.LongRunningRecognizeAsync, GrpcClient.LongRunningRecognize, effectiveSettings.LongRunningRecognizeSettings);
             _callStreamingRecognize = clientHelper.BuildApiCall<StreamingRecognizeRequest, StreamingRecognizeResponse>(
                 GrpcClient.StreamingRecognize, effectiveSettings.StreamingRecognizeSettings, effectiveSettings.StreamingRecognizeStreamingSettings);
@@ -696,19 +696,19 @@ namespace Google.Cloud.Speech.V1
 
         // Partial methods called for every ApiCall on construction.
         // Allows modification of all the underlying ApiCall objects.
-        partial void Modify_ApiCall<TRequest, TResponse>(ref ApiCall<TRequest, TResponse> call)
-            where TRequest : class, IMessage<TRequest>
-            where TResponse : class, IMessage<TResponse>;
-        partial void Modify_ApiCall<TRequest, TResponse>(ref ApiBidirectionalStreamingCall<TRequest, TResponse> call)
-            where TRequest : class, IMessage<TRequest>
-            where TResponse : class, IMessage<TResponse>;
+        partial void Modify_ApiCall<TRequest, TResponse>(ref gaxgrpc::ApiCall<TRequest, TResponse> call)
+            where TRequest : class, proto::IMessage<TRequest>
+            where TResponse : class, proto::IMessage<TResponse>;
+        partial void Modify_ApiCall<TRequest, TResponse>(ref gaxgrpc::ApiBidirectionalStreamingCall<TRequest, TResponse> call)
+            where TRequest : class, proto::IMessage<TRequest>
+            where TResponse : class, proto::IMessage<TResponse>;
 
         // Partial methods called for each ApiCall on construction.
         // Allows per-RPC-method modification of the underlying ApiCall object.
-        partial void Modify_RecognizeApiCall(ref ApiCall<RecognizeRequest, RecognizeResponse> call);
-        partial void Modify_LongRunningRecognizeApiCall(ref ApiCall<LongRunningRecognizeRequest, Operation> call);
-        partial void Modify_StreamingRecognizeApiCall(ref ApiBidirectionalStreamingCall<StreamingRecognizeRequest, StreamingRecognizeResponse> call);
-        partial void OnConstruction(Speech.SpeechClient grpcClient, SpeechSettings effectiveSettings, ClientHelper clientHelper);
+        partial void Modify_RecognizeApiCall(ref gaxgrpc::ApiCall<RecognizeRequest, RecognizeResponse> call);
+        partial void Modify_LongRunningRecognizeApiCall(ref gaxgrpc::ApiCall<LongRunningRecognizeRequest, lro::Operation> call);
+        partial void Modify_StreamingRecognizeApiCall(ref gaxgrpc::ApiBidirectionalStreamingCall<StreamingRecognizeRequest, StreamingRecognizeResponse> call);
+        partial void OnConstruction(Speech.SpeechClient grpcClient, SpeechSettings effectiveSettings, gaxgrpc::ClientHelper clientHelper);
 
         /// <summary>
         /// The underlying gRPC Speech client.
@@ -718,9 +718,9 @@ namespace Google.Cloud.Speech.V1
         // Partial methods called on each request.
         // Allows per-RPC-call modification to the request and CallSettings objects,
         // before the underlying RPC is performed.
-        partial void Modify_RecognizeRequest(ref RecognizeRequest request, ref CallSettings settings);
-        partial void Modify_LongRunningRecognizeRequest(ref LongRunningRecognizeRequest request, ref CallSettings settings);
-        partial void Modify_StreamingRecognizeRequestCallSettings(ref CallSettings settings);
+        partial void Modify_RecognizeRequest(ref RecognizeRequest request, ref gaxgrpc::CallSettings settings);
+        partial void Modify_LongRunningRecognizeRequest(ref LongRunningRecognizeRequest request, ref gaxgrpc::CallSettings settings);
+        partial void Modify_StreamingRecognizeRequestCallSettings(ref gaxgrpc::CallSettings settings);
         partial void Modify_StreamingRecognizeRequestRequest(ref StreamingRecognizeRequest request);
 
         /// <summary>
@@ -736,9 +736,9 @@ namespace Google.Cloud.Speech.V1
         /// <returns>
         /// A Task containing the RPC response.
         /// </returns>
-        public override Task<RecognizeResponse> RecognizeAsync(
+        public override stt::Task<RecognizeResponse> RecognizeAsync(
             RecognizeRequest request,
-            CallSettings callSettings = null)
+            gaxgrpc::CallSettings callSettings = null)
         {
             Modify_RecognizeRequest(ref request, ref callSettings);
             return _callRecognize.Async(request, callSettings);
@@ -759,7 +759,7 @@ namespace Google.Cloud.Speech.V1
         /// </returns>
         public override RecognizeResponse Recognize(
             RecognizeRequest request,
-            CallSettings callSettings = null)
+            gaxgrpc::CallSettings callSettings = null)
         {
             Modify_RecognizeRequest(ref request, ref callSettings);
             return _callRecognize.Sync(request, callSettings);
@@ -780,12 +780,12 @@ namespace Google.Cloud.Speech.V1
         /// <returns>
         /// A Task containing the RPC response.
         /// </returns>
-        public override async Task<Operation<LongRunningRecognizeResponse, LongRunningRecognizeMetadata>> LongRunningRecognizeAsync(
+        public override async stt::Task<lro::Operation<LongRunningRecognizeResponse, LongRunningRecognizeMetadata>> LongRunningRecognizeAsync(
             LongRunningRecognizeRequest request,
-            CallSettings callSettings = null)
+            gaxgrpc::CallSettings callSettings = null)
         {
             Modify_LongRunningRecognizeRequest(ref request, ref callSettings);
-            return new Operation<LongRunningRecognizeResponse, LongRunningRecognizeMetadata>(
+            return new lro::Operation<LongRunningRecognizeResponse, LongRunningRecognizeMetadata>(
                 await _callLongRunningRecognize.Async(request, callSettings).ConfigureAwait(false), LongRunningRecognizeOperationsClient);
         }
 
@@ -804,19 +804,19 @@ namespace Google.Cloud.Speech.V1
         /// <returns>
         /// The RPC response.
         /// </returns>
-        public override Operation<LongRunningRecognizeResponse, LongRunningRecognizeMetadata> LongRunningRecognize(
+        public override lro::Operation<LongRunningRecognizeResponse, LongRunningRecognizeMetadata> LongRunningRecognize(
             LongRunningRecognizeRequest request,
-            CallSettings callSettings = null)
+            gaxgrpc::CallSettings callSettings = null)
         {
             Modify_LongRunningRecognizeRequest(ref request, ref callSettings);
-            return new Operation<LongRunningRecognizeResponse, LongRunningRecognizeMetadata>(
+            return new lro::Operation<LongRunningRecognizeResponse, LongRunningRecognizeMetadata>(
                 _callLongRunningRecognize.Sync(request, callSettings), LongRunningRecognizeOperationsClient);
         }
 
         /// <summary>
         /// The long-running operations client for <c>LongRunningRecognize</c>.
         /// </summary>
-        public override OperationsClient LongRunningRecognizeOperationsClient { get; }
+        public override lro::OperationsClient LongRunningRecognizeOperationsClient { get; }
 
         /// <summary>
         /// Performs bidirectional streaming speech recognition: receive results while
@@ -832,16 +832,16 @@ namespace Google.Cloud.Speech.V1
         /// The client-server stream.
         /// </returns>
         public override StreamingRecognizeStream StreamingRecognize(
-            CallSettings callSettings = null,
-            BidirectionalStreamingSettings streamingSettings = null)
+            gaxgrpc::CallSettings callSettings = null,
+            gaxgrpc::BidirectionalStreamingSettings streamingSettings = null)
         {
             Modify_StreamingRecognizeRequestCallSettings(ref callSettings);
-            BidirectionalStreamingSettings effectiveStreamingSettings =
+            gaxgrpc::BidirectionalStreamingSettings effectiveStreamingSettings =
                 streamingSettings ?? _callStreamingRecognize.StreamingSettings;
-            AsyncDuplexStreamingCall<StreamingRecognizeRequest, StreamingRecognizeResponse> call =
+            grpccore::AsyncDuplexStreamingCall<StreamingRecognizeRequest, StreamingRecognizeResponse> call =
                 _callStreamingRecognize.Call(callSettings);
-            BufferedClientStreamWriter<StreamingRecognizeRequest> writeBuffer =
-                new BufferedClientStreamWriter<StreamingRecognizeRequest>(
+            gaxgrpc::BufferedClientStreamWriter<StreamingRecognizeRequest> writeBuffer =
+                new gaxgrpc::BufferedClientStreamWriter<StreamingRecognizeRequest>(
                     call.RequestStream, effectiveStreamingSettings.BufferedClientWriterCapacity);
             return new StreamingRecognizeStreamImpl(this, call, writeBuffer);
         }
@@ -853,12 +853,12 @@ namespace Google.Cloud.Speech.V1
             /// </summary>
             /// <param name="service">The service containing this streaming method.</param>
             /// <param name="call">The underlying gRPC duplex streaming call.</param>
-            /// <param name="writeBuffer">The <see cref="BufferedClientStreamWriter{StreamingRecognizeRequest}"/>
+            /// <param name="writeBuffer">The <see cref="gaxgrpc::BufferedClientStreamWriter{StreamingRecognizeRequest}"/>
             /// instance associated with this streaming call.</param>
             public StreamingRecognizeStreamImpl(
                 SpeechClientImpl service,
-                AsyncDuplexStreamingCall<StreamingRecognizeRequest, StreamingRecognizeResponse> call,
-                BufferedClientStreamWriter<StreamingRecognizeRequest> writeBuffer)
+                grpccore::AsyncDuplexStreamingCall<StreamingRecognizeRequest, StreamingRecognizeResponse> call,
+                gaxgrpc::BufferedClientStreamWriter<StreamingRecognizeRequest> writeBuffer)
             {
                 _service = service;
                 GrpcCall = call;
@@ -866,7 +866,7 @@ namespace Google.Cloud.Speech.V1
             }
 
             private SpeechClientImpl _service;
-            private BufferedClientStreamWriter<StreamingRecognizeRequest> _writeBuffer;
+            private gaxgrpc::BufferedClientStreamWriter<StreamingRecognizeRequest> _writeBuffer;
 
             private StreamingRecognizeRequest ModifyRequest(StreamingRecognizeRequest request)
             {
@@ -875,34 +875,34 @@ namespace Google.Cloud.Speech.V1
             }
 
             /// <inheritdoc/>
-            public override AsyncDuplexStreamingCall<StreamingRecognizeRequest, StreamingRecognizeResponse> GrpcCall { get; }
+            public override grpccore::AsyncDuplexStreamingCall<StreamingRecognizeRequest, StreamingRecognizeResponse> GrpcCall { get; }
 
             /// <inheritdoc/>
-            public override Task TryWriteAsync(StreamingRecognizeRequest message) =>
+            public override stt::Task TryWriteAsync(StreamingRecognizeRequest message) =>
                 _writeBuffer.TryWriteAsync(ModifyRequest(message));
 
             /// <inheritdoc/>
-            public override Task WriteAsync(StreamingRecognizeRequest message) =>
+            public override stt::Task WriteAsync(StreamingRecognizeRequest message) =>
                 _writeBuffer.WriteAsync(ModifyRequest(message));
 
             /// <inheritdoc/>
-            public override Task TryWriteAsync(StreamingRecognizeRequest message, WriteOptions options) =>
+            public override stt::Task TryWriteAsync(StreamingRecognizeRequest message, grpccore::WriteOptions options) =>
                 _writeBuffer.TryWriteAsync(ModifyRequest(message), options);
 
             /// <inheritdoc/>
-            public override Task WriteAsync(StreamingRecognizeRequest message, WriteOptions options) =>
+            public override stt::Task WriteAsync(StreamingRecognizeRequest message, grpccore::WriteOptions options) =>
                 _writeBuffer.WriteAsync(ModifyRequest(message), options);
 
             /// <inheritdoc/>
-            public override Task TryWriteCompleteAsync() =>
+            public override stt::Task TryWriteCompleteAsync() =>
                 _writeBuffer.TryWriteCompleteAsync();
 
             /// <inheritdoc/>
-            public override Task WriteCompleteAsync() =>
+            public override stt::Task WriteCompleteAsync() =>
                 _writeBuffer.WriteCompleteAsync();
 
             /// <inheritdoc/>
-            public override IAsyncEnumerator<StreamingRecognizeResponse> ResponseStream =>
+            public override scg::IAsyncEnumerator<StreamingRecognizeResponse> ResponseStream =>
                 GrpcCall.ResponseStream;
         }
 
@@ -916,10 +916,10 @@ namespace Google.Cloud.Speech.V1
         public partial class SpeechClient
         {
             /// <summary>
-            /// Creates a new instance of <see cref="Operations.OperationsClient"/> using the same call invoker as this client.
+            /// Creates a new instance of <see cref="lro::Operations.OperationsClient"/> using the same call invoker as this client.
             /// </summary>
             /// <returns>A new Operations client for the same target as this client.</returns>
-            public virtual Operations.OperationsClient CreateOperationsClient() => new Operations.OperationsClient(CallInvoker);
+            public virtual lro::Operations.OperationsClient CreateOperationsClient() => new lro::Operations.OperationsClient(CallInvoker);
         }
     }
 

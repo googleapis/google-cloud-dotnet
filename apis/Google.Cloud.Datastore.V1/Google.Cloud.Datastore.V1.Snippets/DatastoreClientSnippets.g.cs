@@ -14,22 +14,22 @@
 
 // Generated code. DO NOT EDIT!
 
-using Google.Api.Gax;
-using Google.Api.Gax.Grpc;
-using Google.Cloud.Datastore.V1;
-using Google.Protobuf;
-using Google.Protobuf.WellKnownTypes;
-using Grpc.Core;
-using System;
-using System.Collections;
-using System.Collections.Generic;
-using System.Collections.ObjectModel;
-using System.Linq;
-using System.Threading;
-using System.Threading.Tasks;
-
 namespace Google.Cloud.Datastore.V1.Snippets
 {
+    using Google.Api.Gax;
+    using Google.Api.Gax.Grpc;
+    using apis = Google.Cloud.Datastore.V1;
+    using Google.Protobuf;
+    using Google.Protobuf.WellKnownTypes;
+    using Grpc.Core;
+    using System;
+    using System.Collections;
+    using System.Collections.Generic;
+    using System.Collections.ObjectModel;
+    using System.Linq;
+    using System.Threading;
+    using System.Threading.Tasks;
+
     /// <summary>Generated snippets</summary>
     public class GeneratedDatastoreClientSnippets
     {
@@ -204,7 +204,7 @@ namespace Google.Cloud.Datastore.V1.Snippets
             // Initialize request argument(s)
             string projectId = "";
             CommitRequest.Types.Mode mode = CommitRequest.Types.Mode.Unspecified;
-            ByteString transaction = ByteString.CopyFromUtf8("");
+            ByteString transaction = Google.Protobuf.ByteString.CopyFromUtf8("");
             IEnumerable<Mutation> mutations = new List<Mutation>();
             // Make the request
             CommitResponse response = await datastoreClient.CommitAsync(projectId, mode, transaction, mutations);
@@ -220,7 +220,7 @@ namespace Google.Cloud.Datastore.V1.Snippets
             // Initialize request argument(s)
             string projectId = "";
             CommitRequest.Types.Mode mode = CommitRequest.Types.Mode.Unspecified;
-            ByteString transaction = ByteString.CopyFromUtf8("");
+            ByteString transaction = Google.Protobuf.ByteString.CopyFromUtf8("");
             IEnumerable<Mutation> mutations = new List<Mutation>();
             // Make the request
             CommitResponse response = datastoreClient.Commit(projectId, mode, transaction, mutations);
@@ -304,7 +304,7 @@ namespace Google.Cloud.Datastore.V1.Snippets
             DatastoreClient datastoreClient = await DatastoreClient.CreateAsync();
             // Initialize request argument(s)
             string projectId = "";
-            ByteString transaction = ByteString.CopyFromUtf8("");
+            ByteString transaction = Google.Protobuf.ByteString.CopyFromUtf8("");
             // Make the request
             RollbackResponse response = await datastoreClient.RollbackAsync(projectId, transaction);
             // End snippet
@@ -318,7 +318,7 @@ namespace Google.Cloud.Datastore.V1.Snippets
             DatastoreClient datastoreClient = DatastoreClient.Create();
             // Initialize request argument(s)
             string projectId = "";
-            ByteString transaction = ByteString.CopyFromUtf8("");
+            ByteString transaction = Google.Protobuf.ByteString.CopyFromUtf8("");
             // Make the request
             RollbackResponse response = datastoreClient.Rollback(projectId, transaction);
             // End snippet
@@ -335,7 +335,7 @@ namespace Google.Cloud.Datastore.V1.Snippets
             RollbackRequest request = new RollbackRequest
             {
                 ProjectId = "",
-                Transaction = ByteString.CopyFromUtf8(""),
+                Transaction = Google.Protobuf.ByteString.CopyFromUtf8(""),
             };
             // Make the request
             RollbackResponse response = await datastoreClient.RollbackAsync(request);
@@ -352,7 +352,7 @@ namespace Google.Cloud.Datastore.V1.Snippets
             RollbackRequest request = new RollbackRequest
             {
                 ProjectId = "",
-                Transaction = ByteString.CopyFromUtf8(""),
+                Transaction = Google.Protobuf.ByteString.CopyFromUtf8(""),
             };
             // Make the request
             RollbackResponse response = datastoreClient.Rollback(request);

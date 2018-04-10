@@ -14,24 +14,24 @@
 
 // Generated code. DO NOT EDIT!
 
-using Google.Api.Gax;
-using Google.Api.Gax.Grpc;
-using Google.Protobuf;
-using Google.Protobuf.WellKnownTypes;
-using Grpc.Core;
-using System;
-using System.Collections;
-using System.Collections.Generic;
-using System.Collections.ObjectModel;
-using System.Threading;
-using System.Threading.Tasks;
+using gax = Google.Api.Gax;
+using gaxgrpc = Google.Api.Gax.Grpc;
+using proto = Google.Protobuf;
+using protowkt = Google.Protobuf.WellKnownTypes;
+using grpccore = Grpc.Core;
+using s = System;
+using sc = System.Collections;
+using scg = System.Collections.Generic;
+using sco = System.Collections.ObjectModel;
+using st = System.Threading;
+using stt = System.Threading.Tasks;
 
 namespace Google.Cloud.Language.V1
 {
     /// <summary>
     /// Settings for a <see cref="LanguageServiceClient"/>.
     /// </summary>
-    public sealed partial class LanguageServiceSettings : ServiceSettingsBase
+    public sealed partial class LanguageServiceSettings : gaxgrpc::ServiceSettingsBase
     {
         /// <summary>
         /// Get a new instance of the default <see cref="LanguageServiceSettings"/>.
@@ -48,7 +48,7 @@ namespace Google.Cloud.Language.V1
 
         private LanguageServiceSettings(LanguageServiceSettings existing) : base(existing)
         {
-            GaxPreconditions.CheckNotNull(existing, nameof(existing));
+            gax::GaxPreconditions.CheckNotNull(existing, nameof(existing));
             AnalyzeSentimentSettings = existing.AnalyzeSentimentSettings;
             AnalyzeEntitiesSettings = existing.AnalyzeEntitiesSettings;
             AnalyzeEntitySentimentSettings = existing.AnalyzeEntitySentimentSettings;
@@ -61,28 +61,28 @@ namespace Google.Cloud.Language.V1
         partial void OnCopy(LanguageServiceSettings existing);
 
         /// <summary>
-        /// The filter specifying which RPC <see cref="StatusCode"/>s are eligible for retry
+        /// The filter specifying which RPC <see cref="grpccore::StatusCode"/>s are eligible for retry
         /// for "Idempotent" <see cref="LanguageServiceClient"/> RPC methods.
         /// </summary>
         /// <remarks>
-        /// The eligible RPC <see cref="StatusCode"/>s for retry for "Idempotent" RPC methods are:
+        /// The eligible RPC <see cref="grpccore::StatusCode"/>s for retry for "Idempotent" RPC methods are:
         /// <list type="bullet">
-        /// <item><description><see cref="StatusCode.DeadlineExceeded"/></description></item>
-        /// <item><description><see cref="StatusCode.Unavailable"/></description></item>
+        /// <item><description><see cref="grpccore::StatusCode.DeadlineExceeded"/></description></item>
+        /// <item><description><see cref="grpccore::StatusCode.Unavailable"/></description></item>
         /// </list>
         /// </remarks>
-        public static Predicate<RpcException> IdempotentRetryFilter { get; } =
-            RetrySettings.FilterForStatusCodes(StatusCode.DeadlineExceeded, StatusCode.Unavailable);
+        public static s::Predicate<grpccore::RpcException> IdempotentRetryFilter { get; } =
+            gaxgrpc::RetrySettings.FilterForStatusCodes(grpccore::StatusCode.DeadlineExceeded, grpccore::StatusCode.Unavailable);
 
         /// <summary>
-        /// The filter specifying which RPC <see cref="StatusCode"/>s are eligible for retry
+        /// The filter specifying which RPC <see cref="grpccore::StatusCode"/>s are eligible for retry
         /// for "NonIdempotent" <see cref="LanguageServiceClient"/> RPC methods.
         /// </summary>
         /// <remarks>
-        /// There are no RPC <see cref="StatusCode"/>s eligible for retry for "NonIdempotent" RPC methods.
+        /// There are no RPC <see cref="grpccore::StatusCode"/>s eligible for retry for "NonIdempotent" RPC methods.
         /// </remarks>
-        public static Predicate<RpcException> NonIdempotentRetryFilter { get; } =
-            RetrySettings.FilterForStatusCodes();
+        public static s::Predicate<grpccore::RpcException> NonIdempotentRetryFilter { get; } =
+            gaxgrpc::RetrySettings.FilterForStatusCodes();
 
         /// <summary>
         /// "Default" retry backoff for <see cref="LanguageServiceClient"/> RPC methods.
@@ -98,9 +98,9 @@ namespace Google.Cloud.Language.V1
         /// <item><description>Delay multiplier: 1.3</description></item>
         /// </list>
         /// </remarks>
-        public static BackoffSettings GetDefaultRetryBackoff() => new BackoffSettings(
-            delay: TimeSpan.FromMilliseconds(100),
-            maxDelay: TimeSpan.FromMilliseconds(60000),
+        public static gaxgrpc::BackoffSettings GetDefaultRetryBackoff() => new gaxgrpc::BackoffSettings(
+            delay: s::TimeSpan.FromMilliseconds(100),
+            maxDelay: s::TimeSpan.FromMilliseconds(60000),
             delayMultiplier: 1.3
         );
 
@@ -118,19 +118,19 @@ namespace Google.Cloud.Language.V1
         /// <item><description>Maximum timeout: 60000 milliseconds</description></item>
         /// </list>
         /// </remarks>
-        public static BackoffSettings GetDefaultTimeoutBackoff() => new BackoffSettings(
-            delay: TimeSpan.FromMilliseconds(60000),
-            maxDelay: TimeSpan.FromMilliseconds(60000),
+        public static gaxgrpc::BackoffSettings GetDefaultTimeoutBackoff() => new gaxgrpc::BackoffSettings(
+            delay: s::TimeSpan.FromMilliseconds(60000),
+            maxDelay: s::TimeSpan.FromMilliseconds(60000),
             delayMultiplier: 1.0
         );
 
         /// <summary>
-        /// <see cref="CallSettings"/> for synchronous and asynchronous calls to
+        /// <see cref="gaxgrpc::CallSettings"/> for synchronous and asynchronous calls to
         /// <c>LanguageServiceClient.AnalyzeSentiment</c> and <c>LanguageServiceClient.AnalyzeSentimentAsync</c>.
         /// </summary>
         /// <remarks>
         /// The default <c>LanguageServiceClient.AnalyzeSentiment</c> and
-        /// <c>LanguageServiceClient.AnalyzeSentimentAsync</c> <see cref="RetrySettings"/> are:
+        /// <c>LanguageServiceClient.AnalyzeSentimentAsync</c> <see cref="gaxgrpc::RetrySettings"/> are:
         /// <list type="bullet">
         /// <item><description>Initial retry delay: 100 milliseconds</description></item>
         /// <item><description>Retry delay multiplier: 1.3</description></item>
@@ -141,26 +141,26 @@ namespace Google.Cloud.Language.V1
         /// </list>
         /// Retry will be attempted on the following response status codes:
         /// <list>
-        /// <item><description><see cref="StatusCode.DeadlineExceeded"/></description></item>
-        /// <item><description><see cref="StatusCode.Unavailable"/></description></item>
+        /// <item><description><see cref="grpccore::StatusCode.DeadlineExceeded"/></description></item>
+        /// <item><description><see cref="grpccore::StatusCode.Unavailable"/></description></item>
         /// </list>
         /// Default RPC expiration is 600000 milliseconds.
         /// </remarks>
-        public CallSettings AnalyzeSentimentSettings { get; set; } = CallSettings.FromCallTiming(
-            CallTiming.FromRetry(new RetrySettings(
+        public gaxgrpc::CallSettings AnalyzeSentimentSettings { get; set; } = gaxgrpc::CallSettings.FromCallTiming(
+            gaxgrpc::CallTiming.FromRetry(new gaxgrpc::RetrySettings(
                 retryBackoff: GetDefaultRetryBackoff(),
                 timeoutBackoff: GetDefaultTimeoutBackoff(),
-                totalExpiration: Expiration.FromTimeout(TimeSpan.FromMilliseconds(600000)),
+                totalExpiration: gax::Expiration.FromTimeout(s::TimeSpan.FromMilliseconds(600000)),
                 retryFilter: IdempotentRetryFilter
             )));
 
         /// <summary>
-        /// <see cref="CallSettings"/> for synchronous and asynchronous calls to
+        /// <see cref="gaxgrpc::CallSettings"/> for synchronous and asynchronous calls to
         /// <c>LanguageServiceClient.AnalyzeEntities</c> and <c>LanguageServiceClient.AnalyzeEntitiesAsync</c>.
         /// </summary>
         /// <remarks>
         /// The default <c>LanguageServiceClient.AnalyzeEntities</c> and
-        /// <c>LanguageServiceClient.AnalyzeEntitiesAsync</c> <see cref="RetrySettings"/> are:
+        /// <c>LanguageServiceClient.AnalyzeEntitiesAsync</c> <see cref="gaxgrpc::RetrySettings"/> are:
         /// <list type="bullet">
         /// <item><description>Initial retry delay: 100 milliseconds</description></item>
         /// <item><description>Retry delay multiplier: 1.3</description></item>
@@ -171,26 +171,26 @@ namespace Google.Cloud.Language.V1
         /// </list>
         /// Retry will be attempted on the following response status codes:
         /// <list>
-        /// <item><description><see cref="StatusCode.DeadlineExceeded"/></description></item>
-        /// <item><description><see cref="StatusCode.Unavailable"/></description></item>
+        /// <item><description><see cref="grpccore::StatusCode.DeadlineExceeded"/></description></item>
+        /// <item><description><see cref="grpccore::StatusCode.Unavailable"/></description></item>
         /// </list>
         /// Default RPC expiration is 600000 milliseconds.
         /// </remarks>
-        public CallSettings AnalyzeEntitiesSettings { get; set; } = CallSettings.FromCallTiming(
-            CallTiming.FromRetry(new RetrySettings(
+        public gaxgrpc::CallSettings AnalyzeEntitiesSettings { get; set; } = gaxgrpc::CallSettings.FromCallTiming(
+            gaxgrpc::CallTiming.FromRetry(new gaxgrpc::RetrySettings(
                 retryBackoff: GetDefaultRetryBackoff(),
                 timeoutBackoff: GetDefaultTimeoutBackoff(),
-                totalExpiration: Expiration.FromTimeout(TimeSpan.FromMilliseconds(600000)),
+                totalExpiration: gax::Expiration.FromTimeout(s::TimeSpan.FromMilliseconds(600000)),
                 retryFilter: IdempotentRetryFilter
             )));
 
         /// <summary>
-        /// <see cref="CallSettings"/> for synchronous and asynchronous calls to
+        /// <see cref="gaxgrpc::CallSettings"/> for synchronous and asynchronous calls to
         /// <c>LanguageServiceClient.AnalyzeEntitySentiment</c> and <c>LanguageServiceClient.AnalyzeEntitySentimentAsync</c>.
         /// </summary>
         /// <remarks>
         /// The default <c>LanguageServiceClient.AnalyzeEntitySentiment</c> and
-        /// <c>LanguageServiceClient.AnalyzeEntitySentimentAsync</c> <see cref="RetrySettings"/> are:
+        /// <c>LanguageServiceClient.AnalyzeEntitySentimentAsync</c> <see cref="gaxgrpc::RetrySettings"/> are:
         /// <list type="bullet">
         /// <item><description>Initial retry delay: 100 milliseconds</description></item>
         /// <item><description>Retry delay multiplier: 1.3</description></item>
@@ -201,26 +201,26 @@ namespace Google.Cloud.Language.V1
         /// </list>
         /// Retry will be attempted on the following response status codes:
         /// <list>
-        /// <item><description><see cref="StatusCode.DeadlineExceeded"/></description></item>
-        /// <item><description><see cref="StatusCode.Unavailable"/></description></item>
+        /// <item><description><see cref="grpccore::StatusCode.DeadlineExceeded"/></description></item>
+        /// <item><description><see cref="grpccore::StatusCode.Unavailable"/></description></item>
         /// </list>
         /// Default RPC expiration is 600000 milliseconds.
         /// </remarks>
-        public CallSettings AnalyzeEntitySentimentSettings { get; set; } = CallSettings.FromCallTiming(
-            CallTiming.FromRetry(new RetrySettings(
+        public gaxgrpc::CallSettings AnalyzeEntitySentimentSettings { get; set; } = gaxgrpc::CallSettings.FromCallTiming(
+            gaxgrpc::CallTiming.FromRetry(new gaxgrpc::RetrySettings(
                 retryBackoff: GetDefaultRetryBackoff(),
                 timeoutBackoff: GetDefaultTimeoutBackoff(),
-                totalExpiration: Expiration.FromTimeout(TimeSpan.FromMilliseconds(600000)),
+                totalExpiration: gax::Expiration.FromTimeout(s::TimeSpan.FromMilliseconds(600000)),
                 retryFilter: IdempotentRetryFilter
             )));
 
         /// <summary>
-        /// <see cref="CallSettings"/> for synchronous and asynchronous calls to
+        /// <see cref="gaxgrpc::CallSettings"/> for synchronous and asynchronous calls to
         /// <c>LanguageServiceClient.AnalyzeSyntax</c> and <c>LanguageServiceClient.AnalyzeSyntaxAsync</c>.
         /// </summary>
         /// <remarks>
         /// The default <c>LanguageServiceClient.AnalyzeSyntax</c> and
-        /// <c>LanguageServiceClient.AnalyzeSyntaxAsync</c> <see cref="RetrySettings"/> are:
+        /// <c>LanguageServiceClient.AnalyzeSyntaxAsync</c> <see cref="gaxgrpc::RetrySettings"/> are:
         /// <list type="bullet">
         /// <item><description>Initial retry delay: 100 milliseconds</description></item>
         /// <item><description>Retry delay multiplier: 1.3</description></item>
@@ -231,26 +231,26 @@ namespace Google.Cloud.Language.V1
         /// </list>
         /// Retry will be attempted on the following response status codes:
         /// <list>
-        /// <item><description><see cref="StatusCode.DeadlineExceeded"/></description></item>
-        /// <item><description><see cref="StatusCode.Unavailable"/></description></item>
+        /// <item><description><see cref="grpccore::StatusCode.DeadlineExceeded"/></description></item>
+        /// <item><description><see cref="grpccore::StatusCode.Unavailable"/></description></item>
         /// </list>
         /// Default RPC expiration is 600000 milliseconds.
         /// </remarks>
-        public CallSettings AnalyzeSyntaxSettings { get; set; } = CallSettings.FromCallTiming(
-            CallTiming.FromRetry(new RetrySettings(
+        public gaxgrpc::CallSettings AnalyzeSyntaxSettings { get; set; } = gaxgrpc::CallSettings.FromCallTiming(
+            gaxgrpc::CallTiming.FromRetry(new gaxgrpc::RetrySettings(
                 retryBackoff: GetDefaultRetryBackoff(),
                 timeoutBackoff: GetDefaultTimeoutBackoff(),
-                totalExpiration: Expiration.FromTimeout(TimeSpan.FromMilliseconds(600000)),
+                totalExpiration: gax::Expiration.FromTimeout(s::TimeSpan.FromMilliseconds(600000)),
                 retryFilter: IdempotentRetryFilter
             )));
 
         /// <summary>
-        /// <see cref="CallSettings"/> for synchronous and asynchronous calls to
+        /// <see cref="gaxgrpc::CallSettings"/> for synchronous and asynchronous calls to
         /// <c>LanguageServiceClient.ClassifyText</c> and <c>LanguageServiceClient.ClassifyTextAsync</c>.
         /// </summary>
         /// <remarks>
         /// The default <c>LanguageServiceClient.ClassifyText</c> and
-        /// <c>LanguageServiceClient.ClassifyTextAsync</c> <see cref="RetrySettings"/> are:
+        /// <c>LanguageServiceClient.ClassifyTextAsync</c> <see cref="gaxgrpc::RetrySettings"/> are:
         /// <list type="bullet">
         /// <item><description>Initial retry delay: 100 milliseconds</description></item>
         /// <item><description>Retry delay multiplier: 1.3</description></item>
@@ -261,26 +261,26 @@ namespace Google.Cloud.Language.V1
         /// </list>
         /// Retry will be attempted on the following response status codes:
         /// <list>
-        /// <item><description><see cref="StatusCode.DeadlineExceeded"/></description></item>
-        /// <item><description><see cref="StatusCode.Unavailable"/></description></item>
+        /// <item><description><see cref="grpccore::StatusCode.DeadlineExceeded"/></description></item>
+        /// <item><description><see cref="grpccore::StatusCode.Unavailable"/></description></item>
         /// </list>
         /// Default RPC expiration is 600000 milliseconds.
         /// </remarks>
-        public CallSettings ClassifyTextSettings { get; set; } = CallSettings.FromCallTiming(
-            CallTiming.FromRetry(new RetrySettings(
+        public gaxgrpc::CallSettings ClassifyTextSettings { get; set; } = gaxgrpc::CallSettings.FromCallTiming(
+            gaxgrpc::CallTiming.FromRetry(new gaxgrpc::RetrySettings(
                 retryBackoff: GetDefaultRetryBackoff(),
                 timeoutBackoff: GetDefaultTimeoutBackoff(),
-                totalExpiration: Expiration.FromTimeout(TimeSpan.FromMilliseconds(600000)),
+                totalExpiration: gax::Expiration.FromTimeout(s::TimeSpan.FromMilliseconds(600000)),
                 retryFilter: IdempotentRetryFilter
             )));
 
         /// <summary>
-        /// <see cref="CallSettings"/> for synchronous and asynchronous calls to
+        /// <see cref="gaxgrpc::CallSettings"/> for synchronous and asynchronous calls to
         /// <c>LanguageServiceClient.AnnotateText</c> and <c>LanguageServiceClient.AnnotateTextAsync</c>.
         /// </summary>
         /// <remarks>
         /// The default <c>LanguageServiceClient.AnnotateText</c> and
-        /// <c>LanguageServiceClient.AnnotateTextAsync</c> <see cref="RetrySettings"/> are:
+        /// <c>LanguageServiceClient.AnnotateTextAsync</c> <see cref="gaxgrpc::RetrySettings"/> are:
         /// <list type="bullet">
         /// <item><description>Initial retry delay: 100 milliseconds</description></item>
         /// <item><description>Retry delay multiplier: 1.3</description></item>
@@ -291,16 +291,16 @@ namespace Google.Cloud.Language.V1
         /// </list>
         /// Retry will be attempted on the following response status codes:
         /// <list>
-        /// <item><description><see cref="StatusCode.DeadlineExceeded"/></description></item>
-        /// <item><description><see cref="StatusCode.Unavailable"/></description></item>
+        /// <item><description><see cref="grpccore::StatusCode.DeadlineExceeded"/></description></item>
+        /// <item><description><see cref="grpccore::StatusCode.Unavailable"/></description></item>
         /// </list>
         /// Default RPC expiration is 600000 milliseconds.
         /// </remarks>
-        public CallSettings AnnotateTextSettings { get; set; } = CallSettings.FromCallTiming(
-            CallTiming.FromRetry(new RetrySettings(
+        public gaxgrpc::CallSettings AnnotateTextSettings { get; set; } = gaxgrpc::CallSettings.FromCallTiming(
+            gaxgrpc::CallTiming.FromRetry(new gaxgrpc::RetrySettings(
                 retryBackoff: GetDefaultRetryBackoff(),
                 timeoutBackoff: GetDefaultTimeoutBackoff(),
-                totalExpiration: Expiration.FromTimeout(TimeSpan.FromMilliseconds(600000)),
+                totalExpiration: gax::Expiration.FromTimeout(s::TimeSpan.FromMilliseconds(600000)),
                 retryFilter: IdempotentRetryFilter
             )));
 
@@ -319,7 +319,7 @@ namespace Google.Cloud.Language.V1
         /// <summary>
         /// The default endpoint for the LanguageService service, which is a host of "language.googleapis.com" and a port of 443.
         /// </summary>
-        public static ServiceEndpoint DefaultEndpoint { get; } = new ServiceEndpoint("language.googleapis.com", 443);
+        public static gaxgrpc::ServiceEndpoint DefaultEndpoint { get; } = new gaxgrpc::ServiceEndpoint("language.googleapis.com", 443);
 
         /// <summary>
         /// The default LanguageService scopes.
@@ -330,11 +330,11 @@ namespace Google.Cloud.Language.V1
         /// <item><description>"https://www.googleapis.com/auth/cloud-platform"</description></item>
         /// </list>
         /// </remarks>
-        public static IReadOnlyList<string> DefaultScopes { get; } = new ReadOnlyCollection<string>(new string[] {
+        public static scg::IReadOnlyList<string> DefaultScopes { get; } = new sco::ReadOnlyCollection<string>(new string[] {
             "https://www.googleapis.com/auth/cloud-platform",
         });
 
-        private static readonly ChannelPool s_channelPool = new ChannelPool(DefaultScopes);
+        private static readonly gaxgrpc::ChannelPool s_channelPool = new gaxgrpc::ChannelPool(DefaultScopes);
 
         // Note: we could have parameterless overloads of Create and CreateAsync,
         // documented to just use the default endpoint, settings and credentials.
@@ -348,12 +348,12 @@ namespace Google.Cloud.Language.V1
         /// and creating a channel connecting to the given endpoint with application default credentials where
         /// necessary.
         /// </summary>
-        /// <param name="endpoint">Optional <see cref="ServiceEndpoint"/>.</param>
+        /// <param name="endpoint">Optional <see cref="gaxgrpc::ServiceEndpoint"/>.</param>
         /// <param name="settings">Optional <see cref="LanguageServiceSettings"/>.</param>
         /// <returns>The task representing the created <see cref="LanguageServiceClient"/>.</returns>
-        public static async Task<LanguageServiceClient> CreateAsync(ServiceEndpoint endpoint = null, LanguageServiceSettings settings = null)
+        public static async stt::Task<LanguageServiceClient> CreateAsync(gaxgrpc::ServiceEndpoint endpoint = null, LanguageServiceSettings settings = null)
         {
-            Channel channel = await s_channelPool.GetChannelAsync(endpoint ?? DefaultEndpoint).ConfigureAwait(false);
+            grpccore::Channel channel = await s_channelPool.GetChannelAsync(endpoint ?? DefaultEndpoint).ConfigureAwait(false);
             return Create(channel, settings);
         }
 
@@ -362,45 +362,45 @@ namespace Google.Cloud.Language.V1
         /// and creating a channel connecting to the given endpoint with application default credentials where
         /// necessary.
         /// </summary>
-        /// <param name="endpoint">Optional <see cref="ServiceEndpoint"/>.</param>
+        /// <param name="endpoint">Optional <see cref="gaxgrpc::ServiceEndpoint"/>.</param>
         /// <param name="settings">Optional <see cref="LanguageServiceSettings"/>.</param>
         /// <returns>The created <see cref="LanguageServiceClient"/>.</returns>
-        public static LanguageServiceClient Create(ServiceEndpoint endpoint = null, LanguageServiceSettings settings = null)
+        public static LanguageServiceClient Create(gaxgrpc::ServiceEndpoint endpoint = null, LanguageServiceSettings settings = null)
         {
-            Channel channel = s_channelPool.GetChannel(endpoint ?? DefaultEndpoint);
+            grpccore::Channel channel = s_channelPool.GetChannel(endpoint ?? DefaultEndpoint);
             return Create(channel, settings);
         }
 
         /// <summary>
         /// Creates a <see cref="LanguageServiceClient"/> which uses the specified channel for remote operations.
         /// </summary>
-        /// <param name="channel">The <see cref="Channel"/> for remote operations. Must not be null.</param>
+        /// <param name="channel">The <see cref="grpccore::Channel"/> for remote operations. Must not be null.</param>
         /// <param name="settings">Optional <see cref="LanguageServiceSettings"/>.</param>
         /// <returns>The created <see cref="LanguageServiceClient"/>.</returns>
-        public static LanguageServiceClient Create(Channel channel, LanguageServiceSettings settings = null)
+        public static LanguageServiceClient Create(grpccore::Channel channel, LanguageServiceSettings settings = null)
         {
-            GaxPreconditions.CheckNotNull(channel, nameof(channel));
+            gax::GaxPreconditions.CheckNotNull(channel, nameof(channel));
             LanguageService.LanguageServiceClient grpcClient = new LanguageService.LanguageServiceClient(channel);
             return new LanguageServiceClientImpl(grpcClient, settings);
         }
 
         /// <summary>
-        /// Shuts down any channels automatically created by <see cref="Create(ServiceEndpoint, LanguageServiceSettings)"/>
-        /// and <see cref="CreateAsync(ServiceEndpoint, LanguageServiceSettings)"/>. Channels which weren't automatically
+        /// Shuts down any channels automatically created by <see cref="Create(gaxgrpc::ServiceEndpoint, LanguageServiceSettings)"/>
+        /// and <see cref="CreateAsync(gaxgrpc::ServiceEndpoint, LanguageServiceSettings)"/>. Channels which weren't automatically
         /// created are not affected.
         /// </summary>
-        /// <remarks>After calling this method, further calls to <see cref="Create(ServiceEndpoint, LanguageServiceSettings)"/>
-        /// and <see cref="CreateAsync(ServiceEndpoint, LanguageServiceSettings)"/> will create new channels, which could
+        /// <remarks>After calling this method, further calls to <see cref="Create(gaxgrpc::ServiceEndpoint, LanguageServiceSettings)"/>
+        /// and <see cref="CreateAsync(gaxgrpc::ServiceEndpoint, LanguageServiceSettings)"/> will create new channels, which could
         /// in turn be shut down by another call to this method.</remarks>
         /// <returns>A task representing the asynchronous shutdown operation.</returns>
-        public static Task ShutdownDefaultChannelsAsync() => s_channelPool.ShutdownChannelsAsync();
+        public static stt::Task ShutdownDefaultChannelsAsync() => s_channelPool.ShutdownChannelsAsync();
 
         /// <summary>
         /// The underlying gRPC LanguageService client.
         /// </summary>
         public virtual LanguageService.LanguageServiceClient GrpcClient
         {
-            get { throw new NotImplementedException(); }
+            get { throw new s::NotImplementedException(); }
         }
 
         /// <summary>
@@ -415,12 +415,12 @@ namespace Google.Cloud.Language.V1
         /// <returns>
         /// A Task containing the RPC response.
         /// </returns>
-        public virtual Task<AnalyzeSentimentResponse> AnalyzeSentimentAsync(
+        public virtual stt::Task<AnalyzeSentimentResponse> AnalyzeSentimentAsync(
             Document document,
-            CallSettings callSettings = null) => AnalyzeSentimentAsync(
+            gaxgrpc::CallSettings callSettings = null) => AnalyzeSentimentAsync(
                 new AnalyzeSentimentRequest
                 {
-                    Document = GaxPreconditions.CheckNotNull(document, nameof(document)),
+                    Document = gax::GaxPreconditions.CheckNotNull(document, nameof(document)),
                 },
                 callSettings);
 
@@ -431,16 +431,16 @@ namespace Google.Cloud.Language.V1
         /// Input document.
         /// </param>
         /// <param name="cancellationToken">
-        /// A <see cref="CancellationToken"/> to use for this RPC.
+        /// A <see cref="st::CancellationToken"/> to use for this RPC.
         /// </param>
         /// <returns>
         /// A Task containing the RPC response.
         /// </returns>
-        public virtual Task<AnalyzeSentimentResponse> AnalyzeSentimentAsync(
+        public virtual stt::Task<AnalyzeSentimentResponse> AnalyzeSentimentAsync(
             Document document,
-            CancellationToken cancellationToken) => AnalyzeSentimentAsync(
+            st::CancellationToken cancellationToken) => AnalyzeSentimentAsync(
                 document,
-                CallSettings.FromCancellationToken(cancellationToken));
+                gaxgrpc::CallSettings.FromCancellationToken(cancellationToken));
 
         /// <summary>
         /// Analyzes the sentiment of the provided text.
@@ -456,10 +456,10 @@ namespace Google.Cloud.Language.V1
         /// </returns>
         public virtual AnalyzeSentimentResponse AnalyzeSentiment(
             Document document,
-            CallSettings callSettings = null) => AnalyzeSentiment(
+            gaxgrpc::CallSettings callSettings = null) => AnalyzeSentiment(
                 new AnalyzeSentimentRequest
                 {
-                    Document = GaxPreconditions.CheckNotNull(document, nameof(document)),
+                    Document = gax::GaxPreconditions.CheckNotNull(document, nameof(document)),
                 },
                 callSettings);
 
@@ -475,11 +475,11 @@ namespace Google.Cloud.Language.V1
         /// <returns>
         /// A Task containing the RPC response.
         /// </returns>
-        public virtual Task<AnalyzeSentimentResponse> AnalyzeSentimentAsync(
+        public virtual stt::Task<AnalyzeSentimentResponse> AnalyzeSentimentAsync(
             AnalyzeSentimentRequest request,
-            CallSettings callSettings = null)
+            gaxgrpc::CallSettings callSettings = null)
         {
-            throw new NotImplementedException();
+            throw new s::NotImplementedException();
         }
 
         /// <summary>
@@ -489,16 +489,16 @@ namespace Google.Cloud.Language.V1
         /// The request object containing all of the parameters for the API call.
         /// </param>
         /// <param name="cancellationToken">
-        /// A <see cref="CancellationToken"/> to use for this RPC.
+        /// A <see cref="st::CancellationToken"/> to use for this RPC.
         /// </param>
         /// <returns>
         /// A Task containing the RPC response.
         /// </returns>
-        public virtual Task<AnalyzeSentimentResponse> AnalyzeSentimentAsync(
+        public virtual stt::Task<AnalyzeSentimentResponse> AnalyzeSentimentAsync(
             AnalyzeSentimentRequest request,
-            CancellationToken cancellationToken) => AnalyzeSentimentAsync(
+            st::CancellationToken cancellationToken) => AnalyzeSentimentAsync(
                 request,
-                CallSettings.FromCancellationToken(cancellationToken));
+                gaxgrpc::CallSettings.FromCancellationToken(cancellationToken));
 
         /// <summary>
         /// Analyzes the sentiment of the provided text.
@@ -514,9 +514,9 @@ namespace Google.Cloud.Language.V1
         /// </returns>
         public virtual AnalyzeSentimentResponse AnalyzeSentiment(
             AnalyzeSentimentRequest request,
-            CallSettings callSettings = null)
+            gaxgrpc::CallSettings callSettings = null)
         {
-            throw new NotImplementedException();
+            throw new s::NotImplementedException();
         }
 
         /// <summary>
@@ -536,13 +536,13 @@ namespace Google.Cloud.Language.V1
         /// <returns>
         /// A Task containing the RPC response.
         /// </returns>
-        public virtual Task<AnalyzeEntitiesResponse> AnalyzeEntitiesAsync(
+        public virtual stt::Task<AnalyzeEntitiesResponse> AnalyzeEntitiesAsync(
             Document document,
             EncodingType? encodingType,
-            CallSettings callSettings = null) => AnalyzeEntitiesAsync(
+            gaxgrpc::CallSettings callSettings = null) => AnalyzeEntitiesAsync(
                 new AnalyzeEntitiesRequest
                 {
-                    Document = GaxPreconditions.CheckNotNull(document, nameof(document)),
+                    Document = gax::GaxPreconditions.CheckNotNull(document, nameof(document)),
                     EncodingType = encodingType ?? EncodingType.None, // Optional
                 },
                 callSettings);
@@ -559,18 +559,18 @@ namespace Google.Cloud.Language.V1
         /// The encoding type used by the API to calculate offsets.
         /// </param>
         /// <param name="cancellationToken">
-        /// A <see cref="CancellationToken"/> to use for this RPC.
+        /// A <see cref="st::CancellationToken"/> to use for this RPC.
         /// </param>
         /// <returns>
         /// A Task containing the RPC response.
         /// </returns>
-        public virtual Task<AnalyzeEntitiesResponse> AnalyzeEntitiesAsync(
+        public virtual stt::Task<AnalyzeEntitiesResponse> AnalyzeEntitiesAsync(
             Document document,
             EncodingType? encodingType,
-            CancellationToken cancellationToken) => AnalyzeEntitiesAsync(
+            st::CancellationToken cancellationToken) => AnalyzeEntitiesAsync(
                 document,
                 encodingType,
-                CallSettings.FromCancellationToken(cancellationToken));
+                gaxgrpc::CallSettings.FromCancellationToken(cancellationToken));
 
         /// <summary>
         /// Finds named entities (currently proper names and common nouns) in the text
@@ -592,10 +592,10 @@ namespace Google.Cloud.Language.V1
         public virtual AnalyzeEntitiesResponse AnalyzeEntities(
             Document document,
             EncodingType? encodingType,
-            CallSettings callSettings = null) => AnalyzeEntities(
+            gaxgrpc::CallSettings callSettings = null) => AnalyzeEntities(
                 new AnalyzeEntitiesRequest
                 {
-                    Document = GaxPreconditions.CheckNotNull(document, nameof(document)),
+                    Document = gax::GaxPreconditions.CheckNotNull(document, nameof(document)),
                     EncodingType = encodingType ?? EncodingType.None, // Optional
                 },
                 callSettings);
@@ -614,11 +614,11 @@ namespace Google.Cloud.Language.V1
         /// <returns>
         /// A Task containing the RPC response.
         /// </returns>
-        public virtual Task<AnalyzeEntitiesResponse> AnalyzeEntitiesAsync(
+        public virtual stt::Task<AnalyzeEntitiesResponse> AnalyzeEntitiesAsync(
             AnalyzeEntitiesRequest request,
-            CallSettings callSettings = null)
+            gaxgrpc::CallSettings callSettings = null)
         {
-            throw new NotImplementedException();
+            throw new s::NotImplementedException();
         }
 
         /// <summary>
@@ -630,16 +630,16 @@ namespace Google.Cloud.Language.V1
         /// The request object containing all of the parameters for the API call.
         /// </param>
         /// <param name="cancellationToken">
-        /// A <see cref="CancellationToken"/> to use for this RPC.
+        /// A <see cref="st::CancellationToken"/> to use for this RPC.
         /// </param>
         /// <returns>
         /// A Task containing the RPC response.
         /// </returns>
-        public virtual Task<AnalyzeEntitiesResponse> AnalyzeEntitiesAsync(
+        public virtual stt::Task<AnalyzeEntitiesResponse> AnalyzeEntitiesAsync(
             AnalyzeEntitiesRequest request,
-            CancellationToken cancellationToken) => AnalyzeEntitiesAsync(
+            st::CancellationToken cancellationToken) => AnalyzeEntitiesAsync(
                 request,
-                CallSettings.FromCancellationToken(cancellationToken));
+                gaxgrpc::CallSettings.FromCancellationToken(cancellationToken));
 
         /// <summary>
         /// Finds named entities (currently proper names and common nouns) in the text
@@ -657,9 +657,9 @@ namespace Google.Cloud.Language.V1
         /// </returns>
         public virtual AnalyzeEntitiesResponse AnalyzeEntities(
             AnalyzeEntitiesRequest request,
-            CallSettings callSettings = null)
+            gaxgrpc::CallSettings callSettings = null)
         {
-            throw new NotImplementedException();
+            throw new s::NotImplementedException();
         }
 
         /// <summary>
@@ -678,13 +678,13 @@ namespace Google.Cloud.Language.V1
         /// <returns>
         /// A Task containing the RPC response.
         /// </returns>
-        public virtual Task<AnalyzeEntitySentimentResponse> AnalyzeEntitySentimentAsync(
+        public virtual stt::Task<AnalyzeEntitySentimentResponse> AnalyzeEntitySentimentAsync(
             Document document,
             EncodingType? encodingType,
-            CallSettings callSettings = null) => AnalyzeEntitySentimentAsync(
+            gaxgrpc::CallSettings callSettings = null) => AnalyzeEntitySentimentAsync(
                 new AnalyzeEntitySentimentRequest
                 {
-                    Document = GaxPreconditions.CheckNotNull(document, nameof(document)),
+                    Document = gax::GaxPreconditions.CheckNotNull(document, nameof(document)),
                     EncodingType = encodingType ?? EncodingType.None, // Optional
                 },
                 callSettings);
@@ -700,18 +700,18 @@ namespace Google.Cloud.Language.V1
         /// The encoding type used by the API to calculate offsets.
         /// </param>
         /// <param name="cancellationToken">
-        /// A <see cref="CancellationToken"/> to use for this RPC.
+        /// A <see cref="st::CancellationToken"/> to use for this RPC.
         /// </param>
         /// <returns>
         /// A Task containing the RPC response.
         /// </returns>
-        public virtual Task<AnalyzeEntitySentimentResponse> AnalyzeEntitySentimentAsync(
+        public virtual stt::Task<AnalyzeEntitySentimentResponse> AnalyzeEntitySentimentAsync(
             Document document,
             EncodingType? encodingType,
-            CancellationToken cancellationToken) => AnalyzeEntitySentimentAsync(
+            st::CancellationToken cancellationToken) => AnalyzeEntitySentimentAsync(
                 document,
                 encodingType,
-                CallSettings.FromCancellationToken(cancellationToken));
+                gaxgrpc::CallSettings.FromCancellationToken(cancellationToken));
 
         /// <summary>
         /// Finds entities, similar to [AnalyzeEntities][google.cloud.language.v1.LanguageService.AnalyzeEntities] in the text and analyzes
@@ -732,10 +732,10 @@ namespace Google.Cloud.Language.V1
         public virtual AnalyzeEntitySentimentResponse AnalyzeEntitySentiment(
             Document document,
             EncodingType? encodingType,
-            CallSettings callSettings = null) => AnalyzeEntitySentiment(
+            gaxgrpc::CallSettings callSettings = null) => AnalyzeEntitySentiment(
                 new AnalyzeEntitySentimentRequest
                 {
-                    Document = GaxPreconditions.CheckNotNull(document, nameof(document)),
+                    Document = gax::GaxPreconditions.CheckNotNull(document, nameof(document)),
                     EncodingType = encodingType ?? EncodingType.None, // Optional
                 },
                 callSettings);
@@ -753,11 +753,11 @@ namespace Google.Cloud.Language.V1
         /// <returns>
         /// A Task containing the RPC response.
         /// </returns>
-        public virtual Task<AnalyzeEntitySentimentResponse> AnalyzeEntitySentimentAsync(
+        public virtual stt::Task<AnalyzeEntitySentimentResponse> AnalyzeEntitySentimentAsync(
             AnalyzeEntitySentimentRequest request,
-            CallSettings callSettings = null)
+            gaxgrpc::CallSettings callSettings = null)
         {
-            throw new NotImplementedException();
+            throw new s::NotImplementedException();
         }
 
         /// <summary>
@@ -768,16 +768,16 @@ namespace Google.Cloud.Language.V1
         /// The request object containing all of the parameters for the API call.
         /// </param>
         /// <param name="cancellationToken">
-        /// A <see cref="CancellationToken"/> to use for this RPC.
+        /// A <see cref="st::CancellationToken"/> to use for this RPC.
         /// </param>
         /// <returns>
         /// A Task containing the RPC response.
         /// </returns>
-        public virtual Task<AnalyzeEntitySentimentResponse> AnalyzeEntitySentimentAsync(
+        public virtual stt::Task<AnalyzeEntitySentimentResponse> AnalyzeEntitySentimentAsync(
             AnalyzeEntitySentimentRequest request,
-            CancellationToken cancellationToken) => AnalyzeEntitySentimentAsync(
+            st::CancellationToken cancellationToken) => AnalyzeEntitySentimentAsync(
                 request,
-                CallSettings.FromCancellationToken(cancellationToken));
+                gaxgrpc::CallSettings.FromCancellationToken(cancellationToken));
 
         /// <summary>
         /// Finds entities, similar to [AnalyzeEntities][google.cloud.language.v1.LanguageService.AnalyzeEntities] in the text and analyzes
@@ -794,9 +794,9 @@ namespace Google.Cloud.Language.V1
         /// </returns>
         public virtual AnalyzeEntitySentimentResponse AnalyzeEntitySentiment(
             AnalyzeEntitySentimentRequest request,
-            CallSettings callSettings = null)
+            gaxgrpc::CallSettings callSettings = null)
         {
-            throw new NotImplementedException();
+            throw new s::NotImplementedException();
         }
 
         /// <summary>
@@ -816,13 +816,13 @@ namespace Google.Cloud.Language.V1
         /// <returns>
         /// A Task containing the RPC response.
         /// </returns>
-        public virtual Task<AnalyzeSyntaxResponse> AnalyzeSyntaxAsync(
+        public virtual stt::Task<AnalyzeSyntaxResponse> AnalyzeSyntaxAsync(
             Document document,
             EncodingType? encodingType,
-            CallSettings callSettings = null) => AnalyzeSyntaxAsync(
+            gaxgrpc::CallSettings callSettings = null) => AnalyzeSyntaxAsync(
                 new AnalyzeSyntaxRequest
                 {
-                    Document = GaxPreconditions.CheckNotNull(document, nameof(document)),
+                    Document = gax::GaxPreconditions.CheckNotNull(document, nameof(document)),
                     EncodingType = encodingType ?? EncodingType.None, // Optional
                 },
                 callSettings);
@@ -839,18 +839,18 @@ namespace Google.Cloud.Language.V1
         /// The encoding type used by the API to calculate offsets.
         /// </param>
         /// <param name="cancellationToken">
-        /// A <see cref="CancellationToken"/> to use for this RPC.
+        /// A <see cref="st::CancellationToken"/> to use for this RPC.
         /// </param>
         /// <returns>
         /// A Task containing the RPC response.
         /// </returns>
-        public virtual Task<AnalyzeSyntaxResponse> AnalyzeSyntaxAsync(
+        public virtual stt::Task<AnalyzeSyntaxResponse> AnalyzeSyntaxAsync(
             Document document,
             EncodingType? encodingType,
-            CancellationToken cancellationToken) => AnalyzeSyntaxAsync(
+            st::CancellationToken cancellationToken) => AnalyzeSyntaxAsync(
                 document,
                 encodingType,
-                CallSettings.FromCancellationToken(cancellationToken));
+                gaxgrpc::CallSettings.FromCancellationToken(cancellationToken));
 
         /// <summary>
         /// Analyzes the syntax of the text and provides sentence boundaries and
@@ -872,10 +872,10 @@ namespace Google.Cloud.Language.V1
         public virtual AnalyzeSyntaxResponse AnalyzeSyntax(
             Document document,
             EncodingType? encodingType,
-            CallSettings callSettings = null) => AnalyzeSyntax(
+            gaxgrpc::CallSettings callSettings = null) => AnalyzeSyntax(
                 new AnalyzeSyntaxRequest
                 {
-                    Document = GaxPreconditions.CheckNotNull(document, nameof(document)),
+                    Document = gax::GaxPreconditions.CheckNotNull(document, nameof(document)),
                     EncodingType = encodingType ?? EncodingType.None, // Optional
                 },
                 callSettings);
@@ -894,11 +894,11 @@ namespace Google.Cloud.Language.V1
         /// <returns>
         /// A Task containing the RPC response.
         /// </returns>
-        public virtual Task<AnalyzeSyntaxResponse> AnalyzeSyntaxAsync(
+        public virtual stt::Task<AnalyzeSyntaxResponse> AnalyzeSyntaxAsync(
             AnalyzeSyntaxRequest request,
-            CallSettings callSettings = null)
+            gaxgrpc::CallSettings callSettings = null)
         {
-            throw new NotImplementedException();
+            throw new s::NotImplementedException();
         }
 
         /// <summary>
@@ -910,16 +910,16 @@ namespace Google.Cloud.Language.V1
         /// The request object containing all of the parameters for the API call.
         /// </param>
         /// <param name="cancellationToken">
-        /// A <see cref="CancellationToken"/> to use for this RPC.
+        /// A <see cref="st::CancellationToken"/> to use for this RPC.
         /// </param>
         /// <returns>
         /// A Task containing the RPC response.
         /// </returns>
-        public virtual Task<AnalyzeSyntaxResponse> AnalyzeSyntaxAsync(
+        public virtual stt::Task<AnalyzeSyntaxResponse> AnalyzeSyntaxAsync(
             AnalyzeSyntaxRequest request,
-            CancellationToken cancellationToken) => AnalyzeSyntaxAsync(
+            st::CancellationToken cancellationToken) => AnalyzeSyntaxAsync(
                 request,
-                CallSettings.FromCancellationToken(cancellationToken));
+                gaxgrpc::CallSettings.FromCancellationToken(cancellationToken));
 
         /// <summary>
         /// Analyzes the syntax of the text and provides sentence boundaries and
@@ -937,9 +937,9 @@ namespace Google.Cloud.Language.V1
         /// </returns>
         public virtual AnalyzeSyntaxResponse AnalyzeSyntax(
             AnalyzeSyntaxRequest request,
-            CallSettings callSettings = null)
+            gaxgrpc::CallSettings callSettings = null)
         {
-            throw new NotImplementedException();
+            throw new s::NotImplementedException();
         }
 
         /// <summary>
@@ -954,12 +954,12 @@ namespace Google.Cloud.Language.V1
         /// <returns>
         /// A Task containing the RPC response.
         /// </returns>
-        public virtual Task<ClassifyTextResponse> ClassifyTextAsync(
+        public virtual stt::Task<ClassifyTextResponse> ClassifyTextAsync(
             Document document,
-            CallSettings callSettings = null) => ClassifyTextAsync(
+            gaxgrpc::CallSettings callSettings = null) => ClassifyTextAsync(
                 new ClassifyTextRequest
                 {
-                    Document = GaxPreconditions.CheckNotNull(document, nameof(document)),
+                    Document = gax::GaxPreconditions.CheckNotNull(document, nameof(document)),
                 },
                 callSettings);
 
@@ -970,16 +970,16 @@ namespace Google.Cloud.Language.V1
         /// Input document.
         /// </param>
         /// <param name="cancellationToken">
-        /// A <see cref="CancellationToken"/> to use for this RPC.
+        /// A <see cref="st::CancellationToken"/> to use for this RPC.
         /// </param>
         /// <returns>
         /// A Task containing the RPC response.
         /// </returns>
-        public virtual Task<ClassifyTextResponse> ClassifyTextAsync(
+        public virtual stt::Task<ClassifyTextResponse> ClassifyTextAsync(
             Document document,
-            CancellationToken cancellationToken) => ClassifyTextAsync(
+            st::CancellationToken cancellationToken) => ClassifyTextAsync(
                 document,
-                CallSettings.FromCancellationToken(cancellationToken));
+                gaxgrpc::CallSettings.FromCancellationToken(cancellationToken));
 
         /// <summary>
         /// Classifies a document into categories.
@@ -995,10 +995,10 @@ namespace Google.Cloud.Language.V1
         /// </returns>
         public virtual ClassifyTextResponse ClassifyText(
             Document document,
-            CallSettings callSettings = null) => ClassifyText(
+            gaxgrpc::CallSettings callSettings = null) => ClassifyText(
                 new ClassifyTextRequest
                 {
-                    Document = GaxPreconditions.CheckNotNull(document, nameof(document)),
+                    Document = gax::GaxPreconditions.CheckNotNull(document, nameof(document)),
                 },
                 callSettings);
 
@@ -1014,11 +1014,11 @@ namespace Google.Cloud.Language.V1
         /// <returns>
         /// A Task containing the RPC response.
         /// </returns>
-        public virtual Task<ClassifyTextResponse> ClassifyTextAsync(
+        public virtual stt::Task<ClassifyTextResponse> ClassifyTextAsync(
             ClassifyTextRequest request,
-            CallSettings callSettings = null)
+            gaxgrpc::CallSettings callSettings = null)
         {
-            throw new NotImplementedException();
+            throw new s::NotImplementedException();
         }
 
         /// <summary>
@@ -1028,16 +1028,16 @@ namespace Google.Cloud.Language.V1
         /// The request object containing all of the parameters for the API call.
         /// </param>
         /// <param name="cancellationToken">
-        /// A <see cref="CancellationToken"/> to use for this RPC.
+        /// A <see cref="st::CancellationToken"/> to use for this RPC.
         /// </param>
         /// <returns>
         /// A Task containing the RPC response.
         /// </returns>
-        public virtual Task<ClassifyTextResponse> ClassifyTextAsync(
+        public virtual stt::Task<ClassifyTextResponse> ClassifyTextAsync(
             ClassifyTextRequest request,
-            CancellationToken cancellationToken) => ClassifyTextAsync(
+            st::CancellationToken cancellationToken) => ClassifyTextAsync(
                 request,
-                CallSettings.FromCancellationToken(cancellationToken));
+                gaxgrpc::CallSettings.FromCancellationToken(cancellationToken));
 
         /// <summary>
         /// Classifies a document into categories.
@@ -1053,9 +1053,9 @@ namespace Google.Cloud.Language.V1
         /// </returns>
         public virtual ClassifyTextResponse ClassifyText(
             ClassifyTextRequest request,
-            CallSettings callSettings = null)
+            gaxgrpc::CallSettings callSettings = null)
         {
-            throw new NotImplementedException();
+            throw new s::NotImplementedException();
         }
 
         /// <summary>
@@ -1077,15 +1077,15 @@ namespace Google.Cloud.Language.V1
         /// <returns>
         /// A Task containing the RPC response.
         /// </returns>
-        public virtual Task<AnnotateTextResponse> AnnotateTextAsync(
+        public virtual stt::Task<AnnotateTextResponse> AnnotateTextAsync(
             Document document,
             AnnotateTextRequest.Types.Features features,
             EncodingType? encodingType,
-            CallSettings callSettings = null) => AnnotateTextAsync(
+            gaxgrpc::CallSettings callSettings = null) => AnnotateTextAsync(
                 new AnnotateTextRequest
                 {
-                    Document = GaxPreconditions.CheckNotNull(document, nameof(document)),
-                    Features = GaxPreconditions.CheckNotNull(features, nameof(features)),
+                    Document = gax::GaxPreconditions.CheckNotNull(document, nameof(document)),
+                    Features = gax::GaxPreconditions.CheckNotNull(features, nameof(features)),
                     EncodingType = encodingType ?? EncodingType.None, // Optional
                 },
                 callSettings);
@@ -1104,20 +1104,20 @@ namespace Google.Cloud.Language.V1
         /// The encoding type used by the API to calculate offsets.
         /// </param>
         /// <param name="cancellationToken">
-        /// A <see cref="CancellationToken"/> to use for this RPC.
+        /// A <see cref="st::CancellationToken"/> to use for this RPC.
         /// </param>
         /// <returns>
         /// A Task containing the RPC response.
         /// </returns>
-        public virtual Task<AnnotateTextResponse> AnnotateTextAsync(
+        public virtual stt::Task<AnnotateTextResponse> AnnotateTextAsync(
             Document document,
             AnnotateTextRequest.Types.Features features,
             EncodingType? encodingType,
-            CancellationToken cancellationToken) => AnnotateTextAsync(
+            st::CancellationToken cancellationToken) => AnnotateTextAsync(
                 document,
                 features,
                 encodingType,
-                CallSettings.FromCancellationToken(cancellationToken));
+                gaxgrpc::CallSettings.FromCancellationToken(cancellationToken));
 
         /// <summary>
         /// A convenience method that provides all the features that analyzeSentiment,
@@ -1142,11 +1142,11 @@ namespace Google.Cloud.Language.V1
             Document document,
             AnnotateTextRequest.Types.Features features,
             EncodingType? encodingType,
-            CallSettings callSettings = null) => AnnotateText(
+            gaxgrpc::CallSettings callSettings = null) => AnnotateText(
                 new AnnotateTextRequest
                 {
-                    Document = GaxPreconditions.CheckNotNull(document, nameof(document)),
-                    Features = GaxPreconditions.CheckNotNull(features, nameof(features)),
+                    Document = gax::GaxPreconditions.CheckNotNull(document, nameof(document)),
+                    Features = gax::GaxPreconditions.CheckNotNull(features, nameof(features)),
                     EncodingType = encodingType ?? EncodingType.None, // Optional
                 },
                 callSettings);
@@ -1164,11 +1164,11 @@ namespace Google.Cloud.Language.V1
         /// <returns>
         /// A Task containing the RPC response.
         /// </returns>
-        public virtual Task<AnnotateTextResponse> AnnotateTextAsync(
+        public virtual stt::Task<AnnotateTextResponse> AnnotateTextAsync(
             AnnotateTextRequest request,
-            CallSettings callSettings = null)
+            gaxgrpc::CallSettings callSettings = null)
         {
-            throw new NotImplementedException();
+            throw new s::NotImplementedException();
         }
 
         /// <summary>
@@ -1179,16 +1179,16 @@ namespace Google.Cloud.Language.V1
         /// The request object containing all of the parameters for the API call.
         /// </param>
         /// <param name="cancellationToken">
-        /// A <see cref="CancellationToken"/> to use for this RPC.
+        /// A <see cref="st::CancellationToken"/> to use for this RPC.
         /// </param>
         /// <returns>
         /// A Task containing the RPC response.
         /// </returns>
-        public virtual Task<AnnotateTextResponse> AnnotateTextAsync(
+        public virtual stt::Task<AnnotateTextResponse> AnnotateTextAsync(
             AnnotateTextRequest request,
-            CancellationToken cancellationToken) => AnnotateTextAsync(
+            st::CancellationToken cancellationToken) => AnnotateTextAsync(
                 request,
-                CallSettings.FromCancellationToken(cancellationToken));
+                gaxgrpc::CallSettings.FromCancellationToken(cancellationToken));
 
         /// <summary>
         /// A convenience method that provides all the features that analyzeSentiment,
@@ -1205,9 +1205,9 @@ namespace Google.Cloud.Language.V1
         /// </returns>
         public virtual AnnotateTextResponse AnnotateText(
             AnnotateTextRequest request,
-            CallSettings callSettings = null)
+            gaxgrpc::CallSettings callSettings = null)
         {
-            throw new NotImplementedException();
+            throw new s::NotImplementedException();
         }
 
     }
@@ -1217,12 +1217,12 @@ namespace Google.Cloud.Language.V1
     /// </summary>
     public sealed partial class LanguageServiceClientImpl : LanguageServiceClient
     {
-        private readonly ApiCall<AnalyzeSentimentRequest, AnalyzeSentimentResponse> _callAnalyzeSentiment;
-        private readonly ApiCall<AnalyzeEntitiesRequest, AnalyzeEntitiesResponse> _callAnalyzeEntities;
-        private readonly ApiCall<AnalyzeEntitySentimentRequest, AnalyzeEntitySentimentResponse> _callAnalyzeEntitySentiment;
-        private readonly ApiCall<AnalyzeSyntaxRequest, AnalyzeSyntaxResponse> _callAnalyzeSyntax;
-        private readonly ApiCall<ClassifyTextRequest, ClassifyTextResponse> _callClassifyText;
-        private readonly ApiCall<AnnotateTextRequest, AnnotateTextResponse> _callAnnotateText;
+        private readonly gaxgrpc::ApiCall<AnalyzeSentimentRequest, AnalyzeSentimentResponse> _callAnalyzeSentiment;
+        private readonly gaxgrpc::ApiCall<AnalyzeEntitiesRequest, AnalyzeEntitiesResponse> _callAnalyzeEntities;
+        private readonly gaxgrpc::ApiCall<AnalyzeEntitySentimentRequest, AnalyzeEntitySentimentResponse> _callAnalyzeEntitySentiment;
+        private readonly gaxgrpc::ApiCall<AnalyzeSyntaxRequest, AnalyzeSyntaxResponse> _callAnalyzeSyntax;
+        private readonly gaxgrpc::ApiCall<ClassifyTextRequest, ClassifyTextResponse> _callClassifyText;
+        private readonly gaxgrpc::ApiCall<AnnotateTextRequest, AnnotateTextResponse> _callAnnotateText;
 
         /// <summary>
         /// Constructs a client wrapper for the LanguageService service, with the specified gRPC client and settings.
@@ -1233,7 +1233,7 @@ namespace Google.Cloud.Language.V1
         {
             GrpcClient = grpcClient;
             LanguageServiceSettings effectiveSettings = settings ?? LanguageServiceSettings.GetDefault();
-            ClientHelper clientHelper = new ClientHelper(effectiveSettings);
+            gaxgrpc::ClientHelper clientHelper = new gaxgrpc::ClientHelper(effectiveSettings);
             _callAnalyzeSentiment = clientHelper.BuildApiCall<AnalyzeSentimentRequest, AnalyzeSentimentResponse>(
                 GrpcClient.AnalyzeSentimentAsync, GrpcClient.AnalyzeSentiment, effectiveSettings.AnalyzeSentimentSettings);
             _callAnalyzeEntities = clientHelper.BuildApiCall<AnalyzeEntitiesRequest, AnalyzeEntitiesResponse>(
@@ -1265,19 +1265,19 @@ namespace Google.Cloud.Language.V1
 
         // Partial methods called for every ApiCall on construction.
         // Allows modification of all the underlying ApiCall objects.
-        partial void Modify_ApiCall<TRequest, TResponse>(ref ApiCall<TRequest, TResponse> call)
-            where TRequest : class, IMessage<TRequest>
-            where TResponse : class, IMessage<TResponse>;
+        partial void Modify_ApiCall<TRequest, TResponse>(ref gaxgrpc::ApiCall<TRequest, TResponse> call)
+            where TRequest : class, proto::IMessage<TRequest>
+            where TResponse : class, proto::IMessage<TResponse>;
 
         // Partial methods called for each ApiCall on construction.
         // Allows per-RPC-method modification of the underlying ApiCall object.
-        partial void Modify_AnalyzeSentimentApiCall(ref ApiCall<AnalyzeSentimentRequest, AnalyzeSentimentResponse> call);
-        partial void Modify_AnalyzeEntitiesApiCall(ref ApiCall<AnalyzeEntitiesRequest, AnalyzeEntitiesResponse> call);
-        partial void Modify_AnalyzeEntitySentimentApiCall(ref ApiCall<AnalyzeEntitySentimentRequest, AnalyzeEntitySentimentResponse> call);
-        partial void Modify_AnalyzeSyntaxApiCall(ref ApiCall<AnalyzeSyntaxRequest, AnalyzeSyntaxResponse> call);
-        partial void Modify_ClassifyTextApiCall(ref ApiCall<ClassifyTextRequest, ClassifyTextResponse> call);
-        partial void Modify_AnnotateTextApiCall(ref ApiCall<AnnotateTextRequest, AnnotateTextResponse> call);
-        partial void OnConstruction(LanguageService.LanguageServiceClient grpcClient, LanguageServiceSettings effectiveSettings, ClientHelper clientHelper);
+        partial void Modify_AnalyzeSentimentApiCall(ref gaxgrpc::ApiCall<AnalyzeSentimentRequest, AnalyzeSentimentResponse> call);
+        partial void Modify_AnalyzeEntitiesApiCall(ref gaxgrpc::ApiCall<AnalyzeEntitiesRequest, AnalyzeEntitiesResponse> call);
+        partial void Modify_AnalyzeEntitySentimentApiCall(ref gaxgrpc::ApiCall<AnalyzeEntitySentimentRequest, AnalyzeEntitySentimentResponse> call);
+        partial void Modify_AnalyzeSyntaxApiCall(ref gaxgrpc::ApiCall<AnalyzeSyntaxRequest, AnalyzeSyntaxResponse> call);
+        partial void Modify_ClassifyTextApiCall(ref gaxgrpc::ApiCall<ClassifyTextRequest, ClassifyTextResponse> call);
+        partial void Modify_AnnotateTextApiCall(ref gaxgrpc::ApiCall<AnnotateTextRequest, AnnotateTextResponse> call);
+        partial void OnConstruction(LanguageService.LanguageServiceClient grpcClient, LanguageServiceSettings effectiveSettings, gaxgrpc::ClientHelper clientHelper);
 
         /// <summary>
         /// The underlying gRPC LanguageService client.
@@ -1287,12 +1287,12 @@ namespace Google.Cloud.Language.V1
         // Partial methods called on each request.
         // Allows per-RPC-call modification to the request and CallSettings objects,
         // before the underlying RPC is performed.
-        partial void Modify_AnalyzeSentimentRequest(ref AnalyzeSentimentRequest request, ref CallSettings settings);
-        partial void Modify_AnalyzeEntitiesRequest(ref AnalyzeEntitiesRequest request, ref CallSettings settings);
-        partial void Modify_AnalyzeEntitySentimentRequest(ref AnalyzeEntitySentimentRequest request, ref CallSettings settings);
-        partial void Modify_AnalyzeSyntaxRequest(ref AnalyzeSyntaxRequest request, ref CallSettings settings);
-        partial void Modify_ClassifyTextRequest(ref ClassifyTextRequest request, ref CallSettings settings);
-        partial void Modify_AnnotateTextRequest(ref AnnotateTextRequest request, ref CallSettings settings);
+        partial void Modify_AnalyzeSentimentRequest(ref AnalyzeSentimentRequest request, ref gaxgrpc::CallSettings settings);
+        partial void Modify_AnalyzeEntitiesRequest(ref AnalyzeEntitiesRequest request, ref gaxgrpc::CallSettings settings);
+        partial void Modify_AnalyzeEntitySentimentRequest(ref AnalyzeEntitySentimentRequest request, ref gaxgrpc::CallSettings settings);
+        partial void Modify_AnalyzeSyntaxRequest(ref AnalyzeSyntaxRequest request, ref gaxgrpc::CallSettings settings);
+        partial void Modify_ClassifyTextRequest(ref ClassifyTextRequest request, ref gaxgrpc::CallSettings settings);
+        partial void Modify_AnnotateTextRequest(ref AnnotateTextRequest request, ref gaxgrpc::CallSettings settings);
 
         /// <summary>
         /// Analyzes the sentiment of the provided text.
@@ -1306,9 +1306,9 @@ namespace Google.Cloud.Language.V1
         /// <returns>
         /// A Task containing the RPC response.
         /// </returns>
-        public override Task<AnalyzeSentimentResponse> AnalyzeSentimentAsync(
+        public override stt::Task<AnalyzeSentimentResponse> AnalyzeSentimentAsync(
             AnalyzeSentimentRequest request,
-            CallSettings callSettings = null)
+            gaxgrpc::CallSettings callSettings = null)
         {
             Modify_AnalyzeSentimentRequest(ref request, ref callSettings);
             return _callAnalyzeSentiment.Async(request, callSettings);
@@ -1328,7 +1328,7 @@ namespace Google.Cloud.Language.V1
         /// </returns>
         public override AnalyzeSentimentResponse AnalyzeSentiment(
             AnalyzeSentimentRequest request,
-            CallSettings callSettings = null)
+            gaxgrpc::CallSettings callSettings = null)
         {
             Modify_AnalyzeSentimentRequest(ref request, ref callSettings);
             return _callAnalyzeSentiment.Sync(request, callSettings);
@@ -1348,9 +1348,9 @@ namespace Google.Cloud.Language.V1
         /// <returns>
         /// A Task containing the RPC response.
         /// </returns>
-        public override Task<AnalyzeEntitiesResponse> AnalyzeEntitiesAsync(
+        public override stt::Task<AnalyzeEntitiesResponse> AnalyzeEntitiesAsync(
             AnalyzeEntitiesRequest request,
-            CallSettings callSettings = null)
+            gaxgrpc::CallSettings callSettings = null)
         {
             Modify_AnalyzeEntitiesRequest(ref request, ref callSettings);
             return _callAnalyzeEntities.Async(request, callSettings);
@@ -1372,7 +1372,7 @@ namespace Google.Cloud.Language.V1
         /// </returns>
         public override AnalyzeEntitiesResponse AnalyzeEntities(
             AnalyzeEntitiesRequest request,
-            CallSettings callSettings = null)
+            gaxgrpc::CallSettings callSettings = null)
         {
             Modify_AnalyzeEntitiesRequest(ref request, ref callSettings);
             return _callAnalyzeEntities.Sync(request, callSettings);
@@ -1391,9 +1391,9 @@ namespace Google.Cloud.Language.V1
         /// <returns>
         /// A Task containing the RPC response.
         /// </returns>
-        public override Task<AnalyzeEntitySentimentResponse> AnalyzeEntitySentimentAsync(
+        public override stt::Task<AnalyzeEntitySentimentResponse> AnalyzeEntitySentimentAsync(
             AnalyzeEntitySentimentRequest request,
-            CallSettings callSettings = null)
+            gaxgrpc::CallSettings callSettings = null)
         {
             Modify_AnalyzeEntitySentimentRequest(ref request, ref callSettings);
             return _callAnalyzeEntitySentiment.Async(request, callSettings);
@@ -1414,7 +1414,7 @@ namespace Google.Cloud.Language.V1
         /// </returns>
         public override AnalyzeEntitySentimentResponse AnalyzeEntitySentiment(
             AnalyzeEntitySentimentRequest request,
-            CallSettings callSettings = null)
+            gaxgrpc::CallSettings callSettings = null)
         {
             Modify_AnalyzeEntitySentimentRequest(ref request, ref callSettings);
             return _callAnalyzeEntitySentiment.Sync(request, callSettings);
@@ -1434,9 +1434,9 @@ namespace Google.Cloud.Language.V1
         /// <returns>
         /// A Task containing the RPC response.
         /// </returns>
-        public override Task<AnalyzeSyntaxResponse> AnalyzeSyntaxAsync(
+        public override stt::Task<AnalyzeSyntaxResponse> AnalyzeSyntaxAsync(
             AnalyzeSyntaxRequest request,
-            CallSettings callSettings = null)
+            gaxgrpc::CallSettings callSettings = null)
         {
             Modify_AnalyzeSyntaxRequest(ref request, ref callSettings);
             return _callAnalyzeSyntax.Async(request, callSettings);
@@ -1458,7 +1458,7 @@ namespace Google.Cloud.Language.V1
         /// </returns>
         public override AnalyzeSyntaxResponse AnalyzeSyntax(
             AnalyzeSyntaxRequest request,
-            CallSettings callSettings = null)
+            gaxgrpc::CallSettings callSettings = null)
         {
             Modify_AnalyzeSyntaxRequest(ref request, ref callSettings);
             return _callAnalyzeSyntax.Sync(request, callSettings);
@@ -1476,9 +1476,9 @@ namespace Google.Cloud.Language.V1
         /// <returns>
         /// A Task containing the RPC response.
         /// </returns>
-        public override Task<ClassifyTextResponse> ClassifyTextAsync(
+        public override stt::Task<ClassifyTextResponse> ClassifyTextAsync(
             ClassifyTextRequest request,
-            CallSettings callSettings = null)
+            gaxgrpc::CallSettings callSettings = null)
         {
             Modify_ClassifyTextRequest(ref request, ref callSettings);
             return _callClassifyText.Async(request, callSettings);
@@ -1498,7 +1498,7 @@ namespace Google.Cloud.Language.V1
         /// </returns>
         public override ClassifyTextResponse ClassifyText(
             ClassifyTextRequest request,
-            CallSettings callSettings = null)
+            gaxgrpc::CallSettings callSettings = null)
         {
             Modify_ClassifyTextRequest(ref request, ref callSettings);
             return _callClassifyText.Sync(request, callSettings);
@@ -1517,9 +1517,9 @@ namespace Google.Cloud.Language.V1
         /// <returns>
         /// A Task containing the RPC response.
         /// </returns>
-        public override Task<AnnotateTextResponse> AnnotateTextAsync(
+        public override stt::Task<AnnotateTextResponse> AnnotateTextAsync(
             AnnotateTextRequest request,
-            CallSettings callSettings = null)
+            gaxgrpc::CallSettings callSettings = null)
         {
             Modify_AnnotateTextRequest(ref request, ref callSettings);
             return _callAnnotateText.Async(request, callSettings);
@@ -1540,7 +1540,7 @@ namespace Google.Cloud.Language.V1
         /// </returns>
         public override AnnotateTextResponse AnnotateText(
             AnnotateTextRequest request,
-            CallSettings callSettings = null)
+            gaxgrpc::CallSettings callSettings = null)
         {
             Modify_AnnotateTextRequest(ref request, ref callSettings);
             return _callAnnotateText.Sync(request, callSettings);

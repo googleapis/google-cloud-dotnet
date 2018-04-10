@@ -14,8 +14,8 @@
 
 // Generated code. DO NOT EDIT!
 
-using Google.Api.Gax;
-using System;
+using gax = Google.Api.Gax;
+using s = System;
 using System.Linq;
 
 namespace Google.Cloud.ErrorReporting.V1Beta1
@@ -23,9 +23,9 @@ namespace Google.Cloud.ErrorReporting.V1Beta1
     /// <summary>
     /// Resource name for the 'project' resource.
     /// </summary>
-    public sealed partial class ProjectName : IResourceName, IEquatable<ProjectName>
+    public sealed partial class ProjectName : gax::IResourceName, s::IEquatable<ProjectName>
     {
-        private static readonly PathTemplate s_template = new PathTemplate("projects/{project}");
+        private static readonly gax::PathTemplate s_template = new gax::PathTemplate("projects/{project}");
 
         /// <summary>
         /// Parses the given project resource name in string form into a new
@@ -35,8 +35,8 @@ namespace Google.Cloud.ErrorReporting.V1Beta1
         /// <returns>The parsed <see cref="ProjectName"/> if successful.</returns>
         public static ProjectName Parse(string projectName)
         {
-            GaxPreconditions.CheckNotNull(projectName, nameof(projectName));
-            TemplatedResourceName resourceName = s_template.ParseName(projectName);
+            gax::GaxPreconditions.CheckNotNull(projectName, nameof(projectName));
+            gax::TemplatedResourceName resourceName = s_template.ParseName(projectName);
             return new ProjectName(resourceName[0]);
         }
 
@@ -45,7 +45,7 @@ namespace Google.Cloud.ErrorReporting.V1Beta1
         /// <see cref="ProjectName"/> instance.
         /// </summary>
         /// <remarks>
-        /// This method still throws <see cref="ArgumentNullException"/> if <paramref name="projectName"/> is null,
+        /// This method still throws <see cref="s::ArgumentNullException"/> if <paramref name="projectName"/> is null,
         /// as this would usually indicate a programming error rather than a data error.
         /// </remarks>
         /// <param name="projectName">The project resource name in string form. Must not be <c>null</c>.</param>
@@ -54,8 +54,8 @@ namespace Google.Cloud.ErrorReporting.V1Beta1
         /// <returns><c>true</c> if the name was parsed succssfully; <c>false</c> otherwise.</returns>
         public static bool TryParse(string projectName, out ProjectName result)
         {
-            GaxPreconditions.CheckNotNull(projectName, nameof(projectName));
-            TemplatedResourceName resourceName;
+            gax::GaxPreconditions.CheckNotNull(projectName, nameof(projectName));
+            gax::TemplatedResourceName resourceName;
             if (s_template.TryParseName(projectName, out resourceName))
             {
                 result = new ProjectName(resourceName[0]);
@@ -75,7 +75,7 @@ namespace Google.Cloud.ErrorReporting.V1Beta1
         /// <param name="projectId">The project ID. Must not be <c>null</c>.</param>
         public ProjectName(string projectId)
         {
-            ProjectId = GaxPreconditions.CheckNotNull(projectId, nameof(projectId));
+            ProjectId = gax::GaxPreconditions.CheckNotNull(projectId, nameof(projectId));
         }
 
         /// <summary>
@@ -84,7 +84,7 @@ namespace Google.Cloud.ErrorReporting.V1Beta1
         public string ProjectId { get; }
 
         /// <inheritdoc />
-        public ResourceNameKind Kind => ResourceNameKind.Simple;
+        public gax::ResourceNameKind Kind => gax::ResourceNameKind.Simple;
 
         /// <inheritdoc />
         public override string ToString() => s_template.Expand(ProjectId);
@@ -108,9 +108,9 @@ namespace Google.Cloud.ErrorReporting.V1Beta1
     /// <summary>
     /// Resource name for the 'group' resource.
     /// </summary>
-    public sealed partial class GroupName : IResourceName, IEquatable<GroupName>
+    public sealed partial class GroupName : gax::IResourceName, s::IEquatable<GroupName>
     {
-        private static readonly PathTemplate s_template = new PathTemplate("projects/{project}/groups/{group}");
+        private static readonly gax::PathTemplate s_template = new gax::PathTemplate("projects/{project}/groups/{group}");
 
         /// <summary>
         /// Parses the given group resource name in string form into a new
@@ -120,8 +120,8 @@ namespace Google.Cloud.ErrorReporting.V1Beta1
         /// <returns>The parsed <see cref="GroupName"/> if successful.</returns>
         public static GroupName Parse(string groupName)
         {
-            GaxPreconditions.CheckNotNull(groupName, nameof(groupName));
-            TemplatedResourceName resourceName = s_template.ParseName(groupName);
+            gax::GaxPreconditions.CheckNotNull(groupName, nameof(groupName));
+            gax::TemplatedResourceName resourceName = s_template.ParseName(groupName);
             return new GroupName(resourceName[0], resourceName[1]);
         }
 
@@ -130,7 +130,7 @@ namespace Google.Cloud.ErrorReporting.V1Beta1
         /// <see cref="GroupName"/> instance.
         /// </summary>
         /// <remarks>
-        /// This method still throws <see cref="ArgumentNullException"/> if <paramref name="groupName"/> is null,
+        /// This method still throws <see cref="s::ArgumentNullException"/> if <paramref name="groupName"/> is null,
         /// as this would usually indicate a programming error rather than a data error.
         /// </remarks>
         /// <param name="groupName">The group resource name in string form. Must not be <c>null</c>.</param>
@@ -139,8 +139,8 @@ namespace Google.Cloud.ErrorReporting.V1Beta1
         /// <returns><c>true</c> if the name was parsed succssfully; <c>false</c> otherwise.</returns>
         public static bool TryParse(string groupName, out GroupName result)
         {
-            GaxPreconditions.CheckNotNull(groupName, nameof(groupName));
-            TemplatedResourceName resourceName;
+            gax::GaxPreconditions.CheckNotNull(groupName, nameof(groupName));
+            gax::TemplatedResourceName resourceName;
             if (s_template.TryParseName(groupName, out resourceName))
             {
                 result = new GroupName(resourceName[0], resourceName[1]);
@@ -161,8 +161,8 @@ namespace Google.Cloud.ErrorReporting.V1Beta1
         /// <param name="groupId">The group ID. Must not be <c>null</c>.</param>
         public GroupName(string projectId, string groupId)
         {
-            ProjectId = GaxPreconditions.CheckNotNull(projectId, nameof(projectId));
-            GroupId = GaxPreconditions.CheckNotNull(groupId, nameof(groupId));
+            ProjectId = gax::GaxPreconditions.CheckNotNull(projectId, nameof(projectId));
+            GroupId = gax::GaxPreconditions.CheckNotNull(groupId, nameof(groupId));
         }
 
         /// <summary>
@@ -176,7 +176,7 @@ namespace Google.Cloud.ErrorReporting.V1Beta1
         public string GroupId { get; }
 
         /// <inheritdoc />
-        public ResourceNameKind Kind => ResourceNameKind.Simple;
+        public gax::ResourceNameKind Kind => gax::ResourceNameKind.Simple;
 
         /// <inheritdoc />
         public override string ToString() => s_template.Expand(ProjectId, GroupId);

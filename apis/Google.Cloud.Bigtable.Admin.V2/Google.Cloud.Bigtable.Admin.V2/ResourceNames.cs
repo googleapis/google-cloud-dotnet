@@ -14,8 +14,8 @@
 
 // Generated code. DO NOT EDIT!
 
-using Google.Api.Gax;
-using System;
+using gax = Google.Api.Gax;
+using s = System;
 using System.Linq;
 
 namespace Google.Cloud.Bigtable.Admin.V2
@@ -23,9 +23,9 @@ namespace Google.Cloud.Bigtable.Admin.V2
     /// <summary>
     /// Resource name for the 'project' resource.
     /// </summary>
-    public sealed partial class ProjectName : IResourceName, IEquatable<ProjectName>
+    public sealed partial class ProjectName : gax::IResourceName, s::IEquatable<ProjectName>
     {
-        private static readonly PathTemplate s_template = new PathTemplate("projects/{project}");
+        private static readonly gax::PathTemplate s_template = new gax::PathTemplate("projects/{project}");
 
         /// <summary>
         /// Parses the given project resource name in string form into a new
@@ -35,8 +35,8 @@ namespace Google.Cloud.Bigtable.Admin.V2
         /// <returns>The parsed <see cref="ProjectName"/> if successful.</returns>
         public static ProjectName Parse(string projectName)
         {
-            GaxPreconditions.CheckNotNull(projectName, nameof(projectName));
-            TemplatedResourceName resourceName = s_template.ParseName(projectName);
+            gax::GaxPreconditions.CheckNotNull(projectName, nameof(projectName));
+            gax::TemplatedResourceName resourceName = s_template.ParseName(projectName);
             return new ProjectName(resourceName[0]);
         }
 
@@ -45,7 +45,7 @@ namespace Google.Cloud.Bigtable.Admin.V2
         /// <see cref="ProjectName"/> instance.
         /// </summary>
         /// <remarks>
-        /// This method still throws <see cref="ArgumentNullException"/> if <paramref name="projectName"/> is null,
+        /// This method still throws <see cref="s::ArgumentNullException"/> if <paramref name="projectName"/> is null,
         /// as this would usually indicate a programming error rather than a data error.
         /// </remarks>
         /// <param name="projectName">The project resource name in string form. Must not be <c>null</c>.</param>
@@ -54,8 +54,8 @@ namespace Google.Cloud.Bigtable.Admin.V2
         /// <returns><c>true</c> if the name was parsed succssfully; <c>false</c> otherwise.</returns>
         public static bool TryParse(string projectName, out ProjectName result)
         {
-            GaxPreconditions.CheckNotNull(projectName, nameof(projectName));
-            TemplatedResourceName resourceName;
+            gax::GaxPreconditions.CheckNotNull(projectName, nameof(projectName));
+            gax::TemplatedResourceName resourceName;
             if (s_template.TryParseName(projectName, out resourceName))
             {
                 result = new ProjectName(resourceName[0]);
@@ -75,7 +75,7 @@ namespace Google.Cloud.Bigtable.Admin.V2
         /// <param name="projectId">The project ID. Must not be <c>null</c>.</param>
         public ProjectName(string projectId)
         {
-            ProjectId = GaxPreconditions.CheckNotNull(projectId, nameof(projectId));
+            ProjectId = gax::GaxPreconditions.CheckNotNull(projectId, nameof(projectId));
         }
 
         /// <summary>
@@ -84,7 +84,7 @@ namespace Google.Cloud.Bigtable.Admin.V2
         public string ProjectId { get; }
 
         /// <inheritdoc />
-        public ResourceNameKind Kind => ResourceNameKind.Simple;
+        public gax::ResourceNameKind Kind => gax::ResourceNameKind.Simple;
 
         /// <inheritdoc />
         public override string ToString() => s_template.Expand(ProjectId);
@@ -108,9 +108,9 @@ namespace Google.Cloud.Bigtable.Admin.V2
     /// <summary>
     /// Resource name for the 'instance' resource.
     /// </summary>
-    public sealed partial class InstanceName : IResourceName, IEquatable<InstanceName>
+    public sealed partial class InstanceName : gax::IResourceName, s::IEquatable<InstanceName>
     {
-        private static readonly PathTemplate s_template = new PathTemplate("projects/{project}/instances/{instance}");
+        private static readonly gax::PathTemplate s_template = new gax::PathTemplate("projects/{project}/instances/{instance}");
 
         /// <summary>
         /// Parses the given instance resource name in string form into a new
@@ -120,8 +120,8 @@ namespace Google.Cloud.Bigtable.Admin.V2
         /// <returns>The parsed <see cref="InstanceName"/> if successful.</returns>
         public static InstanceName Parse(string instanceName)
         {
-            GaxPreconditions.CheckNotNull(instanceName, nameof(instanceName));
-            TemplatedResourceName resourceName = s_template.ParseName(instanceName);
+            gax::GaxPreconditions.CheckNotNull(instanceName, nameof(instanceName));
+            gax::TemplatedResourceName resourceName = s_template.ParseName(instanceName);
             return new InstanceName(resourceName[0], resourceName[1]);
         }
 
@@ -130,7 +130,7 @@ namespace Google.Cloud.Bigtable.Admin.V2
         /// <see cref="InstanceName"/> instance.
         /// </summary>
         /// <remarks>
-        /// This method still throws <see cref="ArgumentNullException"/> if <paramref name="instanceName"/> is null,
+        /// This method still throws <see cref="s::ArgumentNullException"/> if <paramref name="instanceName"/> is null,
         /// as this would usually indicate a programming error rather than a data error.
         /// </remarks>
         /// <param name="instanceName">The instance resource name in string form. Must not be <c>null</c>.</param>
@@ -139,8 +139,8 @@ namespace Google.Cloud.Bigtable.Admin.V2
         /// <returns><c>true</c> if the name was parsed succssfully; <c>false</c> otherwise.</returns>
         public static bool TryParse(string instanceName, out InstanceName result)
         {
-            GaxPreconditions.CheckNotNull(instanceName, nameof(instanceName));
-            TemplatedResourceName resourceName;
+            gax::GaxPreconditions.CheckNotNull(instanceName, nameof(instanceName));
+            gax::TemplatedResourceName resourceName;
             if (s_template.TryParseName(instanceName, out resourceName))
             {
                 result = new InstanceName(resourceName[0], resourceName[1]);
@@ -161,8 +161,8 @@ namespace Google.Cloud.Bigtable.Admin.V2
         /// <param name="instanceId">The instance ID. Must not be <c>null</c>.</param>
         public InstanceName(string projectId, string instanceId)
         {
-            ProjectId = GaxPreconditions.CheckNotNull(projectId, nameof(projectId));
-            InstanceId = GaxPreconditions.CheckNotNull(instanceId, nameof(instanceId));
+            ProjectId = gax::GaxPreconditions.CheckNotNull(projectId, nameof(projectId));
+            InstanceId = gax::GaxPreconditions.CheckNotNull(instanceId, nameof(instanceId));
         }
 
         /// <summary>
@@ -176,7 +176,7 @@ namespace Google.Cloud.Bigtable.Admin.V2
         public string InstanceId { get; }
 
         /// <inheritdoc />
-        public ResourceNameKind Kind => ResourceNameKind.Simple;
+        public gax::ResourceNameKind Kind => gax::ResourceNameKind.Simple;
 
         /// <inheritdoc />
         public override string ToString() => s_template.Expand(ProjectId, InstanceId);
@@ -200,9 +200,9 @@ namespace Google.Cloud.Bigtable.Admin.V2
     /// <summary>
     /// Resource name for the 'app_profile' resource.
     /// </summary>
-    public sealed partial class AppProfileName : IResourceName, IEquatable<AppProfileName>
+    public sealed partial class AppProfileName : gax::IResourceName, s::IEquatable<AppProfileName>
     {
-        private static readonly PathTemplate s_template = new PathTemplate("projects/{project}/instances/{instance}/appProfiles/{app_profile}");
+        private static readonly gax::PathTemplate s_template = new gax::PathTemplate("projects/{project}/instances/{instance}/appProfiles/{app_profile}");
 
         /// <summary>
         /// Parses the given app_profile resource name in string form into a new
@@ -212,8 +212,8 @@ namespace Google.Cloud.Bigtable.Admin.V2
         /// <returns>The parsed <see cref="AppProfileName"/> if successful.</returns>
         public static AppProfileName Parse(string appProfileName)
         {
-            GaxPreconditions.CheckNotNull(appProfileName, nameof(appProfileName));
-            TemplatedResourceName resourceName = s_template.ParseName(appProfileName);
+            gax::GaxPreconditions.CheckNotNull(appProfileName, nameof(appProfileName));
+            gax::TemplatedResourceName resourceName = s_template.ParseName(appProfileName);
             return new AppProfileName(resourceName[0], resourceName[1], resourceName[2]);
         }
 
@@ -222,7 +222,7 @@ namespace Google.Cloud.Bigtable.Admin.V2
         /// <see cref="AppProfileName"/> instance.
         /// </summary>
         /// <remarks>
-        /// This method still throws <see cref="ArgumentNullException"/> if <paramref name="appProfileName"/> is null,
+        /// This method still throws <see cref="s::ArgumentNullException"/> if <paramref name="appProfileName"/> is null,
         /// as this would usually indicate a programming error rather than a data error.
         /// </remarks>
         /// <param name="appProfileName">The app_profile resource name in string form. Must not be <c>null</c>.</param>
@@ -231,8 +231,8 @@ namespace Google.Cloud.Bigtable.Admin.V2
         /// <returns><c>true</c> if the name was parsed succssfully; <c>false</c> otherwise.</returns>
         public static bool TryParse(string appProfileName, out AppProfileName result)
         {
-            GaxPreconditions.CheckNotNull(appProfileName, nameof(appProfileName));
-            TemplatedResourceName resourceName;
+            gax::GaxPreconditions.CheckNotNull(appProfileName, nameof(appProfileName));
+            gax::TemplatedResourceName resourceName;
             if (s_template.TryParseName(appProfileName, out resourceName))
             {
                 result = new AppProfileName(resourceName[0], resourceName[1], resourceName[2]);
@@ -254,9 +254,9 @@ namespace Google.Cloud.Bigtable.Admin.V2
         /// <param name="appProfileId">The appProfile ID. Must not be <c>null</c>.</param>
         public AppProfileName(string projectId, string instanceId, string appProfileId)
         {
-            ProjectId = GaxPreconditions.CheckNotNull(projectId, nameof(projectId));
-            InstanceId = GaxPreconditions.CheckNotNull(instanceId, nameof(instanceId));
-            AppProfileId = GaxPreconditions.CheckNotNull(appProfileId, nameof(appProfileId));
+            ProjectId = gax::GaxPreconditions.CheckNotNull(projectId, nameof(projectId));
+            InstanceId = gax::GaxPreconditions.CheckNotNull(instanceId, nameof(instanceId));
+            AppProfileId = gax::GaxPreconditions.CheckNotNull(appProfileId, nameof(appProfileId));
         }
 
         /// <summary>
@@ -275,7 +275,7 @@ namespace Google.Cloud.Bigtable.Admin.V2
         public string AppProfileId { get; }
 
         /// <inheritdoc />
-        public ResourceNameKind Kind => ResourceNameKind.Simple;
+        public gax::ResourceNameKind Kind => gax::ResourceNameKind.Simple;
 
         /// <inheritdoc />
         public override string ToString() => s_template.Expand(ProjectId, InstanceId, AppProfileId);
@@ -299,9 +299,9 @@ namespace Google.Cloud.Bigtable.Admin.V2
     /// <summary>
     /// Resource name for the 'cluster' resource.
     /// </summary>
-    public sealed partial class ClusterName : IResourceName, IEquatable<ClusterName>
+    public sealed partial class ClusterName : gax::IResourceName, s::IEquatable<ClusterName>
     {
-        private static readonly PathTemplate s_template = new PathTemplate("projects/{project}/instances/{instance}/clusters/{cluster}");
+        private static readonly gax::PathTemplate s_template = new gax::PathTemplate("projects/{project}/instances/{instance}/clusters/{cluster}");
 
         /// <summary>
         /// Parses the given cluster resource name in string form into a new
@@ -311,8 +311,8 @@ namespace Google.Cloud.Bigtable.Admin.V2
         /// <returns>The parsed <see cref="ClusterName"/> if successful.</returns>
         public static ClusterName Parse(string clusterName)
         {
-            GaxPreconditions.CheckNotNull(clusterName, nameof(clusterName));
-            TemplatedResourceName resourceName = s_template.ParseName(clusterName);
+            gax::GaxPreconditions.CheckNotNull(clusterName, nameof(clusterName));
+            gax::TemplatedResourceName resourceName = s_template.ParseName(clusterName);
             return new ClusterName(resourceName[0], resourceName[1], resourceName[2]);
         }
 
@@ -321,7 +321,7 @@ namespace Google.Cloud.Bigtable.Admin.V2
         /// <see cref="ClusterName"/> instance.
         /// </summary>
         /// <remarks>
-        /// This method still throws <see cref="ArgumentNullException"/> if <paramref name="clusterName"/> is null,
+        /// This method still throws <see cref="s::ArgumentNullException"/> if <paramref name="clusterName"/> is null,
         /// as this would usually indicate a programming error rather than a data error.
         /// </remarks>
         /// <param name="clusterName">The cluster resource name in string form. Must not be <c>null</c>.</param>
@@ -330,8 +330,8 @@ namespace Google.Cloud.Bigtable.Admin.V2
         /// <returns><c>true</c> if the name was parsed succssfully; <c>false</c> otherwise.</returns>
         public static bool TryParse(string clusterName, out ClusterName result)
         {
-            GaxPreconditions.CheckNotNull(clusterName, nameof(clusterName));
-            TemplatedResourceName resourceName;
+            gax::GaxPreconditions.CheckNotNull(clusterName, nameof(clusterName));
+            gax::TemplatedResourceName resourceName;
             if (s_template.TryParseName(clusterName, out resourceName))
             {
                 result = new ClusterName(resourceName[0], resourceName[1], resourceName[2]);
@@ -353,9 +353,9 @@ namespace Google.Cloud.Bigtable.Admin.V2
         /// <param name="clusterId">The cluster ID. Must not be <c>null</c>.</param>
         public ClusterName(string projectId, string instanceId, string clusterId)
         {
-            ProjectId = GaxPreconditions.CheckNotNull(projectId, nameof(projectId));
-            InstanceId = GaxPreconditions.CheckNotNull(instanceId, nameof(instanceId));
-            ClusterId = GaxPreconditions.CheckNotNull(clusterId, nameof(clusterId));
+            ProjectId = gax::GaxPreconditions.CheckNotNull(projectId, nameof(projectId));
+            InstanceId = gax::GaxPreconditions.CheckNotNull(instanceId, nameof(instanceId));
+            ClusterId = gax::GaxPreconditions.CheckNotNull(clusterId, nameof(clusterId));
         }
 
         /// <summary>
@@ -374,7 +374,7 @@ namespace Google.Cloud.Bigtable.Admin.V2
         public string ClusterId { get; }
 
         /// <inheritdoc />
-        public ResourceNameKind Kind => ResourceNameKind.Simple;
+        public gax::ResourceNameKind Kind => gax::ResourceNameKind.Simple;
 
         /// <inheritdoc />
         public override string ToString() => s_template.Expand(ProjectId, InstanceId, ClusterId);
@@ -398,9 +398,9 @@ namespace Google.Cloud.Bigtable.Admin.V2
     /// <summary>
     /// Resource name for the 'location' resource.
     /// </summary>
-    public sealed partial class LocationName : IResourceName, IEquatable<LocationName>
+    public sealed partial class LocationName : gax::IResourceName, s::IEquatable<LocationName>
     {
-        private static readonly PathTemplate s_template = new PathTemplate("projects/{project}/locations/{location}");
+        private static readonly gax::PathTemplate s_template = new gax::PathTemplate("projects/{project}/locations/{location}");
 
         /// <summary>
         /// Parses the given location resource name in string form into a new
@@ -410,8 +410,8 @@ namespace Google.Cloud.Bigtable.Admin.V2
         /// <returns>The parsed <see cref="LocationName"/> if successful.</returns>
         public static LocationName Parse(string locationName)
         {
-            GaxPreconditions.CheckNotNull(locationName, nameof(locationName));
-            TemplatedResourceName resourceName = s_template.ParseName(locationName);
+            gax::GaxPreconditions.CheckNotNull(locationName, nameof(locationName));
+            gax::TemplatedResourceName resourceName = s_template.ParseName(locationName);
             return new LocationName(resourceName[0], resourceName[1]);
         }
 
@@ -420,7 +420,7 @@ namespace Google.Cloud.Bigtable.Admin.V2
         /// <see cref="LocationName"/> instance.
         /// </summary>
         /// <remarks>
-        /// This method still throws <see cref="ArgumentNullException"/> if <paramref name="locationName"/> is null,
+        /// This method still throws <see cref="s::ArgumentNullException"/> if <paramref name="locationName"/> is null,
         /// as this would usually indicate a programming error rather than a data error.
         /// </remarks>
         /// <param name="locationName">The location resource name in string form. Must not be <c>null</c>.</param>
@@ -429,8 +429,8 @@ namespace Google.Cloud.Bigtable.Admin.V2
         /// <returns><c>true</c> if the name was parsed succssfully; <c>false</c> otherwise.</returns>
         public static bool TryParse(string locationName, out LocationName result)
         {
-            GaxPreconditions.CheckNotNull(locationName, nameof(locationName));
-            TemplatedResourceName resourceName;
+            gax::GaxPreconditions.CheckNotNull(locationName, nameof(locationName));
+            gax::TemplatedResourceName resourceName;
             if (s_template.TryParseName(locationName, out resourceName))
             {
                 result = new LocationName(resourceName[0], resourceName[1]);
@@ -451,8 +451,8 @@ namespace Google.Cloud.Bigtable.Admin.V2
         /// <param name="locationId">The location ID. Must not be <c>null</c>.</param>
         public LocationName(string projectId, string locationId)
         {
-            ProjectId = GaxPreconditions.CheckNotNull(projectId, nameof(projectId));
-            LocationId = GaxPreconditions.CheckNotNull(locationId, nameof(locationId));
+            ProjectId = gax::GaxPreconditions.CheckNotNull(projectId, nameof(projectId));
+            LocationId = gax::GaxPreconditions.CheckNotNull(locationId, nameof(locationId));
         }
 
         /// <summary>
@@ -466,7 +466,7 @@ namespace Google.Cloud.Bigtable.Admin.V2
         public string LocationId { get; }
 
         /// <inheritdoc />
-        public ResourceNameKind Kind => ResourceNameKind.Simple;
+        public gax::ResourceNameKind Kind => gax::ResourceNameKind.Simple;
 
         /// <inheritdoc />
         public override string ToString() => s_template.Expand(ProjectId, LocationId);
@@ -490,9 +490,9 @@ namespace Google.Cloud.Bigtable.Admin.V2
     /// <summary>
     /// Resource name for the 'snapshot' resource.
     /// </summary>
-    public sealed partial class SnapshotName : IResourceName, IEquatable<SnapshotName>
+    public sealed partial class SnapshotName : gax::IResourceName, s::IEquatable<SnapshotName>
     {
-        private static readonly PathTemplate s_template = new PathTemplate("projects/{project}/instances/{instance}/clusters/{cluster}/snapshots/{snapshot}");
+        private static readonly gax::PathTemplate s_template = new gax::PathTemplate("projects/{project}/instances/{instance}/clusters/{cluster}/snapshots/{snapshot}");
 
         /// <summary>
         /// Parses the given snapshot resource name in string form into a new
@@ -502,8 +502,8 @@ namespace Google.Cloud.Bigtable.Admin.V2
         /// <returns>The parsed <see cref="SnapshotName"/> if successful.</returns>
         public static SnapshotName Parse(string snapshotName)
         {
-            GaxPreconditions.CheckNotNull(snapshotName, nameof(snapshotName));
-            TemplatedResourceName resourceName = s_template.ParseName(snapshotName);
+            gax::GaxPreconditions.CheckNotNull(snapshotName, nameof(snapshotName));
+            gax::TemplatedResourceName resourceName = s_template.ParseName(snapshotName);
             return new SnapshotName(resourceName[0], resourceName[1], resourceName[2], resourceName[3]);
         }
 
@@ -512,7 +512,7 @@ namespace Google.Cloud.Bigtable.Admin.V2
         /// <see cref="SnapshotName"/> instance.
         /// </summary>
         /// <remarks>
-        /// This method still throws <see cref="ArgumentNullException"/> if <paramref name="snapshotName"/> is null,
+        /// This method still throws <see cref="s::ArgumentNullException"/> if <paramref name="snapshotName"/> is null,
         /// as this would usually indicate a programming error rather than a data error.
         /// </remarks>
         /// <param name="snapshotName">The snapshot resource name in string form. Must not be <c>null</c>.</param>
@@ -521,8 +521,8 @@ namespace Google.Cloud.Bigtable.Admin.V2
         /// <returns><c>true</c> if the name was parsed succssfully; <c>false</c> otherwise.</returns>
         public static bool TryParse(string snapshotName, out SnapshotName result)
         {
-            GaxPreconditions.CheckNotNull(snapshotName, nameof(snapshotName));
-            TemplatedResourceName resourceName;
+            gax::GaxPreconditions.CheckNotNull(snapshotName, nameof(snapshotName));
+            gax::TemplatedResourceName resourceName;
             if (s_template.TryParseName(snapshotName, out resourceName))
             {
                 result = new SnapshotName(resourceName[0], resourceName[1], resourceName[2], resourceName[3]);
@@ -545,10 +545,10 @@ namespace Google.Cloud.Bigtable.Admin.V2
         /// <param name="snapshotId">The snapshot ID. Must not be <c>null</c>.</param>
         public SnapshotName(string projectId, string instanceId, string clusterId, string snapshotId)
         {
-            ProjectId = GaxPreconditions.CheckNotNull(projectId, nameof(projectId));
-            InstanceId = GaxPreconditions.CheckNotNull(instanceId, nameof(instanceId));
-            ClusterId = GaxPreconditions.CheckNotNull(clusterId, nameof(clusterId));
-            SnapshotId = GaxPreconditions.CheckNotNull(snapshotId, nameof(snapshotId));
+            ProjectId = gax::GaxPreconditions.CheckNotNull(projectId, nameof(projectId));
+            InstanceId = gax::GaxPreconditions.CheckNotNull(instanceId, nameof(instanceId));
+            ClusterId = gax::GaxPreconditions.CheckNotNull(clusterId, nameof(clusterId));
+            SnapshotId = gax::GaxPreconditions.CheckNotNull(snapshotId, nameof(snapshotId));
         }
 
         /// <summary>
@@ -572,7 +572,7 @@ namespace Google.Cloud.Bigtable.Admin.V2
         public string SnapshotId { get; }
 
         /// <inheritdoc />
-        public ResourceNameKind Kind => ResourceNameKind.Simple;
+        public gax::ResourceNameKind Kind => gax::ResourceNameKind.Simple;
 
         /// <inheritdoc />
         public override string ToString() => s_template.Expand(ProjectId, InstanceId, ClusterId, SnapshotId);
@@ -596,9 +596,9 @@ namespace Google.Cloud.Bigtable.Admin.V2
     /// <summary>
     /// Resource name for the 'table' resource.
     /// </summary>
-    public sealed partial class TableName : IResourceName, IEquatable<TableName>
+    public sealed partial class TableName : gax::IResourceName, s::IEquatable<TableName>
     {
-        private static readonly PathTemplate s_template = new PathTemplate("projects/{project}/instances/{instance}/tables/{table}");
+        private static readonly gax::PathTemplate s_template = new gax::PathTemplate("projects/{project}/instances/{instance}/tables/{table}");
 
         /// <summary>
         /// Parses the given table resource name in string form into a new
@@ -608,8 +608,8 @@ namespace Google.Cloud.Bigtable.Admin.V2
         /// <returns>The parsed <see cref="TableName"/> if successful.</returns>
         public static TableName Parse(string tableName)
         {
-            GaxPreconditions.CheckNotNull(tableName, nameof(tableName));
-            TemplatedResourceName resourceName = s_template.ParseName(tableName);
+            gax::GaxPreconditions.CheckNotNull(tableName, nameof(tableName));
+            gax::TemplatedResourceName resourceName = s_template.ParseName(tableName);
             return new TableName(resourceName[0], resourceName[1], resourceName[2]);
         }
 
@@ -618,7 +618,7 @@ namespace Google.Cloud.Bigtable.Admin.V2
         /// <see cref="TableName"/> instance.
         /// </summary>
         /// <remarks>
-        /// This method still throws <see cref="ArgumentNullException"/> if <paramref name="tableName"/> is null,
+        /// This method still throws <see cref="s::ArgumentNullException"/> if <paramref name="tableName"/> is null,
         /// as this would usually indicate a programming error rather than a data error.
         /// </remarks>
         /// <param name="tableName">The table resource name in string form. Must not be <c>null</c>.</param>
@@ -627,8 +627,8 @@ namespace Google.Cloud.Bigtable.Admin.V2
         /// <returns><c>true</c> if the name was parsed succssfully; <c>false</c> otherwise.</returns>
         public static bool TryParse(string tableName, out TableName result)
         {
-            GaxPreconditions.CheckNotNull(tableName, nameof(tableName));
-            TemplatedResourceName resourceName;
+            gax::GaxPreconditions.CheckNotNull(tableName, nameof(tableName));
+            gax::TemplatedResourceName resourceName;
             if (s_template.TryParseName(tableName, out resourceName))
             {
                 result = new TableName(resourceName[0], resourceName[1], resourceName[2]);
@@ -650,9 +650,9 @@ namespace Google.Cloud.Bigtable.Admin.V2
         /// <param name="tableId">The table ID. Must not be <c>null</c>.</param>
         public TableName(string projectId, string instanceId, string tableId)
         {
-            ProjectId = GaxPreconditions.CheckNotNull(projectId, nameof(projectId));
-            InstanceId = GaxPreconditions.CheckNotNull(instanceId, nameof(instanceId));
-            TableId = GaxPreconditions.CheckNotNull(tableId, nameof(tableId));
+            ProjectId = gax::GaxPreconditions.CheckNotNull(projectId, nameof(projectId));
+            InstanceId = gax::GaxPreconditions.CheckNotNull(instanceId, nameof(instanceId));
+            TableId = gax::GaxPreconditions.CheckNotNull(tableId, nameof(tableId));
         }
 
         /// <summary>
@@ -671,7 +671,7 @@ namespace Google.Cloud.Bigtable.Admin.V2
         public string TableId { get; }
 
         /// <inheritdoc />
-        public ResourceNameKind Kind => ResourceNameKind.Simple;
+        public gax::ResourceNameKind Kind => gax::ResourceNameKind.Simple;
 
         /// <inheritdoc />
         public override string ToString() => s_template.Expand(ProjectId, InstanceId, TableId);
