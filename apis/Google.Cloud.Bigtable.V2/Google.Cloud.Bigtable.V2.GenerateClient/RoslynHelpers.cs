@@ -105,16 +105,16 @@ namespace Google.Cloud.Bigtable.V2.GenerateClient
 
         internal static NameSyntax Of(this NameSyntax typeName, params TypeSyntax[] typeArguments)
         {
-            switch (typeName.Kind())
+            switch (typeName)
             {
-                case SyntaxKind.AliasQualifiedName:
-                    return ((AliasQualifiedNameSyntax)typeName).Of(typeArguments);
-                case SyntaxKind.QualifiedName:
-                    return ((QualifiedNameSyntax)typeName).Of(typeArguments);
-                case SyntaxKind.IdentifierName:
-                    return GenericName(((IdentifierNameSyntax)typeName).Identifier).Of(typeArguments);
-                case SyntaxKind.GenericName:
-                    return ((GenericNameSyntax)typeName).WithTypeArgumentList(TypeArgumentList(SeparatedList(typeArguments)));
+                case AliasQualifiedNameSyntax aliasQualifiedName:
+                    return aliasQualifiedName.Of(typeArguments);
+                case QualifiedNameSyntax qualifiedName:
+                    return qualifiedName.Of(typeArguments);
+                case IdentifierNameSyntax identifierName:
+                    return identifierName.Of(typeArguments);
+                case GenericNameSyntax genericName:
+                    return genericName.Of(typeArguments);
                 default:
                     throw new ArgumentException();
             }
