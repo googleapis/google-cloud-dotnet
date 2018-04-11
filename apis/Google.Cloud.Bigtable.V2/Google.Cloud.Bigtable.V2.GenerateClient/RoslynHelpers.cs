@@ -15,6 +15,7 @@
 using Microsoft.CodeAnalysis;
 using Microsoft.CodeAnalysis.CSharp;
 using Microsoft.CodeAnalysis.CSharp.Syntax;
+using System;
 using System.Collections.Generic;
 using System.Linq;
 
@@ -90,14 +91,39 @@ namespace Google.Cloud.Bigtable.V2.GenerateClient
         internal static LiteralExpressionSyntax Null() =>
             LiteralExpression(SyntaxKind.NullLiteralExpression);
 
-        internal static GenericNameSyntax Of(this SyntaxToken typeName, params TypeSyntax[] typeArguments) =>
-            GenericName(typeName, TypeArgumentList(SeparatedList(typeArguments)));
+        internal static AliasQualifiedNameSyntax Of(this AliasQualifiedNameSyntax typeName, params TypeSyntax[] typeArguments) =>
+            typeName.WithName((SimpleNameSyntax)typeName.Name.Of(typeArguments));
+
+        internal static QualifiedNameSyntax Of(this QualifiedNameSyntax typeName, params TypeSyntax[] typeArguments) =>
+            typeName.WithRight((SimpleNameSyntax)typeName.Right.Of(typeArguments));
+
+        internal static GenericNameSyntax Of(this GenericNameSyntax typeName, params TypeSyntax[] typeArguments) =>
+            typeName.WithTypeArgumentList(TypeArgumentList(SeparatedList(typeArguments)));
+
+        internal static GenericNameSyntax Of(this IdentifierNameSyntax typeName, params TypeSyntax[] typeArguments) =>
+            GenericName(typeName.Identifier).Of(typeArguments);
+
+        internal static NameSyntax Of(this NameSyntax typeName, params TypeSyntax[] typeArguments)
+        {
+            switch (typeName.Kind())
+            {
+                case SyntaxKind.AliasQualifiedName:
+                    return ((AliasQualifiedNameSyntax)typeName).Of(typeArguments);
+                case SyntaxKind.QualifiedName:
+                    return ((QualifiedNameSyntax)typeName).Of(typeArguments);
+                case SyntaxKind.IdentifierName:
+                    return GenericName(((IdentifierNameSyntax)typeName).Identifier).Of(typeArguments);
+                case SyntaxKind.GenericName:
+                    return ((GenericNameSyntax)typeName).WithTypeArgumentList(TypeArgumentList(SeparatedList(typeArguments)));
+                default:
+                    throw new ArgumentException();
+            }
+        }
 
         internal static XmlEmptyElementSyntax SeeTag(CrefSyntax cref) =>
             XmlEmptyElement("see").AddAttributes(XmlCrefAttribute(cref));
 
-        // TODO: Use ParseName given that it's not a simple identifier.
-        internal static SyntaxToken Task() => Identifier("stt::Task");
+        internal static NameSyntax Task() => ParseName("stt::Task");
 
         internal static MethodDeclarationSyntax ToAsync(this MethodDeclarationSyntax method) =>
             method.WithReturnType(Task().Of(method.ReturnType)).WithIdentifier(Identifier(method.Identifier.ToString() + "Async"));
