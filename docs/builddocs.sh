@@ -25,12 +25,14 @@ build_api_docs() {
       return 1
     fi
   else
-    dotnet run -p ../tools/Google.Cloud.Tools.GenerateDocfxSources/*.csproj -- $api
+    dotnet run --no-build --no-restore -p ../tools/Google.Cloud.Tools.GenerateDocfxSources -- $api
   fi
   cp filterConfig.yml output/$api
-  $DOCFX metadata --logLevel Warning -f output/$api/docfx.json | tee errors.txt | grep -v "Invalid file link"
+  $DOCFX metadata --logLevel Warning -f output/$api/docfx.json | tee errors.txt \
+      | grep -v "Invalid file link" \
+      | grep -v "Invalid cref value \"s::"
   (! grep --quiet 'Build failed.' errors.txt)
-  dotnet run -p ../tools/Google.Cloud.Tools.GenerateSnippetMarkdown/*.csproj -- $api
+  dotnet run --no-build --no-restore -p ../tools/Google.Cloud.Tools.GenerateSnippetMarkdown -- $api
   
   # Copy external dependency yml files into the API and concatenate toc.yml
   for dep in $(cat output/$api/dependencies)
@@ -65,6 +67,10 @@ fi
 rm -rf output
 mkdir output
 mkdir output/assembled
+
+# Build the tools once, then we can run them without restoring/building each time
+dotnet build ../tools/Google.Cloud.Tools.GenerateDocfxSources -v quiet
+dotnet build ../tools/Google.Cloud.Tools.GenerateSnippetMarkdown -v quiet
 
 apis=$@
 if [ -z "$apis" ]
