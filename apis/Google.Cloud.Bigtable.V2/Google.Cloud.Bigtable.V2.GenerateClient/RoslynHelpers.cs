@@ -112,9 +112,9 @@ namespace Google.Cloud.Bigtable.V2.GenerateClient
                 case SyntaxKind.QualifiedName:
                     return ((QualifiedNameSyntax)typeName).Of(typeArguments);
                 case SyntaxKind.IdentifierName:
-                    return GenericName(((IdentifierNameSyntax)typeName).Identifier).Of(typeArguments);
+                    return ((IdentifierNameSyntax)typeName).Of(typeArguments);
                 case SyntaxKind.GenericName:
-                    return ((GenericNameSyntax)typeName).WithTypeArgumentList(TypeArgumentList(SeparatedList(typeArguments)));
+                    return ((GenericNameSyntax)typeName).Of(typeArguments);
                 default:
                     throw new ArgumentException();
             }
