@@ -1,11 +1,11 @@
 ﻿// Copyright 2017 Google Inc. All Rights Reserved.
-// 
+//
 // Licensed under the Apache License, Version 2.0 (the "License");
 // you may not use this file except in compliance with the License.
 // You may obtain a copy of the License at
-// 
+//
 //     http://www.apache.org/licenses/LICENSE-2.0
-// 
+//
 // Unless required by applicable law or agreed to in writing, software
 // distributed under the License is distributed on an "AS IS" BASIS,
 // WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
@@ -46,8 +46,8 @@ namespace Google.Cloud.Diagnostics.Common
             _managedTracerGetter().RunInSpan(func, name, options);
 
         /// <inheritdoc />
-        public Task<T> RunInSpanAsync<T>(Func<Task<T>> func, string name, StartSpanOptions options = null) =>
-            _managedTracerGetter().RunInSpan(func, name, options);
+        public async Task<T> RunInSpanAsync<T>(Func<Task<T>> func, string name, StartSpanOptions options = null) =>
+            await _managedTracerGetter().RunInSpanAsync(func, name, options).ConfigureAwait(false);
 
         /// <inheritdoc />
         public void AnnotateSpan(Dictionary<string, string> labels) => _managedTracerGetter().AnnotateSpan(labels);
@@ -59,6 +59,6 @@ namespace Google.Cloud.Diagnostics.Common
         public string GetCurrentTraceId() => _managedTracerGetter().GetCurrentTraceId();
 
         /// <inheritdoc />
-        public ulong? GetCurrentSpanId() =>  _managedTracerGetter().GetCurrentSpanId();
+        public ulong? GetCurrentSpanId() => _managedTracerGetter().GetCurrentSpanId();
     }
 }
