@@ -80,7 +80,7 @@ namespace Google.Cloud.Tools.GenerateSnippetMarkdown
         private static readonly Regex DocfxSnippetPattern = new Regex(@"^[\w\.]+$", RegexOptions.Compiled);
         private static readonly Regex NullablePattern = new Regex(@"^System.Nullable\{([\w\.]*)\}$", RegexOptions.Compiled);
         private static readonly Regex GenericMemberPattern = new Regex(@"^([\w\.]+)\{([\w\.,]*)\}$", RegexOptions.Compiled);
-        private static readonly Regex GenericSnippetPattern = new Regex(@"^([\w\.]+)\<([\w\., ]*)\>$", RegexOptions.Compiled);
+        private static readonly Regex GenericSnippetPattern = new Regex(@"^([\w\.]+)\<([\w\.,: ]*)\>$", RegexOptions.Compiled);
         private static readonly Dictionary<string, string> KeywordAliases = new Dictionary<string, string>
         {
             { "string", "System.String" },
@@ -840,11 +840,6 @@ namespace Google.Cloud.Tools.GenerateSnippetMarkdown
         // TODO: Unit tests for this...
         private static bool IsParameterMatch(string memberParameter, string snippetParameter)
         {
-            // Remove any namespace qualifiers.
-            if (snippetParameter.Contains("::"))
-            {
-                snippetParameter = snippetParameter.Split(':').Last();
-            }
             snippetParameter = snippetParameter.Trim();
             if (snippetParameter == "*")
             {
@@ -876,6 +871,11 @@ namespace Google.Cloud.Tools.GenerateSnippetMarkdown
                     memberTypeArguments.Zip(snippetTypeArguments, IsParameterMatch).All(x => x);
             }
 
+            // Now that we're down to simple names, remove any namespace qualifiers in the snippet.
+            if (snippetParameter.Contains("::"))
+            {
+                snippetParameter = snippetParameter.Split(':').Last();
+            }
             // Ignore namespaces, for now.
             var simpleMemberParameterName = memberParameter.Split('.').Last();
             var simpleSnippetParameterName = snippetParameter.Split('.').Last();
