@@ -127,7 +127,7 @@ namespace Google.Cloud.Firestore.Tests
         public async Task RunTransactionAsync_TooManyRetries(int? userSpecifiedAttempts)
         {
             int actualAttempts = userSpecifiedAttempts ?? TransactionOptions.Default.MaxAttempts;
-            var options = userSpecifiedAttempts == null ? null : TransactionOptions.Create(userSpecifiedAttempts.Value);
+            var options = TransactionOptions.Create(actualAttempts);
 
             var client = new TransactionTestingClient(actualAttempts, CreateRpcException(StatusCode.Aborted));
             var db = FirestoreDb.Create("proj", "db", client);

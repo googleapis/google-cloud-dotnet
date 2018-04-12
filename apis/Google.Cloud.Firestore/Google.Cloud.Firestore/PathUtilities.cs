@@ -42,7 +42,7 @@ namespace Google.Cloud.Firestore
             return elements;
         }
 
-        internal static string ValidateId(string id, string paramName = "id")
+        internal static string ValidateId(string id, string paramName)
         {
             GaxPreconditions.CheckNotNullOrEmpty(id, paramName);
             GaxPreconditions.CheckArgument(!id.Contains('/'), paramName, "ID cannot contain a '/' character.");

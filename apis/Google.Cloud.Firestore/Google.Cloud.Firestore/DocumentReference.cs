@@ -93,9 +93,16 @@ namespace Google.Cloud.Firestore
         /// Asynchronously creates a document on the server with the given data. The document must not exist beforehand.
         /// </summary>
         /// <param name="documentData">The data for the document. Must not be null.</param>
+        /// <returns>The write result of the server operation.</returns>
+        public Task<WriteResult> CreateAsync(object documentData) => CreateAsync(documentData, default);
+
+        /// <summary>
+        /// Asynchronously creates a document on the server with the given data. The document must not exist beforehand.
+        /// </summary>
+        /// <param name="documentData">The data for the document. Must not be null.</param>
         /// <param name="cancellationToken">A cancellation token to monitor for the asynchronous operation.</param>
         /// <returns>The write result of the server operation.</returns>
-        public async Task<WriteResult> CreateAsync(object documentData, CancellationToken cancellationToken = default)
+        public async Task<WriteResult> CreateAsync(object documentData, CancellationToken cancellationToken)
         {
             var batch = Database.StartBatch();
             var results = await batch.Create(this, documentData).CommitAsync(cancellationToken).ConfigureAwait(false);
@@ -103,58 +110,162 @@ namespace Google.Cloud.Firestore
         }
 
         /// <summary>
-        /// Asynchronously deletes the document referred to by this path, with an optional precondition.
+        /// Asynchronously deletes the document referred to by this path.
+        /// </summary>
+        /// <remarks>
+        /// If the document doesn't exist, this returned task will still succeed.
+        /// </remarks>
+        /// <returns>The write result of the server operation.</returns>
+        public Task<WriteResult> DeleteAsync() => DeleteAsync(Precondition.None, default);
+
+        /// <summary>
+        /// Asynchronously deletes the document referred to by this path, with a cancellation token.
+        /// </summary>
+        /// <remarks>
+        /// If the document doesn't exist, this returned task will still succeed.
+        /// </remarks>
+        /// <param name="cancellationToken">A cancellation token to monitor for the asynchronous operation.</param>
+        /// <returns>The write result of the server operation.</returns>
+        public Task<WriteResult> DeleteAsync(CancellationToken cancellationToken) => DeleteAsync(Precondition.None, cancellationToken);
+
+        /// <summary>
+        /// Asynchronously deletes the document referred to by this path, with a precondition.
         /// </summary>
         /// <remarks>
         /// If no precondition is specified and the document doesn't exist, this returned task will succeed. If a precondition
         /// is specified and not met, the returned task will fail with an <see cref="RpcException"/>.
         /// </remarks>
-        /// <param name="precondition">Optional precondition for deletion. May be null, in which case the deletion is unconditional.</param>
+        /// <param name="precondition">Precondition for deletion. Must not be null.</param>
+        /// <returns>The write result of the server operation.</returns>
+        public Task<WriteResult> DeleteAsync(Precondition precondition) => DeleteAsync(precondition, default);
+
+        /// <summary>
+        /// Asynchronously deletes the document referred to by this path, with a precondition.
+        /// </summary>
+        /// <remarks>
+        /// If <see cref="Precondition.None">Precondition.None</see> is specified and the document doesn't exist, this returned task
+        /// will succeed. If any other precondition is specified and not met, the returned task will fail with an <see cref="RpcException"/>.
+        /// </remarks>
+        /// <param name="precondition">Precondition for deletion. Must not be null.</param>
         /// <param name="cancellationToken">A cancellation token to monitor for the asynchronous operation.</param>
         /// <returns>The write result of the server operation.</returns>
-        public async Task<WriteResult> DeleteAsync(Precondition precondition = null, CancellationToken cancellationToken = default)
+        public async Task<WriteResult> DeleteAsync(Precondition precondition, CancellationToken cancellationToken)
         {
+            GaxPreconditions.CheckNotNull(precondition, nameof(precondition));
             var batch = Database.StartBatch();
             batch.Delete(this, precondition);
             var results = await batch.CommitAsync(cancellationToken).ConfigureAwait(false);
             return results[0];
         }
-        
+
         /// <summary>
-        /// Asynchronously performs a set of updates on the document referred to by this path, with an optional precondition.
+        /// Asynchronously performs a set of updates on the document referred to by this path. A precondition of <see cref="Precondition.MustExist" /> is applied.
         /// </summary>
         /// <param name="updates">The updates to perform on the document, keyed by the dot-separated field path to update. Fields not present in this dictionary are not updated. Must not be null or empty.</param>
-        /// <param name="precondition">Optional precondition for updating the document. May be null, which is equivalent to <see cref="Precondition.MustExist"/>.</param>
+        /// <returns>The write result of the server operation.</returns>
+        public Task<WriteResult> UpdateAsync(IDictionary<string, object> updates) => UpdateAsync(updates, Precondition.MustExist, default);
+
+        /// <summary>
+        /// Asynchronously performs a set of updates on the document referred to by this path. A precondition of <see cref="Precondition.MustExist" /> is applied.
+        /// </summary>
+        /// <param name="updates">The updates to perform on the document, keyed by the dot-separated field path to update. Fields not present in this dictionary are not updated. Must not be null or empty.</param>
         /// <param name="cancellationToken">A cancellation token to monitor for the asynchronous operation.</param>
         /// <returns>The write result of the server operation.</returns>
-        public Task<WriteResult> UpdateAsync(IDictionary<string, object> updates, Precondition precondition = null, CancellationToken cancellationToken = default)
+        public Task<WriteResult> UpdateAsync(IDictionary<string, object> updates, CancellationToken cancellationToken) => UpdateAsync(updates, Precondition.MustExist, cancellationToken);
+
+        /// <summary>
+        /// Asynchronously performs a set of updates on the document referred to by this path, with a precondition.
+        /// </summary>
+        /// <param name="updates">The updates to perform on the document, keyed by the dot-separated field path to update. Fields not present in this dictionary are not updated. Must not be null or empty.</param>
+        /// <param name="precondition">Precondition for updating the document. Must not be null.</param>
+        /// <returns>The write result of the server operation.</returns>
+        public Task<WriteResult> UpdateAsync(IDictionary<string, object> updates, Precondition precondition) => UpdateAsync(updates, precondition, default);
+
+        /// <summary>
+        /// Asynchronously performs a set of updates on the document referred to by this path, with a precondition.
+        /// </summary>
+        /// <param name="updates">The updates to perform on the document, keyed by the dot-separated field path to update. Fields not present in this dictionary are not updated. Must not be null or empty.</param>
+        /// <param name="precondition">Precondition for updating the document. Must not be null.</param>
+        /// <param name="cancellationToken">A cancellation token to monitor for the asynchronous operation.</param>
+        /// <returns>The write result of the server operation.</returns>
+        public Task<WriteResult> UpdateAsync(IDictionary<string, object> updates, Precondition precondition, CancellationToken cancellationToken)
         {
             GaxPreconditions.CheckNotNull(updates, nameof(updates));
+            GaxPreconditions.CheckNotNull(precondition, nameof(precondition));
             return UpdateAsync(updates.ToDictionary(pair => FieldPath.FromDotSeparatedString(pair.Key), pair => pair.Value), precondition, cancellationToken);
         }
 
         /// <summary>
-        /// Asynchronously performs a single field update on the document referred to by this path, with an optional precondition.
+        /// Asynchronously performs a single field update on the document referred to by this path. A precondition of <see cref="Precondition.MustExist" /> is applied.
         /// </summary>
         /// <param name="field">The dot-separated name of the field to update. Must not be null.</param>
         /// <param name="value">The new value for the field. May be null.</param>
-        /// <param name="precondition">Optional precondition for updating the document. May be null, which is equivalent to <see cref="Precondition.MustExist"/>.</param>
+        /// <returns>The write result of the server operation.</returns>
+        public Task<WriteResult> UpdateAsync(string field, object value) => UpdateAsync(field, value, Precondition.MustExist, default);
+
+        /// <summary>
+        /// Asynchronously performs a single field update on the document referred to by this path. A precondition of <see cref="Precondition.MustExist" /> is applied.
+        /// </summary>
+        /// <param name="field">The dot-separated name of the field to update. Must not be null.</param>
+        /// <param name="value">The new value for the field. May be null.</param>
         /// <param name="cancellationToken">A cancellation token to monitor for the asynchronous operation.</param>
         /// <returns>The write result of the server operation.</returns>
-        public Task<WriteResult> UpdateAsync(string field, object value, Precondition precondition = null, CancellationToken cancellationToken = default)
+        public Task<WriteResult> UpdateAsync(string field, object value, CancellationToken cancellationToken) => UpdateAsync(field, value, Precondition.MustExist, cancellationToken);
+
+        /// <summary>
+        /// Asynchronously performs a single field update on the document referred to by this path, with a precondition.
+        /// </summary>
+        /// <param name="field">The dot-separated name of the field to update. Must not be null.</param>
+        /// <param name="value">The new value for the field. May be null.</param>
+        /// <param name="precondition">Optional precondition for updating the document. Must not be null.</param>
+        /// <returns>The write result of the server operation.</returns>
+        public Task<WriteResult> UpdateAsync(string field, object value, Precondition precondition) => UpdateAsync(field, value, precondition, default);
+
+        /// <summary>
+        /// Asynchronously performs a single field update on the document referred to by this path, with a precondition.
+        /// </summary>
+        /// <param name="field">The dot-separated name of the field to update. Must not be null.</param>
+        /// <param name="value">The new value for the field. May be null.</param>
+        /// <param name="precondition">Optional precondition for updating the document. Must not be null.</param>
+        /// <param name="cancellationToken">A cancellation token to monitor for the asynchronous operation.</param>
+        /// <returns>The write result of the server operation.</returns>
+        public Task<WriteResult> UpdateAsync(string field, object value, Precondition precondition, CancellationToken cancellationToken)
         {
             GaxPreconditions.CheckNotNull(field, nameof(field));
             return UpdateAsync(new Dictionary<string, object> { { field, value } }, precondition, cancellationToken);
         }
 
         /// <summary>
-        /// Asynchronously performs a set of updates on the document referred to by this path, with an optional precondition.
+        /// Asynchronously performs a set of updates on the document referred to by this path. A precondition of <see cref="Precondition.MustExist" /> is applied.
         /// </summary>
         /// <param name="updates">The updates to perform on the document, keyed by the field path to update. Fields not present in this dictionary are not updated. Must not be null or empty.</param>
-        /// <param name="precondition">Optional precondition for updating the document. May be null, which is equivalent to <see cref="Precondition.MustExist"/>.</param>
+        /// <returns>The write result of the server operation.</returns>
+        public Task<WriteResult> UpdateAsync(IDictionary<FieldPath, object> updates) => UpdateAsync(updates, Precondition.MustExist, default);
+
+        /// <summary>
+        /// Asynchronously performs a set of updates on the document referred to by this path. A precondition of <see cref="Precondition.MustExist" /> is applied.
+        /// </summary>
+        /// <param name="updates">The updates to perform on the document, keyed by the field path to update. Fields not present in this dictionary are not updated. Must not be null or empty.</param>
         /// <param name="cancellationToken">A cancellation token to monitor for the asynchronous operation.</param>
         /// <returns>The write result of the server operation.</returns>
-        public async Task<WriteResult> UpdateAsync(IDictionary<FieldPath, object> updates, Precondition precondition = null, CancellationToken cancellationToken = default)
+        public Task<WriteResult> UpdateAsync(IDictionary<FieldPath, object> updates, CancellationToken cancellationToken) => UpdateAsync(updates, Precondition.MustExist, cancellationToken);
+
+        /// <summary>
+        /// Asynchronously performs a set of updates on the document referred to by this path, with a precondition.
+        /// </summary>
+        /// <param name="updates">The updates to perform on the document, keyed by the field path to update. Fields not present in this dictionary are not updated. Must not be null or empty.</param>
+        /// <param name="precondition">Optional precondition for updating the document. Must not be null.</param>
+        /// <returns>The write result of the server operation.</returns>
+        public Task<WriteResult> UpdateAsync(IDictionary<FieldPath, object> updates, Precondition precondition) => UpdateAsync(updates, precondition, default);
+
+        /// <summary>
+        /// Asynchronously performs a set of updates on the document referred to by this path, with a precondition.
+        /// </summary>
+        /// <param name="updates">The updates to perform on the document, keyed by the field path to update. Fields not present in this dictionary are not updated. Must not be null or empty.</param>
+        /// <param name="precondition">Optional precondition for updating the document. Must not be null.</param>
+        /// <param name="cancellationToken">A cancellation token to monitor for the asynchronous operation.</param>
+        /// <returns>The write result of the server operation.</returns>
+        public async Task<WriteResult> UpdateAsync(IDictionary<FieldPath, object> updates, Precondition precondition, CancellationToken cancellationToken)
         {
             var batch = Database.StartBatch();
             batch.Update(this, updates, precondition);
@@ -163,13 +274,36 @@ namespace Google.Cloud.Firestore
         }
 
         /// <summary>
+        /// Asynchronously sets data in the document, replacing it completely.
+        /// </summary>
+        /// <param name="documentData">The data to store in the document. Must not be null.</param>
+        /// <returns>The write result of the server operation.</returns>
+        public Task<WriteResult> SetAsync(object documentData) => SetAsync(documentData, SetOptions.Overwrite, default);
+
+        /// <summary>
+        /// Asynchronously sets data in the document, replacing it completely.
+        /// </summary>
+        /// <param name="documentData">The data to store in the document. Must not be null.</param>
+        /// <param name="cancellationToken">A cancellation token to monitor for the asynchronous operation.</param>
+        /// <returns>The write result of the server operation.</returns>
+        public Task<WriteResult> SetAsync(object documentData, CancellationToken cancellationToken) => SetAsync(documentData, SetOptions.Overwrite, cancellationToken);
+
+        /// <summary>
         /// Asynchronously sets data in the document, either replacing it completely or merging fields.
         /// </summary>
         /// <param name="documentData">The data to store in the document. Must not be null.</param>
-        /// <param name="options">The options to use when updating the document. May be null, which is equivalent to <see cref="SetOptions.Overwrite"/>.</param>
+        /// <param name="options">The options to use when updating the document. Must not be null.</param>
+        /// <returns>The write result of the server operation.</returns>
+        public Task<WriteResult> SetAsync(object documentData, SetOptions options) => SetAsync(documentData, options, default);
+
+        /// <summary>
+        /// Asynchronously sets data in the document, either replacing it completely or merging fields.
+        /// </summary>
+        /// <param name="documentData">The data to store in the document. Must not be null.</param>
+        /// <param name="options">The options to use when updating the document. Must not be null.</param>
         /// <param name="cancellationToken">A cancellation token to monitor for the asynchronous operation.</param>
         /// <returns>The write result of the server operation.</returns>
-        public async Task<WriteResult> SetAsync(object documentData, SetOptions options = null, CancellationToken cancellationToken = default)
+        public async Task<WriteResult> SetAsync(object documentData, SetOptions options, CancellationToken cancellationToken)
         {
             var batch = Database.StartBatch();
             batch.Set(this, documentData, options);
@@ -181,7 +315,14 @@ namespace Google.Cloud.Firestore
         /// Asynchronously fetches a snapshot of the document.
         /// </summary>
         /// <returns>A snapshot of the document. The snapshot may represent a missing document.</returns>
-        public Task<DocumentSnapshot> GetSnapshotAsync(CancellationToken cancellationToken = default) =>
+        public Task<DocumentSnapshot> GetSnapshotAsync() => GetSnapshotAsync(default);
+
+        /// <summary>
+        /// Asynchronously fetches a snapshot of the document.
+        /// </summary>
+        /// <param name="cancellationToken">A cancellation token to monitor for the asynchronous operation.</param>
+        /// <returns>A snapshot of the document. The snapshot may represent a missing document.</returns>
+        public Task<DocumentSnapshot> GetSnapshotAsync(CancellationToken cancellationToken) =>
             GetSnapshotAsync(null, cancellationToken);
 
         /// <summary>

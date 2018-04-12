@@ -40,7 +40,7 @@ namespace Google.Cloud.Firestore.Tests
         [InlineData("a/b")]
         public void ValidateId_Invalid(string id)
         {
-            Assert.Throws<ArgumentException>(() => PathUtilities.ValidateId(id));
+            Assert.Throws<ArgumentException>(() => PathUtilities.ValidateId(id, nameof(id)));
         }
 
         [Theory]
@@ -49,7 +49,7 @@ namespace Google.Cloud.Firestore.Tests
         [InlineData("a-b")]
         public void ValidateId_Valid(string id)
         {
-            PathUtilities.ValidateId(id);
+            PathUtilities.ValidateId(id, nameof(id));
         }
 
         [Theory]

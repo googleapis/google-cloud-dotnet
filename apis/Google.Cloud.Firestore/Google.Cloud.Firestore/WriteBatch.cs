@@ -69,12 +69,19 @@ namespace Google.Cloud.Firestore
         }
 
         /// <summary>
-        /// Adds a write operation that deletes the specified document, with an optional precondition.
+        /// Adds a write operation that unconditionally deletes the specified document.
         /// </summary>
         /// <param name="documentReference">A document reference indicating the path of the document to delete. Must not be null.</param>
-        /// <param name="precondition">Optional precondition for deletion. May be null, in which case the deletion is unconditional.</param>
         /// <returns>This batch, for the purposes of method chaining.</returns>
-        public WriteBatch Delete(DocumentReference documentReference, Precondition precondition = null)
+        public WriteBatch Delete(DocumentReference documentReference) => Delete(documentReference, Precondition.None);
+
+        /// <summary>
+        /// Adds a write operation that deletes the specified document, with a precondition.
+        /// </summary>
+        /// <param name="documentReference">A document reference indicating the path of the document to delete. Must not be null.</param>
+        /// <param name="precondition">Optional precondition for deletion. Must not be null</param>
+        /// <returns>This batch, for the purposes of method chaining.</returns>
+        public WriteBatch Delete(DocumentReference documentReference, Precondition precondition)
         {
             GaxPreconditions.CheckNotNull(documentReference, nameof(documentReference));
             var write = new Write
@@ -87,17 +94,34 @@ namespace Google.Cloud.Firestore
         }
 
         /// <summary>
+        /// Adds an update operation that updates just the specified fields paths in the document, with the corresponding values. A precondition of <see cref="Precondition.MustExist" /> is applied.
+        /// </summary>
+        /// <param name="documentReference">A document reference indicating the path of the document to update. Must not be null.</param>
+        /// <param name="updates">The updates to perform on the document, keyed by the dot-separated field path to update. Fields not present in this dictionary are not updated. Must not be null or empty.</param>
+        /// <returns>This batch, for the purposes of method chaining.</returns>
+        public WriteBatch Update(DocumentReference documentReference, IDictionary<string, object> updates) => Update(documentReference, updates, Precondition.MustExist);
+
+        /// <summary>
         /// Adds an update operation that updates just the specified fields paths in the document, with the corresponding values.
         /// </summary>
         /// <param name="documentReference">A document reference indicating the path of the document to update. Must not be null.</param>
         /// <param name="updates">The updates to perform on the document, keyed by the dot-separated field path to update. Fields not present in this dictionary are not updated. Must not be null or empty.</param>
-        /// <param name="precondition">Optional precondition for updating the document. May be null, which is equivalent to <see cref="Precondition.MustExist"/>.</param>
+        /// <param name="precondition">Precondition for updating the document. Must not be null.</param>
         /// <returns>This batch, for the purposes of method chaining.</returns>
-        public WriteBatch Update(DocumentReference documentReference, IDictionary<string, object> updates, Precondition precondition = null)
+        public WriteBatch Update(DocumentReference documentReference, IDictionary<string, object> updates, Precondition precondition)
         {
             GaxPreconditions.CheckNotNull(updates, nameof(updates));
             return Update(documentReference, updates.ToDictionary(pair => FieldPath.FromDotSeparatedString(pair.Key), pair => pair.Value), precondition);
         }
+
+        /// <summary>
+        /// Adds an update operation that updates just the specified field in the document, with the corresponding values. A precondition of <see cref="Precondition.MustExist" /> is applied.
+        /// </summary>
+        /// <param name="documentReference">A document reference indicating the path of the document to update. Must not be null.</param>
+        /// <param name="field">The dot-separated name of the field to update. Must not be null.</param>
+        /// <param name="value">The new value for the field. May be null.</param>
+        /// <returns>This batch, for the purposes of method chaining.</returns>
+        public WriteBatch Update(DocumentReference documentReference, string field, object value) => Update(documentReference, field, value, Precondition.MustExist);
 
         /// <summary>
         /// Adds an update operation that updates just the specified field in the document, with the corresponding values.
@@ -105,27 +129,34 @@ namespace Google.Cloud.Firestore
         /// <param name="documentReference">A document reference indicating the path of the document to update. Must not be null.</param>
         /// <param name="field">The dot-separated name of the field to update. Must not be null.</param>
         /// <param name="value">The new value for the field. May be null.</param>
-        /// <param name="precondition">Optional precondition for updating the document. May be null, which is equivalent to <see cref="Precondition.MustExist"/>.</param>
+        /// <param name="precondition">Precondition for updating the document. Must not be null.</param>
         /// <returns>This batch, for the purposes of method chaining.</returns>
-        public WriteBatch Update(DocumentReference documentReference, string field, object value, Precondition precondition = null)
+        public WriteBatch Update(DocumentReference documentReference, string field, object value, Precondition precondition)
         {
             GaxPreconditions.CheckNotNull(field, nameof(field));
             return Update(documentReference, new Dictionary<string, object> { { field, value } }, precondition);
         }
 
         /// <summary>
+        /// Adds an update operation that updates just the specified fields paths in the document, with the corresponding values. A precondition of <see cref="Precondition.MustExist" /> is applied.
+        /// </summary>
+        /// <param name="documentReference">A document reference indicating the path of the document to update. Must not be null.</param>
+        /// <param name="updates">The updates to perform on the document, keyed by the field path to update. Fields not present in this dictionary are not updated. Must not be null or empty.</param>
+        /// <returns>This batch, for the purposes of method chaining.</returns>
+        public WriteBatch Update(DocumentReference documentReference, IDictionary<FieldPath, object> updates) => Update(documentReference, updates, Precondition.MustExist);
+
+        /// <summary>
         /// Adds an update operation that updates just the specified fields paths in the document, with the corresponding values.
         /// </summary>
         /// <param name="documentReference">A document reference indicating the path of the document to update. Must not be null.</param>
         /// <param name="updates">The updates to perform on the document, keyed by the field path to update. Fields not present in this dictionary are not updated. Must not be null or empty.</param>
-        /// <param name="precondition">Optional precondition for updating the document. May be null, which is equivalent to <see cref="Precondition.MustExist"/>.</param>
+        /// <param name="precondition">Precondition for updating the document. Must not be null.</param>
         /// <returns>This batch, for the purposes of method chaining.</returns>
-        public WriteBatch Update(DocumentReference documentReference, IDictionary<FieldPath, object> updates, Precondition precondition = null)
+        public WriteBatch Update(DocumentReference documentReference, IDictionary<FieldPath, object> updates, Precondition precondition)
         {
             GaxPreconditions.CheckNotNull(documentReference, nameof(documentReference));
             GaxPreconditions.CheckNotNull(updates, nameof(updates));
             GaxPreconditions.CheckArgument(updates.Count != 0, nameof(updates), "Empty set of updates specified");
-            GaxPreconditions.CheckArgument(precondition?.Proto.Exists != true, nameof(precondition), "Cannot specify a must-exist precondition for update");
 
             var serializedUpdates = updates.ToDictionary(pair => pair.Key, pair => ValueSerializer.Serialize(pair.Value));
             var expanded = ExpandObject(serializedUpdates);
@@ -144,19 +175,27 @@ namespace Google.Cloud.Firestore
         }
 
         /// <summary>
+        /// Adds an operation that sets data in a document, replacing it completely.
+        /// </summary>
+        /// <param name="documentReference">A document reference indicating the path of the document to update. Must not be null.</param>
+        /// <param name="documentData">The data to store in the document. Must not be null.</param>
+        /// <returns>This batch, for the purposes of method chaining.</returns>
+        public WriteBatch Set(DocumentReference documentReference, object documentData) => Set(documentReference, documentData, SetOptions.Overwrite);
+
+        /// <summary>
         /// Adds an operation that sets data in a document, either replacing it completely or merging fields.
         /// </summary>
         /// <param name="documentReference">A document reference indicating the path of the document to update. Must not be null.</param>
         /// <param name="documentData">The data to store in the document. Must not be null.</param>
-        /// <param name="options">The options to use when setting data in the document. May be null, which is equivalent to <see cref="SetOptions.Overwrite"/>.</param>
+        /// <param name="options">The options to use when setting data in the document. Must not be null.</param>
         /// <returns>This batch, for the purposes of method chaining.</returns>
-        public WriteBatch Set(DocumentReference documentReference, object documentData, SetOptions options = null)
+        public WriteBatch Set(DocumentReference documentReference, object documentData, SetOptions options)
         {
             GaxPreconditions.CheckNotNull(documentReference, nameof(documentReference));
             GaxPreconditions.CheckNotNull(documentData, nameof(documentData));
+            GaxPreconditions.CheckNotNull(options, nameof(options));
 
             var fields = ValueSerializer.SerializeMap(documentData);
-            options = options ?? SetOptions.Overwrite;
             var serverTimestamps = new List<FieldPath>();
             var deletes = new List<FieldPath>();
             FindSentinels(fields, FieldPath.Empty, serverTimestamps, deletes);
@@ -221,7 +260,14 @@ namespace Google.Cloud.Firestore
         /// Commits the batch on the server.
         /// </summary>
         /// <returns>The write results from the commit.</returns>
-        public Task<IList<WriteResult>> CommitAsync(CancellationToken cancellationToken = default) =>
+        public Task<IList<WriteResult>> CommitAsync() => CommitAsync(default);
+
+        /// <summary>
+        /// Commits the batch on the server.
+        /// </summary>
+        /// <param name="cancellationToken">A cancellation token to monitor for the asynchronous operation.</param>
+        /// <returns>The write results from the commit.</returns>
+        public Task<IList<WriteResult>> CommitAsync(CancellationToken cancellationToken) =>
             CommitAsync(ByteString.Empty, cancellationToken);
 
         internal async Task<IList<WriteResult>> CommitAsync(ByteString transactionId, CancellationToken cancellationToken)
