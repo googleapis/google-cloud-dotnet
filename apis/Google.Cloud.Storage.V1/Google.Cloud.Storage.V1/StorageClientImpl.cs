@@ -143,22 +143,51 @@ namespace Google.Cloud.Storage.V1
                 "Object bucket '{0}' is invalid", obj.Bucket);
         }
 
-        private void ApplyEncryptionKey<TRequest>(EncryptionKey keyFromOptions, ClientServiceRequest<TRequest> request)
+        /// <summary>
+        /// Applies an encryption key to a request. Note that there is no overload without a kmsNameFromOptions, even though most
+        /// requests don't have one, just to avoid missing one accidentally.
+        /// </summary>
+        /// <param name="keyFromOptions">The encryption key specified in the operation-specific options, or null.</param>
+        /// <param name="kmsNameFromOptions">The KMS key name specified in the operation-specific options, or null.</param>
+        /// <param name="request">The request to apply this to.</param>
+        private void ApplyEncryptionKey<TRequest>(EncryptionKey keyFromOptions, string kmsNameFromOptions, ClientServiceRequest<TRequest> request)
         {
-            var effectiveKey = keyFromOptions ?? EncryptionKey;
+            var effectiveKey = GetEffectiveEncryptionKey(keyFromOptions, kmsNameFromOptions);
             request.ModifyRequest += effectiveKey.ModifyRequest;
         }
 
-        private void ApplyEncryptionKey(EncryptionKey keyFromOptions, CustomMediaUpload upload)
+        private void ApplyEncryptionKey(EncryptionKey keyFromOptions, string kmsNameFromOptions, CustomMediaUpload upload)
         {
-            var effectiveKey = keyFromOptions ?? EncryptionKey;
+            var effectiveKey = GetEffectiveEncryptionKey(keyFromOptions, kmsNameFromOptions);
             upload.Options.ModifySessionInitiationRequest += effectiveKey.ModifyRequest;
         }
 
+        // Downloaders don't have a KMS key name.
         private void ApplyEncryptionKey(EncryptionKey keyFromOptions, MediaDownloader download)
         {
             var effectiveKey = keyFromOptions ?? EncryptionKey;
             download.ModifyRequest += effectiveKey.ModifyRequest;
+        }
+
+        // Work out which EncryptionKey to use for a request, based on values from options. The intention
+        // is that a client-specified encryption key can be overridden by either option, but the two
+        // options can't be used together to end up specifying both a CMEK and a CSEK.
+        // Only visible for test purposes.
+        internal EncryptionKey GetEffectiveEncryptionKey(EncryptionKey keyFromOptions, string kmsNameFromOptions)
+        {
+            // Simple: if there's no KMS name, just use keyFromOptions or EncryptionKey
+            if (kmsNameFromOptions == null)
+            {
+                return keyFromOptions ?? EncryptionKey;
+            }
+            // We have a KMS name, and the key option is not an actual CSEK: we don't want to use
+            // a CSEK for this request.
+            if (keyFromOptions == null || keyFromOptions == EncryptionKey.None)
+            {
+                return EncryptionKey.None;
+            }
+            // While this could be implemented in options, it makes sense to do it all in one place.
+            throw new ArgumentException("Can't specify both an EncryptionKey and KmsKeyName in the same options", "options");
         }
 
         /// <inheritdoc />

@@ -46,7 +46,7 @@ namespace Google.Cloud.Storage.V1
         {
             var request = Service.Objects.Get(bucket, objectName);
             request.ModifyRequest += _versionHeaderAction;
-            ApplyEncryptionKey(options?.EncryptionKey, request);
+            ApplyEncryptionKey(options?.EncryptionKey, kmsNameFromOptions: null, request);
             options?.ModifyRequest(request);
             return request;
         }

@@ -74,7 +74,7 @@ namespace Google.Cloud.Storage.V1
             Object obj = options?.ExtraMetadata ?? new Object();
             var request = Service.Objects.Rewrite(obj, sourceBucket, sourceObjectName, destinationBucket, destinationObjectName);
             options?.ModifyRequest(request);
-            ApplyEncryptionKey(options?.EncryptionKey, request);
+            ApplyEncryptionKey(options?.EncryptionKey, options?.KmsKeyName, request);
             request.ModifyRequest += (options?.SourceEncryptionKey ?? EncryptionKey).ModifyRequestForRewriteSource;
             request.ModifyRequest += _versionHeaderAction;
             return request;

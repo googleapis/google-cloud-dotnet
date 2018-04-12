@@ -159,6 +159,7 @@ namespace Google.Cloud.Storage.V1.IntegrationTests
             CreateAndPopulateReadBucket();
             CreateBucket(BucketBeginningWithZ, false);
             CreateBucket(LabelsTestBucket, false);
+            CreateBucket(InitiallyEmptyBucket, false);
 
             RequesterPaysClient = CreateRequesterPaysClient();
             if (RequesterPaysClient != null)
