@@ -210,6 +210,19 @@
       "Microsoft.AspNetCore.Http": "1.0.2"
     }
   },
+  
+  {
+    "id": "Google.Cloud.Dialogflow.V2",
+    "productName": "Google Cloud Dialogflow",
+    "productUrl": "https://cloud.google.com/dialogflow-enterprise/",
+    "version": "1.0.0-beta01",
+    "type": "grpc",
+    "description": "Recommended Google client library to access the Google Dialogflow API.",
+    "tags": [ "dialogflow", "iot" ],
+    "dependencies": {
+      "Google.LongRunning": "1.0.0"
+    }
+  },
 
   {
     "id": "Google.Cloud.Dlp.V2",
