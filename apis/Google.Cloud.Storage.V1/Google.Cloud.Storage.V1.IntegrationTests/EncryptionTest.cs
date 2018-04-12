@@ -20,6 +20,10 @@ using static Google.Cloud.Storage.V1.IntegrationTests.TestHelpers;
 
 namespace Google.Cloud.Storage.V1.IntegrationTests
 {
+    /// <summary>
+    /// Tests for customer-supplied encryption keys (CSEK). For customer-managed encryption keys (CMEK),
+    /// see <see cref="KmsTest"/>.
+    /// </summary>
     [Collection(nameof(StorageFixture))]
     public class EncryptionTest
     {
