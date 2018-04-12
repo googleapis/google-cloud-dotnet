@@ -62,6 +62,7 @@ namespace Google.Cloud.Storage.V1.Tests
             Assert.Null(upload.IfGenerationNotMatch);
             Assert.Null(upload.IfMetagenerationMatch);
             Assert.Null(upload.IfMetagenerationNotMatch);
+            Assert.Null(upload.KmsKeyName);
             Assert.Null(upload.PredefinedAcl);
             Assert.Null(upload.Projection);
             Assert.Null(upload.UserProject);
@@ -76,6 +77,7 @@ namespace Google.Cloud.Storage.V1.Tests
                 ChunkSize = UploadObjectOptions.MinimumChunkSize * 3,
                 IfGenerationMatch = 1L,
                 IfMetagenerationMatch = 2L,
+                KmsKeyName = "key",
                 PredefinedAcl = PredefinedObjectAcl.BucketOwnerRead,
                 Projection = Projection.Full,
                 UserProject = "proj"
@@ -85,6 +87,7 @@ namespace Google.Cloud.Storage.V1.Tests
             Assert.Null(upload.IfGenerationNotMatch);
             Assert.Equal(2L, upload.IfMetagenerationMatch);
             Assert.Null(upload.IfMetagenerationNotMatch);
+            Assert.Equal("key", upload.KmsKeyName);
             Assert.Equal(PredefinedAclEnum.BucketOwnerRead, upload.PredefinedAcl);
             Assert.Equal(ProjectionEnum.Full, upload.Projection);
             Assert.Equal("proj", upload.UserProject);

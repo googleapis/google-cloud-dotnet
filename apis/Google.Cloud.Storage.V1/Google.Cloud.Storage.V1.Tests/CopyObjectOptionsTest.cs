@@ -26,6 +26,7 @@ namespace Google.Cloud.Storage.V1.Tests
             var request = new RewriteRequest(null, null, "sourceBucket", "sourceObject", "destBucket", "destObject");
             var options = new CopyObjectOptions();
             options.ModifyRequest(request);
+            Assert.Null(request.DestinationKmsKeyName);
             Assert.Null(request.DestinationPredefinedAcl);
             Assert.Null(request.IfGenerationMatch);
             Assert.Null(request.IfGenerationNotMatch);
@@ -51,11 +52,13 @@ namespace Google.Cloud.Storage.V1.Tests
                 IfMetagenerationMatch = 2L,
                 IfSourceGenerationMatch = 3L,
                 IfSourceMetagenerationMatch = 4L,
+                KmsKeyName = "key",
                 Projection = Projection.Full,
                 SourceGeneration = 5L,
                 UserProject = "proj"
             };
             options.ModifyRequest(request);
+            Assert.Equal("key", request.DestinationKmsKeyName);
             Assert.Equal(RewriteRequest.DestinationPredefinedAclEnum.Private__, request.DestinationPredefinedAcl);
             Assert.Equal(1L, request.IfGenerationMatch);
             Assert.Null(request.IfGenerationNotMatch);
