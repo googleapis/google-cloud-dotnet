@@ -89,10 +89,16 @@ namespace Google.Cloud.Storage.V1
         public Projection? Projection { get; set; }
 
         /// <summary>
-        /// The encryption key to use for this operation. If this property is null, the <see cref="StorageClient.EncryptionKey"/>
+        /// The customer-supplied encryption key to use for this operation. If this property is null, the <see cref="StorageClient.EncryptionKey"/>
         /// will be used instead. Use <see cref="EncryptionKey.None"/> to remove encryption headers from this request.
         /// </summary>
         public EncryptionKey EncryptionKey { get; set; }
+
+        /// <summary>
+        /// The name of the Cloud KMS key to use to encrypt the object. If this is null and customer-supplied encryption is not being used,
+        /// the bucket encryption defaults will be used to determine the encryption for the object.
+        /// </summary>
+        public string KmsKeyName { get; set; }
 
         /// <summary>
         /// If set, this is the ID of the project which will be billed for the request.
@@ -156,6 +162,12 @@ namespace Google.Cloud.Storage.V1
             if (UserProject != null)
             {
                 upload.UserProject = UserProject;
+            }
+
+            // Note: specifying this and EncryptionKey as non-null/non-None is invalid, but that's checked in StorageClientImpl.
+            if (KmsKeyName != null)
+            {
+                upload.KmsKeyName = KmsKeyName;
             }
         }
     }

@@ -110,6 +110,11 @@ namespace Google.Cloud.Storage.V1
         /// </summary>
         public EncryptionKey SourceEncryptionKey { get; set; }
 
+        /// <summary>
+        /// The name of the Cloud KMS key to use to encrypt the new object. If this is null and customer-supplied encryption is not being used,
+        /// the bucket encryption defaults will be used to determine the encryption for the object.
+        /// </summary>
+        public string KmsKeyName { get; set; }
 
         /// <summary>
         /// If set, this is the ID of the project which will be billed for the request.
@@ -188,6 +193,12 @@ namespace Google.Cloud.Storage.V1
             if (UserProject != null)
             {
                 request.UserProject = UserProject;
+            }
+            
+            // Note: specifying this and EncryptionKey as non-null/non-None is invalid, but that's checked in StorageClientImpl.
+            if (KmsKeyName != null)
+            {
+                request.DestinationKmsKeyName = KmsKeyName;
             }
         }
     }
