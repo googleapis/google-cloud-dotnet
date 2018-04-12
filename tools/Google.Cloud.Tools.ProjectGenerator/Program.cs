@@ -65,6 +65,7 @@ namespace Google.Cloud.Tools.ProjectGenerator
             { "Microsoft.NET.Test.Sdk", "15.5.0" },
             { "xunit", "2.3.1" },
             { "xunit.runner.visualstudio", "2.3.1" },
+            { "Xunit.SkippableFact", "1.3.3" },
             { "Moq", "4.7.145" }
         };
 
