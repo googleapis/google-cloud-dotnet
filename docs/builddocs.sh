@@ -28,9 +28,7 @@ build_api_docs() {
     dotnet run --no-build --no-restore -p ../tools/Google.Cloud.Tools.GenerateDocfxSources -- $api
   fi
   cp filterConfig.yml output/$api
-  $DOCFX metadata --logLevel Warning -f output/$api/docfx.json | tee errors.txt \
-      | grep -v "Invalid file link" \
-      | grep -v "Invalid cref value \"s::"
+  $DOCFX metadata --logLevel Warning -f output/$api/docfx.json | tee errors.txt | grep -v "Invalid file link"
   (! grep --quiet 'Build failed.' errors.txt)
   dotnet run --no-build --no-restore -p ../tools/Google.Cloud.Tools.GenerateSnippetMarkdown -- $api
   
