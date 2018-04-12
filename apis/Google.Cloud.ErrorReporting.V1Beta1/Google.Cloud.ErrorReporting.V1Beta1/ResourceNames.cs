@@ -15,15 +15,15 @@
 // Generated code. DO NOT EDIT!
 
 using gax = Google.Api.Gax;
-using s = System;
-using System.Linq;
+using sys = System;
+using linq = System.Linq;
 
 namespace Google.Cloud.ErrorReporting.V1Beta1
 {
     /// <summary>
     /// Resource name for the 'project' resource.
     /// </summary>
-    public sealed partial class ProjectName : gax::IResourceName, s::IEquatable<ProjectName>
+    public sealed partial class ProjectName : gax::IResourceName, sys::IEquatable<ProjectName>
     {
         private static readonly gax::PathTemplate s_template = new gax::PathTemplate("projects/{project}");
 
@@ -45,7 +45,7 @@ namespace Google.Cloud.ErrorReporting.V1Beta1
         /// <see cref="ProjectName"/> instance.
         /// </summary>
         /// <remarks>
-        /// This method still throws <see cref="s::ArgumentNullException"/> if <paramref name="projectName"/> is null,
+        /// This method still throws <see cref="sys::ArgumentNullException"/> if <paramref name="projectName"/> is null,
         /// as this would usually indicate a programming error rather than a data error.
         /// </remarks>
         /// <param name="projectName">The project resource name in string form. Must not be <c>null</c>.</param>
@@ -108,7 +108,7 @@ namespace Google.Cloud.ErrorReporting.V1Beta1
     /// <summary>
     /// Resource name for the 'group' resource.
     /// </summary>
-    public sealed partial class GroupName : gax::IResourceName, s::IEquatable<GroupName>
+    public sealed partial class GroupName : gax::IResourceName, sys::IEquatable<GroupName>
     {
         private static readonly gax::PathTemplate s_template = new gax::PathTemplate("projects/{project}/groups/{group}");
 
@@ -130,7 +130,7 @@ namespace Google.Cloud.ErrorReporting.V1Beta1
         /// <see cref="GroupName"/> instance.
         /// </summary>
         /// <remarks>
-        /// This method still throws <see cref="s::ArgumentNullException"/> if <paramref name="groupName"/> is null,
+        /// This method still throws <see cref="sys::ArgumentNullException"/> if <paramref name="groupName"/> is null,
         /// as this would usually indicate a programming error rather than a data error.
         /// </remarks>
         /// <param name="groupName">The group resource name in string form. Must not be <c>null</c>.</param>
@@ -201,9 +201,9 @@ namespace Google.Cloud.ErrorReporting.V1Beta1
     public partial class DeleteEventsRequest
     {
         /// <summary>
-        /// <see cref="ProjectName"/>-typed view over the <see cref="ProjectName"/> resource name property.
+        /// <see cref="Google.Cloud.ErrorReporting.V1Beta1.ProjectName"/>-typed view over the <see cref="ProjectName"/> resource name property.
         /// </summary>
-        public ProjectName ProjectNameAsProjectName
+        public Google.Cloud.ErrorReporting.V1Beta1.ProjectName ProjectNameAsProjectName
         {
             get { return string.IsNullOrEmpty(ProjectName) ? null : Google.Cloud.ErrorReporting.V1Beta1.ProjectName.Parse(ProjectName); }
             set { ProjectName = value != null ? value.ToString() : ""; }
@@ -214,9 +214,9 @@ namespace Google.Cloud.ErrorReporting.V1Beta1
     public partial class ErrorGroup
     {
         /// <summary>
-        /// <see cref="GroupName"/>-typed view over the <see cref="Name"/> resource name property.
+        /// <see cref="Google.Cloud.ErrorReporting.V1Beta1.GroupName"/>-typed view over the <see cref="Name"/> resource name property.
         /// </summary>
-        public GroupName GroupName
+        public Google.Cloud.ErrorReporting.V1Beta1.GroupName GroupName
         {
             get { return string.IsNullOrEmpty(Name) ? null : Google.Cloud.ErrorReporting.V1Beta1.GroupName.Parse(Name); }
             set { Name = value != null ? value.ToString() : ""; }
@@ -227,9 +227,9 @@ namespace Google.Cloud.ErrorReporting.V1Beta1
     public partial class GetGroupRequest
     {
         /// <summary>
-        /// <see cref="GroupName"/>-typed view over the <see cref="GroupName"/> resource name property.
+        /// <see cref="Google.Cloud.ErrorReporting.V1Beta1.GroupName"/>-typed view over the <see cref="GroupName"/> resource name property.
         /// </summary>
-        public GroupName GroupNameAsGroupName
+        public Google.Cloud.ErrorReporting.V1Beta1.GroupName GroupNameAsGroupName
         {
             get { return string.IsNullOrEmpty(GroupName) ? null : Google.Cloud.ErrorReporting.V1Beta1.GroupName.Parse(GroupName); }
             set { GroupName = value != null ? value.ToString() : ""; }
@@ -240,9 +240,9 @@ namespace Google.Cloud.ErrorReporting.V1Beta1
     public partial class ListEventsRequest
     {
         /// <summary>
-        /// <see cref="ProjectName"/>-typed view over the <see cref="ProjectName"/> resource name property.
+        /// <see cref="Google.Cloud.ErrorReporting.V1Beta1.ProjectName"/>-typed view over the <see cref="ProjectName"/> resource name property.
         /// </summary>
-        public ProjectName ProjectNameAsProjectName
+        public Google.Cloud.ErrorReporting.V1Beta1.ProjectName ProjectNameAsProjectName
         {
             get { return string.IsNullOrEmpty(ProjectName) ? null : Google.Cloud.ErrorReporting.V1Beta1.ProjectName.Parse(ProjectName); }
             set { ProjectName = value != null ? value.ToString() : ""; }
@@ -253,9 +253,9 @@ namespace Google.Cloud.ErrorReporting.V1Beta1
     public partial class ListGroupStatsRequest
     {
         /// <summary>
-        /// <see cref="ProjectName"/>-typed view over the <see cref="ProjectName"/> resource name property.
+        /// <see cref="Google.Cloud.ErrorReporting.V1Beta1.ProjectName"/>-typed view over the <see cref="ProjectName"/> resource name property.
         /// </summary>
-        public ProjectName ProjectNameAsProjectName
+        public Google.Cloud.ErrorReporting.V1Beta1.ProjectName ProjectNameAsProjectName
         {
             get { return string.IsNullOrEmpty(ProjectName) ? null : Google.Cloud.ErrorReporting.V1Beta1.ProjectName.Parse(ProjectName); }
             set { ProjectName = value != null ? value.ToString() : ""; }
@@ -266,9 +266,9 @@ namespace Google.Cloud.ErrorReporting.V1Beta1
     public partial class ReportErrorEventRequest
     {
         /// <summary>
-        /// <see cref="ProjectName"/>-typed view over the <see cref="ProjectName"/> resource name property.
+        /// <see cref="Google.Cloud.ErrorReporting.V1Beta1.ProjectName"/>-typed view over the <see cref="ProjectName"/> resource name property.
         /// </summary>
-        public ProjectName ProjectNameAsProjectName
+        public Google.Cloud.ErrorReporting.V1Beta1.ProjectName ProjectNameAsProjectName
         {
             get { return string.IsNullOrEmpty(ProjectName) ? null : Google.Cloud.ErrorReporting.V1Beta1.ProjectName.Parse(ProjectName); }
             set { ProjectName = value != null ? value.ToString() : ""; }

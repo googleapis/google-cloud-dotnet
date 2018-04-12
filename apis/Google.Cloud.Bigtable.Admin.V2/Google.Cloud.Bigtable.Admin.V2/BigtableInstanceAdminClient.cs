@@ -18,10 +18,10 @@ using gax = Google.Api.Gax;
 using gaxgrpc = Google.Api.Gax.Grpc;
 using iam = Google.Cloud.Iam.V1;
 using lro = Google.LongRunning;
-using proto = Google.Protobuf;
-using protowkt = Google.Protobuf.WellKnownTypes;
+using pb = Google.Protobuf;
+using pbwkt = Google.Protobuf.WellKnownTypes;
 using grpccore = Grpc.Core;
-using s = System;
+using sys = System;
 using sc = System.Collections;
 using scg = System.Collections.Generic;
 using sco = System.Collections.ObjectModel;
@@ -90,7 +90,7 @@ namespace Google.Cloud.Bigtable.Admin.V2
         /// <item><description><see cref="grpccore::StatusCode.Unavailable"/></description></item>
         /// </list>
         /// </remarks>
-        public static s::Predicate<grpccore::RpcException> IdempotentRetryFilter { get; } =
+        public static sys::Predicate<grpccore::RpcException> IdempotentRetryFilter { get; } =
             gaxgrpc::RetrySettings.FilterForStatusCodes(grpccore::StatusCode.DeadlineExceeded, grpccore::StatusCode.Unavailable);
 
         /// <summary>
@@ -103,7 +103,7 @@ namespace Google.Cloud.Bigtable.Admin.V2
         /// <item><description><see cref="grpccore::StatusCode.Unavailable"/></description></item>
         /// </list>
         /// </remarks>
-        public static s::Predicate<grpccore::RpcException> NonIdempotentRetryFilter { get; } =
+        public static sys::Predicate<grpccore::RpcException> NonIdempotentRetryFilter { get; } =
             gaxgrpc::RetrySettings.FilterForStatusCodes(grpccore::StatusCode.Unavailable);
 
         /// <summary>
@@ -121,8 +121,8 @@ namespace Google.Cloud.Bigtable.Admin.V2
         /// </list>
         /// </remarks>
         public static gaxgrpc::BackoffSettings GetDefaultRetryBackoff() => new gaxgrpc::BackoffSettings(
-            delay: s::TimeSpan.FromMilliseconds(5),
-            maxDelay: s::TimeSpan.FromMilliseconds(60000),
+            delay: sys::TimeSpan.FromMilliseconds(5),
+            maxDelay: sys::TimeSpan.FromMilliseconds(60000),
             delayMultiplier: 2.0
         );
 
@@ -141,8 +141,8 @@ namespace Google.Cloud.Bigtable.Admin.V2
         /// </list>
         /// </remarks>
         public static gaxgrpc::BackoffSettings GetDefaultTimeoutBackoff() => new gaxgrpc::BackoffSettings(
-            delay: s::TimeSpan.FromMilliseconds(60000),
-            maxDelay: s::TimeSpan.FromMilliseconds(60000),
+            delay: sys::TimeSpan.FromMilliseconds(60000),
+            maxDelay: sys::TimeSpan.FromMilliseconds(60000),
             delayMultiplier: 1.0
         );
 
@@ -171,7 +171,7 @@ namespace Google.Cloud.Bigtable.Admin.V2
             gaxgrpc::CallTiming.FromRetry(new gaxgrpc::RetrySettings(
                 retryBackoff: GetDefaultRetryBackoff(),
                 timeoutBackoff: GetDefaultTimeoutBackoff(),
-                totalExpiration: gax::Expiration.FromTimeout(s::TimeSpan.FromMilliseconds(600000)),
+                totalExpiration: gax::Expiration.FromTimeout(sys::TimeSpan.FromMilliseconds(600000)),
                 retryFilter: NonIdempotentRetryFilter
             )));
 
@@ -190,10 +190,10 @@ namespace Google.Cloud.Bigtable.Admin.V2
         public lro::OperationsSettings CreateInstanceOperationsSettings { get; set; } = new lro::OperationsSettings
         {
             DefaultPollSettings = new gax::PollSettings(
-                gax::Expiration.FromTimeout(s::TimeSpan.FromMilliseconds(300000L)),
-                s::TimeSpan.FromMilliseconds(500L),
+                gax::Expiration.FromTimeout(sys::TimeSpan.FromMilliseconds(300000L)),
+                sys::TimeSpan.FromMilliseconds(500L),
                 1.5,
-                s::TimeSpan.FromMilliseconds(5000L))
+                sys::TimeSpan.FromMilliseconds(5000L))
         };
 
         /// <summary>
@@ -222,7 +222,7 @@ namespace Google.Cloud.Bigtable.Admin.V2
             gaxgrpc::CallTiming.FromRetry(new gaxgrpc::RetrySettings(
                 retryBackoff: GetDefaultRetryBackoff(),
                 timeoutBackoff: GetDefaultTimeoutBackoff(),
-                totalExpiration: gax::Expiration.FromTimeout(s::TimeSpan.FromMilliseconds(600000)),
+                totalExpiration: gax::Expiration.FromTimeout(sys::TimeSpan.FromMilliseconds(600000)),
                 retryFilter: IdempotentRetryFilter
             )));
 
@@ -252,7 +252,7 @@ namespace Google.Cloud.Bigtable.Admin.V2
             gaxgrpc::CallTiming.FromRetry(new gaxgrpc::RetrySettings(
                 retryBackoff: GetDefaultRetryBackoff(),
                 timeoutBackoff: GetDefaultTimeoutBackoff(),
-                totalExpiration: gax::Expiration.FromTimeout(s::TimeSpan.FromMilliseconds(600000)),
+                totalExpiration: gax::Expiration.FromTimeout(sys::TimeSpan.FromMilliseconds(600000)),
                 retryFilter: IdempotentRetryFilter
             )));
 
@@ -282,7 +282,7 @@ namespace Google.Cloud.Bigtable.Admin.V2
             gaxgrpc::CallTiming.FromRetry(new gaxgrpc::RetrySettings(
                 retryBackoff: GetDefaultRetryBackoff(),
                 timeoutBackoff: GetDefaultTimeoutBackoff(),
-                totalExpiration: gax::Expiration.FromTimeout(s::TimeSpan.FromMilliseconds(600000)),
+                totalExpiration: gax::Expiration.FromTimeout(sys::TimeSpan.FromMilliseconds(600000)),
                 retryFilter: IdempotentRetryFilter
             )));
 
@@ -301,10 +301,10 @@ namespace Google.Cloud.Bigtable.Admin.V2
         public lro::OperationsSettings PartialUpdateInstanceOperationsSettings { get; set; } = new lro::OperationsSettings
         {
             DefaultPollSettings = new gax::PollSettings(
-                gax::Expiration.FromTimeout(s::TimeSpan.FromMilliseconds(300000L)),
-                s::TimeSpan.FromMilliseconds(500L),
+                gax::Expiration.FromTimeout(sys::TimeSpan.FromMilliseconds(300000L)),
+                sys::TimeSpan.FromMilliseconds(500L),
                 1.5,
-                s::TimeSpan.FromMilliseconds(5000L))
+                sys::TimeSpan.FromMilliseconds(5000L))
         };
 
         /// <summary>
@@ -333,7 +333,7 @@ namespace Google.Cloud.Bigtable.Admin.V2
             gaxgrpc::CallTiming.FromRetry(new gaxgrpc::RetrySettings(
                 retryBackoff: GetDefaultRetryBackoff(),
                 timeoutBackoff: GetDefaultTimeoutBackoff(),
-                totalExpiration: gax::Expiration.FromTimeout(s::TimeSpan.FromMilliseconds(600000)),
+                totalExpiration: gax::Expiration.FromTimeout(sys::TimeSpan.FromMilliseconds(600000)),
                 retryFilter: IdempotentRetryFilter
             )));
 
@@ -362,7 +362,7 @@ namespace Google.Cloud.Bigtable.Admin.V2
             gaxgrpc::CallTiming.FromRetry(new gaxgrpc::RetrySettings(
                 retryBackoff: GetDefaultRetryBackoff(),
                 timeoutBackoff: GetDefaultTimeoutBackoff(),
-                totalExpiration: gax::Expiration.FromTimeout(s::TimeSpan.FromMilliseconds(600000)),
+                totalExpiration: gax::Expiration.FromTimeout(sys::TimeSpan.FromMilliseconds(600000)),
                 retryFilter: NonIdempotentRetryFilter
             )));
 
@@ -381,10 +381,10 @@ namespace Google.Cloud.Bigtable.Admin.V2
         public lro::OperationsSettings CreateClusterOperationsSettings { get; set; } = new lro::OperationsSettings
         {
             DefaultPollSettings = new gax::PollSettings(
-                gax::Expiration.FromTimeout(s::TimeSpan.FromMilliseconds(300000L)),
-                s::TimeSpan.FromMilliseconds(500L),
+                gax::Expiration.FromTimeout(sys::TimeSpan.FromMilliseconds(300000L)),
+                sys::TimeSpan.FromMilliseconds(500L),
                 1.5,
-                s::TimeSpan.FromMilliseconds(5000L))
+                sys::TimeSpan.FromMilliseconds(5000L))
         };
 
         /// <summary>
@@ -413,7 +413,7 @@ namespace Google.Cloud.Bigtable.Admin.V2
             gaxgrpc::CallTiming.FromRetry(new gaxgrpc::RetrySettings(
                 retryBackoff: GetDefaultRetryBackoff(),
                 timeoutBackoff: GetDefaultTimeoutBackoff(),
-                totalExpiration: gax::Expiration.FromTimeout(s::TimeSpan.FromMilliseconds(600000)),
+                totalExpiration: gax::Expiration.FromTimeout(sys::TimeSpan.FromMilliseconds(600000)),
                 retryFilter: IdempotentRetryFilter
             )));
 
@@ -443,7 +443,7 @@ namespace Google.Cloud.Bigtable.Admin.V2
             gaxgrpc::CallTiming.FromRetry(new gaxgrpc::RetrySettings(
                 retryBackoff: GetDefaultRetryBackoff(),
                 timeoutBackoff: GetDefaultTimeoutBackoff(),
-                totalExpiration: gax::Expiration.FromTimeout(s::TimeSpan.FromMilliseconds(600000)),
+                totalExpiration: gax::Expiration.FromTimeout(sys::TimeSpan.FromMilliseconds(600000)),
                 retryFilter: IdempotentRetryFilter
             )));
 
@@ -473,7 +473,7 @@ namespace Google.Cloud.Bigtable.Admin.V2
             gaxgrpc::CallTiming.FromRetry(new gaxgrpc::RetrySettings(
                 retryBackoff: GetDefaultRetryBackoff(),
                 timeoutBackoff: GetDefaultTimeoutBackoff(),
-                totalExpiration: gax::Expiration.FromTimeout(s::TimeSpan.FromMilliseconds(600000)),
+                totalExpiration: gax::Expiration.FromTimeout(sys::TimeSpan.FromMilliseconds(600000)),
                 retryFilter: IdempotentRetryFilter
             )));
 
@@ -492,10 +492,10 @@ namespace Google.Cloud.Bigtable.Admin.V2
         public lro::OperationsSettings UpdateClusterOperationsSettings { get; set; } = new lro::OperationsSettings
         {
             DefaultPollSettings = new gax::PollSettings(
-                gax::Expiration.FromTimeout(s::TimeSpan.FromMilliseconds(300000L)),
-                s::TimeSpan.FromMilliseconds(500L),
+                gax::Expiration.FromTimeout(sys::TimeSpan.FromMilliseconds(300000L)),
+                sys::TimeSpan.FromMilliseconds(500L),
                 1.5,
-                s::TimeSpan.FromMilliseconds(5000L))
+                sys::TimeSpan.FromMilliseconds(5000L))
         };
 
         /// <summary>
@@ -524,7 +524,7 @@ namespace Google.Cloud.Bigtable.Admin.V2
             gaxgrpc::CallTiming.FromRetry(new gaxgrpc::RetrySettings(
                 retryBackoff: GetDefaultRetryBackoff(),
                 timeoutBackoff: GetDefaultTimeoutBackoff(),
-                totalExpiration: gax::Expiration.FromTimeout(s::TimeSpan.FromMilliseconds(600000)),
+                totalExpiration: gax::Expiration.FromTimeout(sys::TimeSpan.FromMilliseconds(600000)),
                 retryFilter: IdempotentRetryFilter
             )));
 
@@ -553,7 +553,7 @@ namespace Google.Cloud.Bigtable.Admin.V2
             gaxgrpc::CallTiming.FromRetry(new gaxgrpc::RetrySettings(
                 retryBackoff: GetDefaultRetryBackoff(),
                 timeoutBackoff: GetDefaultTimeoutBackoff(),
-                totalExpiration: gax::Expiration.FromTimeout(s::TimeSpan.FromMilliseconds(600000)),
+                totalExpiration: gax::Expiration.FromTimeout(sys::TimeSpan.FromMilliseconds(600000)),
                 retryFilter: NonIdempotentRetryFilter
             )));
 
@@ -583,7 +583,7 @@ namespace Google.Cloud.Bigtable.Admin.V2
             gaxgrpc::CallTiming.FromRetry(new gaxgrpc::RetrySettings(
                 retryBackoff: GetDefaultRetryBackoff(),
                 timeoutBackoff: GetDefaultTimeoutBackoff(),
-                totalExpiration: gax::Expiration.FromTimeout(s::TimeSpan.FromMilliseconds(600000)),
+                totalExpiration: gax::Expiration.FromTimeout(sys::TimeSpan.FromMilliseconds(600000)),
                 retryFilter: IdempotentRetryFilter
             )));
 
@@ -613,7 +613,7 @@ namespace Google.Cloud.Bigtable.Admin.V2
             gaxgrpc::CallTiming.FromRetry(new gaxgrpc::RetrySettings(
                 retryBackoff: GetDefaultRetryBackoff(),
                 timeoutBackoff: GetDefaultTimeoutBackoff(),
-                totalExpiration: gax::Expiration.FromTimeout(s::TimeSpan.FromMilliseconds(600000)),
+                totalExpiration: gax::Expiration.FromTimeout(sys::TimeSpan.FromMilliseconds(600000)),
                 retryFilter: IdempotentRetryFilter
             )));
 
@@ -643,7 +643,7 @@ namespace Google.Cloud.Bigtable.Admin.V2
             gaxgrpc::CallTiming.FromRetry(new gaxgrpc::RetrySettings(
                 retryBackoff: GetDefaultRetryBackoff(),
                 timeoutBackoff: GetDefaultTimeoutBackoff(),
-                totalExpiration: gax::Expiration.FromTimeout(s::TimeSpan.FromMilliseconds(600000)),
+                totalExpiration: gax::Expiration.FromTimeout(sys::TimeSpan.FromMilliseconds(600000)),
                 retryFilter: IdempotentRetryFilter
             )));
 
@@ -662,10 +662,10 @@ namespace Google.Cloud.Bigtable.Admin.V2
         public lro::OperationsSettings UpdateAppProfileOperationsSettings { get; set; } = new lro::OperationsSettings
         {
             DefaultPollSettings = new gax::PollSettings(
-                gax::Expiration.FromTimeout(s::TimeSpan.FromMilliseconds(300000L)),
-                s::TimeSpan.FromMilliseconds(5L),
+                gax::Expiration.FromTimeout(sys::TimeSpan.FromMilliseconds(300000L)),
+                sys::TimeSpan.FromMilliseconds(5L),
                 1.5,
-                s::TimeSpan.FromMilliseconds(5000L))
+                sys::TimeSpan.FromMilliseconds(5000L))
         };
 
         /// <summary>
@@ -693,7 +693,7 @@ namespace Google.Cloud.Bigtable.Admin.V2
             gaxgrpc::CallTiming.FromRetry(new gaxgrpc::RetrySettings(
                 retryBackoff: GetDefaultRetryBackoff(),
                 timeoutBackoff: GetDefaultTimeoutBackoff(),
-                totalExpiration: gax::Expiration.FromTimeout(s::TimeSpan.FromMilliseconds(600000)),
+                totalExpiration: gax::Expiration.FromTimeout(sys::TimeSpan.FromMilliseconds(600000)),
                 retryFilter: NonIdempotentRetryFilter
             )));
 
@@ -723,7 +723,7 @@ namespace Google.Cloud.Bigtable.Admin.V2
             gaxgrpc::CallTiming.FromRetry(new gaxgrpc::RetrySettings(
                 retryBackoff: GetDefaultRetryBackoff(),
                 timeoutBackoff: GetDefaultTimeoutBackoff(),
-                totalExpiration: gax::Expiration.FromTimeout(s::TimeSpan.FromMilliseconds(600000)),
+                totalExpiration: gax::Expiration.FromTimeout(sys::TimeSpan.FromMilliseconds(600000)),
                 retryFilter: IdempotentRetryFilter
             )));
 
@@ -752,7 +752,7 @@ namespace Google.Cloud.Bigtable.Admin.V2
             gaxgrpc::CallTiming.FromRetry(new gaxgrpc::RetrySettings(
                 retryBackoff: GetDefaultRetryBackoff(),
                 timeoutBackoff: GetDefaultTimeoutBackoff(),
-                totalExpiration: gax::Expiration.FromTimeout(s::TimeSpan.FromMilliseconds(600000)),
+                totalExpiration: gax::Expiration.FromTimeout(sys::TimeSpan.FromMilliseconds(600000)),
                 retryFilter: NonIdempotentRetryFilter
             )));
 
@@ -782,7 +782,7 @@ namespace Google.Cloud.Bigtable.Admin.V2
             gaxgrpc::CallTiming.FromRetry(new gaxgrpc::RetrySettings(
                 retryBackoff: GetDefaultRetryBackoff(),
                 timeoutBackoff: GetDefaultTimeoutBackoff(),
-                totalExpiration: gax::Expiration.FromTimeout(s::TimeSpan.FromMilliseconds(600000)),
+                totalExpiration: gax::Expiration.FromTimeout(sys::TimeSpan.FromMilliseconds(600000)),
                 retryFilter: IdempotentRetryFilter
             )));
 
@@ -898,7 +898,7 @@ namespace Google.Cloud.Bigtable.Admin.V2
         /// </summary>
         public virtual BigtableInstanceAdmin.BigtableInstanceAdminClient GrpcClient
         {
-            get { throw new s::NotImplementedException(); }
+            get { throw new sys::NotImplementedException(); }
         }
 
         /// <summary>
@@ -1046,7 +1046,7 @@ namespace Google.Cloud.Bigtable.Admin.V2
             CreateInstanceRequest request,
             gaxgrpc::CallSettings callSettings = null)
         {
-            throw new s::NotImplementedException();
+            throw new sys::NotImplementedException();
         }
 
         /// <summary>
@@ -1078,7 +1078,7 @@ namespace Google.Cloud.Bigtable.Admin.V2
             CreateInstanceRequest request,
             gaxgrpc::CallSettings callSettings = null)
         {
-            throw new s::NotImplementedException();
+            throw new sys::NotImplementedException();
         }
 
         /// <summary>
@@ -1086,7 +1086,7 @@ namespace Google.Cloud.Bigtable.Admin.V2
         /// </summary>
         public virtual lro::OperationsClient CreateInstanceOperationsClient
         {
-            get { throw new s::NotImplementedException(); }
+            get { throw new sys::NotImplementedException(); }
         }
 
         /// <summary>
@@ -1181,7 +1181,7 @@ namespace Google.Cloud.Bigtable.Admin.V2
             GetInstanceRequest request,
             gaxgrpc::CallSettings callSettings = null)
         {
-            throw new s::NotImplementedException();
+            throw new sys::NotImplementedException();
         }
 
         /// <summary>
@@ -1218,7 +1218,7 @@ namespace Google.Cloud.Bigtable.Admin.V2
             GetInstanceRequest request,
             gaxgrpc::CallSettings callSettings = null)
         {
-            throw new s::NotImplementedException();
+            throw new sys::NotImplementedException();
         }
 
         /// <summary>
@@ -1300,7 +1300,7 @@ namespace Google.Cloud.Bigtable.Admin.V2
             ListInstancesRequest request,
             gaxgrpc::CallSettings callSettings = null)
         {
-            throw new s::NotImplementedException();
+            throw new sys::NotImplementedException();
         }
 
         /// <summary>
@@ -1337,7 +1337,7 @@ namespace Google.Cloud.Bigtable.Admin.V2
             ListInstancesRequest request,
             gaxgrpc::CallSettings callSettings = null)
         {
-            throw new s::NotImplementedException();
+            throw new sys::NotImplementedException();
         }
 
         /// <summary>
@@ -1358,7 +1358,7 @@ namespace Google.Cloud.Bigtable.Admin.V2
         /// </returns>
         public virtual stt::Task<lro::Operation<Instance, UpdateInstanceMetadata>> PartialUpdateInstanceAsync(
             Instance instance,
-            protowkt::FieldMask updateMask,
+            pbwkt::FieldMask updateMask,
             gaxgrpc::CallSettings callSettings = null) => PartialUpdateInstanceAsync(
                 new PartialUpdateInstanceRequest
                 {
@@ -1385,7 +1385,7 @@ namespace Google.Cloud.Bigtable.Admin.V2
         /// </returns>
         public virtual stt::Task<lro::Operation<Instance, UpdateInstanceMetadata>> PartialUpdateInstanceAsync(
             Instance instance,
-            protowkt::FieldMask updateMask,
+            pbwkt::FieldMask updateMask,
             st::CancellationToken cancellationToken) => PartialUpdateInstanceAsync(
                 instance,
                 updateMask,
@@ -1409,7 +1409,7 @@ namespace Google.Cloud.Bigtable.Admin.V2
         /// </returns>
         public virtual lro::Operation<Instance, UpdateInstanceMetadata> PartialUpdateInstance(
             Instance instance,
-            protowkt::FieldMask updateMask,
+            pbwkt::FieldMask updateMask,
             gaxgrpc::CallSettings callSettings = null) => PartialUpdateInstance(
                 new PartialUpdateInstanceRequest
                 {
@@ -1434,7 +1434,7 @@ namespace Google.Cloud.Bigtable.Admin.V2
             PartialUpdateInstanceRequest request,
             gaxgrpc::CallSettings callSettings = null)
         {
-            throw new s::NotImplementedException();
+            throw new sys::NotImplementedException();
         }
 
         /// <summary>
@@ -1466,7 +1466,7 @@ namespace Google.Cloud.Bigtable.Admin.V2
             PartialUpdateInstanceRequest request,
             gaxgrpc::CallSettings callSettings = null)
         {
-            throw new s::NotImplementedException();
+            throw new sys::NotImplementedException();
         }
 
         /// <summary>
@@ -1474,7 +1474,7 @@ namespace Google.Cloud.Bigtable.Admin.V2
         /// </summary>
         public virtual lro::OperationsClient PartialUpdateInstanceOperationsClient
         {
-            get { throw new s::NotImplementedException(); }
+            get { throw new sys::NotImplementedException(); }
         }
 
         /// <summary>
@@ -1566,7 +1566,7 @@ namespace Google.Cloud.Bigtable.Admin.V2
             DeleteInstanceRequest request,
             gaxgrpc::CallSettings callSettings = null)
         {
-            throw new s::NotImplementedException();
+            throw new sys::NotImplementedException();
         }
 
         /// <summary>
@@ -1600,7 +1600,7 @@ namespace Google.Cloud.Bigtable.Admin.V2
             DeleteInstanceRequest request,
             gaxgrpc::CallSettings callSettings = null)
         {
-            throw new s::NotImplementedException();
+            throw new sys::NotImplementedException();
         }
 
         /// <summary>
@@ -1724,7 +1724,7 @@ namespace Google.Cloud.Bigtable.Admin.V2
             CreateClusterRequest request,
             gaxgrpc::CallSettings callSettings = null)
         {
-            throw new s::NotImplementedException();
+            throw new sys::NotImplementedException();
         }
 
         /// <summary>
@@ -1756,7 +1756,7 @@ namespace Google.Cloud.Bigtable.Admin.V2
             CreateClusterRequest request,
             gaxgrpc::CallSettings callSettings = null)
         {
-            throw new s::NotImplementedException();
+            throw new sys::NotImplementedException();
         }
 
         /// <summary>
@@ -1764,7 +1764,7 @@ namespace Google.Cloud.Bigtable.Admin.V2
         /// </summary>
         public virtual lro::OperationsClient CreateClusterOperationsClient
         {
-            get { throw new s::NotImplementedException(); }
+            get { throw new sys::NotImplementedException(); }
         }
 
         /// <summary>
@@ -1859,7 +1859,7 @@ namespace Google.Cloud.Bigtable.Admin.V2
             GetClusterRequest request,
             gaxgrpc::CallSettings callSettings = null)
         {
-            throw new s::NotImplementedException();
+            throw new sys::NotImplementedException();
         }
 
         /// <summary>
@@ -1896,7 +1896,7 @@ namespace Google.Cloud.Bigtable.Admin.V2
             GetClusterRequest request,
             gaxgrpc::CallSettings callSettings = null)
         {
-            throw new s::NotImplementedException();
+            throw new sys::NotImplementedException();
         }
 
         /// <summary>
@@ -1984,7 +1984,7 @@ namespace Google.Cloud.Bigtable.Admin.V2
             ListClustersRequest request,
             gaxgrpc::CallSettings callSettings = null)
         {
-            throw new s::NotImplementedException();
+            throw new sys::NotImplementedException();
         }
 
         /// <summary>
@@ -2021,7 +2021,7 @@ namespace Google.Cloud.Bigtable.Admin.V2
             ListClustersRequest request,
             gaxgrpc::CallSettings callSettings = null)
         {
-            throw new s::NotImplementedException();
+            throw new sys::NotImplementedException();
         }
 
         /// <summary>
@@ -2040,7 +2040,7 @@ namespace Google.Cloud.Bigtable.Admin.V2
             Cluster request,
             gaxgrpc::CallSettings callSettings = null)
         {
-            throw new s::NotImplementedException();
+            throw new sys::NotImplementedException();
         }
 
         /// <summary>
@@ -2072,7 +2072,7 @@ namespace Google.Cloud.Bigtable.Admin.V2
             Cluster request,
             gaxgrpc::CallSettings callSettings = null)
         {
-            throw new s::NotImplementedException();
+            throw new sys::NotImplementedException();
         }
 
         /// <summary>
@@ -2080,7 +2080,7 @@ namespace Google.Cloud.Bigtable.Admin.V2
         /// </summary>
         public virtual lro::OperationsClient UpdateClusterOperationsClient
         {
-            get { throw new s::NotImplementedException(); }
+            get { throw new sys::NotImplementedException(); }
         }
 
         /// <summary>
@@ -2172,7 +2172,7 @@ namespace Google.Cloud.Bigtable.Admin.V2
             DeleteClusterRequest request,
             gaxgrpc::CallSettings callSettings = null)
         {
-            throw new s::NotImplementedException();
+            throw new sys::NotImplementedException();
         }
 
         /// <summary>
@@ -2206,7 +2206,7 @@ namespace Google.Cloud.Bigtable.Admin.V2
             DeleteClusterRequest request,
             gaxgrpc::CallSettings callSettings = null)
         {
-            throw new s::NotImplementedException();
+            throw new sys::NotImplementedException();
         }
 
         /// <summary>
@@ -2350,7 +2350,7 @@ namespace Google.Cloud.Bigtable.Admin.V2
             CreateAppProfileRequest request,
             gaxgrpc::CallSettings callSettings = null)
         {
-            throw new s::NotImplementedException();
+            throw new sys::NotImplementedException();
         }
 
         /// <summary>
@@ -2397,7 +2397,7 @@ namespace Google.Cloud.Bigtable.Admin.V2
             CreateAppProfileRequest request,
             gaxgrpc::CallSettings callSettings = null)
         {
-            throw new s::NotImplementedException();
+            throw new sys::NotImplementedException();
         }
 
         /// <summary>
@@ -2499,7 +2499,7 @@ namespace Google.Cloud.Bigtable.Admin.V2
             GetAppProfileRequest request,
             gaxgrpc::CallSettings callSettings = null)
         {
-            throw new s::NotImplementedException();
+            throw new sys::NotImplementedException();
         }
 
         /// <summary>
@@ -2546,7 +2546,7 @@ namespace Google.Cloud.Bigtable.Admin.V2
             GetAppProfileRequest request,
             gaxgrpc::CallSettings callSettings = null)
         {
-            throw new s::NotImplementedException();
+            throw new sys::NotImplementedException();
         }
 
         /// <summary>
@@ -2650,7 +2650,7 @@ namespace Google.Cloud.Bigtable.Admin.V2
             ListAppProfilesRequest request,
             gaxgrpc::CallSettings callSettings = null)
         {
-            throw new s::NotImplementedException();
+            throw new sys::NotImplementedException();
         }
 
         /// <summary>
@@ -2674,7 +2674,7 @@ namespace Google.Cloud.Bigtable.Admin.V2
             ListAppProfilesRequest request,
             gaxgrpc::CallSettings callSettings = null)
         {
-            throw new s::NotImplementedException();
+            throw new sys::NotImplementedException();
         }
 
         /// <summary>
@@ -2700,7 +2700,7 @@ namespace Google.Cloud.Bigtable.Admin.V2
         /// </returns>
         public virtual stt::Task<lro::Operation<AppProfile, UpdateAppProfileMetadata>> UpdateAppProfileAsync(
             AppProfile appProfile,
-            protowkt::FieldMask updateMask,
+            pbwkt::FieldMask updateMask,
             gaxgrpc::CallSettings callSettings = null) => UpdateAppProfileAsync(
                 new UpdateAppProfileRequest
                 {
@@ -2732,7 +2732,7 @@ namespace Google.Cloud.Bigtable.Admin.V2
         /// </returns>
         public virtual stt::Task<lro::Operation<AppProfile, UpdateAppProfileMetadata>> UpdateAppProfileAsync(
             AppProfile appProfile,
-            protowkt::FieldMask updateMask,
+            pbwkt::FieldMask updateMask,
             st::CancellationToken cancellationToken) => UpdateAppProfileAsync(
                 appProfile,
                 updateMask,
@@ -2761,7 +2761,7 @@ namespace Google.Cloud.Bigtable.Admin.V2
         /// </returns>
         public virtual lro::Operation<AppProfile, UpdateAppProfileMetadata> UpdateAppProfile(
             AppProfile appProfile,
-            protowkt::FieldMask updateMask,
+            pbwkt::FieldMask updateMask,
             gaxgrpc::CallSettings callSettings = null) => UpdateAppProfile(
                 new UpdateAppProfileRequest
                 {
@@ -2791,7 +2791,7 @@ namespace Google.Cloud.Bigtable.Admin.V2
             UpdateAppProfileRequest request,
             gaxgrpc::CallSettings callSettings = null)
         {
-            throw new s::NotImplementedException();
+            throw new sys::NotImplementedException();
         }
 
         /// <summary>
@@ -2828,7 +2828,7 @@ namespace Google.Cloud.Bigtable.Admin.V2
             UpdateAppProfileRequest request,
             gaxgrpc::CallSettings callSettings = null)
         {
-            throw new s::NotImplementedException();
+            throw new sys::NotImplementedException();
         }
 
         /// <summary>
@@ -2836,7 +2836,7 @@ namespace Google.Cloud.Bigtable.Admin.V2
         /// </summary>
         public virtual lro::OperationsClient UpdateAppProfileOperationsClient
         {
-            get { throw new s::NotImplementedException(); }
+            get { throw new sys::NotImplementedException(); }
         }
 
         /// <summary>
@@ -2948,7 +2948,7 @@ namespace Google.Cloud.Bigtable.Admin.V2
             DeleteAppProfileRequest request,
             gaxgrpc::CallSettings callSettings = null)
         {
-            throw new s::NotImplementedException();
+            throw new sys::NotImplementedException();
         }
 
         /// <summary>
@@ -2992,7 +2992,7 @@ namespace Google.Cloud.Bigtable.Admin.V2
             DeleteAppProfileRequest request,
             gaxgrpc::CallSettings callSettings = null)
         {
-            throw new s::NotImplementedException();
+            throw new sys::NotImplementedException();
         }
 
         /// <summary>
@@ -3105,7 +3105,7 @@ namespace Google.Cloud.Bigtable.Admin.V2
             iam::GetIamPolicyRequest request,
             gaxgrpc::CallSettings callSettings = null)
         {
-            throw new s::NotImplementedException();
+            throw new sys::NotImplementedException();
         }
 
         /// <summary>
@@ -3156,7 +3156,7 @@ namespace Google.Cloud.Bigtable.Admin.V2
             iam::GetIamPolicyRequest request,
             gaxgrpc::CallSettings callSettings = null)
         {
-            throw new s::NotImplementedException();
+            throw new sys::NotImplementedException();
         }
 
         /// <summary>
@@ -3293,7 +3293,7 @@ namespace Google.Cloud.Bigtable.Admin.V2
             iam::SetIamPolicyRequest request,
             gaxgrpc::CallSettings callSettings = null)
         {
-            throw new s::NotImplementedException();
+            throw new sys::NotImplementedException();
         }
 
         /// <summary>
@@ -3344,7 +3344,7 @@ namespace Google.Cloud.Bigtable.Admin.V2
             iam::SetIamPolicyRequest request,
             gaxgrpc::CallSettings callSettings = null)
         {
-            throw new s::NotImplementedException();
+            throw new sys::NotImplementedException();
         }
 
         /// <summary>
@@ -3477,7 +3477,7 @@ namespace Google.Cloud.Bigtable.Admin.V2
             iam::TestIamPermissionsRequest request,
             gaxgrpc::CallSettings callSettings = null)
         {
-            throw new s::NotImplementedException();
+            throw new sys::NotImplementedException();
         }
 
         /// <summary>
@@ -3526,7 +3526,7 @@ namespace Google.Cloud.Bigtable.Admin.V2
             iam::TestIamPermissionsRequest request,
             gaxgrpc::CallSettings callSettings = null)
         {
-            throw new s::NotImplementedException();
+            throw new sys::NotImplementedException();
         }
 
     }
@@ -3540,17 +3540,17 @@ namespace Google.Cloud.Bigtable.Admin.V2
         private readonly gaxgrpc::ApiCall<GetInstanceRequest, Instance> _callGetInstance;
         private readonly gaxgrpc::ApiCall<ListInstancesRequest, ListInstancesResponse> _callListInstances;
         private readonly gaxgrpc::ApiCall<PartialUpdateInstanceRequest, lro::Operation> _callPartialUpdateInstance;
-        private readonly gaxgrpc::ApiCall<DeleteInstanceRequest, protowkt::Empty> _callDeleteInstance;
+        private readonly gaxgrpc::ApiCall<DeleteInstanceRequest, pbwkt::Empty> _callDeleteInstance;
         private readonly gaxgrpc::ApiCall<CreateClusterRequest, lro::Operation> _callCreateCluster;
         private readonly gaxgrpc::ApiCall<GetClusterRequest, Cluster> _callGetCluster;
         private readonly gaxgrpc::ApiCall<ListClustersRequest, ListClustersResponse> _callListClusters;
         private readonly gaxgrpc::ApiCall<Cluster, lro::Operation> _callUpdateCluster;
-        private readonly gaxgrpc::ApiCall<DeleteClusterRequest, protowkt::Empty> _callDeleteCluster;
+        private readonly gaxgrpc::ApiCall<DeleteClusterRequest, pbwkt::Empty> _callDeleteCluster;
         private readonly gaxgrpc::ApiCall<CreateAppProfileRequest, AppProfile> _callCreateAppProfile;
         private readonly gaxgrpc::ApiCall<GetAppProfileRequest, AppProfile> _callGetAppProfile;
         private readonly gaxgrpc::ApiCall<ListAppProfilesRequest, ListAppProfilesResponse> _callListAppProfiles;
         private readonly gaxgrpc::ApiCall<UpdateAppProfileRequest, lro::Operation> _callUpdateAppProfile;
-        private readonly gaxgrpc::ApiCall<DeleteAppProfileRequest, protowkt::Empty> _callDeleteAppProfile;
+        private readonly gaxgrpc::ApiCall<DeleteAppProfileRequest, pbwkt::Empty> _callDeleteAppProfile;
         private readonly gaxgrpc::ApiCall<iam::GetIamPolicyRequest, iam::Policy> _callGetIamPolicy;
         private readonly gaxgrpc::ApiCall<iam::SetIamPolicyRequest, iam::Policy> _callSetIamPolicy;
         private readonly gaxgrpc::ApiCall<iam::TestIamPermissionsRequest, iam::TestIamPermissionsResponse> _callTestIamPermissions;
@@ -3587,7 +3587,7 @@ namespace Google.Cloud.Bigtable.Admin.V2
             _callPartialUpdateInstance = clientHelper.BuildApiCall<PartialUpdateInstanceRequest, lro::Operation>(
                 GrpcClient.PartialUpdateInstanceAsync, GrpcClient.PartialUpdateInstance, effectiveSettings.PartialUpdateInstanceSettings)
                 .WithCallSettingsOverlay(request => gaxgrpc::CallSettings.FromHeader("x-goog-request-params", $"instance.name={request.Instance.Name}"));
-            _callDeleteInstance = clientHelper.BuildApiCall<DeleteInstanceRequest, protowkt::Empty>(
+            _callDeleteInstance = clientHelper.BuildApiCall<DeleteInstanceRequest, pbwkt::Empty>(
                 GrpcClient.DeleteInstanceAsync, GrpcClient.DeleteInstance, effectiveSettings.DeleteInstanceSettings)
                 .WithCallSettingsOverlay(request => gaxgrpc::CallSettings.FromHeader("x-goog-request-params", $"name={request.Name}"));
             _callCreateCluster = clientHelper.BuildApiCall<CreateClusterRequest, lro::Operation>(
@@ -3602,7 +3602,7 @@ namespace Google.Cloud.Bigtable.Admin.V2
             _callUpdateCluster = clientHelper.BuildApiCall<Cluster, lro::Operation>(
                 GrpcClient.UpdateClusterAsync, GrpcClient.UpdateCluster, effectiveSettings.UpdateClusterSettings)
                 .WithCallSettingsOverlay(request => gaxgrpc::CallSettings.FromHeader("x-goog-request-params", $"name={request.Name}"));
-            _callDeleteCluster = clientHelper.BuildApiCall<DeleteClusterRequest, protowkt::Empty>(
+            _callDeleteCluster = clientHelper.BuildApiCall<DeleteClusterRequest, pbwkt::Empty>(
                 GrpcClient.DeleteClusterAsync, GrpcClient.DeleteCluster, effectiveSettings.DeleteClusterSettings)
                 .WithCallSettingsOverlay(request => gaxgrpc::CallSettings.FromHeader("x-goog-request-params", $"name={request.Name}"));
             _callCreateAppProfile = clientHelper.BuildApiCall<CreateAppProfileRequest, AppProfile>(
@@ -3617,7 +3617,7 @@ namespace Google.Cloud.Bigtable.Admin.V2
             _callUpdateAppProfile = clientHelper.BuildApiCall<UpdateAppProfileRequest, lro::Operation>(
                 GrpcClient.UpdateAppProfileAsync, GrpcClient.UpdateAppProfile, effectiveSettings.UpdateAppProfileSettings)
                 .WithCallSettingsOverlay(request => gaxgrpc::CallSettings.FromHeader("x-goog-request-params", $"app_profile.name={request.AppProfile.Name}"));
-            _callDeleteAppProfile = clientHelper.BuildApiCall<DeleteAppProfileRequest, protowkt::Empty>(
+            _callDeleteAppProfile = clientHelper.BuildApiCall<DeleteAppProfileRequest, pbwkt::Empty>(
                 GrpcClient.DeleteAppProfileAsync, GrpcClient.DeleteAppProfile, effectiveSettings.DeleteAppProfileSettings)
                 .WithCallSettingsOverlay(request => gaxgrpc::CallSettings.FromHeader("x-goog-request-params", $"name={request.Name}"));
             _callGetIamPolicy = clientHelper.BuildApiCall<iam::GetIamPolicyRequest, iam::Policy>(
@@ -3673,8 +3673,8 @@ namespace Google.Cloud.Bigtable.Admin.V2
         // Partial methods called for every ApiCall on construction.
         // Allows modification of all the underlying ApiCall objects.
         partial void Modify_ApiCall<TRequest, TResponse>(ref gaxgrpc::ApiCall<TRequest, TResponse> call)
-            where TRequest : class, proto::IMessage<TRequest>
-            where TResponse : class, proto::IMessage<TResponse>;
+            where TRequest : class, pb::IMessage<TRequest>
+            where TResponse : class, pb::IMessage<TResponse>;
 
         // Partial methods called for each ApiCall on construction.
         // Allows per-RPC-method modification of the underlying ApiCall object.
@@ -3682,17 +3682,17 @@ namespace Google.Cloud.Bigtable.Admin.V2
         partial void Modify_GetInstanceApiCall(ref gaxgrpc::ApiCall<GetInstanceRequest, Instance> call);
         partial void Modify_ListInstancesApiCall(ref gaxgrpc::ApiCall<ListInstancesRequest, ListInstancesResponse> call);
         partial void Modify_PartialUpdateInstanceApiCall(ref gaxgrpc::ApiCall<PartialUpdateInstanceRequest, lro::Operation> call);
-        partial void Modify_DeleteInstanceApiCall(ref gaxgrpc::ApiCall<DeleteInstanceRequest, protowkt::Empty> call);
+        partial void Modify_DeleteInstanceApiCall(ref gaxgrpc::ApiCall<DeleteInstanceRequest, pbwkt::Empty> call);
         partial void Modify_CreateClusterApiCall(ref gaxgrpc::ApiCall<CreateClusterRequest, lro::Operation> call);
         partial void Modify_GetClusterApiCall(ref gaxgrpc::ApiCall<GetClusterRequest, Cluster> call);
         partial void Modify_ListClustersApiCall(ref gaxgrpc::ApiCall<ListClustersRequest, ListClustersResponse> call);
         partial void Modify_UpdateClusterApiCall(ref gaxgrpc::ApiCall<Cluster, lro::Operation> call);
-        partial void Modify_DeleteClusterApiCall(ref gaxgrpc::ApiCall<DeleteClusterRequest, protowkt::Empty> call);
+        partial void Modify_DeleteClusterApiCall(ref gaxgrpc::ApiCall<DeleteClusterRequest, pbwkt::Empty> call);
         partial void Modify_CreateAppProfileApiCall(ref gaxgrpc::ApiCall<CreateAppProfileRequest, AppProfile> call);
         partial void Modify_GetAppProfileApiCall(ref gaxgrpc::ApiCall<GetAppProfileRequest, AppProfile> call);
         partial void Modify_ListAppProfilesApiCall(ref gaxgrpc::ApiCall<ListAppProfilesRequest, ListAppProfilesResponse> call);
         partial void Modify_UpdateAppProfileApiCall(ref gaxgrpc::ApiCall<UpdateAppProfileRequest, lro::Operation> call);
-        partial void Modify_DeleteAppProfileApiCall(ref gaxgrpc::ApiCall<DeleteAppProfileRequest, protowkt::Empty> call);
+        partial void Modify_DeleteAppProfileApiCall(ref gaxgrpc::ApiCall<DeleteAppProfileRequest, pbwkt::Empty> call);
         partial void Modify_GetIamPolicyApiCall(ref gaxgrpc::ApiCall<iam::GetIamPolicyRequest, iam::Policy> call);
         partial void Modify_SetIamPolicyApiCall(ref gaxgrpc::ApiCall<iam::SetIamPolicyRequest, iam::Policy> call);
         partial void Modify_TestIamPermissionsApiCall(ref gaxgrpc::ApiCall<iam::TestIamPermissionsRequest, iam::TestIamPermissionsResponse> call);

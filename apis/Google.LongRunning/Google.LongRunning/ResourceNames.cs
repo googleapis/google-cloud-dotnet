@@ -15,8 +15,8 @@
 // Generated code. DO NOT EDIT!
 
 using gax = Google.Api.Gax;
-using s = System;
-using System.Linq;
+using sys = System;
+using linq = System.Linq;
 
 namespace Google.LongRunning
 {

@@ -16,10 +16,10 @@
 
 using gax = Google.Api.Gax;
 using gaxgrpc = Google.Api.Gax.Grpc;
-using proto = Google.Protobuf;
-using protowkt = Google.Protobuf.WellKnownTypes;
+using pb = Google.Protobuf;
+using pbwkt = Google.Protobuf.WellKnownTypes;
 using grpccore = Grpc.Core;
-using s = System;
+using sys = System;
 using sc = System.Collections;
 using scg = System.Collections.Generic;
 using sco = System.Collections.ObjectModel;
@@ -69,7 +69,7 @@ namespace Google.LongRunning
         /// <item><description><see cref="grpccore::StatusCode.Unavailable"/></description></item>
         /// </list>
         /// </remarks>
-        public static s::Predicate<grpccore::RpcException> IdempotentRetryFilter { get; } =
+        public static sys::Predicate<grpccore::RpcException> IdempotentRetryFilter { get; } =
             gaxgrpc::RetrySettings.FilterForStatusCodes(grpccore::StatusCode.DeadlineExceeded, grpccore::StatusCode.Unavailable);
 
         /// <summary>
@@ -79,7 +79,7 @@ namespace Google.LongRunning
         /// <remarks>
         /// There are no RPC <see cref="grpccore::StatusCode"/>s eligible for retry for "NonIdempotent" RPC methods.
         /// </remarks>
-        public static s::Predicate<grpccore::RpcException> NonIdempotentRetryFilter { get; } =
+        public static sys::Predicate<grpccore::RpcException> NonIdempotentRetryFilter { get; } =
             gaxgrpc::RetrySettings.FilterForStatusCodes();
 
         /// <summary>
@@ -97,8 +97,8 @@ namespace Google.LongRunning
         /// </list>
         /// </remarks>
         public static gaxgrpc::BackoffSettings GetDefaultRetryBackoff() => new gaxgrpc::BackoffSettings(
-            delay: s::TimeSpan.FromMilliseconds(100),
-            maxDelay: s::TimeSpan.FromMilliseconds(60000),
+            delay: sys::TimeSpan.FromMilliseconds(100),
+            maxDelay: sys::TimeSpan.FromMilliseconds(60000),
             delayMultiplier: 1.3
         );
 
@@ -117,8 +117,8 @@ namespace Google.LongRunning
         /// </list>
         /// </remarks>
         public static gaxgrpc::BackoffSettings GetDefaultTimeoutBackoff() => new gaxgrpc::BackoffSettings(
-            delay: s::TimeSpan.FromMilliseconds(90000),
-            maxDelay: s::TimeSpan.FromMilliseconds(90000),
+            delay: sys::TimeSpan.FromMilliseconds(90000),
+            maxDelay: sys::TimeSpan.FromMilliseconds(90000),
             delayMultiplier: 1.0
         );
 
@@ -148,7 +148,7 @@ namespace Google.LongRunning
             gaxgrpc::CallTiming.FromRetry(new gaxgrpc::RetrySettings(
                 retryBackoff: GetDefaultRetryBackoff(),
                 timeoutBackoff: GetDefaultTimeoutBackoff(),
-                totalExpiration: gax::Expiration.FromTimeout(s::TimeSpan.FromMilliseconds(600000)),
+                totalExpiration: gax::Expiration.FromTimeout(sys::TimeSpan.FromMilliseconds(600000)),
                 retryFilter: IdempotentRetryFilter
             )));
 
@@ -178,7 +178,7 @@ namespace Google.LongRunning
             gaxgrpc::CallTiming.FromRetry(new gaxgrpc::RetrySettings(
                 retryBackoff: GetDefaultRetryBackoff(),
                 timeoutBackoff: GetDefaultTimeoutBackoff(),
-                totalExpiration: gax::Expiration.FromTimeout(s::TimeSpan.FromMilliseconds(600000)),
+                totalExpiration: gax::Expiration.FromTimeout(sys::TimeSpan.FromMilliseconds(600000)),
                 retryFilter: IdempotentRetryFilter
             )));
 
@@ -208,7 +208,7 @@ namespace Google.LongRunning
             gaxgrpc::CallTiming.FromRetry(new gaxgrpc::RetrySettings(
                 retryBackoff: GetDefaultRetryBackoff(),
                 timeoutBackoff: GetDefaultTimeoutBackoff(),
-                totalExpiration: gax::Expiration.FromTimeout(s::TimeSpan.FromMilliseconds(600000)),
+                totalExpiration: gax::Expiration.FromTimeout(sys::TimeSpan.FromMilliseconds(600000)),
                 retryFilter: IdempotentRetryFilter
             )));
 
@@ -238,7 +238,7 @@ namespace Google.LongRunning
             gaxgrpc::CallTiming.FromRetry(new gaxgrpc::RetrySettings(
                 retryBackoff: GetDefaultRetryBackoff(),
                 timeoutBackoff: GetDefaultTimeoutBackoff(),
-                totalExpiration: gax::Expiration.FromTimeout(s::TimeSpan.FromMilliseconds(600000)),
+                totalExpiration: gax::Expiration.FromTimeout(sys::TimeSpan.FromMilliseconds(600000)),
                 retryFilter: IdempotentRetryFilter
             )));
 
@@ -336,7 +336,7 @@ namespace Google.LongRunning
         /// </summary>
         public virtual Operations.OperationsClient GrpcClient
         {
-            get { throw new s::NotImplementedException(); }
+            get { throw new sys::NotImplementedException(); }
         }
 
         /// <summary>
@@ -423,7 +423,7 @@ namespace Google.LongRunning
             GetOperationRequest request,
             gaxgrpc::CallSettings callSettings = null)
         {
-            throw new s::NotImplementedException();
+            throw new sys::NotImplementedException();
         }
 
         /// <summary>
@@ -464,7 +464,7 @@ namespace Google.LongRunning
             GetOperationRequest request,
             gaxgrpc::CallSettings callSettings = null)
         {
-            throw new s::NotImplementedException();
+            throw new sys::NotImplementedException();
         }
 
         /// <summary>
@@ -571,7 +571,7 @@ namespace Google.LongRunning
             ListOperationsRequest request,
             gaxgrpc::CallSettings callSettings = null)
         {
-            throw new s::NotImplementedException();
+            throw new sys::NotImplementedException();
         }
 
         /// <summary>
@@ -594,7 +594,7 @@ namespace Google.LongRunning
             ListOperationsRequest request,
             gaxgrpc::CallSettings callSettings = null)
         {
-            throw new s::NotImplementedException();
+            throw new sys::NotImplementedException();
         }
 
         /// <summary>
@@ -706,7 +706,7 @@ namespace Google.LongRunning
             CancelOperationRequest request,
             gaxgrpc::CallSettings callSettings = null)
         {
-            throw new s::NotImplementedException();
+            throw new sys::NotImplementedException();
         }
 
         /// <summary>
@@ -758,7 +758,7 @@ namespace Google.LongRunning
             CancelOperationRequest request,
             gaxgrpc::CallSettings callSettings = null)
         {
-            throw new s::NotImplementedException();
+            throw new sys::NotImplementedException();
         }
 
         /// <summary>
@@ -846,7 +846,7 @@ namespace Google.LongRunning
             DeleteOperationRequest request,
             gaxgrpc::CallSettings callSettings = null)
         {
-            throw new s::NotImplementedException();
+            throw new sys::NotImplementedException();
         }
 
         /// <summary>
@@ -886,7 +886,7 @@ namespace Google.LongRunning
             DeleteOperationRequest request,
             gaxgrpc::CallSettings callSettings = null)
         {
-            throw new s::NotImplementedException();
+            throw new sys::NotImplementedException();
         }
 
     }
@@ -898,8 +898,8 @@ namespace Google.LongRunning
     {
         private readonly gaxgrpc::ApiCall<GetOperationRequest, Operation> _callGetOperation;
         private readonly gaxgrpc::ApiCall<ListOperationsRequest, ListOperationsResponse> _callListOperations;
-        private readonly gaxgrpc::ApiCall<CancelOperationRequest, protowkt::Empty> _callCancelOperation;
-        private readonly gaxgrpc::ApiCall<DeleteOperationRequest, protowkt::Empty> _callDeleteOperation;
+        private readonly gaxgrpc::ApiCall<CancelOperationRequest, pbwkt::Empty> _callCancelOperation;
+        private readonly gaxgrpc::ApiCall<DeleteOperationRequest, pbwkt::Empty> _callDeleteOperation;
 
         /// <summary>
         /// Constructs a client wrapper for the Operations service, with the specified gRPC client and settings.
@@ -915,9 +915,9 @@ namespace Google.LongRunning
                 GrpcClient.GetOperationAsync, GrpcClient.GetOperation, effectiveSettings.GetOperationSettings);
             _callListOperations = clientHelper.BuildApiCall<ListOperationsRequest, ListOperationsResponse>(
                 GrpcClient.ListOperationsAsync, GrpcClient.ListOperations, effectiveSettings.ListOperationsSettings);
-            _callCancelOperation = clientHelper.BuildApiCall<CancelOperationRequest, protowkt::Empty>(
+            _callCancelOperation = clientHelper.BuildApiCall<CancelOperationRequest, pbwkt::Empty>(
                 GrpcClient.CancelOperationAsync, GrpcClient.CancelOperation, effectiveSettings.CancelOperationSettings);
-            _callDeleteOperation = clientHelper.BuildApiCall<DeleteOperationRequest, protowkt::Empty>(
+            _callDeleteOperation = clientHelper.BuildApiCall<DeleteOperationRequest, pbwkt::Empty>(
                 GrpcClient.DeleteOperationAsync, GrpcClient.DeleteOperation, effectiveSettings.DeleteOperationSettings);
             Modify_ApiCall(ref _callGetOperation);
             Modify_GetOperationApiCall(ref _callGetOperation);
@@ -935,15 +935,15 @@ namespace Google.LongRunning
         // Partial methods called for every ApiCall on construction.
         // Allows modification of all the underlying ApiCall objects.
         partial void Modify_ApiCall<TRequest, TResponse>(ref gaxgrpc::ApiCall<TRequest, TResponse> call)
-            where TRequest : class, proto::IMessage<TRequest>
-            where TResponse : class, proto::IMessage<TResponse>;
+            where TRequest : class, pb::IMessage<TRequest>
+            where TResponse : class, pb::IMessage<TResponse>;
 
         // Partial methods called for each ApiCall on construction.
         // Allows per-RPC-method modification of the underlying ApiCall object.
         partial void Modify_GetOperationApiCall(ref gaxgrpc::ApiCall<GetOperationRequest, Operation> call);
         partial void Modify_ListOperationsApiCall(ref gaxgrpc::ApiCall<ListOperationsRequest, ListOperationsResponse> call);
-        partial void Modify_CancelOperationApiCall(ref gaxgrpc::ApiCall<CancelOperationRequest, protowkt::Empty> call);
-        partial void Modify_DeleteOperationApiCall(ref gaxgrpc::ApiCall<DeleteOperationRequest, protowkt::Empty> call);
+        partial void Modify_CancelOperationApiCall(ref gaxgrpc::ApiCall<CancelOperationRequest, pbwkt::Empty> call);
+        partial void Modify_DeleteOperationApiCall(ref gaxgrpc::ApiCall<DeleteOperationRequest, pbwkt::Empty> call);
         partial void OnConstruction(Operations.OperationsClient grpcClient, OperationsSettings effectiveSettings, gaxgrpc::ClientHelper clientHelper);
 
         /// <summary>

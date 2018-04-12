@@ -18,10 +18,10 @@ using gax = Google.Api.Gax;
 using gaxgrpc = Google.Api.Gax.Grpc;
 using iam = Google.Cloud.Iam.V1;
 using lro = Google.LongRunning;
-using proto = Google.Protobuf;
-using protowkt = Google.Protobuf.WellKnownTypes;
+using pb = Google.Protobuf;
+using pbwkt = Google.Protobuf.WellKnownTypes;
 using grpccore = Grpc.Core;
-using s = System;
+using sys = System;
 using sc = System.Collections;
 using scg = System.Collections.Generic;
 using sco = System.Collections.ObjectModel;
@@ -79,7 +79,7 @@ namespace Google.Cloud.Spanner.Admin.Instance.V1
         /// <item><description><see cref="grpccore::StatusCode.Unavailable"/></description></item>
         /// </list>
         /// </remarks>
-        public static s::Predicate<grpccore::RpcException> IdempotentRetryFilter { get; } =
+        public static sys::Predicate<grpccore::RpcException> IdempotentRetryFilter { get; } =
             gaxgrpc::RetrySettings.FilterForStatusCodes(grpccore::StatusCode.DeadlineExceeded, grpccore::StatusCode.Unavailable);
 
         /// <summary>
@@ -89,7 +89,7 @@ namespace Google.Cloud.Spanner.Admin.Instance.V1
         /// <remarks>
         /// There are no RPC <see cref="grpccore::StatusCode"/>s eligible for retry for "NonIdempotent" RPC methods.
         /// </remarks>
-        public static s::Predicate<grpccore::RpcException> NonIdempotentRetryFilter { get; } =
+        public static sys::Predicate<grpccore::RpcException> NonIdempotentRetryFilter { get; } =
             gaxgrpc::RetrySettings.FilterForStatusCodes();
 
         /// <summary>
@@ -107,8 +107,8 @@ namespace Google.Cloud.Spanner.Admin.Instance.V1
         /// </list>
         /// </remarks>
         public static gaxgrpc::BackoffSettings GetDefaultRetryBackoff() => new gaxgrpc::BackoffSettings(
-            delay: s::TimeSpan.FromMilliseconds(1000),
-            maxDelay: s::TimeSpan.FromMilliseconds(32000),
+            delay: sys::TimeSpan.FromMilliseconds(1000),
+            maxDelay: sys::TimeSpan.FromMilliseconds(32000),
             delayMultiplier: 1.3
         );
 
@@ -127,8 +127,8 @@ namespace Google.Cloud.Spanner.Admin.Instance.V1
         /// </list>
         /// </remarks>
         public static gaxgrpc::BackoffSettings GetDefaultTimeoutBackoff() => new gaxgrpc::BackoffSettings(
-            delay: s::TimeSpan.FromMilliseconds(60000),
-            maxDelay: s::TimeSpan.FromMilliseconds(60000),
+            delay: sys::TimeSpan.FromMilliseconds(60000),
+            maxDelay: sys::TimeSpan.FromMilliseconds(60000),
             delayMultiplier: 1.0
         );
 
@@ -158,7 +158,7 @@ namespace Google.Cloud.Spanner.Admin.Instance.V1
             gaxgrpc::CallTiming.FromRetry(new gaxgrpc::RetrySettings(
                 retryBackoff: GetDefaultRetryBackoff(),
                 timeoutBackoff: GetDefaultTimeoutBackoff(),
-                totalExpiration: gax::Expiration.FromTimeout(s::TimeSpan.FromMilliseconds(600000)),
+                totalExpiration: gax::Expiration.FromTimeout(sys::TimeSpan.FromMilliseconds(600000)),
                 retryFilter: IdempotentRetryFilter
             )));
 
@@ -188,7 +188,7 @@ namespace Google.Cloud.Spanner.Admin.Instance.V1
             gaxgrpc::CallTiming.FromRetry(new gaxgrpc::RetrySettings(
                 retryBackoff: GetDefaultRetryBackoff(),
                 timeoutBackoff: GetDefaultTimeoutBackoff(),
-                totalExpiration: gax::Expiration.FromTimeout(s::TimeSpan.FromMilliseconds(600000)),
+                totalExpiration: gax::Expiration.FromTimeout(sys::TimeSpan.FromMilliseconds(600000)),
                 retryFilter: IdempotentRetryFilter
             )));
 
@@ -218,7 +218,7 @@ namespace Google.Cloud.Spanner.Admin.Instance.V1
             gaxgrpc::CallTiming.FromRetry(new gaxgrpc::RetrySettings(
                 retryBackoff: GetDefaultRetryBackoff(),
                 timeoutBackoff: GetDefaultTimeoutBackoff(),
-                totalExpiration: gax::Expiration.FromTimeout(s::TimeSpan.FromMilliseconds(600000)),
+                totalExpiration: gax::Expiration.FromTimeout(sys::TimeSpan.FromMilliseconds(600000)),
                 retryFilter: IdempotentRetryFilter
             )));
 
@@ -248,7 +248,7 @@ namespace Google.Cloud.Spanner.Admin.Instance.V1
             gaxgrpc::CallTiming.FromRetry(new gaxgrpc::RetrySettings(
                 retryBackoff: GetDefaultRetryBackoff(),
                 timeoutBackoff: GetDefaultTimeoutBackoff(),
-                totalExpiration: gax::Expiration.FromTimeout(s::TimeSpan.FromMilliseconds(600000)),
+                totalExpiration: gax::Expiration.FromTimeout(sys::TimeSpan.FromMilliseconds(600000)),
                 retryFilter: IdempotentRetryFilter
             )));
 
@@ -277,7 +277,7 @@ namespace Google.Cloud.Spanner.Admin.Instance.V1
             gaxgrpc::CallTiming.FromRetry(new gaxgrpc::RetrySettings(
                 retryBackoff: GetDefaultRetryBackoff(),
                 timeoutBackoff: GetDefaultTimeoutBackoff(),
-                totalExpiration: gax::Expiration.FromTimeout(s::TimeSpan.FromMilliseconds(600000)),
+                totalExpiration: gax::Expiration.FromTimeout(sys::TimeSpan.FromMilliseconds(600000)),
                 retryFilter: NonIdempotentRetryFilter
             )));
 
@@ -296,10 +296,10 @@ namespace Google.Cloud.Spanner.Admin.Instance.V1
         public lro::OperationsSettings CreateInstanceOperationsSettings { get; set; } = new lro::OperationsSettings
         {
             DefaultPollSettings = new gax::PollSettings(
-                gax::Expiration.FromTimeout(s::TimeSpan.FromMilliseconds(86400000L)),
-                s::TimeSpan.FromMilliseconds(20000L),
+                gax::Expiration.FromTimeout(sys::TimeSpan.FromMilliseconds(86400000L)),
+                sys::TimeSpan.FromMilliseconds(20000L),
                 1.5,
-                s::TimeSpan.FromMilliseconds(45000L))
+                sys::TimeSpan.FromMilliseconds(45000L))
         };
 
         /// <summary>
@@ -327,7 +327,7 @@ namespace Google.Cloud.Spanner.Admin.Instance.V1
             gaxgrpc::CallTiming.FromRetry(new gaxgrpc::RetrySettings(
                 retryBackoff: GetDefaultRetryBackoff(),
                 timeoutBackoff: GetDefaultTimeoutBackoff(),
-                totalExpiration: gax::Expiration.FromTimeout(s::TimeSpan.FromMilliseconds(600000)),
+                totalExpiration: gax::Expiration.FromTimeout(sys::TimeSpan.FromMilliseconds(600000)),
                 retryFilter: NonIdempotentRetryFilter
             )));
 
@@ -346,10 +346,10 @@ namespace Google.Cloud.Spanner.Admin.Instance.V1
         public lro::OperationsSettings UpdateInstanceOperationsSettings { get; set; } = new lro::OperationsSettings
         {
             DefaultPollSettings = new gax::PollSettings(
-                gax::Expiration.FromTimeout(s::TimeSpan.FromMilliseconds(86400000L)),
-                s::TimeSpan.FromMilliseconds(20000L),
+                gax::Expiration.FromTimeout(sys::TimeSpan.FromMilliseconds(86400000L)),
+                sys::TimeSpan.FromMilliseconds(20000L),
                 1.5,
-                s::TimeSpan.FromMilliseconds(45000L))
+                sys::TimeSpan.FromMilliseconds(45000L))
         };
 
         /// <summary>
@@ -378,7 +378,7 @@ namespace Google.Cloud.Spanner.Admin.Instance.V1
             gaxgrpc::CallTiming.FromRetry(new gaxgrpc::RetrySettings(
                 retryBackoff: GetDefaultRetryBackoff(),
                 timeoutBackoff: GetDefaultTimeoutBackoff(),
-                totalExpiration: gax::Expiration.FromTimeout(s::TimeSpan.FromMilliseconds(600000)),
+                totalExpiration: gax::Expiration.FromTimeout(sys::TimeSpan.FromMilliseconds(600000)),
                 retryFilter: IdempotentRetryFilter
             )));
 
@@ -407,7 +407,7 @@ namespace Google.Cloud.Spanner.Admin.Instance.V1
             gaxgrpc::CallTiming.FromRetry(new gaxgrpc::RetrySettings(
                 retryBackoff: GetDefaultRetryBackoff(),
                 timeoutBackoff: GetDefaultTimeoutBackoff(),
-                totalExpiration: gax::Expiration.FromTimeout(s::TimeSpan.FromMilliseconds(600000)),
+                totalExpiration: gax::Expiration.FromTimeout(sys::TimeSpan.FromMilliseconds(600000)),
                 retryFilter: NonIdempotentRetryFilter
             )));
 
@@ -437,7 +437,7 @@ namespace Google.Cloud.Spanner.Admin.Instance.V1
             gaxgrpc::CallTiming.FromRetry(new gaxgrpc::RetrySettings(
                 retryBackoff: GetDefaultRetryBackoff(),
                 timeoutBackoff: GetDefaultTimeoutBackoff(),
-                totalExpiration: gax::Expiration.FromTimeout(s::TimeSpan.FromMilliseconds(600000)),
+                totalExpiration: gax::Expiration.FromTimeout(sys::TimeSpan.FromMilliseconds(600000)),
                 retryFilter: IdempotentRetryFilter
             )));
 
@@ -466,7 +466,7 @@ namespace Google.Cloud.Spanner.Admin.Instance.V1
             gaxgrpc::CallTiming.FromRetry(new gaxgrpc::RetrySettings(
                 retryBackoff: GetDefaultRetryBackoff(),
                 timeoutBackoff: GetDefaultTimeoutBackoff(),
-                totalExpiration: gax::Expiration.FromTimeout(s::TimeSpan.FromMilliseconds(600000)),
+                totalExpiration: gax::Expiration.FromTimeout(sys::TimeSpan.FromMilliseconds(600000)),
                 retryFilter: NonIdempotentRetryFilter
             )));
 
@@ -568,7 +568,7 @@ namespace Google.Cloud.Spanner.Admin.Instance.V1
         /// </summary>
         public virtual InstanceAdmin.InstanceAdminClient GrpcClient
         {
-            get { throw new s::NotImplementedException(); }
+            get { throw new sys::NotImplementedException(); }
         }
 
         /// <summary>
@@ -657,7 +657,7 @@ namespace Google.Cloud.Spanner.Admin.Instance.V1
             ListInstanceConfigsRequest request,
             gaxgrpc::CallSettings callSettings = null)
         {
-            throw new s::NotImplementedException();
+            throw new sys::NotImplementedException();
         }
 
         /// <summary>
@@ -676,7 +676,7 @@ namespace Google.Cloud.Spanner.Admin.Instance.V1
             ListInstanceConfigsRequest request,
             gaxgrpc::CallSettings callSettings = null)
         {
-            throw new s::NotImplementedException();
+            throw new sys::NotImplementedException();
         }
 
         /// <summary>
@@ -758,7 +758,7 @@ namespace Google.Cloud.Spanner.Admin.Instance.V1
             GetInstanceConfigRequest request,
             gaxgrpc::CallSettings callSettings = null)
         {
-            throw new s::NotImplementedException();
+            throw new sys::NotImplementedException();
         }
 
         /// <summary>
@@ -795,7 +795,7 @@ namespace Google.Cloud.Spanner.Admin.Instance.V1
             GetInstanceConfigRequest request,
             gaxgrpc::CallSettings callSettings = null)
         {
-            throw new s::NotImplementedException();
+            throw new sys::NotImplementedException();
         }
 
         /// <summary>
@@ -882,7 +882,7 @@ namespace Google.Cloud.Spanner.Admin.Instance.V1
             ListInstancesRequest request,
             gaxgrpc::CallSettings callSettings = null)
         {
-            throw new s::NotImplementedException();
+            throw new sys::NotImplementedException();
         }
 
         /// <summary>
@@ -901,7 +901,7 @@ namespace Google.Cloud.Spanner.Admin.Instance.V1
             ListInstancesRequest request,
             gaxgrpc::CallSettings callSettings = null)
         {
-            throw new s::NotImplementedException();
+            throw new sys::NotImplementedException();
         }
 
         /// <summary>
@@ -983,7 +983,7 @@ namespace Google.Cloud.Spanner.Admin.Instance.V1
             GetInstanceRequest request,
             gaxgrpc::CallSettings callSettings = null)
         {
-            throw new s::NotImplementedException();
+            throw new sys::NotImplementedException();
         }
 
         /// <summary>
@@ -1020,7 +1020,7 @@ namespace Google.Cloud.Spanner.Admin.Instance.V1
             GetInstanceRequest request,
             gaxgrpc::CallSettings callSettings = null)
         {
-            throw new s::NotImplementedException();
+            throw new sys::NotImplementedException();
         }
 
         /// <summary>
@@ -1273,7 +1273,7 @@ namespace Google.Cloud.Spanner.Admin.Instance.V1
             CreateInstanceRequest request,
             gaxgrpc::CallSettings callSettings = null)
         {
-            throw new s::NotImplementedException();
+            throw new sys::NotImplementedException();
         }
 
         /// <summary>
@@ -1338,7 +1338,7 @@ namespace Google.Cloud.Spanner.Admin.Instance.V1
             CreateInstanceRequest request,
             gaxgrpc::CallSettings callSettings = null)
         {
-            throw new s::NotImplementedException();
+            throw new sys::NotImplementedException();
         }
 
         /// <summary>
@@ -1346,7 +1346,7 @@ namespace Google.Cloud.Spanner.Admin.Instance.V1
         /// </summary>
         public virtual lro::OperationsClient CreateInstanceOperationsClient
         {
-            get { throw new s::NotImplementedException(); }
+            get { throw new sys::NotImplementedException(); }
         }
 
         /// <summary>
@@ -1422,7 +1422,7 @@ namespace Google.Cloud.Spanner.Admin.Instance.V1
         /// </returns>
         public virtual stt::Task<lro::Operation<Instance, UpdateInstanceMetadata>> UpdateInstanceAsync(
             Instance instance,
-            protowkt::FieldMask fieldMask,
+            pbwkt::FieldMask fieldMask,
             gaxgrpc::CallSettings callSettings = null) => UpdateInstanceAsync(
                 new UpdateInstanceRequest
                 {
@@ -1491,7 +1491,7 @@ namespace Google.Cloud.Spanner.Admin.Instance.V1
         /// </returns>
         public virtual stt::Task<lro::Operation<Instance, UpdateInstanceMetadata>> UpdateInstanceAsync(
             Instance instance,
-            protowkt::FieldMask fieldMask,
+            pbwkt::FieldMask fieldMask,
             st::CancellationToken cancellationToken) => UpdateInstanceAsync(
                 instance,
                 fieldMask,
@@ -1557,7 +1557,7 @@ namespace Google.Cloud.Spanner.Admin.Instance.V1
         /// </returns>
         public virtual lro::Operation<Instance, UpdateInstanceMetadata> UpdateInstance(
             Instance instance,
-            protowkt::FieldMask fieldMask,
+            pbwkt::FieldMask fieldMask,
             gaxgrpc::CallSettings callSettings = null) => UpdateInstance(
                 new UpdateInstanceRequest
                 {
@@ -1621,7 +1621,7 @@ namespace Google.Cloud.Spanner.Admin.Instance.V1
             UpdateInstanceRequest request,
             gaxgrpc::CallSettings callSettings = null)
         {
-            throw new s::NotImplementedException();
+            throw new sys::NotImplementedException();
         }
 
         /// <summary>
@@ -1692,7 +1692,7 @@ namespace Google.Cloud.Spanner.Admin.Instance.V1
             UpdateInstanceRequest request,
             gaxgrpc::CallSettings callSettings = null)
         {
-            throw new s::NotImplementedException();
+            throw new sys::NotImplementedException();
         }
 
         /// <summary>
@@ -1700,7 +1700,7 @@ namespace Google.Cloud.Spanner.Admin.Instance.V1
         /// </summary>
         public virtual lro::OperationsClient UpdateInstanceOperationsClient
         {
-            get { throw new s::NotImplementedException(); }
+            get { throw new sys::NotImplementedException(); }
         }
 
         /// <summary>
@@ -1832,7 +1832,7 @@ namespace Google.Cloud.Spanner.Admin.Instance.V1
             DeleteInstanceRequest request,
             gaxgrpc::CallSettings callSettings = null)
         {
-            throw new s::NotImplementedException();
+            throw new sys::NotImplementedException();
         }
 
         /// <summary>
@@ -1886,7 +1886,7 @@ namespace Google.Cloud.Spanner.Admin.Instance.V1
             DeleteInstanceRequest request,
             gaxgrpc::CallSettings callSettings = null)
         {
-            throw new s::NotImplementedException();
+            throw new sys::NotImplementedException();
         }
 
         /// <summary>
@@ -2011,7 +2011,7 @@ namespace Google.Cloud.Spanner.Admin.Instance.V1
             iam::SetIamPolicyRequest request,
             gaxgrpc::CallSettings callSettings = null)
         {
-            throw new s::NotImplementedException();
+            throw new sys::NotImplementedException();
         }
 
         /// <summary>
@@ -2056,7 +2056,7 @@ namespace Google.Cloud.Spanner.Admin.Instance.V1
             iam::SetIamPolicyRequest request,
             gaxgrpc::CallSettings callSettings = null)
         {
-            throw new s::NotImplementedException();
+            throw new sys::NotImplementedException();
         }
 
         /// <summary>
@@ -2157,7 +2157,7 @@ namespace Google.Cloud.Spanner.Admin.Instance.V1
             iam::GetIamPolicyRequest request,
             gaxgrpc::CallSettings callSettings = null)
         {
-            throw new s::NotImplementedException();
+            throw new sys::NotImplementedException();
         }
 
         /// <summary>
@@ -2202,7 +2202,7 @@ namespace Google.Cloud.Spanner.Admin.Instance.V1
             iam::GetIamPolicyRequest request,
             gaxgrpc::CallSettings callSettings = null)
         {
-            throw new s::NotImplementedException();
+            throw new sys::NotImplementedException();
         }
 
         /// <summary>
@@ -2331,7 +2331,7 @@ namespace Google.Cloud.Spanner.Admin.Instance.V1
             iam::TestIamPermissionsRequest request,
             gaxgrpc::CallSettings callSettings = null)
         {
-            throw new s::NotImplementedException();
+            throw new sys::NotImplementedException();
         }
 
         /// <summary>
@@ -2378,7 +2378,7 @@ namespace Google.Cloud.Spanner.Admin.Instance.V1
             iam::TestIamPermissionsRequest request,
             gaxgrpc::CallSettings callSettings = null)
         {
-            throw new s::NotImplementedException();
+            throw new sys::NotImplementedException();
         }
 
     }
@@ -2394,7 +2394,7 @@ namespace Google.Cloud.Spanner.Admin.Instance.V1
         private readonly gaxgrpc::ApiCall<GetInstanceRequest, Instance> _callGetInstance;
         private readonly gaxgrpc::ApiCall<CreateInstanceRequest, lro::Operation> _callCreateInstance;
         private readonly gaxgrpc::ApiCall<UpdateInstanceRequest, lro::Operation> _callUpdateInstance;
-        private readonly gaxgrpc::ApiCall<DeleteInstanceRequest, protowkt::Empty> _callDeleteInstance;
+        private readonly gaxgrpc::ApiCall<DeleteInstanceRequest, pbwkt::Empty> _callDeleteInstance;
         private readonly gaxgrpc::ApiCall<iam::SetIamPolicyRequest, iam::Policy> _callSetIamPolicy;
         private readonly gaxgrpc::ApiCall<iam::GetIamPolicyRequest, iam::Policy> _callGetIamPolicy;
         private readonly gaxgrpc::ApiCall<iam::TestIamPermissionsRequest, iam::TestIamPermissionsResponse> _callTestIamPermissions;
@@ -2425,7 +2425,7 @@ namespace Google.Cloud.Spanner.Admin.Instance.V1
                 GrpcClient.CreateInstanceAsync, GrpcClient.CreateInstance, effectiveSettings.CreateInstanceSettings);
             _callUpdateInstance = clientHelper.BuildApiCall<UpdateInstanceRequest, lro::Operation>(
                 GrpcClient.UpdateInstanceAsync, GrpcClient.UpdateInstance, effectiveSettings.UpdateInstanceSettings);
-            _callDeleteInstance = clientHelper.BuildApiCall<DeleteInstanceRequest, protowkt::Empty>(
+            _callDeleteInstance = clientHelper.BuildApiCall<DeleteInstanceRequest, pbwkt::Empty>(
                 GrpcClient.DeleteInstanceAsync, GrpcClient.DeleteInstance, effectiveSettings.DeleteInstanceSettings);
             _callSetIamPolicy = clientHelper.BuildApiCall<iam::SetIamPolicyRequest, iam::Policy>(
                 GrpcClient.SetIamPolicyAsync, GrpcClient.SetIamPolicy, effectiveSettings.SetIamPolicySettings);
@@ -2461,8 +2461,8 @@ namespace Google.Cloud.Spanner.Admin.Instance.V1
         // Partial methods called for every ApiCall on construction.
         // Allows modification of all the underlying ApiCall objects.
         partial void Modify_ApiCall<TRequest, TResponse>(ref gaxgrpc::ApiCall<TRequest, TResponse> call)
-            where TRequest : class, proto::IMessage<TRequest>
-            where TResponse : class, proto::IMessage<TResponse>;
+            where TRequest : class, pb::IMessage<TRequest>
+            where TResponse : class, pb::IMessage<TResponse>;
 
         // Partial methods called for each ApiCall on construction.
         // Allows per-RPC-method modification of the underlying ApiCall object.
@@ -2472,7 +2472,7 @@ namespace Google.Cloud.Spanner.Admin.Instance.V1
         partial void Modify_GetInstanceApiCall(ref gaxgrpc::ApiCall<GetInstanceRequest, Instance> call);
         partial void Modify_CreateInstanceApiCall(ref gaxgrpc::ApiCall<CreateInstanceRequest, lro::Operation> call);
         partial void Modify_UpdateInstanceApiCall(ref gaxgrpc::ApiCall<UpdateInstanceRequest, lro::Operation> call);
-        partial void Modify_DeleteInstanceApiCall(ref gaxgrpc::ApiCall<DeleteInstanceRequest, protowkt::Empty> call);
+        partial void Modify_DeleteInstanceApiCall(ref gaxgrpc::ApiCall<DeleteInstanceRequest, pbwkt::Empty> call);
         partial void Modify_SetIamPolicyApiCall(ref gaxgrpc::ApiCall<iam::SetIamPolicyRequest, iam::Policy> call);
         partial void Modify_GetIamPolicyApiCall(ref gaxgrpc::ApiCall<iam::GetIamPolicyRequest, iam::Policy> call);
         partial void Modify_TestIamPermissionsApiCall(ref gaxgrpc::ApiCall<iam::TestIamPermissionsRequest, iam::TestIamPermissionsResponse> call);

@@ -17,10 +17,10 @@
 using gax = Google.Api.Gax;
 using gaxgrpc = Google.Api.Gax.Grpc;
 using iam = Google.Cloud.Iam.V1;
-using proto = Google.Protobuf;
-using protowkt = Google.Protobuf.WellKnownTypes;
+using pb = Google.Protobuf;
+using pbwkt = Google.Protobuf.WellKnownTypes;
 using grpccore = Grpc.Core;
-using s = System;
+using sys = System;
 using sc = System.Collections;
 using scg = System.Collections.Generic;
 using sco = System.Collections.ObjectModel;
@@ -85,7 +85,7 @@ namespace Google.Cloud.PubSub.V1
         /// <item><description><see cref="grpccore::StatusCode.Unavailable"/></description></item>
         /// </list>
         /// </remarks>
-        public static s::Predicate<grpccore::RpcException> IdempotentRetryFilter { get; } =
+        public static sys::Predicate<grpccore::RpcException> IdempotentRetryFilter { get; } =
             gaxgrpc::RetrySettings.FilterForStatusCodes(grpccore::StatusCode.DeadlineExceeded, grpccore::StatusCode.Unavailable);
 
         /// <summary>
@@ -95,7 +95,7 @@ namespace Google.Cloud.PubSub.V1
         /// <remarks>
         /// There are no RPC <see cref="grpccore::StatusCode"/>s eligible for retry for "NonIdempotent" RPC methods.
         /// </remarks>
-        public static s::Predicate<grpccore::RpcException> NonIdempotentRetryFilter { get; } =
+        public static sys::Predicate<grpccore::RpcException> NonIdempotentRetryFilter { get; } =
             gaxgrpc::RetrySettings.FilterForStatusCodes();
 
         /// <summary>
@@ -112,7 +112,7 @@ namespace Google.Cloud.PubSub.V1
         /// <item><description><see cref="grpccore::StatusCode.Unavailable"/></description></item>
         /// </list>
         /// </remarks>
-        public static s::Predicate<grpccore::RpcException> PullRetryFilter { get; } =
+        public static sys::Predicate<grpccore::RpcException> PullRetryFilter { get; } =
             gaxgrpc::RetrySettings.FilterForStatusCodes(grpccore::StatusCode.Cancelled, grpccore::StatusCode.DeadlineExceeded, grpccore::StatusCode.Internal, grpccore::StatusCode.ResourceExhausted, grpccore::StatusCode.Unavailable);
 
         /// <summary>
@@ -130,8 +130,8 @@ namespace Google.Cloud.PubSub.V1
         /// </list>
         /// </remarks>
         public static gaxgrpc::BackoffSettings GetDefaultRetryBackoff() => new gaxgrpc::BackoffSettings(
-            delay: s::TimeSpan.FromMilliseconds(100),
-            maxDelay: s::TimeSpan.FromMilliseconds(60000),
+            delay: sys::TimeSpan.FromMilliseconds(100),
+            maxDelay: sys::TimeSpan.FromMilliseconds(60000),
             delayMultiplier: 1.3
         );
 
@@ -150,8 +150,8 @@ namespace Google.Cloud.PubSub.V1
         /// </list>
         /// </remarks>
         public static gaxgrpc::BackoffSettings GetDefaultTimeoutBackoff() => new gaxgrpc::BackoffSettings(
-            delay: s::TimeSpan.FromMilliseconds(60000),
-            maxDelay: s::TimeSpan.FromMilliseconds(60000),
+            delay: sys::TimeSpan.FromMilliseconds(60000),
+            maxDelay: sys::TimeSpan.FromMilliseconds(60000),
             delayMultiplier: 1.0
         );
 
@@ -170,8 +170,8 @@ namespace Google.Cloud.PubSub.V1
         /// </list>
         /// </remarks>
         public static gaxgrpc::BackoffSettings GetMessagingRetryBackoff() => new gaxgrpc::BackoffSettings(
-            delay: s::TimeSpan.FromMilliseconds(100),
-            maxDelay: s::TimeSpan.FromMilliseconds(60000),
+            delay: sys::TimeSpan.FromMilliseconds(100),
+            maxDelay: sys::TimeSpan.FromMilliseconds(60000),
             delayMultiplier: 1.3
         );
 
@@ -190,8 +190,8 @@ namespace Google.Cloud.PubSub.V1
         /// </list>
         /// </remarks>
         public static gaxgrpc::BackoffSettings GetMessagingTimeoutBackoff() => new gaxgrpc::BackoffSettings(
-            delay: s::TimeSpan.FromMilliseconds(12000),
-            maxDelay: s::TimeSpan.FromMilliseconds(12000),
+            delay: sys::TimeSpan.FromMilliseconds(12000),
+            maxDelay: sys::TimeSpan.FromMilliseconds(12000),
             delayMultiplier: 1.0
         );
 
@@ -210,8 +210,8 @@ namespace Google.Cloud.PubSub.V1
         /// </list>
         /// </remarks>
         public static gaxgrpc::BackoffSettings GetStreamingMessagingRetryBackoff() => new gaxgrpc::BackoffSettings(
-            delay: s::TimeSpan.FromMilliseconds(100),
-            maxDelay: s::TimeSpan.FromMilliseconds(60000),
+            delay: sys::TimeSpan.FromMilliseconds(100),
+            maxDelay: sys::TimeSpan.FromMilliseconds(60000),
             delayMultiplier: 1.3
         );
 
@@ -230,8 +230,8 @@ namespace Google.Cloud.PubSub.V1
         /// </list>
         /// </remarks>
         public static gaxgrpc::BackoffSettings GetStreamingMessagingTimeoutBackoff() => new gaxgrpc::BackoffSettings(
-            delay: s::TimeSpan.FromMilliseconds(600000),
-            maxDelay: s::TimeSpan.FromMilliseconds(600000),
+            delay: sys::TimeSpan.FromMilliseconds(600000),
+            maxDelay: sys::TimeSpan.FromMilliseconds(600000),
             delayMultiplier: 1.0
         );
 
@@ -261,7 +261,7 @@ namespace Google.Cloud.PubSub.V1
             gaxgrpc::CallTiming.FromRetry(new gaxgrpc::RetrySettings(
                 retryBackoff: GetDefaultRetryBackoff(),
                 timeoutBackoff: GetDefaultTimeoutBackoff(),
-                totalExpiration: gax::Expiration.FromTimeout(s::TimeSpan.FromMilliseconds(600000)),
+                totalExpiration: gax::Expiration.FromTimeout(sys::TimeSpan.FromMilliseconds(600000)),
                 retryFilter: IdempotentRetryFilter
             )));
 
@@ -291,7 +291,7 @@ namespace Google.Cloud.PubSub.V1
             gaxgrpc::CallTiming.FromRetry(new gaxgrpc::RetrySettings(
                 retryBackoff: GetDefaultRetryBackoff(),
                 timeoutBackoff: GetDefaultTimeoutBackoff(),
-                totalExpiration: gax::Expiration.FromTimeout(s::TimeSpan.FromMilliseconds(600000)),
+                totalExpiration: gax::Expiration.FromTimeout(sys::TimeSpan.FromMilliseconds(600000)),
                 retryFilter: IdempotentRetryFilter
             )));
 
@@ -321,7 +321,7 @@ namespace Google.Cloud.PubSub.V1
             gaxgrpc::CallTiming.FromRetry(new gaxgrpc::RetrySettings(
                 retryBackoff: GetDefaultRetryBackoff(),
                 timeoutBackoff: GetDefaultTimeoutBackoff(),
-                totalExpiration: gax::Expiration.FromTimeout(s::TimeSpan.FromMilliseconds(600000)),
+                totalExpiration: gax::Expiration.FromTimeout(sys::TimeSpan.FromMilliseconds(600000)),
                 retryFilter: IdempotentRetryFilter
             )));
 
@@ -351,7 +351,7 @@ namespace Google.Cloud.PubSub.V1
             gaxgrpc::CallTiming.FromRetry(new gaxgrpc::RetrySettings(
                 retryBackoff: GetDefaultRetryBackoff(),
                 timeoutBackoff: GetDefaultTimeoutBackoff(),
-                totalExpiration: gax::Expiration.FromTimeout(s::TimeSpan.FromMilliseconds(600000)),
+                totalExpiration: gax::Expiration.FromTimeout(sys::TimeSpan.FromMilliseconds(600000)),
                 retryFilter: IdempotentRetryFilter
             )));
 
@@ -381,7 +381,7 @@ namespace Google.Cloud.PubSub.V1
             gaxgrpc::CallTiming.FromRetry(new gaxgrpc::RetrySettings(
                 retryBackoff: GetDefaultRetryBackoff(),
                 timeoutBackoff: GetDefaultTimeoutBackoff(),
-                totalExpiration: gax::Expiration.FromTimeout(s::TimeSpan.FromMilliseconds(600000)),
+                totalExpiration: gax::Expiration.FromTimeout(sys::TimeSpan.FromMilliseconds(600000)),
                 retryFilter: IdempotentRetryFilter
             )));
 
@@ -410,7 +410,7 @@ namespace Google.Cloud.PubSub.V1
             gaxgrpc::CallTiming.FromRetry(new gaxgrpc::RetrySettings(
                 retryBackoff: GetDefaultRetryBackoff(),
                 timeoutBackoff: GetDefaultTimeoutBackoff(),
-                totalExpiration: gax::Expiration.FromTimeout(s::TimeSpan.FromMilliseconds(600000)),
+                totalExpiration: gax::Expiration.FromTimeout(sys::TimeSpan.FromMilliseconds(600000)),
                 retryFilter: NonIdempotentRetryFilter
             )));
 
@@ -439,7 +439,7 @@ namespace Google.Cloud.PubSub.V1
             gaxgrpc::CallTiming.FromRetry(new gaxgrpc::RetrySettings(
                 retryBackoff: GetMessagingRetryBackoff(),
                 timeoutBackoff: GetMessagingTimeoutBackoff(),
-                totalExpiration: gax::Expiration.FromTimeout(s::TimeSpan.FromMilliseconds(600000)),
+                totalExpiration: gax::Expiration.FromTimeout(sys::TimeSpan.FromMilliseconds(600000)),
                 retryFilter: NonIdempotentRetryFilter
             )));
 
@@ -472,7 +472,7 @@ namespace Google.Cloud.PubSub.V1
             gaxgrpc::CallTiming.FromRetry(new gaxgrpc::RetrySettings(
                 retryBackoff: GetMessagingRetryBackoff(),
                 timeoutBackoff: GetMessagingTimeoutBackoff(),
-                totalExpiration: gax::Expiration.FromTimeout(s::TimeSpan.FromMilliseconds(600000)),
+                totalExpiration: gax::Expiration.FromTimeout(sys::TimeSpan.FromMilliseconds(600000)),
                 retryFilter: PullRetryFilter
             )));
 
@@ -483,7 +483,7 @@ namespace Google.Cloud.PubSub.V1
         /// Default RPC expiration is 600000 milliseconds.
         /// </remarks>
         public gaxgrpc::CallSettings StreamingPullSettings { get; set; } = gaxgrpc::CallSettings.FromCallTiming(
-            gaxgrpc::CallTiming.FromTimeout(s::TimeSpan.FromMilliseconds(600000)));
+            gaxgrpc::CallTiming.FromTimeout(sys::TimeSpan.FromMilliseconds(600000)));
 
         /// <summary>
         /// <see cref="gaxgrpc::BidirectionalStreamingSettings"/> for calls to
@@ -520,7 +520,7 @@ namespace Google.Cloud.PubSub.V1
             gaxgrpc::CallTiming.FromRetry(new gaxgrpc::RetrySettings(
                 retryBackoff: GetDefaultRetryBackoff(),
                 timeoutBackoff: GetDefaultTimeoutBackoff(),
-                totalExpiration: gax::Expiration.FromTimeout(s::TimeSpan.FromMilliseconds(600000)),
+                totalExpiration: gax::Expiration.FromTimeout(sys::TimeSpan.FromMilliseconds(600000)),
                 retryFilter: NonIdempotentRetryFilter
             )));
 
@@ -550,7 +550,7 @@ namespace Google.Cloud.PubSub.V1
             gaxgrpc::CallTiming.FromRetry(new gaxgrpc::RetrySettings(
                 retryBackoff: GetDefaultRetryBackoff(),
                 timeoutBackoff: GetDefaultTimeoutBackoff(),
-                totalExpiration: gax::Expiration.FromTimeout(s::TimeSpan.FromMilliseconds(600000)),
+                totalExpiration: gax::Expiration.FromTimeout(sys::TimeSpan.FromMilliseconds(600000)),
                 retryFilter: IdempotentRetryFilter
             )));
 
@@ -580,7 +580,7 @@ namespace Google.Cloud.PubSub.V1
             gaxgrpc::CallTiming.FromRetry(new gaxgrpc::RetrySettings(
                 retryBackoff: GetDefaultRetryBackoff(),
                 timeoutBackoff: GetDefaultTimeoutBackoff(),
-                totalExpiration: gax::Expiration.FromTimeout(s::TimeSpan.FromMilliseconds(600000)),
+                totalExpiration: gax::Expiration.FromTimeout(sys::TimeSpan.FromMilliseconds(600000)),
                 retryFilter: IdempotentRetryFilter
             )));
 
@@ -610,7 +610,7 @@ namespace Google.Cloud.PubSub.V1
             gaxgrpc::CallTiming.FromRetry(new gaxgrpc::RetrySettings(
                 retryBackoff: GetDefaultRetryBackoff(),
                 timeoutBackoff: GetDefaultTimeoutBackoff(),
-                totalExpiration: gax::Expiration.FromTimeout(s::TimeSpan.FromMilliseconds(600000)),
+                totalExpiration: gax::Expiration.FromTimeout(sys::TimeSpan.FromMilliseconds(600000)),
                 retryFilter: IdempotentRetryFilter
             )));
 
@@ -640,7 +640,7 @@ namespace Google.Cloud.PubSub.V1
             gaxgrpc::CallTiming.FromRetry(new gaxgrpc::RetrySettings(
                 retryBackoff: GetDefaultRetryBackoff(),
                 timeoutBackoff: GetDefaultTimeoutBackoff(),
-                totalExpiration: gax::Expiration.FromTimeout(s::TimeSpan.FromMilliseconds(600000)),
+                totalExpiration: gax::Expiration.FromTimeout(sys::TimeSpan.FromMilliseconds(600000)),
                 retryFilter: IdempotentRetryFilter
             )));
 
@@ -669,7 +669,7 @@ namespace Google.Cloud.PubSub.V1
             gaxgrpc::CallTiming.FromRetry(new gaxgrpc::RetrySettings(
                 retryBackoff: GetDefaultRetryBackoff(),
                 timeoutBackoff: GetDefaultTimeoutBackoff(),
-                totalExpiration: gax::Expiration.FromTimeout(s::TimeSpan.FromMilliseconds(600000)),
+                totalExpiration: gax::Expiration.FromTimeout(sys::TimeSpan.FromMilliseconds(600000)),
                 retryFilter: NonIdempotentRetryFilter
             )));
 
@@ -698,7 +698,7 @@ namespace Google.Cloud.PubSub.V1
             gaxgrpc::CallTiming.FromRetry(new gaxgrpc::RetrySettings(
                 retryBackoff: GetDefaultRetryBackoff(),
                 timeoutBackoff: GetDefaultTimeoutBackoff(),
-                totalExpiration: gax::Expiration.FromTimeout(s::TimeSpan.FromMilliseconds(600000)),
+                totalExpiration: gax::Expiration.FromTimeout(sys::TimeSpan.FromMilliseconds(600000)),
                 retryFilter: NonIdempotentRetryFilter
             )));
 
@@ -728,7 +728,7 @@ namespace Google.Cloud.PubSub.V1
             gaxgrpc::CallTiming.FromRetry(new gaxgrpc::RetrySettings(
                 retryBackoff: GetDefaultRetryBackoff(),
                 timeoutBackoff: GetDefaultTimeoutBackoff(),
-                totalExpiration: gax::Expiration.FromTimeout(s::TimeSpan.FromMilliseconds(600000)),
+                totalExpiration: gax::Expiration.FromTimeout(sys::TimeSpan.FromMilliseconds(600000)),
                 retryFilter: IdempotentRetryFilter
             )));
 
@@ -757,7 +757,7 @@ namespace Google.Cloud.PubSub.V1
             gaxgrpc::CallTiming.FromRetry(new gaxgrpc::RetrySettings(
                 retryBackoff: GetDefaultRetryBackoff(),
                 timeoutBackoff: GetDefaultTimeoutBackoff(),
-                totalExpiration: gax::Expiration.FromTimeout(s::TimeSpan.FromMilliseconds(600000)),
+                totalExpiration: gax::Expiration.FromTimeout(sys::TimeSpan.FromMilliseconds(600000)),
                 retryFilter: NonIdempotentRetryFilter
             )));
 
@@ -859,7 +859,7 @@ namespace Google.Cloud.PubSub.V1
         /// </summary>
         public virtual Subscriber.SubscriberClient GrpcClient
         {
-            get { throw new s::NotImplementedException(); }
+            get { throw new sys::NotImplementedException(); }
         }
 
         /// <summary>
@@ -1103,7 +1103,7 @@ namespace Google.Cloud.PubSub.V1
             Subscription request,
             gaxgrpc::CallSettings callSettings = null)
         {
-            throw new s::NotImplementedException();
+            throw new sys::NotImplementedException();
         }
 
         /// <summary>
@@ -1158,7 +1158,7 @@ namespace Google.Cloud.PubSub.V1
             Subscription request,
             gaxgrpc::CallSettings callSettings = null)
         {
-            throw new s::NotImplementedException();
+            throw new sys::NotImplementedException();
         }
 
         /// <summary>
@@ -1240,7 +1240,7 @@ namespace Google.Cloud.PubSub.V1
             GetSubscriptionRequest request,
             gaxgrpc::CallSettings callSettings = null)
         {
-            throw new s::NotImplementedException();
+            throw new sys::NotImplementedException();
         }
 
         /// <summary>
@@ -1277,7 +1277,7 @@ namespace Google.Cloud.PubSub.V1
             GetSubscriptionRequest request,
             gaxgrpc::CallSettings callSettings = null)
         {
-            throw new s::NotImplementedException();
+            throw new sys::NotImplementedException();
         }
 
         /// <summary>
@@ -1301,7 +1301,7 @@ namespace Google.Cloud.PubSub.V1
             UpdateSubscriptionRequest request,
             gaxgrpc::CallSettings callSettings = null)
         {
-            throw new s::NotImplementedException();
+            throw new sys::NotImplementedException();
         }
 
         /// <summary>
@@ -1348,7 +1348,7 @@ namespace Google.Cloud.PubSub.V1
             UpdateSubscriptionRequest request,
             gaxgrpc::CallSettings callSettings = null)
         {
-            throw new s::NotImplementedException();
+            throw new sys::NotImplementedException();
         }
 
         /// <summary>
@@ -1435,7 +1435,7 @@ namespace Google.Cloud.PubSub.V1
             ListSubscriptionsRequest request,
             gaxgrpc::CallSettings callSettings = null)
         {
-            throw new s::NotImplementedException();
+            throw new sys::NotImplementedException();
         }
 
         /// <summary>
@@ -1454,7 +1454,7 @@ namespace Google.Cloud.PubSub.V1
             ListSubscriptionsRequest request,
             gaxgrpc::CallSettings callSettings = null)
         {
-            throw new s::NotImplementedException();
+            throw new sys::NotImplementedException();
         }
 
         /// <summary>
@@ -1549,7 +1549,7 @@ namespace Google.Cloud.PubSub.V1
             DeleteSubscriptionRequest request,
             gaxgrpc::CallSettings callSettings = null)
         {
-            throw new s::NotImplementedException();
+            throw new sys::NotImplementedException();
         }
 
         /// <summary>
@@ -1591,7 +1591,7 @@ namespace Google.Cloud.PubSub.V1
             DeleteSubscriptionRequest request,
             gaxgrpc::CallSettings callSettings = null)
         {
-            throw new s::NotImplementedException();
+            throw new sys::NotImplementedException();
         }
 
         /// <summary>
@@ -1734,7 +1734,7 @@ namespace Google.Cloud.PubSub.V1
             ModifyAckDeadlineRequest request,
             gaxgrpc::CallSettings callSettings = null)
         {
-            throw new s::NotImplementedException();
+            throw new sys::NotImplementedException();
         }
 
         /// <summary>
@@ -1776,7 +1776,7 @@ namespace Google.Cloud.PubSub.V1
             ModifyAckDeadlineRequest request,
             gaxgrpc::CallSettings callSettings = null)
         {
-            throw new s::NotImplementedException();
+            throw new sys::NotImplementedException();
         }
 
         /// <summary>
@@ -1897,7 +1897,7 @@ namespace Google.Cloud.PubSub.V1
             AcknowledgeRequest request,
             gaxgrpc::CallSettings callSettings = null)
         {
-            throw new s::NotImplementedException();
+            throw new sys::NotImplementedException();
         }
 
         /// <summary>
@@ -1943,7 +1943,7 @@ namespace Google.Cloud.PubSub.V1
             AcknowledgeRequest request,
             gaxgrpc::CallSettings callSettings = null)
         {
-            throw new s::NotImplementedException();
+            throw new sys::NotImplementedException();
         }
 
         /// <summary>
@@ -2085,7 +2085,7 @@ namespace Google.Cloud.PubSub.V1
             PullRequest request,
             gaxgrpc::CallSettings callSettings = null)
         {
-            throw new s::NotImplementedException();
+            throw new sys::NotImplementedException();
         }
 
         /// <summary>
@@ -2128,7 +2128,7 @@ namespace Google.Cloud.PubSub.V1
             PullRequest request,
             gaxgrpc::CallSettings callSettings = null)
         {
-            throw new s::NotImplementedException();
+            throw new sys::NotImplementedException();
         }
 
         /// <summary>
@@ -2158,7 +2158,7 @@ namespace Google.Cloud.PubSub.V1
             gaxgrpc::CallSettings callSettings = null,
             gaxgrpc::BidirectionalStreamingSettings streamingSettings = null)
         {
-            throw new s::NotImplementedException();
+            throw new sys::NotImplementedException();
         }
 
         /// <summary>
@@ -2294,7 +2294,7 @@ namespace Google.Cloud.PubSub.V1
             ModifyPushConfigRequest request,
             gaxgrpc::CallSettings callSettings = null)
         {
-            throw new s::NotImplementedException();
+            throw new sys::NotImplementedException();
         }
 
         /// <summary>
@@ -2338,7 +2338,7 @@ namespace Google.Cloud.PubSub.V1
             ModifyPushConfigRequest request,
             gaxgrpc::CallSettings callSettings = null)
         {
-            throw new s::NotImplementedException();
+            throw new sys::NotImplementedException();
         }
 
         /// <summary>
@@ -2425,7 +2425,7 @@ namespace Google.Cloud.PubSub.V1
             ListSnapshotsRequest request,
             gaxgrpc::CallSettings callSettings = null)
         {
-            throw new s::NotImplementedException();
+            throw new sys::NotImplementedException();
         }
 
         /// <summary>
@@ -2444,7 +2444,7 @@ namespace Google.Cloud.PubSub.V1
             ListSnapshotsRequest request,
             gaxgrpc::CallSettings callSettings = null)
         {
-            throw new s::NotImplementedException();
+            throw new sys::NotImplementedException();
         }
 
         /// <summary>
@@ -2610,7 +2610,7 @@ namespace Google.Cloud.PubSub.V1
             CreateSnapshotRequest request,
             gaxgrpc::CallSettings callSettings = null)
         {
-            throw new s::NotImplementedException();
+            throw new sys::NotImplementedException();
         }
 
         /// <summary>
@@ -2665,7 +2665,7 @@ namespace Google.Cloud.PubSub.V1
             CreateSnapshotRequest request,
             gaxgrpc::CallSettings callSettings = null)
         {
-            throw new s::NotImplementedException();
+            throw new sys::NotImplementedException();
         }
 
         /// <summary>
@@ -2689,7 +2689,7 @@ namespace Google.Cloud.PubSub.V1
             UpdateSnapshotRequest request,
             gaxgrpc::CallSettings callSettings = null)
         {
-            throw new s::NotImplementedException();
+            throw new sys::NotImplementedException();
         }
 
         /// <summary>
@@ -2736,7 +2736,7 @@ namespace Google.Cloud.PubSub.V1
             UpdateSnapshotRequest request,
             gaxgrpc::CallSettings callSettings = null)
         {
-            throw new s::NotImplementedException();
+            throw new sys::NotImplementedException();
         }
 
         /// <summary>
@@ -2827,7 +2827,7 @@ namespace Google.Cloud.PubSub.V1
             DeleteSnapshotRequest request,
             gaxgrpc::CallSettings callSettings = null)
         {
-            throw new s::NotImplementedException();
+            throw new sys::NotImplementedException();
         }
 
         /// <summary>
@@ -2867,7 +2867,7 @@ namespace Google.Cloud.PubSub.V1
             DeleteSnapshotRequest request,
             gaxgrpc::CallSettings callSettings = null)
         {
-            throw new s::NotImplementedException();
+            throw new sys::NotImplementedException();
         }
 
         /// <summary>
@@ -2887,7 +2887,7 @@ namespace Google.Cloud.PubSub.V1
             SeekRequest request,
             gaxgrpc::CallSettings callSettings = null)
         {
-            throw new s::NotImplementedException();
+            throw new sys::NotImplementedException();
         }
 
         /// <summary>
@@ -2926,7 +2926,7 @@ namespace Google.Cloud.PubSub.V1
             SeekRequest request,
             gaxgrpc::CallSettings callSettings = null)
         {
-            throw new s::NotImplementedException();
+            throw new sys::NotImplementedException();
         }
 
         /// <summary>
@@ -3039,7 +3039,7 @@ namespace Google.Cloud.PubSub.V1
             iam::SetIamPolicyRequest request,
             gaxgrpc::CallSettings callSettings = null)
         {
-            throw new s::NotImplementedException();
+            throw new sys::NotImplementedException();
         }
 
         /// <summary>
@@ -3078,7 +3078,7 @@ namespace Google.Cloud.PubSub.V1
             iam::SetIamPolicyRequest request,
             gaxgrpc::CallSettings callSettings = null)
         {
-            throw new s::NotImplementedException();
+            throw new sys::NotImplementedException();
         }
 
         /// <summary>
@@ -3171,7 +3171,7 @@ namespace Google.Cloud.PubSub.V1
             iam::GetIamPolicyRequest request,
             gaxgrpc::CallSettings callSettings = null)
         {
-            throw new s::NotImplementedException();
+            throw new sys::NotImplementedException();
         }
 
         /// <summary>
@@ -3212,7 +3212,7 @@ namespace Google.Cloud.PubSub.V1
             iam::GetIamPolicyRequest request,
             gaxgrpc::CallSettings callSettings = null)
         {
-            throw new s::NotImplementedException();
+            throw new sys::NotImplementedException();
         }
 
         /// <summary>
@@ -3329,7 +3329,7 @@ namespace Google.Cloud.PubSub.V1
             iam::TestIamPermissionsRequest request,
             gaxgrpc::CallSettings callSettings = null)
         {
-            throw new s::NotImplementedException();
+            throw new sys::NotImplementedException();
         }
 
         /// <summary>
@@ -3370,7 +3370,7 @@ namespace Google.Cloud.PubSub.V1
             iam::TestIamPermissionsRequest request,
             gaxgrpc::CallSettings callSettings = null)
         {
-            throw new s::NotImplementedException();
+            throw new sys::NotImplementedException();
         }
 
     }
@@ -3384,16 +3384,16 @@ namespace Google.Cloud.PubSub.V1
         private readonly gaxgrpc::ApiCall<GetSubscriptionRequest, Subscription> _callGetSubscription;
         private readonly gaxgrpc::ApiCall<UpdateSubscriptionRequest, Subscription> _callUpdateSubscription;
         private readonly gaxgrpc::ApiCall<ListSubscriptionsRequest, ListSubscriptionsResponse> _callListSubscriptions;
-        private readonly gaxgrpc::ApiCall<DeleteSubscriptionRequest, protowkt::Empty> _callDeleteSubscription;
-        private readonly gaxgrpc::ApiCall<ModifyAckDeadlineRequest, protowkt::Empty> _callModifyAckDeadline;
-        private readonly gaxgrpc::ApiCall<AcknowledgeRequest, protowkt::Empty> _callAcknowledge;
+        private readonly gaxgrpc::ApiCall<DeleteSubscriptionRequest, pbwkt::Empty> _callDeleteSubscription;
+        private readonly gaxgrpc::ApiCall<ModifyAckDeadlineRequest, pbwkt::Empty> _callModifyAckDeadline;
+        private readonly gaxgrpc::ApiCall<AcknowledgeRequest, pbwkt::Empty> _callAcknowledge;
         private readonly gaxgrpc::ApiCall<PullRequest, PullResponse> _callPull;
         private readonly gaxgrpc::ApiBidirectionalStreamingCall<StreamingPullRequest, StreamingPullResponse> _callStreamingPull;
-        private readonly gaxgrpc::ApiCall<ModifyPushConfigRequest, protowkt::Empty> _callModifyPushConfig;
+        private readonly gaxgrpc::ApiCall<ModifyPushConfigRequest, pbwkt::Empty> _callModifyPushConfig;
         private readonly gaxgrpc::ApiCall<ListSnapshotsRequest, ListSnapshotsResponse> _callListSnapshots;
         private readonly gaxgrpc::ApiCall<CreateSnapshotRequest, Snapshot> _callCreateSnapshot;
         private readonly gaxgrpc::ApiCall<UpdateSnapshotRequest, Snapshot> _callUpdateSnapshot;
-        private readonly gaxgrpc::ApiCall<DeleteSnapshotRequest, protowkt::Empty> _callDeleteSnapshot;
+        private readonly gaxgrpc::ApiCall<DeleteSnapshotRequest, pbwkt::Empty> _callDeleteSnapshot;
         private readonly gaxgrpc::ApiCall<SeekRequest, SeekResponse> _callSeek;
         private readonly gaxgrpc::ApiCall<iam::SetIamPolicyRequest, iam::Policy> _callSetIamPolicy;
         private readonly gaxgrpc::ApiCall<iam::GetIamPolicyRequest, iam::Policy> _callGetIamPolicy;
@@ -3418,17 +3418,17 @@ namespace Google.Cloud.PubSub.V1
                 GrpcClient.UpdateSubscriptionAsync, GrpcClient.UpdateSubscription, effectiveSettings.UpdateSubscriptionSettings);
             _callListSubscriptions = clientHelper.BuildApiCall<ListSubscriptionsRequest, ListSubscriptionsResponse>(
                 GrpcClient.ListSubscriptionsAsync, GrpcClient.ListSubscriptions, effectiveSettings.ListSubscriptionsSettings);
-            _callDeleteSubscription = clientHelper.BuildApiCall<DeleteSubscriptionRequest, protowkt::Empty>(
+            _callDeleteSubscription = clientHelper.BuildApiCall<DeleteSubscriptionRequest, pbwkt::Empty>(
                 GrpcClient.DeleteSubscriptionAsync, GrpcClient.DeleteSubscription, effectiveSettings.DeleteSubscriptionSettings);
-            _callModifyAckDeadline = clientHelper.BuildApiCall<ModifyAckDeadlineRequest, protowkt::Empty>(
+            _callModifyAckDeadline = clientHelper.BuildApiCall<ModifyAckDeadlineRequest, pbwkt::Empty>(
                 GrpcClient.ModifyAckDeadlineAsync, GrpcClient.ModifyAckDeadline, effectiveSettings.ModifyAckDeadlineSettings);
-            _callAcknowledge = clientHelper.BuildApiCall<AcknowledgeRequest, protowkt::Empty>(
+            _callAcknowledge = clientHelper.BuildApiCall<AcknowledgeRequest, pbwkt::Empty>(
                 GrpcClient.AcknowledgeAsync, GrpcClient.Acknowledge, effectiveSettings.AcknowledgeSettings);
             _callPull = clientHelper.BuildApiCall<PullRequest, PullResponse>(
                 GrpcClient.PullAsync, GrpcClient.Pull, effectiveSettings.PullSettings);
             _callStreamingPull = clientHelper.BuildApiCall<StreamingPullRequest, StreamingPullResponse>(
                 GrpcClient.StreamingPull, effectiveSettings.StreamingPullSettings, effectiveSettings.StreamingPullStreamingSettings);
-            _callModifyPushConfig = clientHelper.BuildApiCall<ModifyPushConfigRequest, protowkt::Empty>(
+            _callModifyPushConfig = clientHelper.BuildApiCall<ModifyPushConfigRequest, pbwkt::Empty>(
                 GrpcClient.ModifyPushConfigAsync, GrpcClient.ModifyPushConfig, effectiveSettings.ModifyPushConfigSettings);
             _callListSnapshots = clientHelper.BuildApiCall<ListSnapshotsRequest, ListSnapshotsResponse>(
                 GrpcClient.ListSnapshotsAsync, GrpcClient.ListSnapshots, effectiveSettings.ListSnapshotsSettings);
@@ -3436,7 +3436,7 @@ namespace Google.Cloud.PubSub.V1
                 GrpcClient.CreateSnapshotAsync, GrpcClient.CreateSnapshot, effectiveSettings.CreateSnapshotSettings);
             _callUpdateSnapshot = clientHelper.BuildApiCall<UpdateSnapshotRequest, Snapshot>(
                 GrpcClient.UpdateSnapshotAsync, GrpcClient.UpdateSnapshot, effectiveSettings.UpdateSnapshotSettings);
-            _callDeleteSnapshot = clientHelper.BuildApiCall<DeleteSnapshotRequest, protowkt::Empty>(
+            _callDeleteSnapshot = clientHelper.BuildApiCall<DeleteSnapshotRequest, pbwkt::Empty>(
                 GrpcClient.DeleteSnapshotAsync, GrpcClient.DeleteSnapshot, effectiveSettings.DeleteSnapshotSettings);
             _callSeek = clientHelper.BuildApiCall<SeekRequest, SeekResponse>(
                 GrpcClient.SeekAsync, GrpcClient.Seek, effectiveSettings.SeekSettings);
@@ -3490,11 +3490,11 @@ namespace Google.Cloud.PubSub.V1
         // Partial methods called for every ApiCall on construction.
         // Allows modification of all the underlying ApiCall objects.
         partial void Modify_ApiCall<TRequest, TResponse>(ref gaxgrpc::ApiCall<TRequest, TResponse> call)
-            where TRequest : class, proto::IMessage<TRequest>
-            where TResponse : class, proto::IMessage<TResponse>;
+            where TRequest : class, pb::IMessage<TRequest>
+            where TResponse : class, pb::IMessage<TResponse>;
         partial void Modify_ApiCall<TRequest, TResponse>(ref gaxgrpc::ApiBidirectionalStreamingCall<TRequest, TResponse> call)
-            where TRequest : class, proto::IMessage<TRequest>
-            where TResponse : class, proto::IMessage<TResponse>;
+            where TRequest : class, pb::IMessage<TRequest>
+            where TResponse : class, pb::IMessage<TResponse>;
 
         // Partial methods called for each ApiCall on construction.
         // Allows per-RPC-method modification of the underlying ApiCall object.
@@ -3502,16 +3502,16 @@ namespace Google.Cloud.PubSub.V1
         partial void Modify_GetSubscriptionApiCall(ref gaxgrpc::ApiCall<GetSubscriptionRequest, Subscription> call);
         partial void Modify_UpdateSubscriptionApiCall(ref gaxgrpc::ApiCall<UpdateSubscriptionRequest, Subscription> call);
         partial void Modify_ListSubscriptionsApiCall(ref gaxgrpc::ApiCall<ListSubscriptionsRequest, ListSubscriptionsResponse> call);
-        partial void Modify_DeleteSubscriptionApiCall(ref gaxgrpc::ApiCall<DeleteSubscriptionRequest, protowkt::Empty> call);
-        partial void Modify_ModifyAckDeadlineApiCall(ref gaxgrpc::ApiCall<ModifyAckDeadlineRequest, protowkt::Empty> call);
-        partial void Modify_AcknowledgeApiCall(ref gaxgrpc::ApiCall<AcknowledgeRequest, protowkt::Empty> call);
+        partial void Modify_DeleteSubscriptionApiCall(ref gaxgrpc::ApiCall<DeleteSubscriptionRequest, pbwkt::Empty> call);
+        partial void Modify_ModifyAckDeadlineApiCall(ref gaxgrpc::ApiCall<ModifyAckDeadlineRequest, pbwkt::Empty> call);
+        partial void Modify_AcknowledgeApiCall(ref gaxgrpc::ApiCall<AcknowledgeRequest, pbwkt::Empty> call);
         partial void Modify_PullApiCall(ref gaxgrpc::ApiCall<PullRequest, PullResponse> call);
         partial void Modify_StreamingPullApiCall(ref gaxgrpc::ApiBidirectionalStreamingCall<StreamingPullRequest, StreamingPullResponse> call);
-        partial void Modify_ModifyPushConfigApiCall(ref gaxgrpc::ApiCall<ModifyPushConfigRequest, protowkt::Empty> call);
+        partial void Modify_ModifyPushConfigApiCall(ref gaxgrpc::ApiCall<ModifyPushConfigRequest, pbwkt::Empty> call);
         partial void Modify_ListSnapshotsApiCall(ref gaxgrpc::ApiCall<ListSnapshotsRequest, ListSnapshotsResponse> call);
         partial void Modify_CreateSnapshotApiCall(ref gaxgrpc::ApiCall<CreateSnapshotRequest, Snapshot> call);
         partial void Modify_UpdateSnapshotApiCall(ref gaxgrpc::ApiCall<UpdateSnapshotRequest, Snapshot> call);
-        partial void Modify_DeleteSnapshotApiCall(ref gaxgrpc::ApiCall<DeleteSnapshotRequest, protowkt::Empty> call);
+        partial void Modify_DeleteSnapshotApiCall(ref gaxgrpc::ApiCall<DeleteSnapshotRequest, pbwkt::Empty> call);
         partial void Modify_SeekApiCall(ref gaxgrpc::ApiCall<SeekRequest, SeekResponse> call);
         partial void Modify_SetIamPolicyApiCall(ref gaxgrpc::ApiCall<iam::SetIamPolicyRequest, iam::Policy> call);
         partial void Modify_GetIamPolicyApiCall(ref gaxgrpc::ApiCall<iam::GetIamPolicyRequest, iam::Policy> call);

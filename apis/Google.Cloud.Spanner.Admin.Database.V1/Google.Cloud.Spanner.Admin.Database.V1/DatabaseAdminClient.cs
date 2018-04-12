@@ -18,10 +18,10 @@ using gax = Google.Api.Gax;
 using gaxgrpc = Google.Api.Gax.Grpc;
 using iam = Google.Cloud.Iam.V1;
 using lro = Google.LongRunning;
-using proto = Google.Protobuf;
-using protowkt = Google.Protobuf.WellKnownTypes;
+using pb = Google.Protobuf;
+using pbwkt = Google.Protobuf.WellKnownTypes;
 using grpccore = Grpc.Core;
-using s = System;
+using sys = System;
 using sc = System.Collections;
 using scg = System.Collections.Generic;
 using sco = System.Collections.ObjectModel;
@@ -78,7 +78,7 @@ namespace Google.Cloud.Spanner.Admin.Database.V1
         /// <item><description><see cref="grpccore::StatusCode.Unavailable"/></description></item>
         /// </list>
         /// </remarks>
-        public static s::Predicate<grpccore::RpcException> IdempotentRetryFilter { get; } =
+        public static sys::Predicate<grpccore::RpcException> IdempotentRetryFilter { get; } =
             gaxgrpc::RetrySettings.FilterForStatusCodes(grpccore::StatusCode.DeadlineExceeded, grpccore::StatusCode.Unavailable);
 
         /// <summary>
@@ -88,7 +88,7 @@ namespace Google.Cloud.Spanner.Admin.Database.V1
         /// <remarks>
         /// There are no RPC <see cref="grpccore::StatusCode"/>s eligible for retry for "NonIdempotent" RPC methods.
         /// </remarks>
-        public static s::Predicate<grpccore::RpcException> NonIdempotentRetryFilter { get; } =
+        public static sys::Predicate<grpccore::RpcException> NonIdempotentRetryFilter { get; } =
             gaxgrpc::RetrySettings.FilterForStatusCodes();
 
         /// <summary>
@@ -106,8 +106,8 @@ namespace Google.Cloud.Spanner.Admin.Database.V1
         /// </list>
         /// </remarks>
         public static gaxgrpc::BackoffSettings GetDefaultRetryBackoff() => new gaxgrpc::BackoffSettings(
-            delay: s::TimeSpan.FromMilliseconds(1000),
-            maxDelay: s::TimeSpan.FromMilliseconds(32000),
+            delay: sys::TimeSpan.FromMilliseconds(1000),
+            maxDelay: sys::TimeSpan.FromMilliseconds(32000),
             delayMultiplier: 1.3
         );
 
@@ -126,8 +126,8 @@ namespace Google.Cloud.Spanner.Admin.Database.V1
         /// </list>
         /// </remarks>
         public static gaxgrpc::BackoffSettings GetDefaultTimeoutBackoff() => new gaxgrpc::BackoffSettings(
-            delay: s::TimeSpan.FromMilliseconds(60000),
-            maxDelay: s::TimeSpan.FromMilliseconds(60000),
+            delay: sys::TimeSpan.FromMilliseconds(60000),
+            maxDelay: sys::TimeSpan.FromMilliseconds(60000),
             delayMultiplier: 1.0
         );
 
@@ -157,7 +157,7 @@ namespace Google.Cloud.Spanner.Admin.Database.V1
             gaxgrpc::CallTiming.FromRetry(new gaxgrpc::RetrySettings(
                 retryBackoff: GetDefaultRetryBackoff(),
                 timeoutBackoff: GetDefaultTimeoutBackoff(),
-                totalExpiration: gax::Expiration.FromTimeout(s::TimeSpan.FromMilliseconds(600000)),
+                totalExpiration: gax::Expiration.FromTimeout(sys::TimeSpan.FromMilliseconds(600000)),
                 retryFilter: IdempotentRetryFilter
             )));
 
@@ -186,7 +186,7 @@ namespace Google.Cloud.Spanner.Admin.Database.V1
             gaxgrpc::CallTiming.FromRetry(new gaxgrpc::RetrySettings(
                 retryBackoff: GetDefaultRetryBackoff(),
                 timeoutBackoff: GetDefaultTimeoutBackoff(),
-                totalExpiration: gax::Expiration.FromTimeout(s::TimeSpan.FromMilliseconds(600000)),
+                totalExpiration: gax::Expiration.FromTimeout(sys::TimeSpan.FromMilliseconds(600000)),
                 retryFilter: NonIdempotentRetryFilter
             )));
 
@@ -205,10 +205,10 @@ namespace Google.Cloud.Spanner.Admin.Database.V1
         public lro::OperationsSettings CreateDatabaseOperationsSettings { get; set; } = new lro::OperationsSettings
         {
             DefaultPollSettings = new gax::PollSettings(
-                gax::Expiration.FromTimeout(s::TimeSpan.FromMilliseconds(86400000L)),
-                s::TimeSpan.FromMilliseconds(20000L),
+                gax::Expiration.FromTimeout(sys::TimeSpan.FromMilliseconds(86400000L)),
+                sys::TimeSpan.FromMilliseconds(20000L),
                 1.5,
-                s::TimeSpan.FromMilliseconds(45000L))
+                sys::TimeSpan.FromMilliseconds(45000L))
         };
 
         /// <summary>
@@ -237,7 +237,7 @@ namespace Google.Cloud.Spanner.Admin.Database.V1
             gaxgrpc::CallTiming.FromRetry(new gaxgrpc::RetrySettings(
                 retryBackoff: GetDefaultRetryBackoff(),
                 timeoutBackoff: GetDefaultTimeoutBackoff(),
-                totalExpiration: gax::Expiration.FromTimeout(s::TimeSpan.FromMilliseconds(600000)),
+                totalExpiration: gax::Expiration.FromTimeout(sys::TimeSpan.FromMilliseconds(600000)),
                 retryFilter: IdempotentRetryFilter
             )));
 
@@ -267,7 +267,7 @@ namespace Google.Cloud.Spanner.Admin.Database.V1
             gaxgrpc::CallTiming.FromRetry(new gaxgrpc::RetrySettings(
                 retryBackoff: GetDefaultRetryBackoff(),
                 timeoutBackoff: GetDefaultTimeoutBackoff(),
-                totalExpiration: gax::Expiration.FromTimeout(s::TimeSpan.FromMilliseconds(600000)),
+                totalExpiration: gax::Expiration.FromTimeout(sys::TimeSpan.FromMilliseconds(600000)),
                 retryFilter: IdempotentRetryFilter
             )));
 
@@ -286,10 +286,10 @@ namespace Google.Cloud.Spanner.Admin.Database.V1
         public lro::OperationsSettings UpdateDatabaseDdlOperationsSettings { get; set; } = new lro::OperationsSettings
         {
             DefaultPollSettings = new gax::PollSettings(
-                gax::Expiration.FromTimeout(s::TimeSpan.FromMilliseconds(86400000L)),
-                s::TimeSpan.FromMilliseconds(20000L),
+                gax::Expiration.FromTimeout(sys::TimeSpan.FromMilliseconds(86400000L)),
+                sys::TimeSpan.FromMilliseconds(20000L),
                 1.5,
-                s::TimeSpan.FromMilliseconds(45000L))
+                sys::TimeSpan.FromMilliseconds(45000L))
         };
 
         /// <summary>
@@ -318,7 +318,7 @@ namespace Google.Cloud.Spanner.Admin.Database.V1
             gaxgrpc::CallTiming.FromRetry(new gaxgrpc::RetrySettings(
                 retryBackoff: GetDefaultRetryBackoff(),
                 timeoutBackoff: GetDefaultTimeoutBackoff(),
-                totalExpiration: gax::Expiration.FromTimeout(s::TimeSpan.FromMilliseconds(600000)),
+                totalExpiration: gax::Expiration.FromTimeout(sys::TimeSpan.FromMilliseconds(600000)),
                 retryFilter: IdempotentRetryFilter
             )));
 
@@ -348,7 +348,7 @@ namespace Google.Cloud.Spanner.Admin.Database.V1
             gaxgrpc::CallTiming.FromRetry(new gaxgrpc::RetrySettings(
                 retryBackoff: GetDefaultRetryBackoff(),
                 timeoutBackoff: GetDefaultTimeoutBackoff(),
-                totalExpiration: gax::Expiration.FromTimeout(s::TimeSpan.FromMilliseconds(600000)),
+                totalExpiration: gax::Expiration.FromTimeout(sys::TimeSpan.FromMilliseconds(600000)),
                 retryFilter: IdempotentRetryFilter
             )));
 
@@ -377,7 +377,7 @@ namespace Google.Cloud.Spanner.Admin.Database.V1
             gaxgrpc::CallTiming.FromRetry(new gaxgrpc::RetrySettings(
                 retryBackoff: GetDefaultRetryBackoff(),
                 timeoutBackoff: GetDefaultTimeoutBackoff(),
-                totalExpiration: gax::Expiration.FromTimeout(s::TimeSpan.FromMilliseconds(600000)),
+                totalExpiration: gax::Expiration.FromTimeout(sys::TimeSpan.FromMilliseconds(600000)),
                 retryFilter: NonIdempotentRetryFilter
             )));
 
@@ -407,7 +407,7 @@ namespace Google.Cloud.Spanner.Admin.Database.V1
             gaxgrpc::CallTiming.FromRetry(new gaxgrpc::RetrySettings(
                 retryBackoff: GetDefaultRetryBackoff(),
                 timeoutBackoff: GetDefaultTimeoutBackoff(),
-                totalExpiration: gax::Expiration.FromTimeout(s::TimeSpan.FromMilliseconds(600000)),
+                totalExpiration: gax::Expiration.FromTimeout(sys::TimeSpan.FromMilliseconds(600000)),
                 retryFilter: IdempotentRetryFilter
             )));
 
@@ -436,7 +436,7 @@ namespace Google.Cloud.Spanner.Admin.Database.V1
             gaxgrpc::CallTiming.FromRetry(new gaxgrpc::RetrySettings(
                 retryBackoff: GetDefaultRetryBackoff(),
                 timeoutBackoff: GetDefaultTimeoutBackoff(),
-                totalExpiration: gax::Expiration.FromTimeout(s::TimeSpan.FromMilliseconds(600000)),
+                totalExpiration: gax::Expiration.FromTimeout(sys::TimeSpan.FromMilliseconds(600000)),
                 retryFilter: NonIdempotentRetryFilter
             )));
 
@@ -538,7 +538,7 @@ namespace Google.Cloud.Spanner.Admin.Database.V1
         /// </summary>
         public virtual DatabaseAdmin.DatabaseAdminClient GrpcClient
         {
-            get { throw new s::NotImplementedException(); }
+            get { throw new sys::NotImplementedException(); }
         }
 
         /// <summary>
@@ -625,7 +625,7 @@ namespace Google.Cloud.Spanner.Admin.Database.V1
             ListDatabasesRequest request,
             gaxgrpc::CallSettings callSettings = null)
         {
-            throw new s::NotImplementedException();
+            throw new sys::NotImplementedException();
         }
 
         /// <summary>
@@ -644,7 +644,7 @@ namespace Google.Cloud.Spanner.Admin.Database.V1
             ListDatabasesRequest request,
             gaxgrpc::CallSettings callSettings = null)
         {
-            throw new s::NotImplementedException();
+            throw new sys::NotImplementedException();
         }
 
         /// <summary>
@@ -781,7 +781,7 @@ namespace Google.Cloud.Spanner.Admin.Database.V1
             CreateDatabaseRequest request,
             gaxgrpc::CallSettings callSettings = null)
         {
-            throw new s::NotImplementedException();
+            throw new sys::NotImplementedException();
         }
 
         /// <summary>
@@ -820,7 +820,7 @@ namespace Google.Cloud.Spanner.Admin.Database.V1
             CreateDatabaseRequest request,
             gaxgrpc::CallSettings callSettings = null)
         {
-            throw new s::NotImplementedException();
+            throw new sys::NotImplementedException();
         }
 
         /// <summary>
@@ -828,7 +828,7 @@ namespace Google.Cloud.Spanner.Admin.Database.V1
         /// </summary>
         public virtual lro::OperationsClient CreateDatabaseOperationsClient
         {
-            get { throw new s::NotImplementedException(); }
+            get { throw new sys::NotImplementedException(); }
         }
 
         /// <summary>
@@ -923,7 +923,7 @@ namespace Google.Cloud.Spanner.Admin.Database.V1
             GetDatabaseRequest request,
             gaxgrpc::CallSettings callSettings = null)
         {
-            throw new s::NotImplementedException();
+            throw new sys::NotImplementedException();
         }
 
         /// <summary>
@@ -960,7 +960,7 @@ namespace Google.Cloud.Spanner.Admin.Database.V1
             GetDatabaseRequest request,
             gaxgrpc::CallSettings callSettings = null)
         {
-            throw new s::NotImplementedException();
+            throw new sys::NotImplementedException();
         }
 
         /// <summary>
@@ -984,7 +984,7 @@ namespace Google.Cloud.Spanner.Admin.Database.V1
         /// <returns>
         /// A Task containing the RPC response.
         /// </returns>
-        public virtual stt::Task<lro::Operation<protowkt::Empty, UpdateDatabaseDdlMetadata>> UpdateDatabaseDdlAsync(
+        public virtual stt::Task<lro::Operation<pbwkt::Empty, UpdateDatabaseDdlMetadata>> UpdateDatabaseDdlAsync(
             DatabaseName database,
             scg::IEnumerable<string> statements,
             gaxgrpc::CallSettings callSettings = null) => UpdateDatabaseDdlAsync(
@@ -1016,7 +1016,7 @@ namespace Google.Cloud.Spanner.Admin.Database.V1
         /// <returns>
         /// A Task containing the RPC response.
         /// </returns>
-        public virtual stt::Task<lro::Operation<protowkt::Empty, UpdateDatabaseDdlMetadata>> UpdateDatabaseDdlAsync(
+        public virtual stt::Task<lro::Operation<pbwkt::Empty, UpdateDatabaseDdlMetadata>> UpdateDatabaseDdlAsync(
             DatabaseName database,
             scg::IEnumerable<string> statements,
             st::CancellationToken cancellationToken) => UpdateDatabaseDdlAsync(
@@ -1045,7 +1045,7 @@ namespace Google.Cloud.Spanner.Admin.Database.V1
         /// <returns>
         /// The RPC response.
         /// </returns>
-        public virtual lro::Operation<protowkt::Empty, UpdateDatabaseDdlMetadata> UpdateDatabaseDdl(
+        public virtual lro::Operation<pbwkt::Empty, UpdateDatabaseDdlMetadata> UpdateDatabaseDdl(
             DatabaseName database,
             scg::IEnumerable<string> statements,
             gaxgrpc::CallSettings callSettings = null) => UpdateDatabaseDdl(
@@ -1074,11 +1074,11 @@ namespace Google.Cloud.Spanner.Admin.Database.V1
         /// <returns>
         /// A Task containing the RPC response.
         /// </returns>
-        public virtual stt::Task<lro::Operation<protowkt::Empty, UpdateDatabaseDdlMetadata>> UpdateDatabaseDdlAsync(
+        public virtual stt::Task<lro::Operation<pbwkt::Empty, UpdateDatabaseDdlMetadata>> UpdateDatabaseDdlAsync(
             UpdateDatabaseDdlRequest request,
             gaxgrpc::CallSettings callSettings = null)
         {
-            throw new s::NotImplementedException();
+            throw new sys::NotImplementedException();
         }
 
         /// <summary>
@@ -1087,9 +1087,9 @@ namespace Google.Cloud.Spanner.Admin.Database.V1
         /// <param name="operationName">The name of a previously invoked operation. Must not be <c>null</c> or empty.</param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
         /// <returns>A task representing the result of polling the operation.</returns>
-        public virtual stt::Task<lro::Operation<protowkt::Empty, UpdateDatabaseDdlMetadata>> PollOnceUpdateDatabaseDdlAsync(
+        public virtual stt::Task<lro::Operation<pbwkt::Empty, UpdateDatabaseDdlMetadata>> PollOnceUpdateDatabaseDdlAsync(
             string operationName,
-            gaxgrpc::CallSettings callSettings = null) => lro::Operation<protowkt::Empty, UpdateDatabaseDdlMetadata>.PollOnceFromNameAsync(
+            gaxgrpc::CallSettings callSettings = null) => lro::Operation<pbwkt::Empty, UpdateDatabaseDdlMetadata>.PollOnceFromNameAsync(
                 gax::GaxPreconditions.CheckNotNullOrEmpty(operationName, nameof(operationName)),
                 UpdateDatabaseDdlOperationsClient,
                 callSettings);
@@ -1112,11 +1112,11 @@ namespace Google.Cloud.Spanner.Admin.Database.V1
         /// <returns>
         /// The RPC response.
         /// </returns>
-        public virtual lro::Operation<protowkt::Empty, UpdateDatabaseDdlMetadata> UpdateDatabaseDdl(
+        public virtual lro::Operation<pbwkt::Empty, UpdateDatabaseDdlMetadata> UpdateDatabaseDdl(
             UpdateDatabaseDdlRequest request,
             gaxgrpc::CallSettings callSettings = null)
         {
-            throw new s::NotImplementedException();
+            throw new sys::NotImplementedException();
         }
 
         /// <summary>
@@ -1124,7 +1124,7 @@ namespace Google.Cloud.Spanner.Admin.Database.V1
         /// </summary>
         public virtual lro::OperationsClient UpdateDatabaseDdlOperationsClient
         {
-            get { throw new s::NotImplementedException(); }
+            get { throw new sys::NotImplementedException(); }
         }
 
         /// <summary>
@@ -1133,9 +1133,9 @@ namespace Google.Cloud.Spanner.Admin.Database.V1
         /// <param name="operationName">The name of a previously invoked operation. Must not be <c>null</c> or empty.</param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
         /// <returns>The result of polling the operation.</returns>
-        public virtual lro::Operation<protowkt::Empty, UpdateDatabaseDdlMetadata> PollOnceUpdateDatabaseDdl(
+        public virtual lro::Operation<pbwkt::Empty, UpdateDatabaseDdlMetadata> PollOnceUpdateDatabaseDdl(
             string operationName,
-            gaxgrpc::CallSettings callSettings = null) => lro::Operation<protowkt::Empty, UpdateDatabaseDdlMetadata>.PollOnceFromName(
+            gaxgrpc::CallSettings callSettings = null) => lro::Operation<pbwkt::Empty, UpdateDatabaseDdlMetadata>.PollOnceFromName(
                 gax::GaxPreconditions.CheckNotNullOrEmpty(operationName, nameof(operationName)),
                 UpdateDatabaseDdlOperationsClient,
                 callSettings);
@@ -1213,7 +1213,7 @@ namespace Google.Cloud.Spanner.Admin.Database.V1
             DropDatabaseRequest request,
             gaxgrpc::CallSettings callSettings = null)
         {
-            throw new s::NotImplementedException();
+            throw new sys::NotImplementedException();
         }
 
         /// <summary>
@@ -1247,7 +1247,7 @@ namespace Google.Cloud.Spanner.Admin.Database.V1
             DropDatabaseRequest request,
             gaxgrpc::CallSettings callSettings = null)
         {
-            throw new s::NotImplementedException();
+            throw new sys::NotImplementedException();
         }
 
         /// <summary>
@@ -1334,7 +1334,7 @@ namespace Google.Cloud.Spanner.Admin.Database.V1
             GetDatabaseDdlRequest request,
             gaxgrpc::CallSettings callSettings = null)
         {
-            throw new s::NotImplementedException();
+            throw new sys::NotImplementedException();
         }
 
         /// <summary>
@@ -1375,7 +1375,7 @@ namespace Google.Cloud.Spanner.Admin.Database.V1
             GetDatabaseDdlRequest request,
             gaxgrpc::CallSettings callSettings = null)
         {
-            throw new s::NotImplementedException();
+            throw new sys::NotImplementedException();
         }
 
         /// <summary>
@@ -1500,7 +1500,7 @@ namespace Google.Cloud.Spanner.Admin.Database.V1
             iam::SetIamPolicyRequest request,
             gaxgrpc::CallSettings callSettings = null)
         {
-            throw new s::NotImplementedException();
+            throw new sys::NotImplementedException();
         }
 
         /// <summary>
@@ -1545,7 +1545,7 @@ namespace Google.Cloud.Spanner.Admin.Database.V1
             iam::SetIamPolicyRequest request,
             gaxgrpc::CallSettings callSettings = null)
         {
-            throw new s::NotImplementedException();
+            throw new sys::NotImplementedException();
         }
 
         /// <summary>
@@ -1646,7 +1646,7 @@ namespace Google.Cloud.Spanner.Admin.Database.V1
             iam::GetIamPolicyRequest request,
             gaxgrpc::CallSettings callSettings = null)
         {
-            throw new s::NotImplementedException();
+            throw new sys::NotImplementedException();
         }
 
         /// <summary>
@@ -1691,7 +1691,7 @@ namespace Google.Cloud.Spanner.Admin.Database.V1
             iam::GetIamPolicyRequest request,
             gaxgrpc::CallSettings callSettings = null)
         {
-            throw new s::NotImplementedException();
+            throw new sys::NotImplementedException();
         }
 
         /// <summary>
@@ -1820,7 +1820,7 @@ namespace Google.Cloud.Spanner.Admin.Database.V1
             iam::TestIamPermissionsRequest request,
             gaxgrpc::CallSettings callSettings = null)
         {
-            throw new s::NotImplementedException();
+            throw new sys::NotImplementedException();
         }
 
         /// <summary>
@@ -1867,7 +1867,7 @@ namespace Google.Cloud.Spanner.Admin.Database.V1
             iam::TestIamPermissionsRequest request,
             gaxgrpc::CallSettings callSettings = null)
         {
-            throw new s::NotImplementedException();
+            throw new sys::NotImplementedException();
         }
 
     }
@@ -1881,7 +1881,7 @@ namespace Google.Cloud.Spanner.Admin.Database.V1
         private readonly gaxgrpc::ApiCall<CreateDatabaseRequest, lro::Operation> _callCreateDatabase;
         private readonly gaxgrpc::ApiCall<GetDatabaseRequest, Database> _callGetDatabase;
         private readonly gaxgrpc::ApiCall<UpdateDatabaseDdlRequest, lro::Operation> _callUpdateDatabaseDdl;
-        private readonly gaxgrpc::ApiCall<DropDatabaseRequest, protowkt::Empty> _callDropDatabase;
+        private readonly gaxgrpc::ApiCall<DropDatabaseRequest, pbwkt::Empty> _callDropDatabase;
         private readonly gaxgrpc::ApiCall<GetDatabaseDdlRequest, GetDatabaseDdlResponse> _callGetDatabaseDdl;
         private readonly gaxgrpc::ApiCall<iam::SetIamPolicyRequest, iam::Policy> _callSetIamPolicy;
         private readonly gaxgrpc::ApiCall<iam::GetIamPolicyRequest, iam::Policy> _callGetIamPolicy;
@@ -1909,7 +1909,7 @@ namespace Google.Cloud.Spanner.Admin.Database.V1
                 GrpcClient.GetDatabaseAsync, GrpcClient.GetDatabase, effectiveSettings.GetDatabaseSettings);
             _callUpdateDatabaseDdl = clientHelper.BuildApiCall<UpdateDatabaseDdlRequest, lro::Operation>(
                 GrpcClient.UpdateDatabaseDdlAsync, GrpcClient.UpdateDatabaseDdl, effectiveSettings.UpdateDatabaseDdlSettings);
-            _callDropDatabase = clientHelper.BuildApiCall<DropDatabaseRequest, protowkt::Empty>(
+            _callDropDatabase = clientHelper.BuildApiCall<DropDatabaseRequest, pbwkt::Empty>(
                 GrpcClient.DropDatabaseAsync, GrpcClient.DropDatabase, effectiveSettings.DropDatabaseSettings);
             _callGetDatabaseDdl = clientHelper.BuildApiCall<GetDatabaseDdlRequest, GetDatabaseDdlResponse>(
                 GrpcClient.GetDatabaseDdlAsync, GrpcClient.GetDatabaseDdl, effectiveSettings.GetDatabaseDdlSettings);
@@ -1945,8 +1945,8 @@ namespace Google.Cloud.Spanner.Admin.Database.V1
         // Partial methods called for every ApiCall on construction.
         // Allows modification of all the underlying ApiCall objects.
         partial void Modify_ApiCall<TRequest, TResponse>(ref gaxgrpc::ApiCall<TRequest, TResponse> call)
-            where TRequest : class, proto::IMessage<TRequest>
-            where TResponse : class, proto::IMessage<TResponse>;
+            where TRequest : class, pb::IMessage<TRequest>
+            where TResponse : class, pb::IMessage<TResponse>;
 
         // Partial methods called for each ApiCall on construction.
         // Allows per-RPC-method modification of the underlying ApiCall object.
@@ -1954,7 +1954,7 @@ namespace Google.Cloud.Spanner.Admin.Database.V1
         partial void Modify_CreateDatabaseApiCall(ref gaxgrpc::ApiCall<CreateDatabaseRequest, lro::Operation> call);
         partial void Modify_GetDatabaseApiCall(ref gaxgrpc::ApiCall<GetDatabaseRequest, Database> call);
         partial void Modify_UpdateDatabaseDdlApiCall(ref gaxgrpc::ApiCall<UpdateDatabaseDdlRequest, lro::Operation> call);
-        partial void Modify_DropDatabaseApiCall(ref gaxgrpc::ApiCall<DropDatabaseRequest, protowkt::Empty> call);
+        partial void Modify_DropDatabaseApiCall(ref gaxgrpc::ApiCall<DropDatabaseRequest, pbwkt::Empty> call);
         partial void Modify_GetDatabaseDdlApiCall(ref gaxgrpc::ApiCall<GetDatabaseDdlRequest, GetDatabaseDdlResponse> call);
         partial void Modify_SetIamPolicyApiCall(ref gaxgrpc::ApiCall<iam::SetIamPolicyRequest, iam::Policy> call);
         partial void Modify_GetIamPolicyApiCall(ref gaxgrpc::ApiCall<iam::GetIamPolicyRequest, iam::Policy> call);
@@ -2138,12 +2138,12 @@ namespace Google.Cloud.Spanner.Admin.Database.V1
         /// <returns>
         /// A Task containing the RPC response.
         /// </returns>
-        public override async stt::Task<lro::Operation<protowkt::Empty, UpdateDatabaseDdlMetadata>> UpdateDatabaseDdlAsync(
+        public override async stt::Task<lro::Operation<pbwkt::Empty, UpdateDatabaseDdlMetadata>> UpdateDatabaseDdlAsync(
             UpdateDatabaseDdlRequest request,
             gaxgrpc::CallSettings callSettings = null)
         {
             Modify_UpdateDatabaseDdlRequest(ref request, ref callSettings);
-            return new lro::Operation<protowkt::Empty, UpdateDatabaseDdlMetadata>(
+            return new lro::Operation<pbwkt::Empty, UpdateDatabaseDdlMetadata>(
                 await _callUpdateDatabaseDdl.Async(request, callSettings).ConfigureAwait(false), UpdateDatabaseDdlOperationsClient);
         }
 
@@ -2165,12 +2165,12 @@ namespace Google.Cloud.Spanner.Admin.Database.V1
         /// <returns>
         /// The RPC response.
         /// </returns>
-        public override lro::Operation<protowkt::Empty, UpdateDatabaseDdlMetadata> UpdateDatabaseDdl(
+        public override lro::Operation<pbwkt::Empty, UpdateDatabaseDdlMetadata> UpdateDatabaseDdl(
             UpdateDatabaseDdlRequest request,
             gaxgrpc::CallSettings callSettings = null)
         {
             Modify_UpdateDatabaseDdlRequest(ref request, ref callSettings);
-            return new lro::Operation<protowkt::Empty, UpdateDatabaseDdlMetadata>(
+            return new lro::Operation<pbwkt::Empty, UpdateDatabaseDdlMetadata>(
                 _callUpdateDatabaseDdl.Sync(request, callSettings), UpdateDatabaseDdlOperationsClient);
         }
 

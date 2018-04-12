@@ -142,7 +142,7 @@ namespace Google.Cloud.PubSub.V1.Snippets
             {
                 new PubsubMessage
                 {
-                    Data = Google.Protobuf.ByteString.CopyFromUtf8(""),
+                    Data = ByteString.Empty,
                 },
             };
             // Make the request
@@ -162,7 +162,7 @@ namespace Google.Cloud.PubSub.V1.Snippets
             {
                 new PubsubMessage
                 {
-                    Data = Google.Protobuf.ByteString.CopyFromUtf8(""),
+                    Data = ByteString.Empty,
                 },
             };
             // Make the request
@@ -184,7 +184,7 @@ namespace Google.Cloud.PubSub.V1.Snippets
                 Messages = {
                                new PubsubMessage
                                {
-                                   Data = Google.Protobuf.ByteString.CopyFromUtf8(""),
+                                   Data = ByteString.Empty,
                                },
                            },
             };
@@ -206,7 +206,7 @@ namespace Google.Cloud.PubSub.V1.Snippets
                 Messages = {
                                new PubsubMessage
                                {
-                                   Data = Google.Protobuf.ByteString.CopyFromUtf8(""),
+                                   Data = ByteString.Empty,
                                },
                            },
             };

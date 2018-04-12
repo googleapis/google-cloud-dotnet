@@ -16,10 +16,10 @@
 
 using gax = Google.Api.Gax;
 using gaxgrpc = Google.Api.Gax.Grpc;
-using proto = Google.Protobuf;
-using protowkt = Google.Protobuf.WellKnownTypes;
+using pb = Google.Protobuf;
+using pbwkt = Google.Protobuf.WellKnownTypes;
 using grpccore = Grpc.Core;
-using s = System;
+using sys = System;
 using sc = System.Collections;
 using scg = System.Collections.Generic;
 using sco = System.Collections.ObjectModel;
@@ -90,7 +90,7 @@ namespace Google.Cloud.Dlp.V2
         /// <item><description><see cref="grpccore::StatusCode.Unavailable"/></description></item>
         /// </list>
         /// </remarks>
-        public static s::Predicate<grpccore::RpcException> IdempotentRetryFilter { get; } =
+        public static sys::Predicate<grpccore::RpcException> IdempotentRetryFilter { get; } =
             gaxgrpc::RetrySettings.FilterForStatusCodes(grpccore::StatusCode.DeadlineExceeded, grpccore::StatusCode.Unavailable);
 
         /// <summary>
@@ -100,7 +100,7 @@ namespace Google.Cloud.Dlp.V2
         /// <remarks>
         /// There are no RPC <see cref="grpccore::StatusCode"/>s eligible for retry for "NonIdempotent" RPC methods.
         /// </remarks>
-        public static s::Predicate<grpccore::RpcException> NonIdempotentRetryFilter { get; } =
+        public static sys::Predicate<grpccore::RpcException> NonIdempotentRetryFilter { get; } =
             gaxgrpc::RetrySettings.FilterForStatusCodes();
 
         /// <summary>
@@ -118,8 +118,8 @@ namespace Google.Cloud.Dlp.V2
         /// </list>
         /// </remarks>
         public static gaxgrpc::BackoffSettings GetDefaultRetryBackoff() => new gaxgrpc::BackoffSettings(
-            delay: s::TimeSpan.FromMilliseconds(100),
-            maxDelay: s::TimeSpan.FromMilliseconds(60000),
+            delay: sys::TimeSpan.FromMilliseconds(100),
+            maxDelay: sys::TimeSpan.FromMilliseconds(60000),
             delayMultiplier: 1.3
         );
 
@@ -138,8 +138,8 @@ namespace Google.Cloud.Dlp.V2
         /// </list>
         /// </remarks>
         public static gaxgrpc::BackoffSettings GetDefaultTimeoutBackoff() => new gaxgrpc::BackoffSettings(
-            delay: s::TimeSpan.FromMilliseconds(20000),
-            maxDelay: s::TimeSpan.FromMilliseconds(20000),
+            delay: sys::TimeSpan.FromMilliseconds(20000),
+            maxDelay: sys::TimeSpan.FromMilliseconds(20000),
             delayMultiplier: 1.0
         );
 
@@ -169,7 +169,7 @@ namespace Google.Cloud.Dlp.V2
             gaxgrpc::CallTiming.FromRetry(new gaxgrpc::RetrySettings(
                 retryBackoff: GetDefaultRetryBackoff(),
                 timeoutBackoff: GetDefaultTimeoutBackoff(),
-                totalExpiration: gax::Expiration.FromTimeout(s::TimeSpan.FromMilliseconds(600000)),
+                totalExpiration: gax::Expiration.FromTimeout(sys::TimeSpan.FromMilliseconds(600000)),
                 retryFilter: IdempotentRetryFilter
             )));
 
@@ -199,7 +199,7 @@ namespace Google.Cloud.Dlp.V2
             gaxgrpc::CallTiming.FromRetry(new gaxgrpc::RetrySettings(
                 retryBackoff: GetDefaultRetryBackoff(),
                 timeoutBackoff: GetDefaultTimeoutBackoff(),
-                totalExpiration: gax::Expiration.FromTimeout(s::TimeSpan.FromMilliseconds(600000)),
+                totalExpiration: gax::Expiration.FromTimeout(sys::TimeSpan.FromMilliseconds(600000)),
                 retryFilter: IdempotentRetryFilter
             )));
 
@@ -229,7 +229,7 @@ namespace Google.Cloud.Dlp.V2
             gaxgrpc::CallTiming.FromRetry(new gaxgrpc::RetrySettings(
                 retryBackoff: GetDefaultRetryBackoff(),
                 timeoutBackoff: GetDefaultTimeoutBackoff(),
-                totalExpiration: gax::Expiration.FromTimeout(s::TimeSpan.FromMilliseconds(600000)),
+                totalExpiration: gax::Expiration.FromTimeout(sys::TimeSpan.FromMilliseconds(600000)),
                 retryFilter: IdempotentRetryFilter
             )));
 
@@ -259,7 +259,7 @@ namespace Google.Cloud.Dlp.V2
             gaxgrpc::CallTiming.FromRetry(new gaxgrpc::RetrySettings(
                 retryBackoff: GetDefaultRetryBackoff(),
                 timeoutBackoff: GetDefaultTimeoutBackoff(),
-                totalExpiration: gax::Expiration.FromTimeout(s::TimeSpan.FromMilliseconds(600000)),
+                totalExpiration: gax::Expiration.FromTimeout(sys::TimeSpan.FromMilliseconds(600000)),
                 retryFilter: IdempotentRetryFilter
             )));
 
@@ -289,7 +289,7 @@ namespace Google.Cloud.Dlp.V2
             gaxgrpc::CallTiming.FromRetry(new gaxgrpc::RetrySettings(
                 retryBackoff: GetDefaultRetryBackoff(),
                 timeoutBackoff: GetDefaultTimeoutBackoff(),
-                totalExpiration: gax::Expiration.FromTimeout(s::TimeSpan.FromMilliseconds(600000)),
+                totalExpiration: gax::Expiration.FromTimeout(sys::TimeSpan.FromMilliseconds(600000)),
                 retryFilter: IdempotentRetryFilter
             )));
 
@@ -318,7 +318,7 @@ namespace Google.Cloud.Dlp.V2
             gaxgrpc::CallTiming.FromRetry(new gaxgrpc::RetrySettings(
                 retryBackoff: GetDefaultRetryBackoff(),
                 timeoutBackoff: GetDefaultTimeoutBackoff(),
-                totalExpiration: gax::Expiration.FromTimeout(s::TimeSpan.FromMilliseconds(600000)),
+                totalExpiration: gax::Expiration.FromTimeout(sys::TimeSpan.FromMilliseconds(600000)),
                 retryFilter: NonIdempotentRetryFilter
             )));
 
@@ -347,7 +347,7 @@ namespace Google.Cloud.Dlp.V2
             gaxgrpc::CallTiming.FromRetry(new gaxgrpc::RetrySettings(
                 retryBackoff: GetDefaultRetryBackoff(),
                 timeoutBackoff: GetDefaultTimeoutBackoff(),
-                totalExpiration: gax::Expiration.FromTimeout(s::TimeSpan.FromMilliseconds(600000)),
+                totalExpiration: gax::Expiration.FromTimeout(sys::TimeSpan.FromMilliseconds(600000)),
                 retryFilter: NonIdempotentRetryFilter
             )));
 
@@ -377,7 +377,7 @@ namespace Google.Cloud.Dlp.V2
             gaxgrpc::CallTiming.FromRetry(new gaxgrpc::RetrySettings(
                 retryBackoff: GetDefaultRetryBackoff(),
                 timeoutBackoff: GetDefaultTimeoutBackoff(),
-                totalExpiration: gax::Expiration.FromTimeout(s::TimeSpan.FromMilliseconds(600000)),
+                totalExpiration: gax::Expiration.FromTimeout(sys::TimeSpan.FromMilliseconds(600000)),
                 retryFilter: IdempotentRetryFilter
             )));
 
@@ -407,7 +407,7 @@ namespace Google.Cloud.Dlp.V2
             gaxgrpc::CallTiming.FromRetry(new gaxgrpc::RetrySettings(
                 retryBackoff: GetDefaultRetryBackoff(),
                 timeoutBackoff: GetDefaultTimeoutBackoff(),
-                totalExpiration: gax::Expiration.FromTimeout(s::TimeSpan.FromMilliseconds(600000)),
+                totalExpiration: gax::Expiration.FromTimeout(sys::TimeSpan.FromMilliseconds(600000)),
                 retryFilter: IdempotentRetryFilter
             )));
 
@@ -437,7 +437,7 @@ namespace Google.Cloud.Dlp.V2
             gaxgrpc::CallTiming.FromRetry(new gaxgrpc::RetrySettings(
                 retryBackoff: GetDefaultRetryBackoff(),
                 timeoutBackoff: GetDefaultTimeoutBackoff(),
-                totalExpiration: gax::Expiration.FromTimeout(s::TimeSpan.FromMilliseconds(600000)),
+                totalExpiration: gax::Expiration.FromTimeout(sys::TimeSpan.FromMilliseconds(600000)),
                 retryFilter: IdempotentRetryFilter
             )));
 
@@ -466,7 +466,7 @@ namespace Google.Cloud.Dlp.V2
             gaxgrpc::CallTiming.FromRetry(new gaxgrpc::RetrySettings(
                 retryBackoff: GetDefaultRetryBackoff(),
                 timeoutBackoff: GetDefaultTimeoutBackoff(),
-                totalExpiration: gax::Expiration.FromTimeout(s::TimeSpan.FromMilliseconds(600000)),
+                totalExpiration: gax::Expiration.FromTimeout(sys::TimeSpan.FromMilliseconds(600000)),
                 retryFilter: NonIdempotentRetryFilter
             )));
 
@@ -495,7 +495,7 @@ namespace Google.Cloud.Dlp.V2
             gaxgrpc::CallTiming.FromRetry(new gaxgrpc::RetrySettings(
                 retryBackoff: GetDefaultRetryBackoff(),
                 timeoutBackoff: GetDefaultTimeoutBackoff(),
-                totalExpiration: gax::Expiration.FromTimeout(s::TimeSpan.FromMilliseconds(600000)),
+                totalExpiration: gax::Expiration.FromTimeout(sys::TimeSpan.FromMilliseconds(600000)),
                 retryFilter: NonIdempotentRetryFilter
             )));
 
@@ -525,7 +525,7 @@ namespace Google.Cloud.Dlp.V2
             gaxgrpc::CallTiming.FromRetry(new gaxgrpc::RetrySettings(
                 retryBackoff: GetDefaultRetryBackoff(),
                 timeoutBackoff: GetDefaultTimeoutBackoff(),
-                totalExpiration: gax::Expiration.FromTimeout(s::TimeSpan.FromMilliseconds(600000)),
+                totalExpiration: gax::Expiration.FromTimeout(sys::TimeSpan.FromMilliseconds(600000)),
                 retryFilter: IdempotentRetryFilter
             )));
 
@@ -555,7 +555,7 @@ namespace Google.Cloud.Dlp.V2
             gaxgrpc::CallTiming.FromRetry(new gaxgrpc::RetrySettings(
                 retryBackoff: GetDefaultRetryBackoff(),
                 timeoutBackoff: GetDefaultTimeoutBackoff(),
-                totalExpiration: gax::Expiration.FromTimeout(s::TimeSpan.FromMilliseconds(600000)),
+                totalExpiration: gax::Expiration.FromTimeout(sys::TimeSpan.FromMilliseconds(600000)),
                 retryFilter: IdempotentRetryFilter
             )));
 
@@ -585,7 +585,7 @@ namespace Google.Cloud.Dlp.V2
             gaxgrpc::CallTiming.FromRetry(new gaxgrpc::RetrySettings(
                 retryBackoff: GetDefaultRetryBackoff(),
                 timeoutBackoff: GetDefaultTimeoutBackoff(),
-                totalExpiration: gax::Expiration.FromTimeout(s::TimeSpan.FromMilliseconds(600000)),
+                totalExpiration: gax::Expiration.FromTimeout(sys::TimeSpan.FromMilliseconds(600000)),
                 retryFilter: IdempotentRetryFilter
             )));
 
@@ -614,7 +614,7 @@ namespace Google.Cloud.Dlp.V2
             gaxgrpc::CallTiming.FromRetry(new gaxgrpc::RetrySettings(
                 retryBackoff: GetDefaultRetryBackoff(),
                 timeoutBackoff: GetDefaultTimeoutBackoff(),
-                totalExpiration: gax::Expiration.FromTimeout(s::TimeSpan.FromMilliseconds(600000)),
+                totalExpiration: gax::Expiration.FromTimeout(sys::TimeSpan.FromMilliseconds(600000)),
                 retryFilter: NonIdempotentRetryFilter
             )));
 
@@ -644,7 +644,7 @@ namespace Google.Cloud.Dlp.V2
             gaxgrpc::CallTiming.FromRetry(new gaxgrpc::RetrySettings(
                 retryBackoff: GetDefaultRetryBackoff(),
                 timeoutBackoff: GetDefaultTimeoutBackoff(),
-                totalExpiration: gax::Expiration.FromTimeout(s::TimeSpan.FromMilliseconds(600000)),
+                totalExpiration: gax::Expiration.FromTimeout(sys::TimeSpan.FromMilliseconds(600000)),
                 retryFilter: IdempotentRetryFilter
             )));
 
@@ -674,7 +674,7 @@ namespace Google.Cloud.Dlp.V2
             gaxgrpc::CallTiming.FromRetry(new gaxgrpc::RetrySettings(
                 retryBackoff: GetDefaultRetryBackoff(),
                 timeoutBackoff: GetDefaultTimeoutBackoff(),
-                totalExpiration: gax::Expiration.FromTimeout(s::TimeSpan.FromMilliseconds(600000)),
+                totalExpiration: gax::Expiration.FromTimeout(sys::TimeSpan.FromMilliseconds(600000)),
                 retryFilter: IdempotentRetryFilter
             )));
 
@@ -704,7 +704,7 @@ namespace Google.Cloud.Dlp.V2
             gaxgrpc::CallTiming.FromRetry(new gaxgrpc::RetrySettings(
                 retryBackoff: GetDefaultRetryBackoff(),
                 timeoutBackoff: GetDefaultTimeoutBackoff(),
-                totalExpiration: gax::Expiration.FromTimeout(s::TimeSpan.FromMilliseconds(600000)),
+                totalExpiration: gax::Expiration.FromTimeout(sys::TimeSpan.FromMilliseconds(600000)),
                 retryFilter: IdempotentRetryFilter
             )));
 
@@ -733,7 +733,7 @@ namespace Google.Cloud.Dlp.V2
             gaxgrpc::CallTiming.FromRetry(new gaxgrpc::RetrySettings(
                 retryBackoff: GetDefaultRetryBackoff(),
                 timeoutBackoff: GetDefaultTimeoutBackoff(),
-                totalExpiration: gax::Expiration.FromTimeout(s::TimeSpan.FromMilliseconds(600000)),
+                totalExpiration: gax::Expiration.FromTimeout(sys::TimeSpan.FromMilliseconds(600000)),
                 retryFilter: NonIdempotentRetryFilter
             )));
 
@@ -763,7 +763,7 @@ namespace Google.Cloud.Dlp.V2
             gaxgrpc::CallTiming.FromRetry(new gaxgrpc::RetrySettings(
                 retryBackoff: GetDefaultRetryBackoff(),
                 timeoutBackoff: GetDefaultTimeoutBackoff(),
-                totalExpiration: gax::Expiration.FromTimeout(s::TimeSpan.FromMilliseconds(600000)),
+                totalExpiration: gax::Expiration.FromTimeout(sys::TimeSpan.FromMilliseconds(600000)),
                 retryFilter: IdempotentRetryFilter
             )));
 
@@ -793,7 +793,7 @@ namespace Google.Cloud.Dlp.V2
             gaxgrpc::CallTiming.FromRetry(new gaxgrpc::RetrySettings(
                 retryBackoff: GetDefaultRetryBackoff(),
                 timeoutBackoff: GetDefaultTimeoutBackoff(),
-                totalExpiration: gax::Expiration.FromTimeout(s::TimeSpan.FromMilliseconds(600000)),
+                totalExpiration: gax::Expiration.FromTimeout(sys::TimeSpan.FromMilliseconds(600000)),
                 retryFilter: IdempotentRetryFilter
             )));
 
@@ -823,7 +823,7 @@ namespace Google.Cloud.Dlp.V2
             gaxgrpc::CallTiming.FromRetry(new gaxgrpc::RetrySettings(
                 retryBackoff: GetDefaultRetryBackoff(),
                 timeoutBackoff: GetDefaultTimeoutBackoff(),
-                totalExpiration: gax::Expiration.FromTimeout(s::TimeSpan.FromMilliseconds(600000)),
+                totalExpiration: gax::Expiration.FromTimeout(sys::TimeSpan.FromMilliseconds(600000)),
                 retryFilter: IdempotentRetryFilter
             )));
 
@@ -852,7 +852,7 @@ namespace Google.Cloud.Dlp.V2
             gaxgrpc::CallTiming.FromRetry(new gaxgrpc::RetrySettings(
                 retryBackoff: GetDefaultRetryBackoff(),
                 timeoutBackoff: GetDefaultTimeoutBackoff(),
-                totalExpiration: gax::Expiration.FromTimeout(s::TimeSpan.FromMilliseconds(600000)),
+                totalExpiration: gax::Expiration.FromTimeout(sys::TimeSpan.FromMilliseconds(600000)),
                 retryFilter: NonIdempotentRetryFilter
             )));
 
@@ -881,7 +881,7 @@ namespace Google.Cloud.Dlp.V2
             gaxgrpc::CallTiming.FromRetry(new gaxgrpc::RetrySettings(
                 retryBackoff: GetDefaultRetryBackoff(),
                 timeoutBackoff: GetDefaultTimeoutBackoff(),
-                totalExpiration: gax::Expiration.FromTimeout(s::TimeSpan.FromMilliseconds(600000)),
+                totalExpiration: gax::Expiration.FromTimeout(sys::TimeSpan.FromMilliseconds(600000)),
                 retryFilter: NonIdempotentRetryFilter
             )));
 
@@ -981,7 +981,7 @@ namespace Google.Cloud.Dlp.V2
         /// </summary>
         public virtual DlpService.DlpServiceClient GrpcClient
         {
-            get { throw new s::NotImplementedException(); }
+            get { throw new sys::NotImplementedException(); }
         }
 
         /// <summary>
@@ -1003,7 +1003,7 @@ namespace Google.Cloud.Dlp.V2
             InspectContentRequest request,
             gaxgrpc::CallSettings callSettings = null)
         {
-            throw new s::NotImplementedException();
+            throw new sys::NotImplementedException();
         }
 
         /// <summary>
@@ -1046,7 +1046,7 @@ namespace Google.Cloud.Dlp.V2
             InspectContentRequest request,
             gaxgrpc::CallSettings callSettings = null)
         {
-            throw new s::NotImplementedException();
+            throw new sys::NotImplementedException();
         }
 
         /// <summary>
@@ -1067,7 +1067,7 @@ namespace Google.Cloud.Dlp.V2
             RedactImageRequest request,
             gaxgrpc::CallSettings callSettings = null)
         {
-            throw new s::NotImplementedException();
+            throw new sys::NotImplementedException();
         }
 
         /// <summary>
@@ -1108,7 +1108,7 @@ namespace Google.Cloud.Dlp.V2
             RedactImageRequest request,
             gaxgrpc::CallSettings callSettings = null)
         {
-            throw new s::NotImplementedException();
+            throw new sys::NotImplementedException();
         }
 
         /// <summary>
@@ -1129,7 +1129,7 @@ namespace Google.Cloud.Dlp.V2
             DeidentifyContentRequest request,
             gaxgrpc::CallSettings callSettings = null)
         {
-            throw new s::NotImplementedException();
+            throw new sys::NotImplementedException();
         }
 
         /// <summary>
@@ -1170,7 +1170,7 @@ namespace Google.Cloud.Dlp.V2
             DeidentifyContentRequest request,
             gaxgrpc::CallSettings callSettings = null)
         {
-            throw new s::NotImplementedException();
+            throw new sys::NotImplementedException();
         }
 
         /// <summary>
@@ -1189,7 +1189,7 @@ namespace Google.Cloud.Dlp.V2
             ReidentifyContentRequest request,
             gaxgrpc::CallSettings callSettings = null)
         {
-            throw new s::NotImplementedException();
+            throw new sys::NotImplementedException();
         }
 
         /// <summary>
@@ -1226,7 +1226,7 @@ namespace Google.Cloud.Dlp.V2
             ReidentifyContentRequest request,
             gaxgrpc::CallSettings callSettings = null)
         {
-            throw new s::NotImplementedException();
+            throw new sys::NotImplementedException();
         }
 
         /// <summary>
@@ -1247,7 +1247,7 @@ namespace Google.Cloud.Dlp.V2
             ListInfoTypesRequest request,
             gaxgrpc::CallSettings callSettings = null)
         {
-            throw new s::NotImplementedException();
+            throw new sys::NotImplementedException();
         }
 
         /// <summary>
@@ -1288,7 +1288,7 @@ namespace Google.Cloud.Dlp.V2
             ListInfoTypesRequest request,
             gaxgrpc::CallSettings callSettings = null)
         {
-            throw new s::NotImplementedException();
+            throw new sys::NotImplementedException();
         }
 
         /// <summary>
@@ -1308,7 +1308,7 @@ namespace Google.Cloud.Dlp.V2
             CreateInspectTemplateRequest request,
             gaxgrpc::CallSettings callSettings = null)
         {
-            throw new s::NotImplementedException();
+            throw new sys::NotImplementedException();
         }
 
         /// <summary>
@@ -1347,7 +1347,7 @@ namespace Google.Cloud.Dlp.V2
             CreateInspectTemplateRequest request,
             gaxgrpc::CallSettings callSettings = null)
         {
-            throw new s::NotImplementedException();
+            throw new sys::NotImplementedException();
         }
 
         /// <summary>
@@ -1366,7 +1366,7 @@ namespace Google.Cloud.Dlp.V2
             UpdateInspectTemplateRequest request,
             gaxgrpc::CallSettings callSettings = null)
         {
-            throw new s::NotImplementedException();
+            throw new sys::NotImplementedException();
         }
 
         /// <summary>
@@ -1403,7 +1403,7 @@ namespace Google.Cloud.Dlp.V2
             UpdateInspectTemplateRequest request,
             gaxgrpc::CallSettings callSettings = null)
         {
-            throw new s::NotImplementedException();
+            throw new sys::NotImplementedException();
         }
 
         /// <summary>
@@ -1422,7 +1422,7 @@ namespace Google.Cloud.Dlp.V2
             GetInspectTemplateRequest request,
             gaxgrpc::CallSettings callSettings = null)
         {
-            throw new s::NotImplementedException();
+            throw new sys::NotImplementedException();
         }
 
         /// <summary>
@@ -1459,7 +1459,7 @@ namespace Google.Cloud.Dlp.V2
             GetInspectTemplateRequest request,
             gaxgrpc::CallSettings callSettings = null)
         {
-            throw new s::NotImplementedException();
+            throw new sys::NotImplementedException();
         }
 
         /// <summary>
@@ -1478,7 +1478,7 @@ namespace Google.Cloud.Dlp.V2
             ListInspectTemplatesRequest request,
             gaxgrpc::CallSettings callSettings = null)
         {
-            throw new s::NotImplementedException();
+            throw new sys::NotImplementedException();
         }
 
         /// <summary>
@@ -1497,7 +1497,7 @@ namespace Google.Cloud.Dlp.V2
             ListInspectTemplatesRequest request,
             gaxgrpc::CallSettings callSettings = null)
         {
-            throw new s::NotImplementedException();
+            throw new sys::NotImplementedException();
         }
 
         /// <summary>
@@ -1516,7 +1516,7 @@ namespace Google.Cloud.Dlp.V2
             DeleteInspectTemplateRequest request,
             gaxgrpc::CallSettings callSettings = null)
         {
-            throw new s::NotImplementedException();
+            throw new sys::NotImplementedException();
         }
 
         /// <summary>
@@ -1550,7 +1550,7 @@ namespace Google.Cloud.Dlp.V2
             DeleteInspectTemplateRequest request,
             gaxgrpc::CallSettings callSettings = null)
         {
-            throw new s::NotImplementedException();
+            throw new sys::NotImplementedException();
         }
 
         /// <summary>
@@ -1570,7 +1570,7 @@ namespace Google.Cloud.Dlp.V2
             CreateDeidentifyTemplateRequest request,
             gaxgrpc::CallSettings callSettings = null)
         {
-            throw new s::NotImplementedException();
+            throw new sys::NotImplementedException();
         }
 
         /// <summary>
@@ -1609,7 +1609,7 @@ namespace Google.Cloud.Dlp.V2
             CreateDeidentifyTemplateRequest request,
             gaxgrpc::CallSettings callSettings = null)
         {
-            throw new s::NotImplementedException();
+            throw new sys::NotImplementedException();
         }
 
         /// <summary>
@@ -1628,7 +1628,7 @@ namespace Google.Cloud.Dlp.V2
             UpdateDeidentifyTemplateRequest request,
             gaxgrpc::CallSettings callSettings = null)
         {
-            throw new s::NotImplementedException();
+            throw new sys::NotImplementedException();
         }
 
         /// <summary>
@@ -1665,7 +1665,7 @@ namespace Google.Cloud.Dlp.V2
             UpdateDeidentifyTemplateRequest request,
             gaxgrpc::CallSettings callSettings = null)
         {
-            throw new s::NotImplementedException();
+            throw new sys::NotImplementedException();
         }
 
         /// <summary>
@@ -1684,7 +1684,7 @@ namespace Google.Cloud.Dlp.V2
             GetDeidentifyTemplateRequest request,
             gaxgrpc::CallSettings callSettings = null)
         {
-            throw new s::NotImplementedException();
+            throw new sys::NotImplementedException();
         }
 
         /// <summary>
@@ -1721,7 +1721,7 @@ namespace Google.Cloud.Dlp.V2
             GetDeidentifyTemplateRequest request,
             gaxgrpc::CallSettings callSettings = null)
         {
-            throw new s::NotImplementedException();
+            throw new sys::NotImplementedException();
         }
 
         /// <summary>
@@ -1740,7 +1740,7 @@ namespace Google.Cloud.Dlp.V2
             ListDeidentifyTemplatesRequest request,
             gaxgrpc::CallSettings callSettings = null)
         {
-            throw new s::NotImplementedException();
+            throw new sys::NotImplementedException();
         }
 
         /// <summary>
@@ -1759,7 +1759,7 @@ namespace Google.Cloud.Dlp.V2
             ListDeidentifyTemplatesRequest request,
             gaxgrpc::CallSettings callSettings = null)
         {
-            throw new s::NotImplementedException();
+            throw new sys::NotImplementedException();
         }
 
         /// <summary>
@@ -1778,7 +1778,7 @@ namespace Google.Cloud.Dlp.V2
             DeleteDeidentifyTemplateRequest request,
             gaxgrpc::CallSettings callSettings = null)
         {
-            throw new s::NotImplementedException();
+            throw new sys::NotImplementedException();
         }
 
         /// <summary>
@@ -1812,7 +1812,7 @@ namespace Google.Cloud.Dlp.V2
             DeleteDeidentifyTemplateRequest request,
             gaxgrpc::CallSettings callSettings = null)
         {
-            throw new s::NotImplementedException();
+            throw new sys::NotImplementedException();
         }
 
         /// <summary>
@@ -1832,7 +1832,7 @@ namespace Google.Cloud.Dlp.V2
             CreateDlpJobRequest request,
             gaxgrpc::CallSettings callSettings = null)
         {
-            throw new s::NotImplementedException();
+            throw new sys::NotImplementedException();
         }
 
         /// <summary>
@@ -1871,7 +1871,7 @@ namespace Google.Cloud.Dlp.V2
             CreateDlpJobRequest request,
             gaxgrpc::CallSettings callSettings = null)
         {
-            throw new s::NotImplementedException();
+            throw new sys::NotImplementedException();
         }
 
         /// <summary>
@@ -1890,7 +1890,7 @@ namespace Google.Cloud.Dlp.V2
             ListDlpJobsRequest request,
             gaxgrpc::CallSettings callSettings = null)
         {
-            throw new s::NotImplementedException();
+            throw new sys::NotImplementedException();
         }
 
         /// <summary>
@@ -1909,7 +1909,7 @@ namespace Google.Cloud.Dlp.V2
             ListDlpJobsRequest request,
             gaxgrpc::CallSettings callSettings = null)
         {
-            throw new s::NotImplementedException();
+            throw new sys::NotImplementedException();
         }
 
         /// <summary>
@@ -1928,7 +1928,7 @@ namespace Google.Cloud.Dlp.V2
             GetDlpJobRequest request,
             gaxgrpc::CallSettings callSettings = null)
         {
-            throw new s::NotImplementedException();
+            throw new sys::NotImplementedException();
         }
 
         /// <summary>
@@ -1965,7 +1965,7 @@ namespace Google.Cloud.Dlp.V2
             GetDlpJobRequest request,
             gaxgrpc::CallSettings callSettings = null)
         {
-            throw new s::NotImplementedException();
+            throw new sys::NotImplementedException();
         }
 
         /// <summary>
@@ -1986,7 +1986,7 @@ namespace Google.Cloud.Dlp.V2
             DeleteDlpJobRequest request,
             gaxgrpc::CallSettings callSettings = null)
         {
-            throw new s::NotImplementedException();
+            throw new sys::NotImplementedException();
         }
 
         /// <summary>
@@ -2024,7 +2024,7 @@ namespace Google.Cloud.Dlp.V2
             DeleteDlpJobRequest request,
             gaxgrpc::CallSettings callSettings = null)
         {
-            throw new s::NotImplementedException();
+            throw new sys::NotImplementedException();
         }
 
         /// <summary>
@@ -2045,7 +2045,7 @@ namespace Google.Cloud.Dlp.V2
             CancelDlpJobRequest request,
             gaxgrpc::CallSettings callSettings = null)
         {
-            throw new s::NotImplementedException();
+            throw new sys::NotImplementedException();
         }
 
         /// <summary>
@@ -2083,7 +2083,7 @@ namespace Google.Cloud.Dlp.V2
             CancelDlpJobRequest request,
             gaxgrpc::CallSettings callSettings = null)
         {
-            throw new s::NotImplementedException();
+            throw new sys::NotImplementedException();
         }
 
         /// <summary>
@@ -2102,7 +2102,7 @@ namespace Google.Cloud.Dlp.V2
             ListJobTriggersRequest request,
             gaxgrpc::CallSettings callSettings = null)
         {
-            throw new s::NotImplementedException();
+            throw new sys::NotImplementedException();
         }
 
         /// <summary>
@@ -2121,7 +2121,7 @@ namespace Google.Cloud.Dlp.V2
             ListJobTriggersRequest request,
             gaxgrpc::CallSettings callSettings = null)
         {
-            throw new s::NotImplementedException();
+            throw new sys::NotImplementedException();
         }
 
         /// <summary>
@@ -2140,7 +2140,7 @@ namespace Google.Cloud.Dlp.V2
             GetJobTriggerRequest request,
             gaxgrpc::CallSettings callSettings = null)
         {
-            throw new s::NotImplementedException();
+            throw new sys::NotImplementedException();
         }
 
         /// <summary>
@@ -2177,7 +2177,7 @@ namespace Google.Cloud.Dlp.V2
             GetJobTriggerRequest request,
             gaxgrpc::CallSettings callSettings = null)
         {
-            throw new s::NotImplementedException();
+            throw new sys::NotImplementedException();
         }
 
         /// <summary>
@@ -2196,7 +2196,7 @@ namespace Google.Cloud.Dlp.V2
             DeleteJobTriggerRequest request,
             gaxgrpc::CallSettings callSettings = null)
         {
-            throw new s::NotImplementedException();
+            throw new sys::NotImplementedException();
         }
 
         /// <summary>
@@ -2230,7 +2230,7 @@ namespace Google.Cloud.Dlp.V2
             DeleteJobTriggerRequest request,
             gaxgrpc::CallSettings callSettings = null)
         {
-            throw new s::NotImplementedException();
+            throw new sys::NotImplementedException();
         }
 
         /// <summary>
@@ -2249,7 +2249,7 @@ namespace Google.Cloud.Dlp.V2
             UpdateJobTriggerRequest request,
             gaxgrpc::CallSettings callSettings = null)
         {
-            throw new s::NotImplementedException();
+            throw new sys::NotImplementedException();
         }
 
         /// <summary>
@@ -2286,7 +2286,7 @@ namespace Google.Cloud.Dlp.V2
             UpdateJobTriggerRequest request,
             gaxgrpc::CallSettings callSettings = null)
         {
-            throw new s::NotImplementedException();
+            throw new sys::NotImplementedException();
         }
 
         /// <summary>
@@ -2306,7 +2306,7 @@ namespace Google.Cloud.Dlp.V2
             CreateJobTriggerRequest request,
             gaxgrpc::CallSettings callSettings = null)
         {
-            throw new s::NotImplementedException();
+            throw new sys::NotImplementedException();
         }
 
         /// <summary>
@@ -2345,7 +2345,7 @@ namespace Google.Cloud.Dlp.V2
             CreateJobTriggerRequest request,
             gaxgrpc::CallSettings callSettings = null)
         {
-            throw new s::NotImplementedException();
+            throw new sys::NotImplementedException();
         }
 
     }
@@ -2364,20 +2364,20 @@ namespace Google.Cloud.Dlp.V2
         private readonly gaxgrpc::ApiCall<UpdateInspectTemplateRequest, InspectTemplate> _callUpdateInspectTemplate;
         private readonly gaxgrpc::ApiCall<GetInspectTemplateRequest, InspectTemplate> _callGetInspectTemplate;
         private readonly gaxgrpc::ApiCall<ListInspectTemplatesRequest, ListInspectTemplatesResponse> _callListInspectTemplates;
-        private readonly gaxgrpc::ApiCall<DeleteInspectTemplateRequest, protowkt::Empty> _callDeleteInspectTemplate;
+        private readonly gaxgrpc::ApiCall<DeleteInspectTemplateRequest, pbwkt::Empty> _callDeleteInspectTemplate;
         private readonly gaxgrpc::ApiCall<CreateDeidentifyTemplateRequest, DeidentifyTemplate> _callCreateDeidentifyTemplate;
         private readonly gaxgrpc::ApiCall<UpdateDeidentifyTemplateRequest, DeidentifyTemplate> _callUpdateDeidentifyTemplate;
         private readonly gaxgrpc::ApiCall<GetDeidentifyTemplateRequest, DeidentifyTemplate> _callGetDeidentifyTemplate;
         private readonly gaxgrpc::ApiCall<ListDeidentifyTemplatesRequest, ListDeidentifyTemplatesResponse> _callListDeidentifyTemplates;
-        private readonly gaxgrpc::ApiCall<DeleteDeidentifyTemplateRequest, protowkt::Empty> _callDeleteDeidentifyTemplate;
+        private readonly gaxgrpc::ApiCall<DeleteDeidentifyTemplateRequest, pbwkt::Empty> _callDeleteDeidentifyTemplate;
         private readonly gaxgrpc::ApiCall<CreateDlpJobRequest, DlpJob> _callCreateDlpJob;
         private readonly gaxgrpc::ApiCall<ListDlpJobsRequest, ListDlpJobsResponse> _callListDlpJobs;
         private readonly gaxgrpc::ApiCall<GetDlpJobRequest, DlpJob> _callGetDlpJob;
-        private readonly gaxgrpc::ApiCall<DeleteDlpJobRequest, protowkt::Empty> _callDeleteDlpJob;
-        private readonly gaxgrpc::ApiCall<CancelDlpJobRequest, protowkt::Empty> _callCancelDlpJob;
+        private readonly gaxgrpc::ApiCall<DeleteDlpJobRequest, pbwkt::Empty> _callDeleteDlpJob;
+        private readonly gaxgrpc::ApiCall<CancelDlpJobRequest, pbwkt::Empty> _callCancelDlpJob;
         private readonly gaxgrpc::ApiCall<ListJobTriggersRequest, ListJobTriggersResponse> _callListJobTriggers;
         private readonly gaxgrpc::ApiCall<GetJobTriggerRequest, JobTrigger> _callGetJobTrigger;
-        private readonly gaxgrpc::ApiCall<DeleteJobTriggerRequest, protowkt::Empty> _callDeleteJobTrigger;
+        private readonly gaxgrpc::ApiCall<DeleteJobTriggerRequest, pbwkt::Empty> _callDeleteJobTrigger;
         private readonly gaxgrpc::ApiCall<UpdateJobTriggerRequest, JobTrigger> _callUpdateJobTrigger;
         private readonly gaxgrpc::ApiCall<CreateJobTriggerRequest, JobTrigger> _callCreateJobTrigger;
 
@@ -2409,7 +2409,7 @@ namespace Google.Cloud.Dlp.V2
                 GrpcClient.GetInspectTemplateAsync, GrpcClient.GetInspectTemplate, effectiveSettings.GetInspectTemplateSettings);
             _callListInspectTemplates = clientHelper.BuildApiCall<ListInspectTemplatesRequest, ListInspectTemplatesResponse>(
                 GrpcClient.ListInspectTemplatesAsync, GrpcClient.ListInspectTemplates, effectiveSettings.ListInspectTemplatesSettings);
-            _callDeleteInspectTemplate = clientHelper.BuildApiCall<DeleteInspectTemplateRequest, protowkt::Empty>(
+            _callDeleteInspectTemplate = clientHelper.BuildApiCall<DeleteInspectTemplateRequest, pbwkt::Empty>(
                 GrpcClient.DeleteInspectTemplateAsync, GrpcClient.DeleteInspectTemplate, effectiveSettings.DeleteInspectTemplateSettings);
             _callCreateDeidentifyTemplate = clientHelper.BuildApiCall<CreateDeidentifyTemplateRequest, DeidentifyTemplate>(
                 GrpcClient.CreateDeidentifyTemplateAsync, GrpcClient.CreateDeidentifyTemplate, effectiveSettings.CreateDeidentifyTemplateSettings);
@@ -2419,7 +2419,7 @@ namespace Google.Cloud.Dlp.V2
                 GrpcClient.GetDeidentifyTemplateAsync, GrpcClient.GetDeidentifyTemplate, effectiveSettings.GetDeidentifyTemplateSettings);
             _callListDeidentifyTemplates = clientHelper.BuildApiCall<ListDeidentifyTemplatesRequest, ListDeidentifyTemplatesResponse>(
                 GrpcClient.ListDeidentifyTemplatesAsync, GrpcClient.ListDeidentifyTemplates, effectiveSettings.ListDeidentifyTemplatesSettings);
-            _callDeleteDeidentifyTemplate = clientHelper.BuildApiCall<DeleteDeidentifyTemplateRequest, protowkt::Empty>(
+            _callDeleteDeidentifyTemplate = clientHelper.BuildApiCall<DeleteDeidentifyTemplateRequest, pbwkt::Empty>(
                 GrpcClient.DeleteDeidentifyTemplateAsync, GrpcClient.DeleteDeidentifyTemplate, effectiveSettings.DeleteDeidentifyTemplateSettings);
             _callCreateDlpJob = clientHelper.BuildApiCall<CreateDlpJobRequest, DlpJob>(
                 GrpcClient.CreateDlpJobAsync, GrpcClient.CreateDlpJob, effectiveSettings.CreateDlpJobSettings);
@@ -2427,15 +2427,15 @@ namespace Google.Cloud.Dlp.V2
                 GrpcClient.ListDlpJobsAsync, GrpcClient.ListDlpJobs, effectiveSettings.ListDlpJobsSettings);
             _callGetDlpJob = clientHelper.BuildApiCall<GetDlpJobRequest, DlpJob>(
                 GrpcClient.GetDlpJobAsync, GrpcClient.GetDlpJob, effectiveSettings.GetDlpJobSettings);
-            _callDeleteDlpJob = clientHelper.BuildApiCall<DeleteDlpJobRequest, protowkt::Empty>(
+            _callDeleteDlpJob = clientHelper.BuildApiCall<DeleteDlpJobRequest, pbwkt::Empty>(
                 GrpcClient.DeleteDlpJobAsync, GrpcClient.DeleteDlpJob, effectiveSettings.DeleteDlpJobSettings);
-            _callCancelDlpJob = clientHelper.BuildApiCall<CancelDlpJobRequest, protowkt::Empty>(
+            _callCancelDlpJob = clientHelper.BuildApiCall<CancelDlpJobRequest, pbwkt::Empty>(
                 GrpcClient.CancelDlpJobAsync, GrpcClient.CancelDlpJob, effectiveSettings.CancelDlpJobSettings);
             _callListJobTriggers = clientHelper.BuildApiCall<ListJobTriggersRequest, ListJobTriggersResponse>(
                 GrpcClient.ListJobTriggersAsync, GrpcClient.ListJobTriggers, effectiveSettings.ListJobTriggersSettings);
             _callGetJobTrigger = clientHelper.BuildApiCall<GetJobTriggerRequest, JobTrigger>(
                 GrpcClient.GetJobTriggerAsync, GrpcClient.GetJobTrigger, effectiveSettings.GetJobTriggerSettings);
-            _callDeleteJobTrigger = clientHelper.BuildApiCall<DeleteJobTriggerRequest, protowkt::Empty>(
+            _callDeleteJobTrigger = clientHelper.BuildApiCall<DeleteJobTriggerRequest, pbwkt::Empty>(
                 GrpcClient.DeleteJobTriggerAsync, GrpcClient.DeleteJobTrigger, effectiveSettings.DeleteJobTriggerSettings);
             _callUpdateJobTrigger = clientHelper.BuildApiCall<UpdateJobTriggerRequest, JobTrigger>(
                 GrpcClient.UpdateJobTriggerAsync, GrpcClient.UpdateJobTrigger, effectiveSettings.UpdateJobTriggerSettings);
@@ -2499,8 +2499,8 @@ namespace Google.Cloud.Dlp.V2
         // Partial methods called for every ApiCall on construction.
         // Allows modification of all the underlying ApiCall objects.
         partial void Modify_ApiCall<TRequest, TResponse>(ref gaxgrpc::ApiCall<TRequest, TResponse> call)
-            where TRequest : class, proto::IMessage<TRequest>
-            where TResponse : class, proto::IMessage<TResponse>;
+            where TRequest : class, pb::IMessage<TRequest>
+            where TResponse : class, pb::IMessage<TResponse>;
 
         // Partial methods called for each ApiCall on construction.
         // Allows per-RPC-method modification of the underlying ApiCall object.
@@ -2513,20 +2513,20 @@ namespace Google.Cloud.Dlp.V2
         partial void Modify_UpdateInspectTemplateApiCall(ref gaxgrpc::ApiCall<UpdateInspectTemplateRequest, InspectTemplate> call);
         partial void Modify_GetInspectTemplateApiCall(ref gaxgrpc::ApiCall<GetInspectTemplateRequest, InspectTemplate> call);
         partial void Modify_ListInspectTemplatesApiCall(ref gaxgrpc::ApiCall<ListInspectTemplatesRequest, ListInspectTemplatesResponse> call);
-        partial void Modify_DeleteInspectTemplateApiCall(ref gaxgrpc::ApiCall<DeleteInspectTemplateRequest, protowkt::Empty> call);
+        partial void Modify_DeleteInspectTemplateApiCall(ref gaxgrpc::ApiCall<DeleteInspectTemplateRequest, pbwkt::Empty> call);
         partial void Modify_CreateDeidentifyTemplateApiCall(ref gaxgrpc::ApiCall<CreateDeidentifyTemplateRequest, DeidentifyTemplate> call);
         partial void Modify_UpdateDeidentifyTemplateApiCall(ref gaxgrpc::ApiCall<UpdateDeidentifyTemplateRequest, DeidentifyTemplate> call);
         partial void Modify_GetDeidentifyTemplateApiCall(ref gaxgrpc::ApiCall<GetDeidentifyTemplateRequest, DeidentifyTemplate> call);
         partial void Modify_ListDeidentifyTemplatesApiCall(ref gaxgrpc::ApiCall<ListDeidentifyTemplatesRequest, ListDeidentifyTemplatesResponse> call);
-        partial void Modify_DeleteDeidentifyTemplateApiCall(ref gaxgrpc::ApiCall<DeleteDeidentifyTemplateRequest, protowkt::Empty> call);
+        partial void Modify_DeleteDeidentifyTemplateApiCall(ref gaxgrpc::ApiCall<DeleteDeidentifyTemplateRequest, pbwkt::Empty> call);
         partial void Modify_CreateDlpJobApiCall(ref gaxgrpc::ApiCall<CreateDlpJobRequest, DlpJob> call);
         partial void Modify_ListDlpJobsApiCall(ref gaxgrpc::ApiCall<ListDlpJobsRequest, ListDlpJobsResponse> call);
         partial void Modify_GetDlpJobApiCall(ref gaxgrpc::ApiCall<GetDlpJobRequest, DlpJob> call);
-        partial void Modify_DeleteDlpJobApiCall(ref gaxgrpc::ApiCall<DeleteDlpJobRequest, protowkt::Empty> call);
-        partial void Modify_CancelDlpJobApiCall(ref gaxgrpc::ApiCall<CancelDlpJobRequest, protowkt::Empty> call);
+        partial void Modify_DeleteDlpJobApiCall(ref gaxgrpc::ApiCall<DeleteDlpJobRequest, pbwkt::Empty> call);
+        partial void Modify_CancelDlpJobApiCall(ref gaxgrpc::ApiCall<CancelDlpJobRequest, pbwkt::Empty> call);
         partial void Modify_ListJobTriggersApiCall(ref gaxgrpc::ApiCall<ListJobTriggersRequest, ListJobTriggersResponse> call);
         partial void Modify_GetJobTriggerApiCall(ref gaxgrpc::ApiCall<GetJobTriggerRequest, JobTrigger> call);
-        partial void Modify_DeleteJobTriggerApiCall(ref gaxgrpc::ApiCall<DeleteJobTriggerRequest, protowkt::Empty> call);
+        partial void Modify_DeleteJobTriggerApiCall(ref gaxgrpc::ApiCall<DeleteJobTriggerRequest, pbwkt::Empty> call);
         partial void Modify_UpdateJobTriggerApiCall(ref gaxgrpc::ApiCall<UpdateJobTriggerRequest, JobTrigger> call);
         partial void Modify_CreateJobTriggerApiCall(ref gaxgrpc::ApiCall<CreateJobTriggerRequest, JobTrigger> call);
         partial void OnConstruction(DlpService.DlpServiceClient grpcClient, DlpServiceSettings effectiveSettings, gaxgrpc::ClientHelper clientHelper);

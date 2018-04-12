@@ -17,10 +17,10 @@
 using gax = Google.Api.Gax;
 using gaxgrpc = Google.Api.Gax.Grpc;
 using lro = Google.LongRunning;
-using proto = Google.Protobuf;
-using protowkt = Google.Protobuf.WellKnownTypes;
+using pb = Google.Protobuf;
+using pbwkt = Google.Protobuf.WellKnownTypes;
 using grpccore = Grpc.Core;
-using s = System;
+using sys = System;
 using sc = System.Collections;
 using scg = System.Collections.Generic;
 using sco = System.Collections.ObjectModel;
@@ -81,7 +81,7 @@ namespace Google.Cloud.Bigtable.Admin.V2
         /// <item><description><see cref="grpccore::StatusCode.Unavailable"/></description></item>
         /// </list>
         /// </remarks>
-        public static s::Predicate<grpccore::RpcException> IdempotentRetryFilter { get; } =
+        public static sys::Predicate<grpccore::RpcException> IdempotentRetryFilter { get; } =
             gaxgrpc::RetrySettings.FilterForStatusCodes(grpccore::StatusCode.DeadlineExceeded, grpccore::StatusCode.Unavailable);
 
         /// <summary>
@@ -91,7 +91,7 @@ namespace Google.Cloud.Bigtable.Admin.V2
         /// <remarks>
         /// There are no RPC <see cref="grpccore::StatusCode"/>s eligible for retry for "NonIdempotent" RPC methods.
         /// </remarks>
-        public static s::Predicate<grpccore::RpcException> NonIdempotentRetryFilter { get; } =
+        public static sys::Predicate<grpccore::RpcException> NonIdempotentRetryFilter { get; } =
             gaxgrpc::RetrySettings.FilterForStatusCodes();
 
         /// <summary>
@@ -109,8 +109,8 @@ namespace Google.Cloud.Bigtable.Admin.V2
         /// </list>
         /// </remarks>
         public static gaxgrpc::BackoffSettings GetDefaultRetryBackoff() => new gaxgrpc::BackoffSettings(
-            delay: s::TimeSpan.FromMilliseconds(100),
-            maxDelay: s::TimeSpan.FromMilliseconds(60000),
+            delay: sys::TimeSpan.FromMilliseconds(100),
+            maxDelay: sys::TimeSpan.FromMilliseconds(60000),
             delayMultiplier: 1.3
         );
 
@@ -129,8 +129,8 @@ namespace Google.Cloud.Bigtable.Admin.V2
         /// </list>
         /// </remarks>
         public static gaxgrpc::BackoffSettings GetDefaultTimeoutBackoff() => new gaxgrpc::BackoffSettings(
-            delay: s::TimeSpan.FromMilliseconds(20000),
-            maxDelay: s::TimeSpan.FromMilliseconds(20000),
+            delay: sys::TimeSpan.FromMilliseconds(20000),
+            maxDelay: sys::TimeSpan.FromMilliseconds(20000),
             delayMultiplier: 1.0
         );
 
@@ -159,7 +159,7 @@ namespace Google.Cloud.Bigtable.Admin.V2
             gaxgrpc::CallTiming.FromRetry(new gaxgrpc::RetrySettings(
                 retryBackoff: GetDefaultRetryBackoff(),
                 timeoutBackoff: GetDefaultTimeoutBackoff(),
-                totalExpiration: gax::Expiration.FromTimeout(s::TimeSpan.FromMilliseconds(600000)),
+                totalExpiration: gax::Expiration.FromTimeout(sys::TimeSpan.FromMilliseconds(600000)),
                 retryFilter: NonIdempotentRetryFilter
             )));
 
@@ -188,7 +188,7 @@ namespace Google.Cloud.Bigtable.Admin.V2
             gaxgrpc::CallTiming.FromRetry(new gaxgrpc::RetrySettings(
                 retryBackoff: GetDefaultRetryBackoff(),
                 timeoutBackoff: GetDefaultTimeoutBackoff(),
-                totalExpiration: gax::Expiration.FromTimeout(s::TimeSpan.FromMilliseconds(600000)),
+                totalExpiration: gax::Expiration.FromTimeout(sys::TimeSpan.FromMilliseconds(600000)),
                 retryFilter: NonIdempotentRetryFilter
             )));
 
@@ -207,10 +207,10 @@ namespace Google.Cloud.Bigtable.Admin.V2
         public lro::OperationsSettings CreateTableFromSnapshotOperationsSettings { get; set; } = new lro::OperationsSettings
         {
             DefaultPollSettings = new gax::PollSettings(
-                gax::Expiration.FromTimeout(s::TimeSpan.FromMilliseconds(300000L)),
-                s::TimeSpan.FromMilliseconds(500L),
+                gax::Expiration.FromTimeout(sys::TimeSpan.FromMilliseconds(300000L)),
+                sys::TimeSpan.FromMilliseconds(500L),
                 1.5,
-                s::TimeSpan.FromMilliseconds(5000L))
+                sys::TimeSpan.FromMilliseconds(5000L))
         };
 
         /// <summary>
@@ -239,7 +239,7 @@ namespace Google.Cloud.Bigtable.Admin.V2
             gaxgrpc::CallTiming.FromRetry(new gaxgrpc::RetrySettings(
                 retryBackoff: GetDefaultRetryBackoff(),
                 timeoutBackoff: GetDefaultTimeoutBackoff(),
-                totalExpiration: gax::Expiration.FromTimeout(s::TimeSpan.FromMilliseconds(600000)),
+                totalExpiration: gax::Expiration.FromTimeout(sys::TimeSpan.FromMilliseconds(600000)),
                 retryFilter: IdempotentRetryFilter
             )));
 
@@ -269,7 +269,7 @@ namespace Google.Cloud.Bigtable.Admin.V2
             gaxgrpc::CallTiming.FromRetry(new gaxgrpc::RetrySettings(
                 retryBackoff: GetDefaultRetryBackoff(),
                 timeoutBackoff: GetDefaultTimeoutBackoff(),
-                totalExpiration: gax::Expiration.FromTimeout(s::TimeSpan.FromMilliseconds(600000)),
+                totalExpiration: gax::Expiration.FromTimeout(sys::TimeSpan.FromMilliseconds(600000)),
                 retryFilter: IdempotentRetryFilter
             )));
 
@@ -299,7 +299,7 @@ namespace Google.Cloud.Bigtable.Admin.V2
             gaxgrpc::CallTiming.FromRetry(new gaxgrpc::RetrySettings(
                 retryBackoff: GetDefaultRetryBackoff(),
                 timeoutBackoff: GetDefaultTimeoutBackoff(),
-                totalExpiration: gax::Expiration.FromTimeout(s::TimeSpan.FromMilliseconds(600000)),
+                totalExpiration: gax::Expiration.FromTimeout(sys::TimeSpan.FromMilliseconds(600000)),
                 retryFilter: IdempotentRetryFilter
             )));
 
@@ -328,7 +328,7 @@ namespace Google.Cloud.Bigtable.Admin.V2
             gaxgrpc::CallTiming.FromRetry(new gaxgrpc::RetrySettings(
                 retryBackoff: GetDefaultRetryBackoff(),
                 timeoutBackoff: GetDefaultTimeoutBackoff(),
-                totalExpiration: gax::Expiration.FromTimeout(s::TimeSpan.FromMilliseconds(600000)),
+                totalExpiration: gax::Expiration.FromTimeout(sys::TimeSpan.FromMilliseconds(600000)),
                 retryFilter: NonIdempotentRetryFilter
             )));
 
@@ -357,7 +357,7 @@ namespace Google.Cloud.Bigtable.Admin.V2
             gaxgrpc::CallTiming.FromRetry(new gaxgrpc::RetrySettings(
                 retryBackoff: GetDefaultRetryBackoff(),
                 timeoutBackoff: GetDefaultTimeoutBackoff(),
-                totalExpiration: gax::Expiration.FromTimeout(s::TimeSpan.FromMilliseconds(600000)),
+                totalExpiration: gax::Expiration.FromTimeout(sys::TimeSpan.FromMilliseconds(600000)),
                 retryFilter: NonIdempotentRetryFilter
             )));
 
@@ -387,7 +387,7 @@ namespace Google.Cloud.Bigtable.Admin.V2
             gaxgrpc::CallTiming.FromRetry(new gaxgrpc::RetrySettings(
                 retryBackoff: GetDefaultRetryBackoff(),
                 timeoutBackoff: GetDefaultTimeoutBackoff(),
-                totalExpiration: gax::Expiration.FromTimeout(s::TimeSpan.FromMilliseconds(600000)),
+                totalExpiration: gax::Expiration.FromTimeout(sys::TimeSpan.FromMilliseconds(600000)),
                 retryFilter: IdempotentRetryFilter
             )));
 
@@ -417,7 +417,7 @@ namespace Google.Cloud.Bigtable.Admin.V2
             gaxgrpc::CallTiming.FromRetry(new gaxgrpc::RetrySettings(
                 retryBackoff: GetDefaultRetryBackoff(),
                 timeoutBackoff: GetDefaultTimeoutBackoff(),
-                totalExpiration: gax::Expiration.FromTimeout(s::TimeSpan.FromMilliseconds(600000)),
+                totalExpiration: gax::Expiration.FromTimeout(sys::TimeSpan.FromMilliseconds(600000)),
                 retryFilter: IdempotentRetryFilter
             )));
 
@@ -446,7 +446,7 @@ namespace Google.Cloud.Bigtable.Admin.V2
             gaxgrpc::CallTiming.FromRetry(new gaxgrpc::RetrySettings(
                 retryBackoff: GetDefaultRetryBackoff(),
                 timeoutBackoff: GetDefaultTimeoutBackoff(),
-                totalExpiration: gax::Expiration.FromTimeout(s::TimeSpan.FromMilliseconds(600000)),
+                totalExpiration: gax::Expiration.FromTimeout(sys::TimeSpan.FromMilliseconds(600000)),
                 retryFilter: NonIdempotentRetryFilter
             )));
 
@@ -465,10 +465,10 @@ namespace Google.Cloud.Bigtable.Admin.V2
         public lro::OperationsSettings SnapshotTableOperationsSettings { get; set; } = new lro::OperationsSettings
         {
             DefaultPollSettings = new gax::PollSettings(
-                gax::Expiration.FromTimeout(s::TimeSpan.FromMilliseconds(300000L)),
-                s::TimeSpan.FromMilliseconds(500L),
+                gax::Expiration.FromTimeout(sys::TimeSpan.FromMilliseconds(300000L)),
+                sys::TimeSpan.FromMilliseconds(500L),
                 1.5,
-                s::TimeSpan.FromMilliseconds(5000L))
+                sys::TimeSpan.FromMilliseconds(5000L))
         };
 
         /// <summary>
@@ -497,7 +497,7 @@ namespace Google.Cloud.Bigtable.Admin.V2
             gaxgrpc::CallTiming.FromRetry(new gaxgrpc::RetrySettings(
                 retryBackoff: GetDefaultRetryBackoff(),
                 timeoutBackoff: GetDefaultTimeoutBackoff(),
-                totalExpiration: gax::Expiration.FromTimeout(s::TimeSpan.FromMilliseconds(600000)),
+                totalExpiration: gax::Expiration.FromTimeout(sys::TimeSpan.FromMilliseconds(600000)),
                 retryFilter: IdempotentRetryFilter
             )));
 
@@ -527,7 +527,7 @@ namespace Google.Cloud.Bigtable.Admin.V2
             gaxgrpc::CallTiming.FromRetry(new gaxgrpc::RetrySettings(
                 retryBackoff: GetDefaultRetryBackoff(),
                 timeoutBackoff: GetDefaultTimeoutBackoff(),
-                totalExpiration: gax::Expiration.FromTimeout(s::TimeSpan.FromMilliseconds(600000)),
+                totalExpiration: gax::Expiration.FromTimeout(sys::TimeSpan.FromMilliseconds(600000)),
                 retryFilter: IdempotentRetryFilter
             )));
 
@@ -556,7 +556,7 @@ namespace Google.Cloud.Bigtable.Admin.V2
             gaxgrpc::CallTiming.FromRetry(new gaxgrpc::RetrySettings(
                 retryBackoff: GetDefaultRetryBackoff(),
                 timeoutBackoff: GetDefaultTimeoutBackoff(),
-                totalExpiration: gax::Expiration.FromTimeout(s::TimeSpan.FromMilliseconds(600000)),
+                totalExpiration: gax::Expiration.FromTimeout(sys::TimeSpan.FromMilliseconds(600000)),
                 retryFilter: NonIdempotentRetryFilter
             )));
 
@@ -672,7 +672,7 @@ namespace Google.Cloud.Bigtable.Admin.V2
         /// </summary>
         public virtual BigtableTableAdmin.BigtableTableAdminClient GrpcClient
         {
-            get { throw new s::NotImplementedException(); }
+            get { throw new sys::NotImplementedException(); }
         }
 
         /// <summary>
@@ -795,7 +795,7 @@ namespace Google.Cloud.Bigtable.Admin.V2
             CreateTableRequest request,
             gaxgrpc::CallSettings callSettings = null)
         {
-            throw new s::NotImplementedException();
+            throw new sys::NotImplementedException();
         }
 
         /// <summary>
@@ -836,7 +836,7 @@ namespace Google.Cloud.Bigtable.Admin.V2
             CreateTableRequest request,
             gaxgrpc::CallSettings callSettings = null)
         {
-            throw new s::NotImplementedException();
+            throw new sys::NotImplementedException();
         }
 
         /// <summary>
@@ -984,7 +984,7 @@ namespace Google.Cloud.Bigtable.Admin.V2
             CreateTableFromSnapshotRequest request,
             gaxgrpc::CallSettings callSettings = null)
         {
-            throw new s::NotImplementedException();
+            throw new sys::NotImplementedException();
         }
 
         /// <summary>
@@ -1022,7 +1022,7 @@ namespace Google.Cloud.Bigtable.Admin.V2
             CreateTableFromSnapshotRequest request,
             gaxgrpc::CallSettings callSettings = null)
         {
-            throw new s::NotImplementedException();
+            throw new sys::NotImplementedException();
         }
 
         /// <summary>
@@ -1030,7 +1030,7 @@ namespace Google.Cloud.Bigtable.Admin.V2
         /// </summary>
         public virtual lro::OperationsClient CreateTableFromSnapshotOperationsClient
         {
-            get { throw new s::NotImplementedException(); }
+            get { throw new sys::NotImplementedException(); }
         }
 
         /// <summary>
@@ -1130,7 +1130,7 @@ namespace Google.Cloud.Bigtable.Admin.V2
             ListTablesRequest request,
             gaxgrpc::CallSettings callSettings = null)
         {
-            throw new s::NotImplementedException();
+            throw new sys::NotImplementedException();
         }
 
         /// <summary>
@@ -1149,7 +1149,7 @@ namespace Google.Cloud.Bigtable.Admin.V2
             ListTablesRequest request,
             gaxgrpc::CallSettings callSettings = null)
         {
-            throw new s::NotImplementedException();
+            throw new sys::NotImplementedException();
         }
 
         /// <summary>
@@ -1234,7 +1234,7 @@ namespace Google.Cloud.Bigtable.Admin.V2
             GetTableRequest request,
             gaxgrpc::CallSettings callSettings = null)
         {
-            throw new s::NotImplementedException();
+            throw new sys::NotImplementedException();
         }
 
         /// <summary>
@@ -1271,7 +1271,7 @@ namespace Google.Cloud.Bigtable.Admin.V2
             GetTableRequest request,
             gaxgrpc::CallSettings callSettings = null)
         {
-            throw new s::NotImplementedException();
+            throw new sys::NotImplementedException();
         }
 
         /// <summary>
@@ -1353,7 +1353,7 @@ namespace Google.Cloud.Bigtable.Admin.V2
             DeleteTableRequest request,
             gaxgrpc::CallSettings callSettings = null)
         {
-            throw new s::NotImplementedException();
+            throw new sys::NotImplementedException();
         }
 
         /// <summary>
@@ -1387,7 +1387,7 @@ namespace Google.Cloud.Bigtable.Admin.V2
             DeleteTableRequest request,
             gaxgrpc::CallSettings callSettings = null)
         {
-            throw new s::NotImplementedException();
+            throw new sys::NotImplementedException();
         }
 
         /// <summary>
@@ -1508,7 +1508,7 @@ namespace Google.Cloud.Bigtable.Admin.V2
             ModifyColumnFamiliesRequest request,
             gaxgrpc::CallSettings callSettings = null)
         {
-            throw new s::NotImplementedException();
+            throw new sys::NotImplementedException();
         }
 
         /// <summary>
@@ -1551,7 +1551,7 @@ namespace Google.Cloud.Bigtable.Admin.V2
             ModifyColumnFamiliesRequest request,
             gaxgrpc::CallSettings callSettings = null)
         {
-            throw new s::NotImplementedException();
+            throw new sys::NotImplementedException();
         }
 
         /// <summary>
@@ -1572,7 +1572,7 @@ namespace Google.Cloud.Bigtable.Admin.V2
             DropRowRangeRequest request,
             gaxgrpc::CallSettings callSettings = null)
         {
-            throw new s::NotImplementedException();
+            throw new sys::NotImplementedException();
         }
 
         /// <summary>
@@ -1610,7 +1610,7 @@ namespace Google.Cloud.Bigtable.Admin.V2
             DropRowRangeRequest request,
             gaxgrpc::CallSettings callSettings = null)
         {
-            throw new s::NotImplementedException();
+            throw new sys::NotImplementedException();
         }
 
         /// <summary>
@@ -1727,7 +1727,7 @@ namespace Google.Cloud.Bigtable.Admin.V2
             GenerateConsistencyTokenRequest request,
             gaxgrpc::CallSettings callSettings = null)
         {
-            throw new s::NotImplementedException();
+            throw new sys::NotImplementedException();
         }
 
         /// <summary>
@@ -1780,7 +1780,7 @@ namespace Google.Cloud.Bigtable.Admin.V2
             GenerateConsistencyTokenRequest request,
             gaxgrpc::CallSettings callSettings = null)
         {
-            throw new s::NotImplementedException();
+            throw new sys::NotImplementedException();
         }
 
         /// <summary>
@@ -1908,7 +1908,7 @@ namespace Google.Cloud.Bigtable.Admin.V2
             CheckConsistencyRequest request,
             gaxgrpc::CallSettings callSettings = null)
         {
-            throw new s::NotImplementedException();
+            throw new sys::NotImplementedException();
         }
 
         /// <summary>
@@ -1959,7 +1959,7 @@ namespace Google.Cloud.Bigtable.Admin.V2
             CheckConsistencyRequest request,
             gaxgrpc::CallSettings callSettings = null)
         {
-            throw new s::NotImplementedException();
+            throw new sys::NotImplementedException();
         }
 
         /// <summary>
@@ -2128,7 +2128,7 @@ namespace Google.Cloud.Bigtable.Admin.V2
             SnapshotTableRequest request,
             gaxgrpc::CallSettings callSettings = null)
         {
-            throw new s::NotImplementedException();
+            throw new sys::NotImplementedException();
         }
 
         /// <summary>
@@ -2166,7 +2166,7 @@ namespace Google.Cloud.Bigtable.Admin.V2
             SnapshotTableRequest request,
             gaxgrpc::CallSettings callSettings = null)
         {
-            throw new s::NotImplementedException();
+            throw new sys::NotImplementedException();
         }
 
         /// <summary>
@@ -2174,7 +2174,7 @@ namespace Google.Cloud.Bigtable.Admin.V2
         /// </summary>
         public virtual lro::OperationsClient SnapshotTableOperationsClient
         {
-            get { throw new s::NotImplementedException(); }
+            get { throw new sys::NotImplementedException(); }
         }
 
         /// <summary>
@@ -2292,7 +2292,7 @@ namespace Google.Cloud.Bigtable.Admin.V2
             GetSnapshotRequest request,
             gaxgrpc::CallSettings callSettings = null)
         {
-            throw new s::NotImplementedException();
+            throw new sys::NotImplementedException();
         }
 
         /// <summary>
@@ -2339,7 +2339,7 @@ namespace Google.Cloud.Bigtable.Admin.V2
             GetSnapshotRequest request,
             gaxgrpc::CallSettings callSettings = null)
         {
-            throw new s::NotImplementedException();
+            throw new sys::NotImplementedException();
         }
 
         /// <summary>
@@ -2447,7 +2447,7 @@ namespace Google.Cloud.Bigtable.Admin.V2
             ListSnapshotsRequest request,
             gaxgrpc::CallSettings callSettings = null)
         {
-            throw new s::NotImplementedException();
+            throw new sys::NotImplementedException();
         }
 
         /// <summary>
@@ -2471,7 +2471,7 @@ namespace Google.Cloud.Bigtable.Admin.V2
             ListSnapshotsRequest request,
             gaxgrpc::CallSettings callSettings = null)
         {
-            throw new s::NotImplementedException();
+            throw new sys::NotImplementedException();
         }
 
         /// <summary>
@@ -2573,7 +2573,7 @@ namespace Google.Cloud.Bigtable.Admin.V2
             DeleteSnapshotRequest request,
             gaxgrpc::CallSettings callSettings = null)
         {
-            throw new s::NotImplementedException();
+            throw new sys::NotImplementedException();
         }
 
         /// <summary>
@@ -2617,7 +2617,7 @@ namespace Google.Cloud.Bigtable.Admin.V2
             DeleteSnapshotRequest request,
             gaxgrpc::CallSettings callSettings = null)
         {
-            throw new s::NotImplementedException();
+            throw new sys::NotImplementedException();
         }
 
     }
@@ -2631,15 +2631,15 @@ namespace Google.Cloud.Bigtable.Admin.V2
         private readonly gaxgrpc::ApiCall<CreateTableFromSnapshotRequest, lro::Operation> _callCreateTableFromSnapshot;
         private readonly gaxgrpc::ApiCall<ListTablesRequest, ListTablesResponse> _callListTables;
         private readonly gaxgrpc::ApiCall<GetTableRequest, Table> _callGetTable;
-        private readonly gaxgrpc::ApiCall<DeleteTableRequest, protowkt::Empty> _callDeleteTable;
+        private readonly gaxgrpc::ApiCall<DeleteTableRequest, pbwkt::Empty> _callDeleteTable;
         private readonly gaxgrpc::ApiCall<ModifyColumnFamiliesRequest, Table> _callModifyColumnFamilies;
-        private readonly gaxgrpc::ApiCall<DropRowRangeRequest, protowkt::Empty> _callDropRowRange;
+        private readonly gaxgrpc::ApiCall<DropRowRangeRequest, pbwkt::Empty> _callDropRowRange;
         private readonly gaxgrpc::ApiCall<GenerateConsistencyTokenRequest, GenerateConsistencyTokenResponse> _callGenerateConsistencyToken;
         private readonly gaxgrpc::ApiCall<CheckConsistencyRequest, CheckConsistencyResponse> _callCheckConsistency;
         private readonly gaxgrpc::ApiCall<SnapshotTableRequest, lro::Operation> _callSnapshotTable;
         private readonly gaxgrpc::ApiCall<GetSnapshotRequest, Snapshot> _callGetSnapshot;
         private readonly gaxgrpc::ApiCall<ListSnapshotsRequest, ListSnapshotsResponse> _callListSnapshots;
-        private readonly gaxgrpc::ApiCall<DeleteSnapshotRequest, protowkt::Empty> _callDeleteSnapshot;
+        private readonly gaxgrpc::ApiCall<DeleteSnapshotRequest, pbwkt::Empty> _callDeleteSnapshot;
 
         /// <summary>
         /// Constructs a client wrapper for the BigtableTableAdmin service, with the specified gRPC client and settings.
@@ -2667,13 +2667,13 @@ namespace Google.Cloud.Bigtable.Admin.V2
             _callGetTable = clientHelper.BuildApiCall<GetTableRequest, Table>(
                 GrpcClient.GetTableAsync, GrpcClient.GetTable, effectiveSettings.GetTableSettings)
                 .WithCallSettingsOverlay(request => gaxgrpc::CallSettings.FromHeader("x-goog-request-params", $"name={request.Name}"));
-            _callDeleteTable = clientHelper.BuildApiCall<DeleteTableRequest, protowkt::Empty>(
+            _callDeleteTable = clientHelper.BuildApiCall<DeleteTableRequest, pbwkt::Empty>(
                 GrpcClient.DeleteTableAsync, GrpcClient.DeleteTable, effectiveSettings.DeleteTableSettings)
                 .WithCallSettingsOverlay(request => gaxgrpc::CallSettings.FromHeader("x-goog-request-params", $"name={request.Name}"));
             _callModifyColumnFamilies = clientHelper.BuildApiCall<ModifyColumnFamiliesRequest, Table>(
                 GrpcClient.ModifyColumnFamiliesAsync, GrpcClient.ModifyColumnFamilies, effectiveSettings.ModifyColumnFamiliesSettings)
                 .WithCallSettingsOverlay(request => gaxgrpc::CallSettings.FromHeader("x-goog-request-params", $"name={request.Name}"));
-            _callDropRowRange = clientHelper.BuildApiCall<DropRowRangeRequest, protowkt::Empty>(
+            _callDropRowRange = clientHelper.BuildApiCall<DropRowRangeRequest, pbwkt::Empty>(
                 GrpcClient.DropRowRangeAsync, GrpcClient.DropRowRange, effectiveSettings.DropRowRangeSettings)
                 .WithCallSettingsOverlay(request => gaxgrpc::CallSettings.FromHeader("x-goog-request-params", $"name={request.Name}"));
             _callGenerateConsistencyToken = clientHelper.BuildApiCall<GenerateConsistencyTokenRequest, GenerateConsistencyTokenResponse>(
@@ -2691,7 +2691,7 @@ namespace Google.Cloud.Bigtable.Admin.V2
             _callListSnapshots = clientHelper.BuildApiCall<ListSnapshotsRequest, ListSnapshotsResponse>(
                 GrpcClient.ListSnapshotsAsync, GrpcClient.ListSnapshots, effectiveSettings.ListSnapshotsSettings)
                 .WithCallSettingsOverlay(request => gaxgrpc::CallSettings.FromHeader("x-goog-request-params", $"parent={request.Parent}"));
-            _callDeleteSnapshot = clientHelper.BuildApiCall<DeleteSnapshotRequest, protowkt::Empty>(
+            _callDeleteSnapshot = clientHelper.BuildApiCall<DeleteSnapshotRequest, pbwkt::Empty>(
                 GrpcClient.DeleteSnapshotAsync, GrpcClient.DeleteSnapshot, effectiveSettings.DeleteSnapshotSettings)
                 .WithCallSettingsOverlay(request => gaxgrpc::CallSettings.FromHeader("x-goog-request-params", $"name={request.Name}"));
             Modify_ApiCall(ref _callCreateTable);
@@ -2728,8 +2728,8 @@ namespace Google.Cloud.Bigtable.Admin.V2
         // Partial methods called for every ApiCall on construction.
         // Allows modification of all the underlying ApiCall objects.
         partial void Modify_ApiCall<TRequest, TResponse>(ref gaxgrpc::ApiCall<TRequest, TResponse> call)
-            where TRequest : class, proto::IMessage<TRequest>
-            where TResponse : class, proto::IMessage<TResponse>;
+            where TRequest : class, pb::IMessage<TRequest>
+            where TResponse : class, pb::IMessage<TResponse>;
 
         // Partial methods called for each ApiCall on construction.
         // Allows per-RPC-method modification of the underlying ApiCall object.
@@ -2737,15 +2737,15 @@ namespace Google.Cloud.Bigtable.Admin.V2
         partial void Modify_CreateTableFromSnapshotApiCall(ref gaxgrpc::ApiCall<CreateTableFromSnapshotRequest, lro::Operation> call);
         partial void Modify_ListTablesApiCall(ref gaxgrpc::ApiCall<ListTablesRequest, ListTablesResponse> call);
         partial void Modify_GetTableApiCall(ref gaxgrpc::ApiCall<GetTableRequest, Table> call);
-        partial void Modify_DeleteTableApiCall(ref gaxgrpc::ApiCall<DeleteTableRequest, protowkt::Empty> call);
+        partial void Modify_DeleteTableApiCall(ref gaxgrpc::ApiCall<DeleteTableRequest, pbwkt::Empty> call);
         partial void Modify_ModifyColumnFamiliesApiCall(ref gaxgrpc::ApiCall<ModifyColumnFamiliesRequest, Table> call);
-        partial void Modify_DropRowRangeApiCall(ref gaxgrpc::ApiCall<DropRowRangeRequest, protowkt::Empty> call);
+        partial void Modify_DropRowRangeApiCall(ref gaxgrpc::ApiCall<DropRowRangeRequest, pbwkt::Empty> call);
         partial void Modify_GenerateConsistencyTokenApiCall(ref gaxgrpc::ApiCall<GenerateConsistencyTokenRequest, GenerateConsistencyTokenResponse> call);
         partial void Modify_CheckConsistencyApiCall(ref gaxgrpc::ApiCall<CheckConsistencyRequest, CheckConsistencyResponse> call);
         partial void Modify_SnapshotTableApiCall(ref gaxgrpc::ApiCall<SnapshotTableRequest, lro::Operation> call);
         partial void Modify_GetSnapshotApiCall(ref gaxgrpc::ApiCall<GetSnapshotRequest, Snapshot> call);
         partial void Modify_ListSnapshotsApiCall(ref gaxgrpc::ApiCall<ListSnapshotsRequest, ListSnapshotsResponse> call);
-        partial void Modify_DeleteSnapshotApiCall(ref gaxgrpc::ApiCall<DeleteSnapshotRequest, protowkt::Empty> call);
+        partial void Modify_DeleteSnapshotApiCall(ref gaxgrpc::ApiCall<DeleteSnapshotRequest, pbwkt::Empty> call);
         partial void OnConstruction(BigtableTableAdmin.BigtableTableAdminClient grpcClient, BigtableTableAdminSettings effectiveSettings, gaxgrpc::ClientHelper clientHelper);
 
         /// <summary>

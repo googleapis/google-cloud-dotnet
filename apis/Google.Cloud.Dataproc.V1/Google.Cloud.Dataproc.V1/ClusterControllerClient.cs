@@ -17,10 +17,10 @@
 using gax = Google.Api.Gax;
 using gaxgrpc = Google.Api.Gax.Grpc;
 using lro = Google.LongRunning;
-using proto = Google.Protobuf;
-using protowkt = Google.Protobuf.WellKnownTypes;
+using pb = Google.Protobuf;
+using pbwkt = Google.Protobuf.WellKnownTypes;
 using grpccore = Grpc.Core;
-using s = System;
+using sys = System;
 using sc = System.Collections;
 using scg = System.Collections.Generic;
 using sco = System.Collections.ObjectModel;
@@ -76,7 +76,7 @@ namespace Google.Cloud.Dataproc.V1
         /// <item><description><see cref="grpccore::StatusCode.Unavailable"/></description></item>
         /// </list>
         /// </remarks>
-        public static s::Predicate<grpccore::RpcException> IdempotentRetryFilter { get; } =
+        public static sys::Predicate<grpccore::RpcException> IdempotentRetryFilter { get; } =
             gaxgrpc::RetrySettings.FilterForStatusCodes(grpccore::StatusCode.DeadlineExceeded, grpccore::StatusCode.Unavailable);
 
         /// <summary>
@@ -86,7 +86,7 @@ namespace Google.Cloud.Dataproc.V1
         /// <remarks>
         /// There are no RPC <see cref="grpccore::StatusCode"/>s eligible for retry for "NonIdempotent" RPC methods.
         /// </remarks>
-        public static s::Predicate<grpccore::RpcException> NonIdempotentRetryFilter { get; } =
+        public static sys::Predicate<grpccore::RpcException> NonIdempotentRetryFilter { get; } =
             gaxgrpc::RetrySettings.FilterForStatusCodes();
 
         /// <summary>
@@ -104,8 +104,8 @@ namespace Google.Cloud.Dataproc.V1
         /// </list>
         /// </remarks>
         public static gaxgrpc::BackoffSettings GetDefaultRetryBackoff() => new gaxgrpc::BackoffSettings(
-            delay: s::TimeSpan.FromMilliseconds(100),
-            maxDelay: s::TimeSpan.FromMilliseconds(60000),
+            delay: sys::TimeSpan.FromMilliseconds(100),
+            maxDelay: sys::TimeSpan.FromMilliseconds(60000),
             delayMultiplier: 1.3
         );
 
@@ -124,8 +124,8 @@ namespace Google.Cloud.Dataproc.V1
         /// </list>
         /// </remarks>
         public static gaxgrpc::BackoffSettings GetDefaultTimeoutBackoff() => new gaxgrpc::BackoffSettings(
-            delay: s::TimeSpan.FromMilliseconds(10000),
-            maxDelay: s::TimeSpan.FromMilliseconds(10000),
+            delay: sys::TimeSpan.FromMilliseconds(10000),
+            maxDelay: sys::TimeSpan.FromMilliseconds(10000),
             delayMultiplier: 1.0
         );
 
@@ -154,7 +154,7 @@ namespace Google.Cloud.Dataproc.V1
             gaxgrpc::CallTiming.FromRetry(new gaxgrpc::RetrySettings(
                 retryBackoff: GetDefaultRetryBackoff(),
                 timeoutBackoff: GetDefaultTimeoutBackoff(),
-                totalExpiration: gax::Expiration.FromTimeout(s::TimeSpan.FromMilliseconds(300000)),
+                totalExpiration: gax::Expiration.FromTimeout(sys::TimeSpan.FromMilliseconds(300000)),
                 retryFilter: NonIdempotentRetryFilter
             )));
 
@@ -173,10 +173,10 @@ namespace Google.Cloud.Dataproc.V1
         public lro::OperationsSettings CreateClusterOperationsSettings { get; set; } = new lro::OperationsSettings
         {
             DefaultPollSettings = new gax::PollSettings(
-                gax::Expiration.FromTimeout(s::TimeSpan.FromMilliseconds(300000L)),
-                s::TimeSpan.FromMilliseconds(1000L),
+                gax::Expiration.FromTimeout(sys::TimeSpan.FromMilliseconds(300000L)),
+                sys::TimeSpan.FromMilliseconds(1000L),
                 2.0,
-                s::TimeSpan.FromMilliseconds(10000L))
+                sys::TimeSpan.FromMilliseconds(10000L))
         };
 
         /// <summary>
@@ -204,7 +204,7 @@ namespace Google.Cloud.Dataproc.V1
             gaxgrpc::CallTiming.FromRetry(new gaxgrpc::RetrySettings(
                 retryBackoff: GetDefaultRetryBackoff(),
                 timeoutBackoff: GetDefaultTimeoutBackoff(),
-                totalExpiration: gax::Expiration.FromTimeout(s::TimeSpan.FromMilliseconds(300000)),
+                totalExpiration: gax::Expiration.FromTimeout(sys::TimeSpan.FromMilliseconds(300000)),
                 retryFilter: NonIdempotentRetryFilter
             )));
 
@@ -223,10 +223,10 @@ namespace Google.Cloud.Dataproc.V1
         public lro::OperationsSettings UpdateClusterOperationsSettings { get; set; } = new lro::OperationsSettings
         {
             DefaultPollSettings = new gax::PollSettings(
-                gax::Expiration.FromTimeout(s::TimeSpan.FromMilliseconds(300000L)),
-                s::TimeSpan.FromMilliseconds(1000L),
+                gax::Expiration.FromTimeout(sys::TimeSpan.FromMilliseconds(300000L)),
+                sys::TimeSpan.FromMilliseconds(1000L),
                 2.0,
-                s::TimeSpan.FromMilliseconds(10000L))
+                sys::TimeSpan.FromMilliseconds(10000L))
         };
 
         /// <summary>
@@ -255,7 +255,7 @@ namespace Google.Cloud.Dataproc.V1
             gaxgrpc::CallTiming.FromRetry(new gaxgrpc::RetrySettings(
                 retryBackoff: GetDefaultRetryBackoff(),
                 timeoutBackoff: GetDefaultTimeoutBackoff(),
-                totalExpiration: gax::Expiration.FromTimeout(s::TimeSpan.FromMilliseconds(300000)),
+                totalExpiration: gax::Expiration.FromTimeout(sys::TimeSpan.FromMilliseconds(300000)),
                 retryFilter: IdempotentRetryFilter
             )));
 
@@ -274,10 +274,10 @@ namespace Google.Cloud.Dataproc.V1
         public lro::OperationsSettings DeleteClusterOperationsSettings { get; set; } = new lro::OperationsSettings
         {
             DefaultPollSettings = new gax::PollSettings(
-                gax::Expiration.FromTimeout(s::TimeSpan.FromMilliseconds(300000L)),
-                s::TimeSpan.FromMilliseconds(1000L),
+                gax::Expiration.FromTimeout(sys::TimeSpan.FromMilliseconds(300000L)),
+                sys::TimeSpan.FromMilliseconds(1000L),
                 2.0,
-                s::TimeSpan.FromMilliseconds(10000L))
+                sys::TimeSpan.FromMilliseconds(10000L))
         };
 
         /// <summary>
@@ -306,7 +306,7 @@ namespace Google.Cloud.Dataproc.V1
             gaxgrpc::CallTiming.FromRetry(new gaxgrpc::RetrySettings(
                 retryBackoff: GetDefaultRetryBackoff(),
                 timeoutBackoff: GetDefaultTimeoutBackoff(),
-                totalExpiration: gax::Expiration.FromTimeout(s::TimeSpan.FromMilliseconds(300000)),
+                totalExpiration: gax::Expiration.FromTimeout(sys::TimeSpan.FromMilliseconds(300000)),
                 retryFilter: IdempotentRetryFilter
             )));
 
@@ -336,7 +336,7 @@ namespace Google.Cloud.Dataproc.V1
             gaxgrpc::CallTiming.FromRetry(new gaxgrpc::RetrySettings(
                 retryBackoff: GetDefaultRetryBackoff(),
                 timeoutBackoff: GetDefaultTimeoutBackoff(),
-                totalExpiration: gax::Expiration.FromTimeout(s::TimeSpan.FromMilliseconds(300000)),
+                totalExpiration: gax::Expiration.FromTimeout(sys::TimeSpan.FromMilliseconds(300000)),
                 retryFilter: IdempotentRetryFilter
             )));
 
@@ -365,7 +365,7 @@ namespace Google.Cloud.Dataproc.V1
             gaxgrpc::CallTiming.FromRetry(new gaxgrpc::RetrySettings(
                 retryBackoff: GetDefaultRetryBackoff(),
                 timeoutBackoff: GetDefaultTimeoutBackoff(),
-                totalExpiration: gax::Expiration.FromTimeout(s::TimeSpan.FromMilliseconds(300000)),
+                totalExpiration: gax::Expiration.FromTimeout(sys::TimeSpan.FromMilliseconds(300000)),
                 retryFilter: NonIdempotentRetryFilter
             )));
 
@@ -384,10 +384,10 @@ namespace Google.Cloud.Dataproc.V1
         public lro::OperationsSettings DiagnoseClusterOperationsSettings { get; set; } = new lro::OperationsSettings
         {
             DefaultPollSettings = new gax::PollSettings(
-                gax::Expiration.FromTimeout(s::TimeSpan.FromMilliseconds(30000L)),
-                s::TimeSpan.FromMilliseconds(1000L),
+                gax::Expiration.FromTimeout(sys::TimeSpan.FromMilliseconds(30000L)),
+                sys::TimeSpan.FromMilliseconds(1000L),
                 2.0,
-                s::TimeSpan.FromMilliseconds(10000L))
+                sys::TimeSpan.FromMilliseconds(10000L))
         };
 
         /// <summary>
@@ -486,7 +486,7 @@ namespace Google.Cloud.Dataproc.V1
         /// </summary>
         public virtual ClusterController.ClusterControllerClient GrpcClient
         {
-            get { throw new s::NotImplementedException(); }
+            get { throw new sys::NotImplementedException(); }
         }
 
         /// <summary>
@@ -598,7 +598,7 @@ namespace Google.Cloud.Dataproc.V1
             CreateClusterRequest request,
             gaxgrpc::CallSettings callSettings = null)
         {
-            throw new s::NotImplementedException();
+            throw new sys::NotImplementedException();
         }
 
         /// <summary>
@@ -630,7 +630,7 @@ namespace Google.Cloud.Dataproc.V1
             CreateClusterRequest request,
             gaxgrpc::CallSettings callSettings = null)
         {
-            throw new s::NotImplementedException();
+            throw new sys::NotImplementedException();
         }
 
         /// <summary>
@@ -638,7 +638,7 @@ namespace Google.Cloud.Dataproc.V1
         /// </summary>
         public virtual lro::OperationsClient CreateClusterOperationsClient
         {
-            get { throw new s::NotImplementedException(); }
+            get { throw new sys::NotImplementedException(); }
         }
 
         /// <summary>
@@ -670,7 +670,7 @@ namespace Google.Cloud.Dataproc.V1
             UpdateClusterRequest request,
             gaxgrpc::CallSettings callSettings = null)
         {
-            throw new s::NotImplementedException();
+            throw new sys::NotImplementedException();
         }
 
         /// <summary>
@@ -702,7 +702,7 @@ namespace Google.Cloud.Dataproc.V1
             UpdateClusterRequest request,
             gaxgrpc::CallSettings callSettings = null)
         {
-            throw new s::NotImplementedException();
+            throw new sys::NotImplementedException();
         }
 
         /// <summary>
@@ -710,7 +710,7 @@ namespace Google.Cloud.Dataproc.V1
         /// </summary>
         public virtual lro::OperationsClient UpdateClusterOperationsClient
         {
-            get { throw new s::NotImplementedException(); }
+            get { throw new sys::NotImplementedException(); }
         }
 
         /// <summary>
@@ -745,7 +745,7 @@ namespace Google.Cloud.Dataproc.V1
         /// <returns>
         /// A Task containing the RPC response.
         /// </returns>
-        public virtual stt::Task<lro::Operation<protowkt::Empty, ClusterOperationMetadata>> DeleteClusterAsync(
+        public virtual stt::Task<lro::Operation<pbwkt::Empty, ClusterOperationMetadata>> DeleteClusterAsync(
             string projectId,
             string region,
             string clusterName,
@@ -777,7 +777,7 @@ namespace Google.Cloud.Dataproc.V1
         /// <returns>
         /// A Task containing the RPC response.
         /// </returns>
-        public virtual stt::Task<lro::Operation<protowkt::Empty, ClusterOperationMetadata>> DeleteClusterAsync(
+        public virtual stt::Task<lro::Operation<pbwkt::Empty, ClusterOperationMetadata>> DeleteClusterAsync(
             string projectId,
             string region,
             string clusterName,
@@ -806,7 +806,7 @@ namespace Google.Cloud.Dataproc.V1
         /// <returns>
         /// The RPC response.
         /// </returns>
-        public virtual lro::Operation<protowkt::Empty, ClusterOperationMetadata> DeleteCluster(
+        public virtual lro::Operation<pbwkt::Empty, ClusterOperationMetadata> DeleteCluster(
             string projectId,
             string region,
             string clusterName,
@@ -831,11 +831,11 @@ namespace Google.Cloud.Dataproc.V1
         /// <returns>
         /// A Task containing the RPC response.
         /// </returns>
-        public virtual stt::Task<lro::Operation<protowkt::Empty, ClusterOperationMetadata>> DeleteClusterAsync(
+        public virtual stt::Task<lro::Operation<pbwkt::Empty, ClusterOperationMetadata>> DeleteClusterAsync(
             DeleteClusterRequest request,
             gaxgrpc::CallSettings callSettings = null)
         {
-            throw new s::NotImplementedException();
+            throw new sys::NotImplementedException();
         }
 
         /// <summary>
@@ -844,9 +844,9 @@ namespace Google.Cloud.Dataproc.V1
         /// <param name="operationName">The name of a previously invoked operation. Must not be <c>null</c> or empty.</param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
         /// <returns>A task representing the result of polling the operation.</returns>
-        public virtual stt::Task<lro::Operation<protowkt::Empty, ClusterOperationMetadata>> PollOnceDeleteClusterAsync(
+        public virtual stt::Task<lro::Operation<pbwkt::Empty, ClusterOperationMetadata>> PollOnceDeleteClusterAsync(
             string operationName,
-            gaxgrpc::CallSettings callSettings = null) => lro::Operation<protowkt::Empty, ClusterOperationMetadata>.PollOnceFromNameAsync(
+            gaxgrpc::CallSettings callSettings = null) => lro::Operation<pbwkt::Empty, ClusterOperationMetadata>.PollOnceFromNameAsync(
                 gax::GaxPreconditions.CheckNotNullOrEmpty(operationName, nameof(operationName)),
                 DeleteClusterOperationsClient,
                 callSettings);
@@ -863,11 +863,11 @@ namespace Google.Cloud.Dataproc.V1
         /// <returns>
         /// The RPC response.
         /// </returns>
-        public virtual lro::Operation<protowkt::Empty, ClusterOperationMetadata> DeleteCluster(
+        public virtual lro::Operation<pbwkt::Empty, ClusterOperationMetadata> DeleteCluster(
             DeleteClusterRequest request,
             gaxgrpc::CallSettings callSettings = null)
         {
-            throw new s::NotImplementedException();
+            throw new sys::NotImplementedException();
         }
 
         /// <summary>
@@ -875,7 +875,7 @@ namespace Google.Cloud.Dataproc.V1
         /// </summary>
         public virtual lro::OperationsClient DeleteClusterOperationsClient
         {
-            get { throw new s::NotImplementedException(); }
+            get { throw new sys::NotImplementedException(); }
         }
 
         /// <summary>
@@ -884,9 +884,9 @@ namespace Google.Cloud.Dataproc.V1
         /// <param name="operationName">The name of a previously invoked operation. Must not be <c>null</c> or empty.</param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
         /// <returns>The result of polling the operation.</returns>
-        public virtual lro::Operation<protowkt::Empty, ClusterOperationMetadata> PollOnceDeleteCluster(
+        public virtual lro::Operation<pbwkt::Empty, ClusterOperationMetadata> PollOnceDeleteCluster(
             string operationName,
-            gaxgrpc::CallSettings callSettings = null) => lro::Operation<protowkt::Empty, ClusterOperationMetadata>.PollOnceFromName(
+            gaxgrpc::CallSettings callSettings = null) => lro::Operation<pbwkt::Empty, ClusterOperationMetadata>.PollOnceFromName(
                 gax::GaxPreconditions.CheckNotNullOrEmpty(operationName, nameof(operationName)),
                 DeleteClusterOperationsClient,
                 callSettings);
@@ -1000,7 +1000,7 @@ namespace Google.Cloud.Dataproc.V1
             GetClusterRequest request,
             gaxgrpc::CallSettings callSettings = null)
         {
-            throw new s::NotImplementedException();
+            throw new sys::NotImplementedException();
         }
 
         /// <summary>
@@ -1037,7 +1037,7 @@ namespace Google.Cloud.Dataproc.V1
             GetClusterRequest request,
             gaxgrpc::CallSettings callSettings = null)
         {
-            throw new s::NotImplementedException();
+            throw new sys::NotImplementedException();
         }
 
         /// <summary>
@@ -1134,7 +1134,7 @@ namespace Google.Cloud.Dataproc.V1
             ListClustersRequest request,
             gaxgrpc::CallSettings callSettings = null)
         {
-            throw new s::NotImplementedException();
+            throw new sys::NotImplementedException();
         }
 
         /// <summary>
@@ -1153,7 +1153,7 @@ namespace Google.Cloud.Dataproc.V1
             ListClustersRequest request,
             gaxgrpc::CallSettings callSettings = null)
         {
-            throw new s::NotImplementedException();
+            throw new sys::NotImplementedException();
         }
 
         /// <summary>
@@ -1177,7 +1177,7 @@ namespace Google.Cloud.Dataproc.V1
         /// <returns>
         /// A Task containing the RPC response.
         /// </returns>
-        public virtual stt::Task<lro::Operation<protowkt::Empty, DiagnoseClusterResults>> DiagnoseClusterAsync(
+        public virtual stt::Task<lro::Operation<pbwkt::Empty, DiagnoseClusterResults>> DiagnoseClusterAsync(
             string projectId,
             string region,
             string clusterName,
@@ -1211,7 +1211,7 @@ namespace Google.Cloud.Dataproc.V1
         /// <returns>
         /// A Task containing the RPC response.
         /// </returns>
-        public virtual stt::Task<lro::Operation<protowkt::Empty, DiagnoseClusterResults>> DiagnoseClusterAsync(
+        public virtual stt::Task<lro::Operation<pbwkt::Empty, DiagnoseClusterResults>> DiagnoseClusterAsync(
             string projectId,
             string region,
             string clusterName,
@@ -1242,7 +1242,7 @@ namespace Google.Cloud.Dataproc.V1
         /// <returns>
         /// The RPC response.
         /// </returns>
-        public virtual lro::Operation<protowkt::Empty, DiagnoseClusterResults> DiagnoseCluster(
+        public virtual lro::Operation<pbwkt::Empty, DiagnoseClusterResults> DiagnoseCluster(
             string projectId,
             string region,
             string clusterName,
@@ -1269,11 +1269,11 @@ namespace Google.Cloud.Dataproc.V1
         /// <returns>
         /// A Task containing the RPC response.
         /// </returns>
-        public virtual stt::Task<lro::Operation<protowkt::Empty, DiagnoseClusterResults>> DiagnoseClusterAsync(
+        public virtual stt::Task<lro::Operation<pbwkt::Empty, DiagnoseClusterResults>> DiagnoseClusterAsync(
             DiagnoseClusterRequest request,
             gaxgrpc::CallSettings callSettings = null)
         {
-            throw new s::NotImplementedException();
+            throw new sys::NotImplementedException();
         }
 
         /// <summary>
@@ -1282,9 +1282,9 @@ namespace Google.Cloud.Dataproc.V1
         /// <param name="operationName">The name of a previously invoked operation. Must not be <c>null</c> or empty.</param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
         /// <returns>A task representing the result of polling the operation.</returns>
-        public virtual stt::Task<lro::Operation<protowkt::Empty, DiagnoseClusterResults>> PollOnceDiagnoseClusterAsync(
+        public virtual stt::Task<lro::Operation<pbwkt::Empty, DiagnoseClusterResults>> PollOnceDiagnoseClusterAsync(
             string operationName,
-            gaxgrpc::CallSettings callSettings = null) => lro::Operation<protowkt::Empty, DiagnoseClusterResults>.PollOnceFromNameAsync(
+            gaxgrpc::CallSettings callSettings = null) => lro::Operation<pbwkt::Empty, DiagnoseClusterResults>.PollOnceFromNameAsync(
                 gax::GaxPreconditions.CheckNotNullOrEmpty(operationName, nameof(operationName)),
                 DiagnoseClusterOperationsClient,
                 callSettings);
@@ -1303,11 +1303,11 @@ namespace Google.Cloud.Dataproc.V1
         /// <returns>
         /// The RPC response.
         /// </returns>
-        public virtual lro::Operation<protowkt::Empty, DiagnoseClusterResults> DiagnoseCluster(
+        public virtual lro::Operation<pbwkt::Empty, DiagnoseClusterResults> DiagnoseCluster(
             DiagnoseClusterRequest request,
             gaxgrpc::CallSettings callSettings = null)
         {
-            throw new s::NotImplementedException();
+            throw new sys::NotImplementedException();
         }
 
         /// <summary>
@@ -1315,7 +1315,7 @@ namespace Google.Cloud.Dataproc.V1
         /// </summary>
         public virtual lro::OperationsClient DiagnoseClusterOperationsClient
         {
-            get { throw new s::NotImplementedException(); }
+            get { throw new sys::NotImplementedException(); }
         }
 
         /// <summary>
@@ -1324,9 +1324,9 @@ namespace Google.Cloud.Dataproc.V1
         /// <param name="operationName">The name of a previously invoked operation. Must not be <c>null</c> or empty.</param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
         /// <returns>The result of polling the operation.</returns>
-        public virtual lro::Operation<protowkt::Empty, DiagnoseClusterResults> PollOnceDiagnoseCluster(
+        public virtual lro::Operation<pbwkt::Empty, DiagnoseClusterResults> PollOnceDiagnoseCluster(
             string operationName,
-            gaxgrpc::CallSettings callSettings = null) => lro::Operation<protowkt::Empty, DiagnoseClusterResults>.PollOnceFromName(
+            gaxgrpc::CallSettings callSettings = null) => lro::Operation<pbwkt::Empty, DiagnoseClusterResults>.PollOnceFromName(
                 gax::GaxPreconditions.CheckNotNullOrEmpty(operationName, nameof(operationName)),
                 DiagnoseClusterOperationsClient,
                 callSettings);
@@ -1395,8 +1395,8 @@ namespace Google.Cloud.Dataproc.V1
         // Partial methods called for every ApiCall on construction.
         // Allows modification of all the underlying ApiCall objects.
         partial void Modify_ApiCall<TRequest, TResponse>(ref gaxgrpc::ApiCall<TRequest, TResponse> call)
-            where TRequest : class, proto::IMessage<TRequest>
-            where TResponse : class, proto::IMessage<TResponse>;
+            where TRequest : class, pb::IMessage<TRequest>
+            where TResponse : class, pb::IMessage<TResponse>;
 
         // Partial methods called for each ApiCall on construction.
         // Allows per-RPC-method modification of the underlying ApiCall object.
@@ -1529,12 +1529,12 @@ namespace Google.Cloud.Dataproc.V1
         /// <returns>
         /// A Task containing the RPC response.
         /// </returns>
-        public override async stt::Task<lro::Operation<protowkt::Empty, ClusterOperationMetadata>> DeleteClusterAsync(
+        public override async stt::Task<lro::Operation<pbwkt::Empty, ClusterOperationMetadata>> DeleteClusterAsync(
             DeleteClusterRequest request,
             gaxgrpc::CallSettings callSettings = null)
         {
             Modify_DeleteClusterRequest(ref request, ref callSettings);
-            return new lro::Operation<protowkt::Empty, ClusterOperationMetadata>(
+            return new lro::Operation<pbwkt::Empty, ClusterOperationMetadata>(
                 await _callDeleteCluster.Async(request, callSettings).ConfigureAwait(false), DeleteClusterOperationsClient);
         }
 
@@ -1550,12 +1550,12 @@ namespace Google.Cloud.Dataproc.V1
         /// <returns>
         /// The RPC response.
         /// </returns>
-        public override lro::Operation<protowkt::Empty, ClusterOperationMetadata> DeleteCluster(
+        public override lro::Operation<pbwkt::Empty, ClusterOperationMetadata> DeleteCluster(
             DeleteClusterRequest request,
             gaxgrpc::CallSettings callSettings = null)
         {
             Modify_DeleteClusterRequest(ref request, ref callSettings);
-            return new lro::Operation<protowkt::Empty, ClusterOperationMetadata>(
+            return new lro::Operation<pbwkt::Empty, ClusterOperationMetadata>(
                 _callDeleteCluster.Sync(request, callSettings), DeleteClusterOperationsClient);
         }
 
@@ -1658,12 +1658,12 @@ namespace Google.Cloud.Dataproc.V1
         /// <returns>
         /// A Task containing the RPC response.
         /// </returns>
-        public override async stt::Task<lro::Operation<protowkt::Empty, DiagnoseClusterResults>> DiagnoseClusterAsync(
+        public override async stt::Task<lro::Operation<pbwkt::Empty, DiagnoseClusterResults>> DiagnoseClusterAsync(
             DiagnoseClusterRequest request,
             gaxgrpc::CallSettings callSettings = null)
         {
             Modify_DiagnoseClusterRequest(ref request, ref callSettings);
-            return new lro::Operation<protowkt::Empty, DiagnoseClusterResults>(
+            return new lro::Operation<pbwkt::Empty, DiagnoseClusterResults>(
                 await _callDiagnoseCluster.Async(request, callSettings).ConfigureAwait(false), DiagnoseClusterOperationsClient);
         }
 
@@ -1681,12 +1681,12 @@ namespace Google.Cloud.Dataproc.V1
         /// <returns>
         /// The RPC response.
         /// </returns>
-        public override lro::Operation<protowkt::Empty, DiagnoseClusterResults> DiagnoseCluster(
+        public override lro::Operation<pbwkt::Empty, DiagnoseClusterResults> DiagnoseCluster(
             DiagnoseClusterRequest request,
             gaxgrpc::CallSettings callSettings = null)
         {
             Modify_DiagnoseClusterRequest(ref request, ref callSettings);
-            return new lro::Operation<protowkt::Empty, DiagnoseClusterResults>(
+            return new lro::Operation<pbwkt::Empty, DiagnoseClusterResults>(
                 _callDiagnoseCluster.Sync(request, callSettings), DiagnoseClusterOperationsClient);
         }
 

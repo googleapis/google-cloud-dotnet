@@ -16,10 +16,10 @@
 
 using gax = Google.Api.Gax;
 using gaxgrpc = Google.Api.Gax.Grpc;
-using proto = Google.Protobuf;
-using protowkt = Google.Protobuf.WellKnownTypes;
+using pb = Google.Protobuf;
+using pbwkt = Google.Protobuf.WellKnownTypes;
 using grpccore = Grpc.Core;
-using s = System;
+using sys = System;
 using sc = System.Collections;
 using scg = System.Collections.Generic;
 using sco = System.Collections.ObjectModel;
@@ -72,7 +72,7 @@ namespace Google.Cloud.Datastore.V1
         /// <item><description><see cref="grpccore::StatusCode.Unavailable"/></description></item>
         /// </list>
         /// </remarks>
-        public static s::Predicate<grpccore::RpcException> IdempotentRetryFilter { get; } =
+        public static sys::Predicate<grpccore::RpcException> IdempotentRetryFilter { get; } =
             gaxgrpc::RetrySettings.FilterForStatusCodes(grpccore::StatusCode.DeadlineExceeded, grpccore::StatusCode.Unavailable);
 
         /// <summary>
@@ -82,7 +82,7 @@ namespace Google.Cloud.Datastore.V1
         /// <remarks>
         /// There are no RPC <see cref="grpccore::StatusCode"/>s eligible for retry for "NonIdempotent" RPC methods.
         /// </remarks>
-        public static s::Predicate<grpccore::RpcException> NonIdempotentRetryFilter { get; } =
+        public static sys::Predicate<grpccore::RpcException> NonIdempotentRetryFilter { get; } =
             gaxgrpc::RetrySettings.FilterForStatusCodes();
 
         /// <summary>
@@ -100,8 +100,8 @@ namespace Google.Cloud.Datastore.V1
         /// </list>
         /// </remarks>
         public static gaxgrpc::BackoffSettings GetDefaultRetryBackoff() => new gaxgrpc::BackoffSettings(
-            delay: s::TimeSpan.FromMilliseconds(100),
-            maxDelay: s::TimeSpan.FromMilliseconds(60000),
+            delay: sys::TimeSpan.FromMilliseconds(100),
+            maxDelay: sys::TimeSpan.FromMilliseconds(60000),
             delayMultiplier: 1.3
         );
 
@@ -120,8 +120,8 @@ namespace Google.Cloud.Datastore.V1
         /// </list>
         /// </remarks>
         public static gaxgrpc::BackoffSettings GetDefaultTimeoutBackoff() => new gaxgrpc::BackoffSettings(
-            delay: s::TimeSpan.FromMilliseconds(60000),
-            maxDelay: s::TimeSpan.FromMilliseconds(60000),
+            delay: sys::TimeSpan.FromMilliseconds(60000),
+            maxDelay: sys::TimeSpan.FromMilliseconds(60000),
             delayMultiplier: 1.0
         );
 
@@ -151,7 +151,7 @@ namespace Google.Cloud.Datastore.V1
             gaxgrpc::CallTiming.FromRetry(new gaxgrpc::RetrySettings(
                 retryBackoff: GetDefaultRetryBackoff(),
                 timeoutBackoff: GetDefaultTimeoutBackoff(),
-                totalExpiration: gax::Expiration.FromTimeout(s::TimeSpan.FromMilliseconds(600000)),
+                totalExpiration: gax::Expiration.FromTimeout(sys::TimeSpan.FromMilliseconds(600000)),
                 retryFilter: IdempotentRetryFilter
             )));
 
@@ -181,7 +181,7 @@ namespace Google.Cloud.Datastore.V1
             gaxgrpc::CallTiming.FromRetry(new gaxgrpc::RetrySettings(
                 retryBackoff: GetDefaultRetryBackoff(),
                 timeoutBackoff: GetDefaultTimeoutBackoff(),
-                totalExpiration: gax::Expiration.FromTimeout(s::TimeSpan.FromMilliseconds(600000)),
+                totalExpiration: gax::Expiration.FromTimeout(sys::TimeSpan.FromMilliseconds(600000)),
                 retryFilter: IdempotentRetryFilter
             )));
 
@@ -210,7 +210,7 @@ namespace Google.Cloud.Datastore.V1
             gaxgrpc::CallTiming.FromRetry(new gaxgrpc::RetrySettings(
                 retryBackoff: GetDefaultRetryBackoff(),
                 timeoutBackoff: GetDefaultTimeoutBackoff(),
-                totalExpiration: gax::Expiration.FromTimeout(s::TimeSpan.FromMilliseconds(600000)),
+                totalExpiration: gax::Expiration.FromTimeout(sys::TimeSpan.FromMilliseconds(600000)),
                 retryFilter: NonIdempotentRetryFilter
             )));
 
@@ -239,7 +239,7 @@ namespace Google.Cloud.Datastore.V1
             gaxgrpc::CallTiming.FromRetry(new gaxgrpc::RetrySettings(
                 retryBackoff: GetDefaultRetryBackoff(),
                 timeoutBackoff: GetDefaultTimeoutBackoff(),
-                totalExpiration: gax::Expiration.FromTimeout(s::TimeSpan.FromMilliseconds(600000)),
+                totalExpiration: gax::Expiration.FromTimeout(sys::TimeSpan.FromMilliseconds(600000)),
                 retryFilter: NonIdempotentRetryFilter
             )));
 
@@ -268,7 +268,7 @@ namespace Google.Cloud.Datastore.V1
             gaxgrpc::CallTiming.FromRetry(new gaxgrpc::RetrySettings(
                 retryBackoff: GetDefaultRetryBackoff(),
                 timeoutBackoff: GetDefaultTimeoutBackoff(),
-                totalExpiration: gax::Expiration.FromTimeout(s::TimeSpan.FromMilliseconds(600000)),
+                totalExpiration: gax::Expiration.FromTimeout(sys::TimeSpan.FromMilliseconds(600000)),
                 retryFilter: NonIdempotentRetryFilter
             )));
 
@@ -297,7 +297,7 @@ namespace Google.Cloud.Datastore.V1
             gaxgrpc::CallTiming.FromRetry(new gaxgrpc::RetrySettings(
                 retryBackoff: GetDefaultRetryBackoff(),
                 timeoutBackoff: GetDefaultTimeoutBackoff(),
-                totalExpiration: gax::Expiration.FromTimeout(s::TimeSpan.FromMilliseconds(600000)),
+                totalExpiration: gax::Expiration.FromTimeout(sys::TimeSpan.FromMilliseconds(600000)),
                 retryFilter: NonIdempotentRetryFilter
             )));
 
@@ -327,7 +327,7 @@ namespace Google.Cloud.Datastore.V1
             gaxgrpc::CallTiming.FromRetry(new gaxgrpc::RetrySettings(
                 retryBackoff: GetDefaultRetryBackoff(),
                 timeoutBackoff: GetDefaultTimeoutBackoff(),
-                totalExpiration: gax::Expiration.FromTimeout(s::TimeSpan.FromMilliseconds(600000)),
+                totalExpiration: gax::Expiration.FromTimeout(sys::TimeSpan.FromMilliseconds(600000)),
                 retryFilter: IdempotentRetryFilter
             )));
 
@@ -429,7 +429,7 @@ namespace Google.Cloud.Datastore.V1
         /// </summary>
         public virtual Datastore.DatastoreClient GrpcClient
         {
-            get { throw new s::NotImplementedException(); }
+            get { throw new sys::NotImplementedException(); }
         }
 
         /// <summary>
@@ -538,7 +538,7 @@ namespace Google.Cloud.Datastore.V1
             LookupRequest request,
             gaxgrpc::CallSettings callSettings = null)
         {
-            throw new s::NotImplementedException();
+            throw new sys::NotImplementedException();
         }
 
         /// <summary>
@@ -575,7 +575,7 @@ namespace Google.Cloud.Datastore.V1
             LookupRequest request,
             gaxgrpc::CallSettings callSettings = null)
         {
-            throw new s::NotImplementedException();
+            throw new sys::NotImplementedException();
         }
 
         /// <summary>
@@ -594,7 +594,7 @@ namespace Google.Cloud.Datastore.V1
             RunQueryRequest request,
             gaxgrpc::CallSettings callSettings = null)
         {
-            throw new s::NotImplementedException();
+            throw new sys::NotImplementedException();
         }
 
         /// <summary>
@@ -631,7 +631,7 @@ namespace Google.Cloud.Datastore.V1
             RunQueryRequest request,
             gaxgrpc::CallSettings callSettings = null)
         {
-            throw new s::NotImplementedException();
+            throw new sys::NotImplementedException();
         }
 
         /// <summary>
@@ -710,7 +710,7 @@ namespace Google.Cloud.Datastore.V1
             BeginTransactionRequest request,
             gaxgrpc::CallSettings callSettings = null)
         {
-            throw new s::NotImplementedException();
+            throw new sys::NotImplementedException();
         }
 
         /// <summary>
@@ -747,7 +747,7 @@ namespace Google.Cloud.Datastore.V1
             BeginTransactionRequest request,
             gaxgrpc::CallSettings callSettings = null)
         {
-            throw new s::NotImplementedException();
+            throw new sys::NotImplementedException();
         }
 
         /// <summary>
@@ -789,14 +789,14 @@ namespace Google.Cloud.Datastore.V1
         public virtual stt::Task<CommitResponse> CommitAsync(
             string projectId,
             CommitRequest.Types.Mode mode,
-            proto::ByteString transaction,
+            pb::ByteString transaction,
             scg::IEnumerable<Mutation> mutations,
             gaxgrpc::CallSettings callSettings = null) => CommitAsync(
                 new CommitRequest
                 {
                     ProjectId = gax::GaxPreconditions.CheckNotNullOrEmpty(projectId, nameof(projectId)),
                     Mode = mode,
-                    Transaction = transaction ?? Google.Protobuf.ByteString.Empty, // Optional
+                    Transaction = transaction ?? pb::ByteString.Empty, // Optional
                     Mutations = { gax::GaxPreconditions.CheckNotNull(mutations, nameof(mutations)) },
                 },
                 callSettings);
@@ -840,7 +840,7 @@ namespace Google.Cloud.Datastore.V1
         public virtual stt::Task<CommitResponse> CommitAsync(
             string projectId,
             CommitRequest.Types.Mode mode,
-            proto::ByteString transaction,
+            pb::ByteString transaction,
             scg::IEnumerable<Mutation> mutations,
             st::CancellationToken cancellationToken) => CommitAsync(
                 projectId,
@@ -888,14 +888,14 @@ namespace Google.Cloud.Datastore.V1
         public virtual CommitResponse Commit(
             string projectId,
             CommitRequest.Types.Mode mode,
-            proto::ByteString transaction,
+            pb::ByteString transaction,
             scg::IEnumerable<Mutation> mutations,
             gaxgrpc::CallSettings callSettings = null) => Commit(
                 new CommitRequest
                 {
                     ProjectId = gax::GaxPreconditions.CheckNotNullOrEmpty(projectId, nameof(projectId)),
                     Mode = mode,
-                    Transaction = transaction ?? Google.Protobuf.ByteString.Empty, // Optional
+                    Transaction = transaction ?? pb::ByteString.Empty, // Optional
                     Mutations = { gax::GaxPreconditions.CheckNotNull(mutations, nameof(mutations)) },
                 },
                 callSettings);
@@ -1046,7 +1046,7 @@ namespace Google.Cloud.Datastore.V1
             CommitRequest request,
             gaxgrpc::CallSettings callSettings = null)
         {
-            throw new s::NotImplementedException();
+            throw new sys::NotImplementedException();
         }
 
         /// <summary>
@@ -1085,7 +1085,7 @@ namespace Google.Cloud.Datastore.V1
             CommitRequest request,
             gaxgrpc::CallSettings callSettings = null)
         {
-            throw new s::NotImplementedException();
+            throw new sys::NotImplementedException();
         }
 
         /// <summary>
@@ -1106,7 +1106,7 @@ namespace Google.Cloud.Datastore.V1
         /// </returns>
         public virtual stt::Task<RollbackResponse> RollbackAsync(
             string projectId,
-            proto::ByteString transaction,
+            pb::ByteString transaction,
             gaxgrpc::CallSettings callSettings = null) => RollbackAsync(
                 new RollbackRequest
                 {
@@ -1133,7 +1133,7 @@ namespace Google.Cloud.Datastore.V1
         /// </returns>
         public virtual stt::Task<RollbackResponse> RollbackAsync(
             string projectId,
-            proto::ByteString transaction,
+            pb::ByteString transaction,
             st::CancellationToken cancellationToken) => RollbackAsync(
                 projectId,
                 transaction,
@@ -1157,7 +1157,7 @@ namespace Google.Cloud.Datastore.V1
         /// </returns>
         public virtual RollbackResponse Rollback(
             string projectId,
-            proto::ByteString transaction,
+            pb::ByteString transaction,
             gaxgrpc::CallSettings callSettings = null) => Rollback(
                 new RollbackRequest
                 {
@@ -1182,7 +1182,7 @@ namespace Google.Cloud.Datastore.V1
             RollbackRequest request,
             gaxgrpc::CallSettings callSettings = null)
         {
-            throw new s::NotImplementedException();
+            throw new sys::NotImplementedException();
         }
 
         /// <summary>
@@ -1219,7 +1219,7 @@ namespace Google.Cloud.Datastore.V1
             RollbackRequest request,
             gaxgrpc::CallSettings callSettings = null)
         {
-            throw new s::NotImplementedException();
+            throw new sys::NotImplementedException();
         }
 
         /// <summary>
@@ -1320,7 +1320,7 @@ namespace Google.Cloud.Datastore.V1
             AllocateIdsRequest request,
             gaxgrpc::CallSettings callSettings = null)
         {
-            throw new s::NotImplementedException();
+            throw new sys::NotImplementedException();
         }
 
         /// <summary>
@@ -1359,7 +1359,7 @@ namespace Google.Cloud.Datastore.V1
             AllocateIdsRequest request,
             gaxgrpc::CallSettings callSettings = null)
         {
-            throw new s::NotImplementedException();
+            throw new sys::NotImplementedException();
         }
 
         /// <summary>
@@ -1460,7 +1460,7 @@ namespace Google.Cloud.Datastore.V1
             ReserveIdsRequest request,
             gaxgrpc::CallSettings callSettings = null)
         {
-            throw new s::NotImplementedException();
+            throw new sys::NotImplementedException();
         }
 
         /// <summary>
@@ -1499,7 +1499,7 @@ namespace Google.Cloud.Datastore.V1
             ReserveIdsRequest request,
             gaxgrpc::CallSettings callSettings = null)
         {
-            throw new s::NotImplementedException();
+            throw new sys::NotImplementedException();
         }
 
     }
@@ -1563,8 +1563,8 @@ namespace Google.Cloud.Datastore.V1
         // Partial methods called for every ApiCall on construction.
         // Allows modification of all the underlying ApiCall objects.
         partial void Modify_ApiCall<TRequest, TResponse>(ref gaxgrpc::ApiCall<TRequest, TResponse> call)
-            where TRequest : class, proto::IMessage<TRequest>
-            where TResponse : class, proto::IMessage<TResponse>;
+            where TRequest : class, pb::IMessage<TRequest>
+            where TResponse : class, pb::IMessage<TResponse>;
 
         // Partial methods called for each ApiCall on construction.
         // Allows per-RPC-method modification of the underlying ApiCall object.

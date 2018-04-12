@@ -596,7 +596,7 @@ namespace Google.Cloud.Spanner.V1.Snippets
             SpannerClient spannerClient = await SpannerClient.CreateAsync();
             // Initialize request argument(s)
             SessionName session = new SessionName("[PROJECT]", "[INSTANCE]", "[DATABASE]", "[SESSION]");
-            ByteString transactionId = Google.Protobuf.ByteString.CopyFromUtf8("");
+            ByteString transactionId = ByteString.Empty;
             IEnumerable<Mutation> mutations = new List<Mutation>();
             // Make the request
             CommitResponse response = await spannerClient.CommitAsync(session, transactionId, mutations);
@@ -611,7 +611,7 @@ namespace Google.Cloud.Spanner.V1.Snippets
             SpannerClient spannerClient = SpannerClient.Create();
             // Initialize request argument(s)
             SessionName session = new SessionName("[PROJECT]", "[INSTANCE]", "[DATABASE]", "[SESSION]");
-            ByteString transactionId = Google.Protobuf.ByteString.CopyFromUtf8("");
+            ByteString transactionId = ByteString.Empty;
             IEnumerable<Mutation> mutations = new List<Mutation>();
             // Make the request
             CommitResponse response = spannerClient.Commit(session, transactionId, mutations);
@@ -693,7 +693,7 @@ namespace Google.Cloud.Spanner.V1.Snippets
             SpannerClient spannerClient = await SpannerClient.CreateAsync();
             // Initialize request argument(s)
             SessionName session = new SessionName("[PROJECT]", "[INSTANCE]", "[DATABASE]", "[SESSION]");
-            ByteString transactionId = Google.Protobuf.ByteString.CopyFromUtf8("");
+            ByteString transactionId = ByteString.Empty;
             // Make the request
             await spannerClient.RollbackAsync(session, transactionId);
             // End snippet
@@ -707,7 +707,7 @@ namespace Google.Cloud.Spanner.V1.Snippets
             SpannerClient spannerClient = SpannerClient.Create();
             // Initialize request argument(s)
             SessionName session = new SessionName("[PROJECT]", "[INSTANCE]", "[DATABASE]", "[SESSION]");
-            ByteString transactionId = Google.Protobuf.ByteString.CopyFromUtf8("");
+            ByteString transactionId = ByteString.Empty;
             // Make the request
             spannerClient.Rollback(session, transactionId);
             // End snippet
@@ -724,7 +724,7 @@ namespace Google.Cloud.Spanner.V1.Snippets
             RollbackRequest request = new RollbackRequest
             {
                 SessionAsSessionName = new SessionName("[PROJECT]", "[INSTANCE]", "[DATABASE]", "[SESSION]"),
-                TransactionId = Google.Protobuf.ByteString.CopyFromUtf8(""),
+                TransactionId = ByteString.Empty,
             };
             // Make the request
             await spannerClient.RollbackAsync(request);
@@ -741,7 +741,7 @@ namespace Google.Cloud.Spanner.V1.Snippets
             RollbackRequest request = new RollbackRequest
             {
                 SessionAsSessionName = new SessionName("[PROJECT]", "[INSTANCE]", "[DATABASE]", "[SESSION]"),
-                TransactionId = Google.Protobuf.ByteString.CopyFromUtf8(""),
+                TransactionId = ByteString.Empty,
             };
             // Make the request
             spannerClient.Rollback(request);

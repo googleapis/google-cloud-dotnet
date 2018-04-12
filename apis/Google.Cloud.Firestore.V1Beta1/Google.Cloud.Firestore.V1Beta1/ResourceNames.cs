@@ -15,15 +15,15 @@
 // Generated code. DO NOT EDIT!
 
 using gax = Google.Api.Gax;
-using s = System;
-using System.Linq;
+using sys = System;
+using linq = System.Linq;
 
 namespace Google.Cloud.Firestore.V1Beta1
 {
     /// <summary>
     /// Resource name for the 'database_root' resource.
     /// </summary>
-    public sealed partial class DatabaseRootName : gax::IResourceName, s::IEquatable<DatabaseRootName>
+    public sealed partial class DatabaseRootName : gax::IResourceName, sys::IEquatable<DatabaseRootName>
     {
         private static readonly gax::PathTemplate s_template = new gax::PathTemplate("projects/{project}/databases/{database}");
 
@@ -45,7 +45,7 @@ namespace Google.Cloud.Firestore.V1Beta1
         /// <see cref="DatabaseRootName"/> instance.
         /// </summary>
         /// <remarks>
-        /// This method still throws <see cref="s::ArgumentNullException"/> if <paramref name="databaseRootName"/> is null,
+        /// This method still throws <see cref="sys::ArgumentNullException"/> if <paramref name="databaseRootName"/> is null,
         /// as this would usually indicate a programming error rather than a data error.
         /// </remarks>
         /// <param name="databaseRootName">The database_root resource name in string form. Must not be <c>null</c>.</param>
@@ -115,7 +115,7 @@ namespace Google.Cloud.Firestore.V1Beta1
     /// <summary>
     /// Resource name for the 'document_root' resource.
     /// </summary>
-    public sealed partial class DocumentRootName : gax::IResourceName, s::IEquatable<DocumentRootName>
+    public sealed partial class DocumentRootName : gax::IResourceName, sys::IEquatable<DocumentRootName>
     {
         private static readonly gax::PathTemplate s_template = new gax::PathTemplate("projects/{project}/databases/{database}/documents");
 
@@ -137,7 +137,7 @@ namespace Google.Cloud.Firestore.V1Beta1
         /// <see cref="DocumentRootName"/> instance.
         /// </summary>
         /// <remarks>
-        /// This method still throws <see cref="s::ArgumentNullException"/> if <paramref name="documentRootName"/> is null,
+        /// This method still throws <see cref="sys::ArgumentNullException"/> if <paramref name="documentRootName"/> is null,
         /// as this would usually indicate a programming error rather than a data error.
         /// </remarks>
         /// <param name="documentRootName">The document_root resource name in string form. Must not be <c>null</c>.</param>
@@ -207,7 +207,7 @@ namespace Google.Cloud.Firestore.V1Beta1
     /// <summary>
     /// Resource name for the 'document_path' resource.
     /// </summary>
-    public sealed partial class DocumentPathName : gax::IResourceName, s::IEquatable<DocumentPathName>
+    public sealed partial class DocumentPathName : gax::IResourceName, sys::IEquatable<DocumentPathName>
     {
         private static readonly gax::PathTemplate s_template = new gax::PathTemplate("projects/{project}/databases/{database}/documents/{document_path=**}");
 
@@ -229,7 +229,7 @@ namespace Google.Cloud.Firestore.V1Beta1
         /// <see cref="DocumentPathName"/> instance.
         /// </summary>
         /// <remarks>
-        /// This method still throws <see cref="s::ArgumentNullException"/> if <paramref name="documentPathName"/> is null,
+        /// This method still throws <see cref="sys::ArgumentNullException"/> if <paramref name="documentPathName"/> is null,
         /// as this would usually indicate a programming error rather than a data error.
         /// </remarks>
         /// <param name="documentPathName">The document_path resource name in string form. Must not be <c>null</c>.</param>
@@ -306,7 +306,7 @@ namespace Google.Cloud.Firestore.V1Beta1
     /// <summary>
     /// Resource name for the 'any_path' resource.
     /// </summary>
-    public sealed partial class AnyPathName : gax::IResourceName, s::IEquatable<AnyPathName>
+    public sealed partial class AnyPathName : gax::IResourceName, sys::IEquatable<AnyPathName>
     {
         private static readonly gax::PathTemplate s_template = new gax::PathTemplate("projects/{project}/databases/{database}/documents/{document}/{any_path=**}");
 
@@ -328,7 +328,7 @@ namespace Google.Cloud.Firestore.V1Beta1
         /// <see cref="AnyPathName"/> instance.
         /// </summary>
         /// <remarks>
-        /// This method still throws <see cref="s::ArgumentNullException"/> if <paramref name="anyPathName"/> is null,
+        /// This method still throws <see cref="sys::ArgumentNullException"/> if <paramref name="anyPathName"/> is null,
         /// as this would usually indicate a programming error rather than a data error.
         /// </remarks>
         /// <param name="anyPathName">The any_path resource name in string form. Must not be <c>null</c>.</param>

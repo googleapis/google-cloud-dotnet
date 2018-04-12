@@ -16,14 +16,14 @@
 
 using gax = Google.Api.Gax;
 using gaxgrpc = Google.Api.Gax.Grpc;
-using proto = Google.Protobuf;
-using protowkt = Google.Protobuf.WellKnownTypes;
+using pb = Google.Protobuf;
+using pbwkt = Google.Protobuf.WellKnownTypes;
 using grpccore = Grpc.Core;
-using s = System;
+using sys = System;
 using sc = System.Collections;
 using scg = System.Collections.Generic;
 using sco = System.Collections.ObjectModel;
-using System.Linq;
+using linq = System.Linq;
 using st = System.Threading;
 using stt = System.Threading.Tasks;
 
@@ -72,7 +72,7 @@ namespace Google.Cloud.Bigtable.V2
         /// <item><description><see cref="grpccore::StatusCode.Unavailable"/></description></item>
         /// </list>
         /// </remarks>
-        public static s::Predicate<grpccore::RpcException> IdempotentRetryFilter { get; } =
+        public static sys::Predicate<grpccore::RpcException> IdempotentRetryFilter { get; } =
             gaxgrpc::RetrySettings.FilterForStatusCodes(grpccore::StatusCode.DeadlineExceeded, grpccore::StatusCode.Unavailable);
 
         /// <summary>
@@ -82,7 +82,7 @@ namespace Google.Cloud.Bigtable.V2
         /// <remarks>
         /// There are no RPC <see cref="grpccore::StatusCode"/>s eligible for retry for "NonIdempotent" RPC methods.
         /// </remarks>
-        public static s::Predicate<grpccore::RpcException> NonIdempotentRetryFilter { get; } =
+        public static sys::Predicate<grpccore::RpcException> NonIdempotentRetryFilter { get; } =
             gaxgrpc::RetrySettings.FilterForStatusCodes();
 
         /// <summary>
@@ -100,8 +100,8 @@ namespace Google.Cloud.Bigtable.V2
         /// </list>
         /// </remarks>
         public static gaxgrpc::BackoffSettings GetDefaultRetryBackoff() => new gaxgrpc::BackoffSettings(
-            delay: s::TimeSpan.FromMilliseconds(100),
-            maxDelay: s::TimeSpan.FromMilliseconds(60000),
+            delay: sys::TimeSpan.FromMilliseconds(100),
+            maxDelay: sys::TimeSpan.FromMilliseconds(60000),
             delayMultiplier: 1.3
         );
 
@@ -120,8 +120,8 @@ namespace Google.Cloud.Bigtable.V2
         /// </list>
         /// </remarks>
         public static gaxgrpc::BackoffSettings GetDefaultTimeoutBackoff() => new gaxgrpc::BackoffSettings(
-            delay: s::TimeSpan.FromMilliseconds(20000),
-            maxDelay: s::TimeSpan.FromMilliseconds(20000),
+            delay: sys::TimeSpan.FromMilliseconds(20000),
+            maxDelay: sys::TimeSpan.FromMilliseconds(20000),
             delayMultiplier: 1.0
         );
 
@@ -132,7 +132,7 @@ namespace Google.Cloud.Bigtable.V2
         /// Default RPC expiration is 600000 milliseconds.
         /// </remarks>
         public gaxgrpc::CallSettings ReadRowsSettings { get; set; } = gaxgrpc::CallSettings.FromCallTiming(
-            gaxgrpc::CallTiming.FromTimeout(s::TimeSpan.FromMilliseconds(600000)));
+            gaxgrpc::CallTiming.FromTimeout(sys::TimeSpan.FromMilliseconds(600000)));
 
         /// <summary>
         /// <see cref="gaxgrpc::CallSettings"/> for calls to <c>BigtableServiceApiClient.SampleRowKeys</c>.
@@ -141,7 +141,7 @@ namespace Google.Cloud.Bigtable.V2
         /// Default RPC expiration is 600000 milliseconds.
         /// </remarks>
         public gaxgrpc::CallSettings SampleRowKeysSettings { get; set; } = gaxgrpc::CallSettings.FromCallTiming(
-            gaxgrpc::CallTiming.FromTimeout(s::TimeSpan.FromMilliseconds(600000)));
+            gaxgrpc::CallTiming.FromTimeout(sys::TimeSpan.FromMilliseconds(600000)));
 
         /// <summary>
         /// <see cref="gaxgrpc::CallSettings"/> for synchronous and asynchronous calls to
@@ -169,7 +169,7 @@ namespace Google.Cloud.Bigtable.V2
             gaxgrpc::CallTiming.FromRetry(new gaxgrpc::RetrySettings(
                 retryBackoff: GetDefaultRetryBackoff(),
                 timeoutBackoff: GetDefaultTimeoutBackoff(),
-                totalExpiration: gax::Expiration.FromTimeout(s::TimeSpan.FromMilliseconds(600000)),
+                totalExpiration: gax::Expiration.FromTimeout(sys::TimeSpan.FromMilliseconds(600000)),
                 retryFilter: IdempotentRetryFilter
             )));
 
@@ -180,7 +180,7 @@ namespace Google.Cloud.Bigtable.V2
         /// Default RPC expiration is 600000 milliseconds.
         /// </remarks>
         public gaxgrpc::CallSettings MutateRowsSettings { get; set; } = gaxgrpc::CallSettings.FromCallTiming(
-            gaxgrpc::CallTiming.FromTimeout(s::TimeSpan.FromMilliseconds(600000)));
+            gaxgrpc::CallTiming.FromTimeout(sys::TimeSpan.FromMilliseconds(600000)));
 
         /// <summary>
         /// <see cref="gaxgrpc::CallSettings"/> for synchronous and asynchronous calls to
@@ -207,7 +207,7 @@ namespace Google.Cloud.Bigtable.V2
             gaxgrpc::CallTiming.FromRetry(new gaxgrpc::RetrySettings(
                 retryBackoff: GetDefaultRetryBackoff(),
                 timeoutBackoff: GetDefaultTimeoutBackoff(),
-                totalExpiration: gax::Expiration.FromTimeout(s::TimeSpan.FromMilliseconds(600000)),
+                totalExpiration: gax::Expiration.FromTimeout(sys::TimeSpan.FromMilliseconds(600000)),
                 retryFilter: NonIdempotentRetryFilter
             )));
 
@@ -236,7 +236,7 @@ namespace Google.Cloud.Bigtable.V2
             gaxgrpc::CallTiming.FromRetry(new gaxgrpc::RetrySettings(
                 retryBackoff: GetDefaultRetryBackoff(),
                 timeoutBackoff: GetDefaultTimeoutBackoff(),
-                totalExpiration: gax::Expiration.FromTimeout(s::TimeSpan.FromMilliseconds(600000)),
+                totalExpiration: gax::Expiration.FromTimeout(sys::TimeSpan.FromMilliseconds(600000)),
                 retryFilter: NonIdempotentRetryFilter
             )));
 
@@ -346,7 +346,7 @@ namespace Google.Cloud.Bigtable.V2
         /// </summary>
         public virtual Bigtable.BigtableClient GrpcClient
         {
-            get { throw new s::NotImplementedException(); }
+            get { throw new sys::NotImplementedException(); }
         }
 
         /// <summary>
@@ -369,7 +369,7 @@ namespace Google.Cloud.Bigtable.V2
             ReadRowsRequest request,
             gaxgrpc::CallSettings callSettings = null)
         {
-            throw new s::NotImplementedException();
+            throw new sys::NotImplementedException();
         }
 
         /// <summary>
@@ -398,7 +398,7 @@ namespace Google.Cloud.Bigtable.V2
             SampleRowKeysRequest request,
             gaxgrpc::CallSettings callSettings = null)
         {
-            throw new s::NotImplementedException();
+            throw new sys::NotImplementedException();
         }
 
         /// <summary>
@@ -433,7 +433,7 @@ namespace Google.Cloud.Bigtable.V2
         /// </returns>
         public virtual stt::Task<MutateRowResponse> MutateRowAsync(
             TableName tableName,
-            proto::ByteString rowKey,
+            pb::ByteString rowKey,
             scg::IEnumerable<Mutation> mutations,
             gaxgrpc::CallSettings callSettings = null) => MutateRowAsync(
                 new MutateRowRequest
@@ -469,7 +469,7 @@ namespace Google.Cloud.Bigtable.V2
         /// </returns>
         public virtual stt::Task<MutateRowResponse> MutateRowAsync(
             TableName tableName,
-            proto::ByteString rowKey,
+            pb::ByteString rowKey,
             scg::IEnumerable<Mutation> mutations,
             st::CancellationToken cancellationToken) => MutateRowAsync(
                 tableName,
@@ -502,7 +502,7 @@ namespace Google.Cloud.Bigtable.V2
         /// </returns>
         public virtual MutateRowResponse MutateRow(
             TableName tableName,
-            proto::ByteString rowKey,
+            pb::ByteString rowKey,
             scg::IEnumerable<Mutation> mutations,
             gaxgrpc::CallSettings callSettings = null) => MutateRow(
                 new MutateRowRequest
@@ -530,7 +530,7 @@ namespace Google.Cloud.Bigtable.V2
             MutateRowRequest request,
             gaxgrpc::CallSettings callSettings = null)
         {
-            throw new s::NotImplementedException();
+            throw new sys::NotImplementedException();
         }
 
         /// <summary>
@@ -569,7 +569,7 @@ namespace Google.Cloud.Bigtable.V2
             MutateRowRequest request,
             gaxgrpc::CallSettings callSettings = null)
         {
-            throw new s::NotImplementedException();
+            throw new sys::NotImplementedException();
         }
 
         /// <summary>
@@ -590,7 +590,7 @@ namespace Google.Cloud.Bigtable.V2
             MutateRowsRequest request,
             gaxgrpc::CallSettings callSettings = null)
         {
-            throw new s::NotImplementedException();
+            throw new sys::NotImplementedException();
         }
 
         /// <summary>
@@ -640,7 +640,7 @@ namespace Google.Cloud.Bigtable.V2
         /// </returns>
         public virtual stt::Task<CheckAndMutateRowResponse> CheckAndMutateRowAsync(
             TableName tableName,
-            proto::ByteString rowKey,
+            pb::ByteString rowKey,
             RowFilter predicateFilter,
             scg::IEnumerable<Mutation> trueMutations,
             scg::IEnumerable<Mutation> falseMutations,
@@ -650,8 +650,8 @@ namespace Google.Cloud.Bigtable.V2
                     TableNameAsTableName = gax::GaxPreconditions.CheckNotNull(tableName, nameof(tableName)),
                     RowKey = gax::GaxPreconditions.CheckNotNull(rowKey, nameof(rowKey)),
                     PredicateFilter = predicateFilter, // Optional
-                    TrueMutations = { trueMutations ?? Enumerable.Empty<Mutation>() }, // Optional
-                    FalseMutations = { falseMutations ?? Enumerable.Empty<Mutation>() }, // Optional
+                    TrueMutations = { trueMutations ?? linq::Enumerable.Empty<Mutation>() }, // Optional
+                    FalseMutations = { falseMutations ?? linq::Enumerable.Empty<Mutation>() }, // Optional
                 },
                 callSettings);
 
@@ -695,7 +695,7 @@ namespace Google.Cloud.Bigtable.V2
         /// </returns>
         public virtual stt::Task<CheckAndMutateRowResponse> CheckAndMutateRowAsync(
             TableName tableName,
-            proto::ByteString rowKey,
+            pb::ByteString rowKey,
             RowFilter predicateFilter,
             scg::IEnumerable<Mutation> trueMutations,
             scg::IEnumerable<Mutation> falseMutations,
@@ -747,7 +747,7 @@ namespace Google.Cloud.Bigtable.V2
         /// </returns>
         public virtual CheckAndMutateRowResponse CheckAndMutateRow(
             TableName tableName,
-            proto::ByteString rowKey,
+            pb::ByteString rowKey,
             RowFilter predicateFilter,
             scg::IEnumerable<Mutation> trueMutations,
             scg::IEnumerable<Mutation> falseMutations,
@@ -757,8 +757,8 @@ namespace Google.Cloud.Bigtable.V2
                     TableNameAsTableName = gax::GaxPreconditions.CheckNotNull(tableName, nameof(tableName)),
                     RowKey = gax::GaxPreconditions.CheckNotNull(rowKey, nameof(rowKey)),
                     PredicateFilter = predicateFilter, // Optional
-                    TrueMutations = { trueMutations ?? Enumerable.Empty<Mutation>() }, // Optional
-                    FalseMutations = { falseMutations ?? Enumerable.Empty<Mutation>() }, // Optional
+                    TrueMutations = { trueMutations ?? linq::Enumerable.Empty<Mutation>() }, // Optional
+                    FalseMutations = { falseMutations ?? linq::Enumerable.Empty<Mutation>() }, // Optional
                 },
                 callSettings);
 
@@ -778,7 +778,7 @@ namespace Google.Cloud.Bigtable.V2
             CheckAndMutateRowRequest request,
             gaxgrpc::CallSettings callSettings = null)
         {
-            throw new s::NotImplementedException();
+            throw new sys::NotImplementedException();
         }
 
         /// <summary>
@@ -815,7 +815,7 @@ namespace Google.Cloud.Bigtable.V2
             CheckAndMutateRowRequest request,
             gaxgrpc::CallSettings callSettings = null)
         {
-            throw new s::NotImplementedException();
+            throw new sys::NotImplementedException();
         }
 
         /// <summary>
@@ -847,7 +847,7 @@ namespace Google.Cloud.Bigtable.V2
         /// </returns>
         public virtual stt::Task<ReadModifyWriteRowResponse> ReadModifyWriteRowAsync(
             TableName tableName,
-            proto::ByteString rowKey,
+            pb::ByteString rowKey,
             scg::IEnumerable<ReadModifyWriteRule> rules,
             gaxgrpc::CallSettings callSettings = null) => ReadModifyWriteRowAsync(
                 new ReadModifyWriteRowRequest
@@ -887,7 +887,7 @@ namespace Google.Cloud.Bigtable.V2
         /// </returns>
         public virtual stt::Task<ReadModifyWriteRowResponse> ReadModifyWriteRowAsync(
             TableName tableName,
-            proto::ByteString rowKey,
+            pb::ByteString rowKey,
             scg::IEnumerable<ReadModifyWriteRule> rules,
             st::CancellationToken cancellationToken) => ReadModifyWriteRowAsync(
                 tableName,
@@ -924,7 +924,7 @@ namespace Google.Cloud.Bigtable.V2
         /// </returns>
         public virtual ReadModifyWriteRowResponse ReadModifyWriteRow(
             TableName tableName,
-            proto::ByteString rowKey,
+            pb::ByteString rowKey,
             scg::IEnumerable<ReadModifyWriteRule> rules,
             gaxgrpc::CallSettings callSettings = null) => ReadModifyWriteRow(
                 new ReadModifyWriteRowRequest
@@ -955,7 +955,7 @@ namespace Google.Cloud.Bigtable.V2
             ReadModifyWriteRowRequest request,
             gaxgrpc::CallSettings callSettings = null)
         {
-            throw new s::NotImplementedException();
+            throw new sys::NotImplementedException();
         }
 
         /// <summary>
@@ -1000,7 +1000,7 @@ namespace Google.Cloud.Bigtable.V2
             ReadModifyWriteRowRequest request,
             gaxgrpc::CallSettings callSettings = null)
         {
-            throw new s::NotImplementedException();
+            throw new sys::NotImplementedException();
         }
 
     }
@@ -1065,11 +1065,11 @@ namespace Google.Cloud.Bigtable.V2
         // Partial methods called for every ApiCall on construction.
         // Allows modification of all the underlying ApiCall objects.
         partial void Modify_ApiCall<TRequest, TResponse>(ref gaxgrpc::ApiCall<TRequest, TResponse> call)
-            where TRequest : class, proto::IMessage<TRequest>
-            where TResponse : class, proto::IMessage<TResponse>;
+            where TRequest : class, pb::IMessage<TRequest>
+            where TResponse : class, pb::IMessage<TResponse>;
         partial void Modify_ApiCall<TRequest, TResponse>(ref gaxgrpc::ApiServerStreamingCall<TRequest, TResponse> call)
-            where TRequest : class, proto::IMessage<TRequest>
-            where TResponse : class, proto::IMessage<TResponse>;
+            where TRequest : class, pb::IMessage<TRequest>
+            where TResponse : class, pb::IMessage<TResponse>;
 
         // Partial methods called for each ApiCall on construction.
         // Allows per-RPC-method modification of the underlying ApiCall object.

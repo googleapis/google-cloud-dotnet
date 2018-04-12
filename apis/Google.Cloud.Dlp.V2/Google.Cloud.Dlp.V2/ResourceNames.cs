@@ -15,15 +15,15 @@
 // Generated code. DO NOT EDIT!
 
 using gax = Google.Api.Gax;
-using s = System;
-using System.Linq;
+using sys = System;
+using linq = System.Linq;
 
 namespace Google.Cloud.Dlp.V2
 {
     /// <summary>
     /// Resource name for the 'organization' resource.
     /// </summary>
-    public sealed partial class OrganizationName : gax::IResourceName, s::IEquatable<OrganizationName>
+    public sealed partial class OrganizationName : gax::IResourceName, sys::IEquatable<OrganizationName>
     {
         private static readonly gax::PathTemplate s_template = new gax::PathTemplate("organizations/{organization}");
 
@@ -45,7 +45,7 @@ namespace Google.Cloud.Dlp.V2
         /// <see cref="OrganizationName"/> instance.
         /// </summary>
         /// <remarks>
-        /// This method still throws <see cref="s::ArgumentNullException"/> if <paramref name="organizationName"/> is null,
+        /// This method still throws <see cref="sys::ArgumentNullException"/> if <paramref name="organizationName"/> is null,
         /// as this would usually indicate a programming error rather than a data error.
         /// </remarks>
         /// <param name="organizationName">The organization resource name in string form. Must not be <c>null</c>.</param>
@@ -108,7 +108,7 @@ namespace Google.Cloud.Dlp.V2
     /// <summary>
     /// Resource name for the 'organization_deidentify_template' resource.
     /// </summary>
-    public sealed partial class OrganizationDeidentifyTemplateName : gax::IResourceName, s::IEquatable<OrganizationDeidentifyTemplateName>
+    public sealed partial class OrganizationDeidentifyTemplateName : gax::IResourceName, sys::IEquatable<OrganizationDeidentifyTemplateName>
     {
         private static readonly gax::PathTemplate s_template = new gax::PathTemplate("organizations/{organization}/deidentifyTemplates/{deidentify_template}");
 
@@ -130,7 +130,7 @@ namespace Google.Cloud.Dlp.V2
         /// <see cref="OrganizationDeidentifyTemplateName"/> instance.
         /// </summary>
         /// <remarks>
-        /// This method still throws <see cref="s::ArgumentNullException"/> if <paramref name="organizationDeidentifyTemplateName"/> is null,
+        /// This method still throws <see cref="sys::ArgumentNullException"/> if <paramref name="organizationDeidentifyTemplateName"/> is null,
         /// as this would usually indicate a programming error rather than a data error.
         /// </remarks>
         /// <param name="organizationDeidentifyTemplateName">The organization_deidentify_template resource name in string form. Must not be <c>null</c>.</param>
@@ -200,7 +200,7 @@ namespace Google.Cloud.Dlp.V2
     /// <summary>
     /// Resource name for the 'project_deidentify_template' resource.
     /// </summary>
-    public sealed partial class ProjectDeidentifyTemplateName : gax::IResourceName, s::IEquatable<ProjectDeidentifyTemplateName>
+    public sealed partial class ProjectDeidentifyTemplateName : gax::IResourceName, sys::IEquatable<ProjectDeidentifyTemplateName>
     {
         private static readonly gax::PathTemplate s_template = new gax::PathTemplate("projects/{project}/deidentifyTemplates/{deidentify_template}");
 
@@ -222,7 +222,7 @@ namespace Google.Cloud.Dlp.V2
         /// <see cref="ProjectDeidentifyTemplateName"/> instance.
         /// </summary>
         /// <remarks>
-        /// This method still throws <see cref="s::ArgumentNullException"/> if <paramref name="projectDeidentifyTemplateName"/> is null,
+        /// This method still throws <see cref="sys::ArgumentNullException"/> if <paramref name="projectDeidentifyTemplateName"/> is null,
         /// as this would usually indicate a programming error rather than a data error.
         /// </remarks>
         /// <param name="projectDeidentifyTemplateName">The project_deidentify_template resource name in string form. Must not be <c>null</c>.</param>
@@ -292,7 +292,7 @@ namespace Google.Cloud.Dlp.V2
     /// <summary>
     /// Resource name for the 'organization_inspect_template' resource.
     /// </summary>
-    public sealed partial class OrganizationInspectTemplateName : gax::IResourceName, s::IEquatable<OrganizationInspectTemplateName>
+    public sealed partial class OrganizationInspectTemplateName : gax::IResourceName, sys::IEquatable<OrganizationInspectTemplateName>
     {
         private static readonly gax::PathTemplate s_template = new gax::PathTemplate("organizations/{organization}/inspectTemplates/{inspect_template}");
 
@@ -314,7 +314,7 @@ namespace Google.Cloud.Dlp.V2
         /// <see cref="OrganizationInspectTemplateName"/> instance.
         /// </summary>
         /// <remarks>
-        /// This method still throws <see cref="s::ArgumentNullException"/> if <paramref name="organizationInspectTemplateName"/> is null,
+        /// This method still throws <see cref="sys::ArgumentNullException"/> if <paramref name="organizationInspectTemplateName"/> is null,
         /// as this would usually indicate a programming error rather than a data error.
         /// </remarks>
         /// <param name="organizationInspectTemplateName">The organization_inspect_template resource name in string form. Must not be <c>null</c>.</param>
@@ -384,7 +384,7 @@ namespace Google.Cloud.Dlp.V2
     /// <summary>
     /// Resource name for the 'project_inspect_template' resource.
     /// </summary>
-    public sealed partial class ProjectInspectTemplateName : gax::IResourceName, s::IEquatable<ProjectInspectTemplateName>
+    public sealed partial class ProjectInspectTemplateName : gax::IResourceName, sys::IEquatable<ProjectInspectTemplateName>
     {
         private static readonly gax::PathTemplate s_template = new gax::PathTemplate("projects/{project}/inspectTemplates/{inspect_template}");
 
@@ -406,7 +406,7 @@ namespace Google.Cloud.Dlp.V2
         /// <see cref="ProjectInspectTemplateName"/> instance.
         /// </summary>
         /// <remarks>
-        /// This method still throws <see cref="s::ArgumentNullException"/> if <paramref name="projectInspectTemplateName"/> is null,
+        /// This method still throws <see cref="sys::ArgumentNullException"/> if <paramref name="projectInspectTemplateName"/> is null,
         /// as this would usually indicate a programming error rather than a data error.
         /// </remarks>
         /// <param name="projectInspectTemplateName">The project_inspect_template resource name in string form. Must not be <c>null</c>.</param>
@@ -476,7 +476,7 @@ namespace Google.Cloud.Dlp.V2
     /// <summary>
     /// Resource name for the 'project_job_trigger' resource.
     /// </summary>
-    public sealed partial class ProjectJobTriggerName : gax::IResourceName, s::IEquatable<ProjectJobTriggerName>
+    public sealed partial class ProjectJobTriggerName : gax::IResourceName, sys::IEquatable<ProjectJobTriggerName>
     {
         private static readonly gax::PathTemplate s_template = new gax::PathTemplate("projects/{project}/jobTriggers/{job_trigger}");
 
@@ -498,7 +498,7 @@ namespace Google.Cloud.Dlp.V2
         /// <see cref="ProjectJobTriggerName"/> instance.
         /// </summary>
         /// <remarks>
-        /// This method still throws <see cref="s::ArgumentNullException"/> if <paramref name="projectJobTriggerName"/> is null,
+        /// This method still throws <see cref="sys::ArgumentNullException"/> if <paramref name="projectJobTriggerName"/> is null,
         /// as this would usually indicate a programming error rather than a data error.
         /// </remarks>
         /// <param name="projectJobTriggerName">The project_job_trigger resource name in string form. Must not be <c>null</c>.</param>
@@ -568,7 +568,7 @@ namespace Google.Cloud.Dlp.V2
     /// <summary>
     /// Resource name for the 'project' resource.
     /// </summary>
-    public sealed partial class ProjectName : gax::IResourceName, s::IEquatable<ProjectName>
+    public sealed partial class ProjectName : gax::IResourceName, sys::IEquatable<ProjectName>
     {
         private static readonly gax::PathTemplate s_template = new gax::PathTemplate("projects/{project}");
 
@@ -590,7 +590,7 @@ namespace Google.Cloud.Dlp.V2
         /// <see cref="ProjectName"/> instance.
         /// </summary>
         /// <remarks>
-        /// This method still throws <see cref="s::ArgumentNullException"/> if <paramref name="projectName"/> is null,
+        /// This method still throws <see cref="sys::ArgumentNullException"/> if <paramref name="projectName"/> is null,
         /// as this would usually indicate a programming error rather than a data error.
         /// </remarks>
         /// <param name="projectName">The project resource name in string form. Must not be <c>null</c>.</param>
@@ -653,7 +653,7 @@ namespace Google.Cloud.Dlp.V2
     /// <summary>
     /// Resource name for the 'dlp_job' resource.
     /// </summary>
-    public sealed partial class DlpJobName : gax::IResourceName, s::IEquatable<DlpJobName>
+    public sealed partial class DlpJobName : gax::IResourceName, sys::IEquatable<DlpJobName>
     {
         private static readonly gax::PathTemplate s_template = new gax::PathTemplate("projects/{project}/dlpJobs/{dlp_job}");
 
@@ -675,7 +675,7 @@ namespace Google.Cloud.Dlp.V2
         /// <see cref="DlpJobName"/> instance.
         /// </summary>
         /// <remarks>
-        /// This method still throws <see cref="s::ArgumentNullException"/> if <paramref name="dlpJobName"/> is null,
+        /// This method still throws <see cref="sys::ArgumentNullException"/> if <paramref name="dlpJobName"/> is null,
         /// as this would usually indicate a programming error rather than a data error.
         /// </remarks>
         /// <param name="dlpJobName">The dlp_job resource name in string form. Must not be <c>null</c>.</param>
@@ -752,7 +752,7 @@ namespace Google.Cloud.Dlp.V2
     /// <item><description>ProjectDeidentifyTemplateName: A resource of type 'project_deidentify_template'.</description></item>
     /// </list>
     /// </remarks>
-    public sealed partial class DeidentifyTemplateNameOneof : gax::IResourceName, s::IEquatable<DeidentifyTemplateNameOneof>
+    public sealed partial class DeidentifyTemplateNameOneof : gax::IResourceName, sys::IEquatable<DeidentifyTemplateNameOneof>
     {
         /// <summary>
         /// The possible contents of <see cref="DeidentifyTemplateNameOneof"/>.
@@ -789,7 +789,7 @@ namespace Google.Cloud.Dlp.V2
         /// <param name="name">The resource name in string form. Must not be <c>null</c>.</param>
         /// <param name="allowUnknown">If true, will successfully parse an unknown resource name
         /// into an <see cref="gax::UnknownResourceName"/>; otherwise will throw an
-        /// <see cref="s::ArgumentException"/> if an unknown resource name is given.</param>
+        /// <see cref="sys::ArgumentException"/> if an unknown resource name is given.</param>
         /// <returns>The parsed <see cref="DeidentifyTemplateNameOneof"/> if successful.</returns>
         public static DeidentifyTemplateNameOneof Parse(string name, bool allowUnknown)
         {
@@ -798,7 +798,7 @@ namespace Google.Cloud.Dlp.V2
             {
                 return result;
             }
-            throw new s::ArgumentException("Invalid name", nameof(name));
+            throw new sys::ArgumentException("Invalid name", nameof(name));
         }
 
         /// <summary>
@@ -883,7 +883,7 @@ namespace Google.Cloud.Dlp.V2
             Name = gax::GaxPreconditions.CheckNotNull(name, nameof(name));
             if (!IsValid(type, name))
             {
-                throw new s::ArgumentException($"Mismatched OneofType '{type}' and resource name '{name}'");
+                throw new sys::ArgumentException($"Mismatched OneofType '{type}' and resource name '{name}'");
             }
         }
 
@@ -901,7 +901,7 @@ namespace Google.Cloud.Dlp.V2
         {
             if (Type != type)
             {
-                throw new s::InvalidOperationException($"Requested type {type}, but this one-of contains type {Type}");
+                throw new sys::InvalidOperationException($"Requested type {type}, but this one-of contains type {Type}");
             }
             return (T)Name;
         }
@@ -910,7 +910,7 @@ namespace Google.Cloud.Dlp.V2
         /// Get the contained <see cref="gax::IResourceName"/> as <see cref="OrganizationDeidentifyTemplateName"/>.
         /// </summary>
         /// <remarks>
-        /// An <see cref="s::InvalidOperationException"/> will be thrown if this does not
+        /// An <see cref="sys::InvalidOperationException"/> will be thrown if this does not
         /// contain an instance of <see cref="OrganizationDeidentifyTemplateName"/>.
         /// </remarks>
         public OrganizationDeidentifyTemplateName OrganizationDeidentifyTemplateName => CheckAndReturn<OrganizationDeidentifyTemplateName>(OneofType.OrganizationDeidentifyTemplateName);
@@ -919,7 +919,7 @@ namespace Google.Cloud.Dlp.V2
         /// Get the contained <see cref="gax::IResourceName"/> as <see cref="ProjectDeidentifyTemplateName"/>.
         /// </summary>
         /// <remarks>
-        /// An <see cref="s::InvalidOperationException"/> will be thrown if this does not
+        /// An <see cref="sys::InvalidOperationException"/> will be thrown if this does not
         /// contain an instance of <see cref="ProjectDeidentifyTemplateName"/>.
         /// </remarks>
         public ProjectDeidentifyTemplateName ProjectDeidentifyTemplateName => CheckAndReturn<ProjectDeidentifyTemplateName>(OneofType.ProjectDeidentifyTemplateName);
@@ -956,7 +956,7 @@ namespace Google.Cloud.Dlp.V2
     /// <item><description>ProjectInspectTemplateName: A resource of type 'project_inspect_template'.</description></item>
     /// </list>
     /// </remarks>
-    public sealed partial class InspectTemplateNameOneof : gax::IResourceName, s::IEquatable<InspectTemplateNameOneof>
+    public sealed partial class InspectTemplateNameOneof : gax::IResourceName, sys::IEquatable<InspectTemplateNameOneof>
     {
         /// <summary>
         /// The possible contents of <see cref="InspectTemplateNameOneof"/>.
@@ -993,7 +993,7 @@ namespace Google.Cloud.Dlp.V2
         /// <param name="name">The resource name in string form. Must not be <c>null</c>.</param>
         /// <param name="allowUnknown">If true, will successfully parse an unknown resource name
         /// into an <see cref="gax::UnknownResourceName"/>; otherwise will throw an
-        /// <see cref="s::ArgumentException"/> if an unknown resource name is given.</param>
+        /// <see cref="sys::ArgumentException"/> if an unknown resource name is given.</param>
         /// <returns>The parsed <see cref="InspectTemplateNameOneof"/> if successful.</returns>
         public static InspectTemplateNameOneof Parse(string name, bool allowUnknown)
         {
@@ -1002,7 +1002,7 @@ namespace Google.Cloud.Dlp.V2
             {
                 return result;
             }
-            throw new s::ArgumentException("Invalid name", nameof(name));
+            throw new sys::ArgumentException("Invalid name", nameof(name));
         }
 
         /// <summary>
@@ -1087,7 +1087,7 @@ namespace Google.Cloud.Dlp.V2
             Name = gax::GaxPreconditions.CheckNotNull(name, nameof(name));
             if (!IsValid(type, name))
             {
-                throw new s::ArgumentException($"Mismatched OneofType '{type}' and resource name '{name}'");
+                throw new sys::ArgumentException($"Mismatched OneofType '{type}' and resource name '{name}'");
             }
         }
 
@@ -1105,7 +1105,7 @@ namespace Google.Cloud.Dlp.V2
         {
             if (Type != type)
             {
-                throw new s::InvalidOperationException($"Requested type {type}, but this one-of contains type {Type}");
+                throw new sys::InvalidOperationException($"Requested type {type}, but this one-of contains type {Type}");
             }
             return (T)Name;
         }
@@ -1114,7 +1114,7 @@ namespace Google.Cloud.Dlp.V2
         /// Get the contained <see cref="gax::IResourceName"/> as <see cref="OrganizationInspectTemplateName"/>.
         /// </summary>
         /// <remarks>
-        /// An <see cref="s::InvalidOperationException"/> will be thrown if this does not
+        /// An <see cref="sys::InvalidOperationException"/> will be thrown if this does not
         /// contain an instance of <see cref="OrganizationInspectTemplateName"/>.
         /// </remarks>
         public OrganizationInspectTemplateName OrganizationInspectTemplateName => CheckAndReturn<OrganizationInspectTemplateName>(OneofType.OrganizationInspectTemplateName);
@@ -1123,7 +1123,7 @@ namespace Google.Cloud.Dlp.V2
         /// Get the contained <see cref="gax::IResourceName"/> as <see cref="ProjectInspectTemplateName"/>.
         /// </summary>
         /// <remarks>
-        /// An <see cref="s::InvalidOperationException"/> will be thrown if this does not
+        /// An <see cref="sys::InvalidOperationException"/> will be thrown if this does not
         /// contain an instance of <see cref="ProjectInspectTemplateName"/>.
         /// </remarks>
         public ProjectInspectTemplateName ProjectInspectTemplateName => CheckAndReturn<ProjectInspectTemplateName>(OneofType.ProjectInspectTemplateName);
@@ -1154,9 +1154,9 @@ namespace Google.Cloud.Dlp.V2
     public partial class CancelDlpJobRequest
     {
         /// <summary>
-        /// <see cref="DlpJobName"/>-typed view over the <see cref="Name"/> resource name property.
+        /// <see cref="Google.Cloud.Dlp.V2.DlpJobName"/>-typed view over the <see cref="Name"/> resource name property.
         /// </summary>
-        public DlpJobName DlpJobName
+        public Google.Cloud.Dlp.V2.DlpJobName DlpJobName
         {
             get { return string.IsNullOrEmpty(Name) ? null : Google.Cloud.Dlp.V2.DlpJobName.Parse(Name); }
             set { Name = value != null ? value.ToString() : ""; }
@@ -1167,9 +1167,9 @@ namespace Google.Cloud.Dlp.V2
     public partial class CreateDeidentifyTemplateRequest
     {
         /// <summary>
-        /// <see cref="OrganizationName"/>-typed view over the <see cref="Parent"/> resource name property.
+        /// <see cref="Google.Cloud.Dlp.V2.OrganizationName"/>-typed view over the <see cref="Parent"/> resource name property.
         /// </summary>
-        public OrganizationName ParentAsOrganizationName
+        public Google.Cloud.Dlp.V2.OrganizationName ParentAsOrganizationName
         {
             get { return string.IsNullOrEmpty(Parent) ? null : Google.Cloud.Dlp.V2.OrganizationName.Parse(Parent); }
             set { Parent = value != null ? value.ToString() : ""; }
@@ -1180,9 +1180,9 @@ namespace Google.Cloud.Dlp.V2
     public partial class CreateDlpJobRequest
     {
         /// <summary>
-        /// <see cref="ProjectName"/>-typed view over the <see cref="Parent"/> resource name property.
+        /// <see cref="Google.Cloud.Dlp.V2.ProjectName"/>-typed view over the <see cref="Parent"/> resource name property.
         /// </summary>
-        public ProjectName ParentAsProjectName
+        public Google.Cloud.Dlp.V2.ProjectName ParentAsProjectName
         {
             get { return string.IsNullOrEmpty(Parent) ? null : Google.Cloud.Dlp.V2.ProjectName.Parse(Parent); }
             set { Parent = value != null ? value.ToString() : ""; }
@@ -1193,9 +1193,9 @@ namespace Google.Cloud.Dlp.V2
     public partial class CreateInspectTemplateRequest
     {
         /// <summary>
-        /// <see cref="OrganizationName"/>-typed view over the <see cref="Parent"/> resource name property.
+        /// <see cref="Google.Cloud.Dlp.V2.OrganizationName"/>-typed view over the <see cref="Parent"/> resource name property.
         /// </summary>
-        public OrganizationName ParentAsOrganizationName
+        public Google.Cloud.Dlp.V2.OrganizationName ParentAsOrganizationName
         {
             get { return string.IsNullOrEmpty(Parent) ? null : Google.Cloud.Dlp.V2.OrganizationName.Parse(Parent); }
             set { Parent = value != null ? value.ToString() : ""; }
@@ -1206,9 +1206,9 @@ namespace Google.Cloud.Dlp.V2
     public partial class CreateJobTriggerRequest
     {
         /// <summary>
-        /// <see cref="ProjectName"/>-typed view over the <see cref="Parent"/> resource name property.
+        /// <see cref="Google.Cloud.Dlp.V2.ProjectName"/>-typed view over the <see cref="Parent"/> resource name property.
         /// </summary>
-        public ProjectName ParentAsProjectName
+        public Google.Cloud.Dlp.V2.ProjectName ParentAsProjectName
         {
             get { return string.IsNullOrEmpty(Parent) ? null : Google.Cloud.Dlp.V2.ProjectName.Parse(Parent); }
             set { Parent = value != null ? value.ToString() : ""; }
@@ -1219,9 +1219,9 @@ namespace Google.Cloud.Dlp.V2
     public partial class DeidentifyContentRequest
     {
         /// <summary>
-        /// <see cref="ProjectName"/>-typed view over the <see cref="Parent"/> resource name property.
+        /// <see cref="Google.Cloud.Dlp.V2.ProjectName"/>-typed view over the <see cref="Parent"/> resource name property.
         /// </summary>
-        public ProjectName ParentAsProjectName
+        public Google.Cloud.Dlp.V2.ProjectName ParentAsProjectName
         {
             get { return string.IsNullOrEmpty(Parent) ? null : Google.Cloud.Dlp.V2.ProjectName.Parse(Parent); }
             set { Parent = value != null ? value.ToString() : ""; }
@@ -1232,9 +1232,9 @@ namespace Google.Cloud.Dlp.V2
     public partial class DeleteDeidentifyTemplateRequest
     {
         /// <summary>
-        /// <see cref="DeidentifyTemplateNameOneof"/>-typed view over the <see cref="Name"/> resource name property.
+        /// <see cref="Google.Cloud.Dlp.V2.DeidentifyTemplateNameOneof"/>-typed view over the <see cref="Name"/> resource name property.
         /// </summary>
-        public DeidentifyTemplateNameOneof DeidentifyTemplateNameOneof
+        public Google.Cloud.Dlp.V2.DeidentifyTemplateNameOneof DeidentifyTemplateNameOneof
         {
             get { return string.IsNullOrEmpty(Name) ? null : Google.Cloud.Dlp.V2.DeidentifyTemplateNameOneof.Parse(Name, true); }
             set { Name = value != null ? value.ToString() : ""; }
@@ -1245,9 +1245,9 @@ namespace Google.Cloud.Dlp.V2
     public partial class DeleteDlpJobRequest
     {
         /// <summary>
-        /// <see cref="DlpJobName"/>-typed view over the <see cref="Name"/> resource name property.
+        /// <see cref="Google.Cloud.Dlp.V2.DlpJobName"/>-typed view over the <see cref="Name"/> resource name property.
         /// </summary>
-        public DlpJobName DlpJobName
+        public Google.Cloud.Dlp.V2.DlpJobName DlpJobName
         {
             get { return string.IsNullOrEmpty(Name) ? null : Google.Cloud.Dlp.V2.DlpJobName.Parse(Name); }
             set { Name = value != null ? value.ToString() : ""; }
@@ -1258,9 +1258,9 @@ namespace Google.Cloud.Dlp.V2
     public partial class DeleteInspectTemplateRequest
     {
         /// <summary>
-        /// <see cref="InspectTemplateNameOneof"/>-typed view over the <see cref="Name"/> resource name property.
+        /// <see cref="Google.Cloud.Dlp.V2.InspectTemplateNameOneof"/>-typed view over the <see cref="Name"/> resource name property.
         /// </summary>
-        public InspectTemplateNameOneof InspectTemplateNameOneof
+        public Google.Cloud.Dlp.V2.InspectTemplateNameOneof InspectTemplateNameOneof
         {
             get { return string.IsNullOrEmpty(Name) ? null : Google.Cloud.Dlp.V2.InspectTemplateNameOneof.Parse(Name, true); }
             set { Name = value != null ? value.ToString() : ""; }
@@ -1271,9 +1271,9 @@ namespace Google.Cloud.Dlp.V2
     public partial class DeleteJobTriggerRequest
     {
         /// <summary>
-        /// <see cref="ProjectJobTriggerName"/>-typed view over the <see cref="Name"/> resource name property.
+        /// <see cref="Google.Cloud.Dlp.V2.ProjectJobTriggerName"/>-typed view over the <see cref="Name"/> resource name property.
         /// </summary>
-        public ProjectJobTriggerName ProjectJobTriggerName
+        public Google.Cloud.Dlp.V2.ProjectJobTriggerName ProjectJobTriggerName
         {
             get { return string.IsNullOrEmpty(Name) ? null : Google.Cloud.Dlp.V2.ProjectJobTriggerName.Parse(Name); }
             set { Name = value != null ? value.ToString() : ""; }
@@ -1284,9 +1284,9 @@ namespace Google.Cloud.Dlp.V2
     public partial class GetDeidentifyTemplateRequest
     {
         /// <summary>
-        /// <see cref="DeidentifyTemplateNameOneof"/>-typed view over the <see cref="Name"/> resource name property.
+        /// <see cref="Google.Cloud.Dlp.V2.DeidentifyTemplateNameOneof"/>-typed view over the <see cref="Name"/> resource name property.
         /// </summary>
-        public DeidentifyTemplateNameOneof DeidentifyTemplateNameOneof
+        public Google.Cloud.Dlp.V2.DeidentifyTemplateNameOneof DeidentifyTemplateNameOneof
         {
             get { return string.IsNullOrEmpty(Name) ? null : Google.Cloud.Dlp.V2.DeidentifyTemplateNameOneof.Parse(Name, true); }
             set { Name = value != null ? value.ToString() : ""; }
@@ -1297,9 +1297,9 @@ namespace Google.Cloud.Dlp.V2
     public partial class GetDlpJobRequest
     {
         /// <summary>
-        /// <see cref="DlpJobName"/>-typed view over the <see cref="Name"/> resource name property.
+        /// <see cref="Google.Cloud.Dlp.V2.DlpJobName"/>-typed view over the <see cref="Name"/> resource name property.
         /// </summary>
-        public DlpJobName DlpJobName
+        public Google.Cloud.Dlp.V2.DlpJobName DlpJobName
         {
             get { return string.IsNullOrEmpty(Name) ? null : Google.Cloud.Dlp.V2.DlpJobName.Parse(Name); }
             set { Name = value != null ? value.ToString() : ""; }
@@ -1310,9 +1310,9 @@ namespace Google.Cloud.Dlp.V2
     public partial class GetInspectTemplateRequest
     {
         /// <summary>
-        /// <see cref="InspectTemplateNameOneof"/>-typed view over the <see cref="Name"/> resource name property.
+        /// <see cref="Google.Cloud.Dlp.V2.InspectTemplateNameOneof"/>-typed view over the <see cref="Name"/> resource name property.
         /// </summary>
-        public InspectTemplateNameOneof InspectTemplateNameOneof
+        public Google.Cloud.Dlp.V2.InspectTemplateNameOneof InspectTemplateNameOneof
         {
             get { return string.IsNullOrEmpty(Name) ? null : Google.Cloud.Dlp.V2.InspectTemplateNameOneof.Parse(Name, true); }
             set { Name = value != null ? value.ToString() : ""; }
@@ -1323,9 +1323,9 @@ namespace Google.Cloud.Dlp.V2
     public partial class GetJobTriggerRequest
     {
         /// <summary>
-        /// <see cref="ProjectJobTriggerName"/>-typed view over the <see cref="Name"/> resource name property.
+        /// <see cref="Google.Cloud.Dlp.V2.ProjectJobTriggerName"/>-typed view over the <see cref="Name"/> resource name property.
         /// </summary>
-        public ProjectJobTriggerName ProjectJobTriggerName
+        public Google.Cloud.Dlp.V2.ProjectJobTriggerName ProjectJobTriggerName
         {
             get { return string.IsNullOrEmpty(Name) ? null : Google.Cloud.Dlp.V2.ProjectJobTriggerName.Parse(Name); }
             set { Name = value != null ? value.ToString() : ""; }
@@ -1336,9 +1336,9 @@ namespace Google.Cloud.Dlp.V2
     public partial class InspectContentRequest
     {
         /// <summary>
-        /// <see cref="ProjectName"/>-typed view over the <see cref="Parent"/> resource name property.
+        /// <see cref="Google.Cloud.Dlp.V2.ProjectName"/>-typed view over the <see cref="Parent"/> resource name property.
         /// </summary>
-        public ProjectName ParentAsProjectName
+        public Google.Cloud.Dlp.V2.ProjectName ParentAsProjectName
         {
             get { return string.IsNullOrEmpty(Parent) ? null : Google.Cloud.Dlp.V2.ProjectName.Parse(Parent); }
             set { Parent = value != null ? value.ToString() : ""; }
@@ -1349,9 +1349,9 @@ namespace Google.Cloud.Dlp.V2
     public partial class ListDeidentifyTemplatesRequest
     {
         /// <summary>
-        /// <see cref="OrganizationName"/>-typed view over the <see cref="Parent"/> resource name property.
+        /// <see cref="Google.Cloud.Dlp.V2.OrganizationName"/>-typed view over the <see cref="Parent"/> resource name property.
         /// </summary>
-        public OrganizationName ParentAsOrganizationName
+        public Google.Cloud.Dlp.V2.OrganizationName ParentAsOrganizationName
         {
             get { return string.IsNullOrEmpty(Parent) ? null : Google.Cloud.Dlp.V2.OrganizationName.Parse(Parent); }
             set { Parent = value != null ? value.ToString() : ""; }
@@ -1362,9 +1362,9 @@ namespace Google.Cloud.Dlp.V2
     public partial class ListDlpJobsRequest
     {
         /// <summary>
-        /// <see cref="ProjectName"/>-typed view over the <see cref="Parent"/> resource name property.
+        /// <see cref="Google.Cloud.Dlp.V2.ProjectName"/>-typed view over the <see cref="Parent"/> resource name property.
         /// </summary>
-        public ProjectName ParentAsProjectName
+        public Google.Cloud.Dlp.V2.ProjectName ParentAsProjectName
         {
             get { return string.IsNullOrEmpty(Parent) ? null : Google.Cloud.Dlp.V2.ProjectName.Parse(Parent); }
             set { Parent = value != null ? value.ToString() : ""; }
@@ -1375,9 +1375,9 @@ namespace Google.Cloud.Dlp.V2
     public partial class ListInspectTemplatesRequest
     {
         /// <summary>
-        /// <see cref="OrganizationName"/>-typed view over the <see cref="Parent"/> resource name property.
+        /// <see cref="Google.Cloud.Dlp.V2.OrganizationName"/>-typed view over the <see cref="Parent"/> resource name property.
         /// </summary>
-        public OrganizationName ParentAsOrganizationName
+        public Google.Cloud.Dlp.V2.OrganizationName ParentAsOrganizationName
         {
             get { return string.IsNullOrEmpty(Parent) ? null : Google.Cloud.Dlp.V2.OrganizationName.Parse(Parent); }
             set { Parent = value != null ? value.ToString() : ""; }
@@ -1388,9 +1388,9 @@ namespace Google.Cloud.Dlp.V2
     public partial class ListJobTriggersRequest
     {
         /// <summary>
-        /// <see cref="ProjectName"/>-typed view over the <see cref="Parent"/> resource name property.
+        /// <see cref="Google.Cloud.Dlp.V2.ProjectName"/>-typed view over the <see cref="Parent"/> resource name property.
         /// </summary>
-        public ProjectName ParentAsProjectName
+        public Google.Cloud.Dlp.V2.ProjectName ParentAsProjectName
         {
             get { return string.IsNullOrEmpty(Parent) ? null : Google.Cloud.Dlp.V2.ProjectName.Parse(Parent); }
             set { Parent = value != null ? value.ToString() : ""; }
@@ -1401,9 +1401,9 @@ namespace Google.Cloud.Dlp.V2
     public partial class RedactImageRequest
     {
         /// <summary>
-        /// <see cref="ProjectName"/>-typed view over the <see cref="Parent"/> resource name property.
+        /// <see cref="Google.Cloud.Dlp.V2.ProjectName"/>-typed view over the <see cref="Parent"/> resource name property.
         /// </summary>
-        public ProjectName ParentAsProjectName
+        public Google.Cloud.Dlp.V2.ProjectName ParentAsProjectName
         {
             get { return string.IsNullOrEmpty(Parent) ? null : Google.Cloud.Dlp.V2.ProjectName.Parse(Parent); }
             set { Parent = value != null ? value.ToString() : ""; }
@@ -1414,9 +1414,9 @@ namespace Google.Cloud.Dlp.V2
     public partial class ReidentifyContentRequest
     {
         /// <summary>
-        /// <see cref="ProjectName"/>-typed view over the <see cref="Parent"/> resource name property.
+        /// <see cref="Google.Cloud.Dlp.V2.ProjectName"/>-typed view over the <see cref="Parent"/> resource name property.
         /// </summary>
-        public ProjectName ParentAsProjectName
+        public Google.Cloud.Dlp.V2.ProjectName ParentAsProjectName
         {
             get { return string.IsNullOrEmpty(Parent) ? null : Google.Cloud.Dlp.V2.ProjectName.Parse(Parent); }
             set { Parent = value != null ? value.ToString() : ""; }
@@ -1427,9 +1427,9 @@ namespace Google.Cloud.Dlp.V2
     public partial class UpdateDeidentifyTemplateRequest
     {
         /// <summary>
-        /// <see cref="DeidentifyTemplateNameOneof"/>-typed view over the <see cref="Name"/> resource name property.
+        /// <see cref="Google.Cloud.Dlp.V2.DeidentifyTemplateNameOneof"/>-typed view over the <see cref="Name"/> resource name property.
         /// </summary>
-        public DeidentifyTemplateNameOneof DeidentifyTemplateNameOneof
+        public Google.Cloud.Dlp.V2.DeidentifyTemplateNameOneof DeidentifyTemplateNameOneof
         {
             get { return string.IsNullOrEmpty(Name) ? null : Google.Cloud.Dlp.V2.DeidentifyTemplateNameOneof.Parse(Name, true); }
             set { Name = value != null ? value.ToString() : ""; }
@@ -1440,9 +1440,9 @@ namespace Google.Cloud.Dlp.V2
     public partial class UpdateInspectTemplateRequest
     {
         /// <summary>
-        /// <see cref="InspectTemplateNameOneof"/>-typed view over the <see cref="Name"/> resource name property.
+        /// <see cref="Google.Cloud.Dlp.V2.InspectTemplateNameOneof"/>-typed view over the <see cref="Name"/> resource name property.
         /// </summary>
-        public InspectTemplateNameOneof InspectTemplateNameOneof
+        public Google.Cloud.Dlp.V2.InspectTemplateNameOneof InspectTemplateNameOneof
         {
             get { return string.IsNullOrEmpty(Name) ? null : Google.Cloud.Dlp.V2.InspectTemplateNameOneof.Parse(Name, true); }
             set { Name = value != null ? value.ToString() : ""; }
@@ -1453,9 +1453,9 @@ namespace Google.Cloud.Dlp.V2
     public partial class UpdateJobTriggerRequest
     {
         /// <summary>
-        /// <see cref="ProjectJobTriggerName"/>-typed view over the <see cref="Name"/> resource name property.
+        /// <see cref="Google.Cloud.Dlp.V2.ProjectJobTriggerName"/>-typed view over the <see cref="Name"/> resource name property.
         /// </summary>
-        public ProjectJobTriggerName ProjectJobTriggerName
+        public Google.Cloud.Dlp.V2.ProjectJobTriggerName ProjectJobTriggerName
         {
             get { return string.IsNullOrEmpty(Name) ? null : Google.Cloud.Dlp.V2.ProjectJobTriggerName.Parse(Name); }
             set { Name = value != null ? value.ToString() : ""; }

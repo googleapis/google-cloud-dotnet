@@ -17,10 +17,10 @@
 using gax = Google.Api.Gax;
 using gaxgrpc = Google.Api.Gax.Grpc;
 using Google.Cloud.OsLogin.Common;
-using proto = Google.Protobuf;
-using protowkt = Google.Protobuf.WellKnownTypes;
+using pb = Google.Protobuf;
+using pbwkt = Google.Protobuf.WellKnownTypes;
 using grpccore = Grpc.Core;
-using s = System;
+using sys = System;
 using sc = System.Collections;
 using scg = System.Collections.Generic;
 using sco = System.Collections.ObjectModel;
@@ -72,7 +72,7 @@ namespace Google.Cloud.OsLogin.V1Beta
         /// <item><description><see cref="grpccore::StatusCode.Unavailable"/></description></item>
         /// </list>
         /// </remarks>
-        public static s::Predicate<grpccore::RpcException> IdempotentRetryFilter { get; } =
+        public static sys::Predicate<grpccore::RpcException> IdempotentRetryFilter { get; } =
             gaxgrpc::RetrySettings.FilterForStatusCodes(grpccore::StatusCode.DeadlineExceeded, grpccore::StatusCode.Unavailable);
 
         /// <summary>
@@ -82,7 +82,7 @@ namespace Google.Cloud.OsLogin.V1Beta
         /// <remarks>
         /// There are no RPC <see cref="grpccore::StatusCode"/>s eligible for retry for "NonIdempotent" RPC methods.
         /// </remarks>
-        public static s::Predicate<grpccore::RpcException> NonIdempotentRetryFilter { get; } =
+        public static sys::Predicate<grpccore::RpcException> NonIdempotentRetryFilter { get; } =
             gaxgrpc::RetrySettings.FilterForStatusCodes();
 
         /// <summary>
@@ -100,8 +100,8 @@ namespace Google.Cloud.OsLogin.V1Beta
         /// </list>
         /// </remarks>
         public static gaxgrpc::BackoffSettings GetDefaultRetryBackoff() => new gaxgrpc::BackoffSettings(
-            delay: s::TimeSpan.FromMilliseconds(100),
-            maxDelay: s::TimeSpan.FromMilliseconds(60000),
+            delay: sys::TimeSpan.FromMilliseconds(100),
+            maxDelay: sys::TimeSpan.FromMilliseconds(60000),
             delayMultiplier: 1.3
         );
 
@@ -120,8 +120,8 @@ namespace Google.Cloud.OsLogin.V1Beta
         /// </list>
         /// </remarks>
         public static gaxgrpc::BackoffSettings GetDefaultTimeoutBackoff() => new gaxgrpc::BackoffSettings(
-            delay: s::TimeSpan.FromMilliseconds(10000),
-            maxDelay: s::TimeSpan.FromMilliseconds(10000),
+            delay: sys::TimeSpan.FromMilliseconds(10000),
+            maxDelay: sys::TimeSpan.FromMilliseconds(10000),
             delayMultiplier: 1.0
         );
 
@@ -151,7 +151,7 @@ namespace Google.Cloud.OsLogin.V1Beta
             gaxgrpc::CallTiming.FromRetry(new gaxgrpc::RetrySettings(
                 retryBackoff: GetDefaultRetryBackoff(),
                 timeoutBackoff: GetDefaultTimeoutBackoff(),
-                totalExpiration: gax::Expiration.FromTimeout(s::TimeSpan.FromMilliseconds(600000)),
+                totalExpiration: gax::Expiration.FromTimeout(sys::TimeSpan.FromMilliseconds(600000)),
                 retryFilter: IdempotentRetryFilter
             )));
 
@@ -181,7 +181,7 @@ namespace Google.Cloud.OsLogin.V1Beta
             gaxgrpc::CallTiming.FromRetry(new gaxgrpc::RetrySettings(
                 retryBackoff: GetDefaultRetryBackoff(),
                 timeoutBackoff: GetDefaultTimeoutBackoff(),
-                totalExpiration: gax::Expiration.FromTimeout(s::TimeSpan.FromMilliseconds(600000)),
+                totalExpiration: gax::Expiration.FromTimeout(sys::TimeSpan.FromMilliseconds(600000)),
                 retryFilter: IdempotentRetryFilter
             )));
 
@@ -211,7 +211,7 @@ namespace Google.Cloud.OsLogin.V1Beta
             gaxgrpc::CallTiming.FromRetry(new gaxgrpc::RetrySettings(
                 retryBackoff: GetDefaultRetryBackoff(),
                 timeoutBackoff: GetDefaultTimeoutBackoff(),
-                totalExpiration: gax::Expiration.FromTimeout(s::TimeSpan.FromMilliseconds(600000)),
+                totalExpiration: gax::Expiration.FromTimeout(sys::TimeSpan.FromMilliseconds(600000)),
                 retryFilter: IdempotentRetryFilter
             )));
 
@@ -241,7 +241,7 @@ namespace Google.Cloud.OsLogin.V1Beta
             gaxgrpc::CallTiming.FromRetry(new gaxgrpc::RetrySettings(
                 retryBackoff: GetDefaultRetryBackoff(),
                 timeoutBackoff: GetDefaultTimeoutBackoff(),
-                totalExpiration: gax::Expiration.FromTimeout(s::TimeSpan.FromMilliseconds(600000)),
+                totalExpiration: gax::Expiration.FromTimeout(sys::TimeSpan.FromMilliseconds(600000)),
                 retryFilter: IdempotentRetryFilter
             )));
 
@@ -271,7 +271,7 @@ namespace Google.Cloud.OsLogin.V1Beta
             gaxgrpc::CallTiming.FromRetry(new gaxgrpc::RetrySettings(
                 retryBackoff: GetDefaultRetryBackoff(),
                 timeoutBackoff: GetDefaultTimeoutBackoff(),
-                totalExpiration: gax::Expiration.FromTimeout(s::TimeSpan.FromMilliseconds(600000)),
+                totalExpiration: gax::Expiration.FromTimeout(sys::TimeSpan.FromMilliseconds(600000)),
                 retryFilter: IdempotentRetryFilter
             )));
 
@@ -301,7 +301,7 @@ namespace Google.Cloud.OsLogin.V1Beta
             gaxgrpc::CallTiming.FromRetry(new gaxgrpc::RetrySettings(
                 retryBackoff: GetDefaultRetryBackoff(),
                 timeoutBackoff: GetDefaultTimeoutBackoff(),
-                totalExpiration: gax::Expiration.FromTimeout(s::TimeSpan.FromMilliseconds(600000)),
+                totalExpiration: gax::Expiration.FromTimeout(sys::TimeSpan.FromMilliseconds(600000)),
                 retryFilter: IdempotentRetryFilter
             )));
 
@@ -407,7 +407,7 @@ namespace Google.Cloud.OsLogin.V1Beta
         /// </summary>
         public virtual OsLoginService.OsLoginServiceClient GrpcClient
         {
-            get { throw new s::NotImplementedException(); }
+            get { throw new sys::NotImplementedException(); }
         }
 
         /// <summary>
@@ -489,7 +489,7 @@ namespace Google.Cloud.OsLogin.V1Beta
             DeletePosixAccountRequest request,
             gaxgrpc::CallSettings callSettings = null)
         {
-            throw new s::NotImplementedException();
+            throw new sys::NotImplementedException();
         }
 
         /// <summary>
@@ -523,7 +523,7 @@ namespace Google.Cloud.OsLogin.V1Beta
             DeletePosixAccountRequest request,
             gaxgrpc::CallSettings callSettings = null)
         {
-            throw new s::NotImplementedException();
+            throw new sys::NotImplementedException();
         }
 
         /// <summary>
@@ -605,7 +605,7 @@ namespace Google.Cloud.OsLogin.V1Beta
             DeleteSshPublicKeyRequest request,
             gaxgrpc::CallSettings callSettings = null)
         {
-            throw new s::NotImplementedException();
+            throw new sys::NotImplementedException();
         }
 
         /// <summary>
@@ -639,7 +639,7 @@ namespace Google.Cloud.OsLogin.V1Beta
             DeleteSshPublicKeyRequest request,
             gaxgrpc::CallSettings callSettings = null)
         {
-            throw new s::NotImplementedException();
+            throw new sys::NotImplementedException();
         }
 
         /// <summary>
@@ -722,7 +722,7 @@ namespace Google.Cloud.OsLogin.V1Beta
             GetLoginProfileRequest request,
             gaxgrpc::CallSettings callSettings = null)
         {
-            throw new s::NotImplementedException();
+            throw new sys::NotImplementedException();
         }
 
         /// <summary>
@@ -761,7 +761,7 @@ namespace Google.Cloud.OsLogin.V1Beta
             GetLoginProfileRequest request,
             gaxgrpc::CallSettings callSettings = null)
         {
-            throw new s::NotImplementedException();
+            throw new sys::NotImplementedException();
         }
 
         /// <summary>
@@ -846,7 +846,7 @@ namespace Google.Cloud.OsLogin.V1Beta
             GetSshPublicKeyRequest request,
             gaxgrpc::CallSettings callSettings = null)
         {
-            throw new s::NotImplementedException();
+            throw new sys::NotImplementedException();
         }
 
         /// <summary>
@@ -883,7 +883,7 @@ namespace Google.Cloud.OsLogin.V1Beta
             GetSshPublicKeyRequest request,
             gaxgrpc::CallSettings callSettings = null)
         {
-            throw new s::NotImplementedException();
+            throw new sys::NotImplementedException();
         }
 
         /// <summary>
@@ -1081,7 +1081,7 @@ namespace Google.Cloud.OsLogin.V1Beta
             ImportSshPublicKeyRequest request,
             gaxgrpc::CallSettings callSettings = null)
         {
-            throw new s::NotImplementedException();
+            throw new sys::NotImplementedException();
         }
 
         /// <summary>
@@ -1122,7 +1122,7 @@ namespace Google.Cloud.OsLogin.V1Beta
             ImportSshPublicKeyRequest request,
             gaxgrpc::CallSettings callSettings = null)
         {
-            throw new s::NotImplementedException();
+            throw new sys::NotImplementedException();
         }
 
         /// <summary>
@@ -1233,7 +1233,7 @@ namespace Google.Cloud.OsLogin.V1Beta
         public virtual stt::Task<SshPublicKey> UpdateSshPublicKeyAsync(
             FingerprintName name,
             SshPublicKey sshPublicKey,
-            protowkt::FieldMask updateMask,
+            pbwkt::FieldMask updateMask,
             gaxgrpc::CallSettings callSettings = null) => UpdateSshPublicKeyAsync(
                 new UpdateSshPublicKeyRequest
                 {
@@ -1267,7 +1267,7 @@ namespace Google.Cloud.OsLogin.V1Beta
         public virtual stt::Task<SshPublicKey> UpdateSshPublicKeyAsync(
             FingerprintName name,
             SshPublicKey sshPublicKey,
-            protowkt::FieldMask updateMask,
+            pbwkt::FieldMask updateMask,
             st::CancellationToken cancellationToken) => UpdateSshPublicKeyAsync(
                 name,
                 sshPublicKey,
@@ -1298,7 +1298,7 @@ namespace Google.Cloud.OsLogin.V1Beta
         public virtual SshPublicKey UpdateSshPublicKey(
             FingerprintName name,
             SshPublicKey sshPublicKey,
-            protowkt::FieldMask updateMask,
+            pbwkt::FieldMask updateMask,
             gaxgrpc::CallSettings callSettings = null) => UpdateSshPublicKey(
                 new UpdateSshPublicKeyRequest
                 {
@@ -1325,7 +1325,7 @@ namespace Google.Cloud.OsLogin.V1Beta
             UpdateSshPublicKeyRequest request,
             gaxgrpc::CallSettings callSettings = null)
         {
-            throw new s::NotImplementedException();
+            throw new sys::NotImplementedException();
         }
 
         /// <summary>
@@ -1364,7 +1364,7 @@ namespace Google.Cloud.OsLogin.V1Beta
             UpdateSshPublicKeyRequest request,
             gaxgrpc::CallSettings callSettings = null)
         {
-            throw new s::NotImplementedException();
+            throw new sys::NotImplementedException();
         }
 
     }
@@ -1374,8 +1374,8 @@ namespace Google.Cloud.OsLogin.V1Beta
     /// </summary>
     public sealed partial class OsLoginServiceClientImpl : OsLoginServiceClient
     {
-        private readonly gaxgrpc::ApiCall<DeletePosixAccountRequest, protowkt::Empty> _callDeletePosixAccount;
-        private readonly gaxgrpc::ApiCall<DeleteSshPublicKeyRequest, protowkt::Empty> _callDeleteSshPublicKey;
+        private readonly gaxgrpc::ApiCall<DeletePosixAccountRequest, pbwkt::Empty> _callDeletePosixAccount;
+        private readonly gaxgrpc::ApiCall<DeleteSshPublicKeyRequest, pbwkt::Empty> _callDeleteSshPublicKey;
         private readonly gaxgrpc::ApiCall<GetLoginProfileRequest, LoginProfile> _callGetLoginProfile;
         private readonly gaxgrpc::ApiCall<GetSshPublicKeyRequest, SshPublicKey> _callGetSshPublicKey;
         private readonly gaxgrpc::ApiCall<ImportSshPublicKeyRequest, ImportSshPublicKeyResponse> _callImportSshPublicKey;
@@ -1391,9 +1391,9 @@ namespace Google.Cloud.OsLogin.V1Beta
             GrpcClient = grpcClient;
             OsLoginServiceSettings effectiveSettings = settings ?? OsLoginServiceSettings.GetDefault();
             gaxgrpc::ClientHelper clientHelper = new gaxgrpc::ClientHelper(effectiveSettings);
-            _callDeletePosixAccount = clientHelper.BuildApiCall<DeletePosixAccountRequest, protowkt::Empty>(
+            _callDeletePosixAccount = clientHelper.BuildApiCall<DeletePosixAccountRequest, pbwkt::Empty>(
                 GrpcClient.DeletePosixAccountAsync, GrpcClient.DeletePosixAccount, effectiveSettings.DeletePosixAccountSettings);
-            _callDeleteSshPublicKey = clientHelper.BuildApiCall<DeleteSshPublicKeyRequest, protowkt::Empty>(
+            _callDeleteSshPublicKey = clientHelper.BuildApiCall<DeleteSshPublicKeyRequest, pbwkt::Empty>(
                 GrpcClient.DeleteSshPublicKeyAsync, GrpcClient.DeleteSshPublicKey, effectiveSettings.DeleteSshPublicKeySettings);
             _callGetLoginProfile = clientHelper.BuildApiCall<GetLoginProfileRequest, LoginProfile>(
                 GrpcClient.GetLoginProfileAsync, GrpcClient.GetLoginProfile, effectiveSettings.GetLoginProfileSettings);
@@ -1423,13 +1423,13 @@ namespace Google.Cloud.OsLogin.V1Beta
         // Partial methods called for every ApiCall on construction.
         // Allows modification of all the underlying ApiCall objects.
         partial void Modify_ApiCall<TRequest, TResponse>(ref gaxgrpc::ApiCall<TRequest, TResponse> call)
-            where TRequest : class, proto::IMessage<TRequest>
-            where TResponse : class, proto::IMessage<TResponse>;
+            where TRequest : class, pb::IMessage<TRequest>
+            where TResponse : class, pb::IMessage<TResponse>;
 
         // Partial methods called for each ApiCall on construction.
         // Allows per-RPC-method modification of the underlying ApiCall object.
-        partial void Modify_DeletePosixAccountApiCall(ref gaxgrpc::ApiCall<DeletePosixAccountRequest, protowkt::Empty> call);
-        partial void Modify_DeleteSshPublicKeyApiCall(ref gaxgrpc::ApiCall<DeleteSshPublicKeyRequest, protowkt::Empty> call);
+        partial void Modify_DeletePosixAccountApiCall(ref gaxgrpc::ApiCall<DeletePosixAccountRequest, pbwkt::Empty> call);
+        partial void Modify_DeleteSshPublicKeyApiCall(ref gaxgrpc::ApiCall<DeleteSshPublicKeyRequest, pbwkt::Empty> call);
         partial void Modify_GetLoginProfileApiCall(ref gaxgrpc::ApiCall<GetLoginProfileRequest, LoginProfile> call);
         partial void Modify_GetSshPublicKeyApiCall(ref gaxgrpc::ApiCall<GetSshPublicKeyRequest, SshPublicKey> call);
         partial void Modify_ImportSshPublicKeyApiCall(ref gaxgrpc::ApiCall<ImportSshPublicKeyRequest, ImportSshPublicKeyResponse> call);

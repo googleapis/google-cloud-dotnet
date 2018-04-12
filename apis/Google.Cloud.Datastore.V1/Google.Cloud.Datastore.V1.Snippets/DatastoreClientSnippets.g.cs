@@ -204,7 +204,7 @@ namespace Google.Cloud.Datastore.V1.Snippets
             // Initialize request argument(s)
             string projectId = "";
             CommitRequest.Types.Mode mode = CommitRequest.Types.Mode.Unspecified;
-            ByteString transaction = Google.Protobuf.ByteString.CopyFromUtf8("");
+            ByteString transaction = ByteString.Empty;
             IEnumerable<Mutation> mutations = new List<Mutation>();
             // Make the request
             CommitResponse response = await datastoreClient.CommitAsync(projectId, mode, transaction, mutations);
@@ -220,7 +220,7 @@ namespace Google.Cloud.Datastore.V1.Snippets
             // Initialize request argument(s)
             string projectId = "";
             CommitRequest.Types.Mode mode = CommitRequest.Types.Mode.Unspecified;
-            ByteString transaction = Google.Protobuf.ByteString.CopyFromUtf8("");
+            ByteString transaction = ByteString.Empty;
             IEnumerable<Mutation> mutations = new List<Mutation>();
             // Make the request
             CommitResponse response = datastoreClient.Commit(projectId, mode, transaction, mutations);
@@ -304,7 +304,7 @@ namespace Google.Cloud.Datastore.V1.Snippets
             DatastoreClient datastoreClient = await DatastoreClient.CreateAsync();
             // Initialize request argument(s)
             string projectId = "";
-            ByteString transaction = Google.Protobuf.ByteString.CopyFromUtf8("");
+            ByteString transaction = ByteString.Empty;
             // Make the request
             RollbackResponse response = await datastoreClient.RollbackAsync(projectId, transaction);
             // End snippet
@@ -318,7 +318,7 @@ namespace Google.Cloud.Datastore.V1.Snippets
             DatastoreClient datastoreClient = DatastoreClient.Create();
             // Initialize request argument(s)
             string projectId = "";
-            ByteString transaction = Google.Protobuf.ByteString.CopyFromUtf8("");
+            ByteString transaction = ByteString.Empty;
             // Make the request
             RollbackResponse response = datastoreClient.Rollback(projectId, transaction);
             // End snippet
@@ -335,7 +335,7 @@ namespace Google.Cloud.Datastore.V1.Snippets
             RollbackRequest request = new RollbackRequest
             {
                 ProjectId = "",
-                Transaction = Google.Protobuf.ByteString.CopyFromUtf8(""),
+                Transaction = ByteString.Empty,
             };
             // Make the request
             RollbackResponse response = await datastoreClient.RollbackAsync(request);
@@ -352,7 +352,7 @@ namespace Google.Cloud.Datastore.V1.Snippets
             RollbackRequest request = new RollbackRequest
             {
                 ProjectId = "",
-                Transaction = Google.Protobuf.ByteString.CopyFromUtf8(""),
+                Transaction = ByteString.Empty,
             };
             // Make the request
             RollbackResponse response = datastoreClient.Rollback(request);

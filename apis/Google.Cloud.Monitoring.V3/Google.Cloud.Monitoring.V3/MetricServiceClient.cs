@@ -17,10 +17,10 @@
 using Google.Api;
 using gax = Google.Api.Gax;
 using gaxgrpc = Google.Api.Gax.Grpc;
-using proto = Google.Protobuf;
-using protowkt = Google.Protobuf.WellKnownTypes;
+using pb = Google.Protobuf;
+using pbwkt = Google.Protobuf.WellKnownTypes;
 using grpccore = Grpc.Core;
-using s = System;
+using sys = System;
 using sc = System.Collections;
 using scg = System.Collections.Generic;
 using sco = System.Collections.ObjectModel;
@@ -74,7 +74,7 @@ namespace Google.Cloud.Monitoring.V3
         /// <item><description><see cref="grpccore::StatusCode.Unavailable"/></description></item>
         /// </list>
         /// </remarks>
-        public static s::Predicate<grpccore::RpcException> IdempotentRetryFilter { get; } =
+        public static sys::Predicate<grpccore::RpcException> IdempotentRetryFilter { get; } =
             gaxgrpc::RetrySettings.FilterForStatusCodes(grpccore::StatusCode.DeadlineExceeded, grpccore::StatusCode.Unavailable);
 
         /// <summary>
@@ -84,7 +84,7 @@ namespace Google.Cloud.Monitoring.V3
         /// <remarks>
         /// There are no RPC <see cref="grpccore::StatusCode"/>s eligible for retry for "NonIdempotent" RPC methods.
         /// </remarks>
-        public static s::Predicate<grpccore::RpcException> NonIdempotentRetryFilter { get; } =
+        public static sys::Predicate<grpccore::RpcException> NonIdempotentRetryFilter { get; } =
             gaxgrpc::RetrySettings.FilterForStatusCodes();
 
         /// <summary>
@@ -102,8 +102,8 @@ namespace Google.Cloud.Monitoring.V3
         /// </list>
         /// </remarks>
         public static gaxgrpc::BackoffSettings GetDefaultRetryBackoff() => new gaxgrpc::BackoffSettings(
-            delay: s::TimeSpan.FromMilliseconds(100),
-            maxDelay: s::TimeSpan.FromMilliseconds(60000),
+            delay: sys::TimeSpan.FromMilliseconds(100),
+            maxDelay: sys::TimeSpan.FromMilliseconds(60000),
             delayMultiplier: 1.3
         );
 
@@ -122,8 +122,8 @@ namespace Google.Cloud.Monitoring.V3
         /// </list>
         /// </remarks>
         public static gaxgrpc::BackoffSettings GetDefaultTimeoutBackoff() => new gaxgrpc::BackoffSettings(
-            delay: s::TimeSpan.FromMilliseconds(20000),
-            maxDelay: s::TimeSpan.FromMilliseconds(20000),
+            delay: sys::TimeSpan.FromMilliseconds(20000),
+            maxDelay: sys::TimeSpan.FromMilliseconds(20000),
             delayMultiplier: 1.0
         );
 
@@ -153,7 +153,7 @@ namespace Google.Cloud.Monitoring.V3
             gaxgrpc::CallTiming.FromRetry(new gaxgrpc::RetrySettings(
                 retryBackoff: GetDefaultRetryBackoff(),
                 timeoutBackoff: GetDefaultTimeoutBackoff(),
-                totalExpiration: gax::Expiration.FromTimeout(s::TimeSpan.FromMilliseconds(600000)),
+                totalExpiration: gax::Expiration.FromTimeout(sys::TimeSpan.FromMilliseconds(600000)),
                 retryFilter: IdempotentRetryFilter
             )));
 
@@ -183,7 +183,7 @@ namespace Google.Cloud.Monitoring.V3
             gaxgrpc::CallTiming.FromRetry(new gaxgrpc::RetrySettings(
                 retryBackoff: GetDefaultRetryBackoff(),
                 timeoutBackoff: GetDefaultTimeoutBackoff(),
-                totalExpiration: gax::Expiration.FromTimeout(s::TimeSpan.FromMilliseconds(600000)),
+                totalExpiration: gax::Expiration.FromTimeout(sys::TimeSpan.FromMilliseconds(600000)),
                 retryFilter: IdempotentRetryFilter
             )));
 
@@ -213,7 +213,7 @@ namespace Google.Cloud.Monitoring.V3
             gaxgrpc::CallTiming.FromRetry(new gaxgrpc::RetrySettings(
                 retryBackoff: GetDefaultRetryBackoff(),
                 timeoutBackoff: GetDefaultTimeoutBackoff(),
-                totalExpiration: gax::Expiration.FromTimeout(s::TimeSpan.FromMilliseconds(600000)),
+                totalExpiration: gax::Expiration.FromTimeout(sys::TimeSpan.FromMilliseconds(600000)),
                 retryFilter: IdempotentRetryFilter
             )));
 
@@ -243,7 +243,7 @@ namespace Google.Cloud.Monitoring.V3
             gaxgrpc::CallTiming.FromRetry(new gaxgrpc::RetrySettings(
                 retryBackoff: GetDefaultRetryBackoff(),
                 timeoutBackoff: GetDefaultTimeoutBackoff(),
-                totalExpiration: gax::Expiration.FromTimeout(s::TimeSpan.FromMilliseconds(600000)),
+                totalExpiration: gax::Expiration.FromTimeout(sys::TimeSpan.FromMilliseconds(600000)),
                 retryFilter: IdempotentRetryFilter
             )));
 
@@ -272,7 +272,7 @@ namespace Google.Cloud.Monitoring.V3
             gaxgrpc::CallTiming.FromRetry(new gaxgrpc::RetrySettings(
                 retryBackoff: GetDefaultRetryBackoff(),
                 timeoutBackoff: GetDefaultTimeoutBackoff(),
-                totalExpiration: gax::Expiration.FromTimeout(s::TimeSpan.FromMilliseconds(600000)),
+                totalExpiration: gax::Expiration.FromTimeout(sys::TimeSpan.FromMilliseconds(600000)),
                 retryFilter: NonIdempotentRetryFilter
             )));
 
@@ -302,7 +302,7 @@ namespace Google.Cloud.Monitoring.V3
             gaxgrpc::CallTiming.FromRetry(new gaxgrpc::RetrySettings(
                 retryBackoff: GetDefaultRetryBackoff(),
                 timeoutBackoff: GetDefaultTimeoutBackoff(),
-                totalExpiration: gax::Expiration.FromTimeout(s::TimeSpan.FromMilliseconds(600000)),
+                totalExpiration: gax::Expiration.FromTimeout(sys::TimeSpan.FromMilliseconds(600000)),
                 retryFilter: IdempotentRetryFilter
             )));
 
@@ -332,7 +332,7 @@ namespace Google.Cloud.Monitoring.V3
             gaxgrpc::CallTiming.FromRetry(new gaxgrpc::RetrySettings(
                 retryBackoff: GetDefaultRetryBackoff(),
                 timeoutBackoff: GetDefaultTimeoutBackoff(),
-                totalExpiration: gax::Expiration.FromTimeout(s::TimeSpan.FromMilliseconds(600000)),
+                totalExpiration: gax::Expiration.FromTimeout(sys::TimeSpan.FromMilliseconds(600000)),
                 retryFilter: IdempotentRetryFilter
             )));
 
@@ -361,7 +361,7 @@ namespace Google.Cloud.Monitoring.V3
             gaxgrpc::CallTiming.FromRetry(new gaxgrpc::RetrySettings(
                 retryBackoff: GetDefaultRetryBackoff(),
                 timeoutBackoff: GetDefaultTimeoutBackoff(),
-                totalExpiration: gax::Expiration.FromTimeout(s::TimeSpan.FromMilliseconds(600000)),
+                totalExpiration: gax::Expiration.FromTimeout(sys::TimeSpan.FromMilliseconds(600000)),
                 retryFilter: NonIdempotentRetryFilter
             )));
 
@@ -467,7 +467,7 @@ namespace Google.Cloud.Monitoring.V3
         /// </summary>
         public virtual MetricService.MetricServiceClient GrpcClient
         {
-            get { throw new s::NotImplementedException(); }
+            get { throw new sys::NotImplementedException(); }
         }
 
         /// <summary>
@@ -554,7 +554,7 @@ namespace Google.Cloud.Monitoring.V3
             ListMonitoredResourceDescriptorsRequest request,
             gaxgrpc::CallSettings callSettings = null)
         {
-            throw new s::NotImplementedException();
+            throw new sys::NotImplementedException();
         }
 
         /// <summary>
@@ -573,7 +573,7 @@ namespace Google.Cloud.Monitoring.V3
             ListMonitoredResourceDescriptorsRequest request,
             gaxgrpc::CallSettings callSettings = null)
         {
-            throw new s::NotImplementedException();
+            throw new sys::NotImplementedException();
         }
 
         /// <summary>
@@ -661,7 +661,7 @@ namespace Google.Cloud.Monitoring.V3
             GetMonitoredResourceDescriptorRequest request,
             gaxgrpc::CallSettings callSettings = null)
         {
-            throw new s::NotImplementedException();
+            throw new sys::NotImplementedException();
         }
 
         /// <summary>
@@ -698,7 +698,7 @@ namespace Google.Cloud.Monitoring.V3
             GetMonitoredResourceDescriptorRequest request,
             gaxgrpc::CallSettings callSettings = null)
         {
-            throw new s::NotImplementedException();
+            throw new sys::NotImplementedException();
         }
 
         /// <summary>
@@ -785,7 +785,7 @@ namespace Google.Cloud.Monitoring.V3
             ListMetricDescriptorsRequest request,
             gaxgrpc::CallSettings callSettings = null)
         {
-            throw new s::NotImplementedException();
+            throw new sys::NotImplementedException();
         }
 
         /// <summary>
@@ -804,7 +804,7 @@ namespace Google.Cloud.Monitoring.V3
             ListMetricDescriptorsRequest request,
             gaxgrpc::CallSettings callSettings = null)
         {
-            throw new s::NotImplementedException();
+            throw new sys::NotImplementedException();
         }
 
         /// <summary>
@@ -892,7 +892,7 @@ namespace Google.Cloud.Monitoring.V3
             GetMetricDescriptorRequest request,
             gaxgrpc::CallSettings callSettings = null)
         {
-            throw new s::NotImplementedException();
+            throw new sys::NotImplementedException();
         }
 
         /// <summary>
@@ -929,7 +929,7 @@ namespace Google.Cloud.Monitoring.V3
             GetMetricDescriptorRequest request,
             gaxgrpc::CallSettings callSettings = null)
         {
-            throw new s::NotImplementedException();
+            throw new sys::NotImplementedException();
         }
 
         /// <summary>
@@ -1037,7 +1037,7 @@ namespace Google.Cloud.Monitoring.V3
             CreateMetricDescriptorRequest request,
             gaxgrpc::CallSettings callSettings = null)
         {
-            throw new s::NotImplementedException();
+            throw new sys::NotImplementedException();
         }
 
         /// <summary>
@@ -1078,7 +1078,7 @@ namespace Google.Cloud.Monitoring.V3
             CreateMetricDescriptorRequest request,
             gaxgrpc::CallSettings callSettings = null)
         {
-            throw new s::NotImplementedException();
+            throw new sys::NotImplementedException();
         }
 
         /// <summary>
@@ -1167,7 +1167,7 @@ namespace Google.Cloud.Monitoring.V3
             DeleteMetricDescriptorRequest request,
             gaxgrpc::CallSettings callSettings = null)
         {
-            throw new s::NotImplementedException();
+            throw new sys::NotImplementedException();
         }
 
         /// <summary>
@@ -1203,7 +1203,7 @@ namespace Google.Cloud.Monitoring.V3
             DeleteMetricDescriptorRequest request,
             gaxgrpc::CallSettings callSettings = null)
         {
-            throw new s::NotImplementedException();
+            throw new sys::NotImplementedException();
         }
 
         /// <summary>
@@ -1336,7 +1336,7 @@ namespace Google.Cloud.Monitoring.V3
             ListTimeSeriesRequest request,
             gaxgrpc::CallSettings callSettings = null)
         {
-            throw new s::NotImplementedException();
+            throw new sys::NotImplementedException();
         }
 
         /// <summary>
@@ -1355,7 +1355,7 @@ namespace Google.Cloud.Monitoring.V3
             ListTimeSeriesRequest request,
             gaxgrpc::CallSettings callSettings = null)
         {
-            throw new s::NotImplementedException();
+            throw new sys::NotImplementedException();
         }
 
         /// <summary>
@@ -1473,7 +1473,7 @@ namespace Google.Cloud.Monitoring.V3
             CreateTimeSeriesRequest request,
             gaxgrpc::CallSettings callSettings = null)
         {
-            throw new s::NotImplementedException();
+            throw new sys::NotImplementedException();
         }
 
         /// <summary>
@@ -1513,7 +1513,7 @@ namespace Google.Cloud.Monitoring.V3
             CreateTimeSeriesRequest request,
             gaxgrpc::CallSettings callSettings = null)
         {
-            throw new s::NotImplementedException();
+            throw new sys::NotImplementedException();
         }
 
     }
@@ -1528,9 +1528,9 @@ namespace Google.Cloud.Monitoring.V3
         private readonly gaxgrpc::ApiCall<ListMetricDescriptorsRequest, ListMetricDescriptorsResponse> _callListMetricDescriptors;
         private readonly gaxgrpc::ApiCall<GetMetricDescriptorRequest, MetricDescriptor> _callGetMetricDescriptor;
         private readonly gaxgrpc::ApiCall<CreateMetricDescriptorRequest, MetricDescriptor> _callCreateMetricDescriptor;
-        private readonly gaxgrpc::ApiCall<DeleteMetricDescriptorRequest, protowkt::Empty> _callDeleteMetricDescriptor;
+        private readonly gaxgrpc::ApiCall<DeleteMetricDescriptorRequest, pbwkt::Empty> _callDeleteMetricDescriptor;
         private readonly gaxgrpc::ApiCall<ListTimeSeriesRequest, ListTimeSeriesResponse> _callListTimeSeries;
-        private readonly gaxgrpc::ApiCall<CreateTimeSeriesRequest, protowkt::Empty> _callCreateTimeSeries;
+        private readonly gaxgrpc::ApiCall<CreateTimeSeriesRequest, pbwkt::Empty> _callCreateTimeSeries;
 
         /// <summary>
         /// Constructs a client wrapper for the MetricService service, with the specified gRPC client and settings.
@@ -1552,11 +1552,11 @@ namespace Google.Cloud.Monitoring.V3
                 GrpcClient.GetMetricDescriptorAsync, GrpcClient.GetMetricDescriptor, effectiveSettings.GetMetricDescriptorSettings);
             _callCreateMetricDescriptor = clientHelper.BuildApiCall<CreateMetricDescriptorRequest, MetricDescriptor>(
                 GrpcClient.CreateMetricDescriptorAsync, GrpcClient.CreateMetricDescriptor, effectiveSettings.CreateMetricDescriptorSettings);
-            _callDeleteMetricDescriptor = clientHelper.BuildApiCall<DeleteMetricDescriptorRequest, protowkt::Empty>(
+            _callDeleteMetricDescriptor = clientHelper.BuildApiCall<DeleteMetricDescriptorRequest, pbwkt::Empty>(
                 GrpcClient.DeleteMetricDescriptorAsync, GrpcClient.DeleteMetricDescriptor, effectiveSettings.DeleteMetricDescriptorSettings);
             _callListTimeSeries = clientHelper.BuildApiCall<ListTimeSeriesRequest, ListTimeSeriesResponse>(
                 GrpcClient.ListTimeSeriesAsync, GrpcClient.ListTimeSeries, effectiveSettings.ListTimeSeriesSettings);
-            _callCreateTimeSeries = clientHelper.BuildApiCall<CreateTimeSeriesRequest, protowkt::Empty>(
+            _callCreateTimeSeries = clientHelper.BuildApiCall<CreateTimeSeriesRequest, pbwkt::Empty>(
                 GrpcClient.CreateTimeSeriesAsync, GrpcClient.CreateTimeSeries, effectiveSettings.CreateTimeSeriesSettings);
             Modify_ApiCall(ref _callListMonitoredResourceDescriptors);
             Modify_ListMonitoredResourceDescriptorsApiCall(ref _callListMonitoredResourceDescriptors);
@@ -1582,8 +1582,8 @@ namespace Google.Cloud.Monitoring.V3
         // Partial methods called for every ApiCall on construction.
         // Allows modification of all the underlying ApiCall objects.
         partial void Modify_ApiCall<TRequest, TResponse>(ref gaxgrpc::ApiCall<TRequest, TResponse> call)
-            where TRequest : class, proto::IMessage<TRequest>
-            where TResponse : class, proto::IMessage<TResponse>;
+            where TRequest : class, pb::IMessage<TRequest>
+            where TResponse : class, pb::IMessage<TResponse>;
 
         // Partial methods called for each ApiCall on construction.
         // Allows per-RPC-method modification of the underlying ApiCall object.
@@ -1592,9 +1592,9 @@ namespace Google.Cloud.Monitoring.V3
         partial void Modify_ListMetricDescriptorsApiCall(ref gaxgrpc::ApiCall<ListMetricDescriptorsRequest, ListMetricDescriptorsResponse> call);
         partial void Modify_GetMetricDescriptorApiCall(ref gaxgrpc::ApiCall<GetMetricDescriptorRequest, MetricDescriptor> call);
         partial void Modify_CreateMetricDescriptorApiCall(ref gaxgrpc::ApiCall<CreateMetricDescriptorRequest, MetricDescriptor> call);
-        partial void Modify_DeleteMetricDescriptorApiCall(ref gaxgrpc::ApiCall<DeleteMetricDescriptorRequest, protowkt::Empty> call);
+        partial void Modify_DeleteMetricDescriptorApiCall(ref gaxgrpc::ApiCall<DeleteMetricDescriptorRequest, pbwkt::Empty> call);
         partial void Modify_ListTimeSeriesApiCall(ref gaxgrpc::ApiCall<ListTimeSeriesRequest, ListTimeSeriesResponse> call);
-        partial void Modify_CreateTimeSeriesApiCall(ref gaxgrpc::ApiCall<CreateTimeSeriesRequest, protowkt::Empty> call);
+        partial void Modify_CreateTimeSeriesApiCall(ref gaxgrpc::ApiCall<CreateTimeSeriesRequest, pbwkt::Empty> call);
         partial void OnConstruction(MetricService.MetricServiceClient grpcClient, MetricServiceSettings effectiveSettings, gaxgrpc::ClientHelper clientHelper);
 
         /// <summary>
