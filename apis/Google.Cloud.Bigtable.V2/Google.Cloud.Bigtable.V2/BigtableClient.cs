@@ -16,14 +16,14 @@
 
 using gax = Google.Api.Gax;
 using gaxgrpc = Google.Api.Gax.Grpc;
-using proto = Google.Protobuf;
-using protowkt = Google.Protobuf.WellKnownTypes;
+using pb = Google.Protobuf;
+using pbwkt = Google.Protobuf.WellKnownTypes;
 using grpccore = Grpc.Core;
-using s = System;
+using sys = System;
 using sc = System.Collections;
 using scg = System.Collections.Generic;
 using sco = System.Collections.ObjectModel;
-using System.Linq;
+using linq = System.Linq;
 using st = System.Threading;
 using stt = System.Threading.Tasks;
 using Google.Api.Gax;
@@ -50,7 +50,7 @@ namespace Google.Cloud.Bigtable.V2
             ReadRowsRequest request,
             gaxgrpc::CallSettings callSettings = null)
         {
-            throw new s::NotImplementedException();
+            throw new sys::NotImplementedException();
         }
 
         /// <summary>
@@ -73,7 +73,7 @@ namespace Google.Cloud.Bigtable.V2
             SampleRowKeysRequest request,
             gaxgrpc::CallSettings callSettings = null)
         {
-            throw new s::NotImplementedException();
+            throw new sys::NotImplementedException();
         }
 
         /// <summary>
@@ -94,7 +94,7 @@ namespace Google.Cloud.Bigtable.V2
             MutateRowRequest request,
             gaxgrpc::CallSettings callSettings = null)
         {
-            throw new s::NotImplementedException();
+            throw new sys::NotImplementedException();
         }
 
         /// <summary>
@@ -135,7 +135,7 @@ namespace Google.Cloud.Bigtable.V2
             MutateRowRequest request,
             gaxgrpc::CallSettings callSettings = null)
         {
-            throw new s::NotImplementedException();
+            throw new sys::NotImplementedException();
         }
 
         /// <summary>
@@ -155,7 +155,7 @@ namespace Google.Cloud.Bigtable.V2
             MutateRowsRequest request,
             gaxgrpc::CallSettings callSettings = null)
         {
-            throw new s::NotImplementedException();
+            throw new sys::NotImplementedException();
         }
 
         /// <summary>
@@ -175,7 +175,7 @@ namespace Google.Cloud.Bigtable.V2
             MutateRowsRequest request,
             gaxgrpc::CallSettings callSettings = null)
         {
-            throw new s::NotImplementedException();
+            throw new sys::NotImplementedException();
         }
 
         /// <summary>
@@ -210,7 +210,7 @@ namespace Google.Cloud.Bigtable.V2
             CheckAndMutateRowRequest request,
             gaxgrpc::CallSettings callSettings = null)
         {
-            throw new s::NotImplementedException();
+            throw new sys::NotImplementedException();
         }
 
         /// <summary>
@@ -249,7 +249,7 @@ namespace Google.Cloud.Bigtable.V2
             CheckAndMutateRowRequest request,
             gaxgrpc::CallSettings callSettings = null)
         {
-            throw new s::NotImplementedException();
+            throw new sys::NotImplementedException();
         }
 
         /// <summary>
@@ -273,7 +273,7 @@ namespace Google.Cloud.Bigtable.V2
             ReadModifyWriteRowRequest request,
             gaxgrpc::CallSettings callSettings = null)
         {
-            throw new s::NotImplementedException();
+            throw new sys::NotImplementedException();
         }
 
         /// <summary>
@@ -320,7 +320,7 @@ namespace Google.Cloud.Bigtable.V2
             ReadModifyWriteRowRequest request,
             gaxgrpc::CallSettings callSettings = null)
         {
-            throw new s::NotImplementedException();
+            throw new sys::NotImplementedException();
         }
     }
 

@@ -15,15 +15,15 @@
 // Generated code. DO NOT EDIT!
 
 using gax = Google.Api.Gax;
-using s = System;
-using System.Linq;
+using sys = System;
+using linq = System.Linq;
 
 namespace Google.Cloud.Bigtable.V2
 {
     /// <summary>
     /// Resource name for the 'table' resource.
     /// </summary>
-    public sealed partial class TableName : gax::IResourceName, s::IEquatable<TableName>
+    public sealed partial class TableName : gax::IResourceName, sys::IEquatable<TableName>
     {
         private static readonly gax::PathTemplate s_template = new gax::PathTemplate("projects/{project}/instances/{instance}/tables/{table}");
 
@@ -45,7 +45,7 @@ namespace Google.Cloud.Bigtable.V2
         /// <see cref="TableName"/> instance.
         /// </summary>
         /// <remarks>
-        /// This method still throws <see cref="s::ArgumentNullException"/> if <paramref name="tableName"/> is null,
+        /// This method still throws <see cref="sys::ArgumentNullException"/> if <paramref name="tableName"/> is null,
         /// as this would usually indicate a programming error rather than a data error.
         /// </remarks>
         /// <param name="tableName">The table resource name in string form. Must not be <c>null</c>.</param>
@@ -123,9 +123,9 @@ namespace Google.Cloud.Bigtable.V2
     public partial class CheckAndMutateRowRequest
     {
         /// <summary>
-        /// <see cref="TableName"/>-typed view over the <see cref="TableName"/> resource name property.
+        /// <see cref="Google.Cloud.Bigtable.V2.TableName"/>-typed view over the <see cref="TableName"/> resource name property.
         /// </summary>
-        public TableName TableNameAsTableName
+        public Google.Cloud.Bigtable.V2.TableName TableNameAsTableName
         {
             get { return string.IsNullOrEmpty(TableName) ? null : Google.Cloud.Bigtable.V2.TableName.Parse(TableName); }
             set { TableName = value != null ? value.ToString() : ""; }
@@ -136,9 +136,9 @@ namespace Google.Cloud.Bigtable.V2
     public partial class MutateRowRequest
     {
         /// <summary>
-        /// <see cref="TableName"/>-typed view over the <see cref="TableName"/> resource name property.
+        /// <see cref="Google.Cloud.Bigtable.V2.TableName"/>-typed view over the <see cref="TableName"/> resource name property.
         /// </summary>
-        public TableName TableNameAsTableName
+        public Google.Cloud.Bigtable.V2.TableName TableNameAsTableName
         {
             get { return string.IsNullOrEmpty(TableName) ? null : Google.Cloud.Bigtable.V2.TableName.Parse(TableName); }
             set { TableName = value != null ? value.ToString() : ""; }
@@ -149,9 +149,9 @@ namespace Google.Cloud.Bigtable.V2
     public partial class MutateRowsRequest
     {
         /// <summary>
-        /// <see cref="TableName"/>-typed view over the <see cref="TableName"/> resource name property.
+        /// <see cref="Google.Cloud.Bigtable.V2.TableName"/>-typed view over the <see cref="TableName"/> resource name property.
         /// </summary>
-        public TableName TableNameAsTableName
+        public Google.Cloud.Bigtable.V2.TableName TableNameAsTableName
         {
             get { return string.IsNullOrEmpty(TableName) ? null : Google.Cloud.Bigtable.V2.TableName.Parse(TableName); }
             set { TableName = value != null ? value.ToString() : ""; }
@@ -162,9 +162,9 @@ namespace Google.Cloud.Bigtable.V2
     public partial class ReadModifyWriteRowRequest
     {
         /// <summary>
-        /// <see cref="TableName"/>-typed view over the <see cref="TableName"/> resource name property.
+        /// <see cref="Google.Cloud.Bigtable.V2.TableName"/>-typed view over the <see cref="TableName"/> resource name property.
         /// </summary>
-        public TableName TableNameAsTableName
+        public Google.Cloud.Bigtable.V2.TableName TableNameAsTableName
         {
             get { return string.IsNullOrEmpty(TableName) ? null : Google.Cloud.Bigtable.V2.TableName.Parse(TableName); }
             set { TableName = value != null ? value.ToString() : ""; }
@@ -175,9 +175,9 @@ namespace Google.Cloud.Bigtable.V2
     public partial class ReadRowsRequest
     {
         /// <summary>
-        /// <see cref="TableName"/>-typed view over the <see cref="TableName"/> resource name property.
+        /// <see cref="Google.Cloud.Bigtable.V2.TableName"/>-typed view over the <see cref="TableName"/> resource name property.
         /// </summary>
-        public TableName TableNameAsTableName
+        public Google.Cloud.Bigtable.V2.TableName TableNameAsTableName
         {
             get { return string.IsNullOrEmpty(TableName) ? null : Google.Cloud.Bigtable.V2.TableName.Parse(TableName); }
             set { TableName = value != null ? value.ToString() : ""; }
@@ -188,9 +188,9 @@ namespace Google.Cloud.Bigtable.V2
     public partial class SampleRowKeysRequest
     {
         /// <summary>
-        /// <see cref="TableName"/>-typed view over the <see cref="TableName"/> resource name property.
+        /// <see cref="Google.Cloud.Bigtable.V2.TableName"/>-typed view over the <see cref="TableName"/> resource name property.
         /// </summary>
-        public TableName TableNameAsTableName
+        public Google.Cloud.Bigtable.V2.TableName TableNameAsTableName
         {
             get { return string.IsNullOrEmpty(TableName) ? null : Google.Cloud.Bigtable.V2.TableName.Parse(TableName); }
             set { TableName = value != null ? value.ToString() : ""; }

@@ -484,7 +484,7 @@ namespace Google.Cloud.Firestore.V1Beta1.Snippets
             FirestoreClient firestoreClient = await FirestoreClient.CreateAsync();
             // Initialize request argument(s)
             string formattedDatabase = new DatabaseRootName("[PROJECT]", "[DATABASE]").ToString();
-            ByteString transaction = Google.Protobuf.ByteString.CopyFromUtf8("");
+            ByteString transaction = ByteString.Empty;
             // Make the request
             await firestoreClient.RollbackAsync(formattedDatabase, transaction);
             // End snippet
@@ -498,7 +498,7 @@ namespace Google.Cloud.Firestore.V1Beta1.Snippets
             FirestoreClient firestoreClient = FirestoreClient.Create();
             // Initialize request argument(s)
             string formattedDatabase = new DatabaseRootName("[PROJECT]", "[DATABASE]").ToString();
-            ByteString transaction = Google.Protobuf.ByteString.CopyFromUtf8("");
+            ByteString transaction = ByteString.Empty;
             // Make the request
             firestoreClient.Rollback(formattedDatabase, transaction);
             // End snippet
@@ -515,7 +515,7 @@ namespace Google.Cloud.Firestore.V1Beta1.Snippets
             RollbackRequest request = new RollbackRequest
             {
                 Database = new DatabaseRootName("[PROJECT]", "[DATABASE]").ToString(),
-                Transaction = Google.Protobuf.ByteString.CopyFromUtf8(""),
+                Transaction = ByteString.Empty,
             };
             // Make the request
             await firestoreClient.RollbackAsync(request);
@@ -532,7 +532,7 @@ namespace Google.Cloud.Firestore.V1Beta1.Snippets
             RollbackRequest request = new RollbackRequest
             {
                 Database = new DatabaseRootName("[PROJECT]", "[DATABASE]").ToString(),
-                Transaction = Google.Protobuf.ByteString.CopyFromUtf8(""),
+                Transaction = ByteString.Empty,
             };
             // Make the request
             firestoreClient.Rollback(request);

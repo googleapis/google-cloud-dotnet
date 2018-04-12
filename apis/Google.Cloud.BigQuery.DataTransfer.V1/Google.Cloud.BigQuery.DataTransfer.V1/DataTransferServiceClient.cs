@@ -16,10 +16,10 @@
 
 using gax = Google.Api.Gax;
 using gaxgrpc = Google.Api.Gax.Grpc;
-using proto = Google.Protobuf;
-using protowkt = Google.Protobuf.WellKnownTypes;
+using pb = Google.Protobuf;
+using pbwkt = Google.Protobuf.WellKnownTypes;
 using grpccore = Grpc.Core;
-using s = System;
+using sys = System;
 using sc = System.Collections;
 using scg = System.Collections.Generic;
 using sco = System.Collections.ObjectModel;
@@ -78,7 +78,7 @@ namespace Google.Cloud.BigQuery.DataTransfer.V1
         /// <item><description><see cref="grpccore::StatusCode.Unavailable"/></description></item>
         /// </list>
         /// </remarks>
-        public static s::Predicate<grpccore::RpcException> IdempotentRetryFilter { get; } =
+        public static sys::Predicate<grpccore::RpcException> IdempotentRetryFilter { get; } =
             gaxgrpc::RetrySettings.FilterForStatusCodes(grpccore::StatusCode.DeadlineExceeded, grpccore::StatusCode.Unavailable);
 
         /// <summary>
@@ -88,7 +88,7 @@ namespace Google.Cloud.BigQuery.DataTransfer.V1
         /// <remarks>
         /// There are no RPC <see cref="grpccore::StatusCode"/>s eligible for retry for "NonIdempotent" RPC methods.
         /// </remarks>
-        public static s::Predicate<grpccore::RpcException> NonIdempotentRetryFilter { get; } =
+        public static sys::Predicate<grpccore::RpcException> NonIdempotentRetryFilter { get; } =
             gaxgrpc::RetrySettings.FilterForStatusCodes();
 
         /// <summary>
@@ -106,8 +106,8 @@ namespace Google.Cloud.BigQuery.DataTransfer.V1
         /// </list>
         /// </remarks>
         public static gaxgrpc::BackoffSettings GetDefaultRetryBackoff() => new gaxgrpc::BackoffSettings(
-            delay: s::TimeSpan.FromMilliseconds(100),
-            maxDelay: s::TimeSpan.FromMilliseconds(60000),
+            delay: sys::TimeSpan.FromMilliseconds(100),
+            maxDelay: sys::TimeSpan.FromMilliseconds(60000),
             delayMultiplier: 1.3
         );
 
@@ -126,8 +126,8 @@ namespace Google.Cloud.BigQuery.DataTransfer.V1
         /// </list>
         /// </remarks>
         public static gaxgrpc::BackoffSettings GetDefaultTimeoutBackoff() => new gaxgrpc::BackoffSettings(
-            delay: s::TimeSpan.FromMilliseconds(20000),
-            maxDelay: s::TimeSpan.FromMilliseconds(20000),
+            delay: sys::TimeSpan.FromMilliseconds(20000),
+            maxDelay: sys::TimeSpan.FromMilliseconds(20000),
             delayMultiplier: 1.0
         );
 
@@ -157,7 +157,7 @@ namespace Google.Cloud.BigQuery.DataTransfer.V1
             gaxgrpc::CallTiming.FromRetry(new gaxgrpc::RetrySettings(
                 retryBackoff: GetDefaultRetryBackoff(),
                 timeoutBackoff: GetDefaultTimeoutBackoff(),
-                totalExpiration: gax::Expiration.FromTimeout(s::TimeSpan.FromMilliseconds(600000)),
+                totalExpiration: gax::Expiration.FromTimeout(sys::TimeSpan.FromMilliseconds(600000)),
                 retryFilter: IdempotentRetryFilter
             )));
 
@@ -187,7 +187,7 @@ namespace Google.Cloud.BigQuery.DataTransfer.V1
             gaxgrpc::CallTiming.FromRetry(new gaxgrpc::RetrySettings(
                 retryBackoff: GetDefaultRetryBackoff(),
                 timeoutBackoff: GetDefaultTimeoutBackoff(),
-                totalExpiration: gax::Expiration.FromTimeout(s::TimeSpan.FromMilliseconds(600000)),
+                totalExpiration: gax::Expiration.FromTimeout(sys::TimeSpan.FromMilliseconds(600000)),
                 retryFilter: IdempotentRetryFilter
             )));
 
@@ -216,7 +216,7 @@ namespace Google.Cloud.BigQuery.DataTransfer.V1
             gaxgrpc::CallTiming.FromRetry(new gaxgrpc::RetrySettings(
                 retryBackoff: GetDefaultRetryBackoff(),
                 timeoutBackoff: GetDefaultTimeoutBackoff(),
-                totalExpiration: gax::Expiration.FromTimeout(s::TimeSpan.FromMilliseconds(600000)),
+                totalExpiration: gax::Expiration.FromTimeout(sys::TimeSpan.FromMilliseconds(600000)),
                 retryFilter: NonIdempotentRetryFilter
             )));
 
@@ -245,7 +245,7 @@ namespace Google.Cloud.BigQuery.DataTransfer.V1
             gaxgrpc::CallTiming.FromRetry(new gaxgrpc::RetrySettings(
                 retryBackoff: GetDefaultRetryBackoff(),
                 timeoutBackoff: GetDefaultTimeoutBackoff(),
-                totalExpiration: gax::Expiration.FromTimeout(s::TimeSpan.FromMilliseconds(600000)),
+                totalExpiration: gax::Expiration.FromTimeout(sys::TimeSpan.FromMilliseconds(600000)),
                 retryFilter: NonIdempotentRetryFilter
             )));
 
@@ -275,7 +275,7 @@ namespace Google.Cloud.BigQuery.DataTransfer.V1
             gaxgrpc::CallTiming.FromRetry(new gaxgrpc::RetrySettings(
                 retryBackoff: GetDefaultRetryBackoff(),
                 timeoutBackoff: GetDefaultTimeoutBackoff(),
-                totalExpiration: gax::Expiration.FromTimeout(s::TimeSpan.FromMilliseconds(600000)),
+                totalExpiration: gax::Expiration.FromTimeout(sys::TimeSpan.FromMilliseconds(600000)),
                 retryFilter: IdempotentRetryFilter
             )));
 
@@ -305,7 +305,7 @@ namespace Google.Cloud.BigQuery.DataTransfer.V1
             gaxgrpc::CallTiming.FromRetry(new gaxgrpc::RetrySettings(
                 retryBackoff: GetDefaultRetryBackoff(),
                 timeoutBackoff: GetDefaultTimeoutBackoff(),
-                totalExpiration: gax::Expiration.FromTimeout(s::TimeSpan.FromMilliseconds(600000)),
+                totalExpiration: gax::Expiration.FromTimeout(sys::TimeSpan.FromMilliseconds(600000)),
                 retryFilter: IdempotentRetryFilter
             )));
 
@@ -335,7 +335,7 @@ namespace Google.Cloud.BigQuery.DataTransfer.V1
             gaxgrpc::CallTiming.FromRetry(new gaxgrpc::RetrySettings(
                 retryBackoff: GetDefaultRetryBackoff(),
                 timeoutBackoff: GetDefaultTimeoutBackoff(),
-                totalExpiration: gax::Expiration.FromTimeout(s::TimeSpan.FromMilliseconds(600000)),
+                totalExpiration: gax::Expiration.FromTimeout(sys::TimeSpan.FromMilliseconds(600000)),
                 retryFilter: IdempotentRetryFilter
             )));
 
@@ -364,7 +364,7 @@ namespace Google.Cloud.BigQuery.DataTransfer.V1
             gaxgrpc::CallTiming.FromRetry(new gaxgrpc::RetrySettings(
                 retryBackoff: GetDefaultRetryBackoff(),
                 timeoutBackoff: GetDefaultTimeoutBackoff(),
-                totalExpiration: gax::Expiration.FromTimeout(s::TimeSpan.FromMilliseconds(600000)),
+                totalExpiration: gax::Expiration.FromTimeout(sys::TimeSpan.FromMilliseconds(600000)),
                 retryFilter: NonIdempotentRetryFilter
             )));
 
@@ -394,7 +394,7 @@ namespace Google.Cloud.BigQuery.DataTransfer.V1
             gaxgrpc::CallTiming.FromRetry(new gaxgrpc::RetrySettings(
                 retryBackoff: GetDefaultRetryBackoff(),
                 timeoutBackoff: GetDefaultTimeoutBackoff(),
-                totalExpiration: gax::Expiration.FromTimeout(s::TimeSpan.FromMilliseconds(600000)),
+                totalExpiration: gax::Expiration.FromTimeout(sys::TimeSpan.FromMilliseconds(600000)),
                 retryFilter: IdempotentRetryFilter
             )));
 
@@ -424,7 +424,7 @@ namespace Google.Cloud.BigQuery.DataTransfer.V1
             gaxgrpc::CallTiming.FromRetry(new gaxgrpc::RetrySettings(
                 retryBackoff: GetDefaultRetryBackoff(),
                 timeoutBackoff: GetDefaultTimeoutBackoff(),
-                totalExpiration: gax::Expiration.FromTimeout(s::TimeSpan.FromMilliseconds(600000)),
+                totalExpiration: gax::Expiration.FromTimeout(sys::TimeSpan.FromMilliseconds(600000)),
                 retryFilter: IdempotentRetryFilter
             )));
 
@@ -454,7 +454,7 @@ namespace Google.Cloud.BigQuery.DataTransfer.V1
             gaxgrpc::CallTiming.FromRetry(new gaxgrpc::RetrySettings(
                 retryBackoff: GetDefaultRetryBackoff(),
                 timeoutBackoff: GetDefaultTimeoutBackoff(),
-                totalExpiration: gax::Expiration.FromTimeout(s::TimeSpan.FromMilliseconds(600000)),
+                totalExpiration: gax::Expiration.FromTimeout(sys::TimeSpan.FromMilliseconds(600000)),
                 retryFilter: IdempotentRetryFilter
             )));
 
@@ -484,7 +484,7 @@ namespace Google.Cloud.BigQuery.DataTransfer.V1
             gaxgrpc::CallTiming.FromRetry(new gaxgrpc::RetrySettings(
                 retryBackoff: GetDefaultRetryBackoff(),
                 timeoutBackoff: GetDefaultTimeoutBackoff(),
-                totalExpiration: gax::Expiration.FromTimeout(s::TimeSpan.FromMilliseconds(600000)),
+                totalExpiration: gax::Expiration.FromTimeout(sys::TimeSpan.FromMilliseconds(600000)),
                 retryFilter: IdempotentRetryFilter
             )));
 
@@ -514,7 +514,7 @@ namespace Google.Cloud.BigQuery.DataTransfer.V1
             gaxgrpc::CallTiming.FromRetry(new gaxgrpc::RetrySettings(
                 retryBackoff: GetDefaultRetryBackoff(),
                 timeoutBackoff: GetDefaultTimeoutBackoff(),
-                totalExpiration: gax::Expiration.FromTimeout(s::TimeSpan.FromMilliseconds(600000)),
+                totalExpiration: gax::Expiration.FromTimeout(sys::TimeSpan.FromMilliseconds(600000)),
                 retryFilter: IdempotentRetryFilter
             )));
 
@@ -614,7 +614,7 @@ namespace Google.Cloud.BigQuery.DataTransfer.V1
         /// </summary>
         public virtual DataTransferService.DataTransferServiceClient GrpcClient
         {
-            get { throw new s::NotImplementedException(); }
+            get { throw new sys::NotImplementedException(); }
         }
 
         /// <summary>
@@ -700,7 +700,7 @@ namespace Google.Cloud.BigQuery.DataTransfer.V1
             GetDataSourceRequest request,
             gaxgrpc::CallSettings callSettings = null)
         {
-            throw new s::NotImplementedException();
+            throw new sys::NotImplementedException();
         }
 
         /// <summary>
@@ -739,7 +739,7 @@ namespace Google.Cloud.BigQuery.DataTransfer.V1
             GetDataSourceRequest request,
             gaxgrpc::CallSettings callSettings = null)
         {
-            throw new s::NotImplementedException();
+            throw new sys::NotImplementedException();
         }
 
         /// <summary>
@@ -829,7 +829,7 @@ namespace Google.Cloud.BigQuery.DataTransfer.V1
             ListDataSourcesRequest request,
             gaxgrpc::CallSettings callSettings = null)
         {
-            throw new s::NotImplementedException();
+            throw new sys::NotImplementedException();
         }
 
         /// <summary>
@@ -849,7 +849,7 @@ namespace Google.Cloud.BigQuery.DataTransfer.V1
             ListDataSourcesRequest request,
             gaxgrpc::CallSettings callSettings = null)
         {
-            throw new s::NotImplementedException();
+            throw new sys::NotImplementedException();
         }
 
         /// <summary>
@@ -952,7 +952,7 @@ namespace Google.Cloud.BigQuery.DataTransfer.V1
             CreateTransferConfigRequest request,
             gaxgrpc::CallSettings callSettings = null)
         {
-            throw new s::NotImplementedException();
+            throw new sys::NotImplementedException();
         }
 
         /// <summary>
@@ -989,7 +989,7 @@ namespace Google.Cloud.BigQuery.DataTransfer.V1
             CreateTransferConfigRequest request,
             gaxgrpc::CallSettings callSettings = null)
         {
-            throw new s::NotImplementedException();
+            throw new sys::NotImplementedException();
         }
 
         /// <summary>
@@ -1010,7 +1010,7 @@ namespace Google.Cloud.BigQuery.DataTransfer.V1
         /// </returns>
         public virtual stt::Task<TransferConfig> UpdateTransferConfigAsync(
             TransferConfig transferConfig,
-            protowkt::FieldMask updateMask,
+            pbwkt::FieldMask updateMask,
             gaxgrpc::CallSettings callSettings = null) => UpdateTransferConfigAsync(
                 new UpdateTransferConfigRequest
                 {
@@ -1037,7 +1037,7 @@ namespace Google.Cloud.BigQuery.DataTransfer.V1
         /// </returns>
         public virtual stt::Task<TransferConfig> UpdateTransferConfigAsync(
             TransferConfig transferConfig,
-            protowkt::FieldMask updateMask,
+            pbwkt::FieldMask updateMask,
             st::CancellationToken cancellationToken) => UpdateTransferConfigAsync(
                 transferConfig,
                 updateMask,
@@ -1061,7 +1061,7 @@ namespace Google.Cloud.BigQuery.DataTransfer.V1
         /// </returns>
         public virtual TransferConfig UpdateTransferConfig(
             TransferConfig transferConfig,
-            protowkt::FieldMask updateMask,
+            pbwkt::FieldMask updateMask,
             gaxgrpc::CallSettings callSettings = null) => UpdateTransferConfig(
                 new UpdateTransferConfigRequest
                 {
@@ -1087,7 +1087,7 @@ namespace Google.Cloud.BigQuery.DataTransfer.V1
             UpdateTransferConfigRequest request,
             gaxgrpc::CallSettings callSettings = null)
         {
-            throw new s::NotImplementedException();
+            throw new sys::NotImplementedException();
         }
 
         /// <summary>
@@ -1126,7 +1126,7 @@ namespace Google.Cloud.BigQuery.DataTransfer.V1
             UpdateTransferConfigRequest request,
             gaxgrpc::CallSettings callSettings = null)
         {
-            throw new s::NotImplementedException();
+            throw new sys::NotImplementedException();
         }
 
         /// <summary>
@@ -1209,7 +1209,7 @@ namespace Google.Cloud.BigQuery.DataTransfer.V1
             DeleteTransferConfigRequest request,
             gaxgrpc::CallSettings callSettings = null)
         {
-            throw new s::NotImplementedException();
+            throw new sys::NotImplementedException();
         }
 
         /// <summary>
@@ -1245,7 +1245,7 @@ namespace Google.Cloud.BigQuery.DataTransfer.V1
             DeleteTransferConfigRequest request,
             gaxgrpc::CallSettings callSettings = null)
         {
-            throw new s::NotImplementedException();
+            throw new sys::NotImplementedException();
         }
 
         /// <summary>
@@ -1327,7 +1327,7 @@ namespace Google.Cloud.BigQuery.DataTransfer.V1
             GetTransferConfigRequest request,
             gaxgrpc::CallSettings callSettings = null)
         {
-            throw new s::NotImplementedException();
+            throw new sys::NotImplementedException();
         }
 
         /// <summary>
@@ -1364,7 +1364,7 @@ namespace Google.Cloud.BigQuery.DataTransfer.V1
             GetTransferConfigRequest request,
             gaxgrpc::CallSettings callSettings = null)
         {
-            throw new s::NotImplementedException();
+            throw new sys::NotImplementedException();
         }
 
         /// <summary>
@@ -1451,7 +1451,7 @@ namespace Google.Cloud.BigQuery.DataTransfer.V1
             ListTransferConfigsRequest request,
             gaxgrpc::CallSettings callSettings = null)
         {
-            throw new s::NotImplementedException();
+            throw new sys::NotImplementedException();
         }
 
         /// <summary>
@@ -1470,7 +1470,7 @@ namespace Google.Cloud.BigQuery.DataTransfer.V1
             ListTransferConfigsRequest request,
             gaxgrpc::CallSettings callSettings = null)
         {
-            throw new s::NotImplementedException();
+            throw new sys::NotImplementedException();
         }
 
         /// <summary>
@@ -1499,8 +1499,8 @@ namespace Google.Cloud.BigQuery.DataTransfer.V1
         /// </returns>
         public virtual stt::Task<ScheduleTransferRunsResponse> ScheduleTransferRunsAsync(
             TransferConfigNameOneof parent,
-            protowkt::Timestamp startTime,
-            protowkt::Timestamp endTime,
+            pbwkt::Timestamp startTime,
+            pbwkt::Timestamp endTime,
             gaxgrpc::CallSettings callSettings = null) => ScheduleTransferRunsAsync(
                 new ScheduleTransferRunsRequest
                 {
@@ -1536,8 +1536,8 @@ namespace Google.Cloud.BigQuery.DataTransfer.V1
         /// </returns>
         public virtual stt::Task<ScheduleTransferRunsResponse> ScheduleTransferRunsAsync(
             TransferConfigNameOneof parent,
-            protowkt::Timestamp startTime,
-            protowkt::Timestamp endTime,
+            pbwkt::Timestamp startTime,
+            pbwkt::Timestamp endTime,
             st::CancellationToken cancellationToken) => ScheduleTransferRunsAsync(
                 parent,
                 startTime,
@@ -1570,8 +1570,8 @@ namespace Google.Cloud.BigQuery.DataTransfer.V1
         /// </returns>
         public virtual ScheduleTransferRunsResponse ScheduleTransferRuns(
             TransferConfigNameOneof parent,
-            protowkt::Timestamp startTime,
-            protowkt::Timestamp endTime,
+            pbwkt::Timestamp startTime,
+            pbwkt::Timestamp endTime,
             gaxgrpc::CallSettings callSettings = null) => ScheduleTransferRuns(
                 new ScheduleTransferRunsRequest
                 {
@@ -1600,7 +1600,7 @@ namespace Google.Cloud.BigQuery.DataTransfer.V1
             ScheduleTransferRunsRequest request,
             gaxgrpc::CallSettings callSettings = null)
         {
-            throw new s::NotImplementedException();
+            throw new sys::NotImplementedException();
         }
 
         /// <summary>
@@ -1643,7 +1643,7 @@ namespace Google.Cloud.BigQuery.DataTransfer.V1
             ScheduleTransferRunsRequest request,
             gaxgrpc::CallSettings callSettings = null)
         {
-            throw new s::NotImplementedException();
+            throw new sys::NotImplementedException();
         }
 
         /// <summary>
@@ -1725,7 +1725,7 @@ namespace Google.Cloud.BigQuery.DataTransfer.V1
             GetTransferRunRequest request,
             gaxgrpc::CallSettings callSettings = null)
         {
-            throw new s::NotImplementedException();
+            throw new sys::NotImplementedException();
         }
 
         /// <summary>
@@ -1762,7 +1762,7 @@ namespace Google.Cloud.BigQuery.DataTransfer.V1
             GetTransferRunRequest request,
             gaxgrpc::CallSettings callSettings = null)
         {
-            throw new s::NotImplementedException();
+            throw new sys::NotImplementedException();
         }
 
         /// <summary>
@@ -1841,7 +1841,7 @@ namespace Google.Cloud.BigQuery.DataTransfer.V1
             DeleteTransferRunRequest request,
             gaxgrpc::CallSettings callSettings = null)
         {
-            throw new s::NotImplementedException();
+            throw new sys::NotImplementedException();
         }
 
         /// <summary>
@@ -1875,7 +1875,7 @@ namespace Google.Cloud.BigQuery.DataTransfer.V1
             DeleteTransferRunRequest request,
             gaxgrpc::CallSettings callSettings = null)
         {
-            throw new s::NotImplementedException();
+            throw new sys::NotImplementedException();
         }
 
         /// <summary>
@@ -1964,7 +1964,7 @@ namespace Google.Cloud.BigQuery.DataTransfer.V1
             ListTransferRunsRequest request,
             gaxgrpc::CallSettings callSettings = null)
         {
-            throw new s::NotImplementedException();
+            throw new sys::NotImplementedException();
         }
 
         /// <summary>
@@ -1983,7 +1983,7 @@ namespace Google.Cloud.BigQuery.DataTransfer.V1
             ListTransferRunsRequest request,
             gaxgrpc::CallSettings callSettings = null)
         {
-            throw new s::NotImplementedException();
+            throw new sys::NotImplementedException();
         }
 
         /// <summary>
@@ -2070,7 +2070,7 @@ namespace Google.Cloud.BigQuery.DataTransfer.V1
             ListTransferLogsRequest request,
             gaxgrpc::CallSettings callSettings = null)
         {
-            throw new s::NotImplementedException();
+            throw new sys::NotImplementedException();
         }
 
         /// <summary>
@@ -2089,7 +2089,7 @@ namespace Google.Cloud.BigQuery.DataTransfer.V1
             ListTransferLogsRequest request,
             gaxgrpc::CallSettings callSettings = null)
         {
-            throw new s::NotImplementedException();
+            throw new sys::NotImplementedException();
         }
 
         /// <summary>
@@ -2191,7 +2191,7 @@ namespace Google.Cloud.BigQuery.DataTransfer.V1
             CheckValidCredsRequest request,
             gaxgrpc::CallSettings callSettings = null)
         {
-            throw new s::NotImplementedException();
+            throw new sys::NotImplementedException();
         }
 
         /// <summary>
@@ -2238,7 +2238,7 @@ namespace Google.Cloud.BigQuery.DataTransfer.V1
             CheckValidCredsRequest request,
             gaxgrpc::CallSettings callSettings = null)
         {
-            throw new s::NotImplementedException();
+            throw new sys::NotImplementedException();
         }
 
     }
@@ -2252,12 +2252,12 @@ namespace Google.Cloud.BigQuery.DataTransfer.V1
         private readonly gaxgrpc::ApiCall<ListDataSourcesRequest, ListDataSourcesResponse> _callListDataSources;
         private readonly gaxgrpc::ApiCall<CreateTransferConfigRequest, TransferConfig> _callCreateTransferConfig;
         private readonly gaxgrpc::ApiCall<UpdateTransferConfigRequest, TransferConfig> _callUpdateTransferConfig;
-        private readonly gaxgrpc::ApiCall<DeleteTransferConfigRequest, protowkt::Empty> _callDeleteTransferConfig;
+        private readonly gaxgrpc::ApiCall<DeleteTransferConfigRequest, pbwkt::Empty> _callDeleteTransferConfig;
         private readonly gaxgrpc::ApiCall<GetTransferConfigRequest, TransferConfig> _callGetTransferConfig;
         private readonly gaxgrpc::ApiCall<ListTransferConfigsRequest, ListTransferConfigsResponse> _callListTransferConfigs;
         private readonly gaxgrpc::ApiCall<ScheduleTransferRunsRequest, ScheduleTransferRunsResponse> _callScheduleTransferRuns;
         private readonly gaxgrpc::ApiCall<GetTransferRunRequest, TransferRun> _callGetTransferRun;
-        private readonly gaxgrpc::ApiCall<DeleteTransferRunRequest, protowkt::Empty> _callDeleteTransferRun;
+        private readonly gaxgrpc::ApiCall<DeleteTransferRunRequest, pbwkt::Empty> _callDeleteTransferRun;
         private readonly gaxgrpc::ApiCall<ListTransferRunsRequest, ListTransferRunsResponse> _callListTransferRuns;
         private readonly gaxgrpc::ApiCall<ListTransferLogsRequest, ListTransferLogsResponse> _callListTransferLogs;
         private readonly gaxgrpc::ApiCall<CheckValidCredsRequest, CheckValidCredsResponse> _callCheckValidCreds;
@@ -2280,7 +2280,7 @@ namespace Google.Cloud.BigQuery.DataTransfer.V1
                 GrpcClient.CreateTransferConfigAsync, GrpcClient.CreateTransferConfig, effectiveSettings.CreateTransferConfigSettings);
             _callUpdateTransferConfig = clientHelper.BuildApiCall<UpdateTransferConfigRequest, TransferConfig>(
                 GrpcClient.UpdateTransferConfigAsync, GrpcClient.UpdateTransferConfig, effectiveSettings.UpdateTransferConfigSettings);
-            _callDeleteTransferConfig = clientHelper.BuildApiCall<DeleteTransferConfigRequest, protowkt::Empty>(
+            _callDeleteTransferConfig = clientHelper.BuildApiCall<DeleteTransferConfigRequest, pbwkt::Empty>(
                 GrpcClient.DeleteTransferConfigAsync, GrpcClient.DeleteTransferConfig, effectiveSettings.DeleteTransferConfigSettings);
             _callGetTransferConfig = clientHelper.BuildApiCall<GetTransferConfigRequest, TransferConfig>(
                 GrpcClient.GetTransferConfigAsync, GrpcClient.GetTransferConfig, effectiveSettings.GetTransferConfigSettings);
@@ -2290,7 +2290,7 @@ namespace Google.Cloud.BigQuery.DataTransfer.V1
                 GrpcClient.ScheduleTransferRunsAsync, GrpcClient.ScheduleTransferRuns, effectiveSettings.ScheduleTransferRunsSettings);
             _callGetTransferRun = clientHelper.BuildApiCall<GetTransferRunRequest, TransferRun>(
                 GrpcClient.GetTransferRunAsync, GrpcClient.GetTransferRun, effectiveSettings.GetTransferRunSettings);
-            _callDeleteTransferRun = clientHelper.BuildApiCall<DeleteTransferRunRequest, protowkt::Empty>(
+            _callDeleteTransferRun = clientHelper.BuildApiCall<DeleteTransferRunRequest, pbwkt::Empty>(
                 GrpcClient.DeleteTransferRunAsync, GrpcClient.DeleteTransferRun, effectiveSettings.DeleteTransferRunSettings);
             _callListTransferRuns = clientHelper.BuildApiCall<ListTransferRunsRequest, ListTransferRunsResponse>(
                 GrpcClient.ListTransferRunsAsync, GrpcClient.ListTransferRuns, effectiveSettings.ListTransferRunsSettings);
@@ -2332,8 +2332,8 @@ namespace Google.Cloud.BigQuery.DataTransfer.V1
         // Partial methods called for every ApiCall on construction.
         // Allows modification of all the underlying ApiCall objects.
         partial void Modify_ApiCall<TRequest, TResponse>(ref gaxgrpc::ApiCall<TRequest, TResponse> call)
-            where TRequest : class, proto::IMessage<TRequest>
-            where TResponse : class, proto::IMessage<TResponse>;
+            where TRequest : class, pb::IMessage<TRequest>
+            where TResponse : class, pb::IMessage<TResponse>;
 
         // Partial methods called for each ApiCall on construction.
         // Allows per-RPC-method modification of the underlying ApiCall object.
@@ -2341,12 +2341,12 @@ namespace Google.Cloud.BigQuery.DataTransfer.V1
         partial void Modify_ListDataSourcesApiCall(ref gaxgrpc::ApiCall<ListDataSourcesRequest, ListDataSourcesResponse> call);
         partial void Modify_CreateTransferConfigApiCall(ref gaxgrpc::ApiCall<CreateTransferConfigRequest, TransferConfig> call);
         partial void Modify_UpdateTransferConfigApiCall(ref gaxgrpc::ApiCall<UpdateTransferConfigRequest, TransferConfig> call);
-        partial void Modify_DeleteTransferConfigApiCall(ref gaxgrpc::ApiCall<DeleteTransferConfigRequest, protowkt::Empty> call);
+        partial void Modify_DeleteTransferConfigApiCall(ref gaxgrpc::ApiCall<DeleteTransferConfigRequest, pbwkt::Empty> call);
         partial void Modify_GetTransferConfigApiCall(ref gaxgrpc::ApiCall<GetTransferConfigRequest, TransferConfig> call);
         partial void Modify_ListTransferConfigsApiCall(ref gaxgrpc::ApiCall<ListTransferConfigsRequest, ListTransferConfigsResponse> call);
         partial void Modify_ScheduleTransferRunsApiCall(ref gaxgrpc::ApiCall<ScheduleTransferRunsRequest, ScheduleTransferRunsResponse> call);
         partial void Modify_GetTransferRunApiCall(ref gaxgrpc::ApiCall<GetTransferRunRequest, TransferRun> call);
-        partial void Modify_DeleteTransferRunApiCall(ref gaxgrpc::ApiCall<DeleteTransferRunRequest, protowkt::Empty> call);
+        partial void Modify_DeleteTransferRunApiCall(ref gaxgrpc::ApiCall<DeleteTransferRunRequest, pbwkt::Empty> call);
         partial void Modify_ListTransferRunsApiCall(ref gaxgrpc::ApiCall<ListTransferRunsRequest, ListTransferRunsResponse> call);
         partial void Modify_ListTransferLogsApiCall(ref gaxgrpc::ApiCall<ListTransferLogsRequest, ListTransferLogsResponse> call);
         partial void Modify_CheckValidCredsApiCall(ref gaxgrpc::ApiCall<CheckValidCredsRequest, CheckValidCredsResponse> call);

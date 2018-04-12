@@ -15,15 +15,15 @@
 // Generated code. DO NOT EDIT!
 
 using gax = Google.Api.Gax;
-using s = System;
-using System.Linq;
+using sys = System;
+using linq = System.Linq;
 
 namespace Google.Cloud.Spanner.Admin.Database.V1
 {
     /// <summary>
     /// Resource name for the 'instance' resource.
     /// </summary>
-    public sealed partial class InstanceName : gax::IResourceName, s::IEquatable<InstanceName>
+    public sealed partial class InstanceName : gax::IResourceName, sys::IEquatable<InstanceName>
     {
         private static readonly gax::PathTemplate s_template = new gax::PathTemplate("projects/{project}/instances/{instance}");
 
@@ -45,7 +45,7 @@ namespace Google.Cloud.Spanner.Admin.Database.V1
         /// <see cref="InstanceName"/> instance.
         /// </summary>
         /// <remarks>
-        /// This method still throws <see cref="s::ArgumentNullException"/> if <paramref name="instanceName"/> is null,
+        /// This method still throws <see cref="sys::ArgumentNullException"/> if <paramref name="instanceName"/> is null,
         /// as this would usually indicate a programming error rather than a data error.
         /// </remarks>
         /// <param name="instanceName">The instance resource name in string form. Must not be <c>null</c>.</param>
@@ -115,7 +115,7 @@ namespace Google.Cloud.Spanner.Admin.Database.V1
     /// <summary>
     /// Resource name for the 'database' resource.
     /// </summary>
-    public sealed partial class DatabaseName : gax::IResourceName, s::IEquatable<DatabaseName>
+    public sealed partial class DatabaseName : gax::IResourceName, sys::IEquatable<DatabaseName>
     {
         private static readonly gax::PathTemplate s_template = new gax::PathTemplate("projects/{project}/instances/{instance}/databases/{database}");
 
@@ -137,7 +137,7 @@ namespace Google.Cloud.Spanner.Admin.Database.V1
         /// <see cref="DatabaseName"/> instance.
         /// </summary>
         /// <remarks>
-        /// This method still throws <see cref="s::ArgumentNullException"/> if <paramref name="databaseName"/> is null,
+        /// This method still throws <see cref="sys::ArgumentNullException"/> if <paramref name="databaseName"/> is null,
         /// as this would usually indicate a programming error rather than a data error.
         /// </remarks>
         /// <param name="databaseName">The database resource name in string form. Must not be <c>null</c>.</param>
@@ -215,9 +215,9 @@ namespace Google.Cloud.Spanner.Admin.Database.V1
     public partial class CreateDatabaseMetadata
     {
         /// <summary>
-        /// <see cref="DatabaseName"/>-typed view over the <see cref="Database"/> resource name property.
+        /// <see cref="Google.Cloud.Spanner.Admin.Database.V1.DatabaseName"/>-typed view over the <see cref="Database"/> resource name property.
         /// </summary>
-        public DatabaseName DatabaseAsDatabaseName
+        public Google.Cloud.Spanner.Admin.Database.V1.DatabaseName DatabaseAsDatabaseName
         {
             get { return string.IsNullOrEmpty(Database) ? null : Google.Cloud.Spanner.Admin.Database.V1.DatabaseName.Parse(Database); }
             set { Database = value != null ? value.ToString() : ""; }
@@ -228,9 +228,9 @@ namespace Google.Cloud.Spanner.Admin.Database.V1
     public partial class CreateDatabaseRequest
     {
         /// <summary>
-        /// <see cref="InstanceName"/>-typed view over the <see cref="Parent"/> resource name property.
+        /// <see cref="Google.Cloud.Spanner.Admin.Database.V1.InstanceName"/>-typed view over the <see cref="Parent"/> resource name property.
         /// </summary>
-        public InstanceName ParentAsInstanceName
+        public Google.Cloud.Spanner.Admin.Database.V1.InstanceName ParentAsInstanceName
         {
             get { return string.IsNullOrEmpty(Parent) ? null : Google.Cloud.Spanner.Admin.Database.V1.InstanceName.Parse(Parent); }
             set { Parent = value != null ? value.ToString() : ""; }
@@ -241,9 +241,9 @@ namespace Google.Cloud.Spanner.Admin.Database.V1
     public partial class DropDatabaseRequest
     {
         /// <summary>
-        /// <see cref="DatabaseName"/>-typed view over the <see cref="Database"/> resource name property.
+        /// <see cref="Google.Cloud.Spanner.Admin.Database.V1.DatabaseName"/>-typed view over the <see cref="Database"/> resource name property.
         /// </summary>
-        public DatabaseName DatabaseAsDatabaseName
+        public Google.Cloud.Spanner.Admin.Database.V1.DatabaseName DatabaseAsDatabaseName
         {
             get { return string.IsNullOrEmpty(Database) ? null : Google.Cloud.Spanner.Admin.Database.V1.DatabaseName.Parse(Database); }
             set { Database = value != null ? value.ToString() : ""; }
@@ -254,9 +254,9 @@ namespace Google.Cloud.Spanner.Admin.Database.V1
     public partial class GetDatabaseDdlRequest
     {
         /// <summary>
-        /// <see cref="DatabaseName"/>-typed view over the <see cref="Database"/> resource name property.
+        /// <see cref="Google.Cloud.Spanner.Admin.Database.V1.DatabaseName"/>-typed view over the <see cref="Database"/> resource name property.
         /// </summary>
-        public DatabaseName DatabaseAsDatabaseName
+        public Google.Cloud.Spanner.Admin.Database.V1.DatabaseName DatabaseAsDatabaseName
         {
             get { return string.IsNullOrEmpty(Database) ? null : Google.Cloud.Spanner.Admin.Database.V1.DatabaseName.Parse(Database); }
             set { Database = value != null ? value.ToString() : ""; }
@@ -267,9 +267,9 @@ namespace Google.Cloud.Spanner.Admin.Database.V1
     public partial class GetDatabaseRequest
     {
         /// <summary>
-        /// <see cref="DatabaseName"/>-typed view over the <see cref="Name"/> resource name property.
+        /// <see cref="Google.Cloud.Spanner.Admin.Database.V1.DatabaseName"/>-typed view over the <see cref="Name"/> resource name property.
         /// </summary>
-        public DatabaseName DatabaseName
+        public Google.Cloud.Spanner.Admin.Database.V1.DatabaseName DatabaseName
         {
             get { return string.IsNullOrEmpty(Name) ? null : Google.Cloud.Spanner.Admin.Database.V1.DatabaseName.Parse(Name); }
             set { Name = value != null ? value.ToString() : ""; }
@@ -280,9 +280,9 @@ namespace Google.Cloud.Spanner.Admin.Database.V1
     public partial class ListDatabasesRequest
     {
         /// <summary>
-        /// <see cref="InstanceName"/>-typed view over the <see cref="Parent"/> resource name property.
+        /// <see cref="Google.Cloud.Spanner.Admin.Database.V1.InstanceName"/>-typed view over the <see cref="Parent"/> resource name property.
         /// </summary>
-        public InstanceName ParentAsInstanceName
+        public Google.Cloud.Spanner.Admin.Database.V1.InstanceName ParentAsInstanceName
         {
             get { return string.IsNullOrEmpty(Parent) ? null : Google.Cloud.Spanner.Admin.Database.V1.InstanceName.Parse(Parent); }
             set { Parent = value != null ? value.ToString() : ""; }
@@ -293,9 +293,9 @@ namespace Google.Cloud.Spanner.Admin.Database.V1
     public partial class UpdateDatabaseDdlMetadata
     {
         /// <summary>
-        /// <see cref="DatabaseName"/>-typed view over the <see cref="Database"/> resource name property.
+        /// <see cref="Google.Cloud.Spanner.Admin.Database.V1.DatabaseName"/>-typed view over the <see cref="Database"/> resource name property.
         /// </summary>
-        public DatabaseName DatabaseAsDatabaseName
+        public Google.Cloud.Spanner.Admin.Database.V1.DatabaseName DatabaseAsDatabaseName
         {
             get { return string.IsNullOrEmpty(Database) ? null : Google.Cloud.Spanner.Admin.Database.V1.DatabaseName.Parse(Database); }
             set { Database = value != null ? value.ToString() : ""; }
@@ -306,9 +306,9 @@ namespace Google.Cloud.Spanner.Admin.Database.V1
     public partial class UpdateDatabaseDdlRequest
     {
         /// <summary>
-        /// <see cref="DatabaseName"/>-typed view over the <see cref="Database"/> resource name property.
+        /// <see cref="Google.Cloud.Spanner.Admin.Database.V1.DatabaseName"/>-typed view over the <see cref="Database"/> resource name property.
         /// </summary>
-        public DatabaseName DatabaseAsDatabaseName
+        public Google.Cloud.Spanner.Admin.Database.V1.DatabaseName DatabaseAsDatabaseName
         {
             get { return string.IsNullOrEmpty(Database) ? null : Google.Cloud.Spanner.Admin.Database.V1.DatabaseName.Parse(Database); }
             set { Database = value != null ? value.ToString() : ""; }

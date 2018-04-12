@@ -17,14 +17,14 @@
 using gax = Google.Api.Gax;
 using gaxgrpc = Google.Api.Gax.Grpc;
 using lro = Google.LongRunning;
-using proto = Google.Protobuf;
-using protowkt = Google.Protobuf.WellKnownTypes;
+using pb = Google.Protobuf;
+using pbwkt = Google.Protobuf.WellKnownTypes;
 using grpccore = Grpc.Core;
-using s = System;
+using sys = System;
 using sc = System.Collections;
 using scg = System.Collections.Generic;
 using sco = System.Collections.ObjectModel;
-using System.Linq;
+using linq = System.Linq;
 using st = System.Threading;
 using stt = System.Threading.Tasks;
 
@@ -69,7 +69,7 @@ namespace Google.Cloud.VideoIntelligence.V1
         /// <item><description><see cref="grpccore::StatusCode.Unavailable"/></description></item>
         /// </list>
         /// </remarks>
-        public static s::Predicate<grpccore::RpcException> IdempotentRetryFilter { get; } =
+        public static sys::Predicate<grpccore::RpcException> IdempotentRetryFilter { get; } =
             gaxgrpc::RetrySettings.FilterForStatusCodes(grpccore::StatusCode.DeadlineExceeded, grpccore::StatusCode.Unavailable);
 
         /// <summary>
@@ -79,7 +79,7 @@ namespace Google.Cloud.VideoIntelligence.V1
         /// <remarks>
         /// There are no RPC <see cref="grpccore::StatusCode"/>s eligible for retry for "NonIdempotent" RPC methods.
         /// </remarks>
-        public static s::Predicate<grpccore::RpcException> NonIdempotentRetryFilter { get; } =
+        public static sys::Predicate<grpccore::RpcException> NonIdempotentRetryFilter { get; } =
             gaxgrpc::RetrySettings.FilterForStatusCodes();
 
         /// <summary>
@@ -97,8 +97,8 @@ namespace Google.Cloud.VideoIntelligence.V1
         /// </list>
         /// </remarks>
         public static gaxgrpc::BackoffSettings GetDefaultRetryBackoff() => new gaxgrpc::BackoffSettings(
-            delay: s::TimeSpan.FromMilliseconds(1000),
-            maxDelay: s::TimeSpan.FromMilliseconds(120000),
+            delay: sys::TimeSpan.FromMilliseconds(1000),
+            maxDelay: sys::TimeSpan.FromMilliseconds(120000),
             delayMultiplier: 2.5
         );
 
@@ -117,8 +117,8 @@ namespace Google.Cloud.VideoIntelligence.V1
         /// </list>
         /// </remarks>
         public static gaxgrpc::BackoffSettings GetDefaultTimeoutBackoff() => new gaxgrpc::BackoffSettings(
-            delay: s::TimeSpan.FromMilliseconds(120000),
-            maxDelay: s::TimeSpan.FromMilliseconds(120000),
+            delay: sys::TimeSpan.FromMilliseconds(120000),
+            maxDelay: sys::TimeSpan.FromMilliseconds(120000),
             delayMultiplier: 1.0
         );
 
@@ -148,7 +148,7 @@ namespace Google.Cloud.VideoIntelligence.V1
             gaxgrpc::CallTiming.FromRetry(new gaxgrpc::RetrySettings(
                 retryBackoff: GetDefaultRetryBackoff(),
                 timeoutBackoff: GetDefaultTimeoutBackoff(),
-                totalExpiration: gax::Expiration.FromTimeout(s::TimeSpan.FromMilliseconds(600000)),
+                totalExpiration: gax::Expiration.FromTimeout(sys::TimeSpan.FromMilliseconds(600000)),
                 retryFilter: IdempotentRetryFilter
             )));
 
@@ -167,10 +167,10 @@ namespace Google.Cloud.VideoIntelligence.V1
         public lro::OperationsSettings AnnotateVideoOperationsSettings { get; set; } = new lro::OperationsSettings
         {
             DefaultPollSettings = new gax::PollSettings(
-                gax::Expiration.FromTimeout(s::TimeSpan.FromMilliseconds(86400000L)),
-                s::TimeSpan.FromMilliseconds(20000L),
+                gax::Expiration.FromTimeout(sys::TimeSpan.FromMilliseconds(86400000L)),
+                sys::TimeSpan.FromMilliseconds(20000L),
                 1.5,
-                s::TimeSpan.FromMilliseconds(45000L))
+                sys::TimeSpan.FromMilliseconds(45000L))
         };
 
         /// <summary>
@@ -269,7 +269,7 @@ namespace Google.Cloud.VideoIntelligence.V1
         /// </summary>
         public virtual VideoIntelligenceService.VideoIntelligenceServiceClient GrpcClient
         {
-            get { throw new s::NotImplementedException(); }
+            get { throw new sys::NotImplementedException(); }
         }
 
         /// <summary>
@@ -306,7 +306,7 @@ namespace Google.Cloud.VideoIntelligence.V1
                 new AnnotateVideoRequest
                 {
                     InputUri = inputUri ?? "", // Optional
-                    Features = { features ?? Enumerable.Empty<Feature>() }, // Optional
+                    Features = { features ?? linq::Enumerable.Empty<Feature>() }, // Optional
                 },
                 callSettings);
 
@@ -379,7 +379,7 @@ namespace Google.Cloud.VideoIntelligence.V1
                 new AnnotateVideoRequest
                 {
                     InputUri = inputUri ?? "", // Optional
-                    Features = { features ?? Enumerable.Empty<Feature>() }, // Optional
+                    Features = { features ?? linq::Enumerable.Empty<Feature>() }, // Optional
                 },
                 callSettings);
 
@@ -402,7 +402,7 @@ namespace Google.Cloud.VideoIntelligence.V1
             AnnotateVideoRequest request,
             gaxgrpc::CallSettings callSettings = null)
         {
-            throw new s::NotImplementedException();
+            throw new sys::NotImplementedException();
         }
 
         /// <summary>
@@ -437,7 +437,7 @@ namespace Google.Cloud.VideoIntelligence.V1
             AnnotateVideoRequest request,
             gaxgrpc::CallSettings callSettings = null)
         {
-            throw new s::NotImplementedException();
+            throw new sys::NotImplementedException();
         }
 
         /// <summary>
@@ -445,7 +445,7 @@ namespace Google.Cloud.VideoIntelligence.V1
         /// </summary>
         public virtual lro::OperationsClient AnnotateVideoOperationsClient
         {
-            get { throw new s::NotImplementedException(); }
+            get { throw new sys::NotImplementedException(); }
         }
 
         /// <summary>
@@ -494,8 +494,8 @@ namespace Google.Cloud.VideoIntelligence.V1
         // Partial methods called for every ApiCall on construction.
         // Allows modification of all the underlying ApiCall objects.
         partial void Modify_ApiCall<TRequest, TResponse>(ref gaxgrpc::ApiCall<TRequest, TResponse> call)
-            where TRequest : class, proto::IMessage<TRequest>
-            where TResponse : class, proto::IMessage<TResponse>;
+            where TRequest : class, pb::IMessage<TRequest>
+            where TResponse : class, pb::IMessage<TResponse>;
 
         // Partial methods called for each ApiCall on construction.
         // Allows per-RPC-method modification of the underlying ApiCall object.

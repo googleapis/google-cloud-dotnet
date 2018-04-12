@@ -15,15 +15,15 @@
 // Generated code. DO NOT EDIT!
 
 using gax = Google.Api.Gax;
-using s = System;
-using System.Linq;
+using sys = System;
+using linq = System.Linq;
 
 namespace Google.Cloud.Monitoring.V3
 {
     /// <summary>
     /// Resource name for the 'project' resource.
     /// </summary>
-    public sealed partial class ProjectName : gax::IResourceName, s::IEquatable<ProjectName>
+    public sealed partial class ProjectName : gax::IResourceName, sys::IEquatable<ProjectName>
     {
         private static readonly gax::PathTemplate s_template = new gax::PathTemplate("projects/{project}");
 
@@ -45,7 +45,7 @@ namespace Google.Cloud.Monitoring.V3
         /// <see cref="ProjectName"/> instance.
         /// </summary>
         /// <remarks>
-        /// This method still throws <see cref="s::ArgumentNullException"/> if <paramref name="projectName"/> is null,
+        /// This method still throws <see cref="sys::ArgumentNullException"/> if <paramref name="projectName"/> is null,
         /// as this would usually indicate a programming error rather than a data error.
         /// </remarks>
         /// <param name="projectName">The project resource name in string form. Must not be <c>null</c>.</param>
@@ -108,7 +108,7 @@ namespace Google.Cloud.Monitoring.V3
     /// <summary>
     /// Resource name for the 'alert_policy' resource.
     /// </summary>
-    public sealed partial class AlertPolicyName : gax::IResourceName, s::IEquatable<AlertPolicyName>
+    public sealed partial class AlertPolicyName : gax::IResourceName, sys::IEquatable<AlertPolicyName>
     {
         private static readonly gax::PathTemplate s_template = new gax::PathTemplate("projects/{project}/alertPolicies/{alert_policy}");
 
@@ -130,7 +130,7 @@ namespace Google.Cloud.Monitoring.V3
         /// <see cref="AlertPolicyName"/> instance.
         /// </summary>
         /// <remarks>
-        /// This method still throws <see cref="s::ArgumentNullException"/> if <paramref name="alertPolicyName"/> is null,
+        /// This method still throws <see cref="sys::ArgumentNullException"/> if <paramref name="alertPolicyName"/> is null,
         /// as this would usually indicate a programming error rather than a data error.
         /// </remarks>
         /// <param name="alertPolicyName">The alert_policy resource name in string form. Must not be <c>null</c>.</param>
@@ -200,7 +200,7 @@ namespace Google.Cloud.Monitoring.V3
     /// <summary>
     /// Resource name for the 'alert_policy_condition' resource.
     /// </summary>
-    public sealed partial class AlertPolicyConditionName : gax::IResourceName, s::IEquatable<AlertPolicyConditionName>
+    public sealed partial class AlertPolicyConditionName : gax::IResourceName, sys::IEquatable<AlertPolicyConditionName>
     {
         private static readonly gax::PathTemplate s_template = new gax::PathTemplate("projects/{project}/alertPolicies/{alert_policy}/conditions/{condition}");
 
@@ -222,7 +222,7 @@ namespace Google.Cloud.Monitoring.V3
         /// <see cref="AlertPolicyConditionName"/> instance.
         /// </summary>
         /// <remarks>
-        /// This method still throws <see cref="s::ArgumentNullException"/> if <paramref name="alertPolicyConditionName"/> is null,
+        /// This method still throws <see cref="sys::ArgumentNullException"/> if <paramref name="alertPolicyConditionName"/> is null,
         /// as this would usually indicate a programming error rather than a data error.
         /// </remarks>
         /// <param name="alertPolicyConditionName">The alert_policy_condition resource name in string form. Must not be <c>null</c>.</param>
@@ -299,7 +299,7 @@ namespace Google.Cloud.Monitoring.V3
     /// <summary>
     /// Resource name for the 'group' resource.
     /// </summary>
-    public sealed partial class GroupName : gax::IResourceName, s::IEquatable<GroupName>
+    public sealed partial class GroupName : gax::IResourceName, sys::IEquatable<GroupName>
     {
         private static readonly gax::PathTemplate s_template = new gax::PathTemplate("projects/{project}/groups/{group}");
 
@@ -321,7 +321,7 @@ namespace Google.Cloud.Monitoring.V3
         /// <see cref="GroupName"/> instance.
         /// </summary>
         /// <remarks>
-        /// This method still throws <see cref="s::ArgumentNullException"/> if <paramref name="groupName"/> is null,
+        /// This method still throws <see cref="sys::ArgumentNullException"/> if <paramref name="groupName"/> is null,
         /// as this would usually indicate a programming error rather than a data error.
         /// </remarks>
         /// <param name="groupName">The group resource name in string form. Must not be <c>null</c>.</param>
@@ -391,7 +391,7 @@ namespace Google.Cloud.Monitoring.V3
     /// <summary>
     /// Resource name for the 'metric_descriptor' resource.
     /// </summary>
-    public sealed partial class MetricDescriptorName : gax::IResourceName, s::IEquatable<MetricDescriptorName>
+    public sealed partial class MetricDescriptorName : gax::IResourceName, sys::IEquatable<MetricDescriptorName>
     {
         private static readonly gax::PathTemplate s_template = new gax::PathTemplate("projects/{project}/metricDescriptors/{metric_descriptor=**}");
 
@@ -413,7 +413,7 @@ namespace Google.Cloud.Monitoring.V3
         /// <see cref="MetricDescriptorName"/> instance.
         /// </summary>
         /// <remarks>
-        /// This method still throws <see cref="s::ArgumentNullException"/> if <paramref name="metricDescriptorName"/> is null,
+        /// This method still throws <see cref="sys::ArgumentNullException"/> if <paramref name="metricDescriptorName"/> is null,
         /// as this would usually indicate a programming error rather than a data error.
         /// </remarks>
         /// <param name="metricDescriptorName">The metric_descriptor resource name in string form. Must not be <c>null</c>.</param>
@@ -483,7 +483,7 @@ namespace Google.Cloud.Monitoring.V3
     /// <summary>
     /// Resource name for the 'monitored_resource_descriptor' resource.
     /// </summary>
-    public sealed partial class MonitoredResourceDescriptorName : gax::IResourceName, s::IEquatable<MonitoredResourceDescriptorName>
+    public sealed partial class MonitoredResourceDescriptorName : gax::IResourceName, sys::IEquatable<MonitoredResourceDescriptorName>
     {
         private static readonly gax::PathTemplate s_template = new gax::PathTemplate("projects/{project}/monitoredResourceDescriptors/{monitored_resource_descriptor}");
 
@@ -505,7 +505,7 @@ namespace Google.Cloud.Monitoring.V3
         /// <see cref="MonitoredResourceDescriptorName"/> instance.
         /// </summary>
         /// <remarks>
-        /// This method still throws <see cref="s::ArgumentNullException"/> if <paramref name="monitoredResourceDescriptorName"/> is null,
+        /// This method still throws <see cref="sys::ArgumentNullException"/> if <paramref name="monitoredResourceDescriptorName"/> is null,
         /// as this would usually indicate a programming error rather than a data error.
         /// </remarks>
         /// <param name="monitoredResourceDescriptorName">The monitored_resource_descriptor resource name in string form. Must not be <c>null</c>.</param>
@@ -575,7 +575,7 @@ namespace Google.Cloud.Monitoring.V3
     /// <summary>
     /// Resource name for the 'notification_channel' resource.
     /// </summary>
-    public sealed partial class NotificationChannelName : gax::IResourceName, s::IEquatable<NotificationChannelName>
+    public sealed partial class NotificationChannelName : gax::IResourceName, sys::IEquatable<NotificationChannelName>
     {
         private static readonly gax::PathTemplate s_template = new gax::PathTemplate("projects/{project}/notificationChannels/{notification_channel}");
 
@@ -597,7 +597,7 @@ namespace Google.Cloud.Monitoring.V3
         /// <see cref="NotificationChannelName"/> instance.
         /// </summary>
         /// <remarks>
-        /// This method still throws <see cref="s::ArgumentNullException"/> if <paramref name="notificationChannelName"/> is null,
+        /// This method still throws <see cref="sys::ArgumentNullException"/> if <paramref name="notificationChannelName"/> is null,
         /// as this would usually indicate a programming error rather than a data error.
         /// </remarks>
         /// <param name="notificationChannelName">The notification_channel resource name in string form. Must not be <c>null</c>.</param>
@@ -667,7 +667,7 @@ namespace Google.Cloud.Monitoring.V3
     /// <summary>
     /// Resource name for the 'notification_channel_descriptor' resource.
     /// </summary>
-    public sealed partial class NotificationChannelDescriptorName : gax::IResourceName, s::IEquatable<NotificationChannelDescriptorName>
+    public sealed partial class NotificationChannelDescriptorName : gax::IResourceName, sys::IEquatable<NotificationChannelDescriptorName>
     {
         private static readonly gax::PathTemplate s_template = new gax::PathTemplate("projects/{project}/notificationChannelDescriptors/{channel_descriptor}");
 
@@ -689,7 +689,7 @@ namespace Google.Cloud.Monitoring.V3
         /// <see cref="NotificationChannelDescriptorName"/> instance.
         /// </summary>
         /// <remarks>
-        /// This method still throws <see cref="s::ArgumentNullException"/> if <paramref name="notificationChannelDescriptorName"/> is null,
+        /// This method still throws <see cref="sys::ArgumentNullException"/> if <paramref name="notificationChannelDescriptorName"/> is null,
         /// as this would usually indicate a programming error rather than a data error.
         /// </remarks>
         /// <param name="notificationChannelDescriptorName">The notification_channel_descriptor resource name in string form. Must not be <c>null</c>.</param>
@@ -759,7 +759,7 @@ namespace Google.Cloud.Monitoring.V3
     /// <summary>
     /// Resource name for the 'uptime_check_config' resource.
     /// </summary>
-    public sealed partial class UptimeCheckConfigName : gax::IResourceName, s::IEquatable<UptimeCheckConfigName>
+    public sealed partial class UptimeCheckConfigName : gax::IResourceName, sys::IEquatable<UptimeCheckConfigName>
     {
         private static readonly gax::PathTemplate s_template = new gax::PathTemplate("projects/{project}/uptimeCheckConfigs/{uptime_check_config}");
 
@@ -781,7 +781,7 @@ namespace Google.Cloud.Monitoring.V3
         /// <see cref="UptimeCheckConfigName"/> instance.
         /// </summary>
         /// <remarks>
-        /// This method still throws <see cref="s::ArgumentNullException"/> if <paramref name="uptimeCheckConfigName"/> is null,
+        /// This method still throws <see cref="sys::ArgumentNullException"/> if <paramref name="uptimeCheckConfigName"/> is null,
         /// as this would usually indicate a programming error rather than a data error.
         /// </remarks>
         /// <param name="uptimeCheckConfigName">The uptime_check_config resource name in string form. Must not be <c>null</c>.</param>
@@ -852,9 +852,9 @@ namespace Google.Cloud.Monitoring.V3
     public partial class CreateAlertPolicyRequest
     {
         /// <summary>
-        /// <see cref="ProjectName"/>-typed view over the <see cref="Name"/> resource name property.
+        /// <see cref="Google.Cloud.Monitoring.V3.ProjectName"/>-typed view over the <see cref="Name"/> resource name property.
         /// </summary>
-        public ProjectName ProjectName
+        public Google.Cloud.Monitoring.V3.ProjectName ProjectName
         {
             get { return string.IsNullOrEmpty(Name) ? null : Google.Cloud.Monitoring.V3.ProjectName.Parse(Name); }
             set { Name = value != null ? value.ToString() : ""; }
@@ -865,9 +865,9 @@ namespace Google.Cloud.Monitoring.V3
     public partial class CreateGroupRequest
     {
         /// <summary>
-        /// <see cref="ProjectName"/>-typed view over the <see cref="Name"/> resource name property.
+        /// <see cref="Google.Cloud.Monitoring.V3.ProjectName"/>-typed view over the <see cref="Name"/> resource name property.
         /// </summary>
-        public ProjectName ProjectName
+        public Google.Cloud.Monitoring.V3.ProjectName ProjectName
         {
             get { return string.IsNullOrEmpty(Name) ? null : Google.Cloud.Monitoring.V3.ProjectName.Parse(Name); }
             set { Name = value != null ? value.ToString() : ""; }
@@ -878,9 +878,9 @@ namespace Google.Cloud.Monitoring.V3
     public partial class CreateMetricDescriptorRequest
     {
         /// <summary>
-        /// <see cref="ProjectName"/>-typed view over the <see cref="Name"/> resource name property.
+        /// <see cref="Google.Cloud.Monitoring.V3.ProjectName"/>-typed view over the <see cref="Name"/> resource name property.
         /// </summary>
-        public ProjectName ProjectName
+        public Google.Cloud.Monitoring.V3.ProjectName ProjectName
         {
             get { return string.IsNullOrEmpty(Name) ? null : Google.Cloud.Monitoring.V3.ProjectName.Parse(Name); }
             set { Name = value != null ? value.ToString() : ""; }
@@ -891,9 +891,9 @@ namespace Google.Cloud.Monitoring.V3
     public partial class CreateNotificationChannelRequest
     {
         /// <summary>
-        /// <see cref="ProjectName"/>-typed view over the <see cref="Name"/> resource name property.
+        /// <see cref="Google.Cloud.Monitoring.V3.ProjectName"/>-typed view over the <see cref="Name"/> resource name property.
         /// </summary>
-        public ProjectName ProjectName
+        public Google.Cloud.Monitoring.V3.ProjectName ProjectName
         {
             get { return string.IsNullOrEmpty(Name) ? null : Google.Cloud.Monitoring.V3.ProjectName.Parse(Name); }
             set { Name = value != null ? value.ToString() : ""; }
@@ -904,9 +904,9 @@ namespace Google.Cloud.Monitoring.V3
     public partial class CreateTimeSeriesRequest
     {
         /// <summary>
-        /// <see cref="ProjectName"/>-typed view over the <see cref="Name"/> resource name property.
+        /// <see cref="Google.Cloud.Monitoring.V3.ProjectName"/>-typed view over the <see cref="Name"/> resource name property.
         /// </summary>
-        public ProjectName ProjectName
+        public Google.Cloud.Monitoring.V3.ProjectName ProjectName
         {
             get { return string.IsNullOrEmpty(Name) ? null : Google.Cloud.Monitoring.V3.ProjectName.Parse(Name); }
             set { Name = value != null ? value.ToString() : ""; }
@@ -917,9 +917,9 @@ namespace Google.Cloud.Monitoring.V3
     public partial class DeleteAlertPolicyRequest
     {
         /// <summary>
-        /// <see cref="AlertPolicyName"/>-typed view over the <see cref="Name"/> resource name property.
+        /// <see cref="Google.Cloud.Monitoring.V3.AlertPolicyName"/>-typed view over the <see cref="Name"/> resource name property.
         /// </summary>
-        public AlertPolicyName AlertPolicyName
+        public Google.Cloud.Monitoring.V3.AlertPolicyName AlertPolicyName
         {
             get { return string.IsNullOrEmpty(Name) ? null : Google.Cloud.Monitoring.V3.AlertPolicyName.Parse(Name); }
             set { Name = value != null ? value.ToString() : ""; }
@@ -930,9 +930,9 @@ namespace Google.Cloud.Monitoring.V3
     public partial class DeleteGroupRequest
     {
         /// <summary>
-        /// <see cref="GroupName"/>-typed view over the <see cref="Name"/> resource name property.
+        /// <see cref="Google.Cloud.Monitoring.V3.GroupName"/>-typed view over the <see cref="Name"/> resource name property.
         /// </summary>
-        public GroupName GroupName
+        public Google.Cloud.Monitoring.V3.GroupName GroupName
         {
             get { return string.IsNullOrEmpty(Name) ? null : Google.Cloud.Monitoring.V3.GroupName.Parse(Name); }
             set { Name = value != null ? value.ToString() : ""; }
@@ -943,9 +943,9 @@ namespace Google.Cloud.Monitoring.V3
     public partial class DeleteMetricDescriptorRequest
     {
         /// <summary>
-        /// <see cref="MetricDescriptorName"/>-typed view over the <see cref="Name"/> resource name property.
+        /// <see cref="Google.Cloud.Monitoring.V3.MetricDescriptorName"/>-typed view over the <see cref="Name"/> resource name property.
         /// </summary>
-        public MetricDescriptorName MetricDescriptorName
+        public Google.Cloud.Monitoring.V3.MetricDescriptorName MetricDescriptorName
         {
             get { return string.IsNullOrEmpty(Name) ? null : Google.Cloud.Monitoring.V3.MetricDescriptorName.Parse(Name); }
             set { Name = value != null ? value.ToString() : ""; }
@@ -956,9 +956,9 @@ namespace Google.Cloud.Monitoring.V3
     public partial class DeleteNotificationChannelRequest
     {
         /// <summary>
-        /// <see cref="NotificationChannelName"/>-typed view over the <see cref="Name"/> resource name property.
+        /// <see cref="Google.Cloud.Monitoring.V3.NotificationChannelName"/>-typed view over the <see cref="Name"/> resource name property.
         /// </summary>
-        public NotificationChannelName NotificationChannelName
+        public Google.Cloud.Monitoring.V3.NotificationChannelName NotificationChannelName
         {
             get { return string.IsNullOrEmpty(Name) ? null : Google.Cloud.Monitoring.V3.NotificationChannelName.Parse(Name); }
             set { Name = value != null ? value.ToString() : ""; }
@@ -969,9 +969,9 @@ namespace Google.Cloud.Monitoring.V3
     public partial class GetAlertPolicyRequest
     {
         /// <summary>
-        /// <see cref="AlertPolicyName"/>-typed view over the <see cref="Name"/> resource name property.
+        /// <see cref="Google.Cloud.Monitoring.V3.AlertPolicyName"/>-typed view over the <see cref="Name"/> resource name property.
         /// </summary>
-        public AlertPolicyName AlertPolicyName
+        public Google.Cloud.Monitoring.V3.AlertPolicyName AlertPolicyName
         {
             get { return string.IsNullOrEmpty(Name) ? null : Google.Cloud.Monitoring.V3.AlertPolicyName.Parse(Name); }
             set { Name = value != null ? value.ToString() : ""; }
@@ -982,9 +982,9 @@ namespace Google.Cloud.Monitoring.V3
     public partial class GetGroupRequest
     {
         /// <summary>
-        /// <see cref="GroupName"/>-typed view over the <see cref="Name"/> resource name property.
+        /// <see cref="Google.Cloud.Monitoring.V3.GroupName"/>-typed view over the <see cref="Name"/> resource name property.
         /// </summary>
-        public GroupName GroupName
+        public Google.Cloud.Monitoring.V3.GroupName GroupName
         {
             get { return string.IsNullOrEmpty(Name) ? null : Google.Cloud.Monitoring.V3.GroupName.Parse(Name); }
             set { Name = value != null ? value.ToString() : ""; }
@@ -995,9 +995,9 @@ namespace Google.Cloud.Monitoring.V3
     public partial class GetMetricDescriptorRequest
     {
         /// <summary>
-        /// <see cref="MetricDescriptorName"/>-typed view over the <see cref="Name"/> resource name property.
+        /// <see cref="Google.Cloud.Monitoring.V3.MetricDescriptorName"/>-typed view over the <see cref="Name"/> resource name property.
         /// </summary>
-        public MetricDescriptorName MetricDescriptorName
+        public Google.Cloud.Monitoring.V3.MetricDescriptorName MetricDescriptorName
         {
             get { return string.IsNullOrEmpty(Name) ? null : Google.Cloud.Monitoring.V3.MetricDescriptorName.Parse(Name); }
             set { Name = value != null ? value.ToString() : ""; }
@@ -1008,9 +1008,9 @@ namespace Google.Cloud.Monitoring.V3
     public partial class GetMonitoredResourceDescriptorRequest
     {
         /// <summary>
-        /// <see cref="MonitoredResourceDescriptorName"/>-typed view over the <see cref="Name"/> resource name property.
+        /// <see cref="Google.Cloud.Monitoring.V3.MonitoredResourceDescriptorName"/>-typed view over the <see cref="Name"/> resource name property.
         /// </summary>
-        public MonitoredResourceDescriptorName MonitoredResourceDescriptorName
+        public Google.Cloud.Monitoring.V3.MonitoredResourceDescriptorName MonitoredResourceDescriptorName
         {
             get { return string.IsNullOrEmpty(Name) ? null : Google.Cloud.Monitoring.V3.MonitoredResourceDescriptorName.Parse(Name); }
             set { Name = value != null ? value.ToString() : ""; }
@@ -1021,9 +1021,9 @@ namespace Google.Cloud.Monitoring.V3
     public partial class GetNotificationChannelDescriptorRequest
     {
         /// <summary>
-        /// <see cref="NotificationChannelDescriptorName"/>-typed view over the <see cref="Name"/> resource name property.
+        /// <see cref="Google.Cloud.Monitoring.V3.NotificationChannelDescriptorName"/>-typed view over the <see cref="Name"/> resource name property.
         /// </summary>
-        public NotificationChannelDescriptorName NotificationChannelDescriptorName
+        public Google.Cloud.Monitoring.V3.NotificationChannelDescriptorName NotificationChannelDescriptorName
         {
             get { return string.IsNullOrEmpty(Name) ? null : Google.Cloud.Monitoring.V3.NotificationChannelDescriptorName.Parse(Name); }
             set { Name = value != null ? value.ToString() : ""; }
@@ -1034,9 +1034,9 @@ namespace Google.Cloud.Monitoring.V3
     public partial class GetNotificationChannelRequest
     {
         /// <summary>
-        /// <see cref="NotificationChannelName"/>-typed view over the <see cref="Name"/> resource name property.
+        /// <see cref="Google.Cloud.Monitoring.V3.NotificationChannelName"/>-typed view over the <see cref="Name"/> resource name property.
         /// </summary>
-        public NotificationChannelName NotificationChannelName
+        public Google.Cloud.Monitoring.V3.NotificationChannelName NotificationChannelName
         {
             get { return string.IsNullOrEmpty(Name) ? null : Google.Cloud.Monitoring.V3.NotificationChannelName.Parse(Name); }
             set { Name = value != null ? value.ToString() : ""; }
@@ -1047,9 +1047,9 @@ namespace Google.Cloud.Monitoring.V3
     public partial class GetNotificationChannelVerificationCodeRequest
     {
         /// <summary>
-        /// <see cref="NotificationChannelName"/>-typed view over the <see cref="Name"/> resource name property.
+        /// <see cref="Google.Cloud.Monitoring.V3.NotificationChannelName"/>-typed view over the <see cref="Name"/> resource name property.
         /// </summary>
-        public NotificationChannelName NotificationChannelName
+        public Google.Cloud.Monitoring.V3.NotificationChannelName NotificationChannelName
         {
             get { return string.IsNullOrEmpty(Name) ? null : Google.Cloud.Monitoring.V3.NotificationChannelName.Parse(Name); }
             set { Name = value != null ? value.ToString() : ""; }
@@ -1060,18 +1060,18 @@ namespace Google.Cloud.Monitoring.V3
     public partial class Group
     {
         /// <summary>
-        /// <see cref="GroupName"/>-typed view over the <see cref="Name"/> resource name property.
+        /// <see cref="Google.Cloud.Monitoring.V3.GroupName"/>-typed view over the <see cref="Name"/> resource name property.
         /// </summary>
-        public GroupName GroupName
+        public Google.Cloud.Monitoring.V3.GroupName GroupName
         {
             get { return string.IsNullOrEmpty(Name) ? null : Google.Cloud.Monitoring.V3.GroupName.Parse(Name); }
             set { Name = value != null ? value.ToString() : ""; }
         }
 
         /// <summary>
-        /// <see cref="GroupName"/>-typed view over the <see cref="ParentName"/> resource name property.
+        /// <see cref="Google.Cloud.Monitoring.V3.GroupName"/>-typed view over the <see cref="ParentName"/> resource name property.
         /// </summary>
-        public GroupName ParentNameAsGroupName
+        public Google.Cloud.Monitoring.V3.GroupName ParentNameAsGroupName
         {
             get { return string.IsNullOrEmpty(ParentName) ? null : Google.Cloud.Monitoring.V3.GroupName.Parse(ParentName); }
             set { ParentName = value != null ? value.ToString() : ""; }
@@ -1082,9 +1082,9 @@ namespace Google.Cloud.Monitoring.V3
     public partial class ListAlertPoliciesRequest
     {
         /// <summary>
-        /// <see cref="ProjectName"/>-typed view over the <see cref="Name"/> resource name property.
+        /// <see cref="Google.Cloud.Monitoring.V3.ProjectName"/>-typed view over the <see cref="Name"/> resource name property.
         /// </summary>
-        public ProjectName ProjectName
+        public Google.Cloud.Monitoring.V3.ProjectName ProjectName
         {
             get { return string.IsNullOrEmpty(Name) ? null : Google.Cloud.Monitoring.V3.ProjectName.Parse(Name); }
             set { Name = value != null ? value.ToString() : ""; }
@@ -1095,9 +1095,9 @@ namespace Google.Cloud.Monitoring.V3
     public partial class ListGroupMembersRequest
     {
         /// <summary>
-        /// <see cref="GroupName"/>-typed view over the <see cref="Name"/> resource name property.
+        /// <see cref="Google.Cloud.Monitoring.V3.GroupName"/>-typed view over the <see cref="Name"/> resource name property.
         /// </summary>
-        public GroupName GroupName
+        public Google.Cloud.Monitoring.V3.GroupName GroupName
         {
             get { return string.IsNullOrEmpty(Name) ? null : Google.Cloud.Monitoring.V3.GroupName.Parse(Name); }
             set { Name = value != null ? value.ToString() : ""; }
@@ -1108,36 +1108,36 @@ namespace Google.Cloud.Monitoring.V3
     public partial class ListGroupsRequest
     {
         /// <summary>
-        /// <see cref="ProjectName"/>-typed view over the <see cref="Name"/> resource name property.
+        /// <see cref="Google.Cloud.Monitoring.V3.ProjectName"/>-typed view over the <see cref="Name"/> resource name property.
         /// </summary>
-        public ProjectName ProjectName
+        public Google.Cloud.Monitoring.V3.ProjectName ProjectName
         {
             get { return string.IsNullOrEmpty(Name) ? null : Google.Cloud.Monitoring.V3.ProjectName.Parse(Name); }
             set { Name = value != null ? value.ToString() : ""; }
         }
 
         /// <summary>
-        /// <see cref="GroupName"/>-typed view over the <see cref="ChildrenOfGroup"/> resource name property.
+        /// <see cref="Google.Cloud.Monitoring.V3.GroupName"/>-typed view over the <see cref="ChildrenOfGroup"/> resource name property.
         /// </summary>
-        public GroupName ChildrenOfGroupAsGroupName
+        public Google.Cloud.Monitoring.V3.GroupName ChildrenOfGroupAsGroupName
         {
             get { return string.IsNullOrEmpty(ChildrenOfGroup) ? null : Google.Cloud.Monitoring.V3.GroupName.Parse(ChildrenOfGroup); }
             set { ChildrenOfGroup = value != null ? value.ToString() : ""; }
         }
 
         /// <summary>
-        /// <see cref="GroupName"/>-typed view over the <see cref="AncestorsOfGroup"/> resource name property.
+        /// <see cref="Google.Cloud.Monitoring.V3.GroupName"/>-typed view over the <see cref="AncestorsOfGroup"/> resource name property.
         /// </summary>
-        public GroupName AncestorsOfGroupAsGroupName
+        public Google.Cloud.Monitoring.V3.GroupName AncestorsOfGroupAsGroupName
         {
             get { return string.IsNullOrEmpty(AncestorsOfGroup) ? null : Google.Cloud.Monitoring.V3.GroupName.Parse(AncestorsOfGroup); }
             set { AncestorsOfGroup = value != null ? value.ToString() : ""; }
         }
 
         /// <summary>
-        /// <see cref="GroupName"/>-typed view over the <see cref="DescendantsOfGroup"/> resource name property.
+        /// <see cref="Google.Cloud.Monitoring.V3.GroupName"/>-typed view over the <see cref="DescendantsOfGroup"/> resource name property.
         /// </summary>
-        public GroupName DescendantsOfGroupAsGroupName
+        public Google.Cloud.Monitoring.V3.GroupName DescendantsOfGroupAsGroupName
         {
             get { return string.IsNullOrEmpty(DescendantsOfGroup) ? null : Google.Cloud.Monitoring.V3.GroupName.Parse(DescendantsOfGroup); }
             set { DescendantsOfGroup = value != null ? value.ToString() : ""; }
@@ -1148,9 +1148,9 @@ namespace Google.Cloud.Monitoring.V3
     public partial class ListMetricDescriptorsRequest
     {
         /// <summary>
-        /// <see cref="ProjectName"/>-typed view over the <see cref="Name"/> resource name property.
+        /// <see cref="Google.Cloud.Monitoring.V3.ProjectName"/>-typed view over the <see cref="Name"/> resource name property.
         /// </summary>
-        public ProjectName ProjectName
+        public Google.Cloud.Monitoring.V3.ProjectName ProjectName
         {
             get { return string.IsNullOrEmpty(Name) ? null : Google.Cloud.Monitoring.V3.ProjectName.Parse(Name); }
             set { Name = value != null ? value.ToString() : ""; }
@@ -1161,9 +1161,9 @@ namespace Google.Cloud.Monitoring.V3
     public partial class ListMonitoredResourceDescriptorsRequest
     {
         /// <summary>
-        /// <see cref="ProjectName"/>-typed view over the <see cref="Name"/> resource name property.
+        /// <see cref="Google.Cloud.Monitoring.V3.ProjectName"/>-typed view over the <see cref="Name"/> resource name property.
         /// </summary>
-        public ProjectName ProjectName
+        public Google.Cloud.Monitoring.V3.ProjectName ProjectName
         {
             get { return string.IsNullOrEmpty(Name) ? null : Google.Cloud.Monitoring.V3.ProjectName.Parse(Name); }
             set { Name = value != null ? value.ToString() : ""; }
@@ -1174,9 +1174,9 @@ namespace Google.Cloud.Monitoring.V3
     public partial class ListNotificationChannelDescriptorsRequest
     {
         /// <summary>
-        /// <see cref="ProjectName"/>-typed view over the <see cref="Name"/> resource name property.
+        /// <see cref="Google.Cloud.Monitoring.V3.ProjectName"/>-typed view over the <see cref="Name"/> resource name property.
         /// </summary>
-        public ProjectName ProjectName
+        public Google.Cloud.Monitoring.V3.ProjectName ProjectName
         {
             get { return string.IsNullOrEmpty(Name) ? null : Google.Cloud.Monitoring.V3.ProjectName.Parse(Name); }
             set { Name = value != null ? value.ToString() : ""; }
@@ -1187,9 +1187,9 @@ namespace Google.Cloud.Monitoring.V3
     public partial class ListNotificationChannelsRequest
     {
         /// <summary>
-        /// <see cref="ProjectName"/>-typed view over the <see cref="Name"/> resource name property.
+        /// <see cref="Google.Cloud.Monitoring.V3.ProjectName"/>-typed view over the <see cref="Name"/> resource name property.
         /// </summary>
-        public ProjectName ProjectName
+        public Google.Cloud.Monitoring.V3.ProjectName ProjectName
         {
             get { return string.IsNullOrEmpty(Name) ? null : Google.Cloud.Monitoring.V3.ProjectName.Parse(Name); }
             set { Name = value != null ? value.ToString() : ""; }
@@ -1200,9 +1200,9 @@ namespace Google.Cloud.Monitoring.V3
     public partial class ListTimeSeriesRequest
     {
         /// <summary>
-        /// <see cref="ProjectName"/>-typed view over the <see cref="Name"/> resource name property.
+        /// <see cref="Google.Cloud.Monitoring.V3.ProjectName"/>-typed view over the <see cref="Name"/> resource name property.
         /// </summary>
-        public ProjectName ProjectName
+        public Google.Cloud.Monitoring.V3.ProjectName ProjectName
         {
             get { return string.IsNullOrEmpty(Name) ? null : Google.Cloud.Monitoring.V3.ProjectName.Parse(Name); }
             set { Name = value != null ? value.ToString() : ""; }
@@ -1213,9 +1213,9 @@ namespace Google.Cloud.Monitoring.V3
     public partial class SendNotificationChannelVerificationCodeRequest
     {
         /// <summary>
-        /// <see cref="NotificationChannelName"/>-typed view over the <see cref="Name"/> resource name property.
+        /// <see cref="Google.Cloud.Monitoring.V3.NotificationChannelName"/>-typed view over the <see cref="Name"/> resource name property.
         /// </summary>
-        public NotificationChannelName NotificationChannelName
+        public Google.Cloud.Monitoring.V3.NotificationChannelName NotificationChannelName
         {
             get { return string.IsNullOrEmpty(Name) ? null : Google.Cloud.Monitoring.V3.NotificationChannelName.Parse(Name); }
             set { Name = value != null ? value.ToString() : ""; }
@@ -1226,9 +1226,9 @@ namespace Google.Cloud.Monitoring.V3
     public partial class VerifyNotificationChannelRequest
     {
         /// <summary>
-        /// <see cref="NotificationChannelName"/>-typed view over the <see cref="Name"/> resource name property.
+        /// <see cref="Google.Cloud.Monitoring.V3.NotificationChannelName"/>-typed view over the <see cref="Name"/> resource name property.
         /// </summary>
-        public NotificationChannelName NotificationChannelName
+        public Google.Cloud.Monitoring.V3.NotificationChannelName NotificationChannelName
         {
             get { return string.IsNullOrEmpty(Name) ? null : Google.Cloud.Monitoring.V3.NotificationChannelName.Parse(Name); }
             set { Name = value != null ? value.ToString() : ""; }

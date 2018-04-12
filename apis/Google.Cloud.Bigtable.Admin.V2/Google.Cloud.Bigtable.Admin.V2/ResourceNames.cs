@@ -15,15 +15,15 @@
 // Generated code. DO NOT EDIT!
 
 using gax = Google.Api.Gax;
-using s = System;
-using System.Linq;
+using sys = System;
+using linq = System.Linq;
 
 namespace Google.Cloud.Bigtable.Admin.V2
 {
     /// <summary>
     /// Resource name for the 'project' resource.
     /// </summary>
-    public sealed partial class ProjectName : gax::IResourceName, s::IEquatable<ProjectName>
+    public sealed partial class ProjectName : gax::IResourceName, sys::IEquatable<ProjectName>
     {
         private static readonly gax::PathTemplate s_template = new gax::PathTemplate("projects/{project}");
 
@@ -45,7 +45,7 @@ namespace Google.Cloud.Bigtable.Admin.V2
         /// <see cref="ProjectName"/> instance.
         /// </summary>
         /// <remarks>
-        /// This method still throws <see cref="s::ArgumentNullException"/> if <paramref name="projectName"/> is null,
+        /// This method still throws <see cref="sys::ArgumentNullException"/> if <paramref name="projectName"/> is null,
         /// as this would usually indicate a programming error rather than a data error.
         /// </remarks>
         /// <param name="projectName">The project resource name in string form. Must not be <c>null</c>.</param>
@@ -108,7 +108,7 @@ namespace Google.Cloud.Bigtable.Admin.V2
     /// <summary>
     /// Resource name for the 'instance' resource.
     /// </summary>
-    public sealed partial class InstanceName : gax::IResourceName, s::IEquatable<InstanceName>
+    public sealed partial class InstanceName : gax::IResourceName, sys::IEquatable<InstanceName>
     {
         private static readonly gax::PathTemplate s_template = new gax::PathTemplate("projects/{project}/instances/{instance}");
 
@@ -130,7 +130,7 @@ namespace Google.Cloud.Bigtable.Admin.V2
         /// <see cref="InstanceName"/> instance.
         /// </summary>
         /// <remarks>
-        /// This method still throws <see cref="s::ArgumentNullException"/> if <paramref name="instanceName"/> is null,
+        /// This method still throws <see cref="sys::ArgumentNullException"/> if <paramref name="instanceName"/> is null,
         /// as this would usually indicate a programming error rather than a data error.
         /// </remarks>
         /// <param name="instanceName">The instance resource name in string form. Must not be <c>null</c>.</param>
@@ -200,7 +200,7 @@ namespace Google.Cloud.Bigtable.Admin.V2
     /// <summary>
     /// Resource name for the 'app_profile' resource.
     /// </summary>
-    public sealed partial class AppProfileName : gax::IResourceName, s::IEquatable<AppProfileName>
+    public sealed partial class AppProfileName : gax::IResourceName, sys::IEquatable<AppProfileName>
     {
         private static readonly gax::PathTemplate s_template = new gax::PathTemplate("projects/{project}/instances/{instance}/appProfiles/{app_profile}");
 
@@ -222,7 +222,7 @@ namespace Google.Cloud.Bigtable.Admin.V2
         /// <see cref="AppProfileName"/> instance.
         /// </summary>
         /// <remarks>
-        /// This method still throws <see cref="s::ArgumentNullException"/> if <paramref name="appProfileName"/> is null,
+        /// This method still throws <see cref="sys::ArgumentNullException"/> if <paramref name="appProfileName"/> is null,
         /// as this would usually indicate a programming error rather than a data error.
         /// </remarks>
         /// <param name="appProfileName">The app_profile resource name in string form. Must not be <c>null</c>.</param>
@@ -299,7 +299,7 @@ namespace Google.Cloud.Bigtable.Admin.V2
     /// <summary>
     /// Resource name for the 'cluster' resource.
     /// </summary>
-    public sealed partial class ClusterName : gax::IResourceName, s::IEquatable<ClusterName>
+    public sealed partial class ClusterName : gax::IResourceName, sys::IEquatable<ClusterName>
     {
         private static readonly gax::PathTemplate s_template = new gax::PathTemplate("projects/{project}/instances/{instance}/clusters/{cluster}");
 
@@ -321,7 +321,7 @@ namespace Google.Cloud.Bigtable.Admin.V2
         /// <see cref="ClusterName"/> instance.
         /// </summary>
         /// <remarks>
-        /// This method still throws <see cref="s::ArgumentNullException"/> if <paramref name="clusterName"/> is null,
+        /// This method still throws <see cref="sys::ArgumentNullException"/> if <paramref name="clusterName"/> is null,
         /// as this would usually indicate a programming error rather than a data error.
         /// </remarks>
         /// <param name="clusterName">The cluster resource name in string form. Must not be <c>null</c>.</param>
@@ -398,7 +398,7 @@ namespace Google.Cloud.Bigtable.Admin.V2
     /// <summary>
     /// Resource name for the 'location' resource.
     /// </summary>
-    public sealed partial class LocationName : gax::IResourceName, s::IEquatable<LocationName>
+    public sealed partial class LocationName : gax::IResourceName, sys::IEquatable<LocationName>
     {
         private static readonly gax::PathTemplate s_template = new gax::PathTemplate("projects/{project}/locations/{location}");
 
@@ -420,7 +420,7 @@ namespace Google.Cloud.Bigtable.Admin.V2
         /// <see cref="LocationName"/> instance.
         /// </summary>
         /// <remarks>
-        /// This method still throws <see cref="s::ArgumentNullException"/> if <paramref name="locationName"/> is null,
+        /// This method still throws <see cref="sys::ArgumentNullException"/> if <paramref name="locationName"/> is null,
         /// as this would usually indicate a programming error rather than a data error.
         /// </remarks>
         /// <param name="locationName">The location resource name in string form. Must not be <c>null</c>.</param>
@@ -490,7 +490,7 @@ namespace Google.Cloud.Bigtable.Admin.V2
     /// <summary>
     /// Resource name for the 'snapshot' resource.
     /// </summary>
-    public sealed partial class SnapshotName : gax::IResourceName, s::IEquatable<SnapshotName>
+    public sealed partial class SnapshotName : gax::IResourceName, sys::IEquatable<SnapshotName>
     {
         private static readonly gax::PathTemplate s_template = new gax::PathTemplate("projects/{project}/instances/{instance}/clusters/{cluster}/snapshots/{snapshot}");
 
@@ -512,7 +512,7 @@ namespace Google.Cloud.Bigtable.Admin.V2
         /// <see cref="SnapshotName"/> instance.
         /// </summary>
         /// <remarks>
-        /// This method still throws <see cref="s::ArgumentNullException"/> if <paramref name="snapshotName"/> is null,
+        /// This method still throws <see cref="sys::ArgumentNullException"/> if <paramref name="snapshotName"/> is null,
         /// as this would usually indicate a programming error rather than a data error.
         /// </remarks>
         /// <param name="snapshotName">The snapshot resource name in string form. Must not be <c>null</c>.</param>
@@ -596,7 +596,7 @@ namespace Google.Cloud.Bigtable.Admin.V2
     /// <summary>
     /// Resource name for the 'table' resource.
     /// </summary>
-    public sealed partial class TableName : gax::IResourceName, s::IEquatable<TableName>
+    public sealed partial class TableName : gax::IResourceName, sys::IEquatable<TableName>
     {
         private static readonly gax::PathTemplate s_template = new gax::PathTemplate("projects/{project}/instances/{instance}/tables/{table}");
 
@@ -618,7 +618,7 @@ namespace Google.Cloud.Bigtable.Admin.V2
         /// <see cref="TableName"/> instance.
         /// </summary>
         /// <remarks>
-        /// This method still throws <see cref="s::ArgumentNullException"/> if <paramref name="tableName"/> is null,
+        /// This method still throws <see cref="sys::ArgumentNullException"/> if <paramref name="tableName"/> is null,
         /// as this would usually indicate a programming error rather than a data error.
         /// </remarks>
         /// <param name="tableName">The table resource name in string form. Must not be <c>null</c>.</param>
@@ -696,9 +696,9 @@ namespace Google.Cloud.Bigtable.Admin.V2
     public partial class CheckConsistencyRequest
     {
         /// <summary>
-        /// <see cref="TableName"/>-typed view over the <see cref="Name"/> resource name property.
+        /// <see cref="Google.Cloud.Bigtable.Admin.V2.TableName"/>-typed view over the <see cref="Name"/> resource name property.
         /// </summary>
-        public TableName TableName
+        public Google.Cloud.Bigtable.Admin.V2.TableName TableName
         {
             get { return string.IsNullOrEmpty(Name) ? null : Google.Cloud.Bigtable.Admin.V2.TableName.Parse(Name); }
             set { Name = value != null ? value.ToString() : ""; }
@@ -709,18 +709,18 @@ namespace Google.Cloud.Bigtable.Admin.V2
     public partial class Cluster
     {
         /// <summary>
-        /// <see cref="ClusterName"/>-typed view over the <see cref="Name"/> resource name property.
+        /// <see cref="Google.Cloud.Bigtable.Admin.V2.ClusterName"/>-typed view over the <see cref="Name"/> resource name property.
         /// </summary>
-        public ClusterName ClusterName
+        public Google.Cloud.Bigtable.Admin.V2.ClusterName ClusterName
         {
             get { return string.IsNullOrEmpty(Name) ? null : Google.Cloud.Bigtable.Admin.V2.ClusterName.Parse(Name); }
             set { Name = value != null ? value.ToString() : ""; }
         }
 
         /// <summary>
-        /// <see cref="LocationName"/>-typed view over the <see cref="Location"/> resource name property.
+        /// <see cref="Google.Cloud.Bigtable.Admin.V2.LocationName"/>-typed view over the <see cref="Location"/> resource name property.
         /// </summary>
-        public LocationName LocationAsLocationName
+        public Google.Cloud.Bigtable.Admin.V2.LocationName LocationAsLocationName
         {
             get { return string.IsNullOrEmpty(Location) ? null : Google.Cloud.Bigtable.Admin.V2.LocationName.Parse(Location); }
             set { Location = value != null ? value.ToString() : ""; }
@@ -731,9 +731,9 @@ namespace Google.Cloud.Bigtable.Admin.V2
     public partial class CreateAppProfileRequest
     {
         /// <summary>
-        /// <see cref="InstanceName"/>-typed view over the <see cref="Parent"/> resource name property.
+        /// <see cref="Google.Cloud.Bigtable.Admin.V2.InstanceName"/>-typed view over the <see cref="Parent"/> resource name property.
         /// </summary>
-        public InstanceName ParentAsInstanceName
+        public Google.Cloud.Bigtable.Admin.V2.InstanceName ParentAsInstanceName
         {
             get { return string.IsNullOrEmpty(Parent) ? null : Google.Cloud.Bigtable.Admin.V2.InstanceName.Parse(Parent); }
             set { Parent = value != null ? value.ToString() : ""; }
@@ -744,9 +744,9 @@ namespace Google.Cloud.Bigtable.Admin.V2
     public partial class CreateClusterRequest
     {
         /// <summary>
-        /// <see cref="InstanceName"/>-typed view over the <see cref="Parent"/> resource name property.
+        /// <see cref="Google.Cloud.Bigtable.Admin.V2.InstanceName"/>-typed view over the <see cref="Parent"/> resource name property.
         /// </summary>
-        public InstanceName ParentAsInstanceName
+        public Google.Cloud.Bigtable.Admin.V2.InstanceName ParentAsInstanceName
         {
             get { return string.IsNullOrEmpty(Parent) ? null : Google.Cloud.Bigtable.Admin.V2.InstanceName.Parse(Parent); }
             set { Parent = value != null ? value.ToString() : ""; }
@@ -757,9 +757,9 @@ namespace Google.Cloud.Bigtable.Admin.V2
     public partial class CreateInstanceRequest
     {
         /// <summary>
-        /// <see cref="ProjectName"/>-typed view over the <see cref="Parent"/> resource name property.
+        /// <see cref="Google.Cloud.Bigtable.Admin.V2.ProjectName"/>-typed view over the <see cref="Parent"/> resource name property.
         /// </summary>
-        public ProjectName ParentAsProjectName
+        public Google.Cloud.Bigtable.Admin.V2.ProjectName ParentAsProjectName
         {
             get { return string.IsNullOrEmpty(Parent) ? null : Google.Cloud.Bigtable.Admin.V2.ProjectName.Parse(Parent); }
             set { Parent = value != null ? value.ToString() : ""; }
@@ -770,18 +770,18 @@ namespace Google.Cloud.Bigtable.Admin.V2
     public partial class CreateTableFromSnapshotRequest
     {
         /// <summary>
-        /// <see cref="InstanceName"/>-typed view over the <see cref="Parent"/> resource name property.
+        /// <see cref="Google.Cloud.Bigtable.Admin.V2.InstanceName"/>-typed view over the <see cref="Parent"/> resource name property.
         /// </summary>
-        public InstanceName ParentAsInstanceName
+        public Google.Cloud.Bigtable.Admin.V2.InstanceName ParentAsInstanceName
         {
             get { return string.IsNullOrEmpty(Parent) ? null : Google.Cloud.Bigtable.Admin.V2.InstanceName.Parse(Parent); }
             set { Parent = value != null ? value.ToString() : ""; }
         }
 
         /// <summary>
-        /// <see cref="SnapshotName"/>-typed view over the <see cref="SourceSnapshot"/> resource name property.
+        /// <see cref="Google.Cloud.Bigtable.Admin.V2.SnapshotName"/>-typed view over the <see cref="SourceSnapshot"/> resource name property.
         /// </summary>
-        public SnapshotName SourceSnapshotAsSnapshotName
+        public Google.Cloud.Bigtable.Admin.V2.SnapshotName SourceSnapshotAsSnapshotName
         {
             get { return string.IsNullOrEmpty(SourceSnapshot) ? null : Google.Cloud.Bigtable.Admin.V2.SnapshotName.Parse(SourceSnapshot); }
             set { SourceSnapshot = value != null ? value.ToString() : ""; }
@@ -792,9 +792,9 @@ namespace Google.Cloud.Bigtable.Admin.V2
     public partial class CreateTableRequest
     {
         /// <summary>
-        /// <see cref="InstanceName"/>-typed view over the <see cref="Parent"/> resource name property.
+        /// <see cref="Google.Cloud.Bigtable.Admin.V2.InstanceName"/>-typed view over the <see cref="Parent"/> resource name property.
         /// </summary>
-        public InstanceName ParentAsInstanceName
+        public Google.Cloud.Bigtable.Admin.V2.InstanceName ParentAsInstanceName
         {
             get { return string.IsNullOrEmpty(Parent) ? null : Google.Cloud.Bigtable.Admin.V2.InstanceName.Parse(Parent); }
             set { Parent = value != null ? value.ToString() : ""; }
@@ -805,9 +805,9 @@ namespace Google.Cloud.Bigtable.Admin.V2
     public partial class DeleteAppProfileRequest
     {
         /// <summary>
-        /// <see cref="AppProfileName"/>-typed view over the <see cref="Name"/> resource name property.
+        /// <see cref="Google.Cloud.Bigtable.Admin.V2.AppProfileName"/>-typed view over the <see cref="Name"/> resource name property.
         /// </summary>
-        public AppProfileName AppProfileName
+        public Google.Cloud.Bigtable.Admin.V2.AppProfileName AppProfileName
         {
             get { return string.IsNullOrEmpty(Name) ? null : Google.Cloud.Bigtable.Admin.V2.AppProfileName.Parse(Name); }
             set { Name = value != null ? value.ToString() : ""; }
@@ -818,9 +818,9 @@ namespace Google.Cloud.Bigtable.Admin.V2
     public partial class DeleteClusterRequest
     {
         /// <summary>
-        /// <see cref="ClusterName"/>-typed view over the <see cref="Name"/> resource name property.
+        /// <see cref="Google.Cloud.Bigtable.Admin.V2.ClusterName"/>-typed view over the <see cref="Name"/> resource name property.
         /// </summary>
-        public ClusterName ClusterName
+        public Google.Cloud.Bigtable.Admin.V2.ClusterName ClusterName
         {
             get { return string.IsNullOrEmpty(Name) ? null : Google.Cloud.Bigtable.Admin.V2.ClusterName.Parse(Name); }
             set { Name = value != null ? value.ToString() : ""; }
@@ -831,9 +831,9 @@ namespace Google.Cloud.Bigtable.Admin.V2
     public partial class DeleteInstanceRequest
     {
         /// <summary>
-        /// <see cref="InstanceName"/>-typed view over the <see cref="Name"/> resource name property.
+        /// <see cref="Google.Cloud.Bigtable.Admin.V2.InstanceName"/>-typed view over the <see cref="Name"/> resource name property.
         /// </summary>
-        public InstanceName InstanceName
+        public Google.Cloud.Bigtable.Admin.V2.InstanceName InstanceName
         {
             get { return string.IsNullOrEmpty(Name) ? null : Google.Cloud.Bigtable.Admin.V2.InstanceName.Parse(Name); }
             set { Name = value != null ? value.ToString() : ""; }
@@ -844,9 +844,9 @@ namespace Google.Cloud.Bigtable.Admin.V2
     public partial class DeleteSnapshotRequest
     {
         /// <summary>
-        /// <see cref="SnapshotName"/>-typed view over the <see cref="Name"/> resource name property.
+        /// <see cref="Google.Cloud.Bigtable.Admin.V2.SnapshotName"/>-typed view over the <see cref="Name"/> resource name property.
         /// </summary>
-        public SnapshotName SnapshotName
+        public Google.Cloud.Bigtable.Admin.V2.SnapshotName SnapshotName
         {
             get { return string.IsNullOrEmpty(Name) ? null : Google.Cloud.Bigtable.Admin.V2.SnapshotName.Parse(Name); }
             set { Name = value != null ? value.ToString() : ""; }
@@ -857,9 +857,9 @@ namespace Google.Cloud.Bigtable.Admin.V2
     public partial class DeleteTableRequest
     {
         /// <summary>
-        /// <see cref="TableName"/>-typed view over the <see cref="Name"/> resource name property.
+        /// <see cref="Google.Cloud.Bigtable.Admin.V2.TableName"/>-typed view over the <see cref="Name"/> resource name property.
         /// </summary>
-        public TableName TableName
+        public Google.Cloud.Bigtable.Admin.V2.TableName TableName
         {
             get { return string.IsNullOrEmpty(Name) ? null : Google.Cloud.Bigtable.Admin.V2.TableName.Parse(Name); }
             set { Name = value != null ? value.ToString() : ""; }
@@ -870,9 +870,9 @@ namespace Google.Cloud.Bigtable.Admin.V2
     public partial class DropRowRangeRequest
     {
         /// <summary>
-        /// <see cref="TableName"/>-typed view over the <see cref="Name"/> resource name property.
+        /// <see cref="Google.Cloud.Bigtable.Admin.V2.TableName"/>-typed view over the <see cref="Name"/> resource name property.
         /// </summary>
-        public TableName TableName
+        public Google.Cloud.Bigtable.Admin.V2.TableName TableName
         {
             get { return string.IsNullOrEmpty(Name) ? null : Google.Cloud.Bigtable.Admin.V2.TableName.Parse(Name); }
             set { Name = value != null ? value.ToString() : ""; }
@@ -883,9 +883,9 @@ namespace Google.Cloud.Bigtable.Admin.V2
     public partial class GenerateConsistencyTokenRequest
     {
         /// <summary>
-        /// <see cref="TableName"/>-typed view over the <see cref="Name"/> resource name property.
+        /// <see cref="Google.Cloud.Bigtable.Admin.V2.TableName"/>-typed view over the <see cref="Name"/> resource name property.
         /// </summary>
-        public TableName TableName
+        public Google.Cloud.Bigtable.Admin.V2.TableName TableName
         {
             get { return string.IsNullOrEmpty(Name) ? null : Google.Cloud.Bigtable.Admin.V2.TableName.Parse(Name); }
             set { Name = value != null ? value.ToString() : ""; }
@@ -896,9 +896,9 @@ namespace Google.Cloud.Bigtable.Admin.V2
     public partial class GetAppProfileRequest
     {
         /// <summary>
-        /// <see cref="AppProfileName"/>-typed view over the <see cref="Name"/> resource name property.
+        /// <see cref="Google.Cloud.Bigtable.Admin.V2.AppProfileName"/>-typed view over the <see cref="Name"/> resource name property.
         /// </summary>
-        public AppProfileName AppProfileName
+        public Google.Cloud.Bigtable.Admin.V2.AppProfileName AppProfileName
         {
             get { return string.IsNullOrEmpty(Name) ? null : Google.Cloud.Bigtable.Admin.V2.AppProfileName.Parse(Name); }
             set { Name = value != null ? value.ToString() : ""; }
@@ -909,9 +909,9 @@ namespace Google.Cloud.Bigtable.Admin.V2
     public partial class GetClusterRequest
     {
         /// <summary>
-        /// <see cref="ClusterName"/>-typed view over the <see cref="Name"/> resource name property.
+        /// <see cref="Google.Cloud.Bigtable.Admin.V2.ClusterName"/>-typed view over the <see cref="Name"/> resource name property.
         /// </summary>
-        public ClusterName ClusterName
+        public Google.Cloud.Bigtable.Admin.V2.ClusterName ClusterName
         {
             get { return string.IsNullOrEmpty(Name) ? null : Google.Cloud.Bigtable.Admin.V2.ClusterName.Parse(Name); }
             set { Name = value != null ? value.ToString() : ""; }
@@ -922,9 +922,9 @@ namespace Google.Cloud.Bigtable.Admin.V2
     public partial class GetInstanceRequest
     {
         /// <summary>
-        /// <see cref="InstanceName"/>-typed view over the <see cref="Name"/> resource name property.
+        /// <see cref="Google.Cloud.Bigtable.Admin.V2.InstanceName"/>-typed view over the <see cref="Name"/> resource name property.
         /// </summary>
-        public InstanceName InstanceName
+        public Google.Cloud.Bigtable.Admin.V2.InstanceName InstanceName
         {
             get { return string.IsNullOrEmpty(Name) ? null : Google.Cloud.Bigtable.Admin.V2.InstanceName.Parse(Name); }
             set { Name = value != null ? value.ToString() : ""; }
@@ -935,9 +935,9 @@ namespace Google.Cloud.Bigtable.Admin.V2
     public partial class GetSnapshotRequest
     {
         /// <summary>
-        /// <see cref="SnapshotName"/>-typed view over the <see cref="Name"/> resource name property.
+        /// <see cref="Google.Cloud.Bigtable.Admin.V2.SnapshotName"/>-typed view over the <see cref="Name"/> resource name property.
         /// </summary>
-        public SnapshotName SnapshotName
+        public Google.Cloud.Bigtable.Admin.V2.SnapshotName SnapshotName
         {
             get { return string.IsNullOrEmpty(Name) ? null : Google.Cloud.Bigtable.Admin.V2.SnapshotName.Parse(Name); }
             set { Name = value != null ? value.ToString() : ""; }
@@ -948,9 +948,9 @@ namespace Google.Cloud.Bigtable.Admin.V2
     public partial class GetTableRequest
     {
         /// <summary>
-        /// <see cref="TableName"/>-typed view over the <see cref="Name"/> resource name property.
+        /// <see cref="Google.Cloud.Bigtable.Admin.V2.TableName"/>-typed view over the <see cref="Name"/> resource name property.
         /// </summary>
-        public TableName TableName
+        public Google.Cloud.Bigtable.Admin.V2.TableName TableName
         {
             get { return string.IsNullOrEmpty(Name) ? null : Google.Cloud.Bigtable.Admin.V2.TableName.Parse(Name); }
             set { Name = value != null ? value.ToString() : ""; }
@@ -961,9 +961,9 @@ namespace Google.Cloud.Bigtable.Admin.V2
     public partial class Instance
     {
         /// <summary>
-        /// <see cref="InstanceName"/>-typed view over the <see cref="Name"/> resource name property.
+        /// <see cref="Google.Cloud.Bigtable.Admin.V2.InstanceName"/>-typed view over the <see cref="Name"/> resource name property.
         /// </summary>
-        public InstanceName InstanceName
+        public Google.Cloud.Bigtable.Admin.V2.InstanceName InstanceName
         {
             get { return string.IsNullOrEmpty(Name) ? null : Google.Cloud.Bigtable.Admin.V2.InstanceName.Parse(Name); }
             set { Name = value != null ? value.ToString() : ""; }
@@ -974,9 +974,9 @@ namespace Google.Cloud.Bigtable.Admin.V2
     public partial class ListAppProfilesRequest
     {
         /// <summary>
-        /// <see cref="InstanceName"/>-typed view over the <see cref="Parent"/> resource name property.
+        /// <see cref="Google.Cloud.Bigtable.Admin.V2.InstanceName"/>-typed view over the <see cref="Parent"/> resource name property.
         /// </summary>
-        public InstanceName ParentAsInstanceName
+        public Google.Cloud.Bigtable.Admin.V2.InstanceName ParentAsInstanceName
         {
             get { return string.IsNullOrEmpty(Parent) ? null : Google.Cloud.Bigtable.Admin.V2.InstanceName.Parse(Parent); }
             set { Parent = value != null ? value.ToString() : ""; }
@@ -987,9 +987,9 @@ namespace Google.Cloud.Bigtable.Admin.V2
     public partial class ListClustersRequest
     {
         /// <summary>
-        /// <see cref="InstanceName"/>-typed view over the <see cref="Parent"/> resource name property.
+        /// <see cref="Google.Cloud.Bigtable.Admin.V2.InstanceName"/>-typed view over the <see cref="Parent"/> resource name property.
         /// </summary>
-        public InstanceName ParentAsInstanceName
+        public Google.Cloud.Bigtable.Admin.V2.InstanceName ParentAsInstanceName
         {
             get { return string.IsNullOrEmpty(Parent) ? null : Google.Cloud.Bigtable.Admin.V2.InstanceName.Parse(Parent); }
             set { Parent = value != null ? value.ToString() : ""; }
@@ -1000,9 +1000,9 @@ namespace Google.Cloud.Bigtable.Admin.V2
     public partial class ListInstancesRequest
     {
         /// <summary>
-        /// <see cref="ProjectName"/>-typed view over the <see cref="Parent"/> resource name property.
+        /// <see cref="Google.Cloud.Bigtable.Admin.V2.ProjectName"/>-typed view over the <see cref="Parent"/> resource name property.
         /// </summary>
-        public ProjectName ParentAsProjectName
+        public Google.Cloud.Bigtable.Admin.V2.ProjectName ParentAsProjectName
         {
             get { return string.IsNullOrEmpty(Parent) ? null : Google.Cloud.Bigtable.Admin.V2.ProjectName.Parse(Parent); }
             set { Parent = value != null ? value.ToString() : ""; }
@@ -1013,9 +1013,9 @@ namespace Google.Cloud.Bigtable.Admin.V2
     public partial class ListSnapshotsRequest
     {
         /// <summary>
-        /// <see cref="ClusterName"/>-typed view over the <see cref="Parent"/> resource name property.
+        /// <see cref="Google.Cloud.Bigtable.Admin.V2.ClusterName"/>-typed view over the <see cref="Parent"/> resource name property.
         /// </summary>
-        public ClusterName ParentAsClusterName
+        public Google.Cloud.Bigtable.Admin.V2.ClusterName ParentAsClusterName
         {
             get { return string.IsNullOrEmpty(Parent) ? null : Google.Cloud.Bigtable.Admin.V2.ClusterName.Parse(Parent); }
             set { Parent = value != null ? value.ToString() : ""; }
@@ -1026,9 +1026,9 @@ namespace Google.Cloud.Bigtable.Admin.V2
     public partial class ListTablesRequest
     {
         /// <summary>
-        /// <see cref="InstanceName"/>-typed view over the <see cref="Parent"/> resource name property.
+        /// <see cref="Google.Cloud.Bigtable.Admin.V2.InstanceName"/>-typed view over the <see cref="Parent"/> resource name property.
         /// </summary>
-        public InstanceName ParentAsInstanceName
+        public Google.Cloud.Bigtable.Admin.V2.InstanceName ParentAsInstanceName
         {
             get { return string.IsNullOrEmpty(Parent) ? null : Google.Cloud.Bigtable.Admin.V2.InstanceName.Parse(Parent); }
             set { Parent = value != null ? value.ToString() : ""; }
@@ -1039,9 +1039,9 @@ namespace Google.Cloud.Bigtable.Admin.V2
     public partial class ModifyColumnFamiliesRequest
     {
         /// <summary>
-        /// <see cref="TableName"/>-typed view over the <see cref="Name"/> resource name property.
+        /// <see cref="Google.Cloud.Bigtable.Admin.V2.TableName"/>-typed view over the <see cref="Name"/> resource name property.
         /// </summary>
-        public TableName TableName
+        public Google.Cloud.Bigtable.Admin.V2.TableName TableName
         {
             get { return string.IsNullOrEmpty(Name) ? null : Google.Cloud.Bigtable.Admin.V2.TableName.Parse(Name); }
             set { Name = value != null ? value.ToString() : ""; }
@@ -1052,9 +1052,9 @@ namespace Google.Cloud.Bigtable.Admin.V2
     public partial class Snapshot
     {
         /// <summary>
-        /// <see cref="SnapshotName"/>-typed view over the <see cref="Name"/> resource name property.
+        /// <see cref="Google.Cloud.Bigtable.Admin.V2.SnapshotName"/>-typed view over the <see cref="Name"/> resource name property.
         /// </summary>
-        public SnapshotName SnapshotName
+        public Google.Cloud.Bigtable.Admin.V2.SnapshotName SnapshotName
         {
             get { return string.IsNullOrEmpty(Name) ? null : Google.Cloud.Bigtable.Admin.V2.SnapshotName.Parse(Name); }
             set { Name = value != null ? value.ToString() : ""; }
@@ -1065,27 +1065,27 @@ namespace Google.Cloud.Bigtable.Admin.V2
     public partial class SnapshotTableRequest
     {
         /// <summary>
-        /// <see cref="TableName"/>-typed view over the <see cref="Name"/> resource name property.
+        /// <see cref="Google.Cloud.Bigtable.Admin.V2.TableName"/>-typed view over the <see cref="Name"/> resource name property.
         /// </summary>
-        public TableName TableName
+        public Google.Cloud.Bigtable.Admin.V2.TableName TableName
         {
             get { return string.IsNullOrEmpty(Name) ? null : Google.Cloud.Bigtable.Admin.V2.TableName.Parse(Name); }
             set { Name = value != null ? value.ToString() : ""; }
         }
 
         /// <summary>
-        /// <see cref="ClusterName"/>-typed view over the <see cref="Cluster"/> resource name property.
+        /// <see cref="Google.Cloud.Bigtable.Admin.V2.ClusterName"/>-typed view over the <see cref="Cluster"/> resource name property.
         /// </summary>
-        public ClusterName ClusterAsClusterName
+        public Google.Cloud.Bigtable.Admin.V2.ClusterName ClusterAsClusterName
         {
             get { return string.IsNullOrEmpty(Cluster) ? null : Google.Cloud.Bigtable.Admin.V2.ClusterName.Parse(Cluster); }
             set { Cluster = value != null ? value.ToString() : ""; }
         }
 
         /// <summary>
-        /// <see cref="SnapshotName"/>-typed view over the <see cref="SnapshotId"/> resource name property.
+        /// <see cref="Google.Cloud.Bigtable.Admin.V2.SnapshotName"/>-typed view over the <see cref="SnapshotId"/> resource name property.
         /// </summary>
-        public SnapshotName SnapshotIdAsSnapshotName
+        public Google.Cloud.Bigtable.Admin.V2.SnapshotName SnapshotIdAsSnapshotName
         {
             get { return string.IsNullOrEmpty(SnapshotId) ? null : Google.Cloud.Bigtable.Admin.V2.SnapshotName.Parse(SnapshotId); }
             set { SnapshotId = value != null ? value.ToString() : ""; }
@@ -1096,9 +1096,9 @@ namespace Google.Cloud.Bigtable.Admin.V2
     public partial class Table
     {
         /// <summary>
-        /// <see cref="TableName"/>-typed view over the <see cref="Name"/> resource name property.
+        /// <see cref="Google.Cloud.Bigtable.Admin.V2.TableName"/>-typed view over the <see cref="Name"/> resource name property.
         /// </summary>
-        public TableName TableName
+        public Google.Cloud.Bigtable.Admin.V2.TableName TableName
         {
             get { return string.IsNullOrEmpty(Name) ? null : Google.Cloud.Bigtable.Admin.V2.TableName.Parse(Name); }
             set { Name = value != null ? value.ToString() : ""; }

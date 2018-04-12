@@ -16,10 +16,10 @@
 
 using gax = Google.Api.Gax;
 using gaxgrpc = Google.Api.Gax.Grpc;
-using proto = Google.Protobuf;
-using protowkt = Google.Protobuf.WellKnownTypes;
+using pb = Google.Protobuf;
+using pbwkt = Google.Protobuf.WellKnownTypes;
 using grpccore = Grpc.Core;
-using s = System;
+using sys = System;
 using sc = System.Collections;
 using scg = System.Collections.Generic;
 using sco = System.Collections.ObjectModel;
@@ -68,7 +68,7 @@ namespace Google.Cloud.Trace.V1
         /// <item><description><see cref="grpccore::StatusCode.Unavailable"/></description></item>
         /// </list>
         /// </remarks>
-        public static s::Predicate<grpccore::RpcException> IdempotentRetryFilter { get; } =
+        public static sys::Predicate<grpccore::RpcException> IdempotentRetryFilter { get; } =
             gaxgrpc::RetrySettings.FilterForStatusCodes(grpccore::StatusCode.DeadlineExceeded, grpccore::StatusCode.Unavailable);
 
         /// <summary>
@@ -78,7 +78,7 @@ namespace Google.Cloud.Trace.V1
         /// <remarks>
         /// There are no RPC <see cref="grpccore::StatusCode"/>s eligible for retry for "NonIdempotent" RPC methods.
         /// </remarks>
-        public static s::Predicate<grpccore::RpcException> NonIdempotentRetryFilter { get; } =
+        public static sys::Predicate<grpccore::RpcException> NonIdempotentRetryFilter { get; } =
             gaxgrpc::RetrySettings.FilterForStatusCodes();
 
         /// <summary>
@@ -96,8 +96,8 @@ namespace Google.Cloud.Trace.V1
         /// </list>
         /// </remarks>
         public static gaxgrpc::BackoffSettings GetDefaultRetryBackoff() => new gaxgrpc::BackoffSettings(
-            delay: s::TimeSpan.FromMilliseconds(100),
-            maxDelay: s::TimeSpan.FromMilliseconds(1000),
+            delay: sys::TimeSpan.FromMilliseconds(100),
+            maxDelay: sys::TimeSpan.FromMilliseconds(1000),
             delayMultiplier: 1.2
         );
 
@@ -116,8 +116,8 @@ namespace Google.Cloud.Trace.V1
         /// </list>
         /// </remarks>
         public static gaxgrpc::BackoffSettings GetDefaultTimeoutBackoff() => new gaxgrpc::BackoffSettings(
-            delay: s::TimeSpan.FromMilliseconds(20000),
-            maxDelay: s::TimeSpan.FromMilliseconds(30000),
+            delay: sys::TimeSpan.FromMilliseconds(20000),
+            maxDelay: sys::TimeSpan.FromMilliseconds(30000),
             delayMultiplier: 1.5
         );
 
@@ -147,7 +147,7 @@ namespace Google.Cloud.Trace.V1
             gaxgrpc::CallTiming.FromRetry(new gaxgrpc::RetrySettings(
                 retryBackoff: GetDefaultRetryBackoff(),
                 timeoutBackoff: GetDefaultTimeoutBackoff(),
-                totalExpiration: gax::Expiration.FromTimeout(s::TimeSpan.FromMilliseconds(45000)),
+                totalExpiration: gax::Expiration.FromTimeout(sys::TimeSpan.FromMilliseconds(45000)),
                 retryFilter: IdempotentRetryFilter
             )));
 
@@ -177,7 +177,7 @@ namespace Google.Cloud.Trace.V1
             gaxgrpc::CallTiming.FromRetry(new gaxgrpc::RetrySettings(
                 retryBackoff: GetDefaultRetryBackoff(),
                 timeoutBackoff: GetDefaultTimeoutBackoff(),
-                totalExpiration: gax::Expiration.FromTimeout(s::TimeSpan.FromMilliseconds(45000)),
+                totalExpiration: gax::Expiration.FromTimeout(sys::TimeSpan.FromMilliseconds(45000)),
                 retryFilter: IdempotentRetryFilter
             )));
 
@@ -207,7 +207,7 @@ namespace Google.Cloud.Trace.V1
             gaxgrpc::CallTiming.FromRetry(new gaxgrpc::RetrySettings(
                 retryBackoff: GetDefaultRetryBackoff(),
                 timeoutBackoff: GetDefaultTimeoutBackoff(),
-                totalExpiration: gax::Expiration.FromTimeout(s::TimeSpan.FromMilliseconds(45000)),
+                totalExpiration: gax::Expiration.FromTimeout(sys::TimeSpan.FromMilliseconds(45000)),
                 retryFilter: IdempotentRetryFilter
             )));
 
@@ -311,7 +311,7 @@ namespace Google.Cloud.Trace.V1
         /// </summary>
         public virtual TraceService.TraceServiceClient GrpcClient
         {
-            get { throw new s::NotImplementedException(); }
+            get { throw new sys::NotImplementedException(); }
         }
 
         /// <summary>
@@ -418,7 +418,7 @@ namespace Google.Cloud.Trace.V1
             PatchTracesRequest request,
             gaxgrpc::CallSettings callSettings = null)
         {
-            throw new s::NotImplementedException();
+            throw new sys::NotImplementedException();
         }
 
         /// <summary>
@@ -460,7 +460,7 @@ namespace Google.Cloud.Trace.V1
             PatchTracesRequest request,
             gaxgrpc::CallSettings callSettings = null)
         {
-            throw new s::NotImplementedException();
+            throw new sys::NotImplementedException();
         }
 
         /// <summary>
@@ -554,7 +554,7 @@ namespace Google.Cloud.Trace.V1
             GetTraceRequest request,
             gaxgrpc::CallSettings callSettings = null)
         {
-            throw new s::NotImplementedException();
+            throw new sys::NotImplementedException();
         }
 
         /// <summary>
@@ -591,7 +591,7 @@ namespace Google.Cloud.Trace.V1
             GetTraceRequest request,
             gaxgrpc::CallSettings callSettings = null)
         {
-            throw new s::NotImplementedException();
+            throw new sys::NotImplementedException();
         }
 
         /// <summary>
@@ -676,7 +676,7 @@ namespace Google.Cloud.Trace.V1
             ListTracesRequest request,
             gaxgrpc::CallSettings callSettings = null)
         {
-            throw new s::NotImplementedException();
+            throw new sys::NotImplementedException();
         }
 
         /// <summary>
@@ -695,7 +695,7 @@ namespace Google.Cloud.Trace.V1
             ListTracesRequest request,
             gaxgrpc::CallSettings callSettings = null)
         {
-            throw new s::NotImplementedException();
+            throw new sys::NotImplementedException();
         }
 
     }
@@ -705,7 +705,7 @@ namespace Google.Cloud.Trace.V1
     /// </summary>
     public sealed partial class TraceServiceClientImpl : TraceServiceClient
     {
-        private readonly gaxgrpc::ApiCall<PatchTracesRequest, protowkt::Empty> _callPatchTraces;
+        private readonly gaxgrpc::ApiCall<PatchTracesRequest, pbwkt::Empty> _callPatchTraces;
         private readonly gaxgrpc::ApiCall<GetTraceRequest, Trace> _callGetTrace;
         private readonly gaxgrpc::ApiCall<ListTracesRequest, ListTracesResponse> _callListTraces;
 
@@ -719,7 +719,7 @@ namespace Google.Cloud.Trace.V1
             GrpcClient = grpcClient;
             TraceServiceSettings effectiveSettings = settings ?? TraceServiceSettings.GetDefault();
             gaxgrpc::ClientHelper clientHelper = new gaxgrpc::ClientHelper(effectiveSettings);
-            _callPatchTraces = clientHelper.BuildApiCall<PatchTracesRequest, protowkt::Empty>(
+            _callPatchTraces = clientHelper.BuildApiCall<PatchTracesRequest, pbwkt::Empty>(
                 GrpcClient.PatchTracesAsync, GrpcClient.PatchTraces, effectiveSettings.PatchTracesSettings);
             _callGetTrace = clientHelper.BuildApiCall<GetTraceRequest, Trace>(
                 GrpcClient.GetTraceAsync, GrpcClient.GetTrace, effectiveSettings.GetTraceSettings);
@@ -739,12 +739,12 @@ namespace Google.Cloud.Trace.V1
         // Partial methods called for every ApiCall on construction.
         // Allows modification of all the underlying ApiCall objects.
         partial void Modify_ApiCall<TRequest, TResponse>(ref gaxgrpc::ApiCall<TRequest, TResponse> call)
-            where TRequest : class, proto::IMessage<TRequest>
-            where TResponse : class, proto::IMessage<TResponse>;
+            where TRequest : class, pb::IMessage<TRequest>
+            where TResponse : class, pb::IMessage<TResponse>;
 
         // Partial methods called for each ApiCall on construction.
         // Allows per-RPC-method modification of the underlying ApiCall object.
-        partial void Modify_PatchTracesApiCall(ref gaxgrpc::ApiCall<PatchTracesRequest, protowkt::Empty> call);
+        partial void Modify_PatchTracesApiCall(ref gaxgrpc::ApiCall<PatchTracesRequest, pbwkt::Empty> call);
         partial void Modify_GetTraceApiCall(ref gaxgrpc::ApiCall<GetTraceRequest, Trace> call);
         partial void Modify_ListTracesApiCall(ref gaxgrpc::ApiCall<ListTracesRequest, ListTracesResponse> call);
         partial void OnConstruction(TraceService.TraceServiceClient grpcClient, TraceServiceSettings effectiveSettings, gaxgrpc::ClientHelper clientHelper);

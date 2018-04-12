@@ -16,10 +16,10 @@
 
 using gax = Google.Api.Gax;
 using gaxgrpc = Google.Api.Gax.Grpc;
-using proto = Google.Protobuf;
-using protowkt = Google.Protobuf.WellKnownTypes;
+using pb = Google.Protobuf;
+using pbwkt = Google.Protobuf.WellKnownTypes;
 using grpccore = Grpc.Core;
-using s = System;
+using sys = System;
 using sc = System.Collections;
 using scg = System.Collections.Generic;
 using sco = System.Collections.ObjectModel;
@@ -71,7 +71,7 @@ namespace Google.Cloud.Logging.V2
         /// <item><description><see cref="grpccore::StatusCode.Unavailable"/></description></item>
         /// </list>
         /// </remarks>
-        public static s::Predicate<grpccore::RpcException> IdempotentRetryFilter { get; } =
+        public static sys::Predicate<grpccore::RpcException> IdempotentRetryFilter { get; } =
             gaxgrpc::RetrySettings.FilterForStatusCodes(grpccore::StatusCode.DeadlineExceeded, grpccore::StatusCode.Internal, grpccore::StatusCode.Unavailable);
 
         /// <summary>
@@ -81,7 +81,7 @@ namespace Google.Cloud.Logging.V2
         /// <remarks>
         /// There are no RPC <see cref="grpccore::StatusCode"/>s eligible for retry for "NonIdempotent" RPC methods.
         /// </remarks>
-        public static s::Predicate<grpccore::RpcException> NonIdempotentRetryFilter { get; } =
+        public static sys::Predicate<grpccore::RpcException> NonIdempotentRetryFilter { get; } =
             gaxgrpc::RetrySettings.FilterForStatusCodes();
 
         /// <summary>
@@ -99,8 +99,8 @@ namespace Google.Cloud.Logging.V2
         /// </list>
         /// </remarks>
         public static gaxgrpc::BackoffSettings GetDefaultRetryBackoff() => new gaxgrpc::BackoffSettings(
-            delay: s::TimeSpan.FromMilliseconds(100),
-            maxDelay: s::TimeSpan.FromMilliseconds(1000),
+            delay: sys::TimeSpan.FromMilliseconds(100),
+            maxDelay: sys::TimeSpan.FromMilliseconds(1000),
             delayMultiplier: 1.2
         );
 
@@ -119,8 +119,8 @@ namespace Google.Cloud.Logging.V2
         /// </list>
         /// </remarks>
         public static gaxgrpc::BackoffSettings GetDefaultTimeoutBackoff() => new gaxgrpc::BackoffSettings(
-            delay: s::TimeSpan.FromMilliseconds(20000),
-            maxDelay: s::TimeSpan.FromMilliseconds(60000),
+            delay: sys::TimeSpan.FromMilliseconds(20000),
+            maxDelay: sys::TimeSpan.FromMilliseconds(60000),
             delayMultiplier: 1.5
         );
 
@@ -151,7 +151,7 @@ namespace Google.Cloud.Logging.V2
             gaxgrpc::CallTiming.FromRetry(new gaxgrpc::RetrySettings(
                 retryBackoff: GetDefaultRetryBackoff(),
                 timeoutBackoff: GetDefaultTimeoutBackoff(),
-                totalExpiration: gax::Expiration.FromTimeout(s::TimeSpan.FromMilliseconds(90000)),
+                totalExpiration: gax::Expiration.FromTimeout(sys::TimeSpan.FromMilliseconds(90000)),
                 retryFilter: IdempotentRetryFilter
             )));
 
@@ -182,7 +182,7 @@ namespace Google.Cloud.Logging.V2
             gaxgrpc::CallTiming.FromRetry(new gaxgrpc::RetrySettings(
                 retryBackoff: GetDefaultRetryBackoff(),
                 timeoutBackoff: GetDefaultTimeoutBackoff(),
-                totalExpiration: gax::Expiration.FromTimeout(s::TimeSpan.FromMilliseconds(90000)),
+                totalExpiration: gax::Expiration.FromTimeout(sys::TimeSpan.FromMilliseconds(90000)),
                 retryFilter: IdempotentRetryFilter
             )));
 
@@ -211,7 +211,7 @@ namespace Google.Cloud.Logging.V2
             gaxgrpc::CallTiming.FromRetry(new gaxgrpc::RetrySettings(
                 retryBackoff: GetDefaultRetryBackoff(),
                 timeoutBackoff: GetDefaultTimeoutBackoff(),
-                totalExpiration: gax::Expiration.FromTimeout(s::TimeSpan.FromMilliseconds(90000)),
+                totalExpiration: gax::Expiration.FromTimeout(sys::TimeSpan.FromMilliseconds(90000)),
                 retryFilter: NonIdempotentRetryFilter
             )));
 
@@ -240,7 +240,7 @@ namespace Google.Cloud.Logging.V2
             gaxgrpc::CallTiming.FromRetry(new gaxgrpc::RetrySettings(
                 retryBackoff: GetDefaultRetryBackoff(),
                 timeoutBackoff: GetDefaultTimeoutBackoff(),
-                totalExpiration: gax::Expiration.FromTimeout(s::TimeSpan.FromMilliseconds(90000)),
+                totalExpiration: gax::Expiration.FromTimeout(sys::TimeSpan.FromMilliseconds(90000)),
                 retryFilter: NonIdempotentRetryFilter
             )));
 
@@ -271,7 +271,7 @@ namespace Google.Cloud.Logging.V2
             gaxgrpc::CallTiming.FromRetry(new gaxgrpc::RetrySettings(
                 retryBackoff: GetDefaultRetryBackoff(),
                 timeoutBackoff: GetDefaultTimeoutBackoff(),
-                totalExpiration: gax::Expiration.FromTimeout(s::TimeSpan.FromMilliseconds(90000)),
+                totalExpiration: gax::Expiration.FromTimeout(sys::TimeSpan.FromMilliseconds(90000)),
                 retryFilter: IdempotentRetryFilter
             )));
 
@@ -379,7 +379,7 @@ namespace Google.Cloud.Logging.V2
         /// </summary>
         public virtual MetricsServiceV2.MetricsServiceV2Client GrpcClient
         {
-            get { throw new s::NotImplementedException(); }
+            get { throw new sys::NotImplementedException(); }
         }
 
         /// <summary>
@@ -468,7 +468,7 @@ namespace Google.Cloud.Logging.V2
             ListLogMetricsRequest request,
             gaxgrpc::CallSettings callSettings = null)
         {
-            throw new s::NotImplementedException();
+            throw new sys::NotImplementedException();
         }
 
         /// <summary>
@@ -487,7 +487,7 @@ namespace Google.Cloud.Logging.V2
             ListLogMetricsRequest request,
             gaxgrpc::CallSettings callSettings = null)
         {
-            throw new s::NotImplementedException();
+            throw new sys::NotImplementedException();
         }
 
         /// <summary>
@@ -572,7 +572,7 @@ namespace Google.Cloud.Logging.V2
             GetLogMetricRequest request,
             gaxgrpc::CallSettings callSettings = null)
         {
-            throw new s::NotImplementedException();
+            throw new sys::NotImplementedException();
         }
 
         /// <summary>
@@ -609,7 +609,7 @@ namespace Google.Cloud.Logging.V2
             GetLogMetricRequest request,
             gaxgrpc::CallSettings callSettings = null)
         {
-            throw new s::NotImplementedException();
+            throw new sys::NotImplementedException();
         }
 
         /// <summary>
@@ -718,7 +718,7 @@ namespace Google.Cloud.Logging.V2
             CreateLogMetricRequest request,
             gaxgrpc::CallSettings callSettings = null)
         {
-            throw new s::NotImplementedException();
+            throw new sys::NotImplementedException();
         }
 
         /// <summary>
@@ -755,7 +755,7 @@ namespace Google.Cloud.Logging.V2
             CreateLogMetricRequest request,
             gaxgrpc::CallSettings callSettings = null)
         {
-            throw new s::NotImplementedException();
+            throw new sys::NotImplementedException();
         }
 
         /// <summary>
@@ -867,7 +867,7 @@ namespace Google.Cloud.Logging.V2
             UpdateLogMetricRequest request,
             gaxgrpc::CallSettings callSettings = null)
         {
-            throw new s::NotImplementedException();
+            throw new sys::NotImplementedException();
         }
 
         /// <summary>
@@ -904,7 +904,7 @@ namespace Google.Cloud.Logging.V2
             UpdateLogMetricRequest request,
             gaxgrpc::CallSettings callSettings = null)
         {
-            throw new s::NotImplementedException();
+            throw new sys::NotImplementedException();
         }
 
         /// <summary>
@@ -986,7 +986,7 @@ namespace Google.Cloud.Logging.V2
             DeleteLogMetricRequest request,
             gaxgrpc::CallSettings callSettings = null)
         {
-            throw new s::NotImplementedException();
+            throw new sys::NotImplementedException();
         }
 
         /// <summary>
@@ -1020,7 +1020,7 @@ namespace Google.Cloud.Logging.V2
             DeleteLogMetricRequest request,
             gaxgrpc::CallSettings callSettings = null)
         {
-            throw new s::NotImplementedException();
+            throw new sys::NotImplementedException();
         }
 
     }
@@ -1034,7 +1034,7 @@ namespace Google.Cloud.Logging.V2
         private readonly gaxgrpc::ApiCall<GetLogMetricRequest, LogMetric> _callGetLogMetric;
         private readonly gaxgrpc::ApiCall<CreateLogMetricRequest, LogMetric> _callCreateLogMetric;
         private readonly gaxgrpc::ApiCall<UpdateLogMetricRequest, LogMetric> _callUpdateLogMetric;
-        private readonly gaxgrpc::ApiCall<DeleteLogMetricRequest, protowkt::Empty> _callDeleteLogMetric;
+        private readonly gaxgrpc::ApiCall<DeleteLogMetricRequest, pbwkt::Empty> _callDeleteLogMetric;
 
         /// <summary>
         /// Constructs a client wrapper for the MetricsServiceV2 service, with the specified gRPC client and settings.
@@ -1054,7 +1054,7 @@ namespace Google.Cloud.Logging.V2
                 GrpcClient.CreateLogMetricAsync, GrpcClient.CreateLogMetric, effectiveSettings.CreateLogMetricSettings);
             _callUpdateLogMetric = clientHelper.BuildApiCall<UpdateLogMetricRequest, LogMetric>(
                 GrpcClient.UpdateLogMetricAsync, GrpcClient.UpdateLogMetric, effectiveSettings.UpdateLogMetricSettings);
-            _callDeleteLogMetric = clientHelper.BuildApiCall<DeleteLogMetricRequest, protowkt::Empty>(
+            _callDeleteLogMetric = clientHelper.BuildApiCall<DeleteLogMetricRequest, pbwkt::Empty>(
                 GrpcClient.DeleteLogMetricAsync, GrpcClient.DeleteLogMetric, effectiveSettings.DeleteLogMetricSettings);
             Modify_ApiCall(ref _callListLogMetrics);
             Modify_ListLogMetricsApiCall(ref _callListLogMetrics);
@@ -1074,8 +1074,8 @@ namespace Google.Cloud.Logging.V2
         // Partial methods called for every ApiCall on construction.
         // Allows modification of all the underlying ApiCall objects.
         partial void Modify_ApiCall<TRequest, TResponse>(ref gaxgrpc::ApiCall<TRequest, TResponse> call)
-            where TRequest : class, proto::IMessage<TRequest>
-            where TResponse : class, proto::IMessage<TResponse>;
+            where TRequest : class, pb::IMessage<TRequest>
+            where TResponse : class, pb::IMessage<TResponse>;
 
         // Partial methods called for each ApiCall on construction.
         // Allows per-RPC-method modification of the underlying ApiCall object.
@@ -1083,7 +1083,7 @@ namespace Google.Cloud.Logging.V2
         partial void Modify_GetLogMetricApiCall(ref gaxgrpc::ApiCall<GetLogMetricRequest, LogMetric> call);
         partial void Modify_CreateLogMetricApiCall(ref gaxgrpc::ApiCall<CreateLogMetricRequest, LogMetric> call);
         partial void Modify_UpdateLogMetricApiCall(ref gaxgrpc::ApiCall<UpdateLogMetricRequest, LogMetric> call);
-        partial void Modify_DeleteLogMetricApiCall(ref gaxgrpc::ApiCall<DeleteLogMetricRequest, protowkt::Empty> call);
+        partial void Modify_DeleteLogMetricApiCall(ref gaxgrpc::ApiCall<DeleteLogMetricRequest, pbwkt::Empty> call);
         partial void OnConstruction(MetricsServiceV2.MetricsServiceV2Client grpcClient, MetricsServiceV2Settings effectiveSettings, gaxgrpc::ClientHelper clientHelper);
 
         /// <summary>

@@ -92,7 +92,7 @@ namespace Google.Cloud.Bigtable.V2.Snippets
             BigtableServiceApiClient bigtableServiceApiClient = await BigtableServiceApiClient.CreateAsync();
             // Initialize request argument(s)
             TableName tableName = new TableName("[PROJECT]", "[INSTANCE]", "[TABLE]");
-            ByteString rowKey = Google.Protobuf.ByteString.CopyFromUtf8("");
+            ByteString rowKey = ByteString.Empty;
             IEnumerable<Mutation> mutations = new List<Mutation>();
             // Make the request
             MutateRowResponse response = await bigtableServiceApiClient.MutateRowAsync(tableName, rowKey, mutations);
@@ -107,7 +107,7 @@ namespace Google.Cloud.Bigtable.V2.Snippets
             BigtableServiceApiClient bigtableServiceApiClient = BigtableServiceApiClient.Create();
             // Initialize request argument(s)
             TableName tableName = new TableName("[PROJECT]", "[INSTANCE]", "[TABLE]");
-            ByteString rowKey = Google.Protobuf.ByteString.CopyFromUtf8("");
+            ByteString rowKey = ByteString.Empty;
             IEnumerable<Mutation> mutations = new List<Mutation>();
             // Make the request
             MutateRowResponse response = bigtableServiceApiClient.MutateRow(tableName, rowKey, mutations);
@@ -125,7 +125,7 @@ namespace Google.Cloud.Bigtable.V2.Snippets
             MutateRowRequest request = new MutateRowRequest
             {
                 TableNameAsTableName = new TableName("[PROJECT]", "[INSTANCE]", "[TABLE]"),
-                RowKey = Google.Protobuf.ByteString.CopyFromUtf8(""),
+                RowKey = ByteString.Empty,
                 Mutations = { },
             };
             // Make the request
@@ -143,7 +143,7 @@ namespace Google.Cloud.Bigtable.V2.Snippets
             MutateRowRequest request = new MutateRowRequest
             {
                 TableNameAsTableName = new TableName("[PROJECT]", "[INSTANCE]", "[TABLE]"),
-                RowKey = Google.Protobuf.ByteString.CopyFromUtf8(""),
+                RowKey = ByteString.Empty,
                 Mutations = { },
             };
             // Make the request
@@ -186,7 +186,7 @@ namespace Google.Cloud.Bigtable.V2.Snippets
             BigtableServiceApiClient bigtableServiceApiClient = await BigtableServiceApiClient.CreateAsync();
             // Initialize request argument(s)
             TableName tableName = new TableName("[PROJECT]", "[INSTANCE]", "[TABLE]");
-            ByteString rowKey = Google.Protobuf.ByteString.CopyFromUtf8("");
+            ByteString rowKey = ByteString.Empty;
             RowFilter predicateFilter = new RowFilter();
             IEnumerable<Mutation> trueMutations = new List<Mutation>();
             IEnumerable<Mutation> falseMutations = new List<Mutation>();
@@ -203,7 +203,7 @@ namespace Google.Cloud.Bigtable.V2.Snippets
             BigtableServiceApiClient bigtableServiceApiClient = BigtableServiceApiClient.Create();
             // Initialize request argument(s)
             TableName tableName = new TableName("[PROJECT]", "[INSTANCE]", "[TABLE]");
-            ByteString rowKey = Google.Protobuf.ByteString.CopyFromUtf8("");
+            ByteString rowKey = ByteString.Empty;
             RowFilter predicateFilter = new RowFilter();
             IEnumerable<Mutation> trueMutations = new List<Mutation>();
             IEnumerable<Mutation> falseMutations = new List<Mutation>();
@@ -223,7 +223,7 @@ namespace Google.Cloud.Bigtable.V2.Snippets
             CheckAndMutateRowRequest request = new CheckAndMutateRowRequest
             {
                 TableNameAsTableName = new TableName("[PROJECT]", "[INSTANCE]", "[TABLE]"),
-                RowKey = Google.Protobuf.ByteString.CopyFromUtf8(""),
+                RowKey = ByteString.Empty,
             };
             // Make the request
             CheckAndMutateRowResponse response = await bigtableServiceApiClient.CheckAndMutateRowAsync(request);
@@ -240,7 +240,7 @@ namespace Google.Cloud.Bigtable.V2.Snippets
             CheckAndMutateRowRequest request = new CheckAndMutateRowRequest
             {
                 TableNameAsTableName = new TableName("[PROJECT]", "[INSTANCE]", "[TABLE]"),
-                RowKey = Google.Protobuf.ByteString.CopyFromUtf8(""),
+                RowKey = ByteString.Empty,
             };
             // Make the request
             CheckAndMutateRowResponse response = bigtableServiceApiClient.CheckAndMutateRow(request);
@@ -256,7 +256,7 @@ namespace Google.Cloud.Bigtable.V2.Snippets
             BigtableServiceApiClient bigtableServiceApiClient = await BigtableServiceApiClient.CreateAsync();
             // Initialize request argument(s)
             TableName tableName = new TableName("[PROJECT]", "[INSTANCE]", "[TABLE]");
-            ByteString rowKey = Google.Protobuf.ByteString.CopyFromUtf8("");
+            ByteString rowKey = ByteString.Empty;
             IEnumerable<ReadModifyWriteRule> rules = new List<ReadModifyWriteRule>();
             // Make the request
             ReadModifyWriteRowResponse response = await bigtableServiceApiClient.ReadModifyWriteRowAsync(tableName, rowKey, rules);
@@ -271,7 +271,7 @@ namespace Google.Cloud.Bigtable.V2.Snippets
             BigtableServiceApiClient bigtableServiceApiClient = BigtableServiceApiClient.Create();
             // Initialize request argument(s)
             TableName tableName = new TableName("[PROJECT]", "[INSTANCE]", "[TABLE]");
-            ByteString rowKey = Google.Protobuf.ByteString.CopyFromUtf8("");
+            ByteString rowKey = ByteString.Empty;
             IEnumerable<ReadModifyWriteRule> rules = new List<ReadModifyWriteRule>();
             // Make the request
             ReadModifyWriteRowResponse response = bigtableServiceApiClient.ReadModifyWriteRow(tableName, rowKey, rules);
@@ -289,7 +289,7 @@ namespace Google.Cloud.Bigtable.V2.Snippets
             ReadModifyWriteRowRequest request = new ReadModifyWriteRowRequest
             {
                 TableNameAsTableName = new TableName("[PROJECT]", "[INSTANCE]", "[TABLE]"),
-                RowKey = Google.Protobuf.ByteString.CopyFromUtf8(""),
+                RowKey = ByteString.Empty,
                 Rules = { },
             };
             // Make the request
@@ -307,7 +307,7 @@ namespace Google.Cloud.Bigtable.V2.Snippets
             ReadModifyWriteRowRequest request = new ReadModifyWriteRowRequest
             {
                 TableNameAsTableName = new TableName("[PROJECT]", "[INSTANCE]", "[TABLE]"),
-                RowKey = Google.Protobuf.ByteString.CopyFromUtf8(""),
+                RowKey = ByteString.Empty,
                 Rules = { },
             };
             // Make the request

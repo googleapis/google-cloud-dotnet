@@ -16,10 +16,10 @@
 
 using gax = Google.Api.Gax;
 using gaxgrpc = Google.Api.Gax.Grpc;
-using proto = Google.Protobuf;
-using protowkt = Google.Protobuf.WellKnownTypes;
+using pb = Google.Protobuf;
+using pbwkt = Google.Protobuf.WellKnownTypes;
 using grpccore = Grpc.Core;
-using s = System;
+using sys = System;
 using sc = System.Collections;
 using scg = System.Collections.Generic;
 using sco = System.Collections.ObjectModel;
@@ -76,7 +76,7 @@ namespace Google.Cloud.Logging.V2
         /// <item><description><see cref="grpccore::StatusCode.Unavailable"/></description></item>
         /// </list>
         /// </remarks>
-        public static s::Predicate<grpccore::RpcException> IdempotentRetryFilter { get; } =
+        public static sys::Predicate<grpccore::RpcException> IdempotentRetryFilter { get; } =
             gaxgrpc::RetrySettings.FilterForStatusCodes(grpccore::StatusCode.DeadlineExceeded, grpccore::StatusCode.Internal, grpccore::StatusCode.Unavailable);
 
         /// <summary>
@@ -86,7 +86,7 @@ namespace Google.Cloud.Logging.V2
         /// <remarks>
         /// There are no RPC <see cref="grpccore::StatusCode"/>s eligible for retry for "NonIdempotent" RPC methods.
         /// </remarks>
-        public static s::Predicate<grpccore::RpcException> NonIdempotentRetryFilter { get; } =
+        public static sys::Predicate<grpccore::RpcException> NonIdempotentRetryFilter { get; } =
             gaxgrpc::RetrySettings.FilterForStatusCodes();
 
         /// <summary>
@@ -104,8 +104,8 @@ namespace Google.Cloud.Logging.V2
         /// </list>
         /// </remarks>
         public static gaxgrpc::BackoffSettings GetDefaultRetryBackoff() => new gaxgrpc::BackoffSettings(
-            delay: s::TimeSpan.FromMilliseconds(100),
-            maxDelay: s::TimeSpan.FromMilliseconds(1000),
+            delay: sys::TimeSpan.FromMilliseconds(100),
+            maxDelay: sys::TimeSpan.FromMilliseconds(1000),
             delayMultiplier: 1.2
         );
 
@@ -124,8 +124,8 @@ namespace Google.Cloud.Logging.V2
         /// </list>
         /// </remarks>
         public static gaxgrpc::BackoffSettings GetDefaultTimeoutBackoff() => new gaxgrpc::BackoffSettings(
-            delay: s::TimeSpan.FromMilliseconds(30000),
-            maxDelay: s::TimeSpan.FromMilliseconds(60000),
+            delay: sys::TimeSpan.FromMilliseconds(30000),
+            maxDelay: sys::TimeSpan.FromMilliseconds(60000),
             delayMultiplier: 1.5
         );
 
@@ -144,8 +144,8 @@ namespace Google.Cloud.Logging.V2
         /// </list>
         /// </remarks>
         public static gaxgrpc::BackoffSettings GetWriteSinkRetryBackoff() => new gaxgrpc::BackoffSettings(
-            delay: s::TimeSpan.FromMilliseconds(100),
-            maxDelay: s::TimeSpan.FromMilliseconds(1000),
+            delay: sys::TimeSpan.FromMilliseconds(100),
+            maxDelay: sys::TimeSpan.FromMilliseconds(1000),
             delayMultiplier: 1.2
         );
 
@@ -164,8 +164,8 @@ namespace Google.Cloud.Logging.V2
         /// </list>
         /// </remarks>
         public static gaxgrpc::BackoffSettings GetWriteSinkTimeoutBackoff() => new gaxgrpc::BackoffSettings(
-            delay: s::TimeSpan.FromMilliseconds(30000),
-            maxDelay: s::TimeSpan.FromMilliseconds(60000),
+            delay: sys::TimeSpan.FromMilliseconds(30000),
+            maxDelay: sys::TimeSpan.FromMilliseconds(60000),
             delayMultiplier: 1.5
         );
 
@@ -196,7 +196,7 @@ namespace Google.Cloud.Logging.V2
             gaxgrpc::CallTiming.FromRetry(new gaxgrpc::RetrySettings(
                 retryBackoff: GetDefaultRetryBackoff(),
                 timeoutBackoff: GetDefaultTimeoutBackoff(),
-                totalExpiration: gax::Expiration.FromTimeout(s::TimeSpan.FromMilliseconds(90000)),
+                totalExpiration: gax::Expiration.FromTimeout(sys::TimeSpan.FromMilliseconds(90000)),
                 retryFilter: IdempotentRetryFilter
             )));
 
@@ -227,7 +227,7 @@ namespace Google.Cloud.Logging.V2
             gaxgrpc::CallTiming.FromRetry(new gaxgrpc::RetrySettings(
                 retryBackoff: GetDefaultRetryBackoff(),
                 timeoutBackoff: GetDefaultTimeoutBackoff(),
-                totalExpiration: gax::Expiration.FromTimeout(s::TimeSpan.FromMilliseconds(90000)),
+                totalExpiration: gax::Expiration.FromTimeout(sys::TimeSpan.FromMilliseconds(90000)),
                 retryFilter: IdempotentRetryFilter
             )));
 
@@ -256,7 +256,7 @@ namespace Google.Cloud.Logging.V2
             gaxgrpc::CallTiming.FromRetry(new gaxgrpc::RetrySettings(
                 retryBackoff: GetDefaultRetryBackoff(),
                 timeoutBackoff: GetDefaultTimeoutBackoff(),
-                totalExpiration: gax::Expiration.FromTimeout(s::TimeSpan.FromMilliseconds(90000)),
+                totalExpiration: gax::Expiration.FromTimeout(sys::TimeSpan.FromMilliseconds(90000)),
                 retryFilter: NonIdempotentRetryFilter
             )));
 
@@ -285,7 +285,7 @@ namespace Google.Cloud.Logging.V2
             gaxgrpc::CallTiming.FromRetry(new gaxgrpc::RetrySettings(
                 retryBackoff: GetDefaultRetryBackoff(),
                 timeoutBackoff: GetDefaultTimeoutBackoff(),
-                totalExpiration: gax::Expiration.FromTimeout(s::TimeSpan.FromMilliseconds(90000)),
+                totalExpiration: gax::Expiration.FromTimeout(sys::TimeSpan.FromMilliseconds(90000)),
                 retryFilter: NonIdempotentRetryFilter
             )));
 
@@ -316,7 +316,7 @@ namespace Google.Cloud.Logging.V2
             gaxgrpc::CallTiming.FromRetry(new gaxgrpc::RetrySettings(
                 retryBackoff: GetDefaultRetryBackoff(),
                 timeoutBackoff: GetDefaultTimeoutBackoff(),
-                totalExpiration: gax::Expiration.FromTimeout(s::TimeSpan.FromMilliseconds(90000)),
+                totalExpiration: gax::Expiration.FromTimeout(sys::TimeSpan.FromMilliseconds(90000)),
                 retryFilter: IdempotentRetryFilter
             )));
 
@@ -347,7 +347,7 @@ namespace Google.Cloud.Logging.V2
             gaxgrpc::CallTiming.FromRetry(new gaxgrpc::RetrySettings(
                 retryBackoff: GetDefaultRetryBackoff(),
                 timeoutBackoff: GetDefaultTimeoutBackoff(),
-                totalExpiration: gax::Expiration.FromTimeout(s::TimeSpan.FromMilliseconds(90000)),
+                totalExpiration: gax::Expiration.FromTimeout(sys::TimeSpan.FromMilliseconds(90000)),
                 retryFilter: IdempotentRetryFilter
             )));
 
@@ -378,7 +378,7 @@ namespace Google.Cloud.Logging.V2
             gaxgrpc::CallTiming.FromRetry(new gaxgrpc::RetrySettings(
                 retryBackoff: GetDefaultRetryBackoff(),
                 timeoutBackoff: GetDefaultTimeoutBackoff(),
-                totalExpiration: gax::Expiration.FromTimeout(s::TimeSpan.FromMilliseconds(90000)),
+                totalExpiration: gax::Expiration.FromTimeout(sys::TimeSpan.FromMilliseconds(90000)),
                 retryFilter: IdempotentRetryFilter
             )));
 
@@ -407,7 +407,7 @@ namespace Google.Cloud.Logging.V2
             gaxgrpc::CallTiming.FromRetry(new gaxgrpc::RetrySettings(
                 retryBackoff: GetDefaultRetryBackoff(),
                 timeoutBackoff: GetDefaultTimeoutBackoff(),
-                totalExpiration: gax::Expiration.FromTimeout(s::TimeSpan.FromMilliseconds(90000)),
+                totalExpiration: gax::Expiration.FromTimeout(sys::TimeSpan.FromMilliseconds(90000)),
                 retryFilter: NonIdempotentRetryFilter
             )));
 
@@ -436,7 +436,7 @@ namespace Google.Cloud.Logging.V2
             gaxgrpc::CallTiming.FromRetry(new gaxgrpc::RetrySettings(
                 retryBackoff: GetDefaultRetryBackoff(),
                 timeoutBackoff: GetDefaultTimeoutBackoff(),
-                totalExpiration: gax::Expiration.FromTimeout(s::TimeSpan.FromMilliseconds(90000)),
+                totalExpiration: gax::Expiration.FromTimeout(sys::TimeSpan.FromMilliseconds(90000)),
                 retryFilter: NonIdempotentRetryFilter
             )));
 
@@ -467,7 +467,7 @@ namespace Google.Cloud.Logging.V2
             gaxgrpc::CallTiming.FromRetry(new gaxgrpc::RetrySettings(
                 retryBackoff: GetDefaultRetryBackoff(),
                 timeoutBackoff: GetDefaultTimeoutBackoff(),
-                totalExpiration: gax::Expiration.FromTimeout(s::TimeSpan.FromMilliseconds(90000)),
+                totalExpiration: gax::Expiration.FromTimeout(sys::TimeSpan.FromMilliseconds(90000)),
                 retryFilter: IdempotentRetryFilter
             )));
 
@@ -575,7 +575,7 @@ namespace Google.Cloud.Logging.V2
         /// </summary>
         public virtual ConfigServiceV2.ConfigServiceV2Client GrpcClient
         {
-            get { throw new s::NotImplementedException(); }
+            get { throw new sys::NotImplementedException(); }
         }
 
         /// <summary>
@@ -670,7 +670,7 @@ namespace Google.Cloud.Logging.V2
             ListSinksRequest request,
             gaxgrpc::CallSettings callSettings = null)
         {
-            throw new s::NotImplementedException();
+            throw new sys::NotImplementedException();
         }
 
         /// <summary>
@@ -689,7 +689,7 @@ namespace Google.Cloud.Logging.V2
             ListSinksRequest request,
             gaxgrpc::CallSettings callSettings = null)
         {
-            throw new s::NotImplementedException();
+            throw new sys::NotImplementedException();
         }
 
         /// <summary>
@@ -789,7 +789,7 @@ namespace Google.Cloud.Logging.V2
             GetSinkRequest request,
             gaxgrpc::CallSettings callSettings = null)
         {
-            throw new s::NotImplementedException();
+            throw new sys::NotImplementedException();
         }
 
         /// <summary>
@@ -826,7 +826,7 @@ namespace Google.Cloud.Logging.V2
             GetSinkRequest request,
             gaxgrpc::CallSettings callSettings = null)
         {
-            throw new s::NotImplementedException();
+            throw new sys::NotImplementedException();
         }
 
         /// <summary>
@@ -956,7 +956,7 @@ namespace Google.Cloud.Logging.V2
             CreateSinkRequest request,
             gaxgrpc::CallSettings callSettings = null)
         {
-            throw new s::NotImplementedException();
+            throw new sys::NotImplementedException();
         }
 
         /// <summary>
@@ -999,7 +999,7 @@ namespace Google.Cloud.Logging.V2
             CreateSinkRequest request,
             gaxgrpc::CallSettings callSettings = null)
         {
-            throw new s::NotImplementedException();
+            throw new sys::NotImplementedException();
         }
 
         /// <summary>
@@ -1132,7 +1132,7 @@ namespace Google.Cloud.Logging.V2
             UpdateSinkRequest request,
             gaxgrpc::CallSettings callSettings = null)
         {
-            throw new s::NotImplementedException();
+            throw new sys::NotImplementedException();
         }
 
         /// <summary>
@@ -1175,7 +1175,7 @@ namespace Google.Cloud.Logging.V2
             UpdateSinkRequest request,
             gaxgrpc::CallSettings callSettings = null)
         {
-            throw new s::NotImplementedException();
+            throw new sys::NotImplementedException();
         }
 
         /// <summary>
@@ -1279,7 +1279,7 @@ namespace Google.Cloud.Logging.V2
             DeleteSinkRequest request,
             gaxgrpc::CallSettings callSettings = null)
         {
-            throw new s::NotImplementedException();
+            throw new sys::NotImplementedException();
         }
 
         /// <summary>
@@ -1315,7 +1315,7 @@ namespace Google.Cloud.Logging.V2
             DeleteSinkRequest request,
             gaxgrpc::CallSettings callSettings = null)
         {
-            throw new s::NotImplementedException();
+            throw new sys::NotImplementedException();
         }
 
         /// <summary>
@@ -1410,7 +1410,7 @@ namespace Google.Cloud.Logging.V2
             ListExclusionsRequest request,
             gaxgrpc::CallSettings callSettings = null)
         {
-            throw new s::NotImplementedException();
+            throw new sys::NotImplementedException();
         }
 
         /// <summary>
@@ -1429,7 +1429,7 @@ namespace Google.Cloud.Logging.V2
             ListExclusionsRequest request,
             gaxgrpc::CallSettings callSettings = null)
         {
-            throw new s::NotImplementedException();
+            throw new sys::NotImplementedException();
         }
 
         /// <summary>
@@ -1529,7 +1529,7 @@ namespace Google.Cloud.Logging.V2
             GetExclusionRequest request,
             gaxgrpc::CallSettings callSettings = null)
         {
-            throw new s::NotImplementedException();
+            throw new sys::NotImplementedException();
         }
 
         /// <summary>
@@ -1566,7 +1566,7 @@ namespace Google.Cloud.Logging.V2
             GetExclusionRequest request,
             gaxgrpc::CallSettings callSettings = null)
         {
-            throw new s::NotImplementedException();
+            throw new sys::NotImplementedException();
         }
 
         /// <summary>
@@ -1692,7 +1692,7 @@ namespace Google.Cloud.Logging.V2
             CreateExclusionRequest request,
             gaxgrpc::CallSettings callSettings = null)
         {
-            throw new s::NotImplementedException();
+            throw new sys::NotImplementedException();
         }
 
         /// <summary>
@@ -1733,7 +1733,7 @@ namespace Google.Cloud.Logging.V2
             CreateExclusionRequest request,
             gaxgrpc::CallSettings callSettings = null)
         {
-            throw new s::NotImplementedException();
+            throw new sys::NotImplementedException();
         }
 
         /// <summary>
@@ -1771,7 +1771,7 @@ namespace Google.Cloud.Logging.V2
         public virtual stt::Task<LogExclusion> UpdateExclusionAsync(
             ExclusionNameOneof name,
             LogExclusion exclusion,
-            protowkt::FieldMask updateMask,
+            pbwkt::FieldMask updateMask,
             gaxgrpc::CallSettings callSettings = null) => UpdateExclusionAsync(
                 new UpdateExclusionRequest
                 {
@@ -1816,7 +1816,7 @@ namespace Google.Cloud.Logging.V2
         public virtual stt::Task<LogExclusion> UpdateExclusionAsync(
             ExclusionNameOneof name,
             LogExclusion exclusion,
-            protowkt::FieldMask updateMask,
+            pbwkt::FieldMask updateMask,
             st::CancellationToken cancellationToken) => UpdateExclusionAsync(
                 name,
                 exclusion,
@@ -1858,7 +1858,7 @@ namespace Google.Cloud.Logging.V2
         public virtual LogExclusion UpdateExclusion(
             ExclusionNameOneof name,
             LogExclusion exclusion,
-            protowkt::FieldMask updateMask,
+            pbwkt::FieldMask updateMask,
             gaxgrpc::CallSettings callSettings = null) => UpdateExclusion(
                 new UpdateExclusionRequest
                 {
@@ -1884,7 +1884,7 @@ namespace Google.Cloud.Logging.V2
             UpdateExclusionRequest request,
             gaxgrpc::CallSettings callSettings = null)
         {
-            throw new s::NotImplementedException();
+            throw new sys::NotImplementedException();
         }
 
         /// <summary>
@@ -1921,7 +1921,7 @@ namespace Google.Cloud.Logging.V2
             UpdateExclusionRequest request,
             gaxgrpc::CallSettings callSettings = null)
         {
-            throw new s::NotImplementedException();
+            throw new sys::NotImplementedException();
         }
 
         /// <summary>
@@ -2018,7 +2018,7 @@ namespace Google.Cloud.Logging.V2
             DeleteExclusionRequest request,
             gaxgrpc::CallSettings callSettings = null)
         {
-            throw new s::NotImplementedException();
+            throw new sys::NotImplementedException();
         }
 
         /// <summary>
@@ -2052,7 +2052,7 @@ namespace Google.Cloud.Logging.V2
             DeleteExclusionRequest request,
             gaxgrpc::CallSettings callSettings = null)
         {
-            throw new s::NotImplementedException();
+            throw new sys::NotImplementedException();
         }
 
     }
@@ -2066,12 +2066,12 @@ namespace Google.Cloud.Logging.V2
         private readonly gaxgrpc::ApiCall<GetSinkRequest, LogSink> _callGetSink;
         private readonly gaxgrpc::ApiCall<CreateSinkRequest, LogSink> _callCreateSink;
         private readonly gaxgrpc::ApiCall<UpdateSinkRequest, LogSink> _callUpdateSink;
-        private readonly gaxgrpc::ApiCall<DeleteSinkRequest, protowkt::Empty> _callDeleteSink;
+        private readonly gaxgrpc::ApiCall<DeleteSinkRequest, pbwkt::Empty> _callDeleteSink;
         private readonly gaxgrpc::ApiCall<ListExclusionsRequest, ListExclusionsResponse> _callListExclusions;
         private readonly gaxgrpc::ApiCall<GetExclusionRequest, LogExclusion> _callGetExclusion;
         private readonly gaxgrpc::ApiCall<CreateExclusionRequest, LogExclusion> _callCreateExclusion;
         private readonly gaxgrpc::ApiCall<UpdateExclusionRequest, LogExclusion> _callUpdateExclusion;
-        private readonly gaxgrpc::ApiCall<DeleteExclusionRequest, protowkt::Empty> _callDeleteExclusion;
+        private readonly gaxgrpc::ApiCall<DeleteExclusionRequest, pbwkt::Empty> _callDeleteExclusion;
 
         /// <summary>
         /// Constructs a client wrapper for the ConfigServiceV2 service, with the specified gRPC client and settings.
@@ -2091,7 +2091,7 @@ namespace Google.Cloud.Logging.V2
                 GrpcClient.CreateSinkAsync, GrpcClient.CreateSink, effectiveSettings.CreateSinkSettings);
             _callUpdateSink = clientHelper.BuildApiCall<UpdateSinkRequest, LogSink>(
                 GrpcClient.UpdateSinkAsync, GrpcClient.UpdateSink, effectiveSettings.UpdateSinkSettings);
-            _callDeleteSink = clientHelper.BuildApiCall<DeleteSinkRequest, protowkt::Empty>(
+            _callDeleteSink = clientHelper.BuildApiCall<DeleteSinkRequest, pbwkt::Empty>(
                 GrpcClient.DeleteSinkAsync, GrpcClient.DeleteSink, effectiveSettings.DeleteSinkSettings);
             _callListExclusions = clientHelper.BuildApiCall<ListExclusionsRequest, ListExclusionsResponse>(
                 GrpcClient.ListExclusionsAsync, GrpcClient.ListExclusions, effectiveSettings.ListExclusionsSettings);
@@ -2101,7 +2101,7 @@ namespace Google.Cloud.Logging.V2
                 GrpcClient.CreateExclusionAsync, GrpcClient.CreateExclusion, effectiveSettings.CreateExclusionSettings);
             _callUpdateExclusion = clientHelper.BuildApiCall<UpdateExclusionRequest, LogExclusion>(
                 GrpcClient.UpdateExclusionAsync, GrpcClient.UpdateExclusion, effectiveSettings.UpdateExclusionSettings);
-            _callDeleteExclusion = clientHelper.BuildApiCall<DeleteExclusionRequest, protowkt::Empty>(
+            _callDeleteExclusion = clientHelper.BuildApiCall<DeleteExclusionRequest, pbwkt::Empty>(
                 GrpcClient.DeleteExclusionAsync, GrpcClient.DeleteExclusion, effectiveSettings.DeleteExclusionSettings);
             Modify_ApiCall(ref _callListSinks);
             Modify_ListSinksApiCall(ref _callListSinks);
@@ -2131,8 +2131,8 @@ namespace Google.Cloud.Logging.V2
         // Partial methods called for every ApiCall on construction.
         // Allows modification of all the underlying ApiCall objects.
         partial void Modify_ApiCall<TRequest, TResponse>(ref gaxgrpc::ApiCall<TRequest, TResponse> call)
-            where TRequest : class, proto::IMessage<TRequest>
-            where TResponse : class, proto::IMessage<TResponse>;
+            where TRequest : class, pb::IMessage<TRequest>
+            where TResponse : class, pb::IMessage<TResponse>;
 
         // Partial methods called for each ApiCall on construction.
         // Allows per-RPC-method modification of the underlying ApiCall object.
@@ -2140,12 +2140,12 @@ namespace Google.Cloud.Logging.V2
         partial void Modify_GetSinkApiCall(ref gaxgrpc::ApiCall<GetSinkRequest, LogSink> call);
         partial void Modify_CreateSinkApiCall(ref gaxgrpc::ApiCall<CreateSinkRequest, LogSink> call);
         partial void Modify_UpdateSinkApiCall(ref gaxgrpc::ApiCall<UpdateSinkRequest, LogSink> call);
-        partial void Modify_DeleteSinkApiCall(ref gaxgrpc::ApiCall<DeleteSinkRequest, protowkt::Empty> call);
+        partial void Modify_DeleteSinkApiCall(ref gaxgrpc::ApiCall<DeleteSinkRequest, pbwkt::Empty> call);
         partial void Modify_ListExclusionsApiCall(ref gaxgrpc::ApiCall<ListExclusionsRequest, ListExclusionsResponse> call);
         partial void Modify_GetExclusionApiCall(ref gaxgrpc::ApiCall<GetExclusionRequest, LogExclusion> call);
         partial void Modify_CreateExclusionApiCall(ref gaxgrpc::ApiCall<CreateExclusionRequest, LogExclusion> call);
         partial void Modify_UpdateExclusionApiCall(ref gaxgrpc::ApiCall<UpdateExclusionRequest, LogExclusion> call);
-        partial void Modify_DeleteExclusionApiCall(ref gaxgrpc::ApiCall<DeleteExclusionRequest, protowkt::Empty> call);
+        partial void Modify_DeleteExclusionApiCall(ref gaxgrpc::ApiCall<DeleteExclusionRequest, pbwkt::Empty> call);
         partial void OnConstruction(ConfigServiceV2.ConfigServiceV2Client grpcClient, ConfigServiceV2Settings effectiveSettings, gaxgrpc::ClientHelper clientHelper);
 
         /// <summary>

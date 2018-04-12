@@ -15,15 +15,15 @@
 // Generated code. DO NOT EDIT!
 
 using gax = Google.Api.Gax;
-using s = System;
-using System.Linq;
+using sys = System;
+using linq = System.Linq;
 
 namespace Google.Cloud.Trace.V2
 {
     /// <summary>
     /// Resource name for the 'project' resource.
     /// </summary>
-    public sealed partial class ProjectName : gax::IResourceName, s::IEquatable<ProjectName>
+    public sealed partial class ProjectName : gax::IResourceName, sys::IEquatable<ProjectName>
     {
         private static readonly gax::PathTemplate s_template = new gax::PathTemplate("projects/{project}");
 
@@ -45,7 +45,7 @@ namespace Google.Cloud.Trace.V2
         /// <see cref="ProjectName"/> instance.
         /// </summary>
         /// <remarks>
-        /// This method still throws <see cref="s::ArgumentNullException"/> if <paramref name="projectName"/> is null,
+        /// This method still throws <see cref="sys::ArgumentNullException"/> if <paramref name="projectName"/> is null,
         /// as this would usually indicate a programming error rather than a data error.
         /// </remarks>
         /// <param name="projectName">The project resource name in string form. Must not be <c>null</c>.</param>
@@ -108,7 +108,7 @@ namespace Google.Cloud.Trace.V2
     /// <summary>
     /// Resource name for the 'span' resource.
     /// </summary>
-    public sealed partial class SpanName : gax::IResourceName, s::IEquatable<SpanName>
+    public sealed partial class SpanName : gax::IResourceName, sys::IEquatable<SpanName>
     {
         private static readonly gax::PathTemplate s_template = new gax::PathTemplate("projects/{project}/traces/{trace}/spans/{span}");
 
@@ -130,7 +130,7 @@ namespace Google.Cloud.Trace.V2
         /// <see cref="SpanName"/> instance.
         /// </summary>
         /// <remarks>
-        /// This method still throws <see cref="s::ArgumentNullException"/> if <paramref name="spanName"/> is null,
+        /// This method still throws <see cref="sys::ArgumentNullException"/> if <paramref name="spanName"/> is null,
         /// as this would usually indicate a programming error rather than a data error.
         /// </remarks>
         /// <param name="spanName">The span resource name in string form. Must not be <c>null</c>.</param>
@@ -208,9 +208,9 @@ namespace Google.Cloud.Trace.V2
     public partial class BatchWriteSpansRequest
     {
         /// <summary>
-        /// <see cref="ProjectName"/>-typed view over the <see cref="Name"/> resource name property.
+        /// <see cref="Google.Cloud.Trace.V2.ProjectName"/>-typed view over the <see cref="Name"/> resource name property.
         /// </summary>
-        public ProjectName ProjectName
+        public Google.Cloud.Trace.V2.ProjectName ProjectName
         {
             get { return string.IsNullOrEmpty(Name) ? null : Google.Cloud.Trace.V2.ProjectName.Parse(Name); }
             set { Name = value != null ? value.ToString() : ""; }
@@ -221,9 +221,9 @@ namespace Google.Cloud.Trace.V2
     public partial class Span
     {
         /// <summary>
-        /// <see cref="SpanName"/>-typed view over the <see cref="Name"/> resource name property.
+        /// <see cref="Google.Cloud.Trace.V2.SpanName"/>-typed view over the <see cref="Name"/> resource name property.
         /// </summary>
-        public SpanName SpanName
+        public Google.Cloud.Trace.V2.SpanName SpanName
         {
             get { return string.IsNullOrEmpty(Name) ? null : Google.Cloud.Trace.V2.SpanName.Parse(Name); }
             set { Name = value != null ? value.ToString() : ""; }

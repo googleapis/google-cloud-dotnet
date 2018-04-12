@@ -15,15 +15,15 @@
 // Generated code. DO NOT EDIT!
 
 using gax = Google.Api.Gax;
-using s = System;
-using System.Linq;
+using sys = System;
+using linq = System.Linq;
 
 namespace Google.Cloud.OsLogin.V1Beta
 {
     /// <summary>
     /// Resource name for the 'user' resource.
     /// </summary>
-    public sealed partial class UserName : gax::IResourceName, s::IEquatable<UserName>
+    public sealed partial class UserName : gax::IResourceName, sys::IEquatable<UserName>
     {
         private static readonly gax::PathTemplate s_template = new gax::PathTemplate("users/{user}");
 
@@ -45,7 +45,7 @@ namespace Google.Cloud.OsLogin.V1Beta
         /// <see cref="UserName"/> instance.
         /// </summary>
         /// <remarks>
-        /// This method still throws <see cref="s::ArgumentNullException"/> if <paramref name="userName"/> is null,
+        /// This method still throws <see cref="sys::ArgumentNullException"/> if <paramref name="userName"/> is null,
         /// as this would usually indicate a programming error rather than a data error.
         /// </remarks>
         /// <param name="userName">The user resource name in string form. Must not be <c>null</c>.</param>
@@ -108,7 +108,7 @@ namespace Google.Cloud.OsLogin.V1Beta
     /// <summary>
     /// Resource name for the 'project' resource.
     /// </summary>
-    public sealed partial class ProjectName : gax::IResourceName, s::IEquatable<ProjectName>
+    public sealed partial class ProjectName : gax::IResourceName, sys::IEquatable<ProjectName>
     {
         private static readonly gax::PathTemplate s_template = new gax::PathTemplate("users/{user}/projects/{project}");
 
@@ -130,7 +130,7 @@ namespace Google.Cloud.OsLogin.V1Beta
         /// <see cref="ProjectName"/> instance.
         /// </summary>
         /// <remarks>
-        /// This method still throws <see cref="s::ArgumentNullException"/> if <paramref name="projectName"/> is null,
+        /// This method still throws <see cref="sys::ArgumentNullException"/> if <paramref name="projectName"/> is null,
         /// as this would usually indicate a programming error rather than a data error.
         /// </remarks>
         /// <param name="projectName">The project resource name in string form. Must not be <c>null</c>.</param>
@@ -200,7 +200,7 @@ namespace Google.Cloud.OsLogin.V1Beta
     /// <summary>
     /// Resource name for the 'fingerprint' resource.
     /// </summary>
-    public sealed partial class FingerprintName : gax::IResourceName, s::IEquatable<FingerprintName>
+    public sealed partial class FingerprintName : gax::IResourceName, sys::IEquatable<FingerprintName>
     {
         private static readonly gax::PathTemplate s_template = new gax::PathTemplate("users/{user}/sshPublicKeys/{fingerprint}");
 
@@ -222,7 +222,7 @@ namespace Google.Cloud.OsLogin.V1Beta
         /// <see cref="FingerprintName"/> instance.
         /// </summary>
         /// <remarks>
-        /// This method still throws <see cref="s::ArgumentNullException"/> if <paramref name="fingerprintName"/> is null,
+        /// This method still throws <see cref="sys::ArgumentNullException"/> if <paramref name="fingerprintName"/> is null,
         /// as this would usually indicate a programming error rather than a data error.
         /// </remarks>
         /// <param name="fingerprintName">The fingerprint resource name in string form. Must not be <c>null</c>.</param>
@@ -293,9 +293,9 @@ namespace Google.Cloud.OsLogin.V1Beta
     public partial class DeletePosixAccountRequest
     {
         /// <summary>
-        /// <see cref="ProjectName"/>-typed view over the <see cref="Name"/> resource name property.
+        /// <see cref="Google.Cloud.OsLogin.V1Beta.ProjectName"/>-typed view over the <see cref="Name"/> resource name property.
         /// </summary>
-        public ProjectName ProjectName
+        public Google.Cloud.OsLogin.V1Beta.ProjectName ProjectName
         {
             get { return string.IsNullOrEmpty(Name) ? null : Google.Cloud.OsLogin.V1Beta.ProjectName.Parse(Name); }
             set { Name = value != null ? value.ToString() : ""; }
@@ -306,9 +306,9 @@ namespace Google.Cloud.OsLogin.V1Beta
     public partial class DeleteSshPublicKeyRequest
     {
         /// <summary>
-        /// <see cref="FingerprintName"/>-typed view over the <see cref="Name"/> resource name property.
+        /// <see cref="Google.Cloud.OsLogin.V1Beta.FingerprintName"/>-typed view over the <see cref="Name"/> resource name property.
         /// </summary>
-        public FingerprintName FingerprintName
+        public Google.Cloud.OsLogin.V1Beta.FingerprintName FingerprintName
         {
             get { return string.IsNullOrEmpty(Name) ? null : Google.Cloud.OsLogin.V1Beta.FingerprintName.Parse(Name); }
             set { Name = value != null ? value.ToString() : ""; }
@@ -319,9 +319,9 @@ namespace Google.Cloud.OsLogin.V1Beta
     public partial class GetLoginProfileRequest
     {
         /// <summary>
-        /// <see cref="UserName"/>-typed view over the <see cref="Name"/> resource name property.
+        /// <see cref="Google.Cloud.OsLogin.V1Beta.UserName"/>-typed view over the <see cref="Name"/> resource name property.
         /// </summary>
-        public UserName UserName
+        public Google.Cloud.OsLogin.V1Beta.UserName UserName
         {
             get { return string.IsNullOrEmpty(Name) ? null : Google.Cloud.OsLogin.V1Beta.UserName.Parse(Name); }
             set { Name = value != null ? value.ToString() : ""; }
@@ -332,9 +332,9 @@ namespace Google.Cloud.OsLogin.V1Beta
     public partial class GetSshPublicKeyRequest
     {
         /// <summary>
-        /// <see cref="FingerprintName"/>-typed view over the <see cref="Name"/> resource name property.
+        /// <see cref="Google.Cloud.OsLogin.V1Beta.FingerprintName"/>-typed view over the <see cref="Name"/> resource name property.
         /// </summary>
-        public FingerprintName FingerprintName
+        public Google.Cloud.OsLogin.V1Beta.FingerprintName FingerprintName
         {
             get { return string.IsNullOrEmpty(Name) ? null : Google.Cloud.OsLogin.V1Beta.FingerprintName.Parse(Name); }
             set { Name = value != null ? value.ToString() : ""; }
@@ -345,9 +345,9 @@ namespace Google.Cloud.OsLogin.V1Beta
     public partial class ImportSshPublicKeyRequest
     {
         /// <summary>
-        /// <see cref="UserName"/>-typed view over the <see cref="Parent"/> resource name property.
+        /// <see cref="Google.Cloud.OsLogin.V1Beta.UserName"/>-typed view over the <see cref="Parent"/> resource name property.
         /// </summary>
-        public UserName ParentAsUserName
+        public Google.Cloud.OsLogin.V1Beta.UserName ParentAsUserName
         {
             get { return string.IsNullOrEmpty(Parent) ? null : Google.Cloud.OsLogin.V1Beta.UserName.Parse(Parent); }
             set { Parent = value != null ? value.ToString() : ""; }
@@ -358,9 +358,9 @@ namespace Google.Cloud.OsLogin.V1Beta
     public partial class UpdateSshPublicKeyRequest
     {
         /// <summary>
-        /// <see cref="FingerprintName"/>-typed view over the <see cref="Name"/> resource name property.
+        /// <see cref="Google.Cloud.OsLogin.V1Beta.FingerprintName"/>-typed view over the <see cref="Name"/> resource name property.
         /// </summary>
-        public FingerprintName FingerprintName
+        public Google.Cloud.OsLogin.V1Beta.FingerprintName FingerprintName
         {
             get { return string.IsNullOrEmpty(Name) ? null : Google.Cloud.OsLogin.V1Beta.FingerprintName.Parse(Name); }
             set { Name = value != null ? value.ToString() : ""; }

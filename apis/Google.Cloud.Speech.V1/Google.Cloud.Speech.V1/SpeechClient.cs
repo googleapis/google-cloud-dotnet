@@ -17,10 +17,10 @@
 using gax = Google.Api.Gax;
 using gaxgrpc = Google.Api.Gax.Grpc;
 using lro = Google.LongRunning;
-using proto = Google.Protobuf;
-using protowkt = Google.Protobuf.WellKnownTypes;
+using pb = Google.Protobuf;
+using pbwkt = Google.Protobuf.WellKnownTypes;
 using grpccore = Grpc.Core;
-using s = System;
+using sys = System;
 using sc = System.Collections;
 using scg = System.Collections.Generic;
 using sco = System.Collections.ObjectModel;
@@ -71,7 +71,7 @@ namespace Google.Cloud.Speech.V1
         /// <item><description><see cref="grpccore::StatusCode.Unavailable"/></description></item>
         /// </list>
         /// </remarks>
-        public static s::Predicate<grpccore::RpcException> IdempotentRetryFilter { get; } =
+        public static sys::Predicate<grpccore::RpcException> IdempotentRetryFilter { get; } =
             gaxgrpc::RetrySettings.FilterForStatusCodes(grpccore::StatusCode.DeadlineExceeded, grpccore::StatusCode.Unavailable);
 
         /// <summary>
@@ -81,7 +81,7 @@ namespace Google.Cloud.Speech.V1
         /// <remarks>
         /// There are no RPC <see cref="grpccore::StatusCode"/>s eligible for retry for "NonIdempotent" RPC methods.
         /// </remarks>
-        public static s::Predicate<grpccore::RpcException> NonIdempotentRetryFilter { get; } =
+        public static sys::Predicate<grpccore::RpcException> NonIdempotentRetryFilter { get; } =
             gaxgrpc::RetrySettings.FilterForStatusCodes();
 
         /// <summary>
@@ -99,8 +99,8 @@ namespace Google.Cloud.Speech.V1
         /// </list>
         /// </remarks>
         public static gaxgrpc::BackoffSettings GetDefaultRetryBackoff() => new gaxgrpc::BackoffSettings(
-            delay: s::TimeSpan.FromMilliseconds(100),
-            maxDelay: s::TimeSpan.FromMilliseconds(60000),
+            delay: sys::TimeSpan.FromMilliseconds(100),
+            maxDelay: sys::TimeSpan.FromMilliseconds(60000),
             delayMultiplier: 1.3
         );
 
@@ -119,8 +119,8 @@ namespace Google.Cloud.Speech.V1
         /// </list>
         /// </remarks>
         public static gaxgrpc::BackoffSettings GetDefaultTimeoutBackoff() => new gaxgrpc::BackoffSettings(
-            delay: s::TimeSpan.FromMilliseconds(1000000),
-            maxDelay: s::TimeSpan.FromMilliseconds(1000000),
+            delay: sys::TimeSpan.FromMilliseconds(1000000),
+            maxDelay: sys::TimeSpan.FromMilliseconds(1000000),
             delayMultiplier: 1.0
         );
 
@@ -150,7 +150,7 @@ namespace Google.Cloud.Speech.V1
             gaxgrpc::CallTiming.FromRetry(new gaxgrpc::RetrySettings(
                 retryBackoff: GetDefaultRetryBackoff(),
                 timeoutBackoff: GetDefaultTimeoutBackoff(),
-                totalExpiration: gax::Expiration.FromTimeout(s::TimeSpan.FromMilliseconds(5000000)),
+                totalExpiration: gax::Expiration.FromTimeout(sys::TimeSpan.FromMilliseconds(5000000)),
                 retryFilter: IdempotentRetryFilter
             )));
 
@@ -179,7 +179,7 @@ namespace Google.Cloud.Speech.V1
             gaxgrpc::CallTiming.FromRetry(new gaxgrpc::RetrySettings(
                 retryBackoff: GetDefaultRetryBackoff(),
                 timeoutBackoff: GetDefaultTimeoutBackoff(),
-                totalExpiration: gax::Expiration.FromTimeout(s::TimeSpan.FromMilliseconds(5000000)),
+                totalExpiration: gax::Expiration.FromTimeout(sys::TimeSpan.FromMilliseconds(5000000)),
                 retryFilter: NonIdempotentRetryFilter
             )));
 
@@ -198,10 +198,10 @@ namespace Google.Cloud.Speech.V1
         public lro::OperationsSettings LongRunningRecognizeOperationsSettings { get; set; } = new lro::OperationsSettings
         {
             DefaultPollSettings = new gax::PollSettings(
-                gax::Expiration.FromTimeout(s::TimeSpan.FromMilliseconds(86400000L)),
-                s::TimeSpan.FromMilliseconds(20000L),
+                gax::Expiration.FromTimeout(sys::TimeSpan.FromMilliseconds(86400000L)),
+                sys::TimeSpan.FromMilliseconds(20000L),
                 1.5,
-                s::TimeSpan.FromMilliseconds(45000L))
+                sys::TimeSpan.FromMilliseconds(45000L))
         };
 
         /// <summary>
@@ -211,7 +211,7 @@ namespace Google.Cloud.Speech.V1
         /// Default RPC expiration is 5000000 milliseconds.
         /// </remarks>
         public gaxgrpc::CallSettings StreamingRecognizeSettings { get; set; } = gaxgrpc::CallSettings.FromCallTiming(
-            gaxgrpc::CallTiming.FromTimeout(s::TimeSpan.FromMilliseconds(5000000)));
+            gaxgrpc::CallTiming.FromTimeout(sys::TimeSpan.FromMilliseconds(5000000)));
 
         /// <summary>
         /// <see cref="gaxgrpc::BidirectionalStreamingSettings"/> for calls to
@@ -319,7 +319,7 @@ namespace Google.Cloud.Speech.V1
         /// </summary>
         public virtual Speech.SpeechClient GrpcClient
         {
-            get { throw new s::NotImplementedException(); }
+            get { throw new sys::NotImplementedException(); }
         }
 
         /// <summary>
@@ -420,7 +420,7 @@ namespace Google.Cloud.Speech.V1
             RecognizeRequest request,
             gaxgrpc::CallSettings callSettings = null)
         {
-            throw new s::NotImplementedException();
+            throw new sys::NotImplementedException();
         }
 
         /// <summary>
@@ -459,7 +459,7 @@ namespace Google.Cloud.Speech.V1
             RecognizeRequest request,
             gaxgrpc::CallSettings callSettings = null)
         {
-            throw new s::NotImplementedException();
+            throw new sys::NotImplementedException();
         }
 
         /// <summary>
@@ -568,7 +568,7 @@ namespace Google.Cloud.Speech.V1
             LongRunningRecognizeRequest request,
             gaxgrpc::CallSettings callSettings = null)
         {
-            throw new s::NotImplementedException();
+            throw new sys::NotImplementedException();
         }
 
         /// <summary>
@@ -603,7 +603,7 @@ namespace Google.Cloud.Speech.V1
             LongRunningRecognizeRequest request,
             gaxgrpc::CallSettings callSettings = null)
         {
-            throw new s::NotImplementedException();
+            throw new sys::NotImplementedException();
         }
 
         /// <summary>
@@ -611,7 +611,7 @@ namespace Google.Cloud.Speech.V1
         /// </summary>
         public virtual lro::OperationsClient LongRunningRecognizeOperationsClient
         {
-            get { throw new s::NotImplementedException(); }
+            get { throw new sys::NotImplementedException(); }
         }
 
         /// <summary>
@@ -644,7 +644,7 @@ namespace Google.Cloud.Speech.V1
             gaxgrpc::CallSettings callSettings = null,
             gaxgrpc::BidirectionalStreamingSettings streamingSettings = null)
         {
-            throw new s::NotImplementedException();
+            throw new sys::NotImplementedException();
         }
 
         /// <summary>
@@ -697,11 +697,11 @@ namespace Google.Cloud.Speech.V1
         // Partial methods called for every ApiCall on construction.
         // Allows modification of all the underlying ApiCall objects.
         partial void Modify_ApiCall<TRequest, TResponse>(ref gaxgrpc::ApiCall<TRequest, TResponse> call)
-            where TRequest : class, proto::IMessage<TRequest>
-            where TResponse : class, proto::IMessage<TResponse>;
+            where TRequest : class, pb::IMessage<TRequest>
+            where TResponse : class, pb::IMessage<TResponse>;
         partial void Modify_ApiCall<TRequest, TResponse>(ref gaxgrpc::ApiBidirectionalStreamingCall<TRequest, TResponse> call)
-            where TRequest : class, proto::IMessage<TRequest>
-            where TResponse : class, proto::IMessage<TResponse>;
+            where TRequest : class, pb::IMessage<TRequest>
+            where TResponse : class, pb::IMessage<TResponse>;
 
         // Partial methods called for each ApiCall on construction.
         // Allows per-RPC-method modification of the underlying ApiCall object.
