@@ -22,7 +22,8 @@ namespace Google.Cloud.Storage.V1
 {
     /// <summary>
     /// An AES-256 key passed to the Google Cloud Storage servers via headers to allow objects to be encrypted at
-    /// rest using a client-supplied key rather than a server-supplied default key.
+    /// rest using a client-supplied key rather than a server-supplied default key. An alternative to
+    /// customer-supplied encryption keys is to use customer-managed encryption keys, via Cloud KMS.
     /// </summary>
     public sealed class EncryptionKey : IEquatable<EncryptionKey>
     {

@@ -61,7 +61,7 @@ namespace Google.Cloud.Storage.V1
         public virtual StorageService Service { get { throw new NotImplementedException(); } }
 
         /// <summary>
-        /// The encryption key used by default for all relevant object-based operations. This can be overridden in call-specific options.
+        /// The customer-supplied encryption key used by default for all relevant object-based operations. This can be overridden in call-specific options.
         /// This will never return null in the built-in implementation; if no encryption key is specified,
         /// <see cref="EncryptionKey.None"/> is returned.
         /// </summary>
