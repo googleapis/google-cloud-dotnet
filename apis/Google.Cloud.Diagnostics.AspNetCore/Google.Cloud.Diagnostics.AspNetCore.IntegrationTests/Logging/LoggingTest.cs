@@ -1,23 +1,27 @@
 ﻿// Copyright 2016 Google Inc. All Rights Reserved.
-// 
+//
 // Licensed under the Apache License, Version 2.0 (the "License");
 // you may not use this file except in compliance with the License.
 // You may obtain a copy of the License at
-// 
+//
 //     http://www.apache.org/licenses/LICENSE-2.0
-// 
+//
 // Unless required by applicable law or agreed to in writing, software
 // distributed under the License is distributed on an "AS IS" BASIS,
 // WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
 // See the License for the specific language governing permissions and
 // limitations under the License.
 
+using System;
+using System.Collections.Generic;
+using System.Linq;
+using System.Threading;
+using System.Threading.Tasks;
 using Google.Api;
 using Google.Cloud.Diagnostics.Common;
 using Google.Cloud.Diagnostics.Common.IntegrationTests;
 using Google.Cloud.Diagnostics.Common.Tests;
 using Google.Cloud.Logging.Type;
-using Google.Cloud.Logging.V2;
 using Microsoft.AspNetCore.Builder;
 using Microsoft.AspNetCore.Hosting;
 using Microsoft.AspNetCore.Http;
@@ -26,10 +30,6 @@ using Microsoft.AspNetCore.TestHost;
 using Microsoft.Extensions.DependencyInjection;
 using Microsoft.Extensions.DependencyInjection.Extensions;
 using Microsoft.Extensions.Logging;
-using System;
-using System.Linq;
-using System.Threading;
-using System.Threading.Tasks;
 using Xunit;
 
 namespace Google.Cloud.Diagnostics.AspNetCore.IntegrationTests
@@ -142,7 +142,7 @@ namespace Google.Cloud.Diagnostics.AspNetCore.IntegrationTests
         [Fact]
         public async Task Logging_TimedBuffer()
         {
-            // To ensure this test does not take too long and to not wait for the buffer to 
+            // To ensure this test does not take too long and to not wait for the buffer to
             // flush itself we use custom polling to check for the initial check that no
             // entries exist.
             var quickPolling = new LogEntryPolling(TimeSpan.FromSeconds(10));
@@ -254,12 +254,35 @@ namespace Google.Cloud.Diagnostics.AspNetCore.IntegrationTests
                 Assert.Contains(traceId, results.Single().Trace);
             }
         }
+
+        [Fact]
+        public async Task Logging_Labels()
+        {
+            string testId = Utils.GetTestId();
+            DateTime startTime = DateTime.UtcNow;
+
+            var builder = new WebHostBuilder().UseStartup<WarningWithLabelsLoggerTestApplication>();
+            using (var server = new TestServer(builder))
+            using (var client = server.CreateClient())
+            {
+                await client.GetAsync($"/Main/Warning/{testId}");
+                var results = _polling.GetEntries(startTime, testId, 1, LogSeverity.Warning);
+                var entry = results.Single();
+                Assert.Equal(2, entry.Labels.Count);
+                var defaultLabel = entry.Labels.First();
+                Assert.Equal("some-key", defaultLabel.Key);
+                Assert.Equal("some-value", defaultLabel.Value);
+                var fooLabel = entry.Labels.Skip(1).Single();
+                Assert.Equal("Foo", fooLabel.Key);
+                Assert.Equal("Hello, World!", fooLabel.Value);
+            }
+        }
     }
 
     /// <summary>
     /// A simple web application to test the <see cref="GoogleLogger"/> and associated classes.
     /// </summary>
-    public class LoggerTestApplication
+    public abstract class LoggerTestApplication
     {
         protected string ProjectId;
 
@@ -268,14 +291,14 @@ namespace Google.Cloud.Diagnostics.AspNetCore.IntegrationTests
             ProjectId = Utils.GetProjectIdFromEnvironment();
         }
 
-        public void ConfigureServices(IServiceCollection services)
+        public virtual void ConfigureServices(IServiceCollection services)
         {
             services.TryAddSingleton<IHttpContextAccessor, HttpContextAccessor>();
-            services.AddGoogleTrace(options => 
+            services.AddGoogleTrace(options =>
             {
                 options.ProjectId = ProjectId;
-                // Don't actually trace anything.
-                options.Options = TraceOptions.Create(qpsSampleRate: 0.00000001);
+            // Don't actually trace anything.
+            options.Options = TraceOptions.Create(qpsSampleRate: 0.00000001);
             });
             services.AddMvc();
         }
@@ -365,6 +388,28 @@ namespace Google.Cloud.Diagnostics.AspNetCore.IntegrationTests
     }
 
     /// <summary>
+    /// An application that has a <see cref="GoogleLogger"/> and a <see cref="ILogEntryLabelProvider"/>,
+    /// that accept all logs of level warning or above.
+    /// </summary>
+    public class WarningWithLabelsLoggerTestApplication : LoggerTestApplication
+    {
+        public override void ConfigureServices(IServiceCollection services)
+        {
+            base.ConfigureServices(services);
+            services.AddSingleton<ILogEntryLabelProvider, FooLogEntryLabelProvider>();
+        }
+
+        public void Configure(IApplicationBuilder app, ILoggerFactory loggerFactory)
+        {
+            var labels = new Dictionary<string, string> { { "some-key", "some-value" } };
+            SetupRoutes(app);
+            LoggerOptions loggerOptions = LoggerOptions.Create(
+                LogLevel.Warning, null, labels, null, BufferOptions.NoBuffer());
+            loggerFactory.AddGoogle(app.ApplicationServices, ProjectId, loggerOptions);
+        }
+    }
+
+    /// <summary>
     /// A controller for the <see cref="LoggerTestApplication"/> used to generate simple log entries.
     /// </summary>
     public class MainController : Controller
@@ -440,10 +485,18 @@ namespace Google.Cloud.Diagnostics.AspNetCore.IntegrationTests
             catch (Exception e)
             {
                 _logger.LogCritical(message, e);
-            } 
+            }
             return message;
         }
 
         public static string GetMessage(string message, string id) => $"{message} - {id}";
+    }
+
+    internal class FooLogEntryLabelProvider : ILogEntryLabelProvider
+    {
+        public void Invoke(Dictionary<string, string> labels)
+        {
+            labels["Foo"] = "Hello, World!";
+        }
     }
 }

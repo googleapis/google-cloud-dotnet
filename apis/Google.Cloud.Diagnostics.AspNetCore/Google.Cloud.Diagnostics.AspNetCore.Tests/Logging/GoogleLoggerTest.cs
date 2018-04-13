@@ -12,6 +12,9 @@
 // See the License for the specific language governing permissions and
 // limitations under the License.
 
+using System;
+using System.Collections.Generic;
+using System.Linq;
 using Google.Api.Gax;
 using Google.Api.Gax.Grpc;
 using Google.Api.Gax.Testing;
@@ -19,12 +22,8 @@ using Google.Cloud.Diagnostics.Common;
 using Google.Cloud.Logging.V2;
 using Google.Protobuf.WellKnownTypes;
 using Microsoft.AspNetCore.Http;
-using Microsoft.Extensions.DependencyInjection;
 using Microsoft.Extensions.Logging;
 using Moq;
-using System;
-using System.Collections.Generic;
-using System.Linq;
 using Xunit;
 
 namespace Google.Cloud.Diagnostics.AspNetCore.Tests
@@ -262,13 +261,45 @@ namespace Google.Cloud.Diagnostics.AspNetCore.Tests
             logger.LogInformation(_logMessage);
             mockConsumer.VerifyAll();
         }
+
+        [Fact]
+        public void Log_Labels_DefaultLabelsFirst()
+        {
+            var labels = new Dictionary<string, string> { { "some-key", "some-value" } };
+
+            Predicate<IEnumerable<LogEntry>> matcher = logEntries =>
+            {
+                LogEntry entry = logEntries.Single();
+
+                var defaultLabel = entry.Labels.First();
+                var labelFoo = entry.Labels.Skip(1).First();
+                var labelBar = entry.Labels.Skip(2).Single();
+
+                return entry.LogName == new LogName(_projectId, _baseLogName).ToString() &&
+                    defaultLabel.Key == "some-key" &&
+                    defaultLabel.Value == "some-value" &&
+                    labelFoo.Key == "Foo" &&
+                    labelFoo.Value == "Hello" &&
+                    labelBar.Key == "Bar" &&
+                    labelBar.Value == "World";
+            };
+
+            var mockServiceProvider = new Mock<IServiceProvider>();
+            mockServiceProvider.Setup(sp => sp.GetService(typeof(IEnumerable<ILogEntryLabelProvider>)))
+                .Returns(new ILogEntryLabelProvider[] { new FooLogEntryLabelProvider(), new BarLogEntryLabelProvider() });
+
+            var mockConsumer = new Mock<IConsumer<LogEntry>>();
+            mockConsumer.Setup(c => c.Receive(Match.Create(matcher)));
+            var logger = GetLogger(mockConsumer.Object, LogLevel.Information, labels: labels, serviceProvider: mockServiceProvider.Object, logName: _baseLogName);
+            logger.LogInformation(_logMessage);
+            mockConsumer.VerifyAll();
+        }
     }
 
     internal class FooLogEntryLabelProvider : ILogEntryLabelProvider
     {
         public void Invoke(Dictionary<string, string> labels)
         {
-            Console.WriteLine(nameof(FooLogEntryLabelProvider));
             labels["Foo"] = "Hello";
         }
     }
@@ -277,7 +308,6 @@ namespace Google.Cloud.Diagnostics.AspNetCore.Tests
     {
         public void Invoke(Dictionary<string, string> labels)
         {
-            Console.WriteLine(nameof(BarLogEntryLabelProvider));
             labels["Bar"] = "World";
         }
     }
