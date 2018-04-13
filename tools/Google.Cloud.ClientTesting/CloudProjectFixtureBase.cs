@@ -13,6 +13,8 @@
 // limitations under the License.
 
 using System;
+using Xunit;
+using Xunit.Sdk;
 
 namespace Google.Cloud.ClientTesting
 {
@@ -22,6 +24,9 @@ namespace Google.Cloud.ClientTesting
     public abstract class CloudProjectFixtureBase : IDisposable
     {
         public const string TestProjectEnvironmentVariable = "TEST_PROJECT";
+
+        // We don't care about the value beyond whether it's absent/empty or non-empty.
+        private static bool s_allowedToSkip = string.IsNullOrEmpty(Environment.GetEnvironmentVariable("MUST_NOT_SKIP_TESTS"));
 
         /// <summary>
         /// The Google Cloud Project ID to use for tests.
@@ -36,6 +41,27 @@ namespace Google.Cloud.ClientTesting
                 throw new InvalidOperationException(
                     $"Please set the {testProjectEnvironmentVariable} environment variable to your test project ID before running tests");
             }
+        }
+
+        /// <summary>
+        /// Like <see cref="Skip.If"/>, but first checks whether or not we're *allowed* to skip tests
+        /// based on environment variables. The intention is that tests which require elaborate set-up
+        /// may be skipped for local dev environments if developers aren't working on those features,
+        /// but should always run in continuous integration - if the environemnt isn't set up appropriately,
+        /// we should fail.
+        /// </summary>
+        /// <param name="condition"></param>
+        public void SkipIf(bool condition)
+        {
+            if (!condition)
+            {
+                return;
+            }
+            if (!s_allowedToSkip)
+            {
+                throw new XunitException("Test is not allowed to be skipped in this environment.");
+            }
+            Skip.If(true);
         }
 
         /// <summary>

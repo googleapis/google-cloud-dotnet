@@ -35,52 +35,40 @@ namespace Google.Cloud.Storage.V1.IntegrationTests
             _skip = _fixture.RequesterPaysBucket == null;
         }
 
-        [Fact]
+        [SkippableFact]
         public void DownloadObject_WithoutOption()
         {
-            if (_skip)
-            {
-                return;
-            }
+            _fixture.SkipIf(_skip);
 
             var exception = Assert.Throws<GoogleApiException>(
                 () => _fixture.Client.DownloadObject(_fixture.RequesterPaysBucket, _fixture.SmallObject, new MemoryStream()));
             Assert.Equal(HttpStatusCode.BadRequest, exception.HttpStatusCode);
         }
 
-        [Fact]
+        [SkippableFact]
         public void DownloadObject_WithOption()
         {
-            if (_skip)
-            {
-                return;
-            }
+            _fixture.SkipIf(_skip);
 
             var destination = new MemoryStream();
             _fixture.Client.DownloadObject(_fixture.RequesterPaysBucket, _fixture.SmallObject, destination,
                 new DownloadObjectOptions { UserProject = _fixture.ProjectId });
         }
 
-        [Fact]
+        [SkippableFact]
         public void ListObjects_WithoutOption()
         {
-            if (_skip)
-            {
-                return;
-            }
+            _fixture.SkipIf(_skip);
 
             var exception = Assert.Throws<GoogleApiException>(
                 () => _fixture.Client.ListObjects(_fixture.RequesterPaysBucket).ToList());
             Assert.Equal(HttpStatusCode.BadRequest, exception.HttpStatusCode);
         }
 
-        [Fact]
+        [SkippableFact]
         public void ListObjects_WithOption()
         {
-            if (_skip)
-            {
-                return;
-            }
+            _fixture.SkipIf(_skip);
 
             var objects = _fixture.Client
                 .ListObjects(_fixture.RequesterPaysBucket, options: new ListObjectsOptions { UserProject = _fixture.ProjectId })
@@ -88,26 +76,20 @@ namespace Google.Cloud.Storage.V1.IntegrationTests
             Assert.Contains(_fixture.SmallObject, objects.Select(o => o.Name));
         }
 
-        [Fact]
+        [SkippableFact]
         public void UploadObject_WithoutOption()
         {
-            if (_skip)
-            {
-                return;
-            }
+            _fixture.SkipIf(_skip);
 
             var exception = Assert.Throws<GoogleApiException>(
                 () => _fixture.Client.UploadObject(_fixture.RequesterPaysBucket, "other-upload.txt", "text/plain", new MemoryStream(_fixture.SmallContent)));
             Assert.Equal(HttpStatusCode.BadRequest, exception.HttpStatusCode);
         }
 
-        [Fact]
+        [SkippableFact]
         public void UploadObject_WithOption()
         {
-            if (_skip)
-            {
-                return;
-            }
+            _fixture.SkipIf(_skip);
 
             _fixture.Client.UploadObject(_fixture.RequesterPaysBucket, "other-upload.txt", "text/plain",
                 new MemoryStream(_fixture.SmallContent), new UploadObjectOptions { UserProject = _fixture.ProjectId });            
