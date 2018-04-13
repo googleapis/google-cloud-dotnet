@@ -29,8 +29,8 @@ namespace Google.Cloud.Diagnostics.Common.Tests
         [Fact]
         public async Task RunInSpanAsync_CorrectSpan()
         {
-            const string _traceId = "trace-id";
-            const string _projectId = "project-id";
+            const string traceId = "trace-id";
+            const string projectId = "project-id";
             const string traceName = "trace-name";
             const int delayInSeconds = 1;
 
@@ -40,11 +40,11 @@ namespace Google.Cloud.Diagnostics.Common.Tests
             mockConsumer.Setup(x => x.Receive(It.IsAny<IEnumerable<TraceProto>>()))
                 .Callback<IEnumerable<TraceProto>>(arg => actualTraceProto = arg?.FirstOrDefault());
 
-            IManagedTracer _simpleTracer = SimpleManagedTracer.Create(mockConsumer.Object, _projectId, _traceId);
-            IManagedTracer _delegatingTracer = new DelegatingTracer(() => _simpleTracer);
+            IManagedTracer simpleTracer = SimpleManagedTracer.Create(mockConsumer.Object, projectId, traceId);
+            IManagedTracer delegatingTracer = new DelegatingTracer(() => simpleTracer);
 
             var stopwatch = Stopwatch.StartNew();
-            await _delegatingTracer.RunInSpanAsync(async () =>
+            await delegatingTracer.RunInSpanAsync(async () =>
             {
                 await Task.Delay(TimeSpan.FromSeconds(delayInSeconds));
                 return 0;
@@ -52,12 +52,13 @@ namespace Google.Cloud.Diagnostics.Common.Tests
             stopwatch.Stop();
 
             Assert.NotNull(actualTraceProto);
-            Assert.Equal(delayInSeconds, SpanInSeconds(actualTraceProto));
+            Assert.InRange(SpanInSeconds(actualTraceProto), delayInSeconds, stopwatch.Elapsed.Seconds);
         }
 
         private static long SpanInSeconds(TraceProto actualTraceProto)
         {
-            return actualTraceProto.Spans.First().EndTime.Seconds - actualTraceProto.Spans.First().StartTime.Seconds;
+            var duration = actualTraceProto.Spans.First().EndTime - actualTraceProto.Spans.First().StartTime;
+            return duration.Seconds;
         }
     }
 }

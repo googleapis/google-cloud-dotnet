@@ -46,8 +46,8 @@ namespace Google.Cloud.Diagnostics.Common
             _managedTracerGetter().RunInSpan(func, name, options);
 
         /// <inheritdoc />
-        public async Task<T> RunInSpanAsync<T>(Func<Task<T>> func, string name, StartSpanOptions options = null) =>
-            await _managedTracerGetter().RunInSpanAsync(func, name, options).ConfigureAwait(false);
+        public Task<T> RunInSpanAsync<T>(Func<Task<T>> func, string name, StartSpanOptions options = null) =>
+            _managedTracerGetter().RunInSpanAsync(func, name, options);
 
         /// <inheritdoc />
         public void AnnotateSpan(Dictionary<string, string> labels) => _managedTracerGetter().AnnotateSpan(labels);
