@@ -5,8 +5,3 @@ coverage:
       default:
         # Allow coverage to drop by 2% before complaining
         threshold: 2
-    # For pull requests
-    patch:
-      default:
-        # Allow coverage to drop by 2% before complaining
-        threshold: 2
