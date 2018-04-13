@@ -7,8 +7,8 @@ declare -r CORE_PROTOS_ROOT=$PROTOBUF_TOOLS_ROOT/tools
 declare -r BASH=/c/Windows/System32/bash.exe
 
 # This script generates all APIs from the googleapis/googleapis github repository,
-# using the API toolkit from googleapis/toolkit. It will fetch both repositories if
-# necessary.
+# using the code generator from googleapis/gapic-generator.
+# It will fetch both repositories if necessary.
 
 # Currently it will only work on Windows due to the way nuget packages installed;
 # changing toolversions.sh could mitigate that, if it's ever necessary.
@@ -32,12 +32,12 @@ declare -r BASH=/c/Windows/System32/bash.exe
 OUTDIR=tmp
 
 fetch_github_repos() {
-  if [ -d "toolkit" ]
+  if [ -d "gapic-generator" ]
   then
-    git -C toolkit pull
-    git -C toolkit submodule update
+    git -C gapic-generator pull
+    git -C gapic-generator submodule update
   else
-    git clone --recursive https://github.com/googleapis/toolkit \
+    git clone --recursive https://github.com/googleapis/gapic-generator \
       --config core.autocrlf=false \
       --config core.eol=lf
   fi
@@ -86,7 +86,7 @@ EOF
   args+=(--package_yaml=$OUTDIR/package.yaml)
   args+=(--output=$API_TMP_DIR)
   
-  $BASH -c "java -cp toolkit/build/libs/toolkit-${TOOLKIT_VERSION}-all.jar com.google.api.codegen.CodeGeneratorTool ${args[*]}"
+  $BASH -c "java -cp gapic-generator/build/libs/gapic-generator-${GAPIC_GENERATOR_VERSION}-all.jar com.google.api.codegen.CodeGeneratorTool ${args[*]}"
   
   # We don't want to copy the snippet/prod/tests project files,
   # but the smoke test project file is okay, as we don't
@@ -112,19 +112,19 @@ EOF
 install_protoc
 install_grpc  
 fetch_github_repos
-TOOLKIT_VERSION=$(cat toolkit/version.txt)
+GAPIC_GENERATOR_VERSION=$(cat gapic-generator/version.txt)
 
-# Build toolkit once with gradle so we can invoke it from Java directly
+# Build GAPIC generator once with gradle so we can invoke it from Java directly
 # once per API.
-(cd toolkit; ./gradlew shadowJar)
+(cd gapic-generator; ./gradlew shadowJar)
 
 OUTDIR=tmp
 rm -rf $OUTDIR
 mkdir $OUTDIR
 
-# Fake package.yaml file that's just enough to make Toolkit happy.
+# Fake package.yaml file that's just enough to make GAPIC generator happy.
 # We don't use this project file for anything (we don't even move it into place)
-# but Toolkit doesn't have an option to not generate it.
+# but GAPIC generator doesn't have an option to not generate it.
 
 cat > $OUTDIR/package.yaml <<END_OF_FILE
 package_type: grpc_client

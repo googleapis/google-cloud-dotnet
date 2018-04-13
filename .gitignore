@@ -21,6 +21,9 @@ launchSettings.json
 # Used when generating APIs
 tmp
 googleapis
+gapic-generator
+# Legacy name, still here to avoid suddenly adding it for
+# existing users
 toolkit
 
 # Testing
