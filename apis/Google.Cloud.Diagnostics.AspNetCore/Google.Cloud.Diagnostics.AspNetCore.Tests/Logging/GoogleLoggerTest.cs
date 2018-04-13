@@ -1,11 +1,11 @@
 ﻿// Copyright 2016 Google Inc. All Rights Reserved.
-// 
+//
 // Licensed under the Apache License, Version 2.0 (the "License");
 // you may not use this file except in compliance with the License.
 // You may obtain a copy of the License at
-// 
+//
 //     http://www.apache.org/licenses/LICENSE-2.0
-// 
+//
 // Unless required by applicable law or agreed to in writing, software
 // distributed under the License is distributed on an "AS IS" BASIS,
 // WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
@@ -234,6 +234,51 @@ namespace Google.Cloud.Diagnostics.AspNetCore.Tests
             var logger = GetLogger(mockConsumer.Object, LogLevel.Information, serviceProvider: mockServiceProvider.Object, logName: _baseLogName);
             logger.Log(LogLevel.Error, 0, _logMessage, s_exception, Formatter);
             mockConsumer.VerifyAll();
+        }
+
+        [Fact]
+        public void Log_Labels()
+        {
+            Predicate<IEnumerable<LogEntry>> matcher = logEntries =>
+            {
+                LogEntry entry = logEntries.Single();
+                var labelFoo = entry.Labels.First();
+                var labelBar = entry.Labels.Skip(1).Single();
+
+                return entry.LogName == new LogName(_projectId, _baseLogName).ToString() &&
+                    labelFoo.Key == "Foo" &&
+                    labelFoo.Value == "Hello" &&
+                    labelBar.Key == "Bar" &&
+                    labelBar.Value == "World";
+            };
+
+            var mockServiceProvider = new Mock<IServiceProvider>();
+            mockServiceProvider.Setup(sp => sp.GetService(typeof(IEnumerable<ILogEntryLabelProvider>)))
+                .Returns(new ILogEntryLabelProvider[] { new FooLogEntryLabelProvider(), new BarLogEntryLabelProvider() });
+
+            var mockConsumer = new Mock<IConsumer<LogEntry>>();
+            mockConsumer.Setup(c => c.Receive(Match.Create(matcher)));
+            var logger = GetLogger(mockConsumer.Object, LogLevel.Information, serviceProvider: mockServiceProvider.Object, logName: _baseLogName);
+            logger.LogInformation(_logMessage);
+            mockConsumer.VerifyAll();
+        }
+    }
+
+    internal class FooLogEntryLabelProvider : ILogEntryLabelProvider
+    {
+        public void Invoke(Dictionary<string, string> labels)
+        {
+            Console.WriteLine(nameof(FooLogEntryLabelProvider));
+            labels["Foo"] = "Hello";
+        }
+    }
+
+    internal class BarLogEntryLabelProvider : ILogEntryLabelProvider
+    {
+        public void Invoke(Dictionary<string, string> labels)
+        {
+            Console.WriteLine(nameof(BarLogEntryLabelProvider));
+            labels["Bar"] = "World";
         }
     }
 }
