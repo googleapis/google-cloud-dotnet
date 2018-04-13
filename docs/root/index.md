@@ -45,6 +45,7 @@ Beta:
 - [Google.Cloud.Container.V1](Google.Cloud.Container.V1/index.html)
 - [Google.Cloud.Dataproc.V1](Google.Cloud.Dataproc.V1/index.html)
 - [Google.Cloud.Debugger.V2](Google.Cloud.Debugger.V2/index.html)
+- [Google.Cloud.Dialogflow.V2](Google.Cloud.Dialogflow.V2/index.html)
 - [Google.Cloud.Dlp.V2](Google.Cloud.Dlp.V2/index.html)
   - The Google.Cloud.Dlp.V2Beta1 package has now been deprecated, and is unlisted on nuget.org.
     Please update to Google.Cloud.Dlp.V2.
