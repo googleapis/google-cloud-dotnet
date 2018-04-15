@@ -250,7 +250,7 @@ namespace Google.Cloud.PubSub.V1
                 new ChannelOption(ChannelOptions.MaxSendMessageLength, -1),
                 new ChannelOption(ChannelOptions.MaxReceiveMessageLength, -1),
 
-                // Use a random arg to prevent sub-channel re-use in gRPC, which would pin all channels to a single GFE CPU.
+                // Use a random arg to prevent sub-channel re-use in gRPC, so each channel uses its own connection.
                 new ChannelOption("sub-channel-separator", Guid.NewGuid().ToString())
             };
             for (int i = 0; i < clientCount; i++)
