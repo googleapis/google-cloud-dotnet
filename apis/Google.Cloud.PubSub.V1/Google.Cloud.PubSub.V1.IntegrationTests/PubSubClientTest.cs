@@ -14,6 +14,7 @@
 
 using Google.Api.Gax;
 using Google.Api.Gax.Grpc;
+using Google.Cloud.ClientTesting;
 using Grpc.Core;
 using System;
 using System.Collections.Concurrent;
@@ -42,10 +43,21 @@ namespace Google.Cloud.PubSub.V1.IntegrationTests
 
         private readonly PubsubFixture _fixture;
 
+        private async Task CreateTopicAndSubscription(TopicName topicName, SubscriptionName subscriptionName)
+        {
+            // Create topic
+            var publisherApi = await PublisherServiceApiClient.CreateAsync().ConfigureAwait(false);
+            await publisherApi.CreateTopicAsync(topicName).ConfigureAwait(false);
+
+            // Subscribe to the topic
+            var subscriberApi = await SubscriberServiceApiClient.CreateAsync().ConfigureAwait(false);
+            await subscriberApi.CreateSubscriptionAsync(subscriptionName, topicName, null, 60).ConfigureAwait(false);
+        }
+
         private async Task RunBulkMessaging(
             int messageCount, int minMessageSize, int maxMessageSize, int maxMessagesInFlight, int initialNackCount,
             TimeSpan? timeouts = null, int? cancelAfterRecvCount = null, TimeSpan? interPublishDelay = null,
-            TimeSpan? debugOutputPeriod = null, int? clientCount = null)
+            TimeSpan? debugOutputPeriod = null, int? clientCount = null, int? subscriberChannelCount = null)
         {
             // Force messages to be at least 4 bytes long, so an int ID can be used.
             minMessageSize = Math.Max(4, minMessageSize);
@@ -61,20 +73,29 @@ namespace Google.Cloud.PubSub.V1.IntegrationTests
                 $"cancelAfterRecvCount: {cancelAfterRecvCount}, interPublishDelay: {interPublishDelay}, " +
                 $"clientCount: {clientCount?.ToString() ?? $"UsingDefault:{Environment.ProcessorCount}"}");
 
-            // Create topic
             var topicName = new TopicName(_fixture.ProjectId, topicId);
-            var publisherApi = await PublisherServiceApiClient.CreateAsync().ConfigureAwait(false);
-            await publisherApi.CreateTopicAsync(topicName).ConfigureAwait(false);
-
-            // Subscribe to the topic
-            var subscriberApi = await SubscriberServiceApiClient.CreateAsync().ConfigureAwait(false);
             var subscriptionName = new SubscriptionName(_fixture.ProjectId, subscriptionId);
-            await subscriberApi.CreateSubscriptionAsync(subscriptionName, topicName, null, 60).ConfigureAwait(false);
 
-            // Create Publisher and Subscriber
-            var publisher = await PublisherClient.CreateAsync(topicName, clientCreationSettings: timeouts == null ? null :
-                new PublisherClient.ClientCreationSettings(
-                    publisherServiceApiSettings: new PublisherServiceApiSettings
+            await CreateTopicAndSubscription(topicName, subscriptionName);
+            await RunBulkMessagingImpl(topicName, subscriptionName, messageCount, minMessageSize, maxMessageSize,
+                maxMessagesInFlight, initialNackCount, timeouts, cancelAfterRecvCount, interPublishDelay,
+                debugOutputPeriod, publisherChannelCount, subscriberChannelCount);
+        }
+
+        private async Task RunBulkMessagingImpl(
+            TopicName topicName, SubscriptionName subscriptionName,
+            int messageCount, int minMessageSize, int maxMessageSize, int maxMessagesInFlight, int initialNackCount,
+            TimeSpan? timeouts = null, int? cancelAfterRecvCount = null, TimeSpan? interPublishDelay = null,
+            TimeSpan? debugOutputPeriod = null, int? publisherChannelCount = null, int? subscriberChannelCount = null)
+        {
+            // Force messages to be at least 4 bytes long, so an int ID can be used.
+            minMessageSize = Math.Max(4, minMessageSize);
+
+            // Create PublisherClient and SubscriberClient
+            var publisher = await PublisherClient.CreateAsync(topicName,
+                clientCreationSettings: new PublisherClient.ClientCreationSettings(
+                    clientCount: publisherChannelCount,
+                    publisherServiceApiSettings: timeouts == null ? null : new PublisherServiceApiSettings
                     {
                         PublishSettings = CallSettings.FromCallTiming(CallTiming.FromRetry(new RetrySettings(
                             retryBackoff: PublisherServiceApiSettings.GetMessagingRetryBackoff(),
@@ -85,7 +106,8 @@ namespace Google.Cloud.PubSub.V1.IntegrationTests
                     }
                 )).ConfigureAwait(false);
             var subscriber = await SubscriberClient.CreateAsync(subscriptionName,
-                clientCreationSettings: new SubscriberClient.ClientCreationSettings(clientCount: clientCount),
+                clientCreationSettings: new SubscriberClient.ClientCreationSettings(
+                    clientCount: subscriberChannelCount),
                 settings: new SubscriberClient.Settings
                 {
                     StreamAckDeadline = timeouts,
@@ -413,6 +435,31 @@ namespace Google.Cloud.PubSub.V1.IntegrationTests
             Console.WriteLine("Waiting for pub+sub to complete.");
             await Task.WhenAll(publishTask, subscribeAllTask).ConfigureAwait(false);
             Console.WriteLine("pub+sub completed.");
+        }
+
+        [Fact]
+        public async Task SeparateSubchannels()
+        {
+            var topicId = _fixture.CreateTopicId();
+            var subscriptionId = _fixture.CreateSubscriptionId();
+            var topicName = new TopicName(_fixture.ProjectId, topicId);
+            var subscriptionName = new SubscriptionName(_fixture.ProjectId, subscriptionId);
+            await CreateTopicAndSubscription(topicName, subscriptionName);
+
+            int originalSubchannelCount = GrpcInfo.SubchannelCount;
+            await RunBulkMessagingImpl(
+                topicName,
+                subscriptionName,
+                messageCount: 2_000,
+                minMessageSize: 4,
+                maxMessageSize: 4,
+                maxMessagesInFlight: 100,
+                initialNackCount: 0,
+                publisherChannelCount: 3,
+                subscriberChannelCount: 4);
+
+            int subchannelsCreated = GrpcInfo.SubchannelCount - originalSubchannelCount;
+            Assert.Equal(7, subchannelsCreated);
         }
     }
 }
