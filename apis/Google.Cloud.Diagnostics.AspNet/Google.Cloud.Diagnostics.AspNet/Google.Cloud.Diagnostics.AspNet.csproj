@@ -1,7 +1,7 @@
 ﻿<?xml version="1.0" encoding="utf-8"?>
 <Project Sdk="Microsoft.NET.Sdk">
   <PropertyGroup>
-    <Version>3.0.0-beta00</Version>
+    <Version>3.0.0-beta01</Version>
     <TargetFrameworks>net45</TargetFrameworks>
     <TargetFrameworks Condition=" '$(OS)' != 'Windows_NT' ">net45</TargetFrameworks>
     <LangVersion>latest</LangVersion>
