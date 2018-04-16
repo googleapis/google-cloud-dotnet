@@ -25,16 +25,24 @@ namespace Google.Cloud.Tools.GenerateReleaseNotes
     /// </summary>
     class Program
     {
+        private const string IncludeProjectChangesOption = "--include-project-changes";
+        private const string IncludeNonProductionChangesOption = "--include-non-production-changes";
+        private static readonly string[] ProjectFileSuffixes = { ".csproj", ".sln", "project.json", ".xproj" };
+
         static int Main(string[] args)
         {
-            if (args.Length != 1)
+            bool includeProjectChanges = args.Contains(IncludeProjectChangesOption);
+            bool includeNonProductionChanges = args.Contains(IncludeNonProductionChangesOption);
+            var otherArgs = args.Except(new[] { IncludeProjectChangesOption, IncludeNonProductionChangesOption } ).ToArray();
+            if (otherArgs.Length != 1)
             {
-                Console.WriteLine("Arguments: <api>");
+                Console.WriteLine($"Arguments: [{IncludeProjectChangesOption}] [{IncludeNonProductionChangesOption}] <api>");
                 return 1;
             }
+            string api = otherArgs[0];
             try
             {
-                GenerateNotes(args[0]);
+                GenerateNotes(api, CreatePathFilter(api, includeProjectChanges, includeNonProductionChanges));
                 return 0;
             }
             catch (UserErrorException e)
@@ -49,7 +57,13 @@ namespace Google.Cloud.Tools.GenerateReleaseNotes
             }
         }
 
-        static void GenerateNotes(string api)
+        static Func<string, bool> CreatePathFilter(string api, bool includeProjectChanges, bool includeNonProductionChanges)
+        {
+            var prefix = includeNonProductionChanges ? $"apis\\{api}\\" : $"apis\\{api}\\{api}\\";
+            return path => path.StartsWith(prefix) && (includeProjectChanges || !ProjectFileSuffixes.Any(path.EndsWith));
+        }
+
+        static void GenerateNotes(string api, Func<string, bool> pathFilter)
         {
             var apiDirectory = $"apis\\{api}\\";
             var tagPrefix = $"{api}-";
@@ -73,7 +87,7 @@ namespace Google.Cloud.Tools.GenerateReleaseNotes
                         Console.WriteLine($"Release: {version}");
                         Console.WriteLine($"---------{new string('-', version.Length)}");
                     }
-                    if (CommitContainsApi(diff, commit, apiDirectory))
+                    if (CommitContainsApi(diff, commit, pathFilter))
                     {
                         var message = commit.MessageShort;
                         if (message.Length > 75)
@@ -88,7 +102,7 @@ namespace Google.Cloud.Tools.GenerateReleaseNotes
             }
         }
 
-        static bool CommitContainsApi(Diff diff, Commit commit, string apiDirectory)
+        static bool CommitContainsApi(Diff diff, Commit commit, Func<string, bool> pathFilter)
         {
             if (commit.Parents.Count() != 1)
             {
@@ -97,7 +111,7 @@ namespace Google.Cloud.Tools.GenerateReleaseNotes
             var tree = commit.Tree;
             var parentTree = commit.Parents.First().Tree;
             var comparison = diff.Compare<TreeChanges>(parentTree, tree);
-            return comparison.Any(change => change.Path.StartsWith(apiDirectory));            
+            return comparison.Select(change => change.Path).Any(pathFilter);
         }
     }
 }
