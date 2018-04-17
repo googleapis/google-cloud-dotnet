@@ -15,6 +15,7 @@
 using Google.Cloud.Diagnostics.Common.Tests;
 using Google.Cloud.Trace.V1;
 using Google.Protobuf.WellKnownTypes;
+using System;
 using System.Linq;
 
 using TraceProto = Google.Cloud.Trace.V1.Trace;
@@ -31,6 +32,10 @@ namespace Google.Cloud.Diagnostics.Common.IntegrationTests
 
         /// <summary>Client to use to send RPCs.</summary>
         private readonly TraceServiceClient _client = TraceServiceClient.Create();
+
+        internal TraceEntryPolling() : base() { }
+
+        internal TraceEntryPolling(TimeSpan timeout = default, TimeSpan sleepInterval = default) : base(timeout, sleepInterval) { }
 
         /// <summary>
         /// Gets a trace that contains a span with the given name.

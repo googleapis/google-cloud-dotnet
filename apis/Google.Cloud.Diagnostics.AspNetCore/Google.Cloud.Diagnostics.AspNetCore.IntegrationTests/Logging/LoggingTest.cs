@@ -36,7 +36,7 @@ namespace Google.Cloud.Diagnostics.AspNetCore.IntegrationTests
 {
     public class LoggingTest
     {
-        private readonly LogEntryPolling _polling = new LogEntryPolling(TimeSpan.FromSeconds(60));
+        private readonly LogEntryPolling _polling = new LogEntryPolling(TimeSpan.FromSeconds(120));
 
         [Fact]
         public async Task Logging_SizedBufferNoLogs()
@@ -161,7 +161,7 @@ namespace Google.Cloud.Diagnostics.AspNetCore.IntegrationTests
 
                 await client.GetAsync($"/Main/Error/{testId}");
                 await client.GetAsync($"/Main/Critical/{testId}");
-                Thread.Sleep(TimeSpan.FromSeconds(10));
+                Thread.Sleep(TimeSpan.FromSeconds(20));
 
                 var results = _polling.GetEntries(startTime, testId, 4, LogSeverity.Warning);
                 Assert.Equal(4, results.Count());
