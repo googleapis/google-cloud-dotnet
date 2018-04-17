@@ -423,7 +423,8 @@
     "type": "grpc",
     "description": "Recommended Google client library to access the Google Cloud Pub/Sub API, which provides reliable, many-to-many, asynchronous messaging between applications.",
     "dependencies": {
-      "Google.Cloud.Iam.V1": "1.0.0"
+      "Google.Cloud.Iam.V1": "1.0.0",
+      "Google.Api.Gax.Grpc": "2.4.0-beta02"
     },
     "testDependencies": {
       "System.ValueTuple": "4.3.1"
