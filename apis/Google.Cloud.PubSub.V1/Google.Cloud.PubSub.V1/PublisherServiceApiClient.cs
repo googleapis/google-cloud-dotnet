@@ -16,6 +16,7 @@
 
 using gax = Google.Api.Gax;
 using gaxgrpc = Google.Api.Gax.Grpc;
+using gaxres = Google.Api.Gax.ResourceNames;
 using iam = Google.Cloud.Iam.V1;
 using pb = Google.Protobuf;
 using pbwkt = Google.Protobuf.WellKnownTypes;
@@ -1081,7 +1082,7 @@ namespace Google.Cloud.PubSub.V1
         /// A pageable asynchronous sequence of <see cref="Topic"/> resources.
         /// </returns>
         public virtual gax::PagedAsyncEnumerable<ListTopicsResponse, Topic> ListTopicsAsync(
-            ProjectName project,
+            gaxres::ProjectName project,
             string pageToken = null,
             int? pageSize = null,
             gaxgrpc::CallSettings callSettings = null) => ListTopicsAsync(
@@ -1115,7 +1116,7 @@ namespace Google.Cloud.PubSub.V1
         /// A pageable sequence of <see cref="Topic"/> resources.
         /// </returns>
         public virtual gax::PagedEnumerable<ListTopicsResponse, Topic> ListTopics(
-            ProjectName project,
+            gaxres::ProjectName project,
             string pageToken = null,
             int? pageSize = null,
             gaxgrpc::CallSettings callSettings = null) => ListTopics(
