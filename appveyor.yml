@@ -23,23 +23,7 @@ install:
 
 # Perform the build.
 build_script:
-  - dotnet --info
-  - echo "Regenerating projects: if this fails, run generateprojects.sh and commit changes"
-  - bash generateprojects.sh && git diff --exit-code
-  - bash build.sh --notests --diff
+  - bash appveyor.sh
 
-# Scripts to run before tests
-before_test:
-  - choco install codecov
-
-# Run the tests with coverage
-test_script:
-  - bash runcoverage.sh
-  
-# Create and upload code coverage report.
-# As we only build changed APIs, and some APIs don't have unit tests,
-# we need to handle the possibility of there being no coverage to
-# report on.
-after_test:
-  - bash createcoveragereport.sh
-  - if exist coverage/coverage-filtered.xml codecov -f "coverage/coverage-filtered.xml"
+test: off
+deploy: off
