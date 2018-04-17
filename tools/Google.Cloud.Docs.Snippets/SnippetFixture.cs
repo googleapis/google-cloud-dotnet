@@ -1,4 +1,5 @@
-﻿using Google.Cloud.PubSub.V1;
+﻿using Google.Api.Gax.ResourceNames;
+using Google.Cloud.PubSub.V1;
 using System;
 using System.Linq;
 using Xunit;
