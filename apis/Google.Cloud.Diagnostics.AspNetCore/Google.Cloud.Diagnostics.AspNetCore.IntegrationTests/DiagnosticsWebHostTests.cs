@@ -15,6 +15,7 @@
 using System;
 using System.Linq;
 using System.Net.Http;
+using System.Threading;
 using System.Threading.Tasks;
 using Google.Api;
 using Google.Cloud.Diagnostics.Common;
@@ -111,7 +112,10 @@ namespace Google.Cloud.Diagnostics.AspNetCore.IntegrationTests
 
             var spanName = TraceController.GetMessage(nameof(TraceController.Trace), testId);
 
-            var polling = new TraceEntryPolling();
+            // Give the polling a little extra time to find the trace as
+            // trace processing can sometimes take time and the default buffer is a 
+            // timed buffer.
+            var polling = new TraceEntryPolling(TimeSpan.FromSeconds(20));
             var trace = polling.GetTrace(spanName, Timestamp.FromDateTime(startTime));
 
             Assert.NotNull(trace);
