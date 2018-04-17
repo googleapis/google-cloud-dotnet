@@ -109,7 +109,6 @@ namespace Google.Cloud.Diagnostics.AspNetCore.IntegrationTests
         private static async Task TestTrace(string testId, DateTime startTime, HttpClient client)
         {
             var response = await client.GetAsync($"/Trace/Trace/{testId}");
-            Thread.Sleep(TimeSpan.FromSeconds(5));
 
             var spanName = TraceController.GetMessage(nameof(TraceController.Trace), testId);
 

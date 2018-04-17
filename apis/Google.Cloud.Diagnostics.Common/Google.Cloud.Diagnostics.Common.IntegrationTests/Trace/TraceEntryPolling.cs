@@ -33,8 +33,6 @@ namespace Google.Cloud.Diagnostics.Common.IntegrationTests
         /// <summary>Client to use to send RPCs.</summary>
         private readonly TraceServiceClient _client = TraceServiceClient.Create();
 
-        internal TraceEntryPolling() : base() { }
-
         internal TraceEntryPolling(TimeSpan timeout = default, TimeSpan sleepInterval = default) : base(timeout, sleepInterval) { }
 
         /// <summary>
