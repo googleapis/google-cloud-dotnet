@@ -13,6 +13,7 @@
 // limitations under the License.
 
 using Google.Api.Gax;
+using Google.Api.Gax.ResourceNames;
 using Google.Cloud.PubSub.V1;
 using System;
 using System.Collections.Generic;

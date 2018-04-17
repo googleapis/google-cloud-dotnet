@@ -18,6 +18,7 @@ using Google.Cloud.Translation.V2;
 using static Google.Apis.Http.ConfigurableMessageHandler;
 using Grpc.Core;
 using System;
+using Google.Api.Gax.ResourceNames;
 
 namespace Google.Cloud.Tools.Snippets
 {
