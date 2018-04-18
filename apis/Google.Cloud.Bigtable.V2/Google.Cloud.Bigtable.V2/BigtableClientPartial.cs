@@ -29,6 +29,9 @@ namespace Google.Cloud.Bigtable.V2
 {
     public abstract partial class BigtableClient
     {
+        private static string UserAgent { get; } =
+            $"cbt-csharp/v{typeof(BigtableClient).GetTypeInfo().Assembly.GetCustomAttribute<AssemblyInformationalVersionAttribute>().InformationalVersion}";
+
         // TODO: Auto-generate these if possible/easy after multi-channel support is added.
 
         /// <summary>
@@ -65,8 +68,6 @@ namespace Google.Cloud.Bigtable.V2
             }
             var clientCount = clientCreationSettings?.ClientCount ?? Environment.ProcessorCount;
 
-            var versionAttribute = typeof(BigtableClient).GetTypeInfo().Assembly.GetCustomAttribute<AssemblyInformationalVersionAttribute>();
-
             var settings = clientCreationSettings?.BigtableServiceApiSettings;
             var endpoint = clientCreationSettings?.ServiceEndpoint ?? BigtableServiceApiClient.DefaultEndpoint;
             var clients = new BigtableServiceApiClient[clientCount];
@@ -78,7 +79,7 @@ namespace Google.Cloud.Bigtable.V2
                 new ChannelOption(ChannelOptions.MaxReceiveMessageLength, -1),
 
                 // TODO: Figure out if there's a good way to test this
-                new ChannelOption(ChannelOptions.PrimaryUserAgentString, $"cbt-csharp/v{versionAttribute.InformationalVersion}")
+                new ChannelOption(ChannelOptions.PrimaryUserAgentString, UserAgent)
             };
             // Fill clients[] with BigtableServiceApiClient instances, each with specific channel
             for (int i = 0; i < clientCount; i++)
