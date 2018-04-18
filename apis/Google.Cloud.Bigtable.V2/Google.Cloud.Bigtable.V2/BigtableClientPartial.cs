@@ -18,6 +18,7 @@ using Grpc.Core;
 using System;
 using System.Collections.Generic;
 using System.Linq;
+using System.Reflection;
 using System.Threading;
 using System.Threading.Tasks;
 using Google.Apis.Auth.OAuth2;
@@ -64,6 +65,8 @@ namespace Google.Cloud.Bigtable.V2
             }
             var clientCount = clientCreationSettings?.ClientCount ?? Environment.ProcessorCount;
 
+            var versionAttribute = typeof(BigtableClient).GetTypeInfo().Assembly.GetCustomAttribute<AssemblyInformationalVersionAttribute>();
+
             var settings = clientCreationSettings?.BigtableServiceApiSettings;
             var endpoint = clientCreationSettings?.ServiceEndpoint ?? BigtableServiceApiClient.DefaultEndpoint;
             var clients = new BigtableServiceApiClient[clientCount];
@@ -72,7 +75,10 @@ namespace Google.Cloud.Bigtable.V2
             var channelOptions = new[]
             {
                 new ChannelOption(ChannelOptions.MaxSendMessageLength, -1),
-                new ChannelOption(ChannelOptions.MaxReceiveMessageLength, -1)
+                new ChannelOption(ChannelOptions.MaxReceiveMessageLength, -1),
+
+                // TODO: Figure out if there's a good way to test this
+                new ChannelOption(ChannelOptions.PrimaryUserAgentString, $"cbt-csharp/v{versionAttribute.InformationalVersion}")
             };
             // Fill clients[] with BigtableServiceApiClient instances, each with specific channel
             for (int i = 0; i < clientCount; i++)
