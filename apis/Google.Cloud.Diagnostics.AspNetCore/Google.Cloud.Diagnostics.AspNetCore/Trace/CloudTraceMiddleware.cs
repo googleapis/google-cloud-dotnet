@@ -30,20 +30,17 @@ namespace Google.Cloud.Diagnostics.AspNetCore
     {
         private readonly RequestDelegate _next;
         private readonly Func<TraceHeaderContext, IManagedTracer> _tracerFactory;
-        private readonly IHttpContextAccessor _accessor;
 
         /// <summary>
         /// Create a new instance of <see cref="CloudTraceMiddleware"/>.
         /// </summary>
         /// <param name="next">The next request delegate. Cannot be null.</param>
         /// <param name="tracerFactory">A factory to create <see cref="IManagedTracer"/>s. Cannot be null.</param>
-        /// <param name="accessor">Access to <see cref="HttpContext"/>. Cannot be null.</param>
         public CloudTraceMiddleware(
-            RequestDelegate next, Func<TraceHeaderContext, IManagedTracer> tracerFactory, IHttpContextAccessor accessor)
+            RequestDelegate next, Func<TraceHeaderContext, IManagedTracer> tracerFactory)
         {
             _next = GaxPreconditions.CheckNotNull(next, nameof(next));
             _tracerFactory = GaxPreconditions.CheckNotNull(tracerFactory, nameof(tracerFactory));
-            _accessor = GaxPreconditions.CheckNotNull(accessor, nameof(accessor));
         }
 
         /// <summary>
@@ -57,10 +54,10 @@ namespace Google.Cloud.Diagnostics.AspNetCore
         {
             GaxPreconditions.CheckNotNull(traceHeaderContext, nameof(traceHeaderContext));
 
-            // Create a tracer for the given request and set it on the HttpContext so
+            // Create a tracer for the given request and set it on the context manager so
             // the tracer can be used in other places.
             var tracer = _tracerFactory(traceHeaderContext);
-            ContextTracerManager.SetCurrentTracer(_accessor, tracer);
+            ContextTracerManager.SetCurrentTracer(tracer);
 
             if (tracer.GetCurrentTraceId() == null)
             {

@@ -57,7 +57,6 @@ namespace Google.Cloud.Diagnostics.AspNetCore.Tests
         [Fact]
         public async Task Invoke_Trace()
         {
-            var accessor = new HttpContextAccessor { HttpContext = new DefaultHttpContext() };
             var context = CreateHttpContext();
             var tracerMock = CreateIManagedTracerMock(context);
 
@@ -66,12 +65,13 @@ namespace Google.Cloud.Diagnostics.AspNetCore.Tests
 
             Func<TraceHeaderContext, IManagedTracer> fakeFactory = f => tracerMock.Object;
 
-            Assert.Equal(NullManagedTracer.Instance, ContextTracerManager.GetCurrentTracer(accessor));
+            Assert.Equal(NullManagedTracer.Instance, ContextTracerManager.GetCurrentTracer());
 
-            var middleware = new CloudTraceMiddleware(delegateMock.Object, fakeFactory, accessor);
+            var middleware = new CloudTraceMiddleware(delegateMock.Object, fakeFactory);
             await middleware.Invoke(context, _traceHeaderContext);
 
-            Assert.Equal(tracerMock.Object, ContextTracerManager.GetCurrentTracer(accessor));
+            // Since the current tracer is AsyncLocal<>, it will be back to the default after awaiting the middleware invoke
+            Assert.Equal(NullManagedTracer.Instance, ContextTracerManager.GetCurrentTracer());
 
             Assert.True(context.Response.Headers.ContainsKey(TraceHeaderContext.TraceHeader));
             Assert.Equal(_traceHeaderContext.ToString(), context.Response.Headers[TraceHeaderContext.TraceHeader]);
@@ -83,7 +83,6 @@ namespace Google.Cloud.Diagnostics.AspNetCore.Tests
         [Fact]
         public async Task Invoke_TraceException()
         {
-            var accessor = new HttpContextAccessor { HttpContext = new DefaultHttpContext() };
             var context = CreateHttpContext();
             var tracerMock = CreateIManagedTracerMock(context);
             tracerMock.Setup(t => t.SetStackTrace(It.IsAny<StackTrace>()));
@@ -93,7 +92,7 @@ namespace Google.Cloud.Diagnostics.AspNetCore.Tests
 
             Func<TraceHeaderContext, IManagedTracer> fakeFactory = f => tracerMock.Object;
 
-            var middleware = new CloudTraceMiddleware(delegateMock.Object, fakeFactory, accessor);
+            var middleware = new CloudTraceMiddleware(delegateMock.Object, fakeFactory);
             await Assert.ThrowsAsync<DivideByZeroException>(
                 () => middleware.Invoke(context, _traceHeaderContext));
 
@@ -108,7 +107,6 @@ namespace Google.Cloud.Diagnostics.AspNetCore.Tests
         [Fact]
         public async Task Invoke_TraceThrowsAndException()
         {
-            var accessor = new HttpContextAccessor { HttpContext = new DefaultHttpContext() };
             var context = CreateHttpContext();
             var tracerMock = CreateIManagedTracerMock(context);
             tracerMock.Setup(t => t.SetStackTrace(It.IsAny<StackTrace>()))
@@ -119,7 +117,7 @@ namespace Google.Cloud.Diagnostics.AspNetCore.Tests
 
             Func<TraceHeaderContext, IManagedTracer> fakeFactory = f => tracerMock.Object;
 
-            var middleware = new CloudTraceMiddleware(delegateMock.Object, fakeFactory, accessor);
+            var middleware = new CloudTraceMiddleware(delegateMock.Object, fakeFactory);
             await Assert.ThrowsAsync<AggregateException>(
                 () => middleware.Invoke(context, _traceHeaderContext));
 
@@ -133,17 +131,18 @@ namespace Google.Cloud.Diagnostics.AspNetCore.Tests
         [Fact]
         public async Task Invoke_NoTrace()
         {
-            var accessor = new HttpContextAccessor { HttpContext = new DefaultHttpContext() };
             var context = new DefaultHttpContext();
             var delegateMock = new Mock<RequestDelegate>();
             var tracerMock = new Mock<IManagedTracer>();
 
             Func<TraceHeaderContext, IManagedTracer> fakeFactory = f => tracerMock.Object;
 
-            var middleware = new CloudTraceMiddleware(delegateMock.Object, fakeFactory, accessor);
+            var middleware = new CloudTraceMiddleware(delegateMock.Object, fakeFactory);
             await middleware.Invoke(context, _traceHeaderContext);
 
-            Assert.Equal(tracerMock.Object, ContextTracerManager.GetCurrentTracer(accessor));
+            // Since the current tracer is AsyncLocal<>, it will be back to the default after awaiting the middleware invoke
+            Assert.Equal(NullManagedTracer.Instance, ContextTracerManager.GetCurrentTracer());
+
             Assert.False(context.Response.Headers.ContainsKey(TraceHeaderContext.TraceHeader));
 
             delegateMock.Verify(d => d(context), Times.Once());

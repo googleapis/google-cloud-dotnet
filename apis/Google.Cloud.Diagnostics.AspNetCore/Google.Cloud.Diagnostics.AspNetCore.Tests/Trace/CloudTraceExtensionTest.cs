@@ -19,8 +19,6 @@ using Moq;
 using System;
 using Xunit;
 
-using static Google.Cloud.Diagnostics.AspNetCore.CloudTraceExtension;
-
 namespace Google.Cloud.Diagnostics.AspNetCore.Tests
 {
     public class CloudTraceExtensionTest
@@ -76,10 +74,14 @@ namespace Google.Cloud.Diagnostics.AspNetCore.Tests
         public void CreateManagedTracer()
         {
             var mockProvider = new Mock<IServiceProvider>();
-            mockProvider.Setup(p => p.GetService(typeof(IHttpContextAccessor))).Returns(new HttpContextAccessor());
-            var tracer = CloudTraceExtension.CreateManagedTracer(mockProvider.Object);
+            var mockTracer = new Mock<IManagedTracer>();
+            string traceId = Guid.NewGuid().ToString("N");
+            mockTracer.Setup(p => p.GetCurrentTraceId()).Returns(traceId);
+            ContextTracerManager.SetCurrentTracer(mockTracer.Object);
+            var tracer = ManagedTracer.CreateDelegatingTracer(() => ContextTracerManager.GetCurrentTracer());
             Assert.IsType<DelegatingTracer>(tracer);
-            mockProvider.VerifyAll();
+            Assert.Equal(traceId, tracer.GetCurrentTraceId());
+            mockTracer.Verify();
         }
 
         [Fact]
