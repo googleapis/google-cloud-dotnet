@@ -27,7 +27,7 @@ namespace Google.Cloud.Firestore
     /// A reference to a document in a Firestore database. The existence of
     /// this object does not imply that the document currently exists in storage.
     /// </summary>
-    public sealed class DocumentReference : IEquatable<DocumentReference>
+    public sealed class DocumentReference : IEquatable<DocumentReference>, IComparable<DocumentReference>
     {
         /// <summary>
         /// The database which contains the document.
@@ -89,6 +89,11 @@ namespace Google.Cloud.Firestore
         /// <inheritdoc />
         public override string ToString() => Path;
 
+        // Note: this implementation wastefully compares the characters in "projects" and "databases" but means we don't need
+        // to keep a database-relative path or perform more complex comparisons.
+        /// <inheritdoc />
+        public int CompareTo(DocumentReference other) => other == null ? 1 : PathComparer.Instance.Compare(Path, other.Path);
+        
         /// <summary>
         /// Asynchronously creates a document on the server with the given data. The document must not exist beforehand.
         /// </summary>

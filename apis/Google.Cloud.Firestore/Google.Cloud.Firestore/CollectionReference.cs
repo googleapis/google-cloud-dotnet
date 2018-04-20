@@ -24,7 +24,7 @@ namespace Google.Cloud.Firestore
     /// A reference to a collection in a Firestore database. The existence of
     /// this object does not imply that the collection currently exists in storage.
     /// </summary>
-    public sealed class CollectionReference : Query, IEquatable<CollectionReference>
+    public sealed class CollectionReference : Query, IEquatable<CollectionReference>, IComparable<CollectionReference>
     {
         /// <summary>
         /// The final part of the complete collection path; this is the identity of
@@ -108,5 +108,10 @@ namespace Google.Cloud.Firestore
 
         /// <inheritdoc />
         public override string ToString() => Path;
+
+        // Note: this implementation wastefully compares the characters in "projects" and "databases" but means we don't need
+        // to keep a database-relative path or perform more complex comparisons.
+        /// <inheritdoc />
+        public int CompareTo(CollectionReference other) => other == null ? 1 : PathComparer.Instance.Compare(Path, other.Path);
     }
 }

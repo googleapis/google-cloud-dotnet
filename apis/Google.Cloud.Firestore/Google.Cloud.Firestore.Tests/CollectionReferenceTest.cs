@@ -119,5 +119,35 @@ namespace Google.Cloud.Firestore.Tests
             // But we shouldn't get the same one twice
             Assert.NotEqual(doc.Id, collection.Document().Id);
         }
+
+        [Theory]
+        // Vary one property at a time
+        [InlineData("p1", "d1", "col1/doc1/col3", "p2", "d1", "col1/doc1/col3")]
+        [InlineData("p1", "d1", "col1/doc1/col3", "p1", "d2", "col1/doc1/col3")]
+        [InlineData("p1", "d1", "col1/doc1/col3", "p1", "d1", "col2/doc1/col3")]
+        [InlineData("p1", "d1", "col1/doc1/col3", "p1", "d1", "col1/doc2/col3")]
+
+        // Precedence of properties
+        [InlineData("p1", "d2", "col1/doc1/col3", "p2", "d1", "col1/doc1/col3")] // Project before database
+        [InlineData("p1", "d1", "col9/doc9/col3", "p1", "d2", "col1/doc1/col3")] // Database before path
+        [InlineData("p1", "d1", "col1/doc2/col3", "p1", "d1", "col2/doc1/col3")] // Collection before document
+        // (More details path tests in PathComparerTest)
+        public void CompareTo(
+            string smallerProject, string smallerDb, string smallerPath,
+            string largerProject, string largerDb, string largerPath)
+        {
+            var client = new FakeFirestoreClient();
+            var smaller = FirestoreDb.Create(smallerProject, smallerDb, client).Collection(smallerPath);
+            var larger = FirestoreDb.Create(largerProject, largerDb, client).Collection(largerPath);
+            ComparisonTester.AssertComparison(smaller, larger);
+        }
+
+        [Fact]
+        public void CompareTo_Null()
+        {
+            var db = FirestoreDb.Create("proj", "db", new FakeFirestoreClient());
+            var collection = db.Collection("root");
+            ComparisonTester.AssertComparison(null, collection);
+        }
     }
 }
