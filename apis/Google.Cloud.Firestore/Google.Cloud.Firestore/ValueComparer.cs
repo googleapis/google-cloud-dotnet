@@ -133,30 +133,8 @@ namespace Google.Cloud.Firestore
             return result != 0 ? result : leftPoint.Longitude.CompareTo(rightPoint.Longitude);
         }
 
-        private int CompareResourcePaths(Value left, Value right)
-        {
-            // Note: this does no validation, but it's simple...
-            // We can't just do a string comparison, because of cases such as:
-            // foo/bar/baz
-            // foo/bar-/baz
-            // Here "bar-" should come after "bar" because it's longer, but '-' is earlier than '/'.
-            string leftReference = left.ReferenceValue;
-            string rightReference = right.ReferenceValue;
-            int length = Math.Min(leftReference.Length, rightReference.Length);
-            for (int i = 0; i < length; i++)
-            {
-                char leftChar = leftReference[i];
-                char rightChar = rightReference[i];
-                if (leftChar != rightChar)
-                {
-                    return leftChar == '/' ? -1 // Left segment finishes earlier
-                        : rightChar == '/' ? 1  // Right segment finishes earlier
-                        : leftChar - rightChar; // Not a segment end, so just compare ordinals
-                }
-            }
-            // Shorter comes before longer
-            return leftReference.Length.CompareTo(rightReference.Length);
-        }
+        private int CompareResourcePaths(Value left, Value right) =>
+            PathComparer.Instance.Compare(left.ReferenceValue, right.ReferenceValue);
 
         private int CompareArrays(Value left, Value right)
         {
