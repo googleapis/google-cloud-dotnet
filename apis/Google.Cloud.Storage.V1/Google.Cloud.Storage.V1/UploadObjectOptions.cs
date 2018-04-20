@@ -95,9 +95,15 @@ namespace Google.Cloud.Storage.V1
         public EncryptionKey EncryptionKey { get; set; }
 
         /// <summary>
-        /// The name of the Cloud KMS key to use to encrypt the object. If this is null and customer-supplied encryption is not being used,
-        /// the bucket encryption defaults will be used to determine the encryption for the object.
+        /// The name of the Cloud KMS key to use to encrypt the object.
         /// </summary>
+        /// <remarks>
+        /// Currently, either customer-supplied encryption or a Cloud KMS key can be used, but not both.
+        /// If this property is null and customer-supplied encryption is not being used,
+        /// the bucket encryption defaults will be used to determine the encryption for the object.
+        /// If this property is non-null and the client object has a default encryption key, the <see cref="EncryptionKey"/> property
+        /// of this options object must be set to <see cref="EncryptionKey.None"/> to make the intention clear.
+        /// </remarks>
         public string KmsKeyName { get; set; }
 
         /// <summary>
