@@ -37,7 +37,6 @@ namespace Google.Cloud.Storage.V1.Tests
                 { None, None, "key", None },
                 { None, EncryptionKey2, null, EncryptionKey2 },
                 { EncryptionKey1, null, null, EncryptionKey1 },
-                { EncryptionKey1, null, "key", None },
                 { EncryptionKey1, None, null, None },
                 { EncryptionKey1, None, "key", None },
                 { EncryptionKey1, EncryptionKey2, null, EncryptionKey2 },
@@ -52,19 +51,23 @@ namespace Google.Cloud.Storage.V1.Tests
             Assert.Same(expected, actual);
         }
 
-        public static TheoryData<EncryptionKey, EncryptionKey, string> GetEffectiveEncryptionKey_Invalid_Data =>
-            new TheoryData<EncryptionKey, EncryptionKey, string>
+        public static TheoryData<EncryptionKey, EncryptionKey, string, string> GetEffectiveEncryptionKey_Invalid_Data =>
+            new TheoryData<EncryptionKey, EncryptionKey, string, string>
             {
-                { None, EncryptionKey2, "key" },
-                { EncryptionKey1, EncryptionKey2, "key" }
+                // The final string is expected to be a substring in the exception message.
+                // This is brittle, but makes sure we give the right message.
+                { None, EncryptionKey2, "key", "Can't specify both" },
+                { EncryptionKey1, null, "key", "default" },
+                { EncryptionKey1, EncryptionKey2, "key", "Can't specify both" }
             };
 
         [Theory, MemberData(nameof(GetEffectiveEncryptionKey_Invalid_Data))]
-        public void GetEffectiveEncryptionKey_Invalid(EncryptionKey clientkey, EncryptionKey operationKey, string kmsKey)
+        public void GetEffectiveEncryptionKey_Invalid(EncryptionKey clientkey, EncryptionKey operationKey, string kmsKey, string expectedMessageSubstring)
         {
             var service = new StorageService();
             var client = new StorageClientImpl(service, clientkey);
-            Assert.Throws<ArgumentException>(() => client.GetEffectiveEncryptionKey(operationKey, kmsKey));
+            var exception = Assert.Throws<ArgumentException>(() => client.GetEffectiveEncryptionKey(operationKey, kmsKey));
+            Assert.Contains(expectedMessageSubstring, exception.Message);
         }
     }
 }

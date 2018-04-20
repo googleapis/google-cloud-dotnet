@@ -169,25 +169,23 @@ namespace Google.Cloud.Storage.V1
             download.ModifyRequest += effectiveKey.ModifyRequest;
         }
 
-        // Work out which EncryptionKey to use for a request, based on values from options. The intention
-        // is that a client-specified encryption key can be overridden by either option, but the two
-        // options can't be used together to end up specifying both a CMEK and a CSEK.
+        // Work out which EncryptionKey to use for a request, based on values from options. We mustn't end up
+        // with both a CSEK and a CMEK; if the client has a default CSEK, it has to be explictly disabled in the options
+        // in order to use a CMEK.
         // Only visible for test purposes.
         internal EncryptionKey GetEffectiveEncryptionKey(EncryptionKey keyFromOptions, string kmsNameFromOptions)
         {
-            // Simple: if there's no KMS name, just use keyFromOptions or EncryptionKey
-            if (kmsNameFromOptions == null)
+            var effectiveKeyIgnoringKms = keyFromOptions ?? EncryptionKey;
+            // It's valid to have *either* a CMEK or a CSEK, but not both.
+            if (kmsNameFromOptions == null || effectiveKeyIgnoringKms == EncryptionKey.None)
             {
-                return keyFromOptions ?? EncryptionKey;
+                return effectiveKeyIgnoringKms;
             }
-            // We have a KMS name, and the key option is not an actual CSEK: we don't want to use
-            // a CSEK for this request.
-            if (keyFromOptions == null || keyFromOptions == EncryptionKey.None)
-            {
-                return EncryptionKey.None;
-            }
-            // While this could be implemented in options, it makes sense to do it all in one place.
-            throw new ArgumentException("Can't specify both an EncryptionKey and KmsKeyName in the same options", "options");
+            // We're definitely going to fail now, but we want to give clear details in the message.
+            string message = keyFromOptions == null
+                ? "This client has a default EncryptionKey. To specify a KmsKeyName for an operation, you must also set the EncryptionKey to EncryptionKey.None in the options for the operation."
+                : "Can't specify both an EncryptionKey (other than EncryptionKey.None) and KmsKeyName in options for a single operation.";
+            throw new ArgumentException(message, "options");
         }
 
         /// <inheritdoc />
