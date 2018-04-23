@@ -12,15 +12,15 @@
 // See the License for the specific language governing permissions and
 // limitations under the License.
 
+using Google.Protobuf;
+using Google.Protobuf.WellKnownTypes;
 using System;
 using System.Collections;
 using System.Collections.Generic;
-using System.Linq;
-using Google.Protobuf;
-using Google.Protobuf.WellKnownTypes;
-using Xunit;
 using System.Globalization;
+using System.Linq;
 using System.Threading;
+using Xunit;
 
 namespace Google.Cloud.Spanner.Data.Tests
 {
@@ -42,6 +42,21 @@ namespace Google.Cloud.Spanner.Data.Tests
         private static readonly DateTime s_testDate = new DateTime(2017, 1, 31, 3, 15, 30, 500);
         private static readonly byte[] s_bytesToEncode = {1, 2, 3, 4};
         private static readonly string s_base64Encoded = Convert.ToBase64String(s_bytesToEncode);
+
+        private static readonly SpannerStruct s_sampleStruct = new SpannerStruct
+        {
+            { "StringField", SpannerDbType.String, "stringValue" },
+            { "Int64Field", SpannerDbType.Int64, 2L },
+            { "Float64Field", SpannerDbType.Float64, double.NaN },
+            { "BoolField", SpannerDbType.Bool, true },
+            { "DateField", SpannerDbType.Date, new DateTime(2017, 1, 31) },
+            { "TimestampField", SpannerDbType.Timestamp, new DateTime(2017, 1, 31, 3, 15, 30) }
+        };
+
+        // Structs are serialized as lists of their values. The field names aren't present, as they're
+        // specified in the type.
+        private static readonly string s_sampleStructSerialized =
+            "[ \"stringValue\", \"2\", \"NaN\", true, \"2017-01-31\", \"2017-01-31T03:15:30Z\" ]";
 
         private static string Quote(string s) => $"\"{s}\"";
 
@@ -293,6 +308,39 @@ namespace Google.Cloud.Spanner.Data.Tests
                 new CustomList(GetStringsForArray()), SpannerDbType.ArrayOf(SpannerDbType.String),
                 "[ \"abc\", \"123\", \"def\" ]"
             };
+
+            // Struct test case includes nested complex conversions.
+            // These are one-way only, because SpannerStruct doesn't (and can't generally) implement
+            // IEquatable<T>. (By the time the nested value can be an array etc, it ends up being infeasible.)
+            // Deserialization is therefore handled separately in hand-written tests.
+            yield return new object[]
+            {
+                s_sampleStruct,
+                s_sampleStruct.GetSpannerDbType(),
+                s_sampleStructSerialized,
+                TestType.ClrToValue
+            };
+
+            // Array of structs.
+            yield return new object[]
+            {
+                new List<object>(new[] { s_sampleStruct }),
+                SpannerDbType.ArrayOf(s_sampleStruct.GetSpannerDbType()), $"[ {s_sampleStructSerialized} ]",
+                TestType.ClrToValue
+            };
+
+            // Struct of struct and array.
+            var complexStruct = new SpannerStruct
+            {
+                { "StructField", s_sampleStruct.GetSpannerDbType(), s_sampleStruct },
+                { "ArrayField" , SpannerDbType.ArrayOf(SpannerDbType.Int64), GetIntsForArray().Select(x => (long) x).ToList() }
+            };
+            yield return new object[]
+            {
+                complexStruct, complexStruct.GetSpannerDbType(),
+                $"[ {s_sampleStructSerialized}, [ \"4\", \"5\", \"6\" ] ]",
+                TestType.ClrToValue
+            };
         }
 
         public static IEnumerable<object[]> GetInvalidValueConversions()
@@ -423,7 +471,61 @@ namespace Google.Cloud.Spanner.Data.Tests
             });
         }
 
+        [Fact]
+        public void DeserializeSimpleStruct()
+        {
+            var wireValue = JsonParser.Default.Parse<Value>(s_sampleStructSerialized);
+            var actual = s_sampleStruct.GetSpannerDbType().ConvertToClrType<SpannerStruct>(wireValue, SpannerConversionOptions.Default);
+            AssertSampleStruct(actual);
+        }
+
+        [Fact]
+        public void DeserializeArrayOfStruct()
+        {
+            var wireValue = JsonParser.Default.Parse<Value>($"[ {s_sampleStructSerialized} ]");
+            var dbType = SpannerDbType.ArrayOf(s_sampleStruct.GetSpannerDbType());
+            var actual = dbType.ConvertToClrType<List<object>>(wireValue, SpannerConversionOptions.Default);
+            Assert.Equal(1, actual.Count);
+            AssertSampleStruct((SpannerStruct) actual[0]);
+        }
+
+        [Fact]
+        public void DeserializeComplexStruct()
+        {
+            var complexStruct = new SpannerStruct
+            {
+                { "StructField", s_sampleStruct.GetSpannerDbType(), s_sampleStruct },
+                { "ArrayField" , SpannerDbType.ArrayOf(SpannerDbType.Int64), GetIntsForArray().Select(x => (long) x).ToList() }
+            };
+            var wireValue = JsonParser.Default.Parse<Value>($"[ {s_sampleStructSerialized}, [ \"4\", \"5\", \"6\" ] ]");
+            var actual = complexStruct.GetSpannerDbType().ConvertToClrType<SpannerStruct>(wireValue, SpannerConversionOptions.Default);
+            Assert.Equal(2, actual.Count);
+
+            Assert.Equal("StructField", actual[0].Name);
+            Assert.Equal(s_sampleStruct.GetSpannerDbType(), actual[0].Type);
+            AssertSampleStruct((SpannerStruct)actual[0].Value);
+
+            Assert.Equal("ArrayField", actual[1].Name);
+            Assert.Equal(SpannerDbType.ArrayOf(SpannerDbType.Int64), actual[1].Type);
+            Assert.Equal(new[] { 4L, 5L, 6L }, actual[1].Value);
+        }
+
+        private static void AssertSampleStruct(SpannerStruct actual)
+        {
+            Assert.Equal(s_sampleStruct.Count, actual.Count);
+            for (int i = 0; i < s_sampleStruct.Count; i++)
+            {
+                var expectedField = s_sampleStruct[i];
+                var actualField = actual[i];
+                Assert.Equal(expectedField.Name, actualField.Name);
+                Assert.Equal(expectedField.Type, actualField.Type);
+                Assert.Equal(expectedField.Value, actualField.Value);
+            }
+        }        
+
         // Note: Value.Parse fails for list values containing null, hence the separate tests
+        // TODO: Put these back in as normal tests when a new version of Google.Protobuf is
+        // available; this was fixed in https://github.com/google/protobuf/pull/4345
         [Fact]
         public void SerializeStringArrayContainingNull()
         {

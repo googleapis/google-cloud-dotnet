@@ -27,6 +27,23 @@ namespace Google.Cloud.Spanner.Data.Tests
                 {SpannerDbType.ArrayOf(SpannerDbType.String), SpannerDbType.ArrayOf(SpannerDbType.String)};
             yield return new object[]
                 {SpannerDbType.ArrayOf(SpannerDbType.Bytes), SpannerDbType.ArrayOf(SpannerDbType.Bytes)};
+            yield return new object[]
+            {
+                new SpannerStruct
+                {
+                    { "StringValue", SpannerDbType.String, null },
+                    { "StringValue2", SpannerDbType.String, null },
+                    { "FloatValue", SpannerDbType.Float64, null },
+                    { "BoolArrayValue", SpannerDbType.ArrayOf(SpannerDbType.Bool), null},
+                }.GetSpannerDbType(),
+                new SpannerStruct
+                {
+                    { "StringValue", SpannerDbType.String, null },
+                    { "StringValue2", SpannerDbType.String, null },
+                    { "FloatValue", SpannerDbType.Float64, null },
+                    { "BoolArrayValue", SpannerDbType.ArrayOf(SpannerDbType.Bool), null},
+                }.GetSpannerDbType()
+            };
         }
 
         [Theory]
@@ -85,11 +102,77 @@ namespace Google.Cloud.Spanner.Data.Tests
             yield return new object[] { "ARRAY<  STRING (   5 )  > ", SpannerDbType.ArrayOf(SpannerDbType.String.WithSize(5)) };
 
 
+            // Structs
 
+            // Empty struct
+            yield return new object[] { "STRUCT<>", new SpannerStruct().GetSpannerDbType() };
 
-
+            // Non-unique fields
+            var sampleStruct = new SpannerStruct
             {
+                { "F", SpannerDbType.String, null },
+                { "F", SpannerDbType.Int64, null },
+                { "G", SpannerDbType.String, null },
             };
+            yield return new object[] { "STRUCT<F:STRING,F:INT64,G:STRING>", sampleStruct.GetSpannerDbType() };
+
+            // Empty fields
+            sampleStruct = new SpannerStruct
+            {
+                { "", SpannerDbType.String, null },
+                { "F", SpannerDbType.Int64, null },
+                { "", SpannerDbType.String, null },
+            };
+            yield return new object[] { "STRUCT<STRING,F:INT64,STRING>", sampleStruct.GetSpannerDbType() };
+
+            sampleStruct = new SpannerStruct
+            {
+                { "F1", SpannerDbType.String, null },
+                { "F2", SpannerDbType.Int64, null },
+            };
+            yield return new object[] { "STRUCT<F1:STRING,F2:INT64>", sampleStruct.GetSpannerDbType() };
+            yield return new object[] { "STRUCT< F1 : STRING , F2  : INT64 >", sampleStruct.GetSpannerDbType() };
+
+            sampleStruct = new SpannerStruct
+            {
+                { "F1", SpannerDbType.String, null },
+                { "F2", SpannerDbType.Int64, null },
+                { "F3", SpannerDbType.Bool, null },
+                { "F4", SpannerDbType.Bytes, null },
+                { "F5", SpannerDbType.Date, null },
+                { "F6", SpannerDbType.Float64, null },
+                { "F7", SpannerDbType.Timestamp, null },
+            };
+            yield return new object[] { "STRUCT<F1:STRING,F2:INT64,F3:BOOL,F4:BYTES,F5:DATE,F6:FLOAT64,F7:TIMESTAMP>", sampleStruct.GetSpannerDbType() };
+
+            sampleStruct = new SpannerStruct
+            {
+                { "F1", SpannerDbType.String.WithSize(100), null },
+                { "F2", SpannerDbType.Bytes.WithSize(200), null },
+            };
+            yield return new object[] { "STRUCT<F1: STRING(100), F2: BYTES(200)>", sampleStruct.GetSpannerDbType() };
+
+            // Struct of struct
+            var nestedStruct = new SpannerStruct { { "F2", SpannerDbType.Int64, null } };
+            sampleStruct = new SpannerStruct
+            {
+                { "F1", nestedStruct.GetSpannerDbType(), null }
+            };
+            yield return new object[] { "STRUCT<F1:STRUCT<F2:INT64>>", sampleStruct.GetSpannerDbType() };
+
+            // Struct of array
+            sampleStruct = new SpannerStruct
+            {
+                { "F1", SpannerDbType.ArrayOf(SpannerDbType.Int64), null }
+            };
+            yield return new object[] { "STRUCT<F1:ARRAY<INT64>>", sampleStruct.GetSpannerDbType() };
+
+            // Array of struct
+            sampleStruct = new SpannerStruct
+            {
+                { "F1", SpannerDbType.Int64, null }
+            };
+            yield return new object[] { "ARRAY<STRUCT<F1:INT64>>", SpannerDbType.ArrayOf(sampleStruct.GetSpannerDbType()) };
         }
 
         [Theory]

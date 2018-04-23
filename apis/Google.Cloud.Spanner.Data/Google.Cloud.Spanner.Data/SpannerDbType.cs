@@ -173,7 +173,7 @@ namespace Google.Cloud.Spanner.Data
                     case TypeCode.Array:
                         return typeof(List<>).MakeGenericType(ArrayElementType.DefaultClrType);
                     case TypeCode.Struct:
-                        return typeof(Dictionary<string, object>);
+                        return typeof(SpannerStruct);
                     default:
                         //if we don't recognize it (or its a struct), we use the google native wellknown type.
                         return typeof(Value);
