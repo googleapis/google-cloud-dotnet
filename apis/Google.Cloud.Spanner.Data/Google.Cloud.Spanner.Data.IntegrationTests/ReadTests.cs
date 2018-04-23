@@ -64,11 +64,6 @@ namespace Google.Cloud.Spanner.Data.IntegrationTests
             {
                 var cmd = connection.CreateSelectCommand(sql);
                 var result = await cmd.ExecuteScalarAsync<T>();
-
-                //ensure the synchronous method returns the same as the async.
-                Assert.Equal(await cmd.ExecuteScalarAsync<object>(),
-                    cmd.ExecuteScalar());
-
                 return result;
             }
         }
@@ -346,21 +341,57 @@ namespace Google.Cloud.Spanner.Data.IntegrationTests
         }
 
         [Fact]
-        public async Task StructArray()
+        public async Task StructArray_AsDictionaryArray()
         {
             string sqlQuery = "SELECT ARRAY(SELECT AS STRUCT C1, C2 "
                 + "FROM (SELECT 'a' AS C1, 1 AS C2 UNION ALL SELECT 'b' AS C1, 2 AS C2) "
                 + "ORDER BY C1 ASC)";
-            var result = await ExecuteAsync<IList>(sqlQuery);
+            var result = await ExecuteAsync<List<Dictionary<string, object>>>(sqlQuery);
             Assert.Equal(2, result.Count);
-            var s1 = result[0] as IDictionary;
 
-            Assert.Equal("a", (string) s1["C1"]);
-            Assert.Equal(1, (long) s1["C2"]);
+            Assert.Equal("a", result[0]["C1"]);
+            Assert.Equal(1L , result[0]["C2"]);
 
-            s1 = result[1] as IDictionary;
-            Assert.Equal("b", (string) s1["C1"]);
-            Assert.Equal(2, (long) s1["C2"]);
+            Assert.Equal("b", result[1]["C1"]);
+            Assert.Equal(2L, result[1]["C2"]);
+        }
+
+        [Fact]
+        public async Task StructArray_AsSpannerStructArray()
+        {
+            string sqlQuery = "SELECT ARRAY(SELECT AS STRUCT C1, C2 "
+                + "FROM (SELECT 'a' AS C1, 1 AS C2 UNION ALL SELECT 'b' AS C1, 2 AS C2) "
+                + "ORDER BY C1 ASC)";
+            var result = await ExecuteAsync<List<SpannerStruct>>(sqlQuery);
+            Assert.Equal(2, result.Count);
+
+            var struct1 = result[0];
+            AssertStructField("C1", SpannerDbType.String, "a", struct1[0]);
+            AssertStructField("C2", SpannerDbType.Int64, 1L, struct1[1]);
+
+            var struct2 = result[1];
+            AssertStructField("C1", SpannerDbType.String, "b", struct2[0]);
+            AssertStructField("C2", SpannerDbType.Int64, 2L, struct2[1]);
+        }
+
+        [Fact]
+        public async Task StructArray_DuplicateAndEmptyFieldNames()
+        {
+            var result = await ExecuteAsync<SpannerStruct[]>("SELECT ARRAY(SELECT STRUCT(1, 2 as f, 3 as f))");
+            Assert.Equal(1, result.Length);
+            var structValue = result[0];
+            Assert.Equal(3, structValue.Count);
+
+            AssertStructField("", SpannerDbType.Int64, 1L, structValue[0]);
+            AssertStructField("f", SpannerDbType.Int64, 2L, structValue[1]);
+            AssertStructField("f", SpannerDbType.Int64, 3L, structValue[2]);
+        }
+
+        private static void AssertStructField(string expectedName, SpannerDbType expectedType, object expectedValue, SpannerStruct.Field actualField)
+        {
+            Assert.Equal(expectedName, actualField.Name);
+            Assert.Equal(expectedType, actualField.Type);
+            Assert.Equal(expectedValue, actualField.Value);
         }
 
         [Fact]
