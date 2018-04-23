@@ -13,7 +13,6 @@
 // limitations under the License.
 
 using System.Collections;
-using System.Collections.Generic;
 using System.Linq;
 
 namespace Google.Cloud.Spanner.Data
@@ -34,22 +33,6 @@ namespace Google.Cloud.Spanner.Data
 
             return d1.Count == d2.Count
                 && d1.Keys.Cast<object>().All(key => d2.Contains(key) && Equals(d2[key], d1[key]));
-        }
-
-        public static bool DictionaryEquals<TK, TV>(IDictionary<TK, TV> d1, IDictionary<TK, TV> d2)
-        {
-            if (d1 == null && d2 == null)
-            {
-                return true;
-            }
-
-            if (d1 == null || d2 == null)
-            {
-                return false;
-            }
-
-            return d1.Count == d2.Count
-                && d1.Keys.All(key => d2.ContainsKey(key) && Equals(d2[key], d1[key]));
         }
     }
 }
