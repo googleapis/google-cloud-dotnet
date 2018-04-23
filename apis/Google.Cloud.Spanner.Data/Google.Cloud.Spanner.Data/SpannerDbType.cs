@@ -12,15 +12,15 @@
 // See the License for the specific language governing permissions and
 // limitations under the License.
 
+using Google.Api.Gax;
+using Google.Cloud.Spanner.V1;
+using Google.Protobuf.Collections;
+using Google.Protobuf.WellKnownTypes;
 using System;
-using System.Collections;
 using System.Collections.Generic;
 using System.Data;
 using System.Linq;
 using System.Reflection;
-using Google.Api.Gax;
-using Google.Cloud.Spanner.V1;
-using Google.Protobuf.WellKnownTypes;
 using TypeCode = Google.Cloud.Spanner.V1.TypeCode;
 
 namespace Google.Cloud.Spanner.Data
@@ -88,13 +88,17 @@ namespace Google.Cloud.Spanner.Data
 
         internal TypeCode TypeCode { get; }
 
-        internal SpannerDbType ArrayElementType { get; }
+        /// <summary>
+        /// When TypeCode is Array, this is the array element type. (Null for non-arrays.)
+        /// </summary>
+        private SpannerDbType ArrayElementType { get; }
 
-        internal IDictionary<string, SpannerDbType> StructMembers { get; }
-
-        //Preserving the order which struct members are declared is important because some values come back
-        //as list values.
-        internal List<string> StructOrder { get; }
+        /// <summary>
+        /// The field names and types within a struct. (Null for non-structs.) This is of type
+        /// List rather than IList so we can use the protobuf-supplied Lists class for equality
+        /// and hash codes.
+        /// </summary>
+        private List<StructField> StructFields { get; }
 
         private SpannerDbType(TypeCode typeCode, int? size = null)
         {
@@ -111,23 +115,9 @@ namespace Google.Cloud.Spanner.Data
         private SpannerDbType(TypeCode typeCode, SpannerDbType arrayElementType)
             : this(typeCode) => ArrayElementType = arrayElementType;
 
-        private SpannerDbType(TypeCode typeCode, IEnumerable<Tuple<string, SpannerDbType>> structMembers)
-            : this(typeCode)
-        {
-            StructOrder = new List<string>();
-            StructMembers = new Dictionary<string, SpannerDbType>();
-            foreach (var field in structMembers)
-            {
-                StructMembers[field.Item1] = field.Item2;
-                StructOrder.Add(field.Item1);
-            }
-        }
-
-        private SpannerDbType(TypeCode typeCode, IEnumerable<StructType.Types.Field> structTypeFields)
-            : this(typeCode, structTypeFields.Select(
-                    x => new Tuple<string, SpannerDbType>(x.Name, FromProtobufType(x.Type))))
-        {
-        }
+        // Note: the list reference is copied directly; callers are expected to be careful.
+        private SpannerDbType(TypeCode typeCode, List<StructField> structFields)
+            : this(typeCode) => StructFields = structFields;
 
         /// <summary>
         /// The corresponding <see cref="DbType"/> for this Cloud Spanner type.
@@ -200,7 +190,8 @@ namespace Google.Cloud.Spanner.Data
                         TypeCode.Array,
                         FromProtobufType(type.ArrayElementType));
                 case TypeCode.Struct:
-                    return new SpannerDbType(TypeCode.Struct, type.StructType.Fields);
+                    return new SpannerDbType(TypeCode.Struct,
+                        type.StructType.Fields.Select(f => new StructField(f.Name, SpannerDbType.FromProtobufType(f.Type))).ToList());
                 default:
                     return FromTypeCode(type.Code);
             }
@@ -223,15 +214,7 @@ namespace Google.Cloud.Spanner.Data
                         StructType =
                             new StructType
                             {
-                                Fields =
-                                {
-                                    StructMembers.Select(
-                                        kvp => new StructType.Types.Field
-                                        {
-                                            Name = kvp.Key,
-                                            Type = kvp.Value.ToProtobufType()
-                                        })
-                                }
+                                Fields = { StructFields.Select(f => f.ToFieldType()) }
                             }
                     };
                 default: return new V1.Type {Code = TypeCode};
@@ -251,22 +234,12 @@ namespace Google.Cloud.Spanner.Data
             new SpannerDbType(TypeCode.Array, elementType);
 
 
-#pragma warning disable DE0006
         /// <summary>
-        /// Creates a struct of the specified type.
-        /// A struct has field names and field values.
-        /// You may use any type that implements IDictionary as a source for the array.
-        /// The ToString method will be called on each key of the IDictionary to generate each field name.
-        /// Each field value's type is determined by the given argument <paramref name="structMembers"/>.
-        /// When calling <see cref="SpannerDataReader.GetFieldValue(string)"/> the default type
-        /// is <see cref="Dictionary{String, Object}"/>. You may, however, specify any type that implements IDictionary which
-        /// has a default constructor.
+        /// Factory method for creating a SpannerDbType from a struct. Public access would be via the instance
+        /// method; making this internal allows us to avoid exposing constructors even internally.
         /// </summary>
-        /// <param name="structMembers">A dictionary containing the field names and types of each member of the struct.</param>
-        /// <returns>A <see cref="SpannerDbType"/> representing a structure.</returns>
-#pragma warning restore DE0006
-        public static SpannerDbType StructOf(IDictionary<string, SpannerDbType> structMembers) => new SpannerDbType(
-            TypeCode.Struct, structMembers.Select(x => new Tuple<string, SpannerDbType>(x.Key, x.Value)));
+        internal static SpannerDbType ForStruct(SpannerStruct spannerStruct) =>
+            new SpannerDbType(TypeCode.Struct, spannerStruct.Select(f => new StructField(f.Name, f.Type)).ToList());
 
         /// <summary>
         /// Returns a SpannerDbType given a ClrType.
@@ -323,8 +296,9 @@ namespace Google.Cloud.Spanner.Data
         /// <inheritdoc />
         public override bool Equals(object obj) => Equals(obj as SpannerDbType);
 
-        private bool Equals(SpannerDbType other) => TypeUtil.DictionaryEquals(StructMembers, other?.StructMembers)
-            && TypeCode == other?.TypeCode
+        private bool Equals(SpannerDbType other) => other != null 
+            && Lists.Equals(StructFields, other.StructFields)
+            && TypeCode == other.TypeCode
             && Size == other.Size
             && Equals(ArrayElementType, other.ArrayElementType);
 
@@ -333,12 +307,35 @@ namespace Google.Cloud.Spanner.Data
         {
             unchecked
             {
-                int hashCode = StructMembers?.Count ?? 0;
+                int hashCode = Lists.GetHashCode(StructFields);
                 hashCode = (hashCode * 397) ^ Size.GetValueOrDefault(0);
                 hashCode = (hashCode * 397) ^ (int)TypeCode;
                 hashCode = (hashCode * 397) ^ (ArrayElementType?.GetHashCode() ?? 0);
                 return hashCode;
             }
+        }
+
+        /// <summary>
+        /// Value type representing the name and type of a field within a struct. This is like SpannerStruct.Field
+        /// but without the value - and it's private. This mostly makes equality comparisons simpler.
+        /// </summary>
+        private struct StructField : IEquatable<StructField>
+        {
+            internal string Name { get; }
+            internal SpannerDbType Type { get; }
+
+            public StructField(string name, SpannerDbType type)
+            {
+                Name = GaxPreconditions.CheckNotNull(name, nameof(name));
+                Type = GaxPreconditions.CheckNotNull(type, nameof(type));
+            }
+
+            public override bool Equals(object obj) => obj is StructField sf ? Equals(sf) : false;
+            public bool Equals(StructField other) => Name == other.Name && Type.Equals(other.Type);
+            public override int GetHashCode() => Name.GetHashCode() * 397 + Type.GetHashCode();
+
+            public StructType.Types.Field ToFieldType() =>
+                new StructType.Types.Field { Name = Name, Type = Type.ToProtobufType() };
         }
     }
 }

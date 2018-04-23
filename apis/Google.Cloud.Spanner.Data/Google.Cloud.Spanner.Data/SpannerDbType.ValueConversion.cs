@@ -183,21 +183,7 @@ namespace Google.Cloud.Spanner.Data
                     }
                     throw new ArgumentException("The given array instance needs to implement IEnumerable.");
                 case TypeCode.Struct:
-                    if (value is IDictionary dictionary)
-                    {
-                        var structValue = new Struct();
-                        foreach (var key in dictionary.Keys)
-                        {
-                            string keyString = Convert.ToString(key, InvariantCulture);
-                            if (!StructMembers.ContainsKey(keyString))
-                            {
-                                throw new ArgumentException("The given struct instance has members not defined in the Struct.", nameof(value));
-                            }
-                            structValue.Fields[keyString] = StructMembers[keyString].ToProtobufValue(dictionary[key], options);
-                        }
-                        return Value.ForStruct(structValue);
-                    }
-                    throw new ArgumentException("The given struct instance needs to implement IDictionary.");
+                    throw new ArgumentException("Struct parameters are not supported");
 
                 default:
                     throw new ArgumentOutOfRangeException(nameof(TypeCode), TypeCode, null);
@@ -215,7 +201,12 @@ namespace Google.Cloud.Spanner.Data
                 return wireValue;
             }
 
-            //targetClrType should be one of the values returned by GetDefaultClrTypeFromSpannerType
+            if (wireValue.KindCase == Value.KindOneofCase.StructValue)
+            {
+                throw new InvalidOperationException($"google.protobuf.Struct values are invalid in Spanner");
+            }
+
+            // targetClrType should be one of the values returned by DefaultClrType
             if (targetClrType == typeof(bool))
             {
                 switch (wireValue.KindCase)
@@ -404,32 +395,29 @@ namespace Google.Cloud.Spanner.Data
                         throw new ArgumentOutOfRangeException();
                 }
             }
+            // TODO: Do we still want to support this?
             if (typeof(IDictionary).IsAssignableFrom(targetClrType))
             {
                 if (targetClrType == typeof(IDictionary))
                 {
-                    targetClrType = typeof(Dictionary<string, object>);
+                    // Default type depends on whether it's a struct or not.
+                    targetClrType = TypeCode == TypeCode.Struct
+                        ? typeof(Dictionary<string, object>)
+                        : typeof(Dictionary<int, object>);
                 }
                 //a bit of recursion here...
                 IDictionary dictionary = (IDictionary)Activator.CreateInstance(targetClrType);
                 var itemType = targetClrType.GetGenericArguments().Skip(1).FirstOrDefault() ?? typeof(object);
                 switch (wireValue.KindCase)
                 {
-                    case Value.KindOneofCase.StructValue:
-                        foreach (var structField in StructMembers)
-                        {
-                            var fieldValue = wireValue.StructValue.Fields[structField.Key];
-                            dictionary[structField.Key] = structField.Value.ConvertToClrType(fieldValue, itemType, options, topLevel: false);
-                        }
-
-                        return dictionary;
                     case Value.KindOneofCase.ListValue:
                         if (TypeCode == TypeCode.Struct)
                         {
-                            for (var i = 0; i < StructOrder?.Count; i++)
+                            for (int i = 0; i < StructFields.Count; i++)
                             {
                                 var elementValue = wireValue.ListValue.Values[i];
-                                dictionary[StructOrder[i]] = StructMembers[StructOrder[i]].ConvertToClrType(elementValue, itemType, options, topLevel: false);
+                                var field = StructFields[i];
+                                dictionary[field.Name] = field.Type.ConvertToClrType(elementValue, itemType, options, topLevel: false);
                             }
                         }
                         else

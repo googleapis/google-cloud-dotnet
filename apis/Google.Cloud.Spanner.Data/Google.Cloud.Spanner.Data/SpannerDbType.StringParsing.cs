@@ -52,7 +52,8 @@ namespace Google.Cloud.Spanner.Data
                         //unexepected inner remainder on simple type
                         return false;
                     }
-                    spannerDbType = !size.HasValue ? FromTypeCode(code) : new SpannerDbType(code, size.Value);
+                    // If there's no size, we can use cached values.
+                    spannerDbType = size == null ? FromTypeCode(code) : new SpannerDbType(code, size);
                     return true;
                 case TypeCode.Array:
                     if (!TryParse(remainder, out SpannerDbType elementType))
@@ -62,30 +63,43 @@ namespace Google.Cloud.Spanner.Data
                     spannerDbType = new SpannerDbType(code, elementType);
                     return true;
                 case TypeCode.Struct:
-                    //there could be nested structs, so we need to be careful about parsing the inner string.
-                    List<Tuple<string, SpannerDbType>> fields = new List<Tuple<string, SpannerDbType>>();
+                    // There could be nested structs, so we need to be careful about parsing the inner string.
+                    var fields = new List<StructField>();
                     int currentIndex = 0;
-                    while (currentIndex < remainder.Length)
+                    while (remainder != null && currentIndex < remainder.Length)
                     {
                         int midfieldIndex = NonNestedIndexOf(remainder, currentIndex, ':');
-                        if (midfieldIndex == -1)
-                        {
-                            return false;
-                        }
                         int endFieldIndex = NonNestedIndexOf(remainder, currentIndex, ',');
                         if (endFieldIndex == -1)
                         {
-                            //we reached the last field.
+                            // We reached the last field.
                             endFieldIndex = remainder.Length;
                         }
 
-                        string fieldName = remainder.Substring(currentIndex, midfieldIndex - currentIndex).Trim();
-                        if (!TryParse(remainder.Substring(midfieldIndex + 1, endFieldIndex - midfieldIndex - 1),
+                        string fieldName;
+                        int fieldTypeStartIndex;
+                        if (midfieldIndex != -1 && midfieldIndex < endFieldIndex)
+                        {
+                            fieldName = remainder.Substring(currentIndex, midfieldIndex - currentIndex).Trim();
+                            // Empty names can't be specified expicitly; STRUCT<INT64> is fine, but STRUCT<:INT64> is not.
+                            if (fieldName == "")
+                            {
+                                return false;
+                            }
+                            fieldTypeStartIndex = midfieldIndex + 1;
+                        }
+                        else
+                        {
+                            fieldName = "";
+                            fieldTypeStartIndex = currentIndex;
+                        }
+
+                        if (!TryParse(remainder.Substring(fieldTypeStartIndex, endFieldIndex - fieldTypeStartIndex),
                             out SpannerDbType fieldDbType))
                         {
                             return false;
                         }
-                        fields.Add(new Tuple<string, SpannerDbType>(fieldName, fieldDbType));
+                        fields.Add(new StructField(fieldName, fieldDbType));
                         currentIndex = endFieldIndex + 1;
                     }
                     spannerDbType = new SpannerDbType(code, fields);
@@ -172,13 +186,13 @@ namespace Google.Cloud.Spanner.Data
             {
                 return $"ARRAY<{ArrayElementType}>";
             }
-            if (StructMembers != null && StructMembers.Count > 0)
+            if (StructFields != null && StructFields.Count > 0)
             {
                 var s = new StringBuilder();
-                foreach (var keyValuePair in StructMembers)
+                foreach (var field in StructFields)
                 {
                     s.Append(s.Length == 0 ? "STRUCT<" : ", ");
-                    s.Append($"{keyValuePair.Key}:{keyValuePair.Value}");
+                    s.Append(field.Name == "" ? field.Type.ToString() : $"{field.Name}: {field.Type}");
                 }
                 s.Append(">");
                 return s.ToString();
