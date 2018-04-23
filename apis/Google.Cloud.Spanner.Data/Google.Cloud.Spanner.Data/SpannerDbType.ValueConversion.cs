@@ -157,6 +157,12 @@ namespace Google.Cloud.Spanner.Data
                         // a string as a backing field for a datetime for whatever reason).
                         return new Value { StringValue = XmlConvert.ToString(dateTime, XmlDateTimeSerializationMode.Utc) };
                     }
+                    // All the other conversions will fail naturally, but let's make sure we don't convert structs
+                    // to strings.
+                    if (value is SpannerStruct)
+                    {
+                        throw new ArgumentException("SpannerStruct cannot be used for string parameters", nameof(value));
+                    }
                     return new Value { StringValue = Convert.ToString(value, InvariantCulture) };
                 case TypeCode.Int64:
                         return new Value { StringValue = Convert.ToInt64(value, InvariantCulture)
@@ -183,7 +189,17 @@ namespace Google.Cloud.Spanner.Data
                     }
                     throw new ArgumentException("The given array instance needs to implement IEnumerable.");
                 case TypeCode.Struct:
-                    throw new ArgumentException("Struct parameters are not supported");
+                    if (value is SpannerStruct spannerStruct)
+                    {
+                        return new Value
+                        {
+                            ListValue = new ListValue
+                            {
+                                Values = { spannerStruct.Select(f => f.Type.ToProtobufValue(f.Value, options)) }
+                            }
+                        };
+                    }
+                    throw new ArgumentException("Struct parameters must be of type SpannerStruct");
 
                 default:
                     throw new ArgumentOutOfRangeException(nameof(TypeCode), TypeCode, null);
@@ -395,6 +411,37 @@ namespace Google.Cloud.Spanner.Data
                         throw new ArgumentOutOfRangeException();
                 }
             }
+
+            if (targetClrType == typeof(SpannerStruct))
+            {
+                if (TypeCode != TypeCode.Struct)
+                {
+                    throw new ArgumentException(
+                        $"{targetClrType.FullName} can only be used for struct results");
+                }
+                if (wireValue.KindCase != Value.KindOneofCase.ListValue)
+                {
+                    throw new ArgumentException(
+                        $"Invalid conversion from {wireValue.KindCase} to {targetClrType.FullName}");
+                }
+                var values = wireValue.ListValue.Values;
+                // StructFields will definitely be non-null, as we can only construct SpannerDbTypes of structs
+                // by passing them fields.
+                var ret = new SpannerStruct();
+                if (StructFields.Count != values.Count)
+                {
+                    throw new InvalidOperationException(
+                        $"Incorrect number of struct fields. SpannerDbType has {StructFields.Count}; list has {values.Count}");
+                }
+                // Could use Zip, but this is probably simpler.
+                for (int i = 0; i < values.Count; i++)
+                {
+                    var field = StructFields[i];
+                    ret.Add(field.Name, field.Type, field.Type.ConvertToClrType(values[i], typeof(object), options, topLevel: false));
+                }
+                return ret;
+            }
+            
             // TODO: Do we still want to support this?
             if (typeof(IDictionary).IsAssignableFrom(targetClrType))
             {

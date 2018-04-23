@@ -72,6 +72,15 @@ namespace Google.Cloud.Spanner.Data
         public void Add(Field field) => _fields.Add(GaxPreconditions.CheckNotNull(field, nameof(field)));
 
         /// <summary>
+        /// Returns the full schema of this struct as a <see cref="SpannerDbType"/>.
+        /// </summary>
+        /// <remarks>The returned object reflects the current fields in the struct. If more
+        /// fields are added later, those changes will not be visible via the returned value.
+        /// Instead, this method should be called again obtain the up-to-date schema.</remarks>
+        /// <returns>The <see cref="SpannerDbType"/> representing the schema of this struct.</returns>
+        public SpannerDbType GetSpannerDbType() => SpannerDbType.ForStruct(this);
+
+        /// <summary>
         /// A field within a struct.
         /// </summary>
         public class Field
