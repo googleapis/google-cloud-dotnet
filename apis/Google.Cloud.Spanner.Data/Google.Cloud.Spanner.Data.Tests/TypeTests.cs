@@ -43,27 +43,6 @@ namespace Google.Cloud.Spanner.Data.Tests
         private static readonly byte[] s_bytesToEncode = {1, 2, 3, 4};
         private static readonly string s_base64Encoded = Convert.ToBase64String(s_bytesToEncode);
 
-        private static readonly SpannerDbType s_struct = SpannerDbType.StructOf(
-            new Dictionary<string, SpannerDbType>
-            {
-                {"StringField", SpannerDbType.String},
-                {"Int64Field", SpannerDbType.Int64},
-                {"Float64Field", SpannerDbType.Float64},
-                {"BoolField", SpannerDbType.Bool},
-                {"DateField", SpannerDbType.Date},
-                {"TimestampField", SpannerDbType.Timestamp}
-            });
-
-        //nested complex type support.
-        private static readonly SpannerDbType s_arrayOfStruct = SpannerDbType.ArrayOf(s_struct);
-
-        private static readonly SpannerDbType s_complexStruct = SpannerDbType.StructOf(
-            new Dictionary<string, SpannerDbType>
-            {
-                {"StructField", s_struct},
-                {"ArrayField", SpannerDbType.ArrayOf(SpannerDbType.Int64)}
-            });
-
         private static string Quote(string s) => $"\"{s}\"";
 
         private static IEnumerable<string> GetStringsForArray()
@@ -313,56 +292,6 @@ namespace Google.Cloud.Spanner.Data.Tests
             {
                 new CustomList(GetStringsForArray()), SpannerDbType.ArrayOf(SpannerDbType.String),
                 "[ \"abc\", \"123\", \"def\" ]"
-            };
-
-            //struct test case includes nested complex conversions.
-            var sampleStruct = new Dictionary<string, object>
-            {
-                {"StringField", "stringValue"},
-                {"Int64Field", 2L},
-                {"Float64Field", double.NaN},
-                {"BoolField", true},
-                {"DateField", new DateTime(2017, 1, 31)},
-                {"TimestampField", new DateTime(2017, 1, 31, 3, 15, 30)}
-            };
-            string sampleValueSerialized = "{ \"StringField\": \"stringValue\", \"Int64Field\": \"2\", "
-                + "\"Float64Field\": \"NaN\", \"BoolField\": true, \"DateField\": \"2017-01-31\", "
-                + "\"TimestampField\": \"2017-01-31T03:15:30Z\" }";
-
-            yield return new object[]
-            {
-                sampleStruct,
-                s_struct,
-                sampleValueSerialized
-            };
-            yield return new object[]
-            {
-                new Hashtable(sampleStruct),
-                s_struct, sampleValueSerialized
-            };
-            yield return new object[]
-            {
-                new CustomDictionary(sampleStruct),
-                s_struct, sampleValueSerialized
-            };
-
-            //array of structs.
-            yield return new object[]
-            {
-                new List<object>(new[] {sampleStruct}),
-                s_arrayOfStruct, $"[ {sampleValueSerialized} ]"
-            };
-
-            //struct of struct+array.
-            var complexStruct = new Dictionary<string, object>
-            {
-                {"StructField", new Hashtable(sampleStruct)},
-                {"ArrayField", new ArrayList(GetIntsForArray().Select(x => (long) x).ToList())}
-            };
-            yield return new object[]
-            {
-                complexStruct, s_complexStruct,
-                "{ \"StructField\": { \"StringField\": \"stringValue\", \"Int64Field\": \"2\", \"Float64Field\": \"NaN\", \"BoolField\": true, \"DateField\": \"2017-01-31\", \"TimestampField\": \"2017-01-31T03:15:30Z\" }, \"ArrayField\": [ \"4\", \"5\", \"6\" ] }"
             };
         }
 
@@ -684,78 +613,6 @@ namespace Google.Cloud.Spanner.Data.Tests
                 get => _listImplementation[index];
                 set => _listImplementation[index] = value;
             }
-        }
-
-        private class CustomDictionary : IDictionary
-        {
-            private readonly IDictionary _dictionaryImplementation = new Hashtable();
-
-            // Used by ValueConversion via reflection upon deserialization.
-            // ReSharper disable once UnusedMember.Local
-            public CustomDictionary() { }
-
-            public CustomDictionary(IDictionary contents) => _dictionaryImplementation = new Hashtable(contents);
-
-            /// <inheritdoc />
-            public void Add(object key, object value)
-            {
-                _dictionaryImplementation.Add(key, value);
-            }
-
-            /// <inheritdoc />
-            public void Clear()
-            {
-                _dictionaryImplementation.Clear();
-            }
-
-            /// <inheritdoc />
-            public bool Contains(object key) => _dictionaryImplementation.Contains(key);
-
-            /// <inheritdoc />
-            public IDictionaryEnumerator GetEnumerator() => _dictionaryImplementation.GetEnumerator();
-
-            /// <inheritdoc />
-            public void Remove(object key)
-            {
-                _dictionaryImplementation.Remove(key);
-            }
-
-            /// <inheritdoc />
-            public bool IsFixedSize => _dictionaryImplementation.IsFixedSize;
-
-            /// <inheritdoc />
-            public bool IsReadOnly => _dictionaryImplementation.IsReadOnly;
-
-            /// <inheritdoc />
-            public object this[object key]
-            {
-                get => _dictionaryImplementation[key];
-                set => _dictionaryImplementation[key] = value;
-            }
-
-            /// <inheritdoc />
-            public ICollection Keys => _dictionaryImplementation.Keys;
-
-            /// <inheritdoc />
-            public ICollection Values => _dictionaryImplementation.Values;
-
-            /// <inheritdoc />
-            IEnumerator IEnumerable.GetEnumerator() => ((IEnumerable) _dictionaryImplementation).GetEnumerator();
-
-            /// <inheritdoc />
-            public void CopyTo(Array array, int index)
-            {
-                _dictionaryImplementation.CopyTo(array, index);
-            }
-
-            /// <inheritdoc />
-            public int Count => _dictionaryImplementation.Count;
-
-            /// <inheritdoc />
-            public bool IsSynchronized => _dictionaryImplementation.IsSynchronized;
-
-            /// <inheritdoc />
-            public object SyncRoot => _dictionaryImplementation.SyncRoot;
         }
     }
 }

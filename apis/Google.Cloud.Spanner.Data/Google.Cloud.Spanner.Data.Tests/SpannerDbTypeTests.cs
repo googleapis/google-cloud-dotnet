@@ -27,25 +27,6 @@ namespace Google.Cloud.Spanner.Data.Tests
                 {SpannerDbType.ArrayOf(SpannerDbType.String), SpannerDbType.ArrayOf(SpannerDbType.String)};
             yield return new object[]
                 {SpannerDbType.ArrayOf(SpannerDbType.Bytes), SpannerDbType.ArrayOf(SpannerDbType.Bytes)};
-            yield return new object[]
-            {
-                SpannerDbType.StructOf(
-                    new Dictionary<string, SpannerDbType>
-                    {
-                        {"StringValue", SpannerDbType.String},
-                        {"StringValue2", SpannerDbType.String},
-                        {"FloatValue", SpannerDbType.Float64},
-                        {"BoolArrayValue", SpannerDbType.ArrayOf(SpannerDbType.Bool)},
-                    }),
-                SpannerDbType.StructOf(
-                    new Dictionary<string, SpannerDbType>
-                    {
-                        {"StringValue", SpannerDbType.String},
-                        {"StringValue2", SpannerDbType.String},
-                        {"FloatValue", SpannerDbType.Float64},
-                        {"BoolArrayValue", SpannerDbType.ArrayOf(SpannerDbType.Bool)},
-                    })
-            };
         }
 
         [Theory]
@@ -103,68 +84,11 @@ namespace Google.Cloud.Spanner.Data.Tests
             yield return new object[] { "ARRAY <  STRING (   5 )>", SpannerDbType.ArrayOf(SpannerDbType.String.WithSize(5)) };
             yield return new object[] { "ARRAY<  STRING (   5 )  > ", SpannerDbType.ArrayOf(SpannerDbType.String.WithSize(5)) };
 
-            //simple structs
-            yield return new object[] { "STRUCT<F1:STRING,F2:INT64>", SpannerDbType.StructOf(
-                new Dictionary<string, SpannerDbType>
-                {
-                    { "F1", SpannerDbType.String },
-                    { "F2", SpannerDbType.Int64 },
-                }) };
 
-            yield return new object[] { "STRUCT< F1 : STRING , F2  : INT64 >", SpannerDbType.StructOf(
-                new Dictionary<string, SpannerDbType>
-                {
-                    { "F1", SpannerDbType.String },
-                    { "F2", SpannerDbType.Int64 },
-                }) };
 
-            yield return new object[] { "STRUCT<F1:STRING,F2:INT64,F3:BOOL,F4:BYTES,F5:DATE,F6:FLOAT64,F7:TIMESTAMP>",
-                SpannerDbType.StructOf( new Dictionary<string, SpannerDbType>
-                {
-                    { "F1", SpannerDbType.String },
-                    { "F2", SpannerDbType.Int64 },
-                    { "F3", SpannerDbType.Bool },
-                    { "F4", SpannerDbType.Bytes },
-                    { "F5", SpannerDbType.Date },
-                    { "F6", SpannerDbType.Float64 },
-                    { "F7", SpannerDbType.Timestamp },
-                }) };
 
-            yield return new object[] { "STRUCT<F1: STRING(100), F2: BYTES(200)>" ,
-                SpannerDbType.StructOf( new Dictionary<string, SpannerDbType>
-                {
-                    { "F1", SpannerDbType.String.WithSize(100) },
-                    { "F2", SpannerDbType.Bytes.WithSize(200) }
-                }) };
 
-            //struct of struct
-            yield return new object[] { "STRUCT<F1:STRUCT<F2:INT64>>", SpannerDbType.StructOf(
-                new Dictionary<string, SpannerDbType>
-                {
-                    { "F1", SpannerDbType.StructOf(
-                            new Dictionary<string, SpannerDbType>
-                            {
-                                { "F2", SpannerDbType.Int64 },
-                            }
-                        ) },
-                }) };
-
-            //struct of array
-            yield return new object[] { "STRUCT<F1:ARRAY<INT64>>", SpannerDbType.StructOf(
-                new Dictionary<string, SpannerDbType>
-                {
-                    { "F1", SpannerDbType.ArrayOf(SpannerDbType.Int64) }
-                }) };
-
-            //array of struct
-            yield return new object[]
             {
-                "ARRAY<STRUCT<F1:INT64>>", SpannerDbType.ArrayOf(
-                    SpannerDbType.StructOf(
-                        new Dictionary<string, SpannerDbType>
-                        {
-                            {"F1", SpannerDbType.Int64}
-                        }))
             };
         }
 
@@ -185,6 +109,18 @@ namespace Google.Cloud.Spanner.Data.Tests
             //roundtrip test.
             Assert.True(SpannerDbType.TryParse(result.ToString(), out SpannerDbType result2));
             Assert.Equal(result, result2);
+        }
+
+        [Theory]
+        [InlineData("RUBBISH")]
+        [InlineData("STRUCT<F1:INT64")]
+        [InlineData("STRUCT<F1:INT64,,F2:STRING>")] // Double comma
+        [InlineData("STRUCT<F1:>")] // No type
+        [InlineData("STRUCT<:INT64>")] // No name (but a colon)
+        public void TryParse_Invalid(string text)
+        {
+            Assert.False(SpannerDbType.TryParse(text, out var result));
+            Assert.Null(result);
         }
 
         [Fact]
