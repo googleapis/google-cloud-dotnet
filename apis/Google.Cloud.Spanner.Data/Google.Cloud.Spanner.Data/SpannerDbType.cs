@@ -330,7 +330,7 @@ namespace Google.Cloud.Spanner.Data
                 Type = GaxPreconditions.CheckNotNull(type, nameof(type));
             }
 
-            public override bool Equals(object obj) => obj is StructField sf ? Equals(sf) : false;
+            public override bool Equals(object obj) => obj is StructField sf && Equals(sf);
             public bool Equals(StructField other) => Name == other.Name && Type.Equals(other.Type);
             public override int GetHashCode() => Name.GetHashCode() * 397 + Type.GetHashCode();
 

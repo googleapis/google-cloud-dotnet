@@ -62,14 +62,19 @@ namespace Google.Cloud.Spanner.Data
         /// If the value is null, the <see cref="Field"/> value added will have an empty string for the name.</param>
         /// <param name="type">The type of the field. Must not be null.</param>
         /// <param name="value">The value of the field. May be null.</param>
-        public void Add(string name, SpannerDbType type, object value) =>
-            _fields.Add(new Field(name, type, value));
+        /// <returns>The newly-added field.</returns>
+        public Field Add(string name, SpannerDbType type, object value) => Add(new Field(name, type, value));
 
         /// <summary>
         /// Adds a new field to the struct.
         /// </summary>
         /// <param name="field">The field to add. Must not be null.</param>
-        public void Add(Field field) => _fields.Add(GaxPreconditions.CheckNotNull(field, nameof(field)));
+        /// <returns><paramref name="field"/> for convenience</returns>
+        public Field Add(Field field)
+        {
+            _fields.Add(GaxPreconditions.CheckNotNull(field, nameof(field)));
+            return field;
+        }
 
         /// <summary>
         /// Returns the full schema of this struct as a <see cref="SpannerDbType"/>.
