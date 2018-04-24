@@ -31,6 +31,9 @@
     <Compile Update="FirestoreDbTest.*.cs">
       <DependentUpon>FirestoreDbTest.cs</DependentUpon>
     </Compile>
+    <Compile Update="QueryTest.*.cs">
+      <DependentUpon>QueryTest.cs</DependentUpon>
+    </Compile>
   </ItemGroup>
   <ItemGroup>
     <EmbeddedResource Include="Proto/test-suite.binproto" />

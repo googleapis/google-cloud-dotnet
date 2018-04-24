@@ -535,6 +535,12 @@ namespace Google.Cloud.Firestore
         }
 
         /// <summary>
+        /// Creates an <see cref="IComparer{DocumentSnapshot}"/> which will order documents in the same way as the server
+        /// does for this query. The returned comparer does *not* handle missing snapshots.
+        /// </summary>
+        internal IComparer<DocumentSnapshot> CreateDocumentSnapshotComparer() => new DocumentSnapshotComparer(this);
+
+        /// <summary>
         /// Returns an asynchronous sequence of snapshots matching the query.
         /// </summary>
         /// <remarks>
@@ -827,5 +833,55 @@ namespace Google.Cloud.Firestore
             public override int GetHashCode() =>
                 EqualityHelpers.CombineHashCodes(Field.GetHashCode(), _op, _value?.GetHashCode() ?? -1);
         }
+
+        private sealed class DocumentSnapshotComparer : IComparer<DocumentSnapshot>
+        {
+            private readonly Query _query;
+
+            internal DocumentSnapshotComparer(Query query) => _query = query;
+
+            public int Compare(DocumentSnapshot x, DocumentSnapshot y)
+            {
+                GaxPreconditions.CheckArgument(x.Exists, nameof(x), "Document snapshot comparer for a query cannot be used with snapshots of missing documents");
+                GaxPreconditions.CheckArgument(y.Exists, nameof(y), "Document snapshot comparer for a query cannot be used with snapshots of missing documents");
+                var orderings = _query._orderings;
+
+                Direction lastDirection = Direction.Ascending;
+                foreach (var ordering in _query._orderings)
+                {
+                    lastDirection = ordering.Direction;
+                    int fieldResult;
+                    if (Equals(ordering.Field, FieldPath.DocumentId))
+                    {
+                        fieldResult = x.Reference.CompareTo(y.Reference);
+                    }
+                    else
+                    {
+                        var xValue = x.ExtractValue(ordering.Field);
+                        var yValue = y.ExtractValue(ordering.Field);
+                        if (xValue == null || yValue == null)
+                        {
+                            throw new InvalidOperationException("Can only compare fields that exist in the DocumentSnapshot."
+                                + " Please include the fields you are ordering on in your Select() call.");
+                        }
+                        fieldResult = ValueComparer.Instance.Compare(xValue, yValue);
+                    }
+                    if (fieldResult != 0)
+                    {
+                        return lastDirection == Direction.Ascending ? fieldResult : -Math.Sign(fieldResult);
+                    }
+                }
+
+                // Everything is equal in the specified orderings.
+                // Compare by name, using the last-specified ordering, defaulting to ascending.
+                int result = x.Reference.CompareTo(y.Reference);
+                if (lastDirection == Direction.Descending)
+                {
+                    result = -Math.Sign(result);
+                }
+                return result;
+            }
+        }
+
     }
 }

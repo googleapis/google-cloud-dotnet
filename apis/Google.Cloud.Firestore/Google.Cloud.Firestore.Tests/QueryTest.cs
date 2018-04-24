@@ -26,7 +26,7 @@ using static Google.Cloud.Firestore.V1Beta1.StructuredQuery.Types;
 
 namespace Google.Cloud.Firestore.Tests
 {
-    public class QueryTest
+    public partial class QueryTest
     {
         private static readonly FirestoreDb s_db = FirestoreDb.Create("proj", "db", new FakeFirestoreClient());
 
