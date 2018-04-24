@@ -197,13 +197,15 @@ namespace Google.Cloud.Spanner.Data.IntegrationTests
             }
         }
 
-        [Fact]
-        public async Task ServerStructEquality()
+        [Theory]
+        [InlineData("bob", true)]
+        [InlineData("jeff", false)]
+        public async Task ServerStructEquality(string parameterFieldValue, bool expectedEqualityResult)
         {
             var structValue = new SpannerStruct
             {
                 { "threadf", SpannerDbType.Int64, 1 },
-                { "userf", SpannerDbType.String, "bob" }
+                { "userf", SpannerDbType.String, parameterFieldValue }
             };
 
             using (var connection = await _fixture.GetTestDatabaseConnectionAsync())
@@ -215,12 +217,12 @@ namespace Google.Cloud.Spanner.Data.IntegrationTests
                     using (var reader = await cmd.ExecuteReaderAsync())
                     {
                         Assert.True(await reader.ReadAsync());
-                        Assert.True(reader.GetBoolean(0));
+                        Assert.Equal(expectedEqualityResult, reader.GetBoolean(0));
                         Assert.False(await reader.ReadAsync());
                     }
                 }
             }
-        }
+        }        
 
         [Fact]
         public async Task NullnessCheck()
