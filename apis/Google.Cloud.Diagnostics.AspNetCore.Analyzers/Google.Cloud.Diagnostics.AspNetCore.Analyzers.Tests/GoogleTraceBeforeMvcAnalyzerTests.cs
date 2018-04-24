@@ -18,7 +18,6 @@ using Microsoft.CodeAnalysis;
 using Microsoft.CodeAnalysis.CodeFixes;
 using Microsoft.CodeAnalysis.Diagnostics;
 using System;
-using System.Collections.Generic;
 using System.Linq;
 using System.Reflection;
 using TestHelper;
@@ -28,13 +27,13 @@ namespace Google.Cloud.Diagnostics.AspNetCore.Analyzers.Tests
 {
     public class GoogleTraceBeforeMvcAnalyzerTests : CodeFixVerifier
     {
-        private static readonly MetadataReference RuntimeReference =
+        private static readonly MetadataReference s_runtimeReference =
             MetadataReference.CreateFromFile(Assembly.Load("System.Runtime, Version=4.1.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a").Location);
-        private static readonly MetadataReference AspNetCoreBuilderReference =
+        private static readonly MetadataReference s_aspNetCoreBuilderReference =
             MetadataReference.CreateFromFile(typeof(IApplicationBuilder).Assembly.Location);
-        private static readonly MetadataReference AspNetCoreRoutingReference =
+        private static readonly MetadataReference s_aspNetCoreRoutingReference =
             MetadataReference.CreateFromFile(typeof(IRouteBuilder).Assembly.Location);
-        private static readonly MetadataReference BuilderExtensionsReference =
+        private static readonly MetadataReference s_builderExtensionsReference =
             MetadataReference.CreateFromFile(typeof(MvcApplicationBuilderExtensions).Assembly.Location);
 
         [Fact]
@@ -506,7 +505,7 @@ namespace Google.Cloud.Diagnostics.AspNetCore
         }
 
         [Fact]
-        public void SeparateChecksInSeaprateScopes()
+        public void SeparateChecksInSeparateScopes()
         {
             var test = @"
 using Google.Cloud.Diagnostics.AspNetCore;
@@ -891,10 +890,10 @@ namespace Google.Cloud.Diagnostics.AspNetCore
         protected override void FinalizeSolution(ProjectId projectId, ref Solution solution)
         {
             solution = solution
-                .AddMetadataReference(projectId, RuntimeReference)
-                .AddMetadataReference(projectId, AspNetCoreBuilderReference)
-                .AddMetadataReference(projectId, AspNetCoreRoutingReference)
-                .AddMetadataReference(projectId, BuilderExtensionsReference);
+                .AddMetadataReference(projectId, s_runtimeReference)
+                .AddMetadataReference(projectId, s_aspNetCoreBuilderReference)
+                .AddMetadataReference(projectId, s_aspNetCoreRoutingReference)
+                .AddMetadataReference(projectId, s_builderExtensionsReference);
             base.FinalizeSolution(projectId, ref solution);
         }
     }

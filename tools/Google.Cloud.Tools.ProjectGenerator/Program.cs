@@ -292,6 +292,11 @@ namespace Google.Cloud.Tools.ProjectGenerator
             SortedList<string, string> dependencies;
             if (api.Type == ApiType.Analyzers)
             {
+                if (targetFrameworks != AnalyzersTargetFramework)
+                {
+                    throw new UserErrorException($"Analyzers are expected to use {AnalyzersTargetFramework}");
+                }
+
                 dependencies = new SortedList<string, string>(CommonAnalyzerDependencies);
 
                 // Note: If support is added here for using additional dependencies, we need to resolve
@@ -354,6 +359,8 @@ namespace Google.Cloud.Tools.ProjectGenerator
             var dependenciesElement = CreateDependenciesElement(api.Id, dependencies, api.IsReleaseVersion, testProject: false, apiNames: apiNames);
             if (api.Type == ApiType.Analyzers)
             {
+                propertyGroup.Add(new XElement("IncludeBuildOutput", false));
+
                 void AddPackFile(string includePath, string packagePath)
                 {
                     dependenciesElement.Add(
@@ -365,7 +372,7 @@ namespace Google.Cloud.Tools.ProjectGenerator
                 }
 
                 AddPackFile(
-                    "$(OutputPath)\\**\\$(AssemblyName).dll",
+                    $"$(OutputPath)\\{AnalyzersTargetFramework}\\$(AssemblyName).dll",
                     "analyzers/dotnet/cs");
 
                 // Add install scripts as per

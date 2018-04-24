@@ -23,14 +23,14 @@ namespace Google.Cloud.Diagnostics.AspNetCore.Analyzers
     {
         internal static ITypeSymbol Type(this ISymbol symbol)
         {
-            switch (symbol.Kind)
+            switch (symbol)
             {
-                case SymbolKind.Event: return ((IEventSymbol)symbol).Type;
-                case SymbolKind.Field: return ((IFieldSymbol)symbol).Type;
-                case SymbolKind.Local: return ((ILocalSymbol)symbol).Type;
-                case SymbolKind.Method: return ((IMethodSymbol)symbol).ReturnType;
-                case SymbolKind.Parameter: return ((IParameterSymbol)symbol).Type;
-                case SymbolKind.Property: return ((IPropertySymbol)symbol).Type;
+                case IEventSymbol eventSymbol: return eventSymbol.Type;
+                case IFieldSymbol fieldSymbol: return fieldSymbol.Type;
+                case ILocalSymbol localSymbol: return localSymbol.Type;
+                case IMethodSymbol methodSymbol: return methodSymbol.ReturnType;
+                case IParameterSymbol parameterSymbol: return parameterSymbol.Type;
+                case IPropertySymbol propertySymbol: return propertySymbol.Type;
             }
             return null;
         }
