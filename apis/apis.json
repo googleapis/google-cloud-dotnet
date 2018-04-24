@@ -197,7 +197,6 @@
     "testTargetFrameworks": "netcoreapp1.0;netcoreapp2.0;net46",
     "description": "Google Stackdriver Instrumentation Libraries for ASP.NET Core.",
     "tags": [ "Error", "Reporting", "Stackdriver", "ExceptionLogger", "Trace", "Diagnostics" ],
-    "hasAnalyzers": true,
     "dependencies": {
       "Google.Cloud.Diagnostics.Common": "project",
       "Grpc.Core": "1.10.0"
@@ -208,6 +207,20 @@
       "Google.Api.Gax.Testing": "2.3.0"
     },
     "additionalAnalyzerTestDependencies": {
+      "Microsoft.AspNetCore.Mvc.Core": "1.0.2",
+      "Microsoft.AspNetCore.Routing": "1.0.2"
+    }
+  },
+
+  {
+    "id": "Google.Cloud.Diagnostics.AspNetCore.Analyzers",
+    "version": "1.0.0-beta01",
+    "type": "analyzers",
+    "targetFrameworks": "netstandard1.3",
+    "testTargetFrameworks": "netcoreapp2.0",
+    "description": "Guidelines for using Google Stackdriver Instrumentation Libraries for ASP.NET Core.",
+    "tags": [ "CodeAnalysis", "Analyzers", "CSharp" ],
+    "testDependencies": {
       "Microsoft.AspNetCore.Mvc.Core": "1.0.2",
       "Microsoft.AspNetCore.Routing": "1.0.2"
     }
