@@ -25,7 +25,7 @@ namespace Google.Cloud.Tools.Common
 
         public string Version { get; set; }
         public string Id { get; set; }
-        public string Type { get; set; } // TODO: enum? Autodetect based on files?
+        public ApiType Type { get; set; }
         public string TargetFrameworks { get; set; }
         public string TestTargetFrameworks { get; set; }
 
@@ -44,10 +44,7 @@ namespace Google.Cloud.Tools.Common
         public List<string> Tags { get; set; } = new List<string>();
         public Dictionary<string, string> Dependencies { get; set; } = new Dictionary<string, string>();
         public Dictionary<string, string> TestDependencies { get; set; } = new Dictionary<string, string>();
-        public Dictionary<string, string> AdditionalAnalyzerTestDependencies { get; set; } = new Dictionary<string, string>();
         public List<string> MetaApis { get; set; } // TODO: enum?
-
-        public bool HasAnalyzers { get; set; }
 
         public bool IsReleaseVersion => ReleaseVersion.IsMatch(Version);
 
