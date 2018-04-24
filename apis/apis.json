@@ -58,13 +58,26 @@
     "tags": [ "Bigtable" ],
     "dependencies": {
       "Google.LongRunning": "1.0.0",
-      "Google.Cloud.Iam.V1": "1.0.0"
+      "Google.Cloud.Iam.V1": "1.0.0",
+      "Google.Cloud.Bigtable.Common.V2": "project"
     },
     "testDependencies": {
       "Google.Api.Gax.Grpc.Testing": "default"
     }
   },
 
+  {
+    "id": "Google.Cloud.Bigtable.Common.V2",
+    "type": "other",
+    "targetFrameworks": "netstandard1.5;net45",
+    "version": "1.0.0-beta00",
+    "description": "Common code used by Bigtable V2 APIs",
+    "tags": [ "Bigtable" ],
+    "dependencies": {
+      "Google.Api.Gax": "2.3.0"
+    }
+  },
+  
   {
     "id": "Google.Cloud.Bigtable.V2",
     "productName": "Google Bigtable",
@@ -73,6 +86,9 @@
     "type": "grpc",
     "description": "Recommended Google client library to access the Google Cloud Bigtable API.",
     "tags": [ "Bigtable" ],
+    "dependencies": {
+      "Google.Cloud.Bigtable.Common.V2": "project"
+    },
     "testDependencies": {
       "Google.Api.Gax.Grpc.Testing": "default",
       "Google.Cloud.Bigtable.Admin.V2": "project"
