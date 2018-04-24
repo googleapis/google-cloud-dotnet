@@ -16,7 +16,6 @@ using Microsoft.CodeAnalysis;
 using Microsoft.CodeAnalysis.CSharp;
 using Microsoft.CodeAnalysis.CSharp.Syntax;
 using Microsoft.CodeAnalysis.Diagnostics;
-using Microsoft.CodeAnalysis.Semantics;
 using System;
 using System.Collections.Generic;
 using System.Collections.Immutable;
@@ -24,6 +23,8 @@ using System.Linq;
 
 namespace Google.Cloud.Tools.Analyzers
 {
+    // TODO: https://github.com/dotnet/roslyn/issues/22578 is now fixed in Roslyn 2.7.0, so this can probably be removed,
+    //       but leave around for now just to catch issues if an older compiler is used.
     /// <summary>
     /// Warns about default literal expressions triggering https://github.com/dotnet/roslyn/issues/22578.
     /// </summary>

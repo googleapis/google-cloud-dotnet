@@ -16,7 +16,7 @@ using Microsoft.CodeAnalysis;
 using Microsoft.CodeAnalysis.CSharp;
 using Microsoft.CodeAnalysis.CSharp.Syntax;
 using Microsoft.CodeAnalysis.Diagnostics;
-using Microsoft.CodeAnalysis.Semantics;
+using Microsoft.CodeAnalysis.Operations;
 using System;
 using System.Collections.Generic;
 using System.Collections.Immutable;
@@ -46,7 +46,7 @@ namespace Google.Cloud.Tools.Analyzers
         {
             context.EnableConcurrentExecution();
             context.ConfigureGeneratedCodeAnalysis(GeneratedCodeAnalysisFlags.Analyze | GeneratedCodeAnalysisFlags.ReportDiagnostics);
-            context.RegisterOperationAction(AnalyzeInvocation, OperationKind.InvocationExpression);
+            context.RegisterOperationAction(AnalyzeInvocation, OperationKind.Invocation);
         }
 
         private static void AnalyzeInvocation(OperationAnalysisContext context)
@@ -54,16 +54,16 @@ namespace Google.Cloud.Tools.Analyzers
             // Only perform the check on calls to externally visible methods which are defined within the same assembly.
             // Also, not strictly required, but check that at least some argument is omitted so we don't get a semantic
             // model and do flow analysis when it isn't necessary.
-            var invocation = (IInvocationExpression)context.Operation;
+            var invocation = (IInvocationOperation)context.Operation;
             if (invocation.Syntax is InvocationExpressionSyntax invocationExpression &&
                 invocation.TargetMethod?.IsExternallyVisible() == true &&
                 context.Compilation.Assembly == invocation.TargetMethod.ContainingAssembly &&
-                invocation.ArgumentsInEvaluationOrder.Any(ShouldAnalyzeArgument))
+                invocation.Arguments.Any(ShouldAnalyzeArgument))
             {
                 var semanticModel = context.Compilation.GetSemanticModel(context.Operation.Syntax.SyntaxTree);
                 var usableVariables = GetUsableVariables(context.Operation.Syntax, semanticModel);
 
-                foreach (var arg in invocation.ArgumentsInEvaluationOrder)
+                foreach (var arg in invocation.Arguments)
                 {
                     if (!ShouldAnalyzeArgument(arg))
                     {
@@ -85,7 +85,7 @@ namespace Google.Cloud.Tools.Analyzers
                 }
             }
 
-            bool ShouldAnalyzeArgument(IArgument arg) =>
+            bool ShouldAnalyzeArgument(IArgumentOperation arg) =>
                 arg.ArgumentKind == ArgumentKind.DefaultValue && arg.Parameter != null;
         }
 

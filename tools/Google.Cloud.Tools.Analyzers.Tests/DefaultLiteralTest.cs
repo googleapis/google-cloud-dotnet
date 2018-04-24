@@ -80,15 +80,7 @@ public class A
 {
     public void B(bool? x = default) { }
 }";
-            var expected = CreateDiagnostic("bool?", 4, 29);
-            VerifyCSharpDiagnostic(test, expected);
-
-            var newSource = @"
-public class A
-{
-    public void B(bool? x = default(bool?)) { }
-}";
-            VerifyCSharpFix(test, newSource);
+            VerifyCSharpDiagnostic(test);
         }
 
         [Fact]
@@ -124,15 +116,7 @@ public class A
 {
     public void B(System.DateTimeKind? x = default) { }
 }";
-            var expected = CreateDiagnostic("System.DateTimeKind?", 4, 44);
-            VerifyCSharpDiagnostic(test, expected);
-
-            var newSource = @"
-public class A
-{
-    public void B(System.DateTimeKind? x = default(System.DateTimeKind?)) { }
-}";
-            VerifyCSharpFix(test, newSource);
+            VerifyCSharpDiagnostic(test);
         }
 
         [Fact]
@@ -143,15 +127,7 @@ public class A
 {
     public void B(int? x = default) { }
 }";
-            var expected = CreateDiagnostic("int?", 4, 28);
-            VerifyCSharpDiagnostic(test, expected);
-
-            var newSource = @"
-public class A
-{
-    public void B(int? x = default(int?)) { }
-}";
-            VerifyCSharpFix(test, newSource);
+            VerifyCSharpDiagnostic(test);
         }
 
         [Fact]

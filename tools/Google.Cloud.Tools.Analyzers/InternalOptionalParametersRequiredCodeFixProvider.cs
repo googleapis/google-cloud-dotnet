@@ -17,7 +17,7 @@ using Microsoft.CodeAnalysis.CodeActions;
 using Microsoft.CodeAnalysis.CodeFixes;
 using Microsoft.CodeAnalysis.CSharp.Syntax;
 using Microsoft.CodeAnalysis.Editing;
-using Microsoft.CodeAnalysis.Semantics;
+using Microsoft.CodeAnalysis.Operations;
 using System;
 using System.Collections.Generic;
 using System.Collections.Immutable;
@@ -51,29 +51,29 @@ namespace Google.Cloud.Tools.Analyzers
             var semanticModel = await document.GetSemanticModelAsync(context.CancellationToken).ConfigureAwait(false);
             var root = await document.GetSyntaxRootAsync(context.CancellationToken).ConfigureAwait(false);
 
-            var argumentListExpression =
-                root.FindToken(context.Span.Start).Parent.AncestorsAndSelf().OfType<ArgumentListSyntax>().FirstOrDefault();
-            if (argumentListExpression == null)
+            var invocationExpression =
+                root.FindToken(context.Span.Start).Parent.AncestorsAndSelf().OfType<InvocationExpressionSyntax>().FirstOrDefault();
+            if (invocationExpression == null)
             {
                 return;
             }
 
-            if (!(semanticModel.GetOperation(argumentListExpression, context.CancellationToken) is IInvocationExpression invocation))
+            if (!(semanticModel.GetOperation(invocationExpression, context.CancellationToken) is IInvocationOperation invocation))
             {
                 return;
             }
 
             var usableVariables =
-                InternalOptionalParametersRequiredAnalyzer.GetUsableVariables(argumentListExpression, semanticModel);
+                InternalOptionalParametersRequiredAnalyzer.GetUsableVariables(invocationExpression, semanticModel);
 
             var omittedParameterVariablePairs = new List<Tuple<string, string>>();
             bool useNamedArguments = false;
-            foreach (var argument in invocation.ArgumentsInEvaluationOrder)
+            foreach (var argument in invocation.Arguments)
             {
                 switch (argument.ArgumentKind)
                 {
                     case ArgumentKind.Explicit:
-                        if (argument.Syntax?.Parent is ArgumentSyntax argumentSyntax && argumentSyntax.NameColon != null)
+                        if (argument.Syntax is ArgumentSyntax argumentSyntax && argumentSyntax.NameColon != null)
                         {
                             useNamedArguments = true;
                         }
@@ -101,7 +101,7 @@ namespace Google.Cloud.Tools.Analyzers
                     RefKind.None,
                     generator.IdentifierName(entry.Item2))).ToArray();
             var newDocument = document.WithSyntaxRoot(
-                root.ReplaceNode(argumentListExpression, argumentListExpression.AddArguments(newArguments)));
+                root.ReplaceNode(invocationExpression.ArgumentList, invocationExpression.ArgumentList.AddArguments(newArguments)));
 
             context.RegisterCodeFix(
                 CodeAction.Create(
