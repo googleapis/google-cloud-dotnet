@@ -191,7 +191,7 @@
 
   {
     "id": "Google.Cloud.Diagnostics.AspNetCore",
-    "version": "3.0.0-beta02",
+    "version": "3.0.0-beta03",
     "type": "other",
     "targetFrameworks": "netstandard2.0;netstandard1.5;net46",
     "testTargetFrameworks": "netcoreapp1.0;netcoreapp2.0;net46",
