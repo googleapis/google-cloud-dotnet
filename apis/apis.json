@@ -169,7 +169,7 @@
 
   {
     "id": "Google.Cloud.Diagnostics.AspNet",
-    "version": "3.0.0-beta02",
+    "version": "3.0.0-beta03",
     "type": "other",
     "targetFrameworks": "net45",
     "testTargetFrameworks": "net452",
@@ -229,7 +229,7 @@
 
   {
     "id": "Google.Cloud.Diagnostics.Common",
-    "version": "3.0.0-beta02",
+    "version": "3.0.0-beta03",
     "type": "other",
     "targetFrameworks": "netstandard2.0;netstandard1.5;net45",
     "testTargetFrameworks": "netcoreapp2.0;netcoreapp1.0;net452",
