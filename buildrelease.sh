@@ -90,7 +90,9 @@ cd releasedocs
 for project in $projects
 do
   rm -rf ./docs/$project
-  mv ../docs/output/assembled/$project ./docs
+  if [ -d "../docs/output/assembled/$project" ]; then
+    mv ../docs/output/assembled/$project ./docs
+  fi
 done
 
 mv -f ../docs/output/assembled/index.html ./docs/
