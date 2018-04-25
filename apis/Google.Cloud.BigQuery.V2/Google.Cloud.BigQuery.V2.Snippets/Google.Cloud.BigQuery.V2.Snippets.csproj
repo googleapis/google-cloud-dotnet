@@ -30,5 +30,6 @@
   </ItemGroup>
   <ItemGroup>
     <EmbeddedResource Include="one_complex.avro" />
+    <EmbeddedResource Include="*.parquet" />
   </ItemGroup>
 </Project>

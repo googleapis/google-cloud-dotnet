@@ -27,5 +27,6 @@
   <ItemGroup>
     <EmbeddedResource Include="personsData.json" />
     <EmbeddedResource Include="one_complex.avro" />
+    <EmbeddedResource Include="*.parquet" />
   </ItemGroup>
 </Project>

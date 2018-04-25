@@ -63,6 +63,22 @@ namespace Google.Cloud.BigQuery.V2
         }
 
         /// <inheritdoc />
+        public override BigQueryJob UploadParquet(TableReference tableReference, Stream input, UploadParquetOptions options = null)
+        {
+            GaxPreconditions.CheckNotNull(tableReference, nameof(tableReference));
+            GaxPreconditions.CheckNotNull(input, nameof(input));
+
+            var configuration = new JobConfigurationLoad
+            {
+                DestinationTable = tableReference,
+                SourceFormat = "PARQUET"
+            };
+            options?.ModifyConfiguration(configuration);
+
+            return UploadData(configuration, input, "application/vnd.apache.parquet+binary", options);
+        }
+
+        /// <inheritdoc />
         public override BigQueryJob UploadJson(TableReference tableReference, TableSchema schema, IEnumerable<string> rows, UploadJsonOptions options = null)
             => UploadJson(tableReference, schema, CreateJsonStream(rows), options);
 
@@ -171,6 +187,22 @@ namespace Google.Cloud.BigQuery.V2
             options?.ModifyConfiguration(configuration);
 
             return await UploadDataAsync(configuration, input, "application/vnd.apache.avro+binary", options, cancellationToken).ConfigureAwait(false);
+        }
+
+        /// <inheritdoc />
+        public override async Task<BigQueryJob> UploadParquetAsync(TableReference tableReference, Stream input, UploadParquetOptions options = null, CancellationToken cancellationToken = default)
+        {
+            GaxPreconditions.CheckNotNull(tableReference, nameof(tableReference));
+            GaxPreconditions.CheckNotNull(input, nameof(input));
+
+            var configuration = new JobConfigurationLoad
+            {
+                DestinationTable = tableReference,
+                SourceFormat = "PARQUET"
+            };
+            options?.ModifyConfiguration(configuration);
+
+            return await UploadDataAsync(configuration, input, "application/vnd.apache.parquet+binary", options, cancellationToken).ConfigureAwait(false);
         }
 
         /// <inheritdoc />

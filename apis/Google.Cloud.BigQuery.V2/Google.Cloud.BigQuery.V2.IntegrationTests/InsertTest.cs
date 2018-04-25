@@ -12,9 +12,11 @@
 // See the License for the specific language governing permissions and
 // limitations under the License.
 
+using Google.Cloud.Storage.V1;
 using System;
 using System.Collections.Generic;
 using System.Linq;
+using System.Reflection;
 using System.Threading;
 using Xunit;
 
@@ -219,5 +221,23 @@ namespace Google.Cloud.BigQuery.V2.IntegrationTests
                 { "score", score },
                 { "gameStarted", gameStarted }
             };
+
+        [Fact]
+        public void CreateLoadJob_Parquet()
+        {
+            string sourceUri = "gs://cloud-samples-data/bigquery/us-states/us-states.parquet";
+
+            var client = BigQueryClient.Create(_fixture.ProjectId);
+            var tableId = _fixture.CreateTableId();
+            var tableRef = client.GetTableReference(_fixture.DatasetId, tableId);
+
+            var options = new CreateLoadJobOptions { SourceFormat = FileFormat.Parquet };
+            var job = client.CreateLoadJob(sourceUri, tableRef, schema: null, options: options);
+            job.PollUntilCompleted().ThrowOnAnyError();
+
+            var table = client.GetTable(tableRef);
+            var rows = table.ListRows().ToList();
+            Assert.Equal(50, rows.Count);
+        }
     }
 }

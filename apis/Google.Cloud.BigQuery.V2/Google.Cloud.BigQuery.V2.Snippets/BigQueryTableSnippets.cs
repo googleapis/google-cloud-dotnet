@@ -162,6 +162,12 @@ namespace Google.Cloud.BigQuery.V2.Snippets
         // See [BigQueryClient.UploadAvro](ref) for an example using BigQueryClient.
         // End see-also
 
+        // See-also: BigQueryClient.UploadParquet(string, string, Stream, *)
+        // Member: UploadParquet(*, *)
+        // Member: UploadParquetAsync(*, *, *)
+        // See [BigQueryClient.UploadParquet](ref) for an example using BigQueryClient.
+        // End see-also
+
         // See-also: BigQueryClient.UploadJson(string, string, TableSchema, Stream, *)
         // Member: UploadJson(Stream, *)
         // See [BigQueryClient.UploadJson](ref) for an example using BigQueryClient.

@@ -95,6 +95,17 @@ namespace Google.Cloud.BigQuery.V2
             _client.UploadAvro(GetTableReference(tableId), schema, input, options);
 
         /// <summary>
+        /// Uploads a stream of Parquet data to a table.
+        /// This method just creates a <see cref="TableReference"/> and delegates to <see cref="BigQueryClient.UploadParquet(TableReference, Stream, UploadParquetOptions)"/>.
+        /// </summary>
+        /// <param name="tableId">The table ID. Must not be null.</param>
+        /// <param name="input">The stream of input data. Must not be null.</param>
+        /// <param name="options">The options for the operation. May be null, in which case defaults will be supplied.</param>
+        /// <returns>A data upload job.</returns>
+        public BigQueryJob UploadParquet(string tableId, Stream input, UploadParquetOptions options = null) =>
+            _client.UploadParquet(GetTableReference(tableId), input, options);
+
+        /// <summary>
         /// Uploads a stream of JSON data to a table.
         /// This method just creates a <see cref="TableReference"/> and delegates to <see cref="BigQueryClient.UploadJson(TableReference, TableSchema, Stream, UploadJsonOptions)"/>.
         /// </summary>
@@ -244,6 +255,19 @@ namespace Google.Cloud.BigQuery.V2
         /// a data upload job.</returns>
         public Task<BigQueryJob> UploadAvroAsync(string tableId, TableSchema schema, Stream input, UploadAvroOptions options = null, CancellationToken cancellationToken = default) =>
             _client.UploadAvroAsync(GetTableReference(tableId), schema, input, options, cancellationToken);
+
+        /// <summary>
+        /// Asynchronously uploads a stream of Parquet data to a table.
+        /// This method just creates a <see cref="TableReference"/> and delegates to <see cref="BigQueryClient.UploadParquetAsync(TableReference, Stream, UploadParquetOptions, CancellationToken)"/>.
+        /// </summary>
+        /// <param name="tableId">The table ID. Must not be null.</param>
+        /// <param name="input">The stream of input data. Must not be null.</param>
+        /// <param name="options">The options for the operation. May be null, in which case defaults will be supplied.</param>
+        /// <param name="cancellationToken">The token to monitor for cancellation requests.</param>
+        /// <returns>A task representing the asynchronous operation. When complete, the result is
+        /// a data upload job.</returns>
+        public Task<BigQueryJob> UploadParquetAsync(string tableId, Stream input, UploadParquetOptions options = null, CancellationToken cancellationToken = default) =>
+            _client.UploadParquetAsync(GetTableReference(tableId), input, options, cancellationToken);
 
         /// <summary>
         /// Asynchronously uploads a stream of JSON data to a table.
