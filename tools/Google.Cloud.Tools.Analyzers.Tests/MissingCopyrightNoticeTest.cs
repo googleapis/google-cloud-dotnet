@@ -20,9 +20,9 @@ using System;
 using TestHelper;
 using Xunit;
 
-namespace Google.Cloud.Tools.Analyzers.Test
+namespace Google.Cloud.Tools.Analyzers.Tests
 {
-    public class MissingCopyrightNoticeTest : CodeFixVerifier
+    public class MissingCopyrightNoticeTest : CodeFixVerifierWithOperations
     {
         [Fact]
         public void CopyrightMissing()

@@ -1,5 +1,7 @@
-﻿// This file was automatically created from the "Analyzer With Code Fix (NuGet + VSIX)" template.
-// (It was then modified just enough to get the tests working under netcoreapp1.0.)
+// This file was automatically created from the "Analyzer With Code Fix (NuGet + VSIX)" template.
+// It has been updated in the following ways:
+// 1) to use GetTypeInfo().Assembly where necessary
+// 2) to provide a hook point to add in extra references to the compilation.
 
 using Microsoft.CodeAnalysis;
 using Microsoft.CodeAnalysis.CSharp;
@@ -32,15 +34,15 @@ namespace TestHelper
         #region  Get Diagnostics
 
         /// <summary>
-        /// Given classes in the form of strings, their language, and an IDiagnosticAnlayzer to apply to it, return the diagnostics found in the string after converting it to a document.
+        /// Given classes in the form of strings, their language, and an IDiagnosticAnalyzer to apply to it, return the diagnostics found in the string after converting it to a document.
         /// </summary>
         /// <param name="sources">Classes in the form of strings</param>
         /// <param name="language">The language the source classes are in</param>
         /// <param name="analyzer">The analyzer to be run on the sources</param>
         /// <returns>An IEnumerable of Diagnostics that surfaced in the source code, sorted by Location</returns>
-        private static Diagnostic[] GetSortedDiagnostics(string[] sources, string language, DiagnosticAnalyzer analyzer)
+        private static Diagnostic[] GetSortedDiagnostics(DiagnosticVerifier verifier, string[] sources, string language, DiagnosticAnalyzer analyzer)
         {
-            return GetSortedDiagnosticsFromDocuments(analyzer, GetDocuments(sources, language));
+            return GetSortedDiagnosticsFromDocuments(analyzer, GetDocuments(verifier, sources, language));
         }
 
         /// <summary>
@@ -108,19 +110,19 @@ namespace TestHelper
         /// <param name="sources">Classes in the form of strings</param>
         /// <param name="language">The language the source code is in</param>
         /// <returns>A Tuple containing the Documents produced from the sources and their TextSpans if relevant</returns>
-        private static Document[] GetDocuments(string[] sources, string language)
+        private static Document[] GetDocuments(DiagnosticVerifier verifier, string[] sources, string language)
         {
             if (language != LanguageNames.CSharp && language != LanguageNames.VisualBasic)
             {
                 throw new ArgumentException("Unsupported Language");
             }
 
-            var project = CreateProject(sources, language);
+            var project = CreateProject(verifier, sources, language);
             var documents = project.Documents.ToArray();
 
             if (sources.Length != documents.Length)
             {
-                throw new Exception("Amount of sources did not match amount of Documents created");
+                throw new InvalidOperationException("Amount of sources did not match amount of Documents created");
             }
 
             return documents;
@@ -132,9 +134,9 @@ namespace TestHelper
         /// <param name="source">Classes in the form of a string</param>
         /// <param name="language">The language the source code is in</param>
         /// <returns>A Document created from the source string</returns>
-        protected static Document CreateDocument(string source, string language = LanguageNames.CSharp)
+        protected static Document CreateDocument(DiagnosticVerifier verifier, string source, string language = LanguageNames.CSharp)
         {
-            return CreateProject(new[] { source }, language).Documents.First();
+            return CreateProject(verifier, new[] { source }, language).Documents.First();
         }
 
         /// <summary>
@@ -143,7 +145,7 @@ namespace TestHelper
         /// <param name="sources">Classes in the form of strings</param>
         /// <param name="language">The language the source code is in</param>
         /// <returns>A Project created out of the Documents created from the source strings</returns>
-        private static Project CreateProject(string[] sources, string language = LanguageNames.CSharp)
+        private static Project CreateProject(DiagnosticVerifier verifier, string[] sources, string language = LanguageNames.CSharp)
         {
             string fileNamePrefix = DefaultFilePathPrefix;
             string fileExt = language == LanguageNames.CSharp ? CSharpDefaultFileExt : VisualBasicDefaultExt;
@@ -153,14 +155,14 @@ namespace TestHelper
             var solution = new AdhocWorkspace()
                 .CurrentSolution
                 .AddProject(projectId, TestProjectName, TestProjectName, language)
-                .WithProjectParseOptions(projectId,
-                    CSharpParseOptions.Default
-                        .WithLanguageVersion(LanguageVersion.CSharp7_1)
-                        .WithFeatures(new[] { new KeyValuePair<string, string>("IOperation", "true") }))
+                .WithProjectCompilationOptions(projectId,
+                    new CSharpCompilationOptions(OutputKind.DynamicallyLinkedLibrary))
                 .AddMetadataReference(projectId, CorlibReference)
                 .AddMetadataReference(projectId, SystemCoreReference)
                 .AddMetadataReference(projectId, CSharpSymbolsReference)
                 .AddMetadataReference(projectId, CodeAnalysisReference);
+
+            verifier.FinalizeSolution(projectId, ref solution);
 
             int count = 0;
             foreach (var source in sources)
@@ -171,6 +173,10 @@ namespace TestHelper
                 count++;
             }
             return solution.GetProject(projectId);
+        }
+
+        protected virtual void FinalizeSolution(ProjectId projectId, ref Solution solution)
+        {
         }
         #endregion
     }

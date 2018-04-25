@@ -1,5 +1,7 @@
 ﻿// This file was automatically created from the "Analyzer With Code Fix (NuGet + VSIX)" template.
-// It has only been updated to use xunit's Assert APIs.
+// It has been updated in the following ways:
+// 1) to use xunit's Assert APIs.
+// 2) to provide a hook point to add in extra references to the compilation.
 
 using Microsoft.CodeAnalysis;
 using Microsoft.CodeAnalysis.CodeActions;
@@ -82,7 +84,7 @@ namespace TestHelper
             newSource = newSource.Replace("\r\n", "\n");
             // End of manual change
             
-            var document = CreateDocument(oldSource, language);
+            var document = CreateDocument(this, oldSource, language);
             var analyzerDiagnostics = GetSortedDiagnosticsFromDocuments(analyzer, new[] { document });
             var compilerDiagnostics = GetCompilerDiagnostics(document);
             var attempts = analyzerDiagnostics.Length;

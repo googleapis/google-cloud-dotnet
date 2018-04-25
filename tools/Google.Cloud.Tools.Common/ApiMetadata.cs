@@ -25,7 +25,7 @@ namespace Google.Cloud.Tools.Common
 
         public string Version { get; set; }
         public string Id { get; set; }
-        public string Type { get; set; } // TODO: enum? Autodetect based on files?
+        public ApiType Type { get; set; }
         public string TargetFrameworks { get; set; }
         public string TestTargetFrameworks { get; set; }
 

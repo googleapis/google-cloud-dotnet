@@ -20,7 +20,7 @@
   // testDependencies: Dependencies for all test projects. (This can lead to redundant dependencies, but it's simple.)
   // productName: Name of product to include when using doc templates
   // productUrl: Product home page URL to include when using doc templates
-  
+
   {
     "id": "Google.Cloud.BigQuery.DataTransfer.V1",
     "productName": "Google BigQuery Data Transfer",
@@ -30,7 +30,7 @@
     "description": "Recommended Google client library to access the BigQuery Data Transfer API, which transfers data from partner SaaS applications to Google BigQuery on a scheduled, managed basis.",
     "tags": [ "BigQuery", "DataTransfer" ]
   },
-  
+
   {
     "id": "Google.Cloud.BigQuery.V2",
     "productName": "Google BigQuery",
@@ -137,7 +137,7 @@
       "Google.Api.Gax.Grpc.Testing": "2.3.0"
     },
   },
-  
+
   {
     "id": "Google.Cloud.Debugger.V2",
     "productName": "Stackdriver Debugger",
@@ -158,7 +158,7 @@
     "version": "1.0.0",
     "type": "other",
     "targetFrameworks": "netstandard1.3;net45",
-    "testTargetFrameworks": "netcoreapp1.0;net452",	
+    "testTargetFrameworks": "netcoreapp1.0;net452",
     "description": "Common Protocol Buffer messages for Google Cloud Developer Tools APIs.",
     "tags": [ "Tools" ],
     "dependencies": {
@@ -205,6 +205,24 @@
       "Google.Cloud.Diagnostics.Common.Tests": "project",
       "Google.Cloud.Diagnostics.Common.IntegrationTests": "project",
       "Google.Api.Gax.Testing": "2.3.0"
+    },
+    "additionalAnalyzerTestDependencies": {
+      "Microsoft.AspNetCore.Mvc.Core": "1.0.2",
+      "Microsoft.AspNetCore.Routing": "1.0.2"
+    }
+  },
+
+  {
+    "id": "Google.Cloud.Diagnostics.AspNetCore.Analyzers",
+    "version": "1.0.0-beta01",
+    "type": "analyzers",
+    "targetFrameworks": "netstandard1.3",
+    "testTargetFrameworks": "netcoreapp2.0",
+    "description": "Guidelines for using Google Stackdriver Instrumentation Libraries for ASP.NET Core.",
+    "tags": [ "CodeAnalysis", "Analyzers", "CSharp" ],
+    "testDependencies": {
+      "Microsoft.AspNetCore.Mvc.Core": "1.0.2",
+      "Microsoft.AspNetCore.Routing": "1.0.2"
     }
   },
 
@@ -269,7 +287,7 @@
     "type": "other",
     "targetFrameworks": "netstandard1.5;net45",
     "testTargetFrameworks": "netcoreapp1.0;net452",
-    "description": "Recommended Google client library to access the Firestore API.", 
+    "description": "Recommended Google client library to access the Firestore API.",
     "tags": [ "firestore", "firebase" ],
     "dependencies": {
       "Google.Cloud.Firestore.V1Beta1": "project",
@@ -640,7 +658,7 @@
       "Grpc.Core": "1.10.0"
     },
   },
-  
+
   {
     "id": "Google.Cloud.Vision.V1",
     "productName": "Google Cloud Vision",

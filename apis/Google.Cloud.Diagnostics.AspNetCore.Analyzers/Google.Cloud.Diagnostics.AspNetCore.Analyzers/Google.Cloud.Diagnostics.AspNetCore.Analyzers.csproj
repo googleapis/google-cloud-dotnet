@@ -1,0 +1,32 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project Sdk="Microsoft.NET.Sdk">
+  <PropertyGroup>
+    <Version>1.0.0-beta01</Version>
+    <TargetFrameworks>netstandard1.3</TargetFrameworks>
+    <TargetFrameworks Condition=" '$(OS)' != 'Windows_NT' ">netstandard1.3</TargetFrameworks>
+    <LangVersion>latest</LangVersion>
+    <Features>IOperation</Features>
+    <GenerateDocumentationFile>false</GenerateDocumentationFile>
+    <AssemblyOriginatorKeyFile>../../GoogleApis.snk</AssemblyOriginatorKeyFile>
+    <SignAssembly>true</SignAssembly>
+    <Deterministic>true</Deterministic>
+    <TreatWarningsAsErrors>true</TreatWarningsAsErrors>
+    <Description>Guidelines for using Google Stackdriver Instrumentation Libraries for ASP.NET Core.</Description>
+    <PackageTags>CodeAnalysis;Analyzers;CSharp;Google;Cloud</PackageTags>
+    <Copyright>Copyright 2018 Google LLC</Copyright>
+    <Authors>Google Inc.</Authors>
+    <PackageIconUrl>https://cloud.google.com/images/gcp-icon-64x64.png</PackageIconUrl>
+    <PackageLicenseUrl>https://www.apache.org/licenses/LICENSE-2.0</PackageLicenseUrl>
+    <PackageProjectUrl>https://github.com/GoogleCloudPlatform/google-cloud-dotnet</PackageProjectUrl>
+    <RepositoryType>git</RepositoryType>
+    <RepositoryUrl>https://github.com/GoogleCloudPlatform/google-cloud-dotnet</RepositoryUrl>
+    <IncludeBuildOutput>false</IncludeBuildOutput>
+  </PropertyGroup>
+  <ItemGroup>
+    <PackageReference Include="Microsoft.CodeAnalysis.CSharp.Workspaces" Version="2.4.0" PrivateAssets="All" />
+    <Analyzer Condition="Exists('..\..\..\tools\Google.Cloud.Tools.Analyzers\bin\$(Configuration)\netstandard1.3\publish\Google.Cloud.Tools.Analyzers.dll')" Include="..\..\..\tools\Google.Cloud.Tools.Analyzers\bin\$(Configuration)\netstandard1.3\publish\Google.Cloud.Tools.Analyzers.dll" />
+    <None Include="$(OutputPath)\netstandard1.3\$(AssemblyName).dll" Pack="true" PackagePath="analyzers/dotnet/cs" Visible="false" />
+    <None Include="..\..\..\analyzerScripts\install.ps1" Pack="true" PackagePath="tools" Visible="false" />
+    <None Include="..\..\..\analyzerScripts\uninstall.ps1" Pack="true" PackagePath="tools" Visible="false" />
+  </ItemGroup>
+</Project>

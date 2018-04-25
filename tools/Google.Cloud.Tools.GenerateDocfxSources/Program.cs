@@ -220,7 +220,7 @@ specifying an end-point or channel and settings.";
 
         private static string CreateClientClassesDocumentation(ApiMetadata api)
         {
-            if (api.Type != "grpc")
+            if (api.Type != ApiType.Grpc)
             {
                 return "FIXME"; // No automatic templating for this API
             }

@@ -17,9 +17,9 @@ using Microsoft.CodeAnalysis.Diagnostics;
 using TestHelper;
 using Xunit;
 
-namespace Google.Cloud.Tools.Analyzers.Test
+namespace Google.Cloud.Tools.Analyzers.Tests
 {
-    public class PublicDependencyForbiddenAnalyzerTest : CodeFixVerifier
+    public class PublicDependencyForbiddenAnalyzerTest : CodeFixVerifierWithOperations
     {
         [Fact]
         public void ConstructorCheck()
