@@ -539,6 +539,24 @@ namespace Google.Cloud.BigQuery.V2.Tests
         }
 
         [Fact]
+        public void UploadParquet_Equivalents()
+        {
+            var datasetId = "dataset";
+            var tableId = "table";
+            var jobReference = GetJobReference("job");
+            var datasetReference = GetDatasetReference(datasetId);
+            var tableReference = GetTableReference(datasetId, tableId);
+            var options = new UploadParquetOptions();
+            var stream = new MemoryStream();
+            VerifyEquivalent(new BigQueryJob(new DerivedBigQueryClient(), new Job { JobReference = jobReference }),
+                client => client.UploadParquet(MatchesWhenSerialized(tableReference), stream, options),
+                client => client.UploadParquet(datasetId, tableId, stream, options),
+                client => client.UploadParquet(ProjectId, datasetId, tableId, stream, options),
+                client => new BigQueryTable(client, GetTable(tableReference)).UploadParquet(stream, options),
+                client => new BigQueryDataset(client, GetDataset(datasetReference)).UploadParquet(tableId, stream, options));
+        }
+
+        [Fact]
         public void InsertEquivalents_SingleRow()
         {
             var datasetId = "dataset";
@@ -1045,6 +1063,25 @@ namespace Google.Cloud.BigQuery.V2.Tests
                 client => client.UploadAvroAsync(ProjectId, datasetId, tableId, schema, stream, options, token),
                 client => new BigQueryTable(client, GetTable(tableReference, schema)).UploadAvroAsync(stream, options, token),
                 client => new BigQueryDataset(client, GetDataset(datasetReference)).UploadAvroAsync(tableId, schema, stream, options, token));
+        }
+
+        [Fact]
+        public void UploadParquetAsyncEquivalents()
+        {
+            var datasetId = "dataset";
+            var tableId = "table";
+            var jobReference = GetJobReference("job");
+            var datasetReference = GetDatasetReference(datasetId);
+            var tableReference = GetTableReference(datasetId, tableId);
+            var options = new UploadParquetOptions();
+            var token = new CancellationTokenSource().Token;
+            var stream = new MemoryStream();
+            VerifyEquivalentAsync(new BigQueryJob(new DerivedBigQueryClient(), new Job { JobReference = jobReference }),
+                client => client.UploadParquetAsync(MatchesWhenSerialized(tableReference), stream, options, token),
+                client => client.UploadParquetAsync(datasetId, tableId, stream, options, token),
+                client => client.UploadParquetAsync(ProjectId, datasetId, tableId, stream, options, token),
+                client => new BigQueryTable(client, GetTable(tableReference)).UploadParquetAsync(stream, options, token),
+                client => new BigQueryDataset(client, GetDataset(datasetReference)).UploadParquetAsync(tableId, stream, options, token));
         }
 
         [Fact]

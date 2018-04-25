@@ -529,6 +529,40 @@ namespace Google.Cloud.BigQuery.V2.Snippets
         // End see-also
 
         [Fact]
+        public void UploadParquet()
+        {
+            string projectId = _fixture.ProjectId;
+            string datasetId = _fixture.GameDatasetId;
+            string tableId = _fixture.GenerateTableId();
+
+            var typeInfo = GetType().GetTypeInfo();
+            string resourceName = typeInfo.Namespace + ".us-states.parquet";
+            var stream = typeInfo.Assembly.GetManifestResourceStream(resourceName);
+            // Snippet: UploadParquet(string, string, Stream, *)
+            BigQueryClient client = BigQueryClient.Create(projectId);
+            // This example creates a new table.
+            BigQueryJob job = client.UploadParquet(datasetId, tableId, stream);
+            // Use the job to find out when the data has finished being inserted into the table,
+            // report errors etc.
+            // End snippet
+
+            AssertJobCompletesSuccessfully(job);
+        }
+
+        // See-also: UploadParquet(string, string, Stream, *)
+        // Member: UploadParquet(TableReference, *, *)
+        // Member: UploadParquet(string, string, string, *, *)
+        // See [UploadParquet](ref) for an example using an alternative overload.
+        // End see-also
+
+        // See-also: UploadParquet(string, string, *, *)
+        // Member: UploadParquetAsync(TableReference, *, *, *)
+        // Member: UploadParquetAsync(string, string, string, *, *, *)
+        // Member: UploadParquetAsync(string, string, *, *, *)
+        // See [UploadParquet](ref) for a synchronous example.
+        // End see-also
+
+        [Fact]
         public void UploadJson_Stream()
         {
             string projectId = _fixture.ProjectId;
@@ -678,7 +712,6 @@ namespace Google.Cloud.BigQuery.V2.Snippets
             // We later come back and want to wait for the job to complete.
 
             BigQueryJob completedJob = client.PollJobUntilCompleted(jobId);
-            Console.WriteLine(completedJob.State);
             // End snippet
 
             completedJob.ThrowOnAnyError();

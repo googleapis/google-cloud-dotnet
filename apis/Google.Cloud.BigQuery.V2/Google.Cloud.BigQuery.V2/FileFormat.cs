@@ -41,6 +41,12 @@ namespace Google.Cloud.BigQuery.V2
         /// for all operations.
         /// </summary>
         [ApiValue("DATASTORE_BACKUP")]
-        DatastoreBackup
+        DatastoreBackup,
+        
+        /// <summary>
+        /// A Parquet file.
+        /// </summary>
+        [ApiValue("PARQUET")]
+        Parquet
     }
 }
