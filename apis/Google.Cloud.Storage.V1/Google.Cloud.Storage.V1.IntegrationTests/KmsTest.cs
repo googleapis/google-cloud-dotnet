@@ -15,6 +15,7 @@
 using Google.Apis.Storage.v1.Data;
 using System;
 using System.IO;
+using System.Net;
 using Xunit;
 using static Google.Apis.Storage.v1.Data.Bucket;
 using Object = Google.Apis.Storage.v1.Data.Object;
@@ -153,9 +154,27 @@ namespace Google.Cloud.Storage.V1.IntegrationTests
             EncryptionKey key = EncryptionKey.Generate();
             var client = StorageClient.Create(encryptionKey: key);
 
-            // Upload an object using a client that has an encryption key, but also specify a KMS key. The KMS key should be used,
-            // and the CSEK should be ignored.
-            Object obj = client.UploadObject(bucketName, objectName, null, data, new UploadObjectOptions { KmsKeyName = KeyName1 });
+            // Upload an object using a client that has an encryption key, but also specify a KMS key.
+            // This should result in an error. The CSEK needs to be explicitly disabled.
+            var options = new UploadObjectOptions { KmsKeyName = KeyName1 };
+            Assert.Throws<ArgumentException>(() => client.UploadObject(bucketName, objectName, null, data, options));
+        }
+
+        [SkippableFact]
+        public void UploadObject_BucketHasNoDefaultKmsKey_UploadWithClientDefaultCsek_ExplicitKmsKeyAndCsekDisabled()
+        {
+            Skip.If(SkipTests);
+
+            string bucketName = _fixture.InitiallyEmptyBucket;
+            string objectName = TestHelpers.GenerateName();
+            var data = TestHelpers.GenerateData(1024);
+            EncryptionKey key = EncryptionKey.Generate();
+            var client = StorageClient.Create(encryptionKey: key);
+
+            // Upload an object using a client that has an encryption key, but also specify a KMS key and disable
+            // the CSEK in options. The KMS key should be used.
+            var options = new UploadObjectOptions { KmsKeyName = KeyName1, EncryptionKey = EncryptionKey.None };
+            Object obj = client.UploadObject(bucketName, objectName, null, data, options);
             Assert.StartsWith(VersionedKeyName1Prefix, obj.KmsKeyName);
 
             // We should be able to download it again, even with a default (no CSEK) client.
@@ -261,6 +280,40 @@ namespace Google.Cloud.Storage.V1.IntegrationTests
             var exception = Assert.Throws<ArgumentException>(() => client.CopyObject(_fixture.ReadBucket, _fixture.SmallObject, _fixture.InitiallyEmptyBucket, objectName, options));
             Assert.Contains(nameof(CopyObjectOptions.EncryptionKey), exception.Message);
             Assert.Contains(nameof(CopyObjectOptions.KmsKeyName), exception.Message);
+        }
+
+        [SkippableFact]
+        public void PatchObject_CannotChangeKms()
+        {
+            Skip.If(SkipTests);
+            var client = _fixture.Client;
+            string bucketName = _fixture.InitiallyEmptyBucket;
+            string objectName = TestHelpers.GenerateName();
+            var data = TestHelpers.GenerateData(1024);
+
+            // Upload an object without any encryption.
+            Object obj = client.UploadObject(bucketName, objectName, null, data);
+            // Try to use patch to set a KMS key. This will fail.
+            var patch = new Object { Name = obj.Name, Bucket = obj.Bucket, KmsKeyName = KeyName1 };
+            var exception = Assert.Throws<GoogleApiException>(() => client.PatchObject(patch));
+            Assert.Equal(HttpStatusCode.BadRequest, exception.HttpStatusCode);
+        }
+
+        [SkippableFact]
+        public void UpdateObject_CannotChangeKms()
+        {
+            Skip.If(SkipTests);
+            var client = _fixture.Client;
+            string bucketName = _fixture.InitiallyEmptyBucket;
+            string objectName = TestHelpers.GenerateName();
+            var data = TestHelpers.GenerateData(1024);
+
+            // Upload an object without any encryption.
+            Object obj = client.UploadObject(bucketName, objectName, null, data);
+            obj.KmsKeyName = KeyName1;
+            // Try to use patch to set a KMS key. This will fail.
+            var exception = Assert.Throws<GoogleApiException>(() => client.UpdateObject(obj));
+            Assert.Equal(HttpStatusCode.BadRequest, exception.HttpStatusCode);
         }
 
         private string CreateBucketWithDefaultKmsKeyName(string keyName)
