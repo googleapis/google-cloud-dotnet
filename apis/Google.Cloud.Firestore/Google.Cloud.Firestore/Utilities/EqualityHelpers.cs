@@ -98,7 +98,21 @@ namespace Google.Cloud.Firestore
                 return hash;
             }
         }
-        public static int CombineHashCodes(int hash1, int hash2, int hash3, int hash4, int hash5, int hash6, int hash7, int hash8)
+
+        internal static int CombineHashCodes(int hash1, int hash2, int hash3, int hash4)
+        {
+            unchecked
+            {
+                int hash = HashInitialValue;
+                hash = (hash << 5) + hash + hash1;
+                hash = (hash << 5) + hash + hash2;
+                hash = (hash << 5) + hash + hash3;
+                hash = (hash << 5) + hash + hash4;
+                return hash;
+            }
+        }
+
+        internal static int CombineHashCodes(int hash1, int hash2, int hash3, int hash4, int hash5, int hash6, int hash7, int hash8)
         {
             unchecked
             {
