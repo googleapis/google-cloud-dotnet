@@ -14,9 +14,7 @@
 
 using Google.Cloud.Firestore.V1Beta1;
 using System;
-using System.Collections.Generic;
 using System.Linq;
-using System.Text;
 using Xunit;
 using static Google.Cloud.Firestore.Tests.ProtoHelpers;
 
@@ -42,7 +40,7 @@ namespace Google.Cloud.Firestore.Tests
             var doc2 = DocumentSnapshot.ForDocument(db, proto, readTime);
             var docs = new[] { doc1, doc2 };
 
-            var querySnapshot = new QuerySnapshot(query, docs, readTime);
+            var querySnapshot = QuerySnapshot.ForDocuments(query, docs, readTime);
 
             Assert.Equal(2, querySnapshot.Count);
             // Indexer
@@ -66,20 +64,56 @@ namespace Google.Cloud.Firestore.Tests
             var doc3 = GetSampleSnapshot("doc3");
 
             var docs = new[] { doc1, doc2 };
-            var control = new QuerySnapshot(query, docs, readTime);
+            var control = QuerySnapshot.ForDocuments(query, docs, readTime);
             EqualityTester.AssertEqual(control,
                 // Distinct but equal values for query and snapshots, but a different timestamp
-                equal: new[] { new QuerySnapshot(s_db.Collection("col1"), new[] { GetSampleSnapshot("doc1"), doc2 }, new Timestamp(12, 13)) },
+                equal: new[] { QuerySnapshot.ForDocuments(s_db.Collection("col1"), new[] { GetSampleSnapshot("doc1"), doc2 }, new Timestamp(12, 13)) },
                 unequal: new[] {
                     // Unequal query
-                    new QuerySnapshot(query.Offset(0), docs, readTime),
+                    QuerySnapshot.ForDocuments(query.Offset(0), docs, readTime),
                     // No doc2
-                    new QuerySnapshot(query, new[] { doc1 }, readTime),
+                    QuerySnapshot.ForDocuments(query, new[] { doc1 }, readTime),
                     // Extra doc3
-                    new QuerySnapshot(query, new[] { doc1, doc2, doc3 }, readTime),
+                    QuerySnapshot.ForDocuments(query, new[] { doc1, doc2, doc3 }, readTime),
                     // Order matters
-                    new QuerySnapshot(query, new[] { doc2, doc1 }, readTime),
+                    QuerySnapshot.ForDocuments(query, new[] { doc2, doc1 }, readTime),
                 });
+
+            // Note: no test for the changes being compared. It would be overkill at the moment.
+        }
+
+        [Fact]
+        public void GeneratedChanges()
+        {
+            var query = s_db.Collection("col1");
+            var readTime = new Timestamp(10, 2);
+            var doc1 = GetSampleSnapshot("doc1");
+            var doc2 = GetSampleSnapshot("doc2");
+            var snapshot = QuerySnapshot.ForDocuments(query, new[] { doc1, doc2 }, readTime);
+
+            Assert.Equal(new DocumentChange(doc1, DocumentChange.Type.Added, null, 0), snapshot.Changes[0]);
+            Assert.Equal(new DocumentChange(doc2, DocumentChange.Type.Added, null, 1), snapshot.Changes[1]);
+        }
+
+        [Fact]
+        public void SnapshotFromChanges()
+        {
+            var query = s_db.Collection("col1");
+            var readTime = new Timestamp(10, 2);
+            var doc1 = GetSampleSnapshot("doc1");
+            var doc2 = GetSampleSnapshot("doc2");
+            var documentSet = DocumentSet.Empty(query.CreateDocumentSnapshotComparer())
+                .WithDocumentAdded(doc1)
+                .WithDocumentAdded(doc2);
+            var changes = new[] { new DocumentChange(doc2, DocumentChange.Type.Added, null, 1) };
+
+            // It's fine for the list to be a different length; the document set is *all* the
+            // documents, whereas changes is just the delta from the previous snapshot.
+            var snapshot = QuerySnapshot.ForChanges(query, documentSet, changes, readTime);
+
+            Assert.Equal(changes, snapshot.Changes);
+            Assert.Equal(new[] { doc1, doc2 }, snapshot.Documents);
+            Assert.Equal(new[] { doc1, doc2 }, snapshot.ToList());
         }
 
         private static DocumentSnapshot GetSampleSnapshot(string docId)
@@ -94,6 +128,5 @@ namespace Google.Cloud.Firestore.Tests
             };
             return DocumentSnapshot.ForDocument(s_db, proto, readTime);
         }
-
     }
 }

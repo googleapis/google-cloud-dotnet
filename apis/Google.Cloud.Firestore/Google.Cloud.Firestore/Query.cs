@@ -531,7 +531,7 @@ namespace Google.Cloud.Firestore
 
             GaxPreconditions.CheckState(readTime != null, "The stream returned from RunQuery did not provide a read timestamp.");
 
-            return new QuerySnapshot(this, snapshots.AsReadOnly(), readTime.Value);
+            return QuerySnapshot.ForDocuments(this, snapshots.AsReadOnly(), readTime.Value);
         }
 
         /// <summary>
