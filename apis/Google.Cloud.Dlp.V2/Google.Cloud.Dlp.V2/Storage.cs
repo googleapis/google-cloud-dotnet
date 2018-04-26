@@ -27,7 +27,7 @@ namespace Google.Cloud.Dlp.V2 {
             "CiNnb29nbGUvcHJpdmFjeS9kbHAvdjIvc3RvcmFnZS5wcm90bxIVZ29vZ2xl",
             "LnByaXZhY3kuZGxwLnYyGhxnb29nbGUvYXBpL2Fubm90YXRpb25zLnByb3Rv",
             "Gh9nb29nbGUvcHJvdG9idWYvdGltZXN0YW1wLnByb3RvIhgKCEluZm9UeXBl",
-            "EgwKBG5hbWUYASABKAkilgkKDkN1c3RvbUluZm9UeXBlEjIKCWluZm9fdHlw",
+            "EgwKBG5hbWUYASABKAki3QkKDkN1c3RvbUluZm9UeXBlEjIKCWluZm9fdHlw",
             "ZRgBIAEoCzIfLmdvb2dsZS5wcml2YWN5LmRscC52Mi5JbmZvVHlwZRI1Cgps",
             "aWtlbGlob29kGAYgASgOMiEuZ29vZ2xlLnByaXZhY3kuZGxwLnYyLkxpa2Vs",
             "aWhvb2QSRgoKZGljdGlvbmFyeRgCIAEoCzIwLmdvb2dsZS5wcml2YWN5LmRs",
@@ -36,74 +36,79 @@ namespace Google.Cloud.Dlp.V2 {
             "ZXhIABJNCg5zdXJyb2dhdGVfdHlwZRgEIAEoCzIzLmdvb2dsZS5wcml2YWN5",
             "LmRscC52Mi5DdXN0b21JbmZvVHlwZS5TdXJyb2dhdGVUeXBlSAASTAoPZGV0",
             "ZWN0aW9uX3J1bGVzGAcgAygLMjMuZ29vZ2xlLnByaXZhY3kuZGxwLnYyLkN1",
-            "c3RvbUluZm9UeXBlLkRldGVjdGlvblJ1bGUagQEKCkRpY3Rpb25hcnkSTgoJ",
+            "c3RvbUluZm9UeXBlLkRldGVjdGlvblJ1bGUayAEKCkRpY3Rpb25hcnkSTgoJ",
             "d29yZF9saXN0GAEgASgLMjkuZ29vZ2xlLnByaXZhY3kuZGxwLnYyLkN1c3Rv",
-            "bUluZm9UeXBlLkRpY3Rpb25hcnkuV29yZExpc3RIABoZCghXb3JkTGlzdBIN",
-            "CgV3b3JkcxgBIAMoCUIICgZzb3VyY2UaGAoFUmVnZXgSDwoHcGF0dGVybhgB",
-            "IAEoCRoPCg1TdXJyb2dhdGVUeXBlGr4ECg1EZXRlY3Rpb25SdWxlElcKDGhv",
-            "dHdvcmRfcnVsZRgBIAEoCzI/Lmdvb2dsZS5wcml2YWN5LmRscC52Mi5DdXN0",
-            "b21JbmZvVHlwZS5EZXRlY3Rpb25SdWxlLkhvdHdvcmRSdWxlSAAaOAoJUHJv",
-            "eGltaXR5EhUKDXdpbmRvd19iZWZvcmUYASABKAUSFAoMd2luZG93X2FmdGVy",
-            "GAIgASgFGoIBChRMaWtlbGlob29kQWRqdXN0bWVudBI9ChBmaXhlZF9saWtl",
-            "bGlob29kGAEgASgOMiEuZ29vZ2xlLnByaXZhY3kuZGxwLnYyLkxpa2VsaWhv",
-            "b2RIABIdChNyZWxhdGl2ZV9saWtlbGlob29kGAIgASgFSABCDAoKYWRqdXN0",
-            "bWVudBqMAgoLSG90d29yZFJ1bGUSQgoNaG90d29yZF9yZWdleBgBIAEoCzIr",
-            "Lmdvb2dsZS5wcml2YWN5LmRscC52Mi5DdXN0b21JbmZvVHlwZS5SZWdleBJQ",
-            "Cglwcm94aW1pdHkYAiABKAsyPS5nb29nbGUucHJpdmFjeS5kbHAudjIuQ3Vz",
-            "dG9tSW5mb1R5cGUuRGV0ZWN0aW9uUnVsZS5Qcm94aW1pdHkSZwoVbGlrZWxp",
-            "aG9vZF9hZGp1c3RtZW50GAMgASgLMkguZ29vZ2xlLnByaXZhY3kuZGxwLnYy",
-            "LkN1c3RvbUluZm9UeXBlLkRldGVjdGlvblJ1bGUuTGlrZWxpaG9vZEFkanVz",
-            "dG1lbnRCBgoEdHlwZUIGCgR0eXBlIhcKB0ZpZWxkSWQSDAoEbmFtZRgBIAEo",
-            "CSI3CgtQYXJ0aXRpb25JZBISCgpwcm9qZWN0X2lkGAIgASgJEhQKDG5hbWVz",
-            "cGFjZV9pZBgEIAEoCSIeCg5LaW5kRXhwcmVzc2lvbhIMCgRuYW1lGAEgASgJ",
-            "IoEBChBEYXRhc3RvcmVPcHRpb25zEjgKDHBhcnRpdGlvbl9pZBgBIAEoCzIi",
-            "Lmdvb2dsZS5wcml2YWN5LmRscC52Mi5QYXJ0aXRpb25JZBIzCgRraW5kGAIg",
-            "ASgLMiUuZ29vZ2xlLnByaXZhY3kuZGxwLnYyLktpbmRFeHByZXNzaW9uIsYB",
-            "ChNDbG91ZFN0b3JhZ2VPcHRpb25zEkQKCGZpbGVfc2V0GAEgASgLMjIuZ29v",
-            "Z2xlLnByaXZhY3kuZGxwLnYyLkNsb3VkU3RvcmFnZU9wdGlvbnMuRmlsZVNl",
-            "dBIcChRieXRlc19saW1pdF9wZXJfZmlsZRgEIAEoAxIzCgpmaWxlX3R5cGVz",
-            "GAUgAygOMh8uZ29vZ2xlLnByaXZhY3kuZGxwLnYyLkZpbGVUeXBlGhYKB0Zp",
-            "bGVTZXQSCwoDdXJsGAEgASgJIowBCg9CaWdRdWVyeU9wdGlvbnMSPQoPdGFi",
-            "bGVfcmVmZXJlbmNlGAEgASgLMiQuZ29vZ2xlLnByaXZhY3kuZGxwLnYyLkJp",
-            "Z1F1ZXJ5VGFibGUSOgoSaWRlbnRpZnlpbmdfZmllbGRzGAIgAygLMh4uZ29v",
-            "Z2xlLnByaXZhY3kuZGxwLnYyLkZpZWxkSWQimgQKDVN0b3JhZ2VDb25maWcS",
-            "RAoRZGF0YXN0b3JlX29wdGlvbnMYAiABKAsyJy5nb29nbGUucHJpdmFjeS5k",
-            "bHAudjIuRGF0YXN0b3JlT3B0aW9uc0gAEksKFWNsb3VkX3N0b3JhZ2Vfb3B0",
-            "aW9ucxgDIAEoCzIqLmdvb2dsZS5wcml2YWN5LmRscC52Mi5DbG91ZFN0b3Jh",
-            "Z2VPcHRpb25zSAASQwoRYmlnX3F1ZXJ5X29wdGlvbnMYBCABKAsyJi5nb29n",
-            "bGUucHJpdmFjeS5kbHAudjIuQmlnUXVlcnlPcHRpb25zSAASTAoPdGltZXNw",
-            "YW5fY29uZmlnGAYgASgLMjMuZ29vZ2xlLnByaXZhY3kuZGxwLnYyLlN0b3Jh",
-            "Z2VDb25maWcuVGltZXNwYW5Db25maWca2gEKDlRpbWVzcGFuQ29uZmlnEi4K",
-            "CnN0YXJ0X3RpbWUYASABKAsyGi5nb29nbGUucHJvdG9idWYuVGltZXN0YW1w",
-            "EiwKCGVuZF90aW1lGAIgASgLMhouZ29vZ2xlLnByb3RvYnVmLlRpbWVzdGFt",
-            "cBI3Cg90aW1lc3RhbXBfZmllbGQYAyABKAsyHi5nb29nbGUucHJpdmFjeS5k",
-            "bHAudjIuRmllbGRJZBIxCillbmFibGVfYXV0b19wb3B1bGF0aW9uX29mX3Rp",
-            "bWVzcGFuX2NvbmZpZxgEIAEoCEIGCgR0eXBlImAKC0JpZ1F1ZXJ5S2V5Ej0K",
-            "D3RhYmxlX3JlZmVyZW5jZRgBIAEoCzIkLmdvb2dsZS5wcml2YWN5LmRscC52",
-            "Mi5CaWdRdWVyeVRhYmxlEhIKCnJvd19udW1iZXIYAiABKAMiPgoMRGF0YXN0",
-            "b3JlS2V5Ei4KCmVudGl0eV9rZXkYASABKAsyGi5nb29nbGUucHJpdmFjeS5k",
-            "bHAudjIuS2V5IrsBCgNLZXkSOAoMcGFydGl0aW9uX2lkGAEgASgLMiIuZ29v",
-            "Z2xlLnByaXZhY3kuZGxwLnYyLlBhcnRpdGlvbklkEjQKBHBhdGgYAiADKAsy",
-            "Ji5nb29nbGUucHJpdmFjeS5kbHAudjIuS2V5LlBhdGhFbGVtZW50GkQKC1Bh",
-            "dGhFbGVtZW50EgwKBGtpbmQYASABKAkSDAoCaWQYAiABKANIABIOCgRuYW1l",
-            "GAMgASgJSABCCQoHaWRfdHlwZSKOAQoJUmVjb3JkS2V5EjwKDWRhdGFzdG9y",
-            "ZV9rZXkYAiABKAsyIy5nb29nbGUucHJpdmFjeS5kbHAudjIuRGF0YXN0b3Jl",
-            "S2V5SAASOwoNYmlnX3F1ZXJ5X2tleRgDIAEoCzIiLmdvb2dsZS5wcml2YWN5",
-            "LmRscC52Mi5CaWdRdWVyeUtleUgAQgYKBHR5cGUiSQoNQmlnUXVlcnlUYWJs",
-            "ZRISCgpwcm9qZWN0X2lkGAEgASgJEhIKCmRhdGFzZXRfaWQYAiABKAkSEAoI",
-            "dGFibGVfaWQYAyABKAkqdAoKTGlrZWxpaG9vZBIaChZMSUtFTElIT09EX1VO",
-            "U1BFQ0lGSUVEEAASEQoNVkVSWV9VTkxJS0VMWRABEgwKCFVOTElLRUxZEAIS",
-            "DAoIUE9TU0lCTEUQAxIKCgZMSUtFTFkQBBIPCgtWRVJZX0xJS0VMWRAFKkUK",
-            "CEZpbGVUeXBlEhkKFUZJTEVfVFlQRV9VTlNQRUNJRklFRBAAEg8KC0JJTkFS",
-            "WV9GSUxFEAESDQoJVEVYVF9GSUxFEAJCjwEKGWNvbS5nb29nbGUucHJpdmFj",
-            "eS5kbHAudjJCCkRscFN0b3JhZ2VQAVo4Z29vZ2xlLmdvbGFuZy5vcmcvZ2Vu",
-            "cHJvdG8vZ29vZ2xlYXBpcy9wcml2YWN5L2RscC92MjtkbHCqAhNHb29nbGUu",
-            "Q2xvdWQuRGxwLlYyygITR29vZ2xlXENsb3VkXERscFxWMmIGcHJvdG8z"));
+            "bUluZm9UeXBlLkRpY3Rpb25hcnkuV29yZExpc3RIABJFChJjbG91ZF9zdG9y",
+            "YWdlX3BhdGgYAyABKAsyJy5nb29nbGUucHJpdmFjeS5kbHAudjIuQ2xvdWRT",
+            "dG9yYWdlUGF0aEgAGhkKCFdvcmRMaXN0Eg0KBXdvcmRzGAEgAygJQggKBnNv",
+            "dXJjZRoYCgVSZWdleBIPCgdwYXR0ZXJuGAEgASgJGg8KDVN1cnJvZ2F0ZVR5",
+            "cGUavgQKDURldGVjdGlvblJ1bGUSVwoMaG90d29yZF9ydWxlGAEgASgLMj8u",
+            "Z29vZ2xlLnByaXZhY3kuZGxwLnYyLkN1c3RvbUluZm9UeXBlLkRldGVjdGlv",
+            "blJ1bGUuSG90d29yZFJ1bGVIABo4CglQcm94aW1pdHkSFQoNd2luZG93X2Jl",
+            "Zm9yZRgBIAEoBRIUCgx3aW5kb3dfYWZ0ZXIYAiABKAUaggEKFExpa2VsaWhv",
+            "b2RBZGp1c3RtZW50Ej0KEGZpeGVkX2xpa2VsaWhvb2QYASABKA4yIS5nb29n",
+            "bGUucHJpdmFjeS5kbHAudjIuTGlrZWxpaG9vZEgAEh0KE3JlbGF0aXZlX2xp",
+            "a2VsaWhvb2QYAiABKAVIAEIMCgphZGp1c3RtZW50GowCCgtIb3R3b3JkUnVs",
+            "ZRJCCg1ob3R3b3JkX3JlZ2V4GAEgASgLMisuZ29vZ2xlLnByaXZhY3kuZGxw",
+            "LnYyLkN1c3RvbUluZm9UeXBlLlJlZ2V4ElAKCXByb3hpbWl0eRgCIAEoCzI9",
+            "Lmdvb2dsZS5wcml2YWN5LmRscC52Mi5DdXN0b21JbmZvVHlwZS5EZXRlY3Rp",
+            "b25SdWxlLlByb3hpbWl0eRJnChVsaWtlbGlob29kX2FkanVzdG1lbnQYAyAB",
+            "KAsySC5nb29nbGUucHJpdmFjeS5kbHAudjIuQ3VzdG9tSW5mb1R5cGUuRGV0",
+            "ZWN0aW9uUnVsZS5MaWtlbGlob29kQWRqdXN0bWVudEIGCgR0eXBlQgYKBHR5",
+            "cGUiFwoHRmllbGRJZBIMCgRuYW1lGAEgASgJIjcKC1BhcnRpdGlvbklkEhIK",
+            "CnByb2plY3RfaWQYAiABKAkSFAoMbmFtZXNwYWNlX2lkGAQgASgJIh4KDktp",
+            "bmRFeHByZXNzaW9uEgwKBG5hbWUYASABKAkigQEKEERhdGFzdG9yZU9wdGlv",
+            "bnMSOAoMcGFydGl0aW9uX2lkGAEgASgLMiIuZ29vZ2xlLnByaXZhY3kuZGxw",
+            "LnYyLlBhcnRpdGlvbklkEjMKBGtpbmQYAiABKAsyJS5nb29nbGUucHJpdmFj",
+            "eS5kbHAudjIuS2luZEV4cHJlc3Npb24ixgEKE0Nsb3VkU3RvcmFnZU9wdGlv",
+            "bnMSRAoIZmlsZV9zZXQYASABKAsyMi5nb29nbGUucHJpdmFjeS5kbHAudjIu",
+            "Q2xvdWRTdG9yYWdlT3B0aW9ucy5GaWxlU2V0EhwKFGJ5dGVzX2xpbWl0X3Bl",
+            "cl9maWxlGAQgASgDEjMKCmZpbGVfdHlwZXMYBSADKA4yHy5nb29nbGUucHJp",
+            "dmFjeS5kbHAudjIuRmlsZVR5cGUaFgoHRmlsZVNldBILCgN1cmwYASABKAki",
+            "IAoQQ2xvdWRTdG9yYWdlUGF0aBIMCgRwYXRoGAEgASgJIqABCg9CaWdRdWVy",
+            "eU9wdGlvbnMSPQoPdGFibGVfcmVmZXJlbmNlGAEgASgLMiQuZ29vZ2xlLnBy",
+            "aXZhY3kuZGxwLnYyLkJpZ1F1ZXJ5VGFibGUSOgoSaWRlbnRpZnlpbmdfZmll",
+            "bGRzGAIgAygLMh4uZ29vZ2xlLnByaXZhY3kuZGxwLnYyLkZpZWxkSWQSEgoK",
+            "cm93c19saW1pdBgDIAEoAyKaBAoNU3RvcmFnZUNvbmZpZxJEChFkYXRhc3Rv",
+            "cmVfb3B0aW9ucxgCIAEoCzInLmdvb2dsZS5wcml2YWN5LmRscC52Mi5EYXRh",
+            "c3RvcmVPcHRpb25zSAASSwoVY2xvdWRfc3RvcmFnZV9vcHRpb25zGAMgASgL",
+            "MiouZ29vZ2xlLnByaXZhY3kuZGxwLnYyLkNsb3VkU3RvcmFnZU9wdGlvbnNI",
+            "ABJDChFiaWdfcXVlcnlfb3B0aW9ucxgEIAEoCzImLmdvb2dsZS5wcml2YWN5",
+            "LmRscC52Mi5CaWdRdWVyeU9wdGlvbnNIABJMCg90aW1lc3Bhbl9jb25maWcY",
+            "BiABKAsyMy5nb29nbGUucHJpdmFjeS5kbHAudjIuU3RvcmFnZUNvbmZpZy5U",
+            "aW1lc3BhbkNvbmZpZxraAQoOVGltZXNwYW5Db25maWcSLgoKc3RhcnRfdGlt",
+            "ZRgBIAEoCzIaLmdvb2dsZS5wcm90b2J1Zi5UaW1lc3RhbXASLAoIZW5kX3Rp",
+            "bWUYAiABKAsyGi5nb29nbGUucHJvdG9idWYuVGltZXN0YW1wEjcKD3RpbWVz",
+            "dGFtcF9maWVsZBgDIAEoCzIeLmdvb2dsZS5wcml2YWN5LmRscC52Mi5GaWVs",
+            "ZElkEjEKKWVuYWJsZV9hdXRvX3BvcHVsYXRpb25fb2ZfdGltZXNwYW5fY29u",
+            "ZmlnGAQgASgIQgYKBHR5cGUiYAoLQmlnUXVlcnlLZXkSPQoPdGFibGVfcmVm",
+            "ZXJlbmNlGAEgASgLMiQuZ29vZ2xlLnByaXZhY3kuZGxwLnYyLkJpZ1F1ZXJ5",
+            "VGFibGUSEgoKcm93X251bWJlchgCIAEoAyI+CgxEYXRhc3RvcmVLZXkSLgoK",
+            "ZW50aXR5X2tleRgBIAEoCzIaLmdvb2dsZS5wcml2YWN5LmRscC52Mi5LZXki",
+            "uwEKA0tleRI4CgxwYXJ0aXRpb25faWQYASABKAsyIi5nb29nbGUucHJpdmFj",
+            "eS5kbHAudjIuUGFydGl0aW9uSWQSNAoEcGF0aBgCIAMoCzImLmdvb2dsZS5w",
+            "cml2YWN5LmRscC52Mi5LZXkuUGF0aEVsZW1lbnQaRAoLUGF0aEVsZW1lbnQS",
+            "DAoEa2luZBgBIAEoCRIMCgJpZBgCIAEoA0gAEg4KBG5hbWUYAyABKAlIAEIJ",
+            "CgdpZF90eXBlIo4BCglSZWNvcmRLZXkSPAoNZGF0YXN0b3JlX2tleRgCIAEo",
+            "CzIjLmdvb2dsZS5wcml2YWN5LmRscC52Mi5EYXRhc3RvcmVLZXlIABI7Cg1i",
+            "aWdfcXVlcnlfa2V5GAMgASgLMiIuZ29vZ2xlLnByaXZhY3kuZGxwLnYyLkJp",
+            "Z1F1ZXJ5S2V5SABCBgoEdHlwZSJJCg1CaWdRdWVyeVRhYmxlEhIKCnByb2pl",
+            "Y3RfaWQYASABKAkSEgoKZGF0YXNldF9pZBgCIAEoCRIQCgh0YWJsZV9pZBgD",
+            "IAEoCSI5CghFbnRpdHlJZBItCgVmaWVsZBgBIAEoCzIeLmdvb2dsZS5wcml2",
+            "YWN5LmRscC52Mi5GaWVsZElkKnQKCkxpa2VsaWhvb2QSGgoWTElLRUxJSE9P",
+            "RF9VTlNQRUNJRklFRBAAEhEKDVZFUllfVU5MSUtFTFkQARIMCghVTkxJS0VM",
+            "WRACEgwKCFBPU1NJQkxFEAMSCgoGTElLRUxZEAQSDwoLVkVSWV9MSUtFTFkQ",
+            "BSpFCghGaWxlVHlwZRIZChVGSUxFX1RZUEVfVU5TUEVDSUZJRUQQABIPCgtC",
+            "SU5BUllfRklMRRABEg0KCVRFWFRfRklMRRACQo8BChljb20uZ29vZ2xlLnBy",
+            "aXZhY3kuZGxwLnYyQgpEbHBTdG9yYWdlUAFaOGdvb2dsZS5nb2xhbmcub3Jn",
+            "L2dlbnByb3RvL2dvb2dsZWFwaXMvcHJpdmFjeS9kbHAvdjI7ZGxwqgITR29v",
+            "Z2xlLkNsb3VkLkRscC5WMsoCE0dvb2dsZVxDbG91ZFxEbHBcVjJiBnByb3Rv",
+            "Mw=="));
       descriptor = pbr::FileDescriptor.FromGeneratedCode(descriptorData,
           new pbr::FileDescriptor[] { global::Google.Api.AnnotationsReflection.Descriptor, global::Google.Protobuf.WellKnownTypes.TimestampReflection.Descriptor, },
           new pbr::GeneratedClrTypeInfo(new[] {typeof(global::Google.Cloud.Dlp.V2.Likelihood), typeof(global::Google.Cloud.Dlp.V2.FileType), }, new pbr::GeneratedClrTypeInfo[] {
             new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.Dlp.V2.InfoType), global::Google.Cloud.Dlp.V2.InfoType.Parser, new[]{ "Name" }, null, null, null),
-            new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.Dlp.V2.CustomInfoType), global::Google.Cloud.Dlp.V2.CustomInfoType.Parser, new[]{ "InfoType", "Likelihood", "Dictionary", "Regex", "SurrogateType", "DetectionRules" }, new[]{ "Type" }, null, new pbr::GeneratedClrTypeInfo[] { new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.Dlp.V2.CustomInfoType.Types.Dictionary), global::Google.Cloud.Dlp.V2.CustomInfoType.Types.Dictionary.Parser, new[]{ "WordList" }, new[]{ "Source" }, null, new pbr::GeneratedClrTypeInfo[] { new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.Dlp.V2.CustomInfoType.Types.Dictionary.Types.WordList), global::Google.Cloud.Dlp.V2.CustomInfoType.Types.Dictionary.Types.WordList.Parser, new[]{ "Words" }, null, null, null)}),
+            new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.Dlp.V2.CustomInfoType), global::Google.Cloud.Dlp.V2.CustomInfoType.Parser, new[]{ "InfoType", "Likelihood", "Dictionary", "Regex", "SurrogateType", "DetectionRules" }, new[]{ "Type" }, null, new pbr::GeneratedClrTypeInfo[] { new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.Dlp.V2.CustomInfoType.Types.Dictionary), global::Google.Cloud.Dlp.V2.CustomInfoType.Types.Dictionary.Parser, new[]{ "WordList", "CloudStoragePath" }, new[]{ "Source" }, null, new pbr::GeneratedClrTypeInfo[] { new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.Dlp.V2.CustomInfoType.Types.Dictionary.Types.WordList), global::Google.Cloud.Dlp.V2.CustomInfoType.Types.Dictionary.Types.WordList.Parser, new[]{ "Words" }, null, null, null)}),
             new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.Dlp.V2.CustomInfoType.Types.Regex), global::Google.Cloud.Dlp.V2.CustomInfoType.Types.Regex.Parser, new[]{ "Pattern" }, null, null, null),
             new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.Dlp.V2.CustomInfoType.Types.SurrogateType), global::Google.Cloud.Dlp.V2.CustomInfoType.Types.SurrogateType.Parser, null, null, null, null),
             new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.Dlp.V2.CustomInfoType.Types.DetectionRule), global::Google.Cloud.Dlp.V2.CustomInfoType.Types.DetectionRule.Parser, new[]{ "HotwordRule" }, new[]{ "Type" }, null, new pbr::GeneratedClrTypeInfo[] { new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.Dlp.V2.CustomInfoType.Types.DetectionRule.Types.Proximity), global::Google.Cloud.Dlp.V2.CustomInfoType.Types.DetectionRule.Types.Proximity.Parser, new[]{ "WindowBefore", "WindowAfter" }, null, null, null),
@@ -114,13 +119,15 @@ namespace Google.Cloud.Dlp.V2 {
             new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.Dlp.V2.KindExpression), global::Google.Cloud.Dlp.V2.KindExpression.Parser, new[]{ "Name" }, null, null, null),
             new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.Dlp.V2.DatastoreOptions), global::Google.Cloud.Dlp.V2.DatastoreOptions.Parser, new[]{ "PartitionId", "Kind" }, null, null, null),
             new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.Dlp.V2.CloudStorageOptions), global::Google.Cloud.Dlp.V2.CloudStorageOptions.Parser, new[]{ "FileSet", "BytesLimitPerFile", "FileTypes" }, null, null, new pbr::GeneratedClrTypeInfo[] { new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.Dlp.V2.CloudStorageOptions.Types.FileSet), global::Google.Cloud.Dlp.V2.CloudStorageOptions.Types.FileSet.Parser, new[]{ "Url" }, null, null, null)}),
-            new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.Dlp.V2.BigQueryOptions), global::Google.Cloud.Dlp.V2.BigQueryOptions.Parser, new[]{ "TableReference", "IdentifyingFields" }, null, null, null),
+            new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.Dlp.V2.CloudStoragePath), global::Google.Cloud.Dlp.V2.CloudStoragePath.Parser, new[]{ "Path" }, null, null, null),
+            new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.Dlp.V2.BigQueryOptions), global::Google.Cloud.Dlp.V2.BigQueryOptions.Parser, new[]{ "TableReference", "IdentifyingFields", "RowsLimit" }, null, null, null),
             new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.Dlp.V2.StorageConfig), global::Google.Cloud.Dlp.V2.StorageConfig.Parser, new[]{ "DatastoreOptions", "CloudStorageOptions", "BigQueryOptions", "TimespanConfig" }, new[]{ "Type" }, null, new pbr::GeneratedClrTypeInfo[] { new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.Dlp.V2.StorageConfig.Types.TimespanConfig), global::Google.Cloud.Dlp.V2.StorageConfig.Types.TimespanConfig.Parser, new[]{ "StartTime", "EndTime", "TimestampField", "EnableAutoPopulationOfTimespanConfig" }, null, null, null)}),
             new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.Dlp.V2.BigQueryKey), global::Google.Cloud.Dlp.V2.BigQueryKey.Parser, new[]{ "TableReference", "RowNumber" }, null, null, null),
             new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.Dlp.V2.DatastoreKey), global::Google.Cloud.Dlp.V2.DatastoreKey.Parser, new[]{ "EntityKey" }, null, null, null),
             new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.Dlp.V2.Key), global::Google.Cloud.Dlp.V2.Key.Parser, new[]{ "PartitionId", "Path" }, null, null, new pbr::GeneratedClrTypeInfo[] { new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.Dlp.V2.Key.Types.PathElement), global::Google.Cloud.Dlp.V2.Key.Types.PathElement.Parser, new[]{ "Kind", "Id", "Name" }, new[]{ "IdType" }, null, null)}),
             new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.Dlp.V2.RecordKey), global::Google.Cloud.Dlp.V2.RecordKey.Parser, new[]{ "DatastoreKey", "BigQueryKey" }, new[]{ "Type" }, null, null),
-            new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.Dlp.V2.BigQueryTable), global::Google.Cloud.Dlp.V2.BigQueryTable.Parser, new[]{ "ProjectId", "DatasetId", "TableId" }, null, null, null)
+            new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.Dlp.V2.BigQueryTable), global::Google.Cloud.Dlp.V2.BigQueryTable.Parser, new[]{ "ProjectId", "DatasetId", "TableId" }, null, null, null),
+            new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.Dlp.V2.EntityId), global::Google.Cloud.Dlp.V2.EntityId.Parser, new[]{ "Field" }, null, null, null)
           }));
     }
     #endregion
@@ -161,16 +168,16 @@ namespace Google.Cloud.Dlp.V2 {
     /// </summary>
     [pbr::OriginalName("FILE_TYPE_UNSPECIFIED")] Unspecified = 0,
     /// <summary>
-    /// Includes all file extensions not covered by other types.
+    /// Includes all file extensions not covered by text file types.
     /// </summary>
     [pbr::OriginalName("BINARY_FILE")] BinaryFile = 1,
     /// <summary>
     /// Included file extensions:
-    ///   c, cc, cpp, cxx, c++, cs, css, dart, eml, go, h, hh, hpp, hxx, h++, hs,
-    ///   html, htm, shtml, shtm, xhtml, lhs, ini, java, js, json, ocaml, md, mkd,
-    ///   markdown, m, ml, mli, pl, pm, php, phtml, pht, py, pyw, rb, rbw, rs, rc,
-    ///   scala, sh, sql, tex, txt, asc, text, brf, vcard, vcs, wml, xml, xsl, xsd,
-    ///   yml, yaml.
+    ///   asc, brf, c, cc, cpp, csv, cxx, c++, cs, css, dart, eml, go, h, hh, hpp,
+    ///   hxx, h++, hs, html, htm, shtml, shtm, xhtml, lhs, ini, java, js, json,
+    ///   ocaml, md, mkd, markdown, m, ml, mli, pl, pm, php, phtml, pht, py, pyw,
+    ///   rb, rbw, rs, rc, scala, sh, sql, tex, txt, text, tsv, vcard, vcs, wml,
+    ///   xml, xsl, xsd, yml, yaml.
     /// </summary>
     [pbr::OriginalName("TEXT_FILE")] TextFile = 2,
   }
@@ -717,6 +724,9 @@ namespace Google.Cloud.Dlp.V2 {
             case SourceOneofCase.WordList:
               WordList = other.WordList.Clone();
               break;
+            case SourceOneofCase.CloudStoragePath:
+              CloudStoragePath = other.CloudStoragePath.Clone();
+              break;
           }
 
           _unknownFields = pb::UnknownFieldSet.Clone(other._unknownFields);
@@ -741,11 +751,27 @@ namespace Google.Cloud.Dlp.V2 {
           }
         }
 
+        /// <summary>Field number for the "cloud_storage_path" field.</summary>
+        public const int CloudStoragePathFieldNumber = 3;
+        /// <summary>
+        /// Newline-delimited file of words in Cloud Storage. Only a single file
+        /// is accepted.
+        /// </summary>
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        public global::Google.Cloud.Dlp.V2.CloudStoragePath CloudStoragePath {
+          get { return sourceCase_ == SourceOneofCase.CloudStoragePath ? (global::Google.Cloud.Dlp.V2.CloudStoragePath) source_ : null; }
+          set {
+            source_ = value;
+            sourceCase_ = value == null ? SourceOneofCase.None : SourceOneofCase.CloudStoragePath;
+          }
+        }
+
         private object source_;
         /// <summary>Enum of possible cases for the "source" oneof.</summary>
         public enum SourceOneofCase {
           None = 0,
           WordList = 1,
+          CloudStoragePath = 3,
         }
         private SourceOneofCase sourceCase_ = SourceOneofCase.None;
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
@@ -773,6 +799,7 @@ namespace Google.Cloud.Dlp.V2 {
             return true;
           }
           if (!object.Equals(WordList, other.WordList)) return false;
+          if (!object.Equals(CloudStoragePath, other.CloudStoragePath)) return false;
           if (SourceCase != other.SourceCase) return false;
           return Equals(_unknownFields, other._unknownFields);
         }
@@ -781,6 +808,7 @@ namespace Google.Cloud.Dlp.V2 {
         public override int GetHashCode() {
           int hash = 1;
           if (sourceCase_ == SourceOneofCase.WordList) hash ^= WordList.GetHashCode();
+          if (sourceCase_ == SourceOneofCase.CloudStoragePath) hash ^= CloudStoragePath.GetHashCode();
           hash ^= (int) sourceCase_;
           if (_unknownFields != null) {
             hash ^= _unknownFields.GetHashCode();
@@ -799,6 +827,10 @@ namespace Google.Cloud.Dlp.V2 {
             output.WriteRawTag(10);
             output.WriteMessage(WordList);
           }
+          if (sourceCase_ == SourceOneofCase.CloudStoragePath) {
+            output.WriteRawTag(26);
+            output.WriteMessage(CloudStoragePath);
+          }
           if (_unknownFields != null) {
             _unknownFields.WriteTo(output);
           }
@@ -809,6 +841,9 @@ namespace Google.Cloud.Dlp.V2 {
           int size = 0;
           if (sourceCase_ == SourceOneofCase.WordList) {
             size += 1 + pb::CodedOutputStream.ComputeMessageSize(WordList);
+          }
+          if (sourceCase_ == SourceOneofCase.CloudStoragePath) {
+            size += 1 + pb::CodedOutputStream.ComputeMessageSize(CloudStoragePath);
           }
           if (_unknownFields != null) {
             size += _unknownFields.CalculateSize();
@@ -827,6 +862,12 @@ namespace Google.Cloud.Dlp.V2 {
                 WordList = new global::Google.Cloud.Dlp.V2.CustomInfoType.Types.Dictionary.Types.WordList();
               }
               WordList.MergeFrom(other.WordList);
+              break;
+            case SourceOneofCase.CloudStoragePath:
+              if (CloudStoragePath == null) {
+                CloudStoragePath = new global::Google.Cloud.Dlp.V2.CloudStoragePath();
+              }
+              CloudStoragePath.MergeFrom(other.CloudStoragePath);
               break;
           }
 
@@ -848,6 +889,15 @@ namespace Google.Cloud.Dlp.V2 {
                 }
                 input.ReadMessage(subBuilder);
                 WordList = subBuilder;
+                break;
+              }
+              case 26: {
+                global::Google.Cloud.Dlp.V2.CloudStoragePath subBuilder = new global::Google.Cloud.Dlp.V2.CloudStoragePath();
+                if (sourceCase_ == SourceOneofCase.CloudStoragePath) {
+                  subBuilder.MergeFrom(CloudStoragePath);
+                }
+                input.ReadMessage(subBuilder);
+                CloudStoragePath = subBuilder;
                 break;
               }
             }
@@ -2980,6 +3030,142 @@ namespace Google.Cloud.Dlp.V2 {
   }
 
   /// <summary>
+  /// Message representing a path in Cloud Storage.
+  /// </summary>
+  public sealed partial class CloudStoragePath : pb::IMessage<CloudStoragePath> {
+    private static readonly pb::MessageParser<CloudStoragePath> _parser = new pb::MessageParser<CloudStoragePath>(() => new CloudStoragePath());
+    private pb::UnknownFieldSet _unknownFields;
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    public static pb::MessageParser<CloudStoragePath> Parser { get { return _parser; } }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    public static pbr::MessageDescriptor Descriptor {
+      get { return global::Google.Cloud.Dlp.V2.StorageReflection.Descriptor.MessageTypes[7]; }
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    pbr::MessageDescriptor pb::IMessage.Descriptor {
+      get { return Descriptor; }
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    public CloudStoragePath() {
+      OnConstruction();
+    }
+
+    partial void OnConstruction();
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    public CloudStoragePath(CloudStoragePath other) : this() {
+      path_ = other.path_;
+      _unknownFields = pb::UnknownFieldSet.Clone(other._unknownFields);
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    public CloudStoragePath Clone() {
+      return new CloudStoragePath(this);
+    }
+
+    /// <summary>Field number for the "path" field.</summary>
+    public const int PathFieldNumber = 1;
+    private string path_ = "";
+    /// <summary>
+    /// A url representing a file or path (no wildcards) in Cloud Storage.
+    /// Example: gs://[BUCKET_NAME]/dictionary.txt
+    /// </summary>
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    public string Path {
+      get { return path_; }
+      set {
+        path_ = pb::ProtoPreconditions.CheckNotNull(value, "value");
+      }
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    public override bool Equals(object other) {
+      return Equals(other as CloudStoragePath);
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    public bool Equals(CloudStoragePath other) {
+      if (ReferenceEquals(other, null)) {
+        return false;
+      }
+      if (ReferenceEquals(other, this)) {
+        return true;
+      }
+      if (Path != other.Path) return false;
+      return Equals(_unknownFields, other._unknownFields);
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    public override int GetHashCode() {
+      int hash = 1;
+      if (Path.Length != 0) hash ^= Path.GetHashCode();
+      if (_unknownFields != null) {
+        hash ^= _unknownFields.GetHashCode();
+      }
+      return hash;
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    public override string ToString() {
+      return pb::JsonFormatter.ToDiagnosticString(this);
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    public void WriteTo(pb::CodedOutputStream output) {
+      if (Path.Length != 0) {
+        output.WriteRawTag(10);
+        output.WriteString(Path);
+      }
+      if (_unknownFields != null) {
+        _unknownFields.WriteTo(output);
+      }
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    public int CalculateSize() {
+      int size = 0;
+      if (Path.Length != 0) {
+        size += 1 + pb::CodedOutputStream.ComputeStringSize(Path);
+      }
+      if (_unknownFields != null) {
+        size += _unknownFields.CalculateSize();
+      }
+      return size;
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    public void MergeFrom(CloudStoragePath other) {
+      if (other == null) {
+        return;
+      }
+      if (other.Path.Length != 0) {
+        Path = other.Path;
+      }
+      _unknownFields = pb::UnknownFieldSet.MergeFrom(_unknownFields, other._unknownFields);
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    public void MergeFrom(pb::CodedInputStream input) {
+      uint tag;
+      while ((tag = input.ReadTag()) != 0) {
+        switch(tag) {
+          default:
+            _unknownFields = pb::UnknownFieldSet.MergeFieldFrom(_unknownFields, input);
+            break;
+          case 10: {
+            Path = input.ReadString();
+            break;
+          }
+        }
+      }
+    }
+
+  }
+
+  /// <summary>
   /// Options defining BigQuery table and row identifiers.
   /// </summary>
   public sealed partial class BigQueryOptions : pb::IMessage<BigQueryOptions> {
@@ -2990,7 +3176,7 @@ namespace Google.Cloud.Dlp.V2 {
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     public static pbr::MessageDescriptor Descriptor {
-      get { return global::Google.Cloud.Dlp.V2.StorageReflection.Descriptor.MessageTypes[7]; }
+      get { return global::Google.Cloud.Dlp.V2.StorageReflection.Descriptor.MessageTypes[8]; }
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
@@ -3009,6 +3195,7 @@ namespace Google.Cloud.Dlp.V2 {
     public BigQueryOptions(BigQueryOptions other) : this() {
       TableReference = other.tableReference_ != null ? other.TableReference.Clone() : null;
       identifyingFields_ = other.identifyingFields_.Clone();
+      rowsLimit_ = other.rowsLimit_;
       _unknownFields = pb::UnknownFieldSet.Clone(other._unknownFields);
     }
 
@@ -3045,6 +3232,22 @@ namespace Google.Cloud.Dlp.V2 {
       get { return identifyingFields_; }
     }
 
+    /// <summary>Field number for the "rows_limit" field.</summary>
+    public const int RowsLimitFieldNumber = 3;
+    private long rowsLimit_;
+    /// <summary>
+    /// Max number of rows to scan. If the table has more rows than this value, the
+    /// rest of the rows are omitted. If not set, or if set to 0, all rows will be
+    /// scanned. Cannot be used in conjunction with TimespanConfig.
+    /// </summary>
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    public long RowsLimit {
+      get { return rowsLimit_; }
+      set {
+        rowsLimit_ = value;
+      }
+    }
+
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     public override bool Equals(object other) {
       return Equals(other as BigQueryOptions);
@@ -3060,6 +3263,7 @@ namespace Google.Cloud.Dlp.V2 {
       }
       if (!object.Equals(TableReference, other.TableReference)) return false;
       if(!identifyingFields_.Equals(other.identifyingFields_)) return false;
+      if (RowsLimit != other.RowsLimit) return false;
       return Equals(_unknownFields, other._unknownFields);
     }
 
@@ -3068,6 +3272,7 @@ namespace Google.Cloud.Dlp.V2 {
       int hash = 1;
       if (tableReference_ != null) hash ^= TableReference.GetHashCode();
       hash ^= identifyingFields_.GetHashCode();
+      if (RowsLimit != 0L) hash ^= RowsLimit.GetHashCode();
       if (_unknownFields != null) {
         hash ^= _unknownFields.GetHashCode();
       }
@@ -3086,6 +3291,10 @@ namespace Google.Cloud.Dlp.V2 {
         output.WriteMessage(TableReference);
       }
       identifyingFields_.WriteTo(output, _repeated_identifyingFields_codec);
+      if (RowsLimit != 0L) {
+        output.WriteRawTag(24);
+        output.WriteInt64(RowsLimit);
+      }
       if (_unknownFields != null) {
         _unknownFields.WriteTo(output);
       }
@@ -3098,6 +3307,9 @@ namespace Google.Cloud.Dlp.V2 {
         size += 1 + pb::CodedOutputStream.ComputeMessageSize(TableReference);
       }
       size += identifyingFields_.CalculateSize(_repeated_identifyingFields_codec);
+      if (RowsLimit != 0L) {
+        size += 1 + pb::CodedOutputStream.ComputeInt64Size(RowsLimit);
+      }
       if (_unknownFields != null) {
         size += _unknownFields.CalculateSize();
       }
@@ -3116,6 +3328,9 @@ namespace Google.Cloud.Dlp.V2 {
         TableReference.MergeFrom(other.TableReference);
       }
       identifyingFields_.Add(other.identifyingFields_);
+      if (other.RowsLimit != 0L) {
+        RowsLimit = other.RowsLimit;
+      }
       _unknownFields = pb::UnknownFieldSet.MergeFrom(_unknownFields, other._unknownFields);
     }
 
@@ -3138,6 +3353,10 @@ namespace Google.Cloud.Dlp.V2 {
             identifyingFields_.AddEntriesFrom(input, _repeated_identifyingFields_codec);
             break;
           }
+          case 24: {
+            RowsLimit = input.ReadInt64();
+            break;
+          }
         }
       }
     }
@@ -3155,7 +3374,7 @@ namespace Google.Cloud.Dlp.V2 {
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     public static pbr::MessageDescriptor Descriptor {
-      get { return global::Google.Cloud.Dlp.V2.StorageReflection.Descriptor.MessageTypes[8]; }
+      get { return global::Google.Cloud.Dlp.V2.StorageReflection.Descriptor.MessageTypes[9]; }
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
@@ -3708,7 +3927,7 @@ namespace Google.Cloud.Dlp.V2 {
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     public static pbr::MessageDescriptor Descriptor {
-      get { return global::Google.Cloud.Dlp.V2.StorageReflection.Descriptor.MessageTypes[9]; }
+      get { return global::Google.Cloud.Dlp.V2.StorageReflection.Descriptor.MessageTypes[10]; }
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
@@ -3881,7 +4100,7 @@ namespace Google.Cloud.Dlp.V2 {
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     public static pbr::MessageDescriptor Descriptor {
-      get { return global::Google.Cloud.Dlp.V2.StorageReflection.Descriptor.MessageTypes[10]; }
+      get { return global::Google.Cloud.Dlp.V2.StorageReflection.Descriptor.MessageTypes[11]; }
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
@@ -4025,7 +4244,7 @@ namespace Google.Cloud.Dlp.V2 {
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     public static pbr::MessageDescriptor Descriptor {
-      get { return global::Google.Cloud.Dlp.V2.StorageReflection.Descriptor.MessageTypes[11]; }
+      get { return global::Google.Cloud.Dlp.V2.StorageReflection.Descriptor.MessageTypes[12]; }
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
@@ -4445,7 +4664,7 @@ namespace Google.Cloud.Dlp.V2 {
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     public static pbr::MessageDescriptor Descriptor {
-      get { return global::Google.Cloud.Dlp.V2.StorageReflection.Descriptor.MessageTypes[12]; }
+      get { return global::Google.Cloud.Dlp.V2.StorageReflection.Descriptor.MessageTypes[13]; }
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
@@ -4656,7 +4875,7 @@ namespace Google.Cloud.Dlp.V2 {
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     public static pbr::MessageDescriptor Descriptor {
-      get { return global::Google.Cloud.Dlp.V2.StorageReflection.Descriptor.MessageTypes[13]; }
+      get { return global::Google.Cloud.Dlp.V2.StorageReflection.Descriptor.MessageTypes[14]; }
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
@@ -4835,6 +5054,151 @@ namespace Google.Cloud.Dlp.V2 {
           }
           case 26: {
             TableId = input.ReadString();
+            break;
+          }
+        }
+      }
+    }
+
+  }
+
+  /// <summary>
+  /// An entity in a dataset is a field or set of fields that correspond to a
+  /// single person. For example, in medical records the `EntityId` might be a
+  /// patient identifier, or for financial records it might be an account
+  /// identifier. This message is used when generalizations or analysis must take
+  /// into account that multiple rows correspond to the same entity.
+  /// </summary>
+  public sealed partial class EntityId : pb::IMessage<EntityId> {
+    private static readonly pb::MessageParser<EntityId> _parser = new pb::MessageParser<EntityId>(() => new EntityId());
+    private pb::UnknownFieldSet _unknownFields;
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    public static pb::MessageParser<EntityId> Parser { get { return _parser; } }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    public static pbr::MessageDescriptor Descriptor {
+      get { return global::Google.Cloud.Dlp.V2.StorageReflection.Descriptor.MessageTypes[15]; }
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    pbr::MessageDescriptor pb::IMessage.Descriptor {
+      get { return Descriptor; }
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    public EntityId() {
+      OnConstruction();
+    }
+
+    partial void OnConstruction();
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    public EntityId(EntityId other) : this() {
+      Field = other.field_ != null ? other.Field.Clone() : null;
+      _unknownFields = pb::UnknownFieldSet.Clone(other._unknownFields);
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    public EntityId Clone() {
+      return new EntityId(this);
+    }
+
+    /// <summary>Field number for the "field" field.</summary>
+    public const int FieldFieldNumber = 1;
+    private global::Google.Cloud.Dlp.V2.FieldId field_;
+    /// <summary>
+    /// Composite key indicating which field contains the entity identifier.
+    /// </summary>
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    public global::Google.Cloud.Dlp.V2.FieldId Field {
+      get { return field_; }
+      set {
+        field_ = value;
+      }
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    public override bool Equals(object other) {
+      return Equals(other as EntityId);
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    public bool Equals(EntityId other) {
+      if (ReferenceEquals(other, null)) {
+        return false;
+      }
+      if (ReferenceEquals(other, this)) {
+        return true;
+      }
+      if (!object.Equals(Field, other.Field)) return false;
+      return Equals(_unknownFields, other._unknownFields);
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    public override int GetHashCode() {
+      int hash = 1;
+      if (field_ != null) hash ^= Field.GetHashCode();
+      if (_unknownFields != null) {
+        hash ^= _unknownFields.GetHashCode();
+      }
+      return hash;
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    public override string ToString() {
+      return pb::JsonFormatter.ToDiagnosticString(this);
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    public void WriteTo(pb::CodedOutputStream output) {
+      if (field_ != null) {
+        output.WriteRawTag(10);
+        output.WriteMessage(Field);
+      }
+      if (_unknownFields != null) {
+        _unknownFields.WriteTo(output);
+      }
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    public int CalculateSize() {
+      int size = 0;
+      if (field_ != null) {
+        size += 1 + pb::CodedOutputStream.ComputeMessageSize(Field);
+      }
+      if (_unknownFields != null) {
+        size += _unknownFields.CalculateSize();
+      }
+      return size;
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    public void MergeFrom(EntityId other) {
+      if (other == null) {
+        return;
+      }
+      if (other.field_ != null) {
+        if (field_ == null) {
+          field_ = new global::Google.Cloud.Dlp.V2.FieldId();
+        }
+        Field.MergeFrom(other.Field);
+      }
+      _unknownFields = pb::UnknownFieldSet.MergeFrom(_unknownFields, other._unknownFields);
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    public void MergeFrom(pb::CodedInputStream input) {
+      uint tag;
+      while ((tag = input.ReadTag()) != 0) {
+        switch(tag) {
+          default:
+            _unknownFields = pb::UnknownFieldSet.MergeFieldFrom(_unknownFields, input);
+            break;
+          case 10: {
+            if (field_ == null) {
+              field_ = new global::Google.Cloud.Dlp.V2.FieldId();
+            }
+            input.ReadMessage(field_);
             break;
           }
         }
