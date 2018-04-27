@@ -15,6 +15,7 @@
 using System.Diagnostics;
 using System.Linq;
 using System;
+using Google.Cloud.Bigtable.Common.V2;
 
 namespace Google.Cloud.Bigtable.V2
 {
