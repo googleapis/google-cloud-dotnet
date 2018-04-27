@@ -14,6 +14,7 @@
 
 using Google.Api.Gax;
 using Google.Api.Gax.Grpc;
+using Google.Cloud.Bigtable.Common.V2;
 using Google.Protobuf;
 using System.Threading;
 using System.Threading.Tasks;
@@ -41,7 +42,7 @@ namespace Google.Cloud.Bigtable.Admin.V2
         /// </returns>
         public Task DropAllRowsAsync(TableName tableName, CallSettings callSettings = null) =>
             DropRowRangeAsync(
-                CreateDropRowRangeRequest(tableName, rowKeyPrefix: null, deleteAllDataFromTable: true),
+                CreateDropRowRangeRequest(tableName, rowKeyPrefix: default, deleteAllDataFromTable: true),
                 callSettings);
 
         /// <summary>
@@ -83,7 +84,7 @@ namespace Google.Cloud.Bigtable.Admin.V2
         /// </returns>
         public void DropAllRows(TableName tableName, CallSettings callSettings = null) =>
             DropRowRange(
-                CreateDropRowRangeRequest(tableName, rowKeyPrefix: null, deleteAllDataFromTable: true),
+                CreateDropRowRangeRequest(tableName, rowKeyPrefix: default, deleteAllDataFromTable: true),
                 callSettings);
 
         /// <summary>
@@ -92,6 +93,10 @@ namespace Google.Cloud.Bigtable.Admin.V2
         /// <remarks>
         /// <para>
         /// This method simply delegates to <see cref="DropRowRangeAsync(DropRowRangeRequest, CallSettings)"/>.
+        /// </para>
+        /// <para>
+        /// Note that string is implicitly convertible to <see cref="BigtableByteString"/>, so <paramref name="rowKeyPrefix"/> can
+        /// be specified using a string as well and its UTF-8 representations will be used.
         /// </para>
         /// </remarks>
         /// <param name="tableName">
@@ -108,7 +113,7 @@ namespace Google.Cloud.Bigtable.Admin.V2
         /// </returns>
         public Task DropRowRangeAsync(
             TableName tableName,
-            ByteString rowKeyPrefix, // TODO: Use BigtableByteString when shared
+            BigtableByteString rowKeyPrefix,
             CallSettings callSettings = null) =>
             DropRowRangeAsync(
                 CreateDropRowRangeRequest(tableName, rowKeyPrefix, deleteAllDataFromTable: false),
@@ -119,7 +124,11 @@ namespace Google.Cloud.Bigtable.Admin.V2
         /// </summary>
         /// <remarks>
         /// <para>
-        /// This method simply delegates to <see cref="DropRowRangeAsync(TableName, ByteString, CallSettings)"/>.
+        /// This method simply delegates to <see cref="DropRowRangeAsync(TableName, BigtableByteString, CallSettings)"/>.
+        /// </para>
+        /// <para>
+        /// Note that string is implicitly convertible to <see cref="BigtableByteString"/>, so <paramref name="rowKeyPrefix"/> can
+        /// be specified using a string as well and its UTF-8 representations will be used.
         /// </para>
         /// </remarks>
         /// <param name="tableName">
@@ -136,7 +145,7 @@ namespace Google.Cloud.Bigtable.Admin.V2
         /// </returns>
         public Task DropRowRangeAsync(
             TableName tableName,
-            ByteString rowKeyPrefix, // TODO: Use BigtableByteString when shared
+            BigtableByteString rowKeyPrefix,
             CancellationToken cancellationToken) =>
             DropRowRangeAsync(tableName, rowKeyPrefix, CallSettings.FromCancellationToken(cancellationToken));
 
@@ -146,6 +155,10 @@ namespace Google.Cloud.Bigtable.Admin.V2
         /// <remarks>
         /// <para>
         /// This method simply delegates to <see cref="DropRowRange(DropRowRangeRequest, CallSettings)"/>.
+        /// </para>
+        /// <para>
+        /// Note that string is implicitly convertible to <see cref="BigtableByteString"/>, so <paramref name="rowKeyPrefix"/> can
+        /// be specified using a string as well and its UTF-8 representations will be used.
         /// </para>
         /// </remarks>
         /// <param name="tableName">
@@ -159,7 +172,7 @@ namespace Google.Cloud.Bigtable.Admin.V2
         /// </param>
         public void DropRowRange(
             TableName tableName,
-            ByteString rowKeyPrefix, // TODO: Use BigtableByteString when shared
+            BigtableByteString rowKeyPrefix,
             CallSettings callSettings = null) =>
             DropRowRange(
                 CreateDropRowRangeRequest(tableName, rowKeyPrefix, deleteAllDataFromTable: false),
@@ -167,7 +180,7 @@ namespace Google.Cloud.Bigtable.Admin.V2
 
         private static DropRowRangeRequest CreateDropRowRangeRequest(
             TableName tableName,
-            ByteString rowKeyPrefix,
+            BigtableByteString rowKeyPrefix,
             bool deleteAllDataFromTable)
         {
             GaxPreconditions.CheckNotNull(tableName, nameof(tableName));
@@ -179,11 +192,10 @@ namespace Google.Cloud.Bigtable.Admin.V2
             }
             else
             {
-                GaxPreconditions.CheckNotNull(rowKeyPrefix, nameof(rowKeyPrefix));
                 GaxPreconditions.CheckArgument(
                     rowKeyPrefix.Length != 0, nameof(rowKeyPrefix),
                     "The row key prefix must not empty");
-                request.RowKeyPrefix = rowKeyPrefix;
+                request.RowKeyPrefix = rowKeyPrefix.Value;
             }
             return request;
         }

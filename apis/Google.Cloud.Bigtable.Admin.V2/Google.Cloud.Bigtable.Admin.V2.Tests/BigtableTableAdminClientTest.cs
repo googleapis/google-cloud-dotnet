@@ -76,7 +76,7 @@ namespace Google.Cloud.Bigtable.Admin.V2.Tests
         public async Task DropRowRange_Validate_RowKeyPrefix()
         {
             var tableName = new TableName("project", "instance", "table");
-            await DropRowRange_ValidateArguments<ArgumentNullException>(
+            await DropRowRange_ValidateArguments<ArgumentException>(
                 tableName,
                 null);
             await DropRowRange_ValidateArguments<ArgumentException>(
