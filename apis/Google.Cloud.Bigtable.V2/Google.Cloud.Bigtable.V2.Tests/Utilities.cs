@@ -13,6 +13,7 @@
 // limitations under the License.
 
 using Google.Api.Gax.Grpc;
+using Google.Cloud.Bigtable.Common.V2;
 using Google.Protobuf;
 using Google.Rpc;
 using Moq;

@@ -18,7 +18,7 @@ using System.Collections;
 using System.Collections.Generic;
 using System.Text;
 
-namespace Google.Cloud.Bigtable.V2
+namespace Google.Cloud.Bigtable.Common.V2
 {
     /// <summary>
     /// A sequence of bytes which can be used for a row key, column qualifier, or cell value.

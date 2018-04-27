@@ -74,7 +74,8 @@
     "description": "Common code used by Bigtable V2 APIs",
     "tags": [ "Bigtable" ],
     "dependencies": {
-      "Google.Api.Gax": "2.3.0"
+      "Google.Api.Gax": "2.3.0",
+      "Google.Protobuf": "3.5.1"
     }
   },
   
