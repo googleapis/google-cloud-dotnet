@@ -469,6 +469,17 @@
   },
 
   {
+    "id": "Google.Cloud.Redis.V1Beta1",
+    "version": "1.0.0-beta01",
+    "type": "grpc",
+    "description": "Recommended Google client library to manage Redis.",
+    "dependencies": {
+      "Google.LongRunning": "1.0.0",
+    },
+    "tags": [ "Redis" ]
+  },
+
+  {
     "id": "Google.Cloud.Spanner.Admin.Database.V1",
     "productName": "Google Cloud Spanner Database Administration",
     "productUrl": "https://cloud.google.com/spanner/",
