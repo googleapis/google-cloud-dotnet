@@ -207,6 +207,7 @@ generate_api Google.Cloud.Monitoring.V3 google/monitoring/v3 monitoring.yaml
 generate_api Google.Cloud.OsLogin.V1 google/cloud/oslogin/v1 oslogin_v1.yaml
 generate_api Google.Cloud.OsLogin.V1Beta google/cloud/oslogin/v1beta oslogin_v1beta.yaml
 generate_api Google.Cloud.PubSub.V1 google/pubsub/v1 pubsub.yaml
+generate_api Google.Cloud.Redis.V1Beta1 google/cloud/redis/v1beta1 redis_v1beta1.yaml
 generate_api Google.Cloud.Spanner.Admin.Database.V1 google/spanner/admin/database/v1 spanner_admin_database.yaml
 generate_api Google.Cloud.Spanner.Admin.Instance.V1 google/spanner/admin/instance/v1 spanner_admin_instance.yaml
 generate_api Google.Cloud.Spanner.V1 google/spanner/v1 spanner.yaml
