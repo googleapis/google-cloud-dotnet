@@ -4,7 +4,6 @@
     <TargetFrameworks>net452</TargetFrameworks>
     <TargetFrameworks Condition=" '$(OS)' != 'Windows_NT' ">net452</TargetFrameworks>
     <LangVersion>latest</LangVersion>
-    <Features>IOperation</Features>
     <IsPackable>false</IsPackable>
     <AssemblyOriginatorKeyFile>../../GoogleApis.snk</AssemblyOriginatorKeyFile>
     <SignAssembly>true</SignAssembly>

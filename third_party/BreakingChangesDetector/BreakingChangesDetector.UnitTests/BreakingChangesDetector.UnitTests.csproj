@@ -3,7 +3,6 @@
   <PropertyGroup>
     <TargetFrameworks>net461</TargetFrameworks>
     <LangVersion>latest</LangVersion>
-    <Features>IOperation</Features>
     <IsPackable>false</IsPackable>
     <SignAssembly>true</SignAssembly>
     <TreatWarningsAsErrors>true</TreatWarningsAsErrors>
