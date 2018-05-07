@@ -335,7 +335,6 @@ namespace Google.Cloud.Tools.ProjectGenerator
                 new XElement("TargetFrameworks", targetFrameworks),
                 new XElement("TargetFrameworks", new XAttribute("Condition", " '$(OS)' != 'Windows_NT' "), AnyDesktopFramework.Replace(targetFrameworks, "")),
                 new XElement("LangVersion", "latest"),
-                new XElement("Features", "IOperation"),
                 new XElement("GenerateDocumentationFile", api.Type != ApiType.Analyzers),
                 new XElement("AssemblyOriginatorKeyFile", "../../GoogleApis.snk"),
                 new XElement("SignAssembly", true),
@@ -397,7 +396,7 @@ namespace Google.Cloud.Tools.ProjectGenerator
         private static void GenerateTestProject(ApiMetadata api, string directory, HashSet<string> apiNames, bool isForAnalyzers = false)
         {
             // Don't generate a project file if we've got a placeholder directory
-            if (Directory.GetFiles(directory, "*.cs").Length == 0)
+            if (Directory.GetFiles(directory, "*.cs", SearchOption.AllDirectories).Length == 0)
             {
                 return;
             }
@@ -422,7 +421,6 @@ namespace Google.Cloud.Tools.ProjectGenerator
                     new XElement("TargetFrameworks", testTargetFrameworks),
                     new XElement("TargetFrameworks", new XAttribute("Condition", " '$(OS)' != 'Windows_NT' "), AnyDesktopFramework.Replace(testTargetFrameworks, "")),
                     new XElement("LangVersion", "latest"),
-                    new XElement("Features", "IOperation"),
                     new XElement("IsPackable", false),
                     new XElement("AssemblyOriginatorKeyFile", "../../GoogleApis.snk"),
                     new XElement("SignAssembly", true),
@@ -449,7 +447,7 @@ namespace Google.Cloud.Tools.ProjectGenerator
         private static void GenerateCoverageFile(ApiMetadata api, string directory)
         {
             // Don't generate a coverage file if we've got a placeholder directory
-            if (Directory.GetFiles(directory, "*.cs").Length == 0)
+            if (Directory.GetFiles(directory, "*.cs", SearchOption.AllDirectories).Length == 0)
             {
                 return;
             }

@@ -26,8 +26,7 @@ namespace Google.Cloud.Tools.Analyzers.Tests
             solution =
                 solution.WithProjectParseOptions(projectId,
                     CSharpParseOptions.Default
-                        .WithLanguageVersion(LanguageVersion.CSharp7_1)
-                        .WithFeatures(new[] { new KeyValuePair<string, string>("IOperation", "true") }));
+                        .WithLanguageVersion(LanguageVersion.CSharp7_1));
         }
     }
 }
