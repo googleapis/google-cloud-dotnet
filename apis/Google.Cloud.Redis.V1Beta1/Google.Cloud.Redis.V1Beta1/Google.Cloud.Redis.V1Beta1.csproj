@@ -5,14 +5,13 @@
     <TargetFrameworks>netstandard1.5;net45</TargetFrameworks>
     <TargetFrameworks Condition=" '$(OS)' != 'Windows_NT' ">netstandard1.5</TargetFrameworks>
     <LangVersion>latest</LangVersion>
-    <Features>IOperation</Features>
     <GenerateDocumentationFile>true</GenerateDocumentationFile>
     <AssemblyOriginatorKeyFile>../../GoogleApis.snk</AssemblyOriginatorKeyFile>
     <SignAssembly>true</SignAssembly>
     <Deterministic>true</Deterministic>
     <TreatWarningsAsErrors>true</TreatWarningsAsErrors>
-    <Description>Recommended Google client library to manage Redis.</Description>
-    <PackageTags>Redis;Google;Cloud</PackageTags>
+    <Description>Recommended Google client library to administer Cloud Memorystore for Redis.</Description>
+    <PackageTags>Redis;Memorystore;Google;Cloud</PackageTags>
     <Copyright>Copyright 2018 Google LLC</Copyright>
     <Authors>Google Inc.</Authors>
     <PackageIconUrl>https://cloud.google.com/images/gcp-icon-64x64.png</PackageIconUrl>

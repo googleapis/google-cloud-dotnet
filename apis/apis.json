@@ -470,13 +470,15 @@
 
   {
     "id": "Google.Cloud.Redis.V1Beta1",
+    "productName": "Google Cloud Memorystore for Redis",
+    "productUrl": "https://cloud.google.com/memorystore/",
     "version": "1.0.0-beta01",
     "type": "grpc",
-    "description": "Recommended Google client library to manage Redis.",
+    "description": "Recommended Google client library to administer Cloud Memorystore for Redis.",
     "dependencies": {
       "Google.LongRunning": "1.0.0",
     },
-    "tags": [ "Redis" ]
+    "tags": [ "Redis", "Memorystore" ]
   },
 
   {
