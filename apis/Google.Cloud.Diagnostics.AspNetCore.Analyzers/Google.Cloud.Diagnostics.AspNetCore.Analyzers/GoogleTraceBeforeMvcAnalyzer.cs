@@ -194,6 +194,8 @@ namespace Google.Cloud.Diagnostics.AspNetCore.Analyzers
         {
             switch (node.Kind())
             {
+                case SyntaxKind.StructDeclaration:
+                case SyntaxKind.ClassDeclaration:
                 case SyntaxKind.MethodDeclaration:
                 case SyntaxKind.AnonymousMethodExpression:
                 case SyntaxKind.ParenthesizedLambdaExpression:

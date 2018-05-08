@@ -720,6 +720,82 @@ namespace Google.Cloud.Diagnostics.AspNetCore
         }
 
         [Fact]
+        public void FieldAccessNotInMethodCorrectOrder()
+        {
+            var test = @"
+using Google.Cloud.Diagnostics.AspNetCore;
+using Microsoft.AspNetCore.Builder;
+
+class A
+{
+    private IApplicationBuilder _app;
+    private IApplicationBuilder _app2 = _app.UseGoogleTrace().UseMvc();
+}
+
+namespace Google.Cloud.Diagnostics.AspNetCore
+{
+    public static class CloudTraceExtension
+    {
+        public static IApplicationBuilder UseGoogleTrace(this IApplicationBuilder app) { return app; }
+    }
+}";
+            VerifyCSharpDiagnostic(test);
+        }
+
+        [Fact]
+        public void FieldAccessNotInMethodIncorrectOrder()
+        {
+            var test = @"
+using Google.Cloud.Diagnostics.AspNetCore;
+using Microsoft.AspNetCore.Builder;
+
+class A
+{
+    private IApplicationBuilder _app;
+    private IApplicationBuilder _app2 = _app.UseMvc().UseGoogleTrace();
+}
+
+namespace Google.Cloud.Diagnostics.AspNetCore
+{
+    public static class CloudTraceExtension
+    {
+        public static IApplicationBuilder UseGoogleTrace(this IApplicationBuilder app) { return app; }
+    }
+}";
+            var expected = CreateDiagnostic("UseMvc", 8, 55);
+            VerifyCSharpDiagnostic(test, expected);
+        }
+
+        [Fact]
+        public void FieldAccessNotInMethodSeparateScopes()
+        {
+            var test = @"
+using Google.Cloud.Diagnostics.AspNetCore;
+using Microsoft.AspNetCore.Builder;
+
+class A
+{
+    private IApplicationBuilder _app;
+    private IApplicationBuilder _app2 = _app.UseMvc();
+}
+
+class B
+{
+    private IApplicationBuilder _app;
+    private IApplicationBuilder _app2 = _app.UseGoogleTrace();
+}
+
+namespace Google.Cloud.Diagnostics.AspNetCore
+{
+    public static class CloudTraceExtension
+    {
+        public static IApplicationBuilder UseGoogleTrace(this IApplicationBuilder app) { return app; }
+    }
+}";
+            VerifyCSharpDiagnostic(test);
+        }
+
+        [Fact]
         public void PropertyAccessSameScope()
         {
             var test = @"
