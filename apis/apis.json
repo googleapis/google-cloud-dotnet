@@ -200,7 +200,7 @@
     "tags": [ "Error", "Reporting", "Stackdriver", "ExceptionLogger", "Trace", "Diagnostics" ],
     "dependencies": {
       "Google.Cloud.Diagnostics.Common": "project",
-      "Google.Cloud.Diagnostics.AspNetCore.Analyzers": "1.0.0-beta01",
+      "Google.Cloud.Diagnostics.AspNetCore.Analyzers": "1.0.0-beta02",
       "Grpc.Core": "1.10.0"
     },
     "testDependencies": {
