@@ -15,7 +15,9 @@
 using Google.Api.Gax.Grpc;
 using Google.Cloud.Firestore.V1Beta1;
 using Google.Protobuf;
+using Google.Protobuf.Collections;
 using Google.Protobuf.WellKnownTypes;
+using Grpc.Core;
 using System;
 using System.Collections.Generic;
 using System.IO;
@@ -56,6 +58,7 @@ namespace Google.Cloud.Firestore.Tests.Proto
         public static IEnumerable<object[]> SetTests => FindTests(TestOneofCase.Set);
         public static IEnumerable<object[]> UpdateTests => FindTests(TestOneofCase.Update);
         public static IEnumerable<object[]> UpdatePathsTests => FindTests(TestOneofCase.UpdatePaths);
+        public static IEnumerable<object[]> ListenTests => FindTests(TestOneofCase.Listen);
 
         private static readonly IDictionary<string, Func<Query, Firestore.FieldPath, object, Query>> QueryOperators =
             new Dictionary<string, Func<Query, Firestore.FieldPath, object, Query>>
@@ -71,15 +74,16 @@ namespace Google.Cloud.Firestore.Tests.Proto
         public void AllTestsKnown()
         {
             var testTypes = s_allTests.Select(t => t.TestCase)
-                // All the test types used above
                 .Except(new[]
                 {
+                    // All the test types used above
                     TestOneofCase.Create,
                     TestOneofCase.Delete,
                     TestOneofCase.Set,
                     TestOneofCase.Query,
                     TestOneofCase.Update,
                     TestOneofCase.UpdatePaths,
+                    TestOneofCase.Listen,
                     // We don't test Get as GetDocument is never used in this client.
                     TestOneofCase.Get
                 });
@@ -245,7 +249,85 @@ namespace Google.Cloud.Firestore.Tests.Proto
                 batch.Update(doc, updates, precondition);
             });
         }
-        
+
+        [Theory]
+        [MemberData(nameof(ListenTests))]
+        public async Task Listen(SerializableTest wrapper)
+        {
+            ListenTest test = wrapper.Test.Listen;
+            var db = FirestoreDb.Create(ProjectId, DatabaseId, new FakeFirestoreClient());
+            var query = db.Collection("C").OrderBy("a");
+
+            Func<Task> action = async () =>
+            {
+                List<QuerySnapshot> snapshots = new List<QuerySnapshot>();
+                var watchState = new WatchState(query, (snapshot, token) => { snapshots.Add(snapshot); return Task.FromResult(1); });
+                watchState.OnStreamInitialization(StreamInitializationCause.WatchStarting);
+                foreach (var response in test.Responses)
+                {
+                    // Fix up the test response to use our watch target ID.
+                    ReplaceWatchTargetId(response.TargetChange?.TargetIds);
+                    ReplaceWatchTargetId(response.DocumentChange?.TargetIds);
+                    ReplaceWatchTargetId(response.DocumentChange?.RemovedTargetIds);
+                    ReplaceWatchTargetId(response.DocumentDelete?.RemovedTargetIds);
+                    ReplaceWatchTargetId(response.DocumentRemove?.RemovedTargetIds);
+
+                    var result = await watchState.HandleResponseAsync(response, default);
+                    if (result == WatchResponseResult.ResetStream)
+                    {
+                        watchState.OnStreamInitialization(StreamInitializationCause.ResetRequested);
+                    }
+                }
+                var expectedSnapshots = test.Snapshots.Select(snapshot => ConvertSnapshot(snapshot)).ToList();
+                Assert.Equal(expectedSnapshots, snapshots);
+            };
+
+            if (test.IsError)
+            {
+                // TODO: Should we actually check that it's only the last response that causes the exception?
+                var exception = await Assert.ThrowsAnyAsync<Exception>(action);
+                Assert.True(exception is ArgumentException || exception is InvalidOperationException || exception is RpcException,
+                    $"Exception type: {exception.GetType()}");
+            }
+            else
+            {
+                await action();
+            }
+
+            // Different clients use different watch target IDs. The test data always uses 1
+            // to mean "the target ID that the client uses".
+            void ReplaceWatchTargetId(RepeatedField<int> ids)
+            {
+                if (ids == null)
+                {
+                    return;
+                }
+                for (int i = 0; i < ids.Count; i++)
+                {
+                    if (ids[i] == 1)
+                    {
+                        ids[i] = WatchStream.WatchTargetId;
+                    }
+                }
+            }
+
+            // Converts from a test proto snapshot to a QuerySnapshot
+            QuerySnapshot ConvertSnapshot(Snapshot snapshot)
+            {
+                var readTime = Timestamp.FromProto(snapshot.ReadTime);
+                var changes = snapshot.Changes.Select(change => ConvertChange(change, readTime)).ToList();
+                var docs = snapshot.Docs.Select(doc => DocumentSnapshot.ForDocument(db, doc, readTime)).ToList();
+                return QuerySnapshot.ForChanges(query, docs, changes, readTime);
+            }
+
+            DocumentChange ConvertChange(DocChange change, Timestamp readTime)
+            {
+                var snapshot = DocumentSnapshot.ForDocument(db, change.Doc, readTime);
+                return new DocumentChange(snapshot, (DocumentChange.Type) change.Kind, 
+                    change.OldIndex == -1 ? default(int?) : change.OldIndex, change.NewIndex == - 1 ? default(int?) : change.NewIndex);
+            }
+        }
+
         private static Firestore.FieldPath ConvertFieldPath(FieldPath testFieldPath) =>
             new Firestore.FieldPath(testFieldPath.Field.ToArray());
 

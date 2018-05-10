@@ -38,7 +38,7 @@ namespace Google.Cloud.Firestore
         internal static QuerySnapshot ForDocuments(Query query, IReadOnlyList<DocumentSnapshot> documents, Timestamp readTime) =>
             new QuerySnapshot(query, () => documents, () => new LazyChangeList(documents), readTime);
 
-        internal static QuerySnapshot ForChanges(Query query, DocumentSet documentSet, IReadOnlyList<DocumentChange> changes, Timestamp readTime) =>
+        internal static QuerySnapshot ForChanges(Query query, IEnumerable<DocumentSnapshot> documentSet, IReadOnlyList<DocumentChange> changes, Timestamp readTime) =>
             new QuerySnapshot(query, () => documentSet.ToList().AsReadOnly(), () => changes, readTime);
 
         /// <summary>
