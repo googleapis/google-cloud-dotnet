@@ -59,6 +59,11 @@ environment variables:
 - `TEST_PROJECT`: The name of the Google Cloud Project to test against
 - `GOOGLE_APPLICATION_CREDENTIALS`: The absolute path to a JSON file
   containing service credentials for the test project.
+- `MUST_NOT_SKIP_TESTS`: If this is set to any non-empty value, tests
+  that require other environment variables will fail rather than being
+  skipped. (Tests that require more elaborate configuration default to
+  being skipped to avoid placing an unnecessary burden on developers,
+  but we want to run them in CI.)
 
 Per API configuration
 =====================
@@ -107,3 +112,14 @@ Google.Cloud.Storage.V1
 -----------------------
 
 - Enable the Google Cloud Pub/Sub API as well as Google Cloud Storage
+
+Environment variables for KMS testing (all just IDs rather than full
+resource names):
+
+- `US_KMS_TEST_KEYRING`: The ID of a keyring in the "us" location.
+- `US_KMS_TEST_KEY1`: The ID of a key within the above US keyring
+- `US_KMS_TEST_KEY2`: The ID of a second key within the above US keyring
+- `REQUESTER_PAYS_TEST_PROJECT`: The ID of a second project to use
+  when testing the "requester pays" feature.
+- `REQUESTER_PAYS_CREDENTIALS`: The path to a service account credentials
+  file for the requester pays project
