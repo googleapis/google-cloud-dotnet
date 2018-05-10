@@ -4,12 +4,15 @@ syntax = "proto3";
 
 package tests;
 
+option php_namespace = "Google\\Cloud\\Firestore\\Tests\\Conformance";
 option csharp_namespace = "Google.Cloud.Firestore.Tests.Proto";
 option java_package = "com.google.cloud.firestore.conformance";
 
-import "google/firestore/v1beta1/firestore.proto";
 import "google/firestore/v1beta1/common.proto";
+import "google/firestore/v1beta1/document.proto";
+import "google/firestore/v1beta1/firestore.proto";
 import "google/firestore/v1beta1/query.proto";
+import "google/protobuf/timestamp.proto";
 
 // A collection of tests.
 message TestSuite {
@@ -28,6 +31,7 @@ message Test {
     UpdatePathsTest update_paths = 6;
     DeleteTest      delete = 7;
     QueryTest       query = 8;
+    ListenTest      listen = 9;
   }
 }
 
@@ -152,4 +156,41 @@ message DocSnapshot {
 
 message FieldPath {
   repeated string field = 1;
+}
+
+// A test of the Listen streaming RPC (a.k.a. FireStore watch).
+// If the sequence of responses is provided to the implementation,
+// it should produce the sequence of snapshots.
+// If is_error is true, an error should occur after the snapshots.
+//
+// The tests assume that the query is
+// Collection("projects/projectID/databases/(default)/documents/C").OrderBy("a", Ascending)
+//
+// The watch target ID used in these tests is 1. Test interpreters
+// should either change their client's ID for testing,
+// or change the ID in the tests before running them.
+message ListenTest {
+  repeated google.firestore.v1beta1.ListenResponse responses = 1;
+  repeated Snapshot snapshots = 2;
+  bool is_error = 3;
+}
+
+message Snapshot {
+  repeated google.firestore.v1beta1.Document docs = 1;
+  repeated DocChange changes = 2;
+  google.protobuf.Timestamp read_time = 3;
+}
+
+message DocChange {
+  enum Kind {
+    KIND_UNSPECIFIED = 0;
+    ADDED = 1;
+    REMOVED = 2;
+    MODIFIED = 3;
+  }
+
+  Kind kind = 1;
+  google.firestore.v1beta1.Document doc = 2;
+  int32 old_index = 3;
+  int32 new_index = 4;
 }
