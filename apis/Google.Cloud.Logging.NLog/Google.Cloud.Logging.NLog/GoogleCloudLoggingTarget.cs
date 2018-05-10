@@ -64,6 +64,9 @@ namespace Google.Cloud.Logging.NLog
         /// Google Compute Engine: ResourceType "gce_instance", with project_id, instance_id, and zone set approprately.
         /// </description></item>
         /// <item><description>
+        /// Google Kubernetes Engine: ResourceType "container", with project_id and other labels set approprately.
+        /// </description></item>
+        /// <item><description>
         /// Unknown: ResourceType "global", with project_id set from this configuration.
         /// </description></item>
         /// </list>
@@ -74,8 +77,8 @@ namespace Google.Cloud.Logging.NLog
 
         /// <summary>
         /// The project ID for all log entries.
-        /// Must be configured in not executing on Google Compute Engine or Google App Engine.
-        /// If running on GCE or GAE, the ProjectId will be automatically detected if not set.
+        /// Must be configured if not executing on Google Compute Engine, Google App Engine, or Google Kubernetes Engine.
+        /// If running on GCE, GAE or GKE, the ProjectId will be automatically detected if not set.
         /// </summary>
         public Layout ProjectId { get; set; }
 
