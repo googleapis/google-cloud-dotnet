@@ -143,17 +143,38 @@ namespace Google.Cloud.Firestore
             return this;
         }
 
+        /// <summary></summary>
+        /// <param name="documentReference"></param>
+        /// <param name="documentData"></param>
+        /// <returns></returns>
+        public WriteBatch Set(DocumentReference documentReference, object documentData) => Set(documentReference, documentData, SetOptions.Overwrite);
+
+        /// <summary></summary>
+        /// <param name="documentReference"></param>
+        /// <param name="documentData"></param>
+        /// <param name="merge"></param>
+        /// <returns></returns>
+        public WriteBatch Set(DocumentReference documentReference, object documentData, bool merge) => Set(documentReference, documentData, merge ? SetOptions.MergeAll : SetOptions.Overwrite);
+
+        /// <summary></summary>
+        /// <param name="documentReference"></param>
+        /// <param name="documentData"></param>
+        /// <param name="mergeFields"></param>
+        /// <returns></returns>
+        public WriteBatch Set(DocumentReference documentReference, object documentData, params string[] mergeFields) => Set(documentReference, documentData, SetOptions.MergeFields(mergeFields));
+
         /// <summary>
         /// Adds an operation that sets data in a document, either replacing it completely or merging fields.
         /// </summary>
         /// <param name="documentReference">A document reference indicating the path of the document to update. Must not be null.</param>
         /// <param name="documentData">The data to store in the document. Must not be null.</param>
-        /// <param name="options">The options to use when setting data in the document. May be null, which is equivalent to <see cref="SetOptions.Overwrite"/>.</param>
+        /// <param name="options">The options to use when setting data in the document. Must not be null.</param>
         /// <returns>This batch, for the purposes of method chaining.</returns>
-        public WriteBatch Set(DocumentReference documentReference, object documentData, SetOptions options = null)
+        internal WriteBatch Set(DocumentReference documentReference, object documentData, SetOptions options)
         {
             GaxPreconditions.CheckNotNull(documentReference, nameof(documentReference));
             GaxPreconditions.CheckNotNull(documentData, nameof(documentData));
+            GaxPreconditions.CheckNotNull(options, nameof(options));
 
             var fields = ValueSerializer.SerializeMap(documentData);
             options = options ?? SetOptions.Overwrite;

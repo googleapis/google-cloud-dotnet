@@ -124,13 +124,33 @@ namespace Google.Cloud.Firestore
             _writes.Create(documentReference, documentData);
         }
 
+        /// <summary></summary>
+        /// <param name="documentReference"></param>
+        /// <param name="documentData"></param>
+        /// <returns></returns>
+        public void Set(DocumentReference documentReference, object documentData) => Set(documentReference, documentData, SetOptions.Overwrite);
+
+        /// <summary></summary>
+        /// <param name="documentReference"></param>
+        /// <param name="documentData"></param>
+        /// <param name="merge"></param>
+        /// <returns></returns>
+        public void Set(DocumentReference documentReference, object documentData, bool merge) => Set(documentReference, documentData, merge ? SetOptions.MergeAll : SetOptions.Overwrite);
+
+        /// <summary></summary>
+        /// <param name="documentReference"></param>
+        /// <param name="documentData"></param>
+        /// <param name="mergeFields"></param>
+        /// <returns></returns>
+        public void Set(DocumentReference documentReference, object documentData, params string[] mergeFields) => Set(documentReference, documentData, SetOptions.MergeFields(mergeFields));
+
         /// <summary>
         /// Adds an operation to set a document's data in this transaction.
         /// </summary>
         /// <param name="documentReference">The document in which to set the data. Must not be null.</param>
         /// <param name="documentData">The data for the document. Must not be null.</param>
-        /// <param name="options">The options to use when updating the document. May be null, which is equivalent to <see cref="SetOptions.Overwrite"/>.</param>
-        public void Set(DocumentReference documentReference, object documentData, SetOptions options = null)
+        /// <param name="options">The options to use when updating the document. Must not be null.</param>
+        internal void Set(DocumentReference documentReference, object documentData, SetOptions options)
         {
             // Preconditions are validated by WriteBatch.
             _writes.Set(documentReference, documentData, options);
