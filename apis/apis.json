@@ -310,6 +310,27 @@
   },
 
   {
+    "id": "Google.Cloud.Logging.NLog",
+    "version": "2.0.0-beta00",
+    "type": "other",
+    "targetFrameworks": "netstandard1.5;net45",
+    "testTargetFrameworks": "netcoreapp1.0;net452",
+    "description": "NLog target for the Google Stackdriver Logging API.",
+    "tags": [ "NLog", "Logging", "Stackdriver" ],
+    "dependencies": {
+      "NLog": "4.5.0",
+      "Google.Api.Gax.Grpc": "2.3.0",
+      "Google.Cloud.Logging.V2": "2.1.0",
+      "Google.Cloud.DevTools.Common": "1.0.0",
+      "Grpc.Core": "1.10.0"
+    },
+    "testDependencies": {
+      "Google.Api.Gax.Testing": "2.3.0",
+      "Xunit.SkippableFact": "1.3.3" // Remove once uptodate with master
+    }
+  },
+
+  {
     "id": "Google.Cloud.Logging.Type",
     "version": "2.1.0-beta00",
     "type": "other",
