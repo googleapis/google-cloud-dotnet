@@ -102,8 +102,8 @@ namespace Google.Cloud.Firestore.IntegrationTests
             var doc = await _fixture.NonQueryCollection.AddAsync(new { Count = 0 });
             var latch = new CountdownEvent(2);
 
-            var t1 = db.RunTransactionAsync(IncrementCounter, TransactionOptions.Create(1));
-            var t2 = db.RunTransactionAsync(IncrementCounter, TransactionOptions.Create(1));
+            var t1 = db.RunTransactionAsync(IncrementCounter, 1);
+            var t2 = db.RunTransactionAsync(IncrementCounter, 1);
             await Assert.ThrowsAsync<RpcException>(() => Task.WhenAll(t1, t2));
 
             // Exactly one of the transactions should be faulted.

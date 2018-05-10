@@ -27,7 +27,7 @@ namespace Google.Cloud.Firestore
 {
     /// <summary>
     /// A transaction, as created by
-    /// <see cref="FirestoreDb.RunTransactionAsync{T}(System.Func{Transaction, Task{T}}, TransactionOptions, CancellationToken)"/>
+    /// <see cref="FirestoreDb.RunTransactionAsync{T}(System.Func{Transaction, Task{T}}, int, CancellationToken)"/>
     /// (and overloads) and passed to user code.
     /// </summary>
     public sealed class Transaction

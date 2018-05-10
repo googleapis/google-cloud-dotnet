@@ -121,21 +121,17 @@ namespace Google.Cloud.Firestore.Tests
         }
 
         [Theory]
-        [InlineData(null)]
         [InlineData(2)]
         [InlineData(10)]
-        public async Task RunTransactionAsync_TooManyRetries(int? userSpecifiedAttempts)
+        public async Task RunTransactionAsync_TooManyRetries(int maxAttempts)
         {
-            int actualAttempts = userSpecifiedAttempts ?? TransactionOptions.Default.MaxAttempts;
-            var options = userSpecifiedAttempts == null ? null : TransactionOptions.Create(userSpecifiedAttempts.Value);
-
-            var client = new TransactionTestingClient(actualAttempts, CreateRpcException(StatusCode.Aborted));
+            var client = new TransactionTestingClient(maxAttempts, CreateRpcException(StatusCode.Aborted));
             var db = FirestoreDb.Create("proj", "db", client);
-            var exception = await Assert.ThrowsAsync<RpcException>(() => db.RunTransactionAsync(CreateCountingCallback(), options));
+            var exception = await Assert.ThrowsAsync<RpcException>(() => db.RunTransactionAsync(CreateCountingCallback(), maxAttempts));
             Assert.Equal(StatusCode.Aborted, exception.Status.StatusCode);
             // We should have made as many attempts as we were allowed, and all should have been rolled back.
-            Assert.Equal(actualAttempts, client.CommitRequests.Count);
-            Assert.Equal(actualAttempts, client.RollbackRequests.Count);
+            Assert.Equal(maxAttempts, client.CommitRequests.Count);
+            Assert.Equal(maxAttempts, client.RollbackRequests.Count);
         }
 
         /// <summary>
