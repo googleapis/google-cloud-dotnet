@@ -29,6 +29,8 @@ using NLog.Config;
 using NLog.Targets;
 using NLog.Common;
 using NLog.Layouts;
+using System.Threading.Tasks;
+using System.Threading;
 
 namespace Google.Cloud.Logging.NLog
 {
@@ -40,7 +42,7 @@ namespace Google.Cloud.Logging.NLog
     {
         /// <summary>
         /// The file path of a service account JSON file to use for authenitication.
-        /// Not necessary if running on GCE or GAE or if the GOOGLE_APPLICATION_CREDENTIALS environment variable has been set.
+        /// Not necessary if running on GCE, GAE or GKE, or if the GOOGLE_APPLICATION_CREDENTIALS environment variable has been set.
         /// </summary>
         public Layout CredentialFile { get; set; }
 
@@ -77,7 +79,7 @@ namespace Google.Cloud.Logging.NLog
 
         /// <summary>
         /// The project ID for all log entries.
-        /// Must be configured if not executing on Google Compute Engine, Google App Engine, or Google Kubernetes Engine.
+        /// Must be configured if not executing on Google Compute Engine, Google App Engine or Google Kubernetes Engine.
         /// If running on GCE, GAE or GKE, the ProjectId will be automatically detected if not set.
         /// </summary>
         public Layout ProjectId { get; set; }
@@ -106,8 +108,8 @@ namespace Google.Cloud.Logging.NLog
         private MonitoredResource _resource;
         private string _logName;
         private LogNameOneof _logNameToWrite;
-        private System.Threading.Tasks.Task _prevTask;
-        private System.Threading.CancellationTokenSource _cancelTokenSource;
+        private Task _prevTask;
+        private CancellationTokenSource _cancelTokenSource;
 
         private static readonly string[] s_oAuthScopes = new string[] { "https://www.googleapis.com/auth/logging.write" };
         private static readonly Dictionary<string, string> s_emptyLabels = new Dictionary<string, string>();
@@ -123,23 +125,20 @@ namespace Google.Cloud.Logging.NLog
         };
 
         /// <summary>
-        /// Constructor
+        /// Construct a Google Cloud loggin target.
         /// </summary>
-        public GoogleCloudLoggingTarget()
-            :this(null)
+        public GoogleCloudLoggingTarget() : this(null)
         {
         }
 
-        /// <summary>
-        /// Constructor
-        /// </summary>
-        public GoogleCloudLoggingTarget(LoggingServiceV2Client client)
+        // For testing only.
+        internal GoogleCloudLoggingTarget(LoggingServiceV2Client client)
         {
             ResourceLabels = new List<TargetPropertyWithContext>();
             _contextProperties = new List<TargetPropertyWithContext>();
             _client = client;
             LogId = "Default";
-			OptimizeBufferReuse = true;
+            OptimizeBufferReuse = true;
         }
 
         /// <summary>
@@ -147,9 +146,9 @@ namespace Google.Cloud.Logging.NLog
         /// </summary>
         protected override void InitializeTarget()
         {
-            _cancelTokenSource = new System.Threading.CancellationTokenSource();
+            _cancelTokenSource = new CancellationTokenSource();
 
-            _platform = _platform ?? Platform.Instance();
+            _platform = Platform.Instance();
             string logId = LogId?.Render(LogEventInfo.CreateNullEvent());
             if (string.IsNullOrWhiteSpace(logId))
             {
@@ -178,7 +177,7 @@ namespace Google.Cloud.Logging.NLog
         /// </summary>
         protected override void FlushAsync(AsyncContinuation asyncContinuation)
         {
-            _prevTask?.ContinueWith((prevTask) => asyncContinuation(null));
+            _prevTask?.ContinueWith((prevTask) => asyncContinuation(null), TaskScheduler.Default);
         }
 
         private LoggingServiceV2Client BuildLoggingServiceClient()
@@ -254,7 +253,8 @@ namespace Google.Cloud.Logging.NLog
         {
             var continuation = logEvent.Continuation;
             var logEntry = BuildLogEntry(logEvent.LogEvent);
-            _prevTask = _client.WriteLogEntriesAsync(_logNameToWrite, _resource, s_emptyLabels, new[] { logEntry }, _cancelTokenSource.Token).ContinueWith(WriteContinuation, continuation);
+            _prevTask = _client.WriteLogEntriesAsync(_logNameToWrite, _resource, s_emptyLabels, new[] { logEntry }, _cancelTokenSource.Token)
+                .ContinueWith(WriteContinuation, continuation, TaskScheduler.Default);
         }
 
         /// <summary>
@@ -280,10 +280,11 @@ namespace Google.Cloud.Logging.NLog
                 }
             }
 
-            _prevTask = _client.WriteLogEntriesAsync(_logNameToWrite, _resource, s_emptyLabels, logEntries, _cancelTokenSource.Token).ContinueWith(WriteContinuation, continuationList);
+            _prevTask = _client.WriteLogEntriesAsync(_logNameToWrite, _resource, s_emptyLabels, logEntries, _cancelTokenSource.Token)
+                .ContinueWith(WriteContinuation, continuationList, TaskScheduler.Default);
         }
 
-        private static void WriteContinuation(System.Threading.Tasks.Task<WriteLogEntriesResponse> prevTask, object state)
+        private static void WriteContinuation(Task<WriteLogEntriesResponse> prevTask, object state)
         {
             if (prevTask.Exception != null)
             {
