@@ -1,10 +1,12 @@
 # Version history
 
-# (Unreleased)
+# 2.2.0-beta01, 2018-05-14
 
 New features:
 
 - Option to delete objects automatically when deleting a bucket
+- Support for [customer-managed encryption
+  keys](https://cloud.google.com/storage/docs/encryption/customer-managed-keys)
 
 # 2.1.0, 2018-01-02
 
