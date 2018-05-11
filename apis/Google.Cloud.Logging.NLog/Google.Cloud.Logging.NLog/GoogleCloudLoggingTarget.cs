@@ -151,10 +151,7 @@ namespace Google.Cloud.Logging.NLog
 
             _platform = _platform ?? Platform.Instance();
             string logId = LogId?.Render(LogEventInfo.CreateNullEvent());
-            if (string.IsNullOrWhiteSpace(logId))
-            {
-                throw new ArgumentNullException(nameof(LogId), $"{nameof(LogId)} must be set.");
-            }
+            GaxPreconditions.CheckNotNullOrEmpty(logId, nameof(LogId));
 
             ActivateLogIdAndResource(logId);
 
