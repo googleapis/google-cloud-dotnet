@@ -127,16 +127,17 @@ namespace Google.Cloud.Logging.NLog
         /// <summary>
         /// Construct a Google Cloud loggin target.
         /// </summary>
-        public GoogleCloudLoggingTarget() : this(null)
+        public GoogleCloudLoggingTarget() : this(null, null)
         {
         }
 
         // For testing only.
-        internal GoogleCloudLoggingTarget(LoggingServiceV2Client client)
+        internal GoogleCloudLoggingTarget(LoggingServiceV2Client client, Platform platform)
         {
             ResourceLabels = new List<TargetPropertyWithContext>();
             _contextProperties = new List<TargetPropertyWithContext>();
             _client = client;
+            _platform = platform;
             LogId = "Default";
             OptimizeBufferReuse = true;
         }
@@ -148,7 +149,7 @@ namespace Google.Cloud.Logging.NLog
         {
             _cancelTokenSource = new CancellationTokenSource();
 
-            _platform = Platform.Instance();
+            _platform = _platform ?? Platform.Instance();
             string logId = LogId?.Render(LogEventInfo.CreateNullEvent());
             if (string.IsNullOrWhiteSpace(logId))
             {
@@ -229,14 +230,15 @@ namespace Google.Cloud.Logging.NLog
             {
                 // Either platform detection is disabled, or it detected an unknown platform
                 // So use the manually configured projectId and override the resource
-                projectId = GaxPreconditions.CheckNotNull(ProjectId?.Render(LogEventInfo.CreateNullEvent()) ?? string.Empty, nameof(ProjectId));
+                projectId = GaxPreconditions.CheckNotNull(ProjectId?.Render(LogEventInfo.CreateNullEvent()), nameof(ProjectId));
                 if (ResourceType == null)
                 {
                     resource = new MonitoredResource { Type = "global", Labels = { { "project_id", projectId } } };
                 }
                 else
                 {
-                    resource = new MonitoredResource { Type = ResourceType, Labels = { ResourceLabels.ToDictionary(x => x.Name, x => x.Layout.Render(LogEventInfo.CreateNullEvent())) } };
+                    resource = new MonitoredResource { Type = ResourceType,
+                        Labels = { ResourceLabels.ToDictionary(x => x.Name, x => x.Layout.Render(LogEventInfo.CreateNullEvent())) } };
                 }
             }
 

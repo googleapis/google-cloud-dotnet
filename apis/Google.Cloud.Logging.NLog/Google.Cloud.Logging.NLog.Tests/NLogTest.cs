@@ -14,18 +14,15 @@
 
 using Google.Api;
 using Google.Api.Gax;
-using Google.Api.Gax.Testing;
 using Google.Cloud.Logging.V2;
-using Grpc.Core;
+using Moq;
 using NLog;
 using NLog.Config;
 using NLog.Targets;
 using NLog.Targets.Wrappers;
-using Moq;
 using System;
 using System.Collections.Generic;
 using System.Linq;
-using System.Reflection;
 using System.Runtime.CompilerServices;
 using System.Threading;
 using System.Threading.Tasks;
@@ -54,7 +51,11 @@ namespace Google.Cloud.Logging.NLog.Tests
         private async Task RunTest(
             Func<IEnumerable<LogEntry>, Task<WriteLogEntriesResponse>> handlerFn,
             Func<GoogleCloudLoggingTarget, Task> testFn,
-            IEnumerable<KeyValuePair<string, string>> withMetadata = null, bool enableResourceTypeDetection = false)
+            IEnumerable<KeyValuePair<string, string>> withMetadata = null,
+            Platform platform = null,
+            bool enableResourceTypeDetection = false,
+            bool includeCallSiteStackTrace = false,
+            bool includeEventProperties = false)
         {
             try
             {
@@ -62,13 +63,13 @@ namespace Google.Cloud.Logging.NLog.Tests
                 fakeClient.Setup(x => x.WriteLogEntriesAsync(
                     It.IsAny<LogNameOneof>(), It.IsAny<MonitoredResource>(), It.IsAny<IDictionary<string, string>>(), It.IsAny<IEnumerable<LogEntry>>(), It.IsAny<CancellationToken>()))
                     .Returns<LogNameOneof, MonitoredResource, IDictionary<string, string>, IEnumerable<LogEntry>, CancellationToken>((a, b, c, entries, d) => handlerFn(entries));
-                var googleTarget = new GoogleCloudLoggingTarget(fakeClient.Object)
+                var googleTarget = new GoogleCloudLoggingTarget(fakeClient.Object, platform)
                 {
                     ProjectId = s_projectId,
                     LogId = s_logId,
                     Layout = "${message}",
-                    IncludeCallSiteStackTrace = true,
-                    IncludeEventProperties = true,
+                    IncludeCallSiteStackTrace = includeCallSiteStackTrace,
+                    IncludeEventProperties = includeEventProperties,
                 };
                 if (!enableResourceTypeDetection)
                 {
@@ -90,14 +91,18 @@ namespace Google.Cloud.Logging.NLog.Tests
 
         private async Task<List<LogEntry>> RunTestWorkingServer(
             Func<GoogleCloudLoggingTarget, Task> testFn,
-            IEnumerable<KeyValuePair<string,string>> withMetadata = null, bool enableResourceTypeDetection = false)
+            IEnumerable<KeyValuePair<string,string>> withMetadata = null,
+            Platform platform = null,
+            bool enableResourceTypeDetection = false,
+            bool includeCallSiteStackTrace = false,
+            bool includeEventProperties = false)
         {
             List<LogEntry> uploadedEntries = new List<LogEntry>();
             await RunTest(entries =>
             {
                 uploadedEntries.AddRange(entries);
                 return Task.FromResult(new WriteLogEntriesResponse());
-            }, testFn, withMetadata, enableResourceTypeDetection);
+            }, testFn, withMetadata, platform, enableResourceTypeDetection, includeCallSiteStackTrace, includeEventProperties);
             return uploadedEntries;
         }
 
@@ -110,32 +115,32 @@ namespace Google.Cloud.Logging.NLog.Tests
         public async Task SingleLogEntry()
         {
             var uploadedEntries = await RunTestWorkingServer(
-                async googleTarget =>
+                googleTarget =>
                 {
                     LogInfo("Message0");
-                    await Task.Yield();
+                    return Task.FromResult(0);
                 });
-            Assert.Equal(1, uploadedEntries.Count);
+            Assert.Single(uploadedEntries);
             Assert.Equal("Message0", uploadedEntries[0].TextPayload);
+            Assert.Null(uploadedEntries[0].SourceLocation);
         }
 
         [Fact]
         public async Task SingleLogEntryWithLocation()
         {
             var uploadedEntries = await RunTestWorkingServer(
-                async googleTarget =>
+                googleTarget =>
                 {
                     LogInfo("Message0");
-                    await Task.Yield();
-                });
-            Assert.Equal(1, uploadedEntries.Count);
+                    return Task.FromResult(0);
+                }, includeCallSiteStackTrace: true);
+            Assert.Single(uploadedEntries);
             var entry0 = uploadedEntries[0];
             Assert.Contains("Message0", entry0.TextPayload.Trim());
 
             Assert.NotNull(entry0.SourceLocation);
             Assert.True(string.IsNullOrEmpty(entry0.SourceLocation.File) || entry0.SourceLocation.File.EndsWith("NLogTest.cs"),
-            $"Actual 'entry0.SourceLocation.File' = '{entry0.SourceLocation.File}'");
-            // Line 44 on dev machine, line 42 on AppVeyor. Don't ask, I don't understand.
+                $"Actual 'entry0.SourceLocation.File' = '{entry0.SourceLocation.File}'");
             Assert.NotEqual(0, entry0.SourceLocation.Line);
             Assert.Equal("Google.Cloud.Logging.NLog.Tests.NLogTest.LogInfo", entry0.SourceLocation.Function);
         }
@@ -144,13 +149,13 @@ namespace Google.Cloud.Logging.NLog.Tests
         public async Task SingleLogEntryWithProperties()
         {
             var uploadedEntries = await RunTestWorkingServer(
-                async googleTarget =>
+                googleTarget =>
                 {
                     googleTarget.ContextProperties.Add(new TargetPropertyWithContext() { Name = "Galaxy", Layout = "Milky way" });
                     LogManager.GetLogger("testlogger").Info("Hello {Planet}", "Earth");
-                    await Task.Yield();
-                });
-            Assert.Equal(1, uploadedEntries.Count);
+                    return Task.FromResult(0);
+                }, includeEventProperties: true);
+            Assert.Single(uploadedEntries);
             var entry0 = uploadedEntries[0];
             Assert.Equal("Hello \"Earth\"", entry0.TextPayload.Trim());
             Assert.Equal(2, entry0.Labels.Count);
@@ -163,12 +168,12 @@ namespace Google.Cloud.Logging.NLog.Tests
         {
             var logs = Enumerable.Range(1, 5).Select(i => $"Message{i}");
             var uploadedEntries = await RunTestWorkingServer(
-                async googleTarget =>
+                googleTarget =>
                 {
                     LogInfo(logs.Take(2));
                     googleTarget.Flush((ex) => { });
                     LogInfo(logs.Skip(2));
-                    await Task.Yield();
+                    return Task.FromResult(0);
                 });
             Assert.Equal(5, uploadedEntries.Count);
             Assert.Equal(logs, uploadedEntries.Select(x => x.TextPayload.Trim()));
@@ -179,7 +184,7 @@ namespace Google.Cloud.Logging.NLog.Tests
         {
             var logs = Enumerable.Range(1, 5).Select(i => $"Message{i}");
             var uploadedEntries = await RunTestWorkingServer(
-                async googleTarget =>
+                googleTarget =>
                 {
                     AsyncTargetWrapper asyncWrapper = new AsyncTargetWrapper(googleTarget) { TimeToSleepBetweenBatches = 500 };
                     LogManager.Configuration.LoggingRules.Clear();
@@ -188,10 +193,75 @@ namespace Google.Cloud.Logging.NLog.Tests
                     LogInfo(logs.Take(2));
                     asyncWrapper.Flush((ex) => { });
                     LogInfo(logs.Skip(2));
-                    await Task.Yield();
+                    return Task.FromResult(0);
                 });
             Assert.Equal(5, uploadedEntries.Count);
             Assert.Equal(logs, uploadedEntries.Select(x => x.TextPayload.Trim()));
+        }
+
+        [Fact]
+        public async Task UnknownPlatform()
+        {
+            var uploadedEntries = await RunTestWorkingServer(
+                googleTarget =>
+                {
+                    LogInfo("Message0");
+                    return Task.FromResult(0);
+                }, platform: new Platform(), enableResourceTypeDetection: true);
+            Assert.Single(uploadedEntries);
+            var r = uploadedEntries[0].Resource;
+            Assert.Equal("global", r.Type);
+            Assert.Equal(1, r.Labels.Count);
+            Assert.Equal(s_projectId, r.Labels["project_id"]);
+        }
+
+        [Fact]
+        public async Task GcePlatform()
+        {
+            const string json = @"
+{
+  'project': {
+    'projectId': '" + s_projectId + @"'
+  },
+  'instance': {
+    'id': 'FakeInstanceId',
+    'zone': 'FakeZone'
+  }
+}
+";
+            var platform = new Platform(GcePlatformDetails.TryLoad(json));
+            var uploadedEntries = await RunTestWorkingServer(
+                googleTarget =>
+                {
+                    LogInfo("Message0");
+                    return Task.FromResult(0);
+                }, platform: platform, enableResourceTypeDetection: true);
+            Assert.Equal(1, uploadedEntries.Count);
+            var r = uploadedEntries[0].Resource;
+            Assert.Equal("gce_instance", r.Type);
+            Assert.Equal(3, r.Labels.Count);
+            Assert.Equal(s_projectId, r.Labels["project_id"]);
+            Assert.Equal("FakeInstanceId", r.Labels["instance_id"]);
+            Assert.Equal("FakeZone", r.Labels["zone"]);
+        }
+
+        [Fact]
+        public async Task GaePlatform()
+        {
+            var platform = new Platform(new GaePlatformDetails(s_projectId, "FakeInstanceId", "FakeService", "FakeVersion"));
+            var uploadedEntries = await RunTestWorkingServer(
+                googleTarget =>
+                {
+                    LogInfo("Message0");
+                    return Task.FromResult(0);
+                }, platform: platform, enableResourceTypeDetection: true);
+            Assert.Equal(1, uploadedEntries.Count);
+            var r = uploadedEntries[0].Resource;
+            Assert.Equal("gae_app", r.Type);
+            Assert.Equal(3, r.Labels.Count);
+            Assert.Equal(s_projectId, r.Labels["project_id"]);
+            Assert.Equal("FakeService", r.Labels["module_id"]);
+            Assert.Equal("FakeVersion", r.Labels["version_id"]);
         }
     }
 }
