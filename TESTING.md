@@ -112,6 +112,8 @@ Google.Cloud.Storage.V1
 -----------------------
 
 - Enable the Google Cloud Pub/Sub API as well as Google Cloud Storage
+- Follow the [instructions](https://cloud.google.com/storage/docs/encryption/using-customer-managed-keys)
+  for giving the Storage service account access to Cloud KMS.
 
 Environment variables for KMS testing (all just IDs rather than full
 resource names):
