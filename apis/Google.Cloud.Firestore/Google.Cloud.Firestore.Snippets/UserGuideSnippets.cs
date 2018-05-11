@@ -166,7 +166,7 @@ namespace Google.Cloud.Firestore.Snippets
             // Sample: SetAsyncMergeAll
             await document.SetAsync(
                 new { Country = "United States of America", Population = 3900005L },
-                SetOptions.MergeAll);
+                merge: true);
             // End sample
         }
 
@@ -194,7 +194,7 @@ namespace Google.Cloud.Firestore.Snippets
                 Country = "United States of America",
                 Population = 3900005L
             };
-            await document.SetAsync(newCity, SetOptions.MergeFields("Country", "Population"));
+            await document.SetAsync(newCity, mergeFields: new[] { "Country", "Population" });
             // End sample
         }
 

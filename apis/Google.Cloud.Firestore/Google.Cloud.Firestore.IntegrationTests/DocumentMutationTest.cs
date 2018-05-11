@@ -91,17 +91,17 @@ namespace Google.Cloud.Firestore.IntegrationTests
         {
             var doc = await _fixture.NonQueryCollection.AddAsync(new { Name = "Original" });
             // Add a field
-            await doc.SetAsync(new { Score = 20 }, SetOptions.MergeAll);
+            await doc.SetAsync(new { Score = 20 }, merge: true);
             var snapshot = await doc.GetSnapshotAsync();
             AssertSerialized(snapshot, new { Name = "Original", Score = 20 });
 
             // Update one field with "MergeAll"
-            await doc.SetAsync(new { Score = 30 }, SetOptions.MergeAll);
+            await doc.SetAsync(new { Score = 30 }, merge: true);
             snapshot = await doc.GetSnapshotAsync();
             AssertSerialized(snapshot, new { Name = "Original", Score = 30 });
 
             // Update one field with "MergeFields"
-            await doc.SetAsync(new { Name = "Ignored", Score = 30 }, SetOptions.MergeFields("Score"));
+            await doc.SetAsync(new { Name = "Ignored", Score = 30 }, new[] { "Score" });
             snapshot = await doc.GetSnapshotAsync();
             AssertSerialized(snapshot, new { Name = "Original", Score = 30 });
 
@@ -131,17 +131,17 @@ namespace Google.Cloud.Firestore.IntegrationTests
             AssertSerialized(snapshot, Map(("a.b", Map("f.g", 2L)), ("h", Map("g", 2L))));
 
             // Step 3: Set (merge)
-            await docRef.SetAsync(Map("h", Map(("g", 3), ("f", 3))), SetOptions.MergeAll);
+            await docRef.SetAsync(Map("h", Map(("g", 3), ("f", 3))), merge: true);
             snapshot = await docRef.GetSnapshotAsync();
             AssertSerialized(snapshot, Map(("a.b", Map("f.g", 2L)), ("h", Map(("g", 3L), ("f", 3L)))));
 
             // Step 4: Set (update path specified; only h.g is updated, not h.f)
-            await docRef.SetAsync(Map("h", Map(("g", 4), ("f", 4))), SetOptions.MergeFields("h.g"));
+            await docRef.SetAsync(Map("h", Map(("g", 4), ("f", 4))), mergeFields: new[] { "h.g" });
             snapshot = await docRef.GetSnapshotAsync();
             AssertSerialized(snapshot, Map(("a.b", Map("f.g", 2L)), ("h", Map(("g", 4L), ("f", 3L)))));
 
             // Step 5: Set (update path specified; all of h is overwritten)
-            await docRef.SetAsync(Map("h", Map(("g", 5), ("f", 5))), SetOptions.MergeFields("h"));
+            await docRef.SetAsync(Map("h", Map(("g", 5), ("f", 5))), mergeFields: new[] { "h" });
             snapshot = await docRef.GetSnapshotAsync();
             AssertSerialized(snapshot, Map(("a.b", Map("f.g", 2L)), ("h", Map(("g", 5L), ("f", 5L)))));
 

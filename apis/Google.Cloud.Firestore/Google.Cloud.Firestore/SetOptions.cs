@@ -23,7 +23,7 @@ namespace Google.Cloud.Firestore
     /// <summary>
     /// Immutable class representing options for Set operations.
     /// </summary>
-    public sealed class SetOptions
+    internal sealed class SetOptions
     {
         /// <summary>
         /// Returns an instance that overwrites the target object. This is the default when no

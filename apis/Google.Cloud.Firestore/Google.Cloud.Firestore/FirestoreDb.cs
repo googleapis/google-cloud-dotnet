@@ -34,6 +34,7 @@ namespace Google.Cloud.Firestore
     public sealed class FirestoreDb
     {
         private const string DefaultDatabaseId = "(default)";
+        private const int DefaultTransactionMaxAttempts = 5;
 
         /// <summary>
         /// The underlying client used to make service requests.
@@ -255,38 +256,36 @@ namespace Google.Cloud.Firestore
         /// <summary>
         /// Runs a transaction asynchronously, with an asynchronous callback that doesn't return a value.
         /// The specified callback is executed for a newly-created transaction. If committing the transaction
-        /// fails, the whole operation is retried based on <see cref="TransactionOptions.MaxAttempts"/>.
+        /// fails, the whole operation is retried based on <paramref name="maxAttempts"/>.
         /// </summary>
         /// <param name="callback">The callback to execute. Must not be null.</param>
-        /// <param name="options">The options for the transaction. May be null, in which case default options will be used.</param>
+        /// <param name="maxAttempts">The maximum number of attempts to make.</param>
         /// <param name="cancellationToken">A cancellation token for the operation. This is exposed to the callback through <see cref="Transaction.CancellationToken"/>
         /// and applied to all RPCs to begin, rollback or commit the transaction.</param>
         /// <returns>A task which completes when the transaction has committed.</returns>
-        public Task RunTransactionAsync(Func<Transaction, Task> callback, TransactionOptions options = null, CancellationToken cancellationToken = default)
+        public Task RunTransactionAsync(Func<Transaction, Task> callback, int maxAttempts = DefaultTransactionMaxAttempts, CancellationToken cancellationToken = default)
         {
             GaxPreconditions.CheckNotNull(callback, nameof(callback));
             return RunTransactionAsync(
                 async transaction => { await callback(transaction).ConfigureAwait(false); return 0; },
-                options, cancellationToken);
+                maxAttempts, cancellationToken);
         }
 
         /// <summary>
         /// Runs a transaction asynchronously, with an asynchronous callback that returns a value.
         /// The specified callback is executed for a newly-created transaction. If committing the transaction
-        /// fails, the whole operation is retried based on <see cref="TransactionOptions.MaxAttempts"/>.
+        /// fails, the whole operation is retried based on <paramref name="maxAttempts"/>.
         /// </summary>
         /// <typeparam name="T">The result type of the callback.</typeparam>
         /// <param name="callback">The callback to execute. Must not be null.</param>
-        /// <param name="options">The options for the transaction. May be null, in which case default options will be used.</param>
+        /// <param name="maxAttempts">The maximum number of attempts to make.</param>
         /// <param name="cancellationToken">A cancellation token for the operation. This is exposed to the callback through <see cref="Transaction.CancellationToken"/>
         /// and applied to all RPCs to begin, rollback or commit the transaction.</param>
         /// <returns>A task which completes when the transaction has committed. The result of the task then contains the result of the callback.</returns>
-        public async Task<T> RunTransactionAsync<T>(Func<Transaction, Task<T>> callback, TransactionOptions options = null, CancellationToken cancellationToken = default)
+        public async Task<T> RunTransactionAsync<T>(Func<Transaction, Task<T>> callback, int maxAttempts = DefaultTransactionMaxAttempts, CancellationToken cancellationToken = default)
         {
-
             ByteString previousTransactionId = null;
-            options = options ?? TransactionOptions.Default;
-            var attemptsLeft = options.MaxAttempts;
+            var attemptsLeft = maxAttempts;
             TimeSpan backoff = TimeSpan.FromSeconds(1);
 
             while (true)

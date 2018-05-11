@@ -121,7 +121,7 @@ namespace Google.Cloud.Firestore.Snippets
             DocumentReference document = await collection.AddAsync(city);
 
             // Update just the population using another anonymous type
-            await document.SetAsync(new { Population = 3900005L }, SetOptions.MergeAll);
+            await document.SetAsync(new { Population = 3900005L }, merge: true);
 
             // Fetch the latest document and print the population
             DocumentSnapshot snapshot = await document.GetSnapshotAsync();
@@ -157,7 +157,7 @@ namespace Google.Cloud.Firestore.Snippets
             // Sample: AnonymousTypeSentinel
             await document.SetAsync(
                 new { Score = 20, LastUpdated = FieldValue.ServerTimestamp },
-                SetOptions.MergeAll);
+                merge: true);
             // End sample
         }
     }

@@ -167,14 +167,34 @@ namespace Google.Cloud.Firestore
             return results[0];
         }
 
+        /// <summary></summary>
+        /// <param name="documentData"></param>
+        /// <param name="cancellationToken"></param>
+        /// <returns></returns>
+        public Task<WriteResult> SetAsync(object documentData, CancellationToken cancellationToken = default) => SetAsync(documentData, SetOptions.Overwrite, cancellationToken);
+        
+        /// <summary></summary>
+        /// <param name="documentData"></param>
+        /// <param name="merge"></param>
+        /// <param name="cancellationToken"></param>
+        /// <returns></returns>
+        public Task<WriteResult> SetAsync(object documentData, bool merge, CancellationToken cancellationToken = default) => SetAsync(documentData, merge ? SetOptions.MergeAll : SetOptions.Overwrite, cancellationToken);
+
+        /// <summary></summary>
+        /// <param name="documentData"></param>
+        /// <param name="mergeFields"></param>
+        /// <param name="cancellationToken"></param>
+        /// <returns></returns>
+        public Task<WriteResult> SetAsync(object documentData, string[] mergeFields, CancellationToken cancellationToken = default) => SetAsync(documentData, SetOptions.MergeFields(mergeFields), cancellationToken);
+
         /// <summary>
         /// Asynchronously sets data in the document, either replacing it completely or merging fields.
         /// </summary>
         /// <param name="documentData">The data to store in the document. Must not be null.</param>
-        /// <param name="options">The options to use when updating the document. May be null, which is equivalent to <see cref="SetOptions.Overwrite"/>.</param>
+        /// <param name="options">The options to use when updating the document. Must not be null.</param>
         /// <param name="cancellationToken">A cancellation token to monitor for the asynchronous operation.</param>
         /// <returns>The write result of the server operation.</returns>
-        public async Task<WriteResult> SetAsync(object documentData, SetOptions options = null, CancellationToken cancellationToken = default)
+        private async Task<WriteResult> SetAsync(object documentData, SetOptions options = null, CancellationToken cancellationToken = default)
         {
             var batch = Database.StartBatch();
             batch.Set(this, documentData, options);
