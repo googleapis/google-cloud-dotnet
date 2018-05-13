@@ -164,9 +164,21 @@ namespace Google.Cloud.Firestore
         /// with <see cref="DocumentSnapshot.Exists"/> value of <c>false</c>.
         /// </remarks>
         /// <param name="documents">The document references to fetch. Must not be null, or contain null references.</param>
+        /// <returns>The document snapshots, in the same order as <paramref name="documents"/>.</returns>
+        public Task<IList<DocumentSnapshot>> GetAllSnapshotsAsync(IEnumerable<DocumentReference> documents) =>
+            GetAllSnapshotsAsync(documents, default);
+
+        /// <summary>
+        /// Fetches document snapshots from the server.
+        /// </summary>
+        /// <remarks>
+        /// Any documents which are missing are represented in the returned list by a <see cref="DocumentSnapshot"/>
+        /// with <see cref="DocumentSnapshot.Exists"/> value of <c>false</c>.
+        /// </remarks>
+        /// <param name="documents">The document references to fetch. Must not be null, or contain null references.</param>
         /// <param name="cancellationToken">A cancellation token for the operation.</param>
         /// <returns>The document snapshots, in the same order as <paramref name="documents"/>.</returns>
-        public Task<IList<DocumentSnapshot>> GetAllSnapshotsAsync(IEnumerable<DocumentReference> documents, CancellationToken cancellationToken = default) =>
+        public Task<IList<DocumentSnapshot>> GetAllSnapshotsAsync(IEnumerable<DocumentReference> documents, CancellationToken cancellationToken) =>
             GetAllSnapshotsAsync(documents, null, cancellationToken);
 
         internal async Task<IList<DocumentSnapshot>> GetAllSnapshotsAsync(IEnumerable<DocumentReference> documents, ByteString transactionId, CancellationToken cancellationToken)
@@ -248,9 +260,14 @@ namespace Google.Cloud.Firestore
             Client.ListCollectionIdsAsync(parent?.Path ?? RootPath)
                 .Select(id => new CollectionReference(this, parent, id));
 
-        // TODO: Is it appropriate to use ConfigureAwait(false) here? Should the caller be able to specify the context for executing their callback?
-        // TODO: Collect up all the exceptions we've retried?
-        // TODO: Is it nice to have all these overloads?
+        /// <summary>
+        /// Runs a transaction asynchronously, with an asynchronous callback that doesn't return a value.
+        /// The specified callback is executed for a newly-created transaction. If committing the transaction
+        /// fails, the whole operation is retried based on <see cref="TransactionOptions.MaxAttempts"/>.
+        /// </summary>
+        /// <param name="callback">The callback to execute. Must not be null.</param>
+        /// <returns>A task which completes when the transaction has committed.</returns>
+        public Task RunTransactionAsync(Func<Transaction, Task> callback) => RunTransactionAsync(callback, TransactionOptions.Default, default);
 
         /// <summary>
         /// Runs a transaction asynchronously, with an asynchronous callback that doesn't return a value.
@@ -258,11 +275,32 @@ namespace Google.Cloud.Firestore
         /// fails, the whole operation is retried based on <see cref="TransactionOptions.MaxAttempts"/>.
         /// </summary>
         /// <param name="callback">The callback to execute. Must not be null.</param>
-        /// <param name="options">The options for the transaction. May be null, in which case default options will be used.</param>
         /// <param name="cancellationToken">A cancellation token for the operation. This is exposed to the callback through <see cref="Transaction.CancellationToken"/>
         /// and applied to all RPCs to begin, rollback or commit the transaction.</param>
         /// <returns>A task which completes when the transaction has committed.</returns>
-        public Task RunTransactionAsync(Func<Transaction, Task> callback, TransactionOptions options = null, CancellationToken cancellationToken = default)
+        public Task RunTransactionAsync(Func<Transaction, Task> callback, CancellationToken cancellationToken) => RunTransactionAsync(callback, TransactionOptions.Default, cancellationToken);
+
+        /// <summary>
+        /// Runs a transaction asynchronously, with an asynchronous callback that doesn't return a value.
+        /// The specified callback is executed for a newly-created transaction. If committing the transaction
+        /// fails, the whole operation is retried based on <see cref="TransactionOptions.MaxAttempts"/>.
+        /// </summary>
+        /// <param name="callback">The callback to execute. Must not be null.</param>
+        /// <param name="options">The options for the transaction. Must not be null..</param>
+        /// <returns>A task which completes when the transaction has committed.</returns>
+        public Task RunTransactionAsync(Func<Transaction, Task> callback, TransactionOptions options) => RunTransactionAsync(callback, options, default);
+
+        /// <summary>
+        /// Runs a transaction asynchronously, with an asynchronous callback that doesn't return a value.
+        /// The specified callback is executed for a newly-created transaction. If committing the transaction
+        /// fails, the whole operation is retried based on <see cref="TransactionOptions.MaxAttempts"/>.
+        /// </summary>
+        /// <param name="callback">The callback to execute. Must not be null.</param>
+        /// <param name="options">The options for the transaction. Must not be null.</param>
+        /// <param name="cancellationToken">A cancellation token for the operation. This is exposed to the callback through <see cref="Transaction.CancellationToken"/>
+        /// and applied to all RPCs to begin, rollback or commit the transaction.</param>
+        /// <returns>A task which completes when the transaction has committed.</returns>
+        public Task RunTransactionAsync(Func<Transaction, Task> callback, TransactionOptions options, CancellationToken cancellationToken)
         {
             GaxPreconditions.CheckNotNull(callback, nameof(callback));
             return RunTransactionAsync(
@@ -277,15 +315,51 @@ namespace Google.Cloud.Firestore
         /// </summary>
         /// <typeparam name="T">The result type of the callback.</typeparam>
         /// <param name="callback">The callback to execute. Must not be null.</param>
-        /// <param name="options">The options for the transaction. May be null, in which case default options will be used.</param>
+        /// <returns>A task which completes when the transaction has committed. The result of the task then contains the result of the callback.</returns>
+        public Task<T> RunTransactionAsync<T>(Func<Transaction, Task<T>> callback) => RunTransactionAsync(callback, TransactionOptions.Default, default);
+
+        /// <summary>
+        /// Runs a transaction asynchronously, with an asynchronous callback that returns a value.
+        /// The specified callback is executed for a newly-created transaction. If committing the transaction
+        /// fails, the whole operation is retried based on <see cref="TransactionOptions.MaxAttempts"/>.
+        /// </summary>
+        /// <typeparam name="T">The result type of the callback.</typeparam>
+        /// <param name="callback">The callback to execute. Must not be null.</param>
         /// <param name="cancellationToken">A cancellation token for the operation. This is exposed to the callback through <see cref="Transaction.CancellationToken"/>
         /// and applied to all RPCs to begin, rollback or commit the transaction.</param>
         /// <returns>A task which completes when the transaction has committed. The result of the task then contains the result of the callback.</returns>
-        public async Task<T> RunTransactionAsync<T>(Func<Transaction, Task<T>> callback, TransactionOptions options = null, CancellationToken cancellationToken = default)
-        {
+        public Task<T> RunTransactionAsync<T>(Func<Transaction, Task<T>> callback, CancellationToken cancellationToken) => RunTransactionAsync(callback, TransactionOptions.Default, cancellationToken);
 
+        /// <summary>
+        /// Runs a transaction asynchronously, with an asynchronous callback that returns a value.
+        /// The specified callback is executed for a newly-created transaction. If committing the transaction
+        /// fails, the whole operation is retried based on <see cref="TransactionOptions.MaxAttempts"/>.
+        /// </summary>
+        /// <typeparam name="T">The result type of the callback.</typeparam>
+        /// <param name="callback">The callback to execute. Must not be null.</param>
+        /// <param name="options">The options for the transaction. Must not be null.</param>
+        /// <returns>A task which completes when the transaction has committed. The result of the task then contains the result of the callback.</returns>
+        public Task<T> RunTransactionAsync<T>(Func<Transaction, Task<T>> callback, TransactionOptions options) => RunTransactionAsync(callback, options, default);
+
+        // TODO: Is it appropriate to use ConfigureAwait(false) here? Should the caller be able to specify the context for executing their callback?
+        // TODO: Collect up all the exceptions we've retried?
+
+        /// <summary>
+        /// Runs a transaction asynchronously, with an asynchronous callback that returns a value.
+        /// The specified callback is executed for a newly-created transaction. If committing the transaction
+        /// fails, the whole operation is retried based on <see cref="TransactionOptions.MaxAttempts"/>.
+        /// </summary>
+        /// <typeparam name="T">The result type of the callback.</typeparam>
+        /// <param name="callback">The callback to execute. Must not be null.</param>
+        /// <param name="options">The options for the transaction. Must not be null.</param>
+        /// <param name="cancellationToken">A cancellation token for the operation. This is exposed to the callback through <see cref="Transaction.CancellationToken"/>
+        /// and applied to all RPCs to begin, rollback or commit the transaction.</param>
+        /// <returns>A task which completes when the transaction has committed. The result of the task then contains the result of the callback.</returns>
+        public async Task<T> RunTransactionAsync<T>(Func<Transaction, Task<T>> callback, TransactionOptions options, CancellationToken cancellationToken)
+        {
+            GaxPreconditions.CheckNotNull(callback, nameof(callback));
+            GaxPreconditions.CheckNotNull(options, nameof(options));
             ByteString previousTransactionId = null;
-            options = options ?? TransactionOptions.Default;
             var attemptsLeft = options.MaxAttempts;
             TimeSpan backoff = TimeSpan.FromSeconds(1);
 

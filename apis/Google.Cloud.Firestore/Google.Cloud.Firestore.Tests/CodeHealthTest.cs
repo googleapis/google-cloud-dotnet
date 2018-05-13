@@ -13,6 +13,8 @@
 // limitations under the License.
 
 using Google.Cloud.ClientTesting;
+using System.Linq;
+using System.Reflection;
 using Xunit;
 
 namespace Google.Cloud.Firestore.Tests
@@ -31,6 +33,17 @@ namespace Google.Cloud.Firestore.Tests
             // Query is neither sealed nor abstract, deliberately: CollectionReference derives from it, and
             // it creates new instances of itself.
             CodeHealthTester.AssertClassesAreSealedOrAbstract(typeof(FirestoreDb), new[] { typeof(Query) });
+        }
+
+        [Fact]
+        public void NoOptionalParameters()
+        {
+            string[] allowedMethods = { "FirestoreDb.Create", "FirestoreDb.CreateAsync" };
+            var methods = from type in typeof(FirestoreDb).GetTypeInfo().Assembly.GetTypes()
+                          from method in type.GetTypeInfo().GetMethods(BindingFlags.DeclaredOnly | BindingFlags.Public | BindingFlags.NonPublic | BindingFlags.Instance | BindingFlags.Static)
+                          where method.GetParameters().Any(p => p.IsOptional)
+                          select $"{type.Name}.{method.Name}";
+            Assert.Empty(methods.Except(allowedMethods));
         }
     }
 }

@@ -70,9 +70,17 @@ namespace Google.Cloud.Firestore
         /// This method cannot be called after any write operations have been created.
         /// </summary>
         /// <param name="documentReference">The document reference to fetch. Must not be null.</param>
+        /// <returns>A snapshot of the given document with respect to this transaction.</returns>
+        public Task<DocumentSnapshot> GetSnapshotAsync(DocumentReference documentReference) => GetSnapshotAsync(documentReference, default);
+
+        /// <summary>
+        /// Fetch a snapshot of the document specified by <paramref name="documentReference"/>, with respect to this transaction.
+        /// This method cannot be called after any write operations have been created.
+        /// </summary>
+        /// <param name="documentReference">The document reference to fetch. Must not be null.</param>
         /// <param name="cancellationToken">A cancellation token to monitor for the asynchronous operation.</param>
         /// <returns>A snapshot of the given document with respect to this transaction.</returns>
-        public Task<DocumentSnapshot> GetSnapshotAsync(DocumentReference documentReference, CancellationToken cancellationToken = default)
+        public Task<DocumentSnapshot> GetSnapshotAsync(DocumentReference documentReference, CancellationToken cancellationToken)
         {
             GaxPreconditions.CheckNotNull(documentReference, nameof(documentReference));
             GaxPreconditions.CheckState(_writes.IsEmpty, "Firestore transactions require all reads to be executed before all writes.");
@@ -89,9 +97,21 @@ namespace Google.Cloud.Firestore
         /// with <see cref="DocumentSnapshot.Exists"/> value of <c>false</c>.
         /// </remarks>
         /// <param name="documentReferences">The document references to fetch. Must not be null, or contain null references.</param>
+        /// <returns>The document snapshots, in the same order as <paramref name="documentReferences"/>.</returns>
+        public Task<IList<DocumentSnapshot>> GetAllSnapshotsAsync(IEnumerable<DocumentReference> documentReferences) => GetAllSnapshotsAsync(documentReferences, default);
+
+        /// <summary>
+        /// Fetch snapshots of all the documents specified by <paramref name="documentReferences"/>, with respect to this transaction.
+        /// This method cannot be called after any write operations have been created.
+        /// </summary>
+        /// <remarks>
+        /// Any documents which are missing are represented in the returned list by a <see cref="DocumentSnapshot"/>
+        /// with <see cref="DocumentSnapshot.Exists"/> value of <c>false</c>.
+        /// </remarks>
+        /// <param name="documentReferences">The document references to fetch. Must not be null, or contain null references.</param>
         /// <param name="cancellationToken">A cancellation token to monitor for the asynchronous operation.</param>
         /// <returns>The document snapshots, in the same order as <paramref name="documentReferences"/>.</returns>
-        public Task<IList<DocumentSnapshot>> GetAllSnapshotsAsync(IEnumerable<DocumentReference> documentReferences, CancellationToken cancellationToken = default)
+        public Task<IList<DocumentSnapshot>> GetAllSnapshotsAsync(IEnumerable<DocumentReference> documentReferences, CancellationToken cancellationToken)
         {
             GaxPreconditions.CheckState(_writes.IsEmpty, "Firestore transactions require all reads to be executed before all writes.");
             CancellationToken effectiveToken = GetEffectiveCancellationToken(cancellationToken);
@@ -103,9 +123,17 @@ namespace Google.Cloud.Firestore
         /// This method cannot be called after any write operations have been created.
         /// </summary>
         /// <param name="query">The query to execute. Must not be null.</param>
+        /// <returns>A snapshot of results of the given query with respect to this transaction.</returns>
+        public Task<QuerySnapshot> GetSnapshotAsync(Query query) => GetSnapshotAsync(query, default);
+
+        /// <summary>
+        /// Performs a query and returned a snapshot of the the results, with respect to this transaction.
+        /// This method cannot be called after any write operations have been created.
+        /// </summary>
+        /// <param name="query">The query to execute. Must not be null.</param>
         /// <param name="cancellationToken">A cancellation token to monitor for the asynchronous operation.</param>
         /// <returns>A snapshot of results of the given query with respect to this transaction.</returns>
-        public Task<QuerySnapshot> GetSnapshotAsync(Query query, CancellationToken cancellationToken = default)
+        public Task<QuerySnapshot> GetSnapshotAsync(Query query, CancellationToken cancellationToken)
         {
             GaxPreconditions.CheckNotNull(query, nameof(query));
             CancellationToken effectiveToken = GetEffectiveCancellationToken(cancellationToken);
@@ -129,24 +157,46 @@ namespace Google.Cloud.Firestore
         /// </summary>
         /// <param name="documentReference">The document in which to set the data. Must not be null.</param>
         /// <param name="documentData">The data for the document. Must not be null.</param>
-        /// <param name="options">The options to use when updating the document. May be null, which is equivalent to <see cref="SetOptions.Overwrite"/>.</param>
-        public void Set(DocumentReference documentReference, object documentData, SetOptions options = null)
+        public void Set(DocumentReference documentReference, object documentData) => Set(documentReference, documentData, SetOptions.Overwrite);
+
+        /// <summary>
+        /// Adds an operation to set a document's data in this transaction.
+        /// </summary>
+        /// <param name="documentReference">The document in which to set the data. Must not be null.</param>
+        /// <param name="documentData">The data for the document. Must not be null.</param>
+        /// <param name="options">The options to use when updating the document. Must not be null.</param>
+        public void Set(DocumentReference documentReference, object documentData, SetOptions options)
         {
             // Preconditions are validated by WriteBatch.
             _writes.Set(documentReference, documentData, options);
         }
 
         /// <summary>
+        /// Adds an operation to update a document's data in this transaction. A precondition of <see cref="Precondition.MustExist" /> is applied.
+        /// </summary>
+        /// <param name="documentReference">A document reference indicating the path of the document to update. Must not be null.</param>
+        /// <param name="updates">The updates to perform on the document, keyed by the dot-separated field path to update. Fields not present in this dictionary are not updated. Must not be null or empty.</param>
+        public void Update(DocumentReference documentReference, IDictionary<string, object> updates) => Update(documentReference, updates, Precondition.MustExist);
+
+        /// <summary>
         /// Adds an operation to update a document's data in this transaction.
         /// </summary>
         /// <param name="documentReference">A document reference indicating the path of the document to update. Must not be null.</param>
         /// <param name="updates">The updates to perform on the document, keyed by the dot-separated field path to update. Fields not present in this dictionary are not updated. Must not be null or empty.</param>
-        /// <param name="precondition">Optional precondition for updating the document. May be null, which is equivalent to <see cref="Precondition.MustExist"/>.</param>
-        public void Update(DocumentReference documentReference, IDictionary<string, object> updates, Precondition precondition = null)
+        /// <param name="precondition">Precondition for updating the document. Must not be null.</param>
+        public void Update(DocumentReference documentReference, IDictionary<string, object> updates, Precondition precondition)
         {
             GaxPreconditions.CheckNotNull(updates, nameof(updates));
             Update(documentReference, updates.ToDictionary(pair => FieldPath.FromDotSeparatedString(pair.Key), pair => pair.Value), precondition);
         }
+
+        /// <summary>
+        /// Adds an operation to update a document's data in this transaction. A precondition of <see cref="Precondition.MustExist" /> is applied.
+        /// </summary>
+        /// <param name="documentReference">A document reference indicating the path of the document to update. Must not be null.</param>
+        /// <param name="field">The dot-separated name of the field to update. Must not be null.</param>
+        /// <param name="value">The new value for the field. May be null.</param>
+        public void Update(DocumentReference documentReference, string field, object value) => Update(documentReference, field, value, Precondition.MustExist);
 
         /// <summary>
         /// Adds an operation to update a document's data in this transaction.
@@ -154,31 +204,44 @@ namespace Google.Cloud.Firestore
         /// <param name="documentReference">A document reference indicating the path of the document to update. Must not be null.</param>
         /// <param name="field">The dot-separated name of the field to update. Must not be null.</param>
         /// <param name="value">The new value for the field. May be null.</param>
-        /// <param name="precondition">Optional precondition for updating the document. May be null, which is equivalent to <see cref="Precondition.MustExist"/>.</param>
-        public void Update(DocumentReference documentReference, string field, object value, Precondition precondition = null)
+        /// <param name="precondition">Precondition for updating the document. Must not be null.</param>
+        public void Update(DocumentReference documentReference, string field, object value, Precondition precondition)
         {
             GaxPreconditions.CheckNotNull(field, nameof(field));
             Update(documentReference, new Dictionary<string, object> { { field, value } }, precondition);
         }
-        
+
+        /// <summary>
+        /// Adds an operation to update a document's data in this transaction. A precondition of <see cref="Precondition.MustExist" /> is applied.
+        /// </summary>
+        /// <param name="documentReference">The document to update. Must not be null.</param>
+        /// <param name="updates">The updates to perform on the document, keyed by the field path to update. Fields not present in this dictionary are not updated. Must not be null or empty.</param>
+        public void Update(DocumentReference documentReference, IDictionary<FieldPath, object> updates) => Update(documentReference, updates, Precondition.MustExist);
+
         /// <summary>
         /// Adds an operation to update a document's data in this transaction.
         /// </summary>
         /// <param name="documentReference">The document to update. Must not be null.</param>
         /// <param name="updates">The updates to perform on the document, keyed by the field path to update. Fields not present in this dictionary are not updated. Must not be null or empty.</param>
-        /// <param name="precondition">Optional precondition for updating the document. May be null, which is equivalent to <see cref="Precondition.MustExist"/>.</param>
-        public void Update(DocumentReference documentReference, IDictionary<FieldPath, object> updates, Precondition precondition = null)
+        /// <param name="precondition">Precondition for updating the document. Must not be null.</param>
+        public void Update(DocumentReference documentReference, IDictionary<FieldPath, object> updates, Precondition precondition)
         {
             // Preconditions are validated by WriteBatch.
             _writes.Update(documentReference, updates, precondition);
         }
 
         /// <summary>
+        /// Adds an operation to delete a document's data in this transaction. The deletion is unconditionl.
+        /// </summary>
+        /// <param name="documentReference">The document to delete. Must not be null.</param>
+        public void Delete(DocumentReference documentReference) => Delete(documentReference, Precondition.None);
+
+        /// <summary>
         /// Adds an operation to delete a document's data in this transaction.
         /// </summary>
         /// <param name="documentReference">The document to delete. Must not be null.</param>
-        /// <param name="precondition">Optional precondition for deletion. May be null, in which case the deletion is unconditional.</param>
-        public void Delete(DocumentReference documentReference, Precondition precondition = null)
+        /// <param name="precondition">Precondition for deletion. Must not be null.</param>
+        public void Delete(DocumentReference documentReference, Precondition precondition)
         {
             // Preconditions are validated by WriteBatch.
             _writes.Delete(documentReference, precondition);

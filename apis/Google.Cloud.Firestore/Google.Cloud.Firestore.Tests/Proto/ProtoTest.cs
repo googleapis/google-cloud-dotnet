@@ -212,7 +212,7 @@ namespace Google.Cloud.Firestore.Tests.Proto
             {
                 DocumentReference doc = GetDocumentReference(test.DocRefPath);
                 object documentData = DeserializeJson(test.JsonData);
-                var setOptions = test.Option == null ? null :
+                var setOptions = test.Option == null ? SetOptions.Overwrite : // Overwrite is the effective default
                     test.Option.All ? SetOptions.MergeAll :
                     SetOptions.MergeFields(test.Option.Fields.Select(ConvertFieldPath).ToArray());
                 batch.Set(doc, documentData, setOptions);

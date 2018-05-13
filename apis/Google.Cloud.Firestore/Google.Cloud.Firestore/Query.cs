@@ -508,9 +508,15 @@ namespace Google.Cloud.Firestore
         /// <summary>
         /// Asynchronously takes a snapshot of all documents matching the query.
         /// </summary>
+        /// <returns>A snapshot of documents matching the query.</returns>
+        public Task<QuerySnapshot> GetSnapshotAsync() => GetSnapshotAsync(default);
+
+        /// <summary>
+        /// Asynchronously takes a snapshot of all documents matching the query.
+        /// </summary>
         /// <param name="cancellationToken">A cancellation token for the operation.</param>
         /// <returns>A snapshot of documents matching the query.</returns>
-        public Task<QuerySnapshot> GetSnapshotAsync(CancellationToken cancellationToken = default) => GetSnapshotAsync(null, cancellationToken);
+        public Task<QuerySnapshot> GetSnapshotAsync(CancellationToken cancellationToken) => GetSnapshotAsync(null, cancellationToken);
 
         internal async Task<QuerySnapshot> GetSnapshotAsync(ByteString transactionId, CancellationToken cancellationToken)
         {
@@ -546,9 +552,18 @@ namespace Google.Cloud.Firestore
         /// <remarks>
         /// Each time you iterate over the sequence, a new query will be performed.
         /// </remarks>
+        /// <returns>An asynchronous sequence of document snapshots matching the query.</returns>
+        public IAsyncEnumerable<DocumentSnapshot> StreamAsync() => StreamAsync(default);
+
+        /// <summary>
+        /// Returns an asynchronous sequence of snapshots matching the query.
+        /// </summary>
+        /// <remarks>
+        /// Each time you iterate over the sequence, a new query will be performed.
+        /// </remarks>
         /// <param name="cancellationToken">A cancellation token for the operation.</param>
         /// <returns>An asynchronous sequence of document snapshots matching the query.</returns>
-        public IAsyncEnumerable<DocumentSnapshot> StreamAsync(CancellationToken cancellationToken = default) => StreamAsync(null, cancellationToken);
+        public IAsyncEnumerable<DocumentSnapshot> StreamAsync(CancellationToken cancellationToken) => StreamAsync(null, cancellationToken);
 
         internal IAsyncEnumerable<DocumentSnapshot> StreamAsync(ByteString transactionId, CancellationToken cancellationToken) =>
              StreamResponsesAsync(transactionId, cancellationToken)

@@ -88,9 +88,20 @@ namespace Google.Cloud.Firestore
         /// instead of this method.
         /// </remarks>
         /// <param name="documentData">The data for the document. Must not be null.</param>
+        /// <returns>The reference for the newly-created document.</returns>
+        public Task<DocumentReference> AddAsync(object documentData) => AddAsync(documentData, default);
+
+        /// <summary>
+        /// Asynchronously creates a document with the given data in this collection. The document has a randomly generated ID.
+        /// </summary>
+        /// <remarks>
+        /// If the <see cref="WriteResult"/> for the operation is required, use <see cref="DocumentReference.CreateAsync(object, CancellationToken)"/>
+        /// instead of this method.
+        /// </remarks>
+        /// <param name="documentData">The data for the document. Must not be null.</param>
         /// <param name="cancellationToken">A cancellation token to monitor for the asynchronous operation.</param>
         /// <returns>The reference for the newly-created document.</returns>
-        public async Task<DocumentReference> AddAsync(object documentData, CancellationToken cancellationToken = default)
+        public async Task<DocumentReference> AddAsync(object documentData, CancellationToken cancellationToken)
         {
             var docRef = Document();
             var result = await docRef.CreateAsync(documentData, cancellationToken).ConfigureAwait(false);

@@ -182,17 +182,14 @@ namespace Google.Cloud.Firestore.Tests
             AssertWrites(batch, (expectedWrite, true));
         }
 
-        [Theory]
-        [InlineData(false)]
-        [InlineData(true)]
-        public void Set_Overwrite(bool explicitOptions)
+        [Fact]
+        public void Set_Overwrite()
         {
-            var options = explicitOptions ? SetOptions.Overwrite : null;
             var db = FirestoreDb.Create("project", "db", new FakeFirestoreClient());
             var batch = db.StartBatch();
             var doc = db.Document("col/doc");
             var data = new { Name = "Test", Nested = new { Value1 = 10, Value2 = 20 }, Score = 30 };
-            batch.Set(doc, data, options);
+            batch.Set(doc, data, SetOptions.Overwrite);
 
             var expectedWrite = new Write
             {
