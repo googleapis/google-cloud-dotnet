@@ -42,7 +42,7 @@ namespace Google.Cloud.Redis.V1Beta1.Tests
                 .Returns(new Mock<Operations.OperationsClient>().Object);
             GetInstanceRequest expectedRequest = new GetInstanceRequest
             {
-                Name = new InstanceName("[PROJECT]", "[LOCATION]", "[INSTANCE]").ToString(),
+                InstanceName = new InstanceName("[PROJECT]", "[LOCATION]", "[INSTANCE]"),
             };
             Instance expectedResponse = new Instance
             {
@@ -62,8 +62,8 @@ namespace Google.Cloud.Redis.V1Beta1.Tests
             mockGrpcClient.Setup(x => x.GetInstance(expectedRequest, It.IsAny<CallOptions>()))
                 .Returns(expectedResponse);
             CloudRedisClient client = new CloudRedisClientImpl(mockGrpcClient.Object, null);
-            string formattedName = new InstanceName("[PROJECT]", "[LOCATION]", "[INSTANCE]").ToString();
-            Instance response = client.GetInstance(formattedName);
+            InstanceName name = new InstanceName("[PROJECT]", "[LOCATION]", "[INSTANCE]");
+            Instance response = client.GetInstance(name);
             Assert.Same(expectedResponse, response);
             mockGrpcClient.VerifyAll();
         }
@@ -76,7 +76,7 @@ namespace Google.Cloud.Redis.V1Beta1.Tests
                 .Returns(new Mock<Operations.OperationsClient>().Object);
             GetInstanceRequest expectedRequest = new GetInstanceRequest
             {
-                Name = new InstanceName("[PROJECT]", "[LOCATION]", "[INSTANCE]").ToString(),
+                InstanceName = new InstanceName("[PROJECT]", "[LOCATION]", "[INSTANCE]"),
             };
             Instance expectedResponse = new Instance
             {
@@ -96,8 +96,8 @@ namespace Google.Cloud.Redis.V1Beta1.Tests
             mockGrpcClient.Setup(x => x.GetInstanceAsync(expectedRequest, It.IsAny<CallOptions>()))
                 .Returns(new Grpc.Core.AsyncUnaryCall<Instance>(Task.FromResult(expectedResponse), null, null, null, null));
             CloudRedisClient client = new CloudRedisClientImpl(mockGrpcClient.Object, null);
-            string formattedName = new InstanceName("[PROJECT]", "[LOCATION]", "[INSTANCE]").ToString();
-            Instance response = await client.GetInstanceAsync(formattedName);
+            InstanceName name = new InstanceName("[PROJECT]", "[LOCATION]", "[INSTANCE]");
+            Instance response = await client.GetInstanceAsync(name);
             Assert.Same(expectedResponse, response);
             mockGrpcClient.VerifyAll();
         }
@@ -110,7 +110,7 @@ namespace Google.Cloud.Redis.V1Beta1.Tests
                 .Returns(new Mock<Operations.OperationsClient>().Object);
             GetInstanceRequest request = new GetInstanceRequest
             {
-                Name = new InstanceName("[PROJECT]", "[LOCATION]", "[INSTANCE]").ToString(),
+                InstanceName = new InstanceName("[PROJECT]", "[LOCATION]", "[INSTANCE]"),
             };
             Instance expectedResponse = new Instance
             {
@@ -143,7 +143,7 @@ namespace Google.Cloud.Redis.V1Beta1.Tests
                 .Returns(new Mock<Operations.OperationsClient>().Object);
             GetInstanceRequest request = new GetInstanceRequest
             {
-                Name = new InstanceName("[PROJECT]", "[LOCATION]", "[INSTANCE]").ToString(),
+                InstanceName = new InstanceName("[PROJECT]", "[LOCATION]", "[INSTANCE]"),
             };
             Instance expectedResponse = new Instance
             {

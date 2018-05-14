@@ -509,13 +509,13 @@ namespace Google.Cloud.Redis.V1Beta1
         /// A pageable asynchronous sequence of <see cref="Instance"/> resources.
         /// </returns>
         public virtual gax::PagedAsyncEnumerable<ListInstancesResponse, Instance> ListInstancesAsync(
-            string parent,
+            LocationName parent,
             string pageToken = null,
             int? pageSize = null,
             gaxgrpc::CallSettings callSettings = null) => ListInstancesAsync(
                 new ListInstancesRequest
                 {
-                    Parent = gax::GaxPreconditions.CheckNotNullOrEmpty(parent, nameof(parent)),
+                    ParentAsLocationName = gax::GaxPreconditions.CheckNotNull(parent, nameof(parent)),
                     PageToken = pageToken ?? "",
                     PageSize = pageSize ?? 0,
                 },
@@ -551,13 +551,13 @@ namespace Google.Cloud.Redis.V1Beta1
         /// A pageable sequence of <see cref="Instance"/> resources.
         /// </returns>
         public virtual gax::PagedEnumerable<ListInstancesResponse, Instance> ListInstances(
-            string parent,
+            LocationName parent,
             string pageToken = null,
             int? pageSize = null,
             gaxgrpc::CallSettings callSettings = null) => ListInstances(
                 new ListInstancesRequest
                 {
-                    Parent = gax::GaxPreconditions.CheckNotNullOrEmpty(parent, nameof(parent)),
+                    ParentAsLocationName = gax::GaxPreconditions.CheckNotNull(parent, nameof(parent)),
                     PageToken = pageToken ?? "",
                     PageSize = pageSize ?? 0,
                 },
@@ -630,11 +630,11 @@ namespace Google.Cloud.Redis.V1Beta1
         /// A Task containing the RPC response.
         /// </returns>
         public virtual stt::Task<Instance> GetInstanceAsync(
-            string name,
+            InstanceName name,
             gaxgrpc::CallSettings callSettings = null) => GetInstanceAsync(
                 new GetInstanceRequest
                 {
-                    Name = gax::GaxPreconditions.CheckNotNullOrEmpty(name, nameof(name)),
+                    InstanceName = gax::GaxPreconditions.CheckNotNull(name, nameof(name)),
                 },
                 callSettings);
 
@@ -653,7 +653,7 @@ namespace Google.Cloud.Redis.V1Beta1
         /// A Task containing the RPC response.
         /// </returns>
         public virtual stt::Task<Instance> GetInstanceAsync(
-            string name,
+            InstanceName name,
             st::CancellationToken cancellationToken) => GetInstanceAsync(
                 name,
                 gaxgrpc::CallSettings.FromCancellationToken(cancellationToken));
@@ -673,11 +673,11 @@ namespace Google.Cloud.Redis.V1Beta1
         /// The RPC response.
         /// </returns>
         public virtual Instance GetInstance(
-            string name,
+            InstanceName name,
             gaxgrpc::CallSettings callSettings = null) => GetInstance(
                 new GetInstanceRequest
                 {
-                    Name = gax::GaxPreconditions.CheckNotNullOrEmpty(name, nameof(name)),
+                    InstanceName = gax::GaxPreconditions.CheckNotNull(name, nameof(name)),
                 },
                 callSettings);
 
@@ -776,13 +776,13 @@ namespace Google.Cloud.Redis.V1Beta1
         /// A Task containing the RPC response.
         /// </returns>
         public virtual stt::Task<lro::Operation<Instance, pbwkt::Any>> CreateInstanceAsync(
-            string parent,
+            LocationName parent,
             string instanceId,
             Instance instance,
             gaxgrpc::CallSettings callSettings = null) => CreateInstanceAsync(
                 new CreateInstanceRequest
                 {
-                    Parent = gax::GaxPreconditions.CheckNotNullOrEmpty(parent, nameof(parent)),
+                    ParentAsLocationName = gax::GaxPreconditions.CheckNotNull(parent, nameof(parent)),
                     InstanceId = gax::GaxPreconditions.CheckNotNullOrEmpty(instanceId, nameof(instanceId)),
                     Instance = gax::GaxPreconditions.CheckNotNull(instance, nameof(instance)),
                 },
@@ -827,7 +827,7 @@ namespace Google.Cloud.Redis.V1Beta1
         /// A Task containing the RPC response.
         /// </returns>
         public virtual stt::Task<lro::Operation<Instance, pbwkt::Any>> CreateInstanceAsync(
-            string parent,
+            LocationName parent,
             string instanceId,
             Instance instance,
             st::CancellationToken cancellationToken) => CreateInstanceAsync(
@@ -875,13 +875,13 @@ namespace Google.Cloud.Redis.V1Beta1
         /// The RPC response.
         /// </returns>
         public virtual lro::Operation<Instance, pbwkt::Any> CreateInstance(
-            string parent,
+            LocationName parent,
             string instanceId,
             Instance instance,
             gaxgrpc::CallSettings callSettings = null) => CreateInstance(
                 new CreateInstanceRequest
                 {
-                    Parent = gax::GaxPreconditions.CheckNotNullOrEmpty(parent, nameof(parent)),
+                    ParentAsLocationName = gax::GaxPreconditions.CheckNotNull(parent, nameof(parent)),
                     InstanceId = gax::GaxPreconditions.CheckNotNullOrEmpty(instanceId, nameof(instanceId)),
                     Instance = gax::GaxPreconditions.CheckNotNull(instance, nameof(instance)),
                 },
@@ -1185,11 +1185,11 @@ namespace Google.Cloud.Redis.V1Beta1
         /// A Task containing the RPC response.
         /// </returns>
         public virtual stt::Task<lro::Operation<pbwkt::Empty, pbwkt::Any>> DeleteInstanceAsync(
-            string name,
+            InstanceName name,
             gaxgrpc::CallSettings callSettings = null) => DeleteInstanceAsync(
                 new DeleteInstanceRequest
                 {
-                    Name = gax::GaxPreconditions.CheckNotNullOrEmpty(name, nameof(name)),
+                    InstanceName = gax::GaxPreconditions.CheckNotNull(name, nameof(name)),
                 },
                 callSettings);
 
@@ -1209,7 +1209,7 @@ namespace Google.Cloud.Redis.V1Beta1
         /// A Task containing the RPC response.
         /// </returns>
         public virtual stt::Task<lro::Operation<pbwkt::Empty, pbwkt::Any>> DeleteInstanceAsync(
-            string name,
+            InstanceName name,
             st::CancellationToken cancellationToken) => DeleteInstanceAsync(
                 name,
                 gaxgrpc::CallSettings.FromCancellationToken(cancellationToken));
@@ -1230,11 +1230,11 @@ namespace Google.Cloud.Redis.V1Beta1
         /// The RPC response.
         /// </returns>
         public virtual lro::Operation<pbwkt::Empty, pbwkt::Any> DeleteInstance(
-            string name,
+            InstanceName name,
             gaxgrpc::CallSettings callSettings = null) => DeleteInstance(
                 new DeleteInstanceRequest
                 {
-                    Name = gax::GaxPreconditions.CheckNotNullOrEmpty(name, nameof(name)),
+                    InstanceName = gax::GaxPreconditions.CheckNotNull(name, nameof(name)),
                 },
                 callSettings);
 
