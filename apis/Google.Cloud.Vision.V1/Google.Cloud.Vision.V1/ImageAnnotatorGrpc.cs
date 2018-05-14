@@ -37,6 +37,8 @@ namespace Google.Cloud.Vision.V1 {
 
     static readonly grpc::Marshaller<global::Google.Cloud.Vision.V1.BatchAnnotateImagesRequest> __Marshaller_BatchAnnotateImagesRequest = grpc::Marshallers.Create((arg) => global::Google.Protobuf.MessageExtensions.ToByteArray(arg), global::Google.Cloud.Vision.V1.BatchAnnotateImagesRequest.Parser.ParseFrom);
     static readonly grpc::Marshaller<global::Google.Cloud.Vision.V1.BatchAnnotateImagesResponse> __Marshaller_BatchAnnotateImagesResponse = grpc::Marshallers.Create((arg) => global::Google.Protobuf.MessageExtensions.ToByteArray(arg), global::Google.Cloud.Vision.V1.BatchAnnotateImagesResponse.Parser.ParseFrom);
+    static readonly grpc::Marshaller<global::Google.Cloud.Vision.V1.AsyncBatchAnnotateFilesRequest> __Marshaller_AsyncBatchAnnotateFilesRequest = grpc::Marshallers.Create((arg) => global::Google.Protobuf.MessageExtensions.ToByteArray(arg), global::Google.Cloud.Vision.V1.AsyncBatchAnnotateFilesRequest.Parser.ParseFrom);
+    static readonly grpc::Marshaller<global::Google.LongRunning.Operation> __Marshaller_Operation = grpc::Marshallers.Create((arg) => global::Google.Protobuf.MessageExtensions.ToByteArray(arg), global::Google.LongRunning.Operation.Parser.ParseFrom);
 
     static readonly grpc::Method<global::Google.Cloud.Vision.V1.BatchAnnotateImagesRequest, global::Google.Cloud.Vision.V1.BatchAnnotateImagesResponse> __Method_BatchAnnotateImages = new grpc::Method<global::Google.Cloud.Vision.V1.BatchAnnotateImagesRequest, global::Google.Cloud.Vision.V1.BatchAnnotateImagesResponse>(
         grpc::MethodType.Unary,
@@ -44,6 +46,13 @@ namespace Google.Cloud.Vision.V1 {
         "BatchAnnotateImages",
         __Marshaller_BatchAnnotateImagesRequest,
         __Marshaller_BatchAnnotateImagesResponse);
+
+    static readonly grpc::Method<global::Google.Cloud.Vision.V1.AsyncBatchAnnotateFilesRequest, global::Google.LongRunning.Operation> __Method_AsyncBatchAnnotateFiles = new grpc::Method<global::Google.Cloud.Vision.V1.AsyncBatchAnnotateFilesRequest, global::Google.LongRunning.Operation>(
+        grpc::MethodType.Unary,
+        __ServiceName,
+        "AsyncBatchAnnotateFiles",
+        __Marshaller_AsyncBatchAnnotateFilesRequest,
+        __Marshaller_Operation);
 
     /// <summary>Service descriptor</summary>
     public static global::Google.Protobuf.Reflection.ServiceDescriptor Descriptor
@@ -61,6 +70,22 @@ namespace Google.Cloud.Vision.V1 {
       /// <param name="context">The context of the server-side call handler being invoked.</param>
       /// <returns>The response to send back to the client (wrapped by a task).</returns>
       public virtual global::System.Threading.Tasks.Task<global::Google.Cloud.Vision.V1.BatchAnnotateImagesResponse> BatchAnnotateImages(global::Google.Cloud.Vision.V1.BatchAnnotateImagesRequest request, grpc::ServerCallContext context)
+      {
+        throw new grpc::RpcException(new grpc::Status(grpc::StatusCode.Unimplemented, ""));
+      }
+
+      /// <summary>
+      /// Run asynchronous image detection and annotation for a list of generic
+      /// files, such as PDF files, which may contain multiple pages and multiple
+      /// images per page. Progress and results can be retrieved through the
+      /// `google.longrunning.Operations` interface.
+      /// `Operation.metadata` contains `OperationMetadata` (metadata).
+      /// `Operation.response` contains `AsyncBatchAnnotateFilesResponse` (results).
+      /// </summary>
+      /// <param name="request">The request received from the client.</param>
+      /// <param name="context">The context of the server-side call handler being invoked.</param>
+      /// <returns>The response to send back to the client (wrapped by a task).</returns>
+      public virtual global::System.Threading.Tasks.Task<global::Google.LongRunning.Operation> AsyncBatchAnnotateFiles(global::Google.Cloud.Vision.V1.AsyncBatchAnnotateFilesRequest request, grpc::ServerCallContext context)
       {
         throw new grpc::RpcException(new grpc::Status(grpc::StatusCode.Unimplemented, ""));
       }
@@ -134,6 +159,70 @@ namespace Google.Cloud.Vision.V1 {
       {
         return CallInvoker.AsyncUnaryCall(__Method_BatchAnnotateImages, null, options, request);
       }
+      /// <summary>
+      /// Run asynchronous image detection and annotation for a list of generic
+      /// files, such as PDF files, which may contain multiple pages and multiple
+      /// images per page. Progress and results can be retrieved through the
+      /// `google.longrunning.Operations` interface.
+      /// `Operation.metadata` contains `OperationMetadata` (metadata).
+      /// `Operation.response` contains `AsyncBatchAnnotateFilesResponse` (results).
+      /// </summary>
+      /// <param name="request">The request to send to the server.</param>
+      /// <param name="headers">The initial metadata to send with the call. This parameter is optional.</param>
+      /// <param name="deadline">An optional deadline for the call. The call will be cancelled if deadline is hit.</param>
+      /// <param name="cancellationToken">An optional token for canceling the call.</param>
+      /// <returns>The response received from the server.</returns>
+      public virtual global::Google.LongRunning.Operation AsyncBatchAnnotateFiles(global::Google.Cloud.Vision.V1.AsyncBatchAnnotateFilesRequest request, grpc::Metadata headers = null, DateTime? deadline = null, CancellationToken cancellationToken = default(CancellationToken))
+      {
+        return AsyncBatchAnnotateFiles(request, new grpc::CallOptions(headers, deadline, cancellationToken));
+      }
+      /// <summary>
+      /// Run asynchronous image detection and annotation for a list of generic
+      /// files, such as PDF files, which may contain multiple pages and multiple
+      /// images per page. Progress and results can be retrieved through the
+      /// `google.longrunning.Operations` interface.
+      /// `Operation.metadata` contains `OperationMetadata` (metadata).
+      /// `Operation.response` contains `AsyncBatchAnnotateFilesResponse` (results).
+      /// </summary>
+      /// <param name="request">The request to send to the server.</param>
+      /// <param name="options">The options for the call.</param>
+      /// <returns>The response received from the server.</returns>
+      public virtual global::Google.LongRunning.Operation AsyncBatchAnnotateFiles(global::Google.Cloud.Vision.V1.AsyncBatchAnnotateFilesRequest request, grpc::CallOptions options)
+      {
+        return CallInvoker.BlockingUnaryCall(__Method_AsyncBatchAnnotateFiles, null, options, request);
+      }
+      /// <summary>
+      /// Run asynchronous image detection and annotation for a list of generic
+      /// files, such as PDF files, which may contain multiple pages and multiple
+      /// images per page. Progress and results can be retrieved through the
+      /// `google.longrunning.Operations` interface.
+      /// `Operation.metadata` contains `OperationMetadata` (metadata).
+      /// `Operation.response` contains `AsyncBatchAnnotateFilesResponse` (results).
+      /// </summary>
+      /// <param name="request">The request to send to the server.</param>
+      /// <param name="headers">The initial metadata to send with the call. This parameter is optional.</param>
+      /// <param name="deadline">An optional deadline for the call. The call will be cancelled if deadline is hit.</param>
+      /// <param name="cancellationToken">An optional token for canceling the call.</param>
+      /// <returns>The call object.</returns>
+      public virtual grpc::AsyncUnaryCall<global::Google.LongRunning.Operation> AsyncBatchAnnotateFilesAsync(global::Google.Cloud.Vision.V1.AsyncBatchAnnotateFilesRequest request, grpc::Metadata headers = null, DateTime? deadline = null, CancellationToken cancellationToken = default(CancellationToken))
+      {
+        return AsyncBatchAnnotateFilesAsync(request, new grpc::CallOptions(headers, deadline, cancellationToken));
+      }
+      /// <summary>
+      /// Run asynchronous image detection and annotation for a list of generic
+      /// files, such as PDF files, which may contain multiple pages and multiple
+      /// images per page. Progress and results can be retrieved through the
+      /// `google.longrunning.Operations` interface.
+      /// `Operation.metadata` contains `OperationMetadata` (metadata).
+      /// `Operation.response` contains `AsyncBatchAnnotateFilesResponse` (results).
+      /// </summary>
+      /// <param name="request">The request to send to the server.</param>
+      /// <param name="options">The options for the call.</param>
+      /// <returns>The call object.</returns>
+      public virtual grpc::AsyncUnaryCall<global::Google.LongRunning.Operation> AsyncBatchAnnotateFilesAsync(global::Google.Cloud.Vision.V1.AsyncBatchAnnotateFilesRequest request, grpc::CallOptions options)
+      {
+        return CallInvoker.AsyncUnaryCall(__Method_AsyncBatchAnnotateFiles, null, options, request);
+      }
       /// <summary>Creates a new instance of client from given <c>ClientBaseConfiguration</c>.</summary>
       protected override ImageAnnotatorClient NewInstance(ClientBaseConfiguration configuration)
       {
@@ -146,7 +235,8 @@ namespace Google.Cloud.Vision.V1 {
     public static grpc::ServerServiceDefinition BindService(ImageAnnotatorBase serviceImpl)
     {
       return grpc::ServerServiceDefinition.CreateBuilder()
-          .AddMethod(__Method_BatchAnnotateImages, serviceImpl.BatchAnnotateImages).Build();
+          .AddMethod(__Method_BatchAnnotateImages, serviceImpl.BatchAnnotateImages)
+          .AddMethod(__Method_AsyncBatchAnnotateFiles, serviceImpl.AsyncBatchAnnotateFiles).Build();
     }
 
   }

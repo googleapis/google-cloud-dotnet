@@ -851,7 +851,8 @@ namespace Google.Cloud.Vision.V1 {
     public const int WidthFieldNumber = 2;
     private int width_;
     /// <summary>
-    /// Page width in pixels.
+    /// Page width. For PDFs the unit is points. For images (including
+    /// TIFFs) the unit is pixels.
     /// </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     public int Width {
@@ -865,7 +866,8 @@ namespace Google.Cloud.Vision.V1 {
     public const int HeightFieldNumber = 3;
     private int height_;
     /// <summary>
-    /// Page height in pixels.
+    /// Page height. For PDFs the unit is points. For images (including
+    /// TIFFs) the unit is pixels.
     /// </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     public int Height {

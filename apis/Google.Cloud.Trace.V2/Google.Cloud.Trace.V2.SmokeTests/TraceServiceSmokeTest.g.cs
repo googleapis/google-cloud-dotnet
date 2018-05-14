@@ -18,6 +18,7 @@ namespace Google.Cloud.Trace.V2.SmokeTests
 {
     using Google.Api.Gax;
     using Google.Api.Gax.Grpc;
+    using Google.Api.Gax.ResourceNames;
     using Google.Protobuf.WellKnownTypes;
     using Grpc.Core;
     using System;

@@ -15,211 +15,22 @@
 // Generated code. DO NOT EDIT!
 
 using gax = Google.Api.Gax;
+using Google.Cloud.Spanner.Common.V1;
 using sys = System;
 using linq = System.Linq;
 
 namespace Google.Cloud.Spanner.Admin.Database.V1
 {
-    /// <summary>
-    /// Resource name for the 'instance' resource.
-    /// </summary>
-    public sealed partial class InstanceName : gax::IResourceName, sys::IEquatable<InstanceName>
-    {
-        private static readonly gax::PathTemplate s_template = new gax::PathTemplate("projects/{project}/instances/{instance}");
-
-        /// <summary>
-        /// Parses the given instance resource name in string form into a new
-        /// <see cref="InstanceName"/> instance.
-        /// </summary>
-        /// <param name="instanceName">The instance resource name in string form. Must not be <c>null</c>.</param>
-        /// <returns>The parsed <see cref="InstanceName"/> if successful.</returns>
-        public static InstanceName Parse(string instanceName)
-        {
-            gax::GaxPreconditions.CheckNotNull(instanceName, nameof(instanceName));
-            gax::TemplatedResourceName resourceName = s_template.ParseName(instanceName);
-            return new InstanceName(resourceName[0], resourceName[1]);
-        }
-
-        /// <summary>
-        /// Tries to parse the given instance resource name in string form into a new
-        /// <see cref="InstanceName"/> instance.
-        /// </summary>
-        /// <remarks>
-        /// This method still throws <see cref="sys::ArgumentNullException"/> if <paramref name="instanceName"/> is null,
-        /// as this would usually indicate a programming error rather than a data error.
-        /// </remarks>
-        /// <param name="instanceName">The instance resource name in string form. Must not be <c>null</c>.</param>
-        /// <param name="result">When this method returns, the parsed <see cref="InstanceName"/>,
-        /// or <c>null</c> if parsing fails.</param>
-        /// <returns><c>true</c> if the name was parsed succssfully; <c>false</c> otherwise.</returns>
-        public static bool TryParse(string instanceName, out InstanceName result)
-        {
-            gax::GaxPreconditions.CheckNotNull(instanceName, nameof(instanceName));
-            gax::TemplatedResourceName resourceName;
-            if (s_template.TryParseName(instanceName, out resourceName))
-            {
-                result = new InstanceName(resourceName[0], resourceName[1]);
-                return true;
-            }
-            else
-            {
-                result = null;
-                return false;
-            }
-        }
-
-        /// <summary>
-        /// Constructs a new instance of the <see cref="InstanceName"/> resource name class
-        /// from its component parts.
-        /// </summary>
-        /// <param name="projectId">The project ID. Must not be <c>null</c>.</param>
-        /// <param name="instanceId">The instance ID. Must not be <c>null</c>.</param>
-        public InstanceName(string projectId, string instanceId)
-        {
-            ProjectId = gax::GaxPreconditions.CheckNotNull(projectId, nameof(projectId));
-            InstanceId = gax::GaxPreconditions.CheckNotNull(instanceId, nameof(instanceId));
-        }
-
-        /// <summary>
-        /// The project ID. Never <c>null</c>.
-        /// </summary>
-        public string ProjectId { get; }
-
-        /// <summary>
-        /// The instance ID. Never <c>null</c>.
-        /// </summary>
-        public string InstanceId { get; }
-
-        /// <inheritdoc />
-        public gax::ResourceNameKind Kind => gax::ResourceNameKind.Simple;
-
-        /// <inheritdoc />
-        public override string ToString() => s_template.Expand(ProjectId, InstanceId);
-
-        /// <inheritdoc />
-        public override int GetHashCode() => ToString().GetHashCode();
-
-        /// <inheritdoc />
-        public override bool Equals(object obj) => Equals(obj as InstanceName);
-
-        /// <inheritdoc />
-        public bool Equals(InstanceName other) => ToString() == other?.ToString();
-
-        /// <inheritdoc />
-        public static bool operator ==(InstanceName a, InstanceName b) => ReferenceEquals(a, b) || (a?.Equals(b) ?? false);
-
-        /// <inheritdoc />
-        public static bool operator !=(InstanceName a, InstanceName b) => !(a == b);
-    }
-
-    /// <summary>
-    /// Resource name for the 'database' resource.
-    /// </summary>
-    public sealed partial class DatabaseName : gax::IResourceName, sys::IEquatable<DatabaseName>
-    {
-        private static readonly gax::PathTemplate s_template = new gax::PathTemplate("projects/{project}/instances/{instance}/databases/{database}");
-
-        /// <summary>
-        /// Parses the given database resource name in string form into a new
-        /// <see cref="DatabaseName"/> instance.
-        /// </summary>
-        /// <param name="databaseName">The database resource name in string form. Must not be <c>null</c>.</param>
-        /// <returns>The parsed <see cref="DatabaseName"/> if successful.</returns>
-        public static DatabaseName Parse(string databaseName)
-        {
-            gax::GaxPreconditions.CheckNotNull(databaseName, nameof(databaseName));
-            gax::TemplatedResourceName resourceName = s_template.ParseName(databaseName);
-            return new DatabaseName(resourceName[0], resourceName[1], resourceName[2]);
-        }
-
-        /// <summary>
-        /// Tries to parse the given database resource name in string form into a new
-        /// <see cref="DatabaseName"/> instance.
-        /// </summary>
-        /// <remarks>
-        /// This method still throws <see cref="sys::ArgumentNullException"/> if <paramref name="databaseName"/> is null,
-        /// as this would usually indicate a programming error rather than a data error.
-        /// </remarks>
-        /// <param name="databaseName">The database resource name in string form. Must not be <c>null</c>.</param>
-        /// <param name="result">When this method returns, the parsed <see cref="DatabaseName"/>,
-        /// or <c>null</c> if parsing fails.</param>
-        /// <returns><c>true</c> if the name was parsed succssfully; <c>false</c> otherwise.</returns>
-        public static bool TryParse(string databaseName, out DatabaseName result)
-        {
-            gax::GaxPreconditions.CheckNotNull(databaseName, nameof(databaseName));
-            gax::TemplatedResourceName resourceName;
-            if (s_template.TryParseName(databaseName, out resourceName))
-            {
-                result = new DatabaseName(resourceName[0], resourceName[1], resourceName[2]);
-                return true;
-            }
-            else
-            {
-                result = null;
-                return false;
-            }
-        }
-
-        /// <summary>
-        /// Constructs a new instance of the <see cref="DatabaseName"/> resource name class
-        /// from its component parts.
-        /// </summary>
-        /// <param name="projectId">The project ID. Must not be <c>null</c>.</param>
-        /// <param name="instanceId">The instance ID. Must not be <c>null</c>.</param>
-        /// <param name="databaseId">The database ID. Must not be <c>null</c>.</param>
-        public DatabaseName(string projectId, string instanceId, string databaseId)
-        {
-            ProjectId = gax::GaxPreconditions.CheckNotNull(projectId, nameof(projectId));
-            InstanceId = gax::GaxPreconditions.CheckNotNull(instanceId, nameof(instanceId));
-            DatabaseId = gax::GaxPreconditions.CheckNotNull(databaseId, nameof(databaseId));
-        }
-
-        /// <summary>
-        /// The project ID. Never <c>null</c>.
-        /// </summary>
-        public string ProjectId { get; }
-
-        /// <summary>
-        /// The instance ID. Never <c>null</c>.
-        /// </summary>
-        public string InstanceId { get; }
-
-        /// <summary>
-        /// The database ID. Never <c>null</c>.
-        /// </summary>
-        public string DatabaseId { get; }
-
-        /// <inheritdoc />
-        public gax::ResourceNameKind Kind => gax::ResourceNameKind.Simple;
-
-        /// <inheritdoc />
-        public override string ToString() => s_template.Expand(ProjectId, InstanceId, DatabaseId);
-
-        /// <inheritdoc />
-        public override int GetHashCode() => ToString().GetHashCode();
-
-        /// <inheritdoc />
-        public override bool Equals(object obj) => Equals(obj as DatabaseName);
-
-        /// <inheritdoc />
-        public bool Equals(DatabaseName other) => ToString() == other?.ToString();
-
-        /// <inheritdoc />
-        public static bool operator ==(DatabaseName a, DatabaseName b) => ReferenceEquals(a, b) || (a?.Equals(b) ?? false);
-
-        /// <inheritdoc />
-        public static bool operator !=(DatabaseName a, DatabaseName b) => !(a == b);
-    }
 
 
     public partial class CreateDatabaseMetadata
     {
         /// <summary>
-        /// <see cref="Google.Cloud.Spanner.Admin.Database.V1.DatabaseName"/>-typed view over the <see cref="Database"/> resource name property.
+        /// <see cref="DatabaseName"/>-typed view over the <see cref="Database"/> resource name property.
         /// </summary>
-        public Google.Cloud.Spanner.Admin.Database.V1.DatabaseName DatabaseAsDatabaseName
+        public DatabaseName DatabaseAsDatabaseName
         {
-            get { return string.IsNullOrEmpty(Database) ? null : Google.Cloud.Spanner.Admin.Database.V1.DatabaseName.Parse(Database); }
+            get { return string.IsNullOrEmpty(Database) ? null : DatabaseName.Parse(Database); }
             set { Database = value != null ? value.ToString() : ""; }
         }
 
@@ -228,11 +39,11 @@ namespace Google.Cloud.Spanner.Admin.Database.V1
     public partial class CreateDatabaseRequest
     {
         /// <summary>
-        /// <see cref="Google.Cloud.Spanner.Admin.Database.V1.InstanceName"/>-typed view over the <see cref="Parent"/> resource name property.
+        /// <see cref="InstanceName"/>-typed view over the <see cref="Parent"/> resource name property.
         /// </summary>
-        public Google.Cloud.Spanner.Admin.Database.V1.InstanceName ParentAsInstanceName
+        public InstanceName ParentAsInstanceName
         {
-            get { return string.IsNullOrEmpty(Parent) ? null : Google.Cloud.Spanner.Admin.Database.V1.InstanceName.Parse(Parent); }
+            get { return string.IsNullOrEmpty(Parent) ? null : InstanceName.Parse(Parent); }
             set { Parent = value != null ? value.ToString() : ""; }
         }
 
@@ -241,11 +52,11 @@ namespace Google.Cloud.Spanner.Admin.Database.V1
     public partial class DropDatabaseRequest
     {
         /// <summary>
-        /// <see cref="Google.Cloud.Spanner.Admin.Database.V1.DatabaseName"/>-typed view over the <see cref="Database"/> resource name property.
+        /// <see cref="DatabaseName"/>-typed view over the <see cref="Database"/> resource name property.
         /// </summary>
-        public Google.Cloud.Spanner.Admin.Database.V1.DatabaseName DatabaseAsDatabaseName
+        public DatabaseName DatabaseAsDatabaseName
         {
-            get { return string.IsNullOrEmpty(Database) ? null : Google.Cloud.Spanner.Admin.Database.V1.DatabaseName.Parse(Database); }
+            get { return string.IsNullOrEmpty(Database) ? null : DatabaseName.Parse(Database); }
             set { Database = value != null ? value.ToString() : ""; }
         }
 
@@ -254,11 +65,11 @@ namespace Google.Cloud.Spanner.Admin.Database.V1
     public partial class GetDatabaseDdlRequest
     {
         /// <summary>
-        /// <see cref="Google.Cloud.Spanner.Admin.Database.V1.DatabaseName"/>-typed view over the <see cref="Database"/> resource name property.
+        /// <see cref="DatabaseName"/>-typed view over the <see cref="Database"/> resource name property.
         /// </summary>
-        public Google.Cloud.Spanner.Admin.Database.V1.DatabaseName DatabaseAsDatabaseName
+        public DatabaseName DatabaseAsDatabaseName
         {
-            get { return string.IsNullOrEmpty(Database) ? null : Google.Cloud.Spanner.Admin.Database.V1.DatabaseName.Parse(Database); }
+            get { return string.IsNullOrEmpty(Database) ? null : DatabaseName.Parse(Database); }
             set { Database = value != null ? value.ToString() : ""; }
         }
 
@@ -267,11 +78,11 @@ namespace Google.Cloud.Spanner.Admin.Database.V1
     public partial class GetDatabaseRequest
     {
         /// <summary>
-        /// <see cref="Google.Cloud.Spanner.Admin.Database.V1.DatabaseName"/>-typed view over the <see cref="Name"/> resource name property.
+        /// <see cref="DatabaseName"/>-typed view over the <see cref="Name"/> resource name property.
         /// </summary>
-        public Google.Cloud.Spanner.Admin.Database.V1.DatabaseName DatabaseName
+        public DatabaseName DatabaseName
         {
-            get { return string.IsNullOrEmpty(Name) ? null : Google.Cloud.Spanner.Admin.Database.V1.DatabaseName.Parse(Name); }
+            get { return string.IsNullOrEmpty(Name) ? null : DatabaseName.Parse(Name); }
             set { Name = value != null ? value.ToString() : ""; }
         }
 
@@ -280,11 +91,11 @@ namespace Google.Cloud.Spanner.Admin.Database.V1
     public partial class ListDatabasesRequest
     {
         /// <summary>
-        /// <see cref="Google.Cloud.Spanner.Admin.Database.V1.InstanceName"/>-typed view over the <see cref="Parent"/> resource name property.
+        /// <see cref="InstanceName"/>-typed view over the <see cref="Parent"/> resource name property.
         /// </summary>
-        public Google.Cloud.Spanner.Admin.Database.V1.InstanceName ParentAsInstanceName
+        public InstanceName ParentAsInstanceName
         {
-            get { return string.IsNullOrEmpty(Parent) ? null : Google.Cloud.Spanner.Admin.Database.V1.InstanceName.Parse(Parent); }
+            get { return string.IsNullOrEmpty(Parent) ? null : InstanceName.Parse(Parent); }
             set { Parent = value != null ? value.ToString() : ""; }
         }
 
@@ -293,11 +104,11 @@ namespace Google.Cloud.Spanner.Admin.Database.V1
     public partial class UpdateDatabaseDdlMetadata
     {
         /// <summary>
-        /// <see cref="Google.Cloud.Spanner.Admin.Database.V1.DatabaseName"/>-typed view over the <see cref="Database"/> resource name property.
+        /// <see cref="DatabaseName"/>-typed view over the <see cref="Database"/> resource name property.
         /// </summary>
-        public Google.Cloud.Spanner.Admin.Database.V1.DatabaseName DatabaseAsDatabaseName
+        public DatabaseName DatabaseAsDatabaseName
         {
-            get { return string.IsNullOrEmpty(Database) ? null : Google.Cloud.Spanner.Admin.Database.V1.DatabaseName.Parse(Database); }
+            get { return string.IsNullOrEmpty(Database) ? null : DatabaseName.Parse(Database); }
             set { Database = value != null ? value.ToString() : ""; }
         }
 
@@ -306,11 +117,11 @@ namespace Google.Cloud.Spanner.Admin.Database.V1
     public partial class UpdateDatabaseDdlRequest
     {
         /// <summary>
-        /// <see cref="Google.Cloud.Spanner.Admin.Database.V1.DatabaseName"/>-typed view over the <see cref="Database"/> resource name property.
+        /// <see cref="DatabaseName"/>-typed view over the <see cref="Database"/> resource name property.
         /// </summary>
-        public Google.Cloud.Spanner.Admin.Database.V1.DatabaseName DatabaseAsDatabaseName
+        public DatabaseName DatabaseAsDatabaseName
         {
-            get { return string.IsNullOrEmpty(Database) ? null : Google.Cloud.Spanner.Admin.Database.V1.DatabaseName.Parse(Database); }
+            get { return string.IsNullOrEmpty(Database) ? null : DatabaseName.Parse(Database); }
             set { Database = value != null ? value.ToString() : ""; }
         }
 

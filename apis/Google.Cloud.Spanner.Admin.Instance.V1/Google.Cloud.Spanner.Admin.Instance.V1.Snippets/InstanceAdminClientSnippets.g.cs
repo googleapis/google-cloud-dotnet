@@ -18,8 +18,10 @@ namespace Google.Cloud.Spanner.Admin.Instance.V1.Snippets
 {
     using Google.Api.Gax;
     using Google.Api.Gax.Grpc;
+    using Google.Api.Gax.ResourceNames;
     using Google.Cloud.Iam.V1;
     using apis = Google.Cloud.Spanner.Admin.Instance.V1;
+    using Google.Cloud.Spanner.Common.V1;
     using Google.LongRunning;
     using Google.Protobuf;
     using Google.Protobuf.WellKnownTypes;
@@ -869,7 +871,7 @@ namespace Google.Cloud.Spanner.Admin.Instance.V1.Snippets
             // Create client
             InstanceAdminClient instanceAdminClient = await InstanceAdminClient.CreateAsync();
             // Initialize request argument(s)
-            string formattedResource = new InstanceName("[PROJECT]", "[INSTANCE]").ToString();
+            string formattedResource = new Google.Cloud.Spanner.Common.V1.InstanceName("[PROJECT]", "[INSTANCE]").ToString();
             Policy policy = new Policy();
             // Make the request
             Policy response = await instanceAdminClient.SetIamPolicyAsync(formattedResource, policy);
@@ -883,7 +885,7 @@ namespace Google.Cloud.Spanner.Admin.Instance.V1.Snippets
             // Create client
             InstanceAdminClient instanceAdminClient = InstanceAdminClient.Create();
             // Initialize request argument(s)
-            string formattedResource = new InstanceName("[PROJECT]", "[INSTANCE]").ToString();
+            string formattedResource = new Google.Cloud.Spanner.Common.V1.InstanceName("[PROJECT]", "[INSTANCE]").ToString();
             Policy policy = new Policy();
             // Make the request
             Policy response = instanceAdminClient.SetIamPolicy(formattedResource, policy);
@@ -900,7 +902,7 @@ namespace Google.Cloud.Spanner.Admin.Instance.V1.Snippets
             // Initialize request argument(s)
             SetIamPolicyRequest request = new SetIamPolicyRequest
             {
-                Resource = new InstanceName("[PROJECT]", "[INSTANCE]").ToString(),
+                Resource = new Google.Cloud.Spanner.Common.V1.InstanceName("[PROJECT]", "[INSTANCE]").ToString(),
                 Policy = new Policy(),
             };
             // Make the request
@@ -917,7 +919,7 @@ namespace Google.Cloud.Spanner.Admin.Instance.V1.Snippets
             // Initialize request argument(s)
             SetIamPolicyRequest request = new SetIamPolicyRequest
             {
-                Resource = new InstanceName("[PROJECT]", "[INSTANCE]").ToString(),
+                Resource = new Google.Cloud.Spanner.Common.V1.InstanceName("[PROJECT]", "[INSTANCE]").ToString(),
                 Policy = new Policy(),
             };
             // Make the request
@@ -933,7 +935,7 @@ namespace Google.Cloud.Spanner.Admin.Instance.V1.Snippets
             // Create client
             InstanceAdminClient instanceAdminClient = await InstanceAdminClient.CreateAsync();
             // Initialize request argument(s)
-            string formattedResource = new InstanceName("[PROJECT]", "[INSTANCE]").ToString();
+            string formattedResource = new Google.Cloud.Spanner.Common.V1.InstanceName("[PROJECT]", "[INSTANCE]").ToString();
             // Make the request
             Policy response = await instanceAdminClient.GetIamPolicyAsync(formattedResource);
             // End snippet
@@ -946,7 +948,7 @@ namespace Google.Cloud.Spanner.Admin.Instance.V1.Snippets
             // Create client
             InstanceAdminClient instanceAdminClient = InstanceAdminClient.Create();
             // Initialize request argument(s)
-            string formattedResource = new InstanceName("[PROJECT]", "[INSTANCE]").ToString();
+            string formattedResource = new Google.Cloud.Spanner.Common.V1.InstanceName("[PROJECT]", "[INSTANCE]").ToString();
             // Make the request
             Policy response = instanceAdminClient.GetIamPolicy(formattedResource);
             // End snippet
@@ -962,7 +964,7 @@ namespace Google.Cloud.Spanner.Admin.Instance.V1.Snippets
             // Initialize request argument(s)
             GetIamPolicyRequest request = new GetIamPolicyRequest
             {
-                Resource = new InstanceName("[PROJECT]", "[INSTANCE]").ToString(),
+                Resource = new Google.Cloud.Spanner.Common.V1.InstanceName("[PROJECT]", "[INSTANCE]").ToString(),
             };
             // Make the request
             Policy response = await instanceAdminClient.GetIamPolicyAsync(request);
@@ -978,7 +980,7 @@ namespace Google.Cloud.Spanner.Admin.Instance.V1.Snippets
             // Initialize request argument(s)
             GetIamPolicyRequest request = new GetIamPolicyRequest
             {
-                Resource = new InstanceName("[PROJECT]", "[INSTANCE]").ToString(),
+                Resource = new Google.Cloud.Spanner.Common.V1.InstanceName("[PROJECT]", "[INSTANCE]").ToString(),
             };
             // Make the request
             Policy response = instanceAdminClient.GetIamPolicy(request);
@@ -993,7 +995,7 @@ namespace Google.Cloud.Spanner.Admin.Instance.V1.Snippets
             // Create client
             InstanceAdminClient instanceAdminClient = await InstanceAdminClient.CreateAsync();
             // Initialize request argument(s)
-            string formattedResource = new InstanceName("[PROJECT]", "[INSTANCE]").ToString();
+            string formattedResource = new Google.Cloud.Spanner.Common.V1.InstanceName("[PROJECT]", "[INSTANCE]").ToString();
             IEnumerable<string> permissions = new List<string>();
             // Make the request
             TestIamPermissionsResponse response = await instanceAdminClient.TestIamPermissionsAsync(formattedResource, permissions);
@@ -1007,7 +1009,7 @@ namespace Google.Cloud.Spanner.Admin.Instance.V1.Snippets
             // Create client
             InstanceAdminClient instanceAdminClient = InstanceAdminClient.Create();
             // Initialize request argument(s)
-            string formattedResource = new InstanceName("[PROJECT]", "[INSTANCE]").ToString();
+            string formattedResource = new Google.Cloud.Spanner.Common.V1.InstanceName("[PROJECT]", "[INSTANCE]").ToString();
             IEnumerable<string> permissions = new List<string>();
             // Make the request
             TestIamPermissionsResponse response = instanceAdminClient.TestIamPermissions(formattedResource, permissions);
@@ -1024,7 +1026,7 @@ namespace Google.Cloud.Spanner.Admin.Instance.V1.Snippets
             // Initialize request argument(s)
             TestIamPermissionsRequest request = new TestIamPermissionsRequest
             {
-                Resource = new InstanceName("[PROJECT]", "[INSTANCE]").ToString(),
+                Resource = new Google.Cloud.Spanner.Common.V1.InstanceName("[PROJECT]", "[INSTANCE]").ToString(),
                 Permissions = { },
             };
             // Make the request
@@ -1041,7 +1043,7 @@ namespace Google.Cloud.Spanner.Admin.Instance.V1.Snippets
             // Initialize request argument(s)
             TestIamPermissionsRequest request = new TestIamPermissionsRequest
             {
-                Resource = new InstanceName("[PROJECT]", "[INSTANCE]").ToString(),
+                Resource = new Google.Cloud.Spanner.Common.V1.InstanceName("[PROJECT]", "[INSTANCE]").ToString(),
                 Permissions = { },
             };
             // Make the request

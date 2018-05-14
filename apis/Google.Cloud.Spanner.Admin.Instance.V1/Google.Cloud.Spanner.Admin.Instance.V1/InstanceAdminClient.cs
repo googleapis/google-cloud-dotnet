@@ -16,7 +16,9 @@
 
 using gax = Google.Api.Gax;
 using gaxgrpc = Google.Api.Gax.Grpc;
+using gaxres = Google.Api.Gax.ResourceNames;
 using iam = Google.Cloud.Iam.V1;
+using Google.Cloud.Spanner.Common.V1;
 using lro = Google.LongRunning;
 using pb = Google.Protobuf;
 using pbwkt = Google.Protobuf.WellKnownTypes;
@@ -639,7 +641,7 @@ namespace Google.Cloud.Spanner.Admin.Instance.V1
         /// A pageable asynchronous sequence of <see cref="InstanceConfig"/> resources.
         /// </returns>
         public virtual gax::PagedAsyncEnumerable<ListInstanceConfigsResponse, InstanceConfig> ListInstanceConfigsAsync(
-            ProjectName parent,
+            gaxres::ProjectName parent,
             string pageToken = null,
             int? pageSize = null,
             gaxgrpc::CallSettings callSettings = null) => ListInstanceConfigsAsync(
@@ -674,7 +676,7 @@ namespace Google.Cloud.Spanner.Admin.Instance.V1
         /// A pageable sequence of <see cref="InstanceConfig"/> resources.
         /// </returns>
         public virtual gax::PagedEnumerable<ListInstanceConfigsResponse, InstanceConfig> ListInstanceConfigs(
-            ProjectName parent,
+            gaxres::ProjectName parent,
             string pageToken = null,
             int? pageSize = null,
             gaxgrpc::CallSettings callSettings = null) => ListInstanceConfigs(
@@ -865,7 +867,7 @@ namespace Google.Cloud.Spanner.Admin.Instance.V1
         /// A pageable asynchronous sequence of <see cref="Instance"/> resources.
         /// </returns>
         public virtual gax::PagedAsyncEnumerable<ListInstancesResponse, Instance> ListInstancesAsync(
-            ProjectName parent,
+            gaxres::ProjectName parent,
             string pageToken = null,
             int? pageSize = null,
             gaxgrpc::CallSettings callSettings = null) => ListInstancesAsync(
@@ -899,7 +901,7 @@ namespace Google.Cloud.Spanner.Admin.Instance.V1
         /// A pageable sequence of <see cref="Instance"/> resources.
         /// </returns>
         public virtual gax::PagedEnumerable<ListInstancesResponse, Instance> ListInstances(
-            ProjectName parent,
+            gaxres::ProjectName parent,
             string pageToken = null,
             int? pageSize = null,
             gaxgrpc::CallSettings callSettings = null) => ListInstances(
@@ -1124,7 +1126,7 @@ namespace Google.Cloud.Spanner.Admin.Instance.V1
         /// A Task containing the RPC response.
         /// </returns>
         public virtual stt::Task<lro::Operation<Instance, CreateInstanceMetadata>> CreateInstanceAsync(
-            ProjectName parent,
+            gaxres::ProjectName parent,
             InstanceName instanceId,
             Instance instance,
             gaxgrpc::CallSettings callSettings = null) => CreateInstanceAsync(
@@ -1192,7 +1194,7 @@ namespace Google.Cloud.Spanner.Admin.Instance.V1
         /// A Task containing the RPC response.
         /// </returns>
         public virtual stt::Task<lro::Operation<Instance, CreateInstanceMetadata>> CreateInstanceAsync(
-            ProjectName parent,
+            gaxres::ProjectName parent,
             InstanceName instanceId,
             Instance instance,
             st::CancellationToken cancellationToken) => CreateInstanceAsync(
@@ -1257,7 +1259,7 @@ namespace Google.Cloud.Spanner.Admin.Instance.V1
         /// The RPC response.
         /// </returns>
         public virtual lro::Operation<Instance, CreateInstanceMetadata> CreateInstance(
-            ProjectName parent,
+            gaxres::ProjectName parent,
             InstanceName instanceId,
             Instance instance,
             gaxgrpc::CallSettings callSettings = null) => CreateInstance(

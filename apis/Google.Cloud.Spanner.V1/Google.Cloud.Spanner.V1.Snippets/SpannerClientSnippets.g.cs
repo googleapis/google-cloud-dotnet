@@ -18,6 +18,7 @@ namespace Google.Cloud.Spanner.V1.Snippets
 {
     using Google.Api.Gax;
     using Google.Api.Gax.Grpc;
+    using Google.Cloud.Spanner.Common.V1;
     using apis = Google.Cloud.Spanner.V1;
     using Google.Protobuf;
     using Google.Protobuf.WellKnownTypes;
@@ -160,7 +161,7 @@ namespace Google.Cloud.Spanner.V1.Snippets
             // Create client
             SpannerClient spannerClient = await SpannerClient.CreateAsync();
             // Initialize request argument(s)
-            string formattedDatabase = new DatabaseName("[PROJECT]", "[INSTANCE]", "[DATABASE]").ToString();
+            string formattedDatabase = new Google.Cloud.Spanner.Common.V1.DatabaseName("[PROJECT]", "[INSTANCE]", "[DATABASE]").ToString();
             // Make the request
             PagedAsyncEnumerable<ListSessionsResponse, Session> response =
                 spannerClient.ListSessionsAsync(formattedDatabase);
@@ -204,7 +205,7 @@ namespace Google.Cloud.Spanner.V1.Snippets
             // Create client
             SpannerClient spannerClient = SpannerClient.Create();
             // Initialize request argument(s)
-            string formattedDatabase = new DatabaseName("[PROJECT]", "[INSTANCE]", "[DATABASE]").ToString();
+            string formattedDatabase = new Google.Cloud.Spanner.Common.V1.DatabaseName("[PROJECT]", "[INSTANCE]", "[DATABASE]").ToString();
             // Make the request
             PagedEnumerable<ListSessionsResponse, Session> response =
                 spannerClient.ListSessions(formattedDatabase);
@@ -250,7 +251,7 @@ namespace Google.Cloud.Spanner.V1.Snippets
             // Initialize request argument(s)
             ListSessionsRequest request = new ListSessionsRequest
             {
-                Database = new DatabaseName("[PROJECT]", "[INSTANCE]", "[DATABASE]").ToString(),
+                Database = new Google.Cloud.Spanner.Common.V1.DatabaseName("[PROJECT]", "[INSTANCE]", "[DATABASE]").ToString(),
             };
             // Make the request
             PagedAsyncEnumerable<ListSessionsResponse, Session> response =
@@ -297,7 +298,7 @@ namespace Google.Cloud.Spanner.V1.Snippets
             // Initialize request argument(s)
             ListSessionsRequest request = new ListSessionsRequest
             {
-                Database = new DatabaseName("[PROJECT]", "[INSTANCE]", "[DATABASE]").ToString(),
+                Database = new Google.Cloud.Spanner.Common.V1.DatabaseName("[PROJECT]", "[INSTANCE]", "[DATABASE]").ToString(),
             };
             // Make the request
             PagedEnumerable<ListSessionsResponse, Session> response =

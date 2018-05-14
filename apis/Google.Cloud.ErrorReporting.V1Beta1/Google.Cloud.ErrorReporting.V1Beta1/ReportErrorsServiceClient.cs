@@ -16,6 +16,7 @@
 
 using gax = Google.Api.Gax;
 using gaxgrpc = Google.Api.Gax.Grpc;
+using gaxres = Google.Api.Gax.ResourceNames;
 using pb = Google.Protobuf;
 using pbwkt = Google.Protobuf.WellKnownTypes;
 using grpccore = Grpc.Core;
@@ -318,7 +319,7 @@ namespace Google.Cloud.ErrorReporting.V1Beta1
         /// A Task containing the RPC response.
         /// </returns>
         public virtual stt::Task<ReportErrorEventResponse> ReportErrorEventAsync(
-            ProjectName projectName,
+            gaxres::ProjectName projectName,
             ReportedErrorEvent @event,
             gaxgrpc::CallSettings callSettings = null) => ReportErrorEventAsync(
                 new ReportErrorEventRequest
@@ -354,7 +355,7 @@ namespace Google.Cloud.ErrorReporting.V1Beta1
         /// A Task containing the RPC response.
         /// </returns>
         public virtual stt::Task<ReportErrorEventResponse> ReportErrorEventAsync(
-            ProjectName projectName,
+            gaxres::ProjectName projectName,
             ReportedErrorEvent @event,
             st::CancellationToken cancellationToken) => ReportErrorEventAsync(
                 projectName,
@@ -387,7 +388,7 @@ namespace Google.Cloud.ErrorReporting.V1Beta1
         /// The RPC response.
         /// </returns>
         public virtual ReportErrorEventResponse ReportErrorEvent(
-            ProjectName projectName,
+            gaxres::ProjectName projectName,
             ReportedErrorEvent @event,
             gaxgrpc::CallSettings callSettings = null) => ReportErrorEvent(
                 new ReportErrorEventRequest
