@@ -17,6 +17,7 @@
 using gax = Google.Api.Gax;
 using gaxgrpc = Google.Api.Gax.Grpc;
 using iam = Google.Cloud.Iam.V1;
+using Google.Cloud.Spanner.Common.V1;
 using lro = Google.LongRunning;
 using pb = Google.Protobuf;
 using pbwkt = Google.Protobuf.WellKnownTypes;

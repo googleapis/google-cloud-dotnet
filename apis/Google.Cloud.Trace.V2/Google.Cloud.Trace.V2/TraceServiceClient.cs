@@ -16,6 +16,7 @@
 
 using gax = Google.Api.Gax;
 using gaxgrpc = Google.Api.Gax.Grpc;
+using gaxres = Google.Api.Gax.ResourceNames;
 using pb = Google.Protobuf;
 using pbwkt = Google.Protobuf.WellKnownTypes;
 using grpccore = Grpc.Core;
@@ -344,7 +345,7 @@ namespace Google.Cloud.Trace.V2
         /// A Task that completes when the RPC has completed.
         /// </returns>
         public virtual stt::Task BatchWriteSpansAsync(
-            ProjectName name,
+            gaxres::ProjectName name,
             scg::IEnumerable<Span> spans,
             gaxgrpc::CallSettings callSettings = null) => BatchWriteSpansAsync(
                 new BatchWriteSpansRequest
@@ -373,7 +374,7 @@ namespace Google.Cloud.Trace.V2
         /// A Task that completes when the RPC has completed.
         /// </returns>
         public virtual stt::Task BatchWriteSpansAsync(
-            ProjectName name,
+            gaxres::ProjectName name,
             scg::IEnumerable<Span> spans,
             st::CancellationToken cancellationToken) => BatchWriteSpansAsync(
                 name,
@@ -396,7 +397,7 @@ namespace Google.Cloud.Trace.V2
         /// If not null, applies overrides to this RPC call.
         /// </param>
         public virtual void BatchWriteSpans(
-            ProjectName name,
+            gaxres::ProjectName name,
             scg::IEnumerable<Span> spans,
             gaxgrpc::CallSettings callSettings = null) => BatchWriteSpans(
                 new BatchWriteSpansRequest

@@ -16,6 +16,7 @@
 
 using gax = Google.Api.Gax;
 using gaxgrpc = Google.Api.Gax.Grpc;
+using gaxres = Google.Api.Gax.ResourceNames;
 using pb = Google.Protobuf;
 using pbwkt = Google.Protobuf.WellKnownTypes;
 using grpccore = Grpc.Core;
@@ -390,7 +391,7 @@ namespace Google.Cloud.ErrorReporting.V1Beta1
         /// A pageable asynchronous sequence of <see cref="ErrorGroupStats"/> resources.
         /// </returns>
         public virtual gax::PagedAsyncEnumerable<ListGroupStatsResponse, ErrorGroupStats> ListGroupStatsAsync(
-            ProjectName projectName,
+            gaxres::ProjectName projectName,
             QueryTimeRange timeRange,
             string pageToken = null,
             int? pageSize = null,
@@ -439,7 +440,7 @@ namespace Google.Cloud.ErrorReporting.V1Beta1
         /// A pageable sequence of <see cref="ErrorGroupStats"/> resources.
         /// </returns>
         public virtual gax::PagedEnumerable<ListGroupStatsResponse, ErrorGroupStats> ListGroupStats(
-            ProjectName projectName,
+            gaxres::ProjectName projectName,
             QueryTimeRange timeRange,
             string pageToken = null,
             int? pageSize = null,
@@ -519,7 +520,7 @@ namespace Google.Cloud.ErrorReporting.V1Beta1
         /// A pageable asynchronous sequence of <see cref="ErrorEvent"/> resources.
         /// </returns>
         public virtual gax::PagedAsyncEnumerable<ListEventsResponse, ErrorEvent> ListEventsAsync(
-            ProjectName projectName,
+            gaxres::ProjectName projectName,
             string groupId,
             string pageToken = null,
             int? pageSize = null,
@@ -561,7 +562,7 @@ namespace Google.Cloud.ErrorReporting.V1Beta1
         /// A pageable sequence of <see cref="ErrorEvent"/> resources.
         /// </returns>
         public virtual gax::PagedEnumerable<ListEventsResponse, ErrorEvent> ListEvents(
-            ProjectName projectName,
+            gaxres::ProjectName projectName,
             string groupId,
             string pageToken = null,
             int? pageSize = null,
@@ -630,7 +631,7 @@ namespace Google.Cloud.ErrorReporting.V1Beta1
         /// A Task containing the RPC response.
         /// </returns>
         public virtual stt::Task<DeleteEventsResponse> DeleteEventsAsync(
-            ProjectName projectName,
+            gaxres::ProjectName projectName,
             gaxgrpc::CallSettings callSettings = null) => DeleteEventsAsync(
                 new DeleteEventsRequest
                 {
@@ -655,7 +656,7 @@ namespace Google.Cloud.ErrorReporting.V1Beta1
         /// A Task containing the RPC response.
         /// </returns>
         public virtual stt::Task<DeleteEventsResponse> DeleteEventsAsync(
-            ProjectName projectName,
+            gaxres::ProjectName projectName,
             st::CancellationToken cancellationToken) => DeleteEventsAsync(
                 projectName,
                 gaxgrpc::CallSettings.FromCancellationToken(cancellationToken));
@@ -677,7 +678,7 @@ namespace Google.Cloud.ErrorReporting.V1Beta1
         /// The RPC response.
         /// </returns>
         public virtual DeleteEventsResponse DeleteEvents(
-            ProjectName projectName,
+            gaxres::ProjectName projectName,
             gaxgrpc::CallSettings callSettings = null) => DeleteEvents(
                 new DeleteEventsRequest
                 {

@@ -20,6 +20,7 @@ namespace Google.Cloud.Spanner.Admin.Database.V1.Snippets
     using Google.Api.Gax.Grpc;
     using Google.Cloud.Iam.V1;
     using apis = Google.Cloud.Spanner.Admin.Database.V1;
+    using Google.Cloud.Spanner.Common.V1;
     using Google.LongRunning;
     using Google.Protobuf;
     using Google.Protobuf.WellKnownTypes;
@@ -675,7 +676,7 @@ namespace Google.Cloud.Spanner.Admin.Database.V1.Snippets
             // Create client
             DatabaseAdminClient databaseAdminClient = await DatabaseAdminClient.CreateAsync();
             // Initialize request argument(s)
-            string formattedResource = new DatabaseName("[PROJECT]", "[INSTANCE]", "[DATABASE]").ToString();
+            string formattedResource = new Google.Cloud.Spanner.Common.V1.DatabaseName("[PROJECT]", "[INSTANCE]", "[DATABASE]").ToString();
             Policy policy = new Policy();
             // Make the request
             Policy response = await databaseAdminClient.SetIamPolicyAsync(formattedResource, policy);
@@ -689,7 +690,7 @@ namespace Google.Cloud.Spanner.Admin.Database.V1.Snippets
             // Create client
             DatabaseAdminClient databaseAdminClient = DatabaseAdminClient.Create();
             // Initialize request argument(s)
-            string formattedResource = new DatabaseName("[PROJECT]", "[INSTANCE]", "[DATABASE]").ToString();
+            string formattedResource = new Google.Cloud.Spanner.Common.V1.DatabaseName("[PROJECT]", "[INSTANCE]", "[DATABASE]").ToString();
             Policy policy = new Policy();
             // Make the request
             Policy response = databaseAdminClient.SetIamPolicy(formattedResource, policy);
@@ -706,7 +707,7 @@ namespace Google.Cloud.Spanner.Admin.Database.V1.Snippets
             // Initialize request argument(s)
             SetIamPolicyRequest request = new SetIamPolicyRequest
             {
-                Resource = new DatabaseName("[PROJECT]", "[INSTANCE]", "[DATABASE]").ToString(),
+                Resource = new Google.Cloud.Spanner.Common.V1.DatabaseName("[PROJECT]", "[INSTANCE]", "[DATABASE]").ToString(),
                 Policy = new Policy(),
             };
             // Make the request
@@ -723,7 +724,7 @@ namespace Google.Cloud.Spanner.Admin.Database.V1.Snippets
             // Initialize request argument(s)
             SetIamPolicyRequest request = new SetIamPolicyRequest
             {
-                Resource = new DatabaseName("[PROJECT]", "[INSTANCE]", "[DATABASE]").ToString(),
+                Resource = new Google.Cloud.Spanner.Common.V1.DatabaseName("[PROJECT]", "[INSTANCE]", "[DATABASE]").ToString(),
                 Policy = new Policy(),
             };
             // Make the request
@@ -739,7 +740,7 @@ namespace Google.Cloud.Spanner.Admin.Database.V1.Snippets
             // Create client
             DatabaseAdminClient databaseAdminClient = await DatabaseAdminClient.CreateAsync();
             // Initialize request argument(s)
-            string formattedResource = new DatabaseName("[PROJECT]", "[INSTANCE]", "[DATABASE]").ToString();
+            string formattedResource = new Google.Cloud.Spanner.Common.V1.DatabaseName("[PROJECT]", "[INSTANCE]", "[DATABASE]").ToString();
             // Make the request
             Policy response = await databaseAdminClient.GetIamPolicyAsync(formattedResource);
             // End snippet
@@ -752,7 +753,7 @@ namespace Google.Cloud.Spanner.Admin.Database.V1.Snippets
             // Create client
             DatabaseAdminClient databaseAdminClient = DatabaseAdminClient.Create();
             // Initialize request argument(s)
-            string formattedResource = new DatabaseName("[PROJECT]", "[INSTANCE]", "[DATABASE]").ToString();
+            string formattedResource = new Google.Cloud.Spanner.Common.V1.DatabaseName("[PROJECT]", "[INSTANCE]", "[DATABASE]").ToString();
             // Make the request
             Policy response = databaseAdminClient.GetIamPolicy(formattedResource);
             // End snippet
@@ -768,7 +769,7 @@ namespace Google.Cloud.Spanner.Admin.Database.V1.Snippets
             // Initialize request argument(s)
             GetIamPolicyRequest request = new GetIamPolicyRequest
             {
-                Resource = new DatabaseName("[PROJECT]", "[INSTANCE]", "[DATABASE]").ToString(),
+                Resource = new Google.Cloud.Spanner.Common.V1.DatabaseName("[PROJECT]", "[INSTANCE]", "[DATABASE]").ToString(),
             };
             // Make the request
             Policy response = await databaseAdminClient.GetIamPolicyAsync(request);
@@ -784,7 +785,7 @@ namespace Google.Cloud.Spanner.Admin.Database.V1.Snippets
             // Initialize request argument(s)
             GetIamPolicyRequest request = new GetIamPolicyRequest
             {
-                Resource = new DatabaseName("[PROJECT]", "[INSTANCE]", "[DATABASE]").ToString(),
+                Resource = new Google.Cloud.Spanner.Common.V1.DatabaseName("[PROJECT]", "[INSTANCE]", "[DATABASE]").ToString(),
             };
             // Make the request
             Policy response = databaseAdminClient.GetIamPolicy(request);
@@ -799,7 +800,7 @@ namespace Google.Cloud.Spanner.Admin.Database.V1.Snippets
             // Create client
             DatabaseAdminClient databaseAdminClient = await DatabaseAdminClient.CreateAsync();
             // Initialize request argument(s)
-            string formattedResource = new DatabaseName("[PROJECT]", "[INSTANCE]", "[DATABASE]").ToString();
+            string formattedResource = new Google.Cloud.Spanner.Common.V1.DatabaseName("[PROJECT]", "[INSTANCE]", "[DATABASE]").ToString();
             IEnumerable<string> permissions = new List<string>();
             // Make the request
             TestIamPermissionsResponse response = await databaseAdminClient.TestIamPermissionsAsync(formattedResource, permissions);
@@ -813,7 +814,7 @@ namespace Google.Cloud.Spanner.Admin.Database.V1.Snippets
             // Create client
             DatabaseAdminClient databaseAdminClient = DatabaseAdminClient.Create();
             // Initialize request argument(s)
-            string formattedResource = new DatabaseName("[PROJECT]", "[INSTANCE]", "[DATABASE]").ToString();
+            string formattedResource = new Google.Cloud.Spanner.Common.V1.DatabaseName("[PROJECT]", "[INSTANCE]", "[DATABASE]").ToString();
             IEnumerable<string> permissions = new List<string>();
             // Make the request
             TestIamPermissionsResponse response = databaseAdminClient.TestIamPermissions(formattedResource, permissions);
@@ -830,7 +831,7 @@ namespace Google.Cloud.Spanner.Admin.Database.V1.Snippets
             // Initialize request argument(s)
             TestIamPermissionsRequest request = new TestIamPermissionsRequest
             {
-                Resource = new DatabaseName("[PROJECT]", "[INSTANCE]", "[DATABASE]").ToString(),
+                Resource = new Google.Cloud.Spanner.Common.V1.DatabaseName("[PROJECT]", "[INSTANCE]", "[DATABASE]").ToString(),
                 Permissions = { },
             };
             // Make the request
@@ -847,7 +848,7 @@ namespace Google.Cloud.Spanner.Admin.Database.V1.Snippets
             // Initialize request argument(s)
             TestIamPermissionsRequest request = new TestIamPermissionsRequest
             {
-                Resource = new DatabaseName("[PROJECT]", "[INSTANCE]", "[DATABASE]").ToString(),
+                Resource = new Google.Cloud.Spanner.Common.V1.DatabaseName("[PROJECT]", "[INSTANCE]", "[DATABASE]").ToString(),
                 Permissions = { },
             };
             // Make the request

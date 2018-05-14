@@ -26,17 +26,20 @@ namespace Google.Cloud.Vision.V1 {
           string.Concat(
             "CiVnb29nbGUvY2xvdWQvdmlzaW9uL3YxL2dlb21ldHJ5LnByb3RvEhZnb29n",
             "bGUuY2xvdWQudmlzaW9uLnYxIh4KBlZlcnRleBIJCgF4GAEgASgFEgkKAXkY",
-            "AiABKAUiQAoMQm91bmRpbmdQb2x5EjAKCHZlcnRpY2VzGAEgAygLMh4uZ29v",
-            "Z2xlLmNsb3VkLnZpc2lvbi52MS5WZXJ0ZXgiKwoIUG9zaXRpb24SCQoBeBgB",
-            "IAEoAhIJCgF5GAIgASgCEgkKAXoYAyABKAJCbgoaY29tLmdvb2dsZS5jbG91",
-            "ZC52aXNpb24udjFCDUdlb21ldHJ5UHJvdG9QAVo8Z29vZ2xlLmdvbGFuZy5v",
-            "cmcvZ2VucHJvdG8vZ29vZ2xlYXBpcy9jbG91ZC92aXNpb24vdjE7dmlzaW9u",
-            "+AEBYgZwcm90bzM="));
+            "AiABKAUiKAoQTm9ybWFsaXplZFZlcnRleBIJCgF4GAEgASgCEgkKAXkYAiAB",
+            "KAIihwEKDEJvdW5kaW5nUG9seRIwCgh2ZXJ0aWNlcxgBIAMoCzIeLmdvb2ds",
+            "ZS5jbG91ZC52aXNpb24udjEuVmVydGV4EkUKE25vcm1hbGl6ZWRfdmVydGlj",
+            "ZXMYAiADKAsyKC5nb29nbGUuY2xvdWQudmlzaW9uLnYxLk5vcm1hbGl6ZWRW",
+            "ZXJ0ZXgiKwoIUG9zaXRpb24SCQoBeBgBIAEoAhIJCgF5GAIgASgCEgkKAXoY",
+            "AyABKAJCbgoaY29tLmdvb2dsZS5jbG91ZC52aXNpb24udjFCDUdlb21ldHJ5",
+            "UHJvdG9QAVo8Z29vZ2xlLmdvbGFuZy5vcmcvZ2VucHJvdG8vZ29vZ2xlYXBp",
+            "cy9jbG91ZC92aXNpb24vdjE7dmlzaW9u+AEBYgZwcm90bzM="));
       descriptor = pbr::FileDescriptor.FromGeneratedCode(descriptorData,
           new pbr::FileDescriptor[] { },
           new pbr::GeneratedClrTypeInfo(null, new pbr::GeneratedClrTypeInfo[] {
             new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.Vision.V1.Vertex), global::Google.Cloud.Vision.V1.Vertex.Parser, new[]{ "X", "Y" }, null, null, null),
-            new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.Vision.V1.BoundingPoly), global::Google.Cloud.Vision.V1.BoundingPoly.Parser, new[]{ "Vertices" }, null, null, null),
+            new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.Vision.V1.NormalizedVertex), global::Google.Cloud.Vision.V1.NormalizedVertex.Parser, new[]{ "X", "Y" }, null, null, null),
+            new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.Vision.V1.BoundingPoly), global::Google.Cloud.Vision.V1.BoundingPoly.Parser, new[]{ "Vertices", "NormalizedVertices" }, null, null, null),
             new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.Vision.V1.Position), global::Google.Cloud.Vision.V1.Position.Parser, new[]{ "X", "Y", "Z" }, null, null, null)
           }));
     }
@@ -212,6 +215,174 @@ namespace Google.Cloud.Vision.V1 {
   }
 
   /// <summary>
+  /// A vertex represents a 2D point in the image.
+  /// NOTE: the normalized vertex coordinates are relative to the original image
+  /// and range from 0 to 1.
+  /// </summary>
+  public sealed partial class NormalizedVertex : pb::IMessage<NormalizedVertex> {
+    private static readonly pb::MessageParser<NormalizedVertex> _parser = new pb::MessageParser<NormalizedVertex>(() => new NormalizedVertex());
+    private pb::UnknownFieldSet _unknownFields;
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    public static pb::MessageParser<NormalizedVertex> Parser { get { return _parser; } }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    public static pbr::MessageDescriptor Descriptor {
+      get { return global::Google.Cloud.Vision.V1.GeometryReflection.Descriptor.MessageTypes[1]; }
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    pbr::MessageDescriptor pb::IMessage.Descriptor {
+      get { return Descriptor; }
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    public NormalizedVertex() {
+      OnConstruction();
+    }
+
+    partial void OnConstruction();
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    public NormalizedVertex(NormalizedVertex other) : this() {
+      x_ = other.x_;
+      y_ = other.y_;
+      _unknownFields = pb::UnknownFieldSet.Clone(other._unknownFields);
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    public NormalizedVertex Clone() {
+      return new NormalizedVertex(this);
+    }
+
+    /// <summary>Field number for the "x" field.</summary>
+    public const int XFieldNumber = 1;
+    private float x_;
+    /// <summary>
+    /// X coordinate.
+    /// </summary>
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    public float X {
+      get { return x_; }
+      set {
+        x_ = value;
+      }
+    }
+
+    /// <summary>Field number for the "y" field.</summary>
+    public const int YFieldNumber = 2;
+    private float y_;
+    /// <summary>
+    /// Y coordinate.
+    /// </summary>
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    public float Y {
+      get { return y_; }
+      set {
+        y_ = value;
+      }
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    public override bool Equals(object other) {
+      return Equals(other as NormalizedVertex);
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    public bool Equals(NormalizedVertex other) {
+      if (ReferenceEquals(other, null)) {
+        return false;
+      }
+      if (ReferenceEquals(other, this)) {
+        return true;
+      }
+      if (!pbc::ProtobufEqualityComparers.BitwiseSingleEqualityComparer.Equals(X, other.X)) return false;
+      if (!pbc::ProtobufEqualityComparers.BitwiseSingleEqualityComparer.Equals(Y, other.Y)) return false;
+      return Equals(_unknownFields, other._unknownFields);
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    public override int GetHashCode() {
+      int hash = 1;
+      if (X != 0F) hash ^= pbc::ProtobufEqualityComparers.BitwiseSingleEqualityComparer.GetHashCode(X);
+      if (Y != 0F) hash ^= pbc::ProtobufEqualityComparers.BitwiseSingleEqualityComparer.GetHashCode(Y);
+      if (_unknownFields != null) {
+        hash ^= _unknownFields.GetHashCode();
+      }
+      return hash;
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    public override string ToString() {
+      return pb::JsonFormatter.ToDiagnosticString(this);
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    public void WriteTo(pb::CodedOutputStream output) {
+      if (X != 0F) {
+        output.WriteRawTag(13);
+        output.WriteFloat(X);
+      }
+      if (Y != 0F) {
+        output.WriteRawTag(21);
+        output.WriteFloat(Y);
+      }
+      if (_unknownFields != null) {
+        _unknownFields.WriteTo(output);
+      }
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    public int CalculateSize() {
+      int size = 0;
+      if (X != 0F) {
+        size += 1 + 4;
+      }
+      if (Y != 0F) {
+        size += 1 + 4;
+      }
+      if (_unknownFields != null) {
+        size += _unknownFields.CalculateSize();
+      }
+      return size;
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    public void MergeFrom(NormalizedVertex other) {
+      if (other == null) {
+        return;
+      }
+      if (other.X != 0F) {
+        X = other.X;
+      }
+      if (other.Y != 0F) {
+        Y = other.Y;
+      }
+      _unknownFields = pb::UnknownFieldSet.MergeFrom(_unknownFields, other._unknownFields);
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    public void MergeFrom(pb::CodedInputStream input) {
+      uint tag;
+      while ((tag = input.ReadTag()) != 0) {
+        switch(tag) {
+          default:
+            _unknownFields = pb::UnknownFieldSet.MergeFieldFrom(_unknownFields, input);
+            break;
+          case 13: {
+            X = input.ReadFloat();
+            break;
+          }
+          case 21: {
+            Y = input.ReadFloat();
+            break;
+          }
+        }
+      }
+    }
+
+  }
+
+  /// <summary>
   /// A bounding polygon for the detected image annotation.
   /// </summary>
   public sealed partial class BoundingPoly : pb::IMessage<BoundingPoly> {
@@ -222,7 +393,7 @@ namespace Google.Cloud.Vision.V1 {
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     public static pbr::MessageDescriptor Descriptor {
-      get { return global::Google.Cloud.Vision.V1.GeometryReflection.Descriptor.MessageTypes[1]; }
+      get { return global::Google.Cloud.Vision.V1.GeometryReflection.Descriptor.MessageTypes[2]; }
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
@@ -240,6 +411,7 @@ namespace Google.Cloud.Vision.V1 {
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     public BoundingPoly(BoundingPoly other) : this() {
       vertices_ = other.vertices_.Clone();
+      normalizedVertices_ = other.normalizedVertices_.Clone();
       _unknownFields = pb::UnknownFieldSet.Clone(other._unknownFields);
     }
 
@@ -261,6 +433,19 @@ namespace Google.Cloud.Vision.V1 {
       get { return vertices_; }
     }
 
+    /// <summary>Field number for the "normalized_vertices" field.</summary>
+    public const int NormalizedVerticesFieldNumber = 2;
+    private static readonly pb::FieldCodec<global::Google.Cloud.Vision.V1.NormalizedVertex> _repeated_normalizedVertices_codec
+        = pb::FieldCodec.ForMessage(18, global::Google.Cloud.Vision.V1.NormalizedVertex.Parser);
+    private readonly pbc::RepeatedField<global::Google.Cloud.Vision.V1.NormalizedVertex> normalizedVertices_ = new pbc::RepeatedField<global::Google.Cloud.Vision.V1.NormalizedVertex>();
+    /// <summary>
+    /// The bounding polygon normalized vertices.
+    /// </summary>
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    public pbc::RepeatedField<global::Google.Cloud.Vision.V1.NormalizedVertex> NormalizedVertices {
+      get { return normalizedVertices_; }
+    }
+
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     public override bool Equals(object other) {
       return Equals(other as BoundingPoly);
@@ -275,6 +460,7 @@ namespace Google.Cloud.Vision.V1 {
         return true;
       }
       if(!vertices_.Equals(other.vertices_)) return false;
+      if(!normalizedVertices_.Equals(other.normalizedVertices_)) return false;
       return Equals(_unknownFields, other._unknownFields);
     }
 
@@ -282,6 +468,7 @@ namespace Google.Cloud.Vision.V1 {
     public override int GetHashCode() {
       int hash = 1;
       hash ^= vertices_.GetHashCode();
+      hash ^= normalizedVertices_.GetHashCode();
       if (_unknownFields != null) {
         hash ^= _unknownFields.GetHashCode();
       }
@@ -296,6 +483,7 @@ namespace Google.Cloud.Vision.V1 {
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     public void WriteTo(pb::CodedOutputStream output) {
       vertices_.WriteTo(output, _repeated_vertices_codec);
+      normalizedVertices_.WriteTo(output, _repeated_normalizedVertices_codec);
       if (_unknownFields != null) {
         _unknownFields.WriteTo(output);
       }
@@ -305,6 +493,7 @@ namespace Google.Cloud.Vision.V1 {
     public int CalculateSize() {
       int size = 0;
       size += vertices_.CalculateSize(_repeated_vertices_codec);
+      size += normalizedVertices_.CalculateSize(_repeated_normalizedVertices_codec);
       if (_unknownFields != null) {
         size += _unknownFields.CalculateSize();
       }
@@ -317,6 +506,7 @@ namespace Google.Cloud.Vision.V1 {
         return;
       }
       vertices_.Add(other.vertices_);
+      normalizedVertices_.Add(other.normalizedVertices_);
       _unknownFields = pb::UnknownFieldSet.MergeFrom(_unknownFields, other._unknownFields);
     }
 
@@ -330,6 +520,10 @@ namespace Google.Cloud.Vision.V1 {
             break;
           case 10: {
             vertices_.AddEntriesFrom(input, _repeated_vertices_codec);
+            break;
+          }
+          case 18: {
+            normalizedVertices_.AddEntriesFrom(input, _repeated_normalizedVertices_codec);
             break;
           }
         }
@@ -351,7 +545,7 @@ namespace Google.Cloud.Vision.V1 {
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     public static pbr::MessageDescriptor Descriptor {
-      get { return global::Google.Cloud.Vision.V1.GeometryReflection.Descriptor.MessageTypes[2]; }
+      get { return global::Google.Cloud.Vision.V1.GeometryReflection.Descriptor.MessageTypes[3]; }
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]

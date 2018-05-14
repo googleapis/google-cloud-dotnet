@@ -19,6 +19,7 @@ namespace Google.Cloud.Vision.V1.Tests
     using Google.Api.Gax;
     using Google.Api.Gax.Grpc;
     using apis = Google.Cloud.Vision.V1;
+    using Google.LongRunning;
     using Google.Protobuf.WellKnownTypes;
     using Grpc.Core;
     using Moq;
@@ -37,6 +38,8 @@ namespace Google.Cloud.Vision.V1.Tests
         public void BatchAnnotateImages()
         {
             Mock<ImageAnnotator.ImageAnnotatorClient> mockGrpcClient = new Mock<ImageAnnotator.ImageAnnotatorClient>(MockBehavior.Strict);
+            mockGrpcClient.Setup(x => x.CreateOperationsClient())
+                .Returns(new Mock<Operations.OperationsClient>().Object);
             BatchAnnotateImagesRequest expectedRequest = new BatchAnnotateImagesRequest
             {
                 Requests = { },
@@ -55,6 +58,8 @@ namespace Google.Cloud.Vision.V1.Tests
         public async Task BatchAnnotateImagesAsync()
         {
             Mock<ImageAnnotator.ImageAnnotatorClient> mockGrpcClient = new Mock<ImageAnnotator.ImageAnnotatorClient>(MockBehavior.Strict);
+            mockGrpcClient.Setup(x => x.CreateOperationsClient())
+                .Returns(new Mock<Operations.OperationsClient>().Object);
             BatchAnnotateImagesRequest expectedRequest = new BatchAnnotateImagesRequest
             {
                 Requests = { },
@@ -73,6 +78,8 @@ namespace Google.Cloud.Vision.V1.Tests
         public void BatchAnnotateImages2()
         {
             Mock<ImageAnnotator.ImageAnnotatorClient> mockGrpcClient = new Mock<ImageAnnotator.ImageAnnotatorClient>(MockBehavior.Strict);
+            mockGrpcClient.Setup(x => x.CreateOperationsClient())
+                .Returns(new Mock<Operations.OperationsClient>().Object);
             BatchAnnotateImagesRequest request = new BatchAnnotateImagesRequest
             {
                 Requests = { },
@@ -90,6 +97,8 @@ namespace Google.Cloud.Vision.V1.Tests
         public async Task BatchAnnotateImagesAsync2()
         {
             Mock<ImageAnnotator.ImageAnnotatorClient> mockGrpcClient = new Mock<ImageAnnotator.ImageAnnotatorClient>(MockBehavior.Strict);
+            mockGrpcClient.Setup(x => x.CreateOperationsClient())
+                .Returns(new Mock<Operations.OperationsClient>().Object);
             BatchAnnotateImagesRequest request = new BatchAnnotateImagesRequest
             {
                 Requests = { },
