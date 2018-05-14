@@ -13,7 +13,6 @@
 // limitations under the License.
 
 using Google.Api.Gax;
-using System;
 
 namespace Google.Cloud.Firestore
 {
@@ -42,7 +41,7 @@ namespace Google.Cloud.Firestore
         /// </summary>
         /// <param name="maxAttempts">The number of times a transaction will be attempted before failing. Must be positive.</param>
         /// <returns>A new options object.</returns>
-        public static TransactionOptions Create(int maxAttempts)
+        public static TransactionOptions ForMaxAttempts(int maxAttempts)
         {
             GaxPreconditions.CheckArgumentRange(maxAttempts, nameof(maxAttempts), 1, int.MaxValue);
             return new TransactionOptions(maxAttempts);

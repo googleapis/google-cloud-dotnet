@@ -23,18 +23,18 @@ namespace Google.Cloud.Firestore.Tests
         [InlineData(0)]
         [InlineData(-1)]
         [InlineData(-10)]
-        public void Create_Invalid(int attempts)
+        public void ForMaxAttempts_Invalid(int attempts)
         {
-            Assert.Throws<ArgumentOutOfRangeException>(() => TransactionOptions.Create(attempts));
+            Assert.Throws<ArgumentOutOfRangeException>(() => TransactionOptions.ForMaxAttempts(attempts));
         }
 
         [Theory]
         [InlineData(1)]
         [InlineData(5)]
         [InlineData(int.MaxValue)]
-        public void Create_Valid(int attempts)
+        public void ForMaxAttempts_Valid(int attempts)
         {
-            var options = TransactionOptions.Create(attempts);
+            var options = TransactionOptions.ForMaxAttempts(attempts);
             Assert.Equal(attempts, options.MaxAttempts);
         }
     }
