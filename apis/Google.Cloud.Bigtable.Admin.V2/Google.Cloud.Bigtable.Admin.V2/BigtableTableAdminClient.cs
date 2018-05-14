@@ -135,6 +135,86 @@ namespace Google.Cloud.Bigtable.Admin.V2
         );
 
         /// <summary>
+        /// "CreateTable" retry backoff for <see cref="BigtableTableAdminClient"/> RPC methods.
+        /// </summary>
+        /// <returns>
+        /// The "CreateTable" retry backoff for <see cref="BigtableTableAdminClient"/> RPC methods.
+        /// </returns>
+        /// <remarks>
+        /// The "CreateTable" retry backoff for <see cref="BigtableTableAdminClient"/> RPC methods is defined as:
+        /// <list type="bullet">
+        /// <item><description>Initial delay: 100 milliseconds</description></item>
+        /// <item><description>Maximum delay: 60000 milliseconds</description></item>
+        /// <item><description>Delay multiplier: 1.3</description></item>
+        /// </list>
+        /// </remarks>
+        public static gaxgrpc::BackoffSettings GetCreateTableRetryBackoff() => new gaxgrpc::BackoffSettings(
+            delay: sys::TimeSpan.FromMilliseconds(100),
+            maxDelay: sys::TimeSpan.FromMilliseconds(60000),
+            delayMultiplier: 1.3
+        );
+
+        /// <summary>
+        /// "CreateTable" timeout backoff for <see cref="BigtableTableAdminClient"/> RPC methods.
+        /// </summary>
+        /// <returns>
+        /// The "CreateTable" timeout backoff for <see cref="BigtableTableAdminClient"/> RPC methods.
+        /// </returns>
+        /// <remarks>
+        /// The "CreateTable" timeout backoff for <see cref="BigtableTableAdminClient"/> RPC methods is defined as:
+        /// <list type="bullet">
+        /// <item><description>Initial timeout: 130000 milliseconds</description></item>
+        /// <item><description>Timeout multiplier: 1.0</description></item>
+        /// <item><description>Maximum timeout: 130000 milliseconds</description></item>
+        /// </list>
+        /// </remarks>
+        public static gaxgrpc::BackoffSettings GetCreateTableTimeoutBackoff() => new gaxgrpc::BackoffSettings(
+            delay: sys::TimeSpan.FromMilliseconds(130000),
+            maxDelay: sys::TimeSpan.FromMilliseconds(130000),
+            delayMultiplier: 1.0
+        );
+
+        /// <summary>
+        /// "DropRowRange" retry backoff for <see cref="BigtableTableAdminClient"/> RPC methods.
+        /// </summary>
+        /// <returns>
+        /// The "DropRowRange" retry backoff for <see cref="BigtableTableAdminClient"/> RPC methods.
+        /// </returns>
+        /// <remarks>
+        /// The "DropRowRange" retry backoff for <see cref="BigtableTableAdminClient"/> RPC methods is defined as:
+        /// <list type="bullet">
+        /// <item><description>Initial delay: 100 milliseconds</description></item>
+        /// <item><description>Maximum delay: 60000 milliseconds</description></item>
+        /// <item><description>Delay multiplier: 1.3</description></item>
+        /// </list>
+        /// </remarks>
+        public static gaxgrpc::BackoffSettings GetDropRowRangeRetryBackoff() => new gaxgrpc::BackoffSettings(
+            delay: sys::TimeSpan.FromMilliseconds(100),
+            maxDelay: sys::TimeSpan.FromMilliseconds(60000),
+            delayMultiplier: 1.3
+        );
+
+        /// <summary>
+        /// "DropRowRange" timeout backoff for <see cref="BigtableTableAdminClient"/> RPC methods.
+        /// </summary>
+        /// <returns>
+        /// The "DropRowRange" timeout backoff for <see cref="BigtableTableAdminClient"/> RPC methods.
+        /// </returns>
+        /// <remarks>
+        /// The "DropRowRange" timeout backoff for <see cref="BigtableTableAdminClient"/> RPC methods is defined as:
+        /// <list type="bullet">
+        /// <item><description>Initial timeout: 900000 milliseconds</description></item>
+        /// <item><description>Timeout multiplier: 1.0</description></item>
+        /// <item><description>Maximum timeout: 900000 milliseconds</description></item>
+        /// </list>
+        /// </remarks>
+        public static gaxgrpc::BackoffSettings GetDropRowRangeTimeoutBackoff() => new gaxgrpc::BackoffSettings(
+            delay: sys::TimeSpan.FromMilliseconds(900000),
+            maxDelay: sys::TimeSpan.FromMilliseconds(900000),
+            delayMultiplier: 1.0
+        );
+
+        /// <summary>
         /// <see cref="gaxgrpc::CallSettings"/> for synchronous and asynchronous calls to
         /// <c>BigtableTableAdminClient.CreateTable</c> and <c>BigtableTableAdminClient.CreateTableAsync</c>.
         /// </summary>
@@ -145,21 +225,21 @@ namespace Google.Cloud.Bigtable.Admin.V2
         /// <item><description>Initial retry delay: 100 milliseconds</description></item>
         /// <item><description>Retry delay multiplier: 1.3</description></item>
         /// <item><description>Retry maximum delay: 60000 milliseconds</description></item>
-        /// <item><description>Initial timeout: 20000 milliseconds</description></item>
+        /// <item><description>Initial timeout: 130000 milliseconds</description></item>
         /// <item><description>Timeout multiplier: 1.0</description></item>
-        /// <item><description>Timeout maximum delay: 20000 milliseconds</description></item>
+        /// <item><description>Timeout maximum delay: 130000 milliseconds</description></item>
         /// </list>
         /// Retry will be attempted on the following response status codes:
         /// <list>
         /// <item><description>No status codes</description></item>
         /// </list>
-        /// Default RPC expiration is 600000 milliseconds.
+        /// Default RPC expiration is 3600000 milliseconds.
         /// </remarks>
         public gaxgrpc::CallSettings CreateTableSettings { get; set; } = gaxgrpc::CallSettings.FromCallTiming(
             gaxgrpc::CallTiming.FromRetry(new gaxgrpc::RetrySettings(
-                retryBackoff: GetDefaultRetryBackoff(),
-                timeoutBackoff: GetDefaultTimeoutBackoff(),
-                totalExpiration: gax::Expiration.FromTimeout(sys::TimeSpan.FromMilliseconds(600000)),
+                retryBackoff: GetCreateTableRetryBackoff(),
+                timeoutBackoff: GetCreateTableTimeoutBackoff(),
+                totalExpiration: gax::Expiration.FromTimeout(sys::TimeSpan.FromMilliseconds(3600000)),
                 retryFilter: NonIdempotentRetryFilter
             )));
 
@@ -343,21 +423,21 @@ namespace Google.Cloud.Bigtable.Admin.V2
         /// <item><description>Initial retry delay: 100 milliseconds</description></item>
         /// <item><description>Retry delay multiplier: 1.3</description></item>
         /// <item><description>Retry maximum delay: 60000 milliseconds</description></item>
-        /// <item><description>Initial timeout: 20000 milliseconds</description></item>
+        /// <item><description>Initial timeout: 900000 milliseconds</description></item>
         /// <item><description>Timeout multiplier: 1.0</description></item>
-        /// <item><description>Timeout maximum delay: 20000 milliseconds</description></item>
+        /// <item><description>Timeout maximum delay: 900000 milliseconds</description></item>
         /// </list>
         /// Retry will be attempted on the following response status codes:
         /// <list>
         /// <item><description>No status codes</description></item>
         /// </list>
-        /// Default RPC expiration is 600000 milliseconds.
+        /// Default RPC expiration is 3600000 milliseconds.
         /// </remarks>
         public gaxgrpc::CallSettings DropRowRangeSettings { get; set; } = gaxgrpc::CallSettings.FromCallTiming(
             gaxgrpc::CallTiming.FromRetry(new gaxgrpc::RetrySettings(
-                retryBackoff: GetDefaultRetryBackoff(),
-                timeoutBackoff: GetDefaultTimeoutBackoff(),
-                totalExpiration: gax::Expiration.FromTimeout(sys::TimeSpan.FromMilliseconds(600000)),
+                retryBackoff: GetDropRowRangeRetryBackoff(),
+                timeoutBackoff: GetDropRowRangeTimeoutBackoff(),
+                totalExpiration: gax::Expiration.FromTimeout(sys::TimeSpan.FromMilliseconds(3600000)),
                 retryFilter: NonIdempotentRetryFilter
             )));
 
@@ -608,18 +688,37 @@ namespace Google.Cloud.Bigtable.Admin.V2
 
         private static readonly gaxgrpc::ChannelPool s_channelPool = new gaxgrpc::ChannelPool(DefaultScopes);
 
-        // Note: we could have parameterless overloads of Create and CreateAsync,
-        // documented to just use the default endpoint, settings and credentials.
-        // Pros:
-        // - Might be more reassuring on first use
-        // - Allows method group conversions
-        // Con: overloads!
-
         /// <summary>
         /// Asynchronously creates a <see cref="BigtableTableAdminClient"/>, applying defaults for all unspecified settings,
         /// and creating a channel connecting to the given endpoint with application default credentials where
-        /// necessary.
+        /// necessary. See the example for how to use custom credentials.
         /// </summary>
+        /// <example>
+        /// This sample shows how to create a client using default credentials:
+        /// <code>
+        /// using Google.Cloud.Bigtable.Admin.V2;
+        /// ...
+        /// // When running on Google Cloud Platform this will use the project Compute Credential.
+        /// // Or set the GOOGLE_APPLICATION_CREDENTIALS environment variable to the path of a JSON
+        /// // credential file to use that credential.
+        /// BigtableTableAdminClient client = await BigtableTableAdminClient.CreateAsync();
+        /// </code>
+        /// This sample shows how to create a client using credentials loaded from a JSON file:
+        /// <code>
+        /// using Google.Cloud.Bigtable.Admin.V2;
+        /// using Google.Apis.Auth.OAuth2;
+        /// using Grpc.Auth;
+        /// using Grpc.Core;
+        /// ...
+        /// GoogleCredential cred = GoogleCredential.FromFile("/path/to/credentials.json");
+        /// Channel channel = new Channel(
+        ///     BigtableTableAdminClient.DefaultEndpoint.Host, BigtableTableAdminClient.DefaultEndpoint.Port, cred.ToChannelCredentials());
+        /// BigtableTableAdminClient client = BigtableTableAdminClient.Create(channel);
+        /// ...
+        /// // Shutdown the channel when it is no longer required.
+        /// await channel.ShutdownAsync();
+        /// </code>
+        /// </example>
         /// <param name="endpoint">Optional <see cref="gaxgrpc::ServiceEndpoint"/>.</param>
         /// <param name="settings">Optional <see cref="BigtableTableAdminSettings"/>.</param>
         /// <returns>The task representing the created <see cref="BigtableTableAdminClient"/>.</returns>
@@ -632,8 +731,34 @@ namespace Google.Cloud.Bigtable.Admin.V2
         /// <summary>
         /// Synchronously creates a <see cref="BigtableTableAdminClient"/>, applying defaults for all unspecified settings,
         /// and creating a channel connecting to the given endpoint with application default credentials where
-        /// necessary.
+        /// necessary. See the example for how to use custom credentials.
         /// </summary>
+        /// <example>
+        /// This sample shows how to create a client using default credentials:
+        /// <code>
+        /// using Google.Cloud.Bigtable.Admin.V2;
+        /// ...
+        /// // When running on Google Cloud Platform this will use the project Compute Credential.
+        /// // Or set the GOOGLE_APPLICATION_CREDENTIALS environment variable to the path of a JSON
+        /// // credential file to use that credential.
+        /// BigtableTableAdminClient client = BigtableTableAdminClient.Create();
+        /// </code>
+        /// This sample shows how to create a client using credentials loaded from a JSON file:
+        /// <code>
+        /// using Google.Cloud.Bigtable.Admin.V2;
+        /// using Google.Apis.Auth.OAuth2;
+        /// using Grpc.Auth;
+        /// using Grpc.Core;
+        /// ...
+        /// GoogleCredential cred = GoogleCredential.FromFile("/path/to/credentials.json");
+        /// Channel channel = new Channel(
+        ///     BigtableTableAdminClient.DefaultEndpoint.Host, BigtableTableAdminClient.DefaultEndpoint.Port, cred.ToChannelCredentials());
+        /// BigtableTableAdminClient client = BigtableTableAdminClient.Create(channel);
+        /// ...
+        /// // Shutdown the channel when it is no longer required.
+        /// channel.ShutdownAsync().Wait();
+        /// </code>
+        /// </example>
         /// <param name="endpoint">Optional <see cref="gaxgrpc::ServiceEndpoint"/>.</param>
         /// <param name="settings">Optional <see cref="BigtableTableAdminSettings"/>.</param>
         /// <returns>The created <see cref="BigtableTableAdminClient"/>.</returns>
