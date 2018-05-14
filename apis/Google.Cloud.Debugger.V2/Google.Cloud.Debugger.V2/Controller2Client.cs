@@ -244,18 +244,37 @@ namespace Google.Cloud.Debugger.V2
 
         private static readonly gaxgrpc::ChannelPool s_channelPool = new gaxgrpc::ChannelPool(DefaultScopes);
 
-        // Note: we could have parameterless overloads of Create and CreateAsync,
-        // documented to just use the default endpoint, settings and credentials.
-        // Pros:
-        // - Might be more reassuring on first use
-        // - Allows method group conversions
-        // Con: overloads!
-
         /// <summary>
         /// Asynchronously creates a <see cref="Controller2Client"/>, applying defaults for all unspecified settings,
         /// and creating a channel connecting to the given endpoint with application default credentials where
-        /// necessary.
+        /// necessary. See the example for how to use custom credentials.
         /// </summary>
+        /// <example>
+        /// This sample shows how to create a client using default credentials:
+        /// <code>
+        /// using Google.Cloud.Debugger.V2;
+        /// ...
+        /// // When running on Google Cloud Platform this will use the project Compute Credential.
+        /// // Or set the GOOGLE_APPLICATION_CREDENTIALS environment variable to the path of a JSON
+        /// // credential file to use that credential.
+        /// Controller2Client client = await Controller2Client.CreateAsync();
+        /// </code>
+        /// This sample shows how to create a client using credentials loaded from a JSON file:
+        /// <code>
+        /// using Google.Cloud.Debugger.V2;
+        /// using Google.Apis.Auth.OAuth2;
+        /// using Grpc.Auth;
+        /// using Grpc.Core;
+        /// ...
+        /// GoogleCredential cred = GoogleCredential.FromFile("/path/to/credentials.json");
+        /// Channel channel = new Channel(
+        ///     Controller2Client.DefaultEndpoint.Host, Controller2Client.DefaultEndpoint.Port, cred.ToChannelCredentials());
+        /// Controller2Client client = Controller2Client.Create(channel);
+        /// ...
+        /// // Shutdown the channel when it is no longer required.
+        /// await channel.ShutdownAsync();
+        /// </code>
+        /// </example>
         /// <param name="endpoint">Optional <see cref="gaxgrpc::ServiceEndpoint"/>.</param>
         /// <param name="settings">Optional <see cref="Controller2Settings"/>.</param>
         /// <returns>The task representing the created <see cref="Controller2Client"/>.</returns>
@@ -268,8 +287,34 @@ namespace Google.Cloud.Debugger.V2
         /// <summary>
         /// Synchronously creates a <see cref="Controller2Client"/>, applying defaults for all unspecified settings,
         /// and creating a channel connecting to the given endpoint with application default credentials where
-        /// necessary.
+        /// necessary. See the example for how to use custom credentials.
         /// </summary>
+        /// <example>
+        /// This sample shows how to create a client using default credentials:
+        /// <code>
+        /// using Google.Cloud.Debugger.V2;
+        /// ...
+        /// // When running on Google Cloud Platform this will use the project Compute Credential.
+        /// // Or set the GOOGLE_APPLICATION_CREDENTIALS environment variable to the path of a JSON
+        /// // credential file to use that credential.
+        /// Controller2Client client = Controller2Client.Create();
+        /// </code>
+        /// This sample shows how to create a client using credentials loaded from a JSON file:
+        /// <code>
+        /// using Google.Cloud.Debugger.V2;
+        /// using Google.Apis.Auth.OAuth2;
+        /// using Grpc.Auth;
+        /// using Grpc.Core;
+        /// ...
+        /// GoogleCredential cred = GoogleCredential.FromFile("/path/to/credentials.json");
+        /// Channel channel = new Channel(
+        ///     Controller2Client.DefaultEndpoint.Host, Controller2Client.DefaultEndpoint.Port, cred.ToChannelCredentials());
+        /// Controller2Client client = Controller2Client.Create(channel);
+        /// ...
+        /// // Shutdown the channel when it is no longer required.
+        /// channel.ShutdownAsync().Wait();
+        /// </code>
+        /// </example>
         /// <param name="endpoint">Optional <see cref="gaxgrpc::ServiceEndpoint"/>.</param>
         /// <param name="settings">Optional <see cref="Controller2Settings"/>.</param>
         /// <returns>The created <see cref="Controller2Client"/>.</returns>
