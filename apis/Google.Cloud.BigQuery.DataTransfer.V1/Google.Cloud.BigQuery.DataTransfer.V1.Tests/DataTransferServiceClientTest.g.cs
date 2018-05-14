@@ -18,6 +18,7 @@ namespace Google.Cloud.BigQuery.DataTransfer.V1.Tests
 {
     using Google.Api.Gax;
     using Google.Api.Gax.Grpc;
+    using Google.Api.Gax.ResourceNames;
     using apis = Google.Cloud.BigQuery.DataTransfer.V1;
     using Google.Protobuf.WellKnownTypes;
     using Grpc.Core;
