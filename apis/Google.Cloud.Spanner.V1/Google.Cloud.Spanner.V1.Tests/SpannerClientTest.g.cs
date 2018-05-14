@@ -18,6 +18,7 @@ namespace Google.Cloud.Spanner.V1.Tests
 {
     using Google.Api.Gax;
     using Google.Api.Gax.Grpc;
+    using Google.Cloud.Spanner.Common.V1;
     using apis = Google.Cloud.Spanner.V1;
     using Google.Protobuf;
     using Google.Protobuf.WellKnownTypes;

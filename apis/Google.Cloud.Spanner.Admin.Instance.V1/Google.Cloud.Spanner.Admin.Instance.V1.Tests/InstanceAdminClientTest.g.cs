@@ -20,6 +20,7 @@ namespace Google.Cloud.Spanner.Admin.Instance.V1.Tests
     using Google.Api.Gax.Grpc;
     using Google.Cloud.Iam.V1;
     using apis = Google.Cloud.Spanner.Admin.Instance.V1;
+    using Google.Cloud.Spanner.Common.V1;
     using Google.LongRunning;
     using Google.Protobuf;
     using Google.Protobuf.WellKnownTypes;
