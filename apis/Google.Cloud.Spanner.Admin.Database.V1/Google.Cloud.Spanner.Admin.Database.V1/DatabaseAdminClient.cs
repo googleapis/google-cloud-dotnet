@@ -17,7 +17,7 @@
 using gax = Google.Api.Gax;
 using gaxgrpc = Google.Api.Gax.Grpc;
 using iam = Google.Cloud.Iam.V1;
-using Google.Cloud.Spanner.Common.V1;
+using gcscv = Google.Cloud.Spanner.Common.V1;
 using lro = Google.LongRunning;
 using pb = Google.Protobuf;
 using pbwkt = Google.Protobuf.WellKnownTypes;
@@ -609,7 +609,7 @@ namespace Google.Cloud.Spanner.Admin.Database.V1
         /// A pageable asynchronous sequence of <see cref="Database"/> resources.
         /// </returns>
         public virtual gax::PagedAsyncEnumerable<ListDatabasesResponse, Database> ListDatabasesAsync(
-            InstanceName parent,
+            gcscv::InstanceName parent,
             string pageToken = null,
             int? pageSize = null,
             gaxgrpc::CallSettings callSettings = null) => ListDatabasesAsync(
@@ -643,7 +643,7 @@ namespace Google.Cloud.Spanner.Admin.Database.V1
         /// A pageable sequence of <see cref="Database"/> resources.
         /// </returns>
         public virtual gax::PagedEnumerable<ListDatabasesResponse, Database> ListDatabases(
-            InstanceName parent,
+            gcscv::InstanceName parent,
             string pageToken = null,
             int? pageSize = null,
             gaxgrpc::CallSettings callSettings = null) => ListDatabases(
@@ -721,7 +721,7 @@ namespace Google.Cloud.Spanner.Admin.Database.V1
         /// A Task containing the RPC response.
         /// </returns>
         public virtual stt::Task<lro::Operation<Database, CreateDatabaseMetadata>> CreateDatabaseAsync(
-            InstanceName parent,
+            gcscv::InstanceName parent,
             string createStatement,
             gaxgrpc::CallSettings callSettings = null) => CreateDatabaseAsync(
                 new CreateDatabaseRequest
@@ -759,7 +759,7 @@ namespace Google.Cloud.Spanner.Admin.Database.V1
         /// A Task containing the RPC response.
         /// </returns>
         public virtual stt::Task<lro::Operation<Database, CreateDatabaseMetadata>> CreateDatabaseAsync(
-            InstanceName parent,
+            gcscv::InstanceName parent,
             string createStatement,
             st::CancellationToken cancellationToken) => CreateDatabaseAsync(
                 parent,
@@ -794,7 +794,7 @@ namespace Google.Cloud.Spanner.Admin.Database.V1
         /// The RPC response.
         /// </returns>
         public virtual lro::Operation<Database, CreateDatabaseMetadata> CreateDatabase(
-            InstanceName parent,
+            gcscv::InstanceName parent,
             string createStatement,
             gaxgrpc::CallSettings callSettings = null) => CreateDatabase(
                 new CreateDatabaseRequest
@@ -904,7 +904,7 @@ namespace Google.Cloud.Spanner.Admin.Database.V1
         /// A Task containing the RPC response.
         /// </returns>
         public virtual stt::Task<Database> GetDatabaseAsync(
-            DatabaseName name,
+            gcscv::DatabaseName name,
             gaxgrpc::CallSettings callSettings = null) => GetDatabaseAsync(
                 new GetDatabaseRequest
                 {
@@ -926,7 +926,7 @@ namespace Google.Cloud.Spanner.Admin.Database.V1
         /// A Task containing the RPC response.
         /// </returns>
         public virtual stt::Task<Database> GetDatabaseAsync(
-            DatabaseName name,
+            gcscv::DatabaseName name,
             st::CancellationToken cancellationToken) => GetDatabaseAsync(
                 name,
                 gaxgrpc::CallSettings.FromCancellationToken(cancellationToken));
@@ -945,7 +945,7 @@ namespace Google.Cloud.Spanner.Admin.Database.V1
         /// The RPC response.
         /// </returns>
         public virtual Database GetDatabase(
-            DatabaseName name,
+            gcscv::DatabaseName name,
             gaxgrpc::CallSettings callSettings = null) => GetDatabase(
                 new GetDatabaseRequest
                 {
@@ -1031,7 +1031,7 @@ namespace Google.Cloud.Spanner.Admin.Database.V1
         /// A Task containing the RPC response.
         /// </returns>
         public virtual stt::Task<lro::Operation<pbwkt::Empty, UpdateDatabaseDdlMetadata>> UpdateDatabaseDdlAsync(
-            DatabaseName database,
+            gcscv::DatabaseName database,
             scg::IEnumerable<string> statements,
             gaxgrpc::CallSettings callSettings = null) => UpdateDatabaseDdlAsync(
                 new UpdateDatabaseDdlRequest
@@ -1063,7 +1063,7 @@ namespace Google.Cloud.Spanner.Admin.Database.V1
         /// A Task containing the RPC response.
         /// </returns>
         public virtual stt::Task<lro::Operation<pbwkt::Empty, UpdateDatabaseDdlMetadata>> UpdateDatabaseDdlAsync(
-            DatabaseName database,
+            gcscv::DatabaseName database,
             scg::IEnumerable<string> statements,
             st::CancellationToken cancellationToken) => UpdateDatabaseDdlAsync(
                 database,
@@ -1092,7 +1092,7 @@ namespace Google.Cloud.Spanner.Admin.Database.V1
         /// The RPC response.
         /// </returns>
         public virtual lro::Operation<pbwkt::Empty, UpdateDatabaseDdlMetadata> UpdateDatabaseDdl(
-            DatabaseName database,
+            gcscv::DatabaseName database,
             scg::IEnumerable<string> statements,
             gaxgrpc::CallSettings callSettings = null) => UpdateDatabaseDdl(
                 new UpdateDatabaseDdlRequest
@@ -1199,7 +1199,7 @@ namespace Google.Cloud.Spanner.Admin.Database.V1
         /// A Task that completes when the RPC has completed.
         /// </returns>
         public virtual stt::Task DropDatabaseAsync(
-            DatabaseName database,
+            gcscv::DatabaseName database,
             gaxgrpc::CallSettings callSettings = null) => DropDatabaseAsync(
                 new DropDatabaseRequest
                 {
@@ -1220,7 +1220,7 @@ namespace Google.Cloud.Spanner.Admin.Database.V1
         /// A Task that completes when the RPC has completed.
         /// </returns>
         public virtual stt::Task DropDatabaseAsync(
-            DatabaseName database,
+            gcscv::DatabaseName database,
             st::CancellationToken cancellationToken) => DropDatabaseAsync(
                 database,
                 gaxgrpc::CallSettings.FromCancellationToken(cancellationToken));
@@ -1235,7 +1235,7 @@ namespace Google.Cloud.Spanner.Admin.Database.V1
         /// If not null, applies overrides to this RPC call.
         /// </param>
         public virtual void DropDatabase(
-            DatabaseName database,
+            gcscv::DatabaseName database,
             gaxgrpc::CallSettings callSettings = null) => DropDatabase(
                 new DropDatabaseRequest
                 {
@@ -1311,7 +1311,7 @@ namespace Google.Cloud.Spanner.Admin.Database.V1
         /// A Task containing the RPC response.
         /// </returns>
         public virtual stt::Task<GetDatabaseDdlResponse> GetDatabaseDdlAsync(
-            DatabaseName database,
+            gcscv::DatabaseName database,
             gaxgrpc::CallSettings callSettings = null) => GetDatabaseDdlAsync(
                 new GetDatabaseDdlRequest
                 {
@@ -1334,7 +1334,7 @@ namespace Google.Cloud.Spanner.Admin.Database.V1
         /// A Task containing the RPC response.
         /// </returns>
         public virtual stt::Task<GetDatabaseDdlResponse> GetDatabaseDdlAsync(
-            DatabaseName database,
+            gcscv::DatabaseName database,
             st::CancellationToken cancellationToken) => GetDatabaseDdlAsync(
                 database,
                 gaxgrpc::CallSettings.FromCancellationToken(cancellationToken));
@@ -1354,7 +1354,7 @@ namespace Google.Cloud.Spanner.Admin.Database.V1
         /// The RPC response.
         /// </returns>
         public virtual GetDatabaseDdlResponse GetDatabaseDdl(
-            DatabaseName database,
+            gcscv::DatabaseName database,
             gaxgrpc::CallSettings callSettings = null) => GetDatabaseDdl(
                 new GetDatabaseDdlRequest
                 {

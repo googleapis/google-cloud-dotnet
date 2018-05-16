@@ -14,7 +14,7 @@
 
 // Generated code. DO NOT EDIT!
 
-using Google.Api;
+using ga = Google.Api;
 using gax = Google.Api.Gax;
 using gaxgrpc = Google.Api.Gax.Grpc;
 using pb = Google.Protobuf;
@@ -1005,9 +1005,9 @@ namespace Google.Cloud.Monitoring.V3
         /// If not null, applies overrides to this RPC call.
         /// </param>
         /// <returns>
-        /// A pageable asynchronous sequence of <see cref="MonitoredResource"/> resources.
+        /// A pageable asynchronous sequence of <see cref="ga::MonitoredResource"/> resources.
         /// </returns>
-        public virtual gax::PagedAsyncEnumerable<ListGroupMembersResponse, MonitoredResource> ListGroupMembersAsync(
+        public virtual gax::PagedAsyncEnumerable<ListGroupMembersResponse, ga::MonitoredResource> ListGroupMembersAsync(
             GroupName name,
             string pageToken = null,
             int? pageSize = null,
@@ -1039,9 +1039,9 @@ namespace Google.Cloud.Monitoring.V3
         /// If not null, applies overrides to this RPC call.
         /// </param>
         /// <returns>
-        /// A pageable sequence of <see cref="MonitoredResource"/> resources.
+        /// A pageable sequence of <see cref="ga::MonitoredResource"/> resources.
         /// </returns>
-        public virtual gax::PagedEnumerable<ListGroupMembersResponse, MonitoredResource> ListGroupMembers(
+        public virtual gax::PagedEnumerable<ListGroupMembersResponse, ga::MonitoredResource> ListGroupMembers(
             GroupName name,
             string pageToken = null,
             int? pageSize = null,
@@ -1064,9 +1064,9 @@ namespace Google.Cloud.Monitoring.V3
         /// If not null, applies overrides to this RPC call.
         /// </param>
         /// <returns>
-        /// A pageable asynchronous sequence of <see cref="MonitoredResource"/> resources.
+        /// A pageable asynchronous sequence of <see cref="ga::MonitoredResource"/> resources.
         /// </returns>
-        public virtual gax::PagedAsyncEnumerable<ListGroupMembersResponse, MonitoredResource> ListGroupMembersAsync(
+        public virtual gax::PagedAsyncEnumerable<ListGroupMembersResponse, ga::MonitoredResource> ListGroupMembersAsync(
             ListGroupMembersRequest request,
             gaxgrpc::CallSettings callSettings = null)
         {
@@ -1083,9 +1083,9 @@ namespace Google.Cloud.Monitoring.V3
         /// If not null, applies overrides to this RPC call.
         /// </param>
         /// <returns>
-        /// A pageable sequence of <see cref="MonitoredResource"/> resources.
+        /// A pageable sequence of <see cref="ga::MonitoredResource"/> resources.
         /// </returns>
-        public virtual gax::PagedEnumerable<ListGroupMembersResponse, MonitoredResource> ListGroupMembers(
+        public virtual gax::PagedEnumerable<ListGroupMembersResponse, ga::MonitoredResource> ListGroupMembers(
             ListGroupMembersRequest request,
             gaxgrpc::CallSettings callSettings = null)
         {
@@ -1385,14 +1385,14 @@ namespace Google.Cloud.Monitoring.V3
         /// If not null, applies overrides to this RPC call.
         /// </param>
         /// <returns>
-        /// A pageable asynchronous sequence of <see cref="MonitoredResource"/> resources.
+        /// A pageable asynchronous sequence of <see cref="ga::MonitoredResource"/> resources.
         /// </returns>
-        public override gax::PagedAsyncEnumerable<ListGroupMembersResponse, MonitoredResource> ListGroupMembersAsync(
+        public override gax::PagedAsyncEnumerable<ListGroupMembersResponse, ga::MonitoredResource> ListGroupMembersAsync(
             ListGroupMembersRequest request,
             gaxgrpc::CallSettings callSettings = null)
         {
             Modify_ListGroupMembersRequest(ref request, ref callSettings);
-            return new gaxgrpc::GrpcPagedAsyncEnumerable<ListGroupMembersRequest, ListGroupMembersResponse, MonitoredResource>(_callListGroupMembers, request, callSettings);
+            return new gaxgrpc::GrpcPagedAsyncEnumerable<ListGroupMembersRequest, ListGroupMembersResponse, ga::MonitoredResource>(_callListGroupMembers, request, callSettings);
         }
 
         /// <summary>
@@ -1405,14 +1405,14 @@ namespace Google.Cloud.Monitoring.V3
         /// If not null, applies overrides to this RPC call.
         /// </param>
         /// <returns>
-        /// A pageable sequence of <see cref="MonitoredResource"/> resources.
+        /// A pageable sequence of <see cref="ga::MonitoredResource"/> resources.
         /// </returns>
-        public override gax::PagedEnumerable<ListGroupMembersResponse, MonitoredResource> ListGroupMembers(
+        public override gax::PagedEnumerable<ListGroupMembersResponse, ga::MonitoredResource> ListGroupMembers(
             ListGroupMembersRequest request,
             gaxgrpc::CallSettings callSettings = null)
         {
             Modify_ListGroupMembersRequest(ref request, ref callSettings);
-            return new gaxgrpc::GrpcPagedEnumerable<ListGroupMembersRequest, ListGroupMembersResponse, MonitoredResource>(_callListGroupMembers, request, callSettings);
+            return new gaxgrpc::GrpcPagedEnumerable<ListGroupMembersRequest, ListGroupMembersResponse, ga::MonitoredResource>(_callListGroupMembers, request, callSettings);
         }
 
     }
@@ -1432,12 +1432,12 @@ namespace Google.Cloud.Monitoring.V3
     }
 
     public partial class ListGroupMembersRequest : gaxgrpc::IPageRequest { }
-    public partial class ListGroupMembersResponse : gaxgrpc::IPageResponse<MonitoredResource>
+    public partial class ListGroupMembersResponse : gaxgrpc::IPageResponse<ga::MonitoredResource>
     {
         /// <summary>
         /// Returns an enumerator that iterates through the resources in this response.
         /// </summary>
-        public scg::IEnumerator<MonitoredResource> GetEnumerator() => Members.GetEnumerator();
+        public scg::IEnumerator<ga::MonitoredResource> GetEnumerator() => Members.GetEnumerator();
 
         /// <inheritdoc/>
         sc::IEnumerator sc::IEnumerable.GetEnumerator() => GetEnumerator();
