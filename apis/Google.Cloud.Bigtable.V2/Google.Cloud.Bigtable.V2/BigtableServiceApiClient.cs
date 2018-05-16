@@ -16,7 +16,7 @@
 
 using gax = Google.Api.Gax;
 using gaxgrpc = Google.Api.Gax.Grpc;
-using Google.Cloud.Bigtable.Common.V2;
+using gcbcv = Google.Cloud.Bigtable.Common.V2;
 using pb = Google.Protobuf;
 using pbwkt = Google.Protobuf.WellKnownTypes;
 using grpccore = Grpc.Core;
@@ -478,7 +478,7 @@ namespace Google.Cloud.Bigtable.V2
         /// A Task containing the RPC response.
         /// </returns>
         public virtual stt::Task<MutateRowResponse> MutateRowAsync(
-            TableName tableName,
+            gcbcv::TableName tableName,
             pb::ByteString rowKey,
             scg::IEnumerable<Mutation> mutations,
             gaxgrpc::CallSettings callSettings = null) => MutateRowAsync(
@@ -514,7 +514,7 @@ namespace Google.Cloud.Bigtable.V2
         /// A Task containing the RPC response.
         /// </returns>
         public virtual stt::Task<MutateRowResponse> MutateRowAsync(
-            TableName tableName,
+            gcbcv::TableName tableName,
             pb::ByteString rowKey,
             scg::IEnumerable<Mutation> mutations,
             st::CancellationToken cancellationToken) => MutateRowAsync(
@@ -547,7 +547,7 @@ namespace Google.Cloud.Bigtable.V2
         /// The RPC response.
         /// </returns>
         public virtual MutateRowResponse MutateRow(
-            TableName tableName,
+            gcbcv::TableName tableName,
             pb::ByteString rowKey,
             scg::IEnumerable<Mutation> mutations,
             gaxgrpc::CallSettings callSettings = null) => MutateRow(
@@ -685,7 +685,7 @@ namespace Google.Cloud.Bigtable.V2
         /// A Task containing the RPC response.
         /// </returns>
         public virtual stt::Task<CheckAndMutateRowResponse> CheckAndMutateRowAsync(
-            TableName tableName,
+            gcbcv::TableName tableName,
             pb::ByteString rowKey,
             RowFilter predicateFilter,
             scg::IEnumerable<Mutation> trueMutations,
@@ -740,7 +740,7 @@ namespace Google.Cloud.Bigtable.V2
         /// A Task containing the RPC response.
         /// </returns>
         public virtual stt::Task<CheckAndMutateRowResponse> CheckAndMutateRowAsync(
-            TableName tableName,
+            gcbcv::TableName tableName,
             pb::ByteString rowKey,
             RowFilter predicateFilter,
             scg::IEnumerable<Mutation> trueMutations,
@@ -792,7 +792,7 @@ namespace Google.Cloud.Bigtable.V2
         /// The RPC response.
         /// </returns>
         public virtual CheckAndMutateRowResponse CheckAndMutateRow(
-            TableName tableName,
+            gcbcv::TableName tableName,
             pb::ByteString rowKey,
             RowFilter predicateFilter,
             scg::IEnumerable<Mutation> trueMutations,
@@ -892,7 +892,7 @@ namespace Google.Cloud.Bigtable.V2
         /// A Task containing the RPC response.
         /// </returns>
         public virtual stt::Task<ReadModifyWriteRowResponse> ReadModifyWriteRowAsync(
-            TableName tableName,
+            gcbcv::TableName tableName,
             pb::ByteString rowKey,
             scg::IEnumerable<ReadModifyWriteRule> rules,
             gaxgrpc::CallSettings callSettings = null) => ReadModifyWriteRowAsync(
@@ -932,7 +932,7 @@ namespace Google.Cloud.Bigtable.V2
         /// A Task containing the RPC response.
         /// </returns>
         public virtual stt::Task<ReadModifyWriteRowResponse> ReadModifyWriteRowAsync(
-            TableName tableName,
+            gcbcv::TableName tableName,
             pb::ByteString rowKey,
             scg::IEnumerable<ReadModifyWriteRule> rules,
             st::CancellationToken cancellationToken) => ReadModifyWriteRowAsync(
@@ -969,7 +969,7 @@ namespace Google.Cloud.Bigtable.V2
         /// The RPC response.
         /// </returns>
         public virtual ReadModifyWriteRowResponse ReadModifyWriteRow(
-            TableName tableName,
+            gcbcv::TableName tableName,
             pb::ByteString rowKey,
             scg::IEnumerable<ReadModifyWriteRule> rules,
             gaxgrpc::CallSettings callSettings = null) => ReadModifyWriteRow(

@@ -16,7 +16,7 @@
 
 using gax = Google.Api.Gax;
 using gaxres = Google.Api.Gax.ResourceNames;
-using Google.Cloud.Spanner.Common.V1;
+using gcscv = Google.Cloud.Spanner.Common.V1;
 using sys = System;
 using linq = System.Linq;
 
@@ -127,11 +127,11 @@ namespace Google.Cloud.Spanner.Admin.Instance.V1
         }
 
         /// <summary>
-        /// <see cref="InstanceName"/>-typed view over the <see cref="InstanceId"/> resource name property.
+        /// <see cref="gcscv::InstanceName"/>-typed view over the <see cref="InstanceId"/> resource name property.
         /// </summary>
-        public InstanceName InstanceIdAsInstanceName
+        public gcscv::InstanceName InstanceIdAsInstanceName
         {
-            get { return string.IsNullOrEmpty(InstanceId) ? null : InstanceName.Parse(InstanceId); }
+            get { return string.IsNullOrEmpty(InstanceId) ? null : gcscv::InstanceName.Parse(InstanceId); }
             set { InstanceId = value != null ? value.ToString() : ""; }
         }
 
@@ -140,11 +140,11 @@ namespace Google.Cloud.Spanner.Admin.Instance.V1
     public partial class DeleteInstanceRequest
     {
         /// <summary>
-        /// <see cref="InstanceName"/>-typed view over the <see cref="Name"/> resource name property.
+        /// <see cref="gcscv::InstanceName"/>-typed view over the <see cref="Name"/> resource name property.
         /// </summary>
-        public InstanceName InstanceName
+        public gcscv::InstanceName InstanceName
         {
-            get { return string.IsNullOrEmpty(Name) ? null : InstanceName.Parse(Name); }
+            get { return string.IsNullOrEmpty(Name) ? null : gcscv::InstanceName.Parse(Name); }
             set { Name = value != null ? value.ToString() : ""; }
         }
 
@@ -166,11 +166,11 @@ namespace Google.Cloud.Spanner.Admin.Instance.V1
     public partial class GetInstanceRequest
     {
         /// <summary>
-        /// <see cref="InstanceName"/>-typed view over the <see cref="Name"/> resource name property.
+        /// <see cref="gcscv::InstanceName"/>-typed view over the <see cref="Name"/> resource name property.
         /// </summary>
-        public InstanceName InstanceName
+        public gcscv::InstanceName InstanceName
         {
-            get { return string.IsNullOrEmpty(Name) ? null : InstanceName.Parse(Name); }
+            get { return string.IsNullOrEmpty(Name) ? null : gcscv::InstanceName.Parse(Name); }
             set { Name = value != null ? value.ToString() : ""; }
         }
 
@@ -179,11 +179,11 @@ namespace Google.Cloud.Spanner.Admin.Instance.V1
     public partial class Instance
     {
         /// <summary>
-        /// <see cref="InstanceName"/>-typed view over the <see cref="Name"/> resource name property.
+        /// <see cref="gcscv::InstanceName"/>-typed view over the <see cref="Name"/> resource name property.
         /// </summary>
-        public InstanceName InstanceName
+        public gcscv::InstanceName InstanceName
         {
-            get { return string.IsNullOrEmpty(Name) ? null : InstanceName.Parse(Name); }
+            get { return string.IsNullOrEmpty(Name) ? null : gcscv::InstanceName.Parse(Name); }
             set { Name = value != null ? value.ToString() : ""; }
         }
 

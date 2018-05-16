@@ -16,7 +16,7 @@
 
 using gax = Google.Api.Gax;
 using gaxgrpc = Google.Api.Gax.Grpc;
-using Google.Cloud.OsLogin.Common;
+using gcoc = Google.Cloud.OsLogin.Common;
 using pb = Google.Protobuf;
 using pbwkt = Google.Protobuf.WellKnownTypes;
 using grpccore = Grpc.Core;
@@ -823,7 +823,7 @@ namespace Google.Cloud.OsLogin.V1
         /// <returns>
         /// A Task containing the RPC response.
         /// </returns>
-        public virtual stt::Task<SshPublicKey> GetSshPublicKeyAsync(
+        public virtual stt::Task<gcoc::SshPublicKey> GetSshPublicKeyAsync(
             FingerprintName name,
             gaxgrpc::CallSettings callSettings = null) => GetSshPublicKeyAsync(
                 new GetSshPublicKeyRequest
@@ -846,7 +846,7 @@ namespace Google.Cloud.OsLogin.V1
         /// <returns>
         /// A Task containing the RPC response.
         /// </returns>
-        public virtual stt::Task<SshPublicKey> GetSshPublicKeyAsync(
+        public virtual stt::Task<gcoc::SshPublicKey> GetSshPublicKeyAsync(
             FingerprintName name,
             st::CancellationToken cancellationToken) => GetSshPublicKeyAsync(
                 name,
@@ -866,7 +866,7 @@ namespace Google.Cloud.OsLogin.V1
         /// <returns>
         /// The RPC response.
         /// </returns>
-        public virtual SshPublicKey GetSshPublicKey(
+        public virtual gcoc::SshPublicKey GetSshPublicKey(
             FingerprintName name,
             gaxgrpc::CallSettings callSettings = null) => GetSshPublicKey(
                 new GetSshPublicKeyRequest
@@ -887,7 +887,7 @@ namespace Google.Cloud.OsLogin.V1
         /// <returns>
         /// A Task containing the RPC response.
         /// </returns>
-        public virtual stt::Task<SshPublicKey> GetSshPublicKeyAsync(
+        public virtual stt::Task<gcoc::SshPublicKey> GetSshPublicKeyAsync(
             GetSshPublicKeyRequest request,
             gaxgrpc::CallSettings callSettings = null)
         {
@@ -906,7 +906,7 @@ namespace Google.Cloud.OsLogin.V1
         /// <returns>
         /// A Task containing the RPC response.
         /// </returns>
-        public virtual stt::Task<SshPublicKey> GetSshPublicKeyAsync(
+        public virtual stt::Task<gcoc::SshPublicKey> GetSshPublicKeyAsync(
             GetSshPublicKeyRequest request,
             st::CancellationToken cancellationToken) => GetSshPublicKeyAsync(
                 request,
@@ -924,7 +924,7 @@ namespace Google.Cloud.OsLogin.V1
         /// <returns>
         /// The RPC response.
         /// </returns>
-        public virtual SshPublicKey GetSshPublicKey(
+        public virtual gcoc::SshPublicKey GetSshPublicKey(
             GetSshPublicKeyRequest request,
             gaxgrpc::CallSettings callSettings = null)
         {
@@ -950,7 +950,7 @@ namespace Google.Cloud.OsLogin.V1
         /// </returns>
         public virtual stt::Task<ImportSshPublicKeyResponse> ImportSshPublicKeyAsync(
             UserName parent,
-            SshPublicKey sshPublicKey,
+            gcoc::SshPublicKey sshPublicKey,
             gaxgrpc::CallSettings callSettings = null) => ImportSshPublicKeyAsync(
                 new ImportSshPublicKeyRequest
                 {
@@ -978,7 +978,7 @@ namespace Google.Cloud.OsLogin.V1
         /// </returns>
         public virtual stt::Task<ImportSshPublicKeyResponse> ImportSshPublicKeyAsync(
             UserName parent,
-            SshPublicKey sshPublicKey,
+            gcoc::SshPublicKey sshPublicKey,
             st::CancellationToken cancellationToken) => ImportSshPublicKeyAsync(
                 parent,
                 sshPublicKey,
@@ -1003,7 +1003,7 @@ namespace Google.Cloud.OsLogin.V1
         /// </returns>
         public virtual ImportSshPublicKeyResponse ImportSshPublicKey(
             UserName parent,
-            SshPublicKey sshPublicKey,
+            gcoc::SshPublicKey sshPublicKey,
             gaxgrpc::CallSettings callSettings = null) => ImportSshPublicKey(
                 new ImportSshPublicKeyRequest
                 {
@@ -1034,7 +1034,7 @@ namespace Google.Cloud.OsLogin.V1
         /// </returns>
         public virtual stt::Task<ImportSshPublicKeyResponse> ImportSshPublicKeyAsync(
             UserName parent,
-            SshPublicKey sshPublicKey,
+            gcoc::SshPublicKey sshPublicKey,
             string projectId,
             gaxgrpc::CallSettings callSettings = null) => ImportSshPublicKeyAsync(
                 new ImportSshPublicKeyRequest
@@ -1067,7 +1067,7 @@ namespace Google.Cloud.OsLogin.V1
         /// </returns>
         public virtual stt::Task<ImportSshPublicKeyResponse> ImportSshPublicKeyAsync(
             UserName parent,
-            SshPublicKey sshPublicKey,
+            gcoc::SshPublicKey sshPublicKey,
             string projectId,
             st::CancellationToken cancellationToken) => ImportSshPublicKeyAsync(
                 parent,
@@ -1097,7 +1097,7 @@ namespace Google.Cloud.OsLogin.V1
         /// </returns>
         public virtual ImportSshPublicKeyResponse ImportSshPublicKey(
             UserName parent,
-            SshPublicKey sshPublicKey,
+            gcoc::SshPublicKey sshPublicKey,
             string projectId,
             gaxgrpc::CallSettings callSettings = null) => ImportSshPublicKey(
                 new ImportSshPublicKeyRequest
@@ -1188,9 +1188,9 @@ namespace Google.Cloud.OsLogin.V1
         /// <returns>
         /// A Task containing the RPC response.
         /// </returns>
-        public virtual stt::Task<SshPublicKey> UpdateSshPublicKeyAsync(
+        public virtual stt::Task<gcoc::SshPublicKey> UpdateSshPublicKeyAsync(
             FingerprintName name,
-            SshPublicKey sshPublicKey,
+            gcoc::SshPublicKey sshPublicKey,
             gaxgrpc::CallSettings callSettings = null) => UpdateSshPublicKeyAsync(
                 new UpdateSshPublicKeyRequest
                 {
@@ -1217,9 +1217,9 @@ namespace Google.Cloud.OsLogin.V1
         /// <returns>
         /// A Task containing the RPC response.
         /// </returns>
-        public virtual stt::Task<SshPublicKey> UpdateSshPublicKeyAsync(
+        public virtual stt::Task<gcoc::SshPublicKey> UpdateSshPublicKeyAsync(
             FingerprintName name,
-            SshPublicKey sshPublicKey,
+            gcoc::SshPublicKey sshPublicKey,
             st::CancellationToken cancellationToken) => UpdateSshPublicKeyAsync(
                 name,
                 sshPublicKey,
@@ -1243,9 +1243,9 @@ namespace Google.Cloud.OsLogin.V1
         /// <returns>
         /// The RPC response.
         /// </returns>
-        public virtual SshPublicKey UpdateSshPublicKey(
+        public virtual gcoc::SshPublicKey UpdateSshPublicKey(
             FingerprintName name,
-            SshPublicKey sshPublicKey,
+            gcoc::SshPublicKey sshPublicKey,
             gaxgrpc::CallSettings callSettings = null) => UpdateSshPublicKey(
                 new UpdateSshPublicKeyRequest
                 {
@@ -1275,9 +1275,9 @@ namespace Google.Cloud.OsLogin.V1
         /// <returns>
         /// A Task containing the RPC response.
         /// </returns>
-        public virtual stt::Task<SshPublicKey> UpdateSshPublicKeyAsync(
+        public virtual stt::Task<gcoc::SshPublicKey> UpdateSshPublicKeyAsync(
             FingerprintName name,
-            SshPublicKey sshPublicKey,
+            gcoc::SshPublicKey sshPublicKey,
             pbwkt::FieldMask updateMask,
             gaxgrpc::CallSettings callSettings = null) => UpdateSshPublicKeyAsync(
                 new UpdateSshPublicKeyRequest
@@ -1309,9 +1309,9 @@ namespace Google.Cloud.OsLogin.V1
         /// <returns>
         /// A Task containing the RPC response.
         /// </returns>
-        public virtual stt::Task<SshPublicKey> UpdateSshPublicKeyAsync(
+        public virtual stt::Task<gcoc::SshPublicKey> UpdateSshPublicKeyAsync(
             FingerprintName name,
-            SshPublicKey sshPublicKey,
+            gcoc::SshPublicKey sshPublicKey,
             pbwkt::FieldMask updateMask,
             st::CancellationToken cancellationToken) => UpdateSshPublicKeyAsync(
                 name,
@@ -1340,9 +1340,9 @@ namespace Google.Cloud.OsLogin.V1
         /// <returns>
         /// The RPC response.
         /// </returns>
-        public virtual SshPublicKey UpdateSshPublicKey(
+        public virtual gcoc::SshPublicKey UpdateSshPublicKey(
             FingerprintName name,
-            SshPublicKey sshPublicKey,
+            gcoc::SshPublicKey sshPublicKey,
             pbwkt::FieldMask updateMask,
             gaxgrpc::CallSettings callSettings = null) => UpdateSshPublicKey(
                 new UpdateSshPublicKeyRequest
@@ -1366,7 +1366,7 @@ namespace Google.Cloud.OsLogin.V1
         /// <returns>
         /// A Task containing the RPC response.
         /// </returns>
-        public virtual stt::Task<SshPublicKey> UpdateSshPublicKeyAsync(
+        public virtual stt::Task<gcoc::SshPublicKey> UpdateSshPublicKeyAsync(
             UpdateSshPublicKeyRequest request,
             gaxgrpc::CallSettings callSettings = null)
         {
@@ -1386,7 +1386,7 @@ namespace Google.Cloud.OsLogin.V1
         /// <returns>
         /// A Task containing the RPC response.
         /// </returns>
-        public virtual stt::Task<SshPublicKey> UpdateSshPublicKeyAsync(
+        public virtual stt::Task<gcoc::SshPublicKey> UpdateSshPublicKeyAsync(
             UpdateSshPublicKeyRequest request,
             st::CancellationToken cancellationToken) => UpdateSshPublicKeyAsync(
                 request,
@@ -1405,7 +1405,7 @@ namespace Google.Cloud.OsLogin.V1
         /// <returns>
         /// The RPC response.
         /// </returns>
-        public virtual SshPublicKey UpdateSshPublicKey(
+        public virtual gcoc::SshPublicKey UpdateSshPublicKey(
             UpdateSshPublicKeyRequest request,
             gaxgrpc::CallSettings callSettings = null)
         {
@@ -1422,9 +1422,9 @@ namespace Google.Cloud.OsLogin.V1
         private readonly gaxgrpc::ApiCall<DeletePosixAccountRequest, pbwkt::Empty> _callDeletePosixAccount;
         private readonly gaxgrpc::ApiCall<DeleteSshPublicKeyRequest, pbwkt::Empty> _callDeleteSshPublicKey;
         private readonly gaxgrpc::ApiCall<GetLoginProfileRequest, LoginProfile> _callGetLoginProfile;
-        private readonly gaxgrpc::ApiCall<GetSshPublicKeyRequest, SshPublicKey> _callGetSshPublicKey;
+        private readonly gaxgrpc::ApiCall<GetSshPublicKeyRequest, gcoc::SshPublicKey> _callGetSshPublicKey;
         private readonly gaxgrpc::ApiCall<ImportSshPublicKeyRequest, ImportSshPublicKeyResponse> _callImportSshPublicKey;
-        private readonly gaxgrpc::ApiCall<UpdateSshPublicKeyRequest, SshPublicKey> _callUpdateSshPublicKey;
+        private readonly gaxgrpc::ApiCall<UpdateSshPublicKeyRequest, gcoc::SshPublicKey> _callUpdateSshPublicKey;
 
         /// <summary>
         /// Constructs a client wrapper for the OsLoginService service, with the specified gRPC client and settings.
@@ -1442,11 +1442,11 @@ namespace Google.Cloud.OsLogin.V1
                 GrpcClient.DeleteSshPublicKeyAsync, GrpcClient.DeleteSshPublicKey, effectiveSettings.DeleteSshPublicKeySettings);
             _callGetLoginProfile = clientHelper.BuildApiCall<GetLoginProfileRequest, LoginProfile>(
                 GrpcClient.GetLoginProfileAsync, GrpcClient.GetLoginProfile, effectiveSettings.GetLoginProfileSettings);
-            _callGetSshPublicKey = clientHelper.BuildApiCall<GetSshPublicKeyRequest, SshPublicKey>(
+            _callGetSshPublicKey = clientHelper.BuildApiCall<GetSshPublicKeyRequest, gcoc::SshPublicKey>(
                 GrpcClient.GetSshPublicKeyAsync, GrpcClient.GetSshPublicKey, effectiveSettings.GetSshPublicKeySettings);
             _callImportSshPublicKey = clientHelper.BuildApiCall<ImportSshPublicKeyRequest, ImportSshPublicKeyResponse>(
                 GrpcClient.ImportSshPublicKeyAsync, GrpcClient.ImportSshPublicKey, effectiveSettings.ImportSshPublicKeySettings);
-            _callUpdateSshPublicKey = clientHelper.BuildApiCall<UpdateSshPublicKeyRequest, SshPublicKey>(
+            _callUpdateSshPublicKey = clientHelper.BuildApiCall<UpdateSshPublicKeyRequest, gcoc::SshPublicKey>(
                 GrpcClient.UpdateSshPublicKeyAsync, GrpcClient.UpdateSshPublicKey, effectiveSettings.UpdateSshPublicKeySettings);
             Modify_ApiCall(ref _callDeletePosixAccount);
             Modify_DeletePosixAccountApiCall(ref _callDeletePosixAccount);
@@ -1476,9 +1476,9 @@ namespace Google.Cloud.OsLogin.V1
         partial void Modify_DeletePosixAccountApiCall(ref gaxgrpc::ApiCall<DeletePosixAccountRequest, pbwkt::Empty> call);
         partial void Modify_DeleteSshPublicKeyApiCall(ref gaxgrpc::ApiCall<DeleteSshPublicKeyRequest, pbwkt::Empty> call);
         partial void Modify_GetLoginProfileApiCall(ref gaxgrpc::ApiCall<GetLoginProfileRequest, LoginProfile> call);
-        partial void Modify_GetSshPublicKeyApiCall(ref gaxgrpc::ApiCall<GetSshPublicKeyRequest, SshPublicKey> call);
+        partial void Modify_GetSshPublicKeyApiCall(ref gaxgrpc::ApiCall<GetSshPublicKeyRequest, gcoc::SshPublicKey> call);
         partial void Modify_ImportSshPublicKeyApiCall(ref gaxgrpc::ApiCall<ImportSshPublicKeyRequest, ImportSshPublicKeyResponse> call);
-        partial void Modify_UpdateSshPublicKeyApiCall(ref gaxgrpc::ApiCall<UpdateSshPublicKeyRequest, SshPublicKey> call);
+        partial void Modify_UpdateSshPublicKeyApiCall(ref gaxgrpc::ApiCall<UpdateSshPublicKeyRequest, gcoc::SshPublicKey> call);
         partial void OnConstruction(OsLoginService.OsLoginServiceClient grpcClient, OsLoginServiceSettings effectiveSettings, gaxgrpc::ClientHelper clientHelper);
 
         /// <summary>
@@ -1624,7 +1624,7 @@ namespace Google.Cloud.OsLogin.V1
         /// <returns>
         /// A Task containing the RPC response.
         /// </returns>
-        public override stt::Task<SshPublicKey> GetSshPublicKeyAsync(
+        public override stt::Task<gcoc::SshPublicKey> GetSshPublicKeyAsync(
             GetSshPublicKeyRequest request,
             gaxgrpc::CallSettings callSettings = null)
         {
@@ -1644,7 +1644,7 @@ namespace Google.Cloud.OsLogin.V1
         /// <returns>
         /// The RPC response.
         /// </returns>
-        public override SshPublicKey GetSshPublicKey(
+        public override gcoc::SshPublicKey GetSshPublicKey(
             GetSshPublicKeyRequest request,
             gaxgrpc::CallSettings callSettings = null)
         {
@@ -1709,7 +1709,7 @@ namespace Google.Cloud.OsLogin.V1
         /// <returns>
         /// A Task containing the RPC response.
         /// </returns>
-        public override stt::Task<SshPublicKey> UpdateSshPublicKeyAsync(
+        public override stt::Task<gcoc::SshPublicKey> UpdateSshPublicKeyAsync(
             UpdateSshPublicKeyRequest request,
             gaxgrpc::CallSettings callSettings = null)
         {
@@ -1730,7 +1730,7 @@ namespace Google.Cloud.OsLogin.V1
         /// <returns>
         /// The RPC response.
         /// </returns>
-        public override SshPublicKey UpdateSshPublicKey(
+        public override gcoc::SshPublicKey UpdateSshPublicKey(
             UpdateSshPublicKeyRequest request,
             gaxgrpc::CallSettings callSettings = null)
         {

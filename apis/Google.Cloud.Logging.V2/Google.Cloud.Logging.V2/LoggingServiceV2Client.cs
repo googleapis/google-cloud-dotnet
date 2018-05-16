@@ -14,7 +14,7 @@
 
 // Generated code. DO NOT EDIT!
 
-using Google.Api;
+using ga = Google.Api;
 using gax = Google.Api.Gax;
 using gaxgrpc = Google.Api.Gax.Grpc;
 using pb = Google.Protobuf;
@@ -702,7 +702,7 @@ namespace Google.Cloud.Logging.V2
         /// </returns>
         public virtual stt::Task<WriteLogEntriesResponse> WriteLogEntriesAsync(
             LogNameOneof logName,
-            MonitoredResource resource,
+            ga::MonitoredResource resource,
             scg::IDictionary<string, string> labels,
             scg::IEnumerable<LogEntry> entries,
             gaxgrpc::CallSettings callSettings = null) => WriteLogEntriesAsync(
@@ -786,7 +786,7 @@ namespace Google.Cloud.Logging.V2
         /// </returns>
         public virtual stt::Task<WriteLogEntriesResponse> WriteLogEntriesAsync(
             LogNameOneof logName,
-            MonitoredResource resource,
+            ga::MonitoredResource resource,
             scg::IDictionary<string, string> labels,
             scg::IEnumerable<LogEntry> entries,
             st::CancellationToken cancellationToken) => WriteLogEntriesAsync(
@@ -867,7 +867,7 @@ namespace Google.Cloud.Logging.V2
         /// </returns>
         public virtual WriteLogEntriesResponse WriteLogEntries(
             LogNameOneof logName,
-            MonitoredResource resource,
+            ga::MonitoredResource resource,
             scg::IDictionary<string, string> labels,
             scg::IEnumerable<LogEntry> entries,
             gaxgrpc::CallSettings callSettings = null) => WriteLogEntries(
@@ -1135,9 +1135,9 @@ namespace Google.Cloud.Logging.V2
         /// If not null, applies overrides to this RPC call.
         /// </param>
         /// <returns>
-        /// A pageable asynchronous sequence of <see cref="MonitoredResourceDescriptor"/> resources.
+        /// A pageable asynchronous sequence of <see cref="ga::MonitoredResourceDescriptor"/> resources.
         /// </returns>
-        public virtual gax::PagedAsyncEnumerable<ListMonitoredResourceDescriptorsResponse, MonitoredResourceDescriptor> ListMonitoredResourceDescriptorsAsync(
+        public virtual gax::PagedAsyncEnumerable<ListMonitoredResourceDescriptorsResponse, ga::MonitoredResourceDescriptor> ListMonitoredResourceDescriptorsAsync(
             ListMonitoredResourceDescriptorsRequest request,
             gaxgrpc::CallSettings callSettings = null)
         {
@@ -1155,9 +1155,9 @@ namespace Google.Cloud.Logging.V2
         /// If not null, applies overrides to this RPC call.
         /// </param>
         /// <returns>
-        /// A pageable sequence of <see cref="MonitoredResourceDescriptor"/> resources.
+        /// A pageable sequence of <see cref="ga::MonitoredResourceDescriptor"/> resources.
         /// </returns>
-        public virtual gax::PagedEnumerable<ListMonitoredResourceDescriptorsResponse, MonitoredResourceDescriptor> ListMonitoredResourceDescriptors(
+        public virtual gax::PagedEnumerable<ListMonitoredResourceDescriptorsResponse, ga::MonitoredResourceDescriptor> ListMonitoredResourceDescriptors(
             ListMonitoredResourceDescriptorsRequest request,
             gaxgrpc::CallSettings callSettings = null)
         {
@@ -1509,14 +1509,14 @@ namespace Google.Cloud.Logging.V2
         /// If not null, applies overrides to this RPC call.
         /// </param>
         /// <returns>
-        /// A pageable asynchronous sequence of <see cref="MonitoredResourceDescriptor"/> resources.
+        /// A pageable asynchronous sequence of <see cref="ga::MonitoredResourceDescriptor"/> resources.
         /// </returns>
-        public override gax::PagedAsyncEnumerable<ListMonitoredResourceDescriptorsResponse, MonitoredResourceDescriptor> ListMonitoredResourceDescriptorsAsync(
+        public override gax::PagedAsyncEnumerable<ListMonitoredResourceDescriptorsResponse, ga::MonitoredResourceDescriptor> ListMonitoredResourceDescriptorsAsync(
             ListMonitoredResourceDescriptorsRequest request,
             gaxgrpc::CallSettings callSettings = null)
         {
             Modify_ListMonitoredResourceDescriptorsRequest(ref request, ref callSettings);
-            return new gaxgrpc::GrpcPagedAsyncEnumerable<ListMonitoredResourceDescriptorsRequest, ListMonitoredResourceDescriptorsResponse, MonitoredResourceDescriptor>(_callListMonitoredResourceDescriptors, request, callSettings);
+            return new gaxgrpc::GrpcPagedAsyncEnumerable<ListMonitoredResourceDescriptorsRequest, ListMonitoredResourceDescriptorsResponse, ga::MonitoredResourceDescriptor>(_callListMonitoredResourceDescriptors, request, callSettings);
         }
 
         /// <summary>
@@ -1530,14 +1530,14 @@ namespace Google.Cloud.Logging.V2
         /// If not null, applies overrides to this RPC call.
         /// </param>
         /// <returns>
-        /// A pageable sequence of <see cref="MonitoredResourceDescriptor"/> resources.
+        /// A pageable sequence of <see cref="ga::MonitoredResourceDescriptor"/> resources.
         /// </returns>
-        public override gax::PagedEnumerable<ListMonitoredResourceDescriptorsResponse, MonitoredResourceDescriptor> ListMonitoredResourceDescriptors(
+        public override gax::PagedEnumerable<ListMonitoredResourceDescriptorsResponse, ga::MonitoredResourceDescriptor> ListMonitoredResourceDescriptors(
             ListMonitoredResourceDescriptorsRequest request,
             gaxgrpc::CallSettings callSettings = null)
         {
             Modify_ListMonitoredResourceDescriptorsRequest(ref request, ref callSettings);
-            return new gaxgrpc::GrpcPagedEnumerable<ListMonitoredResourceDescriptorsRequest, ListMonitoredResourceDescriptorsResponse, MonitoredResourceDescriptor>(_callListMonitoredResourceDescriptors, request, callSettings);
+            return new gaxgrpc::GrpcPagedEnumerable<ListMonitoredResourceDescriptorsRequest, ListMonitoredResourceDescriptorsResponse, ga::MonitoredResourceDescriptor>(_callListMonitoredResourceDescriptors, request, callSettings);
         }
 
         /// <summary>
@@ -1599,12 +1599,12 @@ namespace Google.Cloud.Logging.V2
     }
 
     public partial class ListMonitoredResourceDescriptorsRequest : gaxgrpc::IPageRequest { }
-    public partial class ListMonitoredResourceDescriptorsResponse : gaxgrpc::IPageResponse<MonitoredResourceDescriptor>
+    public partial class ListMonitoredResourceDescriptorsResponse : gaxgrpc::IPageResponse<ga::MonitoredResourceDescriptor>
     {
         /// <summary>
         /// Returns an enumerator that iterates through the resources in this response.
         /// </summary>
-        public scg::IEnumerator<MonitoredResourceDescriptor> GetEnumerator() => ResourceDescriptors.GetEnumerator();
+        public scg::IEnumerator<ga::MonitoredResourceDescriptor> GetEnumerator() => ResourceDescriptors.GetEnumerator();
 
         /// <inheritdoc/>
         sc::IEnumerator sc::IEnumerable.GetEnumerator() => GetEnumerator();

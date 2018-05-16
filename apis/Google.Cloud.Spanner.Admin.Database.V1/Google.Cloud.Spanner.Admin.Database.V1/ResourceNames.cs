@@ -15,7 +15,7 @@
 // Generated code. DO NOT EDIT!
 
 using gax = Google.Api.Gax;
-using Google.Cloud.Spanner.Common.V1;
+using gcscv = Google.Cloud.Spanner.Common.V1;
 using sys = System;
 using linq = System.Linq;
 
@@ -26,11 +26,11 @@ namespace Google.Cloud.Spanner.Admin.Database.V1
     public partial class CreateDatabaseMetadata
     {
         /// <summary>
-        /// <see cref="DatabaseName"/>-typed view over the <see cref="Database"/> resource name property.
+        /// <see cref="gcscv::DatabaseName"/>-typed view over the <see cref="Database"/> resource name property.
         /// </summary>
-        public DatabaseName DatabaseAsDatabaseName
+        public gcscv::DatabaseName DatabaseAsDatabaseName
         {
-            get { return string.IsNullOrEmpty(Database) ? null : DatabaseName.Parse(Database); }
+            get { return string.IsNullOrEmpty(Database) ? null : gcscv::DatabaseName.Parse(Database); }
             set { Database = value != null ? value.ToString() : ""; }
         }
 
@@ -39,11 +39,11 @@ namespace Google.Cloud.Spanner.Admin.Database.V1
     public partial class CreateDatabaseRequest
     {
         /// <summary>
-        /// <see cref="InstanceName"/>-typed view over the <see cref="Parent"/> resource name property.
+        /// <see cref="gcscv::InstanceName"/>-typed view over the <see cref="Parent"/> resource name property.
         /// </summary>
-        public InstanceName ParentAsInstanceName
+        public gcscv::InstanceName ParentAsInstanceName
         {
-            get { return string.IsNullOrEmpty(Parent) ? null : InstanceName.Parse(Parent); }
+            get { return string.IsNullOrEmpty(Parent) ? null : gcscv::InstanceName.Parse(Parent); }
             set { Parent = value != null ? value.ToString() : ""; }
         }
 
@@ -52,11 +52,11 @@ namespace Google.Cloud.Spanner.Admin.Database.V1
     public partial class DropDatabaseRequest
     {
         /// <summary>
-        /// <see cref="DatabaseName"/>-typed view over the <see cref="Database"/> resource name property.
+        /// <see cref="gcscv::DatabaseName"/>-typed view over the <see cref="Database"/> resource name property.
         /// </summary>
-        public DatabaseName DatabaseAsDatabaseName
+        public gcscv::DatabaseName DatabaseAsDatabaseName
         {
-            get { return string.IsNullOrEmpty(Database) ? null : DatabaseName.Parse(Database); }
+            get { return string.IsNullOrEmpty(Database) ? null : gcscv::DatabaseName.Parse(Database); }
             set { Database = value != null ? value.ToString() : ""; }
         }
 
@@ -65,11 +65,11 @@ namespace Google.Cloud.Spanner.Admin.Database.V1
     public partial class GetDatabaseDdlRequest
     {
         /// <summary>
-        /// <see cref="DatabaseName"/>-typed view over the <see cref="Database"/> resource name property.
+        /// <see cref="gcscv::DatabaseName"/>-typed view over the <see cref="Database"/> resource name property.
         /// </summary>
-        public DatabaseName DatabaseAsDatabaseName
+        public gcscv::DatabaseName DatabaseAsDatabaseName
         {
-            get { return string.IsNullOrEmpty(Database) ? null : DatabaseName.Parse(Database); }
+            get { return string.IsNullOrEmpty(Database) ? null : gcscv::DatabaseName.Parse(Database); }
             set { Database = value != null ? value.ToString() : ""; }
         }
 
@@ -78,11 +78,11 @@ namespace Google.Cloud.Spanner.Admin.Database.V1
     public partial class GetDatabaseRequest
     {
         /// <summary>
-        /// <see cref="DatabaseName"/>-typed view over the <see cref="Name"/> resource name property.
+        /// <see cref="gcscv::DatabaseName"/>-typed view over the <see cref="Name"/> resource name property.
         /// </summary>
-        public DatabaseName DatabaseName
+        public gcscv::DatabaseName DatabaseName
         {
-            get { return string.IsNullOrEmpty(Name) ? null : DatabaseName.Parse(Name); }
+            get { return string.IsNullOrEmpty(Name) ? null : gcscv::DatabaseName.Parse(Name); }
             set { Name = value != null ? value.ToString() : ""; }
         }
 
@@ -91,11 +91,11 @@ namespace Google.Cloud.Spanner.Admin.Database.V1
     public partial class ListDatabasesRequest
     {
         /// <summary>
-        /// <see cref="InstanceName"/>-typed view over the <see cref="Parent"/> resource name property.
+        /// <see cref="gcscv::InstanceName"/>-typed view over the <see cref="Parent"/> resource name property.
         /// </summary>
-        public InstanceName ParentAsInstanceName
+        public gcscv::InstanceName ParentAsInstanceName
         {
-            get { return string.IsNullOrEmpty(Parent) ? null : InstanceName.Parse(Parent); }
+            get { return string.IsNullOrEmpty(Parent) ? null : gcscv::InstanceName.Parse(Parent); }
             set { Parent = value != null ? value.ToString() : ""; }
         }
 
@@ -104,11 +104,11 @@ namespace Google.Cloud.Spanner.Admin.Database.V1
     public partial class UpdateDatabaseDdlMetadata
     {
         /// <summary>
-        /// <see cref="DatabaseName"/>-typed view over the <see cref="Database"/> resource name property.
+        /// <see cref="gcscv::DatabaseName"/>-typed view over the <see cref="Database"/> resource name property.
         /// </summary>
-        public DatabaseName DatabaseAsDatabaseName
+        public gcscv::DatabaseName DatabaseAsDatabaseName
         {
-            get { return string.IsNullOrEmpty(Database) ? null : DatabaseName.Parse(Database); }
+            get { return string.IsNullOrEmpty(Database) ? null : gcscv::DatabaseName.Parse(Database); }
             set { Database = value != null ? value.ToString() : ""; }
         }
 
@@ -117,11 +117,11 @@ namespace Google.Cloud.Spanner.Admin.Database.V1
     public partial class UpdateDatabaseDdlRequest
     {
         /// <summary>
-        /// <see cref="DatabaseName"/>-typed view over the <see cref="Database"/> resource name property.
+        /// <see cref="gcscv::DatabaseName"/>-typed view over the <see cref="Database"/> resource name property.
         /// </summary>
-        public DatabaseName DatabaseAsDatabaseName
+        public gcscv::DatabaseName DatabaseAsDatabaseName
         {
-            get { return string.IsNullOrEmpty(Database) ? null : DatabaseName.Parse(Database); }
+            get { return string.IsNullOrEmpty(Database) ? null : gcscv::DatabaseName.Parse(Database); }
             set { Database = value != null ? value.ToString() : ""; }
         }
 

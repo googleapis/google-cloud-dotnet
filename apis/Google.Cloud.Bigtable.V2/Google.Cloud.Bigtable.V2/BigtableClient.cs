@@ -16,7 +16,7 @@
 
 using gax = Google.Api.Gax;
 using gaxgrpc = Google.Api.Gax.Grpc;
-using Google.Cloud.Bigtable.Common.V2;
+using gcbcv = Google.Cloud.Bigtable.Common.V2;
 using pb = Google.Protobuf;
 using pbwkt = Google.Protobuf.WellKnownTypes;
 using grpccore = Grpc.Core;

@@ -14,7 +14,7 @@
 
 // Generated code. DO NOT EDIT!
 
-using Google.Api;
+using ga = Google.Api;
 using gax = Google.Api.Gax;
 using gaxgrpc = Google.Api.Gax.Grpc;
 using pb = Google.Protobuf;
@@ -534,9 +534,9 @@ namespace Google.Cloud.Monitoring.V3
         /// If not null, applies overrides to this RPC call.
         /// </param>
         /// <returns>
-        /// A pageable asynchronous sequence of <see cref="MonitoredResourceDescriptor"/> resources.
+        /// A pageable asynchronous sequence of <see cref="ga::MonitoredResourceDescriptor"/> resources.
         /// </returns>
-        public virtual gax::PagedAsyncEnumerable<ListMonitoredResourceDescriptorsResponse, MonitoredResourceDescriptor> ListMonitoredResourceDescriptorsAsync(
+        public virtual gax::PagedAsyncEnumerable<ListMonitoredResourceDescriptorsResponse, ga::MonitoredResourceDescriptor> ListMonitoredResourceDescriptorsAsync(
             ProjectName name,
             string pageToken = null,
             int? pageSize = null,
@@ -568,9 +568,9 @@ namespace Google.Cloud.Monitoring.V3
         /// If not null, applies overrides to this RPC call.
         /// </param>
         /// <returns>
-        /// A pageable sequence of <see cref="MonitoredResourceDescriptor"/> resources.
+        /// A pageable sequence of <see cref="ga::MonitoredResourceDescriptor"/> resources.
         /// </returns>
-        public virtual gax::PagedEnumerable<ListMonitoredResourceDescriptorsResponse, MonitoredResourceDescriptor> ListMonitoredResourceDescriptors(
+        public virtual gax::PagedEnumerable<ListMonitoredResourceDescriptorsResponse, ga::MonitoredResourceDescriptor> ListMonitoredResourceDescriptors(
             ProjectName name,
             string pageToken = null,
             int? pageSize = null,
@@ -593,9 +593,9 @@ namespace Google.Cloud.Monitoring.V3
         /// If not null, applies overrides to this RPC call.
         /// </param>
         /// <returns>
-        /// A pageable asynchronous sequence of <see cref="MonitoredResourceDescriptor"/> resources.
+        /// A pageable asynchronous sequence of <see cref="ga::MonitoredResourceDescriptor"/> resources.
         /// </returns>
-        public virtual gax::PagedAsyncEnumerable<ListMonitoredResourceDescriptorsResponse, MonitoredResourceDescriptor> ListMonitoredResourceDescriptorsAsync(
+        public virtual gax::PagedAsyncEnumerable<ListMonitoredResourceDescriptorsResponse, ga::MonitoredResourceDescriptor> ListMonitoredResourceDescriptorsAsync(
             ListMonitoredResourceDescriptorsRequest request,
             gaxgrpc::CallSettings callSettings = null)
         {
@@ -612,9 +612,9 @@ namespace Google.Cloud.Monitoring.V3
         /// If not null, applies overrides to this RPC call.
         /// </param>
         /// <returns>
-        /// A pageable sequence of <see cref="MonitoredResourceDescriptor"/> resources.
+        /// A pageable sequence of <see cref="ga::MonitoredResourceDescriptor"/> resources.
         /// </returns>
-        public virtual gax::PagedEnumerable<ListMonitoredResourceDescriptorsResponse, MonitoredResourceDescriptor> ListMonitoredResourceDescriptors(
+        public virtual gax::PagedEnumerable<ListMonitoredResourceDescriptorsResponse, ga::MonitoredResourceDescriptor> ListMonitoredResourceDescriptors(
             ListMonitoredResourceDescriptorsRequest request,
             gaxgrpc::CallSettings callSettings = null)
         {
@@ -636,7 +636,7 @@ namespace Google.Cloud.Monitoring.V3
         /// <returns>
         /// A Task containing the RPC response.
         /// </returns>
-        public virtual stt::Task<MonitoredResourceDescriptor> GetMonitoredResourceDescriptorAsync(
+        public virtual stt::Task<ga::MonitoredResourceDescriptor> GetMonitoredResourceDescriptorAsync(
             MonitoredResourceDescriptorName name,
             gaxgrpc::CallSettings callSettings = null) => GetMonitoredResourceDescriptorAsync(
                 new GetMonitoredResourceDescriptorRequest
@@ -660,7 +660,7 @@ namespace Google.Cloud.Monitoring.V3
         /// <returns>
         /// A Task containing the RPC response.
         /// </returns>
-        public virtual stt::Task<MonitoredResourceDescriptor> GetMonitoredResourceDescriptorAsync(
+        public virtual stt::Task<ga::MonitoredResourceDescriptor> GetMonitoredResourceDescriptorAsync(
             MonitoredResourceDescriptorName name,
             st::CancellationToken cancellationToken) => GetMonitoredResourceDescriptorAsync(
                 name,
@@ -681,7 +681,7 @@ namespace Google.Cloud.Monitoring.V3
         /// <returns>
         /// The RPC response.
         /// </returns>
-        public virtual MonitoredResourceDescriptor GetMonitoredResourceDescriptor(
+        public virtual ga::MonitoredResourceDescriptor GetMonitoredResourceDescriptor(
             MonitoredResourceDescriptorName name,
             gaxgrpc::CallSettings callSettings = null) => GetMonitoredResourceDescriptor(
                 new GetMonitoredResourceDescriptorRequest
@@ -702,7 +702,7 @@ namespace Google.Cloud.Monitoring.V3
         /// <returns>
         /// A Task containing the RPC response.
         /// </returns>
-        public virtual stt::Task<MonitoredResourceDescriptor> GetMonitoredResourceDescriptorAsync(
+        public virtual stt::Task<ga::MonitoredResourceDescriptor> GetMonitoredResourceDescriptorAsync(
             GetMonitoredResourceDescriptorRequest request,
             gaxgrpc::CallSettings callSettings = null)
         {
@@ -721,7 +721,7 @@ namespace Google.Cloud.Monitoring.V3
         /// <returns>
         /// A Task containing the RPC response.
         /// </returns>
-        public virtual stt::Task<MonitoredResourceDescriptor> GetMonitoredResourceDescriptorAsync(
+        public virtual stt::Task<ga::MonitoredResourceDescriptor> GetMonitoredResourceDescriptorAsync(
             GetMonitoredResourceDescriptorRequest request,
             st::CancellationToken cancellationToken) => GetMonitoredResourceDescriptorAsync(
                 request,
@@ -739,7 +739,7 @@ namespace Google.Cloud.Monitoring.V3
         /// <returns>
         /// The RPC response.
         /// </returns>
-        public virtual MonitoredResourceDescriptor GetMonitoredResourceDescriptor(
+        public virtual ga::MonitoredResourceDescriptor GetMonitoredResourceDescriptor(
             GetMonitoredResourceDescriptorRequest request,
             gaxgrpc::CallSettings callSettings = null)
         {
@@ -765,9 +765,9 @@ namespace Google.Cloud.Monitoring.V3
         /// If not null, applies overrides to this RPC call.
         /// </param>
         /// <returns>
-        /// A pageable asynchronous sequence of <see cref="MetricDescriptor"/> resources.
+        /// A pageable asynchronous sequence of <see cref="ga::MetricDescriptor"/> resources.
         /// </returns>
-        public virtual gax::PagedAsyncEnumerable<ListMetricDescriptorsResponse, MetricDescriptor> ListMetricDescriptorsAsync(
+        public virtual gax::PagedAsyncEnumerable<ListMetricDescriptorsResponse, ga::MetricDescriptor> ListMetricDescriptorsAsync(
             ProjectName name,
             string pageToken = null,
             int? pageSize = null,
@@ -799,9 +799,9 @@ namespace Google.Cloud.Monitoring.V3
         /// If not null, applies overrides to this RPC call.
         /// </param>
         /// <returns>
-        /// A pageable sequence of <see cref="MetricDescriptor"/> resources.
+        /// A pageable sequence of <see cref="ga::MetricDescriptor"/> resources.
         /// </returns>
-        public virtual gax::PagedEnumerable<ListMetricDescriptorsResponse, MetricDescriptor> ListMetricDescriptors(
+        public virtual gax::PagedEnumerable<ListMetricDescriptorsResponse, ga::MetricDescriptor> ListMetricDescriptors(
             ProjectName name,
             string pageToken = null,
             int? pageSize = null,
@@ -824,9 +824,9 @@ namespace Google.Cloud.Monitoring.V3
         /// If not null, applies overrides to this RPC call.
         /// </param>
         /// <returns>
-        /// A pageable asynchronous sequence of <see cref="MetricDescriptor"/> resources.
+        /// A pageable asynchronous sequence of <see cref="ga::MetricDescriptor"/> resources.
         /// </returns>
-        public virtual gax::PagedAsyncEnumerable<ListMetricDescriptorsResponse, MetricDescriptor> ListMetricDescriptorsAsync(
+        public virtual gax::PagedAsyncEnumerable<ListMetricDescriptorsResponse, ga::MetricDescriptor> ListMetricDescriptorsAsync(
             ListMetricDescriptorsRequest request,
             gaxgrpc::CallSettings callSettings = null)
         {
@@ -843,9 +843,9 @@ namespace Google.Cloud.Monitoring.V3
         /// If not null, applies overrides to this RPC call.
         /// </param>
         /// <returns>
-        /// A pageable sequence of <see cref="MetricDescriptor"/> resources.
+        /// A pageable sequence of <see cref="ga::MetricDescriptor"/> resources.
         /// </returns>
-        public virtual gax::PagedEnumerable<ListMetricDescriptorsResponse, MetricDescriptor> ListMetricDescriptors(
+        public virtual gax::PagedEnumerable<ListMetricDescriptorsResponse, ga::MetricDescriptor> ListMetricDescriptors(
             ListMetricDescriptorsRequest request,
             gaxgrpc::CallSettings callSettings = null)
         {
@@ -867,7 +867,7 @@ namespace Google.Cloud.Monitoring.V3
         /// <returns>
         /// A Task containing the RPC response.
         /// </returns>
-        public virtual stt::Task<MetricDescriptor> GetMetricDescriptorAsync(
+        public virtual stt::Task<ga::MetricDescriptor> GetMetricDescriptorAsync(
             MetricDescriptorName name,
             gaxgrpc::CallSettings callSettings = null) => GetMetricDescriptorAsync(
                 new GetMetricDescriptorRequest
@@ -891,7 +891,7 @@ namespace Google.Cloud.Monitoring.V3
         /// <returns>
         /// A Task containing the RPC response.
         /// </returns>
-        public virtual stt::Task<MetricDescriptor> GetMetricDescriptorAsync(
+        public virtual stt::Task<ga::MetricDescriptor> GetMetricDescriptorAsync(
             MetricDescriptorName name,
             st::CancellationToken cancellationToken) => GetMetricDescriptorAsync(
                 name,
@@ -912,7 +912,7 @@ namespace Google.Cloud.Monitoring.V3
         /// <returns>
         /// The RPC response.
         /// </returns>
-        public virtual MetricDescriptor GetMetricDescriptor(
+        public virtual ga::MetricDescriptor GetMetricDescriptor(
             MetricDescriptorName name,
             gaxgrpc::CallSettings callSettings = null) => GetMetricDescriptor(
                 new GetMetricDescriptorRequest
@@ -933,7 +933,7 @@ namespace Google.Cloud.Monitoring.V3
         /// <returns>
         /// A Task containing the RPC response.
         /// </returns>
-        public virtual stt::Task<MetricDescriptor> GetMetricDescriptorAsync(
+        public virtual stt::Task<ga::MetricDescriptor> GetMetricDescriptorAsync(
             GetMetricDescriptorRequest request,
             gaxgrpc::CallSettings callSettings = null)
         {
@@ -952,7 +952,7 @@ namespace Google.Cloud.Monitoring.V3
         /// <returns>
         /// A Task containing the RPC response.
         /// </returns>
-        public virtual stt::Task<MetricDescriptor> GetMetricDescriptorAsync(
+        public virtual stt::Task<ga::MetricDescriptor> GetMetricDescriptorAsync(
             GetMetricDescriptorRequest request,
             st::CancellationToken cancellationToken) => GetMetricDescriptorAsync(
                 request,
@@ -970,7 +970,7 @@ namespace Google.Cloud.Monitoring.V3
         /// <returns>
         /// The RPC response.
         /// </returns>
-        public virtual MetricDescriptor GetMetricDescriptor(
+        public virtual ga::MetricDescriptor GetMetricDescriptor(
             GetMetricDescriptorRequest request,
             gaxgrpc::CallSettings callSettings = null)
         {
@@ -996,9 +996,9 @@ namespace Google.Cloud.Monitoring.V3
         /// <returns>
         /// A Task containing the RPC response.
         /// </returns>
-        public virtual stt::Task<MetricDescriptor> CreateMetricDescriptorAsync(
+        public virtual stt::Task<ga::MetricDescriptor> CreateMetricDescriptorAsync(
             ProjectName name,
-            MetricDescriptor metricDescriptor,
+            ga::MetricDescriptor metricDescriptor,
             gaxgrpc::CallSettings callSettings = null) => CreateMetricDescriptorAsync(
                 new CreateMetricDescriptorRequest
                 {
@@ -1026,9 +1026,9 @@ namespace Google.Cloud.Monitoring.V3
         /// <returns>
         /// A Task containing the RPC response.
         /// </returns>
-        public virtual stt::Task<MetricDescriptor> CreateMetricDescriptorAsync(
+        public virtual stt::Task<ga::MetricDescriptor> CreateMetricDescriptorAsync(
             ProjectName name,
-            MetricDescriptor metricDescriptor,
+            ga::MetricDescriptor metricDescriptor,
             st::CancellationToken cancellationToken) => CreateMetricDescriptorAsync(
                 name,
                 metricDescriptor,
@@ -1053,9 +1053,9 @@ namespace Google.Cloud.Monitoring.V3
         /// <returns>
         /// The RPC response.
         /// </returns>
-        public virtual MetricDescriptor CreateMetricDescriptor(
+        public virtual ga::MetricDescriptor CreateMetricDescriptor(
             ProjectName name,
-            MetricDescriptor metricDescriptor,
+            ga::MetricDescriptor metricDescriptor,
             gaxgrpc::CallSettings callSettings = null) => CreateMetricDescriptor(
                 new CreateMetricDescriptorRequest
                 {
@@ -1078,7 +1078,7 @@ namespace Google.Cloud.Monitoring.V3
         /// <returns>
         /// A Task containing the RPC response.
         /// </returns>
-        public virtual stt::Task<MetricDescriptor> CreateMetricDescriptorAsync(
+        public virtual stt::Task<ga::MetricDescriptor> CreateMetricDescriptorAsync(
             CreateMetricDescriptorRequest request,
             gaxgrpc::CallSettings callSettings = null)
         {
@@ -1099,7 +1099,7 @@ namespace Google.Cloud.Monitoring.V3
         /// <returns>
         /// A Task containing the RPC response.
         /// </returns>
-        public virtual stt::Task<MetricDescriptor> CreateMetricDescriptorAsync(
+        public virtual stt::Task<ga::MetricDescriptor> CreateMetricDescriptorAsync(
             CreateMetricDescriptorRequest request,
             st::CancellationToken cancellationToken) => CreateMetricDescriptorAsync(
                 request,
@@ -1119,7 +1119,7 @@ namespace Google.Cloud.Monitoring.V3
         /// <returns>
         /// The RPC response.
         /// </returns>
-        public virtual MetricDescriptor CreateMetricDescriptor(
+        public virtual ga::MetricDescriptor CreateMetricDescriptor(
             CreateMetricDescriptorRequest request,
             gaxgrpc::CallSettings callSettings = null)
         {
@@ -1569,10 +1569,10 @@ namespace Google.Cloud.Monitoring.V3
     public sealed partial class MetricServiceClientImpl : MetricServiceClient
     {
         private readonly gaxgrpc::ApiCall<ListMonitoredResourceDescriptorsRequest, ListMonitoredResourceDescriptorsResponse> _callListMonitoredResourceDescriptors;
-        private readonly gaxgrpc::ApiCall<GetMonitoredResourceDescriptorRequest, MonitoredResourceDescriptor> _callGetMonitoredResourceDescriptor;
+        private readonly gaxgrpc::ApiCall<GetMonitoredResourceDescriptorRequest, ga::MonitoredResourceDescriptor> _callGetMonitoredResourceDescriptor;
         private readonly gaxgrpc::ApiCall<ListMetricDescriptorsRequest, ListMetricDescriptorsResponse> _callListMetricDescriptors;
-        private readonly gaxgrpc::ApiCall<GetMetricDescriptorRequest, MetricDescriptor> _callGetMetricDescriptor;
-        private readonly gaxgrpc::ApiCall<CreateMetricDescriptorRequest, MetricDescriptor> _callCreateMetricDescriptor;
+        private readonly gaxgrpc::ApiCall<GetMetricDescriptorRequest, ga::MetricDescriptor> _callGetMetricDescriptor;
+        private readonly gaxgrpc::ApiCall<CreateMetricDescriptorRequest, ga::MetricDescriptor> _callCreateMetricDescriptor;
         private readonly gaxgrpc::ApiCall<DeleteMetricDescriptorRequest, pbwkt::Empty> _callDeleteMetricDescriptor;
         private readonly gaxgrpc::ApiCall<ListTimeSeriesRequest, ListTimeSeriesResponse> _callListTimeSeries;
         private readonly gaxgrpc::ApiCall<CreateTimeSeriesRequest, pbwkt::Empty> _callCreateTimeSeries;
@@ -1589,13 +1589,13 @@ namespace Google.Cloud.Monitoring.V3
             gaxgrpc::ClientHelper clientHelper = new gaxgrpc::ClientHelper(effectiveSettings);
             _callListMonitoredResourceDescriptors = clientHelper.BuildApiCall<ListMonitoredResourceDescriptorsRequest, ListMonitoredResourceDescriptorsResponse>(
                 GrpcClient.ListMonitoredResourceDescriptorsAsync, GrpcClient.ListMonitoredResourceDescriptors, effectiveSettings.ListMonitoredResourceDescriptorsSettings);
-            _callGetMonitoredResourceDescriptor = clientHelper.BuildApiCall<GetMonitoredResourceDescriptorRequest, MonitoredResourceDescriptor>(
+            _callGetMonitoredResourceDescriptor = clientHelper.BuildApiCall<GetMonitoredResourceDescriptorRequest, ga::MonitoredResourceDescriptor>(
                 GrpcClient.GetMonitoredResourceDescriptorAsync, GrpcClient.GetMonitoredResourceDescriptor, effectiveSettings.GetMonitoredResourceDescriptorSettings);
             _callListMetricDescriptors = clientHelper.BuildApiCall<ListMetricDescriptorsRequest, ListMetricDescriptorsResponse>(
                 GrpcClient.ListMetricDescriptorsAsync, GrpcClient.ListMetricDescriptors, effectiveSettings.ListMetricDescriptorsSettings);
-            _callGetMetricDescriptor = clientHelper.BuildApiCall<GetMetricDescriptorRequest, MetricDescriptor>(
+            _callGetMetricDescriptor = clientHelper.BuildApiCall<GetMetricDescriptorRequest, ga::MetricDescriptor>(
                 GrpcClient.GetMetricDescriptorAsync, GrpcClient.GetMetricDescriptor, effectiveSettings.GetMetricDescriptorSettings);
-            _callCreateMetricDescriptor = clientHelper.BuildApiCall<CreateMetricDescriptorRequest, MetricDescriptor>(
+            _callCreateMetricDescriptor = clientHelper.BuildApiCall<CreateMetricDescriptorRequest, ga::MetricDescriptor>(
                 GrpcClient.CreateMetricDescriptorAsync, GrpcClient.CreateMetricDescriptor, effectiveSettings.CreateMetricDescriptorSettings);
             _callDeleteMetricDescriptor = clientHelper.BuildApiCall<DeleteMetricDescriptorRequest, pbwkt::Empty>(
                 GrpcClient.DeleteMetricDescriptorAsync, GrpcClient.DeleteMetricDescriptor, effectiveSettings.DeleteMetricDescriptorSettings);
@@ -1633,10 +1633,10 @@ namespace Google.Cloud.Monitoring.V3
         // Partial methods called for each ApiCall on construction.
         // Allows per-RPC-method modification of the underlying ApiCall object.
         partial void Modify_ListMonitoredResourceDescriptorsApiCall(ref gaxgrpc::ApiCall<ListMonitoredResourceDescriptorsRequest, ListMonitoredResourceDescriptorsResponse> call);
-        partial void Modify_GetMonitoredResourceDescriptorApiCall(ref gaxgrpc::ApiCall<GetMonitoredResourceDescriptorRequest, MonitoredResourceDescriptor> call);
+        partial void Modify_GetMonitoredResourceDescriptorApiCall(ref gaxgrpc::ApiCall<GetMonitoredResourceDescriptorRequest, ga::MonitoredResourceDescriptor> call);
         partial void Modify_ListMetricDescriptorsApiCall(ref gaxgrpc::ApiCall<ListMetricDescriptorsRequest, ListMetricDescriptorsResponse> call);
-        partial void Modify_GetMetricDescriptorApiCall(ref gaxgrpc::ApiCall<GetMetricDescriptorRequest, MetricDescriptor> call);
-        partial void Modify_CreateMetricDescriptorApiCall(ref gaxgrpc::ApiCall<CreateMetricDescriptorRequest, MetricDescriptor> call);
+        partial void Modify_GetMetricDescriptorApiCall(ref gaxgrpc::ApiCall<GetMetricDescriptorRequest, ga::MetricDescriptor> call);
+        partial void Modify_CreateMetricDescriptorApiCall(ref gaxgrpc::ApiCall<CreateMetricDescriptorRequest, ga::MetricDescriptor> call);
         partial void Modify_DeleteMetricDescriptorApiCall(ref gaxgrpc::ApiCall<DeleteMetricDescriptorRequest, pbwkt::Empty> call);
         partial void Modify_ListTimeSeriesApiCall(ref gaxgrpc::ApiCall<ListTimeSeriesRequest, ListTimeSeriesResponse> call);
         partial void Modify_CreateTimeSeriesApiCall(ref gaxgrpc::ApiCall<CreateTimeSeriesRequest, pbwkt::Empty> call);
@@ -1669,14 +1669,14 @@ namespace Google.Cloud.Monitoring.V3
         /// If not null, applies overrides to this RPC call.
         /// </param>
         /// <returns>
-        /// A pageable asynchronous sequence of <see cref="MonitoredResourceDescriptor"/> resources.
+        /// A pageable asynchronous sequence of <see cref="ga::MonitoredResourceDescriptor"/> resources.
         /// </returns>
-        public override gax::PagedAsyncEnumerable<ListMonitoredResourceDescriptorsResponse, MonitoredResourceDescriptor> ListMonitoredResourceDescriptorsAsync(
+        public override gax::PagedAsyncEnumerable<ListMonitoredResourceDescriptorsResponse, ga::MonitoredResourceDescriptor> ListMonitoredResourceDescriptorsAsync(
             ListMonitoredResourceDescriptorsRequest request,
             gaxgrpc::CallSettings callSettings = null)
         {
             Modify_ListMonitoredResourceDescriptorsRequest(ref request, ref callSettings);
-            return new gaxgrpc::GrpcPagedAsyncEnumerable<ListMonitoredResourceDescriptorsRequest, ListMonitoredResourceDescriptorsResponse, MonitoredResourceDescriptor>(_callListMonitoredResourceDescriptors, request, callSettings);
+            return new gaxgrpc::GrpcPagedAsyncEnumerable<ListMonitoredResourceDescriptorsRequest, ListMonitoredResourceDescriptorsResponse, ga::MonitoredResourceDescriptor>(_callListMonitoredResourceDescriptors, request, callSettings);
         }
 
         /// <summary>
@@ -1689,14 +1689,14 @@ namespace Google.Cloud.Monitoring.V3
         /// If not null, applies overrides to this RPC call.
         /// </param>
         /// <returns>
-        /// A pageable sequence of <see cref="MonitoredResourceDescriptor"/> resources.
+        /// A pageable sequence of <see cref="ga::MonitoredResourceDescriptor"/> resources.
         /// </returns>
-        public override gax::PagedEnumerable<ListMonitoredResourceDescriptorsResponse, MonitoredResourceDescriptor> ListMonitoredResourceDescriptors(
+        public override gax::PagedEnumerable<ListMonitoredResourceDescriptorsResponse, ga::MonitoredResourceDescriptor> ListMonitoredResourceDescriptors(
             ListMonitoredResourceDescriptorsRequest request,
             gaxgrpc::CallSettings callSettings = null)
         {
             Modify_ListMonitoredResourceDescriptorsRequest(ref request, ref callSettings);
-            return new gaxgrpc::GrpcPagedEnumerable<ListMonitoredResourceDescriptorsRequest, ListMonitoredResourceDescriptorsResponse, MonitoredResourceDescriptor>(_callListMonitoredResourceDescriptors, request, callSettings);
+            return new gaxgrpc::GrpcPagedEnumerable<ListMonitoredResourceDescriptorsRequest, ListMonitoredResourceDescriptorsResponse, ga::MonitoredResourceDescriptor>(_callListMonitoredResourceDescriptors, request, callSettings);
         }
 
         /// <summary>
@@ -1711,7 +1711,7 @@ namespace Google.Cloud.Monitoring.V3
         /// <returns>
         /// A Task containing the RPC response.
         /// </returns>
-        public override stt::Task<MonitoredResourceDescriptor> GetMonitoredResourceDescriptorAsync(
+        public override stt::Task<ga::MonitoredResourceDescriptor> GetMonitoredResourceDescriptorAsync(
             GetMonitoredResourceDescriptorRequest request,
             gaxgrpc::CallSettings callSettings = null)
         {
@@ -1731,7 +1731,7 @@ namespace Google.Cloud.Monitoring.V3
         /// <returns>
         /// The RPC response.
         /// </returns>
-        public override MonitoredResourceDescriptor GetMonitoredResourceDescriptor(
+        public override ga::MonitoredResourceDescriptor GetMonitoredResourceDescriptor(
             GetMonitoredResourceDescriptorRequest request,
             gaxgrpc::CallSettings callSettings = null)
         {
@@ -1749,14 +1749,14 @@ namespace Google.Cloud.Monitoring.V3
         /// If not null, applies overrides to this RPC call.
         /// </param>
         /// <returns>
-        /// A pageable asynchronous sequence of <see cref="MetricDescriptor"/> resources.
+        /// A pageable asynchronous sequence of <see cref="ga::MetricDescriptor"/> resources.
         /// </returns>
-        public override gax::PagedAsyncEnumerable<ListMetricDescriptorsResponse, MetricDescriptor> ListMetricDescriptorsAsync(
+        public override gax::PagedAsyncEnumerable<ListMetricDescriptorsResponse, ga::MetricDescriptor> ListMetricDescriptorsAsync(
             ListMetricDescriptorsRequest request,
             gaxgrpc::CallSettings callSettings = null)
         {
             Modify_ListMetricDescriptorsRequest(ref request, ref callSettings);
-            return new gaxgrpc::GrpcPagedAsyncEnumerable<ListMetricDescriptorsRequest, ListMetricDescriptorsResponse, MetricDescriptor>(_callListMetricDescriptors, request, callSettings);
+            return new gaxgrpc::GrpcPagedAsyncEnumerable<ListMetricDescriptorsRequest, ListMetricDescriptorsResponse, ga::MetricDescriptor>(_callListMetricDescriptors, request, callSettings);
         }
 
         /// <summary>
@@ -1769,14 +1769,14 @@ namespace Google.Cloud.Monitoring.V3
         /// If not null, applies overrides to this RPC call.
         /// </param>
         /// <returns>
-        /// A pageable sequence of <see cref="MetricDescriptor"/> resources.
+        /// A pageable sequence of <see cref="ga::MetricDescriptor"/> resources.
         /// </returns>
-        public override gax::PagedEnumerable<ListMetricDescriptorsResponse, MetricDescriptor> ListMetricDescriptors(
+        public override gax::PagedEnumerable<ListMetricDescriptorsResponse, ga::MetricDescriptor> ListMetricDescriptors(
             ListMetricDescriptorsRequest request,
             gaxgrpc::CallSettings callSettings = null)
         {
             Modify_ListMetricDescriptorsRequest(ref request, ref callSettings);
-            return new gaxgrpc::GrpcPagedEnumerable<ListMetricDescriptorsRequest, ListMetricDescriptorsResponse, MetricDescriptor>(_callListMetricDescriptors, request, callSettings);
+            return new gaxgrpc::GrpcPagedEnumerable<ListMetricDescriptorsRequest, ListMetricDescriptorsResponse, ga::MetricDescriptor>(_callListMetricDescriptors, request, callSettings);
         }
 
         /// <summary>
@@ -1791,7 +1791,7 @@ namespace Google.Cloud.Monitoring.V3
         /// <returns>
         /// A Task containing the RPC response.
         /// </returns>
-        public override stt::Task<MetricDescriptor> GetMetricDescriptorAsync(
+        public override stt::Task<ga::MetricDescriptor> GetMetricDescriptorAsync(
             GetMetricDescriptorRequest request,
             gaxgrpc::CallSettings callSettings = null)
         {
@@ -1811,7 +1811,7 @@ namespace Google.Cloud.Monitoring.V3
         /// <returns>
         /// The RPC response.
         /// </returns>
-        public override MetricDescriptor GetMetricDescriptor(
+        public override ga::MetricDescriptor GetMetricDescriptor(
             GetMetricDescriptorRequest request,
             gaxgrpc::CallSettings callSettings = null)
         {
@@ -1833,7 +1833,7 @@ namespace Google.Cloud.Monitoring.V3
         /// <returns>
         /// A Task containing the RPC response.
         /// </returns>
-        public override stt::Task<MetricDescriptor> CreateMetricDescriptorAsync(
+        public override stt::Task<ga::MetricDescriptor> CreateMetricDescriptorAsync(
             CreateMetricDescriptorRequest request,
             gaxgrpc::CallSettings callSettings = null)
         {
@@ -1855,7 +1855,7 @@ namespace Google.Cloud.Monitoring.V3
         /// <returns>
         /// The RPC response.
         /// </returns>
-        public override MetricDescriptor CreateMetricDescriptor(
+        public override ga::MetricDescriptor CreateMetricDescriptor(
             CreateMetricDescriptorRequest request,
             gaxgrpc::CallSettings callSettings = null)
         {
@@ -1990,24 +1990,24 @@ namespace Google.Cloud.Monitoring.V3
     // Partial classes to enable page-streaming
 
     public partial class ListMonitoredResourceDescriptorsRequest : gaxgrpc::IPageRequest { }
-    public partial class ListMonitoredResourceDescriptorsResponse : gaxgrpc::IPageResponse<MonitoredResourceDescriptor>
+    public partial class ListMonitoredResourceDescriptorsResponse : gaxgrpc::IPageResponse<ga::MonitoredResourceDescriptor>
     {
         /// <summary>
         /// Returns an enumerator that iterates through the resources in this response.
         /// </summary>
-        public scg::IEnumerator<MonitoredResourceDescriptor> GetEnumerator() => ResourceDescriptors.GetEnumerator();
+        public scg::IEnumerator<ga::MonitoredResourceDescriptor> GetEnumerator() => ResourceDescriptors.GetEnumerator();
 
         /// <inheritdoc/>
         sc::IEnumerator sc::IEnumerable.GetEnumerator() => GetEnumerator();
     }
 
     public partial class ListMetricDescriptorsRequest : gaxgrpc::IPageRequest { }
-    public partial class ListMetricDescriptorsResponse : gaxgrpc::IPageResponse<MetricDescriptor>
+    public partial class ListMetricDescriptorsResponse : gaxgrpc::IPageResponse<ga::MetricDescriptor>
     {
         /// <summary>
         /// Returns an enumerator that iterates through the resources in this response.
         /// </summary>
-        public scg::IEnumerator<MetricDescriptor> GetEnumerator() => MetricDescriptors.GetEnumerator();
+        public scg::IEnumerator<ga::MetricDescriptor> GetEnumerator() => MetricDescriptors.GetEnumerator();
 
         /// <inheritdoc/>
         sc::IEnumerator sc::IEnumerable.GetEnumerator() => GetEnumerator();

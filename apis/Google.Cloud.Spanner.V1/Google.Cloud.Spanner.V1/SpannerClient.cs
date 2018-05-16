@@ -16,7 +16,7 @@
 
 using gax = Google.Api.Gax;
 using gaxgrpc = Google.Api.Gax.Grpc;
-using Google.Cloud.Spanner.Common.V1;
+using gcscv = Google.Cloud.Spanner.Common.V1;
 using pb = Google.Protobuf;
 using pbwkt = Google.Protobuf.WellKnownTypes;
 using grpccore = Grpc.Core;
@@ -709,7 +709,7 @@ namespace Google.Cloud.Spanner.V1
         /// A Task containing the RPC response.
         /// </returns>
         public virtual stt::Task<Session> CreateSessionAsync(
-            DatabaseName database,
+            gcscv::DatabaseName database,
             gaxgrpc::CallSettings callSettings = null) => CreateSessionAsync(
                 new CreateSessionRequest
                 {
@@ -748,7 +748,7 @@ namespace Google.Cloud.Spanner.V1
         /// A Task containing the RPC response.
         /// </returns>
         public virtual stt::Task<Session> CreateSessionAsync(
-            DatabaseName database,
+            gcscv::DatabaseName database,
             st::CancellationToken cancellationToken) => CreateSessionAsync(
                 database,
                 gaxgrpc::CallSettings.FromCancellationToken(cancellationToken));
@@ -784,7 +784,7 @@ namespace Google.Cloud.Spanner.V1
         /// The RPC response.
         /// </returns>
         public virtual Session CreateSession(
-            DatabaseName database,
+            gcscv::DatabaseName database,
             gaxgrpc::CallSettings callSettings = null) => CreateSession(
                 new CreateSessionRequest
                 {

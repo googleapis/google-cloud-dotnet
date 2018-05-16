@@ -16,7 +16,7 @@
 
 using gax = Google.Api.Gax;
 using gaxgrpc = Google.Api.Gax.Grpc;
-using Google.Cloud.Bigtable.Common.V2;
+using gcbcv = Google.Cloud.Bigtable.Common.V2;
 using lro = Google.LongRunning;
 using pb = Google.Protobuf;
 using pbwkt = Google.Protobuf.WellKnownTypes;
@@ -1293,7 +1293,7 @@ namespace Google.Cloud.Bigtable.Admin.V2
         /// A Task containing the RPC response.
         /// </returns>
         public virtual stt::Task<Table> GetTableAsync(
-            TableName name,
+            gcbcv::TableName name,
             gaxgrpc::CallSettings callSettings = null) => GetTableAsync(
                 new GetTableRequest
                 {
@@ -1316,7 +1316,7 @@ namespace Google.Cloud.Bigtable.Admin.V2
         /// A Task containing the RPC response.
         /// </returns>
         public virtual stt::Task<Table> GetTableAsync(
-            TableName name,
+            gcbcv::TableName name,
             st::CancellationToken cancellationToken) => GetTableAsync(
                 name,
                 gaxgrpc::CallSettings.FromCancellationToken(cancellationToken));
@@ -1336,7 +1336,7 @@ namespace Google.Cloud.Bigtable.Admin.V2
         /// The RPC response.
         /// </returns>
         public virtual Table GetTable(
-            TableName name,
+            gcbcv::TableName name,
             gaxgrpc::CallSettings callSettings = null) => GetTable(
                 new GetTableRequest
                 {
@@ -1415,7 +1415,7 @@ namespace Google.Cloud.Bigtable.Admin.V2
         /// A Task that completes when the RPC has completed.
         /// </returns>
         public virtual stt::Task DeleteTableAsync(
-            TableName name,
+            gcbcv::TableName name,
             gaxgrpc::CallSettings callSettings = null) => DeleteTableAsync(
                 new DeleteTableRequest
                 {
@@ -1438,7 +1438,7 @@ namespace Google.Cloud.Bigtable.Admin.V2
         /// A Task that completes when the RPC has completed.
         /// </returns>
         public virtual stt::Task DeleteTableAsync(
-            TableName name,
+            gcbcv::TableName name,
             st::CancellationToken cancellationToken) => DeleteTableAsync(
                 name,
                 gaxgrpc::CallSettings.FromCancellationToken(cancellationToken));
@@ -1455,7 +1455,7 @@ namespace Google.Cloud.Bigtable.Admin.V2
         /// If not null, applies overrides to this RPC call.
         /// </param>
         public virtual void DeleteTable(
-            TableName name,
+            gcbcv::TableName name,
             gaxgrpc::CallSettings callSettings = null) => DeleteTable(
                 new DeleteTableRequest
                 {
@@ -1540,7 +1540,7 @@ namespace Google.Cloud.Bigtable.Admin.V2
         /// A Task containing the RPC response.
         /// </returns>
         public virtual stt::Task<Table> ModifyColumnFamiliesAsync(
-            TableName name,
+            gcbcv::TableName name,
             scg::IEnumerable<ModifyColumnFamiliesRequest.Types.Modification> modifications,
             gaxgrpc::CallSettings callSettings = null) => ModifyColumnFamiliesAsync(
                 new ModifyColumnFamiliesRequest
@@ -1574,7 +1574,7 @@ namespace Google.Cloud.Bigtable.Admin.V2
         /// A Task containing the RPC response.
         /// </returns>
         public virtual stt::Task<Table> ModifyColumnFamiliesAsync(
-            TableName name,
+            gcbcv::TableName name,
             scg::IEnumerable<ModifyColumnFamiliesRequest.Types.Modification> modifications,
             st::CancellationToken cancellationToken) => ModifyColumnFamiliesAsync(
                 name,
@@ -1605,7 +1605,7 @@ namespace Google.Cloud.Bigtable.Admin.V2
         /// The RPC response.
         /// </returns>
         public virtual Table ModifyColumnFamilies(
-            TableName name,
+            gcbcv::TableName name,
             scg::IEnumerable<ModifyColumnFamiliesRequest.Types.Modification> modifications,
             gaxgrpc::CallSettings callSettings = null) => ModifyColumnFamilies(
                 new ModifyColumnFamiliesRequest
@@ -1762,7 +1762,7 @@ namespace Google.Cloud.Bigtable.Admin.V2
         /// A Task containing the RPC response.
         /// </returns>
         public virtual stt::Task<GenerateConsistencyTokenResponse> GenerateConsistencyTokenAsync(
-            TableName name,
+            gcbcv::TableName name,
             gaxgrpc::CallSettings callSettings = null) => GenerateConsistencyTokenAsync(
                 new GenerateConsistencyTokenRequest
                 {
@@ -1793,7 +1793,7 @@ namespace Google.Cloud.Bigtable.Admin.V2
         /// A Task containing the RPC response.
         /// </returns>
         public virtual stt::Task<GenerateConsistencyTokenResponse> GenerateConsistencyTokenAsync(
-            TableName name,
+            gcbcv::TableName name,
             st::CancellationToken cancellationToken) => GenerateConsistencyTokenAsync(
                 name,
                 gaxgrpc::CallSettings.FromCancellationToken(cancellationToken));
@@ -1821,7 +1821,7 @@ namespace Google.Cloud.Bigtable.Admin.V2
         /// The RPC response.
         /// </returns>
         public virtual GenerateConsistencyTokenResponse GenerateConsistencyToken(
-            TableName name,
+            gcbcv::TableName name,
             gaxgrpc::CallSettings callSettings = null) => GenerateConsistencyToken(
                 new GenerateConsistencyTokenRequest
                 {
@@ -1934,7 +1934,7 @@ namespace Google.Cloud.Bigtable.Admin.V2
         /// A Task containing the RPC response.
         /// </returns>
         public virtual stt::Task<CheckConsistencyResponse> CheckConsistencyAsync(
-            TableName name,
+            gcbcv::TableName name,
             string consistencyToken,
             gaxgrpc::CallSettings callSettings = null) => CheckConsistencyAsync(
                 new CheckConsistencyRequest
@@ -1969,7 +1969,7 @@ namespace Google.Cloud.Bigtable.Admin.V2
         /// A Task containing the RPC response.
         /// </returns>
         public virtual stt::Task<CheckConsistencyResponse> CheckConsistencyAsync(
-            TableName name,
+            gcbcv::TableName name,
             string consistencyToken,
             st::CancellationToken cancellationToken) => CheckConsistencyAsync(
                 name,
@@ -2001,7 +2001,7 @@ namespace Google.Cloud.Bigtable.Admin.V2
         /// The RPC response.
         /// </returns>
         public virtual CheckConsistencyResponse CheckConsistency(
-            TableName name,
+            gcbcv::TableName name,
             string consistencyToken,
             gaxgrpc::CallSettings callSettings = null) => CheckConsistency(
                 new CheckConsistencyRequest
@@ -2123,7 +2123,7 @@ namespace Google.Cloud.Bigtable.Admin.V2
         /// A Task containing the RPC response.
         /// </returns>
         public virtual stt::Task<lro::Operation<Snapshot, SnapshotTableMetadata>> SnapshotTableAsync(
-            TableName name,
+            gcbcv::TableName name,
             ClusterName cluster,
             SnapshotName snapshotId,
             string description,
@@ -2172,7 +2172,7 @@ namespace Google.Cloud.Bigtable.Admin.V2
         /// A Task containing the RPC response.
         /// </returns>
         public virtual stt::Task<lro::Operation<Snapshot, SnapshotTableMetadata>> SnapshotTableAsync(
-            TableName name,
+            gcbcv::TableName name,
             ClusterName cluster,
             SnapshotName snapshotId,
             string description,
@@ -2218,7 +2218,7 @@ namespace Google.Cloud.Bigtable.Admin.V2
         /// The RPC response.
         /// </returns>
         public virtual lro::Operation<Snapshot, SnapshotTableMetadata> SnapshotTable(
-            TableName name,
+            gcbcv::TableName name,
             ClusterName cluster,
             SnapshotName snapshotId,
             string description,

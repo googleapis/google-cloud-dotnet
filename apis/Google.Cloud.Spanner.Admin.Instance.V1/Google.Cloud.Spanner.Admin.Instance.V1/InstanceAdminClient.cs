@@ -18,7 +18,7 @@ using gax = Google.Api.Gax;
 using gaxgrpc = Google.Api.Gax.Grpc;
 using gaxres = Google.Api.Gax.ResourceNames;
 using iam = Google.Cloud.Iam.V1;
-using Google.Cloud.Spanner.Common.V1;
+using gcscv = Google.Cloud.Spanner.Common.V1;
 using lro = Google.LongRunning;
 using pb = Google.Protobuf;
 using pbwkt = Google.Protobuf.WellKnownTypes;
@@ -965,7 +965,7 @@ namespace Google.Cloud.Spanner.Admin.Instance.V1
         /// A Task containing the RPC response.
         /// </returns>
         public virtual stt::Task<Instance> GetInstanceAsync(
-            InstanceName name,
+            gcscv::InstanceName name,
             gaxgrpc::CallSettings callSettings = null) => GetInstanceAsync(
                 new GetInstanceRequest
                 {
@@ -987,7 +987,7 @@ namespace Google.Cloud.Spanner.Admin.Instance.V1
         /// A Task containing the RPC response.
         /// </returns>
         public virtual stt::Task<Instance> GetInstanceAsync(
-            InstanceName name,
+            gcscv::InstanceName name,
             st::CancellationToken cancellationToken) => GetInstanceAsync(
                 name,
                 gaxgrpc::CallSettings.FromCancellationToken(cancellationToken));
@@ -1006,7 +1006,7 @@ namespace Google.Cloud.Spanner.Admin.Instance.V1
         /// The RPC response.
         /// </returns>
         public virtual Instance GetInstance(
-            InstanceName name,
+            gcscv::InstanceName name,
             gaxgrpc::CallSettings callSettings = null) => GetInstance(
                 new GetInstanceRequest
                 {
@@ -1127,7 +1127,7 @@ namespace Google.Cloud.Spanner.Admin.Instance.V1
         /// </returns>
         public virtual stt::Task<lro::Operation<Instance, CreateInstanceMetadata>> CreateInstanceAsync(
             gaxres::ProjectName parent,
-            InstanceName instanceId,
+            gcscv::InstanceName instanceId,
             Instance instance,
             gaxgrpc::CallSettings callSettings = null) => CreateInstanceAsync(
                 new CreateInstanceRequest
@@ -1195,7 +1195,7 @@ namespace Google.Cloud.Spanner.Admin.Instance.V1
         /// </returns>
         public virtual stt::Task<lro::Operation<Instance, CreateInstanceMetadata>> CreateInstanceAsync(
             gaxres::ProjectName parent,
-            InstanceName instanceId,
+            gcscv::InstanceName instanceId,
             Instance instance,
             st::CancellationToken cancellationToken) => CreateInstanceAsync(
                 parent,
@@ -1260,7 +1260,7 @@ namespace Google.Cloud.Spanner.Admin.Instance.V1
         /// </returns>
         public virtual lro::Operation<Instance, CreateInstanceMetadata> CreateInstance(
             gaxres::ProjectName parent,
-            InstanceName instanceId,
+            gcscv::InstanceName instanceId,
             Instance instance,
             gaxgrpc::CallSettings callSettings = null) => CreateInstance(
                 new CreateInstanceRequest
@@ -1787,7 +1787,7 @@ namespace Google.Cloud.Spanner.Admin.Instance.V1
         /// A Task that completes when the RPC has completed.
         /// </returns>
         public virtual stt::Task DeleteInstanceAsync(
-            InstanceName name,
+            gcscv::InstanceName name,
             gaxgrpc::CallSettings callSettings = null) => DeleteInstanceAsync(
                 new DeleteInstanceRequest
                 {
@@ -1819,7 +1819,7 @@ namespace Google.Cloud.Spanner.Admin.Instance.V1
         /// A Task that completes when the RPC has completed.
         /// </returns>
         public virtual stt::Task DeleteInstanceAsync(
-            InstanceName name,
+            gcscv::InstanceName name,
             st::CancellationToken cancellationToken) => DeleteInstanceAsync(
                 name,
                 gaxgrpc::CallSettings.FromCancellationToken(cancellationToken));
@@ -1845,7 +1845,7 @@ namespace Google.Cloud.Spanner.Admin.Instance.V1
         /// If not null, applies overrides to this RPC call.
         /// </param>
         public virtual void DeleteInstance(
-            InstanceName name,
+            gcscv::InstanceName name,
             gaxgrpc::CallSettings callSettings = null) => DeleteInstance(
                 new DeleteInstanceRequest
                 {

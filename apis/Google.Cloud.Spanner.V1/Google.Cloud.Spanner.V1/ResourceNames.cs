@@ -15,7 +15,7 @@
 // Generated code. DO NOT EDIT!
 
 using gax = Google.Api.Gax;
-using Google.Cloud.Spanner.Common.V1;
+using gcscv = Google.Cloud.Spanner.Common.V1;
 using sys = System;
 using linq = System.Linq;
 
@@ -157,11 +157,11 @@ namespace Google.Cloud.Spanner.V1
     public partial class CreateSessionRequest
     {
         /// <summary>
-        /// <see cref="DatabaseName"/>-typed view over the <see cref="Database"/> resource name property.
+        /// <see cref="gcscv::DatabaseName"/>-typed view over the <see cref="Database"/> resource name property.
         /// </summary>
-        public DatabaseName DatabaseAsDatabaseName
+        public gcscv::DatabaseName DatabaseAsDatabaseName
         {
-            get { return string.IsNullOrEmpty(Database) ? null : DatabaseName.Parse(Database); }
+            get { return string.IsNullOrEmpty(Database) ? null : gcscv::DatabaseName.Parse(Database); }
             set { Database = value != null ? value.ToString() : ""; }
         }
 
