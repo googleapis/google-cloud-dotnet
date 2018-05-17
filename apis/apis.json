@@ -491,7 +491,7 @@
     "tags": [ "Spanner" ],
     "dependencies": {
       "Google.LongRunning": "1.0.0",
-      "Google.Api.Gax.Grpc": "2.3.0",
+      "Google.Api.Gax.Grpc": "2.4.0-beta02",
       "Grpc.Core": "1.10.0",
       "Google.Cloud.Iam.V1": "1.0.0",
       "Google.Cloud.Spanner.Common.V1": "project"
@@ -508,7 +508,7 @@
     "tags": [ "Spanner" ],
     "dependencies": {
       "Google.LongRunning": "1.0.0",
-      "Google.Api.Gax.Grpc": "2.3.0",
+      "Google.Api.Gax.Grpc": "2.4.0-beta02",
       "Grpc.Core": "1.10.0",
       "Google.Cloud.Iam.V1": "1.0.0",
       "Google.Cloud.Spanner.Common.V1": "project"
@@ -568,7 +568,7 @@
     "description": "Common resource names used by all Spanner V1 APIs",
     "tags": [ "Spanner" ],
     "dependencies": {
-      "Google.Api.Gax": "2.3.0"
+      "Google.Api.Gax": "2.4.0-beta02"
     }
   },
   
@@ -583,7 +583,7 @@
     "description": "Low-level Google client library to access the Google Cloud Spanner API. The ADO.NET provider (Google.Cloud.Spanner.Data) which depends on this package is generally preferred for Spanner access.",
     "tags": [ "Spanner" ],
     "dependencies": {
-      "Google.Api.Gax.Grpc": "2.3.0",
+      "Google.Api.Gax.Grpc": "2.4.0-beta02",
       "Grpc.Core": "1.10.0",
       "Google.Cloud.Spanner.Common.V1": "project"
     }
@@ -684,6 +684,7 @@
     "tags": [ "Vision" ],
     "dependencies": {
       "Google.Api.Gax.Grpc": "2.3.0",
+      "Google.LongRunning": "1.0.0",
       "Grpc.Core": "1.10.0"
     },
   },

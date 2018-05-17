@@ -15,6 +15,7 @@
 using Google.Api.Gax;
 using Google.Api.Gax.Grpc;
 using Google.Cloud.Bigtable.Admin.V2;
+using Google.Cloud.Bigtable.Common.V2;
 using Google.LongRunning;
 using Google.Protobuf;
 using Google.Protobuf.WellKnownTypes;

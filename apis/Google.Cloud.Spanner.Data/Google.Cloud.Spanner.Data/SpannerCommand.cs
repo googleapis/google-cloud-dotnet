@@ -21,11 +21,11 @@ using System.Threading;
 using System.Threading.Tasks;
 using Google.Api.Gax;
 using Google.Cloud.Spanner.Admin.Database.V1;
+using Google.Cloud.Spanner.Common.V1;
 using Google.Cloud.Spanner.V1;
 using Google.Cloud.Spanner.V1.Internal.Logging;
 using Google.Protobuf.WellKnownTypes;
 using Grpc.Core;
-using DatabaseName = Google.Cloud.Spanner.Admin.Database.V1.DatabaseName;
 
 // ReSharper disable UnusedParameter.Local
 
