@@ -286,7 +286,7 @@ namespace Google.Cloud.Firestore.Tests.Proto
             {
                 // TODO: Should we actually check that it's only the last response that causes the exception?
                 var exception = await Assert.ThrowsAnyAsync<Exception>(action);
-                Assert.True(exception is ArgumentException || exception is InvalidOperationException || exception is RpcException,
+                Assert.True(exception is ArgumentException || exception is InvalidOperationException,
                     $"Exception type: {exception.GetType()}");
             }
             else

@@ -15,7 +15,6 @@
 using Google.Api.Gax;
 using Google.Cloud.Firestore.V1Beta1;
 using Google.Protobuf;
-using Grpc.Core;
 using System;
 using System.Collections.Generic;
 using System.Threading;
@@ -77,12 +76,12 @@ namespace Google.Cloud.Firestore
                             }
                             break;
                         case Add:
-                            GaxPreconditions.CheckState(WatchStream.WatchTargetId == change.TargetIds[0], "Target ID must be 0x{0:x}", WatchStream.WatchTargetId);
+                            GaxPreconditions.CheckState(!noTargetIds && WatchStream.WatchTargetId == change.TargetIds[0], "Target ID must be 0x{0:x}", WatchStream.WatchTargetId);
                             break;
                         case Remove:
-                            // TODO: Do we really want an RpcException here?
-                            StatusCode status = (StatusCode?)change.Cause?.Code ?? StatusCode.Cancelled;
-                            throw new RpcException(new Status(status, $"Backend ended listen stream: {change.Cause?.Message}"));
+                            GaxPreconditions.CheckState(!noTargetIds && WatchStream.WatchTargetId == change.TargetIds[0], "Target ID must be 0x{0:x}", WatchStream.WatchTargetId);
+                            // This may not be the right kind of exception to throw, but whatever we throw should be a permanent error. This is a reasonable starting point.
+                            throw new InvalidOperationException("Server removed watch target");
                         case Current:
                             _current = true;
                             break;
@@ -90,8 +89,7 @@ namespace Google.Cloud.Firestore
                             ResetDocs();
                             return WatchResponseResult.Continue;
                         default:
-                            // TODO: Do we really want an RpcException here?
-                            throw new RpcException(new Status(StatusCode.InvalidArgument, $"Encountered invalid target change type: {change.Cause.Message}"));
+                            throw new InvalidOperationException($"Encountered invalid target change type: {change.Cause.Message}");
                     }
 
                     bool healthy = change.ResumeToken != null && (change.TargetIds.Count == 0 || change.TargetIds.Contains(WatchStream.WatchTargetId));
@@ -110,7 +108,8 @@ namespace Google.Cloud.Firestore
                     }
                     if (!changed && !removed)
                     {
-                        throw new InvalidOperationException("Server error: document was neither changed nor removed");
+                        // This is probably an error in the server, but we can follow protocol by just ignoring this response.
+                        return WatchResponseResult.Continue;
                     }
                     _changeMap[docRef] = changed ? document : null;
                     return WatchResponseResult.Continue;
@@ -132,7 +131,7 @@ namespace Google.Cloud.Firestore
                     }
                     return WatchResponseResult.Continue;
                 default:
-                    throw new RpcException(new Status(StatusCode.InvalidArgument, $"Encountered invalid listen response type: {response.ResponseTypeCase}"));
+                    throw new InvalidOperationException($"Encountered invalid listen response type: {response.ResponseTypeCase}");
             }
         }
 
