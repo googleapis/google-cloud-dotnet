@@ -19,10 +19,10 @@ using Google.Api.Gax;
 using Google.Api.Gax.Grpc;
 using Google.Apis.Auth.OAuth2;
 using Google.Cloud.Spanner.Admin.Database.V1;
+using Google.Cloud.Spanner.Common.V1;
 using Google.Cloud.Spanner.V1;
 using Grpc.Auth;
 using Grpc.Core;
-using DatabaseName = Google.Cloud.Spanner.V1.DatabaseName;
 
 // ReSharper disable UnusedParameter.Local
 namespace Google.Cloud.Spanner.Data

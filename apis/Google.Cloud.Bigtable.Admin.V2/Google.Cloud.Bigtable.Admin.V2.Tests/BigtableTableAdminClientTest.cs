@@ -24,6 +24,7 @@ using Google.Api.Gax;
 using Google.LongRunning;
 using Grpc.Core;
 using Xunit;
+using Google.Cloud.Bigtable.Common.V2;
 
 namespace Google.Cloud.Bigtable.Admin.V2.Tests
 {
