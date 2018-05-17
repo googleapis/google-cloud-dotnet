@@ -180,6 +180,23 @@ namespace Google.Cloud.Logging.NLog.Tests
         }
 
         [Fact]
+        public async Task MultipleLogEntriesThrottle()
+        {
+            var logs = Enumerable.Range(1, 5).Select(i => $"Message{i}");
+            var uploadedEntries = await RunTestWorkingServer(
+                googleTarget =>
+                {
+                    googleTarget.TaskPendingLimit = 2;
+                    LogInfo(logs.Take(2));
+                    googleTarget.Flush((ex) => { });
+                    LogInfo(logs.Skip(2));
+                    return Task.FromResult(0);
+                });
+            Assert.Equal(5, uploadedEntries.Count);
+            Assert.Equal(logs, uploadedEntries.Select(x => x.TextPayload.Trim()));
+        }
+
+        [Fact]
         public async Task MultipleLogEntriesAsync()
         {
             var logs = Enumerable.Range(1, 5).Select(i => $"Message{i}");

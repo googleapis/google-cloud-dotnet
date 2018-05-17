@@ -53,6 +53,11 @@ namespace Google.Cloud.Logging.NLog
         public bool DisableResourceTypeDetection { get; set; }
 
         /// <summary>
+        /// Configures how many outstanding write tasks before starting to throttle 
+        /// </summary>
+        public int TaskPendingLimit { get; set; }
+
+        /// <summary>
         /// The resource type of log entries.
         /// Default value depends on the detected platform. See the remarks section for details.
         /// </summary>
@@ -109,7 +114,10 @@ namespace Google.Cloud.Logging.NLog
         private string _logName;
         private LogNameOneof _logNameToWrite;
         private Task _prevTask;
+        private int _pendingTaskCount;
         private CancellationTokenSource _cancelTokenSource;
+        private Func<Task, object, Task> _writeLogEntriesBegin;
+        private Action<Task, object> _writeLogEntriesCompleted;
 
         private static readonly string[] s_oAuthScopes = new string[] { "https://www.googleapis.com/auth/logging.write" };
         private static readonly Dictionary<string, string> s_emptyLabels = new Dictionary<string, string>();
@@ -134,12 +142,15 @@ namespace Google.Cloud.Logging.NLog
         // For testing only.
         internal GoogleStackdriverTarget(LoggingServiceV2Client client, Platform platform)
         {
+            OptimizeBufferReuse = true;
             ResourceLabels = new List<TargetPropertyWithContext>();
             _contextProperties = new List<TargetPropertyWithContext>();
             _client = client;
             _platform = platform;
             LogId = "Default";
-            OptimizeBufferReuse = true;
+            TaskPendingLimit = 5;
+            _writeLogEntriesBegin = WriteLogEntriesBegin;
+            _writeLogEntriesCompleted = WriteLogEntriesCompleted;
         }
 
         /// <summary>
@@ -167,6 +178,7 @@ namespace Google.Cloud.Logging.NLog
         {
             _cancelTokenSource.Cancel();
             _prevTask = null;
+            _pendingTaskCount = 0;
             base.CloseTarget();
         }
 
@@ -175,7 +187,10 @@ namespace Google.Cloud.Logging.NLog
         /// </summary>
         protected override void FlushAsync(AsyncContinuation asyncContinuation)
         {
-            _prevTask?.ContinueWith((prevTask) => asyncContinuation(null), TaskScheduler.Default);
+            if (_prevTask != null)
+                _prevTask.ContinueWith((prevTask) => asyncContinuation(null), TaskScheduler.Default);
+            else
+                asyncContinuation(null);    // Nothing to flush
         }
 
         private LoggingServiceV2Client BuildLoggingServiceClient()
@@ -250,10 +265,8 @@ namespace Google.Cloud.Logging.NLog
         /// </summary>
         protected override void Write(AsyncLogEventInfo logEvent)
         {
-            var continuation = logEvent.Continuation;
             var logEntry = BuildLogEntry(logEvent.LogEvent);
-            _prevTask = _client.WriteLogEntriesAsync(_logNameToWrite, _resource, s_emptyLabels, new[] { logEntry }, _cancelTokenSource.Token)
-                .ContinueWith(WriteContinuation, continuation, TaskScheduler.Default);
+            WriteLogEntries(new[] { logEntry }, logEvent.Continuation);
         }
 
         /// <summary>
@@ -279,15 +292,47 @@ namespace Google.Cloud.Logging.NLog
                 }
             }
 
-            _prevTask = _client.WriteLogEntriesAsync(_logNameToWrite, _resource, s_emptyLabels, logEntries, _cancelTokenSource.Token)
-                .ContinueWith(WriteContinuation, continuationList, TaskScheduler.Default);
+            WriteLogEntries(logEntries, continuationList);
         }
 
-        private static void WriteContinuation(Task<WriteLogEntriesResponse> prevTask, object state)
+        private void WriteLogEntries(IList<LogEntry> logEntries, object continuationList)
         {
+            bool belowTaskLimit = Interlocked.Increment(ref _pendingTaskCount) < TaskPendingLimit;
+            if (!belowTaskLimit)
+            {
+                belowTaskLimit = _prevTask?.Wait(1000, _cancelTokenSource.Token) ?? false; // Throttle
+                if (belowTaskLimit)
+                    _pendingTaskCount = 1;
+            }
+
+            try
+            {
+                if (belowTaskLimit && _prevTask != null)
+                    _prevTask = _prevTask.ContinueWith(_writeLogEntriesBegin, logEntries, _cancelTokenSource.Token);
+                else
+                    _prevTask = WriteLogEntriesBegin(null, logEntries);
+                _prevTask = _prevTask.ContinueWith(_writeLogEntriesCompleted, continuationList, _cancelTokenSource.Token);
+            }
+            catch
+            {
+                Interlocked.Decrement(ref _pendingTaskCount);
+                throw;
+            }
+        }
+
+        private async Task WriteLogEntriesBegin(Task _, object state)
+        {
+            var logEntries = state as IList<LogEntry>;
+            await _client.WriteLogEntriesAsync(_logNameToWrite, _resource, s_emptyLabels, logEntries, _cancelTokenSource.Token).ConfigureAwait(false);
+        }
+
+        private void WriteLogEntriesCompleted(Task prevTask, object state)
+        {
+            Interlocked.Decrement(ref _pendingTaskCount);
+
             if (prevTask.Exception != null)
             {
-                InternalLogger.Warn(prevTask.Exception, "GoogleStackdriver: Exception at WriteLogEntriesAsync");
+                InternalLogger.Warn(prevTask.Exception, "GoogleStackdriver(Name={0}): Exception at WriteLogEntriesAsync", Name);
             }
 
             var singleContinuation = state as AsyncContinuation;
