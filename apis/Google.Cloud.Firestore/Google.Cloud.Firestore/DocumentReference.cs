@@ -208,5 +208,33 @@ namespace Google.Cloud.Firestore
         /// </summary>
         /// <returns>A lazily-iterated sequence of collection references within this document.</returns>
         public IAsyncEnumerable<CollectionReference> ListCollectionsAsync() => Database.ListCollectionsAsync(this);
+
+        /// <summary>
+        /// Watch this document for changes.
+        /// </summary>
+        /// <param name="callback">The callback to invoke each time the document changes. Must not be null.</param>
+        /// <param name="cancellationToken">Optional cancellation token which may be used to cancel the listening operation.</param>
+        /// <returns>A <see cref="SnapshotListener"/> which may be used to monitor the listening operation and stop it gracefully.</returns>
+        public SnapshotListener Listen(Func<DocumentSnapshot, CancellationToken, Task> callback, CancellationToken cancellationToken = default)
+        {
+            GaxPreconditions.CheckNotNull(callback, nameof(callback));
+            var target = WatchStream.CreateTarget(this);
+            Func<QuerySnapshot, CancellationToken, Task> queryCallback = async (querySnapshot, localCancellationToken) =>
+            {
+                foreach (var doc in querySnapshot)
+                {
+                    if (doc.Reference == this)
+                    {
+                        await callback(doc, localCancellationToken).ConfigureAwait(false);
+                        return;
+                    }
+                }
+                // TODO: This will mean parsing the path back to a DocumentReference. Maybe we should accept "this".
+                var missingDoc = DocumentSnapshot.ForMissingDocument(Database, Path, querySnapshot.ReadTime);
+                await callback(missingDoc, cancellationToken).ConfigureAwait(false);
+            };
+            var stream = new WatchStream(new WatchState(Parent, queryCallback), target, Database, cancellationToken);
+            return SnapshotListener.Start(stream);
+        }
     }
 }

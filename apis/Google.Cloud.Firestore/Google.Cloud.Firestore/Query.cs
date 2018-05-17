@@ -738,7 +738,22 @@ namespace Google.Cloud.Firestore
             EqualityHelpers.GetListHashCode(_projections),
             _startAt?.GetHashCode() ?? -1,
             _endAt?.GetHashCode() ?? -1);
-        
+
+        // TODO: Should this be ListenAsync?
+        /// <summary>
+        /// Listen to this query for changes.
+        /// </summary>
+        /// <param name="callback">The callback to invoke each time the query results change. Must not be null.</param>
+        /// <param name="cancellationToken">Optional cancellation token which may be used to cancel the listening operation.</param>
+        /// <returns>A <see cref="SnapshotListener"/> which may be used to monitor the listening operation and stop it gracefully.</returns>
+        public SnapshotListener Listen(Func<QuerySnapshot, CancellationToken, Task> callback, CancellationToken cancellationToken = default)
+        {
+            GaxPreconditions.CheckNotNull(callback, nameof(callback));
+            var target = WatchStream.CreateTarget(this);
+            var stream = new WatchStream(new WatchState(this, callback), target, Database, cancellationToken);
+            return SnapshotListener.Start(stream);
+        }
+
         // Structs representing orderings and filters but using FieldPath instead of FieldReference.
         // This allows us to use fields specified in the ordering/filter in this more convenient form.
 
