@@ -18,6 +18,7 @@ using System.Collections.Generic;
 using System.Globalization;
 using System.Threading.Tasks;
 using Xunit;
+using static Google.Cloud.Firestore.Snippets.DataModelSnippets;
 
 namespace Google.Cloud.Firestore.Snippets
 {
@@ -339,6 +340,55 @@ namespace Google.Cloud.Firestore.Snippets
                 City city = document.ConvertTo<City>();
                 Console.WriteLine($"{city.Name}: {city.Population}");
             }
+            // End sample
+        }
+
+        [Fact]
+        public async Task ListenQuery()
+        {
+            string projectId = _fixture.ProjectId;
+            string collectionId = _fixture.CreateUniqueCollection().Id;
+            // Sample: ListenQuery
+            FirestoreDb db = FirestoreDb.Create(projectId);
+            CollectionReference collection = db.Collection(collectionId);
+            Query query = collection.WhereGreaterThan("Score", 5).OrderByDescending("Score");
+
+            SnapshotListener listener = query.Listen(snapshot =>
+            {
+                Console.WriteLine($"Callback received snapshot");
+                Console.WriteLine($"Count: {snapshot.Count}");
+                Console.WriteLine("Changes:");
+                foreach (DocumentChange change in snapshot.Changes)
+                {
+                    Console.WriteLine($"{change.Document.Reference.Id}: ChangeType={change.ChangeType}; OldIndex={change.OldIndex}; NewIndex={change.NewIndex})");
+                }
+                Console.WriteLine();
+            });
+
+            Console.WriteLine("Creating document for Sophie (Score = 7)");
+            var doc1Ref = await collection.AddAsync(new { Name = "Sophie", Score = 7 });
+            Console.WriteLine($"Sophie document ID: {doc1Ref.Id}");
+            await Task.Delay(1000);
+
+            Console.WriteLine("Creating document for James (Score = 10)");
+            var doc2Ref = await collection.AddAsync(new { Name = "James", Score = 10 });
+            Console.WriteLine($"James document ID: {doc2Ref.Id}");
+            await Task.Delay(1000);
+
+            Console.WriteLine("Modifying document for Sophie (set Score = 11, higher than score for James)");
+            await doc1Ref.UpdateAsync("Score", 11);
+            await Task.Delay(1000);
+
+            Console.WriteLine("Modifying document for James (set Score = 4, below threshold for query)");
+            await doc2Ref.UpdateAsync("Score", 4);
+            await Task.Delay(1000);
+
+            Console.WriteLine("Deleting document for Sophie");
+            await doc1Ref.DeleteAsync();
+            await Task.Delay(1000);
+
+            Console.WriteLine("Stopping listener");
+            await listener.StopAsync();
             // End sample
         }
     }

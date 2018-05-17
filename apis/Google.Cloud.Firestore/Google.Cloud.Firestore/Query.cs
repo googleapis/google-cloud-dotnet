@@ -754,6 +754,19 @@ namespace Google.Cloud.Firestore
             return SnapshotListener.Start(stream);
         }
 
+        /// <summary>
+        /// Listen to this query for changes. This method is a convenience method over <see cref="Listen(Func{QuerySnapshot, CancellationToken, Task}, CancellationToken)"/>,
+        /// wrapping a synchronous callback to create an asynchronous one.
+        /// </summary>
+        /// <param name="callback">The callback to invoke each time the query results change. Must not be null.</param>
+        /// <param name="cancellationToken">Optional cancellation token which may be used to cancel the listening operation.</param>
+        /// <returns>A <see cref="SnapshotListener"/> which may be used to monitor the listening operation and stop it gracefully.</returns>
+        public SnapshotListener Listen(Action<QuerySnapshot> callback, CancellationToken cancellationToken = default)
+        {
+            GaxPreconditions.CheckNotNull(callback, nameof(callback));
+            return Listen((snapshot, _) => { callback(snapshot); return Task.FromResult(0); }, cancellationToken);
+        }
+
         // Structs representing orderings and filters but using FieldPath instead of FieldReference.
         // This allows us to use fields specified in the ordering/filter in this more convenient form.
 
