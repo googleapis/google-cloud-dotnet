@@ -236,5 +236,18 @@ namespace Google.Cloud.Firestore
             var stream = new WatchStream(new WatchState(Parent, queryCallback), target, Database, cancellationToken);
             return SnapshotListener.Start(stream);
         }
+
+        /// <summary>
+        /// Watch this document for changes. This method is a convenience method over <see cref="Listen(Func{DocumentSnapshot, CancellationToken, Task}, CancellationToken)"/>,
+        /// wrapping a synchronous callback to create an asynchronous one.
+        /// </summary>
+        /// <param name="callback">The callback to invoke each time the query results change. Must not be null.</param>
+        /// <param name="cancellationToken">Optional cancellation token which may be used to cancel the listening operation.</param>
+        /// <returns>A <see cref="SnapshotListener"/> which may be used to monitor the listening operation and stop it gracefully.</returns>
+        public SnapshotListener Listen(Action<DocumentSnapshot> callback, CancellationToken cancellationToken = default)
+        {
+            GaxPreconditions.CheckNotNull(callback, nameof(callback));
+            return Listen((snapshot, _) => { callback(snapshot); return Task.FromResult(0); }, cancellationToken);
+        }
     }
 }
