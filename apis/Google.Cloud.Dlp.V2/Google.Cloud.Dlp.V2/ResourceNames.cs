@@ -22,91 +22,6 @@ using linq = System.Linq;
 namespace Google.Cloud.Dlp.V2
 {
     /// <summary>
-    /// Resource name for the 'organization' resource.
-    /// </summary>
-    public sealed partial class OrganizationName : gax::IResourceName, sys::IEquatable<OrganizationName>
-    {
-        private static readonly gax::PathTemplate s_template = new gax::PathTemplate("organizations/{organization}");
-
-        /// <summary>
-        /// Parses the given organization resource name in string form into a new
-        /// <see cref="OrganizationName"/> instance.
-        /// </summary>
-        /// <param name="organizationName">The organization resource name in string form. Must not be <c>null</c>.</param>
-        /// <returns>The parsed <see cref="OrganizationName"/> if successful.</returns>
-        public static OrganizationName Parse(string organizationName)
-        {
-            gax::GaxPreconditions.CheckNotNull(organizationName, nameof(organizationName));
-            gax::TemplatedResourceName resourceName = s_template.ParseName(organizationName);
-            return new OrganizationName(resourceName[0]);
-        }
-
-        /// <summary>
-        /// Tries to parse the given organization resource name in string form into a new
-        /// <see cref="OrganizationName"/> instance.
-        /// </summary>
-        /// <remarks>
-        /// This method still throws <see cref="sys::ArgumentNullException"/> if <paramref name="organizationName"/> is null,
-        /// as this would usually indicate a programming error rather than a data error.
-        /// </remarks>
-        /// <param name="organizationName">The organization resource name in string form. Must not be <c>null</c>.</param>
-        /// <param name="result">When this method returns, the parsed <see cref="OrganizationName"/>,
-        /// or <c>null</c> if parsing fails.</param>
-        /// <returns><c>true</c> if the name was parsed succssfully; <c>false</c> otherwise.</returns>
-        public static bool TryParse(string organizationName, out OrganizationName result)
-        {
-            gax::GaxPreconditions.CheckNotNull(organizationName, nameof(organizationName));
-            gax::TemplatedResourceName resourceName;
-            if (s_template.TryParseName(organizationName, out resourceName))
-            {
-                result = new OrganizationName(resourceName[0]);
-                return true;
-            }
-            else
-            {
-                result = null;
-                return false;
-            }
-        }
-
-        /// <summary>
-        /// Constructs a new instance of the <see cref="OrganizationName"/> resource name class
-        /// from its component parts.
-        /// </summary>
-        /// <param name="organizationId">The organization ID. Must not be <c>null</c>.</param>
-        public OrganizationName(string organizationId)
-        {
-            OrganizationId = gax::GaxPreconditions.CheckNotNull(organizationId, nameof(organizationId));
-        }
-
-        /// <summary>
-        /// The organization ID. Never <c>null</c>.
-        /// </summary>
-        public string OrganizationId { get; }
-
-        /// <inheritdoc />
-        public gax::ResourceNameKind Kind => gax::ResourceNameKind.Simple;
-
-        /// <inheritdoc />
-        public override string ToString() => s_template.Expand(OrganizationId);
-
-        /// <inheritdoc />
-        public override int GetHashCode() => ToString().GetHashCode();
-
-        /// <inheritdoc />
-        public override bool Equals(object obj) => Equals(obj as OrganizationName);
-
-        /// <inheritdoc />
-        public bool Equals(OrganizationName other) => ToString() == other?.ToString();
-
-        /// <inheritdoc />
-        public static bool operator ==(OrganizationName a, OrganizationName b) => ReferenceEquals(a, b) || (a?.Equals(b) ?? false);
-
-        /// <inheritdoc />
-        public static bool operator !=(OrganizationName a, OrganizationName b) => !(a == b);
-    }
-
-    /// <summary>
     /// Resource name for the 'organization_deidentify_template' resource.
     /// </summary>
     public sealed partial class OrganizationDeidentifyTemplateName : gax::IResourceName, sys::IEquatable<OrganizationDeidentifyTemplateName>
@@ -1083,11 +998,11 @@ namespace Google.Cloud.Dlp.V2
     public partial class CreateDeidentifyTemplateRequest
     {
         /// <summary>
-        /// <see cref="Google.Cloud.Dlp.V2.OrganizationName"/>-typed view over the <see cref="Parent"/> resource name property.
+        /// <see cref="gaxres::OrganizationName"/>-typed view over the <see cref="Parent"/> resource name property.
         /// </summary>
-        public Google.Cloud.Dlp.V2.OrganizationName ParentAsOrganizationName
+        public gaxres::OrganizationName ParentAsOrganizationName
         {
-            get { return string.IsNullOrEmpty(Parent) ? null : Google.Cloud.Dlp.V2.OrganizationName.Parse(Parent); }
+            get { return string.IsNullOrEmpty(Parent) ? null : gaxres::OrganizationName.Parse(Parent); }
             set { Parent = value != null ? value.ToString() : ""; }
         }
 
@@ -1109,11 +1024,11 @@ namespace Google.Cloud.Dlp.V2
     public partial class CreateInspectTemplateRequest
     {
         /// <summary>
-        /// <see cref="Google.Cloud.Dlp.V2.OrganizationName"/>-typed view over the <see cref="Parent"/> resource name property.
+        /// <see cref="gaxres::OrganizationName"/>-typed view over the <see cref="Parent"/> resource name property.
         /// </summary>
-        public Google.Cloud.Dlp.V2.OrganizationName ParentAsOrganizationName
+        public gaxres::OrganizationName ParentAsOrganizationName
         {
-            get { return string.IsNullOrEmpty(Parent) ? null : Google.Cloud.Dlp.V2.OrganizationName.Parse(Parent); }
+            get { return string.IsNullOrEmpty(Parent) ? null : gaxres::OrganizationName.Parse(Parent); }
             set { Parent = value != null ? value.ToString() : ""; }
         }
 
@@ -1265,11 +1180,11 @@ namespace Google.Cloud.Dlp.V2
     public partial class ListDeidentifyTemplatesRequest
     {
         /// <summary>
-        /// <see cref="Google.Cloud.Dlp.V2.OrganizationName"/>-typed view over the <see cref="Parent"/> resource name property.
+        /// <see cref="gaxres::OrganizationName"/>-typed view over the <see cref="Parent"/> resource name property.
         /// </summary>
-        public Google.Cloud.Dlp.V2.OrganizationName ParentAsOrganizationName
+        public gaxres::OrganizationName ParentAsOrganizationName
         {
-            get { return string.IsNullOrEmpty(Parent) ? null : Google.Cloud.Dlp.V2.OrganizationName.Parse(Parent); }
+            get { return string.IsNullOrEmpty(Parent) ? null : gaxres::OrganizationName.Parse(Parent); }
             set { Parent = value != null ? value.ToString() : ""; }
         }
 
@@ -1291,11 +1206,11 @@ namespace Google.Cloud.Dlp.V2
     public partial class ListInspectTemplatesRequest
     {
         /// <summary>
-        /// <see cref="Google.Cloud.Dlp.V2.OrganizationName"/>-typed view over the <see cref="Parent"/> resource name property.
+        /// <see cref="gaxres::OrganizationName"/>-typed view over the <see cref="Parent"/> resource name property.
         /// </summary>
-        public Google.Cloud.Dlp.V2.OrganizationName ParentAsOrganizationName
+        public gaxres::OrganizationName ParentAsOrganizationName
         {
-            get { return string.IsNullOrEmpty(Parent) ? null : Google.Cloud.Dlp.V2.OrganizationName.Parse(Parent); }
+            get { return string.IsNullOrEmpty(Parent) ? null : gaxres::OrganizationName.Parse(Parent); }
             set { Parent = value != null ? value.ToString() : ""; }
         }
 
