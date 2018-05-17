@@ -30,9 +30,7 @@ namespace Google.Cloud.Diagnostics.AspNetCore
         /// <returns>The <see cref="IServiceCollection"/> instance.</returns>
         public static IServiceCollection AddLogEntryLabelProvider<T>(this IServiceCollection serivces)
             where T : class, ILogEntryLabelProvider
-        {
-            return serivces.AddSingleton<ILogEntryLabelProvider, T>();
-        }
+            => serivces.AddSingleton<ILogEntryLabelProvider, T>();
 
         /// <summary>
         /// Adds a <see cref="ILogEntryLabelProvider"/> of type <typeparamref name="T"/> to the service collection instance.
@@ -43,9 +41,7 @@ namespace Google.Cloud.Diagnostics.AspNetCore
         /// <returns>The <see cref="IServiceCollection"/> instance.</returns>
         public static IServiceCollection AddLogEntryLabelProvider<T>(this IServiceCollection serivces, Func<IServiceProvider, T> implementationFactory)
             where T : class, ILogEntryLabelProvider
-        {
-            return serivces.AddSingleton<ILogEntryLabelProvider, T>(implementationFactory);
-        }
+             => serivces.AddSingleton<ILogEntryLabelProvider, T>(implementationFactory);
 
         /// <summary>
         /// Adds a <see cref="ILogEntryLabelProvider"/> of type <typeparamref name="T"/> to the service collection instance.
@@ -56,8 +52,6 @@ namespace Google.Cloud.Diagnostics.AspNetCore
         /// <returns>The <see cref="IServiceCollection"/> instance.</returns>
         public static IServiceCollection AddLogEntryLabelProvider<T>(this IServiceCollection serivces, T instance)
             where T : class, ILogEntryLabelProvider
-        {
-            return serivces.AddSingleton<ILogEntryLabelProvider>(instance);
-        }
+            => serivces.AddSingleton<ILogEntryLabelProvider>(instance);
     }
 }
