@@ -17,6 +17,7 @@
 namespace Google.Cloud.BigQuery.DataTransfer.V1.Snippets
 {
     using Google.Api.Gax;
+    using Google.Api.Gax.ResourceNames;
     using Google.Api.Gax.Grpc;
     using apis = Google.Cloud.BigQuery.DataTransfer.V1;
     using Google.Protobuf;

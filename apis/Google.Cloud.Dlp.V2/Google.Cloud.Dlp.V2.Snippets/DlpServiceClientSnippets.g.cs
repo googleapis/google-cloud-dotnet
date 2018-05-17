@@ -29,6 +29,7 @@ namespace Google.Cloud.Dlp.V2.Snippets
     using System.Linq;
     using System.Threading;
     using System.Threading.Tasks;
+    using Google.Api.Gax.ResourceNames;
 
     /// <summary>Generated snippets</summary>
     public class GeneratedDlpServiceClientSnippets
