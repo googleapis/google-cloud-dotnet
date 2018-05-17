@@ -268,13 +268,16 @@ namespace Google.Cloud.Diagnostics.AspNetCore.IntegrationTests
                 await client.GetAsync($"/Main/Warning/{testId}");
                 var results = _polling.GetEntries(startTime, testId, 1, LogSeverity.Warning);
                 var entry = results.Single();
-                Assert.Equal(2, entry.Labels.Count);
+                Assert.Equal(3, entry.Labels.Count);
                 var defaultLabel = entry.Labels.First();
                 Assert.Equal("some-key", defaultLabel.Key);
                 Assert.Equal("some-value", defaultLabel.Value);
-                var fooLabel = entry.Labels.Skip(1).Single();
+                var fooLabel = entry.Labels.Skip(1).First();
                 Assert.Equal("Foo", fooLabel.Key);
                 Assert.Equal("Hello, World!", fooLabel.Value);
+                var traceIdLabel = entry.Labels.Skip(2).Single();
+                Assert.Equal("trace_identifier", traceIdLabel.Key);
+                Assert.NotEmpty(traceIdLabel.Value);
             }
         }
     }
@@ -396,7 +399,8 @@ namespace Google.Cloud.Diagnostics.AspNetCore.IntegrationTests
         public override void ConfigureServices(IServiceCollection services)
         {
             base.ConfigureServices(services);
-            services.AddSingleton<ILogEntryLabelProvider, FooLogEntryLabelProvider>();
+            services.AddLogEntryLabelProvider<FooLogEntryLabelProvider>();
+            services.AddLogEntryLabelProvider<TraceIdLogEntryLabelProvider>();
         }
 
         public void Configure(IApplicationBuilder app, ILoggerFactory loggerFactory)

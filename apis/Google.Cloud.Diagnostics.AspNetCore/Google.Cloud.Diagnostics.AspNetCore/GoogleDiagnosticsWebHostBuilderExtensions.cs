@@ -52,6 +52,7 @@ namespace Google.Cloud.Diagnostics.AspNetCore
             {
                 projectId = Project.GetAndCheckProjectId(projectId, monitoredResource);
 
+                services.AddLogEntryLabelProvider<TraceIdLogEntryLabelProvider>();
                 services.AddSingleton<IStartupFilter>(new GoogleDiagnosticsStartupFilter(projectId, monitoredResource));
                 services.AddGoogleTrace(options => options.ProjectId = projectId);
                 services.AddGoogleExceptionLogging(options =>
