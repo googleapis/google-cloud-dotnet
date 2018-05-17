@@ -37,8 +37,8 @@ namespace Google.Cloud.Logging.NLog
     /// <summary>
     /// 
     /// </summary>
-    [Target("GoogleCloud")]
-    public class GoogleCloudLoggingTarget : TargetWithContext
+    [Target("GoogleStackdriver")]
+    public class GoogleStackdriverTarget : TargetWithContext
     {
         /// <summary>
         /// The file path of a service account JSON file to use for authenitication.
@@ -127,12 +127,12 @@ namespace Google.Cloud.Logging.NLog
         /// <summary>
         /// Construct a Google Cloud loggin target.
         /// </summary>
-        public GoogleCloudLoggingTarget() : this(null, null)
+        public GoogleStackdriverTarget() : this(null, null)
         {
         }
 
         // For testing only.
-        internal GoogleCloudLoggingTarget(LoggingServiceV2Client client, Platform platform)
+        internal GoogleStackdriverTarget(LoggingServiceV2Client client, Platform platform)
         {
             ResourceLabels = new List<TargetPropertyWithContext>();
             _contextProperties = new List<TargetPropertyWithContext>();
@@ -287,7 +287,7 @@ namespace Google.Cloud.Logging.NLog
         {
             if (prevTask.Exception != null)
             {
-                InternalLogger.Warn(prevTask.Exception, "GoogleCloudTarget: Exception at WriteLogEntriesAsync");
+                InternalLogger.Warn(prevTask.Exception, "GoogleStackdriver: Exception at WriteLogEntriesAsync");
             }
 
             var singleContinuation = state as AsyncContinuation;
@@ -330,7 +330,7 @@ namespace Google.Cloud.Logging.NLog
                 }
                 catch (Exception ex)
                 {
-                    InternalLogger.Warn(ex, "GoogleCloudTarget(Name={0}): Exception at BuildLogEntry with Key={1}", Name, combinedProperty.Key);
+                    InternalLogger.Warn(ex, "GoogleStackdriver(Name={0}): Exception at BuildLogEntry with Key={1}", Name, combinedProperty.Key);
                     logEntry.Labels[combinedProperty.Key] = "null";
                 }
             }
@@ -382,7 +382,7 @@ namespace Google.Cloud.Logging.NLog
                 || ex is UnauthorizedAccessException)
             {
                 // This is best-effort only, exceptions from reading/parsing the source_context.json are ignored.
-                InternalLogger.Warn(ex, "GoogleCloudTarget(Name={0}): Exception at TryAddGitRevisionId", Name);
+                InternalLogger.Warn(ex, "GoogleStackdriver(Name={0}): Exception at TryAddGitRevisionId", Name);
             }
         }
     }

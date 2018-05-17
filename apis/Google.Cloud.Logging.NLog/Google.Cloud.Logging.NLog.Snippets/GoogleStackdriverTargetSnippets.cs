@@ -29,22 +29,22 @@ namespace Google.Cloud.Logging.NLog.Snippets
 {
     [SnippetOutputCollector]
     [Collection(nameof(NLogSnippetFixture))]
-    public class GoogleCloudLoggingTargetSnippets
+    public class GoogleStackdriverTargetSnippets
     {
         private readonly NLogSnippetFixture _fixture;
 
-        public GoogleCloudLoggingTargetSnippets(NLogSnippetFixture fixture) => _fixture = fixture;
+        public GoogleStackdriverTargetSnippets(NLogSnippetFixture fixture) => _fixture = fixture;
 
         [Fact]
         public void Overview()
         {
             string projectId = _fixture.ProjectId;
             string logId = $"{_fixture.LogId}-{Guid.NewGuid()}";
-            string resourceName = $"{typeof(GoogleCloudLoggingTargetSnippets).Namespace}.nlog-template.xml";
+            string resourceName = $"{typeof(GoogleStackdriverTargetSnippets).Namespace}.nlog-template.xml";
 
             // Load the NLog XML configuration, and replace the projectId and logId
             string xmlString;
-            using (var stream = typeof(GoogleCloudLoggingTargetSnippets).GetTypeInfo().Assembly
+            using (var stream = typeof(GoogleStackdriverTargetSnippets).GetTypeInfo().Assembly
                 .GetManifestResourceStream(resourceName))
             {
                 using (var reader = new StreamReader(stream))

@@ -39,7 +39,7 @@ When using default options, logs will appear under these filter settings in the 
 	<add assembly="Google.Cloud.Logging.NLog" />
 </extensions>
 <targets>
-  <target type="GoogleCloud"
+  <target type="GoogleStackdriver"
           name="String"
 		  projectId="your project ID"
 		  logId="your log ID"

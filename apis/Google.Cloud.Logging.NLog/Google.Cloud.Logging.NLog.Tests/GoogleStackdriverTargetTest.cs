@@ -30,7 +30,7 @@ using Xunit;
 
 namespace Google.Cloud.Logging.NLog.Tests
 {
-    public class NLogTest
+    public class GoogleStackdriverTargetTest
     {
         // At the top of the file to minimize line number changes.
         [MethodImpl(MethodImplOptions.NoInlining)]
@@ -50,7 +50,7 @@ namespace Google.Cloud.Logging.NLog.Tests
 
         private async Task RunTest(
             Func<IEnumerable<LogEntry>, Task<WriteLogEntriesResponse>> handlerFn,
-            Func<GoogleCloudLoggingTarget, Task> testFn,
+            Func<GoogleStackdriverTarget, Task> testFn,
             IEnumerable<KeyValuePair<string, string>> withMetadata = null,
             Platform platform = null,
             bool enableResourceTypeDetection = false,
@@ -63,7 +63,7 @@ namespace Google.Cloud.Logging.NLog.Tests
                 fakeClient.Setup(x => x.WriteLogEntriesAsync(
                     It.IsAny<LogNameOneof>(), It.IsAny<MonitoredResource>(), It.IsAny<IDictionary<string, string>>(), It.IsAny<IEnumerable<LogEntry>>(), It.IsAny<CancellationToken>()))
                     .Returns<LogNameOneof, MonitoredResource, IDictionary<string, string>, IEnumerable<LogEntry>, CancellationToken>((a, b, c, entries, d) => handlerFn(entries));
-                var googleTarget = new GoogleCloudLoggingTarget(fakeClient.Object, platform)
+                var googleTarget = new GoogleStackdriverTarget(fakeClient.Object, platform)
                 {
                     ProjectId = s_projectId,
                     LogId = s_logId,
@@ -90,7 +90,7 @@ namespace Google.Cloud.Logging.NLog.Tests
         }
 
         private async Task<List<LogEntry>> RunTestWorkingServer(
-            Func<GoogleCloudLoggingTarget, Task> testFn,
+            Func<GoogleStackdriverTarget, Task> testFn,
             IEnumerable<KeyValuePair<string,string>> withMetadata = null,
             Platform platform = null,
             bool enableResourceTypeDetection = false,
@@ -139,10 +139,10 @@ namespace Google.Cloud.Logging.NLog.Tests
             Assert.Contains("Message0", entry0.TextPayload.Trim());
 
             Assert.NotNull(entry0.SourceLocation);
-            Assert.True(string.IsNullOrEmpty(entry0.SourceLocation.File) || entry0.SourceLocation.File.EndsWith("NLogTest.cs"),
+            Assert.True(string.IsNullOrEmpty(entry0.SourceLocation.File) || entry0.SourceLocation.File.EndsWith("GoogleStackdriverTargetTest.cs"),
                 $"Actual 'entry0.SourceLocation.File' = '{entry0.SourceLocation.File}'");
             Assert.NotEqual(0, entry0.SourceLocation.Line);
-            Assert.Equal("Google.Cloud.Logging.NLog.Tests.NLogTest.LogInfo", entry0.SourceLocation.Function);
+            Assert.Equal("Google.Cloud.Logging.NLog.Tests.GoogleStackdriverTargetTest.LogInfo", entry0.SourceLocation.Function);
         }
 
         [Fact]

@@ -7,7 +7,7 @@
   </extensions>
   
   <targets async="true">
-    <target name="stackdriver" xsi:type="GoogleCloud" projectId="PROJECT_ID" logId="LOG_ID" />
+    <target name="stackdriver" xsi:type="GoogleStackdriver" projectId="PROJECT_ID" logId="LOG_ID" />
     <target name="console" xsi:type="Console" />
   </targets>
 
