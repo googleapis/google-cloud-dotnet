@@ -14,6 +14,7 @@
 
 using System;
 using System.Collections.Generic;
+using Google.Api.Gax;
 using Microsoft.AspNetCore.Http;
 
 namespace Google.Cloud.Diagnostics.AspNetCore
@@ -31,7 +32,7 @@ namespace Google.Cloud.Diagnostics.AspNetCore
         /// <param name="httpContextAccessor">The <see cref="IHttpContextAccessor"/> instance with the <see cref="HttpContext"/>.</param>
         protected HttpLogEntryLabelProvider(IHttpContextAccessor httpContextAccessor)
         {
-            _httpContextAccessor = httpContextAccessor ?? throw new ArgumentNullException(nameof(httpContextAccessor));
+            _httpContextAccessor = GaxPreconditions.CheckNotNull(httpContextAccessor, nameof(httpContextAccessor));
         }
 
         /// <inheritdoc/>

@@ -14,6 +14,7 @@
 
 using System;
 using System.Collections.Generic;
+using Google.Api.Gax;
 using Microsoft.AspNetCore.Hosting;
 
 namespace Google.Cloud.Diagnostics.AspNetCore
@@ -31,7 +32,7 @@ namespace Google.Cloud.Diagnostics.AspNetCore
         /// <param name="hostingEnvironment">The <see cref="IHostingEnvironment"/> instance to retrieve the environment name from.</param>
         public EnvironmentNameLogEntryLabelProvider(IHostingEnvironment hostingEnvironment)
         {
-            _hostingEnvironment = hostingEnvironment ?? throw new ArgumentNullException(nameof(hostingEnvironment));
+            _hostingEnvironment = GaxPreconditions.CheckNotNull(hostingEnvironment, nameof(hostingEnvironment));
         }
 
         /// <inheritdoc/>
