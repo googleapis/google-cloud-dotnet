@@ -27,8 +27,8 @@ namespace Google.Cloud.Diagnostics.AspNetCore.Tests
         public void ThrowsWithoutHttpContextAccessor()
         {
             Assert.Throws<ArgumentNullException>(
-                "hostingEnvironment",
-                () => new EnvironmentNameLogEntryLabelProvider(hostingEnvironment: null));
+                "httpContextAccessor",
+                () => new DummyHttpLogEntryLabelProvider(httpContextAccessor: null));
         }
 
         [Fact]
