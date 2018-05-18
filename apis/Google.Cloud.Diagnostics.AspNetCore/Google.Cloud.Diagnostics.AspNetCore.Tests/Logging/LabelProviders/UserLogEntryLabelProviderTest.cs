@@ -73,15 +73,12 @@ namespace Google.Cloud.Diagnostics.AspNetCore.Tests
             instance.Invoke(labels);
 
             // Assert
-            Assert.Equal(2, labels.Count);
-
-            var userAuthenticated = labels.First();
-            Assert.Equal("user_authenticated", userAuthenticated.Key);
-            Assert.Equal(true.ToString(), userAuthenticated.Value);
-
-            var userName = labels.Skip(1).Single();
-            Assert.Equal("user_name", userName.Key);
-            Assert.Null(userName.Value);
+            var expected = new Dictionary<string, string>
+            {
+                { "user_authenticated", true.ToString() },
+                { "user_name", null }
+            };
+            Assert.Equal(expected, labels);
         }
 
         [Fact]
@@ -102,15 +99,12 @@ namespace Google.Cloud.Diagnostics.AspNetCore.Tests
             instance.Invoke(labels);
 
             // Assert
-            Assert.Equal(2, labels.Count);
-
-            var userAuthenticated = labels.First();
-            Assert.Equal("user_authenticated", userAuthenticated.Key);
-            Assert.Equal(true.ToString(), userAuthenticated.Value);
-
-            var userName = labels.Skip(1).Single();
-            Assert.Equal("user_name", userName.Key);
-            Assert.Equal("Foo", userName.Value);
+           var expected = new Dictionary<string, string>
+            {
+                { "user_authenticated", true.ToString() },
+                { "user_name", "Foo" }
+            };
+            Assert.Equal(expected, labels);
         }
 
         [Theory]
@@ -133,15 +127,12 @@ namespace Google.Cloud.Diagnostics.AspNetCore.Tests
             instance.Invoke(labels);
 
             // Assert
-            Assert.Equal(2, labels.Count);
-
-            var userAuthenticated = labels.First();
-            Assert.Equal("user_authenticated", userAuthenticated.Key);
-            Assert.Equal(true.ToString(), userAuthenticated.Value);
-
-            var userName = labels.Skip(1).Single();
-            Assert.Equal("user_name", userName.Key);
-            Assert.Equal("Foo", userName.Value);
+            var expected = new Dictionary<string, string>
+            {
+                { "user_authenticated", true.ToString() },
+                { "user_name", "Foo" }
+            };
+            Assert.Equal(expected, labels);
         }
 
         [Fact]
