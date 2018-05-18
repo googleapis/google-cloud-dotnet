@@ -269,12 +269,9 @@ namespace Google.Cloud.Diagnostics.AspNetCore.IntegrationTests
                 var results = _polling.GetEntries(startTime, testId, 1, LogSeverity.Warning);
                 var entry = results.Single();
                 Assert.Equal(3, entry.Labels.Count);
-                var defaultLabel = entry.Labels.Single(l => l.Key.Equals("some-key"));
-                Assert.Equal("some-value", defaultLabel.Value);
-                var fooLabel = entry.Labels.Single(l => l.Key.Equals("Foo"));
-                Assert.Equal("Hello, World!", fooLabel.Value);
-                var traceIdLabel = entry.Labels.Single(l => l.Key.Equals("trace_identifier"));
-                Assert.NotEmpty(traceIdLabel.Value);
+                Assert.Equal("some-value", entry.Labels["some-key"]);
+                Assert.Equal("Hello, World!", entry.Labels["Foo"]);
+                Assert.NotEmpty(entry.Labels["trace_identifier"]);
             }
         }
     }
