@@ -75,12 +75,10 @@ namespace Google.Cloud.Diagnostics.AspNetCore.Tests
             // Assert
             Assert.Equal(2, labels.Count);
 
-            var userAuthenticated = labels.First();
-            Assert.Equal("user_authenticated", userAuthenticated.Key);
+            var userAuthenticated = labels.Single(l => l.Key.Equals("user_authenticated"));
             Assert.Equal(true.ToString(), userAuthenticated.Value);
 
-            var userName = labels.Skip(1).Single();
-            Assert.Equal("user_name", userName.Key);
+            var userName = labels.Single(l => l.Key.Equals("user_name"));
             Assert.Null(userName.Value);
         }
 
@@ -104,12 +102,10 @@ namespace Google.Cloud.Diagnostics.AspNetCore.Tests
             // Assert
             Assert.Equal(2, labels.Count);
 
-            var userAuthenticated = labels.First();
-            Assert.Equal("user_authenticated", userAuthenticated.Key);
+            var userAuthenticated = labels.Single(l => l.Key.Equals("user_authenticated"));
             Assert.Equal(true.ToString(), userAuthenticated.Value);
 
-            var userName = labels.Skip(1).Single();
-            Assert.Equal("user_name", userName.Key);
+            var userName = labels.Single(l => l.Key.Equals("user_name"));
             Assert.Equal("Foo", userName.Value);
         }
 
@@ -135,12 +131,10 @@ namespace Google.Cloud.Diagnostics.AspNetCore.Tests
             // Assert
             Assert.Equal(2, labels.Count);
 
-            var userAuthenticated = labels.First();
-            Assert.Equal("user_authenticated", userAuthenticated.Key);
+            var userAuthenticated = labels.Single(l => l.Key.Equals("user_authenticated"));
             Assert.Equal(true.ToString(), userAuthenticated.Value);
 
-            var userName = labels.Skip(1).Single();
-            Assert.Equal("user_name", userName.Key);
+            var userName = labels.Single(l => l.Key.Equals("user_name"));
             Assert.Equal("Foo", userName.Value);
         }
 
