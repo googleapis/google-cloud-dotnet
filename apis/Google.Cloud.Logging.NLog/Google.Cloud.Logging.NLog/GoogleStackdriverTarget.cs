@@ -265,8 +265,22 @@ namespace Google.Cloud.Logging.NLog
         /// </summary>
         protected override void Write(AsyncLogEventInfo logEvent)
         {
-            var logEntry = BuildLogEntry(logEvent.LogEvent);
-            WriteLogEntries(new[] { logEntry }, logEvent.Continuation);
+            LogEntry logEntry = null;
+
+            try
+            {
+                logEntry = BuildLogEntry(logEvent.LogEvent);
+            }
+            catch (Exception ex)
+            {
+                InternalLogger.Error(ex, "GoogleStackdriver(Name={0}): Failed to create LogEntry, marked as failed", Name);
+                logEvent.Continuation(ex);
+            }
+
+            if (logEntry != null)
+            {
+                WriteLogEntries(new[] { logEntry }, logEvent.Continuation);
+            }
         }
 
         /// <summary>
@@ -288,34 +302,43 @@ namespace Google.Cloud.Logging.NLog
                 }
                 catch (Exception ex)
                 {
+                    InternalLogger.Error(ex, "GoogleStackdriver(Name={0}): Failed to create LogEntry, marked as failed", Name);
                     logEvent.Continuation(ex);
                 }
             }
 
-            WriteLogEntries(logEntries, continuationList);
+            if (logEntries.Count > 0)
+            {
+                WriteLogEntries(logEntries, continuationList);
+            }
         }
 
         private void WriteLogEntries(IList<LogEntry> logEntries, object continuationList)
         {
             bool belowTaskLimit = Interlocked.Increment(ref _pendingTaskCount) < TaskPendingLimit;
-            if (!belowTaskLimit)
-            {
-                belowTaskLimit = _prevTask?.Wait(1000, _cancelTokenSource.Token) ?? false; // Throttle
-                if (belowTaskLimit)
-                    _pendingTaskCount = 1;
-            }
 
             try
             {
+                if (!belowTaskLimit)
+                {
+                    InternalLogger.Debug("GoogleStackdriver(Name={0}): Throttle started because {1} tasks are pending", Name, _pendingTaskCount);
+                    belowTaskLimit = _prevTask?.Wait(1000, _cancelTokenSource.Token) ?? true; // Throttle
+                    if (!belowTaskLimit)
+                        InternalLogger.Info("GoogleStackdriver(Name={0}): Throttle timeout but {1} tasks are still pending", Name, _pendingTaskCount);
+                    else
+                        _pendingTaskCount = 1;
+                }
+
                 if (belowTaskLimit && _prevTask != null)
                     _prevTask = _prevTask.ContinueWith(_writeLogEntriesBegin, logEntries, _cancelTokenSource.Token);
                 else
                     _prevTask = WriteLogEntriesBegin(null, logEntries);
                 _prevTask = _prevTask.ContinueWith(_writeLogEntriesCompleted, continuationList, _cancelTokenSource.Token);
             }
-            catch
+            catch (Exception ex)
             {
                 Interlocked.Decrement(ref _pendingTaskCount);
+                InternalLogger.Error(ex, "GoogleStackdriver(Name={0}): Failed to begin writing {1} LogEntries", Name, logEntries.Count);
                 throw;
             }
         }
@@ -330,14 +353,14 @@ namespace Google.Cloud.Logging.NLog
         {
             Interlocked.Decrement(ref _pendingTaskCount);
 
-            if (prevTask.Exception != null)
-            {
-                InternalLogger.Warn(prevTask.Exception, "GoogleStackdriver(Name={0}): Exception at WriteLogEntriesAsync", Name);
-            }
-
             var singleContinuation = state as AsyncContinuation;
             if (singleContinuation != null)
             {
+                if (prevTask.Exception != null)
+                {
+                    InternalLogger.Error(prevTask.Exception, "GoogleStackdriver(Name={0}): Failed to write LogEntry", Name);
+                }
+
                 singleContinuation(prevTask.Exception);
             }
             else
@@ -345,6 +368,11 @@ namespace Google.Cloud.Logging.NLog
                 var continuationList = state as List<AsyncContinuation>;
                 if (continuationList != null)
                 {
+                    if (prevTask.Exception != null)
+                    {
+                        InternalLogger.Error(prevTask.Exception, "GoogleStackdriver(Name={0}): Failed to write {1} LogEntries", Name, continuationList.Count);
+                    }
+
                     foreach (var continuation in continuationList)
                     {
                         continuation(prevTask.Exception);
