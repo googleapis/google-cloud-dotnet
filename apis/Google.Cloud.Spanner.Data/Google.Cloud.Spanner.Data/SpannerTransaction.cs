@@ -63,7 +63,7 @@ namespace Google.Cloud.Spanner.Data
 
         // Note: We use seconds here to follow the convention set by DbCommand.CommandTimeout.
         /// <summary>
-        /// Gets or sets the wait time before terminating the attempt to <see cref="Commit"/> 
+        /// Gets or sets the wait time before terminating the attempt to <see cref="Commit()"/> 
         /// or <see cref="Rollback"/> and generating an error.
         /// Defaults to <see cref="SpannerOptions.Timeout"/> which is 60 seconds.
         /// A value of '0' normally indicates that no timeout should be used (it waits an infinite amount of time).
@@ -242,10 +242,14 @@ namespace Google.Cloud.Spanner.Data
         }
 
         /// <inheritdoc />
-        public override void Commit()
-        {
-            Task.Run(CommitAsync).Wait();
-        }
+        public override void Commit() => Commit(out _);
+
+        // Note: it would be nice just to use Commit, but that's taken by the void method.
+        /// <summary>
+        /// Commits the database transaction synchronously, returning the database timestamp for the commit via <paramref name="timestamp"/>.
+        /// </summary>
+        /// <param name="timestamp">Returns the UTC timestamp when the data was written to the database.</param>
+        public void Commit(out DateTime? timestamp) => timestamp = Task.Run(CommitAsync).ResultWithUnwrappedExceptions();
 
         /// <summary>
         /// Commits the database transaction asynchronously.

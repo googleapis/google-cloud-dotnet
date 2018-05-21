@@ -267,6 +267,12 @@ namespace Google.Cloud.Spanner.Data
         }
 
         /// <summary>
+        /// Begins a new Spanner transaction synchronously. This method hides <see cref="DbConnection.BeginTransaction()"/>, but behaves
+        /// the same way, just with a more specific return type.
+        /// </summary>
+        public new SpannerTransaction BeginTransaction() => (SpannerTransaction) base.BeginTransaction();
+
+        /// <summary>
         /// Begins a new read/write transaction.
         /// This method is thread safe.
         /// </summary>
@@ -454,7 +460,10 @@ namespace Google.Cloud.Spanner.Data
                 return;
             }
 
-            Task.Run(OpenAsync).Wait(SpannerOptions.Instance.Timeout);
+            if (!Task.Run(OpenAsync).Wait(TimeSpan.FromSeconds(SpannerOptions.Instance.Timeout)))
+            {
+                throw new SpannerException(ErrorCode.DeadlineExceeded, "Timed out opening connection");
+            }
         }
 
         /// <inheritdoc />
