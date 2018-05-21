@@ -18,6 +18,7 @@ namespace Google.Cloud.Dlp.V2.Snippets
 {
     using Google.Api.Gax;
     using Google.Api.Gax.Grpc;
+    using Google.Api.Gax.ResourceNames;
     using apis = Google.Cloud.Dlp.V2;
     using Google.Protobuf;
     using Google.Protobuf.WellKnownTypes;
@@ -29,7 +30,6 @@ namespace Google.Cloud.Dlp.V2.Snippets
     using System.Linq;
     using System.Threading;
     using System.Threading.Tasks;
-    using Google.Api.Gax.ResourceNames;
 
     /// <summary>Generated snippets</summary>
     public class GeneratedDlpServiceClientSnippets

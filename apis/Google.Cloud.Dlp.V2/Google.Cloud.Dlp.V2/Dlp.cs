@@ -9131,6 +9131,7 @@ namespace Google.Cloud.Dlp.V2 {
       /// using publicly available data (like the US Census), or using a custom
       /// statistical model (indicated as one or several BigQuery tables), or by
       /// extrapolating from the distribution of values in the input dataset.
+      /// A column with a semantic tag attached.
       /// </summary>
       public sealed partial class KMapEstimationConfig : pb::IMessage<KMapEstimationConfig> {
         private static readonly pb::MessageParser<KMapEstimationConfig> _parser = new pb::MessageParser<KMapEstimationConfig>(() => new KMapEstimationConfig());
@@ -9317,9 +9318,6 @@ namespace Google.Cloud.Dlp.V2 {
         /// <summary>Container for nested types declared in the KMapEstimationConfig message type.</summary>
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
         public static partial class Types {
-          /// <summary>
-          /// A column with a semantic tag attached.
-          /// </summary>
           public sealed partial class TaggedField : pb::IMessage<TaggedField> {
             private static readonly pb::MessageParser<TaggedField> _parser = new pb::MessageParser<TaggedField>(() => new TaggedField());
             private pb::UnknownFieldSet _unknownFields;
@@ -16361,8 +16359,7 @@ namespace Google.Cloud.Dlp.V2 {
     /// such that:
     ///
     /// - a 64 bit integer is encoded followed by a single byte of value 1
-    /// - a string is encoded in UTF-8 format followed by a single byte of value
-    ///  å 2
+    /// - a string is encoded in UTF-8 format followed by a single byte of value 2
     /// </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     public global::Google.Cloud.Dlp.V2.FieldId Context {
