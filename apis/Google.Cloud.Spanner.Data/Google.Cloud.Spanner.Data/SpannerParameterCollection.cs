@@ -68,12 +68,15 @@ namespace Google.Cloud.Spanner.Data
         /// One of the <see cref="SpannerDbType" /> values that indicates the type of the parameter.
         /// Must not be null.
         /// </param>
-        public void Add(string parameterName, SpannerDbType dbType)
+        /// <returns>The parameter which has been added.</returns>
+        public SpannerParameter Add(string parameterName, SpannerDbType dbType)
         {
             GaxPreconditions.CheckNotNull(parameterName, nameof(parameterName));
             GaxPreconditions.CheckNotNull(dbType, nameof(dbType));
 
-            _innerList.Add(new SpannerParameter(parameterName, dbType));
+            var parameter = new SpannerParameter(parameterName, dbType);
+            _innerList.Add(parameter);
+            return parameter;
         }
 
         /// <summary>
@@ -89,13 +92,12 @@ namespace Google.Cloud.Spanner.Data
         /// Must not be null.
         /// </param>
         /// <param name="value">An object that is the value of the SpannerParameter. May be null.</param>
-        public void Add(string parameterName, SpannerDbType dbType, object value)
+        /// <returns>The parameter which has been added.</returns>
+        public SpannerParameter Add(string parameterName, SpannerDbType dbType, object value)
         {
-            GaxPreconditions.CheckNotNull(parameterName, nameof(parameterName));
-            GaxPreconditions.CheckNotNull(dbType, nameof(dbType));
-
-            var parameter = new SpannerParameter(parameterName, dbType) {Value = value};
-            _innerList.Add(parameter);
+            var parameter = Add(parameterName, dbType);
+            parameter.Value = value;
+            return parameter;
         }
 
         /// <inheritdoc />
