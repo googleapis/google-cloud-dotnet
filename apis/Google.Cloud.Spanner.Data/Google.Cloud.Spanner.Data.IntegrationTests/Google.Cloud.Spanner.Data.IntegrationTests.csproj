@@ -30,4 +30,7 @@
     <PackageReference Include="MySql.ConnectorNET.Data" Version="6.8.3.2" />
     <Reference Include="System.Transactions" />
   </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\Google.Cloud.Spanner.Data.CommonTesting\Google.Cloud.Spanner.Data.CommonTesting.csproj" />
+  </ItemGroup>
 </Project>
