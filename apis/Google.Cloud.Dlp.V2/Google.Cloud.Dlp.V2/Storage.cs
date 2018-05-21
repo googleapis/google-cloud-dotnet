@@ -60,50 +60,57 @@ namespace Google.Cloud.Dlp.V2 {
             "bmRFeHByZXNzaW9uEgwKBG5hbWUYASABKAkigQEKEERhdGFzdG9yZU9wdGlv",
             "bnMSOAoMcGFydGl0aW9uX2lkGAEgASgLMiIuZ29vZ2xlLnByaXZhY3kuZGxw",
             "LnYyLlBhcnRpdGlvbklkEjMKBGtpbmQYAiABKAsyJS5nb29nbGUucHJpdmFj",
-            "eS5kbHAudjIuS2luZEV4cHJlc3Npb24ixgEKE0Nsb3VkU3RvcmFnZU9wdGlv",
+            "eS5kbHAudjIuS2luZEV4cHJlc3Npb24i/QIKE0Nsb3VkU3RvcmFnZU9wdGlv",
             "bnMSRAoIZmlsZV9zZXQYASABKAsyMi5nb29nbGUucHJpdmFjeS5kbHAudjIu",
             "Q2xvdWRTdG9yYWdlT3B0aW9ucy5GaWxlU2V0EhwKFGJ5dGVzX2xpbWl0X3Bl",
             "cl9maWxlGAQgASgDEjMKCmZpbGVfdHlwZXMYBSADKA4yHy5nb29nbGUucHJp",
-            "dmFjeS5kbHAudjIuRmlsZVR5cGUaFgoHRmlsZVNldBILCgN1cmwYASABKAki",
-            "IAoQQ2xvdWRTdG9yYWdlUGF0aBIMCgRwYXRoGAEgASgJIqABCg9CaWdRdWVy",
-            "eU9wdGlvbnMSPQoPdGFibGVfcmVmZXJlbmNlGAEgASgLMiQuZ29vZ2xlLnBy",
-            "aXZhY3kuZGxwLnYyLkJpZ1F1ZXJ5VGFibGUSOgoSaWRlbnRpZnlpbmdfZmll",
-            "bGRzGAIgAygLMh4uZ29vZ2xlLnByaXZhY3kuZGxwLnYyLkZpZWxkSWQSEgoK",
-            "cm93c19saW1pdBgDIAEoAyKaBAoNU3RvcmFnZUNvbmZpZxJEChFkYXRhc3Rv",
-            "cmVfb3B0aW9ucxgCIAEoCzInLmdvb2dsZS5wcml2YWN5LmRscC52Mi5EYXRh",
-            "c3RvcmVPcHRpb25zSAASSwoVY2xvdWRfc3RvcmFnZV9vcHRpb25zGAMgASgL",
-            "MiouZ29vZ2xlLnByaXZhY3kuZGxwLnYyLkNsb3VkU3RvcmFnZU9wdGlvbnNI",
-            "ABJDChFiaWdfcXVlcnlfb3B0aW9ucxgEIAEoCzImLmdvb2dsZS5wcml2YWN5",
-            "LmRscC52Mi5CaWdRdWVyeU9wdGlvbnNIABJMCg90aW1lc3Bhbl9jb25maWcY",
-            "BiABKAsyMy5nb29nbGUucHJpdmFjeS5kbHAudjIuU3RvcmFnZUNvbmZpZy5U",
-            "aW1lc3BhbkNvbmZpZxraAQoOVGltZXNwYW5Db25maWcSLgoKc3RhcnRfdGlt",
-            "ZRgBIAEoCzIaLmdvb2dsZS5wcm90b2J1Zi5UaW1lc3RhbXASLAoIZW5kX3Rp",
-            "bWUYAiABKAsyGi5nb29nbGUucHJvdG9idWYuVGltZXN0YW1wEjcKD3RpbWVz",
-            "dGFtcF9maWVsZBgDIAEoCzIeLmdvb2dsZS5wcml2YWN5LmRscC52Mi5GaWVs",
-            "ZElkEjEKKWVuYWJsZV9hdXRvX3BvcHVsYXRpb25fb2ZfdGltZXNwYW5fY29u",
-            "ZmlnGAQgASgIQgYKBHR5cGUiYAoLQmlnUXVlcnlLZXkSPQoPdGFibGVfcmVm",
-            "ZXJlbmNlGAEgASgLMiQuZ29vZ2xlLnByaXZhY3kuZGxwLnYyLkJpZ1F1ZXJ5",
-            "VGFibGUSEgoKcm93X251bWJlchgCIAEoAyI+CgxEYXRhc3RvcmVLZXkSLgoK",
-            "ZW50aXR5X2tleRgBIAEoCzIaLmdvb2dsZS5wcml2YWN5LmRscC52Mi5LZXki",
-            "uwEKA0tleRI4CgxwYXJ0aXRpb25faWQYASABKAsyIi5nb29nbGUucHJpdmFj",
-            "eS5kbHAudjIuUGFydGl0aW9uSWQSNAoEcGF0aBgCIAMoCzImLmdvb2dsZS5w",
-            "cml2YWN5LmRscC52Mi5LZXkuUGF0aEVsZW1lbnQaRAoLUGF0aEVsZW1lbnQS",
-            "DAoEa2luZBgBIAEoCRIMCgJpZBgCIAEoA0gAEg4KBG5hbWUYAyABKAlIAEIJ",
-            "CgdpZF90eXBlIo4BCglSZWNvcmRLZXkSPAoNZGF0YXN0b3JlX2tleRgCIAEo",
-            "CzIjLmdvb2dsZS5wcml2YWN5LmRscC52Mi5EYXRhc3RvcmVLZXlIABI7Cg1i",
-            "aWdfcXVlcnlfa2V5GAMgASgLMiIuZ29vZ2xlLnByaXZhY3kuZGxwLnYyLkJp",
-            "Z1F1ZXJ5S2V5SABCBgoEdHlwZSJJCg1CaWdRdWVyeVRhYmxlEhIKCnByb2pl",
-            "Y3RfaWQYASABKAkSEgoKZGF0YXNldF9pZBgCIAEoCRIQCgh0YWJsZV9pZBgD",
-            "IAEoCSI5CghFbnRpdHlJZBItCgVmaWVsZBgBIAEoCzIeLmdvb2dsZS5wcml2",
-            "YWN5LmRscC52Mi5GaWVsZElkKnQKCkxpa2VsaWhvb2QSGgoWTElLRUxJSE9P",
-            "RF9VTlNQRUNJRklFRBAAEhEKDVZFUllfVU5MSUtFTFkQARIMCghVTkxJS0VM",
-            "WRACEgwKCFBPU1NJQkxFEAMSCgoGTElLRUxZEAQSDwoLVkVSWV9MSUtFTFkQ",
-            "BSpFCghGaWxlVHlwZRIZChVGSUxFX1RZUEVfVU5TUEVDSUZJRUQQABIPCgtC",
-            "SU5BUllfRklMRRABEg0KCVRFWFRfRklMRRACQo8BChljb20uZ29vZ2xlLnBy",
-            "aXZhY3kuZGxwLnYyQgpEbHBTdG9yYWdlUAFaOGdvb2dsZS5nb2xhbmcub3Jn",
-            "L2dlbnByb3RvL2dvb2dsZWFwaXMvcHJpdmFjeS9kbHAvdjI7ZGxwqgITR29v",
-            "Z2xlLkNsb3VkLkRscC5WMsoCE0dvb2dsZVxDbG91ZFxEbHBcVjJiBnByb3Rv",
-            "Mw=="));
+            "dmFjeS5kbHAudjIuRmlsZVR5cGUSTgoNc2FtcGxlX21ldGhvZBgGIAEoDjI3",
+            "Lmdvb2dsZS5wcml2YWN5LmRscC52Mi5DbG91ZFN0b3JhZ2VPcHRpb25zLlNh",
+            "bXBsZU1ldGhvZBIbChNmaWxlc19saW1pdF9wZXJjZW50GAcgASgFGhYKB0Zp",
+            "bGVTZXQSCwoDdXJsGAEgASgJIkgKDFNhbXBsZU1ldGhvZBIdChlTQU1QTEVf",
+            "TUVUSE9EX1VOU1BFQ0lGSUVEEAASBwoDVE9QEAESEAoMUkFORE9NX1NUQVJU",
+            "EAIiIAoQQ2xvdWRTdG9yYWdlUGF0aBIMCgRwYXRoGAEgASgJIrYCCg9CaWdR",
+            "dWVyeU9wdGlvbnMSPQoPdGFibGVfcmVmZXJlbmNlGAEgASgLMiQuZ29vZ2xl",
+            "LnByaXZhY3kuZGxwLnYyLkJpZ1F1ZXJ5VGFibGUSOgoSaWRlbnRpZnlpbmdf",
+            "ZmllbGRzGAIgAygLMh4uZ29vZ2xlLnByaXZhY3kuZGxwLnYyLkZpZWxkSWQS",
+            "EgoKcm93c19saW1pdBgDIAEoAxJKCg1zYW1wbGVfbWV0aG9kGAQgASgOMjMu",
+            "Z29vZ2xlLnByaXZhY3kuZGxwLnYyLkJpZ1F1ZXJ5T3B0aW9ucy5TYW1wbGVN",
+            "ZXRob2QiSAoMU2FtcGxlTWV0aG9kEh0KGVNBTVBMRV9NRVRIT0RfVU5TUEVD",
+            "SUZJRUQQABIHCgNUT1AQARIQCgxSQU5ET01fU1RBUlQQAiKaBAoNU3RvcmFn",
+            "ZUNvbmZpZxJEChFkYXRhc3RvcmVfb3B0aW9ucxgCIAEoCzInLmdvb2dsZS5w",
+            "cml2YWN5LmRscC52Mi5EYXRhc3RvcmVPcHRpb25zSAASSwoVY2xvdWRfc3Rv",
+            "cmFnZV9vcHRpb25zGAMgASgLMiouZ29vZ2xlLnByaXZhY3kuZGxwLnYyLkNs",
+            "b3VkU3RvcmFnZU9wdGlvbnNIABJDChFiaWdfcXVlcnlfb3B0aW9ucxgEIAEo",
+            "CzImLmdvb2dsZS5wcml2YWN5LmRscC52Mi5CaWdRdWVyeU9wdGlvbnNIABJM",
+            "Cg90aW1lc3Bhbl9jb25maWcYBiABKAsyMy5nb29nbGUucHJpdmFjeS5kbHAu",
+            "djIuU3RvcmFnZUNvbmZpZy5UaW1lc3BhbkNvbmZpZxraAQoOVGltZXNwYW5D",
+            "b25maWcSLgoKc3RhcnRfdGltZRgBIAEoCzIaLmdvb2dsZS5wcm90b2J1Zi5U",
+            "aW1lc3RhbXASLAoIZW5kX3RpbWUYAiABKAsyGi5nb29nbGUucHJvdG9idWYu",
+            "VGltZXN0YW1wEjcKD3RpbWVzdGFtcF9maWVsZBgDIAEoCzIeLmdvb2dsZS5w",
+            "cml2YWN5LmRscC52Mi5GaWVsZElkEjEKKWVuYWJsZV9hdXRvX3BvcHVsYXRp",
+            "b25fb2ZfdGltZXNwYW5fY29uZmlnGAQgASgIQgYKBHR5cGUiYAoLQmlnUXVl",
+            "cnlLZXkSPQoPdGFibGVfcmVmZXJlbmNlGAEgASgLMiQuZ29vZ2xlLnByaXZh",
+            "Y3kuZGxwLnYyLkJpZ1F1ZXJ5VGFibGUSEgoKcm93X251bWJlchgCIAEoAyI+",
+            "CgxEYXRhc3RvcmVLZXkSLgoKZW50aXR5X2tleRgBIAEoCzIaLmdvb2dsZS5w",
+            "cml2YWN5LmRscC52Mi5LZXkiuwEKA0tleRI4CgxwYXJ0aXRpb25faWQYASAB",
+            "KAsyIi5nb29nbGUucHJpdmFjeS5kbHAudjIuUGFydGl0aW9uSWQSNAoEcGF0",
+            "aBgCIAMoCzImLmdvb2dsZS5wcml2YWN5LmRscC52Mi5LZXkuUGF0aEVsZW1l",
+            "bnQaRAoLUGF0aEVsZW1lbnQSDAoEa2luZBgBIAEoCRIMCgJpZBgCIAEoA0gA",
+            "Eg4KBG5hbWUYAyABKAlIAEIJCgdpZF90eXBlIo4BCglSZWNvcmRLZXkSPAoN",
+            "ZGF0YXN0b3JlX2tleRgCIAEoCzIjLmdvb2dsZS5wcml2YWN5LmRscC52Mi5E",
+            "YXRhc3RvcmVLZXlIABI7Cg1iaWdfcXVlcnlfa2V5GAMgASgLMiIuZ29vZ2xl",
+            "LnByaXZhY3kuZGxwLnYyLkJpZ1F1ZXJ5S2V5SABCBgoEdHlwZSJJCg1CaWdR",
+            "dWVyeVRhYmxlEhIKCnByb2plY3RfaWQYASABKAkSEgoKZGF0YXNldF9pZBgC",
+            "IAEoCRIQCgh0YWJsZV9pZBgDIAEoCSI5CghFbnRpdHlJZBItCgVmaWVsZBgB",
+            "IAEoCzIeLmdvb2dsZS5wcml2YWN5LmRscC52Mi5GaWVsZElkKnQKCkxpa2Vs",
+            "aWhvb2QSGgoWTElLRUxJSE9PRF9VTlNQRUNJRklFRBAAEhEKDVZFUllfVU5M",
+            "SUtFTFkQARIMCghVTkxJS0VMWRACEgwKCFBPU1NJQkxFEAMSCgoGTElLRUxZ",
+            "EAQSDwoLVkVSWV9MSUtFTFkQBSpFCghGaWxlVHlwZRIZChVGSUxFX1RZUEVf",
+            "VU5TUEVDSUZJRUQQABIPCgtCSU5BUllfRklMRRABEg0KCVRFWFRfRklMRRAC",
+            "Qo8BChljb20uZ29vZ2xlLnByaXZhY3kuZGxwLnYyQgpEbHBTdG9yYWdlUAFa",
+            "OGdvb2dsZS5nb2xhbmcub3JnL2dlbnByb3RvL2dvb2dsZWFwaXMvcHJpdmFj",
+            "eS9kbHAvdjI7ZGxwqgITR29vZ2xlLkNsb3VkLkRscC5WMsoCE0dvb2dsZVxD",
+            "bG91ZFxEbHBcVjJiBnByb3RvMw=="));
       descriptor = pbr::FileDescriptor.FromGeneratedCode(descriptorData,
           new pbr::FileDescriptor[] { global::Google.Api.AnnotationsReflection.Descriptor, global::Google.Protobuf.WellKnownTypes.TimestampReflection.Descriptor, },
           new pbr::GeneratedClrTypeInfo(new[] {typeof(global::Google.Cloud.Dlp.V2.Likelihood), typeof(global::Google.Cloud.Dlp.V2.FileType), }, new pbr::GeneratedClrTypeInfo[] {
@@ -118,9 +125,9 @@ namespace Google.Cloud.Dlp.V2 {
             new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.Dlp.V2.PartitionId), global::Google.Cloud.Dlp.V2.PartitionId.Parser, new[]{ "ProjectId", "NamespaceId" }, null, null, null),
             new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.Dlp.V2.KindExpression), global::Google.Cloud.Dlp.V2.KindExpression.Parser, new[]{ "Name" }, null, null, null),
             new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.Dlp.V2.DatastoreOptions), global::Google.Cloud.Dlp.V2.DatastoreOptions.Parser, new[]{ "PartitionId", "Kind" }, null, null, null),
-            new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.Dlp.V2.CloudStorageOptions), global::Google.Cloud.Dlp.V2.CloudStorageOptions.Parser, new[]{ "FileSet", "BytesLimitPerFile", "FileTypes" }, null, null, new pbr::GeneratedClrTypeInfo[] { new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.Dlp.V2.CloudStorageOptions.Types.FileSet), global::Google.Cloud.Dlp.V2.CloudStorageOptions.Types.FileSet.Parser, new[]{ "Url" }, null, null, null)}),
+            new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.Dlp.V2.CloudStorageOptions), global::Google.Cloud.Dlp.V2.CloudStorageOptions.Parser, new[]{ "FileSet", "BytesLimitPerFile", "FileTypes", "SampleMethod", "FilesLimitPercent" }, null, new[]{ typeof(global::Google.Cloud.Dlp.V2.CloudStorageOptions.Types.SampleMethod) }, new pbr::GeneratedClrTypeInfo[] { new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.Dlp.V2.CloudStorageOptions.Types.FileSet), global::Google.Cloud.Dlp.V2.CloudStorageOptions.Types.FileSet.Parser, new[]{ "Url" }, null, null, null)}),
             new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.Dlp.V2.CloudStoragePath), global::Google.Cloud.Dlp.V2.CloudStoragePath.Parser, new[]{ "Path" }, null, null, null),
-            new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.Dlp.V2.BigQueryOptions), global::Google.Cloud.Dlp.V2.BigQueryOptions.Parser, new[]{ "TableReference", "IdentifyingFields", "RowsLimit" }, null, null, null),
+            new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.Dlp.V2.BigQueryOptions), global::Google.Cloud.Dlp.V2.BigQueryOptions.Parser, new[]{ "TableReference", "IdentifyingFields", "RowsLimit", "SampleMethod" }, null, new[]{ typeof(global::Google.Cloud.Dlp.V2.BigQueryOptions.Types.SampleMethod) }, null),
             new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.Dlp.V2.StorageConfig), global::Google.Cloud.Dlp.V2.StorageConfig.Parser, new[]{ "DatastoreOptions", "CloudStorageOptions", "BigQueryOptions", "TimespanConfig" }, new[]{ "Type" }, null, new pbr::GeneratedClrTypeInfo[] { new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.Dlp.V2.StorageConfig.Types.TimespanConfig), global::Google.Cloud.Dlp.V2.StorageConfig.Types.TimespanConfig.Parser, new[]{ "StartTime", "EndTime", "TimestampField", "EnableAutoPopulationOfTimespanConfig" }, null, null, null)}),
             new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.Dlp.V2.BigQueryKey), global::Google.Cloud.Dlp.V2.BigQueryKey.Parser, new[]{ "TableReference", "RowNumber" }, null, null, null),
             new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.Dlp.V2.DatastoreKey), global::Google.Cloud.Dlp.V2.DatastoreKey.Parser, new[]{ "EntityKey" }, null, null, null),
@@ -2721,6 +2728,8 @@ namespace Google.Cloud.Dlp.V2 {
       FileSet = other.fileSet_ != null ? other.FileSet.Clone() : null;
       bytesLimitPerFile_ = other.bytesLimitPerFile_;
       fileTypes_ = other.fileTypes_.Clone();
+      sampleMethod_ = other.sampleMethod_;
+      filesLimitPercent_ = other.filesLimitPercent_;
       _unknownFields = pb::UnknownFieldSet.Clone(other._unknownFields);
     }
 
@@ -2770,6 +2779,33 @@ namespace Google.Cloud.Dlp.V2 {
       get { return fileTypes_; }
     }
 
+    /// <summary>Field number for the "sample_method" field.</summary>
+    public const int SampleMethodFieldNumber = 6;
+    private global::Google.Cloud.Dlp.V2.CloudStorageOptions.Types.SampleMethod sampleMethod_ = 0;
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    public global::Google.Cloud.Dlp.V2.CloudStorageOptions.Types.SampleMethod SampleMethod {
+      get { return sampleMethod_; }
+      set {
+        sampleMethod_ = value;
+      }
+    }
+
+    /// <summary>Field number for the "files_limit_percent" field.</summary>
+    public const int FilesLimitPercentFieldNumber = 7;
+    private int filesLimitPercent_;
+    /// <summary>
+    /// Limits the number of files to scan to this percentage of the input FileSet.
+    /// Number of files scanned is rounded down. Must be between 0 and 100,
+    /// inclusively. Both 0 and 100 means no limit. Defaults to 0.
+    /// </summary>
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    public int FilesLimitPercent {
+      get { return filesLimitPercent_; }
+      set {
+        filesLimitPercent_ = value;
+      }
+    }
+
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     public override bool Equals(object other) {
       return Equals(other as CloudStorageOptions);
@@ -2786,6 +2822,8 @@ namespace Google.Cloud.Dlp.V2 {
       if (!object.Equals(FileSet, other.FileSet)) return false;
       if (BytesLimitPerFile != other.BytesLimitPerFile) return false;
       if(!fileTypes_.Equals(other.fileTypes_)) return false;
+      if (SampleMethod != other.SampleMethod) return false;
+      if (FilesLimitPercent != other.FilesLimitPercent) return false;
       return Equals(_unknownFields, other._unknownFields);
     }
 
@@ -2795,6 +2833,8 @@ namespace Google.Cloud.Dlp.V2 {
       if (fileSet_ != null) hash ^= FileSet.GetHashCode();
       if (BytesLimitPerFile != 0L) hash ^= BytesLimitPerFile.GetHashCode();
       hash ^= fileTypes_.GetHashCode();
+      if (SampleMethod != 0) hash ^= SampleMethod.GetHashCode();
+      if (FilesLimitPercent != 0) hash ^= FilesLimitPercent.GetHashCode();
       if (_unknownFields != null) {
         hash ^= _unknownFields.GetHashCode();
       }
@@ -2817,6 +2857,14 @@ namespace Google.Cloud.Dlp.V2 {
         output.WriteInt64(BytesLimitPerFile);
       }
       fileTypes_.WriteTo(output, _repeated_fileTypes_codec);
+      if (SampleMethod != 0) {
+        output.WriteRawTag(48);
+        output.WriteEnum((int) SampleMethod);
+      }
+      if (FilesLimitPercent != 0) {
+        output.WriteRawTag(56);
+        output.WriteInt32(FilesLimitPercent);
+      }
       if (_unknownFields != null) {
         _unknownFields.WriteTo(output);
       }
@@ -2832,6 +2880,12 @@ namespace Google.Cloud.Dlp.V2 {
         size += 1 + pb::CodedOutputStream.ComputeInt64Size(BytesLimitPerFile);
       }
       size += fileTypes_.CalculateSize(_repeated_fileTypes_codec);
+      if (SampleMethod != 0) {
+        size += 1 + pb::CodedOutputStream.ComputeEnumSize((int) SampleMethod);
+      }
+      if (FilesLimitPercent != 0) {
+        size += 1 + pb::CodedOutputStream.ComputeInt32Size(FilesLimitPercent);
+      }
       if (_unknownFields != null) {
         size += _unknownFields.CalculateSize();
       }
@@ -2853,6 +2907,12 @@ namespace Google.Cloud.Dlp.V2 {
         BytesLimitPerFile = other.BytesLimitPerFile;
       }
       fileTypes_.Add(other.fileTypes_);
+      if (other.SampleMethod != 0) {
+        SampleMethod = other.SampleMethod;
+      }
+      if (other.FilesLimitPercent != 0) {
+        FilesLimitPercent = other.FilesLimitPercent;
+      }
       _unknownFields = pb::UnknownFieldSet.MergeFrom(_unknownFields, other._unknownFields);
     }
 
@@ -2880,6 +2940,14 @@ namespace Google.Cloud.Dlp.V2 {
             fileTypes_.AddEntriesFrom(input, _repeated_fileTypes_codec);
             break;
           }
+          case 48: {
+            sampleMethod_ = (global::Google.Cloud.Dlp.V2.CloudStorageOptions.Types.SampleMethod) input.ReadEnum();
+            break;
+          }
+          case 56: {
+            FilesLimitPercent = input.ReadInt32();
+            break;
+          }
         }
       }
     }
@@ -2888,6 +2956,24 @@ namespace Google.Cloud.Dlp.V2 {
     /// <summary>Container for nested types declared in the CloudStorageOptions message type.</summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     public static partial class Types {
+      /// <summary>
+      /// How to sample bytes if not all bytes are scanned. Meaningful only when used
+      /// in conjunction with bytes_limit_per_file. If not specified, scanning would
+      /// start from the top.
+      /// </summary>
+      public enum SampleMethod {
+        [pbr::OriginalName("SAMPLE_METHOD_UNSPECIFIED")] Unspecified = 0,
+        /// <summary>
+        /// Scan from the top (default).
+        /// </summary>
+        [pbr::OriginalName("TOP")] Top = 1,
+        /// <summary>
+        /// For each file larger than bytes_limit_per_file, randomly pick the offset
+        /// to start scanning. The scanned bytes are contiguous.
+        /// </summary>
+        [pbr::OriginalName("RANDOM_START")] RandomStart = 2,
+      }
+
       /// <summary>
       /// Set of files to scan.
       /// </summary>
@@ -3030,7 +3116,7 @@ namespace Google.Cloud.Dlp.V2 {
   }
 
   /// <summary>
-  /// Message representing a path in Cloud Storage.
+  /// Message representing a single file or path in Cloud Storage.
   /// </summary>
   public sealed partial class CloudStoragePath : pb::IMessage<CloudStoragePath> {
     private static readonly pb::MessageParser<CloudStoragePath> _parser = new pb::MessageParser<CloudStoragePath>(() => new CloudStoragePath());
@@ -3196,6 +3282,7 @@ namespace Google.Cloud.Dlp.V2 {
       TableReference = other.tableReference_ != null ? other.TableReference.Clone() : null;
       identifyingFields_ = other.identifyingFields_.Clone();
       rowsLimit_ = other.rowsLimit_;
+      sampleMethod_ = other.sampleMethod_;
       _unknownFields = pb::UnknownFieldSet.Clone(other._unknownFields);
     }
 
@@ -3248,6 +3335,17 @@ namespace Google.Cloud.Dlp.V2 {
       }
     }
 
+    /// <summary>Field number for the "sample_method" field.</summary>
+    public const int SampleMethodFieldNumber = 4;
+    private global::Google.Cloud.Dlp.V2.BigQueryOptions.Types.SampleMethod sampleMethod_ = 0;
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    public global::Google.Cloud.Dlp.V2.BigQueryOptions.Types.SampleMethod SampleMethod {
+      get { return sampleMethod_; }
+      set {
+        sampleMethod_ = value;
+      }
+    }
+
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     public override bool Equals(object other) {
       return Equals(other as BigQueryOptions);
@@ -3264,6 +3362,7 @@ namespace Google.Cloud.Dlp.V2 {
       if (!object.Equals(TableReference, other.TableReference)) return false;
       if(!identifyingFields_.Equals(other.identifyingFields_)) return false;
       if (RowsLimit != other.RowsLimit) return false;
+      if (SampleMethod != other.SampleMethod) return false;
       return Equals(_unknownFields, other._unknownFields);
     }
 
@@ -3273,6 +3372,7 @@ namespace Google.Cloud.Dlp.V2 {
       if (tableReference_ != null) hash ^= TableReference.GetHashCode();
       hash ^= identifyingFields_.GetHashCode();
       if (RowsLimit != 0L) hash ^= RowsLimit.GetHashCode();
+      if (SampleMethod != 0) hash ^= SampleMethod.GetHashCode();
       if (_unknownFields != null) {
         hash ^= _unknownFields.GetHashCode();
       }
@@ -3295,6 +3395,10 @@ namespace Google.Cloud.Dlp.V2 {
         output.WriteRawTag(24);
         output.WriteInt64(RowsLimit);
       }
+      if (SampleMethod != 0) {
+        output.WriteRawTag(32);
+        output.WriteEnum((int) SampleMethod);
+      }
       if (_unknownFields != null) {
         _unknownFields.WriteTo(output);
       }
@@ -3309,6 +3413,9 @@ namespace Google.Cloud.Dlp.V2 {
       size += identifyingFields_.CalculateSize(_repeated_identifyingFields_codec);
       if (RowsLimit != 0L) {
         size += 1 + pb::CodedOutputStream.ComputeInt64Size(RowsLimit);
+      }
+      if (SampleMethod != 0) {
+        size += 1 + pb::CodedOutputStream.ComputeEnumSize((int) SampleMethod);
       }
       if (_unknownFields != null) {
         size += _unknownFields.CalculateSize();
@@ -3330,6 +3437,9 @@ namespace Google.Cloud.Dlp.V2 {
       identifyingFields_.Add(other.identifyingFields_);
       if (other.RowsLimit != 0L) {
         RowsLimit = other.RowsLimit;
+      }
+      if (other.SampleMethod != 0) {
+        SampleMethod = other.SampleMethod;
       }
       _unknownFields = pb::UnknownFieldSet.MergeFrom(_unknownFields, other._unknownFields);
     }
@@ -3357,9 +3467,37 @@ namespace Google.Cloud.Dlp.V2 {
             RowsLimit = input.ReadInt64();
             break;
           }
+          case 32: {
+            sampleMethod_ = (global::Google.Cloud.Dlp.V2.BigQueryOptions.Types.SampleMethod) input.ReadEnum();
+            break;
+          }
         }
       }
     }
+
+    #region Nested types
+    /// <summary>Container for nested types declared in the BigQueryOptions message type.</summary>
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    public static partial class Types {
+      /// <summary>
+      /// How to sample rows if not all rows are scanned. Meaningful only when used
+      /// in conjunction with rows_limit. If not specified, scanning would start
+      /// from the top.
+      /// </summary>
+      public enum SampleMethod {
+        [pbr::OriginalName("SAMPLE_METHOD_UNSPECIFIED")] Unspecified = 0,
+        /// <summary>
+        /// Scan from the top (default).
+        /// </summary>
+        [pbr::OriginalName("TOP")] Top = 1,
+        /// <summary>
+        /// Randomly pick the row to start scanning. The scanned rows are contiguous.
+        /// </summary>
+        [pbr::OriginalName("RANDOM_START")] RandomStart = 2,
+      }
+
+    }
+    #endregion
 
   }
 
