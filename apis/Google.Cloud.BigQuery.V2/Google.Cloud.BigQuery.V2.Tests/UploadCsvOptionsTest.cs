@@ -37,6 +37,7 @@ namespace Google.Cloud.BigQuery.V2.Tests
                 NullMarker = "custom-null",
                 TimePartitioning = TimePartition.CreateDailyPartitioning(expiration: null),
                 DestinationEncryptionConfiguration = new EncryptionConfiguration { KmsKeyName = "projects/1/locations/us/keyRings/1/cryptoKeys/1" },
+                DestinationSchemaUpdateOptions = SchemaUpdateOption.AllowFieldAddition | SchemaUpdateOption.AllowFieldRelaxation
             };
 
             JobConfigurationLoad config = new JobConfigurationLoad();
@@ -55,6 +56,9 @@ namespace Google.Cloud.BigQuery.V2.Tests
             Assert.Equal("DAY", config.TimePartitioning.Type);
             Assert.Null(config.TimePartitioning.ExpirationMs);
             Assert.Equal("projects/1/locations/us/keyRings/1/cryptoKeys/1", config.DestinationEncryptionConfiguration.KmsKeyName);
+            Assert.Equal(2, config.SchemaUpdateOptions.Count);
+            Assert.Contains("ALLOW_FIELD_ADDITION", config.SchemaUpdateOptions);
+            Assert.Contains("ALLOW_FIELD_RELAXATION", config.SchemaUpdateOptions);
         }
     }
 }

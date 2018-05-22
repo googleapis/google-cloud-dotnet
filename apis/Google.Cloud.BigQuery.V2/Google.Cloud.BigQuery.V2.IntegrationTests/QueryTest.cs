@@ -14,7 +14,6 @@
 
 using Google.Apis.Bigquery.v2.Data;
 using Google.Cloud.Storage.V1;
-using Newtonsoft.Json;
 using System;
 using System.Collections.Generic;
 using System.IO;
@@ -94,6 +93,49 @@ namespace Google.Cloud.BigQuery.V2.IntegrationTests
             Assert.Equal(10, rows.Count);
             Assert.Equal("hamlet", (string)rows[0][0]);
             Assert.Equal(5318, (long)rows[0][1]);
+        }
+
+        [Fact]
+        public void AsynchronousPermanentQuery_UpdatesSchema()
+        {
+            // We create the client using our user, but then access a dataset in a public data
+            // project. We can't run a query "as" the public data project.
+            var projectId = _fixture.ProjectId;
+            var client = BigQueryClient.Create(projectId);
+            var table = client.GetTable(PublicDatasetsProject, PublicDatasetsDataset, ShakespeareTable);
+            var userDataset = client.GetDataset(_fixture.DatasetId);
+            var destinationTableReference = userDataset.GetTableReference(_fixture.CreateTableId());
+            var sql = $"SELECT corpus as title FROM {table} ORDER BY title DESC LIMIT 10";
+
+            var job = client.CreateQueryJob(sql, null, new QueryOptions { DestinationTable = destinationTableReference });
+            var result = job.PollUntilCompleted();
+            Assert.Null(result.Status.ErrorResult);
+
+            var destinationTable = client.GetTable(destinationTableReference);
+            var rows = destinationTable.ListRows().ToList();
+            Assert.Equal(1, destinationTable.Schema.Fields.Count);
+            Assert.Equal(10, rows.Count);
+
+            // Execute a new query adding a field
+            sql = $"SELECT corpus as title, COUNT(word) as unique_words FROM {table} GROUP BY title ORDER BY unique_words DESC LIMIT 10";
+
+            job = client.CreateQueryJob(sql, null,
+                new QueryOptions
+                {
+                    DestinationTable = destinationTableReference,
+                    WriteDisposition = WriteDisposition.WriteAppend,
+                    DestinationSchemaUpdateOptions = SchemaUpdateOption.AllowFieldAddition
+                });
+            result = job.PollUntilCompleted();
+            Assert.Null(result.Status.ErrorResult);
+
+            destinationTable = client.GetTable(destinationTableReference);
+            rows = destinationTable.ListRows().ToList();
+            var fields = destinationTable.Schema.Fields.Select(f => new { f.Name, f.Type, f.Mode }).OrderBy(f => f.Name).ToList();
+            Assert.Equal(20, rows.Count);
+            Assert.Equal(2, fields.Count);
+            Assert.Equal(new { Name = "title", Type = "STRING", Mode = "NULLABLE" }, fields[0]);
+            Assert.Equal(new { Name = "unique_words", Type = "INTEGER", Mode = "NULLABLE" }, fields[1]);
         }
 
         [Fact]

@@ -13,6 +13,7 @@
 // limitations under the License.
 
 using Google.Apis.Bigquery.v2.Data;
+using System.Collections.Generic;
 
 namespace Google.Cloud.BigQuery.V2
 {
@@ -113,6 +114,18 @@ namespace Google.Cloud.BigQuery.V2
         /// </summary>
         public EncryptionConfiguration DestinationEncryptionConfiguration { get; set; }
 
+        /// <summary>
+        /// Allows the schema of the <see cref="DestinationTable" /> to be updated as a side effect
+        /// of the query job. 
+        /// Schema update options are supported in two cases:
+        /// when <see cref="WriteDisposition"/> is <see cref="WriteDisposition.WriteAppend"/>;
+        /// when <see cref="WriteDisposition"/> is <see cref="WriteDisposition.WriteTruncate"/>
+        /// and the destination table is a partition of a table, specified by partition decorators.
+        /// <see cref="SchemaUpdateOption" /> is marked with the <see cref="System.FlagsAttribute"/>
+        /// so several flags can be specified.
+        /// </summary>
+        public SchemaUpdateOption? DestinationSchemaUpdateOptions { get; set; }
+
         internal void ModifyRequest(JobConfigurationQuery query)
         {
             // Note: no validation of combinations (flatten results etc). Leave this to the server,
@@ -169,6 +182,10 @@ namespace Google.Cloud.BigQuery.V2
             if (DestinationEncryptionConfiguration != null)
             {
                 query.DestinationEncryptionConfiguration = DestinationEncryptionConfiguration;
+            }
+            if (DestinationSchemaUpdateOptions != null)
+            {
+                query.SchemaUpdateOptions = new List<string>(EnumMap.ToApiValues(DestinationSchemaUpdateOptions.Value));
             }
         }
     }

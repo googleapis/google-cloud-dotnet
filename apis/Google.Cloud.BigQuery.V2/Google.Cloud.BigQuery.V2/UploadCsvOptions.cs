@@ -12,8 +12,8 @@
 // See the License for the specific language governing permissions and
 // limitations under the License.
 
-using System;
 using Google.Apis.Bigquery.v2.Data;
+using System.Collections.Generic;
 
 namespace Google.Cloud.BigQuery.V2
 {
@@ -97,6 +97,18 @@ namespace Google.Cloud.BigQuery.V2
         /// </summary>
         public EncryptionConfiguration DestinationEncryptionConfiguration { get; set; }
 
+        /// <summary>
+        /// Allows the schema of the destination table to be updated as a side effect 
+        /// of the load job if a schema is autodetected or supplied in the job configuration.
+        /// Schema update options are supported in two cases:
+        /// when<see cref="WriteDisposition"/> is <see cref = "WriteDisposition.WriteAppend" />;
+        /// when <see cref="WriteDisposition"/> is <see cref="WriteDisposition.WriteTruncate"/>
+        /// and the destination table is a partition of a table, specified by partition decorators.
+        /// <see cref="SchemaUpdateOption" /> is marked with the <see cref="System.FlagsAttribute"/>
+        /// so several flags can be specified.
+        /// </summary>
+        public SchemaUpdateOption? DestinationSchemaUpdateOptions { get; set; }
+
         internal void ModifyConfiguration(JobConfigurationLoad loadRequest)
         {
             if (SkipLeadingRows != null)
@@ -150,6 +162,10 @@ namespace Google.Cloud.BigQuery.V2
             if (DestinationEncryptionConfiguration != null)
             {
                 loadRequest.DestinationEncryptionConfiguration = DestinationEncryptionConfiguration;
+            }
+            if (DestinationSchemaUpdateOptions != null)
+            {
+                loadRequest.SchemaUpdateOptions = new List<string>(EnumMap.ToApiValues(DestinationSchemaUpdateOptions.Value));
             }
             // TODO: Encoding? Only UTF-8 and ISO-8859-1 are supported... unsure what to do with this.
         }
