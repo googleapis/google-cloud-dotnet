@@ -113,7 +113,7 @@ namespace Google.Cloud.Logging.NLog
         private string _logName;
         private LogNameOneof _logNameToWrite;
         private Task _prevTask;
-        private int _pendingTaskCount;
+        private long _pendingTaskCount;
         private CancellationTokenSource _cancelTokenSource;
         private readonly Func<Task, object, Task> _writeLogEntriesBegin;
         private readonly Action<Task, object> _writeLogEntriesCompleted;
@@ -325,15 +325,26 @@ namespace Google.Cloud.Logging.NLog
             {
                 if (!belowTaskLimit)
                 {
+                    // The task queue has become too long. We will throttle, and wait for the task-queue to become shorter
                     InternalLogger.Debug("GoogleStackdriver(Name={0}): Throttle started because {1} tasks are pending", Name, _pendingTaskCount);
-                    belowTaskLimit = _prevTask?.Wait(1000, _cancelTokenSource.Token) ?? true; // Throttle
+                    for (int i = 0; i < 15; ++i)
+                    {
+                        belowTaskLimit = _prevTask?.Wait(100, _cancelTokenSource.Token) ?? true; // Throttle
+                        if (belowTaskLimit)
+                        {
+                            _pendingTaskCount = 1;  // All pending tasks has completed
+                            break;
+                        }
+                        if (Interlocked.Read(ref _pendingTaskCount) < TaskPendingLimit)
+                        {
+                            belowTaskLimit = true;  // Some pending tasks has completed
+                            break;
+                        }
+                    }
                     if (!belowTaskLimit)
                     {
+                        // The tasks queue is not moving. We start a new task queue and ignores the old one
                         InternalLogger.Info("GoogleStackdriver(Name={0}): Throttle timeout but {1} tasks are still pending", Name, _pendingTaskCount);
-                    }
-                    else
-                    {
-                        _pendingTaskCount = 1;
                     }
                 }
 
