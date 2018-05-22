@@ -31,12 +31,13 @@ namespace Google.Cloud.BigQuery.V2.Tests
                 FlattenResults = false,
                 MaximumBillingTier = 10,
                 MaximumBytesBilled = 1000,
-                Priority = QueryPriority.Batch, 
+                Priority = QueryPriority.Batch,
                 UseQueryCache = false,
                 WriteDisposition = WriteDisposition.WriteIfEmpty,
                 UseLegacySql = true,
                 ParameterMode = BigQueryParameterMode.Positional,
-                DestinationEncryptionConfiguration = new EncryptionConfiguration { KmsKeyName = "projects/1/locations/us/keyRings/1/cryptoKeys/1" }
+                DestinationEncryptionConfiguration = new EncryptionConfiguration { KmsKeyName = "projects/1/locations/us/keyRings/1/cryptoKeys/1" },
+                DestinationSchemaUpdateOptions = SchemaUpdateOption.AllowFieldAddition | SchemaUpdateOption.AllowFieldRelaxation
             };
 
             JobConfigurationQuery query = new JobConfigurationQuery();
@@ -54,6 +55,9 @@ namespace Google.Cloud.BigQuery.V2.Tests
             Assert.Equal(true, query.UseLegacySql);
             Assert.Equal("positional", query.ParameterMode);
             Assert.Equal("projects/1/locations/us/keyRings/1/cryptoKeys/1", query.DestinationEncryptionConfiguration.KmsKeyName);
+            Assert.Equal(2, query.SchemaUpdateOptions.Count);
+            Assert.Contains("ALLOW_FIELD_ADDITION", query.SchemaUpdateOptions);
+            Assert.Contains("ALLOW_FIELD_RELAXATION", query.SchemaUpdateOptions);
         }
     }
 }

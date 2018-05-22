@@ -13,6 +13,7 @@
 // limitations under the License.
 
 using System;
+using System.Collections.Generic;
 using Xunit;
 
 namespace Google.Cloud.BigQuery.V2.Tests
@@ -20,8 +21,8 @@ namespace Google.Cloud.BigQuery.V2.Tests
     public class EnumMapTest
     {
         [Theory]
-        [InlineData(typeof(WriteDisposition), (int) WriteDisposition.WriteIfEmpty, "WRITE_EMPTY")]
-        [InlineData(typeof(BigQueryDbType), (int) BigQueryDbType.Float64, "FLOAT")]
+        [InlineData(typeof(WriteDisposition), (int)WriteDisposition.WriteIfEmpty, "WRITE_EMPTY")]
+        [InlineData(typeof(BigQueryDbType), (int)BigQueryDbType.Float64, "FLOAT")]
         public void ValidConversion(Type type, int value, string name)
         {
             // Note: this is pretty horrible in terms of how the values are specified, but xUnit
@@ -36,13 +37,37 @@ namespace Google.Cloud.BigQuery.V2.Tests
             Assert.Throws<ArgumentException>(() => EnumMap<WriteDisposition>.ToValue("WRITEIFEMPTY"));
             Assert.Throws<ArgumentException>(() => EnumMap<WriteDisposition>.ToValue("Bogus"));
             Assert.Throws<ArgumentException>(() => EnumMap<WriteDisposition>.ToValue("Write_Empty"));
-            Assert.Throws<ArgumentException>(() => EnumMap<WriteDisposition>.ToApiValue((WriteDisposition) 100));
+            Assert.Throws<ArgumentException>(() => EnumMap<WriteDisposition>.ToApiValue((WriteDisposition)100));
+            Assert.Throws<ArgumentException>(() => EnumMap<SchemaUpdateOption>.ToApiValues((SchemaUpdateOption)100));
+            Assert.Throws<InvalidOperationException>(() => EnumMap<WriteDisposition>.ToApiValues(WriteDisposition.WriteAppend));
+            Assert.Throws<InvalidOperationException>(() => EnumMap<SchemaUpdateOption>.ToApiValue(SchemaUpdateOption.AllowFieldAddition));
+        }
+
+        [Theory]
+        [InlineData(typeof(SchemaUpdateOption), (int)SchemaUpdateOption.AllowFieldAddition, new string[] { "ALLOW_FIELD_ADDITION" })]
+        [InlineData(typeof(SchemaUpdateOption), (int)SchemaUpdateOption.AllowFieldRelaxation, new string[] { "ALLOW_FIELD_RELAXATION" })]
+        [InlineData(typeof(SchemaUpdateOption), (int)(SchemaUpdateOption.AllowFieldAddition | SchemaUpdateOption.AllowFieldRelaxation), new string[] { "ALLOW_FIELD_RELAXATION", "ALLOW_FIELD_ADDITION" })]
+        public void ValidFlagsConversion(Type type, int value, string[] names)
+        {
+            // Note: this is pretty horrible in terms of how the values are specified, but xUnit
+            // doesn't seem to like boxing enums.
+            dynamic converted = Enum.Parse(type, value.ToString());
+            ISet<string> expected = new HashSet<string>(names);
+            ValidateFlags(converted, expected);
         }
 
         private static void Validate<T>(T value, string name) where T : struct
         {
             Assert.Equal(name, EnumMap<T>.ToApiValue(value));
             Assert.Equal(value, EnumMap<T>.ToValue(name));
+        }
+
+        private static void ValidateFlags<T>(T value, ISet<string> expected) where T : struct
+        {
+            ISet<string> actual = EnumMap<T>.ToApiValues(value);
+            // Assert.Equal(ISet, ISet) is order dependant.
+            Assert.Subset(expected, actual);
+            Assert.Superset(expected, actual);
         }
     }
 }

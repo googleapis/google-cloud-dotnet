@@ -38,6 +38,9 @@ namespace Google.Cloud.BigQuery.V2
     {
         internal static string ToApiValue<T>(T value, string paramName = "value") where T : struct =>
             EnumMap<T>.ToApiValue(value, paramName);
+
+        internal static ISet<string> ToApiValues<T>(T value) where T : struct =>
+            EnumMap<T>.ToApiValues(value);
     }
 
     /// <summary>
@@ -48,27 +51,70 @@ namespace Google.Cloud.BigQuery.V2
     {
         private static readonly Dictionary<string, T> s_stringToValue = new Dictionary<string, T>();
         private static readonly Dictionary<T, string> s_valueToString = new Dictionary<T, string>();
+        private static readonly Dictionary<int, string> s_intValueToString =
+            typeof(T).GetTypeInfo().IsDefined(typeof(FlagsAttribute))
+            ? new Dictionary<int, string>() : null;
 
         static EnumMap()
         {
             foreach (var field in typeof(T).GetTypeInfo().DeclaredFields.Where(f => f.IsStatic))
             {
-                var value = (T) field.GetValue(null);
-                var nameAttribute = (ApiValueAttribute) field.GetCustomAttribute(typeof(ApiValueAttribute));
+                var value = (T)field.GetValue(null);
+                var nameAttribute = (ApiValueAttribute)field.GetCustomAttribute(typeof(ApiValueAttribute));
                 var name = nameAttribute?.Value ?? value.ToString().ToUpperInvariant();
                 s_stringToValue[name] = value;
                 s_valueToString[value] = name;
+                s_intValueToString?.Add((int)(object)value, name);
             }
         }
 
         internal static string ToApiValue(T value, string paramName = "value")
         {
+            if (s_intValueToString != null)
+            {
+                throw new InvalidOperationException($"{typeof(T).Name} is marked with the {typeof(FlagsAttribute).Name} attribute. Use the {nameof(EnumMap.ToApiValues)} method instead.");
+            }
+
             string name;
             if (s_valueToString.TryGetValue(value, out name))
             {
                 return name;
             }
             throw new ArgumentException($"Value {value} is undefined in {typeof(T).Name}", paramName);
+        }
+
+        /// <summary>
+        /// Similar to <see cref="ToApiValue(T, string)"/> but for used with Flags enum.
+        /// </summary>
+        /// <param name="value">An enum value, possibly flagged.</param>
+        /// <returns>A set of string that contains the api value corresponding to each
+        /// of the flags set in <paramref name="value"/>.</returns>
+        internal static ISet<string> ToApiValues(T value)
+        {
+            if(s_intValueToString == null)
+            {
+                throw new InvalidOperationException($"{typeof(T).Name} is not marked with the {typeof(FlagsAttribute).Name} attribute. Use the {nameof(EnumMap.ToApiValue)} method instead.");
+            }
+
+            int intValue = (int)(object) value;
+            ISet<string> apiValues = new HashSet<string>();
+            foreach (var oneValue in s_intValueToString)
+            {
+                if((intValue & oneValue.Key) == oneValue.Key)
+                {
+                    apiValues.Add(oneValue.Value);
+                    intValue = intValue ^ oneValue.Key;
+                }
+            }
+
+            // We've removed all the valid flags from intValue.
+            // If something remains is not valid.
+            if (intValue != 0)
+            {
+                throw new ArgumentException($"At least one of the flags set in Value {value} is undefined in {typeof(T).Name}", nameof(value));
+            }
+
+            return apiValues;
         }
 
         internal static T ToValue(string apiValue, string paramName = "name")
