@@ -35,7 +35,7 @@ using System.Threading;
 namespace Google.Cloud.Logging.NLog
 {
     /// <summary>
-    /// 
+    /// Appends logging events to Google Stackdriver Logging.
     /// </summary>
     [Target("GoogleStackdriver")]
     public class GoogleStackdriverTarget : TargetWithContext
@@ -53,7 +53,7 @@ namespace Google.Cloud.Logging.NLog
         public bool DisableResourceTypeDetection { get; set; }
 
         /// <summary>
-        /// Configures how many outstanding write tasks before starting to throttle 
+        /// Configures how many outstanding write tasks before starting to throttle. Defaults to 5.
         /// </summary>
         public int TaskPendingLimit { get; set; }
 
@@ -90,7 +90,7 @@ namespace Google.Cloud.Logging.NLog
         public Layout ProjectId { get; set; }
 
         /// <summary>
-        /// LogID for all log entries. Must be configured.
+        /// LogID for all log entries. Defaults to "Default".
         /// </summary>
         public Layout LogId { get; set; }
 
@@ -101,12 +101,11 @@ namespace Google.Cloud.Logging.NLog
         [ArrayParameter(typeof(TargetPropertyWithContext), "resourcelabel")]
         public IList<TargetPropertyWithContext> ResourceLabels { get; }
 
-        /// <summary>
-        /// Allows custom labels to be added to the log entries as extra metadata
-        /// </summary>
+        /// <inheritdoc/>
         [ArrayParameter(typeof(TargetPropertyWithContext), "contextproperty")]
         public override IList<TargetPropertyWithContext> ContextProperties { get { return _contextProperties; } }
-        readonly List<TargetPropertyWithContext> _contextProperties;
+
+        private readonly List<TargetPropertyWithContext> _contextProperties;
 
         private LoggingServiceV2Client _client;
         private Platform _platform;
@@ -116,8 +115,8 @@ namespace Google.Cloud.Logging.NLog
         private Task _prevTask;
         private int _pendingTaskCount;
         private CancellationTokenSource _cancelTokenSource;
-        private Func<Task, object, Task> _writeLogEntriesBegin;
-        private Action<Task, object> _writeLogEntriesCompleted;
+        private readonly Func<Task, object, Task> _writeLogEntriesBegin;
+        private readonly Action<Task, object> _writeLogEntriesCompleted;
 
         private static readonly string[] s_oAuthScopes = new string[] { "https://www.googleapis.com/auth/logging.write" };
         private static readonly Dictionary<string, string> s_emptyLabels = new Dictionary<string, string>();
@@ -154,7 +153,7 @@ namespace Google.Cloud.Logging.NLog
         }
 
         /// <summary>
-        /// Initializes Target
+        /// Initializes the target.
         /// </summary>
         protected override void InitializeTarget()
         {
@@ -182,15 +181,19 @@ namespace Google.Cloud.Logging.NLog
             base.CloseTarget();
         }
 
-        /// <summary>
-        /// Flushes the Target
-        /// </summary>
+        /// <inheritdoc/>
         protected override void FlushAsync(AsyncContinuation asyncContinuation)
         {
             if (_prevTask != null)
-                _prevTask.ContinueWith((prevTask) => asyncContinuation(null), TaskScheduler.Default);
+            {
+                // Continue after last write is complete.
+                _prevTask.ContinueWith(_ => asyncContinuation(null), TaskScheduler.Default);
+            }
             else
-                asyncContinuation(null);    // Nothing to flush
+            {
+                // Nothing to flush.
+                asyncContinuation(null);
+            }
         }
 
         private LoggingServiceV2Client BuildLoggingServiceClient()
@@ -240,8 +243,8 @@ namespace Google.Cloud.Logging.NLog
 
             if (projectId == null)
             {
-                // Either platform detection is disabled, or it detected an unknown platform
-                // So use the manually configured projectId and override the resource
+                // Either platform detection is disabled, or it detected an unknown platform.
+                // So use the manually configured projectId and override the resource.
                 projectId = GaxPreconditions.CheckNotNull(ProjectId?.Render(LogEventInfo.CreateNullEvent()), nameof(ProjectId));
                 if (ResourceType == null)
                 {
@@ -261,8 +264,9 @@ namespace Google.Cloud.Logging.NLog
         }
 
         /// <summary>
-        /// 
+        /// Writes async log event to the log target.
         /// </summary>
+        /// /// <param name="logEvent">Logging event to be written out.</param>
         protected override void Write(AsyncLogEventInfo logEvent)
         {
             LogEntry logEntry = null;
@@ -284,7 +288,7 @@ namespace Google.Cloud.Logging.NLog
         }
 
         /// <summary>
-        /// 
+        /// Writes a list of logging events to the log target.
         /// </summary>
         protected override void Write(IList<AsyncLogEventInfo> logEvents)
         {
@@ -324,15 +328,23 @@ namespace Google.Cloud.Logging.NLog
                     InternalLogger.Debug("GoogleStackdriver(Name={0}): Throttle started because {1} tasks are pending", Name, _pendingTaskCount);
                     belowTaskLimit = _prevTask?.Wait(1000, _cancelTokenSource.Token) ?? true; // Throttle
                     if (!belowTaskLimit)
+                    {
                         InternalLogger.Info("GoogleStackdriver(Name={0}): Throttle timeout but {1} tasks are still pending", Name, _pendingTaskCount);
+                    }
                     else
+                    {
                         _pendingTaskCount = 1;
+                    }
                 }
 
                 if (belowTaskLimit && _prevTask != null)
+                {
                     _prevTask = _prevTask.ContinueWith(_writeLogEntriesBegin, logEntries, _cancelTokenSource.Token);
+                }
                 else
+                {
                     _prevTask = WriteLogEntriesBegin(null, logEntries);
+                }
                 _prevTask = _prevTask.ContinueWith(_writeLogEntriesCompleted, continuationList, _cancelTokenSource.Token);
             }
             catch (Exception ex)
