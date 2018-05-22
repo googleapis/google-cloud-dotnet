@@ -38,6 +38,9 @@ namespace Google.Cloud.BigQuery.V2
     {
         internal static string ToApiValue<T>(T value, string paramName = "value") where T : struct =>
             EnumMap<T>.ToApiValue(value, paramName);
+
+        internal static ISet<string> ToApiValues<T>(T value) where T : struct =>
+            EnumMap<T>.ToApiValues(value);
     }
 
     /// <summary>
@@ -69,6 +72,35 @@ namespace Google.Cloud.BigQuery.V2
                 return name;
             }
             throw new ArgumentException($"Value {value} is undefined in {typeof(T).Name}", paramName);
+        }
+
+        /// <summary>
+        /// Similar to <see cref="ToApiValue(T, string)"/> but for used with Flags enum.
+        /// </summary>
+        /// <param name="value">An enum value, possibly flagged.</param>
+        /// <returns>A set of string that contains the api value corresponding to each
+        /// of the flags set in <paramref name="value"/>.</returns>
+        internal static ISet<string> ToApiValues(T value)
+        {
+            // Checking here to avoid an uncrontrolled NullReferenceException down the line.
+            if(!(value is Enum))
+            {
+                throw new ArgumentException($" The Type {typeof(T)} of Value {value} is not an Enum type", nameof(value));
+            }
+            
+            Enum eValue = value as Enum;
+            ISet<string> apiValues = new HashSet<string>();
+            foreach(T oneValue in Enum.GetValues(typeof(T)))
+            {
+                Enum eOneValue = oneValue as Enum;
+                if (eValue.HasFlag(eOneValue))
+                {
+                    // No need to check whether the value is on the dict or not,
+                    // since we are certain that oneValue is defined in T.
+                    apiValues.Add(s_valueToString[oneValue]);
+                }
+            }
+            return apiValues;
         }
 
         internal static T ToValue(string apiValue, string paramName = "name")
