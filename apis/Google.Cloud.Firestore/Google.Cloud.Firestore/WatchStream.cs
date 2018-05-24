@@ -15,6 +15,7 @@
 using Google.Api.Gax;
 using Google.Api.Gax.Grpc;
 using Google.Cloud.Firestore.V1Beta1;
+using Google.Protobuf;
 using Grpc.Core;
 using System;
 using System.Collections.Generic;
@@ -136,12 +137,12 @@ namespace Google.Cloud.Firestore
             }
             finally
             {
-                _networkCancellationTokenSource.Dispose();
-                _callbackCancellationTokenSource.Dispose();
                 lock (_stateLock)
                 {
-                    _finished = true;
+                    _networkCancellationTokenSource.Dispose();
+                    _callbackCancellationTokenSource.Dispose();
                     _stopCancellationTokenRegistration.Dispose();
+                    _finished = true;
                 }
                 // Make sure we clean up even if we get an exception we don't handle explicitly.
                 await CloseStreamAsync().ConfigureAwait(false);
@@ -162,7 +163,7 @@ namespace Google.Cloud.Firestore
                             await _scheduler.Delay(_backoffJitter.GetDelay(nextBackoff), _networkCancellationTokenSource.Token).ConfigureAwait(false);
                             nextBackoff = _backoffSettings.NextDelay(nextBackoff);
                             underlyingStream = _db.Client.Listen();
-                            await underlyingStream.TryWriteAsync(CreateRequest()).ConfigureAwait(false);
+                            await underlyingStream.TryWriteAsync(CreateRequest(_state.ResumeToken)).ConfigureAwait(false);
                             _state.OnStreamInitialization(cause);
                         }
                         // Wait for a response or end-of-stream
@@ -209,17 +210,17 @@ namespace Google.Cloud.Firestore
 
         internal void Stop(CancellationToken userCancellationToken)
         {
-            if (userCancellationToken.CanBeCanceled)
+            lock (_stateLock)
             {
-                lock (_stateLock)
+                if (!_finished)
                 {
-                    if (!_finished)
+                    if (userCancellationToken.CanBeCanceled)
                     {
                         _stopCancellationTokenRegistration = userCancellationToken.Register(() => _callbackCancellationTokenSource.Cancel());
                     }
+                    _networkCancellationTokenSource.Cancel();
                 }
             }
-            _networkCancellationTokenSource.Cancel();
         }
 
         internal static Target CreateTarget(DocumentReference doc) =>
@@ -236,16 +237,17 @@ namespace Google.Cloud.Firestore
                 TargetId = WatchTargetId
             };
 
-        private ListenRequest CreateRequest()
+        // Visible for testing
+        internal ListenRequest CreateRequest(ByteString resumeToken)
         {
             var request = new ListenRequest
             {
                 AddTarget = _target.Clone(),
                 Database = _db.RootPath
             };
-            if (_state.ResumeToken != null)
+            if (resumeToken != null)
             {
-                request.AddTarget.ResumeToken = _state.ResumeToken;
+                request.AddTarget.ResumeToken = resumeToken;
             }
             return request;
         }
