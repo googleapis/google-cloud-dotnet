@@ -51,7 +51,7 @@ namespace Google.Cloud.Diagnostics.Common
                 catch (Exception)
                 {
                     // TODO(talarico): This is a short term solution to ensure 
-                    // we do not kill a process. See issue #842 to track the long term solution.
+                    // we do not kill a process. See issue #2182 to track the long term solution.
                 }
             }, waitTime);
         }
