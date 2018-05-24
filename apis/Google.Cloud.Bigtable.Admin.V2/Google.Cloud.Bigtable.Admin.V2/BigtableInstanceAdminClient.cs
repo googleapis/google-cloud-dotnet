@@ -2255,11 +2255,6 @@ namespace Google.Cloud.Bigtable.Admin.V2
         }
 
         /// <summary>
-        /// This is a private alpha release of Cloud Bigtable replication. This feature
-        /// is not currently available to most Cloud Bigtable customers. This feature
-        /// might be changed in backward-incompatible ways and is not recommended for
-        /// production use. It is not subject to any SLA or deprecation policy.
-        ///
         /// Creates an app profile within an instance.
         /// </summary>
         /// <param name="parent">
@@ -2296,11 +2291,6 @@ namespace Google.Cloud.Bigtable.Admin.V2
                 callSettings);
 
         /// <summary>
-        /// This is a private alpha release of Cloud Bigtable replication. This feature
-        /// is not currently available to most Cloud Bigtable customers. This feature
-        /// might be changed in backward-incompatible ways and is not recommended for
-        /// production use. It is not subject to any SLA or deprecation policy.
-        ///
         /// Creates an app profile within an instance.
         /// </summary>
         /// <param name="parent">
@@ -2334,11 +2324,6 @@ namespace Google.Cloud.Bigtable.Admin.V2
                 gaxgrpc::CallSettings.FromCancellationToken(cancellationToken));
 
         /// <summary>
-        /// This is a private alpha release of Cloud Bigtable replication. This feature
-        /// is not currently available to most Cloud Bigtable customers. This feature
-        /// might be changed in backward-incompatible ways and is not recommended for
-        /// production use. It is not subject to any SLA or deprecation policy.
-        ///
         /// Creates an app profile within an instance.
         /// </summary>
         /// <param name="parent">
@@ -2375,11 +2360,6 @@ namespace Google.Cloud.Bigtable.Admin.V2
                 callSettings);
 
         /// <summary>
-        /// This is a private alpha release of Cloud Bigtable replication. This feature
-        /// is not currently available to most Cloud Bigtable customers. This feature
-        /// might be changed in backward-incompatible ways and is not recommended for
-        /// production use. It is not subject to any SLA or deprecation policy.
-        ///
         /// Creates an app profile within an instance.
         /// </summary>
         /// <param name="request">
@@ -2399,11 +2379,6 @@ namespace Google.Cloud.Bigtable.Admin.V2
         }
 
         /// <summary>
-        /// This is a private alpha release of Cloud Bigtable replication. This feature
-        /// is not currently available to most Cloud Bigtable customers. This feature
-        /// might be changed in backward-incompatible ways and is not recommended for
-        /// production use. It is not subject to any SLA or deprecation policy.
-        ///
         /// Creates an app profile within an instance.
         /// </summary>
         /// <param name="request">
@@ -2422,11 +2397,6 @@ namespace Google.Cloud.Bigtable.Admin.V2
                 gaxgrpc::CallSettings.FromCancellationToken(cancellationToken));
 
         /// <summary>
-        /// This is a private alpha release of Cloud Bigtable replication. This feature
-        /// is not currently available to most Cloud Bigtable customers. This feature
-        /// might be changed in backward-incompatible ways and is not recommended for
-        /// production use. It is not subject to any SLA or deprecation policy.
-        ///
         /// Creates an app profile within an instance.
         /// </summary>
         /// <param name="request">
@@ -2446,11 +2416,6 @@ namespace Google.Cloud.Bigtable.Admin.V2
         }
 
         /// <summary>
-        /// This is a private alpha release of Cloud Bigtable replication. This feature
-        /// is not currently available to most Cloud Bigtable customers. This feature
-        /// might be changed in backward-incompatible ways and is not recommended for
-        /// production use. It is not subject to any SLA or deprecation policy.
-        ///
         /// Gets information about an app profile.
         /// </summary>
         /// <param name="name">
@@ -2473,11 +2438,6 @@ namespace Google.Cloud.Bigtable.Admin.V2
                 callSettings);
 
         /// <summary>
-        /// This is a private alpha release of Cloud Bigtable replication. This feature
-        /// is not currently available to most Cloud Bigtable customers. This feature
-        /// might be changed in backward-incompatible ways and is not recommended for
-        /// production use. It is not subject to any SLA or deprecation policy.
-        ///
         /// Gets information about an app profile.
         /// </summary>
         /// <param name="name">
@@ -2497,11 +2457,6 @@ namespace Google.Cloud.Bigtable.Admin.V2
                 gaxgrpc::CallSettings.FromCancellationToken(cancellationToken));
 
         /// <summary>
-        /// This is a private alpha release of Cloud Bigtable replication. This feature
-        /// is not currently available to most Cloud Bigtable customers. This feature
-        /// might be changed in backward-incompatible ways and is not recommended for
-        /// production use. It is not subject to any SLA or deprecation policy.
-        ///
         /// Gets information about an app profile.
         /// </summary>
         /// <param name="name">
@@ -2524,11 +2479,6 @@ namespace Google.Cloud.Bigtable.Admin.V2
                 callSettings);
 
         /// <summary>
-        /// This is a private alpha release of Cloud Bigtable replication. This feature
-        /// is not currently available to most Cloud Bigtable customers. This feature
-        /// might be changed in backward-incompatible ways and is not recommended for
-        /// production use. It is not subject to any SLA or deprecation policy.
-        ///
         /// Gets information about an app profile.
         /// </summary>
         /// <param name="request">
@@ -2548,11 +2498,6 @@ namespace Google.Cloud.Bigtable.Admin.V2
         }
 
         /// <summary>
-        /// This is a private alpha release of Cloud Bigtable replication. This feature
-        /// is not currently available to most Cloud Bigtable customers. This feature
-        /// might be changed in backward-incompatible ways and is not recommended for
-        /// production use. It is not subject to any SLA or deprecation policy.
-        ///
         /// Gets information about an app profile.
         /// </summary>
         /// <param name="request">
@@ -2571,11 +2516,6 @@ namespace Google.Cloud.Bigtable.Admin.V2
                 gaxgrpc::CallSettings.FromCancellationToken(cancellationToken));
 
         /// <summary>
-        /// This is a private alpha release of Cloud Bigtable replication. This feature
-        /// is not currently available to most Cloud Bigtable customers. This feature
-        /// might be changed in backward-incompatible ways and is not recommended for
-        /// production use. It is not subject to any SLA or deprecation policy.
-        ///
         /// Gets information about an app profile.
         /// </summary>
         /// <param name="request">
@@ -2595,11 +2535,6 @@ namespace Google.Cloud.Bigtable.Admin.V2
         }
 
         /// <summary>
-        /// This is a private alpha release of Cloud Bigtable replication. This feature
-        /// is not currently available to most Cloud Bigtable customers. This feature
-        /// might be changed in backward-incompatible ways and is not recommended for
-        /// production use. It is not subject to any SLA or deprecation policy.
-        ///
         /// Lists information about app profiles in an instance.
         /// </summary>
         /// <param name="parent">
@@ -2635,11 +2570,6 @@ namespace Google.Cloud.Bigtable.Admin.V2
                 callSettings);
 
         /// <summary>
-        /// This is a private alpha release of Cloud Bigtable replication. This feature
-        /// is not currently available to most Cloud Bigtable customers. This feature
-        /// might be changed in backward-incompatible ways and is not recommended for
-        /// production use. It is not subject to any SLA or deprecation policy.
-        ///
         /// Lists information about app profiles in an instance.
         /// </summary>
         /// <param name="parent">
@@ -2675,11 +2605,6 @@ namespace Google.Cloud.Bigtable.Admin.V2
                 callSettings);
 
         /// <summary>
-        /// This is a private alpha release of Cloud Bigtable replication. This feature
-        /// is not currently available to most Cloud Bigtable customers. This feature
-        /// might be changed in backward-incompatible ways and is not recommended for
-        /// production use. It is not subject to any SLA or deprecation policy.
-        ///
         /// Lists information about app profiles in an instance.
         /// </summary>
         /// <param name="request">
@@ -2699,11 +2624,6 @@ namespace Google.Cloud.Bigtable.Admin.V2
         }
 
         /// <summary>
-        /// This is a private alpha release of Cloud Bigtable replication. This feature
-        /// is not currently available to most Cloud Bigtable customers. This feature
-        /// might be changed in backward-incompatible ways and is not recommended for
-        /// production use. It is not subject to any SLA or deprecation policy.
-        ///
         /// Lists information about app profiles in an instance.
         /// </summary>
         /// <param name="request">
@@ -2723,11 +2643,6 @@ namespace Google.Cloud.Bigtable.Admin.V2
         }
 
         /// <summary>
-        /// This is a private alpha release of Cloud Bigtable replication. This feature
-        /// is not currently available to most Cloud Bigtable customers. This feature
-        /// might be changed in backward-incompatible ways and is not recommended for
-        /// production use. It is not subject to any SLA or deprecation policy.
-        ///
         /// Updates an app profile within an instance.
         /// </summary>
         /// <param name="appProfile">
@@ -2755,11 +2670,6 @@ namespace Google.Cloud.Bigtable.Admin.V2
                 callSettings);
 
         /// <summary>
-        /// This is a private alpha release of Cloud Bigtable replication. This feature
-        /// is not currently available to most Cloud Bigtable customers. This feature
-        /// might be changed in backward-incompatible ways and is not recommended for
-        /// production use. It is not subject to any SLA or deprecation policy.
-        ///
         /// Updates an app profile within an instance.
         /// </summary>
         /// <param name="appProfile">
@@ -2784,11 +2694,6 @@ namespace Google.Cloud.Bigtable.Admin.V2
                 gaxgrpc::CallSettings.FromCancellationToken(cancellationToken));
 
         /// <summary>
-        /// This is a private alpha release of Cloud Bigtable replication. This feature
-        /// is not currently available to most Cloud Bigtable customers. This feature
-        /// might be changed in backward-incompatible ways and is not recommended for
-        /// production use. It is not subject to any SLA or deprecation policy.
-        ///
         /// Updates an app profile within an instance.
         /// </summary>
         /// <param name="appProfile">
@@ -2816,11 +2721,6 @@ namespace Google.Cloud.Bigtable.Admin.V2
                 callSettings);
 
         /// <summary>
-        /// This is a private alpha release of Cloud Bigtable replication. This feature
-        /// is not currently available to most Cloud Bigtable customers. This feature
-        /// might be changed in backward-incompatible ways and is not recommended for
-        /// production use. It is not subject to any SLA or deprecation policy.
-        ///
         /// Updates an app profile within an instance.
         /// </summary>
         /// <param name="request">
@@ -2853,11 +2753,6 @@ namespace Google.Cloud.Bigtable.Admin.V2
                 callSettings);
 
         /// <summary>
-        /// This is a private alpha release of Cloud Bigtable replication. This feature
-        /// is not currently available to most Cloud Bigtable customers. This feature
-        /// might be changed in backward-incompatible ways and is not recommended for
-        /// production use. It is not subject to any SLA or deprecation policy.
-        ///
         /// Updates an app profile within an instance.
         /// </summary>
         /// <param name="request">
@@ -2898,11 +2793,6 @@ namespace Google.Cloud.Bigtable.Admin.V2
                 callSettings);
 
         /// <summary>
-        /// This is a private alpha release of Cloud Bigtable replication. This feature
-        /// is not currently available to most Cloud Bigtable customers. This feature
-        /// might be changed in backward-incompatible ways and is not recommended for
-        /// production use. It is not subject to any SLA or deprecation policy.
-        ///
         /// Deletes an app profile from an instance.
         /// </summary>
         /// <param name="name">
@@ -2925,11 +2815,6 @@ namespace Google.Cloud.Bigtable.Admin.V2
                 callSettings);
 
         /// <summary>
-        /// This is a private alpha release of Cloud Bigtable replication. This feature
-        /// is not currently available to most Cloud Bigtable customers. This feature
-        /// might be changed in backward-incompatible ways and is not recommended for
-        /// production use. It is not subject to any SLA or deprecation policy.
-        ///
         /// Deletes an app profile from an instance.
         /// </summary>
         /// <param name="name">
@@ -2949,11 +2834,6 @@ namespace Google.Cloud.Bigtable.Admin.V2
                 gaxgrpc::CallSettings.FromCancellationToken(cancellationToken));
 
         /// <summary>
-        /// This is a private alpha release of Cloud Bigtable replication. This feature
-        /// is not currently available to most Cloud Bigtable customers. This feature
-        /// might be changed in backward-incompatible ways and is not recommended for
-        /// production use. It is not subject to any SLA or deprecation policy.
-        ///
         /// Deletes an app profile from an instance.
         /// </summary>
         /// <param name="name">
@@ -2973,11 +2853,6 @@ namespace Google.Cloud.Bigtable.Admin.V2
                 callSettings);
 
         /// <summary>
-        /// This is a private alpha release of Cloud Bigtable replication. This feature
-        /// is not currently available to most Cloud Bigtable customers. This feature
-        /// might be changed in backward-incompatible ways and is not recommended for
-        /// production use. It is not subject to any SLA or deprecation policy.
-        ///
         /// Deletes an app profile from an instance.
         /// </summary>
         /// <param name="request">
@@ -2997,11 +2872,6 @@ namespace Google.Cloud.Bigtable.Admin.V2
         }
 
         /// <summary>
-        /// This is a private alpha release of Cloud Bigtable replication. This feature
-        /// is not currently available to most Cloud Bigtable customers. This feature
-        /// might be changed in backward-incompatible ways and is not recommended for
-        /// production use. It is not subject to any SLA or deprecation policy.
-        ///
         /// Deletes an app profile from an instance.
         /// </summary>
         /// <param name="request">
@@ -3020,11 +2890,6 @@ namespace Google.Cloud.Bigtable.Admin.V2
                 gaxgrpc::CallSettings.FromCancellationToken(cancellationToken));
 
         /// <summary>
-        /// This is a private alpha release of Cloud Bigtable replication. This feature
-        /// is not currently available to most Cloud Bigtable customers. This feature
-        /// might be changed in backward-incompatible ways and is not recommended for
-        /// production use. It is not subject to any SLA or deprecation policy.
-        ///
         /// Deletes an app profile from an instance.
         /// </summary>
         /// <param name="request">
@@ -3041,12 +2906,6 @@ namespace Google.Cloud.Bigtable.Admin.V2
         }
 
         /// <summary>
-        /// This is a private alpha release of Cloud Bigtable instance level
-        /// permissions. This feature is not currently available to most Cloud Bigtable
-        /// customers. This feature might be changed in backward-incompatible ways and
-        /// is not recommended for production use. It is not subject to any SLA or
-        /// deprecation policy.
-        ///
         /// Gets the access control policy for an instance resource. Returns an empty
         /// policy if an instance exists but does not have a policy set.
         /// </summary>
@@ -3071,12 +2930,6 @@ namespace Google.Cloud.Bigtable.Admin.V2
                 callSettings);
 
         /// <summary>
-        /// This is a private alpha release of Cloud Bigtable instance level
-        /// permissions. This feature is not currently available to most Cloud Bigtable
-        /// customers. This feature might be changed in backward-incompatible ways and
-        /// is not recommended for production use. It is not subject to any SLA or
-        /// deprecation policy.
-        ///
         /// Gets the access control policy for an instance resource. Returns an empty
         /// policy if an instance exists but does not have a policy set.
         /// </summary>
@@ -3098,12 +2951,6 @@ namespace Google.Cloud.Bigtable.Admin.V2
                 gaxgrpc::CallSettings.FromCancellationToken(cancellationToken));
 
         /// <summary>
-        /// This is a private alpha release of Cloud Bigtable instance level
-        /// permissions. This feature is not currently available to most Cloud Bigtable
-        /// customers. This feature might be changed in backward-incompatible ways and
-        /// is not recommended for production use. It is not subject to any SLA or
-        /// deprecation policy.
-        ///
         /// Gets the access control policy for an instance resource. Returns an empty
         /// policy if an instance exists but does not have a policy set.
         /// </summary>
@@ -3128,12 +2975,6 @@ namespace Google.Cloud.Bigtable.Admin.V2
                 callSettings);
 
         /// <summary>
-        /// This is a private alpha release of Cloud Bigtable instance level
-        /// permissions. This feature is not currently available to most Cloud Bigtable
-        /// customers. This feature might be changed in backward-incompatible ways and
-        /// is not recommended for production use. It is not subject to any SLA or
-        /// deprecation policy.
-        ///
         /// Gets the access control policy for an instance resource. Returns an empty
         /// policy if an instance exists but does not have a policy set.
         /// </summary>
@@ -3154,12 +2995,6 @@ namespace Google.Cloud.Bigtable.Admin.V2
         }
 
         /// <summary>
-        /// This is a private alpha release of Cloud Bigtable instance level
-        /// permissions. This feature is not currently available to most Cloud Bigtable
-        /// customers. This feature might be changed in backward-incompatible ways and
-        /// is not recommended for production use. It is not subject to any SLA or
-        /// deprecation policy.
-        ///
         /// Gets the access control policy for an instance resource. Returns an empty
         /// policy if an instance exists but does not have a policy set.
         /// </summary>
@@ -3179,12 +3014,6 @@ namespace Google.Cloud.Bigtable.Admin.V2
                 gaxgrpc::CallSettings.FromCancellationToken(cancellationToken));
 
         /// <summary>
-        /// This is a private alpha release of Cloud Bigtable instance level
-        /// permissions. This feature is not currently available to most Cloud Bigtable
-        /// customers. This feature might be changed in backward-incompatible ways and
-        /// is not recommended for production use. It is not subject to any SLA or
-        /// deprecation policy.
-        ///
         /// Gets the access control policy for an instance resource. Returns an empty
         /// policy if an instance exists but does not have a policy set.
         /// </summary>
@@ -3205,12 +3034,6 @@ namespace Google.Cloud.Bigtable.Admin.V2
         }
 
         /// <summary>
-        /// This is a private alpha release of Cloud Bigtable instance level
-        /// permissions. This feature is not currently available to most Cloud Bigtable
-        /// customers. This feature might be changed in backward-incompatible ways and
-        /// is not recommended for production use. It is not subject to any SLA or
-        /// deprecation policy.
-        ///
         /// Sets the access control policy on an instance resource. Replaces any
         /// existing policy.
         /// </summary>
@@ -3243,12 +3066,6 @@ namespace Google.Cloud.Bigtable.Admin.V2
                 callSettings);
 
         /// <summary>
-        /// This is a private alpha release of Cloud Bigtable instance level
-        /// permissions. This feature is not currently available to most Cloud Bigtable
-        /// customers. This feature might be changed in backward-incompatible ways and
-        /// is not recommended for production use. It is not subject to any SLA or
-        /// deprecation policy.
-        ///
         /// Sets the access control policy on an instance resource. Replaces any
         /// existing policy.
         /// </summary>
@@ -3278,12 +3095,6 @@ namespace Google.Cloud.Bigtable.Admin.V2
                 gaxgrpc::CallSettings.FromCancellationToken(cancellationToken));
 
         /// <summary>
-        /// This is a private alpha release of Cloud Bigtable instance level
-        /// permissions. This feature is not currently available to most Cloud Bigtable
-        /// customers. This feature might be changed in backward-incompatible ways and
-        /// is not recommended for production use. It is not subject to any SLA or
-        /// deprecation policy.
-        ///
         /// Sets the access control policy on an instance resource. Replaces any
         /// existing policy.
         /// </summary>
@@ -3316,12 +3127,6 @@ namespace Google.Cloud.Bigtable.Admin.V2
                 callSettings);
 
         /// <summary>
-        /// This is a private alpha release of Cloud Bigtable instance level
-        /// permissions. This feature is not currently available to most Cloud Bigtable
-        /// customers. This feature might be changed in backward-incompatible ways and
-        /// is not recommended for production use. It is not subject to any SLA or
-        /// deprecation policy.
-        ///
         /// Sets the access control policy on an instance resource. Replaces any
         /// existing policy.
         /// </summary>
@@ -3342,12 +3147,6 @@ namespace Google.Cloud.Bigtable.Admin.V2
         }
 
         /// <summary>
-        /// This is a private alpha release of Cloud Bigtable instance level
-        /// permissions. This feature is not currently available to most Cloud Bigtable
-        /// customers. This feature might be changed in backward-incompatible ways and
-        /// is not recommended for production use. It is not subject to any SLA or
-        /// deprecation policy.
-        ///
         /// Sets the access control policy on an instance resource. Replaces any
         /// existing policy.
         /// </summary>
@@ -3367,12 +3166,6 @@ namespace Google.Cloud.Bigtable.Admin.V2
                 gaxgrpc::CallSettings.FromCancellationToken(cancellationToken));
 
         /// <summary>
-        /// This is a private alpha release of Cloud Bigtable instance level
-        /// permissions. This feature is not currently available to most Cloud Bigtable
-        /// customers. This feature might be changed in backward-incompatible ways and
-        /// is not recommended for production use. It is not subject to any SLA or
-        /// deprecation policy.
-        ///
         /// Sets the access control policy on an instance resource. Replaces any
         /// existing policy.
         /// </summary>
@@ -3393,12 +3186,6 @@ namespace Google.Cloud.Bigtable.Admin.V2
         }
 
         /// <summary>
-        /// This is a private alpha release of Cloud Bigtable instance level
-        /// permissions. This feature is not currently available to most Cloud Bigtable
-        /// customers. This feature might be changed in backward-incompatible ways and
-        /// is not recommended for production use. It is not subject to any SLA or
-        /// deprecation policy.
-        ///
         /// Returns permissions that the caller has on the specified instance resource.
         /// </summary>
         /// <param name="resource">
@@ -3430,12 +3217,6 @@ namespace Google.Cloud.Bigtable.Admin.V2
                 callSettings);
 
         /// <summary>
-        /// This is a private alpha release of Cloud Bigtable instance level
-        /// permissions. This feature is not currently available to most Cloud Bigtable
-        /// customers. This feature might be changed in backward-incompatible ways and
-        /// is not recommended for production use. It is not subject to any SLA or
-        /// deprecation policy.
-        ///
         /// Returns permissions that the caller has on the specified instance resource.
         /// </summary>
         /// <param name="resource">
@@ -3464,12 +3245,6 @@ namespace Google.Cloud.Bigtable.Admin.V2
                 gaxgrpc::CallSettings.FromCancellationToken(cancellationToken));
 
         /// <summary>
-        /// This is a private alpha release of Cloud Bigtable instance level
-        /// permissions. This feature is not currently available to most Cloud Bigtable
-        /// customers. This feature might be changed in backward-incompatible ways and
-        /// is not recommended for production use. It is not subject to any SLA or
-        /// deprecation policy.
-        ///
         /// Returns permissions that the caller has on the specified instance resource.
         /// </summary>
         /// <param name="resource">
@@ -3501,12 +3276,6 @@ namespace Google.Cloud.Bigtable.Admin.V2
                 callSettings);
 
         /// <summary>
-        /// This is a private alpha release of Cloud Bigtable instance level
-        /// permissions. This feature is not currently available to most Cloud Bigtable
-        /// customers. This feature might be changed in backward-incompatible ways and
-        /// is not recommended for production use. It is not subject to any SLA or
-        /// deprecation policy.
-        ///
         /// Returns permissions that the caller has on the specified instance resource.
         /// </summary>
         /// <param name="request">
@@ -3526,12 +3295,6 @@ namespace Google.Cloud.Bigtable.Admin.V2
         }
 
         /// <summary>
-        /// This is a private alpha release of Cloud Bigtable instance level
-        /// permissions. This feature is not currently available to most Cloud Bigtable
-        /// customers. This feature might be changed in backward-incompatible ways and
-        /// is not recommended for production use. It is not subject to any SLA or
-        /// deprecation policy.
-        ///
         /// Returns permissions that the caller has on the specified instance resource.
         /// </summary>
         /// <param name="request">
@@ -3550,12 +3313,6 @@ namespace Google.Cloud.Bigtable.Admin.V2
                 gaxgrpc::CallSettings.FromCancellationToken(cancellationToken));
 
         /// <summary>
-        /// This is a private alpha release of Cloud Bigtable instance level
-        /// permissions. This feature is not currently available to most Cloud Bigtable
-        /// customers. This feature might be changed in backward-incompatible ways and
-        /// is not recommended for production use. It is not subject to any SLA or
-        /// deprecation policy.
-        ///
         /// Returns permissions that the caller has on the specified instance resource.
         /// </summary>
         /// <param name="request">
@@ -4193,11 +3950,6 @@ namespace Google.Cloud.Bigtable.Admin.V2
         }
 
         /// <summary>
-        /// This is a private alpha release of Cloud Bigtable replication. This feature
-        /// is not currently available to most Cloud Bigtable customers. This feature
-        /// might be changed in backward-incompatible ways and is not recommended for
-        /// production use. It is not subject to any SLA or deprecation policy.
-        ///
         /// Creates an app profile within an instance.
         /// </summary>
         /// <param name="request">
@@ -4218,11 +3970,6 @@ namespace Google.Cloud.Bigtable.Admin.V2
         }
 
         /// <summary>
-        /// This is a private alpha release of Cloud Bigtable replication. This feature
-        /// is not currently available to most Cloud Bigtable customers. This feature
-        /// might be changed in backward-incompatible ways and is not recommended for
-        /// production use. It is not subject to any SLA or deprecation policy.
-        ///
         /// Creates an app profile within an instance.
         /// </summary>
         /// <param name="request">
@@ -4243,11 +3990,6 @@ namespace Google.Cloud.Bigtable.Admin.V2
         }
 
         /// <summary>
-        /// This is a private alpha release of Cloud Bigtable replication. This feature
-        /// is not currently available to most Cloud Bigtable customers. This feature
-        /// might be changed in backward-incompatible ways and is not recommended for
-        /// production use. It is not subject to any SLA or deprecation policy.
-        ///
         /// Gets information about an app profile.
         /// </summary>
         /// <param name="request">
@@ -4268,11 +4010,6 @@ namespace Google.Cloud.Bigtable.Admin.V2
         }
 
         /// <summary>
-        /// This is a private alpha release of Cloud Bigtable replication. This feature
-        /// is not currently available to most Cloud Bigtable customers. This feature
-        /// might be changed in backward-incompatible ways and is not recommended for
-        /// production use. It is not subject to any SLA or deprecation policy.
-        ///
         /// Gets information about an app profile.
         /// </summary>
         /// <param name="request">
@@ -4293,11 +4030,6 @@ namespace Google.Cloud.Bigtable.Admin.V2
         }
 
         /// <summary>
-        /// This is a private alpha release of Cloud Bigtable replication. This feature
-        /// is not currently available to most Cloud Bigtable customers. This feature
-        /// might be changed in backward-incompatible ways and is not recommended for
-        /// production use. It is not subject to any SLA or deprecation policy.
-        ///
         /// Lists information about app profiles in an instance.
         /// </summary>
         /// <param name="request">
@@ -4318,11 +4050,6 @@ namespace Google.Cloud.Bigtable.Admin.V2
         }
 
         /// <summary>
-        /// This is a private alpha release of Cloud Bigtable replication. This feature
-        /// is not currently available to most Cloud Bigtable customers. This feature
-        /// might be changed in backward-incompatible ways and is not recommended for
-        /// production use. It is not subject to any SLA or deprecation policy.
-        ///
         /// Lists information about app profiles in an instance.
         /// </summary>
         /// <param name="request">
@@ -4343,11 +4070,6 @@ namespace Google.Cloud.Bigtable.Admin.V2
         }
 
         /// <summary>
-        /// This is a private alpha release of Cloud Bigtable replication. This feature
-        /// is not currently available to most Cloud Bigtable customers. This feature
-        /// might be changed in backward-incompatible ways and is not recommended for
-        /// production use. It is not subject to any SLA or deprecation policy.
-        ///
         /// Updates an app profile within an instance.
         /// </summary>
         /// <param name="request">
@@ -4369,11 +4091,6 @@ namespace Google.Cloud.Bigtable.Admin.V2
         }
 
         /// <summary>
-        /// This is a private alpha release of Cloud Bigtable replication. This feature
-        /// is not currently available to most Cloud Bigtable customers. This feature
-        /// might be changed in backward-incompatible ways and is not recommended for
-        /// production use. It is not subject to any SLA or deprecation policy.
-        ///
         /// Updates an app profile within an instance.
         /// </summary>
         /// <param name="request">
@@ -4400,11 +4117,6 @@ namespace Google.Cloud.Bigtable.Admin.V2
         public override lro::OperationsClient UpdateAppProfileOperationsClient { get; }
 
         /// <summary>
-        /// This is a private alpha release of Cloud Bigtable replication. This feature
-        /// is not currently available to most Cloud Bigtable customers. This feature
-        /// might be changed in backward-incompatible ways and is not recommended for
-        /// production use. It is not subject to any SLA or deprecation policy.
-        ///
         /// Deletes an app profile from an instance.
         /// </summary>
         /// <param name="request">
@@ -4425,11 +4137,6 @@ namespace Google.Cloud.Bigtable.Admin.V2
         }
 
         /// <summary>
-        /// This is a private alpha release of Cloud Bigtable replication. This feature
-        /// is not currently available to most Cloud Bigtable customers. This feature
-        /// might be changed in backward-incompatible ways and is not recommended for
-        /// production use. It is not subject to any SLA or deprecation policy.
-        ///
         /// Deletes an app profile from an instance.
         /// </summary>
         /// <param name="request">
@@ -4447,12 +4154,6 @@ namespace Google.Cloud.Bigtable.Admin.V2
         }
 
         /// <summary>
-        /// This is a private alpha release of Cloud Bigtable instance level
-        /// permissions. This feature is not currently available to most Cloud Bigtable
-        /// customers. This feature might be changed in backward-incompatible ways and
-        /// is not recommended for production use. It is not subject to any SLA or
-        /// deprecation policy.
-        ///
         /// Gets the access control policy for an instance resource. Returns an empty
         /// policy if an instance exists but does not have a policy set.
         /// </summary>
@@ -4474,12 +4175,6 @@ namespace Google.Cloud.Bigtable.Admin.V2
         }
 
         /// <summary>
-        /// This is a private alpha release of Cloud Bigtable instance level
-        /// permissions. This feature is not currently available to most Cloud Bigtable
-        /// customers. This feature might be changed in backward-incompatible ways and
-        /// is not recommended for production use. It is not subject to any SLA or
-        /// deprecation policy.
-        ///
         /// Gets the access control policy for an instance resource. Returns an empty
         /// policy if an instance exists but does not have a policy set.
         /// </summary>
@@ -4501,12 +4196,6 @@ namespace Google.Cloud.Bigtable.Admin.V2
         }
 
         /// <summary>
-        /// This is a private alpha release of Cloud Bigtable instance level
-        /// permissions. This feature is not currently available to most Cloud Bigtable
-        /// customers. This feature might be changed in backward-incompatible ways and
-        /// is not recommended for production use. It is not subject to any SLA or
-        /// deprecation policy.
-        ///
         /// Sets the access control policy on an instance resource. Replaces any
         /// existing policy.
         /// </summary>
@@ -4528,12 +4217,6 @@ namespace Google.Cloud.Bigtable.Admin.V2
         }
 
         /// <summary>
-        /// This is a private alpha release of Cloud Bigtable instance level
-        /// permissions. This feature is not currently available to most Cloud Bigtable
-        /// customers. This feature might be changed in backward-incompatible ways and
-        /// is not recommended for production use. It is not subject to any SLA or
-        /// deprecation policy.
-        ///
         /// Sets the access control policy on an instance resource. Replaces any
         /// existing policy.
         /// </summary>
@@ -4555,12 +4238,6 @@ namespace Google.Cloud.Bigtable.Admin.V2
         }
 
         /// <summary>
-        /// This is a private alpha release of Cloud Bigtable instance level
-        /// permissions. This feature is not currently available to most Cloud Bigtable
-        /// customers. This feature might be changed in backward-incompatible ways and
-        /// is not recommended for production use. It is not subject to any SLA or
-        /// deprecation policy.
-        ///
         /// Returns permissions that the caller has on the specified instance resource.
         /// </summary>
         /// <param name="request">
@@ -4581,12 +4258,6 @@ namespace Google.Cloud.Bigtable.Admin.V2
         }
 
         /// <summary>
-        /// This is a private alpha release of Cloud Bigtable instance level
-        /// permissions. This feature is not currently available to most Cloud Bigtable
-        /// customers. This feature might be changed in backward-incompatible ways and
-        /// is not recommended for production use. It is not subject to any SLA or
-        /// deprecation policy.
-        ///
         /// Returns permissions that the caller has on the specified instance resource.
         /// </summary>
         /// <param name="request">
