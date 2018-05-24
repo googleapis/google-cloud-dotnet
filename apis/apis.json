@@ -636,6 +636,16 @@
   },
 
   {
+    "id": "Google.Cloud.TextToSpeech.V1",
+    "productName": "Google Cloud Text-to-Speech",
+    "productUrl": "https://cloud.google.com/text-to-speech",
+    "version": "1.0.0-beta00",
+    "type": "grpc",
+    "description": "Recommended Google client library to access the Google Cloud Text-to-Speech API, synthesizes natural-sounding speech by applying powerful neural network models.",
+    "tags": [ "Speech", "Text-to-speech" ],
+  },
+
+  {
     "id": "Google.Cloud.Trace.V1",
     "productName": "Stackdriver Trace",
     "productUrl": "https://cloud.google.com/trace/",
