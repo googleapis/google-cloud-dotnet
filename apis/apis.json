@@ -296,6 +296,8 @@
       "Grpc.Core": "default"
     },
     "testDependencies": {
+      "Google.Api.Gax.Testing": "default",
+      "Grpc.Core.Testing": "default",
       "System.ValueTuple": "4.4.0"
     }
   },
