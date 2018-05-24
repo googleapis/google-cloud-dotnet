@@ -3,7 +3,7 @@
 //     source: google/bigtable/admin/v2/bigtable_table_admin.proto
 // </auto-generated>
 // Original file comments:
-// Copyright 2017 Google Inc.
+// Copyright 2018 Google Inc.
 //
 // Licensed under the Apache License, Version 2.0 (the "License");
 // you may not use this file except in compliance with the License.
@@ -172,13 +172,14 @@ namespace Google.Cloud.Bigtable.Admin.V2 {
       }
 
       /// <summary>
-      /// This is a private alpha release of Cloud Bigtable snapshots. This feature
-      /// is not currently available to most Cloud Bigtable customers. This feature
-      /// might be changed in backward-incompatible ways and is not recommended for
-      /// production use. It is not subject to any SLA or deprecation policy.
-      ///
       /// Creates a new table from the specified snapshot. The target table must
       /// not exist. The snapshot and the table must be in the same instance.
+      ///
+      /// Note: This is a private alpha release of Cloud Bigtable snapshots. This
+      /// feature is not currently available to most Cloud Bigtable customers. This
+      /// feature might be changed in backward-incompatible ways and is not
+      /// recommended for production use. It is not subject to any SLA or deprecation
+      /// policy.
       /// </summary>
       /// <param name="request">The request received from the client.</param>
       /// <param name="context">The context of the server-side call handler being invoked.</param>
@@ -249,11 +250,6 @@ namespace Google.Cloud.Bigtable.Admin.V2 {
       }
 
       /// <summary>
-      /// This is a private alpha release of Cloud Bigtable replication. This feature
-      /// is not currently available to most Cloud Bigtable customers. This feature
-      /// might be changed in backward-incompatible ways and is not recommended for
-      /// production use. It is not subject to any SLA or deprecation policy.
-      ///
       /// Generates a consistency token for a Table, which can be used in
       /// CheckConsistency to check whether mutations to the table that finished
       /// before this call started have been replicated. The tokens will be available
@@ -268,11 +264,6 @@ namespace Google.Cloud.Bigtable.Admin.V2 {
       }
 
       /// <summary>
-      /// This is a private alpha release of Cloud Bigtable replication. This feature
-      /// is not currently available to most Cloud Bigtable customers. This feature
-      /// might be changed in backward-incompatible ways and is not recommended for
-      /// production use. It is not subject to any SLA or deprecation policy.
-      ///
       /// Checks replication consistency based on a consistency token, that is, if
       /// replication has caught up based on the conditions specified in the token
       /// and the check request.
@@ -286,13 +277,14 @@ namespace Google.Cloud.Bigtable.Admin.V2 {
       }
 
       /// <summary>
-      /// This is a private alpha release of Cloud Bigtable snapshots. This feature
-      /// is not currently available to most Cloud Bigtable customers. This feature
-      /// might be changed in backward-incompatible ways and is not recommended for
-      /// production use. It is not subject to any SLA or deprecation policy.
-      ///
       /// Creates a new snapshot in the specified cluster from the specified
       /// source table. The cluster and the table must be in the same instance.
+      ///
+      /// Note: This is a private alpha release of Cloud Bigtable snapshots. This
+      /// feature is not currently available to most Cloud Bigtable customers. This
+      /// feature might be changed in backward-incompatible ways and is not
+      /// recommended for production use. It is not subject to any SLA or deprecation
+      /// policy.
       /// </summary>
       /// <param name="request">The request received from the client.</param>
       /// <param name="context">The context of the server-side call handler being invoked.</param>
@@ -303,12 +295,13 @@ namespace Google.Cloud.Bigtable.Admin.V2 {
       }
 
       /// <summary>
-      /// This is a private alpha release of Cloud Bigtable snapshots. This feature
-      /// is not currently available to most Cloud Bigtable customers. This feature
-      /// might be changed in backward-incompatible ways and is not recommended for
-      /// production use. It is not subject to any SLA or deprecation policy.
-      ///
       /// Gets metadata information about the specified snapshot.
+      ///
+      /// Note: This is a private alpha release of Cloud Bigtable snapshots. This
+      /// feature is not currently available to most Cloud Bigtable customers. This
+      /// feature might be changed in backward-incompatible ways and is not
+      /// recommended for production use. It is not subject to any SLA or deprecation
+      /// policy.
       /// </summary>
       /// <param name="request">The request received from the client.</param>
       /// <param name="context">The context of the server-side call handler being invoked.</param>
@@ -319,12 +312,13 @@ namespace Google.Cloud.Bigtable.Admin.V2 {
       }
 
       /// <summary>
-      /// This is a private alpha release of Cloud Bigtable snapshots. This feature
-      /// is not currently available to most Cloud Bigtable customers. This feature
-      /// might be changed in backward-incompatible ways and is not recommended for
-      /// production use. It is not subject to any SLA or deprecation policy.
-      ///
       /// Lists all snapshots associated with the specified cluster.
+      ///
+      /// Note: This is a private alpha release of Cloud Bigtable snapshots. This
+      /// feature is not currently available to most Cloud Bigtable customers. This
+      /// feature might be changed in backward-incompatible ways and is not
+      /// recommended for production use. It is not subject to any SLA or deprecation
+      /// policy.
       /// </summary>
       /// <param name="request">The request received from the client.</param>
       /// <param name="context">The context of the server-side call handler being invoked.</param>
@@ -335,12 +329,13 @@ namespace Google.Cloud.Bigtable.Admin.V2 {
       }
 
       /// <summary>
-      /// This is a private alpha release of Cloud Bigtable snapshots. This feature
-      /// is not currently available to most Cloud Bigtable customers. This feature
-      /// might be changed in backward-incompatible ways and is not recommended for
-      /// production use. It is not subject to any SLA or deprecation policy.
-      ///
       /// Permanently deletes the specified snapshot.
+      ///
+      /// Note: This is a private alpha release of Cloud Bigtable snapshots. This
+      /// feature is not currently available to most Cloud Bigtable customers. This
+      /// feature might be changed in backward-incompatible ways and is not
+      /// recommended for production use. It is not subject to any SLA or deprecation
+      /// policy.
       /// </summary>
       /// <param name="request">The request received from the client.</param>
       /// <param name="context">The context of the server-side call handler being invoked.</param>
@@ -428,13 +423,14 @@ namespace Google.Cloud.Bigtable.Admin.V2 {
         return CallInvoker.AsyncUnaryCall(__Method_CreateTable, null, options, request);
       }
       /// <summary>
-      /// This is a private alpha release of Cloud Bigtable snapshots. This feature
-      /// is not currently available to most Cloud Bigtable customers. This feature
-      /// might be changed in backward-incompatible ways and is not recommended for
-      /// production use. It is not subject to any SLA or deprecation policy.
-      ///
       /// Creates a new table from the specified snapshot. The target table must
       /// not exist. The snapshot and the table must be in the same instance.
+      ///
+      /// Note: This is a private alpha release of Cloud Bigtable snapshots. This
+      /// feature is not currently available to most Cloud Bigtable customers. This
+      /// feature might be changed in backward-incompatible ways and is not
+      /// recommended for production use. It is not subject to any SLA or deprecation
+      /// policy.
       /// </summary>
       /// <param name="request">The request to send to the server.</param>
       /// <param name="headers">The initial metadata to send with the call. This parameter is optional.</param>
@@ -446,13 +442,14 @@ namespace Google.Cloud.Bigtable.Admin.V2 {
         return CreateTableFromSnapshot(request, new grpc::CallOptions(headers, deadline, cancellationToken));
       }
       /// <summary>
-      /// This is a private alpha release of Cloud Bigtable snapshots. This feature
-      /// is not currently available to most Cloud Bigtable customers. This feature
-      /// might be changed in backward-incompatible ways and is not recommended for
-      /// production use. It is not subject to any SLA or deprecation policy.
-      ///
       /// Creates a new table from the specified snapshot. The target table must
       /// not exist. The snapshot and the table must be in the same instance.
+      ///
+      /// Note: This is a private alpha release of Cloud Bigtable snapshots. This
+      /// feature is not currently available to most Cloud Bigtable customers. This
+      /// feature might be changed in backward-incompatible ways and is not
+      /// recommended for production use. It is not subject to any SLA or deprecation
+      /// policy.
       /// </summary>
       /// <param name="request">The request to send to the server.</param>
       /// <param name="options">The options for the call.</param>
@@ -462,13 +459,14 @@ namespace Google.Cloud.Bigtable.Admin.V2 {
         return CallInvoker.BlockingUnaryCall(__Method_CreateTableFromSnapshot, null, options, request);
       }
       /// <summary>
-      /// This is a private alpha release of Cloud Bigtable snapshots. This feature
-      /// is not currently available to most Cloud Bigtable customers. This feature
-      /// might be changed in backward-incompatible ways and is not recommended for
-      /// production use. It is not subject to any SLA or deprecation policy.
-      ///
       /// Creates a new table from the specified snapshot. The target table must
       /// not exist. The snapshot and the table must be in the same instance.
+      ///
+      /// Note: This is a private alpha release of Cloud Bigtable snapshots. This
+      /// feature is not currently available to most Cloud Bigtable customers. This
+      /// feature might be changed in backward-incompatible ways and is not
+      /// recommended for production use. It is not subject to any SLA or deprecation
+      /// policy.
       /// </summary>
       /// <param name="request">The request to send to the server.</param>
       /// <param name="headers">The initial metadata to send with the call. This parameter is optional.</param>
@@ -480,13 +478,14 @@ namespace Google.Cloud.Bigtable.Admin.V2 {
         return CreateTableFromSnapshotAsync(request, new grpc::CallOptions(headers, deadline, cancellationToken));
       }
       /// <summary>
-      /// This is a private alpha release of Cloud Bigtable snapshots. This feature
-      /// is not currently available to most Cloud Bigtable customers. This feature
-      /// might be changed in backward-incompatible ways and is not recommended for
-      /// production use. It is not subject to any SLA or deprecation policy.
-      ///
       /// Creates a new table from the specified snapshot. The target table must
       /// not exist. The snapshot and the table must be in the same instance.
+      ///
+      /// Note: This is a private alpha release of Cloud Bigtable snapshots. This
+      /// feature is not currently available to most Cloud Bigtable customers. This
+      /// feature might be changed in backward-incompatible ways and is not
+      /// recommended for production use. It is not subject to any SLA or deprecation
+      /// policy.
       /// </summary>
       /// <param name="request">The request to send to the server.</param>
       /// <param name="options">The options for the call.</param>
@@ -736,11 +735,6 @@ namespace Google.Cloud.Bigtable.Admin.V2 {
         return CallInvoker.AsyncUnaryCall(__Method_DropRowRange, null, options, request);
       }
       /// <summary>
-      /// This is a private alpha release of Cloud Bigtable replication. This feature
-      /// is not currently available to most Cloud Bigtable customers. This feature
-      /// might be changed in backward-incompatible ways and is not recommended for
-      /// production use. It is not subject to any SLA or deprecation policy.
-      ///
       /// Generates a consistency token for a Table, which can be used in
       /// CheckConsistency to check whether mutations to the table that finished
       /// before this call started have been replicated. The tokens will be available
@@ -756,11 +750,6 @@ namespace Google.Cloud.Bigtable.Admin.V2 {
         return GenerateConsistencyToken(request, new grpc::CallOptions(headers, deadline, cancellationToken));
       }
       /// <summary>
-      /// This is a private alpha release of Cloud Bigtable replication. This feature
-      /// is not currently available to most Cloud Bigtable customers. This feature
-      /// might be changed in backward-incompatible ways and is not recommended for
-      /// production use. It is not subject to any SLA or deprecation policy.
-      ///
       /// Generates a consistency token for a Table, which can be used in
       /// CheckConsistency to check whether mutations to the table that finished
       /// before this call started have been replicated. The tokens will be available
@@ -774,11 +763,6 @@ namespace Google.Cloud.Bigtable.Admin.V2 {
         return CallInvoker.BlockingUnaryCall(__Method_GenerateConsistencyToken, null, options, request);
       }
       /// <summary>
-      /// This is a private alpha release of Cloud Bigtable replication. This feature
-      /// is not currently available to most Cloud Bigtable customers. This feature
-      /// might be changed in backward-incompatible ways and is not recommended for
-      /// production use. It is not subject to any SLA or deprecation policy.
-      ///
       /// Generates a consistency token for a Table, which can be used in
       /// CheckConsistency to check whether mutations to the table that finished
       /// before this call started have been replicated. The tokens will be available
@@ -794,11 +778,6 @@ namespace Google.Cloud.Bigtable.Admin.V2 {
         return GenerateConsistencyTokenAsync(request, new grpc::CallOptions(headers, deadline, cancellationToken));
       }
       /// <summary>
-      /// This is a private alpha release of Cloud Bigtable replication. This feature
-      /// is not currently available to most Cloud Bigtable customers. This feature
-      /// might be changed in backward-incompatible ways and is not recommended for
-      /// production use. It is not subject to any SLA or deprecation policy.
-      ///
       /// Generates a consistency token for a Table, which can be used in
       /// CheckConsistency to check whether mutations to the table that finished
       /// before this call started have been replicated. The tokens will be available
@@ -812,11 +791,6 @@ namespace Google.Cloud.Bigtable.Admin.V2 {
         return CallInvoker.AsyncUnaryCall(__Method_GenerateConsistencyToken, null, options, request);
       }
       /// <summary>
-      /// This is a private alpha release of Cloud Bigtable replication. This feature
-      /// is not currently available to most Cloud Bigtable customers. This feature
-      /// might be changed in backward-incompatible ways and is not recommended for
-      /// production use. It is not subject to any SLA or deprecation policy.
-      ///
       /// Checks replication consistency based on a consistency token, that is, if
       /// replication has caught up based on the conditions specified in the token
       /// and the check request.
@@ -831,11 +805,6 @@ namespace Google.Cloud.Bigtable.Admin.V2 {
         return CheckConsistency(request, new grpc::CallOptions(headers, deadline, cancellationToken));
       }
       /// <summary>
-      /// This is a private alpha release of Cloud Bigtable replication. This feature
-      /// is not currently available to most Cloud Bigtable customers. This feature
-      /// might be changed in backward-incompatible ways and is not recommended for
-      /// production use. It is not subject to any SLA or deprecation policy.
-      ///
       /// Checks replication consistency based on a consistency token, that is, if
       /// replication has caught up based on the conditions specified in the token
       /// and the check request.
@@ -848,11 +817,6 @@ namespace Google.Cloud.Bigtable.Admin.V2 {
         return CallInvoker.BlockingUnaryCall(__Method_CheckConsistency, null, options, request);
       }
       /// <summary>
-      /// This is a private alpha release of Cloud Bigtable replication. This feature
-      /// is not currently available to most Cloud Bigtable customers. This feature
-      /// might be changed in backward-incompatible ways and is not recommended for
-      /// production use. It is not subject to any SLA or deprecation policy.
-      ///
       /// Checks replication consistency based on a consistency token, that is, if
       /// replication has caught up based on the conditions specified in the token
       /// and the check request.
@@ -867,11 +831,6 @@ namespace Google.Cloud.Bigtable.Admin.V2 {
         return CheckConsistencyAsync(request, new grpc::CallOptions(headers, deadline, cancellationToken));
       }
       /// <summary>
-      /// This is a private alpha release of Cloud Bigtable replication. This feature
-      /// is not currently available to most Cloud Bigtable customers. This feature
-      /// might be changed in backward-incompatible ways and is not recommended for
-      /// production use. It is not subject to any SLA or deprecation policy.
-      ///
       /// Checks replication consistency based on a consistency token, that is, if
       /// replication has caught up based on the conditions specified in the token
       /// and the check request.
@@ -884,13 +843,14 @@ namespace Google.Cloud.Bigtable.Admin.V2 {
         return CallInvoker.AsyncUnaryCall(__Method_CheckConsistency, null, options, request);
       }
       /// <summary>
-      /// This is a private alpha release of Cloud Bigtable snapshots. This feature
-      /// is not currently available to most Cloud Bigtable customers. This feature
-      /// might be changed in backward-incompatible ways and is not recommended for
-      /// production use. It is not subject to any SLA or deprecation policy.
-      ///
       /// Creates a new snapshot in the specified cluster from the specified
       /// source table. The cluster and the table must be in the same instance.
+      ///
+      /// Note: This is a private alpha release of Cloud Bigtable snapshots. This
+      /// feature is not currently available to most Cloud Bigtable customers. This
+      /// feature might be changed in backward-incompatible ways and is not
+      /// recommended for production use. It is not subject to any SLA or deprecation
+      /// policy.
       /// </summary>
       /// <param name="request">The request to send to the server.</param>
       /// <param name="headers">The initial metadata to send with the call. This parameter is optional.</param>
@@ -902,13 +862,14 @@ namespace Google.Cloud.Bigtable.Admin.V2 {
         return SnapshotTable(request, new grpc::CallOptions(headers, deadline, cancellationToken));
       }
       /// <summary>
-      /// This is a private alpha release of Cloud Bigtable snapshots. This feature
-      /// is not currently available to most Cloud Bigtable customers. This feature
-      /// might be changed in backward-incompatible ways and is not recommended for
-      /// production use. It is not subject to any SLA or deprecation policy.
-      ///
       /// Creates a new snapshot in the specified cluster from the specified
       /// source table. The cluster and the table must be in the same instance.
+      ///
+      /// Note: This is a private alpha release of Cloud Bigtable snapshots. This
+      /// feature is not currently available to most Cloud Bigtable customers. This
+      /// feature might be changed in backward-incompatible ways and is not
+      /// recommended for production use. It is not subject to any SLA or deprecation
+      /// policy.
       /// </summary>
       /// <param name="request">The request to send to the server.</param>
       /// <param name="options">The options for the call.</param>
@@ -918,13 +879,14 @@ namespace Google.Cloud.Bigtable.Admin.V2 {
         return CallInvoker.BlockingUnaryCall(__Method_SnapshotTable, null, options, request);
       }
       /// <summary>
-      /// This is a private alpha release of Cloud Bigtable snapshots. This feature
-      /// is not currently available to most Cloud Bigtable customers. This feature
-      /// might be changed in backward-incompatible ways and is not recommended for
-      /// production use. It is not subject to any SLA or deprecation policy.
-      ///
       /// Creates a new snapshot in the specified cluster from the specified
       /// source table. The cluster and the table must be in the same instance.
+      ///
+      /// Note: This is a private alpha release of Cloud Bigtable snapshots. This
+      /// feature is not currently available to most Cloud Bigtable customers. This
+      /// feature might be changed in backward-incompatible ways and is not
+      /// recommended for production use. It is not subject to any SLA or deprecation
+      /// policy.
       /// </summary>
       /// <param name="request">The request to send to the server.</param>
       /// <param name="headers">The initial metadata to send with the call. This parameter is optional.</param>
@@ -936,13 +898,14 @@ namespace Google.Cloud.Bigtable.Admin.V2 {
         return SnapshotTableAsync(request, new grpc::CallOptions(headers, deadline, cancellationToken));
       }
       /// <summary>
-      /// This is a private alpha release of Cloud Bigtable snapshots. This feature
-      /// is not currently available to most Cloud Bigtable customers. This feature
-      /// might be changed in backward-incompatible ways and is not recommended for
-      /// production use. It is not subject to any SLA or deprecation policy.
-      ///
       /// Creates a new snapshot in the specified cluster from the specified
       /// source table. The cluster and the table must be in the same instance.
+      ///
+      /// Note: This is a private alpha release of Cloud Bigtable snapshots. This
+      /// feature is not currently available to most Cloud Bigtable customers. This
+      /// feature might be changed in backward-incompatible ways and is not
+      /// recommended for production use. It is not subject to any SLA or deprecation
+      /// policy.
       /// </summary>
       /// <param name="request">The request to send to the server.</param>
       /// <param name="options">The options for the call.</param>
@@ -952,12 +915,13 @@ namespace Google.Cloud.Bigtable.Admin.V2 {
         return CallInvoker.AsyncUnaryCall(__Method_SnapshotTable, null, options, request);
       }
       /// <summary>
-      /// This is a private alpha release of Cloud Bigtable snapshots. This feature
-      /// is not currently available to most Cloud Bigtable customers. This feature
-      /// might be changed in backward-incompatible ways and is not recommended for
-      /// production use. It is not subject to any SLA or deprecation policy.
-      ///
       /// Gets metadata information about the specified snapshot.
+      ///
+      /// Note: This is a private alpha release of Cloud Bigtable snapshots. This
+      /// feature is not currently available to most Cloud Bigtable customers. This
+      /// feature might be changed in backward-incompatible ways and is not
+      /// recommended for production use. It is not subject to any SLA or deprecation
+      /// policy.
       /// </summary>
       /// <param name="request">The request to send to the server.</param>
       /// <param name="headers">The initial metadata to send with the call. This parameter is optional.</param>
@@ -969,12 +933,13 @@ namespace Google.Cloud.Bigtable.Admin.V2 {
         return GetSnapshot(request, new grpc::CallOptions(headers, deadline, cancellationToken));
       }
       /// <summary>
-      /// This is a private alpha release of Cloud Bigtable snapshots. This feature
-      /// is not currently available to most Cloud Bigtable customers. This feature
-      /// might be changed in backward-incompatible ways and is not recommended for
-      /// production use. It is not subject to any SLA or deprecation policy.
-      ///
       /// Gets metadata information about the specified snapshot.
+      ///
+      /// Note: This is a private alpha release of Cloud Bigtable snapshots. This
+      /// feature is not currently available to most Cloud Bigtable customers. This
+      /// feature might be changed in backward-incompatible ways and is not
+      /// recommended for production use. It is not subject to any SLA or deprecation
+      /// policy.
       /// </summary>
       /// <param name="request">The request to send to the server.</param>
       /// <param name="options">The options for the call.</param>
@@ -984,12 +949,13 @@ namespace Google.Cloud.Bigtable.Admin.V2 {
         return CallInvoker.BlockingUnaryCall(__Method_GetSnapshot, null, options, request);
       }
       /// <summary>
-      /// This is a private alpha release of Cloud Bigtable snapshots. This feature
-      /// is not currently available to most Cloud Bigtable customers. This feature
-      /// might be changed in backward-incompatible ways and is not recommended for
-      /// production use. It is not subject to any SLA or deprecation policy.
-      ///
       /// Gets metadata information about the specified snapshot.
+      ///
+      /// Note: This is a private alpha release of Cloud Bigtable snapshots. This
+      /// feature is not currently available to most Cloud Bigtable customers. This
+      /// feature might be changed in backward-incompatible ways and is not
+      /// recommended for production use. It is not subject to any SLA or deprecation
+      /// policy.
       /// </summary>
       /// <param name="request">The request to send to the server.</param>
       /// <param name="headers">The initial metadata to send with the call. This parameter is optional.</param>
@@ -1001,12 +967,13 @@ namespace Google.Cloud.Bigtable.Admin.V2 {
         return GetSnapshotAsync(request, new grpc::CallOptions(headers, deadline, cancellationToken));
       }
       /// <summary>
-      /// This is a private alpha release of Cloud Bigtable snapshots. This feature
-      /// is not currently available to most Cloud Bigtable customers. This feature
-      /// might be changed in backward-incompatible ways and is not recommended for
-      /// production use. It is not subject to any SLA or deprecation policy.
-      ///
       /// Gets metadata information about the specified snapshot.
+      ///
+      /// Note: This is a private alpha release of Cloud Bigtable snapshots. This
+      /// feature is not currently available to most Cloud Bigtable customers. This
+      /// feature might be changed in backward-incompatible ways and is not
+      /// recommended for production use. It is not subject to any SLA or deprecation
+      /// policy.
       /// </summary>
       /// <param name="request">The request to send to the server.</param>
       /// <param name="options">The options for the call.</param>
@@ -1016,12 +983,13 @@ namespace Google.Cloud.Bigtable.Admin.V2 {
         return CallInvoker.AsyncUnaryCall(__Method_GetSnapshot, null, options, request);
       }
       /// <summary>
-      /// This is a private alpha release of Cloud Bigtable snapshots. This feature
-      /// is not currently available to most Cloud Bigtable customers. This feature
-      /// might be changed in backward-incompatible ways and is not recommended for
-      /// production use. It is not subject to any SLA or deprecation policy.
-      ///
       /// Lists all snapshots associated with the specified cluster.
+      ///
+      /// Note: This is a private alpha release of Cloud Bigtable snapshots. This
+      /// feature is not currently available to most Cloud Bigtable customers. This
+      /// feature might be changed in backward-incompatible ways and is not
+      /// recommended for production use. It is not subject to any SLA or deprecation
+      /// policy.
       /// </summary>
       /// <param name="request">The request to send to the server.</param>
       /// <param name="headers">The initial metadata to send with the call. This parameter is optional.</param>
@@ -1033,12 +1001,13 @@ namespace Google.Cloud.Bigtable.Admin.V2 {
         return ListSnapshots(request, new grpc::CallOptions(headers, deadline, cancellationToken));
       }
       /// <summary>
-      /// This is a private alpha release of Cloud Bigtable snapshots. This feature
-      /// is not currently available to most Cloud Bigtable customers. This feature
-      /// might be changed in backward-incompatible ways and is not recommended for
-      /// production use. It is not subject to any SLA or deprecation policy.
-      ///
       /// Lists all snapshots associated with the specified cluster.
+      ///
+      /// Note: This is a private alpha release of Cloud Bigtable snapshots. This
+      /// feature is not currently available to most Cloud Bigtable customers. This
+      /// feature might be changed in backward-incompatible ways and is not
+      /// recommended for production use. It is not subject to any SLA or deprecation
+      /// policy.
       /// </summary>
       /// <param name="request">The request to send to the server.</param>
       /// <param name="options">The options for the call.</param>
@@ -1048,12 +1017,13 @@ namespace Google.Cloud.Bigtable.Admin.V2 {
         return CallInvoker.BlockingUnaryCall(__Method_ListSnapshots, null, options, request);
       }
       /// <summary>
-      /// This is a private alpha release of Cloud Bigtable snapshots. This feature
-      /// is not currently available to most Cloud Bigtable customers. This feature
-      /// might be changed in backward-incompatible ways and is not recommended for
-      /// production use. It is not subject to any SLA or deprecation policy.
-      ///
       /// Lists all snapshots associated with the specified cluster.
+      ///
+      /// Note: This is a private alpha release of Cloud Bigtable snapshots. This
+      /// feature is not currently available to most Cloud Bigtable customers. This
+      /// feature might be changed in backward-incompatible ways and is not
+      /// recommended for production use. It is not subject to any SLA or deprecation
+      /// policy.
       /// </summary>
       /// <param name="request">The request to send to the server.</param>
       /// <param name="headers">The initial metadata to send with the call. This parameter is optional.</param>
@@ -1065,12 +1035,13 @@ namespace Google.Cloud.Bigtable.Admin.V2 {
         return ListSnapshotsAsync(request, new grpc::CallOptions(headers, deadline, cancellationToken));
       }
       /// <summary>
-      /// This is a private alpha release of Cloud Bigtable snapshots. This feature
-      /// is not currently available to most Cloud Bigtable customers. This feature
-      /// might be changed in backward-incompatible ways and is not recommended for
-      /// production use. It is not subject to any SLA or deprecation policy.
-      ///
       /// Lists all snapshots associated with the specified cluster.
+      ///
+      /// Note: This is a private alpha release of Cloud Bigtable snapshots. This
+      /// feature is not currently available to most Cloud Bigtable customers. This
+      /// feature might be changed in backward-incompatible ways and is not
+      /// recommended for production use. It is not subject to any SLA or deprecation
+      /// policy.
       /// </summary>
       /// <param name="request">The request to send to the server.</param>
       /// <param name="options">The options for the call.</param>
@@ -1080,12 +1051,13 @@ namespace Google.Cloud.Bigtable.Admin.V2 {
         return CallInvoker.AsyncUnaryCall(__Method_ListSnapshots, null, options, request);
       }
       /// <summary>
-      /// This is a private alpha release of Cloud Bigtable snapshots. This feature
-      /// is not currently available to most Cloud Bigtable customers. This feature
-      /// might be changed in backward-incompatible ways and is not recommended for
-      /// production use. It is not subject to any SLA or deprecation policy.
-      ///
       /// Permanently deletes the specified snapshot.
+      ///
+      /// Note: This is a private alpha release of Cloud Bigtable snapshots. This
+      /// feature is not currently available to most Cloud Bigtable customers. This
+      /// feature might be changed in backward-incompatible ways and is not
+      /// recommended for production use. It is not subject to any SLA or deprecation
+      /// policy.
       /// </summary>
       /// <param name="request">The request to send to the server.</param>
       /// <param name="headers">The initial metadata to send with the call. This parameter is optional.</param>
@@ -1097,12 +1069,13 @@ namespace Google.Cloud.Bigtable.Admin.V2 {
         return DeleteSnapshot(request, new grpc::CallOptions(headers, deadline, cancellationToken));
       }
       /// <summary>
-      /// This is a private alpha release of Cloud Bigtable snapshots. This feature
-      /// is not currently available to most Cloud Bigtable customers. This feature
-      /// might be changed in backward-incompatible ways and is not recommended for
-      /// production use. It is not subject to any SLA or deprecation policy.
-      ///
       /// Permanently deletes the specified snapshot.
+      ///
+      /// Note: This is a private alpha release of Cloud Bigtable snapshots. This
+      /// feature is not currently available to most Cloud Bigtable customers. This
+      /// feature might be changed in backward-incompatible ways and is not
+      /// recommended for production use. It is not subject to any SLA or deprecation
+      /// policy.
       /// </summary>
       /// <param name="request">The request to send to the server.</param>
       /// <param name="options">The options for the call.</param>
@@ -1112,12 +1085,13 @@ namespace Google.Cloud.Bigtable.Admin.V2 {
         return CallInvoker.BlockingUnaryCall(__Method_DeleteSnapshot, null, options, request);
       }
       /// <summary>
-      /// This is a private alpha release of Cloud Bigtable snapshots. This feature
-      /// is not currently available to most Cloud Bigtable customers. This feature
-      /// might be changed in backward-incompatible ways and is not recommended for
-      /// production use. It is not subject to any SLA or deprecation policy.
-      ///
       /// Permanently deletes the specified snapshot.
+      ///
+      /// Note: This is a private alpha release of Cloud Bigtable snapshots. This
+      /// feature is not currently available to most Cloud Bigtable customers. This
+      /// feature might be changed in backward-incompatible ways and is not
+      /// recommended for production use. It is not subject to any SLA or deprecation
+      /// policy.
       /// </summary>
       /// <param name="request">The request to send to the server.</param>
       /// <param name="headers">The initial metadata to send with the call. This parameter is optional.</param>
@@ -1129,12 +1103,13 @@ namespace Google.Cloud.Bigtable.Admin.V2 {
         return DeleteSnapshotAsync(request, new grpc::CallOptions(headers, deadline, cancellationToken));
       }
       /// <summary>
-      /// This is a private alpha release of Cloud Bigtable snapshots. This feature
-      /// is not currently available to most Cloud Bigtable customers. This feature
-      /// might be changed in backward-incompatible ways and is not recommended for
-      /// production use. It is not subject to any SLA or deprecation policy.
-      ///
       /// Permanently deletes the specified snapshot.
+      ///
+      /// Note: This is a private alpha release of Cloud Bigtable snapshots. This
+      /// feature is not currently available to most Cloud Bigtable customers. This
+      /// feature might be changed in backward-incompatible ways and is not
+      /// recommended for production use. It is not subject to any SLA or deprecation
+      /// policy.
       /// </summary>
       /// <param name="request">The request to send to the server.</param>
       /// <param name="options">The options for the call.</param>

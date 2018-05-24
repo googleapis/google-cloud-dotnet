@@ -546,13 +546,13 @@ namespace Google.Cloud.Bigtable.Admin.V2 {
   }
 
   /// <summary>
-  /// This is a private alpha release of Cloud Bigtable snapshots. This feature
-  /// is not currently available to most Cloud Bigtable customers. This feature
-  /// might be changed in backward-incompatible ways and is not recommended for
-  /// production use. It is not subject to any SLA or deprecation policy.
-  ///
   /// Request message for
   /// [google.bigtable.admin.v2.BigtableTableAdmin.CreateTableFromSnapshot][google.bigtable.admin.v2.BigtableTableAdmin.CreateTableFromSnapshot]
+  ///
+  /// Note: This is a private alpha release of Cloud Bigtable snapshots. This
+  /// feature is not currently available to most Cloud Bigtable customers. This
+  /// feature might be changed in backward-incompatible ways and is not recommended
+  /// for production use. It is not subject to any SLA or deprecation policy.
   /// </summary>
   public sealed partial class CreateTableFromSnapshotRequest : pb::IMessage<CreateTableFromSnapshotRequest> {
     private static readonly pb::MessageParser<CreateTableFromSnapshotRequest> _parser = new pb::MessageParser<CreateTableFromSnapshotRequest>(() => new CreateTableFromSnapshotRequest());
@@ -2107,11 +2107,6 @@ namespace Google.Cloud.Bigtable.Admin.V2 {
   }
 
   /// <summary>
-  /// This is a private alpha release of Cloud Bigtable replication. This feature
-  /// is not currently available to most Cloud Bigtable customers. This feature
-  /// might be changed in backward-incompatible ways and is not recommended for
-  /// production use. It is not subject to any SLA or deprecation policy.
-  ///
   /// Request message for
   /// [google.bigtable.admin.v2.BigtableTableAdmin.GenerateConsistencyToken][google.bigtable.admin.v2.BigtableTableAdmin.GenerateConsistencyToken]
   /// </summary>
@@ -2250,11 +2245,6 @@ namespace Google.Cloud.Bigtable.Admin.V2 {
   }
 
   /// <summary>
-  /// This is a private alpha release of Cloud Bigtable replication. This feature
-  /// is not currently available to most Cloud Bigtable customers. This feature
-  /// might be changed in backward-incompatible ways and is not recommended for
-  /// production use. It is not subject to any SLA or deprecation policy.
-  ///
   /// Response message for
   /// [google.bigtable.admin.v2.BigtableTableAdmin.GenerateConsistencyToken][google.bigtable.admin.v2.BigtableTableAdmin.GenerateConsistencyToken]
   /// </summary>
@@ -2391,11 +2381,6 @@ namespace Google.Cloud.Bigtable.Admin.V2 {
   }
 
   /// <summary>
-  /// This is a private alpha release of Cloud Bigtable replication. This feature
-  /// is not currently available to most Cloud Bigtable customers. This feature
-  /// might be changed in backward-incompatible ways and is not recommended for
-  /// production use. It is not subject to any SLA or deprecation policy.
-  ///
   /// Request message for
   /// [google.bigtable.admin.v2.BigtableTableAdmin.CheckConsistency][google.bigtable.admin.v2.BigtableTableAdmin.CheckConsistency]
   /// </summary>
@@ -2565,11 +2550,6 @@ namespace Google.Cloud.Bigtable.Admin.V2 {
   }
 
   /// <summary>
-  /// This is a private alpha release of Cloud Bigtable replication. This feature
-  /// is not currently available to most Cloud Bigtable customers. This feature
-  /// might be changed in backward-incompatible ways and is not recommended for
-  /// production use. It is not subject to any SLA or deprecation policy.
-  ///
   /// Response message for
   /// [google.bigtable.admin.v2.BigtableTableAdmin.CheckConsistency][google.bigtable.admin.v2.BigtableTableAdmin.CheckConsistency]
   /// </summary>
@@ -2707,13 +2687,13 @@ namespace Google.Cloud.Bigtable.Admin.V2 {
   }
 
   /// <summary>
-  /// This is a private alpha release of Cloud Bigtable snapshots. This feature
-  /// is not currently available to most Cloud Bigtable customers. This feature
-  /// might be changed in backward-incompatible ways and is not recommended for
-  /// production use. It is not subject to any SLA or deprecation policy.
-  ///
   /// Request message for
   /// [google.bigtable.admin.v2.BigtableTableAdmin.SnapshotTable][google.bigtable.admin.v2.BigtableTableAdmin.SnapshotTable]
+  ///
+  /// Note: This is a private alpha release of Cloud Bigtable snapshots. This
+  /// feature is not currently available to most Cloud Bigtable customers. This
+  /// feature might be changed in backward-incompatible ways and is not recommended
+  /// for production use. It is not subject to any SLA or deprecation policy.
   /// </summary>
   public sealed partial class SnapshotTableRequest : pb::IMessage<SnapshotTableRequest> {
     private static readonly pb::MessageParser<SnapshotTableRequest> _parser = new pb::MessageParser<SnapshotTableRequest>(() => new SnapshotTableRequest());
@@ -2988,13 +2968,13 @@ namespace Google.Cloud.Bigtable.Admin.V2 {
   }
 
   /// <summary>
-  /// This is a private alpha release of Cloud Bigtable snapshots. This feature
-  /// is not currently available to most Cloud Bigtable customers. This feature
-  /// might be changed in backward-incompatible ways and is not recommended for
-  /// production use. It is not subject to any SLA or deprecation policy.
-  ///
   /// Request message for
   /// [google.bigtable.admin.v2.BigtableTableAdmin.GetSnapshot][google.bigtable.admin.v2.BigtableTableAdmin.GetSnapshot]
+  ///
+  /// Note: This is a private alpha release of Cloud Bigtable snapshots. This
+  /// feature is not currently available to most Cloud Bigtable customers. This
+  /// feature might be changed in backward-incompatible ways and is not recommended
+  /// for production use. It is not subject to any SLA or deprecation policy.
   /// </summary>
   public sealed partial class GetSnapshotRequest : pb::IMessage<GetSnapshotRequest> {
     private static readonly pb::MessageParser<GetSnapshotRequest> _parser = new pb::MessageParser<GetSnapshotRequest>(() => new GetSnapshotRequest());
@@ -3131,13 +3111,13 @@ namespace Google.Cloud.Bigtable.Admin.V2 {
   }
 
   /// <summary>
-  /// This is a private alpha release of Cloud Bigtable snapshots. This feature
-  /// is not currently available to most Cloud Bigtable customers. This feature
-  /// might be changed in backward-incompatible ways and is not recommended for
-  /// production use. It is not subject to any SLA or deprecation policy.
-  ///
   /// Request message for
   /// [google.bigtable.admin.v2.BigtableTableAdmin.ListSnapshots][google.bigtable.admin.v2.BigtableTableAdmin.ListSnapshots]
+  ///
+  /// Note: This is a private alpha release of Cloud Bigtable snapshots. This
+  /// feature is not currently available to most Cloud Bigtable customers. This
+  /// feature might be changed in backward-incompatible ways and is not recommended
+  /// for production use. It is not subject to any SLA or deprecation policy.
   /// </summary>
   public sealed partial class ListSnapshotsRequest : pb::IMessage<ListSnapshotsRequest> {
     private static readonly pb::MessageParser<ListSnapshotsRequest> _parser = new pb::MessageParser<ListSnapshotsRequest>(() => new ListSnapshotsRequest());
@@ -3338,13 +3318,13 @@ namespace Google.Cloud.Bigtable.Admin.V2 {
   }
 
   /// <summary>
-  /// This is a private alpha release of Cloud Bigtable snapshots. This feature
-  /// is not currently available to most Cloud Bigtable customers. This feature
-  /// might be changed in backward-incompatible ways and is not recommended for
-  /// production use. It is not subject to any SLA or deprecation policy.
-  ///
   /// Response message for
   /// [google.bigtable.admin.v2.BigtableTableAdmin.ListSnapshots][google.bigtable.admin.v2.BigtableTableAdmin.ListSnapshots]
+  ///
+  /// Note: This is a private alpha release of Cloud Bigtable snapshots. This
+  /// feature is not currently available to most Cloud Bigtable customers. This
+  /// feature might be changed in backward-incompatible ways and is not recommended
+  /// for production use. It is not subject to any SLA or deprecation policy.
   /// </summary>
   public sealed partial class ListSnapshotsResponse : pb::IMessage<ListSnapshotsResponse> {
     private static readonly pb::MessageParser<ListSnapshotsResponse> _parser = new pb::MessageParser<ListSnapshotsResponse>(() => new ListSnapshotsResponse());
@@ -3504,13 +3484,13 @@ namespace Google.Cloud.Bigtable.Admin.V2 {
   }
 
   /// <summary>
-  /// This is a private alpha release of Cloud Bigtable snapshots. This feature
-  /// is not currently available to most Cloud Bigtable customers. This feature
-  /// might be changed in backward-incompatible ways and is not recommended for
-  /// production use. It is not subject to any SLA or deprecation policy.
-  ///
   /// Request message for
   /// [google.bigtable.admin.v2.BigtableTableAdmin.DeleteSnapshot][google.bigtable.admin.v2.BigtableTableAdmin.DeleteSnapshot]
+  ///
+  /// Note: This is a private alpha release of Cloud Bigtable snapshots. This
+  /// feature is not currently available to most Cloud Bigtable customers. This
+  /// feature might be changed in backward-incompatible ways and is not recommended
+  /// for production use. It is not subject to any SLA or deprecation policy.
   /// </summary>
   public sealed partial class DeleteSnapshotRequest : pb::IMessage<DeleteSnapshotRequest> {
     private static readonly pb::MessageParser<DeleteSnapshotRequest> _parser = new pb::MessageParser<DeleteSnapshotRequest>(() => new DeleteSnapshotRequest());
@@ -3647,12 +3627,12 @@ namespace Google.Cloud.Bigtable.Admin.V2 {
   }
 
   /// <summary>
-  /// This is a private alpha release of Cloud Bigtable snapshots. This feature
-  /// is not currently available to most Cloud Bigtable customers. This feature
-  /// might be changed in backward-incompatible ways and is not recommended for
-  /// production use. It is not subject to any SLA or deprecation policy.
-  ///
   /// The metadata for the Operation returned by SnapshotTable.
+  ///
+  /// Note: This is a private alpha release of Cloud Bigtable snapshots. This
+  /// feature is not currently available to most Cloud Bigtable customers. This
+  /// feature might be changed in backward-incompatible ways and is not recommended
+  /// for production use. It is not subject to any SLA or deprecation policy.
   /// </summary>
   public sealed partial class SnapshotTableMetadata : pb::IMessage<SnapshotTableMetadata> {
     private static readonly pb::MessageParser<SnapshotTableMetadata> _parser = new pb::MessageParser<SnapshotTableMetadata>(() => new SnapshotTableMetadata());
@@ -3867,12 +3847,12 @@ namespace Google.Cloud.Bigtable.Admin.V2 {
   }
 
   /// <summary>
-  /// This is a private alpha release of Cloud Bigtable snapshots. This feature
-  /// is not currently available to most Cloud Bigtable customers. This feature
-  /// might be changed in backward-incompatible ways and is not recommended for
-  /// production use. It is not subject to any SLA or deprecation policy.
-  ///
   /// The metadata for the Operation returned by CreateTableFromSnapshot.
+  ///
+  /// Note: This is a private alpha release of Cloud Bigtable snapshots. This
+  /// feature is not currently available to most Cloud Bigtable customers. This
+  /// feature might be changed in backward-incompatible ways and is not recommended
+  /// for production use. It is not subject to any SLA or deprecation policy.
   /// </summary>
   public sealed partial class CreateTableFromSnapshotMetadata : pb::IMessage<CreateTableFromSnapshotMetadata> {
     private static readonly pb::MessageParser<CreateTableFromSnapshotMetadata> _parser = new pb::MessageParser<CreateTableFromSnapshotMetadata>(() => new CreateTableFromSnapshotMetadata());

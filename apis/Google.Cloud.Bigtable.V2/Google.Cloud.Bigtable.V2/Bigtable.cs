@@ -176,11 +176,6 @@ namespace Google.Cloud.Bigtable.V2 {
     public const int AppProfileIdFieldNumber = 5;
     private string appProfileId_ = "";
     /// <summary>
-    /// This is a private alpha release of Cloud Bigtable replication. This feature
-    /// is not currently available to most Cloud Bigtable customers. This feature
-    /// might be changed in backward-incompatible ways and is not recommended for
-    /// production use. It is not subject to any SLA or deprecation policy.
-    ///
     /// This value specifies routing for replication. If not specified, the
     /// "default" application profile will be used.
     /// </summary>
@@ -1069,11 +1064,6 @@ namespace Google.Cloud.Bigtable.V2 {
     public const int AppProfileIdFieldNumber = 2;
     private string appProfileId_ = "";
     /// <summary>
-    /// This is a private alpha release of Cloud Bigtable replication. This feature
-    /// is not currently available to most Cloud Bigtable customers. This feature
-    /// might be changed in backward-incompatible ways and is not recommended for
-    /// production use. It is not subject to any SLA or deprecation policy.
-    ///
     /// This value specifies routing for replication. If not specified, the
     /// "default" application profile will be used.
     /// </summary>
@@ -1420,11 +1410,6 @@ namespace Google.Cloud.Bigtable.V2 {
     public const int AppProfileIdFieldNumber = 4;
     private string appProfileId_ = "";
     /// <summary>
-    /// This is a private alpha release of Cloud Bigtable replication. This feature
-    /// is not currently available to most Cloud Bigtable customers. This feature
-    /// might be changed in backward-incompatible ways and is not recommended for
-    /// production use. It is not subject to any SLA or deprecation policy.
-    ///
     /// This value specifies routing for replication. If not specified, the
     /// "default" application profile will be used.
     /// </summary>
@@ -1751,11 +1736,6 @@ namespace Google.Cloud.Bigtable.V2 {
     public const int AppProfileIdFieldNumber = 3;
     private string appProfileId_ = "";
     /// <summary>
-    /// This is a private alpha release of Cloud Bigtable replication. This feature
-    /// is not currently available to most Cloud Bigtable customers. This feature
-    /// might be changed in backward-incompatible ways and is not recommended for
-    /// production use. It is not subject to any SLA or deprecation policy.
-    ///
     /// This value specifies routing for replication. If not specified, the
     /// "default" application profile will be used.
     /// </summary>
@@ -2428,11 +2408,6 @@ namespace Google.Cloud.Bigtable.V2 {
     public const int AppProfileIdFieldNumber = 7;
     private string appProfileId_ = "";
     /// <summary>
-    /// This is a private alpha release of Cloud Bigtable replication. This feature
-    /// is not currently available to most Cloud Bigtable customers. This feature
-    /// might be changed in backward-incompatible ways and is not recommended for
-    /// production use. It is not subject to any SLA or deprecation policy.
-    ///
     /// This value specifies routing for replication. If not specified, the
     /// "default" application profile will be used.
     /// </summary>
@@ -2862,11 +2837,6 @@ namespace Google.Cloud.Bigtable.V2 {
     public const int AppProfileIdFieldNumber = 4;
     private string appProfileId_ = "";
     /// <summary>
-    /// This is a private alpha release of Cloud Bigtable replication. This feature
-    /// is not currently available to most Cloud Bigtable customers. This feature
-    /// might be changed in backward-incompatible ways and is not recommended for
-    /// production use. It is not subject to any SLA or deprecation policy.
-    ///
     /// This value specifies routing for replication. If not specified, the
     /// "default" application profile will be used.
     /// </summary>

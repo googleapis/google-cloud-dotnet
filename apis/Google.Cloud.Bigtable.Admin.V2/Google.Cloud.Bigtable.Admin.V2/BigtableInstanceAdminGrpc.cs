@@ -3,7 +3,7 @@
 //     source: google/bigtable/admin/v2/bigtable_instance_admin.proto
 // </auto-generated>
 // Original file comments:
-// Copyright 2017 Google Inc.
+// Copyright 2018 Google Inc.
 //
 // Licensed under the Apache License, Version 2.0 (the "License");
 // you may not use this file except in compliance with the License.
@@ -327,11 +327,6 @@ namespace Google.Cloud.Bigtable.Admin.V2 {
       }
 
       /// <summary>
-      /// This is a private alpha release of Cloud Bigtable replication. This feature
-      /// is not currently available to most Cloud Bigtable customers. This feature
-      /// might be changed in backward-incompatible ways and is not recommended for
-      /// production use. It is not subject to any SLA or deprecation policy.
-      ///
       /// Creates an app profile within an instance.
       /// </summary>
       /// <param name="request">The request received from the client.</param>
@@ -343,11 +338,6 @@ namespace Google.Cloud.Bigtable.Admin.V2 {
       }
 
       /// <summary>
-      /// This is a private alpha release of Cloud Bigtable replication. This feature
-      /// is not currently available to most Cloud Bigtable customers. This feature
-      /// might be changed in backward-incompatible ways and is not recommended for
-      /// production use. It is not subject to any SLA or deprecation policy.
-      ///
       /// Gets information about an app profile.
       /// </summary>
       /// <param name="request">The request received from the client.</param>
@@ -359,11 +349,6 @@ namespace Google.Cloud.Bigtable.Admin.V2 {
       }
 
       /// <summary>
-      /// This is a private alpha release of Cloud Bigtable replication. This feature
-      /// is not currently available to most Cloud Bigtable customers. This feature
-      /// might be changed in backward-incompatible ways and is not recommended for
-      /// production use. It is not subject to any SLA or deprecation policy.
-      ///
       /// Lists information about app profiles in an instance.
       /// </summary>
       /// <param name="request">The request received from the client.</param>
@@ -375,11 +360,6 @@ namespace Google.Cloud.Bigtable.Admin.V2 {
       }
 
       /// <summary>
-      /// This is a private alpha release of Cloud Bigtable replication. This feature
-      /// is not currently available to most Cloud Bigtable customers. This feature
-      /// might be changed in backward-incompatible ways and is not recommended for
-      /// production use. It is not subject to any SLA or deprecation policy.
-      ///
       /// Updates an app profile within an instance.
       /// </summary>
       /// <param name="request">The request received from the client.</param>
@@ -391,11 +371,6 @@ namespace Google.Cloud.Bigtable.Admin.V2 {
       }
 
       /// <summary>
-      /// This is a private alpha release of Cloud Bigtable replication. This feature
-      /// is not currently available to most Cloud Bigtable customers. This feature
-      /// might be changed in backward-incompatible ways and is not recommended for
-      /// production use. It is not subject to any SLA or deprecation policy.
-      ///
       /// Deletes an app profile from an instance.
       /// </summary>
       /// <param name="request">The request received from the client.</param>
@@ -407,12 +382,6 @@ namespace Google.Cloud.Bigtable.Admin.V2 {
       }
 
       /// <summary>
-      /// This is a private alpha release of Cloud Bigtable instance level
-      /// permissions. This feature is not currently available to most Cloud Bigtable
-      /// customers. This feature might be changed in backward-incompatible ways and
-      /// is not recommended for production use. It is not subject to any SLA or
-      /// deprecation policy.
-      ///
       /// Gets the access control policy for an instance resource. Returns an empty
       /// policy if an instance exists but does not have a policy set.
       /// </summary>
@@ -425,12 +394,6 @@ namespace Google.Cloud.Bigtable.Admin.V2 {
       }
 
       /// <summary>
-      /// This is a private alpha release of Cloud Bigtable instance level
-      /// permissions. This feature is not currently available to most Cloud Bigtable
-      /// customers. This feature might be changed in backward-incompatible ways and
-      /// is not recommended for production use. It is not subject to any SLA or
-      /// deprecation policy.
-      ///
       /// Sets the access control policy on an instance resource. Replaces any
       /// existing policy.
       /// </summary>
@@ -443,12 +406,6 @@ namespace Google.Cloud.Bigtable.Admin.V2 {
       }
 
       /// <summary>
-      /// This is a private alpha release of Cloud Bigtable instance level
-      /// permissions. This feature is not currently available to most Cloud Bigtable
-      /// customers. This feature might be changed in backward-incompatible ways and
-      /// is not recommended for production use. It is not subject to any SLA or
-      /// deprecation policy.
-      ///
       /// Returns permissions that the caller has on the specified instance resource.
       /// </summary>
       /// <param name="request">The request received from the client.</param>
@@ -969,11 +926,6 @@ namespace Google.Cloud.Bigtable.Admin.V2 {
         return CallInvoker.AsyncUnaryCall(__Method_DeleteCluster, null, options, request);
       }
       /// <summary>
-      /// This is a private alpha release of Cloud Bigtable replication. This feature
-      /// is not currently available to most Cloud Bigtable customers. This feature
-      /// might be changed in backward-incompatible ways and is not recommended for
-      /// production use. It is not subject to any SLA or deprecation policy.
-      ///
       /// Creates an app profile within an instance.
       /// </summary>
       /// <param name="request">The request to send to the server.</param>
@@ -986,11 +938,6 @@ namespace Google.Cloud.Bigtable.Admin.V2 {
         return CreateAppProfile(request, new grpc::CallOptions(headers, deadline, cancellationToken));
       }
       /// <summary>
-      /// This is a private alpha release of Cloud Bigtable replication. This feature
-      /// is not currently available to most Cloud Bigtable customers. This feature
-      /// might be changed in backward-incompatible ways and is not recommended for
-      /// production use. It is not subject to any SLA or deprecation policy.
-      ///
       /// Creates an app profile within an instance.
       /// </summary>
       /// <param name="request">The request to send to the server.</param>
@@ -1001,11 +948,6 @@ namespace Google.Cloud.Bigtable.Admin.V2 {
         return CallInvoker.BlockingUnaryCall(__Method_CreateAppProfile, null, options, request);
       }
       /// <summary>
-      /// This is a private alpha release of Cloud Bigtable replication. This feature
-      /// is not currently available to most Cloud Bigtable customers. This feature
-      /// might be changed in backward-incompatible ways and is not recommended for
-      /// production use. It is not subject to any SLA or deprecation policy.
-      ///
       /// Creates an app profile within an instance.
       /// </summary>
       /// <param name="request">The request to send to the server.</param>
@@ -1018,11 +960,6 @@ namespace Google.Cloud.Bigtable.Admin.V2 {
         return CreateAppProfileAsync(request, new grpc::CallOptions(headers, deadline, cancellationToken));
       }
       /// <summary>
-      /// This is a private alpha release of Cloud Bigtable replication. This feature
-      /// is not currently available to most Cloud Bigtable customers. This feature
-      /// might be changed in backward-incompatible ways and is not recommended for
-      /// production use. It is not subject to any SLA or deprecation policy.
-      ///
       /// Creates an app profile within an instance.
       /// </summary>
       /// <param name="request">The request to send to the server.</param>
@@ -1033,11 +970,6 @@ namespace Google.Cloud.Bigtable.Admin.V2 {
         return CallInvoker.AsyncUnaryCall(__Method_CreateAppProfile, null, options, request);
       }
       /// <summary>
-      /// This is a private alpha release of Cloud Bigtable replication. This feature
-      /// is not currently available to most Cloud Bigtable customers. This feature
-      /// might be changed in backward-incompatible ways and is not recommended for
-      /// production use. It is not subject to any SLA or deprecation policy.
-      ///
       /// Gets information about an app profile.
       /// </summary>
       /// <param name="request">The request to send to the server.</param>
@@ -1050,11 +982,6 @@ namespace Google.Cloud.Bigtable.Admin.V2 {
         return GetAppProfile(request, new grpc::CallOptions(headers, deadline, cancellationToken));
       }
       /// <summary>
-      /// This is a private alpha release of Cloud Bigtable replication. This feature
-      /// is not currently available to most Cloud Bigtable customers. This feature
-      /// might be changed in backward-incompatible ways and is not recommended for
-      /// production use. It is not subject to any SLA or deprecation policy.
-      ///
       /// Gets information about an app profile.
       /// </summary>
       /// <param name="request">The request to send to the server.</param>
@@ -1065,11 +992,6 @@ namespace Google.Cloud.Bigtable.Admin.V2 {
         return CallInvoker.BlockingUnaryCall(__Method_GetAppProfile, null, options, request);
       }
       /// <summary>
-      /// This is a private alpha release of Cloud Bigtable replication. This feature
-      /// is not currently available to most Cloud Bigtable customers. This feature
-      /// might be changed in backward-incompatible ways and is not recommended for
-      /// production use. It is not subject to any SLA or deprecation policy.
-      ///
       /// Gets information about an app profile.
       /// </summary>
       /// <param name="request">The request to send to the server.</param>
@@ -1082,11 +1004,6 @@ namespace Google.Cloud.Bigtable.Admin.V2 {
         return GetAppProfileAsync(request, new grpc::CallOptions(headers, deadline, cancellationToken));
       }
       /// <summary>
-      /// This is a private alpha release of Cloud Bigtable replication. This feature
-      /// is not currently available to most Cloud Bigtable customers. This feature
-      /// might be changed in backward-incompatible ways and is not recommended for
-      /// production use. It is not subject to any SLA or deprecation policy.
-      ///
       /// Gets information about an app profile.
       /// </summary>
       /// <param name="request">The request to send to the server.</param>
@@ -1097,11 +1014,6 @@ namespace Google.Cloud.Bigtable.Admin.V2 {
         return CallInvoker.AsyncUnaryCall(__Method_GetAppProfile, null, options, request);
       }
       /// <summary>
-      /// This is a private alpha release of Cloud Bigtable replication. This feature
-      /// is not currently available to most Cloud Bigtable customers. This feature
-      /// might be changed in backward-incompatible ways and is not recommended for
-      /// production use. It is not subject to any SLA or deprecation policy.
-      ///
       /// Lists information about app profiles in an instance.
       /// </summary>
       /// <param name="request">The request to send to the server.</param>
@@ -1114,11 +1026,6 @@ namespace Google.Cloud.Bigtable.Admin.V2 {
         return ListAppProfiles(request, new grpc::CallOptions(headers, deadline, cancellationToken));
       }
       /// <summary>
-      /// This is a private alpha release of Cloud Bigtable replication. This feature
-      /// is not currently available to most Cloud Bigtable customers. This feature
-      /// might be changed in backward-incompatible ways and is not recommended for
-      /// production use. It is not subject to any SLA or deprecation policy.
-      ///
       /// Lists information about app profiles in an instance.
       /// </summary>
       /// <param name="request">The request to send to the server.</param>
@@ -1129,11 +1036,6 @@ namespace Google.Cloud.Bigtable.Admin.V2 {
         return CallInvoker.BlockingUnaryCall(__Method_ListAppProfiles, null, options, request);
       }
       /// <summary>
-      /// This is a private alpha release of Cloud Bigtable replication. This feature
-      /// is not currently available to most Cloud Bigtable customers. This feature
-      /// might be changed in backward-incompatible ways and is not recommended for
-      /// production use. It is not subject to any SLA or deprecation policy.
-      ///
       /// Lists information about app profiles in an instance.
       /// </summary>
       /// <param name="request">The request to send to the server.</param>
@@ -1146,11 +1048,6 @@ namespace Google.Cloud.Bigtable.Admin.V2 {
         return ListAppProfilesAsync(request, new grpc::CallOptions(headers, deadline, cancellationToken));
       }
       /// <summary>
-      /// This is a private alpha release of Cloud Bigtable replication. This feature
-      /// is not currently available to most Cloud Bigtable customers. This feature
-      /// might be changed in backward-incompatible ways and is not recommended for
-      /// production use. It is not subject to any SLA or deprecation policy.
-      ///
       /// Lists information about app profiles in an instance.
       /// </summary>
       /// <param name="request">The request to send to the server.</param>
@@ -1161,11 +1058,6 @@ namespace Google.Cloud.Bigtable.Admin.V2 {
         return CallInvoker.AsyncUnaryCall(__Method_ListAppProfiles, null, options, request);
       }
       /// <summary>
-      /// This is a private alpha release of Cloud Bigtable replication. This feature
-      /// is not currently available to most Cloud Bigtable customers. This feature
-      /// might be changed in backward-incompatible ways and is not recommended for
-      /// production use. It is not subject to any SLA or deprecation policy.
-      ///
       /// Updates an app profile within an instance.
       /// </summary>
       /// <param name="request">The request to send to the server.</param>
@@ -1178,11 +1070,6 @@ namespace Google.Cloud.Bigtable.Admin.V2 {
         return UpdateAppProfile(request, new grpc::CallOptions(headers, deadline, cancellationToken));
       }
       /// <summary>
-      /// This is a private alpha release of Cloud Bigtable replication. This feature
-      /// is not currently available to most Cloud Bigtable customers. This feature
-      /// might be changed in backward-incompatible ways and is not recommended for
-      /// production use. It is not subject to any SLA or deprecation policy.
-      ///
       /// Updates an app profile within an instance.
       /// </summary>
       /// <param name="request">The request to send to the server.</param>
@@ -1193,11 +1080,6 @@ namespace Google.Cloud.Bigtable.Admin.V2 {
         return CallInvoker.BlockingUnaryCall(__Method_UpdateAppProfile, null, options, request);
       }
       /// <summary>
-      /// This is a private alpha release of Cloud Bigtable replication. This feature
-      /// is not currently available to most Cloud Bigtable customers. This feature
-      /// might be changed in backward-incompatible ways and is not recommended for
-      /// production use. It is not subject to any SLA or deprecation policy.
-      ///
       /// Updates an app profile within an instance.
       /// </summary>
       /// <param name="request">The request to send to the server.</param>
@@ -1210,11 +1092,6 @@ namespace Google.Cloud.Bigtable.Admin.V2 {
         return UpdateAppProfileAsync(request, new grpc::CallOptions(headers, deadline, cancellationToken));
       }
       /// <summary>
-      /// This is a private alpha release of Cloud Bigtable replication. This feature
-      /// is not currently available to most Cloud Bigtable customers. This feature
-      /// might be changed in backward-incompatible ways and is not recommended for
-      /// production use. It is not subject to any SLA or deprecation policy.
-      ///
       /// Updates an app profile within an instance.
       /// </summary>
       /// <param name="request">The request to send to the server.</param>
@@ -1225,11 +1102,6 @@ namespace Google.Cloud.Bigtable.Admin.V2 {
         return CallInvoker.AsyncUnaryCall(__Method_UpdateAppProfile, null, options, request);
       }
       /// <summary>
-      /// This is a private alpha release of Cloud Bigtable replication. This feature
-      /// is not currently available to most Cloud Bigtable customers. This feature
-      /// might be changed in backward-incompatible ways and is not recommended for
-      /// production use. It is not subject to any SLA or deprecation policy.
-      ///
       /// Deletes an app profile from an instance.
       /// </summary>
       /// <param name="request">The request to send to the server.</param>
@@ -1242,11 +1114,6 @@ namespace Google.Cloud.Bigtable.Admin.V2 {
         return DeleteAppProfile(request, new grpc::CallOptions(headers, deadline, cancellationToken));
       }
       /// <summary>
-      /// This is a private alpha release of Cloud Bigtable replication. This feature
-      /// is not currently available to most Cloud Bigtable customers. This feature
-      /// might be changed in backward-incompatible ways and is not recommended for
-      /// production use. It is not subject to any SLA or deprecation policy.
-      ///
       /// Deletes an app profile from an instance.
       /// </summary>
       /// <param name="request">The request to send to the server.</param>
@@ -1257,11 +1124,6 @@ namespace Google.Cloud.Bigtable.Admin.V2 {
         return CallInvoker.BlockingUnaryCall(__Method_DeleteAppProfile, null, options, request);
       }
       /// <summary>
-      /// This is a private alpha release of Cloud Bigtable replication. This feature
-      /// is not currently available to most Cloud Bigtable customers. This feature
-      /// might be changed in backward-incompatible ways and is not recommended for
-      /// production use. It is not subject to any SLA or deprecation policy.
-      ///
       /// Deletes an app profile from an instance.
       /// </summary>
       /// <param name="request">The request to send to the server.</param>
@@ -1274,11 +1136,6 @@ namespace Google.Cloud.Bigtable.Admin.V2 {
         return DeleteAppProfileAsync(request, new grpc::CallOptions(headers, deadline, cancellationToken));
       }
       /// <summary>
-      /// This is a private alpha release of Cloud Bigtable replication. This feature
-      /// is not currently available to most Cloud Bigtable customers. This feature
-      /// might be changed in backward-incompatible ways and is not recommended for
-      /// production use. It is not subject to any SLA or deprecation policy.
-      ///
       /// Deletes an app profile from an instance.
       /// </summary>
       /// <param name="request">The request to send to the server.</param>
@@ -1289,12 +1146,6 @@ namespace Google.Cloud.Bigtable.Admin.V2 {
         return CallInvoker.AsyncUnaryCall(__Method_DeleteAppProfile, null, options, request);
       }
       /// <summary>
-      /// This is a private alpha release of Cloud Bigtable instance level
-      /// permissions. This feature is not currently available to most Cloud Bigtable
-      /// customers. This feature might be changed in backward-incompatible ways and
-      /// is not recommended for production use. It is not subject to any SLA or
-      /// deprecation policy.
-      ///
       /// Gets the access control policy for an instance resource. Returns an empty
       /// policy if an instance exists but does not have a policy set.
       /// </summary>
@@ -1308,12 +1159,6 @@ namespace Google.Cloud.Bigtable.Admin.V2 {
         return GetIamPolicy(request, new grpc::CallOptions(headers, deadline, cancellationToken));
       }
       /// <summary>
-      /// This is a private alpha release of Cloud Bigtable instance level
-      /// permissions. This feature is not currently available to most Cloud Bigtable
-      /// customers. This feature might be changed in backward-incompatible ways and
-      /// is not recommended for production use. It is not subject to any SLA or
-      /// deprecation policy.
-      ///
       /// Gets the access control policy for an instance resource. Returns an empty
       /// policy if an instance exists but does not have a policy set.
       /// </summary>
@@ -1325,12 +1170,6 @@ namespace Google.Cloud.Bigtable.Admin.V2 {
         return CallInvoker.BlockingUnaryCall(__Method_GetIamPolicy, null, options, request);
       }
       /// <summary>
-      /// This is a private alpha release of Cloud Bigtable instance level
-      /// permissions. This feature is not currently available to most Cloud Bigtable
-      /// customers. This feature might be changed in backward-incompatible ways and
-      /// is not recommended for production use. It is not subject to any SLA or
-      /// deprecation policy.
-      ///
       /// Gets the access control policy for an instance resource. Returns an empty
       /// policy if an instance exists but does not have a policy set.
       /// </summary>
@@ -1344,12 +1183,6 @@ namespace Google.Cloud.Bigtable.Admin.V2 {
         return GetIamPolicyAsync(request, new grpc::CallOptions(headers, deadline, cancellationToken));
       }
       /// <summary>
-      /// This is a private alpha release of Cloud Bigtable instance level
-      /// permissions. This feature is not currently available to most Cloud Bigtable
-      /// customers. This feature might be changed in backward-incompatible ways and
-      /// is not recommended for production use. It is not subject to any SLA or
-      /// deprecation policy.
-      ///
       /// Gets the access control policy for an instance resource. Returns an empty
       /// policy if an instance exists but does not have a policy set.
       /// </summary>
@@ -1361,12 +1194,6 @@ namespace Google.Cloud.Bigtable.Admin.V2 {
         return CallInvoker.AsyncUnaryCall(__Method_GetIamPolicy, null, options, request);
       }
       /// <summary>
-      /// This is a private alpha release of Cloud Bigtable instance level
-      /// permissions. This feature is not currently available to most Cloud Bigtable
-      /// customers. This feature might be changed in backward-incompatible ways and
-      /// is not recommended for production use. It is not subject to any SLA or
-      /// deprecation policy.
-      ///
       /// Sets the access control policy on an instance resource. Replaces any
       /// existing policy.
       /// </summary>
@@ -1380,12 +1207,6 @@ namespace Google.Cloud.Bigtable.Admin.V2 {
         return SetIamPolicy(request, new grpc::CallOptions(headers, deadline, cancellationToken));
       }
       /// <summary>
-      /// This is a private alpha release of Cloud Bigtable instance level
-      /// permissions. This feature is not currently available to most Cloud Bigtable
-      /// customers. This feature might be changed in backward-incompatible ways and
-      /// is not recommended for production use. It is not subject to any SLA or
-      /// deprecation policy.
-      ///
       /// Sets the access control policy on an instance resource. Replaces any
       /// existing policy.
       /// </summary>
@@ -1397,12 +1218,6 @@ namespace Google.Cloud.Bigtable.Admin.V2 {
         return CallInvoker.BlockingUnaryCall(__Method_SetIamPolicy, null, options, request);
       }
       /// <summary>
-      /// This is a private alpha release of Cloud Bigtable instance level
-      /// permissions. This feature is not currently available to most Cloud Bigtable
-      /// customers. This feature might be changed in backward-incompatible ways and
-      /// is not recommended for production use. It is not subject to any SLA or
-      /// deprecation policy.
-      ///
       /// Sets the access control policy on an instance resource. Replaces any
       /// existing policy.
       /// </summary>
@@ -1416,12 +1231,6 @@ namespace Google.Cloud.Bigtable.Admin.V2 {
         return SetIamPolicyAsync(request, new grpc::CallOptions(headers, deadline, cancellationToken));
       }
       /// <summary>
-      /// This is a private alpha release of Cloud Bigtable instance level
-      /// permissions. This feature is not currently available to most Cloud Bigtable
-      /// customers. This feature might be changed in backward-incompatible ways and
-      /// is not recommended for production use. It is not subject to any SLA or
-      /// deprecation policy.
-      ///
       /// Sets the access control policy on an instance resource. Replaces any
       /// existing policy.
       /// </summary>
@@ -1433,12 +1242,6 @@ namespace Google.Cloud.Bigtable.Admin.V2 {
         return CallInvoker.AsyncUnaryCall(__Method_SetIamPolicy, null, options, request);
       }
       /// <summary>
-      /// This is a private alpha release of Cloud Bigtable instance level
-      /// permissions. This feature is not currently available to most Cloud Bigtable
-      /// customers. This feature might be changed in backward-incompatible ways and
-      /// is not recommended for production use. It is not subject to any SLA or
-      /// deprecation policy.
-      ///
       /// Returns permissions that the caller has on the specified instance resource.
       /// </summary>
       /// <param name="request">The request to send to the server.</param>
@@ -1451,12 +1254,6 @@ namespace Google.Cloud.Bigtable.Admin.V2 {
         return TestIamPermissions(request, new grpc::CallOptions(headers, deadline, cancellationToken));
       }
       /// <summary>
-      /// This is a private alpha release of Cloud Bigtable instance level
-      /// permissions. This feature is not currently available to most Cloud Bigtable
-      /// customers. This feature might be changed in backward-incompatible ways and
-      /// is not recommended for production use. It is not subject to any SLA or
-      /// deprecation policy.
-      ///
       /// Returns permissions that the caller has on the specified instance resource.
       /// </summary>
       /// <param name="request">The request to send to the server.</param>
@@ -1467,12 +1264,6 @@ namespace Google.Cloud.Bigtable.Admin.V2 {
         return CallInvoker.BlockingUnaryCall(__Method_TestIamPermissions, null, options, request);
       }
       /// <summary>
-      /// This is a private alpha release of Cloud Bigtable instance level
-      /// permissions. This feature is not currently available to most Cloud Bigtable
-      /// customers. This feature might be changed in backward-incompatible ways and
-      /// is not recommended for production use. It is not subject to any SLA or
-      /// deprecation policy.
-      ///
       /// Returns permissions that the caller has on the specified instance resource.
       /// </summary>
       /// <param name="request">The request to send to the server.</param>
@@ -1485,12 +1276,6 @@ namespace Google.Cloud.Bigtable.Admin.V2 {
         return TestIamPermissionsAsync(request, new grpc::CallOptions(headers, deadline, cancellationToken));
       }
       /// <summary>
-      /// This is a private alpha release of Cloud Bigtable instance level
-      /// permissions. This feature is not currently available to most Cloud Bigtable
-      /// customers. This feature might be changed in backward-incompatible ways and
-      /// is not recommended for production use. It is not subject to any SLA or
-      /// deprecation policy.
-      ///
       /// Returns permissions that the caller has on the specified instance resource.
       /// </summary>
       /// <param name="request">The request to send to the server.</param>

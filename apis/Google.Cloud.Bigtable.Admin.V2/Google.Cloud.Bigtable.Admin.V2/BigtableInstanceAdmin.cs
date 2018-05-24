@@ -2924,11 +2924,6 @@ namespace Google.Cloud.Bigtable.Admin.V2 {
   }
 
   /// <summary>
-  /// This is a private alpha release of Cloud Bigtable replication. This feature
-  /// is not currently available to most Cloud Bigtable customers. This feature
-  /// might be changed in backward-incompatible ways and is not recommended for
-  /// production use. It is not subject to any SLA or deprecation policy.
-  ///
   /// Request message for BigtableInstanceAdmin.CreateAppProfile.
   /// </summary>
   public sealed partial class CreateAppProfileRequest : pb::IMessage<CreateAppProfileRequest> {
@@ -3168,11 +3163,6 @@ namespace Google.Cloud.Bigtable.Admin.V2 {
   }
 
   /// <summary>
-  /// This is a private alpha release of Cloud Bigtable replication. This feature
-  /// is not currently available to most Cloud Bigtable customers. This feature
-  /// might be changed in backward-incompatible ways and is not recommended for
-  /// production use. It is not subject to any SLA or deprecation policy.
-  ///
   /// Request message for BigtableInstanceAdmin.GetAppProfile.
   /// </summary>
   public sealed partial class GetAppProfileRequest : pb::IMessage<GetAppProfileRequest> {
@@ -3309,11 +3299,6 @@ namespace Google.Cloud.Bigtable.Admin.V2 {
   }
 
   /// <summary>
-  /// This is a private alpha release of Cloud Bigtable replication. This feature
-  /// is not currently available to most Cloud Bigtable customers. This feature
-  /// might be changed in backward-incompatible ways and is not recommended for
-  /// production use. It is not subject to any SLA or deprecation policy.
-  ///
   /// Request message for BigtableInstanceAdmin.ListAppProfiles.
   /// </summary>
   public sealed partial class ListAppProfilesRequest : pb::IMessage<ListAppProfilesRequest> {
@@ -3482,11 +3467,6 @@ namespace Google.Cloud.Bigtable.Admin.V2 {
   }
 
   /// <summary>
-  /// This is a private alpha release of Cloud Bigtable replication. This feature
-  /// is not currently available to most Cloud Bigtable customers. This feature
-  /// might be changed in backward-incompatible ways and is not recommended for
-  /// production use. It is not subject to any SLA or deprecation policy.
-  ///
   /// Response message for BigtableInstanceAdmin.ListAppProfiles.
   /// </summary>
   public sealed partial class ListAppProfilesResponse : pb::IMessage<ListAppProfilesResponse> {
@@ -3647,11 +3627,6 @@ namespace Google.Cloud.Bigtable.Admin.V2 {
   }
 
   /// <summary>
-  /// This is a private alpha release of Cloud Bigtable replication. This feature
-  /// is not currently available to most Cloud Bigtable customers. This feature
-  /// might be changed in backward-incompatible ways and is not recommended for
-  /// production use. It is not subject to any SLA or deprecation policy.
-  ///
   /// Request message for BigtableInstanceAdmin.UpdateAppProfile.
   /// </summary>
   public sealed partial class UpdateAppProfileRequest : pb::IMessage<UpdateAppProfileRequest> {
@@ -3862,11 +3837,6 @@ namespace Google.Cloud.Bigtable.Admin.V2 {
   }
 
   /// <summary>
-  /// This is a private alpha release of Cloud Bigtable replication. This feature
-  /// is not currently available to most Cloud Bigtable customers. This feature
-  /// might be changed in backward-incompatible ways and is not recommended for
-  /// production use. It is not subject to any SLA or deprecation policy.
-  ///
   /// Request message for BigtableInstanceAdmin.DeleteAppProfile.
   /// </summary>
   public sealed partial class DeleteAppProfileRequest : pb::IMessage<DeleteAppProfileRequest> {
@@ -4034,11 +4004,6 @@ namespace Google.Cloud.Bigtable.Admin.V2 {
   }
 
   /// <summary>
-  /// This is a private alpha release of Cloud Bigtable replication. This feature
-  /// is not currently available to most Cloud Bigtable customers. This feature
-  /// might be changed in backward-incompatible ways and is not recommended for
-  /// production use. It is not subject to any SLA or deprecation policy.
-  ///
   /// The metadata for the Operation returned by UpdateAppProfile.
   /// </summary>
   public sealed partial class UpdateAppProfileMetadata : pb::IMessage<UpdateAppProfileMetadata> {

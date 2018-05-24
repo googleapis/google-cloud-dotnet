@@ -131,7 +131,7 @@ namespace Google.Cloud.Bigtable.Admin.V2 {
     /// (`OutputOnly`)
     /// The unique name of the table. Values are of the form
     /// `projects/&lt;project>/instances/&lt;instance>/tables/[_a-zA-Z0-9][-_.a-zA-Z0-9]*`.
-    /// Views: `NAME_ONLY`, `SCHEMA_VIEW`, `FULL`
+    /// Views: `NAME_ONLY`, `SCHEMA_VIEW`, `REPLICATION_VIEW`, `FULL`
     /// </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     public string Name {
@@ -147,17 +147,12 @@ namespace Google.Cloud.Bigtable.Admin.V2 {
         = new pbc::MapField<string, global::Google.Cloud.Bigtable.Admin.V2.Table.Types.ClusterState>.Codec(pb::FieldCodec.ForString(10), pb::FieldCodec.ForMessage(18, global::Google.Cloud.Bigtable.Admin.V2.Table.Types.ClusterState.Parser), 18);
     private readonly pbc::MapField<string, global::Google.Cloud.Bigtable.Admin.V2.Table.Types.ClusterState> clusterStates_ = new pbc::MapField<string, global::Google.Cloud.Bigtable.Admin.V2.Table.Types.ClusterState>();
     /// <summary>
-    /// This is a private alpha release of Cloud Bigtable replication. This feature
-    /// is not currently available to most Cloud Bigtable customers. This feature
-    /// might be changed in backward-incompatible ways and is not recommended for
-    /// production use. It is not subject to any SLA or deprecation policy.
-    ///
     /// (`OutputOnly`)
     /// Map from cluster ID to per-cluster table state.
     /// If it could not be determined whether or not the table has data in a
     /// particular cluster (for example, if its zone is unavailable), then
     /// there will be an entry for the cluster with UNKNOWN `replication_status`.
-    /// Views: `FULL`
+    /// Views: `REPLICATION_VIEW`, `FULL`
     /// </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     public pbc::MapField<string, global::Google.Cloud.Bigtable.Admin.V2.Table.Types.ClusterState> ClusterStates {
@@ -184,7 +179,7 @@ namespace Google.Cloud.Bigtable.Admin.V2 {
     private global::Google.Cloud.Bigtable.Admin.V2.Table.Types.TimestampGranularity granularity_ = 0;
     /// <summary>
     /// (`CreationOnly`)
-    /// The granularity (e.g. `MILLIS`, `MICROS`) at which timestamps are stored in
+    /// The granularity (i.e. `MILLIS`) at which timestamps are stored in
     /// this table. Timestamps not matching the granularity will be rejected.
     /// If unspecified at creation time, the value will be set to `MILLIS`.
     /// Views: `SCHEMA_VIEW`, `FULL`
@@ -350,12 +345,6 @@ namespace Google.Cloud.Bigtable.Admin.V2 {
         /// </summary>
         [pbr::OriginalName("SCHEMA_VIEW")] SchemaView = 2,
         /// <summary>
-        /// This is a private alpha release of Cloud Bigtable replication. This
-        /// feature is not currently available to most Cloud Bigtable customers. This
-        /// feature might be changed in backward-incompatible ways and is not
-        /// recommended for production use. It is not subject to any SLA or
-        /// deprecation policy.
-        ///
         /// Only populates `name` and fields related to the table's
         /// replication state.
         /// </summary>
@@ -367,11 +356,6 @@ namespace Google.Cloud.Bigtable.Admin.V2 {
       }
 
       /// <summary>
-      /// This is a private alpha release of Cloud Bigtable replication. This feature
-      /// is not currently available to most Cloud Bigtable customers. This feature
-      /// might be changed in backward-incompatible ways and is not recommended for
-      /// production use. It is not subject to any SLA or deprecation policy.
-      ///
       /// The state of a table's data in a particular cluster.
       /// </summary>
       public sealed partial class ClusterState : pb::IMessage<ClusterState> {
@@ -520,27 +504,23 @@ namespace Google.Cloud.Bigtable.Admin.V2 {
             /// <summary>
             /// The cluster was recently created, and the table must finish copying
             /// over pre-existing data from other clusters before it can begin
-            /// receiving live replication updates and serving
-            /// [Data API][google.bigtable.v2.Bigtable] requests.
+            /// receiving live replication updates and serving Data API requests.
             /// </summary>
             [pbr::OriginalName("INITIALIZING")] Initializing = 1,
             /// <summary>
-            /// The table is temporarily unable to serve
-            /// [Data API][google.bigtable.v2.Bigtable] requests from this
+            /// The table is temporarily unable to serve Data API requests from this
             /// cluster due to planned internal maintenance.
             /// </summary>
             [pbr::OriginalName("PLANNED_MAINTENANCE")] PlannedMaintenance = 2,
             /// <summary>
-            /// The table is temporarily unable to serve
-            /// [Data API][google.bigtable.v2.Bigtable] requests from this
+            /// The table is temporarily unable to serve Data API requests from this
             /// cluster due to unplanned or emergency maintenance.
             /// </summary>
             [pbr::OriginalName("UNPLANNED_MAINTENANCE")] UnplannedMaintenance = 3,
             /// <summary>
-            /// The table can serve
-            /// [Data API][google.bigtable.v2.Bigtable] requests from this
-            /// cluster. Depending on replication delay, reads may not immediately
-            /// reflect the state of the table in other clusters.
+            /// The table can serve Data API requests from this cluster. Depending on
+            /// replication delay, reads may not immediately reflect the state of the
+            /// table in other clusters.
             /// </summary>
             [pbr::OriginalName("READY")] Ready = 4,
           }
@@ -1254,13 +1234,13 @@ namespace Google.Cloud.Bigtable.Admin.V2 {
   }
 
   /// <summary>
-  /// This is a private alpha release of Cloud Bigtable snapshots. This feature
-  /// is not currently available to most Cloud Bigtable customers. This feature
-  /// might be changed in backward-incompatible ways and is not recommended for
-  /// production use. It is not subject to any SLA or deprecation policy.
-  ///
   /// A snapshot of a table at a particular time. A snapshot can be used as a
   /// checkpoint for data restoration or a data source for a new table.
+  ///
+  /// Note: This is a private alpha release of Cloud Bigtable snapshots. This
+  /// feature is not currently available to most Cloud Bigtable customers. This
+  /// feature might be changed in backward-incompatible ways and is not recommended
+  /// for production use. It is not subject to any SLA or deprecation policy.
   /// </summary>
   public sealed partial class Snapshot : pb::IMessage<Snapshot> {
     private static readonly pb::MessageParser<Snapshot> _parser = new pb::MessageParser<Snapshot>(() => new Snapshot());
