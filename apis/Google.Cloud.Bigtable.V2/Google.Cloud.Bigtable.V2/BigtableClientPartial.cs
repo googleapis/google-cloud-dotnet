@@ -43,11 +43,6 @@ namespace Google.Cloud.Bigtable.V2
         /// <param name="clientCreationSettings">Optional. <see cref="ClientCreationSettings"/> specifying how to create
         /// <see cref="BigtableServiceApiClient"/>s.</param>
         /// <param name="appProfileId">
-        /// This is a private alpha release of Cloud Bigtable replication. This feature
-        /// is not currently available to most Cloud Bigtable customers. This feature
-        /// might be changed in backward-incompatible ways and is not recommended for
-        /// production use. It is not subject to any SLA or deprecation policy.
-        ///
         /// This value specifies routing for replication. If not specified, the
         /// "default" application profile will be used.
         /// </param>
@@ -102,11 +97,6 @@ namespace Google.Cloud.Bigtable.V2
         /// <param name="clientCreationSettings">Optional. <see cref="ClientCreationSettings"/> specifying how to create
         /// <see cref="BigtableServiceApiClient"/>s.</param>
         /// <param name="appProfileId">
-        /// This is a private alpha release of Cloud Bigtable replication. This feature
-        /// is not currently available to most Cloud Bigtable customers. This feature
-        /// might be changed in backward-incompatible ways and is not recommended for
-        /// production use. It is not subject to any SLA or deprecation policy.
-        ///
         /// This value specifies routing for replication. If not specified, the
         /// "default" application profile will be used.
         /// </param>
@@ -120,10 +110,6 @@ namespace Google.Cloud.Bigtable.V2
         /// <param name="clients">The <see cref="BigtableServiceApiClient"/>s to use in a <see cref="BigtableClient"/> 
         /// Must not be null.</param>
         /// <param name="appProfileId">
-        /// This is a private alpha release of Cloud Bigtable replication. This feature
-        /// is not currently available to most Cloud Bigtable customers. This feature
-        /// might be changed in backward-incompatible ways and is not recommended for
-        /// production use. It is not subject to any SLA or deprecation policy.
         /// This value specifies routing for replication. If not specified, the
         /// "default" application profile will be used.
         /// </param>
@@ -138,11 +124,6 @@ namespace Google.Cloud.Bigtable.V2
         /// Gets a <see cref="BigtableClient"/> matching this one but with the specified <paramref name="appProfileId"/>.
         /// </summary>
         /// <param name="appProfileId">
-        /// This is a private alpha release of Cloud Bigtable replication. This feature
-        /// is not currently available to most Cloud Bigtable customers. This feature
-        /// might be changed in backward-incompatible ways and is not recommended for
-        /// production use. It is not subject to any SLA or deprecation policy.
-        ///
         /// This value specifies routing for replication. If not specified, the
         /// "default" application profile will be used.
         /// </param>
