@@ -27,17 +27,22 @@ namespace Google.Cloud.Firestore
         private readonly WatchStream _stream;
         private int _stopped;
 
-        // TODO: Rename! (Don't know what to though...)
         /// <summary>
         /// A task that will complete when the listen operation finishes.
-        /// TODO: More documentation
         /// </summary>
-        public Task Task { get; }
+        /// <remarks>
+        /// If a cancellation token provided by the caller (either when starting to listen or
+        /// when calling <see cref="StopAsync"/>) is canceled, the task will finish in a state of <see cref="TaskStatus.Canceled"/>.
+        /// The task will finish in a state of <see cref="TaskStatus.Faulted"/> if any other kind of exception was thrown, including
+        /// any non-retriable RPC exceptions. The task will finish in a state of <see cref="TaskStatus.RanToCompletion"/> if
+        /// the listener stopped gracefully.
+        /// </remarks>
+        public Task ListenerTask { get; }
 
         internal SnapshotListener(WatchStream stream, Task task)
         {
             _stream = stream;
-            Task = task;
+            ListenerTask = task;
         }
 
         internal static SnapshotListener Start(WatchStream stream)
@@ -53,7 +58,7 @@ namespace Google.Cloud.Firestore
         /// </summary>
         /// <remarks>This method must only be called once per listener.</remarks>
         /// <param name="cancellationToken">A cancellation token to cancel a callback if one is in progress.</param>
-        /// <returns>The task to indicate listener completion. This returns the same as <see cref="Task"/>.</returns>
+        /// <returns>The task to indicate listener completion. This returns the same as <see cref="ListenerTask"/>.</returns>
         public Task StopAsync(CancellationToken cancellationToken = default)
         {
             if (Interlocked.Exchange(ref _stopped, 1) != 0)
@@ -61,7 +66,7 @@ namespace Google.Cloud.Firestore
                 throw new InvalidOperationException($"{nameof(StopAsync)} can only be called once");
             }
             _stream.Stop(cancellationToken);
-            return Task;
-        }        
+            return ListenerTask;
+        }
     }
 }
