@@ -59,6 +59,7 @@ namespace Google.Cloud.Tools.ProjectGenerator
             { "Google.Api.Gax.Testing", DefaultGaxVersion },
             { "Google.Api.Gax.Grpc.Testing", DefaultGaxVersion },
             { GrpcPackage, GrpcVersion },
+            { "Grpc.Core.Testing", GrpcVersion }
         };
 
         // Hard-coded versions for all analyzer projects.
