@@ -48,12 +48,10 @@ namespace Google.Cloud.Diagnostics.Common
                 {
                     Flush();
                 }
-                catch (RpcException)
+                catch (Exception)
                 {
                     // TODO(talarico): This is a short term solution to ensure 
                     // we do not kill a process. See issue #842 to track the long term solution.
-                    // This solution is dependent on implementation details specifically the fact
-                    // that all consumers that make requests are gRPC based.
                 }
             }, waitTime);
         }
