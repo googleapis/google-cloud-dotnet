@@ -199,6 +199,7 @@ generate_api Google.Cloud.Spanner.Admin.Instance.V1 google/spanner/admin/instanc
 generate_api Google.Cloud.Spanner.V1 google/spanner/v1 spanner.yaml
 generate_api Google.Cloud.Speech.V1 google/cloud/speech/v1 speech_v1.yaml
 generate_api Google.Cloud.Tasks.V2Beta2 google/cloud/tasks/v2beta2 cloudtasks.yaml
+generate_api Google.Cloud.TextToSpeech.V1 google/cloud/texttospeech/v1 tts_v1.yaml
 generate_api Google.Cloud.Trace.V1 google/devtools/cloudtrace/v1 cloudtrace_v1.yaml
 generate_api Google.Cloud.Trace.V2 google/devtools/cloudtrace/v2 cloudtrace_v2.yaml
 generate_api Google.Cloud.VideoIntelligence.V1 google/cloud/videointelligence/v1 videointelligence_v1.yaml
