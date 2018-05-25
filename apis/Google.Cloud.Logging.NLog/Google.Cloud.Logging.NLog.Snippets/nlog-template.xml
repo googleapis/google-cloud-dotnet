@@ -1,0 +1,19 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<nlog xmlns="http://www.nlog-project.org/schemas/NLog.xsd"
+      xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+
+  <extensions>
+    <add assembly="Google.Cloud.Logging.NLog" />
+  </extensions>
+  
+  <targets async="true">
+    <target name="stackdriver" xsi:type="GoogleStackdriver" projectId="PROJECT_ID" logId="LOG_ID" />
+    <target name="console" xsi:type="Console" />
+  </targets>
+
+  <rules>
+    <logger name="*" minlevel="Info" writeTo="stackdriver" />
+    <logger name="*" minlevel="Info" writeTo="console" />
+  </rules>
+  
+</nlog>
