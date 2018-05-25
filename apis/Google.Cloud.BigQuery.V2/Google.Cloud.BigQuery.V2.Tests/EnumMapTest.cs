@@ -38,9 +38,9 @@ namespace Google.Cloud.BigQuery.V2.Tests
             Assert.Throws<ArgumentException>(() => EnumMap<WriteDisposition>.ToValue("Bogus"));
             Assert.Throws<ArgumentException>(() => EnumMap<WriteDisposition>.ToValue("Write_Empty"));
             Assert.Throws<ArgumentException>(() => EnumMap<WriteDisposition>.ToApiValue((WriteDisposition)100));
-            Assert.Throws<ArgumentException>(() => EnumMap<SchemaUpdateOption>.ToApiValues((SchemaUpdateOption)100));
-            Assert.Throws<InvalidOperationException>(() => EnumMap<WriteDisposition>.ToApiValues(WriteDisposition.WriteAppend));
-            Assert.Throws<InvalidOperationException>(() => EnumMap<SchemaUpdateOption>.ToApiValue(SchemaUpdateOption.AllowFieldAddition));
+            Assert.Throws<TypeInitializationException>(() => EnumMap<SchemaUpdateOption>.ToApiValue(SchemaUpdateOption.AllowFieldAddition));
+            Assert.Throws<ArgumentException>(() => FlagsEnumMap<SchemaUpdateOption>.ToApiValues((SchemaUpdateOption)100));
+            Assert.Throws<TypeInitializationException>(() => FlagsEnumMap<WriteDisposition>.ToApiValues(WriteDisposition.WriteAppend));
         }
 
         [Theory]
@@ -64,7 +64,7 @@ namespace Google.Cloud.BigQuery.V2.Tests
 
         private static void ValidateFlags<T>(T value, ISet<string> expected) where T : struct
         {
-            ISet<string> actual = EnumMap<T>.ToApiValues(value);
+            ISet<string> actual = FlagsEnumMap<T>.ToApiValues(value);
             // Assert.Equal(ISet, ISet) is order dependant.
             Assert.Subset(expected, actual);
             Assert.Superset(expected, actual);

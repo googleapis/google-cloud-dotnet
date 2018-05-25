@@ -29,6 +29,19 @@ namespace Google.Cloud.BigQuery.V2
         {
             Value = value;
         }
+
+        public static IEnumerable<KeyValuePair<T, string>> GetApiValueNamesIn<T>() where T : struct => 
+            from field in typeof(T).GetTypeInfo().DeclaredFields
+            where field.IsStatic
+            select CreateKeyValuePair<T>(field);
+
+        private static KeyValuePair<T, string> CreateKeyValuePair<T>(FieldInfo field) where T : struct
+        {
+            T value = (T)field.GetValue(null);
+            ApiValueAttribute nameAttribute = (ApiValueAttribute)field.GetCustomAttribute(typeof(ApiValueAttribute));
+            string name = nameAttribute?.Value ?? value.ToString().ToUpperInvariant();
+            return new KeyValuePair<T, string>(value, name);
+        }
     }
 
     /// <summary>
@@ -40,7 +53,7 @@ namespace Google.Cloud.BigQuery.V2
             EnumMap<T>.ToApiValue(value, paramName);
 
         internal static ISet<string> ToApiValues<T>(T value) where T : struct =>
-            EnumMap<T>.ToApiValues(value);
+            FlagsEnumMap<T>.ToApiValues(value);
     }
 
     /// <summary>
@@ -49,32 +62,24 @@ namespace Google.Cloud.BigQuery.V2
     /// </summary>
     internal static class EnumMap<T> where T : struct
     {
-        private static readonly Dictionary<string, T> s_stringToValue = new Dictionary<string, T>();
-        private static readonly Dictionary<T, string> s_valueToString = new Dictionary<T, string>();
-        private static readonly Dictionary<int, string> s_intValueToString =
-            typeof(T).GetTypeInfo().IsDefined(typeof(FlagsAttribute))
-            ? new Dictionary<int, string>() : null;
+        private static readonly Dictionary<string, T> s_stringToValue;
+        private static readonly Dictionary<T, string> s_valueToString;
 
         static EnumMap()
         {
-            foreach (var field in typeof(T).GetTypeInfo().DeclaredFields.Where(f => f.IsStatic))
+            if (typeof(T).GetTypeInfo().IsDefined(typeof(FlagsAttribute)))
             {
-                var value = (T)field.GetValue(null);
-                var nameAttribute = (ApiValueAttribute)field.GetCustomAttribute(typeof(ApiValueAttribute));
-                var name = nameAttribute?.Value ?? value.ToString().ToUpperInvariant();
-                s_stringToValue[name] = value;
-                s_valueToString[value] = name;
-                s_intValueToString?.Add((int)(object)value, name);
+                throw new InvalidOperationException($"{typeof(T).Name} is marked with the {typeof(FlagsAttribute).Name} attribute. Use the {nameof(FlagsEnumMap<T>)} class or the {nameof(EnumMap.ToApiValues)} method instead.");
             }
+
+            var valueNames = ApiValueAttribute.GetApiValueNamesIn<T>();
+
+            s_stringToValue = valueNames.ToDictionary(vn => vn.Value, vn => vn.Key);
+            s_valueToString = valueNames.ToDictionary(vn => vn.Key, vn => vn.Value);
         }
 
         internal static string ToApiValue(T value, string paramName = "value")
         {
-            if (s_intValueToString != null)
-            {
-                throw new InvalidOperationException($"{typeof(T).Name} is marked with the {typeof(FlagsAttribute).Name} attribute. Use the {nameof(EnumMap.ToApiValues)} method instead.");
-            }
-
             string name;
             if (s_valueToString.TryGetValue(value, out name))
             {
@@ -83,12 +88,36 @@ namespace Google.Cloud.BigQuery.V2
             throw new ArgumentException($"Value {value} is undefined in {typeof(T).Name}", paramName);
         }
 
-        /// <summary>
-        /// Similar to <see cref="ToApiValue(T, string)"/> but for used with Flags enum.
-        /// </summary>
-        /// <param name="value">An enum value, possibly flagged.</param>
-        /// <returns>A set of string that contains the api value corresponding to each
-        /// of the flags set in <paramref name="value"/>.</returns>
+        internal static T ToValue(string apiValue, string paramName = "name")
+        {
+            GaxPreconditions.CheckNotNull(apiValue, paramName);
+            T value;
+            if (s_stringToValue.TryGetValue(apiValue, out value))
+            {
+                return value;
+            }
+            throw new ArgumentException($"Value {apiValue} is undefined in {typeof(T).Name}", paramName);
+        }
+    }
+
+    /// <summary>
+    /// Conversion between flags enum values and their API representations.
+    /// (Could make this a regular class, but we basically need an instance per type...)
+    /// </summary>
+    internal static class FlagsEnumMap<T> where T : struct
+    {
+        private static readonly Dictionary<int, string> s_intValueToString;
+
+        static FlagsEnumMap()
+        {
+            if (!typeof(T).GetTypeInfo().IsDefined(typeof(FlagsAttribute)))
+            {
+                throw new InvalidOperationException($"{typeof(T).Name} is not marked with the {typeof(FlagsAttribute).Name} attribute. Use the {nameof(EnumMap<T>)} class or the {nameof(EnumMap.ToApiValue)} method instead.");
+            }
+
+            s_intValueToString = ApiValueAttribute.GetApiValueNamesIn<T>().ToDictionary(vn => (int)(object)vn.Key, vn => vn.Value);
+        }
+
         internal static ISet<string> ToApiValues(T value)
         {
             if(s_intValueToString == null)
@@ -115,17 +144,6 @@ namespace Google.Cloud.BigQuery.V2
             }
 
             return apiValues;
-        }
-
-        internal static T ToValue(string apiValue, string paramName = "name")
-        {
-            GaxPreconditions.CheckNotNull(apiValue, paramName);
-            T value;
-            if (s_stringToValue.TryGetValue(apiValue, out value))
-            {
-                return value;
-            }
-            throw new ArgumentException($"Value {apiValue} is undefined in {typeof(T).Name}", paramName);
         }
     }
 }
