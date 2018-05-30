@@ -16,6 +16,7 @@
 
 using gax = Google.Api.Gax;
 using gaxgrpc = Google.Api.Gax.Grpc;
+using gaxres = Google.Api.Gax.ResourceNames;
 using iam = Google.Cloud.Iam.V1;
 using lro = Google.LongRunning;
 using pb = Google.Protobuf;
@@ -976,7 +977,7 @@ namespace Google.Cloud.Bigtable.Admin.V2
         /// A Task containing the RPC response.
         /// </returns>
         public virtual stt::Task<lro::Operation<Instance, CreateInstanceMetadata>> CreateInstanceAsync(
-            ProjectName parent,
+            gaxres::ProjectName parent,
             string instanceId,
             Instance instance,
             scg::IDictionary<string, Cluster> clusters,
@@ -1020,7 +1021,7 @@ namespace Google.Cloud.Bigtable.Admin.V2
         /// A Task containing the RPC response.
         /// </returns>
         public virtual stt::Task<lro::Operation<Instance, CreateInstanceMetadata>> CreateInstanceAsync(
-            ProjectName parent,
+            gaxres::ProjectName parent,
             string instanceId,
             Instance instance,
             scg::IDictionary<string, Cluster> clusters,
@@ -1061,7 +1062,7 @@ namespace Google.Cloud.Bigtable.Admin.V2
         /// The RPC response.
         /// </returns>
         public virtual lro::Operation<Instance, CreateInstanceMetadata> CreateInstance(
-            ProjectName parent,
+            gaxres::ProjectName parent,
             string instanceId,
             Instance instance,
             scg::IDictionary<string, Cluster> clusters,
@@ -1280,7 +1281,7 @@ namespace Google.Cloud.Bigtable.Admin.V2
         /// A Task containing the RPC response.
         /// </returns>
         public virtual stt::Task<ListInstancesResponse> ListInstancesAsync(
-            ProjectName parent,
+            gaxres::ProjectName parent,
             gaxgrpc::CallSettings callSettings = null) => ListInstancesAsync(
                 new ListInstancesRequest
                 {
@@ -1302,7 +1303,7 @@ namespace Google.Cloud.Bigtable.Admin.V2
         /// A Task containing the RPC response.
         /// </returns>
         public virtual stt::Task<ListInstancesResponse> ListInstancesAsync(
-            ProjectName parent,
+            gaxres::ProjectName parent,
             st::CancellationToken cancellationToken) => ListInstancesAsync(
                 parent,
                 gaxgrpc::CallSettings.FromCancellationToken(cancellationToken));
@@ -1321,7 +1322,7 @@ namespace Google.Cloud.Bigtable.Admin.V2
         /// The RPC response.
         /// </returns>
         public virtual ListInstancesResponse ListInstances(
-            ProjectName parent,
+            gaxres::ProjectName parent,
             gaxgrpc::CallSettings callSettings = null) => ListInstances(
                 new ListInstancesRequest
                 {

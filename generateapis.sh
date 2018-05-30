@@ -83,10 +83,10 @@ EOF
   args+=(--descriptor_set=$OUTDIR/protos.desc)
   args+=(--service_yaml=$API_YAML)
   args+=(--gapic_yaml=$API_TMP_DIR/gapic.yaml)
-  args+=(--package_yaml=$OUTDIR/package.yaml)
+  args+=(--package_yaml2=$OUTDIR/package.yaml)
   args+=(--output=$API_TMP_DIR)
   
-  $BASH -c "java -cp gapic-generator/build/libs/gapic-generator-${GAPIC_GENERATOR_VERSION}-all.jar com.google.api.codegen.CodeGeneratorTool ${args[*]}"
+  $BASH -c "java -cp gapic-generator/build/libs/gapic-generator-${GAPIC_GENERATOR_VERSION}-all.jar com.google.api.codegen.gapic.GapicGeneratorTool ${args[*]}"
   
   # We don't want to copy the snippet/prod/tests project files,
   # but the smoke test project file is okay, as we don't
@@ -128,19 +128,10 @@ mkdir $OUTDIR
 
 cat > $OUTDIR/package.yaml <<END_OF_FILE
 package_type: grpc_client
-short_name: fake
-package_name: {default: fake}
-gax_version: {csharp: {lower: 0.0.0}}
-grpc_version: {csharp: {lower: 0.0.0}}
-proto_version: {csharp: {lower: 0.0.0}}
-gax_grpc_version: {csharp: {lower: 0.0.0}}
-auth_version: {csharp: {lower: 0.0.0}}
-generated_package_version: {csharp: {lower: 0.0.0}}
-generated_ga_package_version: {csharp: {lower: 0.0.0}}
-api_common_version: {csharp: {lower: 0.0.0}}
-release_level: {csharp: alpha}
+api_name: fake
+organization_name: fake
 proto_deps: []
-major_version: v0
+api_version: v0
 proto_path: fake
 author: fake
 homepage: fake

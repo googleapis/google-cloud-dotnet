@@ -18,6 +18,7 @@ namespace Google.Cloud.Bigtable.Admin.V2.Snippets
 {
     using Google.Api.Gax;
     using Google.Api.Gax.Grpc;
+    using Google.Api.Gax.ResourceNames;
     using apis = Google.Cloud.Bigtable.Admin.V2;
     using Google.Cloud.Iam.V1;
     using Google.LongRunning;
