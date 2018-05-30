@@ -15,6 +15,7 @@
 using Google.Api.Gax.Grpc;
 using Google.Cloud.Bigtable.Common.V2;
 using Google.Protobuf;
+using Grpc.Core;
 using System;
 using System.Collections.Generic;
 using System.Linq;
@@ -25,6 +26,23 @@ namespace Google.Cloud.Bigtable.V2.Tests
 {
     public class BigtableClientTest
     {
+        [Fact]
+        public void AppProfileId()
+        {
+            var settings = new BigtableClient.ClientCreationSettings(credentials: ChannelCredentials.Insecure);
+            var client = BigtableClient.Create(settings);
+            Assert.Null(client.AppProfileId);
+
+            client = client.WithAppProfileId("abc");
+            Assert.Equal("abc", client.AppProfileId);
+
+            client = BigtableClient.Create(settings, appProfileId: "xyz");
+            Assert.Equal("xyz", client.AppProfileId);
+
+            client = client.WithAppProfileId(null);
+            Assert.Null(client.AppProfileId);
+        }
+
         [Fact]
         public async Task CheckAndMutateRow_Valid_Request()
         {

@@ -44,7 +44,7 @@ namespace Google.Cloud.Bigtable.V2
         /// <see cref="BigtableServiceApiClient"/>s.</param>
         /// <param name="appProfileId">
         /// This value specifies routing for replication. If not specified, the
-        /// "default" application profile will be used.
+        /// "default" application profile will be used by the server.
         /// </param>
         /// <returns>The task representing the created <see cref="BigtableClient"/>.</returns>
         public static async Task<BigtableClient> CreateAsync(ClientCreationSettings clientCreationSettings = null, string appProfileId = null)
@@ -98,7 +98,7 @@ namespace Google.Cloud.Bigtable.V2
         /// <see cref="BigtableServiceApiClient"/>s.</param>
         /// <param name="appProfileId">
         /// This value specifies routing for replication. If not specified, the
-        /// "default" application profile will be used.
+        /// "default" application profile will be used by the server.
         /// </param>
         /// <returns>The created <see cref="BigtableClient"/>.</returns>
         public static BigtableClient Create(ClientCreationSettings clientCreationSettings = null, string appProfileId = null) =>
@@ -111,7 +111,7 @@ namespace Google.Cloud.Bigtable.V2
         /// Must not be null.</param>
         /// <param name="appProfileId">
         /// This value specifies routing for replication. If not specified, the
-        /// "default" application profile will be used.
+        /// "default" application profile will be used by the server.
         /// </param>
         /// <returns>The created <see cref="BigtableClient"/>.</returns>
         public static BigtableClient Create(IEnumerable<BigtableServiceApiClient> clients, string appProfileId = null) => 
@@ -121,11 +121,16 @@ namespace Google.Cloud.Bigtable.V2
                 underlyingClientSettings: null);
 
         /// <summary>
+        /// Gets the value which specifies routing for replication. If null, the "default" application profile will be used by the server.
+        /// </summary>
+        public virtual string AppProfileId => null;
+
+        /// <summary>
         /// Gets a <see cref="BigtableClient"/> matching this one but with the specified <paramref name="appProfileId"/>.
         /// </summary>
         /// <param name="appProfileId">
         /// This value specifies routing for replication. If not specified, the
-        /// "default" application profile will be used.
+        /// "default" application profile will be used by the server.
         /// </param>
         /// <returns>The updated <see cref="BigtableClient"/>.</returns>
         public virtual BigtableClient WithAppProfileId(string appProfileId) => this;
@@ -1119,6 +1124,9 @@ namespace Google.Cloud.Bigtable.V2
         /// Returns index of the next <see cref="BigtableClient"/> instance from <see cref="_clients"/>.
         /// </summary>
         private int GetClientIndex() => Interlocked.Increment(ref _clientNumber) % _clients.Length;
+
+        /// <inheritdoc/>
+        public override string AppProfileId => _appProfileId;
 
         /// <inheritdoc/>
         public override BigtableClient WithAppProfileId(string appProfileId) =>
