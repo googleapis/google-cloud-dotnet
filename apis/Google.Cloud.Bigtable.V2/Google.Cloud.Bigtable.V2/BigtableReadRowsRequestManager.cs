@@ -25,7 +25,7 @@ namespace Google.Cloud.Bigtable.V2
     /// </summary>
     internal class BigtableReadRowsRequestManager
     {
-        private readonly ReadRowsRequest _originalRequest;
+        internal ReadRowsRequest OriginalRequest { get; }
         private long _rowsReadSoFar;
 
         /// <summary>
@@ -34,7 +34,7 @@ namespace Google.Cloud.Bigtable.V2
         /// <param name="originalRequest">
         /// Original ReadRowsRequest containing all of the parameters of the API call.
         /// </param>
-        internal BigtableReadRowsRequestManager(ReadRowsRequest originalRequest) => _originalRequest = originalRequest;
+        internal BigtableReadRowsRequestManager(ReadRowsRequest originalRequest) => OriginalRequest = originalRequest;
 
         /// <summary>
         /// Update last found Rowkey
@@ -54,7 +54,7 @@ namespace Google.Cloud.Bigtable.V2
 
             // If we removed all row keys/ranges, we don't want to retry anything: all rows have
             // actually been received.
-            if (rows != _originalRequest.Rows &&
+            if (rows != OriginalRequest.Rows &&
                 rows.RowKeys.Count == 0 &&
                 rows.RowRanges.Count == 0)
             {
@@ -63,16 +63,16 @@ namespace Google.Cloud.Bigtable.V2
 
             var newReadRowsRequest = new ReadRowsRequest
             {
-                TableName = _originalRequest.TableName,
-                Filter = _originalRequest.Filter,
-                AppProfileId = _originalRequest.AppProfileId,
+                TableName = OriginalRequest.TableName,
+                Filter = OriginalRequest.Filter,
+                AppProfileId = OriginalRequest.AppProfileId,
                 Rows = rows
             };
 
             // If the row limit is set, update it.
-            if (_originalRequest.RowsLimit != 0)
+            if (OriginalRequest.RowsLimit != 0)
             {
-                long rowsRemaining = _originalRequest.RowsLimit - _rowsReadSoFar;
+                long rowsRemaining = OriginalRequest.RowsLimit - _rowsReadSoFar;
                 Debug.Assert(rowsRemaining > 0, "The remaining number of rows must be greater than 0.");
                 newReadRowsRequest.RowsLimit = Math.Max(1, rowsRemaining);
             }
@@ -87,7 +87,7 @@ namespace Google.Cloud.Bigtable.V2
         /// New RowSet with not received rows.</returns>
         private RowSet FilterRows()
         {
-            RowSet originalRows = _originalRequest.Rows;
+            RowSet originalRows = OriginalRequest.Rows;
 
             if (LastFoundKey.Value.IsEmpty)
             {

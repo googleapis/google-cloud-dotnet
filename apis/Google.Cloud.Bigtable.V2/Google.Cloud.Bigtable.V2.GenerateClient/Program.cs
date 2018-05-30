@@ -441,16 +441,17 @@ namespace Google.Cloud.Bigtable.V2.GenerateClient
                 //  return GetUnderlyingClient().MethodName(request, callSettings);
                 //------------------------------------------------------------------------
                 var appProfileIdProperty = node.ParameterList.Parameters[0].Identifier.Member(AppProfileIdPropertyName);
-                var underlyingMethod = IdentifierName(GetUnderlyingClientMethodName).Invoke().Member(node.Identifier);
-                var resultExpression = (ExpressionSyntax)underlyingMethod.Invoke(node.ParameterList.AsArguments());
+                ExpressionSyntax resultExpression;
                 if (s_customStreamMethods.TryGetValue(node.Identifier.ToString(), out var customStreamMethodInfo))
                 {
-                    // If we have a custom implementation, pass all parameters as well as the
-                    // underlying result to a method named ConvertResult, which should be
+                    // If we have a custom implementation, pass all parameters to a method named "<method-name>Impl", which should be
                     // implemented manually.
-                    resultExpression =
-                        IdentifierName("ConvertResult").Invoke(
-                            node.ParameterList.AsArguments().AddArgument(resultExpression));
+                    resultExpression = IdentifierName(node.Identifier + "Impl").Invoke(node.ParameterList.AsArguments());
+                }
+                else
+                {
+                    var underlyingMethod = IdentifierName(GetUnderlyingClientMethodName).Invoke().Member(node.Identifier);
+                    resultExpression = underlyingMethod.Invoke(node.ParameterList.AsArguments());
                 }
                 node = node.WithBodySafe(Block(
                     If(appProfileIdProperty.EqualTo(Null()),

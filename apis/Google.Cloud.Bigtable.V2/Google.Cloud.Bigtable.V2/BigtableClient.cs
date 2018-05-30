@@ -340,7 +340,7 @@ namespace Google.Cloud.Bigtable.V2
                 request.AppProfileId = _appProfileId;
             }
 
-            return ConvertResult(request, callSettings, GetUnderlyingClient().ReadRows(request, callSettings));
+            return ReadRowsImpl(request, callSettings);
         }
 
         /// <inheritdoc/>
@@ -397,7 +397,7 @@ namespace Google.Cloud.Bigtable.V2
                 request.AppProfileId = _appProfileId;
             }
 
-            return ConvertResult(request, callSettings, GetUnderlyingClient().MutateRows(request, callSettings));
+            return MutateRowsImpl(request, callSettings);
         }
 
         /// <inheritdoc/>

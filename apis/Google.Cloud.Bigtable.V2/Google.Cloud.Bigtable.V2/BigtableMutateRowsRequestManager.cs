@@ -27,14 +27,14 @@ namespace Google.Cloud.Bigtable.V2
         private readonly MutateRowsRequest _originalRequest;
 
         /// <summary>
-        /// The new request to send. This starts as a null. If retries occur, this
+        /// The next request to send. This starts as the original request. If retries occur, this
         /// request will contain the subset of Entries that need to be retried.
         /// </summary>
-        internal MutateRowsRequest RetryRequest { get; private set; }
-        
+        internal MutateRowsRequest NextRequest { get; private set; }
+
         /// <summary>
         /// When doing retries, the retry sends a partial set of the original Entries that failed with a
-        /// retryable status. This array contains a mapping of indices from the <see cref="RetryRequest"/> 
+        /// retryable status. This array contains a mapping of indices from the <see cref="NextRequest"/> 
         /// to <see cref="_originalRequest"/>.
         /// </summary>
         private int[] _mapToOriginalIndex;
@@ -81,11 +81,11 @@ namespace Google.Cloud.Bigtable.V2
         /// </summary>
         /// <param name="retryStatuses">
         /// Collection of Grpc status codes to retry on.</param>
-        /// <param name="mutateRowsRequest">
-        /// <see cref="MutateRowsRequest"/> that was received from the user.</param>
+        /// <param name="mutateRowsRequest"><see cref="MutateRowsRequest"/> that was received from the user.</param>
         internal BigtableMutateRowsRequestManager(IEnumerable<StatusCode> retryStatuses, MutateRowsRequest mutateRowsRequest)
         {
             _originalRequest = mutateRowsRequest;
+            NextRequest = _originalRequest;
 
             _results = new Rpc.Status[_originalRequest.Entries.Count];
             
@@ -175,7 +175,7 @@ namespace Google.Cloud.Bigtable.V2
             }
             else
             {
-                RetryRequest = null;
+                NextRequest = null;
             }
             return processingStatus;
         }
@@ -189,7 +189,7 @@ namespace Google.Cloud.Bigtable.V2
         /// </param>
         private void CreateRetryRequest(List<int> indiciesToRetry)
         {
-            RetryRequest = new MutateRowsRequest
+            NextRequest = new MutateRowsRequest
             {
                 TableName = _originalRequest.TableName,
                 AppProfileId = _originalRequest.AppProfileId
@@ -198,7 +198,7 @@ namespace Google.Cloud.Bigtable.V2
             for (int i = 0; i < _mapToOriginalIndex.Length; i++)
             {
                 _mapToOriginalIndex[i] = indiciesToRetry[i];
-                RetryRequest.Entries.Add(_originalRequest.Entries[indiciesToRetry[i]]);
+                NextRequest.Entries.Add(_originalRequest.Entries[indiciesToRetry[i]]);
             }
         }
 
