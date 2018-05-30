@@ -38,7 +38,7 @@ In Web API:
 Using [`Google.Cloud.Diagnostics.AspNetCore`'s Exception Logger Middleware](../Google.Cloud.Diagnostics.AspNetCore/index.html)
 uncaught exceptions in ASP.NET Core applications can be automatically reported to the Stackdriver Error Reporting API.
 
-[!code-cs[](../Google.Cloud.Diagnostics.AspNetCore/obj/snippets/Google.Cloud.Diagnostics.AspNetCore.AspNetCore.txt#ReportUnandledExceptions)]
+[!code-cs[](../Google.Cloud.Diagnostics.AspNetCore/obj/snippets/Google.Cloud.Diagnostics.AspNetCore.ErrorReporting.txt#ReportUnhandledExceptions)]
 
 ## Report an error
 
