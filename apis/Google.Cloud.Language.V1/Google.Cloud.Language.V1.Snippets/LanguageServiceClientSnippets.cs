@@ -17,6 +17,9 @@ using Xunit;
 using Google.Cloud.ClientTesting;
 using static Google.Cloud.Language.V1.AnnotateTextRequest.Types;
 using static Google.Cloud.Language.V1.PartOfSpeech.Types;
+using Grpc.Core.Interceptors;
+using Grpc.Core;
+using System.Threading.Tasks;
 
 namespace Google.Cloud.Language.V1.Snippets
 {
@@ -125,6 +128,45 @@ namespace Google.Cloud.Language.V1.Snippets
                 Console.WriteLine($"  Sentiment score: {entity.Sentiment.Score}; magnitude: {entity.Sentiment.Magnitude}");
             }
             // End sample
+        }
+
+        [Fact]
+        public void InteceptorDemo()
+        {
+            LanguageServiceSettings settings = new LanguageServiceSettings { Interceptor = new LoggingInterceptor() };
+            LanguageServiceClient client = LanguageServiceClient.Create(settings: settings);
+            Document document = Document.FromPlainText(
+                "This is a simple sentence. This sentence, while not very complicated, is still more complicated than the first");
+            AnalyzeSyntaxResponse response = client.AnalyzeSyntax(document);
+        }
+
+        [Fact]
+        public async Task AsyncInteceptorDemo()
+        {
+            LanguageServiceSettings settings = new LanguageServiceSettings { Interceptor = new LoggingInterceptor() };
+            LanguageServiceClient client = LanguageServiceClient.Create(settings: settings);
+            Document document = Document.FromPlainText(
+                "This is a simple sentence. This sentence, while not very complicated, is still more complicated than the first");
+            AnalyzeSyntaxResponse response = await client.AnalyzeSyntaxAsync(document);
+        }
+
+        private class LoggingInterceptor : Interceptor
+        {
+            public override AsyncUnaryCall<TResponse> AsyncUnaryCall<TRequest, TResponse>(TRequest request, ClientInterceptorContext<TRequest, TResponse> context, AsyncUnaryCallContinuation<TRequest, TResponse> continuation)
+            {
+                Console.WriteLine($"Async sending request: {request}");
+                var call = continuation(request, context);
+                call.ResponseAsync.ContinueWith(task => Console.WriteLine($"Async got response: {task.Result}"), TaskContinuationOptions.OnlyOnRanToCompletion);
+                return new AsyncUnaryCall<TResponse>(call.ResponseAsync, call.ResponseHeadersAsync, call.GetStatus, call.GetTrailers, call.Dispose);
+            }
+
+            public override TResponse BlockingUnaryCall<TRequest, TResponse>(TRequest request, ClientInterceptorContext<TRequest, TResponse> context, BlockingUnaryCallContinuation<TRequest, TResponse> continuation)
+            {
+                Console.WriteLine($"Sending request: {request}");
+                var response = continuation(request, context);
+                Console.WriteLine($"Got response: {response}");
+                return response;
+            }
         }
     }
 }
