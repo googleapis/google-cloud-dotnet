@@ -22,8 +22,8 @@
   </PropertyGroup>
   <ItemGroup>
     <PackageReference Include="ConfigureAwaitChecker.Analyzer" Version="1.0.1" PrivateAssets="All" />
-    <PackageReference Include="Google.Api.Gax.Rest" Version="2.3.0" />
-    <PackageReference Include="Google.Apis.Storage.v1" Version="1.33.1.1215" />
+    <PackageReference Include="Google.Api.Gax.Rest" Version="2.4.0" />
+    <PackageReference Include="Google.Apis.Storage.v1" Version="1.34.0.1233" />
     <PackageReference Include="Microsoft.DotNet.Analyzers.Compatibility" Version="0.1.2-alpha" PrivateAssets="All" />
     <PackageReference Include="SourceLink.Create.CommandLine" Version="2.8.0" PrivateAssets="All" />
     <Analyzer Condition="Exists('..\..\..\tools\Google.Cloud.Tools.Analyzers\bin\$(Configuration)\netstandard1.3\publish\Google.Cloud.Tools.Analyzers.dll')" Include="..\..\..\tools\Google.Cloud.Tools.Analyzers\bin\$(Configuration)\netstandard1.3\publish\Google.Cloud.Tools.Analyzers.dll" />
