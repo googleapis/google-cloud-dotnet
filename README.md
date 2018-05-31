@@ -14,6 +14,7 @@ The following libraries are available at a [GA](#versioning) quality level:
 * [Google Cloud Datastore](https://cloud.google.com/datastore/) - [API docs](http://googlecloudplatform.github.io/google-cloud-dotnet/docs/Google.Cloud.Datastore.V1/) (GA)
 * Google Cloud Diagnostics for ASP.NET - [API docs](http://googlecloudplatform.github.io/google-cloud-dotnet/docs/Google.Cloud.Diagnostics.AspNet/) (GA)
 * Google Cloud Diagnostics for ASP.NET Core - [API docs](http://googlecloudplatform.github.io/google-cloud-dotnet/docs/Google.Cloud.Diagnostics.AspNetCore/) (GA)
+* [Google Cloud IAM](https://cloud.google.com/iam/) - [API docs]() (GA)
 * [Google Stackdriver Logging](https://cloud.google.com/logging/) - [API docs](http://googlecloudplatform.github.io/google-cloud-dotnet/docs/Google.Cloud.Logging.V2/) (GA)
   * Integration with Log4Net is provided via [Google.Cloud.Logging.Log4Net](http://googlecloudplatform.github.io/google-cloud-dotnet/docs/Google.Cloud.Logging.Log4Net/) (GA)
 * [Google Cloud Natural Language](https://cloud.google.com/natural-language/) - [API docs](http://googlecloudplatform.github.io/google-cloud-dotnet/docs/Google.Cloud.Language.V1/) (GA)
