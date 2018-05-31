@@ -12,6 +12,7 @@
 // See the License for the specific language governing permissions and
 // limitations under the License.
 
+using Google.Api.Gax;
 using Google.Apis.Bigquery.v2.Data;
 using Newtonsoft.Json.Linq;
 using System;
@@ -37,10 +38,23 @@ namespace Google.Cloud.BigQuery.V2
 
         private readonly IDictionary<string, int> _fieldNameIndexMap;
 
+        /// <summary>
+        /// Constructs a row from the underlying REST-ful resource and schema.
+        /// </summary>
+        /// <remarks>
+        /// This is public to allow tests to construct instances for production code to consume;
+        /// production code should not normally construct instances itself.
+        /// </remarks>
+        /// <param name="rawRow">The underlying REST-ful row resource. Must not be null.</param>
+        /// <param name="schema">The table schema. Must not be null.</param>
+        public BigQueryRow(TableRow rawRow, TableSchema schema) : this(rawRow, schema, schema?.IndexFieldNames())
+        {
+        }
+
         internal BigQueryRow(TableRow rawRow, TableSchema schema, IDictionary<string, int> fieldNameIndexMap)
         {
-            Schema = schema;
-            RawRow = rawRow;
+            RawRow = GaxPreconditions.CheckNotNull(rawRow, nameof(rawRow));
+            Schema = GaxPreconditions.CheckNotNull(schema, nameof(schema));
             _fieldNameIndexMap = fieldNameIndexMap;
         }
 

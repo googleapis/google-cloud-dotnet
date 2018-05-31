@@ -42,7 +42,7 @@ namespace Google.Cloud.BigQuery.V2.Tests
         {
             var nextPageToken = "token";
             var schema = new TableSchema();
-            var row = new BigQueryRow(new TableRow(), schema, schema.IndexFieldNames());
+            var row = new BigQueryRow(new TableRow(), schema);
             var rawPage = new Page<BigQueryRow>(new List<BigQueryRow> { row }, nextPageToken);
             var jobReference = new JobReference { ProjectId = "project", JobId = "job" };
             var tableReference = new TableReference { ProjectId = "project", DatasetId = "dataset", TableId = "table" };
