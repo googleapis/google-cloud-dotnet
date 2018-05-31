@@ -128,9 +128,8 @@ namespace Google.Cloud.Bigtable.V2
 
             return false;
 
-            async Task EstablishStream(ReadRowsRequest request)
-            {
-                await ApiCallRetryExtensions.RetryOperationUntilCompleted(
+            Task EstablishStream(ReadRowsRequest request)  =>
+                ApiCallRetryExtensions.RetryOperationUntilCompleted(
                     () =>
                     {
                         _stream = _client.ReadRowsInternal(request, _callSettings);
@@ -139,8 +138,7 @@ namespace Google.Cloud.Bigtable.V2
                     _client.Clock,
                     _client.Scheduler,
                     _callSettings,
-                    _retrySettings).ConfigureAwait(false);
-            }
+                    _retrySettings);
 
             IEnumerator<Row> MergeResponseChunks(ReadRowsResponse response)
             {
