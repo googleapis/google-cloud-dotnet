@@ -17,12 +17,12 @@ using Xunit;
 
 namespace Google.Cloud.Spanner.Data.IntegrationTests
 {
-    [Collection(nameof(TestDatabaseFixture))]
+    [Collection(nameof(SpannerDatabaseFixture))]
     public class StructParameterTests
     {
-        private readonly TestDatabaseFixture _fixture;
+        private readonly SpannerDatabaseFixture _fixture;
 
-        public StructParameterTests(TestDatabaseFixture fixture) => _fixture = fixture;
+        public StructParameterTests(SpannerDatabaseFixture fixture) => _fixture = fixture;
 
         [Fact]
         public async Task SimpleFieldAccess()
@@ -32,7 +32,7 @@ namespace Google.Cloud.Spanner.Data.IntegrationTests
                 { "threadf", SpannerDbType.Int64, 1 },
                 { "userf", SpannerDbType.String, "bob" }
             };
-            using (var connection = await _fixture.GetTestDatabaseConnectionAsync())
+            using (var connection = _fixture.GetConnection())
             {
                 using (var cmd = connection.CreateSelectCommand("SELECT @struct_param.userf, @p4"))
                 {
@@ -58,7 +58,7 @@ namespace Google.Cloud.Spanner.Data.IntegrationTests
                 { "threadf", SpannerDbType.Int64, 1 },
                 { "userf", SpannerDbType.String, "bob" }
             }.GetSpannerDbType();
-            using (var connection = await _fixture.GetTestDatabaseConnectionAsync())
+            using (var connection = _fixture.GetConnection())
             {
                 using (var cmd = connection.CreateSelectCommand("SELECT @struct_param.userf"))
                 {
@@ -87,7 +87,7 @@ namespace Google.Cloud.Spanner.Data.IntegrationTests
                 { "structf", nestedStruct.GetSpannerDbType(), nestedStruct }
             };
 
-            using (var connection = await _fixture.GetTestDatabaseConnectionAsync())
+            using (var connection = _fixture.GetConnection())
             {
                 using (var cmd = connection.CreateSelectCommand("SELECT @struct_param.structf.nestedf"))
                 {
@@ -115,7 +115,7 @@ namespace Google.Cloud.Spanner.Data.IntegrationTests
                 { "structf", nestedStruct.GetSpannerDbType(), nestedStruct }
             };
 
-            using (var connection = await _fixture.GetTestDatabaseConnectionAsync())
+            using (var connection = _fixture.GetConnection())
             {
                 using (var cmd = connection.CreateSelectCommand("SELECT @struct_param.structf.nestedf"))
                 {
@@ -136,7 +136,7 @@ namespace Google.Cloud.Spanner.Data.IntegrationTests
         {
             var emptyStruct = new SpannerStruct();
 
-            using (var connection = await _fixture.GetTestDatabaseConnectionAsync())
+            using (var connection = _fixture.GetConnection())
             {
                 using (var cmd = connection.CreateSelectCommand("SELECT @struct_param IS NULL"))
                 {
@@ -157,7 +157,7 @@ namespace Google.Cloud.Spanner.Data.IntegrationTests
         {
             var emptyStruct = new SpannerStruct();
 
-            using (var connection = await _fixture.GetTestDatabaseConnectionAsync())
+            using (var connection = _fixture.GetConnection())
             {
                 using (var cmd = connection.CreateSelectCommand("SELECT @struct_param IS NULL"))
                 {
@@ -181,7 +181,7 @@ namespace Google.Cloud.Spanner.Data.IntegrationTests
                 { "f1", SpannerDbType.Int64, null }
             };
 
-            using (var connection = await _fixture.GetTestDatabaseConnectionAsync())
+            using (var connection = _fixture.GetConnection())
             {
                 using (var cmd = connection.CreateSelectCommand("SELECT @struct_param.f1"))
                 {
@@ -208,7 +208,7 @@ namespace Google.Cloud.Spanner.Data.IntegrationTests
                 { "userf", SpannerDbType.String, parameterFieldValue }
             };
 
-            using (var connection = await _fixture.GetTestDatabaseConnectionAsync())
+            using (var connection = _fixture.GetConnection())
             {
                 using (var cmd = connection.CreateSelectCommand("SELECT @struct_param = STRUCT < threadf INT64, userf STRING>(1,\"bob\")"))
                 {
@@ -233,7 +233,7 @@ namespace Google.Cloud.Spanner.Data.IntegrationTests
                 { "userf", SpannerDbType.String, "bob" }
             };
 
-            using (var connection = await _fixture.GetTestDatabaseConnectionAsync())
+            using (var connection = _fixture.GetConnection())
             {
                 using (var cmd = connection.CreateSelectCommand("SELECT @struct_arr_param IS NULL"))
                 {
@@ -265,7 +265,7 @@ namespace Google.Cloud.Spanner.Data.IntegrationTests
                 { "arraysf", SpannerDbType.ArrayOf(nestedStruct.GetSpannerDbType()), null }
             };
 
-            using (var connection = await _fixture.GetTestDatabaseConnectionAsync())
+            using (var connection = _fixture.GetConnection())
             {
                 using (var cmd = connection.CreateSelectCommand("SELECT a.threadid FROM UNNEST(@struct_param.arraysf) a"))
                 {
@@ -288,7 +288,7 @@ namespace Google.Cloud.Spanner.Data.IntegrationTests
                 { "threadid", SpannerDbType.Int64, null }
             };
 
-            using (var connection = await _fixture.GetTestDatabaseConnectionAsync())
+            using (var connection = _fixture.GetConnection())
             {
                 using (var cmd = connection.CreateSelectCommand("SELECT a.threadid FROM UNNEST(@struct_arr_param) a"))
                 {
