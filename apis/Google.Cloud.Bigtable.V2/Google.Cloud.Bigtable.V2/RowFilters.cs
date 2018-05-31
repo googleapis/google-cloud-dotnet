@@ -159,8 +159,6 @@ namespace Google.Cloud.Bigtable.V2
         public static RowFilter ColumnRange(ColumnRange range) =>
             new RowFilter { ColumnRangeFilter = GaxPreconditions.CheckNotNull(range, nameof(range)) };
 
-        // TODO: Add additional ColumnRange... methods to take start/end values?
-
         /// <summary>
         /// Creates a new <see cref="RowFilter"/> instance which applies one of two
         /// possible RowFilters to the data based on the output of a predicate
@@ -388,8 +386,6 @@ namespace Google.Cloud.Bigtable.V2
         public static RowFilter ValueRange(ValueRange range) =>
             new RowFilter { ValueRangeFilter = GaxPreconditions.CheckNotNull(range, nameof(range)) };
 
-        // TODO: Add additional ValueRange... methods to take start/end values?
-
         /// <summary>
         /// Creates a new <see cref="RowFilter"/> instance which matches only cells
         /// with values that satisfy the given regular expression.
@@ -422,7 +418,5 @@ namespace Google.Cloud.Bigtable.V2
         /// <returns>The created row filter.</returns>
         public static RowFilter VersionRange(BigtableVersionRange range) =>
             new RowFilter { TimestampRangeFilter = GaxPreconditions.CheckNotNull(range, nameof(range)).ToTimestampRange() };
-
-        // TODO: Add additional VersionRange... methods to take start/end values?
     }
 }

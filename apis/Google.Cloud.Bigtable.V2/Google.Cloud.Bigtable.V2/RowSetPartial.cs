@@ -18,7 +18,6 @@ using System.Linq;
 
 namespace Google.Cloud.Bigtable.V2
 {
-    // TODO: You can combine keys and ranges in a set. Make a helper for that as well?
     public partial class RowSet
     {
         /// <summary>
@@ -79,7 +78,5 @@ namespace Google.Cloud.Bigtable.V2
             {
                 RowRanges = { Utilities.ValidateCollection(rowRanges, nameof(rowRanges)) }
             };
-
-        // TODO: Also include helpers for closed/open range if it is a set of a single range only?
     }
 }

@@ -1147,7 +1147,6 @@ namespace Google.Cloud.Bigtable.V2
         {
             var defaultSettings = UnderlyingClientSettings ?? new BigtableServiceApiSettings();
             var effectiveCallSettings = defaultSettings.ReadRowsSettings.MergedWith(callSettings);
-            // TODO(mdour): Do we want to try to support per-call retry settings?
             var effectiveRetrySettings = defaultSettings.ReadRowsRetrySettings;
 
             return new ReadRowsStream(this, request, effectiveCallSettings, effectiveRetrySettings, result);
@@ -1160,7 +1159,6 @@ namespace Google.Cloud.Bigtable.V2
         {
             var defaultSettings = UnderlyingClientSettings ?? new BigtableServiceApiSettings();
             var effectiveCallSettings = defaultSettings.MutateRowsSettings.MergedWith(callSettings);
-            // TODO(mdour): Do we want to try to support per-call retry settings?
             var effectiveRetrySettings = defaultSettings.MutateRowsRetrySettings;
 
             // TODO: Should the request manager be using the retry filter? We would need to fabricate RpcExceptions
