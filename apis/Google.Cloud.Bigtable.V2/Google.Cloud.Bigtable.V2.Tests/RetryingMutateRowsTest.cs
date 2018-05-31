@@ -12,8 +12,11 @@
 // See the License for the specific language governing permissions and
 // limitations under the License.
 
+using Google.Api.Gax;
 using Google.Protobuf;
 using Google.Rpc;
+using Grpc.Core;
+using System;
 using System.Linq;
 using System.Threading.Tasks;
 using Xunit;
@@ -183,6 +186,88 @@ namespace Google.Cloud.Bigtable.V2.Tests
             Assert.Equal((int)Code.DeadlineExceeded, entry.Status.Code);
         }
 
-        // TODO: Test with a mock IClock to make sure we don't go over the total timeout when retrying
+        [Fact]
+        public async Task RetryAfterTotalExpiration()
+        {
+            var settings = new BigtableServiceApiSettings();
+            // Don't allow for any time to retry.
+            settings.MutateRowsRetrySettings =
+                settings.MutateRowsRetrySettings.WithTotalExpiration(
+                    Expiration.FromTimeout(TimeSpan.Zero));
+
+            var request = new MutateRowsRequest
+            {
+                Entries =
+                {
+                    Mutations.CreateEntry("a", Mutations.DeleteFromRow()),
+                    Mutations.CreateEntry("b", Mutations.DeleteFromRow()),
+                    Mutations.CreateEntry("c", Mutations.DeleteFromRow())
+                }
+            };
+            var client = Utilities.CreateMutateRowsMockClient(
+                request,
+                entriesForInitialStream: new[]
+                {
+                    Utilities.CreateMutateRowsResponseEntry(0, Code.Ok),
+                    Utilities.CreateMutateRowsResponseEntry(1, Code.DeadlineExceeded),
+                    Utilities.CreateMutateRowsResponseEntry(2, Code.Ok)
+                },
+                entriesForRetryStreams: new[]
+                {
+                    // 1st retry response entries
+                    new[] { Utilities.CreateMutateRowsResponseEntry(0, Code.Ok) }
+                },
+                settings: settings);
+
+            bool exceptionOccurred = false;
+            try
+            {
+                await client.MutateRowsAsync(request);
+            }
+            catch (RpcException ex) when (ex.StatusCode == StatusCode.DeadlineExceeded)
+            {
+                exceptionOccurred = true;
+            }
+            Assert.True(exceptionOccurred);
+        }
+
+        [Fact]
+        public async Task RetryBeforeTotalExpiration()
+        {
+            var request = new MutateRowsRequest
+            {
+                Entries =
+                {
+                    Mutations.CreateEntry("a", Mutations.DeleteFromRow()),
+                    Mutations.CreateEntry("b", Mutations.DeleteFromRow()),
+                    Mutations.CreateEntry("c", Mutations.DeleteFromRow())
+                }
+            };
+            var client = Utilities.CreateMutateRowsMockClient(
+                request,
+                entriesForInitialStream: new[]
+                {
+                    Utilities.CreateMutateRowsResponseEntry(0, Code.Ok),
+                    Utilities.CreateMutateRowsResponseEntry(1, Code.DeadlineExceeded),
+                    Utilities.CreateMutateRowsResponseEntry(2, Code.Ok)
+                },
+                entriesForRetryStreams: new[]
+                {
+                    null, // A null entry will throw an Unavailable RpcException
+                    // 2nd retry response entries
+                    new[] { Utilities.CreateMutateRowsResponseEntry(0, Code.Ok) }
+                });
+
+            bool exceptionOccurred = false;
+            try
+            {
+                await client.MutateRowsAsync(request);
+            }
+            catch (RpcException ex) when (ex.StatusCode == StatusCode.DeadlineExceeded)
+            {
+                exceptionOccurred = true;
+            }
+            Assert.False(exceptionOccurred);
+        }
     }
 }
