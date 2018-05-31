@@ -12,30 +12,28 @@
 // See the License for the specific language governing permissions and
 // limitations under the License.
 
-#region
-
 using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Threading.Tasks;
+using Google.Cloud.ClientTesting;
+using Google.Cloud.Spanner.Data.CommonTesting;
 using Google.Cloud.Spanner.V1;
 using Google.Cloud.Spanner.V1.Internal.Logging;
 using Xunit;
 using Xunit.Abstractions;
 
-#endregion
-
-// ReSharper disable RedundantArgumentDefaultValue
-
 namespace Google.Cloud.Spanner.Data.IntegrationTests
 {
-    [Collection(nameof(TestDatabaseFixture))]
+    [Collection(nameof(AllTypesTableFixture))]
     public class WriteTests
     {
-        // ReSharper disable once UnusedParameter.Local
-        public WriteTests(TestDatabaseFixture testFixture, ITestOutputHelper outputHelper)
+        private readonly AllTypesTableFixture _fixture;
+        private string _lastKey;
+
+        public WriteTests(AllTypesTableFixture fixture, ITestOutputHelper outputHelper)
         {
-            _testFixture = testFixture;
+            _fixture = fixture;
 #if LoggingOn
             SpannerConnection.ConnectionPoolOptions.LogLevel = LogLevel.Debug;
             SpannerConnection.ConnectionPoolOptions.LogPerformanceTraces = true;
@@ -44,19 +42,19 @@ namespace Google.Cloud.Spanner.Data.IntegrationTests
             TestLogger.TestOutputHelper = outputHelper;
         }
 
-        private readonly TestDatabaseFixture _testFixture;
-        private string _lastKey;
-
         private static string UniqueString() => Guid.NewGuid().ToString();
+
+        private Task<int> InsertAsync(string name, SpannerDbType type, object value) =>
+            InsertAsync(new SpannerParameterCollection { { name, type, value } });
 
         private async Task<int> InsertAsync(SpannerParameterCollection values)
         {
-            using (var connection = await _testFixture.GetTestDatabaseConnectionAsync())
+            using (var connection = _fixture.GetConnection())
             {
                 values.Add("K", SpannerDbType.String, _lastKey = UniqueString());
-                var cmd = connection.CreateInsertCommand("T", values);
+                var cmd = connection.CreateInsertCommand(_fixture.TableName, values);
 
-                return await cmd.ExecuteNonQueryAsync();
+                return await cmd.ExecuteNonQueryAsyncWithRetry();
             }
         }
 
@@ -64,23 +62,17 @@ namespace Google.Cloud.Spanner.Data.IntegrationTests
             byte[] bytes,
             IDictionary<string, byte[]> record)
         {
-            Assert.Equal(
-                1, await InsertAsync(
-                    new SpannerParameterCollection
-                    {
-                        new SpannerParameter("BytesValue", SpannerDbType.Bytes) {Value = bytes}
-                    }));
+            Assert.Equal(1, await InsertAsync("BytesValue", SpannerDbType.Bytes, bytes));
             record[_lastKey] = bytes;
         }
 
         private async Task<SpannerDataReader> GetLastRowAsync()
         {
-            using (var connection = await _testFixture.GetTestDatabaseConnectionAsync())
+            using (var connection = _fixture.GetConnection())
             {
-                var cmd = connection.CreateSelectCommand(
-                    "SELECT * FROM T WHERE K=@k",
-                    new SpannerParameterCollection {{"K", SpannerDbType.String, _lastKey}});
-                var reader = (SpannerDataReader) await cmd.ExecuteReaderAsync();
+                var cmd = connection.CreateSelectCommand($"SELECT * FROM {_fixture.TableName} WHERE K=@k");
+                cmd.Parameters.Add("K", SpannerDbType.String, _lastKey);
+                var reader = await cmd.ExecuteReaderAsync();
                 await reader.ReadAsync();
                 return reader;
             }
@@ -190,15 +182,11 @@ namespace Google.Cloud.Spanner.Data.IntegrationTests
             var e = await Assert.ThrowsAsync<SpannerException>(
                 async () =>
                 {
-                    using (var connection = await _testFixture.GetTestDatabaseConnectionAsync())
+                    using (var connection = _fixture.GetConnection())
                     {
-                        var cmd = connection.CreateInsertCommand(
-                            "T", new SpannerParameterCollection
-                            {
-                                {"badjuju", SpannerDbType.String, UniqueString()}
-                            });
-
-                        rowsWritten = await cmd.ExecuteNonQueryAsync();
+                        var cmd = connection.CreateInsertCommand(_fixture.TableName);
+                        cmd.Parameters.Add("badjuju", SpannerDbType.String, UniqueString());
+                        rowsWritten = await cmd.ExecuteNonQueryAsyncWithRetry();
                     }
                 }).ConfigureAwait(false);
 
@@ -215,15 +203,11 @@ namespace Google.Cloud.Spanner.Data.IntegrationTests
             var e = await Assert.ThrowsAsync<SpannerException>(
                 async () =>
                 {
-                    using (var connection = await _testFixture.GetTestDatabaseConnectionAsync())
+                    using (var connection = _fixture.GetConnection())
                     {
-                        var cmd = connection.CreateInsertCommand(
-                            "T", new SpannerParameterCollection
-                            {
-                                {"K", SpannerDbType.Float64, 0.1}
-                            });
-
-                        rowsWritten = await cmd.ExecuteNonQueryAsync();
+                        var cmd = connection.CreateInsertCommand(_fixture.TableName);
+                        cmd.Parameters.Add("K", SpannerDbType.Float64, 0.1);
+                        rowsWritten = await cmd.ExecuteNonQueryAsyncWithRetry();
                     }
                 }).ConfigureAwait(false);
 
@@ -240,15 +224,11 @@ namespace Google.Cloud.Spanner.Data.IntegrationTests
             var e = await Assert.ThrowsAsync<SpannerException>(
                 async () =>
                 {
-                    using (var connection = await _testFixture.GetTestDatabaseConnectionAsync())
+                    using (var connection = _fixture.GetConnection())
                     {
-                        var cmd = connection.CreateInsertCommand(
-                            "badjuju", new SpannerParameterCollection
-                            {
-                                {"K", SpannerDbType.String, UniqueString()}
-                            });
-
-                        rowsWritten = await cmd.ExecuteNonQueryAsync();
+                        var cmd = connection.CreateInsertCommand("badjuju");
+                        cmd.Parameters.Add("K", SpannerDbType.String, UniqueString());
+                        rowsWritten = await cmd.ExecuteNonQueryAsyncWithRetry();
                     }
                 }).ConfigureAwait(false);
 
@@ -317,27 +297,29 @@ namespace Google.Cloud.Spanner.Data.IntegrationTests
         [Fact]
         public async Task WriteInfinity()
         {
-            Assert.Equal(
-                1, await InsertAsync(
-                    new SpannerParameterCollection
-                    {
-                        {"Float64Value", SpannerDbType.Float64, double.PositiveInfinity}
-                    }));
-            using (var reader = await GetLastRowAsync())
+            int failureCount = 0;
+            for (int i = 0; i < 100; i++)
             {
-                Assert.True(double.IsPositiveInfinity(reader.GetFieldValue<double>("Float64Value")));
+                try
+                {
+                    Assert.Equal(1, await InsertAsync("Float64Value", SpannerDbType.Float64, double.PositiveInfinity));
+                    using (var reader = await GetLastRowAsync())
+                    {
+                        Assert.True(double.IsPositiveInfinity(reader.GetFieldValue<double>("Float64Value")));
+                    }
+                }
+                catch (SpannerException e) when (e.ErrorCode == ErrorCode.Aborted)
+                {
+                    failureCount++;
+                }
             }
+            Assert.Equal(0, failureCount);
         }
 
         [Fact]
         public async Task WriteNanValue()
         {
-            Assert.Equal(
-                1, await InsertAsync(
-                    new SpannerParameterCollection
-                    {
-                        {"Float64Value", SpannerDbType.Float64, double.NaN}
-                    }));
+            Assert.Equal(1, await InsertAsync("Float64Value", SpannerDbType.Float64, double.NaN));
             using (var reader = await GetLastRowAsync())
             {
                 Assert.True(double.IsNaN(reader.GetFieldValue<double>("Float64Value")));
@@ -347,12 +329,7 @@ namespace Google.Cloud.Spanner.Data.IntegrationTests
         [Fact]
         public async Task WriteNegativeInfinity()
         {
-            Assert.Equal(
-                1, await InsertAsync(
-                    new SpannerParameterCollection
-                    {
-                        {"Float64Value", SpannerDbType.Float64, double.NegativeInfinity}
-                    }));
+            Assert.Equal(1, await InsertAsync("Float64Value", SpannerDbType.Float64, double.NegativeInfinity));
             using (var reader = await GetLastRowAsync())
             {
                 Assert.True(double.IsNegativeInfinity(reader.GetFieldValue<double>("Float64Value")));
@@ -447,14 +424,14 @@ namespace Google.Cloud.Spanner.Data.IntegrationTests
                 await InsertAndRecordBytesAsync(byteArray, recordedValues);
             }
 
-            using (var connection = await _testFixture.GetTestDatabaseConnectionAsync())
+            using (var connection = _fixture.GetConnection())
             {
                 string sqlQuery = $@"SELECT K,BytesValue
-                                FROM T
+                                FROM {_fixture.TableName}
                                 WHERE K IN ({string.Join(", ", recordedValues.Keys.Select(x => $"'{x}'"))})";
 
                 var cmd = connection.CreateSelectCommand(sqlQuery);
-                using (var reader = (SpannerDataReader) await cmd.ExecuteReaderAsync())
+                using (var reader = await cmd.ExecuteReaderAsync())
                 {
                     while (await reader.ReadAsync())
                     {
@@ -471,8 +448,6 @@ namespace Google.Cloud.Spanner.Data.IntegrationTests
         [Fact]
         public async Task CommandTimeout()
         {
-            await _testFixture.EnsureTestDatabaseAsync();
-
             var values = new SpannerParameterCollection
             {
                 {"StringValue", SpannerDbType.String, "abc"},
@@ -482,16 +457,15 @@ namespace Google.Cloud.Spanner.Data.IntegrationTests
             var e = await Assert.ThrowsAsync<SpannerException>(
                 async () =>
                 {
-                    using (var connection = new SpannerConnection($"{_testFixture.ConnectionString};{nameof(SpannerSettings.AllowImmediateTimeouts)}=true"))
+                    using (var connection = new SpannerConnection($"{_fixture.ConnectionString};{nameof(SpannerSettings.AllowImmediateTimeouts)}=true"))
                     {
-                        var cmd = connection.CreateInsertCommand("T", values);
+                        var cmd = connection.CreateInsertCommand(_fixture.TableName, values);
                         cmd.CommandTimeout = 0;
                         await cmd.ExecuteNonQueryAsync();
                     }
                 }).ConfigureAwait(false);
 
-            Assert.Equal(ErrorCode.DeadlineExceeded, e.ErrorCode);
-            Assert.False(e.IsTransientSpannerFault());
+            SpannerAssert.IsTimeout(e);
         }
     }
 }

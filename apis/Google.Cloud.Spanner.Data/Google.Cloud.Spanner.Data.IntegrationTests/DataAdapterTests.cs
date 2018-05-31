@@ -12,10 +12,11 @@
 // See the License for the specific language governing permissions and
 // limitations under the License.
 
+#if !NETCOREAPP1_0
+using Google.Cloud.Spanner.Data.CommonTesting;
 using System;
 using System.Data;
 using System.Linq;
-using System.Threading.Tasks;
 using Xunit;
 using Xunit.Abstractions;
 
@@ -24,124 +25,135 @@ namespace Google.Cloud.Spanner.Data.IntegrationTests
     /// <summary>
     /// Integration tests to ensure that <see cref="SpannerDataAdapter"/> works properly.
     /// </summary>
-    [Collection(nameof(TestDatabaseFixture))]
+    [Collection(nameof(DataAdapterTableFixture))]
     public class DataAdapterTests
     {
-        private TestDatabaseFixture _testFixture;
+        private DataAdapterTableFixture _fixture;
 
-        public DataAdapterTests(TestDatabaseFixture testFixture, ITestOutputHelper outputHelper)
+        public DataAdapterTests(DataAdapterTableFixture fixture, ITestOutputHelper outputHelper)
         {
-            _testFixture = testFixture;
+            _fixture = fixture;
             TestLogger.TestOutputHelper = outputHelper;
         }
 
-#if !NETCOREAPP1_0
         [Fact]
-        public async Task AdapterFill()
+        public void AdapterFill()
         {
-            using (var connection = await _testFixture.GetTestDatabaseConnectionAsync())
+            using (var connection = _fixture.GetConnection())
             {
-                var adapter = new SpannerDataAdapter(connection, _testFixture.DataAdapterTestTable, "Key");
+                var adapter = new SpannerDataAdapter(connection, _fixture.TableName, "Key");
 
                 var testDataSet = new DataSet();
                 adapter.Fill(testDataSet);
                 Assert.Equal(1, testDataSet.Tables.Count);
                 Assert.Equal(2, testDataSet.Tables[0].Columns.Count);
-                Assert.Equal(_testFixture.TestTableRowCount, testDataSet.Tables[0].Rows.Count);
+                Assert.Equal(_fixture.RowCount, testDataSet.Tables[0].Rows.Count);
             }
         }
 
         [Fact]
-        public async Task AdapterDeleteInsert()
+        public void AdapterDeleteInsert()
         {
-            using (var connection = await _testFixture.GetTestDatabaseConnectionAsync())
+            RetryHelpers.RetryOnce(() =>
             {
-                var adapter = new SpannerDataAdapter(connection, _testFixture.DataAdapterTestTable, "Key");
-
-                //Load
-                var testDataSet = new DataSet();
-                adapter.Fill(testDataSet);
-                var k0 = testDataSet.Tables[0].Rows[0]["Key"];
-                var stringValue0 = testDataSet.Tables[0].Rows[0]["StringValue"];
-                Assert.IsType<string>(k0);
-                Assert.IsType<string>(stringValue0);
-
-                //Delete, reload
-                testDataSet.Tables[0].Rows[0].Delete();
-                adapter.Update(testDataSet);
-                testDataSet.Clear();
-                adapter.Fill(testDataSet);
-                Assert.Equal(_testFixture.TestTableRowCount - 1, testDataSet.Tables[0].Rows.Count);
-
-                //insert, reload
-                var newRow = testDataSet.Tables[0].NewRow();
-                newRow["Key"] = k0;
-                newRow["StringValue"] = stringValue0;
-                testDataSet.Tables[0].Rows.Add(newRow);
-                adapter.Update(testDataSet);
-                testDataSet.Clear();
-                adapter.Fill(testDataSet);
-                Assert.Equal(_testFixture.TestTableRowCount, testDataSet.Tables[0].Rows.Count);
-            }
-        }
-
-        [Fact]
-        public async Task AdapterUpdate()
-        {
-            using (var connection = await _testFixture.GetTestDatabaseConnectionAsync())
-            {
-                var adapter = new SpannerDataAdapter(connection, _testFixture.DataAdapterTestTable, "Key");
-
-                //Load
-                var testDataSet = new DataSet();
-                adapter.Fill(testDataSet);
-
-                //update, reload
-                var newValue = Guid.NewGuid().ToString();
-                var oldKey = testDataSet.Tables[0].Rows[1]["Key"];
-                testDataSet.Tables[0].Rows[1]["StringValue"] = newValue;
-                adapter.Update(testDataSet);
-                testDataSet.Clear();
-                adapter.Fill(testDataSet);
-                int i = 0;
-                for (; i < testDataSet.Tables[0].Rows.Count; i++) {
-                    if (testDataSet.Tables[0].Rows[i]["Key"].Equals(oldKey)) {
-                        break;
-                    }
-                }
-                var row = testDataSet.Tables[0].Rows.Cast<DataRow>()
-                                .FirstOrDefault(r => r["Key"].Equals(oldKey));
-                Assert.NotNull(row);
-                Assert.Equal(newValue, row["StringValue"]);
-            }
-        }
-
-        [Fact]
-        public async Task AdapterOverrideSelect()
-        {
-            using (var connection = await _testFixture.GetTestDatabaseConnectionAsync())
-            {
-                var adapter = new SpannerDataAdapter(connection, _testFixture.DataAdapterTestTable, "Key")
+                using (var connection = _fixture.GetConnection())
                 {
-                    SelectCommand =
-                        connection.CreateSelectCommand(
-                            $"SELECT * FROM {_testFixture.DataAdapterTestTable} WHERE Key='k2'")
-                };
+                    var adapter = new SpannerDataAdapter(connection, _fixture.TableName, "Key");
 
-                //Load
-                var testDataSet = new DataSet();
-                adapter.Fill(testDataSet);
-                Assert.Equal(1, testDataSet.Tables[0].Rows.Count);
+                    //Load
+                    var testDataSet = new DataSet();
+                    adapter.Fill(testDataSet);
+                    var k0 = testDataSet.Tables[0].Rows[0]["Key"];
+                    var stringValue0 = testDataSet.Tables[0].Rows[0]["StringValue"];
+                    Assert.IsType<string>(k0);
+                    Assert.IsType<string>(stringValue0);
 
-                //update, reload (update still works even with an overloaded selectcommand)
-                string newValue = Guid.NewGuid().ToString();
-                testDataSet.Tables[0].Rows[0]["StringValue"] = newValue;
-                adapter.Update(testDataSet);
-                testDataSet.Clear();
-                adapter.Fill(testDataSet);
-                Assert.Equal(newValue, testDataSet.Tables[0].Rows[0]["StringValue"]);
-            }
+                    //Delete, reload
+                    testDataSet.Tables[0].Rows[0].Delete();
+                    adapter.Update(testDataSet);
+                    testDataSet.Clear();
+                    adapter.Fill(testDataSet);
+                    Assert.Equal(_fixture.RowCount - 1, testDataSet.Tables[0].Rows.Count);
+
+                    //insert, reload
+                    var newRow = testDataSet.Tables[0].NewRow();
+                    newRow["Key"] = k0;
+                    newRow["StringValue"] = stringValue0;
+                    testDataSet.Tables[0].Rows.Add(newRow);
+                    adapter.Update(testDataSet);
+                    testDataSet.Clear();
+                    adapter.Fill(testDataSet);
+                    Assert.Equal(_fixture.RowCount, testDataSet.Tables[0].Rows.Count);
+                }
+            });
         }
-#endif
+
+        [Fact]
+        public void AdapterUpdate()
+        {
+            RetryHelpers.RetryOnce(() =>
+            {
+                using (var connection = _fixture.GetConnection())
+                {
+                    var adapter = new SpannerDataAdapter(connection, _fixture.TableName, "Key");
+
+                    //Load
+                    var testDataSet = new DataSet();
+                    adapter.Fill(testDataSet);
+
+                    //update, reload
+                    var newValue = Guid.NewGuid().ToString();
+                    var oldKey = testDataSet.Tables[0].Rows[1]["Key"];
+                    testDataSet.Tables[0].Rows[1]["StringValue"] = newValue;
+                    adapter.Update(testDataSet);
+                    testDataSet.Clear();
+                    adapter.Fill(testDataSet);
+                    int i = 0;
+                    for (; i < testDataSet.Tables[0].Rows.Count; i++)
+                    {
+                        if (testDataSet.Tables[0].Rows[i]["Key"].Equals(oldKey))
+                        {
+                            break;
+                        }
+                    }
+                    var row = testDataSet.Tables[0].Rows.Cast<DataRow>()
+                                    .FirstOrDefault(r => r["Key"].Equals(oldKey));
+                    Assert.NotNull(row);
+                    Assert.Equal(newValue, row["StringValue"]);
+                }
+            });
+        }
+
+        [Fact]
+        public void AdapterOverrideSelect()
+        {
+            RetryHelpers.RetryOnce(() =>
+            {
+
+                using (var connection = _fixture.GetConnection())
+                {
+                    var adapter = new SpannerDataAdapter(connection, _fixture.TableName, "Key")
+                    {
+                        SelectCommand =
+                            connection.CreateSelectCommand(
+                                $"SELECT * FROM {_fixture.TableName} WHERE Key='k2'")
+                    };
+
+                    //Load
+                    var testDataSet = new DataSet();
+                    adapter.Fill(testDataSet);
+                    Assert.Equal(1, testDataSet.Tables[0].Rows.Count);
+
+                    //update, reload (update still works even with an overloaded selectcommand)
+                    string newValue = Guid.NewGuid().ToString();
+                    testDataSet.Tables[0].Rows[0]["StringValue"] = newValue;
+                    adapter.Update(testDataSet);
+                    testDataSet.Clear();
+                    adapter.Fill(testDataSet);
+                    Assert.Equal(newValue, testDataSet.Tables[0].Rows[0]["StringValue"]);
+                }
+            });
+        }
     }
 }
+#endif

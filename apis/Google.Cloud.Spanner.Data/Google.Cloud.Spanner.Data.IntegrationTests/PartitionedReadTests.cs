@@ -12,34 +12,25 @@
 // See the License for the specific language governing permissions and
 // limitations under the License.
 
-#region
-
-using System;
-using System.Collections;
-using System.Diagnostics;
+using Google.Cloud.ClientTesting;
+using Google.Cloud.Spanner.Data.CommonTesting;
 using System.Linq;
 using System.Threading;
 using System.Threading.Tasks;
-using Google.Api.Gax;
-using Google.Apis.Auth.OAuth2;
-using Google.Cloud.Spanner.V1;
-using Grpc.Auth;
 using Xunit;
 using Xunit.Abstractions;
 
-#endregion
-
-// ReSharper disable PossibleNullReferenceException
-
 namespace Google.Cloud.Spanner.Data.IntegrationTests
 {
-    [Collection(nameof(TestDatabaseFixture))]
+    [Collection(nameof(PartitionedReadTableFixture))]
     public class PartitionedReadTests
     {
-        // ReSharper disable once UnusedParameter.Local
-        public PartitionedReadTests(TestDatabaseFixture testFixture, ITestOutputHelper outputHelper)
+        private readonly PartitionedReadTableFixture _fixture;
+        private int _rowsRead = 0;
+
+        public PartitionedReadTests(PartitionedReadTableFixture fixture, ITestOutputHelper outputHelper)
         {
-            _testFixture = testFixture;
+            _fixture = fixture;
 #if LoggingOn
             SpannerConnection.ConnectionPoolOptions.LogLevel = LogLevel.Debug;
             SpannerConnection.ConnectionPoolOptions.LogPerformanceTraces = true;
@@ -47,25 +38,22 @@ namespace Google.Cloud.Spanner.Data.IntegrationTests
             TestLogger.TestOutputHelper = outputHelper;
         }
 
-        private readonly TestDatabaseFixture _testFixture;
-        private int _rowsRead = 0;
-
         [Fact]
         public async Task DistributedReadAsync()
         {
             int numRows;
-            using (var connection = await _testFixture.GetTestDatabaseConnectionAsync())
-            using (var cmd = connection.CreateSelectCommand("SELECT COUNT(*) FROM Orders"))
+            using (var connection = _fixture.GetConnection())
+            using (var cmd = connection.CreateSelectCommand($"SELECT COUNT(*) FROM {_fixture.TableName}"))
             {
                 numRows = await cmd.ExecuteScalarAsync<int>();
             }
 
-            using (var connection = new SpannerConnection(_testFixture.ConnectionString))
+            using (var connection = new SpannerConnection(_fixture.ConnectionString))
             {
                 await connection.OpenAsync();
 
                 using (var transaction = await connection.BeginReadOnlyTransactionAsync())
-                using (var cmd = connection.CreateSelectCommand("SELECT * FROM Orders"))
+                using (var cmd = connection.CreateSelectCommand($"SELECT * FROM {_fixture.TableName}"))
                 {
                     transaction.DisposeBehavior = DisposeBehavior.CloseResources;
                     cmd.Transaction = transaction;
@@ -88,17 +76,19 @@ namespace Google.Cloud.Spanner.Data.IntegrationTests
         /// </summary>
         private async Task DistributedReadWorkerAsync(CommandPartition readPartition, TransactionId id)
         {
-            //note: we only use state provided by the arguments here.
+            // Note: we only use state provided by the arguments here.
             using (var connection = new SpannerConnection(id.ConnectionString))
-            using (var transaction = connection.BeginReadOnlyTransaction(id))
             {
-                using (var cmd = connection.CreateCommandWithPartition(readPartition, transaction))
+                using (var transaction = connection.BeginReadOnlyTransaction(id))
                 {
-                    using (var reader = await cmd.ExecuteReaderAsync().ConfigureAwait(false))
+                    using (var cmd = connection.CreateCommandWithPartition(readPartition, transaction))
                     {
-                        while (await reader.ReadAsync())
+                        using (var reader = await cmd.ExecuteReaderAsync().ConfigureAwait(false))
                         {
-                            Interlocked.Increment(ref _rowsRead);
+                            while (await reader.ReadAsync())
+                            {
+                                Interlocked.Increment(ref _rowsRead);
+                            }
                         }
                     }
                 }

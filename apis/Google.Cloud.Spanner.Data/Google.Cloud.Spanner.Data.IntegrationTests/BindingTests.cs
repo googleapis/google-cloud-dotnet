@@ -12,25 +12,24 @@
 // See the License for the specific language governing permissions and
 // limitations under the License.
 
-#region
-
+using Google.Cloud.ClientTesting;
+using Google.Cloud.Spanner.Data.CommonTesting;
 using System;
 using System.Collections.Generic;
 using System.Threading.Tasks;
 using Xunit;
 using Xunit.Abstractions;
 
-#endregion
-
 namespace Google.Cloud.Spanner.Data.IntegrationTests
 {
-    [Collection(nameof(TestDatabaseFixture))]
+    [Collection(nameof(SpannerDatabaseFixture))]
     public class BindingTests
     {
-        // ReSharper disable once UnusedParameter.Local
-        public BindingTests(TestDatabaseFixture testFixture, ITestOutputHelper outputHelper)
+        private readonly SpannerDatabaseFixture _fixture;
+
+        public BindingTests(SpannerDatabaseFixture fixture, ITestOutputHelper outputHelper)
         {
-            _testFixture = testFixture;
+            _fixture = fixture;
 #if LoggingOn
             SpannerConnection.ConnectionPoolOptions.LogLevel = LogLevel.Debug;
             SpannerConnection.ConnectionPoolOptions.LogPerformanceTraces = true;
@@ -38,8 +37,6 @@ namespace Google.Cloud.Spanner.Data.IntegrationTests
 #endif
             TestLogger.TestOutputHelper = outputHelper;
         }
-
-        private readonly TestDatabaseFixture _testFixture;
 
         public static TheoryData<SpannerDbType> BindNullData { get; } = new TheoryData<SpannerDbType>
         {
@@ -63,13 +60,10 @@ namespace Google.Cloud.Spanner.Data.IntegrationTests
         [MemberData(nameof(BindNullData))]
         public async Task BindNull(SpannerDbType parameterType)
         {
-            using (var connection = await _testFixture.GetTestDatabaseConnectionAsync())
+            using (var connection = _fixture.GetConnection())
             {
-                var cmd = connection.CreateSelectCommand(
-                    "SELECT @v",
-                    new SpannerParameterCollection { new SpannerParameter("v", parameterType) });
-
-                cmd.Parameters["v"].Value = null;
+                var cmd = connection.CreateSelectCommand("SELECT @v");
+                cmd.Parameters.Add("v", parameterType, null);
                 using (var reader = await cmd.ExecuteReaderAsync())
                 {
                     Assert.True(await reader.ReadAsync());
@@ -87,13 +81,10 @@ namespace Google.Cloud.Spanner.Data.IntegrationTests
             int rowsRead;
             var valueRead = default(T);
 
-            using (var connection = await _testFixture.GetTestDatabaseConnectionAsync())
+            using (var connection = _fixture.GetConnection())
             {
-                var cmd = connection.CreateSelectCommand(
-                    "SELECT @v",
-                    new SpannerParameterCollection {new SpannerParameter("v", parameterType)});
-
-                cmd.Parameters["v"].Value = value;
+                var cmd = connection.CreateSelectCommand("SELECT @v");
+                cmd.Parameters.Add("v", parameterType, value);
                 using (var reader = await cmd.ExecuteReaderAsync())
                 {
                     rowsRead = 0;
@@ -101,11 +92,10 @@ namespace Google.Cloud.Spanner.Data.IntegrationTests
                     {
                         valueRead = reader.GetFieldValue<T>(0);
 
-                        // optional extra test for certain built in types
+                        // Optional extra test for certain built in types
                         if (typeSpecificReader != null)
                         {
                             Assert.Equal(typeSpecificReader(reader), valueRead);
-                            // ReSharper disable once CompareNonConstrainedGenericWithNull
                             Assert.False(reader.IsDBNull(0));
                         }
 
@@ -122,7 +112,6 @@ namespace Google.Cloud.Spanner.Data.IntegrationTests
                 Assert.Equal(valueAsArray.Length, valueReadAsArray.Length);
                 for (int i = 0; i < valueAsArray.Length; i++)
                 {
-                    // ReSharper disable once PossibleNullReferenceException
                     Assert.Equal(valueAsArray.GetValue(i), valueReadAsArray.GetValue(i));
                 }
             }

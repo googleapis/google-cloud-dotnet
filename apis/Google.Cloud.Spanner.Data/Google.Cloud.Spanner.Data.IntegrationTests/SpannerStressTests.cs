@@ -18,6 +18,8 @@ using System.Diagnostics;
 using System.Linq;
 using System.Threading;
 using System.Threading.Tasks;
+using Google.Cloud.ClientTesting;
+using Google.Cloud.Spanner.Data.CommonTesting;
 using Google.Cloud.Spanner.V1;
 using Google.Cloud.Spanner.V1.Internal.Logging;
 using Xunit;
@@ -25,37 +27,32 @@ using Xunit.Abstractions;
 
 namespace Google.Cloud.Spanner.Data.IntegrationTests
 {
-    [Collection(nameof(TestDatabaseFixture))]
+    [Collection(nameof(SpannerStressTestTableFixture))]
     [PerformanceLog]
     public class SpannerStressTests : StressTestBase
     {
         private static int s_rowCounter = 1;
         private static readonly string s_guid = Guid.NewGuid().ToString();
         private static ThreadLocal<Random> s_rnd = new ThreadLocal<Random>(() => new Random(Environment.TickCount));
-        private TestDatabaseFixture _testFixture;
+        private SpannerStressTestTableFixture _fixture;
 
-        public SpannerStressTests(TestDatabaseFixture testFixture, ITestOutputHelper outputHelper)
+        public SpannerStressTests(SpannerStressTestTableFixture fixture, ITestOutputHelper outputHelper)
         {
-            _testFixture = testFixture;
+            _fixture = fixture;
             SpannerOptions.Instance.LogPerformanceTraces = true;
             TestLogger.TestOutputHelper = outputHelper;
         }
 
         private async Task<TimeSpan> TestWriteOneRow(Stopwatch sw)
         {
-            using (var connection = await _testFixture.GetTestDatabaseConnectionAsync())
+            using (var connection = _fixture.GetConnection())
             {
                 var localCounter = Interlocked.Increment(ref s_rowCounter);
-                var insertCommand = connection.CreateInsertCommand(
-                    _testFixture.StressTestTable, new SpannerParameterCollection
-                    {
-                        {"ID", SpannerDbType.String},
-                        {"Title", SpannerDbType.String}
-                    });
-                insertCommand.Parameters["ID"].Value = $"{s_guid}{localCounter}";
-                insertCommand.Parameters["Title"].Value = "Title";
+                var insertCommand = connection.CreateInsertCommand(_fixture.TableName);
+                insertCommand.Parameters.Add("ID", SpannerDbType.String, $"{s_guid}{localCounter}");
+                insertCommand.Parameters.Add("Title", SpannerDbType.String, "Title");
 
-                // This uses an ephemeral transaction, so its legal to retry it.
+                // This uses an ephemeral transaction, so it's legal to retry it.
                 await ExecuteWithRetry(insertCommand.ExecuteNonQueryAsync);
             }
             return sw.Elapsed;
@@ -65,7 +62,7 @@ namespace Google.Cloud.Spanner.Data.IntegrationTests
         {
             await ExecuteWithRetry(async () =>
             {
-                using (var connection = await _testFixture.GetTestDatabaseConnectionAsync())
+                using (var connection = _fixture.GetConnection())
                 {
                     await connection.OpenAsync();
                     using (var tx = await connection.BeginTransactionAsync())
@@ -73,20 +70,17 @@ namespace Google.Cloud.Spanner.Data.IntegrationTests
                         var rowsToWrite = Enumerable.Range(0, s_rnd.Value.Next(5) + 1)
                             .Select(x => Interlocked.Increment(ref s_rowCounter)).ToList();
 
-                        var insertCommand = connection.CreateInsertCommand(
-                            _testFixture.StressTestTable, new SpannerParameterCollection
-                            {
-                                {"ID", SpannerDbType.String},
-                                {"Title", SpannerDbType.String}
-                            });
-                        insertCommand.Parameters["Title"].Value = "Title";
+                        var insertCommand = connection.CreateInsertCommand(_fixture.TableName);
+                        var idParameter = insertCommand.Parameters.Add("ID", SpannerDbType.String);
+                        var titleParameter = insertCommand.Parameters.Add("Title", SpannerDbType.String);
+                        titleParameter.Value = "Title";
                         insertCommand.Transaction = tx;
 
                         var tasks = rowsToWrite.Select(
                             x =>
                             {
                                 // This will blow up with dupe primary keys if not threadsafe.
-                                insertCommand.Parameters["ID"].Value = $"{s_guid}{x}";
+                                idParameter.Value = $"{s_guid}{x}";
                                 return insertCommand.ExecuteNonQueryAsync(CancellationToken.None);
                             });
 
@@ -134,7 +128,10 @@ namespace Google.Cloud.Spanner.Data.IntegrationTests
         {
             // Clear current session pool to eliminate the chance of a previous
             // test altering the pool state (which is validated at end)
-            Task.Run(SessionPool.Default.ReleaseAllAsync).Wait(SessionPool.Default.ShutDownTimeout);
+            if (!Task.Run(SessionPool.Default.ReleaseAllAsync).Wait(SessionPool.Default.ShutDownTimeout))
+            {
+                throw new TimeoutException("Deadline exceeded while releasing all sessions");
+            }
 
             //prewarm
             // The maximum roundtrip time for spanner (and mysql) is about 200ms per
@@ -151,7 +148,7 @@ namespace Google.Cloud.Spanner.Data.IntegrationTests
                 $"SpannerOptions.Instance.MaximumGrpcChannels:{SpannerOptions.Instance.MaximumGrpcChannels}");
 
             //prewarm step.
-            using (await _testFixture.GetTestDatabaseConnectionAsync())
+            using (_fixture.GetConnection())
             {
                 var all = new List<SpannerConnection>();
                 const int increment = 25;
@@ -162,7 +159,7 @@ namespace Google.Cloud.Spanner.Data.IntegrationTests
                     Logger.DefaultLogger.Info(() => $"prewarming {localCount} spanner sessions");
                     for (var i = 0; i < localCount; i++)
                     {
-                        prewarm.Add(new SpannerConnection(_testFixture.ConnectionString));
+                        prewarm.Add(new SpannerConnection(_fixture.ConnectionString));
                     }
                     await Task.WhenAll(prewarm.Select(x => x.OpenAsync()));
                     await Task.Delay(TimeSpan.FromMilliseconds(250));
