@@ -80,7 +80,6 @@ namespace Google.Cloud.Bigtable.V2
         public BigtableVersionRange(long? start, long? end)
             : this(start.ToVersion(), end.ToVersion()) { }
 
-        // TODO: Get clarification on use cases to see how useful this would be.
         /// <summary>
         /// Creates a new <see cref="BigtableVersionRange"/>.
         /// </summary>
