@@ -1138,24 +1138,16 @@ namespace Google.Cloud.Bigtable.V2
         internal BigtableServiceApiClient.ReadRowsStream ReadRowsInternal(ReadRowsRequest request, CallSettings callSettings) =>
             GetUnderlyingClient().ReadRows(request, callSettings);
 
-        // TODO: These retry approaches don't retry if the initial request fails. We should probably handle these cases as well.
-
-        private ReadRowsStream ConvertResult(
-            ReadRowsRequest request,
-            CallSettings callSettings,
-            BigtableServiceApiClient.ReadRowsStream result)
+        private ReadRowsStream ReadRowsImpl(ReadRowsRequest request, CallSettings callSettings)
         {
             var defaultSettings = UnderlyingClientSettings ?? new BigtableServiceApiSettings();
             var effectiveCallSettings = defaultSettings.ReadRowsSettings.MergedWith(callSettings);
             var effectiveRetrySettings = defaultSettings.ReadRowsRetrySettings;
 
-            return new ReadRowsStream(this, request, effectiveCallSettings, effectiveRetrySettings, result);
+            return new ReadRowsStream(this, request, effectiveCallSettings, effectiveRetrySettings);
         }
 
-        private async Task<MutateRowsResponse> ConvertResult(
-            MutateRowsRequest request,
-            CallSettings callSettings,
-            BigtableServiceApiClient.MutateRowsStream result)
+        private async Task<MutateRowsResponse> MutateRowsImpl(MutateRowsRequest request, CallSettings callSettings)
         {
             var defaultSettings = UnderlyingClientSettings ?? new BigtableServiceApiSettings();
             var effectiveCallSettings = defaultSettings.MutateRowsSettings.MergedWith(callSettings);
@@ -1165,27 +1157,22 @@ namespace Google.Cloud.Bigtable.V2
             StatusCode[] retryStatuses = { StatusCode.DeadlineExceeded, StatusCode.Unavailable };
             var requestManager = new BigtableMutateRowsRequestManager(retryStatuses, request);
 
-            var currentStream = result;
-            var status = await ProcessCurrentStream().ConfigureAwait(false);
-            if (effectiveRetrySettings != null && status == ProcessingStatus.Retryable)
-            {
-                await ApiCallRetryExtensions.RetryOperationUntilCompleted(
-                    async () =>
-                    {
-                        currentStream = GetUnderlyingClient().MutateRows(requestManager.RetryRequest, callSettings);
-                        return await ProcessCurrentStream().ConfigureAwait(false) != ProcessingStatus.Retryable;
-                    },
-                    Clock,
-                    Scheduler,
-                    effectiveCallSettings,
-                    effectiveRetrySettings).ConfigureAwait(false);
-            }
+            await ApiCallRetryExtensions.RetryOperationUntilCompleted(
+                async () =>
+                {
+                    var currentStream = GetUnderlyingClient().MutateRows(requestManager.NextRequest, callSettings);
+                    return await ProcessCurrentStream(currentStream).ConfigureAwait(false) != ProcessingStatus.Retryable;
+                },
+                Clock,
+                Scheduler,
+                effectiveCallSettings,
+                effectiveRetrySettings).ConfigureAwait(false);
             return requestManager.BuildResponse();
 
-            async Task<ProcessingStatus> ProcessCurrentStream()
+            async Task<ProcessingStatus> ProcessCurrentStream(BigtableServiceApiClient.MutateRowsStream stream)
             {
                 var cancellationToken = effectiveCallSettings.CancellationToken ?? default;
-                var responseStream = currentStream.ResponseStream;
+                var responseStream = stream.ResponseStream;
                 while (await responseStream.MoveNext(cancellationToken).ConfigureAwait(false))
                 {
                     requestManager.SetStatus(responseStream.Current);

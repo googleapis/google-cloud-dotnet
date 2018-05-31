@@ -147,15 +147,16 @@ namespace Google.Cloud.Bigtable.V2.Tests
             MutateRowsRequest originalRequest = CreateRequest(3);
             BigtableMutateRowsRequestManager underTest =
                 new BigtableMutateRowsRequestManager(_retryStatuses, originalRequest);
+            Assert.Equal(originalRequest, underTest.NextRequest);
 
             Assert.Equal(BigtableMutateRowsRequestManager.ProcessingStatus.Retryable,
                 Send(underTest, CreateResponse(Ok, DeadlineExceeded, Ok)));
-            Assert.Equal(CreateRetryRequest(originalRequest, 1), underTest.RetryRequest);
+            Assert.Equal(CreateRetryRequest(originalRequest, 1), underTest.NextRequest);
             Assert.Equal(CreateResponse(Ok, DeadlineExceeded, Ok), underTest.BuildResponse());
 
             Assert.Equal(BigtableMutateRowsRequestManager.ProcessingStatus.NotRetryable,
                 Send(underTest, CreateResponse(Ok)));
-            Assert.Null(underTest.RetryRequest);
+            Assert.Null(underTest.NextRequest);
             Assert.Equal(CreateResponse(Ok, Ok, Ok), underTest.BuildResponse());
         }
 
@@ -168,19 +169,20 @@ namespace Google.Cloud.Bigtable.V2.Tests
             MutateRowsRequest originalRequest = CreateRequest(10);
             BigtableMutateRowsRequestManager underTest =
                 new BigtableMutateRowsRequestManager(_retryStatuses, originalRequest);
+            Assert.Equal(originalRequest, underTest.NextRequest);
 
             // 5 mutations succeed, 5 mutations are retryable.
             MutateRowsResponse firstRetryableResponse = CreateResponse(Ok, DeadlineExceeded, Ok, DeadlineExceeded,
                 Ok, DeadlineExceeded, Ok, DeadlineExceeded, Ok, DeadlineExceeded);
             Assert.Equal(BigtableMutateRowsRequestManager.ProcessingStatus.Retryable,
                 Send(underTest, firstRetryableResponse));
-            Assert.Equal(CreateRetryRequest(originalRequest, 1, 3, 5, 7, 9), underTest.RetryRequest);
+            Assert.Equal(CreateRetryRequest(originalRequest, 1, 3, 5, 7, 9), underTest.NextRequest);
             Assert.Equal(firstRetryableResponse, underTest.BuildResponse());
 
             // 3 mutations succeed, 2 mutations are retryable.
             Assert.Equal(BigtableMutateRowsRequestManager.ProcessingStatus.Retryable,
                 Send(underTest, CreateResponse(Ok, DeadlineExceeded, Ok, Ok, DeadlineExceeded)));
-            Assert.Equal(CreateRetryRequest(originalRequest, 3, 9), underTest.RetryRequest);
+            Assert.Equal(CreateRetryRequest(originalRequest, 3, 9), underTest.NextRequest);
             MutateRowsResponse secondRetryableResponse = CreateResponse(Ok, Ok, Ok, DeadlineExceeded,
                 Ok, Ok, Ok, Ok, Ok, DeadlineExceeded);
             Assert.Equal(secondRetryableResponse, underTest.BuildResponse());
@@ -188,7 +190,7 @@ namespace Google.Cloud.Bigtable.V2.Tests
             // The final 2 mutations are OK
             Assert.Equal(BigtableMutateRowsRequestManager.ProcessingStatus.NotRetryable,
                 Send(underTest, CreateResponse(Ok, Ok)));
-            Assert.Null(underTest.RetryRequest);
+            Assert.Null(underTest.NextRequest);
             Assert.Equal(CreateResponse(Ok, Ok, Ok, Ok, Ok, Ok, Ok, Ok, Ok, Ok),
                 underTest.BuildResponse());
         }
@@ -206,6 +208,7 @@ namespace Google.Cloud.Bigtable.V2.Tests
             MutateRowsRequest originalRequest = CreateRequest(RequestCount);
             BigtableMutateRowsRequestManager underTest =
                 new BigtableMutateRowsRequestManager(_retryStatuses, originalRequest);
+            Assert.Equal(originalRequest, underTest.NextRequest);
 
             // At the beginning, all mutations are outstanding.
             List<int> remaining = Enumerable.Range(0, RequestCount).ToList();
@@ -230,7 +233,7 @@ namespace Google.Cloud.Bigtable.V2.Tests
                 Assert.True(BigtableMutateRowsRequestManager.ProcessingStatus.Retryable.Equals
                     (Send(underTest, CreateResponse(statuses.ToArray()))), $"Seed value is {seed} ");
                 Assert.True(CreateRetryRequest(originalRequest, remaining.ToArray()).Equals
-                    (underTest.RetryRequest), $"Seed value is {seed} ");
+                    (underTest.NextRequest), $"Seed value is {seed} ");
 
                 // Remove Successful status from statuses.
                 statuses.RemoveAt(successIndex);
@@ -242,7 +245,7 @@ namespace Google.Cloud.Bigtable.V2.Tests
             statuses[remaining[0]] = DeadlineExceeded;
 
             Assert.Equal(CreateResponse(statuses.ToArray()), underTest.BuildResponse());
-            Assert.Equal(CreateRetryRequest(originalRequest, remaining.ToArray()), underTest.RetryRequest);
+            Assert.Equal(CreateRetryRequest(originalRequest, remaining.ToArray()), underTest.NextRequest);
         }
 
         /// <summary>
@@ -251,12 +254,14 @@ namespace Google.Cloud.Bigtable.V2.Tests
         [Fact]
         public void TestNotRetryable()
         {
+            var originalRequest = CreateRequest(4);
             BigtableMutateRowsRequestManager underTest =
-                new BigtableMutateRowsRequestManager(_retryStatuses, CreateRequest(4));
+                new BigtableMutateRowsRequestManager(_retryStatuses, originalRequest);
+            Assert.Equal(originalRequest, underTest.NextRequest);
 
             Assert.Equal(BigtableMutateRowsRequestManager.ProcessingStatus.NotRetryable,
                 Send(underTest, CreateResponse(Ok, DeadlineExceeded, Ok, NotFound)));
-            Assert.Null(underTest.RetryRequest);
+            Assert.Null(underTest.NextRequest);
             Assert.Equal(CreateResponse(Ok, DeadlineExceeded, Ok, NotFound), underTest.BuildResponse());
         }
 
@@ -270,17 +275,18 @@ namespace Google.Cloud.Bigtable.V2.Tests
             MutateRowsRequest originalRequest = CreateRequest(4);
             BigtableMutateRowsRequestManager underTest =
                 new BigtableMutateRowsRequestManager(_retryStatuses, originalRequest);
+            Assert.Equal(originalRequest, underTest.NextRequest);
 
             Assert.Equal(BigtableMutateRowsRequestManager.ProcessingStatus.Retryable,
                 Send(underTest, CreateResponse(Ok, Ok, DeadlineExceeded, DeadlineExceeded)));
-            Assert.Equal(CreateRetryRequest(originalRequest, 2, 3), underTest.RetryRequest);
+            Assert.Equal(CreateRetryRequest(originalRequest, 2, 3), underTest.NextRequest);
             Assert.Equal(CreateResponse(Ok, Ok, DeadlineExceeded, DeadlineExceeded), underTest.BuildResponse());
 
             Assert.Equal(BigtableMutateRowsRequestManager.ProcessingStatus.NotRetryable,
                 Send(underTest, CreateResponse(DeadlineExceeded, NotFound)));
             // Don't retry if even a single response is not retryable.
             // RetryRequest should be null.
-            Assert.Null(underTest.RetryRequest);
+            Assert.Null(underTest.NextRequest);
             Assert.Equal(CreateResponse(Ok, Ok, DeadlineExceeded, NotFound), underTest.BuildResponse());
         }
 

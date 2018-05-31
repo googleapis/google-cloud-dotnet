@@ -47,13 +47,11 @@ namespace Google.Cloud.Bigtable.V2
             BigtableClientImpl client,
             ReadRowsRequest originalRequest,
             CallSettings callSettings,
-            RetrySettings retrySettings,
-            BigtableServiceApiClient.ReadRowsStream stream)
+            RetrySettings retrySettings)
         {
             _client = client;
             _callSettings = callSettings;
             _retrySettings = retrySettings;
-            _stream = stream;
 
             _requestManager = new BigtableReadRowsRequestManager(originalRequest);
         }
@@ -61,14 +59,24 @@ namespace Google.Cloud.Bigtable.V2
         public Row Current { get; private set; }
 
         /// <summary>
+        /// The underlying gRPC duplex streaming call.
+        /// </summary>
+        internal AsyncServerStreamingCall<ReadRowsResponse> GrpcCall => _stream?.GrpcCall;
+
+        /// <summary>
         /// For testing purposes
         /// </summary>
         public bool HadSplitCell { get; private set; }
 
-        public void Dispose() => _stream.GrpcCall?.Dispose();
+        public void Dispose() => GrpcCall?.Dispose();
 
         public async Task<bool> MoveNext(CancellationToken cancellationToken)
         {
+            if (_stream == null)
+            {
+                await EstablishStream(_requestManager.OriginalRequest).ConfigureAwait(false);
+            }
+
             // Try to walk to the next row for the current response being processed.
             while (_singleResponseRowEnumerator?.MoveNext() != true)
             {
@@ -99,16 +107,7 @@ namespace Google.Cloud.Bigtable.V2
 
                     // Reset the merging and re-connect to a new stream.
                     Reset();
-                    await ApiCallRetryExtensions.RetryOperationUntilCompleted(
-                        () =>
-                        {
-                            _stream = _client.ReadRowsInternal(retryRequest, _callSettings);
-                            return Task.FromResult(true);
-                        },
-                        _client.Clock,
-                        _client.Scheduler,
-                        _callSettings,
-                        _retrySettings).ConfigureAwait(false);
+                    await EstablishStream(retryRequest).ConfigureAwait(false);
                 }
             }
 
@@ -128,6 +127,20 @@ namespace Google.Cloud.Bigtable.V2
             }
 
             return false;
+
+            async Task EstablishStream(ReadRowsRequest request)
+            {
+                await ApiCallRetryExtensions.RetryOperationUntilCompleted(
+                    () =>
+                    {
+                        _stream = _client.ReadRowsInternal(request, _callSettings);
+                        return Task.FromResult(true);
+                    },
+                    _client.Clock,
+                    _client.Scheduler,
+                    _callSettings,
+                    _retrySettings).ConfigureAwait(false);
+            }
 
             IEnumerator<Row> MergeResponseChunks(ReadRowsResponse response)
             {
@@ -256,7 +269,6 @@ namespace Google.Cloud.Bigtable.V2
                 owner.Assert(
                     owner._currentCell.Row == null || BigtableByteString.Compare(owner._currentCell.Row.Key, chunk.RowKey) < 0,
                     "NewRow key must be greater than the previous row's");
-                // TODO: If last scanned row key cached, make sure it is less than current row key
 
                 // WARNING: owner._currentCell is a struct value. Do not extract as a local (which will make a copy).
                 owner._currentCell.Row = new Row { Key = chunk.RowKey };
