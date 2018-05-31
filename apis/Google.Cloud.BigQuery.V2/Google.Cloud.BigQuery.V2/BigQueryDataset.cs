@@ -64,10 +64,19 @@ namespace Google.Cloud.BigQuery.V2
         {
         }
 
-        internal BigQueryDataset(BigQueryClient client, Dataset resource)
+        /// <summary>
+        /// Constructs a new dataset.
+        /// </summary>
+        /// <remarks>
+        /// This is public to allow tests to construct instances for production code to consume;
+        /// production code should not normally construct instances itself.
+        /// </remarks>
+        /// <param name="client">The client to use for operations on the dataset. Must not be null.</param>
+        /// <param name="resource">The REST-ful resource representing the dataset. Must not be null.</param>
+        public BigQueryDataset(BigQueryClient client, Dataset resource)
         {
-            _client = client;
-            Resource = resource;
+            _client = GaxPreconditions.CheckNotNull(client, nameof(client));
+            Resource = GaxPreconditions.CheckNotNull(resource, nameof(resource));
         }
 
         /// <summary>

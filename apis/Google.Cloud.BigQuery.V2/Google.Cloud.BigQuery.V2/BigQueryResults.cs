@@ -75,7 +75,18 @@ namespace Google.Cloud.BigQuery.V2
         /// <returns>An iterator over the query results.</returns>
         IEnumerator IEnumerable.GetEnumerator() => GetEnumerator();
 
-        internal BigQueryResults(BigQueryClient client, GetQueryResultsResponse response, TableReference tableReference, ListRowsOptions options)
+        /// <summary>
+        /// Constructs a new set of results.
+        /// </summary>
+        /// <remarks>
+        /// This is public to allow tests to construct instances for production code to consume;
+        /// production code should not normally construct instances itself.
+        /// </remarks>
+        /// <param name="client">The client to use for further operations. Must not be null.</param>
+        /// <param name="response">The response to a GetQueryResults API call. Must not be null.</param>
+        /// <param name="tableReference">A reference to the table containing the results.</param>
+        /// <param name="options">Options to use when listing rows. May be null.</param>
+        public BigQueryResults(BigQueryClient client, GetQueryResultsResponse response, TableReference tableReference, ListRowsOptions options)
         {
             _client = GaxPreconditions.CheckNotNull(client, nameof(client));
             _response = GaxPreconditions.CheckNotNull(response, nameof(response));

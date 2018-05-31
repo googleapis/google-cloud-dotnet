@@ -55,7 +55,7 @@ namespace Google.Cloud.BigQuery.V2.Tests
                     new TableCell { V = new JObject { ["f"] = new JArray {new JObject { ["v"] = "100" }, new JObject { ["v"] = "xyz" } } } }
                 }
             };
-            var row = CreateRow(rawRow, schema);
+            var row = new BigQueryRow(rawRow, schema);
             Assert.Equal(10, (long)row["integer"]);
             Assert.Equal(true, (bool)row["bool"]);
             Assert.Equal(new byte[] { 1, 2 }, (byte[])row["bytes"]);
@@ -103,7 +103,7 @@ namespace Google.Cloud.BigQuery.V2.Tests
                     } }
                 }
             };
-            var row = CreateRow(rawRow, schema);
+            var row = new BigQueryRow(rawRow, schema);
             Assert.Equal(new[] { 10L, 20L }, (long[])row["integer"]);
             Assert.Equal(new[] { true, false }, (bool[])row["bool"]);
             Assert.Equal(new[] { new byte[] { 1, 2 }, new byte[] { 1, 3 } }, (byte[][])row["bytes"]);
@@ -138,7 +138,7 @@ namespace Google.Cloud.BigQuery.V2.Tests
                     new TableCell { V = null }
                 }
             };
-            var row = CreateRow(rawRow, schema);
+            var row = new BigQueryRow(rawRow, schema);
             Assert.Null(row["text"]);
         }
 
@@ -157,14 +157,12 @@ namespace Google.Cloud.BigQuery.V2.Tests
                     new TableCell { V = new JObject { ["f"] = new JArray {new JObject { ["v"] = "100" } } } }
                 }
             };
-            var row = CreateRow(rawRow, schema);
+            var row = new BigQueryRow(rawRow, schema);
             Assert.Throws<InvalidOperationException>(() => row["struct"]);
         }
 
         private JArray CreateArray(params string[] values) => new JArray(values.Select(CreateObject));
 
         private JObject CreateObject(string value) => new JObject { ["v"] = value };
-
-        private BigQueryRow CreateRow(TableRow rawRow, TableSchema schema) => new BigQueryRow(rawRow, schema, schema.IndexFieldNames());
     }
 }
