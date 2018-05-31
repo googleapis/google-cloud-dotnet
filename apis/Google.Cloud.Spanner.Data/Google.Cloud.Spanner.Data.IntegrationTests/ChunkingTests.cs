@@ -12,41 +12,23 @@
 // See the License for the specific language governing permissions and
 // limitations under the License.
 
-#region
-
 using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
+using Google.Cloud.ClientTesting;
+using Google.Cloud.Spanner.Data.CommonTesting;
 using Google.Cloud.Spanner.V1.Internal.Logging;
 using Xunit;
 using Xunit.Abstractions;
 
-#endregion
-
-// ReSharper disable RedundantArgumentDefaultValue
-
 namespace Google.Cloud.Spanner.Data.IntegrationTests
 {
-    [Collection(nameof(TestDatabaseFixture))]
+    [Collection(nameof(ChunkingTableFixture))]
     public class ChunkingTests
     {
-        // ReSharper disable once UnusedParameter.Local
-        public ChunkingTests(TestDatabaseFixture testFixture, ITestOutputHelper outputHelper)
-        {
-            _testFixture = testFixture;
-#if LoggingOn
-            SpannerConnection.ConnectionPoolOptions.LogLevel = LogLevel.Debug;
-            SpannerConnection.ConnectionPoolOptions.LogPerformanceTraces = true;
-            SpannerConnection.ConnectionPoolOptions.PerformanceTraceLogInterval = 1000;
-#endif
-            TestLogger.TestOutputHelper = outputHelper;
-            _seed = Environment.TickCount;
-            _random = new Random(_seed);
-        }
-
-        private readonly TestDatabaseFixture _testFixture;
+        private readonly ChunkingTableFixture _fixture;
         private const int MaxDataSize = 2621000;
         private const int MinDataSize = 1000000;
         private readonly Dictionary<string, string> _stringValues = new Dictionary<string, string>();
@@ -57,6 +39,19 @@ namespace Google.Cloud.Spanner.Data.IntegrationTests
 
         private readonly Random _random;
         private readonly int _seed;
+
+        public ChunkingTests(ChunkingTableFixture fixture, ITestOutputHelper outputHelper)
+        {
+            _fixture = fixture;
+#if LoggingOn
+            SpannerConnection.ConnectionPoolOptions.LogLevel = LogLevel.Debug;
+            SpannerConnection.ConnectionPoolOptions.LogPerformanceTraces = true;
+            SpannerConnection.ConnectionPoolOptions.PerformanceTraceLogInterval = 1000;
+#endif
+            TestLogger.TestOutputHelper = outputHelper;
+            _seed = Environment.TickCount;
+            _random = new Random(_seed);
+        }
 
         private static string UniqueString() => Guid.NewGuid().ToString();
 
@@ -108,36 +103,39 @@ namespace Google.Cloud.Spanner.Data.IntegrationTests
             var rowsRead = 0;
             int rowsToWrite = _random.Next(1, 6);
 
-            using (var connection = await _testFixture.GetTestDatabaseConnectionAsync())
+            using (var connection = _fixture.GetConnection())
             {
                 await connection.OpenAsync();
-                using (var tx = await connection.BeginTransactionAsync())
+                await RetryHelpers.RetryOnceAsync(async () =>
                 {
-                    using (var cmd = connection.CreateInsertCommand(
-                        _testFixture.ChunkingTestTable, new SpannerParameterCollection
-                        {
+                    using (var tx = await connection.BeginTransactionAsync())
+                    {
+                        using (var cmd = connection.CreateInsertCommand(
+                            _fixture.TableName, new SpannerParameterCollection
+                            {
                             new SpannerParameter("K", SpannerDbType.String),
                             new SpannerParameter("StringValue", SpannerDbType.String),
                             new SpannerParameter("StringArrayValue", SpannerDbType.ArrayOf(SpannerDbType.String)),
                             new SpannerParameter("BytesValue", SpannerDbType.Bytes),
                             new SpannerParameter("BytesArrayValue", SpannerDbType.ArrayOf(SpannerDbType.Bytes))
-                        }))
-                    {
-                        cmd.Transaction = tx;
-
-                        //write 1-5 rows
-                        for (var i = 0; i < rowsToWrite; i++)
+                            }))
                         {
-                            await InsertRowAsync(cmd);
+                            cmd.Transaction = tx;
+
+                            //write 1-5 rows
+                            for (var i = 0; i < rowsToWrite; i++)
+                            {
+                                await InsertRowAsync(cmd);
+                            }
+
+                            await tx.CommitAsync();
                         }
-
-                        await tx.CommitAsync();
                     }
-                }
+                });
 
-                using (var readCmd = connection.CreateSelectCommand($"SELECT * FROM {_testFixture.ChunkingTestTable}"))
+                using (var readCmd = connection.CreateSelectCommand($"SELECT * FROM {_fixture.TableName}"))
                 {
-                    using (var reader = (SpannerDataReader) await readCmd.ExecuteReaderAsync())
+                    using (var reader = await readCmd.ExecuteReaderAsync())
                     {
                         var keySet = new HashSet<string>();
                         while (await reader.ReadAsync())

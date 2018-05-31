@@ -26,7 +26,6 @@ using Xunit;
 
 namespace Google.Cloud.Spanner.Data.IntegrationTests
 {
-    [Collection(nameof(TestDatabaseFixture))]
     [PerformanceLog]
     public class MySqlStressTests : StressTestBase
     {

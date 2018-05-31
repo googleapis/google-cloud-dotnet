@@ -12,41 +12,35 @@
 // See the License for the specific language governing permissions and
 // limitations under the License.
 
-#region
-
+using Google.Apis.Auth.OAuth2;
+using Google.Cloud.ClientTesting;
+using Google.Cloud.Spanner.Data.CommonTesting;
+using Google.Cloud.Spanner.V1;
+using Grpc.Auth;
 using System;
 using System.Collections;
 using System.Collections.Generic;
-using System.Diagnostics;
 using System.Threading;
 using System.Threading.Tasks;
-using Google.Apis.Auth.OAuth2;
-using Google.Cloud.Spanner.V1;
-using Grpc.Auth;
 using Xunit;
 using Xunit.Abstractions;
 
-#endregion
-
-// ReSharper disable PossibleNullReferenceException
-
 namespace Google.Cloud.Spanner.Data.IntegrationTests
 {
-    [Collection(nameof(TestDatabaseFixture))]
+    [Collection(nameof(ReadTableFixture))]
     public class ReadTests
     {
-        // ReSharper disable once UnusedParameter.Local
-        public ReadTests(TestDatabaseFixture testFixture, ITestOutputHelper outputHelper)
+        private readonly ReadTableFixture _fixture;
+
+        public ReadTests(ReadTableFixture fixture, ITestOutputHelper outputHelper)
         {
-            _testFixture = testFixture;
+            _fixture = fixture;
 #if LoggingOn
             SpannerConnection.ConnectionPoolOptions.LogLevel = LogLevel.Debug;
             SpannerConnection.ConnectionPoolOptions.LogPerformanceTraces = true;
 #endif
             TestLogger.TestOutputHelper = outputHelper;
         }
-
-        private readonly TestDatabaseFixture _testFixture;
 
         /// <summary>
         /// This class ensures that the credential in TestDeadlineExceeded is seen as a new instance.
@@ -66,7 +60,7 @@ namespace Google.Cloud.Spanner.Data.IntegrationTests
 
         private async Task<T> ExecuteAsync<T>(string sql)
         {
-            using (var connection = await _testFixture.GetTestDatabaseConnectionAsync())
+            using (var connection = _fixture.GetConnection())
             {
                 var cmd = connection.CreateSelectCommand(sql);
                 var result = await cmd.ExecuteScalarAsync<T>();
@@ -82,15 +76,13 @@ namespace Google.Cloud.Spanner.Data.IntegrationTests
         [Fact]
         public async Task BadColumnName()
         {
-            // ReSharper disable once RedundantAssignment
             int rowsRead = -1;
             var e = await Assert.ThrowsAsync<SpannerException>(
                 async () =>
                 {
-                    using (var connection = await _testFixture.GetTestDatabaseConnectionAsync())
+                    using (var connection = _fixture.GetConnection())
                     {
-                        var cmd = connection.CreateSelectCommand(
-                            "SELECT badjuju FROM " + _testFixture.TestTable);
+                        var cmd = connection.CreateSelectCommand($"SELECT badjuju FROM {_fixture.TableName}");
                         using (var reader = await cmd.ExecuteReaderAsync())
                         {
                             rowsRead = 0;
@@ -110,10 +102,9 @@ namespace Google.Cloud.Spanner.Data.IntegrationTests
         [Fact]
         public async Task BadDbName()
         {
-            string connectionString = new SpannerConnectionStringBuilder(_testFixture.ConnectionString)
+            string connectionString = new SpannerConnectionStringBuilder(_fixture.ConnectionString)
                 .WithDatabase("badjuju")
                 .ConnectionString;
-            // ReSharper disable once RedundantAssignment
             int rowsRead = -1;
 
             var e = await Assert.ThrowsAsync<SpannerException>(
@@ -122,7 +113,7 @@ namespace Google.Cloud.Spanner.Data.IntegrationTests
                     using (var connection = new SpannerConnection(connectionString))
                     {
                         var cmd = connection.CreateSelectCommand(
-                            $"SELECT * FROM {_testFixture.TestTable} WHERE Key = 'k1'");
+                            $"SELECT * FROM {_fixture.TableName} WHERE Key = 'k1'");
                         using (var reader = await cmd.ExecuteReaderAsync())
                         {
                             rowsRead = 0;
@@ -142,16 +133,14 @@ namespace Google.Cloud.Spanner.Data.IntegrationTests
         [Fact]
         public async Task BadTableName()
         {
-            // ReSharper disable once RedundantAssignment
             int rowsRead = -1;
 
             var e = await Assert.ThrowsAsync<SpannerException>(
                 async () =>
                 {
-                    using (var connection = await _testFixture.GetTestDatabaseConnectionAsync())
+                    using (var connection = _fixture.GetConnection())
                     {
-                        var cmd = connection.CreateSelectCommand(
-                            "SELECT * FROM badjuju WHERE Key = 'k99'");
+                        var cmd = connection.CreateSelectCommand("SELECT * FROM badjuju WHERE Key = 'k99'");
                         using (var reader = await cmd.ExecuteReaderAsync())
                         {
                             rowsRead = 0;
@@ -174,10 +163,9 @@ namespace Google.Cloud.Spanner.Data.IntegrationTests
             var e = await Assert.ThrowsAsync<OperationCanceledException>(
                 async () =>
                 {
-                    using (var connection = await _testFixture.GetTestDatabaseConnectionAsync())
+                    using (var connection = _fixture.GetConnection())
                     {
-                        var cmd = connection.CreateSelectCommand(
-                            $"SELECT * FROM {_testFixture.TestTable}");
+                        var cmd = connection.CreateSelectCommand($"SELECT * FROM {_fixture.TableName}");
 
                         using (var reader = await cmd.ExecuteReaderAsync())
                         {
@@ -230,13 +218,12 @@ namespace Google.Cloud.Spanner.Data.IntegrationTests
         [Fact]
         public async Task PointRead()
         {
-            // ReSharper disable once RedundantAssignment
             int rowsRead = -1;
 
-            using (var connection = await _testFixture.GetTestDatabaseConnectionAsync())
+            using (var connection = _fixture.GetConnection())
             {
                 var cmd = connection.CreateSelectCommand(
-                    $"SELECT * FROM {_testFixture.TestTable} WHERE Key = 'k1'");
+                    $"SELECT * FROM {_fixture.TableName} WHERE Key = 'k1'");
                 using (var reader = await cmd.ExecuteReaderAsync())
                 {
                     rowsRead = 0;
@@ -254,13 +241,12 @@ namespace Google.Cloud.Spanner.Data.IntegrationTests
         [Fact]
         public async Task ReadAllowsNewApis()
         {
-            // ReSharper disable once RedundantAssignment
             int rowsRead = -1;
 
-            using (var connection = await _testFixture.GetTestDatabaseConnectionAsync())
+            using (var connection = _fixture.GetConnection())
             {
                 var cmd = connection.CreateSelectCommand(
-                    $"SELECT * FROM {_testFixture.TestTable} WHERE Key = 'k1'");
+                    $"SELECT * FROM {_fixture.TableName} WHERE Key = 'k1'");
                 using (var reader = await cmd.ExecuteReaderAsync())
                 {
                     rowsRead = 0;
@@ -278,13 +264,12 @@ namespace Google.Cloud.Spanner.Data.IntegrationTests
         [Fact]
         public async Task PointReadEmpty()
         {
-            // ReSharper disable once RedundantAssignment
             int rowsRead = -1;
 
-            using (var connection = await _testFixture.GetTestDatabaseConnectionAsync())
+            using (var connection = _fixture.GetConnection())
             {
                 var cmd = connection.CreateSelectCommand(
-                    $"SELECT * FROM {_testFixture.TestTable} WHERE Key = 'k99'");
+                    $"SELECT * FROM {_fixture.TableName} WHERE Key = 'k99'");
                 using (var reader = await cmd.ExecuteReaderAsync())
                 {
                     rowsRead = 0;
@@ -307,15 +292,14 @@ namespace Google.Cloud.Spanner.Data.IntegrationTests
         [Fact]
         public async Task QueryTypo()
         {
-            // ReSharper disable once RedundantAssignment
             int rowsRead = -1;
             var e = await Assert.ThrowsAsync<SpannerException>(
                 async () =>
                 {
-                    using (var connection = await _testFixture.GetTestDatabaseConnectionAsync())
+                    using (var connection = _fixture.GetConnection())
                     {
                         var cmd = connection.CreateSelectCommand(
-                            $"SLECT * FROM {_testFixture.TestTable}");
+                            $"SLECT * FROM {_fixture.TableName}");
                         using (var reader = await cmd.ExecuteReaderAsync())
                         {
                             rowsRead = 0;
@@ -335,14 +319,13 @@ namespace Google.Cloud.Spanner.Data.IntegrationTests
         [Fact]
         public async Task ReadEmpty()
         {
-            // ReSharper disable once RedundantAssignment
             int rowsRead = -1;
 
-            using (var connection = await _testFixture.GetTestDatabaseConnectionAsync())
+            using (var connection = _fixture.GetConnection())
             {
                 // All our keys start with "k" so there shouldn't be anything starting with "l"
                 var cmd = connection.CreateSelectCommand(
-                    $"SELECT * FROM {_testFixture.TestTable} WHERE Key >= 'l'");
+                    $"SELECT * FROM {_fixture.TableName} WHERE Key >= 'l'");
                 using (var reader = await cmd.ExecuteReaderAsync())
                 {
                     rowsRead = 0;
@@ -383,11 +366,10 @@ namespace Google.Cloud.Spanner.Data.IntegrationTests
         [Fact]
         public async Task ReadNullValue_Legacy()
         {
-            await _testFixture.EnsureTestDatabaseAsync();
-            using (var connection = new SpannerConnection($"{_testFixture.ConnectionString};UseClrDefaultForNull=true"))
+            using (var connection = new SpannerConnection($"{_fixture.ConnectionString};UseClrDefaultForNull=true"))
             {
                 var cmd = connection.CreateSelectCommand(
-                    $"SELECT Key, StringValue FROM {_testFixture.TestTable} WHERE Key = 'kNull'");
+                    $"SELECT Key, StringValue FROM {_fixture.TableName} WHERE Key = 'kNull'");
                 using (var reader = await cmd.ExecuteReaderAsync())
                 {
                     Assert.True(await reader.ReadAsync());
@@ -406,11 +388,10 @@ namespace Google.Cloud.Spanner.Data.IntegrationTests
         [Fact]
         public async Task ReadNullValue_DBNull()
         {
-            await _testFixture.EnsureTestDatabaseAsync();
-            using (var connection = new SpannerConnection(_testFixture.ConnectionString))
+            using (var connection = new SpannerConnection(_fixture.ConnectionString))
             {
                 var cmd = connection.CreateSelectCommand(
-                    $"SELECT Key, StringValue FROM {_testFixture.TestTable} WHERE Key = 'kNull'");
+                    $"SELECT Key, StringValue FROM {_fixture.TableName} WHERE Key = 'kNull'");
                 using (var reader = await cmd.ExecuteReaderAsync())
                 {
                     Assert.True(await reader.ReadAsync());
@@ -433,35 +414,31 @@ namespace Google.Cloud.Spanner.Data.IntegrationTests
             var e = await Assert.ThrowsAsync<SpannerException>(
                 async () =>
                 {
-                    using (await _testFixture.GetTestDatabaseConnectionAsync())
+                    using (var connection =
+                        new SpannerConnection($"{_fixture.ConnectionString};{nameof(SpannerSettings.AllowImmediateTimeouts)}=true"))
                     {
-                        using (var connection =
-                            new SpannerConnection($"{_testFixture.ConnectionString};{nameof(SpannerSettings.AllowImmediateTimeouts)}=true"))
-                        {
-                            var cmd = connection.CreateSelectCommand("SELECT 1");
-                            cmd.CommandTimeout = 0;
-                            result = await cmd.ExecuteScalarAsync<long>();
-                        }
+                        var cmd = connection.CreateSelectCommand("SELECT 1");
+                        cmd.CommandTimeout = 0;
+                        result = await cmd.ExecuteScalarAsync<long>();
                     }
                 }).ConfigureAwait(false);
 
-            Assert.Equal(ErrorCode.DeadlineExceeded, e.ErrorCode);
-            Assert.False(e.IsTransientSpannerFault());
+            SpannerAssert.IsTimeout(e);
             Assert.Equal(0, result);
         }
 
         [Fact]
-        public async Task TestDeadlineExceeded()
+        public async Task TimeoutFromOptions()
         {
             var oldTimeout = SpannerOptions.Instance.Timeout;
             SpannerOptions.Instance.Timeout = 0;
 
             try
             {
-                //we use a new instance of a credential to force create a new spannerclient,
-                //which will cause the new options to be respected (ie timeout).
-                //normally setting timeout is only supported before creation of any client and cannot
-                //be changed due to the fact we pool clients.
+                // We use a new instance of a credential to force create a new SpannerClient,
+                // which will cause the new options to be respected (Timeout in this case).
+                // Normally setting the timeout in SpannerOptions.Instance is only supported before creation of any client and cannot
+                // be changed due to the fact we pool clients.
                 var appDefaultCredentials = await GoogleCredential.GetApplicationDefaultAsync().ConfigureAwait(false);
                 if (appDefaultCredentials.IsCreateScopedRequired)
                 {
@@ -472,23 +449,17 @@ namespace Google.Cloud.Spanner.Data.IntegrationTests
                 var e = await Assert.ThrowsAsync<SpannerException>(
                     async () =>
                     {
-                        using (await _testFixture.GetTestDatabaseConnectionAsync())
+                        string connectionString = $"{_fixture.ConnectionString};{nameof(SpannerSettings.AllowImmediateTimeouts)}=true";
+                        var channelCredentials = new CredentialWrapper(appDefaultCredentials).ToChannelCredentials();
+                        using (var connection = new SpannerConnection(connectionString, channelCredentials))
                         {
-                            using (var connection =
-                                new SpannerConnection(
-                                    $"{_testFixture.ConnectionString};{nameof(SpannerSettings.AllowImmediateTimeouts)}=true",
-                                    new CredentialWrapper(appDefaultCredentials).ToChannelCredentials()))
-                            {
-                                var cmd =
-                                    connection.CreateSelectCommand("SELECT 1");
-                                Assert.Equal(0, cmd.CommandTimeout);
-                                result = await cmd.ExecuteScalarAsync<long>();
-                            }
+                            var cmd = connection.CreateSelectCommand("SELECT 1");
+                            Assert.Equal(0, cmd.CommandTimeout);
+                            result = await cmd.ExecuteScalarAsync<long>();
                         }
                     }).ConfigureAwait(false);
 
-                Assert.Equal(ErrorCode.DeadlineExceeded, e.ErrorCode);
-                Assert.False(e.IsTransientSpannerFault());
+                SpannerAssert.IsTimeout(e);
                 Assert.Equal(0, result);
             }
             finally
@@ -496,54 +467,5 @@ namespace Google.Cloud.Spanner.Data.IntegrationTests
                 SpannerOptions.Instance.Timeout = oldTimeout;
             }
         }
-
-#if !NETCOREAPP1_0
-        [Fact]
-        public async Task GetSchemaTable_Default_ReturnsNull()
-        {
-            await _testFixture.EnsureTestDatabaseAsync();
-            using (var connection = new SpannerConnection(_testFixture.ConnectionString))
-            {
-                var command = connection.CreateSelectCommand($"SELECT Int64Value, BytesArrayValue FROM T");
-                using (var reader = await command.ExecuteReaderAsync())
-                {
-                    Assert.Null(reader.GetSchemaTable());
-                }
-            }
-        }
-
-        [Fact]
-        public async Task GetSchemaTable_WithFlagEnabled_ReturnsNull()
-        {
-            await _testFixture.EnsureTestDatabaseAsync();
-            using (var connection = new SpannerConnection($"{_testFixture.ConnectionString};EnableGetSchemaTable=true"))
-            {
-                var command = connection.CreateSelectCommand($"SELECT Int64Value, BytesArrayValue FROM T");
-                using (var reader = await command.ExecuteReaderAsync())
-                {
-                    var table = reader.GetSchemaTable();
-                    Assert.Equal(2, table.Rows.Count);
-
-                    var int64ValueRow = table.Rows[0];
-                    Assert.Equal("Int64Value", (string) int64ValueRow["ColumnName"]);
-                    Assert.Equal(0, (int) int64ValueRow["ColumnOrdinal"]);
-                    Assert.Equal(typeof(long), (System.Type) int64ValueRow["DataType"]);
-                    Assert.Equal(SpannerDbType.Int64, (SpannerDbType) int64ValueRow["ProviderType"]);
-                    Assert.True(int64ValueRow.IsNull("ColumnSize"));
-                    Assert.True(int64ValueRow.IsNull("NumericPrecision"));
-                    Assert.True(int64ValueRow.IsNull("NumericScale"));
-
-                    var bytesArrayValueRow = table.Rows[1];
-                    Assert.Equal("BytesArrayValue", (string) bytesArrayValueRow["ColumnName"]);
-                    Assert.Equal(1, (int) bytesArrayValueRow["ColumnOrdinal"]);
-                    Assert.Equal(typeof(List<byte[]>), (System.Type) bytesArrayValueRow["DataType"]);
-                    Assert.Equal(SpannerDbType.ArrayOf(SpannerDbType.Bytes), (SpannerDbType) bytesArrayValueRow["ProviderType"]);
-                    Assert.True(bytesArrayValueRow.IsNull("ColumnSize"));
-                    Assert.True(bytesArrayValueRow.IsNull("NumericPrecision"));
-                    Assert.True(bytesArrayValueRow.IsNull("NumericScale"));
-                }
-            }
-        }
-#endif
     }
 }
