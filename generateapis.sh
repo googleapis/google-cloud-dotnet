@@ -72,12 +72,6 @@ generate_api() {
   do
     cp $i $API_TMP_DIR/gapic.yaml
   done
-  cat >> $API_TMP_DIR/gapic.yaml << EOF
-language: csharp
-generator:
-  factory: com.google.api.codegen.gapic.MainGapicProviderFactory
-  id: csharp
-EOF
   
   args=()
   args+=(--descriptor_set=$OUTDIR/protos.desc)
@@ -85,8 +79,9 @@ EOF
   args+=(--gapic_yaml=$API_TMP_DIR/gapic.yaml)
   args+=(--package_yaml2=$OUTDIR/package.yaml)
   args+=(--output=$API_TMP_DIR)
+  args+=(--language=csharp)
   
-  $BASH -c "java -cp gapic-generator/build/libs/gapic-generator-${GAPIC_GENERATOR_VERSION}-all.jar com.google.api.codegen.gapic.GapicGeneratorTool ${args[*]}"
+  $BASH -c "java -cp gapic-generator/build/libs/gapic-generator-${GAPIC_GENERATOR_VERSION}-all.jar com.google.api.codegen.GeneratorMain LEGACY_GAPIC_AND_PACKAGE ${args[*]}"
   
   # We don't want to copy the snippet/prod/tests project files,
   # but the smoke test project file is okay, as we don't
