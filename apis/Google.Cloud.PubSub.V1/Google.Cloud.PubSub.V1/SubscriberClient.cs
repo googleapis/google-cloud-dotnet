@@ -16,6 +16,7 @@ using Google.Api.Gax;
 using Google.Api.Gax.Grpc;
 using Google.Apis.Auth.OAuth2;
 using Google.Cloud.PubSub.V1.Tasks;
+using Google.Protobuf.Collections;
 using Grpc.Auth;
 using Grpc.Core;
 using System;
@@ -348,7 +349,14 @@ namespace Google.Cloud.PubSub.V1
             GaxPreconditions.CheckNotNull(settings, nameof(settings));
             settings.Validate();
             _modifyDeadlineSeconds = (int)((settings.StreamAckDeadline ?? DefaultStreamAckDeadline).TotalSeconds);
+            // Enforce server-side constraint on _modifyDeadlineSeconds.
+            GaxPreconditions.CheckArgument(_modifyDeadlineSeconds >= 10 && _modifyDeadlineSeconds <= 600, nameof(settings.StreamAckDeadline), "Must be between 10 and 600 seconds");
             _autoExtendInterval = TimeSpan.FromSeconds(_modifyDeadlineSeconds) - (settings.AckExtensionWindow ?? DefaultAckExtensionWindow);
+            if (_autoExtendInterval < TimeSpan.FromSeconds(5))
+            {
+                // Silently use a sensible lower limit on _autoExtendInterval.
+                _autoExtendInterval = TimeSpan.FromSeconds(5);
+            }
             _shutdown = shutdown;
             _scheduler = settings.Scheduler ?? SystemScheduler.Instance;
             _taskHelper = GaxPreconditions.CheckNotNull(taskHelper, nameof(taskHelper));
@@ -387,8 +395,8 @@ namespace Google.Cloud.PubSub.V1
             Action<Task> registerTask = task =>
             {
                 registeredTasks.Locked(() => registeredTasks.Add(task));
-                Action unregisterTask = () => registeredTasks.Locked(() => registeredTasks.Remove(task));
-                _taskHelper.Run(async () => await _taskHelper.ConfigureAwaitWithFinally(() => task, unregisterTask));
+                Action<Task> unregisterTask = t => registeredTasks.Locked(() => registeredTasks.Remove(t));
+                task.ContinueWith(unregisterTask, CancellationToken.None, TaskContinuationOptions.ExecuteSynchronously, _taskHelper.TaskScheduler);
             };
             Flow flow = new Flow(_flowControlSettings.MaxOutstandingByteCount ?? long.MaxValue,
                 _flowControlSettings.MaxOutstandingElementCount ?? long.MaxValue, registerTask, _taskHelper);
@@ -396,7 +404,7 @@ namespace Google.Cloud.PubSub.V1
             var subscriberTasks = _clients.Select(client =>
             {
                 var singleChannel = new SingleChannel(this, client, handlerAsync, flow, registerTask);
-                return singleChannel.StartAsync();
+                return _taskHelper.Run(() => singleChannel.StartAsync());
             }).ToArray();
             // Set up finish task
             _taskHelper.Run(async () =>
@@ -515,7 +523,9 @@ namespace Google.Cloud.PubSub.V1
                 }
                 // Execute fn, and schedule the following code to execute once it has completed.
                 // Register the function, so we can be sure it's completed during shutdown.
-                _registerTaskFn(_taskHelper.Run(async () => await _taskHelper.ConfigureAwaitWithFinally(fn, () =>
+                //_registerTaskFn(_taskHelper.Run(async () => await _taskHelper.ConfigureAwaitWithFinally(fn, () =>
+                Task task = null;
+                task = _taskHelper.Run(async () => await _taskHelper.ConfigureAwaitWithFinally(fn, () =>
                 {
                     bool setEvent;
                     lock (_lock)
@@ -530,7 +540,138 @@ namespace Google.Cloud.PubSub.V1
                     {
                         _event.Set();
                     }
-                })));
+                }));
+                _registerTaskFn(task);
+            }
+        }
+
+        // internal for testing.
+        internal class ReQueue<T>
+        {
+            private readonly Queue<T> _q = new Queue<T>();
+            private readonly LinkedList<Queue<T>> _qs = new LinkedList<Queue<T>>();
+            private int _requeueCount = 0;
+
+            public void Enqueue(T item) => _q.Enqueue(item);
+            public void Enqueue(IEnumerable<T> items)
+            {
+                foreach (var item in items)
+                {
+                    _q.Enqueue(item);
+                }
+            }
+            public void Requeue(IEnumerable<T> items)
+            {
+                var q = new Queue<T>(items);
+                _qs.AddLast(q);
+                _requeueCount += q.Count;
+            }
+
+            public int Count => _q.Count + _requeueCount;
+
+            public List<T> Dequeue(int maxCount, Predicate<T> includeFn)
+            {
+                List<T> result = new List<T>();
+                Queue<T> q = _qs.First?.Value;
+                if (q != null)
+                {
+                    while (result.Count < maxCount)
+                    {
+                        if (q.Count > 0)
+                        {
+                            var item = q.Dequeue();
+                            _requeueCount -= 1;
+                            if (includeFn == null || includeFn(item))
+                            {
+                                result.Add(item);
+                            }
+                        }
+                        else
+                        {
+                            _qs.RemoveFirst();
+                            q = _qs.First?.Value;
+                            if (q == null)
+                            {
+                                break;
+                            }
+                        }
+                    }
+                }
+                while (result.Count < maxCount && _q.Count > 0)
+                {
+                    var item = _q.Dequeue();
+                    if (includeFn == null || includeFn(item))
+                    {
+                        result.Add(item);
+                    }
+                }
+                return result;
+            }
+
+            public bool TryPeek(out T value)
+            {
+                var qsNode = _qs.First;
+                while (qsNode != null)
+                {
+                    if (qsNode.Value.Count > 0)
+                    {
+                        value = qsNode.Value.Peek();
+                        return true;
+                    }
+                    qsNode = qsNode.Next;
+                }
+                if (_q.Count > 0)
+                {
+                    value = _q.Peek();
+                    return true;
+                }
+                value = default(T);
+                return false;
+            }
+        }
+
+        internal class AsyncSingleRecvQueue<T>
+        {
+            public AsyncSingleRecvQueue(TaskHelper taskHelper) => _taskHelper = taskHelper;
+
+            private readonly TaskHelper _taskHelper;
+            private readonly object _lock = new object();
+            private readonly Queue<T> _queue = new Queue<T>();
+            private TaskCompletionSource<int> _tcs = null;
+
+            // Thread-safe.
+            public void Enqueue(T item)
+            {
+                TaskCompletionSource<int> tcs;
+                lock (_lock)
+                {
+                    _queue.Enqueue(item);
+                    tcs = _tcs;
+                }
+                if (tcs != null)
+                {
+                    // Don't run in lock, as it may execute continuations synchonously.
+                    tcs.SetResult(0);
+                }
+            }
+
+            // Thread-safe, but only one dequeue is allowed at a time.
+            public async Task<T> DequeueAsync()
+            {
+                lock (_lock)
+                {
+                    if (_queue.Count > 0)
+                    {
+                        return _queue.Dequeue();
+                    }
+                    _tcs = new TaskCompletionSource<int>();
+                }
+                await _taskHelper.ConfigureAwait(_tcs.Task);
+                lock (_lock)
+                {
+                    _tcs = null;
+                    return _queue.Dequeue();
+                }
             }
         }
 
@@ -538,289 +679,466 @@ namespace Google.Cloud.PubSub.V1
         /// Controls a single <see cref="Channel"/>/<see cref="SubscriberClient"/> within this
         /// <see cref="SubscriberClientImpl"/>. This class controls the pulling of messages, and
         /// the pushing of message acks and lease-extensions back to the server.
-        /// It also manages error conditions within the channel, restarting the StreamingPull()
-        /// RPC as required.
+        /// It also manages error conditions within the channel, restarting RPCs as required.
         /// </summary>
         private class SingleChannel
         {
+            private struct NextAction
+            {
+                public NextAction(bool isPull, Action action)
+                {
+                    IsPull = isPull;
+                    Action = action;
+                }
+                public bool IsPull { get; }
+                public Action Action { get; }
+            }
+
+            private struct TaskNextAction
+            {
+                public TaskNextAction(Task task, NextAction nextAction)
+                {
+                    Task = task;
+                    NextAction = nextAction;
+                }
+                public Task Task { get; }
+                public NextAction NextAction { get; }
+            }
+
+            private struct TimedId // "Time" is abstract, a monotonic incrementing counter is used.
+            {
+                public TimedId(long time, string id)
+                {
+                    Time = time;
+                    Id = id;
+                }
+                public long Time { get; }
+                public string Id { get; }
+            }
+
             public SingleChannel(SubscriberClientImpl subscriber,
                 SubscriberServiceApiClient client, Func<PubsubMessage, CancellationToken, Task<Reply>> handlerAsync,
                 Flow flow,
                 Action<Task> registerTaskFn)
             {
-                _subscriptionName = subscriber.SubscriptionName;
+                _registerTaskFn = registerTaskFn;
+                _taskHelper = subscriber._taskHelper;
+                _scheduler = subscriber._scheduler;
                 _client = client;
                 _handlerAsync = handlerAsync;
-                _autoExtendInterval = subscriber._autoExtendInterval;
+                _hardStopCts = subscriber._globalHardStopCts;
+                _pushStopCts = CancellationTokenSource.CreateLinkedTokenSource(_hardStopCts.Token);
+                _softStopCts = subscriber._globalSoftStopCts;
+                _subscriptionName = subscriber.SubscriptionName;
                 _modifyDeadlineSeconds = subscriber._modifyDeadlineSeconds;
                 _maxAckExtendQueueSize = subscriber._maxAckExtendQueue;
+                _autoExtendInterval = subscriber._autoExtendInterval;
+                _extendQueueThrottleInterval = TimeSpan.FromTicks((long)((TimeSpan.FromSeconds(_modifyDeadlineSeconds) - _autoExtendInterval).Ticks * 0.5));
+                _maxAckExtendSendCount = Math.Max(10, subscriber._maxAckExtendQueue / 4);
+                _maxConcurrentPush = 3; // Fairly arbitrary.
                 _flow = flow;
-                _registerTaskFn = registerTaskFn;
-                _scheduler = subscriber._scheduler;
-                _taskHelper = subscriber._taskHelper;
-                _softStopCts = subscriber._globalSoftStopCts;
-                _hardStopCts = CancellationTokenSource.CreateLinkedTokenSource(subscriber._globalHardStopCts.Token);
-                _qEvent = new AsyncAutoResetEvent(_taskHelper);
-                subscriber._globalSoftStopCts.Token.Register(() => _qEvent.Set());
-                subscriber._globalHardStopCts.Token.Register(() => _qEvent.Set());
+                _eventPush = new AsyncAutoResetEvent(subscriber._taskHelper);
+                _continuationQueue = new AsyncSingleRecvQueue<TaskNextAction>(subscriber._taskHelper);
             }
 
-            private readonly SubscriptionName _subscriptionName;
+            private readonly object _lock = new object(); // For: _ackQueue, _nackQueue, _userHandlerInFlight
+            private readonly Action<Task> _registerTaskFn;
+            private readonly TaskHelper _taskHelper;
+            private readonly IScheduler _scheduler;
             private readonly SubscriberServiceApiClient _client;
             private readonly Func<PubsubMessage, CancellationToken, Task<Reply>> _handlerAsync;
-            private readonly TimeSpan _autoExtendInterval;
-            private readonly int _modifyDeadlineSeconds;
-            private readonly int _maxAckExtendQueueSize;
-            private readonly Flow _flow;
-            private readonly Action<Task> _registerTaskFn;
-            private readonly IScheduler _scheduler;
-            private readonly TaskHelper _taskHelper;
-            private readonly CancellationTokenSource _softStopCts;
             private readonly CancellationTokenSource _hardStopCts;
+            private readonly CancellationTokenSource _pushStopCts;
+            private readonly CancellationTokenSource _softStopCts;
+            private readonly SubscriptionName _subscriptionName;
+            private readonly int _modifyDeadlineSeconds; // Seconds to add to deadling on lease extension.
+            private readonly TimeSpan _autoExtendInterval; // Delay between auto-extends.
+            private readonly TimeSpan _extendQueueThrottleInterval; // Throttle pull if items in the extend queue are older than this.
+            private readonly int _maxAckExtendQueueSize; // Soft limit on push queue sizes. Used to throttle pulls.
+            private readonly int _maxAckExtendSendCount; // Maximum number of ids to include in an ack/nack/extend push RPC.
+            private readonly int _maxConcurrentPush; // Mamimum number (slightly soft) of concurrent ack/nack/extend push RPCs.
 
-            private readonly object _qLock = new object();
-            private readonly Queue<string> _ackQueue = new Queue<string>();
-            private readonly Queue<string> _extendQueue = new Queue<string>();
-            private int _unAckedMsgCount;
-            private AsyncAutoResetEvent _qEvent;
+            private readonly Flow _flow;
+            private readonly AsyncAutoResetEvent _eventPush;
+            private readonly AsyncSingleRecvQueue<TaskNextAction> _continuationQueue;
+            private readonly ReQueue<TimedId> _extendQueue = new ReQueue<TimedId>();
+            private readonly ReQueue<string> _ackQueue = new ReQueue<string>();
+            private readonly ReQueue<string> _nackQueue = new ReQueue<string>();
 
-            // States:
-            // Push faulted: local immediate stop/restart streaming-pull request
-            // - push task faults, which cancels streamingPullCts
-            // Pull faulted: local immediate stop/restart streaming-pull request
-            // - pull task faults, which cancels streamingPullCts
-            // soft-stop requested: no more msg processing/receiving, stop pull; continue push, then local hard-stop when all acks done
-            // - Pull task completes, which does not cancel streamingPullCts
-            // hard-stop requested: immediate stop of pull and push
-            // - Pull and Push fault, if they are still running
-            // Pull call completes; ie MoveNext() returns false: immediate stop of Push, restart stream-pull request
-            // - Pull and Push complete
+            private int _pushInFlight = 0;
+            private int _userHandlerInFlight = 0;
+            private SubscriberServiceApiClient.StreamingPullStream _pull = null;
+            private TimeSpan? _pullBackoff = null;
+            private int _concurrentPushCount = 0;
+            private bool _pullComplete = false;
+            private long _extendThrottleHigh = 0; // Incremented on extension, and put on extend queue items.
+            private long _extendThrottleLow = 0; // Incremented after _extendQueueThrottleInterval, checked when throttling.
 
             public async Task StartAsync()
             {
-                // Loop to restart pull if it fails recoverably.
-                while (!_hardStopCts.IsCancellationRequested)
+                // Start pull.
+                StartStreamingPull();
+                // Start push.
+                HandlePush();
+                // Start event loop.
+                // This loop exits by an action throwing a error or cancellation exception.
+                while (!IsComplete())
                 {
-                    SubscriberServiceApiClient.StreamingPullStream pull = null;
-                    // The CancellationTokenSource that reflects the state of the StreamingPull() RPC.
-                    // This is cancelled once the StreamingPull() RPC has an error.
-                    var streamingPullCts = CancellationTokenSource.CreateLinkedTokenSource(_hardStopCts.Token);
+                    // Wait for, then process next continuation.
+                    TaskNextAction nextContinuation = await _taskHelper.ConfigureAwait(_continuationQueue.DequeueAsync());
+                    // On hardstop just immediately stop this event loop.
+                    // The registered-task code ensures that all currently-active tasks finish before
+                    // return to user code.
+                    if (_hardStopCts.IsCancellationRequested)
+                    {
+                        StopStreamingPull();
+                        throw new OperationCanceledException();
+                    }
+                    var task = nextContinuation.Task;
+                    var next = nextContinuation.NextAction;
+                    if (next.IsPull && (task.IsCanceled || (task.IsFaulted && (task.Exception.IsCancellation() || task.Exception.IsRpcCancellation()))))
+                    {
+                        // Pull has been cancelled by user, shutdown pull stream and don't run continuation.
+                        // RPC exceptions are dealt with in the relevant handlers.
+                        StopStreamingPull();
+                        // Pull process has been stopped, wait for push process to complete.
+                        _pullComplete = true;
+                    }
+                    else
+                    {
+                        next.Action();
+                    }
+                }
+                // Stop waiting for data to push.
+                _pushStopCts.Cancel();
+            }
+
+            private bool IsComplete()
+            {
+                // extend-queue not included, as these have no effect after shutdown.
+                // Lock required for ackQueue and nackQueue.
+                lock (_lock)
+                {
+                    return _pullComplete && _ackQueue.Count == 0 && _nackQueue.Count == 0 && _pushInFlight == 0 && _userHandlerInFlight == 0;
+                }
+            }
+
+            private NextAction Next(bool isPull, Action action) => new NextAction(isPull, action);
+
+            private void Add(Task task, NextAction next)
+            {
+                _registerTaskFn(task);
+                var taskNext = new TaskNextAction(task, next);
+                task.ContinueWith(_ => _continuationQueue.Enqueue(taskNext),
+                    CancellationToken.None, TaskContinuationOptions.ExecuteSynchronously, _taskHelper.TaskScheduler);
+            }
+
+            private void StopStreamingPull()
+            {
+                if (_pull != null)
+                {
+                    // Ignore all errors; the stream may be in any state.
                     try
                     {
-                        pull = _client.StreamingPull(CallSettings.FromCancellationToken(streamingPullCts.Token), new BidirectionalStreamingSettings(1));
-                        // Initial call to start subscribe messages arriving.
-                        await _taskHelper.ConfigureAwait(pull.WriteAsync(new StreamingPullRequest
-                        {
-                            SubscriptionAsSubscriptionName = _subscriptionName,
-                            StreamAckDeadlineSeconds = _modifyDeadlineSeconds
-                        }));
-                        // Start Push task which pushes acks and extends.
-                        var pushTask = _taskHelper.Run(() => Push(pull, streamingPullCts.Token));
-                        // Read incoming messages whilst not stopped, and not in a fault condition.
-                        var pullTask = _taskHelper.Run(() => Pull(pull, streamingPullCts.Token));
-                        // Trigger _qEvent, to restart pushes with new streaming-pull
-                        _qEvent.Set();
-                        // Wait for either pull or push to complete. This will not throw on error or cancellation.
-                        var completedTask = await _taskHelper.ConfigureAwait(_taskHelper.WhenAny(pushTask, pullTask));
-                        // If fault: RPC is broken, need to cancel and restart
-                        // If cancelled: Softstop or hardstop.
-                        // * If hard-stop: Everything already cancelled, do nothing; or could cancel, it'll be a nop
-                        // * If soft-stop: Need to allow push to continue, do nothing
-                        // If completed OK: Server has terminated RPC, need to restart
-                        if (completedTask.IsFaulted || !completedTask.IsCanceled)
-                        {
-                            streamingPullCts.Cancel();
-                        }
-                        _qEvent.Set();
-                        // Await until pull and push have both stopped.
-                        // If pull of push is faulted/cancelled, this will throw.
-                        await _taskHelper.ConfigureAwait(_taskHelper.WhenAll(pushTask, pullTask));
+                        _registerTaskFn(_pull.WriteCompleteAsync());
                     }
-                    catch (Exception e0) when (
-                        e0.AllExceptions().All(e => e.IsCancellation() || (e.As<RpcException>()?.IsRecoverable() ?? false)))
-                    {
-                        // If all errors are recoverable, then do nothing here; restart pull on loop.
-                    }
-                    finally
-                    {
-                        // Try to cleanly shutdown the subscriber. This may or may not be possible
-                        // depending on the state of the subscriber; ignore all errors.
-                        if (pull != null)
-                        {
-                            _registerTaskFn(_taskHelper.Run(() => pull.WriteCompleteAsync()));
-                        }
-                        streamingPullCts.Dispose();
-                    }
+                    catch { }
+                    _pull = null;
                 }
             }
 
-            private async Task Pull(SubscriberServiceApiClient.StreamingPullStream pull, CancellationToken streamingPullToken)
+            // Open streaming-pull, and send initial request to start message stream.
+            // If backoff is non-zero delay before opening streaming-pull.
+            private void StartStreamingPull()
             {
-                // This method returns normally on cancellation. The caller handles cancellation.
-                using (var cts = CancellationTokenSource.CreateLinkedTokenSource(streamingPullToken, _softStopCts.Token))
+                if (_pullBackoff is TimeSpan backoff)
                 {
-                    async Task<bool> MoveNext()
+                    // Delay, then start the streaming-pull.
+                    Task delayTask = _scheduler.Delay(backoff, _softStopCts.Token);
+                    Add(delayTask, Next(true, HandleStartStreamingPullWithoutBackoff));
+                }
+                else
+                {
+                    HandleStartStreamingPullWithoutBackoff();
+                }
+            }
+
+            // Open streaming-pull, and send initial request to start message stream.
+            // Backoff delay (if present) has already been done; no need to delay here.
+            private void HandleStartStreamingPullWithoutBackoff()
+            {
+                _pull = _client.StreamingPull(CallSettings.FromCancellationToken(_softStopCts.Token));
+                // Cancellation not needed in this WriteAsync call. The StreamingPull() cancellation
+                // (above) will cause this call to cancel if _softStopCts is cancelled.
+                Task initTask = _pull.WriteAsync(new StreamingPullRequest
+                {
+                    SubscriptionAsSubscriptionName = _subscriptionName,
+                    StreamAckDeadlineSeconds = _modifyDeadlineSeconds
+                });
+                Add(initTask, Next(true, () => HandlePullMoveNext(initTask)));
+            }
+
+            private bool HandleRpcFailure(Exception e)
+            {
+                if (e != null)
+                {
+                    if (e.As<RpcException>()?.IsRecoverable() ?? false)
                     {
-                        // Pause pulling more messages if too many msgs are locally queued for sending.
-                        // The size of the extend queue is a reasonable proxy for push loading.
-                        while (_qLock.Locked(() => _extendQueue.Count) >= _maxAckExtendQueueSize)
+                        // Recoverable RPC error, stop and restart pull.
+                        StopStreamingPull();
+                        // Increase backoff internal and start stream again.
+                        // If stream-pull fails repeatly, increase the delay, up to a maximum of 30 seconds.
+                        _pullBackoff = _pullBackoff is TimeSpan backoff ? TimeSpan.FromTicks(backoff.Ticks * 2) : TimeSpan.FromSeconds(0.5);
+                        if (_pullBackoff.Value > TimeSpan.FromSeconds(30))
                         {
-                            // A 100ms pause is fairly arbitrary, but should never cause problems.
-                            // Using an event would be better, but this is simpler and easier to assure correctness.
-                            await _taskHelper.ConfigureAwait(_scheduler.Delay(TimeSpan.FromMilliseconds(100), cts.Token));
+                            _pullBackoff = TimeSpan.FromSeconds(30);
                         }
-                        // Don't use a cancellation-token here, as it will cancel the whole call.
-                        // This isn't desirable, as push operations may still be ongoing.
-                        return await pull.ResponseStream.MoveNext(CancellationToken.None);
+                        StartStreamingPull();
+                        return true;
                     }
-                    while (await _taskHelper.ConfigureAwait(MoveNext()))
+                    else
                     {
-                        cts.Token.ThrowIfCancellationRequested();
-                        var receivedMessages = pull.ResponseStream.Current.ReceivedMessages;
-                        // Copy msgs to list, and clear original proto repeatedfield;
-                        // to remove refs to large messages as soon as possible.
-                        var msgs = receivedMessages.ToList();
-                        receivedMessages.Clear();
-                        var extendIds = new HashSet<string>(msgs.Select(x => x.AckId));
-                        // Extend leases immediately. This is the receipt to the server that starts the server lease timeout.
-                        QueueLeaseExtensions(extendIds);
-                        var allMsgsHandledCts = CancellationTokenSource.CreateLinkedTokenSource(_hardStopCts.Token);
-                        _registerTaskFn(_taskHelper.Run(() => AutoExtend(extendIds, allMsgsHandledCts)));
-                        for (int msgIndex = 0; msgIndex < msgs.Count; msgIndex++)
+                        // Unrecoverable error; throw it.
+                        throw e.FlattenIfPossible();
+                    }
+                }
+                return false;
+            }
+
+            // Pull-stream is ready; call MoveNext to wait for messages.
+            private void HandlePullMoveNext(Task initTask)
+            {
+                // Check if the init write failed.
+                if (initTask != null && HandleRpcFailure(initTask.Exception))
+                {
+                    return;
+                }
+                // Check if pulls need throttling due to push queues being too full, or too slow to push.
+                bool throttle = _extendQueue.TryPeek(out var qItem) && _extendThrottleLow >= qItem.Time;
+                if (!throttle)
+                {
+                    int totalQueueCount = _pushInFlight + _extendQueue.Count;
+                    lock (_lock)
+                    {
+                        totalQueueCount += _ackQueue.Count + _nackQueue.Count;
+                    }
+                    throttle = totalQueueCount > _maxAckExtendQueueSize;
+                }
+                if (throttle)
+                {
+                    // Too many queued ack/nack/extend ids. Loop until the queue has drained a bit.
+                    Add(_scheduler.Delay(TimeSpan.FromMilliseconds(100), _softStopCts.Token), Next(true, () => HandlePullMoveNext(null)));
+                }
+                else
+                {
+                    // Call MoveNext to receive more messages.
+                    // Cancellation is handled by the cancellation-token passed when the stream is created.
+                    var moveNextTask = _pull.ResponseStream.MoveNext(CancellationToken.None);
+                    Add(moveNextTask, Next(true, () => HandlePullMessageData(moveNextTask)));
+                }
+            }
+
+            // Message-stream has messages (or not, depending on moveNextResult)
+            private void HandlePullMessageData(Task<bool> moveNextTask)
+            {
+                if (HandleRpcFailure(moveNextTask.Exception))
+                {
+                    return;
+                }
+                if (moveNextTask.Result)
+                {
+                    // Successful receive. Reset pull backoff to zero.
+                    _pullBackoff = null;
+                    // Copy msgs to list, and clear original proto repeatedfield; to remove refs to large messages as soon as possible.
+                    // It is not possible to set RepeatedField elements to null, so messages need transfering to a List.
+                    StreamingPullResponse current;
+                    try
+                    {
+                        current = _pull.ResponseStream.Current;
+                    }
+                    catch (Exception e) when (e.As<RpcException>()?.IsRecoverable() ?? false)
+                    {
+                        HandleRpcFailure(e);
+                        return;
+                    }
+                    var receivedMessages = current.ReceivedMessages;
+                    var msgs = receivedMessages.ToList();
+                    receivedMessages.Clear();
+                    // Get all ack-ids, used to extend leases as required.
+                    var msgIds = new HashSet<string>(msgs.Select(x => x.AckId));
+                    // Send an initial "lease-extension"; which starts the server timer.
+                    HandleExtendLease(msgIds);
+                    // Asynchonously start message processing. Handles flow, and calls the user-supplied message handler.
+                    // Uses Task.Run(), so not to clog up this "master" thread with per-message processing.
+                    Task messagesTask = _taskHelper.Run(() => ProcessPullMessagesAsync(msgs, msgIds));
+                    // Once all received messages have been queued for processing, read the stream for more messages.
+                    Add(messagesTask, Next(true, () => HandlePullMoveNext(null)));
+                }
+                else
+                {
+                    StopStreamingPull();
+                    // Always a short pause on server disconnect.
+                    _pullBackoff = TimeSpan.FromSeconds(0.5);
+                    StartStreamingPull();
+                }
+            }
+
+            private async Task ProcessPullMessagesAsync(List<ReceivedMessage> msgs, HashSet<string> msgIds)
+            {
+                // Running async. Common data needs locking
+                for (int msgIndex = 0; msgIndex < msgs.Count; msgIndex++)
+                {
+                    _softStopCts.Token.ThrowIfCancellationRequested();
+                    var msg = msgs[msgIndex];
+                    msgs[msgIndex] = null;
+                    await _taskHelper.ConfigureAwait(_flow.Process(msg.CalculateSize(), async () =>
+                    {
+                            // Running async. Common data needs locking
+                            lock (_lock)
                         {
-                            var msg = msgs[msgIndex];
-                            // Remove reference to message. In case a small number of messages from each
-                            // pull take a long time to process. This ensures all other messages aren't still referenced.
-                            msgs[msgIndex] = null;
-                            // If stop requested, then don't start processing any further messages.
                             _softStopCts.Token.ThrowIfCancellationRequested();
-                            // Returned Task completes once flow-control is satisfied.
-                            await _taskHelper.ConfigureAwait(_flow.Process(msg.CalculateSize(), async () =>
+                            _userHandlerInFlight += 1;
+                        }
+                            // Call user message handler
+                            var reply = await _taskHelper.ConfigureAwaitHideErrors(() => _handlerAsync(msg.Message, _hardStopCts.Token), Reply.Nack);
+                            // Lock msgsIds, this is accessed concurrently here and in HandleExtendLease().
+                            lock (msgIds)
+                        {
+                            msgIds.Remove(msg.AckId);
+                        }
+                            // Lock ack/nack-queues, this is accessed concurrently here and in "master" thread.
+                            lock (_lock)
+                        {
+                            _userHandlerInFlight -= 1;
+                            (reply == Reply.Ack ? _ackQueue : _nackQueue).Enqueue(msg.AckId);
+                        }
+                            // Ids have been added to ack/nack-queue, so trigger a push.
+                            _eventPush.Set();
+                    }));
+                }
+            }
+
+            private void HandleExtendLease(HashSet<string> msgIds)
+            {
+                if (_softStopCts.IsCancellationRequested)
+                {
+                    // No further lease extensions once stop is requested.
+                    return;
+                }
+                bool anyMsgIds;
+                lock (msgIds)
+                {
+                    anyMsgIds = msgIds.Count > 0;
+                    if (anyMsgIds)
+                    {
+                        lock (_lock)
+                        {
+                            // Only enqueue ack IDs that are not already being acked.
+                            _extendQueue.Enqueue(msgIds.Select(x => new TimedId(_extendThrottleHigh + 1, x)));
+                        }
+                    }
+                }
+                if (anyMsgIds)
+                {
+                    // Ids have been added to _extendQueue, so trigger a push.
+                    _eventPush.Set();
+                    // Some ids still exist, schedule another extension.
+                    Add(_scheduler.Delay(_autoExtendInterval, _softStopCts.Token), Next(false, () => HandleExtendLease(msgIds)));
+                    // Increment _extendThrottles.
+                    _extendThrottleHigh += 1;
+                    Add(_scheduler.Delay(_extendQueueThrottleInterval, _softStopCts.Token), Next(false, () => _extendThrottleLow += 1));
+                }
+            }
+
+            private void HandlePush()
+            {
+                // Always re-listen for push events.
+                Add(_eventPush.WaitAsync(_pushStopCts.Token), Next(false, HandlePush));
+                // Send data, if there is any to send.
+                StartPush();
+            }
+
+            private void StartPush()
+            {
+                // Send data, if there is any to send.
+                if (_concurrentPushCount >= _maxConcurrentPush)
+                {
+                    // Too many existing concurrent pushes; do nothing.
+                    return;
+                }
+                List<string> acks;
+                List<TimedId> extends;
+                List<string> nacks;
+                lock (_lock)
+                {
+                    // Priority of sending: Acks, Extends, Nacks.
+                    // Allow 2 over _maxConcurrentPush, otherwise extend/nack queues could be unfairly penalized.
+                    acks = _ackQueue.Dequeue(_maxAckExtendSendCount, null);
+                    var ackSet = new HashSet<string>(acks);
+                    extends = _extendQueue.Dequeue(_maxAckExtendSendCount, x => !ackSet.Contains(x.Id));
+                    nacks = _nackQueue.Dequeue(_maxAckExtendSendCount, null);
+                }
+                if (acks.Count > 0)
+                {
+                    _pushInFlight += acks.Count;
+                    _concurrentPushCount += 1;
+                    Task ackTask = _client.AcknowledgeAsync(_subscriptionName, acks, _hardStopCts.Token);
+                    Add(ackTask, Next(false, () => HandleAckResponse(ackTask, acks, null, null)));
+                }
+                if (extends.Count > 0)
+                {
+                    _pushInFlight += extends.Count;
+                    _concurrentPushCount += 1;
+                    Task extendTask = _client.ModifyAckDeadlineAsync(_subscriptionName, extends.Select(x => x.Id), _modifyDeadlineSeconds, _hardStopCts.Token);
+                    Add(extendTask, Next(false, () => HandleAckResponse(extendTask, null, null, extends)));
+                }
+                if (nacks.Count > 0)
+                {
+                    _pushInFlight += nacks.Count;
+                    _concurrentPushCount += 1;
+                    Task nackTask = _client.ModifyAckDeadlineAsync(_subscriptionName, nacks, 0, _hardStopCts.Token);
+                    Add(nackTask, Next(false, () => HandleAckResponse(nackTask, null, nacks, null)));
+                }
+            }
+
+            private void HandleAckResponse(Task writeTask, List<string> ackIds, List<string> nackIds, List<TimedId> extendIds)
+            {
+                _concurrentPushCount -= 1;
+                _pushInFlight -= ackIds?.Count ?? 0 + nackIds?.Count ?? 0 + extendIds?.Count ?? 0;
+                if (writeTask.IsFaulted)
+                {
+                    if (writeTask.Exception.As<RpcException>()?.IsRecoverable() ?? false)
+                    {
+                        // Recoverable write error, requeue data and continue.
+                        // ackIds and nackIds are never both set in the same call, so no need to share a lock.
+                        if (ackIds != null && ackIds.Count > 0)
+                        {
+                            lock (_lock)
                             {
-                                // If stop requested, then don't start processing any further messages.
-                                _softStopCts.Token.ThrowIfCancellationRequested();
-                                lock (_qLock)
-                                {
-                                    _unAckedMsgCount += 1;
-                                }
-                                // Execute the user-provided message handler, and ignoring exceptions.
-                                // And process the ACK/NACK response.
-                                var reply = await _taskHelper.ConfigureAwaitHideErrors(
-                                    () => _handlerAsync(msg.Message, _hardStopCts.Token), Reply.Nack);
-                                bool triggerQEvent = false;
-                                lock (_qLock)
-                                {
-                                    extendIds.Remove(msg.AckId);
-                                    if (extendIds.Count == 0)
-                                    {
-                                        allMsgsHandledCts.Cancel();
-                                    }
-                                    if (reply == Reply.Ack)
-                                    {
-                                        _ackQueue.Enqueue(msg.AckId);
-                                        triggerQEvent = true;
-                                    }
-                                    else
-                                    {
-                                        _unAckedMsgCount -= 1;
-                                    }
-                                }
-                                if (triggerQEvent)
-                                {
-                                    // Unblock Push(), because now there is at least one ACK to push.
-                                    _qEvent.Set();
-                                }
-                            }));
+                                _ackQueue.Requeue(ackIds);
+                            }
                         }
-                    }
-                }
-            }
-
-            private void QueueLeaseExtensions(IEnumerable<string> ackIds)
-            {
-                lock (_qLock)
-                {
-                    _extendQueue.EnqueueAll(ackIds);
-                }
-                _qEvent.Set();
-            }
-
-            private async Task AutoExtend(HashSet<string> ackIds, CancellationTokenSource allMsgsHandled)
-            {
-                // Moves ackIds into the extend-queue as required for auto lease extension
-                // This loop is not infinite; it terminates when allMsgsHandledToken is cancelled.
-                try
-                {
-                    while (true)
-                    {
-                        bool isCancelled = await _taskHelper.ConfigureAwaitHideCancellation(
-                            () => _scheduler.Delay(_autoExtendInterval, allMsgsHandled.Token));
-                        if (isCancelled)
+                        if (nackIds != null && nackIds.Count > 0)
                         {
-                            return;
+                            lock (_lock)
+                            {
+                                _nackQueue.Requeue(nackIds);
+                            }
                         }
-                        // Queue lease extensions on all not-yet-processed messages.
-                        // It's OK if an ID is lease-extended and ACKed to the server concurrently.
-                        // The ACK takes precedence on the server.
-                        QueueLeaseExtensions(ackIds);
-                    }
-                }
-                finally
-                {
-                    allMsgsHandled.Dispose();
-                }
-            }
-
-            private async Task Push(SubscriberServiceApiClient.StreamingPullStream pull, CancellationToken streamingPullToken)
-            {
-                // Send ack/extends in smaller chunks than maximum ack/extend queue size.
-                // This temporally smooths out server message receipt, which causes higher
-                // sustained message delivery in high-bandwidth environments.
-                var maxAckExtendSendCount = Math.Max(10, _maxAckExtendQueueSize / 4);
-                // Pushing of acks and extends
-                // If a Push call fails then this Task always ends, and the StreamingPull is cancelled.
-                // If it's recoverable, then a new StreamingPull call is started.
-                // If it's unrecoverable, then a global hard stop occurs.
-                while (true)
-                {
-                    // Wait until there are acks or lease-extensions to push to server.
-                    while (_qLock.Locked(() => _ackQueue.Count == 0 && _extendQueue.Count == 0))
-                    {
-                        if (_softStopCts.IsCancellationRequested && _qLock.Locked(() => _unAckedMsgCount == 0))
+                        if (extendIds != null && extendIds.Count > 0)
                         {
-                            // All acks sent and a stop has been requested, so cancel local _hardStopCts
-                            // to signal this SingleChannel has completed; then exit Pusher
-                            _hardStopCts.Cancel();
-                            return;
+                            _extendQueue.Requeue(extendIds);
                         }
-                        await _taskHelper.ConfigureAwait(_qEvent.WaitAsync(streamingPullToken));
+                        // TODO: Backoff
                     }
-                    // Get local copies of acks/extensions to send.
-                    List<string> acks;
-                    List<string> extends;
-                    lock (_qLock)
+                    else
                     {
-                        acks = _ackQueue.Take(maxAckExtendSendCount).ToList();
-                        extends = _extendQueue.Take(maxAckExtendSendCount - acks.Count).ToList();
-                    }
-                    var req = new StreamingPullRequest
-                    {
-                        AckIds = { acks },
-                        // Don't lease-extend any msg that is also being acked.
-                        ModifyDeadlineAckIds = { extends.Except(acks) }
-                    };
-                    req.ModifyDeadlineSeconds.AddRange(Enumerable.Repeat(_modifyDeadlineSeconds, req.ModifyDeadlineAckIds.Count));
-                    // Send acks/extensions
-                    await _taskHelper.ConfigureAwait(pull.WriteAsync(req));
-                    // If the send didn't have errors, then dequeue the acks/extends that were just sent.
-                    // Any error would have thrown an exception in the previous WriteAsync() call.
-                    lock (_qLock)
-                    {
-                        _ackQueue.Dequeue(acks.Count);
-                        _extendQueue.Dequeue(extends.Count);
-                        _unAckedMsgCount -= acks.Count;
+                        // Unrecoverable error; throw exception.
+                        throw writeTask.Exception.FlattenIfPossible();
                     }
                 }
+                // Immediately send more data if there is any to send.
+                StartPush();
             }
         }
     }

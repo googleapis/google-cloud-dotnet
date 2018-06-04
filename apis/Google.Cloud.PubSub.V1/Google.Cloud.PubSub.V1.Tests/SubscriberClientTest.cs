@@ -149,7 +149,7 @@ namespace Google.Cloud.PubSub.V1.Tests
             private class PullStream : StreamingPullStream
             {
                 public PullStream(TimeSpan writeAsyncPreDelay,
-                    IEnumerable<ServerAction> msgs, List<TimedId> extends, List<TimedId> acks, List<DateTime> writeCompletes,
+                    IEnumerable<ServerAction> msgs, List<DateTime> writeCompletes,
                     IScheduler scheduler, IClock clock, TaskHelper taskHelper, bool useMsgAsId, CancellationToken? ct)
                 {
                     _taskHelper = taskHelper;
@@ -157,8 +157,6 @@ namespace Google.Cloud.PubSub.V1.Tests
                     _writeAsyncPreDelay = writeAsyncPreDelay; // delay within the WriteAsync() method. Simulating network or server slowness.
                     _en = new En(msgs, scheduler, taskHelper, clock, useMsgAsId, ct);
                     _clock = clock;
-                    _extends = extends;
-                    _acks = acks;
                     _writeCompletes = writeCompletes;
                 }
 
@@ -168,21 +166,18 @@ namespace Google.Cloud.PubSub.V1.Tests
                 private readonly TimeSpan _writeAsyncPreDelay;
                 private readonly IAsyncEnumerator<StreamingPullResponse> _en;
                 private readonly IClock _clock;
-                private readonly List<TimedId> _extends;
-                private readonly List<TimedId> _acks;
                 private readonly List<DateTime> _writeCompletes;
 
                 public override IAsyncEnumerator<StreamingPullResponse> ResponseStream => _en;
 
-                public override async Task WriteAsync(StreamingPullRequest message)
+                public override Task WriteAsync(StreamingPullRequest message)
                 {
-                    await _taskHelper.ConfigureAwait(_scheduler.Delay(_writeAsyncPreDelay, CancellationToken.None));
-                    var now = _clock.GetCurrentDateTimeUtc();
-                    lock (_lock)
+                    if (message.ModifyDeadlineAckIds.Count != 0 || message.AckIds.Count != 0)
                     {
-                        _extends.AddRange(message.ModifyDeadlineAckIds.Select(id => new TimedId(now, id)).ToList());
-                        _acks.AddRange(message.AckIds.Select(id => new TimedId(now, id)).ToList());
+                        throw new InvalidOperationException("WriteAsync must not modify deadlines.");
                     }
+                    // TODO: Record write time
+                    return Task.FromResult(0);
                 }
 
                 public override Task WriteCompleteAsync()
@@ -190,8 +185,8 @@ namespace Google.Cloud.PubSub.V1.Tests
                     lock (_lock)
                     {
                         _writeCompletes.Add(_clock.GetCurrentDateTimeUtc());
-                        return Task.FromResult(0);
                     }
+                    return Task.FromResult(0);
                 }
             }
 
@@ -207,19 +202,22 @@ namespace Google.Cloud.PubSub.V1.Tests
                 _useMsgAsId = useMsgAsId;
             }
 
+            private readonly object _lock = new object();
             private readonly IEnumerator<IEnumerable<ServerAction>> _msgsEn;
             private readonly IScheduler _scheduler;
             private readonly IClock _clock;
             private readonly TaskHelper _taskHelper;
-            private readonly TimeSpan _writeAsyncPreDelay;
+            private readonly TimeSpan _writeAsyncPreDelay; // Simulates slow network or server
             private readonly bool _useMsgAsId;
 
             private readonly List<TimedId> _extends = new List<TimedId>();
             private readonly List<TimedId> _acks = new List<TimedId>();
+            private readonly List<TimedId> _nacks = new List<TimedId>();
             private readonly List<DateTime> _writeCompletes = new List<DateTime>();
 
             public IReadOnlyList<TimedId> Extends => _extends;
             public IReadOnlyList<TimedId> Acks => _acks;
+            public IReadOnlyList<TimedId> Nacks => _nacks;
             public IReadOnlyList<DateTime> WriteCompletes => _writeCompletes;
 
             public override StreamingPullStream StreamingPull(
@@ -232,8 +230,39 @@ namespace Google.Cloud.PubSub.V1.Tests
                         throw new InvalidOperationException("Test subscriber creation failed. Run out of (fake) data");
                     }
                     var msgs = _msgsEn.Current;
-                    return new PullStream(_writeAsyncPreDelay, msgs, _extends, _acks, _writeCompletes,
+                    return new PullStream(_writeAsyncPreDelay, msgs, _writeCompletes,
                         _scheduler, _clock, _taskHelper, _useMsgAsId, callSettings?.CancellationToken);
+                }
+            }
+
+            public override async Task AcknowledgeAsync(SubscriptionName subscription, IEnumerable<string> ackIds, CancellationToken cancellationToken)
+            {
+                if (_writeAsyncPreDelay != TimeSpan.Zero)
+                {
+                    await _taskHelper.ConfigureAwait(_scheduler.Delay(_writeAsyncPreDelay, CancellationToken.None));
+                }
+                lock (_lock)
+                {
+                    _acks.AddRange(ackIds.Select(id => new TimedId(_clock.GetCurrentDateTimeUtc(), id)));
+                }
+            }
+
+            public override async Task ModifyAckDeadlineAsync(SubscriptionName subscription, IEnumerable<string> ackIds, int ackDeadlineSeconds, CancellationToken cancellationToken)
+            {
+                if (_writeAsyncPreDelay != TimeSpan.Zero)
+                {
+                    await _taskHelper.ConfigureAwait(_scheduler.Delay(_writeAsyncPreDelay, CancellationToken.None));
+                }
+                lock (_lock)
+                {
+                    if (ackDeadlineSeconds == 0)
+                    {
+                        _nacks.AddRange(ackIds.Select(id => new TimedId(_clock.GetCurrentDateTimeUtc(), id)));
+                    }
+                    else
+                    {
+                        _extends.AddRange(ackIds.Select(id => new TimedId(_clock.GetCurrentDateTimeUtc(), id)));
+                    }
                 }
             }
         }
@@ -308,6 +337,7 @@ namespace Google.Cloud.PubSub.V1.Tests
                     Assert.Equal(hardStop, isCancelled);
                     Assert.Equal(1, fake.Subscribers.Count);
                     Assert.Empty(fake.Subscribers[0].Acks);
+                    Assert.Empty(fake.Subscribers[0].Nacks);
                     Assert.Empty(fake.Subscribers[0].Extends);
                     Assert.Equal(new[] { fake.Time0 + TimeSpan.FromSeconds(1) }, fake.Subscribers[0].WriteCompletes);
                     Assert.Equal(new[] { fake.Time0 + TimeSpan.FromSeconds(1) }, fake.ClientShutdowns);
@@ -423,7 +453,7 @@ namespace Google.Cloud.PubSub.V1.Tests
                 });
             }
         }
-        
+
         [Theory, PairwiseData]
         public void FlowControl(
             [CombinatorialValues(false, true)] bool hardStop,
@@ -468,8 +498,7 @@ namespace Google.Cloud.PubSub.V1.Tests
                         return SubscriberClient.Reply.Ack;
                     });
                     await fake.TaskHelper.ConfigureAwait(fake.Scheduler.Delay(TimeSpan.FromSeconds(stopAfterSeconds) + TimeSpan.FromSeconds(0.5), CancellationToken.None));
-                    await fake.TaskHelper.ConfigureAwaitHideCancellation(
-                        () => fake.Subscriber.StopAsync(new CancellationToken(hardStop)));
+                    await fake.TaskHelper.ConfigureAwaitHideCancellation(() => fake.Subscriber.StopAsync(new CancellationToken(hardStop)));
                     Assert.Equal(expectedMsgCount, handledMsgs.Count);
                 });
             }
@@ -498,6 +527,8 @@ namespace Google.Cloud.PubSub.V1.Tests
                     await fake.TaskHelper.ConfigureAwait(fake.Scheduler.Delay(TimeSpan.FromSeconds(10), CancellationToken.None));
                     await fake.TaskHelper.ConfigureAwait(fake.Subscriber.StopAsync(CancellationToken.None));
                     Assert.Equal(Enumerable.Repeat("m", 5), handledMsgs);
+                    Assert.Equal(5, fake.Subscribers[0].Acks.Count);
+                    Assert.Equal(5, fake.Subscribers[0].Nacks.Count);
                 });
             }
         }
@@ -542,12 +573,14 @@ namespace Google.Cloud.PubSub.V1.Tests
             var zero = TimeSpan.Zero;
             var unrecoverableEx = new RpcException(new Status(StatusCode.Unimplemented, ""), "");
             var failure = badMoveNext ? ServerAction.BadMoveNext(zero, unrecoverableEx) : ServerAction.BadCurrent(zero, unrecoverableEx);
-            // Client 1 will recv "1", then crash unrecoverably
+            // Client 1 will recv ["1", "2"], then crash unrecoverably
             // Client(s) 2(+) will just block; this tests that shutdown occurs
-            var msgs = new[] { new[] { ServerAction.Data(zero, new[] { "1" }), failure } }
+            var msgs = new[] { new[] { ServerAction.Data(zero, new[] { "1", "2" }), failure } }
                 .Concat(Enumerable.Repeat<IEnumerable<ServerAction>>(new[] { ServerAction.Inf() }, clientCount - 1))
                 .ToList();
-            using (var fake = Fake.Create(msgs, clientCount: clientCount, threadCount: threadCount))
+            // flowMaxElements must be 1, with at least 2 msgs. This ensures that at least one valid item
+            // is handled before the server-fault triggers the client to shutdown.
+            using (var fake = Fake.Create(msgs, clientCount: clientCount, threadCount: threadCount, flowMaxElements: 1))
             {
                 fake.Scheduler.Run(async () =>
                 {
@@ -559,10 +592,10 @@ namespace Google.Cloud.PubSub.V1.Tests
                         return SubscriberClient.Reply.Ack;
                     });
                     await fake.TaskHelper.ConfigureAwait(fake.Scheduler.Delay(TimeSpan.FromSeconds(10), CancellationToken.None));
-                    Exception ex = await fake.TaskHelper.ConfigureAwaitHideErrors(
-                        () => fake.Subscriber.StopAsync(CancellationToken.None));
+                    Exception ex = await fake.TaskHelper.ConfigureAwaitHideErrors(() => fake.Subscriber.StopAsync(CancellationToken.None));
                     Assert.Equal(unrecoverableEx, ex.AllExceptions().FirstOrDefault());
-                    Assert.Equal(new[] { "1" }, handledMsgs);
+                    Assert.NotEmpty(handledMsgs);
+                    Assert.True(handledMsgs[0] == "1" || handledMsgs[0] == "2");
                     Assert.Equal(1, fake.ClientShutdowns.Count);
                 });
             }
@@ -598,13 +631,13 @@ namespace Google.Cloud.PubSub.V1.Tests
                     var doneTask = fake.Subscriber.StartAsync(async (msg, ct) =>
                     {
                         await fake.TaskHelper.ConfigureAwait(fake.Scheduler.Delay(TimeSpan.FromSeconds(70), ct));
-                        Task unusedTask = fake.Subscriber.StopAsync(CancellationToken.None);
                         return SubscriberClient.Reply.Ack;
                     });
+                    await fake.TaskHelper.ConfigureAwait(fake.Scheduler.Delay(TimeSpan.FromSeconds(100), CancellationToken.None));
+                    await fake.TaskHelper.ConfigureAwait(fake.Subscriber.StopAsync(CancellationToken.None));
                     await fake.TaskHelper.ConfigureAwait(doneTask);
-                    var t0 = fake.Time0;
-                    DateTime S(int seconds) => t0 + TimeSpan.FromSeconds(seconds);
                     Assert.Equal(1, fake.Subscribers.Count);
+                    DateTime S(int seconds) => fake.Time0 + TimeSpan.FromSeconds(seconds);
                     Assert.Equal(new[] { S(0), S(5), S(20), S(25), S(40), S(45), S(60), S(65) }, fake.Subscribers[0].Extends.Select(x => x.Time));
                     Assert.Equal(new[] { S(70), S(75) }, fake.Subscribers[0].Acks.Select(x => x.Time));
                 });
@@ -635,10 +668,14 @@ namespace Google.Cloud.PubSub.V1.Tests
                     Assert.Equal(msgCount, sub.Acks.Count);
                     // Difficult to predict the exact timings, so check durations.
                     var expectedMinDuration = TimeSpan.FromTicks(preDelay.Ticks * msgCount / flowMaxEls);
-                    Assert.True(sub.Acks.Last().Time - sub.Acks.First().Time >= expectedMinDuration, "Pull not throttled (acks)");
+                    var duration = sub.Acks.Last().Time - sub.Acks.First().Time;
+                    Assert.True(duration >= expectedMinDuration, $"Pull not throttled (acks) {duration} should be >= {expectedMinDuration}");
                 });
             }
         }
+
+        // TODO: Test client behaviour when ack/nack/extend push RPCs fail.
+        // TODO: Test client behaviour when extends taking too long to send.
 
         private class FakeEmptySubscriberServiceApiClient : SubscriberServiceApiClient
         {

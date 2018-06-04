@@ -45,7 +45,7 @@ namespace Google.Cloud.PubSub.V1.IntegrationTests
         private async Task RunBulkMessaging(
             int messageCount, int minMessageSize, int maxMessageSize, int maxMessagesInFlight, int initialNackCount,
             TimeSpan? timeouts = null, int? cancelAfterRecvCount = null, TimeSpan? interPublishDelay = null,
-            TimeSpan? debugOutputPeriod = null)
+            TimeSpan? debugOutputPeriod = null, int? clientCount = null)
         {
             // Force messages to be at least 4 bytes long, so an int ID can be used.
             minMessageSize = Math.Max(4, minMessageSize);
@@ -84,6 +84,7 @@ namespace Google.Cloud.PubSub.V1.IntegrationTests
                     }
                 )).ConfigureAwait(false);
             var simpleSubscriber = await SubscriberClient.CreateAsync(subscriptionName,
+                clientCreationSettings: new SubscriberClient.ClientCreationSettings(clientCount: clientCount),
                 settings: new SubscriberClient.Settings
                 {
                     StreamAckDeadline = timeouts,
@@ -232,10 +233,10 @@ namespace Google.Cloud.PubSub.V1.IntegrationTests
             Console.WriteLine("Test complete.");
         }
 
-        [Fact]
-        public async Task ManySmallMessages()
+        [Theory, CombinatorialData]
+        public async Task ManySmallMessages([CombinatorialValues(0, 1, 2)] int clientCount)
         {
-            await RunBulkMessaging(2_000_000, 1, 10, 10_000, 0);
+            await RunBulkMessaging(1_000_000, 1, 10, 10_000, 0, clientCount: clientCount > 0 ? clientCount : (int?)null);
         }
 
         [Theory(Skip = "Very long-running test; takes 6 hours")]
