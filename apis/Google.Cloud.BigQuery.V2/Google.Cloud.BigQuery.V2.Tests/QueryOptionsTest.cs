@@ -13,6 +13,7 @@
 // limitations under the License.
 
 using Google.Apis.Bigquery.v2.Data;
+using System;
 using Xunit;
 
 namespace Google.Cloud.BigQuery.V2.Tests
@@ -37,7 +38,8 @@ namespace Google.Cloud.BigQuery.V2.Tests
                 UseLegacySql = true,
                 ParameterMode = BigQueryParameterMode.Positional,
                 DestinationEncryptionConfiguration = new EncryptionConfiguration { KmsKeyName = "projects/1/locations/us/keyRings/1/cryptoKeys/1" },
-                DestinationSchemaUpdateOptions = SchemaUpdateOption.AllowFieldAddition | SchemaUpdateOption.AllowFieldRelaxation
+                DestinationSchemaUpdateOptions = SchemaUpdateOption.AllowFieldAddition | SchemaUpdateOption.AllowFieldRelaxation,
+                TimePartitioning = TimePartition.CreateDailyPartitioning(TimeSpan.FromHours(1), "field")
             };
 
             JobConfigurationQuery query = new JobConfigurationQuery();
@@ -58,6 +60,9 @@ namespace Google.Cloud.BigQuery.V2.Tests
             Assert.Equal(2, query.SchemaUpdateOptions.Count);
             Assert.Contains("ALLOW_FIELD_ADDITION", query.SchemaUpdateOptions);
             Assert.Contains("ALLOW_FIELD_RELAXATION", query.SchemaUpdateOptions);
+            Assert.Equal(60 * 60 * 1000, query.TimePartitioning.ExpirationMs);
+            Assert.Equal("DAY", query.TimePartitioning.Type);
+            Assert.Equal("field", query.TimePartitioning.Field);
         }
     }
 }
