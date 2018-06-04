@@ -1157,7 +1157,7 @@ namespace Google.Cloud.Bigtable.V2
             StatusCode[] retryStatuses = { StatusCode.DeadlineExceeded, StatusCode.Unavailable };
             var requestManager = new BigtableMutateRowsRequestManager(retryStatuses, request);
 
-            await ApiCallRetryExtensions.RetryOperationUntilCompleted(
+            await Utilities.RetryOperationUntilCompleted(
                 async () =>
                 {
                     var currentStream = GetUnderlyingClient().MutateRows(requestManager.NextRequest, callSettings);

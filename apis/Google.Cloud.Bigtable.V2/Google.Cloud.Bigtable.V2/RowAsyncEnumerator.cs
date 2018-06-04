@@ -129,7 +129,7 @@ namespace Google.Cloud.Bigtable.V2
             return false;
 
             Task EstablishStream(ReadRowsRequest request)  =>
-                ApiCallRetryExtensions.RetryOperationUntilCompleted(
+                Utilities.RetryOperationUntilCompleted(
                     () =>
                     {
                         _stream = _client.ReadRowsInternal(request, _callSettings);

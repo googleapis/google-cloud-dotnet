@@ -13,12 +13,15 @@
 // limitations under the License.
 
 using Google.Api.Gax;
+using Google.Api.Gax.Grpc;
 using Google.Protobuf;
+using Grpc.Core;
+using System;
 using System.Collections.Generic;
 using System.Linq;
-using System.Text.RegularExpressions;
-using System;
 using System.Text;
+using System.Text.RegularExpressions;
+using System.Threading.Tasks;
 
 namespace Google.Cloud.Bigtable.V2
 {
@@ -108,6 +111,53 @@ namespace Google.Cloud.Bigtable.V2
                     return false;
                 }
                 return true;
+            }
+        }
+
+        internal static async Task RetryOperationUntilCompleted(
+            Func<Task<bool>> fn,
+            IClock clock,
+            IScheduler scheduler,
+            CallSettings callSettings,
+            RetrySettings retrySettings)
+        {
+            DateTime? overallDeadline = retrySettings.TotalExpiration.CalculateDeadline(clock);
+            TimeSpan retryDelay = retrySettings.RetryBackoff.Delay;
+            TimeSpan callTimeout = retrySettings.TimeoutBackoff.Delay;
+            while (true)
+            {
+                DateTime attemptDeadline = clock.GetCurrentDateTimeUtc() + callTimeout;
+                // Note: this handles a null total deadline due to "<" returning false if overallDeadline is null.
+                DateTime combinedDeadline = overallDeadline < attemptDeadline ? overallDeadline.Value : attemptDeadline;
+                CallSettings attemptCallSettings = callSettings.WithCallTiming(CallTiming.FromDeadline(combinedDeadline));
+                TimeSpan actualDelay = retrySettings.DelayJitter.GetDelay(retryDelay);
+                DateTime expectedRetryTime;
+                try
+                {
+                    bool isResponseOk = await fn().ConfigureAwait(false);
+                    if (isResponseOk)
+                    {
+                        return;
+                    }
+
+                    expectedRetryTime = clock.GetCurrentDateTimeUtc() + actualDelay;
+                    if (expectedRetryTime > overallDeadline)
+                    {
+                        // TODO: Can we get this string from somewhere?
+                        throw new RpcException(new Status(StatusCode.DeadlineExceeded, "Deadline Exceeded"));
+                    }
+                }
+                catch (RpcException e) when (retrySettings.RetryFilter(e))
+                {
+                    expectedRetryTime = clock.GetCurrentDateTimeUtc() + actualDelay;
+                    if (expectedRetryTime > overallDeadline)
+                    {
+                        throw;
+                    }
+                }
+                await scheduler.Delay(actualDelay, callSettings.CancellationToken.GetValueOrDefault()).ConfigureAwait(false);
+                retryDelay = retrySettings.RetryBackoff.NextDelay(retryDelay);
+                callTimeout = retrySettings.TimeoutBackoff.NextDelay(callTimeout);
             }
         }
 
