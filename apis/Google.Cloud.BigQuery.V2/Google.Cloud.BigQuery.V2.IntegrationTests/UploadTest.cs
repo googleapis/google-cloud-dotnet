@@ -149,6 +149,42 @@ namespace Google.Cloud.BigQuery.V2.IntegrationTests
         }
 
         [Fact]
+        public void UploadCsv_PartitionedByField()
+        {
+            var client = BigQueryClient.Create(_fixture.ProjectId);
+            string tableId = _fixture.CreateTableId();
+            var tableReference = client.GetTableReference(_fixture.DatasetId, _fixture.CreateTableId());
+
+            string[] csvRows =
+            {
+                "Name,GameStarted,Score",
+                "Ben,2014-08-19T12:41:35.220Z,85",
+                "Lucy,2014-08-20T12:41:35.220Z,130",
+                "Rohit,2014-08-21T12:41:35.220Z,90"
+            };
+
+            var bytes = Encoding.UTF8.GetBytes(string.Join("\n", csvRows));
+
+            TableSchema schema = new TableSchemaBuilder
+            {
+                { "Name", BigQueryDbType.String },
+                { "GameStarted", BigQueryDbType.Timestamp },
+                { "Score", BigQueryDbType.Int64 },
+            }.Build();
+            var options = new UploadCsvOptions
+            {
+                SkipLeadingRows = 1,
+                TimePartitioning = TimePartition.CreateDailyPartitioning(expiration: null, "GameStarted")
+            };
+            var job = client.UploadCsv(_fixture.DatasetId, tableId, schema, new MemoryStream(bytes), options);
+            var result = job.PollUntilCompleted();
+            Assert.Null(result.Status.ErrorResult);
+
+            var table = client.GetTable(_fixture.DatasetId, tableId);
+            Assert.Equal("GameStarted", table.Resource.TimePartitioning.Field);            
+        }
+
+        [Fact]
         public void UploadAvro()
         {
             var client = BigQueryClient.Create(_fixture.ProjectId);
