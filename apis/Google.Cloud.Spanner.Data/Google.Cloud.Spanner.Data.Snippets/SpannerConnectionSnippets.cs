@@ -73,12 +73,12 @@ namespace Google.Cloud.Spanner.Data.Snippets
 
             // Sample: CreateDatabaseAsync
             // Additional: CreateDdlCommand
-            using (var connection = new SpannerConnection(connectionString))
+            using (SpannerConnection connection = new SpannerConnection(connectionString))
             {
-                var createDbCmd = connection.CreateDdlCommand($"CREATE DATABASE {databaseName}");
+                SpannerCommand createDbCmd = connection.CreateDdlCommand($"CREATE DATABASE {databaseName}");
                 await createDbCmd.ExecuteNonQueryAsync();
 
-                var createTableCmd = connection.CreateDdlCommand(
+                SpannerCommand createTableCmd = connection.CreateDdlCommand(
                     @"CREATE TABLE TestTable (
                                             Key                STRING(MAX) NOT NULL,
                                             StringValue        STRING(MAX),
@@ -88,9 +88,9 @@ namespace Google.Cloud.Spanner.Data.Snippets
             }
             // End sample
 
-            using (var connection = new SpannerConnection(connectionString))
+            using (SpannerConnection connection = new SpannerConnection(connectionString))
             {
-                var createDbCmd = connection.CreateDdlCommand($"DROP DATABASE {databaseName}");
+                SpannerCommand createDbCmd = connection.CreateDdlCommand($"DROP DATABASE {databaseName}");
                 await createDbCmd.ExecuteNonQueryAsync();
             }
         }
@@ -103,24 +103,21 @@ namespace Google.Cloud.Spanner.Data.Snippets
             await RetryHelpers.RetryOnceAsync(async () =>
             {
                 // Sample: InsertDataAsync
-                using (var connection = new SpannerConnection(connectionString))
+                using (SpannerConnection connection = new SpannerConnection(connectionString))
                 {
                     await connection.OpenAsync();
 
-                    var cmd = connection.CreateInsertCommand(
-                        "TestTable", new SpannerParameterCollection
-                        {
-                        {"Key", SpannerDbType.String},
-                        {"StringValue", SpannerDbType.String},
-                        {"Int64Value", SpannerDbType.Int64}
-                        });
+                    SpannerCommand cmd = connection.CreateInsertCommand("TestTable");
+                    SpannerParameter keyParameter = cmd.Parameters.Add("Key", SpannerDbType.String);
+                    SpannerParameter stringValueParameter = cmd.Parameters.Add("StringValue", SpannerDbType.String);
+                    SpannerParameter int64ValueParameter = cmd.Parameters.Add("Int64Value", SpannerDbType.Int64);
 
                     // This executes 5 distinct transactions with one row written per transaction.
-                    for (var i = 0; i < 5; i++)
+                    for (int i = 0; i < 5; i++)
                     {
-                        cmd.Parameters["Key"].Value = Guid.NewGuid().ToString("N");
-                        cmd.Parameters["StringValue"].Value = $"StringValue{i}";
-                        cmd.Parameters["Int64Value"].Value = i;
+                        keyParameter.Value = Guid.NewGuid().ToString("N");
+                        stringValueParameter.Value = $"StringValue{i}";
+                        int64ValueParameter.Value = i;
                         int rowsAffected = await cmd.ExecuteNonQueryAsync();
                         Console.WriteLine($"{rowsAffected} rows written...");
                     }
@@ -157,10 +154,10 @@ namespace Google.Cloud.Spanner.Data.Snippets
                     SpannerCommand cmd = connection.CreateInsertCommand("UsersHistory",
                         new SpannerParameterCollection
                         {
-                        { "Id", SpannerDbType.Int64, 10L },
-                        { "CommitTs", SpannerDbType.Timestamp, SpannerParameter.CommitTimestamp },
-                        { "Name", SpannerDbType.String, "Demo 1" },
-                        { "Deleted", SpannerDbType.Bool, false }
+                            { "Id", SpannerDbType.Int64, 10L },
+                            { "CommitTs", SpannerDbType.Timestamp, SpannerParameter.CommitTimestamp },
+                            { "Name", SpannerDbType.String, "Demo 1" },
+                            { "Deleted", SpannerDbType.Bool, false }
                         });
                     int rowsAffected = await cmd.ExecuteNonQueryAsync();
 
@@ -198,14 +195,14 @@ namespace Google.Cloud.Spanner.Data.Snippets
                 // Additional: CreateUpdateCommand
                 // Additional: CreateDeleteCommand
                 // Additional: CreateSelectCommand
-                using (var connection = new SpannerConnection(connectionString))
+                using (SpannerConnection connection = new SpannerConnection(connectionString))
                 {
                     await connection.OpenAsync();
 
                     // Read the first two keys in the database.
-                    var keys = new List<string>();
-                    var selectCmd = connection.CreateSelectCommand("SELECT * FROM TestTable");
-                    using (var reader = await selectCmd.ExecuteReaderAsync())
+                    List<string> keys = new List<string>();
+                    SpannerCommand selectCmd = connection.CreateSelectCommand("SELECT * FROM TestTable");
+                    using (SpannerDataReader reader = await selectCmd.ExecuteReaderAsync())
                     {
                         while (keys.Count < 3 && await reader.ReadAsync())
                         {
@@ -215,7 +212,7 @@ namespace Google.Cloud.Spanner.Data.Snippets
 
                     // Update the Int64Value of keys[0]
                     // Include the primary key and update columns.
-                    var updateCmd = connection.CreateUpdateCommand(
+                    SpannerCommand updateCmd = connection.CreateUpdateCommand(
                         "TestTable", new SpannerParameterCollection
                         {
                         {"Key", SpannerDbType.String, keys[0]},
@@ -224,7 +221,7 @@ namespace Google.Cloud.Spanner.Data.Snippets
                     await updateCmd.ExecuteNonQueryAsync();
 
                     // Delete row for keys[1]
-                    var deleteCmd = connection.CreateDeleteCommand(
+                    SpannerCommand deleteCmd = connection.CreateDeleteCommand(
                         "TestTable", new SpannerParameterCollection
                         {
                         {"Key", SpannerDbType.String, keys[1]}
@@ -250,18 +247,19 @@ namespace Google.Cloud.Spanner.Data.Snippets
 
             // Sample: TransactionAsync
             // Additional: BeginTransactionAsync
-            var retryPolicy = new RetryPolicy<SpannerFaultDetectionStrategy>(RetryStrategy.DefaultExponential);
+            RetryPolicy<SpannerFaultDetectionStrategy> retryPolicy =
+                new RetryPolicy<SpannerFaultDetectionStrategy>(RetryStrategy.DefaultExponential);
 
             await retryPolicy.ExecuteAsync(
                 async () =>
                 {
-                    using (var connection = new SpannerConnection(connectionString))
+                    using (SpannerConnection connection = new SpannerConnection(connectionString))
                     {
                         await connection.OpenAsync();
 
-                        using (var transaction = await connection.BeginTransactionAsync())
+                        using (SpannerTransaction transaction = await connection.BeginTransactionAsync())
                         {
-                            var cmd = connection.CreateInsertCommand(
+                            SpannerCommand cmd = connection.CreateInsertCommand(
                                 "TestTable", new SpannerParameterCollection
                                 {
                                     {"Key", SpannerDbType.String},
@@ -295,18 +293,19 @@ namespace Google.Cloud.Spanner.Data.Snippets
 
             // Sample: TransactionScopeAsync
             // Additional: CreateInsertCommand
-            var retryPolicy = new RetryPolicy<SpannerFaultDetectionStrategy>(RetryStrategy.DefaultExponential);
+            RetryPolicy<SpannerFaultDetectionStrategy> retryPolicy =
+                new RetryPolicy<SpannerFaultDetectionStrategy>(RetryStrategy.DefaultExponential);
 
             await retryPolicy.ExecuteAsync(
                 async () =>
                 {
-                    using (var scope = new TransactionScope(TransactionScopeAsyncFlowOption.Enabled))
+                    using (TransactionScope scope = new TransactionScope(TransactionScopeAsyncFlowOption.Enabled))
                     {
-                        using (var connection = new SpannerConnection(connectionString))
+                        using (SpannerConnection connection = new SpannerConnection(connectionString))
                         {
                             await connection.OpenAsync();
 
-                            var cmd = connection.CreateInsertCommand(
+                            SpannerCommand cmd = connection.CreateInsertCommand(
                                 "TestTable", new SpannerParameterCollection
                                 {
                                     {"Key", SpannerDbType.String},
@@ -316,7 +315,7 @@ namespace Google.Cloud.Spanner.Data.Snippets
 
                             // This executes a single transactions with alls row written at once during scope.Complete().
                             // If a transient fault occurs, this entire method is re-run.
-                            for (var i = 0; i < 5; i++)
+                            for (int i = 0; i < 5; i++)
                             {
                                 cmd.Parameters["Key"].Value = Guid.NewGuid().ToString("N");
                                 cmd.Parameters["StringValue"].Value = $"StringValue{i}";
@@ -339,16 +338,16 @@ namespace Google.Cloud.Spanner.Data.Snippets
             RetryHelpers.RetryOnce(() =>
             {
                 // Sample: DataAdapter
-                using (var connection = new SpannerConnection(connectionString))
+                using (SpannerConnection connection = new SpannerConnection(connectionString))
                 {
-                    var untypedDataSet = new DataSet();
+                    DataSet untypedDataSet = new DataSet();
 
                     // Provide the name of the Cloud Spanner table and primary key column names.
-                    var adapter = new SpannerDataAdapter(connection, "TestTable", "Key");
+                    SpannerDataAdapter adapter = new SpannerDataAdapter(connection, "TestTable", "Key");
                     adapter.Fill(untypedDataSet);
 
                     // Insert a row
-                    var row = untypedDataSet.Tables[0].NewRow();
+                    DataRow row = untypedDataSet.Tables[0].NewRow();
                     row["Key"] = Guid.NewGuid().ToString("N");
                     row["StringValue"] = "New String Value";
                     row["Int64Value"] = 0L;
