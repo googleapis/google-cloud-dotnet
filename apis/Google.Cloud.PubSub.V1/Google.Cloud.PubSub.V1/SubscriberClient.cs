@@ -16,7 +16,6 @@ using Google.Api.Gax;
 using Google.Api.Gax.Grpc;
 using Google.Apis.Auth.OAuth2;
 using Google.Cloud.PubSub.V1.Tasks;
-using Google.Protobuf.Collections;
 using Grpc.Auth;
 using Grpc.Core;
 using System;
