@@ -24,24 +24,6 @@ using System.Threading.Tasks;
 
 namespace Google.Cloud.Firestore
 {
-    // TODO: Put this into GAX; there's already an internal method, but it doesn't
-    // handle an initial value less than settings.Delay.
-    internal static class BackoffSettingsExtensions
-    {
-        internal static TimeSpan NextDelay(this BackoffSettings settings, TimeSpan currentDelay)
-        {
-            checked
-            {
-                if (currentDelay < settings.Delay)
-                {
-                    return settings.Delay;
-                }
-                TimeSpan next = new TimeSpan((long)(currentDelay.Ticks * settings.DelayMultiplier));
-                return next < settings.MaxDelay ? next : settings.MaxDelay;
-            }
-        }
-    }
-
     internal sealed class WatchStream
     {
         private static readonly HashSet<StatusCode> s_transientErrorStatusCodes = new HashSet<StatusCode>
