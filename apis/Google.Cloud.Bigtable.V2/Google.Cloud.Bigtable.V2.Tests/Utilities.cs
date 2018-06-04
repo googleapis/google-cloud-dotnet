@@ -36,7 +36,8 @@ namespace Google.Cloud.Bigtable.V2.Tests
         public static BigtableClient CreateMutateRowsMockClient(
             MutateRowsRequest initialRequest,
             MutateRowsResponse.Types.Entry[] entriesForInitialStream,
-            MutateRowsResponse.Types.Entry[][] entriesForRetryStreams = null) =>
+            MutateRowsResponse.Types.Entry[][] entriesForRetryStreams = null,
+            BigtableServiceApiSettings settings = null) =>
             CreateMockClientForStreamingRpc(
                 initialRequest,
                 c => c.MutateRows(
@@ -55,13 +56,15 @@ namespace Google.Cloud.Bigtable.V2.Tests
                     {
                         throw new InvalidOperationException("The specified request is invalid for the mock stream about to be returned.");
                     }
-                });
+                },
+                settings);
 
         public static BigtableClient CreateReadRowsMockClient(
             ReadRowsRequest initialRequest,
             ReadRowsResponse[] initialStreamResponse,
             ReadRowsResponse[][] responsesForRetryStreams = null,
-            bool errorAtEndOfLastStream = false)
+            bool errorAtEndOfLastStream = false,
+            BigtableServiceApiSettings settings = null)
         {
             MockReadRowsStream lastStream = null;
             var result = CreateMockClientForStreamingRpc(
@@ -86,7 +89,8 @@ namespace Google.Cloud.Bigtable.V2.Tests
                     {
                         throw new InvalidOperationException("The specified request is invalid for the mock stream about to be returned.");
                     }
-                });
+                },
+                settings);
 
             // All but the last stream should end with an RpcException which permits retrying with the
             // default RetrySettings so the higher level ReadRowsStream keeps retrying
@@ -149,8 +153,9 @@ namespace Google.Cloud.Bigtable.V2.Tests
             TStreamItems[] entriesForInitialStream,
             TStreamItems[][] entriesForRetryStreams,
             Func<TStreamItems[], TMockStream> itemsToStream,
-            Action<TRequest, TMockStream> validator)
-            where TMockStream : TStream
+            Action<TRequest, TMockStream> validator,
+            BigtableServiceApiSettings settings)
+            where TMockStream : class, TStream
         {
             var mock = new Mock<BigtableServiceApiClient>();
 
@@ -160,25 +165,31 @@ namespace Google.Cloud.Bigtable.V2.Tests
             var initialResponse = itemsToStream(entriesForInitialStream);
 
             var retryStreams = entriesForRetryStreams != null
-                ? new Queue<TMockStream>(entriesForRetryStreams.Select(itemsToStream))
+                ? new Queue<TMockStream>(entriesForRetryStreams.Select(items => items == null ? null : itemsToStream(items)))
                 : new Queue<TMockStream>();
 
             mock.Setup(retrySetup).Returns<TRequest, CallSettings>((request, callSettings) =>
             {
                 Assert.NotEmpty(retryStreams);
                 var respose = retryStreams.Dequeue();
+                if (respose == null)
+                {
+                    throw new Grpc.Core.RpcException(
+                        new Grpc.Core.Status(Grpc.Core.StatusCode.Unavailable, "Unavailable"));
+                }
                 validator?.Invoke(request, respose);
                 return respose;
             });
 
             // Setup the initial response last so the catch-all setup doesn't overwrite it.
             // Check for reference equality to retry requests that happen to be a duplicate of the original don't match here.
-            mock.Setup(initialSetup).Returns<TRequest, CallSettings>((request, callSettings) => {
+            mock.Setup(initialSetup).Returns<TRequest, CallSettings>((request, callSettings) =>
+            {
                 validator?.Invoke(request, initialResponse);
                 return initialResponse;
             });
 
-            return new BigtableClientImpl(new[] { mock.Object }, appProfileId: null, underlyingClientSettings: null);
+            return new BigtableClientImpl(new[] { mock.Object }, appProfileId: null, underlyingClientSettings: settings);
         }
     }
 }

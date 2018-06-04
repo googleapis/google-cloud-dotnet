@@ -12,8 +12,10 @@
 // See the License for the specific language governing permissions and
 // limitations under the License.
 
+using Google.Api.Gax;
 using Google.Cloud.Bigtable.Common.V2;
 using Google.Protobuf;
+using Grpc.Core;
 using System;
 using System.Linq;
 using System.Threading.Tasks;
@@ -441,7 +443,87 @@ namespace Google.Cloud.Bigtable.V2.Tests
             Assert.Equal("value1", row.Families[0].Columns[0].Cells[0].Value.ToStringUtf8());
         }
 
-        // TODO: Test with a mock IClock to make sure we don't go over the total timeout when retrying
+        [Fact]
+        public async Task RetryingAfterTotalExpiration()
+        {
+            var settings = new BigtableServiceApiSettings();
+            // Don't allow for any time to retry.
+            settings.ReadRowsRetrySettings =
+                settings.ReadRowsRetrySettings.WithTotalExpiration(
+                    Expiration.FromTimeout(TimeSpan.Zero));
+
+            var request = new ReadRowsRequest
+            {
+                Rows = RowSet.FromRowKeys("a", "b", "c")
+            };
+            var client = Utilities.CreateReadRowsMockClient(
+                request,
+                initialStreamResponse: new[]
+                {
+                    new ReadRowsResponse
+                    {
+                        Chunks =
+                        {
+                            CreateChunk("a", "cf1", "column1", "value1", commitRow: true)
+                        }
+                    }
+                },
+                responsesForRetryStreams: new[]
+                {
+                    null, // A null entry will throw an Unavailable RpcException
+                    new []
+                    {
+                        new ReadRowsResponse
+                        {
+                            Chunks =
+                            {
+                                CreateChunk("b", "cf1", "column2", "value2", commitRow: true)
+                            }
+                        }
+                    }
+                },
+                settings: settings);
+
+            var exception = await Assert.ThrowsAsync<RpcException>(() => client.ReadRows(request).ToList());
+            Assert.Equal(StatusCode.Unavailable, exception.StatusCode);
+        }
+
+        [Fact]
+        public async Task RetryingBeforeTotalExpiration()
+        {
+            var request = new ReadRowsRequest
+            {
+                Rows = RowSet.FromRowKeys("a", "b", "c")
+            };
+            var client = Utilities.CreateReadRowsMockClient(
+                request,
+                initialStreamResponse: new[]
+                {
+                    new ReadRowsResponse
+                    {
+                        Chunks =
+                        {
+                            CreateChunk("a", "cf1", "column1", "value1", commitRow: true)
+                        }
+                    }
+                },
+                responsesForRetryStreams: new[]
+                {
+                    null, // A null entry will throw an Unavailable RpcException
+                    new []
+                    {
+                        new ReadRowsResponse
+                        {
+                            Chunks =
+                            {
+                                CreateChunk("b", "cf1", "column2", "value2", commitRow: true)
+                            }
+                        }
+                    }
+                });
+
+            await client.ReadRows(request).ToList();
+        }
 
         private static ReadRowsResponse.Types.CellChunk CreateChunk(
             BigtableByteString rowKey,
