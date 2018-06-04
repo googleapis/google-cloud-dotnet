@@ -51,7 +51,7 @@ namespace Google.Cloud.BigQuery.DataTransfer.V1
         /// <param name="locationName">The location resource name in string form. Must not be <c>null</c>.</param>
         /// <param name="result">When this method returns, the parsed <see cref="LocationName"/>,
         /// or <c>null</c> if parsing fails.</param>
-        /// <returns><c>true</c> if the name was parsed succssfully; <c>false</c> otherwise.</returns>
+        /// <returns><c>true</c> if the name was parsed successfully; <c>false</c> otherwise.</returns>
         public static bool TryParse(string locationName, out LocationName result)
         {
             gax::GaxPreconditions.CheckNotNull(locationName, nameof(locationName));
@@ -143,7 +143,7 @@ namespace Google.Cloud.BigQuery.DataTransfer.V1
         /// <param name="projectDataSourceName">The project_data_source resource name in string form. Must not be <c>null</c>.</param>
         /// <param name="result">When this method returns, the parsed <see cref="ProjectDataSourceName"/>,
         /// or <c>null</c> if parsing fails.</param>
-        /// <returns><c>true</c> if the name was parsed succssfully; <c>false</c> otherwise.</returns>
+        /// <returns><c>true</c> if the name was parsed successfully; <c>false</c> otherwise.</returns>
         public static bool TryParse(string projectDataSourceName, out ProjectDataSourceName result)
         {
             gax::GaxPreconditions.CheckNotNull(projectDataSourceName, nameof(projectDataSourceName));
@@ -235,7 +235,7 @@ namespace Google.Cloud.BigQuery.DataTransfer.V1
         /// <param name="locationDataSourceName">The location_data_source resource name in string form. Must not be <c>null</c>.</param>
         /// <param name="result">When this method returns, the parsed <see cref="LocationDataSourceName"/>,
         /// or <c>null</c> if parsing fails.</param>
-        /// <returns><c>true</c> if the name was parsed succssfully; <c>false</c> otherwise.</returns>
+        /// <returns><c>true</c> if the name was parsed successfully; <c>false</c> otherwise.</returns>
         public static bool TryParse(string locationDataSourceName, out LocationDataSourceName result)
         {
             gax::GaxPreconditions.CheckNotNull(locationDataSourceName, nameof(locationDataSourceName));
@@ -334,7 +334,7 @@ namespace Google.Cloud.BigQuery.DataTransfer.V1
         /// <param name="projectTransferConfigName">The project_transfer_config resource name in string form. Must not be <c>null</c>.</param>
         /// <param name="result">When this method returns, the parsed <see cref="ProjectTransferConfigName"/>,
         /// or <c>null</c> if parsing fails.</param>
-        /// <returns><c>true</c> if the name was parsed succssfully; <c>false</c> otherwise.</returns>
+        /// <returns><c>true</c> if the name was parsed successfully; <c>false</c> otherwise.</returns>
         public static bool TryParse(string projectTransferConfigName, out ProjectTransferConfigName result)
         {
             gax::GaxPreconditions.CheckNotNull(projectTransferConfigName, nameof(projectTransferConfigName));
@@ -426,7 +426,7 @@ namespace Google.Cloud.BigQuery.DataTransfer.V1
         /// <param name="locationTransferConfigName">The location_transfer_config resource name in string form. Must not be <c>null</c>.</param>
         /// <param name="result">When this method returns, the parsed <see cref="LocationTransferConfigName"/>,
         /// or <c>null</c> if parsing fails.</param>
-        /// <returns><c>true</c> if the name was parsed succssfully; <c>false</c> otherwise.</returns>
+        /// <returns><c>true</c> if the name was parsed successfully; <c>false</c> otherwise.</returns>
         public static bool TryParse(string locationTransferConfigName, out LocationTransferConfigName result)
         {
             gax::GaxPreconditions.CheckNotNull(locationTransferConfigName, nameof(locationTransferConfigName));
@@ -525,7 +525,7 @@ namespace Google.Cloud.BigQuery.DataTransfer.V1
         /// <param name="projectRunName">The project_run resource name in string form. Must not be <c>null</c>.</param>
         /// <param name="result">When this method returns, the parsed <see cref="ProjectRunName"/>,
         /// or <c>null</c> if parsing fails.</param>
-        /// <returns><c>true</c> if the name was parsed succssfully; <c>false</c> otherwise.</returns>
+        /// <returns><c>true</c> if the name was parsed successfully; <c>false</c> otherwise.</returns>
         public static bool TryParse(string projectRunName, out ProjectRunName result)
         {
             gax::GaxPreconditions.CheckNotNull(projectRunName, nameof(projectRunName));
@@ -624,7 +624,7 @@ namespace Google.Cloud.BigQuery.DataTransfer.V1
         /// <param name="locationRunName">The location_run resource name in string form. Must not be <c>null</c>.</param>
         /// <param name="result">When this method returns, the parsed <see cref="LocationRunName"/>,
         /// or <c>null</c> if parsing fails.</param>
-        /// <returns><c>true</c> if the name was parsed succssfully; <c>false</c> otherwise.</returns>
+        /// <returns><c>true</c> if the name was parsed successfully; <c>false</c> otherwise.</returns>
         public static bool TryParse(string locationRunName, out LocationRunName result)
         {
             gax::GaxPreconditions.CheckNotNull(locationRunName, nameof(locationRunName));

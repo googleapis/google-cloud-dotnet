@@ -51,7 +51,7 @@ namespace Google.Cloud.OsLogin.V1
         /// <param name="userName">The user resource name in string form. Must not be <c>null</c>.</param>
         /// <param name="result">When this method returns, the parsed <see cref="UserName"/>,
         /// or <c>null</c> if parsing fails.</param>
-        /// <returns><c>true</c> if the name was parsed succssfully; <c>false</c> otherwise.</returns>
+        /// <returns><c>true</c> if the name was parsed successfully; <c>false</c> otherwise.</returns>
         public static bool TryParse(string userName, out UserName result)
         {
             gax::GaxPreconditions.CheckNotNull(userName, nameof(userName));
@@ -136,7 +136,7 @@ namespace Google.Cloud.OsLogin.V1
         /// <param name="projectName">The project resource name in string form. Must not be <c>null</c>.</param>
         /// <param name="result">When this method returns, the parsed <see cref="ProjectName"/>,
         /// or <c>null</c> if parsing fails.</param>
-        /// <returns><c>true</c> if the name was parsed succssfully; <c>false</c> otherwise.</returns>
+        /// <returns><c>true</c> if the name was parsed successfully; <c>false</c> otherwise.</returns>
         public static bool TryParse(string projectName, out ProjectName result)
         {
             gax::GaxPreconditions.CheckNotNull(projectName, nameof(projectName));
@@ -228,7 +228,7 @@ namespace Google.Cloud.OsLogin.V1
         /// <param name="fingerprintName">The fingerprint resource name in string form. Must not be <c>null</c>.</param>
         /// <param name="result">When this method returns, the parsed <see cref="FingerprintName"/>,
         /// or <c>null</c> if parsing fails.</param>
-        /// <returns><c>true</c> if the name was parsed succssfully; <c>false</c> otherwise.</returns>
+        /// <returns><c>true</c> if the name was parsed successfully; <c>false</c> otherwise.</returns>
         public static bool TryParse(string fingerprintName, out FingerprintName result)
         {
             gax::GaxPreconditions.CheckNotNull(fingerprintName, nameof(fingerprintName));

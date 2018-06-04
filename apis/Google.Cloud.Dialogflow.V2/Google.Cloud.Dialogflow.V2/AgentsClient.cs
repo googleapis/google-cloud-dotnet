@@ -16,6 +16,7 @@
 
 using gax = Google.Api.Gax;
 using gaxgrpc = Google.Api.Gax.Grpc;
+using gaxres = Google.Api.Gax.ResourceNames;
 using lro = Google.LongRunning;
 using pb = Google.Protobuf;
 using pbwkt = Google.Protobuf.WellKnownTypes;
@@ -550,7 +551,7 @@ namespace Google.Cloud.Dialogflow.V2
         /// A Task containing the RPC response.
         /// </returns>
         public virtual stt::Task<Agent> GetAgentAsync(
-            ProjectName parent,
+            gaxres::ProjectName parent,
             gaxgrpc::CallSettings callSettings = null) => GetAgentAsync(
                 new GetAgentRequest
                 {
@@ -572,7 +573,7 @@ namespace Google.Cloud.Dialogflow.V2
         /// A Task containing the RPC response.
         /// </returns>
         public virtual stt::Task<Agent> GetAgentAsync(
-            ProjectName parent,
+            gaxres::ProjectName parent,
             st::CancellationToken cancellationToken) => GetAgentAsync(
                 parent,
                 gaxgrpc::CallSettings.FromCancellationToken(cancellationToken));
@@ -591,7 +592,7 @@ namespace Google.Cloud.Dialogflow.V2
         /// The RPC response.
         /// </returns>
         public virtual Agent GetAgent(
-            ProjectName parent,
+            gaxres::ProjectName parent,
             gaxgrpc::CallSettings callSettings = null) => GetAgent(
                 new GetAgentRequest
                 {
@@ -683,7 +684,7 @@ namespace Google.Cloud.Dialogflow.V2
         /// A pageable asynchronous sequence of <see cref="Agent"/> resources.
         /// </returns>
         public virtual gax::PagedAsyncEnumerable<SearchAgentsResponse, Agent> SearchAgentsAsync(
-            ProjectName parent,
+            gaxres::ProjectName parent,
             string pageToken = null,
             int? pageSize = null,
             gaxgrpc::CallSettings callSettings = null) => SearchAgentsAsync(
@@ -723,7 +724,7 @@ namespace Google.Cloud.Dialogflow.V2
         /// A pageable sequence of <see cref="Agent"/> resources.
         /// </returns>
         public virtual gax::PagedEnumerable<SearchAgentsResponse, Agent> SearchAgents(
-            ProjectName parent,
+            gaxres::ProjectName parent,
             string pageToken = null,
             int? pageSize = null,
             gaxgrpc::CallSettings callSettings = null) => SearchAgents(
@@ -802,7 +803,7 @@ namespace Google.Cloud.Dialogflow.V2
         /// A Task containing the RPC response.
         /// </returns>
         public virtual stt::Task<lro::Operation<pbwkt::Empty, pbwkt::Struct>> TrainAgentAsync(
-            ProjectName parent,
+            gaxres::ProjectName parent,
             gaxgrpc::CallSettings callSettings = null) => TrainAgentAsync(
                 new TrainAgentRequest
                 {
@@ -827,7 +828,7 @@ namespace Google.Cloud.Dialogflow.V2
         /// A Task containing the RPC response.
         /// </returns>
         public virtual stt::Task<lro::Operation<pbwkt::Empty, pbwkt::Struct>> TrainAgentAsync(
-            ProjectName parent,
+            gaxres::ProjectName parent,
             st::CancellationToken cancellationToken) => TrainAgentAsync(
                 parent,
                 gaxgrpc::CallSettings.FromCancellationToken(cancellationToken));
@@ -849,7 +850,7 @@ namespace Google.Cloud.Dialogflow.V2
         /// The RPC response.
         /// </returns>
         public virtual lro::Operation<pbwkt::Empty, pbwkt::Struct> TrainAgent(
-            ProjectName parent,
+            gaxres::ProjectName parent,
             gaxgrpc::CallSettings callSettings = null) => TrainAgent(
                 new TrainAgentRequest
                 {
@@ -952,7 +953,7 @@ namespace Google.Cloud.Dialogflow.V2
         /// A Task containing the RPC response.
         /// </returns>
         public virtual stt::Task<lro::Operation<ExportAgentResponse, pbwkt::Struct>> ExportAgentAsync(
-            ProjectName parent,
+            gaxres::ProjectName parent,
             gaxgrpc::CallSettings callSettings = null) => ExportAgentAsync(
                 new ExportAgentRequest
                 {
@@ -977,7 +978,7 @@ namespace Google.Cloud.Dialogflow.V2
         /// A Task containing the RPC response.
         /// </returns>
         public virtual stt::Task<lro::Operation<ExportAgentResponse, pbwkt::Struct>> ExportAgentAsync(
-            ProjectName parent,
+            gaxres::ProjectName parent,
             st::CancellationToken cancellationToken) => ExportAgentAsync(
                 parent,
                 gaxgrpc::CallSettings.FromCancellationToken(cancellationToken));
@@ -999,7 +1000,7 @@ namespace Google.Cloud.Dialogflow.V2
         /// The RPC response.
         /// </returns>
         public virtual lro::Operation<ExportAgentResponse, pbwkt::Struct> ExportAgent(
-            ProjectName parent,
+            gaxres::ProjectName parent,
             gaxgrpc::CallSettings callSettings = null) => ExportAgent(
                 new ExportAgentRequest
                 {

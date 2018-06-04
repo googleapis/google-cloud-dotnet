@@ -53,7 +53,7 @@ namespace Google.Cloud.Bigtable.Admin.V2
         /// <param name="instanceName">The instance resource name in string form. Must not be <c>null</c>.</param>
         /// <param name="result">When this method returns, the parsed <see cref="InstanceName"/>,
         /// or <c>null</c> if parsing fails.</param>
-        /// <returns><c>true</c> if the name was parsed succssfully; <c>false</c> otherwise.</returns>
+        /// <returns><c>true</c> if the name was parsed successfully; <c>false</c> otherwise.</returns>
         public static bool TryParse(string instanceName, out InstanceName result)
         {
             gax::GaxPreconditions.CheckNotNull(instanceName, nameof(instanceName));
@@ -145,7 +145,7 @@ namespace Google.Cloud.Bigtable.Admin.V2
         /// <param name="appProfileName">The app_profile resource name in string form. Must not be <c>null</c>.</param>
         /// <param name="result">When this method returns, the parsed <see cref="AppProfileName"/>,
         /// or <c>null</c> if parsing fails.</param>
-        /// <returns><c>true</c> if the name was parsed succssfully; <c>false</c> otherwise.</returns>
+        /// <returns><c>true</c> if the name was parsed successfully; <c>false</c> otherwise.</returns>
         public static bool TryParse(string appProfileName, out AppProfileName result)
         {
             gax::GaxPreconditions.CheckNotNull(appProfileName, nameof(appProfileName));
@@ -244,7 +244,7 @@ namespace Google.Cloud.Bigtable.Admin.V2
         /// <param name="clusterName">The cluster resource name in string form. Must not be <c>null</c>.</param>
         /// <param name="result">When this method returns, the parsed <see cref="ClusterName"/>,
         /// or <c>null</c> if parsing fails.</param>
-        /// <returns><c>true</c> if the name was parsed succssfully; <c>false</c> otherwise.</returns>
+        /// <returns><c>true</c> if the name was parsed successfully; <c>false</c> otherwise.</returns>
         public static bool TryParse(string clusterName, out ClusterName result)
         {
             gax::GaxPreconditions.CheckNotNull(clusterName, nameof(clusterName));
@@ -343,7 +343,7 @@ namespace Google.Cloud.Bigtable.Admin.V2
         /// <param name="locationName">The location resource name in string form. Must not be <c>null</c>.</param>
         /// <param name="result">When this method returns, the parsed <see cref="LocationName"/>,
         /// or <c>null</c> if parsing fails.</param>
-        /// <returns><c>true</c> if the name was parsed succssfully; <c>false</c> otherwise.</returns>
+        /// <returns><c>true</c> if the name was parsed successfully; <c>false</c> otherwise.</returns>
         public static bool TryParse(string locationName, out LocationName result)
         {
             gax::GaxPreconditions.CheckNotNull(locationName, nameof(locationName));
@@ -435,7 +435,7 @@ namespace Google.Cloud.Bigtable.Admin.V2
         /// <param name="snapshotName">The snapshot resource name in string form. Must not be <c>null</c>.</param>
         /// <param name="result">When this method returns, the parsed <see cref="SnapshotName"/>,
         /// or <c>null</c> if parsing fails.</param>
-        /// <returns><c>true</c> if the name was parsed succssfully; <c>false</c> otherwise.</returns>
+        /// <returns><c>true</c> if the name was parsed successfully; <c>false</c> otherwise.</returns>
         public static bool TryParse(string snapshotName, out SnapshotName result)
         {
             gax::GaxPreconditions.CheckNotNull(snapshotName, nameof(snapshotName));
