@@ -27,12 +27,22 @@ namespace Google.Cloud.BigQuery.V2
         /// </summary>
         /// <param name="expiration">The expiration duration for each partition, if any.</param>
         /// <returns>A <see cref="TimePartitioning"/> representing a daily partitioning.</returns>
-        public static TimePartitioning CreateDailyPartitioning(TimeSpan? expiration)
+        public static TimePartitioning CreateDailyPartitioning(TimeSpan? expiration) =>
+            CreateDailyPartitioning(expiration, null);
+
+        /// <summary>
+        /// Returns a daily partitioning scheme with an optional per-partition expiration, and a field name.
+        /// </summary>
+        /// <param name="expiration">The expiration duration for each partition, if any.</param>
+        /// <param name="field">The field name to partition by, if any. If this is null, the table will be
+        /// partitioned by a pseudo-column called _PARTITIONTIME.</param>
+        /// <returns>A <see cref="TimePartitioning"/> representing a daily partitioning.</returns>
+        public static TimePartitioning CreateDailyPartitioning(TimeSpan? expiration, string field)
         {
-            var ret = new TimePartitioning { Type = "DAY" };
+            var ret = new TimePartitioning { Type = "DAY", Field = field };
             if (expiration != null)
             {
-                ret.ExpirationMs = (long) expiration.Value.TotalMilliseconds;
+                ret.ExpirationMs = (long)expiration.Value.TotalMilliseconds;
             }
             return ret;
         }
