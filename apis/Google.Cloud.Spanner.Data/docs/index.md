@@ -33,7 +33,7 @@ Cloud Spanner supports a limited DataAdapter that provides basic CRUD operations
 Create a SpannerDataAdapter with the target table and its primary keys.  You may replace any
 commands provided by SpannerDataAdapter with your own custom commands.
 
-[!code-cs[](obj/snippets/Google.Cloud.Spanner.Data.SpannerConnection.txt#DataAdapterAsync)]
+[!code-cs[](obj/snippets/Google.Cloud.Spanner.Data.SpannerConnection.txt#DataAdapter)]
 
 ## Inserting Data
 

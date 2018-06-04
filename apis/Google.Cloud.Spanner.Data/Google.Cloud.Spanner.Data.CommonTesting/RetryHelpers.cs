@@ -15,7 +15,7 @@
 using System;
 using System.Threading.Tasks;
 
-namespace Google.Cloud.Spanner.Data.IntegrationTests
+namespace Google.Cloud.Spanner.Data.CommonTesting
 {
     /// <summary>
     /// Helper methods to provide *very* simplistic retry behavior:
@@ -23,25 +23,25 @@ namespace Google.Cloud.Spanner.Data.IntegrationTests
     /// - A single retry
     /// - Only if the error code is "aborted"
     /// 
-    /// This is enough to make the integration tests significantly more stable.
+    /// This is enough to make the snippet/integration tests significantly more stable.
     /// </summary>
-    internal static class RetryHelpers
+    public static class RetryHelpers
     {
         /// <summary>
         /// Executes a single command, retrying once if the first attempt is aborted.
         /// Only for use in "one-shot" commands (not in a transaction).
-        internal static Task<int> ExecuteNonQueryAsyncWithRetry(this SpannerCommand command) =>
+        public static Task<int> ExecuteNonQueryAsyncWithRetry(this SpannerCommand command) =>
             ExecuteWithRetryAsync(() => command.ExecuteNonQueryAsync());
 
         /// <summary>
         /// Executes the given action, retrying once if the first attempt is aborted.
         /// </summary>
-        internal static void RetryOnce(Action action) => ExecuteWithRetry(() => { action(); return 0; });
+        public static void RetryOnce(Action action) => ExecuteWithRetry(() => { action(); return 0; });
 
         /// <summary>
         /// Executes the given asynchronous action, retrying once if the first attempt is aborted.
         /// </summary>
-        internal static Task RetryOnceAsync(Func<Task> action) => ExecuteWithRetryAsync(async () => { await action(); return 0; });
+        public static Task RetryOnceAsync(Func<Task> action) => ExecuteWithRetryAsync(async () => { await action(); return 0; });
 
         private static T ExecuteWithRetry<T>(Func<T> func)
         {

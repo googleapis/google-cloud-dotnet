@@ -26,4 +26,7 @@
   <ItemGroup Condition="'$(TargetFramework)' == 'net452'">
     <Reference Include="System.Transactions" />
   </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\Google.Cloud.Spanner.Data.CommonTesting\Google.Cloud.Spanner.Data.CommonTesting.csproj" />
+  </ItemGroup>
 </Project>

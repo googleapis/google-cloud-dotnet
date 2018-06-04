@@ -19,6 +19,7 @@ using System.Data;
 using System.Threading.Tasks;
 using Microsoft.Practices.EnterpriseLibrary.TransientFaultHandling;
 using Xunit;
+using Google.Cloud.Spanner.Data.CommonTesting;
 
 #if !NETCOREAPP1_0
 using System.Transactions;
@@ -31,16 +32,20 @@ using System.Transactions;
 // - Con: There are fewer examples of building a connection string
 // - Unsure: Arguably a connection string should be built elsewhere and reused, rather than appearing in the
 //           code that creates a SpannerConnection. We need to see what actual usage tends towards.
+//
+// The table name of "TestTable" is hard-coded here, rather than taken from _fixture.TableName. This probably
+// leads to simpler snippets.
 
 namespace Google.Cloud.Spanner.Data.Snippets
 {
     [SnippetOutputCollector]
-    [Collection(nameof(SnippetFixture))]
+    [Collection(nameof(SampleTableFixture))]
+    [FileLoggerBeforeAfterTest]
     public class SpannerConnectionSnippets
     {
-        private readonly SnippetFixture _fixture;
+        private readonly SampleTableFixture _fixture;
 
-        public SpannerConnectionSnippets(SnippetFixture fixture) => _fixture = fixture;
+        public SpannerConnectionSnippets(SampleTableFixture fixture) => _fixture = fixture;
 
         [Fact]
         public void CreateConnection()
@@ -61,7 +66,7 @@ namespace Google.Cloud.Spanner.Data.Snippets
         [Fact]
         public async Task CreateDatabaseAsync()
         {
-            string databaseName = "t_" + Guid.NewGuid().ToString("N").Substring(0, 28);
+            string databaseName = $"{_fixture.Database.SpannerDatabase}_extra";
             string connectionString = new SpannerConnectionStringBuilder(_fixture.ConnectionString)
                 .WithDatabase(databaseName)
                 .ConnectionString;
@@ -93,48 +98,51 @@ namespace Google.Cloud.Spanner.Data.Snippets
         [Fact]
         public async Task InsertDataAsync()
         {
-            await _fixture.EnsureTestDatabaseAsync().ConfigureAwait(false);
             string connectionString = _fixture.ConnectionString;
 
-            // Sample: InsertDataAsync
-            using (var connection = new SpannerConnection(connectionString))
+            await RetryHelpers.RetryOnceAsync(async () =>
             {
-                await connection.OpenAsync();
+                // Sample: InsertDataAsync
+                using (var connection = new SpannerConnection(connectionString))
+                {
+                    await connection.OpenAsync();
 
-                var cmd = connection.CreateInsertCommand(
-                    "TestTable", new SpannerParameterCollection
-                    {
+                    var cmd = connection.CreateInsertCommand(
+                        "TestTable", new SpannerParameterCollection
+                        {
                         {"Key", SpannerDbType.String},
                         {"StringValue", SpannerDbType.String},
                         {"Int64Value", SpannerDbType.Int64}
-                    });
+                        });
 
-                // This executes 5 distinct transactions with one row written per transaction.
-                for (var i = 0; i < 5; i++)
-                {
-                    cmd.Parameters["Key"].Value = Guid.NewGuid().ToString("N");
-                    cmd.Parameters["StringValue"].Value = $"StringValue{i}";
-                    cmd.Parameters["Int64Value"].Value = i;
-                    int rowsAffected = await cmd.ExecuteNonQueryAsync();
-                    Console.WriteLine($"{rowsAffected} rows written...");
+                    // This executes 5 distinct transactions with one row written per transaction.
+                    for (var i = 0; i < 5; i++)
+                    {
+                        cmd.Parameters["Key"].Value = Guid.NewGuid().ToString("N");
+                        cmd.Parameters["StringValue"].Value = $"StringValue{i}";
+                        cmd.Parameters["Int64Value"].Value = i;
+                        int rowsAffected = await cmd.ExecuteNonQueryAsync();
+                        Console.WriteLine($"{rowsAffected} rows written...");
+                    }
                 }
-            }
-            // End sample
+                // End sample
+            });
         }        
 
         [Fact]
         public async Task CommitTimestampAsync()
         {
-            await _fixture.EnsureTestDatabaseAsync().ConfigureAwait(false);
             string connectionString = _fixture.ConnectionString;
 
-            // Sample: CommitTimestamp
-            using (SpannerConnection connection = new SpannerConnection(connectionString))
+            await RetryHelpers.RetryOnceAsync(async () =>
             {
-                await connection.OpenAsync();
+                // Sample: CommitTimestamp
+                using (SpannerConnection connection = new SpannerConnection(connectionString))
+                {
+                    await connection.OpenAsync();
 
-                string createTableStatement =
-                    @"CREATE TABLE UsersHistory (
+                    string createTableStatement =
+                        @"CREATE TABLE UsersHistory (
                         Id INT64 NOT NULL,
                         CommitTs TIMESTAMP NOT NULL OPTIONS
                             (allow_commit_timestamp=true),
@@ -143,85 +151,88 @@ namespace Google.Cloud.Spanner.Data.Snippets
                         Deleted BOOL NOT NULL,
                       ) PRIMARY KEY(Id, CommitTs DESC)";
 
-                await connection.CreateDdlCommand(createTableStatement).ExecuteNonQueryAsync();
+                    await connection.CreateDdlCommand(createTableStatement).ExecuteNonQueryAsync();
 
-                // Insert a first row
-                SpannerCommand cmd = connection.CreateInsertCommand("UsersHistory",
-                    new SpannerParameterCollection
-                    {
+                    // Insert a first row
+                    SpannerCommand cmd = connection.CreateInsertCommand("UsersHistory",
+                        new SpannerParameterCollection
+                        {
                         { "Id", SpannerDbType.Int64, 10L },
                         { "CommitTs", SpannerDbType.Timestamp, SpannerParameter.CommitTimestamp },
                         { "Name", SpannerDbType.String, "Demo 1" },
                         { "Deleted", SpannerDbType.Bool, false }
-                    });
-                int rowsAffected = await cmd.ExecuteNonQueryAsync();
+                        });
+                    int rowsAffected = await cmd.ExecuteNonQueryAsync();
 
-                // Insert a second row
-                cmd.Parameters["Id"].Value = 11L;
-                cmd.Parameters["Name"].Value = "Demo 2";
-                rowsAffected += await cmd.ExecuteNonQueryAsync();
-                Console.WriteLine($"{rowsAffected} rows written...");
+                    // Insert a second row
+                    cmd.Parameters["Id"].Value = 11L;
+                    cmd.Parameters["Name"].Value = "Demo 2";
+                    rowsAffected += await cmd.ExecuteNonQueryAsync();
+                    Console.WriteLine($"{rowsAffected} rows written...");
 
-                // Display the inserted values
-                SpannerCommand selectCmd = connection.CreateSelectCommand("SELECT * FROM UsersHistory");
-                using (SpannerDataReader reader = await selectCmd.ExecuteReaderAsync())
-                {
-                    while (await reader.ReadAsync())
+                    // Display the inserted values
+                    SpannerCommand selectCmd = connection.CreateSelectCommand("SELECT * FROM UsersHistory");
+                    using (SpannerDataReader reader = await selectCmd.ExecuteReaderAsync())
                     {
-                        long id = reader.GetFieldValue<long>("Id");
-                        string name = reader.GetFieldValue<string>("Name");
-                        DateTime timestamp = reader.GetFieldValue<DateTime>("CommitTs");
-                        Console.WriteLine($"{id}: {name} - {timestamp:HH:mm:ss.ffffff}");
+                        while (await reader.ReadAsync())
+                        {
+                            long id = reader.GetFieldValue<long>("Id");
+                            string name = reader.GetFieldValue<string>("Name");
+                            DateTime timestamp = reader.GetFieldValue<DateTime>("CommitTs");
+                            Console.WriteLine($"{id}: {name} - {timestamp:HH:mm:ss.ffffff}");
+                        }
                     }
                 }
-            }
-            // End sample
+                // End sample
+            });
         }
 
         [Fact]
         public async Task ReadUpdateDeleteAsync()
         {
-            await _fixture.EnsureTestDatabaseAsync().ConfigureAwait(false);
             string connectionString = _fixture.ConnectionString;
 
-            // Sample: ReadUpdateDeleteAsync
-            // Additional: CreateUpdateCommand
-            // Additional: CreateDeleteCommand
-            // Additional: CreateSelectCommand
-            using (var connection = new SpannerConnection(connectionString))
+            await RetryHelpers.RetryOnceAsync(async () =>
             {
-                await connection.OpenAsync();
-
-                // Read the first two keys in the database.
-                var keys = new List<string>();
-                var selectCmd = connection.CreateSelectCommand("SELECT * FROM TestTable");
-                using (var reader = await selectCmd.ExecuteReaderAsync())
+                // Sample: ReadUpdateDeleteAsync
+                // Additional: CreateUpdateCommand
+                // Additional: CreateDeleteCommand
+                // Additional: CreateSelectCommand
+                using (var connection = new SpannerConnection(connectionString))
                 {
-                    while (keys.Count < 3 && await reader.ReadAsync())
-                    {
-                        keys.Add(reader.GetFieldValue<string>("Key"));
-                    }
-                }
+                    await connection.OpenAsync();
 
-                // Update the Int64Value of keys[0]
-                // Include the primary key and update columns.
-                var updateCmd = connection.CreateUpdateCommand(
-                    "TestTable", new SpannerParameterCollection
+                    // Read the first two keys in the database.
+                    var keys = new List<string>();
+                    var selectCmd = connection.CreateSelectCommand("SELECT * FROM TestTable");
+                    using (var reader = await selectCmd.ExecuteReaderAsync())
                     {
+                        while (keys.Count < 3 && await reader.ReadAsync())
+                        {
+                            keys.Add(reader.GetFieldValue<string>("Key"));
+                        }
+                    }
+
+                    // Update the Int64Value of keys[0]
+                    // Include the primary key and update columns.
+                    var updateCmd = connection.CreateUpdateCommand(
+                        "TestTable", new SpannerParameterCollection
+                        {
                         {"Key", SpannerDbType.String, keys[0]},
                         {"Int64Value", SpannerDbType.Int64, 0L}
-                    });
-                await updateCmd.ExecuteNonQueryAsync();
+                        });
+                    await updateCmd.ExecuteNonQueryAsync();
 
-                // Delete row for keys[1]
-                var deleteCmd = connection.CreateDeleteCommand(
-                    "TestTable", new SpannerParameterCollection
-                    {
+                    // Delete row for keys[1]
+                    var deleteCmd = connection.CreateDeleteCommand(
+                        "TestTable", new SpannerParameterCollection
+                        {
                         {"Key", SpannerDbType.String, keys[1]}
-                    });
-                await deleteCmd.ExecuteNonQueryAsync();
-            }
-            // End sample
+                        });
+                    await deleteCmd.ExecuteNonQueryAsync();
+                }
+                // End sample
+            });
         }
 
         // Sample: SpannerFaultDetectionStrategy
@@ -235,7 +246,6 @@ namespace Google.Cloud.Spanner.Data.Snippets
         [Fact]
         public async Task TransactionAsync()
         {
-            await _fixture.EnsureTestDatabaseAsync().ConfigureAwait(false);
             string connectionString = _fixture.ConnectionString;
 
             // Sample: TransactionAsync
@@ -281,7 +291,6 @@ namespace Google.Cloud.Spanner.Data.Snippets
         [Fact]
         public async Task TransactionScopeAsync()
         {
-            await _fixture.EnsureTestDatabaseAsync().ConfigureAwait(false);
             string connectionString = _fixture.ConnectionString;
 
             // Sample: TransactionScopeAsync
@@ -323,30 +332,32 @@ namespace Google.Cloud.Spanner.Data.Snippets
         }
 
         [Fact]
-        public async Task DataAdapterAsync()
+        public void DataAdapter()
         {
-            await _fixture.EnsureTestDatabaseAsync().ConfigureAwait(false);
             string connectionString = _fixture.ConnectionString;
 
-            // Sample: DataAdapterAsync
-            using (var connection = new SpannerConnection(connectionString))
+            RetryHelpers.RetryOnce(() =>
             {
-                var untypedDataSet = new DataSet();
+                // Sample: DataAdapter
+                using (var connection = new SpannerConnection(connectionString))
+                {
+                    var untypedDataSet = new DataSet();
 
-                // Provide the name of the Cloud Spanner table and primary key column names.
-                var adapter = new SpannerDataAdapter(connection, "TestTable", "Key");
-                adapter.Fill(untypedDataSet);
+                    // Provide the name of the Cloud Spanner table and primary key column names.
+                    var adapter = new SpannerDataAdapter(connection, "TestTable", "Key");
+                    adapter.Fill(untypedDataSet);
 
-                // Insert a row
-                var row = untypedDataSet.Tables[0].NewRow();
-                row["Key"] = Guid.NewGuid().ToString("N");
-                row["StringValue"] = "New String Value";
-                row["Int64Value"] = 0L;
-                untypedDataSet.Tables[0].Rows.Add(row);
+                    // Insert a row
+                    var row = untypedDataSet.Tables[0].NewRow();
+                    row["Key"] = Guid.NewGuid().ToString("N");
+                    row["StringValue"] = "New String Value";
+                    row["Int64Value"] = 0L;
+                    untypedDataSet.Tables[0].Rows.Add(row);
 
-                adapter.Update(untypedDataSet.Tables[0]);
-            }
-            // End sample
+                    adapter.Update(untypedDataSet.Tables[0]);
+                }
+                // End sample
+            });
         }
 #endif
     }
