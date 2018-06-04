@@ -219,16 +219,8 @@ namespace Google.Cloud.Bigtable.V2.Tests
                 },
                 settings: settings);
 
-            bool exceptionOccurred = false;
-            try
-            {
-                await client.MutateRowsAsync(request);
-            }
-            catch (RpcException ex) when (ex.StatusCode == StatusCode.DeadlineExceeded)
-            {
-                exceptionOccurred = true;
-            }
-            Assert.True(exceptionOccurred);
+            var exception = await Assert.ThrowsAsync<RpcException>(() => client.MutateRowsAsync(request));
+            Assert.Equal(StatusCode.DeadlineExceeded, exception.StatusCode);
         }
 
         [Fact]
@@ -258,16 +250,7 @@ namespace Google.Cloud.Bigtable.V2.Tests
                     new[] { Utilities.CreateMutateRowsResponseEntry(0, Code.Ok) }
                 });
 
-            bool exceptionOccurred = false;
-            try
-            {
-                await client.MutateRowsAsync(request);
-            }
-            catch (RpcException ex) when (ex.StatusCode == StatusCode.DeadlineExceeded)
-            {
-                exceptionOccurred = true;
-            }
-            Assert.False(exceptionOccurred);
+            await client.MutateRowsAsync(request);
         }
     }
 }

@@ -484,16 +484,8 @@ namespace Google.Cloud.Bigtable.V2.Tests
                 },
                 settings: settings);
 
-            bool exceptionOccurred = false;
-            try
-            {
-                await client.ReadRows(request).ToList();
-            }
-            catch (RpcException ex) when (ex.StatusCode == StatusCode.Unavailable)
-            {
-                exceptionOccurred = true;
-            }
-            Assert.True(exceptionOccurred);
+            var exception = await Assert.ThrowsAsync<RpcException>(() => client.ReadRows(request).ToList());
+            Assert.Equal(StatusCode.Unavailable, exception.StatusCode);
         }
 
         [Fact]
@@ -530,16 +522,7 @@ namespace Google.Cloud.Bigtable.V2.Tests
                     }
                 });
 
-            bool exceptionOccurred = false;
-            try
-            {
-                await client.ReadRows(request).ToList();
-            }
-            catch (RpcException ex) when (ex.StatusCode == StatusCode.Unavailable)
-            {
-                exceptionOccurred = true;
-            }
-            Assert.False(exceptionOccurred);
+            await client.ReadRows(request).ToList();
         }
 
         private static ReadRowsResponse.Types.CellChunk CreateChunk(
