@@ -30,13 +30,9 @@ namespace Google.Cloud.Spanner.Data.CommonTesting
             TableName = tableName;
             if (Database.Fresh)
             {
-                FileLogger.Log($"Creating table {TableName}");
                 CreateTable();
             }
-            FileLogger.Log($"Populating table {TableName}");
             PopulateTable(Database.Fresh);
-            FileLogger.Log($"Table populated");
-
         }
 
         /// <summary>
