@@ -148,159 +148,204 @@ namespace Google.Cloud.PubSub.V1.Tests.Tasks
 
         private class TestTaskScheduler : TaskScheduler, IDisposable
         {
-            public TestTaskScheduler(int threadCount, SimpleThreadPool threadPool = null)
-            {
-                threadPool = threadPool ?? CachingSimpleThreadPool.Instance;
-                MaximumConcurrencyLevel = threadCount;
-                lock (_lock)
-                {
-                    _activeThreadCount = threadCount;
-                }
-                _events = Enumerable.Range(0, threadCount).Select(_ => new AutoResetEvent(false)).ToArray();
-                _runEvent = new AutoResetEvent(false);
-                _threads = Enumerable.Range(0, threadCount).Select(i => threadPool.Start(() => RunThread(_events[i]))).ToArray();
-            }
+            [ThreadStatic]
+            private static bool t_isExecutionThread;
+            [ThreadStatic]
+            private static int t_threadIndex;
 
             private readonly object _lock = new object();
-            private readonly AutoResetEvent[] _events;
-            private readonly Task[] _threads;
-            private readonly AutoResetEvent _runEvent;
+            private readonly SimpleThreadPool _threadPool;
+            private readonly Task[] _threadCompletionTasks;
+            private readonly CancellationTokenSource _disposeCts;
+            private readonly CancellationToken _disposeToken;
+            private readonly AutoResetEvent _mayBeIdleEvent = new AutoResetEvent(false);
 
-            private readonly Queue<Task> _taskQueue = new Queue<Task>();
-            private readonly Dictionary<Task, Task> _waitingTasks = new Dictionary<Task, Task>(); // Key: Task that is waiting; Value: task that is being waited on
+            private readonly AutoResetEvent[] _threadEvents; // An event per thread, used to trigger threads to execute tasks.
+            private readonly Task[] _threadExecutingTasks; // Tasks currently being executed by threads.
+            private readonly Task[] _threadWaiting; // Contained tasks are the task being waited on.
+            private readonly Queue<int> _readyThreadIndexes = new Queue<int>(); // The thead indexes that are ready to execute new tasks.
+            private readonly LinkedList<Task> _taskQueue = new LinkedList<Task>(); // All tasks that need executing.
 
-            private int _activeThreadCount;
-            private bool _running;
-            private CancellationTokenSource _disposedCts = new CancellationTokenSource();
-
-            [ThreadStatic]
-            private static Task t_currentTask;
+            public TestTaskScheduler(int threadCount, SimpleThreadPool threadPool = null)
+            {
+                _disposeCts = new CancellationTokenSource();
+                _disposeToken = _disposeCts.Token;
+                MaximumConcurrencyLevel = threadCount;
+                _threadPool = threadPool ?? DefaultSimpleThreadPool.Instance;
+                _threadEvents = new AutoResetEvent[threadCount];
+                _threadCompletionTasks = new Task[threadCount];
+                _threadExecutingTasks = new Task[threadCount];
+                _threadWaiting = new Task[threadCount];
+                for (int i = 0; i < threadCount; i++)
+                {
+                    int threadIndex = i;
+                    _threadExecutingTasks[i] = null;
+                    _threadWaiting[i] = null;
+                    var ev = new AutoResetEvent(false);
+                    _threadEvents[i] = ev;
+                    _threadCompletionTasks[i] = _threadPool.Start(() => RunThread(threadIndex, ev));
+                    _readyThreadIndexes.Enqueue(i);
+                }
+            }
 
             public override int MaximumConcurrencyLevel { get; }
 
-            private void RunThread(AutoResetEvent ev)
+            private void RunThread(int threadIndex, AutoResetEvent ev)
             {
-                while (true)
+                t_isExecutionThread = true;
+                t_threadIndex = threadIndex;
+                try
                 {
-                    t_currentTask = null;
-                    lock (_lock)
-                    {
-                        _activeThreadCount -= 1;
-                    }
+                    var waiters = new[] { _disposeToken.WaitHandle, ev };
                     while (true)
                     {
-                        if (_disposedCts.IsCancellationRequested)
+                        var ready = WaitHandle.WaitAny(waiters);
+                        if (ready == 0)
                         {
-                            return;
+                            break;
                         }
+                        Task taskToExecute;
                         lock (_lock)
                         {
-                            if (_taskQueue.Count > 0 && _running)
-                            {
-                                t_currentTask = _taskQueue.Dequeue();
-                                _activeThreadCount += 1;
-                                break;
-                            }
+                            taskToExecute = _threadExecutingTasks[threadIndex];
                         }
-                        _runEvent.Set();
-                        ev.WaitOne();
+                        TryExecuteTask(taskToExecute);
+                        lock (_lock)
+                        {
+                            _threadExecutingTasks[threadIndex] = null;
+                            _readyThreadIndexes.Enqueue(threadIndex);
+                            if (_taskQueue.Count == 0)
+                            {
+                                _mayBeIdleEvent.Set();
+                            }
+                            MaybeExecuteNextTask();
+                        }
                     }
-                    TryExecuteTask(t_currentTask);
+                }
+                finally
+                {
+                    t_isExecutionThread = false;
+                    t_threadIndex = 0;
                 }
             }
 
-            protected override IEnumerable<Task> GetScheduledTasks()
+            private void MaybeExecuteNextTask()
             {
-                lock (_lock)
+                // Must be locked
+                if (_taskQueue.Count == 0 || _readyThreadIndexes.Count == 0)
                 {
-                    return _taskQueue.ToArray();
+                    return;
                 }
-            }
-
-            private void SetAllEvents()
-            {
-                foreach (var ev in _events)
-                {
-                    ev.Set();
-                }
+                var task = _taskQueue.First.Value;
+                _taskQueue.RemoveFirst();
+                var threadIndex = _readyThreadIndexes.Dequeue();
+                _threadExecutingTasks[threadIndex] = task;
+                _threadEvents[threadIndex].Set();
             }
 
             protected override void QueueTask(Task task)
             {
                 lock (_lock)
                 {
-                    _taskQueue.Enqueue(task);
+                    _taskQueue.AddLast(task);
+                    MaybeExecuteNextTask();
                 }
-                SetAllEvents();
+            }
+
+            protected override bool TryDequeue(Task task)
+            {
+                lock (_lock)
+                {
+                    return _taskQueue.Remove(task);
+                }
             }
 
             protected override bool TryExecuteTaskInline(Task task, bool taskWasPreviouslyQueued)
             {
-                lock (_lock)
+                if (!t_isExecutionThread)
                 {
-                    _taskQueue.Enqueue(task);
+                    return false;
                 }
-                SetAllEvents();
-                return false;
+                if (taskWasPreviouslyQueued)
+                {
+                    TryDequeue(task);
+                }
+                return TryExecuteTask(task);
+            }
+
+            protected override IEnumerable<Task> GetScheduledTasks()
+            {
+                bool lockTaken = false;
+                try
+                {
+                    Monitor.TryEnter(_lock, ref lockTaken);
+                    if (lockTaken)
+                    {
+                        return _taskQueue.ToArray();
+                    }
+                    else
+                    {
+                        throw new NotSupportedException();
+                    }
+                }
+                finally
+                {
+                    if (lockTaken)
+                    {
+                        Monitor.Exit(_lock);
+                    }
+                }
             }
 
             public void Wait(Task task)
             {
-                // Task is in a blocking wait. Track tasks being blocked on.
+                if (!t_isExecutionThread)
+                {
+                    throw new InvalidOperationException("A non-execution thread should not be Wait()ing");
+                }
                 lock (_lock)
                 {
-                    _waitingTasks.Add(t_currentTask, task);
+                    _threadWaiting[t_threadIndex] = task;
                 }
-                _runEvent.Set();
+                _mayBeIdleEvent.Set();
                 try
                 {
-                    task.Wait(_disposedCts.Token);
+                    task.Wait(_disposeToken);
                 }
                 finally
                 {
                     lock (_lock)
                     {
-                        _waitingTasks.Remove(t_currentTask);
+                        _threadWaiting[t_threadIndex] = null;
                     }
                 }
             }
 
+            // Return true if all threads are idle, false if cancelled.
             public bool RunUntilIdle(CancellationToken ct)
             {
-                lock (_lock)
-                {
-                    _running = true;
-                }
-                SetAllEvents(); // Get threads started
+                _mayBeIdleEvent.Set(); // In case this is called with no tasks in the queue.
+                var waiters = new[] { _disposeToken.WaitHandle, ct.WaitHandle, _mayBeIdleEvent };
                 while (true)
                 {
-                    bool moreTodo;
+                    int ready = WaitHandle.WaitAny(waiters);
+                    if (ready == 0 || ready == 1)
+                    {
+                        return false;
+                    }
                     lock (_lock)
                     {
-                        moreTodo = _taskQueue.Count + _activeThreadCount - _waitingTasks.Count > 0 || _waitingTasks.Values.Any(x => x.IsCompleted);
-                    }
-                    if (!moreTodo)
-                    {
-                        lock (_lock)
+                        int waitingCount = _threadWaiting.Count(x => x != null);
+                        bool anyWaitsCompleted = _threadWaiting.Any(x => x != null && x.IsCompleted);
+                        if (waitingCount == MaximumConcurrencyLevel && !anyWaitsCompleted)
                         {
-                            _running = false;
+                            throw new SchedulerException($"All {waitingCount} threads blocking. This code requires more threads in the thread-pool.");
                         }
-                        return true; // All Tasks run, now idle
-                    }
-                    WaitHandle.WaitAny(new[] { ct.WaitHandle, _runEvent });
-                    lock (_lock)
-                    {
-                        if (ct.IsCancellationRequested)
+                        int activeCount = _threadExecutingTasks.Count(x => x != null);
+                        if (_taskQueue.Count == 0 && activeCount == waitingCount && !anyWaitsCompleted)
                         {
-                            _taskQueue.Clear();
-                            _running = false;
-                            SetAllEvents();
-                            return false;
-                        }
-                        if (_waitingTasks.Count == _threads.Length)
-                        {
-                            _running = false;
-                            throw new SchedulerException($"All {_threads.Length} threads blocking. This code requires more threads in the thread-pool.");
+                            // Everything idle.
+                            return true;
                         }
                     }
                 }
@@ -308,9 +353,8 @@ namespace Google.Cloud.PubSub.V1.Tests.Tasks
 
             public void Dispose()
             {
-                _disposedCts.Cancel();
-                SetAllEvents();
-                Task.WaitAll(_threads);
+                _disposeCts.Cancel();
+                Task.WaitAll(_threadCompletionTasks);
             }
         }
 
@@ -325,8 +369,10 @@ namespace Google.Cloud.PubSub.V1.Tests.Tasks
 
             public override TaskScheduler TaskScheduler => _scheduler._taskScheduler;
 
-            public override async Task<T> Run<T>(Func<Task<T>> function) =>
-                await ConfigureAwait(await ConfigureAwait(Task<Task<T>>.Factory.StartNew(function, CancellationToken.None, TaskCreationOptions.None, _scheduler._taskScheduler)));
+            public override async Task<T> Run<T>(Func<Task<T>> function)
+            {
+                return await ConfigureAwait(await ConfigureAwait(Task.Factory.StartNew(function, CancellationToken.None, TaskCreationOptions.None, _scheduler._taskScheduler)));
+            }
 
             public override void Wait(Task task)
             {
@@ -403,6 +449,7 @@ namespace Google.Cloud.PubSub.V1.Tests.Tasks
             TaskHelper = new TestTaskHelper(this);
         }
 
+        private readonly Task _completedTask = Task.FromResult(0);
         private readonly object _lock = new object();
         private readonly LinkedList<DelayTask> _delays = new LinkedList<DelayTask>();
         private readonly TestTaskScheduler _taskScheduler;
@@ -415,6 +462,10 @@ namespace Google.Cloud.PubSub.V1.Tests.Tasks
 
         public Task Delay(TimeSpan delay, CancellationToken cancellationToken)
         {
+            if (delay <= TimeSpan.Zero)
+            {
+                return _completedTask;
+            }
             lock (_lock)
             {
                 var delayTask = new DelayTask(Clock.GetCurrentDateTimeUtc() + delay, cancellationToken);
@@ -438,7 +489,7 @@ namespace Google.Cloud.PubSub.V1.Tests.Tasks
         public void Run(Action action) => Run(() =>
         {
             action();
-            return Task.FromResult(0);
+            return _completedTask;
         });
 
         public void Run(Func<Task> taskProvider) => Run(async () =>
@@ -450,8 +501,8 @@ namespace Google.Cloud.PubSub.V1.Tests.Tasks
         public T Run<T>(Func<Task<T>> taskProvider)
         {
             var simulatedTimeout = Clock.GetCurrentDateTimeUtc() + TimeSpan.FromHours(24);
-            var realCts = new CancellationTokenSource(TimeSpan.FromSeconds(20));
-            Task<Task<T>> mainTask = Task<Task<T>>.Factory.StartNew(taskProvider, CancellationToken.None, TaskCreationOptions.None, _taskScheduler);
+            var realCts = new CancellationTokenSource(TimeSpan.FromSeconds(10));
+            var mainTask = TaskHelper.Run(taskProvider);
             while (true)
             {
                 // Run all tasks
@@ -462,20 +513,10 @@ namespace Google.Cloud.PubSub.V1.Tests.Tasks
                 }
                 if (mainTask.IsCompleted)
                 {
-                    if (mainTask.Exception != null)
-                    {
-                        throw mainTask.Exception;
-                    }
-                    if (mainTask.Result.IsCompleted)
-                    {
-                        if (mainTask.Result.Exception != null)
-                        {
-                            throw mainTask.Result.Exception;
-                        }
-                        return mainTask.Result.Result;
-                    }
+                    return mainTask.Result;
                 }
                 // Cancel Tasks, or move to next clock time
+                var tasksToCancel = new List<TaskCompletionSource<int>>();
                 var tasksToComplete = new List<TaskCompletionSource<int>>();
                 lock (_lock)
                 {
@@ -483,20 +524,18 @@ namespace Google.Cloud.PubSub.V1.Tests.Tasks
                     {
                         throw new SchedulerException("Inconsistent state, delay queue should have content. This is probably caused by a misconfigured await.");
                     }
-                    bool anyCancelled = false;
                     var node = _delays.First;
                     while (node != null)
                     {
                         var next = node.Next;
                         if (node.Value.CancellationToken.IsCancellationRequested)
                         {
-                            node.Value.Tcs.SetCanceled();
+                            tasksToCancel.Add(node.Value.Tcs);
                             _delays.Remove(node);
-                            anyCancelled = true;
                         }
                         node = next;
                     }
-                    if (!anyCancelled)
+                    if (tasksToCancel.Count == 0)
                     {
                         var delayTask = _delays.First.Value;
                         while (_delays.Count > 0 && _delays.First.Value.Scheduled <= delayTask.Scheduled)
@@ -512,6 +551,10 @@ namespace Google.Cloud.PubSub.V1.Tests.Tasks
                     }
                 }
                 // Results must be set after the clock has changed, and outside the lock
+                foreach (var tcs in tasksToCancel)
+                {
+                    tcs.SetCanceled();
+                }
                 foreach (var tcs in tasksToComplete)
                 {
                     tcs.SetResult(0);

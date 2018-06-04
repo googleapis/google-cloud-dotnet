@@ -28,8 +28,8 @@ namespace Google.Cloud.PubSub.V1.Tests.Tasks
             _taskScheduler = taskScheduler;
         }
 
-        private Task _task;
-        private TaskScheduler _taskScheduler;
+        private readonly Task _task;
+        private readonly TaskScheduler _taskScheduler;
 
         public void OnCompleted(Action continuation) =>
             _task.ContinueWith(_ => continuation(), CancellationToken.None, TaskContinuationOptions.DenyChildAttach, _taskScheduler);
@@ -47,8 +47,8 @@ namespace Google.Cloud.PubSub.V1.Tests.Tasks
             _taskScheduler = taskScheduler;
         }
 
-        private Task<T> _task;
-        private TaskScheduler _taskScheduler;
+        private readonly Task<T> _task;
+        private readonly TaskScheduler _taskScheduler;
 
         public void OnCompleted(Action continuation) =>
             _task.ContinueWith(_ => continuation(), CancellationToken.None, TaskContinuationOptions.DenyChildAttach, _taskScheduler);
