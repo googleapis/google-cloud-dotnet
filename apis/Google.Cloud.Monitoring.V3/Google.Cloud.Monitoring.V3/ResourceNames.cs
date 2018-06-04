@@ -51,7 +51,7 @@ namespace Google.Cloud.Monitoring.V3
         /// <param name="projectName">The project resource name in string form. Must not be <c>null</c>.</param>
         /// <param name="result">When this method returns, the parsed <see cref="ProjectName"/>,
         /// or <c>null</c> if parsing fails.</param>
-        /// <returns><c>true</c> if the name was parsed succssfully; <c>false</c> otherwise.</returns>
+        /// <returns><c>true</c> if the name was parsed successfully; <c>false</c> otherwise.</returns>
         public static bool TryParse(string projectName, out ProjectName result)
         {
             gax::GaxPreconditions.CheckNotNull(projectName, nameof(projectName));
@@ -136,7 +136,7 @@ namespace Google.Cloud.Monitoring.V3
         /// <param name="alertPolicyName">The alert_policy resource name in string form. Must not be <c>null</c>.</param>
         /// <param name="result">When this method returns, the parsed <see cref="AlertPolicyName"/>,
         /// or <c>null</c> if parsing fails.</param>
-        /// <returns><c>true</c> if the name was parsed succssfully; <c>false</c> otherwise.</returns>
+        /// <returns><c>true</c> if the name was parsed successfully; <c>false</c> otherwise.</returns>
         public static bool TryParse(string alertPolicyName, out AlertPolicyName result)
         {
             gax::GaxPreconditions.CheckNotNull(alertPolicyName, nameof(alertPolicyName));
@@ -228,7 +228,7 @@ namespace Google.Cloud.Monitoring.V3
         /// <param name="alertPolicyConditionName">The alert_policy_condition resource name in string form. Must not be <c>null</c>.</param>
         /// <param name="result">When this method returns, the parsed <see cref="AlertPolicyConditionName"/>,
         /// or <c>null</c> if parsing fails.</param>
-        /// <returns><c>true</c> if the name was parsed succssfully; <c>false</c> otherwise.</returns>
+        /// <returns><c>true</c> if the name was parsed successfully; <c>false</c> otherwise.</returns>
         public static bool TryParse(string alertPolicyConditionName, out AlertPolicyConditionName result)
         {
             gax::GaxPreconditions.CheckNotNull(alertPolicyConditionName, nameof(alertPolicyConditionName));
@@ -327,7 +327,7 @@ namespace Google.Cloud.Monitoring.V3
         /// <param name="groupName">The group resource name in string form. Must not be <c>null</c>.</param>
         /// <param name="result">When this method returns, the parsed <see cref="GroupName"/>,
         /// or <c>null</c> if parsing fails.</param>
-        /// <returns><c>true</c> if the name was parsed succssfully; <c>false</c> otherwise.</returns>
+        /// <returns><c>true</c> if the name was parsed successfully; <c>false</c> otherwise.</returns>
         public static bool TryParse(string groupName, out GroupName result)
         {
             gax::GaxPreconditions.CheckNotNull(groupName, nameof(groupName));
@@ -419,7 +419,7 @@ namespace Google.Cloud.Monitoring.V3
         /// <param name="metricDescriptorName">The metric_descriptor resource name in string form. Must not be <c>null</c>.</param>
         /// <param name="result">When this method returns, the parsed <see cref="MetricDescriptorName"/>,
         /// or <c>null</c> if parsing fails.</param>
-        /// <returns><c>true</c> if the name was parsed succssfully; <c>false</c> otherwise.</returns>
+        /// <returns><c>true</c> if the name was parsed successfully; <c>false</c> otherwise.</returns>
         public static bool TryParse(string metricDescriptorName, out MetricDescriptorName result)
         {
             gax::GaxPreconditions.CheckNotNull(metricDescriptorName, nameof(metricDescriptorName));
@@ -511,7 +511,7 @@ namespace Google.Cloud.Monitoring.V3
         /// <param name="monitoredResourceDescriptorName">The monitored_resource_descriptor resource name in string form. Must not be <c>null</c>.</param>
         /// <param name="result">When this method returns, the parsed <see cref="MonitoredResourceDescriptorName"/>,
         /// or <c>null</c> if parsing fails.</param>
-        /// <returns><c>true</c> if the name was parsed succssfully; <c>false</c> otherwise.</returns>
+        /// <returns><c>true</c> if the name was parsed successfully; <c>false</c> otherwise.</returns>
         public static bool TryParse(string monitoredResourceDescriptorName, out MonitoredResourceDescriptorName result)
         {
             gax::GaxPreconditions.CheckNotNull(monitoredResourceDescriptorName, nameof(monitoredResourceDescriptorName));
@@ -603,7 +603,7 @@ namespace Google.Cloud.Monitoring.V3
         /// <param name="notificationChannelName">The notification_channel resource name in string form. Must not be <c>null</c>.</param>
         /// <param name="result">When this method returns, the parsed <see cref="NotificationChannelName"/>,
         /// or <c>null</c> if parsing fails.</param>
-        /// <returns><c>true</c> if the name was parsed succssfully; <c>false</c> otherwise.</returns>
+        /// <returns><c>true</c> if the name was parsed successfully; <c>false</c> otherwise.</returns>
         public static bool TryParse(string notificationChannelName, out NotificationChannelName result)
         {
             gax::GaxPreconditions.CheckNotNull(notificationChannelName, nameof(notificationChannelName));
@@ -695,7 +695,7 @@ namespace Google.Cloud.Monitoring.V3
         /// <param name="notificationChannelDescriptorName">The notification_channel_descriptor resource name in string form. Must not be <c>null</c>.</param>
         /// <param name="result">When this method returns, the parsed <see cref="NotificationChannelDescriptorName"/>,
         /// or <c>null</c> if parsing fails.</param>
-        /// <returns><c>true</c> if the name was parsed succssfully; <c>false</c> otherwise.</returns>
+        /// <returns><c>true</c> if the name was parsed successfully; <c>false</c> otherwise.</returns>
         public static bool TryParse(string notificationChannelDescriptorName, out NotificationChannelDescriptorName result)
         {
             gax::GaxPreconditions.CheckNotNull(notificationChannelDescriptorName, nameof(notificationChannelDescriptorName));
@@ -787,7 +787,7 @@ namespace Google.Cloud.Monitoring.V3
         /// <param name="uptimeCheckConfigName">The uptime_check_config resource name in string form. Must not be <c>null</c>.</param>
         /// <param name="result">When this method returns, the parsed <see cref="UptimeCheckConfigName"/>,
         /// or <c>null</c> if parsing fails.</param>
-        /// <returns><c>true</c> if the name was parsed succssfully; <c>false</c> otherwise.</returns>
+        /// <returns><c>true</c> if the name was parsed successfully; <c>false</c> otherwise.</returns>
         public static bool TryParse(string uptimeCheckConfigName, out UptimeCheckConfigName result)
         {
             gax::GaxPreconditions.CheckNotNull(uptimeCheckConfigName, nameof(uptimeCheckConfigName));

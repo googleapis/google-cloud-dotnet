@@ -51,7 +51,7 @@ namespace Google.Cloud.Logging.V2
         /// <param name="projectName">The project resource name in string form. Must not be <c>null</c>.</param>
         /// <param name="result">When this method returns, the parsed <see cref="ProjectName"/>,
         /// or <c>null</c> if parsing fails.</param>
-        /// <returns><c>true</c> if the name was parsed succssfully; <c>false</c> otherwise.</returns>
+        /// <returns><c>true</c> if the name was parsed successfully; <c>false</c> otherwise.</returns>
         public static bool TryParse(string projectName, out ProjectName result)
         {
             gax::GaxPreconditions.CheckNotNull(projectName, nameof(projectName));
@@ -136,7 +136,7 @@ namespace Google.Cloud.Logging.V2
         /// <param name="logName">The log resource name in string form. Must not be <c>null</c>.</param>
         /// <param name="result">When this method returns, the parsed <see cref="LogName"/>,
         /// or <c>null</c> if parsing fails.</param>
-        /// <returns><c>true</c> if the name was parsed succssfully; <c>false</c> otherwise.</returns>
+        /// <returns><c>true</c> if the name was parsed successfully; <c>false</c> otherwise.</returns>
         public static bool TryParse(string logName, out LogName result)
         {
             gax::GaxPreconditions.CheckNotNull(logName, nameof(logName));
@@ -228,7 +228,7 @@ namespace Google.Cloud.Logging.V2
         /// <param name="sinkName">The sink resource name in string form. Must not be <c>null</c>.</param>
         /// <param name="result">When this method returns, the parsed <see cref="SinkName"/>,
         /// or <c>null</c> if parsing fails.</param>
-        /// <returns><c>true</c> if the name was parsed succssfully; <c>false</c> otherwise.</returns>
+        /// <returns><c>true</c> if the name was parsed successfully; <c>false</c> otherwise.</returns>
         public static bool TryParse(string sinkName, out SinkName result)
         {
             gax::GaxPreconditions.CheckNotNull(sinkName, nameof(sinkName));
@@ -320,7 +320,7 @@ namespace Google.Cloud.Logging.V2
         /// <param name="metricName">The metric resource name in string form. Must not be <c>null</c>.</param>
         /// <param name="result">When this method returns, the parsed <see cref="MetricName"/>,
         /// or <c>null</c> if parsing fails.</param>
-        /// <returns><c>true</c> if the name was parsed succssfully; <c>false</c> otherwise.</returns>
+        /// <returns><c>true</c> if the name was parsed successfully; <c>false</c> otherwise.</returns>
         public static bool TryParse(string metricName, out MetricName result)
         {
             gax::GaxPreconditions.CheckNotNull(metricName, nameof(metricName));
@@ -412,7 +412,7 @@ namespace Google.Cloud.Logging.V2
         /// <param name="exclusionName">The exclusion resource name in string form. Must not be <c>null</c>.</param>
         /// <param name="result">When this method returns, the parsed <see cref="ExclusionName"/>,
         /// or <c>null</c> if parsing fails.</param>
-        /// <returns><c>true</c> if the name was parsed succssfully; <c>false</c> otherwise.</returns>
+        /// <returns><c>true</c> if the name was parsed successfully; <c>false</c> otherwise.</returns>
         public static bool TryParse(string exclusionName, out ExclusionName result)
         {
             gax::GaxPreconditions.CheckNotNull(exclusionName, nameof(exclusionName));
@@ -504,7 +504,7 @@ namespace Google.Cloud.Logging.V2
         /// <param name="organizationName">The organization resource name in string form. Must not be <c>null</c>.</param>
         /// <param name="result">When this method returns, the parsed <see cref="OrganizationName"/>,
         /// or <c>null</c> if parsing fails.</param>
-        /// <returns><c>true</c> if the name was parsed succssfully; <c>false</c> otherwise.</returns>
+        /// <returns><c>true</c> if the name was parsed successfully; <c>false</c> otherwise.</returns>
         public static bool TryParse(string organizationName, out OrganizationName result)
         {
             gax::GaxPreconditions.CheckNotNull(organizationName, nameof(organizationName));
@@ -589,7 +589,7 @@ namespace Google.Cloud.Logging.V2
         /// <param name="organizationLogName">The organization_log resource name in string form. Must not be <c>null</c>.</param>
         /// <param name="result">When this method returns, the parsed <see cref="OrganizationLogName"/>,
         /// or <c>null</c> if parsing fails.</param>
-        /// <returns><c>true</c> if the name was parsed succssfully; <c>false</c> otherwise.</returns>
+        /// <returns><c>true</c> if the name was parsed successfully; <c>false</c> otherwise.</returns>
         public static bool TryParse(string organizationLogName, out OrganizationLogName result)
         {
             gax::GaxPreconditions.CheckNotNull(organizationLogName, nameof(organizationLogName));
@@ -681,7 +681,7 @@ namespace Google.Cloud.Logging.V2
         /// <param name="organizationSinkName">The organization_sink resource name in string form. Must not be <c>null</c>.</param>
         /// <param name="result">When this method returns, the parsed <see cref="OrganizationSinkName"/>,
         /// or <c>null</c> if parsing fails.</param>
-        /// <returns><c>true</c> if the name was parsed succssfully; <c>false</c> otherwise.</returns>
+        /// <returns><c>true</c> if the name was parsed successfully; <c>false</c> otherwise.</returns>
         public static bool TryParse(string organizationSinkName, out OrganizationSinkName result)
         {
             gax::GaxPreconditions.CheckNotNull(organizationSinkName, nameof(organizationSinkName));
@@ -773,7 +773,7 @@ namespace Google.Cloud.Logging.V2
         /// <param name="organizationExclusionName">The organization_exclusion resource name in string form. Must not be <c>null</c>.</param>
         /// <param name="result">When this method returns, the parsed <see cref="OrganizationExclusionName"/>,
         /// or <c>null</c> if parsing fails.</param>
-        /// <returns><c>true</c> if the name was parsed succssfully; <c>false</c> otherwise.</returns>
+        /// <returns><c>true</c> if the name was parsed successfully; <c>false</c> otherwise.</returns>
         public static bool TryParse(string organizationExclusionName, out OrganizationExclusionName result)
         {
             gax::GaxPreconditions.CheckNotNull(organizationExclusionName, nameof(organizationExclusionName));
@@ -865,7 +865,7 @@ namespace Google.Cloud.Logging.V2
         /// <param name="folderName">The folder resource name in string form. Must not be <c>null</c>.</param>
         /// <param name="result">When this method returns, the parsed <see cref="FolderName"/>,
         /// or <c>null</c> if parsing fails.</param>
-        /// <returns><c>true</c> if the name was parsed succssfully; <c>false</c> otherwise.</returns>
+        /// <returns><c>true</c> if the name was parsed successfully; <c>false</c> otherwise.</returns>
         public static bool TryParse(string folderName, out FolderName result)
         {
             gax::GaxPreconditions.CheckNotNull(folderName, nameof(folderName));
@@ -950,7 +950,7 @@ namespace Google.Cloud.Logging.V2
         /// <param name="folderLogName">The folder_log resource name in string form. Must not be <c>null</c>.</param>
         /// <param name="result">When this method returns, the parsed <see cref="FolderLogName"/>,
         /// or <c>null</c> if parsing fails.</param>
-        /// <returns><c>true</c> if the name was parsed succssfully; <c>false</c> otherwise.</returns>
+        /// <returns><c>true</c> if the name was parsed successfully; <c>false</c> otherwise.</returns>
         public static bool TryParse(string folderLogName, out FolderLogName result)
         {
             gax::GaxPreconditions.CheckNotNull(folderLogName, nameof(folderLogName));
@@ -1042,7 +1042,7 @@ namespace Google.Cloud.Logging.V2
         /// <param name="folderSinkName">The folder_sink resource name in string form. Must not be <c>null</c>.</param>
         /// <param name="result">When this method returns, the parsed <see cref="FolderSinkName"/>,
         /// or <c>null</c> if parsing fails.</param>
-        /// <returns><c>true</c> if the name was parsed succssfully; <c>false</c> otherwise.</returns>
+        /// <returns><c>true</c> if the name was parsed successfully; <c>false</c> otherwise.</returns>
         public static bool TryParse(string folderSinkName, out FolderSinkName result)
         {
             gax::GaxPreconditions.CheckNotNull(folderSinkName, nameof(folderSinkName));
@@ -1134,7 +1134,7 @@ namespace Google.Cloud.Logging.V2
         /// <param name="folderExclusionName">The folder_exclusion resource name in string form. Must not be <c>null</c>.</param>
         /// <param name="result">When this method returns, the parsed <see cref="FolderExclusionName"/>,
         /// or <c>null</c> if parsing fails.</param>
-        /// <returns><c>true</c> if the name was parsed succssfully; <c>false</c> otherwise.</returns>
+        /// <returns><c>true</c> if the name was parsed successfully; <c>false</c> otherwise.</returns>
         public static bool TryParse(string folderExclusionName, out FolderExclusionName result)
         {
             gax::GaxPreconditions.CheckNotNull(folderExclusionName, nameof(folderExclusionName));
@@ -1226,7 +1226,7 @@ namespace Google.Cloud.Logging.V2
         /// <param name="billingName">The billing resource name in string form. Must not be <c>null</c>.</param>
         /// <param name="result">When this method returns, the parsed <see cref="BillingName"/>,
         /// or <c>null</c> if parsing fails.</param>
-        /// <returns><c>true</c> if the name was parsed succssfully; <c>false</c> otherwise.</returns>
+        /// <returns><c>true</c> if the name was parsed successfully; <c>false</c> otherwise.</returns>
         public static bool TryParse(string billingName, out BillingName result)
         {
             gax::GaxPreconditions.CheckNotNull(billingName, nameof(billingName));
@@ -1311,7 +1311,7 @@ namespace Google.Cloud.Logging.V2
         /// <param name="billingLogName">The billing_log resource name in string form. Must not be <c>null</c>.</param>
         /// <param name="result">When this method returns, the parsed <see cref="BillingLogName"/>,
         /// or <c>null</c> if parsing fails.</param>
-        /// <returns><c>true</c> if the name was parsed succssfully; <c>false</c> otherwise.</returns>
+        /// <returns><c>true</c> if the name was parsed successfully; <c>false</c> otherwise.</returns>
         public static bool TryParse(string billingLogName, out BillingLogName result)
         {
             gax::GaxPreconditions.CheckNotNull(billingLogName, nameof(billingLogName));
@@ -1403,7 +1403,7 @@ namespace Google.Cloud.Logging.V2
         /// <param name="billingSinkName">The billing_sink resource name in string form. Must not be <c>null</c>.</param>
         /// <param name="result">When this method returns, the parsed <see cref="BillingSinkName"/>,
         /// or <c>null</c> if parsing fails.</param>
-        /// <returns><c>true</c> if the name was parsed succssfully; <c>false</c> otherwise.</returns>
+        /// <returns><c>true</c> if the name was parsed successfully; <c>false</c> otherwise.</returns>
         public static bool TryParse(string billingSinkName, out BillingSinkName result)
         {
             gax::GaxPreconditions.CheckNotNull(billingSinkName, nameof(billingSinkName));
@@ -1495,7 +1495,7 @@ namespace Google.Cloud.Logging.V2
         /// <param name="billingExclusionName">The billing_exclusion resource name in string form. Must not be <c>null</c>.</param>
         /// <param name="result">When this method returns, the parsed <see cref="BillingExclusionName"/>,
         /// or <c>null</c> if parsing fails.</param>
-        /// <returns><c>true</c> if the name was parsed succssfully; <c>false</c> otherwise.</returns>
+        /// <returns><c>true</c> if the name was parsed successfully; <c>false</c> otherwise.</returns>
         public static bool TryParse(string billingExclusionName, out BillingExclusionName result)
         {
             gax::GaxPreconditions.CheckNotNull(billingExclusionName, nameof(billingExclusionName));

@@ -15,96 +15,12 @@
 // Generated code. DO NOT EDIT!
 
 using gax = Google.Api.Gax;
+using gaxres = Google.Api.Gax.ResourceNames;
 using sys = System;
 using linq = System.Linq;
 
 namespace Google.Cloud.Dialogflow.V2
 {
-    /// <summary>
-    /// Resource name for the 'project' resource.
-    /// </summary>
-    public sealed partial class ProjectName : gax::IResourceName, sys::IEquatable<ProjectName>
-    {
-        private static readonly gax::PathTemplate s_template = new gax::PathTemplate("projects/{project}");
-
-        /// <summary>
-        /// Parses the given project resource name in string form into a new
-        /// <see cref="ProjectName"/> instance.
-        /// </summary>
-        /// <param name="projectName">The project resource name in string form. Must not be <c>null</c>.</param>
-        /// <returns>The parsed <see cref="ProjectName"/> if successful.</returns>
-        public static ProjectName Parse(string projectName)
-        {
-            gax::GaxPreconditions.CheckNotNull(projectName, nameof(projectName));
-            gax::TemplatedResourceName resourceName = s_template.ParseName(projectName);
-            return new ProjectName(resourceName[0]);
-        }
-
-        /// <summary>
-        /// Tries to parse the given project resource name in string form into a new
-        /// <see cref="ProjectName"/> instance.
-        /// </summary>
-        /// <remarks>
-        /// This method still throws <see cref="sys::ArgumentNullException"/> if <paramref name="projectName"/> is null,
-        /// as this would usually indicate a programming error rather than a data error.
-        /// </remarks>
-        /// <param name="projectName">The project resource name in string form. Must not be <c>null</c>.</param>
-        /// <param name="result">When this method returns, the parsed <see cref="ProjectName"/>,
-        /// or <c>null</c> if parsing fails.</param>
-        /// <returns><c>true</c> if the name was parsed succssfully; <c>false</c> otherwise.</returns>
-        public static bool TryParse(string projectName, out ProjectName result)
-        {
-            gax::GaxPreconditions.CheckNotNull(projectName, nameof(projectName));
-            gax::TemplatedResourceName resourceName;
-            if (s_template.TryParseName(projectName, out resourceName))
-            {
-                result = new ProjectName(resourceName[0]);
-                return true;
-            }
-            else
-            {
-                result = null;
-                return false;
-            }
-        }
-
-        /// <summary>
-        /// Constructs a new instance of the <see cref="ProjectName"/> resource name class
-        /// from its component parts.
-        /// </summary>
-        /// <param name="projectId">The project ID. Must not be <c>null</c>.</param>
-        public ProjectName(string projectId)
-        {
-            ProjectId = gax::GaxPreconditions.CheckNotNull(projectId, nameof(projectId));
-        }
-
-        /// <summary>
-        /// The project ID. Never <c>null</c>.
-        /// </summary>
-        public string ProjectId { get; }
-
-        /// <inheritdoc />
-        public gax::ResourceNameKind Kind => gax::ResourceNameKind.Simple;
-
-        /// <inheritdoc />
-        public override string ToString() => s_template.Expand(ProjectId);
-
-        /// <inheritdoc />
-        public override int GetHashCode() => ToString().GetHashCode();
-
-        /// <inheritdoc />
-        public override bool Equals(object obj) => Equals(obj as ProjectName);
-
-        /// <inheritdoc />
-        public bool Equals(ProjectName other) => ToString() == other?.ToString();
-
-        /// <inheritdoc />
-        public static bool operator ==(ProjectName a, ProjectName b) => ReferenceEquals(a, b) || (a?.Equals(b) ?? false);
-
-        /// <inheritdoc />
-        public static bool operator !=(ProjectName a, ProjectName b) => !(a == b);
-    }
-
     /// <summary>
     /// Resource name for the 'session' resource.
     /// </summary>
@@ -136,7 +52,7 @@ namespace Google.Cloud.Dialogflow.V2
         /// <param name="sessionName">The session resource name in string form. Must not be <c>null</c>.</param>
         /// <param name="result">When this method returns, the parsed <see cref="SessionName"/>,
         /// or <c>null</c> if parsing fails.</param>
-        /// <returns><c>true</c> if the name was parsed succssfully; <c>false</c> otherwise.</returns>
+        /// <returns><c>true</c> if the name was parsed successfully; <c>false</c> otherwise.</returns>
         public static bool TryParse(string sessionName, out SessionName result)
         {
             gax::GaxPreconditions.CheckNotNull(sessionName, nameof(sessionName));
@@ -228,7 +144,7 @@ namespace Google.Cloud.Dialogflow.V2
         /// <param name="contextName">The context resource name in string form. Must not be <c>null</c>.</param>
         /// <param name="result">When this method returns, the parsed <see cref="ContextName"/>,
         /// or <c>null</c> if parsing fails.</param>
-        /// <returns><c>true</c> if the name was parsed succssfully; <c>false</c> otherwise.</returns>
+        /// <returns><c>true</c> if the name was parsed successfully; <c>false</c> otherwise.</returns>
         public static bool TryParse(string contextName, out ContextName result)
         {
             gax::GaxPreconditions.CheckNotNull(contextName, nameof(contextName));
@@ -327,7 +243,7 @@ namespace Google.Cloud.Dialogflow.V2
         /// <param name="projectAgentName">The project_agent resource name in string form. Must not be <c>null</c>.</param>
         /// <param name="result">When this method returns, the parsed <see cref="ProjectAgentName"/>,
         /// or <c>null</c> if parsing fails.</param>
-        /// <returns><c>true</c> if the name was parsed succssfully; <c>false</c> otherwise.</returns>
+        /// <returns><c>true</c> if the name was parsed successfully; <c>false</c> otherwise.</returns>
         public static bool TryParse(string projectAgentName, out ProjectAgentName result)
         {
             gax::GaxPreconditions.CheckNotNull(projectAgentName, nameof(projectAgentName));
@@ -412,7 +328,7 @@ namespace Google.Cloud.Dialogflow.V2
         /// <param name="entityTypeName">The entity_type resource name in string form. Must not be <c>null</c>.</param>
         /// <param name="result">When this method returns, the parsed <see cref="EntityTypeName"/>,
         /// or <c>null</c> if parsing fails.</param>
-        /// <returns><c>true</c> if the name was parsed succssfully; <c>false</c> otherwise.</returns>
+        /// <returns><c>true</c> if the name was parsed successfully; <c>false</c> otherwise.</returns>
         public static bool TryParse(string entityTypeName, out EntityTypeName result)
         {
             gax::GaxPreconditions.CheckNotNull(entityTypeName, nameof(entityTypeName));
@@ -504,7 +420,7 @@ namespace Google.Cloud.Dialogflow.V2
         /// <param name="intentName">The intent resource name in string form. Must not be <c>null</c>.</param>
         /// <param name="result">When this method returns, the parsed <see cref="IntentName"/>,
         /// or <c>null</c> if parsing fails.</param>
-        /// <returns><c>true</c> if the name was parsed succssfully; <c>false</c> otherwise.</returns>
+        /// <returns><c>true</c> if the name was parsed successfully; <c>false</c> otherwise.</returns>
         public static bool TryParse(string intentName, out IntentName result)
         {
             gax::GaxPreconditions.CheckNotNull(intentName, nameof(intentName));
@@ -596,7 +512,7 @@ namespace Google.Cloud.Dialogflow.V2
         /// <param name="agentName">The agent resource name in string form. Must not be <c>null</c>.</param>
         /// <param name="result">When this method returns, the parsed <see cref="AgentName"/>,
         /// or <c>null</c> if parsing fails.</param>
-        /// <returns><c>true</c> if the name was parsed succssfully; <c>false</c> otherwise.</returns>
+        /// <returns><c>true</c> if the name was parsed successfully; <c>false</c> otherwise.</returns>
         public static bool TryParse(string agentName, out AgentName result)
         {
             gax::GaxPreconditions.CheckNotNull(agentName, nameof(agentName));
@@ -688,7 +604,7 @@ namespace Google.Cloud.Dialogflow.V2
         /// <param name="sessionEntityTypeName">The session_entity_type resource name in string form. Must not be <c>null</c>.</param>
         /// <param name="result">When this method returns, the parsed <see cref="SessionEntityTypeName"/>,
         /// or <c>null</c> if parsing fails.</param>
-        /// <returns><c>true</c> if the name was parsed succssfully; <c>false</c> otherwise.</returns>
+        /// <returns><c>true</c> if the name was parsed successfully; <c>false</c> otherwise.</returns>
         public static bool TryParse(string sessionEntityTypeName, out SessionEntityTypeName result)
         {
             gax::GaxPreconditions.CheckNotNull(sessionEntityTypeName, nameof(sessionEntityTypeName));
@@ -1007,11 +923,11 @@ namespace Google.Cloud.Dialogflow.V2
     public partial class ExportAgentRequest
     {
         /// <summary>
-        /// <see cref="Google.Cloud.Dialogflow.V2.ProjectName"/>-typed view over the <see cref="Parent"/> resource name property.
+        /// <see cref="gaxres::ProjectName"/>-typed view over the <see cref="Parent"/> resource name property.
         /// </summary>
-        public Google.Cloud.Dialogflow.V2.ProjectName ParentAsProjectName
+        public gaxres::ProjectName ParentAsProjectName
         {
-            get { return string.IsNullOrEmpty(Parent) ? null : Google.Cloud.Dialogflow.V2.ProjectName.Parse(Parent); }
+            get { return string.IsNullOrEmpty(Parent) ? null : gaxres::ProjectName.Parse(Parent); }
             set { Parent = value != null ? value.ToString() : ""; }
         }
 
@@ -1020,11 +936,11 @@ namespace Google.Cloud.Dialogflow.V2
     public partial class GetAgentRequest
     {
         /// <summary>
-        /// <see cref="Google.Cloud.Dialogflow.V2.ProjectName"/>-typed view over the <see cref="Parent"/> resource name property.
+        /// <see cref="gaxres::ProjectName"/>-typed view over the <see cref="Parent"/> resource name property.
         /// </summary>
-        public Google.Cloud.Dialogflow.V2.ProjectName ParentAsProjectName
+        public gaxres::ProjectName ParentAsProjectName
         {
-            get { return string.IsNullOrEmpty(Parent) ? null : Google.Cloud.Dialogflow.V2.ProjectName.Parse(Parent); }
+            get { return string.IsNullOrEmpty(Parent) ? null : gaxres::ProjectName.Parse(Parent); }
             set { Parent = value != null ? value.ToString() : ""; }
         }
 
@@ -1085,11 +1001,11 @@ namespace Google.Cloud.Dialogflow.V2
     public partial class ImportAgentRequest
     {
         /// <summary>
-        /// <see cref="Google.Cloud.Dialogflow.V2.ProjectName"/>-typed view over the <see cref="Parent"/> resource name property.
+        /// <see cref="gaxres::ProjectName"/>-typed view over the <see cref="Parent"/> resource name property.
         /// </summary>
-        public Google.Cloud.Dialogflow.V2.ProjectName ParentAsProjectName
+        public gaxres::ProjectName ParentAsProjectName
         {
-            get { return string.IsNullOrEmpty(Parent) ? null : Google.Cloud.Dialogflow.V2.ProjectName.Parse(Parent); }
+            get { return string.IsNullOrEmpty(Parent) ? null : gaxres::ProjectName.Parse(Parent); }
             set { Parent = value != null ? value.ToString() : ""; }
         }
 
@@ -1163,11 +1079,11 @@ namespace Google.Cloud.Dialogflow.V2
     public partial class RestoreAgentRequest
     {
         /// <summary>
-        /// <see cref="Google.Cloud.Dialogflow.V2.ProjectName"/>-typed view over the <see cref="Parent"/> resource name property.
+        /// <see cref="gaxres::ProjectName"/>-typed view over the <see cref="Parent"/> resource name property.
         /// </summary>
-        public Google.Cloud.Dialogflow.V2.ProjectName ParentAsProjectName
+        public gaxres::ProjectName ParentAsProjectName
         {
-            get { return string.IsNullOrEmpty(Parent) ? null : Google.Cloud.Dialogflow.V2.ProjectName.Parse(Parent); }
+            get { return string.IsNullOrEmpty(Parent) ? null : gaxres::ProjectName.Parse(Parent); }
             set { Parent = value != null ? value.ToString() : ""; }
         }
 
@@ -1176,11 +1092,11 @@ namespace Google.Cloud.Dialogflow.V2
     public partial class SearchAgentsRequest
     {
         /// <summary>
-        /// <see cref="Google.Cloud.Dialogflow.V2.ProjectName"/>-typed view over the <see cref="Parent"/> resource name property.
+        /// <see cref="gaxres::ProjectName"/>-typed view over the <see cref="Parent"/> resource name property.
         /// </summary>
-        public Google.Cloud.Dialogflow.V2.ProjectName ParentAsProjectName
+        public gaxres::ProjectName ParentAsProjectName
         {
-            get { return string.IsNullOrEmpty(Parent) ? null : Google.Cloud.Dialogflow.V2.ProjectName.Parse(Parent); }
+            get { return string.IsNullOrEmpty(Parent) ? null : gaxres::ProjectName.Parse(Parent); }
             set { Parent = value != null ? value.ToString() : ""; }
         }
 
@@ -1202,11 +1118,11 @@ namespace Google.Cloud.Dialogflow.V2
     public partial class TrainAgentRequest
     {
         /// <summary>
-        /// <see cref="Google.Cloud.Dialogflow.V2.ProjectName"/>-typed view over the <see cref="Parent"/> resource name property.
+        /// <see cref="gaxres::ProjectName"/>-typed view over the <see cref="Parent"/> resource name property.
         /// </summary>
-        public Google.Cloud.Dialogflow.V2.ProjectName ParentAsProjectName
+        public gaxres::ProjectName ParentAsProjectName
         {
-            get { return string.IsNullOrEmpty(Parent) ? null : Google.Cloud.Dialogflow.V2.ProjectName.Parse(Parent); }
+            get { return string.IsNullOrEmpty(Parent) ? null : gaxres::ProjectName.Parse(Parent); }
             set { Parent = value != null ? value.ToString() : ""; }
         }
 

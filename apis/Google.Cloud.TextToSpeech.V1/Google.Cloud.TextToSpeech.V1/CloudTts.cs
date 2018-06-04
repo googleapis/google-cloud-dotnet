@@ -57,11 +57,12 @@ namespace Google.Cloud.TextToSpeech.V1 {
             "bnRoZXNpemVTcGVlY2gSNS5nb29nbGUuY2xvdWQudGV4dHRvc3BlZWNoLnYx",
             "LlN5bnRoZXNpemVTcGVlY2hSZXF1ZXN0GjYuZ29vZ2xlLmNsb3VkLnRleHR0",
             "b3NwZWVjaC52MS5TeW50aGVzaXplU3BlZWNoUmVzcG9uc2UiHoLT5JMCGCIT",
-            "L3YxL3RleHQ6c3ludGhlc2l6ZToBKkKjAQogY29tLmdvb2dsZS5jbG91ZC50",
+            "L3YxL3RleHQ6c3ludGhlc2l6ZToBKkLCAQogY29tLmdvb2dsZS5jbG91ZC50",
             "ZXh0dG9zcGVlY2gudjFCEVRleHRUb1NwZWVjaFByb3RvUAFaSGdvb2dsZS5n",
             "b2xhbmcub3JnL2dlbnByb3RvL2dvb2dsZWFwaXMvY2xvdWQvdGV4dHRvc3Bl",
             "ZWNoL3YxO3RleHR0b3NwZWVjaPgBAaoCHEdvb2dsZS5DbG91ZC5UZXh0VG9T",
-            "cGVlY2guVjFiBnByb3RvMw=="));
+            "cGVlY2guVjHKAhxHb29nbGVcQ2xvdWRcVGV4dFRvU3BlZWNoXFYxYgZwcm90",
+            "bzM="));
       descriptor = pbr::FileDescriptor.FromGeneratedCode(descriptorData,
           new pbr::FileDescriptor[] { global::Google.Api.AnnotationsReflection.Descriptor, },
           new pbr::GeneratedClrTypeInfo(new[] {typeof(global::Google.Cloud.TextToSpeech.V1.SsmlVoiceGender), typeof(global::Google.Cloud.TextToSpeech.V1.AudioEncoding), }, new pbr::GeneratedClrTypeInfo[] {

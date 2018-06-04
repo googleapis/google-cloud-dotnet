@@ -51,7 +51,7 @@ namespace Google.Cloud.Redis.V1Beta1
         /// <param name="locationName">The location resource name in string form. Must not be <c>null</c>.</param>
         /// <param name="result">When this method returns, the parsed <see cref="LocationName"/>,
         /// or <c>null</c> if parsing fails.</param>
-        /// <returns><c>true</c> if the name was parsed succssfully; <c>false</c> otherwise.</returns>
+        /// <returns><c>true</c> if the name was parsed successfully; <c>false</c> otherwise.</returns>
         public static bool TryParse(string locationName, out LocationName result)
         {
             gax::GaxPreconditions.CheckNotNull(locationName, nameof(locationName));
@@ -143,7 +143,7 @@ namespace Google.Cloud.Redis.V1Beta1
         /// <param name="instanceName">The instance resource name in string form. Must not be <c>null</c>.</param>
         /// <param name="result">When this method returns, the parsed <see cref="InstanceName"/>,
         /// or <c>null</c> if parsing fails.</param>
-        /// <returns><c>true</c> if the name was parsed succssfully; <c>false</c> otherwise.</returns>
+        /// <returns><c>true</c> if the name was parsed successfully; <c>false</c> otherwise.</returns>
         public static bool TryParse(string instanceName, out InstanceName result)
         {
             gax::GaxPreconditions.CheckNotNull(instanceName, nameof(instanceName));

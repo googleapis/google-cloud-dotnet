@@ -51,7 +51,7 @@ namespace Google.Cloud.Firestore.V1Beta1
         /// <param name="databaseRootName">The database_root resource name in string form. Must not be <c>null</c>.</param>
         /// <param name="result">When this method returns, the parsed <see cref="DatabaseRootName"/>,
         /// or <c>null</c> if parsing fails.</param>
-        /// <returns><c>true</c> if the name was parsed succssfully; <c>false</c> otherwise.</returns>
+        /// <returns><c>true</c> if the name was parsed successfully; <c>false</c> otherwise.</returns>
         public static bool TryParse(string databaseRootName, out DatabaseRootName result)
         {
             gax::GaxPreconditions.CheckNotNull(databaseRootName, nameof(databaseRootName));
@@ -143,7 +143,7 @@ namespace Google.Cloud.Firestore.V1Beta1
         /// <param name="documentRootName">The document_root resource name in string form. Must not be <c>null</c>.</param>
         /// <param name="result">When this method returns, the parsed <see cref="DocumentRootName"/>,
         /// or <c>null</c> if parsing fails.</param>
-        /// <returns><c>true</c> if the name was parsed succssfully; <c>false</c> otherwise.</returns>
+        /// <returns><c>true</c> if the name was parsed successfully; <c>false</c> otherwise.</returns>
         public static bool TryParse(string documentRootName, out DocumentRootName result)
         {
             gax::GaxPreconditions.CheckNotNull(documentRootName, nameof(documentRootName));
@@ -235,7 +235,7 @@ namespace Google.Cloud.Firestore.V1Beta1
         /// <param name="documentPathName">The document_path resource name in string form. Must not be <c>null</c>.</param>
         /// <param name="result">When this method returns, the parsed <see cref="DocumentPathName"/>,
         /// or <c>null</c> if parsing fails.</param>
-        /// <returns><c>true</c> if the name was parsed succssfully; <c>false</c> otherwise.</returns>
+        /// <returns><c>true</c> if the name was parsed successfully; <c>false</c> otherwise.</returns>
         public static bool TryParse(string documentPathName, out DocumentPathName result)
         {
             gax::GaxPreconditions.CheckNotNull(documentPathName, nameof(documentPathName));
@@ -334,7 +334,7 @@ namespace Google.Cloud.Firestore.V1Beta1
         /// <param name="anyPathName">The any_path resource name in string form. Must not be <c>null</c>.</param>
         /// <param name="result">When this method returns, the parsed <see cref="AnyPathName"/>,
         /// or <c>null</c> if parsing fails.</param>
-        /// <returns><c>true</c> if the name was parsed succssfully; <c>false</c> otherwise.</returns>
+        /// <returns><c>true</c> if the name was parsed successfully; <c>false</c> otherwise.</returns>
         public static bool TryParse(string anyPathName, out AnyPathName result)
         {
             gax::GaxPreconditions.CheckNotNull(anyPathName, nameof(anyPathName));

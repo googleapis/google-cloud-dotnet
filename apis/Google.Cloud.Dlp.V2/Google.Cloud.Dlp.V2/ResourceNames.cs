@@ -52,7 +52,7 @@ namespace Google.Cloud.Dlp.V2
         /// <param name="organizationDeidentifyTemplateName">The organization_deidentify_template resource name in string form. Must not be <c>null</c>.</param>
         /// <param name="result">When this method returns, the parsed <see cref="OrganizationDeidentifyTemplateName"/>,
         /// or <c>null</c> if parsing fails.</param>
-        /// <returns><c>true</c> if the name was parsed succssfully; <c>false</c> otherwise.</returns>
+        /// <returns><c>true</c> if the name was parsed successfully; <c>false</c> otherwise.</returns>
         public static bool TryParse(string organizationDeidentifyTemplateName, out OrganizationDeidentifyTemplateName result)
         {
             gax::GaxPreconditions.CheckNotNull(organizationDeidentifyTemplateName, nameof(organizationDeidentifyTemplateName));
@@ -144,7 +144,7 @@ namespace Google.Cloud.Dlp.V2
         /// <param name="projectDeidentifyTemplateName">The project_deidentify_template resource name in string form. Must not be <c>null</c>.</param>
         /// <param name="result">When this method returns, the parsed <see cref="ProjectDeidentifyTemplateName"/>,
         /// or <c>null</c> if parsing fails.</param>
-        /// <returns><c>true</c> if the name was parsed succssfully; <c>false</c> otherwise.</returns>
+        /// <returns><c>true</c> if the name was parsed successfully; <c>false</c> otherwise.</returns>
         public static bool TryParse(string projectDeidentifyTemplateName, out ProjectDeidentifyTemplateName result)
         {
             gax::GaxPreconditions.CheckNotNull(projectDeidentifyTemplateName, nameof(projectDeidentifyTemplateName));
@@ -236,7 +236,7 @@ namespace Google.Cloud.Dlp.V2
         /// <param name="organizationInspectTemplateName">The organization_inspect_template resource name in string form. Must not be <c>null</c>.</param>
         /// <param name="result">When this method returns, the parsed <see cref="OrganizationInspectTemplateName"/>,
         /// or <c>null</c> if parsing fails.</param>
-        /// <returns><c>true</c> if the name was parsed succssfully; <c>false</c> otherwise.</returns>
+        /// <returns><c>true</c> if the name was parsed successfully; <c>false</c> otherwise.</returns>
         public static bool TryParse(string organizationInspectTemplateName, out OrganizationInspectTemplateName result)
         {
             gax::GaxPreconditions.CheckNotNull(organizationInspectTemplateName, nameof(organizationInspectTemplateName));
@@ -328,7 +328,7 @@ namespace Google.Cloud.Dlp.V2
         /// <param name="projectInspectTemplateName">The project_inspect_template resource name in string form. Must not be <c>null</c>.</param>
         /// <param name="result">When this method returns, the parsed <see cref="ProjectInspectTemplateName"/>,
         /// or <c>null</c> if parsing fails.</param>
-        /// <returns><c>true</c> if the name was parsed succssfully; <c>false</c> otherwise.</returns>
+        /// <returns><c>true</c> if the name was parsed successfully; <c>false</c> otherwise.</returns>
         public static bool TryParse(string projectInspectTemplateName, out ProjectInspectTemplateName result)
         {
             gax::GaxPreconditions.CheckNotNull(projectInspectTemplateName, nameof(projectInspectTemplateName));
@@ -420,7 +420,7 @@ namespace Google.Cloud.Dlp.V2
         /// <param name="projectJobTriggerName">The project_job_trigger resource name in string form. Must not be <c>null</c>.</param>
         /// <param name="result">When this method returns, the parsed <see cref="ProjectJobTriggerName"/>,
         /// or <c>null</c> if parsing fails.</param>
-        /// <returns><c>true</c> if the name was parsed succssfully; <c>false</c> otherwise.</returns>
+        /// <returns><c>true</c> if the name was parsed successfully; <c>false</c> otherwise.</returns>
         public static bool TryParse(string projectJobTriggerName, out ProjectJobTriggerName result)
         {
             gax::GaxPreconditions.CheckNotNull(projectJobTriggerName, nameof(projectJobTriggerName));
@@ -512,7 +512,7 @@ namespace Google.Cloud.Dlp.V2
         /// <param name="dlpJobName">The dlp_job resource name in string form. Must not be <c>null</c>.</param>
         /// <param name="result">When this method returns, the parsed <see cref="DlpJobName"/>,
         /// or <c>null</c> if parsing fails.</param>
-        /// <returns><c>true</c> if the name was parsed succssfully; <c>false</c> otherwise.</returns>
+        /// <returns><c>true</c> if the name was parsed successfully; <c>false</c> otherwise.</returns>
         public static bool TryParse(string dlpJobName, out DlpJobName result)
         {
             gax::GaxPreconditions.CheckNotNull(dlpJobName, nameof(dlpJobName));
