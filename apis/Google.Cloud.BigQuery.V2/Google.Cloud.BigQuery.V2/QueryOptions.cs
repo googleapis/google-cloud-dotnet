@@ -126,6 +126,11 @@ namespace Google.Cloud.BigQuery.V2
         /// </summary>
         public SchemaUpdateOption? DestinationSchemaUpdateOptions { get; set; }
 
+        /// <summary>
+        /// The time partitioning to apply, if any. See <see cref="TimePartition"/> to create instances of <see cref="TimePartitioning"/>.
+        /// </summary>
+        public TimePartitioning TimePartitioning { get; set; }
+
         internal void ModifyRequest(JobConfigurationQuery query)
         {
             // Note: no validation of combinations (flatten results etc). Leave this to the server,
@@ -186,6 +191,10 @@ namespace Google.Cloud.BigQuery.V2
             if (DestinationSchemaUpdateOptions != null)
             {
                 query.SchemaUpdateOptions = new List<string>(EnumMap.ToApiValues(DestinationSchemaUpdateOptions.Value));
+            }
+            if (TimePartitioning != null)
+            {
+                query.TimePartitioning = TimePartitioning;
             }
         }
     }

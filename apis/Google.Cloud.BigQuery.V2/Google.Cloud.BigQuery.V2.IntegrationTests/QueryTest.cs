@@ -139,6 +139,22 @@ namespace Google.Cloud.BigQuery.V2.IntegrationTests
         }
 
         [Fact]
+        public void QueryWithTimePartitioning()
+        {
+            var projectId = _fixture.ProjectId;
+            var client = BigQueryClient.Create(projectId);
+            var table = client.GetTable(_fixture.DatasetId, _fixture.HighScoreTableId);
+            var queryOptions = new QueryOptions
+            {
+                DestinationTable = client.GetTableReference(_fixture.DatasetId, _fixture.CreateTableId()),
+                TimePartitioning = TimePartition.CreateDailyPartitioning(null, "GameStarted")
+            };
+            var results = client.ExecuteQuery($"SELECT * FROM {table}", null, queryOptions);
+            var outputTable = client.GetTable(results.TableReference);
+            Assert.Equal("GameStarted", outputTable.Resource.TimePartitioning.Field);
+        }
+
+        [Fact]
         public void RepeatedFields_Aggregate()
         {
             var client = BigQueryClient.Create(_fixture.ProjectId);
