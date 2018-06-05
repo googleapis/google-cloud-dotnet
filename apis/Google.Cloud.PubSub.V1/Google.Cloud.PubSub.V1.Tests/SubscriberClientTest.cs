@@ -174,7 +174,7 @@ namespace Google.Cloud.PubSub.V1.Tests
                 {
                     if (message.ModifyDeadlineAckIds.Count != 0 || message.AckIds.Count != 0)
                     {
-                        throw new InvalidOperationException("WriteAsync must not modify deadlines.");
+                        throw new InvalidOperationException("WriteAsync must not modify deadlines or send acks/nacks.");
                     }
                     // TODO: Record write time
                     return Task.FromResult(0);
@@ -255,14 +255,8 @@ namespace Google.Cloud.PubSub.V1.Tests
                 }
                 lock (_lock)
                 {
-                    if (ackDeadlineSeconds == 0)
-                    {
-                        _nacks.AddRange(ackIds.Select(id => new TimedId(_clock.GetCurrentDateTimeUtc(), id)));
-                    }
-                    else
-                    {
-                        _extends.AddRange(ackIds.Select(id => new TimedId(_clock.GetCurrentDateTimeUtc(), id)));
-                    }
+                    var ids = ackDeadlineSeconds == 0 ? _nacks : _extends;
+                    ids.AddRange(ackIds.Select(id => new TimedId(_clock.GetCurrentDateTimeUtc(), id)));
                 }
             }
         }

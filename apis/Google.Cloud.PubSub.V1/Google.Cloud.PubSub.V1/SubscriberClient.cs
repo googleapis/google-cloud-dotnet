@@ -347,15 +347,9 @@ namespace Google.Cloud.PubSub.V1
             GaxPreconditions.CheckArgument(_clients.All(x => x != null), nameof(clients), "All elements must be non-null");
             GaxPreconditions.CheckNotNull(settings, nameof(settings));
             settings.Validate();
+            // These values are validated in Settings.Validate() above, so no need to re-validate here.
             _modifyDeadlineSeconds = (int)((settings.StreamAckDeadline ?? DefaultStreamAckDeadline).TotalSeconds);
-            // Enforce server-side constraint on _modifyDeadlineSeconds.
-            GaxPreconditions.CheckArgument(_modifyDeadlineSeconds >= 10 && _modifyDeadlineSeconds <= 600, nameof(settings.StreamAckDeadline), "Must be between 10 and 600 seconds");
             _autoExtendInterval = TimeSpan.FromSeconds(_modifyDeadlineSeconds) - (settings.AckExtensionWindow ?? DefaultAckExtensionWindow);
-            if (_autoExtendInterval < TimeSpan.FromSeconds(5))
-            {
-                // Silently use a sensible lower limit on _autoExtendInterval.
-                _autoExtendInterval = TimeSpan.FromSeconds(5);
-            }
             _shutdown = shutdown;
             _scheduler = settings.Scheduler ?? SystemScheduler.Instance;
             _taskHelper = GaxPreconditions.CheckNotNull(taskHelper, nameof(taskHelper));
@@ -545,7 +539,7 @@ namespace Google.Cloud.PubSub.V1
         }
 
         // internal for testing.
-        internal class ReQueue<T>
+        internal class RequeueableQueue<T>
         {
             private readonly Queue<T> _q = new Queue<T>();
             private readonly LinkedList<Queue<T>> _qs = new LinkedList<Queue<T>>();
@@ -760,9 +754,9 @@ namespace Google.Cloud.PubSub.V1
             private readonly Flow _flow;
             private readonly AsyncAutoResetEvent _eventPush;
             private readonly AsyncSingleRecvQueue<TaskNextAction> _continuationQueue;
-            private readonly ReQueue<TimedId> _extendQueue = new ReQueue<TimedId>();
-            private readonly ReQueue<string> _ackQueue = new ReQueue<string>();
-            private readonly ReQueue<string> _nackQueue = new ReQueue<string>();
+            private readonly RequeueableQueue<TimedId> _extendQueue = new RequeueableQueue<TimedId>();
+            private readonly RequeueableQueue<string> _ackQueue = new RequeueableQueue<string>();
+            private readonly RequeueableQueue<string> _nackQueue = new RequeueableQueue<string>();
 
             private int _pushInFlight = 0;
             private int _userHandlerInFlight = 0;
