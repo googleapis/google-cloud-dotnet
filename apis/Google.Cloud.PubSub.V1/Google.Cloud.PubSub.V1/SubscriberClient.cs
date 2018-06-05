@@ -399,43 +399,45 @@ namespace Google.Cloud.PubSub.V1
                 var singleChannel = new SingleChannel(this, client, handlerAsync, flow, registerTask);
                 return _taskHelper.Run(() => singleChannel.StartAsync());
             }).ToArray();
-            // Set up finish task
-            _taskHelper.Run(async () =>
-            {
-                // WhenAny() always returns a non-faulted task, so the await will never throw.
-                var task = await _taskHelper.ConfigureAwait(_taskHelper.WhenAny(subscriberTasks));
-                if (task.IsFaulted)
-                {
-                    _globalSoftStopCts.Cancel();
-                    _globalHardStopCts.Cancel();
-                }
-                // Wait for all subscribers to stop
-                var exception = await _taskHelper.ConfigureAwaitHideErrors(() => _taskHelper.WhenAll(subscriberTasks));
-                // Wait for all registered Tasks to stop
-                await _taskHelper.ConfigureAwaitHideErrors(
-                    () => _taskHelper.WhenAll(registeredTasks.Locked(() => registeredTasks.ToArray())));
-                // Call shutdown function
-                if (_shutdown != null)
-                {
-                    await _taskHelper.ConfigureAwaitHideErrors(_shutdown);
-                }
-                // Return final result
-                var exceptions = ((exception as AggregateException)?.Flatten().InnerExceptions) ??
-                    Enumerable.Repeat(exception, exception == null ? 0 : 1);
-                if (exceptions.Any())
-                {
-                    _mainTcs.SetException(exceptions);
-                }
-                else if (_globalHardStopCts.IsCancellationRequested)
-                {
-                    _mainTcs.SetCanceled();
-                }
-                else
-                {
-                    _mainTcs.SetResult(0);
-                }
-            });
+            // Set up finish task; code that executes when this subscriber is being shutdown (for whatever reason).
+            _taskHelper.Run(async () => await StopCompletionAsync(subscriberTasks, registeredTasks));
             return _mainTcs.Task;
+        }
+
+        private async Task StopCompletionAsync(Task[] subscriberTasks, HashSet<Task> registeredTasks)
+        {
+            // WhenAny() always returns a non-faulted task, so the await will never throw.
+            var task = await _taskHelper.ConfigureAwait(_taskHelper.WhenAny(subscriberTasks));
+            if (task.IsFaulted)
+            {
+                _globalSoftStopCts.Cancel();
+                _globalHardStopCts.Cancel();
+            }
+            // Wait for all subscribers to stop
+            var exception = await _taskHelper.ConfigureAwaitHideErrors(() => _taskHelper.WhenAll(subscriberTasks));
+            // Wait for all registered Tasks to stop
+            await _taskHelper.ConfigureAwaitHideErrors(
+                () => _taskHelper.WhenAll(registeredTasks.Locked(() => registeredTasks.ToArray())));
+            // Call shutdown function
+            if (_shutdown != null)
+            {
+                await _taskHelper.ConfigureAwaitHideErrors(_shutdown);
+            }
+            // Return final result
+            var exceptions = ((exception as AggregateException)?.Flatten().InnerExceptions) ??
+                Enumerable.Repeat(exception, exception == null ? 0 : 1);
+            if (exceptions.Any())
+            {
+                _mainTcs.SetException(exceptions);
+            }
+            else if (_globalHardStopCts.IsCancellationRequested)
+            {
+                _mainTcs.SetCanceled();
+            }
+            else
+            {
+                _mainTcs.SetResult(0);
+            }
         }
 
         /// <inheritdoc />
@@ -516,9 +518,7 @@ namespace Google.Cloud.PubSub.V1
                 }
                 // Execute fn, and schedule the following code to execute once it has completed.
                 // Register the function, so we can be sure it's completed during shutdown.
-                //_registerTaskFn(_taskHelper.Run(async () => await _taskHelper.ConfigureAwaitWithFinally(fn, () =>
-                Task task = null;
-                task = _taskHelper.Run(async () => await _taskHelper.ConfigureAwaitWithFinally(fn, () =>
+                Task task = _taskHelper.Run(async () => await _taskHelper.ConfigureAwaitWithFinally(fn, () =>
                 {
                     bool setEvent;
                     lock (_lock)
@@ -539,6 +539,10 @@ namespace Google.Cloud.PubSub.V1
         }
 
         // internal for testing.
+        /// <summary>
+        /// A queue that allows data to be requeued at the front of the queue.
+        /// Requeued items are queued after previously requeued items, but before queued items.
+        /// </summary>
         internal class RequeueableQueue<T>
         {
             private readonly Queue<T> _q = new Queue<T>();
@@ -546,6 +550,7 @@ namespace Google.Cloud.PubSub.V1
             private int _requeueCount = 0;
 
             public void Enqueue(T item) => _q.Enqueue(item);
+
             public void Enqueue(IEnumerable<T> items)
             {
                 foreach (var item in items)
@@ -553,6 +558,7 @@ namespace Google.Cloud.PubSub.V1
                     _q.Enqueue(item);
                 }
             }
+
             public void Requeue(IEnumerable<T> items)
             {
                 var q = new Queue<T>(items);
@@ -562,6 +568,13 @@ namespace Google.Cloud.PubSub.V1
 
             public int Count => _q.Count + _requeueCount;
 
+            /// <summary>
+            /// Dequeue up to maxCount items.
+            /// Any items that are not included in the return value due to <c>includeFn</c> are discarded.
+            /// </summary>
+            /// <param name="maxCount">Maximum count of items to dequeue.</param>
+            /// <param name="includeFn">If not null, most return <c>true</c> for the item to be included.</param>
+            /// <returns></returns>
             public List<T> Dequeue(int maxCount, Predicate<T> includeFn)
             {
                 List<T> result = new List<T>();
@@ -648,7 +661,8 @@ namespace Google.Cloud.PubSub.V1
                 }
             }
 
-            // Thread-safe, but only one dequeue is allowed at a time.
+            // Thread-safe to use concurrently with Enqueue(),
+            // but this DequeueAsync() method must *not* be called concurrently.
             public async Task<T> DequeueAsync()
             {
                 lock (_lock)
@@ -761,11 +775,13 @@ namespace Google.Cloud.PubSub.V1
             private int _pushInFlight = 0;
             private int _userHandlerInFlight = 0;
             private SubscriberServiceApiClient.StreamingPullStream _pull = null;
-            private TimeSpan? _pullBackoff = null;
             private int _concurrentPushCount = 0;
             private bool _pullComplete = false;
             private long _extendThrottleHigh = 0; // Incremented on extension, and put on extend queue items.
             private long _extendThrottleLow = 0; // Incremented after _extendQueueThrottleInterval, checked when throttling.
+
+            private readonly static BackoffSettings s_pullBackoff = new BackoffSettings(TimeSpan.FromSeconds(0.5), TimeSpan.FromSeconds(30), 2.0);
+            private TimeSpan? _pullBackoff = null;
 
             public async Task StartAsync()
             {
@@ -881,11 +897,7 @@ namespace Google.Cloud.PubSub.V1
                         StopStreamingPull();
                         // Increase backoff internal and start stream again.
                         // If stream-pull fails repeatly, increase the delay, up to a maximum of 30 seconds.
-                        _pullBackoff = _pullBackoff is TimeSpan backoff ? TimeSpan.FromTicks(backoff.Ticks * 2) : TimeSpan.FromSeconds(0.5);
-                        if (_pullBackoff.Value > TimeSpan.FromSeconds(30))
-                        {
-                            _pullBackoff = TimeSpan.FromSeconds(30);
-                        }
+                        _pullBackoff = s_pullBackoff.NextDelay(_pullBackoff ?? TimeSpan.Zero);
                         StartStreamingPull();
                         return true;
                     }
@@ -984,29 +996,31 @@ namespace Google.Cloud.PubSub.V1
                     _softStopCts.Token.ThrowIfCancellationRequested();
                     var msg = msgs[msgIndex];
                     msgs[msgIndex] = null;
+                    // Prepare to call user message handler, _flow.Process(...) enforces the user-handler concurrency constraints.
                     await _taskHelper.ConfigureAwait(_flow.Process(msg.CalculateSize(), async () =>
                     {
-                            // Running async. Common data needs locking
-                            lock (_lock)
+                        // Running async. Common data needs locking
+                        lock (_lock)
                         {
                             _softStopCts.Token.ThrowIfCancellationRequested();
                             _userHandlerInFlight += 1;
                         }
-                            // Call user message handler
-                            var reply = await _taskHelper.ConfigureAwaitHideErrors(() => _handlerAsync(msg.Message, _hardStopCts.Token), Reply.Nack);
-                            // Lock msgsIds, this is accessed concurrently here and in HandleExtendLease().
-                            lock (msgIds)
+                        // Call user message handler
+                        var reply = await _taskHelper.ConfigureAwaitHideErrors(() => _handlerAsync(msg.Message, _hardStopCts.Token), Reply.Nack);
+                        // Lock msgsIds, this is accessed concurrently here and in HandleExtendLease().
+                        lock (msgIds)
                         {
                             msgIds.Remove(msg.AckId);
                         }
-                            // Lock ack/nack-queues, this is accessed concurrently here and in "master" thread.
-                            lock (_lock)
+                        // Lock ack/nack-queues, this is accessed concurrently here and in "master" thread.
+                        lock (_lock)
                         {
                             _userHandlerInFlight -= 1;
-                            (reply == Reply.Ack ? _ackQueue : _nackQueue).Enqueue(msg.AckId);
+                            var queue = reply == Reply.Ack ? _ackQueue : _nackQueue;
+                            queue.Enqueue(msg.AckId);
                         }
-                            // Ids have been added to ack/nack-queue, so trigger a push.
-                            _eventPush.Set();
+                        // Ids have been added to ack/nack-queue, so trigger a push.
+                        _eventPush.Set();
                     }));
                 }
             }
@@ -1026,7 +1040,6 @@ namespace Google.Cloud.PubSub.V1
                     {
                         lock (_lock)
                         {
-                            // Only enqueue ack IDs that are not already being acked.
                             _extendQueue.Enqueue(msgIds.Select(x => new TimedId(_extendThrottleHigh + 1, x)));
                         }
                     }
@@ -1065,11 +1078,14 @@ namespace Google.Cloud.PubSub.V1
                 lock (_lock)
                 {
                     // Priority of sending: Acks, Extends, Nacks.
-                    // Allow 2 over _maxConcurrentPush, otherwise extend/nack queues could be unfairly penalized.
+                    // This code can cause the number of concurrent pushes to go over _maxConcurrentPush
+                    // by 2. Allow this, to ensure all queues get fairly sent.
                     acks = _ackQueue.Dequeue(_maxAckExtendSendCount, null);
-                    var ackSet = new HashSet<string>(acks);
-                    extends = _extendQueue.Dequeue(_maxAckExtendSendCount, x => !ackSet.Contains(x.Id));
                     nacks = _nackQueue.Dequeue(_maxAckExtendSendCount, null);
+                    var ackSet = new HashSet<string>(acks);
+                    var nackSet = new HashSet<string>(nacks);
+                    // Only send extends for ids that aren't also about to ack or nack.
+                    extends = _extendQueue.Dequeue(_maxAckExtendSendCount, x => !ackSet.Contains(x.Id) && !nackSet.Contains(x.Id));
                 }
                 if (acks.Count > 0)
                 {
