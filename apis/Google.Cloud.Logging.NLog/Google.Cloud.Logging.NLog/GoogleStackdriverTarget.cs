@@ -104,8 +104,12 @@ namespace Google.Cloud.Logging.NLog
         /// <inheritdoc/>
         [ArrayParameter(typeof(TargetPropertyWithContext), "contextproperty")]
         public override IList<TargetPropertyWithContext> ContextProperties { get { return _contextProperties; } }
-
         private readonly List<TargetPropertyWithContext> _contextProperties;
+
+        /// <summary>
+        /// How many seconds to wait for task completion before starting new task
+        /// </summary>
+        public int TimeoutSeconds { get; set; } = 2;
 
         private LoggingServiceV2Client _client;
         private Platform _platform;
@@ -327,7 +331,7 @@ namespace Google.Cloud.Logging.NLog
                 {
                     // The task queue has become too long. We will throttle, and wait for the task-queue to become shorter
                     InternalLogger.Debug("GoogleStackdriver(Name={0}): Throttle started because {1} tasks are pending", Name, _pendingTaskCount);
-                    for (int i = 0; i < 15; ++i)
+                    for (int i = -100; i < TimeoutSeconds * 1000; i += 100)
                     {
                         belowTaskLimit = _prevTask?.Wait(100, _cancelTokenSource.Token) ?? true; // Throttle
                         if (belowTaskLimit)
@@ -356,7 +360,8 @@ namespace Google.Cloud.Logging.NLog
                 {
                     _prevTask = WriteLogEntriesBegin(null, logEntries);
                 }
-                _prevTask = _prevTask.ContinueWith(_writeLogEntriesCompleted, continuationList, _cancelTokenSource.Token);
+
+                _prevTask = _prevTask.ContinueWith(_writeLogEntriesCompleted, continuationList);
             }
             catch (Exception ex)
             {
