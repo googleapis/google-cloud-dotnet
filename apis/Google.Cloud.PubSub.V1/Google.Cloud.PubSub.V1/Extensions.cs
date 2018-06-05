@@ -15,6 +15,7 @@
 using Grpc.Core;
 using System;
 using System.Collections.Generic;
+using System.Linq;
 
 namespace Google.Cloud.PubSub.V1
 {
@@ -64,6 +65,12 @@ namespace Google.Cloud.PubSub.V1
 
         internal static IEnumerable<Exception> AllExceptions(this Exception e) =>
             (IEnumerable<Exception>)(e as AggregateException)?.Flatten().InnerExceptions ?? new[] { e };
+
+        internal static Exception FlattenIfPossible(this Exception e)
+        {
+            var exs = e.AllExceptions().ToList();
+            return exs.Count == 1 ? exs[0] : new AggregateException(exs);
+        }
 
         internal static bool IsRecoverable(this RpcException e)
         {

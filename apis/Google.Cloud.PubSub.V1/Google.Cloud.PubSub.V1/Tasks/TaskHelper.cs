@@ -30,6 +30,7 @@ namespace Google.Cloud.PubSub.V1.Tasks
         {
             public override TaskScheduler TaskScheduler => TaskScheduler.Default;
             public override Task<T> Run<T>(Func<Task<T>> function) => Task.Run(function);
+            public override Task Run(Func<Task> function) => Task.Run(function);
             public override void Wait(Task task) => task.Wait();
             public override TaskAwaitable ConfigureAwait(Task task) =>
                 new TaskAwaitable(new ForwardingAwaiter(task.ConfigureAwait(false).GetAwaiter()));

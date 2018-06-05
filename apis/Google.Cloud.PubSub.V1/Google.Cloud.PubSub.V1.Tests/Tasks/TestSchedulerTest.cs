@@ -70,7 +70,7 @@ namespace Google.Cloud.PubSub.V1.Tests.Tasks
                     {
                         tasks[i] = WaitTest(scheduler, i);
                     }
-                    await taskHelper.ConfigureAwait(Task.WhenAll(tasks));
+                    await taskHelper.ConfigureAwait(taskHelper.WhenAll(tasks));
                     return tasks.Sum(x => x.Result);
                 });
                 Assert.Equal(1000 * 999 / 2, number);
@@ -132,6 +132,29 @@ namespace Google.Cloud.PubSub.V1.Tests.Tasks
                     var ae = Assert.Throws<AggregateException>(() => taskHelper.Wait(task));
                     Assert.IsAssignableFrom<NotImplementedException>(ae.InnerException);
                     Assert.True(task.IsFaulted);
+                });
+            }
+        }
+
+        [Theory, CombinatorialData]
+        public void WhenAll([CombinatorialValues(1, 2, 3)] int threadCount)
+        {
+            using (var scheduler = new TestScheduler(threadCount: threadCount))
+            {
+                TaskHelper th = scheduler.TaskHelper;
+                scheduler.Run(async () =>
+                {
+                    var tcs1 = new TaskCompletionSource<int>();
+                    var tcs2 = new TaskCompletionSource<int>();
+                    tcs1.SetResult(0);
+                    Task delayTask = th.Run(async () =>
+                    {
+                        await th.ConfigureAwait(scheduler.Delay(TimeSpan.FromSeconds(1), CancellationToken.None));
+                        tcs2.SetResult(0);
+                    });
+                    await th.ConfigureAwait(th.WhenAll(tcs1.Task, tcs2.Task));
+                    await th.ConfigureAwait(delayTask);
+                    // Test passes if no exception is thrown.
                 });
             }
         }
