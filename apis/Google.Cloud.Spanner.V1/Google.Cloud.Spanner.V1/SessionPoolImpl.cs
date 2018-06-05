@@ -340,5 +340,20 @@ namespace Google.Cloud.Spanner.V1
 
         /// <inheritdoc />
         public event EventHandler<EventArgs> PriorityChanged;
+
+        /// <summary>
+        /// An entry in the session pool.
+        /// </summary>
+        private struct SessionPoolEntry
+        {
+            public SessionPoolEntry(Session session, CancellationTokenSource evictCancellationTokenSource)
+            {
+                Session = session;
+                EvictTaskCancellationSource = evictCancellationTokenSource;
+            }
+
+            public Session Session { get; }
+            public CancellationTokenSource EvictTaskCancellationSource { get; }
+        }
     }
 }
