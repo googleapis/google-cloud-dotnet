@@ -7,15 +7,12 @@ EndProject
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Google.Cloud.Spanner.V1.Snippets", "Google.Cloud.Spanner.V1.Snippets\Google.Cloud.Spanner.V1.Snippets.csproj", "{B5339F90-F083-48B5-A098-50D8E6145F44}"
 EndProject
 Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Solution Items", "Solution Items", "{47F159E3-3603-41F7-BDA0-96B305E05A26}"
-	ProjectSection(SolutionItems) = preProject
-		..\..\..\..\Downloads\google-cloud-dotnet\apis\Google.Cloud.Spanner.V1\Google.Coud.Spanner.AdoNet.V2\ClassDiagram1.cd = ..\..\..\..\Downloads\google-cloud-dotnet\apis\Google.Cloud.Spanner.V1\Google.Coud.Spanner.AdoNet.V2\ClassDiagram1.cd
-	EndProjectSection
 EndProject
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Google.Cloud.Spanner.V1.Tests", "Google.Cloud.Spanner.V1.Tests\Google.Cloud.Spanner.V1.Tests.csproj", "{BEBCD645-F262-4D5C-9D42-ED4A2831BA64}"
 EndProject
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Google.Cloud.ClientTesting", "..\..\tools\Google.Cloud.ClientTesting\Google.Cloud.ClientTesting.csproj", "{65CDA7BA-D484-4B0F-B1F6-8FD8EFF5168F}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Google.Cloud.Spanner.Common.V1", "..\Google.Cloud.Spanner.Common.V1\Google.Cloud.Spanner.Common.V1\Google.Cloud.Spanner.Common.V1.csproj", "{F939879A-C2EF-4CE2-97D7-1424F6D643D2}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Google.Cloud.Spanner.Common.V1", "..\Google.Cloud.Spanner.Common.V1\Google.Cloud.Spanner.Common.V1\Google.Cloud.Spanner.Common.V1.csproj", "{F939879A-C2EF-4CE2-97D7-1424F6D643D2}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -77,22 +74,22 @@ Global
 		{65CDA7BA-D484-4B0F-B1F6-8FD8EFF5168F}.Release|x86.Build.0 = Release|Any CPU
 		{F939879A-C2EF-4CE2-97D7-1424F6D643D2}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
 		{F939879A-C2EF-4CE2-97D7-1424F6D643D2}.Debug|Any CPU.Build.0 = Debug|Any CPU
-		{F939879A-C2EF-4CE2-97D7-1424F6D643D2}.Debug|x64.ActiveCfg = Debug|x64
-		{F939879A-C2EF-4CE2-97D7-1424F6D643D2}.Debug|x64.Build.0 = Debug|x64
-		{F939879A-C2EF-4CE2-97D7-1424F6D643D2}.Debug|x86.ActiveCfg = Debug|x86
-		{F939879A-C2EF-4CE2-97D7-1424F6D643D2}.Debug|x86.Build.0 = Debug|x86
+		{F939879A-C2EF-4CE2-97D7-1424F6D643D2}.Debug|x64.ActiveCfg = Debug|Any CPU
+		{F939879A-C2EF-4CE2-97D7-1424F6D643D2}.Debug|x64.Build.0 = Debug|Any CPU
+		{F939879A-C2EF-4CE2-97D7-1424F6D643D2}.Debug|x86.ActiveCfg = Debug|Any CPU
+		{F939879A-C2EF-4CE2-97D7-1424F6D643D2}.Debug|x86.Build.0 = Debug|Any CPU
 		{F939879A-C2EF-4CE2-97D7-1424F6D643D2}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{F939879A-C2EF-4CE2-97D7-1424F6D643D2}.Release|Any CPU.Build.0 = Release|Any CPU
-		{F939879A-C2EF-4CE2-97D7-1424F6D643D2}.Release|x64.ActiveCfg = Release|x64
-		{F939879A-C2EF-4CE2-97D7-1424F6D643D2}.Release|x64.Build.0 = Release|x64
-		{F939879A-C2EF-4CE2-97D7-1424F6D643D2}.Release|x86.ActiveCfg = Release|x86
-		{F939879A-C2EF-4CE2-97D7-1424F6D643D2}.Release|x86.Build.0 = Release|x86
+		{F939879A-C2EF-4CE2-97D7-1424F6D643D2}.Release|x64.ActiveCfg = Release|Any CPU
+		{F939879A-C2EF-4CE2-97D7-1424F6D643D2}.Release|x64.Build.0 = Release|Any CPU
+		{F939879A-C2EF-4CE2-97D7-1424F6D643D2}.Release|x86.ActiveCfg = Release|Any CPU
+		{F939879A-C2EF-4CE2-97D7-1424F6D643D2}.Release|x86.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
 	EndGlobalSection
 	GlobalSection(ExtensibilityGlobals) = postSolution
-		EnterpriseLibraryConfigurationToolBinariesPathV6 = packages\EnterpriseLibrary.TransientFaultHandling.6.0.1304.0\lib\portable-net45+win+wp8
 		SolutionGuid = {0D2E0AA8-1DE4-4330-A1A0-2A5AB886F23C}
+		EnterpriseLibraryConfigurationToolBinariesPathV6 = packages\EnterpriseLibrary.TransientFaultHandling.6.0.1304.0\lib\portable-net45+win+wp8
 	EndGlobalSection
 EndGlobal
