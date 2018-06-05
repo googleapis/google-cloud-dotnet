@@ -24,15 +24,11 @@ using Google.Protobuf.WellKnownTypes;
 using Grpc.Core;
 using Google.Api.Gax.Grpc;
 
-// ReSharper disable PrivateFieldCanBeConvertedToLocalVariable
-// ReSharper disable NotAccessedField.Local
-// ReSharper disable EmptyDestructor
-
 namespace Google.Cloud.Spanner.V1
 {
     /// <summary>
-    ///     Provides streaming access to a Spanner SQL query that automatically retries, handles
-    ///     chunking and recoverable errors.
+    /// Provides streaming access to a Spanner SQL query that automatically retries, handles
+    /// chunking and recoverable errors.
     /// </summary>
     public sealed class ReliableStreamReader : IDisposable
     {
@@ -72,10 +68,12 @@ namespace Google.Cloud.Spanner.V1
         public Logger Logger { get; set; } = Logger.DefaultLogger;
 
         /// <summary>
+        /// Indicates whether the reader is closed or not.
         /// </summary>
         public bool IsClosed { get; private set; }
 
         /// <summary>
+        /// Returns the session associated with this reader.
         /// </summary>
         public Session Session => _session;
 
@@ -115,10 +113,9 @@ namespace Google.Cloud.Spanner.V1
         }
 
         /// <summary>
-        ///     Connects or reconnects to Spanner, fast forwarding to where we left off based on
-        ///     our _resumeToken and _resumeSkipCount.
+        /// Connects or reconnects to Spanner, fast forwarding to where we left off based on
+        /// our _resumeToken and _resumeSkipCount.
         /// </summary>
-        /// <returns></returns>
         private async Task<bool> ReliableConnectAsync(CancellationToken cancellationToken)
         {
             if (_currentCall == null)
@@ -239,9 +236,10 @@ namespace Google.Cloud.Spanner.V1
         }
 
         /// <summary>
+        /// Asynchronously retrieves the metadata associated with this stream.
         /// </summary>
-        /// <param name="cancellationToken"></param>
-        /// <returns></returns>
+        /// <param name="cancellationToken">A cancellation token for the asynchronous operation.</param>
+        /// <returns>A task which, when completed, will contain the metadata for the stream.</returns>
         public async Task<ResultSetMetadata> GetMetadataAsync(CancellationToken cancellationToken)
         {
             await ReliableConnectAsync(cancellationToken).ConfigureAwait(false);
@@ -249,6 +247,7 @@ namespace Google.Cloud.Spanner.V1
         }
 
         /// <summary>
+        /// Closes the stream reader.
         /// </summary>
         public void Close()
         {
@@ -262,19 +261,22 @@ namespace Google.Cloud.Spanner.V1
         }
 
         /// <summary>
+        /// Event invoked when the stream is closed.
         /// </summary>
         public event EventHandler<StreamClosedEventArgs> StreamClosed;
 
         /// <summary>
+        /// Determines whether this stream has data or not.
         /// </summary>
-        /// <param name="cancellationToken"></param>
-        /// <returns></returns>
+        /// <param name="cancellationToken">A cancellation token for the asynchronous operation.</param>
+        /// <returns>A task which, when completed, will indicate whether the stream contains data.</returns>
         public Task<bool> HasDataAsync(CancellationToken cancellationToken) => ReliableConnectAsync(cancellationToken);
 
         /// <summary>
+        /// Asynchronously reads the next value from the stream.
         /// </summary>
-        /// <param name="cancellationToken"></param>
-        /// <returns></returns>
+        /// <param name="cancellationToken">A cancellation token for the asynchronous operation.</param>
+        /// <returns>A task which, when completed, will provide the next value read from the stream.</returns>
         public async Task<Value> NextAsync(CancellationToken cancellationToken)
         {
             Value result = await NextChunkAsync(cancellationToken).ConfigureAwait(false);
@@ -287,11 +289,7 @@ namespace Google.Cloud.Spanner.V1
             return result;
         }
 
-        /// <summary>
-        /// </summary>
-        /// <param name="cancellationToken"></param>
-        /// <returns></returns>
-        public async Task<Value> NextChunkAsync(CancellationToken cancellationToken)
+        private async Task<Value> NextChunkAsync(CancellationToken cancellationToken)
         {
             if (!await HasDataAsync(cancellationToken).ConfigureAwait(false))
             {
@@ -316,12 +314,13 @@ namespace Google.Cloud.Spanner.V1
         /// <inheritdoc />
         ~ReliableStreamReader()
         {
-            //If our finalizer runs, it means we were not disposed properly.
+            // If our finalizer runs, it means we were not disposed properly.
             Logger.Warn(() => "ReliableStreamReader was not disposed of properly.  A Session may have been leaked.");
         }
     }
 
     /// <summary>
+    /// Event argument type for <see cref="ReliableStreamReader.StreamClosed"/>.
     /// </summary>
     public sealed class StreamClosedEventArgs : EventArgs
     {
