@@ -12,44 +12,34 @@
 // See the License for the specific language governing permissions and
 // limitations under the License.
 
+using System;
 using System.Collections.Generic;
+using System.Linq;
 using Google.Api.Gax;
 
 namespace Google.Cloud.Spanner.V1
 {
     /// <summary>
+    /// Extension methods and factory methods for type codes.
     /// </summary>
     public static class TypeCodeExtensions
     {
         private static readonly Dictionary<string, TypeCode> s_originalNameToCode
-            = new Dictionary<string, TypeCode>
-            {
-                {TypeCode.Bool.ToString().ToUpperInvariant(), TypeCode.Bool},
-                {TypeCode.Unspecified.ToString().ToUpperInvariant(), TypeCode.Unspecified},
-                {TypeCode.Int64.ToString().ToUpperInvariant(), TypeCode.Int64},
-                {TypeCode.Float64.ToString().ToUpperInvariant(), TypeCode.Float64},
-                {TypeCode.Timestamp.ToString().ToUpperInvariant(), TypeCode.Timestamp},
-                {TypeCode.Date.ToString().ToUpperInvariant(), TypeCode.Date},
-                {TypeCode.String.ToString().ToUpperInvariant(), TypeCode.String},
-                {TypeCode.Bytes.ToString().ToUpperInvariant(), TypeCode.Bytes},
-                {TypeCode.Array.ToString().ToUpperInvariant(), TypeCode.Array},
-                {TypeCode.Struct.ToString().ToUpperInvariant(), TypeCode.Struct},
-            };
+            = Enum.GetValues(typeof(TypeCode)).Cast<TypeCode>().ToDictionary(code => code.GetOriginalName());
 
         /// <summary>
+        /// Returns the original name of a <see cref="TypeCode" />, as specified in the proto file.
         /// </summary>
-        /// <param name="typeCode"></param>
-        /// <returns></returns>
-        public static string GetOriginalName(this TypeCode typeCode)
-        {
-            return typeCode.ToString().ToUpperInvariant();
-        }
+        /// <param name="typeCode">The type code to retrieve the original name of.</param>
+        /// <returns>The original name of the type code.</returns>
+        public static string GetOriginalName(this TypeCode typeCode) =>
+            typeCode.ToString().ToUpperInvariant();
 
         /// <summary>
         /// Returns a TypeCode given its original string representation.
         /// </summary>
-        /// <param name="originalName"></param>
-        /// <returns></returns>
+        /// <param name="originalName">The original name to retrieve the type code from. Must not be null.</param>
+        /// <returns>The type code corresponding to the given name, or <see cref="TypeCode.Unspecified"/> if there is no such type code.</returns>
         public static TypeCode GetTypeCode(string originalName)
         {
             GaxPreconditions.CheckNotNull(originalName, nameof(originalName));
