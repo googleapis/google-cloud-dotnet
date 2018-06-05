@@ -28,7 +28,8 @@ using Google.Api.Gax.Grpc;
 // ReSharper disable NotAccessedField.Local
 // ReSharper disable EmptyDestructor
 
-namespace Google.Cloud.Spanner.V1 {
+namespace Google.Cloud.Spanner.V1
+{
     /// <summary>
     ///     Provides streaming access to a Spanner SQL query that automatically retries, handles
     ///     chunking and recoverable errors.
@@ -53,7 +54,8 @@ namespace Google.Cloud.Spanner.V1 {
             SpannerClient spannerClient,
             ExecuteSqlRequest request,
             Session session,
-            int timeoutSeconds) {
+            int timeoutSeconds)
+        {
             _spannerClient = spannerClient;
             _request = request;
             _session = session;
@@ -78,14 +80,17 @@ namespace Google.Cloud.Spanner.V1 {
         public Session Session => _session;
 
         /// <inheritdoc />
-        public void Dispose() {
+        public void Dispose()
+        {
             Close();
             GC.SuppressFinalize(this);
         }
 
-        private  Task<Metadata> ConnectAsync() {
+        private Task<Metadata> ConnectAsync()
+        {
             Logger.LogPerformanceCounterFn("StreamReader.ConnectCount", x => x + 1);
-            if (_resumeToken != null) {
+            if (_resumeToken != null)
+            {
                 Logger.Debug(() => $"Resuming at location:{_resumeToken}");
                 _request.ResumeToken = _resumeToken;
             }
@@ -161,8 +166,10 @@ namespace Google.Cloud.Spanner.V1 {
             return result;
         }
 
-        private async Task<bool> ReliableMoveNextAsync(CancellationToken cancellationToken) {
-            try {
+        private async Task<bool> ReliableMoveNextAsync(CancellationToken cancellationToken)
+        {
+            try
+            {
                 Logger.LogPerformanceCounterFn("StreamReader.MoveNextCount", x => x + 1);
                 _isReading = await _currentCall.ResponseStream.MoveNext(cancellationToken)
                     .WithSessionChecking(() => _session).ConfigureAwait(false);
@@ -218,10 +225,13 @@ namespace Google.Cloud.Spanner.V1 {
             }
         }
 
-        private void RecordResumeToken() {
-            if (_isReading && (_currentCall != null)) {
+        private void RecordResumeToken()
+        {
+            if (_isReading && (_currentCall != null))
+            {
                 //record resume information.
-                if (_currentCall.ResponseStream.Current.ResumeToken != null) {
+                if (_currentCall.ResponseStream.Current.ResumeToken != null)
+                {
                     _resumeToken = _currentCall.ResponseStream.Current.ResumeToken;
                     _resumeSkipCount = 0;
                 }
@@ -232,15 +242,18 @@ namespace Google.Cloud.Spanner.V1 {
         /// </summary>
         /// <param name="cancellationToken"></param>
         /// <returns></returns>
-        public async Task<ResultSetMetadata> GetMetadataAsync(CancellationToken cancellationToken) {
+        public async Task<ResultSetMetadata> GetMetadataAsync(CancellationToken cancellationToken)
+        {
             await ReliableConnectAsync(cancellationToken).ConfigureAwait(false);
             return _metadata;
         }
 
         /// <summary>
         /// </summary>
-        public void Close() {
-            if (IsClosed) {
+        public void Close()
+        {
+            if (IsClosed)
+            {
                 return;
             }
             IsClosed = true;
@@ -262,11 +275,13 @@ namespace Google.Cloud.Spanner.V1 {
         /// </summary>
         /// <param name="cancellationToken"></param>
         /// <returns></returns>
-        public async Task<Value> NextAsync(CancellationToken cancellationToken) {
+        public async Task<Value> NextAsync(CancellationToken cancellationToken)
+        {
             Value result = await NextChunkAsync(cancellationToken).ConfigureAwait(false);
             while ((result != null)
                    && _currentCall.ResponseStream.Current.ChunkedValue
-                   && (_nextIndex >= _currentCall.ResponseStream.Current.Values.Count)) {
+                   && (_nextIndex >= _currentCall.ResponseStream.Current.Values.Count))
+            {
                 result.ChunkedMerge(await NextChunkAsync(cancellationToken).ConfigureAwait(false));
             }
             return result;
@@ -276,15 +291,19 @@ namespace Google.Cloud.Spanner.V1 {
         /// </summary>
         /// <param name="cancellationToken"></param>
         /// <returns></returns>
-        public async Task<Value> NextChunkAsync(CancellationToken cancellationToken) {
-            if (!await HasDataAsync(cancellationToken).ConfigureAwait(false)) {
+        public async Task<Value> NextChunkAsync(CancellationToken cancellationToken)
+        {
+            if (!await HasDataAsync(cancellationToken).ConfigureAwait(false))
+            {
                 return null;
             }
-            if (_nextIndex >= _currentCall.ResponseStream.Current.Values.Count) {
+            if (_nextIndex >= _currentCall.ResponseStream.Current.Values.Count)
+            {
                 //we need to move next
                 _isReading = await ReliableMoveNextAsync(cancellationToken).ConfigureAwait(false);
                 _nextIndex = 0;
-                if (!_isReading) {
+                if (!_isReading)
+                {
                     return null;
                 }
             }
@@ -295,7 +314,8 @@ namespace Google.Cloud.Spanner.V1 {
         }
 
         /// <inheritdoc />
-        ~ReliableStreamReader() {
+        ~ReliableStreamReader()
+        {
             //If our finalizer runs, it means we were not disposed properly.
             Logger.Warn(() => "ReliableStreamReader was not disposed of properly.  A Session may have been leaked.");
         }
@@ -303,6 +323,7 @@ namespace Google.Cloud.Spanner.V1 {
 
     /// <summary>
     /// </summary>
-    public sealed class StreamClosedEventArgs : EventArgs {
+    public sealed class StreamClosedEventArgs : EventArgs
+    {
     }
 }
