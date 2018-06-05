@@ -128,7 +128,7 @@ namespace Google.Cloud.Spanner.V1
             {
                 try
                 {
-                    await Key.Client.DeleteSessionAsync(entry.Session.GetSessionName(), cancellationToken)
+                    await Key.Client.DeleteSessionAsync(entry.Session.SessionName, cancellationToken)
                         .ConfigureAwait(false);
                 }
                 catch (ObjectDisposedException)
