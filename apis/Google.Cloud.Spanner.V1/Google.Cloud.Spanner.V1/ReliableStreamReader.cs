@@ -23,6 +23,8 @@ using Google.Protobuf;
 using Google.Protobuf.WellKnownTypes;
 using Grpc.Core;
 using Google.Api.Gax.Grpc;
+using System.Linq;
+using System.IO;
 
 namespace Google.Cloud.Spanner.V1
 {
@@ -280,11 +282,14 @@ namespace Google.Cloud.Spanner.V1
         public async Task<Value> NextAsync(CancellationToken cancellationToken)
         {
             Value result = await NextChunkAsync(cancellationToken).ConfigureAwait(false);
-            while ((result != null)
-                   && _currentCall.ResponseStream.Current.ChunkedValue
-                   && (_nextIndex >= _currentCall.ResponseStream.Current.Values.Count))
+            // If we have a chunk, and it's the last value within the current response, and it's marked as a chunked
+            // value, we need to merge it with the first value in the next response. We may need to do this multiple
+            // times, if a single value is split across multiple responses.
+            while (result != null &&
+                   _nextIndex >= _currentCall.ResponseStream.Current.Values.Count &&
+                   _currentCall.ResponseStream.Current.ChunkedValue)
             {
-                result.ChunkedMerge(await NextChunkAsync(cancellationToken).ConfigureAwait(false));
+                MergeChunk(result, await NextChunkAsync(cancellationToken).ConfigureAwait(false));
             }
             return result;
         }
@@ -297,7 +302,7 @@ namespace Google.Cloud.Spanner.V1
             }
             if (_nextIndex >= _currentCall.ResponseStream.Current.Values.Count)
             {
-                //we need to move next
+                // We've exhausted this response; move to the next one.
                 _isReading = await ReliableMoveNextAsync(cancellationToken).ConfigureAwait(false);
                 _nextIndex = 0;
                 if (!_isReading)
@@ -316,6 +321,69 @@ namespace Google.Cloud.Spanner.V1
         {
             // If our finalizer runs, it means we were not disposed properly.
             Logger.Warn(() => "ReliableStreamReader was not disposed of properly.  A Session may have been leaked.");
+        }
+
+        /// <summary>
+        /// Merges <paramref name="nextValue"/> into <paramref name="currentValue"/>.
+        /// </summary>
+        private static void MergeChunk(Value currentValue, Value nextValue)
+        {
+            switch (currentValue.KindCase)
+            {
+                case Value.KindOneofCase.StringValue:
+                    // Simple concatentation
+                    currentValue.StringValue = currentValue.StringValue + nextValue.StringValue;
+                    break;
+                case Value.KindOneofCase.StructValue:
+                    foreach (var fieldValue in nextValue.StructValue.Fields)
+                    {
+                        Value thisChildField;
+                        if (currentValue.StructValue.Fields.TryGetValue(fieldValue.Key, out thisChildField))
+                        {
+                            // Merge duplicated keys
+                            MergeChunk(thisChildField, fieldValue.Value);
+                        }
+                        else
+                        {
+                            currentValue.StructValue.Fields[fieldValue.Key] = fieldValue.Value;
+                        }
+                    }
+                    break;
+                case Value.KindOneofCase.ListValue:
+                    // When merging a ListValue, we examine the last item in the list.
+                    // If that item is mergeable, we then merge that item with the first item in the other list.
+                    var childItemValue = currentValue.ListValue.Values.LastOrDefault();
+                    int iterator = 0;
+                    if (IsMergeable(childItemValue))
+                    {
+                        MergeChunk(childItemValue, nextValue.ListValue.Values.First());
+                        iterator++;
+                    }
+                    for (; iterator < nextValue.ListValue.Values.Count; iterator++)
+                    {
+                        currentValue.ListValue.Values.Add(nextValue.ListValue.Values[iterator]);
+                    }
+                    break;
+                default:
+                    throw new IOException($"The value of type {currentValue.KindCase} cannot be merged as a chunk.");
+            }
+
+            bool IsMergeable(Value value)
+            {
+                if (value == null)
+                {
+                    return false;
+                }
+                switch (value.KindCase)
+                {
+                    case Value.KindOneofCase.StringValue:
+                    case Value.KindOneofCase.StructValue:
+                    case Value.KindOneofCase.ListValue:
+                        return true;
+                    default:
+                        return false;
+                }
+            }
         }
     }
 
