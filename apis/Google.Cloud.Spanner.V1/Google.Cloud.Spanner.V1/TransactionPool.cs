@@ -74,7 +74,7 @@ namespace Google.Cloud.Spanner.V1
                 }
                 //cache hit, but no match on options
                 Session ignored;
-                s_activeTransactionTable.TryRemove(info.ActiveTransaction.GetTransactionId(), out ignored);
+                s_activeTransactionTable.TryRemove(info.ActiveTransaction.Id, out ignored);
             }
 
             //ok, our cache hit didnt work for whatever reason.  Let's create a transaction with the given options and return it.
@@ -82,7 +82,7 @@ namespace Google.Cloud.Spanner.V1
             await info.CreateTransactionAsync(session, options).ConfigureAwait(false);
             if (info.ActiveTransaction != null)
             {
-                s_activeTransactionTable.AddOrUpdate(info.ActiveTransaction.GetTransactionId(), session, (id, s) => session);
+                s_activeTransactionTable.AddOrUpdate(info.ActiveTransaction.Id, session, (id, s) => session);
             }
             return info.ActiveTransaction;
         }
@@ -101,7 +101,7 @@ namespace Google.Cloud.Spanner.V1
                 if (info.HasActiveTransaction)
                 {
                     Session ignored;
-                    s_activeTransactionTable.TryRemove(info.ActiveTransaction.GetTransactionId(), out ignored); //clear out old tx.
+                    s_activeTransactionTable.TryRemove(info.ActiveTransaction.Id, out ignored); //clear out old tx.
                 }
                 s_sessionInfoTable.TryRemove(session, out info); //implicit transaction is active on session.
             }
@@ -163,7 +163,7 @@ namespace Google.Cloud.Spanner.V1
             IEnumerable<Mutation> mutations, int timeoutSeconds)
         {
             return RunFinalMethodAsync(transaction, session, info => info.SpannerClient.CommitAsync(
-                            session.SessionName, info.ActiveTransaction.GetTransactionId(), mutations,
+                            session.SessionName, info.ActiveTransaction.Id, mutations,
                             info.SpannerClient.Settings.CommitSettings.WithExpiration(info.SpannerClient.Settings.ConvertTimeoutToExpiration(timeoutSeconds)))
                         .WithSessionChecking(() => session));
         }
@@ -182,8 +182,8 @@ namespace Google.Cloud.Spanner.V1
                 {
                     await info.SpannerClient
                         .RollbackAsync(
-                            session.GetSessionName(),
-                            info.ActiveTransaction.GetTransactionId(),
+                            session.SessionName,
+                            info.ActiveTransaction.Id,
                             info.SpannerClient.Settings.RollbackSettings.WithExpiration(
                                 info.SpannerClient.Settings.ConvertTimeoutToExpiration(timeoutSeconds)))
                         .WithSessionChecking(() => session).ConfigureAwait(false);
@@ -214,7 +214,7 @@ namespace Google.Cloud.Spanner.V1
                 finally
                 {
                     Session ignored;
-                    s_activeTransactionTable.TryRemove(info.ActiveTransaction.GetTransactionId(), out ignored);
+                    s_activeTransactionTable.TryRemove(info.ActiveTransaction.Id, out ignored);
                     info.MarkTransactionUsed();
                 }
             }

@@ -342,7 +342,7 @@ namespace Google.Cloud.Spanner.V1
             Session evictionSession)
         {
             await evictionSession.RemoveFromTransactionPoolAsync().ConfigureAwait(false);
-            await evictionClient.DeleteSessionAsync(evictionSession.GetSessionName()).ConfigureAwait(false);
+            await evictionClient.DeleteSessionAsync(evictionSession.SessionName).ConfigureAwait(false);
         }
 
         /// <summary>
@@ -359,7 +359,7 @@ namespace Google.Cloud.Spanner.V1
             {
                 LogSessionsInUse();
                 SignalAnyWaitingRequests();
-                await result.Client.DeleteSessionAsync(session.GetSessionName()).ConfigureAwait(false);
+                await result.Client.DeleteSessionAsync(session.SessionName).ConfigureAwait(false);
                 return;
             }
             throw new InvalidOperationException(
