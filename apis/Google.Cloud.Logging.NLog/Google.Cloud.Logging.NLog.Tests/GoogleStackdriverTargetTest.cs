@@ -1,4 +1,4 @@
-﻿// Copyright 2016 Google Inc. All Rights Reserved.
+﻿// Copyright 2018 Google Inc. All Rights Reserved.
 //
 // Licensed under the Apache License, Version 2.0 (the "License");
 // you may not use this file except in compliance with the License.
@@ -214,6 +214,35 @@ namespace Google.Cloud.Logging.NLog.Tests
                 });
             Assert.Equal(5, uploadedEntries.Count);
             Assert.Equal(logs, uploadedEntries.Select(x => x.TextPayload.Trim()));
+        }
+
+        // Note: This test blocks for 1 second.
+        [Fact]
+        public async Task RetryWrites()
+        {
+            var incompleteTcs = new TaskCompletionSource<WriteLogEntriesResponse>();
+            List<LogEntry> uploadedEntries = new List<LogEntry>();
+            await RunTest(
+                entries =>
+                {
+                    lock (uploadedEntries)
+                    {
+                        uploadedEntries.AddRange(entries);
+                    }
+                    return incompleteTcs.Task;
+                },
+                googleTarget =>
+                {
+                    googleTarget.TimeoutSeconds = 1;
+                    googleTarget.TaskPendingLimit = 2;
+                    LogInfo("1");
+                    LogInfo("2");
+                    LogInfo("3");
+                    return Task.FromResult(0);
+                });
+            // "2" is missing because it's queued after "1", but "1" never completes.
+            // "3" is present because the initial task-pending queue times-out, "3" is sent on a new queue.
+            Assert.Equal(new[] { "1", "3" }, uploadedEntries.Select(x => x.TextPayload));
         }
 
         [Fact]
