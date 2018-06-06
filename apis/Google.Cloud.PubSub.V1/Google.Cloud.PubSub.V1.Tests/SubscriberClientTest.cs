@@ -149,7 +149,7 @@ namespace Google.Cloud.PubSub.V1.Tests
             private class PullStream : StreamingPullStream
             {
                 public PullStream(TimeSpan writeAsyncPreDelay,
-                    IEnumerable<ServerAction> msgs, List<DateTime> writeCompletes,
+                    IEnumerable<ServerAction> msgs, List<DateTime> writeCompletes, List<DateTime> streamPings,
                     IScheduler scheduler, IClock clock, TaskHelper taskHelper, bool useMsgAsId, CancellationToken? ct)
                 {
                     _taskHelper = taskHelper;
@@ -158,6 +158,7 @@ namespace Google.Cloud.PubSub.V1.Tests
                     _en = new En(msgs, scheduler, taskHelper, clock, useMsgAsId, ct);
                     _clock = clock;
                     _writeCompletes = writeCompletes;
+                    _streamPings = streamPings;
                 }
 
                 private readonly object _lock = new object();
@@ -167,6 +168,7 @@ namespace Google.Cloud.PubSub.V1.Tests
                 private readonly IAsyncEnumerator<StreamingPullResponse> _en;
                 private readonly IClock _clock;
                 private readonly List<DateTime> _writeCompletes;
+                private readonly List<DateTime> _streamPings;
 
                 public override IAsyncEnumerator<StreamingPullResponse> ResponseStream => _en;
 
@@ -176,7 +178,14 @@ namespace Google.Cloud.PubSub.V1.Tests
                     {
                         throw new InvalidOperationException("WriteAsync must not modify deadlines or send acks/nacks.");
                     }
-                    // TODO: Record write time
+                    if (Equals(message, new StreamingPullRequest()))
+                    {
+                        // An empty message is a ping
+                        lock (_lock)
+                        {
+                            _streamPings.Add(_clock.GetCurrentDateTimeUtc());
+                        }
+                    }
                     return Task.FromResult(0);
                 }
 
@@ -214,11 +223,13 @@ namespace Google.Cloud.PubSub.V1.Tests
             private readonly List<TimedId> _acks = new List<TimedId>();
             private readonly List<TimedId> _nacks = new List<TimedId>();
             private readonly List<DateTime> _writeCompletes = new List<DateTime>();
+            private readonly List<DateTime> _streamPings = new List<DateTime>();
 
             public IReadOnlyList<TimedId> Extends => _extends;
             public IReadOnlyList<TimedId> Acks => _acks;
             public IReadOnlyList<TimedId> Nacks => _nacks;
             public IReadOnlyList<DateTime> WriteCompletes => _writeCompletes;
+            public IReadOnlyList<DateTime> StreamPings => _streamPings;
 
             public override StreamingPullStream StreamingPull(
                 CallSettings callSettings = null, BidirectionalStreamingSettings streamingSettings = null)
@@ -230,7 +241,7 @@ namespace Google.Cloud.PubSub.V1.Tests
                         throw new InvalidOperationException("Test subscriber creation failed. Run out of (fake) data");
                     }
                     var msgs = _msgsEn.Current;
-                    return new PullStream(_writeAsyncPreDelay, msgs, _writeCompletes,
+                    return new PullStream(_writeAsyncPreDelay, msgs, _writeCompletes, _streamPings,
                         _scheduler, _clock, _taskHelper, _useMsgAsId, callSettings?.CancellationToken);
                 }
             }
@@ -664,6 +675,34 @@ namespace Google.Cloud.PubSub.V1.Tests
                     var expectedMinDuration = TimeSpan.FromTicks(preDelay.Ticks * msgCount / flowMaxEls);
                     var duration = sub.Acks.Last().Time - sub.Acks.First().Time;
                     Assert.True(duration >= expectedMinDuration, $"Pull not throttled (acks) {duration} should be >= {expectedMinDuration}");
+                });
+            }
+        }
+
+        [Fact]
+        public void StreamPings()
+        {
+            const int pingPeriodSeconds = 25; // From SubscriberClient.
+            const int pingCount = 10;
+            var msgs = new[] { ServerAction.Data(TimeSpan.Zero, new[] { "1" }), ServerAction.Inf() };
+            using (var fake = Fake.Create(new[] { msgs }))
+            {
+                var th = fake.TaskHelper;
+                fake.Scheduler.Run(async () =>
+                {
+                    var incompleteTcs = new TaskCompletionSource<SubscriberClient.Reply>();
+                    var subTask = fake.Subscriber.StartAsync((msg, ct) => incompleteTcs.Task);
+                    // Wait for the time required for pingCount stream pings.
+                    await th.ConfigureAwait(fake.Scheduler.Delay(TimeSpan.FromSeconds(pingPeriodSeconds * pingCount) + TimeSpan.FromSeconds(1), CancellationToken.None));
+                    // Complete the handler task, which will cause pings to stop.
+                    incompleteTcs.SetCanceled();
+                    // Wait a bit longer, to check no more pings happen.
+                    await th.ConfigureAwait(fake.Scheduler.Delay(TimeSpan.FromSeconds(pingPeriodSeconds * 4), CancellationToken.None));
+                    // Stop subscriber.
+                    await th.ConfigureAwait(fake.Subscriber.StopAsync(CancellationToken.None));
+                    await th.ConfigureAwait(subTask);
+                    var expectedPings = Enumerable.Range(0, pingCount).Select(i => fake.Time0 + TimeSpan.FromSeconds(pingPeriodSeconds * (i + 1)));
+                    Assert.Equal(expectedPings, fake.Subscribers[0].StreamPings);
                 });
             }
         }

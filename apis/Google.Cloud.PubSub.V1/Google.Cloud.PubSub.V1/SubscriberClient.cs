@@ -783,15 +783,20 @@ namespace Google.Cloud.PubSub.V1
             private readonly static BackoffSettings s_pullBackoff = new BackoffSettings(TimeSpan.FromSeconds(0.5), TimeSpan.FromSeconds(30), 2.0);
             private TimeSpan? _pullBackoff = null;
 
+            // Stream shutdown occurs after 1 minute, so ensure we're always before that.
+            private readonly static TimeSpan s_streamPingPeriod = TimeSpan.FromSeconds(25);
+
             public async Task StartAsync()
             {
                 // Start pull.
                 StartStreamingPull();
                 // Start push.
                 HandlePush();
+                // Start stream-keep-alive ping
+                HandleStreamPing();
                 // Start event loop.
                 // This loop exits by an action throwing a error or cancellation exception.
-                while (!IsComplete())
+                while (!(_pullComplete && IsPushComplete()))
                 {
                     // Wait for, then process next continuation.
                     TaskNextAction nextContinuation = await _taskHelper.ConfigureAwait(_continuationQueue.DequeueAsync());
@@ -822,13 +827,13 @@ namespace Google.Cloud.PubSub.V1
                 _pushStopCts.Cancel();
             }
 
-            private bool IsComplete()
+            private bool IsPushComplete()
             {
                 // extend-queue not included, as these have no effect after shutdown.
                 // Lock required for ackQueue and nackQueue.
                 lock (_lock)
                 {
-                    return _pullComplete && _ackQueue.Count == 0 && _nackQueue.Count == 0 && _pushInFlight == 0 && _userHandlerInFlight == 0;
+                    return _ackQueue.Count == 0 && _nackQueue.Count == 0 && _pushInFlight == 0 && _userHandlerInFlight == 0;
                 }
             }
 
@@ -1148,6 +1153,36 @@ namespace Google.Cloud.PubSub.V1
                 }
                 // Immediately send more data if there is any to send.
                 StartPush();
+            }
+
+            private void HandleStreamPing()
+            {
+                // Need to explicitly check this, as the continuation passed to Add() may be executed
+                // regardless of the fault/cancellation state of the Task.
+                if (_softStopCts.IsCancellationRequested)
+                {
+                    // No more pings when subscriber stopping.
+                    return;
+                }
+                // Schedule next ping, this never stops whilst this subscriber as active
+                Add(_scheduler.Delay(s_streamPingPeriod, _softStopCts.Token), Next(false, HandleStreamPing));
+                // If messages are currently being processed, then ping the stream periodically;
+                // this ensures the stream isn't closed.
+                // If the stream is closed, then all gRPC-buffered messages have their server-side
+                // expiry timers started, when the client hasn't yet started processing these messages.
+                // This can lead to unncessarily duplicated messages.
+                if (!IsPushComplete() && _pull != null)
+                {
+                    // Write an empty message to the stream
+                    try
+                    {
+                        _pull.WriteAsync(new StreamingPullRequest());
+                    }
+                    catch
+                    {
+                        // Ignore any errors.
+                    }
+                }
             }
         }
     }
