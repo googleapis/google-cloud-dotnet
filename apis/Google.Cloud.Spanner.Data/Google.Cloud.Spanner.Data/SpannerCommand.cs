@@ -389,7 +389,7 @@ namespace Google.Cloud.Spanner.Data
                 }
                 else if (spannerCommandTextBuilder.IsDropDatabaseCommand)
                 {
-                    if (spannerCommandTextBuilder.ExtraStatements?.Length > 0)
+                    if (spannerCommandTextBuilder.ExtraStatements?.Count > 0)
                     {
                         throw new InvalidOperationException(
                             "Drop database commands do not support additional ddl statements");

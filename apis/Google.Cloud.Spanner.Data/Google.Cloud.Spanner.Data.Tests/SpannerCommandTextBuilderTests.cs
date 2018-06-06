@@ -41,18 +41,19 @@ namespace Google.Cloud.Spanner.Data.Tests
             }
         }
 
-        [Theory]
-        [InlineData("DROPDATABASE FOO;")]
-        [InlineData("DROP DATABASE FOO BAR")]
-        public void DropDatabaseNegative(string ddlString)
+        [Fact]
+        public void DropDatabase_UnrecognizedCommand()
         {
-            Assert.Throws<InvalidOperationException>(
-                () =>
-                {
-                    var builder = new SpannerCommandTextBuilder(ddlString);
-                    // ReSharper disable once UnusedVariable
-                    string ignored = builder.DatabaseToDrop;
-                });
+            Assert.Throws<ArgumentException>(() => new SpannerCommandTextBuilder("DROPDATABASE FOO;"));
+        }
+
+        [Fact]
+        public void DropDatabase_TooManyValues()
+        {
+            // Arguably this should throw an ArgumentException on construction, but for the moment, we'll
+            // stick with the v1.0 behavior.
+            var builder = new SpannerCommandTextBuilder("DROP DATABASE FOO BAR;");
+            Assert.Throws<InvalidOperationException>(() => builder.DatabaseToDrop.ToString());
         }
 
         [Theory]
