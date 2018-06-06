@@ -323,7 +323,7 @@ namespace Google.Cloud.Logging.NLog
 
         private void WriteLogEntries(IList<LogEntry> logEntries, object continuationList)
         {
-            bool belowTaskLimit = Interlocked.Increment(ref _pendingTaskCount) < TaskPendingLimit;
+            bool belowTaskLimit = Interlocked.Increment(ref _pendingTaskCount) <= TaskPendingLimit;
 
             try
             {
