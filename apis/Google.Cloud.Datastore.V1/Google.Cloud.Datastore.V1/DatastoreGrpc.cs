@@ -20,9 +20,6 @@
 #pragma warning disable 1591
 #region Designer generated code
 
-using System;
-using System.Threading;
-using System.Threading.Tasks;
 using grpc = global::Grpc.Core;
 
 namespace Google.Cloud.Datastore.V1 {
@@ -224,7 +221,7 @@ namespace Google.Cloud.Datastore.V1 {
       /// <param name="deadline">An optional deadline for the call. The call will be cancelled if deadline is hit.</param>
       /// <param name="cancellationToken">An optional token for canceling the call.</param>
       /// <returns>The response received from the server.</returns>
-      public virtual global::Google.Cloud.Datastore.V1.LookupResponse Lookup(global::Google.Cloud.Datastore.V1.LookupRequest request, grpc::Metadata headers = null, DateTime? deadline = null, CancellationToken cancellationToken = default(CancellationToken))
+      public virtual global::Google.Cloud.Datastore.V1.LookupResponse Lookup(global::Google.Cloud.Datastore.V1.LookupRequest request, grpc::Metadata headers = null, global::System.DateTime? deadline = null, global::System.Threading.CancellationToken cancellationToken = default(global::System.Threading.CancellationToken))
       {
         return Lookup(request, new grpc::CallOptions(headers, deadline, cancellationToken));
       }
@@ -246,7 +243,7 @@ namespace Google.Cloud.Datastore.V1 {
       /// <param name="deadline">An optional deadline for the call. The call will be cancelled if deadline is hit.</param>
       /// <param name="cancellationToken">An optional token for canceling the call.</param>
       /// <returns>The call object.</returns>
-      public virtual grpc::AsyncUnaryCall<global::Google.Cloud.Datastore.V1.LookupResponse> LookupAsync(global::Google.Cloud.Datastore.V1.LookupRequest request, grpc::Metadata headers = null, DateTime? deadline = null, CancellationToken cancellationToken = default(CancellationToken))
+      public virtual grpc::AsyncUnaryCall<global::Google.Cloud.Datastore.V1.LookupResponse> LookupAsync(global::Google.Cloud.Datastore.V1.LookupRequest request, grpc::Metadata headers = null, global::System.DateTime? deadline = null, global::System.Threading.CancellationToken cancellationToken = default(global::System.Threading.CancellationToken))
       {
         return LookupAsync(request, new grpc::CallOptions(headers, deadline, cancellationToken));
       }
@@ -268,7 +265,7 @@ namespace Google.Cloud.Datastore.V1 {
       /// <param name="deadline">An optional deadline for the call. The call will be cancelled if deadline is hit.</param>
       /// <param name="cancellationToken">An optional token for canceling the call.</param>
       /// <returns>The response received from the server.</returns>
-      public virtual global::Google.Cloud.Datastore.V1.RunQueryResponse RunQuery(global::Google.Cloud.Datastore.V1.RunQueryRequest request, grpc::Metadata headers = null, DateTime? deadline = null, CancellationToken cancellationToken = default(CancellationToken))
+      public virtual global::Google.Cloud.Datastore.V1.RunQueryResponse RunQuery(global::Google.Cloud.Datastore.V1.RunQueryRequest request, grpc::Metadata headers = null, global::System.DateTime? deadline = null, global::System.Threading.CancellationToken cancellationToken = default(global::System.Threading.CancellationToken))
       {
         return RunQuery(request, new grpc::CallOptions(headers, deadline, cancellationToken));
       }
@@ -290,7 +287,7 @@ namespace Google.Cloud.Datastore.V1 {
       /// <param name="deadline">An optional deadline for the call. The call will be cancelled if deadline is hit.</param>
       /// <param name="cancellationToken">An optional token for canceling the call.</param>
       /// <returns>The call object.</returns>
-      public virtual grpc::AsyncUnaryCall<global::Google.Cloud.Datastore.V1.RunQueryResponse> RunQueryAsync(global::Google.Cloud.Datastore.V1.RunQueryRequest request, grpc::Metadata headers = null, DateTime? deadline = null, CancellationToken cancellationToken = default(CancellationToken))
+      public virtual grpc::AsyncUnaryCall<global::Google.Cloud.Datastore.V1.RunQueryResponse> RunQueryAsync(global::Google.Cloud.Datastore.V1.RunQueryRequest request, grpc::Metadata headers = null, global::System.DateTime? deadline = null, global::System.Threading.CancellationToken cancellationToken = default(global::System.Threading.CancellationToken))
       {
         return RunQueryAsync(request, new grpc::CallOptions(headers, deadline, cancellationToken));
       }
@@ -312,7 +309,7 @@ namespace Google.Cloud.Datastore.V1 {
       /// <param name="deadline">An optional deadline for the call. The call will be cancelled if deadline is hit.</param>
       /// <param name="cancellationToken">An optional token for canceling the call.</param>
       /// <returns>The response received from the server.</returns>
-      public virtual global::Google.Cloud.Datastore.V1.BeginTransactionResponse BeginTransaction(global::Google.Cloud.Datastore.V1.BeginTransactionRequest request, grpc::Metadata headers = null, DateTime? deadline = null, CancellationToken cancellationToken = default(CancellationToken))
+      public virtual global::Google.Cloud.Datastore.V1.BeginTransactionResponse BeginTransaction(global::Google.Cloud.Datastore.V1.BeginTransactionRequest request, grpc::Metadata headers = null, global::System.DateTime? deadline = null, global::System.Threading.CancellationToken cancellationToken = default(global::System.Threading.CancellationToken))
       {
         return BeginTransaction(request, new grpc::CallOptions(headers, deadline, cancellationToken));
       }
@@ -334,7 +331,7 @@ namespace Google.Cloud.Datastore.V1 {
       /// <param name="deadline">An optional deadline for the call. The call will be cancelled if deadline is hit.</param>
       /// <param name="cancellationToken">An optional token for canceling the call.</param>
       /// <returns>The call object.</returns>
-      public virtual grpc::AsyncUnaryCall<global::Google.Cloud.Datastore.V1.BeginTransactionResponse> BeginTransactionAsync(global::Google.Cloud.Datastore.V1.BeginTransactionRequest request, grpc::Metadata headers = null, DateTime? deadline = null, CancellationToken cancellationToken = default(CancellationToken))
+      public virtual grpc::AsyncUnaryCall<global::Google.Cloud.Datastore.V1.BeginTransactionResponse> BeginTransactionAsync(global::Google.Cloud.Datastore.V1.BeginTransactionRequest request, grpc::Metadata headers = null, global::System.DateTime? deadline = null, global::System.Threading.CancellationToken cancellationToken = default(global::System.Threading.CancellationToken))
       {
         return BeginTransactionAsync(request, new grpc::CallOptions(headers, deadline, cancellationToken));
       }
@@ -357,7 +354,7 @@ namespace Google.Cloud.Datastore.V1 {
       /// <param name="deadline">An optional deadline for the call. The call will be cancelled if deadline is hit.</param>
       /// <param name="cancellationToken">An optional token for canceling the call.</param>
       /// <returns>The response received from the server.</returns>
-      public virtual global::Google.Cloud.Datastore.V1.CommitResponse Commit(global::Google.Cloud.Datastore.V1.CommitRequest request, grpc::Metadata headers = null, DateTime? deadline = null, CancellationToken cancellationToken = default(CancellationToken))
+      public virtual global::Google.Cloud.Datastore.V1.CommitResponse Commit(global::Google.Cloud.Datastore.V1.CommitRequest request, grpc::Metadata headers = null, global::System.DateTime? deadline = null, global::System.Threading.CancellationToken cancellationToken = default(global::System.Threading.CancellationToken))
       {
         return Commit(request, new grpc::CallOptions(headers, deadline, cancellationToken));
       }
@@ -381,7 +378,7 @@ namespace Google.Cloud.Datastore.V1 {
       /// <param name="deadline">An optional deadline for the call. The call will be cancelled if deadline is hit.</param>
       /// <param name="cancellationToken">An optional token for canceling the call.</param>
       /// <returns>The call object.</returns>
-      public virtual grpc::AsyncUnaryCall<global::Google.Cloud.Datastore.V1.CommitResponse> CommitAsync(global::Google.Cloud.Datastore.V1.CommitRequest request, grpc::Metadata headers = null, DateTime? deadline = null, CancellationToken cancellationToken = default(CancellationToken))
+      public virtual grpc::AsyncUnaryCall<global::Google.Cloud.Datastore.V1.CommitResponse> CommitAsync(global::Google.Cloud.Datastore.V1.CommitRequest request, grpc::Metadata headers = null, global::System.DateTime? deadline = null, global::System.Threading.CancellationToken cancellationToken = default(global::System.Threading.CancellationToken))
       {
         return CommitAsync(request, new grpc::CallOptions(headers, deadline, cancellationToken));
       }
@@ -404,7 +401,7 @@ namespace Google.Cloud.Datastore.V1 {
       /// <param name="deadline">An optional deadline for the call. The call will be cancelled if deadline is hit.</param>
       /// <param name="cancellationToken">An optional token for canceling the call.</param>
       /// <returns>The response received from the server.</returns>
-      public virtual global::Google.Cloud.Datastore.V1.RollbackResponse Rollback(global::Google.Cloud.Datastore.V1.RollbackRequest request, grpc::Metadata headers = null, DateTime? deadline = null, CancellationToken cancellationToken = default(CancellationToken))
+      public virtual global::Google.Cloud.Datastore.V1.RollbackResponse Rollback(global::Google.Cloud.Datastore.V1.RollbackRequest request, grpc::Metadata headers = null, global::System.DateTime? deadline = null, global::System.Threading.CancellationToken cancellationToken = default(global::System.Threading.CancellationToken))
       {
         return Rollback(request, new grpc::CallOptions(headers, deadline, cancellationToken));
       }
@@ -426,7 +423,7 @@ namespace Google.Cloud.Datastore.V1 {
       /// <param name="deadline">An optional deadline for the call. The call will be cancelled if deadline is hit.</param>
       /// <param name="cancellationToken">An optional token for canceling the call.</param>
       /// <returns>The call object.</returns>
-      public virtual grpc::AsyncUnaryCall<global::Google.Cloud.Datastore.V1.RollbackResponse> RollbackAsync(global::Google.Cloud.Datastore.V1.RollbackRequest request, grpc::Metadata headers = null, DateTime? deadline = null, CancellationToken cancellationToken = default(CancellationToken))
+      public virtual grpc::AsyncUnaryCall<global::Google.Cloud.Datastore.V1.RollbackResponse> RollbackAsync(global::Google.Cloud.Datastore.V1.RollbackRequest request, grpc::Metadata headers = null, global::System.DateTime? deadline = null, global::System.Threading.CancellationToken cancellationToken = default(global::System.Threading.CancellationToken))
       {
         return RollbackAsync(request, new grpc::CallOptions(headers, deadline, cancellationToken));
       }
@@ -449,7 +446,7 @@ namespace Google.Cloud.Datastore.V1 {
       /// <param name="deadline">An optional deadline for the call. The call will be cancelled if deadline is hit.</param>
       /// <param name="cancellationToken">An optional token for canceling the call.</param>
       /// <returns>The response received from the server.</returns>
-      public virtual global::Google.Cloud.Datastore.V1.AllocateIdsResponse AllocateIds(global::Google.Cloud.Datastore.V1.AllocateIdsRequest request, grpc::Metadata headers = null, DateTime? deadline = null, CancellationToken cancellationToken = default(CancellationToken))
+      public virtual global::Google.Cloud.Datastore.V1.AllocateIdsResponse AllocateIds(global::Google.Cloud.Datastore.V1.AllocateIdsRequest request, grpc::Metadata headers = null, global::System.DateTime? deadline = null, global::System.Threading.CancellationToken cancellationToken = default(global::System.Threading.CancellationToken))
       {
         return AllocateIds(request, new grpc::CallOptions(headers, deadline, cancellationToken));
       }
@@ -473,7 +470,7 @@ namespace Google.Cloud.Datastore.V1 {
       /// <param name="deadline">An optional deadline for the call. The call will be cancelled if deadline is hit.</param>
       /// <param name="cancellationToken">An optional token for canceling the call.</param>
       /// <returns>The call object.</returns>
-      public virtual grpc::AsyncUnaryCall<global::Google.Cloud.Datastore.V1.AllocateIdsResponse> AllocateIdsAsync(global::Google.Cloud.Datastore.V1.AllocateIdsRequest request, grpc::Metadata headers = null, DateTime? deadline = null, CancellationToken cancellationToken = default(CancellationToken))
+      public virtual grpc::AsyncUnaryCall<global::Google.Cloud.Datastore.V1.AllocateIdsResponse> AllocateIdsAsync(global::Google.Cloud.Datastore.V1.AllocateIdsRequest request, grpc::Metadata headers = null, global::System.DateTime? deadline = null, global::System.Threading.CancellationToken cancellationToken = default(global::System.Threading.CancellationToken))
       {
         return AllocateIdsAsync(request, new grpc::CallOptions(headers, deadline, cancellationToken));
       }
@@ -497,7 +494,7 @@ namespace Google.Cloud.Datastore.V1 {
       /// <param name="deadline">An optional deadline for the call. The call will be cancelled if deadline is hit.</param>
       /// <param name="cancellationToken">An optional token for canceling the call.</param>
       /// <returns>The response received from the server.</returns>
-      public virtual global::Google.Cloud.Datastore.V1.ReserveIdsResponse ReserveIds(global::Google.Cloud.Datastore.V1.ReserveIdsRequest request, grpc::Metadata headers = null, DateTime? deadline = null, CancellationToken cancellationToken = default(CancellationToken))
+      public virtual global::Google.Cloud.Datastore.V1.ReserveIdsResponse ReserveIds(global::Google.Cloud.Datastore.V1.ReserveIdsRequest request, grpc::Metadata headers = null, global::System.DateTime? deadline = null, global::System.Threading.CancellationToken cancellationToken = default(global::System.Threading.CancellationToken))
       {
         return ReserveIds(request, new grpc::CallOptions(headers, deadline, cancellationToken));
       }
@@ -521,7 +518,7 @@ namespace Google.Cloud.Datastore.V1 {
       /// <param name="deadline">An optional deadline for the call. The call will be cancelled if deadline is hit.</param>
       /// <param name="cancellationToken">An optional token for canceling the call.</param>
       /// <returns>The call object.</returns>
-      public virtual grpc::AsyncUnaryCall<global::Google.Cloud.Datastore.V1.ReserveIdsResponse> ReserveIdsAsync(global::Google.Cloud.Datastore.V1.ReserveIdsRequest request, grpc::Metadata headers = null, DateTime? deadline = null, CancellationToken cancellationToken = default(CancellationToken))
+      public virtual grpc::AsyncUnaryCall<global::Google.Cloud.Datastore.V1.ReserveIdsResponse> ReserveIdsAsync(global::Google.Cloud.Datastore.V1.ReserveIdsRequest request, grpc::Metadata headers = null, global::System.DateTime? deadline = null, global::System.Threading.CancellationToken cancellationToken = default(global::System.Threading.CancellationToken))
       {
         return ReserveIdsAsync(request, new grpc::CallOptions(headers, deadline, cancellationToken));
       }

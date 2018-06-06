@@ -20,9 +20,6 @@
 #pragma warning disable 1591
 #region Designer generated code
 
-using System;
-using System.Threading;
-using System.Threading.Tasks;
 using grpc = global::Grpc.Core;
 
 namespace Google.Cloud.Logging.V2 {
@@ -281,7 +278,7 @@ namespace Google.Cloud.Logging.V2 {
       /// <param name="deadline">An optional deadline for the call. The call will be cancelled if deadline is hit.</param>
       /// <param name="cancellationToken">An optional token for canceling the call.</param>
       /// <returns>The response received from the server.</returns>
-      public virtual global::Google.Cloud.Logging.V2.ListSinksResponse ListSinks(global::Google.Cloud.Logging.V2.ListSinksRequest request, grpc::Metadata headers = null, DateTime? deadline = null, CancellationToken cancellationToken = default(CancellationToken))
+      public virtual global::Google.Cloud.Logging.V2.ListSinksResponse ListSinks(global::Google.Cloud.Logging.V2.ListSinksRequest request, grpc::Metadata headers = null, global::System.DateTime? deadline = null, global::System.Threading.CancellationToken cancellationToken = default(global::System.Threading.CancellationToken))
       {
         return ListSinks(request, new grpc::CallOptions(headers, deadline, cancellationToken));
       }
@@ -303,7 +300,7 @@ namespace Google.Cloud.Logging.V2 {
       /// <param name="deadline">An optional deadline for the call. The call will be cancelled if deadline is hit.</param>
       /// <param name="cancellationToken">An optional token for canceling the call.</param>
       /// <returns>The call object.</returns>
-      public virtual grpc::AsyncUnaryCall<global::Google.Cloud.Logging.V2.ListSinksResponse> ListSinksAsync(global::Google.Cloud.Logging.V2.ListSinksRequest request, grpc::Metadata headers = null, DateTime? deadline = null, CancellationToken cancellationToken = default(CancellationToken))
+      public virtual grpc::AsyncUnaryCall<global::Google.Cloud.Logging.V2.ListSinksResponse> ListSinksAsync(global::Google.Cloud.Logging.V2.ListSinksRequest request, grpc::Metadata headers = null, global::System.DateTime? deadline = null, global::System.Threading.CancellationToken cancellationToken = default(global::System.Threading.CancellationToken))
       {
         return ListSinksAsync(request, new grpc::CallOptions(headers, deadline, cancellationToken));
       }
@@ -325,7 +322,7 @@ namespace Google.Cloud.Logging.V2 {
       /// <param name="deadline">An optional deadline for the call. The call will be cancelled if deadline is hit.</param>
       /// <param name="cancellationToken">An optional token for canceling the call.</param>
       /// <returns>The response received from the server.</returns>
-      public virtual global::Google.Cloud.Logging.V2.LogSink GetSink(global::Google.Cloud.Logging.V2.GetSinkRequest request, grpc::Metadata headers = null, DateTime? deadline = null, CancellationToken cancellationToken = default(CancellationToken))
+      public virtual global::Google.Cloud.Logging.V2.LogSink GetSink(global::Google.Cloud.Logging.V2.GetSinkRequest request, grpc::Metadata headers = null, global::System.DateTime? deadline = null, global::System.Threading.CancellationToken cancellationToken = default(global::System.Threading.CancellationToken))
       {
         return GetSink(request, new grpc::CallOptions(headers, deadline, cancellationToken));
       }
@@ -347,7 +344,7 @@ namespace Google.Cloud.Logging.V2 {
       /// <param name="deadline">An optional deadline for the call. The call will be cancelled if deadline is hit.</param>
       /// <param name="cancellationToken">An optional token for canceling the call.</param>
       /// <returns>The call object.</returns>
-      public virtual grpc::AsyncUnaryCall<global::Google.Cloud.Logging.V2.LogSink> GetSinkAsync(global::Google.Cloud.Logging.V2.GetSinkRequest request, grpc::Metadata headers = null, DateTime? deadline = null, CancellationToken cancellationToken = default(CancellationToken))
+      public virtual grpc::AsyncUnaryCall<global::Google.Cloud.Logging.V2.LogSink> GetSinkAsync(global::Google.Cloud.Logging.V2.GetSinkRequest request, grpc::Metadata headers = null, global::System.DateTime? deadline = null, global::System.Threading.CancellationToken cancellationToken = default(global::System.Threading.CancellationToken))
       {
         return GetSinkAsync(request, new grpc::CallOptions(headers, deadline, cancellationToken));
       }
@@ -372,7 +369,7 @@ namespace Google.Cloud.Logging.V2 {
       /// <param name="deadline">An optional deadline for the call. The call will be cancelled if deadline is hit.</param>
       /// <param name="cancellationToken">An optional token for canceling the call.</param>
       /// <returns>The response received from the server.</returns>
-      public virtual global::Google.Cloud.Logging.V2.LogSink CreateSink(global::Google.Cloud.Logging.V2.CreateSinkRequest request, grpc::Metadata headers = null, DateTime? deadline = null, CancellationToken cancellationToken = default(CancellationToken))
+      public virtual global::Google.Cloud.Logging.V2.LogSink CreateSink(global::Google.Cloud.Logging.V2.CreateSinkRequest request, grpc::Metadata headers = null, global::System.DateTime? deadline = null, global::System.Threading.CancellationToken cancellationToken = default(global::System.Threading.CancellationToken))
       {
         return CreateSink(request, new grpc::CallOptions(headers, deadline, cancellationToken));
       }
@@ -400,7 +397,7 @@ namespace Google.Cloud.Logging.V2 {
       /// <param name="deadline">An optional deadline for the call. The call will be cancelled if deadline is hit.</param>
       /// <param name="cancellationToken">An optional token for canceling the call.</param>
       /// <returns>The call object.</returns>
-      public virtual grpc::AsyncUnaryCall<global::Google.Cloud.Logging.V2.LogSink> CreateSinkAsync(global::Google.Cloud.Logging.V2.CreateSinkRequest request, grpc::Metadata headers = null, DateTime? deadline = null, CancellationToken cancellationToken = default(CancellationToken))
+      public virtual grpc::AsyncUnaryCall<global::Google.Cloud.Logging.V2.LogSink> CreateSinkAsync(global::Google.Cloud.Logging.V2.CreateSinkRequest request, grpc::Metadata headers = null, global::System.DateTime? deadline = null, global::System.Threading.CancellationToken cancellationToken = default(global::System.Threading.CancellationToken))
       {
         return CreateSinkAsync(request, new grpc::CallOptions(headers, deadline, cancellationToken));
       }
@@ -428,7 +425,7 @@ namespace Google.Cloud.Logging.V2 {
       /// <param name="deadline">An optional deadline for the call. The call will be cancelled if deadline is hit.</param>
       /// <param name="cancellationToken">An optional token for canceling the call.</param>
       /// <returns>The response received from the server.</returns>
-      public virtual global::Google.Cloud.Logging.V2.LogSink UpdateSink(global::Google.Cloud.Logging.V2.UpdateSinkRequest request, grpc::Metadata headers = null, DateTime? deadline = null, CancellationToken cancellationToken = default(CancellationToken))
+      public virtual global::Google.Cloud.Logging.V2.LogSink UpdateSink(global::Google.Cloud.Logging.V2.UpdateSinkRequest request, grpc::Metadata headers = null, global::System.DateTime? deadline = null, global::System.Threading.CancellationToken cancellationToken = default(global::System.Threading.CancellationToken))
       {
         return UpdateSink(request, new grpc::CallOptions(headers, deadline, cancellationToken));
       }
@@ -456,7 +453,7 @@ namespace Google.Cloud.Logging.V2 {
       /// <param name="deadline">An optional deadline for the call. The call will be cancelled if deadline is hit.</param>
       /// <param name="cancellationToken">An optional token for canceling the call.</param>
       /// <returns>The call object.</returns>
-      public virtual grpc::AsyncUnaryCall<global::Google.Cloud.Logging.V2.LogSink> UpdateSinkAsync(global::Google.Cloud.Logging.V2.UpdateSinkRequest request, grpc::Metadata headers = null, DateTime? deadline = null, CancellationToken cancellationToken = default(CancellationToken))
+      public virtual grpc::AsyncUnaryCall<global::Google.Cloud.Logging.V2.LogSink> UpdateSinkAsync(global::Google.Cloud.Logging.V2.UpdateSinkRequest request, grpc::Metadata headers = null, global::System.DateTime? deadline = null, global::System.Threading.CancellationToken cancellationToken = default(global::System.Threading.CancellationToken))
       {
         return UpdateSinkAsync(request, new grpc::CallOptions(headers, deadline, cancellationToken));
       }
@@ -482,7 +479,7 @@ namespace Google.Cloud.Logging.V2 {
       /// <param name="deadline">An optional deadline for the call. The call will be cancelled if deadline is hit.</param>
       /// <param name="cancellationToken">An optional token for canceling the call.</param>
       /// <returns>The response received from the server.</returns>
-      public virtual global::Google.Protobuf.WellKnownTypes.Empty DeleteSink(global::Google.Cloud.Logging.V2.DeleteSinkRequest request, grpc::Metadata headers = null, DateTime? deadline = null, CancellationToken cancellationToken = default(CancellationToken))
+      public virtual global::Google.Protobuf.WellKnownTypes.Empty DeleteSink(global::Google.Cloud.Logging.V2.DeleteSinkRequest request, grpc::Metadata headers = null, global::System.DateTime? deadline = null, global::System.Threading.CancellationToken cancellationToken = default(global::System.Threading.CancellationToken))
       {
         return DeleteSink(request, new grpc::CallOptions(headers, deadline, cancellationToken));
       }
@@ -506,7 +503,7 @@ namespace Google.Cloud.Logging.V2 {
       /// <param name="deadline">An optional deadline for the call. The call will be cancelled if deadline is hit.</param>
       /// <param name="cancellationToken">An optional token for canceling the call.</param>
       /// <returns>The call object.</returns>
-      public virtual grpc::AsyncUnaryCall<global::Google.Protobuf.WellKnownTypes.Empty> DeleteSinkAsync(global::Google.Cloud.Logging.V2.DeleteSinkRequest request, grpc::Metadata headers = null, DateTime? deadline = null, CancellationToken cancellationToken = default(CancellationToken))
+      public virtual grpc::AsyncUnaryCall<global::Google.Protobuf.WellKnownTypes.Empty> DeleteSinkAsync(global::Google.Cloud.Logging.V2.DeleteSinkRequest request, grpc::Metadata headers = null, global::System.DateTime? deadline = null, global::System.Threading.CancellationToken cancellationToken = default(global::System.Threading.CancellationToken))
       {
         return DeleteSinkAsync(request, new grpc::CallOptions(headers, deadline, cancellationToken));
       }
@@ -529,7 +526,7 @@ namespace Google.Cloud.Logging.V2 {
       /// <param name="deadline">An optional deadline for the call. The call will be cancelled if deadline is hit.</param>
       /// <param name="cancellationToken">An optional token for canceling the call.</param>
       /// <returns>The response received from the server.</returns>
-      public virtual global::Google.Cloud.Logging.V2.ListExclusionsResponse ListExclusions(global::Google.Cloud.Logging.V2.ListExclusionsRequest request, grpc::Metadata headers = null, DateTime? deadline = null, CancellationToken cancellationToken = default(CancellationToken))
+      public virtual global::Google.Cloud.Logging.V2.ListExclusionsResponse ListExclusions(global::Google.Cloud.Logging.V2.ListExclusionsRequest request, grpc::Metadata headers = null, global::System.DateTime? deadline = null, global::System.Threading.CancellationToken cancellationToken = default(global::System.Threading.CancellationToken))
       {
         return ListExclusions(request, new grpc::CallOptions(headers, deadline, cancellationToken));
       }
@@ -551,7 +548,7 @@ namespace Google.Cloud.Logging.V2 {
       /// <param name="deadline">An optional deadline for the call. The call will be cancelled if deadline is hit.</param>
       /// <param name="cancellationToken">An optional token for canceling the call.</param>
       /// <returns>The call object.</returns>
-      public virtual grpc::AsyncUnaryCall<global::Google.Cloud.Logging.V2.ListExclusionsResponse> ListExclusionsAsync(global::Google.Cloud.Logging.V2.ListExclusionsRequest request, grpc::Metadata headers = null, DateTime? deadline = null, CancellationToken cancellationToken = default(CancellationToken))
+      public virtual grpc::AsyncUnaryCall<global::Google.Cloud.Logging.V2.ListExclusionsResponse> ListExclusionsAsync(global::Google.Cloud.Logging.V2.ListExclusionsRequest request, grpc::Metadata headers = null, global::System.DateTime? deadline = null, global::System.Threading.CancellationToken cancellationToken = default(global::System.Threading.CancellationToken))
       {
         return ListExclusionsAsync(request, new grpc::CallOptions(headers, deadline, cancellationToken));
       }
@@ -573,7 +570,7 @@ namespace Google.Cloud.Logging.V2 {
       /// <param name="deadline">An optional deadline for the call. The call will be cancelled if deadline is hit.</param>
       /// <param name="cancellationToken">An optional token for canceling the call.</param>
       /// <returns>The response received from the server.</returns>
-      public virtual global::Google.Cloud.Logging.V2.LogExclusion GetExclusion(global::Google.Cloud.Logging.V2.GetExclusionRequest request, grpc::Metadata headers = null, DateTime? deadline = null, CancellationToken cancellationToken = default(CancellationToken))
+      public virtual global::Google.Cloud.Logging.V2.LogExclusion GetExclusion(global::Google.Cloud.Logging.V2.GetExclusionRequest request, grpc::Metadata headers = null, global::System.DateTime? deadline = null, global::System.Threading.CancellationToken cancellationToken = default(global::System.Threading.CancellationToken))
       {
         return GetExclusion(request, new grpc::CallOptions(headers, deadline, cancellationToken));
       }
@@ -595,7 +592,7 @@ namespace Google.Cloud.Logging.V2 {
       /// <param name="deadline">An optional deadline for the call. The call will be cancelled if deadline is hit.</param>
       /// <param name="cancellationToken">An optional token for canceling the call.</param>
       /// <returns>The call object.</returns>
-      public virtual grpc::AsyncUnaryCall<global::Google.Cloud.Logging.V2.LogExclusion> GetExclusionAsync(global::Google.Cloud.Logging.V2.GetExclusionRequest request, grpc::Metadata headers = null, DateTime? deadline = null, CancellationToken cancellationToken = default(CancellationToken))
+      public virtual grpc::AsyncUnaryCall<global::Google.Cloud.Logging.V2.LogExclusion> GetExclusionAsync(global::Google.Cloud.Logging.V2.GetExclusionRequest request, grpc::Metadata headers = null, global::System.DateTime? deadline = null, global::System.Threading.CancellationToken cancellationToken = default(global::System.Threading.CancellationToken))
       {
         return GetExclusionAsync(request, new grpc::CallOptions(headers, deadline, cancellationToken));
       }
@@ -619,7 +616,7 @@ namespace Google.Cloud.Logging.V2 {
       /// <param name="deadline">An optional deadline for the call. The call will be cancelled if deadline is hit.</param>
       /// <param name="cancellationToken">An optional token for canceling the call.</param>
       /// <returns>The response received from the server.</returns>
-      public virtual global::Google.Cloud.Logging.V2.LogExclusion CreateExclusion(global::Google.Cloud.Logging.V2.CreateExclusionRequest request, grpc::Metadata headers = null, DateTime? deadline = null, CancellationToken cancellationToken = default(CancellationToken))
+      public virtual global::Google.Cloud.Logging.V2.LogExclusion CreateExclusion(global::Google.Cloud.Logging.V2.CreateExclusionRequest request, grpc::Metadata headers = null, global::System.DateTime? deadline = null, global::System.Threading.CancellationToken cancellationToken = default(global::System.Threading.CancellationToken))
       {
         return CreateExclusion(request, new grpc::CallOptions(headers, deadline, cancellationToken));
       }
@@ -645,7 +642,7 @@ namespace Google.Cloud.Logging.V2 {
       /// <param name="deadline">An optional deadline for the call. The call will be cancelled if deadline is hit.</param>
       /// <param name="cancellationToken">An optional token for canceling the call.</param>
       /// <returns>The call object.</returns>
-      public virtual grpc::AsyncUnaryCall<global::Google.Cloud.Logging.V2.LogExclusion> CreateExclusionAsync(global::Google.Cloud.Logging.V2.CreateExclusionRequest request, grpc::Metadata headers = null, DateTime? deadline = null, CancellationToken cancellationToken = default(CancellationToken))
+      public virtual grpc::AsyncUnaryCall<global::Google.Cloud.Logging.V2.LogExclusion> CreateExclusionAsync(global::Google.Cloud.Logging.V2.CreateExclusionRequest request, grpc::Metadata headers = null, global::System.DateTime? deadline = null, global::System.Threading.CancellationToken cancellationToken = default(global::System.Threading.CancellationToken))
       {
         return CreateExclusionAsync(request, new grpc::CallOptions(headers, deadline, cancellationToken));
       }
@@ -669,7 +666,7 @@ namespace Google.Cloud.Logging.V2 {
       /// <param name="deadline">An optional deadline for the call. The call will be cancelled if deadline is hit.</param>
       /// <param name="cancellationToken">An optional token for canceling the call.</param>
       /// <returns>The response received from the server.</returns>
-      public virtual global::Google.Cloud.Logging.V2.LogExclusion UpdateExclusion(global::Google.Cloud.Logging.V2.UpdateExclusionRequest request, grpc::Metadata headers = null, DateTime? deadline = null, CancellationToken cancellationToken = default(CancellationToken))
+      public virtual global::Google.Cloud.Logging.V2.LogExclusion UpdateExclusion(global::Google.Cloud.Logging.V2.UpdateExclusionRequest request, grpc::Metadata headers = null, global::System.DateTime? deadline = null, global::System.Threading.CancellationToken cancellationToken = default(global::System.Threading.CancellationToken))
       {
         return UpdateExclusion(request, new grpc::CallOptions(headers, deadline, cancellationToken));
       }
@@ -691,7 +688,7 @@ namespace Google.Cloud.Logging.V2 {
       /// <param name="deadline">An optional deadline for the call. The call will be cancelled if deadline is hit.</param>
       /// <param name="cancellationToken">An optional token for canceling the call.</param>
       /// <returns>The call object.</returns>
-      public virtual grpc::AsyncUnaryCall<global::Google.Cloud.Logging.V2.LogExclusion> UpdateExclusionAsync(global::Google.Cloud.Logging.V2.UpdateExclusionRequest request, grpc::Metadata headers = null, DateTime? deadline = null, CancellationToken cancellationToken = default(CancellationToken))
+      public virtual grpc::AsyncUnaryCall<global::Google.Cloud.Logging.V2.LogExclusion> UpdateExclusionAsync(global::Google.Cloud.Logging.V2.UpdateExclusionRequest request, grpc::Metadata headers = null, global::System.DateTime? deadline = null, global::System.Threading.CancellationToken cancellationToken = default(global::System.Threading.CancellationToken))
       {
         return UpdateExclusionAsync(request, new grpc::CallOptions(headers, deadline, cancellationToken));
       }
@@ -713,7 +710,7 @@ namespace Google.Cloud.Logging.V2 {
       /// <param name="deadline">An optional deadline for the call. The call will be cancelled if deadline is hit.</param>
       /// <param name="cancellationToken">An optional token for canceling the call.</param>
       /// <returns>The response received from the server.</returns>
-      public virtual global::Google.Protobuf.WellKnownTypes.Empty DeleteExclusion(global::Google.Cloud.Logging.V2.DeleteExclusionRequest request, grpc::Metadata headers = null, DateTime? deadline = null, CancellationToken cancellationToken = default(CancellationToken))
+      public virtual global::Google.Protobuf.WellKnownTypes.Empty DeleteExclusion(global::Google.Cloud.Logging.V2.DeleteExclusionRequest request, grpc::Metadata headers = null, global::System.DateTime? deadline = null, global::System.Threading.CancellationToken cancellationToken = default(global::System.Threading.CancellationToken))
       {
         return DeleteExclusion(request, new grpc::CallOptions(headers, deadline, cancellationToken));
       }
@@ -735,7 +732,7 @@ namespace Google.Cloud.Logging.V2 {
       /// <param name="deadline">An optional deadline for the call. The call will be cancelled if deadline is hit.</param>
       /// <param name="cancellationToken">An optional token for canceling the call.</param>
       /// <returns>The call object.</returns>
-      public virtual grpc::AsyncUnaryCall<global::Google.Protobuf.WellKnownTypes.Empty> DeleteExclusionAsync(global::Google.Cloud.Logging.V2.DeleteExclusionRequest request, grpc::Metadata headers = null, DateTime? deadline = null, CancellationToken cancellationToken = default(CancellationToken))
+      public virtual grpc::AsyncUnaryCall<global::Google.Protobuf.WellKnownTypes.Empty> DeleteExclusionAsync(global::Google.Cloud.Logging.V2.DeleteExclusionRequest request, grpc::Metadata headers = null, global::System.DateTime? deadline = null, global::System.Threading.CancellationToken cancellationToken = default(global::System.Threading.CancellationToken))
       {
         return DeleteExclusionAsync(request, new grpc::CallOptions(headers, deadline, cancellationToken));
       }

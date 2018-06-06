@@ -20,9 +20,6 @@
 #pragma warning disable 1591
 #region Designer generated code
 
-using System;
-using System.Threading;
-using System.Threading.Tasks;
 using grpc = global::Grpc.Core;
 
 namespace Google.Cloud.Bigtable.V2 {
@@ -217,7 +214,7 @@ namespace Google.Cloud.Bigtable.V2 {
       /// <param name="deadline">An optional deadline for the call. The call will be cancelled if deadline is hit.</param>
       /// <param name="cancellationToken">An optional token for canceling the call.</param>
       /// <returns>The call object.</returns>
-      public virtual grpc::AsyncServerStreamingCall<global::Google.Cloud.Bigtable.V2.ReadRowsResponse> ReadRows(global::Google.Cloud.Bigtable.V2.ReadRowsRequest request, grpc::Metadata headers = null, DateTime? deadline = null, CancellationToken cancellationToken = default(CancellationToken))
+      public virtual grpc::AsyncServerStreamingCall<global::Google.Cloud.Bigtable.V2.ReadRowsResponse> ReadRows(global::Google.Cloud.Bigtable.V2.ReadRowsRequest request, grpc::Metadata headers = null, global::System.DateTime? deadline = null, global::System.Threading.CancellationToken cancellationToken = default(global::System.Threading.CancellationToken))
       {
         return ReadRows(request, new grpc::CallOptions(headers, deadline, cancellationToken));
       }
@@ -246,7 +243,7 @@ namespace Google.Cloud.Bigtable.V2 {
       /// <param name="deadline">An optional deadline for the call. The call will be cancelled if deadline is hit.</param>
       /// <param name="cancellationToken">An optional token for canceling the call.</param>
       /// <returns>The call object.</returns>
-      public virtual grpc::AsyncServerStreamingCall<global::Google.Cloud.Bigtable.V2.SampleRowKeysResponse> SampleRowKeys(global::Google.Cloud.Bigtable.V2.SampleRowKeysRequest request, grpc::Metadata headers = null, DateTime? deadline = null, CancellationToken cancellationToken = default(CancellationToken))
+      public virtual grpc::AsyncServerStreamingCall<global::Google.Cloud.Bigtable.V2.SampleRowKeysResponse> SampleRowKeys(global::Google.Cloud.Bigtable.V2.SampleRowKeysRequest request, grpc::Metadata headers = null, global::System.DateTime? deadline = null, global::System.Threading.CancellationToken cancellationToken = default(global::System.Threading.CancellationToken))
       {
         return SampleRowKeys(request, new grpc::CallOptions(headers, deadline, cancellationToken));
       }
@@ -272,7 +269,7 @@ namespace Google.Cloud.Bigtable.V2 {
       /// <param name="deadline">An optional deadline for the call. The call will be cancelled if deadline is hit.</param>
       /// <param name="cancellationToken">An optional token for canceling the call.</param>
       /// <returns>The response received from the server.</returns>
-      public virtual global::Google.Cloud.Bigtable.V2.MutateRowResponse MutateRow(global::Google.Cloud.Bigtable.V2.MutateRowRequest request, grpc::Metadata headers = null, DateTime? deadline = null, CancellationToken cancellationToken = default(CancellationToken))
+      public virtual global::Google.Cloud.Bigtable.V2.MutateRowResponse MutateRow(global::Google.Cloud.Bigtable.V2.MutateRowRequest request, grpc::Metadata headers = null, global::System.DateTime? deadline = null, global::System.Threading.CancellationToken cancellationToken = default(global::System.Threading.CancellationToken))
       {
         return MutateRow(request, new grpc::CallOptions(headers, deadline, cancellationToken));
       }
@@ -296,7 +293,7 @@ namespace Google.Cloud.Bigtable.V2 {
       /// <param name="deadline">An optional deadline for the call. The call will be cancelled if deadline is hit.</param>
       /// <param name="cancellationToken">An optional token for canceling the call.</param>
       /// <returns>The call object.</returns>
-      public virtual grpc::AsyncUnaryCall<global::Google.Cloud.Bigtable.V2.MutateRowResponse> MutateRowAsync(global::Google.Cloud.Bigtable.V2.MutateRowRequest request, grpc::Metadata headers = null, DateTime? deadline = null, CancellationToken cancellationToken = default(CancellationToken))
+      public virtual grpc::AsyncUnaryCall<global::Google.Cloud.Bigtable.V2.MutateRowResponse> MutateRowAsync(global::Google.Cloud.Bigtable.V2.MutateRowRequest request, grpc::Metadata headers = null, global::System.DateTime? deadline = null, global::System.Threading.CancellationToken cancellationToken = default(global::System.Threading.CancellationToken))
       {
         return MutateRowAsync(request, new grpc::CallOptions(headers, deadline, cancellationToken));
       }
@@ -321,7 +318,7 @@ namespace Google.Cloud.Bigtable.V2 {
       /// <param name="deadline">An optional deadline for the call. The call will be cancelled if deadline is hit.</param>
       /// <param name="cancellationToken">An optional token for canceling the call.</param>
       /// <returns>The call object.</returns>
-      public virtual grpc::AsyncServerStreamingCall<global::Google.Cloud.Bigtable.V2.MutateRowsResponse> MutateRows(global::Google.Cloud.Bigtable.V2.MutateRowsRequest request, grpc::Metadata headers = null, DateTime? deadline = null, CancellationToken cancellationToken = default(CancellationToken))
+      public virtual grpc::AsyncServerStreamingCall<global::Google.Cloud.Bigtable.V2.MutateRowsResponse> MutateRows(global::Google.Cloud.Bigtable.V2.MutateRowsRequest request, grpc::Metadata headers = null, global::System.DateTime? deadline = null, global::System.Threading.CancellationToken cancellationToken = default(global::System.Threading.CancellationToken))
       {
         return MutateRows(request, new grpc::CallOptions(headers, deadline, cancellationToken));
       }
@@ -345,7 +342,7 @@ namespace Google.Cloud.Bigtable.V2 {
       /// <param name="deadline">An optional deadline for the call. The call will be cancelled if deadline is hit.</param>
       /// <param name="cancellationToken">An optional token for canceling the call.</param>
       /// <returns>The response received from the server.</returns>
-      public virtual global::Google.Cloud.Bigtable.V2.CheckAndMutateRowResponse CheckAndMutateRow(global::Google.Cloud.Bigtable.V2.CheckAndMutateRowRequest request, grpc::Metadata headers = null, DateTime? deadline = null, CancellationToken cancellationToken = default(CancellationToken))
+      public virtual global::Google.Cloud.Bigtable.V2.CheckAndMutateRowResponse CheckAndMutateRow(global::Google.Cloud.Bigtable.V2.CheckAndMutateRowRequest request, grpc::Metadata headers = null, global::System.DateTime? deadline = null, global::System.Threading.CancellationToken cancellationToken = default(global::System.Threading.CancellationToken))
       {
         return CheckAndMutateRow(request, new grpc::CallOptions(headers, deadline, cancellationToken));
       }
@@ -367,7 +364,7 @@ namespace Google.Cloud.Bigtable.V2 {
       /// <param name="deadline">An optional deadline for the call. The call will be cancelled if deadline is hit.</param>
       /// <param name="cancellationToken">An optional token for canceling the call.</param>
       /// <returns>The call object.</returns>
-      public virtual grpc::AsyncUnaryCall<global::Google.Cloud.Bigtable.V2.CheckAndMutateRowResponse> CheckAndMutateRowAsync(global::Google.Cloud.Bigtable.V2.CheckAndMutateRowRequest request, grpc::Metadata headers = null, DateTime? deadline = null, CancellationToken cancellationToken = default(CancellationToken))
+      public virtual grpc::AsyncUnaryCall<global::Google.Cloud.Bigtable.V2.CheckAndMutateRowResponse> CheckAndMutateRowAsync(global::Google.Cloud.Bigtable.V2.CheckAndMutateRowRequest request, grpc::Metadata headers = null, global::System.DateTime? deadline = null, global::System.Threading.CancellationToken cancellationToken = default(global::System.Threading.CancellationToken))
       {
         return CheckAndMutateRowAsync(request, new grpc::CallOptions(headers, deadline, cancellationToken));
       }
@@ -393,7 +390,7 @@ namespace Google.Cloud.Bigtable.V2 {
       /// <param name="deadline">An optional deadline for the call. The call will be cancelled if deadline is hit.</param>
       /// <param name="cancellationToken">An optional token for canceling the call.</param>
       /// <returns>The response received from the server.</returns>
-      public virtual global::Google.Cloud.Bigtable.V2.ReadModifyWriteRowResponse ReadModifyWriteRow(global::Google.Cloud.Bigtable.V2.ReadModifyWriteRowRequest request, grpc::Metadata headers = null, DateTime? deadline = null, CancellationToken cancellationToken = default(CancellationToken))
+      public virtual global::Google.Cloud.Bigtable.V2.ReadModifyWriteRowResponse ReadModifyWriteRow(global::Google.Cloud.Bigtable.V2.ReadModifyWriteRowRequest request, grpc::Metadata headers = null, global::System.DateTime? deadline = null, global::System.Threading.CancellationToken cancellationToken = default(global::System.Threading.CancellationToken))
       {
         return ReadModifyWriteRow(request, new grpc::CallOptions(headers, deadline, cancellationToken));
       }
@@ -423,7 +420,7 @@ namespace Google.Cloud.Bigtable.V2 {
       /// <param name="deadline">An optional deadline for the call. The call will be cancelled if deadline is hit.</param>
       /// <param name="cancellationToken">An optional token for canceling the call.</param>
       /// <returns>The call object.</returns>
-      public virtual grpc::AsyncUnaryCall<global::Google.Cloud.Bigtable.V2.ReadModifyWriteRowResponse> ReadModifyWriteRowAsync(global::Google.Cloud.Bigtable.V2.ReadModifyWriteRowRequest request, grpc::Metadata headers = null, DateTime? deadline = null, CancellationToken cancellationToken = default(CancellationToken))
+      public virtual grpc::AsyncUnaryCall<global::Google.Cloud.Bigtable.V2.ReadModifyWriteRowResponse> ReadModifyWriteRowAsync(global::Google.Cloud.Bigtable.V2.ReadModifyWriteRowRequest request, grpc::Metadata headers = null, global::System.DateTime? deadline = null, global::System.Threading.CancellationToken cancellationToken = default(global::System.Threading.CancellationToken))
       {
         return ReadModifyWriteRowAsync(request, new grpc::CallOptions(headers, deadline, cancellationToken));
       }

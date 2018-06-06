@@ -20,9 +20,6 @@
 #pragma warning disable 1591
 #region Designer generated code
 
-using System;
-using System.Threading;
-using System.Threading.Tasks;
 using grpc = global::Grpc.Core;
 
 namespace Google.Cloud.Monitoring.V3 {
@@ -305,7 +302,7 @@ namespace Google.Cloud.Monitoring.V3 {
       /// <param name="deadline">An optional deadline for the call. The call will be cancelled if deadline is hit.</param>
       /// <param name="cancellationToken">An optional token for canceling the call.</param>
       /// <returns>The response received from the server.</returns>
-      public virtual global::Google.Cloud.Monitoring.V3.ListNotificationChannelDescriptorsResponse ListNotificationChannelDescriptors(global::Google.Cloud.Monitoring.V3.ListNotificationChannelDescriptorsRequest request, grpc::Metadata headers = null, DateTime? deadline = null, CancellationToken cancellationToken = default(CancellationToken))
+      public virtual global::Google.Cloud.Monitoring.V3.ListNotificationChannelDescriptorsResponse ListNotificationChannelDescriptors(global::Google.Cloud.Monitoring.V3.ListNotificationChannelDescriptorsRequest request, grpc::Metadata headers = null, global::System.DateTime? deadline = null, global::System.Threading.CancellationToken cancellationToken = default(global::System.Threading.CancellationToken))
       {
         return ListNotificationChannelDescriptors(request, new grpc::CallOptions(headers, deadline, cancellationToken));
       }
@@ -329,7 +326,7 @@ namespace Google.Cloud.Monitoring.V3 {
       /// <param name="deadline">An optional deadline for the call. The call will be cancelled if deadline is hit.</param>
       /// <param name="cancellationToken">An optional token for canceling the call.</param>
       /// <returns>The call object.</returns>
-      public virtual grpc::AsyncUnaryCall<global::Google.Cloud.Monitoring.V3.ListNotificationChannelDescriptorsResponse> ListNotificationChannelDescriptorsAsync(global::Google.Cloud.Monitoring.V3.ListNotificationChannelDescriptorsRequest request, grpc::Metadata headers = null, DateTime? deadline = null, CancellationToken cancellationToken = default(CancellationToken))
+      public virtual grpc::AsyncUnaryCall<global::Google.Cloud.Monitoring.V3.ListNotificationChannelDescriptorsResponse> ListNotificationChannelDescriptorsAsync(global::Google.Cloud.Monitoring.V3.ListNotificationChannelDescriptorsRequest request, grpc::Metadata headers = null, global::System.DateTime? deadline = null, global::System.Threading.CancellationToken cancellationToken = default(global::System.Threading.CancellationToken))
       {
         return ListNotificationChannelDescriptorsAsync(request, new grpc::CallOptions(headers, deadline, cancellationToken));
       }
@@ -353,7 +350,7 @@ namespace Google.Cloud.Monitoring.V3 {
       /// <param name="deadline">An optional deadline for the call. The call will be cancelled if deadline is hit.</param>
       /// <param name="cancellationToken">An optional token for canceling the call.</param>
       /// <returns>The response received from the server.</returns>
-      public virtual global::Google.Cloud.Monitoring.V3.NotificationChannelDescriptor GetNotificationChannelDescriptor(global::Google.Cloud.Monitoring.V3.GetNotificationChannelDescriptorRequest request, grpc::Metadata headers = null, DateTime? deadline = null, CancellationToken cancellationToken = default(CancellationToken))
+      public virtual global::Google.Cloud.Monitoring.V3.NotificationChannelDescriptor GetNotificationChannelDescriptor(global::Google.Cloud.Monitoring.V3.GetNotificationChannelDescriptorRequest request, grpc::Metadata headers = null, global::System.DateTime? deadline = null, global::System.Threading.CancellationToken cancellationToken = default(global::System.Threading.CancellationToken))
       {
         return GetNotificationChannelDescriptor(request, new grpc::CallOptions(headers, deadline, cancellationToken));
       }
@@ -377,7 +374,7 @@ namespace Google.Cloud.Monitoring.V3 {
       /// <param name="deadline">An optional deadline for the call. The call will be cancelled if deadline is hit.</param>
       /// <param name="cancellationToken">An optional token for canceling the call.</param>
       /// <returns>The call object.</returns>
-      public virtual grpc::AsyncUnaryCall<global::Google.Cloud.Monitoring.V3.NotificationChannelDescriptor> GetNotificationChannelDescriptorAsync(global::Google.Cloud.Monitoring.V3.GetNotificationChannelDescriptorRequest request, grpc::Metadata headers = null, DateTime? deadline = null, CancellationToken cancellationToken = default(CancellationToken))
+      public virtual grpc::AsyncUnaryCall<global::Google.Cloud.Monitoring.V3.NotificationChannelDescriptor> GetNotificationChannelDescriptorAsync(global::Google.Cloud.Monitoring.V3.GetNotificationChannelDescriptorRequest request, grpc::Metadata headers = null, global::System.DateTime? deadline = null, global::System.Threading.CancellationToken cancellationToken = default(global::System.Threading.CancellationToken))
       {
         return GetNotificationChannelDescriptorAsync(request, new grpc::CallOptions(headers, deadline, cancellationToken));
       }
@@ -400,7 +397,7 @@ namespace Google.Cloud.Monitoring.V3 {
       /// <param name="deadline">An optional deadline for the call. The call will be cancelled if deadline is hit.</param>
       /// <param name="cancellationToken">An optional token for canceling the call.</param>
       /// <returns>The response received from the server.</returns>
-      public virtual global::Google.Cloud.Monitoring.V3.ListNotificationChannelsResponse ListNotificationChannels(global::Google.Cloud.Monitoring.V3.ListNotificationChannelsRequest request, grpc::Metadata headers = null, DateTime? deadline = null, CancellationToken cancellationToken = default(CancellationToken))
+      public virtual global::Google.Cloud.Monitoring.V3.ListNotificationChannelsResponse ListNotificationChannels(global::Google.Cloud.Monitoring.V3.ListNotificationChannelsRequest request, grpc::Metadata headers = null, global::System.DateTime? deadline = null, global::System.Threading.CancellationToken cancellationToken = default(global::System.Threading.CancellationToken))
       {
         return ListNotificationChannels(request, new grpc::CallOptions(headers, deadline, cancellationToken));
       }
@@ -422,7 +419,7 @@ namespace Google.Cloud.Monitoring.V3 {
       /// <param name="deadline">An optional deadline for the call. The call will be cancelled if deadline is hit.</param>
       /// <param name="cancellationToken">An optional token for canceling the call.</param>
       /// <returns>The call object.</returns>
-      public virtual grpc::AsyncUnaryCall<global::Google.Cloud.Monitoring.V3.ListNotificationChannelsResponse> ListNotificationChannelsAsync(global::Google.Cloud.Monitoring.V3.ListNotificationChannelsRequest request, grpc::Metadata headers = null, DateTime? deadline = null, CancellationToken cancellationToken = default(CancellationToken))
+      public virtual grpc::AsyncUnaryCall<global::Google.Cloud.Monitoring.V3.ListNotificationChannelsResponse> ListNotificationChannelsAsync(global::Google.Cloud.Monitoring.V3.ListNotificationChannelsRequest request, grpc::Metadata headers = null, global::System.DateTime? deadline = null, global::System.Threading.CancellationToken cancellationToken = default(global::System.Threading.CancellationToken))
       {
         return ListNotificationChannelsAsync(request, new grpc::CallOptions(headers, deadline, cancellationToken));
       }
@@ -448,7 +445,7 @@ namespace Google.Cloud.Monitoring.V3 {
       /// <param name="deadline">An optional deadline for the call. The call will be cancelled if deadline is hit.</param>
       /// <param name="cancellationToken">An optional token for canceling the call.</param>
       /// <returns>The response received from the server.</returns>
-      public virtual global::Google.Cloud.Monitoring.V3.NotificationChannel GetNotificationChannel(global::Google.Cloud.Monitoring.V3.GetNotificationChannelRequest request, grpc::Metadata headers = null, DateTime? deadline = null, CancellationToken cancellationToken = default(CancellationToken))
+      public virtual global::Google.Cloud.Monitoring.V3.NotificationChannel GetNotificationChannel(global::Google.Cloud.Monitoring.V3.GetNotificationChannelRequest request, grpc::Metadata headers = null, global::System.DateTime? deadline = null, global::System.Threading.CancellationToken cancellationToken = default(global::System.Threading.CancellationToken))
       {
         return GetNotificationChannel(request, new grpc::CallOptions(headers, deadline, cancellationToken));
       }
@@ -478,7 +475,7 @@ namespace Google.Cloud.Monitoring.V3 {
       /// <param name="deadline">An optional deadline for the call. The call will be cancelled if deadline is hit.</param>
       /// <param name="cancellationToken">An optional token for canceling the call.</param>
       /// <returns>The call object.</returns>
-      public virtual grpc::AsyncUnaryCall<global::Google.Cloud.Monitoring.V3.NotificationChannel> GetNotificationChannelAsync(global::Google.Cloud.Monitoring.V3.GetNotificationChannelRequest request, grpc::Metadata headers = null, DateTime? deadline = null, CancellationToken cancellationToken = default(CancellationToken))
+      public virtual grpc::AsyncUnaryCall<global::Google.Cloud.Monitoring.V3.NotificationChannel> GetNotificationChannelAsync(global::Google.Cloud.Monitoring.V3.GetNotificationChannelRequest request, grpc::Metadata headers = null, global::System.DateTime? deadline = null, global::System.Threading.CancellationToken cancellationToken = default(global::System.Threading.CancellationToken))
       {
         return GetNotificationChannelAsync(request, new grpc::CallOptions(headers, deadline, cancellationToken));
       }
@@ -505,7 +502,7 @@ namespace Google.Cloud.Monitoring.V3 {
       /// <param name="deadline">An optional deadline for the call. The call will be cancelled if deadline is hit.</param>
       /// <param name="cancellationToken">An optional token for canceling the call.</param>
       /// <returns>The response received from the server.</returns>
-      public virtual global::Google.Cloud.Monitoring.V3.NotificationChannel CreateNotificationChannel(global::Google.Cloud.Monitoring.V3.CreateNotificationChannelRequest request, grpc::Metadata headers = null, DateTime? deadline = null, CancellationToken cancellationToken = default(CancellationToken))
+      public virtual global::Google.Cloud.Monitoring.V3.NotificationChannel CreateNotificationChannel(global::Google.Cloud.Monitoring.V3.CreateNotificationChannelRequest request, grpc::Metadata headers = null, global::System.DateTime? deadline = null, global::System.Threading.CancellationToken cancellationToken = default(global::System.Threading.CancellationToken))
       {
         return CreateNotificationChannel(request, new grpc::CallOptions(headers, deadline, cancellationToken));
       }
@@ -529,7 +526,7 @@ namespace Google.Cloud.Monitoring.V3 {
       /// <param name="deadline">An optional deadline for the call. The call will be cancelled if deadline is hit.</param>
       /// <param name="cancellationToken">An optional token for canceling the call.</param>
       /// <returns>The call object.</returns>
-      public virtual grpc::AsyncUnaryCall<global::Google.Cloud.Monitoring.V3.NotificationChannel> CreateNotificationChannelAsync(global::Google.Cloud.Monitoring.V3.CreateNotificationChannelRequest request, grpc::Metadata headers = null, DateTime? deadline = null, CancellationToken cancellationToken = default(CancellationToken))
+      public virtual grpc::AsyncUnaryCall<global::Google.Cloud.Monitoring.V3.NotificationChannel> CreateNotificationChannelAsync(global::Google.Cloud.Monitoring.V3.CreateNotificationChannelRequest request, grpc::Metadata headers = null, global::System.DateTime? deadline = null, global::System.Threading.CancellationToken cancellationToken = default(global::System.Threading.CancellationToken))
       {
         return CreateNotificationChannelAsync(request, new grpc::CallOptions(headers, deadline, cancellationToken));
       }
@@ -553,7 +550,7 @@ namespace Google.Cloud.Monitoring.V3 {
       /// <param name="deadline">An optional deadline for the call. The call will be cancelled if deadline is hit.</param>
       /// <param name="cancellationToken">An optional token for canceling the call.</param>
       /// <returns>The response received from the server.</returns>
-      public virtual global::Google.Cloud.Monitoring.V3.NotificationChannel UpdateNotificationChannel(global::Google.Cloud.Monitoring.V3.UpdateNotificationChannelRequest request, grpc::Metadata headers = null, DateTime? deadline = null, CancellationToken cancellationToken = default(CancellationToken))
+      public virtual global::Google.Cloud.Monitoring.V3.NotificationChannel UpdateNotificationChannel(global::Google.Cloud.Monitoring.V3.UpdateNotificationChannelRequest request, grpc::Metadata headers = null, global::System.DateTime? deadline = null, global::System.Threading.CancellationToken cancellationToken = default(global::System.Threading.CancellationToken))
       {
         return UpdateNotificationChannel(request, new grpc::CallOptions(headers, deadline, cancellationToken));
       }
@@ -577,7 +574,7 @@ namespace Google.Cloud.Monitoring.V3 {
       /// <param name="deadline">An optional deadline for the call. The call will be cancelled if deadline is hit.</param>
       /// <param name="cancellationToken">An optional token for canceling the call.</param>
       /// <returns>The call object.</returns>
-      public virtual grpc::AsyncUnaryCall<global::Google.Cloud.Monitoring.V3.NotificationChannel> UpdateNotificationChannelAsync(global::Google.Cloud.Monitoring.V3.UpdateNotificationChannelRequest request, grpc::Metadata headers = null, DateTime? deadline = null, CancellationToken cancellationToken = default(CancellationToken))
+      public virtual grpc::AsyncUnaryCall<global::Google.Cloud.Monitoring.V3.NotificationChannel> UpdateNotificationChannelAsync(global::Google.Cloud.Monitoring.V3.UpdateNotificationChannelRequest request, grpc::Metadata headers = null, global::System.DateTime? deadline = null, global::System.Threading.CancellationToken cancellationToken = default(global::System.Threading.CancellationToken))
       {
         return UpdateNotificationChannelAsync(request, new grpc::CallOptions(headers, deadline, cancellationToken));
       }
@@ -600,7 +597,7 @@ namespace Google.Cloud.Monitoring.V3 {
       /// <param name="deadline">An optional deadline for the call. The call will be cancelled if deadline is hit.</param>
       /// <param name="cancellationToken">An optional token for canceling the call.</param>
       /// <returns>The response received from the server.</returns>
-      public virtual global::Google.Protobuf.WellKnownTypes.Empty DeleteNotificationChannel(global::Google.Cloud.Monitoring.V3.DeleteNotificationChannelRequest request, grpc::Metadata headers = null, DateTime? deadline = null, CancellationToken cancellationToken = default(CancellationToken))
+      public virtual global::Google.Protobuf.WellKnownTypes.Empty DeleteNotificationChannel(global::Google.Cloud.Monitoring.V3.DeleteNotificationChannelRequest request, grpc::Metadata headers = null, global::System.DateTime? deadline = null, global::System.Threading.CancellationToken cancellationToken = default(global::System.Threading.CancellationToken))
       {
         return DeleteNotificationChannel(request, new grpc::CallOptions(headers, deadline, cancellationToken));
       }
@@ -622,7 +619,7 @@ namespace Google.Cloud.Monitoring.V3 {
       /// <param name="deadline">An optional deadline for the call. The call will be cancelled if deadline is hit.</param>
       /// <param name="cancellationToken">An optional token for canceling the call.</param>
       /// <returns>The call object.</returns>
-      public virtual grpc::AsyncUnaryCall<global::Google.Protobuf.WellKnownTypes.Empty> DeleteNotificationChannelAsync(global::Google.Cloud.Monitoring.V3.DeleteNotificationChannelRequest request, grpc::Metadata headers = null, DateTime? deadline = null, CancellationToken cancellationToken = default(CancellationToken))
+      public virtual grpc::AsyncUnaryCall<global::Google.Protobuf.WellKnownTypes.Empty> DeleteNotificationChannelAsync(global::Google.Cloud.Monitoring.V3.DeleteNotificationChannelRequest request, grpc::Metadata headers = null, global::System.DateTime? deadline = null, global::System.Threading.CancellationToken cancellationToken = default(global::System.Threading.CancellationToken))
       {
         return DeleteNotificationChannelAsync(request, new grpc::CallOptions(headers, deadline, cancellationToken));
       }
@@ -645,7 +642,7 @@ namespace Google.Cloud.Monitoring.V3 {
       /// <param name="deadline">An optional deadline for the call. The call will be cancelled if deadline is hit.</param>
       /// <param name="cancellationToken">An optional token for canceling the call.</param>
       /// <returns>The response received from the server.</returns>
-      public virtual global::Google.Protobuf.WellKnownTypes.Empty SendNotificationChannelVerificationCode(global::Google.Cloud.Monitoring.V3.SendNotificationChannelVerificationCodeRequest request, grpc::Metadata headers = null, DateTime? deadline = null, CancellationToken cancellationToken = default(CancellationToken))
+      public virtual global::Google.Protobuf.WellKnownTypes.Empty SendNotificationChannelVerificationCode(global::Google.Cloud.Monitoring.V3.SendNotificationChannelVerificationCodeRequest request, grpc::Metadata headers = null, global::System.DateTime? deadline = null, global::System.Threading.CancellationToken cancellationToken = default(global::System.Threading.CancellationToken))
       {
         return SendNotificationChannelVerificationCode(request, new grpc::CallOptions(headers, deadline, cancellationToken));
       }
@@ -669,7 +666,7 @@ namespace Google.Cloud.Monitoring.V3 {
       /// <param name="deadline">An optional deadline for the call. The call will be cancelled if deadline is hit.</param>
       /// <param name="cancellationToken">An optional token for canceling the call.</param>
       /// <returns>The call object.</returns>
-      public virtual grpc::AsyncUnaryCall<global::Google.Protobuf.WellKnownTypes.Empty> SendNotificationChannelVerificationCodeAsync(global::Google.Cloud.Monitoring.V3.SendNotificationChannelVerificationCodeRequest request, grpc::Metadata headers = null, DateTime? deadline = null, CancellationToken cancellationToken = default(CancellationToken))
+      public virtual grpc::AsyncUnaryCall<global::Google.Protobuf.WellKnownTypes.Empty> SendNotificationChannelVerificationCodeAsync(global::Google.Cloud.Monitoring.V3.SendNotificationChannelVerificationCodeRequest request, grpc::Metadata headers = null, global::System.DateTime? deadline = null, global::System.Threading.CancellationToken cancellationToken = default(global::System.Threading.CancellationToken))
       {
         return SendNotificationChannelVerificationCodeAsync(request, new grpc::CallOptions(headers, deadline, cancellationToken));
       }
@@ -712,7 +709,7 @@ namespace Google.Cloud.Monitoring.V3 {
       /// <param name="deadline">An optional deadline for the call. The call will be cancelled if deadline is hit.</param>
       /// <param name="cancellationToken">An optional token for canceling the call.</param>
       /// <returns>The response received from the server.</returns>
-      public virtual global::Google.Cloud.Monitoring.V3.GetNotificationChannelVerificationCodeResponse GetNotificationChannelVerificationCode(global::Google.Cloud.Monitoring.V3.GetNotificationChannelVerificationCodeRequest request, grpc::Metadata headers = null, DateTime? deadline = null, CancellationToken cancellationToken = default(CancellationToken))
+      public virtual global::Google.Cloud.Monitoring.V3.GetNotificationChannelVerificationCodeResponse GetNotificationChannelVerificationCode(global::Google.Cloud.Monitoring.V3.GetNotificationChannelVerificationCodeRequest request, grpc::Metadata headers = null, global::System.DateTime? deadline = null, global::System.Threading.CancellationToken cancellationToken = default(global::System.Threading.CancellationToken))
       {
         return GetNotificationChannelVerificationCode(request, new grpc::CallOptions(headers, deadline, cancellationToken));
       }
@@ -774,7 +771,7 @@ namespace Google.Cloud.Monitoring.V3 {
       /// <param name="deadline">An optional deadline for the call. The call will be cancelled if deadline is hit.</param>
       /// <param name="cancellationToken">An optional token for canceling the call.</param>
       /// <returns>The call object.</returns>
-      public virtual grpc::AsyncUnaryCall<global::Google.Cloud.Monitoring.V3.GetNotificationChannelVerificationCodeResponse> GetNotificationChannelVerificationCodeAsync(global::Google.Cloud.Monitoring.V3.GetNotificationChannelVerificationCodeRequest request, grpc::Metadata headers = null, DateTime? deadline = null, CancellationToken cancellationToken = default(CancellationToken))
+      public virtual grpc::AsyncUnaryCall<global::Google.Cloud.Monitoring.V3.GetNotificationChannelVerificationCodeResponse> GetNotificationChannelVerificationCodeAsync(global::Google.Cloud.Monitoring.V3.GetNotificationChannelVerificationCodeRequest request, grpc::Metadata headers = null, global::System.DateTime? deadline = null, global::System.Threading.CancellationToken cancellationToken = default(global::System.Threading.CancellationToken))
       {
         return GetNotificationChannelVerificationCodeAsync(request, new grpc::CallOptions(headers, deadline, cancellationToken));
       }
@@ -818,7 +815,7 @@ namespace Google.Cloud.Monitoring.V3 {
       /// <param name="deadline">An optional deadline for the call. The call will be cancelled if deadline is hit.</param>
       /// <param name="cancellationToken">An optional token for canceling the call.</param>
       /// <returns>The response received from the server.</returns>
-      public virtual global::Google.Cloud.Monitoring.V3.NotificationChannel VerifyNotificationChannel(global::Google.Cloud.Monitoring.V3.VerifyNotificationChannelRequest request, grpc::Metadata headers = null, DateTime? deadline = null, CancellationToken cancellationToken = default(CancellationToken))
+      public virtual global::Google.Cloud.Monitoring.V3.NotificationChannel VerifyNotificationChannel(global::Google.Cloud.Monitoring.V3.VerifyNotificationChannelRequest request, grpc::Metadata headers = null, global::System.DateTime? deadline = null, global::System.Threading.CancellationToken cancellationToken = default(global::System.Threading.CancellationToken))
       {
         return VerifyNotificationChannel(request, new grpc::CallOptions(headers, deadline, cancellationToken));
       }
@@ -844,7 +841,7 @@ namespace Google.Cloud.Monitoring.V3 {
       /// <param name="deadline">An optional deadline for the call. The call will be cancelled if deadline is hit.</param>
       /// <param name="cancellationToken">An optional token for canceling the call.</param>
       /// <returns>The call object.</returns>
-      public virtual grpc::AsyncUnaryCall<global::Google.Cloud.Monitoring.V3.NotificationChannel> VerifyNotificationChannelAsync(global::Google.Cloud.Monitoring.V3.VerifyNotificationChannelRequest request, grpc::Metadata headers = null, DateTime? deadline = null, CancellationToken cancellationToken = default(CancellationToken))
+      public virtual grpc::AsyncUnaryCall<global::Google.Cloud.Monitoring.V3.NotificationChannel> VerifyNotificationChannelAsync(global::Google.Cloud.Monitoring.V3.VerifyNotificationChannelRequest request, grpc::Metadata headers = null, global::System.DateTime? deadline = null, global::System.Threading.CancellationToken cancellationToken = default(global::System.Threading.CancellationToken))
       {
         return VerifyNotificationChannelAsync(request, new grpc::CallOptions(headers, deadline, cancellationToken));
       }

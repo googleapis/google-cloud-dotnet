@@ -20,9 +20,6 @@
 #pragma warning disable 1591
 #region Designer generated code
 
-using System;
-using System.Threading;
-using System.Threading.Tasks;
 using grpc = global::Grpc.Core;
 
 namespace Google.Cloud.Dialogflow.V2 {
@@ -242,7 +239,7 @@ namespace Google.Cloud.Dialogflow.V2 {
       /// <param name="deadline">An optional deadline for the call. The call will be cancelled if deadline is hit.</param>
       /// <param name="cancellationToken">An optional token for canceling the call.</param>
       /// <returns>The response received from the server.</returns>
-      public virtual global::Google.Cloud.Dialogflow.V2.Agent GetAgent(global::Google.Cloud.Dialogflow.V2.GetAgentRequest request, grpc::Metadata headers = null, DateTime? deadline = null, CancellationToken cancellationToken = default(CancellationToken))
+      public virtual global::Google.Cloud.Dialogflow.V2.Agent GetAgent(global::Google.Cloud.Dialogflow.V2.GetAgentRequest request, grpc::Metadata headers = null, global::System.DateTime? deadline = null, global::System.Threading.CancellationToken cancellationToken = default(global::System.Threading.CancellationToken))
       {
         return GetAgent(request, new grpc::CallOptions(headers, deadline, cancellationToken));
       }
@@ -264,7 +261,7 @@ namespace Google.Cloud.Dialogflow.V2 {
       /// <param name="deadline">An optional deadline for the call. The call will be cancelled if deadline is hit.</param>
       /// <param name="cancellationToken">An optional token for canceling the call.</param>
       /// <returns>The call object.</returns>
-      public virtual grpc::AsyncUnaryCall<global::Google.Cloud.Dialogflow.V2.Agent> GetAgentAsync(global::Google.Cloud.Dialogflow.V2.GetAgentRequest request, grpc::Metadata headers = null, DateTime? deadline = null, CancellationToken cancellationToken = default(CancellationToken))
+      public virtual grpc::AsyncUnaryCall<global::Google.Cloud.Dialogflow.V2.Agent> GetAgentAsync(global::Google.Cloud.Dialogflow.V2.GetAgentRequest request, grpc::Metadata headers = null, global::System.DateTime? deadline = null, global::System.Threading.CancellationToken cancellationToken = default(global::System.Threading.CancellationToken))
       {
         return GetAgentAsync(request, new grpc::CallOptions(headers, deadline, cancellationToken));
       }
@@ -292,7 +289,7 @@ namespace Google.Cloud.Dialogflow.V2 {
       /// <param name="deadline">An optional deadline for the call. The call will be cancelled if deadline is hit.</param>
       /// <param name="cancellationToken">An optional token for canceling the call.</param>
       /// <returns>The response received from the server.</returns>
-      public virtual global::Google.Cloud.Dialogflow.V2.SearchAgentsResponse SearchAgents(global::Google.Cloud.Dialogflow.V2.SearchAgentsRequest request, grpc::Metadata headers = null, DateTime? deadline = null, CancellationToken cancellationToken = default(CancellationToken))
+      public virtual global::Google.Cloud.Dialogflow.V2.SearchAgentsResponse SearchAgents(global::Google.Cloud.Dialogflow.V2.SearchAgentsRequest request, grpc::Metadata headers = null, global::System.DateTime? deadline = null, global::System.Threading.CancellationToken cancellationToken = default(global::System.Threading.CancellationToken))
       {
         return SearchAgents(request, new grpc::CallOptions(headers, deadline, cancellationToken));
       }
@@ -326,7 +323,7 @@ namespace Google.Cloud.Dialogflow.V2 {
       /// <param name="deadline">An optional deadline for the call. The call will be cancelled if deadline is hit.</param>
       /// <param name="cancellationToken">An optional token for canceling the call.</param>
       /// <returns>The call object.</returns>
-      public virtual grpc::AsyncUnaryCall<global::Google.Cloud.Dialogflow.V2.SearchAgentsResponse> SearchAgentsAsync(global::Google.Cloud.Dialogflow.V2.SearchAgentsRequest request, grpc::Metadata headers = null, DateTime? deadline = null, CancellationToken cancellationToken = default(CancellationToken))
+      public virtual grpc::AsyncUnaryCall<global::Google.Cloud.Dialogflow.V2.SearchAgentsResponse> SearchAgentsAsync(global::Google.Cloud.Dialogflow.V2.SearchAgentsRequest request, grpc::Metadata headers = null, global::System.DateTime? deadline = null, global::System.Threading.CancellationToken cancellationToken = default(global::System.Threading.CancellationToken))
       {
         return SearchAgentsAsync(request, new grpc::CallOptions(headers, deadline, cancellationToken));
       }
@@ -357,7 +354,7 @@ namespace Google.Cloud.Dialogflow.V2 {
       /// <param name="deadline">An optional deadline for the call. The call will be cancelled if deadline is hit.</param>
       /// <param name="cancellationToken">An optional token for canceling the call.</param>
       /// <returns>The response received from the server.</returns>
-      public virtual global::Google.LongRunning.Operation TrainAgent(global::Google.Cloud.Dialogflow.V2.TrainAgentRequest request, grpc::Metadata headers = null, DateTime? deadline = null, CancellationToken cancellationToken = default(CancellationToken))
+      public virtual global::Google.LongRunning.Operation TrainAgent(global::Google.Cloud.Dialogflow.V2.TrainAgentRequest request, grpc::Metadata headers = null, global::System.DateTime? deadline = null, global::System.Threading.CancellationToken cancellationToken = default(global::System.Threading.CancellationToken))
       {
         return TrainAgent(request, new grpc::CallOptions(headers, deadline, cancellationToken));
       }
@@ -385,7 +382,7 @@ namespace Google.Cloud.Dialogflow.V2 {
       /// <param name="deadline">An optional deadline for the call. The call will be cancelled if deadline is hit.</param>
       /// <param name="cancellationToken">An optional token for canceling the call.</param>
       /// <returns>The call object.</returns>
-      public virtual grpc::AsyncUnaryCall<global::Google.LongRunning.Operation> TrainAgentAsync(global::Google.Cloud.Dialogflow.V2.TrainAgentRequest request, grpc::Metadata headers = null, DateTime? deadline = null, CancellationToken cancellationToken = default(CancellationToken))
+      public virtual grpc::AsyncUnaryCall<global::Google.LongRunning.Operation> TrainAgentAsync(global::Google.Cloud.Dialogflow.V2.TrainAgentRequest request, grpc::Metadata headers = null, global::System.DateTime? deadline = null, global::System.Threading.CancellationToken cancellationToken = default(global::System.Threading.CancellationToken))
       {
         return TrainAgentAsync(request, new grpc::CallOptions(headers, deadline, cancellationToken));
       }
@@ -413,7 +410,7 @@ namespace Google.Cloud.Dialogflow.V2 {
       /// <param name="deadline">An optional deadline for the call. The call will be cancelled if deadline is hit.</param>
       /// <param name="cancellationToken">An optional token for canceling the call.</param>
       /// <returns>The response received from the server.</returns>
-      public virtual global::Google.LongRunning.Operation ExportAgent(global::Google.Cloud.Dialogflow.V2.ExportAgentRequest request, grpc::Metadata headers = null, DateTime? deadline = null, CancellationToken cancellationToken = default(CancellationToken))
+      public virtual global::Google.LongRunning.Operation ExportAgent(global::Google.Cloud.Dialogflow.V2.ExportAgentRequest request, grpc::Metadata headers = null, global::System.DateTime? deadline = null, global::System.Threading.CancellationToken cancellationToken = default(global::System.Threading.CancellationToken))
       {
         return ExportAgent(request, new grpc::CallOptions(headers, deadline, cancellationToken));
       }
@@ -441,7 +438,7 @@ namespace Google.Cloud.Dialogflow.V2 {
       /// <param name="deadline">An optional deadline for the call. The call will be cancelled if deadline is hit.</param>
       /// <param name="cancellationToken">An optional token for canceling the call.</param>
       /// <returns>The call object.</returns>
-      public virtual grpc::AsyncUnaryCall<global::Google.LongRunning.Operation> ExportAgentAsync(global::Google.Cloud.Dialogflow.V2.ExportAgentRequest request, grpc::Metadata headers = null, DateTime? deadline = null, CancellationToken cancellationToken = default(CancellationToken))
+      public virtual grpc::AsyncUnaryCall<global::Google.LongRunning.Operation> ExportAgentAsync(global::Google.Cloud.Dialogflow.V2.ExportAgentRequest request, grpc::Metadata headers = null, global::System.DateTime? deadline = null, global::System.Threading.CancellationToken cancellationToken = default(global::System.Threading.CancellationToken))
       {
         return ExportAgentAsync(request, new grpc::CallOptions(headers, deadline, cancellationToken));
       }
@@ -473,7 +470,7 @@ namespace Google.Cloud.Dialogflow.V2 {
       /// <param name="deadline">An optional deadline for the call. The call will be cancelled if deadline is hit.</param>
       /// <param name="cancellationToken">An optional token for canceling the call.</param>
       /// <returns>The response received from the server.</returns>
-      public virtual global::Google.LongRunning.Operation ImportAgent(global::Google.Cloud.Dialogflow.V2.ImportAgentRequest request, grpc::Metadata headers = null, DateTime? deadline = null, CancellationToken cancellationToken = default(CancellationToken))
+      public virtual global::Google.LongRunning.Operation ImportAgent(global::Google.Cloud.Dialogflow.V2.ImportAgentRequest request, grpc::Metadata headers = null, global::System.DateTime? deadline = null, global::System.Threading.CancellationToken cancellationToken = default(global::System.Threading.CancellationToken))
       {
         return ImportAgent(request, new grpc::CallOptions(headers, deadline, cancellationToken));
       }
@@ -509,7 +506,7 @@ namespace Google.Cloud.Dialogflow.V2 {
       /// <param name="deadline">An optional deadline for the call. The call will be cancelled if deadline is hit.</param>
       /// <param name="cancellationToken">An optional token for canceling the call.</param>
       /// <returns>The call object.</returns>
-      public virtual grpc::AsyncUnaryCall<global::Google.LongRunning.Operation> ImportAgentAsync(global::Google.Cloud.Dialogflow.V2.ImportAgentRequest request, grpc::Metadata headers = null, DateTime? deadline = null, CancellationToken cancellationToken = default(CancellationToken))
+      public virtual grpc::AsyncUnaryCall<global::Google.LongRunning.Operation> ImportAgentAsync(global::Google.Cloud.Dialogflow.V2.ImportAgentRequest request, grpc::Metadata headers = null, global::System.DateTime? deadline = null, global::System.Threading.CancellationToken cancellationToken = default(global::System.Threading.CancellationToken))
       {
         return ImportAgentAsync(request, new grpc::CallOptions(headers, deadline, cancellationToken));
       }
@@ -544,7 +541,7 @@ namespace Google.Cloud.Dialogflow.V2 {
       /// <param name="deadline">An optional deadline for the call. The call will be cancelled if deadline is hit.</param>
       /// <param name="cancellationToken">An optional token for canceling the call.</param>
       /// <returns>The response received from the server.</returns>
-      public virtual global::Google.LongRunning.Operation RestoreAgent(global::Google.Cloud.Dialogflow.V2.RestoreAgentRequest request, grpc::Metadata headers = null, DateTime? deadline = null, CancellationToken cancellationToken = default(CancellationToken))
+      public virtual global::Google.LongRunning.Operation RestoreAgent(global::Google.Cloud.Dialogflow.V2.RestoreAgentRequest request, grpc::Metadata headers = null, global::System.DateTime? deadline = null, global::System.Threading.CancellationToken cancellationToken = default(global::System.Threading.CancellationToken))
       {
         return RestoreAgent(request, new grpc::CallOptions(headers, deadline, cancellationToken));
       }
@@ -578,7 +575,7 @@ namespace Google.Cloud.Dialogflow.V2 {
       /// <param name="deadline">An optional deadline for the call. The call will be cancelled if deadline is hit.</param>
       /// <param name="cancellationToken">An optional token for canceling the call.</param>
       /// <returns>The call object.</returns>
-      public virtual grpc::AsyncUnaryCall<global::Google.LongRunning.Operation> RestoreAgentAsync(global::Google.Cloud.Dialogflow.V2.RestoreAgentRequest request, grpc::Metadata headers = null, DateTime? deadline = null, CancellationToken cancellationToken = default(CancellationToken))
+      public virtual grpc::AsyncUnaryCall<global::Google.LongRunning.Operation> RestoreAgentAsync(global::Google.Cloud.Dialogflow.V2.RestoreAgentRequest request, grpc::Metadata headers = null, global::System.DateTime? deadline = null, global::System.Threading.CancellationToken cancellationToken = default(global::System.Threading.CancellationToken))
       {
         return RestoreAgentAsync(request, new grpc::CallOptions(headers, deadline, cancellationToken));
       }

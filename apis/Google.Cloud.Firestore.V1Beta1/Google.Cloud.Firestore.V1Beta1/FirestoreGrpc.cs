@@ -20,9 +20,6 @@
 #pragma warning disable 1591
 #region Designer generated code
 
-using System;
-using System.Threading;
-using System.Threading.Tasks;
 using grpc = global::Grpc.Core;
 
 namespace Google.Cloud.Firestore.V1Beta1 {
@@ -355,7 +352,7 @@ namespace Google.Cloud.Firestore.V1Beta1 {
       /// <param name="deadline">An optional deadline for the call. The call will be cancelled if deadline is hit.</param>
       /// <param name="cancellationToken">An optional token for canceling the call.</param>
       /// <returns>The response received from the server.</returns>
-      public virtual global::Google.Cloud.Firestore.V1Beta1.Document GetDocument(global::Google.Cloud.Firestore.V1Beta1.GetDocumentRequest request, grpc::Metadata headers = null, DateTime? deadline = null, CancellationToken cancellationToken = default(CancellationToken))
+      public virtual global::Google.Cloud.Firestore.V1Beta1.Document GetDocument(global::Google.Cloud.Firestore.V1Beta1.GetDocumentRequest request, grpc::Metadata headers = null, global::System.DateTime? deadline = null, global::System.Threading.CancellationToken cancellationToken = default(global::System.Threading.CancellationToken))
       {
         return GetDocument(request, new grpc::CallOptions(headers, deadline, cancellationToken));
       }
@@ -377,7 +374,7 @@ namespace Google.Cloud.Firestore.V1Beta1 {
       /// <param name="deadline">An optional deadline for the call. The call will be cancelled if deadline is hit.</param>
       /// <param name="cancellationToken">An optional token for canceling the call.</param>
       /// <returns>The call object.</returns>
-      public virtual grpc::AsyncUnaryCall<global::Google.Cloud.Firestore.V1Beta1.Document> GetDocumentAsync(global::Google.Cloud.Firestore.V1Beta1.GetDocumentRequest request, grpc::Metadata headers = null, DateTime? deadline = null, CancellationToken cancellationToken = default(CancellationToken))
+      public virtual grpc::AsyncUnaryCall<global::Google.Cloud.Firestore.V1Beta1.Document> GetDocumentAsync(global::Google.Cloud.Firestore.V1Beta1.GetDocumentRequest request, grpc::Metadata headers = null, global::System.DateTime? deadline = null, global::System.Threading.CancellationToken cancellationToken = default(global::System.Threading.CancellationToken))
       {
         return GetDocumentAsync(request, new grpc::CallOptions(headers, deadline, cancellationToken));
       }
@@ -399,7 +396,7 @@ namespace Google.Cloud.Firestore.V1Beta1 {
       /// <param name="deadline">An optional deadline for the call. The call will be cancelled if deadline is hit.</param>
       /// <param name="cancellationToken">An optional token for canceling the call.</param>
       /// <returns>The response received from the server.</returns>
-      public virtual global::Google.Cloud.Firestore.V1Beta1.ListDocumentsResponse ListDocuments(global::Google.Cloud.Firestore.V1Beta1.ListDocumentsRequest request, grpc::Metadata headers = null, DateTime? deadline = null, CancellationToken cancellationToken = default(CancellationToken))
+      public virtual global::Google.Cloud.Firestore.V1Beta1.ListDocumentsResponse ListDocuments(global::Google.Cloud.Firestore.V1Beta1.ListDocumentsRequest request, grpc::Metadata headers = null, global::System.DateTime? deadline = null, global::System.Threading.CancellationToken cancellationToken = default(global::System.Threading.CancellationToken))
       {
         return ListDocuments(request, new grpc::CallOptions(headers, deadline, cancellationToken));
       }
@@ -421,7 +418,7 @@ namespace Google.Cloud.Firestore.V1Beta1 {
       /// <param name="deadline">An optional deadline for the call. The call will be cancelled if deadline is hit.</param>
       /// <param name="cancellationToken">An optional token for canceling the call.</param>
       /// <returns>The call object.</returns>
-      public virtual grpc::AsyncUnaryCall<global::Google.Cloud.Firestore.V1Beta1.ListDocumentsResponse> ListDocumentsAsync(global::Google.Cloud.Firestore.V1Beta1.ListDocumentsRequest request, grpc::Metadata headers = null, DateTime? deadline = null, CancellationToken cancellationToken = default(CancellationToken))
+      public virtual grpc::AsyncUnaryCall<global::Google.Cloud.Firestore.V1Beta1.ListDocumentsResponse> ListDocumentsAsync(global::Google.Cloud.Firestore.V1Beta1.ListDocumentsRequest request, grpc::Metadata headers = null, global::System.DateTime? deadline = null, global::System.Threading.CancellationToken cancellationToken = default(global::System.Threading.CancellationToken))
       {
         return ListDocumentsAsync(request, new grpc::CallOptions(headers, deadline, cancellationToken));
       }
@@ -443,7 +440,7 @@ namespace Google.Cloud.Firestore.V1Beta1 {
       /// <param name="deadline">An optional deadline for the call. The call will be cancelled if deadline is hit.</param>
       /// <param name="cancellationToken">An optional token for canceling the call.</param>
       /// <returns>The response received from the server.</returns>
-      public virtual global::Google.Cloud.Firestore.V1Beta1.Document CreateDocument(global::Google.Cloud.Firestore.V1Beta1.CreateDocumentRequest request, grpc::Metadata headers = null, DateTime? deadline = null, CancellationToken cancellationToken = default(CancellationToken))
+      public virtual global::Google.Cloud.Firestore.V1Beta1.Document CreateDocument(global::Google.Cloud.Firestore.V1Beta1.CreateDocumentRequest request, grpc::Metadata headers = null, global::System.DateTime? deadline = null, global::System.Threading.CancellationToken cancellationToken = default(global::System.Threading.CancellationToken))
       {
         return CreateDocument(request, new grpc::CallOptions(headers, deadline, cancellationToken));
       }
@@ -465,7 +462,7 @@ namespace Google.Cloud.Firestore.V1Beta1 {
       /// <param name="deadline">An optional deadline for the call. The call will be cancelled if deadline is hit.</param>
       /// <param name="cancellationToken">An optional token for canceling the call.</param>
       /// <returns>The call object.</returns>
-      public virtual grpc::AsyncUnaryCall<global::Google.Cloud.Firestore.V1Beta1.Document> CreateDocumentAsync(global::Google.Cloud.Firestore.V1Beta1.CreateDocumentRequest request, grpc::Metadata headers = null, DateTime? deadline = null, CancellationToken cancellationToken = default(CancellationToken))
+      public virtual grpc::AsyncUnaryCall<global::Google.Cloud.Firestore.V1Beta1.Document> CreateDocumentAsync(global::Google.Cloud.Firestore.V1Beta1.CreateDocumentRequest request, grpc::Metadata headers = null, global::System.DateTime? deadline = null, global::System.Threading.CancellationToken cancellationToken = default(global::System.Threading.CancellationToken))
       {
         return CreateDocumentAsync(request, new grpc::CallOptions(headers, deadline, cancellationToken));
       }
@@ -487,7 +484,7 @@ namespace Google.Cloud.Firestore.V1Beta1 {
       /// <param name="deadline">An optional deadline for the call. The call will be cancelled if deadline is hit.</param>
       /// <param name="cancellationToken">An optional token for canceling the call.</param>
       /// <returns>The response received from the server.</returns>
-      public virtual global::Google.Cloud.Firestore.V1Beta1.Document UpdateDocument(global::Google.Cloud.Firestore.V1Beta1.UpdateDocumentRequest request, grpc::Metadata headers = null, DateTime? deadline = null, CancellationToken cancellationToken = default(CancellationToken))
+      public virtual global::Google.Cloud.Firestore.V1Beta1.Document UpdateDocument(global::Google.Cloud.Firestore.V1Beta1.UpdateDocumentRequest request, grpc::Metadata headers = null, global::System.DateTime? deadline = null, global::System.Threading.CancellationToken cancellationToken = default(global::System.Threading.CancellationToken))
       {
         return UpdateDocument(request, new grpc::CallOptions(headers, deadline, cancellationToken));
       }
@@ -509,7 +506,7 @@ namespace Google.Cloud.Firestore.V1Beta1 {
       /// <param name="deadline">An optional deadline for the call. The call will be cancelled if deadline is hit.</param>
       /// <param name="cancellationToken">An optional token for canceling the call.</param>
       /// <returns>The call object.</returns>
-      public virtual grpc::AsyncUnaryCall<global::Google.Cloud.Firestore.V1Beta1.Document> UpdateDocumentAsync(global::Google.Cloud.Firestore.V1Beta1.UpdateDocumentRequest request, grpc::Metadata headers = null, DateTime? deadline = null, CancellationToken cancellationToken = default(CancellationToken))
+      public virtual grpc::AsyncUnaryCall<global::Google.Cloud.Firestore.V1Beta1.Document> UpdateDocumentAsync(global::Google.Cloud.Firestore.V1Beta1.UpdateDocumentRequest request, grpc::Metadata headers = null, global::System.DateTime? deadline = null, global::System.Threading.CancellationToken cancellationToken = default(global::System.Threading.CancellationToken))
       {
         return UpdateDocumentAsync(request, new grpc::CallOptions(headers, deadline, cancellationToken));
       }
@@ -531,7 +528,7 @@ namespace Google.Cloud.Firestore.V1Beta1 {
       /// <param name="deadline">An optional deadline for the call. The call will be cancelled if deadline is hit.</param>
       /// <param name="cancellationToken">An optional token for canceling the call.</param>
       /// <returns>The response received from the server.</returns>
-      public virtual global::Google.Protobuf.WellKnownTypes.Empty DeleteDocument(global::Google.Cloud.Firestore.V1Beta1.DeleteDocumentRequest request, grpc::Metadata headers = null, DateTime? deadline = null, CancellationToken cancellationToken = default(CancellationToken))
+      public virtual global::Google.Protobuf.WellKnownTypes.Empty DeleteDocument(global::Google.Cloud.Firestore.V1Beta1.DeleteDocumentRequest request, grpc::Metadata headers = null, global::System.DateTime? deadline = null, global::System.Threading.CancellationToken cancellationToken = default(global::System.Threading.CancellationToken))
       {
         return DeleteDocument(request, new grpc::CallOptions(headers, deadline, cancellationToken));
       }
@@ -553,7 +550,7 @@ namespace Google.Cloud.Firestore.V1Beta1 {
       /// <param name="deadline">An optional deadline for the call. The call will be cancelled if deadline is hit.</param>
       /// <param name="cancellationToken">An optional token for canceling the call.</param>
       /// <returns>The call object.</returns>
-      public virtual grpc::AsyncUnaryCall<global::Google.Protobuf.WellKnownTypes.Empty> DeleteDocumentAsync(global::Google.Cloud.Firestore.V1Beta1.DeleteDocumentRequest request, grpc::Metadata headers = null, DateTime? deadline = null, CancellationToken cancellationToken = default(CancellationToken))
+      public virtual grpc::AsyncUnaryCall<global::Google.Protobuf.WellKnownTypes.Empty> DeleteDocumentAsync(global::Google.Cloud.Firestore.V1Beta1.DeleteDocumentRequest request, grpc::Metadata headers = null, global::System.DateTime? deadline = null, global::System.Threading.CancellationToken cancellationToken = default(global::System.Threading.CancellationToken))
       {
         return DeleteDocumentAsync(request, new grpc::CallOptions(headers, deadline, cancellationToken));
       }
@@ -578,7 +575,7 @@ namespace Google.Cloud.Firestore.V1Beta1 {
       /// <param name="deadline">An optional deadline for the call. The call will be cancelled if deadline is hit.</param>
       /// <param name="cancellationToken">An optional token for canceling the call.</param>
       /// <returns>The call object.</returns>
-      public virtual grpc::AsyncServerStreamingCall<global::Google.Cloud.Firestore.V1Beta1.BatchGetDocumentsResponse> BatchGetDocuments(global::Google.Cloud.Firestore.V1Beta1.BatchGetDocumentsRequest request, grpc::Metadata headers = null, DateTime? deadline = null, CancellationToken cancellationToken = default(CancellationToken))
+      public virtual grpc::AsyncServerStreamingCall<global::Google.Cloud.Firestore.V1Beta1.BatchGetDocumentsResponse> BatchGetDocuments(global::Google.Cloud.Firestore.V1Beta1.BatchGetDocumentsRequest request, grpc::Metadata headers = null, global::System.DateTime? deadline = null, global::System.Threading.CancellationToken cancellationToken = default(global::System.Threading.CancellationToken))
       {
         return BatchGetDocuments(request, new grpc::CallOptions(headers, deadline, cancellationToken));
       }
@@ -603,7 +600,7 @@ namespace Google.Cloud.Firestore.V1Beta1 {
       /// <param name="deadline">An optional deadline for the call. The call will be cancelled if deadline is hit.</param>
       /// <param name="cancellationToken">An optional token for canceling the call.</param>
       /// <returns>The response received from the server.</returns>
-      public virtual global::Google.Cloud.Firestore.V1Beta1.BeginTransactionResponse BeginTransaction(global::Google.Cloud.Firestore.V1Beta1.BeginTransactionRequest request, grpc::Metadata headers = null, DateTime? deadline = null, CancellationToken cancellationToken = default(CancellationToken))
+      public virtual global::Google.Cloud.Firestore.V1Beta1.BeginTransactionResponse BeginTransaction(global::Google.Cloud.Firestore.V1Beta1.BeginTransactionRequest request, grpc::Metadata headers = null, global::System.DateTime? deadline = null, global::System.Threading.CancellationToken cancellationToken = default(global::System.Threading.CancellationToken))
       {
         return BeginTransaction(request, new grpc::CallOptions(headers, deadline, cancellationToken));
       }
@@ -625,7 +622,7 @@ namespace Google.Cloud.Firestore.V1Beta1 {
       /// <param name="deadline">An optional deadline for the call. The call will be cancelled if deadline is hit.</param>
       /// <param name="cancellationToken">An optional token for canceling the call.</param>
       /// <returns>The call object.</returns>
-      public virtual grpc::AsyncUnaryCall<global::Google.Cloud.Firestore.V1Beta1.BeginTransactionResponse> BeginTransactionAsync(global::Google.Cloud.Firestore.V1Beta1.BeginTransactionRequest request, grpc::Metadata headers = null, DateTime? deadline = null, CancellationToken cancellationToken = default(CancellationToken))
+      public virtual grpc::AsyncUnaryCall<global::Google.Cloud.Firestore.V1Beta1.BeginTransactionResponse> BeginTransactionAsync(global::Google.Cloud.Firestore.V1Beta1.BeginTransactionRequest request, grpc::Metadata headers = null, global::System.DateTime? deadline = null, global::System.Threading.CancellationToken cancellationToken = default(global::System.Threading.CancellationToken))
       {
         return BeginTransactionAsync(request, new grpc::CallOptions(headers, deadline, cancellationToken));
       }
@@ -647,7 +644,7 @@ namespace Google.Cloud.Firestore.V1Beta1 {
       /// <param name="deadline">An optional deadline for the call. The call will be cancelled if deadline is hit.</param>
       /// <param name="cancellationToken">An optional token for canceling the call.</param>
       /// <returns>The response received from the server.</returns>
-      public virtual global::Google.Cloud.Firestore.V1Beta1.CommitResponse Commit(global::Google.Cloud.Firestore.V1Beta1.CommitRequest request, grpc::Metadata headers = null, DateTime? deadline = null, CancellationToken cancellationToken = default(CancellationToken))
+      public virtual global::Google.Cloud.Firestore.V1Beta1.CommitResponse Commit(global::Google.Cloud.Firestore.V1Beta1.CommitRequest request, grpc::Metadata headers = null, global::System.DateTime? deadline = null, global::System.Threading.CancellationToken cancellationToken = default(global::System.Threading.CancellationToken))
       {
         return Commit(request, new grpc::CallOptions(headers, deadline, cancellationToken));
       }
@@ -669,7 +666,7 @@ namespace Google.Cloud.Firestore.V1Beta1 {
       /// <param name="deadline">An optional deadline for the call. The call will be cancelled if deadline is hit.</param>
       /// <param name="cancellationToken">An optional token for canceling the call.</param>
       /// <returns>The call object.</returns>
-      public virtual grpc::AsyncUnaryCall<global::Google.Cloud.Firestore.V1Beta1.CommitResponse> CommitAsync(global::Google.Cloud.Firestore.V1Beta1.CommitRequest request, grpc::Metadata headers = null, DateTime? deadline = null, CancellationToken cancellationToken = default(CancellationToken))
+      public virtual grpc::AsyncUnaryCall<global::Google.Cloud.Firestore.V1Beta1.CommitResponse> CommitAsync(global::Google.Cloud.Firestore.V1Beta1.CommitRequest request, grpc::Metadata headers = null, global::System.DateTime? deadline = null, global::System.Threading.CancellationToken cancellationToken = default(global::System.Threading.CancellationToken))
       {
         return CommitAsync(request, new grpc::CallOptions(headers, deadline, cancellationToken));
       }
@@ -691,7 +688,7 @@ namespace Google.Cloud.Firestore.V1Beta1 {
       /// <param name="deadline">An optional deadline for the call. The call will be cancelled if deadline is hit.</param>
       /// <param name="cancellationToken">An optional token for canceling the call.</param>
       /// <returns>The response received from the server.</returns>
-      public virtual global::Google.Protobuf.WellKnownTypes.Empty Rollback(global::Google.Cloud.Firestore.V1Beta1.RollbackRequest request, grpc::Metadata headers = null, DateTime? deadline = null, CancellationToken cancellationToken = default(CancellationToken))
+      public virtual global::Google.Protobuf.WellKnownTypes.Empty Rollback(global::Google.Cloud.Firestore.V1Beta1.RollbackRequest request, grpc::Metadata headers = null, global::System.DateTime? deadline = null, global::System.Threading.CancellationToken cancellationToken = default(global::System.Threading.CancellationToken))
       {
         return Rollback(request, new grpc::CallOptions(headers, deadline, cancellationToken));
       }
@@ -713,7 +710,7 @@ namespace Google.Cloud.Firestore.V1Beta1 {
       /// <param name="deadline">An optional deadline for the call. The call will be cancelled if deadline is hit.</param>
       /// <param name="cancellationToken">An optional token for canceling the call.</param>
       /// <returns>The call object.</returns>
-      public virtual grpc::AsyncUnaryCall<global::Google.Protobuf.WellKnownTypes.Empty> RollbackAsync(global::Google.Cloud.Firestore.V1Beta1.RollbackRequest request, grpc::Metadata headers = null, DateTime? deadline = null, CancellationToken cancellationToken = default(CancellationToken))
+      public virtual grpc::AsyncUnaryCall<global::Google.Protobuf.WellKnownTypes.Empty> RollbackAsync(global::Google.Cloud.Firestore.V1Beta1.RollbackRequest request, grpc::Metadata headers = null, global::System.DateTime? deadline = null, global::System.Threading.CancellationToken cancellationToken = default(global::System.Threading.CancellationToken))
       {
         return RollbackAsync(request, new grpc::CallOptions(headers, deadline, cancellationToken));
       }
@@ -735,7 +732,7 @@ namespace Google.Cloud.Firestore.V1Beta1 {
       /// <param name="deadline">An optional deadline for the call. The call will be cancelled if deadline is hit.</param>
       /// <param name="cancellationToken">An optional token for canceling the call.</param>
       /// <returns>The call object.</returns>
-      public virtual grpc::AsyncServerStreamingCall<global::Google.Cloud.Firestore.V1Beta1.RunQueryResponse> RunQuery(global::Google.Cloud.Firestore.V1Beta1.RunQueryRequest request, grpc::Metadata headers = null, DateTime? deadline = null, CancellationToken cancellationToken = default(CancellationToken))
+      public virtual grpc::AsyncServerStreamingCall<global::Google.Cloud.Firestore.V1Beta1.RunQueryResponse> RunQuery(global::Google.Cloud.Firestore.V1Beta1.RunQueryRequest request, grpc::Metadata headers = null, global::System.DateTime? deadline = null, global::System.Threading.CancellationToken cancellationToken = default(global::System.Threading.CancellationToken))
       {
         return RunQuery(request, new grpc::CallOptions(headers, deadline, cancellationToken));
       }
@@ -756,7 +753,7 @@ namespace Google.Cloud.Firestore.V1Beta1 {
       /// <param name="deadline">An optional deadline for the call. The call will be cancelled if deadline is hit.</param>
       /// <param name="cancellationToken">An optional token for canceling the call.</param>
       /// <returns>The call object.</returns>
-      public virtual grpc::AsyncDuplexStreamingCall<global::Google.Cloud.Firestore.V1Beta1.WriteRequest, global::Google.Cloud.Firestore.V1Beta1.WriteResponse> Write(grpc::Metadata headers = null, DateTime? deadline = null, CancellationToken cancellationToken = default(CancellationToken))
+      public virtual grpc::AsyncDuplexStreamingCall<global::Google.Cloud.Firestore.V1Beta1.WriteRequest, global::Google.Cloud.Firestore.V1Beta1.WriteResponse> Write(grpc::Metadata headers = null, global::System.DateTime? deadline = null, global::System.Threading.CancellationToken cancellationToken = default(global::System.Threading.CancellationToken))
       {
         return Write(new grpc::CallOptions(headers, deadline, cancellationToken));
       }
@@ -776,7 +773,7 @@ namespace Google.Cloud.Firestore.V1Beta1 {
       /// <param name="deadline">An optional deadline for the call. The call will be cancelled if deadline is hit.</param>
       /// <param name="cancellationToken">An optional token for canceling the call.</param>
       /// <returns>The call object.</returns>
-      public virtual grpc::AsyncDuplexStreamingCall<global::Google.Cloud.Firestore.V1Beta1.ListenRequest, global::Google.Cloud.Firestore.V1Beta1.ListenResponse> Listen(grpc::Metadata headers = null, DateTime? deadline = null, CancellationToken cancellationToken = default(CancellationToken))
+      public virtual grpc::AsyncDuplexStreamingCall<global::Google.Cloud.Firestore.V1Beta1.ListenRequest, global::Google.Cloud.Firestore.V1Beta1.ListenResponse> Listen(grpc::Metadata headers = null, global::System.DateTime? deadline = null, global::System.Threading.CancellationToken cancellationToken = default(global::System.Threading.CancellationToken))
       {
         return Listen(new grpc::CallOptions(headers, deadline, cancellationToken));
       }
@@ -797,7 +794,7 @@ namespace Google.Cloud.Firestore.V1Beta1 {
       /// <param name="deadline">An optional deadline for the call. The call will be cancelled if deadline is hit.</param>
       /// <param name="cancellationToken">An optional token for canceling the call.</param>
       /// <returns>The response received from the server.</returns>
-      public virtual global::Google.Cloud.Firestore.V1Beta1.ListCollectionIdsResponse ListCollectionIds(global::Google.Cloud.Firestore.V1Beta1.ListCollectionIdsRequest request, grpc::Metadata headers = null, DateTime? deadline = null, CancellationToken cancellationToken = default(CancellationToken))
+      public virtual global::Google.Cloud.Firestore.V1Beta1.ListCollectionIdsResponse ListCollectionIds(global::Google.Cloud.Firestore.V1Beta1.ListCollectionIdsRequest request, grpc::Metadata headers = null, global::System.DateTime? deadline = null, global::System.Threading.CancellationToken cancellationToken = default(global::System.Threading.CancellationToken))
       {
         return ListCollectionIds(request, new grpc::CallOptions(headers, deadline, cancellationToken));
       }
@@ -819,7 +816,7 @@ namespace Google.Cloud.Firestore.V1Beta1 {
       /// <param name="deadline">An optional deadline for the call. The call will be cancelled if deadline is hit.</param>
       /// <param name="cancellationToken">An optional token for canceling the call.</param>
       /// <returns>The call object.</returns>
-      public virtual grpc::AsyncUnaryCall<global::Google.Cloud.Firestore.V1Beta1.ListCollectionIdsResponse> ListCollectionIdsAsync(global::Google.Cloud.Firestore.V1Beta1.ListCollectionIdsRequest request, grpc::Metadata headers = null, DateTime? deadline = null, CancellationToken cancellationToken = default(CancellationToken))
+      public virtual grpc::AsyncUnaryCall<global::Google.Cloud.Firestore.V1Beta1.ListCollectionIdsResponse> ListCollectionIdsAsync(global::Google.Cloud.Firestore.V1Beta1.ListCollectionIdsRequest request, grpc::Metadata headers = null, global::System.DateTime? deadline = null, global::System.Threading.CancellationToken cancellationToken = default(global::System.Threading.CancellationToken))
       {
         return ListCollectionIdsAsync(request, new grpc::CallOptions(headers, deadline, cancellationToken));
       }

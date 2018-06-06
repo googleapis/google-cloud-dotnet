@@ -20,9 +20,6 @@
 #pragma warning disable 1591
 #region Designer generated code
 
-using System;
-using System.Threading;
-using System.Threading.Tasks;
 using grpc = global::Grpc.Core;
 
 namespace Google.Cloud.Dlp.V2 {
@@ -590,7 +587,7 @@ namespace Google.Cloud.Dlp.V2 {
       /// <param name="deadline">An optional deadline for the call. The call will be cancelled if deadline is hit.</param>
       /// <param name="cancellationToken">An optional token for canceling the call.</param>
       /// <returns>The response received from the server.</returns>
-      public virtual global::Google.Cloud.Dlp.V2.InspectContentResponse InspectContent(global::Google.Cloud.Dlp.V2.InspectContentRequest request, grpc::Metadata headers = null, global::System.DateTime? deadline = null, CancellationToken cancellationToken = default(CancellationToken))
+      public virtual global::Google.Cloud.Dlp.V2.InspectContentResponse InspectContent(global::Google.Cloud.Dlp.V2.InspectContentRequest request, grpc::Metadata headers = null, global::System.DateTime? deadline = null, global::System.Threading.CancellationToken cancellationToken = default(global::System.Threading.CancellationToken))
       {
         return InspectContent(request, new grpc::CallOptions(headers, deadline, cancellationToken));
       }
@@ -618,7 +615,7 @@ namespace Google.Cloud.Dlp.V2 {
       /// <param name="deadline">An optional deadline for the call. The call will be cancelled if deadline is hit.</param>
       /// <param name="cancellationToken">An optional token for canceling the call.</param>
       /// <returns>The call object.</returns>
-      public virtual grpc::AsyncUnaryCall<global::Google.Cloud.Dlp.V2.InspectContentResponse> InspectContentAsync(global::Google.Cloud.Dlp.V2.InspectContentRequest request, grpc::Metadata headers = null, global::System.DateTime? deadline = null, CancellationToken cancellationToken = default(CancellationToken))
+      public virtual grpc::AsyncUnaryCall<global::Google.Cloud.Dlp.V2.InspectContentResponse> InspectContentAsync(global::Google.Cloud.Dlp.V2.InspectContentRequest request, grpc::Metadata headers = null, global::System.DateTime? deadline = null, global::System.Threading.CancellationToken cancellationToken = default(global::System.Threading.CancellationToken))
       {
         return InspectContentAsync(request, new grpc::CallOptions(headers, deadline, cancellationToken));
       }
@@ -645,7 +642,7 @@ namespace Google.Cloud.Dlp.V2 {
       /// <param name="deadline">An optional deadline for the call. The call will be cancelled if deadline is hit.</param>
       /// <param name="cancellationToken">An optional token for canceling the call.</param>
       /// <returns>The response received from the server.</returns>
-      public virtual global::Google.Cloud.Dlp.V2.RedactImageResponse RedactImage(global::Google.Cloud.Dlp.V2.RedactImageRequest request, grpc::Metadata headers = null, global::System.DateTime? deadline = null, CancellationToken cancellationToken = default(CancellationToken))
+      public virtual global::Google.Cloud.Dlp.V2.RedactImageResponse RedactImage(global::Google.Cloud.Dlp.V2.RedactImageRequest request, grpc::Metadata headers = null, global::System.DateTime? deadline = null, global::System.Threading.CancellationToken cancellationToken = default(global::System.Threading.CancellationToken))
       {
         return RedactImage(request, new grpc::CallOptions(headers, deadline, cancellationToken));
       }
@@ -671,7 +668,7 @@ namespace Google.Cloud.Dlp.V2 {
       /// <param name="deadline">An optional deadline for the call. The call will be cancelled if deadline is hit.</param>
       /// <param name="cancellationToken">An optional token for canceling the call.</param>
       /// <returns>The call object.</returns>
-      public virtual grpc::AsyncUnaryCall<global::Google.Cloud.Dlp.V2.RedactImageResponse> RedactImageAsync(global::Google.Cloud.Dlp.V2.RedactImageRequest request, grpc::Metadata headers = null, global::System.DateTime? deadline = null, CancellationToken cancellationToken = default(CancellationToken))
+      public virtual grpc::AsyncUnaryCall<global::Google.Cloud.Dlp.V2.RedactImageResponse> RedactImageAsync(global::Google.Cloud.Dlp.V2.RedactImageRequest request, grpc::Metadata headers = null, global::System.DateTime? deadline = null, global::System.Threading.CancellationToken cancellationToken = default(global::System.Threading.CancellationToken))
       {
         return RedactImageAsync(request, new grpc::CallOptions(headers, deadline, cancellationToken));
       }
@@ -697,7 +694,7 @@ namespace Google.Cloud.Dlp.V2 {
       /// <param name="deadline">An optional deadline for the call. The call will be cancelled if deadline is hit.</param>
       /// <param name="cancellationToken">An optional token for canceling the call.</param>
       /// <returns>The response received from the server.</returns>
-      public virtual global::Google.Cloud.Dlp.V2.DeidentifyContentResponse DeidentifyContent(global::Google.Cloud.Dlp.V2.DeidentifyContentRequest request, grpc::Metadata headers = null, global::System.DateTime? deadline = null, CancellationToken cancellationToken = default(CancellationToken))
+      public virtual global::Google.Cloud.Dlp.V2.DeidentifyContentResponse DeidentifyContent(global::Google.Cloud.Dlp.V2.DeidentifyContentRequest request, grpc::Metadata headers = null, global::System.DateTime? deadline = null, global::System.Threading.CancellationToken cancellationToken = default(global::System.Threading.CancellationToken))
       {
         return DeidentifyContent(request, new grpc::CallOptions(headers, deadline, cancellationToken));
       }
@@ -723,7 +720,7 @@ namespace Google.Cloud.Dlp.V2 {
       /// <param name="deadline">An optional deadline for the call. The call will be cancelled if deadline is hit.</param>
       /// <param name="cancellationToken">An optional token for canceling the call.</param>
       /// <returns>The call object.</returns>
-      public virtual grpc::AsyncUnaryCall<global::Google.Cloud.Dlp.V2.DeidentifyContentResponse> DeidentifyContentAsync(global::Google.Cloud.Dlp.V2.DeidentifyContentRequest request, grpc::Metadata headers = null, global::System.DateTime? deadline = null, CancellationToken cancellationToken = default(CancellationToken))
+      public virtual grpc::AsyncUnaryCall<global::Google.Cloud.Dlp.V2.DeidentifyContentResponse> DeidentifyContentAsync(global::Google.Cloud.Dlp.V2.DeidentifyContentRequest request, grpc::Metadata headers = null, global::System.DateTime? deadline = null, global::System.Threading.CancellationToken cancellationToken = default(global::System.Threading.CancellationToken))
       {
         return DeidentifyContentAsync(request, new grpc::CallOptions(headers, deadline, cancellationToken));
       }
@@ -747,7 +744,7 @@ namespace Google.Cloud.Dlp.V2 {
       /// <param name="deadline">An optional deadline for the call. The call will be cancelled if deadline is hit.</param>
       /// <param name="cancellationToken">An optional token for canceling the call.</param>
       /// <returns>The response received from the server.</returns>
-      public virtual global::Google.Cloud.Dlp.V2.ReidentifyContentResponse ReidentifyContent(global::Google.Cloud.Dlp.V2.ReidentifyContentRequest request, grpc::Metadata headers = null, global::System.DateTime? deadline = null, CancellationToken cancellationToken = default(CancellationToken))
+      public virtual global::Google.Cloud.Dlp.V2.ReidentifyContentResponse ReidentifyContent(global::Google.Cloud.Dlp.V2.ReidentifyContentRequest request, grpc::Metadata headers = null, global::System.DateTime? deadline = null, global::System.Threading.CancellationToken cancellationToken = default(global::System.Threading.CancellationToken))
       {
         return ReidentifyContent(request, new grpc::CallOptions(headers, deadline, cancellationToken));
       }
@@ -769,7 +766,7 @@ namespace Google.Cloud.Dlp.V2 {
       /// <param name="deadline">An optional deadline for the call. The call will be cancelled if deadline is hit.</param>
       /// <param name="cancellationToken">An optional token for canceling the call.</param>
       /// <returns>The call object.</returns>
-      public virtual grpc::AsyncUnaryCall<global::Google.Cloud.Dlp.V2.ReidentifyContentResponse> ReidentifyContentAsync(global::Google.Cloud.Dlp.V2.ReidentifyContentRequest request, grpc::Metadata headers = null, global::System.DateTime? deadline = null, CancellationToken cancellationToken = default(CancellationToken))
+      public virtual grpc::AsyncUnaryCall<global::Google.Cloud.Dlp.V2.ReidentifyContentResponse> ReidentifyContentAsync(global::Google.Cloud.Dlp.V2.ReidentifyContentRequest request, grpc::Metadata headers = null, global::System.DateTime? deadline = null, global::System.Threading.CancellationToken cancellationToken = default(global::System.Threading.CancellationToken))
       {
         return ReidentifyContentAsync(request, new grpc::CallOptions(headers, deadline, cancellationToken));
       }
@@ -793,7 +790,7 @@ namespace Google.Cloud.Dlp.V2 {
       /// <param name="deadline">An optional deadline for the call. The call will be cancelled if deadline is hit.</param>
       /// <param name="cancellationToken">An optional token for canceling the call.</param>
       /// <returns>The response received from the server.</returns>
-      public virtual global::Google.Cloud.Dlp.V2.ListInfoTypesResponse ListInfoTypes(global::Google.Cloud.Dlp.V2.ListInfoTypesRequest request, grpc::Metadata headers = null, global::System.DateTime? deadline = null, CancellationToken cancellationToken = default(CancellationToken))
+      public virtual global::Google.Cloud.Dlp.V2.ListInfoTypesResponse ListInfoTypes(global::Google.Cloud.Dlp.V2.ListInfoTypesRequest request, grpc::Metadata headers = null, global::System.DateTime? deadline = null, global::System.Threading.CancellationToken cancellationToken = default(global::System.Threading.CancellationToken))
       {
         return ListInfoTypes(request, new grpc::CallOptions(headers, deadline, cancellationToken));
       }
@@ -819,7 +816,7 @@ namespace Google.Cloud.Dlp.V2 {
       /// <param name="deadline">An optional deadline for the call. The call will be cancelled if deadline is hit.</param>
       /// <param name="cancellationToken">An optional token for canceling the call.</param>
       /// <returns>The call object.</returns>
-      public virtual grpc::AsyncUnaryCall<global::Google.Cloud.Dlp.V2.ListInfoTypesResponse> ListInfoTypesAsync(global::Google.Cloud.Dlp.V2.ListInfoTypesRequest request, grpc::Metadata headers = null, global::System.DateTime? deadline = null, CancellationToken cancellationToken = default(CancellationToken))
+      public virtual grpc::AsyncUnaryCall<global::Google.Cloud.Dlp.V2.ListInfoTypesResponse> ListInfoTypesAsync(global::Google.Cloud.Dlp.V2.ListInfoTypesRequest request, grpc::Metadata headers = null, global::System.DateTime? deadline = null, global::System.Threading.CancellationToken cancellationToken = default(global::System.Threading.CancellationToken))
       {
         return ListInfoTypesAsync(request, new grpc::CallOptions(headers, deadline, cancellationToken));
       }
@@ -844,7 +841,7 @@ namespace Google.Cloud.Dlp.V2 {
       /// <param name="deadline">An optional deadline for the call. The call will be cancelled if deadline is hit.</param>
       /// <param name="cancellationToken">An optional token for canceling the call.</param>
       /// <returns>The response received from the server.</returns>
-      public virtual global::Google.Cloud.Dlp.V2.InspectTemplate CreateInspectTemplate(global::Google.Cloud.Dlp.V2.CreateInspectTemplateRequest request, grpc::Metadata headers = null, global::System.DateTime? deadline = null, CancellationToken cancellationToken = default(CancellationToken))
+      public virtual global::Google.Cloud.Dlp.V2.InspectTemplate CreateInspectTemplate(global::Google.Cloud.Dlp.V2.CreateInspectTemplateRequest request, grpc::Metadata headers = null, global::System.DateTime? deadline = null, global::System.Threading.CancellationToken cancellationToken = default(global::System.Threading.CancellationToken))
       {
         return CreateInspectTemplate(request, new grpc::CallOptions(headers, deadline, cancellationToken));
       }
@@ -868,7 +865,7 @@ namespace Google.Cloud.Dlp.V2 {
       /// <param name="deadline">An optional deadline for the call. The call will be cancelled if deadline is hit.</param>
       /// <param name="cancellationToken">An optional token for canceling the call.</param>
       /// <returns>The call object.</returns>
-      public virtual grpc::AsyncUnaryCall<global::Google.Cloud.Dlp.V2.InspectTemplate> CreateInspectTemplateAsync(global::Google.Cloud.Dlp.V2.CreateInspectTemplateRequest request, grpc::Metadata headers = null, global::System.DateTime? deadline = null, CancellationToken cancellationToken = default(CancellationToken))
+      public virtual grpc::AsyncUnaryCall<global::Google.Cloud.Dlp.V2.InspectTemplate> CreateInspectTemplateAsync(global::Google.Cloud.Dlp.V2.CreateInspectTemplateRequest request, grpc::Metadata headers = null, global::System.DateTime? deadline = null, global::System.Threading.CancellationToken cancellationToken = default(global::System.Threading.CancellationToken))
       {
         return CreateInspectTemplateAsync(request, new grpc::CallOptions(headers, deadline, cancellationToken));
       }
@@ -891,7 +888,7 @@ namespace Google.Cloud.Dlp.V2 {
       /// <param name="deadline">An optional deadline for the call. The call will be cancelled if deadline is hit.</param>
       /// <param name="cancellationToken">An optional token for canceling the call.</param>
       /// <returns>The response received from the server.</returns>
-      public virtual global::Google.Cloud.Dlp.V2.InspectTemplate UpdateInspectTemplate(global::Google.Cloud.Dlp.V2.UpdateInspectTemplateRequest request, grpc::Metadata headers = null, global::System.DateTime? deadline = null, CancellationToken cancellationToken = default(CancellationToken))
+      public virtual global::Google.Cloud.Dlp.V2.InspectTemplate UpdateInspectTemplate(global::Google.Cloud.Dlp.V2.UpdateInspectTemplateRequest request, grpc::Metadata headers = null, global::System.DateTime? deadline = null, global::System.Threading.CancellationToken cancellationToken = default(global::System.Threading.CancellationToken))
       {
         return UpdateInspectTemplate(request, new grpc::CallOptions(headers, deadline, cancellationToken));
       }
@@ -913,7 +910,7 @@ namespace Google.Cloud.Dlp.V2 {
       /// <param name="deadline">An optional deadline for the call. The call will be cancelled if deadline is hit.</param>
       /// <param name="cancellationToken">An optional token for canceling the call.</param>
       /// <returns>The call object.</returns>
-      public virtual grpc::AsyncUnaryCall<global::Google.Cloud.Dlp.V2.InspectTemplate> UpdateInspectTemplateAsync(global::Google.Cloud.Dlp.V2.UpdateInspectTemplateRequest request, grpc::Metadata headers = null, global::System.DateTime? deadline = null, CancellationToken cancellationToken = default(CancellationToken))
+      public virtual grpc::AsyncUnaryCall<global::Google.Cloud.Dlp.V2.InspectTemplate> UpdateInspectTemplateAsync(global::Google.Cloud.Dlp.V2.UpdateInspectTemplateRequest request, grpc::Metadata headers = null, global::System.DateTime? deadline = null, global::System.Threading.CancellationToken cancellationToken = default(global::System.Threading.CancellationToken))
       {
         return UpdateInspectTemplateAsync(request, new grpc::CallOptions(headers, deadline, cancellationToken));
       }
@@ -935,7 +932,7 @@ namespace Google.Cloud.Dlp.V2 {
       /// <param name="deadline">An optional deadline for the call. The call will be cancelled if deadline is hit.</param>
       /// <param name="cancellationToken">An optional token for canceling the call.</param>
       /// <returns>The response received from the server.</returns>
-      public virtual global::Google.Cloud.Dlp.V2.InspectTemplate GetInspectTemplate(global::Google.Cloud.Dlp.V2.GetInspectTemplateRequest request, grpc::Metadata headers = null, global::System.DateTime? deadline = null, CancellationToken cancellationToken = default(CancellationToken))
+      public virtual global::Google.Cloud.Dlp.V2.InspectTemplate GetInspectTemplate(global::Google.Cloud.Dlp.V2.GetInspectTemplateRequest request, grpc::Metadata headers = null, global::System.DateTime? deadline = null, global::System.Threading.CancellationToken cancellationToken = default(global::System.Threading.CancellationToken))
       {
         return GetInspectTemplate(request, new grpc::CallOptions(headers, deadline, cancellationToken));
       }
@@ -957,7 +954,7 @@ namespace Google.Cloud.Dlp.V2 {
       /// <param name="deadline">An optional deadline for the call. The call will be cancelled if deadline is hit.</param>
       /// <param name="cancellationToken">An optional token for canceling the call.</param>
       /// <returns>The call object.</returns>
-      public virtual grpc::AsyncUnaryCall<global::Google.Cloud.Dlp.V2.InspectTemplate> GetInspectTemplateAsync(global::Google.Cloud.Dlp.V2.GetInspectTemplateRequest request, grpc::Metadata headers = null, global::System.DateTime? deadline = null, CancellationToken cancellationToken = default(CancellationToken))
+      public virtual grpc::AsyncUnaryCall<global::Google.Cloud.Dlp.V2.InspectTemplate> GetInspectTemplateAsync(global::Google.Cloud.Dlp.V2.GetInspectTemplateRequest request, grpc::Metadata headers = null, global::System.DateTime? deadline = null, global::System.Threading.CancellationToken cancellationToken = default(global::System.Threading.CancellationToken))
       {
         return GetInspectTemplateAsync(request, new grpc::CallOptions(headers, deadline, cancellationToken));
       }
@@ -979,7 +976,7 @@ namespace Google.Cloud.Dlp.V2 {
       /// <param name="deadline">An optional deadline for the call. The call will be cancelled if deadline is hit.</param>
       /// <param name="cancellationToken">An optional token for canceling the call.</param>
       /// <returns>The response received from the server.</returns>
-      public virtual global::Google.Cloud.Dlp.V2.ListInspectTemplatesResponse ListInspectTemplates(global::Google.Cloud.Dlp.V2.ListInspectTemplatesRequest request, grpc::Metadata headers = null, global::System.DateTime? deadline = null, CancellationToken cancellationToken = default(CancellationToken))
+      public virtual global::Google.Cloud.Dlp.V2.ListInspectTemplatesResponse ListInspectTemplates(global::Google.Cloud.Dlp.V2.ListInspectTemplatesRequest request, grpc::Metadata headers = null, global::System.DateTime? deadline = null, global::System.Threading.CancellationToken cancellationToken = default(global::System.Threading.CancellationToken))
       {
         return ListInspectTemplates(request, new grpc::CallOptions(headers, deadline, cancellationToken));
       }
@@ -1001,7 +998,7 @@ namespace Google.Cloud.Dlp.V2 {
       /// <param name="deadline">An optional deadline for the call. The call will be cancelled if deadline is hit.</param>
       /// <param name="cancellationToken">An optional token for canceling the call.</param>
       /// <returns>The call object.</returns>
-      public virtual grpc::AsyncUnaryCall<global::Google.Cloud.Dlp.V2.ListInspectTemplatesResponse> ListInspectTemplatesAsync(global::Google.Cloud.Dlp.V2.ListInspectTemplatesRequest request, grpc::Metadata headers = null, global::System.DateTime? deadline = null, CancellationToken cancellationToken = default(CancellationToken))
+      public virtual grpc::AsyncUnaryCall<global::Google.Cloud.Dlp.V2.ListInspectTemplatesResponse> ListInspectTemplatesAsync(global::Google.Cloud.Dlp.V2.ListInspectTemplatesRequest request, grpc::Metadata headers = null, global::System.DateTime? deadline = null, global::System.Threading.CancellationToken cancellationToken = default(global::System.Threading.CancellationToken))
       {
         return ListInspectTemplatesAsync(request, new grpc::CallOptions(headers, deadline, cancellationToken));
       }
@@ -1023,7 +1020,7 @@ namespace Google.Cloud.Dlp.V2 {
       /// <param name="deadline">An optional deadline for the call. The call will be cancelled if deadline is hit.</param>
       /// <param name="cancellationToken">An optional token for canceling the call.</param>
       /// <returns>The response received from the server.</returns>
-      public virtual global::Google.Protobuf.WellKnownTypes.Empty DeleteInspectTemplate(global::Google.Cloud.Dlp.V2.DeleteInspectTemplateRequest request, grpc::Metadata headers = null, global::System.DateTime? deadline = null, CancellationToken cancellationToken = default(CancellationToken))
+      public virtual global::Google.Protobuf.WellKnownTypes.Empty DeleteInspectTemplate(global::Google.Cloud.Dlp.V2.DeleteInspectTemplateRequest request, grpc::Metadata headers = null, global::System.DateTime? deadline = null, global::System.Threading.CancellationToken cancellationToken = default(global::System.Threading.CancellationToken))
       {
         return DeleteInspectTemplate(request, new grpc::CallOptions(headers, deadline, cancellationToken));
       }
@@ -1045,7 +1042,7 @@ namespace Google.Cloud.Dlp.V2 {
       /// <param name="deadline">An optional deadline for the call. The call will be cancelled if deadline is hit.</param>
       /// <param name="cancellationToken">An optional token for canceling the call.</param>
       /// <returns>The call object.</returns>
-      public virtual grpc::AsyncUnaryCall<global::Google.Protobuf.WellKnownTypes.Empty> DeleteInspectTemplateAsync(global::Google.Cloud.Dlp.V2.DeleteInspectTemplateRequest request, grpc::Metadata headers = null, global::System.DateTime? deadline = null, CancellationToken cancellationToken = default(CancellationToken))
+      public virtual grpc::AsyncUnaryCall<global::Google.Protobuf.WellKnownTypes.Empty> DeleteInspectTemplateAsync(global::Google.Cloud.Dlp.V2.DeleteInspectTemplateRequest request, grpc::Metadata headers = null, global::System.DateTime? deadline = null, global::System.Threading.CancellationToken cancellationToken = default(global::System.Threading.CancellationToken))
       {
         return DeleteInspectTemplateAsync(request, new grpc::CallOptions(headers, deadline, cancellationToken));
       }
@@ -1068,7 +1065,7 @@ namespace Google.Cloud.Dlp.V2 {
       /// <param name="deadline">An optional deadline for the call. The call will be cancelled if deadline is hit.</param>
       /// <param name="cancellationToken">An optional token for canceling the call.</param>
       /// <returns>The response received from the server.</returns>
-      public virtual global::Google.Cloud.Dlp.V2.DeidentifyTemplate CreateDeidentifyTemplate(global::Google.Cloud.Dlp.V2.CreateDeidentifyTemplateRequest request, grpc::Metadata headers = null, global::System.DateTime? deadline = null, CancellationToken cancellationToken = default(CancellationToken))
+      public virtual global::Google.Cloud.Dlp.V2.DeidentifyTemplate CreateDeidentifyTemplate(global::Google.Cloud.Dlp.V2.CreateDeidentifyTemplateRequest request, grpc::Metadata headers = null, global::System.DateTime? deadline = null, global::System.Threading.CancellationToken cancellationToken = default(global::System.Threading.CancellationToken))
       {
         return CreateDeidentifyTemplate(request, new grpc::CallOptions(headers, deadline, cancellationToken));
       }
@@ -1092,7 +1089,7 @@ namespace Google.Cloud.Dlp.V2 {
       /// <param name="deadline">An optional deadline for the call. The call will be cancelled if deadline is hit.</param>
       /// <param name="cancellationToken">An optional token for canceling the call.</param>
       /// <returns>The call object.</returns>
-      public virtual grpc::AsyncUnaryCall<global::Google.Cloud.Dlp.V2.DeidentifyTemplate> CreateDeidentifyTemplateAsync(global::Google.Cloud.Dlp.V2.CreateDeidentifyTemplateRequest request, grpc::Metadata headers = null, global::System.DateTime? deadline = null, CancellationToken cancellationToken = default(CancellationToken))
+      public virtual grpc::AsyncUnaryCall<global::Google.Cloud.Dlp.V2.DeidentifyTemplate> CreateDeidentifyTemplateAsync(global::Google.Cloud.Dlp.V2.CreateDeidentifyTemplateRequest request, grpc::Metadata headers = null, global::System.DateTime? deadline = null, global::System.Threading.CancellationToken cancellationToken = default(global::System.Threading.CancellationToken))
       {
         return CreateDeidentifyTemplateAsync(request, new grpc::CallOptions(headers, deadline, cancellationToken));
       }
@@ -1115,7 +1112,7 @@ namespace Google.Cloud.Dlp.V2 {
       /// <param name="deadline">An optional deadline for the call. The call will be cancelled if deadline is hit.</param>
       /// <param name="cancellationToken">An optional token for canceling the call.</param>
       /// <returns>The response received from the server.</returns>
-      public virtual global::Google.Cloud.Dlp.V2.DeidentifyTemplate UpdateDeidentifyTemplate(global::Google.Cloud.Dlp.V2.UpdateDeidentifyTemplateRequest request, grpc::Metadata headers = null, global::System.DateTime? deadline = null, CancellationToken cancellationToken = default(CancellationToken))
+      public virtual global::Google.Cloud.Dlp.V2.DeidentifyTemplate UpdateDeidentifyTemplate(global::Google.Cloud.Dlp.V2.UpdateDeidentifyTemplateRequest request, grpc::Metadata headers = null, global::System.DateTime? deadline = null, global::System.Threading.CancellationToken cancellationToken = default(global::System.Threading.CancellationToken))
       {
         return UpdateDeidentifyTemplate(request, new grpc::CallOptions(headers, deadline, cancellationToken));
       }
@@ -1137,7 +1134,7 @@ namespace Google.Cloud.Dlp.V2 {
       /// <param name="deadline">An optional deadline for the call. The call will be cancelled if deadline is hit.</param>
       /// <param name="cancellationToken">An optional token for canceling the call.</param>
       /// <returns>The call object.</returns>
-      public virtual grpc::AsyncUnaryCall<global::Google.Cloud.Dlp.V2.DeidentifyTemplate> UpdateDeidentifyTemplateAsync(global::Google.Cloud.Dlp.V2.UpdateDeidentifyTemplateRequest request, grpc::Metadata headers = null, global::System.DateTime? deadline = null, CancellationToken cancellationToken = default(CancellationToken))
+      public virtual grpc::AsyncUnaryCall<global::Google.Cloud.Dlp.V2.DeidentifyTemplate> UpdateDeidentifyTemplateAsync(global::Google.Cloud.Dlp.V2.UpdateDeidentifyTemplateRequest request, grpc::Metadata headers = null, global::System.DateTime? deadline = null, global::System.Threading.CancellationToken cancellationToken = default(global::System.Threading.CancellationToken))
       {
         return UpdateDeidentifyTemplateAsync(request, new grpc::CallOptions(headers, deadline, cancellationToken));
       }
@@ -1159,7 +1156,7 @@ namespace Google.Cloud.Dlp.V2 {
       /// <param name="deadline">An optional deadline for the call. The call will be cancelled if deadline is hit.</param>
       /// <param name="cancellationToken">An optional token for canceling the call.</param>
       /// <returns>The response received from the server.</returns>
-      public virtual global::Google.Cloud.Dlp.V2.DeidentifyTemplate GetDeidentifyTemplate(global::Google.Cloud.Dlp.V2.GetDeidentifyTemplateRequest request, grpc::Metadata headers = null, global::System.DateTime? deadline = null, CancellationToken cancellationToken = default(CancellationToken))
+      public virtual global::Google.Cloud.Dlp.V2.DeidentifyTemplate GetDeidentifyTemplate(global::Google.Cloud.Dlp.V2.GetDeidentifyTemplateRequest request, grpc::Metadata headers = null, global::System.DateTime? deadline = null, global::System.Threading.CancellationToken cancellationToken = default(global::System.Threading.CancellationToken))
       {
         return GetDeidentifyTemplate(request, new grpc::CallOptions(headers, deadline, cancellationToken));
       }
@@ -1181,7 +1178,7 @@ namespace Google.Cloud.Dlp.V2 {
       /// <param name="deadline">An optional deadline for the call. The call will be cancelled if deadline is hit.</param>
       /// <param name="cancellationToken">An optional token for canceling the call.</param>
       /// <returns>The call object.</returns>
-      public virtual grpc::AsyncUnaryCall<global::Google.Cloud.Dlp.V2.DeidentifyTemplate> GetDeidentifyTemplateAsync(global::Google.Cloud.Dlp.V2.GetDeidentifyTemplateRequest request, grpc::Metadata headers = null, global::System.DateTime? deadline = null, CancellationToken cancellationToken = default(CancellationToken))
+      public virtual grpc::AsyncUnaryCall<global::Google.Cloud.Dlp.V2.DeidentifyTemplate> GetDeidentifyTemplateAsync(global::Google.Cloud.Dlp.V2.GetDeidentifyTemplateRequest request, grpc::Metadata headers = null, global::System.DateTime? deadline = null, global::System.Threading.CancellationToken cancellationToken = default(global::System.Threading.CancellationToken))
       {
         return GetDeidentifyTemplateAsync(request, new grpc::CallOptions(headers, deadline, cancellationToken));
       }
@@ -1203,7 +1200,7 @@ namespace Google.Cloud.Dlp.V2 {
       /// <param name="deadline">An optional deadline for the call. The call will be cancelled if deadline is hit.</param>
       /// <param name="cancellationToken">An optional token for canceling the call.</param>
       /// <returns>The response received from the server.</returns>
-      public virtual global::Google.Cloud.Dlp.V2.ListDeidentifyTemplatesResponse ListDeidentifyTemplates(global::Google.Cloud.Dlp.V2.ListDeidentifyTemplatesRequest request, grpc::Metadata headers = null, global::System.DateTime? deadline = null, CancellationToken cancellationToken = default(CancellationToken))
+      public virtual global::Google.Cloud.Dlp.V2.ListDeidentifyTemplatesResponse ListDeidentifyTemplates(global::Google.Cloud.Dlp.V2.ListDeidentifyTemplatesRequest request, grpc::Metadata headers = null, global::System.DateTime? deadline = null, global::System.Threading.CancellationToken cancellationToken = default(global::System.Threading.CancellationToken))
       {
         return ListDeidentifyTemplates(request, new grpc::CallOptions(headers, deadline, cancellationToken));
       }
@@ -1225,7 +1222,7 @@ namespace Google.Cloud.Dlp.V2 {
       /// <param name="deadline">An optional deadline for the call. The call will be cancelled if deadline is hit.</param>
       /// <param name="cancellationToken">An optional token for canceling the call.</param>
       /// <returns>The call object.</returns>
-      public virtual grpc::AsyncUnaryCall<global::Google.Cloud.Dlp.V2.ListDeidentifyTemplatesResponse> ListDeidentifyTemplatesAsync(global::Google.Cloud.Dlp.V2.ListDeidentifyTemplatesRequest request, grpc::Metadata headers = null, global::System.DateTime? deadline = null, CancellationToken cancellationToken = default(CancellationToken))
+      public virtual grpc::AsyncUnaryCall<global::Google.Cloud.Dlp.V2.ListDeidentifyTemplatesResponse> ListDeidentifyTemplatesAsync(global::Google.Cloud.Dlp.V2.ListDeidentifyTemplatesRequest request, grpc::Metadata headers = null, global::System.DateTime? deadline = null, global::System.Threading.CancellationToken cancellationToken = default(global::System.Threading.CancellationToken))
       {
         return ListDeidentifyTemplatesAsync(request, new grpc::CallOptions(headers, deadline, cancellationToken));
       }
@@ -1247,7 +1244,7 @@ namespace Google.Cloud.Dlp.V2 {
       /// <param name="deadline">An optional deadline for the call. The call will be cancelled if deadline is hit.</param>
       /// <param name="cancellationToken">An optional token for canceling the call.</param>
       /// <returns>The response received from the server.</returns>
-      public virtual global::Google.Protobuf.WellKnownTypes.Empty DeleteDeidentifyTemplate(global::Google.Cloud.Dlp.V2.DeleteDeidentifyTemplateRequest request, grpc::Metadata headers = null, global::System.DateTime? deadline = null, CancellationToken cancellationToken = default(CancellationToken))
+      public virtual global::Google.Protobuf.WellKnownTypes.Empty DeleteDeidentifyTemplate(global::Google.Cloud.Dlp.V2.DeleteDeidentifyTemplateRequest request, grpc::Metadata headers = null, global::System.DateTime? deadline = null, global::System.Threading.CancellationToken cancellationToken = default(global::System.Threading.CancellationToken))
       {
         return DeleteDeidentifyTemplate(request, new grpc::CallOptions(headers, deadline, cancellationToken));
       }
@@ -1269,7 +1266,7 @@ namespace Google.Cloud.Dlp.V2 {
       /// <param name="deadline">An optional deadline for the call. The call will be cancelled if deadline is hit.</param>
       /// <param name="cancellationToken">An optional token for canceling the call.</param>
       /// <returns>The call object.</returns>
-      public virtual grpc::AsyncUnaryCall<global::Google.Protobuf.WellKnownTypes.Empty> DeleteDeidentifyTemplateAsync(global::Google.Cloud.Dlp.V2.DeleteDeidentifyTemplateRequest request, grpc::Metadata headers = null, global::System.DateTime? deadline = null, CancellationToken cancellationToken = default(CancellationToken))
+      public virtual grpc::AsyncUnaryCall<global::Google.Protobuf.WellKnownTypes.Empty> DeleteDeidentifyTemplateAsync(global::Google.Cloud.Dlp.V2.DeleteDeidentifyTemplateRequest request, grpc::Metadata headers = null, global::System.DateTime? deadline = null, global::System.Threading.CancellationToken cancellationToken = default(global::System.Threading.CancellationToken))
       {
         return DeleteDeidentifyTemplateAsync(request, new grpc::CallOptions(headers, deadline, cancellationToken));
       }
@@ -1292,7 +1289,7 @@ namespace Google.Cloud.Dlp.V2 {
       /// <param name="deadline">An optional deadline for the call. The call will be cancelled if deadline is hit.</param>
       /// <param name="cancellationToken">An optional token for canceling the call.</param>
       /// <returns>The response received from the server.</returns>
-      public virtual global::Google.Cloud.Dlp.V2.JobTrigger CreateJobTrigger(global::Google.Cloud.Dlp.V2.CreateJobTriggerRequest request, grpc::Metadata headers = null, global::System.DateTime? deadline = null, CancellationToken cancellationToken = default(CancellationToken))
+      public virtual global::Google.Cloud.Dlp.V2.JobTrigger CreateJobTrigger(global::Google.Cloud.Dlp.V2.CreateJobTriggerRequest request, grpc::Metadata headers = null, global::System.DateTime? deadline = null, global::System.Threading.CancellationToken cancellationToken = default(global::System.Threading.CancellationToken))
       {
         return CreateJobTrigger(request, new grpc::CallOptions(headers, deadline, cancellationToken));
       }
@@ -1316,7 +1313,7 @@ namespace Google.Cloud.Dlp.V2 {
       /// <param name="deadline">An optional deadline for the call. The call will be cancelled if deadline is hit.</param>
       /// <param name="cancellationToken">An optional token for canceling the call.</param>
       /// <returns>The call object.</returns>
-      public virtual grpc::AsyncUnaryCall<global::Google.Cloud.Dlp.V2.JobTrigger> CreateJobTriggerAsync(global::Google.Cloud.Dlp.V2.CreateJobTriggerRequest request, grpc::Metadata headers = null, global::System.DateTime? deadline = null, CancellationToken cancellationToken = default(CancellationToken))
+      public virtual grpc::AsyncUnaryCall<global::Google.Cloud.Dlp.V2.JobTrigger> CreateJobTriggerAsync(global::Google.Cloud.Dlp.V2.CreateJobTriggerRequest request, grpc::Metadata headers = null, global::System.DateTime? deadline = null, global::System.Threading.CancellationToken cancellationToken = default(global::System.Threading.CancellationToken))
       {
         return CreateJobTriggerAsync(request, new grpc::CallOptions(headers, deadline, cancellationToken));
       }
@@ -1339,7 +1336,7 @@ namespace Google.Cloud.Dlp.V2 {
       /// <param name="deadline">An optional deadline for the call. The call will be cancelled if deadline is hit.</param>
       /// <param name="cancellationToken">An optional token for canceling the call.</param>
       /// <returns>The response received from the server.</returns>
-      public virtual global::Google.Cloud.Dlp.V2.JobTrigger UpdateJobTrigger(global::Google.Cloud.Dlp.V2.UpdateJobTriggerRequest request, grpc::Metadata headers = null, global::System.DateTime? deadline = null, CancellationToken cancellationToken = default(CancellationToken))
+      public virtual global::Google.Cloud.Dlp.V2.JobTrigger UpdateJobTrigger(global::Google.Cloud.Dlp.V2.UpdateJobTriggerRequest request, grpc::Metadata headers = null, global::System.DateTime? deadline = null, global::System.Threading.CancellationToken cancellationToken = default(global::System.Threading.CancellationToken))
       {
         return UpdateJobTrigger(request, new grpc::CallOptions(headers, deadline, cancellationToken));
       }
@@ -1361,7 +1358,7 @@ namespace Google.Cloud.Dlp.V2 {
       /// <param name="deadline">An optional deadline for the call. The call will be cancelled if deadline is hit.</param>
       /// <param name="cancellationToken">An optional token for canceling the call.</param>
       /// <returns>The call object.</returns>
-      public virtual grpc::AsyncUnaryCall<global::Google.Cloud.Dlp.V2.JobTrigger> UpdateJobTriggerAsync(global::Google.Cloud.Dlp.V2.UpdateJobTriggerRequest request, grpc::Metadata headers = null, global::System.DateTime? deadline = null, CancellationToken cancellationToken = default(CancellationToken))
+      public virtual grpc::AsyncUnaryCall<global::Google.Cloud.Dlp.V2.JobTrigger> UpdateJobTriggerAsync(global::Google.Cloud.Dlp.V2.UpdateJobTriggerRequest request, grpc::Metadata headers = null, global::System.DateTime? deadline = null, global::System.Threading.CancellationToken cancellationToken = default(global::System.Threading.CancellationToken))
       {
         return UpdateJobTriggerAsync(request, new grpc::CallOptions(headers, deadline, cancellationToken));
       }
@@ -1383,7 +1380,7 @@ namespace Google.Cloud.Dlp.V2 {
       /// <param name="deadline">An optional deadline for the call. The call will be cancelled if deadline is hit.</param>
       /// <param name="cancellationToken">An optional token for canceling the call.</param>
       /// <returns>The response received from the server.</returns>
-      public virtual global::Google.Cloud.Dlp.V2.JobTrigger GetJobTrigger(global::Google.Cloud.Dlp.V2.GetJobTriggerRequest request, grpc::Metadata headers = null, global::System.DateTime? deadline = null, CancellationToken cancellationToken = default(CancellationToken))
+      public virtual global::Google.Cloud.Dlp.V2.JobTrigger GetJobTrigger(global::Google.Cloud.Dlp.V2.GetJobTriggerRequest request, grpc::Metadata headers = null, global::System.DateTime? deadline = null, global::System.Threading.CancellationToken cancellationToken = default(global::System.Threading.CancellationToken))
       {
         return GetJobTrigger(request, new grpc::CallOptions(headers, deadline, cancellationToken));
       }
@@ -1405,7 +1402,7 @@ namespace Google.Cloud.Dlp.V2 {
       /// <param name="deadline">An optional deadline for the call. The call will be cancelled if deadline is hit.</param>
       /// <param name="cancellationToken">An optional token for canceling the call.</param>
       /// <returns>The call object.</returns>
-      public virtual grpc::AsyncUnaryCall<global::Google.Cloud.Dlp.V2.JobTrigger> GetJobTriggerAsync(global::Google.Cloud.Dlp.V2.GetJobTriggerRequest request, grpc::Metadata headers = null, global::System.DateTime? deadline = null, CancellationToken cancellationToken = default(CancellationToken))
+      public virtual grpc::AsyncUnaryCall<global::Google.Cloud.Dlp.V2.JobTrigger> GetJobTriggerAsync(global::Google.Cloud.Dlp.V2.GetJobTriggerRequest request, grpc::Metadata headers = null, global::System.DateTime? deadline = null, global::System.Threading.CancellationToken cancellationToken = default(global::System.Threading.CancellationToken))
       {
         return GetJobTriggerAsync(request, new grpc::CallOptions(headers, deadline, cancellationToken));
       }
@@ -1427,7 +1424,7 @@ namespace Google.Cloud.Dlp.V2 {
       /// <param name="deadline">An optional deadline for the call. The call will be cancelled if deadline is hit.</param>
       /// <param name="cancellationToken">An optional token for canceling the call.</param>
       /// <returns>The response received from the server.</returns>
-      public virtual global::Google.Cloud.Dlp.V2.ListJobTriggersResponse ListJobTriggers(global::Google.Cloud.Dlp.V2.ListJobTriggersRequest request, grpc::Metadata headers = null, global::System.DateTime? deadline = null, CancellationToken cancellationToken = default(CancellationToken))
+      public virtual global::Google.Cloud.Dlp.V2.ListJobTriggersResponse ListJobTriggers(global::Google.Cloud.Dlp.V2.ListJobTriggersRequest request, grpc::Metadata headers = null, global::System.DateTime? deadline = null, global::System.Threading.CancellationToken cancellationToken = default(global::System.Threading.CancellationToken))
       {
         return ListJobTriggers(request, new grpc::CallOptions(headers, deadline, cancellationToken));
       }
@@ -1449,7 +1446,7 @@ namespace Google.Cloud.Dlp.V2 {
       /// <param name="deadline">An optional deadline for the call. The call will be cancelled if deadline is hit.</param>
       /// <param name="cancellationToken">An optional token for canceling the call.</param>
       /// <returns>The call object.</returns>
-      public virtual grpc::AsyncUnaryCall<global::Google.Cloud.Dlp.V2.ListJobTriggersResponse> ListJobTriggersAsync(global::Google.Cloud.Dlp.V2.ListJobTriggersRequest request, grpc::Metadata headers = null, global::System.DateTime? deadline = null, CancellationToken cancellationToken = default(CancellationToken))
+      public virtual grpc::AsyncUnaryCall<global::Google.Cloud.Dlp.V2.ListJobTriggersResponse> ListJobTriggersAsync(global::Google.Cloud.Dlp.V2.ListJobTriggersRequest request, grpc::Metadata headers = null, global::System.DateTime? deadline = null, global::System.Threading.CancellationToken cancellationToken = default(global::System.Threading.CancellationToken))
       {
         return ListJobTriggersAsync(request, new grpc::CallOptions(headers, deadline, cancellationToken));
       }
@@ -1471,7 +1468,7 @@ namespace Google.Cloud.Dlp.V2 {
       /// <param name="deadline">An optional deadline for the call. The call will be cancelled if deadline is hit.</param>
       /// <param name="cancellationToken">An optional token for canceling the call.</param>
       /// <returns>The response received from the server.</returns>
-      public virtual global::Google.Protobuf.WellKnownTypes.Empty DeleteJobTrigger(global::Google.Cloud.Dlp.V2.DeleteJobTriggerRequest request, grpc::Metadata headers = null, global::System.DateTime? deadline = null, CancellationToken cancellationToken = default(CancellationToken))
+      public virtual global::Google.Protobuf.WellKnownTypes.Empty DeleteJobTrigger(global::Google.Cloud.Dlp.V2.DeleteJobTriggerRequest request, grpc::Metadata headers = null, global::System.DateTime? deadline = null, global::System.Threading.CancellationToken cancellationToken = default(global::System.Threading.CancellationToken))
       {
         return DeleteJobTrigger(request, new grpc::CallOptions(headers, deadline, cancellationToken));
       }
@@ -1493,7 +1490,7 @@ namespace Google.Cloud.Dlp.V2 {
       /// <param name="deadline">An optional deadline for the call. The call will be cancelled if deadline is hit.</param>
       /// <param name="cancellationToken">An optional token for canceling the call.</param>
       /// <returns>The call object.</returns>
-      public virtual grpc::AsyncUnaryCall<global::Google.Protobuf.WellKnownTypes.Empty> DeleteJobTriggerAsync(global::Google.Cloud.Dlp.V2.DeleteJobTriggerRequest request, grpc::Metadata headers = null, global::System.DateTime? deadline = null, CancellationToken cancellationToken = default(CancellationToken))
+      public virtual grpc::AsyncUnaryCall<global::Google.Protobuf.WellKnownTypes.Empty> DeleteJobTriggerAsync(global::Google.Cloud.Dlp.V2.DeleteJobTriggerRequest request, grpc::Metadata headers = null, global::System.DateTime? deadline = null, global::System.Threading.CancellationToken cancellationToken = default(global::System.Threading.CancellationToken))
       {
         return DeleteJobTriggerAsync(request, new grpc::CallOptions(headers, deadline, cancellationToken));
       }
@@ -1516,7 +1513,7 @@ namespace Google.Cloud.Dlp.V2 {
       /// <param name="deadline">An optional deadline for the call. The call will be cancelled if deadline is hit.</param>
       /// <param name="cancellationToken">An optional token for canceling the call.</param>
       /// <returns>The response received from the server.</returns>
-      public virtual global::Google.Cloud.Dlp.V2.DlpJob CreateDlpJob(global::Google.Cloud.Dlp.V2.CreateDlpJobRequest request, grpc::Metadata headers = null, global::System.DateTime? deadline = null, CancellationToken cancellationToken = default(CancellationToken))
+      public virtual global::Google.Cloud.Dlp.V2.DlpJob CreateDlpJob(global::Google.Cloud.Dlp.V2.CreateDlpJobRequest request, grpc::Metadata headers = null, global::System.DateTime? deadline = null, global::System.Threading.CancellationToken cancellationToken = default(global::System.Threading.CancellationToken))
       {
         return CreateDlpJob(request, new grpc::CallOptions(headers, deadline, cancellationToken));
       }
@@ -1540,7 +1537,7 @@ namespace Google.Cloud.Dlp.V2 {
       /// <param name="deadline">An optional deadline for the call. The call will be cancelled if deadline is hit.</param>
       /// <param name="cancellationToken">An optional token for canceling the call.</param>
       /// <returns>The call object.</returns>
-      public virtual grpc::AsyncUnaryCall<global::Google.Cloud.Dlp.V2.DlpJob> CreateDlpJobAsync(global::Google.Cloud.Dlp.V2.CreateDlpJobRequest request, grpc::Metadata headers = null, global::System.DateTime? deadline = null, CancellationToken cancellationToken = default(CancellationToken))
+      public virtual grpc::AsyncUnaryCall<global::Google.Cloud.Dlp.V2.DlpJob> CreateDlpJobAsync(global::Google.Cloud.Dlp.V2.CreateDlpJobRequest request, grpc::Metadata headers = null, global::System.DateTime? deadline = null, global::System.Threading.CancellationToken cancellationToken = default(global::System.Threading.CancellationToken))
       {
         return CreateDlpJobAsync(request, new grpc::CallOptions(headers, deadline, cancellationToken));
       }
@@ -1563,7 +1560,7 @@ namespace Google.Cloud.Dlp.V2 {
       /// <param name="deadline">An optional deadline for the call. The call will be cancelled if deadline is hit.</param>
       /// <param name="cancellationToken">An optional token for canceling the call.</param>
       /// <returns>The response received from the server.</returns>
-      public virtual global::Google.Cloud.Dlp.V2.ListDlpJobsResponse ListDlpJobs(global::Google.Cloud.Dlp.V2.ListDlpJobsRequest request, grpc::Metadata headers = null, global::System.DateTime? deadline = null, CancellationToken cancellationToken = default(CancellationToken))
+      public virtual global::Google.Cloud.Dlp.V2.ListDlpJobsResponse ListDlpJobs(global::Google.Cloud.Dlp.V2.ListDlpJobsRequest request, grpc::Metadata headers = null, global::System.DateTime? deadline = null, global::System.Threading.CancellationToken cancellationToken = default(global::System.Threading.CancellationToken))
       {
         return ListDlpJobs(request, new grpc::CallOptions(headers, deadline, cancellationToken));
       }
@@ -1585,7 +1582,7 @@ namespace Google.Cloud.Dlp.V2 {
       /// <param name="deadline">An optional deadline for the call. The call will be cancelled if deadline is hit.</param>
       /// <param name="cancellationToken">An optional token for canceling the call.</param>
       /// <returns>The call object.</returns>
-      public virtual grpc::AsyncUnaryCall<global::Google.Cloud.Dlp.V2.ListDlpJobsResponse> ListDlpJobsAsync(global::Google.Cloud.Dlp.V2.ListDlpJobsRequest request, grpc::Metadata headers = null, global::System.DateTime? deadline = null, CancellationToken cancellationToken = default(CancellationToken))
+      public virtual grpc::AsyncUnaryCall<global::Google.Cloud.Dlp.V2.ListDlpJobsResponse> ListDlpJobsAsync(global::Google.Cloud.Dlp.V2.ListDlpJobsRequest request, grpc::Metadata headers = null, global::System.DateTime? deadline = null, global::System.Threading.CancellationToken cancellationToken = default(global::System.Threading.CancellationToken))
       {
         return ListDlpJobsAsync(request, new grpc::CallOptions(headers, deadline, cancellationToken));
       }
@@ -1607,7 +1604,7 @@ namespace Google.Cloud.Dlp.V2 {
       /// <param name="deadline">An optional deadline for the call. The call will be cancelled if deadline is hit.</param>
       /// <param name="cancellationToken">An optional token for canceling the call.</param>
       /// <returns>The response received from the server.</returns>
-      public virtual global::Google.Cloud.Dlp.V2.DlpJob GetDlpJob(global::Google.Cloud.Dlp.V2.GetDlpJobRequest request, grpc::Metadata headers = null, global::System.DateTime? deadline = null, CancellationToken cancellationToken = default(CancellationToken))
+      public virtual global::Google.Cloud.Dlp.V2.DlpJob GetDlpJob(global::Google.Cloud.Dlp.V2.GetDlpJobRequest request, grpc::Metadata headers = null, global::System.DateTime? deadline = null, global::System.Threading.CancellationToken cancellationToken = default(global::System.Threading.CancellationToken))
       {
         return GetDlpJob(request, new grpc::CallOptions(headers, deadline, cancellationToken));
       }
@@ -1629,7 +1626,7 @@ namespace Google.Cloud.Dlp.V2 {
       /// <param name="deadline">An optional deadline for the call. The call will be cancelled if deadline is hit.</param>
       /// <param name="cancellationToken">An optional token for canceling the call.</param>
       /// <returns>The call object.</returns>
-      public virtual grpc::AsyncUnaryCall<global::Google.Cloud.Dlp.V2.DlpJob> GetDlpJobAsync(global::Google.Cloud.Dlp.V2.GetDlpJobRequest request, grpc::Metadata headers = null, global::System.DateTime? deadline = null, CancellationToken cancellationToken = default(CancellationToken))
+      public virtual grpc::AsyncUnaryCall<global::Google.Cloud.Dlp.V2.DlpJob> GetDlpJobAsync(global::Google.Cloud.Dlp.V2.GetDlpJobRequest request, grpc::Metadata headers = null, global::System.DateTime? deadline = null, global::System.Threading.CancellationToken cancellationToken = default(global::System.Threading.CancellationToken))
       {
         return GetDlpJobAsync(request, new grpc::CallOptions(headers, deadline, cancellationToken));
       }
@@ -1653,7 +1650,7 @@ namespace Google.Cloud.Dlp.V2 {
       /// <param name="deadline">An optional deadline for the call. The call will be cancelled if deadline is hit.</param>
       /// <param name="cancellationToken">An optional token for canceling the call.</param>
       /// <returns>The response received from the server.</returns>
-      public virtual global::Google.Protobuf.WellKnownTypes.Empty DeleteDlpJob(global::Google.Cloud.Dlp.V2.DeleteDlpJobRequest request, grpc::Metadata headers = null, global::System.DateTime? deadline = null, CancellationToken cancellationToken = default(CancellationToken))
+      public virtual global::Google.Protobuf.WellKnownTypes.Empty DeleteDlpJob(global::Google.Cloud.Dlp.V2.DeleteDlpJobRequest request, grpc::Metadata headers = null, global::System.DateTime? deadline = null, global::System.Threading.CancellationToken cancellationToken = default(global::System.Threading.CancellationToken))
       {
         return DeleteDlpJob(request, new grpc::CallOptions(headers, deadline, cancellationToken));
       }
@@ -1679,7 +1676,7 @@ namespace Google.Cloud.Dlp.V2 {
       /// <param name="deadline">An optional deadline for the call. The call will be cancelled if deadline is hit.</param>
       /// <param name="cancellationToken">An optional token for canceling the call.</param>
       /// <returns>The call object.</returns>
-      public virtual grpc::AsyncUnaryCall<global::Google.Protobuf.WellKnownTypes.Empty> DeleteDlpJobAsync(global::Google.Cloud.Dlp.V2.DeleteDlpJobRequest request, grpc::Metadata headers = null, global::System.DateTime? deadline = null, CancellationToken cancellationToken = default(CancellationToken))
+      public virtual grpc::AsyncUnaryCall<global::Google.Protobuf.WellKnownTypes.Empty> DeleteDlpJobAsync(global::Google.Cloud.Dlp.V2.DeleteDlpJobRequest request, grpc::Metadata headers = null, global::System.DateTime? deadline = null, global::System.Threading.CancellationToken cancellationToken = default(global::System.Threading.CancellationToken))
       {
         return DeleteDlpJobAsync(request, new grpc::CallOptions(headers, deadline, cancellationToken));
       }
@@ -1705,7 +1702,7 @@ namespace Google.Cloud.Dlp.V2 {
       /// <param name="deadline">An optional deadline for the call. The call will be cancelled if deadline is hit.</param>
       /// <param name="cancellationToken">An optional token for canceling the call.</param>
       /// <returns>The response received from the server.</returns>
-      public virtual global::Google.Protobuf.WellKnownTypes.Empty CancelDlpJob(global::Google.Cloud.Dlp.V2.CancelDlpJobRequest request, grpc::Metadata headers = null, global::System.DateTime? deadline = null, CancellationToken cancellationToken = default(CancellationToken))
+      public virtual global::Google.Protobuf.WellKnownTypes.Empty CancelDlpJob(global::Google.Cloud.Dlp.V2.CancelDlpJobRequest request, grpc::Metadata headers = null, global::System.DateTime? deadline = null, global::System.Threading.CancellationToken cancellationToken = default(global::System.Threading.CancellationToken))
       {
         return CancelDlpJob(request, new grpc::CallOptions(headers, deadline, cancellationToken));
       }
@@ -1731,7 +1728,7 @@ namespace Google.Cloud.Dlp.V2 {
       /// <param name="deadline">An optional deadline for the call. The call will be cancelled if deadline is hit.</param>
       /// <param name="cancellationToken">An optional token for canceling the call.</param>
       /// <returns>The call object.</returns>
-      public virtual grpc::AsyncUnaryCall<global::Google.Protobuf.WellKnownTypes.Empty> CancelDlpJobAsync(global::Google.Cloud.Dlp.V2.CancelDlpJobRequest request, grpc::Metadata headers = null, global::System.DateTime? deadline = null, CancellationToken cancellationToken = default(CancellationToken))
+      public virtual grpc::AsyncUnaryCall<global::Google.Protobuf.WellKnownTypes.Empty> CancelDlpJobAsync(global::Google.Cloud.Dlp.V2.CancelDlpJobRequest request, grpc::Metadata headers = null, global::System.DateTime? deadline = null, global::System.Threading.CancellationToken cancellationToken = default(global::System.Threading.CancellationToken))
       {
         return CancelDlpJobAsync(request, new grpc::CallOptions(headers, deadline, cancellationToken));
       }

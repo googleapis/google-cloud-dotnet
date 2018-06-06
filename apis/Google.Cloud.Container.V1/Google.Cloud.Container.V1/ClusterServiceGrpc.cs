@@ -20,9 +20,6 @@
 #pragma warning disable 1591
 #region Designer generated code
 
-using System;
-using System.Threading;
-using System.Threading.Tasks;
 using grpc = global::Grpc.Core;
 
 namespace Google.Cloud.Container.V1 {
@@ -679,7 +676,7 @@ namespace Google.Cloud.Container.V1 {
       /// <param name="deadline">An optional deadline for the call. The call will be cancelled if deadline is hit.</param>
       /// <param name="cancellationToken">An optional token for canceling the call.</param>
       /// <returns>The response received from the server.</returns>
-      public virtual global::Google.Cloud.Container.V1.ListClustersResponse ListClusters(global::Google.Cloud.Container.V1.ListClustersRequest request, grpc::Metadata headers = null, DateTime? deadline = null, CancellationToken cancellationToken = default(CancellationToken))
+      public virtual global::Google.Cloud.Container.V1.ListClustersResponse ListClusters(global::Google.Cloud.Container.V1.ListClustersRequest request, grpc::Metadata headers = null, global::System.DateTime? deadline = null, global::System.Threading.CancellationToken cancellationToken = default(global::System.Threading.CancellationToken))
       {
         return ListClusters(request, new grpc::CallOptions(headers, deadline, cancellationToken));
       }
@@ -703,7 +700,7 @@ namespace Google.Cloud.Container.V1 {
       /// <param name="deadline">An optional deadline for the call. The call will be cancelled if deadline is hit.</param>
       /// <param name="cancellationToken">An optional token for canceling the call.</param>
       /// <returns>The call object.</returns>
-      public virtual grpc::AsyncUnaryCall<global::Google.Cloud.Container.V1.ListClustersResponse> ListClustersAsync(global::Google.Cloud.Container.V1.ListClustersRequest request, grpc::Metadata headers = null, DateTime? deadline = null, CancellationToken cancellationToken = default(CancellationToken))
+      public virtual grpc::AsyncUnaryCall<global::Google.Cloud.Container.V1.ListClustersResponse> ListClustersAsync(global::Google.Cloud.Container.V1.ListClustersRequest request, grpc::Metadata headers = null, global::System.DateTime? deadline = null, global::System.Threading.CancellationToken cancellationToken = default(global::System.Threading.CancellationToken))
       {
         return ListClustersAsync(request, new grpc::CallOptions(headers, deadline, cancellationToken));
       }
@@ -726,7 +723,7 @@ namespace Google.Cloud.Container.V1 {
       /// <param name="deadline">An optional deadline for the call. The call will be cancelled if deadline is hit.</param>
       /// <param name="cancellationToken">An optional token for canceling the call.</param>
       /// <returns>The response received from the server.</returns>
-      public virtual global::Google.Cloud.Container.V1.Cluster GetCluster(global::Google.Cloud.Container.V1.GetClusterRequest request, grpc::Metadata headers = null, DateTime? deadline = null, CancellationToken cancellationToken = default(CancellationToken))
+      public virtual global::Google.Cloud.Container.V1.Cluster GetCluster(global::Google.Cloud.Container.V1.GetClusterRequest request, grpc::Metadata headers = null, global::System.DateTime? deadline = null, global::System.Threading.CancellationToken cancellationToken = default(global::System.Threading.CancellationToken))
       {
         return GetCluster(request, new grpc::CallOptions(headers, deadline, cancellationToken));
       }
@@ -748,7 +745,7 @@ namespace Google.Cloud.Container.V1 {
       /// <param name="deadline">An optional deadline for the call. The call will be cancelled if deadline is hit.</param>
       /// <param name="cancellationToken">An optional token for canceling the call.</param>
       /// <returns>The call object.</returns>
-      public virtual grpc::AsyncUnaryCall<global::Google.Cloud.Container.V1.Cluster> GetClusterAsync(global::Google.Cloud.Container.V1.GetClusterRequest request, grpc::Metadata headers = null, DateTime? deadline = null, CancellationToken cancellationToken = default(CancellationToken))
+      public virtual grpc::AsyncUnaryCall<global::Google.Cloud.Container.V1.Cluster> GetClusterAsync(global::Google.Cloud.Container.V1.GetClusterRequest request, grpc::Metadata headers = null, global::System.DateTime? deadline = null, global::System.Threading.CancellationToken cancellationToken = default(global::System.Threading.CancellationToken))
       {
         return GetClusterAsync(request, new grpc::CallOptions(headers, deadline, cancellationToken));
       }
@@ -782,7 +779,7 @@ namespace Google.Cloud.Container.V1 {
       /// <param name="deadline">An optional deadline for the call. The call will be cancelled if deadline is hit.</param>
       /// <param name="cancellationToken">An optional token for canceling the call.</param>
       /// <returns>The response received from the server.</returns>
-      public virtual global::Google.Cloud.Container.V1.Operation CreateCluster(global::Google.Cloud.Container.V1.CreateClusterRequest request, grpc::Metadata headers = null, DateTime? deadline = null, CancellationToken cancellationToken = default(CancellationToken))
+      public virtual global::Google.Cloud.Container.V1.Operation CreateCluster(global::Google.Cloud.Container.V1.CreateClusterRequest request, grpc::Metadata headers = null, global::System.DateTime? deadline = null, global::System.Threading.CancellationToken cancellationToken = default(global::System.Threading.CancellationToken))
       {
         return CreateCluster(request, new grpc::CallOptions(headers, deadline, cancellationToken));
       }
@@ -828,7 +825,7 @@ namespace Google.Cloud.Container.V1 {
       /// <param name="deadline">An optional deadline for the call. The call will be cancelled if deadline is hit.</param>
       /// <param name="cancellationToken">An optional token for canceling the call.</param>
       /// <returns>The call object.</returns>
-      public virtual grpc::AsyncUnaryCall<global::Google.Cloud.Container.V1.Operation> CreateClusterAsync(global::Google.Cloud.Container.V1.CreateClusterRequest request, grpc::Metadata headers = null, DateTime? deadline = null, CancellationToken cancellationToken = default(CancellationToken))
+      public virtual grpc::AsyncUnaryCall<global::Google.Cloud.Container.V1.Operation> CreateClusterAsync(global::Google.Cloud.Container.V1.CreateClusterRequest request, grpc::Metadata headers = null, global::System.DateTime? deadline = null, global::System.Threading.CancellationToken cancellationToken = default(global::System.Threading.CancellationToken))
       {
         return CreateClusterAsync(request, new grpc::CallOptions(headers, deadline, cancellationToken));
       }
@@ -862,7 +859,7 @@ namespace Google.Cloud.Container.V1 {
       /// <param name="deadline">An optional deadline for the call. The call will be cancelled if deadline is hit.</param>
       /// <param name="cancellationToken">An optional token for canceling the call.</param>
       /// <returns>The response received from the server.</returns>
-      public virtual global::Google.Cloud.Container.V1.Operation UpdateCluster(global::Google.Cloud.Container.V1.UpdateClusterRequest request, grpc::Metadata headers = null, DateTime? deadline = null, CancellationToken cancellationToken = default(CancellationToken))
+      public virtual global::Google.Cloud.Container.V1.Operation UpdateCluster(global::Google.Cloud.Container.V1.UpdateClusterRequest request, grpc::Metadata headers = null, global::System.DateTime? deadline = null, global::System.Threading.CancellationToken cancellationToken = default(global::System.Threading.CancellationToken))
       {
         return UpdateCluster(request, new grpc::CallOptions(headers, deadline, cancellationToken));
       }
@@ -884,7 +881,7 @@ namespace Google.Cloud.Container.V1 {
       /// <param name="deadline">An optional deadline for the call. The call will be cancelled if deadline is hit.</param>
       /// <param name="cancellationToken">An optional token for canceling the call.</param>
       /// <returns>The call object.</returns>
-      public virtual grpc::AsyncUnaryCall<global::Google.Cloud.Container.V1.Operation> UpdateClusterAsync(global::Google.Cloud.Container.V1.UpdateClusterRequest request, grpc::Metadata headers = null, DateTime? deadline = null, CancellationToken cancellationToken = default(CancellationToken))
+      public virtual grpc::AsyncUnaryCall<global::Google.Cloud.Container.V1.Operation> UpdateClusterAsync(global::Google.Cloud.Container.V1.UpdateClusterRequest request, grpc::Metadata headers = null, global::System.DateTime? deadline = null, global::System.Threading.CancellationToken cancellationToken = default(global::System.Threading.CancellationToken))
       {
         return UpdateClusterAsync(request, new grpc::CallOptions(headers, deadline, cancellationToken));
       }
@@ -906,7 +903,7 @@ namespace Google.Cloud.Container.V1 {
       /// <param name="deadline">An optional deadline for the call. The call will be cancelled if deadline is hit.</param>
       /// <param name="cancellationToken">An optional token for canceling the call.</param>
       /// <returns>The response received from the server.</returns>
-      public virtual global::Google.Cloud.Container.V1.Operation UpdateNodePool(global::Google.Cloud.Container.V1.UpdateNodePoolRequest request, grpc::Metadata headers = null, DateTime? deadline = null, CancellationToken cancellationToken = default(CancellationToken))
+      public virtual global::Google.Cloud.Container.V1.Operation UpdateNodePool(global::Google.Cloud.Container.V1.UpdateNodePoolRequest request, grpc::Metadata headers = null, global::System.DateTime? deadline = null, global::System.Threading.CancellationToken cancellationToken = default(global::System.Threading.CancellationToken))
       {
         return UpdateNodePool(request, new grpc::CallOptions(headers, deadline, cancellationToken));
       }
@@ -928,7 +925,7 @@ namespace Google.Cloud.Container.V1 {
       /// <param name="deadline">An optional deadline for the call. The call will be cancelled if deadline is hit.</param>
       /// <param name="cancellationToken">An optional token for canceling the call.</param>
       /// <returns>The call object.</returns>
-      public virtual grpc::AsyncUnaryCall<global::Google.Cloud.Container.V1.Operation> UpdateNodePoolAsync(global::Google.Cloud.Container.V1.UpdateNodePoolRequest request, grpc::Metadata headers = null, DateTime? deadline = null, CancellationToken cancellationToken = default(CancellationToken))
+      public virtual grpc::AsyncUnaryCall<global::Google.Cloud.Container.V1.Operation> UpdateNodePoolAsync(global::Google.Cloud.Container.V1.UpdateNodePoolRequest request, grpc::Metadata headers = null, global::System.DateTime? deadline = null, global::System.Threading.CancellationToken cancellationToken = default(global::System.Threading.CancellationToken))
       {
         return UpdateNodePoolAsync(request, new grpc::CallOptions(headers, deadline, cancellationToken));
       }
@@ -950,7 +947,7 @@ namespace Google.Cloud.Container.V1 {
       /// <param name="deadline">An optional deadline for the call. The call will be cancelled if deadline is hit.</param>
       /// <param name="cancellationToken">An optional token for canceling the call.</param>
       /// <returns>The response received from the server.</returns>
-      public virtual global::Google.Cloud.Container.V1.Operation SetNodePoolAutoscaling(global::Google.Cloud.Container.V1.SetNodePoolAutoscalingRequest request, grpc::Metadata headers = null, DateTime? deadline = null, CancellationToken cancellationToken = default(CancellationToken))
+      public virtual global::Google.Cloud.Container.V1.Operation SetNodePoolAutoscaling(global::Google.Cloud.Container.V1.SetNodePoolAutoscalingRequest request, grpc::Metadata headers = null, global::System.DateTime? deadline = null, global::System.Threading.CancellationToken cancellationToken = default(global::System.Threading.CancellationToken))
       {
         return SetNodePoolAutoscaling(request, new grpc::CallOptions(headers, deadline, cancellationToken));
       }
@@ -972,7 +969,7 @@ namespace Google.Cloud.Container.V1 {
       /// <param name="deadline">An optional deadline for the call. The call will be cancelled if deadline is hit.</param>
       /// <param name="cancellationToken">An optional token for canceling the call.</param>
       /// <returns>The call object.</returns>
-      public virtual grpc::AsyncUnaryCall<global::Google.Cloud.Container.V1.Operation> SetNodePoolAutoscalingAsync(global::Google.Cloud.Container.V1.SetNodePoolAutoscalingRequest request, grpc::Metadata headers = null, DateTime? deadline = null, CancellationToken cancellationToken = default(CancellationToken))
+      public virtual grpc::AsyncUnaryCall<global::Google.Cloud.Container.V1.Operation> SetNodePoolAutoscalingAsync(global::Google.Cloud.Container.V1.SetNodePoolAutoscalingRequest request, grpc::Metadata headers = null, global::System.DateTime? deadline = null, global::System.Threading.CancellationToken cancellationToken = default(global::System.Threading.CancellationToken))
       {
         return SetNodePoolAutoscalingAsync(request, new grpc::CallOptions(headers, deadline, cancellationToken));
       }
@@ -994,7 +991,7 @@ namespace Google.Cloud.Container.V1 {
       /// <param name="deadline">An optional deadline for the call. The call will be cancelled if deadline is hit.</param>
       /// <param name="cancellationToken">An optional token for canceling the call.</param>
       /// <returns>The response received from the server.</returns>
-      public virtual global::Google.Cloud.Container.V1.Operation SetLoggingService(global::Google.Cloud.Container.V1.SetLoggingServiceRequest request, grpc::Metadata headers = null, DateTime? deadline = null, CancellationToken cancellationToken = default(CancellationToken))
+      public virtual global::Google.Cloud.Container.V1.Operation SetLoggingService(global::Google.Cloud.Container.V1.SetLoggingServiceRequest request, grpc::Metadata headers = null, global::System.DateTime? deadline = null, global::System.Threading.CancellationToken cancellationToken = default(global::System.Threading.CancellationToken))
       {
         return SetLoggingService(request, new grpc::CallOptions(headers, deadline, cancellationToken));
       }
@@ -1016,7 +1013,7 @@ namespace Google.Cloud.Container.V1 {
       /// <param name="deadline">An optional deadline for the call. The call will be cancelled if deadline is hit.</param>
       /// <param name="cancellationToken">An optional token for canceling the call.</param>
       /// <returns>The call object.</returns>
-      public virtual grpc::AsyncUnaryCall<global::Google.Cloud.Container.V1.Operation> SetLoggingServiceAsync(global::Google.Cloud.Container.V1.SetLoggingServiceRequest request, grpc::Metadata headers = null, DateTime? deadline = null, CancellationToken cancellationToken = default(CancellationToken))
+      public virtual grpc::AsyncUnaryCall<global::Google.Cloud.Container.V1.Operation> SetLoggingServiceAsync(global::Google.Cloud.Container.V1.SetLoggingServiceRequest request, grpc::Metadata headers = null, global::System.DateTime? deadline = null, global::System.Threading.CancellationToken cancellationToken = default(global::System.Threading.CancellationToken))
       {
         return SetLoggingServiceAsync(request, new grpc::CallOptions(headers, deadline, cancellationToken));
       }
@@ -1038,7 +1035,7 @@ namespace Google.Cloud.Container.V1 {
       /// <param name="deadline">An optional deadline for the call. The call will be cancelled if deadline is hit.</param>
       /// <param name="cancellationToken">An optional token for canceling the call.</param>
       /// <returns>The response received from the server.</returns>
-      public virtual global::Google.Cloud.Container.V1.Operation SetMonitoringService(global::Google.Cloud.Container.V1.SetMonitoringServiceRequest request, grpc::Metadata headers = null, DateTime? deadline = null, CancellationToken cancellationToken = default(CancellationToken))
+      public virtual global::Google.Cloud.Container.V1.Operation SetMonitoringService(global::Google.Cloud.Container.V1.SetMonitoringServiceRequest request, grpc::Metadata headers = null, global::System.DateTime? deadline = null, global::System.Threading.CancellationToken cancellationToken = default(global::System.Threading.CancellationToken))
       {
         return SetMonitoringService(request, new grpc::CallOptions(headers, deadline, cancellationToken));
       }
@@ -1060,7 +1057,7 @@ namespace Google.Cloud.Container.V1 {
       /// <param name="deadline">An optional deadline for the call. The call will be cancelled if deadline is hit.</param>
       /// <param name="cancellationToken">An optional token for canceling the call.</param>
       /// <returns>The call object.</returns>
-      public virtual grpc::AsyncUnaryCall<global::Google.Cloud.Container.V1.Operation> SetMonitoringServiceAsync(global::Google.Cloud.Container.V1.SetMonitoringServiceRequest request, grpc::Metadata headers = null, DateTime? deadline = null, CancellationToken cancellationToken = default(CancellationToken))
+      public virtual grpc::AsyncUnaryCall<global::Google.Cloud.Container.V1.Operation> SetMonitoringServiceAsync(global::Google.Cloud.Container.V1.SetMonitoringServiceRequest request, grpc::Metadata headers = null, global::System.DateTime? deadline = null, global::System.Threading.CancellationToken cancellationToken = default(global::System.Threading.CancellationToken))
       {
         return SetMonitoringServiceAsync(request, new grpc::CallOptions(headers, deadline, cancellationToken));
       }
@@ -1082,7 +1079,7 @@ namespace Google.Cloud.Container.V1 {
       /// <param name="deadline">An optional deadline for the call. The call will be cancelled if deadline is hit.</param>
       /// <param name="cancellationToken">An optional token for canceling the call.</param>
       /// <returns>The response received from the server.</returns>
-      public virtual global::Google.Cloud.Container.V1.Operation SetAddonsConfig(global::Google.Cloud.Container.V1.SetAddonsConfigRequest request, grpc::Metadata headers = null, DateTime? deadline = null, CancellationToken cancellationToken = default(CancellationToken))
+      public virtual global::Google.Cloud.Container.V1.Operation SetAddonsConfig(global::Google.Cloud.Container.V1.SetAddonsConfigRequest request, grpc::Metadata headers = null, global::System.DateTime? deadline = null, global::System.Threading.CancellationToken cancellationToken = default(global::System.Threading.CancellationToken))
       {
         return SetAddonsConfig(request, new grpc::CallOptions(headers, deadline, cancellationToken));
       }
@@ -1104,7 +1101,7 @@ namespace Google.Cloud.Container.V1 {
       /// <param name="deadline">An optional deadline for the call. The call will be cancelled if deadline is hit.</param>
       /// <param name="cancellationToken">An optional token for canceling the call.</param>
       /// <returns>The call object.</returns>
-      public virtual grpc::AsyncUnaryCall<global::Google.Cloud.Container.V1.Operation> SetAddonsConfigAsync(global::Google.Cloud.Container.V1.SetAddonsConfigRequest request, grpc::Metadata headers = null, DateTime? deadline = null, CancellationToken cancellationToken = default(CancellationToken))
+      public virtual grpc::AsyncUnaryCall<global::Google.Cloud.Container.V1.Operation> SetAddonsConfigAsync(global::Google.Cloud.Container.V1.SetAddonsConfigRequest request, grpc::Metadata headers = null, global::System.DateTime? deadline = null, global::System.Threading.CancellationToken cancellationToken = default(global::System.Threading.CancellationToken))
       {
         return SetAddonsConfigAsync(request, new grpc::CallOptions(headers, deadline, cancellationToken));
       }
@@ -1126,7 +1123,7 @@ namespace Google.Cloud.Container.V1 {
       /// <param name="deadline">An optional deadline for the call. The call will be cancelled if deadline is hit.</param>
       /// <param name="cancellationToken">An optional token for canceling the call.</param>
       /// <returns>The response received from the server.</returns>
-      public virtual global::Google.Cloud.Container.V1.Operation SetLocations(global::Google.Cloud.Container.V1.SetLocationsRequest request, grpc::Metadata headers = null, DateTime? deadline = null, CancellationToken cancellationToken = default(CancellationToken))
+      public virtual global::Google.Cloud.Container.V1.Operation SetLocations(global::Google.Cloud.Container.V1.SetLocationsRequest request, grpc::Metadata headers = null, global::System.DateTime? deadline = null, global::System.Threading.CancellationToken cancellationToken = default(global::System.Threading.CancellationToken))
       {
         return SetLocations(request, new grpc::CallOptions(headers, deadline, cancellationToken));
       }
@@ -1148,7 +1145,7 @@ namespace Google.Cloud.Container.V1 {
       /// <param name="deadline">An optional deadline for the call. The call will be cancelled if deadline is hit.</param>
       /// <param name="cancellationToken">An optional token for canceling the call.</param>
       /// <returns>The call object.</returns>
-      public virtual grpc::AsyncUnaryCall<global::Google.Cloud.Container.V1.Operation> SetLocationsAsync(global::Google.Cloud.Container.V1.SetLocationsRequest request, grpc::Metadata headers = null, DateTime? deadline = null, CancellationToken cancellationToken = default(CancellationToken))
+      public virtual grpc::AsyncUnaryCall<global::Google.Cloud.Container.V1.Operation> SetLocationsAsync(global::Google.Cloud.Container.V1.SetLocationsRequest request, grpc::Metadata headers = null, global::System.DateTime? deadline = null, global::System.Threading.CancellationToken cancellationToken = default(global::System.Threading.CancellationToken))
       {
         return SetLocationsAsync(request, new grpc::CallOptions(headers, deadline, cancellationToken));
       }
@@ -1170,7 +1167,7 @@ namespace Google.Cloud.Container.V1 {
       /// <param name="deadline">An optional deadline for the call. The call will be cancelled if deadline is hit.</param>
       /// <param name="cancellationToken">An optional token for canceling the call.</param>
       /// <returns>The response received from the server.</returns>
-      public virtual global::Google.Cloud.Container.V1.Operation UpdateMaster(global::Google.Cloud.Container.V1.UpdateMasterRequest request, grpc::Metadata headers = null, DateTime? deadline = null, CancellationToken cancellationToken = default(CancellationToken))
+      public virtual global::Google.Cloud.Container.V1.Operation UpdateMaster(global::Google.Cloud.Container.V1.UpdateMasterRequest request, grpc::Metadata headers = null, global::System.DateTime? deadline = null, global::System.Threading.CancellationToken cancellationToken = default(global::System.Threading.CancellationToken))
       {
         return UpdateMaster(request, new grpc::CallOptions(headers, deadline, cancellationToken));
       }
@@ -1192,7 +1189,7 @@ namespace Google.Cloud.Container.V1 {
       /// <param name="deadline">An optional deadline for the call. The call will be cancelled if deadline is hit.</param>
       /// <param name="cancellationToken">An optional token for canceling the call.</param>
       /// <returns>The call object.</returns>
-      public virtual grpc::AsyncUnaryCall<global::Google.Cloud.Container.V1.Operation> UpdateMasterAsync(global::Google.Cloud.Container.V1.UpdateMasterRequest request, grpc::Metadata headers = null, DateTime? deadline = null, CancellationToken cancellationToken = default(CancellationToken))
+      public virtual grpc::AsyncUnaryCall<global::Google.Cloud.Container.V1.Operation> UpdateMasterAsync(global::Google.Cloud.Container.V1.UpdateMasterRequest request, grpc::Metadata headers = null, global::System.DateTime? deadline = null, global::System.Threading.CancellationToken cancellationToken = default(global::System.Threading.CancellationToken))
       {
         return UpdateMasterAsync(request, new grpc::CallOptions(headers, deadline, cancellationToken));
       }
@@ -1216,7 +1213,7 @@ namespace Google.Cloud.Container.V1 {
       /// <param name="deadline">An optional deadline for the call. The call will be cancelled if deadline is hit.</param>
       /// <param name="cancellationToken">An optional token for canceling the call.</param>
       /// <returns>The response received from the server.</returns>
-      public virtual global::Google.Cloud.Container.V1.Operation SetMasterAuth(global::Google.Cloud.Container.V1.SetMasterAuthRequest request, grpc::Metadata headers = null, DateTime? deadline = null, CancellationToken cancellationToken = default(CancellationToken))
+      public virtual global::Google.Cloud.Container.V1.Operation SetMasterAuth(global::Google.Cloud.Container.V1.SetMasterAuthRequest request, grpc::Metadata headers = null, global::System.DateTime? deadline = null, global::System.Threading.CancellationToken cancellationToken = default(global::System.Threading.CancellationToken))
       {
         return SetMasterAuth(request, new grpc::CallOptions(headers, deadline, cancellationToken));
       }
@@ -1242,7 +1239,7 @@ namespace Google.Cloud.Container.V1 {
       /// <param name="deadline">An optional deadline for the call. The call will be cancelled if deadline is hit.</param>
       /// <param name="cancellationToken">An optional token for canceling the call.</param>
       /// <returns>The call object.</returns>
-      public virtual grpc::AsyncUnaryCall<global::Google.Cloud.Container.V1.Operation> SetMasterAuthAsync(global::Google.Cloud.Container.V1.SetMasterAuthRequest request, grpc::Metadata headers = null, DateTime? deadline = null, CancellationToken cancellationToken = default(CancellationToken))
+      public virtual grpc::AsyncUnaryCall<global::Google.Cloud.Container.V1.Operation> SetMasterAuthAsync(global::Google.Cloud.Container.V1.SetMasterAuthRequest request, grpc::Metadata headers = null, global::System.DateTime? deadline = null, global::System.Threading.CancellationToken cancellationToken = default(global::System.Threading.CancellationToken))
       {
         return SetMasterAuthAsync(request, new grpc::CallOptions(headers, deadline, cancellationToken));
       }
@@ -1274,7 +1271,7 @@ namespace Google.Cloud.Container.V1 {
       /// <param name="deadline">An optional deadline for the call. The call will be cancelled if deadline is hit.</param>
       /// <param name="cancellationToken">An optional token for canceling the call.</param>
       /// <returns>The response received from the server.</returns>
-      public virtual global::Google.Cloud.Container.V1.Operation DeleteCluster(global::Google.Cloud.Container.V1.DeleteClusterRequest request, grpc::Metadata headers = null, DateTime? deadline = null, CancellationToken cancellationToken = default(CancellationToken))
+      public virtual global::Google.Cloud.Container.V1.Operation DeleteCluster(global::Google.Cloud.Container.V1.DeleteClusterRequest request, grpc::Metadata headers = null, global::System.DateTime? deadline = null, global::System.Threading.CancellationToken cancellationToken = default(global::System.Threading.CancellationToken))
       {
         return DeleteCluster(request, new grpc::CallOptions(headers, deadline, cancellationToken));
       }
@@ -1312,7 +1309,7 @@ namespace Google.Cloud.Container.V1 {
       /// <param name="deadline">An optional deadline for the call. The call will be cancelled if deadline is hit.</param>
       /// <param name="cancellationToken">An optional token for canceling the call.</param>
       /// <returns>The call object.</returns>
-      public virtual grpc::AsyncUnaryCall<global::Google.Cloud.Container.V1.Operation> DeleteClusterAsync(global::Google.Cloud.Container.V1.DeleteClusterRequest request, grpc::Metadata headers = null, DateTime? deadline = null, CancellationToken cancellationToken = default(CancellationToken))
+      public virtual grpc::AsyncUnaryCall<global::Google.Cloud.Container.V1.Operation> DeleteClusterAsync(global::Google.Cloud.Container.V1.DeleteClusterRequest request, grpc::Metadata headers = null, global::System.DateTime? deadline = null, global::System.Threading.CancellationToken cancellationToken = default(global::System.Threading.CancellationToken))
       {
         return DeleteClusterAsync(request, new grpc::CallOptions(headers, deadline, cancellationToken));
       }
@@ -1342,7 +1339,7 @@ namespace Google.Cloud.Container.V1 {
       /// <param name="deadline">An optional deadline for the call. The call will be cancelled if deadline is hit.</param>
       /// <param name="cancellationToken">An optional token for canceling the call.</param>
       /// <returns>The response received from the server.</returns>
-      public virtual global::Google.Cloud.Container.V1.ListOperationsResponse ListOperations(global::Google.Cloud.Container.V1.ListOperationsRequest request, grpc::Metadata headers = null, DateTime? deadline = null, CancellationToken cancellationToken = default(CancellationToken))
+      public virtual global::Google.Cloud.Container.V1.ListOperationsResponse ListOperations(global::Google.Cloud.Container.V1.ListOperationsRequest request, grpc::Metadata headers = null, global::System.DateTime? deadline = null, global::System.Threading.CancellationToken cancellationToken = default(global::System.Threading.CancellationToken))
       {
         return ListOperations(request, new grpc::CallOptions(headers, deadline, cancellationToken));
       }
@@ -1364,7 +1361,7 @@ namespace Google.Cloud.Container.V1 {
       /// <param name="deadline">An optional deadline for the call. The call will be cancelled if deadline is hit.</param>
       /// <param name="cancellationToken">An optional token for canceling the call.</param>
       /// <returns>The call object.</returns>
-      public virtual grpc::AsyncUnaryCall<global::Google.Cloud.Container.V1.ListOperationsResponse> ListOperationsAsync(global::Google.Cloud.Container.V1.ListOperationsRequest request, grpc::Metadata headers = null, DateTime? deadline = null, CancellationToken cancellationToken = default(CancellationToken))
+      public virtual grpc::AsyncUnaryCall<global::Google.Cloud.Container.V1.ListOperationsResponse> ListOperationsAsync(global::Google.Cloud.Container.V1.ListOperationsRequest request, grpc::Metadata headers = null, global::System.DateTime? deadline = null, global::System.Threading.CancellationToken cancellationToken = default(global::System.Threading.CancellationToken))
       {
         return ListOperationsAsync(request, new grpc::CallOptions(headers, deadline, cancellationToken));
       }
@@ -1386,7 +1383,7 @@ namespace Google.Cloud.Container.V1 {
       /// <param name="deadline">An optional deadline for the call. The call will be cancelled if deadline is hit.</param>
       /// <param name="cancellationToken">An optional token for canceling the call.</param>
       /// <returns>The response received from the server.</returns>
-      public virtual global::Google.Cloud.Container.V1.Operation GetOperation(global::Google.Cloud.Container.V1.GetOperationRequest request, grpc::Metadata headers = null, DateTime? deadline = null, CancellationToken cancellationToken = default(CancellationToken))
+      public virtual global::Google.Cloud.Container.V1.Operation GetOperation(global::Google.Cloud.Container.V1.GetOperationRequest request, grpc::Metadata headers = null, global::System.DateTime? deadline = null, global::System.Threading.CancellationToken cancellationToken = default(global::System.Threading.CancellationToken))
       {
         return GetOperation(request, new grpc::CallOptions(headers, deadline, cancellationToken));
       }
@@ -1408,7 +1405,7 @@ namespace Google.Cloud.Container.V1 {
       /// <param name="deadline">An optional deadline for the call. The call will be cancelled if deadline is hit.</param>
       /// <param name="cancellationToken">An optional token for canceling the call.</param>
       /// <returns>The call object.</returns>
-      public virtual grpc::AsyncUnaryCall<global::Google.Cloud.Container.V1.Operation> GetOperationAsync(global::Google.Cloud.Container.V1.GetOperationRequest request, grpc::Metadata headers = null, DateTime? deadline = null, CancellationToken cancellationToken = default(CancellationToken))
+      public virtual grpc::AsyncUnaryCall<global::Google.Cloud.Container.V1.Operation> GetOperationAsync(global::Google.Cloud.Container.V1.GetOperationRequest request, grpc::Metadata headers = null, global::System.DateTime? deadline = null, global::System.Threading.CancellationToken cancellationToken = default(global::System.Threading.CancellationToken))
       {
         return GetOperationAsync(request, new grpc::CallOptions(headers, deadline, cancellationToken));
       }
@@ -1430,7 +1427,7 @@ namespace Google.Cloud.Container.V1 {
       /// <param name="deadline">An optional deadline for the call. The call will be cancelled if deadline is hit.</param>
       /// <param name="cancellationToken">An optional token for canceling the call.</param>
       /// <returns>The response received from the server.</returns>
-      public virtual global::Google.Protobuf.WellKnownTypes.Empty CancelOperation(global::Google.Cloud.Container.V1.CancelOperationRequest request, grpc::Metadata headers = null, DateTime? deadline = null, CancellationToken cancellationToken = default(CancellationToken))
+      public virtual global::Google.Protobuf.WellKnownTypes.Empty CancelOperation(global::Google.Cloud.Container.V1.CancelOperationRequest request, grpc::Metadata headers = null, global::System.DateTime? deadline = null, global::System.Threading.CancellationToken cancellationToken = default(global::System.Threading.CancellationToken))
       {
         return CancelOperation(request, new grpc::CallOptions(headers, deadline, cancellationToken));
       }
@@ -1452,7 +1449,7 @@ namespace Google.Cloud.Container.V1 {
       /// <param name="deadline">An optional deadline for the call. The call will be cancelled if deadline is hit.</param>
       /// <param name="cancellationToken">An optional token for canceling the call.</param>
       /// <returns>The call object.</returns>
-      public virtual grpc::AsyncUnaryCall<global::Google.Protobuf.WellKnownTypes.Empty> CancelOperationAsync(global::Google.Cloud.Container.V1.CancelOperationRequest request, grpc::Metadata headers = null, DateTime? deadline = null, CancellationToken cancellationToken = default(CancellationToken))
+      public virtual grpc::AsyncUnaryCall<global::Google.Protobuf.WellKnownTypes.Empty> CancelOperationAsync(global::Google.Cloud.Container.V1.CancelOperationRequest request, grpc::Metadata headers = null, global::System.DateTime? deadline = null, global::System.Threading.CancellationToken cancellationToken = default(global::System.Threading.CancellationToken))
       {
         return CancelOperationAsync(request, new grpc::CallOptions(headers, deadline, cancellationToken));
       }
@@ -1474,7 +1471,7 @@ namespace Google.Cloud.Container.V1 {
       /// <param name="deadline">An optional deadline for the call. The call will be cancelled if deadline is hit.</param>
       /// <param name="cancellationToken">An optional token for canceling the call.</param>
       /// <returns>The response received from the server.</returns>
-      public virtual global::Google.Cloud.Container.V1.ServerConfig GetServerConfig(global::Google.Cloud.Container.V1.GetServerConfigRequest request, grpc::Metadata headers = null, DateTime? deadline = null, CancellationToken cancellationToken = default(CancellationToken))
+      public virtual global::Google.Cloud.Container.V1.ServerConfig GetServerConfig(global::Google.Cloud.Container.V1.GetServerConfigRequest request, grpc::Metadata headers = null, global::System.DateTime? deadline = null, global::System.Threading.CancellationToken cancellationToken = default(global::System.Threading.CancellationToken))
       {
         return GetServerConfig(request, new grpc::CallOptions(headers, deadline, cancellationToken));
       }
@@ -1496,7 +1493,7 @@ namespace Google.Cloud.Container.V1 {
       /// <param name="deadline">An optional deadline for the call. The call will be cancelled if deadline is hit.</param>
       /// <param name="cancellationToken">An optional token for canceling the call.</param>
       /// <returns>The call object.</returns>
-      public virtual grpc::AsyncUnaryCall<global::Google.Cloud.Container.V1.ServerConfig> GetServerConfigAsync(global::Google.Cloud.Container.V1.GetServerConfigRequest request, grpc::Metadata headers = null, DateTime? deadline = null, CancellationToken cancellationToken = default(CancellationToken))
+      public virtual grpc::AsyncUnaryCall<global::Google.Cloud.Container.V1.ServerConfig> GetServerConfigAsync(global::Google.Cloud.Container.V1.GetServerConfigRequest request, grpc::Metadata headers = null, global::System.DateTime? deadline = null, global::System.Threading.CancellationToken cancellationToken = default(global::System.Threading.CancellationToken))
       {
         return GetServerConfigAsync(request, new grpc::CallOptions(headers, deadline, cancellationToken));
       }
@@ -1518,7 +1515,7 @@ namespace Google.Cloud.Container.V1 {
       /// <param name="deadline">An optional deadline for the call. The call will be cancelled if deadline is hit.</param>
       /// <param name="cancellationToken">An optional token for canceling the call.</param>
       /// <returns>The response received from the server.</returns>
-      public virtual global::Google.Cloud.Container.V1.ListNodePoolsResponse ListNodePools(global::Google.Cloud.Container.V1.ListNodePoolsRequest request, grpc::Metadata headers = null, DateTime? deadline = null, CancellationToken cancellationToken = default(CancellationToken))
+      public virtual global::Google.Cloud.Container.V1.ListNodePoolsResponse ListNodePools(global::Google.Cloud.Container.V1.ListNodePoolsRequest request, grpc::Metadata headers = null, global::System.DateTime? deadline = null, global::System.Threading.CancellationToken cancellationToken = default(global::System.Threading.CancellationToken))
       {
         return ListNodePools(request, new grpc::CallOptions(headers, deadline, cancellationToken));
       }
@@ -1540,7 +1537,7 @@ namespace Google.Cloud.Container.V1 {
       /// <param name="deadline">An optional deadline for the call. The call will be cancelled if deadline is hit.</param>
       /// <param name="cancellationToken">An optional token for canceling the call.</param>
       /// <returns>The call object.</returns>
-      public virtual grpc::AsyncUnaryCall<global::Google.Cloud.Container.V1.ListNodePoolsResponse> ListNodePoolsAsync(global::Google.Cloud.Container.V1.ListNodePoolsRequest request, grpc::Metadata headers = null, DateTime? deadline = null, CancellationToken cancellationToken = default(CancellationToken))
+      public virtual grpc::AsyncUnaryCall<global::Google.Cloud.Container.V1.ListNodePoolsResponse> ListNodePoolsAsync(global::Google.Cloud.Container.V1.ListNodePoolsRequest request, grpc::Metadata headers = null, global::System.DateTime? deadline = null, global::System.Threading.CancellationToken cancellationToken = default(global::System.Threading.CancellationToken))
       {
         return ListNodePoolsAsync(request, new grpc::CallOptions(headers, deadline, cancellationToken));
       }
@@ -1562,7 +1559,7 @@ namespace Google.Cloud.Container.V1 {
       /// <param name="deadline">An optional deadline for the call. The call will be cancelled if deadline is hit.</param>
       /// <param name="cancellationToken">An optional token for canceling the call.</param>
       /// <returns>The response received from the server.</returns>
-      public virtual global::Google.Cloud.Container.V1.NodePool GetNodePool(global::Google.Cloud.Container.V1.GetNodePoolRequest request, grpc::Metadata headers = null, DateTime? deadline = null, CancellationToken cancellationToken = default(CancellationToken))
+      public virtual global::Google.Cloud.Container.V1.NodePool GetNodePool(global::Google.Cloud.Container.V1.GetNodePoolRequest request, grpc::Metadata headers = null, global::System.DateTime? deadline = null, global::System.Threading.CancellationToken cancellationToken = default(global::System.Threading.CancellationToken))
       {
         return GetNodePool(request, new grpc::CallOptions(headers, deadline, cancellationToken));
       }
@@ -1584,7 +1581,7 @@ namespace Google.Cloud.Container.V1 {
       /// <param name="deadline">An optional deadline for the call. The call will be cancelled if deadline is hit.</param>
       /// <param name="cancellationToken">An optional token for canceling the call.</param>
       /// <returns>The call object.</returns>
-      public virtual grpc::AsyncUnaryCall<global::Google.Cloud.Container.V1.NodePool> GetNodePoolAsync(global::Google.Cloud.Container.V1.GetNodePoolRequest request, grpc::Metadata headers = null, DateTime? deadline = null, CancellationToken cancellationToken = default(CancellationToken))
+      public virtual grpc::AsyncUnaryCall<global::Google.Cloud.Container.V1.NodePool> GetNodePoolAsync(global::Google.Cloud.Container.V1.GetNodePoolRequest request, grpc::Metadata headers = null, global::System.DateTime? deadline = null, global::System.Threading.CancellationToken cancellationToken = default(global::System.Threading.CancellationToken))
       {
         return GetNodePoolAsync(request, new grpc::CallOptions(headers, deadline, cancellationToken));
       }
@@ -1606,7 +1603,7 @@ namespace Google.Cloud.Container.V1 {
       /// <param name="deadline">An optional deadline for the call. The call will be cancelled if deadline is hit.</param>
       /// <param name="cancellationToken">An optional token for canceling the call.</param>
       /// <returns>The response received from the server.</returns>
-      public virtual global::Google.Cloud.Container.V1.Operation CreateNodePool(global::Google.Cloud.Container.V1.CreateNodePoolRequest request, grpc::Metadata headers = null, DateTime? deadline = null, CancellationToken cancellationToken = default(CancellationToken))
+      public virtual global::Google.Cloud.Container.V1.Operation CreateNodePool(global::Google.Cloud.Container.V1.CreateNodePoolRequest request, grpc::Metadata headers = null, global::System.DateTime? deadline = null, global::System.Threading.CancellationToken cancellationToken = default(global::System.Threading.CancellationToken))
       {
         return CreateNodePool(request, new grpc::CallOptions(headers, deadline, cancellationToken));
       }
@@ -1628,7 +1625,7 @@ namespace Google.Cloud.Container.V1 {
       /// <param name="deadline">An optional deadline for the call. The call will be cancelled if deadline is hit.</param>
       /// <param name="cancellationToken">An optional token for canceling the call.</param>
       /// <returns>The call object.</returns>
-      public virtual grpc::AsyncUnaryCall<global::Google.Cloud.Container.V1.Operation> CreateNodePoolAsync(global::Google.Cloud.Container.V1.CreateNodePoolRequest request, grpc::Metadata headers = null, DateTime? deadline = null, CancellationToken cancellationToken = default(CancellationToken))
+      public virtual grpc::AsyncUnaryCall<global::Google.Cloud.Container.V1.Operation> CreateNodePoolAsync(global::Google.Cloud.Container.V1.CreateNodePoolRequest request, grpc::Metadata headers = null, global::System.DateTime? deadline = null, global::System.Threading.CancellationToken cancellationToken = default(global::System.Threading.CancellationToken))
       {
         return CreateNodePoolAsync(request, new grpc::CallOptions(headers, deadline, cancellationToken));
       }
@@ -1650,7 +1647,7 @@ namespace Google.Cloud.Container.V1 {
       /// <param name="deadline">An optional deadline for the call. The call will be cancelled if deadline is hit.</param>
       /// <param name="cancellationToken">An optional token for canceling the call.</param>
       /// <returns>The response received from the server.</returns>
-      public virtual global::Google.Cloud.Container.V1.Operation DeleteNodePool(global::Google.Cloud.Container.V1.DeleteNodePoolRequest request, grpc::Metadata headers = null, DateTime? deadline = null, CancellationToken cancellationToken = default(CancellationToken))
+      public virtual global::Google.Cloud.Container.V1.Operation DeleteNodePool(global::Google.Cloud.Container.V1.DeleteNodePoolRequest request, grpc::Metadata headers = null, global::System.DateTime? deadline = null, global::System.Threading.CancellationToken cancellationToken = default(global::System.Threading.CancellationToken))
       {
         return DeleteNodePool(request, new grpc::CallOptions(headers, deadline, cancellationToken));
       }
@@ -1672,7 +1669,7 @@ namespace Google.Cloud.Container.V1 {
       /// <param name="deadline">An optional deadline for the call. The call will be cancelled if deadline is hit.</param>
       /// <param name="cancellationToken">An optional token for canceling the call.</param>
       /// <returns>The call object.</returns>
-      public virtual grpc::AsyncUnaryCall<global::Google.Cloud.Container.V1.Operation> DeleteNodePoolAsync(global::Google.Cloud.Container.V1.DeleteNodePoolRequest request, grpc::Metadata headers = null, DateTime? deadline = null, CancellationToken cancellationToken = default(CancellationToken))
+      public virtual grpc::AsyncUnaryCall<global::Google.Cloud.Container.V1.Operation> DeleteNodePoolAsync(global::Google.Cloud.Container.V1.DeleteNodePoolRequest request, grpc::Metadata headers = null, global::System.DateTime? deadline = null, global::System.Threading.CancellationToken cancellationToken = default(global::System.Threading.CancellationToken))
       {
         return DeleteNodePoolAsync(request, new grpc::CallOptions(headers, deadline, cancellationToken));
       }
@@ -1695,7 +1692,7 @@ namespace Google.Cloud.Container.V1 {
       /// <param name="deadline">An optional deadline for the call. The call will be cancelled if deadline is hit.</param>
       /// <param name="cancellationToken">An optional token for canceling the call.</param>
       /// <returns>The response received from the server.</returns>
-      public virtual global::Google.Cloud.Container.V1.Operation RollbackNodePoolUpgrade(global::Google.Cloud.Container.V1.RollbackNodePoolUpgradeRequest request, grpc::Metadata headers = null, DateTime? deadline = null, CancellationToken cancellationToken = default(CancellationToken))
+      public virtual global::Google.Cloud.Container.V1.Operation RollbackNodePoolUpgrade(global::Google.Cloud.Container.V1.RollbackNodePoolUpgradeRequest request, grpc::Metadata headers = null, global::System.DateTime? deadline = null, global::System.Threading.CancellationToken cancellationToken = default(global::System.Threading.CancellationToken))
       {
         return RollbackNodePoolUpgrade(request, new grpc::CallOptions(headers, deadline, cancellationToken));
       }
@@ -1719,7 +1716,7 @@ namespace Google.Cloud.Container.V1 {
       /// <param name="deadline">An optional deadline for the call. The call will be cancelled if deadline is hit.</param>
       /// <param name="cancellationToken">An optional token for canceling the call.</param>
       /// <returns>The call object.</returns>
-      public virtual grpc::AsyncUnaryCall<global::Google.Cloud.Container.V1.Operation> RollbackNodePoolUpgradeAsync(global::Google.Cloud.Container.V1.RollbackNodePoolUpgradeRequest request, grpc::Metadata headers = null, DateTime? deadline = null, CancellationToken cancellationToken = default(CancellationToken))
+      public virtual grpc::AsyncUnaryCall<global::Google.Cloud.Container.V1.Operation> RollbackNodePoolUpgradeAsync(global::Google.Cloud.Container.V1.RollbackNodePoolUpgradeRequest request, grpc::Metadata headers = null, global::System.DateTime? deadline = null, global::System.Threading.CancellationToken cancellationToken = default(global::System.Threading.CancellationToken))
       {
         return RollbackNodePoolUpgradeAsync(request, new grpc::CallOptions(headers, deadline, cancellationToken));
       }
@@ -1742,7 +1739,7 @@ namespace Google.Cloud.Container.V1 {
       /// <param name="deadline">An optional deadline for the call. The call will be cancelled if deadline is hit.</param>
       /// <param name="cancellationToken">An optional token for canceling the call.</param>
       /// <returns>The response received from the server.</returns>
-      public virtual global::Google.Cloud.Container.V1.Operation SetNodePoolManagement(global::Google.Cloud.Container.V1.SetNodePoolManagementRequest request, grpc::Metadata headers = null, DateTime? deadline = null, CancellationToken cancellationToken = default(CancellationToken))
+      public virtual global::Google.Cloud.Container.V1.Operation SetNodePoolManagement(global::Google.Cloud.Container.V1.SetNodePoolManagementRequest request, grpc::Metadata headers = null, global::System.DateTime? deadline = null, global::System.Threading.CancellationToken cancellationToken = default(global::System.Threading.CancellationToken))
       {
         return SetNodePoolManagement(request, new grpc::CallOptions(headers, deadline, cancellationToken));
       }
@@ -1764,7 +1761,7 @@ namespace Google.Cloud.Container.V1 {
       /// <param name="deadline">An optional deadline for the call. The call will be cancelled if deadline is hit.</param>
       /// <param name="cancellationToken">An optional token for canceling the call.</param>
       /// <returns>The call object.</returns>
-      public virtual grpc::AsyncUnaryCall<global::Google.Cloud.Container.V1.Operation> SetNodePoolManagementAsync(global::Google.Cloud.Container.V1.SetNodePoolManagementRequest request, grpc::Metadata headers = null, DateTime? deadline = null, CancellationToken cancellationToken = default(CancellationToken))
+      public virtual grpc::AsyncUnaryCall<global::Google.Cloud.Container.V1.Operation> SetNodePoolManagementAsync(global::Google.Cloud.Container.V1.SetNodePoolManagementRequest request, grpc::Metadata headers = null, global::System.DateTime? deadline = null, global::System.Threading.CancellationToken cancellationToken = default(global::System.Threading.CancellationToken))
       {
         return SetNodePoolManagementAsync(request, new grpc::CallOptions(headers, deadline, cancellationToken));
       }
@@ -1786,7 +1783,7 @@ namespace Google.Cloud.Container.V1 {
       /// <param name="deadline">An optional deadline for the call. The call will be cancelled if deadline is hit.</param>
       /// <param name="cancellationToken">An optional token for canceling the call.</param>
       /// <returns>The response received from the server.</returns>
-      public virtual global::Google.Cloud.Container.V1.Operation SetLabels(global::Google.Cloud.Container.V1.SetLabelsRequest request, grpc::Metadata headers = null, DateTime? deadline = null, CancellationToken cancellationToken = default(CancellationToken))
+      public virtual global::Google.Cloud.Container.V1.Operation SetLabels(global::Google.Cloud.Container.V1.SetLabelsRequest request, grpc::Metadata headers = null, global::System.DateTime? deadline = null, global::System.Threading.CancellationToken cancellationToken = default(global::System.Threading.CancellationToken))
       {
         return SetLabels(request, new grpc::CallOptions(headers, deadline, cancellationToken));
       }
@@ -1808,7 +1805,7 @@ namespace Google.Cloud.Container.V1 {
       /// <param name="deadline">An optional deadline for the call. The call will be cancelled if deadline is hit.</param>
       /// <param name="cancellationToken">An optional token for canceling the call.</param>
       /// <returns>The call object.</returns>
-      public virtual grpc::AsyncUnaryCall<global::Google.Cloud.Container.V1.Operation> SetLabelsAsync(global::Google.Cloud.Container.V1.SetLabelsRequest request, grpc::Metadata headers = null, DateTime? deadline = null, CancellationToken cancellationToken = default(CancellationToken))
+      public virtual grpc::AsyncUnaryCall<global::Google.Cloud.Container.V1.Operation> SetLabelsAsync(global::Google.Cloud.Container.V1.SetLabelsRequest request, grpc::Metadata headers = null, global::System.DateTime? deadline = null, global::System.Threading.CancellationToken cancellationToken = default(global::System.Threading.CancellationToken))
       {
         return SetLabelsAsync(request, new grpc::CallOptions(headers, deadline, cancellationToken));
       }
@@ -1830,7 +1827,7 @@ namespace Google.Cloud.Container.V1 {
       /// <param name="deadline">An optional deadline for the call. The call will be cancelled if deadline is hit.</param>
       /// <param name="cancellationToken">An optional token for canceling the call.</param>
       /// <returns>The response received from the server.</returns>
-      public virtual global::Google.Cloud.Container.V1.Operation SetLegacyAbac(global::Google.Cloud.Container.V1.SetLegacyAbacRequest request, grpc::Metadata headers = null, DateTime? deadline = null, CancellationToken cancellationToken = default(CancellationToken))
+      public virtual global::Google.Cloud.Container.V1.Operation SetLegacyAbac(global::Google.Cloud.Container.V1.SetLegacyAbacRequest request, grpc::Metadata headers = null, global::System.DateTime? deadline = null, global::System.Threading.CancellationToken cancellationToken = default(global::System.Threading.CancellationToken))
       {
         return SetLegacyAbac(request, new grpc::CallOptions(headers, deadline, cancellationToken));
       }
@@ -1852,7 +1849,7 @@ namespace Google.Cloud.Container.V1 {
       /// <param name="deadline">An optional deadline for the call. The call will be cancelled if deadline is hit.</param>
       /// <param name="cancellationToken">An optional token for canceling the call.</param>
       /// <returns>The call object.</returns>
-      public virtual grpc::AsyncUnaryCall<global::Google.Cloud.Container.V1.Operation> SetLegacyAbacAsync(global::Google.Cloud.Container.V1.SetLegacyAbacRequest request, grpc::Metadata headers = null, DateTime? deadline = null, CancellationToken cancellationToken = default(CancellationToken))
+      public virtual grpc::AsyncUnaryCall<global::Google.Cloud.Container.V1.Operation> SetLegacyAbacAsync(global::Google.Cloud.Container.V1.SetLegacyAbacRequest request, grpc::Metadata headers = null, global::System.DateTime? deadline = null, global::System.Threading.CancellationToken cancellationToken = default(global::System.Threading.CancellationToken))
       {
         return SetLegacyAbacAsync(request, new grpc::CallOptions(headers, deadline, cancellationToken));
       }
@@ -1874,7 +1871,7 @@ namespace Google.Cloud.Container.V1 {
       /// <param name="deadline">An optional deadline for the call. The call will be cancelled if deadline is hit.</param>
       /// <param name="cancellationToken">An optional token for canceling the call.</param>
       /// <returns>The response received from the server.</returns>
-      public virtual global::Google.Cloud.Container.V1.Operation StartIPRotation(global::Google.Cloud.Container.V1.StartIPRotationRequest request, grpc::Metadata headers = null, DateTime? deadline = null, CancellationToken cancellationToken = default(CancellationToken))
+      public virtual global::Google.Cloud.Container.V1.Operation StartIPRotation(global::Google.Cloud.Container.V1.StartIPRotationRequest request, grpc::Metadata headers = null, global::System.DateTime? deadline = null, global::System.Threading.CancellationToken cancellationToken = default(global::System.Threading.CancellationToken))
       {
         return StartIPRotation(request, new grpc::CallOptions(headers, deadline, cancellationToken));
       }
@@ -1896,7 +1893,7 @@ namespace Google.Cloud.Container.V1 {
       /// <param name="deadline">An optional deadline for the call. The call will be cancelled if deadline is hit.</param>
       /// <param name="cancellationToken">An optional token for canceling the call.</param>
       /// <returns>The call object.</returns>
-      public virtual grpc::AsyncUnaryCall<global::Google.Cloud.Container.V1.Operation> StartIPRotationAsync(global::Google.Cloud.Container.V1.StartIPRotationRequest request, grpc::Metadata headers = null, DateTime? deadline = null, CancellationToken cancellationToken = default(CancellationToken))
+      public virtual grpc::AsyncUnaryCall<global::Google.Cloud.Container.V1.Operation> StartIPRotationAsync(global::Google.Cloud.Container.V1.StartIPRotationRequest request, grpc::Metadata headers = null, global::System.DateTime? deadline = null, global::System.Threading.CancellationToken cancellationToken = default(global::System.Threading.CancellationToken))
       {
         return StartIPRotationAsync(request, new grpc::CallOptions(headers, deadline, cancellationToken));
       }
@@ -1918,7 +1915,7 @@ namespace Google.Cloud.Container.V1 {
       /// <param name="deadline">An optional deadline for the call. The call will be cancelled if deadline is hit.</param>
       /// <param name="cancellationToken">An optional token for canceling the call.</param>
       /// <returns>The response received from the server.</returns>
-      public virtual global::Google.Cloud.Container.V1.Operation CompleteIPRotation(global::Google.Cloud.Container.V1.CompleteIPRotationRequest request, grpc::Metadata headers = null, DateTime? deadline = null, CancellationToken cancellationToken = default(CancellationToken))
+      public virtual global::Google.Cloud.Container.V1.Operation CompleteIPRotation(global::Google.Cloud.Container.V1.CompleteIPRotationRequest request, grpc::Metadata headers = null, global::System.DateTime? deadline = null, global::System.Threading.CancellationToken cancellationToken = default(global::System.Threading.CancellationToken))
       {
         return CompleteIPRotation(request, new grpc::CallOptions(headers, deadline, cancellationToken));
       }
@@ -1940,7 +1937,7 @@ namespace Google.Cloud.Container.V1 {
       /// <param name="deadline">An optional deadline for the call. The call will be cancelled if deadline is hit.</param>
       /// <param name="cancellationToken">An optional token for canceling the call.</param>
       /// <returns>The call object.</returns>
-      public virtual grpc::AsyncUnaryCall<global::Google.Cloud.Container.V1.Operation> CompleteIPRotationAsync(global::Google.Cloud.Container.V1.CompleteIPRotationRequest request, grpc::Metadata headers = null, DateTime? deadline = null, CancellationToken cancellationToken = default(CancellationToken))
+      public virtual grpc::AsyncUnaryCall<global::Google.Cloud.Container.V1.Operation> CompleteIPRotationAsync(global::Google.Cloud.Container.V1.CompleteIPRotationRequest request, grpc::Metadata headers = null, global::System.DateTime? deadline = null, global::System.Threading.CancellationToken cancellationToken = default(global::System.Threading.CancellationToken))
       {
         return CompleteIPRotationAsync(request, new grpc::CallOptions(headers, deadline, cancellationToken));
       }
@@ -1962,7 +1959,7 @@ namespace Google.Cloud.Container.V1 {
       /// <param name="deadline">An optional deadline for the call. The call will be cancelled if deadline is hit.</param>
       /// <param name="cancellationToken">An optional token for canceling the call.</param>
       /// <returns>The response received from the server.</returns>
-      public virtual global::Google.Cloud.Container.V1.Operation SetNodePoolSize(global::Google.Cloud.Container.V1.SetNodePoolSizeRequest request, grpc::Metadata headers = null, DateTime? deadline = null, CancellationToken cancellationToken = default(CancellationToken))
+      public virtual global::Google.Cloud.Container.V1.Operation SetNodePoolSize(global::Google.Cloud.Container.V1.SetNodePoolSizeRequest request, grpc::Metadata headers = null, global::System.DateTime? deadline = null, global::System.Threading.CancellationToken cancellationToken = default(global::System.Threading.CancellationToken))
       {
         return SetNodePoolSize(request, new grpc::CallOptions(headers, deadline, cancellationToken));
       }
@@ -1984,7 +1981,7 @@ namespace Google.Cloud.Container.V1 {
       /// <param name="deadline">An optional deadline for the call. The call will be cancelled if deadline is hit.</param>
       /// <param name="cancellationToken">An optional token for canceling the call.</param>
       /// <returns>The call object.</returns>
-      public virtual grpc::AsyncUnaryCall<global::Google.Cloud.Container.V1.Operation> SetNodePoolSizeAsync(global::Google.Cloud.Container.V1.SetNodePoolSizeRequest request, grpc::Metadata headers = null, DateTime? deadline = null, CancellationToken cancellationToken = default(CancellationToken))
+      public virtual grpc::AsyncUnaryCall<global::Google.Cloud.Container.V1.Operation> SetNodePoolSizeAsync(global::Google.Cloud.Container.V1.SetNodePoolSizeRequest request, grpc::Metadata headers = null, global::System.DateTime? deadline = null, global::System.Threading.CancellationToken cancellationToken = default(global::System.Threading.CancellationToken))
       {
         return SetNodePoolSizeAsync(request, new grpc::CallOptions(headers, deadline, cancellationToken));
       }
@@ -2006,7 +2003,7 @@ namespace Google.Cloud.Container.V1 {
       /// <param name="deadline">An optional deadline for the call. The call will be cancelled if deadline is hit.</param>
       /// <param name="cancellationToken">An optional token for canceling the call.</param>
       /// <returns>The response received from the server.</returns>
-      public virtual global::Google.Cloud.Container.V1.Operation SetNetworkPolicy(global::Google.Cloud.Container.V1.SetNetworkPolicyRequest request, grpc::Metadata headers = null, DateTime? deadline = null, CancellationToken cancellationToken = default(CancellationToken))
+      public virtual global::Google.Cloud.Container.V1.Operation SetNetworkPolicy(global::Google.Cloud.Container.V1.SetNetworkPolicyRequest request, grpc::Metadata headers = null, global::System.DateTime? deadline = null, global::System.Threading.CancellationToken cancellationToken = default(global::System.Threading.CancellationToken))
       {
         return SetNetworkPolicy(request, new grpc::CallOptions(headers, deadline, cancellationToken));
       }
@@ -2028,7 +2025,7 @@ namespace Google.Cloud.Container.V1 {
       /// <param name="deadline">An optional deadline for the call. The call will be cancelled if deadline is hit.</param>
       /// <param name="cancellationToken">An optional token for canceling the call.</param>
       /// <returns>The call object.</returns>
-      public virtual grpc::AsyncUnaryCall<global::Google.Cloud.Container.V1.Operation> SetNetworkPolicyAsync(global::Google.Cloud.Container.V1.SetNetworkPolicyRequest request, grpc::Metadata headers = null, DateTime? deadline = null, CancellationToken cancellationToken = default(CancellationToken))
+      public virtual grpc::AsyncUnaryCall<global::Google.Cloud.Container.V1.Operation> SetNetworkPolicyAsync(global::Google.Cloud.Container.V1.SetNetworkPolicyRequest request, grpc::Metadata headers = null, global::System.DateTime? deadline = null, global::System.Threading.CancellationToken cancellationToken = default(global::System.Threading.CancellationToken))
       {
         return SetNetworkPolicyAsync(request, new grpc::CallOptions(headers, deadline, cancellationToken));
       }
@@ -2050,7 +2047,7 @@ namespace Google.Cloud.Container.V1 {
       /// <param name="deadline">An optional deadline for the call. The call will be cancelled if deadline is hit.</param>
       /// <param name="cancellationToken">An optional token for canceling the call.</param>
       /// <returns>The response received from the server.</returns>
-      public virtual global::Google.Cloud.Container.V1.Operation SetMaintenancePolicy(global::Google.Cloud.Container.V1.SetMaintenancePolicyRequest request, grpc::Metadata headers = null, DateTime? deadline = null, CancellationToken cancellationToken = default(CancellationToken))
+      public virtual global::Google.Cloud.Container.V1.Operation SetMaintenancePolicy(global::Google.Cloud.Container.V1.SetMaintenancePolicyRequest request, grpc::Metadata headers = null, global::System.DateTime? deadline = null, global::System.Threading.CancellationToken cancellationToken = default(global::System.Threading.CancellationToken))
       {
         return SetMaintenancePolicy(request, new grpc::CallOptions(headers, deadline, cancellationToken));
       }
@@ -2072,7 +2069,7 @@ namespace Google.Cloud.Container.V1 {
       /// <param name="deadline">An optional deadline for the call. The call will be cancelled if deadline is hit.</param>
       /// <param name="cancellationToken">An optional token for canceling the call.</param>
       /// <returns>The call object.</returns>
-      public virtual grpc::AsyncUnaryCall<global::Google.Cloud.Container.V1.Operation> SetMaintenancePolicyAsync(global::Google.Cloud.Container.V1.SetMaintenancePolicyRequest request, grpc::Metadata headers = null, DateTime? deadline = null, CancellationToken cancellationToken = default(CancellationToken))
+      public virtual grpc::AsyncUnaryCall<global::Google.Cloud.Container.V1.Operation> SetMaintenancePolicyAsync(global::Google.Cloud.Container.V1.SetMaintenancePolicyRequest request, grpc::Metadata headers = null, global::System.DateTime? deadline = null, global::System.Threading.CancellationToken cancellationToken = default(global::System.Threading.CancellationToken))
       {
         return SetMaintenancePolicyAsync(request, new grpc::CallOptions(headers, deadline, cancellationToken));
       }

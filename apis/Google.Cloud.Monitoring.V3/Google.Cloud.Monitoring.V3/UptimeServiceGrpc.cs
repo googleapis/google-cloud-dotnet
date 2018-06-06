@@ -20,9 +20,6 @@
 #pragma warning disable 1591
 #region Designer generated code
 
-using System;
-using System.Threading;
-using System.Threading.Tasks;
 using grpc = global::Grpc.Core;
 
 namespace Google.Cloud.Monitoring.V3 {
@@ -208,7 +205,7 @@ namespace Google.Cloud.Monitoring.V3 {
       /// <param name="deadline">An optional deadline for the call. The call will be cancelled if deadline is hit.</param>
       /// <param name="cancellationToken">An optional token for canceling the call.</param>
       /// <returns>The response received from the server.</returns>
-      public virtual global::Google.Cloud.Monitoring.V3.ListUptimeCheckConfigsResponse ListUptimeCheckConfigs(global::Google.Cloud.Monitoring.V3.ListUptimeCheckConfigsRequest request, grpc::Metadata headers = null, DateTime? deadline = null, CancellationToken cancellationToken = default(CancellationToken))
+      public virtual global::Google.Cloud.Monitoring.V3.ListUptimeCheckConfigsResponse ListUptimeCheckConfigs(global::Google.Cloud.Monitoring.V3.ListUptimeCheckConfigsRequest request, grpc::Metadata headers = null, global::System.DateTime? deadline = null, global::System.Threading.CancellationToken cancellationToken = default(global::System.Threading.CancellationToken))
       {
         return ListUptimeCheckConfigs(request, new grpc::CallOptions(headers, deadline, cancellationToken));
       }
@@ -232,7 +229,7 @@ namespace Google.Cloud.Monitoring.V3 {
       /// <param name="deadline">An optional deadline for the call. The call will be cancelled if deadline is hit.</param>
       /// <param name="cancellationToken">An optional token for canceling the call.</param>
       /// <returns>The call object.</returns>
-      public virtual grpc::AsyncUnaryCall<global::Google.Cloud.Monitoring.V3.ListUptimeCheckConfigsResponse> ListUptimeCheckConfigsAsync(global::Google.Cloud.Monitoring.V3.ListUptimeCheckConfigsRequest request, grpc::Metadata headers = null, DateTime? deadline = null, CancellationToken cancellationToken = default(CancellationToken))
+      public virtual grpc::AsyncUnaryCall<global::Google.Cloud.Monitoring.V3.ListUptimeCheckConfigsResponse> ListUptimeCheckConfigsAsync(global::Google.Cloud.Monitoring.V3.ListUptimeCheckConfigsRequest request, grpc::Metadata headers = null, global::System.DateTime? deadline = null, global::System.Threading.CancellationToken cancellationToken = default(global::System.Threading.CancellationToken))
       {
         return ListUptimeCheckConfigsAsync(request, new grpc::CallOptions(headers, deadline, cancellationToken));
       }
@@ -255,7 +252,7 @@ namespace Google.Cloud.Monitoring.V3 {
       /// <param name="deadline">An optional deadline for the call. The call will be cancelled if deadline is hit.</param>
       /// <param name="cancellationToken">An optional token for canceling the call.</param>
       /// <returns>The response received from the server.</returns>
-      public virtual global::Google.Cloud.Monitoring.V3.UptimeCheckConfig GetUptimeCheckConfig(global::Google.Cloud.Monitoring.V3.GetUptimeCheckConfigRequest request, grpc::Metadata headers = null, DateTime? deadline = null, CancellationToken cancellationToken = default(CancellationToken))
+      public virtual global::Google.Cloud.Monitoring.V3.UptimeCheckConfig GetUptimeCheckConfig(global::Google.Cloud.Monitoring.V3.GetUptimeCheckConfigRequest request, grpc::Metadata headers = null, global::System.DateTime? deadline = null, global::System.Threading.CancellationToken cancellationToken = default(global::System.Threading.CancellationToken))
       {
         return GetUptimeCheckConfig(request, new grpc::CallOptions(headers, deadline, cancellationToken));
       }
@@ -277,7 +274,7 @@ namespace Google.Cloud.Monitoring.V3 {
       /// <param name="deadline">An optional deadline for the call. The call will be cancelled if deadline is hit.</param>
       /// <param name="cancellationToken">An optional token for canceling the call.</param>
       /// <returns>The call object.</returns>
-      public virtual grpc::AsyncUnaryCall<global::Google.Cloud.Monitoring.V3.UptimeCheckConfig> GetUptimeCheckConfigAsync(global::Google.Cloud.Monitoring.V3.GetUptimeCheckConfigRequest request, grpc::Metadata headers = null, DateTime? deadline = null, CancellationToken cancellationToken = default(CancellationToken))
+      public virtual grpc::AsyncUnaryCall<global::Google.Cloud.Monitoring.V3.UptimeCheckConfig> GetUptimeCheckConfigAsync(global::Google.Cloud.Monitoring.V3.GetUptimeCheckConfigRequest request, grpc::Metadata headers = null, global::System.DateTime? deadline = null, global::System.Threading.CancellationToken cancellationToken = default(global::System.Threading.CancellationToken))
       {
         return GetUptimeCheckConfigAsync(request, new grpc::CallOptions(headers, deadline, cancellationToken));
       }
@@ -299,7 +296,7 @@ namespace Google.Cloud.Monitoring.V3 {
       /// <param name="deadline">An optional deadline for the call. The call will be cancelled if deadline is hit.</param>
       /// <param name="cancellationToken">An optional token for canceling the call.</param>
       /// <returns>The response received from the server.</returns>
-      public virtual global::Google.Cloud.Monitoring.V3.UptimeCheckConfig CreateUptimeCheckConfig(global::Google.Cloud.Monitoring.V3.CreateUptimeCheckConfigRequest request, grpc::Metadata headers = null, DateTime? deadline = null, CancellationToken cancellationToken = default(CancellationToken))
+      public virtual global::Google.Cloud.Monitoring.V3.UptimeCheckConfig CreateUptimeCheckConfig(global::Google.Cloud.Monitoring.V3.CreateUptimeCheckConfigRequest request, grpc::Metadata headers = null, global::System.DateTime? deadline = null, global::System.Threading.CancellationToken cancellationToken = default(global::System.Threading.CancellationToken))
       {
         return CreateUptimeCheckConfig(request, new grpc::CallOptions(headers, deadline, cancellationToken));
       }
@@ -321,7 +318,7 @@ namespace Google.Cloud.Monitoring.V3 {
       /// <param name="deadline">An optional deadline for the call. The call will be cancelled if deadline is hit.</param>
       /// <param name="cancellationToken">An optional token for canceling the call.</param>
       /// <returns>The call object.</returns>
-      public virtual grpc::AsyncUnaryCall<global::Google.Cloud.Monitoring.V3.UptimeCheckConfig> CreateUptimeCheckConfigAsync(global::Google.Cloud.Monitoring.V3.CreateUptimeCheckConfigRequest request, grpc::Metadata headers = null, DateTime? deadline = null, CancellationToken cancellationToken = default(CancellationToken))
+      public virtual grpc::AsyncUnaryCall<global::Google.Cloud.Monitoring.V3.UptimeCheckConfig> CreateUptimeCheckConfigAsync(global::Google.Cloud.Monitoring.V3.CreateUptimeCheckConfigRequest request, grpc::Metadata headers = null, global::System.DateTime? deadline = null, global::System.Threading.CancellationToken cancellationToken = default(global::System.Threading.CancellationToken))
       {
         return CreateUptimeCheckConfigAsync(request, new grpc::CallOptions(headers, deadline, cancellationToken));
       }
@@ -346,7 +343,7 @@ namespace Google.Cloud.Monitoring.V3 {
       /// <param name="deadline">An optional deadline for the call. The call will be cancelled if deadline is hit.</param>
       /// <param name="cancellationToken">An optional token for canceling the call.</param>
       /// <returns>The response received from the server.</returns>
-      public virtual global::Google.Cloud.Monitoring.V3.UptimeCheckConfig UpdateUptimeCheckConfig(global::Google.Cloud.Monitoring.V3.UpdateUptimeCheckConfigRequest request, grpc::Metadata headers = null, DateTime? deadline = null, CancellationToken cancellationToken = default(CancellationToken))
+      public virtual global::Google.Cloud.Monitoring.V3.UptimeCheckConfig UpdateUptimeCheckConfig(global::Google.Cloud.Monitoring.V3.UpdateUptimeCheckConfigRequest request, grpc::Metadata headers = null, global::System.DateTime? deadline = null, global::System.Threading.CancellationToken cancellationToken = default(global::System.Threading.CancellationToken))
       {
         return UpdateUptimeCheckConfig(request, new grpc::CallOptions(headers, deadline, cancellationToken));
       }
@@ -374,7 +371,7 @@ namespace Google.Cloud.Monitoring.V3 {
       /// <param name="deadline">An optional deadline for the call. The call will be cancelled if deadline is hit.</param>
       /// <param name="cancellationToken">An optional token for canceling the call.</param>
       /// <returns>The call object.</returns>
-      public virtual grpc::AsyncUnaryCall<global::Google.Cloud.Monitoring.V3.UptimeCheckConfig> UpdateUptimeCheckConfigAsync(global::Google.Cloud.Monitoring.V3.UpdateUptimeCheckConfigRequest request, grpc::Metadata headers = null, DateTime? deadline = null, CancellationToken cancellationToken = default(CancellationToken))
+      public virtual grpc::AsyncUnaryCall<global::Google.Cloud.Monitoring.V3.UptimeCheckConfig> UpdateUptimeCheckConfigAsync(global::Google.Cloud.Monitoring.V3.UpdateUptimeCheckConfigRequest request, grpc::Metadata headers = null, global::System.DateTime? deadline = null, global::System.Threading.CancellationToken cancellationToken = default(global::System.Threading.CancellationToken))
       {
         return UpdateUptimeCheckConfigAsync(request, new grpc::CallOptions(headers, deadline, cancellationToken));
       }
@@ -401,7 +398,7 @@ namespace Google.Cloud.Monitoring.V3 {
       /// <param name="deadline">An optional deadline for the call. The call will be cancelled if deadline is hit.</param>
       /// <param name="cancellationToken">An optional token for canceling the call.</param>
       /// <returns>The response received from the server.</returns>
-      public virtual global::Google.Protobuf.WellKnownTypes.Empty DeleteUptimeCheckConfig(global::Google.Cloud.Monitoring.V3.DeleteUptimeCheckConfigRequest request, grpc::Metadata headers = null, DateTime? deadline = null, CancellationToken cancellationToken = default(CancellationToken))
+      public virtual global::Google.Protobuf.WellKnownTypes.Empty DeleteUptimeCheckConfig(global::Google.Cloud.Monitoring.V3.DeleteUptimeCheckConfigRequest request, grpc::Metadata headers = null, global::System.DateTime? deadline = null, global::System.Threading.CancellationToken cancellationToken = default(global::System.Threading.CancellationToken))
       {
         return DeleteUptimeCheckConfig(request, new grpc::CallOptions(headers, deadline, cancellationToken));
       }
@@ -427,7 +424,7 @@ namespace Google.Cloud.Monitoring.V3 {
       /// <param name="deadline">An optional deadline for the call. The call will be cancelled if deadline is hit.</param>
       /// <param name="cancellationToken">An optional token for canceling the call.</param>
       /// <returns>The call object.</returns>
-      public virtual grpc::AsyncUnaryCall<global::Google.Protobuf.WellKnownTypes.Empty> DeleteUptimeCheckConfigAsync(global::Google.Cloud.Monitoring.V3.DeleteUptimeCheckConfigRequest request, grpc::Metadata headers = null, DateTime? deadline = null, CancellationToken cancellationToken = default(CancellationToken))
+      public virtual grpc::AsyncUnaryCall<global::Google.Protobuf.WellKnownTypes.Empty> DeleteUptimeCheckConfigAsync(global::Google.Cloud.Monitoring.V3.DeleteUptimeCheckConfigRequest request, grpc::Metadata headers = null, global::System.DateTime? deadline = null, global::System.Threading.CancellationToken cancellationToken = default(global::System.Threading.CancellationToken))
       {
         return DeleteUptimeCheckConfigAsync(request, new grpc::CallOptions(headers, deadline, cancellationToken));
       }
@@ -451,7 +448,7 @@ namespace Google.Cloud.Monitoring.V3 {
       /// <param name="deadline">An optional deadline for the call. The call will be cancelled if deadline is hit.</param>
       /// <param name="cancellationToken">An optional token for canceling the call.</param>
       /// <returns>The response received from the server.</returns>
-      public virtual global::Google.Cloud.Monitoring.V3.ListUptimeCheckIpsResponse ListUptimeCheckIps(global::Google.Cloud.Monitoring.V3.ListUptimeCheckIpsRequest request, grpc::Metadata headers = null, DateTime? deadline = null, CancellationToken cancellationToken = default(CancellationToken))
+      public virtual global::Google.Cloud.Monitoring.V3.ListUptimeCheckIpsResponse ListUptimeCheckIps(global::Google.Cloud.Monitoring.V3.ListUptimeCheckIpsRequest request, grpc::Metadata headers = null, global::System.DateTime? deadline = null, global::System.Threading.CancellationToken cancellationToken = default(global::System.Threading.CancellationToken))
       {
         return ListUptimeCheckIps(request, new grpc::CallOptions(headers, deadline, cancellationToken));
       }
@@ -473,7 +470,7 @@ namespace Google.Cloud.Monitoring.V3 {
       /// <param name="deadline">An optional deadline for the call. The call will be cancelled if deadline is hit.</param>
       /// <param name="cancellationToken">An optional token for canceling the call.</param>
       /// <returns>The call object.</returns>
-      public virtual grpc::AsyncUnaryCall<global::Google.Cloud.Monitoring.V3.ListUptimeCheckIpsResponse> ListUptimeCheckIpsAsync(global::Google.Cloud.Monitoring.V3.ListUptimeCheckIpsRequest request, grpc::Metadata headers = null, DateTime? deadline = null, CancellationToken cancellationToken = default(CancellationToken))
+      public virtual grpc::AsyncUnaryCall<global::Google.Cloud.Monitoring.V3.ListUptimeCheckIpsResponse> ListUptimeCheckIpsAsync(global::Google.Cloud.Monitoring.V3.ListUptimeCheckIpsRequest request, grpc::Metadata headers = null, global::System.DateTime? deadline = null, global::System.Threading.CancellationToken cancellationToken = default(global::System.Threading.CancellationToken))
       {
         return ListUptimeCheckIpsAsync(request, new grpc::CallOptions(headers, deadline, cancellationToken));
       }

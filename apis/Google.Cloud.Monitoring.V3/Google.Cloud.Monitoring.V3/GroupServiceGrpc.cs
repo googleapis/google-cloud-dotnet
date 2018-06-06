@@ -20,9 +20,6 @@
 #pragma warning disable 1591
 #region Designer generated code
 
-using System;
-using System.Threading;
-using System.Threading.Tasks;
 using grpc = global::Grpc.Core;
 
 namespace Google.Cloud.Monitoring.V3 {
@@ -206,7 +203,7 @@ namespace Google.Cloud.Monitoring.V3 {
       /// <param name="deadline">An optional deadline for the call. The call will be cancelled if deadline is hit.</param>
       /// <param name="cancellationToken">An optional token for canceling the call.</param>
       /// <returns>The response received from the server.</returns>
-      public virtual global::Google.Cloud.Monitoring.V3.ListGroupsResponse ListGroups(global::Google.Cloud.Monitoring.V3.ListGroupsRequest request, grpc::Metadata headers = null, DateTime? deadline = null, CancellationToken cancellationToken = default(CancellationToken))
+      public virtual global::Google.Cloud.Monitoring.V3.ListGroupsResponse ListGroups(global::Google.Cloud.Monitoring.V3.ListGroupsRequest request, grpc::Metadata headers = null, global::System.DateTime? deadline = null, global::System.Threading.CancellationToken cancellationToken = default(global::System.Threading.CancellationToken))
       {
         return ListGroups(request, new grpc::CallOptions(headers, deadline, cancellationToken));
       }
@@ -228,7 +225,7 @@ namespace Google.Cloud.Monitoring.V3 {
       /// <param name="deadline">An optional deadline for the call. The call will be cancelled if deadline is hit.</param>
       /// <param name="cancellationToken">An optional token for canceling the call.</param>
       /// <returns>The call object.</returns>
-      public virtual grpc::AsyncUnaryCall<global::Google.Cloud.Monitoring.V3.ListGroupsResponse> ListGroupsAsync(global::Google.Cloud.Monitoring.V3.ListGroupsRequest request, grpc::Metadata headers = null, DateTime? deadline = null, CancellationToken cancellationToken = default(CancellationToken))
+      public virtual grpc::AsyncUnaryCall<global::Google.Cloud.Monitoring.V3.ListGroupsResponse> ListGroupsAsync(global::Google.Cloud.Monitoring.V3.ListGroupsRequest request, grpc::Metadata headers = null, global::System.DateTime? deadline = null, global::System.Threading.CancellationToken cancellationToken = default(global::System.Threading.CancellationToken))
       {
         return ListGroupsAsync(request, new grpc::CallOptions(headers, deadline, cancellationToken));
       }
@@ -250,7 +247,7 @@ namespace Google.Cloud.Monitoring.V3 {
       /// <param name="deadline">An optional deadline for the call. The call will be cancelled if deadline is hit.</param>
       /// <param name="cancellationToken">An optional token for canceling the call.</param>
       /// <returns>The response received from the server.</returns>
-      public virtual global::Google.Cloud.Monitoring.V3.Group GetGroup(global::Google.Cloud.Monitoring.V3.GetGroupRequest request, grpc::Metadata headers = null, DateTime? deadline = null, CancellationToken cancellationToken = default(CancellationToken))
+      public virtual global::Google.Cloud.Monitoring.V3.Group GetGroup(global::Google.Cloud.Monitoring.V3.GetGroupRequest request, grpc::Metadata headers = null, global::System.DateTime? deadline = null, global::System.Threading.CancellationToken cancellationToken = default(global::System.Threading.CancellationToken))
       {
         return GetGroup(request, new grpc::CallOptions(headers, deadline, cancellationToken));
       }
@@ -272,7 +269,7 @@ namespace Google.Cloud.Monitoring.V3 {
       /// <param name="deadline">An optional deadline for the call. The call will be cancelled if deadline is hit.</param>
       /// <param name="cancellationToken">An optional token for canceling the call.</param>
       /// <returns>The call object.</returns>
-      public virtual grpc::AsyncUnaryCall<global::Google.Cloud.Monitoring.V3.Group> GetGroupAsync(global::Google.Cloud.Monitoring.V3.GetGroupRequest request, grpc::Metadata headers = null, DateTime? deadline = null, CancellationToken cancellationToken = default(CancellationToken))
+      public virtual grpc::AsyncUnaryCall<global::Google.Cloud.Monitoring.V3.Group> GetGroupAsync(global::Google.Cloud.Monitoring.V3.GetGroupRequest request, grpc::Metadata headers = null, global::System.DateTime? deadline = null, global::System.Threading.CancellationToken cancellationToken = default(global::System.Threading.CancellationToken))
       {
         return GetGroupAsync(request, new grpc::CallOptions(headers, deadline, cancellationToken));
       }
@@ -294,7 +291,7 @@ namespace Google.Cloud.Monitoring.V3 {
       /// <param name="deadline">An optional deadline for the call. The call will be cancelled if deadline is hit.</param>
       /// <param name="cancellationToken">An optional token for canceling the call.</param>
       /// <returns>The response received from the server.</returns>
-      public virtual global::Google.Cloud.Monitoring.V3.Group CreateGroup(global::Google.Cloud.Monitoring.V3.CreateGroupRequest request, grpc::Metadata headers = null, DateTime? deadline = null, CancellationToken cancellationToken = default(CancellationToken))
+      public virtual global::Google.Cloud.Monitoring.V3.Group CreateGroup(global::Google.Cloud.Monitoring.V3.CreateGroupRequest request, grpc::Metadata headers = null, global::System.DateTime? deadline = null, global::System.Threading.CancellationToken cancellationToken = default(global::System.Threading.CancellationToken))
       {
         return CreateGroup(request, new grpc::CallOptions(headers, deadline, cancellationToken));
       }
@@ -316,7 +313,7 @@ namespace Google.Cloud.Monitoring.V3 {
       /// <param name="deadline">An optional deadline for the call. The call will be cancelled if deadline is hit.</param>
       /// <param name="cancellationToken">An optional token for canceling the call.</param>
       /// <returns>The call object.</returns>
-      public virtual grpc::AsyncUnaryCall<global::Google.Cloud.Monitoring.V3.Group> CreateGroupAsync(global::Google.Cloud.Monitoring.V3.CreateGroupRequest request, grpc::Metadata headers = null, DateTime? deadline = null, CancellationToken cancellationToken = default(CancellationToken))
+      public virtual grpc::AsyncUnaryCall<global::Google.Cloud.Monitoring.V3.Group> CreateGroupAsync(global::Google.Cloud.Monitoring.V3.CreateGroupRequest request, grpc::Metadata headers = null, global::System.DateTime? deadline = null, global::System.Threading.CancellationToken cancellationToken = default(global::System.Threading.CancellationToken))
       {
         return CreateGroupAsync(request, new grpc::CallOptions(headers, deadline, cancellationToken));
       }
@@ -339,7 +336,7 @@ namespace Google.Cloud.Monitoring.V3 {
       /// <param name="deadline">An optional deadline for the call. The call will be cancelled if deadline is hit.</param>
       /// <param name="cancellationToken">An optional token for canceling the call.</param>
       /// <returns>The response received from the server.</returns>
-      public virtual global::Google.Cloud.Monitoring.V3.Group UpdateGroup(global::Google.Cloud.Monitoring.V3.UpdateGroupRequest request, grpc::Metadata headers = null, DateTime? deadline = null, CancellationToken cancellationToken = default(CancellationToken))
+      public virtual global::Google.Cloud.Monitoring.V3.Group UpdateGroup(global::Google.Cloud.Monitoring.V3.UpdateGroupRequest request, grpc::Metadata headers = null, global::System.DateTime? deadline = null, global::System.Threading.CancellationToken cancellationToken = default(global::System.Threading.CancellationToken))
       {
         return UpdateGroup(request, new grpc::CallOptions(headers, deadline, cancellationToken));
       }
@@ -363,7 +360,7 @@ namespace Google.Cloud.Monitoring.V3 {
       /// <param name="deadline">An optional deadline for the call. The call will be cancelled if deadline is hit.</param>
       /// <param name="cancellationToken">An optional token for canceling the call.</param>
       /// <returns>The call object.</returns>
-      public virtual grpc::AsyncUnaryCall<global::Google.Cloud.Monitoring.V3.Group> UpdateGroupAsync(global::Google.Cloud.Monitoring.V3.UpdateGroupRequest request, grpc::Metadata headers = null, DateTime? deadline = null, CancellationToken cancellationToken = default(CancellationToken))
+      public virtual grpc::AsyncUnaryCall<global::Google.Cloud.Monitoring.V3.Group> UpdateGroupAsync(global::Google.Cloud.Monitoring.V3.UpdateGroupRequest request, grpc::Metadata headers = null, global::System.DateTime? deadline = null, global::System.Threading.CancellationToken cancellationToken = default(global::System.Threading.CancellationToken))
       {
         return UpdateGroupAsync(request, new grpc::CallOptions(headers, deadline, cancellationToken));
       }
@@ -386,7 +383,7 @@ namespace Google.Cloud.Monitoring.V3 {
       /// <param name="deadline">An optional deadline for the call. The call will be cancelled if deadline is hit.</param>
       /// <param name="cancellationToken">An optional token for canceling the call.</param>
       /// <returns>The response received from the server.</returns>
-      public virtual global::Google.Protobuf.WellKnownTypes.Empty DeleteGroup(global::Google.Cloud.Monitoring.V3.DeleteGroupRequest request, grpc::Metadata headers = null, DateTime? deadline = null, CancellationToken cancellationToken = default(CancellationToken))
+      public virtual global::Google.Protobuf.WellKnownTypes.Empty DeleteGroup(global::Google.Cloud.Monitoring.V3.DeleteGroupRequest request, grpc::Metadata headers = null, global::System.DateTime? deadline = null, global::System.Threading.CancellationToken cancellationToken = default(global::System.Threading.CancellationToken))
       {
         return DeleteGroup(request, new grpc::CallOptions(headers, deadline, cancellationToken));
       }
@@ -408,7 +405,7 @@ namespace Google.Cloud.Monitoring.V3 {
       /// <param name="deadline">An optional deadline for the call. The call will be cancelled if deadline is hit.</param>
       /// <param name="cancellationToken">An optional token for canceling the call.</param>
       /// <returns>The call object.</returns>
-      public virtual grpc::AsyncUnaryCall<global::Google.Protobuf.WellKnownTypes.Empty> DeleteGroupAsync(global::Google.Cloud.Monitoring.V3.DeleteGroupRequest request, grpc::Metadata headers = null, DateTime? deadline = null, CancellationToken cancellationToken = default(CancellationToken))
+      public virtual grpc::AsyncUnaryCall<global::Google.Protobuf.WellKnownTypes.Empty> DeleteGroupAsync(global::Google.Cloud.Monitoring.V3.DeleteGroupRequest request, grpc::Metadata headers = null, global::System.DateTime? deadline = null, global::System.Threading.CancellationToken cancellationToken = default(global::System.Threading.CancellationToken))
       {
         return DeleteGroupAsync(request, new grpc::CallOptions(headers, deadline, cancellationToken));
       }
@@ -430,7 +427,7 @@ namespace Google.Cloud.Monitoring.V3 {
       /// <param name="deadline">An optional deadline for the call. The call will be cancelled if deadline is hit.</param>
       /// <param name="cancellationToken">An optional token for canceling the call.</param>
       /// <returns>The response received from the server.</returns>
-      public virtual global::Google.Cloud.Monitoring.V3.ListGroupMembersResponse ListGroupMembers(global::Google.Cloud.Monitoring.V3.ListGroupMembersRequest request, grpc::Metadata headers = null, DateTime? deadline = null, CancellationToken cancellationToken = default(CancellationToken))
+      public virtual global::Google.Cloud.Monitoring.V3.ListGroupMembersResponse ListGroupMembers(global::Google.Cloud.Monitoring.V3.ListGroupMembersRequest request, grpc::Metadata headers = null, global::System.DateTime? deadline = null, global::System.Threading.CancellationToken cancellationToken = default(global::System.Threading.CancellationToken))
       {
         return ListGroupMembers(request, new grpc::CallOptions(headers, deadline, cancellationToken));
       }
@@ -452,7 +449,7 @@ namespace Google.Cloud.Monitoring.V3 {
       /// <param name="deadline">An optional deadline for the call. The call will be cancelled if deadline is hit.</param>
       /// <param name="cancellationToken">An optional token for canceling the call.</param>
       /// <returns>The call object.</returns>
-      public virtual grpc::AsyncUnaryCall<global::Google.Cloud.Monitoring.V3.ListGroupMembersResponse> ListGroupMembersAsync(global::Google.Cloud.Monitoring.V3.ListGroupMembersRequest request, grpc::Metadata headers = null, DateTime? deadline = null, CancellationToken cancellationToken = default(CancellationToken))
+      public virtual grpc::AsyncUnaryCall<global::Google.Cloud.Monitoring.V3.ListGroupMembersResponse> ListGroupMembersAsync(global::Google.Cloud.Monitoring.V3.ListGroupMembersRequest request, grpc::Metadata headers = null, global::System.DateTime? deadline = null, global::System.Threading.CancellationToken cancellationToken = default(global::System.Threading.CancellationToken))
       {
         return ListGroupMembersAsync(request, new grpc::CallOptions(headers, deadline, cancellationToken));
       }

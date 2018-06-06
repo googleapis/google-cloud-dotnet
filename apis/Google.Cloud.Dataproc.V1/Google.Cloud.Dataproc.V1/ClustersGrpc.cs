@@ -20,9 +20,6 @@
 #pragma warning disable 1591
 #region Designer generated code
 
-using System;
-using System.Threading;
-using System.Threading.Tasks;
 using grpc = global::Grpc.Core;
 
 namespace Google.Cloud.Dataproc.V1 {
@@ -196,7 +193,7 @@ namespace Google.Cloud.Dataproc.V1 {
       /// <param name="deadline">An optional deadline for the call. The call will be cancelled if deadline is hit.</param>
       /// <param name="cancellationToken">An optional token for canceling the call.</param>
       /// <returns>The response received from the server.</returns>
-      public virtual global::Google.LongRunning.Operation CreateCluster(global::Google.Cloud.Dataproc.V1.CreateClusterRequest request, grpc::Metadata headers = null, DateTime? deadline = null, CancellationToken cancellationToken = default(CancellationToken))
+      public virtual global::Google.LongRunning.Operation CreateCluster(global::Google.Cloud.Dataproc.V1.CreateClusterRequest request, grpc::Metadata headers = null, global::System.DateTime? deadline = null, global::System.Threading.CancellationToken cancellationToken = default(global::System.Threading.CancellationToken))
       {
         return CreateCluster(request, new grpc::CallOptions(headers, deadline, cancellationToken));
       }
@@ -218,7 +215,7 @@ namespace Google.Cloud.Dataproc.V1 {
       /// <param name="deadline">An optional deadline for the call. The call will be cancelled if deadline is hit.</param>
       /// <param name="cancellationToken">An optional token for canceling the call.</param>
       /// <returns>The call object.</returns>
-      public virtual grpc::AsyncUnaryCall<global::Google.LongRunning.Operation> CreateClusterAsync(global::Google.Cloud.Dataproc.V1.CreateClusterRequest request, grpc::Metadata headers = null, DateTime? deadline = null, CancellationToken cancellationToken = default(CancellationToken))
+      public virtual grpc::AsyncUnaryCall<global::Google.LongRunning.Operation> CreateClusterAsync(global::Google.Cloud.Dataproc.V1.CreateClusterRequest request, grpc::Metadata headers = null, global::System.DateTime? deadline = null, global::System.Threading.CancellationToken cancellationToken = default(global::System.Threading.CancellationToken))
       {
         return CreateClusterAsync(request, new grpc::CallOptions(headers, deadline, cancellationToken));
       }
@@ -240,7 +237,7 @@ namespace Google.Cloud.Dataproc.V1 {
       /// <param name="deadline">An optional deadline for the call. The call will be cancelled if deadline is hit.</param>
       /// <param name="cancellationToken">An optional token for canceling the call.</param>
       /// <returns>The response received from the server.</returns>
-      public virtual global::Google.LongRunning.Operation UpdateCluster(global::Google.Cloud.Dataproc.V1.UpdateClusterRequest request, grpc::Metadata headers = null, DateTime? deadline = null, CancellationToken cancellationToken = default(CancellationToken))
+      public virtual global::Google.LongRunning.Operation UpdateCluster(global::Google.Cloud.Dataproc.V1.UpdateClusterRequest request, grpc::Metadata headers = null, global::System.DateTime? deadline = null, global::System.Threading.CancellationToken cancellationToken = default(global::System.Threading.CancellationToken))
       {
         return UpdateCluster(request, new grpc::CallOptions(headers, deadline, cancellationToken));
       }
@@ -262,7 +259,7 @@ namespace Google.Cloud.Dataproc.V1 {
       /// <param name="deadline">An optional deadline for the call. The call will be cancelled if deadline is hit.</param>
       /// <param name="cancellationToken">An optional token for canceling the call.</param>
       /// <returns>The call object.</returns>
-      public virtual grpc::AsyncUnaryCall<global::Google.LongRunning.Operation> UpdateClusterAsync(global::Google.Cloud.Dataproc.V1.UpdateClusterRequest request, grpc::Metadata headers = null, DateTime? deadline = null, CancellationToken cancellationToken = default(CancellationToken))
+      public virtual grpc::AsyncUnaryCall<global::Google.LongRunning.Operation> UpdateClusterAsync(global::Google.Cloud.Dataproc.V1.UpdateClusterRequest request, grpc::Metadata headers = null, global::System.DateTime? deadline = null, global::System.Threading.CancellationToken cancellationToken = default(global::System.Threading.CancellationToken))
       {
         return UpdateClusterAsync(request, new grpc::CallOptions(headers, deadline, cancellationToken));
       }
@@ -284,7 +281,7 @@ namespace Google.Cloud.Dataproc.V1 {
       /// <param name="deadline">An optional deadline for the call. The call will be cancelled if deadline is hit.</param>
       /// <param name="cancellationToken">An optional token for canceling the call.</param>
       /// <returns>The response received from the server.</returns>
-      public virtual global::Google.LongRunning.Operation DeleteCluster(global::Google.Cloud.Dataproc.V1.DeleteClusterRequest request, grpc::Metadata headers = null, DateTime? deadline = null, CancellationToken cancellationToken = default(CancellationToken))
+      public virtual global::Google.LongRunning.Operation DeleteCluster(global::Google.Cloud.Dataproc.V1.DeleteClusterRequest request, grpc::Metadata headers = null, global::System.DateTime? deadline = null, global::System.Threading.CancellationToken cancellationToken = default(global::System.Threading.CancellationToken))
       {
         return DeleteCluster(request, new grpc::CallOptions(headers, deadline, cancellationToken));
       }
@@ -306,7 +303,7 @@ namespace Google.Cloud.Dataproc.V1 {
       /// <param name="deadline">An optional deadline for the call. The call will be cancelled if deadline is hit.</param>
       /// <param name="cancellationToken">An optional token for canceling the call.</param>
       /// <returns>The call object.</returns>
-      public virtual grpc::AsyncUnaryCall<global::Google.LongRunning.Operation> DeleteClusterAsync(global::Google.Cloud.Dataproc.V1.DeleteClusterRequest request, grpc::Metadata headers = null, DateTime? deadline = null, CancellationToken cancellationToken = default(CancellationToken))
+      public virtual grpc::AsyncUnaryCall<global::Google.LongRunning.Operation> DeleteClusterAsync(global::Google.Cloud.Dataproc.V1.DeleteClusterRequest request, grpc::Metadata headers = null, global::System.DateTime? deadline = null, global::System.Threading.CancellationToken cancellationToken = default(global::System.Threading.CancellationToken))
       {
         return DeleteClusterAsync(request, new grpc::CallOptions(headers, deadline, cancellationToken));
       }
@@ -328,7 +325,7 @@ namespace Google.Cloud.Dataproc.V1 {
       /// <param name="deadline">An optional deadline for the call. The call will be cancelled if deadline is hit.</param>
       /// <param name="cancellationToken">An optional token for canceling the call.</param>
       /// <returns>The response received from the server.</returns>
-      public virtual global::Google.Cloud.Dataproc.V1.Cluster GetCluster(global::Google.Cloud.Dataproc.V1.GetClusterRequest request, grpc::Metadata headers = null, DateTime? deadline = null, CancellationToken cancellationToken = default(CancellationToken))
+      public virtual global::Google.Cloud.Dataproc.V1.Cluster GetCluster(global::Google.Cloud.Dataproc.V1.GetClusterRequest request, grpc::Metadata headers = null, global::System.DateTime? deadline = null, global::System.Threading.CancellationToken cancellationToken = default(global::System.Threading.CancellationToken))
       {
         return GetCluster(request, new grpc::CallOptions(headers, deadline, cancellationToken));
       }
@@ -350,7 +347,7 @@ namespace Google.Cloud.Dataproc.V1 {
       /// <param name="deadline">An optional deadline for the call. The call will be cancelled if deadline is hit.</param>
       /// <param name="cancellationToken">An optional token for canceling the call.</param>
       /// <returns>The call object.</returns>
-      public virtual grpc::AsyncUnaryCall<global::Google.Cloud.Dataproc.V1.Cluster> GetClusterAsync(global::Google.Cloud.Dataproc.V1.GetClusterRequest request, grpc::Metadata headers = null, DateTime? deadline = null, CancellationToken cancellationToken = default(CancellationToken))
+      public virtual grpc::AsyncUnaryCall<global::Google.Cloud.Dataproc.V1.Cluster> GetClusterAsync(global::Google.Cloud.Dataproc.V1.GetClusterRequest request, grpc::Metadata headers = null, global::System.DateTime? deadline = null, global::System.Threading.CancellationToken cancellationToken = default(global::System.Threading.CancellationToken))
       {
         return GetClusterAsync(request, new grpc::CallOptions(headers, deadline, cancellationToken));
       }
@@ -372,7 +369,7 @@ namespace Google.Cloud.Dataproc.V1 {
       /// <param name="deadline">An optional deadline for the call. The call will be cancelled if deadline is hit.</param>
       /// <param name="cancellationToken">An optional token for canceling the call.</param>
       /// <returns>The response received from the server.</returns>
-      public virtual global::Google.Cloud.Dataproc.V1.ListClustersResponse ListClusters(global::Google.Cloud.Dataproc.V1.ListClustersRequest request, grpc::Metadata headers = null, DateTime? deadline = null, CancellationToken cancellationToken = default(CancellationToken))
+      public virtual global::Google.Cloud.Dataproc.V1.ListClustersResponse ListClusters(global::Google.Cloud.Dataproc.V1.ListClustersRequest request, grpc::Metadata headers = null, global::System.DateTime? deadline = null, global::System.Threading.CancellationToken cancellationToken = default(global::System.Threading.CancellationToken))
       {
         return ListClusters(request, new grpc::CallOptions(headers, deadline, cancellationToken));
       }
@@ -394,7 +391,7 @@ namespace Google.Cloud.Dataproc.V1 {
       /// <param name="deadline">An optional deadline for the call. The call will be cancelled if deadline is hit.</param>
       /// <param name="cancellationToken">An optional token for canceling the call.</param>
       /// <returns>The call object.</returns>
-      public virtual grpc::AsyncUnaryCall<global::Google.Cloud.Dataproc.V1.ListClustersResponse> ListClustersAsync(global::Google.Cloud.Dataproc.V1.ListClustersRequest request, grpc::Metadata headers = null, DateTime? deadline = null, CancellationToken cancellationToken = default(CancellationToken))
+      public virtual grpc::AsyncUnaryCall<global::Google.Cloud.Dataproc.V1.ListClustersResponse> ListClustersAsync(global::Google.Cloud.Dataproc.V1.ListClustersRequest request, grpc::Metadata headers = null, global::System.DateTime? deadline = null, global::System.Threading.CancellationToken cancellationToken = default(global::System.Threading.CancellationToken))
       {
         return ListClustersAsync(request, new grpc::CallOptions(headers, deadline, cancellationToken));
       }
@@ -418,7 +415,7 @@ namespace Google.Cloud.Dataproc.V1 {
       /// <param name="deadline">An optional deadline for the call. The call will be cancelled if deadline is hit.</param>
       /// <param name="cancellationToken">An optional token for canceling the call.</param>
       /// <returns>The response received from the server.</returns>
-      public virtual global::Google.LongRunning.Operation DiagnoseCluster(global::Google.Cloud.Dataproc.V1.DiagnoseClusterRequest request, grpc::Metadata headers = null, DateTime? deadline = null, CancellationToken cancellationToken = default(CancellationToken))
+      public virtual global::Google.LongRunning.Operation DiagnoseCluster(global::Google.Cloud.Dataproc.V1.DiagnoseClusterRequest request, grpc::Metadata headers = null, global::System.DateTime? deadline = null, global::System.Threading.CancellationToken cancellationToken = default(global::System.Threading.CancellationToken))
       {
         return DiagnoseCluster(request, new grpc::CallOptions(headers, deadline, cancellationToken));
       }
@@ -444,7 +441,7 @@ namespace Google.Cloud.Dataproc.V1 {
       /// <param name="deadline">An optional deadline for the call. The call will be cancelled if deadline is hit.</param>
       /// <param name="cancellationToken">An optional token for canceling the call.</param>
       /// <returns>The call object.</returns>
-      public virtual grpc::AsyncUnaryCall<global::Google.LongRunning.Operation> DiagnoseClusterAsync(global::Google.Cloud.Dataproc.V1.DiagnoseClusterRequest request, grpc::Metadata headers = null, DateTime? deadline = null, CancellationToken cancellationToken = default(CancellationToken))
+      public virtual grpc::AsyncUnaryCall<global::Google.LongRunning.Operation> DiagnoseClusterAsync(global::Google.Cloud.Dataproc.V1.DiagnoseClusterRequest request, grpc::Metadata headers = null, global::System.DateTime? deadline = null, global::System.Threading.CancellationToken cancellationToken = default(global::System.Threading.CancellationToken))
       {
         return DiagnoseClusterAsync(request, new grpc::CallOptions(headers, deadline, cancellationToken));
       }

@@ -20,9 +20,6 @@
 #pragma warning disable 1591
 #region Designer generated code
 
-using System;
-using System.Threading;
-using System.Threading.Tasks;
 using grpc = global::Grpc.Core;
 
 namespace Google.Cloud.Logging.V2 {
@@ -192,7 +189,7 @@ namespace Google.Cloud.Logging.V2 {
       /// <param name="deadline">An optional deadline for the call. The call will be cancelled if deadline is hit.</param>
       /// <param name="cancellationToken">An optional token for canceling the call.</param>
       /// <returns>The response received from the server.</returns>
-      public virtual global::Google.Protobuf.WellKnownTypes.Empty DeleteLog(global::Google.Cloud.Logging.V2.DeleteLogRequest request, grpc::Metadata headers = null, DateTime? deadline = null, CancellationToken cancellationToken = default(CancellationToken))
+      public virtual global::Google.Protobuf.WellKnownTypes.Empty DeleteLog(global::Google.Cloud.Logging.V2.DeleteLogRequest request, grpc::Metadata headers = null, global::System.DateTime? deadline = null, global::System.Threading.CancellationToken cancellationToken = default(global::System.Threading.CancellationToken))
       {
         return DeleteLog(request, new grpc::CallOptions(headers, deadline, cancellationToken));
       }
@@ -220,7 +217,7 @@ namespace Google.Cloud.Logging.V2 {
       /// <param name="deadline">An optional deadline for the call. The call will be cancelled if deadline is hit.</param>
       /// <param name="cancellationToken">An optional token for canceling the call.</param>
       /// <returns>The call object.</returns>
-      public virtual grpc::AsyncUnaryCall<global::Google.Protobuf.WellKnownTypes.Empty> DeleteLogAsync(global::Google.Cloud.Logging.V2.DeleteLogRequest request, grpc::Metadata headers = null, DateTime? deadline = null, CancellationToken cancellationToken = default(CancellationToken))
+      public virtual grpc::AsyncUnaryCall<global::Google.Protobuf.WellKnownTypes.Empty> DeleteLogAsync(global::Google.Cloud.Logging.V2.DeleteLogRequest request, grpc::Metadata headers = null, global::System.DateTime? deadline = null, global::System.Threading.CancellationToken cancellationToken = default(global::System.Threading.CancellationToken))
       {
         return DeleteLogAsync(request, new grpc::CallOptions(headers, deadline, cancellationToken));
       }
@@ -251,7 +248,7 @@ namespace Google.Cloud.Logging.V2 {
       /// <param name="deadline">An optional deadline for the call. The call will be cancelled if deadline is hit.</param>
       /// <param name="cancellationToken">An optional token for canceling the call.</param>
       /// <returns>The response received from the server.</returns>
-      public virtual global::Google.Cloud.Logging.V2.WriteLogEntriesResponse WriteLogEntries(global::Google.Cloud.Logging.V2.WriteLogEntriesRequest request, grpc::Metadata headers = null, DateTime? deadline = null, CancellationToken cancellationToken = default(CancellationToken))
+      public virtual global::Google.Cloud.Logging.V2.WriteLogEntriesResponse WriteLogEntries(global::Google.Cloud.Logging.V2.WriteLogEntriesRequest request, grpc::Metadata headers = null, global::System.DateTime? deadline = null, global::System.Threading.CancellationToken cancellationToken = default(global::System.Threading.CancellationToken))
       {
         return WriteLogEntries(request, new grpc::CallOptions(headers, deadline, cancellationToken));
       }
@@ -285,7 +282,7 @@ namespace Google.Cloud.Logging.V2 {
       /// <param name="deadline">An optional deadline for the call. The call will be cancelled if deadline is hit.</param>
       /// <param name="cancellationToken">An optional token for canceling the call.</param>
       /// <returns>The call object.</returns>
-      public virtual grpc::AsyncUnaryCall<global::Google.Cloud.Logging.V2.WriteLogEntriesResponse> WriteLogEntriesAsync(global::Google.Cloud.Logging.V2.WriteLogEntriesRequest request, grpc::Metadata headers = null, DateTime? deadline = null, CancellationToken cancellationToken = default(CancellationToken))
+      public virtual grpc::AsyncUnaryCall<global::Google.Cloud.Logging.V2.WriteLogEntriesResponse> WriteLogEntriesAsync(global::Google.Cloud.Logging.V2.WriteLogEntriesRequest request, grpc::Metadata headers = null, global::System.DateTime? deadline = null, global::System.Threading.CancellationToken cancellationToken = default(global::System.Threading.CancellationToken))
       {
         return WriteLogEntriesAsync(request, new grpc::CallOptions(headers, deadline, cancellationToken));
       }
@@ -315,7 +312,7 @@ namespace Google.Cloud.Logging.V2 {
       /// <param name="deadline">An optional deadline for the call. The call will be cancelled if deadline is hit.</param>
       /// <param name="cancellationToken">An optional token for canceling the call.</param>
       /// <returns>The response received from the server.</returns>
-      public virtual global::Google.Cloud.Logging.V2.ListLogEntriesResponse ListLogEntries(global::Google.Cloud.Logging.V2.ListLogEntriesRequest request, grpc::Metadata headers = null, DateTime? deadline = null, CancellationToken cancellationToken = default(CancellationToken))
+      public virtual global::Google.Cloud.Logging.V2.ListLogEntriesResponse ListLogEntries(global::Google.Cloud.Logging.V2.ListLogEntriesRequest request, grpc::Metadata headers = null, global::System.DateTime? deadline = null, global::System.Threading.CancellationToken cancellationToken = default(global::System.Threading.CancellationToken))
       {
         return ListLogEntries(request, new grpc::CallOptions(headers, deadline, cancellationToken));
       }
@@ -341,7 +338,7 @@ namespace Google.Cloud.Logging.V2 {
       /// <param name="deadline">An optional deadline for the call. The call will be cancelled if deadline is hit.</param>
       /// <param name="cancellationToken">An optional token for canceling the call.</param>
       /// <returns>The call object.</returns>
-      public virtual grpc::AsyncUnaryCall<global::Google.Cloud.Logging.V2.ListLogEntriesResponse> ListLogEntriesAsync(global::Google.Cloud.Logging.V2.ListLogEntriesRequest request, grpc::Metadata headers = null, DateTime? deadline = null, CancellationToken cancellationToken = default(CancellationToken))
+      public virtual grpc::AsyncUnaryCall<global::Google.Cloud.Logging.V2.ListLogEntriesResponse> ListLogEntriesAsync(global::Google.Cloud.Logging.V2.ListLogEntriesRequest request, grpc::Metadata headers = null, global::System.DateTime? deadline = null, global::System.Threading.CancellationToken cancellationToken = default(global::System.Threading.CancellationToken))
       {
         return ListLogEntriesAsync(request, new grpc::CallOptions(headers, deadline, cancellationToken));
       }
@@ -366,7 +363,7 @@ namespace Google.Cloud.Logging.V2 {
       /// <param name="deadline">An optional deadline for the call. The call will be cancelled if deadline is hit.</param>
       /// <param name="cancellationToken">An optional token for canceling the call.</param>
       /// <returns>The response received from the server.</returns>
-      public virtual global::Google.Cloud.Logging.V2.ListMonitoredResourceDescriptorsResponse ListMonitoredResourceDescriptors(global::Google.Cloud.Logging.V2.ListMonitoredResourceDescriptorsRequest request, grpc::Metadata headers = null, DateTime? deadline = null, CancellationToken cancellationToken = default(CancellationToken))
+      public virtual global::Google.Cloud.Logging.V2.ListMonitoredResourceDescriptorsResponse ListMonitoredResourceDescriptors(global::Google.Cloud.Logging.V2.ListMonitoredResourceDescriptorsRequest request, grpc::Metadata headers = null, global::System.DateTime? deadline = null, global::System.Threading.CancellationToken cancellationToken = default(global::System.Threading.CancellationToken))
       {
         return ListMonitoredResourceDescriptors(request, new grpc::CallOptions(headers, deadline, cancellationToken));
       }
@@ -390,7 +387,7 @@ namespace Google.Cloud.Logging.V2 {
       /// <param name="deadline">An optional deadline for the call. The call will be cancelled if deadline is hit.</param>
       /// <param name="cancellationToken">An optional token for canceling the call.</param>
       /// <returns>The call object.</returns>
-      public virtual grpc::AsyncUnaryCall<global::Google.Cloud.Logging.V2.ListMonitoredResourceDescriptorsResponse> ListMonitoredResourceDescriptorsAsync(global::Google.Cloud.Logging.V2.ListMonitoredResourceDescriptorsRequest request, grpc::Metadata headers = null, DateTime? deadline = null, CancellationToken cancellationToken = default(CancellationToken))
+      public virtual grpc::AsyncUnaryCall<global::Google.Cloud.Logging.V2.ListMonitoredResourceDescriptorsResponse> ListMonitoredResourceDescriptorsAsync(global::Google.Cloud.Logging.V2.ListMonitoredResourceDescriptorsRequest request, grpc::Metadata headers = null, global::System.DateTime? deadline = null, global::System.Threading.CancellationToken cancellationToken = default(global::System.Threading.CancellationToken))
       {
         return ListMonitoredResourceDescriptorsAsync(request, new grpc::CallOptions(headers, deadline, cancellationToken));
       }
@@ -414,7 +411,7 @@ namespace Google.Cloud.Logging.V2 {
       /// <param name="deadline">An optional deadline for the call. The call will be cancelled if deadline is hit.</param>
       /// <param name="cancellationToken">An optional token for canceling the call.</param>
       /// <returns>The response received from the server.</returns>
-      public virtual global::Google.Cloud.Logging.V2.ListLogsResponse ListLogs(global::Google.Cloud.Logging.V2.ListLogsRequest request, grpc::Metadata headers = null, DateTime? deadline = null, CancellationToken cancellationToken = default(CancellationToken))
+      public virtual global::Google.Cloud.Logging.V2.ListLogsResponse ListLogs(global::Google.Cloud.Logging.V2.ListLogsRequest request, grpc::Metadata headers = null, global::System.DateTime? deadline = null, global::System.Threading.CancellationToken cancellationToken = default(global::System.Threading.CancellationToken))
       {
         return ListLogs(request, new grpc::CallOptions(headers, deadline, cancellationToken));
       }
@@ -438,7 +435,7 @@ namespace Google.Cloud.Logging.V2 {
       /// <param name="deadline">An optional deadline for the call. The call will be cancelled if deadline is hit.</param>
       /// <param name="cancellationToken">An optional token for canceling the call.</param>
       /// <returns>The call object.</returns>
-      public virtual grpc::AsyncUnaryCall<global::Google.Cloud.Logging.V2.ListLogsResponse> ListLogsAsync(global::Google.Cloud.Logging.V2.ListLogsRequest request, grpc::Metadata headers = null, DateTime? deadline = null, CancellationToken cancellationToken = default(CancellationToken))
+      public virtual grpc::AsyncUnaryCall<global::Google.Cloud.Logging.V2.ListLogsResponse> ListLogsAsync(global::Google.Cloud.Logging.V2.ListLogsRequest request, grpc::Metadata headers = null, global::System.DateTime? deadline = null, global::System.Threading.CancellationToken cancellationToken = default(global::System.Threading.CancellationToken))
       {
         return ListLogsAsync(request, new grpc::CallOptions(headers, deadline, cancellationToken));
       }

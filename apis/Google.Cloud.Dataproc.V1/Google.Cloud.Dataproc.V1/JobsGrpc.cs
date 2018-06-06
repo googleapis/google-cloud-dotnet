@@ -20,9 +20,6 @@
 #pragma warning disable 1591
 #region Designer generated code
 
-using System;
-using System.Threading;
-using System.Threading.Tasks;
 using grpc = global::Grpc.Core;
 
 namespace Google.Cloud.Dataproc.V1 {
@@ -197,7 +194,7 @@ namespace Google.Cloud.Dataproc.V1 {
       /// <param name="deadline">An optional deadline for the call. The call will be cancelled if deadline is hit.</param>
       /// <param name="cancellationToken">An optional token for canceling the call.</param>
       /// <returns>The response received from the server.</returns>
-      public virtual global::Google.Cloud.Dataproc.V1.Job SubmitJob(global::Google.Cloud.Dataproc.V1.SubmitJobRequest request, grpc::Metadata headers = null, DateTime? deadline = null, CancellationToken cancellationToken = default(CancellationToken))
+      public virtual global::Google.Cloud.Dataproc.V1.Job SubmitJob(global::Google.Cloud.Dataproc.V1.SubmitJobRequest request, grpc::Metadata headers = null, global::System.DateTime? deadline = null, global::System.Threading.CancellationToken cancellationToken = default(global::System.Threading.CancellationToken))
       {
         return SubmitJob(request, new grpc::CallOptions(headers, deadline, cancellationToken));
       }
@@ -219,7 +216,7 @@ namespace Google.Cloud.Dataproc.V1 {
       /// <param name="deadline">An optional deadline for the call. The call will be cancelled if deadline is hit.</param>
       /// <param name="cancellationToken">An optional token for canceling the call.</param>
       /// <returns>The call object.</returns>
-      public virtual grpc::AsyncUnaryCall<global::Google.Cloud.Dataproc.V1.Job> SubmitJobAsync(global::Google.Cloud.Dataproc.V1.SubmitJobRequest request, grpc::Metadata headers = null, DateTime? deadline = null, CancellationToken cancellationToken = default(CancellationToken))
+      public virtual grpc::AsyncUnaryCall<global::Google.Cloud.Dataproc.V1.Job> SubmitJobAsync(global::Google.Cloud.Dataproc.V1.SubmitJobRequest request, grpc::Metadata headers = null, global::System.DateTime? deadline = null, global::System.Threading.CancellationToken cancellationToken = default(global::System.Threading.CancellationToken))
       {
         return SubmitJobAsync(request, new grpc::CallOptions(headers, deadline, cancellationToken));
       }
@@ -241,7 +238,7 @@ namespace Google.Cloud.Dataproc.V1 {
       /// <param name="deadline">An optional deadline for the call. The call will be cancelled if deadline is hit.</param>
       /// <param name="cancellationToken">An optional token for canceling the call.</param>
       /// <returns>The response received from the server.</returns>
-      public virtual global::Google.Cloud.Dataproc.V1.Job GetJob(global::Google.Cloud.Dataproc.V1.GetJobRequest request, grpc::Metadata headers = null, DateTime? deadline = null, CancellationToken cancellationToken = default(CancellationToken))
+      public virtual global::Google.Cloud.Dataproc.V1.Job GetJob(global::Google.Cloud.Dataproc.V1.GetJobRequest request, grpc::Metadata headers = null, global::System.DateTime? deadline = null, global::System.Threading.CancellationToken cancellationToken = default(global::System.Threading.CancellationToken))
       {
         return GetJob(request, new grpc::CallOptions(headers, deadline, cancellationToken));
       }
@@ -263,7 +260,7 @@ namespace Google.Cloud.Dataproc.V1 {
       /// <param name="deadline">An optional deadline for the call. The call will be cancelled if deadline is hit.</param>
       /// <param name="cancellationToken">An optional token for canceling the call.</param>
       /// <returns>The call object.</returns>
-      public virtual grpc::AsyncUnaryCall<global::Google.Cloud.Dataproc.V1.Job> GetJobAsync(global::Google.Cloud.Dataproc.V1.GetJobRequest request, grpc::Metadata headers = null, DateTime? deadline = null, CancellationToken cancellationToken = default(CancellationToken))
+      public virtual grpc::AsyncUnaryCall<global::Google.Cloud.Dataproc.V1.Job> GetJobAsync(global::Google.Cloud.Dataproc.V1.GetJobRequest request, grpc::Metadata headers = null, global::System.DateTime? deadline = null, global::System.Threading.CancellationToken cancellationToken = default(global::System.Threading.CancellationToken))
       {
         return GetJobAsync(request, new grpc::CallOptions(headers, deadline, cancellationToken));
       }
@@ -285,7 +282,7 @@ namespace Google.Cloud.Dataproc.V1 {
       /// <param name="deadline">An optional deadline for the call. The call will be cancelled if deadline is hit.</param>
       /// <param name="cancellationToken">An optional token for canceling the call.</param>
       /// <returns>The response received from the server.</returns>
-      public virtual global::Google.Cloud.Dataproc.V1.ListJobsResponse ListJobs(global::Google.Cloud.Dataproc.V1.ListJobsRequest request, grpc::Metadata headers = null, DateTime? deadline = null, CancellationToken cancellationToken = default(CancellationToken))
+      public virtual global::Google.Cloud.Dataproc.V1.ListJobsResponse ListJobs(global::Google.Cloud.Dataproc.V1.ListJobsRequest request, grpc::Metadata headers = null, global::System.DateTime? deadline = null, global::System.Threading.CancellationToken cancellationToken = default(global::System.Threading.CancellationToken))
       {
         return ListJobs(request, new grpc::CallOptions(headers, deadline, cancellationToken));
       }
@@ -307,7 +304,7 @@ namespace Google.Cloud.Dataproc.V1 {
       /// <param name="deadline">An optional deadline for the call. The call will be cancelled if deadline is hit.</param>
       /// <param name="cancellationToken">An optional token for canceling the call.</param>
       /// <returns>The call object.</returns>
-      public virtual grpc::AsyncUnaryCall<global::Google.Cloud.Dataproc.V1.ListJobsResponse> ListJobsAsync(global::Google.Cloud.Dataproc.V1.ListJobsRequest request, grpc::Metadata headers = null, DateTime? deadline = null, CancellationToken cancellationToken = default(CancellationToken))
+      public virtual grpc::AsyncUnaryCall<global::Google.Cloud.Dataproc.V1.ListJobsResponse> ListJobsAsync(global::Google.Cloud.Dataproc.V1.ListJobsRequest request, grpc::Metadata headers = null, global::System.DateTime? deadline = null, global::System.Threading.CancellationToken cancellationToken = default(global::System.Threading.CancellationToken))
       {
         return ListJobsAsync(request, new grpc::CallOptions(headers, deadline, cancellationToken));
       }
@@ -329,7 +326,7 @@ namespace Google.Cloud.Dataproc.V1 {
       /// <param name="deadline">An optional deadline for the call. The call will be cancelled if deadline is hit.</param>
       /// <param name="cancellationToken">An optional token for canceling the call.</param>
       /// <returns>The response received from the server.</returns>
-      public virtual global::Google.Cloud.Dataproc.V1.Job UpdateJob(global::Google.Cloud.Dataproc.V1.UpdateJobRequest request, grpc::Metadata headers = null, DateTime? deadline = null, CancellationToken cancellationToken = default(CancellationToken))
+      public virtual global::Google.Cloud.Dataproc.V1.Job UpdateJob(global::Google.Cloud.Dataproc.V1.UpdateJobRequest request, grpc::Metadata headers = null, global::System.DateTime? deadline = null, global::System.Threading.CancellationToken cancellationToken = default(global::System.Threading.CancellationToken))
       {
         return UpdateJob(request, new grpc::CallOptions(headers, deadline, cancellationToken));
       }
@@ -351,7 +348,7 @@ namespace Google.Cloud.Dataproc.V1 {
       /// <param name="deadline">An optional deadline for the call. The call will be cancelled if deadline is hit.</param>
       /// <param name="cancellationToken">An optional token for canceling the call.</param>
       /// <returns>The call object.</returns>
-      public virtual grpc::AsyncUnaryCall<global::Google.Cloud.Dataproc.V1.Job> UpdateJobAsync(global::Google.Cloud.Dataproc.V1.UpdateJobRequest request, grpc::Metadata headers = null, DateTime? deadline = null, CancellationToken cancellationToken = default(CancellationToken))
+      public virtual grpc::AsyncUnaryCall<global::Google.Cloud.Dataproc.V1.Job> UpdateJobAsync(global::Google.Cloud.Dataproc.V1.UpdateJobRequest request, grpc::Metadata headers = null, global::System.DateTime? deadline = null, global::System.Threading.CancellationToken cancellationToken = default(global::System.Threading.CancellationToken))
       {
         return UpdateJobAsync(request, new grpc::CallOptions(headers, deadline, cancellationToken));
       }
@@ -376,7 +373,7 @@ namespace Google.Cloud.Dataproc.V1 {
       /// <param name="deadline">An optional deadline for the call. The call will be cancelled if deadline is hit.</param>
       /// <param name="cancellationToken">An optional token for canceling the call.</param>
       /// <returns>The response received from the server.</returns>
-      public virtual global::Google.Cloud.Dataproc.V1.Job CancelJob(global::Google.Cloud.Dataproc.V1.CancelJobRequest request, grpc::Metadata headers = null, DateTime? deadline = null, CancellationToken cancellationToken = default(CancellationToken))
+      public virtual global::Google.Cloud.Dataproc.V1.Job CancelJob(global::Google.Cloud.Dataproc.V1.CancelJobRequest request, grpc::Metadata headers = null, global::System.DateTime? deadline = null, global::System.Threading.CancellationToken cancellationToken = default(global::System.Threading.CancellationToken))
       {
         return CancelJob(request, new grpc::CallOptions(headers, deadline, cancellationToken));
       }
@@ -404,7 +401,7 @@ namespace Google.Cloud.Dataproc.V1 {
       /// <param name="deadline">An optional deadline for the call. The call will be cancelled if deadline is hit.</param>
       /// <param name="cancellationToken">An optional token for canceling the call.</param>
       /// <returns>The call object.</returns>
-      public virtual grpc::AsyncUnaryCall<global::Google.Cloud.Dataproc.V1.Job> CancelJobAsync(global::Google.Cloud.Dataproc.V1.CancelJobRequest request, grpc::Metadata headers = null, DateTime? deadline = null, CancellationToken cancellationToken = default(CancellationToken))
+      public virtual grpc::AsyncUnaryCall<global::Google.Cloud.Dataproc.V1.Job> CancelJobAsync(global::Google.Cloud.Dataproc.V1.CancelJobRequest request, grpc::Metadata headers = null, global::System.DateTime? deadline = null, global::System.Threading.CancellationToken cancellationToken = default(global::System.Threading.CancellationToken))
       {
         return CancelJobAsync(request, new grpc::CallOptions(headers, deadline, cancellationToken));
       }
@@ -430,7 +427,7 @@ namespace Google.Cloud.Dataproc.V1 {
       /// <param name="deadline">An optional deadline for the call. The call will be cancelled if deadline is hit.</param>
       /// <param name="cancellationToken">An optional token for canceling the call.</param>
       /// <returns>The response received from the server.</returns>
-      public virtual global::Google.Protobuf.WellKnownTypes.Empty DeleteJob(global::Google.Cloud.Dataproc.V1.DeleteJobRequest request, grpc::Metadata headers = null, DateTime? deadline = null, CancellationToken cancellationToken = default(CancellationToken))
+      public virtual global::Google.Protobuf.WellKnownTypes.Empty DeleteJob(global::Google.Cloud.Dataproc.V1.DeleteJobRequest request, grpc::Metadata headers = null, global::System.DateTime? deadline = null, global::System.Threading.CancellationToken cancellationToken = default(global::System.Threading.CancellationToken))
       {
         return DeleteJob(request, new grpc::CallOptions(headers, deadline, cancellationToken));
       }
@@ -454,7 +451,7 @@ namespace Google.Cloud.Dataproc.V1 {
       /// <param name="deadline">An optional deadline for the call. The call will be cancelled if deadline is hit.</param>
       /// <param name="cancellationToken">An optional token for canceling the call.</param>
       /// <returns>The call object.</returns>
-      public virtual grpc::AsyncUnaryCall<global::Google.Protobuf.WellKnownTypes.Empty> DeleteJobAsync(global::Google.Cloud.Dataproc.V1.DeleteJobRequest request, grpc::Metadata headers = null, DateTime? deadline = null, CancellationToken cancellationToken = default(CancellationToken))
+      public virtual grpc::AsyncUnaryCall<global::Google.Protobuf.WellKnownTypes.Empty> DeleteJobAsync(global::Google.Cloud.Dataproc.V1.DeleteJobRequest request, grpc::Metadata headers = null, global::System.DateTime? deadline = null, global::System.Threading.CancellationToken cancellationToken = default(global::System.Threading.CancellationToken))
       {
         return DeleteJobAsync(request, new grpc::CallOptions(headers, deadline, cancellationToken));
       }

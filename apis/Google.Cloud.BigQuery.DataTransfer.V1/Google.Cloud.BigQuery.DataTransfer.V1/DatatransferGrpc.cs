@@ -20,9 +20,6 @@
 #pragma warning disable 1591
 #region Designer generated code
 
-using System;
-using System.Threading;
-using System.Threading.Tasks;
 using grpc = global::Grpc.Core;
 
 namespace Google.Cloud.BigQuery.DataTransfer.V1 {
@@ -349,7 +346,7 @@ namespace Google.Cloud.BigQuery.DataTransfer.V1 {
       /// <param name="deadline">An optional deadline for the call. The call will be cancelled if deadline is hit.</param>
       /// <param name="cancellationToken">An optional token for canceling the call.</param>
       /// <returns>The response received from the server.</returns>
-      public virtual global::Google.Cloud.BigQuery.DataTransfer.V1.DataSource GetDataSource(global::Google.Cloud.BigQuery.DataTransfer.V1.GetDataSourceRequest request, grpc::Metadata headers = null, DateTime? deadline = null, CancellationToken cancellationToken = default(CancellationToken))
+      public virtual global::Google.Cloud.BigQuery.DataTransfer.V1.DataSource GetDataSource(global::Google.Cloud.BigQuery.DataTransfer.V1.GetDataSourceRequest request, grpc::Metadata headers = null, global::System.DateTime? deadline = null, global::System.Threading.CancellationToken cancellationToken = default(global::System.Threading.CancellationToken))
       {
         return GetDataSource(request, new grpc::CallOptions(headers, deadline, cancellationToken));
       }
@@ -373,7 +370,7 @@ namespace Google.Cloud.BigQuery.DataTransfer.V1 {
       /// <param name="deadline">An optional deadline for the call. The call will be cancelled if deadline is hit.</param>
       /// <param name="cancellationToken">An optional token for canceling the call.</param>
       /// <returns>The call object.</returns>
-      public virtual grpc::AsyncUnaryCall<global::Google.Cloud.BigQuery.DataTransfer.V1.DataSource> GetDataSourceAsync(global::Google.Cloud.BigQuery.DataTransfer.V1.GetDataSourceRequest request, grpc::Metadata headers = null, DateTime? deadline = null, CancellationToken cancellationToken = default(CancellationToken))
+      public virtual grpc::AsyncUnaryCall<global::Google.Cloud.BigQuery.DataTransfer.V1.DataSource> GetDataSourceAsync(global::Google.Cloud.BigQuery.DataTransfer.V1.GetDataSourceRequest request, grpc::Metadata headers = null, global::System.DateTime? deadline = null, global::System.Threading.CancellationToken cancellationToken = default(global::System.Threading.CancellationToken))
       {
         return GetDataSourceAsync(request, new grpc::CallOptions(headers, deadline, cancellationToken));
       }
@@ -397,7 +394,7 @@ namespace Google.Cloud.BigQuery.DataTransfer.V1 {
       /// <param name="deadline">An optional deadline for the call. The call will be cancelled if deadline is hit.</param>
       /// <param name="cancellationToken">An optional token for canceling the call.</param>
       /// <returns>The response received from the server.</returns>
-      public virtual global::Google.Cloud.BigQuery.DataTransfer.V1.ListDataSourcesResponse ListDataSources(global::Google.Cloud.BigQuery.DataTransfer.V1.ListDataSourcesRequest request, grpc::Metadata headers = null, DateTime? deadline = null, CancellationToken cancellationToken = default(CancellationToken))
+      public virtual global::Google.Cloud.BigQuery.DataTransfer.V1.ListDataSourcesResponse ListDataSources(global::Google.Cloud.BigQuery.DataTransfer.V1.ListDataSourcesRequest request, grpc::Metadata headers = null, global::System.DateTime? deadline = null, global::System.Threading.CancellationToken cancellationToken = default(global::System.Threading.CancellationToken))
       {
         return ListDataSources(request, new grpc::CallOptions(headers, deadline, cancellationToken));
       }
@@ -421,7 +418,7 @@ namespace Google.Cloud.BigQuery.DataTransfer.V1 {
       /// <param name="deadline">An optional deadline for the call. The call will be cancelled if deadline is hit.</param>
       /// <param name="cancellationToken">An optional token for canceling the call.</param>
       /// <returns>The call object.</returns>
-      public virtual grpc::AsyncUnaryCall<global::Google.Cloud.BigQuery.DataTransfer.V1.ListDataSourcesResponse> ListDataSourcesAsync(global::Google.Cloud.BigQuery.DataTransfer.V1.ListDataSourcesRequest request, grpc::Metadata headers = null, DateTime? deadline = null, CancellationToken cancellationToken = default(CancellationToken))
+      public virtual grpc::AsyncUnaryCall<global::Google.Cloud.BigQuery.DataTransfer.V1.ListDataSourcesResponse> ListDataSourcesAsync(global::Google.Cloud.BigQuery.DataTransfer.V1.ListDataSourcesRequest request, grpc::Metadata headers = null, global::System.DateTime? deadline = null, global::System.Threading.CancellationToken cancellationToken = default(global::System.Threading.CancellationToken))
       {
         return ListDataSourcesAsync(request, new grpc::CallOptions(headers, deadline, cancellationToken));
       }
@@ -444,7 +441,7 @@ namespace Google.Cloud.BigQuery.DataTransfer.V1 {
       /// <param name="deadline">An optional deadline for the call. The call will be cancelled if deadline is hit.</param>
       /// <param name="cancellationToken">An optional token for canceling the call.</param>
       /// <returns>The response received from the server.</returns>
-      public virtual global::Google.Cloud.BigQuery.DataTransfer.V1.TransferConfig CreateTransferConfig(global::Google.Cloud.BigQuery.DataTransfer.V1.CreateTransferConfigRequest request, grpc::Metadata headers = null, DateTime? deadline = null, CancellationToken cancellationToken = default(CancellationToken))
+      public virtual global::Google.Cloud.BigQuery.DataTransfer.V1.TransferConfig CreateTransferConfig(global::Google.Cloud.BigQuery.DataTransfer.V1.CreateTransferConfigRequest request, grpc::Metadata headers = null, global::System.DateTime? deadline = null, global::System.Threading.CancellationToken cancellationToken = default(global::System.Threading.CancellationToken))
       {
         return CreateTransferConfig(request, new grpc::CallOptions(headers, deadline, cancellationToken));
       }
@@ -466,7 +463,7 @@ namespace Google.Cloud.BigQuery.DataTransfer.V1 {
       /// <param name="deadline">An optional deadline for the call. The call will be cancelled if deadline is hit.</param>
       /// <param name="cancellationToken">An optional token for canceling the call.</param>
       /// <returns>The call object.</returns>
-      public virtual grpc::AsyncUnaryCall<global::Google.Cloud.BigQuery.DataTransfer.V1.TransferConfig> CreateTransferConfigAsync(global::Google.Cloud.BigQuery.DataTransfer.V1.CreateTransferConfigRequest request, grpc::Metadata headers = null, DateTime? deadline = null, CancellationToken cancellationToken = default(CancellationToken))
+      public virtual grpc::AsyncUnaryCall<global::Google.Cloud.BigQuery.DataTransfer.V1.TransferConfig> CreateTransferConfigAsync(global::Google.Cloud.BigQuery.DataTransfer.V1.CreateTransferConfigRequest request, grpc::Metadata headers = null, global::System.DateTime? deadline = null, global::System.Threading.CancellationToken cancellationToken = default(global::System.Threading.CancellationToken))
       {
         return CreateTransferConfigAsync(request, new grpc::CallOptions(headers, deadline, cancellationToken));
       }
@@ -489,7 +486,7 @@ namespace Google.Cloud.BigQuery.DataTransfer.V1 {
       /// <param name="deadline">An optional deadline for the call. The call will be cancelled if deadline is hit.</param>
       /// <param name="cancellationToken">An optional token for canceling the call.</param>
       /// <returns>The response received from the server.</returns>
-      public virtual global::Google.Cloud.BigQuery.DataTransfer.V1.TransferConfig UpdateTransferConfig(global::Google.Cloud.BigQuery.DataTransfer.V1.UpdateTransferConfigRequest request, grpc::Metadata headers = null, DateTime? deadline = null, CancellationToken cancellationToken = default(CancellationToken))
+      public virtual global::Google.Cloud.BigQuery.DataTransfer.V1.TransferConfig UpdateTransferConfig(global::Google.Cloud.BigQuery.DataTransfer.V1.UpdateTransferConfigRequest request, grpc::Metadata headers = null, global::System.DateTime? deadline = null, global::System.Threading.CancellationToken cancellationToken = default(global::System.Threading.CancellationToken))
       {
         return UpdateTransferConfig(request, new grpc::CallOptions(headers, deadline, cancellationToken));
       }
@@ -513,7 +510,7 @@ namespace Google.Cloud.BigQuery.DataTransfer.V1 {
       /// <param name="deadline">An optional deadline for the call. The call will be cancelled if deadline is hit.</param>
       /// <param name="cancellationToken">An optional token for canceling the call.</param>
       /// <returns>The call object.</returns>
-      public virtual grpc::AsyncUnaryCall<global::Google.Cloud.BigQuery.DataTransfer.V1.TransferConfig> UpdateTransferConfigAsync(global::Google.Cloud.BigQuery.DataTransfer.V1.UpdateTransferConfigRequest request, grpc::Metadata headers = null, DateTime? deadline = null, CancellationToken cancellationToken = default(CancellationToken))
+      public virtual grpc::AsyncUnaryCall<global::Google.Cloud.BigQuery.DataTransfer.V1.TransferConfig> UpdateTransferConfigAsync(global::Google.Cloud.BigQuery.DataTransfer.V1.UpdateTransferConfigRequest request, grpc::Metadata headers = null, global::System.DateTime? deadline = null, global::System.Threading.CancellationToken cancellationToken = default(global::System.Threading.CancellationToken))
       {
         return UpdateTransferConfigAsync(request, new grpc::CallOptions(headers, deadline, cancellationToken));
       }
@@ -537,7 +534,7 @@ namespace Google.Cloud.BigQuery.DataTransfer.V1 {
       /// <param name="deadline">An optional deadline for the call. The call will be cancelled if deadline is hit.</param>
       /// <param name="cancellationToken">An optional token for canceling the call.</param>
       /// <returns>The response received from the server.</returns>
-      public virtual global::Google.Protobuf.WellKnownTypes.Empty DeleteTransferConfig(global::Google.Cloud.BigQuery.DataTransfer.V1.DeleteTransferConfigRequest request, grpc::Metadata headers = null, DateTime? deadline = null, CancellationToken cancellationToken = default(CancellationToken))
+      public virtual global::Google.Protobuf.WellKnownTypes.Empty DeleteTransferConfig(global::Google.Cloud.BigQuery.DataTransfer.V1.DeleteTransferConfigRequest request, grpc::Metadata headers = null, global::System.DateTime? deadline = null, global::System.Threading.CancellationToken cancellationToken = default(global::System.Threading.CancellationToken))
       {
         return DeleteTransferConfig(request, new grpc::CallOptions(headers, deadline, cancellationToken));
       }
@@ -561,7 +558,7 @@ namespace Google.Cloud.BigQuery.DataTransfer.V1 {
       /// <param name="deadline">An optional deadline for the call. The call will be cancelled if deadline is hit.</param>
       /// <param name="cancellationToken">An optional token for canceling the call.</param>
       /// <returns>The call object.</returns>
-      public virtual grpc::AsyncUnaryCall<global::Google.Protobuf.WellKnownTypes.Empty> DeleteTransferConfigAsync(global::Google.Cloud.BigQuery.DataTransfer.V1.DeleteTransferConfigRequest request, grpc::Metadata headers = null, DateTime? deadline = null, CancellationToken cancellationToken = default(CancellationToken))
+      public virtual grpc::AsyncUnaryCall<global::Google.Protobuf.WellKnownTypes.Empty> DeleteTransferConfigAsync(global::Google.Cloud.BigQuery.DataTransfer.V1.DeleteTransferConfigRequest request, grpc::Metadata headers = null, global::System.DateTime? deadline = null, global::System.Threading.CancellationToken cancellationToken = default(global::System.Threading.CancellationToken))
       {
         return DeleteTransferConfigAsync(request, new grpc::CallOptions(headers, deadline, cancellationToken));
       }
@@ -584,7 +581,7 @@ namespace Google.Cloud.BigQuery.DataTransfer.V1 {
       /// <param name="deadline">An optional deadline for the call. The call will be cancelled if deadline is hit.</param>
       /// <param name="cancellationToken">An optional token for canceling the call.</param>
       /// <returns>The response received from the server.</returns>
-      public virtual global::Google.Cloud.BigQuery.DataTransfer.V1.TransferConfig GetTransferConfig(global::Google.Cloud.BigQuery.DataTransfer.V1.GetTransferConfigRequest request, grpc::Metadata headers = null, DateTime? deadline = null, CancellationToken cancellationToken = default(CancellationToken))
+      public virtual global::Google.Cloud.BigQuery.DataTransfer.V1.TransferConfig GetTransferConfig(global::Google.Cloud.BigQuery.DataTransfer.V1.GetTransferConfigRequest request, grpc::Metadata headers = null, global::System.DateTime? deadline = null, global::System.Threading.CancellationToken cancellationToken = default(global::System.Threading.CancellationToken))
       {
         return GetTransferConfig(request, new grpc::CallOptions(headers, deadline, cancellationToken));
       }
@@ -606,7 +603,7 @@ namespace Google.Cloud.BigQuery.DataTransfer.V1 {
       /// <param name="deadline">An optional deadline for the call. The call will be cancelled if deadline is hit.</param>
       /// <param name="cancellationToken">An optional token for canceling the call.</param>
       /// <returns>The call object.</returns>
-      public virtual grpc::AsyncUnaryCall<global::Google.Cloud.BigQuery.DataTransfer.V1.TransferConfig> GetTransferConfigAsync(global::Google.Cloud.BigQuery.DataTransfer.V1.GetTransferConfigRequest request, grpc::Metadata headers = null, DateTime? deadline = null, CancellationToken cancellationToken = default(CancellationToken))
+      public virtual grpc::AsyncUnaryCall<global::Google.Cloud.BigQuery.DataTransfer.V1.TransferConfig> GetTransferConfigAsync(global::Google.Cloud.BigQuery.DataTransfer.V1.GetTransferConfigRequest request, grpc::Metadata headers = null, global::System.DateTime? deadline = null, global::System.Threading.CancellationToken cancellationToken = default(global::System.Threading.CancellationToken))
       {
         return GetTransferConfigAsync(request, new grpc::CallOptions(headers, deadline, cancellationToken));
       }
@@ -628,7 +625,7 @@ namespace Google.Cloud.BigQuery.DataTransfer.V1 {
       /// <param name="deadline">An optional deadline for the call. The call will be cancelled if deadline is hit.</param>
       /// <param name="cancellationToken">An optional token for canceling the call.</param>
       /// <returns>The response received from the server.</returns>
-      public virtual global::Google.Cloud.BigQuery.DataTransfer.V1.ListTransferConfigsResponse ListTransferConfigs(global::Google.Cloud.BigQuery.DataTransfer.V1.ListTransferConfigsRequest request, grpc::Metadata headers = null, DateTime? deadline = null, CancellationToken cancellationToken = default(CancellationToken))
+      public virtual global::Google.Cloud.BigQuery.DataTransfer.V1.ListTransferConfigsResponse ListTransferConfigs(global::Google.Cloud.BigQuery.DataTransfer.V1.ListTransferConfigsRequest request, grpc::Metadata headers = null, global::System.DateTime? deadline = null, global::System.Threading.CancellationToken cancellationToken = default(global::System.Threading.CancellationToken))
       {
         return ListTransferConfigs(request, new grpc::CallOptions(headers, deadline, cancellationToken));
       }
@@ -650,7 +647,7 @@ namespace Google.Cloud.BigQuery.DataTransfer.V1 {
       /// <param name="deadline">An optional deadline for the call. The call will be cancelled if deadline is hit.</param>
       /// <param name="cancellationToken">An optional token for canceling the call.</param>
       /// <returns>The call object.</returns>
-      public virtual grpc::AsyncUnaryCall<global::Google.Cloud.BigQuery.DataTransfer.V1.ListTransferConfigsResponse> ListTransferConfigsAsync(global::Google.Cloud.BigQuery.DataTransfer.V1.ListTransferConfigsRequest request, grpc::Metadata headers = null, DateTime? deadline = null, CancellationToken cancellationToken = default(CancellationToken))
+      public virtual grpc::AsyncUnaryCall<global::Google.Cloud.BigQuery.DataTransfer.V1.ListTransferConfigsResponse> ListTransferConfigsAsync(global::Google.Cloud.BigQuery.DataTransfer.V1.ListTransferConfigsRequest request, grpc::Metadata headers = null, global::System.DateTime? deadline = null, global::System.Threading.CancellationToken cancellationToken = default(global::System.Threading.CancellationToken))
       {
         return ListTransferConfigsAsync(request, new grpc::CallOptions(headers, deadline, cancellationToken));
       }
@@ -675,7 +672,7 @@ namespace Google.Cloud.BigQuery.DataTransfer.V1 {
       /// <param name="deadline">An optional deadline for the call. The call will be cancelled if deadline is hit.</param>
       /// <param name="cancellationToken">An optional token for canceling the call.</param>
       /// <returns>The response received from the server.</returns>
-      public virtual global::Google.Cloud.BigQuery.DataTransfer.V1.ScheduleTransferRunsResponse ScheduleTransferRuns(global::Google.Cloud.BigQuery.DataTransfer.V1.ScheduleTransferRunsRequest request, grpc::Metadata headers = null, DateTime? deadline = null, CancellationToken cancellationToken = default(CancellationToken))
+      public virtual global::Google.Cloud.BigQuery.DataTransfer.V1.ScheduleTransferRunsResponse ScheduleTransferRuns(global::Google.Cloud.BigQuery.DataTransfer.V1.ScheduleTransferRunsRequest request, grpc::Metadata headers = null, global::System.DateTime? deadline = null, global::System.Threading.CancellationToken cancellationToken = default(global::System.Threading.CancellationToken))
       {
         return ScheduleTransferRuns(request, new grpc::CallOptions(headers, deadline, cancellationToken));
       }
@@ -703,7 +700,7 @@ namespace Google.Cloud.BigQuery.DataTransfer.V1 {
       /// <param name="deadline">An optional deadline for the call. The call will be cancelled if deadline is hit.</param>
       /// <param name="cancellationToken">An optional token for canceling the call.</param>
       /// <returns>The call object.</returns>
-      public virtual grpc::AsyncUnaryCall<global::Google.Cloud.BigQuery.DataTransfer.V1.ScheduleTransferRunsResponse> ScheduleTransferRunsAsync(global::Google.Cloud.BigQuery.DataTransfer.V1.ScheduleTransferRunsRequest request, grpc::Metadata headers = null, DateTime? deadline = null, CancellationToken cancellationToken = default(CancellationToken))
+      public virtual grpc::AsyncUnaryCall<global::Google.Cloud.BigQuery.DataTransfer.V1.ScheduleTransferRunsResponse> ScheduleTransferRunsAsync(global::Google.Cloud.BigQuery.DataTransfer.V1.ScheduleTransferRunsRequest request, grpc::Metadata headers = null, global::System.DateTime? deadline = null, global::System.Threading.CancellationToken cancellationToken = default(global::System.Threading.CancellationToken))
       {
         return ScheduleTransferRunsAsync(request, new grpc::CallOptions(headers, deadline, cancellationToken));
       }
@@ -728,7 +725,7 @@ namespace Google.Cloud.BigQuery.DataTransfer.V1 {
       /// <param name="deadline">An optional deadline for the call. The call will be cancelled if deadline is hit.</param>
       /// <param name="cancellationToken">An optional token for canceling the call.</param>
       /// <returns>The response received from the server.</returns>
-      public virtual global::Google.Cloud.BigQuery.DataTransfer.V1.TransferRun GetTransferRun(global::Google.Cloud.BigQuery.DataTransfer.V1.GetTransferRunRequest request, grpc::Metadata headers = null, DateTime? deadline = null, CancellationToken cancellationToken = default(CancellationToken))
+      public virtual global::Google.Cloud.BigQuery.DataTransfer.V1.TransferRun GetTransferRun(global::Google.Cloud.BigQuery.DataTransfer.V1.GetTransferRunRequest request, grpc::Metadata headers = null, global::System.DateTime? deadline = null, global::System.Threading.CancellationToken cancellationToken = default(global::System.Threading.CancellationToken))
       {
         return GetTransferRun(request, new grpc::CallOptions(headers, deadline, cancellationToken));
       }
@@ -750,7 +747,7 @@ namespace Google.Cloud.BigQuery.DataTransfer.V1 {
       /// <param name="deadline">An optional deadline for the call. The call will be cancelled if deadline is hit.</param>
       /// <param name="cancellationToken">An optional token for canceling the call.</param>
       /// <returns>The call object.</returns>
-      public virtual grpc::AsyncUnaryCall<global::Google.Cloud.BigQuery.DataTransfer.V1.TransferRun> GetTransferRunAsync(global::Google.Cloud.BigQuery.DataTransfer.V1.GetTransferRunRequest request, grpc::Metadata headers = null, DateTime? deadline = null, CancellationToken cancellationToken = default(CancellationToken))
+      public virtual grpc::AsyncUnaryCall<global::Google.Cloud.BigQuery.DataTransfer.V1.TransferRun> GetTransferRunAsync(global::Google.Cloud.BigQuery.DataTransfer.V1.GetTransferRunRequest request, grpc::Metadata headers = null, global::System.DateTime? deadline = null, global::System.Threading.CancellationToken cancellationToken = default(global::System.Threading.CancellationToken))
       {
         return GetTransferRunAsync(request, new grpc::CallOptions(headers, deadline, cancellationToken));
       }
@@ -772,7 +769,7 @@ namespace Google.Cloud.BigQuery.DataTransfer.V1 {
       /// <param name="deadline">An optional deadline for the call. The call will be cancelled if deadline is hit.</param>
       /// <param name="cancellationToken">An optional token for canceling the call.</param>
       /// <returns>The response received from the server.</returns>
-      public virtual global::Google.Protobuf.WellKnownTypes.Empty DeleteTransferRun(global::Google.Cloud.BigQuery.DataTransfer.V1.DeleteTransferRunRequest request, grpc::Metadata headers = null, DateTime? deadline = null, CancellationToken cancellationToken = default(CancellationToken))
+      public virtual global::Google.Protobuf.WellKnownTypes.Empty DeleteTransferRun(global::Google.Cloud.BigQuery.DataTransfer.V1.DeleteTransferRunRequest request, grpc::Metadata headers = null, global::System.DateTime? deadline = null, global::System.Threading.CancellationToken cancellationToken = default(global::System.Threading.CancellationToken))
       {
         return DeleteTransferRun(request, new grpc::CallOptions(headers, deadline, cancellationToken));
       }
@@ -794,7 +791,7 @@ namespace Google.Cloud.BigQuery.DataTransfer.V1 {
       /// <param name="deadline">An optional deadline for the call. The call will be cancelled if deadline is hit.</param>
       /// <param name="cancellationToken">An optional token for canceling the call.</param>
       /// <returns>The call object.</returns>
-      public virtual grpc::AsyncUnaryCall<global::Google.Protobuf.WellKnownTypes.Empty> DeleteTransferRunAsync(global::Google.Cloud.BigQuery.DataTransfer.V1.DeleteTransferRunRequest request, grpc::Metadata headers = null, DateTime? deadline = null, CancellationToken cancellationToken = default(CancellationToken))
+      public virtual grpc::AsyncUnaryCall<global::Google.Protobuf.WellKnownTypes.Empty> DeleteTransferRunAsync(global::Google.Cloud.BigQuery.DataTransfer.V1.DeleteTransferRunRequest request, grpc::Metadata headers = null, global::System.DateTime? deadline = null, global::System.Threading.CancellationToken cancellationToken = default(global::System.Threading.CancellationToken))
       {
         return DeleteTransferRunAsync(request, new grpc::CallOptions(headers, deadline, cancellationToken));
       }
@@ -816,7 +813,7 @@ namespace Google.Cloud.BigQuery.DataTransfer.V1 {
       /// <param name="deadline">An optional deadline for the call. The call will be cancelled if deadline is hit.</param>
       /// <param name="cancellationToken">An optional token for canceling the call.</param>
       /// <returns>The response received from the server.</returns>
-      public virtual global::Google.Cloud.BigQuery.DataTransfer.V1.ListTransferRunsResponse ListTransferRuns(global::Google.Cloud.BigQuery.DataTransfer.V1.ListTransferRunsRequest request, grpc::Metadata headers = null, DateTime? deadline = null, CancellationToken cancellationToken = default(CancellationToken))
+      public virtual global::Google.Cloud.BigQuery.DataTransfer.V1.ListTransferRunsResponse ListTransferRuns(global::Google.Cloud.BigQuery.DataTransfer.V1.ListTransferRunsRequest request, grpc::Metadata headers = null, global::System.DateTime? deadline = null, global::System.Threading.CancellationToken cancellationToken = default(global::System.Threading.CancellationToken))
       {
         return ListTransferRuns(request, new grpc::CallOptions(headers, deadline, cancellationToken));
       }
@@ -838,7 +835,7 @@ namespace Google.Cloud.BigQuery.DataTransfer.V1 {
       /// <param name="deadline">An optional deadline for the call. The call will be cancelled if deadline is hit.</param>
       /// <param name="cancellationToken">An optional token for canceling the call.</param>
       /// <returns>The call object.</returns>
-      public virtual grpc::AsyncUnaryCall<global::Google.Cloud.BigQuery.DataTransfer.V1.ListTransferRunsResponse> ListTransferRunsAsync(global::Google.Cloud.BigQuery.DataTransfer.V1.ListTransferRunsRequest request, grpc::Metadata headers = null, DateTime? deadline = null, CancellationToken cancellationToken = default(CancellationToken))
+      public virtual grpc::AsyncUnaryCall<global::Google.Cloud.BigQuery.DataTransfer.V1.ListTransferRunsResponse> ListTransferRunsAsync(global::Google.Cloud.BigQuery.DataTransfer.V1.ListTransferRunsRequest request, grpc::Metadata headers = null, global::System.DateTime? deadline = null, global::System.Threading.CancellationToken cancellationToken = default(global::System.Threading.CancellationToken))
       {
         return ListTransferRunsAsync(request, new grpc::CallOptions(headers, deadline, cancellationToken));
       }
@@ -860,7 +857,7 @@ namespace Google.Cloud.BigQuery.DataTransfer.V1 {
       /// <param name="deadline">An optional deadline for the call. The call will be cancelled if deadline is hit.</param>
       /// <param name="cancellationToken">An optional token for canceling the call.</param>
       /// <returns>The response received from the server.</returns>
-      public virtual global::Google.Cloud.BigQuery.DataTransfer.V1.ListTransferLogsResponse ListTransferLogs(global::Google.Cloud.BigQuery.DataTransfer.V1.ListTransferLogsRequest request, grpc::Metadata headers = null, DateTime? deadline = null, CancellationToken cancellationToken = default(CancellationToken))
+      public virtual global::Google.Cloud.BigQuery.DataTransfer.V1.ListTransferLogsResponse ListTransferLogs(global::Google.Cloud.BigQuery.DataTransfer.V1.ListTransferLogsRequest request, grpc::Metadata headers = null, global::System.DateTime? deadline = null, global::System.Threading.CancellationToken cancellationToken = default(global::System.Threading.CancellationToken))
       {
         return ListTransferLogs(request, new grpc::CallOptions(headers, deadline, cancellationToken));
       }
@@ -882,7 +879,7 @@ namespace Google.Cloud.BigQuery.DataTransfer.V1 {
       /// <param name="deadline">An optional deadline for the call. The call will be cancelled if deadline is hit.</param>
       /// <param name="cancellationToken">An optional token for canceling the call.</param>
       /// <returns>The call object.</returns>
-      public virtual grpc::AsyncUnaryCall<global::Google.Cloud.BigQuery.DataTransfer.V1.ListTransferLogsResponse> ListTransferLogsAsync(global::Google.Cloud.BigQuery.DataTransfer.V1.ListTransferLogsRequest request, grpc::Metadata headers = null, DateTime? deadline = null, CancellationToken cancellationToken = default(CancellationToken))
+      public virtual grpc::AsyncUnaryCall<global::Google.Cloud.BigQuery.DataTransfer.V1.ListTransferLogsResponse> ListTransferLogsAsync(global::Google.Cloud.BigQuery.DataTransfer.V1.ListTransferLogsRequest request, grpc::Metadata headers = null, global::System.DateTime? deadline = null, global::System.Threading.CancellationToken cancellationToken = default(global::System.Threading.CancellationToken))
       {
         return ListTransferLogsAsync(request, new grpc::CallOptions(headers, deadline, cancellationToken));
       }
@@ -909,7 +906,7 @@ namespace Google.Cloud.BigQuery.DataTransfer.V1 {
       /// <param name="deadline">An optional deadline for the call. The call will be cancelled if deadline is hit.</param>
       /// <param name="cancellationToken">An optional token for canceling the call.</param>
       /// <returns>The response received from the server.</returns>
-      public virtual global::Google.Cloud.BigQuery.DataTransfer.V1.CheckValidCredsResponse CheckValidCreds(global::Google.Cloud.BigQuery.DataTransfer.V1.CheckValidCredsRequest request, grpc::Metadata headers = null, DateTime? deadline = null, CancellationToken cancellationToken = default(CancellationToken))
+      public virtual global::Google.Cloud.BigQuery.DataTransfer.V1.CheckValidCredsResponse CheckValidCreds(global::Google.Cloud.BigQuery.DataTransfer.V1.CheckValidCredsRequest request, grpc::Metadata headers = null, global::System.DateTime? deadline = null, global::System.Threading.CancellationToken cancellationToken = default(global::System.Threading.CancellationToken))
       {
         return CheckValidCreds(request, new grpc::CallOptions(headers, deadline, cancellationToken));
       }
@@ -941,7 +938,7 @@ namespace Google.Cloud.BigQuery.DataTransfer.V1 {
       /// <param name="deadline">An optional deadline for the call. The call will be cancelled if deadline is hit.</param>
       /// <param name="cancellationToken">An optional token for canceling the call.</param>
       /// <returns>The call object.</returns>
-      public virtual grpc::AsyncUnaryCall<global::Google.Cloud.BigQuery.DataTransfer.V1.CheckValidCredsResponse> CheckValidCredsAsync(global::Google.Cloud.BigQuery.DataTransfer.V1.CheckValidCredsRequest request, grpc::Metadata headers = null, DateTime? deadline = null, CancellationToken cancellationToken = default(CancellationToken))
+      public virtual grpc::AsyncUnaryCall<global::Google.Cloud.BigQuery.DataTransfer.V1.CheckValidCredsResponse> CheckValidCredsAsync(global::Google.Cloud.BigQuery.DataTransfer.V1.CheckValidCredsRequest request, grpc::Metadata headers = null, global::System.DateTime? deadline = null, global::System.Threading.CancellationToken cancellationToken = default(global::System.Threading.CancellationToken))
       {
         return CheckValidCredsAsync(request, new grpc::CallOptions(headers, deadline, cancellationToken));
       }

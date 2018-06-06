@@ -20,9 +20,6 @@
 #pragma warning disable 1591
 #region Designer generated code
 
-using System;
-using System.Threading;
-using System.Threading.Tasks;
 using grpc = global::Grpc.Core;
 
 namespace Google.Cloud.Speech.V1 {
@@ -143,7 +140,7 @@ namespace Google.Cloud.Speech.V1 {
       /// <param name="deadline">An optional deadline for the call. The call will be cancelled if deadline is hit.</param>
       /// <param name="cancellationToken">An optional token for canceling the call.</param>
       /// <returns>The response received from the server.</returns>
-      public virtual global::Google.Cloud.Speech.V1.RecognizeResponse Recognize(global::Google.Cloud.Speech.V1.RecognizeRequest request, grpc::Metadata headers = null, DateTime? deadline = null, CancellationToken cancellationToken = default(CancellationToken))
+      public virtual global::Google.Cloud.Speech.V1.RecognizeResponse Recognize(global::Google.Cloud.Speech.V1.RecognizeRequest request, grpc::Metadata headers = null, global::System.DateTime? deadline = null, global::System.Threading.CancellationToken cancellationToken = default(global::System.Threading.CancellationToken))
       {
         return Recognize(request, new grpc::CallOptions(headers, deadline, cancellationToken));
       }
@@ -167,7 +164,7 @@ namespace Google.Cloud.Speech.V1 {
       /// <param name="deadline">An optional deadline for the call. The call will be cancelled if deadline is hit.</param>
       /// <param name="cancellationToken">An optional token for canceling the call.</param>
       /// <returns>The call object.</returns>
-      public virtual grpc::AsyncUnaryCall<global::Google.Cloud.Speech.V1.RecognizeResponse> RecognizeAsync(global::Google.Cloud.Speech.V1.RecognizeRequest request, grpc::Metadata headers = null, DateTime? deadline = null, CancellationToken cancellationToken = default(CancellationToken))
+      public virtual grpc::AsyncUnaryCall<global::Google.Cloud.Speech.V1.RecognizeResponse> RecognizeAsync(global::Google.Cloud.Speech.V1.RecognizeRequest request, grpc::Metadata headers = null, global::System.DateTime? deadline = null, global::System.Threading.CancellationToken cancellationToken = default(global::System.Threading.CancellationToken))
       {
         return RecognizeAsync(request, new grpc::CallOptions(headers, deadline, cancellationToken));
       }
@@ -193,7 +190,7 @@ namespace Google.Cloud.Speech.V1 {
       /// <param name="deadline">An optional deadline for the call. The call will be cancelled if deadline is hit.</param>
       /// <param name="cancellationToken">An optional token for canceling the call.</param>
       /// <returns>The response received from the server.</returns>
-      public virtual global::Google.LongRunning.Operation LongRunningRecognize(global::Google.Cloud.Speech.V1.LongRunningRecognizeRequest request, grpc::Metadata headers = null, DateTime? deadline = null, CancellationToken cancellationToken = default(CancellationToken))
+      public virtual global::Google.LongRunning.Operation LongRunningRecognize(global::Google.Cloud.Speech.V1.LongRunningRecognizeRequest request, grpc::Metadata headers = null, global::System.DateTime? deadline = null, global::System.Threading.CancellationToken cancellationToken = default(global::System.Threading.CancellationToken))
       {
         return LongRunningRecognize(request, new grpc::CallOptions(headers, deadline, cancellationToken));
       }
@@ -221,7 +218,7 @@ namespace Google.Cloud.Speech.V1 {
       /// <param name="deadline">An optional deadline for the call. The call will be cancelled if deadline is hit.</param>
       /// <param name="cancellationToken">An optional token for canceling the call.</param>
       /// <returns>The call object.</returns>
-      public virtual grpc::AsyncUnaryCall<global::Google.LongRunning.Operation> LongRunningRecognizeAsync(global::Google.Cloud.Speech.V1.LongRunningRecognizeRequest request, grpc::Metadata headers = null, DateTime? deadline = null, CancellationToken cancellationToken = default(CancellationToken))
+      public virtual grpc::AsyncUnaryCall<global::Google.LongRunning.Operation> LongRunningRecognizeAsync(global::Google.Cloud.Speech.V1.LongRunningRecognizeRequest request, grpc::Metadata headers = null, global::System.DateTime? deadline = null, global::System.Threading.CancellationToken cancellationToken = default(global::System.Threading.CancellationToken))
       {
         return LongRunningRecognizeAsync(request, new grpc::CallOptions(headers, deadline, cancellationToken));
       }
@@ -246,7 +243,7 @@ namespace Google.Cloud.Speech.V1 {
       /// <param name="deadline">An optional deadline for the call. The call will be cancelled if deadline is hit.</param>
       /// <param name="cancellationToken">An optional token for canceling the call.</param>
       /// <returns>The call object.</returns>
-      public virtual grpc::AsyncDuplexStreamingCall<global::Google.Cloud.Speech.V1.StreamingRecognizeRequest, global::Google.Cloud.Speech.V1.StreamingRecognizeResponse> StreamingRecognize(grpc::Metadata headers = null, DateTime? deadline = null, CancellationToken cancellationToken = default(CancellationToken))
+      public virtual grpc::AsyncDuplexStreamingCall<global::Google.Cloud.Speech.V1.StreamingRecognizeRequest, global::Google.Cloud.Speech.V1.StreamingRecognizeResponse> StreamingRecognize(grpc::Metadata headers = null, global::System.DateTime? deadline = null, global::System.Threading.CancellationToken cancellationToken = default(global::System.Threading.CancellationToken))
       {
         return StreamingRecognize(new grpc::CallOptions(headers, deadline, cancellationToken));
       }

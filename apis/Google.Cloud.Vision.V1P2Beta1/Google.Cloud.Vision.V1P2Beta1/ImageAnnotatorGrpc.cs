@@ -20,9 +20,6 @@
 #pragma warning disable 1591
 #region Designer generated code
 
-using System;
-using System.Threading;
-using System.Threading.Tasks;
 using grpc = global::Grpc.Core;
 
 namespace Google.Cloud.Vision.V1P2Beta1 {
@@ -123,7 +120,7 @@ namespace Google.Cloud.Vision.V1P2Beta1 {
       /// <param name="deadline">An optional deadline for the call. The call will be cancelled if deadline is hit.</param>
       /// <param name="cancellationToken">An optional token for canceling the call.</param>
       /// <returns>The response received from the server.</returns>
-      public virtual global::Google.Cloud.Vision.V1P2Beta1.BatchAnnotateImagesResponse BatchAnnotateImages(global::Google.Cloud.Vision.V1P2Beta1.BatchAnnotateImagesRequest request, grpc::Metadata headers = null, DateTime? deadline = null, CancellationToken cancellationToken = default(CancellationToken))
+      public virtual global::Google.Cloud.Vision.V1P2Beta1.BatchAnnotateImagesResponse BatchAnnotateImages(global::Google.Cloud.Vision.V1P2Beta1.BatchAnnotateImagesRequest request, grpc::Metadata headers = null, global::System.DateTime? deadline = null, global::System.Threading.CancellationToken cancellationToken = default(global::System.Threading.CancellationToken))
       {
         return BatchAnnotateImages(request, new grpc::CallOptions(headers, deadline, cancellationToken));
       }
@@ -145,7 +142,7 @@ namespace Google.Cloud.Vision.V1P2Beta1 {
       /// <param name="deadline">An optional deadline for the call. The call will be cancelled if deadline is hit.</param>
       /// <param name="cancellationToken">An optional token for canceling the call.</param>
       /// <returns>The call object.</returns>
-      public virtual grpc::AsyncUnaryCall<global::Google.Cloud.Vision.V1P2Beta1.BatchAnnotateImagesResponse> BatchAnnotateImagesAsync(global::Google.Cloud.Vision.V1P2Beta1.BatchAnnotateImagesRequest request, grpc::Metadata headers = null, DateTime? deadline = null, CancellationToken cancellationToken = default(CancellationToken))
+      public virtual grpc::AsyncUnaryCall<global::Google.Cloud.Vision.V1P2Beta1.BatchAnnotateImagesResponse> BatchAnnotateImagesAsync(global::Google.Cloud.Vision.V1P2Beta1.BatchAnnotateImagesRequest request, grpc::Metadata headers = null, global::System.DateTime? deadline = null, global::System.Threading.CancellationToken cancellationToken = default(global::System.Threading.CancellationToken))
       {
         return BatchAnnotateImagesAsync(request, new grpc::CallOptions(headers, deadline, cancellationToken));
       }
@@ -172,7 +169,7 @@ namespace Google.Cloud.Vision.V1P2Beta1 {
       /// <param name="deadline">An optional deadline for the call. The call will be cancelled if deadline is hit.</param>
       /// <param name="cancellationToken">An optional token for canceling the call.</param>
       /// <returns>The response received from the server.</returns>
-      public virtual global::Google.LongRunning.Operation AsyncBatchAnnotateFiles(global::Google.Cloud.Vision.V1P2Beta1.AsyncBatchAnnotateFilesRequest request, grpc::Metadata headers = null, DateTime? deadline = null, CancellationToken cancellationToken = default(CancellationToken))
+      public virtual global::Google.LongRunning.Operation AsyncBatchAnnotateFiles(global::Google.Cloud.Vision.V1P2Beta1.AsyncBatchAnnotateFilesRequest request, grpc::Metadata headers = null, global::System.DateTime? deadline = null, global::System.Threading.CancellationToken cancellationToken = default(global::System.Threading.CancellationToken))
       {
         return AsyncBatchAnnotateFiles(request, new grpc::CallOptions(headers, deadline, cancellationToken));
       }
@@ -204,7 +201,7 @@ namespace Google.Cloud.Vision.V1P2Beta1 {
       /// <param name="deadline">An optional deadline for the call. The call will be cancelled if deadline is hit.</param>
       /// <param name="cancellationToken">An optional token for canceling the call.</param>
       /// <returns>The call object.</returns>
-      public virtual grpc::AsyncUnaryCall<global::Google.LongRunning.Operation> AsyncBatchAnnotateFilesAsync(global::Google.Cloud.Vision.V1P2Beta1.AsyncBatchAnnotateFilesRequest request, grpc::Metadata headers = null, DateTime? deadline = null, CancellationToken cancellationToken = default(CancellationToken))
+      public virtual grpc::AsyncUnaryCall<global::Google.LongRunning.Operation> AsyncBatchAnnotateFilesAsync(global::Google.Cloud.Vision.V1P2Beta1.AsyncBatchAnnotateFilesRequest request, grpc::Metadata headers = null, global::System.DateTime? deadline = null, global::System.Threading.CancellationToken cancellationToken = default(global::System.Threading.CancellationToken))
       {
         return AsyncBatchAnnotateFilesAsync(request, new grpc::CallOptions(headers, deadline, cancellationToken));
       }

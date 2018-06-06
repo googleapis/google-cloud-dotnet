@@ -20,9 +20,6 @@
 #pragma warning disable 1591
 #region Designer generated code
 
-using System;
-using System.Threading;
-using System.Threading.Tasks;
 using grpc = global::Grpc.Core;
 
 namespace Google.Cloud.Dialogflow.V2 {
@@ -185,7 +182,7 @@ namespace Google.Cloud.Dialogflow.V2 {
       /// <param name="deadline">An optional deadline for the call. The call will be cancelled if deadline is hit.</param>
       /// <param name="cancellationToken">An optional token for canceling the call.</param>
       /// <returns>The response received from the server.</returns>
-      public virtual global::Google.Cloud.Dialogflow.V2.ListSessionEntityTypesResponse ListSessionEntityTypes(global::Google.Cloud.Dialogflow.V2.ListSessionEntityTypesRequest request, grpc::Metadata headers = null, DateTime? deadline = null, CancellationToken cancellationToken = default(CancellationToken))
+      public virtual global::Google.Cloud.Dialogflow.V2.ListSessionEntityTypesResponse ListSessionEntityTypes(global::Google.Cloud.Dialogflow.V2.ListSessionEntityTypesRequest request, grpc::Metadata headers = null, global::System.DateTime? deadline = null, global::System.Threading.CancellationToken cancellationToken = default(global::System.Threading.CancellationToken))
       {
         return ListSessionEntityTypes(request, new grpc::CallOptions(headers, deadline, cancellationToken));
       }
@@ -207,7 +204,7 @@ namespace Google.Cloud.Dialogflow.V2 {
       /// <param name="deadline">An optional deadline for the call. The call will be cancelled if deadline is hit.</param>
       /// <param name="cancellationToken">An optional token for canceling the call.</param>
       /// <returns>The call object.</returns>
-      public virtual grpc::AsyncUnaryCall<global::Google.Cloud.Dialogflow.V2.ListSessionEntityTypesResponse> ListSessionEntityTypesAsync(global::Google.Cloud.Dialogflow.V2.ListSessionEntityTypesRequest request, grpc::Metadata headers = null, DateTime? deadline = null, CancellationToken cancellationToken = default(CancellationToken))
+      public virtual grpc::AsyncUnaryCall<global::Google.Cloud.Dialogflow.V2.ListSessionEntityTypesResponse> ListSessionEntityTypesAsync(global::Google.Cloud.Dialogflow.V2.ListSessionEntityTypesRequest request, grpc::Metadata headers = null, global::System.DateTime? deadline = null, global::System.Threading.CancellationToken cancellationToken = default(global::System.Threading.CancellationToken))
       {
         return ListSessionEntityTypesAsync(request, new grpc::CallOptions(headers, deadline, cancellationToken));
       }
@@ -229,7 +226,7 @@ namespace Google.Cloud.Dialogflow.V2 {
       /// <param name="deadline">An optional deadline for the call. The call will be cancelled if deadline is hit.</param>
       /// <param name="cancellationToken">An optional token for canceling the call.</param>
       /// <returns>The response received from the server.</returns>
-      public virtual global::Google.Cloud.Dialogflow.V2.SessionEntityType GetSessionEntityType(global::Google.Cloud.Dialogflow.V2.GetSessionEntityTypeRequest request, grpc::Metadata headers = null, DateTime? deadline = null, CancellationToken cancellationToken = default(CancellationToken))
+      public virtual global::Google.Cloud.Dialogflow.V2.SessionEntityType GetSessionEntityType(global::Google.Cloud.Dialogflow.V2.GetSessionEntityTypeRequest request, grpc::Metadata headers = null, global::System.DateTime? deadline = null, global::System.Threading.CancellationToken cancellationToken = default(global::System.Threading.CancellationToken))
       {
         return GetSessionEntityType(request, new grpc::CallOptions(headers, deadline, cancellationToken));
       }
@@ -251,7 +248,7 @@ namespace Google.Cloud.Dialogflow.V2 {
       /// <param name="deadline">An optional deadline for the call. The call will be cancelled if deadline is hit.</param>
       /// <param name="cancellationToken">An optional token for canceling the call.</param>
       /// <returns>The call object.</returns>
-      public virtual grpc::AsyncUnaryCall<global::Google.Cloud.Dialogflow.V2.SessionEntityType> GetSessionEntityTypeAsync(global::Google.Cloud.Dialogflow.V2.GetSessionEntityTypeRequest request, grpc::Metadata headers = null, DateTime? deadline = null, CancellationToken cancellationToken = default(CancellationToken))
+      public virtual grpc::AsyncUnaryCall<global::Google.Cloud.Dialogflow.V2.SessionEntityType> GetSessionEntityTypeAsync(global::Google.Cloud.Dialogflow.V2.GetSessionEntityTypeRequest request, grpc::Metadata headers = null, global::System.DateTime? deadline = null, global::System.Threading.CancellationToken cancellationToken = default(global::System.Threading.CancellationToken))
       {
         return GetSessionEntityTypeAsync(request, new grpc::CallOptions(headers, deadline, cancellationToken));
       }
@@ -273,7 +270,7 @@ namespace Google.Cloud.Dialogflow.V2 {
       /// <param name="deadline">An optional deadline for the call. The call will be cancelled if deadline is hit.</param>
       /// <param name="cancellationToken">An optional token for canceling the call.</param>
       /// <returns>The response received from the server.</returns>
-      public virtual global::Google.Cloud.Dialogflow.V2.SessionEntityType CreateSessionEntityType(global::Google.Cloud.Dialogflow.V2.CreateSessionEntityTypeRequest request, grpc::Metadata headers = null, DateTime? deadline = null, CancellationToken cancellationToken = default(CancellationToken))
+      public virtual global::Google.Cloud.Dialogflow.V2.SessionEntityType CreateSessionEntityType(global::Google.Cloud.Dialogflow.V2.CreateSessionEntityTypeRequest request, grpc::Metadata headers = null, global::System.DateTime? deadline = null, global::System.Threading.CancellationToken cancellationToken = default(global::System.Threading.CancellationToken))
       {
         return CreateSessionEntityType(request, new grpc::CallOptions(headers, deadline, cancellationToken));
       }
@@ -295,7 +292,7 @@ namespace Google.Cloud.Dialogflow.V2 {
       /// <param name="deadline">An optional deadline for the call. The call will be cancelled if deadline is hit.</param>
       /// <param name="cancellationToken">An optional token for canceling the call.</param>
       /// <returns>The call object.</returns>
-      public virtual grpc::AsyncUnaryCall<global::Google.Cloud.Dialogflow.V2.SessionEntityType> CreateSessionEntityTypeAsync(global::Google.Cloud.Dialogflow.V2.CreateSessionEntityTypeRequest request, grpc::Metadata headers = null, DateTime? deadline = null, CancellationToken cancellationToken = default(CancellationToken))
+      public virtual grpc::AsyncUnaryCall<global::Google.Cloud.Dialogflow.V2.SessionEntityType> CreateSessionEntityTypeAsync(global::Google.Cloud.Dialogflow.V2.CreateSessionEntityTypeRequest request, grpc::Metadata headers = null, global::System.DateTime? deadline = null, global::System.Threading.CancellationToken cancellationToken = default(global::System.Threading.CancellationToken))
       {
         return CreateSessionEntityTypeAsync(request, new grpc::CallOptions(headers, deadline, cancellationToken));
       }
@@ -317,7 +314,7 @@ namespace Google.Cloud.Dialogflow.V2 {
       /// <param name="deadline">An optional deadline for the call. The call will be cancelled if deadline is hit.</param>
       /// <param name="cancellationToken">An optional token for canceling the call.</param>
       /// <returns>The response received from the server.</returns>
-      public virtual global::Google.Cloud.Dialogflow.V2.SessionEntityType UpdateSessionEntityType(global::Google.Cloud.Dialogflow.V2.UpdateSessionEntityTypeRequest request, grpc::Metadata headers = null, DateTime? deadline = null, CancellationToken cancellationToken = default(CancellationToken))
+      public virtual global::Google.Cloud.Dialogflow.V2.SessionEntityType UpdateSessionEntityType(global::Google.Cloud.Dialogflow.V2.UpdateSessionEntityTypeRequest request, grpc::Metadata headers = null, global::System.DateTime? deadline = null, global::System.Threading.CancellationToken cancellationToken = default(global::System.Threading.CancellationToken))
       {
         return UpdateSessionEntityType(request, new grpc::CallOptions(headers, deadline, cancellationToken));
       }
@@ -339,7 +336,7 @@ namespace Google.Cloud.Dialogflow.V2 {
       /// <param name="deadline">An optional deadline for the call. The call will be cancelled if deadline is hit.</param>
       /// <param name="cancellationToken">An optional token for canceling the call.</param>
       /// <returns>The call object.</returns>
-      public virtual grpc::AsyncUnaryCall<global::Google.Cloud.Dialogflow.V2.SessionEntityType> UpdateSessionEntityTypeAsync(global::Google.Cloud.Dialogflow.V2.UpdateSessionEntityTypeRequest request, grpc::Metadata headers = null, DateTime? deadline = null, CancellationToken cancellationToken = default(CancellationToken))
+      public virtual grpc::AsyncUnaryCall<global::Google.Cloud.Dialogflow.V2.SessionEntityType> UpdateSessionEntityTypeAsync(global::Google.Cloud.Dialogflow.V2.UpdateSessionEntityTypeRequest request, grpc::Metadata headers = null, global::System.DateTime? deadline = null, global::System.Threading.CancellationToken cancellationToken = default(global::System.Threading.CancellationToken))
       {
         return UpdateSessionEntityTypeAsync(request, new grpc::CallOptions(headers, deadline, cancellationToken));
       }
@@ -361,7 +358,7 @@ namespace Google.Cloud.Dialogflow.V2 {
       /// <param name="deadline">An optional deadline for the call. The call will be cancelled if deadline is hit.</param>
       /// <param name="cancellationToken">An optional token for canceling the call.</param>
       /// <returns>The response received from the server.</returns>
-      public virtual global::Google.Protobuf.WellKnownTypes.Empty DeleteSessionEntityType(global::Google.Cloud.Dialogflow.V2.DeleteSessionEntityTypeRequest request, grpc::Metadata headers = null, DateTime? deadline = null, CancellationToken cancellationToken = default(CancellationToken))
+      public virtual global::Google.Protobuf.WellKnownTypes.Empty DeleteSessionEntityType(global::Google.Cloud.Dialogflow.V2.DeleteSessionEntityTypeRequest request, grpc::Metadata headers = null, global::System.DateTime? deadline = null, global::System.Threading.CancellationToken cancellationToken = default(global::System.Threading.CancellationToken))
       {
         return DeleteSessionEntityType(request, new grpc::CallOptions(headers, deadline, cancellationToken));
       }
@@ -383,7 +380,7 @@ namespace Google.Cloud.Dialogflow.V2 {
       /// <param name="deadline">An optional deadline for the call. The call will be cancelled if deadline is hit.</param>
       /// <param name="cancellationToken">An optional token for canceling the call.</param>
       /// <returns>The call object.</returns>
-      public virtual grpc::AsyncUnaryCall<global::Google.Protobuf.WellKnownTypes.Empty> DeleteSessionEntityTypeAsync(global::Google.Cloud.Dialogflow.V2.DeleteSessionEntityTypeRequest request, grpc::Metadata headers = null, DateTime? deadline = null, CancellationToken cancellationToken = default(CancellationToken))
+      public virtual grpc::AsyncUnaryCall<global::Google.Protobuf.WellKnownTypes.Empty> DeleteSessionEntityTypeAsync(global::Google.Cloud.Dialogflow.V2.DeleteSessionEntityTypeRequest request, grpc::Metadata headers = null, global::System.DateTime? deadline = null, global::System.Threading.CancellationToken cancellationToken = default(global::System.Threading.CancellationToken))
       {
         return DeleteSessionEntityTypeAsync(request, new grpc::CallOptions(headers, deadline, cancellationToken));
       }
