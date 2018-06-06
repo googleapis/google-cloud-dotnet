@@ -1173,7 +1173,9 @@ namespace Google.Cloud.PubSub.V1
                 // This can lead to unncessarily duplicated messages.
                 if (!IsPushComplete() && _pull != null)
                 {
-                    // Write an empty message to the stream
+                    // Write an empty message to the stream.
+                    // Don't wait for this to complete, it doesn't matter if or when it completes.
+                    // This is only a best-effort attempt to reduce duplicate messages.
                     try
                     {
                         _pull.WriteAsync(new StreamingPullRequest());
