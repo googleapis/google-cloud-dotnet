@@ -211,8 +211,3 @@ dotnet run -f net461 -p apis/Google.Cloud.Bigtable.V2/Google.Cloud.Bigtable.V2.G
  apis/Google.Cloud.Bigtable.V2/Google.Cloud.Bigtable.V2/Google.Cloud.Bigtable.V2.csproj \
  BigtableServiceApiClient \
  BigtableClient
-
-# Temporary fix-up for DLP; the gRPC protoc plugin doesn't use
-# fully-qualified names everywhere in the version we're using.
-# This hack can be removed when the next version of gRPC is released.
-sed -i 's/ DateTime?/ global::System.DateTime?/g' apis/Google.Cloud.Dlp.V2/Google.Cloud.Dlp.V2/DlpGrpc.cs
