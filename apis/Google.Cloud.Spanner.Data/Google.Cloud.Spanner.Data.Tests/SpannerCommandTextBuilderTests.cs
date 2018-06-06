@@ -28,7 +28,7 @@ namespace Google.Cloud.Spanner.Data.Tests
         [InlineData("DROP DATABASE      FOO;;")]
         public void DropDatabasePositive(string ddlString)
         {
-            SpannerCommandTextBuilder builder = new SpannerCommandTextBuilder(ddlString);
+            SpannerCommandTextBuilder builder = SpannerCommandTextBuilder.FromCommandText(ddlString);
             Assert.True(builder.IsDropDatabaseCommand);
             Assert.Equal("FOO", builder.DatabaseToDrop);
 
@@ -44,7 +44,7 @@ namespace Google.Cloud.Spanner.Data.Tests
         [Fact]
         public void DropDatabase_UnrecognizedCommand()
         {
-            Assert.Throws<ArgumentException>(() => new SpannerCommandTextBuilder("DROPDATABASE FOO;"));
+            Assert.Throws<ArgumentException>(() => SpannerCommandTextBuilder.FromCommandText("DROPDATABASE FOO;"));
         }
 
         [Fact]
@@ -52,7 +52,7 @@ namespace Google.Cloud.Spanner.Data.Tests
         {
             // Arguably this should throw an ArgumentException on construction, but for the moment, we'll
             // stick with the v1.0 behavior.
-            var builder = new SpannerCommandTextBuilder("DROP DATABASE FOO BAR;");
+            var builder = SpannerCommandTextBuilder.FromCommandText("DROP DATABASE FOO BAR;");
             Assert.Throws<InvalidOperationException>(() => builder.DatabaseToDrop.ToString());
         }
 
@@ -61,7 +61,7 @@ namespace Google.Cloud.Spanner.Data.Tests
         [InlineData("DROP  DATABASE  FOO")]
         public void DropDatabaseUnrecognized(string ddlString)
         {
-            var builder = new SpannerCommandTextBuilder(ddlString);
+            var builder = SpannerCommandTextBuilder.FromCommandText(ddlString);
             Assert.False(builder.IsDropDatabaseCommand);
         }
     }
