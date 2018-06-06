@@ -124,7 +124,7 @@ namespace Google.Cloud.Spanner.Data
             GaxPreconditions.CheckNotNull(connection, nameof(connection));
             GaxPreconditions.CheckNotNull(transaction, nameof(transaction));
             GaxPreconditions.CheckNotNull(commandPartition, nameof(commandPartition));
-            SpannerCommandTextBuilder = new SpannerCommandTextBuilder(commandPartition.ExecuteSqlRequest.Sql);
+            SpannerCommandTextBuilder = SpannerCommandTextBuilder.FromCommandText(commandPartition.ExecuteSqlRequest.Sql);
         }
 
         /// <summary>

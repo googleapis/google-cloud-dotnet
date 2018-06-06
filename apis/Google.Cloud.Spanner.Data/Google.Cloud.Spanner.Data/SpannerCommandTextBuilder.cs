@@ -24,7 +24,7 @@ namespace Google.Cloud.Spanner.Data
 {
     /// <summary>
     /// Builds the <see cref="SpannerCommand.CommandText"/> string for executing a query or operation
-    /// on a Spanner database.
+    /// on a Spanner database. Instances are constructed with static factory methods.
     /// </summary>
     public sealed class SpannerCommandTextBuilder
     {
@@ -85,60 +85,6 @@ namespace Google.Cloud.Spanner.Data
             TargetTable = targetTable;
             ExtraStatements = extraStatements?.ToList().AsReadOnly();
         }
-
-        /// <summary>
-        /// Initializes a new SpannerCommandTextBuilder with the given command text.
-        /// The given text will be analyzed to choose the proper <see cref="SpannerCommandType"/>.
-        /// </summary>
-        /// <param name="commandText">The command text intended for <see cref="SpannerCommand.CommandText"/>
-        /// If the intended <see cref="SpannerCommandType"/> is Select, then this string should be
-        /// a SQL Query. If the intended <see cref="SpannerCommandType"/> is Ddl, then this string should be
-        /// the Ddl statement (eg 'CREATE TABLE MYTABLE...')
-        /// If the intended <see cref="SpannerCommandType"/> is Update, Delete,
-        /// InsertOrUpdate, or Insert, then the text should be '[spannercommandtype] [tablename]'
-        /// such as 'INSERT MYTABLE'.  Must not be null or empty.
-        /// </param>
-        /// <exception cref="ArgumentNullException">
-        /// Thrown when <paramref name="commandText"/> is null.</exception>
-        /// <exception cref="InvalidOperationException">
-        /// Thrown when <paramref name="commandText"/> is not formatted correctly.</exception>
-        public SpannerCommandTextBuilder(string commandText)
-        {
-            GaxPreconditions.CheckNotNullOrEmpty(commandText, nameof(commandText));
-            commandText = commandText.Trim();
-            var commandSections = commandText.Split(' ');
-            if (commandSections.Length < 2)
-            {
-                throw new ArgumentException($"'{commandText}' is not a recognized Spanner command.", nameof(commandText));
-            }
-
-            string commandName = commandSections[0].ToUpperInvariant();
-            if (!s_commandToCommandType.TryGetValue(commandName, out var commandType))
-            {
-                throw new ArgumentException($"'{commandName}' is not a recognized Spanner command.", nameof(commandText));
-            }
-            SpannerCommandType = commandType;
-            CommandText = commandText;
-
-            // Any extra validation or assignments go here... currently just for the parameter-based DML cases.
-            switch (commandType)
-            {
-                case SpannerCommandType.Insert:
-                case SpannerCommandType.InsertOrUpdate:
-                case SpannerCommandType.Delete:
-                case SpannerCommandType.Update:
-                    if (commandSections.Length != 2)
-                    {
-                        throw new InvalidOperationException(
-                            $"Spanner {commandName} commands are specified as '{commandName} <table>' with " +
-                            "parameters added to customize the command with filtering or updated values.");
-                    }
-                    TargetTable = ValidateTableName(commandSections[1], nameof(commandText));
-                    // This just makes sure the command starts with the upper-case version.
-                    CommandText = $"{commandName} {TargetTable}";
-                    break;
-            }            
-        }        
 
         internal bool IsCreateDatabaseCommand => CommandText?.StartsWith(CreateDatabaseCommand, StringComparison.OrdinalIgnoreCase) ?? false;
 
@@ -245,13 +191,59 @@ namespace Google.Cloud.Spanner.Data
 
         /// <summary>
         /// Creates a <see cref="SpannerCommandTextBuilder"/> instance by parsing existing command text.
+        /// The given text will be analyzed to choose the proper <see cref="SpannerCommandType"/>.
         /// </summary>
-        /// <param name="commandText">The full command text containing a query, ddl statement or insert/update/delete
+        /// <remarks>
+        /// If the intended <see cref="SpannerCommandType"/> is Select, then <paramref name="commandText"/> should be
+        /// a SQL Query. If the intended <see cref="SpannerCommandType"/> is Ddl, then this string should be
+        /// the DDL statement (eg 'CREATE TABLE MYTABLE...')
+        /// If the intended <see cref="SpannerCommandType"/> is Update, Delete,
+        /// InsertOrUpdate, or Insert, then the text should be '[spanner command type] [table name]'
+        /// such as 'INSERT MYTABLE'.  Must not be null or empty.
+        /// </remarks>
+        /// <param name="commandText">The full command text containing a query, DDL statement or insert/update/delete
         /// operation.  The given text will be parsed and validated. Must not be null.</param>
         /// <returns>A <see cref="SpannerCommandTextBuilder"/> whose <see cref="SpannerCommandType"/> is determined
         /// from parsing <paramref name="commandText"/>.</returns>
-        public static SpannerCommandTextBuilder FromCommandText(string commandText) =>
-            new SpannerCommandTextBuilder(GaxPreconditions.CheckNotNullOrEmpty(commandText, nameof(commandText)));
+        /// <exception cref="ArgumentException"><paramref name="commandText"/> is not formatted correctly.</exception>
+        public static SpannerCommandTextBuilder FromCommandText(string commandText)
+        {
+            GaxPreconditions.CheckNotNullOrEmpty(commandText, nameof(commandText));
+            commandText = commandText.Trim();
+            var commandSections = commandText.Split(' ');
+            if (commandSections.Length < 2)
+            {
+                throw new ArgumentException($"'{commandText}' is not a recognized Spanner command.", nameof(commandText));
+            }
+
+            string commandName = commandSections[0].ToUpperInvariant();
+            if (!s_commandToCommandType.TryGetValue(commandName, out var commandType))
+            {
+                throw new ArgumentException($"'{commandName}' is not a recognized Spanner command.", nameof(commandText));
+            }
+
+            string targetTable = null;
+
+            // Any extra validation or assignments go here... currently just for the parameter-based DML cases.
+            switch (commandType)
+            {
+                case SpannerCommandType.Insert:
+                case SpannerCommandType.InsertOrUpdate:
+                case SpannerCommandType.Delete:
+                case SpannerCommandType.Update:
+                    if (commandSections.Length != 2)
+                    {
+                        throw new InvalidOperationException(
+                            $"Spanner {commandName} commands are specified as '{commandName} <table>' with " +
+                            "parameters added to customize the command with filtering or updated values.");
+                    }
+                    targetTable = ValidateTableName(commandSections[1], nameof(commandText));
+                    // This just normalizes the command text.
+                    commandText = $"{commandName} {targetTable}";
+                    break;
+            }
+            return new SpannerCommandTextBuilder(commandText, commandType, targetTable, extraStatements: null);
+        }
 
         /// <inheritdoc />
         public override string ToString() => CommandText;
