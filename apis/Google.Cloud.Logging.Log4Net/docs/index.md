@@ -6,13 +6,6 @@ Logging](https://cloud.google.com/logging/) with
 
 {{installation}}
 
-Install the `Google.Cloud.Logging.Log4Net` package from NuGet. Add it to
-your project in the normal way (for example by right-clicking on the
-project in Visual Studio and choosing "Manage NuGet Packages...").
-Please ensure you enable pre-release packages (for example, in the
-Visual Studio NuGet user interface, check the "Include prerelease"
-box).
-
 {{auth}}
 
 # Getting started
@@ -30,7 +23,10 @@ ID, and `LOG_ID` with an identifier for your application.
 
 [!code-cs[](obj/snippets/Google.Cloud.Logging.Log4Net.GoogleStackdriverAppender.txt#Overview_AspNet)]
 
-If executing on [Google App Engine (GAE)](https://cloud.google.com/appengine/) or [Google Compute Engine (GCE)](https://cloud.google.com/compute/), then the `<projectId value="PROJECT_ID" />` configuration setting can be omitted; it will be auto-detected from the platform at run-time.
+If executing on [Google App Engine (GAE)](https://cloud.google.com/appengine/),
+[Google Kubernetes Engine (GKE)](https://cloud.google.com/kubernetes-engine/),
+or [Google Compute Engine (GCE)](https://cloud.google.com/compute/),
+then the `<projectId value="PROJECT_ID" />` configuration setting can be omitted; it will be auto-detected from the platform at run-time.
 
 ## Console app
 
@@ -46,4 +42,7 @@ file to configure `log4net` and then log as normal:
 
 [!code-cs[](obj/snippets/Google.Cloud.Logging.Log4Net.GoogleStackdriverAppender.txt#Overview)]
 
-If executing on [Google App Engine (GAE)](https://cloud.google.com/appengine/) or [Google Compute Engine (GCE)](https://cloud.google.com/compute/), then the `<projectId value="PROJECT_ID" />` configuration setting can be omitted; it will be auto-detected from the platform at run-time.
+If executing on [Google App Engine (GAE)](https://cloud.google.com/appengine/),
+[Google Kubernetes Engine (GKE)](https://cloud.google.com/kubernetes-engine/),
+or [Google Compute Engine (GCE)](https://cloud.google.com/compute/),
+then the `<projectId value="PROJECT_ID" />` configuration setting can be omitted; it will be auto-detected from the platform at run-time.
