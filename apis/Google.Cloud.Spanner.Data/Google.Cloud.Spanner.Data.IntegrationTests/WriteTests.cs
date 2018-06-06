@@ -66,15 +66,16 @@ namespace Google.Cloud.Spanner.Data.IntegrationTests
             record[_lastKey] = bytes;
         }
 
-        private async Task<SpannerDataReader> GetLastRowAsync()
+        private async Task WithLastRowAsync(Action<SpannerDataReader> readerAction)
         {
             using (var connection = _fixture.GetConnection())
             {
                 var cmd = connection.CreateSelectCommand($"SELECT * FROM {_fixture.TableName} WHERE K=@k");
                 cmd.Parameters.Add("K", SpannerDbType.String, _lastKey);
-                var reader = await cmd.ExecuteReaderAsync();
-                await reader.ReadAsync();
-                return reader;
+                using (var reader = await cmd.ExecuteReaderAsync())
+                {
+                    readerAction(reader);
+                }
             }
         }
 
@@ -141,7 +142,7 @@ namespace Google.Cloud.Spanner.Data.IntegrationTests
                             dtArray
                         }
                     }));
-            using (var reader = await GetLastRowAsync())
+            await WithLastRowAsync(reader =>
             {
                 Assert.True(reader.GetFieldValue<bool>(reader.GetOrdinal("BoolValue")));
                 Assert.Equal(1, reader.GetFieldValue<long>(reader.GetOrdinal("Int64Value")));
@@ -172,7 +173,7 @@ namespace Google.Cloud.Spanner.Data.IntegrationTests
                 Assert.Equal(
                     dtArray,
                     reader.GetFieldValue<DateTime?[]>(reader.GetOrdinal("DateArrayValue")));
-            }
+            });
         }
 
         [Fact]
@@ -281,7 +282,7 @@ namespace Google.Cloud.Spanner.Data.IntegrationTests
                             new DateTime[0]
                         }
                     }));
-            using (var reader = await GetLastRowAsync())
+            await WithLastRowAsync(reader =>
             {
                 Assert.Equal(new bool[] { }, reader.GetFieldValue<bool[]>(reader.GetOrdinal("BoolArrayValue")));
                 Assert.Equal(new long[] { }, reader.GetFieldValue<long[]>(reader.GetOrdinal("Int64ArrayValue")));
@@ -291,49 +292,28 @@ namespace Google.Cloud.Spanner.Data.IntegrationTests
                 Assert.Equal(
                     new DateTime[] { }, reader.GetFieldValue<DateTime[]>(reader.GetOrdinal("TimestampArrayValue")));
                 Assert.Equal(new DateTime[] { }, reader.GetFieldValue<DateTime[]>(reader.GetOrdinal("DateArrayValue")));
-            }
+            });
         }
 
         [Fact]
         public async Task WriteInfinity()
         {
-            int failureCount = 0;
-            for (int i = 0; i < 100; i++)
-            {
-                try
-                {
-                    Assert.Equal(1, await InsertAsync("Float64Value", SpannerDbType.Float64, double.PositiveInfinity));
-                    using (var reader = await GetLastRowAsync())
-                    {
-                        Assert.True(double.IsPositiveInfinity(reader.GetFieldValue<double>("Float64Value")));
-                    }
-                }
-                catch (SpannerException e) when (e.ErrorCode == ErrorCode.Aborted)
-                {
-                    failureCount++;
-                }
-            }
-            Assert.Equal(0, failureCount);
+            Assert.Equal(1, await InsertAsync("Float64Value", SpannerDbType.Float64, double.PositiveInfinity));
+            await WithLastRowAsync(reader => Assert.True(double.IsPositiveInfinity(reader.GetFieldValue<double>("Float64Value"))));
         }
 
         [Fact]
         public async Task WriteNanValue()
         {
             Assert.Equal(1, await InsertAsync("Float64Value", SpannerDbType.Float64, double.NaN));
-            using (var reader = await GetLastRowAsync())
-            {
-                Assert.True(double.IsNaN(reader.GetFieldValue<double>("Float64Value")));
-            }
+            await WithLastRowAsync(reader => Assert.True(double.IsNaN(reader.GetFieldValue<double>("Float64Value"))));
         }
 
         [Fact]
         public async Task WriteNegativeInfinity()
         {
             Assert.Equal(1, await InsertAsync("Float64Value", SpannerDbType.Float64, double.NegativeInfinity));
-            using (var reader = await GetLastRowAsync())
-            {
-                Assert.True(double.IsNegativeInfinity(reader.GetFieldValue<double>("Float64Value")));
-            }
+            await WithLastRowAsync(reader => Assert.True(double.IsNegativeInfinity(reader.GetFieldValue<double>("Float64Value"))));
         }
 
         [Fact]
@@ -385,7 +365,7 @@ namespace Google.Cloud.Spanner.Data.IntegrationTests
                             null
                         }
                     }));
-            using (var reader = await GetLastRowAsync())
+            await WithLastRowAsync(reader =>
             {
                 Assert.True(reader.IsDBNull(reader.GetOrdinal("BoolValue")));
                 Assert.True(reader.IsDBNull(reader.GetOrdinal("Int64Value")));
@@ -400,7 +380,7 @@ namespace Google.Cloud.Spanner.Data.IntegrationTests
                 Assert.True(reader.IsDBNull(reader.GetOrdinal("BytesArrayValue")));
                 Assert.True(reader.IsDBNull(reader.GetOrdinal("TimestampArrayValue")));
                 Assert.True(reader.IsDBNull(reader.GetOrdinal("DateArrayValue")));
-            }
+            });
         }
 
         [Fact]
