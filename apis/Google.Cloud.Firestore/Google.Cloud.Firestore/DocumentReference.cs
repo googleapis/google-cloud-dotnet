@@ -214,8 +214,8 @@ namespace Google.Cloud.Firestore
         /// </summary>
         /// <param name="callback">The callback to invoke each time the document changes. Must not be null.</param>
         /// <param name="cancellationToken">Optional cancellation token which may be used to cancel the listening operation.</param>
-        /// <returns>A <see cref="SnapshotListener"/> which may be used to monitor the listening operation and stop it gracefully.</returns>
-        public SnapshotListener Listen(Func<DocumentSnapshot, CancellationToken, Task> callback, CancellationToken cancellationToken = default)
+        /// <returns>A <see cref="FirestoreChangeListener"/> which may be used to monitor the listening operation and stop it gracefully.</returns>
+        public FirestoreChangeListener Listen(Func<DocumentSnapshot, CancellationToken, Task> callback, CancellationToken cancellationToken = default)
         {
             GaxPreconditions.CheckNotNull(callback, nameof(callback));
             var target = WatchStream.CreateTarget(this);
@@ -234,7 +234,7 @@ namespace Google.Cloud.Firestore
                 await callback(missingDoc, cancellationToken).ConfigureAwait(false);
             };
             var stream = new WatchStream(new WatchState(Parent, queryCallback), target, Database, cancellationToken);
-            return SnapshotListener.Start(stream);
+            return FirestoreChangeListener.Start(stream);
         }
 
         /// <summary>
@@ -243,8 +243,8 @@ namespace Google.Cloud.Firestore
         /// </summary>
         /// <param name="callback">The callback to invoke each time the query results change. Must not be null.</param>
         /// <param name="cancellationToken">Optional cancellation token which may be used to cancel the listening operation.</param>
-        /// <returns>A <see cref="SnapshotListener"/> which may be used to monitor the listening operation and stop it gracefully.</returns>
-        public SnapshotListener Listen(Action<DocumentSnapshot> callback, CancellationToken cancellationToken = default)
+        /// <returns>A <see cref="FirestoreChangeListener"/> which may be used to monitor the listening operation and stop it gracefully.</returns>
+        public FirestoreChangeListener Listen(Action<DocumentSnapshot> callback, CancellationToken cancellationToken = default)
         {
             GaxPreconditions.CheckNotNull(callback, nameof(callback));
             return Listen((snapshot, _) => { callback(snapshot); return Task.FromResult(0); }, cancellationToken);
