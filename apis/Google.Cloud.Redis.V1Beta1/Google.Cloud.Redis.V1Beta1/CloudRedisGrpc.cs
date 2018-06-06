@@ -20,9 +20,6 @@
 #pragma warning disable 1591
 #region Designer generated code
 
-using System;
-using System.Threading;
-using System.Threading.Tasks;
 using grpc = global::Grpc.Core;
 
 namespace Google.Cloud.Redis.V1Beta1 {
@@ -218,7 +215,7 @@ namespace Google.Cloud.Redis.V1Beta1 {
       /// <param name="deadline">An optional deadline for the call. The call will be cancelled if deadline is hit.</param>
       /// <param name="cancellationToken">An optional token for canceling the call.</param>
       /// <returns>The response received from the server.</returns>
-      public virtual global::Google.Cloud.Redis.V1Beta1.ListInstancesResponse ListInstances(global::Google.Cloud.Redis.V1Beta1.ListInstancesRequest request, grpc::Metadata headers = null, DateTime? deadline = null, CancellationToken cancellationToken = default(CancellationToken))
+      public virtual global::Google.Cloud.Redis.V1Beta1.ListInstancesResponse ListInstances(global::Google.Cloud.Redis.V1Beta1.ListInstancesRequest request, grpc::Metadata headers = null, global::System.DateTime? deadline = null, global::System.Threading.CancellationToken cancellationToken = default(global::System.Threading.CancellationToken))
       {
         return ListInstances(request, new grpc::CallOptions(headers, deadline, cancellationToken));
       }
@@ -254,7 +251,7 @@ namespace Google.Cloud.Redis.V1Beta1 {
       /// <param name="deadline">An optional deadline for the call. The call will be cancelled if deadline is hit.</param>
       /// <param name="cancellationToken">An optional token for canceling the call.</param>
       /// <returns>The call object.</returns>
-      public virtual grpc::AsyncUnaryCall<global::Google.Cloud.Redis.V1Beta1.ListInstancesResponse> ListInstancesAsync(global::Google.Cloud.Redis.V1Beta1.ListInstancesRequest request, grpc::Metadata headers = null, DateTime? deadline = null, CancellationToken cancellationToken = default(CancellationToken))
+      public virtual grpc::AsyncUnaryCall<global::Google.Cloud.Redis.V1Beta1.ListInstancesResponse> ListInstancesAsync(global::Google.Cloud.Redis.V1Beta1.ListInstancesRequest request, grpc::Metadata headers = null, global::System.DateTime? deadline = null, global::System.Threading.CancellationToken cancellationToken = default(global::System.Threading.CancellationToken))
       {
         return ListInstancesAsync(request, new grpc::CallOptions(headers, deadline, cancellationToken));
       }
@@ -283,7 +280,7 @@ namespace Google.Cloud.Redis.V1Beta1 {
       /// <param name="deadline">An optional deadline for the call. The call will be cancelled if deadline is hit.</param>
       /// <param name="cancellationToken">An optional token for canceling the call.</param>
       /// <returns>The response received from the server.</returns>
-      public virtual global::Google.Cloud.Redis.V1Beta1.Instance GetInstance(global::Google.Cloud.Redis.V1Beta1.GetInstanceRequest request, grpc::Metadata headers = null, DateTime? deadline = null, CancellationToken cancellationToken = default(CancellationToken))
+      public virtual global::Google.Cloud.Redis.V1Beta1.Instance GetInstance(global::Google.Cloud.Redis.V1Beta1.GetInstanceRequest request, grpc::Metadata headers = null, global::System.DateTime? deadline = null, global::System.Threading.CancellationToken cancellationToken = default(global::System.Threading.CancellationToken))
       {
         return GetInstance(request, new grpc::CallOptions(headers, deadline, cancellationToken));
       }
@@ -305,7 +302,7 @@ namespace Google.Cloud.Redis.V1Beta1 {
       /// <param name="deadline">An optional deadline for the call. The call will be cancelled if deadline is hit.</param>
       /// <param name="cancellationToken">An optional token for canceling the call.</param>
       /// <returns>The call object.</returns>
-      public virtual grpc::AsyncUnaryCall<global::Google.Cloud.Redis.V1Beta1.Instance> GetInstanceAsync(global::Google.Cloud.Redis.V1Beta1.GetInstanceRequest request, grpc::Metadata headers = null, DateTime? deadline = null, CancellationToken cancellationToken = default(CancellationToken))
+      public virtual grpc::AsyncUnaryCall<global::Google.Cloud.Redis.V1Beta1.Instance> GetInstanceAsync(global::Google.Cloud.Redis.V1Beta1.GetInstanceRequest request, grpc::Metadata headers = null, global::System.DateTime? deadline = null, global::System.Threading.CancellationToken cancellationToken = default(global::System.Threading.CancellationToken))
       {
         return GetInstanceAsync(request, new grpc::CallOptions(headers, deadline, cancellationToken));
       }
@@ -338,7 +335,7 @@ namespace Google.Cloud.Redis.V1Beta1 {
       /// <param name="deadline">An optional deadline for the call. The call will be cancelled if deadline is hit.</param>
       /// <param name="cancellationToken">An optional token for canceling the call.</param>
       /// <returns>The response received from the server.</returns>
-      public virtual global::Google.LongRunning.Operation CreateInstance(global::Google.Cloud.Redis.V1Beta1.CreateInstanceRequest request, grpc::Metadata headers = null, DateTime? deadline = null, CancellationToken cancellationToken = default(CancellationToken))
+      public virtual global::Google.LongRunning.Operation CreateInstance(global::Google.Cloud.Redis.V1Beta1.CreateInstanceRequest request, grpc::Metadata headers = null, global::System.DateTime? deadline = null, global::System.Threading.CancellationToken cancellationToken = default(global::System.Threading.CancellationToken))
       {
         return CreateInstance(request, new grpc::CallOptions(headers, deadline, cancellationToken));
       }
@@ -382,7 +379,7 @@ namespace Google.Cloud.Redis.V1Beta1 {
       /// <param name="deadline">An optional deadline for the call. The call will be cancelled if deadline is hit.</param>
       /// <param name="cancellationToken">An optional token for canceling the call.</param>
       /// <returns>The call object.</returns>
-      public virtual grpc::AsyncUnaryCall<global::Google.LongRunning.Operation> CreateInstanceAsync(global::Google.Cloud.Redis.V1Beta1.CreateInstanceRequest request, grpc::Metadata headers = null, DateTime? deadline = null, CancellationToken cancellationToken = default(CancellationToken))
+      public virtual grpc::AsyncUnaryCall<global::Google.LongRunning.Operation> CreateInstanceAsync(global::Google.Cloud.Redis.V1Beta1.CreateInstanceRequest request, grpc::Metadata headers = null, global::System.DateTime? deadline = null, global::System.Threading.CancellationToken cancellationToken = default(global::System.Threading.CancellationToken))
       {
         return CreateInstanceAsync(request, new grpc::CallOptions(headers, deadline, cancellationToken));
       }
@@ -419,7 +416,7 @@ namespace Google.Cloud.Redis.V1Beta1 {
       /// <param name="deadline">An optional deadline for the call. The call will be cancelled if deadline is hit.</param>
       /// <param name="cancellationToken">An optional token for canceling the call.</param>
       /// <returns>The response received from the server.</returns>
-      public virtual global::Google.LongRunning.Operation UpdateInstance(global::Google.Cloud.Redis.V1Beta1.UpdateInstanceRequest request, grpc::Metadata headers = null, DateTime? deadline = null, CancellationToken cancellationToken = default(CancellationToken))
+      public virtual global::Google.LongRunning.Operation UpdateInstance(global::Google.Cloud.Redis.V1Beta1.UpdateInstanceRequest request, grpc::Metadata headers = null, global::System.DateTime? deadline = null, global::System.Threading.CancellationToken cancellationToken = default(global::System.Threading.CancellationToken))
       {
         return UpdateInstance(request, new grpc::CallOptions(headers, deadline, cancellationToken));
       }
@@ -449,7 +446,7 @@ namespace Google.Cloud.Redis.V1Beta1 {
       /// <param name="deadline">An optional deadline for the call. The call will be cancelled if deadline is hit.</param>
       /// <param name="cancellationToken">An optional token for canceling the call.</param>
       /// <returns>The call object.</returns>
-      public virtual grpc::AsyncUnaryCall<global::Google.LongRunning.Operation> UpdateInstanceAsync(global::Google.Cloud.Redis.V1Beta1.UpdateInstanceRequest request, grpc::Metadata headers = null, DateTime? deadline = null, CancellationToken cancellationToken = default(CancellationToken))
+      public virtual grpc::AsyncUnaryCall<global::Google.LongRunning.Operation> UpdateInstanceAsync(global::Google.Cloud.Redis.V1Beta1.UpdateInstanceRequest request, grpc::Metadata headers = null, global::System.DateTime? deadline = null, global::System.Threading.CancellationToken cancellationToken = default(global::System.Threading.CancellationToken))
       {
         return UpdateInstanceAsync(request, new grpc::CallOptions(headers, deadline, cancellationToken));
       }
@@ -476,7 +473,7 @@ namespace Google.Cloud.Redis.V1Beta1 {
       /// <param name="deadline">An optional deadline for the call. The call will be cancelled if deadline is hit.</param>
       /// <param name="cancellationToken">An optional token for canceling the call.</param>
       /// <returns>The response received from the server.</returns>
-      public virtual global::Google.LongRunning.Operation DeleteInstance(global::Google.Cloud.Redis.V1Beta1.DeleteInstanceRequest request, grpc::Metadata headers = null, DateTime? deadline = null, CancellationToken cancellationToken = default(CancellationToken))
+      public virtual global::Google.LongRunning.Operation DeleteInstance(global::Google.Cloud.Redis.V1Beta1.DeleteInstanceRequest request, grpc::Metadata headers = null, global::System.DateTime? deadline = null, global::System.Threading.CancellationToken cancellationToken = default(global::System.Threading.CancellationToken))
       {
         return DeleteInstance(request, new grpc::CallOptions(headers, deadline, cancellationToken));
       }
@@ -500,7 +497,7 @@ namespace Google.Cloud.Redis.V1Beta1 {
       /// <param name="deadline">An optional deadline for the call. The call will be cancelled if deadline is hit.</param>
       /// <param name="cancellationToken">An optional token for canceling the call.</param>
       /// <returns>The call object.</returns>
-      public virtual grpc::AsyncUnaryCall<global::Google.LongRunning.Operation> DeleteInstanceAsync(global::Google.Cloud.Redis.V1Beta1.DeleteInstanceRequest request, grpc::Metadata headers = null, DateTime? deadline = null, CancellationToken cancellationToken = default(CancellationToken))
+      public virtual grpc::AsyncUnaryCall<global::Google.LongRunning.Operation> DeleteInstanceAsync(global::Google.Cloud.Redis.V1Beta1.DeleteInstanceRequest request, grpc::Metadata headers = null, global::System.DateTime? deadline = null, global::System.Threading.CancellationToken cancellationToken = default(global::System.Threading.CancellationToken))
       {
         return DeleteInstanceAsync(request, new grpc::CallOptions(headers, deadline, cancellationToken));
       }

@@ -20,9 +20,6 @@
 #pragma warning disable 1591
 #region Designer generated code
 
-using System;
-using System.Threading;
-using System.Threading.Tasks;
 using grpc = global::Grpc.Core;
 
 namespace Google.Cloud.Monitoring.V3 {
@@ -241,7 +238,7 @@ namespace Google.Cloud.Monitoring.V3 {
       /// <param name="deadline">An optional deadline for the call. The call will be cancelled if deadline is hit.</param>
       /// <param name="cancellationToken">An optional token for canceling the call.</param>
       /// <returns>The response received from the server.</returns>
-      public virtual global::Google.Cloud.Monitoring.V3.ListMonitoredResourceDescriptorsResponse ListMonitoredResourceDescriptors(global::Google.Cloud.Monitoring.V3.ListMonitoredResourceDescriptorsRequest request, grpc::Metadata headers = null, DateTime? deadline = null, CancellationToken cancellationToken = default(CancellationToken))
+      public virtual global::Google.Cloud.Monitoring.V3.ListMonitoredResourceDescriptorsResponse ListMonitoredResourceDescriptors(global::Google.Cloud.Monitoring.V3.ListMonitoredResourceDescriptorsRequest request, grpc::Metadata headers = null, global::System.DateTime? deadline = null, global::System.Threading.CancellationToken cancellationToken = default(global::System.Threading.CancellationToken))
       {
         return ListMonitoredResourceDescriptors(request, new grpc::CallOptions(headers, deadline, cancellationToken));
       }
@@ -263,7 +260,7 @@ namespace Google.Cloud.Monitoring.V3 {
       /// <param name="deadline">An optional deadline for the call. The call will be cancelled if deadline is hit.</param>
       /// <param name="cancellationToken">An optional token for canceling the call.</param>
       /// <returns>The call object.</returns>
-      public virtual grpc::AsyncUnaryCall<global::Google.Cloud.Monitoring.V3.ListMonitoredResourceDescriptorsResponse> ListMonitoredResourceDescriptorsAsync(global::Google.Cloud.Monitoring.V3.ListMonitoredResourceDescriptorsRequest request, grpc::Metadata headers = null, DateTime? deadline = null, CancellationToken cancellationToken = default(CancellationToken))
+      public virtual grpc::AsyncUnaryCall<global::Google.Cloud.Monitoring.V3.ListMonitoredResourceDescriptorsResponse> ListMonitoredResourceDescriptorsAsync(global::Google.Cloud.Monitoring.V3.ListMonitoredResourceDescriptorsRequest request, grpc::Metadata headers = null, global::System.DateTime? deadline = null, global::System.Threading.CancellationToken cancellationToken = default(global::System.Threading.CancellationToken))
       {
         return ListMonitoredResourceDescriptorsAsync(request, new grpc::CallOptions(headers, deadline, cancellationToken));
       }
@@ -285,7 +282,7 @@ namespace Google.Cloud.Monitoring.V3 {
       /// <param name="deadline">An optional deadline for the call. The call will be cancelled if deadline is hit.</param>
       /// <param name="cancellationToken">An optional token for canceling the call.</param>
       /// <returns>The response received from the server.</returns>
-      public virtual global::Google.Api.MonitoredResourceDescriptor GetMonitoredResourceDescriptor(global::Google.Cloud.Monitoring.V3.GetMonitoredResourceDescriptorRequest request, grpc::Metadata headers = null, DateTime? deadline = null, CancellationToken cancellationToken = default(CancellationToken))
+      public virtual global::Google.Api.MonitoredResourceDescriptor GetMonitoredResourceDescriptor(global::Google.Cloud.Monitoring.V3.GetMonitoredResourceDescriptorRequest request, grpc::Metadata headers = null, global::System.DateTime? deadline = null, global::System.Threading.CancellationToken cancellationToken = default(global::System.Threading.CancellationToken))
       {
         return GetMonitoredResourceDescriptor(request, new grpc::CallOptions(headers, deadline, cancellationToken));
       }
@@ -307,7 +304,7 @@ namespace Google.Cloud.Monitoring.V3 {
       /// <param name="deadline">An optional deadline for the call. The call will be cancelled if deadline is hit.</param>
       /// <param name="cancellationToken">An optional token for canceling the call.</param>
       /// <returns>The call object.</returns>
-      public virtual grpc::AsyncUnaryCall<global::Google.Api.MonitoredResourceDescriptor> GetMonitoredResourceDescriptorAsync(global::Google.Cloud.Monitoring.V3.GetMonitoredResourceDescriptorRequest request, grpc::Metadata headers = null, DateTime? deadline = null, CancellationToken cancellationToken = default(CancellationToken))
+      public virtual grpc::AsyncUnaryCall<global::Google.Api.MonitoredResourceDescriptor> GetMonitoredResourceDescriptorAsync(global::Google.Cloud.Monitoring.V3.GetMonitoredResourceDescriptorRequest request, grpc::Metadata headers = null, global::System.DateTime? deadline = null, global::System.Threading.CancellationToken cancellationToken = default(global::System.Threading.CancellationToken))
       {
         return GetMonitoredResourceDescriptorAsync(request, new grpc::CallOptions(headers, deadline, cancellationToken));
       }
@@ -329,7 +326,7 @@ namespace Google.Cloud.Monitoring.V3 {
       /// <param name="deadline">An optional deadline for the call. The call will be cancelled if deadline is hit.</param>
       /// <param name="cancellationToken">An optional token for canceling the call.</param>
       /// <returns>The response received from the server.</returns>
-      public virtual global::Google.Cloud.Monitoring.V3.ListMetricDescriptorsResponse ListMetricDescriptors(global::Google.Cloud.Monitoring.V3.ListMetricDescriptorsRequest request, grpc::Metadata headers = null, DateTime? deadline = null, CancellationToken cancellationToken = default(CancellationToken))
+      public virtual global::Google.Cloud.Monitoring.V3.ListMetricDescriptorsResponse ListMetricDescriptors(global::Google.Cloud.Monitoring.V3.ListMetricDescriptorsRequest request, grpc::Metadata headers = null, global::System.DateTime? deadline = null, global::System.Threading.CancellationToken cancellationToken = default(global::System.Threading.CancellationToken))
       {
         return ListMetricDescriptors(request, new grpc::CallOptions(headers, deadline, cancellationToken));
       }
@@ -351,7 +348,7 @@ namespace Google.Cloud.Monitoring.V3 {
       /// <param name="deadline">An optional deadline for the call. The call will be cancelled if deadline is hit.</param>
       /// <param name="cancellationToken">An optional token for canceling the call.</param>
       /// <returns>The call object.</returns>
-      public virtual grpc::AsyncUnaryCall<global::Google.Cloud.Monitoring.V3.ListMetricDescriptorsResponse> ListMetricDescriptorsAsync(global::Google.Cloud.Monitoring.V3.ListMetricDescriptorsRequest request, grpc::Metadata headers = null, DateTime? deadline = null, CancellationToken cancellationToken = default(CancellationToken))
+      public virtual grpc::AsyncUnaryCall<global::Google.Cloud.Monitoring.V3.ListMetricDescriptorsResponse> ListMetricDescriptorsAsync(global::Google.Cloud.Monitoring.V3.ListMetricDescriptorsRequest request, grpc::Metadata headers = null, global::System.DateTime? deadline = null, global::System.Threading.CancellationToken cancellationToken = default(global::System.Threading.CancellationToken))
       {
         return ListMetricDescriptorsAsync(request, new grpc::CallOptions(headers, deadline, cancellationToken));
       }
@@ -373,7 +370,7 @@ namespace Google.Cloud.Monitoring.V3 {
       /// <param name="deadline">An optional deadline for the call. The call will be cancelled if deadline is hit.</param>
       /// <param name="cancellationToken">An optional token for canceling the call.</param>
       /// <returns>The response received from the server.</returns>
-      public virtual global::Google.Api.MetricDescriptor GetMetricDescriptor(global::Google.Cloud.Monitoring.V3.GetMetricDescriptorRequest request, grpc::Metadata headers = null, DateTime? deadline = null, CancellationToken cancellationToken = default(CancellationToken))
+      public virtual global::Google.Api.MetricDescriptor GetMetricDescriptor(global::Google.Cloud.Monitoring.V3.GetMetricDescriptorRequest request, grpc::Metadata headers = null, global::System.DateTime? deadline = null, global::System.Threading.CancellationToken cancellationToken = default(global::System.Threading.CancellationToken))
       {
         return GetMetricDescriptor(request, new grpc::CallOptions(headers, deadline, cancellationToken));
       }
@@ -395,7 +392,7 @@ namespace Google.Cloud.Monitoring.V3 {
       /// <param name="deadline">An optional deadline for the call. The call will be cancelled if deadline is hit.</param>
       /// <param name="cancellationToken">An optional token for canceling the call.</param>
       /// <returns>The call object.</returns>
-      public virtual grpc::AsyncUnaryCall<global::Google.Api.MetricDescriptor> GetMetricDescriptorAsync(global::Google.Cloud.Monitoring.V3.GetMetricDescriptorRequest request, grpc::Metadata headers = null, DateTime? deadline = null, CancellationToken cancellationToken = default(CancellationToken))
+      public virtual grpc::AsyncUnaryCall<global::Google.Api.MetricDescriptor> GetMetricDescriptorAsync(global::Google.Cloud.Monitoring.V3.GetMetricDescriptorRequest request, grpc::Metadata headers = null, global::System.DateTime? deadline = null, global::System.Threading.CancellationToken cancellationToken = default(global::System.Threading.CancellationToken))
       {
         return GetMetricDescriptorAsync(request, new grpc::CallOptions(headers, deadline, cancellationToken));
       }
@@ -419,7 +416,7 @@ namespace Google.Cloud.Monitoring.V3 {
       /// <param name="deadline">An optional deadline for the call. The call will be cancelled if deadline is hit.</param>
       /// <param name="cancellationToken">An optional token for canceling the call.</param>
       /// <returns>The response received from the server.</returns>
-      public virtual global::Google.Api.MetricDescriptor CreateMetricDescriptor(global::Google.Cloud.Monitoring.V3.CreateMetricDescriptorRequest request, grpc::Metadata headers = null, DateTime? deadline = null, CancellationToken cancellationToken = default(CancellationToken))
+      public virtual global::Google.Api.MetricDescriptor CreateMetricDescriptor(global::Google.Cloud.Monitoring.V3.CreateMetricDescriptorRequest request, grpc::Metadata headers = null, global::System.DateTime? deadline = null, global::System.Threading.CancellationToken cancellationToken = default(global::System.Threading.CancellationToken))
       {
         return CreateMetricDescriptor(request, new grpc::CallOptions(headers, deadline, cancellationToken));
       }
@@ -445,7 +442,7 @@ namespace Google.Cloud.Monitoring.V3 {
       /// <param name="deadline">An optional deadline for the call. The call will be cancelled if deadline is hit.</param>
       /// <param name="cancellationToken">An optional token for canceling the call.</param>
       /// <returns>The call object.</returns>
-      public virtual grpc::AsyncUnaryCall<global::Google.Api.MetricDescriptor> CreateMetricDescriptorAsync(global::Google.Cloud.Monitoring.V3.CreateMetricDescriptorRequest request, grpc::Metadata headers = null, DateTime? deadline = null, CancellationToken cancellationToken = default(CancellationToken))
+      public virtual grpc::AsyncUnaryCall<global::Google.Api.MetricDescriptor> CreateMetricDescriptorAsync(global::Google.Cloud.Monitoring.V3.CreateMetricDescriptorRequest request, grpc::Metadata headers = null, global::System.DateTime? deadline = null, global::System.Threading.CancellationToken cancellationToken = default(global::System.Threading.CancellationToken))
       {
         return CreateMetricDescriptorAsync(request, new grpc::CallOptions(headers, deadline, cancellationToken));
       }
@@ -470,7 +467,7 @@ namespace Google.Cloud.Monitoring.V3 {
       /// <param name="deadline">An optional deadline for the call. The call will be cancelled if deadline is hit.</param>
       /// <param name="cancellationToken">An optional token for canceling the call.</param>
       /// <returns>The response received from the server.</returns>
-      public virtual global::Google.Protobuf.WellKnownTypes.Empty DeleteMetricDescriptor(global::Google.Cloud.Monitoring.V3.DeleteMetricDescriptorRequest request, grpc::Metadata headers = null, DateTime? deadline = null, CancellationToken cancellationToken = default(CancellationToken))
+      public virtual global::Google.Protobuf.WellKnownTypes.Empty DeleteMetricDescriptor(global::Google.Cloud.Monitoring.V3.DeleteMetricDescriptorRequest request, grpc::Metadata headers = null, global::System.DateTime? deadline = null, global::System.Threading.CancellationToken cancellationToken = default(global::System.Threading.CancellationToken))
       {
         return DeleteMetricDescriptor(request, new grpc::CallOptions(headers, deadline, cancellationToken));
       }
@@ -494,7 +491,7 @@ namespace Google.Cloud.Monitoring.V3 {
       /// <param name="deadline">An optional deadline for the call. The call will be cancelled if deadline is hit.</param>
       /// <param name="cancellationToken">An optional token for canceling the call.</param>
       /// <returns>The call object.</returns>
-      public virtual grpc::AsyncUnaryCall<global::Google.Protobuf.WellKnownTypes.Empty> DeleteMetricDescriptorAsync(global::Google.Cloud.Monitoring.V3.DeleteMetricDescriptorRequest request, grpc::Metadata headers = null, DateTime? deadline = null, CancellationToken cancellationToken = default(CancellationToken))
+      public virtual grpc::AsyncUnaryCall<global::Google.Protobuf.WellKnownTypes.Empty> DeleteMetricDescriptorAsync(global::Google.Cloud.Monitoring.V3.DeleteMetricDescriptorRequest request, grpc::Metadata headers = null, global::System.DateTime? deadline = null, global::System.Threading.CancellationToken cancellationToken = default(global::System.Threading.CancellationToken))
       {
         return DeleteMetricDescriptorAsync(request, new grpc::CallOptions(headers, deadline, cancellationToken));
       }
@@ -517,7 +514,7 @@ namespace Google.Cloud.Monitoring.V3 {
       /// <param name="deadline">An optional deadline for the call. The call will be cancelled if deadline is hit.</param>
       /// <param name="cancellationToken">An optional token for canceling the call.</param>
       /// <returns>The response received from the server.</returns>
-      public virtual global::Google.Cloud.Monitoring.V3.ListTimeSeriesResponse ListTimeSeries(global::Google.Cloud.Monitoring.V3.ListTimeSeriesRequest request, grpc::Metadata headers = null, DateTime? deadline = null, CancellationToken cancellationToken = default(CancellationToken))
+      public virtual global::Google.Cloud.Monitoring.V3.ListTimeSeriesResponse ListTimeSeries(global::Google.Cloud.Monitoring.V3.ListTimeSeriesRequest request, grpc::Metadata headers = null, global::System.DateTime? deadline = null, global::System.Threading.CancellationToken cancellationToken = default(global::System.Threading.CancellationToken))
       {
         return ListTimeSeries(request, new grpc::CallOptions(headers, deadline, cancellationToken));
       }
@@ -539,7 +536,7 @@ namespace Google.Cloud.Monitoring.V3 {
       /// <param name="deadline">An optional deadline for the call. The call will be cancelled if deadline is hit.</param>
       /// <param name="cancellationToken">An optional token for canceling the call.</param>
       /// <returns>The call object.</returns>
-      public virtual grpc::AsyncUnaryCall<global::Google.Cloud.Monitoring.V3.ListTimeSeriesResponse> ListTimeSeriesAsync(global::Google.Cloud.Monitoring.V3.ListTimeSeriesRequest request, grpc::Metadata headers = null, DateTime? deadline = null, CancellationToken cancellationToken = default(CancellationToken))
+      public virtual grpc::AsyncUnaryCall<global::Google.Cloud.Monitoring.V3.ListTimeSeriesResponse> ListTimeSeriesAsync(global::Google.Cloud.Monitoring.V3.ListTimeSeriesRequest request, grpc::Metadata headers = null, global::System.DateTime? deadline = null, global::System.Threading.CancellationToken cancellationToken = default(global::System.Threading.CancellationToken))
       {
         return ListTimeSeriesAsync(request, new grpc::CallOptions(headers, deadline, cancellationToken));
       }
@@ -564,7 +561,7 @@ namespace Google.Cloud.Monitoring.V3 {
       /// <param name="deadline">An optional deadline for the call. The call will be cancelled if deadline is hit.</param>
       /// <param name="cancellationToken">An optional token for canceling the call.</param>
       /// <returns>The response received from the server.</returns>
-      public virtual global::Google.Protobuf.WellKnownTypes.Empty CreateTimeSeries(global::Google.Cloud.Monitoring.V3.CreateTimeSeriesRequest request, grpc::Metadata headers = null, DateTime? deadline = null, CancellationToken cancellationToken = default(CancellationToken))
+      public virtual global::Google.Protobuf.WellKnownTypes.Empty CreateTimeSeries(global::Google.Cloud.Monitoring.V3.CreateTimeSeriesRequest request, grpc::Metadata headers = null, global::System.DateTime? deadline = null, global::System.Threading.CancellationToken cancellationToken = default(global::System.Threading.CancellationToken))
       {
         return CreateTimeSeries(request, new grpc::CallOptions(headers, deadline, cancellationToken));
       }
@@ -592,7 +589,7 @@ namespace Google.Cloud.Monitoring.V3 {
       /// <param name="deadline">An optional deadline for the call. The call will be cancelled if deadline is hit.</param>
       /// <param name="cancellationToken">An optional token for canceling the call.</param>
       /// <returns>The call object.</returns>
-      public virtual grpc::AsyncUnaryCall<global::Google.Protobuf.WellKnownTypes.Empty> CreateTimeSeriesAsync(global::Google.Cloud.Monitoring.V3.CreateTimeSeriesRequest request, grpc::Metadata headers = null, DateTime? deadline = null, CancellationToken cancellationToken = default(CancellationToken))
+      public virtual grpc::AsyncUnaryCall<global::Google.Protobuf.WellKnownTypes.Empty> CreateTimeSeriesAsync(global::Google.Cloud.Monitoring.V3.CreateTimeSeriesRequest request, grpc::Metadata headers = null, global::System.DateTime? deadline = null, global::System.Threading.CancellationToken cancellationToken = default(global::System.Threading.CancellationToken))
       {
         return CreateTimeSeriesAsync(request, new grpc::CallOptions(headers, deadline, cancellationToken));
       }

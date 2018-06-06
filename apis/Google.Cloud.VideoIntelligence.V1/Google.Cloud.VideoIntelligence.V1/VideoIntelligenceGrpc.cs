@@ -20,9 +20,6 @@
 #pragma warning disable 1591
 #region Designer generated code
 
-using System;
-using System.Threading;
-using System.Threading.Tasks;
 using grpc = global::Grpc.Core;
 
 namespace Google.Cloud.VideoIntelligence.V1 {
@@ -102,7 +99,7 @@ namespace Google.Cloud.VideoIntelligence.V1 {
       /// <param name="deadline">An optional deadline for the call. The call will be cancelled if deadline is hit.</param>
       /// <param name="cancellationToken">An optional token for canceling the call.</param>
       /// <returns>The response received from the server.</returns>
-      public virtual global::Google.LongRunning.Operation AnnotateVideo(global::Google.Cloud.VideoIntelligence.V1.AnnotateVideoRequest request, grpc::Metadata headers = null, DateTime? deadline = null, CancellationToken cancellationToken = default(CancellationToken))
+      public virtual global::Google.LongRunning.Operation AnnotateVideo(global::Google.Cloud.VideoIntelligence.V1.AnnotateVideoRequest request, grpc::Metadata headers = null, global::System.DateTime? deadline = null, global::System.Threading.CancellationToken cancellationToken = default(global::System.Threading.CancellationToken))
       {
         return AnnotateVideo(request, new grpc::CallOptions(headers, deadline, cancellationToken));
       }
@@ -130,7 +127,7 @@ namespace Google.Cloud.VideoIntelligence.V1 {
       /// <param name="deadline">An optional deadline for the call. The call will be cancelled if deadline is hit.</param>
       /// <param name="cancellationToken">An optional token for canceling the call.</param>
       /// <returns>The call object.</returns>
-      public virtual grpc::AsyncUnaryCall<global::Google.LongRunning.Operation> AnnotateVideoAsync(global::Google.Cloud.VideoIntelligence.V1.AnnotateVideoRequest request, grpc::Metadata headers = null, DateTime? deadline = null, CancellationToken cancellationToken = default(CancellationToken))
+      public virtual grpc::AsyncUnaryCall<global::Google.LongRunning.Operation> AnnotateVideoAsync(global::Google.Cloud.VideoIntelligence.V1.AnnotateVideoRequest request, grpc::Metadata headers = null, global::System.DateTime? deadline = null, global::System.Threading.CancellationToken cancellationToken = default(global::System.Threading.CancellationToken))
       {
         return AnnotateVideoAsync(request, new grpc::CallOptions(headers, deadline, cancellationToken));
       }

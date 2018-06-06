@@ -20,9 +20,6 @@
 #pragma warning disable 1591
 #region Designer generated code
 
-using System;
-using System.Threading;
-using System.Threading.Tasks;
 using grpc = global::Grpc.Core;
 
 namespace Google.Cloud.Debugger.V2 {
@@ -192,7 +189,7 @@ namespace Google.Cloud.Debugger.V2 {
       /// <param name="deadline">An optional deadline for the call. The call will be cancelled if deadline is hit.</param>
       /// <param name="cancellationToken">An optional token for canceling the call.</param>
       /// <returns>The response received from the server.</returns>
-      public virtual global::Google.Cloud.Debugger.V2.RegisterDebuggeeResponse RegisterDebuggee(global::Google.Cloud.Debugger.V2.RegisterDebuggeeRequest request, grpc::Metadata headers = null, DateTime? deadline = null, CancellationToken cancellationToken = default(CancellationToken))
+      public virtual global::Google.Cloud.Debugger.V2.RegisterDebuggeeResponse RegisterDebuggee(global::Google.Cloud.Debugger.V2.RegisterDebuggeeRequest request, grpc::Metadata headers = null, global::System.DateTime? deadline = null, global::System.Threading.CancellationToken cancellationToken = default(global::System.Threading.CancellationToken))
       {
         return RegisterDebuggee(request, new grpc::CallOptions(headers, deadline, cancellationToken));
       }
@@ -232,7 +229,7 @@ namespace Google.Cloud.Debugger.V2 {
       /// <param name="deadline">An optional deadline for the call. The call will be cancelled if deadline is hit.</param>
       /// <param name="cancellationToken">An optional token for canceling the call.</param>
       /// <returns>The call object.</returns>
-      public virtual grpc::AsyncUnaryCall<global::Google.Cloud.Debugger.V2.RegisterDebuggeeResponse> RegisterDebuggeeAsync(global::Google.Cloud.Debugger.V2.RegisterDebuggeeRequest request, grpc::Metadata headers = null, DateTime? deadline = null, CancellationToken cancellationToken = default(CancellationToken))
+      public virtual grpc::AsyncUnaryCall<global::Google.Cloud.Debugger.V2.RegisterDebuggeeResponse> RegisterDebuggeeAsync(global::Google.Cloud.Debugger.V2.RegisterDebuggeeRequest request, grpc::Metadata headers = null, global::System.DateTime? deadline = null, global::System.Threading.CancellationToken cancellationToken = default(global::System.Threading.CancellationToken))
       {
         return RegisterDebuggeeAsync(request, new grpc::CallOptions(headers, deadline, cancellationToken));
       }
@@ -275,7 +272,7 @@ namespace Google.Cloud.Debugger.V2 {
       /// <param name="deadline">An optional deadline for the call. The call will be cancelled if deadline is hit.</param>
       /// <param name="cancellationToken">An optional token for canceling the call.</param>
       /// <returns>The response received from the server.</returns>
-      public virtual global::Google.Cloud.Debugger.V2.ListActiveBreakpointsResponse ListActiveBreakpoints(global::Google.Cloud.Debugger.V2.ListActiveBreakpointsRequest request, grpc::Metadata headers = null, DateTime? deadline = null, CancellationToken cancellationToken = default(CancellationToken))
+      public virtual global::Google.Cloud.Debugger.V2.ListActiveBreakpointsResponse ListActiveBreakpoints(global::Google.Cloud.Debugger.V2.ListActiveBreakpointsRequest request, grpc::Metadata headers = null, global::System.DateTime? deadline = null, global::System.Threading.CancellationToken cancellationToken = default(global::System.Threading.CancellationToken))
       {
         return ListActiveBreakpoints(request, new grpc::CallOptions(headers, deadline, cancellationToken));
       }
@@ -321,7 +318,7 @@ namespace Google.Cloud.Debugger.V2 {
       /// <param name="deadline">An optional deadline for the call. The call will be cancelled if deadline is hit.</param>
       /// <param name="cancellationToken">An optional token for canceling the call.</param>
       /// <returns>The call object.</returns>
-      public virtual grpc::AsyncUnaryCall<global::Google.Cloud.Debugger.V2.ListActiveBreakpointsResponse> ListActiveBreakpointsAsync(global::Google.Cloud.Debugger.V2.ListActiveBreakpointsRequest request, grpc::Metadata headers = null, DateTime? deadline = null, CancellationToken cancellationToken = default(CancellationToken))
+      public virtual grpc::AsyncUnaryCall<global::Google.Cloud.Debugger.V2.ListActiveBreakpointsResponse> ListActiveBreakpointsAsync(global::Google.Cloud.Debugger.V2.ListActiveBreakpointsRequest request, grpc::Metadata headers = null, global::System.DateTime? deadline = null, global::System.Threading.CancellationToken cancellationToken = default(global::System.Threading.CancellationToken))
       {
         return ListActiveBreakpointsAsync(request, new grpc::CallOptions(headers, deadline, cancellationToken));
       }
@@ -362,7 +359,7 @@ namespace Google.Cloud.Debugger.V2 {
       /// <param name="deadline">An optional deadline for the call. The call will be cancelled if deadline is hit.</param>
       /// <param name="cancellationToken">An optional token for canceling the call.</param>
       /// <returns>The response received from the server.</returns>
-      public virtual global::Google.Cloud.Debugger.V2.UpdateActiveBreakpointResponse UpdateActiveBreakpoint(global::Google.Cloud.Debugger.V2.UpdateActiveBreakpointRequest request, grpc::Metadata headers = null, DateTime? deadline = null, CancellationToken cancellationToken = default(CancellationToken))
+      public virtual global::Google.Cloud.Debugger.V2.UpdateActiveBreakpointResponse UpdateActiveBreakpoint(global::Google.Cloud.Debugger.V2.UpdateActiveBreakpointRequest request, grpc::Metadata headers = null, global::System.DateTime? deadline = null, global::System.Threading.CancellationToken cancellationToken = default(global::System.Threading.CancellationToken))
       {
         return UpdateActiveBreakpoint(request, new grpc::CallOptions(headers, deadline, cancellationToken));
       }
@@ -398,7 +395,7 @@ namespace Google.Cloud.Debugger.V2 {
       /// <param name="deadline">An optional deadline for the call. The call will be cancelled if deadline is hit.</param>
       /// <param name="cancellationToken">An optional token for canceling the call.</param>
       /// <returns>The call object.</returns>
-      public virtual grpc::AsyncUnaryCall<global::Google.Cloud.Debugger.V2.UpdateActiveBreakpointResponse> UpdateActiveBreakpointAsync(global::Google.Cloud.Debugger.V2.UpdateActiveBreakpointRequest request, grpc::Metadata headers = null, DateTime? deadline = null, CancellationToken cancellationToken = default(CancellationToken))
+      public virtual grpc::AsyncUnaryCall<global::Google.Cloud.Debugger.V2.UpdateActiveBreakpointResponse> UpdateActiveBreakpointAsync(global::Google.Cloud.Debugger.V2.UpdateActiveBreakpointRequest request, grpc::Metadata headers = null, global::System.DateTime? deadline = null, global::System.Threading.CancellationToken cancellationToken = default(global::System.Threading.CancellationToken))
       {
         return UpdateActiveBreakpointAsync(request, new grpc::CallOptions(headers, deadline, cancellationToken));
       }

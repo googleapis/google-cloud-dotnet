@@ -20,9 +20,6 @@
 #pragma warning disable 1591
 #region Designer generated code
 
-using System;
-using System.Threading;
-using System.Threading.Tasks;
 using grpc = global::Grpc.Core;
 
 namespace Google.Cloud.Tasks.V2Beta2 {
@@ -641,7 +638,7 @@ namespace Google.Cloud.Tasks.V2Beta2 {
       /// <param name="deadline">An optional deadline for the call. The call will be cancelled if deadline is hit.</param>
       /// <param name="cancellationToken">An optional token for canceling the call.</param>
       /// <returns>The response received from the server.</returns>
-      public virtual global::Google.Cloud.Tasks.V2Beta2.ListQueuesResponse ListQueues(global::Google.Cloud.Tasks.V2Beta2.ListQueuesRequest request, grpc::Metadata headers = null, DateTime? deadline = null, CancellationToken cancellationToken = default(CancellationToken))
+      public virtual global::Google.Cloud.Tasks.V2Beta2.ListQueuesResponse ListQueues(global::Google.Cloud.Tasks.V2Beta2.ListQueuesRequest request, grpc::Metadata headers = null, global::System.DateTime? deadline = null, global::System.Threading.CancellationToken cancellationToken = default(global::System.Threading.CancellationToken))
       {
         return ListQueues(request, new grpc::CallOptions(headers, deadline, cancellationToken));
       }
@@ -667,7 +664,7 @@ namespace Google.Cloud.Tasks.V2Beta2 {
       /// <param name="deadline">An optional deadline for the call. The call will be cancelled if deadline is hit.</param>
       /// <param name="cancellationToken">An optional token for canceling the call.</param>
       /// <returns>The call object.</returns>
-      public virtual grpc::AsyncUnaryCall<global::Google.Cloud.Tasks.V2Beta2.ListQueuesResponse> ListQueuesAsync(global::Google.Cloud.Tasks.V2Beta2.ListQueuesRequest request, grpc::Metadata headers = null, DateTime? deadline = null, CancellationToken cancellationToken = default(CancellationToken))
+      public virtual grpc::AsyncUnaryCall<global::Google.Cloud.Tasks.V2Beta2.ListQueuesResponse> ListQueuesAsync(global::Google.Cloud.Tasks.V2Beta2.ListQueuesRequest request, grpc::Metadata headers = null, global::System.DateTime? deadline = null, global::System.Threading.CancellationToken cancellationToken = default(global::System.Threading.CancellationToken))
       {
         return ListQueuesAsync(request, new grpc::CallOptions(headers, deadline, cancellationToken));
       }
@@ -691,7 +688,7 @@ namespace Google.Cloud.Tasks.V2Beta2 {
       /// <param name="deadline">An optional deadline for the call. The call will be cancelled if deadline is hit.</param>
       /// <param name="cancellationToken">An optional token for canceling the call.</param>
       /// <returns>The response received from the server.</returns>
-      public virtual global::Google.Cloud.Tasks.V2Beta2.Queue GetQueue(global::Google.Cloud.Tasks.V2Beta2.GetQueueRequest request, grpc::Metadata headers = null, DateTime? deadline = null, CancellationToken cancellationToken = default(CancellationToken))
+      public virtual global::Google.Cloud.Tasks.V2Beta2.Queue GetQueue(global::Google.Cloud.Tasks.V2Beta2.GetQueueRequest request, grpc::Metadata headers = null, global::System.DateTime? deadline = null, global::System.Threading.CancellationToken cancellationToken = default(global::System.Threading.CancellationToken))
       {
         return GetQueue(request, new grpc::CallOptions(headers, deadline, cancellationToken));
       }
@@ -713,7 +710,7 @@ namespace Google.Cloud.Tasks.V2Beta2 {
       /// <param name="deadline">An optional deadline for the call. The call will be cancelled if deadline is hit.</param>
       /// <param name="cancellationToken">An optional token for canceling the call.</param>
       /// <returns>The call object.</returns>
-      public virtual grpc::AsyncUnaryCall<global::Google.Cloud.Tasks.V2Beta2.Queue> GetQueueAsync(global::Google.Cloud.Tasks.V2Beta2.GetQueueRequest request, grpc::Metadata headers = null, DateTime? deadline = null, CancellationToken cancellationToken = default(CancellationToken))
+      public virtual grpc::AsyncUnaryCall<global::Google.Cloud.Tasks.V2Beta2.Queue> GetQueueAsync(global::Google.Cloud.Tasks.V2Beta2.GetQueueRequest request, grpc::Metadata headers = null, global::System.DateTime? deadline = null, global::System.Threading.CancellationToken cancellationToken = default(global::System.Threading.CancellationToken))
       {
         return GetQueueAsync(request, new grpc::CallOptions(headers, deadline, cancellationToken));
       }
@@ -745,7 +742,7 @@ namespace Google.Cloud.Tasks.V2Beta2 {
       /// <param name="deadline">An optional deadline for the call. The call will be cancelled if deadline is hit.</param>
       /// <param name="cancellationToken">An optional token for canceling the call.</param>
       /// <returns>The response received from the server.</returns>
-      public virtual global::Google.Cloud.Tasks.V2Beta2.Queue CreateQueue(global::Google.Cloud.Tasks.V2Beta2.CreateQueueRequest request, grpc::Metadata headers = null, DateTime? deadline = null, CancellationToken cancellationToken = default(CancellationToken))
+      public virtual global::Google.Cloud.Tasks.V2Beta2.Queue CreateQueue(global::Google.Cloud.Tasks.V2Beta2.CreateQueueRequest request, grpc::Metadata headers = null, global::System.DateTime? deadline = null, global::System.Threading.CancellationToken cancellationToken = default(global::System.Threading.CancellationToken))
       {
         return CreateQueue(request, new grpc::CallOptions(headers, deadline, cancellationToken));
       }
@@ -787,7 +784,7 @@ namespace Google.Cloud.Tasks.V2Beta2 {
       /// <param name="deadline">An optional deadline for the call. The call will be cancelled if deadline is hit.</param>
       /// <param name="cancellationToken">An optional token for canceling the call.</param>
       /// <returns>The call object.</returns>
-      public virtual grpc::AsyncUnaryCall<global::Google.Cloud.Tasks.V2Beta2.Queue> CreateQueueAsync(global::Google.Cloud.Tasks.V2Beta2.CreateQueueRequest request, grpc::Metadata headers = null, DateTime? deadline = null, CancellationToken cancellationToken = default(CancellationToken))
+      public virtual grpc::AsyncUnaryCall<global::Google.Cloud.Tasks.V2Beta2.Queue> CreateQueueAsync(global::Google.Cloud.Tasks.V2Beta2.CreateQueueRequest request, grpc::Metadata headers = null, global::System.DateTime? deadline = null, global::System.Threading.CancellationToken cancellationToken = default(global::System.Threading.CancellationToken))
       {
         return CreateQueueAsync(request, new grpc::CallOptions(headers, deadline, cancellationToken));
       }
@@ -832,7 +829,7 @@ namespace Google.Cloud.Tasks.V2Beta2 {
       /// <param name="deadline">An optional deadline for the call. The call will be cancelled if deadline is hit.</param>
       /// <param name="cancellationToken">An optional token for canceling the call.</param>
       /// <returns>The response received from the server.</returns>
-      public virtual global::Google.Cloud.Tasks.V2Beta2.Queue UpdateQueue(global::Google.Cloud.Tasks.V2Beta2.UpdateQueueRequest request, grpc::Metadata headers = null, DateTime? deadline = null, CancellationToken cancellationToken = default(CancellationToken))
+      public virtual global::Google.Cloud.Tasks.V2Beta2.Queue UpdateQueue(global::Google.Cloud.Tasks.V2Beta2.UpdateQueueRequest request, grpc::Metadata headers = null, global::System.DateTime? deadline = null, global::System.Threading.CancellationToken cancellationToken = default(global::System.Threading.CancellationToken))
       {
         return UpdateQueue(request, new grpc::CallOptions(headers, deadline, cancellationToken));
       }
@@ -880,7 +877,7 @@ namespace Google.Cloud.Tasks.V2Beta2 {
       /// <param name="deadline">An optional deadline for the call. The call will be cancelled if deadline is hit.</param>
       /// <param name="cancellationToken">An optional token for canceling the call.</param>
       /// <returns>The call object.</returns>
-      public virtual grpc::AsyncUnaryCall<global::Google.Cloud.Tasks.V2Beta2.Queue> UpdateQueueAsync(global::Google.Cloud.Tasks.V2Beta2.UpdateQueueRequest request, grpc::Metadata headers = null, DateTime? deadline = null, CancellationToken cancellationToken = default(CancellationToken))
+      public virtual grpc::AsyncUnaryCall<global::Google.Cloud.Tasks.V2Beta2.Queue> UpdateQueueAsync(global::Google.Cloud.Tasks.V2Beta2.UpdateQueueRequest request, grpc::Metadata headers = null, global::System.DateTime? deadline = null, global::System.Threading.CancellationToken cancellationToken = default(global::System.Threading.CancellationToken))
       {
         return UpdateQueueAsync(request, new grpc::CallOptions(headers, deadline, cancellationToken));
       }
@@ -926,7 +923,7 @@ namespace Google.Cloud.Tasks.V2Beta2 {
       /// <param name="deadline">An optional deadline for the call. The call will be cancelled if deadline is hit.</param>
       /// <param name="cancellationToken">An optional token for canceling the call.</param>
       /// <returns>The response received from the server.</returns>
-      public virtual global::Google.Protobuf.WellKnownTypes.Empty DeleteQueue(global::Google.Cloud.Tasks.V2Beta2.DeleteQueueRequest request, grpc::Metadata headers = null, DateTime? deadline = null, CancellationToken cancellationToken = default(CancellationToken))
+      public virtual global::Google.Protobuf.WellKnownTypes.Empty DeleteQueue(global::Google.Cloud.Tasks.V2Beta2.DeleteQueueRequest request, grpc::Metadata headers = null, global::System.DateTime? deadline = null, global::System.Threading.CancellationToken cancellationToken = default(global::System.Threading.CancellationToken))
       {
         return DeleteQueue(request, new grpc::CallOptions(headers, deadline, cancellationToken));
       }
@@ -970,7 +967,7 @@ namespace Google.Cloud.Tasks.V2Beta2 {
       /// <param name="deadline">An optional deadline for the call. The call will be cancelled if deadline is hit.</param>
       /// <param name="cancellationToken">An optional token for canceling the call.</param>
       /// <returns>The call object.</returns>
-      public virtual grpc::AsyncUnaryCall<global::Google.Protobuf.WellKnownTypes.Empty> DeleteQueueAsync(global::Google.Cloud.Tasks.V2Beta2.DeleteQueueRequest request, grpc::Metadata headers = null, DateTime? deadline = null, CancellationToken cancellationToken = default(CancellationToken))
+      public virtual grpc::AsyncUnaryCall<global::Google.Protobuf.WellKnownTypes.Empty> DeleteQueueAsync(global::Google.Cloud.Tasks.V2Beta2.DeleteQueueRequest request, grpc::Metadata headers = null, global::System.DateTime? deadline = null, global::System.Threading.CancellationToken cancellationToken = default(global::System.Threading.CancellationToken))
       {
         return DeleteQueueAsync(request, new grpc::CallOptions(headers, deadline, cancellationToken));
       }
@@ -1008,7 +1005,7 @@ namespace Google.Cloud.Tasks.V2Beta2 {
       /// <param name="deadline">An optional deadline for the call. The call will be cancelled if deadline is hit.</param>
       /// <param name="cancellationToken">An optional token for canceling the call.</param>
       /// <returns>The response received from the server.</returns>
-      public virtual global::Google.Cloud.Tasks.V2Beta2.Queue PurgeQueue(global::Google.Cloud.Tasks.V2Beta2.PurgeQueueRequest request, grpc::Metadata headers = null, DateTime? deadline = null, CancellationToken cancellationToken = default(CancellationToken))
+      public virtual global::Google.Cloud.Tasks.V2Beta2.Queue PurgeQueue(global::Google.Cloud.Tasks.V2Beta2.PurgeQueueRequest request, grpc::Metadata headers = null, global::System.DateTime? deadline = null, global::System.Threading.CancellationToken cancellationToken = default(global::System.Threading.CancellationToken))
       {
         return PurgeQueue(request, new grpc::CallOptions(headers, deadline, cancellationToken));
       }
@@ -1040,7 +1037,7 @@ namespace Google.Cloud.Tasks.V2Beta2 {
       /// <param name="deadline">An optional deadline for the call. The call will be cancelled if deadline is hit.</param>
       /// <param name="cancellationToken">An optional token for canceling the call.</param>
       /// <returns>The call object.</returns>
-      public virtual grpc::AsyncUnaryCall<global::Google.Cloud.Tasks.V2Beta2.Queue> PurgeQueueAsync(global::Google.Cloud.Tasks.V2Beta2.PurgeQueueRequest request, grpc::Metadata headers = null, DateTime? deadline = null, CancellationToken cancellationToken = default(CancellationToken))
+      public virtual grpc::AsyncUnaryCall<global::Google.Cloud.Tasks.V2Beta2.Queue> PurgeQueueAsync(global::Google.Cloud.Tasks.V2Beta2.PurgeQueueRequest request, grpc::Metadata headers = null, global::System.DateTime? deadline = null, global::System.Threading.CancellationToken cancellationToken = default(global::System.Threading.CancellationToken))
       {
         return PurgeQueueAsync(request, new grpc::CallOptions(headers, deadline, cancellationToken));
       }
@@ -1073,7 +1070,7 @@ namespace Google.Cloud.Tasks.V2Beta2 {
       /// <param name="deadline">An optional deadline for the call. The call will be cancelled if deadline is hit.</param>
       /// <param name="cancellationToken">An optional token for canceling the call.</param>
       /// <returns>The response received from the server.</returns>
-      public virtual global::Google.Cloud.Tasks.V2Beta2.Queue PauseQueue(global::Google.Cloud.Tasks.V2Beta2.PauseQueueRequest request, grpc::Metadata headers = null, DateTime? deadline = null, CancellationToken cancellationToken = default(CancellationToken))
+      public virtual global::Google.Cloud.Tasks.V2Beta2.Queue PauseQueue(global::Google.Cloud.Tasks.V2Beta2.PauseQueueRequest request, grpc::Metadata headers = null, global::System.DateTime? deadline = null, global::System.Threading.CancellationToken cancellationToken = default(global::System.Threading.CancellationToken))
       {
         return PauseQueue(request, new grpc::CallOptions(headers, deadline, cancellationToken));
       }
@@ -1107,7 +1104,7 @@ namespace Google.Cloud.Tasks.V2Beta2 {
       /// <param name="deadline">An optional deadline for the call. The call will be cancelled if deadline is hit.</param>
       /// <param name="cancellationToken">An optional token for canceling the call.</param>
       /// <returns>The call object.</returns>
-      public virtual grpc::AsyncUnaryCall<global::Google.Cloud.Tasks.V2Beta2.Queue> PauseQueueAsync(global::Google.Cloud.Tasks.V2Beta2.PauseQueueRequest request, grpc::Metadata headers = null, DateTime? deadline = null, CancellationToken cancellationToken = default(CancellationToken))
+      public virtual grpc::AsyncUnaryCall<global::Google.Cloud.Tasks.V2Beta2.Queue> PauseQueueAsync(global::Google.Cloud.Tasks.V2Beta2.PauseQueueRequest request, grpc::Metadata headers = null, global::System.DateTime? deadline = null, global::System.Threading.CancellationToken cancellationToken = default(global::System.Threading.CancellationToken))
       {
         return PauseQueueAsync(request, new grpc::CallOptions(headers, deadline, cancellationToken));
       }
@@ -1146,7 +1143,7 @@ namespace Google.Cloud.Tasks.V2Beta2 {
       /// <param name="deadline">An optional deadline for the call. The call will be cancelled if deadline is hit.</param>
       /// <param name="cancellationToken">An optional token for canceling the call.</param>
       /// <returns>The response received from the server.</returns>
-      public virtual global::Google.Cloud.Tasks.V2Beta2.Queue ResumeQueue(global::Google.Cloud.Tasks.V2Beta2.ResumeQueueRequest request, grpc::Metadata headers = null, DateTime? deadline = null, CancellationToken cancellationToken = default(CancellationToken))
+      public virtual global::Google.Cloud.Tasks.V2Beta2.Queue ResumeQueue(global::Google.Cloud.Tasks.V2Beta2.ResumeQueueRequest request, grpc::Metadata headers = null, global::System.DateTime? deadline = null, global::System.Threading.CancellationToken cancellationToken = default(global::System.Threading.CancellationToken))
       {
         return ResumeQueue(request, new grpc::CallOptions(headers, deadline, cancellationToken));
       }
@@ -1190,7 +1187,7 @@ namespace Google.Cloud.Tasks.V2Beta2 {
       /// <param name="deadline">An optional deadline for the call. The call will be cancelled if deadline is hit.</param>
       /// <param name="cancellationToken">An optional token for canceling the call.</param>
       /// <returns>The call object.</returns>
-      public virtual grpc::AsyncUnaryCall<global::Google.Cloud.Tasks.V2Beta2.Queue> ResumeQueueAsync(global::Google.Cloud.Tasks.V2Beta2.ResumeQueueRequest request, grpc::Metadata headers = null, DateTime? deadline = null, CancellationToken cancellationToken = default(CancellationToken))
+      public virtual grpc::AsyncUnaryCall<global::Google.Cloud.Tasks.V2Beta2.Queue> ResumeQueueAsync(global::Google.Cloud.Tasks.V2Beta2.ResumeQueueRequest request, grpc::Metadata headers = null, global::System.DateTime? deadline = null, global::System.Threading.CancellationToken cancellationToken = default(global::System.Threading.CancellationToken))
       {
         return ResumeQueueAsync(request, new grpc::CallOptions(headers, deadline, cancellationToken));
       }
@@ -1230,7 +1227,7 @@ namespace Google.Cloud.Tasks.V2Beta2 {
       /// <param name="deadline">An optional deadline for the call. The call will be cancelled if deadline is hit.</param>
       /// <param name="cancellationToken">An optional token for canceling the call.</param>
       /// <returns>The response received from the server.</returns>
-      public virtual global::Google.Cloud.Iam.V1.Policy GetIamPolicy(global::Google.Cloud.Iam.V1.GetIamPolicyRequest request, grpc::Metadata headers = null, DateTime? deadline = null, CancellationToken cancellationToken = default(CancellationToken))
+      public virtual global::Google.Cloud.Iam.V1.Policy GetIamPolicy(global::Google.Cloud.Iam.V1.GetIamPolicyRequest request, grpc::Metadata headers = null, global::System.DateTime? deadline = null, global::System.Threading.CancellationToken cancellationToken = default(global::System.Threading.CancellationToken))
       {
         return GetIamPolicy(request, new grpc::CallOptions(headers, deadline, cancellationToken));
       }
@@ -1266,7 +1263,7 @@ namespace Google.Cloud.Tasks.V2Beta2 {
       /// <param name="deadline">An optional deadline for the call. The call will be cancelled if deadline is hit.</param>
       /// <param name="cancellationToken">An optional token for canceling the call.</param>
       /// <returns>The call object.</returns>
-      public virtual grpc::AsyncUnaryCall<global::Google.Cloud.Iam.V1.Policy> GetIamPolicyAsync(global::Google.Cloud.Iam.V1.GetIamPolicyRequest request, grpc::Metadata headers = null, DateTime? deadline = null, CancellationToken cancellationToken = default(CancellationToken))
+      public virtual grpc::AsyncUnaryCall<global::Google.Cloud.Iam.V1.Policy> GetIamPolicyAsync(global::Google.Cloud.Iam.V1.GetIamPolicyRequest request, grpc::Metadata headers = null, global::System.DateTime? deadline = null, global::System.Threading.CancellationToken cancellationToken = default(global::System.Threading.CancellationToken))
       {
         return GetIamPolicyAsync(request, new grpc::CallOptions(headers, deadline, cancellationToken));
       }
@@ -1304,7 +1301,7 @@ namespace Google.Cloud.Tasks.V2Beta2 {
       /// <param name="deadline">An optional deadline for the call. The call will be cancelled if deadline is hit.</param>
       /// <param name="cancellationToken">An optional token for canceling the call.</param>
       /// <returns>The response received from the server.</returns>
-      public virtual global::Google.Cloud.Iam.V1.Policy SetIamPolicy(global::Google.Cloud.Iam.V1.SetIamPolicyRequest request, grpc::Metadata headers = null, DateTime? deadline = null, CancellationToken cancellationToken = default(CancellationToken))
+      public virtual global::Google.Cloud.Iam.V1.Policy SetIamPolicy(global::Google.Cloud.Iam.V1.SetIamPolicyRequest request, grpc::Metadata headers = null, global::System.DateTime? deadline = null, global::System.Threading.CancellationToken cancellationToken = default(global::System.Threading.CancellationToken))
       {
         return SetIamPolicy(request, new grpc::CallOptions(headers, deadline, cancellationToken));
       }
@@ -1344,7 +1341,7 @@ namespace Google.Cloud.Tasks.V2Beta2 {
       /// <param name="deadline">An optional deadline for the call. The call will be cancelled if deadline is hit.</param>
       /// <param name="cancellationToken">An optional token for canceling the call.</param>
       /// <returns>The call object.</returns>
-      public virtual grpc::AsyncUnaryCall<global::Google.Cloud.Iam.V1.Policy> SetIamPolicyAsync(global::Google.Cloud.Iam.V1.SetIamPolicyRequest request, grpc::Metadata headers = null, DateTime? deadline = null, CancellationToken cancellationToken = default(CancellationToken))
+      public virtual grpc::AsyncUnaryCall<global::Google.Cloud.Iam.V1.Policy> SetIamPolicyAsync(global::Google.Cloud.Iam.V1.SetIamPolicyRequest request, grpc::Metadata headers = null, global::System.DateTime? deadline = null, global::System.Threading.CancellationToken cancellationToken = default(global::System.Threading.CancellationToken))
       {
         return SetIamPolicyAsync(request, new grpc::CallOptions(headers, deadline, cancellationToken));
       }
@@ -1381,7 +1378,7 @@ namespace Google.Cloud.Tasks.V2Beta2 {
       /// <param name="deadline">An optional deadline for the call. The call will be cancelled if deadline is hit.</param>
       /// <param name="cancellationToken">An optional token for canceling the call.</param>
       /// <returns>The response received from the server.</returns>
-      public virtual global::Google.Cloud.Iam.V1.TestIamPermissionsResponse TestIamPermissions(global::Google.Cloud.Iam.V1.TestIamPermissionsRequest request, grpc::Metadata headers = null, DateTime? deadline = null, CancellationToken cancellationToken = default(CancellationToken))
+      public virtual global::Google.Cloud.Iam.V1.TestIamPermissionsResponse TestIamPermissions(global::Google.Cloud.Iam.V1.TestIamPermissionsRequest request, grpc::Metadata headers = null, global::System.DateTime? deadline = null, global::System.Threading.CancellationToken cancellationToken = default(global::System.Threading.CancellationToken))
       {
         return TestIamPermissions(request, new grpc::CallOptions(headers, deadline, cancellationToken));
       }
@@ -1415,7 +1412,7 @@ namespace Google.Cloud.Tasks.V2Beta2 {
       /// <param name="deadline">An optional deadline for the call. The call will be cancelled if deadline is hit.</param>
       /// <param name="cancellationToken">An optional token for canceling the call.</param>
       /// <returns>The call object.</returns>
-      public virtual grpc::AsyncUnaryCall<global::Google.Cloud.Iam.V1.TestIamPermissionsResponse> TestIamPermissionsAsync(global::Google.Cloud.Iam.V1.TestIamPermissionsRequest request, grpc::Metadata headers = null, DateTime? deadline = null, CancellationToken cancellationToken = default(CancellationToken))
+      public virtual grpc::AsyncUnaryCall<global::Google.Cloud.Iam.V1.TestIamPermissionsResponse> TestIamPermissionsAsync(global::Google.Cloud.Iam.V1.TestIamPermissionsRequest request, grpc::Metadata headers = null, global::System.DateTime? deadline = null, global::System.Threading.CancellationToken cancellationToken = default(global::System.Threading.CancellationToken))
       {
         return TestIamPermissionsAsync(request, new grpc::CallOptions(headers, deadline, cancellationToken));
       }
@@ -1448,7 +1445,7 @@ namespace Google.Cloud.Tasks.V2Beta2 {
       /// <param name="deadline">An optional deadline for the call. The call will be cancelled if deadline is hit.</param>
       /// <param name="cancellationToken">An optional token for canceling the call.</param>
       /// <returns>The response received from the server.</returns>
-      public virtual global::Google.Cloud.Tasks.V2Beta2.ListTasksResponse ListTasks(global::Google.Cloud.Tasks.V2Beta2.ListTasksRequest request, grpc::Metadata headers = null, DateTime? deadline = null, CancellationToken cancellationToken = default(CancellationToken))
+      public virtual global::Google.Cloud.Tasks.V2Beta2.ListTasksResponse ListTasks(global::Google.Cloud.Tasks.V2Beta2.ListTasksRequest request, grpc::Metadata headers = null, global::System.DateTime? deadline = null, global::System.Threading.CancellationToken cancellationToken = default(global::System.Threading.CancellationToken))
       {
         return ListTasks(request, new grpc::CallOptions(headers, deadline, cancellationToken));
       }
@@ -1480,7 +1477,7 @@ namespace Google.Cloud.Tasks.V2Beta2 {
       /// <param name="deadline">An optional deadline for the call. The call will be cancelled if deadline is hit.</param>
       /// <param name="cancellationToken">An optional token for canceling the call.</param>
       /// <returns>The call object.</returns>
-      public virtual grpc::AsyncUnaryCall<global::Google.Cloud.Tasks.V2Beta2.ListTasksResponse> ListTasksAsync(global::Google.Cloud.Tasks.V2Beta2.ListTasksRequest request, grpc::Metadata headers = null, DateTime? deadline = null, CancellationToken cancellationToken = default(CancellationToken))
+      public virtual grpc::AsyncUnaryCall<global::Google.Cloud.Tasks.V2Beta2.ListTasksResponse> ListTasksAsync(global::Google.Cloud.Tasks.V2Beta2.ListTasksRequest request, grpc::Metadata headers = null, global::System.DateTime? deadline = null, global::System.Threading.CancellationToken cancellationToken = default(global::System.Threading.CancellationToken))
       {
         return ListTasksAsync(request, new grpc::CallOptions(headers, deadline, cancellationToken));
       }
@@ -1507,7 +1504,7 @@ namespace Google.Cloud.Tasks.V2Beta2 {
       /// <param name="deadline">An optional deadline for the call. The call will be cancelled if deadline is hit.</param>
       /// <param name="cancellationToken">An optional token for canceling the call.</param>
       /// <returns>The response received from the server.</returns>
-      public virtual global::Google.Cloud.Tasks.V2Beta2.Task GetTask(global::Google.Cloud.Tasks.V2Beta2.GetTaskRequest request, grpc::Metadata headers = null, DateTime? deadline = null, CancellationToken cancellationToken = default(CancellationToken))
+      public virtual global::Google.Cloud.Tasks.V2Beta2.Task GetTask(global::Google.Cloud.Tasks.V2Beta2.GetTaskRequest request, grpc::Metadata headers = null, global::System.DateTime? deadline = null, global::System.Threading.CancellationToken cancellationToken = default(global::System.Threading.CancellationToken))
       {
         return GetTask(request, new grpc::CallOptions(headers, deadline, cancellationToken));
       }
@@ -1529,7 +1526,7 @@ namespace Google.Cloud.Tasks.V2Beta2 {
       /// <param name="deadline">An optional deadline for the call. The call will be cancelled if deadline is hit.</param>
       /// <param name="cancellationToken">An optional token for canceling the call.</param>
       /// <returns>The call object.</returns>
-      public virtual grpc::AsyncUnaryCall<global::Google.Cloud.Tasks.V2Beta2.Task> GetTaskAsync(global::Google.Cloud.Tasks.V2Beta2.GetTaskRequest request, grpc::Metadata headers = null, DateTime? deadline = null, CancellationToken cancellationToken = default(CancellationToken))
+      public virtual grpc::AsyncUnaryCall<global::Google.Cloud.Tasks.V2Beta2.Task> GetTaskAsync(global::Google.Cloud.Tasks.V2Beta2.GetTaskRequest request, grpc::Metadata headers = null, global::System.DateTime? deadline = null, global::System.Threading.CancellationToken cancellationToken = default(global::System.Threading.CancellationToken))
       {
         return GetTaskAsync(request, new grpc::CallOptions(headers, deadline, cancellationToken));
       }
@@ -1563,7 +1560,7 @@ namespace Google.Cloud.Tasks.V2Beta2 {
       /// <param name="deadline">An optional deadline for the call. The call will be cancelled if deadline is hit.</param>
       /// <param name="cancellationToken">An optional token for canceling the call.</param>
       /// <returns>The response received from the server.</returns>
-      public virtual global::Google.Cloud.Tasks.V2Beta2.Task CreateTask(global::Google.Cloud.Tasks.V2Beta2.CreateTaskRequest request, grpc::Metadata headers = null, DateTime? deadline = null, CancellationToken cancellationToken = default(CancellationToken))
+      public virtual global::Google.Cloud.Tasks.V2Beta2.Task CreateTask(global::Google.Cloud.Tasks.V2Beta2.CreateTaskRequest request, grpc::Metadata headers = null, global::System.DateTime? deadline = null, global::System.Threading.CancellationToken cancellationToken = default(global::System.Threading.CancellationToken))
       {
         return CreateTask(request, new grpc::CallOptions(headers, deadline, cancellationToken));
       }
@@ -1609,7 +1606,7 @@ namespace Google.Cloud.Tasks.V2Beta2 {
       /// <param name="deadline">An optional deadline for the call. The call will be cancelled if deadline is hit.</param>
       /// <param name="cancellationToken">An optional token for canceling the call.</param>
       /// <returns>The call object.</returns>
-      public virtual grpc::AsyncUnaryCall<global::Google.Cloud.Tasks.V2Beta2.Task> CreateTaskAsync(global::Google.Cloud.Tasks.V2Beta2.CreateTaskRequest request, grpc::Metadata headers = null, DateTime? deadline = null, CancellationToken cancellationToken = default(CancellationToken))
+      public virtual grpc::AsyncUnaryCall<global::Google.Cloud.Tasks.V2Beta2.Task> CreateTaskAsync(global::Google.Cloud.Tasks.V2Beta2.CreateTaskRequest request, grpc::Metadata headers = null, global::System.DateTime? deadline = null, global::System.Threading.CancellationToken cancellationToken = default(global::System.Threading.CancellationToken))
       {
         return CreateTaskAsync(request, new grpc::CallOptions(headers, deadline, cancellationToken));
       }
@@ -1647,7 +1644,7 @@ namespace Google.Cloud.Tasks.V2Beta2 {
       /// <param name="deadline">An optional deadline for the call. The call will be cancelled if deadline is hit.</param>
       /// <param name="cancellationToken">An optional token for canceling the call.</param>
       /// <returns>The response received from the server.</returns>
-      public virtual global::Google.Protobuf.WellKnownTypes.Empty DeleteTask(global::Google.Cloud.Tasks.V2Beta2.DeleteTaskRequest request, grpc::Metadata headers = null, DateTime? deadline = null, CancellationToken cancellationToken = default(CancellationToken))
+      public virtual global::Google.Protobuf.WellKnownTypes.Empty DeleteTask(global::Google.Cloud.Tasks.V2Beta2.DeleteTaskRequest request, grpc::Metadata headers = null, global::System.DateTime? deadline = null, global::System.Threading.CancellationToken cancellationToken = default(global::System.Threading.CancellationToken))
       {
         return DeleteTask(request, new grpc::CallOptions(headers, deadline, cancellationToken));
       }
@@ -1677,7 +1674,7 @@ namespace Google.Cloud.Tasks.V2Beta2 {
       /// <param name="deadline">An optional deadline for the call. The call will be cancelled if deadline is hit.</param>
       /// <param name="cancellationToken">An optional token for canceling the call.</param>
       /// <returns>The call object.</returns>
-      public virtual grpc::AsyncUnaryCall<global::Google.Protobuf.WellKnownTypes.Empty> DeleteTaskAsync(global::Google.Cloud.Tasks.V2Beta2.DeleteTaskRequest request, grpc::Metadata headers = null, DateTime? deadline = null, CancellationToken cancellationToken = default(CancellationToken))
+      public virtual grpc::AsyncUnaryCall<global::Google.Protobuf.WellKnownTypes.Empty> DeleteTaskAsync(global::Google.Cloud.Tasks.V2Beta2.DeleteTaskRequest request, grpc::Metadata headers = null, global::System.DateTime? deadline = null, global::System.Threading.CancellationToken cancellationToken = default(global::System.Threading.CancellationToken))
       {
         return DeleteTaskAsync(request, new grpc::CallOptions(headers, deadline, cancellationToken));
       }
@@ -1724,7 +1721,7 @@ namespace Google.Cloud.Tasks.V2Beta2 {
       /// <param name="deadline">An optional deadline for the call. The call will be cancelled if deadline is hit.</param>
       /// <param name="cancellationToken">An optional token for canceling the call.</param>
       /// <returns>The response received from the server.</returns>
-      public virtual global::Google.Cloud.Tasks.V2Beta2.LeaseTasksResponse LeaseTasks(global::Google.Cloud.Tasks.V2Beta2.LeaseTasksRequest request, grpc::Metadata headers = null, DateTime? deadline = null, CancellationToken cancellationToken = default(CancellationToken))
+      public virtual global::Google.Cloud.Tasks.V2Beta2.LeaseTasksResponse LeaseTasks(global::Google.Cloud.Tasks.V2Beta2.LeaseTasksRequest request, grpc::Metadata headers = null, global::System.DateTime? deadline = null, global::System.Threading.CancellationToken cancellationToken = default(global::System.Threading.CancellationToken))
       {
         return LeaseTasks(request, new grpc::CallOptions(headers, deadline, cancellationToken));
       }
@@ -1788,7 +1785,7 @@ namespace Google.Cloud.Tasks.V2Beta2 {
       /// <param name="deadline">An optional deadline for the call. The call will be cancelled if deadline is hit.</param>
       /// <param name="cancellationToken">An optional token for canceling the call.</param>
       /// <returns>The call object.</returns>
-      public virtual grpc::AsyncUnaryCall<global::Google.Cloud.Tasks.V2Beta2.LeaseTasksResponse> LeaseTasksAsync(global::Google.Cloud.Tasks.V2Beta2.LeaseTasksRequest request, grpc::Metadata headers = null, DateTime? deadline = null, CancellationToken cancellationToken = default(CancellationToken))
+      public virtual grpc::AsyncUnaryCall<global::Google.Cloud.Tasks.V2Beta2.LeaseTasksResponse> LeaseTasksAsync(global::Google.Cloud.Tasks.V2Beta2.LeaseTasksRequest request, grpc::Metadata headers = null, global::System.DateTime? deadline = null, global::System.Threading.CancellationToken cancellationToken = default(global::System.Threading.CancellationToken))
       {
         return LeaseTasksAsync(request, new grpc::CallOptions(headers, deadline, cancellationToken));
       }
@@ -1848,7 +1845,7 @@ namespace Google.Cloud.Tasks.V2Beta2 {
       /// <param name="deadline">An optional deadline for the call. The call will be cancelled if deadline is hit.</param>
       /// <param name="cancellationToken">An optional token for canceling the call.</param>
       /// <returns>The response received from the server.</returns>
-      public virtual global::Google.Protobuf.WellKnownTypes.Empty AcknowledgeTask(global::Google.Cloud.Tasks.V2Beta2.AcknowledgeTaskRequest request, grpc::Metadata headers = null, DateTime? deadline = null, CancellationToken cancellationToken = default(CancellationToken))
+      public virtual global::Google.Protobuf.WellKnownTypes.Empty AcknowledgeTask(global::Google.Cloud.Tasks.V2Beta2.AcknowledgeTaskRequest request, grpc::Metadata headers = null, global::System.DateTime? deadline = null, global::System.Threading.CancellationToken cancellationToken = default(global::System.Threading.CancellationToken))
       {
         return AcknowledgeTask(request, new grpc::CallOptions(headers, deadline, cancellationToken));
       }
@@ -1904,7 +1901,7 @@ namespace Google.Cloud.Tasks.V2Beta2 {
       /// <param name="deadline">An optional deadline for the call. The call will be cancelled if deadline is hit.</param>
       /// <param name="cancellationToken">An optional token for canceling the call.</param>
       /// <returns>The call object.</returns>
-      public virtual grpc::AsyncUnaryCall<global::Google.Protobuf.WellKnownTypes.Empty> AcknowledgeTaskAsync(global::Google.Cloud.Tasks.V2Beta2.AcknowledgeTaskRequest request, grpc::Metadata headers = null, DateTime? deadline = null, CancellationToken cancellationToken = default(CancellationToken))
+      public virtual grpc::AsyncUnaryCall<global::Google.Protobuf.WellKnownTypes.Empty> AcknowledgeTaskAsync(global::Google.Cloud.Tasks.V2Beta2.AcknowledgeTaskRequest request, grpc::Metadata headers = null, global::System.DateTime? deadline = null, global::System.Threading.CancellationToken cancellationToken = default(global::System.Threading.CancellationToken))
       {
         return AcknowledgeTaskAsync(request, new grpc::CallOptions(headers, deadline, cancellationToken));
       }
@@ -1947,7 +1944,7 @@ namespace Google.Cloud.Tasks.V2Beta2 {
       /// <param name="deadline">An optional deadline for the call. The call will be cancelled if deadline is hit.</param>
       /// <param name="cancellationToken">An optional token for canceling the call.</param>
       /// <returns>The response received from the server.</returns>
-      public virtual global::Google.Cloud.Tasks.V2Beta2.Task RenewLease(global::Google.Cloud.Tasks.V2Beta2.RenewLeaseRequest request, grpc::Metadata headers = null, DateTime? deadline = null, CancellationToken cancellationToken = default(CancellationToken))
+      public virtual global::Google.Cloud.Tasks.V2Beta2.Task RenewLease(global::Google.Cloud.Tasks.V2Beta2.RenewLeaseRequest request, grpc::Metadata headers = null, global::System.DateTime? deadline = null, global::System.Threading.CancellationToken cancellationToken = default(global::System.Threading.CancellationToken))
       {
         return RenewLease(request, new grpc::CallOptions(headers, deadline, cancellationToken));
       }
@@ -1977,7 +1974,7 @@ namespace Google.Cloud.Tasks.V2Beta2 {
       /// <param name="deadline">An optional deadline for the call. The call will be cancelled if deadline is hit.</param>
       /// <param name="cancellationToken">An optional token for canceling the call.</param>
       /// <returns>The call object.</returns>
-      public virtual grpc::AsyncUnaryCall<global::Google.Cloud.Tasks.V2Beta2.Task> RenewLeaseAsync(global::Google.Cloud.Tasks.V2Beta2.RenewLeaseRequest request, grpc::Metadata headers = null, DateTime? deadline = null, CancellationToken cancellationToken = default(CancellationToken))
+      public virtual grpc::AsyncUnaryCall<global::Google.Cloud.Tasks.V2Beta2.Task> RenewLeaseAsync(global::Google.Cloud.Tasks.V2Beta2.RenewLeaseRequest request, grpc::Metadata headers = null, global::System.DateTime? deadline = null, global::System.Threading.CancellationToken cancellationToken = default(global::System.Threading.CancellationToken))
       {
         return RenewLeaseAsync(request, new grpc::CallOptions(headers, deadline, cancellationToken));
       }
@@ -2008,7 +2005,7 @@ namespace Google.Cloud.Tasks.V2Beta2 {
       /// <param name="deadline">An optional deadline for the call. The call will be cancelled if deadline is hit.</param>
       /// <param name="cancellationToken">An optional token for canceling the call.</param>
       /// <returns>The response received from the server.</returns>
-      public virtual global::Google.Cloud.Tasks.V2Beta2.Task CancelLease(global::Google.Cloud.Tasks.V2Beta2.CancelLeaseRequest request, grpc::Metadata headers = null, DateTime? deadline = null, CancellationToken cancellationToken = default(CancellationToken))
+      public virtual global::Google.Cloud.Tasks.V2Beta2.Task CancelLease(global::Google.Cloud.Tasks.V2Beta2.CancelLeaseRequest request, grpc::Metadata headers = null, global::System.DateTime? deadline = null, global::System.Threading.CancellationToken cancellationToken = default(global::System.Threading.CancellationToken))
       {
         return CancelLease(request, new grpc::CallOptions(headers, deadline, cancellationToken));
       }
@@ -2040,7 +2037,7 @@ namespace Google.Cloud.Tasks.V2Beta2 {
       /// <param name="deadline">An optional deadline for the call. The call will be cancelled if deadline is hit.</param>
       /// <param name="cancellationToken">An optional token for canceling the call.</param>
       /// <returns>The call object.</returns>
-      public virtual grpc::AsyncUnaryCall<global::Google.Cloud.Tasks.V2Beta2.Task> CancelLeaseAsync(global::Google.Cloud.Tasks.V2Beta2.CancelLeaseRequest request, grpc::Metadata headers = null, DateTime? deadline = null, CancellationToken cancellationToken = default(CancellationToken))
+      public virtual grpc::AsyncUnaryCall<global::Google.Cloud.Tasks.V2Beta2.Task> CancelLeaseAsync(global::Google.Cloud.Tasks.V2Beta2.CancelLeaseRequest request, grpc::Metadata headers = null, global::System.DateTime? deadline = null, global::System.Threading.CancellationToken cancellationToken = default(global::System.Threading.CancellationToken))
       {
         return CancelLeaseAsync(request, new grpc::CallOptions(headers, deadline, cancellationToken));
       }
@@ -2093,7 +2090,7 @@ namespace Google.Cloud.Tasks.V2Beta2 {
       /// <param name="deadline">An optional deadline for the call. The call will be cancelled if deadline is hit.</param>
       /// <param name="cancellationToken">An optional token for canceling the call.</param>
       /// <returns>The response received from the server.</returns>
-      public virtual global::Google.Cloud.Tasks.V2Beta2.Task RunTask(global::Google.Cloud.Tasks.V2Beta2.RunTaskRequest request, grpc::Metadata headers = null, DateTime? deadline = null, CancellationToken cancellationToken = default(CancellationToken))
+      public virtual global::Google.Cloud.Tasks.V2Beta2.Task RunTask(global::Google.Cloud.Tasks.V2Beta2.RunTaskRequest request, grpc::Metadata headers = null, global::System.DateTime? deadline = null, global::System.Threading.CancellationToken cancellationToken = default(global::System.Threading.CancellationToken))
       {
         return RunTask(request, new grpc::CallOptions(headers, deadline, cancellationToken));
       }
@@ -2167,7 +2164,7 @@ namespace Google.Cloud.Tasks.V2Beta2 {
       /// <param name="deadline">An optional deadline for the call. The call will be cancelled if deadline is hit.</param>
       /// <param name="cancellationToken">An optional token for canceling the call.</param>
       /// <returns>The call object.</returns>
-      public virtual grpc::AsyncUnaryCall<global::Google.Cloud.Tasks.V2Beta2.Task> RunTaskAsync(global::Google.Cloud.Tasks.V2Beta2.RunTaskRequest request, grpc::Metadata headers = null, DateTime? deadline = null, CancellationToken cancellationToken = default(CancellationToken))
+      public virtual grpc::AsyncUnaryCall<global::Google.Cloud.Tasks.V2Beta2.Task> RunTaskAsync(global::Google.Cloud.Tasks.V2Beta2.RunTaskRequest request, grpc::Metadata headers = null, global::System.DateTime? deadline = null, global::System.Threading.CancellationToken cancellationToken = default(global::System.Threading.CancellationToken))
       {
         return RunTaskAsync(request, new grpc::CallOptions(headers, deadline, cancellationToken));
       }

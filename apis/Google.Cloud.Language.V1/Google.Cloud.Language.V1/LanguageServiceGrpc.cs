@@ -20,9 +20,6 @@
 #pragma warning disable 1591
 #region Designer generated code
 
-using System;
-using System.Threading;
-using System.Threading.Tasks;
 using grpc = global::Grpc.Core;
 
 namespace Google.Cloud.Language.V1 {
@@ -203,7 +200,7 @@ namespace Google.Cloud.Language.V1 {
       /// <param name="deadline">An optional deadline for the call. The call will be cancelled if deadline is hit.</param>
       /// <param name="cancellationToken">An optional token for canceling the call.</param>
       /// <returns>The response received from the server.</returns>
-      public virtual global::Google.Cloud.Language.V1.AnalyzeSentimentResponse AnalyzeSentiment(global::Google.Cloud.Language.V1.AnalyzeSentimentRequest request, grpc::Metadata headers = null, DateTime? deadline = null, CancellationToken cancellationToken = default(CancellationToken))
+      public virtual global::Google.Cloud.Language.V1.AnalyzeSentimentResponse AnalyzeSentiment(global::Google.Cloud.Language.V1.AnalyzeSentimentRequest request, grpc::Metadata headers = null, global::System.DateTime? deadline = null, global::System.Threading.CancellationToken cancellationToken = default(global::System.Threading.CancellationToken))
       {
         return AnalyzeSentiment(request, new grpc::CallOptions(headers, deadline, cancellationToken));
       }
@@ -225,7 +222,7 @@ namespace Google.Cloud.Language.V1 {
       /// <param name="deadline">An optional deadline for the call. The call will be cancelled if deadline is hit.</param>
       /// <param name="cancellationToken">An optional token for canceling the call.</param>
       /// <returns>The call object.</returns>
-      public virtual grpc::AsyncUnaryCall<global::Google.Cloud.Language.V1.AnalyzeSentimentResponse> AnalyzeSentimentAsync(global::Google.Cloud.Language.V1.AnalyzeSentimentRequest request, grpc::Metadata headers = null, DateTime? deadline = null, CancellationToken cancellationToken = default(CancellationToken))
+      public virtual grpc::AsyncUnaryCall<global::Google.Cloud.Language.V1.AnalyzeSentimentResponse> AnalyzeSentimentAsync(global::Google.Cloud.Language.V1.AnalyzeSentimentRequest request, grpc::Metadata headers = null, global::System.DateTime? deadline = null, global::System.Threading.CancellationToken cancellationToken = default(global::System.Threading.CancellationToken))
       {
         return AnalyzeSentimentAsync(request, new grpc::CallOptions(headers, deadline, cancellationToken));
       }
@@ -249,7 +246,7 @@ namespace Google.Cloud.Language.V1 {
       /// <param name="deadline">An optional deadline for the call. The call will be cancelled if deadline is hit.</param>
       /// <param name="cancellationToken">An optional token for canceling the call.</param>
       /// <returns>The response received from the server.</returns>
-      public virtual global::Google.Cloud.Language.V1.AnalyzeEntitiesResponse AnalyzeEntities(global::Google.Cloud.Language.V1.AnalyzeEntitiesRequest request, grpc::Metadata headers = null, DateTime? deadline = null, CancellationToken cancellationToken = default(CancellationToken))
+      public virtual global::Google.Cloud.Language.V1.AnalyzeEntitiesResponse AnalyzeEntities(global::Google.Cloud.Language.V1.AnalyzeEntitiesRequest request, grpc::Metadata headers = null, global::System.DateTime? deadline = null, global::System.Threading.CancellationToken cancellationToken = default(global::System.Threading.CancellationToken))
       {
         return AnalyzeEntities(request, new grpc::CallOptions(headers, deadline, cancellationToken));
       }
@@ -275,7 +272,7 @@ namespace Google.Cloud.Language.V1 {
       /// <param name="deadline">An optional deadline for the call. The call will be cancelled if deadline is hit.</param>
       /// <param name="cancellationToken">An optional token for canceling the call.</param>
       /// <returns>The call object.</returns>
-      public virtual grpc::AsyncUnaryCall<global::Google.Cloud.Language.V1.AnalyzeEntitiesResponse> AnalyzeEntitiesAsync(global::Google.Cloud.Language.V1.AnalyzeEntitiesRequest request, grpc::Metadata headers = null, DateTime? deadline = null, CancellationToken cancellationToken = default(CancellationToken))
+      public virtual grpc::AsyncUnaryCall<global::Google.Cloud.Language.V1.AnalyzeEntitiesResponse> AnalyzeEntitiesAsync(global::Google.Cloud.Language.V1.AnalyzeEntitiesRequest request, grpc::Metadata headers = null, global::System.DateTime? deadline = null, global::System.Threading.CancellationToken cancellationToken = default(global::System.Threading.CancellationToken))
       {
         return AnalyzeEntitiesAsync(request, new grpc::CallOptions(headers, deadline, cancellationToken));
       }
@@ -300,7 +297,7 @@ namespace Google.Cloud.Language.V1 {
       /// <param name="deadline">An optional deadline for the call. The call will be cancelled if deadline is hit.</param>
       /// <param name="cancellationToken">An optional token for canceling the call.</param>
       /// <returns>The response received from the server.</returns>
-      public virtual global::Google.Cloud.Language.V1.AnalyzeEntitySentimentResponse AnalyzeEntitySentiment(global::Google.Cloud.Language.V1.AnalyzeEntitySentimentRequest request, grpc::Metadata headers = null, DateTime? deadline = null, CancellationToken cancellationToken = default(CancellationToken))
+      public virtual global::Google.Cloud.Language.V1.AnalyzeEntitySentimentResponse AnalyzeEntitySentiment(global::Google.Cloud.Language.V1.AnalyzeEntitySentimentRequest request, grpc::Metadata headers = null, global::System.DateTime? deadline = null, global::System.Threading.CancellationToken cancellationToken = default(global::System.Threading.CancellationToken))
       {
         return AnalyzeEntitySentiment(request, new grpc::CallOptions(headers, deadline, cancellationToken));
       }
@@ -324,7 +321,7 @@ namespace Google.Cloud.Language.V1 {
       /// <param name="deadline">An optional deadline for the call. The call will be cancelled if deadline is hit.</param>
       /// <param name="cancellationToken">An optional token for canceling the call.</param>
       /// <returns>The call object.</returns>
-      public virtual grpc::AsyncUnaryCall<global::Google.Cloud.Language.V1.AnalyzeEntitySentimentResponse> AnalyzeEntitySentimentAsync(global::Google.Cloud.Language.V1.AnalyzeEntitySentimentRequest request, grpc::Metadata headers = null, DateTime? deadline = null, CancellationToken cancellationToken = default(CancellationToken))
+      public virtual grpc::AsyncUnaryCall<global::Google.Cloud.Language.V1.AnalyzeEntitySentimentResponse> AnalyzeEntitySentimentAsync(global::Google.Cloud.Language.V1.AnalyzeEntitySentimentRequest request, grpc::Metadata headers = null, global::System.DateTime? deadline = null, global::System.Threading.CancellationToken cancellationToken = default(global::System.Threading.CancellationToken))
       {
         return AnalyzeEntitySentimentAsync(request, new grpc::CallOptions(headers, deadline, cancellationToken));
       }
@@ -349,7 +346,7 @@ namespace Google.Cloud.Language.V1 {
       /// <param name="deadline">An optional deadline for the call. The call will be cancelled if deadline is hit.</param>
       /// <param name="cancellationToken">An optional token for canceling the call.</param>
       /// <returns>The response received from the server.</returns>
-      public virtual global::Google.Cloud.Language.V1.AnalyzeSyntaxResponse AnalyzeSyntax(global::Google.Cloud.Language.V1.AnalyzeSyntaxRequest request, grpc::Metadata headers = null, DateTime? deadline = null, CancellationToken cancellationToken = default(CancellationToken))
+      public virtual global::Google.Cloud.Language.V1.AnalyzeSyntaxResponse AnalyzeSyntax(global::Google.Cloud.Language.V1.AnalyzeSyntaxRequest request, grpc::Metadata headers = null, global::System.DateTime? deadline = null, global::System.Threading.CancellationToken cancellationToken = default(global::System.Threading.CancellationToken))
       {
         return AnalyzeSyntax(request, new grpc::CallOptions(headers, deadline, cancellationToken));
       }
@@ -375,7 +372,7 @@ namespace Google.Cloud.Language.V1 {
       /// <param name="deadline">An optional deadline for the call. The call will be cancelled if deadline is hit.</param>
       /// <param name="cancellationToken">An optional token for canceling the call.</param>
       /// <returns>The call object.</returns>
-      public virtual grpc::AsyncUnaryCall<global::Google.Cloud.Language.V1.AnalyzeSyntaxResponse> AnalyzeSyntaxAsync(global::Google.Cloud.Language.V1.AnalyzeSyntaxRequest request, grpc::Metadata headers = null, DateTime? deadline = null, CancellationToken cancellationToken = default(CancellationToken))
+      public virtual grpc::AsyncUnaryCall<global::Google.Cloud.Language.V1.AnalyzeSyntaxResponse> AnalyzeSyntaxAsync(global::Google.Cloud.Language.V1.AnalyzeSyntaxRequest request, grpc::Metadata headers = null, global::System.DateTime? deadline = null, global::System.Threading.CancellationToken cancellationToken = default(global::System.Threading.CancellationToken))
       {
         return AnalyzeSyntaxAsync(request, new grpc::CallOptions(headers, deadline, cancellationToken));
       }
@@ -399,7 +396,7 @@ namespace Google.Cloud.Language.V1 {
       /// <param name="deadline">An optional deadline for the call. The call will be cancelled if deadline is hit.</param>
       /// <param name="cancellationToken">An optional token for canceling the call.</param>
       /// <returns>The response received from the server.</returns>
-      public virtual global::Google.Cloud.Language.V1.ClassifyTextResponse ClassifyText(global::Google.Cloud.Language.V1.ClassifyTextRequest request, grpc::Metadata headers = null, DateTime? deadline = null, CancellationToken cancellationToken = default(CancellationToken))
+      public virtual global::Google.Cloud.Language.V1.ClassifyTextResponse ClassifyText(global::Google.Cloud.Language.V1.ClassifyTextRequest request, grpc::Metadata headers = null, global::System.DateTime? deadline = null, global::System.Threading.CancellationToken cancellationToken = default(global::System.Threading.CancellationToken))
       {
         return ClassifyText(request, new grpc::CallOptions(headers, deadline, cancellationToken));
       }
@@ -421,7 +418,7 @@ namespace Google.Cloud.Language.V1 {
       /// <param name="deadline">An optional deadline for the call. The call will be cancelled if deadline is hit.</param>
       /// <param name="cancellationToken">An optional token for canceling the call.</param>
       /// <returns>The call object.</returns>
-      public virtual grpc::AsyncUnaryCall<global::Google.Cloud.Language.V1.ClassifyTextResponse> ClassifyTextAsync(global::Google.Cloud.Language.V1.ClassifyTextRequest request, grpc::Metadata headers = null, DateTime? deadline = null, CancellationToken cancellationToken = default(CancellationToken))
+      public virtual grpc::AsyncUnaryCall<global::Google.Cloud.Language.V1.ClassifyTextResponse> ClassifyTextAsync(global::Google.Cloud.Language.V1.ClassifyTextRequest request, grpc::Metadata headers = null, global::System.DateTime? deadline = null, global::System.Threading.CancellationToken cancellationToken = default(global::System.Threading.CancellationToken))
       {
         return ClassifyTextAsync(request, new grpc::CallOptions(headers, deadline, cancellationToken));
       }
@@ -444,7 +441,7 @@ namespace Google.Cloud.Language.V1 {
       /// <param name="deadline">An optional deadline for the call. The call will be cancelled if deadline is hit.</param>
       /// <param name="cancellationToken">An optional token for canceling the call.</param>
       /// <returns>The response received from the server.</returns>
-      public virtual global::Google.Cloud.Language.V1.AnnotateTextResponse AnnotateText(global::Google.Cloud.Language.V1.AnnotateTextRequest request, grpc::Metadata headers = null, DateTime? deadline = null, CancellationToken cancellationToken = default(CancellationToken))
+      public virtual global::Google.Cloud.Language.V1.AnnotateTextResponse AnnotateText(global::Google.Cloud.Language.V1.AnnotateTextRequest request, grpc::Metadata headers = null, global::System.DateTime? deadline = null, global::System.Threading.CancellationToken cancellationToken = default(global::System.Threading.CancellationToken))
       {
         return AnnotateText(request, new grpc::CallOptions(headers, deadline, cancellationToken));
       }
@@ -468,7 +465,7 @@ namespace Google.Cloud.Language.V1 {
       /// <param name="deadline">An optional deadline for the call. The call will be cancelled if deadline is hit.</param>
       /// <param name="cancellationToken">An optional token for canceling the call.</param>
       /// <returns>The call object.</returns>
-      public virtual grpc::AsyncUnaryCall<global::Google.Cloud.Language.V1.AnnotateTextResponse> AnnotateTextAsync(global::Google.Cloud.Language.V1.AnnotateTextRequest request, grpc::Metadata headers = null, DateTime? deadline = null, CancellationToken cancellationToken = default(CancellationToken))
+      public virtual grpc::AsyncUnaryCall<global::Google.Cloud.Language.V1.AnnotateTextResponse> AnnotateTextAsync(global::Google.Cloud.Language.V1.AnnotateTextRequest request, grpc::Metadata headers = null, global::System.DateTime? deadline = null, global::System.Threading.CancellationToken cancellationToken = default(global::System.Threading.CancellationToken))
       {
         return AnnotateTextAsync(request, new grpc::CallOptions(headers, deadline, cancellationToken));
       }

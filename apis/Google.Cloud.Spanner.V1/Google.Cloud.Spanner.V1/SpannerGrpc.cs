@@ -20,9 +20,6 @@
 #pragma warning disable 1591
 #region Designer generated code
 
-using System;
-using System.Threading;
-using System.Threading.Tasks;
 using grpc = global::Grpc.Core;
 
 namespace Google.Cloud.Spanner.V1 {
@@ -433,7 +430,7 @@ namespace Google.Cloud.Spanner.V1 {
       /// <param name="deadline">An optional deadline for the call. The call will be cancelled if deadline is hit.</param>
       /// <param name="cancellationToken">An optional token for canceling the call.</param>
       /// <returns>The response received from the server.</returns>
-      public virtual global::Google.Cloud.Spanner.V1.Session CreateSession(global::Google.Cloud.Spanner.V1.CreateSessionRequest request, grpc::Metadata headers = null, DateTime? deadline = null, CancellationToken cancellationToken = default(CancellationToken))
+      public virtual global::Google.Cloud.Spanner.V1.Session CreateSession(global::Google.Cloud.Spanner.V1.CreateSessionRequest request, grpc::Metadata headers = null, global::System.DateTime? deadline = null, global::System.Threading.CancellationToken cancellationToken = default(global::System.Threading.CancellationToken))
       {
         return CreateSession(request, new grpc::CallOptions(headers, deadline, cancellationToken));
       }
@@ -491,7 +488,7 @@ namespace Google.Cloud.Spanner.V1 {
       /// <param name="deadline">An optional deadline for the call. The call will be cancelled if deadline is hit.</param>
       /// <param name="cancellationToken">An optional token for canceling the call.</param>
       /// <returns>The call object.</returns>
-      public virtual grpc::AsyncUnaryCall<global::Google.Cloud.Spanner.V1.Session> CreateSessionAsync(global::Google.Cloud.Spanner.V1.CreateSessionRequest request, grpc::Metadata headers = null, DateTime? deadline = null, CancellationToken cancellationToken = default(CancellationToken))
+      public virtual grpc::AsyncUnaryCall<global::Google.Cloud.Spanner.V1.Session> CreateSessionAsync(global::Google.Cloud.Spanner.V1.CreateSessionRequest request, grpc::Metadata headers = null, global::System.DateTime? deadline = null, global::System.Threading.CancellationToken cancellationToken = default(global::System.Threading.CancellationToken))
       {
         return CreateSessionAsync(request, new grpc::CallOptions(headers, deadline, cancellationToken));
       }
@@ -533,7 +530,7 @@ namespace Google.Cloud.Spanner.V1 {
       /// <param name="deadline">An optional deadline for the call. The call will be cancelled if deadline is hit.</param>
       /// <param name="cancellationToken">An optional token for canceling the call.</param>
       /// <returns>The response received from the server.</returns>
-      public virtual global::Google.Cloud.Spanner.V1.Session GetSession(global::Google.Cloud.Spanner.V1.GetSessionRequest request, grpc::Metadata headers = null, DateTime? deadline = null, CancellationToken cancellationToken = default(CancellationToken))
+      public virtual global::Google.Cloud.Spanner.V1.Session GetSession(global::Google.Cloud.Spanner.V1.GetSessionRequest request, grpc::Metadata headers = null, global::System.DateTime? deadline = null, global::System.Threading.CancellationToken cancellationToken = default(global::System.Threading.CancellationToken))
       {
         return GetSession(request, new grpc::CallOptions(headers, deadline, cancellationToken));
       }
@@ -559,7 +556,7 @@ namespace Google.Cloud.Spanner.V1 {
       /// <param name="deadline">An optional deadline for the call. The call will be cancelled if deadline is hit.</param>
       /// <param name="cancellationToken">An optional token for canceling the call.</param>
       /// <returns>The call object.</returns>
-      public virtual grpc::AsyncUnaryCall<global::Google.Cloud.Spanner.V1.Session> GetSessionAsync(global::Google.Cloud.Spanner.V1.GetSessionRequest request, grpc::Metadata headers = null, DateTime? deadline = null, CancellationToken cancellationToken = default(CancellationToken))
+      public virtual grpc::AsyncUnaryCall<global::Google.Cloud.Spanner.V1.Session> GetSessionAsync(global::Google.Cloud.Spanner.V1.GetSessionRequest request, grpc::Metadata headers = null, global::System.DateTime? deadline = null, global::System.Threading.CancellationToken cancellationToken = default(global::System.Threading.CancellationToken))
       {
         return GetSessionAsync(request, new grpc::CallOptions(headers, deadline, cancellationToken));
       }
@@ -583,7 +580,7 @@ namespace Google.Cloud.Spanner.V1 {
       /// <param name="deadline">An optional deadline for the call. The call will be cancelled if deadline is hit.</param>
       /// <param name="cancellationToken">An optional token for canceling the call.</param>
       /// <returns>The response received from the server.</returns>
-      public virtual global::Google.Cloud.Spanner.V1.ListSessionsResponse ListSessions(global::Google.Cloud.Spanner.V1.ListSessionsRequest request, grpc::Metadata headers = null, DateTime? deadline = null, CancellationToken cancellationToken = default(CancellationToken))
+      public virtual global::Google.Cloud.Spanner.V1.ListSessionsResponse ListSessions(global::Google.Cloud.Spanner.V1.ListSessionsRequest request, grpc::Metadata headers = null, global::System.DateTime? deadline = null, global::System.Threading.CancellationToken cancellationToken = default(global::System.Threading.CancellationToken))
       {
         return ListSessions(request, new grpc::CallOptions(headers, deadline, cancellationToken));
       }
@@ -605,7 +602,7 @@ namespace Google.Cloud.Spanner.V1 {
       /// <param name="deadline">An optional deadline for the call. The call will be cancelled if deadline is hit.</param>
       /// <param name="cancellationToken">An optional token for canceling the call.</param>
       /// <returns>The call object.</returns>
-      public virtual grpc::AsyncUnaryCall<global::Google.Cloud.Spanner.V1.ListSessionsResponse> ListSessionsAsync(global::Google.Cloud.Spanner.V1.ListSessionsRequest request, grpc::Metadata headers = null, DateTime? deadline = null, CancellationToken cancellationToken = default(CancellationToken))
+      public virtual grpc::AsyncUnaryCall<global::Google.Cloud.Spanner.V1.ListSessionsResponse> ListSessionsAsync(global::Google.Cloud.Spanner.V1.ListSessionsRequest request, grpc::Metadata headers = null, global::System.DateTime? deadline = null, global::System.Threading.CancellationToken cancellationToken = default(global::System.Threading.CancellationToken))
       {
         return ListSessionsAsync(request, new grpc::CallOptions(headers, deadline, cancellationToken));
       }
@@ -627,7 +624,7 @@ namespace Google.Cloud.Spanner.V1 {
       /// <param name="deadline">An optional deadline for the call. The call will be cancelled if deadline is hit.</param>
       /// <param name="cancellationToken">An optional token for canceling the call.</param>
       /// <returns>The response received from the server.</returns>
-      public virtual global::Google.Protobuf.WellKnownTypes.Empty DeleteSession(global::Google.Cloud.Spanner.V1.DeleteSessionRequest request, grpc::Metadata headers = null, DateTime? deadline = null, CancellationToken cancellationToken = default(CancellationToken))
+      public virtual global::Google.Protobuf.WellKnownTypes.Empty DeleteSession(global::Google.Cloud.Spanner.V1.DeleteSessionRequest request, grpc::Metadata headers = null, global::System.DateTime? deadline = null, global::System.Threading.CancellationToken cancellationToken = default(global::System.Threading.CancellationToken))
       {
         return DeleteSession(request, new grpc::CallOptions(headers, deadline, cancellationToken));
       }
@@ -649,7 +646,7 @@ namespace Google.Cloud.Spanner.V1 {
       /// <param name="deadline">An optional deadline for the call. The call will be cancelled if deadline is hit.</param>
       /// <param name="cancellationToken">An optional token for canceling the call.</param>
       /// <returns>The call object.</returns>
-      public virtual grpc::AsyncUnaryCall<global::Google.Protobuf.WellKnownTypes.Empty> DeleteSessionAsync(global::Google.Cloud.Spanner.V1.DeleteSessionRequest request, grpc::Metadata headers = null, DateTime? deadline = null, CancellationToken cancellationToken = default(CancellationToken))
+      public virtual grpc::AsyncUnaryCall<global::Google.Protobuf.WellKnownTypes.Empty> DeleteSessionAsync(global::Google.Cloud.Spanner.V1.DeleteSessionRequest request, grpc::Metadata headers = null, global::System.DateTime? deadline = null, global::System.Threading.CancellationToken cancellationToken = default(global::System.Threading.CancellationToken))
       {
         return DeleteSessionAsync(request, new grpc::CallOptions(headers, deadline, cancellationToken));
       }
@@ -681,7 +678,7 @@ namespace Google.Cloud.Spanner.V1 {
       /// <param name="deadline">An optional deadline for the call. The call will be cancelled if deadline is hit.</param>
       /// <param name="cancellationToken">An optional token for canceling the call.</param>
       /// <returns>The response received from the server.</returns>
-      public virtual global::Google.Cloud.Spanner.V1.ResultSet ExecuteSql(global::Google.Cloud.Spanner.V1.ExecuteSqlRequest request, grpc::Metadata headers = null, DateTime? deadline = null, CancellationToken cancellationToken = default(CancellationToken))
+      public virtual global::Google.Cloud.Spanner.V1.ResultSet ExecuteSql(global::Google.Cloud.Spanner.V1.ExecuteSqlRequest request, grpc::Metadata headers = null, global::System.DateTime? deadline = null, global::System.Threading.CancellationToken cancellationToken = default(global::System.Threading.CancellationToken))
       {
         return ExecuteSql(request, new grpc::CallOptions(headers, deadline, cancellationToken));
       }
@@ -723,7 +720,7 @@ namespace Google.Cloud.Spanner.V1 {
       /// <param name="deadline">An optional deadline for the call. The call will be cancelled if deadline is hit.</param>
       /// <param name="cancellationToken">An optional token for canceling the call.</param>
       /// <returns>The call object.</returns>
-      public virtual grpc::AsyncUnaryCall<global::Google.Cloud.Spanner.V1.ResultSet> ExecuteSqlAsync(global::Google.Cloud.Spanner.V1.ExecuteSqlRequest request, grpc::Metadata headers = null, DateTime? deadline = null, CancellationToken cancellationToken = default(CancellationToken))
+      public virtual grpc::AsyncUnaryCall<global::Google.Cloud.Spanner.V1.ResultSet> ExecuteSqlAsync(global::Google.Cloud.Spanner.V1.ExecuteSqlRequest request, grpc::Metadata headers = null, global::System.DateTime? deadline = null, global::System.Threading.CancellationToken cancellationToken = default(global::System.Threading.CancellationToken))
       {
         return ExecuteSqlAsync(request, new grpc::CallOptions(headers, deadline, cancellationToken));
       }
@@ -759,7 +756,7 @@ namespace Google.Cloud.Spanner.V1 {
       /// <param name="deadline">An optional deadline for the call. The call will be cancelled if deadline is hit.</param>
       /// <param name="cancellationToken">An optional token for canceling the call.</param>
       /// <returns>The call object.</returns>
-      public virtual grpc::AsyncServerStreamingCall<global::Google.Cloud.Spanner.V1.PartialResultSet> ExecuteStreamingSql(global::Google.Cloud.Spanner.V1.ExecuteSqlRequest request, grpc::Metadata headers = null, DateTime? deadline = null, CancellationToken cancellationToken = default(CancellationToken))
+      public virtual grpc::AsyncServerStreamingCall<global::Google.Cloud.Spanner.V1.PartialResultSet> ExecuteStreamingSql(global::Google.Cloud.Spanner.V1.ExecuteSqlRequest request, grpc::Metadata headers = null, global::System.DateTime? deadline = null, global::System.Threading.CancellationToken cancellationToken = default(global::System.Threading.CancellationToken))
       {
         return ExecuteStreamingSql(request, new grpc::CallOptions(headers, deadline, cancellationToken));
       }
@@ -797,7 +794,7 @@ namespace Google.Cloud.Spanner.V1 {
       /// <param name="deadline">An optional deadline for the call. The call will be cancelled if deadline is hit.</param>
       /// <param name="cancellationToken">An optional token for canceling the call.</param>
       /// <returns>The response received from the server.</returns>
-      public virtual global::Google.Cloud.Spanner.V1.ResultSet Read(global::Google.Cloud.Spanner.V1.ReadRequest request, grpc::Metadata headers = null, DateTime? deadline = null, CancellationToken cancellationToken = default(CancellationToken))
+      public virtual global::Google.Cloud.Spanner.V1.ResultSet Read(global::Google.Cloud.Spanner.V1.ReadRequest request, grpc::Metadata headers = null, global::System.DateTime? deadline = null, global::System.Threading.CancellationToken cancellationToken = default(global::System.Threading.CancellationToken))
       {
         return Read(request, new grpc::CallOptions(headers, deadline, cancellationToken));
       }
@@ -843,7 +840,7 @@ namespace Google.Cloud.Spanner.V1 {
       /// <param name="deadline">An optional deadline for the call. The call will be cancelled if deadline is hit.</param>
       /// <param name="cancellationToken">An optional token for canceling the call.</param>
       /// <returns>The call object.</returns>
-      public virtual grpc::AsyncUnaryCall<global::Google.Cloud.Spanner.V1.ResultSet> ReadAsync(global::Google.Cloud.Spanner.V1.ReadRequest request, grpc::Metadata headers = null, DateTime? deadline = null, CancellationToken cancellationToken = default(CancellationToken))
+      public virtual grpc::AsyncUnaryCall<global::Google.Cloud.Spanner.V1.ResultSet> ReadAsync(global::Google.Cloud.Spanner.V1.ReadRequest request, grpc::Metadata headers = null, global::System.DateTime? deadline = null, global::System.Threading.CancellationToken cancellationToken = default(global::System.Threading.CancellationToken))
       {
         return ReadAsync(request, new grpc::CallOptions(headers, deadline, cancellationToken));
       }
@@ -881,7 +878,7 @@ namespace Google.Cloud.Spanner.V1 {
       /// <param name="deadline">An optional deadline for the call. The call will be cancelled if deadline is hit.</param>
       /// <param name="cancellationToken">An optional token for canceling the call.</param>
       /// <returns>The call object.</returns>
-      public virtual grpc::AsyncServerStreamingCall<global::Google.Cloud.Spanner.V1.PartialResultSet> StreamingRead(global::Google.Cloud.Spanner.V1.ReadRequest request, grpc::Metadata headers = null, DateTime? deadline = null, CancellationToken cancellationToken = default(CancellationToken))
+      public virtual grpc::AsyncServerStreamingCall<global::Google.Cloud.Spanner.V1.PartialResultSet> StreamingRead(global::Google.Cloud.Spanner.V1.ReadRequest request, grpc::Metadata headers = null, global::System.DateTime? deadline = null, global::System.Threading.CancellationToken cancellationToken = default(global::System.Threading.CancellationToken))
       {
         return StreamingRead(request, new grpc::CallOptions(headers, deadline, cancellationToken));
       }
@@ -910,7 +907,7 @@ namespace Google.Cloud.Spanner.V1 {
       /// <param name="deadline">An optional deadline for the call. The call will be cancelled if deadline is hit.</param>
       /// <param name="cancellationToken">An optional token for canceling the call.</param>
       /// <returns>The response received from the server.</returns>
-      public virtual global::Google.Cloud.Spanner.V1.Transaction BeginTransaction(global::Google.Cloud.Spanner.V1.BeginTransactionRequest request, grpc::Metadata headers = null, DateTime? deadline = null, CancellationToken cancellationToken = default(CancellationToken))
+      public virtual global::Google.Cloud.Spanner.V1.Transaction BeginTransaction(global::Google.Cloud.Spanner.V1.BeginTransactionRequest request, grpc::Metadata headers = null, global::System.DateTime? deadline = null, global::System.Threading.CancellationToken cancellationToken = default(global::System.Threading.CancellationToken))
       {
         return BeginTransaction(request, new grpc::CallOptions(headers, deadline, cancellationToken));
       }
@@ -938,7 +935,7 @@ namespace Google.Cloud.Spanner.V1 {
       /// <param name="deadline">An optional deadline for the call. The call will be cancelled if deadline is hit.</param>
       /// <param name="cancellationToken">An optional token for canceling the call.</param>
       /// <returns>The call object.</returns>
-      public virtual grpc::AsyncUnaryCall<global::Google.Cloud.Spanner.V1.Transaction> BeginTransactionAsync(global::Google.Cloud.Spanner.V1.BeginTransactionRequest request, grpc::Metadata headers = null, DateTime? deadline = null, CancellationToken cancellationToken = default(CancellationToken))
+      public virtual grpc::AsyncUnaryCall<global::Google.Cloud.Spanner.V1.Transaction> BeginTransactionAsync(global::Google.Cloud.Spanner.V1.BeginTransactionRequest request, grpc::Metadata headers = null, global::System.DateTime? deadline = null, global::System.Threading.CancellationToken cancellationToken = default(global::System.Threading.CancellationToken))
       {
         return BeginTransactionAsync(request, new grpc::CallOptions(headers, deadline, cancellationToken));
       }
@@ -970,7 +967,7 @@ namespace Google.Cloud.Spanner.V1 {
       /// <param name="deadline">An optional deadline for the call. The call will be cancelled if deadline is hit.</param>
       /// <param name="cancellationToken">An optional token for canceling the call.</param>
       /// <returns>The response received from the server.</returns>
-      public virtual global::Google.Cloud.Spanner.V1.CommitResponse Commit(global::Google.Cloud.Spanner.V1.CommitRequest request, grpc::Metadata headers = null, DateTime? deadline = null, CancellationToken cancellationToken = default(CancellationToken))
+      public virtual global::Google.Cloud.Spanner.V1.CommitResponse Commit(global::Google.Cloud.Spanner.V1.CommitRequest request, grpc::Metadata headers = null, global::System.DateTime? deadline = null, global::System.Threading.CancellationToken cancellationToken = default(global::System.Threading.CancellationToken))
       {
         return Commit(request, new grpc::CallOptions(headers, deadline, cancellationToken));
       }
@@ -1006,7 +1003,7 @@ namespace Google.Cloud.Spanner.V1 {
       /// <param name="deadline">An optional deadline for the call. The call will be cancelled if deadline is hit.</param>
       /// <param name="cancellationToken">An optional token for canceling the call.</param>
       /// <returns>The call object.</returns>
-      public virtual grpc::AsyncUnaryCall<global::Google.Cloud.Spanner.V1.CommitResponse> CommitAsync(global::Google.Cloud.Spanner.V1.CommitRequest request, grpc::Metadata headers = null, DateTime? deadline = null, CancellationToken cancellationToken = default(CancellationToken))
+      public virtual grpc::AsyncUnaryCall<global::Google.Cloud.Spanner.V1.CommitResponse> CommitAsync(global::Google.Cloud.Spanner.V1.CommitRequest request, grpc::Metadata headers = null, global::System.DateTime? deadline = null, global::System.Threading.CancellationToken cancellationToken = default(global::System.Threading.CancellationToken))
       {
         return CommitAsync(request, new grpc::CallOptions(headers, deadline, cancellationToken));
       }
@@ -1042,7 +1039,7 @@ namespace Google.Cloud.Spanner.V1 {
       /// <param name="deadline">An optional deadline for the call. The call will be cancelled if deadline is hit.</param>
       /// <param name="cancellationToken">An optional token for canceling the call.</param>
       /// <returns>The response received from the server.</returns>
-      public virtual global::Google.Protobuf.WellKnownTypes.Empty Rollback(global::Google.Cloud.Spanner.V1.RollbackRequest request, grpc::Metadata headers = null, DateTime? deadline = null, CancellationToken cancellationToken = default(CancellationToken))
+      public virtual global::Google.Protobuf.WellKnownTypes.Empty Rollback(global::Google.Cloud.Spanner.V1.RollbackRequest request, grpc::Metadata headers = null, global::System.DateTime? deadline = null, global::System.Threading.CancellationToken cancellationToken = default(global::System.Threading.CancellationToken))
       {
         return Rollback(request, new grpc::CallOptions(headers, deadline, cancellationToken));
       }
@@ -1078,7 +1075,7 @@ namespace Google.Cloud.Spanner.V1 {
       /// <param name="deadline">An optional deadline for the call. The call will be cancelled if deadline is hit.</param>
       /// <param name="cancellationToken">An optional token for canceling the call.</param>
       /// <returns>The call object.</returns>
-      public virtual grpc::AsyncUnaryCall<global::Google.Protobuf.WellKnownTypes.Empty> RollbackAsync(global::Google.Cloud.Spanner.V1.RollbackRequest request, grpc::Metadata headers = null, DateTime? deadline = null, CancellationToken cancellationToken = default(CancellationToken))
+      public virtual grpc::AsyncUnaryCall<global::Google.Protobuf.WellKnownTypes.Empty> RollbackAsync(global::Google.Cloud.Spanner.V1.RollbackRequest request, grpc::Metadata headers = null, global::System.DateTime? deadline = null, global::System.Threading.CancellationToken cancellationToken = default(global::System.Threading.CancellationToken))
       {
         return RollbackAsync(request, new grpc::CallOptions(headers, deadline, cancellationToken));
       }
@@ -1114,7 +1111,7 @@ namespace Google.Cloud.Spanner.V1 {
       /// <param name="deadline">An optional deadline for the call. The call will be cancelled if deadline is hit.</param>
       /// <param name="cancellationToken">An optional token for canceling the call.</param>
       /// <returns>The response received from the server.</returns>
-      public virtual global::Google.Cloud.Spanner.V1.PartitionResponse PartitionQuery(global::Google.Cloud.Spanner.V1.PartitionQueryRequest request, grpc::Metadata headers = null, DateTime? deadline = null, CancellationToken cancellationToken = default(CancellationToken))
+      public virtual global::Google.Cloud.Spanner.V1.PartitionResponse PartitionQuery(global::Google.Cloud.Spanner.V1.PartitionQueryRequest request, grpc::Metadata headers = null, global::System.DateTime? deadline = null, global::System.Threading.CancellationToken cancellationToken = default(global::System.Threading.CancellationToken))
       {
         return PartitionQuery(request, new grpc::CallOptions(headers, deadline, cancellationToken));
       }
@@ -1150,7 +1147,7 @@ namespace Google.Cloud.Spanner.V1 {
       /// <param name="deadline">An optional deadline for the call. The call will be cancelled if deadline is hit.</param>
       /// <param name="cancellationToken">An optional token for canceling the call.</param>
       /// <returns>The call object.</returns>
-      public virtual grpc::AsyncUnaryCall<global::Google.Cloud.Spanner.V1.PartitionResponse> PartitionQueryAsync(global::Google.Cloud.Spanner.V1.PartitionQueryRequest request, grpc::Metadata headers = null, DateTime? deadline = null, CancellationToken cancellationToken = default(CancellationToken))
+      public virtual grpc::AsyncUnaryCall<global::Google.Cloud.Spanner.V1.PartitionResponse> PartitionQueryAsync(global::Google.Cloud.Spanner.V1.PartitionQueryRequest request, grpc::Metadata headers = null, global::System.DateTime? deadline = null, global::System.Threading.CancellationToken cancellationToken = default(global::System.Threading.CancellationToken))
       {
         return PartitionQueryAsync(request, new grpc::CallOptions(headers, deadline, cancellationToken));
       }
@@ -1186,7 +1183,7 @@ namespace Google.Cloud.Spanner.V1 {
       /// <param name="deadline">An optional deadline for the call. The call will be cancelled if deadline is hit.</param>
       /// <param name="cancellationToken">An optional token for canceling the call.</param>
       /// <returns>The response received from the server.</returns>
-      public virtual global::Google.Cloud.Spanner.V1.PartitionResponse PartitionRead(global::Google.Cloud.Spanner.V1.PartitionReadRequest request, grpc::Metadata headers = null, DateTime? deadline = null, CancellationToken cancellationToken = default(CancellationToken))
+      public virtual global::Google.Cloud.Spanner.V1.PartitionResponse PartitionRead(global::Google.Cloud.Spanner.V1.PartitionReadRequest request, grpc::Metadata headers = null, global::System.DateTime? deadline = null, global::System.Threading.CancellationToken cancellationToken = default(global::System.Threading.CancellationToken))
       {
         return PartitionRead(request, new grpc::CallOptions(headers, deadline, cancellationToken));
       }
@@ -1222,7 +1219,7 @@ namespace Google.Cloud.Spanner.V1 {
       /// <param name="deadline">An optional deadline for the call. The call will be cancelled if deadline is hit.</param>
       /// <param name="cancellationToken">An optional token for canceling the call.</param>
       /// <returns>The call object.</returns>
-      public virtual grpc::AsyncUnaryCall<global::Google.Cloud.Spanner.V1.PartitionResponse> PartitionReadAsync(global::Google.Cloud.Spanner.V1.PartitionReadRequest request, grpc::Metadata headers = null, DateTime? deadline = null, CancellationToken cancellationToken = default(CancellationToken))
+      public virtual grpc::AsyncUnaryCall<global::Google.Cloud.Spanner.V1.PartitionResponse> PartitionReadAsync(global::Google.Cloud.Spanner.V1.PartitionReadRequest request, grpc::Metadata headers = null, global::System.DateTime? deadline = null, global::System.Threading.CancellationToken cancellationToken = default(global::System.Threading.CancellationToken))
       {
         return PartitionReadAsync(request, new grpc::CallOptions(headers, deadline, cancellationToken));
       }

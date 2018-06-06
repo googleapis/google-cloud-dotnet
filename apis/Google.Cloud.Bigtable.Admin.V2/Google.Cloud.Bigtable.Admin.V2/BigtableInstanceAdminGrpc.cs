@@ -20,9 +20,6 @@
 #pragma warning disable 1591
 #region Designer generated code
 
-using System;
-using System.Threading;
-using System.Threading.Tasks;
 using grpc = global::Grpc.Core;
 
 namespace Google.Cloud.Bigtable.Admin.V2 {
@@ -449,7 +446,7 @@ namespace Google.Cloud.Bigtable.Admin.V2 {
       /// <param name="deadline">An optional deadline for the call. The call will be cancelled if deadline is hit.</param>
       /// <param name="cancellationToken">An optional token for canceling the call.</param>
       /// <returns>The response received from the server.</returns>
-      public virtual global::Google.LongRunning.Operation CreateInstance(global::Google.Cloud.Bigtable.Admin.V2.CreateInstanceRequest request, grpc::Metadata headers = null, DateTime? deadline = null, CancellationToken cancellationToken = default(CancellationToken))
+      public virtual global::Google.LongRunning.Operation CreateInstance(global::Google.Cloud.Bigtable.Admin.V2.CreateInstanceRequest request, grpc::Metadata headers = null, global::System.DateTime? deadline = null, global::System.Threading.CancellationToken cancellationToken = default(global::System.Threading.CancellationToken))
       {
         return CreateInstance(request, new grpc::CallOptions(headers, deadline, cancellationToken));
       }
@@ -471,7 +468,7 @@ namespace Google.Cloud.Bigtable.Admin.V2 {
       /// <param name="deadline">An optional deadline for the call. The call will be cancelled if deadline is hit.</param>
       /// <param name="cancellationToken">An optional token for canceling the call.</param>
       /// <returns>The call object.</returns>
-      public virtual grpc::AsyncUnaryCall<global::Google.LongRunning.Operation> CreateInstanceAsync(global::Google.Cloud.Bigtable.Admin.V2.CreateInstanceRequest request, grpc::Metadata headers = null, DateTime? deadline = null, CancellationToken cancellationToken = default(CancellationToken))
+      public virtual grpc::AsyncUnaryCall<global::Google.LongRunning.Operation> CreateInstanceAsync(global::Google.Cloud.Bigtable.Admin.V2.CreateInstanceRequest request, grpc::Metadata headers = null, global::System.DateTime? deadline = null, global::System.Threading.CancellationToken cancellationToken = default(global::System.Threading.CancellationToken))
       {
         return CreateInstanceAsync(request, new grpc::CallOptions(headers, deadline, cancellationToken));
       }
@@ -493,7 +490,7 @@ namespace Google.Cloud.Bigtable.Admin.V2 {
       /// <param name="deadline">An optional deadline for the call. The call will be cancelled if deadline is hit.</param>
       /// <param name="cancellationToken">An optional token for canceling the call.</param>
       /// <returns>The response received from the server.</returns>
-      public virtual global::Google.Cloud.Bigtable.Admin.V2.Instance GetInstance(global::Google.Cloud.Bigtable.Admin.V2.GetInstanceRequest request, grpc::Metadata headers = null, DateTime? deadline = null, CancellationToken cancellationToken = default(CancellationToken))
+      public virtual global::Google.Cloud.Bigtable.Admin.V2.Instance GetInstance(global::Google.Cloud.Bigtable.Admin.V2.GetInstanceRequest request, grpc::Metadata headers = null, global::System.DateTime? deadline = null, global::System.Threading.CancellationToken cancellationToken = default(global::System.Threading.CancellationToken))
       {
         return GetInstance(request, new grpc::CallOptions(headers, deadline, cancellationToken));
       }
@@ -515,7 +512,7 @@ namespace Google.Cloud.Bigtable.Admin.V2 {
       /// <param name="deadline">An optional deadline for the call. The call will be cancelled if deadline is hit.</param>
       /// <param name="cancellationToken">An optional token for canceling the call.</param>
       /// <returns>The call object.</returns>
-      public virtual grpc::AsyncUnaryCall<global::Google.Cloud.Bigtable.Admin.V2.Instance> GetInstanceAsync(global::Google.Cloud.Bigtable.Admin.V2.GetInstanceRequest request, grpc::Metadata headers = null, DateTime? deadline = null, CancellationToken cancellationToken = default(CancellationToken))
+      public virtual grpc::AsyncUnaryCall<global::Google.Cloud.Bigtable.Admin.V2.Instance> GetInstanceAsync(global::Google.Cloud.Bigtable.Admin.V2.GetInstanceRequest request, grpc::Metadata headers = null, global::System.DateTime? deadline = null, global::System.Threading.CancellationToken cancellationToken = default(global::System.Threading.CancellationToken))
       {
         return GetInstanceAsync(request, new grpc::CallOptions(headers, deadline, cancellationToken));
       }
@@ -537,7 +534,7 @@ namespace Google.Cloud.Bigtable.Admin.V2 {
       /// <param name="deadline">An optional deadline for the call. The call will be cancelled if deadline is hit.</param>
       /// <param name="cancellationToken">An optional token for canceling the call.</param>
       /// <returns>The response received from the server.</returns>
-      public virtual global::Google.Cloud.Bigtable.Admin.V2.ListInstancesResponse ListInstances(global::Google.Cloud.Bigtable.Admin.V2.ListInstancesRequest request, grpc::Metadata headers = null, DateTime? deadline = null, CancellationToken cancellationToken = default(CancellationToken))
+      public virtual global::Google.Cloud.Bigtable.Admin.V2.ListInstancesResponse ListInstances(global::Google.Cloud.Bigtable.Admin.V2.ListInstancesRequest request, grpc::Metadata headers = null, global::System.DateTime? deadline = null, global::System.Threading.CancellationToken cancellationToken = default(global::System.Threading.CancellationToken))
       {
         return ListInstances(request, new grpc::CallOptions(headers, deadline, cancellationToken));
       }
@@ -559,7 +556,7 @@ namespace Google.Cloud.Bigtable.Admin.V2 {
       /// <param name="deadline">An optional deadline for the call. The call will be cancelled if deadline is hit.</param>
       /// <param name="cancellationToken">An optional token for canceling the call.</param>
       /// <returns>The call object.</returns>
-      public virtual grpc::AsyncUnaryCall<global::Google.Cloud.Bigtable.Admin.V2.ListInstancesResponse> ListInstancesAsync(global::Google.Cloud.Bigtable.Admin.V2.ListInstancesRequest request, grpc::Metadata headers = null, DateTime? deadline = null, CancellationToken cancellationToken = default(CancellationToken))
+      public virtual grpc::AsyncUnaryCall<global::Google.Cloud.Bigtable.Admin.V2.ListInstancesResponse> ListInstancesAsync(global::Google.Cloud.Bigtable.Admin.V2.ListInstancesRequest request, grpc::Metadata headers = null, global::System.DateTime? deadline = null, global::System.Threading.CancellationToken cancellationToken = default(global::System.Threading.CancellationToken))
       {
         return ListInstancesAsync(request, new grpc::CallOptions(headers, deadline, cancellationToken));
       }
@@ -581,7 +578,7 @@ namespace Google.Cloud.Bigtable.Admin.V2 {
       /// <param name="deadline">An optional deadline for the call. The call will be cancelled if deadline is hit.</param>
       /// <param name="cancellationToken">An optional token for canceling the call.</param>
       /// <returns>The response received from the server.</returns>
-      public virtual global::Google.Cloud.Bigtable.Admin.V2.Instance UpdateInstance(global::Google.Cloud.Bigtable.Admin.V2.Instance request, grpc::Metadata headers = null, DateTime? deadline = null, CancellationToken cancellationToken = default(CancellationToken))
+      public virtual global::Google.Cloud.Bigtable.Admin.V2.Instance UpdateInstance(global::Google.Cloud.Bigtable.Admin.V2.Instance request, grpc::Metadata headers = null, global::System.DateTime? deadline = null, global::System.Threading.CancellationToken cancellationToken = default(global::System.Threading.CancellationToken))
       {
         return UpdateInstance(request, new grpc::CallOptions(headers, deadline, cancellationToken));
       }
@@ -603,7 +600,7 @@ namespace Google.Cloud.Bigtable.Admin.V2 {
       /// <param name="deadline">An optional deadline for the call. The call will be cancelled if deadline is hit.</param>
       /// <param name="cancellationToken">An optional token for canceling the call.</param>
       /// <returns>The call object.</returns>
-      public virtual grpc::AsyncUnaryCall<global::Google.Cloud.Bigtable.Admin.V2.Instance> UpdateInstanceAsync(global::Google.Cloud.Bigtable.Admin.V2.Instance request, grpc::Metadata headers = null, DateTime? deadline = null, CancellationToken cancellationToken = default(CancellationToken))
+      public virtual grpc::AsyncUnaryCall<global::Google.Cloud.Bigtable.Admin.V2.Instance> UpdateInstanceAsync(global::Google.Cloud.Bigtable.Admin.V2.Instance request, grpc::Metadata headers = null, global::System.DateTime? deadline = null, global::System.Threading.CancellationToken cancellationToken = default(global::System.Threading.CancellationToken))
       {
         return UpdateInstanceAsync(request, new grpc::CallOptions(headers, deadline, cancellationToken));
       }
@@ -625,7 +622,7 @@ namespace Google.Cloud.Bigtable.Admin.V2 {
       /// <param name="deadline">An optional deadline for the call. The call will be cancelled if deadline is hit.</param>
       /// <param name="cancellationToken">An optional token for canceling the call.</param>
       /// <returns>The response received from the server.</returns>
-      public virtual global::Google.LongRunning.Operation PartialUpdateInstance(global::Google.Cloud.Bigtable.Admin.V2.PartialUpdateInstanceRequest request, grpc::Metadata headers = null, DateTime? deadline = null, CancellationToken cancellationToken = default(CancellationToken))
+      public virtual global::Google.LongRunning.Operation PartialUpdateInstance(global::Google.Cloud.Bigtable.Admin.V2.PartialUpdateInstanceRequest request, grpc::Metadata headers = null, global::System.DateTime? deadline = null, global::System.Threading.CancellationToken cancellationToken = default(global::System.Threading.CancellationToken))
       {
         return PartialUpdateInstance(request, new grpc::CallOptions(headers, deadline, cancellationToken));
       }
@@ -647,7 +644,7 @@ namespace Google.Cloud.Bigtable.Admin.V2 {
       /// <param name="deadline">An optional deadline for the call. The call will be cancelled if deadline is hit.</param>
       /// <param name="cancellationToken">An optional token for canceling the call.</param>
       /// <returns>The call object.</returns>
-      public virtual grpc::AsyncUnaryCall<global::Google.LongRunning.Operation> PartialUpdateInstanceAsync(global::Google.Cloud.Bigtable.Admin.V2.PartialUpdateInstanceRequest request, grpc::Metadata headers = null, DateTime? deadline = null, CancellationToken cancellationToken = default(CancellationToken))
+      public virtual grpc::AsyncUnaryCall<global::Google.LongRunning.Operation> PartialUpdateInstanceAsync(global::Google.Cloud.Bigtable.Admin.V2.PartialUpdateInstanceRequest request, grpc::Metadata headers = null, global::System.DateTime? deadline = null, global::System.Threading.CancellationToken cancellationToken = default(global::System.Threading.CancellationToken))
       {
         return PartialUpdateInstanceAsync(request, new grpc::CallOptions(headers, deadline, cancellationToken));
       }
@@ -669,7 +666,7 @@ namespace Google.Cloud.Bigtable.Admin.V2 {
       /// <param name="deadline">An optional deadline for the call. The call will be cancelled if deadline is hit.</param>
       /// <param name="cancellationToken">An optional token for canceling the call.</param>
       /// <returns>The response received from the server.</returns>
-      public virtual global::Google.Protobuf.WellKnownTypes.Empty DeleteInstance(global::Google.Cloud.Bigtable.Admin.V2.DeleteInstanceRequest request, grpc::Metadata headers = null, DateTime? deadline = null, CancellationToken cancellationToken = default(CancellationToken))
+      public virtual global::Google.Protobuf.WellKnownTypes.Empty DeleteInstance(global::Google.Cloud.Bigtable.Admin.V2.DeleteInstanceRequest request, grpc::Metadata headers = null, global::System.DateTime? deadline = null, global::System.Threading.CancellationToken cancellationToken = default(global::System.Threading.CancellationToken))
       {
         return DeleteInstance(request, new grpc::CallOptions(headers, deadline, cancellationToken));
       }
@@ -691,7 +688,7 @@ namespace Google.Cloud.Bigtable.Admin.V2 {
       /// <param name="deadline">An optional deadline for the call. The call will be cancelled if deadline is hit.</param>
       /// <param name="cancellationToken">An optional token for canceling the call.</param>
       /// <returns>The call object.</returns>
-      public virtual grpc::AsyncUnaryCall<global::Google.Protobuf.WellKnownTypes.Empty> DeleteInstanceAsync(global::Google.Cloud.Bigtable.Admin.V2.DeleteInstanceRequest request, grpc::Metadata headers = null, DateTime? deadline = null, CancellationToken cancellationToken = default(CancellationToken))
+      public virtual grpc::AsyncUnaryCall<global::Google.Protobuf.WellKnownTypes.Empty> DeleteInstanceAsync(global::Google.Cloud.Bigtable.Admin.V2.DeleteInstanceRequest request, grpc::Metadata headers = null, global::System.DateTime? deadline = null, global::System.Threading.CancellationToken cancellationToken = default(global::System.Threading.CancellationToken))
       {
         return DeleteInstanceAsync(request, new grpc::CallOptions(headers, deadline, cancellationToken));
       }
@@ -713,7 +710,7 @@ namespace Google.Cloud.Bigtable.Admin.V2 {
       /// <param name="deadline">An optional deadline for the call. The call will be cancelled if deadline is hit.</param>
       /// <param name="cancellationToken">An optional token for canceling the call.</param>
       /// <returns>The response received from the server.</returns>
-      public virtual global::Google.LongRunning.Operation CreateCluster(global::Google.Cloud.Bigtable.Admin.V2.CreateClusterRequest request, grpc::Metadata headers = null, DateTime? deadline = null, CancellationToken cancellationToken = default(CancellationToken))
+      public virtual global::Google.LongRunning.Operation CreateCluster(global::Google.Cloud.Bigtable.Admin.V2.CreateClusterRequest request, grpc::Metadata headers = null, global::System.DateTime? deadline = null, global::System.Threading.CancellationToken cancellationToken = default(global::System.Threading.CancellationToken))
       {
         return CreateCluster(request, new grpc::CallOptions(headers, deadline, cancellationToken));
       }
@@ -735,7 +732,7 @@ namespace Google.Cloud.Bigtable.Admin.V2 {
       /// <param name="deadline">An optional deadline for the call. The call will be cancelled if deadline is hit.</param>
       /// <param name="cancellationToken">An optional token for canceling the call.</param>
       /// <returns>The call object.</returns>
-      public virtual grpc::AsyncUnaryCall<global::Google.LongRunning.Operation> CreateClusterAsync(global::Google.Cloud.Bigtable.Admin.V2.CreateClusterRequest request, grpc::Metadata headers = null, DateTime? deadline = null, CancellationToken cancellationToken = default(CancellationToken))
+      public virtual grpc::AsyncUnaryCall<global::Google.LongRunning.Operation> CreateClusterAsync(global::Google.Cloud.Bigtable.Admin.V2.CreateClusterRequest request, grpc::Metadata headers = null, global::System.DateTime? deadline = null, global::System.Threading.CancellationToken cancellationToken = default(global::System.Threading.CancellationToken))
       {
         return CreateClusterAsync(request, new grpc::CallOptions(headers, deadline, cancellationToken));
       }
@@ -757,7 +754,7 @@ namespace Google.Cloud.Bigtable.Admin.V2 {
       /// <param name="deadline">An optional deadline for the call. The call will be cancelled if deadline is hit.</param>
       /// <param name="cancellationToken">An optional token for canceling the call.</param>
       /// <returns>The response received from the server.</returns>
-      public virtual global::Google.Cloud.Bigtable.Admin.V2.Cluster GetCluster(global::Google.Cloud.Bigtable.Admin.V2.GetClusterRequest request, grpc::Metadata headers = null, DateTime? deadline = null, CancellationToken cancellationToken = default(CancellationToken))
+      public virtual global::Google.Cloud.Bigtable.Admin.V2.Cluster GetCluster(global::Google.Cloud.Bigtable.Admin.V2.GetClusterRequest request, grpc::Metadata headers = null, global::System.DateTime? deadline = null, global::System.Threading.CancellationToken cancellationToken = default(global::System.Threading.CancellationToken))
       {
         return GetCluster(request, new grpc::CallOptions(headers, deadline, cancellationToken));
       }
@@ -779,7 +776,7 @@ namespace Google.Cloud.Bigtable.Admin.V2 {
       /// <param name="deadline">An optional deadline for the call. The call will be cancelled if deadline is hit.</param>
       /// <param name="cancellationToken">An optional token for canceling the call.</param>
       /// <returns>The call object.</returns>
-      public virtual grpc::AsyncUnaryCall<global::Google.Cloud.Bigtable.Admin.V2.Cluster> GetClusterAsync(global::Google.Cloud.Bigtable.Admin.V2.GetClusterRequest request, grpc::Metadata headers = null, DateTime? deadline = null, CancellationToken cancellationToken = default(CancellationToken))
+      public virtual grpc::AsyncUnaryCall<global::Google.Cloud.Bigtable.Admin.V2.Cluster> GetClusterAsync(global::Google.Cloud.Bigtable.Admin.V2.GetClusterRequest request, grpc::Metadata headers = null, global::System.DateTime? deadline = null, global::System.Threading.CancellationToken cancellationToken = default(global::System.Threading.CancellationToken))
       {
         return GetClusterAsync(request, new grpc::CallOptions(headers, deadline, cancellationToken));
       }
@@ -801,7 +798,7 @@ namespace Google.Cloud.Bigtable.Admin.V2 {
       /// <param name="deadline">An optional deadline for the call. The call will be cancelled if deadline is hit.</param>
       /// <param name="cancellationToken">An optional token for canceling the call.</param>
       /// <returns>The response received from the server.</returns>
-      public virtual global::Google.Cloud.Bigtable.Admin.V2.ListClustersResponse ListClusters(global::Google.Cloud.Bigtable.Admin.V2.ListClustersRequest request, grpc::Metadata headers = null, DateTime? deadline = null, CancellationToken cancellationToken = default(CancellationToken))
+      public virtual global::Google.Cloud.Bigtable.Admin.V2.ListClustersResponse ListClusters(global::Google.Cloud.Bigtable.Admin.V2.ListClustersRequest request, grpc::Metadata headers = null, global::System.DateTime? deadline = null, global::System.Threading.CancellationToken cancellationToken = default(global::System.Threading.CancellationToken))
       {
         return ListClusters(request, new grpc::CallOptions(headers, deadline, cancellationToken));
       }
@@ -823,7 +820,7 @@ namespace Google.Cloud.Bigtable.Admin.V2 {
       /// <param name="deadline">An optional deadline for the call. The call will be cancelled if deadline is hit.</param>
       /// <param name="cancellationToken">An optional token for canceling the call.</param>
       /// <returns>The call object.</returns>
-      public virtual grpc::AsyncUnaryCall<global::Google.Cloud.Bigtable.Admin.V2.ListClustersResponse> ListClustersAsync(global::Google.Cloud.Bigtable.Admin.V2.ListClustersRequest request, grpc::Metadata headers = null, DateTime? deadline = null, CancellationToken cancellationToken = default(CancellationToken))
+      public virtual grpc::AsyncUnaryCall<global::Google.Cloud.Bigtable.Admin.V2.ListClustersResponse> ListClustersAsync(global::Google.Cloud.Bigtable.Admin.V2.ListClustersRequest request, grpc::Metadata headers = null, global::System.DateTime? deadline = null, global::System.Threading.CancellationToken cancellationToken = default(global::System.Threading.CancellationToken))
       {
         return ListClustersAsync(request, new grpc::CallOptions(headers, deadline, cancellationToken));
       }
@@ -845,7 +842,7 @@ namespace Google.Cloud.Bigtable.Admin.V2 {
       /// <param name="deadline">An optional deadline for the call. The call will be cancelled if deadline is hit.</param>
       /// <param name="cancellationToken">An optional token for canceling the call.</param>
       /// <returns>The response received from the server.</returns>
-      public virtual global::Google.LongRunning.Operation UpdateCluster(global::Google.Cloud.Bigtable.Admin.V2.Cluster request, grpc::Metadata headers = null, DateTime? deadline = null, CancellationToken cancellationToken = default(CancellationToken))
+      public virtual global::Google.LongRunning.Operation UpdateCluster(global::Google.Cloud.Bigtable.Admin.V2.Cluster request, grpc::Metadata headers = null, global::System.DateTime? deadline = null, global::System.Threading.CancellationToken cancellationToken = default(global::System.Threading.CancellationToken))
       {
         return UpdateCluster(request, new grpc::CallOptions(headers, deadline, cancellationToken));
       }
@@ -867,7 +864,7 @@ namespace Google.Cloud.Bigtable.Admin.V2 {
       /// <param name="deadline">An optional deadline for the call. The call will be cancelled if deadline is hit.</param>
       /// <param name="cancellationToken">An optional token for canceling the call.</param>
       /// <returns>The call object.</returns>
-      public virtual grpc::AsyncUnaryCall<global::Google.LongRunning.Operation> UpdateClusterAsync(global::Google.Cloud.Bigtable.Admin.V2.Cluster request, grpc::Metadata headers = null, DateTime? deadline = null, CancellationToken cancellationToken = default(CancellationToken))
+      public virtual grpc::AsyncUnaryCall<global::Google.LongRunning.Operation> UpdateClusterAsync(global::Google.Cloud.Bigtable.Admin.V2.Cluster request, grpc::Metadata headers = null, global::System.DateTime? deadline = null, global::System.Threading.CancellationToken cancellationToken = default(global::System.Threading.CancellationToken))
       {
         return UpdateClusterAsync(request, new grpc::CallOptions(headers, deadline, cancellationToken));
       }
@@ -889,7 +886,7 @@ namespace Google.Cloud.Bigtable.Admin.V2 {
       /// <param name="deadline">An optional deadline for the call. The call will be cancelled if deadline is hit.</param>
       /// <param name="cancellationToken">An optional token for canceling the call.</param>
       /// <returns>The response received from the server.</returns>
-      public virtual global::Google.Protobuf.WellKnownTypes.Empty DeleteCluster(global::Google.Cloud.Bigtable.Admin.V2.DeleteClusterRequest request, grpc::Metadata headers = null, DateTime? deadline = null, CancellationToken cancellationToken = default(CancellationToken))
+      public virtual global::Google.Protobuf.WellKnownTypes.Empty DeleteCluster(global::Google.Cloud.Bigtable.Admin.V2.DeleteClusterRequest request, grpc::Metadata headers = null, global::System.DateTime? deadline = null, global::System.Threading.CancellationToken cancellationToken = default(global::System.Threading.CancellationToken))
       {
         return DeleteCluster(request, new grpc::CallOptions(headers, deadline, cancellationToken));
       }
@@ -911,7 +908,7 @@ namespace Google.Cloud.Bigtable.Admin.V2 {
       /// <param name="deadline">An optional deadline for the call. The call will be cancelled if deadline is hit.</param>
       /// <param name="cancellationToken">An optional token for canceling the call.</param>
       /// <returns>The call object.</returns>
-      public virtual grpc::AsyncUnaryCall<global::Google.Protobuf.WellKnownTypes.Empty> DeleteClusterAsync(global::Google.Cloud.Bigtable.Admin.V2.DeleteClusterRequest request, grpc::Metadata headers = null, DateTime? deadline = null, CancellationToken cancellationToken = default(CancellationToken))
+      public virtual grpc::AsyncUnaryCall<global::Google.Protobuf.WellKnownTypes.Empty> DeleteClusterAsync(global::Google.Cloud.Bigtable.Admin.V2.DeleteClusterRequest request, grpc::Metadata headers = null, global::System.DateTime? deadline = null, global::System.Threading.CancellationToken cancellationToken = default(global::System.Threading.CancellationToken))
       {
         return DeleteClusterAsync(request, new grpc::CallOptions(headers, deadline, cancellationToken));
       }
@@ -933,7 +930,7 @@ namespace Google.Cloud.Bigtable.Admin.V2 {
       /// <param name="deadline">An optional deadline for the call. The call will be cancelled if deadline is hit.</param>
       /// <param name="cancellationToken">An optional token for canceling the call.</param>
       /// <returns>The response received from the server.</returns>
-      public virtual global::Google.Cloud.Bigtable.Admin.V2.AppProfile CreateAppProfile(global::Google.Cloud.Bigtable.Admin.V2.CreateAppProfileRequest request, grpc::Metadata headers = null, DateTime? deadline = null, CancellationToken cancellationToken = default(CancellationToken))
+      public virtual global::Google.Cloud.Bigtable.Admin.V2.AppProfile CreateAppProfile(global::Google.Cloud.Bigtable.Admin.V2.CreateAppProfileRequest request, grpc::Metadata headers = null, global::System.DateTime? deadline = null, global::System.Threading.CancellationToken cancellationToken = default(global::System.Threading.CancellationToken))
       {
         return CreateAppProfile(request, new grpc::CallOptions(headers, deadline, cancellationToken));
       }
@@ -955,7 +952,7 @@ namespace Google.Cloud.Bigtable.Admin.V2 {
       /// <param name="deadline">An optional deadline for the call. The call will be cancelled if deadline is hit.</param>
       /// <param name="cancellationToken">An optional token for canceling the call.</param>
       /// <returns>The call object.</returns>
-      public virtual grpc::AsyncUnaryCall<global::Google.Cloud.Bigtable.Admin.V2.AppProfile> CreateAppProfileAsync(global::Google.Cloud.Bigtable.Admin.V2.CreateAppProfileRequest request, grpc::Metadata headers = null, DateTime? deadline = null, CancellationToken cancellationToken = default(CancellationToken))
+      public virtual grpc::AsyncUnaryCall<global::Google.Cloud.Bigtable.Admin.V2.AppProfile> CreateAppProfileAsync(global::Google.Cloud.Bigtable.Admin.V2.CreateAppProfileRequest request, grpc::Metadata headers = null, global::System.DateTime? deadline = null, global::System.Threading.CancellationToken cancellationToken = default(global::System.Threading.CancellationToken))
       {
         return CreateAppProfileAsync(request, new grpc::CallOptions(headers, deadline, cancellationToken));
       }
@@ -977,7 +974,7 @@ namespace Google.Cloud.Bigtable.Admin.V2 {
       /// <param name="deadline">An optional deadline for the call. The call will be cancelled if deadline is hit.</param>
       /// <param name="cancellationToken">An optional token for canceling the call.</param>
       /// <returns>The response received from the server.</returns>
-      public virtual global::Google.Cloud.Bigtable.Admin.V2.AppProfile GetAppProfile(global::Google.Cloud.Bigtable.Admin.V2.GetAppProfileRequest request, grpc::Metadata headers = null, DateTime? deadline = null, CancellationToken cancellationToken = default(CancellationToken))
+      public virtual global::Google.Cloud.Bigtable.Admin.V2.AppProfile GetAppProfile(global::Google.Cloud.Bigtable.Admin.V2.GetAppProfileRequest request, grpc::Metadata headers = null, global::System.DateTime? deadline = null, global::System.Threading.CancellationToken cancellationToken = default(global::System.Threading.CancellationToken))
       {
         return GetAppProfile(request, new grpc::CallOptions(headers, deadline, cancellationToken));
       }
@@ -999,7 +996,7 @@ namespace Google.Cloud.Bigtable.Admin.V2 {
       /// <param name="deadline">An optional deadline for the call. The call will be cancelled if deadline is hit.</param>
       /// <param name="cancellationToken">An optional token for canceling the call.</param>
       /// <returns>The call object.</returns>
-      public virtual grpc::AsyncUnaryCall<global::Google.Cloud.Bigtable.Admin.V2.AppProfile> GetAppProfileAsync(global::Google.Cloud.Bigtable.Admin.V2.GetAppProfileRequest request, grpc::Metadata headers = null, DateTime? deadline = null, CancellationToken cancellationToken = default(CancellationToken))
+      public virtual grpc::AsyncUnaryCall<global::Google.Cloud.Bigtable.Admin.V2.AppProfile> GetAppProfileAsync(global::Google.Cloud.Bigtable.Admin.V2.GetAppProfileRequest request, grpc::Metadata headers = null, global::System.DateTime? deadline = null, global::System.Threading.CancellationToken cancellationToken = default(global::System.Threading.CancellationToken))
       {
         return GetAppProfileAsync(request, new grpc::CallOptions(headers, deadline, cancellationToken));
       }
@@ -1021,7 +1018,7 @@ namespace Google.Cloud.Bigtable.Admin.V2 {
       /// <param name="deadline">An optional deadline for the call. The call will be cancelled if deadline is hit.</param>
       /// <param name="cancellationToken">An optional token for canceling the call.</param>
       /// <returns>The response received from the server.</returns>
-      public virtual global::Google.Cloud.Bigtable.Admin.V2.ListAppProfilesResponse ListAppProfiles(global::Google.Cloud.Bigtable.Admin.V2.ListAppProfilesRequest request, grpc::Metadata headers = null, DateTime? deadline = null, CancellationToken cancellationToken = default(CancellationToken))
+      public virtual global::Google.Cloud.Bigtable.Admin.V2.ListAppProfilesResponse ListAppProfiles(global::Google.Cloud.Bigtable.Admin.V2.ListAppProfilesRequest request, grpc::Metadata headers = null, global::System.DateTime? deadline = null, global::System.Threading.CancellationToken cancellationToken = default(global::System.Threading.CancellationToken))
       {
         return ListAppProfiles(request, new grpc::CallOptions(headers, deadline, cancellationToken));
       }
@@ -1043,7 +1040,7 @@ namespace Google.Cloud.Bigtable.Admin.V2 {
       /// <param name="deadline">An optional deadline for the call. The call will be cancelled if deadline is hit.</param>
       /// <param name="cancellationToken">An optional token for canceling the call.</param>
       /// <returns>The call object.</returns>
-      public virtual grpc::AsyncUnaryCall<global::Google.Cloud.Bigtable.Admin.V2.ListAppProfilesResponse> ListAppProfilesAsync(global::Google.Cloud.Bigtable.Admin.V2.ListAppProfilesRequest request, grpc::Metadata headers = null, DateTime? deadline = null, CancellationToken cancellationToken = default(CancellationToken))
+      public virtual grpc::AsyncUnaryCall<global::Google.Cloud.Bigtable.Admin.V2.ListAppProfilesResponse> ListAppProfilesAsync(global::Google.Cloud.Bigtable.Admin.V2.ListAppProfilesRequest request, grpc::Metadata headers = null, global::System.DateTime? deadline = null, global::System.Threading.CancellationToken cancellationToken = default(global::System.Threading.CancellationToken))
       {
         return ListAppProfilesAsync(request, new grpc::CallOptions(headers, deadline, cancellationToken));
       }
@@ -1065,7 +1062,7 @@ namespace Google.Cloud.Bigtable.Admin.V2 {
       /// <param name="deadline">An optional deadline for the call. The call will be cancelled if deadline is hit.</param>
       /// <param name="cancellationToken">An optional token for canceling the call.</param>
       /// <returns>The response received from the server.</returns>
-      public virtual global::Google.LongRunning.Operation UpdateAppProfile(global::Google.Cloud.Bigtable.Admin.V2.UpdateAppProfileRequest request, grpc::Metadata headers = null, DateTime? deadline = null, CancellationToken cancellationToken = default(CancellationToken))
+      public virtual global::Google.LongRunning.Operation UpdateAppProfile(global::Google.Cloud.Bigtable.Admin.V2.UpdateAppProfileRequest request, grpc::Metadata headers = null, global::System.DateTime? deadline = null, global::System.Threading.CancellationToken cancellationToken = default(global::System.Threading.CancellationToken))
       {
         return UpdateAppProfile(request, new grpc::CallOptions(headers, deadline, cancellationToken));
       }
@@ -1087,7 +1084,7 @@ namespace Google.Cloud.Bigtable.Admin.V2 {
       /// <param name="deadline">An optional deadline for the call. The call will be cancelled if deadline is hit.</param>
       /// <param name="cancellationToken">An optional token for canceling the call.</param>
       /// <returns>The call object.</returns>
-      public virtual grpc::AsyncUnaryCall<global::Google.LongRunning.Operation> UpdateAppProfileAsync(global::Google.Cloud.Bigtable.Admin.V2.UpdateAppProfileRequest request, grpc::Metadata headers = null, DateTime? deadline = null, CancellationToken cancellationToken = default(CancellationToken))
+      public virtual grpc::AsyncUnaryCall<global::Google.LongRunning.Operation> UpdateAppProfileAsync(global::Google.Cloud.Bigtable.Admin.V2.UpdateAppProfileRequest request, grpc::Metadata headers = null, global::System.DateTime? deadline = null, global::System.Threading.CancellationToken cancellationToken = default(global::System.Threading.CancellationToken))
       {
         return UpdateAppProfileAsync(request, new grpc::CallOptions(headers, deadline, cancellationToken));
       }
@@ -1109,7 +1106,7 @@ namespace Google.Cloud.Bigtable.Admin.V2 {
       /// <param name="deadline">An optional deadline for the call. The call will be cancelled if deadline is hit.</param>
       /// <param name="cancellationToken">An optional token for canceling the call.</param>
       /// <returns>The response received from the server.</returns>
-      public virtual global::Google.Protobuf.WellKnownTypes.Empty DeleteAppProfile(global::Google.Cloud.Bigtable.Admin.V2.DeleteAppProfileRequest request, grpc::Metadata headers = null, DateTime? deadline = null, CancellationToken cancellationToken = default(CancellationToken))
+      public virtual global::Google.Protobuf.WellKnownTypes.Empty DeleteAppProfile(global::Google.Cloud.Bigtable.Admin.V2.DeleteAppProfileRequest request, grpc::Metadata headers = null, global::System.DateTime? deadline = null, global::System.Threading.CancellationToken cancellationToken = default(global::System.Threading.CancellationToken))
       {
         return DeleteAppProfile(request, new grpc::CallOptions(headers, deadline, cancellationToken));
       }
@@ -1131,7 +1128,7 @@ namespace Google.Cloud.Bigtable.Admin.V2 {
       /// <param name="deadline">An optional deadline for the call. The call will be cancelled if deadline is hit.</param>
       /// <param name="cancellationToken">An optional token for canceling the call.</param>
       /// <returns>The call object.</returns>
-      public virtual grpc::AsyncUnaryCall<global::Google.Protobuf.WellKnownTypes.Empty> DeleteAppProfileAsync(global::Google.Cloud.Bigtable.Admin.V2.DeleteAppProfileRequest request, grpc::Metadata headers = null, DateTime? deadline = null, CancellationToken cancellationToken = default(CancellationToken))
+      public virtual grpc::AsyncUnaryCall<global::Google.Protobuf.WellKnownTypes.Empty> DeleteAppProfileAsync(global::Google.Cloud.Bigtable.Admin.V2.DeleteAppProfileRequest request, grpc::Metadata headers = null, global::System.DateTime? deadline = null, global::System.Threading.CancellationToken cancellationToken = default(global::System.Threading.CancellationToken))
       {
         return DeleteAppProfileAsync(request, new grpc::CallOptions(headers, deadline, cancellationToken));
       }
@@ -1154,7 +1151,7 @@ namespace Google.Cloud.Bigtable.Admin.V2 {
       /// <param name="deadline">An optional deadline for the call. The call will be cancelled if deadline is hit.</param>
       /// <param name="cancellationToken">An optional token for canceling the call.</param>
       /// <returns>The response received from the server.</returns>
-      public virtual global::Google.Cloud.Iam.V1.Policy GetIamPolicy(global::Google.Cloud.Iam.V1.GetIamPolicyRequest request, grpc::Metadata headers = null, DateTime? deadline = null, CancellationToken cancellationToken = default(CancellationToken))
+      public virtual global::Google.Cloud.Iam.V1.Policy GetIamPolicy(global::Google.Cloud.Iam.V1.GetIamPolicyRequest request, grpc::Metadata headers = null, global::System.DateTime? deadline = null, global::System.Threading.CancellationToken cancellationToken = default(global::System.Threading.CancellationToken))
       {
         return GetIamPolicy(request, new grpc::CallOptions(headers, deadline, cancellationToken));
       }
@@ -1178,7 +1175,7 @@ namespace Google.Cloud.Bigtable.Admin.V2 {
       /// <param name="deadline">An optional deadline for the call. The call will be cancelled if deadline is hit.</param>
       /// <param name="cancellationToken">An optional token for canceling the call.</param>
       /// <returns>The call object.</returns>
-      public virtual grpc::AsyncUnaryCall<global::Google.Cloud.Iam.V1.Policy> GetIamPolicyAsync(global::Google.Cloud.Iam.V1.GetIamPolicyRequest request, grpc::Metadata headers = null, DateTime? deadline = null, CancellationToken cancellationToken = default(CancellationToken))
+      public virtual grpc::AsyncUnaryCall<global::Google.Cloud.Iam.V1.Policy> GetIamPolicyAsync(global::Google.Cloud.Iam.V1.GetIamPolicyRequest request, grpc::Metadata headers = null, global::System.DateTime? deadline = null, global::System.Threading.CancellationToken cancellationToken = default(global::System.Threading.CancellationToken))
       {
         return GetIamPolicyAsync(request, new grpc::CallOptions(headers, deadline, cancellationToken));
       }
@@ -1202,7 +1199,7 @@ namespace Google.Cloud.Bigtable.Admin.V2 {
       /// <param name="deadline">An optional deadline for the call. The call will be cancelled if deadline is hit.</param>
       /// <param name="cancellationToken">An optional token for canceling the call.</param>
       /// <returns>The response received from the server.</returns>
-      public virtual global::Google.Cloud.Iam.V1.Policy SetIamPolicy(global::Google.Cloud.Iam.V1.SetIamPolicyRequest request, grpc::Metadata headers = null, DateTime? deadline = null, CancellationToken cancellationToken = default(CancellationToken))
+      public virtual global::Google.Cloud.Iam.V1.Policy SetIamPolicy(global::Google.Cloud.Iam.V1.SetIamPolicyRequest request, grpc::Metadata headers = null, global::System.DateTime? deadline = null, global::System.Threading.CancellationToken cancellationToken = default(global::System.Threading.CancellationToken))
       {
         return SetIamPolicy(request, new grpc::CallOptions(headers, deadline, cancellationToken));
       }
@@ -1226,7 +1223,7 @@ namespace Google.Cloud.Bigtable.Admin.V2 {
       /// <param name="deadline">An optional deadline for the call. The call will be cancelled if deadline is hit.</param>
       /// <param name="cancellationToken">An optional token for canceling the call.</param>
       /// <returns>The call object.</returns>
-      public virtual grpc::AsyncUnaryCall<global::Google.Cloud.Iam.V1.Policy> SetIamPolicyAsync(global::Google.Cloud.Iam.V1.SetIamPolicyRequest request, grpc::Metadata headers = null, DateTime? deadline = null, CancellationToken cancellationToken = default(CancellationToken))
+      public virtual grpc::AsyncUnaryCall<global::Google.Cloud.Iam.V1.Policy> SetIamPolicyAsync(global::Google.Cloud.Iam.V1.SetIamPolicyRequest request, grpc::Metadata headers = null, global::System.DateTime? deadline = null, global::System.Threading.CancellationToken cancellationToken = default(global::System.Threading.CancellationToken))
       {
         return SetIamPolicyAsync(request, new grpc::CallOptions(headers, deadline, cancellationToken));
       }
@@ -1249,7 +1246,7 @@ namespace Google.Cloud.Bigtable.Admin.V2 {
       /// <param name="deadline">An optional deadline for the call. The call will be cancelled if deadline is hit.</param>
       /// <param name="cancellationToken">An optional token for canceling the call.</param>
       /// <returns>The response received from the server.</returns>
-      public virtual global::Google.Cloud.Iam.V1.TestIamPermissionsResponse TestIamPermissions(global::Google.Cloud.Iam.V1.TestIamPermissionsRequest request, grpc::Metadata headers = null, DateTime? deadline = null, CancellationToken cancellationToken = default(CancellationToken))
+      public virtual global::Google.Cloud.Iam.V1.TestIamPermissionsResponse TestIamPermissions(global::Google.Cloud.Iam.V1.TestIamPermissionsRequest request, grpc::Metadata headers = null, global::System.DateTime? deadline = null, global::System.Threading.CancellationToken cancellationToken = default(global::System.Threading.CancellationToken))
       {
         return TestIamPermissions(request, new grpc::CallOptions(headers, deadline, cancellationToken));
       }
@@ -1271,7 +1268,7 @@ namespace Google.Cloud.Bigtable.Admin.V2 {
       /// <param name="deadline">An optional deadline for the call. The call will be cancelled if deadline is hit.</param>
       /// <param name="cancellationToken">An optional token for canceling the call.</param>
       /// <returns>The call object.</returns>
-      public virtual grpc::AsyncUnaryCall<global::Google.Cloud.Iam.V1.TestIamPermissionsResponse> TestIamPermissionsAsync(global::Google.Cloud.Iam.V1.TestIamPermissionsRequest request, grpc::Metadata headers = null, DateTime? deadline = null, CancellationToken cancellationToken = default(CancellationToken))
+      public virtual grpc::AsyncUnaryCall<global::Google.Cloud.Iam.V1.TestIamPermissionsResponse> TestIamPermissionsAsync(global::Google.Cloud.Iam.V1.TestIamPermissionsRequest request, grpc::Metadata headers = null, global::System.DateTime? deadline = null, global::System.Threading.CancellationToken cancellationToken = default(global::System.Threading.CancellationToken))
       {
         return TestIamPermissionsAsync(request, new grpc::CallOptions(headers, deadline, cancellationToken));
       }

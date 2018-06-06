@@ -20,9 +20,6 @@
 #pragma warning disable 1591
 #region Designer generated code
 
-using System;
-using System.Threading;
-using System.Threading.Tasks;
 using grpc = global::Grpc.Core;
 
 namespace Google.Cloud.OsLogin.V1 {
@@ -201,7 +198,7 @@ namespace Google.Cloud.OsLogin.V1 {
       /// <param name="deadline">An optional deadline for the call. The call will be cancelled if deadline is hit.</param>
       /// <param name="cancellationToken">An optional token for canceling the call.</param>
       /// <returns>The response received from the server.</returns>
-      public virtual global::Google.Protobuf.WellKnownTypes.Empty DeletePosixAccount(global::Google.Cloud.OsLogin.V1.DeletePosixAccountRequest request, grpc::Metadata headers = null, DateTime? deadline = null, CancellationToken cancellationToken = default(CancellationToken))
+      public virtual global::Google.Protobuf.WellKnownTypes.Empty DeletePosixAccount(global::Google.Cloud.OsLogin.V1.DeletePosixAccountRequest request, grpc::Metadata headers = null, global::System.DateTime? deadline = null, global::System.Threading.CancellationToken cancellationToken = default(global::System.Threading.CancellationToken))
       {
         return DeletePosixAccount(request, new grpc::CallOptions(headers, deadline, cancellationToken));
       }
@@ -223,7 +220,7 @@ namespace Google.Cloud.OsLogin.V1 {
       /// <param name="deadline">An optional deadline for the call. The call will be cancelled if deadline is hit.</param>
       /// <param name="cancellationToken">An optional token for canceling the call.</param>
       /// <returns>The call object.</returns>
-      public virtual grpc::AsyncUnaryCall<global::Google.Protobuf.WellKnownTypes.Empty> DeletePosixAccountAsync(global::Google.Cloud.OsLogin.V1.DeletePosixAccountRequest request, grpc::Metadata headers = null, DateTime? deadline = null, CancellationToken cancellationToken = default(CancellationToken))
+      public virtual grpc::AsyncUnaryCall<global::Google.Protobuf.WellKnownTypes.Empty> DeletePosixAccountAsync(global::Google.Cloud.OsLogin.V1.DeletePosixAccountRequest request, grpc::Metadata headers = null, global::System.DateTime? deadline = null, global::System.Threading.CancellationToken cancellationToken = default(global::System.Threading.CancellationToken))
       {
         return DeletePosixAccountAsync(request, new grpc::CallOptions(headers, deadline, cancellationToken));
       }
@@ -245,7 +242,7 @@ namespace Google.Cloud.OsLogin.V1 {
       /// <param name="deadline">An optional deadline for the call. The call will be cancelled if deadline is hit.</param>
       /// <param name="cancellationToken">An optional token for canceling the call.</param>
       /// <returns>The response received from the server.</returns>
-      public virtual global::Google.Protobuf.WellKnownTypes.Empty DeleteSshPublicKey(global::Google.Cloud.OsLogin.V1.DeleteSshPublicKeyRequest request, grpc::Metadata headers = null, DateTime? deadline = null, CancellationToken cancellationToken = default(CancellationToken))
+      public virtual global::Google.Protobuf.WellKnownTypes.Empty DeleteSshPublicKey(global::Google.Cloud.OsLogin.V1.DeleteSshPublicKeyRequest request, grpc::Metadata headers = null, global::System.DateTime? deadline = null, global::System.Threading.CancellationToken cancellationToken = default(global::System.Threading.CancellationToken))
       {
         return DeleteSshPublicKey(request, new grpc::CallOptions(headers, deadline, cancellationToken));
       }
@@ -267,7 +264,7 @@ namespace Google.Cloud.OsLogin.V1 {
       /// <param name="deadline">An optional deadline for the call. The call will be cancelled if deadline is hit.</param>
       /// <param name="cancellationToken">An optional token for canceling the call.</param>
       /// <returns>The call object.</returns>
-      public virtual grpc::AsyncUnaryCall<global::Google.Protobuf.WellKnownTypes.Empty> DeleteSshPublicKeyAsync(global::Google.Cloud.OsLogin.V1.DeleteSshPublicKeyRequest request, grpc::Metadata headers = null, DateTime? deadline = null, CancellationToken cancellationToken = default(CancellationToken))
+      public virtual grpc::AsyncUnaryCall<global::Google.Protobuf.WellKnownTypes.Empty> DeleteSshPublicKeyAsync(global::Google.Cloud.OsLogin.V1.DeleteSshPublicKeyRequest request, grpc::Metadata headers = null, global::System.DateTime? deadline = null, global::System.Threading.CancellationToken cancellationToken = default(global::System.Threading.CancellationToken))
       {
         return DeleteSshPublicKeyAsync(request, new grpc::CallOptions(headers, deadline, cancellationToken));
       }
@@ -290,7 +287,7 @@ namespace Google.Cloud.OsLogin.V1 {
       /// <param name="deadline">An optional deadline for the call. The call will be cancelled if deadline is hit.</param>
       /// <param name="cancellationToken">An optional token for canceling the call.</param>
       /// <returns>The response received from the server.</returns>
-      public virtual global::Google.Cloud.OsLogin.V1.LoginProfile GetLoginProfile(global::Google.Cloud.OsLogin.V1.GetLoginProfileRequest request, grpc::Metadata headers = null, DateTime? deadline = null, CancellationToken cancellationToken = default(CancellationToken))
+      public virtual global::Google.Cloud.OsLogin.V1.LoginProfile GetLoginProfile(global::Google.Cloud.OsLogin.V1.GetLoginProfileRequest request, grpc::Metadata headers = null, global::System.DateTime? deadline = null, global::System.Threading.CancellationToken cancellationToken = default(global::System.Threading.CancellationToken))
       {
         return GetLoginProfile(request, new grpc::CallOptions(headers, deadline, cancellationToken));
       }
@@ -314,7 +311,7 @@ namespace Google.Cloud.OsLogin.V1 {
       /// <param name="deadline">An optional deadline for the call. The call will be cancelled if deadline is hit.</param>
       /// <param name="cancellationToken">An optional token for canceling the call.</param>
       /// <returns>The call object.</returns>
-      public virtual grpc::AsyncUnaryCall<global::Google.Cloud.OsLogin.V1.LoginProfile> GetLoginProfileAsync(global::Google.Cloud.OsLogin.V1.GetLoginProfileRequest request, grpc::Metadata headers = null, DateTime? deadline = null, CancellationToken cancellationToken = default(CancellationToken))
+      public virtual grpc::AsyncUnaryCall<global::Google.Cloud.OsLogin.V1.LoginProfile> GetLoginProfileAsync(global::Google.Cloud.OsLogin.V1.GetLoginProfileRequest request, grpc::Metadata headers = null, global::System.DateTime? deadline = null, global::System.Threading.CancellationToken cancellationToken = default(global::System.Threading.CancellationToken))
       {
         return GetLoginProfileAsync(request, new grpc::CallOptions(headers, deadline, cancellationToken));
       }
@@ -337,7 +334,7 @@ namespace Google.Cloud.OsLogin.V1 {
       /// <param name="deadline">An optional deadline for the call. The call will be cancelled if deadline is hit.</param>
       /// <param name="cancellationToken">An optional token for canceling the call.</param>
       /// <returns>The response received from the server.</returns>
-      public virtual global::Google.Cloud.OsLogin.Common.SshPublicKey GetSshPublicKey(global::Google.Cloud.OsLogin.V1.GetSshPublicKeyRequest request, grpc::Metadata headers = null, DateTime? deadline = null, CancellationToken cancellationToken = default(CancellationToken))
+      public virtual global::Google.Cloud.OsLogin.Common.SshPublicKey GetSshPublicKey(global::Google.Cloud.OsLogin.V1.GetSshPublicKeyRequest request, grpc::Metadata headers = null, global::System.DateTime? deadline = null, global::System.Threading.CancellationToken cancellationToken = default(global::System.Threading.CancellationToken))
       {
         return GetSshPublicKey(request, new grpc::CallOptions(headers, deadline, cancellationToken));
       }
@@ -359,7 +356,7 @@ namespace Google.Cloud.OsLogin.V1 {
       /// <param name="deadline">An optional deadline for the call. The call will be cancelled if deadline is hit.</param>
       /// <param name="cancellationToken">An optional token for canceling the call.</param>
       /// <returns>The call object.</returns>
-      public virtual grpc::AsyncUnaryCall<global::Google.Cloud.OsLogin.Common.SshPublicKey> GetSshPublicKeyAsync(global::Google.Cloud.OsLogin.V1.GetSshPublicKeyRequest request, grpc::Metadata headers = null, DateTime? deadline = null, CancellationToken cancellationToken = default(CancellationToken))
+      public virtual grpc::AsyncUnaryCall<global::Google.Cloud.OsLogin.Common.SshPublicKey> GetSshPublicKeyAsync(global::Google.Cloud.OsLogin.V1.GetSshPublicKeyRequest request, grpc::Metadata headers = null, global::System.DateTime? deadline = null, global::System.Threading.CancellationToken cancellationToken = default(global::System.Threading.CancellationToken))
       {
         return GetSshPublicKeyAsync(request, new grpc::CallOptions(headers, deadline, cancellationToken));
       }
@@ -383,7 +380,7 @@ namespace Google.Cloud.OsLogin.V1 {
       /// <param name="deadline">An optional deadline for the call. The call will be cancelled if deadline is hit.</param>
       /// <param name="cancellationToken">An optional token for canceling the call.</param>
       /// <returns>The response received from the server.</returns>
-      public virtual global::Google.Cloud.OsLogin.V1.ImportSshPublicKeyResponse ImportSshPublicKey(global::Google.Cloud.OsLogin.V1.ImportSshPublicKeyRequest request, grpc::Metadata headers = null, DateTime? deadline = null, CancellationToken cancellationToken = default(CancellationToken))
+      public virtual global::Google.Cloud.OsLogin.V1.ImportSshPublicKeyResponse ImportSshPublicKey(global::Google.Cloud.OsLogin.V1.ImportSshPublicKeyRequest request, grpc::Metadata headers = null, global::System.DateTime? deadline = null, global::System.Threading.CancellationToken cancellationToken = default(global::System.Threading.CancellationToken))
       {
         return ImportSshPublicKey(request, new grpc::CallOptions(headers, deadline, cancellationToken));
       }
@@ -409,7 +406,7 @@ namespace Google.Cloud.OsLogin.V1 {
       /// <param name="deadline">An optional deadline for the call. The call will be cancelled if deadline is hit.</param>
       /// <param name="cancellationToken">An optional token for canceling the call.</param>
       /// <returns>The call object.</returns>
-      public virtual grpc::AsyncUnaryCall<global::Google.Cloud.OsLogin.V1.ImportSshPublicKeyResponse> ImportSshPublicKeyAsync(global::Google.Cloud.OsLogin.V1.ImportSshPublicKeyRequest request, grpc::Metadata headers = null, DateTime? deadline = null, CancellationToken cancellationToken = default(CancellationToken))
+      public virtual grpc::AsyncUnaryCall<global::Google.Cloud.OsLogin.V1.ImportSshPublicKeyResponse> ImportSshPublicKeyAsync(global::Google.Cloud.OsLogin.V1.ImportSshPublicKeyRequest request, grpc::Metadata headers = null, global::System.DateTime? deadline = null, global::System.Threading.CancellationToken cancellationToken = default(global::System.Threading.CancellationToken))
       {
         return ImportSshPublicKeyAsync(request, new grpc::CallOptions(headers, deadline, cancellationToken));
       }
@@ -434,7 +431,7 @@ namespace Google.Cloud.OsLogin.V1 {
       /// <param name="deadline">An optional deadline for the call. The call will be cancelled if deadline is hit.</param>
       /// <param name="cancellationToken">An optional token for canceling the call.</param>
       /// <returns>The response received from the server.</returns>
-      public virtual global::Google.Cloud.OsLogin.Common.SshPublicKey UpdateSshPublicKey(global::Google.Cloud.OsLogin.V1.UpdateSshPublicKeyRequest request, grpc::Metadata headers = null, DateTime? deadline = null, CancellationToken cancellationToken = default(CancellationToken))
+      public virtual global::Google.Cloud.OsLogin.Common.SshPublicKey UpdateSshPublicKey(global::Google.Cloud.OsLogin.V1.UpdateSshPublicKeyRequest request, grpc::Metadata headers = null, global::System.DateTime? deadline = null, global::System.Threading.CancellationToken cancellationToken = default(global::System.Threading.CancellationToken))
       {
         return UpdateSshPublicKey(request, new grpc::CallOptions(headers, deadline, cancellationToken));
       }
@@ -458,7 +455,7 @@ namespace Google.Cloud.OsLogin.V1 {
       /// <param name="deadline">An optional deadline for the call. The call will be cancelled if deadline is hit.</param>
       /// <param name="cancellationToken">An optional token for canceling the call.</param>
       /// <returns>The call object.</returns>
-      public virtual grpc::AsyncUnaryCall<global::Google.Cloud.OsLogin.Common.SshPublicKey> UpdateSshPublicKeyAsync(global::Google.Cloud.OsLogin.V1.UpdateSshPublicKeyRequest request, grpc::Metadata headers = null, DateTime? deadline = null, CancellationToken cancellationToken = default(CancellationToken))
+      public virtual grpc::AsyncUnaryCall<global::Google.Cloud.OsLogin.Common.SshPublicKey> UpdateSshPublicKeyAsync(global::Google.Cloud.OsLogin.V1.UpdateSshPublicKeyRequest request, grpc::Metadata headers = null, global::System.DateTime? deadline = null, global::System.Threading.CancellationToken cancellationToken = default(global::System.Threading.CancellationToken))
       {
         return UpdateSshPublicKeyAsync(request, new grpc::CallOptions(headers, deadline, cancellationToken));
       }

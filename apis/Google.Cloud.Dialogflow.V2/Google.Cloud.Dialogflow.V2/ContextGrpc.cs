@@ -20,9 +20,6 @@
 #pragma warning disable 1591
 #region Designer generated code
 
-using System;
-using System.Threading;
-using System.Threading.Tasks;
 using grpc = global::Grpc.Core;
 
 namespace Google.Cloud.Dialogflow.V2 {
@@ -209,7 +206,7 @@ namespace Google.Cloud.Dialogflow.V2 {
       /// <param name="deadline">An optional deadline for the call. The call will be cancelled if deadline is hit.</param>
       /// <param name="cancellationToken">An optional token for canceling the call.</param>
       /// <returns>The response received from the server.</returns>
-      public virtual global::Google.Cloud.Dialogflow.V2.ListContextsResponse ListContexts(global::Google.Cloud.Dialogflow.V2.ListContextsRequest request, grpc::Metadata headers = null, DateTime? deadline = null, CancellationToken cancellationToken = default(CancellationToken))
+      public virtual global::Google.Cloud.Dialogflow.V2.ListContextsResponse ListContexts(global::Google.Cloud.Dialogflow.V2.ListContextsRequest request, grpc::Metadata headers = null, global::System.DateTime? deadline = null, global::System.Threading.CancellationToken cancellationToken = default(global::System.Threading.CancellationToken))
       {
         return ListContexts(request, new grpc::CallOptions(headers, deadline, cancellationToken));
       }
@@ -231,7 +228,7 @@ namespace Google.Cloud.Dialogflow.V2 {
       /// <param name="deadline">An optional deadline for the call. The call will be cancelled if deadline is hit.</param>
       /// <param name="cancellationToken">An optional token for canceling the call.</param>
       /// <returns>The call object.</returns>
-      public virtual grpc::AsyncUnaryCall<global::Google.Cloud.Dialogflow.V2.ListContextsResponse> ListContextsAsync(global::Google.Cloud.Dialogflow.V2.ListContextsRequest request, grpc::Metadata headers = null, DateTime? deadline = null, CancellationToken cancellationToken = default(CancellationToken))
+      public virtual grpc::AsyncUnaryCall<global::Google.Cloud.Dialogflow.V2.ListContextsResponse> ListContextsAsync(global::Google.Cloud.Dialogflow.V2.ListContextsRequest request, grpc::Metadata headers = null, global::System.DateTime? deadline = null, global::System.Threading.CancellationToken cancellationToken = default(global::System.Threading.CancellationToken))
       {
         return ListContextsAsync(request, new grpc::CallOptions(headers, deadline, cancellationToken));
       }
@@ -253,7 +250,7 @@ namespace Google.Cloud.Dialogflow.V2 {
       /// <param name="deadline">An optional deadline for the call. The call will be cancelled if deadline is hit.</param>
       /// <param name="cancellationToken">An optional token for canceling the call.</param>
       /// <returns>The response received from the server.</returns>
-      public virtual global::Google.Cloud.Dialogflow.V2.Context GetContext(global::Google.Cloud.Dialogflow.V2.GetContextRequest request, grpc::Metadata headers = null, DateTime? deadline = null, CancellationToken cancellationToken = default(CancellationToken))
+      public virtual global::Google.Cloud.Dialogflow.V2.Context GetContext(global::Google.Cloud.Dialogflow.V2.GetContextRequest request, grpc::Metadata headers = null, global::System.DateTime? deadline = null, global::System.Threading.CancellationToken cancellationToken = default(global::System.Threading.CancellationToken))
       {
         return GetContext(request, new grpc::CallOptions(headers, deadline, cancellationToken));
       }
@@ -275,7 +272,7 @@ namespace Google.Cloud.Dialogflow.V2 {
       /// <param name="deadline">An optional deadline for the call. The call will be cancelled if deadline is hit.</param>
       /// <param name="cancellationToken">An optional token for canceling the call.</param>
       /// <returns>The call object.</returns>
-      public virtual grpc::AsyncUnaryCall<global::Google.Cloud.Dialogflow.V2.Context> GetContextAsync(global::Google.Cloud.Dialogflow.V2.GetContextRequest request, grpc::Metadata headers = null, DateTime? deadline = null, CancellationToken cancellationToken = default(CancellationToken))
+      public virtual grpc::AsyncUnaryCall<global::Google.Cloud.Dialogflow.V2.Context> GetContextAsync(global::Google.Cloud.Dialogflow.V2.GetContextRequest request, grpc::Metadata headers = null, global::System.DateTime? deadline = null, global::System.Threading.CancellationToken cancellationToken = default(global::System.Threading.CancellationToken))
       {
         return GetContextAsync(request, new grpc::CallOptions(headers, deadline, cancellationToken));
       }
@@ -297,7 +294,7 @@ namespace Google.Cloud.Dialogflow.V2 {
       /// <param name="deadline">An optional deadline for the call. The call will be cancelled if deadline is hit.</param>
       /// <param name="cancellationToken">An optional token for canceling the call.</param>
       /// <returns>The response received from the server.</returns>
-      public virtual global::Google.Cloud.Dialogflow.V2.Context CreateContext(global::Google.Cloud.Dialogflow.V2.CreateContextRequest request, grpc::Metadata headers = null, DateTime? deadline = null, CancellationToken cancellationToken = default(CancellationToken))
+      public virtual global::Google.Cloud.Dialogflow.V2.Context CreateContext(global::Google.Cloud.Dialogflow.V2.CreateContextRequest request, grpc::Metadata headers = null, global::System.DateTime? deadline = null, global::System.Threading.CancellationToken cancellationToken = default(global::System.Threading.CancellationToken))
       {
         return CreateContext(request, new grpc::CallOptions(headers, deadline, cancellationToken));
       }
@@ -319,7 +316,7 @@ namespace Google.Cloud.Dialogflow.V2 {
       /// <param name="deadline">An optional deadline for the call. The call will be cancelled if deadline is hit.</param>
       /// <param name="cancellationToken">An optional token for canceling the call.</param>
       /// <returns>The call object.</returns>
-      public virtual grpc::AsyncUnaryCall<global::Google.Cloud.Dialogflow.V2.Context> CreateContextAsync(global::Google.Cloud.Dialogflow.V2.CreateContextRequest request, grpc::Metadata headers = null, DateTime? deadline = null, CancellationToken cancellationToken = default(CancellationToken))
+      public virtual grpc::AsyncUnaryCall<global::Google.Cloud.Dialogflow.V2.Context> CreateContextAsync(global::Google.Cloud.Dialogflow.V2.CreateContextRequest request, grpc::Metadata headers = null, global::System.DateTime? deadline = null, global::System.Threading.CancellationToken cancellationToken = default(global::System.Threading.CancellationToken))
       {
         return CreateContextAsync(request, new grpc::CallOptions(headers, deadline, cancellationToken));
       }
@@ -341,7 +338,7 @@ namespace Google.Cloud.Dialogflow.V2 {
       /// <param name="deadline">An optional deadline for the call. The call will be cancelled if deadline is hit.</param>
       /// <param name="cancellationToken">An optional token for canceling the call.</param>
       /// <returns>The response received from the server.</returns>
-      public virtual global::Google.Cloud.Dialogflow.V2.Context UpdateContext(global::Google.Cloud.Dialogflow.V2.UpdateContextRequest request, grpc::Metadata headers = null, DateTime? deadline = null, CancellationToken cancellationToken = default(CancellationToken))
+      public virtual global::Google.Cloud.Dialogflow.V2.Context UpdateContext(global::Google.Cloud.Dialogflow.V2.UpdateContextRequest request, grpc::Metadata headers = null, global::System.DateTime? deadline = null, global::System.Threading.CancellationToken cancellationToken = default(global::System.Threading.CancellationToken))
       {
         return UpdateContext(request, new grpc::CallOptions(headers, deadline, cancellationToken));
       }
@@ -363,7 +360,7 @@ namespace Google.Cloud.Dialogflow.V2 {
       /// <param name="deadline">An optional deadline for the call. The call will be cancelled if deadline is hit.</param>
       /// <param name="cancellationToken">An optional token for canceling the call.</param>
       /// <returns>The call object.</returns>
-      public virtual grpc::AsyncUnaryCall<global::Google.Cloud.Dialogflow.V2.Context> UpdateContextAsync(global::Google.Cloud.Dialogflow.V2.UpdateContextRequest request, grpc::Metadata headers = null, DateTime? deadline = null, CancellationToken cancellationToken = default(CancellationToken))
+      public virtual grpc::AsyncUnaryCall<global::Google.Cloud.Dialogflow.V2.Context> UpdateContextAsync(global::Google.Cloud.Dialogflow.V2.UpdateContextRequest request, grpc::Metadata headers = null, global::System.DateTime? deadline = null, global::System.Threading.CancellationToken cancellationToken = default(global::System.Threading.CancellationToken))
       {
         return UpdateContextAsync(request, new grpc::CallOptions(headers, deadline, cancellationToken));
       }
@@ -385,7 +382,7 @@ namespace Google.Cloud.Dialogflow.V2 {
       /// <param name="deadline">An optional deadline for the call. The call will be cancelled if deadline is hit.</param>
       /// <param name="cancellationToken">An optional token for canceling the call.</param>
       /// <returns>The response received from the server.</returns>
-      public virtual global::Google.Protobuf.WellKnownTypes.Empty DeleteContext(global::Google.Cloud.Dialogflow.V2.DeleteContextRequest request, grpc::Metadata headers = null, DateTime? deadline = null, CancellationToken cancellationToken = default(CancellationToken))
+      public virtual global::Google.Protobuf.WellKnownTypes.Empty DeleteContext(global::Google.Cloud.Dialogflow.V2.DeleteContextRequest request, grpc::Metadata headers = null, global::System.DateTime? deadline = null, global::System.Threading.CancellationToken cancellationToken = default(global::System.Threading.CancellationToken))
       {
         return DeleteContext(request, new grpc::CallOptions(headers, deadline, cancellationToken));
       }
@@ -407,7 +404,7 @@ namespace Google.Cloud.Dialogflow.V2 {
       /// <param name="deadline">An optional deadline for the call. The call will be cancelled if deadline is hit.</param>
       /// <param name="cancellationToken">An optional token for canceling the call.</param>
       /// <returns>The call object.</returns>
-      public virtual grpc::AsyncUnaryCall<global::Google.Protobuf.WellKnownTypes.Empty> DeleteContextAsync(global::Google.Cloud.Dialogflow.V2.DeleteContextRequest request, grpc::Metadata headers = null, DateTime? deadline = null, CancellationToken cancellationToken = default(CancellationToken))
+      public virtual grpc::AsyncUnaryCall<global::Google.Protobuf.WellKnownTypes.Empty> DeleteContextAsync(global::Google.Cloud.Dialogflow.V2.DeleteContextRequest request, grpc::Metadata headers = null, global::System.DateTime? deadline = null, global::System.Threading.CancellationToken cancellationToken = default(global::System.Threading.CancellationToken))
       {
         return DeleteContextAsync(request, new grpc::CallOptions(headers, deadline, cancellationToken));
       }
@@ -429,7 +426,7 @@ namespace Google.Cloud.Dialogflow.V2 {
       /// <param name="deadline">An optional deadline for the call. The call will be cancelled if deadline is hit.</param>
       /// <param name="cancellationToken">An optional token for canceling the call.</param>
       /// <returns>The response received from the server.</returns>
-      public virtual global::Google.Protobuf.WellKnownTypes.Empty DeleteAllContexts(global::Google.Cloud.Dialogflow.V2.DeleteAllContextsRequest request, grpc::Metadata headers = null, DateTime? deadline = null, CancellationToken cancellationToken = default(CancellationToken))
+      public virtual global::Google.Protobuf.WellKnownTypes.Empty DeleteAllContexts(global::Google.Cloud.Dialogflow.V2.DeleteAllContextsRequest request, grpc::Metadata headers = null, global::System.DateTime? deadline = null, global::System.Threading.CancellationToken cancellationToken = default(global::System.Threading.CancellationToken))
       {
         return DeleteAllContexts(request, new grpc::CallOptions(headers, deadline, cancellationToken));
       }
@@ -451,7 +448,7 @@ namespace Google.Cloud.Dialogflow.V2 {
       /// <param name="deadline">An optional deadline for the call. The call will be cancelled if deadline is hit.</param>
       /// <param name="cancellationToken">An optional token for canceling the call.</param>
       /// <returns>The call object.</returns>
-      public virtual grpc::AsyncUnaryCall<global::Google.Protobuf.WellKnownTypes.Empty> DeleteAllContextsAsync(global::Google.Cloud.Dialogflow.V2.DeleteAllContextsRequest request, grpc::Metadata headers = null, DateTime? deadline = null, CancellationToken cancellationToken = default(CancellationToken))
+      public virtual grpc::AsyncUnaryCall<global::Google.Protobuf.WellKnownTypes.Empty> DeleteAllContextsAsync(global::Google.Cloud.Dialogflow.V2.DeleteAllContextsRequest request, grpc::Metadata headers = null, global::System.DateTime? deadline = null, global::System.Threading.CancellationToken cancellationToken = default(global::System.Threading.CancellationToken))
       {
         return DeleteAllContextsAsync(request, new grpc::CallOptions(headers, deadline, cancellationToken));
       }
