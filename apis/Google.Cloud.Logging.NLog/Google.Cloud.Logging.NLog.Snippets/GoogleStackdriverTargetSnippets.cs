@@ -55,15 +55,11 @@ namespace Google.Cloud.Logging.NLog.Snippets
             }
             xml = xml.Replace("PROJECT_ID", projectId).Replace("LOG_ID", logId);
             Assert.False(File.Exists(fileName), "Test would overwrite existing file");
-            //var xmlReader = XmlReader.Create(new MemoryStream(Encoding.UTF8.GetBytes(xmlString)));
             File.WriteAllText(fileName, xml);
 
             // Ensure NLog throws exceptions for any error conditions
             LogManager.ThrowExceptions = true;
             LogManager.ThrowConfigExceptions = true;
-
-            // Configure nlog to use Google Stackdriver logging from the XML configuration file.
-            //LogManager.Configuration = new XmlLoggingConfiguration(xmlReader, "unused");
 
             try
             {
@@ -74,7 +70,7 @@ namespace Google.Cloud.Logging.NLog.Snippets
 
                 // Acquire a logger for this class
                 Logger logger = LogManager.GetCurrentClassLogger();
-                // Log some information.This log entry will be sent to Google Stackdriver Logging.
+                // Log some information. This log entry will be sent to Google Stackdriver Logging.
                 logger.Info("An exciting log entry!");
 
                 // Flush buffered log entries before program exit; then shutdown the logger before program exit.
