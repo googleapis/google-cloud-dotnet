@@ -22,7 +22,7 @@ namespace Google.Cloud.Firestore
     /// An ongoing "listen" or "watch" operation on either document or query snapshots.
     /// This is returned from <c>Listen</c> methods.
     /// </summary>
-    public sealed class SnapshotListener
+    public sealed class FirestoreChangeListener
     {
         private readonly WatchStream _stream;
         private int _stopped;
@@ -39,16 +39,16 @@ namespace Google.Cloud.Firestore
         /// </remarks>
         public Task ListenerTask { get; }
 
-        internal SnapshotListener(WatchStream stream, Task task)
+        internal FirestoreChangeListener(WatchStream stream, Task task)
         {
             _stream = stream;
             ListenerTask = task;
         }
 
-        internal static SnapshotListener Start(WatchStream stream)
+        internal static FirestoreChangeListener Start(WatchStream stream)
         {
             var task = stream.StartAsync();
-            return new SnapshotListener(stream, task);
+            return new FirestoreChangeListener(stream, task);
         }
 
         /// <summary>

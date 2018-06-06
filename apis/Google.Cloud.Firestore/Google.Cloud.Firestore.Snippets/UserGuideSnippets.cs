@@ -353,7 +353,7 @@ namespace Google.Cloud.Firestore.Snippets
             CollectionReference collection = db.Collection(collectionId);
             Query query = collection.WhereGreaterThan("Score", 5).OrderByDescending("Score");
 
-            SnapshotListener listener = query.Listen(snapshot =>
+            FirestoreChangeListener listener = query.Listen(snapshot =>
             {
                 Console.WriteLine($"Callback received snapshot");
                 Console.WriteLine($"Count: {snapshot.Count}");
