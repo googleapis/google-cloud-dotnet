@@ -179,6 +179,10 @@ namespace Google.Cloud.Tools.GenerateDocfxSources
         {
             string title = $"# {api.Id}";
             string description = $"`{api.Id}` is a.NET client library for the [{api.ProductName} API]({api.ProductUrl}).";
+            string version =
+$@"Note:
+This documentation is for version `{ api.Version}` of the library.
+Some samples may not work with other versions.";
             string installation =
 $@"# Installation
 
@@ -187,10 +191,11 @@ your project in the normal way (for example by right-clicking on the
 project in Visual Studio and choosing ""Manage NuGet Packages..."").";
             if (!api.IsReleaseVersion)
             {
-                installation += @"
+                installation += $@"
 Please ensure you enable pre-release packages (for example, in the
 Visual Studio NuGet user interface, check the ""Include prerelease""
-box).";
+box). Some of the following samples might only work with the latest 
+pre-release version (`{api.Version}`) of `{api.Id}`.";
             }
 
             string auth =
@@ -212,6 +217,7 @@ specifying an end-point or channel and settings.";
             return text
                 .Replace("{{title}}", title)
                 .Replace("{{description}}", description)
+                .Replace("{{version}}", version)
                 .Replace("{{installation}}", installation)
                 .Replace("{{auth}}", auth)
                 .Replace("{{client-classes}}", clientClasses)

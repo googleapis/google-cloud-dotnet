@@ -4,6 +4,8 @@
 Logging](https://cloud.google.com/logging/) with
 [log4net](https://logging.apache.org/log4net/).
 
+{{version}}
+
 {{installation}}
 
 {{auth}}

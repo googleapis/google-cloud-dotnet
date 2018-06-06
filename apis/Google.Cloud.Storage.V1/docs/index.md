@@ -3,6 +3,8 @@
 {{description}}
 It wraps the `Google.Apis.Storage.v1` generated library, providing a higher-level API to make it easier to use.
 
+{{version}}
+
 {{installation}}
 
 {{auth}}

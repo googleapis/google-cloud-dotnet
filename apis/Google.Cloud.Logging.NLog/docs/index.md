@@ -3,6 +3,8 @@
 `Google.Cloud.Logging.NLog` is a .NET client library to integrate [Google Stackdriver
 Logging](https://cloud.google.com/logging/) with [NLog](http://nlog-project.org/).
 
+{{version}}
+
 {{installation}}
 
 {{auth}}

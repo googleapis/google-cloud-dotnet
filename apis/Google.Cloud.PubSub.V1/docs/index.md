@@ -2,6 +2,8 @@
 
 {{description}}
 
+{{version}}
+
 # Class renaming in [v1.0.0-beta16](https://www.nuget.org/packages/Google.Cloud.PubSub.V1/1.0.0-beta16)
 
 The following classes have been renamed when moving from version 1.0.0-beta15 to 1.0.0-beta16:

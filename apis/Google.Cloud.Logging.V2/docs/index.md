@@ -1,6 +1,9 @@
 {{title}}
 
 {{description}}
+
+{{version}}
+
 Integration with [log4net](https://logging.apache.org/log4net/) is provided by
 the [Google.Cloud.Logging.Log4Net](../Google.Cloud.Logging.Log4Net/index.html) package.
 
