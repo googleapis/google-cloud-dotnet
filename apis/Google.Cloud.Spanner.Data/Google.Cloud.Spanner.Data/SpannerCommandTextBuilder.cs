@@ -13,6 +13,7 @@
 // limitations under the License.
 
 using System;
+using System.Collections.Generic;
 using System.Linq;
 using System.Text;
 using Google.Api.Gax;
@@ -39,30 +40,50 @@ namespace Google.Cloud.Spanner.Data
         private const string CreateDatabaseCommand = "CREATE DATABASE ";
         private const string DropDatabaseCommand = "DROP DATABASE ";
 
-        private string _targetTable;
+        private static readonly Dictionary<string, SpannerCommandType> s_commandToCommandType = new Dictionary<string, SpannerCommandType>
+        {
+            { InsertCommand, SpannerCommandType.Insert },
+            { InsertUpdateCommand, SpannerCommandType.InsertOrUpdate },
+            { UpdateCommand, SpannerCommandType.Update },
+            { DeleteCommand, SpannerCommandType.Delete },
+            { SelectCommand, SpannerCommandType.Select },
+            // These three form the ddl for spanner.
+            // For reference: https://cloud.google.com/spanner/docs/data-definition-language
+            { AlterCommand, SpannerCommandType.Ddl },
+            { CreateCommand, SpannerCommandType.Ddl },
+            { DropCommand, SpannerCommandType.Ddl },
+        };
 
         /// <summary>
         /// Gets the resulting string to be used for <see cref="SpannerCommand.CommandText"/>.
         /// </summary>
-        public string CommandText { get; private set; }
+        public string CommandText { get; }
 
         /// <summary>
         /// Gets the type of Spanner command (Select, Update, Delete, InsertOrUpdate, Insert, Ddl).
         /// </summary>
-        public SpannerCommandType SpannerCommandType { get; private set; }
+        public SpannerCommandType SpannerCommandType { get; }
 
         /// <summary>
-        /// Gets the target Spanner database table if the command is Update, Delete, InsertOrUpdate,
-        /// or Insert
+        /// Returns the target Spanner database table if the command is Update, Delete, InsertOrUpdate,
+        /// or Insert, or null otherwise.
         /// </summary>
-        public string TargetTable
+        public string TargetTable { get; }
+
+        /// <summary>
+        /// A set of additional statements to execute if supported by the command.
+        /// </summary>
+        public IReadOnlyList<string> ExtraStatements { get; }
+
+        /// <summary>
+        /// Constructs an instance without performing any validation. (Callers must validate.)
+        /// </summary>
+        private SpannerCommandTextBuilder(string commandText, SpannerCommandType type, string targetTable, string[] extraStatements)
         {
-            get => _targetTable;
-            private set
-            {
-                ValidateTable(value);
-                _targetTable = value;
-            }
+            CommandText = commandText;
+            SpannerCommandType = type;
+            TargetTable = targetTable;
+            ExtraStatements = extraStatements?.ToList().AsReadOnly();
         }
 
         /// <summary>
@@ -75,7 +96,7 @@ namespace Google.Cloud.Spanner.Data
         /// the Ddl statement (eg 'CREATE TABLE MYTABLE...')
         /// If the intended <see cref="SpannerCommandType"/> is Update, Delete,
         /// InsertOrUpdate, or Insert, then the text should be '[spannercommandtype] [tablename]'
-        /// such as 'INSERT MYTABLE'.  Must not be null.
+        /// such as 'INSERT MYTABLE'.  Must not be null or empty.
         /// </param>
         /// <exception cref="ArgumentNullException">
         /// Thrown when <paramref name="commandText"/> is null.</exception>
@@ -84,42 +105,40 @@ namespace Google.Cloud.Spanner.Data
         public SpannerCommandTextBuilder(string commandText)
         {
             GaxPreconditions.CheckNotNullOrEmpty(commandText, nameof(commandText));
-            var commandSections = commandText.Trim().Split(' ');
+            commandText = commandText.Trim();
+            var commandSections = commandText.Split(' ');
             if (commandSections.Length < 2)
             {
-                throw new InvalidOperationException($"'{commandText}' is not a recognized Spanner command.");
+                throw new ArgumentException($"'{commandText}' is not a recognized Spanner command.", nameof(commandText));
             }
 
-            if (!TryParseCommand(this, DeleteCommand, SpannerCommandType.Delete, commandSections)
-                && !TryParseCommand(this, UpdateCommand, SpannerCommandType.Update, commandSections)
-                && !TryParseCommand(this, InsertCommand, SpannerCommandType.Insert, commandSections)
-                && !TryParseCommand(this, InsertUpdateCommand, SpannerCommandType.InsertOrUpdate, commandSections))
+            string commandName = commandSections[0].ToUpperInvariant();
+            if (!s_commandToCommandType.TryGetValue(commandName, out var commandType))
             {
-                if (string.Equals(commandSections[0], SelectCommand, StringComparison.OrdinalIgnoreCase))
-                {
-                    CommandText = commandText;
-                    SpannerCommandType = SpannerCommandType.Select;
-                }
-                else if (IsDdl(commandSections[0]))
-                {
-                    CommandText = commandText;
-                    SpannerCommandType = SpannerCommandType.Ddl;
-                }
-                else
-                {
-                    throw new InvalidOperationException($"'{commandText}' is not a recognized Spanner command.");
-                }
+                throw new ArgumentException($"'{commandName}' is not a recognized Spanner command.", nameof(commandText));
             }
-        }
+            SpannerCommandType = commandType;
+            CommandText = commandText;
 
-        private static bool IsDdl(string commandPart)
-        {
-            // These three form the ddl for spanner.
-            // For reference: https://cloud.google.com/spanner/docs/data-definition-language
-            return string.Equals(commandPart, CreateCommand, StringComparison.OrdinalIgnoreCase)
-                || string.Equals(commandPart, AlterCommand, StringComparison.OrdinalIgnoreCase)
-                || string.Equals(commandPart, DropCommand, StringComparison.OrdinalIgnoreCase);
-        }
+            // Any extra validation or assignments go here... currently just for the parameter-based DML cases.
+            switch (commandType)
+            {
+                case SpannerCommandType.Insert:
+                case SpannerCommandType.InsertOrUpdate:
+                case SpannerCommandType.Delete:
+                case SpannerCommandType.Update:
+                    if (commandSections.Length != 2)
+                    {
+                        throw new InvalidOperationException(
+                            $"Spanner {commandName} commands are specified as '{commandName} <table>' with " +
+                            "parameters added to customize the command with filtering or updated values.");
+                    }
+                    TargetTable = ValidateTableName(commandSections[1], nameof(commandText));
+                    // This just makes sure the command starts with the upper-case version.
+                    CommandText = $"{commandName} {TargetTable}";
+                    break;
+            }            
+        }        
 
         internal bool IsCreateDatabaseCommand => CommandText?.StartsWith(CreateDatabaseCommand, StringComparison.OrdinalIgnoreCase) ?? false;
 
@@ -163,9 +182,8 @@ namespace Google.Cloud.Spanner.Data
             }
         }
 
-        /// <summary>
-        /// </summary>
-        private SpannerCommandTextBuilder() { }
+        private static SpannerCommandTextBuilder CreateBuilderForTableDml(string command, SpannerCommandType type, string table) =>
+            new SpannerCommandTextBuilder($"{command} {table}", type, ValidateTableName(table, nameof(table)), null);
 
         /// <summary>
         /// Creates a <see cref="SpannerCommandTextBuilder"/> instance that generates <see cref="SpannerCommand.CommandText"/>
@@ -174,16 +192,8 @@ namespace Google.Cloud.Spanner.Data
         /// <param name="table">The name of the Spanner database table from which rows will be deleted.
         /// Must not be null.</param>
         /// <returns>A <see cref="SpannerCommandTextBuilder"/> representing a <see cref="F:SpannerCommandType.Delete"/> Spanner command.</returns>
-        public static SpannerCommandTextBuilder CreateDeleteTextBuilder(string table)
-        {
-            ValidateTable(table);
-            return new SpannerCommandTextBuilder
-            {
-                SpannerCommandType = SpannerCommandType.Delete,
-                TargetTable = table,
-                CommandText = $"{DeleteCommand} {table}"
-            };
-        }
+        public static SpannerCommandTextBuilder CreateDeleteTextBuilder(string table) =>
+            CreateBuilderForTableDml(DeleteCommand, SpannerCommandType.Delete, table);
 
         /// <summary>
         /// Creates a <see cref="SpannerCommandTextBuilder"/> instance that generates <see cref="SpannerCommand.CommandText"/>
@@ -192,16 +202,8 @@ namespace Google.Cloud.Spanner.Data
         /// <param name="table">The name of the Spanner database table from which rows will be updated or inserted.
         /// Must not be null.</param>
         /// <returns>A <see cref="SpannerCommandTextBuilder"/> representing a <see cref="F:SpannerCommandType.InsertOrUpdate"/> Spanner command.</returns>
-        public static SpannerCommandTextBuilder CreateInsertOrUpdateTextBuilder(string table)
-        {
-            ValidateTable(table);
-            return new SpannerCommandTextBuilder
-            {
-                SpannerCommandType = SpannerCommandType.InsertOrUpdate,
-                TargetTable = table,
-                CommandText = $"{InsertUpdateCommand} {table}"
-            };
-        }
+        public static SpannerCommandTextBuilder CreateInsertOrUpdateTextBuilder(string table) =>
+            CreateBuilderForTableDml(InsertUpdateCommand, SpannerCommandType.InsertOrUpdate, table);
 
         /// <summary>
         /// Creates a <see cref="SpannerCommandTextBuilder"/> instance that generates <see cref="SpannerCommand.CommandText"/>
@@ -209,29 +211,17 @@ namespace Google.Cloud.Spanner.Data
         /// </summary>
         /// <param name="table">The name of the Spanner database table from which rows will be inserted. Must not be null.</param>
         /// <returns>A <see cref="SpannerCommandTextBuilder"/> representing a <see cref="F:SpannerCommandType.Insert"/> Spanner command.</returns>
-        public static SpannerCommandTextBuilder CreateInsertTextBuilder(string table)
-        {
-            ValidateTable(table);
-            return new SpannerCommandTextBuilder
-            {
-                SpannerCommandType = SpannerCommandType.Insert,
-                TargetTable = table,
-                CommandText = $"{InsertCommand} {table}"
-            };
-        }
+        public static SpannerCommandTextBuilder CreateInsertTextBuilder(string table) =>
+            CreateBuilderForTableDml(InsertCommand, SpannerCommandType.Insert, table);
 
         /// <summary>
         /// Creates a <see cref="SpannerCommandTextBuilder"/> instance that generates <see cref="SpannerCommand.CommandText"/>
         /// for querying rows via a SQL query.
         /// </summary>
-        /// <param name="sqlQuery">The full SQL query. Must not be null.</param>
+        /// <param name="sqlQuery">The full SQL query. Must not be null or empty.</param>
         /// <returns>A <see cref="SpannerCommandTextBuilder"/> representing a <see cref="F:SpannerCommandType.Select"/> Spanner command.</returns>
-        public static SpannerCommandTextBuilder CreateSelectTextBuilder(string sqlQuery) => new
-            SpannerCommandTextBuilder
-            {
-                SpannerCommandType = SpannerCommandType.Select,
-                CommandText = sqlQuery
-            };
+        public static SpannerCommandTextBuilder CreateSelectTextBuilder(string sqlQuery) =>
+            new SpannerCommandTextBuilder(GaxPreconditions.CheckNotNullOrEmpty(sqlQuery, nameof(sqlQuery)), SpannerCommandType.Select, null, null);
 
         /// <summary>
         /// Creates a <see cref="SpannerCommandTextBuilder"/> instance that generates <see cref="SpannerCommand.CommandText"/>
@@ -239,16 +229,8 @@ namespace Google.Cloud.Spanner.Data
         /// </summary>
         /// <param name="table">The name of the Spanner database table from which rows will be updated. Must not be null.</param>
         /// <returns>A <see cref="SpannerCommandTextBuilder"/> representing a <see cref="F:SpannerCommandType.Update"/> Spanner command.</returns>
-        public static SpannerCommandTextBuilder CreateUpdateTextBuilder(string table)
-        {
-            ValidateTable(table);
-            return new SpannerCommandTextBuilder
-            {
-                SpannerCommandType = SpannerCommandType.Update,
-                TargetTable = table,
-                CommandText = $"{UpdateCommand} {table}"
-            };
-        }
+        public static SpannerCommandTextBuilder CreateUpdateTextBuilder(string table) =>
+            CreateBuilderForTableDml(UpdateCommand, SpannerCommandType.Update, table);
 
         /// <summary>
         /// Creates a <see cref="SpannerCommandTextBuilder"/> instance that generates <see cref="SpannerCommand.CommandText"/>
@@ -258,20 +240,8 @@ namespace Google.Cloud.Spanner.Data
         /// <param name="extraDdlStatements">An optional set of additional DDL statements to execute after
         /// the first statement.  Extra Ddl statements cannot be used to create additional databases.</param>
         /// <returns>A <see cref="SpannerCommandTextBuilder"/> representing a <see cref="F:SpannerCommandType.Ddl"/> Spanner command.</returns>
-        public static SpannerCommandTextBuilder CreateDdlTextBuilder(string ddlStatement, params string[] extraDdlStatements)
-        {
-            return new SpannerCommandTextBuilder
-            {
-                SpannerCommandType = SpannerCommandType.Ddl,
-                CommandText = ddlStatement,
-                ExtraStatements = extraDdlStatements
-            };
-        }
-
-        /// <summary>
-        /// A set of additional statements to execute if supported by the command.
-        /// </summary>
-        public string[] ExtraStatements { get; private set; }
+        public static SpannerCommandTextBuilder CreateDdlTextBuilder(string ddlStatement, params string[] extraDdlStatements) =>
+            new SpannerCommandTextBuilder(GaxPreconditions.CheckNotNullOrEmpty(ddlStatement, nameof(ddlStatement)), SpannerCommandType.Ddl, null, extraDdlStatements);
 
         /// <summary>
         /// Creates a <see cref="SpannerCommandTextBuilder"/> instance by parsing existing command text.
@@ -280,46 +250,20 @@ namespace Google.Cloud.Spanner.Data
         /// operation.  The given text will be parsed and validated. Must not be null.</param>
         /// <returns>A <see cref="SpannerCommandTextBuilder"/> whose <see cref="SpannerCommandType"/> is determined
         /// from parsing <paramref name="commandText"/>.</returns>
-        public static SpannerCommandTextBuilder FromCommandText(string commandText)
-        {
-            GaxPreconditions.CheckNotNullOrEmpty(commandText, nameof(commandText));
-            return new SpannerCommandTextBuilder(commandText);
-        }
+        public static SpannerCommandTextBuilder FromCommandText(string commandText) =>
+            new SpannerCommandTextBuilder(GaxPreconditions.CheckNotNullOrEmpty(commandText, nameof(commandText)));
 
         /// <inheritdoc />
         public override string ToString() => CommandText;
 
-        private static bool TryParseCommand(
-            SpannerCommandTextBuilder newbuilder,
-            string commandToParseFor,
-            SpannerCommandType commandType,
-            string[] commandSections)
+        private static string ValidateTableName(string table, string parameterName)
         {
-            string operationName = commandSections[0].ToUpperInvariant();
-            if (operationName == commandToParseFor)
+            GaxPreconditions.CheckNotNullOrEmpty(table, parameterName);
+            if (!table.All(c => char.IsLetterOrDigit(c) || c == '_'))
             {
-                if (commandSections.Length != 2)
-                {
-                    throw new InvalidOperationException(
-                        $"Spanner {commandToParseFor} commands are specified as '{commandToParseFor} <table>' with " +
-                        "parameters added to customize the command with filtering or updated values.");
-                }
-
-                newbuilder.CommandText = $"{commandToParseFor} {commandSections[1]}";
-                newbuilder.SpannerCommandType = commandType;
-                newbuilder.TargetTable = commandSections[1];
-                return true;
+                throw new ArgumentException($"Table names must consist of letters, numbers or underscores", parameterName);
             }
-            return false;
-        }
-
-        private static void ValidateTable(string databaseTableName)
-        {
-            GaxPreconditions.CheckNotNullOrEmpty(databaseTableName, nameof(databaseTableName));
-            if (!databaseTableName.All(c => char.IsLetterOrDigit(c) || c == '_'))
-            {
-                throw new ArgumentException($"{nameof(databaseTableName)} only allows letters, numbers or underscore");
-            }
+            return table;
         }
     }
 }
