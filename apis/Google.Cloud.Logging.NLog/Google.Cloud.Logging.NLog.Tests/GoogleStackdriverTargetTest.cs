@@ -216,8 +216,7 @@ namespace Google.Cloud.Logging.NLog.Tests
             Assert.Equal(logs, uploadedEntries.Select(x => x.TextPayload.Trim()));
         }
 
-        // Don't run this as a Theory with different settings.
-        // It execises blocking code, so slows down the unit-tests.
+        // Note: This test blocks for 1 second.
         [Fact]
         public async Task RetryWrites()
         {
@@ -242,6 +241,7 @@ namespace Google.Cloud.Logging.NLog.Tests
                     return Task.FromResult(0);
                 });
             // "2" is missing because it's queued after "1", but "1" never completes.
+            // "3" is present because the initial task-pending queue times-out, "3" is sent on a new queue.
             Assert.Equal(new[] { "1", "3" }, uploadedEntries.Select(x => x.TextPayload));
         }
 

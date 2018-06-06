@@ -323,36 +323,36 @@ namespace Google.Cloud.Logging.NLog
 
         private void WriteLogEntries(IList<LogEntry> logEntries, object continuationList)
         {
-            bool belowTaskLimit = Interlocked.Increment(ref _pendingTaskCount) <= TaskPendingLimit;
+            bool withinTaskLimit = Interlocked.Increment(ref _pendingTaskCount) <= TaskPendingLimit;
 
             try
             {
-                if (!belowTaskLimit)
+                if (!withinTaskLimit)
                 {
                     // The task queue has become too long. We will throttle, and wait for the task-queue to become shorter
                     InternalLogger.Debug("GoogleStackdriver(Name={0}): Throttle started because {1} tasks are pending", Name, _pendingTaskCount);
                     for (int i = -100; i < TimeoutSeconds * 1000; i += 100)
                     {
-                        belowTaskLimit = _prevTask?.Wait(100, _cancelTokenSource.Token) ?? true; // Throttle
-                        if (belowTaskLimit)
+                        withinTaskLimit = _prevTask?.Wait(100, _cancelTokenSource.Token) ?? true; // Throttle
+                        if (withinTaskLimit)
                         {
                             _pendingTaskCount = 1;  // All pending tasks has completed
                             break;
                         }
                         if (Interlocked.Read(ref _pendingTaskCount) < TaskPendingLimit)
                         {
-                            belowTaskLimit = true;  // Some pending tasks has completed
+                            withinTaskLimit = true;  // Some pending tasks has completed
                             break;
                         }
                     }
-                    if (!belowTaskLimit)
+                    if (!withinTaskLimit)
                     {
                         // The tasks queue is not moving. We start a new task queue and ignores the old one
                         InternalLogger.Info("GoogleStackdriver(Name={0}): Throttle timeout but {1} tasks are still pending", Name, _pendingTaskCount);
                     }
                 }
 
-                if (belowTaskLimit && _prevTask != null)
+                if (withinTaskLimit && _prevTask != null)
                 {
                     _prevTask = _prevTask.ContinueWith(_writeLogEntriesBegin, logEntries, _cancelTokenSource.Token);
                 }
