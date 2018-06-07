@@ -74,6 +74,7 @@ namespace Google.Cloud.Spanner.Data.IntegrationTests
                 cmd.Parameters.Add("K", SpannerDbType.String, _lastKey);
                 using (var reader = await cmd.ExecuteReaderAsync())
                 {
+                    Assert.True(await reader.ReadAsync());
                     readerAction(reader);
                 }
             }
