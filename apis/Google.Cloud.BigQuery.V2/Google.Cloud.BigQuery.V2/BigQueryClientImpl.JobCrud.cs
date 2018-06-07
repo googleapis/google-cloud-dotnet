@@ -176,6 +176,7 @@ namespace Google.Cloud.BigQuery.V2
             string projectId = options?.ProjectId ?? ProjectId;
             string jobId = options?.JobId;
             string jobIdPrefix = options?.JobIdPrefix;
+            IDictionary<string, string> jobLabels = options?.Labels;
             if (jobId != null && jobIdPrefix != null)
             {
                 throw new ArgumentException("Only one of JobId or JobIdPrefix can be specified for a single operation.");
@@ -186,6 +187,10 @@ namespace Google.Cloud.BigQuery.V2
                 jobId = prefix + Guid.NewGuid().ToString().Replace("-", "_");
             }
             string location = options?.JobLocation ?? DefaultLocation;
+            if (jobLabels != null && jobLabels.Count > 0)
+            {
+                configuration.Labels = jobLabels;
+            }
             return new Job { Configuration = configuration, JobReference = GetJobReference(projectId, jobId, location) };
         }
 

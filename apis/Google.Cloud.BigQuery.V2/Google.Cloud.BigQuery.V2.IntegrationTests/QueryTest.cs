@@ -53,6 +53,23 @@ namespace Google.Cloud.BigQuery.V2.IntegrationTests
         }
 
         [Fact]
+        public void SynchronousTemporaryQuery_JobLabels()
+        {
+            var projectId = _fixture.ProjectId;
+            var client = BigQueryClient.Create(projectId);
+            var table = client.GetTable(PublicDatasetsProject, PublicDatasetsDataset, ShakespeareTable);
+
+            var sql = $"SELECT corpus as title, COUNT(word) as unique_words FROM {table} GROUP BY title ORDER BY unique_words DESC LIMIT 10";
+            var options = new QueryOptions { Labels = JobsTest.JobLabels };
+
+            var queryJob = client.CreateQueryJob(sql, null, options);
+            JobsTest.VerifyJobLabels(queryJob?.Resource?.Configuration?.Labels);
+
+            queryJob.PollUntilCompleted().ThrowOnAnyError();
+            JobsTest.VerifyJobLabels(queryJob?.Resource?.Configuration?.Labels);
+        }
+
+        [Fact]
         public void AsynchronousTemporaryQuery()
         {
             // We create the client using our user, but then access a dataset in a public data
