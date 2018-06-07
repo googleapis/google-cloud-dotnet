@@ -185,6 +185,32 @@ namespace Google.Cloud.BigQuery.V2.IntegrationTests
         }
 
         [Fact]
+        public void UploadCsv_JobLabels()
+        {
+            var client = BigQueryClient.Create(_fixture.ProjectId);
+
+            var tableReference = client.GetTableReference(_fixture.DatasetId, _fixture.CreateTableId());
+
+            string[] csvRows =
+            {
+                "Name,GameStarted",
+                "Ben,2014-08-19T12:41:35.220Z",
+                "Lucy,2014-08-20T12:41:35.220Z",
+                "Rohit,2014-08-21T12:41:35.220Z"
+            };
+
+            var bytes = Encoding.UTF8.GetBytes(string.Join("\n", csvRows));
+            TableSchema schema = null;
+
+            var job = client.UploadCsv(tableReference, schema, new MemoryStream(bytes),
+                new UploadCsvOptions { Autodetect = true, Labels = JobsTest.JobLabels });
+            JobsTest.VerifyJobLabels(job?.Resource?.Configuration?.Labels);
+
+            job = job.PollUntilCompleted().ThrowOnAnyError();
+            JobsTest.VerifyJobLabels(job?.Resource?.Configuration?.Labels);
+        }
+
+        [Fact]
         public void UploadAvro()
         {
             var client = BigQueryClient.Create(_fixture.ProjectId);

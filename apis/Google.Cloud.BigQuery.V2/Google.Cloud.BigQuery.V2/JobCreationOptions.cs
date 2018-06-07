@@ -12,6 +12,8 @@
 // See the License for the specific language governing permissions and
 // limitations under the License.
 
+using System.Collections.Generic;
+
 namespace Google.Cloud.BigQuery.V2
 {
     /// <summary>
@@ -44,5 +46,18 @@ namespace Google.Cloud.BigQuery.V2
         /// </summary>
         /// <seealso cref="BigQueryClient.WithDefaultLocation(string)"/>
         public string JobLocation { get; set; }
+
+        /// <summary>
+        /// The labels associated with the job to be created.
+        /// Labels are key-value pairs.
+        /// You can use these to organize and group your jobs.
+        /// Label keys and values can be no longer than 63 characters,
+        /// can only contain lowercase letters, numeric characters,
+        /// underscores and dashes. International characters are allowed.
+        /// If a label value is <code>null</code>, it won't be added to the job's labels.
+        /// A label value can be <see cref="string.Empty"/>.
+        /// Label keys must start with a letter.
+        /// </summary>
+        public IDictionary<string, string> Labels { get; set; }
     }
 }

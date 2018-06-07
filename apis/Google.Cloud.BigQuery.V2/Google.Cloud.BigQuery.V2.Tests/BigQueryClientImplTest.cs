@@ -521,6 +521,8 @@ namespace Google.Cloud.BigQuery.V2.Tests
             Assert.StartsWith(BigQueryClientImpl.DefaultJobIdPrefix, job.JobReference.JobId);
             Assert.NotEqual(BigQueryClientImpl.DefaultJobIdPrefix, job.JobReference.JobId);
             Assert.Equal(DefaultLocation, job.JobReference.Location);
+            // Don't really care if Configuration is null or not, Labels needs to be null.
+            Assert.Null(job.Configuration?.Labels);
         }
 
         [Fact]
@@ -530,6 +532,8 @@ namespace Google.Cloud.BigQuery.V2.Tests
             Assert.Equal("project", job.JobReference.ProjectId);
             Assert.StartsWith(BigQueryClientImpl.DefaultJobIdPrefix, job.JobReference.JobId);
             Assert.Equal(DefaultLocation, job.JobReference.Location);
+            // Don't really care if Configuration is null or not, Labels needs to be null.
+            Assert.Null(job.Configuration?.Labels);
         }
 
         [Fact]
@@ -570,6 +574,24 @@ namespace Google.Cloud.BigQuery.V2.Tests
         {
             var job = CreateJobWithSampleConfiguration(new UploadCsvOptions { JobLocation = "custom-location" });
             Assert.Equal("custom-location", job.JobReference.Location);
+        }
+
+        [Fact]
+        public void CreateJob_Labels()
+        {
+            var options = new UploadCsvOptions
+            {
+                Labels = new Dictionary<string, string>()
+                {
+                    { "one_label", "one-label-value" },
+                    { "another-label_2", "label_value_2" }
+                }
+            };
+            var job = CreateJobWithSampleConfiguration(options);
+
+            Assert.Equal(2, job.Configuration.Labels.Count);
+            Assert.Equal("one-label-value", job.Configuration.Labels["one_label"]);
+            Assert.Equal("label_value_2", job.Configuration.Labels["another-label_2"]);
         }
 
         [Fact]
