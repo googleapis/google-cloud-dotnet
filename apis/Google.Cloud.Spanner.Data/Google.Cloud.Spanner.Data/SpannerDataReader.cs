@@ -143,6 +143,8 @@ namespace Google.Cloud.Spanner.Data
             return SpannerDbType.FromProtobufType(fieldMetadata.Type).DefaultClrType;
         }
 
+        // TODO: Remove duplication by making all of the methods below call this one.
+        // TODO: Validate that we're positioned on a row.
         /// <inheritdoc />
         public override T GetFieldValue<T>(int ordinal) =>
             GetSpannerFieldType(ordinal).ConvertToClrType<T>(_innerList[ordinal], _conversionOptions);
