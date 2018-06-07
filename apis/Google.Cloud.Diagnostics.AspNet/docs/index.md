@@ -5,6 +5,8 @@ It allows for simple integration of Stackdriver into ASP.NET applications with m
 
 `Google.Cloud.Diagnostics.AspNet` currently supports Stackdriver Error Reporting and Stackdriver Trace.
 
+{{version}}
+
 {{installation}}
 
 {{auth}}

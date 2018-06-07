@@ -3,6 +3,8 @@
 `Google.Cloud.Spanner.Data` is the ADO.NET provider for Cloud Spanner. It is the recommended
 package for regular Cloud Spanner database access from .NET.
 
+{{version}}
+
 The [Google.Cloud.Spanner.Admin.Instance.V1](../Google.Cloud.Spanner.Admin.Instance.V1/) package
 should be used for Cloud Spanner instance administration, such as creating or deleting instances.
 

@@ -245,6 +245,8 @@ namespace Google.Cloud.Tools.ProjectGenerator
 
 {{description}}
 
+{{version}}
+
 {{installation}}
 
 {{auth}}

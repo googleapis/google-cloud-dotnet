@@ -2,6 +2,8 @@
 
 {{description}}
 
+{{version}}
+
 {{installation}}
 
 {{auth}}

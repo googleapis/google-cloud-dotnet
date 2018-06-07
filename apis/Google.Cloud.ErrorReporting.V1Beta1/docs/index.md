@@ -2,6 +2,8 @@
 
 {{description}}
 
+{{version}}
+
 Support for automatic error reporting can be found in the
 [`Google.Cloud.Diagnostics.AspNet`](../Google.Cloud.Diagnostics.AspNet/index.html)
 NuGet package.
