@@ -223,7 +223,7 @@ namespace Google.Cloud.Firestore
             {
                 foreach (var doc in querySnapshot)
                 {
-                    if (doc.Reference == this)
+                    if (doc.Reference.Equals(this))
                     {
                         await callback(doc, localCancellationToken).ConfigureAwait(false);
                         return;
