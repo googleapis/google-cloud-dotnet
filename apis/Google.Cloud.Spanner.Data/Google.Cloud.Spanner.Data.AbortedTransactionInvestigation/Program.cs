@@ -15,6 +15,7 @@
 using System;
 using System.Diagnostics;
 using System.Threading;
+using System.Threading.Tasks;
 
 namespace Google.Cloud.Spanner.Data.AbortedTransactionInvestigation
 {
@@ -25,24 +26,40 @@ namespace Google.Cloud.Spanner.Data.AbortedTransactionInvestigation
     {
         // Configuration: change these before running the test
         private static bool CreateDatabase { get; } = true;
+        private static bool AsyncCreateDatabase { get; } = false;
+        private static bool AsyncCreateTable { get; } = false;
+        private static bool AsyncInsert { get; } = false;
         private static TimeSpan Delay { get; } = TimeSpan.Zero;
         private static string Database { get; } = CreateDatabase ? $"testdb_{DateTime.UtcNow:yyyyMMdd't'HHmmss}" : "CONFIGURE_THIS";
         private static string ProjectId { get; } = Environment.GetEnvironmentVariable("TEST_PROJECT");
+        private static string Table { get; } = $"TestTable{DateTime.UtcNow:HHmmss}";
         private static string InstanceId { get; } = "spannerintegration";
+        private static int InsertCount { get; } = 10000;
+        private static int LogInsertFrequency { get; } = 1000; // Not a frequency really, but we log every "this many "inserts...
 
         private static Stopwatch Stopwatch { get; } = Stopwatch.StartNew();
         private static string NoDbConnectionString => $"Data source=projects/{ProjectId}/instances/{InstanceId}";
         private static string ConnectionString => $"{NoDbConnectionString}/databases/{Database}";
 
-        static void Main()
+        static async Task Main()
         {
             LogConfig();
-            MaybeCreateDatabase();
-            Thread.Sleep(Delay);
-            string table = $"TestTable{DateTime.UtcNow:HHmmss}";
+            await MaybeRunAsync(AsyncCreateDatabase, MaybeCreateDatabaseAsync, MaybeCreateDatabase);
+            await MaybeRunAsync(AsyncCreateTable, CreateTableAsync, CreateTable);
+            await Task.Delay(Delay);
+            await MaybeRunAsync(AsyncInsert, InsertRepeatedlyAsync, InsertRepeatedly);
+        }
 
-            CreateTable(table);
-            InsertRepeatedly(table);
+        static async Task MaybeRunAsync(bool runAsync, Func<Task> asyncAction, Action syncAction)
+        {
+            if (runAsync)
+            {
+                await asyncAction();
+            }
+            else
+            {
+                syncAction();
+            }
         }
 
         static void LogConfig()
@@ -50,7 +67,11 @@ namespace Google.Cloud.Spanner.Data.AbortedTransactionInvestigation
             Log($"Starting test at {DateTime.UtcNow:yyyy-MM-dd'T'HH:mm:ss}Z");
             Log($"Database: {Database}");
             Log($"New database? {CreateDatabase}");
+            Log($"Database creation: {(AsyncCreateDatabase ? "Async" : "Sync")}");
+            Log($"Table creation: {(AsyncCreateTable ? "Async" : "Sync")}");
+            Log($"Insert: {(AsyncInsert ? "Async" : "Sync")}");
             Log($"Delay: {Delay}");
+            Log($"Insert count: {InsertCount}");
             Console.WriteLine();
         }
 
@@ -66,22 +87,44 @@ namespace Google.Cloud.Spanner.Data.AbortedTransactionInvestigation
             }
         }
 
-        static void CreateTable(string table)
+        static async Task MaybeCreateDatabaseAsync()
         {
-            Log($"Creating table {table}");
+            if (CreateDatabase)
+            {
+                Log($"Creating database {Database}");
+                using (var connection = new SpannerConnection(NoDbConnectionString))
+                {
+                    await connection.CreateDdlCommand($"CREATE DATABASE {Database}").ExecuteNonQueryAsync();
+                }
+            }
+        }
+
+        static void CreateTable()
+        {
+            Log($"Creating table {Table}");
             using (var connection = new SpannerConnection(ConnectionString))
             {
-                string ddl = $@"CREATE TABLE {table} (K STRING(MAX) NOT NULL) PRIMARY KEY(K)";
+                string ddl = $@"CREATE TABLE {Table} (K STRING(MAX) NOT NULL) PRIMARY KEY(K)";
                 connection.CreateDdlCommand(ddl).ExecuteNonQuery();
             }
         }
 
-        static void InsertRepeatedly(string table)
+        static async Task CreateTableAsync()
         {
-            // Execute 10001 tests so that we log the end as well.
-            for (int i = 0; i < 10001; i++)
+            Log($"Creating table {Table}");
+            using (var connection = new SpannerConnection(ConnectionString))
             {
-                if (i % 1000 == 0)
+                string ddl = $@"CREATE TABLE {Table} (K STRING(MAX) NOT NULL) PRIMARY KEY(K)";
+                await connection.CreateDdlCommand(ddl).ExecuteNonQueryAsync();
+            }
+        }
+
+        static void InsertRepeatedly()
+        {
+            int errors = 0;
+            for (int i = 0; i < InsertCount; i++)
+            {
+                if (i % LogInsertFrequency == 0)
                 {
                     Log($"Test {i}");
                 }
@@ -89,7 +132,7 @@ namespace Google.Cloud.Spanner.Data.AbortedTransactionInvestigation
                 {
                     using (var connection = new SpannerConnection(ConnectionString))
                     {
-                        var cmd = connection.CreateInsertCommand(table);
+                        var cmd = connection.CreateInsertCommand(Table);
                         cmd.Parameters.Add("K", SpannerDbType.String, Guid.NewGuid().ToString());
                         cmd.ExecuteNonQuery();
                     }
@@ -97,8 +140,37 @@ namespace Google.Cloud.Spanner.Data.AbortedTransactionInvestigation
                 catch (SpannerException e) when (e.ErrorCode == ErrorCode.Aborted)
                 {
                     Log($"Aborted transaction at test {i}");
+                    errors++;
                 }
             }
+            Log($"Total errors over {InsertCount} insertions: {errors}");
+        }
+
+        static async Task InsertRepeatedlyAsync()
+        {
+            int errors = 0;
+            for (int i = 0; i < InsertCount; i++)
+            {
+                if (i % LogInsertFrequency == 0)
+                {
+                    Log($"Test {i}");
+                }
+                try
+                {
+                    using (var connection = new SpannerConnection(ConnectionString))
+                    {
+                        var cmd = connection.CreateInsertCommand(Table);
+                        cmd.Parameters.Add("K", SpannerDbType.String, Guid.NewGuid().ToString());
+                        await cmd.ExecuteNonQueryAsync();
+                    }
+                }
+                catch (SpannerException e) when (e.ErrorCode == ErrorCode.Aborted)
+                {
+                    Log($"Aborted transaction at test {i}");
+                    errors++;
+                }
+            }
+            Log($"Total errors over {InsertCount} insertions: {errors}");
         }
 
         static void Log(string message) =>
