@@ -15,6 +15,7 @@
 using System;
 using System.Linq;
 using Xunit;
+using static Google.Apis.Bigquery.v2.JobsResource.ListRequest;
 
 namespace Google.Cloud.BigQuery.V2.IntegrationTests
 {
@@ -49,6 +50,22 @@ namespace Google.Cloud.BigQuery.V2.IntegrationTests
             // Note: can't find the job reference itself, as that would check equality by reference :(
             var jobIds = recentJobs.Select(job => job.Reference.JobId).ToList();
             Assert.Contains(jobToFind.Reference.JobId, jobIds);
+        }
+
+        [Fact]
+        public void ListJobs_FullProjection()
+        {
+            var client = BigQueryClient.Create(_fixture.ProjectId);
+
+            var table = client.GetTable(_fixture.ProjectId, _fixture.DatasetId, _fixture.HighScoreTableId);
+            var jobToFind = client.CreateQueryJob("SELECT * FROM {table}", parameters: null);
+
+            // Find the job after listing with full projection.
+            var jobFound = (from job in client.ListJobs(new ListJobsOptions() { Projection = ProjectionEnum.Full })
+                            where job.Reference.JobId == jobToFind.Reference.JobId
+                            select job).Single();
+
+            Assert.NotNull(jobFound.Resource.Configuration);
         }
     }
 }

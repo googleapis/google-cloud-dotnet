@@ -39,6 +39,11 @@ namespace Google.Cloud.BigQuery.V2
         /// </summary>
         public bool? AllUsers { get; set; }
 
+        /// <summary>
+        /// The information to retrieve for listed jobs.
+        /// </summary>
+        public ProjectionEnum? Projection { get; set; }
+
         internal void ModifyRequest(ListRequest request)
         {
             if (StateFilter != null)
@@ -56,7 +61,10 @@ namespace Google.Cloud.BigQuery.V2
                 request.AllUsers = AllUsers;
             }
 
-            // TODO: Projection?
+            if (Projection != null)
+            {
+                request.Projection = Projection;
+            }
         }
     }
 }
