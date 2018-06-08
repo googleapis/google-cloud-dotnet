@@ -28,13 +28,15 @@ namespace Google.Cloud.BigQuery.V2.Tests
             {
                 PageSize = 25,
                 StateFilter = JobState.Pending,
-                AllUsers = true
+                AllUsers = true,
+                Projection = ProjectionEnum.Full
             };
             ListRequest request = new ListRequest(new BigqueryService(), "project");
             options.ModifyRequest(request);
             Assert.Equal(25, request.MaxResults);
             Assert.Equal(StateFilterEnum.Pending, request.StateFilter);
             Assert.Equal(true, request.AllUsers);
+            Assert.Equal(ProjectionEnum.Full, request.Projection);
         }
     }
 }
