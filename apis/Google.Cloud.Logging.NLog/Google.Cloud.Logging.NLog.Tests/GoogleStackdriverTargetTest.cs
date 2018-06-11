@@ -164,6 +164,26 @@ namespace Google.Cloud.Logging.NLog.Tests
         }
 
         [Fact]
+        public async Task SingleLogEntryWithJsonProperties()
+        {
+            var uploadedEntries = await RunTestWorkingServer(
+                googleTarget =>
+                {
+                    googleTarget.SendJsonPayload = true;
+                    googleTarget.ContextProperties.Add(new TargetPropertyWithContext() { Name = "Galaxy", Layout = "Milky way" });
+                    LogManager.GetLogger("testlogger").Info("Hello {Planet}", "Earth");
+                    return Task.FromResult(0);
+                }, includeEventProperties: true);
+            Assert.Single(uploadedEntries);
+            var entry0 = uploadedEntries[0];
+            Assert.Equal(string.Empty, entry0.TextPayload?.Trim() ?? string.Empty);
+            Assert.Equal("Hello \"Earth\"", entry0.JsonPayload.Fields["message"].StringValue);
+            Assert.Equal(2, entry0.JsonPayload.Fields["properties"].StructValue.Fields.Count);
+            Assert.Equal("Earth", entry0.JsonPayload.Fields["properties"].StructValue.Fields["Planet"].StringValue);
+            Assert.Equal("Milky way", entry0.JsonPayload.Fields["properties"].StructValue.Fields["Galaxy"].StringValue);
+        }
+
+        [Fact]
         public async Task MultipleLogEntries()
         {
             var logs = Enumerable.Range(1, 5).Select(i => $"Message{i}");

@@ -95,6 +95,11 @@ namespace Google.Cloud.Logging.NLog
         public Layout LogId { get; set; }
 
         /// <summary>
+        /// Fills <see cref="LogEntry.JsonPayload"/> instead of <see cref="LogEntry.TextPayload"/> 
+        /// </summary>
+        public bool SendJsonPayload { get; set; }
+
+        /// <summary>
         /// Specify labels for the resource type;
         /// only used if platform detection is disabled or detects an unknown platform.
         /// </summary>
@@ -413,26 +418,81 @@ namespace Google.Cloud.Logging.NLog
         {
             var logEntry = new LogEntry
             {
-                TextPayload = RenderLogEvent(Layout, loggingEvent),
+
                 Severity = s_levelMap[loggingEvent.Level],
                 Timestamp = ConvertToTimestamp(loggingEvent.TimeStamp),
                 LogName = _logName,
                 Resource = _resource,
             };
 
-            foreach (var combinedProperty in GetAllProperties(loggingEvent))
+            if (SendJsonPayload)
             {
-                if (string.IsNullOrEmpty(combinedProperty.Key))
-                    continue;
+                var jsonStruct = new Struct();
+                jsonStruct.Fields.Add("message", Value.ForString(RenderLogEvent(Layout, loggingEvent)));
 
-                try
+                var propertiesStruct = new Struct();
+                jsonStruct.Fields.Add("properties", Value.ForStruct(propertiesStruct));
+
+                foreach (var combinedProperty in GetAllProperties(loggingEvent))
                 {
-                    logEntry.Labels[combinedProperty.Key] = combinedProperty.Value?.ToString() ?? "null";
+                    if (string.IsNullOrEmpty(combinedProperty.Key))
+                        continue;
+
+                    try
+                    {
+                        switch (Convert.GetTypeCode(combinedProperty.Value))
+                        {
+                            case TypeCode.Empty:
+                                propertiesStruct.Fields.Add(combinedProperty.Key, Value.ForNull());
+                                break;
+                            case TypeCode.Boolean:
+                                propertiesStruct.Fields.Add(combinedProperty.Key, Value.ForBool((bool)combinedProperty.Value));
+                                break;
+                            case TypeCode.Decimal:
+                            case TypeCode.Double:
+                            case TypeCode.Single:
+                            case TypeCode.Byte:
+                            case TypeCode.SByte:
+                            case TypeCode.Int16:
+                            case TypeCode.UInt16:
+                            case TypeCode.Int32:
+                            case TypeCode.UInt32:
+                            case TypeCode.Int64:
+                            case TypeCode.UInt64:
+                                propertiesStruct.Fields.Add(combinedProperty.Key, Value.ForNumber(Convert.ToDouble(combinedProperty.Value)));
+                                break;
+                            default:
+                                propertiesStruct.Fields.Add(combinedProperty.Key, Value.ForString(combinedProperty.Value?.ToString() ?? "null"));
+                                break;
+                        }
+                    }
+                    catch (Exception ex)
+                    {
+                        InternalLogger.Warn(ex, "GoogleStackdriver(Name={0}): Exception at BuildLogEntry with Key={1}", Name, combinedProperty.Key);
+                        propertiesStruct.Fields.Add(combinedProperty.Key, Value.ForNull());
+                    }
                 }
-                catch (Exception ex)
+
+                logEntry.JsonPayload = jsonStruct;
+            }
+            else
+            {
+                logEntry.TextPayload = RenderLogEvent(Layout, loggingEvent);
+
+                foreach (var combinedProperty in GetAllProperties(loggingEvent))
                 {
-                    InternalLogger.Warn(ex, "GoogleStackdriver(Name={0}): Exception at BuildLogEntry with Key={1}", Name, combinedProperty.Key);
-                    logEntry.Labels[combinedProperty.Key] = "null";
+                    if (string.IsNullOrEmpty(combinedProperty.Key))
+                        continue;
+
+                    try
+                    {
+                        logEntry.Labels[combinedProperty.Key] = combinedProperty.Value?.ToString() ?? "null";
+                    }
+                    catch (Exception ex)
+                    {
+                        InternalLogger.Warn(ex, "GoogleStackdriver(Name={0}): Exception at BuildLogEntry with Key={1}", Name, combinedProperty.Key);
+                        logEntry.Labels[combinedProperty.Key] = "null";
+                    }
                 }
             }
 
