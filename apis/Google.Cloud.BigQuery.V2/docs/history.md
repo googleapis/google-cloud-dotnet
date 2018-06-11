@@ -1,5 +1,16 @@
 # Version history
 
+# 1.3.0 (unreleased)
+
+New features:
+
+- Support for a projection to be specified when listing jobs
+- Support for time-based partitioning in query options
+- Support for time-based partitioning by a specific field
+- Support for SchemaUpdateOptions for load and query jobs
+- Support for Parquet load jobs
+- Public constructors for BigQueryTable etc, for improved testability
+
 # 1.2.0, 2018-04-09
 
 New features:
