@@ -26,13 +26,28 @@ namespace Google.Cloud.Diagnostics.Common.IntegrationTests
     /// </summary>
     internal class LogEntryPolling : BaseEntryPolling<LogEntry>
     {
+        /// <summary>
+        /// Default total time to spend sleeping when looking for entries.
+        /// More than what <see cref="BaseEntryPolling{T}._defaultTimeout"/>
+        /// because logs are taking longer to process.
+        /// </summary>
+        private static readonly TimeSpan _defaultTimeout = TimeSpan.FromSeconds(180);
+
+        /// <summary>
+        /// Default time to sleep between checks for entries.
+        /// Consistent with the <see cref="_defaultTimeout"/>.
+        /// </summary>
+        private static readonly TimeSpan _defaultSleepInterval = TimeSpan.FromSeconds(40);
+
         /// <summary>Project id to run the test on.</summary>
         private readonly string _projectId = Utils.GetProjectIdFromEnvironment();
 
         /// <summary>Client to use to send RPCs.</summary>
         private readonly LoggingServiceV2Client _client = LoggingServiceV2Client.Create();
 
-        internal LogEntryPolling(TimeSpan timeout) : base(timeout) { }
+        internal LogEntryPolling(TimeSpan timeout = default) 
+            : base(timeout == default ? _defaultTimeout : timeout, timeout == default ? _defaultSleepInterval : default)
+        { }
 
         /// <summary>
         /// Gets log entries that contain the passed in testId in the log message.  Will poll

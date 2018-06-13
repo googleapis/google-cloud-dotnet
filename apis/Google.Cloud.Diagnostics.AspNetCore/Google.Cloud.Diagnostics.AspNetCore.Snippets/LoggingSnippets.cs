@@ -34,7 +34,7 @@ namespace Google.Cloud.Diagnostics.AspNetCore.Snippets
     public class LoggingSnippetsTests : IDisposable
     {
         private static readonly string ProjectId = Utils.GetProjectIdFromEnvironment();
-        private static readonly LogEntryPolling s_polling = new LogEntryPolling(TimeSpan.FromSeconds(120));
+        private static readonly LogEntryPolling s_polling = new LogEntryPolling();
 
         private readonly string _testId;
 

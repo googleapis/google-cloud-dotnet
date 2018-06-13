@@ -36,7 +36,7 @@ namespace Google.Cloud.Diagnostics.AspNetCore.IntegrationTests
 {
     public class LoggingTest
     {
-        private readonly LogEntryPolling _polling = new LogEntryPolling(TimeSpan.FromSeconds(120));
+        private readonly LogEntryPolling _polling = new LogEntryPolling();
 
         [Fact]
         public async Task Logging_SizedBufferNoLogs()
