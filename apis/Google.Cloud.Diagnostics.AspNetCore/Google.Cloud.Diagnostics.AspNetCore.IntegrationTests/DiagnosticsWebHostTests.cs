@@ -99,7 +99,7 @@ namespace Google.Cloud.Diagnostics.AspNetCore.IntegrationTests
 
         private static async Task TestLogging(string testId, DateTime startTime, HttpClient client)
         {
-            var polling = new LogEntryPolling(TimeSpan.FromSeconds(60));
+            var polling = new LogEntryPolling();
             await client.GetAsync($"/Main/Warning/{testId}");
             var results = polling.GetEntries(startTime, testId, 1, LogSeverity.Warning);
 
