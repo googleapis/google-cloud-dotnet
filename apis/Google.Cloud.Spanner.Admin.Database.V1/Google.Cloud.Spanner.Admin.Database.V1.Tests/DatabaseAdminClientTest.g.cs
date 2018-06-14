@@ -49,7 +49,7 @@ namespace Google.Cloud.Spanner.Admin.Database.V1.Tests
             };
             Database expectedResponse = new Database
             {
-                Name = "name2-1052831874",
+                DatabaseName = new DatabaseName("[PROJECT]", "[INSTANCE]", "[DATABASE]"),
             };
             mockGrpcClient.Setup(x => x.GetDatabase(expectedRequest, It.IsAny<CallOptions>()))
                 .Returns(expectedResponse);
@@ -72,7 +72,7 @@ namespace Google.Cloud.Spanner.Admin.Database.V1.Tests
             };
             Database expectedResponse = new Database
             {
-                Name = "name2-1052831874",
+                DatabaseName = new DatabaseName("[PROJECT]", "[INSTANCE]", "[DATABASE]"),
             };
             mockGrpcClient.Setup(x => x.GetDatabaseAsync(expectedRequest, It.IsAny<CallOptions>()))
                 .Returns(new Grpc.Core.AsyncUnaryCall<Database>(Task.FromResult(expectedResponse), null, null, null, null));
@@ -95,7 +95,7 @@ namespace Google.Cloud.Spanner.Admin.Database.V1.Tests
             };
             Database expectedResponse = new Database
             {
-                Name = "name2-1052831874",
+                DatabaseName = new DatabaseName("[PROJECT]", "[INSTANCE]", "[DATABASE]"),
             };
             mockGrpcClient.Setup(x => x.GetDatabase(request, It.IsAny<CallOptions>()))
                 .Returns(expectedResponse);
@@ -117,7 +117,7 @@ namespace Google.Cloud.Spanner.Admin.Database.V1.Tests
             };
             Database expectedResponse = new Database
             {
-                Name = "name2-1052831874",
+                DatabaseName = new DatabaseName("[PROJECT]", "[INSTANCE]", "[DATABASE]"),
             };
             mockGrpcClient.Setup(x => x.GetDatabaseAsync(request, It.IsAny<CallOptions>()))
                 .Returns(new Grpc.Core.AsyncUnaryCall<Database>(Task.FromResult(expectedResponse), null, null, null, null));

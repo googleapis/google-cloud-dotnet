@@ -49,6 +49,19 @@ namespace Google.Cloud.Spanner.Admin.Database.V1
 
     }
 
+    public partial class Database
+    {
+        /// <summary>
+        /// <see cref="gcscv::DatabaseName"/>-typed view over the <see cref="Name"/> resource name property.
+        /// </summary>
+        public gcscv::DatabaseName DatabaseName
+        {
+            get { return string.IsNullOrEmpty(Name) ? null : gcscv::DatabaseName.Parse(Name); }
+            set { Name = value != null ? value.ToString() : ""; }
+        }
+
+    }
+
     public partial class DropDatabaseRequest
     {
         /// <summary>
