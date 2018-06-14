@@ -36,7 +36,7 @@ namespace Google.Cloud.Spanner.Data.CleanTestData
             var databases = client.ListDatabases(instanceName).ToList();
             foreach (var database in databases)
             {
-                var name = DatabaseName.Parse(database.Name);
+                var name = database.DatabaseName;
                 if (name.DatabaseId.StartsWith("testdb"))
                 {
                     Console.WriteLine($"Dropping {name.DatabaseId}");
