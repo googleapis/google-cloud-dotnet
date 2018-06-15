@@ -11,6 +11,10 @@ branches:
 
 init:
   - git config --global core.autocrlf true
+  # This change was recommended by the AppVeyor team to save space.
+  - rmdir C:\cygwin /s /q
+  - rmdir C:\QT /s /q
+
   
 environment:
   COVERALLS_REPO_TOKEN:
