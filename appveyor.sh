@@ -1,4 +1,7 @@
 #!/bin/bash
+
+set -e
+
 dotnet --info
 echo "Regenerating projects: if this fails, run generateprojects.sh and commit changes"
 bash generateprojects.sh && git diff --exit-code
