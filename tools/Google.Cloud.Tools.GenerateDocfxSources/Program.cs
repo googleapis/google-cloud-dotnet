@@ -235,7 +235,7 @@ specifying an end-point or channel and settings.";
             var sourceFiles = Directory.GetFiles(packageSource, "*Client.cs");
             // TODO: Find a more robust way of detecting the clients.
             var clients = sourceFiles
-                .Where(file => File.ReadAllText(file).Contains(": ServiceSettingsBase")) // Check it contains a generated client
+                .Where(file => File.ReadAllText(file).Contains(": gaxgrpc::ServiceSettingsBase")) // Check it contains a generated client
                 .Select(file => Path.GetFileName(file))             // Just the file name, not full path
                 .Select(file => file.Substring(0, file.Length - 3)) // Trim .cs
                 .OrderBy(client => client)
