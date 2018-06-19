@@ -599,6 +599,29 @@ namespace Google.Cloud.BigQuery.V2.IntegrationTests
             Assert.Equal(Locations.EuropeanUnion, job.Reference.Location);
         }
 
+        [Fact]
+        public void DdlQuery()
+        {
+            var client = BigQueryClient.Create(_fixture.ProjectId);
+            var tableId = _fixture.CreateTableId();
+            var job = client.CreateQueryJob($"CREATE TABLE `{_fixture.ProjectId}.{_fixture.DatasetId}.{tableId}` (x INT64, y STRING)", null);
+            job = job.PollUntilCompleted().ThrowOnAnyError();
+            Assert.Equal("CREATE", job.Statistics.Query.DdlOperationPerformed);
+            var tableRef = job.Statistics.Query.DdlTargetTable;
+            Assert.Equal(_fixture.ProjectId, tableRef.ProjectId);
+            Assert.Equal(_fixture.DatasetId, tableRef.DatasetId);
+            Assert.Equal(tableId, tableRef.TableId);
+
+            var table = client.GetTable(tableRef);
+            var fields = table.Schema.Fields;
+            Assert.Equal(2, fields.Count);
+            Assert.Equal("x", fields[0].Name);
+            Assert.Equal("y", fields[1].Name);
+
+            // Viewing the job as a query, there aren't any results.
+            Assert.Empty(job.GetQueryResults());
+        }
+
         private class TitleComparer : IEqualityComparer<BigQueryRow>
         {
             public bool Equals(BigQueryRow x, BigQueryRow y) => (string)x["title"] == (string)y["title"];
