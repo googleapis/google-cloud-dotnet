@@ -1,0 +1,366 @@
+﻿// Copyright 2018 Google LLC
+// 
+// Licensed under the Apache License, Version 2.0 (the "License");
+// you may not use this file except in compliance with the License.
+// You may obtain a copy of the License at
+// 
+//     https://www.apache.org/licenses/LICENSE-2.0
+// 
+// Unless required by applicable law or agreed to in writing, software
+// distributed under the License is distributed on an "AS IS" BASIS,
+// WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
+// See the License for the specific language governing permissions and
+// limitations under the License.
+
+using Google.Api.Gax;
+using Google.Cloud.Spanner.Admin.Database.V1;
+using Google.Cloud.Spanner.Common.V1;
+using Google.Cloud.Spanner.V1;
+using Google.Cloud.Spanner.V1.Internal.Logging;
+using Google.Protobuf.WellKnownTypes;
+using Grpc.Core;
+using System;
+using System.Collections.Generic;
+using System.Data;
+using System.Data.Common;
+using System.Linq;
+using System.Threading;
+using System.Threading.Tasks;
+
+namespace Google.Cloud.Spanner.Data
+{
+    public sealed partial class SpannerCommand
+    {
+        /// <summary>
+        /// Class that effectively contains a copy of the parameters of a SpannerCommand, but in a shallow-immutable way.
+        /// This means we can validate various things and not worry about them changing. The parameter collection may be modified
+        /// externally, along with the SpannerConnection, but other objects should be fine.
+        /// 
+        /// This class is an implementation detail, used to keep "code required to execute Spanner commands" separate from the ADO
+        /// API surface with its mutable properties and many overloads.
+        /// </summary>
+        private class ExecutableCommand
+        {
+            internal SpannerConnection Connection { get; }
+            internal SpannerCommandTextBuilder CommandTextBuilder { get; }
+            internal Logger Logger { get; }
+            internal int CommandTimeout { get; }
+            internal SpannerTransaction Transaction { get; }
+            internal CommandPartition Partition { get; }
+            internal SpannerParameterCollection Parameters { get; }
+
+            public ExecutableCommand(SpannerCommand command)
+            {
+                Connection = command.SpannerConnection;
+                CommandTextBuilder = command.SpannerCommandTextBuilder;
+                Logger = command.Logger;
+                CommandTimeout = command.CommandTimeout;
+                Partition = command.Partition;
+                Parameters = command.Parameters;
+                Transaction = command._transaction;
+            }
+
+            // ExecuteScalar is simply implemented in terms of ExecuteReader.
+            internal async Task<T> ExecuteScalarAsync<T>(CancellationToken cancellationToken)
+            {
+                // Duplication of later checks, but this means we can report the right method name.
+                ValidateConnectionAndCommandTextBuilder();
+                if (CommandTextBuilder.SpannerCommandType != SpannerCommandType.Select)
+                {
+                    throw new InvalidOperationException("ExecuteScalar functionality is only available for queries.");
+                }
+
+                using (var reader = await ExecuteReaderAsync(CommandBehavior.SingleRow, null, cancellationToken).ConfigureAwait(false))
+                {
+                    if (await reader.ReadAsync(cancellationToken).ConfigureAwait(false) && reader.HasRows &&
+                        reader.FieldCount > 0)
+                    {
+                        return reader.GetFieldValue<T>(0);
+                    }
+                }
+                return default;
+            }
+
+            // Convenience method for upcasting the from SpannerDataReader to DbDataReader.
+            internal async Task<DbDataReader> ExecuteDbDataReaderAsync(CommandBehavior behavior, TimestampBound singleUseReadSettings, CancellationToken cancellationToken) =>
+                await ExecuteReaderAsync(behavior, singleUseReadSettings, cancellationToken).ConfigureAwait(false);
+
+            internal async Task<SpannerDataReader> ExecuteReaderAsync(CommandBehavior behavior, TimestampBound singleUseReadSettings, CancellationToken cancellationToken)
+            {
+                ValidateConnectionAndCommandTextBuilder();
+                ValidateCommandBehavior(behavior);
+
+                if (CommandTextBuilder.SpannerCommandType != SpannerCommandType.Select)
+                {
+                    throw new InvalidOperationException("ExecuteReader functionality is only available for queries.");
+                }
+
+                await EnsureConnectionIsOpenAsync(cancellationToken).ConfigureAwait(false);
+
+                // Three transaction options:
+                // - One created freshly via singleUseReadSettings
+                // - One specified in the command
+                // - The default based on the connection
+
+                IDisposable disposableTransaction = null;
+                ISpannerTransaction effectiveTransaction = Transaction;
+                if (singleUseReadSettings != null)
+                {
+                    if (Transaction != null)
+                    {
+                        throw new InvalidOperationException("singleUseReadSettings cannot be used within another transaction.");
+                    }
+                    SingleUseTransaction transaction = await Connection.BeginSingleUseTransactionAsync(singleUseReadSettings, cancellationToken).ConfigureAwait(false);
+                    effectiveTransaction = transaction;
+                    disposableTransaction = transaction;
+                }
+                if (effectiveTransaction == null)
+                {
+                    effectiveTransaction = Connection.GetDefaultTransaction();
+                }
+
+                ExecuteSqlRequest request = GetExecuteSqlRequest();
+                Logger?.Sensitive_Info(() => $"SpannerCommand.ExecuteReader.Query={request.Sql}");
+
+                // Execute the command.
+                var resultSet = await effectiveTransaction.ExecuteQueryAsync(request, cancellationToken, CommandTimeout)
+                    .ConfigureAwait(false);
+                var conversionOptions = SpannerConversionOptions.ForConnection(Connection);
+                var enableGetSchemaTable = Connection.SpannerConnectionStringBuilder?.EnableGetSchemaTable ?? false;
+                // When the data reader is closed, we need to dispose of either the transaction (if it's single-use) or the connection,
+                // based on the command behavior.
+                var resourceToClose = (behavior & CommandBehavior.CloseConnection) == CommandBehavior.CloseConnection ? Connection : disposableTransaction;
+
+                return new SpannerDataReader(Logger, resultSet, resourceToClose, conversionOptions, enableGetSchemaTable);
+            }
+
+            internal async Task<IReadOnlyList<CommandPartition>> GetReaderPartitionsAsync(long? partitionSizeBytes, long? maxPartitions, CancellationToken cancellationToken)
+            {
+                ValidateConnectionAndCommandTextBuilder();
+
+                GaxPreconditions.CheckState(Transaction?.Mode == TransactionMode.ReadOnly,
+                    "GetReaderPartitions can only be executed within an explicitly created read-only transaction.");
+
+                await EnsureConnectionIsOpenAsync(cancellationToken).ConfigureAwait(false);
+
+                ExecuteSqlRequest executeSqlRequest = GetExecuteSqlRequest();
+                var tokens = await Transaction.GetPartitionTokensAsync(executeSqlRequest, partitionSizeBytes, maxPartitions, cancellationToken, CommandTimeout).ConfigureAwait(false);
+                return tokens.Select(
+                    x => {
+                        var request = executeSqlRequest.Clone();
+                        request.PartitionToken = x;
+                        return new CommandPartition(request);
+                    }).ToList();
+            }
+
+            internal Task<int> ExecuteNonQueryAsync(CancellationToken cancellationToken)
+            {
+                ValidateConnectionAndCommandTextBuilder();
+
+                switch (CommandTextBuilder.SpannerCommandType)
+                {
+                    case SpannerCommandType.Ddl:
+                        return ExecuteDdlAsync(cancellationToken);
+                    case SpannerCommandType.Delete:
+                    case SpannerCommandType.Insert:
+                    case SpannerCommandType.InsertOrUpdate:
+                    case SpannerCommandType.Update:
+                        return ExecuteMutationsAsync(cancellationToken);
+                    default:
+                        throw new InvalidOperationException("ExecuteNonQuery functionality is only available for DML and DDL commands");
+                }
+            }
+
+            private void ValidateConnectionAndCommandTextBuilder()
+            {
+                GaxPreconditions.CheckState(Connection != null, "SpannerCommand can only be executed when a connection is assigned.");
+                GaxPreconditions.CheckState(CommandTextBuilder != null, "SpannerCommand can only be executed when command text is assigned.");
+            }
+
+            private async Task EnsureConnectionIsOpenAsync(CancellationToken cancellationToken)
+            {
+                if (!Connection.IsOpen)
+                {
+                    await Connection.OpenAsync(cancellationToken).ConfigureAwait(false);
+                }
+
+                if (!Connection.IsOpen)
+                {
+                    throw new InvalidOperationException("Unable to open the Spanner connection to the database.");
+                }
+            }
+
+            private async Task<int> ExecuteDdlAsync(CancellationToken cancellationToken)
+            {
+                string commandText = CommandTextBuilder.CommandText;
+                var builder = Connection.SpannerConnectionStringBuilder;
+                var channel = await SpannerClientFactory.CreateChannelAsync(
+                    builder?.Host ?? DatabaseAdminClient.DefaultEndpoint.Host,
+                    builder?.Port ?? DatabaseAdminClient.DefaultEndpoint.Port,
+                    builder?.GetCredentials()).ConfigureAwait(false);
+                try
+                {
+                    var databaseAdminClient = DatabaseAdminClient.Create(channel);
+                    if (CommandTextBuilder.IsCreateDatabaseCommand)
+                    {
+                        var parent = new InstanceName(Connection.Project, Connection.SpannerInstance);
+                        var response = await databaseAdminClient.CreateDatabaseAsync(
+                            new CreateDatabaseRequest
+                            {
+                                ParentAsInstanceName = parent,
+                                CreateStatement = CommandTextBuilder.CommandText,
+                                ExtraStatements = { CommandTextBuilder.ExtraStatements ?? new string[0] }
+                            }).ConfigureAwait(false);
+                        response = await response.PollUntilCompletedAsync().ConfigureAwait(false);
+                        if (response.IsFaulted)
+                        {
+                            throw SpannerException.FromOperationFailedException(response.Exception);
+                        }
+                    }
+                    else if (CommandTextBuilder.IsDropDatabaseCommand)
+                    {
+                        if (CommandTextBuilder.ExtraStatements?.Count > 0)
+                        {
+                            throw new InvalidOperationException(
+                                "Drop database commands do not support additional ddl statements");
+                        }
+                        var dbName = new DatabaseName(
+                            Connection.Project,
+                            Connection.SpannerInstance,
+                            CommandTextBuilder.DatabaseToDrop);
+                        await databaseAdminClient.DropDatabaseAsync(dbName, cancellationToken).ConfigureAwait(false);
+                    }
+                    else
+                    {
+                        var ddlStatements = new List<string> { commandText };
+                        if (CommandTextBuilder.ExtraStatements != null)
+                        {
+                            ddlStatements.AddRange(CommandTextBuilder.ExtraStatements);
+                        }
+
+                        var response =
+                            await databaseAdminClient.UpdateDatabaseDdlAsync(
+                                new UpdateDatabaseDdlRequest
+                                {
+                                    DatabaseAsDatabaseName = new DatabaseName(
+                                        Connection.Project, Connection.SpannerInstance,
+                                        Connection.Database),
+                                    Statements = { ddlStatements }
+                                }).ConfigureAwait(false);
+                        response = await response.PollUntilCompletedAsync().ConfigureAwait(false);
+                        if (response.IsFaulted)
+                        {
+                            throw SpannerException.FromOperationFailedException(response.Exception);
+                        }
+                    }
+                }
+                catch (RpcException gRpcException)
+                {
+                    //we translate rpc errors into a spanner exception
+                    throw new SpannerException(gRpcException);
+                }
+                finally
+                {
+                    await channel.ShutdownAsync().ConfigureAwait(false);
+                }
+
+                return 0;
+            }
+
+            private async Task<int> ExecuteMutationsAsync(CancellationToken cancellationToken)
+            {
+                await EnsureConnectionIsOpenAsync(cancellationToken).ConfigureAwait(false);
+                var mutations = GetMutations();
+                var transaction = Transaction ?? Connection.GetDefaultTransaction();
+                // Make the request. This will commit immediately or not depending on whether a transaction was explicitly created.
+                await transaction.ExecuteMutationsAsync(mutations, cancellationToken, CommandTimeout).ConfigureAwait(false);
+                // Return the number of records affected.
+                return mutations.Count;
+            }
+
+            private List<Mutation> GetMutations()
+            {
+                // Currently, ToProtobufValue doesn't use the options it's provided. They're only
+                // required to prevent us from accidentally adding call sites that wouldn't be able to obtain
+                // valid options. For efficiency, we just pass in null for now. If we ever need real options
+                // from the connection string, uncomment the following line to initialize the options from the connection.
+                // SpannerConversionOptions options = SpannerConversionOptions.ForConnection(SpannerConnection);
+                SpannerConversionOptions conversionOptions = null;
+
+                // Whatever we do with the parameters, we'll need them in a ListValue.
+                var listValue = new ListValue
+                {
+                    Values = { Parameters.Select(x => x.SpannerDbType.ToProtobufValue(x.GetValidatedValue(), conversionOptions)) }
+                };
+
+                var mutations = new List<Mutation>();
+                if (CommandTextBuilder.SpannerCommandType != SpannerCommandType.Delete)
+                {
+                    var w = new Mutation.Types.Write
+                    {
+                        Table = CommandTextBuilder.TargetTable,
+                        Columns = { Parameters.Select(x => x.SourceColumn ?? x.ParameterName) },
+                        Values = { listValue }
+                    };
+                    switch (CommandTextBuilder.SpannerCommandType)
+                    {
+                        case SpannerCommandType.Update:
+                            return new List<Mutation> { new Mutation { Update = w } };
+                        case SpannerCommandType.Insert:
+                            return new List<Mutation> { new Mutation { Insert = w } };
+                        case SpannerCommandType.InsertOrUpdate:
+                            return new List<Mutation> { new Mutation { InsertOrUpdate = w } };
+                        default:
+                            throw new ArgumentOutOfRangeException();
+                    }
+                }
+                else
+                {
+                    var w = new Mutation.Types.Delete
+                    {
+                        Table = CommandTextBuilder.TargetTable,
+                        KeySet = new KeySet { Keys = { listValue } }
+                    };
+                    return new List<Mutation> { new Mutation { Delete = w } };
+                }
+            }
+
+            private ExecuteSqlRequest GetExecuteSqlRequest()
+            {
+                if (Partition != null)
+                {
+                    return Partition.ExecuteSqlRequest;
+                }
+
+                var request = new ExecuteSqlRequest
+                {
+                    Sql = CommandTextBuilder.ToString()
+                };
+
+                if (Parameters?.Count > 0)
+                {
+                    request.Params = new Struct();
+                    // See comment at the start of GetMutations.
+                    SpannerConversionOptions options = null;
+                    Parameters.FillSpannerInternalValues(request.Params.Fields, request.ParamTypes, options);
+                }
+
+                return request;
+            }
+
+            private static void ValidateCommandBehavior(CommandBehavior behavior)
+            {
+                if ((behavior & CommandBehavior.KeyInfo) == CommandBehavior.KeyInfo)
+                {
+                    throw new NotSupportedException(
+                        $"{nameof(CommandBehavior.KeyInfo)} is not supported by Cloud Spanner.");
+                }
+                if ((behavior & CommandBehavior.SchemaOnly) == CommandBehavior.SchemaOnly)
+                {
+                    throw new NotSupportedException(
+                        $"{nameof(CommandBehavior.SchemaOnly)} is not supported by Cloud Spanner.");
+                }
+            }
+        }
+    }
+}
