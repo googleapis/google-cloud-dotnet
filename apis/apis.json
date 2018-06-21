@@ -647,7 +647,7 @@
   {
     "id": "Google.Cloud.Tasks.V2Beta2",
     "productName": "Google Cloud Tasks",
-    "productUrl": "https://cloud.google.com/tasks/",
+    "productUrl": "https://cloud.google.com/cloud-tasks/",
     "version": "1.0.0-beta00",
     "type": "grpc",
     "description": "Recommended Google client library to access the Google Cloud Tasks API, which manages the execution of large numbers of distributed requests.",
