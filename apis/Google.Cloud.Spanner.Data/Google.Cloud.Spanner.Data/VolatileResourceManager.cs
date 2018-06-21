@@ -207,6 +207,16 @@ namespace Google.Cloud.Spanner.Data
             return await ((ISpannerTransaction)transaction).ExecuteQueryAsync(request, cancellationToken, timeoutSeconds).ConfigureAwait(false);
         }
 
+        public async Task<long> ExecuteDmlAsync(ExecuteSqlRequest request, CancellationToken cancellationToken, int timeoutSeconds)
+        {
+            var transaction = await GetTransactionAsync(cancellationToken, timeoutSeconds).ConfigureAwait(false);
+            if (transaction == null)
+            {
+                throw new InvalidOperationException("Unable to obtain a spanner transaction to execute within.");
+            }
+            return await ((ISpannerTransaction)transaction).ExecuteDmlAsync(request, cancellationToken, timeoutSeconds).ConfigureAwait(false);
+        }
+
         private async Task<SpannerTransaction> GetTransactionAsync(CancellationToken cancellationToken, int timeoutSeconds)
         {
             //note that we delay transaction creation (and thereby session allocation)

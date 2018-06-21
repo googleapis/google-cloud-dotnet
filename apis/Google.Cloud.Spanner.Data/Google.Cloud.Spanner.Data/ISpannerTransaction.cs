@@ -12,7 +12,6 @@
 // See the License for the specific language governing permissions and
 // limitations under the License.
 
-using System;
 using System.Collections.Generic;
 using System.Threading;
 using System.Threading.Tasks;
@@ -23,6 +22,10 @@ namespace Google.Cloud.Spanner.Data
     internal interface ISpannerTransaction
     {
         Task<int> ExecuteMutationsAsync(List<Mutation> mutations, CancellationToken cancellationToken, int timeoutSeconds);
+
+        // Note: this returns Task<long> to reflect the results from Spanner faithfully. The caller can then decide what to
+        // do if they need to return an int result type.
+        Task<long> ExecuteDmlAsync(ExecuteSqlRequest request, CancellationToken cancellationToken, int timeoutSeconds);
         Task<ReliableStreamReader> ExecuteQueryAsync(ExecuteSqlRequest request, CancellationToken cancellationToken, int timeoutSeconds);
     }
 }

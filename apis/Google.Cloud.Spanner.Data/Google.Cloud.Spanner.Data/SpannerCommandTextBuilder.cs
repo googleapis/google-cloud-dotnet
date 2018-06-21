@@ -169,6 +169,15 @@ namespace Google.Cloud.Spanner.Data
 
         /// <summary>
         /// Creates a <see cref="SpannerCommandTextBuilder"/> instance that generates <see cref="SpannerCommand.CommandText"/>
+        /// for querying rows via a SQL query.
+        /// </summary>
+        /// <param name="dmlStatement">The full SQL query. Must not be null or empty.</param>
+        /// <returns>A <see cref="SpannerCommandTextBuilder"/> representing a <see cref="F:SpannerCommandType.Select"/> Spanner command.</returns>
+        public static SpannerCommandTextBuilder CreateDmlTextBuilder(string dmlStatement) =>
+            new SpannerCommandTextBuilder(GaxPreconditions.CheckNotNullOrEmpty(dmlStatement, nameof(dmlStatement)), SpannerCommandType.Dml, null, null);
+
+        /// <summary>
+        /// Creates a <see cref="SpannerCommandTextBuilder"/> instance that generates <see cref="SpannerCommand.CommandText"/>
         /// for updating rows.
         /// </summary>
         /// <param name="table">The name of the Spanner database table from which rows will be updated. Must not be null.</param>
@@ -231,13 +240,22 @@ namespace Google.Cloud.Spanner.Data
                 case SpannerCommandType.Update:
                     if (commandSections.Length != 2)
                     {
-                        throw new InvalidOperationException(
-                            $"Spanner {commandName} commands are specified as '{commandName} <table>' with " +
-                            "parameters added to customize the command with filtering or updated values.");
+                        // This is the only DML command that can't be executed as more general DML.
+                        if (commandType == SpannerCommandType.InsertOrUpdate)
+                        {
+                            throw new InvalidOperationException(
+                                $"Spanner {commandName} commands are specified as '{commandName} <table>' with " +
+                                "parameters added to customize the command with filtering or updated values.");
+                        }
+                        // We'll assume it's valid DML, at least.
+                        commandType = SpannerCommandType.Dml;
                     }
-                    targetTable = ValidateTableName(commandSections[1], nameof(commandText));
-                    // This just normalizes the command text.
-                    commandText = $"{commandName} {targetTable}";
+                    else
+                    {
+                        targetTable = ValidateTableName(commandSections[1], nameof(commandText));
+                        // This just normalizes the command text.
+                        commandText = $"{commandName} {targetTable}";
+                    }
                     break;
             }
             return new SpannerCommandTextBuilder(commandText, commandType, targetTable, extraStatements: null);

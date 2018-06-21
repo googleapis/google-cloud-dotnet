@@ -79,6 +79,12 @@ namespace Google.Cloud.Spanner.V1
         /// </summary>
         public Session Session => _session;
 
+        /// <summary>
+        /// The statistics for the results, if present. These are only present on the last RPC
+        /// response from the server. They can be observed while that final response is being consumed, or afterwards.
+        /// </summary>
+        public ResultSetStats Stats { get; private set; }
+
         /// <inheritdoc />
         public void Dispose()
         {
@@ -144,6 +150,7 @@ namespace Google.Cloud.Spanner.V1
                     }
                 }
                 RecordResumeToken();
+                RecordStatistics();
             }
 
             return _isReading;
@@ -182,6 +189,7 @@ namespace Google.Cloud.Spanner.V1
                 await TryRecoverOnFailureAsync(cancellationToken, e).ConfigureAwait(false);
             }
             RecordResumeToken();
+            RecordStatistics();
             return _isReading;
         }
 
@@ -226,13 +234,28 @@ namespace Google.Cloud.Spanner.V1
 
         private void RecordResumeToken()
         {
-            if (_isReading && (_currentCall != null))
+            if (_isReading)
             {
-                //record resume information.
-                if (_currentCall.ResponseStream.Current.ResumeToken != null)
+                // Record a resume token if it's present in the current response.
+                var token = _currentCall?.ResponseStream.Current.ResumeToken;
+                if (token != null)
                 {
-                    _resumeToken = _currentCall.ResponseStream.Current.ResumeToken;
+                    _resumeToken = token;
                     _resumeSkipCount = 0;
+                }
+            }
+        }
+
+        private void RecordStatistics()
+        {
+            if (_isReading)
+            {
+                // We only expect to see a single set of stats, but if we reconnect we might
+                // see two non-null values.
+                var stats = _currentCall?.ResponseStream.Current.Stats;
+                if (stats != null)
+                {
+                    Stats = stats;
                 }
             }
         }
