@@ -323,7 +323,8 @@ namespace Google.Cloud.Spanner.V1
             {
                 return null;
             }
-            if (_nextIndex >= _currentCall.ResponseStream.Current.Values.Count)
+            // This needs to be a while loop to handle chunked streams with no results (e.g. for partitioned DML)
+            while (_nextIndex >= _currentCall.ResponseStream.Current.Values.Count)
             {
                 // We've exhausted this response; move to the next one.
                 _isReading = await ReliableMoveNextAsync(cancellationToken).ConfigureAwait(false);

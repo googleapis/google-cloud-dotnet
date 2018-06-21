@@ -173,6 +173,21 @@ namespace Google.Cloud.Spanner.Data
                 }
             }
 
+            internal async Task<long> ExecutePartitionedUpdateAsync(CancellationToken cancellationToken)
+            {
+                ValidateConnectionAndCommandTextBuilder();
+                GaxPreconditions.CheckState(Transaction is null, "Partitioned updates cannot be executed within another transaction");
+                GaxPreconditions.CheckState(CommandTextBuilder.SpannerCommandType == SpannerCommandType.Dml, "Only general DML commands can be executed in as partitioned updates");
+                await EnsureConnectionIsOpenAsync(cancellationToken).ConfigureAwait(false);
+                ExecuteSqlRequest request = GetExecuteSqlRequest();
+
+                using (var transaction = await Connection.BeginPartitionedUpdateTransactionAsync(cancellationToken).ConfigureAwait(false))
+                {
+                    // Note: no commit here. PDML transactions are implicitly committed as they go along.
+                    return await transaction.ExecuteDmlAsync(request, cancellationToken, CommandTimeout).ConfigureAwait(false);
+                }
+            }
+
             private void ValidateConnectionAndCommandTextBuilder()
             {
                 GaxPreconditions.CheckState(Connection != null, "SpannerCommand can only be executed when a connection is assigned.");

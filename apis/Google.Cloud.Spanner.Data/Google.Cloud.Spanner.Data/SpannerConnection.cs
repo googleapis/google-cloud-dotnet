@@ -835,6 +835,53 @@ namespace Google.Cloud.Spanner.Data
                 }, "SpannerConnection.BeginSingleUseTransaction", Logger);
         }
 
+        internal Task<PartitionedUpdateTransaction> BeginPartitionedUpdateTransactionAsync(CancellationToken cancellationToken) =>
+            ExecuteHelper.WithErrorTranslationAndProfiling(async () =>
+            {
+                // Note that this bypasses the transaction pool. I *believe* that's the desirable behaviour here.
+                var options = new TransactionOptions { PartitionedDml = new TransactionOptions.Types.PartitionedDml() };
+                using (var sessionHolder = await SessionHolder.Allocate(
+                        this,
+                        options, cancellationToken)
+                    .ConfigureAwait(false))
+                {
+                    var transaction = await SpannerClient
+                        .BeginTransactionAsync(sessionHolder.Session.SessionName, options)
+                        .ConfigureAwait(false);
+                    return new PartitionedUpdateTransaction(this, sessionHolder.TakeOwnership(), transaction);
+                }
+            }, "SpannerConnection.BeginPartitionedUpdateTransaction", Logger);
+
+        /// <summary>
+        /// Helper method for common code to execute DML via a ReliableStreamReader.
+        /// </summary>
+        internal Task<long> ExecuteDmlAsync(Session session, ExecuteSqlRequest request, CancellationToken cancellationToken, int timeoutSeconds) =>
+            ExecuteHelper.WithErrorTranslationAndProfiling(async () =>
+            {
+                using (var reader = SpannerClient.GetSqlStreamReader(request, session, timeoutSeconds))
+                {
+                    Value value = await reader.NextAsync(cancellationToken).ConfigureAwait(false);
+                    if (value != null)
+                    {
+                        throw new SpannerException(ErrorCode.Internal, "DML returned results unexpectedly.");
+                    }
+                    var stats = reader.Stats;
+                    if (stats == null)
+                    {
+                        throw new SpannerException(ErrorCode.Internal, "DML completed without statistics.");
+                    }
+                    switch (stats.RowCountCase)
+                    {
+                        case ResultSetStats.RowCountOneofCase.RowCountExact:
+                            return stats.RowCountExact;
+                        case ResultSetStats.RowCountOneofCase.RowCountLowerBound:
+                            return stats.RowCountLowerBound;
+                        default:
+                            throw new SpannerException(ErrorCode.Internal, $"Unknown row count type: {stats.RowCountCase}");
+                    }
+                }
+            }, "PartitionedUpdateTransaction.ExecuteDml", Logger);
+
         private Task<SpannerTransaction> BeginTransactionImplAsync(
             TransactionOptions transactionOptions,
             TransactionMode transactionMode,

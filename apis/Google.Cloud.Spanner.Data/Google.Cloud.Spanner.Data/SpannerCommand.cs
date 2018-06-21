@@ -376,6 +376,37 @@ namespace Google.Cloud.Spanner.Data
             CreateExecutableCommand().ExecuteDbDataReaderAsync(behavior, null, cancellationToken);
 
         /// <summary>
+        /// Executes this command as a partitioned update. The command must be a generalized DML command;
+        /// <see cref="SpannerConnection.CreateDmlCommand(string, SpannerParameterCollection)"/> for details.
+        /// </summary>
+        /// <remarks>
+        /// The command is executed in parallel across multiple partitions, and automatically committed as it executes.
+        /// This operation is not atomic: if it is cancelled part way through, the data that has already been updated will
+        /// remain updated. Additionally, it is performed "at least once" in each partition; if the statement is non-idempotent
+        /// (for example, incrementing a column) then the update may be performed more than once on a given row. 
+        /// This command must not be part of any other transaction.
+        /// </remarks>
+        /// <returns>A lower bound for the number of rows affected.</returns>
+        public long ExecutePartitionedUpdate() =>
+            ExecutePartitionedUpdateAsync(_synchronousCancellationTokenSource.Token).ResultWithUnwrappedExceptions();
+
+        /// <summary>
+        /// Executes this command as a partitioned update. The command must be a generalized DML command;
+        /// <see cref="SpannerConnection.CreateDmlCommand(string, SpannerParameterCollection)"/> for details.
+        /// </summary>
+        /// <remarks>
+        /// The command is executed in parallel across multiple partitions, and automatically committed as it executes.
+        /// This operation is not atomic: if it is cancelled part way through, the data that has already been updated will
+        /// remain updated. Additionally, it is performed "at least once" in each partition; if the statement is non-idempotent
+        /// (for example, incrementing a column) then the update may be performed more than once on a given row. 
+        /// This command must not be part of any other transaction.
+        /// </remarks>
+        /// <param name="cancellationToken">An optional token for canceling the call.</param>
+        /// <returns>A task whose result is a lower bound for the number of rows affected.</returns>
+        public Task<long> ExecutePartitionedUpdateAsync(CancellationToken cancellationToken = default) =>
+            CreateExecutableCommand().ExecutePartitionedUpdateAsync(cancellationToken);
+
+        /// <summary>
         /// Creates an executable command that captures all the necessary information from this command.
         /// </summary>
         private ExecutableCommand CreateExecutableCommand() => new ExecutableCommand(this);
