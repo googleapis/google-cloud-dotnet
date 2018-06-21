@@ -191,7 +191,7 @@ namespace Google.Cloud.Spanner.Data
         /// This method is thread safe.
         /// </summary>
         /// <param name="cancellationToken">An optional token for canceling the call. May be null.</param>
-        /// <returns>a new <see cref="SpannerTransaction" /></returns>
+        /// <returns>The newly created <see cref="SpannerTransaction"/>.</returns>
         public Task<SpannerTransaction> BeginReadOnlyTransactionAsync(
             CancellationToken cancellationToken = default) => BeginReadOnlyTransactionAsync(
             TimestampBound.Strong, cancellationToken);
@@ -229,10 +229,33 @@ namespace Google.Cloud.Spanner.Data
         }
 
         /// <summary>
-        /// Begins a readonly transaction using the provided <see cref="TransactionId" />.
+        /// Begins a readonly transaction.
+        /// Read transactions are preferred if possible because they do not impose locks internally.
+        /// ReadOnly transactions run with strong consistency and return the latest copy of data.
+        /// This method is thread safe.
+        /// </summary>
+        /// <returns>The newly created <see cref="SpannerTransaction"/>.</returns>
+        public SpannerTransaction BeginReadOnlyTransaction() => BeginReadOnlyTransaction(TimestampBound.Strong);
+
+        /// <summary>
+        /// Begins a readonly transaction using the provided <see cref="TimestampBound"/> to control the read timestamp
+        /// and/or staleness of data.
+        /// Read transactions are preferred if possible because they do not impose locks internally.
+        /// ReadOnly transactions run with strong consistency and return the latest copy of data.
+        /// This method is thread safe.
+        /// </summary>
+        /// <param name="targetReadTimestamp">Specifies the timestamp or allowed staleness of data. Must not be null.</param>
+        /// <returns>The newly created <see cref="SpannerTransaction"/>.</returns>
+        public SpannerTransaction BeginReadOnlyTransaction(TimestampBound targetReadTimestamp) =>
+            BeginReadOnlyTransactionAsync(targetReadTimestamp).ResultWithUnwrappedExceptions();
+
+        /// <summary>
+        /// Begins a readonly transaction using the provided <see cref="TransactionId" /> to refer to an existing server-side transaction.
         /// Read transactions are preferred if possible because they do not impose locks internally.
         /// Providing a transaction id will connect to an already created transaction which is useful
-        /// for batch reads.
+        /// for batch reads. This method differs from <see cref="BeginReadOnlyTransaction()">the parameterless overload</see>
+        /// and <see cref="BeginReadOnlyTransaction(TimestampBound)">the overload accepting a TimestampBound</see> as it
+        /// uses an existing transaction rather than creating a new server-side transaction.
         /// </summary>
         /// <param name="transactionId">Specifies the transactionId of an existing readonly transaction.</param>
         /// <returns>A <see cref="SpannerTransaction"/> attached to the existing transaction represented by
@@ -432,7 +455,7 @@ namespace Google.Cloud.Spanner.Data
         /// Information that represents a command to execute against a subset of data.
         /// </param>
         /// <param name="transaction">The <see cref="SpannerTransaction"/> used when
-        /// creating the <see cref="CommandPartition"/>. See <see cref="SpannerConnection.BeginReadOnlyTransaction"/>.</param>
+        /// creating the <see cref="CommandPartition"/>.  See <see cref="SpannerConnection.BeginReadOnlyTransaction(TransactionId)"/>.</param>
         /// <returns>A configured <see cref="SpannerCommand" /></returns>
         public SpannerCommand CreateCommandWithPartition(CommandPartition partition, SpannerTransaction transaction)
             => new SpannerCommand(this, transaction, partition);
