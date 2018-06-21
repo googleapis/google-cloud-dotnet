@@ -423,6 +423,35 @@ namespace Google.Cloud.Spanner.Data.IntegrationTests
             Assert.Equal(expected, actual);
         }
 
+        [Fact]
+        public void PartitionedUpdate()
+        {
+            string key = CreateTestRows();
+            string table = _fixture.TableName;
+            using (var connection = _fixture.GetConnection())
+            {
+                RetryHelpers.RetryOnce(() =>
+                {
+                    string dml = $"UPDATE {table} SET {table}.Value = {table}.OriginalValue + 1 WHERE {table}.UpdateMe AND {table}.Key=@key";
+                    using (var command = connection.CreateDmlCommand(dml))
+                    {
+                        command.Parameters.Add("key", SpannerDbType.String, key);
+                        Assert.Equal(2L, command.ExecutePartitionedUpdate());
+                    }
+                });
+            }
+            var actual = FetchValues(key);
+            var expected = new Dictionary<int, int>
+            {
+                { 0, 0 }, // Not updated
+                { 1, 2 }, // Updated
+                { 2, 2 }, // Not updated
+                { 3, 3 }, // Not updated
+                { 4, 5 }  // Updated
+            };
+            Assert.Equal(expected, actual);
+        }
+
         // Further tests:
         // - Simple PDML
         // - Longrunning PDML (skipped by default)
