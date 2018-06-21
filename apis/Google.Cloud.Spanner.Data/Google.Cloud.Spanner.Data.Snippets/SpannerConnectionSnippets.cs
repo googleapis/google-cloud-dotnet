@@ -124,7 +124,51 @@ namespace Google.Cloud.Spanner.Data.Snippets
                 }
                 // End sample
             });
-        }        
+        }
+
+        [Fact]
+        public async Task DmlUpdate()
+        {
+            string connectionString = _fixture.ConnectionString;
+
+            await RetryHelpers.RetryOnceAsync(async () =>
+            {
+                // Sample: Dml
+                using (SpannerConnection connection = new SpannerConnection(connectionString))
+                {
+                    await connection.OpenAsync();
+
+                    SpannerCommand cmd = connection.CreateDmlCommand(
+                        "UPDATE TestTable SET StringValue='Updated' WHERE Int64Value=@value");
+                    cmd.Parameters.Add("value", SpannerDbType.Int64, 10);
+                    int rowsAffected = await cmd.ExecuteNonQueryAsync();
+                    Console.WriteLine($"{rowsAffected} rows updated...");
+                }
+                // End sample
+            });
+        }
+
+        [Fact]
+        public async Task PartitionedDmlUpdate()
+        {
+            string connectionString = _fixture.ConnectionString;
+
+            await RetryHelpers.RetryOnceAsync(async () =>
+            {
+                // Sample: PartitionedDml
+                using (SpannerConnection connection = new SpannerConnection(connectionString))
+                {
+                    await connection.OpenAsync();
+
+                    SpannerCommand cmd = connection.CreateDmlCommand(
+                        "UPDATE TestTable SET TestTable.StringValue='Updated in partitions' WHERE TestTable.Int64Value=@value");
+                    cmd.Parameters.Add("value", SpannerDbType.Int64, 9);
+                    long rowsAffected = await cmd.ExecutePartitionedUpdateAsync();
+                    Console.WriteLine($"{rowsAffected} rows updated...");
+                }
+                // End sample
+            });
+        }
 
         [Fact]
         public async Task CommitTimestampAsync()
@@ -212,20 +256,14 @@ namespace Google.Cloud.Spanner.Data.Snippets
 
                     // Update the Int64Value of keys[0]
                     // Include the primary key and update columns.
-                    SpannerCommand updateCmd = connection.CreateUpdateCommand(
-                        "TestTable", new SpannerParameterCollection
-                        {
-                        {"Key", SpannerDbType.String, keys[0]},
-                        {"Int64Value", SpannerDbType.Int64, 0L}
-                        });
+                    SpannerCommand updateCmd = connection.CreateUpdateCommand("TestTable");
+                    updateCmd.Parameters.Add("Key", SpannerDbType.String, keys[0]);
+                    updateCmd.Parameters.Add("Int64Value", SpannerDbType.Int64, 0L);            
                     await updateCmd.ExecuteNonQueryAsync();
 
                     // Delete row for keys[1]
-                    SpannerCommand deleteCmd = connection.CreateDeleteCommand(
-                        "TestTable", new SpannerParameterCollection
-                        {
-                        {"Key", SpannerDbType.String, keys[1]}
-                        });
+                    SpannerCommand deleteCmd = connection.CreateDeleteCommand("TestTable");
+                    deleteCmd.Parameters.Add("Key", SpannerDbType.String, keys[1]);
                     await deleteCmd.ExecuteNonQueryAsync();
                 }
                 // End sample

@@ -37,13 +37,57 @@ commands provided by SpannerDataAdapter with your own custom commands.
 
 {{sample:SpannerConnection.DataAdapter}}
 
-## Inserting Data
+## Modifying data
+
+Cloud Spanner supports two approaches to modifying data: DML, and direct row modifications.
+
+### DML
+
+DML is capable of affecting multiple rows with a single command. For example, you could delete all
+rows matching a query, or update rows to set the value of one column equal to another one.
+
+DML can be executed in standard mode using `ExecuteNonQuery` or `ExecuteNonQueryAsync`:
+
+[!code-cs[](obj/snippets/Google.Cloud.Spanner.Data.SpannerConnection.txt#Dml)]
+
+If you execute DML within a transaction, queries are able to observe the changes already made by DML statements,
+and later DML statements can use the values created or updated by earlier ones.
+
+Some DML statements can be executed in a *partitioned* manner, enabling an efficient
+update of large data sets. `ExecutePartitionedUpdate` or `ExecutePartitionedUpdateAsync`:
+
+[!code-cs[](obj/snippets/Google.Cloud.Spanner.Data.SpannerConnection.txt#PartitionedDml)]
+
+Partitioned DML updates cannot be performed within another transaction, and have "at least once" semantics:
+the update can be applied more than once to a row in some cases, and so is best used with idempotent updates.
+
+Not all DML statements can be partitioned. Please read the Cloud Spanner user documentation for details on
+the restrictions.
+
+### Direct row modifications
+
+The following operations are supported for direct row modification:
+
+- Insert
+- Update
+- Delete
+- Insert or update (also known as "upsert")
+
+Create a command from the `SpannerConnection`, providing the table name to the appropriate method
+(`CreateInsertCommand` and the like), then use the command parameters to specify values for columns.
+The command can be reused to perform the same kind of operation for multiple rows.
+
+This sample inserts two rows, then reads them again:
 
 {{sample:SpannerConnection.InsertDataAsync}}
 
-## Reading, Updating and Deleting Data
+This sample reads three keys using a `SELECT` command, updates a row using an `UPDATE` command, then
+deletes a row using a `DELETE` command:
 
 {{sample:SpannerConnection.ReadUpdateDeleteAsync}}
+
+When direct row modifications are performed in a transaction, they are only applied when the transaction is committed.
+Queries within the transaction will not observe any changes.
 
 ## Transactions and Fault Handling
 Cloud Spanner is fully ACID compliant.
