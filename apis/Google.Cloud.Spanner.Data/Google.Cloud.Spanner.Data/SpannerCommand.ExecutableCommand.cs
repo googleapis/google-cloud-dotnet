@@ -166,6 +166,8 @@ namespace Google.Cloud.Spanner.Data
                     case SpannerCommandType.InsertOrUpdate:
                     case SpannerCommandType.Update:
                         return ExecuteMutationsAsync(cancellationToken);
+                    case SpannerCommandType.Dml:
+                        return ExecuteDmlAsync(cancellationToken);
                     default:
                         throw new InvalidOperationException("ExecuteNonQuery functionality is only available for DML and DDL commands");
                 }
@@ -188,6 +190,17 @@ namespace Google.Cloud.Spanner.Data
                 {
                     throw new InvalidOperationException("Unable to open the Spanner connection to the database.");
                 }
+            }
+
+            private async Task<int> ExecuteDmlAsync(CancellationToken cancellationToken)
+            {
+                var transaction = Transaction ?? Connection.GetDefaultTransaction();
+                await EnsureConnectionIsOpenAsync(cancellationToken).ConfigureAwait(false);
+                ExecuteSqlRequest request = GetExecuteSqlRequest();
+                long count = await transaction.ExecuteDmlAsync(request, cancellationToken, CommandTimeout).ConfigureAwait(false);
+                // TODO: We could return int.MaxValue instead, but that's not ideal either.
+                // (Asking about this with the Spanner team.)
+                return checked((int)count);
             }
 
             private async Task<int> ExecuteDdlAsync(CancellationToken cancellationToken)

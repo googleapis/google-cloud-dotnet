@@ -47,6 +47,12 @@ namespace Google.Cloud.Spanner.Data
         /// <summary>
         /// A DDL statement (e.g. a statement to create or modify table schema).
         /// </summary>
-        Ddl
+        Ddl,
+
+        /// <summary>
+        /// A general DML statement, which may use queries to update some
+        /// values based on others.
+        /// </summary>
+        Dml
     }
 }

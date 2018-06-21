@@ -49,8 +49,11 @@ namespace Google.Cloud.Spanner.Data
             }
         }
 
-        public Task<int> ExecuteMutationsAsync(List<Mutation> mutations, CancellationToken cancellationToken, int timeoutSeconds) => throw
-            new NotSupportedException("A single use transaction can only be used for read operations.");
+        public Task<int> ExecuteMutationsAsync(List<Mutation> mutations, CancellationToken cancellationToken, int timeoutSeconds) =>
+            throw new NotSupportedException("A single use transaction can only be used for read operations.");
+
+        public Task<long> ExecuteDmlAsync(ExecuteSqlRequest request, CancellationToken cancellationToken, int timeoutSeconds) =>
+            throw new NotSupportedException("A single use transaction can only be used for read operations.");
 
         public Task<ReliableStreamReader> ExecuteQueryAsync(
             ExecuteSqlRequest request,

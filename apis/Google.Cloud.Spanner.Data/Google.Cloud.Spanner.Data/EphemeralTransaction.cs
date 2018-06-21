@@ -19,6 +19,7 @@ using System.Threading.Tasks;
 using Google.Api.Gax;
 using Google.Cloud.Spanner.V1;
 using Google.Cloud.Spanner.V1.Internal.Logging;
+using Google.Protobuf.WellKnownTypes;
 
 namespace Google.Cloud.Spanner.Data
 {
@@ -41,6 +42,20 @@ namespace Google.Cloud.Spanner.Data
         /// This property is intended for internal use only.
         /// </summary>
         private Logger Logger { get; }
+
+        public Task<long> ExecuteDmlAsync(ExecuteSqlRequest request, CancellationToken cancellationToken, int timeoutSeconds) =>
+            ExecuteHelper.WithErrorTranslationAndProfiling(
+                async () =>
+                {
+                    using (var transaction = await _connection.BeginTransactionAsync(cancellationToken).ConfigureAwait(false))
+                    {
+                        transaction.CommitTimeout = timeoutSeconds;
+                        long count = await ((ISpannerTransaction)transaction).ExecuteDmlAsync(request, cancellationToken, timeoutSeconds).ConfigureAwait(false);
+                        // FIXME: Pass in the cancellation token.
+                        await transaction.CommitAsync().ConfigureAwait(false);
+                        return count;
+                    }
+                }, "EphemeralTransaction.ExecuteDmlAsync", Logger);
 
         /// <summary>
         /// Acquires a read/write transaction from Spannerconnection and releases the transaction back into the pool

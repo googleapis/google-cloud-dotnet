@@ -105,7 +105,7 @@ namespace Google.Cloud.Spanner.Data
         /// </param>
         /// <param name="commandPartition">
         /// The partition which this command is restricted to.
-        /// See <see cref="SpannerConnection.BeginReadOnlyTransaction"/>
+        /// See <see cref="SpannerConnection.BeginReadOnlyTransaction(TransactionId)"/>
         /// </param>
         public SpannerCommand(
             SpannerConnection connection,

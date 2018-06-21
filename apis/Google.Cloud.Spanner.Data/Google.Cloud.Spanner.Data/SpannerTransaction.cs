@@ -24,6 +24,7 @@ using Google.Api.Gax.Grpc;
 using Google.Cloud.Spanner.V1;
 using Google.Cloud.Spanner.V1.Internal.Logging;
 using Google.Protobuf;
+using Google.Protobuf.WellKnownTypes;
 
 namespace Google.Cloud.Spanner.Data
 {
@@ -39,6 +40,12 @@ namespace Google.Cloud.Spanner.Data
         private readonly SpannerConnection _connection;
         private readonly List<Mutation> _mutations = new List<Mutation>();
         private DisposeBehavior _disposeBehavior = DisposeBehavior.ReleaseToPool;
+
+        /// <summary>
+        /// When executing multiple DML commands in a single transaction, each is given a specific sequence number
+        /// to indicate the difference between "apply this DML command twice" and "I'm replaying a request due to a transient failure".
+        /// </summary>
+        private int _lastDmlSequenceNumber = -1;
 
         /// <inheritdoc />
         public override IsolationLevel IsolationLevel => IsolationLevel.Serializable;
@@ -235,6 +242,44 @@ namespace Google.Cloud.Spanner.Data
 
                 return taskCompletionSource.Task;
             }, "SpannerTransaction.ExecuteQuery", Logger);
+        }
+
+        Task<long> ISpannerTransaction.ExecuteDmlAsync(ExecuteSqlRequest request, CancellationToken cancellationToken, int timeoutSeconds)
+        {
+            GaxPreconditions.CheckNotNull(request, nameof(request));
+            return ExecuteHelper.WithErrorTranslationAndProfiling(
+                async () =>
+                {
+                    long count;
+                    request.Seqno = Interlocked.Increment(ref _lastDmlSequenceNumber);
+                    request.Transaction = GetTransactionSelector(TransactionMode.ReadWrite);
+                    using (var reader = _connection.SpannerClient.GetSqlStreamReader(request, Session, timeoutSeconds))
+                    {
+                        Value value = await reader.NextAsync(cancellationToken).ConfigureAwait(false);
+                        if (value != null)
+                        {
+                            throw new SpannerException(ErrorCode.Internal, "DML returned results unexpectedly.");
+                        }
+                        var stats = reader.Stats;
+                        if (stats == null)
+                        {
+                            throw new SpannerException(ErrorCode.Internal, "DML completed without statistics.");
+                        }
+                        switch (stats.RowCountCase)
+                        {
+                            case ResultSetStats.RowCountOneofCase.RowCountExact:
+                                count = stats.RowCountExact;
+                                break;
+                            case ResultSetStats.RowCountOneofCase.RowCountLowerBound:
+                                count = stats.RowCountLowerBound;
+                                break;
+                            default:
+                                throw new SpannerException(ErrorCode.Internal, $"Unknown row count type: {stats.RowCountCase}");
+                        }
+                    }
+
+                    return count;
+                }, "SpannerTransaction.ExecuteQuery", Logger);
         }
 
         /// <inheritdoc />

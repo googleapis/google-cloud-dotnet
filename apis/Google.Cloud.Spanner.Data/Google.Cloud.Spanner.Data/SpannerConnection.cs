@@ -490,6 +490,25 @@ namespace Google.Cloud.Spanner.Data
             string ddlStatement, params string[] extraDdlStatements) => new SpannerCommand(
             SpannerCommandTextBuilder.CreateDdlTextBuilder(ddlStatement, extraDdlStatements), this);
 
+        /// <summary>
+        /// Creates a new <see cref="SpannerCommand" /> to execute a general DML (UPDATE, INSERT, DELETE) statement.
+        /// This method is thread safe.
+        /// </summary>
+        /// <remarks>
+        /// To insert, update, delete or "insert or update" a single row, the operation-specific methods
+        /// (<see cref="CreateUpdateCommand(string, SpannerParameterCollection)"/> etc) are preferred as they are more efficient.
+        /// This method is more appropriate for general-purpose DML which can perform modifications based on query results.
+        /// </remarks>
+        /// <param name="dmlStatement">The DML statement (eg 'DELETE FROM MYTABLE WHERE ...').  Must not be null.</param>
+        /// <param name="dmlParameters">
+        /// Optionally supplied set of <see cref="SpannerParameter" />
+        /// that correspond to the parameters used in the SQL query. May be null.
+        /// </param>
+        /// <returns>A configured <see cref="SpannerCommand" /></returns>
+        public SpannerCommand CreateDmlCommand(
+            string dmlStatement, SpannerParameterCollection dmlParameters = null) =>
+            new SpannerCommand(SpannerCommandTextBuilder.CreateDmlTextBuilder(dmlStatement), this, null, dmlParameters);
+
         /// <inheritdoc />
         public override void Open()
         {
