@@ -53,6 +53,8 @@ Beta:
 - Google Cloud Firestore:
   - [Google.Cloud.Firestore](Google.Cloud.Firestore/index.html): High-level client library for Google Cloud Firestore (recommended)
   - [Google.Cloud.Firestore.V1Beta](Google.Cloud.Firestore.V1Beta1/index.html): Low-level access to Firestore API
+- [Google.Cloud.Logging.V2](Google.Cloud.Logging.V2/index.html)
+  - Additionally, a [separate NLog integration package is available](Google.Cloud.Logging.NLog/index.html)
 - [Google.Cloud.OsLogin.V1](Google.Cloud.OsLogin.V1/index.html)
 - [Google.Cloud.PubSub.V1](Google.Cloud.PubSub.V1/index.html)
 - [Google.Cloud.Redis.V1Beta1](Google.Cloud.Redis.V1Beta1/index.html)
