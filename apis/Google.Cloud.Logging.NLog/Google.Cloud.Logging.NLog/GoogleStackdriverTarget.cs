@@ -436,35 +436,14 @@ namespace Google.Cloud.Logging.NLog
                 foreach (var combinedProperty in GetAllProperties(loggingEvent))
                 {
                     if (string.IsNullOrEmpty(combinedProperty.Key))
+                    {
                         continue;
+                    }
 
                     try
                     {
-                        switch (Convert.GetTypeCode(combinedProperty.Value))
-                        {
-                            case TypeCode.Empty:
-                                propertiesStruct.Fields.Add(combinedProperty.Key, Value.ForNull());
-                                break;
-                            case TypeCode.Boolean:
-                                propertiesStruct.Fields.Add(combinedProperty.Key, Value.ForBool((bool)combinedProperty.Value));
-                                break;
-                            case TypeCode.Decimal:
-                            case TypeCode.Double:
-                            case TypeCode.Single:
-                            case TypeCode.Byte:
-                            case TypeCode.SByte:
-                            case TypeCode.Int16:
-                            case TypeCode.UInt16:
-                            case TypeCode.Int32:
-                            case TypeCode.UInt32:
-                            case TypeCode.Int64:
-                            case TypeCode.UInt64:
-                                propertiesStruct.Fields.Add(combinedProperty.Key, Value.ForNumber(Convert.ToDouble(combinedProperty.Value)));
-                                break;
-                            default:
-                                propertiesStruct.Fields.Add(combinedProperty.Key, Value.ForString(combinedProperty.Value?.ToString() ?? "null"));
-                                break;
-                        }
+                        var jsonValue = BuildJsonValue(combinedProperty.Value);
+                        propertiesStruct.Fields.Add(combinedProperty.Key, jsonValue);
                     }
                     catch (Exception ex)
                     {
@@ -482,7 +461,9 @@ namespace Google.Cloud.Logging.NLog
                 foreach (var combinedProperty in GetAllProperties(loggingEvent))
                 {
                     if (string.IsNullOrEmpty(combinedProperty.Key))
+                    {
                         continue;
+                    }
 
                     try
                     {
@@ -510,6 +491,74 @@ namespace Google.Cloud.Logging.NLog
             }
      
             return logEntry;
+        }
+
+        private static Value BuildJsonValue(object objectValue)
+        {
+            var typeCode = Convert.GetTypeCode(objectValue);
+            switch (typeCode)
+            {
+                case TypeCode.Object:
+                    if (objectValue is System.Collections.IDictionary dictionary)
+                    {
+                        var dictionaryStruct = new Struct();
+                        var itemEnumerator = dictionary.GetEnumerator();
+                        while (itemEnumerator.MoveNext())
+                        {
+                            var dictionaryKey = itemEnumerator.Key?.ToString();
+                            if (string.IsNullOrEmpty(dictionaryKey))
+                            {
+                                continue;
+                            }
+
+                            var itemTypeCode = Convert.GetTypeCode(itemEnumerator.Value);
+                            dictionaryStruct.Fields.Add(dictionaryKey, BuildSimpleJsonValue(itemTypeCode, itemEnumerator.Value));
+                        }
+                        return Value.ForStruct(dictionaryStruct);
+                    }
+                    else if (objectValue is System.Collections.ICollection collection)
+                    {
+                        int collectionIndex = 0;
+                        Value[] collectionStruct = new Value[collection.Count];
+                        foreach (var listItem in collection)
+                        {
+                            var itemTypeCode = Convert.GetTypeCode(listItem);
+                            collectionStruct[collectionIndex++] = BuildSimpleJsonValue(itemTypeCode, listItem);
+                        }
+                        return Value.ForList(collectionStruct);
+                    }
+                    else
+                    {
+                        return BuildSimpleJsonValue(typeCode, objectValue);
+                    }
+                default:
+                    return BuildSimpleJsonValue(typeCode, objectValue);
+            }
+        }
+
+        private static Value BuildSimpleJsonValue(TypeCode typeCode, object objectValue)
+        {
+            switch (typeCode)
+            {
+                case TypeCode.Empty:
+                    return Value.ForNull();
+                case TypeCode.Boolean:
+                    return Value.ForBool((bool)objectValue);
+                case TypeCode.Decimal:
+                case TypeCode.Double:
+                case TypeCode.Single:
+                case TypeCode.Byte:
+                case TypeCode.SByte:
+                case TypeCode.Int16:
+                case TypeCode.UInt16:
+                case TypeCode.Int32:
+                case TypeCode.UInt32:
+                case TypeCode.Int64:
+                case TypeCode.UInt64:
+                    return Value.ForNumber(Convert.ToDouble(objectValue));
+                default:
+                    return Value.ForString(objectValue?.ToString() ?? "null");
+            }
         }
 
         private static Timestamp ConvertToTimestamp(DateTime dt)

@@ -171,16 +171,43 @@ namespace Google.Cloud.Logging.NLog.Tests
                 {
                     googleTarget.SendJsonPayload = true;
                     googleTarget.ContextProperties.Add(new TargetPropertyWithContext() { Name = "Galaxy", Layout = "Milky way" });
-                    LogManager.GetLogger("testlogger").Info("Hello {Planet}", "Earth");
+                    LogManager.GetLogger("testlogger").Info("Hello {Planet}, width {Radius} km", "Earth", 6371);
                     return Task.FromResult(0);
                 }, includeEventProperties: true);
             Assert.Single(uploadedEntries);
             var entry0 = uploadedEntries[0];
-            Assert.Equal(string.Empty, entry0.TextPayload?.Trim() ?? string.Empty);
-            Assert.Equal("Hello \"Earth\"", entry0.JsonPayload.Fields["message"].StringValue);
-            Assert.Equal(2, entry0.JsonPayload.Fields["properties"].StructValue.Fields.Count);
+            Assert.Equal("", entry0.TextPayload?.Trim() ?? "");
+            Assert.Equal("Hello \"Earth\", width 6371 km", entry0.JsonPayload.Fields["message"].StringValue);
+            Assert.Equal(3, entry0.JsonPayload.Fields["properties"].StructValue.Fields.Count);
             Assert.Equal("Earth", entry0.JsonPayload.Fields["properties"].StructValue.Fields["Planet"].StringValue);
             Assert.Equal("Milky way", entry0.JsonPayload.Fields["properties"].StructValue.Fields["Galaxy"].StringValue);
+            Assert.Equal(6371, entry0.JsonPayload.Fields["properties"].StructValue.Fields["Radius"].NumberValue);
+        }
+
+        [Fact]
+        public async Task SingleLogEntryWithJsonCollectionProperties()
+        {
+            var uploadedEntries = await RunTestWorkingServer(
+                googleTarget =>
+                {
+                    googleTarget.SendJsonPayload = true;
+                    googleTarget.ContextProperties.Add(new TargetPropertyWithContext() { Name = "Galaxy", Layout = "Milky way" });
+                    LogManager.GetLogger("testlogger").Info("Favorite {Colors} and {Devices}", new string[] { "Red", "Green", "Blue" }, new Dictionary<string,int>{ ["NTSC"] = 1953, ["PAL"] = 1962, ["SECAM"] = 1956 });
+                    return Task.FromResult(0);
+                }, includeEventProperties: true);
+            Assert.Single(uploadedEntries);
+            var entry0 = uploadedEntries[0];
+            Assert.Equal("", entry0.TextPayload?.Trim() ?? "");
+            Assert.Equal("Favorite \"Red\", \"Green\", \"Blue\" and \"NTSC\"=1953, \"PAL\"=1962, \"SECAM\"=1956", entry0.JsonPayload.Fields["message"].StringValue);
+            Assert.Equal(3, entry0.JsonPayload.Fields["properties"].StructValue.Fields.Count);
+            Assert.Equal(3, entry0.JsonPayload.Fields["properties"].StructValue.Fields["Colors"].ListValue.Values.Count);
+            Assert.Equal("Red", entry0.JsonPayload.Fields["properties"].StructValue.Fields["Colors"].ListValue.Values[0].StringValue);
+            Assert.Equal("Green", entry0.JsonPayload.Fields["properties"].StructValue.Fields["Colors"].ListValue.Values[1].StringValue);
+            Assert.Equal("Blue", entry0.JsonPayload.Fields["properties"].StructValue.Fields["Colors"].ListValue.Values[2].StringValue);
+            Assert.Equal(3, entry0.JsonPayload.Fields["properties"].StructValue.Fields["Devices"].StructValue.Fields.Count);
+            Assert.Equal(1953, entry0.JsonPayload.Fields["properties"].StructValue.Fields["Devices"].StructValue.Fields["NTSC"].NumberValue);
+            Assert.Equal(1962, entry0.JsonPayload.Fields["properties"].StructValue.Fields["Devices"].StructValue.Fields["PAL"].NumberValue);
+            Assert.Equal(1956, entry0.JsonPayload.Fields["properties"].StructValue.Fields["Devices"].StructValue.Fields["SECAM"].NumberValue);
         }
 
         [Fact]
