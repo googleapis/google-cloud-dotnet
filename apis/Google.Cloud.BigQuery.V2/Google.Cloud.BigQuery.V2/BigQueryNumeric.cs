@@ -300,6 +300,16 @@ namespace Google.Cloud.BigQuery.V2
             FromDecimal(value, LossOfPrecisionHandling.Truncate);
 
         /// <summary>
+        /// Implicit conversion from <see cref="Int32"/> to <see cref="BigQueryNumeric"/>.
+        /// </summary>
+        /// <remarks>
+        /// This conversion exists to avoid ambiguity between the 64-bit conversions when using an integer literal.
+        /// </remarks>
+        /// <param name="value">The integer value to convert.</param>
+        /// <returns>The result of the conversion.</returns>
+        public static implicit operator BigQueryNumeric(int value) => (long) value;
+
+        /// <summary>
         /// Implicit conversion from <see cref="Int64"/> to <see cref="BigQueryNumeric"/>.
         /// </summary>
         /// <param name="value">The integer value to convert.</param>

@@ -45,3 +45,6 @@ AllTests.txt
 
 # Test result files
 *.trx
+
+# Benchmarks
+BenchmarkDotNet.Artifacts
