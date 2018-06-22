@@ -33,7 +33,7 @@ When using default options, logs will appear under these filter settings in the 
 * **IncludeCallSiteStackTrace** - Include LogEntrySourceLocation extracted from NLog callsite (Also include filename and linenumber)
 * **IncludeEventProperties** - Includes structured logging properties from NLog LogEventInfo.Properties
 * **IncludeMdlc** - Include async thread context properties from NLog MappedDiagnosticsLogicalContext
-* **SendJsonPayload** - Instead of sending properties as custom labels, then they are sent as Json-Properties
+* **SendJsonPayload** - Instead of sending properties as custom labels, then they are sent as Json-Properties in JsonPayload (without TextPayload)
 
 ```xml
 <extensions>
