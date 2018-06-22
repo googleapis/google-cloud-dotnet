@@ -95,6 +95,11 @@ namespace Google.Cloud.Logging.NLog
         public Layout LogId { get; set; }
 
         /// <summary>
+        /// Fills <see cref="LogEntry.JsonPayload"/> instead of <see cref="LogEntry.TextPayload"/> 
+        /// </summary>
+        public bool SendJsonPayload { get; set; }
+
+        /// <summary>
         /// Specify labels for the resource type;
         /// only used if platform detection is disabled or detects an unknown platform.
         /// </summary>
@@ -413,26 +418,61 @@ namespace Google.Cloud.Logging.NLog
         {
             var logEntry = new LogEntry
             {
-                TextPayload = RenderLogEvent(Layout, loggingEvent),
                 Severity = s_levelMap[loggingEvent.Level],
                 Timestamp = ConvertToTimestamp(loggingEvent.TimeStamp),
                 LogName = _logName,
                 Resource = _resource,
             };
 
-            foreach (var combinedProperty in GetAllProperties(loggingEvent))
+            if (SendJsonPayload)
             {
-                if (string.IsNullOrEmpty(combinedProperty.Key))
-                    continue;
+                var jsonStruct = new Struct();
+                jsonStruct.Fields.Add("message", Value.ForString(RenderLogEvent(Layout, loggingEvent)));
 
-                try
+                var propertiesStruct = new Struct();
+                jsonStruct.Fields.Add("properties", Value.ForStruct(propertiesStruct));
+
+                foreach (var combinedProperty in GetAllProperties(loggingEvent))
                 {
-                    logEntry.Labels[combinedProperty.Key] = combinedProperty.Value?.ToString() ?? "null";
+                    if (string.IsNullOrEmpty(combinedProperty.Key))
+                    {
+                        continue;
+                    }
+
+                    try
+                    {
+                        var jsonValue = BuildJsonValue(combinedProperty.Value);
+                        propertiesStruct.Fields.Add(combinedProperty.Key, jsonValue);
+                    }
+                    catch (Exception ex)
+                    {
+                        InternalLogger.Warn(ex, "GoogleStackdriver(Name={0}): Exception at BuildLogEntry with Key={1}", Name, combinedProperty.Key);
+                        propertiesStruct.Fields.Add(combinedProperty.Key, Value.ForNull());
+                    }
                 }
-                catch (Exception ex)
+
+                logEntry.JsonPayload = jsonStruct;
+            }
+            else
+            {
+                logEntry.TextPayload = RenderLogEvent(Layout, loggingEvent);
+
+                foreach (var combinedProperty in GetAllProperties(loggingEvent))
                 {
-                    InternalLogger.Warn(ex, "GoogleStackdriver(Name={0}): Exception at BuildLogEntry with Key={1}", Name, combinedProperty.Key);
-                    logEntry.Labels[combinedProperty.Key] = "null";
+                    if (string.IsNullOrEmpty(combinedProperty.Key))
+                    {
+                        continue;
+                    }
+
+                    try
+                    {
+                        logEntry.Labels[combinedProperty.Key] = combinedProperty.Value?.ToString() ?? "null";
+                    }
+                    catch (Exception ex)
+                    {
+                        InternalLogger.Warn(ex, "GoogleStackdriver(Name={0}): Exception at BuildLogEntry with Key={1}", Name, combinedProperty.Key);
+                        logEntry.Labels[combinedProperty.Key] = "null";
+                    }
                 }
             }
 
@@ -450,6 +490,87 @@ namespace Google.Cloud.Logging.NLog
             }
      
             return logEntry;
+        }
+
+        private static Value BuildJsonValue(object objectValue)
+        {
+            var typeCode = Convert.GetTypeCode(objectValue);
+            switch (typeCode)
+            {
+                case TypeCode.Object:
+                    if (objectValue is System.Collections.IDictionary dictionary)
+                    {
+                        // Using IDictionaryEnumerator from IDictionary.GetEnumerator() as it provides key/value-pair
+                        var dictionaryStruct = new Struct();
+                        var itemEnumerator = dictionary.GetEnumerator();
+                        while (itemEnumerator.MoveNext())
+                        {
+                            var dictionaryKey = itemEnumerator.Key?.ToString();
+                            if (string.IsNullOrEmpty(dictionaryKey))
+                            {
+                                continue;
+                            }
+
+                            var itemTypeCode = Convert.GetTypeCode(itemEnumerator.Value);
+                            dictionaryStruct.Fields.Add(dictionaryKey, BuildSimpleJsonValue(itemTypeCode, itemEnumerator.Value));
+                        }
+                        return Value.ForStruct(dictionaryStruct);
+                    }
+                    else if (objectValue is System.Collections.ICollection collection)
+                    {
+                        // Using foreach to optimize allocations, by only doing single Array-allocations
+                        int collectionIndex = 0;
+                        Value[] collectionStruct = new Value[collection.Count];
+                        foreach (var listItem in collection)
+                        {
+                            var itemTypeCode = Convert.GetTypeCode(listItem);
+                            collectionStruct[collectionIndex++] = BuildSimpleJsonValue(itemTypeCode, listItem);
+                        }
+                        return Value.ForList(collectionStruct);
+                    }
+                    else if (objectValue is System.Collections.IEnumerable enumerable)
+                    {
+                        // Using foreach because System.Linq only works on typed collections IEnumerable<T>
+                        List<Value> collectionStruct = new List<Value>();
+                        foreach (var listItem in enumerable)
+                        {
+                            var itemTypeCode = Convert.GetTypeCode(listItem);
+                            collectionStruct.Add(BuildSimpleJsonValue(itemTypeCode, listItem));
+                        }
+                        return Value.ForList(collectionStruct.ToArray());
+                    }
+                    else
+                    {
+                        return BuildSimpleJsonValue(typeCode, objectValue);
+                    }
+                default:
+                    return BuildSimpleJsonValue(typeCode, objectValue);
+            }
+        }
+
+        private static Value BuildSimpleJsonValue(TypeCode typeCode, object objectValue)
+        {
+            switch (typeCode)
+            {
+                case TypeCode.Empty:
+                    return Value.ForNull();
+                case TypeCode.Boolean:
+                    return Value.ForBool((bool)objectValue);
+                case TypeCode.Decimal:
+                case TypeCode.Double:
+                case TypeCode.Single:
+                case TypeCode.Byte:
+                case TypeCode.SByte:
+                case TypeCode.Int16:
+                case TypeCode.UInt16:
+                case TypeCode.Int32:
+                case TypeCode.UInt32:
+                case TypeCode.Int64:
+                case TypeCode.UInt64:
+                    return Value.ForNumber(Convert.ToDouble(objectValue));
+                default:
+                    return Value.ForString(objectValue?.ToString() ?? "null");
+            }
         }
 
         private static Timestamp ConvertToTimestamp(DateTime dt)
