@@ -48,6 +48,8 @@ The following libraries are available at a [beta](#versioning) quality level:
 * [Google Cloud Firestore](https://cloud.google.com/firestore/): two packages are available, both beta:
   * [Google.Cloud.Firestore](http://googlecloudplatform.github.io/google-cloud-dotnet/docs/Google.Cloud.Firestore/): High-level client library for Google Cloud Firestore (recommended)
   * [Google.Cloud.Firestore.V1Beta1](http://googlecloudplatform.github.io/google-cloud-dotnet/docs/Google.Cloud.Firestore.V1Beta1/): Low-level access to Firestore API
+* [Google Stackdriver Logging](https://cloud.google.com/logging/)
+  * Integration with NLog is provided via [Google.Cloud.Logging.NLog](http://googlecloudplatform.github.io/google-cloud-dotnet/docs/Google.Cloud.Logging.NLog/) (beta)
 * [Google OS Login](https://cloud.google.com/compute/docs/instances/managing-instance-access) - [API docs](http://googlecloudplatform.github.io/google-cloud-dotnet/docs/Google.Cloud.OsLogin.V1/) (beta)
 * [Google Cloud Pub/Sub](https://cloud.google.com/pubsub/) - [API docs](http://googlecloudplatform.github.io/google-cloud-dotnet/docs/Google.Cloud.PubSub.V1/) (beta)
 * [Google Cloud Memorystore for Redis](https://cloud.google.com/memorystore/) - [API docs](http://googlecloudplatform.github.io/google-cloud-dotnet/docs/Google.Cloud.Redis.V1Beta1/) (beta)
