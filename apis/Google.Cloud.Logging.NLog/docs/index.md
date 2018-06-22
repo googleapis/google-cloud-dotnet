@@ -22,7 +22,7 @@ ID, and `LOG_ID` with an identifier for your application.
 
 Use this file to configure `nlog` and then log as normal:
 
-[!code-cs[](obj/snippets/Google.Cloud.Logging.NLog.GoogleStackdriverTarget.txt.txt#Overview)]
+[!code-cs[](obj/snippets/Google.Cloud.Logging.NLog.GoogleStackdriverTarget.txt#Overview)]
 
 If executing on [Google App Engine (GAE)](https://cloud.google.com/appengine/),
 [Google Kubernetes Engine (GKE)](https://cloud.google.com/kubernetes-engine/),
