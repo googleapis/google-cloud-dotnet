@@ -331,5 +331,88 @@ namespace Google.Cloud.PubSub.V1.IntegrationTests
                 await publishTasks[i].ConfigureAwait(false);
             }
         }
+
+        [Theory]
+        [InlineData(10_000, 1_000, 2)]
+        [InlineData(2_000, 100, 6)]
+        [InlineData(10, 0.1, 4)]
+        public async Task StopStartSubscriber(int totalMessageCount, double publisherFrequencyHz, double subscriberLifetimeSeconds)
+        {
+            int publisherBatchSize = 1;
+            if (publisherFrequencyHz > 50.0)
+            {
+                publisherBatchSize = (int)(publisherFrequencyHz / 50.0);
+                publisherFrequencyHz /= publisherBatchSize;
+            }
+            TimeSpan publisherDelay = TimeSpan.FromSeconds(1.0 / publisherFrequencyHz);
+            TimeSpan handlerDelay = TimeSpan.FromSeconds(0.5);
+            TimeSpan subscriberLifetime = TimeSpan.FromSeconds(subscriberLifetimeSeconds);
+
+            var topicId = _fixture.CreateTopicId();
+            var subscriptionId = _fixture.CreateSubscriptionId();
+            // Create topic
+            var topicName = new TopicName(_fixture.ProjectId, topicId);
+            var publisherApi = await PublisherServiceApiClient.CreateAsync().ConfigureAwait(false);
+            await publisherApi.CreateTopicAsync(topicName).ConfigureAwait(false);
+            // Subscribe to the topic
+            var subscriptionName = new SubscriptionName(_fixture.ProjectId, subscriptionId);
+            var subscriberApi = await SubscriberServiceApiClient.CreateAsync().ConfigureAwait(false);
+            await subscriberApi.CreateSubscriptionAsync(subscriptionName, topicName, null, 60).ConfigureAwait(false);
+            // Create publisher, and start publishing messages
+            var publisher = await PublisherClient.CreateAsync(topicName).ConfigureAwait(false);
+            var publishTask = Task.Run(async () =>
+            {
+                Console.WriteLine($"Starting to publish {totalMessageCount} messages.");
+                for (int i = 0; i < totalMessageCount; i++)
+                {
+                    // Publish, but don't wait for returned task.
+                    publisher.PublishAsync($"Message:{i}");
+                    if ((i + 1) % publisherBatchSize == 0)
+                    {
+                        await Task.Delay(publisherDelay).ConfigureAwait(false);
+                    }
+                }
+                Console.WriteLine("Publishing complete.");
+            });
+            // Subscribe with start/stop subscriber
+            var recvedMsgs = new HashSet<string>();
+            var subscribeAllTask = Task.Run(async () =>
+            {
+                int prevRecvCount = -1;
+                int noRecvCount = 0;
+                while (recvedMsgs.Locked(() => recvedMsgs.Count) < totalMessageCount)
+                {
+                    Console.WriteLine("Starting subscriber");
+                    var subscriber = await SubscriberClient.CreateAsync(subscriptionName).ConfigureAwait(false);
+                    var subscribeTask = subscriber.StartAsync(async (msg, ct) =>
+                    {
+                        recvedMsgs.Locked(() => recvedMsgs.Add(msg.Data.ToStringUtf8()));
+                        await Task.Delay(handlerDelay, ct).ConfigureAwait(false);
+                        return SubscriberClient.Reply.Ack;
+                    });
+                    await Task.Delay(subscriberLifetime).ConfigureAwait(false);
+                    Console.WriteLine("Stopping subscriber");
+                    Task stopTask = subscriber.StopAsync(TimeSpan.FromSeconds(15));
+                    // If shutdown times-out then stopTask, and also Task.WhenAll will cancel, causing the test to fail.
+                    await Task.WhenAll(subscribeTask, stopTask).ConfigureAwait(false);
+                    int recvCount = recvedMsgs.Locked(() => recvedMsgs.Count);
+                    Console.WriteLine($"Stopped subscriber. Recv count: {recvCount}");
+                    if (prevRecvCount == recvCount)
+                    {
+                        noRecvCount += 1;
+                    }
+                    else
+                    {
+                        prevRecvCount = recvCount;
+                        noRecvCount = 0;
+                    }
+                    // It can take a while for the last few messages to be received.
+                    Assert.True(noRecvCount < 50, "No message has been recvied for too long; failing test.");
+                }
+            });
+            Console.WriteLine("Waiting for pub+sub to complete.");
+            await Task.WhenAll(publishTask, subscribeAllTask).ConfigureAwait(false);
+            Console.WriteLine("pub+sub completed.");
+        }
     }
 }
