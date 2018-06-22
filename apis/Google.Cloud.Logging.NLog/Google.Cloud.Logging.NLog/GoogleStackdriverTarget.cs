@@ -418,7 +418,6 @@ namespace Google.Cloud.Logging.NLog
         {
             var logEntry = new LogEntry
             {
-
                 Severity = s_levelMap[loggingEvent.Level],
                 Timestamp = ConvertToTimestamp(loggingEvent.TimeStamp),
                 LogName = _logName,
@@ -501,6 +500,7 @@ namespace Google.Cloud.Logging.NLog
                 case TypeCode.Object:
                     if (objectValue is System.Collections.IDictionary dictionary)
                     {
+                        // Using IDictionaryEnumerator from IDictionary.GetEnumerator() as it provides key/value-pair
                         var dictionaryStruct = new Struct();
                         var itemEnumerator = dictionary.GetEnumerator();
                         while (itemEnumerator.MoveNext())
@@ -518,6 +518,7 @@ namespace Google.Cloud.Logging.NLog
                     }
                     else if (objectValue is System.Collections.ICollection collection)
                     {
+                        // Using foreach to optimize allocations, by only doing single Array-allocations
                         int collectionIndex = 0;
                         Value[] collectionStruct = new Value[collection.Count];
                         foreach (var listItem in collection)
@@ -526,6 +527,17 @@ namespace Google.Cloud.Logging.NLog
                             collectionStruct[collectionIndex++] = BuildSimpleJsonValue(itemTypeCode, listItem);
                         }
                         return Value.ForList(collectionStruct);
+                    }
+                    else if (objectValue is System.Collections.IEnumerable enumerable)
+                    {
+                        // Using foreach because System.Linq only works on typed collections IEnumerable<T>
+                        List<Value> collectionStruct = new List<Value>();
+                        foreach (var listItem in enumerable)
+                        {
+                            var itemTypeCode = Convert.GetTypeCode(listItem);
+                            collectionStruct.Add(BuildSimpleJsonValue(itemTypeCode, listItem));
+                        }
+                        return Value.ForList(collectionStruct.ToArray());
                     }
                     else
                     {
