@@ -106,3 +106,112 @@ When we update the current counter, we may well want to know the current value a
 returning it from the callback:
 
 [!code-cs[](obj/snippets/Google.Cloud.Firestore.UserGuide.txt#TransactionAsyncCallbackWithResult)]
+
+## Listening for changes
+
+Firestore allows you to listen for changes to either a single
+document or the results of a query. You provide a callback which is
+executed each time a change occurs.
+
+First we'll see an example of each, then go into details.
+
+### Listening for changes on a document
+
+This example starts listening for changes on a document that doesn't
+exist yet, then creates the document, updates it, deletes it, and recreates it.
+Each of these changes is logged by the callback.
+After stopping the listening operation, the document is updated one
+final time - which doesn't produce any output.
+
+[!code-cs[](obj/snippets/Google.Cloud.Firestore.UserGuide.txt#ListenDocument)]
+
+### Listening for changes in a query
+
+This example listens for changes in a query of "documents with a
+score greater than 5, in descending score order". Each document has
+two fields: "Name" and "Score".
+
+When the listener is set up, the test makes the following data changes:
+
+- Add a document for Sophie, with score 7
+- Add a document for James, with score 10
+- Update the score for Sophie to 11 (changing its order within the query)
+- Update the score for Sophie to 12 (no change in order, but the document is updated)
+- Update the score for James to 4 (no longer matches the query)
+- Delete the document for Sophie
+
+[!code-cs[](obj/snippets/Google.Cloud.Firestore.UserGuide.txt#ListenQuery)]
+
+### Listener threading
+
+Each listener you start runs independently. It effectively loops
+through three steps:
+
+- Wait for the server to provide changes
+- Update its internal model
+- Report any changes via the callback
+
+The listener waits for the callback to complete before continuing.
+The callbacks can be provided as either a synchronous action or an
+asynchronous function that returns a task. For asynchronous
+callbacks, the listener waits for the returned task to complete.
+This allows you to use async/await within a callback without
+worrying about the callback executing multiple times concurrently
+for a single listener.
+
+Each listener acts independently without any synchronization, so if
+you use the same callback for multiple listeners, the callback could
+be called multiple times concurrently, one for each listener.
+
+Although each listener "logically" operates in a single-threaded
+fashion, it uses asynchronous operations and so the actual thread
+used can change between callbacks. We strongly recommend against
+using thread-local storage; ideally, make no assumptions about the
+thread that will run your callback.
+
+### Stopping listeners
+
+When you start listening for changes, the method returns a
+`FirestoreChangeListener`. This has two important members:
+
+- The `ListenerTask` property returns a task representing the
+  ongoing listen operation.
+- The `StopAsync` method allows you to stop the listener. For
+  convenience, this returns the same task as `ListenerTask`.
+
+The `StopAsync` method will allow any currently executing callback
+to complete before the listener shuts down. However, both the
+original `Listen` calls and the `StopAsync` methods accept an optional
+`CancellationToken`. If this cancellation token is cancelled, not
+only will the listener stop, but the cancellation token passed to
+any asynchronous callback will also be cancelled. This allows you to
+perform asynchronous operations within the callback but still be
+able to cancel the whole listener quickly.
+
+In the "graceful" shutdown case, nothing is cancelled: you call
+`StopAsync`, any current callback completes, and then the listener
+task completes. If this is all you need, you never need to provide a
+cancellation token to the methods to start or stop listening.
+The cancellation token functionality has been provided for two
+specific scenarios:
+
+- The listen operation is being executed as part of another
+  cancellable operation. In this case you'd provide the cancellation
+  token when you start listening.
+
+- The listen operation is long-running, but you need to shut it down
+  as part of shutting down some larger system (such as a web
+  server). Typically this shutdown procedure provides a cancellation
+  token: if the graceful shutdown doesn't complete within a certain
+  time, the cancellation token is cancelled. The signature of
+  `StopAsync` allows you to integrate Firestore into this pattern
+  easily.
+
+The final status of the listener task will be:
+
+- `RanToCompletion` if shutdown completed gracefully.
+- `Faulted` if either the listener encountered a permanent error, or
+  the callback threw an exception.
+- `Canceled` if shutdown was either caused by the "start" cancellation
+  token being canceled, or if the "stop" cancellation token was
+  canceled.
