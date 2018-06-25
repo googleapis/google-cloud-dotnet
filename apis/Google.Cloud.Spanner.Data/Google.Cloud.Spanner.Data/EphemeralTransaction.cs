@@ -71,7 +71,7 @@ namespace Google.Cloud.Spanner.Data
                         count = await ((ISpannerTransaction) transaction)
                             .ExecuteMutationsAsync(mutations, cancellationToken, timeoutSeconds)
                             .ConfigureAwait(false);
-                        await transaction.CommitAsync().ConfigureAwait(false);
+                        await transaction.CommitAsync(cancellationToken).ConfigureAwait(false);
                     }
                     return count;
                 }, "EphemeralTransaction.ExecuteMutations", Logger);

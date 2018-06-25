@@ -249,13 +249,14 @@ namespace Google.Cloud.Spanner.Data
         /// Commits the database transaction synchronously, returning the database timestamp for the commit via <paramref name="timestamp"/>.
         /// </summary>
         /// <param name="timestamp">Returns the UTC timestamp when the data was written to the database.</param>
-        public void Commit(out DateTime? timestamp) => timestamp = Task.Run(CommitAsync).ResultWithUnwrappedExceptions();
+        public void Commit(out DateTime? timestamp) => timestamp = Task.Run(() => CommitAsync(default)).ResultWithUnwrappedExceptions();
 
         /// <summary>
         /// Commits the database transaction asynchronously.
         /// </summary>
+        /// <param name="cancellationToken">A cancellation token used for this task.</param>
         /// <returns>Returns the UTC timestamp when the data was written to the database.</returns>
-        public Task<DateTime?> CommitAsync()
+        public Task<DateTime?> CommitAsync(CancellationToken cancellationToken = default)
         {
             return ExecuteHelper.WithErrorTranslationAndProfiling(
                 async () =>
@@ -265,28 +266,26 @@ namespace Google.Cloud.Spanner.Data
                     // We allow access to _mutations outside of a lock here because multithreaded
                     // access at this point should be done and only one caller can call commit.
                     var response = await WireTransaction
-                        .CommitAsync(Session, _mutations, CommitTimeout).ConfigureAwait(false);
+                        .CommitAsync(Session, _mutations, CommitTimeout, cancellationToken).ConfigureAwait(false);
                     return response.CommitTimestamp?.ToDateTime();
                 }, "SpannerTransaction.Commit", Logger);
         }
 
         /// <inheritdoc />
-        public override void Rollback()
-        {
-            Task.Run(RollbackAsync).Wait();
-        }
+        public override void Rollback() => Task.Run(() => RollbackAsync(default)).WaitWithUnwrappedExceptions();
 
         /// <summary>
         /// Rolls back a transaction asynchronously.
         /// </summary>
-        public Task RollbackAsync()
+        /// <param name="cancellationToken">A cancellation token used for this task.</param>
+        public Task RollbackAsync(CancellationToken cancellationToken = default)
         {
             return ExecuteHelper.WithErrorTranslationAndProfiling(
                 () =>
                 {
                     GaxPreconditions.CheckState(
                         Mode != TransactionMode.ReadOnly, "You cannot roll back a readonly transaction.");
-                    return WireTransaction.RollbackAsync(Session, CommitTimeout);
+                    return WireTransaction.RollbackAsync(Session, CommitTimeout, cancellationToken);
                 }, "SpannerTransaction.Rollback", Logger);
         }
 
