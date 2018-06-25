@@ -27,8 +27,6 @@ using Google.Cloud.Spanner.V1.Internal.Logging;
 using Google.Protobuf.WellKnownTypes;
 using Grpc.Core;
 
-// ReSharper disable UnusedParameter.Local
-
 namespace Google.Cloud.Spanner.Data
 {
     /// <summary>
@@ -236,7 +234,6 @@ namespace Google.Cloud.Spanner.Data
             set => _transaction = (SpannerTransaction) value;
         }
 
-        // ReSharper disable once MemberCanBePrivate.Global
         internal SpannerCommandTextBuilder SpannerCommandTextBuilder { get; set; }
 
         /// <summary>

@@ -18,8 +18,6 @@ using System.Linq;
 using System.Text;
 using Google.Api.Gax;
 
-// ReSharper disable UnusedParameter.Local
-
 namespace Google.Cloud.Spanner.Data
 {
     /// <summary>

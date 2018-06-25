@@ -24,7 +24,6 @@ using Google.Cloud.Spanner.V1;
 using Grpc.Auth;
 using Grpc.Core;
 
-// ReSharper disable UnusedParameter.Local
 namespace Google.Cloud.Spanner.Data
 {
     /// <summary>
@@ -176,7 +175,6 @@ namespace Google.Cloud.Spanner.Data
         /// The TCP Host name to connect to Spanner. If not supplied in the connection string, the default
         /// host will be used.
         /// </summary>
-        // ReSharper disable once MemberCanBePrivate.Global
         public string Host
         {
             get => GetValueOrDefault(nameof(Host), SpannerClient.DefaultEndpoint.Host);
@@ -187,7 +185,6 @@ namespace Google.Cloud.Spanner.Data
         /// The TCP port number to connect to Spanner. If not supplied in the connection string, the default
         /// port will be used.
         /// </summary>
-        // ReSharper disable once MemberCanBePrivate.Global
         public int Port
         {
             get

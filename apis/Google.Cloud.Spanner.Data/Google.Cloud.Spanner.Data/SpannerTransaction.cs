@@ -25,8 +25,6 @@ using Google.Cloud.Spanner.V1;
 using Google.Cloud.Spanner.V1.Internal.Logging;
 using Google.Protobuf;
 
-// ReSharper disable UnusedParameter.Local
-
 namespace Google.Cloud.Spanner.Data
 {
     /// <summary>

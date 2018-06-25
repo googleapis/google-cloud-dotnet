@@ -649,7 +649,6 @@ namespace Google.Cloud.Spanner.Data.Tests
                 new ArrayList(contents.Cast<object>().ToList());
 
             // Used by ValueConversion via reflection upon deserialization.
-            // ReSharper disable once UnusedMember.Local
             public CustomList() { }
 
             /// <inheritdoc />

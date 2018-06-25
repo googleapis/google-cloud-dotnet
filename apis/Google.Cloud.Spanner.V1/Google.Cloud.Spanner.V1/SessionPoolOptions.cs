@@ -28,7 +28,6 @@ namespace Google.Cloud.Spanner.V1
         public SessionPoolOptions()
         {
             var retry = SpannerSettings.GetDefault().CommitSettings.Timing.Retry;
-            // ReSharper disable once PossibleInvalidOperationException
             Timeout = (int)(retry?.TotalExpiration.Timeout).Value.TotalSeconds;
         }
 

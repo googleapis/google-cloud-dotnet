@@ -29,13 +29,10 @@ using Moq;
 using Xunit;
 using Xunit.Abstractions;
 
-// ReSharper disable AccessToDisposedClosure
-
 namespace Google.Cloud.Spanner.Data.Tests
 {
     public class SessionPoolTests
     {
-        // ReSharper disable once UnusedParameter.Local
         public SessionPoolTests(ITestOutputHelper outputHelper)
         {
             //Uncomment these lines to debug a specific test.
@@ -503,9 +500,7 @@ namespace Google.Cloud.Spanner.Data.Tests
         {
             SessionPoolOptions options = new SessionPoolOptions();
             Assert.Equal(options.Timeout,
-                // ReSharper disable once PossibleInvalidOperationException
-                (int)SpannerSettings.GetDefault().CommitSettings.Timing.Retry
-                    .TotalExpiration.Timeout.Value.TotalSeconds);
+                (int)SpannerSettings.GetDefault().CommitSettings.Timing.Retry.TotalExpiration.Timeout.Value.TotalSeconds);
         }
 
         private class ParallelSpannerClient : SpannerClient

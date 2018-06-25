@@ -23,9 +23,7 @@ namespace Google.Cloud.Spanner.Data.Tests
         [Fact]
         public void NullNotAllowed()
         {
-            // ReSharper disable once CollectionNeverQueried.Local
             var collection = new SpannerParameterCollection();
-            // ReSharper disable once AssignNullToNotNullAttribute
             Assert.Throws<ArgumentNullException>(() => collection.Add(null));
         }
 
@@ -101,7 +99,6 @@ namespace Google.Cloud.Spanner.Data.Tests
         [Fact]
         public void AssertConsts()
         {
-            // ReSharper disable once CollectionNeverUpdated.Local
             var collection = new SpannerParameterCollection();
             Assert.False(collection.IsFixedSize);
             Assert.False(collection.IsSynchronized);
