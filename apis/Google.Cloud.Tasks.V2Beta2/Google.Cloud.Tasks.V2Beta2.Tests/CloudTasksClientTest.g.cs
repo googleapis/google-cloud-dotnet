@@ -609,7 +609,7 @@ namespace Google.Cloud.Tasks.V2Beta2.Tests
             Mock<CloudTasks.CloudTasksClient> mockGrpcClient = new Mock<CloudTasks.CloudTasksClient>(MockBehavior.Strict);
             GetIamPolicyRequest expectedRequest = new GetIamPolicyRequest
             {
-                Resource = new ProjectName("[PROJECT]").ToString(),
+                Resource = new QueueName("[PROJECT]", "[LOCATION]", "[QUEUE]").ToString(),
             };
             Policy expectedResponse = new Policy
             {
@@ -631,7 +631,7 @@ namespace Google.Cloud.Tasks.V2Beta2.Tests
             Mock<CloudTasks.CloudTasksClient> mockGrpcClient = new Mock<CloudTasks.CloudTasksClient>(MockBehavior.Strict);
             GetIamPolicyRequest expectedRequest = new GetIamPolicyRequest
             {
-                Resource = new ProjectName("[PROJECT]").ToString(),
+                Resource = new QueueName("[PROJECT]", "[LOCATION]", "[QUEUE]").ToString(),
             };
             Policy expectedResponse = new Policy
             {
@@ -695,7 +695,7 @@ namespace Google.Cloud.Tasks.V2Beta2.Tests
             Mock<CloudTasks.CloudTasksClient> mockGrpcClient = new Mock<CloudTasks.CloudTasksClient>(MockBehavior.Strict);
             SetIamPolicyRequest expectedRequest = new SetIamPolicyRequest
             {
-                Resource = new ProjectName("[PROJECT]").ToString(),
+                Resource = new QueueName("[PROJECT]", "[LOCATION]", "[QUEUE]").ToString(),
                 Policy = new Policy(),
             };
             Policy expectedResponse = new Policy
@@ -719,7 +719,7 @@ namespace Google.Cloud.Tasks.V2Beta2.Tests
             Mock<CloudTasks.CloudTasksClient> mockGrpcClient = new Mock<CloudTasks.CloudTasksClient>(MockBehavior.Strict);
             SetIamPolicyRequest expectedRequest = new SetIamPolicyRequest
             {
-                Resource = new ProjectName("[PROJECT]").ToString(),
+                Resource = new QueueName("[PROJECT]", "[LOCATION]", "[QUEUE]").ToString(),
                 Policy = new Policy(),
             };
             Policy expectedResponse = new Policy
@@ -787,7 +787,7 @@ namespace Google.Cloud.Tasks.V2Beta2.Tests
             Mock<CloudTasks.CloudTasksClient> mockGrpcClient = new Mock<CloudTasks.CloudTasksClient>(MockBehavior.Strict);
             TestIamPermissionsRequest expectedRequest = new TestIamPermissionsRequest
             {
-                Resource = new ProjectName("[PROJECT]").ToString(),
+                Resource = new QueueName("[PROJECT]", "[LOCATION]", "[QUEUE]").ToString(),
                 Permissions = { },
             };
             TestIamPermissionsResponse expectedResponse = new TestIamPermissionsResponse();
@@ -807,7 +807,7 @@ namespace Google.Cloud.Tasks.V2Beta2.Tests
             Mock<CloudTasks.CloudTasksClient> mockGrpcClient = new Mock<CloudTasks.CloudTasksClient>(MockBehavior.Strict);
             TestIamPermissionsRequest expectedRequest = new TestIamPermissionsRequest
             {
-                Resource = new ProjectName("[PROJECT]").ToString(),
+                Resource = new QueueName("[PROJECT]", "[LOCATION]", "[QUEUE]").ToString(),
                 Permissions = { },
             };
             TestIamPermissionsResponse expectedResponse = new TestIamPermissionsResponse();
