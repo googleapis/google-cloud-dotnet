@@ -22,6 +22,7 @@ using Google.Cloud.Spanner.V1.Internal;
 using Google.Cloud.Spanner.V1.Internal.Logging;
 using Google.Protobuf;
 using Google.Api.Gax.Grpc;
+using System.Threading;
 
 namespace Google.Cloud.Spanner.V1
 {
@@ -158,14 +159,19 @@ namespace Google.Cloud.Spanner.V1
         /// <param name="session"></param>
         /// <param name="mutations"></param>
         /// <param name="timeoutSeconds"></param>
+        /// <param name="cancellationToken"></param>
         /// <returns></returns>
         public static Task<CommitResponse> CommitAsync(this Transaction transaction, Session session,
-            IEnumerable<Mutation> mutations, int timeoutSeconds)
+            IEnumerable<Mutation> mutations, int timeoutSeconds, CancellationToken cancellationToken)
         {
-            return RunFinalMethodAsync(transaction, session, info => info.SpannerClient.CommitAsync(
-                            session.SessionName, info.ActiveTransaction.Id, mutations,
-                            info.SpannerClient.Settings.CommitSettings.WithExpiration(info.SpannerClient.Settings.ConvertTimeoutToExpiration(timeoutSeconds)))
-                        .WithSessionChecking(() => session));
+            Func<SessionInfo, Task<CommitResponse>> func = info =>
+            {
+                var settings = info.SpannerClient.Settings.CommitSettings
+                    .WithExpiration(info.SpannerClient.Settings.ConvertTimeoutToExpiration(timeoutSeconds))
+                    .WithCancellationToken(cancellationToken);
+                return info.SpannerClient.CommitAsync(session.SessionName, info.ActiveTransaction.Id, mutations, settings);
+            };
+            return RunFinalMethodAsync(transaction, session, func).WithSessionChecking(() => session);
         }
 
         /// <summary>
@@ -174,22 +180,21 @@ namespace Google.Cloud.Spanner.V1
         /// <param name="transaction"></param>
         /// <param name="session"></param>
         /// <param name="timeoutSeconds"></param>
+        /// <param name="cancellationToken"></param>
         /// <returns></returns>
-        public static Task<bool> RollbackAsync(this Transaction transaction, Session session, int timeoutSeconds)
-        {
-            return RunFinalMethodAsync(transaction, session,
+        public static Task<bool> RollbackAsync(this Transaction transaction, Session session, int timeoutSeconds, CancellationToken cancellationToken) =>
+            RunFinalMethodAsync(transaction, session,
                 async info =>
                 {
+                    var settings = info.SpannerClient.Settings.RollbackSettings
+                        .WithExpiration(info.SpannerClient.Settings.ConvertTimeoutToExpiration(timeoutSeconds))
+                        .WithCancellationToken(cancellationToken);
                     await info.SpannerClient
-                        .RollbackAsync(
-                            session.SessionName,
-                            info.ActiveTransaction.Id,
-                            info.SpannerClient.Settings.RollbackSettings.WithExpiration(
-                                info.SpannerClient.Settings.ConvertTimeoutToExpiration(timeoutSeconds)))
-                        .WithSessionChecking(() => session).ConfigureAwait(false);
+                        .RollbackAsync(session.SessionName, info.ActiveTransaction.Id, settings)
+                        .WithSessionChecking(() => session)
+                        .ConfigureAwait(false);
                     return true;
                 });
-        }
 
         private static async Task<T> RunFinalMethodAsync<T>(Transaction transaction, Session session, Func<SessionInfo, Task<T>> commitOrRollbackAction)
         {
