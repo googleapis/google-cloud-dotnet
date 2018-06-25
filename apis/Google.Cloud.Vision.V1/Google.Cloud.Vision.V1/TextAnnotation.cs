@@ -64,10 +64,10 @@ namespace Google.Cloud.Vision.V1 {
             "Lmdvb2dsZS5jbG91ZC52aXNpb24udjEuVGV4dEFubm90YXRpb24uVGV4dFBy",
             "b3BlcnR5EjoKDGJvdW5kaW5nX2JveBgCIAEoCzIkLmdvb2dsZS5jbG91ZC52",
             "aXNpb24udjEuQm91bmRpbmdQb2x5EgwKBHRleHQYAyABKAkSEgoKY29uZmlk",
-            "ZW5jZRgEIAEoAkJ0Chpjb20uZ29vZ2xlLmNsb3VkLnZpc2lvbi52MUITVGV4",
+            "ZW5jZRgEIAEoAkJ7Chpjb20uZ29vZ2xlLmNsb3VkLnZpc2lvbi52MUITVGV4",
             "dEFubm90YXRpb25Qcm90b1ABWjxnb29nbGUuZ29sYW5nLm9yZy9nZW5wcm90",
-            "by9nb29nbGVhcGlzL2Nsb3VkL3Zpc2lvbi92MTt2aXNpb274AQFiBnByb3Rv",
-            "Mw=="));
+            "by9nb29nbGVhcGlzL2Nsb3VkL3Zpc2lvbi92MTt2aXNpb274AQGiAgRHQ1ZO",
+            "YgZwcm90bzM="));
       descriptor = pbr::FileDescriptor.FromGeneratedCode(descriptorData,
           new pbr::FileDescriptor[] { global::Google.Api.AnnotationsReflection.Descriptor, global::Google.Cloud.Vision.V1.GeometryReflection.Descriptor, },
           new pbr::GeneratedClrTypeInfo(null, new pbr::GeneratedClrTypeInfo[] {

@@ -31,9 +31,9 @@ namespace Google.Cloud.Vision.V1 {
             "ZS5jbG91ZC52aXNpb24udjEuVmVydGV4EkUKE25vcm1hbGl6ZWRfdmVydGlj",
             "ZXMYAiADKAsyKC5nb29nbGUuY2xvdWQudmlzaW9uLnYxLk5vcm1hbGl6ZWRW",
             "ZXJ0ZXgiKwoIUG9zaXRpb24SCQoBeBgBIAEoAhIJCgF5GAIgASgCEgkKAXoY",
-            "AyABKAJCbgoaY29tLmdvb2dsZS5jbG91ZC52aXNpb24udjFCDUdlb21ldHJ5",
+            "AyABKAJCdQoaY29tLmdvb2dsZS5jbG91ZC52aXNpb24udjFCDUdlb21ldHJ5",
             "UHJvdG9QAVo8Z29vZ2xlLmdvbGFuZy5vcmcvZ2VucHJvdG8vZ29vZ2xlYXBp",
-            "cy9jbG91ZC92aXNpb24vdjE7dmlzaW9u+AEBYgZwcm90bzM="));
+            "cy9jbG91ZC92aXNpb24vdjE7dmlzaW9u+AEBogIER0NWTmIGcHJvdG8z"));
       descriptor = pbr::FileDescriptor.FromGeneratedCode(descriptorData,
           new pbr::FileDescriptor[] { },
           new pbr::GeneratedClrTypeInfo(null, new pbr::GeneratedClrTypeInfo[] {
