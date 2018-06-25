@@ -26,7 +26,7 @@ namespace Google.Cloud.Spanner.Data
         /// <summary>
         /// Given a string representation, returns an instance of <see cref="SpannerDbType"/>.
         /// </summary>
-        /// <param name="spannerType">A string representation of a SpannerDbType. See <see cref="ToString"/></param>
+        /// <param name="spannerType">A string representation of a SpannerDbType. See <see cref="ToString"/>.</param>
         /// <param name="spannerDbType">If parsing was successful, then an instance of <see cref="SpannerDbType"/>.
         ///  Otherwise null.</param>
         /// <returns>True if the parse was successful.</returns>

@@ -199,7 +199,7 @@ namespace Google.Cloud.Spanner.Data
         /// <summary>
         /// Creates an instance of <see cref="TimestampBound"/> given its Base64 encoded string.
         /// </summary>
-        /// <param name="base64String">The string provided by <see cref="TimestampBound.ToBase64String"/></param>
+        /// <param name="base64String">The string provided by <see cref="TimestampBound.ToBase64String"/>.</param>
         /// <returns>A new instance of <see cref="TimestampBound"/>.</returns>
         public static TimestampBound FromBase64String(string base64String)
         {

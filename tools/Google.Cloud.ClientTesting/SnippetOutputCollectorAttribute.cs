@@ -35,7 +35,7 @@ namespace Google.Cloud.ClientTesting
         /// <summary>
         /// Redirects standard output 
         /// </summary>
-        /// <param name="methodUnderTest"></param>
+        /// <param name="methodUnderTest">The method being tested.</param>
         public override void Before(MethodInfo methodUnderTest)
         {
             if (s_projectDirectory == null)

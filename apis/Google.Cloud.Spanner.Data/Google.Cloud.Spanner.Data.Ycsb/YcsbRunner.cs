@@ -152,7 +152,6 @@ namespace Google.Cloud.Spanner.Data.Ycsb
         /// <summary>
         /// Runs the test with multiple parallel subtasks equal to at most "numworkers"
         /// </summary>
-        /// <param name="numWorkers"></param>
         private async Task RunWithTargetWorkers(int numWorkers)
         {
             var parallelWorkers = new List<Task>();

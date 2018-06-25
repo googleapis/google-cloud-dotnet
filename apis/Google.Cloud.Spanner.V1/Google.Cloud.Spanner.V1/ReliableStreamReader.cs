@@ -54,9 +54,9 @@ namespace Google.Cloud.Spanner.V1
             Session session,
             int timeoutSeconds)
         {
-            _spannerClient = spannerClient;
-            _request = request;
-            _session = session;
+            _spannerClient = GaxPreconditions.CheckNotNull(spannerClient, nameof(SpannerClient));
+            _request = GaxPreconditions.CheckNotNull(request, nameof(request));
+            _session = GaxPreconditions.CheckNotNull(session, nameof(session));
             _timeoutSeconds = timeoutSeconds;
             _clock = SpannerSettings.GetDefault().Clock ?? SystemClock.Instance;
             _scheduler = SpannerSettings.GetDefault().Scheduler ?? SystemScheduler.Instance;

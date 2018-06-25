@@ -47,7 +47,7 @@ namespace Google.Cloud.Spanner.Data
         /// <param name="host">The host to connect to.</param>
         /// <param name="port">The port to connect to.</param>
         /// <param name="credentials">The credentials to use, or null to use application default credentials.</param>
-        /// <returns></returns>
+        /// <returns>A task which, when completed, will result in a channel to the specified endpoint.</returns>
         internal static async Task<Channel> CreateChannelAsync(string host, int port, ChannelCredentials credentials)
         {
             if (credentials == null)

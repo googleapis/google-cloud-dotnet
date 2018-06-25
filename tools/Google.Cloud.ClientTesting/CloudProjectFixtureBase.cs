@@ -50,7 +50,7 @@ namespace Google.Cloud.ClientTesting
         /// but should always run in continuous integration - if the environemnt isn't set up appropriately,
         /// we should fail.
         /// </summary>
-        /// <param name="condition"></param>
+        /// <param name="condition">The condition under which the test is skipped.</param>
         public void SkipIf(bool condition)
         {
             if (!condition)

@@ -179,7 +179,7 @@ namespace Google.Cloud.Spanner.V1
         /// <summary>
         /// Marks a session as expired so that it will never be pooled in the sessionpool
         /// </summary>
-        /// <param name="session"></param>
+        /// <param name="session">The session to mark as expired. May be null, in which case this method is a no-op.</param>
         public static void MarkSessionExpired(Session session)
         {
             if (session != null)
@@ -191,24 +191,20 @@ namespace Google.Cloud.Spanner.V1
         /// <summary>
         /// Returns true if the given session has been marked as expired.
         /// </summary>
-        /// <param name="session"></param>
-        /// <returns></returns>
-        public bool IsSessionExpired(Session session)
-        {
-            bool unused;
-            return session != null && s_blackListedSessions.TryGetValue(session.Name, out unused);
-        }
+        /// <param name="session">The session to check for expiry. May be null, in which case the return value is always false.</param>
+        /// <returns>True if <paramref name="session"/> has been marked as expired; false otherwise.</returns>
+        public bool IsSessionExpired(Session session) => session != null && s_blackListedSessions.TryGetValue(session.Name, out _);
 
         /// <summary>
         /// Allocates a session from the pool if possible, or creates a new Spanner Session.
         /// </summary>
-        /// <param name="spannerClient"></param>
-        /// <param name="project"></param>
-        /// <param name="spannerInstance"></param>
-        /// <param name="spannerDatabase"></param>
-        /// <param name="options"></param>
-        /// <param name="cancellationToken"></param>
-        /// <returns></returns>
+        /// <param name="spannerClient">The client to associate with the session.</param>
+        /// <param name="project">The project ID for the session. Must not be null.</param>
+        /// <param name="spannerInstance">The instance ID for the session. Must not be null.</param>
+        /// <param name="spannerDatabase">The database ID for the session. Must not be null.</param>
+        /// <param name="options">The transaction options for the session.</param>
+        /// <param name="cancellationToken">An optional token for canceling the call.</param>
+        /// <returns>A task which, when completed, has the session as a result.</returns>
         public async Task<Session> CreateSessionFromPoolAsync(
             SpannerClient spannerClient,
             string project,
@@ -286,9 +282,8 @@ namespace Google.Cloud.Spanner.V1
         /// Releases a session back into the pool, possibly causing another entry to be evicted if the maximum pool size has been
         /// reached.
         /// </summary>
-        /// <param name="session"></param>
-        /// <param name="client"></param>
-        /// <returns></returns>
+        /// <param name="client">The client associated with the session.</param>
+        /// <param name="session">The session to return to the pool. Must not be null.</param>
         public void ReleaseToPool(SpannerClient client, Session session)
         {
             GaxPreconditions.CheckNotNull(session, nameof(session));
@@ -331,10 +326,8 @@ namespace Google.Cloud.Spanner.V1
             }
             else
             {
-                Logger.Error(
-                    () =>
-                        "An attempt was made to release a session to the pool,"
-                        + " but the session was not originally allocated from the pool.");
+                Logger.Error(() =>
+                    "An attempt was made to release a session to the pool, but the session was not originally allocated from the pool.");
             }
         }
 
@@ -348,8 +341,8 @@ namespace Google.Cloud.Spanner.V1
         /// <summary>
         /// Called to close a session and release it without putting it back into the pool.
         /// </summary>
-        /// <param name="session"></param>
-        /// <returns></returns>
+        /// <param name="session">The session to close. Must not be null.</param>
+        /// <returns>A task representing the asynchronous operation.</returns>
         public async Task CloseAsync(Session session)
         {
             GaxPreconditions.CheckNotNull(session, nameof(session));
@@ -362,14 +355,13 @@ namespace Google.Cloud.Spanner.V1
                 await result.Client.DeleteSessionAsync(session.SessionName).ConfigureAwait(false);
                 return;
             }
-            throw new InvalidOperationException(
-                "Close Session was not able to locate the provided session.");
+            throw new InvalidOperationException("Close Session was not able to locate the provided session.");
         }
 
         /// <summary>
         /// Releases all pooled sessions and frees resources on the server.
         /// </summary>
-        /// <returns></returns>
+        /// <returns>A task representing the asynchronous operation.</returns>
         public Task ReleaseAllAsync()
         {
             var entries = _poolByClientAndDatabase.Values;

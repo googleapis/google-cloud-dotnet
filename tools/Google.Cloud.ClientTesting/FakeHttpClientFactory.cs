@@ -49,7 +49,7 @@ namespace Google.Cloud.ClientTesting
         /// Shorthand for creating a <see cref="MockableMessageHandler"/> which uses the given function
         /// to handle requests.
         /// </summary>
-        /// <param name="handler"></param>
+        /// <param name="handler">The handler to call for requests.</param>
         public FakeHttpClientFactory(Func<HttpRequestMessage, HttpResponseMessage> handler)
             : this(new ConfigurableMessageHandler(new MockableMessageHandler(handler)))
         {

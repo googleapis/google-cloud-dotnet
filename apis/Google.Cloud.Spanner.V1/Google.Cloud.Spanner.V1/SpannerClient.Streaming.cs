@@ -23,23 +23,24 @@ namespace Google.Cloud.Spanner.V1
     public partial class SpannerClient
     {
         /// <summary>
-        /// Executes an SQL Query on Spanner returning the results as a set of partialresult streams.
+        /// Executes an SQL Query on Spanner returning the results as a set of partial result streams.
         /// </summary>
-        /// <param name="request"></param>
-        /// <param name="callSettings"></param>
-        /// <returns></returns>
+        /// <param name="request">The query to execute. Must not be null.</param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>The stream of partial results.</returns>
         public virtual AsyncServerStreamingCall<PartialResultSet> ExecuteSqlStream(ExecuteSqlRequest request, CallSettings callSettings = null)
         {
             throw new NotImplementedException();
         }
 
         /// <summary>
-        /// Executes an SQL Query on Spanner returning the results as a set of partialresult streams.
+        /// Executes an SQL Query on Spanner returning the results as a set of partial result streams.
         /// </summary>
-        /// <param name="request"></param>
-        /// <param name="session"></param>
-        /// <param name="timeoutSeconds"></param>
-        /// <returns></returns>
+        /// <param name="request">The query to execute. Must not be null.</param>
+        /// <param name="session">The session to use for the query. Must not be null.</param>
+        /// <param name="timeoutSeconds">The number of seconds to allow the query to execute for. A value of 0
+        /// means "immediate timeout" or "no timeout" depending on <see cref="SpannerSettings.AllowImmediateTimeouts"/>.</param>
+        /// <returns>A stream reader for the results.</returns>
         public virtual ReliableStreamReader GetSqlStreamReader(ExecuteSqlRequest request, Session session, int timeoutSeconds)
         {
             throw new NotImplementedException();
@@ -107,28 +108,15 @@ namespace Google.Cloud.Spanner.V1
                 GrpcClient.ExecuteStreamingSql, Settings.ExecuteSqlStreamSettings);
         }
 
-        /// <summary>
-        /// Executes an SQL Query on Spanner returning the results as a set of partialresult streams.
-        /// </summary>
-        /// <param name="request"></param>
-        /// <param name="callSettings"></param>
-        /// <returns></returns>
+        /// <inheritdoc />
         public override AsyncServerStreamingCall<PartialResultSet> ExecuteSqlStream(ExecuteSqlRequest request, CallSettings callSettings = null)
         {
             Modify_ExecuteSqlRequest(ref request, ref callSettings);
             return _callExecuteSqlStream.Call(request, callSettings);
         }
 
-        /// <summary>
-        /// Executes an SQL Query on Spanner returning the results as a set of partialresult streams.
-        /// </summary>
-        /// <param name="request"></param>
-        /// <param name="session"></param>
-        /// <param name="timeoutSeconds"></param>
-        /// <returns></returns>
-        public override ReliableStreamReader GetSqlStreamReader(ExecuteSqlRequest request, Session session, int timeoutSeconds)
-        {
-            return new ReliableStreamReader(this, request, session, timeoutSeconds);
-        }
+        /// <inheritdoc />
+        public override ReliableStreamReader GetSqlStreamReader(ExecuteSqlRequest request, Session session, int timeoutSeconds) =>
+            new ReliableStreamReader(this, request, session, timeoutSeconds);
     }
 }
