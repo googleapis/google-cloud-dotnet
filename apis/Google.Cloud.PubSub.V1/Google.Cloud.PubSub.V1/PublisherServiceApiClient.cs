@@ -639,7 +639,8 @@ namespace Google.Cloud.PubSub.V1
         }
 
         /// <summary>
-        /// Creates the given topic with the given name.
+        /// Creates the given topic with the given name. See the
+        /// &lt;a href="/pubsub/docs/admin#resource_names"&gt; resource name rules&lt;/a&gt;.
         /// </summary>
         /// <param name="name">
         /// The name of the topic. It must have the format
@@ -665,7 +666,8 @@ namespace Google.Cloud.PubSub.V1
                 callSettings);
 
         /// <summary>
-        /// Creates the given topic with the given name.
+        /// Creates the given topic with the given name. See the
+        /// &lt;a href="/pubsub/docs/admin#resource_names"&gt; resource name rules&lt;/a&gt;.
         /// </summary>
         /// <param name="name">
         /// The name of the topic. It must have the format
@@ -688,7 +690,8 @@ namespace Google.Cloud.PubSub.V1
                 gaxgrpc::CallSettings.FromCancellationToken(cancellationToken));
 
         /// <summary>
-        /// Creates the given topic with the given name.
+        /// Creates the given topic with the given name. See the
+        /// &lt;a href="/pubsub/docs/admin#resource_names"&gt; resource name rules&lt;/a&gt;.
         /// </summary>
         /// <param name="name">
         /// The name of the topic. It must have the format
@@ -714,7 +717,8 @@ namespace Google.Cloud.PubSub.V1
                 callSettings);
 
         /// <summary>
-        /// Creates the given topic with the given name.
+        /// Creates the given topic with the given name. See the
+        /// &lt;a href="/pubsub/docs/admin#resource_names"&gt; resource name rules&lt;/a&gt;.
         /// </summary>
         /// <param name="request">
         /// The request object containing all of the parameters for the API call.
@@ -733,7 +737,8 @@ namespace Google.Cloud.PubSub.V1
         }
 
         /// <summary>
-        /// Creates the given topic with the given name.
+        /// Creates the given topic with the given name. See the
+        /// &lt;a href="/pubsub/docs/admin#resource_names"&gt; resource name rules&lt;/a&gt;.
         /// </summary>
         /// <param name="request">
         /// The request object containing all of the parameters for the API call.
@@ -751,7 +756,8 @@ namespace Google.Cloud.PubSub.V1
                 gaxgrpc::CallSettings.FromCancellationToken(cancellationToken));
 
         /// <summary>
-        /// Creates the given topic with the given name.
+        /// Creates the given topic with the given name. See the
+        /// &lt;a href="/pubsub/docs/admin#resource_names"&gt; resource name rules&lt;/a&gt;.
         /// </summary>
         /// <param name="request">
         /// The request object containing all of the parameters for the API call.
@@ -770,12 +776,8 @@ namespace Google.Cloud.PubSub.V1
         }
 
         /// <summary>
-        /// Updates an existing topic. Note that certain properties of a topic are not
-        /// modifiable.  Options settings follow the style guide:
-        /// NOTE:  The style guide requires body: "topic" instead of body: "*".
-        /// Keeping the latter for internal consistency in V1, however it should be
-        /// corrected in V2.  See
-        /// https://cloud.google.com/apis/design/standard_methods#update for details.
+        /// Updates an existing topic. Note that certain properties of a
+        /// topic are not modifiable.
         /// </summary>
         /// <param name="request">
         /// The request object containing all of the parameters for the API call.
@@ -794,12 +796,8 @@ namespace Google.Cloud.PubSub.V1
         }
 
         /// <summary>
-        /// Updates an existing topic. Note that certain properties of a topic are not
-        /// modifiable.  Options settings follow the style guide:
-        /// NOTE:  The style guide requires body: "topic" instead of body: "*".
-        /// Keeping the latter for internal consistency in V1, however it should be
-        /// corrected in V2.  See
-        /// https://cloud.google.com/apis/design/standard_methods#update for details.
+        /// Updates an existing topic. Note that certain properties of a
+        /// topic are not modifiable.
         /// </summary>
         /// <param name="request">
         /// The request object containing all of the parameters for the API call.
@@ -817,12 +815,8 @@ namespace Google.Cloud.PubSub.V1
                 gaxgrpc::CallSettings.FromCancellationToken(cancellationToken));
 
         /// <summary>
-        /// Updates an existing topic. Note that certain properties of a topic are not
-        /// modifiable.  Options settings follow the style guide:
-        /// NOTE:  The style guide requires body: "topic" instead of body: "*".
-        /// Keeping the latter for internal consistency in V1, however it should be
-        /// corrected in V2.  See
-        /// https://cloud.google.com/apis/design/standard_methods#update for details.
+        /// Updates an existing topic. Note that certain properties of a
+        /// topic are not modifiable.
         /// </summary>
         /// <param name="request">
         /// The request object containing all of the parameters for the API call.
@@ -1212,7 +1206,7 @@ namespace Google.Cloud.PubSub.V1
         }
 
         /// <summary>
-        /// Lists the name of the subscriptions for this topic.
+        /// Lists the names of the subscriptions on this topic.
         /// </summary>
         /// <param name="topic">
         /// The name of the topic that subscriptions are attached to.
@@ -1246,7 +1240,7 @@ namespace Google.Cloud.PubSub.V1
                 callSettings);
 
         /// <summary>
-        /// Lists the name of the subscriptions for this topic.
+        /// Lists the names of the subscriptions on this topic.
         /// </summary>
         /// <param name="topic">
         /// The name of the topic that subscriptions are attached to.
@@ -1280,7 +1274,7 @@ namespace Google.Cloud.PubSub.V1
                 callSettings);
 
         /// <summary>
-        /// Lists the name of the subscriptions for this topic.
+        /// Lists the names of the subscriptions on this topic.
         /// </summary>
         /// <param name="request">
         /// The request object containing all of the parameters for the API call.
@@ -1299,7 +1293,7 @@ namespace Google.Cloud.PubSub.V1
         }
 
         /// <summary>
-        /// Lists the name of the subscriptions for this topic.
+        /// Lists the names of the subscriptions on this topic.
         /// </summary>
         /// <param name="request">
         /// The request object containing all of the parameters for the API call.
@@ -2012,7 +2006,8 @@ namespace Google.Cloud.PubSub.V1
         partial void Modify_TestIamPermissionsRequest(ref iam::TestIamPermissionsRequest request, ref gaxgrpc::CallSettings settings);
 
         /// <summary>
-        /// Creates the given topic with the given name.
+        /// Creates the given topic with the given name. See the
+        /// &lt;a href="/pubsub/docs/admin#resource_names"&gt; resource name rules&lt;/a&gt;.
         /// </summary>
         /// <param name="request">
         /// The request object containing all of the parameters for the API call.
@@ -2032,7 +2027,8 @@ namespace Google.Cloud.PubSub.V1
         }
 
         /// <summary>
-        /// Creates the given topic with the given name.
+        /// Creates the given topic with the given name. See the
+        /// &lt;a href="/pubsub/docs/admin#resource_names"&gt; resource name rules&lt;/a&gt;.
         /// </summary>
         /// <param name="request">
         /// The request object containing all of the parameters for the API call.
@@ -2052,12 +2048,8 @@ namespace Google.Cloud.PubSub.V1
         }
 
         /// <summary>
-        /// Updates an existing topic. Note that certain properties of a topic are not
-        /// modifiable.  Options settings follow the style guide:
-        /// NOTE:  The style guide requires body: "topic" instead of body: "*".
-        /// Keeping the latter for internal consistency in V1, however it should be
-        /// corrected in V2.  See
-        /// https://cloud.google.com/apis/design/standard_methods#update for details.
+        /// Updates an existing topic. Note that certain properties of a
+        /// topic are not modifiable.
         /// </summary>
         /// <param name="request">
         /// The request object containing all of the parameters for the API call.
@@ -2077,12 +2069,8 @@ namespace Google.Cloud.PubSub.V1
         }
 
         /// <summary>
-        /// Updates an existing topic. Note that certain properties of a topic are not
-        /// modifiable.  Options settings follow the style guide:
-        /// NOTE:  The style guide requires body: "topic" instead of body: "*".
-        /// Keeping the latter for internal consistency in V1, however it should be
-        /// corrected in V2.  See
-        /// https://cloud.google.com/apis/design/standard_methods#update for details.
+        /// Updates an existing topic. Note that certain properties of a
+        /// topic are not modifiable.
         /// </summary>
         /// <param name="request">
         /// The request object containing all of the parameters for the API call.
@@ -2226,7 +2214,7 @@ namespace Google.Cloud.PubSub.V1
         }
 
         /// <summary>
-        /// Lists the name of the subscriptions for this topic.
+        /// Lists the names of the subscriptions on this topic.
         /// </summary>
         /// <param name="request">
         /// The request object containing all of the parameters for the API call.
@@ -2246,7 +2234,7 @@ namespace Google.Cloud.PubSub.V1
         }
 
         /// <summary>
-        /// Lists the name of the subscriptions for this topic.
+        /// Lists the names of the subscriptions on this topic.
         /// </summary>
         /// <param name="request">
         /// The request object containing all of the parameters for the API call.
