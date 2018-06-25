@@ -51,8 +51,7 @@ namespace Google.Cloud.Spanner.Data
                     {
                         transaction.CommitTimeout = timeoutSeconds;
                         long count = await ((ISpannerTransaction)transaction).ExecuteDmlAsync(request, cancellationToken, timeoutSeconds).ConfigureAwait(false);
-                        // FIXME: Pass in the cancellation token.
-                        await transaction.CommitAsync().ConfigureAwait(false);
+                        await transaction.CommitAsync(cancellationToken).ConfigureAwait(false);
                         return count;
                     }
                 }, "EphemeralTransaction.ExecuteDmlAsync", Logger);

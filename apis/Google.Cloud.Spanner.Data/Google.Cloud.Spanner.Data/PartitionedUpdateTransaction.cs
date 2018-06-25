@@ -38,7 +38,7 @@ namespace Google.Cloud.Spanner.Data
             _wireTransaction = wireTransaction;
         }
 
-        public void Dispose() => _connection.ReleaseSession(_session);
+        public void Dispose() => _connection.ReleaseSession(_session, _connection.SpannerClient);
 
         public Task<int> ExecuteMutationsAsync(List<Mutation> mutations, CancellationToken cancellationToken, int timeoutSeconds) =>
             throw new NotSupportedException("A partitioned update transaction can only be used for generalized DML operations.");
