@@ -28,158 +28,176 @@ namespace Google.Cloud.PubSub.V1 {
             "Yi52MRocZ29vZ2xlL2FwaS9hbm5vdGF0aW9ucy5wcm90bxoeZ29vZ2xlL3By",
             "b3RvYnVmL2R1cmF0aW9uLnByb3RvGhtnb29nbGUvcHJvdG9idWYvZW1wdHku",
             "cHJvdG8aIGdvb2dsZS9wcm90b2J1Zi9maWVsZF9tYXNrLnByb3RvGh9nb29n",
-            "bGUvcHJvdG9idWYvdGltZXN0YW1wLnByb3RvInkKBVRvcGljEgwKBG5hbWUY",
-            "ASABKAkSMwoGbGFiZWxzGAIgAygLMiMuZ29vZ2xlLnB1YnN1Yi52MS5Ub3Bp",
-            "Yy5MYWJlbHNFbnRyeRotCgtMYWJlbHNFbnRyeRILCgNrZXkYASABKAkSDQoF",
-            "dmFsdWUYAiABKAk6AjgBItsBCg1QdWJzdWJNZXNzYWdlEgwKBGRhdGEYASAB",
-            "KAwSQwoKYXR0cmlidXRlcxgCIAMoCzIvLmdvb2dsZS5wdWJzdWIudjEuUHVi",
-            "c3ViTWVzc2FnZS5BdHRyaWJ1dGVzRW50cnkSEgoKbWVzc2FnZV9pZBgDIAEo",
-            "CRIwCgxwdWJsaXNoX3RpbWUYBCABKAsyGi5nb29nbGUucHJvdG9idWYuVGlt",
-            "ZXN0YW1wGjEKD0F0dHJpYnV0ZXNFbnRyeRILCgNrZXkYASABKAkSDQoFdmFs",
-            "dWUYAiABKAk6AjgBIiAKD0dldFRvcGljUmVxdWVzdBINCgV0b3BpYxgBIAEo",
-            "CSJtChJVcGRhdGVUb3BpY1JlcXVlc3QSJgoFdG9waWMYASABKAsyFy5nb29n",
-            "bGUucHVic3ViLnYxLlRvcGljEi8KC3VwZGF0ZV9tYXNrGAIgASgLMhouZ29v",
-            "Z2xlLnByb3RvYnVmLkZpZWxkTWFzayJSCg5QdWJsaXNoUmVxdWVzdBINCgV0",
-            "b3BpYxgBIAEoCRIxCghtZXNzYWdlcxgCIAMoCzIfLmdvb2dsZS5wdWJzdWIu",
-            "djEuUHVic3ViTWVzc2FnZSImCg9QdWJsaXNoUmVzcG9uc2USEwoLbWVzc2Fn",
-            "ZV9pZHMYASADKAkiSwoRTGlzdFRvcGljc1JlcXVlc3QSDwoHcHJvamVjdBgB",
-            "IAEoCRIRCglwYWdlX3NpemUYAiABKAUSEgoKcGFnZV90b2tlbhgDIAEoCSJW",
-            "ChJMaXN0VG9waWNzUmVzcG9uc2USJwoGdG9waWNzGAEgAygLMhcuZ29vZ2xl",
-            "LnB1YnN1Yi52MS5Ub3BpYxIXCg9uZXh0X3BhZ2VfdG9rZW4YAiABKAkiVQod",
-            "TGlzdFRvcGljU3Vic2NyaXB0aW9uc1JlcXVlc3QSDQoFdG9waWMYASABKAkS",
-            "EQoJcGFnZV9zaXplGAIgASgFEhIKCnBhZ2VfdG9rZW4YAyABKAkiUAoeTGlz",
-            "dFRvcGljU3Vic2NyaXB0aW9uc1Jlc3BvbnNlEhUKDXN1YnNjcmlwdGlvbnMY",
-            "ASADKAkSFwoPbmV4dF9wYWdlX3Rva2VuGAIgASgJIiMKEkRlbGV0ZVRvcGlj",
-            "UmVxdWVzdBINCgV0b3BpYxgBIAEoCSLFAgoMU3Vic2NyaXB0aW9uEgwKBG5h",
-            "bWUYASABKAkSDQoFdG9waWMYAiABKAkSMQoLcHVzaF9jb25maWcYBCABKAsy",
-            "HC5nb29nbGUucHVic3ViLnYxLlB1c2hDb25maWcSHAoUYWNrX2RlYWRsaW5l",
-            "X3NlY29uZHMYBSABKAUSHQoVcmV0YWluX2Fja2VkX21lc3NhZ2VzGAcgASgI",
-            "Ej0KGm1lc3NhZ2VfcmV0ZW50aW9uX2R1cmF0aW9uGAggASgLMhkuZ29vZ2xl",
-            "LnByb3RvYnVmLkR1cmF0aW9uEjoKBmxhYmVscxgJIAMoCzIqLmdvb2dsZS5w",
-            "dWJzdWIudjEuU3Vic2NyaXB0aW9uLkxhYmVsc0VudHJ5Gi0KC0xhYmVsc0Vu",
-            "dHJ5EgsKA2tleRgBIAEoCRINCgV2YWx1ZRgCIAEoCToCOAEimAEKClB1c2hD",
-            "b25maWcSFQoNcHVzaF9lbmRwb2ludBgBIAEoCRJACgphdHRyaWJ1dGVzGAIg",
-            "AygLMiwuZ29vZ2xlLnB1YnN1Yi52MS5QdXNoQ29uZmlnLkF0dHJpYnV0ZXNF",
-            "bnRyeRoxCg9BdHRyaWJ1dGVzRW50cnkSCwoDa2V5GAEgASgJEg0KBXZhbHVl",
-            "GAIgASgJOgI4ASJTCg9SZWNlaXZlZE1lc3NhZ2USDgoGYWNrX2lkGAEgASgJ",
-            "EjAKB21lc3NhZ2UYAiABKAsyHy5nb29nbGUucHVic3ViLnYxLlB1YnN1Yk1l",
-            "c3NhZ2UiLgoWR2V0U3Vic2NyaXB0aW9uUmVxdWVzdBIUCgxzdWJzY3JpcHRp",
-            "b24YASABKAkiggEKGVVwZGF0ZVN1YnNjcmlwdGlvblJlcXVlc3QSNAoMc3Vi",
-            "c2NyaXB0aW9uGAEgASgLMh4uZ29vZ2xlLnB1YnN1Yi52MS5TdWJzY3JpcHRp",
-            "b24SLwoLdXBkYXRlX21hc2sYAiABKAsyGi5nb29nbGUucHJvdG9idWYuRmll",
-            "bGRNYXNrIlIKGExpc3RTdWJzY3JpcHRpb25zUmVxdWVzdBIPCgdwcm9qZWN0",
-            "GAEgASgJEhEKCXBhZ2Vfc2l6ZRgCIAEoBRISCgpwYWdlX3Rva2VuGAMgASgJ",
-            "ImsKGUxpc3RTdWJzY3JpcHRpb25zUmVzcG9uc2USNQoNc3Vic2NyaXB0aW9u",
-            "cxgBIAMoCzIeLmdvb2dsZS5wdWJzdWIudjEuU3Vic2NyaXB0aW9uEhcKD25l",
-            "eHRfcGFnZV90b2tlbhgCIAEoCSIxChlEZWxldGVTdWJzY3JpcHRpb25SZXF1",
-            "ZXN0EhQKDHN1YnNjcmlwdGlvbhgBIAEoCSJiChdNb2RpZnlQdXNoQ29uZmln",
-            "UmVxdWVzdBIUCgxzdWJzY3JpcHRpb24YASABKAkSMQoLcHVzaF9jb25maWcY",
-            "AiABKAsyHC5nb29nbGUucHVic3ViLnYxLlB1c2hDb25maWciVQoLUHVsbFJl",
-            "cXVlc3QSFAoMc3Vic2NyaXB0aW9uGAEgASgJEhoKEnJldHVybl9pbW1lZGlh",
-            "dGVseRgCIAEoCBIUCgxtYXhfbWVzc2FnZXMYAyABKAUiTAoMUHVsbFJlc3Bv",
-            "bnNlEjwKEXJlY2VpdmVkX21lc3NhZ2VzGAEgAygLMiEuZ29vZ2xlLnB1YnN1",
-            "Yi52MS5SZWNlaXZlZE1lc3NhZ2UiXwoYTW9kaWZ5QWNrRGVhZGxpbmVSZXF1",
-            "ZXN0EhQKDHN1YnNjcmlwdGlvbhgBIAEoCRIPCgdhY2tfaWRzGAQgAygJEhwK",
-            "FGFja19kZWFkbGluZV9zZWNvbmRzGAMgASgFIjsKEkFja25vd2xlZGdlUmVx",
-            "dWVzdBIUCgxzdWJzY3JpcHRpb24YASABKAkSDwoHYWNrX2lkcxgCIAMoCSKk",
-            "AQoUU3RyZWFtaW5nUHVsbFJlcXVlc3QSFAoMc3Vic2NyaXB0aW9uGAEgASgJ",
-            "Eg8KB2Fja19pZHMYAiADKAkSHwoXbW9kaWZ5X2RlYWRsaW5lX3NlY29uZHMY",
-            "AyADKAUSHwoXbW9kaWZ5X2RlYWRsaW5lX2Fja19pZHMYBCADKAkSIwobc3Ry",
-            "ZWFtX2Fja19kZWFkbGluZV9zZWNvbmRzGAUgASgFIlUKFVN0cmVhbWluZ1B1",
-            "bGxSZXNwb25zZRI8ChFyZWNlaXZlZF9tZXNzYWdlcxgBIAMoCzIhLmdvb2ds",
-            "ZS5wdWJzdWIudjEuUmVjZWl2ZWRNZXNzYWdlIjsKFUNyZWF0ZVNuYXBzaG90",
-            "UmVxdWVzdBIMCgRuYW1lGAEgASgJEhQKDHN1YnNjcmlwdGlvbhgCIAEoCSJ2",
-            "ChVVcGRhdGVTbmFwc2hvdFJlcXVlc3QSLAoIc25hcHNob3QYASABKAsyGi5n",
-            "b29nbGUucHVic3ViLnYxLlNuYXBzaG90Ei8KC3VwZGF0ZV9tYXNrGAIgASgL",
-            "MhouZ29vZ2xlLnByb3RvYnVmLkZpZWxkTWFzayK/AQoIU25hcHNob3QSDAoE",
-            "bmFtZRgBIAEoCRINCgV0b3BpYxgCIAEoCRIvCgtleHBpcmVfdGltZRgDIAEo",
-            "CzIaLmdvb2dsZS5wcm90b2J1Zi5UaW1lc3RhbXASNgoGbGFiZWxzGAQgAygL",
-            "MiYuZ29vZ2xlLnB1YnN1Yi52MS5TbmFwc2hvdC5MYWJlbHNFbnRyeRotCgtM",
-            "YWJlbHNFbnRyeRILCgNrZXkYASABKAkSDQoFdmFsdWUYAiABKAk6AjgBIk4K",
-            "FExpc3RTbmFwc2hvdHNSZXF1ZXN0Eg8KB3Byb2plY3QYASABKAkSEQoJcGFn",
-            "ZV9zaXplGAIgASgFEhIKCnBhZ2VfdG9rZW4YAyABKAkiXwoVTGlzdFNuYXBz",
-            "aG90c1Jlc3BvbnNlEi0KCXNuYXBzaG90cxgBIAMoCzIaLmdvb2dsZS5wdWJz",
-            "dWIudjEuU25hcHNob3QSFwoPbmV4dF9wYWdlX3Rva2VuGAIgASgJIikKFURl",
-            "bGV0ZVNuYXBzaG90UmVxdWVzdBIQCghzbmFwc2hvdBgBIAEoCSJtCgtTZWVr",
-            "UmVxdWVzdBIUCgxzdWJzY3JpcHRpb24YASABKAkSKgoEdGltZRgCIAEoCzIa",
-            "Lmdvb2dsZS5wcm90b2J1Zi5UaW1lc3RhbXBIABISCghzbmFwc2hvdBgDIAEo",
-            "CUgAQggKBnRhcmdldCIOCgxTZWVrUmVzcG9uc2Uy9xAKClN1YnNjcmliZXIS",
-            "hgEKEkNyZWF0ZVN1YnNjcmlwdGlvbhIeLmdvb2dsZS5wdWJzdWIudjEuU3Vi",
-            "c2NyaXB0aW9uGh4uZ29vZ2xlLnB1YnN1Yi52MS5TdWJzY3JpcHRpb24iMILT",
-            "5JMCKholL3YxL3tuYW1lPXByb2plY3RzLyovc3Vic2NyaXB0aW9ucy8qfToB",
-            "KhKSAQoPR2V0U3Vic2NyaXB0aW9uEiguZ29vZ2xlLnB1YnN1Yi52MS5HZXRT",
-            "dWJzY3JpcHRpb25SZXF1ZXN0Gh4uZ29vZ2xlLnB1YnN1Yi52MS5TdWJzY3Jp",
-            "cHRpb24iNYLT5JMCLxItL3YxL3tzdWJzY3JpcHRpb249cHJvamVjdHMvKi9z",
-            "dWJzY3JpcHRpb25zLyp9EqABChJVcGRhdGVTdWJzY3JpcHRpb24SKy5nb29n",
-            "bGUucHVic3ViLnYxLlVwZGF0ZVN1YnNjcmlwdGlvblJlcXVlc3QaHi5nb29n",
-            "bGUucHVic3ViLnYxLlN1YnNjcmlwdGlvbiI9gtPkkwI3MjIvdjEve3N1YnNj",
-            "cmlwdGlvbi5uYW1lPXByb2plY3RzLyovc3Vic2NyaXB0aW9ucy8qfToBKhKc",
-            "AQoRTGlzdFN1YnNjcmlwdGlvbnMSKi5nb29nbGUucHVic3ViLnYxLkxpc3RT",
-            "dWJzY3JpcHRpb25zUmVxdWVzdBorLmdvb2dsZS5wdWJzdWIudjEuTGlzdFN1",
-            "YnNjcmlwdGlvbnNSZXNwb25zZSIugtPkkwIoEiYvdjEve3Byb2plY3Q9cHJv",
-            "amVjdHMvKn0vc3Vic2NyaXB0aW9ucxKQAQoSRGVsZXRlU3Vic2NyaXB0aW9u",
-            "EisuZ29vZ2xlLnB1YnN1Yi52MS5EZWxldGVTdWJzY3JpcHRpb25SZXF1ZXN0",
-            "GhYuZ29vZ2xlLnByb3RvYnVmLkVtcHR5IjWC0+STAi8qLS92MS97c3Vic2Ny",
-            "aXB0aW9uPXByb2plY3RzLyovc3Vic2NyaXB0aW9ucy8qfRKjAQoRTW9kaWZ5",
-            "QWNrRGVhZGxpbmUSKi5nb29nbGUucHVic3ViLnYxLk1vZGlmeUFja0RlYWRs",
-            "aW5lUmVxdWVzdBoWLmdvb2dsZS5wcm90b2J1Zi5FbXB0eSJKgtPkkwJEIj8v",
-            "djEve3N1YnNjcmlwdGlvbj1wcm9qZWN0cy8qL3N1YnNjcmlwdGlvbnMvKn06",
-            "bW9kaWZ5QWNrRGVhZGxpbmU6ASoSkQEKC0Fja25vd2xlZGdlEiQuZ29vZ2xl",
-            "LnB1YnN1Yi52MS5BY2tub3dsZWRnZVJlcXVlc3QaFi5nb29nbGUucHJvdG9i",
-            "dWYuRW1wdHkiRILT5JMCPiI5L3YxL3tzdWJzY3JpcHRpb249cHJvamVjdHMv",
-            "Ki9zdWJzY3JpcHRpb25zLyp9OmFja25vd2xlZGdlOgEqEoQBCgRQdWxsEh0u",
-            "Z29vZ2xlLnB1YnN1Yi52MS5QdWxsUmVxdWVzdBoeLmdvb2dsZS5wdWJzdWIu",
-            "djEuUHVsbFJlc3BvbnNlIj2C0+STAjciMi92MS97c3Vic2NyaXB0aW9uPXBy",
-            "b2plY3RzLyovc3Vic2NyaXB0aW9ucy8qfTpwdWxsOgEqEmQKDVN0cmVhbWlu",
-            "Z1B1bGwSJi5nb29nbGUucHVic3ViLnYxLlN0cmVhbWluZ1B1bGxSZXF1ZXN0",
-            "GicuZ29vZ2xlLnB1YnN1Yi52MS5TdHJlYW1pbmdQdWxsUmVzcG9uc2UoATAB",
-            "EqABChBNb2RpZnlQdXNoQ29uZmlnEikuZ29vZ2xlLnB1YnN1Yi52MS5Nb2Rp",
-            "ZnlQdXNoQ29uZmlnUmVxdWVzdBoWLmdvb2dsZS5wcm90b2J1Zi5FbXB0eSJJ",
-            "gtPkkwJDIj4vdjEve3N1YnNjcmlwdGlvbj1wcm9qZWN0cy8qL3N1YnNjcmlw",
-            "dGlvbnMvKn06bW9kaWZ5UHVzaENvbmZpZzoBKhKMAQoNTGlzdFNuYXBzaG90",
-            "cxImLmdvb2dsZS5wdWJzdWIudjEuTGlzdFNuYXBzaG90c1JlcXVlc3QaJy5n",
-            "b29nbGUucHVic3ViLnYxLkxpc3RTbmFwc2hvdHNSZXNwb25zZSIqgtPkkwIk",
-            "EiIvdjEve3Byb2plY3Q9cHJvamVjdHMvKn0vc25hcHNob3RzEoMBCg5DcmVh",
-            "dGVTbmFwc2hvdBInLmdvb2dsZS5wdWJzdWIudjEuQ3JlYXRlU25hcHNob3RS",
-            "ZXF1ZXN0GhouZ29vZ2xlLnB1YnN1Yi52MS5TbmFwc2hvdCIsgtPkkwImGiEv",
-            "djEve25hbWU9cHJvamVjdHMvKi9zbmFwc2hvdHMvKn06ASoSjAEKDlVwZGF0",
-            "ZVNuYXBzaG90EicuZ29vZ2xlLnB1YnN1Yi52MS5VcGRhdGVTbmFwc2hvdFJl",
-            "cXVlc3QaGi5nb29nbGUucHVic3ViLnYxLlNuYXBzaG90IjWC0+STAi8yKi92",
-            "MS97c25hcHNob3QubmFtZT1wcm9qZWN0cy8qL3NuYXBzaG90cy8qfToBKhKA",
-            "AQoORGVsZXRlU25hcHNob3QSJy5nb29nbGUucHVic3ViLnYxLkRlbGV0ZVNu",
-            "YXBzaG90UmVxdWVzdBoWLmdvb2dsZS5wcm90b2J1Zi5FbXB0eSItgtPkkwIn",
-            "KiUvdjEve3NuYXBzaG90PXByb2plY3RzLyovc25hcHNob3RzLyp9EoQBCgRT",
-            "ZWVrEh0uZ29vZ2xlLnB1YnN1Yi52MS5TZWVrUmVxdWVzdBoeLmdvb2dsZS5w",
-            "dWJzdWIudjEuU2Vla1Jlc3BvbnNlIj2C0+STAjciMi92MS97c3Vic2NyaXB0",
-            "aW9uPXByb2plY3RzLyovc3Vic2NyaXB0aW9ucy8qfTpzZWVrOgEqMpoHCglQ",
-            "dWJsaXNoZXISagoLQ3JlYXRlVG9waWMSFy5nb29nbGUucHVic3ViLnYxLlRv",
-            "cGljGhcuZ29vZ2xlLnB1YnN1Yi52MS5Ub3BpYyIpgtPkkwIjGh4vdjEve25h",
-            "bWU9cHJvamVjdHMvKi90b3BpY3MvKn06ASoSfQoLVXBkYXRlVG9waWMSJC5n",
-            "b29nbGUucHVic3ViLnYxLlVwZGF0ZVRvcGljUmVxdWVzdBoXLmdvb2dsZS5w",
-            "dWJzdWIudjEuVG9waWMiL4LT5JMCKTIkL3YxL3t0b3BpYy5uYW1lPXByb2pl",
-            "Y3RzLyovdG9waWNzLyp9OgEqEoIBCgdQdWJsaXNoEiAuZ29vZ2xlLnB1YnN1",
-            "Yi52MS5QdWJsaXNoUmVxdWVzdBohLmdvb2dsZS5wdWJzdWIudjEuUHVibGlz",
-            "aFJlc3BvbnNlIjKC0+STAiwiJy92MS97dG9waWM9cHJvamVjdHMvKi90b3Bp",
-            "Y3MvKn06cHVibGlzaDoBKhJvCghHZXRUb3BpYxIhLmdvb2dsZS5wdWJzdWIu",
-            "djEuR2V0VG9waWNSZXF1ZXN0GhcuZ29vZ2xlLnB1YnN1Yi52MS5Ub3BpYyIn",
-            "gtPkkwIhEh8vdjEve3RvcGljPXByb2plY3RzLyovdG9waWNzLyp9EoABCgpM",
-            "aXN0VG9waWNzEiMuZ29vZ2xlLnB1YnN1Yi52MS5MaXN0VG9waWNzUmVxdWVz",
-            "dBokLmdvb2dsZS5wdWJzdWIudjEuTGlzdFRvcGljc1Jlc3BvbnNlIieC0+ST",
-            "AiESHy92MS97cHJvamVjdD1wcm9qZWN0cy8qfS90b3BpY3MSsgEKFkxpc3RU",
-            "b3BpY1N1YnNjcmlwdGlvbnMSLy5nb29nbGUucHVic3ViLnYxLkxpc3RUb3Bp",
-            "Y1N1YnNjcmlwdGlvbnNSZXF1ZXN0GjAuZ29vZ2xlLnB1YnN1Yi52MS5MaXN0",
-            "VG9waWNTdWJzY3JpcHRpb25zUmVzcG9uc2UiNYLT5JMCLxItL3YxL3t0b3Bp",
-            "Yz1wcm9qZWN0cy8qL3RvcGljcy8qfS9zdWJzY3JpcHRpb25zEnQKC0RlbGV0",
-            "ZVRvcGljEiQuZ29vZ2xlLnB1YnN1Yi52MS5EZWxldGVUb3BpY1JlcXVlc3Qa",
-            "Fi5nb29nbGUucHJvdG9idWYuRW1wdHkiJ4LT5JMCISofL3YxL3t0b3BpYz1w",
-            "cm9qZWN0cy8qL3RvcGljcy8qfUKSAQoUY29tLmdvb2dsZS5wdWJzdWIudjFC",
-            "C1B1YnN1YlByb3RvUAFaNmdvb2dsZS5nb2xhbmcub3JnL2dlbnByb3RvL2dv",
-            "b2dsZWFwaXMvcHVic3ViL3YxO3B1YnN1YvgBAaoCFkdvb2dsZS5DbG91ZC5Q",
-            "dWJTdWIuVjHKAhZHb29nbGVcQ2xvdWRcUHViU3ViXFYxYgZwcm90bzM="));
+            "bGUvcHJvdG9idWYvdGltZXN0YW1wLnByb3RvIjsKFE1lc3NhZ2VTdG9yYWdl",
+            "UG9saWN5EiMKG2FsbG93ZWRfcGVyc2lzdGVuY2VfcmVnaW9ucxgBIAMoCSLB",
+            "AQoFVG9waWMSDAoEbmFtZRgBIAEoCRIzCgZsYWJlbHMYAiADKAsyIy5nb29n",
+            "bGUucHVic3ViLnYxLlRvcGljLkxhYmVsc0VudHJ5EkYKFm1lc3NhZ2Vfc3Rv",
+            "cmFnZV9wb2xpY3kYAyABKAsyJi5nb29nbGUucHVic3ViLnYxLk1lc3NhZ2VT",
+            "dG9yYWdlUG9saWN5Gi0KC0xhYmVsc0VudHJ5EgsKA2tleRgBIAEoCRINCgV2",
+            "YWx1ZRgCIAEoCToCOAEi2wEKDVB1YnN1Yk1lc3NhZ2USDAoEZGF0YRgBIAEo",
+            "DBJDCgphdHRyaWJ1dGVzGAIgAygLMi8uZ29vZ2xlLnB1YnN1Yi52MS5QdWJz",
+            "dWJNZXNzYWdlLkF0dHJpYnV0ZXNFbnRyeRISCgptZXNzYWdlX2lkGAMgASgJ",
+            "EjAKDHB1Ymxpc2hfdGltZRgEIAEoCzIaLmdvb2dsZS5wcm90b2J1Zi5UaW1l",
+            "c3RhbXAaMQoPQXR0cmlidXRlc0VudHJ5EgsKA2tleRgBIAEoCRINCgV2YWx1",
+            "ZRgCIAEoCToCOAEiIAoPR2V0VG9waWNSZXF1ZXN0Eg0KBXRvcGljGAEgASgJ",
+            "Im0KElVwZGF0ZVRvcGljUmVxdWVzdBImCgV0b3BpYxgBIAEoCzIXLmdvb2ds",
+            "ZS5wdWJzdWIudjEuVG9waWMSLwoLdXBkYXRlX21hc2sYAiABKAsyGi5nb29n",
+            "bGUucHJvdG9idWYuRmllbGRNYXNrIlIKDlB1Ymxpc2hSZXF1ZXN0Eg0KBXRv",
+            "cGljGAEgASgJEjEKCG1lc3NhZ2VzGAIgAygLMh8uZ29vZ2xlLnB1YnN1Yi52",
+            "MS5QdWJzdWJNZXNzYWdlIiYKD1B1Ymxpc2hSZXNwb25zZRITCgttZXNzYWdl",
+            "X2lkcxgBIAMoCSJLChFMaXN0VG9waWNzUmVxdWVzdBIPCgdwcm9qZWN0GAEg",
+            "ASgJEhEKCXBhZ2Vfc2l6ZRgCIAEoBRISCgpwYWdlX3Rva2VuGAMgASgJIlYK",
+            "Ekxpc3RUb3BpY3NSZXNwb25zZRInCgZ0b3BpY3MYASADKAsyFy5nb29nbGUu",
+            "cHVic3ViLnYxLlRvcGljEhcKD25leHRfcGFnZV90b2tlbhgCIAEoCSJVCh1M",
+            "aXN0VG9waWNTdWJzY3JpcHRpb25zUmVxdWVzdBINCgV0b3BpYxgBIAEoCRIR",
+            "CglwYWdlX3NpemUYAiABKAUSEgoKcGFnZV90b2tlbhgDIAEoCSJQCh5MaXN0",
+            "VG9waWNTdWJzY3JpcHRpb25zUmVzcG9uc2USFQoNc3Vic2NyaXB0aW9ucxgB",
+            "IAMoCRIXCg9uZXh0X3BhZ2VfdG9rZW4YAiABKAkiUQoZTGlzdFRvcGljU25h",
+            "cHNob3RzUmVxdWVzdBINCgV0b3BpYxgBIAEoCRIRCglwYWdlX3NpemUYAiAB",
+            "KAUSEgoKcGFnZV90b2tlbhgDIAEoCSJIChpMaXN0VG9waWNTbmFwc2hvdHNS",
+            "ZXNwb25zZRIRCglzbmFwc2hvdHMYASADKAkSFwoPbmV4dF9wYWdlX3Rva2Vu",
+            "GAIgASgJIiMKEkRlbGV0ZVRvcGljUmVxdWVzdBINCgV0b3BpYxgBIAEoCSLF",
+            "AgoMU3Vic2NyaXB0aW9uEgwKBG5hbWUYASABKAkSDQoFdG9waWMYAiABKAkS",
+            "MQoLcHVzaF9jb25maWcYBCABKAsyHC5nb29nbGUucHVic3ViLnYxLlB1c2hD",
+            "b25maWcSHAoUYWNrX2RlYWRsaW5lX3NlY29uZHMYBSABKAUSHQoVcmV0YWlu",
+            "X2Fja2VkX21lc3NhZ2VzGAcgASgIEj0KGm1lc3NhZ2VfcmV0ZW50aW9uX2R1",
+            "cmF0aW9uGAggASgLMhkuZ29vZ2xlLnByb3RvYnVmLkR1cmF0aW9uEjoKBmxh",
+            "YmVscxgJIAMoCzIqLmdvb2dsZS5wdWJzdWIudjEuU3Vic2NyaXB0aW9uLkxh",
+            "YmVsc0VudHJ5Gi0KC0xhYmVsc0VudHJ5EgsKA2tleRgBIAEoCRINCgV2YWx1",
+            "ZRgCIAEoCToCOAEimAEKClB1c2hDb25maWcSFQoNcHVzaF9lbmRwb2ludBgB",
+            "IAEoCRJACgphdHRyaWJ1dGVzGAIgAygLMiwuZ29vZ2xlLnB1YnN1Yi52MS5Q",
+            "dXNoQ29uZmlnLkF0dHJpYnV0ZXNFbnRyeRoxCg9BdHRyaWJ1dGVzRW50cnkS",
+            "CwoDa2V5GAEgASgJEg0KBXZhbHVlGAIgASgJOgI4ASJTCg9SZWNlaXZlZE1l",
+            "c3NhZ2USDgoGYWNrX2lkGAEgASgJEjAKB21lc3NhZ2UYAiABKAsyHy5nb29n",
+            "bGUucHVic3ViLnYxLlB1YnN1Yk1lc3NhZ2UiLgoWR2V0U3Vic2NyaXB0aW9u",
+            "UmVxdWVzdBIUCgxzdWJzY3JpcHRpb24YASABKAkiggEKGVVwZGF0ZVN1YnNj",
+            "cmlwdGlvblJlcXVlc3QSNAoMc3Vic2NyaXB0aW9uGAEgASgLMh4uZ29vZ2xl",
+            "LnB1YnN1Yi52MS5TdWJzY3JpcHRpb24SLwoLdXBkYXRlX21hc2sYAiABKAsy",
+            "Gi5nb29nbGUucHJvdG9idWYuRmllbGRNYXNrIlIKGExpc3RTdWJzY3JpcHRp",
+            "b25zUmVxdWVzdBIPCgdwcm9qZWN0GAEgASgJEhEKCXBhZ2Vfc2l6ZRgCIAEo",
+            "BRISCgpwYWdlX3Rva2VuGAMgASgJImsKGUxpc3RTdWJzY3JpcHRpb25zUmVz",
+            "cG9uc2USNQoNc3Vic2NyaXB0aW9ucxgBIAMoCzIeLmdvb2dsZS5wdWJzdWIu",
+            "djEuU3Vic2NyaXB0aW9uEhcKD25leHRfcGFnZV90b2tlbhgCIAEoCSIxChlE",
+            "ZWxldGVTdWJzY3JpcHRpb25SZXF1ZXN0EhQKDHN1YnNjcmlwdGlvbhgBIAEo",
+            "CSJiChdNb2RpZnlQdXNoQ29uZmlnUmVxdWVzdBIUCgxzdWJzY3JpcHRpb24Y",
+            "ASABKAkSMQoLcHVzaF9jb25maWcYAiABKAsyHC5nb29nbGUucHVic3ViLnYx",
+            "LlB1c2hDb25maWciVQoLUHVsbFJlcXVlc3QSFAoMc3Vic2NyaXB0aW9uGAEg",
+            "ASgJEhoKEnJldHVybl9pbW1lZGlhdGVseRgCIAEoCBIUCgxtYXhfbWVzc2Fn",
+            "ZXMYAyABKAUiTAoMUHVsbFJlc3BvbnNlEjwKEXJlY2VpdmVkX21lc3NhZ2Vz",
+            "GAEgAygLMiEuZ29vZ2xlLnB1YnN1Yi52MS5SZWNlaXZlZE1lc3NhZ2UiXwoY",
+            "TW9kaWZ5QWNrRGVhZGxpbmVSZXF1ZXN0EhQKDHN1YnNjcmlwdGlvbhgBIAEo",
+            "CRIPCgdhY2tfaWRzGAQgAygJEhwKFGFja19kZWFkbGluZV9zZWNvbmRzGAMg",
+            "ASgFIjsKEkFja25vd2xlZGdlUmVxdWVzdBIUCgxzdWJzY3JpcHRpb24YASAB",
+            "KAkSDwoHYWNrX2lkcxgCIAMoCSKkAQoUU3RyZWFtaW5nUHVsbFJlcXVlc3QS",
+            "FAoMc3Vic2NyaXB0aW9uGAEgASgJEg8KB2Fja19pZHMYAiADKAkSHwoXbW9k",
+            "aWZ5X2RlYWRsaW5lX3NlY29uZHMYAyADKAUSHwoXbW9kaWZ5X2RlYWRsaW5l",
+            "X2Fja19pZHMYBCADKAkSIwobc3RyZWFtX2Fja19kZWFkbGluZV9zZWNvbmRz",
+            "GAUgASgFIlUKFVN0cmVhbWluZ1B1bGxSZXNwb25zZRI8ChFyZWNlaXZlZF9t",
+            "ZXNzYWdlcxgBIAMoCzIhLmdvb2dsZS5wdWJzdWIudjEuUmVjZWl2ZWRNZXNz",
+            "YWdlIq8BChVDcmVhdGVTbmFwc2hvdFJlcXVlc3QSDAoEbmFtZRgBIAEoCRIU",
+            "CgxzdWJzY3JpcHRpb24YAiABKAkSQwoGbGFiZWxzGAMgAygLMjMuZ29vZ2xl",
+            "LnB1YnN1Yi52MS5DcmVhdGVTbmFwc2hvdFJlcXVlc3QuTGFiZWxzRW50cnka",
+            "LQoLTGFiZWxzRW50cnkSCwoDa2V5GAEgASgJEg0KBXZhbHVlGAIgASgJOgI4",
+            "ASJ2ChVVcGRhdGVTbmFwc2hvdFJlcXVlc3QSLAoIc25hcHNob3QYASABKAsy",
+            "Gi5nb29nbGUucHVic3ViLnYxLlNuYXBzaG90Ei8KC3VwZGF0ZV9tYXNrGAIg",
+            "ASgLMhouZ29vZ2xlLnByb3RvYnVmLkZpZWxkTWFzayK/AQoIU25hcHNob3QS",
+            "DAoEbmFtZRgBIAEoCRINCgV0b3BpYxgCIAEoCRIvCgtleHBpcmVfdGltZRgD",
+            "IAEoCzIaLmdvb2dsZS5wcm90b2J1Zi5UaW1lc3RhbXASNgoGbGFiZWxzGAQg",
+            "AygLMiYuZ29vZ2xlLnB1YnN1Yi52MS5TbmFwc2hvdC5MYWJlbHNFbnRyeRot",
+            "CgtMYWJlbHNFbnRyeRILCgNrZXkYASABKAkSDQoFdmFsdWUYAiABKAk6AjgB",
+            "IiYKEkdldFNuYXBzaG90UmVxdWVzdBIQCghzbmFwc2hvdBgBIAEoCSJOChRM",
+            "aXN0U25hcHNob3RzUmVxdWVzdBIPCgdwcm9qZWN0GAEgASgJEhEKCXBhZ2Vf",
+            "c2l6ZRgCIAEoBRISCgpwYWdlX3Rva2VuGAMgASgJIl8KFUxpc3RTbmFwc2hv",
+            "dHNSZXNwb25zZRItCglzbmFwc2hvdHMYASADKAsyGi5nb29nbGUucHVic3Vi",
+            "LnYxLlNuYXBzaG90EhcKD25leHRfcGFnZV90b2tlbhgCIAEoCSIpChVEZWxl",
+            "dGVTbmFwc2hvdFJlcXVlc3QSEAoIc25hcHNob3QYASABKAkibQoLU2Vla1Jl",
+            "cXVlc3QSFAoMc3Vic2NyaXB0aW9uGAEgASgJEioKBHRpbWUYAiABKAsyGi5n",
+            "b29nbGUucHJvdG9idWYuVGltZXN0YW1wSAASEgoIc25hcHNob3QYAyABKAlI",
+            "AEIICgZ0YXJnZXQiDgoMU2Vla1Jlc3BvbnNlMr8ICglQdWJsaXNoZXISagoL",
+            "Q3JlYXRlVG9waWMSFy5nb29nbGUucHVic3ViLnYxLlRvcGljGhcuZ29vZ2xl",
+            "LnB1YnN1Yi52MS5Ub3BpYyIpgtPkkwIjGh4vdjEve25hbWU9cHJvamVjdHMv",
+            "Ki90b3BpY3MvKn06ASoSfQoLVXBkYXRlVG9waWMSJC5nb29nbGUucHVic3Vi",
+            "LnYxLlVwZGF0ZVRvcGljUmVxdWVzdBoXLmdvb2dsZS5wdWJzdWIudjEuVG9w",
+            "aWMiL4LT5JMCKTIkL3YxL3t0b3BpYy5uYW1lPXByb2plY3RzLyovdG9waWNz",
+            "Lyp9OgEqEoIBCgdQdWJsaXNoEiAuZ29vZ2xlLnB1YnN1Yi52MS5QdWJsaXNo",
+            "UmVxdWVzdBohLmdvb2dsZS5wdWJzdWIudjEuUHVibGlzaFJlc3BvbnNlIjKC",
+            "0+STAiwiJy92MS97dG9waWM9cHJvamVjdHMvKi90b3BpY3MvKn06cHVibGlz",
+            "aDoBKhJvCghHZXRUb3BpYxIhLmdvb2dsZS5wdWJzdWIudjEuR2V0VG9waWNS",
+            "ZXF1ZXN0GhcuZ29vZ2xlLnB1YnN1Yi52MS5Ub3BpYyIngtPkkwIhEh8vdjEv",
+            "e3RvcGljPXByb2plY3RzLyovdG9waWNzLyp9EoABCgpMaXN0VG9waWNzEiMu",
+            "Z29vZ2xlLnB1YnN1Yi52MS5MaXN0VG9waWNzUmVxdWVzdBokLmdvb2dsZS5w",
+            "dWJzdWIudjEuTGlzdFRvcGljc1Jlc3BvbnNlIieC0+STAiESHy92MS97cHJv",
+            "amVjdD1wcm9qZWN0cy8qfS90b3BpY3MSsgEKFkxpc3RUb3BpY1N1YnNjcmlw",
+            "dGlvbnMSLy5nb29nbGUucHVic3ViLnYxLkxpc3RUb3BpY1N1YnNjcmlwdGlv",
+            "bnNSZXF1ZXN0GjAuZ29vZ2xlLnB1YnN1Yi52MS5MaXN0VG9waWNTdWJzY3Jp",
+            "cHRpb25zUmVzcG9uc2UiNYLT5JMCLxItL3YxL3t0b3BpYz1wcm9qZWN0cy8q",
+            "L3RvcGljcy8qfS9zdWJzY3JpcHRpb25zEqIBChJMaXN0VG9waWNTbmFwc2hv",
+            "dHMSKy5nb29nbGUucHVic3ViLnYxLkxpc3RUb3BpY1NuYXBzaG90c1JlcXVl",
+            "c3QaLC5nb29nbGUucHVic3ViLnYxLkxpc3RUb3BpY1NuYXBzaG90c1Jlc3Bv",
+            "bnNlIjGC0+STAisSKS92MS97dG9waWM9cHJvamVjdHMvKi90b3BpY3MvKn0v",
+            "c25hcHNob3RzEnQKC0RlbGV0ZVRvcGljEiQuZ29vZ2xlLnB1YnN1Yi52MS5E",
+            "ZWxldGVUb3BpY1JlcXVlc3QaFi5nb29nbGUucHJvdG9idWYuRW1wdHkiJ4LT",
+            "5JMCISofL3YxL3t0b3BpYz1wcm9qZWN0cy8qL3RvcGljcy8qfTL3EQoKU3Vi",
+            "c2NyaWJlchKGAQoSQ3JlYXRlU3Vic2NyaXB0aW9uEh4uZ29vZ2xlLnB1YnN1",
+            "Yi52MS5TdWJzY3JpcHRpb24aHi5nb29nbGUucHVic3ViLnYxLlN1YnNjcmlw",
+            "dGlvbiIwgtPkkwIqGiUvdjEve25hbWU9cHJvamVjdHMvKi9zdWJzY3JpcHRp",
+            "b25zLyp9OgEqEpIBCg9HZXRTdWJzY3JpcHRpb24SKC5nb29nbGUucHVic3Vi",
+            "LnYxLkdldFN1YnNjcmlwdGlvblJlcXVlc3QaHi5nb29nbGUucHVic3ViLnYx",
+            "LlN1YnNjcmlwdGlvbiI1gtPkkwIvEi0vdjEve3N1YnNjcmlwdGlvbj1wcm9q",
+            "ZWN0cy8qL3N1YnNjcmlwdGlvbnMvKn0SoAEKElVwZGF0ZVN1YnNjcmlwdGlv",
+            "bhIrLmdvb2dsZS5wdWJzdWIudjEuVXBkYXRlU3Vic2NyaXB0aW9uUmVxdWVz",
+            "dBoeLmdvb2dsZS5wdWJzdWIudjEuU3Vic2NyaXB0aW9uIj2C0+STAjcyMi92",
+            "MS97c3Vic2NyaXB0aW9uLm5hbWU9cHJvamVjdHMvKi9zdWJzY3JpcHRpb25z",
+            "Lyp9OgEqEpwBChFMaXN0U3Vic2NyaXB0aW9ucxIqLmdvb2dsZS5wdWJzdWIu",
+            "djEuTGlzdFN1YnNjcmlwdGlvbnNSZXF1ZXN0GisuZ29vZ2xlLnB1YnN1Yi52",
+            "MS5MaXN0U3Vic2NyaXB0aW9uc1Jlc3BvbnNlIi6C0+STAigSJi92MS97cHJv",
+            "amVjdD1wcm9qZWN0cy8qfS9zdWJzY3JpcHRpb25zEpABChJEZWxldGVTdWJz",
+            "Y3JpcHRpb24SKy5nb29nbGUucHVic3ViLnYxLkRlbGV0ZVN1YnNjcmlwdGlv",
+            "blJlcXVlc3QaFi5nb29nbGUucHJvdG9idWYuRW1wdHkiNYLT5JMCLyotL3Yx",
+            "L3tzdWJzY3JpcHRpb249cHJvamVjdHMvKi9zdWJzY3JpcHRpb25zLyp9EqMB",
+            "ChFNb2RpZnlBY2tEZWFkbGluZRIqLmdvb2dsZS5wdWJzdWIudjEuTW9kaWZ5",
+            "QWNrRGVhZGxpbmVSZXF1ZXN0GhYuZ29vZ2xlLnByb3RvYnVmLkVtcHR5IkqC",
+            "0+STAkQiPy92MS97c3Vic2NyaXB0aW9uPXByb2plY3RzLyovc3Vic2NyaXB0",
+            "aW9ucy8qfTptb2RpZnlBY2tEZWFkbGluZToBKhKRAQoLQWNrbm93bGVkZ2US",
+            "JC5nb29nbGUucHVic3ViLnYxLkFja25vd2xlZGdlUmVxdWVzdBoWLmdvb2ds",
+            "ZS5wcm90b2J1Zi5FbXB0eSJEgtPkkwI+IjkvdjEve3N1YnNjcmlwdGlvbj1w",
+            "cm9qZWN0cy8qL3N1YnNjcmlwdGlvbnMvKn06YWNrbm93bGVkZ2U6ASoShAEK",
+            "BFB1bGwSHS5nb29nbGUucHVic3ViLnYxLlB1bGxSZXF1ZXN0Gh4uZ29vZ2xl",
+            "LnB1YnN1Yi52MS5QdWxsUmVzcG9uc2UiPYLT5JMCNyIyL3YxL3tzdWJzY3Jp",
+            "cHRpb249cHJvamVjdHMvKi9zdWJzY3JpcHRpb25zLyp9OnB1bGw6ASoSZAoN",
+            "U3RyZWFtaW5nUHVsbBImLmdvb2dsZS5wdWJzdWIudjEuU3RyZWFtaW5nUHVs",
+            "bFJlcXVlc3QaJy5nb29nbGUucHVic3ViLnYxLlN0cmVhbWluZ1B1bGxSZXNw",
+            "b25zZSgBMAESoAEKEE1vZGlmeVB1c2hDb25maWcSKS5nb29nbGUucHVic3Vi",
+            "LnYxLk1vZGlmeVB1c2hDb25maWdSZXF1ZXN0GhYuZ29vZ2xlLnByb3RvYnVm",
+            "LkVtcHR5IkmC0+STAkMiPi92MS97c3Vic2NyaXB0aW9uPXByb2plY3RzLyov",
+            "c3Vic2NyaXB0aW9ucy8qfTptb2RpZnlQdXNoQ29uZmlnOgEqEn4KC0dldFNu",
+            "YXBzaG90EiQuZ29vZ2xlLnB1YnN1Yi52MS5HZXRTbmFwc2hvdFJlcXVlc3Qa",
+            "Gi5nb29nbGUucHVic3ViLnYxLlNuYXBzaG90Ii2C0+STAicSJS92MS97c25h",
+            "cHNob3Q9cHJvamVjdHMvKi9zbmFwc2hvdHMvKn0SjAEKDUxpc3RTbmFwc2hv",
+            "dHMSJi5nb29nbGUucHVic3ViLnYxLkxpc3RTbmFwc2hvdHNSZXF1ZXN0Gicu",
+            "Z29vZ2xlLnB1YnN1Yi52MS5MaXN0U25hcHNob3RzUmVzcG9uc2UiKoLT5JMC",
+            "JBIiL3YxL3twcm9qZWN0PXByb2plY3RzLyp9L3NuYXBzaG90cxKDAQoOQ3Jl",
+            "YXRlU25hcHNob3QSJy5nb29nbGUucHVic3ViLnYxLkNyZWF0ZVNuYXBzaG90",
+            "UmVxdWVzdBoaLmdvb2dsZS5wdWJzdWIudjEuU25hcHNob3QiLILT5JMCJhoh",
+            "L3YxL3tuYW1lPXByb2plY3RzLyovc25hcHNob3RzLyp9OgEqEowBCg5VcGRh",
+            "dGVTbmFwc2hvdBInLmdvb2dsZS5wdWJzdWIudjEuVXBkYXRlU25hcHNob3RS",
+            "ZXF1ZXN0GhouZ29vZ2xlLnB1YnN1Yi52MS5TbmFwc2hvdCI1gtPkkwIvMiov",
+            "djEve3NuYXBzaG90Lm5hbWU9cHJvamVjdHMvKi9zbmFwc2hvdHMvKn06ASoS",
+            "gAEKDkRlbGV0ZVNuYXBzaG90EicuZ29vZ2xlLnB1YnN1Yi52MS5EZWxldGVT",
+            "bmFwc2hvdFJlcXVlc3QaFi5nb29nbGUucHJvdG9idWYuRW1wdHkiLYLT5JMC",
+            "JyolL3YxL3tzbmFwc2hvdD1wcm9qZWN0cy8qL3NuYXBzaG90cy8qfRKEAQoE",
+            "U2VlaxIdLmdvb2dsZS5wdWJzdWIudjEuU2Vla1JlcXVlc3QaHi5nb29nbGUu",
+            "cHVic3ViLnYxLlNlZWtSZXNwb25zZSI9gtPkkwI3IjIvdjEve3N1YnNjcmlw",
+            "dGlvbj1wcm9qZWN0cy8qL3N1YnNjcmlwdGlvbnMvKn06c2VlazoBKkKSAQoU",
+            "Y29tLmdvb2dsZS5wdWJzdWIudjFCC1B1YnN1YlByb3RvUAFaNmdvb2dsZS5n",
+            "b2xhbmcub3JnL2dlbnByb3RvL2dvb2dsZWFwaXMvcHVic3ViL3YxO3B1YnN1",
+            "YvgBAaoCFkdvb2dsZS5DbG91ZC5QdWJTdWIuVjHKAhZHb29nbGVcQ2xvdWRc",
+            "UHViU3ViXFYxYgZwcm90bzM="));
       descriptor = pbr::FileDescriptor.FromGeneratedCode(descriptorData,
           new pbr::FileDescriptor[] { global::Google.Api.AnnotationsReflection.Descriptor, global::Google.Protobuf.WellKnownTypes.DurationReflection.Descriptor, global::Google.Protobuf.WellKnownTypes.EmptyReflection.Descriptor, global::Google.Protobuf.WellKnownTypes.FieldMaskReflection.Descriptor, global::Google.Protobuf.WellKnownTypes.TimestampReflection.Descriptor, },
           new pbr::GeneratedClrTypeInfo(null, new pbr::GeneratedClrTypeInfo[] {
-            new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.PubSub.V1.Topic), global::Google.Cloud.PubSub.V1.Topic.Parser, new[]{ "Name", "Labels" }, null, null, new pbr::GeneratedClrTypeInfo[] { null, }),
+            new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.PubSub.V1.MessageStoragePolicy), global::Google.Cloud.PubSub.V1.MessageStoragePolicy.Parser, new[]{ "AllowedPersistenceRegions" }, null, null, null),
+            new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.PubSub.V1.Topic), global::Google.Cloud.PubSub.V1.Topic.Parser, new[]{ "Name", "Labels", "MessageStoragePolicy" }, null, null, new pbr::GeneratedClrTypeInfo[] { null, }),
             new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.PubSub.V1.PubsubMessage), global::Google.Cloud.PubSub.V1.PubsubMessage.Parser, new[]{ "Data", "Attributes", "MessageId", "PublishTime" }, null, null, new pbr::GeneratedClrTypeInfo[] { null, }),
             new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.PubSub.V1.GetTopicRequest), global::Google.Cloud.PubSub.V1.GetTopicRequest.Parser, new[]{ "Topic" }, null, null, null),
             new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.PubSub.V1.UpdateTopicRequest), global::Google.Cloud.PubSub.V1.UpdateTopicRequest.Parser, new[]{ "Topic", "UpdateMask" }, null, null, null),
@@ -189,6 +207,8 @@ namespace Google.Cloud.PubSub.V1 {
             new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.PubSub.V1.ListTopicsResponse), global::Google.Cloud.PubSub.V1.ListTopicsResponse.Parser, new[]{ "Topics", "NextPageToken" }, null, null, null),
             new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.PubSub.V1.ListTopicSubscriptionsRequest), global::Google.Cloud.PubSub.V1.ListTopicSubscriptionsRequest.Parser, new[]{ "Topic", "PageSize", "PageToken" }, null, null, null),
             new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.PubSub.V1.ListTopicSubscriptionsResponse), global::Google.Cloud.PubSub.V1.ListTopicSubscriptionsResponse.Parser, new[]{ "Subscriptions", "NextPageToken" }, null, null, null),
+            new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.PubSub.V1.ListTopicSnapshotsRequest), global::Google.Cloud.PubSub.V1.ListTopicSnapshotsRequest.Parser, new[]{ "Topic", "PageSize", "PageToken" }, null, null, null),
+            new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.PubSub.V1.ListTopicSnapshotsResponse), global::Google.Cloud.PubSub.V1.ListTopicSnapshotsResponse.Parser, new[]{ "Snapshots", "NextPageToken" }, null, null, null),
             new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.PubSub.V1.DeleteTopicRequest), global::Google.Cloud.PubSub.V1.DeleteTopicRequest.Parser, new[]{ "Topic" }, null, null, null),
             new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.PubSub.V1.Subscription), global::Google.Cloud.PubSub.V1.Subscription.Parser, new[]{ "Name", "Topic", "PushConfig", "AckDeadlineSeconds", "RetainAckedMessages", "MessageRetentionDuration", "Labels" }, null, null, new pbr::GeneratedClrTypeInfo[] { null, }),
             new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.PubSub.V1.PushConfig), global::Google.Cloud.PubSub.V1.PushConfig.Parser, new[]{ "PushEndpoint", "Attributes" }, null, null, new pbr::GeneratedClrTypeInfo[] { null, }),
@@ -205,9 +225,10 @@ namespace Google.Cloud.PubSub.V1 {
             new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.PubSub.V1.AcknowledgeRequest), global::Google.Cloud.PubSub.V1.AcknowledgeRequest.Parser, new[]{ "Subscription", "AckIds" }, null, null, null),
             new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.PubSub.V1.StreamingPullRequest), global::Google.Cloud.PubSub.V1.StreamingPullRequest.Parser, new[]{ "Subscription", "AckIds", "ModifyDeadlineSeconds", "ModifyDeadlineAckIds", "StreamAckDeadlineSeconds" }, null, null, null),
             new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.PubSub.V1.StreamingPullResponse), global::Google.Cloud.PubSub.V1.StreamingPullResponse.Parser, new[]{ "ReceivedMessages" }, null, null, null),
-            new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.PubSub.V1.CreateSnapshotRequest), global::Google.Cloud.PubSub.V1.CreateSnapshotRequest.Parser, new[]{ "Name", "Subscription" }, null, null, null),
+            new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.PubSub.V1.CreateSnapshotRequest), global::Google.Cloud.PubSub.V1.CreateSnapshotRequest.Parser, new[]{ "Name", "Subscription", "Labels" }, null, null, new pbr::GeneratedClrTypeInfo[] { null, }),
             new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.PubSub.V1.UpdateSnapshotRequest), global::Google.Cloud.PubSub.V1.UpdateSnapshotRequest.Parser, new[]{ "Snapshot", "UpdateMask" }, null, null, null),
             new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.PubSub.V1.Snapshot), global::Google.Cloud.PubSub.V1.Snapshot.Parser, new[]{ "Name", "Topic", "ExpireTime", "Labels" }, null, null, new pbr::GeneratedClrTypeInfo[] { null, }),
+            new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.PubSub.V1.GetSnapshotRequest), global::Google.Cloud.PubSub.V1.GetSnapshotRequest.Parser, new[]{ "Snapshot" }, null, null, null),
             new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.PubSub.V1.ListSnapshotsRequest), global::Google.Cloud.PubSub.V1.ListSnapshotsRequest.Parser, new[]{ "Project", "PageSize", "PageToken" }, null, null, null),
             new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.PubSub.V1.ListSnapshotsResponse), global::Google.Cloud.PubSub.V1.ListSnapshotsResponse.Parser, new[]{ "Snapshots", "NextPageToken" }, null, null, null),
             new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.PubSub.V1.DeleteSnapshotRequest), global::Google.Cloud.PubSub.V1.DeleteSnapshotRequest.Parser, new[]{ "Snapshot" }, null, null, null),
@@ -219,6 +240,135 @@ namespace Google.Cloud.PubSub.V1 {
 
   }
   #region Messages
+  public sealed partial class MessageStoragePolicy : pb::IMessage<MessageStoragePolicy> {
+    private static readonly pb::MessageParser<MessageStoragePolicy> _parser = new pb::MessageParser<MessageStoragePolicy>(() => new MessageStoragePolicy());
+    private pb::UnknownFieldSet _unknownFields;
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    public static pb::MessageParser<MessageStoragePolicy> Parser { get { return _parser; } }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    public static pbr::MessageDescriptor Descriptor {
+      get { return global::Google.Cloud.PubSub.V1.PubsubReflection.Descriptor.MessageTypes[0]; }
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    pbr::MessageDescriptor pb::IMessage.Descriptor {
+      get { return Descriptor; }
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    public MessageStoragePolicy() {
+      OnConstruction();
+    }
+
+    partial void OnConstruction();
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    public MessageStoragePolicy(MessageStoragePolicy other) : this() {
+      allowedPersistenceRegions_ = other.allowedPersistenceRegions_.Clone();
+      _unknownFields = pb::UnknownFieldSet.Clone(other._unknownFields);
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    public MessageStoragePolicy Clone() {
+      return new MessageStoragePolicy(this);
+    }
+
+    /// <summary>Field number for the "allowed_persistence_regions" field.</summary>
+    public const int AllowedPersistenceRegionsFieldNumber = 1;
+    private static readonly pb::FieldCodec<string> _repeated_allowedPersistenceRegions_codec
+        = pb::FieldCodec.ForString(10);
+    private readonly pbc::RepeatedField<string> allowedPersistenceRegions_ = new pbc::RepeatedField<string>();
+    /// <summary>
+    /// The list of GCP regions where messages that are published to the topic may
+    /// be persisted in storage. Messages published by publishers running in
+    /// non-allowed GCP regions (or running outside of GCP altogether) will be
+    /// routed for storage in one of the allowed regions. An empty list indicates a
+    /// misconfiguration at the project or organization level, which will result in
+    /// all Publish operations failing.
+    /// </summary>
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    public pbc::RepeatedField<string> AllowedPersistenceRegions {
+      get { return allowedPersistenceRegions_; }
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    public override bool Equals(object other) {
+      return Equals(other as MessageStoragePolicy);
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    public bool Equals(MessageStoragePolicy other) {
+      if (ReferenceEquals(other, null)) {
+        return false;
+      }
+      if (ReferenceEquals(other, this)) {
+        return true;
+      }
+      if(!allowedPersistenceRegions_.Equals(other.allowedPersistenceRegions_)) return false;
+      return Equals(_unknownFields, other._unknownFields);
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    public override int GetHashCode() {
+      int hash = 1;
+      hash ^= allowedPersistenceRegions_.GetHashCode();
+      if (_unknownFields != null) {
+        hash ^= _unknownFields.GetHashCode();
+      }
+      return hash;
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    public override string ToString() {
+      return pb::JsonFormatter.ToDiagnosticString(this);
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    public void WriteTo(pb::CodedOutputStream output) {
+      allowedPersistenceRegions_.WriteTo(output, _repeated_allowedPersistenceRegions_codec);
+      if (_unknownFields != null) {
+        _unknownFields.WriteTo(output);
+      }
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    public int CalculateSize() {
+      int size = 0;
+      size += allowedPersistenceRegions_.CalculateSize(_repeated_allowedPersistenceRegions_codec);
+      if (_unknownFields != null) {
+        size += _unknownFields.CalculateSize();
+      }
+      return size;
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    public void MergeFrom(MessageStoragePolicy other) {
+      if (other == null) {
+        return;
+      }
+      allowedPersistenceRegions_.Add(other.allowedPersistenceRegions_);
+      _unknownFields = pb::UnknownFieldSet.MergeFrom(_unknownFields, other._unknownFields);
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    public void MergeFrom(pb::CodedInputStream input) {
+      uint tag;
+      while ((tag = input.ReadTag()) != 0) {
+        switch(tag) {
+          default:
+            _unknownFields = pb::UnknownFieldSet.MergeFieldFrom(_unknownFields, input);
+            break;
+          case 10: {
+            allowedPersistenceRegions_.AddEntriesFrom(input, _repeated_allowedPersistenceRegions_codec);
+            break;
+          }
+        }
+      }
+    }
+
+  }
+
   /// <summary>
   /// A topic resource.
   /// </summary>
@@ -230,7 +380,7 @@ namespace Google.Cloud.PubSub.V1 {
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     public static pbr::MessageDescriptor Descriptor {
-      get { return global::Google.Cloud.PubSub.V1.PubsubReflection.Descriptor.MessageTypes[0]; }
+      get { return global::Google.Cloud.PubSub.V1.PubsubReflection.Descriptor.MessageTypes[1]; }
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
@@ -249,6 +399,7 @@ namespace Google.Cloud.PubSub.V1 {
     public Topic(Topic other) : this() {
       name_ = other.name_;
       labels_ = other.labels_.Clone();
+      MessageStoragePolicy = other.messageStoragePolicy_ != null ? other.MessageStoragePolicy.Clone() : null;
       _unknownFields = pb::UnknownFieldSet.Clone(other._unknownFields);
     }
 
@@ -289,6 +440,25 @@ namespace Google.Cloud.PubSub.V1 {
       get { return labels_; }
     }
 
+    /// <summary>Field number for the "message_storage_policy" field.</summary>
+    public const int MessageStoragePolicyFieldNumber = 3;
+    private global::Google.Cloud.PubSub.V1.MessageStoragePolicy messageStoragePolicy_;
+    /// <summary>
+    /// Policy constraining how messages published to the topic may be stored. It
+    /// is determined when the topic is created based on the policy configured at
+    /// the project level. It must not be set by the caller in the request to
+    /// CreateTopic or to UpdateTopic. This field will be populated in the
+    /// responses for GetTopic, CreateTopic, and UpdateTopic: if not present in the
+    /// response, then no constraints are in effect.
+    /// </summary>
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    public global::Google.Cloud.PubSub.V1.MessageStoragePolicy MessageStoragePolicy {
+      get { return messageStoragePolicy_; }
+      set {
+        messageStoragePolicy_ = value;
+      }
+    }
+
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     public override bool Equals(object other) {
       return Equals(other as Topic);
@@ -304,6 +474,7 @@ namespace Google.Cloud.PubSub.V1 {
       }
       if (Name != other.Name) return false;
       if (!Labels.Equals(other.Labels)) return false;
+      if (!object.Equals(MessageStoragePolicy, other.MessageStoragePolicy)) return false;
       return Equals(_unknownFields, other._unknownFields);
     }
 
@@ -312,6 +483,7 @@ namespace Google.Cloud.PubSub.V1 {
       int hash = 1;
       if (Name.Length != 0) hash ^= Name.GetHashCode();
       hash ^= Labels.GetHashCode();
+      if (messageStoragePolicy_ != null) hash ^= MessageStoragePolicy.GetHashCode();
       if (_unknownFields != null) {
         hash ^= _unknownFields.GetHashCode();
       }
@@ -330,6 +502,10 @@ namespace Google.Cloud.PubSub.V1 {
         output.WriteString(Name);
       }
       labels_.WriteTo(output, _map_labels_codec);
+      if (messageStoragePolicy_ != null) {
+        output.WriteRawTag(26);
+        output.WriteMessage(MessageStoragePolicy);
+      }
       if (_unknownFields != null) {
         _unknownFields.WriteTo(output);
       }
@@ -342,6 +518,9 @@ namespace Google.Cloud.PubSub.V1 {
         size += 1 + pb::CodedOutputStream.ComputeStringSize(Name);
       }
       size += labels_.CalculateSize(_map_labels_codec);
+      if (messageStoragePolicy_ != null) {
+        size += 1 + pb::CodedOutputStream.ComputeMessageSize(MessageStoragePolicy);
+      }
       if (_unknownFields != null) {
         size += _unknownFields.CalculateSize();
       }
@@ -357,6 +536,12 @@ namespace Google.Cloud.PubSub.V1 {
         Name = other.Name;
       }
       labels_.Add(other.labels_);
+      if (other.messageStoragePolicy_ != null) {
+        if (messageStoragePolicy_ == null) {
+          messageStoragePolicy_ = new global::Google.Cloud.PubSub.V1.MessageStoragePolicy();
+        }
+        MessageStoragePolicy.MergeFrom(other.MessageStoragePolicy);
+      }
       _unknownFields = pb::UnknownFieldSet.MergeFrom(_unknownFields, other._unknownFields);
     }
 
@@ -374,6 +559,13 @@ namespace Google.Cloud.PubSub.V1 {
           }
           case 18: {
             labels_.AddEntriesFrom(input, _map_labels_codec);
+            break;
+          }
+          case 26: {
+            if (messageStoragePolicy_ == null) {
+              messageStoragePolicy_ = new global::Google.Cloud.PubSub.V1.MessageStoragePolicy();
+            }
+            input.ReadMessage(messageStoragePolicy_);
             break;
           }
         }
@@ -394,7 +586,7 @@ namespace Google.Cloud.PubSub.V1 {
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     public static pbr::MessageDescriptor Descriptor {
-      get { return global::Google.Cloud.PubSub.V1.PubsubReflection.Descriptor.MessageTypes[1]; }
+      get { return global::Google.Cloud.PubSub.V1.PubsubReflection.Descriptor.MessageTypes[2]; }
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
@@ -625,7 +817,7 @@ namespace Google.Cloud.PubSub.V1 {
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     public static pbr::MessageDescriptor Descriptor {
-      get { return global::Google.Cloud.PubSub.V1.PubsubReflection.Descriptor.MessageTypes[2]; }
+      get { return global::Google.Cloud.PubSub.V1.PubsubReflection.Descriptor.MessageTypes[3]; }
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
@@ -761,7 +953,7 @@ namespace Google.Cloud.PubSub.V1 {
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     public static pbr::MessageDescriptor Descriptor {
-      get { return global::Google.Cloud.PubSub.V1.PubsubReflection.Descriptor.MessageTypes[3]; }
+      get { return global::Google.Cloud.PubSub.V1.PubsubReflection.Descriptor.MessageTypes[4]; }
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
@@ -792,7 +984,7 @@ namespace Google.Cloud.PubSub.V1 {
     public const int TopicFieldNumber = 1;
     private global::Google.Cloud.PubSub.V1.Topic topic_;
     /// <summary>
-    /// The topic to update.
+    /// The updated topic object.
     /// </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     public global::Google.Cloud.PubSub.V1.Topic Topic {
@@ -806,8 +998,11 @@ namespace Google.Cloud.PubSub.V1 {
     public const int UpdateMaskFieldNumber = 2;
     private global::Google.Protobuf.WellKnownTypes.FieldMask updateMask_;
     /// <summary>
-    /// Indicates which fields in the provided topic to update.
-    /// Must be specified and non-empty.
+    /// Indicates which fields in the provided topic to update. Must be specified
+    /// and non-empty. Note that if `update_mask` contains
+    /// "message_storage_policy" then the new value will be determined based on the
+    /// policy configured at the project or organization level. The
+    /// `message_storage_policy` must not be set in the `topic` provided above.
     /// </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     public global::Google.Protobuf.WellKnownTypes.FieldMask UpdateMask {
@@ -940,7 +1135,7 @@ namespace Google.Cloud.PubSub.V1 {
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     public static pbr::MessageDescriptor Descriptor {
-      get { return global::Google.Cloud.PubSub.V1.PubsubReflection.Descriptor.MessageTypes[4]; }
+      get { return global::Google.Cloud.PubSub.V1.PubsubReflection.Descriptor.MessageTypes[5]; }
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
@@ -1099,7 +1294,7 @@ namespace Google.Cloud.PubSub.V1 {
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     public static pbr::MessageDescriptor Descriptor {
-      get { return global::Google.Cloud.PubSub.V1.PubsubReflection.Descriptor.MessageTypes[5]; }
+      get { return global::Google.Cloud.PubSub.V1.PubsubReflection.Descriptor.MessageTypes[6]; }
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
@@ -1228,7 +1423,7 @@ namespace Google.Cloud.PubSub.V1 {
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     public static pbr::MessageDescriptor Descriptor {
-      get { return global::Google.Cloud.PubSub.V1.PubsubReflection.Descriptor.MessageTypes[6]; }
+      get { return global::Google.Cloud.PubSub.V1.PubsubReflection.Descriptor.MessageTypes[7]; }
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
@@ -1428,7 +1623,7 @@ namespace Google.Cloud.PubSub.V1 {
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     public static pbr::MessageDescriptor Descriptor {
-      get { return global::Google.Cloud.PubSub.V1.PubsubReflection.Descriptor.MessageTypes[7]; }
+      get { return global::Google.Cloud.PubSub.V1.PubsubReflection.Descriptor.MessageTypes[8]; }
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
@@ -1587,7 +1782,7 @@ namespace Google.Cloud.PubSub.V1 {
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     public static pbr::MessageDescriptor Descriptor {
-      get { return global::Google.Cloud.PubSub.V1.PubsubReflection.Descriptor.MessageTypes[8]; }
+      get { return global::Google.Cloud.PubSub.V1.PubsubReflection.Descriptor.MessageTypes[9]; }
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
@@ -1787,7 +1982,7 @@ namespace Google.Cloud.PubSub.V1 {
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     public static pbr::MessageDescriptor Descriptor {
-      get { return global::Google.Cloud.PubSub.V1.PubsubReflection.Descriptor.MessageTypes[9]; }
+      get { return global::Google.Cloud.PubSub.V1.PubsubReflection.Descriptor.MessageTypes[10]; }
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
@@ -1937,6 +2132,372 @@ namespace Google.Cloud.PubSub.V1 {
   }
 
   /// <summary>
+  /// Request for the `ListTopicSnapshots` method.&lt;br>&lt;br>
+  /// &lt;b>ALPHA:&lt;/b> This feature is part of an alpha release. This API might be
+  /// changed in backward-incompatible ways and is not recommended for production
+  /// use. It is not subject to any SLA or deprecation policy.
+  /// </summary>
+  public sealed partial class ListTopicSnapshotsRequest : pb::IMessage<ListTopicSnapshotsRequest> {
+    private static readonly pb::MessageParser<ListTopicSnapshotsRequest> _parser = new pb::MessageParser<ListTopicSnapshotsRequest>(() => new ListTopicSnapshotsRequest());
+    private pb::UnknownFieldSet _unknownFields;
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    public static pb::MessageParser<ListTopicSnapshotsRequest> Parser { get { return _parser; } }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    public static pbr::MessageDescriptor Descriptor {
+      get { return global::Google.Cloud.PubSub.V1.PubsubReflection.Descriptor.MessageTypes[11]; }
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    pbr::MessageDescriptor pb::IMessage.Descriptor {
+      get { return Descriptor; }
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    public ListTopicSnapshotsRequest() {
+      OnConstruction();
+    }
+
+    partial void OnConstruction();
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    public ListTopicSnapshotsRequest(ListTopicSnapshotsRequest other) : this() {
+      topic_ = other.topic_;
+      pageSize_ = other.pageSize_;
+      pageToken_ = other.pageToken_;
+      _unknownFields = pb::UnknownFieldSet.Clone(other._unknownFields);
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    public ListTopicSnapshotsRequest Clone() {
+      return new ListTopicSnapshotsRequest(this);
+    }
+
+    /// <summary>Field number for the "topic" field.</summary>
+    public const int TopicFieldNumber = 1;
+    private string topic_ = "";
+    /// <summary>
+    /// The name of the topic that snapshots are attached to.
+    /// Format is `projects/{project}/topics/{topic}`.
+    /// </summary>
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    public string Topic {
+      get { return topic_; }
+      set {
+        topic_ = pb::ProtoPreconditions.CheckNotNull(value, "value");
+      }
+    }
+
+    /// <summary>Field number for the "page_size" field.</summary>
+    public const int PageSizeFieldNumber = 2;
+    private int pageSize_;
+    /// <summary>
+    /// Maximum number of snapshot names to return.
+    /// </summary>
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    public int PageSize {
+      get { return pageSize_; }
+      set {
+        pageSize_ = value;
+      }
+    }
+
+    /// <summary>Field number for the "page_token" field.</summary>
+    public const int PageTokenFieldNumber = 3;
+    private string pageToken_ = "";
+    /// <summary>
+    /// The value returned by the last `ListTopicSnapshotsResponse`; indicates
+    /// that this is a continuation of a prior `ListTopicSnapshots` call, and
+    /// that the system should return the next page of data.
+    /// </summary>
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    public string PageToken {
+      get { return pageToken_; }
+      set {
+        pageToken_ = pb::ProtoPreconditions.CheckNotNull(value, "value");
+      }
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    public override bool Equals(object other) {
+      return Equals(other as ListTopicSnapshotsRequest);
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    public bool Equals(ListTopicSnapshotsRequest other) {
+      if (ReferenceEquals(other, null)) {
+        return false;
+      }
+      if (ReferenceEquals(other, this)) {
+        return true;
+      }
+      if (Topic != other.Topic) return false;
+      if (PageSize != other.PageSize) return false;
+      if (PageToken != other.PageToken) return false;
+      return Equals(_unknownFields, other._unknownFields);
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    public override int GetHashCode() {
+      int hash = 1;
+      if (Topic.Length != 0) hash ^= Topic.GetHashCode();
+      if (PageSize != 0) hash ^= PageSize.GetHashCode();
+      if (PageToken.Length != 0) hash ^= PageToken.GetHashCode();
+      if (_unknownFields != null) {
+        hash ^= _unknownFields.GetHashCode();
+      }
+      return hash;
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    public override string ToString() {
+      return pb::JsonFormatter.ToDiagnosticString(this);
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    public void WriteTo(pb::CodedOutputStream output) {
+      if (Topic.Length != 0) {
+        output.WriteRawTag(10);
+        output.WriteString(Topic);
+      }
+      if (PageSize != 0) {
+        output.WriteRawTag(16);
+        output.WriteInt32(PageSize);
+      }
+      if (PageToken.Length != 0) {
+        output.WriteRawTag(26);
+        output.WriteString(PageToken);
+      }
+      if (_unknownFields != null) {
+        _unknownFields.WriteTo(output);
+      }
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    public int CalculateSize() {
+      int size = 0;
+      if (Topic.Length != 0) {
+        size += 1 + pb::CodedOutputStream.ComputeStringSize(Topic);
+      }
+      if (PageSize != 0) {
+        size += 1 + pb::CodedOutputStream.ComputeInt32Size(PageSize);
+      }
+      if (PageToken.Length != 0) {
+        size += 1 + pb::CodedOutputStream.ComputeStringSize(PageToken);
+      }
+      if (_unknownFields != null) {
+        size += _unknownFields.CalculateSize();
+      }
+      return size;
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    public void MergeFrom(ListTopicSnapshotsRequest other) {
+      if (other == null) {
+        return;
+      }
+      if (other.Topic.Length != 0) {
+        Topic = other.Topic;
+      }
+      if (other.PageSize != 0) {
+        PageSize = other.PageSize;
+      }
+      if (other.PageToken.Length != 0) {
+        PageToken = other.PageToken;
+      }
+      _unknownFields = pb::UnknownFieldSet.MergeFrom(_unknownFields, other._unknownFields);
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    public void MergeFrom(pb::CodedInputStream input) {
+      uint tag;
+      while ((tag = input.ReadTag()) != 0) {
+        switch(tag) {
+          default:
+            _unknownFields = pb::UnknownFieldSet.MergeFieldFrom(_unknownFields, input);
+            break;
+          case 10: {
+            Topic = input.ReadString();
+            break;
+          }
+          case 16: {
+            PageSize = input.ReadInt32();
+            break;
+          }
+          case 26: {
+            PageToken = input.ReadString();
+            break;
+          }
+        }
+      }
+    }
+
+  }
+
+  /// <summary>
+  /// Response for the `ListTopicSnapshots` method.&lt;br>&lt;br>
+  /// &lt;b>ALPHA:&lt;/b> This feature is part of an alpha release. This API might be
+  /// changed in backward-incompatible ways and is not recommended for production
+  /// use. It is not subject to any SLA or deprecation policy.
+  /// </summary>
+  public sealed partial class ListTopicSnapshotsResponse : pb::IMessage<ListTopicSnapshotsResponse> {
+    private static readonly pb::MessageParser<ListTopicSnapshotsResponse> _parser = new pb::MessageParser<ListTopicSnapshotsResponse>(() => new ListTopicSnapshotsResponse());
+    private pb::UnknownFieldSet _unknownFields;
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    public static pb::MessageParser<ListTopicSnapshotsResponse> Parser { get { return _parser; } }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    public static pbr::MessageDescriptor Descriptor {
+      get { return global::Google.Cloud.PubSub.V1.PubsubReflection.Descriptor.MessageTypes[12]; }
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    pbr::MessageDescriptor pb::IMessage.Descriptor {
+      get { return Descriptor; }
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    public ListTopicSnapshotsResponse() {
+      OnConstruction();
+    }
+
+    partial void OnConstruction();
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    public ListTopicSnapshotsResponse(ListTopicSnapshotsResponse other) : this() {
+      snapshots_ = other.snapshots_.Clone();
+      nextPageToken_ = other.nextPageToken_;
+      _unknownFields = pb::UnknownFieldSet.Clone(other._unknownFields);
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    public ListTopicSnapshotsResponse Clone() {
+      return new ListTopicSnapshotsResponse(this);
+    }
+
+    /// <summary>Field number for the "snapshots" field.</summary>
+    public const int SnapshotsFieldNumber = 1;
+    private static readonly pb::FieldCodec<string> _repeated_snapshots_codec
+        = pb::FieldCodec.ForString(10);
+    private readonly pbc::RepeatedField<string> snapshots_ = new pbc::RepeatedField<string>();
+    /// <summary>
+    /// The names of the snapshots that match the request.
+    /// </summary>
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    public pbc::RepeatedField<string> Snapshots {
+      get { return snapshots_; }
+    }
+
+    /// <summary>Field number for the "next_page_token" field.</summary>
+    public const int NextPageTokenFieldNumber = 2;
+    private string nextPageToken_ = "";
+    /// <summary>
+    /// If not empty, indicates that there may be more snapshots that match
+    /// the request; this value should be passed in a new
+    /// `ListTopicSnapshotsRequest` to get more snapshots.
+    /// </summary>
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    public string NextPageToken {
+      get { return nextPageToken_; }
+      set {
+        nextPageToken_ = pb::ProtoPreconditions.CheckNotNull(value, "value");
+      }
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    public override bool Equals(object other) {
+      return Equals(other as ListTopicSnapshotsResponse);
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    public bool Equals(ListTopicSnapshotsResponse other) {
+      if (ReferenceEquals(other, null)) {
+        return false;
+      }
+      if (ReferenceEquals(other, this)) {
+        return true;
+      }
+      if(!snapshots_.Equals(other.snapshots_)) return false;
+      if (NextPageToken != other.NextPageToken) return false;
+      return Equals(_unknownFields, other._unknownFields);
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    public override int GetHashCode() {
+      int hash = 1;
+      hash ^= snapshots_.GetHashCode();
+      if (NextPageToken.Length != 0) hash ^= NextPageToken.GetHashCode();
+      if (_unknownFields != null) {
+        hash ^= _unknownFields.GetHashCode();
+      }
+      return hash;
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    public override string ToString() {
+      return pb::JsonFormatter.ToDiagnosticString(this);
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    public void WriteTo(pb::CodedOutputStream output) {
+      snapshots_.WriteTo(output, _repeated_snapshots_codec);
+      if (NextPageToken.Length != 0) {
+        output.WriteRawTag(18);
+        output.WriteString(NextPageToken);
+      }
+      if (_unknownFields != null) {
+        _unknownFields.WriteTo(output);
+      }
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    public int CalculateSize() {
+      int size = 0;
+      size += snapshots_.CalculateSize(_repeated_snapshots_codec);
+      if (NextPageToken.Length != 0) {
+        size += 1 + pb::CodedOutputStream.ComputeStringSize(NextPageToken);
+      }
+      if (_unknownFields != null) {
+        size += _unknownFields.CalculateSize();
+      }
+      return size;
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    public void MergeFrom(ListTopicSnapshotsResponse other) {
+      if (other == null) {
+        return;
+      }
+      snapshots_.Add(other.snapshots_);
+      if (other.NextPageToken.Length != 0) {
+        NextPageToken = other.NextPageToken;
+      }
+      _unknownFields = pb::UnknownFieldSet.MergeFrom(_unknownFields, other._unknownFields);
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    public void MergeFrom(pb::CodedInputStream input) {
+      uint tag;
+      while ((tag = input.ReadTag()) != 0) {
+        switch(tag) {
+          default:
+            _unknownFields = pb::UnknownFieldSet.MergeFieldFrom(_unknownFields, input);
+            break;
+          case 10: {
+            snapshots_.AddEntriesFrom(input, _repeated_snapshots_codec);
+            break;
+          }
+          case 18: {
+            NextPageToken = input.ReadString();
+            break;
+          }
+        }
+      }
+    }
+
+  }
+
+  /// <summary>
   /// Request for the `DeleteTopic` method.
   /// </summary>
   public sealed partial class DeleteTopicRequest : pb::IMessage<DeleteTopicRequest> {
@@ -1947,7 +2508,7 @@ namespace Google.Cloud.PubSub.V1 {
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     public static pbr::MessageDescriptor Descriptor {
-      get { return global::Google.Cloud.PubSub.V1.PubsubReflection.Descriptor.MessageTypes[10]; }
+      get { return global::Google.Cloud.PubSub.V1.PubsubReflection.Descriptor.MessageTypes[13]; }
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
@@ -2083,7 +2644,7 @@ namespace Google.Cloud.PubSub.V1 {
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     public static pbr::MessageDescriptor Descriptor {
-      get { return global::Google.Cloud.PubSub.V1.PubsubReflection.Descriptor.MessageTypes[11]; }
+      get { return global::Google.Cloud.PubSub.V1.PubsubReflection.Descriptor.MessageTypes[14]; }
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
@@ -2180,7 +2741,8 @@ namespace Google.Cloud.PubSub.V1 {
     /// For pull subscriptions, this value is used as the initial value for the ack
     /// deadline. To override this value for a given message, call
     /// `ModifyAckDeadline` with the corresponding `ack_id` if using
-    /// pull.
+    /// non-streaming pull or send the `ack_id` in a
+    /// `StreamingModifyAckDeadlineRequest` if using streaming pull.
     /// The minimum custom deadline you can specify is 10 seconds.
     /// The maximum custom deadline you can specify is 600 seconds (10 minutes).
     /// If this parameter is 0, a default value of 10 seconds is used.
@@ -2206,7 +2768,10 @@ namespace Google.Cloud.PubSub.V1 {
     /// Indicates whether to retain acknowledged messages. If true, then
     /// messages are not expunged from the subscription's backlog, even if they are
     /// acknowledged, until they fall out of the `message_retention_duration`
-    /// window.
+    /// window.&lt;br>&lt;br>
+    /// &lt;b>ALPHA:&lt;/b> This feature is part of an alpha release. This API might be
+    /// changed in backward-incompatible ways and is not recommended for production
+    /// use. It is not subject to any SLA or deprecation policy.
     /// </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     public bool RetainAckedMessages {
@@ -2225,7 +2790,10 @@ namespace Google.Cloud.PubSub.V1 {
     /// If `retain_acked_messages` is true, then this also configures the retention
     /// of acknowledged messages, and thus configures how far back in time a `Seek`
     /// can be done. Defaults to 7 days. Cannot be more than 7 days or less than 10
-    /// minutes.
+    /// minutes.&lt;br>&lt;br>
+    /// &lt;b>ALPHA:&lt;/b> This feature is part of an alpha release. This API might be
+    /// changed in backward-incompatible ways and is not recommended for production
+    /// use. It is not subject to any SLA or deprecation policy.
     /// </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     public global::Google.Protobuf.WellKnownTypes.Duration MessageRetentionDuration {
@@ -2444,7 +3012,7 @@ namespace Google.Cloud.PubSub.V1 {
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     public static pbr::MessageDescriptor Descriptor {
-      get { return global::Google.Cloud.PubSub.V1.PubsubReflection.Descriptor.MessageTypes[12]; }
+      get { return global::Google.Cloud.PubSub.V1.PubsubReflection.Descriptor.MessageTypes[15]; }
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
@@ -2623,7 +3191,7 @@ namespace Google.Cloud.PubSub.V1 {
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     public static pbr::MessageDescriptor Descriptor {
-      get { return global::Google.Cloud.PubSub.V1.PubsubReflection.Descriptor.MessageTypes[13]; }
+      get { return global::Google.Cloud.PubSub.V1.PubsubReflection.Descriptor.MessageTypes[16]; }
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
@@ -2795,7 +3363,7 @@ namespace Google.Cloud.PubSub.V1 {
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     public static pbr::MessageDescriptor Descriptor {
-      get { return global::Google.Cloud.PubSub.V1.PubsubReflection.Descriptor.MessageTypes[14]; }
+      get { return global::Google.Cloud.PubSub.V1.PubsubReflection.Descriptor.MessageTypes[17]; }
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
@@ -2931,7 +3499,7 @@ namespace Google.Cloud.PubSub.V1 {
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     public static pbr::MessageDescriptor Descriptor {
-      get { return global::Google.Cloud.PubSub.V1.PubsubReflection.Descriptor.MessageTypes[15]; }
+      get { return global::Google.Cloud.PubSub.V1.PubsubReflection.Descriptor.MessageTypes[18]; }
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
@@ -3110,7 +3678,7 @@ namespace Google.Cloud.PubSub.V1 {
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     public static pbr::MessageDescriptor Descriptor {
-      get { return global::Google.Cloud.PubSub.V1.PubsubReflection.Descriptor.MessageTypes[16]; }
+      get { return global::Google.Cloud.PubSub.V1.PubsubReflection.Descriptor.MessageTypes[19]; }
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
@@ -3310,7 +3878,7 @@ namespace Google.Cloud.PubSub.V1 {
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     public static pbr::MessageDescriptor Descriptor {
-      get { return global::Google.Cloud.PubSub.V1.PubsubReflection.Descriptor.MessageTypes[17]; }
+      get { return global::Google.Cloud.PubSub.V1.PubsubReflection.Descriptor.MessageTypes[20]; }
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
@@ -3470,7 +4038,7 @@ namespace Google.Cloud.PubSub.V1 {
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     public static pbr::MessageDescriptor Descriptor {
-      get { return global::Google.Cloud.PubSub.V1.PubsubReflection.Descriptor.MessageTypes[18]; }
+      get { return global::Google.Cloud.PubSub.V1.PubsubReflection.Descriptor.MessageTypes[21]; }
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
@@ -3606,7 +4174,7 @@ namespace Google.Cloud.PubSub.V1 {
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     public static pbr::MessageDescriptor Descriptor {
-      get { return global::Google.Cloud.PubSub.V1.PubsubReflection.Descriptor.MessageTypes[19]; }
+      get { return global::Google.Cloud.PubSub.V1.PubsubReflection.Descriptor.MessageTypes[22]; }
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
@@ -3657,7 +4225,7 @@ namespace Google.Cloud.PubSub.V1 {
     /// An empty `pushConfig` indicates that the Pub/Sub system should
     /// stop pushing messages from the given subscription and allow
     /// messages to be pulled and acknowledged - effectively pausing
-    /// the subscription if `Pull` is not called.
+    /// the subscription if `Pull` or `StreamingPull` is not called.
     /// </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     public global::Google.Cloud.PubSub.V1.PushConfig PushConfig {
@@ -3784,7 +4352,7 @@ namespace Google.Cloud.PubSub.V1 {
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     public static pbr::MessageDescriptor Descriptor {
-      get { return global::Google.Cloud.PubSub.V1.PubsubReflection.Descriptor.MessageTypes[20]; }
+      get { return global::Google.Cloud.PubSub.V1.PubsubReflection.Descriptor.MessageTypes[23]; }
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
@@ -3988,7 +4556,7 @@ namespace Google.Cloud.PubSub.V1 {
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     public static pbr::MessageDescriptor Descriptor {
-      get { return global::Google.Cloud.PubSub.V1.PubsubReflection.Descriptor.MessageTypes[21]; }
+      get { return global::Google.Cloud.PubSub.V1.PubsubReflection.Descriptor.MessageTypes[24]; }
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
@@ -4118,7 +4686,7 @@ namespace Google.Cloud.PubSub.V1 {
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     public static pbr::MessageDescriptor Descriptor {
-      get { return global::Google.Cloud.PubSub.V1.PubsubReflection.Descriptor.MessageTypes[22]; }
+      get { return global::Google.Cloud.PubSub.V1.PubsubReflection.Descriptor.MessageTypes[25]; }
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
@@ -4314,7 +4882,7 @@ namespace Google.Cloud.PubSub.V1 {
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     public static pbr::MessageDescriptor Descriptor {
-      get { return global::Google.Cloud.PubSub.V1.PubsubReflection.Descriptor.MessageTypes[23]; }
+      get { return global::Google.Cloud.PubSub.V1.PubsubReflection.Descriptor.MessageTypes[26]; }
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
@@ -4476,7 +5044,7 @@ namespace Google.Cloud.PubSub.V1 {
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     public static pbr::MessageDescriptor Descriptor {
-      get { return global::Google.Cloud.PubSub.V1.PubsubReflection.Descriptor.MessageTypes[24]; }
+      get { return global::Google.Cloud.PubSub.V1.PubsubReflection.Descriptor.MessageTypes[27]; }
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
@@ -4737,7 +5305,7 @@ namespace Google.Cloud.PubSub.V1 {
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     public static pbr::MessageDescriptor Descriptor {
-      get { return global::Google.Cloud.PubSub.V1.PubsubReflection.Descriptor.MessageTypes[25]; }
+      get { return global::Google.Cloud.PubSub.V1.PubsubReflection.Descriptor.MessageTypes[28]; }
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
@@ -4854,7 +5422,10 @@ namespace Google.Cloud.PubSub.V1 {
   }
 
   /// <summary>
-  /// Request for the `CreateSnapshot` method.
+  /// Request for the `CreateSnapshot` method.&lt;br>&lt;br>
+  /// &lt;b>ALPHA:&lt;/b> This feature is part of an alpha release. This API might be changed in
+  /// backward-incompatible ways and is not recommended for production use.
+  /// It is not subject to any SLA or deprecation policy.
   /// </summary>
   public sealed partial class CreateSnapshotRequest : pb::IMessage<CreateSnapshotRequest> {
     private static readonly pb::MessageParser<CreateSnapshotRequest> _parser = new pb::MessageParser<CreateSnapshotRequest>(() => new CreateSnapshotRequest());
@@ -4864,7 +5435,7 @@ namespace Google.Cloud.PubSub.V1 {
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     public static pbr::MessageDescriptor Descriptor {
-      get { return global::Google.Cloud.PubSub.V1.PubsubReflection.Descriptor.MessageTypes[26]; }
+      get { return global::Google.Cloud.PubSub.V1.PubsubReflection.Descriptor.MessageTypes[29]; }
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
@@ -4883,6 +5454,7 @@ namespace Google.Cloud.PubSub.V1 {
     public CreateSnapshotRequest(CreateSnapshotRequest other) : this() {
       name_ = other.name_;
       subscription_ = other.subscription_;
+      labels_ = other.labels_.Clone();
       _unknownFields = pb::UnknownFieldSet.Clone(other._unknownFields);
     }
 
@@ -4931,6 +5503,19 @@ namespace Google.Cloud.PubSub.V1 {
       }
     }
 
+    /// <summary>Field number for the "labels" field.</summary>
+    public const int LabelsFieldNumber = 3;
+    private static readonly pbc::MapField<string, string>.Codec _map_labels_codec
+        = new pbc::MapField<string, string>.Codec(pb::FieldCodec.ForString(10), pb::FieldCodec.ForString(18), 26);
+    private readonly pbc::MapField<string, string> labels_ = new pbc::MapField<string, string>();
+    /// <summary>
+    /// User labels.
+    /// </summary>
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    public pbc::MapField<string, string> Labels {
+      get { return labels_; }
+    }
+
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     public override bool Equals(object other) {
       return Equals(other as CreateSnapshotRequest);
@@ -4946,6 +5531,7 @@ namespace Google.Cloud.PubSub.V1 {
       }
       if (Name != other.Name) return false;
       if (Subscription != other.Subscription) return false;
+      if (!Labels.Equals(other.Labels)) return false;
       return Equals(_unknownFields, other._unknownFields);
     }
 
@@ -4954,6 +5540,7 @@ namespace Google.Cloud.PubSub.V1 {
       int hash = 1;
       if (Name.Length != 0) hash ^= Name.GetHashCode();
       if (Subscription.Length != 0) hash ^= Subscription.GetHashCode();
+      hash ^= Labels.GetHashCode();
       if (_unknownFields != null) {
         hash ^= _unknownFields.GetHashCode();
       }
@@ -4975,6 +5562,7 @@ namespace Google.Cloud.PubSub.V1 {
         output.WriteRawTag(18);
         output.WriteString(Subscription);
       }
+      labels_.WriteTo(output, _map_labels_codec);
       if (_unknownFields != null) {
         _unknownFields.WriteTo(output);
       }
@@ -4989,6 +5577,7 @@ namespace Google.Cloud.PubSub.V1 {
       if (Subscription.Length != 0) {
         size += 1 + pb::CodedOutputStream.ComputeStringSize(Subscription);
       }
+      size += labels_.CalculateSize(_map_labels_codec);
       if (_unknownFields != null) {
         size += _unknownFields.CalculateSize();
       }
@@ -5006,6 +5595,7 @@ namespace Google.Cloud.PubSub.V1 {
       if (other.Subscription.Length != 0) {
         Subscription = other.Subscription;
       }
+      labels_.Add(other.labels_);
       _unknownFields = pb::UnknownFieldSet.MergeFrom(_unknownFields, other._unknownFields);
     }
 
@@ -5025,6 +5615,10 @@ namespace Google.Cloud.PubSub.V1 {
             Subscription = input.ReadString();
             break;
           }
+          case 26: {
+            labels_.AddEntriesFrom(input, _map_labels_codec);
+            break;
+          }
         }
       }
     }
@@ -5032,7 +5626,10 @@ namespace Google.Cloud.PubSub.V1 {
   }
 
   /// <summary>
-  /// Request for the UpdateSnapshot method.
+  /// Request for the UpdateSnapshot method.&lt;br>&lt;br>
+  /// &lt;b>ALPHA:&lt;/b> This feature is part of an alpha release. This API might be
+  /// changed in backward-incompatible ways and is not recommended for production
+  /// use. It is not subject to any SLA or deprecation policy.
   /// </summary>
   public sealed partial class UpdateSnapshotRequest : pb::IMessage<UpdateSnapshotRequest> {
     private static readonly pb::MessageParser<UpdateSnapshotRequest> _parser = new pb::MessageParser<UpdateSnapshotRequest>(() => new UpdateSnapshotRequest());
@@ -5042,7 +5639,7 @@ namespace Google.Cloud.PubSub.V1 {
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     public static pbr::MessageDescriptor Descriptor {
-      get { return global::Google.Cloud.PubSub.V1.PubsubReflection.Descriptor.MessageTypes[27]; }
+      get { return global::Google.Cloud.PubSub.V1.PubsubReflection.Descriptor.MessageTypes[30]; }
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
@@ -5073,7 +5670,7 @@ namespace Google.Cloud.PubSub.V1 {
     public const int SnapshotFieldNumber = 1;
     private global::Google.Cloud.PubSub.V1.Snapshot snapshot_;
     /// <summary>
-    /// The updated snpashot object.
+    /// The updated snapshot object.
     /// </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     public global::Google.Cloud.PubSub.V1.Snapshot Snapshot {
@@ -5211,7 +5808,10 @@ namespace Google.Cloud.PubSub.V1 {
   }
 
   /// <summary>
-  /// A snapshot resource.
+  /// A snapshot resource.&lt;br>&lt;br>
+  /// &lt;b>ALPHA:&lt;/b> This feature is part of an alpha release. This API might be
+  /// changed in backward-incompatible ways and is not recommended for production
+  /// use. It is not subject to any SLA or deprecation policy.
   /// </summary>
   public sealed partial class Snapshot : pb::IMessage<Snapshot> {
     private static readonly pb::MessageParser<Snapshot> _parser = new pb::MessageParser<Snapshot>(() => new Snapshot());
@@ -5221,7 +5821,7 @@ namespace Google.Cloud.PubSub.V1 {
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     public static pbr::MessageDescriptor Descriptor {
-      get { return global::Google.Cloud.PubSub.V1.PubsubReflection.Descriptor.MessageTypes[28]; }
+      get { return global::Google.Cloud.PubSub.V1.PubsubReflection.Descriptor.MessageTypes[31]; }
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
@@ -5290,7 +5890,8 @@ namespace Google.Cloud.PubSub.V1 {
     /// For example, consider a subscription whose oldest unacked message is 3 days
     /// old. If a snapshot is created from this subscription, the snapshot -- which
     /// will always capture this 3-day-old backlog as long as the snapshot
-    /// exists -- will expire in 4 days.
+    /// exists -- will expire in 4 days. The service will refuse to create a
+    /// snapshot that would expire in less than 1 hour after creation.
     /// </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     public global::Google.Protobuf.WellKnownTypes.Timestamp ExpireTime {
@@ -5445,7 +6046,149 @@ namespace Google.Cloud.PubSub.V1 {
   }
 
   /// <summary>
-  /// Request for the `ListSnapshots` method.
+  /// Request for the GetSnapshot method.&lt;br>&lt;br>
+  /// &lt;b>ALPHA:&lt;/b> This feature is part of an alpha release. This API might be
+  /// changed in backward-incompatible ways and is not recommended for production
+  /// use. It is not subject to any SLA or deprecation policy.
+  /// </summary>
+  public sealed partial class GetSnapshotRequest : pb::IMessage<GetSnapshotRequest> {
+    private static readonly pb::MessageParser<GetSnapshotRequest> _parser = new pb::MessageParser<GetSnapshotRequest>(() => new GetSnapshotRequest());
+    private pb::UnknownFieldSet _unknownFields;
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    public static pb::MessageParser<GetSnapshotRequest> Parser { get { return _parser; } }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    public static pbr::MessageDescriptor Descriptor {
+      get { return global::Google.Cloud.PubSub.V1.PubsubReflection.Descriptor.MessageTypes[32]; }
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    pbr::MessageDescriptor pb::IMessage.Descriptor {
+      get { return Descriptor; }
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    public GetSnapshotRequest() {
+      OnConstruction();
+    }
+
+    partial void OnConstruction();
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    public GetSnapshotRequest(GetSnapshotRequest other) : this() {
+      snapshot_ = other.snapshot_;
+      _unknownFields = pb::UnknownFieldSet.Clone(other._unknownFields);
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    public GetSnapshotRequest Clone() {
+      return new GetSnapshotRequest(this);
+    }
+
+    /// <summary>Field number for the "snapshot" field.</summary>
+    public const int SnapshotFieldNumber = 1;
+    private string snapshot_ = "";
+    /// <summary>
+    /// The name of the snapshot to get.
+    /// Format is `projects/{project}/snapshots/{snap}`.
+    /// </summary>
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    public string Snapshot {
+      get { return snapshot_; }
+      set {
+        snapshot_ = pb::ProtoPreconditions.CheckNotNull(value, "value");
+      }
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    public override bool Equals(object other) {
+      return Equals(other as GetSnapshotRequest);
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    public bool Equals(GetSnapshotRequest other) {
+      if (ReferenceEquals(other, null)) {
+        return false;
+      }
+      if (ReferenceEquals(other, this)) {
+        return true;
+      }
+      if (Snapshot != other.Snapshot) return false;
+      return Equals(_unknownFields, other._unknownFields);
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    public override int GetHashCode() {
+      int hash = 1;
+      if (Snapshot.Length != 0) hash ^= Snapshot.GetHashCode();
+      if (_unknownFields != null) {
+        hash ^= _unknownFields.GetHashCode();
+      }
+      return hash;
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    public override string ToString() {
+      return pb::JsonFormatter.ToDiagnosticString(this);
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    public void WriteTo(pb::CodedOutputStream output) {
+      if (Snapshot.Length != 0) {
+        output.WriteRawTag(10);
+        output.WriteString(Snapshot);
+      }
+      if (_unknownFields != null) {
+        _unknownFields.WriteTo(output);
+      }
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    public int CalculateSize() {
+      int size = 0;
+      if (Snapshot.Length != 0) {
+        size += 1 + pb::CodedOutputStream.ComputeStringSize(Snapshot);
+      }
+      if (_unknownFields != null) {
+        size += _unknownFields.CalculateSize();
+      }
+      return size;
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    public void MergeFrom(GetSnapshotRequest other) {
+      if (other == null) {
+        return;
+      }
+      if (other.Snapshot.Length != 0) {
+        Snapshot = other.Snapshot;
+      }
+      _unknownFields = pb::UnknownFieldSet.MergeFrom(_unknownFields, other._unknownFields);
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    public void MergeFrom(pb::CodedInputStream input) {
+      uint tag;
+      while ((tag = input.ReadTag()) != 0) {
+        switch(tag) {
+          default:
+            _unknownFields = pb::UnknownFieldSet.MergeFieldFrom(_unknownFields, input);
+            break;
+          case 10: {
+            Snapshot = input.ReadString();
+            break;
+          }
+        }
+      }
+    }
+
+  }
+
+  /// <summary>
+  /// Request for the `ListSnapshots` method.&lt;br>&lt;br>
+  /// &lt;b>ALPHA:&lt;/b> This feature is part of an alpha release. This API might be
+  /// changed in backward-incompatible ways and is not recommended for production
+  /// use. It is not subject to any SLA or deprecation policy.
   /// </summary>
   public sealed partial class ListSnapshotsRequest : pb::IMessage<ListSnapshotsRequest> {
     private static readonly pb::MessageParser<ListSnapshotsRequest> _parser = new pb::MessageParser<ListSnapshotsRequest>(() => new ListSnapshotsRequest());
@@ -5455,7 +6198,7 @@ namespace Google.Cloud.PubSub.V1 {
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     public static pbr::MessageDescriptor Descriptor {
-      get { return global::Google.Cloud.PubSub.V1.PubsubReflection.Descriptor.MessageTypes[29]; }
+      get { return global::Google.Cloud.PubSub.V1.PubsubReflection.Descriptor.MessageTypes[33]; }
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
@@ -5645,7 +6388,10 @@ namespace Google.Cloud.PubSub.V1 {
   }
 
   /// <summary>
-  /// Response for the `ListSnapshots` method.
+  /// Response for the `ListSnapshots` method.&lt;br>&lt;br>
+  /// &lt;b>ALPHA:&lt;/b> This feature is part of an alpha release. This API might be
+  /// changed in backward-incompatible ways and is not recommended for production
+  /// use. It is not subject to any SLA or deprecation policy.
   /// </summary>
   public sealed partial class ListSnapshotsResponse : pb::IMessage<ListSnapshotsResponse> {
     private static readonly pb::MessageParser<ListSnapshotsResponse> _parser = new pb::MessageParser<ListSnapshotsResponse>(() => new ListSnapshotsResponse());
@@ -5655,7 +6401,7 @@ namespace Google.Cloud.PubSub.V1 {
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     public static pbr::MessageDescriptor Descriptor {
-      get { return global::Google.Cloud.PubSub.V1.PubsubReflection.Descriptor.MessageTypes[30]; }
+      get { return global::Google.Cloud.PubSub.V1.PubsubReflection.Descriptor.MessageTypes[34]; }
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
@@ -5804,7 +6550,10 @@ namespace Google.Cloud.PubSub.V1 {
   }
 
   /// <summary>
-  /// Request for the `DeleteSnapshot` method.
+  /// Request for the `DeleteSnapshot` method.&lt;br>&lt;br>
+  /// &lt;b>ALPHA:&lt;/b> This feature is part of an alpha release. This API might be
+  /// changed in backward-incompatible ways and is not recommended for production
+  /// use. It is not subject to any SLA or deprecation policy.
   /// </summary>
   public sealed partial class DeleteSnapshotRequest : pb::IMessage<DeleteSnapshotRequest> {
     private static readonly pb::MessageParser<DeleteSnapshotRequest> _parser = new pb::MessageParser<DeleteSnapshotRequest>(() => new DeleteSnapshotRequest());
@@ -5814,7 +6563,7 @@ namespace Google.Cloud.PubSub.V1 {
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     public static pbr::MessageDescriptor Descriptor {
-      get { return global::Google.Cloud.PubSub.V1.PubsubReflection.Descriptor.MessageTypes[31]; }
+      get { return global::Google.Cloud.PubSub.V1.PubsubReflection.Descriptor.MessageTypes[35]; }
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
@@ -5940,7 +6689,10 @@ namespace Google.Cloud.PubSub.V1 {
   }
 
   /// <summary>
-  /// Request for the `Seek` method.
+  /// Request for the `Seek` method.&lt;br>&lt;br>
+  /// &lt;b>ALPHA:&lt;/b> This feature is part of an alpha release. This API might be
+  /// changed in backward-incompatible ways and is not recommended for production
+  /// use. It is not subject to any SLA or deprecation policy.
   /// </summary>
   public sealed partial class SeekRequest : pb::IMessage<SeekRequest> {
     private static readonly pb::MessageParser<SeekRequest> _parser = new pb::MessageParser<SeekRequest>(() => new SeekRequest());
@@ -5950,7 +6702,7 @@ namespace Google.Cloud.PubSub.V1 {
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     public static pbr::MessageDescriptor Descriptor {
-      get { return global::Google.Cloud.PubSub.V1.PubsubReflection.Descriptor.MessageTypes[32]; }
+      get { return global::Google.Cloud.PubSub.V1.PubsubReflection.Descriptor.MessageTypes[36]; }
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
@@ -6195,7 +6947,7 @@ namespace Google.Cloud.PubSub.V1 {
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     public static pbr::MessageDescriptor Descriptor {
-      get { return global::Google.Cloud.PubSub.V1.PubsubReflection.Descriptor.MessageTypes[33]; }
+      get { return global::Google.Cloud.PubSub.V1.PubsubReflection.Descriptor.MessageTypes[37]; }
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]

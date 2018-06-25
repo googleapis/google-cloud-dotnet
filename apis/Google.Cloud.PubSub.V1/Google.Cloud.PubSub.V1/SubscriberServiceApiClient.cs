@@ -909,7 +909,8 @@ namespace Google.Cloud.PubSub.V1
         }
 
         /// <summary>
-        /// Creates a subscription to a given topic.
+        /// Creates a subscription to a given topic. See the
+        /// &lt;a href="/pubsub/docs/admin#resource_names"&gt; resource name rules&lt;/a&gt;.
         /// If the subscription already exists, returns `ALREADY_EXISTS`.
         /// If the corresponding topic doesn't exist, returns `NOT_FOUND`.
         ///
@@ -949,7 +950,8 @@ namespace Google.Cloud.PubSub.V1
         /// For pull subscriptions, this value is used as the initial value for the ack
         /// deadline. To override this value for a given message, call
         /// `ModifyAckDeadline` with the corresponding `ack_id` if using
-        /// pull.
+        /// non-streaming pull or send the `ack_id` in a
+        /// `StreamingModifyAckDeadlineRequest` if using streaming pull.
         /// The minimum custom deadline you can specify is 10 seconds.
         /// The maximum custom deadline you can specify is 600 seconds (10 minutes).
         /// If this parameter is 0, a default value of 10 seconds is used.
@@ -982,7 +984,8 @@ namespace Google.Cloud.PubSub.V1
                 callSettings);
 
         /// <summary>
-        /// Creates a subscription to a given topic.
+        /// Creates a subscription to a given topic. See the
+        /// &lt;a href="/pubsub/docs/admin#resource_names"&gt; resource name rules&lt;/a&gt;.
         /// If the subscription already exists, returns `ALREADY_EXISTS`.
         /// If the corresponding topic doesn't exist, returns `NOT_FOUND`.
         ///
@@ -1022,7 +1025,8 @@ namespace Google.Cloud.PubSub.V1
         /// For pull subscriptions, this value is used as the initial value for the ack
         /// deadline. To override this value for a given message, call
         /// `ModifyAckDeadline` with the corresponding `ack_id` if using
-        /// pull.
+        /// non-streaming pull or send the `ack_id` in a
+        /// `StreamingModifyAckDeadlineRequest` if using streaming pull.
         /// The minimum custom deadline you can specify is 10 seconds.
         /// The maximum custom deadline you can specify is 600 seconds (10 minutes).
         /// If this parameter is 0, a default value of 10 seconds is used.
@@ -1052,7 +1056,8 @@ namespace Google.Cloud.PubSub.V1
                 gaxgrpc::CallSettings.FromCancellationToken(cancellationToken));
 
         /// <summary>
-        /// Creates a subscription to a given topic.
+        /// Creates a subscription to a given topic. See the
+        /// &lt;a href="/pubsub/docs/admin#resource_names"&gt; resource name rules&lt;/a&gt;.
         /// If the subscription already exists, returns `ALREADY_EXISTS`.
         /// If the corresponding topic doesn't exist, returns `NOT_FOUND`.
         ///
@@ -1092,7 +1097,8 @@ namespace Google.Cloud.PubSub.V1
         /// For pull subscriptions, this value is used as the initial value for the ack
         /// deadline. To override this value for a given message, call
         /// `ModifyAckDeadline` with the corresponding `ack_id` if using
-        /// pull.
+        /// non-streaming pull or send the `ack_id` in a
+        /// `StreamingModifyAckDeadlineRequest` if using streaming pull.
         /// The minimum custom deadline you can specify is 10 seconds.
         /// The maximum custom deadline you can specify is 600 seconds (10 minutes).
         /// If this parameter is 0, a default value of 10 seconds is used.
@@ -1125,7 +1131,8 @@ namespace Google.Cloud.PubSub.V1
                 callSettings);
 
         /// <summary>
-        /// Creates a subscription to a given topic.
+        /// Creates a subscription to a given topic. See the
+        /// &lt;a href="/pubsub/docs/admin#resource_names"&gt; resource name rules&lt;/a&gt;.
         /// If the subscription already exists, returns `ALREADY_EXISTS`.
         /// If the corresponding topic doesn't exist, returns `NOT_FOUND`.
         ///
@@ -1153,7 +1160,8 @@ namespace Google.Cloud.PubSub.V1
         }
 
         /// <summary>
-        /// Creates a subscription to a given topic.
+        /// Creates a subscription to a given topic. See the
+        /// &lt;a href="/pubsub/docs/admin#resource_names"&gt; resource name rules&lt;/a&gt;.
         /// If the subscription already exists, returns `ALREADY_EXISTS`.
         /// If the corresponding topic doesn't exist, returns `NOT_FOUND`.
         ///
@@ -1180,7 +1188,8 @@ namespace Google.Cloud.PubSub.V1
                 gaxgrpc::CallSettings.FromCancellationToken(cancellationToken));
 
         /// <summary>
-        /// Creates a subscription to a given topic.
+        /// Creates a subscription to a given topic. See the
+        /// &lt;a href="/pubsub/docs/admin#resource_names"&gt; resource name rules&lt;/a&gt;.
         /// If the subscription already exists, returns `ALREADY_EXISTS`.
         /// If the corresponding topic doesn't exist, returns `NOT_FOUND`.
         ///
@@ -1329,10 +1338,6 @@ namespace Google.Cloud.PubSub.V1
         /// <summary>
         /// Updates an existing subscription. Note that certain properties of a
         /// subscription, such as its topic, are not modifiable.
-        /// NOTE:  The style guide requires body: "subscription" instead of body: "*".
-        /// Keeping the latter for internal consistency in V1, however it should be
-        /// corrected in V2.  See
-        /// https://cloud.google.com/apis/design/standard_methods#update for details.
         /// </summary>
         /// <param name="request">
         /// The request object containing all of the parameters for the API call.
@@ -1353,10 +1358,6 @@ namespace Google.Cloud.PubSub.V1
         /// <summary>
         /// Updates an existing subscription. Note that certain properties of a
         /// subscription, such as its topic, are not modifiable.
-        /// NOTE:  The style guide requires body: "subscription" instead of body: "*".
-        /// Keeping the latter for internal consistency in V1, however it should be
-        /// corrected in V2.  See
-        /// https://cloud.google.com/apis/design/standard_methods#update for details.
         /// </summary>
         /// <param name="request">
         /// The request object containing all of the parameters for the API call.
@@ -1376,10 +1377,6 @@ namespace Google.Cloud.PubSub.V1
         /// <summary>
         /// Updates an existing subscription. Note that certain properties of a
         /// subscription, such as its topic, are not modifiable.
-        /// NOTE:  The style guide requires body: "subscription" instead of body: "*".
-        /// Keeping the latter for internal consistency in V1, however it should be
-        /// corrected in V2.  See
-        /// https://cloud.google.com/apis/design/standard_methods#update for details.
         /// </summary>
         /// <param name="request">
         /// The request object containing all of the parameters for the API call.
@@ -2178,18 +2175,13 @@ namespace Google.Cloud.PubSub.V1
         }
 
         /// <summary>
-        /// (EXPERIMENTAL) StreamingPull is an experimental feature. This RPC will
-        /// respond with UNIMPLEMENTED errors unless you have been invited to test
-        /// this feature. Contact cloud-pubsub@google.com with any questions.
-        ///
         /// Establishes a stream with the server, which sends messages down to the
         /// client. The client streams acknowledgements and ack deadline modifications
         /// back to the server. The server will close the stream and return the status
-        /// on any error. The server may close the stream with status `OK` to reassign
-        /// server-side resources, in which case, the client should re-establish the
-        /// stream. `UNAVAILABLE` may also be returned in the case of a transient error
-        /// (e.g., a server restart). These should also be retried by the client. Flow
-        /// control can be achieved by configuring the underlying RPC channel.
+        /// on any error. The server may close the stream with status `UNAVAILABLE` to
+        /// reassign server-side resources, in which case, the client should
+        /// re-establish the stream. Flow control can be achieved by configuring the
+        /// underlying RPC channel.
         /// </summary>
         /// <param name="callSettings">
         /// If not null, applies overrides to this RPC call.
@@ -2232,7 +2224,7 @@ namespace Google.Cloud.PubSub.V1
         /// An empty `pushConfig` indicates that the Pub/Sub system should
         /// stop pushing messages from the given subscription and allow
         /// messages to be pulled and acknowledged - effectively pausing
-        /// the subscription if `Pull` is not called.
+        /// the subscription if `Pull` or `StreamingPull` is not called.
         /// </param>
         /// <param name="callSettings">
         /// If not null, applies overrides to this RPC call.
@@ -2269,7 +2261,7 @@ namespace Google.Cloud.PubSub.V1
         /// An empty `pushConfig` indicates that the Pub/Sub system should
         /// stop pushing messages from the given subscription and allow
         /// messages to be pulled and acknowledged - effectively pausing
-        /// the subscription if `Pull` is not called.
+        /// the subscription if `Pull` or `StreamingPull` is not called.
         /// </param>
         /// <param name="cancellationToken">
         /// A <see cref="st::CancellationToken"/> to use for this RPC.
@@ -2303,7 +2295,7 @@ namespace Google.Cloud.PubSub.V1
         /// An empty `pushConfig` indicates that the Pub/Sub system should
         /// stop pushing messages from the given subscription and allow
         /// messages to be pulled and acknowledged - effectively pausing
-        /// the subscription if `Pull` is not called.
+        /// the subscription if `Pull` or `StreamingPull` is not called.
         /// </param>
         /// <param name="callSettings">
         /// If not null, applies overrides to this RPC call.
@@ -2388,7 +2380,10 @@ namespace Google.Cloud.PubSub.V1
         }
 
         /// <summary>
-        /// Lists the existing snapshots.
+        /// Lists the existing snapshots.&lt;br&gt;&lt;br&gt;
+        /// &lt;b&gt;ALPHA:&lt;/b&gt; This feature is part of an alpha release. This API might be
+        /// changed in backward-incompatible ways and is not recommended for production
+        /// use. It is not subject to any SLA or deprecation policy.
         /// </summary>
         /// <param name="project">
         /// The name of the cloud project that snapshots belong to.
@@ -2422,7 +2417,10 @@ namespace Google.Cloud.PubSub.V1
                 callSettings);
 
         /// <summary>
-        /// Lists the existing snapshots.
+        /// Lists the existing snapshots.&lt;br&gt;&lt;br&gt;
+        /// &lt;b&gt;ALPHA:&lt;/b&gt; This feature is part of an alpha release. This API might be
+        /// changed in backward-incompatible ways and is not recommended for production
+        /// use. It is not subject to any SLA or deprecation policy.
         /// </summary>
         /// <param name="project">
         /// The name of the cloud project that snapshots belong to.
@@ -2456,7 +2454,10 @@ namespace Google.Cloud.PubSub.V1
                 callSettings);
 
         /// <summary>
-        /// Lists the existing snapshots.
+        /// Lists the existing snapshots.&lt;br&gt;&lt;br&gt;
+        /// &lt;b&gt;ALPHA:&lt;/b&gt; This feature is part of an alpha release. This API might be
+        /// changed in backward-incompatible ways and is not recommended for production
+        /// use. It is not subject to any SLA or deprecation policy.
         /// </summary>
         /// <param name="request">
         /// The request object containing all of the parameters for the API call.
@@ -2475,7 +2476,10 @@ namespace Google.Cloud.PubSub.V1
         }
 
         /// <summary>
-        /// Lists the existing snapshots.
+        /// Lists the existing snapshots.&lt;br&gt;&lt;br&gt;
+        /// &lt;b&gt;ALPHA:&lt;/b&gt; This feature is part of an alpha release. This API might be
+        /// changed in backward-incompatible ways and is not recommended for production
+        /// use. It is not subject to any SLA or deprecation policy.
         /// </summary>
         /// <param name="request">
         /// The request object containing all of the parameters for the API call.
@@ -2494,16 +2498,21 @@ namespace Google.Cloud.PubSub.V1
         }
 
         /// <summary>
-        /// Creates a snapshot from the requested subscription.
+        /// Creates a snapshot from the requested subscription.&lt;br&gt;&lt;br&gt;
+        /// &lt;b&gt;ALPHA:&lt;/b&gt; This feature is part of an alpha release. This API might be
+        /// changed in backward-incompatible ways and is not recommended for production
+        /// use. It is not subject to any SLA or deprecation policy.
         /// If the snapshot already exists, returns `ALREADY_EXISTS`.
         /// If the requested subscription doesn't exist, returns `NOT_FOUND`.
-        ///
-        /// If the name is not provided in the request, the server will assign a random
+        /// If the backlog in the subscription is too old -- and the resulting snapshot
+        /// would expire in less than 1 hour -- then `FAILED_PRECONDITION` is returned.
+        /// See also the `Snapshot.expire_time` field. If the name is not provided in
+        /// the request, the server will assign a random
         /// name for this snapshot on the same project as the subscription, conforming
-        /// to the
-        /// [resource name format](https://cloud.google.com/pubsub/docs/overview#names).
-        /// The generated name is populated in the returned Snapshot object.
-        /// Note that for REST API requests, you must specify a name in the request.
+        /// to the [resource name format](https://cloud.google.com/pubsub/docs/overview#names).
+        /// The generated
+        /// name is populated in the returned Snapshot object. Note that for REST API
+        /// requests, you must specify a name in the request.
         /// </summary>
         /// <param name="name">
         /// Optional user-provided name for this snapshot.
@@ -2541,16 +2550,21 @@ namespace Google.Cloud.PubSub.V1
                 callSettings);
 
         /// <summary>
-        /// Creates a snapshot from the requested subscription.
+        /// Creates a snapshot from the requested subscription.&lt;br&gt;&lt;br&gt;
+        /// &lt;b&gt;ALPHA:&lt;/b&gt; This feature is part of an alpha release. This API might be
+        /// changed in backward-incompatible ways and is not recommended for production
+        /// use. It is not subject to any SLA or deprecation policy.
         /// If the snapshot already exists, returns `ALREADY_EXISTS`.
         /// If the requested subscription doesn't exist, returns `NOT_FOUND`.
-        ///
-        /// If the name is not provided in the request, the server will assign a random
+        /// If the backlog in the subscription is too old -- and the resulting snapshot
+        /// would expire in less than 1 hour -- then `FAILED_PRECONDITION` is returned.
+        /// See also the `Snapshot.expire_time` field. If the name is not provided in
+        /// the request, the server will assign a random
         /// name for this snapshot on the same project as the subscription, conforming
-        /// to the
-        /// [resource name format](https://cloud.google.com/pubsub/docs/overview#names).
-        /// The generated name is populated in the returned Snapshot object.
-        /// Note that for REST API requests, you must specify a name in the request.
+        /// to the [resource name format](https://cloud.google.com/pubsub/docs/overview#names).
+        /// The generated
+        /// name is populated in the returned Snapshot object. Note that for REST API
+        /// requests, you must specify a name in the request.
         /// </summary>
         /// <param name="name">
         /// Optional user-provided name for this snapshot.
@@ -2585,16 +2599,21 @@ namespace Google.Cloud.PubSub.V1
                 gaxgrpc::CallSettings.FromCancellationToken(cancellationToken));
 
         /// <summary>
-        /// Creates a snapshot from the requested subscription.
+        /// Creates a snapshot from the requested subscription.&lt;br&gt;&lt;br&gt;
+        /// &lt;b&gt;ALPHA:&lt;/b&gt; This feature is part of an alpha release. This API might be
+        /// changed in backward-incompatible ways and is not recommended for production
+        /// use. It is not subject to any SLA or deprecation policy.
         /// If the snapshot already exists, returns `ALREADY_EXISTS`.
         /// If the requested subscription doesn't exist, returns `NOT_FOUND`.
-        ///
-        /// If the name is not provided in the request, the server will assign a random
+        /// If the backlog in the subscription is too old -- and the resulting snapshot
+        /// would expire in less than 1 hour -- then `FAILED_PRECONDITION` is returned.
+        /// See also the `Snapshot.expire_time` field. If the name is not provided in
+        /// the request, the server will assign a random
         /// name for this snapshot on the same project as the subscription, conforming
-        /// to the
-        /// [resource name format](https://cloud.google.com/pubsub/docs/overview#names).
-        /// The generated name is populated in the returned Snapshot object.
-        /// Note that for REST API requests, you must specify a name in the request.
+        /// to the [resource name format](https://cloud.google.com/pubsub/docs/overview#names).
+        /// The generated
+        /// name is populated in the returned Snapshot object. Note that for REST API
+        /// requests, you must specify a name in the request.
         /// </summary>
         /// <param name="name">
         /// Optional user-provided name for this snapshot.
@@ -2632,16 +2651,21 @@ namespace Google.Cloud.PubSub.V1
                 callSettings);
 
         /// <summary>
-        /// Creates a snapshot from the requested subscription.
+        /// Creates a snapshot from the requested subscription.&lt;br&gt;&lt;br&gt;
+        /// &lt;b&gt;ALPHA:&lt;/b&gt; This feature is part of an alpha release. This API might be
+        /// changed in backward-incompatible ways and is not recommended for production
+        /// use. It is not subject to any SLA or deprecation policy.
         /// If the snapshot already exists, returns `ALREADY_EXISTS`.
         /// If the requested subscription doesn't exist, returns `NOT_FOUND`.
-        ///
-        /// If the name is not provided in the request, the server will assign a random
+        /// If the backlog in the subscription is too old -- and the resulting snapshot
+        /// would expire in less than 1 hour -- then `FAILED_PRECONDITION` is returned.
+        /// See also the `Snapshot.expire_time` field. If the name is not provided in
+        /// the request, the server will assign a random
         /// name for this snapshot on the same project as the subscription, conforming
-        /// to the
-        /// [resource name format](https://cloud.google.com/pubsub/docs/overview#names).
-        /// The generated name is populated in the returned Snapshot object.
-        /// Note that for REST API requests, you must specify a name in the request.
+        /// to the [resource name format](https://cloud.google.com/pubsub/docs/overview#names).
+        /// The generated
+        /// name is populated in the returned Snapshot object. Note that for REST API
+        /// requests, you must specify a name in the request.
         /// </summary>
         /// <param name="request">
         /// The request object containing all of the parameters for the API call.
@@ -2660,16 +2684,21 @@ namespace Google.Cloud.PubSub.V1
         }
 
         /// <summary>
-        /// Creates a snapshot from the requested subscription.
+        /// Creates a snapshot from the requested subscription.&lt;br&gt;&lt;br&gt;
+        /// &lt;b&gt;ALPHA:&lt;/b&gt; This feature is part of an alpha release. This API might be
+        /// changed in backward-incompatible ways and is not recommended for production
+        /// use. It is not subject to any SLA or deprecation policy.
         /// If the snapshot already exists, returns `ALREADY_EXISTS`.
         /// If the requested subscription doesn't exist, returns `NOT_FOUND`.
-        ///
-        /// If the name is not provided in the request, the server will assign a random
+        /// If the backlog in the subscription is too old -- and the resulting snapshot
+        /// would expire in less than 1 hour -- then `FAILED_PRECONDITION` is returned.
+        /// See also the `Snapshot.expire_time` field. If the name is not provided in
+        /// the request, the server will assign a random
         /// name for this snapshot on the same project as the subscription, conforming
-        /// to the
-        /// [resource name format](https://cloud.google.com/pubsub/docs/overview#names).
-        /// The generated name is populated in the returned Snapshot object.
-        /// Note that for REST API requests, you must specify a name in the request.
+        /// to the [resource name format](https://cloud.google.com/pubsub/docs/overview#names).
+        /// The generated
+        /// name is populated in the returned Snapshot object. Note that for REST API
+        /// requests, you must specify a name in the request.
         /// </summary>
         /// <param name="request">
         /// The request object containing all of the parameters for the API call.
@@ -2687,16 +2716,21 @@ namespace Google.Cloud.PubSub.V1
                 gaxgrpc::CallSettings.FromCancellationToken(cancellationToken));
 
         /// <summary>
-        /// Creates a snapshot from the requested subscription.
+        /// Creates a snapshot from the requested subscription.&lt;br&gt;&lt;br&gt;
+        /// &lt;b&gt;ALPHA:&lt;/b&gt; This feature is part of an alpha release. This API might be
+        /// changed in backward-incompatible ways and is not recommended for production
+        /// use. It is not subject to any SLA or deprecation policy.
         /// If the snapshot already exists, returns `ALREADY_EXISTS`.
         /// If the requested subscription doesn't exist, returns `NOT_FOUND`.
-        ///
-        /// If the name is not provided in the request, the server will assign a random
+        /// If the backlog in the subscription is too old -- and the resulting snapshot
+        /// would expire in less than 1 hour -- then `FAILED_PRECONDITION` is returned.
+        /// See also the `Snapshot.expire_time` field. If the name is not provided in
+        /// the request, the server will assign a random
         /// name for this snapshot on the same project as the subscription, conforming
-        /// to the
-        /// [resource name format](https://cloud.google.com/pubsub/docs/overview#names).
-        /// The generated name is populated in the returned Snapshot object.
-        /// Note that for REST API requests, you must specify a name in the request.
+        /// to the [resource name format](https://cloud.google.com/pubsub/docs/overview#names).
+        /// The generated
+        /// name is populated in the returned Snapshot object. Note that for REST API
+        /// requests, you must specify a name in the request.
         /// </summary>
         /// <param name="request">
         /// The request object containing all of the parameters for the API call.
@@ -2715,12 +2749,11 @@ namespace Google.Cloud.PubSub.V1
         }
 
         /// <summary>
-        /// Updates an existing snapshot. Note that certain properties of a snapshot
-        /// are not modifiable.
-        /// NOTE:  The style guide requires body: "snapshot" instead of body: "*".
-        /// Keeping the latter for internal consistency in V1, however it should be
-        /// corrected in V2.  See
-        /// https://cloud.google.com/apis/design/standard_methods#update for details.
+        /// Updates an existing snapshot.&lt;br&gt;&lt;br&gt;
+        /// &lt;b&gt;ALPHA:&lt;/b&gt; This feature is part of an alpha release. This API might be
+        /// changed in backward-incompatible ways and is not recommended for production
+        /// use. It is not subject to any SLA or deprecation policy.
+        /// Note that certain properties of a snapshot are not modifiable.
         /// </summary>
         /// <param name="request">
         /// The request object containing all of the parameters for the API call.
@@ -2739,12 +2772,11 @@ namespace Google.Cloud.PubSub.V1
         }
 
         /// <summary>
-        /// Updates an existing snapshot. Note that certain properties of a snapshot
-        /// are not modifiable.
-        /// NOTE:  The style guide requires body: "snapshot" instead of body: "*".
-        /// Keeping the latter for internal consistency in V1, however it should be
-        /// corrected in V2.  See
-        /// https://cloud.google.com/apis/design/standard_methods#update for details.
+        /// Updates an existing snapshot.&lt;br&gt;&lt;br&gt;
+        /// &lt;b&gt;ALPHA:&lt;/b&gt; This feature is part of an alpha release. This API might be
+        /// changed in backward-incompatible ways and is not recommended for production
+        /// use. It is not subject to any SLA or deprecation policy.
+        /// Note that certain properties of a snapshot are not modifiable.
         /// </summary>
         /// <param name="request">
         /// The request object containing all of the parameters for the API call.
@@ -2762,12 +2794,11 @@ namespace Google.Cloud.PubSub.V1
                 gaxgrpc::CallSettings.FromCancellationToken(cancellationToken));
 
         /// <summary>
-        /// Updates an existing snapshot. Note that certain properties of a snapshot
-        /// are not modifiable.
-        /// NOTE:  The style guide requires body: "snapshot" instead of body: "*".
-        /// Keeping the latter for internal consistency in V1, however it should be
-        /// corrected in V2.  See
-        /// https://cloud.google.com/apis/design/standard_methods#update for details.
+        /// Updates an existing snapshot.&lt;br&gt;&lt;br&gt;
+        /// &lt;b&gt;ALPHA:&lt;/b&gt; This feature is part of an alpha release. This API might be
+        /// changed in backward-incompatible ways and is not recommended for production
+        /// use. It is not subject to any SLA or deprecation policy.
+        /// Note that certain properties of a snapshot are not modifiable.
         /// </summary>
         /// <param name="request">
         /// The request object containing all of the parameters for the API call.
@@ -2786,7 +2817,11 @@ namespace Google.Cloud.PubSub.V1
         }
 
         /// <summary>
-        /// Removes an existing snapshot. All messages retained in the snapshot
+        /// Removes an existing snapshot. &lt;br&gt;&lt;br&gt;
+        /// &lt;b&gt;ALPHA:&lt;/b&gt; This feature is part of an alpha release. This API might be
+        /// changed in backward-incompatible ways and is not recommended for production
+        /// use. It is not subject to any SLA or deprecation policy.
+        /// When the snapshot is deleted, all messages retained in the snapshot
         /// are immediately dropped. After a snapshot is deleted, a new one may be
         /// created with the same name, but the new one has no association with the old
         /// snapshot or its subscription, unless the same subscription is specified.
@@ -2811,7 +2846,11 @@ namespace Google.Cloud.PubSub.V1
                 callSettings);
 
         /// <summary>
-        /// Removes an existing snapshot. All messages retained in the snapshot
+        /// Removes an existing snapshot. &lt;br&gt;&lt;br&gt;
+        /// &lt;b&gt;ALPHA:&lt;/b&gt; This feature is part of an alpha release. This API might be
+        /// changed in backward-incompatible ways and is not recommended for production
+        /// use. It is not subject to any SLA or deprecation policy.
+        /// When the snapshot is deleted, all messages retained in the snapshot
         /// are immediately dropped. After a snapshot is deleted, a new one may be
         /// created with the same name, but the new one has no association with the old
         /// snapshot or its subscription, unless the same subscription is specified.
@@ -2833,7 +2872,11 @@ namespace Google.Cloud.PubSub.V1
                 gaxgrpc::CallSettings.FromCancellationToken(cancellationToken));
 
         /// <summary>
-        /// Removes an existing snapshot. All messages retained in the snapshot
+        /// Removes an existing snapshot. &lt;br&gt;&lt;br&gt;
+        /// &lt;b&gt;ALPHA:&lt;/b&gt; This feature is part of an alpha release. This API might be
+        /// changed in backward-incompatible ways and is not recommended for production
+        /// use. It is not subject to any SLA or deprecation policy.
+        /// When the snapshot is deleted, all messages retained in the snapshot
         /// are immediately dropped. After a snapshot is deleted, a new one may be
         /// created with the same name, but the new one has no association with the old
         /// snapshot or its subscription, unless the same subscription is specified.
@@ -2855,7 +2898,11 @@ namespace Google.Cloud.PubSub.V1
                 callSettings);
 
         /// <summary>
-        /// Removes an existing snapshot. All messages retained in the snapshot
+        /// Removes an existing snapshot. &lt;br&gt;&lt;br&gt;
+        /// &lt;b&gt;ALPHA:&lt;/b&gt; This feature is part of an alpha release. This API might be
+        /// changed in backward-incompatible ways and is not recommended for production
+        /// use. It is not subject to any SLA or deprecation policy.
+        /// When the snapshot is deleted, all messages retained in the snapshot
         /// are immediately dropped. After a snapshot is deleted, a new one may be
         /// created with the same name, but the new one has no association with the old
         /// snapshot or its subscription, unless the same subscription is specified.
@@ -2877,7 +2924,11 @@ namespace Google.Cloud.PubSub.V1
         }
 
         /// <summary>
-        /// Removes an existing snapshot. All messages retained in the snapshot
+        /// Removes an existing snapshot. &lt;br&gt;&lt;br&gt;
+        /// &lt;b&gt;ALPHA:&lt;/b&gt; This feature is part of an alpha release. This API might be
+        /// changed in backward-incompatible ways and is not recommended for production
+        /// use. It is not subject to any SLA or deprecation policy.
+        /// When the snapshot is deleted, all messages retained in the snapshot
         /// are immediately dropped. After a snapshot is deleted, a new one may be
         /// created with the same name, but the new one has no association with the old
         /// snapshot or its subscription, unless the same subscription is specified.
@@ -2898,7 +2949,11 @@ namespace Google.Cloud.PubSub.V1
                 gaxgrpc::CallSettings.FromCancellationToken(cancellationToken));
 
         /// <summary>
-        /// Removes an existing snapshot. All messages retained in the snapshot
+        /// Removes an existing snapshot. &lt;br&gt;&lt;br&gt;
+        /// &lt;b&gt;ALPHA:&lt;/b&gt; This feature is part of an alpha release. This API might be
+        /// changed in backward-incompatible ways and is not recommended for production
+        /// use. It is not subject to any SLA or deprecation policy.
+        /// When the snapshot is deleted, all messages retained in the snapshot
         /// are immediately dropped. After a snapshot is deleted, a new one may be
         /// created with the same name, but the new one has no association with the old
         /// snapshot or its subscription, unless the same subscription is specified.
@@ -2918,7 +2973,10 @@ namespace Google.Cloud.PubSub.V1
 
         /// <summary>
         /// Seeks an existing subscription to a point in time or to a given snapshot,
-        /// whichever is provided in the request.
+        /// whichever is provided in the request.&lt;br&gt;&lt;br&gt;
+        /// &lt;b&gt;ALPHA:&lt;/b&gt; This feature is part of an alpha release. This API might be
+        /// changed in backward-incompatible ways and is not recommended for production
+        /// use. It is not subject to any SLA or deprecation policy.
         /// </summary>
         /// <param name="request">
         /// The request object containing all of the parameters for the API call.
@@ -2938,7 +2996,10 @@ namespace Google.Cloud.PubSub.V1
 
         /// <summary>
         /// Seeks an existing subscription to a point in time or to a given snapshot,
-        /// whichever is provided in the request.
+        /// whichever is provided in the request.&lt;br&gt;&lt;br&gt;
+        /// &lt;b&gt;ALPHA:&lt;/b&gt; This feature is part of an alpha release. This API might be
+        /// changed in backward-incompatible ways and is not recommended for production
+        /// use. It is not subject to any SLA or deprecation policy.
         /// </summary>
         /// <param name="request">
         /// The request object containing all of the parameters for the API call.
@@ -2957,7 +3018,10 @@ namespace Google.Cloud.PubSub.V1
 
         /// <summary>
         /// Seeks an existing subscription to a point in time or to a given snapshot,
-        /// whichever is provided in the request.
+        /// whichever is provided in the request.&lt;br&gt;&lt;br&gt;
+        /// &lt;b&gt;ALPHA:&lt;/b&gt; This feature is part of an alpha release. This API might be
+        /// changed in backward-incompatible ways and is not recommended for production
+        /// use. It is not subject to any SLA or deprecation policy.
         /// </summary>
         /// <param name="request">
         /// The request object containing all of the parameters for the API call.
@@ -3593,7 +3657,8 @@ namespace Google.Cloud.PubSub.V1
         partial void Modify_TestIamPermissionsRequest(ref iam::TestIamPermissionsRequest request, ref gaxgrpc::CallSettings settings);
 
         /// <summary>
-        /// Creates a subscription to a given topic.
+        /// Creates a subscription to a given topic. See the
+        /// &lt;a href="/pubsub/docs/admin#resource_names"&gt; resource name rules&lt;/a&gt;.
         /// If the subscription already exists, returns `ALREADY_EXISTS`.
         /// If the corresponding topic doesn't exist, returns `NOT_FOUND`.
         ///
@@ -3622,7 +3687,8 @@ namespace Google.Cloud.PubSub.V1
         }
 
         /// <summary>
-        /// Creates a subscription to a given topic.
+        /// Creates a subscription to a given topic. See the
+        /// &lt;a href="/pubsub/docs/admin#resource_names"&gt; resource name rules&lt;/a&gt;.
         /// If the subscription already exists, returns `ALREADY_EXISTS`.
         /// If the corresponding topic doesn't exist, returns `NOT_FOUND`.
         ///
@@ -3693,10 +3759,6 @@ namespace Google.Cloud.PubSub.V1
         /// <summary>
         /// Updates an existing subscription. Note that certain properties of a
         /// subscription, such as its topic, are not modifiable.
-        /// NOTE:  The style guide requires body: "subscription" instead of body: "*".
-        /// Keeping the latter for internal consistency in V1, however it should be
-        /// corrected in V2.  See
-        /// https://cloud.google.com/apis/design/standard_methods#update for details.
         /// </summary>
         /// <param name="request">
         /// The request object containing all of the parameters for the API call.
@@ -3718,10 +3780,6 @@ namespace Google.Cloud.PubSub.V1
         /// <summary>
         /// Updates an existing subscription. Note that certain properties of a
         /// subscription, such as its topic, are not modifiable.
-        /// NOTE:  The style guide requires body: "subscription" instead of body: "*".
-        /// Keeping the latter for internal consistency in V1, however it should be
-        /// corrected in V2.  See
-        /// https://cloud.google.com/apis/design/standard_methods#update for details.
         /// </summary>
         /// <param name="request">
         /// The request object containing all of the parameters for the API call.
@@ -3966,18 +4024,13 @@ namespace Google.Cloud.PubSub.V1
         }
 
         /// <summary>
-        /// (EXPERIMENTAL) StreamingPull is an experimental feature. This RPC will
-        /// respond with UNIMPLEMENTED errors unless you have been invited to test
-        /// this feature. Contact cloud-pubsub@google.com with any questions.
-        ///
         /// Establishes a stream with the server, which sends messages down to the
         /// client. The client streams acknowledgements and ack deadline modifications
         /// back to the server. The server will close the stream and return the status
-        /// on any error. The server may close the stream with status `OK` to reassign
-        /// server-side resources, in which case, the client should re-establish the
-        /// stream. `UNAVAILABLE` may also be returned in the case of a transient error
-        /// (e.g., a server restart). These should also be retried by the client. Flow
-        /// control can be achieved by configuring the underlying RPC channel.
+        /// on any error. The server may close the stream with status `UNAVAILABLE` to
+        /// reassign server-side resources, in which case, the client should
+        /// re-establish the stream. Flow control can be achieved by configuring the
+        /// underlying RPC channel.
         /// </summary>
         /// <param name="callSettings">
         /// If not null, applies overrides to this RPC call.
@@ -4111,7 +4164,10 @@ namespace Google.Cloud.PubSub.V1
         }
 
         /// <summary>
-        /// Lists the existing snapshots.
+        /// Lists the existing snapshots.&lt;br&gt;&lt;br&gt;
+        /// &lt;b&gt;ALPHA:&lt;/b&gt; This feature is part of an alpha release. This API might be
+        /// changed in backward-incompatible ways and is not recommended for production
+        /// use. It is not subject to any SLA or deprecation policy.
         /// </summary>
         /// <param name="request">
         /// The request object containing all of the parameters for the API call.
@@ -4131,7 +4187,10 @@ namespace Google.Cloud.PubSub.V1
         }
 
         /// <summary>
-        /// Lists the existing snapshots.
+        /// Lists the existing snapshots.&lt;br&gt;&lt;br&gt;
+        /// &lt;b&gt;ALPHA:&lt;/b&gt; This feature is part of an alpha release. This API might be
+        /// changed in backward-incompatible ways and is not recommended for production
+        /// use. It is not subject to any SLA or deprecation policy.
         /// </summary>
         /// <param name="request">
         /// The request object containing all of the parameters for the API call.
@@ -4151,16 +4210,21 @@ namespace Google.Cloud.PubSub.V1
         }
 
         /// <summary>
-        /// Creates a snapshot from the requested subscription.
+        /// Creates a snapshot from the requested subscription.&lt;br&gt;&lt;br&gt;
+        /// &lt;b&gt;ALPHA:&lt;/b&gt; This feature is part of an alpha release. This API might be
+        /// changed in backward-incompatible ways and is not recommended for production
+        /// use. It is not subject to any SLA or deprecation policy.
         /// If the snapshot already exists, returns `ALREADY_EXISTS`.
         /// If the requested subscription doesn't exist, returns `NOT_FOUND`.
-        ///
-        /// If the name is not provided in the request, the server will assign a random
+        /// If the backlog in the subscription is too old -- and the resulting snapshot
+        /// would expire in less than 1 hour -- then `FAILED_PRECONDITION` is returned.
+        /// See also the `Snapshot.expire_time` field. If the name is not provided in
+        /// the request, the server will assign a random
         /// name for this snapshot on the same project as the subscription, conforming
-        /// to the
-        /// [resource name format](https://cloud.google.com/pubsub/docs/overview#names).
-        /// The generated name is populated in the returned Snapshot object.
-        /// Note that for REST API requests, you must specify a name in the request.
+        /// to the [resource name format](https://cloud.google.com/pubsub/docs/overview#names).
+        /// The generated
+        /// name is populated in the returned Snapshot object. Note that for REST API
+        /// requests, you must specify a name in the request.
         /// </summary>
         /// <param name="request">
         /// The request object containing all of the parameters for the API call.
@@ -4180,16 +4244,21 @@ namespace Google.Cloud.PubSub.V1
         }
 
         /// <summary>
-        /// Creates a snapshot from the requested subscription.
+        /// Creates a snapshot from the requested subscription.&lt;br&gt;&lt;br&gt;
+        /// &lt;b&gt;ALPHA:&lt;/b&gt; This feature is part of an alpha release. This API might be
+        /// changed in backward-incompatible ways and is not recommended for production
+        /// use. It is not subject to any SLA or deprecation policy.
         /// If the snapshot already exists, returns `ALREADY_EXISTS`.
         /// If the requested subscription doesn't exist, returns `NOT_FOUND`.
-        ///
-        /// If the name is not provided in the request, the server will assign a random
+        /// If the backlog in the subscription is too old -- and the resulting snapshot
+        /// would expire in less than 1 hour -- then `FAILED_PRECONDITION` is returned.
+        /// See also the `Snapshot.expire_time` field. If the name is not provided in
+        /// the request, the server will assign a random
         /// name for this snapshot on the same project as the subscription, conforming
-        /// to the
-        /// [resource name format](https://cloud.google.com/pubsub/docs/overview#names).
-        /// The generated name is populated in the returned Snapshot object.
-        /// Note that for REST API requests, you must specify a name in the request.
+        /// to the [resource name format](https://cloud.google.com/pubsub/docs/overview#names).
+        /// The generated
+        /// name is populated in the returned Snapshot object. Note that for REST API
+        /// requests, you must specify a name in the request.
         /// </summary>
         /// <param name="request">
         /// The request object containing all of the parameters for the API call.
@@ -4209,12 +4278,11 @@ namespace Google.Cloud.PubSub.V1
         }
 
         /// <summary>
-        /// Updates an existing snapshot. Note that certain properties of a snapshot
-        /// are not modifiable.
-        /// NOTE:  The style guide requires body: "snapshot" instead of body: "*".
-        /// Keeping the latter for internal consistency in V1, however it should be
-        /// corrected in V2.  See
-        /// https://cloud.google.com/apis/design/standard_methods#update for details.
+        /// Updates an existing snapshot.&lt;br&gt;&lt;br&gt;
+        /// &lt;b&gt;ALPHA:&lt;/b&gt; This feature is part of an alpha release. This API might be
+        /// changed in backward-incompatible ways and is not recommended for production
+        /// use. It is not subject to any SLA or deprecation policy.
+        /// Note that certain properties of a snapshot are not modifiable.
         /// </summary>
         /// <param name="request">
         /// The request object containing all of the parameters for the API call.
@@ -4234,12 +4302,11 @@ namespace Google.Cloud.PubSub.V1
         }
 
         /// <summary>
-        /// Updates an existing snapshot. Note that certain properties of a snapshot
-        /// are not modifiable.
-        /// NOTE:  The style guide requires body: "snapshot" instead of body: "*".
-        /// Keeping the latter for internal consistency in V1, however it should be
-        /// corrected in V2.  See
-        /// https://cloud.google.com/apis/design/standard_methods#update for details.
+        /// Updates an existing snapshot.&lt;br&gt;&lt;br&gt;
+        /// &lt;b&gt;ALPHA:&lt;/b&gt; This feature is part of an alpha release. This API might be
+        /// changed in backward-incompatible ways and is not recommended for production
+        /// use. It is not subject to any SLA or deprecation policy.
+        /// Note that certain properties of a snapshot are not modifiable.
         /// </summary>
         /// <param name="request">
         /// The request object containing all of the parameters for the API call.
@@ -4259,7 +4326,11 @@ namespace Google.Cloud.PubSub.V1
         }
 
         /// <summary>
-        /// Removes an existing snapshot. All messages retained in the snapshot
+        /// Removes an existing snapshot. &lt;br&gt;&lt;br&gt;
+        /// &lt;b&gt;ALPHA:&lt;/b&gt; This feature is part of an alpha release. This API might be
+        /// changed in backward-incompatible ways and is not recommended for production
+        /// use. It is not subject to any SLA or deprecation policy.
+        /// When the snapshot is deleted, all messages retained in the snapshot
         /// are immediately dropped. After a snapshot is deleted, a new one may be
         /// created with the same name, but the new one has no association with the old
         /// snapshot or its subscription, unless the same subscription is specified.
@@ -4282,7 +4353,11 @@ namespace Google.Cloud.PubSub.V1
         }
 
         /// <summary>
-        /// Removes an existing snapshot. All messages retained in the snapshot
+        /// Removes an existing snapshot. &lt;br&gt;&lt;br&gt;
+        /// &lt;b&gt;ALPHA:&lt;/b&gt; This feature is part of an alpha release. This API might be
+        /// changed in backward-incompatible ways and is not recommended for production
+        /// use. It is not subject to any SLA or deprecation policy.
+        /// When the snapshot is deleted, all messages retained in the snapshot
         /// are immediately dropped. After a snapshot is deleted, a new one may be
         /// created with the same name, but the new one has no association with the old
         /// snapshot or its subscription, unless the same subscription is specified.
@@ -4303,7 +4378,10 @@ namespace Google.Cloud.PubSub.V1
 
         /// <summary>
         /// Seeks an existing subscription to a point in time or to a given snapshot,
-        /// whichever is provided in the request.
+        /// whichever is provided in the request.&lt;br&gt;&lt;br&gt;
+        /// &lt;b&gt;ALPHA:&lt;/b&gt; This feature is part of an alpha release. This API might be
+        /// changed in backward-incompatible ways and is not recommended for production
+        /// use. It is not subject to any SLA or deprecation policy.
         /// </summary>
         /// <param name="request">
         /// The request object containing all of the parameters for the API call.
@@ -4324,7 +4402,10 @@ namespace Google.Cloud.PubSub.V1
 
         /// <summary>
         /// Seeks an existing subscription to a point in time or to a given snapshot,
-        /// whichever is provided in the request.
+        /// whichever is provided in the request.&lt;br&gt;&lt;br&gt;
+        /// &lt;b&gt;ALPHA:&lt;/b&gt; This feature is part of an alpha release. This API might be
+        /// changed in backward-incompatible ways and is not recommended for production
+        /// use. It is not subject to any SLA or deprecation policy.
         /// </summary>
         /// <param name="request">
         /// The request object containing all of the parameters for the API call.

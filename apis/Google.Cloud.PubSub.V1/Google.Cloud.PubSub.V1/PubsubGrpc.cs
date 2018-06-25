@@ -3,7 +3,7 @@
 //     source: google/pubsub/v1/pubsub.proto
 // </auto-generated>
 // Original file comments:
-// Copyright 2017 Google Inc.
+// Copyright 2018 Google Inc.
 //
 // Licensed under the Apache License, Version 2.0 (the "License");
 // you may not use this file except in compliance with the License.
@@ -24,8 +24,639 @@ using grpc = global::Grpc.Core;
 
 namespace Google.Cloud.PubSub.V1 {
   /// <summary>
+  /// The service that an application uses to manipulate topics, and to send
+  /// messages to a topic.
+  /// </summary>
+  public static partial class Publisher
+  {
+    static readonly string __ServiceName = "google.pubsub.v1.Publisher";
+
+    static readonly grpc::Marshaller<global::Google.Cloud.PubSub.V1.Topic> __Marshaller_Topic = grpc::Marshallers.Create((arg) => global::Google.Protobuf.MessageExtensions.ToByteArray(arg), global::Google.Cloud.PubSub.V1.Topic.Parser.ParseFrom);
+    static readonly grpc::Marshaller<global::Google.Cloud.PubSub.V1.UpdateTopicRequest> __Marshaller_UpdateTopicRequest = grpc::Marshallers.Create((arg) => global::Google.Protobuf.MessageExtensions.ToByteArray(arg), global::Google.Cloud.PubSub.V1.UpdateTopicRequest.Parser.ParseFrom);
+    static readonly grpc::Marshaller<global::Google.Cloud.PubSub.V1.PublishRequest> __Marshaller_PublishRequest = grpc::Marshallers.Create((arg) => global::Google.Protobuf.MessageExtensions.ToByteArray(arg), global::Google.Cloud.PubSub.V1.PublishRequest.Parser.ParseFrom);
+    static readonly grpc::Marshaller<global::Google.Cloud.PubSub.V1.PublishResponse> __Marshaller_PublishResponse = grpc::Marshallers.Create((arg) => global::Google.Protobuf.MessageExtensions.ToByteArray(arg), global::Google.Cloud.PubSub.V1.PublishResponse.Parser.ParseFrom);
+    static readonly grpc::Marshaller<global::Google.Cloud.PubSub.V1.GetTopicRequest> __Marshaller_GetTopicRequest = grpc::Marshallers.Create((arg) => global::Google.Protobuf.MessageExtensions.ToByteArray(arg), global::Google.Cloud.PubSub.V1.GetTopicRequest.Parser.ParseFrom);
+    static readonly grpc::Marshaller<global::Google.Cloud.PubSub.V1.ListTopicsRequest> __Marshaller_ListTopicsRequest = grpc::Marshallers.Create((arg) => global::Google.Protobuf.MessageExtensions.ToByteArray(arg), global::Google.Cloud.PubSub.V1.ListTopicsRequest.Parser.ParseFrom);
+    static readonly grpc::Marshaller<global::Google.Cloud.PubSub.V1.ListTopicsResponse> __Marshaller_ListTopicsResponse = grpc::Marshallers.Create((arg) => global::Google.Protobuf.MessageExtensions.ToByteArray(arg), global::Google.Cloud.PubSub.V1.ListTopicsResponse.Parser.ParseFrom);
+    static readonly grpc::Marshaller<global::Google.Cloud.PubSub.V1.ListTopicSubscriptionsRequest> __Marshaller_ListTopicSubscriptionsRequest = grpc::Marshallers.Create((arg) => global::Google.Protobuf.MessageExtensions.ToByteArray(arg), global::Google.Cloud.PubSub.V1.ListTopicSubscriptionsRequest.Parser.ParseFrom);
+    static readonly grpc::Marshaller<global::Google.Cloud.PubSub.V1.ListTopicSubscriptionsResponse> __Marshaller_ListTopicSubscriptionsResponse = grpc::Marshallers.Create((arg) => global::Google.Protobuf.MessageExtensions.ToByteArray(arg), global::Google.Cloud.PubSub.V1.ListTopicSubscriptionsResponse.Parser.ParseFrom);
+    static readonly grpc::Marshaller<global::Google.Cloud.PubSub.V1.ListTopicSnapshotsRequest> __Marshaller_ListTopicSnapshotsRequest = grpc::Marshallers.Create((arg) => global::Google.Protobuf.MessageExtensions.ToByteArray(arg), global::Google.Cloud.PubSub.V1.ListTopicSnapshotsRequest.Parser.ParseFrom);
+    static readonly grpc::Marshaller<global::Google.Cloud.PubSub.V1.ListTopicSnapshotsResponse> __Marshaller_ListTopicSnapshotsResponse = grpc::Marshallers.Create((arg) => global::Google.Protobuf.MessageExtensions.ToByteArray(arg), global::Google.Cloud.PubSub.V1.ListTopicSnapshotsResponse.Parser.ParseFrom);
+    static readonly grpc::Marshaller<global::Google.Cloud.PubSub.V1.DeleteTopicRequest> __Marshaller_DeleteTopicRequest = grpc::Marshallers.Create((arg) => global::Google.Protobuf.MessageExtensions.ToByteArray(arg), global::Google.Cloud.PubSub.V1.DeleteTopicRequest.Parser.ParseFrom);
+    static readonly grpc::Marshaller<global::Google.Protobuf.WellKnownTypes.Empty> __Marshaller_Empty = grpc::Marshallers.Create((arg) => global::Google.Protobuf.MessageExtensions.ToByteArray(arg), global::Google.Protobuf.WellKnownTypes.Empty.Parser.ParseFrom);
+
+    static readonly grpc::Method<global::Google.Cloud.PubSub.V1.Topic, global::Google.Cloud.PubSub.V1.Topic> __Method_CreateTopic = new grpc::Method<global::Google.Cloud.PubSub.V1.Topic, global::Google.Cloud.PubSub.V1.Topic>(
+        grpc::MethodType.Unary,
+        __ServiceName,
+        "CreateTopic",
+        __Marshaller_Topic,
+        __Marshaller_Topic);
+
+    static readonly grpc::Method<global::Google.Cloud.PubSub.V1.UpdateTopicRequest, global::Google.Cloud.PubSub.V1.Topic> __Method_UpdateTopic = new grpc::Method<global::Google.Cloud.PubSub.V1.UpdateTopicRequest, global::Google.Cloud.PubSub.V1.Topic>(
+        grpc::MethodType.Unary,
+        __ServiceName,
+        "UpdateTopic",
+        __Marshaller_UpdateTopicRequest,
+        __Marshaller_Topic);
+
+    static readonly grpc::Method<global::Google.Cloud.PubSub.V1.PublishRequest, global::Google.Cloud.PubSub.V1.PublishResponse> __Method_Publish = new grpc::Method<global::Google.Cloud.PubSub.V1.PublishRequest, global::Google.Cloud.PubSub.V1.PublishResponse>(
+        grpc::MethodType.Unary,
+        __ServiceName,
+        "Publish",
+        __Marshaller_PublishRequest,
+        __Marshaller_PublishResponse);
+
+    static readonly grpc::Method<global::Google.Cloud.PubSub.V1.GetTopicRequest, global::Google.Cloud.PubSub.V1.Topic> __Method_GetTopic = new grpc::Method<global::Google.Cloud.PubSub.V1.GetTopicRequest, global::Google.Cloud.PubSub.V1.Topic>(
+        grpc::MethodType.Unary,
+        __ServiceName,
+        "GetTopic",
+        __Marshaller_GetTopicRequest,
+        __Marshaller_Topic);
+
+    static readonly grpc::Method<global::Google.Cloud.PubSub.V1.ListTopicsRequest, global::Google.Cloud.PubSub.V1.ListTopicsResponse> __Method_ListTopics = new grpc::Method<global::Google.Cloud.PubSub.V1.ListTopicsRequest, global::Google.Cloud.PubSub.V1.ListTopicsResponse>(
+        grpc::MethodType.Unary,
+        __ServiceName,
+        "ListTopics",
+        __Marshaller_ListTopicsRequest,
+        __Marshaller_ListTopicsResponse);
+
+    static readonly grpc::Method<global::Google.Cloud.PubSub.V1.ListTopicSubscriptionsRequest, global::Google.Cloud.PubSub.V1.ListTopicSubscriptionsResponse> __Method_ListTopicSubscriptions = new grpc::Method<global::Google.Cloud.PubSub.V1.ListTopicSubscriptionsRequest, global::Google.Cloud.PubSub.V1.ListTopicSubscriptionsResponse>(
+        grpc::MethodType.Unary,
+        __ServiceName,
+        "ListTopicSubscriptions",
+        __Marshaller_ListTopicSubscriptionsRequest,
+        __Marshaller_ListTopicSubscriptionsResponse);
+
+    static readonly grpc::Method<global::Google.Cloud.PubSub.V1.ListTopicSnapshotsRequest, global::Google.Cloud.PubSub.V1.ListTopicSnapshotsResponse> __Method_ListTopicSnapshots = new grpc::Method<global::Google.Cloud.PubSub.V1.ListTopicSnapshotsRequest, global::Google.Cloud.PubSub.V1.ListTopicSnapshotsResponse>(
+        grpc::MethodType.Unary,
+        __ServiceName,
+        "ListTopicSnapshots",
+        __Marshaller_ListTopicSnapshotsRequest,
+        __Marshaller_ListTopicSnapshotsResponse);
+
+    static readonly grpc::Method<global::Google.Cloud.PubSub.V1.DeleteTopicRequest, global::Google.Protobuf.WellKnownTypes.Empty> __Method_DeleteTopic = new grpc::Method<global::Google.Cloud.PubSub.V1.DeleteTopicRequest, global::Google.Protobuf.WellKnownTypes.Empty>(
+        grpc::MethodType.Unary,
+        __ServiceName,
+        "DeleteTopic",
+        __Marshaller_DeleteTopicRequest,
+        __Marshaller_Empty);
+
+    /// <summary>Service descriptor</summary>
+    public static global::Google.Protobuf.Reflection.ServiceDescriptor Descriptor
+    {
+      get { return global::Google.Cloud.PubSub.V1.PubsubReflection.Descriptor.Services[0]; }
+    }
+
+    /// <summary>Base class for server-side implementations of Publisher</summary>
+    public abstract partial class PublisherBase
+    {
+      /// <summary>
+      /// Creates the given topic with the given name. See the
+      /// &lt;a href="/pubsub/docs/admin#resource_names"> resource name rules&lt;/a>.
+      /// </summary>
+      /// <param name="request">The request received from the client.</param>
+      /// <param name="context">The context of the server-side call handler being invoked.</param>
+      /// <returns>The response to send back to the client (wrapped by a task).</returns>
+      public virtual global::System.Threading.Tasks.Task<global::Google.Cloud.PubSub.V1.Topic> CreateTopic(global::Google.Cloud.PubSub.V1.Topic request, grpc::ServerCallContext context)
+      {
+        throw new grpc::RpcException(new grpc::Status(grpc::StatusCode.Unimplemented, ""));
+      }
+
+      /// <summary>
+      /// Updates an existing topic. Note that certain properties of a
+      /// topic are not modifiable.
+      /// </summary>
+      /// <param name="request">The request received from the client.</param>
+      /// <param name="context">The context of the server-side call handler being invoked.</param>
+      /// <returns>The response to send back to the client (wrapped by a task).</returns>
+      public virtual global::System.Threading.Tasks.Task<global::Google.Cloud.PubSub.V1.Topic> UpdateTopic(global::Google.Cloud.PubSub.V1.UpdateTopicRequest request, grpc::ServerCallContext context)
+      {
+        throw new grpc::RpcException(new grpc::Status(grpc::StatusCode.Unimplemented, ""));
+      }
+
+      /// <summary>
+      /// Adds one or more messages to the topic. Returns `NOT_FOUND` if the topic
+      /// does not exist. The message payload must not be empty; it must contain
+      ///  either a non-empty data field, or at least one attribute.
+      /// </summary>
+      /// <param name="request">The request received from the client.</param>
+      /// <param name="context">The context of the server-side call handler being invoked.</param>
+      /// <returns>The response to send back to the client (wrapped by a task).</returns>
+      public virtual global::System.Threading.Tasks.Task<global::Google.Cloud.PubSub.V1.PublishResponse> Publish(global::Google.Cloud.PubSub.V1.PublishRequest request, grpc::ServerCallContext context)
+      {
+        throw new grpc::RpcException(new grpc::Status(grpc::StatusCode.Unimplemented, ""));
+      }
+
+      /// <summary>
+      /// Gets the configuration of a topic.
+      /// </summary>
+      /// <param name="request">The request received from the client.</param>
+      /// <param name="context">The context of the server-side call handler being invoked.</param>
+      /// <returns>The response to send back to the client (wrapped by a task).</returns>
+      public virtual global::System.Threading.Tasks.Task<global::Google.Cloud.PubSub.V1.Topic> GetTopic(global::Google.Cloud.PubSub.V1.GetTopicRequest request, grpc::ServerCallContext context)
+      {
+        throw new grpc::RpcException(new grpc::Status(grpc::StatusCode.Unimplemented, ""));
+      }
+
+      /// <summary>
+      /// Lists matching topics.
+      /// </summary>
+      /// <param name="request">The request received from the client.</param>
+      /// <param name="context">The context of the server-side call handler being invoked.</param>
+      /// <returns>The response to send back to the client (wrapped by a task).</returns>
+      public virtual global::System.Threading.Tasks.Task<global::Google.Cloud.PubSub.V1.ListTopicsResponse> ListTopics(global::Google.Cloud.PubSub.V1.ListTopicsRequest request, grpc::ServerCallContext context)
+      {
+        throw new grpc::RpcException(new grpc::Status(grpc::StatusCode.Unimplemented, ""));
+      }
+
+      /// <summary>
+      /// Lists the names of the subscriptions on this topic.
+      /// </summary>
+      /// <param name="request">The request received from the client.</param>
+      /// <param name="context">The context of the server-side call handler being invoked.</param>
+      /// <returns>The response to send back to the client (wrapped by a task).</returns>
+      public virtual global::System.Threading.Tasks.Task<global::Google.Cloud.PubSub.V1.ListTopicSubscriptionsResponse> ListTopicSubscriptions(global::Google.Cloud.PubSub.V1.ListTopicSubscriptionsRequest request, grpc::ServerCallContext context)
+      {
+        throw new grpc::RpcException(new grpc::Status(grpc::StatusCode.Unimplemented, ""));
+      }
+
+      /// <summary>
+      /// Lists the names of the snapshots on this topic.&lt;br>&lt;br>
+      /// &lt;b>ALPHA:&lt;/b> This feature is part of an alpha release. This API might be
+      /// changed in backward-incompatible ways and is not recommended for production
+      /// use. It is not subject to any SLA or deprecation policy.
+      /// </summary>
+      /// <param name="request">The request received from the client.</param>
+      /// <param name="context">The context of the server-side call handler being invoked.</param>
+      /// <returns>The response to send back to the client (wrapped by a task).</returns>
+      public virtual global::System.Threading.Tasks.Task<global::Google.Cloud.PubSub.V1.ListTopicSnapshotsResponse> ListTopicSnapshots(global::Google.Cloud.PubSub.V1.ListTopicSnapshotsRequest request, grpc::ServerCallContext context)
+      {
+        throw new grpc::RpcException(new grpc::Status(grpc::StatusCode.Unimplemented, ""));
+      }
+
+      /// <summary>
+      /// Deletes the topic with the given name. Returns `NOT_FOUND` if the topic
+      /// does not exist. After a topic is deleted, a new topic may be created with
+      /// the same name; this is an entirely new topic with none of the old
+      /// configuration or subscriptions. Existing subscriptions to this topic are
+      /// not deleted, but their `topic` field is set to `_deleted-topic_`.
+      /// </summary>
+      /// <param name="request">The request received from the client.</param>
+      /// <param name="context">The context of the server-side call handler being invoked.</param>
+      /// <returns>The response to send back to the client (wrapped by a task).</returns>
+      public virtual global::System.Threading.Tasks.Task<global::Google.Protobuf.WellKnownTypes.Empty> DeleteTopic(global::Google.Cloud.PubSub.V1.DeleteTopicRequest request, grpc::ServerCallContext context)
+      {
+        throw new grpc::RpcException(new grpc::Status(grpc::StatusCode.Unimplemented, ""));
+      }
+
+    }
+
+    /// <summary>Client for Publisher</summary>
+    public partial class PublisherClient : grpc::ClientBase<PublisherClient>
+    {
+      /// <summary>Creates a new client for Publisher</summary>
+      /// <param name="channel">The channel to use to make remote calls.</param>
+      public PublisherClient(grpc::Channel channel) : base(channel)
+      {
+      }
+      /// <summary>Creates a new client for Publisher that uses a custom <c>CallInvoker</c>.</summary>
+      /// <param name="callInvoker">The callInvoker to use to make remote calls.</param>
+      public PublisherClient(grpc::CallInvoker callInvoker) : base(callInvoker)
+      {
+      }
+      /// <summary>Protected parameterless constructor to allow creation of test doubles.</summary>
+      protected PublisherClient() : base()
+      {
+      }
+      /// <summary>Protected constructor to allow creation of configured clients.</summary>
+      /// <param name="configuration">The client configuration.</param>
+      protected PublisherClient(ClientBaseConfiguration configuration) : base(configuration)
+      {
+      }
+
+      /// <summary>
+      /// Creates the given topic with the given name. See the
+      /// &lt;a href="/pubsub/docs/admin#resource_names"> resource name rules&lt;/a>.
+      /// </summary>
+      /// <param name="request">The request to send to the server.</param>
+      /// <param name="headers">The initial metadata to send with the call. This parameter is optional.</param>
+      /// <param name="deadline">An optional deadline for the call. The call will be cancelled if deadline is hit.</param>
+      /// <param name="cancellationToken">An optional token for canceling the call.</param>
+      /// <returns>The response received from the server.</returns>
+      public virtual global::Google.Cloud.PubSub.V1.Topic CreateTopic(global::Google.Cloud.PubSub.V1.Topic request, grpc::Metadata headers = null, global::System.DateTime? deadline = null, global::System.Threading.CancellationToken cancellationToken = default(global::System.Threading.CancellationToken))
+      {
+        return CreateTopic(request, new grpc::CallOptions(headers, deadline, cancellationToken));
+      }
+      /// <summary>
+      /// Creates the given topic with the given name. See the
+      /// &lt;a href="/pubsub/docs/admin#resource_names"> resource name rules&lt;/a>.
+      /// </summary>
+      /// <param name="request">The request to send to the server.</param>
+      /// <param name="options">The options for the call.</param>
+      /// <returns>The response received from the server.</returns>
+      public virtual global::Google.Cloud.PubSub.V1.Topic CreateTopic(global::Google.Cloud.PubSub.V1.Topic request, grpc::CallOptions options)
+      {
+        return CallInvoker.BlockingUnaryCall(__Method_CreateTopic, null, options, request);
+      }
+      /// <summary>
+      /// Creates the given topic with the given name. See the
+      /// &lt;a href="/pubsub/docs/admin#resource_names"> resource name rules&lt;/a>.
+      /// </summary>
+      /// <param name="request">The request to send to the server.</param>
+      /// <param name="headers">The initial metadata to send with the call. This parameter is optional.</param>
+      /// <param name="deadline">An optional deadline for the call. The call will be cancelled if deadline is hit.</param>
+      /// <param name="cancellationToken">An optional token for canceling the call.</param>
+      /// <returns>The call object.</returns>
+      public virtual grpc::AsyncUnaryCall<global::Google.Cloud.PubSub.V1.Topic> CreateTopicAsync(global::Google.Cloud.PubSub.V1.Topic request, grpc::Metadata headers = null, global::System.DateTime? deadline = null, global::System.Threading.CancellationToken cancellationToken = default(global::System.Threading.CancellationToken))
+      {
+        return CreateTopicAsync(request, new grpc::CallOptions(headers, deadline, cancellationToken));
+      }
+      /// <summary>
+      /// Creates the given topic with the given name. See the
+      /// &lt;a href="/pubsub/docs/admin#resource_names"> resource name rules&lt;/a>.
+      /// </summary>
+      /// <param name="request">The request to send to the server.</param>
+      /// <param name="options">The options for the call.</param>
+      /// <returns>The call object.</returns>
+      public virtual grpc::AsyncUnaryCall<global::Google.Cloud.PubSub.V1.Topic> CreateTopicAsync(global::Google.Cloud.PubSub.V1.Topic request, grpc::CallOptions options)
+      {
+        return CallInvoker.AsyncUnaryCall(__Method_CreateTopic, null, options, request);
+      }
+      /// <summary>
+      /// Updates an existing topic. Note that certain properties of a
+      /// topic are not modifiable.
+      /// </summary>
+      /// <param name="request">The request to send to the server.</param>
+      /// <param name="headers">The initial metadata to send with the call. This parameter is optional.</param>
+      /// <param name="deadline">An optional deadline for the call. The call will be cancelled if deadline is hit.</param>
+      /// <param name="cancellationToken">An optional token for canceling the call.</param>
+      /// <returns>The response received from the server.</returns>
+      public virtual global::Google.Cloud.PubSub.V1.Topic UpdateTopic(global::Google.Cloud.PubSub.V1.UpdateTopicRequest request, grpc::Metadata headers = null, global::System.DateTime? deadline = null, global::System.Threading.CancellationToken cancellationToken = default(global::System.Threading.CancellationToken))
+      {
+        return UpdateTopic(request, new grpc::CallOptions(headers, deadline, cancellationToken));
+      }
+      /// <summary>
+      /// Updates an existing topic. Note that certain properties of a
+      /// topic are not modifiable.
+      /// </summary>
+      /// <param name="request">The request to send to the server.</param>
+      /// <param name="options">The options for the call.</param>
+      /// <returns>The response received from the server.</returns>
+      public virtual global::Google.Cloud.PubSub.V1.Topic UpdateTopic(global::Google.Cloud.PubSub.V1.UpdateTopicRequest request, grpc::CallOptions options)
+      {
+        return CallInvoker.BlockingUnaryCall(__Method_UpdateTopic, null, options, request);
+      }
+      /// <summary>
+      /// Updates an existing topic. Note that certain properties of a
+      /// topic are not modifiable.
+      /// </summary>
+      /// <param name="request">The request to send to the server.</param>
+      /// <param name="headers">The initial metadata to send with the call. This parameter is optional.</param>
+      /// <param name="deadline">An optional deadline for the call. The call will be cancelled if deadline is hit.</param>
+      /// <param name="cancellationToken">An optional token for canceling the call.</param>
+      /// <returns>The call object.</returns>
+      public virtual grpc::AsyncUnaryCall<global::Google.Cloud.PubSub.V1.Topic> UpdateTopicAsync(global::Google.Cloud.PubSub.V1.UpdateTopicRequest request, grpc::Metadata headers = null, global::System.DateTime? deadline = null, global::System.Threading.CancellationToken cancellationToken = default(global::System.Threading.CancellationToken))
+      {
+        return UpdateTopicAsync(request, new grpc::CallOptions(headers, deadline, cancellationToken));
+      }
+      /// <summary>
+      /// Updates an existing topic. Note that certain properties of a
+      /// topic are not modifiable.
+      /// </summary>
+      /// <param name="request">The request to send to the server.</param>
+      /// <param name="options">The options for the call.</param>
+      /// <returns>The call object.</returns>
+      public virtual grpc::AsyncUnaryCall<global::Google.Cloud.PubSub.V1.Topic> UpdateTopicAsync(global::Google.Cloud.PubSub.V1.UpdateTopicRequest request, grpc::CallOptions options)
+      {
+        return CallInvoker.AsyncUnaryCall(__Method_UpdateTopic, null, options, request);
+      }
+      /// <summary>
+      /// Adds one or more messages to the topic. Returns `NOT_FOUND` if the topic
+      /// does not exist. The message payload must not be empty; it must contain
+      ///  either a non-empty data field, or at least one attribute.
+      /// </summary>
+      /// <param name="request">The request to send to the server.</param>
+      /// <param name="headers">The initial metadata to send with the call. This parameter is optional.</param>
+      /// <param name="deadline">An optional deadline for the call. The call will be cancelled if deadline is hit.</param>
+      /// <param name="cancellationToken">An optional token for canceling the call.</param>
+      /// <returns>The response received from the server.</returns>
+      public virtual global::Google.Cloud.PubSub.V1.PublishResponse Publish(global::Google.Cloud.PubSub.V1.PublishRequest request, grpc::Metadata headers = null, global::System.DateTime? deadline = null, global::System.Threading.CancellationToken cancellationToken = default(global::System.Threading.CancellationToken))
+      {
+        return Publish(request, new grpc::CallOptions(headers, deadline, cancellationToken));
+      }
+      /// <summary>
+      /// Adds one or more messages to the topic. Returns `NOT_FOUND` if the topic
+      /// does not exist. The message payload must not be empty; it must contain
+      ///  either a non-empty data field, or at least one attribute.
+      /// </summary>
+      /// <param name="request">The request to send to the server.</param>
+      /// <param name="options">The options for the call.</param>
+      /// <returns>The response received from the server.</returns>
+      public virtual global::Google.Cloud.PubSub.V1.PublishResponse Publish(global::Google.Cloud.PubSub.V1.PublishRequest request, grpc::CallOptions options)
+      {
+        return CallInvoker.BlockingUnaryCall(__Method_Publish, null, options, request);
+      }
+      /// <summary>
+      /// Adds one or more messages to the topic. Returns `NOT_FOUND` if the topic
+      /// does not exist. The message payload must not be empty; it must contain
+      ///  either a non-empty data field, or at least one attribute.
+      /// </summary>
+      /// <param name="request">The request to send to the server.</param>
+      /// <param name="headers">The initial metadata to send with the call. This parameter is optional.</param>
+      /// <param name="deadline">An optional deadline for the call. The call will be cancelled if deadline is hit.</param>
+      /// <param name="cancellationToken">An optional token for canceling the call.</param>
+      /// <returns>The call object.</returns>
+      public virtual grpc::AsyncUnaryCall<global::Google.Cloud.PubSub.V1.PublishResponse> PublishAsync(global::Google.Cloud.PubSub.V1.PublishRequest request, grpc::Metadata headers = null, global::System.DateTime? deadline = null, global::System.Threading.CancellationToken cancellationToken = default(global::System.Threading.CancellationToken))
+      {
+        return PublishAsync(request, new grpc::CallOptions(headers, deadline, cancellationToken));
+      }
+      /// <summary>
+      /// Adds one or more messages to the topic. Returns `NOT_FOUND` if the topic
+      /// does not exist. The message payload must not be empty; it must contain
+      ///  either a non-empty data field, or at least one attribute.
+      /// </summary>
+      /// <param name="request">The request to send to the server.</param>
+      /// <param name="options">The options for the call.</param>
+      /// <returns>The call object.</returns>
+      public virtual grpc::AsyncUnaryCall<global::Google.Cloud.PubSub.V1.PublishResponse> PublishAsync(global::Google.Cloud.PubSub.V1.PublishRequest request, grpc::CallOptions options)
+      {
+        return CallInvoker.AsyncUnaryCall(__Method_Publish, null, options, request);
+      }
+      /// <summary>
+      /// Gets the configuration of a topic.
+      /// </summary>
+      /// <param name="request">The request to send to the server.</param>
+      /// <param name="headers">The initial metadata to send with the call. This parameter is optional.</param>
+      /// <param name="deadline">An optional deadline for the call. The call will be cancelled if deadline is hit.</param>
+      /// <param name="cancellationToken">An optional token for canceling the call.</param>
+      /// <returns>The response received from the server.</returns>
+      public virtual global::Google.Cloud.PubSub.V1.Topic GetTopic(global::Google.Cloud.PubSub.V1.GetTopicRequest request, grpc::Metadata headers = null, global::System.DateTime? deadline = null, global::System.Threading.CancellationToken cancellationToken = default(global::System.Threading.CancellationToken))
+      {
+        return GetTopic(request, new grpc::CallOptions(headers, deadline, cancellationToken));
+      }
+      /// <summary>
+      /// Gets the configuration of a topic.
+      /// </summary>
+      /// <param name="request">The request to send to the server.</param>
+      /// <param name="options">The options for the call.</param>
+      /// <returns>The response received from the server.</returns>
+      public virtual global::Google.Cloud.PubSub.V1.Topic GetTopic(global::Google.Cloud.PubSub.V1.GetTopicRequest request, grpc::CallOptions options)
+      {
+        return CallInvoker.BlockingUnaryCall(__Method_GetTopic, null, options, request);
+      }
+      /// <summary>
+      /// Gets the configuration of a topic.
+      /// </summary>
+      /// <param name="request">The request to send to the server.</param>
+      /// <param name="headers">The initial metadata to send with the call. This parameter is optional.</param>
+      /// <param name="deadline">An optional deadline for the call. The call will be cancelled if deadline is hit.</param>
+      /// <param name="cancellationToken">An optional token for canceling the call.</param>
+      /// <returns>The call object.</returns>
+      public virtual grpc::AsyncUnaryCall<global::Google.Cloud.PubSub.V1.Topic> GetTopicAsync(global::Google.Cloud.PubSub.V1.GetTopicRequest request, grpc::Metadata headers = null, global::System.DateTime? deadline = null, global::System.Threading.CancellationToken cancellationToken = default(global::System.Threading.CancellationToken))
+      {
+        return GetTopicAsync(request, new grpc::CallOptions(headers, deadline, cancellationToken));
+      }
+      /// <summary>
+      /// Gets the configuration of a topic.
+      /// </summary>
+      /// <param name="request">The request to send to the server.</param>
+      /// <param name="options">The options for the call.</param>
+      /// <returns>The call object.</returns>
+      public virtual grpc::AsyncUnaryCall<global::Google.Cloud.PubSub.V1.Topic> GetTopicAsync(global::Google.Cloud.PubSub.V1.GetTopicRequest request, grpc::CallOptions options)
+      {
+        return CallInvoker.AsyncUnaryCall(__Method_GetTopic, null, options, request);
+      }
+      /// <summary>
+      /// Lists matching topics.
+      /// </summary>
+      /// <param name="request">The request to send to the server.</param>
+      /// <param name="headers">The initial metadata to send with the call. This parameter is optional.</param>
+      /// <param name="deadline">An optional deadline for the call. The call will be cancelled if deadline is hit.</param>
+      /// <param name="cancellationToken">An optional token for canceling the call.</param>
+      /// <returns>The response received from the server.</returns>
+      public virtual global::Google.Cloud.PubSub.V1.ListTopicsResponse ListTopics(global::Google.Cloud.PubSub.V1.ListTopicsRequest request, grpc::Metadata headers = null, global::System.DateTime? deadline = null, global::System.Threading.CancellationToken cancellationToken = default(global::System.Threading.CancellationToken))
+      {
+        return ListTopics(request, new grpc::CallOptions(headers, deadline, cancellationToken));
+      }
+      /// <summary>
+      /// Lists matching topics.
+      /// </summary>
+      /// <param name="request">The request to send to the server.</param>
+      /// <param name="options">The options for the call.</param>
+      /// <returns>The response received from the server.</returns>
+      public virtual global::Google.Cloud.PubSub.V1.ListTopicsResponse ListTopics(global::Google.Cloud.PubSub.V1.ListTopicsRequest request, grpc::CallOptions options)
+      {
+        return CallInvoker.BlockingUnaryCall(__Method_ListTopics, null, options, request);
+      }
+      /// <summary>
+      /// Lists matching topics.
+      /// </summary>
+      /// <param name="request">The request to send to the server.</param>
+      /// <param name="headers">The initial metadata to send with the call. This parameter is optional.</param>
+      /// <param name="deadline">An optional deadline for the call. The call will be cancelled if deadline is hit.</param>
+      /// <param name="cancellationToken">An optional token for canceling the call.</param>
+      /// <returns>The call object.</returns>
+      public virtual grpc::AsyncUnaryCall<global::Google.Cloud.PubSub.V1.ListTopicsResponse> ListTopicsAsync(global::Google.Cloud.PubSub.V1.ListTopicsRequest request, grpc::Metadata headers = null, global::System.DateTime? deadline = null, global::System.Threading.CancellationToken cancellationToken = default(global::System.Threading.CancellationToken))
+      {
+        return ListTopicsAsync(request, new grpc::CallOptions(headers, deadline, cancellationToken));
+      }
+      /// <summary>
+      /// Lists matching topics.
+      /// </summary>
+      /// <param name="request">The request to send to the server.</param>
+      /// <param name="options">The options for the call.</param>
+      /// <returns>The call object.</returns>
+      public virtual grpc::AsyncUnaryCall<global::Google.Cloud.PubSub.V1.ListTopicsResponse> ListTopicsAsync(global::Google.Cloud.PubSub.V1.ListTopicsRequest request, grpc::CallOptions options)
+      {
+        return CallInvoker.AsyncUnaryCall(__Method_ListTopics, null, options, request);
+      }
+      /// <summary>
+      /// Lists the names of the subscriptions on this topic.
+      /// </summary>
+      /// <param name="request">The request to send to the server.</param>
+      /// <param name="headers">The initial metadata to send with the call. This parameter is optional.</param>
+      /// <param name="deadline">An optional deadline for the call. The call will be cancelled if deadline is hit.</param>
+      /// <param name="cancellationToken">An optional token for canceling the call.</param>
+      /// <returns>The response received from the server.</returns>
+      public virtual global::Google.Cloud.PubSub.V1.ListTopicSubscriptionsResponse ListTopicSubscriptions(global::Google.Cloud.PubSub.V1.ListTopicSubscriptionsRequest request, grpc::Metadata headers = null, global::System.DateTime? deadline = null, global::System.Threading.CancellationToken cancellationToken = default(global::System.Threading.CancellationToken))
+      {
+        return ListTopicSubscriptions(request, new grpc::CallOptions(headers, deadline, cancellationToken));
+      }
+      /// <summary>
+      /// Lists the names of the subscriptions on this topic.
+      /// </summary>
+      /// <param name="request">The request to send to the server.</param>
+      /// <param name="options">The options for the call.</param>
+      /// <returns>The response received from the server.</returns>
+      public virtual global::Google.Cloud.PubSub.V1.ListTopicSubscriptionsResponse ListTopicSubscriptions(global::Google.Cloud.PubSub.V1.ListTopicSubscriptionsRequest request, grpc::CallOptions options)
+      {
+        return CallInvoker.BlockingUnaryCall(__Method_ListTopicSubscriptions, null, options, request);
+      }
+      /// <summary>
+      /// Lists the names of the subscriptions on this topic.
+      /// </summary>
+      /// <param name="request">The request to send to the server.</param>
+      /// <param name="headers">The initial metadata to send with the call. This parameter is optional.</param>
+      /// <param name="deadline">An optional deadline for the call. The call will be cancelled if deadline is hit.</param>
+      /// <param name="cancellationToken">An optional token for canceling the call.</param>
+      /// <returns>The call object.</returns>
+      public virtual grpc::AsyncUnaryCall<global::Google.Cloud.PubSub.V1.ListTopicSubscriptionsResponse> ListTopicSubscriptionsAsync(global::Google.Cloud.PubSub.V1.ListTopicSubscriptionsRequest request, grpc::Metadata headers = null, global::System.DateTime? deadline = null, global::System.Threading.CancellationToken cancellationToken = default(global::System.Threading.CancellationToken))
+      {
+        return ListTopicSubscriptionsAsync(request, new grpc::CallOptions(headers, deadline, cancellationToken));
+      }
+      /// <summary>
+      /// Lists the names of the subscriptions on this topic.
+      /// </summary>
+      /// <param name="request">The request to send to the server.</param>
+      /// <param name="options">The options for the call.</param>
+      /// <returns>The call object.</returns>
+      public virtual grpc::AsyncUnaryCall<global::Google.Cloud.PubSub.V1.ListTopicSubscriptionsResponse> ListTopicSubscriptionsAsync(global::Google.Cloud.PubSub.V1.ListTopicSubscriptionsRequest request, grpc::CallOptions options)
+      {
+        return CallInvoker.AsyncUnaryCall(__Method_ListTopicSubscriptions, null, options, request);
+      }
+      /// <summary>
+      /// Lists the names of the snapshots on this topic.&lt;br>&lt;br>
+      /// &lt;b>ALPHA:&lt;/b> This feature is part of an alpha release. This API might be
+      /// changed in backward-incompatible ways and is not recommended for production
+      /// use. It is not subject to any SLA or deprecation policy.
+      /// </summary>
+      /// <param name="request">The request to send to the server.</param>
+      /// <param name="headers">The initial metadata to send with the call. This parameter is optional.</param>
+      /// <param name="deadline">An optional deadline for the call. The call will be cancelled if deadline is hit.</param>
+      /// <param name="cancellationToken">An optional token for canceling the call.</param>
+      /// <returns>The response received from the server.</returns>
+      public virtual global::Google.Cloud.PubSub.V1.ListTopicSnapshotsResponse ListTopicSnapshots(global::Google.Cloud.PubSub.V1.ListTopicSnapshotsRequest request, grpc::Metadata headers = null, global::System.DateTime? deadline = null, global::System.Threading.CancellationToken cancellationToken = default(global::System.Threading.CancellationToken))
+      {
+        return ListTopicSnapshots(request, new grpc::CallOptions(headers, deadline, cancellationToken));
+      }
+      /// <summary>
+      /// Lists the names of the snapshots on this topic.&lt;br>&lt;br>
+      /// &lt;b>ALPHA:&lt;/b> This feature is part of an alpha release. This API might be
+      /// changed in backward-incompatible ways and is not recommended for production
+      /// use. It is not subject to any SLA or deprecation policy.
+      /// </summary>
+      /// <param name="request">The request to send to the server.</param>
+      /// <param name="options">The options for the call.</param>
+      /// <returns>The response received from the server.</returns>
+      public virtual global::Google.Cloud.PubSub.V1.ListTopicSnapshotsResponse ListTopicSnapshots(global::Google.Cloud.PubSub.V1.ListTopicSnapshotsRequest request, grpc::CallOptions options)
+      {
+        return CallInvoker.BlockingUnaryCall(__Method_ListTopicSnapshots, null, options, request);
+      }
+      /// <summary>
+      /// Lists the names of the snapshots on this topic.&lt;br>&lt;br>
+      /// &lt;b>ALPHA:&lt;/b> This feature is part of an alpha release. This API might be
+      /// changed in backward-incompatible ways and is not recommended for production
+      /// use. It is not subject to any SLA or deprecation policy.
+      /// </summary>
+      /// <param name="request">The request to send to the server.</param>
+      /// <param name="headers">The initial metadata to send with the call. This parameter is optional.</param>
+      /// <param name="deadline">An optional deadline for the call. The call will be cancelled if deadline is hit.</param>
+      /// <param name="cancellationToken">An optional token for canceling the call.</param>
+      /// <returns>The call object.</returns>
+      public virtual grpc::AsyncUnaryCall<global::Google.Cloud.PubSub.V1.ListTopicSnapshotsResponse> ListTopicSnapshotsAsync(global::Google.Cloud.PubSub.V1.ListTopicSnapshotsRequest request, grpc::Metadata headers = null, global::System.DateTime? deadline = null, global::System.Threading.CancellationToken cancellationToken = default(global::System.Threading.CancellationToken))
+      {
+        return ListTopicSnapshotsAsync(request, new grpc::CallOptions(headers, deadline, cancellationToken));
+      }
+      /// <summary>
+      /// Lists the names of the snapshots on this topic.&lt;br>&lt;br>
+      /// &lt;b>ALPHA:&lt;/b> This feature is part of an alpha release. This API might be
+      /// changed in backward-incompatible ways and is not recommended for production
+      /// use. It is not subject to any SLA or deprecation policy.
+      /// </summary>
+      /// <param name="request">The request to send to the server.</param>
+      /// <param name="options">The options for the call.</param>
+      /// <returns>The call object.</returns>
+      public virtual grpc::AsyncUnaryCall<global::Google.Cloud.PubSub.V1.ListTopicSnapshotsResponse> ListTopicSnapshotsAsync(global::Google.Cloud.PubSub.V1.ListTopicSnapshotsRequest request, grpc::CallOptions options)
+      {
+        return CallInvoker.AsyncUnaryCall(__Method_ListTopicSnapshots, null, options, request);
+      }
+      /// <summary>
+      /// Deletes the topic with the given name. Returns `NOT_FOUND` if the topic
+      /// does not exist. After a topic is deleted, a new topic may be created with
+      /// the same name; this is an entirely new topic with none of the old
+      /// configuration or subscriptions. Existing subscriptions to this topic are
+      /// not deleted, but their `topic` field is set to `_deleted-topic_`.
+      /// </summary>
+      /// <param name="request">The request to send to the server.</param>
+      /// <param name="headers">The initial metadata to send with the call. This parameter is optional.</param>
+      /// <param name="deadline">An optional deadline for the call. The call will be cancelled if deadline is hit.</param>
+      /// <param name="cancellationToken">An optional token for canceling the call.</param>
+      /// <returns>The response received from the server.</returns>
+      public virtual global::Google.Protobuf.WellKnownTypes.Empty DeleteTopic(global::Google.Cloud.PubSub.V1.DeleteTopicRequest request, grpc::Metadata headers = null, global::System.DateTime? deadline = null, global::System.Threading.CancellationToken cancellationToken = default(global::System.Threading.CancellationToken))
+      {
+        return DeleteTopic(request, new grpc::CallOptions(headers, deadline, cancellationToken));
+      }
+      /// <summary>
+      /// Deletes the topic with the given name. Returns `NOT_FOUND` if the topic
+      /// does not exist. After a topic is deleted, a new topic may be created with
+      /// the same name; this is an entirely new topic with none of the old
+      /// configuration or subscriptions. Existing subscriptions to this topic are
+      /// not deleted, but their `topic` field is set to `_deleted-topic_`.
+      /// </summary>
+      /// <param name="request">The request to send to the server.</param>
+      /// <param name="options">The options for the call.</param>
+      /// <returns>The response received from the server.</returns>
+      public virtual global::Google.Protobuf.WellKnownTypes.Empty DeleteTopic(global::Google.Cloud.PubSub.V1.DeleteTopicRequest request, grpc::CallOptions options)
+      {
+        return CallInvoker.BlockingUnaryCall(__Method_DeleteTopic, null, options, request);
+      }
+      /// <summary>
+      /// Deletes the topic with the given name. Returns `NOT_FOUND` if the topic
+      /// does not exist. After a topic is deleted, a new topic may be created with
+      /// the same name; this is an entirely new topic with none of the old
+      /// configuration or subscriptions. Existing subscriptions to this topic are
+      /// not deleted, but their `topic` field is set to `_deleted-topic_`.
+      /// </summary>
+      /// <param name="request">The request to send to the server.</param>
+      /// <param name="headers">The initial metadata to send with the call. This parameter is optional.</param>
+      /// <param name="deadline">An optional deadline for the call. The call will be cancelled if deadline is hit.</param>
+      /// <param name="cancellationToken">An optional token for canceling the call.</param>
+      /// <returns>The call object.</returns>
+      public virtual grpc::AsyncUnaryCall<global::Google.Protobuf.WellKnownTypes.Empty> DeleteTopicAsync(global::Google.Cloud.PubSub.V1.DeleteTopicRequest request, grpc::Metadata headers = null, global::System.DateTime? deadline = null, global::System.Threading.CancellationToken cancellationToken = default(global::System.Threading.CancellationToken))
+      {
+        return DeleteTopicAsync(request, new grpc::CallOptions(headers, deadline, cancellationToken));
+      }
+      /// <summary>
+      /// Deletes the topic with the given name. Returns `NOT_FOUND` if the topic
+      /// does not exist. After a topic is deleted, a new topic may be created with
+      /// the same name; this is an entirely new topic with none of the old
+      /// configuration or subscriptions. Existing subscriptions to this topic are
+      /// not deleted, but their `topic` field is set to `_deleted-topic_`.
+      /// </summary>
+      /// <param name="request">The request to send to the server.</param>
+      /// <param name="options">The options for the call.</param>
+      /// <returns>The call object.</returns>
+      public virtual grpc::AsyncUnaryCall<global::Google.Protobuf.WellKnownTypes.Empty> DeleteTopicAsync(global::Google.Cloud.PubSub.V1.DeleteTopicRequest request, grpc::CallOptions options)
+      {
+        return CallInvoker.AsyncUnaryCall(__Method_DeleteTopic, null, options, request);
+      }
+      /// <summary>Creates a new instance of client from given <c>ClientBaseConfiguration</c>.</summary>
+      protected override PublisherClient NewInstance(ClientBaseConfiguration configuration)
+      {
+        return new PublisherClient(configuration);
+      }
+    }
+
+    /// <summary>Creates service definition that can be registered with a server</summary>
+    /// <param name="serviceImpl">An object implementing the server-side handling logic.</param>
+    public static grpc::ServerServiceDefinition BindService(PublisherBase serviceImpl)
+    {
+      return grpc::ServerServiceDefinition.CreateBuilder()
+          .AddMethod(__Method_CreateTopic, serviceImpl.CreateTopic)
+          .AddMethod(__Method_UpdateTopic, serviceImpl.UpdateTopic)
+          .AddMethod(__Method_Publish, serviceImpl.Publish)
+          .AddMethod(__Method_GetTopic, serviceImpl.GetTopic)
+          .AddMethod(__Method_ListTopics, serviceImpl.ListTopics)
+          .AddMethod(__Method_ListTopicSubscriptions, serviceImpl.ListTopicSubscriptions)
+          .AddMethod(__Method_ListTopicSnapshots, serviceImpl.ListTopicSnapshots)
+          .AddMethod(__Method_DeleteTopic, serviceImpl.DeleteTopic).Build();
+    }
+
+  }
+  /// <summary>
   /// The service that an application uses to manipulate subscriptions and to
-  /// consume messages from a subscription via the `Pull` method.
+  /// consume messages from a subscription via the `Pull` method or by
+  /// establishing a bi-directional stream using the `StreamingPull` method.
   /// </summary>
   public static partial class Subscriber
   {
@@ -45,10 +676,11 @@ namespace Google.Cloud.PubSub.V1 {
     static readonly grpc::Marshaller<global::Google.Cloud.PubSub.V1.StreamingPullRequest> __Marshaller_StreamingPullRequest = grpc::Marshallers.Create((arg) => global::Google.Protobuf.MessageExtensions.ToByteArray(arg), global::Google.Cloud.PubSub.V1.StreamingPullRequest.Parser.ParseFrom);
     static readonly grpc::Marshaller<global::Google.Cloud.PubSub.V1.StreamingPullResponse> __Marshaller_StreamingPullResponse = grpc::Marshallers.Create((arg) => global::Google.Protobuf.MessageExtensions.ToByteArray(arg), global::Google.Cloud.PubSub.V1.StreamingPullResponse.Parser.ParseFrom);
     static readonly grpc::Marshaller<global::Google.Cloud.PubSub.V1.ModifyPushConfigRequest> __Marshaller_ModifyPushConfigRequest = grpc::Marshallers.Create((arg) => global::Google.Protobuf.MessageExtensions.ToByteArray(arg), global::Google.Cloud.PubSub.V1.ModifyPushConfigRequest.Parser.ParseFrom);
+    static readonly grpc::Marshaller<global::Google.Cloud.PubSub.V1.GetSnapshotRequest> __Marshaller_GetSnapshotRequest = grpc::Marshallers.Create((arg) => global::Google.Protobuf.MessageExtensions.ToByteArray(arg), global::Google.Cloud.PubSub.V1.GetSnapshotRequest.Parser.ParseFrom);
+    static readonly grpc::Marshaller<global::Google.Cloud.PubSub.V1.Snapshot> __Marshaller_Snapshot = grpc::Marshallers.Create((arg) => global::Google.Protobuf.MessageExtensions.ToByteArray(arg), global::Google.Cloud.PubSub.V1.Snapshot.Parser.ParseFrom);
     static readonly grpc::Marshaller<global::Google.Cloud.PubSub.V1.ListSnapshotsRequest> __Marshaller_ListSnapshotsRequest = grpc::Marshallers.Create((arg) => global::Google.Protobuf.MessageExtensions.ToByteArray(arg), global::Google.Cloud.PubSub.V1.ListSnapshotsRequest.Parser.ParseFrom);
     static readonly grpc::Marshaller<global::Google.Cloud.PubSub.V1.ListSnapshotsResponse> __Marshaller_ListSnapshotsResponse = grpc::Marshallers.Create((arg) => global::Google.Protobuf.MessageExtensions.ToByteArray(arg), global::Google.Cloud.PubSub.V1.ListSnapshotsResponse.Parser.ParseFrom);
     static readonly grpc::Marshaller<global::Google.Cloud.PubSub.V1.CreateSnapshotRequest> __Marshaller_CreateSnapshotRequest = grpc::Marshallers.Create((arg) => global::Google.Protobuf.MessageExtensions.ToByteArray(arg), global::Google.Cloud.PubSub.V1.CreateSnapshotRequest.Parser.ParseFrom);
-    static readonly grpc::Marshaller<global::Google.Cloud.PubSub.V1.Snapshot> __Marshaller_Snapshot = grpc::Marshallers.Create((arg) => global::Google.Protobuf.MessageExtensions.ToByteArray(arg), global::Google.Cloud.PubSub.V1.Snapshot.Parser.ParseFrom);
     static readonly grpc::Marshaller<global::Google.Cloud.PubSub.V1.UpdateSnapshotRequest> __Marshaller_UpdateSnapshotRequest = grpc::Marshallers.Create((arg) => global::Google.Protobuf.MessageExtensions.ToByteArray(arg), global::Google.Cloud.PubSub.V1.UpdateSnapshotRequest.Parser.ParseFrom);
     static readonly grpc::Marshaller<global::Google.Cloud.PubSub.V1.DeleteSnapshotRequest> __Marshaller_DeleteSnapshotRequest = grpc::Marshallers.Create((arg) => global::Google.Protobuf.MessageExtensions.ToByteArray(arg), global::Google.Cloud.PubSub.V1.DeleteSnapshotRequest.Parser.ParseFrom);
     static readonly grpc::Marshaller<global::Google.Cloud.PubSub.V1.SeekRequest> __Marshaller_SeekRequest = grpc::Marshallers.Create((arg) => global::Google.Protobuf.MessageExtensions.ToByteArray(arg), global::Google.Cloud.PubSub.V1.SeekRequest.Parser.ParseFrom);
@@ -124,6 +756,13 @@ namespace Google.Cloud.PubSub.V1 {
         __Marshaller_ModifyPushConfigRequest,
         __Marshaller_Empty);
 
+    static readonly grpc::Method<global::Google.Cloud.PubSub.V1.GetSnapshotRequest, global::Google.Cloud.PubSub.V1.Snapshot> __Method_GetSnapshot = new grpc::Method<global::Google.Cloud.PubSub.V1.GetSnapshotRequest, global::Google.Cloud.PubSub.V1.Snapshot>(
+        grpc::MethodType.Unary,
+        __ServiceName,
+        "GetSnapshot",
+        __Marshaller_GetSnapshotRequest,
+        __Marshaller_Snapshot);
+
     static readonly grpc::Method<global::Google.Cloud.PubSub.V1.ListSnapshotsRequest, global::Google.Cloud.PubSub.V1.ListSnapshotsResponse> __Method_ListSnapshots = new grpc::Method<global::Google.Cloud.PubSub.V1.ListSnapshotsRequest, global::Google.Cloud.PubSub.V1.ListSnapshotsResponse>(
         grpc::MethodType.Unary,
         __ServiceName,
@@ -162,14 +801,15 @@ namespace Google.Cloud.PubSub.V1 {
     /// <summary>Service descriptor</summary>
     public static global::Google.Protobuf.Reflection.ServiceDescriptor Descriptor
     {
-      get { return global::Google.Cloud.PubSub.V1.PubsubReflection.Descriptor.Services[0]; }
+      get { return global::Google.Cloud.PubSub.V1.PubsubReflection.Descriptor.Services[1]; }
     }
 
     /// <summary>Base class for server-side implementations of Subscriber</summary>
     public abstract partial class SubscriberBase
     {
       /// <summary>
-      /// Creates a subscription to a given topic.
+      /// Creates a subscription to a given topic. See the
+      /// &lt;a href="/pubsub/docs/admin#resource_names"> resource name rules&lt;/a>.
       /// If the subscription already exists, returns `ALREADY_EXISTS`.
       /// If the corresponding topic doesn't exist, returns `NOT_FOUND`.
       ///
@@ -202,10 +842,6 @@ namespace Google.Cloud.PubSub.V1 {
       /// <summary>
       /// Updates an existing subscription. Note that certain properties of a
       /// subscription, such as its topic, are not modifiable.
-      /// NOTE:  The style guide requires body: "subscription" instead of body: "*".
-      /// Keeping the latter for internal consistency in V1, however it should be
-      /// corrected in V2.  See
-      /// https://cloud.google.com/apis/design/standard_methods#update for details.
       /// </summary>
       /// <param name="request">The request received from the client.</param>
       /// <param name="context">The context of the server-side call handler being invoked.</param>
@@ -288,18 +924,13 @@ namespace Google.Cloud.PubSub.V1 {
       }
 
       /// <summary>
-      /// (EXPERIMENTAL) StreamingPull is an experimental feature. This RPC will
-      /// respond with UNIMPLEMENTED errors unless you have been invited to test
-      /// this feature. Contact cloud-pubsub@google.com with any questions.
-      ///
       /// Establishes a stream with the server, which sends messages down to the
       /// client. The client streams acknowledgements and ack deadline modifications
       /// back to the server. The server will close the stream and return the status
-      /// on any error. The server may close the stream with status `OK` to reassign
-      /// server-side resources, in which case, the client should re-establish the
-      /// stream. `UNAVAILABLE` may also be returned in the case of a transient error
-      /// (e.g., a server restart). These should also be retried by the client. Flow
-      /// control can be achieved by configuring the underlying RPC channel.
+      /// on any error. The server may close the stream with status `UNAVAILABLE` to
+      /// reassign server-side resources, in which case, the client should
+      /// re-establish the stream. Flow control can be achieved by configuring the
+      /// underlying RPC channel.
       /// </summary>
       /// <param name="requestStream">Used for reading requests from the client.</param>
       /// <param name="responseStream">Used for sending responses back to the client.</param>
@@ -327,7 +958,24 @@ namespace Google.Cloud.PubSub.V1 {
       }
 
       /// <summary>
-      /// Lists the existing snapshots.
+      /// Gets the configuration details of a snapshot.&lt;br>&lt;br>
+      /// &lt;b>ALPHA:&lt;/b> This feature is part of an alpha release. This API might be
+      /// changed in backward-incompatible ways and is not recommended for production
+      /// use. It is not subject to any SLA or deprecation policy.
+      /// </summary>
+      /// <param name="request">The request received from the client.</param>
+      /// <param name="context">The context of the server-side call handler being invoked.</param>
+      /// <returns>The response to send back to the client (wrapped by a task).</returns>
+      public virtual global::System.Threading.Tasks.Task<global::Google.Cloud.PubSub.V1.Snapshot> GetSnapshot(global::Google.Cloud.PubSub.V1.GetSnapshotRequest request, grpc::ServerCallContext context)
+      {
+        throw new grpc::RpcException(new grpc::Status(grpc::StatusCode.Unimplemented, ""));
+      }
+
+      /// <summary>
+      /// Lists the existing snapshots.&lt;br>&lt;br>
+      /// &lt;b>ALPHA:&lt;/b> This feature is part of an alpha release. This API might be
+      /// changed in backward-incompatible ways and is not recommended for production
+      /// use. It is not subject to any SLA or deprecation policy.
       /// </summary>
       /// <param name="request">The request received from the client.</param>
       /// <param name="context">The context of the server-side call handler being invoked.</param>
@@ -338,16 +986,21 @@ namespace Google.Cloud.PubSub.V1 {
       }
 
       /// <summary>
-      /// Creates a snapshot from the requested subscription.
+      /// Creates a snapshot from the requested subscription.&lt;br>&lt;br>
+      /// &lt;b>ALPHA:&lt;/b> This feature is part of an alpha release. This API might be
+      /// changed in backward-incompatible ways and is not recommended for production
+      /// use. It is not subject to any SLA or deprecation policy.
       /// If the snapshot already exists, returns `ALREADY_EXISTS`.
       /// If the requested subscription doesn't exist, returns `NOT_FOUND`.
-      ///
-      /// If the name is not provided in the request, the server will assign a random
+      /// If the backlog in the subscription is too old -- and the resulting snapshot
+      /// would expire in less than 1 hour -- then `FAILED_PRECONDITION` is returned.
+      /// See also the `Snapshot.expire_time` field. If the name is not provided in
+      /// the request, the server will assign a random
       /// name for this snapshot on the same project as the subscription, conforming
-      /// to the
-      /// [resource name format](https://cloud.google.com/pubsub/docs/overview#names).
-      /// The generated name is populated in the returned Snapshot object.
-      /// Note that for REST API requests, you must specify a name in the request.
+      /// to the [resource name format](https://cloud.google.com/pubsub/docs/overview#names).
+      /// The generated
+      /// name is populated in the returned Snapshot object. Note that for REST API
+      /// requests, you must specify a name in the request.
       /// </summary>
       /// <param name="request">The request received from the client.</param>
       /// <param name="context">The context of the server-side call handler being invoked.</param>
@@ -358,12 +1011,11 @@ namespace Google.Cloud.PubSub.V1 {
       }
 
       /// <summary>
-      /// Updates an existing snapshot. Note that certain properties of a snapshot
-      /// are not modifiable.
-      /// NOTE:  The style guide requires body: "snapshot" instead of body: "*".
-      /// Keeping the latter for internal consistency in V1, however it should be
-      /// corrected in V2.  See
-      /// https://cloud.google.com/apis/design/standard_methods#update for details.
+      /// Updates an existing snapshot.&lt;br>&lt;br>
+      /// &lt;b>ALPHA:&lt;/b> This feature is part of an alpha release. This API might be
+      /// changed in backward-incompatible ways and is not recommended for production
+      /// use. It is not subject to any SLA or deprecation policy.
+      /// Note that certain properties of a snapshot are not modifiable.
       /// </summary>
       /// <param name="request">The request received from the client.</param>
       /// <param name="context">The context of the server-side call handler being invoked.</param>
@@ -374,7 +1026,11 @@ namespace Google.Cloud.PubSub.V1 {
       }
 
       /// <summary>
-      /// Removes an existing snapshot. All messages retained in the snapshot
+      /// Removes an existing snapshot. &lt;br>&lt;br>
+      /// &lt;b>ALPHA:&lt;/b> This feature is part of an alpha release. This API might be
+      /// changed in backward-incompatible ways and is not recommended for production
+      /// use. It is not subject to any SLA or deprecation policy.
+      /// When the snapshot is deleted, all messages retained in the snapshot
       /// are immediately dropped. After a snapshot is deleted, a new one may be
       /// created with the same name, but the new one has no association with the old
       /// snapshot or its subscription, unless the same subscription is specified.
@@ -389,7 +1045,10 @@ namespace Google.Cloud.PubSub.V1 {
 
       /// <summary>
       /// Seeks an existing subscription to a point in time or to a given snapshot,
-      /// whichever is provided in the request.
+      /// whichever is provided in the request.&lt;br>&lt;br>
+      /// &lt;b>ALPHA:&lt;/b> This feature is part of an alpha release. This API might be
+      /// changed in backward-incompatible ways and is not recommended for production
+      /// use. It is not subject to any SLA or deprecation policy.
       /// </summary>
       /// <param name="request">The request received from the client.</param>
       /// <param name="context">The context of the server-side call handler being invoked.</param>
@@ -425,7 +1084,8 @@ namespace Google.Cloud.PubSub.V1 {
       }
 
       /// <summary>
-      /// Creates a subscription to a given topic.
+      /// Creates a subscription to a given topic. See the
+      /// &lt;a href="/pubsub/docs/admin#resource_names"> resource name rules&lt;/a>.
       /// If the subscription already exists, returns `ALREADY_EXISTS`.
       /// If the corresponding topic doesn't exist, returns `NOT_FOUND`.
       ///
@@ -446,7 +1106,8 @@ namespace Google.Cloud.PubSub.V1 {
         return CreateSubscription(request, new grpc::CallOptions(headers, deadline, cancellationToken));
       }
       /// <summary>
-      /// Creates a subscription to a given topic.
+      /// Creates a subscription to a given topic. See the
+      /// &lt;a href="/pubsub/docs/admin#resource_names"> resource name rules&lt;/a>.
       /// If the subscription already exists, returns `ALREADY_EXISTS`.
       /// If the corresponding topic doesn't exist, returns `NOT_FOUND`.
       ///
@@ -465,7 +1126,8 @@ namespace Google.Cloud.PubSub.V1 {
         return CallInvoker.BlockingUnaryCall(__Method_CreateSubscription, null, options, request);
       }
       /// <summary>
-      /// Creates a subscription to a given topic.
+      /// Creates a subscription to a given topic. See the
+      /// &lt;a href="/pubsub/docs/admin#resource_names"> resource name rules&lt;/a>.
       /// If the subscription already exists, returns `ALREADY_EXISTS`.
       /// If the corresponding topic doesn't exist, returns `NOT_FOUND`.
       ///
@@ -486,7 +1148,8 @@ namespace Google.Cloud.PubSub.V1 {
         return CreateSubscriptionAsync(request, new grpc::CallOptions(headers, deadline, cancellationToken));
       }
       /// <summary>
-      /// Creates a subscription to a given topic.
+      /// Creates a subscription to a given topic. See the
+      /// &lt;a href="/pubsub/docs/admin#resource_names"> resource name rules&lt;/a>.
       /// If the subscription already exists, returns `ALREADY_EXISTS`.
       /// If the corresponding topic doesn't exist, returns `NOT_FOUND`.
       ///
@@ -551,10 +1214,6 @@ namespace Google.Cloud.PubSub.V1 {
       /// <summary>
       /// Updates an existing subscription. Note that certain properties of a
       /// subscription, such as its topic, are not modifiable.
-      /// NOTE:  The style guide requires body: "subscription" instead of body: "*".
-      /// Keeping the latter for internal consistency in V1, however it should be
-      /// corrected in V2.  See
-      /// https://cloud.google.com/apis/design/standard_methods#update for details.
       /// </summary>
       /// <param name="request">The request to send to the server.</param>
       /// <param name="headers">The initial metadata to send with the call. This parameter is optional.</param>
@@ -568,10 +1227,6 @@ namespace Google.Cloud.PubSub.V1 {
       /// <summary>
       /// Updates an existing subscription. Note that certain properties of a
       /// subscription, such as its topic, are not modifiable.
-      /// NOTE:  The style guide requires body: "subscription" instead of body: "*".
-      /// Keeping the latter for internal consistency in V1, however it should be
-      /// corrected in V2.  See
-      /// https://cloud.google.com/apis/design/standard_methods#update for details.
       /// </summary>
       /// <param name="request">The request to send to the server.</param>
       /// <param name="options">The options for the call.</param>
@@ -583,10 +1238,6 @@ namespace Google.Cloud.PubSub.V1 {
       /// <summary>
       /// Updates an existing subscription. Note that certain properties of a
       /// subscription, such as its topic, are not modifiable.
-      /// NOTE:  The style guide requires body: "subscription" instead of body: "*".
-      /// Keeping the latter for internal consistency in V1, however it should be
-      /// corrected in V2.  See
-      /// https://cloud.google.com/apis/design/standard_methods#update for details.
       /// </summary>
       /// <param name="request">The request to send to the server.</param>
       /// <param name="headers">The initial metadata to send with the call. This parameter is optional.</param>
@@ -600,10 +1251,6 @@ namespace Google.Cloud.PubSub.V1 {
       /// <summary>
       /// Updates an existing subscription. Note that certain properties of a
       /// subscription, such as its topic, are not modifiable.
-      /// NOTE:  The style guide requires body: "subscription" instead of body: "*".
-      /// Keeping the latter for internal consistency in V1, however it should be
-      /// corrected in V2.  See
-      /// https://cloud.google.com/apis/design/standard_methods#update for details.
       /// </summary>
       /// <param name="request">The request to send to the server.</param>
       /// <param name="options">The options for the call.</param>
@@ -901,18 +1548,13 @@ namespace Google.Cloud.PubSub.V1 {
         return CallInvoker.AsyncUnaryCall(__Method_Pull, null, options, request);
       }
       /// <summary>
-      /// (EXPERIMENTAL) StreamingPull is an experimental feature. This RPC will
-      /// respond with UNIMPLEMENTED errors unless you have been invited to test
-      /// this feature. Contact cloud-pubsub@google.com with any questions.
-      ///
       /// Establishes a stream with the server, which sends messages down to the
       /// client. The client streams acknowledgements and ack deadline modifications
       /// back to the server. The server will close the stream and return the status
-      /// on any error. The server may close the stream with status `OK` to reassign
-      /// server-side resources, in which case, the client should re-establish the
-      /// stream. `UNAVAILABLE` may also be returned in the case of a transient error
-      /// (e.g., a server restart). These should also be retried by the client. Flow
-      /// control can be achieved by configuring the underlying RPC channel.
+      /// on any error. The server may close the stream with status `UNAVAILABLE` to
+      /// reassign server-side resources, in which case, the client should
+      /// re-establish the stream. Flow control can be achieved by configuring the
+      /// underlying RPC channel.
       /// </summary>
       /// <param name="headers">The initial metadata to send with the call. This parameter is optional.</param>
       /// <param name="deadline">An optional deadline for the call. The call will be cancelled if deadline is hit.</param>
@@ -923,18 +1565,13 @@ namespace Google.Cloud.PubSub.V1 {
         return StreamingPull(new grpc::CallOptions(headers, deadline, cancellationToken));
       }
       /// <summary>
-      /// (EXPERIMENTAL) StreamingPull is an experimental feature. This RPC will
-      /// respond with UNIMPLEMENTED errors unless you have been invited to test
-      /// this feature. Contact cloud-pubsub@google.com with any questions.
-      ///
       /// Establishes a stream with the server, which sends messages down to the
       /// client. The client streams acknowledgements and ack deadline modifications
       /// back to the server. The server will close the stream and return the status
-      /// on any error. The server may close the stream with status `OK` to reassign
-      /// server-side resources, in which case, the client should re-establish the
-      /// stream. `UNAVAILABLE` may also be returned in the case of a transient error
-      /// (e.g., a server restart). These should also be retried by the client. Flow
-      /// control can be achieved by configuring the underlying RPC channel.
+      /// on any error. The server may close the stream with status `UNAVAILABLE` to
+      /// reassign server-side resources, in which case, the client should
+      /// re-establish the stream. Flow control can be achieved by configuring the
+      /// underlying RPC channel.
       /// </summary>
       /// <param name="options">The options for the call.</param>
       /// <returns>The call object.</returns>
@@ -1007,7 +1644,66 @@ namespace Google.Cloud.PubSub.V1 {
         return CallInvoker.AsyncUnaryCall(__Method_ModifyPushConfig, null, options, request);
       }
       /// <summary>
-      /// Lists the existing snapshots.
+      /// Gets the configuration details of a snapshot.&lt;br>&lt;br>
+      /// &lt;b>ALPHA:&lt;/b> This feature is part of an alpha release. This API might be
+      /// changed in backward-incompatible ways and is not recommended for production
+      /// use. It is not subject to any SLA or deprecation policy.
+      /// </summary>
+      /// <param name="request">The request to send to the server.</param>
+      /// <param name="headers">The initial metadata to send with the call. This parameter is optional.</param>
+      /// <param name="deadline">An optional deadline for the call. The call will be cancelled if deadline is hit.</param>
+      /// <param name="cancellationToken">An optional token for canceling the call.</param>
+      /// <returns>The response received from the server.</returns>
+      public virtual global::Google.Cloud.PubSub.V1.Snapshot GetSnapshot(global::Google.Cloud.PubSub.V1.GetSnapshotRequest request, grpc::Metadata headers = null, global::System.DateTime? deadline = null, global::System.Threading.CancellationToken cancellationToken = default(global::System.Threading.CancellationToken))
+      {
+        return GetSnapshot(request, new grpc::CallOptions(headers, deadline, cancellationToken));
+      }
+      /// <summary>
+      /// Gets the configuration details of a snapshot.&lt;br>&lt;br>
+      /// &lt;b>ALPHA:&lt;/b> This feature is part of an alpha release. This API might be
+      /// changed in backward-incompatible ways and is not recommended for production
+      /// use. It is not subject to any SLA or deprecation policy.
+      /// </summary>
+      /// <param name="request">The request to send to the server.</param>
+      /// <param name="options">The options for the call.</param>
+      /// <returns>The response received from the server.</returns>
+      public virtual global::Google.Cloud.PubSub.V1.Snapshot GetSnapshot(global::Google.Cloud.PubSub.V1.GetSnapshotRequest request, grpc::CallOptions options)
+      {
+        return CallInvoker.BlockingUnaryCall(__Method_GetSnapshot, null, options, request);
+      }
+      /// <summary>
+      /// Gets the configuration details of a snapshot.&lt;br>&lt;br>
+      /// &lt;b>ALPHA:&lt;/b> This feature is part of an alpha release. This API might be
+      /// changed in backward-incompatible ways and is not recommended for production
+      /// use. It is not subject to any SLA or deprecation policy.
+      /// </summary>
+      /// <param name="request">The request to send to the server.</param>
+      /// <param name="headers">The initial metadata to send with the call. This parameter is optional.</param>
+      /// <param name="deadline">An optional deadline for the call. The call will be cancelled if deadline is hit.</param>
+      /// <param name="cancellationToken">An optional token for canceling the call.</param>
+      /// <returns>The call object.</returns>
+      public virtual grpc::AsyncUnaryCall<global::Google.Cloud.PubSub.V1.Snapshot> GetSnapshotAsync(global::Google.Cloud.PubSub.V1.GetSnapshotRequest request, grpc::Metadata headers = null, global::System.DateTime? deadline = null, global::System.Threading.CancellationToken cancellationToken = default(global::System.Threading.CancellationToken))
+      {
+        return GetSnapshotAsync(request, new grpc::CallOptions(headers, deadline, cancellationToken));
+      }
+      /// <summary>
+      /// Gets the configuration details of a snapshot.&lt;br>&lt;br>
+      /// &lt;b>ALPHA:&lt;/b> This feature is part of an alpha release. This API might be
+      /// changed in backward-incompatible ways and is not recommended for production
+      /// use. It is not subject to any SLA or deprecation policy.
+      /// </summary>
+      /// <param name="request">The request to send to the server.</param>
+      /// <param name="options">The options for the call.</param>
+      /// <returns>The call object.</returns>
+      public virtual grpc::AsyncUnaryCall<global::Google.Cloud.PubSub.V1.Snapshot> GetSnapshotAsync(global::Google.Cloud.PubSub.V1.GetSnapshotRequest request, grpc::CallOptions options)
+      {
+        return CallInvoker.AsyncUnaryCall(__Method_GetSnapshot, null, options, request);
+      }
+      /// <summary>
+      /// Lists the existing snapshots.&lt;br>&lt;br>
+      /// &lt;b>ALPHA:&lt;/b> This feature is part of an alpha release. This API might be
+      /// changed in backward-incompatible ways and is not recommended for production
+      /// use. It is not subject to any SLA or deprecation policy.
       /// </summary>
       /// <param name="request">The request to send to the server.</param>
       /// <param name="headers">The initial metadata to send with the call. This parameter is optional.</param>
@@ -1019,7 +1715,10 @@ namespace Google.Cloud.PubSub.V1 {
         return ListSnapshots(request, new grpc::CallOptions(headers, deadline, cancellationToken));
       }
       /// <summary>
-      /// Lists the existing snapshots.
+      /// Lists the existing snapshots.&lt;br>&lt;br>
+      /// &lt;b>ALPHA:&lt;/b> This feature is part of an alpha release. This API might be
+      /// changed in backward-incompatible ways and is not recommended for production
+      /// use. It is not subject to any SLA or deprecation policy.
       /// </summary>
       /// <param name="request">The request to send to the server.</param>
       /// <param name="options">The options for the call.</param>
@@ -1029,7 +1728,10 @@ namespace Google.Cloud.PubSub.V1 {
         return CallInvoker.BlockingUnaryCall(__Method_ListSnapshots, null, options, request);
       }
       /// <summary>
-      /// Lists the existing snapshots.
+      /// Lists the existing snapshots.&lt;br>&lt;br>
+      /// &lt;b>ALPHA:&lt;/b> This feature is part of an alpha release. This API might be
+      /// changed in backward-incompatible ways and is not recommended for production
+      /// use. It is not subject to any SLA or deprecation policy.
       /// </summary>
       /// <param name="request">The request to send to the server.</param>
       /// <param name="headers">The initial metadata to send with the call. This parameter is optional.</param>
@@ -1041,7 +1743,10 @@ namespace Google.Cloud.PubSub.V1 {
         return ListSnapshotsAsync(request, new grpc::CallOptions(headers, deadline, cancellationToken));
       }
       /// <summary>
-      /// Lists the existing snapshots.
+      /// Lists the existing snapshots.&lt;br>&lt;br>
+      /// &lt;b>ALPHA:&lt;/b> This feature is part of an alpha release. This API might be
+      /// changed in backward-incompatible ways and is not recommended for production
+      /// use. It is not subject to any SLA or deprecation policy.
       /// </summary>
       /// <param name="request">The request to send to the server.</param>
       /// <param name="options">The options for the call.</param>
@@ -1051,16 +1756,21 @@ namespace Google.Cloud.PubSub.V1 {
         return CallInvoker.AsyncUnaryCall(__Method_ListSnapshots, null, options, request);
       }
       /// <summary>
-      /// Creates a snapshot from the requested subscription.
+      /// Creates a snapshot from the requested subscription.&lt;br>&lt;br>
+      /// &lt;b>ALPHA:&lt;/b> This feature is part of an alpha release. This API might be
+      /// changed in backward-incompatible ways and is not recommended for production
+      /// use. It is not subject to any SLA or deprecation policy.
       /// If the snapshot already exists, returns `ALREADY_EXISTS`.
       /// If the requested subscription doesn't exist, returns `NOT_FOUND`.
-      ///
-      /// If the name is not provided in the request, the server will assign a random
+      /// If the backlog in the subscription is too old -- and the resulting snapshot
+      /// would expire in less than 1 hour -- then `FAILED_PRECONDITION` is returned.
+      /// See also the `Snapshot.expire_time` field. If the name is not provided in
+      /// the request, the server will assign a random
       /// name for this snapshot on the same project as the subscription, conforming
-      /// to the
-      /// [resource name format](https://cloud.google.com/pubsub/docs/overview#names).
-      /// The generated name is populated in the returned Snapshot object.
-      /// Note that for REST API requests, you must specify a name in the request.
+      /// to the [resource name format](https://cloud.google.com/pubsub/docs/overview#names).
+      /// The generated
+      /// name is populated in the returned Snapshot object. Note that for REST API
+      /// requests, you must specify a name in the request.
       /// </summary>
       /// <param name="request">The request to send to the server.</param>
       /// <param name="headers">The initial metadata to send with the call. This parameter is optional.</param>
@@ -1072,16 +1782,21 @@ namespace Google.Cloud.PubSub.V1 {
         return CreateSnapshot(request, new grpc::CallOptions(headers, deadline, cancellationToken));
       }
       /// <summary>
-      /// Creates a snapshot from the requested subscription.
+      /// Creates a snapshot from the requested subscription.&lt;br>&lt;br>
+      /// &lt;b>ALPHA:&lt;/b> This feature is part of an alpha release. This API might be
+      /// changed in backward-incompatible ways and is not recommended for production
+      /// use. It is not subject to any SLA or deprecation policy.
       /// If the snapshot already exists, returns `ALREADY_EXISTS`.
       /// If the requested subscription doesn't exist, returns `NOT_FOUND`.
-      ///
-      /// If the name is not provided in the request, the server will assign a random
+      /// If the backlog in the subscription is too old -- and the resulting snapshot
+      /// would expire in less than 1 hour -- then `FAILED_PRECONDITION` is returned.
+      /// See also the `Snapshot.expire_time` field. If the name is not provided in
+      /// the request, the server will assign a random
       /// name for this snapshot on the same project as the subscription, conforming
-      /// to the
-      /// [resource name format](https://cloud.google.com/pubsub/docs/overview#names).
-      /// The generated name is populated in the returned Snapshot object.
-      /// Note that for REST API requests, you must specify a name in the request.
+      /// to the [resource name format](https://cloud.google.com/pubsub/docs/overview#names).
+      /// The generated
+      /// name is populated in the returned Snapshot object. Note that for REST API
+      /// requests, you must specify a name in the request.
       /// </summary>
       /// <param name="request">The request to send to the server.</param>
       /// <param name="options">The options for the call.</param>
@@ -1091,16 +1806,21 @@ namespace Google.Cloud.PubSub.V1 {
         return CallInvoker.BlockingUnaryCall(__Method_CreateSnapshot, null, options, request);
       }
       /// <summary>
-      /// Creates a snapshot from the requested subscription.
+      /// Creates a snapshot from the requested subscription.&lt;br>&lt;br>
+      /// &lt;b>ALPHA:&lt;/b> This feature is part of an alpha release. This API might be
+      /// changed in backward-incompatible ways and is not recommended for production
+      /// use. It is not subject to any SLA or deprecation policy.
       /// If the snapshot already exists, returns `ALREADY_EXISTS`.
       /// If the requested subscription doesn't exist, returns `NOT_FOUND`.
-      ///
-      /// If the name is not provided in the request, the server will assign a random
+      /// If the backlog in the subscription is too old -- and the resulting snapshot
+      /// would expire in less than 1 hour -- then `FAILED_PRECONDITION` is returned.
+      /// See also the `Snapshot.expire_time` field. If the name is not provided in
+      /// the request, the server will assign a random
       /// name for this snapshot on the same project as the subscription, conforming
-      /// to the
-      /// [resource name format](https://cloud.google.com/pubsub/docs/overview#names).
-      /// The generated name is populated in the returned Snapshot object.
-      /// Note that for REST API requests, you must specify a name in the request.
+      /// to the [resource name format](https://cloud.google.com/pubsub/docs/overview#names).
+      /// The generated
+      /// name is populated in the returned Snapshot object. Note that for REST API
+      /// requests, you must specify a name in the request.
       /// </summary>
       /// <param name="request">The request to send to the server.</param>
       /// <param name="headers">The initial metadata to send with the call. This parameter is optional.</param>
@@ -1112,16 +1832,21 @@ namespace Google.Cloud.PubSub.V1 {
         return CreateSnapshotAsync(request, new grpc::CallOptions(headers, deadline, cancellationToken));
       }
       /// <summary>
-      /// Creates a snapshot from the requested subscription.
+      /// Creates a snapshot from the requested subscription.&lt;br>&lt;br>
+      /// &lt;b>ALPHA:&lt;/b> This feature is part of an alpha release. This API might be
+      /// changed in backward-incompatible ways and is not recommended for production
+      /// use. It is not subject to any SLA or deprecation policy.
       /// If the snapshot already exists, returns `ALREADY_EXISTS`.
       /// If the requested subscription doesn't exist, returns `NOT_FOUND`.
-      ///
-      /// If the name is not provided in the request, the server will assign a random
+      /// If the backlog in the subscription is too old -- and the resulting snapshot
+      /// would expire in less than 1 hour -- then `FAILED_PRECONDITION` is returned.
+      /// See also the `Snapshot.expire_time` field. If the name is not provided in
+      /// the request, the server will assign a random
       /// name for this snapshot on the same project as the subscription, conforming
-      /// to the
-      /// [resource name format](https://cloud.google.com/pubsub/docs/overview#names).
-      /// The generated name is populated in the returned Snapshot object.
-      /// Note that for REST API requests, you must specify a name in the request.
+      /// to the [resource name format](https://cloud.google.com/pubsub/docs/overview#names).
+      /// The generated
+      /// name is populated in the returned Snapshot object. Note that for REST API
+      /// requests, you must specify a name in the request.
       /// </summary>
       /// <param name="request">The request to send to the server.</param>
       /// <param name="options">The options for the call.</param>
@@ -1131,12 +1856,11 @@ namespace Google.Cloud.PubSub.V1 {
         return CallInvoker.AsyncUnaryCall(__Method_CreateSnapshot, null, options, request);
       }
       /// <summary>
-      /// Updates an existing snapshot. Note that certain properties of a snapshot
-      /// are not modifiable.
-      /// NOTE:  The style guide requires body: "snapshot" instead of body: "*".
-      /// Keeping the latter for internal consistency in V1, however it should be
-      /// corrected in V2.  See
-      /// https://cloud.google.com/apis/design/standard_methods#update for details.
+      /// Updates an existing snapshot.&lt;br>&lt;br>
+      /// &lt;b>ALPHA:&lt;/b> This feature is part of an alpha release. This API might be
+      /// changed in backward-incompatible ways and is not recommended for production
+      /// use. It is not subject to any SLA or deprecation policy.
+      /// Note that certain properties of a snapshot are not modifiable.
       /// </summary>
       /// <param name="request">The request to send to the server.</param>
       /// <param name="headers">The initial metadata to send with the call. This parameter is optional.</param>
@@ -1148,12 +1872,11 @@ namespace Google.Cloud.PubSub.V1 {
         return UpdateSnapshot(request, new grpc::CallOptions(headers, deadline, cancellationToken));
       }
       /// <summary>
-      /// Updates an existing snapshot. Note that certain properties of a snapshot
-      /// are not modifiable.
-      /// NOTE:  The style guide requires body: "snapshot" instead of body: "*".
-      /// Keeping the latter for internal consistency in V1, however it should be
-      /// corrected in V2.  See
-      /// https://cloud.google.com/apis/design/standard_methods#update for details.
+      /// Updates an existing snapshot.&lt;br>&lt;br>
+      /// &lt;b>ALPHA:&lt;/b> This feature is part of an alpha release. This API might be
+      /// changed in backward-incompatible ways and is not recommended for production
+      /// use. It is not subject to any SLA or deprecation policy.
+      /// Note that certain properties of a snapshot are not modifiable.
       /// </summary>
       /// <param name="request">The request to send to the server.</param>
       /// <param name="options">The options for the call.</param>
@@ -1163,12 +1886,11 @@ namespace Google.Cloud.PubSub.V1 {
         return CallInvoker.BlockingUnaryCall(__Method_UpdateSnapshot, null, options, request);
       }
       /// <summary>
-      /// Updates an existing snapshot. Note that certain properties of a snapshot
-      /// are not modifiable.
-      /// NOTE:  The style guide requires body: "snapshot" instead of body: "*".
-      /// Keeping the latter for internal consistency in V1, however it should be
-      /// corrected in V2.  See
-      /// https://cloud.google.com/apis/design/standard_methods#update for details.
+      /// Updates an existing snapshot.&lt;br>&lt;br>
+      /// &lt;b>ALPHA:&lt;/b> This feature is part of an alpha release. This API might be
+      /// changed in backward-incompatible ways and is not recommended for production
+      /// use. It is not subject to any SLA or deprecation policy.
+      /// Note that certain properties of a snapshot are not modifiable.
       /// </summary>
       /// <param name="request">The request to send to the server.</param>
       /// <param name="headers">The initial metadata to send with the call. This parameter is optional.</param>
@@ -1180,12 +1902,11 @@ namespace Google.Cloud.PubSub.V1 {
         return UpdateSnapshotAsync(request, new grpc::CallOptions(headers, deadline, cancellationToken));
       }
       /// <summary>
-      /// Updates an existing snapshot. Note that certain properties of a snapshot
-      /// are not modifiable.
-      /// NOTE:  The style guide requires body: "snapshot" instead of body: "*".
-      /// Keeping the latter for internal consistency in V1, however it should be
-      /// corrected in V2.  See
-      /// https://cloud.google.com/apis/design/standard_methods#update for details.
+      /// Updates an existing snapshot.&lt;br>&lt;br>
+      /// &lt;b>ALPHA:&lt;/b> This feature is part of an alpha release. This API might be
+      /// changed in backward-incompatible ways and is not recommended for production
+      /// use. It is not subject to any SLA or deprecation policy.
+      /// Note that certain properties of a snapshot are not modifiable.
       /// </summary>
       /// <param name="request">The request to send to the server.</param>
       /// <param name="options">The options for the call.</param>
@@ -1195,7 +1916,11 @@ namespace Google.Cloud.PubSub.V1 {
         return CallInvoker.AsyncUnaryCall(__Method_UpdateSnapshot, null, options, request);
       }
       /// <summary>
-      /// Removes an existing snapshot. All messages retained in the snapshot
+      /// Removes an existing snapshot. &lt;br>&lt;br>
+      /// &lt;b>ALPHA:&lt;/b> This feature is part of an alpha release. This API might be
+      /// changed in backward-incompatible ways and is not recommended for production
+      /// use. It is not subject to any SLA or deprecation policy.
+      /// When the snapshot is deleted, all messages retained in the snapshot
       /// are immediately dropped. After a snapshot is deleted, a new one may be
       /// created with the same name, but the new one has no association with the old
       /// snapshot or its subscription, unless the same subscription is specified.
@@ -1210,7 +1935,11 @@ namespace Google.Cloud.PubSub.V1 {
         return DeleteSnapshot(request, new grpc::CallOptions(headers, deadline, cancellationToken));
       }
       /// <summary>
-      /// Removes an existing snapshot. All messages retained in the snapshot
+      /// Removes an existing snapshot. &lt;br>&lt;br>
+      /// &lt;b>ALPHA:&lt;/b> This feature is part of an alpha release. This API might be
+      /// changed in backward-incompatible ways and is not recommended for production
+      /// use. It is not subject to any SLA or deprecation policy.
+      /// When the snapshot is deleted, all messages retained in the snapshot
       /// are immediately dropped. After a snapshot is deleted, a new one may be
       /// created with the same name, but the new one has no association with the old
       /// snapshot or its subscription, unless the same subscription is specified.
@@ -1223,7 +1952,11 @@ namespace Google.Cloud.PubSub.V1 {
         return CallInvoker.BlockingUnaryCall(__Method_DeleteSnapshot, null, options, request);
       }
       /// <summary>
-      /// Removes an existing snapshot. All messages retained in the snapshot
+      /// Removes an existing snapshot. &lt;br>&lt;br>
+      /// &lt;b>ALPHA:&lt;/b> This feature is part of an alpha release. This API might be
+      /// changed in backward-incompatible ways and is not recommended for production
+      /// use. It is not subject to any SLA or deprecation policy.
+      /// When the snapshot is deleted, all messages retained in the snapshot
       /// are immediately dropped. After a snapshot is deleted, a new one may be
       /// created with the same name, but the new one has no association with the old
       /// snapshot or its subscription, unless the same subscription is specified.
@@ -1238,7 +1971,11 @@ namespace Google.Cloud.PubSub.V1 {
         return DeleteSnapshotAsync(request, new grpc::CallOptions(headers, deadline, cancellationToken));
       }
       /// <summary>
-      /// Removes an existing snapshot. All messages retained in the snapshot
+      /// Removes an existing snapshot. &lt;br>&lt;br>
+      /// &lt;b>ALPHA:&lt;/b> This feature is part of an alpha release. This API might be
+      /// changed in backward-incompatible ways and is not recommended for production
+      /// use. It is not subject to any SLA or deprecation policy.
+      /// When the snapshot is deleted, all messages retained in the snapshot
       /// are immediately dropped. After a snapshot is deleted, a new one may be
       /// created with the same name, but the new one has no association with the old
       /// snapshot or its subscription, unless the same subscription is specified.
@@ -1252,7 +1989,10 @@ namespace Google.Cloud.PubSub.V1 {
       }
       /// <summary>
       /// Seeks an existing subscription to a point in time or to a given snapshot,
-      /// whichever is provided in the request.
+      /// whichever is provided in the request.&lt;br>&lt;br>
+      /// &lt;b>ALPHA:&lt;/b> This feature is part of an alpha release. This API might be
+      /// changed in backward-incompatible ways and is not recommended for production
+      /// use. It is not subject to any SLA or deprecation policy.
       /// </summary>
       /// <param name="request">The request to send to the server.</param>
       /// <param name="headers">The initial metadata to send with the call. This parameter is optional.</param>
@@ -1265,7 +2005,10 @@ namespace Google.Cloud.PubSub.V1 {
       }
       /// <summary>
       /// Seeks an existing subscription to a point in time or to a given snapshot,
-      /// whichever is provided in the request.
+      /// whichever is provided in the request.&lt;br>&lt;br>
+      /// &lt;b>ALPHA:&lt;/b> This feature is part of an alpha release. This API might be
+      /// changed in backward-incompatible ways and is not recommended for production
+      /// use. It is not subject to any SLA or deprecation policy.
       /// </summary>
       /// <param name="request">The request to send to the server.</param>
       /// <param name="options">The options for the call.</param>
@@ -1276,7 +2019,10 @@ namespace Google.Cloud.PubSub.V1 {
       }
       /// <summary>
       /// Seeks an existing subscription to a point in time or to a given snapshot,
-      /// whichever is provided in the request.
+      /// whichever is provided in the request.&lt;br>&lt;br>
+      /// &lt;b>ALPHA:&lt;/b> This feature is part of an alpha release. This API might be
+      /// changed in backward-incompatible ways and is not recommended for production
+      /// use. It is not subject to any SLA or deprecation policy.
       /// </summary>
       /// <param name="request">The request to send to the server.</param>
       /// <param name="headers">The initial metadata to send with the call. This parameter is optional.</param>
@@ -1289,7 +2035,10 @@ namespace Google.Cloud.PubSub.V1 {
       }
       /// <summary>
       /// Seeks an existing subscription to a point in time or to a given snapshot,
-      /// whichever is provided in the request.
+      /// whichever is provided in the request.&lt;br>&lt;br>
+      /// &lt;b>ALPHA:&lt;/b> This feature is part of an alpha release. This API might be
+      /// changed in backward-incompatible ways and is not recommended for production
+      /// use. It is not subject to any SLA or deprecation policy.
       /// </summary>
       /// <param name="request">The request to send to the server.</param>
       /// <param name="options">The options for the call.</param>
@@ -1320,576 +2069,12 @@ namespace Google.Cloud.PubSub.V1 {
           .AddMethod(__Method_Pull, serviceImpl.Pull)
           .AddMethod(__Method_StreamingPull, serviceImpl.StreamingPull)
           .AddMethod(__Method_ModifyPushConfig, serviceImpl.ModifyPushConfig)
+          .AddMethod(__Method_GetSnapshot, serviceImpl.GetSnapshot)
           .AddMethod(__Method_ListSnapshots, serviceImpl.ListSnapshots)
           .AddMethod(__Method_CreateSnapshot, serviceImpl.CreateSnapshot)
           .AddMethod(__Method_UpdateSnapshot, serviceImpl.UpdateSnapshot)
           .AddMethod(__Method_DeleteSnapshot, serviceImpl.DeleteSnapshot)
           .AddMethod(__Method_Seek, serviceImpl.Seek).Build();
-    }
-
-  }
-  /// <summary>
-  /// The service that an application uses to manipulate topics, and to send
-  /// messages to a topic.
-  /// </summary>
-  public static partial class Publisher
-  {
-    static readonly string __ServiceName = "google.pubsub.v1.Publisher";
-
-    static readonly grpc::Marshaller<global::Google.Cloud.PubSub.V1.Topic> __Marshaller_Topic = grpc::Marshallers.Create((arg) => global::Google.Protobuf.MessageExtensions.ToByteArray(arg), global::Google.Cloud.PubSub.V1.Topic.Parser.ParseFrom);
-    static readonly grpc::Marshaller<global::Google.Cloud.PubSub.V1.UpdateTopicRequest> __Marshaller_UpdateTopicRequest = grpc::Marshallers.Create((arg) => global::Google.Protobuf.MessageExtensions.ToByteArray(arg), global::Google.Cloud.PubSub.V1.UpdateTopicRequest.Parser.ParseFrom);
-    static readonly grpc::Marshaller<global::Google.Cloud.PubSub.V1.PublishRequest> __Marshaller_PublishRequest = grpc::Marshallers.Create((arg) => global::Google.Protobuf.MessageExtensions.ToByteArray(arg), global::Google.Cloud.PubSub.V1.PublishRequest.Parser.ParseFrom);
-    static readonly grpc::Marshaller<global::Google.Cloud.PubSub.V1.PublishResponse> __Marshaller_PublishResponse = grpc::Marshallers.Create((arg) => global::Google.Protobuf.MessageExtensions.ToByteArray(arg), global::Google.Cloud.PubSub.V1.PublishResponse.Parser.ParseFrom);
-    static readonly grpc::Marshaller<global::Google.Cloud.PubSub.V1.GetTopicRequest> __Marshaller_GetTopicRequest = grpc::Marshallers.Create((arg) => global::Google.Protobuf.MessageExtensions.ToByteArray(arg), global::Google.Cloud.PubSub.V1.GetTopicRequest.Parser.ParseFrom);
-    static readonly grpc::Marshaller<global::Google.Cloud.PubSub.V1.ListTopicsRequest> __Marshaller_ListTopicsRequest = grpc::Marshallers.Create((arg) => global::Google.Protobuf.MessageExtensions.ToByteArray(arg), global::Google.Cloud.PubSub.V1.ListTopicsRequest.Parser.ParseFrom);
-    static readonly grpc::Marshaller<global::Google.Cloud.PubSub.V1.ListTopicsResponse> __Marshaller_ListTopicsResponse = grpc::Marshallers.Create((arg) => global::Google.Protobuf.MessageExtensions.ToByteArray(arg), global::Google.Cloud.PubSub.V1.ListTopicsResponse.Parser.ParseFrom);
-    static readonly grpc::Marshaller<global::Google.Cloud.PubSub.V1.ListTopicSubscriptionsRequest> __Marshaller_ListTopicSubscriptionsRequest = grpc::Marshallers.Create((arg) => global::Google.Protobuf.MessageExtensions.ToByteArray(arg), global::Google.Cloud.PubSub.V1.ListTopicSubscriptionsRequest.Parser.ParseFrom);
-    static readonly grpc::Marshaller<global::Google.Cloud.PubSub.V1.ListTopicSubscriptionsResponse> __Marshaller_ListTopicSubscriptionsResponse = grpc::Marshallers.Create((arg) => global::Google.Protobuf.MessageExtensions.ToByteArray(arg), global::Google.Cloud.PubSub.V1.ListTopicSubscriptionsResponse.Parser.ParseFrom);
-    static readonly grpc::Marshaller<global::Google.Cloud.PubSub.V1.DeleteTopicRequest> __Marshaller_DeleteTopicRequest = grpc::Marshallers.Create((arg) => global::Google.Protobuf.MessageExtensions.ToByteArray(arg), global::Google.Cloud.PubSub.V1.DeleteTopicRequest.Parser.ParseFrom);
-    static readonly grpc::Marshaller<global::Google.Protobuf.WellKnownTypes.Empty> __Marshaller_Empty = grpc::Marshallers.Create((arg) => global::Google.Protobuf.MessageExtensions.ToByteArray(arg), global::Google.Protobuf.WellKnownTypes.Empty.Parser.ParseFrom);
-
-    static readonly grpc::Method<global::Google.Cloud.PubSub.V1.Topic, global::Google.Cloud.PubSub.V1.Topic> __Method_CreateTopic = new grpc::Method<global::Google.Cloud.PubSub.V1.Topic, global::Google.Cloud.PubSub.V1.Topic>(
-        grpc::MethodType.Unary,
-        __ServiceName,
-        "CreateTopic",
-        __Marshaller_Topic,
-        __Marshaller_Topic);
-
-    static readonly grpc::Method<global::Google.Cloud.PubSub.V1.UpdateTopicRequest, global::Google.Cloud.PubSub.V1.Topic> __Method_UpdateTopic = new grpc::Method<global::Google.Cloud.PubSub.V1.UpdateTopicRequest, global::Google.Cloud.PubSub.V1.Topic>(
-        grpc::MethodType.Unary,
-        __ServiceName,
-        "UpdateTopic",
-        __Marshaller_UpdateTopicRequest,
-        __Marshaller_Topic);
-
-    static readonly grpc::Method<global::Google.Cloud.PubSub.V1.PublishRequest, global::Google.Cloud.PubSub.V1.PublishResponse> __Method_Publish = new grpc::Method<global::Google.Cloud.PubSub.V1.PublishRequest, global::Google.Cloud.PubSub.V1.PublishResponse>(
-        grpc::MethodType.Unary,
-        __ServiceName,
-        "Publish",
-        __Marshaller_PublishRequest,
-        __Marshaller_PublishResponse);
-
-    static readonly grpc::Method<global::Google.Cloud.PubSub.V1.GetTopicRequest, global::Google.Cloud.PubSub.V1.Topic> __Method_GetTopic = new grpc::Method<global::Google.Cloud.PubSub.V1.GetTopicRequest, global::Google.Cloud.PubSub.V1.Topic>(
-        grpc::MethodType.Unary,
-        __ServiceName,
-        "GetTopic",
-        __Marshaller_GetTopicRequest,
-        __Marshaller_Topic);
-
-    static readonly grpc::Method<global::Google.Cloud.PubSub.V1.ListTopicsRequest, global::Google.Cloud.PubSub.V1.ListTopicsResponse> __Method_ListTopics = new grpc::Method<global::Google.Cloud.PubSub.V1.ListTopicsRequest, global::Google.Cloud.PubSub.V1.ListTopicsResponse>(
-        grpc::MethodType.Unary,
-        __ServiceName,
-        "ListTopics",
-        __Marshaller_ListTopicsRequest,
-        __Marshaller_ListTopicsResponse);
-
-    static readonly grpc::Method<global::Google.Cloud.PubSub.V1.ListTopicSubscriptionsRequest, global::Google.Cloud.PubSub.V1.ListTopicSubscriptionsResponse> __Method_ListTopicSubscriptions = new grpc::Method<global::Google.Cloud.PubSub.V1.ListTopicSubscriptionsRequest, global::Google.Cloud.PubSub.V1.ListTopicSubscriptionsResponse>(
-        grpc::MethodType.Unary,
-        __ServiceName,
-        "ListTopicSubscriptions",
-        __Marshaller_ListTopicSubscriptionsRequest,
-        __Marshaller_ListTopicSubscriptionsResponse);
-
-    static readonly grpc::Method<global::Google.Cloud.PubSub.V1.DeleteTopicRequest, global::Google.Protobuf.WellKnownTypes.Empty> __Method_DeleteTopic = new grpc::Method<global::Google.Cloud.PubSub.V1.DeleteTopicRequest, global::Google.Protobuf.WellKnownTypes.Empty>(
-        grpc::MethodType.Unary,
-        __ServiceName,
-        "DeleteTopic",
-        __Marshaller_DeleteTopicRequest,
-        __Marshaller_Empty);
-
-    /// <summary>Service descriptor</summary>
-    public static global::Google.Protobuf.Reflection.ServiceDescriptor Descriptor
-    {
-      get { return global::Google.Cloud.PubSub.V1.PubsubReflection.Descriptor.Services[1]; }
-    }
-
-    /// <summary>Base class for server-side implementations of Publisher</summary>
-    public abstract partial class PublisherBase
-    {
-      /// <summary>
-      /// Creates the given topic with the given name.
-      /// </summary>
-      /// <param name="request">The request received from the client.</param>
-      /// <param name="context">The context of the server-side call handler being invoked.</param>
-      /// <returns>The response to send back to the client (wrapped by a task).</returns>
-      public virtual global::System.Threading.Tasks.Task<global::Google.Cloud.PubSub.V1.Topic> CreateTopic(global::Google.Cloud.PubSub.V1.Topic request, grpc::ServerCallContext context)
-      {
-        throw new grpc::RpcException(new grpc::Status(grpc::StatusCode.Unimplemented, ""));
-      }
-
-      /// <summary>
-      /// Updates an existing topic. Note that certain properties of a topic are not
-      /// modifiable.  Options settings follow the style guide:
-      /// NOTE:  The style guide requires body: "topic" instead of body: "*".
-      /// Keeping the latter for internal consistency in V1, however it should be
-      /// corrected in V2.  See
-      /// https://cloud.google.com/apis/design/standard_methods#update for details.
-      /// </summary>
-      /// <param name="request">The request received from the client.</param>
-      /// <param name="context">The context of the server-side call handler being invoked.</param>
-      /// <returns>The response to send back to the client (wrapped by a task).</returns>
-      public virtual global::System.Threading.Tasks.Task<global::Google.Cloud.PubSub.V1.Topic> UpdateTopic(global::Google.Cloud.PubSub.V1.UpdateTopicRequest request, grpc::ServerCallContext context)
-      {
-        throw new grpc::RpcException(new grpc::Status(grpc::StatusCode.Unimplemented, ""));
-      }
-
-      /// <summary>
-      /// Adds one or more messages to the topic. Returns `NOT_FOUND` if the topic
-      /// does not exist. The message payload must not be empty; it must contain
-      ///  either a non-empty data field, or at least one attribute.
-      /// </summary>
-      /// <param name="request">The request received from the client.</param>
-      /// <param name="context">The context of the server-side call handler being invoked.</param>
-      /// <returns>The response to send back to the client (wrapped by a task).</returns>
-      public virtual global::System.Threading.Tasks.Task<global::Google.Cloud.PubSub.V1.PublishResponse> Publish(global::Google.Cloud.PubSub.V1.PublishRequest request, grpc::ServerCallContext context)
-      {
-        throw new grpc::RpcException(new grpc::Status(grpc::StatusCode.Unimplemented, ""));
-      }
-
-      /// <summary>
-      /// Gets the configuration of a topic.
-      /// </summary>
-      /// <param name="request">The request received from the client.</param>
-      /// <param name="context">The context of the server-side call handler being invoked.</param>
-      /// <returns>The response to send back to the client (wrapped by a task).</returns>
-      public virtual global::System.Threading.Tasks.Task<global::Google.Cloud.PubSub.V1.Topic> GetTopic(global::Google.Cloud.PubSub.V1.GetTopicRequest request, grpc::ServerCallContext context)
-      {
-        throw new grpc::RpcException(new grpc::Status(grpc::StatusCode.Unimplemented, ""));
-      }
-
-      /// <summary>
-      /// Lists matching topics.
-      /// </summary>
-      /// <param name="request">The request received from the client.</param>
-      /// <param name="context">The context of the server-side call handler being invoked.</param>
-      /// <returns>The response to send back to the client (wrapped by a task).</returns>
-      public virtual global::System.Threading.Tasks.Task<global::Google.Cloud.PubSub.V1.ListTopicsResponse> ListTopics(global::Google.Cloud.PubSub.V1.ListTopicsRequest request, grpc::ServerCallContext context)
-      {
-        throw new grpc::RpcException(new grpc::Status(grpc::StatusCode.Unimplemented, ""));
-      }
-
-      /// <summary>
-      /// Lists the name of the subscriptions for this topic.
-      /// </summary>
-      /// <param name="request">The request received from the client.</param>
-      /// <param name="context">The context of the server-side call handler being invoked.</param>
-      /// <returns>The response to send back to the client (wrapped by a task).</returns>
-      public virtual global::System.Threading.Tasks.Task<global::Google.Cloud.PubSub.V1.ListTopicSubscriptionsResponse> ListTopicSubscriptions(global::Google.Cloud.PubSub.V1.ListTopicSubscriptionsRequest request, grpc::ServerCallContext context)
-      {
-        throw new grpc::RpcException(new grpc::Status(grpc::StatusCode.Unimplemented, ""));
-      }
-
-      /// <summary>
-      /// Deletes the topic with the given name. Returns `NOT_FOUND` if the topic
-      /// does not exist. After a topic is deleted, a new topic may be created with
-      /// the same name; this is an entirely new topic with none of the old
-      /// configuration or subscriptions. Existing subscriptions to this topic are
-      /// not deleted, but their `topic` field is set to `_deleted-topic_`.
-      /// </summary>
-      /// <param name="request">The request received from the client.</param>
-      /// <param name="context">The context of the server-side call handler being invoked.</param>
-      /// <returns>The response to send back to the client (wrapped by a task).</returns>
-      public virtual global::System.Threading.Tasks.Task<global::Google.Protobuf.WellKnownTypes.Empty> DeleteTopic(global::Google.Cloud.PubSub.V1.DeleteTopicRequest request, grpc::ServerCallContext context)
-      {
-        throw new grpc::RpcException(new grpc::Status(grpc::StatusCode.Unimplemented, ""));
-      }
-
-    }
-
-    /// <summary>Client for Publisher</summary>
-    public partial class PublisherClient : grpc::ClientBase<PublisherClient>
-    {
-      /// <summary>Creates a new client for Publisher</summary>
-      /// <param name="channel">The channel to use to make remote calls.</param>
-      public PublisherClient(grpc::Channel channel) : base(channel)
-      {
-      }
-      /// <summary>Creates a new client for Publisher that uses a custom <c>CallInvoker</c>.</summary>
-      /// <param name="callInvoker">The callInvoker to use to make remote calls.</param>
-      public PublisherClient(grpc::CallInvoker callInvoker) : base(callInvoker)
-      {
-      }
-      /// <summary>Protected parameterless constructor to allow creation of test doubles.</summary>
-      protected PublisherClient() : base()
-      {
-      }
-      /// <summary>Protected constructor to allow creation of configured clients.</summary>
-      /// <param name="configuration">The client configuration.</param>
-      protected PublisherClient(ClientBaseConfiguration configuration) : base(configuration)
-      {
-      }
-
-      /// <summary>
-      /// Creates the given topic with the given name.
-      /// </summary>
-      /// <param name="request">The request to send to the server.</param>
-      /// <param name="headers">The initial metadata to send with the call. This parameter is optional.</param>
-      /// <param name="deadline">An optional deadline for the call. The call will be cancelled if deadline is hit.</param>
-      /// <param name="cancellationToken">An optional token for canceling the call.</param>
-      /// <returns>The response received from the server.</returns>
-      public virtual global::Google.Cloud.PubSub.V1.Topic CreateTopic(global::Google.Cloud.PubSub.V1.Topic request, grpc::Metadata headers = null, global::System.DateTime? deadline = null, global::System.Threading.CancellationToken cancellationToken = default(global::System.Threading.CancellationToken))
-      {
-        return CreateTopic(request, new grpc::CallOptions(headers, deadline, cancellationToken));
-      }
-      /// <summary>
-      /// Creates the given topic with the given name.
-      /// </summary>
-      /// <param name="request">The request to send to the server.</param>
-      /// <param name="options">The options for the call.</param>
-      /// <returns>The response received from the server.</returns>
-      public virtual global::Google.Cloud.PubSub.V1.Topic CreateTopic(global::Google.Cloud.PubSub.V1.Topic request, grpc::CallOptions options)
-      {
-        return CallInvoker.BlockingUnaryCall(__Method_CreateTopic, null, options, request);
-      }
-      /// <summary>
-      /// Creates the given topic with the given name.
-      /// </summary>
-      /// <param name="request">The request to send to the server.</param>
-      /// <param name="headers">The initial metadata to send with the call. This parameter is optional.</param>
-      /// <param name="deadline">An optional deadline for the call. The call will be cancelled if deadline is hit.</param>
-      /// <param name="cancellationToken">An optional token for canceling the call.</param>
-      /// <returns>The call object.</returns>
-      public virtual grpc::AsyncUnaryCall<global::Google.Cloud.PubSub.V1.Topic> CreateTopicAsync(global::Google.Cloud.PubSub.V1.Topic request, grpc::Metadata headers = null, global::System.DateTime? deadline = null, global::System.Threading.CancellationToken cancellationToken = default(global::System.Threading.CancellationToken))
-      {
-        return CreateTopicAsync(request, new grpc::CallOptions(headers, deadline, cancellationToken));
-      }
-      /// <summary>
-      /// Creates the given topic with the given name.
-      /// </summary>
-      /// <param name="request">The request to send to the server.</param>
-      /// <param name="options">The options for the call.</param>
-      /// <returns>The call object.</returns>
-      public virtual grpc::AsyncUnaryCall<global::Google.Cloud.PubSub.V1.Topic> CreateTopicAsync(global::Google.Cloud.PubSub.V1.Topic request, grpc::CallOptions options)
-      {
-        return CallInvoker.AsyncUnaryCall(__Method_CreateTopic, null, options, request);
-      }
-      /// <summary>
-      /// Updates an existing topic. Note that certain properties of a topic are not
-      /// modifiable.  Options settings follow the style guide:
-      /// NOTE:  The style guide requires body: "topic" instead of body: "*".
-      /// Keeping the latter for internal consistency in V1, however it should be
-      /// corrected in V2.  See
-      /// https://cloud.google.com/apis/design/standard_methods#update for details.
-      /// </summary>
-      /// <param name="request">The request to send to the server.</param>
-      /// <param name="headers">The initial metadata to send with the call. This parameter is optional.</param>
-      /// <param name="deadline">An optional deadline for the call. The call will be cancelled if deadline is hit.</param>
-      /// <param name="cancellationToken">An optional token for canceling the call.</param>
-      /// <returns>The response received from the server.</returns>
-      public virtual global::Google.Cloud.PubSub.V1.Topic UpdateTopic(global::Google.Cloud.PubSub.V1.UpdateTopicRequest request, grpc::Metadata headers = null, global::System.DateTime? deadline = null, global::System.Threading.CancellationToken cancellationToken = default(global::System.Threading.CancellationToken))
-      {
-        return UpdateTopic(request, new grpc::CallOptions(headers, deadline, cancellationToken));
-      }
-      /// <summary>
-      /// Updates an existing topic. Note that certain properties of a topic are not
-      /// modifiable.  Options settings follow the style guide:
-      /// NOTE:  The style guide requires body: "topic" instead of body: "*".
-      /// Keeping the latter for internal consistency in V1, however it should be
-      /// corrected in V2.  See
-      /// https://cloud.google.com/apis/design/standard_methods#update for details.
-      /// </summary>
-      /// <param name="request">The request to send to the server.</param>
-      /// <param name="options">The options for the call.</param>
-      /// <returns>The response received from the server.</returns>
-      public virtual global::Google.Cloud.PubSub.V1.Topic UpdateTopic(global::Google.Cloud.PubSub.V1.UpdateTopicRequest request, grpc::CallOptions options)
-      {
-        return CallInvoker.BlockingUnaryCall(__Method_UpdateTopic, null, options, request);
-      }
-      /// <summary>
-      /// Updates an existing topic. Note that certain properties of a topic are not
-      /// modifiable.  Options settings follow the style guide:
-      /// NOTE:  The style guide requires body: "topic" instead of body: "*".
-      /// Keeping the latter for internal consistency in V1, however it should be
-      /// corrected in V2.  See
-      /// https://cloud.google.com/apis/design/standard_methods#update for details.
-      /// </summary>
-      /// <param name="request">The request to send to the server.</param>
-      /// <param name="headers">The initial metadata to send with the call. This parameter is optional.</param>
-      /// <param name="deadline">An optional deadline for the call. The call will be cancelled if deadline is hit.</param>
-      /// <param name="cancellationToken">An optional token for canceling the call.</param>
-      /// <returns>The call object.</returns>
-      public virtual grpc::AsyncUnaryCall<global::Google.Cloud.PubSub.V1.Topic> UpdateTopicAsync(global::Google.Cloud.PubSub.V1.UpdateTopicRequest request, grpc::Metadata headers = null, global::System.DateTime? deadline = null, global::System.Threading.CancellationToken cancellationToken = default(global::System.Threading.CancellationToken))
-      {
-        return UpdateTopicAsync(request, new grpc::CallOptions(headers, deadline, cancellationToken));
-      }
-      /// <summary>
-      /// Updates an existing topic. Note that certain properties of a topic are not
-      /// modifiable.  Options settings follow the style guide:
-      /// NOTE:  The style guide requires body: "topic" instead of body: "*".
-      /// Keeping the latter for internal consistency in V1, however it should be
-      /// corrected in V2.  See
-      /// https://cloud.google.com/apis/design/standard_methods#update for details.
-      /// </summary>
-      /// <param name="request">The request to send to the server.</param>
-      /// <param name="options">The options for the call.</param>
-      /// <returns>The call object.</returns>
-      public virtual grpc::AsyncUnaryCall<global::Google.Cloud.PubSub.V1.Topic> UpdateTopicAsync(global::Google.Cloud.PubSub.V1.UpdateTopicRequest request, grpc::CallOptions options)
-      {
-        return CallInvoker.AsyncUnaryCall(__Method_UpdateTopic, null, options, request);
-      }
-      /// <summary>
-      /// Adds one or more messages to the topic. Returns `NOT_FOUND` if the topic
-      /// does not exist. The message payload must not be empty; it must contain
-      ///  either a non-empty data field, or at least one attribute.
-      /// </summary>
-      /// <param name="request">The request to send to the server.</param>
-      /// <param name="headers">The initial metadata to send with the call. This parameter is optional.</param>
-      /// <param name="deadline">An optional deadline for the call. The call will be cancelled if deadline is hit.</param>
-      /// <param name="cancellationToken">An optional token for canceling the call.</param>
-      /// <returns>The response received from the server.</returns>
-      public virtual global::Google.Cloud.PubSub.V1.PublishResponse Publish(global::Google.Cloud.PubSub.V1.PublishRequest request, grpc::Metadata headers = null, global::System.DateTime? deadline = null, global::System.Threading.CancellationToken cancellationToken = default(global::System.Threading.CancellationToken))
-      {
-        return Publish(request, new grpc::CallOptions(headers, deadline, cancellationToken));
-      }
-      /// <summary>
-      /// Adds one or more messages to the topic. Returns `NOT_FOUND` if the topic
-      /// does not exist. The message payload must not be empty; it must contain
-      ///  either a non-empty data field, or at least one attribute.
-      /// </summary>
-      /// <param name="request">The request to send to the server.</param>
-      /// <param name="options">The options for the call.</param>
-      /// <returns>The response received from the server.</returns>
-      public virtual global::Google.Cloud.PubSub.V1.PublishResponse Publish(global::Google.Cloud.PubSub.V1.PublishRequest request, grpc::CallOptions options)
-      {
-        return CallInvoker.BlockingUnaryCall(__Method_Publish, null, options, request);
-      }
-      /// <summary>
-      /// Adds one or more messages to the topic. Returns `NOT_FOUND` if the topic
-      /// does not exist. The message payload must not be empty; it must contain
-      ///  either a non-empty data field, or at least one attribute.
-      /// </summary>
-      /// <param name="request">The request to send to the server.</param>
-      /// <param name="headers">The initial metadata to send with the call. This parameter is optional.</param>
-      /// <param name="deadline">An optional deadline for the call. The call will be cancelled if deadline is hit.</param>
-      /// <param name="cancellationToken">An optional token for canceling the call.</param>
-      /// <returns>The call object.</returns>
-      public virtual grpc::AsyncUnaryCall<global::Google.Cloud.PubSub.V1.PublishResponse> PublishAsync(global::Google.Cloud.PubSub.V1.PublishRequest request, grpc::Metadata headers = null, global::System.DateTime? deadline = null, global::System.Threading.CancellationToken cancellationToken = default(global::System.Threading.CancellationToken))
-      {
-        return PublishAsync(request, new grpc::CallOptions(headers, deadline, cancellationToken));
-      }
-      /// <summary>
-      /// Adds one or more messages to the topic. Returns `NOT_FOUND` if the topic
-      /// does not exist. The message payload must not be empty; it must contain
-      ///  either a non-empty data field, or at least one attribute.
-      /// </summary>
-      /// <param name="request">The request to send to the server.</param>
-      /// <param name="options">The options for the call.</param>
-      /// <returns>The call object.</returns>
-      public virtual grpc::AsyncUnaryCall<global::Google.Cloud.PubSub.V1.PublishResponse> PublishAsync(global::Google.Cloud.PubSub.V1.PublishRequest request, grpc::CallOptions options)
-      {
-        return CallInvoker.AsyncUnaryCall(__Method_Publish, null, options, request);
-      }
-      /// <summary>
-      /// Gets the configuration of a topic.
-      /// </summary>
-      /// <param name="request">The request to send to the server.</param>
-      /// <param name="headers">The initial metadata to send with the call. This parameter is optional.</param>
-      /// <param name="deadline">An optional deadline for the call. The call will be cancelled if deadline is hit.</param>
-      /// <param name="cancellationToken">An optional token for canceling the call.</param>
-      /// <returns>The response received from the server.</returns>
-      public virtual global::Google.Cloud.PubSub.V1.Topic GetTopic(global::Google.Cloud.PubSub.V1.GetTopicRequest request, grpc::Metadata headers = null, global::System.DateTime? deadline = null, global::System.Threading.CancellationToken cancellationToken = default(global::System.Threading.CancellationToken))
-      {
-        return GetTopic(request, new grpc::CallOptions(headers, deadline, cancellationToken));
-      }
-      /// <summary>
-      /// Gets the configuration of a topic.
-      /// </summary>
-      /// <param name="request">The request to send to the server.</param>
-      /// <param name="options">The options for the call.</param>
-      /// <returns>The response received from the server.</returns>
-      public virtual global::Google.Cloud.PubSub.V1.Topic GetTopic(global::Google.Cloud.PubSub.V1.GetTopicRequest request, grpc::CallOptions options)
-      {
-        return CallInvoker.BlockingUnaryCall(__Method_GetTopic, null, options, request);
-      }
-      /// <summary>
-      /// Gets the configuration of a topic.
-      /// </summary>
-      /// <param name="request">The request to send to the server.</param>
-      /// <param name="headers">The initial metadata to send with the call. This parameter is optional.</param>
-      /// <param name="deadline">An optional deadline for the call. The call will be cancelled if deadline is hit.</param>
-      /// <param name="cancellationToken">An optional token for canceling the call.</param>
-      /// <returns>The call object.</returns>
-      public virtual grpc::AsyncUnaryCall<global::Google.Cloud.PubSub.V1.Topic> GetTopicAsync(global::Google.Cloud.PubSub.V1.GetTopicRequest request, grpc::Metadata headers = null, global::System.DateTime? deadline = null, global::System.Threading.CancellationToken cancellationToken = default(global::System.Threading.CancellationToken))
-      {
-        return GetTopicAsync(request, new grpc::CallOptions(headers, deadline, cancellationToken));
-      }
-      /// <summary>
-      /// Gets the configuration of a topic.
-      /// </summary>
-      /// <param name="request">The request to send to the server.</param>
-      /// <param name="options">The options for the call.</param>
-      /// <returns>The call object.</returns>
-      public virtual grpc::AsyncUnaryCall<global::Google.Cloud.PubSub.V1.Topic> GetTopicAsync(global::Google.Cloud.PubSub.V1.GetTopicRequest request, grpc::CallOptions options)
-      {
-        return CallInvoker.AsyncUnaryCall(__Method_GetTopic, null, options, request);
-      }
-      /// <summary>
-      /// Lists matching topics.
-      /// </summary>
-      /// <param name="request">The request to send to the server.</param>
-      /// <param name="headers">The initial metadata to send with the call. This parameter is optional.</param>
-      /// <param name="deadline">An optional deadline for the call. The call will be cancelled if deadline is hit.</param>
-      /// <param name="cancellationToken">An optional token for canceling the call.</param>
-      /// <returns>The response received from the server.</returns>
-      public virtual global::Google.Cloud.PubSub.V1.ListTopicsResponse ListTopics(global::Google.Cloud.PubSub.V1.ListTopicsRequest request, grpc::Metadata headers = null, global::System.DateTime? deadline = null, global::System.Threading.CancellationToken cancellationToken = default(global::System.Threading.CancellationToken))
-      {
-        return ListTopics(request, new grpc::CallOptions(headers, deadline, cancellationToken));
-      }
-      /// <summary>
-      /// Lists matching topics.
-      /// </summary>
-      /// <param name="request">The request to send to the server.</param>
-      /// <param name="options">The options for the call.</param>
-      /// <returns>The response received from the server.</returns>
-      public virtual global::Google.Cloud.PubSub.V1.ListTopicsResponse ListTopics(global::Google.Cloud.PubSub.V1.ListTopicsRequest request, grpc::CallOptions options)
-      {
-        return CallInvoker.BlockingUnaryCall(__Method_ListTopics, null, options, request);
-      }
-      /// <summary>
-      /// Lists matching topics.
-      /// </summary>
-      /// <param name="request">The request to send to the server.</param>
-      /// <param name="headers">The initial metadata to send with the call. This parameter is optional.</param>
-      /// <param name="deadline">An optional deadline for the call. The call will be cancelled if deadline is hit.</param>
-      /// <param name="cancellationToken">An optional token for canceling the call.</param>
-      /// <returns>The call object.</returns>
-      public virtual grpc::AsyncUnaryCall<global::Google.Cloud.PubSub.V1.ListTopicsResponse> ListTopicsAsync(global::Google.Cloud.PubSub.V1.ListTopicsRequest request, grpc::Metadata headers = null, global::System.DateTime? deadline = null, global::System.Threading.CancellationToken cancellationToken = default(global::System.Threading.CancellationToken))
-      {
-        return ListTopicsAsync(request, new grpc::CallOptions(headers, deadline, cancellationToken));
-      }
-      /// <summary>
-      /// Lists matching topics.
-      /// </summary>
-      /// <param name="request">The request to send to the server.</param>
-      /// <param name="options">The options for the call.</param>
-      /// <returns>The call object.</returns>
-      public virtual grpc::AsyncUnaryCall<global::Google.Cloud.PubSub.V1.ListTopicsResponse> ListTopicsAsync(global::Google.Cloud.PubSub.V1.ListTopicsRequest request, grpc::CallOptions options)
-      {
-        return CallInvoker.AsyncUnaryCall(__Method_ListTopics, null, options, request);
-      }
-      /// <summary>
-      /// Lists the name of the subscriptions for this topic.
-      /// </summary>
-      /// <param name="request">The request to send to the server.</param>
-      /// <param name="headers">The initial metadata to send with the call. This parameter is optional.</param>
-      /// <param name="deadline">An optional deadline for the call. The call will be cancelled if deadline is hit.</param>
-      /// <param name="cancellationToken">An optional token for canceling the call.</param>
-      /// <returns>The response received from the server.</returns>
-      public virtual global::Google.Cloud.PubSub.V1.ListTopicSubscriptionsResponse ListTopicSubscriptions(global::Google.Cloud.PubSub.V1.ListTopicSubscriptionsRequest request, grpc::Metadata headers = null, global::System.DateTime? deadline = null, global::System.Threading.CancellationToken cancellationToken = default(global::System.Threading.CancellationToken))
-      {
-        return ListTopicSubscriptions(request, new grpc::CallOptions(headers, deadline, cancellationToken));
-      }
-      /// <summary>
-      /// Lists the name of the subscriptions for this topic.
-      /// </summary>
-      /// <param name="request">The request to send to the server.</param>
-      /// <param name="options">The options for the call.</param>
-      /// <returns>The response received from the server.</returns>
-      public virtual global::Google.Cloud.PubSub.V1.ListTopicSubscriptionsResponse ListTopicSubscriptions(global::Google.Cloud.PubSub.V1.ListTopicSubscriptionsRequest request, grpc::CallOptions options)
-      {
-        return CallInvoker.BlockingUnaryCall(__Method_ListTopicSubscriptions, null, options, request);
-      }
-      /// <summary>
-      /// Lists the name of the subscriptions for this topic.
-      /// </summary>
-      /// <param name="request">The request to send to the server.</param>
-      /// <param name="headers">The initial metadata to send with the call. This parameter is optional.</param>
-      /// <param name="deadline">An optional deadline for the call. The call will be cancelled if deadline is hit.</param>
-      /// <param name="cancellationToken">An optional token for canceling the call.</param>
-      /// <returns>The call object.</returns>
-      public virtual grpc::AsyncUnaryCall<global::Google.Cloud.PubSub.V1.ListTopicSubscriptionsResponse> ListTopicSubscriptionsAsync(global::Google.Cloud.PubSub.V1.ListTopicSubscriptionsRequest request, grpc::Metadata headers = null, global::System.DateTime? deadline = null, global::System.Threading.CancellationToken cancellationToken = default(global::System.Threading.CancellationToken))
-      {
-        return ListTopicSubscriptionsAsync(request, new grpc::CallOptions(headers, deadline, cancellationToken));
-      }
-      /// <summary>
-      /// Lists the name of the subscriptions for this topic.
-      /// </summary>
-      /// <param name="request">The request to send to the server.</param>
-      /// <param name="options">The options for the call.</param>
-      /// <returns>The call object.</returns>
-      public virtual grpc::AsyncUnaryCall<global::Google.Cloud.PubSub.V1.ListTopicSubscriptionsResponse> ListTopicSubscriptionsAsync(global::Google.Cloud.PubSub.V1.ListTopicSubscriptionsRequest request, grpc::CallOptions options)
-      {
-        return CallInvoker.AsyncUnaryCall(__Method_ListTopicSubscriptions, null, options, request);
-      }
-      /// <summary>
-      /// Deletes the topic with the given name. Returns `NOT_FOUND` if the topic
-      /// does not exist. After a topic is deleted, a new topic may be created with
-      /// the same name; this is an entirely new topic with none of the old
-      /// configuration or subscriptions. Existing subscriptions to this topic are
-      /// not deleted, but their `topic` field is set to `_deleted-topic_`.
-      /// </summary>
-      /// <param name="request">The request to send to the server.</param>
-      /// <param name="headers">The initial metadata to send with the call. This parameter is optional.</param>
-      /// <param name="deadline">An optional deadline for the call. The call will be cancelled if deadline is hit.</param>
-      /// <param name="cancellationToken">An optional token for canceling the call.</param>
-      /// <returns>The response received from the server.</returns>
-      public virtual global::Google.Protobuf.WellKnownTypes.Empty DeleteTopic(global::Google.Cloud.PubSub.V1.DeleteTopicRequest request, grpc::Metadata headers = null, global::System.DateTime? deadline = null, global::System.Threading.CancellationToken cancellationToken = default(global::System.Threading.CancellationToken))
-      {
-        return DeleteTopic(request, new grpc::CallOptions(headers, deadline, cancellationToken));
-      }
-      /// <summary>
-      /// Deletes the topic with the given name. Returns `NOT_FOUND` if the topic
-      /// does not exist. After a topic is deleted, a new topic may be created with
-      /// the same name; this is an entirely new topic with none of the old
-      /// configuration or subscriptions. Existing subscriptions to this topic are
-      /// not deleted, but their `topic` field is set to `_deleted-topic_`.
-      /// </summary>
-      /// <param name="request">The request to send to the server.</param>
-      /// <param name="options">The options for the call.</param>
-      /// <returns>The response received from the server.</returns>
-      public virtual global::Google.Protobuf.WellKnownTypes.Empty DeleteTopic(global::Google.Cloud.PubSub.V1.DeleteTopicRequest request, grpc::CallOptions options)
-      {
-        return CallInvoker.BlockingUnaryCall(__Method_DeleteTopic, null, options, request);
-      }
-      /// <summary>
-      /// Deletes the topic with the given name. Returns `NOT_FOUND` if the topic
-      /// does not exist. After a topic is deleted, a new topic may be created with
-      /// the same name; this is an entirely new topic with none of the old
-      /// configuration or subscriptions. Existing subscriptions to this topic are
-      /// not deleted, but their `topic` field is set to `_deleted-topic_`.
-      /// </summary>
-      /// <param name="request">The request to send to the server.</param>
-      /// <param name="headers">The initial metadata to send with the call. This parameter is optional.</param>
-      /// <param name="deadline">An optional deadline for the call. The call will be cancelled if deadline is hit.</param>
-      /// <param name="cancellationToken">An optional token for canceling the call.</param>
-      /// <returns>The call object.</returns>
-      public virtual grpc::AsyncUnaryCall<global::Google.Protobuf.WellKnownTypes.Empty> DeleteTopicAsync(global::Google.Cloud.PubSub.V1.DeleteTopicRequest request, grpc::Metadata headers = null, global::System.DateTime? deadline = null, global::System.Threading.CancellationToken cancellationToken = default(global::System.Threading.CancellationToken))
-      {
-        return DeleteTopicAsync(request, new grpc::CallOptions(headers, deadline, cancellationToken));
-      }
-      /// <summary>
-      /// Deletes the topic with the given name. Returns `NOT_FOUND` if the topic
-      /// does not exist. After a topic is deleted, a new topic may be created with
-      /// the same name; this is an entirely new topic with none of the old
-      /// configuration or subscriptions. Existing subscriptions to this topic are
-      /// not deleted, but their `topic` field is set to `_deleted-topic_`.
-      /// </summary>
-      /// <param name="request">The request to send to the server.</param>
-      /// <param name="options">The options for the call.</param>
-      /// <returns>The call object.</returns>
-      public virtual grpc::AsyncUnaryCall<global::Google.Protobuf.WellKnownTypes.Empty> DeleteTopicAsync(global::Google.Cloud.PubSub.V1.DeleteTopicRequest request, grpc::CallOptions options)
-      {
-        return CallInvoker.AsyncUnaryCall(__Method_DeleteTopic, null, options, request);
-      }
-      /// <summary>Creates a new instance of client from given <c>ClientBaseConfiguration</c>.</summary>
-      protected override PublisherClient NewInstance(ClientBaseConfiguration configuration)
-      {
-        return new PublisherClient(configuration);
-      }
-    }
-
-    /// <summary>Creates service definition that can be registered with a server</summary>
-    /// <param name="serviceImpl">An object implementing the server-side handling logic.</param>
-    public static grpc::ServerServiceDefinition BindService(PublisherBase serviceImpl)
-    {
-      return grpc::ServerServiceDefinition.CreateBuilder()
-          .AddMethod(__Method_CreateTopic, serviceImpl.CreateTopic)
-          .AddMethod(__Method_UpdateTopic, serviceImpl.UpdateTopic)
-          .AddMethod(__Method_Publish, serviceImpl.Publish)
-          .AddMethod(__Method_GetTopic, serviceImpl.GetTopic)
-          .AddMethod(__Method_ListTopics, serviceImpl.ListTopics)
-          .AddMethod(__Method_ListTopicSubscriptions, serviceImpl.ListTopicSubscriptions)
-          .AddMethod(__Method_DeleteTopic, serviceImpl.DeleteTopic).Build();
     }
 
   }
