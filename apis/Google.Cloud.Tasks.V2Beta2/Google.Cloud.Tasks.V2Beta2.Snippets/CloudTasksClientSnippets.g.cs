@@ -679,7 +679,7 @@ namespace Google.Cloud.Tasks.V2Beta2.Snippets
             // Initialize request argument(s)
             GetIamPolicyRequest request = new GetIamPolicyRequest
             {
-                ResourceAsResourceName = new QueueName("[PROJECT]", "[LOCATION]", "[QUEUE]"),
+                Resource = new QueueName("[PROJECT]", "[LOCATION]", "[QUEUE]").ToString(),
             };
             // Make the request
             Policy response = await cloudTasksClient.GetIamPolicyAsync(request);
@@ -695,7 +695,7 @@ namespace Google.Cloud.Tasks.V2Beta2.Snippets
             // Initialize request argument(s)
             GetIamPolicyRequest request = new GetIamPolicyRequest
             {
-                ResourceAsResourceName = new QueueName("[PROJECT]", "[LOCATION]", "[QUEUE]"),
+                Resource = new QueueName("[PROJECT]", "[LOCATION]", "[QUEUE]").ToString(),
             };
             // Make the request
             Policy response = cloudTasksClient.GetIamPolicy(request);
@@ -741,7 +741,7 @@ namespace Google.Cloud.Tasks.V2Beta2.Snippets
             // Initialize request argument(s)
             SetIamPolicyRequest request = new SetIamPolicyRequest
             {
-                ResourceAsResourceName = new QueueName("[PROJECT]", "[LOCATION]", "[QUEUE]"),
+                Resource = new QueueName("[PROJECT]", "[LOCATION]", "[QUEUE]").ToString(),
                 Policy = new Policy(),
             };
             // Make the request
@@ -758,7 +758,7 @@ namespace Google.Cloud.Tasks.V2Beta2.Snippets
             // Initialize request argument(s)
             SetIamPolicyRequest request = new SetIamPolicyRequest
             {
-                ResourceAsResourceName = new QueueName("[PROJECT]", "[LOCATION]", "[QUEUE]"),
+                Resource = new QueueName("[PROJECT]", "[LOCATION]", "[QUEUE]").ToString(),
                 Policy = new Policy(),
             };
             // Make the request
@@ -805,7 +805,7 @@ namespace Google.Cloud.Tasks.V2Beta2.Snippets
             // Initialize request argument(s)
             TestIamPermissionsRequest request = new TestIamPermissionsRequest
             {
-                ResourceAsResourceName = new QueueName("[PROJECT]", "[LOCATION]", "[QUEUE]"),
+                Resource = new QueueName("[PROJECT]", "[LOCATION]", "[QUEUE]").ToString(),
                 Permissions = { },
             };
             // Make the request
@@ -822,7 +822,7 @@ namespace Google.Cloud.Tasks.V2Beta2.Snippets
             // Initialize request argument(s)
             TestIamPermissionsRequest request = new TestIamPermissionsRequest
             {
-                ResourceAsResourceName = new QueueName("[PROJECT]", "[LOCATION]", "[QUEUE]"),
+                Resource = new QueueName("[PROJECT]", "[LOCATION]", "[QUEUE]").ToString(),
                 Permissions = { },
             };
             // Make the request

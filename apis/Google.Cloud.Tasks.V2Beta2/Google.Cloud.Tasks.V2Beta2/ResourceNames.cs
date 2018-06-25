@@ -481,19 +481,6 @@ namespace Google.Cloud.Tasks.V2Beta2
 
     }
 
-    public partial class GetIamPolicyRequest
-    {
-        /// <summary>
-        /// <see cref="gax::IResourceName"/>-typed view over the <see cref="Resource"/> resource name property.
-        /// </summary>
-        public gax::IResourceName ResourceAsResourceName
-        {
-            get { return string.IsNullOrEmpty(Resource) ? null : gax::UnknownResourceName.Parse(Resource); }
-            set { Resource = value != null ? value.ToString() : ""; }
-        }
-
-    }
-
     public partial class GetQueueRequest
     {
         /// <summary>
@@ -637,19 +624,6 @@ namespace Google.Cloud.Tasks.V2Beta2
 
     }
 
-    public partial class SetIamPolicyRequest
-    {
-        /// <summary>
-        /// <see cref="gax::IResourceName"/>-typed view over the <see cref="Resource"/> resource name property.
-        /// </summary>
-        public gax::IResourceName ResourceAsResourceName
-        {
-            get { return string.IsNullOrEmpty(Resource) ? null : gax::UnknownResourceName.Parse(Resource); }
-            set { Resource = value != null ? value.ToString() : ""; }
-        }
-
-    }
-
     public partial class Task
     {
         /// <summary>
@@ -662,18 +636,5 @@ namespace Google.Cloud.Tasks.V2Beta2
         }
 
     }
-
-    public partial class TestIamPermissionsRequest
-    {
-        /// <summary>
-        /// <see cref="gax::IResourceName"/>-typed view over the <see cref="Resource"/> resource name property.
-        /// </summary>
-        public gax::IResourceName ResourceAsResourceName
-        {
-            get { return string.IsNullOrEmpty(Resource) ? null : gax::UnknownResourceName.Parse(Resource); }
-            set { Resource = value != null ? value.ToString() : ""; }
-        }
-
-    }
-
+    
 }

@@ -2295,7 +2295,7 @@ namespace Google.Cloud.Tasks.V2Beta2
             gaxgrpc::CallSettings callSettings = null) => GetIamPolicyAsync(
                 new iam::GetIamPolicyRequest
                 {
-                    ResourceAsResourceName = gax::GaxPreconditions.CheckNotNull(resource, nameof(resource)),
+                    Resource = gax::GaxPreconditions.CheckNotNull(resource, nameof(resource)).ToString(),
                 },
                 callSettings);
 
@@ -2352,7 +2352,7 @@ namespace Google.Cloud.Tasks.V2Beta2
             gaxgrpc::CallSettings callSettings = null) => GetIamPolicy(
                 new iam::GetIamPolicyRequest
                 {
-                    ResourceAsResourceName = gax::GaxPreconditions.CheckNotNull(resource, nameof(resource)),
+                    Resource = gax::GaxPreconditions.CheckNotNull(resource, nameof(resource)).ToString(),
                 },
                 callSettings);
 
@@ -2468,7 +2468,7 @@ namespace Google.Cloud.Tasks.V2Beta2
             gaxgrpc::CallSettings callSettings = null) => SetIamPolicyAsync(
                 new iam::SetIamPolicyRequest
                 {
-                    ResourceAsResourceName = gax::GaxPreconditions.CheckNotNull(resource, nameof(resource)),
+                    Resource = gax::GaxPreconditions.CheckNotNull(resource, nameof(resource)).ToString(),
                     Policy = gax::GaxPreconditions.CheckNotNull(policy, nameof(policy)),
                 },
                 callSettings);
@@ -2545,7 +2545,7 @@ namespace Google.Cloud.Tasks.V2Beta2
             gaxgrpc::CallSettings callSettings = null) => SetIamPolicy(
                 new iam::SetIamPolicyRequest
                 {
-                    ResourceAsResourceName = gax::GaxPreconditions.CheckNotNull(resource, nameof(resource)),
+                    Resource = gax::GaxPreconditions.CheckNotNull(resource, nameof(resource)).ToString(),
                     Policy = gax::GaxPreconditions.CheckNotNull(policy, nameof(policy)),
                 },
                 callSettings);
@@ -2665,7 +2665,7 @@ namespace Google.Cloud.Tasks.V2Beta2
             gaxgrpc::CallSettings callSettings = null) => TestIamPermissionsAsync(
                 new iam::TestIamPermissionsRequest
                 {
-                    ResourceAsResourceName = gax::GaxPreconditions.CheckNotNull(resource, nameof(resource)),
+                    Resource = gax::GaxPreconditions.CheckNotNull(resource, nameof(resource)).ToString(),
                     Permissions = { gax::GaxPreconditions.CheckNotNull(permissions, nameof(permissions)) },
                 },
                 callSettings);
@@ -2736,7 +2736,7 @@ namespace Google.Cloud.Tasks.V2Beta2
             gaxgrpc::CallSettings callSettings = null) => TestIamPermissions(
                 new iam::TestIamPermissionsRequest
                 {
-                    ResourceAsResourceName = gax::GaxPreconditions.CheckNotNull(resource, nameof(resource)),
+                    Resource = gax::GaxPreconditions.CheckNotNull(resource, nameof(resource)).ToString(),
                     Permissions = { gax::GaxPreconditions.CheckNotNull(permissions, nameof(permissions)) },
                 },
                 callSettings);
