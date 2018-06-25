@@ -47,13 +47,15 @@ namespace Google.Cloud.Spanner.V1
         /// Depending on the state of the session, this may or may not result in a request
         /// to Spanner over the network.
         /// </summary>
-        /// <param name="session"></param>
-        /// <param name="client"></param>
-        /// <param name="options"></param>
-        /// <returns></returns>
+        /// <param name="client">The client to use for the transaction. Must not be null.</param>
+        /// <param name="session">The session to use for the transaction. Must not be null.</param>
+        /// <param name="options">The options for the transaction.</param>
+        /// <returns>A task which, when completed, will result in a suitable transaction for the given parameters.</returns>
         public static async Task<Transaction> BeginPooledTransactionAsync(this SpannerClient client, Session session,
             TransactionOptions options)
         {
+            GaxPreconditions.CheckNotNull(client, nameof(client));
+            GaxPreconditions.CheckNotNull(session, nameof(session));
             var info = s_sessionInfoTable.GetOrAdd(session, s => new SessionInfo(client));
 
             //we need to await for previous task completion anyway -- otherwise there is a bad race condition.
@@ -91,11 +93,11 @@ namespace Google.Cloud.Spanner.V1
         /// <summary>
         /// When a session is deleted or no longer used, this will remove it from the transaction pool.
         /// </summary>
-        /// <param name="session"></param>
+        /// <param name="session">The session to remove from the pool. Must not be null.</param>
         public static async Task RemoveFromTransactionPoolAsync(this Session session)
         {
-            SessionInfo info;
-            if (s_sessionInfoTable.TryGetValue(session, out info))
+            GaxPreconditions.CheckNotNull(session, nameof(session));
+            if (s_sessionInfoTable.TryGetValue(session, out SessionInfo info))
             {
                 //we need to await for previous task completion anyway -- otherwise there is a bad race condition.
                 await info.WaitForPreWarmAsync().ConfigureAwait(false);
@@ -109,29 +111,21 @@ namespace Google.Cloud.Spanner.V1
         }
 
         /// <summary>
-        /// Returns the last used transactionoptions for CreateTransactionAsync.
+        /// Returns the last used transaction options for CreateTransactionAsync.
         /// It may return null if the the session was set to use implicit transactions.
         /// </summary>
-        /// <param name="session"></param>
-        /// <returns></returns>
+        /// <param name="session">The session to check for its last transaction options. Must not be null.</param>
+        /// <returns>The last used options, if any.</returns>
         internal static TransactionOptions GetLastUsedTransactionOptions(this Session session)
         {
-            SessionInfo info;
-            if (s_sessionInfoTable.TryGetValue(session, out info))
-            {
-                return info.TransactionOptions;
-            }
-            return null;
+            GaxPreconditions.CheckNotNull(session, nameof(session));
+            return s_sessionInfoTable.TryGetValue(session, out SessionInfo info) ? info.TransactionOptions : null;
         }
 
         internal static bool IsPreWarmedTransactionReady(this Session session)
         {
-            SessionInfo info;
-            if (s_sessionInfoTable.TryGetValue(session, out info))
-            {
-                return info.HasActiveTransaction;
-            }
-            return false;
+            GaxPreconditions.CheckNotNull(session, nameof(session));
+            return s_sessionInfoTable.TryGetValue(session, out SessionInfo info) && info.HasActiveTransaction;
         }
 
         internal static Task WaitForPrewarm(this Session session)
@@ -140,13 +134,14 @@ namespace Google.Cloud.Spanner.V1
 
         /// <summary>
         /// Starts a pre-warm background task to create a transaction on the given session with the
-        /// last used transaction options.  This method will only work if CreateTransactionAsync
+        /// last used transaction options. This method will only work if CreateTransactionAsync
         /// was previously used to create the transaction on the session.
         /// </summary>
-        /// <param name="session"></param>
-        /// <param name="client"></param>
         internal static void StartPreWarmTransaction(this SpannerClient client, Session session)
         {
+            // TODO: Re-enable this when code is fixed.
+            //GaxPreconditions.CheckNotNull(client, nameof(client));
+            GaxPreconditions.CheckNotNull(session, nameof(session));
             TransactionOptions options = session.GetLastUsedTransactionOptions();
             var info = s_sessionInfoTable.GetOrAdd(session, s => new SessionInfo(client));
             info.StartPreWarmTransaction(session, options);
@@ -155,15 +150,19 @@ namespace Google.Cloud.Spanner.V1
         /// <summary>
         /// Commits a transaction and internally marks the transaction as used.
         /// </summary>
-        /// <param name="transaction"></param>
-        /// <param name="session"></param>
-        /// <param name="mutations"></param>
-        /// <param name="timeoutSeconds"></param>
-        /// <param name="cancellationToken"></param>
-        /// <returns></returns>
+        /// <param name="transaction">The transaction to commit. Must not be null.</param>
+        /// <param name="session">The session associated with the transaction. Must not be null.</param>
+        /// <param name="mutations">The mutations to commit. Must not be null.</param>
+        /// <param name="timeoutSeconds">The number of seconds to allow the operation to execute for. A value of 0
+        /// means "immediate timeout" or "no timeout" depending on <see cref="SpannerSettings.AllowImmediateTimeouts"/>.</param>
+        /// <param name="cancellationToken">A cancellation token for the operation.</param>
+        /// <returns>A task which, when completed, will contain the commit response.</returns>
         public static Task<CommitResponse> CommitAsync(this Transaction transaction, Session session,
             IEnumerable<Mutation> mutations, int timeoutSeconds, CancellationToken cancellationToken)
         {
+            GaxPreconditions.CheckNotNull(transaction, nameof(transaction));
+            GaxPreconditions.CheckNotNull(session, nameof(session));
+            GaxPreconditions.CheckNotNull(mutations, nameof(mutations));
             Func<SessionInfo, Task<CommitResponse>> func = info =>
             {
                 var settings = info.SpannerClient.Settings.CommitSettings
@@ -174,16 +173,23 @@ namespace Google.Cloud.Spanner.V1
             return RunFinalMethodAsync(transaction, session, func).WithSessionChecking(() => session);
         }
 
+        // TODO: Why return a Task<bool> if the result will always be true?
+
         /// <summary>
         /// Rolls back a transaction and internally marks the transaction as used.
         /// </summary>
-        /// <param name="transaction"></param>
-        /// <param name="session"></param>
-        /// <param name="timeoutSeconds"></param>
-        /// <param name="cancellationToken"></param>
-        /// <returns></returns>
-        public static Task<bool> RollbackAsync(this Transaction transaction, Session session, int timeoutSeconds, CancellationToken cancellationToken) =>
-            RunFinalMethodAsync(transaction, session,
+        /// <param name="transaction">The transaction to commit. Must not be null.</param>
+        /// <param name="session">The session associated with the transaction. Must not be null.</param>
+        /// <param name="timeoutSeconds">The number of seconds to allow the operation to execute for. A value of 0
+        /// means "immediate timeout" or "no timeout" depending on <see cref="SpannerSettings.AllowImmediateTimeouts"/>.</param>
+        /// <param name="cancellationToken">A cancellation token for the operation.</param>
+        /// <returns>A task representing the asynchronous operation.</returns>
+        public static Task<bool> RollbackAsync(this Transaction transaction, Session session, int timeoutSeconds, CancellationToken cancellationToken)
+        {
+            GaxPreconditions.CheckNotNull(transaction, nameof(transaction));
+            GaxPreconditions.CheckNotNull(session, nameof(session));
+
+            return RunFinalMethodAsync(transaction, session,
                 async info =>
                 {
                     var settings = info.SpannerClient.Settings.RollbackSettings
@@ -195,6 +201,7 @@ namespace Google.Cloud.Spanner.V1
                         .ConfigureAwait(false);
                     return true;
                 });
+        }
 
         private static async Task<T> RunFinalMethodAsync<T>(Transaction transaction, Session session, Func<SessionInfo, Task<T>> commitOrRollbackAction)
         {

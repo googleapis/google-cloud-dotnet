@@ -417,7 +417,7 @@ namespace Google.Cloud.Spanner.Data
         /// Information that represents a command to execute against a subset of data.
         /// </param>
         /// <param name="transaction">The <see cref="SpannerTransaction"/> used when
-        /// creating the <see cref="CommandPartition"/>.  See <see cref="SpannerConnection.BeginReadOnlyTransaction"/></param>
+        /// creating the <see cref="CommandPartition"/>. See <see cref="SpannerConnection.BeginReadOnlyTransaction"/>.</param>
         /// <returns>A configured <see cref="SpannerCommand" /></returns>
         public SpannerCommand CreateCommandWithPartition(CommandPartition partition, SpannerTransaction transaction)
             => new SpannerCommand(this, transaction, partition);
@@ -898,7 +898,7 @@ namespace Google.Cloud.Spanner.Data
         /// If this connection is being opened within a <see cref="System.Transactions.TransactionScope" />, this
         /// will connect to an existing transaction identified by <paramref name="transactionId"/>.
         /// </summary>
-        /// <param name="transactionId">The <see cref="TransactionId"/> representing an active readonly <see cref="SpannerTransaction"/></param>
+        /// <param name="transactionId">The <see cref="TransactionId"/> representing an active readonly <see cref="SpannerTransaction"/>.</param>
         public void OpenAsReadOnly(TransactionId transactionId)
         {
             GaxPreconditions.CheckNotNull(transactionId, nameof(transactionId));

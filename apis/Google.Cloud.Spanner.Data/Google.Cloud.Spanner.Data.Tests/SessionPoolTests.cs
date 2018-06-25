@@ -137,7 +137,7 @@ namespace Google.Cloud.Spanner.Data.Tests
                 {
                     var transaction = await client.BeginPooledTransactionAsync(session, readWriteOptions)
                         .ConfigureAwait(false);
-                    await transaction.CommitAsync(session, null, SpannerOptions.Instance.Timeout, CancellationToken.None).ConfigureAwait(false);
+                    await transaction.CommitAsync(session, new Mutation[0], SpannerOptions.Instance.Timeout, CancellationToken.None).ConfigureAwait(false);
                     pool.ReleaseToPool(client, session);
                 }
             }
@@ -409,7 +409,7 @@ namespace Google.Cloud.Spanner.Data.Tests
                 Transaction transaction;
                 Assert.True(_transactions.TryPop(out transaction));
                 Assert.Same(transaction, transactionAwaited);
-                await transaction.CommitAsync(session1, null, SpannerOptions.Instance.Timeout, CancellationToken.None).ConfigureAwait(false);
+                await transaction.CommitAsync(session1, new Mutation[0], SpannerOptions.Instance.Timeout, CancellationToken.None).ConfigureAwait(false);
 
                 //Releasing should start the tx prewarm
                 pool.ReleaseToPool(client.Object, session1);

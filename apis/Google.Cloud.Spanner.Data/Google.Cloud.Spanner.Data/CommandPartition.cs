@@ -12,10 +12,9 @@
 // See the License for the specific language governing permissions and
 // limitations under the License.
 
-using System;
-using System.Runtime.Serialization;
 using Google.Cloud.Spanner.V1;
 using Google.Protobuf;
+using System;
 
 namespace Google.Cloud.Spanner.Data
 {
@@ -43,19 +42,24 @@ namespace Google.Cloud.Spanner.Data
         }
 
         /// <summary>
-        /// 
+        /// Serializes this command partition as base64 text.
         /// </summary>
-        /// <returns></returns>
+        /// <remarks>
+        /// After partitioning a query, the partitions can be serialized using this method, then deserialized
+        /// with <see cref="FromBase64String(string)"/> on multiple machines, allowing parallel processing.
+        /// </remarks>
+        /// <returns>The base64 representation of this partition.</returns>
         public string ToBase64String()
         {
             return ExecuteSqlRequest.ToByteString().ToBase64();
         }
 
         /// <summary>
-        /// 
+        /// Creates a new <see cref="CommandPartition"/> based on the text returned by a previous
+        /// call to <see cref="ToBase64String"/>.
         /// </summary>
-        /// <param name="base64String"></param>
-        /// <returns></returns>
+        /// <param name="base64String">The base64 representation of the command partition.</param>
+        /// <returns>The <see cref="CommandPartition"/> representation of the partition.</returns>
         public static CommandPartition FromBase64String(string base64String)
         {
             return new CommandPartition(ExecuteSqlRequest.Parser.ParseFrom(ByteString.FromBase64(base64String)));
