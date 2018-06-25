@@ -122,7 +122,6 @@ namespace Google.Cloud.Spanner.Data.Tests
         [Fact]
         public void CredentialFile()
         {
-            // ReSharper disable once JoinDeclarationAndInitializer
             string appFolder;
 #if NETCOREAPP1_0
             appFolder = AppContext.BaseDirectory;

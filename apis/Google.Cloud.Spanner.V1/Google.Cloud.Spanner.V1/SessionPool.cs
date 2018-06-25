@@ -73,10 +73,9 @@ namespace Google.Cloud.Spanner.V1
             GrpcEnvironment.ShuttingDown += (o, e) => Default.Dispose();
         }
 
-        // ReSharper disable once UnusedMember.Global
-        // returns the maximum difference in size between the smallest and largest pool.
+        // Returns the maximum difference in size between the smallest and largest pool.
         // For test purposes only.
-        // poolcontents will be filled with the contents of the pool and may not be null.
+        // poolContents will be filled with the contents of the pool and may not be null.
         internal int GetPoolInfo(StringBuilder poolContents)
         {
             GaxPreconditions.CheckNotNull(poolContents, nameof(poolContents));

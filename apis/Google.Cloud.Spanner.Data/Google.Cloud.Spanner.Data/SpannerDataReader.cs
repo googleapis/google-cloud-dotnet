@@ -30,8 +30,6 @@ using System.Data;
 
 #endif
 
-// ReSharper disable UnusedParameter.Local
-
 namespace Google.Cloud.Spanner.Data
 {
     /// <summary>

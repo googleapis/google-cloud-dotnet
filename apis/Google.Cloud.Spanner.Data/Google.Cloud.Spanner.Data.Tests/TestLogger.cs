@@ -31,8 +31,6 @@ namespace Google.Cloud.Spanner.Data.Tests
             SetDefaultLogger(s_instance);
         }
 
-        // ReSharper disable once MemberCanBePrivate.Global
-        // ReSharper disable once UnusedAutoPropertyAccessor.Global
         public static ITestOutputHelper TestOutputHelper { get; set; }
 
         protected override void WriteLine(string message)

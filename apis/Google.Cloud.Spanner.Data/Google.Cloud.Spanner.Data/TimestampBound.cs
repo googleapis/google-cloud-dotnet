@@ -230,14 +230,12 @@ namespace Google.Cloud.Spanner.Data
             if (mode.Value == TimestampBoundMode.ExactStaleness || mode.Value == TimestampBoundMode.MaxStaleness)
             {
                 GaxPreconditions.CheckState(staleness.HasValue, $"Unable to properly deserialize {nameof(TimestampBound)}.{nameof(Staleness)}");
-                // ReSharper disable once PossibleInvalidOperationException
                 return new TimestampBound(mode.Value, staleness.Value);
             }
             else if (mode.Value == TimestampBoundMode.MinReadTimestamp ||
                 mode.Value == TimestampBoundMode.ReadTimestamp)
             {
                 GaxPreconditions.CheckState(timestamp.HasValue, $"Unable to properly deserialize {nameof(TimestampBound)}.{nameof(Timestamp)}");
-                // ReSharper disable once PossibleInvalidOperationException
                 return new TimestampBound(mode.Value, timestamp.Value);
             }
             return new TimestampBound(mode.Value);

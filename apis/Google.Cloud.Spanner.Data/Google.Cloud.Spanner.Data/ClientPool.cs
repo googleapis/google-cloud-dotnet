@@ -36,7 +36,6 @@ namespace Google.Cloud.Spanner.Data
             new ConcurrentDictionary<ClientCredentialKey, CredentialClientPool>();
         private readonly ISpannerClientFactory _clientFactory;
 
-        // ReSharper disable once MemberCanBePrivate.Global
         internal ClientPool(ISpannerClientFactory clientFactory = null)
         {
             _clientFactory = clientFactory ?? SpannerClientFactory.Default;
@@ -208,7 +207,6 @@ namespace Google.Cloud.Spanner.Data
             private Lazy<Task<SpannerClient>> _creationTask;
             private int _refCount = 0;
             private readonly ClientCredentialKey _parentKey;
-            // ReSharper disable once InconsistentNaming
 
             public SpannerClientCreator(ClientCredentialKey parentKey)
             {

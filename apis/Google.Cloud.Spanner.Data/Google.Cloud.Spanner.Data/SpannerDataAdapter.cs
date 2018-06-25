@@ -12,10 +12,6 @@
 // See the License for the specific language governing permissions and
 // limitations under the License.
 
-// ReSharper disable UnusedParameter.Local
-// ReSharper disable EmptyNamespace
-// ReSharper disable MemberCanBePrivate.Global
-
 #if !NETSTANDARD1_5
 using System;
 using System.Collections.Generic;
@@ -24,9 +20,6 @@ using System.Data;
 using System.Data.Common;
 using System.Threading;
 using Google.Api.Gax;
-
-// ReSharper disable HeuristicUnreachableCode
-
 #endif
 
 namespace Google.Cloud.Spanner.Data
@@ -76,7 +69,6 @@ namespace Google.Cloud.Spanner.Data
         /// The connection to the Spanner database.
         /// </summary>
         [Category("Configuration")]
-        // ReSharper disable once AutoPropertyCanBeMadeGetOnly.Global
         public SpannerConnection SpannerConnection { get; set; }
 
         /// <summary>
@@ -218,7 +210,6 @@ namespace Google.Cloud.Spanner.Data
             IDbCommand command,
             CommandBehavior behavior)
         {
-            // ReSharper disable once ConditionIsAlwaysTrueOrFalse
             if (command == null)
             {
                 command = GetBuiltSelectCommand();

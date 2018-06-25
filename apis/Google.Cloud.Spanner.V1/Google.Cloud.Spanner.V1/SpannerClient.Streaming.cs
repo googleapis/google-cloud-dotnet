@@ -16,7 +16,6 @@ using System;
 using Google.Api.Gax;
 using Google.Api.Gax.Grpc;
 using Grpc.Core;
-// ReSharper disable UnusedParameterInPartialMethod
 
 namespace Google.Cloud.Spanner.V1
 {

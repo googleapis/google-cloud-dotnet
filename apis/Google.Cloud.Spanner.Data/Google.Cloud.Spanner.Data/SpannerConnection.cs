@@ -31,7 +31,6 @@ using Transaction = System.Transactions.Transaction;
 
 #endif
 
-// ReSharper disable UnusedParameter.Local
 namespace Google.Cloud.Spanner.Data
 {
     /// <summary>
@@ -74,7 +73,6 @@ namespace Google.Cloud.Spanner.Data
 
         private CancellationTokenSource _keepAliveCancellation;
 
-        // ReSharper disable once NotAccessedField.Local
         private Task _keepAliveTask;
 
         private int _sessionRefCount;
@@ -941,8 +939,6 @@ namespace Google.Cloud.Spanner.Data
         /// <summary>
         /// Gets or Sets whether to participate in the active <see cref="System.Transactions.TransactionScope" />
         /// </summary>
-        // ReSharper disable once AutoPropertyCanBeMadeGetOnly.Global
-        // ReSharper disable once MemberCanBePrivate.Global
         public bool EnlistInTransaction { get; set; } = true;
 
         /// <inheritdoc />

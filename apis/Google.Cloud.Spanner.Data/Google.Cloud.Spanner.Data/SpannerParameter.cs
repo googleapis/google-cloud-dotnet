@@ -18,8 +18,6 @@ using System.Data.Common;
 using Google.Api.Gax;
 using TypeCode = Google.Cloud.Spanner.V1.TypeCode;
 
-// ReSharper disable UnusedParameter.Local
-
 namespace Google.Cloud.Spanner.Data
 {
     /// <summary>

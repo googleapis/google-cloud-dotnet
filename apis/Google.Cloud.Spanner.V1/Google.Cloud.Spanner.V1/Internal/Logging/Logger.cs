@@ -242,7 +242,6 @@ namespace Google.Cloud.Spanner.V1.Internal.Logging
                     LogPerformanceDataImpl();
                 }
             }
-            // ReSharper disable once FunctionNeverReturns
         }
 
         private void RecordEntryValue(PerformanceTimeEntry entry, Func<double, double> valueFunc)

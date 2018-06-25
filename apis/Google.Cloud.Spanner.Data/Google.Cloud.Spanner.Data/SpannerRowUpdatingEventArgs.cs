@@ -12,15 +12,11 @@
 // See the License for the specific language governing permissions and
 // limitations under the License.
 
-// ReSharper disable EmptyNamespace
-
-
 #if !NETSTANDARD1_5
 using System;
 using System.Data;
 using System.Data.Common;
 using Google.Api.Gax;
-
 #endif
 
 namespace Google.Cloud.Spanner.Data

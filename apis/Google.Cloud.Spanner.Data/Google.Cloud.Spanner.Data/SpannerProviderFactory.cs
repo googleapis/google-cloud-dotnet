@@ -25,7 +25,6 @@ namespace Google.Cloud.Spanner.Data
         /// The default SpannerProviderFactory instance.
         /// This public static field is required for the providerfactory to work properly.
         /// </summary>
-        // ReSharper disable once InconsistentNaming
         public static readonly SpannerProviderFactory Instance = new SpannerProviderFactory();
 
         private SpannerProviderFactory() { }
