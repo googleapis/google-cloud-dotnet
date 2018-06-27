@@ -402,6 +402,33 @@ namespace Google.Cloud.Bigtable.V2
         /// atomicity of each row will still be preserved. See the
         /// ReadRowsResponse documentation for details.
         /// </summary>
+        /// <param name="tableName">
+        /// The unique name of the table from which to read.
+        /// Values are of the form
+        /// `projects/&lt;project&gt;/instances/&lt;instance&gt;/tables/&lt;table&gt;`.
+        /// </param>
+        /// <param name="callSettings">
+        /// If not null, applies overrides to this RPC call.
+        /// </param>
+        /// <returns>
+        /// The server stream.
+        /// </returns>
+        public virtual ReadRowsStream ReadRows(
+            gcbcv::TableName tableName,
+            gaxgrpc::CallSettings callSettings = null) => ReadRows(
+                new ReadRowsRequest
+                {
+                    TableNameAsTableName = gax::GaxPreconditions.CheckNotNull(tableName, nameof(tableName)),
+                },
+                callSettings);
+
+        /// <summary>
+        /// Streams back the contents of all requested rows in key order, optionally
+        /// applying the same Reader filter to each. Depending on their size,
+        /// rows and cells may be broken up across multiple responses, but
+        /// atomicity of each row will still be preserved. See the
+        /// ReadRowsResponse documentation for details.
+        /// </summary>
         /// <param name="request">
         /// The request object containing all of the parameters for the API call.
         /// </param>
@@ -424,6 +451,32 @@ namespace Google.Cloud.Bigtable.V2
         public abstract partial class ReadRowsStream : gaxgrpc::ServerStreamingBase<ReadRowsResponse>
         {
         }
+
+        /// <summary>
+        /// Returns a sample of row keys in the table. The returned row keys will
+        /// delimit contiguous sections of the table of approximately equal size,
+        /// which can be used to break up the data for distributed tasks like
+        /// mapreduces.
+        /// </summary>
+        /// <param name="tableName">
+        /// The unique name of the table from which to sample row keys.
+        /// Values are of the form
+        /// `projects/&lt;project&gt;/instances/&lt;instance&gt;/tables/&lt;table&gt;`.
+        /// </param>
+        /// <param name="callSettings">
+        /// If not null, applies overrides to this RPC call.
+        /// </param>
+        /// <returns>
+        /// The server stream.
+        /// </returns>
+        public virtual SampleRowKeysStream SampleRowKeys(
+            gcbcv::TableName tableName,
+            gaxgrpc::CallSettings callSettings = null) => SampleRowKeys(
+                new SampleRowKeysRequest
+                {
+                    TableNameAsTableName = gax::GaxPreconditions.CheckNotNull(tableName, nameof(tableName)),
+                },
+                callSettings);
 
         /// <summary>
         /// Returns a sample of row keys in the table. The returned row keys will
@@ -617,6 +670,38 @@ namespace Google.Cloud.Bigtable.V2
         {
             throw new sys::NotImplementedException();
         }
+
+        /// <summary>
+        /// Mutates multiple rows in a batch. Each individual row is mutated
+        /// atomically as in MutateRow, but the entire batch is not executed
+        /// atomically.
+        /// </summary>
+        /// <param name="tableName">
+        /// The unique name of the table to which the mutations should be applied.
+        /// </param>
+        /// <param name="entries">
+        /// The row keys and corresponding mutations to be applied in bulk.
+        /// Each entry is applied as an atomic mutation, but the entries may be
+        /// applied in arbitrary order (even between entries for the same row).
+        /// At least one entry must be specified, and in total the entries can
+        /// contain at most 100000 mutations.
+        /// </param>
+        /// <param name="callSettings">
+        /// If not null, applies overrides to this RPC call.
+        /// </param>
+        /// <returns>
+        /// The server stream.
+        /// </returns>
+        public virtual MutateRowsStream MutateRows(
+            gcbcv::TableName tableName,
+            scg::IEnumerable<MutateRowsRequest.Types.Entry> entries,
+            gaxgrpc::CallSettings callSettings = null) => MutateRows(
+                new MutateRowsRequest
+                {
+                    TableNameAsTableName = gax::GaxPreconditions.CheckNotNull(tableName, nameof(tableName)),
+                    Entries = { gax::GaxPreconditions.CheckNotNull(entries, nameof(entries)) },
+                },
+                callSettings);
 
         /// <summary>
         /// Mutates multiple rows in a batch. Each individual row is mutated
