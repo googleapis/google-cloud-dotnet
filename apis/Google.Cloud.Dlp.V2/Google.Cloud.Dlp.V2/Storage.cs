@@ -147,7 +147,7 @@ namespace Google.Cloud.Dlp.V2 {
   /// </summary>
   public enum Likelihood {
     /// <summary>
-    /// Default value; information with all likelihoods is included.
+    /// Default value; same as POSSIBLE.
     /// </summary>
     [pbr::OriginalName("LIKELIHOOD_UNSPECIFIED")] Unspecified = 0,
     /// <summary>
@@ -233,7 +233,10 @@ namespace Google.Cloud.Dlp.V2 {
     public const int NameFieldNumber = 1;
     private string name_ = "";
     /// <summary>
-    /// Name of the information type.
+    /// Name of the information type. Either a name of your choosing when
+    /// creating a CustomInfoType, or one of the names listed
+    /// at https://cloud.google.com/dlp/docs/infotypes-reference when specifying
+    /// a built-in type.
     /// </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     public string Name {
@@ -383,8 +386,8 @@ namespace Google.Cloud.Dlp.V2 {
     public const int InfoTypeFieldNumber = 1;
     private global::Google.Cloud.Dlp.V2.InfoType infoType_;
     /// <summary>
-    /// Info type configuration. All custom info types must have configurations
-    /// that do not conflict with built-in info types or other custom info types.
+    /// All CustomInfoTypes must have a name
+    /// that does not conflict with built-in InfoTypes or other CustomInfoTypes.
     /// </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     public global::Google.Cloud.Dlp.V2.InfoType InfoType {
@@ -398,7 +401,7 @@ namespace Google.Cloud.Dlp.V2 {
     public const int LikelihoodFieldNumber = 6;
     private global::Google.Cloud.Dlp.V2.Likelihood likelihood_ = 0;
     /// <summary>
-    /// Likelihood to return for this custom info type. This base value can be
+    /// Likelihood to return for this CustomInfoType. This base value can be
     /// altered by a detection rule if the finding meets the criteria specified by
     /// the rule. Defaults to `VERY_LIKELY` if not specified.
     /// </summary>
@@ -413,7 +416,7 @@ namespace Google.Cloud.Dlp.V2 {
     /// <summary>Field number for the "dictionary" field.</summary>
     public const int DictionaryFieldNumber = 2;
     /// <summary>
-    /// Dictionary-based custom info type.
+    /// A list of phrases to detect as a CustomInfoType.
     /// </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     public global::Google.Cloud.Dlp.V2.CustomInfoType.Types.Dictionary Dictionary {
@@ -427,7 +430,7 @@ namespace Google.Cloud.Dlp.V2 {
     /// <summary>Field number for the "regex" field.</summary>
     public const int RegexFieldNumber = 3;
     /// <summary>
-    /// Regex-based custom info type.
+    /// Regular expression based CustomInfoType.
     /// </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     public global::Google.Cloud.Dlp.V2.CustomInfoType.Types.Regex Regex {
@@ -441,7 +444,8 @@ namespace Google.Cloud.Dlp.V2 {
     /// <summary>Field number for the "surrogate_type" field.</summary>
     public const int SurrogateTypeFieldNumber = 4;
     /// <summary>
-    /// Surrogate info type.
+    /// Message for detecting output from deidentification transformations that
+    /// support reversing.
     /// </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     public global::Google.Cloud.Dlp.V2.CustomInfoType.Types.SurrogateType SurrogateType {
@@ -458,9 +462,9 @@ namespace Google.Cloud.Dlp.V2 {
         = pb::FieldCodec.ForMessage(58, global::Google.Cloud.Dlp.V2.CustomInfoType.Types.DetectionRule.Parser);
     private readonly pbc::RepeatedField<global::Google.Cloud.Dlp.V2.CustomInfoType.Types.DetectionRule> detectionRules_ = new pbc::RepeatedField<global::Google.Cloud.Dlp.V2.CustomInfoType.Types.DetectionRule>();
     /// <summary>
-    /// Set of detection rules to apply to all findings of this custom info type.
+    /// Set of detection rules to apply to all findings of this CustomInfoType.
     /// Rules are applied in order that they are specified. Not supported for the
-    /// `surrogate_type` custom info type.
+    /// `surrogate_type` CustomInfoType.
     /// </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     public pbc::RepeatedField<global::Google.Cloud.Dlp.V2.CustomInfoType.Types.DetectionRule> DetectionRules {
@@ -1191,7 +1195,7 @@ namespace Google.Cloud.Dlp.V2 {
       /// These types of transformations are
       /// those that perform pseudonymization, thereby producing a "surrogate" as
       /// output. This should be used in conjunction with a field on the
-      /// transformation such as `surrogate_info_type`. This custom info type does
+      /// transformation such as `surrogate_info_type`. This CustomInfoType does
       /// not support the use of `detection_rules`.
       /// </summary>
       public sealed partial class SurrogateType : pb::IMessage<SurrogateType> {
@@ -1296,7 +1300,7 @@ namespace Google.Cloud.Dlp.V2 {
       }
 
       /// <summary>
-      /// Rule for modifying a custom info type to alter behavior under certain
+      /// Rule for modifying a CustomInfoType to alter behavior under certain
       /// circumstances, depending on the specific details of the rule. Not supported
       /// for the `surrogate_type` custom info type.
       /// </summary>
@@ -1844,7 +1848,7 @@ namespace Google.Cloud.Dlp.V2 {
           }
 
           /// <summary>
-          /// Detection rule that adjusts the likelihood of findings within a certain
+          /// The rule that adjusts the likelihood of findings within a certain
           /// proximity of hotwords.
           /// </summary>
           public sealed partial class HotwordRule : pb::IMessage<HotwordRule> {
@@ -1887,7 +1891,7 @@ namespace Google.Cloud.Dlp.V2 {
             public const int HotwordRegexFieldNumber = 1;
             private global::Google.Cloud.Dlp.V2.CustomInfoType.Types.Regex hotwordRegex_;
             /// <summary>
-            /// Regex pattern defining what qualifies as a hotword.
+            /// Regular expression pattern defining what qualifies as a hotword.
             /// </summary>
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
             public global::Google.Cloud.Dlp.V2.CustomInfoType.Types.Regex HotwordRegex {
