@@ -1032,8 +1032,13 @@ namespace Google.Cloud.Dlp.V2
         /// <summary>
         /// Finds potentially sensitive info in content.
         /// This method has limits on input size, processing time, and output size.
-        /// [How-to guide for text](/dlp/docs/inspecting-text), [How-to guide for
-        /// images](/dlp/docs/inspecting-images)
+        ///
+        /// When no InfoTypes or CustomInfoTypes are specified in this request, the
+        /// system will automatically choose what detectors to run. By default this may
+        /// be all types, but may change over time as detectors are updated.
+        ///
+        /// For how to guides, see https://cloud.google.com/dlp/docs/inspecting-images
+        /// and https://cloud.google.com/dlp/docs/inspecting-text,
         /// </summary>
         /// <param name="request">
         /// The request object containing all of the parameters for the API call.
@@ -1054,8 +1059,13 @@ namespace Google.Cloud.Dlp.V2
         /// <summary>
         /// Finds potentially sensitive info in content.
         /// This method has limits on input size, processing time, and output size.
-        /// [How-to guide for text](/dlp/docs/inspecting-text), [How-to guide for
-        /// images](/dlp/docs/inspecting-images)
+        ///
+        /// When no InfoTypes or CustomInfoTypes are specified in this request, the
+        /// system will automatically choose what detectors to run. By default this may
+        /// be all types, but may change over time as detectors are updated.
+        ///
+        /// For how to guides, see https://cloud.google.com/dlp/docs/inspecting-images
+        /// and https://cloud.google.com/dlp/docs/inspecting-text,
         /// </summary>
         /// <param name="request">
         /// The request object containing all of the parameters for the API call.
@@ -1075,8 +1085,13 @@ namespace Google.Cloud.Dlp.V2
         /// <summary>
         /// Finds potentially sensitive info in content.
         /// This method has limits on input size, processing time, and output size.
-        /// [How-to guide for text](/dlp/docs/inspecting-text), [How-to guide for
-        /// images](/dlp/docs/inspecting-images)
+        ///
+        /// When no InfoTypes or CustomInfoTypes are specified in this request, the
+        /// system will automatically choose what detectors to run. By default this may
+        /// be all types, but may change over time as detectors are updated.
+        ///
+        /// For how to guides, see https://cloud.google.com/dlp/docs/inspecting-images
+        /// and https://cloud.google.com/dlp/docs/inspecting-text,
         /// </summary>
         /// <param name="request">
         /// The request object containing all of the parameters for the API call.
@@ -1097,7 +1112,12 @@ namespace Google.Cloud.Dlp.V2
         /// <summary>
         /// Redacts potentially sensitive info from an image.
         /// This method has limits on input size, processing time, and output size.
-        /// [How-to guide](/dlp/docs/redacting-sensitive-data-images)
+        /// See https://cloud.google.com/dlp/docs/redacting-sensitive-data-images to
+        /// learn more.
+        ///
+        /// When no InfoTypes or CustomInfoTypes are specified in this request, the
+        /// system will automatically choose what detectors to run. By default this may
+        /// be all types, but may change over time as detectors are updated.
         /// </summary>
         /// <param name="request">
         /// The request object containing all of the parameters for the API call.
@@ -1118,7 +1138,12 @@ namespace Google.Cloud.Dlp.V2
         /// <summary>
         /// Redacts potentially sensitive info from an image.
         /// This method has limits on input size, processing time, and output size.
-        /// [How-to guide](/dlp/docs/redacting-sensitive-data-images)
+        /// See https://cloud.google.com/dlp/docs/redacting-sensitive-data-images to
+        /// learn more.
+        ///
+        /// When no InfoTypes or CustomInfoTypes are specified in this request, the
+        /// system will automatically choose what detectors to run. By default this may
+        /// be all types, but may change over time as detectors are updated.
         /// </summary>
         /// <param name="request">
         /// The request object containing all of the parameters for the API call.
@@ -1138,7 +1163,12 @@ namespace Google.Cloud.Dlp.V2
         /// <summary>
         /// Redacts potentially sensitive info from an image.
         /// This method has limits on input size, processing time, and output size.
-        /// [How-to guide](/dlp/docs/redacting-sensitive-data-images)
+        /// See https://cloud.google.com/dlp/docs/redacting-sensitive-data-images to
+        /// learn more.
+        ///
+        /// When no InfoTypes or CustomInfoTypes are specified in this request, the
+        /// system will automatically choose what detectors to run. By default this may
+        /// be all types, but may change over time as detectors are updated.
         /// </summary>
         /// <param name="request">
         /// The request object containing all of the parameters for the API call.
@@ -1159,7 +1189,12 @@ namespace Google.Cloud.Dlp.V2
         /// <summary>
         /// De-identifies potentially sensitive info from a ContentItem.
         /// This method has limits on input size and output size.
-        /// [How-to guide](/dlp/docs/deidentify-sensitive-data)
+        /// See https://cloud.google.com/dlp/docs/deidentify-sensitive-data to
+        /// learn more.
+        ///
+        /// When no InfoTypes or CustomInfoTypes are specified in this request, the
+        /// system will automatically choose what detectors to run. By default this may
+        /// be all types, but may change over time as detectors are updated.
         /// </summary>
         /// <param name="request">
         /// The request object containing all of the parameters for the API call.
@@ -1180,7 +1215,12 @@ namespace Google.Cloud.Dlp.V2
         /// <summary>
         /// De-identifies potentially sensitive info from a ContentItem.
         /// This method has limits on input size and output size.
-        /// [How-to guide](/dlp/docs/deidentify-sensitive-data)
+        /// See https://cloud.google.com/dlp/docs/deidentify-sensitive-data to
+        /// learn more.
+        ///
+        /// When no InfoTypes or CustomInfoTypes are specified in this request, the
+        /// system will automatically choose what detectors to run. By default this may
+        /// be all types, but may change over time as detectors are updated.
         /// </summary>
         /// <param name="request">
         /// The request object containing all of the parameters for the API call.
@@ -1200,7 +1240,12 @@ namespace Google.Cloud.Dlp.V2
         /// <summary>
         /// De-identifies potentially sensitive info from a ContentItem.
         /// This method has limits on input size and output size.
-        /// [How-to guide](/dlp/docs/deidentify-sensitive-data)
+        /// See https://cloud.google.com/dlp/docs/deidentify-sensitive-data to
+        /// learn more.
+        ///
+        /// When no InfoTypes or CustomInfoTypes are specified in this request, the
+        /// system will automatically choose what detectors to run. By default this may
+        /// be all types, but may change over time as detectors are updated.
         /// </summary>
         /// <param name="request">
         /// The request object containing all of the parameters for the API call.
@@ -1220,6 +1265,9 @@ namespace Google.Cloud.Dlp.V2
 
         /// <summary>
         /// Re-identifies content that has been de-identified.
+        /// See
+        /// https://cloud.google.com/dlp/docs/pseudonymization#re-identification_in_free_text_code_example
+        /// to learn more.
         /// </summary>
         /// <param name="request">
         /// The request object containing all of the parameters for the API call.
@@ -1239,6 +1287,9 @@ namespace Google.Cloud.Dlp.V2
 
         /// <summary>
         /// Re-identifies content that has been de-identified.
+        /// See
+        /// https://cloud.google.com/dlp/docs/pseudonymization#re-identification_in_free_text_code_example
+        /// to learn more.
         /// </summary>
         /// <param name="request">
         /// The request object containing all of the parameters for the API call.
@@ -1257,6 +1308,9 @@ namespace Google.Cloud.Dlp.V2
 
         /// <summary>
         /// Re-identifies content that has been de-identified.
+        /// See
+        /// https://cloud.google.com/dlp/docs/pseudonymization#re-identification_in_free_text_code_example
+        /// to learn more.
         /// </summary>
         /// <param name="request">
         /// The request object containing all of the parameters for the API call.
@@ -1276,8 +1330,8 @@ namespace Google.Cloud.Dlp.V2
 
         /// <summary>
         /// Returns a list of the sensitive information types that the DLP API
-        /// supports. For more information, see [Listing supported predefined
-        /// infoTypes](/dlp/docs/listing-infotypes).
+        /// supports. See https://cloud.google.com/dlp/docs/infotypes-reference to
+        /// learn more.
         /// </summary>
         /// <param name="request">
         /// The request object containing all of the parameters for the API call.
@@ -1297,8 +1351,8 @@ namespace Google.Cloud.Dlp.V2
 
         /// <summary>
         /// Returns a list of the sensitive information types that the DLP API
-        /// supports. For more information, see [Listing supported predefined
-        /// infoTypes](/dlp/docs/listing-infotypes).
+        /// supports. See https://cloud.google.com/dlp/docs/infotypes-reference to
+        /// learn more.
         /// </summary>
         /// <param name="request">
         /// The request object containing all of the parameters for the API call.
@@ -1317,8 +1371,8 @@ namespace Google.Cloud.Dlp.V2
 
         /// <summary>
         /// Returns a list of the sensitive information types that the DLP API
-        /// supports. For more information, see [Listing supported predefined
-        /// infoTypes](/dlp/docs/listing-infotypes).
+        /// supports. See https://cloud.google.com/dlp/docs/infotypes-reference to
+        /// learn more.
         /// </summary>
         /// <param name="request">
         /// The request object containing all of the parameters for the API call.
@@ -1339,6 +1393,7 @@ namespace Google.Cloud.Dlp.V2
         /// <summary>
         /// Creates an InspectTemplate for re-using frequently used configuration
         /// for inspecting content, images, and storage.
+        /// See https://cloud.google.com/dlp/docs/creating-templates to learn more.
         /// </summary>
         /// <param name="request">
         /// The request object containing all of the parameters for the API call.
@@ -1359,6 +1414,7 @@ namespace Google.Cloud.Dlp.V2
         /// <summary>
         /// Creates an InspectTemplate for re-using frequently used configuration
         /// for inspecting content, images, and storage.
+        /// See https://cloud.google.com/dlp/docs/creating-templates to learn more.
         /// </summary>
         /// <param name="request">
         /// The request object containing all of the parameters for the API call.
@@ -1378,6 +1434,7 @@ namespace Google.Cloud.Dlp.V2
         /// <summary>
         /// Creates an InspectTemplate for re-using frequently used configuration
         /// for inspecting content, images, and storage.
+        /// See https://cloud.google.com/dlp/docs/creating-templates to learn more.
         /// </summary>
         /// <param name="request">
         /// The request object containing all of the parameters for the API call.
@@ -1397,6 +1454,7 @@ namespace Google.Cloud.Dlp.V2
 
         /// <summary>
         /// Updates the InspectTemplate.
+        /// See https://cloud.google.com/dlp/docs/creating-templates to learn more.
         /// </summary>
         /// <param name="request">
         /// The request object containing all of the parameters for the API call.
@@ -1416,6 +1474,7 @@ namespace Google.Cloud.Dlp.V2
 
         /// <summary>
         /// Updates the InspectTemplate.
+        /// See https://cloud.google.com/dlp/docs/creating-templates to learn more.
         /// </summary>
         /// <param name="request">
         /// The request object containing all of the parameters for the API call.
@@ -1434,6 +1493,7 @@ namespace Google.Cloud.Dlp.V2
 
         /// <summary>
         /// Updates the InspectTemplate.
+        /// See https://cloud.google.com/dlp/docs/creating-templates to learn more.
         /// </summary>
         /// <param name="request">
         /// The request object containing all of the parameters for the API call.
@@ -1453,6 +1513,7 @@ namespace Google.Cloud.Dlp.V2
 
         /// <summary>
         /// Gets an InspectTemplate.
+        /// See https://cloud.google.com/dlp/docs/creating-templates to learn more.
         /// </summary>
         /// <param name="request">
         /// The request object containing all of the parameters for the API call.
@@ -1472,6 +1533,7 @@ namespace Google.Cloud.Dlp.V2
 
         /// <summary>
         /// Gets an InspectTemplate.
+        /// See https://cloud.google.com/dlp/docs/creating-templates to learn more.
         /// </summary>
         /// <param name="request">
         /// The request object containing all of the parameters for the API call.
@@ -1490,6 +1552,7 @@ namespace Google.Cloud.Dlp.V2
 
         /// <summary>
         /// Gets an InspectTemplate.
+        /// See https://cloud.google.com/dlp/docs/creating-templates to learn more.
         /// </summary>
         /// <param name="request">
         /// The request object containing all of the parameters for the API call.
@@ -1509,6 +1572,7 @@ namespace Google.Cloud.Dlp.V2
 
         /// <summary>
         /// Lists InspectTemplates.
+        /// See https://cloud.google.com/dlp/docs/creating-templates to learn more.
         /// </summary>
         /// <param name="request">
         /// The request object containing all of the parameters for the API call.
@@ -1528,6 +1592,7 @@ namespace Google.Cloud.Dlp.V2
 
         /// <summary>
         /// Lists InspectTemplates.
+        /// See https://cloud.google.com/dlp/docs/creating-templates to learn more.
         /// </summary>
         /// <param name="request">
         /// The request object containing all of the parameters for the API call.
@@ -1547,6 +1612,7 @@ namespace Google.Cloud.Dlp.V2
 
         /// <summary>
         /// Deletes an InspectTemplate.
+        /// See https://cloud.google.com/dlp/docs/creating-templates to learn more.
         /// </summary>
         /// <param name="request">
         /// The request object containing all of the parameters for the API call.
@@ -1566,6 +1632,7 @@ namespace Google.Cloud.Dlp.V2
 
         /// <summary>
         /// Deletes an InspectTemplate.
+        /// See https://cloud.google.com/dlp/docs/creating-templates to learn more.
         /// </summary>
         /// <param name="request">
         /// The request object containing all of the parameters for the API call.
@@ -1584,6 +1651,7 @@ namespace Google.Cloud.Dlp.V2
 
         /// <summary>
         /// Deletes an InspectTemplate.
+        /// See https://cloud.google.com/dlp/docs/creating-templates to learn more.
         /// </summary>
         /// <param name="request">
         /// The request object containing all of the parameters for the API call.
@@ -1601,6 +1669,8 @@ namespace Google.Cloud.Dlp.V2
         /// <summary>
         /// Creates a DeidentifyTemplate for re-using frequently used configuration
         /// for de-identifying content, images, and storage.
+        /// See https://cloud.google.com/dlp/docs/creating-templates-deid to learn
+        /// more.
         /// </summary>
         /// <param name="request">
         /// The request object containing all of the parameters for the API call.
@@ -1621,6 +1691,8 @@ namespace Google.Cloud.Dlp.V2
         /// <summary>
         /// Creates a DeidentifyTemplate for re-using frequently used configuration
         /// for de-identifying content, images, and storage.
+        /// See https://cloud.google.com/dlp/docs/creating-templates-deid to learn
+        /// more.
         /// </summary>
         /// <param name="request">
         /// The request object containing all of the parameters for the API call.
@@ -1640,6 +1712,8 @@ namespace Google.Cloud.Dlp.V2
         /// <summary>
         /// Creates a DeidentifyTemplate for re-using frequently used configuration
         /// for de-identifying content, images, and storage.
+        /// See https://cloud.google.com/dlp/docs/creating-templates-deid to learn
+        /// more.
         /// </summary>
         /// <param name="request">
         /// The request object containing all of the parameters for the API call.
@@ -1659,6 +1733,8 @@ namespace Google.Cloud.Dlp.V2
 
         /// <summary>
         /// Updates the DeidentifyTemplate.
+        /// See https://cloud.google.com/dlp/docs/creating-templates-deid to learn
+        /// more.
         /// </summary>
         /// <param name="request">
         /// The request object containing all of the parameters for the API call.
@@ -1678,6 +1754,8 @@ namespace Google.Cloud.Dlp.V2
 
         /// <summary>
         /// Updates the DeidentifyTemplate.
+        /// See https://cloud.google.com/dlp/docs/creating-templates-deid to learn
+        /// more.
         /// </summary>
         /// <param name="request">
         /// The request object containing all of the parameters for the API call.
@@ -1696,6 +1774,8 @@ namespace Google.Cloud.Dlp.V2
 
         /// <summary>
         /// Updates the DeidentifyTemplate.
+        /// See https://cloud.google.com/dlp/docs/creating-templates-deid to learn
+        /// more.
         /// </summary>
         /// <param name="request">
         /// The request object containing all of the parameters for the API call.
@@ -1715,6 +1795,8 @@ namespace Google.Cloud.Dlp.V2
 
         /// <summary>
         /// Gets a DeidentifyTemplate.
+        /// See https://cloud.google.com/dlp/docs/creating-templates-deid to learn
+        /// more.
         /// </summary>
         /// <param name="request">
         /// The request object containing all of the parameters for the API call.
@@ -1734,6 +1816,8 @@ namespace Google.Cloud.Dlp.V2
 
         /// <summary>
         /// Gets a DeidentifyTemplate.
+        /// See https://cloud.google.com/dlp/docs/creating-templates-deid to learn
+        /// more.
         /// </summary>
         /// <param name="request">
         /// The request object containing all of the parameters for the API call.
@@ -1752,6 +1836,8 @@ namespace Google.Cloud.Dlp.V2
 
         /// <summary>
         /// Gets a DeidentifyTemplate.
+        /// See https://cloud.google.com/dlp/docs/creating-templates-deid to learn
+        /// more.
         /// </summary>
         /// <param name="request">
         /// The request object containing all of the parameters for the API call.
@@ -1771,6 +1857,8 @@ namespace Google.Cloud.Dlp.V2
 
         /// <summary>
         /// Lists DeidentifyTemplates.
+        /// See https://cloud.google.com/dlp/docs/creating-templates-deid to learn
+        /// more.
         /// </summary>
         /// <param name="request">
         /// The request object containing all of the parameters for the API call.
@@ -1790,6 +1878,8 @@ namespace Google.Cloud.Dlp.V2
 
         /// <summary>
         /// Lists DeidentifyTemplates.
+        /// See https://cloud.google.com/dlp/docs/creating-templates-deid to learn
+        /// more.
         /// </summary>
         /// <param name="request">
         /// The request object containing all of the parameters for the API call.
@@ -1809,6 +1899,8 @@ namespace Google.Cloud.Dlp.V2
 
         /// <summary>
         /// Deletes a DeidentifyTemplate.
+        /// See https://cloud.google.com/dlp/docs/creating-templates-deid to learn
+        /// more.
         /// </summary>
         /// <param name="request">
         /// The request object containing all of the parameters for the API call.
@@ -1828,6 +1920,8 @@ namespace Google.Cloud.Dlp.V2
 
         /// <summary>
         /// Deletes a DeidentifyTemplate.
+        /// See https://cloud.google.com/dlp/docs/creating-templates-deid to learn
+        /// more.
         /// </summary>
         /// <param name="request">
         /// The request object containing all of the parameters for the API call.
@@ -1846,6 +1940,8 @@ namespace Google.Cloud.Dlp.V2
 
         /// <summary>
         /// Deletes a DeidentifyTemplate.
+        /// See https://cloud.google.com/dlp/docs/creating-templates-deid to learn
+        /// more.
         /// </summary>
         /// <param name="request">
         /// The request object containing all of the parameters for the API call.
@@ -1862,7 +1958,12 @@ namespace Google.Cloud.Dlp.V2
 
         /// <summary>
         /// Creates a new job to inspect storage or calculate risk metrics.
-        /// [How-to guide](/dlp/docs/compute-risk-analysis).
+        /// See https://cloud.google.com/dlp/docs/inspecting-storage and
+        /// https://cloud.google.com/dlp/docs/compute-risk-analysis to learn more.
+        ///
+        /// When no InfoTypes or CustomInfoTypes are specified in inspect jobs, the
+        /// system will automatically choose what detectors to run. By default this may
+        /// be all types, but may change over time as detectors are updated.
         /// </summary>
         /// <param name="request">
         /// The request object containing all of the parameters for the API call.
@@ -1882,7 +1983,12 @@ namespace Google.Cloud.Dlp.V2
 
         /// <summary>
         /// Creates a new job to inspect storage or calculate risk metrics.
-        /// [How-to guide](/dlp/docs/compute-risk-analysis).
+        /// See https://cloud.google.com/dlp/docs/inspecting-storage and
+        /// https://cloud.google.com/dlp/docs/compute-risk-analysis to learn more.
+        ///
+        /// When no InfoTypes or CustomInfoTypes are specified in inspect jobs, the
+        /// system will automatically choose what detectors to run. By default this may
+        /// be all types, but may change over time as detectors are updated.
         /// </summary>
         /// <param name="request">
         /// The request object containing all of the parameters for the API call.
@@ -1901,7 +2007,12 @@ namespace Google.Cloud.Dlp.V2
 
         /// <summary>
         /// Creates a new job to inspect storage or calculate risk metrics.
-        /// [How-to guide](/dlp/docs/compute-risk-analysis).
+        /// See https://cloud.google.com/dlp/docs/inspecting-storage and
+        /// https://cloud.google.com/dlp/docs/compute-risk-analysis to learn more.
+        ///
+        /// When no InfoTypes or CustomInfoTypes are specified in inspect jobs, the
+        /// system will automatically choose what detectors to run. By default this may
+        /// be all types, but may change over time as detectors are updated.
         /// </summary>
         /// <param name="request">
         /// The request object containing all of the parameters for the API call.
@@ -1921,6 +2032,8 @@ namespace Google.Cloud.Dlp.V2
 
         /// <summary>
         /// Lists DlpJobs that match the specified filter in the request.
+        /// See https://cloud.google.com/dlp/docs/inspecting-storage and
+        /// https://cloud.google.com/dlp/docs/compute-risk-analysis to learn more.
         /// </summary>
         /// <param name="request">
         /// The request object containing all of the parameters for the API call.
@@ -1940,6 +2053,8 @@ namespace Google.Cloud.Dlp.V2
 
         /// <summary>
         /// Lists DlpJobs that match the specified filter in the request.
+        /// See https://cloud.google.com/dlp/docs/inspecting-storage and
+        /// https://cloud.google.com/dlp/docs/compute-risk-analysis to learn more.
         /// </summary>
         /// <param name="request">
         /// The request object containing all of the parameters for the API call.
@@ -1959,6 +2074,8 @@ namespace Google.Cloud.Dlp.V2
 
         /// <summary>
         /// Gets the latest state of a long-running DlpJob.
+        /// See https://cloud.google.com/dlp/docs/inspecting-storage and
+        /// https://cloud.google.com/dlp/docs/compute-risk-analysis to learn more.
         /// </summary>
         /// <param name="request">
         /// The request object containing all of the parameters for the API call.
@@ -1978,6 +2095,8 @@ namespace Google.Cloud.Dlp.V2
 
         /// <summary>
         /// Gets the latest state of a long-running DlpJob.
+        /// See https://cloud.google.com/dlp/docs/inspecting-storage and
+        /// https://cloud.google.com/dlp/docs/compute-risk-analysis to learn more.
         /// </summary>
         /// <param name="request">
         /// The request object containing all of the parameters for the API call.
@@ -1996,6 +2115,8 @@ namespace Google.Cloud.Dlp.V2
 
         /// <summary>
         /// Gets the latest state of a long-running DlpJob.
+        /// See https://cloud.google.com/dlp/docs/inspecting-storage and
+        /// https://cloud.google.com/dlp/docs/compute-risk-analysis to learn more.
         /// </summary>
         /// <param name="request">
         /// The request object containing all of the parameters for the API call.
@@ -2017,6 +2138,8 @@ namespace Google.Cloud.Dlp.V2
         /// Deletes a long-running DlpJob. This method indicates that the client is
         /// no longer interested in the DlpJob result. The job will be cancelled if
         /// possible.
+        /// See https://cloud.google.com/dlp/docs/inspecting-storage and
+        /// https://cloud.google.com/dlp/docs/compute-risk-analysis to learn more.
         /// </summary>
         /// <param name="request">
         /// The request object containing all of the parameters for the API call.
@@ -2038,6 +2161,8 @@ namespace Google.Cloud.Dlp.V2
         /// Deletes a long-running DlpJob. This method indicates that the client is
         /// no longer interested in the DlpJob result. The job will be cancelled if
         /// possible.
+        /// See https://cloud.google.com/dlp/docs/inspecting-storage and
+        /// https://cloud.google.com/dlp/docs/compute-risk-analysis to learn more.
         /// </summary>
         /// <param name="request">
         /// The request object containing all of the parameters for the API call.
@@ -2058,6 +2183,8 @@ namespace Google.Cloud.Dlp.V2
         /// Deletes a long-running DlpJob. This method indicates that the client is
         /// no longer interested in the DlpJob result. The job will be cancelled if
         /// possible.
+        /// See https://cloud.google.com/dlp/docs/inspecting-storage and
+        /// https://cloud.google.com/dlp/docs/compute-risk-analysis to learn more.
         /// </summary>
         /// <param name="request">
         /// The request object containing all of the parameters for the API call.
@@ -2076,6 +2203,8 @@ namespace Google.Cloud.Dlp.V2
         /// Starts asynchronous cancellation on a long-running DlpJob. The server
         /// makes a best effort to cancel the DlpJob, but success is not
         /// guaranteed.
+        /// See https://cloud.google.com/dlp/docs/inspecting-storage and
+        /// https://cloud.google.com/dlp/docs/compute-risk-analysis to learn more.
         /// </summary>
         /// <param name="request">
         /// The request object containing all of the parameters for the API call.
@@ -2097,6 +2226,8 @@ namespace Google.Cloud.Dlp.V2
         /// Starts asynchronous cancellation on a long-running DlpJob. The server
         /// makes a best effort to cancel the DlpJob, but success is not
         /// guaranteed.
+        /// See https://cloud.google.com/dlp/docs/inspecting-storage and
+        /// https://cloud.google.com/dlp/docs/compute-risk-analysis to learn more.
         /// </summary>
         /// <param name="request">
         /// The request object containing all of the parameters for the API call.
@@ -2117,6 +2248,8 @@ namespace Google.Cloud.Dlp.V2
         /// Starts asynchronous cancellation on a long-running DlpJob. The server
         /// makes a best effort to cancel the DlpJob, but success is not
         /// guaranteed.
+        /// See https://cloud.google.com/dlp/docs/inspecting-storage and
+        /// https://cloud.google.com/dlp/docs/compute-risk-analysis to learn more.
         /// </summary>
         /// <param name="request">
         /// The request object containing all of the parameters for the API call.
@@ -2133,6 +2266,7 @@ namespace Google.Cloud.Dlp.V2
 
         /// <summary>
         /// Lists job triggers.
+        /// See https://cloud.google.com/dlp/docs/creating-job-triggers to learn more.
         /// </summary>
         /// <param name="request">
         /// The request object containing all of the parameters for the API call.
@@ -2152,6 +2286,7 @@ namespace Google.Cloud.Dlp.V2
 
         /// <summary>
         /// Lists job triggers.
+        /// See https://cloud.google.com/dlp/docs/creating-job-triggers to learn more.
         /// </summary>
         /// <param name="request">
         /// The request object containing all of the parameters for the API call.
@@ -2171,6 +2306,7 @@ namespace Google.Cloud.Dlp.V2
 
         /// <summary>
         /// Gets a job trigger.
+        /// See https://cloud.google.com/dlp/docs/creating-job-triggers to learn more.
         /// </summary>
         /// <param name="request">
         /// The request object containing all of the parameters for the API call.
@@ -2190,6 +2326,7 @@ namespace Google.Cloud.Dlp.V2
 
         /// <summary>
         /// Gets a job trigger.
+        /// See https://cloud.google.com/dlp/docs/creating-job-triggers to learn more.
         /// </summary>
         /// <param name="request">
         /// The request object containing all of the parameters for the API call.
@@ -2208,6 +2345,7 @@ namespace Google.Cloud.Dlp.V2
 
         /// <summary>
         /// Gets a job trigger.
+        /// See https://cloud.google.com/dlp/docs/creating-job-triggers to learn more.
         /// </summary>
         /// <param name="request">
         /// The request object containing all of the parameters for the API call.
@@ -2227,6 +2365,7 @@ namespace Google.Cloud.Dlp.V2
 
         /// <summary>
         /// Deletes a job trigger.
+        /// See https://cloud.google.com/dlp/docs/creating-job-triggers to learn more.
         /// </summary>
         /// <param name="request">
         /// The request object containing all of the parameters for the API call.
@@ -2246,6 +2385,7 @@ namespace Google.Cloud.Dlp.V2
 
         /// <summary>
         /// Deletes a job trigger.
+        /// See https://cloud.google.com/dlp/docs/creating-job-triggers to learn more.
         /// </summary>
         /// <param name="request">
         /// The request object containing all of the parameters for the API call.
@@ -2264,6 +2404,7 @@ namespace Google.Cloud.Dlp.V2
 
         /// <summary>
         /// Deletes a job trigger.
+        /// See https://cloud.google.com/dlp/docs/creating-job-triggers to learn more.
         /// </summary>
         /// <param name="request">
         /// The request object containing all of the parameters for the API call.
@@ -2280,6 +2421,7 @@ namespace Google.Cloud.Dlp.V2
 
         /// <summary>
         /// Updates a job trigger.
+        /// See https://cloud.google.com/dlp/docs/creating-job-triggers to learn more.
         /// </summary>
         /// <param name="request">
         /// The request object containing all of the parameters for the API call.
@@ -2299,6 +2441,7 @@ namespace Google.Cloud.Dlp.V2
 
         /// <summary>
         /// Updates a job trigger.
+        /// See https://cloud.google.com/dlp/docs/creating-job-triggers to learn more.
         /// </summary>
         /// <param name="request">
         /// The request object containing all of the parameters for the API call.
@@ -2317,6 +2460,7 @@ namespace Google.Cloud.Dlp.V2
 
         /// <summary>
         /// Updates a job trigger.
+        /// See https://cloud.google.com/dlp/docs/creating-job-triggers to learn more.
         /// </summary>
         /// <param name="request">
         /// The request object containing all of the parameters for the API call.
@@ -2337,6 +2481,7 @@ namespace Google.Cloud.Dlp.V2
         /// <summary>
         /// Creates a job trigger to run DLP actions such as scanning storage for
         /// sensitive information on a set schedule.
+        /// See https://cloud.google.com/dlp/docs/creating-job-triggers to learn more.
         /// </summary>
         /// <param name="request">
         /// The request object containing all of the parameters for the API call.
@@ -2357,6 +2502,7 @@ namespace Google.Cloud.Dlp.V2
         /// <summary>
         /// Creates a job trigger to run DLP actions such as scanning storage for
         /// sensitive information on a set schedule.
+        /// See https://cloud.google.com/dlp/docs/creating-job-triggers to learn more.
         /// </summary>
         /// <param name="request">
         /// The request object containing all of the parameters for the API call.
@@ -2376,6 +2522,7 @@ namespace Google.Cloud.Dlp.V2
         /// <summary>
         /// Creates a job trigger to run DLP actions such as scanning storage for
         /// sensitive information on a set schedule.
+        /// See https://cloud.google.com/dlp/docs/creating-job-triggers to learn more.
         /// </summary>
         /// <param name="request">
         /// The request object containing all of the parameters for the API call.
@@ -2613,8 +2760,13 @@ namespace Google.Cloud.Dlp.V2
         /// <summary>
         /// Finds potentially sensitive info in content.
         /// This method has limits on input size, processing time, and output size.
-        /// [How-to guide for text](/dlp/docs/inspecting-text), [How-to guide for
-        /// images](/dlp/docs/inspecting-images)
+        ///
+        /// When no InfoTypes or CustomInfoTypes are specified in this request, the
+        /// system will automatically choose what detectors to run. By default this may
+        /// be all types, but may change over time as detectors are updated.
+        ///
+        /// For how to guides, see https://cloud.google.com/dlp/docs/inspecting-images
+        /// and https://cloud.google.com/dlp/docs/inspecting-text,
         /// </summary>
         /// <param name="request">
         /// The request object containing all of the parameters for the API call.
@@ -2636,8 +2788,13 @@ namespace Google.Cloud.Dlp.V2
         /// <summary>
         /// Finds potentially sensitive info in content.
         /// This method has limits on input size, processing time, and output size.
-        /// [How-to guide for text](/dlp/docs/inspecting-text), [How-to guide for
-        /// images](/dlp/docs/inspecting-images)
+        ///
+        /// When no InfoTypes or CustomInfoTypes are specified in this request, the
+        /// system will automatically choose what detectors to run. By default this may
+        /// be all types, but may change over time as detectors are updated.
+        ///
+        /// For how to guides, see https://cloud.google.com/dlp/docs/inspecting-images
+        /// and https://cloud.google.com/dlp/docs/inspecting-text,
         /// </summary>
         /// <param name="request">
         /// The request object containing all of the parameters for the API call.
@@ -2659,7 +2816,12 @@ namespace Google.Cloud.Dlp.V2
         /// <summary>
         /// Redacts potentially sensitive info from an image.
         /// This method has limits on input size, processing time, and output size.
-        /// [How-to guide](/dlp/docs/redacting-sensitive-data-images)
+        /// See https://cloud.google.com/dlp/docs/redacting-sensitive-data-images to
+        /// learn more.
+        ///
+        /// When no InfoTypes or CustomInfoTypes are specified in this request, the
+        /// system will automatically choose what detectors to run. By default this may
+        /// be all types, but may change over time as detectors are updated.
         /// </summary>
         /// <param name="request">
         /// The request object containing all of the parameters for the API call.
@@ -2681,7 +2843,12 @@ namespace Google.Cloud.Dlp.V2
         /// <summary>
         /// Redacts potentially sensitive info from an image.
         /// This method has limits on input size, processing time, and output size.
-        /// [How-to guide](/dlp/docs/redacting-sensitive-data-images)
+        /// See https://cloud.google.com/dlp/docs/redacting-sensitive-data-images to
+        /// learn more.
+        ///
+        /// When no InfoTypes or CustomInfoTypes are specified in this request, the
+        /// system will automatically choose what detectors to run. By default this may
+        /// be all types, but may change over time as detectors are updated.
         /// </summary>
         /// <param name="request">
         /// The request object containing all of the parameters for the API call.
@@ -2703,7 +2870,12 @@ namespace Google.Cloud.Dlp.V2
         /// <summary>
         /// De-identifies potentially sensitive info from a ContentItem.
         /// This method has limits on input size and output size.
-        /// [How-to guide](/dlp/docs/deidentify-sensitive-data)
+        /// See https://cloud.google.com/dlp/docs/deidentify-sensitive-data to
+        /// learn more.
+        ///
+        /// When no InfoTypes or CustomInfoTypes are specified in this request, the
+        /// system will automatically choose what detectors to run. By default this may
+        /// be all types, but may change over time as detectors are updated.
         /// </summary>
         /// <param name="request">
         /// The request object containing all of the parameters for the API call.
@@ -2725,7 +2897,12 @@ namespace Google.Cloud.Dlp.V2
         /// <summary>
         /// De-identifies potentially sensitive info from a ContentItem.
         /// This method has limits on input size and output size.
-        /// [How-to guide](/dlp/docs/deidentify-sensitive-data)
+        /// See https://cloud.google.com/dlp/docs/deidentify-sensitive-data to
+        /// learn more.
+        ///
+        /// When no InfoTypes or CustomInfoTypes are specified in this request, the
+        /// system will automatically choose what detectors to run. By default this may
+        /// be all types, but may change over time as detectors are updated.
         /// </summary>
         /// <param name="request">
         /// The request object containing all of the parameters for the API call.
@@ -2746,6 +2923,9 @@ namespace Google.Cloud.Dlp.V2
 
         /// <summary>
         /// Re-identifies content that has been de-identified.
+        /// See
+        /// https://cloud.google.com/dlp/docs/pseudonymization#re-identification_in_free_text_code_example
+        /// to learn more.
         /// </summary>
         /// <param name="request">
         /// The request object containing all of the parameters for the API call.
@@ -2766,6 +2946,9 @@ namespace Google.Cloud.Dlp.V2
 
         /// <summary>
         /// Re-identifies content that has been de-identified.
+        /// See
+        /// https://cloud.google.com/dlp/docs/pseudonymization#re-identification_in_free_text_code_example
+        /// to learn more.
         /// </summary>
         /// <param name="request">
         /// The request object containing all of the parameters for the API call.
@@ -2786,8 +2969,8 @@ namespace Google.Cloud.Dlp.V2
 
         /// <summary>
         /// Returns a list of the sensitive information types that the DLP API
-        /// supports. For more information, see [Listing supported predefined
-        /// infoTypes](/dlp/docs/listing-infotypes).
+        /// supports. See https://cloud.google.com/dlp/docs/infotypes-reference to
+        /// learn more.
         /// </summary>
         /// <param name="request">
         /// The request object containing all of the parameters for the API call.
@@ -2808,8 +2991,8 @@ namespace Google.Cloud.Dlp.V2
 
         /// <summary>
         /// Returns a list of the sensitive information types that the DLP API
-        /// supports. For more information, see [Listing supported predefined
-        /// infoTypes](/dlp/docs/listing-infotypes).
+        /// supports. See https://cloud.google.com/dlp/docs/infotypes-reference to
+        /// learn more.
         /// </summary>
         /// <param name="request">
         /// The request object containing all of the parameters for the API call.
@@ -2831,6 +3014,7 @@ namespace Google.Cloud.Dlp.V2
         /// <summary>
         /// Creates an InspectTemplate for re-using frequently used configuration
         /// for inspecting content, images, and storage.
+        /// See https://cloud.google.com/dlp/docs/creating-templates to learn more.
         /// </summary>
         /// <param name="request">
         /// The request object containing all of the parameters for the API call.
@@ -2852,6 +3036,7 @@ namespace Google.Cloud.Dlp.V2
         /// <summary>
         /// Creates an InspectTemplate for re-using frequently used configuration
         /// for inspecting content, images, and storage.
+        /// See https://cloud.google.com/dlp/docs/creating-templates to learn more.
         /// </summary>
         /// <param name="request">
         /// The request object containing all of the parameters for the API call.
@@ -2872,6 +3057,7 @@ namespace Google.Cloud.Dlp.V2
 
         /// <summary>
         /// Updates the InspectTemplate.
+        /// See https://cloud.google.com/dlp/docs/creating-templates to learn more.
         /// </summary>
         /// <param name="request">
         /// The request object containing all of the parameters for the API call.
@@ -2892,6 +3078,7 @@ namespace Google.Cloud.Dlp.V2
 
         /// <summary>
         /// Updates the InspectTemplate.
+        /// See https://cloud.google.com/dlp/docs/creating-templates to learn more.
         /// </summary>
         /// <param name="request">
         /// The request object containing all of the parameters for the API call.
@@ -2912,6 +3099,7 @@ namespace Google.Cloud.Dlp.V2
 
         /// <summary>
         /// Gets an InspectTemplate.
+        /// See https://cloud.google.com/dlp/docs/creating-templates to learn more.
         /// </summary>
         /// <param name="request">
         /// The request object containing all of the parameters for the API call.
@@ -2932,6 +3120,7 @@ namespace Google.Cloud.Dlp.V2
 
         /// <summary>
         /// Gets an InspectTemplate.
+        /// See https://cloud.google.com/dlp/docs/creating-templates to learn more.
         /// </summary>
         /// <param name="request">
         /// The request object containing all of the parameters for the API call.
@@ -2952,6 +3141,7 @@ namespace Google.Cloud.Dlp.V2
 
         /// <summary>
         /// Lists InspectTemplates.
+        /// See https://cloud.google.com/dlp/docs/creating-templates to learn more.
         /// </summary>
         /// <param name="request">
         /// The request object containing all of the parameters for the API call.
@@ -2972,6 +3162,7 @@ namespace Google.Cloud.Dlp.V2
 
         /// <summary>
         /// Lists InspectTemplates.
+        /// See https://cloud.google.com/dlp/docs/creating-templates to learn more.
         /// </summary>
         /// <param name="request">
         /// The request object containing all of the parameters for the API call.
@@ -2992,6 +3183,7 @@ namespace Google.Cloud.Dlp.V2
 
         /// <summary>
         /// Deletes an InspectTemplate.
+        /// See https://cloud.google.com/dlp/docs/creating-templates to learn more.
         /// </summary>
         /// <param name="request">
         /// The request object containing all of the parameters for the API call.
@@ -3012,6 +3204,7 @@ namespace Google.Cloud.Dlp.V2
 
         /// <summary>
         /// Deletes an InspectTemplate.
+        /// See https://cloud.google.com/dlp/docs/creating-templates to learn more.
         /// </summary>
         /// <param name="request">
         /// The request object containing all of the parameters for the API call.
@@ -3030,6 +3223,8 @@ namespace Google.Cloud.Dlp.V2
         /// <summary>
         /// Creates a DeidentifyTemplate for re-using frequently used configuration
         /// for de-identifying content, images, and storage.
+        /// See https://cloud.google.com/dlp/docs/creating-templates-deid to learn
+        /// more.
         /// </summary>
         /// <param name="request">
         /// The request object containing all of the parameters for the API call.
@@ -3051,6 +3246,8 @@ namespace Google.Cloud.Dlp.V2
         /// <summary>
         /// Creates a DeidentifyTemplate for re-using frequently used configuration
         /// for de-identifying content, images, and storage.
+        /// See https://cloud.google.com/dlp/docs/creating-templates-deid to learn
+        /// more.
         /// </summary>
         /// <param name="request">
         /// The request object containing all of the parameters for the API call.
@@ -3071,6 +3268,8 @@ namespace Google.Cloud.Dlp.V2
 
         /// <summary>
         /// Updates the DeidentifyTemplate.
+        /// See https://cloud.google.com/dlp/docs/creating-templates-deid to learn
+        /// more.
         /// </summary>
         /// <param name="request">
         /// The request object containing all of the parameters for the API call.
@@ -3091,6 +3290,8 @@ namespace Google.Cloud.Dlp.V2
 
         /// <summary>
         /// Updates the DeidentifyTemplate.
+        /// See https://cloud.google.com/dlp/docs/creating-templates-deid to learn
+        /// more.
         /// </summary>
         /// <param name="request">
         /// The request object containing all of the parameters for the API call.
@@ -3111,6 +3312,8 @@ namespace Google.Cloud.Dlp.V2
 
         /// <summary>
         /// Gets a DeidentifyTemplate.
+        /// See https://cloud.google.com/dlp/docs/creating-templates-deid to learn
+        /// more.
         /// </summary>
         /// <param name="request">
         /// The request object containing all of the parameters for the API call.
@@ -3131,6 +3334,8 @@ namespace Google.Cloud.Dlp.V2
 
         /// <summary>
         /// Gets a DeidentifyTemplate.
+        /// See https://cloud.google.com/dlp/docs/creating-templates-deid to learn
+        /// more.
         /// </summary>
         /// <param name="request">
         /// The request object containing all of the parameters for the API call.
@@ -3151,6 +3356,8 @@ namespace Google.Cloud.Dlp.V2
 
         /// <summary>
         /// Lists DeidentifyTemplates.
+        /// See https://cloud.google.com/dlp/docs/creating-templates-deid to learn
+        /// more.
         /// </summary>
         /// <param name="request">
         /// The request object containing all of the parameters for the API call.
@@ -3171,6 +3378,8 @@ namespace Google.Cloud.Dlp.V2
 
         /// <summary>
         /// Lists DeidentifyTemplates.
+        /// See https://cloud.google.com/dlp/docs/creating-templates-deid to learn
+        /// more.
         /// </summary>
         /// <param name="request">
         /// The request object containing all of the parameters for the API call.
@@ -3191,6 +3400,8 @@ namespace Google.Cloud.Dlp.V2
 
         /// <summary>
         /// Deletes a DeidentifyTemplate.
+        /// See https://cloud.google.com/dlp/docs/creating-templates-deid to learn
+        /// more.
         /// </summary>
         /// <param name="request">
         /// The request object containing all of the parameters for the API call.
@@ -3211,6 +3422,8 @@ namespace Google.Cloud.Dlp.V2
 
         /// <summary>
         /// Deletes a DeidentifyTemplate.
+        /// See https://cloud.google.com/dlp/docs/creating-templates-deid to learn
+        /// more.
         /// </summary>
         /// <param name="request">
         /// The request object containing all of the parameters for the API call.
@@ -3228,7 +3441,12 @@ namespace Google.Cloud.Dlp.V2
 
         /// <summary>
         /// Creates a new job to inspect storage or calculate risk metrics.
-        /// [How-to guide](/dlp/docs/compute-risk-analysis).
+        /// See https://cloud.google.com/dlp/docs/inspecting-storage and
+        /// https://cloud.google.com/dlp/docs/compute-risk-analysis to learn more.
+        ///
+        /// When no InfoTypes or CustomInfoTypes are specified in inspect jobs, the
+        /// system will automatically choose what detectors to run. By default this may
+        /// be all types, but may change over time as detectors are updated.
         /// </summary>
         /// <param name="request">
         /// The request object containing all of the parameters for the API call.
@@ -3249,7 +3467,12 @@ namespace Google.Cloud.Dlp.V2
 
         /// <summary>
         /// Creates a new job to inspect storage or calculate risk metrics.
-        /// [How-to guide](/dlp/docs/compute-risk-analysis).
+        /// See https://cloud.google.com/dlp/docs/inspecting-storage and
+        /// https://cloud.google.com/dlp/docs/compute-risk-analysis to learn more.
+        ///
+        /// When no InfoTypes or CustomInfoTypes are specified in inspect jobs, the
+        /// system will automatically choose what detectors to run. By default this may
+        /// be all types, but may change over time as detectors are updated.
         /// </summary>
         /// <param name="request">
         /// The request object containing all of the parameters for the API call.
@@ -3270,6 +3493,8 @@ namespace Google.Cloud.Dlp.V2
 
         /// <summary>
         /// Lists DlpJobs that match the specified filter in the request.
+        /// See https://cloud.google.com/dlp/docs/inspecting-storage and
+        /// https://cloud.google.com/dlp/docs/compute-risk-analysis to learn more.
         /// </summary>
         /// <param name="request">
         /// The request object containing all of the parameters for the API call.
@@ -3290,6 +3515,8 @@ namespace Google.Cloud.Dlp.V2
 
         /// <summary>
         /// Lists DlpJobs that match the specified filter in the request.
+        /// See https://cloud.google.com/dlp/docs/inspecting-storage and
+        /// https://cloud.google.com/dlp/docs/compute-risk-analysis to learn more.
         /// </summary>
         /// <param name="request">
         /// The request object containing all of the parameters for the API call.
@@ -3310,6 +3537,8 @@ namespace Google.Cloud.Dlp.V2
 
         /// <summary>
         /// Gets the latest state of a long-running DlpJob.
+        /// See https://cloud.google.com/dlp/docs/inspecting-storage and
+        /// https://cloud.google.com/dlp/docs/compute-risk-analysis to learn more.
         /// </summary>
         /// <param name="request">
         /// The request object containing all of the parameters for the API call.
@@ -3330,6 +3559,8 @@ namespace Google.Cloud.Dlp.V2
 
         /// <summary>
         /// Gets the latest state of a long-running DlpJob.
+        /// See https://cloud.google.com/dlp/docs/inspecting-storage and
+        /// https://cloud.google.com/dlp/docs/compute-risk-analysis to learn more.
         /// </summary>
         /// <param name="request">
         /// The request object containing all of the parameters for the API call.
@@ -3352,6 +3583,8 @@ namespace Google.Cloud.Dlp.V2
         /// Deletes a long-running DlpJob. This method indicates that the client is
         /// no longer interested in the DlpJob result. The job will be cancelled if
         /// possible.
+        /// See https://cloud.google.com/dlp/docs/inspecting-storage and
+        /// https://cloud.google.com/dlp/docs/compute-risk-analysis to learn more.
         /// </summary>
         /// <param name="request">
         /// The request object containing all of the parameters for the API call.
@@ -3374,6 +3607,8 @@ namespace Google.Cloud.Dlp.V2
         /// Deletes a long-running DlpJob. This method indicates that the client is
         /// no longer interested in the DlpJob result. The job will be cancelled if
         /// possible.
+        /// See https://cloud.google.com/dlp/docs/inspecting-storage and
+        /// https://cloud.google.com/dlp/docs/compute-risk-analysis to learn more.
         /// </summary>
         /// <param name="request">
         /// The request object containing all of the parameters for the API call.
@@ -3393,6 +3628,8 @@ namespace Google.Cloud.Dlp.V2
         /// Starts asynchronous cancellation on a long-running DlpJob. The server
         /// makes a best effort to cancel the DlpJob, but success is not
         /// guaranteed.
+        /// See https://cloud.google.com/dlp/docs/inspecting-storage and
+        /// https://cloud.google.com/dlp/docs/compute-risk-analysis to learn more.
         /// </summary>
         /// <param name="request">
         /// The request object containing all of the parameters for the API call.
@@ -3415,6 +3652,8 @@ namespace Google.Cloud.Dlp.V2
         /// Starts asynchronous cancellation on a long-running DlpJob. The server
         /// makes a best effort to cancel the DlpJob, but success is not
         /// guaranteed.
+        /// See https://cloud.google.com/dlp/docs/inspecting-storage and
+        /// https://cloud.google.com/dlp/docs/compute-risk-analysis to learn more.
         /// </summary>
         /// <param name="request">
         /// The request object containing all of the parameters for the API call.
@@ -3432,6 +3671,7 @@ namespace Google.Cloud.Dlp.V2
 
         /// <summary>
         /// Lists job triggers.
+        /// See https://cloud.google.com/dlp/docs/creating-job-triggers to learn more.
         /// </summary>
         /// <param name="request">
         /// The request object containing all of the parameters for the API call.
@@ -3452,6 +3692,7 @@ namespace Google.Cloud.Dlp.V2
 
         /// <summary>
         /// Lists job triggers.
+        /// See https://cloud.google.com/dlp/docs/creating-job-triggers to learn more.
         /// </summary>
         /// <param name="request">
         /// The request object containing all of the parameters for the API call.
@@ -3472,6 +3713,7 @@ namespace Google.Cloud.Dlp.V2
 
         /// <summary>
         /// Gets a job trigger.
+        /// See https://cloud.google.com/dlp/docs/creating-job-triggers to learn more.
         /// </summary>
         /// <param name="request">
         /// The request object containing all of the parameters for the API call.
@@ -3492,6 +3734,7 @@ namespace Google.Cloud.Dlp.V2
 
         /// <summary>
         /// Gets a job trigger.
+        /// See https://cloud.google.com/dlp/docs/creating-job-triggers to learn more.
         /// </summary>
         /// <param name="request">
         /// The request object containing all of the parameters for the API call.
@@ -3512,6 +3755,7 @@ namespace Google.Cloud.Dlp.V2
 
         /// <summary>
         /// Deletes a job trigger.
+        /// See https://cloud.google.com/dlp/docs/creating-job-triggers to learn more.
         /// </summary>
         /// <param name="request">
         /// The request object containing all of the parameters for the API call.
@@ -3532,6 +3776,7 @@ namespace Google.Cloud.Dlp.V2
 
         /// <summary>
         /// Deletes a job trigger.
+        /// See https://cloud.google.com/dlp/docs/creating-job-triggers to learn more.
         /// </summary>
         /// <param name="request">
         /// The request object containing all of the parameters for the API call.
@@ -3549,6 +3794,7 @@ namespace Google.Cloud.Dlp.V2
 
         /// <summary>
         /// Updates a job trigger.
+        /// See https://cloud.google.com/dlp/docs/creating-job-triggers to learn more.
         /// </summary>
         /// <param name="request">
         /// The request object containing all of the parameters for the API call.
@@ -3569,6 +3815,7 @@ namespace Google.Cloud.Dlp.V2
 
         /// <summary>
         /// Updates a job trigger.
+        /// See https://cloud.google.com/dlp/docs/creating-job-triggers to learn more.
         /// </summary>
         /// <param name="request">
         /// The request object containing all of the parameters for the API call.
@@ -3590,6 +3837,7 @@ namespace Google.Cloud.Dlp.V2
         /// <summary>
         /// Creates a job trigger to run DLP actions such as scanning storage for
         /// sensitive information on a set schedule.
+        /// See https://cloud.google.com/dlp/docs/creating-job-triggers to learn more.
         /// </summary>
         /// <param name="request">
         /// The request object containing all of the parameters for the API call.
@@ -3611,6 +3859,7 @@ namespace Google.Cloud.Dlp.V2
         /// <summary>
         /// Creates a job trigger to run DLP actions such as scanning storage for
         /// sensitive information on a set schedule.
+        /// See https://cloud.google.com/dlp/docs/creating-job-triggers to learn more.
         /// </summary>
         /// <param name="request">
         /// The request object containing all of the parameters for the API call.
