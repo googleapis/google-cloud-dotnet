@@ -34,5 +34,15 @@ namespace Google.Cloud.Diagnostics.AspNet.Tests
             Assert.Null(wrapper.GetUserAgent());
             Assert.Equal(200, wrapper.GetStatusCode());
         }
+
+        [Fact]
+        public void HttpContextWrapper_NullHttpContext()
+        {
+            var wrapper = new HttpContextWrapper(null);
+            Assert.Null(wrapper.GetHttpMethod());
+            Assert.Null(wrapper.GetUri());
+            Assert.Null(wrapper.GetUserAgent());
+            Assert.Equal(0, wrapper.GetStatusCode());
+        }
     }
 }
