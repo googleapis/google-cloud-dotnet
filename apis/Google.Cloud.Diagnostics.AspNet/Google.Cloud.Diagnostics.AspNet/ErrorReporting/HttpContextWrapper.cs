@@ -27,19 +27,19 @@ namespace Google.Cloud.Diagnostics.AspNet
 
         internal HttpContextWrapper(HttpContext context)
         {
-            _context = GaxPreconditions.CheckNotNull(context, nameof(context));
+            _context = context;
         }
 
         /// <inheritdoc />
-        public string GetHttpMethod() => _context.Request?.HttpMethod;
+        public string GetHttpMethod() => _context?.Request?.HttpMethod;
 
         /// <inheritdoc />
-        public string GetUri() => _context.Request?.Url?.ToString();
+        public string GetUri() => _context?.Request?.Url?.ToString();
 
         /// <inheritdoc />
-        public string GetUserAgent() => _context.Request?.UserAgent;
+        public string GetUserAgent() => _context?.Request?.UserAgent;
 
         /// <inheritdoc />
-        public int GetStatusCode() => _context.Response?.StatusCode ?? 0;
+        public int GetStatusCode() => _context?.Response?.StatusCode ?? 0;
     }
 }

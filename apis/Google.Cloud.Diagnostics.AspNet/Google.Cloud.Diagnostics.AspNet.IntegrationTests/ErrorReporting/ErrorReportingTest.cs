@@ -64,7 +64,7 @@ namespace Google.Cloud.Diagnostics.AspNet.IntegrationTests
                 Assert.Equal(HttpStatusCode.InternalServerError, response.StatusCode);
 
                 var errorEvent = _polling.GetEvents(startTime, testId, 1).Single();
-                VerifyErrorEvent(errorEvent, testId, "ThrowsException");
+                VerifyAutomaticLogging(errorEvent, testId, "ThrowsException");
 
                 var content = await contentTask;
                 Assert.Contains("ThrowsException", content);
@@ -102,13 +102,13 @@ namespace Google.Cloud.Diagnostics.AspNet.IntegrationTests
                 Assert.Equal(3, exceptionEvents.Count());
                 foreach (var errorEvent in exceptionEvents)
                 {
-                    VerifyErrorEvent(errorEvent, testId, "ThrowsException");
+                    VerifyAutomaticLogging(errorEvent, testId, "ThrowsException");
                 }
 
                 var argumentExceptionEvent = errorEvents
                     .Where(e => e.Message.Contains("ThrowsArgumentException"))
                     .Single();
-                VerifyErrorEvent(argumentExceptionEvent, testId, "ThrowsArgumentException");
+                VerifyAutomaticLogging(argumentExceptionEvent, testId, "ThrowsArgumentException");
             }
         }
 
@@ -125,8 +125,36 @@ namespace Google.Cloud.Diagnostics.AspNet.IntegrationTests
                 Assert.Equal(HttpStatusCode.InternalServerError, response.StatusCode);
 
                 var errorEvent = _polling.GetEvents(startTime, testId, 1).Single();
-                VerifyErrorEvent(errorEvent, testId, "SendAsync");
+                VerifyAutomaticLogging(errorEvent, testId, "SendAsync");
             }
+        }
+
+        [Fact]
+        public async Task ManualLog()
+        {
+            string testId = Utils.GetTestId();
+            DateTime startTime = DateTime.UtcNow;
+
+            using (TestServer server = TestServer.Create<ErrorReportingTestApplication>())
+            using (var client = server.HttpClient)
+            {
+                var response = await client.GetAsync($"api/ErrorReporting/ThrowCatchLog/{testId}");
+                Assert.Equal(HttpStatusCode.OK, response.StatusCode);
+
+                var errorEvent = _polling.GetEvents(startTime, testId, 1).Single();
+                VerifyManualLogging(errorEvent, testId, "ThrowCatchLog");
+            }
+        }
+
+        private void VerifyAutomaticLogging(ErrorEvent errorEvent, string testId, string functionName)
+        {
+            VerifyErrorEvent(errorEvent, testId, functionName);
+            VerifyHttpRequestContext(errorEvent);
+        }
+
+        private void VerifyManualLogging(ErrorEvent errorEvent, string testId, string functionName)
+        {
+            VerifyErrorEvent(errorEvent, testId, functionName);
         }
 
         /// <summary>
@@ -143,15 +171,22 @@ namespace Google.Cloud.Diagnostics.AspNet.IntegrationTests
             Assert.Contains(functionName, errorEvent.Message);
             Assert.Contains(testId, errorEvent.Message);
 
-            Assert.Equal(HttpMethod.Get.Method, errorEvent.Context.HttpRequest.Method);
-            Assert.False(string.IsNullOrWhiteSpace(errorEvent.Context.HttpRequest.Url));
-
             if (Utils.IsWindows())
             {
                 Assert.False(string.IsNullOrWhiteSpace(errorEvent.Context.ReportLocation.FilePath));
                 Assert.True(errorEvent.Context.ReportLocation.LineNumber > 0);
             }
             Assert.Equal(functionName, errorEvent.Context.ReportLocation.FunctionName);
+        }
+
+        /// <summary>
+        /// Only for automatic logging, in self hosted web apis <see cref="HttpContext.Current"/>
+        /// is <code>null</code>.
+        /// </summary>
+        private void VerifyHttpRequestContext(ErrorEvent errorEvent)
+        {
+            Assert.Equal(HttpMethod.Get.Method, errorEvent.Context.HttpRequest.Method);
+            Assert.False(string.IsNullOrWhiteSpace(errorEvent.Context.HttpRequest.Url));
         }
 
         private class ErrorReportingTestApplication : HttpApplication

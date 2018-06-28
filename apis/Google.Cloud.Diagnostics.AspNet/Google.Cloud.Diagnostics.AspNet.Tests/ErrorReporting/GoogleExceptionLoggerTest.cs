@@ -52,6 +52,17 @@ namespace Google.Cloud.Diagnostics.AspNet.Tests
         }
 
         [Fact]
+        public void Log_NullContext()
+        {
+            var mockContextLogger = new Mock<IContextExceptionLogger>();
+            var logger = new GoogleExceptionLogger(mockContextLogger.Object);
+            HttpContext.Current = null;
+
+            logger.Log(_exception);
+            mockContextLogger.Verify(lb => lb.Log(_exception, It.IsAny<HttpContextWrapper>()));
+        }
+
+        [Fact]
         public async Task LogAsync()
         {
             var mockContextLogger = new Mock<IContextExceptionLogger>();
@@ -73,6 +84,20 @@ namespace Google.Cloud.Diagnostics.AspNet.Tests
                 It.IsAny<Exception>(), It.IsAny<IContextWrapper>(), It.IsAny<CancellationToken>()))
                 .Returns(Task.FromResult(true));
             HttpContext.Current = _context;
+
+            await logger.LogAsync(_exception);
+            mockContextLogger.Verify(lb => lb.LogAsync(_exception, It.IsAny<HttpContextWrapper>(), It.IsAny<CancellationToken>()));
+        }
+
+        [Fact]
+        public async Task LogAsync_NullContext()
+        {
+            var mockContextLogger = new Mock<IContextExceptionLogger>();
+            var logger = new GoogleExceptionLogger(mockContextLogger.Object);
+            mockContextLogger.Setup(lb => lb.LogAsync(
+                It.IsAny<Exception>(), It.IsAny<IContextWrapper>(), It.IsAny<CancellationToken>()))
+                .Returns(Task.FromResult(true));
+            HttpContext.Current = null;
 
             await logger.LogAsync(_exception);
             mockContextLogger.Verify(lb => lb.LogAsync(_exception, It.IsAny<HttpContextWrapper>(), It.IsAny<CancellationToken>()));
