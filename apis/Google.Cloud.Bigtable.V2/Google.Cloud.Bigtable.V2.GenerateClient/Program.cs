@@ -156,6 +156,7 @@ namespace Google.Cloud.Bigtable.V2.GenerateClient
             var semanticModel = compilation.GetSemanticModel(syntaxTree);
             var generator = SyntaxGenerator.GetGenerator(project.GetDocument(syntaxTree));
             var requestMethodRewriter = new RequestMethodRewriter(semanticModel);
+            var nonRequestMethodRewriter = new ClientMethodRewriter(semanticModel);
             var requestMethodToImplRewriter = new RequestMethodToImplRewriter();
             var convertToAsyncCancellationTokenOverload = new ConvertToAsyncCancellationTokenOverloadRewriter();
 
@@ -217,6 +218,21 @@ namespace Google.Cloud.Bigtable.V2.GenerateClient
                             userClientImplSyntax = userClientImplSyntax.AddMembers(clientImplMethod);
                         }
                     }
+                }
+                else if (
+                    method.Name != "Create" &&
+                    method.Name != "CreateAsync" &&
+                    !s_customStreamMethods.ContainsKey(method.Name) &&
+                    !method.Parameters.Any(p => p.Type.Name == "ByteString"))
+                {
+                    // TODO: We could also have this remap to BigtableByteString automatically, but we currently
+                    //       have some validations for most methods with ByteStrings which I think we's lose by
+                    //       autogenerating at the moment.
+                    // For any other methods which aren't custom streaming methods and which don't use ByteString,
+                    // which we remap to BigtableByteString, copy them (with some small fix ups) into the generated
+                    // client.
+                    userClientSyntax = userClientSyntax.AddMembers(
+                        (MethodDeclarationSyntax)nonRequestMethodRewriter.Visit(methodSyntax));
                 }
             }
 
@@ -333,17 +349,16 @@ namespace Google.Cloud.Bigtable.V2.GenerateClient
         }
 
         /// <summary>
-        /// Rewriter which takes a first pass at the API client's request methods to clean them up
+        /// Rewriter which takes a first pass at the API client's methods to clean them up
         /// to be added to the user client.
         /// </summary>
-        private class RequestMethodRewriter : CSharpSyntaxRewriter
+        private class ClientMethodRewriter : CSharpSyntaxRewriter
         {
             private readonly SemanticModel _semanticModel;
 
-            private IMethodSymbol _method;
-            private ParameterSyntax _requestParameterSyntax;
+            protected IMethodSymbol Method { get; private set; }
 
-            public RequestMethodRewriter(SemanticModel semanticModel) :
+            public ClientMethodRewriter(SemanticModel semanticModel) :
                 base(visitIntoStructuredTrivia: true)
             {
                 _semanticModel = semanticModel;
@@ -353,31 +368,55 @@ namespace Google.Cloud.Bigtable.V2.GenerateClient
             {
                 try
                 {
-                    _method = _semanticModel.GetDeclaredSymbol(node);
-                    _requestParameterSyntax = node.ParameterList.Parameters[0];
-
+                    Method = _semanticModel.GetDeclaredSymbol(node);
                     node = (MethodDeclarationSyntax)base.VisitMethodDeclaration(node);
 
-                    if (s_customStreamMethods.TryGetValue(_method.Name, out var customStreamMethodInfo) &&
+                    if (s_customStreamMethods.TryGetValue(Method.Name, out var customStreamMethodInfo) &&
                         customStreamMethodInfo.TypeName != null)
                     {
                         node = node.WithReturnType(ParseTypeName(customStreamMethodInfo.TypeName));
                     }
-                    else if (_method.ReturnType.ContainingType == _method.ContainingType)
+                    else if (Method.ReturnType.ContainingType == Method.ContainingType)
                     {
                         // If the method's return type is defined in the underlying client's class, qualify the return type.
                         node = node.WithReturnType(
                             QualifiedName(
-                                IdentifierName(_method.ContainingType.Name),
-                                IdentifierName(_method.ReturnType.Name)));
+                                IdentifierName(Method.ContainingType.Name),
+                                IdentifierName(Method.ReturnType.Name)));
                     }
 
                     return node;
                 }
                 finally
                 {
+                    Method = null;
+                }
+            }
+        }
+
+        /// <summary>
+        /// Rewriter which takes a first pass at the API client's request methods to clean them up
+        /// to be added to the user client.
+        /// </summary>
+        private class RequestMethodRewriter : ClientMethodRewriter
+        {
+            private ParameterSyntax _requestParameterSyntax;
+
+            public RequestMethodRewriter(SemanticModel semanticModel) :
+                base(semanticModel)
+            {
+            }
+
+            public override SyntaxNode VisitMethodDeclaration(MethodDeclarationSyntax node)
+            {
+                try
+                {
+                    _requestParameterSyntax = node.ParameterList.Parameters[0];
+                    return (MethodDeclarationSyntax)base.VisitMethodDeclaration(node);
+                }
+                finally
+                {
                     _requestParameterSyntax = null;
-                    _method = null;
                 }
             }
 
@@ -387,7 +426,7 @@ namespace Google.Cloud.Bigtable.V2.GenerateClient
 
                 var content = node.Content;
 
-                if (s_customStreamMethods.TryGetValue(_method.Name, out var customStreamMethodInfo) &&
+                if (s_customStreamMethods.TryGetValue(Method.Name, out var customStreamMethodInfo) &&
                     customStreamMethodInfo.CustomDocs.TryGetValue(node.StartTag.Name.ToString(), out var comment))
                 {
                     content = SingletonList((XmlNodeSyntax)XmlText(XmlTextLiteral(comment)));
