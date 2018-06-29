@@ -58,7 +58,11 @@ namespace Google.Cloud.Spanner.Data
         //While SpannerTransaction has sole ownership of the session it obtains, SpannerCommand shares
         // any session it obtains with others.
 
+        // Default transaction options: not valid to pass to Spanner to begin a transaction.
         private static readonly TransactionOptions s_defaultTransactionOptions = new TransactionOptions();
+        // Read/write transaction options; no additional state, so can be reused.
+        private static readonly TransactionOptions s_readWriteTransactionOptions = new TransactionOptions { ReadWrite = new TransactionOptions.Types.ReadWrite() };
+
         private readonly object _sync = new object();
 
         // This object is never mutated and never exposed to consumers.
@@ -211,7 +215,7 @@ namespace Google.Cloud.Spanner.Data
             }
 
             return BeginTransactionImplAsync(
-                new TransactionOptions {ReadOnly = ConvertToOptions(targetReadTimestamp)},
+                CreateReadOnlyTransactionOptions(targetReadTimestamp),
                 TransactionMode.ReadOnly,
                 cancellationToken,
                 targetReadTimestamp);
@@ -232,36 +236,31 @@ namespace Google.Cloud.Spanner.Data
             return SpannerTransaction.FromTransactionId(this, transactionId);
         }
 
-        private TransactionOptions.Types.ReadOnly ConvertToOptions(TimestampBound targetReadTimestamp)
+        private static TransactionOptions CreateReadOnlyTransactionOptions(TimestampBound targetReadTimestamp)
         {
+            var innerOptions = new TransactionOptions.Types.ReadOnly();
+
             switch (targetReadTimestamp.Mode)
             {
                 case TimestampBoundMode.Strong:
-                    return new TransactionOptions.Types.ReadOnly {Strong = true};
+                    innerOptions.Strong = true;
+                    break;
                 case TimestampBoundMode.ReadTimestamp:
-                    return new TransactionOptions.Types.ReadOnly
-                    {
-                        ReadTimestamp = Timestamp.FromDateTime(targetReadTimestamp.Timestamp)
-                    };
+                    innerOptions.ReadTimestamp = Timestamp.FromDateTime(targetReadTimestamp.Timestamp);
+                    break;
                 case TimestampBoundMode.MinReadTimestamp:
-                    return new TransactionOptions.Types.ReadOnly
-                    {
-                        MinReadTimestamp = Timestamp.FromDateTime(targetReadTimestamp.Timestamp)
-                    };
+                    innerOptions.MinReadTimestamp = Timestamp.FromDateTime(targetReadTimestamp.Timestamp);
+                    break;
                 case TimestampBoundMode.ExactStaleness:
-                    return new TransactionOptions.Types.ReadOnly
-                    {
-                        ExactStaleness = Duration.FromTimeSpan(targetReadTimestamp.Staleness)
-                    };
+                    innerOptions.ExactStaleness = Duration.FromTimeSpan(targetReadTimestamp.Staleness);
+                    break;
                 case TimestampBoundMode.MaxStaleness:
-                    return
-                        new TransactionOptions.Types.ReadOnly
-                        {
-                            MaxStaleness = Duration.FromTimeSpan(targetReadTimestamp.Staleness)
-                        };
+                    innerOptions.MaxStaleness = Duration.FromTimeSpan(targetReadTimestamp.Staleness);
+                    break;
                 default:
                     throw new ArgumentOutOfRangeException();
             }
+            return new TransactionOptions { ReadOnly = innerOptions };
         }
 
         /// <summary>
@@ -276,12 +275,8 @@ namespace Google.Cloud.Spanner.Data
         /// </summary>
         /// <param name="cancellationToken">An optional token for canceling the call.</param>
         /// <returns>A new <see cref="SpannerTransaction" /></returns>
-        public Task<SpannerTransaction> BeginTransactionAsync(
-            CancellationToken cancellationToken = default) => BeginTransactionImplAsync(
-            new TransactionOptions
-            {
-                ReadWrite = new TransactionOptions.Types.ReadWrite()
-            }, TransactionMode.ReadWrite, cancellationToken);
+        public Task<SpannerTransaction> BeginTransactionAsync(CancellationToken cancellationToken = default) =>
+            BeginTransactionImplAsync(s_readWriteTransactionOptions, TransactionMode.ReadWrite, cancellationToken);
 
         /// <inheritdoc />
         public override void ChangeDatabase(string newDataSource)
@@ -753,7 +748,7 @@ namespace Google.Cloud.Spanner.Data
             TimestampBound targetReadTimestamp,
             CancellationToken cancellationToken)
         {
-            var options = new TransactionOptions {ReadOnly = ConvertToOptions(targetReadTimestamp)};
+            var options = CreateReadOnlyTransactionOptions(targetReadTimestamp);
             return ExecuteHelper.WithErrorTranslationAndProfiling(
                 async () =>
                 {
