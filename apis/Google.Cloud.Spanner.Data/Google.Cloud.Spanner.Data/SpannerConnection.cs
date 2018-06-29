@@ -86,6 +86,13 @@ namespace Google.Cloud.Spanner.Data
         private ConnectionState _state = ConnectionState.Closed;
         private readonly HashSet<string> _staleSessions = new HashSet<string>();
 
+#if !NETSTANDARD1_5
+        // State used for TransactionScope-based transactions.
+        private TimestampBound _timestampBound;
+        private VolatileResourceManager _volatileResourceManager;
+        private TransactionId _transactionId;
+#endif
+
         /// <summary>
         /// Provides options to customize how connections to Spanner are created
         /// and maintained.
@@ -448,19 +455,34 @@ namespace Google.Cloud.Spanner.Data
             {
                 return;
             }
+#if NETSTANDARD1_5
+            Func<Task> taskRunner = () => OpenAsyncImpl(CancellationToken.None);
+#else
+            // Important: capture the transaction on *this* thread.
+            Transaction transaction = Transaction.Current;
+            Func<Task> taskRunner = () => OpenAsyncImpl(transaction, CancellationToken.None);
+#endif
 
-            if (!Task.Run(OpenAsync).Wait(TimeSpan.FromSeconds(SpannerOptions.Instance.Timeout)))
+            if (!Task.Run(taskRunner).Wait(TimeSpan.FromSeconds(SpannerOptions.Instance.Timeout)))
             {
                 throw new SpannerException(ErrorCode.DeadlineExceeded, "Timed out opening connection");
             }
         }
 
         /// <inheritdoc />
-        public override Task OpenAsync(CancellationToken cancellationToken)
-        {
-#if !NETSTANDARD1_5
-            var currentTransaction = Transaction.Current; //snap it on this thread.
+        public override Task OpenAsync(CancellationToken cancellationToken) =>
+#if NETSTANDARD1_5
+            OpenAsyncImpl(cancellationToken);
+#else
+            OpenAsyncImpl(Transaction.Current, cancellationToken);
 #endif
+
+        private Task OpenAsyncImpl(
+#if !NETSTANDARD1_5
+            Transaction currentTransaction,
+#endif
+            CancellationToken cancellationToken)
+        {
             return ExecuteHelper.WithErrorTranslationAndProfiling(
                 async () =>
                 {
@@ -865,12 +887,6 @@ namespace Google.Cloud.Spanner.Data
         }
 
 #if !NETSTANDARD1_5
-        private TimestampBound _timestampBound;
-        private VolatileResourceManager _volatileResourceManager;
-        private TransactionId _transactionId;
-#endif
-
-#if !NETSTANDARD1_5
 
         /// <summary>
         /// Call OpenAsReadOnly within a <see cref="System.Transactions.TransactionScope" /> to open the connection
@@ -878,7 +894,21 @@ namespace Google.Cloud.Spanner.Data
         /// </summary>
         /// <param name="timestampBound">Specifies the timestamp or maximum staleness of a read operation. May be null.</param>
         public void OpenAsReadOnly(TimestampBound timestampBound = null)
-            => Task.Run(() => OpenAsReadOnlyAsync(timestampBound, CancellationToken.None)).WaitWithUnwrappedExceptions();
+        {
+            // Note: This has to be checked on the current thread, which is why we don't just use Task.Run
+            // and delegate to OpenAsReadOnlyAsync
+            var transaction = Transaction.Current;
+            if (transaction == null)
+            {
+                throw new InvalidOperationException($"{nameof(OpenAsReadOnlyAsync)} should only be called within a TransactionScope.");
+            }
+            if (!EnlistInTransaction)
+            {
+                throw new InvalidOperationException($"{nameof(OpenAsReadOnlyAsync)} should only be called with ${nameof(EnlistInTransaction)} set to true.");
+            }
+            _timestampBound = timestampBound ?? TimestampBound.Strong;
+            OpenAsyncImpl(transaction, CancellationToken.None).WaitWithUnwrappedExceptions(); ;
+        }
 
         /// <summary>
         /// If this connection is being opened within a <see cref="System.Transactions.TransactionScope" />, this
@@ -888,7 +918,8 @@ namespace Google.Cloud.Spanner.Data
         public void OpenAsReadOnly(TransactionId transactionId)
         {
             GaxPreconditions.CheckNotNull(transactionId, nameof(transactionId));
-            if (Transaction.Current == null)
+            var transaction = Transaction.Current;
+            if (transaction == null)
             {
                 throw new InvalidOperationException($"{nameof(OpenAsReadOnlyAsync)} should only be called within a TransactionScope.");
             }
@@ -897,7 +928,7 @@ namespace Google.Cloud.Spanner.Data
                 throw new InvalidOperationException($"{nameof(OpenAsReadOnlyAsync)} should only be called with ${nameof(EnlistInTransaction)} set to true.");
             }
             _transactionId = transactionId;
-            OpenAsync(CancellationToken.None).WaitWithUnwrappedExceptions();
+            OpenAsyncImpl(transaction, CancellationToken.None).WaitWithUnwrappedExceptions();
         }
 
         /// <summary>
@@ -909,7 +940,8 @@ namespace Google.Cloud.Spanner.Data
         /// <param name="cancellationToken">An optional token for canceling the call.</param>
         public Task OpenAsReadOnlyAsync(TimestampBound timestampBound = null, CancellationToken cancellationToken = default)
         {
-            if (Transaction.Current == null)
+            var transaction = Transaction.Current;
+            if (transaction == null)
             {
                 throw new InvalidOperationException($"{nameof(OpenAsReadOnlyAsync)} should only be called within a TransactionScope.");
             }
@@ -918,11 +950,8 @@ namespace Google.Cloud.Spanner.Data
                 throw new InvalidOperationException($"{nameof(OpenAsReadOnlyAsync)} should only be called with ${nameof(EnlistInTransaction)} set to true.");
             }
             _timestampBound = timestampBound ?? TimestampBound.Strong;
-            return OpenAsync(cancellationToken);
+            return OpenAsyncImpl(transaction, cancellationToken);
         }
-#endif
-
-#if !NETSTANDARD1_5
 
         /// <summary>
         /// Gets or Sets whether to participate in the active <see cref="System.Transactions.TransactionScope" />
