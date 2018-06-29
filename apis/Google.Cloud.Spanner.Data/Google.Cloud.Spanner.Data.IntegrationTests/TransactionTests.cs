@@ -12,135 +12,53 @@
 // See the License for the specific language governing permissions and
 // limitations under the License.
 
+using Google.Api.Gax.Grpc;
 using Google.Cloud.ClientTesting;
 using Google.Cloud.Spanner.Data.CommonTesting;
 using System;
-using System.Collections.Generic;
-using System.Threading;
 using System.Threading.Tasks;
-#if !NETCOREAPP1_0
-using System.Transactions;
-#endif
 using Xunit;
 using Xunit.Abstractions;
 
 namespace Google.Cloud.Spanner.Data.IntegrationTests
 {
+    [ValidatePoolBeforeAfterTest]
     [PerformanceLog]
     [Collection(nameof(TransactionTableFixture))]
-    public class TransactionTests
+    public class TransactionTests : TransactionTestBase
     {
-        private readonly TransactionTableFixture _fixture;
-
-        /// <summary>
-        /// Key just for this test.
-        /// </summary>
-        private readonly string _key;
-        private readonly HistoryEntry _oldestEntry;
-        private readonly HistoryEntry _newestEntry;
-
         public TransactionTests(TransactionTableFixture fixture, ITestOutputHelper outputHelper)
+            : base(fixture, outputHelper)
         {
-            _fixture = fixture;
-#if LoggingOn
-            SpannerConnection.ConnectionPoolOptions.LogLevel = LogLevel.Debug;
-            SpannerConnection.ConnectionPoolOptions.LogPerformanceTraces = true;
-            SpannerConnection.ConnectionPoolOptions.PerformanceTraceLogInterval = 1000;
-#endif
-            TestLogger.TestOutputHelper = outputHelper;
-            _key = Guid.NewGuid().ToString();
-            (_oldestEntry, _newestEntry) = PopulateTableForTest(fixture, _key);
-        }
-
-        private static (HistoryEntry oldest, HistoryEntry newest) PopulateTableForTest(TransactionTableFixture fixture, string key)
-        {
-            HistoryEntry oldest = default, newest = default;
-            using (var connection = fixture.GetConnection())
-            {
-                connection.Open();
-
-                SpannerCommand command = connection.CreateInsertOrUpdateCommand(fixture.TableName);
-                command.Parameters.Add("K", SpannerDbType.String, key);
-                var valueParameter = command.Parameters.Add("StringValue", SpannerDbType.String);
-
-                // 1st update with TestKey
-                RetryHelpers.RetryOnce(() =>
-                {
-                    using (var tx = connection.BeginTransaction())
-                    {
-                        command.Transaction = tx;
-                        valueParameter.Value = Guid.NewGuid().ToString();
-                        command.ExecuteNonQuery();
-                        tx.Commit(out var timestamp);
-                        oldest = new HistoryEntry((string)valueParameter.Value, timestamp.Value);
-                    }
-                });
-
-                Thread.Sleep(250);
-
-                // 2nd update
-                RetryHelpers.RetryOnce(() =>
-                {
-                    using (var tx = connection.BeginTransaction())
-                    {
-                        command.Transaction = tx;
-                        command.CommandText = $"UPDATE {fixture.TableName}";
-                        valueParameter.Value = Guid.NewGuid().ToString();
-                        command.ExecuteNonQuery();
-                        tx.Commit();
-                    }
-                });
-
-                Thread.Sleep(250);
-
-                // 3rd update
-                RetryHelpers.RetryOnce(() =>
-                {
-                    using (var tx = connection.BeginTransaction())
-                    {
-                        command.Transaction = tx;
-                        valueParameter.Value = Guid.NewGuid().ToString();
-                        command.ExecuteNonQuery();
-                        tx.Commit(out var timestamp);
-                        newest = new HistoryEntry((string)valueParameter.Value, timestamp.Value);
-                    }
-                });
-
-                // Wait for time to pass after this
-                Thread.Sleep(250);
-            }
-            return (oldest, newest);
         }
 
         private async Task IncrementByOneAsync(SpannerConnection connection, bool orphanTransaction = false)
         {
+            var backoffSettings = new BackoffSettings(TimeSpan.FromMilliseconds(250), TimeSpan.FromSeconds(5), 1.5);
+            TimeSpan nextDelay = TimeSpan.Zero;
             SpannerException spannerException;
-            do
+            DateTime deadline = DateTime.UtcNow.AddSeconds(30);
+
+            while (true)
             {
                 spannerException = null;
                 try
                 {
-                    // We'll do manually created transactions here so the tests run on .net core
+                    // We use manually created transactions here so the tests run on .NET Core.
                     using (var transaction = await connection.BeginTransactionAsync())
                     {
                         long current;
-                        using (var cmd =
-                            connection.CreateSelectCommand(
-                                $"SELECT Int64Value FROM {_fixture.TableName} WHERE K=@k",
-                                new SpannerParameterCollection { { "k", SpannerDbType.String, _key } }))
+                        using (var cmd = connection.CreateSelectCommand($"SELECT Int64Value FROM {_fixture.TableName} WHERE K=@k"))
                         {
+                            cmd.Parameters.Add("k", SpannerDbType.String, _key);
                             cmd.Transaction = transaction;
                             var fetched = await cmd.ExecuteScalarAsync().ConfigureAwait(false);
-                            current = fetched is DBNull ? 0L : (long) fetched;
+                            current = fetched is DBNull ? 0L : (long)fetched;
                         }
-
-                        using (var cmd = connection.CreateUpdateCommand(_fixture.TableName,
-                            new SpannerParameterCollection
-                            {
-                                {"k", SpannerDbType.String, _key},
-                                {"Int64Value", SpannerDbType.Int64, current + 1}
-                            }))
+                        using (var cmd = connection.CreateUpdateCommand(_fixture.TableName))
                         {
+                            cmd.Parameters.Add("k", SpannerDbType.String, _key);
+                            cmd.Parameters.Add("Int64Value", SpannerDbType.Int64, current + 1);
                             cmd.Transaction = transaction;
                             await cmd.ExecuteNonQueryAsync().ConfigureAwait(false);
                             if (!orphanTransaction)
@@ -149,18 +67,17 @@ namespace Google.Cloud.Spanner.Data.IntegrationTests
                             }
                         }
                     }
+                    return;
                 }
-                catch (SpannerException ex)
+                // Keep trying for up to 30 seconds
+                catch (SpannerException ex) when (ex.IsRetryable && DateTime.UtcNow < deadline)
                 {
+                    nextDelay = backoffSettings.NextDelay(nextDelay);
+                    await Task.Delay(RetrySettings.RandomJitter.GetDelay(nextDelay));
                     spannerException = ex;
                 }
-            } while (spannerException?.IsRetryable ?? false);
+            }
         }
-
-        private SpannerCommand CreateSelectAllCommandForKey(SpannerConnection connection) =>
-            connection.CreateSelectCommand(
-                $"SELECT * FROM {_fixture.TableName} WHERE K=@k",
-                new SpannerParameterCollection { { "k", SpannerDbType.String, _key } });
 
         [Fact]
         public async Task DisposedTransactionDoesntLeak()
@@ -188,11 +105,9 @@ namespace Google.Cloud.Spanner.Data.IntegrationTests
                 });
 
                 // The value should not be present in the table.
-                using (var cmd =
-                        connection.CreateSelectCommand(
-                            $"SELECT Int64Value FROM {_fixture.TableName} WHERE K=@k",
-                            new SpannerParameterCollection { { "k", SpannerDbType.String, _key } }))
+                using (var cmd = connection.CreateSelectCommand($"SELECT Int64Value FROM {_fixture.TableName} WHERE K=@k"))
                 {
+                    cmd.Parameters.Add("k", SpannerDbType.String, _key);
                     Assert.Equal(DBNull.Value, await cmd.ExecuteScalarAsync().ConfigureAwait(false));
                 }
             }
@@ -235,14 +150,10 @@ namespace Google.Cloud.Spanner.Data.IntegrationTests
             }
 
             // TX1 WRITE/COMMIT
-            using (var cmd = connection1.CreateUpdateCommand(
-                _fixture.TableName,
-                new SpannerParameterCollection
-                {
-                    {"k", SpannerDbType.String, _key},
-                    {"Int64Value", SpannerDbType.Int64, 0}
-                }))
+            using (var cmd = connection1.CreateUpdateCommand(_fixture.TableName))
             {
+                cmd.Parameters.Add("k", SpannerDbType.String, _key);
+                cmd.Parameters.Add("Int64Value", SpannerDbType.Int64, 0);
                 cmd.Transaction = tx1;
                 await cmd.ExecuteNonQueryAsync().ConfigureAwait(false);
                 await tx1.CommitAsync().ConfigureAwait(false);
@@ -271,9 +182,9 @@ namespace Google.Cloud.Spanner.Data.IntegrationTests
         [Fact]
         public async Task MultiWrite()
         {
-            //To ensure good concurrency (ie that the transactions are not serial)
-            //we'll preopen 5 transactions to ensure they have sessions and then start the increment
-            //process
+            // To ensure good concurrency (ie that the transactions are not serial)
+            // we'll preopen 5 transactions to ensure they have sessions and then start the increment
+            // process
             const int concurrentThreads = 5;
             var connections = new SpannerConnection[concurrentThreads];
             for (var i = 0; i < concurrentThreads; i++)
@@ -289,12 +200,10 @@ namespace Google.Cloud.Spanner.Data.IntegrationTests
             }
             await Task.WhenAll(tasks).ConfigureAwait(false);
 
-            //now ensure we have the correct value
-            using (var cmd =
-                connections[0].CreateSelectCommand(
-                    $"SELECT Int64Value FROM {_fixture.TableName} WHERE K=@k",
-                    new SpannerParameterCollection { { "k", SpannerDbType.String, _key } }))
+            // Now ensure we have the correct value
+            using (var cmd = connections[0].CreateSelectCommand($"SELECT Int64Value FROM {_fixture.TableName} WHERE K=@k"))
             {
+                cmd.Parameters.Add("k", SpannerDbType.String, _key);
                 Assert.Equal(5, await cmd.ExecuteScalarAsync<long>().ConfigureAwait(false));
             }
 
@@ -459,126 +368,6 @@ namespace Google.Cloud.Spanner.Data.IntegrationTests
             }
         }
 
-#if !NETCOREAPP1_0
-        private async Task UpdateValueInTransactionScope(SpannerConnection writeConnection)
-        {
-            var writeCommand = writeConnection.CreateUpdateCommand(
-                 _fixture.TableName,
-                new SpannerParameterCollection
-                {
-                    {"k", SpannerDbType.String, _key},
-                    {"Int64Value", SpannerDbType.Int64, 0}
-                });
-            await writeCommand.ExecuteNonQueryAsync().ConfigureAwait(false);
-        }
-
-        private async Task ReadValueInTransactionScope(SpannerConnection readConnection)
-        {
-            var cmd = CreateSelectAllCommandForKey(readConnection);
-            using (var reader = await cmd.ExecuteReaderAsync())
-            {
-                if (await reader.ReadAsync())
-                {
-                    Assert.Equal(
-                         _newestEntry.Value,
-                        reader.GetFieldValue<string>(reader.GetOrdinal("StringValue")));
-                }
-            }
-        }
-
-        [Fact]
-        public async Task ScopeCompleteWithReadDoesntThrow()
-        {
-            using (var scope = new TransactionScope(TransactionScopeAsyncFlowOption.Enabled))
-            {
-                using (var connection = _fixture.GetConnection())
-                {
-                    await connection.OpenAsReadOnlyAsync();
-                    var cmd = CreateSelectAllCommandForKey(connection);
-                    using (var reader = await cmd.ExecuteReaderAsync())
-                    {
-                        if (await reader.ReadAsync())
-                        {
-                            Assert.Equal(
-                                _newestEntry.Value, reader.GetFieldValue<string>(reader.GetOrdinal("StringValue")));
-                        }
-                    }
-                    scope.Complete();
-                }
-            }
-        }
-
-        [Fact]
-        public async Task ScopeCompleteWithNoWritesDoesntThrow()
-        {
-            using (var scope = new TransactionScope(TransactionScopeAsyncFlowOption.Enabled))
-            {
-                using (var connection = _fixture.GetConnection())
-                {
-                    await connection.OpenAsync();
-                    scope.Complete();
-                }
-            }
-        }
-
-        [Fact]
-        public async Task ScopeCompleteWithTwoReadsDoesntThrow()
-        {
-            using (var scope = new TransactionScope(TransactionScopeAsyncFlowOption.Enabled))
-            using (var readConnection1 = _fixture.GetConnection())
-            using (var readConnection2 = _fixture.GetConnection())
-            {
-                await readConnection1.OpenAsReadOnlyAsync();
-                await readConnection2.OpenAsReadOnlyAsync();
-
-                await ReadValueInTransactionScope(readConnection1);
-                await ReadValueInTransactionScope(readConnection2);
-                scope.Complete();
-            }
-        }
-
-        [Fact]
-        public async Task ScopeCompleteWithOneReadOneWriteThrows()
-        {
-            await Assert.ThrowsAsync<TransactionAbortedException>(
-                async () =>
-                {
-                    using (var scope = new TransactionScope(TransactionScopeAsyncFlowOption.Enabled))
-                    using (var readConnection = _fixture.GetConnection())
-                    using (var writeConnection = _fixture.GetConnection())
-                    {
-                        await readConnection.OpenAsReadOnlyAsync();
-                        await writeConnection.OpenAsync();
-
-                        await ReadValueInTransactionScope(readConnection);
-                        await UpdateValueInTransactionScope(writeConnection);
-                        scope.Complete();
-                    }
-                });
-        }
-
-        [Fact]
-        public async Task ScopeCompleteWithTwoWritesThrows()
-        {
-            await Assert.ThrowsAsync<TransactionAbortedException>(
-                async () =>
-                {
-                    using (var scope = new TransactionScope(TransactionScopeAsyncFlowOption.Enabled))
-                    using (var writeConnection1 = _fixture.GetConnection())
-                    using (var writeConnection2 = _fixture.GetConnection())
-                    {
-                        await writeConnection1.OpenAsync();
-                        await writeConnection2.OpenAsync();
-
-                        await UpdateValueInTransactionScope(writeConnection1);
-                        await UpdateValueInTransactionScope(writeConnection2);
-
-                        scope.Complete();
-                    }
-                });
-        }
-#endif
-
         [Fact]
         public async Task ReadStrongSingle()
         {
@@ -593,18 +382,6 @@ namespace Google.Cloud.Spanner.Data.IntegrationTests
                         Assert.Equal(_newestEntry.Value, reader.GetFieldValue<string>(reader.GetOrdinal("StringValue")));
                     }
                 }
-            }
-        }
-
-        private class HistoryEntry
-        {
-            public string Value { get; }
-            public DateTime Timestamp { get; }
-
-            public HistoryEntry(string value, DateTime timestamp)
-            {
-                Value = value;
-                Timestamp = timestamp;
             }
         }
     }
