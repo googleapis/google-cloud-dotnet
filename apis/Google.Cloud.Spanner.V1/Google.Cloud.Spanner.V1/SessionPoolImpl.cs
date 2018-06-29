@@ -162,12 +162,12 @@ namespace Google.Cloud.Spanner.V1
                             i++)
                         {
                             entry = _sessionMruStack[i];
-                            if (Equals(entry.Session.GetLastUsedTransactionOptions(), transactionOptions))
+                            if (Equals(TransactionPool.GetLastUsedTransactionOptions(entry.Session), transactionOptions))
                             {
                                 Logger.Debug(() => "found a session with matching transaction semantics.");
                                 indexToUse = i;
                                 if (transactionOptions?.ModeCase != TransactionOptions.ModeOneofCase.ReadWrite
-                                    || entry.Session.IsPreWarmedTransactionReady())
+                                    || TransactionPool.IsPreWarmedTransactionReady(entry.Session))
                                 {
                                     //if our prewarmed tx is ready, we can jump out immediately.
                                     break;
@@ -259,7 +259,7 @@ namespace Google.Cloud.Spanner.V1
             sessionEntry.EvictTaskCancellationSource.Cancel();
             //any session leaving the pool will be in a state where its transaction warming (if started) is complete
             //and its eviction task has been canceled.
-            await sessionEntry.Session.WaitForPrewarm().ConfigureAwait(false);
+            await TransactionPool.WaitForPrewarm(sessionEntry.Session).ConfigureAwait(false);
             return sessionEntry.Session;
         }
 
@@ -305,7 +305,7 @@ namespace Google.Cloud.Spanner.V1
 
             if (_options.UseTransactionWarming)
             {
-                client.StartPreWarmTransaction(entry.Session);
+                TransactionPool.StartPreWarmTransaction(client, entry.Session);
             }
             //kick off the pool eviction timer.  This gets canceled when the item is pulled from the pool.
             Task.Run(() => EvictSessionPoolEntry(entry.Session, entry.EvictTaskCancellationSource.Token),

@@ -132,9 +132,9 @@ namespace Google.Cloud.Spanner.Data.Tests
 
                 foreach (var session in writeSessions)
                 {
-                    var transaction = await client.BeginPooledTransactionAsync(session, readWriteOptions)
+                    var transaction = await TransactionPool.BeginPooledTransactionAsync(client, session, readWriteOptions)
                         .ConfigureAwait(false);
-                    await transaction.CommitAsync(session, new Mutation[0], SpannerOptions.Instance.Timeout, CancellationToken.None).ConfigureAwait(false);
+                    await TransactionPool.CommitAsync(transaction, session, new Mutation[0], SpannerOptions.Instance.Timeout, CancellationToken.None).ConfigureAwait(false);
                     pool.ReleaseToPool(client, session);
                 }
             }
@@ -400,13 +400,13 @@ namespace Google.Cloud.Spanner.Data.Tests
                         s_defaultName.InstanceId, s_defaultName.DatabaseId, txOptions, CancellationToken.None)
                     .ConfigureAwait(false);
 
-                var transactionAwaited = await client.Object.BeginPooledTransactionAsync(session1, txOptions)
+                var transactionAwaited = await TransactionPool.BeginPooledTransactionAsync(client.Object, session1, txOptions)
                     .ConfigureAwait(false);
 
                 Transaction transaction;
                 Assert.True(_transactions.TryPop(out transaction));
                 Assert.Same(transaction, transactionAwaited);
-                await transaction.CommitAsync(session1, new Mutation[0], SpannerOptions.Instance.Timeout, CancellationToken.None).ConfigureAwait(false);
+                await TransactionPool.CommitAsync(transaction, session1, new Mutation[0], SpannerOptions.Instance.Timeout, CancellationToken.None).ConfigureAwait(false);
 
                 //Releasing should start the tx prewarm
                 pool.ReleaseToPool(client.Object, session1);
@@ -424,7 +424,7 @@ namespace Google.Cloud.Spanner.Data.Tests
                         s_defaultName.InstanceId, s_defaultName.DatabaseId, txOptions, CancellationToken.None)
                     .ConfigureAwait(false);
 
-                var transaction2 = await client.Object.BeginPooledTransactionAsync(session2, txOptions)
+                var transaction2 = await TransactionPool.BeginPooledTransactionAsync(client.Object, session2, txOptions)
                     .ConfigureAwait(false);
 
                 Assert.Same(preWarmTx, transaction2);

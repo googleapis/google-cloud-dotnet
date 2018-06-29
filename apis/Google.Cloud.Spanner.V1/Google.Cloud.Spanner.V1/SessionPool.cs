@@ -333,7 +333,7 @@ namespace Google.Cloud.Spanner.V1
         private async Task EvictSessionAsync(SpannerClient evictionClient,
             Session evictionSession)
         {
-            await evictionSession.RemoveFromTransactionPoolAsync().ConfigureAwait(false);
+            await TransactionPool.RemoveSessionAsync(evictionSession).ConfigureAwait(false);
             await evictionClient.DeleteSessionAsync(evictionSession.SessionName).ConfigureAwait(false);
         }
 
