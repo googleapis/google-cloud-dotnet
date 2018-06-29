@@ -1,0 +1,315 @@
+﻿// Copyright 2018 Google LLC
+// 
+// Licensed under the Apache License, Version 2.0 (the "License");
+// you may not use this file except in compliance with the License.
+// You may obtain a copy of the License at
+// 
+//     https://www.apache.org/licenses/LICENSE-2.0
+// 
+// Unless required by applicable law or agreed to in writing, software
+// distributed under the License is distributed on an "AS IS" BASIS,
+// WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
+// See the License for the specific language governing permissions and
+// limitations under the License.
+
+#if !NETCOREAPP1_0
+using Google.Cloud.ClientTesting;
+using System.Threading.Tasks;
+using System.Transactions;
+using Xunit;
+using Xunit.Abstractions;
+
+namespace Google.Cloud.Spanner.Data.IntegrationTests
+{
+    /// <summary>
+    /// Tests for the .NET ambient transaction management implementation.
+    /// </summary>
+    [ValidatePoolBeforeAfterTest]
+    [PerformanceLog]
+    [Collection(nameof(TransactionTableFixture))]
+    public class TransactionScopeTests : TransactionTestBase
+    {
+        public TransactionScopeTests(TransactionTableFixture fixture, ITestOutputHelper outputHelper)
+            : base(fixture, outputHelper)
+        {
+        }
+
+        private async Task UpdateValueAsync(SpannerConnection writeConnection)
+        {
+            var writeCommand = writeConnection.CreateUpdateCommand(_fixture.TableName);
+            writeCommand.Parameters.Add("k", SpannerDbType.String, _key);
+            writeCommand.Parameters.Add("Int64Value", SpannerDbType.Int64, 0);
+            await writeCommand.ExecuteNonQueryAsync().ConfigureAwait(false);
+        }
+
+        private void UpdateValue(SpannerConnection writeConnection)
+        {
+            var writeCommand = writeConnection.CreateUpdateCommand(_fixture.TableName);
+            writeCommand.Parameters.Add("k", SpannerDbType.String, _key);
+            writeCommand.Parameters.Add("Int64Value", SpannerDbType.Int64, 0);
+            writeCommand.ExecuteNonQuery();
+        }
+
+        private async Task AssertReadLatestValueAsync(SpannerConnection readConnection)
+        {
+            var cmd = CreateSelectAllCommandForKey(readConnection);
+            using (var reader = await cmd.ExecuteReaderAsync())
+            {
+                Assert.True(await reader.ReadAsync());
+                string expected = _newestEntry.Value;
+                string actual = reader.GetFieldValue<string>(reader.GetOrdinal("StringValue"));
+                Assert.Equal(expected, actual);
+            }
+        }
+
+
+        private void AssertReadLatestValue(SpannerConnection readConnection)
+        {
+            var cmd = CreateSelectAllCommandForKey(readConnection);
+            using (var reader = cmd.ExecuteReader())
+            {
+                Assert.True(reader.Read());
+                string expected = _newestEntry.Value;
+                string actual = reader.GetFieldValue<string>(reader.GetOrdinal("StringValue"));
+                Assert.Equal(expected, actual);
+            }
+        }
+
+        [Fact]
+        public async Task SingleRead_SuccessAsync()
+        {
+            using (var scope = new TransactionScope(TransactionScopeAsyncFlowOption.Enabled))
+            {
+                using (var connection = _fixture.GetConnection())
+                {
+                    await connection.OpenAsReadOnlyAsync();
+                    AssertReadLatestValue(connection);
+                    scope.Complete();
+                }
+            }
+        }
+
+        [Fact]
+        public void SingleRead_Success()
+        {
+            using (var scope = new TransactionScope())
+            {
+                using (var connection = _fixture.GetConnection())
+                {
+                    connection.OpenAsReadOnly();
+                    AssertReadLatestValue(connection);
+                    scope.Complete();
+                }
+            }
+        }
+
+        [Fact]
+        public async Task ReadWriteTransaction_NoWrites_SuccessAsync()
+        {
+            using (var scope = new TransactionScope(TransactionScopeAsyncFlowOption.Enabled))
+            {
+                using (var connection = _fixture.GetConnection())
+                {
+                    await connection.OpenAsync();
+                    scope.Complete();
+                }
+            }
+        }
+
+        [Fact]
+        public void ReadWriteTransaction_NoWrites_Success()
+        {
+            using (var scope = new TransactionScope(TransactionScopeAsyncFlowOption.Enabled))
+            {
+                using (var connection = _fixture.GetConnection())
+                {
+                    connection.Open();
+                    scope.Complete();
+                }
+            }
+        }
+
+        [Fact]
+        public async Task TwoReads_SuccessAsync()
+        {
+            using (var scope = new TransactionScope(TransactionScopeAsyncFlowOption.Enabled))
+            using (var readConnection1 = _fixture.GetConnection())
+            using (var readConnection2 = _fixture.GetConnection())
+            {
+                await readConnection1.OpenAsReadOnlyAsync();
+                await readConnection2.OpenAsReadOnlyAsync();
+
+                await AssertReadLatestValueAsync(readConnection1);
+                await AssertReadLatestValueAsync(readConnection2);
+                scope.Complete();
+            }
+        }
+
+        [Fact]
+        public void TwoReads_Success()
+        {
+            using (var scope = new TransactionScope())
+            using (var readConnection1 = _fixture.GetConnection())
+            using (var readConnection2 = _fixture.GetConnection())
+            {
+                readConnection1.OpenAsReadOnly();
+                readConnection2.OpenAsReadOnly();
+
+                AssertReadLatestValue(readConnection1);
+                AssertReadLatestValue(readConnection2);
+                scope.Complete();
+            }
+        }
+
+        [Fact]
+        public async Task OneReadOneWrite_ThrowsAsync()
+        {
+            await Assert.ThrowsAsync<TransactionAbortedException>(async() =>
+                {
+                    using (var scope = new TransactionScope(TransactionScopeAsyncFlowOption.Enabled))
+                    using (var readConnection = _fixture.GetConnection())
+                    using (var writeConnection = _fixture.GetConnection())
+                    {
+                        await readConnection.OpenAsReadOnlyAsync();
+                        await writeConnection.OpenAsync();
+
+                        await AssertReadLatestValueAsync(readConnection);
+                        await UpdateValueAsync(writeConnection);
+                        scope.Complete();
+                    }
+                });
+        }
+
+        [Fact]
+        public void OneReadOneWrite_Throws()
+        {
+            Assert.Throws<TransactionAbortedException>(() =>
+            {
+                using (var scope = new TransactionScope())
+                using (var readConnection = _fixture.GetConnection())
+                using (var writeConnection = _fixture.GetConnection())
+                {
+                    readConnection.OpenAsReadOnly();
+                    writeConnection.Open();
+
+                    AssertReadLatestValue(readConnection);
+                    UpdateValue(writeConnection);
+                    scope.Complete();
+                }
+            });
+        }
+
+        [Fact]
+        public async Task OneWrite_SuccessAsync()
+        {
+            using (var scope = new TransactionScope(TransactionScopeAsyncFlowOption.Enabled))
+            using (var writeConnection = _fixture.GetConnection())
+            {
+                await writeConnection.OpenAsync();
+                await UpdateValueAsync(writeConnection);
+                scope.Complete();
+            }
+        }
+
+        [Fact]
+        public void OneWrite_Success()
+        {
+            using (var scope = new TransactionScope())
+            using (var writeConnection = _fixture.GetConnection())
+            {
+                writeConnection.Open();
+                UpdateValue(writeConnection);
+                scope.Complete();
+            }
+        }
+
+        [Fact]
+        public async Task TwoWritesDifferentTransactions_ThrowsAsync()
+        {
+            await Assert.ThrowsAsync<TransactionAbortedException>(async () =>
+                {
+                    using (var scope = new TransactionScope(TransactionScopeAsyncFlowOption.Enabled))
+                    using (var writeConnection1 = _fixture.GetConnection())
+                    using (var writeConnection2 = _fixture.GetConnection())
+                    {
+                        await writeConnection1.OpenAsync();
+                        await writeConnection2.OpenAsync();
+
+                        await UpdateValueAsync(writeConnection1);
+                        await UpdateValueAsync(writeConnection2);
+
+                        scope.Complete();
+                    }
+                });
+        }
+
+        [Fact]
+        public void TwoWritesDifferentTransactions_Throws()
+        {
+            Assert.Throws<TransactionAbortedException>(() =>
+                {
+                    using (var scope = new TransactionScope())
+                    using (var writeConnection1 = _fixture.GetConnection())
+                    using (var writeConnection2 = _fixture.GetConnection())
+                    {
+                        writeConnection1.Open();
+                        writeConnection2.Open();
+
+                        UpdateValue(writeConnection1);
+                        UpdateValue(writeConnection2);
+
+                        scope.Complete();
+                    }
+                });
+        }
+
+        // The second transaction will fail to prepare; these tests validate that all three transactions
+        // are cleaned up.
+        [Fact]
+        public async Task ThreeWritesDifferentTransactions_ThrowsAsync()
+        {
+            await Assert.ThrowsAsync<TransactionAbortedException>(async () =>
+            {
+                using (var scope = new TransactionScope(TransactionScopeAsyncFlowOption.Enabled))
+                using (var writeConnection1 = _fixture.GetConnection())
+                using (var writeConnection2 = _fixture.GetConnection())
+                using (var writeConnection3 = _fixture.GetConnection())
+                {
+                    await writeConnection1.OpenAsync();
+                    await writeConnection2.OpenAsync();
+                    await writeConnection3.OpenAsync();
+
+                    await UpdateValueAsync(writeConnection1);
+                    await UpdateValueAsync(writeConnection2);
+                    await UpdateValueAsync(writeConnection3);
+
+                    scope.Complete();
+                }
+            });
+        }
+
+        [Fact]
+        public void ThreeWritesDifferentTransactions_Throws()
+        {
+            Assert.Throws<TransactionAbortedException>(() =>
+            {
+                using (var scope = new TransactionScope())
+                using (var writeConnection1 = _fixture.GetConnection())
+                using (var writeConnection2 = _fixture.GetConnection())
+                using (var writeConnection3 = _fixture.GetConnection())
+                {
+                    writeConnection1.Open();
+                    writeConnection2.Open();
+                    writeConnection3.Open();
+
+                    UpdateValue(writeConnection1);
+                    UpdateValue(writeConnection2);
+                    UpdateValue(writeConnection3);
+
+                    scope.Complete();
+                }
+            });
+        }
+    }
+}
+#endif
