@@ -996,36 +996,6 @@ namespace Google.Cloud.Bigtable.V2
                 },
                 callSettings);
 
-        // TODO: Remove when generator supports flattening of server streaming methods.
-        /// <summary>
-        /// Returns a sample of row keys in the table. The returned row keys will
-        /// delimit contiguous sections of the table of approximately equal size,
-        /// which can be used to break up the data for distributed tasks like
-        /// mapreduces.
-        /// </summary>
-        /// <remarks>
-        /// <para>
-        /// This method simply delegates to <see cref="SampleRowKeys(SampleRowKeysRequest, CallSettings)"/>.
-        /// </para>
-        /// </remarks>
-        /// <param name="tableName">
-        /// The unique name of the table from which to sample row keys. Must not be null.
-        /// </param>
-        /// <param name="callSettings">
-        /// If not null, applies overrides to this RPC call.
-        /// </param>
-        /// <returns>
-        /// The server stream with the row key samples.
-        /// </returns>
-        public virtual BigtableServiceApiClient.SampleRowKeysStream SampleRowKeys(
-            TableName tableName,
-            CallSettings callSettings = null) =>
-            SampleRowKeys(new SampleRowKeysRequest
-                {
-                    TableNameAsTableName = GaxPreconditions.CheckNotNull(tableName, nameof(tableName))
-                },
-                callSettings);
-
         private protected BigtableServiceApiSettings UnderlyingClientSettings { get; set; }
 
         /// <summary>
