@@ -14,12 +14,14 @@
 
 using System.Collections;
 using System.Linq;
+using System.Text;
 
 namespace Google.Cloud.Spanner.Data
 {
+    // TODO: Consider renaming this class, or moving the functionality elsewhere.
     internal static class TypeUtil
     {
-        public static bool DictionaryEquals(IDictionary d1, IDictionary d2)
+        internal static bool DictionaryEquals(IDictionary d1, IDictionary d2)
         {
             if (d1 == null && d2 == null)
             {
@@ -33,6 +35,24 @@ namespace Google.Cloud.Spanner.Data
 
             return d1.Count == d2.Count
                 && d1.Keys.Cast<object>().All(key => d2.Contains(key) && Equals(d2[key], d1[key]));
+        }
+
+        internal static string DictionaryToString(IDictionary dictionary)
+        {
+            if (dictionary.Count == 0)
+            {
+                return "{}";
+            }
+            StringBuilder builder = new StringBuilder();
+            foreach (var key in dictionary.Keys)
+            {
+                builder.Append(builder.Length == 0 ? "{ " : ", ")
+                    .Append(key)
+                    .Append("=")
+                    .Append(dictionary[key]);
+            }
+            builder.Append(" }");
+            return builder.ToString();
         }
     }
 }

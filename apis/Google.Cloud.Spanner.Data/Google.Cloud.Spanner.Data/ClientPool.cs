@@ -15,6 +15,7 @@
 using System;
 using System.Collections;
 using System.Collections.Concurrent;
+using System.Linq;
 using System.Text;
 using System.Threading;
 using System.Threading.Tasks;
@@ -46,15 +47,11 @@ namespace Google.Cloud.Spanner.Data
         /// </summary>
         private Logger Logger { get; } = Logger.DefaultLogger;
 
-        public async Task<SpannerClient> AcquireClientAsync(
-            Logger logger,
-            ChannelCredentials credentials = null,
-            ServiceEndpoint endpoint = null,
-            IDictionary additionalOptions = null)
+        internal async Task<SpannerClient> AcquireClientAsync(SpannerConnectionStringBuilder connectionStringBuilder)
         {
-            var key = new ClientCredentialKey(credentials, endpoint, additionalOptions);
+            var key = new ClientCredentialKey(connectionStringBuilder);
             var poolEntry = _clientPoolByCredential.GetOrAdd(key, k => new CredentialClientPool(k));
-            var result = await poolEntry.AcquireClientAsync(_clientFactory, logger).ConfigureAwait(false);
+            var result = await poolEntry.AcquireClientAsync(_clientFactory, Logger).ConfigureAwait(false);
             Logger.LogPerformanceCounter("SpannerClient.TotalCount", () => _clientPoolByCredential.Count);
             return result;
         }
@@ -78,14 +75,11 @@ namespace Google.Cloud.Spanner.Data
             return referenceCountTotal;
         }
 
-        public void ReleaseClient(SpannerClient spannerClient,
-            ChannelCredentials credentials = null,
-            ServiceEndpoint endpoint = null,
-            IDictionary additionalOptions = null)
+        internal void ReleaseClient(SpannerClient spannerClient, SpannerConnectionStringBuilder connectionStringBuilder)
         {
             if (spannerClient != null)
             {
-                var key = new ClientCredentialKey(credentials, endpoint, additionalOptions);
+                var key = new ClientCredentialKey(connectionStringBuilder);
                 CredentialClientPool poolEntry;
                 if (_clientPoolByCredential.TryGetValue(key, out poolEntry))
                 {
@@ -101,15 +95,14 @@ namespace Google.Cloud.Spanner.Data
         private struct ClientCredentialKey : IEquatable<ClientCredentialKey>
         {
             public ChannelCredentials Credentials { get; }
-            public IDictionary AdditionalOptions { get; }
             public ServiceEndpoint Endpoint { get; }
+            public IDictionary AdditionalOptions { get; }
 
-            public ClientCredentialKey(ChannelCredentials credentials, ServiceEndpoint serviceEndpoint,
-                IDictionary additionalOptions) : this()
+            public ClientCredentialKey(SpannerConnectionStringBuilder connectionStringBuilder)
             {
-                Credentials = credentials;
-                AdditionalOptions = additionalOptions;
-                Endpoint = serviceEndpoint ?? SpannerClient.DefaultEndpoint;
+                Credentials = connectionStringBuilder.GetCredentials();
+                Endpoint = connectionStringBuilder.EndPoint ?? SpannerClient.DefaultEndpoint;
+                AdditionalOptions = connectionStringBuilder;
             }
 
             public bool Equals(ClientCredentialKey other) =>
@@ -130,10 +123,8 @@ namespace Google.Cloud.Spanner.Data
                 }
             }
             /// <inheritdoc />
-            public override string ToString()
-            {
-                return $"Credential:{Credentials?.ToString() ?? "null"} EndPoint:{Endpoint}";
-            }
+            public override string ToString() =>
+                $"Credential: {Credentials?.ToString() ?? "null"}; Endpoint: {Endpoint}; AdditionalOptions: {TypeUtil.DictionaryToString(AdditionalOptions)}";
         }
 
         private class CredentialClientPool
@@ -182,8 +173,8 @@ namespace Google.Cloud.Spanner.Data
                     }
 
                     //now grab the first item in the sorted list, increment refcnt, re-sort and return.
-                    //The re-sorting will happen as a consequence of AcquireClientAsync changing its
-                    //state and firing an event the prioritylist listens to.
+                    // The re-sorting will happen as a consequence of AcquireClientAsync changing its
+                    // state and firing an event the priority list listens to.
                     result = _clientPriorityList.GetTop().AcquireClientAsync(clientFactory, logger);
                 }
                 return result;
