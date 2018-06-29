@@ -51,8 +51,7 @@ namespace Google.Cloud.Spanner.V1
         /// <param name="session">The session to use for the transaction. Must not be null.</param>
         /// <param name="options">The options for the transaction.</param>
         /// <returns>A task which, when completed, will result in a suitable transaction for the given parameters.</returns>
-        public static async Task<Transaction> BeginPooledTransactionAsync(this SpannerClient client, Session session,
-            TransactionOptions options)
+        public static async Task<Transaction> BeginPooledTransactionAsync(SpannerClient client, Session session, TransactionOptions options)
         {
             GaxPreconditions.CheckNotNull(client, nameof(client));
             GaxPreconditions.CheckNotNull(session, nameof(session));
@@ -94,7 +93,7 @@ namespace Google.Cloud.Spanner.V1
         /// When a session is deleted or no longer used, this will remove it from the transaction pool.
         /// </summary>
         /// <param name="session">The session to remove from the pool. Must not be null.</param>
-        public static async Task RemoveFromTransactionPoolAsync(this Session session)
+        public static async Task RemoveSessionAsync(Session session)
         {
             GaxPreconditions.CheckNotNull(session, nameof(session));
             if (s_sessionInfoTable.TryGetValue(session, out SessionInfo info))
@@ -116,19 +115,19 @@ namespace Google.Cloud.Spanner.V1
         /// </summary>
         /// <param name="session">The session to check for its last transaction options. Must not be null.</param>
         /// <returns>The last used options, if any.</returns>
-        internal static TransactionOptions GetLastUsedTransactionOptions(this Session session)
+        internal static TransactionOptions GetLastUsedTransactionOptions(Session session)
         {
             GaxPreconditions.CheckNotNull(session, nameof(session));
             return s_sessionInfoTable.TryGetValue(session, out SessionInfo info) ? info.TransactionOptions : null;
         }
 
-        internal static bool IsPreWarmedTransactionReady(this Session session)
+        internal static bool IsPreWarmedTransactionReady(Session session)
         {
             GaxPreconditions.CheckNotNull(session, nameof(session));
             return s_sessionInfoTable.TryGetValue(session, out SessionInfo info) && info.HasActiveTransaction;
         }
 
-        internal static Task WaitForPrewarm(this Session session)
+        internal static Task WaitForPrewarm(Session session)
             => s_sessionInfoTable.TryGetValue(session, out SessionInfo info)
                 ? info.WaitForPreWarmAsync() : Task.FromResult(0);
 
@@ -137,12 +136,12 @@ namespace Google.Cloud.Spanner.V1
         /// last used transaction options. This method will only work if CreateTransactionAsync
         /// was previously used to create the transaction on the session.
         /// </summary>
-        internal static void StartPreWarmTransaction(this SpannerClient client, Session session)
+        internal static void StartPreWarmTransaction(SpannerClient client, Session session)
         {
             // TODO: Re-enable this when code is fixed.
             //GaxPreconditions.CheckNotNull(client, nameof(client));
             GaxPreconditions.CheckNotNull(session, nameof(session));
-            TransactionOptions options = session.GetLastUsedTransactionOptions();
+            TransactionOptions options = GetLastUsedTransactionOptions(session);
             var info = s_sessionInfoTable.GetOrAdd(session, s => new SessionInfo(client));
             info.StartPreWarmTransaction(session, options);
         }
@@ -157,7 +156,7 @@ namespace Google.Cloud.Spanner.V1
         /// means "immediate timeout" or "no timeout" depending on <see cref="SpannerSettings.AllowImmediateTimeouts"/>.</param>
         /// <param name="cancellationToken">A cancellation token for the operation.</param>
         /// <returns>A task which, when completed, will contain the commit response.</returns>
-        public static Task<CommitResponse> CommitAsync(this Transaction transaction, Session session,
+        public static Task<CommitResponse> CommitAsync(Transaction transaction, Session session,
             IEnumerable<Mutation> mutations, int timeoutSeconds, CancellationToken cancellationToken)
         {
             GaxPreconditions.CheckNotNull(transaction, nameof(transaction));
@@ -184,7 +183,7 @@ namespace Google.Cloud.Spanner.V1
         /// means "immediate timeout" or "no timeout" depending on <see cref="SpannerSettings.AllowImmediateTimeouts"/>.</param>
         /// <param name="cancellationToken">A cancellation token for the operation.</param>
         /// <returns>A task representing the asynchronous operation.</returns>
-        public static Task<bool> RollbackAsync(this Transaction transaction, Session session, int timeoutSeconds, CancellationToken cancellationToken)
+        public static Task<bool> RollbackAsync(Transaction transaction, Session session, int timeoutSeconds, CancellationToken cancellationToken)
         {
             GaxPreconditions.CheckNotNull(transaction, nameof(transaction));
             GaxPreconditions.CheckNotNull(session, nameof(session));

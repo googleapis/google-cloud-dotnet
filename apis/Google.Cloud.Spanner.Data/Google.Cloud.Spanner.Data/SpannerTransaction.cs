@@ -263,8 +263,8 @@ namespace Google.Cloud.Spanner.Data
                         Mode != TransactionMode.ReadOnly, "You cannot commit a readonly transaction.");
                     // We allow access to _mutations outside of a lock here because multithreaded
                     // access at this point should be done and only one caller can call commit.
-                    var response = await WireTransaction
-                        .CommitAsync(Session, _mutations, CommitTimeout, cancellationToken).ConfigureAwait(false);
+                    var response = await TransactionPool.CommitAsync(
+                        WireTransaction, Session, _mutations, CommitTimeout, cancellationToken).ConfigureAwait(false);
                     return response.CommitTimestamp?.ToDateTime();
                 }, "SpannerTransaction.Commit", Logger);
         }
@@ -283,7 +283,7 @@ namespace Google.Cloud.Spanner.Data
                 {
                     GaxPreconditions.CheckState(
                         Mode != TransactionMode.ReadOnly, "You cannot roll back a readonly transaction.");
-                    return WireTransaction.RollbackAsync(Session, CommitTimeout, cancellationToken);
+                    return TransactionPool.RollbackAsync(WireTransaction, Session, CommitTimeout, cancellationToken);
                 }, "SpannerTransaction.Rollback", Logger);
         }
 

@@ -726,7 +726,7 @@ namespace Google.Cloud.Spanner.Data
                     var session = await result.ConfigureAwait(false);
                     if (sharedSessionReadOnlyUse)
                     {
-                        await session.RemoveFromTransactionPoolAsync().ConfigureAwait(false);
+                        await TransactionPool.RemoveSessionAsync(session).ConfigureAwait(false);
                     }
 
                     return session;
@@ -762,7 +762,7 @@ namespace Google.Cloud.Spanner.Data
                             options, cancellationToken)
                         .ConfigureAwait(false))
                     {
-                        await sessionHolder.Session.RemoveFromTransactionPoolAsync().ConfigureAwait(false);
+                        await TransactionPool.RemoveSessionAsync(sessionHolder.Session).ConfigureAwait(false);
                         return new SingleUseTransaction(this, sessionHolder.TakeOwnership(), options);
                     }
                 }, "SpannerConnection.BeginSingleUseTransaction", Logger);
@@ -780,8 +780,8 @@ namespace Google.Cloud.Spanner.Data
                     using (var sessionHolder = await SessionHolder.Allocate(this, transactionOptions, cancellationToken)
                         .ConfigureAwait(false))
                     {
-                        var transaction = await SpannerClient
-                            .BeginPooledTransactionAsync(sessionHolder.Session, transactionOptions)
+                        var transaction = await TransactionPool
+                            .BeginPooledTransactionAsync(SpannerClient, sessionHolder.Session, transactionOptions)
                             .ConfigureAwait(false);
                         return new SpannerTransaction(
                             this, transactionMode, sessionHolder.TakeOwnership(),
