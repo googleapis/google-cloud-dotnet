@@ -26,6 +26,7 @@ namespace Google.Cloud.Spanner.Data
         private readonly SpannerConnection _spannerConnection;
         private readonly Session _session;
         private readonly TransactionOptions _options;
+        private SpannerClient _client;
 
         public SingleUseTransaction(
             SpannerConnection spannerConnection,
@@ -39,7 +40,13 @@ namespace Google.Cloud.Spanner.Data
 
         public void Dispose()
         {
-            _spannerConnection.ReleaseSession(_session);
+            // TODO: Investigate why we can't release the session when the ReliableStreamReader is closed,
+            // like we do for EphemeralTransaction.
+            if (_client != null)
+            {
+                _spannerConnection.ReleaseSession(_session, _spannerConnection.SpannerClient);
+                _client = null;
+            }
         }
 
         public Task<int> ExecuteMutationsAsync(List<Mutation> mutations, CancellationToken cancellationToken, int timeoutSeconds) => throw
@@ -55,7 +62,8 @@ namespace Google.Cloud.Spanner.Data
                 () =>
                 {
                     request.Transaction = new TransactionSelector {SingleUse = _options};
-                    return Task.FromResult(_spannerConnection.SpannerClient.GetSqlStreamReader(request, _session, timeoutSeconds));
+                    _client = _spannerConnection.SpannerClient;
+                    return Task.FromResult(_client.GetSqlStreamReader(request, _session, timeoutSeconds));
                 },
                 "SingleUseTransaction.ExecuteQuery", _spannerConnection.Logger);
         }

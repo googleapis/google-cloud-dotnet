@@ -92,10 +92,10 @@ namespace Google.Cloud.Spanner.Data
                         .Allocate(_connection, cancellationToken)
                         .ConfigureAwait(false))
                     {
-                        var streamReader = _connection.SpannerClient.GetSqlStreamReader(request, holder.Session, timeoutSeconds);
-
+                        var client = _connection.SpannerClient;
+                        var streamReader = client.GetSqlStreamReader(request, holder.Session, timeoutSeconds);
                         holder.TakeOwnership();
-                        streamReader.StreamClosed += (o, e) => { _connection.ReleaseSession(streamReader.Session); };
+                        streamReader.StreamClosed += (o, e) => { _connection.ReleaseSession(streamReader.Session, client); };
 
                         return streamReader;
                     }
