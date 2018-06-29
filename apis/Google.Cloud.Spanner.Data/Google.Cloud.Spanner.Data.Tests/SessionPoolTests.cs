@@ -33,12 +33,14 @@ namespace Google.Cloud.Spanner.Data.Tests
 {
     public class SessionPoolTests
     {
+        private static readonly TransactionOptions s_sampleOptions = new TransactionOptions();
+
         public SessionPoolTests(ITestOutputHelper outputHelper)
         {
             //Uncomment these lines to debug a specific test.
-//            TestLogger.TestOutputHelper = outputHelper;
-//            TestLogger.Install();
-//            Logger.LogLevel = V1.Logging.LogLevel.Debug;
+            //            TestLogger.TestOutputHelper = outputHelper;
+            //            TestLogger.Install();
+            //            Logger.LogLevel = V1.Logging.LogLevel.Debug;
         }
 
         private static readonly DatabaseName s_defaultName =
@@ -83,7 +85,7 @@ namespace Google.Cloud.Spanner.Data.Tests
                 .ReturnsAsync(
                     () =>
                     {
-                        var tx = new Transaction {Id = ByteString.CopyFromUtf8(Guid.NewGuid().ToString())};
+                        var tx = new Transaction { Id = ByteString.CopyFromUtf8(Guid.NewGuid().ToString()) };
                         _transactions.Push(tx);
                         return tx;
                     });
@@ -117,7 +119,7 @@ namespace Google.Cloud.Spanner.Data.Tests
             await Task.Yield();
             for (var i = 0; i < iterations; i++)
             {
-                var readWriteOptions = new TransactionOptions {ReadWrite = new TransactionOptions.Types.ReadWrite()};
+                var readWriteOptions = new TransactionOptions { ReadWrite = new TransactionOptions.Types.ReadWrite() };
                 var writeSessions = await Task.WhenAll(
                         DuplicateTaskAsync(
                             () =>
@@ -155,7 +157,7 @@ namespace Google.Cloud.Spanner.Data.Tests
             await Task.Yield();
             for (var i = 0; i < iterations; i++)
             {
-                var readOptions = new TransactionOptions {ReadOnly = new TransactionOptions.Types.ReadOnly()};
+                var readOptions = new TransactionOptions { ReadOnly = new TransactionOptions.Types.ReadOnly() };
                 var readSessions = await Task.WhenAll(
                         DuplicateTaskAsync(
                             () =>
@@ -191,13 +193,13 @@ namespace Google.Cloud.Spanner.Data.Tests
 
                 var session = await pool.CreateSessionFromPoolAsync(
                         client1.Object, s_defaultName.ProjectId,
-                        s_defaultName.InstanceId, s_defaultName.DatabaseId, null, CancellationToken.None)
+                        s_defaultName.InstanceId, s_defaultName.DatabaseId, s_sampleOptions, CancellationToken.None)
                     .ConfigureAwait(false);
                 pool.ReleaseToPool(client1.Object, session);
 
                 var session2 = await pool.CreateSessionFromPoolAsync(
                         client2.Object, s_defaultName.ProjectId,
-                        s_defaultName.InstanceId, s_defaultName.DatabaseId, null, CancellationToken.None)
+                        s_defaultName.InstanceId, s_defaultName.DatabaseId, s_sampleOptions, CancellationToken.None)
                     .ConfigureAwait(false);
 
                 Assert.NotSame(session, session2);
@@ -213,7 +215,7 @@ namespace Google.Cloud.Spanner.Data.Tests
             var client1 = CreateMockClient();
             var session = await SessionPool.Default.CreateSessionFromPoolAsync(
                         client1.Object, s_defaultName.ProjectId,
-                        s_defaultName.InstanceId, s_defaultName.DatabaseId, null, CancellationToken.None)
+                        s_defaultName.InstanceId, s_defaultName.DatabaseId, s_sampleOptions, CancellationToken.None)
                     .ConfigureAwait(false);
             SessionPool.Default.ReleaseToPool(client1.Object, session);
             await SpannerConnection.ClearPooledResourcesAsync();
@@ -229,12 +231,12 @@ namespace Google.Cloud.Spanner.Data.Tests
 
                 var session = await pool.CreateSessionFromPoolAsync(
                         client.Object, s_defaultName.ProjectId,
-                        s_defaultName.InstanceId, s_defaultName.DatabaseId, null, CancellationToken.None)
+                        s_defaultName.InstanceId, s_defaultName.DatabaseId, s_sampleOptions, CancellationToken.None)
                     .ConfigureAwait(false);
                 pool.ReleaseToPool(client.Object, session);
 
                 var session2 = await pool.CreateSessionFromPoolAsync(
-                        client.Object, "newproject", "newinstance", "newdbid", null, CancellationToken.None)
+                        client.Object, "newproject", "newinstance", "newdbid", s_sampleOptions, CancellationToken.None)
                     .ConfigureAwait(false);
 
                 Assert.NotSame(session, session2);
@@ -251,7 +253,7 @@ namespace Google.Cloud.Spanner.Data.Tests
                 var client = CreateMockClient();
                 var session = await pool.CreateSessionFromPoolAsync(
                         client.Object, s_defaultName.ProjectId,
-                        s_defaultName.InstanceId, s_defaultName.DatabaseId, null, CancellationToken.None)
+                        s_defaultName.InstanceId, s_defaultName.DatabaseId, s_sampleOptions, CancellationToken.None)
                     .ConfigureAwait(false);
 
                 Assert.Equal(1, _createdSessions.Count);
@@ -272,14 +274,14 @@ namespace Google.Cloud.Spanner.Data.Tests
                 var client = CreateMockClient();
                 var session = await pool.CreateSessionFromPoolAsync(
                         client.Object, s_defaultName.ProjectId,
-                        s_defaultName.InstanceId, s_defaultName.DatabaseId, null, CancellationToken.None)
+                        s_defaultName.InstanceId, s_defaultName.DatabaseId, s_sampleOptions, CancellationToken.None)
                     .ConfigureAwait(false);
 
                 SessionPool.MarkSessionExpired(session);
                 pool.ReleaseToPool(client.Object, session);
                 var session2 = await pool.CreateSessionFromPoolAsync(
                         client.Object, s_defaultName.ProjectId,
-                        s_defaultName.InstanceId, s_defaultName.DatabaseId, null, CancellationToken.None)
+                        s_defaultName.InstanceId, s_defaultName.DatabaseId, s_sampleOptions, CancellationToken.None)
                     .ConfigureAwait(false);
 
                 Assert.NotSame(session, session2);
@@ -299,11 +301,11 @@ namespace Google.Cloud.Spanner.Data.Tests
                 var client = CreateMockClient();
                 var session1 = await pool.CreateSessionFromPoolAsync(
                         client.Object, s_defaultName.ProjectId,
-                        s_defaultName.InstanceId, s_defaultName.DatabaseId, null, CancellationToken.None)
+                        s_defaultName.InstanceId, s_defaultName.DatabaseId, s_sampleOptions, CancellationToken.None)
                     .ConfigureAwait(false);
                 await pool.CreateSessionFromPoolAsync(
                         client.Object, s_defaultName.ProjectId,
-                        s_defaultName.InstanceId, s_defaultName.DatabaseId, null, CancellationToken.None)
+                        s_defaultName.InstanceId, s_defaultName.DatabaseId, s_sampleOptions, CancellationToken.None)
                     .ConfigureAwait(false);
 
                 async Task ReleaseTask()
@@ -314,7 +316,7 @@ namespace Google.Cloud.Spanner.Data.Tests
 
                 var createTask = pool.CreateSessionFromPoolAsync(
                     client.Object, s_defaultName.ProjectId,
-                    s_defaultName.InstanceId, s_defaultName.DatabaseId, null, CancellationToken.None);
+                    s_defaultName.InstanceId, s_defaultName.DatabaseId, s_sampleOptions, CancellationToken.None);
 
                 await Task.WhenAll(createTask, ReleaseTask()).ConfigureAwait(false);
                 Assert.Same(session1, createTask.ResultWithUnwrappedExceptions());
@@ -333,17 +335,17 @@ namespace Google.Cloud.Spanner.Data.Tests
                 var client = CreateMockClient();
                 await pool.CreateSessionFromPoolAsync(
                         client.Object, s_defaultName.ProjectId,
-                        s_defaultName.InstanceId, s_defaultName.DatabaseId, null, CancellationToken.None)
+                        s_defaultName.InstanceId, s_defaultName.DatabaseId, s_sampleOptions, CancellationToken.None)
                     .ConfigureAwait(false);
                 await pool.CreateSessionFromPoolAsync(
                         client.Object, s_defaultName.ProjectId,
-                        s_defaultName.InstanceId, s_defaultName.DatabaseId, null, CancellationToken.None)
+                        s_defaultName.InstanceId, s_defaultName.DatabaseId, s_sampleOptions, CancellationToken.None)
                     .ConfigureAwait(false);
                 try
                 {
                     await pool.CreateSessionFromPoolAsync(
                             client.Object, s_defaultName.ProjectId,
-                            s_defaultName.InstanceId, s_defaultName.DatabaseId, null, CancellationToken.None)
+                            s_defaultName.InstanceId, s_defaultName.DatabaseId, s_sampleOptions, CancellationToken.None)
                         .ConfigureAwait(false);
                 }
                 catch (RpcException e)
@@ -367,13 +369,13 @@ namespace Google.Cloud.Spanner.Data.Tests
                 var sessions = await Task.WhenAll(
                         pool.CreateSessionFromPoolAsync(
                             client.Object, s_defaultName.ProjectId,
-                            s_defaultName.InstanceId, s_defaultName.DatabaseId, null, CancellationToken.None),
+                            s_defaultName.InstanceId, s_defaultName.DatabaseId, s_sampleOptions, CancellationToken.None),
                         pool.CreateSessionFromPoolAsync(
                             client.Object, s_defaultName.ProjectId,
-                            s_defaultName.InstanceId, s_defaultName.DatabaseId, null, CancellationToken.None),
+                            s_defaultName.InstanceId, s_defaultName.DatabaseId, s_sampleOptions, CancellationToken.None),
                         pool.CreateSessionFromPoolAsync(
                             client.Object, s_defaultName.ProjectId,
-                            s_defaultName.InstanceId, s_defaultName.DatabaseId, null, CancellationToken.None))
+                            s_defaultName.InstanceId, s_defaultName.DatabaseId, s_sampleOptions, CancellationToken.None))
                     .ConfigureAwait(false);
 
                 pool.ReleaseToPool(client.Object, sessions[0]);
@@ -394,7 +396,7 @@ namespace Google.Cloud.Spanner.Data.Tests
             {
                 var client = CreateMockClient();
 
-                var txOptions = new TransactionOptions {ReadWrite = new TransactionOptions.Types.ReadWrite()};
+                var txOptions = new TransactionOptions { ReadWrite = new TransactionOptions.Types.ReadWrite() };
                 var session1 = await pool.CreateSessionFromPoolAsync(
                         client.Object, s_defaultName.ProjectId,
                         s_defaultName.InstanceId, s_defaultName.DatabaseId, txOptions, CancellationToken.None)
@@ -459,15 +461,16 @@ namespace Google.Cloud.Spanner.Data.Tests
             using (var pool = new SessionPool())
             {
                 var client = CreateMockClient();
+
                 var session = await pool.CreateSessionFromPoolAsync(
                         client.Object, s_defaultName.ProjectId,
-                        s_defaultName.InstanceId, s_defaultName.DatabaseId, null, CancellationToken.None)
+                        s_defaultName.InstanceId, s_defaultName.DatabaseId, s_sampleOptions, CancellationToken.None)
                     .ConfigureAwait(false);
 
                 pool.ReleaseToPool(client.Object, session);
                 var session2 = await pool.CreateSessionFromPoolAsync(
                         client.Object, s_defaultName.ProjectId,
-                        s_defaultName.InstanceId, s_defaultName.DatabaseId, null, CancellationToken.None)
+                        s_defaultName.InstanceId, s_defaultName.DatabaseId, s_sampleOptions, CancellationToken.None)
                     .ConfigureAwait(false);
 
                 Assert.Same(session, session2);
@@ -488,7 +491,7 @@ namespace Google.Cloud.Spanner.Data.Tests
                 var sessionList = Enumerable.Range(0, 100).Select(
                     x => pool.CreateSessionFromPoolAsync(
                         mockClient, s_defaultName.ProjectId,
-                        s_defaultName.InstanceId, s_defaultName.DatabaseId, null, CancellationToken.None)).ToList();
+                        s_defaultName.InstanceId, s_defaultName.DatabaseId, s_sampleOptions, CancellationToken.None)).ToList();
 
                 await Task.WhenAll(sessionList).ConfigureAwait(false);
                 Assert.True(mockClient.MaxConcurrentRequests <= pool.Options.MaximumConcurrentSessionCreates);

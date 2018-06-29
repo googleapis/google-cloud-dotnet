@@ -21,7 +21,13 @@ namespace Google.Cloud.Spanner.V1
     /// </summary>
     internal struct SessionPoolKey : IEquatable<SessionPoolKey>
     {
-        public SessionPoolKey(SpannerClient client, string project, string instance, string database)
+        // All these will be non-null. They're validated before the constructor call.
+        internal SpannerClient Client { get; }
+        internal string Project { get; }
+        internal string Instance { get; }
+        internal string Database { get; }
+
+        internal SessionPoolKey(SpannerClient client, string project, string instance, string database)
         {
             Client = client;
             Project = project;
@@ -29,20 +35,25 @@ namespace Google.Cloud.Spanner.V1
             Database = database;
         }
 
-        public SpannerClient Client { get; }
-        public string Project { get; }
-        public string Instance { get; }
-        public string Database { get; }
-        public bool Equals(SessionPoolKey other)
+        public override int GetHashCode()
         {
-            return (other.Client == Client && other.Project == Project && other.Instance == Instance
-                    && other.Database == Database);
+            int hash = 23;
+            hash = hash * 17 + Client.GetHashCode();
+            hash = hash * 17 + Project.GetHashCode();
+            hash = hash * 17 + Instance.GetHashCode();
+            hash = hash * 17 + Database.GetHashCode();
+            return hash;
         }
 
+        public override bool Equals(object obj) => obj is SessionPoolKey other && Equals(other);
+
+        public bool Equals(SessionPoolKey other) =>
+            other.Client == Client &&
+            other.Project == Project &&
+            other.Instance == Instance &&
+            other.Database == Database;
+
         /// <inheritdoc />
-        public override string ToString()
-        {
-            return $"ID:{Project}.{Instance}.{Database}";
-        }
+        public override string ToString() => $"ID:{Project}.{Instance}.{Database}";
     }
 }

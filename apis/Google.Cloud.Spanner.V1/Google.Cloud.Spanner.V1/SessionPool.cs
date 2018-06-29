@@ -110,7 +110,7 @@ namespace Google.Cloud.Spanner.V1
         private Task WhenCanceled(CancellationToken cancellationToken)
         {
             var tcs = new TaskCompletionSource<bool>();
-            cancellationToken.Register(s => ((TaskCompletionSource<bool>) s).SetResult(true), tcs);
+            cancellationToken.Register(s => ((TaskCompletionSource<bool>)s).SetResult(true), tcs);
             return tcs.Task;
         }
 
@@ -197,13 +197,13 @@ namespace Google.Cloud.Spanner.V1
         /// <summary>
         /// Allocates a session from the pool if possible, or creates a new Spanner Session.
         /// </summary>
-        /// <param name="spannerClient">The client to associate with the session.</param>
-        /// <param name="project">The project ID for the session. Must not be null.</param>
-        /// <param name="spannerInstance">The instance ID for the session. Must not be null.</param>
-        /// <param name="spannerDatabase">The database ID for the session. Must not be null.</param>
-        /// <param name="options">The transaction options for the session.</param>
-        /// <param name="cancellationToken">An optional token for canceling the call.</param>
-        /// <returns>A task which, when completed, has the session as a result.</returns>
+        /// <param name="spannerClient">The client to associate with the session. Must not be null.</param>
+        /// <param name="project">The project of the session. Must not be null.</param>
+        /// <param name="spannerInstance">The instance of the session. Must not be null.</param>
+        /// <param name="spannerDatabase">The database of the session. Must not be null.</param>
+        /// <param name="options">The transaction options for the session. Must not be null.</param>
+        /// <param name="cancellationToken">A cancellation token for the asynchronous operation.</param>
+        /// <returns>A task which, when completed, will return the session.</returns>
         public async Task<Session> CreateSessionFromPoolAsync(
             SpannerClient spannerClient,
             string project,
@@ -212,47 +212,40 @@ namespace Google.Cloud.Spanner.V1
             TransactionOptions options,
             CancellationToken cancellationToken)
         {
+            GaxPreconditions.CheckNotNull(spannerClient, nameof(spannerClient));
             GaxPreconditions.CheckNotNull(project, nameof(project));
             GaxPreconditions.CheckNotNull(spannerInstance, nameof(spannerInstance));
             GaxPreconditions.CheckNotNull(spannerDatabase, nameof(spannerDatabase));
+            GaxPreconditions.CheckNotNull(options, nameof(options));
 
             await StartSessionCreatingAsync(cancellationToken).ConfigureAwait(false);
             Session sessionResult = null;
             SessionPoolKey sessionPoolKey = default;
             try
             {
-                sessionPoolKey = new SessionPoolKey(spannerClient,
-                    project,
-                    spannerInstance,
-                    spannerDatabase);
-                SessionPoolImpl targetPool = _poolByClientAndDatabase.GetOrAdd(sessionPoolKey,
-                    key => new SessionPoolImpl(key, Options));
+                sessionPoolKey = new SessionPoolKey(spannerClient, project, spannerInstance, spannerDatabase);
+                SessionPoolImpl targetPool = _poolByClientAndDatabase.GetOrAdd(sessionPoolKey, key => new SessionPoolImpl(key, Options));
 
                 sessionResult = await targetPool.AcquireSessionAsync(options, cancellationToken).ConfigureAwait(false);
-                //refresh the mru list which tells us what sessions need to be trimmed from the pool when we want
+                // Refresh the MRU list which tells us what sessions need to be trimmed from the pool when we want
                 // to add another poolEntry.
                 return sessionResult;
-            } finally
+            }
+            finally
             {
                 EndSessionCreating(sessionResult, sessionPoolKey);
             }
         }
 
-        internal int GetPoolSize(
-            SpannerClient spannerClient,
-            string project,
-            string spannerInstance,
-            string spannerDatabase)
+        // Only present for testing.
+        internal int GetPoolSize(SpannerClient spannerClient, string project, string spannerInstance, string spannerDatabase)
         {
+            GaxPreconditions.CheckNotNull(spannerClient, nameof(spannerClient));
             GaxPreconditions.CheckNotNull(project, nameof(project));
             GaxPreconditions.CheckNotNull(spannerInstance, nameof(spannerInstance));
             GaxPreconditions.CheckNotNull(spannerDatabase, nameof(spannerDatabase));
-            var sessionPoolKey = new SessionPoolKey(spannerClient,
-                project,
-                spannerInstance,
-                spannerDatabase);
-            SessionPoolImpl targetPool = _poolByClientAndDatabase.GetOrAdd(sessionPoolKey,
-                key => new SessionPoolImpl(key, Options));
+            var sessionPoolKey = new SessionPoolKey(spannerClient, project, spannerInstance, spannerDatabase);
+            SessionPoolImpl targetPool = _poolByClientAndDatabase.GetOrAdd(sessionPoolKey, key => new SessionPoolImpl(key, Options));
 
             return targetPool.GetPoolSize();
         }
@@ -281,10 +274,11 @@ namespace Google.Cloud.Spanner.V1
         /// Releases a session back into the pool, possibly causing another entry to be evicted if the maximum pool size has been
         /// reached.
         /// </summary>
-        /// <param name="client">The client associated with the session.</param>
-        /// <param name="session">The session to return to the pool. Must not be null.</param>
+        /// <param name="client">The client using the session. Must not be null.</param>
+        /// <param name="session">The session to release. Must not be null.</param>
         public void ReleaseToPool(SpannerClient client, Session session)
         {
+            GaxPreconditions.CheckNotNull(client, nameof(client));
             GaxPreconditions.CheckNotNull(session, nameof(session));
 
             SessionPoolKey poolKey;
@@ -311,12 +305,12 @@ namespace Google.Cloud.Spanner.V1
                         var evictionPool = _priorityList.GetTop();
                         var evictionClient = evictionPool?.Key.Client;
                         var evictionSession = evictionPool?.AcquireEvictionCandidate();
-                        if (evictionSession != null)
-                        {
-                            Task.Run(() => EvictSessionAsync(evictionClient, evictionSession));
+                            if (evictionSession != null)
+                            {
+                                Task.Run(() => EvictSessionAsync(evictionClient, evictionSession));
+                            }
                         }
                     }
-                }
                 finally
                 {
                     //signal to any blocked requestor that they *may* be able to allocate a session.
