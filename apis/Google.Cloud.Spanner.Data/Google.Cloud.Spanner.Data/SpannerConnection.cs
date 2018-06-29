@@ -328,11 +328,7 @@ namespace Google.Cloud.Spanner.Data
         {
             if (client != null)
             {
-                ClientPool.Default.ReleaseClient(
-                    client,
-                    _connectionStringBuilder.GetCredentials(),
-                    _connectionStringBuilder.EndPoint,
-                    _connectionStringBuilder);
+                ClientPool.Default.ReleaseClient(client, _connectionStringBuilder);
             }
         }
 
@@ -497,11 +493,8 @@ namespace Google.Cloud.Spanner.Data
                     SpannerClient localClient = null;
                     try
                     {
-                        localClient = await ClientPool.Default.AcquireClientAsync(
-                                Logger,
-                                _connectionStringBuilder.GetCredentials(),
-                                _connectionStringBuilder.EndPoint,
-                                _connectionStringBuilder)
+                        localClient = await ClientPool.Default
+                            .AcquireClientAsync(_connectionStringBuilder)
                             .ConfigureAwait(false);
                         _sharedSession = await SessionPool.Default.CreateSessionFromPoolAsync(
                                 localClient, _connectionStringBuilder.Project,

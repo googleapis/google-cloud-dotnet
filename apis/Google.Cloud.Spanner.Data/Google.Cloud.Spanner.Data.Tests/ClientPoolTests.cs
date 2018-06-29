@@ -18,6 +18,7 @@ using System.Text;
 using System.Threading.Tasks;
 using Google.Cloud.Spanner.V1;
 using Google.Cloud.Spanner.V1.Internal.Logging;
+using Grpc.Core;
 using Moq;
 using Xunit;
 using Xunit.Abstractions;
@@ -26,6 +27,9 @@ namespace Google.Cloud.Spanner.Data.Tests
 {
     public class ClientPoolTests
     {
+        private static readonly SpannerConnectionStringBuilder s_defaultConnectionStringBuilder =
+            new SpannerConnectionStringBuilder("Host=test; Data Source=projects/foo/instances/bar/databases/baz", ChannelCredentials.Insecure);
+
         public ClientPoolTests(ITestOutputHelper outputHelper)
         {
             TestLogger.TestOutputHelper = outputHelper;
@@ -46,7 +50,7 @@ namespace Google.Cloud.Spanner.Data.Tests
         {
             //immediately yield to increase contention for stress testing.
             await Task.Yield();
-            return await pool.AcquireClientAsync(Logger.DefaultLogger);
+            return await pool.AcquireClientAsync(s_defaultConnectionStringBuilder);
         }
 
         [Fact]
@@ -56,8 +60,8 @@ namespace Google.Cloud.Spanner.Data.Tests
             var mockClientFactory = SetupMockClientFactory();
 
             var testPool = new ClientPool(mockClientFactory);
-            var clientAcquired = await testPool.AcquireClientAsync(Logger.DefaultLogger);
-            testPool.ReleaseClient(clientAcquired);
+            var clientAcquired = await testPool.AcquireClientAsync(s_defaultConnectionStringBuilder);
+            testPool.ReleaseClient(clientAcquired, s_defaultConnectionStringBuilder);
 
             Assert.Equal(1, mockClientFactory.Invocations);
             var s = new StringBuilder();
@@ -92,7 +96,7 @@ namespace Google.Cloud.Spanner.Data.Tests
 
             foreach (var client in concurrentQueries.Select(x => x.Result))
             {
-                testPool.ReleaseClient(client);
+                testPool.ReleaseClient(client, s_defaultConnectionStringBuilder);
             }
             var s = new StringBuilder();
             Assert.Equal(0, testPool.GetPoolInfo(s));
@@ -109,19 +113,19 @@ namespace Google.Cloud.Spanner.Data.Tests
             var clientList = new List<SpannerClient>();
             for (var i = 0; i < SpannerOptions.Instance.MaximumGrpcChannels; i++)
             {
-                var newClient = await testPool.AcquireClientAsync(Logger.DefaultLogger);
+                var newClient = await testPool.AcquireClientAsync(s_defaultConnectionStringBuilder);
                 Assert.DoesNotContain(newClient, clientList);
                 clientList.Add(newClient);
             }
 
             //now we wrap around.
-            var firstReusedClient = await testPool.AcquireClientAsync(Logger.DefaultLogger);
+            var firstReusedClient = await testPool.AcquireClientAsync(s_defaultConnectionStringBuilder);
             Assert.Same(clientList[0], firstReusedClient);
-            testPool.ReleaseClient(firstReusedClient);
+            testPool.ReleaseClient(firstReusedClient, s_defaultConnectionStringBuilder);
 
             foreach (var client in clientList)
             {
-                testPool.ReleaseClient(client);
+                testPool.ReleaseClient(client, s_defaultConnectionStringBuilder);
             }
             var s = new StringBuilder();
             Assert.Equal(0, testPool.GetPoolInfo(s));
@@ -129,8 +133,8 @@ namespace Google.Cloud.Spanner.Data.Tests
 
             //now that everything got released, lets ensure the client order is preserved so
             //that we again get the first client.
-            Assert.Same(firstReusedClient, await testPool.AcquireClientAsync(Logger.DefaultLogger));
-            testPool.ReleaseClient(firstReusedClient);
+            Assert.Same(firstReusedClient, await testPool.AcquireClientAsync(s_defaultConnectionStringBuilder));
+            testPool.ReleaseClient(firstReusedClient, s_defaultConnectionStringBuilder);
 
             Assert.Equal(SpannerOptions.Instance.MaximumGrpcChannels, mockClientFactory.Invocations);
         }
@@ -151,19 +155,21 @@ namespace Google.Cloud.Spanner.Data.Tests
             var testPool = new ClientPool(mockClientFactory);
             var expectedClient = firstReturnedClient.Object;
 
-            Assert.Same(expectedClient, await testPool.AcquireClientAsync(Logger.DefaultLogger));
-            testPool.ReleaseClient(expectedClient);
+            Assert.Same(expectedClient, await testPool.AcquireClientAsync(s_defaultConnectionStringBuilder));
+            testPool.ReleaseClient(expectedClient, s_defaultConnectionStringBuilder);
 
-            Assert.Same(expectedClient, await testPool.AcquireClientAsync(Logger.DefaultLogger));
-            testPool.ReleaseClient(expectedClient);
+            Assert.Same(expectedClient, await testPool.AcquireClientAsync(s_defaultConnectionStringBuilder));
+            testPool.ReleaseClient(expectedClient, s_defaultConnectionStringBuilder);
 
-            Assert.Same(expectedClient, await testPool.AcquireClientAsync(Logger.DefaultLogger));
-            testPool.ReleaseClient(expectedClient);
+            Assert.Same(expectedClient, await testPool.AcquireClientAsync(s_defaultConnectionStringBuilder));
+            testPool.ReleaseClient(expectedClient, s_defaultConnectionStringBuilder);
 
             var s = new StringBuilder();
             Assert.Equal(0, testPool.GetPoolInfo(s));
             Logger.DefaultLogger.Info(() => s.ToString());
             Assert.Equal(1, mockClientFactory.Invocations);
         }
+
+        // TODO: Tests that prove the connection string builder is actually used in the pool key.
     }
 }
