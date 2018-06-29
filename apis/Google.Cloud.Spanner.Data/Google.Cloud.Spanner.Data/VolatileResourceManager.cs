@@ -32,6 +32,8 @@ namespace Google.Cloud.Spanner.Data
         private readonly TimestampBound _timestampBound;
         private readonly TransactionId _transactionId;
         private SpannerTransaction _transaction;
+        private SpannerClient _spannerClient;
+        private Action _spannerClientDisposal;
 
         public VolatileResourceManager(SpannerConnection spannerConnection, TimestampBound timestampBound, TransactionId transactionId)
         {
@@ -44,25 +46,37 @@ namespace Google.Cloud.Spanner.Data
 
         public void Dispose()
         {
-            _transaction?.Dispose();
+            try
+            {
+                _transaction?.DisposeWithClient(_spannerClient);
+                _spannerClientDisposal?.Invoke();
+                // Protect against multiple disposals
+                _transaction = null;
+                _spannerClientDisposal = null;
+            }
+            catch (Exception e)
+            {
+
+                Logger.DefaultLogger.Error(() => "Error disposing", e);
+            }
         }
 
         public void Commit(Enlistment enlistment)
-        {
-            if (_transaction != null && !_transaction.HasMutations)
             {
-                //In the case where our resource manager doesn't have any mutations, it was a read,
-                //which we will no-op and allow through even if it was a two phase commit.
+                if (_transaction != null && !_transaction.HasMutations)
+                {
+                    // In the case where our resource manager doesn't have any mutations, it was a read,
+                    // which we will no-op and allow through even if it was a two phase commit.
                 //This allows cases such as nested transactions where the inner transaction is a readonly
-                //timestamp bound read and doesn't have anything to commit.
-                Logger.Debug(() => "Received a COMMIT for a two phase commit but without changes. This is allowed.");
-                enlistment.Done();
+                    // timestamp bound read and doesn't have anything to commit.
+                    Logger.Debug(() => "Received a COMMIT for a two phase commit but without changes. This is allowed.");
+                    enlistment.Done();
 
-                // For write transactions with no mutations, this ensures the transaction
-                // gets closed and the locks get released if any were made.
-                CommitToSpanner();
-                return;
-            }
+                    // For write transactions with no mutations, this ensures the transaction
+                    // gets closed and the locks get released if any were made.
+                    CommitToSpanner();
+                    return;
+                }
             Logger.Warn(
                 () =>
                     "Got a Commit call, which indicates two phase commit inside a transaction scope. This is currently not supported in Spanner.");
@@ -83,10 +97,10 @@ namespace Google.Cloud.Spanner.Data
         public void Prepare(PreparingEnlistment preparingEnlistment)
         {
             if (_transaction != null && !_transaction.HasMutations) {
-                //In the case where our resource manager doesn't have any mutations, it was a read,
-                //which we will no-op and allow through even if it was a two phase commit.
-                //This allows cases such as nested transactions where the inner transaction is a readonly
-                //timestamp bound read and doesn't have anything to commit.
+                // In the case where our resource manager doesn't have any mutations, it was a read,
+                // which we will no-op and allow through even if it was a two phase commit.
+                // This allows cases such as nested transactions where the inner transaction is a readonly
+                // timestamp bound read and doesn't have anything to commit.
                 Logger.Debug(() => "Received a PREPARE for a two phase commit but without changes. This is allowed.");
                 preparingEnlistment.Prepared();
                 return;
@@ -94,18 +108,18 @@ namespace Google.Cloud.Spanner.Data
             Logger.Warn(
                 () =>
                     "Got a Prepare call, which indicates two phase commit inside a transaction scope. This is currently not supported in Spanner.");
-            preparingEnlistment.ForceRollback(new NotSupportedException(
-                "Spanner only supports single phase commit (Prepare not supported)."
-                + " This error can happen when attempting to use multiple transaction resources but may also happen for"
-                + " other reasons that cause a Transaction to use two-phase commit."));
-        }
+                preparingEnlistment.ForceRollback(new NotSupportedException(
+                    "Spanner only supports single phase commit (Prepare not supported)."
+                    + " This error can happen when attempting to use multiple transaction resources but may also happen for"
+                    + " other reasons that cause a Transaction to use two-phase commit."));
+            }
 
         public void Rollback(Enlistment enlistment)
         {
             try
-            {
-                ExecuteHelper.WithErrorTranslationAndProfiling(() =>
-                    _transaction?.Rollback(), "VolatileResourceManager.Rollback", Logger);
+                {
+                    ExecuteHelper.WithErrorTranslationAndProfiling(() =>
+                        _transaction?.Rollback(), "VolatileResourceManager.Rollback", Logger);
                 enlistment.Done();
             }
             catch (Exception e)
@@ -161,7 +175,7 @@ namespace Google.Cloud.Spanner.Data
             {
                 throw new InvalidOperationException("Unable to obtain a spanner transaction to execute within.");
             }
-            return await ((ISpannerTransaction) transaction).ExecuteMutationsAsync(mutations, cancellationToken, timeoutSeconds).ConfigureAwait(false);
+            return await ((ISpannerTransaction)transaction).ExecuteMutationsAsync(mutations, cancellationToken, timeoutSeconds).ConfigureAwait(false);
         }
 
         public async Task<ReliableStreamReader> ExecuteQueryAsync(ExecuteSqlRequest request, CancellationToken cancellationToken, int timeoutSeconds)
@@ -171,7 +185,7 @@ namespace Google.Cloud.Spanner.Data
             {
                 throw new InvalidOperationException("Unable to obtain a spanner transaction to execute within.");
             }
-            return await((ISpannerTransaction) transaction).ExecuteQueryAsync(request, cancellationToken, timeoutSeconds).ConfigureAwait(false);
+            return await ((ISpannerTransaction)transaction).ExecuteQueryAsync(request, cancellationToken, timeoutSeconds).ConfigureAwait(false);
         }
 
         private async Task<SpannerTransaction> GetTransactionAsync(CancellationToken cancellationToken, int timeoutSeconds)
@@ -191,6 +205,16 @@ namespace Google.Cloud.Spanner.Data
                 .ConfigureAwait(false));
             result.CommitTimeout = timeoutSeconds;
             return result;
+        }
+
+        /// <summary>
+        /// The SpannerConnection is usually closed before the transaction is disposed. SpannerConnection.Dispose
+        /// calls this method to transfer ownership of the SpannerClient it currently has.
+        /// </summary>
+        internal void TransferClientOwnership(SpannerClient spannerClient, Action disposalAction)
+        {
+            _spannerClient = spannerClient;
+            _spannerClientDisposal = disposalAction;
         }
     }
 }

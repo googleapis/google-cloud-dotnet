@@ -164,18 +164,18 @@ namespace Google.Cloud.Spanner.Data
             GaxPreconditions.CheckState(
                 Mode == TransactionMode.ReadOnly, "You can only call GetPartitions on a readonly transaction.");
 
-            //Calling this method marks the used transaction as "shared" - but does not set
-            //DisposeBehavior to any value. This will cause an exception during dispose that tell's the developer
-            //that they need to handle this condition by explcitily setting DisposeBehavior to some value.
+            // Calling this method marks the used transaction as "shared" - but does not set
+            // DisposeBehavior to any value. This will cause an exception during dispose that tell's the developer
+            // that they need to handle this condition by explcitily setting DisposeBehavior to some value.
             Shared = true;
 
             var partitionRequest = new PartitionQueryRequest
             {
-               Sql = request.Sql,
-               Params = request.Params,
-               PartitionOptions = partitionSizeBytes.HasValue || maxPartitions.HasValue ? new PartitionOptions() : null,
-               Transaction = GetTransactionSelector(TransactionMode.ReadOnly),
-               Session = Session.Name
+                Sql = request.Sql,
+                Params = request.Params,
+                PartitionOptions = partitionSizeBytes.HasValue || maxPartitions.HasValue ? new PartitionOptions() : null,
+                Transaction = GetTransactionSelector(TransactionMode.ReadOnly),
+                Session = Session.Name
             };
             if (partitionSizeBytes.HasValue)
             {
@@ -209,16 +209,16 @@ namespace Google.Cloud.Spanner.Data
             CheckCompatibleMode(TransactionMode.ReadWrite);
             return ExecuteHelper.WithErrorTranslationAndProfiling(
                 () =>
+            {
+                var taskCompletionSource = new TaskCompletionSource<int>();
+                cancellationToken.ThrowIfCancellationRequested();
+                lock (_mutations)
                 {
-                    var taskCompletionSource = new TaskCompletionSource<int>();
-                    cancellationToken.ThrowIfCancellationRequested();
-                    lock (_mutations)
-                    {
-                        _mutations.AddRange(mutations);
-                    }
-                    taskCompletionSource.SetResult(mutations.Count);
-                    return taskCompletionSource.Task;
-                }, "SpannerTransaction.ExecuteMutations", Logger);
+                    _mutations.AddRange(mutations);
+                }
+                taskCompletionSource.SetResult(mutations.Count);
+                return taskCompletionSource.Task;
+            }, "SpannerTransaction.ExecuteMutations", Logger);
         }
 
         Task<ReliableStreamReader> ISpannerTransaction.ExecuteQueryAsync(
@@ -229,14 +229,14 @@ namespace Google.Cloud.Spanner.Data
             GaxPreconditions.CheckNotNull(request, nameof(request));
             return ExecuteHelper.WithErrorTranslationAndProfiling(
                 () =>
-                {
-                    var taskCompletionSource =
-                        new TaskCompletionSource<ReliableStreamReader>();
-                    request.Transaction = GetTransactionSelector(TransactionMode.ReadOnly);
-                    taskCompletionSource.SetResult(_connection.SpannerClient.GetSqlStreamReader(request, Session, timeoutSeconds));
+            {
+                var taskCompletionSource =
+                    new TaskCompletionSource<ReliableStreamReader>();
+                request.Transaction = GetTransactionSelector(TransactionMode.ReadOnly);
+                taskCompletionSource.SetResult(_connection.SpannerClient.GetSqlStreamReader(request, Session, timeoutSeconds));
 
-                    return taskCompletionSource.Task;
-                }, "SpannerTransaction.ExecuteQuery", Logger);
+                return taskCompletionSource.Task;
+            }, "SpannerTransaction.ExecuteQuery", Logger);
         }
 
         /// <inheritdoc />
@@ -296,7 +296,13 @@ namespace Google.Cloud.Spanner.Data
 
 
         /// <inheritdoc />
-        protected override void Dispose(bool disposing)
+        protected override void Dispose(bool disposing) => DisposeWithClient(null);
+
+        /// <summary>
+        /// Disposes the transaction with the given client.
+        /// </summary>
+        /// <param name="client">The client to use when required, or null to use the connection's client.</param>
+        internal void DisposeWithClient(SpannerClient client)
         {
             Logger.LogPerformanceCounter(
                 "Transactions.ActiveCount",
@@ -311,7 +317,12 @@ namespace Google.Cloud.Spanner.Data
 
             if (DisposeBehavior == DisposeBehavior.ReleaseToPool)
             {
-                _connection.ReleaseSession(Session);
+                client = client ?? _connection.SpannerClient;
+                if (client == null)
+                {
+                    throw new InvalidOperationException($"Unable to release session; no SpannerClient available. Please check your resource management.");
+                }
+                _connection.ReleaseSession(Session, client);
             }
             else if (DisposeBehavior == DisposeBehavior.CloseResources)
             {
@@ -347,7 +358,7 @@ namespace Google.Cloud.Spanner.Data
         private TransactionSelector GetTransactionSelector(TransactionMode mode)
         {
             CheckCompatibleMode(mode);
-            return new TransactionSelector {Id = WireTransaction.Id};
+            return new TransactionSelector { Id = WireTransaction.Id };
         }
     }
 }

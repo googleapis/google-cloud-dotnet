@@ -50,12 +50,12 @@ namespace Google.Cloud.Spanner.Data
     /// </summary>
     public sealed class SpannerConnection : DbConnection
     {
-        //Internally, a SpannerConnection acts as a local SessionPool.
+        // Internally, a SpannerConnection acts as a local SessionPool.
         //When OpenAsync() is called, it creates a session with passthru transaction semantics and
-        //allows other consumers to borrow that session.
-        //Consumers may be SpannerTransactions or if the user has is not explicitly using transactions,
-        //the consumer may be the SpannerCommand itself.
-        //While SpannerTransaction has sole ownership of the session it obtains, SpannerCommand shares
+        // allows other consumers to borrow that session.
+        // Consumers may be SpannerTransactions or if the user has is not explicitly using transactions,
+        // the consumer may be the SpannerCommand itself.
+        // While SpannerTransaction has sole ownership of the session it obtains, SpannerCommand shares
         // any session it obtains with others.
 
         // Default transaction options: not valid to pass to Spanner to begin a transaction.
@@ -274,7 +274,7 @@ namespace Google.Cloud.Spanner.Data
         /// Begins a new Spanner transaction synchronously. This method hides <see cref="DbConnection.BeginTransaction()"/>, but behaves
         /// the same way, just with a more specific return type.
         /// </summary>
-        public new SpannerTransaction BeginTransaction() => (SpannerTransaction) base.BeginTransaction();
+        public new SpannerTransaction BeginTransaction() => (SpannerTransaction)base.BeginTransaction();
 
         /// <summary>
         /// Begins a new read/write transaction.
@@ -301,6 +301,8 @@ namespace Google.Cloud.Spanner.Data
         {
             Session session;
             bool primarySessionInUse;
+            bool releaseClient = true;
+
             var oldState = _state;
             lock (_sync)
             {
@@ -311,7 +313,21 @@ namespace Google.Cloud.Spanner.Data
 
                 _keepAliveCancellation?.Cancel();
 #if !NETSTANDARD1_5
-                _volatileResourceManager = null;
+                // In implicit transactions, the connection will be closed before the transaction is
+                // completed. We expect the SpannerTransaction to have ownership of the session, so that
+                // can be handled by disposal there, but we need to make sure the right SpannerClient is
+                // used when releasing the session to the session pool, and that the SpannerClient is
+                // released to the client pool too.
+                if (_volatileResourceManager != null)
+                {
+                    // Capture current state as local variables so we know what we'll be disposing.
+                    var connectionStringBuilder = _connectionStringBuilder;
+                    var client = SpannerClient;
+
+                    _volatileResourceManager.TransferClientOwnership(client, () => ReleaseClient(client, connectionStringBuilder));
+                    releaseClient = false;
+                    _volatileResourceManager = null;
+                }
 #endif
                 primarySessionInUse = _sessionRefCount > 0;
                 _state = ConnectionState.Closed;
@@ -323,7 +339,10 @@ namespace Google.Cloud.Spanner.Data
             {
                 SessionPool.Default.ReleaseToPool(SpannerClient, session);
             }
-            ReleaseClient(SpannerClient);
+            if (releaseClient)
+            {
+                ReleaseClient(SpannerClient, _connectionStringBuilder);
+            }
             SpannerClient = null;
             if (oldState != _state)
             {
@@ -331,11 +350,11 @@ namespace Google.Cloud.Spanner.Data
             }
         }
 
-        private void ReleaseClient(SpannerClient client)
+        private static void ReleaseClient(SpannerClient client, SpannerConnectionStringBuilder connectionStringBuilder)
         {
             if (client != null)
             {
-                ClientPool.Default.ReleaseClient(client, _connectionStringBuilder);
+                ClientPool.Default.ReleaseClient(client, connectionStringBuilder);
             }
         }
 
@@ -540,7 +559,7 @@ namespace Google.Cloud.Spanner.Data
                         }
                         else
                         {
-                            ReleaseClient(localClient);
+                            ReleaseClient(localClient, _connectionStringBuilder);
                         }
 #if !NETSTANDARD1_5
                         if (IsOpen && currentTransaction != null)
@@ -566,7 +585,7 @@ namespace Google.Cloud.Spanner.Data
         }
 
         /// <inheritdoc />
-        protected override DbCommand CreateDbCommand() => new SpannerCommand() { Connection = this};
+        protected override DbCommand CreateDbCommand() => new SpannerCommand() { Connection = this };
 
         /// <inheritdoc />
         protected override void Dispose(bool disposing)
@@ -593,7 +612,7 @@ namespace Google.Cloud.Spanner.Data
         /// </summary>
         internal SpannerConnectionStringBuilder SpannerConnectionStringBuilder => _connectionStringBuilder;
 
-        internal void ReleaseSession(Session session)
+        internal void ReleaseSession(Session session, SpannerClient client)
         {
             Session sessionToRelease = null;
             lock (_sync)
@@ -619,8 +638,8 @@ namespace Google.Cloud.Spanner.Data
                 {
                     if (SessionPool.Default.IsSessionExpired(session))
                     {
-                        //_staleSessions ensures we only release bad sessions once because
-                        //we are clobbering its refcount that it would otherwise use for this purpose.
+                        // _staleSessions ensures we only release bad sessions once because
+                        // we are clobbering its ref count that it would otherwise use for this purpose.
                         _staleSessions.Add(session.Name);
                     }
                     sessionToRelease = session;
@@ -628,7 +647,7 @@ namespace Google.Cloud.Spanner.Data
             }
             if (sessionToRelease != null)
             {
-                SessionPool.Default.ReleaseToPool(SpannerClient, sessionToRelease);
+                SessionPool.Default.ReleaseToPool(client, sessionToRelease);
             }
         }
 
@@ -709,13 +728,13 @@ namespace Google.Cloud.Spanner.Data
                         }
                         else if (!isSharedReadonlyTx && _sharedSession != null && _sessionRefCount == 0)
                         {
-                            //In this case, someone has called OpenAsync() followed by BeginTransactionAsync().
-                            //While we'd prefer them to just call BeginTransaction (so we can allocate a session
+                            // In this case, someone has called OpenAsync() followed by BeginTransactionAsync().
+                            // While we'd prefer them to just call BeginTransaction (so we can allocate a session
                             // with the appropriate transaction semantics straight from the pool), this is still allowed
                             // and we shouldn't create *two* sessions here for the case where they only ever use
                             // this connection for a single transaction.
-                            //So, we'll steal the shared precreated session and re-allocate it to the transaction.
-                            //If the user later does reads outside of a transaction, it will force create a new session.
+                            // So, we'll steal the shared precreated session and re-allocate it to the transaction.
+                            // If the user later does reads outside of a transaction, it will force create a new session.
                             var taskSource = new TaskCompletionSource<Session>();
                             taskSource.SetResult(_sharedSession);
                             result = taskSource.Task;
@@ -867,17 +886,15 @@ namespace Google.Cloud.Spanner.Data
                 var session = Interlocked.Exchange(ref _session, null);
                 if (session != null)
                 {
-                    _connection.ReleaseSession(session);
+                    // TODO: Check there's always a client at this point.
+                    _connection.ReleaseSession(session, _connection.SpannerClient);
                 }
             }
 
             public static Task<SessionHolder> Allocate(SpannerConnection owner, CancellationToken cancellationToken) =>
                 Allocate(owner, s_defaultTransactionOptions, cancellationToken);
 
-            public static async Task<SessionHolder> Allocate(
-                SpannerConnection owner,
-                TransactionOptions options,
-                CancellationToken cancellationToken)
+            public static async Task<SessionHolder> Allocate(SpannerConnection owner, TransactionOptions options, CancellationToken cancellationToken)
             {
                 var session = await owner.AllocateSession(options, cancellationToken).ConfigureAwait(false);
                 return new SessionHolder(owner, session);
