@@ -62,6 +62,8 @@ namespace Google.Cloud.Spanner.Data
         }
 
         public void Commit(Enlistment enlistment)
+        {
+            try
             {
                 if (_transaction != null && !_transaction.HasMutations)
                 {
@@ -77,13 +79,16 @@ namespace Google.Cloud.Spanner.Data
                     CommitToSpanner();
                     return;
                 }
-            Logger.Warn(
-                () =>
-                    "Got a Commit call, which indicates two phase commit inside a transaction scope. This is currently not supported in Spanner.");
-            throw new NotSupportedException("Spanner only supports single phase commit (2-P Commit not supported)."
-                                            +
-                                            " This error can happen when attempting to use multiple transaction resources but may also happen for"
-                                            + " other reasons that cause a Transaction to use two-phase commit.");
+                Logger.Warn(() => "Received a call to Commit, which indicates two phase commit inside a transaction scope. This is currently not supported in Spanner.");
+                throw new NotSupportedException(
+                    "Spanner only supports single phase commit (2-P Commit not supported)." +
+                    " This error can happen when attempting to use multiple transaction resources but may also happen for" +
+                    " other reasons that cause a Transaction to use two-phase commit.");
+            }
+            finally
+            {
+                Dispose();
+            }
         }
 
         public void InDoubt(Enlistment enlistment)
@@ -96,7 +101,8 @@ namespace Google.Cloud.Spanner.Data
 
         public void Prepare(PreparingEnlistment preparingEnlistment)
         {
-            if (_transaction != null && !_transaction.HasMutations) {
+            if (_transaction != null && !_transaction.HasMutations)
+            {
                 // In the case where our resource manager doesn't have any mutations, it was a read,
                 // which we will no-op and allow through even if it was a two phase commit.
                 // This allows cases such as nested transactions where the inner transaction is a readonly
@@ -105,21 +111,34 @@ namespace Google.Cloud.Spanner.Data
                 preparingEnlistment.Prepared();
                 return;
             }
-            Logger.Warn(
-                () =>
-                    "Got a Prepare call, which indicates two phase commit inside a transaction scope. This is currently not supported in Spanner.");
+            Logger.Warn(() => "Received a call to Prepare, which indicates two phase commit inside a transaction scope. This is currently not supported in Spanner.");
+            try
+            {
                 preparingEnlistment.ForceRollback(new NotSupportedException(
                     "Spanner only supports single phase commit (Prepare not supported)."
                     + " This error can happen when attempting to use multiple transaction resources but may also happen for"
                     + " other reasons that cause a Transaction to use two-phase commit."));
             }
+            finally
+            {
+                // We've forced a rollback, but the expectation is that *this* resource
+                // manager won't have done anything yet, given that we've "failed" to prepare.
+                // Therefore we need to clean ourselves up. The other resource managers that have already
+                // been prepared will be cleaned up by the transaction manager.
+                Dispose();
+            }
+        }
 
         public void Rollback(Enlistment enlistment)
         {
             try
+            {
+                // We don't need to roll back if we're in a read-only transaction, and indeed doing so will cause an error.
+                if (_transaction != null && _transaction.Mode != TransactionMode.ReadOnly)
                 {
                     ExecuteHelper.WithErrorTranslationAndProfiling(() =>
                         _transaction?.Rollback(), "VolatileResourceManager.Rollback", Logger);
+                }
                 enlistment.Done();
             }
             catch (Exception e)
