@@ -14,8 +14,12 @@
 
 using System;
 using System.Collections.Generic;
+using System.Collections.Concurrent;
 using System.Linq;
+using System.Reflection;
 using System.Security;
+using System.Threading.Tasks;
+using System.Threading;
 using Google.Api;
 using Google.Api.Gax;
 using Google.Api.Gax.Grpc;
@@ -29,8 +33,6 @@ using NLog.Config;
 using NLog.Targets;
 using NLog.Common;
 using NLog.Layouts;
-using System.Threading.Tasks;
-using System.Threading;
 
 namespace Google.Cloud.Logging.NLog
 {
@@ -126,6 +128,7 @@ namespace Google.Cloud.Logging.NLog
         private CancellationTokenSource _cancelTokenSource;
         private readonly Func<Task, object, Task> _writeLogEntriesBegin;
         private readonly Action<Task, object> _writeLogEntriesCompleted;
+        private readonly ConcurrentDictionary<System.Type, PropertyInfo[]> _propertyReflection = new ConcurrentDictionary<System.Type, PropertyInfo[]>();
 
         private static readonly string[] s_oAuthScopes = new string[] { "https://www.googleapis.com/auth/logging.write" };
         private static readonly Dictionary<string, string> s_emptyLabels = new Dictionary<string, string>();
@@ -261,8 +264,11 @@ namespace Google.Cloud.Logging.NLog
                 }
                 else
                 {
-                    resource = new MonitoredResource { Type = ResourceType,
-                        Labels = { ResourceLabels.ToDictionary(x => x.Name, x => x.Layout.Render(LogEventInfo.CreateNullEvent())) } };
+                    resource = new MonitoredResource
+                    {
+                        Type = ResourceType,
+                        Labels = { ResourceLabels.ToDictionary(x => x.Name, x => x.Layout.Render(LogEventInfo.CreateNullEvent())) }
+                    };
                 }
             }
 
@@ -441,7 +447,7 @@ namespace Google.Cloud.Logging.NLog
 
                     try
                     {
-                        var jsonValue = BuildJsonValue(combinedProperty.Value);
+                        var jsonValue = BuildJsonValue(combinedProperty.Value, true, true);
                         propertiesStruct.Fields.Add(combinedProperty.Key, jsonValue);
                     }
                     catch (Exception ex)
@@ -488,17 +494,18 @@ namespace Google.Cloud.Logging.NLog
                     Line = loggingEvent.CallerLineNumber,
                 };
             }
-     
+
             return logEntry;
         }
 
-        private static Value BuildJsonValue(object objectValue)
+        private Value BuildJsonValue(object objectValue, bool followingCollection, bool followProperties)
         {
             var typeCode = Convert.GetTypeCode(objectValue);
-            switch (typeCode)
+            if (typeCode == TypeCode.Object && (followingCollection || followProperties))
             {
-                case TypeCode.Object:
-                    if (objectValue is System.Collections.IDictionary dictionary)
+                if (objectValue is System.Collections.IDictionary dictionary)
+                {
+                    if (followingCollection)
                     {
                         // Using IDictionaryEnumerator from IDictionary.GetEnumerator() as it provides key/value-pair
                         var dictionaryStruct = new Struct();
@@ -511,41 +518,70 @@ namespace Google.Cloud.Logging.NLog
                                 continue;
                             }
 
-                            var itemTypeCode = Convert.GetTypeCode(itemEnumerator.Value);
-                            dictionaryStruct.Fields.Add(dictionaryKey, BuildSimpleJsonValue(itemTypeCode, itemEnumerator.Value));
+                            dictionaryStruct.Fields.Add(dictionaryKey, BuildJsonValue(itemEnumerator.Value, false, followProperties));
                         }
                         return Value.ForStruct(dictionaryStruct);
                     }
-                    else if (objectValue is System.Collections.ICollection collection)
+                }
+                else if (objectValue is System.Collections.ICollection collection)
+                {
+                    if (followingCollection)
                     {
                         // Using foreach to optimize allocations, by only doing single Array-allocations
                         int collectionIndex = 0;
                         Value[] collectionStruct = new Value[collection.Count];
                         foreach (var listItem in collection)
                         {
-                            var itemTypeCode = Convert.GetTypeCode(listItem);
-                            collectionStruct[collectionIndex++] = BuildSimpleJsonValue(itemTypeCode, listItem);
+                            collectionStruct[collectionIndex++] = BuildJsonValue(listItem, false, followProperties);
                         }
                         return Value.ForList(collectionStruct);
                     }
-                    else if (objectValue is System.Collections.IEnumerable enumerable)
+                }
+                else if (objectValue is System.Collections.IEnumerable enumerable)
+                {
+                    if (followingCollection)
                     {
                         // Using foreach because System.Linq only works on typed collections IEnumerable<T>
                         List<Value> collectionStruct = new List<Value>();
                         foreach (var listItem in enumerable)
                         {
-                            var itemTypeCode = Convert.GetTypeCode(listItem);
-                            collectionStruct.Add(BuildSimpleJsonValue(itemTypeCode, listItem));
+                            collectionStruct.Add(BuildJsonValue(listItem, false, followProperties));
                         }
                         return Value.ForList(collectionStruct.ToArray());
                     }
-                    else
+                }
+                else if (followProperties)
+                {
+                    var objectType = objectValue.GetType();
+                    if (!_propertyReflection.TryGetValue(objectType, out var propertyReflection))
                     {
-                        return BuildSimpleJsonValue(typeCode, objectValue);
+                        propertyReflection = objectType.GetProperties(BindingFlags.Instance | BindingFlags.Public).Where(p => p.CanRead && p.GetIndexParameters().Length == 0 && p.GetGetMethod() != null).ToArray();
+                        _propertyReflection.TryAdd(objectType, propertyReflection);
                     }
-                default:
-                    return BuildSimpleJsonValue(typeCode, objectValue);
+
+                    if (propertyReflection.Length > 0)
+                    {
+                        var objectStruct = new Struct();
+                        foreach (var propertyInfo in propertyReflection)
+                        {
+                            try
+                            {
+                                var propertyValue = propertyInfo.GetValue(objectValue);
+                                objectStruct.Fields.Add(propertyInfo.Name, BuildJsonValue(propertyValue, followingCollection, false));
+                            }
+                            catch (Exception ex)
+                            {
+                                InternalLogger.Warn(ex, "GoogleStackdriver(Name={0}): Exception at BuildLogEntry with ObjectType={1} PropertyName={2}", Name, objectType.ToString(), propertyInfo.Name);
+                                objectStruct.Fields.Add(propertyInfo.Name, Value.ForNull());
+                            }
+                        }
+
+                        return Value.ForStruct(objectStruct);
+                    }
+                }
             }
+
+            return BuildSimpleJsonValue(typeCode, objectValue);
         }
 
         private static Value BuildSimpleJsonValue(TypeCode typeCode, object objectValue)
@@ -568,6 +604,8 @@ namespace Google.Cloud.Logging.NLog
                 case TypeCode.Int64:
                 case TypeCode.UInt64:
                     return Value.ForNumber(Convert.ToDouble(objectValue));
+                case TypeCode.DateTime:
+                    return Value.ForString(System.Xml.XmlConvert.ToString((DateTime)objectValue, System.Xml.XmlDateTimeSerializationMode.Utc));
                 default:
                     return Value.ForString(objectValue?.ToString() ?? "null");
             }

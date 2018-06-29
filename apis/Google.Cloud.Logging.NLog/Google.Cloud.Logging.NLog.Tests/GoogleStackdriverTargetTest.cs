@@ -91,7 +91,7 @@ namespace Google.Cloud.Logging.NLog.Tests
 
         private async Task<List<LogEntry>> RunTestWorkingServer(
             Func<GoogleStackdriverTarget, Task> testFn,
-            IEnumerable<KeyValuePair<string,string>> withMetadata = null,
+            IEnumerable<KeyValuePair<string, string>> withMetadata = null,
             Platform platform = null,
             bool enableResourceTypeDetection = false,
             bool includeCallSiteStackTrace = false,
@@ -192,7 +192,7 @@ namespace Google.Cloud.Logging.NLog.Tests
                 googleTarget =>
                 {
                     googleTarget.SendJsonPayload = true;
-                    LogManager.GetLogger("testlogger").Info("Favorite {Colors} and {Devices}", new string[] { "Red", "Green", "Blue" }, new Dictionary<string,int>{ ["NTSC"] = 1953, ["PAL"] = 1962, ["SECAM"] = 1956 });
+                    LogManager.GetLogger("testlogger").Info("Favorite {Colors} and {Devices}", new string[] { "Red", "Green", "Blue" }, new Dictionary<string, int> { ["NTSC"] = 1953, ["PAL"] = 1962, ["SECAM"] = 1956 });
                     return Task.FromResult(0);
                 }, includeEventProperties: true);
             Assert.Single(uploadedEntries);
@@ -208,6 +208,30 @@ namespace Google.Cloud.Logging.NLog.Tests
             Assert.Equal(1953, entry0.JsonPayload.Fields["properties"].StructValue.Fields["Devices"].StructValue.Fields["NTSC"].NumberValue);
             Assert.Equal(1962, entry0.JsonPayload.Fields["properties"].StructValue.Fields["Devices"].StructValue.Fields["PAL"].NumberValue);
             Assert.Equal(1956, entry0.JsonPayload.Fields["properties"].StructValue.Fields["Devices"].StructValue.Fields["SECAM"].NumberValue);
+        }
+
+
+        [Fact]
+        public async Task SingleLogEntryWithJsonObjectProperties()
+        {
+            var uploadedEntries = await RunTestWorkingServer(
+                googleTarget =>
+                {
+                    googleTarget.SendJsonPayload = true;
+                    LogManager.GetLogger("testlogger").Info("Favorite {Planet}", new { Name = "Earth", Galaxy = "Milky way", Colors = new[] { "Red", "Green", "Blue" } });
+                    return Task.FromResult(0);
+                }, includeEventProperties: true);
+            Assert.Single(uploadedEntries);
+            var entry0 = uploadedEntries[0];
+            Assert.Equal("", entry0.TextPayload?.Trim() ?? "");
+            Assert.Equal(1, entry0.JsonPayload.Fields["properties"].StructValue.Fields.Count);
+            Assert.Equal(3, entry0.JsonPayload.Fields["properties"].StructValue.Fields["Planet"].StructValue.Fields.Count);
+            Assert.Equal("Earth", entry0.JsonPayload.Fields["properties"].StructValue.Fields["Planet"].StructValue.Fields["Name"].StringValue);
+            Assert.Equal("Milky way", entry0.JsonPayload.Fields["properties"].StructValue.Fields["Planet"].StructValue.Fields["Galaxy"].StringValue);
+            Assert.Equal(3, entry0.JsonPayload.Fields["properties"].StructValue.Fields["Planet"].StructValue.Fields["Colors"].ListValue.Values.Count);
+            Assert.Equal("Red", entry0.JsonPayload.Fields["properties"].StructValue.Fields["Planet"].StructValue.Fields["Colors"].ListValue.Values[0].StringValue);
+            Assert.Equal("Green", entry0.JsonPayload.Fields["properties"].StructValue.Fields["Planet"].StructValue.Fields["Colors"].ListValue.Values[1].StringValue);
+            Assert.Equal("Blue", entry0.JsonPayload.Fields["properties"].StructValue.Fields["Planet"].StructValue.Fields["Colors"].ListValue.Values[2].StringValue);
         }
 
         [Fact]
