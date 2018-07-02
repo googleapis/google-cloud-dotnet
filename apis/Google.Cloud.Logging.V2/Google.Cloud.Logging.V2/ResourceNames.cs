@@ -16,6 +16,7 @@
 
 using gax = Google.Api.Gax;
 using sys = System;
+using scg = System.Collections.Generic;
 using linq = System.Linq;
 
 namespace Google.Cloud.Logging.V2
@@ -2944,6 +2945,17 @@ namespace Google.Cloud.Logging.V2
 
     }
 
+    public partial class ListLogEntriesRequest
+    {
+        /// <summary>
+        /// <see cref="gax::ResourceNameList{ParentNameOneof}"/>-typed view over the <see cref="ResourceNames"/> resource name property.
+        /// </summary>
+        public gax::ResourceNameList<ParentNameOneof> ResourceNamesAsParentNameOneofs =>
+            new gax::ResourceNameList<ParentNameOneof>(ResourceNames,
+                str => ParentNameOneof.Parse(str, true));
+
+    }
+
     public partial class ListLogMetricsRequest
     {
         /// <summary>
@@ -2992,6 +3004,19 @@ namespace Google.Cloud.Logging.V2
         {
             get { return string.IsNullOrEmpty(LogName) ? null : Google.Cloud.Logging.V2.LogNameOneof.Parse(LogName, true); }
             set { LogName = value != null ? value.ToString() : ""; }
+        }
+
+    }
+
+    public partial class LogMetric
+    {
+        /// <summary>
+        /// <see cref="Google.Cloud.Logging.V2.MetricNameOneof"/>-typed view over the <see cref="Name"/> resource name property.
+        /// </summary>
+        public Google.Cloud.Logging.V2.MetricNameOneof MetricNameOneof
+        {
+            get { return string.IsNullOrEmpty(Name) ? null : Google.Cloud.Logging.V2.MetricNameOneof.Parse(Name, true); }
+            set { Name = value != null ? value.ToString() : ""; }
         }
 
     }
