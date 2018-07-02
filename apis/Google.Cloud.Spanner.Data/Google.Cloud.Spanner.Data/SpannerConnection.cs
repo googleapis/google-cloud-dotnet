@@ -51,7 +51,7 @@ namespace Google.Cloud.Spanner.Data
     public sealed class SpannerConnection : DbConnection
     {
         // Internally, a SpannerConnection acts as a local SessionPool.
-        //When OpenAsync() is called, it creates a session with passthru transaction semantics and
+        // When OpenAsync() is called, it creates a session with passthru transaction semantics and
         // allows other consumers to borrow that session.
         // Consumers may be SpannerTransactions or if the user has is not explicitly using transactions,
         // the consumer may be the SpannerCommand itself.

@@ -37,10 +37,10 @@ namespace Google.Cloud.Spanner.Data.Tests
 
         public SessionPoolTests(ITestOutputHelper outputHelper)
         {
-            //Uncomment these lines to debug a specific test.
-            //            TestLogger.TestOutputHelper = outputHelper;
-            //            TestLogger.Install();
-            //            Logger.LogLevel = V1.Logging.LogLevel.Debug;
+            // Uncomment these lines to debug a specific test.
+            // TestLogger.TestOutputHelper = outputHelper;
+            // TestLogger.Install();
+            // Logger.LogLevel = V1.Logging.LogLevel.Debug;
         }
 
         private static readonly DatabaseName s_defaultName =

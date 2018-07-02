@@ -69,7 +69,7 @@ namespace Google.Cloud.Spanner.Data
                 {
                     // In the case where our resource manager doesn't have any mutations, it was a read,
                     // which we will no-op and allow through even if it was a two phase commit.
-                //This allows cases such as nested transactions where the inner transaction is a readonly
+                    // This allows cases such as nested transactions where the inner transaction is a readonly
                     // timestamp bound read and doesn't have anything to commit.
                     Logger.Debug(() => "Received a COMMIT for a two phase commit but without changes. This is allowed.");
                     enlistment.Done();
