@@ -207,8 +207,7 @@ namespace Google.Cloud.Spanner.Data
         {
             GaxPreconditions.CheckNotNull(mutations, nameof(mutations));
             CheckCompatibleMode(TransactionMode.ReadWrite);
-            return ExecuteHelper.WithErrorTranslationAndProfiling(
-                () =>
+            return ExecuteHelper.WithErrorTranslationAndProfiling(() =>
             {
                 var taskCompletionSource = new TaskCompletionSource<int>();
                 cancellationToken.ThrowIfCancellationRequested();
@@ -227,8 +226,7 @@ namespace Google.Cloud.Spanner.Data
             int timeoutSeconds)
         {
             GaxPreconditions.CheckNotNull(request, nameof(request));
-            return ExecuteHelper.WithErrorTranslationAndProfiling(
-                () =>
+            return ExecuteHelper.WithErrorTranslationAndProfiling(() =>
             {
                 var taskCompletionSource =
                     new TaskCompletionSource<ReliableStreamReader>();
@@ -256,8 +254,7 @@ namespace Google.Cloud.Spanner.Data
         /// <returns>Returns the UTC timestamp when the data was written to the database.</returns>
         public Task<DateTime?> CommitAsync(CancellationToken cancellationToken = default)
         {
-            return ExecuteHelper.WithErrorTranslationAndProfiling(
-                async () =>
+            return ExecuteHelper.WithErrorTranslationAndProfiling(async () =>
                 {
                     GaxPreconditions.CheckState(
                         Mode != TransactionMode.ReadOnly, "You cannot commit a readonly transaction.");

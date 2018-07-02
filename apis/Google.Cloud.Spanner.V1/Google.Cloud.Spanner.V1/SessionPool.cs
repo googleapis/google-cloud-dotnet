@@ -305,12 +305,12 @@ namespace Google.Cloud.Spanner.V1
                         var evictionPool = _priorityList.GetTop();
                         var evictionClient = evictionPool?.Key.Client;
                         var evictionSession = evictionPool?.AcquireEvictionCandidate();
-                            if (evictionSession != null)
-                            {
-                                Task.Run(() => EvictSessionAsync(evictionClient, evictionSession));
-                            }
+                        if (evictionSession != null)
+                        {
+                            Task.Run(() => EvictSessionAsync(evictionClient, evictionSession));
                         }
                     }
+                }
                 finally
                 {
                     //signal to any blocked requestor that they *may* be able to allocate a session.
