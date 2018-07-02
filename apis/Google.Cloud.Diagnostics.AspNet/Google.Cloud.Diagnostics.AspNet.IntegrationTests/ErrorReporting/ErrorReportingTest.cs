@@ -42,7 +42,7 @@ namespace Google.Cloud.Diagnostics.AspNet.IntegrationTests
             using (TestServer server = TestServer.Create<ErrorReportingTestApplication>())
             using (var client = server.HttpClient)
             {
-                await client.GetAsync($"api/ErrorReporting/Index/{testId}");
+                await client.GetAsync($"api/ErrorReporting/{nameof(ErrorReportingController.Index)}/{testId}");
 
                 var errorEvents = _polling.GetEvents(startTime, testId, 0);
                 Assert.Empty(errorEvents);
@@ -58,16 +58,16 @@ namespace Google.Cloud.Diagnostics.AspNet.IntegrationTests
             using (TestServer server = TestServer.Create<ErrorReportingTestApplication>())
             using (var client = server.HttpClient)
             {
-                var response = await client.GetAsync($"api/ErrorReporting/ThrowsException/{testId}");
+                var response = await client.GetAsync($"api/ErrorReporting/{nameof(ErrorReportingController.ThrowsException)}/{testId}");
                 var contentTask = response.Content.ReadAsStringAsync();
 
                 Assert.Equal(HttpStatusCode.InternalServerError, response.StatusCode);
 
                 var errorEvent = _polling.GetEvents(startTime, testId, 1).Single();
-                VerifyAutomaticLogging(errorEvent, testId, "ThrowsException");
+                VerifyFullLogging(errorEvent, testId, nameof(ErrorReportingController.ThrowsException));
 
                 var content = await contentTask;
-                Assert.Contains("ThrowsException", content);
+                Assert.Contains(nameof(ErrorReportingController.ThrowsException), content);
                 Assert.Contains(testId, content);
             }
         }
@@ -81,10 +81,10 @@ namespace Google.Cloud.Diagnostics.AspNet.IntegrationTests
             using (TestServer server = TestServer.Create<ErrorReportingTestApplication>())
             using (var client = server.HttpClient)
             {
-                var requestTask1 = client.GetAsync($"api/ErrorReporting/ThrowsException/{testId}");
-                var requestTask2 = client.GetAsync($"api/ErrorReporting/ThrowsArgumentException/{testId}");
-                var requestTask3 = client.GetAsync($"api/ErrorReporting/ThrowsException/{testId}");
-                var requestTask4 = client.GetAsync($"api/ErrorReporting/ThrowsException/{testId}");
+                var requestTask1 = client.GetAsync($"api/ErrorReporting/{nameof(ErrorReportingController.ThrowsException)}/{testId}");
+                var requestTask2 = client.GetAsync($"api/ErrorReporting/{nameof(ErrorReportingController.ThrowsArgumentException)}/{testId}");
+                var requestTask3 = client.GetAsync($"api/ErrorReporting/{nameof(ErrorReportingController.ThrowsException)}/{testId}");
+                var requestTask4 = client.GetAsync($"api/ErrorReporting/{nameof(ErrorReportingController.ThrowsException)}/{testId}");
 
                 var response = await requestTask1;
                 Assert.Equal(HttpStatusCode.InternalServerError, response.StatusCode);
@@ -98,17 +98,17 @@ namespace Google.Cloud.Diagnostics.AspNet.IntegrationTests
                 var errorEvents = _polling.GetEvents(startTime, testId, 4);
                 Assert.Equal(4, errorEvents.Count());
 
-                var exceptionEvents = errorEvents.Where(e => e.Message.Contains("ThrowsException"));
+                var exceptionEvents = errorEvents.Where(e => e.Message.Contains(nameof(ErrorReportingController.ThrowsException)));
                 Assert.Equal(3, exceptionEvents.Count());
                 foreach (var errorEvent in exceptionEvents)
                 {
-                    VerifyAutomaticLogging(errorEvent, testId, "ThrowsException");
+                    VerifyFullLogging(errorEvent, testId, nameof(ErrorReportingController.ThrowsException));
                 }
 
                 var argumentExceptionEvent = errorEvents
-                    .Where(e => e.Message.Contains("ThrowsArgumentException"))
+                    .Where(e => e.Message.Contains(nameof(ErrorReportingController.ThrowsArgumentException)))
                     .Single();
-                VerifyAutomaticLogging(argumentExceptionEvent, testId, "ThrowsArgumentException");
+                VerifyFullLogging(argumentExceptionEvent, testId, nameof(ErrorReportingController.ThrowsArgumentException));
             }
         }
 
@@ -125,12 +125,12 @@ namespace Google.Cloud.Diagnostics.AspNet.IntegrationTests
                 Assert.Equal(HttpStatusCode.InternalServerError, response.StatusCode);
 
                 var errorEvent = _polling.GetEvents(startTime, testId, 1).Single();
-                VerifyAutomaticLogging(errorEvent, testId, "SendAsync");
+                VerifyFullLogging(errorEvent, testId, "SendAsync");
             }
         }
 
         [Fact]
-        public async Task ManualLog()
+        public async Task ManualLog_GoogleLogger()
         {
             string testId = Utils.GetTestId();
             DateTime startTime = DateTime.UtcNow;
@@ -138,23 +138,35 @@ namespace Google.Cloud.Diagnostics.AspNet.IntegrationTests
             using (TestServer server = TestServer.Create<ErrorReportingTestApplication>())
             using (var client = server.HttpClient)
             {
-                var response = await client.GetAsync($"api/ErrorReporting/ThrowCatchLog/{testId}");
+                var response = await client.GetAsync($"api/ErrorReporting/{nameof(ErrorReportingController.ThrowCatchWithGoogleLogger)}/{testId}");
                 Assert.Equal(HttpStatusCode.OK, response.StatusCode);
 
                 var errorEvent = _polling.GetEvents(startTime, testId, 1).Single();
-                VerifyManualLogging(errorEvent, testId, "ThrowCatchLog");
+                VerifyErrorLogging(errorEvent, testId, nameof(ErrorReportingController.ThrowCatchWithGoogleLogger));
             }
         }
 
-        private void VerifyAutomaticLogging(ErrorEvent errorEvent, string testId, string functionName)
+        [Fact]
+        public async Task ManualLog_GoogleWebApiLogger()
         {
-            VerifyErrorEvent(errorEvent, testId, functionName);
-            VerifyHttpRequestContext(errorEvent);
+            string testId = Utils.GetTestId();
+            DateTime startTime = DateTime.UtcNow;
+
+            using (TestServer server = TestServer.Create<ErrorReportingTestApplication>())
+            using (var client = server.HttpClient)
+            {
+                var response = await client.GetAsync($"api/ErrorReporting/{nameof(ErrorReportingController.ThrowCatchWithGoogleWebApiLogger)}/{testId}");
+                Assert.Equal(HttpStatusCode.OK, response.StatusCode);
+
+                var errorEvent = _polling.GetEvents(startTime, testId, 1).Single();
+                VerifyFullLogging(errorEvent, testId, nameof(ErrorReportingController.ThrowCatchWithGoogleWebApiLogger));
+            }
         }
 
-        private void VerifyManualLogging(ErrorEvent errorEvent, string testId, string functionName)
+        private void VerifyFullLogging(ErrorEvent errorEvent, string testId, string functionName)
         {
-            VerifyErrorEvent(errorEvent, testId, functionName);
+            VerifyErrorLogging(errorEvent, testId, functionName);
+            VerifyHttpContextLogging(errorEvent);
         }
 
         /// <summary>
@@ -163,7 +175,7 @@ namespace Google.Cloud.Diagnostics.AspNet.IntegrationTests
         /// <param name="errorEvent">The event to check.</param>
         /// <param name="testId">The id of the test.</param>
         /// <param name="functionName">The name of the function the error occurred in.</param>
-        private void VerifyErrorEvent(ErrorEvent errorEvent, string testId, string functionName)
+        private void VerifyErrorLogging(ErrorEvent errorEvent, string testId, string functionName)
         {
             Assert.Equal(ErrorReportingController.Service, errorEvent.ServiceContext.Service);
             Assert.Equal(ErrorReportingController.Version, errorEvent.ServiceContext.Version);
@@ -183,7 +195,7 @@ namespace Google.Cloud.Diagnostics.AspNet.IntegrationTests
         /// Only for automatic logging, in self hosted web apis <see cref="HttpContext.Current"/>
         /// is <code>null</code>.
         /// </summary>
-        private void VerifyHttpRequestContext(ErrorEvent errorEvent)
+        private void VerifyHttpContextLogging(ErrorEvent errorEvent)
         {
             Assert.Equal(HttpMethod.Get.Method, errorEvent.Context.HttpRequest.Method);
             Assert.False(string.IsNullOrWhiteSpace(errorEvent.Context.HttpRequest.Url));
@@ -246,12 +258,6 @@ namespace Google.Cloud.Diagnostics.AspNet.IntegrationTests
         public const string Version = "version-id";
         public static readonly string ProjectId = Utils.GetProjectIdFromEnvironment();
 
-        private readonly IExceptionLogger _exceptionLogger;
-        public ErrorReportingController()
-        {
-            _exceptionLogger = GoogleExceptionLogger.Create(ProjectId, Service, Version);
-        }
-
         /// <summary>Throws and catches exception.</summary>
         [HttpGet]
         public string Index(string id)
@@ -284,18 +290,38 @@ namespace Google.Cloud.Diagnostics.AspNet.IntegrationTests
             throw new ArgumentException(message);
         }
 
-        /// <summary>Throws, catches and logs an <see cref="Exception"/>.</summary>
+        /// <summary>Throws, catches and logs an <see cref="Exception"/> using the
+        /// general purpose <see cref="GoogleExceptionLogger"></summary>
         [HttpGet]
-        public string ThrowCatchLog(string id)
+        public string ThrowCatchWithGoogleLogger(string id)
         {
-            var message = GetMessage(nameof(ThrowCatchLog), id);
+            var exceptionLogger = GoogleExceptionLogger.Create(ProjectId, Service, Version);
+            var message = GetMessage(nameof(ThrowCatchWithGoogleLogger), id);
             try
             {
                 throw new Exception(message);
             }
             catch (Exception e)
             {
-                _exceptionLogger.Log(e);
+                exceptionLogger.Log(e);
+            }
+            return message;
+        }
+
+        /// <summary>Throws, catches and logs an <see cref="Exception"/> using the
+        /// Web Api specific <see cref="GoogleWebApiExceptionLogger"></summary>
+        [HttpGet]
+        public string ThrowCatchWithGoogleWebApiLogger(string id)
+        {
+            var exceptionLogger = GoogleWebApiExceptionLogger.Create(ProjectId, Service, Version);
+            var message = GetMessage(nameof(ThrowCatchWithGoogleWebApiLogger), id);
+            try
+            {
+                throw new Exception(message);
+            }
+            catch (Exception e)
+            {
+                exceptionLogger.Log(e, ActionContext);
             }
             return message;
         }
