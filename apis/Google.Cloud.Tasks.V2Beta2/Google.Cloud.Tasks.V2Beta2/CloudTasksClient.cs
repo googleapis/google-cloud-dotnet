@@ -274,7 +274,8 @@ namespace Google.Cloud.Tasks.V2Beta2
         /// </list>
         /// Retry will be attempted on the following response status codes:
         /// <list>
-        /// <item><description>No status codes</description></item>
+        /// <item><description><see cref="grpccore::StatusCode.DeadlineExceeded"/></description></item>
+        /// <item><description><see cref="grpccore::StatusCode.Unavailable"/></description></item>
         /// </list>
         /// Default RPC expiration is 600000 milliseconds.
         /// </remarks>
@@ -283,7 +284,7 @@ namespace Google.Cloud.Tasks.V2Beta2
                 retryBackoff: GetDefaultRetryBackoff(),
                 timeoutBackoff: GetDefaultTimeoutBackoff(),
                 totalExpiration: gax::Expiration.FromTimeout(sys::TimeSpan.FromMilliseconds(600000)),
-                retryFilter: NonIdempotentRetryFilter
+                retryFilter: IdempotentRetryFilter
             )));
 
         /// <summary>
@@ -896,13 +897,13 @@ namespace Google.Cloud.Tasks.V2Beta2
         /// A pageable asynchronous sequence of <see cref="Queue"/> resources.
         /// </returns>
         public virtual gax::PagedAsyncEnumerable<ListQueuesResponse, Queue> ListQueuesAsync(
-            string parent,
+            LocationName parent,
             string pageToken = null,
             int? pageSize = null,
             gaxgrpc::CallSettings callSettings = null) => ListQueuesAsync(
                 new ListQueuesRequest
                 {
-                    Parent = gax::GaxPreconditions.CheckNotNullOrEmpty(parent, nameof(parent)),
+                    ParentAsLocationName = gax::GaxPreconditions.CheckNotNull(parent, nameof(parent)),
                     PageToken = pageToken ?? "",
                     PageSize = pageSize ?? 0,
                 },
@@ -934,13 +935,13 @@ namespace Google.Cloud.Tasks.V2Beta2
         /// A pageable sequence of <see cref="Queue"/> resources.
         /// </returns>
         public virtual gax::PagedEnumerable<ListQueuesResponse, Queue> ListQueues(
-            string parent,
+            LocationName parent,
             string pageToken = null,
             int? pageSize = null,
             gaxgrpc::CallSettings callSettings = null) => ListQueues(
                 new ListQueuesRequest
                 {
-                    Parent = gax::GaxPreconditions.CheckNotNullOrEmpty(parent, nameof(parent)),
+                    ParentAsLocationName = gax::GaxPreconditions.CheckNotNull(parent, nameof(parent)),
                     PageToken = pageToken ?? "",
                     PageSize = pageSize ?? 0,
                 },
@@ -1004,11 +1005,11 @@ namespace Google.Cloud.Tasks.V2Beta2
         /// A Task containing the RPC response.
         /// </returns>
         public virtual stt::Task<Queue> GetQueueAsync(
-            string name,
+            QueueName name,
             gaxgrpc::CallSettings callSettings = null) => GetQueueAsync(
                 new GetQueueRequest
                 {
-                    Name = gax::GaxPreconditions.CheckNotNullOrEmpty(name, nameof(name)),
+                    QueueName = gax::GaxPreconditions.CheckNotNull(name, nameof(name)),
                 },
                 callSettings);
 
@@ -1028,7 +1029,7 @@ namespace Google.Cloud.Tasks.V2Beta2
         /// A Task containing the RPC response.
         /// </returns>
         public virtual stt::Task<Queue> GetQueueAsync(
-            string name,
+            QueueName name,
             st::CancellationToken cancellationToken) => GetQueueAsync(
                 name,
                 gaxgrpc::CallSettings.FromCancellationToken(cancellationToken));
@@ -1049,11 +1050,11 @@ namespace Google.Cloud.Tasks.V2Beta2
         /// The RPC response.
         /// </returns>
         public virtual Queue GetQueue(
-            string name,
+            QueueName name,
             gaxgrpc::CallSettings callSettings = null) => GetQueue(
                 new GetQueueRequest
                 {
-                    Name = gax::GaxPreconditions.CheckNotNullOrEmpty(name, nameof(name)),
+                    QueueName = gax::GaxPreconditions.CheckNotNull(name, nameof(name)),
                 },
                 callSettings);
 
@@ -1150,12 +1151,12 @@ namespace Google.Cloud.Tasks.V2Beta2
         /// A Task containing the RPC response.
         /// </returns>
         public virtual stt::Task<Queue> CreateQueueAsync(
-            string parent,
+            LocationName parent,
             Queue queue,
             gaxgrpc::CallSettings callSettings = null) => CreateQueueAsync(
                 new CreateQueueRequest
                 {
-                    Parent = gax::GaxPreconditions.CheckNotNullOrEmpty(parent, nameof(parent)),
+                    ParentAsLocationName = gax::GaxPreconditions.CheckNotNull(parent, nameof(parent)),
                     Queue = gax::GaxPreconditions.CheckNotNull(queue, nameof(queue)),
                 },
                 callSettings);
@@ -1197,7 +1198,7 @@ namespace Google.Cloud.Tasks.V2Beta2
         /// A Task containing the RPC response.
         /// </returns>
         public virtual stt::Task<Queue> CreateQueueAsync(
-            string parent,
+            LocationName parent,
             Queue queue,
             st::CancellationToken cancellationToken) => CreateQueueAsync(
                 parent,
@@ -1241,12 +1242,12 @@ namespace Google.Cloud.Tasks.V2Beta2
         /// The RPC response.
         /// </returns>
         public virtual Queue CreateQueue(
-            string parent,
+            LocationName parent,
             Queue queue,
             gaxgrpc::CallSettings callSettings = null) => CreateQueue(
                 new CreateQueueRequest
                 {
-                    Parent = gax::GaxPreconditions.CheckNotNullOrEmpty(parent, nameof(parent)),
+                    ParentAsLocationName = gax::GaxPreconditions.CheckNotNull(parent, nameof(parent)),
                     Queue = gax::GaxPreconditions.CheckNotNull(queue, nameof(queue)),
                 },
                 callSettings);
@@ -1364,6 +1365,11 @@ namespace Google.Cloud.Tasks.V2Beta2
         /// Any value specified for an output only field will be ignored.
         /// The queue's [name][google.cloud.tasks.v2beta2.Queue.name] cannot be changed.
         /// </param>
+        /// <param name="updateMask">
+        /// A mask used to specify which fields of the queue are being updated.
+        ///
+        /// If empty, then all fields will be updated.
+        /// </param>
         /// <param name="callSettings">
         /// If not null, applies overrides to this RPC call.
         /// </param>
@@ -1372,10 +1378,12 @@ namespace Google.Cloud.Tasks.V2Beta2
         /// </returns>
         public virtual stt::Task<Queue> UpdateQueueAsync(
             Queue queue,
+            pbwkt::FieldMask updateMask,
             gaxgrpc::CallSettings callSettings = null) => UpdateQueueAsync(
                 new UpdateQueueRequest
                 {
                     Queue = gax::GaxPreconditions.CheckNotNull(queue, nameof(queue)),
+                    UpdateMask = updateMask, // Optional
                 },
                 callSettings);
 
@@ -1406,6 +1414,11 @@ namespace Google.Cloud.Tasks.V2Beta2
         /// Any value specified for an output only field will be ignored.
         /// The queue's [name][google.cloud.tasks.v2beta2.Queue.name] cannot be changed.
         /// </param>
+        /// <param name="updateMask">
+        /// A mask used to specify which fields of the queue are being updated.
+        ///
+        /// If empty, then all fields will be updated.
+        /// </param>
         /// <param name="cancellationToken">
         /// A <see cref="st::CancellationToken"/> to use for this RPC.
         /// </param>
@@ -1414,8 +1427,10 @@ namespace Google.Cloud.Tasks.V2Beta2
         /// </returns>
         public virtual stt::Task<Queue> UpdateQueueAsync(
             Queue queue,
+            pbwkt::FieldMask updateMask,
             st::CancellationToken cancellationToken) => UpdateQueueAsync(
                 queue,
+                updateMask,
                 gaxgrpc::CallSettings.FromCancellationToken(cancellationToken));
 
         /// <summary>
@@ -1445,6 +1460,11 @@ namespace Google.Cloud.Tasks.V2Beta2
         /// Any value specified for an output only field will be ignored.
         /// The queue's [name][google.cloud.tasks.v2beta2.Queue.name] cannot be changed.
         /// </param>
+        /// <param name="updateMask">
+        /// A mask used to specify which fields of the queue are being updated.
+        ///
+        /// If empty, then all fields will be updated.
+        /// </param>
         /// <param name="callSettings">
         /// If not null, applies overrides to this RPC call.
         /// </param>
@@ -1453,10 +1473,12 @@ namespace Google.Cloud.Tasks.V2Beta2
         /// </returns>
         public virtual Queue UpdateQueue(
             Queue queue,
+            pbwkt::FieldMask updateMask,
             gaxgrpc::CallSettings callSettings = null) => UpdateQueue(
                 new UpdateQueueRequest
                 {
                     Queue = gax::GaxPreconditions.CheckNotNull(queue, nameof(queue)),
+                    UpdateMask = updateMask, // Optional
                 },
                 callSettings);
 
@@ -1582,11 +1604,11 @@ namespace Google.Cloud.Tasks.V2Beta2
         /// A Task that completes when the RPC has completed.
         /// </returns>
         public virtual stt::Task DeleteQueueAsync(
-            string name,
+            QueueName name,
             gaxgrpc::CallSettings callSettings = null) => DeleteQueueAsync(
                 new DeleteQueueRequest
                 {
-                    Name = gax::GaxPreconditions.CheckNotNullOrEmpty(name, nameof(name)),
+                    QueueName = gax::GaxPreconditions.CheckNotNull(name, nameof(name)),
                 },
                 callSettings);
 
@@ -1617,7 +1639,7 @@ namespace Google.Cloud.Tasks.V2Beta2
         /// A Task that completes when the RPC has completed.
         /// </returns>
         public virtual stt::Task DeleteQueueAsync(
-            string name,
+            QueueName name,
             st::CancellationToken cancellationToken) => DeleteQueueAsync(
                 name,
                 gaxgrpc::CallSettings.FromCancellationToken(cancellationToken));
@@ -1646,11 +1668,11 @@ namespace Google.Cloud.Tasks.V2Beta2
         /// If not null, applies overrides to this RPC call.
         /// </param>
         public virtual void DeleteQueue(
-            string name,
+            QueueName name,
             gaxgrpc::CallSettings callSettings = null) => DeleteQueue(
                 new DeleteQueueRequest
                 {
-                    Name = gax::GaxPreconditions.CheckNotNullOrEmpty(name, nameof(name)),
+                    QueueName = gax::GaxPreconditions.CheckNotNull(name, nameof(name)),
                 },
                 callSettings);
 
@@ -1761,11 +1783,11 @@ namespace Google.Cloud.Tasks.V2Beta2
         /// A Task containing the RPC response.
         /// </returns>
         public virtual stt::Task<Queue> PurgeQueueAsync(
-            string name,
+            QueueName name,
             gaxgrpc::CallSettings callSettings = null) => PurgeQueueAsync(
                 new PurgeQueueRequest
                 {
-                    Name = gax::GaxPreconditions.CheckNotNullOrEmpty(name, nameof(name)),
+                    QueueName = gax::GaxPreconditions.CheckNotNull(name, nameof(name)),
                 },
                 callSettings);
 
@@ -1790,7 +1812,7 @@ namespace Google.Cloud.Tasks.V2Beta2
         /// A Task containing the RPC response.
         /// </returns>
         public virtual stt::Task<Queue> PurgeQueueAsync(
-            string name,
+            QueueName name,
             st::CancellationToken cancellationToken) => PurgeQueueAsync(
                 name,
                 gaxgrpc::CallSettings.FromCancellationToken(cancellationToken));
@@ -1816,11 +1838,11 @@ namespace Google.Cloud.Tasks.V2Beta2
         /// The RPC response.
         /// </returns>
         public virtual Queue PurgeQueue(
-            string name,
+            QueueName name,
             gaxgrpc::CallSettings callSettings = null) => PurgeQueue(
                 new PurgeQueueRequest
                 {
-                    Name = gax::GaxPreconditions.CheckNotNullOrEmpty(name, nameof(name)),
+                    QueueName = gax::GaxPreconditions.CheckNotNull(name, nameof(name)),
                 },
                 callSettings);
 
@@ -1917,11 +1939,11 @@ namespace Google.Cloud.Tasks.V2Beta2
         /// A Task containing the RPC response.
         /// </returns>
         public virtual stt::Task<Queue> PauseQueueAsync(
-            string name,
+            QueueName name,
             gaxgrpc::CallSettings callSettings = null) => PauseQueueAsync(
                 new PauseQueueRequest
                 {
-                    Name = gax::GaxPreconditions.CheckNotNullOrEmpty(name, nameof(name)),
+                    QueueName = gax::GaxPreconditions.CheckNotNull(name, nameof(name)),
                 },
                 callSettings);
 
@@ -1947,7 +1969,7 @@ namespace Google.Cloud.Tasks.V2Beta2
         /// A Task containing the RPC response.
         /// </returns>
         public virtual stt::Task<Queue> PauseQueueAsync(
-            string name,
+            QueueName name,
             st::CancellationToken cancellationToken) => PauseQueueAsync(
                 name,
                 gaxgrpc::CallSettings.FromCancellationToken(cancellationToken));
@@ -1974,11 +1996,11 @@ namespace Google.Cloud.Tasks.V2Beta2
         /// The RPC response.
         /// </returns>
         public virtual Queue PauseQueue(
-            string name,
+            QueueName name,
             gaxgrpc::CallSettings callSettings = null) => PauseQueue(
                 new PauseQueueRequest
                 {
-                    Name = gax::GaxPreconditions.CheckNotNullOrEmpty(name, nameof(name)),
+                    QueueName = gax::GaxPreconditions.CheckNotNull(name, nameof(name)),
                 },
                 callSettings);
 
@@ -2083,11 +2105,11 @@ namespace Google.Cloud.Tasks.V2Beta2
         /// A Task containing the RPC response.
         /// </returns>
         public virtual stt::Task<Queue> ResumeQueueAsync(
-            string name,
+            QueueName name,
             gaxgrpc::CallSettings callSettings = null) => ResumeQueueAsync(
                 new ResumeQueueRequest
                 {
-                    Name = gax::GaxPreconditions.CheckNotNullOrEmpty(name, nameof(name)),
+                    QueueName = gax::GaxPreconditions.CheckNotNull(name, nameof(name)),
                 },
                 callSettings);
 
@@ -2118,7 +2140,7 @@ namespace Google.Cloud.Tasks.V2Beta2
         /// A Task containing the RPC response.
         /// </returns>
         public virtual stt::Task<Queue> ResumeQueueAsync(
-            string name,
+            QueueName name,
             st::CancellationToken cancellationToken) => ResumeQueueAsync(
                 name,
                 gaxgrpc::CallSettings.FromCancellationToken(cancellationToken));
@@ -2150,11 +2172,11 @@ namespace Google.Cloud.Tasks.V2Beta2
         /// The RPC response.
         /// </returns>
         public virtual Queue ResumeQueue(
-            string name,
+            QueueName name,
             gaxgrpc::CallSettings callSettings = null) => ResumeQueue(
                 new ResumeQueueRequest
                 {
-                    Name = gax::GaxPreconditions.CheckNotNullOrEmpty(name, nameof(name)),
+                    QueueName = gax::GaxPreconditions.CheckNotNull(name, nameof(name)),
                 },
                 callSettings);
 
@@ -2269,11 +2291,11 @@ namespace Google.Cloud.Tasks.V2Beta2
         /// A Task containing the RPC response.
         /// </returns>
         public virtual stt::Task<iam::Policy> GetIamPolicyAsync(
-            string resource,
+            QueueName resource,
             gaxgrpc::CallSettings callSettings = null) => GetIamPolicyAsync(
                 new iam::GetIamPolicyRequest
                 {
-                    Resource = gax::GaxPreconditions.CheckNotNullOrEmpty(resource, nameof(resource)),
+                    ResourceAsResourceName = gax::GaxPreconditions.CheckNotNull(resource, nameof(resource)),
                 },
                 callSettings);
 
@@ -2299,7 +2321,7 @@ namespace Google.Cloud.Tasks.V2Beta2
         /// A Task containing the RPC response.
         /// </returns>
         public virtual stt::Task<iam::Policy> GetIamPolicyAsync(
-            string resource,
+            QueueName resource,
             st::CancellationToken cancellationToken) => GetIamPolicyAsync(
                 resource,
                 gaxgrpc::CallSettings.FromCancellationToken(cancellationToken));
@@ -2326,11 +2348,11 @@ namespace Google.Cloud.Tasks.V2Beta2
         /// The RPC response.
         /// </returns>
         public virtual iam::Policy GetIamPolicy(
-            string resource,
+            QueueName resource,
             gaxgrpc::CallSettings callSettings = null) => GetIamPolicy(
                 new iam::GetIamPolicyRequest
                 {
-                    Resource = gax::GaxPreconditions.CheckNotNullOrEmpty(resource, nameof(resource)),
+                    ResourceAsResourceName = gax::GaxPreconditions.CheckNotNull(resource, nameof(resource)),
                 },
                 callSettings);
 
@@ -2441,12 +2463,12 @@ namespace Google.Cloud.Tasks.V2Beta2
         /// A Task containing the RPC response.
         /// </returns>
         public virtual stt::Task<iam::Policy> SetIamPolicyAsync(
-            string resource,
+            QueueName resource,
             iam::Policy policy,
             gaxgrpc::CallSettings callSettings = null) => SetIamPolicyAsync(
                 new iam::SetIamPolicyRequest
                 {
-                    Resource = gax::GaxPreconditions.CheckNotNullOrEmpty(resource, nameof(resource)),
+                    ResourceAsResourceName = gax::GaxPreconditions.CheckNotNull(resource, nameof(resource)),
                     Policy = gax::GaxPreconditions.CheckNotNull(policy, nameof(policy)),
                 },
                 callSettings);
@@ -2481,7 +2503,7 @@ namespace Google.Cloud.Tasks.V2Beta2
         /// A Task containing the RPC response.
         /// </returns>
         public virtual stt::Task<iam::Policy> SetIamPolicyAsync(
-            string resource,
+            QueueName resource,
             iam::Policy policy,
             st::CancellationToken cancellationToken) => SetIamPolicyAsync(
                 resource,
@@ -2518,12 +2540,12 @@ namespace Google.Cloud.Tasks.V2Beta2
         /// The RPC response.
         /// </returns>
         public virtual iam::Policy SetIamPolicy(
-            string resource,
+            QueueName resource,
             iam::Policy policy,
             gaxgrpc::CallSettings callSettings = null) => SetIamPolicy(
                 new iam::SetIamPolicyRequest
                 {
-                    Resource = gax::GaxPreconditions.CheckNotNullOrEmpty(resource, nameof(resource)),
+                    ResourceAsResourceName = gax::GaxPreconditions.CheckNotNull(resource, nameof(resource)),
                     Policy = gax::GaxPreconditions.CheckNotNull(policy, nameof(policy)),
                 },
                 callSettings);
@@ -2638,12 +2660,12 @@ namespace Google.Cloud.Tasks.V2Beta2
         /// A Task containing the RPC response.
         /// </returns>
         public virtual stt::Task<iam::TestIamPermissionsResponse> TestIamPermissionsAsync(
-            string resource,
+            QueueName resource,
             scg::IEnumerable<string> permissions,
             gaxgrpc::CallSettings callSettings = null) => TestIamPermissionsAsync(
                 new iam::TestIamPermissionsRequest
                 {
-                    Resource = gax::GaxPreconditions.CheckNotNullOrEmpty(resource, nameof(resource)),
+                    ResourceAsResourceName = gax::GaxPreconditions.CheckNotNull(resource, nameof(resource)),
                     Permissions = { gax::GaxPreconditions.CheckNotNull(permissions, nameof(permissions)) },
                 },
                 callSettings);
@@ -2675,7 +2697,7 @@ namespace Google.Cloud.Tasks.V2Beta2
         /// A Task containing the RPC response.
         /// </returns>
         public virtual stt::Task<iam::TestIamPermissionsResponse> TestIamPermissionsAsync(
-            string resource,
+            QueueName resource,
             scg::IEnumerable<string> permissions,
             st::CancellationToken cancellationToken) => TestIamPermissionsAsync(
                 resource,
@@ -2709,12 +2731,12 @@ namespace Google.Cloud.Tasks.V2Beta2
         /// The RPC response.
         /// </returns>
         public virtual iam::TestIamPermissionsResponse TestIamPermissions(
-            string resource,
+            QueueName resource,
             scg::IEnumerable<string> permissions,
             gaxgrpc::CallSettings callSettings = null) => TestIamPermissions(
                 new iam::TestIamPermissionsRequest
                 {
-                    Resource = gax::GaxPreconditions.CheckNotNullOrEmpty(resource, nameof(resource)),
+                    ResourceAsResourceName = gax::GaxPreconditions.CheckNotNull(resource, nameof(resource)),
                     Permissions = { gax::GaxPreconditions.CheckNotNull(permissions, nameof(permissions)) },
                 },
                 callSettings);
@@ -2822,13 +2844,13 @@ namespace Google.Cloud.Tasks.V2Beta2
         /// A pageable asynchronous sequence of <see cref="Task"/> resources.
         /// </returns>
         public virtual gax::PagedAsyncEnumerable<ListTasksResponse, Task> ListTasksAsync(
-            string parent,
+            QueueName parent,
             string pageToken = null,
             int? pageSize = null,
             gaxgrpc::CallSettings callSettings = null) => ListTasksAsync(
                 new ListTasksRequest
                 {
-                    Parent = gax::GaxPreconditions.CheckNotNullOrEmpty(parent, nameof(parent)),
+                    ParentAsQueueName = gax::GaxPreconditions.CheckNotNull(parent, nameof(parent)),
                     PageToken = pageToken ?? "",
                     PageSize = pageSize ?? 0,
                 },
@@ -2863,13 +2885,13 @@ namespace Google.Cloud.Tasks.V2Beta2
         /// A pageable sequence of <see cref="Task"/> resources.
         /// </returns>
         public virtual gax::PagedEnumerable<ListTasksResponse, Task> ListTasks(
-            string parent,
+            QueueName parent,
             string pageToken = null,
             int? pageSize = null,
             gaxgrpc::CallSettings callSettings = null) => ListTasks(
                 new ListTasksRequest
                 {
-                    Parent = gax::GaxPreconditions.CheckNotNullOrEmpty(parent, nameof(parent)),
+                    ParentAsQueueName = gax::GaxPreconditions.CheckNotNull(parent, nameof(parent)),
                     PageToken = pageToken ?? "",
                     PageSize = pageSize ?? 0,
                 },
@@ -2939,11 +2961,11 @@ namespace Google.Cloud.Tasks.V2Beta2
         /// A Task containing the RPC response.
         /// </returns>
         public virtual stt::Task<Task> GetTaskAsync(
-            string name,
+            TaskName name,
             gaxgrpc::CallSettings callSettings = null) => GetTaskAsync(
                 new GetTaskRequest
                 {
-                    Name = gax::GaxPreconditions.CheckNotNullOrEmpty(name, nameof(name)),
+                    TaskName = gax::GaxPreconditions.CheckNotNull(name, nameof(name)),
                 },
                 callSettings);
 
@@ -2963,7 +2985,7 @@ namespace Google.Cloud.Tasks.V2Beta2
         /// A Task containing the RPC response.
         /// </returns>
         public virtual stt::Task<Task> GetTaskAsync(
-            string name,
+            TaskName name,
             st::CancellationToken cancellationToken) => GetTaskAsync(
                 name,
                 gaxgrpc::CallSettings.FromCancellationToken(cancellationToken));
@@ -2984,11 +3006,11 @@ namespace Google.Cloud.Tasks.V2Beta2
         /// The RPC response.
         /// </returns>
         public virtual Task GetTask(
-            string name,
+            TaskName name,
             gaxgrpc::CallSettings callSettings = null) => GetTask(
                 new GetTaskRequest
                 {
-                    Name = gax::GaxPreconditions.CheckNotNullOrEmpty(name, nameof(name)),
+                    TaskName = gax::GaxPreconditions.CheckNotNull(name, nameof(name)),
                 },
                 callSettings);
 
@@ -3051,11 +3073,6 @@ namespace Google.Cloud.Tasks.V2Beta2
         /// <summary>
         /// Creates a task and adds it to a queue.
         ///
-        /// To add multiple tasks at the same time, use
-        /// [HTTP batching](/storage/docs/json_api/v1/how-tos/batch)
-        /// or the batching documentation for your client library, for example
-        /// https://developers.google.com/api-client-library/python/guide/batch.
-        ///
         /// Tasks cannot be updated after creation; there is no UpdateTask command.
         ///
         /// * For [App Engine queues](google.cloud.tasks.v2beta2.AppEngineHttpTarget),
@@ -3115,23 +3132,18 @@ namespace Google.Cloud.Tasks.V2Beta2
         /// A Task containing the RPC response.
         /// </returns>
         public virtual stt::Task<Task> CreateTaskAsync(
-            string parent,
+            QueueName parent,
             Task task,
             gaxgrpc::CallSettings callSettings = null) => CreateTaskAsync(
                 new CreateTaskRequest
                 {
-                    Parent = gax::GaxPreconditions.CheckNotNullOrEmpty(parent, nameof(parent)),
+                    ParentAsQueueName = gax::GaxPreconditions.CheckNotNull(parent, nameof(parent)),
                     Task = gax::GaxPreconditions.CheckNotNull(task, nameof(task)),
                 },
                 callSettings);
 
         /// <summary>
         /// Creates a task and adds it to a queue.
-        ///
-        /// To add multiple tasks at the same time, use
-        /// [HTTP batching](/storage/docs/json_api/v1/how-tos/batch)
-        /// or the batching documentation for your client library, for example
-        /// https://developers.google.com/api-client-library/python/guide/batch.
         ///
         /// Tasks cannot be updated after creation; there is no UpdateTask command.
         ///
@@ -3192,7 +3204,7 @@ namespace Google.Cloud.Tasks.V2Beta2
         /// A Task containing the RPC response.
         /// </returns>
         public virtual stt::Task<Task> CreateTaskAsync(
-            string parent,
+            QueueName parent,
             Task task,
             st::CancellationToken cancellationToken) => CreateTaskAsync(
                 parent,
@@ -3201,11 +3213,6 @@ namespace Google.Cloud.Tasks.V2Beta2
 
         /// <summary>
         /// Creates a task and adds it to a queue.
-        ///
-        /// To add multiple tasks at the same time, use
-        /// [HTTP batching](/storage/docs/json_api/v1/how-tos/batch)
-        /// or the batching documentation for your client library, for example
-        /// https://developers.google.com/api-client-library/python/guide/batch.
         ///
         /// Tasks cannot be updated after creation; there is no UpdateTask command.
         ///
@@ -3266,23 +3273,18 @@ namespace Google.Cloud.Tasks.V2Beta2
         /// The RPC response.
         /// </returns>
         public virtual Task CreateTask(
-            string parent,
+            QueueName parent,
             Task task,
             gaxgrpc::CallSettings callSettings = null) => CreateTask(
                 new CreateTaskRequest
                 {
-                    Parent = gax::GaxPreconditions.CheckNotNullOrEmpty(parent, nameof(parent)),
+                    ParentAsQueueName = gax::GaxPreconditions.CheckNotNull(parent, nameof(parent)),
                     Task = gax::GaxPreconditions.CheckNotNull(task, nameof(task)),
                 },
                 callSettings);
 
         /// <summary>
         /// Creates a task and adds it to a queue.
-        ///
-        /// To add multiple tasks at the same time, use
-        /// [HTTP batching](/storage/docs/json_api/v1/how-tos/batch)
-        /// or the batching documentation for your client library, for example
-        /// https://developers.google.com/api-client-library/python/guide/batch.
         ///
         /// Tasks cannot be updated after creation; there is no UpdateTask command.
         ///
@@ -3309,11 +3311,6 @@ namespace Google.Cloud.Tasks.V2Beta2
 
         /// <summary>
         /// Creates a task and adds it to a queue.
-        ///
-        /// To add multiple tasks at the same time, use
-        /// [HTTP batching](/storage/docs/json_api/v1/how-tos/batch)
-        /// or the batching documentation for your client library, for example
-        /// https://developers.google.com/api-client-library/python/guide/batch.
         ///
         /// Tasks cannot be updated after creation; there is no UpdateTask command.
         ///
@@ -3340,11 +3337,6 @@ namespace Google.Cloud.Tasks.V2Beta2
         /// <summary>
         /// Creates a task and adds it to a queue.
         ///
-        /// To add multiple tasks at the same time, use
-        /// [HTTP batching](/storage/docs/json_api/v1/how-tos/batch)
-        /// or the batching documentation for your client library, for example
-        /// https://developers.google.com/api-client-library/python/guide/batch.
-        ///
         /// Tasks cannot be updated after creation; there is no UpdateTask command.
         ///
         /// * For [App Engine queues](google.cloud.tasks.v2beta2.AppEngineHttpTarget),
@@ -3388,11 +3380,11 @@ namespace Google.Cloud.Tasks.V2Beta2
         /// A Task that completes when the RPC has completed.
         /// </returns>
         public virtual stt::Task DeleteTaskAsync(
-            string name,
+            TaskName name,
             gaxgrpc::CallSettings callSettings = null) => DeleteTaskAsync(
                 new DeleteTaskRequest
                 {
-                    Name = gax::GaxPreconditions.CheckNotNullOrEmpty(name, nameof(name)),
+                    TaskName = gax::GaxPreconditions.CheckNotNull(name, nameof(name)),
                 },
                 callSettings);
 
@@ -3416,7 +3408,7 @@ namespace Google.Cloud.Tasks.V2Beta2
         /// A Task that completes when the RPC has completed.
         /// </returns>
         public virtual stt::Task DeleteTaskAsync(
-            string name,
+            TaskName name,
             st::CancellationToken cancellationToken) => DeleteTaskAsync(
                 name,
                 gaxgrpc::CallSettings.FromCancellationToken(cancellationToken));
@@ -3438,11 +3430,11 @@ namespace Google.Cloud.Tasks.V2Beta2
         /// If not null, applies overrides to this RPC call.
         /// </param>
         public virtual void DeleteTask(
-            string name,
+            TaskName name,
             gaxgrpc::CallSettings callSettings = null) => DeleteTask(
                 new DeleteTaskRequest
                 {
-                    Name = gax::GaxPreconditions.CheckNotNullOrEmpty(name, nameof(name)),
+                    TaskName = gax::GaxPreconditions.CheckNotNull(name, nameof(name)),
                 },
                 callSettings);
 
@@ -3644,11 +3636,6 @@ namespace Google.Cloud.Tasks.V2Beta2
         /// by a later [LeaseTasks][google.cloud.tasks.v2beta2.CloudTasks.LeaseTasks],
         /// [GetTask][google.cloud.tasks.v2beta2.CloudTasks.GetTask], or
         /// [ListTasks][google.cloud.tasks.v2beta2.CloudTasks.ListTasks].
-        ///
-        /// To acknowledge multiple tasks at the same time, use
-        /// [HTTP batching](/storage/docs/json_api/v1/how-tos/batch)
-        /// or the batching documentation for your client library, for example
-        /// https://developers.google.com/api-client-library/python/guide/batch.
         /// </summary>
         /// <param name="name">
         /// Required.
@@ -3672,12 +3659,12 @@ namespace Google.Cloud.Tasks.V2Beta2
         /// A Task that completes when the RPC has completed.
         /// </returns>
         public virtual stt::Task AcknowledgeTaskAsync(
-            string name,
+            TaskName name,
             pbwkt::Timestamp scheduleTime,
             gaxgrpc::CallSettings callSettings = null) => AcknowledgeTaskAsync(
                 new AcknowledgeTaskRequest
                 {
-                    Name = gax::GaxPreconditions.CheckNotNullOrEmpty(name, nameof(name)),
+                    TaskName = gax::GaxPreconditions.CheckNotNull(name, nameof(name)),
                     ScheduleTime = gax::GaxPreconditions.CheckNotNull(scheduleTime, nameof(scheduleTime)),
                 },
                 callSettings);
@@ -3696,11 +3683,6 @@ namespace Google.Cloud.Tasks.V2Beta2
         /// by a later [LeaseTasks][google.cloud.tasks.v2beta2.CloudTasks.LeaseTasks],
         /// [GetTask][google.cloud.tasks.v2beta2.CloudTasks.GetTask], or
         /// [ListTasks][google.cloud.tasks.v2beta2.CloudTasks.ListTasks].
-        ///
-        /// To acknowledge multiple tasks at the same time, use
-        /// [HTTP batching](/storage/docs/json_api/v1/how-tos/batch)
-        /// or the batching documentation for your client library, for example
-        /// https://developers.google.com/api-client-library/python/guide/batch.
         /// </summary>
         /// <param name="name">
         /// Required.
@@ -3724,7 +3706,7 @@ namespace Google.Cloud.Tasks.V2Beta2
         /// A Task that completes when the RPC has completed.
         /// </returns>
         public virtual stt::Task AcknowledgeTaskAsync(
-            string name,
+            TaskName name,
             pbwkt::Timestamp scheduleTime,
             st::CancellationToken cancellationToken) => AcknowledgeTaskAsync(
                 name,
@@ -3745,11 +3727,6 @@ namespace Google.Cloud.Tasks.V2Beta2
         /// by a later [LeaseTasks][google.cloud.tasks.v2beta2.CloudTasks.LeaseTasks],
         /// [GetTask][google.cloud.tasks.v2beta2.CloudTasks.GetTask], or
         /// [ListTasks][google.cloud.tasks.v2beta2.CloudTasks.ListTasks].
-        ///
-        /// To acknowledge multiple tasks at the same time, use
-        /// [HTTP batching](/storage/docs/json_api/v1/how-tos/batch)
-        /// or the batching documentation for your client library, for example
-        /// https://developers.google.com/api-client-library/python/guide/batch.
         /// </summary>
         /// <param name="name">
         /// Required.
@@ -3770,12 +3747,12 @@ namespace Google.Cloud.Tasks.V2Beta2
         /// If not null, applies overrides to this RPC call.
         /// </param>
         public virtual void AcknowledgeTask(
-            string name,
+            TaskName name,
             pbwkt::Timestamp scheduleTime,
             gaxgrpc::CallSettings callSettings = null) => AcknowledgeTask(
                 new AcknowledgeTaskRequest
                 {
-                    Name = gax::GaxPreconditions.CheckNotNullOrEmpty(name, nameof(name)),
+                    TaskName = gax::GaxPreconditions.CheckNotNull(name, nameof(name)),
                     ScheduleTime = gax::GaxPreconditions.CheckNotNull(scheduleTime, nameof(scheduleTime)),
                 },
                 callSettings);
@@ -3794,11 +3771,6 @@ namespace Google.Cloud.Tasks.V2Beta2
         /// by a later [LeaseTasks][google.cloud.tasks.v2beta2.CloudTasks.LeaseTasks],
         /// [GetTask][google.cloud.tasks.v2beta2.CloudTasks.GetTask], or
         /// [ListTasks][google.cloud.tasks.v2beta2.CloudTasks.ListTasks].
-        ///
-        /// To acknowledge multiple tasks at the same time, use
-        /// [HTTP batching](/storage/docs/json_api/v1/how-tos/batch)
-        /// or the batching documentation for your client library, for example
-        /// https://developers.google.com/api-client-library/python/guide/batch.
         /// </summary>
         /// <param name="request">
         /// The request object containing all of the parameters for the API call.
@@ -3830,11 +3802,6 @@ namespace Google.Cloud.Tasks.V2Beta2
         /// by a later [LeaseTasks][google.cloud.tasks.v2beta2.CloudTasks.LeaseTasks],
         /// [GetTask][google.cloud.tasks.v2beta2.CloudTasks.GetTask], or
         /// [ListTasks][google.cloud.tasks.v2beta2.CloudTasks.ListTasks].
-        ///
-        /// To acknowledge multiple tasks at the same time, use
-        /// [HTTP batching](/storage/docs/json_api/v1/how-tos/batch)
-        /// or the batching documentation for your client library, for example
-        /// https://developers.google.com/api-client-library/python/guide/batch.
         /// </summary>
         /// <param name="request">
         /// The request object containing all of the parameters for the API call.
@@ -3865,11 +3832,6 @@ namespace Google.Cloud.Tasks.V2Beta2
         /// by a later [LeaseTasks][google.cloud.tasks.v2beta2.CloudTasks.LeaseTasks],
         /// [GetTask][google.cloud.tasks.v2beta2.CloudTasks.GetTask], or
         /// [ListTasks][google.cloud.tasks.v2beta2.CloudTasks.ListTasks].
-        ///
-        /// To acknowledge multiple tasks at the same time, use
-        /// [HTTP batching](/storage/docs/json_api/v1/how-tos/batch)
-        /// or the batching documentation for your client library, for example
-        /// https://developers.google.com/api-client-library/python/guide/batch.
         /// </summary>
         /// <param name="request">
         /// The request object containing all of the parameters for the API call.
@@ -3922,13 +3884,13 @@ namespace Google.Cloud.Tasks.V2Beta2
         /// A Task containing the RPC response.
         /// </returns>
         public virtual stt::Task<Task> RenewLeaseAsync(
-            string name,
+            TaskName name,
             pbwkt::Timestamp scheduleTime,
             pbwkt::Duration leaseDuration,
             gaxgrpc::CallSettings callSettings = null) => RenewLeaseAsync(
                 new RenewLeaseRequest
                 {
-                    Name = gax::GaxPreconditions.CheckNotNullOrEmpty(name, nameof(name)),
+                    TaskName = gax::GaxPreconditions.CheckNotNull(name, nameof(name)),
                     ScheduleTime = gax::GaxPreconditions.CheckNotNull(scheduleTime, nameof(scheduleTime)),
                     LeaseDuration = gax::GaxPreconditions.CheckNotNull(leaseDuration, nameof(leaseDuration)),
                 },
@@ -3972,7 +3934,7 @@ namespace Google.Cloud.Tasks.V2Beta2
         /// A Task containing the RPC response.
         /// </returns>
         public virtual stt::Task<Task> RenewLeaseAsync(
-            string name,
+            TaskName name,
             pbwkt::Timestamp scheduleTime,
             pbwkt::Duration leaseDuration,
             st::CancellationToken cancellationToken) => RenewLeaseAsync(
@@ -4019,13 +3981,13 @@ namespace Google.Cloud.Tasks.V2Beta2
         /// The RPC response.
         /// </returns>
         public virtual Task RenewLease(
-            string name,
+            TaskName name,
             pbwkt::Timestamp scheduleTime,
             pbwkt::Duration leaseDuration,
             gaxgrpc::CallSettings callSettings = null) => RenewLease(
                 new RenewLeaseRequest
                 {
-                    Name = gax::GaxPreconditions.CheckNotNullOrEmpty(name, nameof(name)),
+                    TaskName = gax::GaxPreconditions.CheckNotNull(name, nameof(name)),
                     ScheduleTime = gax::GaxPreconditions.CheckNotNull(scheduleTime, nameof(scheduleTime)),
                     LeaseDuration = gax::GaxPreconditions.CheckNotNull(leaseDuration, nameof(leaseDuration)),
                 },
@@ -4129,12 +4091,12 @@ namespace Google.Cloud.Tasks.V2Beta2
         /// A Task containing the RPC response.
         /// </returns>
         public virtual stt::Task<Task> CancelLeaseAsync(
-            string name,
+            TaskName name,
             pbwkt::Timestamp scheduleTime,
             gaxgrpc::CallSettings callSettings = null) => CancelLeaseAsync(
                 new CancelLeaseRequest
                 {
-                    Name = gax::GaxPreconditions.CheckNotNullOrEmpty(name, nameof(name)),
+                    TaskName = gax::GaxPreconditions.CheckNotNull(name, nameof(name)),
                     ScheduleTime = gax::GaxPreconditions.CheckNotNull(scheduleTime, nameof(scheduleTime)),
                 },
                 callSettings);
@@ -4169,7 +4131,7 @@ namespace Google.Cloud.Tasks.V2Beta2
         /// A Task containing the RPC response.
         /// </returns>
         public virtual stt::Task<Task> CancelLeaseAsync(
-            string name,
+            TaskName name,
             pbwkt::Timestamp scheduleTime,
             st::CancellationToken cancellationToken) => CancelLeaseAsync(
                 name,
@@ -4206,12 +4168,12 @@ namespace Google.Cloud.Tasks.V2Beta2
         /// The RPC response.
         /// </returns>
         public virtual Task CancelLease(
-            string name,
+            TaskName name,
             pbwkt::Timestamp scheduleTime,
             gaxgrpc::CallSettings callSettings = null) => CancelLease(
                 new CancelLeaseRequest
                 {
-                    Name = gax::GaxPreconditions.CheckNotNullOrEmpty(name, nameof(name)),
+                    TaskName = gax::GaxPreconditions.CheckNotNull(name, nameof(name)),
                     ScheduleTime = gax::GaxPreconditions.CheckNotNull(scheduleTime, nameof(scheduleTime)),
                 },
                 callSettings);
@@ -4329,11 +4291,11 @@ namespace Google.Cloud.Tasks.V2Beta2
         /// A Task containing the RPC response.
         /// </returns>
         public virtual stt::Task<Task> RunTaskAsync(
-            string name,
+            TaskName name,
             gaxgrpc::CallSettings callSettings = null) => RunTaskAsync(
                 new RunTaskRequest
                 {
-                    Name = gax::GaxPreconditions.CheckNotNullOrEmpty(name, nameof(name)),
+                    TaskName = gax::GaxPreconditions.CheckNotNull(name, nameof(name)),
                 },
                 callSettings);
 
@@ -4379,7 +4341,7 @@ namespace Google.Cloud.Tasks.V2Beta2
         /// A Task containing the RPC response.
         /// </returns>
         public virtual stt::Task<Task> RunTaskAsync(
-            string name,
+            TaskName name,
             st::CancellationToken cancellationToken) => RunTaskAsync(
                 name,
                 gaxgrpc::CallSettings.FromCancellationToken(cancellationToken));
@@ -4426,11 +4388,11 @@ namespace Google.Cloud.Tasks.V2Beta2
         /// The RPC response.
         /// </returns>
         public virtual Task RunTask(
-            string name,
+            TaskName name,
             gaxgrpc::CallSettings callSettings = null) => RunTask(
                 new RunTaskRequest
                 {
-                    Name = gax::GaxPreconditions.CheckNotNullOrEmpty(name, nameof(name)),
+                    TaskName = gax::GaxPreconditions.CheckNotNull(name, nameof(name)),
                 },
                 callSettings);
 
@@ -5460,11 +5422,6 @@ namespace Google.Cloud.Tasks.V2Beta2
         /// <summary>
         /// Creates a task and adds it to a queue.
         ///
-        /// To add multiple tasks at the same time, use
-        /// [HTTP batching](/storage/docs/json_api/v1/how-tos/batch)
-        /// or the batching documentation for your client library, for example
-        /// https://developers.google.com/api-client-library/python/guide/batch.
-        ///
         /// Tasks cannot be updated after creation; there is no UpdateTask command.
         ///
         /// * For [App Engine queues](google.cloud.tasks.v2beta2.AppEngineHttpTarget),
@@ -5491,11 +5448,6 @@ namespace Google.Cloud.Tasks.V2Beta2
 
         /// <summary>
         /// Creates a task and adds it to a queue.
-        ///
-        /// To add multiple tasks at the same time, use
-        /// [HTTP batching](/storage/docs/json_api/v1/how-tos/batch)
-        /// or the batching documentation for your client library, for example
-        /// https://developers.google.com/api-client-library/python/guide/batch.
         ///
         /// Tasks cannot be updated after creation; there is no UpdateTask command.
         ///
@@ -5662,11 +5614,6 @@ namespace Google.Cloud.Tasks.V2Beta2
         /// by a later [LeaseTasks][google.cloud.tasks.v2beta2.CloudTasks.LeaseTasks],
         /// [GetTask][google.cloud.tasks.v2beta2.CloudTasks.GetTask], or
         /// [ListTasks][google.cloud.tasks.v2beta2.CloudTasks.ListTasks].
-        ///
-        /// To acknowledge multiple tasks at the same time, use
-        /// [HTTP batching](/storage/docs/json_api/v1/how-tos/batch)
-        /// or the batching documentation for your client library, for example
-        /// https://developers.google.com/api-client-library/python/guide/batch.
         /// </summary>
         /// <param name="request">
         /// The request object containing all of the parameters for the API call.
@@ -5699,11 +5646,6 @@ namespace Google.Cloud.Tasks.V2Beta2
         /// by a later [LeaseTasks][google.cloud.tasks.v2beta2.CloudTasks.LeaseTasks],
         /// [GetTask][google.cloud.tasks.v2beta2.CloudTasks.GetTask], or
         /// [ListTasks][google.cloud.tasks.v2beta2.CloudTasks.ListTasks].
-        ///
-        /// To acknowledge multiple tasks at the same time, use
-        /// [HTTP batching](/storage/docs/json_api/v1/how-tos/batch)
-        /// or the batching documentation for your client library, for example
-        /// https://developers.google.com/api-client-library/python/guide/batch.
         /// </summary>
         /// <param name="request">
         /// The request object containing all of the parameters for the API call.
