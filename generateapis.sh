@@ -77,18 +77,11 @@ generate_api() {
   args+=(--descriptor_set=$OUTDIR/protos.desc)
   args+=(--service_yaml=$API_YAML)
   args+=(--gapic_yaml=$API_TMP_DIR/gapic.yaml)
-  args+=(--package_yaml2=$OUTDIR/package.yaml)
   args+=(--output=$API_TMP_DIR)
   args+=(--language=csharp)
   
-  $BASH -c "java -cp gapic-generator/build/libs/gapic-generator-${GAPIC_GENERATOR_VERSION}-all.jar com.google.api.codegen.GeneratorMain LEGACY_GAPIC_AND_PACKAGE ${args[*]}"
+  $BASH -c "java -cp gapic-generator/build/libs/gapic-generator-${GAPIC_GENERATOR_VERSION}-all.jar com.google.api.codegen.GeneratorMain GAPIC_CODE ${args[*]}"
   
-  # We don't want to copy the snippet/prod/tests project files,
-  # but the smoke test project file is okay, as we don't
-  # customize that.
-  rm -f `find $API_TMP_DIR -type f -name $1.Snippets.csproj`
-  rm -f `find $API_TMP_DIR -type f -name $1.Tests.csproj`
-  rm -f `find $API_TMP_DIR -type f -name $1.csproj`
   cp -r $API_TMP_DIR/$1 $API_OUT_DIR
 
   # Generate the C# protos/gRPC directly into the right directory
@@ -116,25 +109,6 @@ GAPIC_GENERATOR_VERSION=$(cat gapic-generator/version.txt)
 OUTDIR=tmp
 rm -rf $OUTDIR
 mkdir $OUTDIR
-
-# Fake package.yaml file that's just enough to make GAPIC generator happy.
-# We don't use this project file for anything (we don't even move it into place)
-# but GAPIC generator doesn't have an option to not generate it.
-
-cat > $OUTDIR/package.yaml <<END_OF_FILE
-package_type: grpc_client
-api_name: fake
-organization_name: fake
-proto_deps: []
-api_version: v0
-proto_path: fake
-author: fake
-homepage: fake
-license: fake
-email: fake
-gapic_config_name: fake
-END_OF_FILE
-
 
 # Generate a single descriptor file for all protos we may care about.
 # We can then reuse that for all APIs.
