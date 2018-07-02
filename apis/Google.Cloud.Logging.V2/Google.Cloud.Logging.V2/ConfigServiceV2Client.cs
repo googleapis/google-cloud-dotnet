@@ -1220,6 +1220,117 @@ namespace Google.Cloud.Logging.V2
         /// The updated sink might also have a new `writer_identity`; see the
         /// `unique_writer_identity` field.
         /// </summary>
+        /// <param name="sinkName">
+        /// Required. The full resource name of the sink to update, including the
+        /// parent resource and the sink identifier:
+        ///
+        ///     "projects/[PROJECT_ID]/sinks/[SINK_ID]"
+        ///     "organizations/[ORGANIZATION_ID]/sinks/[SINK_ID]"
+        ///     "billingAccounts/[BILLING_ACCOUNT_ID]/sinks/[SINK_ID]"
+        ///     "folders/[FOLDER_ID]/sinks/[SINK_ID]"
+        ///
+        /// Example: `"projects/my-project-id/sinks/my-sink-id"`.
+        /// </param>
+        /// <param name="sink">
+        /// Required. The updated sink, whose name is the same identifier that appears
+        /// as part of `sink_name`.
+        /// </param>
+        /// <param name="callSettings">
+        /// If not null, applies overrides to this RPC call.
+        /// </param>
+        /// <returns>
+        /// A Task containing the RPC response.
+        /// </returns>
+        public virtual stt::Task<LogSink> UpdateSinkAsync(
+            SinkNameOneof sinkName,
+            LogSink sink,
+            gaxgrpc::CallSettings callSettings = null) => UpdateSinkAsync(
+                new UpdateSinkRequest
+                {
+                    SinkNameAsSinkNameOneof = gax::GaxPreconditions.CheckNotNull(sinkName, nameof(sinkName)),
+                    Sink = gax::GaxPreconditions.CheckNotNull(sink, nameof(sink)),
+                },
+                callSettings);
+
+        /// <summary>
+        /// Updates a sink.  This method replaces the following fields in the existing
+        /// sink with values from the new sink: `destination`, and `filter`.
+        /// The updated sink might also have a new `writer_identity`; see the
+        /// `unique_writer_identity` field.
+        /// </summary>
+        /// <param name="sinkName">
+        /// Required. The full resource name of the sink to update, including the
+        /// parent resource and the sink identifier:
+        ///
+        ///     "projects/[PROJECT_ID]/sinks/[SINK_ID]"
+        ///     "organizations/[ORGANIZATION_ID]/sinks/[SINK_ID]"
+        ///     "billingAccounts/[BILLING_ACCOUNT_ID]/sinks/[SINK_ID]"
+        ///     "folders/[FOLDER_ID]/sinks/[SINK_ID]"
+        ///
+        /// Example: `"projects/my-project-id/sinks/my-sink-id"`.
+        /// </param>
+        /// <param name="sink">
+        /// Required. The updated sink, whose name is the same identifier that appears
+        /// as part of `sink_name`.
+        /// </param>
+        /// <param name="cancellationToken">
+        /// A <see cref="st::CancellationToken"/> to use for this RPC.
+        /// </param>
+        /// <returns>
+        /// A Task containing the RPC response.
+        /// </returns>
+        public virtual stt::Task<LogSink> UpdateSinkAsync(
+            SinkNameOneof sinkName,
+            LogSink sink,
+            st::CancellationToken cancellationToken) => UpdateSinkAsync(
+                sinkName,
+                sink,
+                gaxgrpc::CallSettings.FromCancellationToken(cancellationToken));
+
+        /// <summary>
+        /// Updates a sink.  This method replaces the following fields in the existing
+        /// sink with values from the new sink: `destination`, and `filter`.
+        /// The updated sink might also have a new `writer_identity`; see the
+        /// `unique_writer_identity` field.
+        /// </summary>
+        /// <param name="sinkName">
+        /// Required. The full resource name of the sink to update, including the
+        /// parent resource and the sink identifier:
+        ///
+        ///     "projects/[PROJECT_ID]/sinks/[SINK_ID]"
+        ///     "organizations/[ORGANIZATION_ID]/sinks/[SINK_ID]"
+        ///     "billingAccounts/[BILLING_ACCOUNT_ID]/sinks/[SINK_ID]"
+        ///     "folders/[FOLDER_ID]/sinks/[SINK_ID]"
+        ///
+        /// Example: `"projects/my-project-id/sinks/my-sink-id"`.
+        /// </param>
+        /// <param name="sink">
+        /// Required. The updated sink, whose name is the same identifier that appears
+        /// as part of `sink_name`.
+        /// </param>
+        /// <param name="callSettings">
+        /// If not null, applies overrides to this RPC call.
+        /// </param>
+        /// <returns>
+        /// The RPC response.
+        /// </returns>
+        public virtual LogSink UpdateSink(
+            SinkNameOneof sinkName,
+            LogSink sink,
+            gaxgrpc::CallSettings callSettings = null) => UpdateSink(
+                new UpdateSinkRequest
+                {
+                    SinkNameAsSinkNameOneof = gax::GaxPreconditions.CheckNotNull(sinkName, nameof(sinkName)),
+                    Sink = gax::GaxPreconditions.CheckNotNull(sink, nameof(sink)),
+                },
+                callSettings);
+
+        /// <summary>
+        /// Updates a sink.  This method replaces the following fields in the existing
+        /// sink with values from the new sink: `destination`, and `filter`.
+        /// The updated sink might also have a new `writer_identity`; see the
+        /// `unique_writer_identity` field.
+        /// </summary>
         /// <param name="request">
         /// The request object containing all of the parameters for the API call.
         /// </param>
