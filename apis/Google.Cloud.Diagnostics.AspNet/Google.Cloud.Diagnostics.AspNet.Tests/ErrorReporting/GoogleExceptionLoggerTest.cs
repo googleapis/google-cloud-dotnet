@@ -25,7 +25,7 @@ namespace Google.Cloud.Diagnostics.AspNet.Tests
 {
     public class GoogleExceptionLoggerTest
     {
-        private static readonly Exception _exception = new Exception("opps...");
+        private static readonly Exception _exception = new Exception("oops...");
         private static readonly HttpRequest _request = new HttpRequest("filename.cs", "http://google.com", "");
         private static readonly HttpResponse _response = new HttpResponse(new StreamWriter(new MemoryStream()));
         private static readonly HttpContext _context = new HttpContext(_request, _response);

@@ -1,0 +1,62 @@
+﻿// Copyright 2018 Google Inc. All Rights Reserved.
+// 
+// Licensed under the Apache License, Version 2.0 (the "License");
+// you may not use this file except in compliance with the License.
+// You may obtain a copy of the License at
+// 
+//     http://www.apache.org/licenses/LICENSE-2.0
+// 
+// Unless required by applicable law or agreed to in writing, software
+// distributed under the License is distributed on an "AS IS" BASIS,
+// WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
+// See the License for the specific language governing permissions and
+// limitations under the License.
+
+using System.Net;
+using System.Net.Http;
+using System.Web.Http.Controllers;
+using Xunit;
+
+namespace Google.Cloud.Diagnostics.AspNet.Tests
+{
+    public class HttpActionContextWrapperTest
+    {
+        [Fact]
+        public void HttpActionContextWrapper()
+        {
+            var uri = "http://google.com/";
+            var userAgent1 = "user_agent_1";
+            var userAgent2 = "user_agent_2";
+
+            var requestMessage = new HttpRequestMessage(HttpMethod.Get, uri);
+            requestMessage.Headers.UserAgent.ParseAdd(userAgent1);
+            requestMessage.Headers.UserAgent.ParseAdd(userAgent2);
+
+            var responseMessage = new HttpResponseMessage(HttpStatusCode.OK);
+
+            var controllerContext = new HttpControllerContext();
+            controllerContext.Request = requestMessage;
+
+            var actionContext = new HttpActionContext();
+            actionContext.ControllerContext = controllerContext;
+            actionContext.Response = responseMessage;
+
+            var wrapper = new HttpActionContextWrapper(actionContext);
+            Assert.Equal(HttpMethod.Get.Method, wrapper.GetHttpMethod());
+            Assert.Equal(uri, wrapper.GetUri());
+            Assert.Contains(userAgent1, wrapper.GetUserAgent());
+            Assert.Contains(userAgent2, wrapper.GetUserAgent());
+            Assert.Equal((int)HttpStatusCode.OK, wrapper.GetStatusCode());
+        }
+
+        [Fact]
+        public void HttpActionContextWrapper_NullHttpActionContext()
+        {
+            var wrapper = new HttpActionContextWrapper(null);
+            Assert.Null(wrapper.GetHttpMethod());
+            Assert.Null(wrapper.GetUri());
+            Assert.Null(wrapper.GetUserAgent());
+            Assert.Equal(0, wrapper.GetStatusCode());
+        }
+    }
+}

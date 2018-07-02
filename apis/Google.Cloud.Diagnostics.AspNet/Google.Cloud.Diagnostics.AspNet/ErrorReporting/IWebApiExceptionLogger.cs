@@ -1,4 +1,4 @@
-﻿// Copyright 2017 Google Inc. All Rights Reserved.
+﻿// Copyright 2018 Google Inc. All Rights Reserved.
 // 
 // Licensed under the Apache License, Version 2.0 (the "License");
 // you may not use this file except in compliance with the License.
@@ -15,33 +15,31 @@
 using System;
 using System.Threading;
 using System.Threading.Tasks;
-using System.Web;
+using System.Web.Http.Controllers;
 
 namespace Google.Cloud.Diagnostics.AspNet
 {
     /// <summary>
-    /// A general purpose exception logger. If used from within Web API controllers
-    /// is possible that HTTP context information is not logged alongside error information.
-    /// Please use <see cref="IWebApiExceptionLogger"/> instead.
+    /// An exception logger for use from withing a Web Api application.
     /// </summary>
-    public interface IExceptionLogger
+    public interface IWebApiExceptionLogger
     {
         /// <summary>
         /// Logs an exception that occurred.
         /// </summary>
         /// <param name="exception">The exception to log. Cannot be null.</param>
-        /// <param name="context">Optional, the current HTTP context. If unset the
-        ///     current context will be retrieved automatically.</param>
-        void Log(Exception exception, HttpContext context = null);
+        /// <param name="context">Optional, the current HTTP action context from which to get HTTP context information.
+        /// If it is not set, no HTTP context information will be logged alongside exception information.</param>
+        void Log(Exception exception, HttpActionContext context = null);
 
         /// <summary>
         /// Asynchronously logs an exception that occurred.
         /// </summary>
         /// <param name="exception">The exception to log. Cannot be null.</param>
-        /// <param name="context">Optional, the current HTTP context. If unset the
-        ///     current context will be retrieved automatically.</param>
-        /// <param name="cancellationToken">Optional, The token to monitor for cancellation requests.</param>
+        /// <param name="context">Optional, the current HTTP action context from which to get HTTP context information.
+        /// If it is not set, no HTTP context information will be logged alongside exception information.</param>
+        /// <param name="cancellationToken">Optional, the token to monitor for cancellation requests.</param>
         /// <returns>A task representing the asynchronous operation.</returns>
-        Task LogAsync(Exception exception, HttpContext context = null, CancellationToken cancellationToken = default);
+        Task LogAsync(Exception exception, HttpActionContext context = null, CancellationToken cancellationToken = default);
     }
 }
