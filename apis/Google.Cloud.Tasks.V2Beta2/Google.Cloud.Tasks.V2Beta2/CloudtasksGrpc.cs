@@ -440,11 +440,6 @@ namespace Google.Cloud.Tasks.V2Beta2 {
       /// <summary>
       /// Creates a task and adds it to a queue.
       ///
-      /// To add multiple tasks at the same time, use
-      /// [HTTP batching](/storage/docs/json_api/v1/how-tos/batch)
-      /// or the batching documentation for your client library, for example
-      /// https://developers.google.com/api-client-library/python/guide/batch.
-      ///
       /// Tasks cannot be updated after creation; there is no UpdateTask command.
       ///
       /// * For [App Engine queues](google.cloud.tasks.v2beta2.AppEngineHttpTarget),
@@ -521,11 +516,6 @@ namespace Google.Cloud.Tasks.V2Beta2 {
       /// by a later [LeaseTasks][google.cloud.tasks.v2beta2.CloudTasks.LeaseTasks],
       /// [GetTask][google.cloud.tasks.v2beta2.CloudTasks.GetTask], or
       /// [ListTasks][google.cloud.tasks.v2beta2.CloudTasks.ListTasks].
-      ///
-      /// To acknowledge multiple tasks at the same time, use
-      /// [HTTP batching](/storage/docs/json_api/v1/how-tos/batch)
-      /// or the batching documentation for your client library, for example
-      /// https://developers.google.com/api-client-library/python/guide/batch.
       /// </summary>
       /// <param name="request">The request received from the client.</param>
       /// <param name="context">The context of the server-side call handler being invoked.</param>
@@ -1543,11 +1533,6 @@ namespace Google.Cloud.Tasks.V2Beta2 {
       /// <summary>
       /// Creates a task and adds it to a queue.
       ///
-      /// To add multiple tasks at the same time, use
-      /// [HTTP batching](/storage/docs/json_api/v1/how-tos/batch)
-      /// or the batching documentation for your client library, for example
-      /// https://developers.google.com/api-client-library/python/guide/batch.
-      ///
       /// Tasks cannot be updated after creation; there is no UpdateTask command.
       ///
       /// * For [App Engine queues](google.cloud.tasks.v2beta2.AppEngineHttpTarget),
@@ -1567,11 +1552,6 @@ namespace Google.Cloud.Tasks.V2Beta2 {
       /// <summary>
       /// Creates a task and adds it to a queue.
       ///
-      /// To add multiple tasks at the same time, use
-      /// [HTTP batching](/storage/docs/json_api/v1/how-tos/batch)
-      /// or the batching documentation for your client library, for example
-      /// https://developers.google.com/api-client-library/python/guide/batch.
-      ///
       /// Tasks cannot be updated after creation; there is no UpdateTask command.
       ///
       /// * For [App Engine queues](google.cloud.tasks.v2beta2.AppEngineHttpTarget),
@@ -1588,11 +1568,6 @@ namespace Google.Cloud.Tasks.V2Beta2 {
       }
       /// <summary>
       /// Creates a task and adds it to a queue.
-      ///
-      /// To add multiple tasks at the same time, use
-      /// [HTTP batching](/storage/docs/json_api/v1/how-tos/batch)
-      /// or the batching documentation for your client library, for example
-      /// https://developers.google.com/api-client-library/python/guide/batch.
       ///
       /// Tasks cannot be updated after creation; there is no UpdateTask command.
       ///
@@ -1612,11 +1587,6 @@ namespace Google.Cloud.Tasks.V2Beta2 {
       }
       /// <summary>
       /// Creates a task and adds it to a queue.
-      ///
-      /// To add multiple tasks at the same time, use
-      /// [HTTP batching](/storage/docs/json_api/v1/how-tos/batch)
-      /// or the batching documentation for your client library, for example
-      /// https://developers.google.com/api-client-library/python/guide/batch.
       ///
       /// Tasks cannot be updated after creation; there is no UpdateTask command.
       ///
@@ -1834,11 +1804,6 @@ namespace Google.Cloud.Tasks.V2Beta2 {
       /// by a later [LeaseTasks][google.cloud.tasks.v2beta2.CloudTasks.LeaseTasks],
       /// [GetTask][google.cloud.tasks.v2beta2.CloudTasks.GetTask], or
       /// [ListTasks][google.cloud.tasks.v2beta2.CloudTasks.ListTasks].
-      ///
-      /// To acknowledge multiple tasks at the same time, use
-      /// [HTTP batching](/storage/docs/json_api/v1/how-tos/batch)
-      /// or the batching documentation for your client library, for example
-      /// https://developers.google.com/api-client-library/python/guide/batch.
       /// </summary>
       /// <param name="request">The request to send to the server.</param>
       /// <param name="headers">The initial metadata to send with the call. This parameter is optional.</param>
@@ -1863,11 +1828,6 @@ namespace Google.Cloud.Tasks.V2Beta2 {
       /// by a later [LeaseTasks][google.cloud.tasks.v2beta2.CloudTasks.LeaseTasks],
       /// [GetTask][google.cloud.tasks.v2beta2.CloudTasks.GetTask], or
       /// [ListTasks][google.cloud.tasks.v2beta2.CloudTasks.ListTasks].
-      ///
-      /// To acknowledge multiple tasks at the same time, use
-      /// [HTTP batching](/storage/docs/json_api/v1/how-tos/batch)
-      /// or the batching documentation for your client library, for example
-      /// https://developers.google.com/api-client-library/python/guide/batch.
       /// </summary>
       /// <param name="request">The request to send to the server.</param>
       /// <param name="options">The options for the call.</param>
@@ -1890,11 +1850,6 @@ namespace Google.Cloud.Tasks.V2Beta2 {
       /// by a later [LeaseTasks][google.cloud.tasks.v2beta2.CloudTasks.LeaseTasks],
       /// [GetTask][google.cloud.tasks.v2beta2.CloudTasks.GetTask], or
       /// [ListTasks][google.cloud.tasks.v2beta2.CloudTasks.ListTasks].
-      ///
-      /// To acknowledge multiple tasks at the same time, use
-      /// [HTTP batching](/storage/docs/json_api/v1/how-tos/batch)
-      /// or the batching documentation for your client library, for example
-      /// https://developers.google.com/api-client-library/python/guide/batch.
       /// </summary>
       /// <param name="request">The request to send to the server.</param>
       /// <param name="headers">The initial metadata to send with the call. This parameter is optional.</param>
@@ -1919,11 +1874,6 @@ namespace Google.Cloud.Tasks.V2Beta2 {
       /// by a later [LeaseTasks][google.cloud.tasks.v2beta2.CloudTasks.LeaseTasks],
       /// [GetTask][google.cloud.tasks.v2beta2.CloudTasks.GetTask], or
       /// [ListTasks][google.cloud.tasks.v2beta2.CloudTasks.ListTasks].
-      ///
-      /// To acknowledge multiple tasks at the same time, use
-      /// [HTTP batching](/storage/docs/json_api/v1/how-tos/batch)
-      /// or the batching documentation for your client library, for example
-      /// https://developers.google.com/api-client-library/python/guide/batch.
       /// </summary>
       /// <param name="request">The request to send to the server.</param>
       /// <param name="options">The options for the call.</param>
