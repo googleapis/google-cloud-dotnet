@@ -340,7 +340,38 @@ namespace Google.Cloud.Logging.V2.Snippets
         }
 
         /// <summary>Snippet for UpdateSinkAsync</summary>
-        public async Task UpdateSinkAsync()
+        public async Task UpdateSinkAsync1()
+        {
+            // Snippet: UpdateSinkAsync(SinkNameOneof,LogSink,FieldMask,CallSettings)
+            // Additional: UpdateSinkAsync(SinkNameOneof,LogSink,FieldMask,CancellationToken)
+            // Create client
+            ConfigServiceV2Client configServiceV2Client = await ConfigServiceV2Client.CreateAsync();
+            // Initialize request argument(s)
+            SinkNameOneof sinkName = SinkNameOneof.From(new SinkName("[PROJECT]", "[SINK]"));
+            LogSink sink = new LogSink();
+            FieldMask updateMask = new FieldMask();
+            // Make the request
+            LogSink response = await configServiceV2Client.UpdateSinkAsync(sinkName, sink, updateMask);
+            // End snippet
+        }
+
+        /// <summary>Snippet for UpdateSink</summary>
+        public void UpdateSink1()
+        {
+            // Snippet: UpdateSink(SinkNameOneof,LogSink,FieldMask,CallSettings)
+            // Create client
+            ConfigServiceV2Client configServiceV2Client = ConfigServiceV2Client.Create();
+            // Initialize request argument(s)
+            SinkNameOneof sinkName = SinkNameOneof.From(new SinkName("[PROJECT]", "[SINK]"));
+            LogSink sink = new LogSink();
+            FieldMask updateMask = new FieldMask();
+            // Make the request
+            LogSink response = configServiceV2Client.UpdateSink(sinkName, sink, updateMask);
+            // End snippet
+        }
+
+        /// <summary>Snippet for UpdateSinkAsync</summary>
+        public async Task UpdateSinkAsync2()
         {
             // Snippet: UpdateSinkAsync(SinkNameOneof,LogSink,CallSettings)
             // Additional: UpdateSinkAsync(SinkNameOneof,LogSink,CancellationToken)
@@ -355,7 +386,7 @@ namespace Google.Cloud.Logging.V2.Snippets
         }
 
         /// <summary>Snippet for UpdateSink</summary>
-        public void UpdateSink()
+        public void UpdateSink2()
         {
             // Snippet: UpdateSink(SinkNameOneof,LogSink,CallSettings)
             // Create client
