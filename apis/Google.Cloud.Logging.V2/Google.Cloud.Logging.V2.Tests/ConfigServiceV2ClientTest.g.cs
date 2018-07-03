@@ -243,6 +243,64 @@ namespace Google.Cloud.Logging.V2.Tests
             {
                 SinkNameAsSinkNameOneof = SinkNameOneof.From(new SinkName("[PROJECT]", "[SINK]")),
                 Sink = new LogSink(),
+                UpdateMask = new FieldMask(),
+            };
+            LogSink expectedResponse = new LogSink
+            {
+                Name = "name3373707",
+                DestinationAsResourceName = new ProjectName("[PROJECT]"),
+                Filter = "filter-1274492040",
+                WriterIdentity = "writerIdentity775638794",
+                IncludeChildren = true,
+            };
+            mockGrpcClient.Setup(x => x.UpdateSink(expectedRequest, It.IsAny<CallOptions>()))
+                .Returns(expectedResponse);
+            ConfigServiceV2Client client = new ConfigServiceV2ClientImpl(mockGrpcClient.Object, null);
+            SinkNameOneof sinkName = SinkNameOneof.From(new SinkName("[PROJECT]", "[SINK]"));
+            LogSink sink = new LogSink();
+            FieldMask updateMask = new FieldMask();
+            LogSink response = client.UpdateSink(sinkName, sink, updateMask);
+            Assert.Same(expectedResponse, response);
+            mockGrpcClient.VerifyAll();
+        }
+
+        [Fact]
+        public async Task UpdateSinkAsync()
+        {
+            Mock<ConfigServiceV2.ConfigServiceV2Client> mockGrpcClient = new Mock<ConfigServiceV2.ConfigServiceV2Client>(MockBehavior.Strict);
+            UpdateSinkRequest expectedRequest = new UpdateSinkRequest
+            {
+                SinkNameAsSinkNameOneof = SinkNameOneof.From(new SinkName("[PROJECT]", "[SINK]")),
+                Sink = new LogSink(),
+                UpdateMask = new FieldMask(),
+            };
+            LogSink expectedResponse = new LogSink
+            {
+                Name = "name3373707",
+                DestinationAsResourceName = new ProjectName("[PROJECT]"),
+                Filter = "filter-1274492040",
+                WriterIdentity = "writerIdentity775638794",
+                IncludeChildren = true,
+            };
+            mockGrpcClient.Setup(x => x.UpdateSinkAsync(expectedRequest, It.IsAny<CallOptions>()))
+                .Returns(new Grpc.Core.AsyncUnaryCall<LogSink>(Task.FromResult(expectedResponse), null, null, null, null));
+            ConfigServiceV2Client client = new ConfigServiceV2ClientImpl(mockGrpcClient.Object, null);
+            SinkNameOneof sinkName = SinkNameOneof.From(new SinkName("[PROJECT]", "[SINK]"));
+            LogSink sink = new LogSink();
+            FieldMask updateMask = new FieldMask();
+            LogSink response = await client.UpdateSinkAsync(sinkName, sink, updateMask);
+            Assert.Same(expectedResponse, response);
+            mockGrpcClient.VerifyAll();
+        }
+
+        [Fact]
+        public void UpdateSink2()
+        {
+            Mock<ConfigServiceV2.ConfigServiceV2Client> mockGrpcClient = new Mock<ConfigServiceV2.ConfigServiceV2Client>(MockBehavior.Strict);
+            UpdateSinkRequest expectedRequest = new UpdateSinkRequest
+            {
+                SinkNameAsSinkNameOneof = SinkNameOneof.From(new SinkName("[PROJECT]", "[SINK]")),
+                Sink = new LogSink(),
             };
             LogSink expectedResponse = new LogSink
             {
@@ -263,7 +321,7 @@ namespace Google.Cloud.Logging.V2.Tests
         }
 
         [Fact]
-        public async Task UpdateSinkAsync()
+        public async Task UpdateSinkAsync2()
         {
             Mock<ConfigServiceV2.ConfigServiceV2Client> mockGrpcClient = new Mock<ConfigServiceV2.ConfigServiceV2Client>(MockBehavior.Strict);
             UpdateSinkRequest expectedRequest = new UpdateSinkRequest
@@ -290,7 +348,7 @@ namespace Google.Cloud.Logging.V2.Tests
         }
 
         [Fact]
-        public void UpdateSink2()
+        public void UpdateSink3()
         {
             Mock<ConfigServiceV2.ConfigServiceV2Client> mockGrpcClient = new Mock<ConfigServiceV2.ConfigServiceV2Client>(MockBehavior.Strict);
             UpdateSinkRequest request = new UpdateSinkRequest
@@ -315,7 +373,7 @@ namespace Google.Cloud.Logging.V2.Tests
         }
 
         [Fact]
-        public async Task UpdateSinkAsync2()
+        public async Task UpdateSinkAsync3()
         {
             Mock<ConfigServiceV2.ConfigServiceV2Client> mockGrpcClient = new Mock<ConfigServiceV2.ConfigServiceV2Client>(MockBehavior.Strict);
             UpdateSinkRequest request = new UpdateSinkRequest

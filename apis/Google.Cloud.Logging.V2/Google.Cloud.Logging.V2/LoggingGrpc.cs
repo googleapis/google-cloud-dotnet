@@ -3,7 +3,7 @@
 //     source: google/logging/v2/logging.proto
 // </auto-generated>
 // Original file comments:
-// Copyright 2017 Google Inc.
+// Copyright 2018 Google Inc.
 //
 // Licensed under the Apache License, Version 2.0 (the "License");
 // you may not use this file except in compliance with the License.
@@ -100,13 +100,14 @@ namespace Google.Cloud.Logging.V2 {
       }
 
       /// <summary>
-      /// ## Log entry resources
-      ///
       /// Writes log entries to Stackdriver Logging. This API method is the
       /// only way to send log entries to Stackdriver Logging. This method
       /// is used, directly or indirectly, by the Stackdriver Logging agent
       /// (fluentd) and all logging libraries configured to use Stackdriver
       /// Logging.
+      /// A single request may contain log entries for a maximum of 1000
+      /// different resources (projects, organizations, billing accounts or
+      /// folders)
       /// </summary>
       /// <param name="request">The request received from the client.</param>
       /// <param name="context">The context of the server-side call handler being invoked.</param>
@@ -235,13 +236,14 @@ namespace Google.Cloud.Logging.V2 {
         return CallInvoker.AsyncUnaryCall(__Method_DeleteLog, null, options, request);
       }
       /// <summary>
-      /// ## Log entry resources
-      ///
       /// Writes log entries to Stackdriver Logging. This API method is the
       /// only way to send log entries to Stackdriver Logging. This method
       /// is used, directly or indirectly, by the Stackdriver Logging agent
       /// (fluentd) and all logging libraries configured to use Stackdriver
       /// Logging.
+      /// A single request may contain log entries for a maximum of 1000
+      /// different resources (projects, organizations, billing accounts or
+      /// folders)
       /// </summary>
       /// <param name="request">The request to send to the server.</param>
       /// <param name="headers">The initial metadata to send with the call. This parameter is optional.</param>
@@ -253,13 +255,14 @@ namespace Google.Cloud.Logging.V2 {
         return WriteLogEntries(request, new grpc::CallOptions(headers, deadline, cancellationToken));
       }
       /// <summary>
-      /// ## Log entry resources
-      ///
       /// Writes log entries to Stackdriver Logging. This API method is the
       /// only way to send log entries to Stackdriver Logging. This method
       /// is used, directly or indirectly, by the Stackdriver Logging agent
       /// (fluentd) and all logging libraries configured to use Stackdriver
       /// Logging.
+      /// A single request may contain log entries for a maximum of 1000
+      /// different resources (projects, organizations, billing accounts or
+      /// folders)
       /// </summary>
       /// <param name="request">The request to send to the server.</param>
       /// <param name="options">The options for the call.</param>
@@ -269,13 +272,14 @@ namespace Google.Cloud.Logging.V2 {
         return CallInvoker.BlockingUnaryCall(__Method_WriteLogEntries, null, options, request);
       }
       /// <summary>
-      /// ## Log entry resources
-      ///
       /// Writes log entries to Stackdriver Logging. This API method is the
       /// only way to send log entries to Stackdriver Logging. This method
       /// is used, directly or indirectly, by the Stackdriver Logging agent
       /// (fluentd) and all logging libraries configured to use Stackdriver
       /// Logging.
+      /// A single request may contain log entries for a maximum of 1000
+      /// different resources (projects, organizations, billing accounts or
+      /// folders)
       /// </summary>
       /// <param name="request">The request to send to the server.</param>
       /// <param name="headers">The initial metadata to send with the call. This parameter is optional.</param>
@@ -287,13 +291,14 @@ namespace Google.Cloud.Logging.V2 {
         return WriteLogEntriesAsync(request, new grpc::CallOptions(headers, deadline, cancellationToken));
       }
       /// <summary>
-      /// ## Log entry resources
-      ///
       /// Writes log entries to Stackdriver Logging. This API method is the
       /// only way to send log entries to Stackdriver Logging. This method
       /// is used, directly or indirectly, by the Stackdriver Logging agent
       /// (fluentd) and all logging libraries configured to use Stackdriver
       /// Logging.
+      /// A single request may contain log entries for a maximum of 1000
+      /// different resources (projects, organizations, billing accounts or
+      /// folders)
       /// </summary>
       /// <param name="request">The request to send to the server.</param>
       /// <param name="options">The options for the call.</param>

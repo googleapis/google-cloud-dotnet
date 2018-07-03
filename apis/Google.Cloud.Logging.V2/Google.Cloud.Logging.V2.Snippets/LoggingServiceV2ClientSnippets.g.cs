@@ -163,11 +163,11 @@ namespace Google.Cloud.Logging.V2.Snippets
         /// <summary>Snippet for ListLogEntriesAsync</summary>
         public async Task ListLogEntriesAsync()
         {
-            // Snippet: ListLogEntriesAsync(IEnumerable<string>,string,string,string,int?,CallSettings)
+            // Snippet: ListLogEntriesAsync(IEnumerable<ParentNameOneof>,string,string,string,int?,CallSettings)
             // Create client
             LoggingServiceV2Client loggingServiceV2Client = await LoggingServiceV2Client.CreateAsync();
             // Initialize request argument(s)
-            IEnumerable<string> resourceNames = new List<string>();
+            IEnumerable<ParentNameOneof> resourceNames = new List<ParentNameOneof>();
             string filter = "";
             string orderBy = "";
             // Make the request
@@ -209,11 +209,11 @@ namespace Google.Cloud.Logging.V2.Snippets
         /// <summary>Snippet for ListLogEntries</summary>
         public void ListLogEntries()
         {
-            // Snippet: ListLogEntries(IEnumerable<string>,string,string,string,int?,CallSettings)
+            // Snippet: ListLogEntries(IEnumerable<ParentNameOneof>,string,string,string,int?,CallSettings)
             // Create client
             LoggingServiceV2Client loggingServiceV2Client = LoggingServiceV2Client.Create();
             // Initialize request argument(s)
-            IEnumerable<string> resourceNames = new List<string>();
+            IEnumerable<ParentNameOneof> resourceNames = new List<ParentNameOneof>();
             string filter = "";
             string orderBy = "";
             // Make the request
@@ -261,7 +261,7 @@ namespace Google.Cloud.Logging.V2.Snippets
             // Initialize request argument(s)
             ListLogEntriesRequest request = new ListLogEntriesRequest
             {
-                ResourceNames = { },
+                ResourceNamesAsParentNameOneofs = { },
             };
             // Make the request
             PagedAsyncEnumerable<ListLogEntriesResponse, LogEntry> response =
@@ -308,7 +308,7 @@ namespace Google.Cloud.Logging.V2.Snippets
             // Initialize request argument(s)
             ListLogEntriesRequest request = new ListLogEntriesRequest
             {
-                ResourceNames = { },
+                ResourceNamesAsParentNameOneofs = { },
             };
             // Make the request
             PagedEnumerable<ListLogEntriesResponse, LogEntry> response =

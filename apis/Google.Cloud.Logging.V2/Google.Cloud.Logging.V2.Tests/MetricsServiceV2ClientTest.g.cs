@@ -43,7 +43,7 @@ namespace Google.Cloud.Logging.V2.Tests
             };
             LogMetric expectedResponse = new LogMetric
             {
-                Name = "name3373707",
+                MetricNameOneof = MetricNameOneof.From(new MetricName("[PROJECT]", "[METRIC]")),
                 Description = "description-1724546052",
                 Filter = "filter-1274492040",
                 ValueExtractor = "valueExtractor2047672534",
@@ -67,7 +67,7 @@ namespace Google.Cloud.Logging.V2.Tests
             };
             LogMetric expectedResponse = new LogMetric
             {
-                Name = "name3373707",
+                MetricNameOneof = MetricNameOneof.From(new MetricName("[PROJECT]", "[METRIC]")),
                 Description = "description-1724546052",
                 Filter = "filter-1274492040",
                 ValueExtractor = "valueExtractor2047672534",
@@ -91,7 +91,7 @@ namespace Google.Cloud.Logging.V2.Tests
             };
             LogMetric expectedResponse = new LogMetric
             {
-                Name = "name3373707",
+                MetricNameOneof = MetricNameOneof.From(new MetricName("[PROJECT]", "[METRIC]")),
                 Description = "description-1724546052",
                 Filter = "filter-1274492040",
                 ValueExtractor = "valueExtractor2047672534",
@@ -114,7 +114,7 @@ namespace Google.Cloud.Logging.V2.Tests
             };
             LogMetric expectedResponse = new LogMetric
             {
-                Name = "name3373707",
+                MetricNameOneof = MetricNameOneof.From(new MetricName("[PROJECT]", "[METRIC]")),
                 Description = "description-1724546052",
                 Filter = "filter-1274492040",
                 ValueExtractor = "valueExtractor2047672534",
@@ -138,7 +138,7 @@ namespace Google.Cloud.Logging.V2.Tests
             };
             LogMetric expectedResponse = new LogMetric
             {
-                Name = "name3373707",
+                MetricNameOneof = MetricNameOneof.From(new MetricName("[PROJECT]", "[METRIC]")),
                 Description = "description-1724546052",
                 Filter = "filter-1274492040",
                 ValueExtractor = "valueExtractor2047672534",
@@ -164,7 +164,7 @@ namespace Google.Cloud.Logging.V2.Tests
             };
             LogMetric expectedResponse = new LogMetric
             {
-                Name = "name3373707",
+                MetricNameOneof = MetricNameOneof.From(new MetricName("[PROJECT]", "[METRIC]")),
                 Description = "description-1724546052",
                 Filter = "filter-1274492040",
                 ValueExtractor = "valueExtractor2047672534",
@@ -190,7 +190,7 @@ namespace Google.Cloud.Logging.V2.Tests
             };
             LogMetric expectedResponse = new LogMetric
             {
-                Name = "name3373707",
+                MetricNameOneof = MetricNameOneof.From(new MetricName("[PROJECT]", "[METRIC]")),
                 Description = "description-1724546052",
                 Filter = "filter-1274492040",
                 ValueExtractor = "valueExtractor2047672534",
@@ -214,7 +214,7 @@ namespace Google.Cloud.Logging.V2.Tests
             };
             LogMetric expectedResponse = new LogMetric
             {
-                Name = "name3373707",
+                MetricNameOneof = MetricNameOneof.From(new MetricName("[PROJECT]", "[METRIC]")),
                 Description = "description-1724546052",
                 Filter = "filter-1274492040",
                 ValueExtractor = "valueExtractor2047672534",
@@ -238,7 +238,7 @@ namespace Google.Cloud.Logging.V2.Tests
             };
             LogMetric expectedResponse = new LogMetric
             {
-                Name = "name3373707",
+                MetricNameOneof = MetricNameOneof.From(new MetricName("[PROJECT]", "[METRIC]")),
                 Description = "description-1724546052",
                 Filter = "filter-1274492040",
                 ValueExtractor = "valueExtractor2047672534",
@@ -264,7 +264,7 @@ namespace Google.Cloud.Logging.V2.Tests
             };
             LogMetric expectedResponse = new LogMetric
             {
-                Name = "name3373707",
+                MetricNameOneof = MetricNameOneof.From(new MetricName("[PROJECT]", "[METRIC]")),
                 Description = "description-1724546052",
                 Filter = "filter-1274492040",
                 ValueExtractor = "valueExtractor2047672534",
@@ -290,7 +290,7 @@ namespace Google.Cloud.Logging.V2.Tests
             };
             LogMetric expectedResponse = new LogMetric
             {
-                Name = "name3373707",
+                MetricNameOneof = MetricNameOneof.From(new MetricName("[PROJECT]", "[METRIC]")),
                 Description = "description-1724546052",
                 Filter = "filter-1274492040",
                 ValueExtractor = "valueExtractor2047672534",
@@ -314,7 +314,7 @@ namespace Google.Cloud.Logging.V2.Tests
             };
             LogMetric expectedResponse = new LogMetric
             {
-                Name = "name3373707",
+                MetricNameOneof = MetricNameOneof.From(new MetricName("[PROJECT]", "[METRIC]")),
                 Description = "description-1724546052",
                 Filter = "filter-1274492040",
                 ValueExtractor = "valueExtractor2047672534",

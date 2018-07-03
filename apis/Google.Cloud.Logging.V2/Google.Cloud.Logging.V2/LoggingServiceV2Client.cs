@@ -95,14 +95,14 @@ namespace Google.Cloud.Logging.V2
         /// The "Default" retry backoff for <see cref="LoggingServiceV2Client"/> RPC methods is defined as:
         /// <list type="bullet">
         /// <item><description>Initial delay: 100 milliseconds</description></item>
-        /// <item><description>Maximum delay: 1000 milliseconds</description></item>
-        /// <item><description>Delay multiplier: 1.2</description></item>
+        /// <item><description>Maximum delay: 60000 milliseconds</description></item>
+        /// <item><description>Delay multiplier: 1.3</description></item>
         /// </list>
         /// </remarks>
         public static gaxgrpc::BackoffSettings GetDefaultRetryBackoff() => new gaxgrpc::BackoffSettings(
             delay: sys::TimeSpan.FromMilliseconds(100),
-            maxDelay: sys::TimeSpan.FromMilliseconds(1000),
-            delayMultiplier: 1.2
+            maxDelay: sys::TimeSpan.FromMilliseconds(60000),
+            delayMultiplier: 1.3
         );
 
         /// <summary>
@@ -115,14 +115,14 @@ namespace Google.Cloud.Logging.V2
         /// The "Default" timeout backoff for <see cref="LoggingServiceV2Client"/> RPC methods is defined as:
         /// <list type="bullet">
         /// <item><description>Initial timeout: 20000 milliseconds</description></item>
-        /// <item><description>Timeout multiplier: 1.5</description></item>
-        /// <item><description>Maximum timeout: 60000 milliseconds</description></item>
+        /// <item><description>Timeout multiplier: 1.0</description></item>
+        /// <item><description>Maximum timeout: 20000 milliseconds</description></item>
         /// </list>
         /// </remarks>
         public static gaxgrpc::BackoffSettings GetDefaultTimeoutBackoff() => new gaxgrpc::BackoffSettings(
             delay: sys::TimeSpan.FromMilliseconds(20000),
-            maxDelay: sys::TimeSpan.FromMilliseconds(60000),
-            delayMultiplier: 1.5
+            maxDelay: sys::TimeSpan.FromMilliseconds(20000),
+            delayMultiplier: 1.0
         );
 
         /// <summary>
@@ -135,14 +135,14 @@ namespace Google.Cloud.Logging.V2
         /// The "List" retry backoff for <see cref="LoggingServiceV2Client"/> RPC methods is defined as:
         /// <list type="bullet">
         /// <item><description>Initial delay: 100 milliseconds</description></item>
-        /// <item><description>Maximum delay: 1000 milliseconds</description></item>
-        /// <item><description>Delay multiplier: 1.2</description></item>
+        /// <item><description>Maximum delay: 60000 milliseconds</description></item>
+        /// <item><description>Delay multiplier: 1.3</description></item>
         /// </list>
         /// </remarks>
         public static gaxgrpc::BackoffSettings GetListRetryBackoff() => new gaxgrpc::BackoffSettings(
             delay: sys::TimeSpan.FromMilliseconds(100),
-            maxDelay: sys::TimeSpan.FromMilliseconds(1000),
-            delayMultiplier: 1.2
+            maxDelay: sys::TimeSpan.FromMilliseconds(60000),
+            delayMultiplier: 1.3
         );
 
         /// <summary>
@@ -154,15 +154,15 @@ namespace Google.Cloud.Logging.V2
         /// <remarks>
         /// The "List" timeout backoff for <see cref="LoggingServiceV2Client"/> RPC methods is defined as:
         /// <list type="bullet">
-        /// <item><description>Initial timeout: 2000 milliseconds</description></item>
-        /// <item><description>Timeout multiplier: 1.5</description></item>
-        /// <item><description>Maximum timeout: 10000 milliseconds</description></item>
+        /// <item><description>Initial timeout: 20000 milliseconds</description></item>
+        /// <item><description>Timeout multiplier: 1.0</description></item>
+        /// <item><description>Maximum timeout: 20000 milliseconds</description></item>
         /// </list>
         /// </remarks>
         public static gaxgrpc::BackoffSettings GetListTimeoutBackoff() => new gaxgrpc::BackoffSettings(
-            delay: sys::TimeSpan.FromMilliseconds(2000),
-            maxDelay: sys::TimeSpan.FromMilliseconds(10000),
-            delayMultiplier: 1.5
+            delay: sys::TimeSpan.FromMilliseconds(20000),
+            maxDelay: sys::TimeSpan.FromMilliseconds(20000),
+            delayMultiplier: 1.0
         );
 
         /// <summary>
@@ -174,11 +174,11 @@ namespace Google.Cloud.Logging.V2
         /// <c>LoggingServiceV2Client.DeleteLogAsync</c> <see cref="gaxgrpc::RetrySettings"/> are:
         /// <list type="bullet">
         /// <item><description>Initial retry delay: 100 milliseconds</description></item>
-        /// <item><description>Retry delay multiplier: 1.2</description></item>
-        /// <item><description>Retry maximum delay: 1000 milliseconds</description></item>
+        /// <item><description>Retry delay multiplier: 1.3</description></item>
+        /// <item><description>Retry maximum delay: 60000 milliseconds</description></item>
         /// <item><description>Initial timeout: 20000 milliseconds</description></item>
-        /// <item><description>Timeout multiplier: 1.5</description></item>
-        /// <item><description>Timeout maximum delay: 60000 milliseconds</description></item>
+        /// <item><description>Timeout multiplier: 1.0</description></item>
+        /// <item><description>Timeout maximum delay: 20000 milliseconds</description></item>
         /// </list>
         /// Retry will be attempted on the following response status codes:
         /// <list>
@@ -186,13 +186,13 @@ namespace Google.Cloud.Logging.V2
         /// <item><description><see cref="grpccore::StatusCode.Internal"/></description></item>
         /// <item><description><see cref="grpccore::StatusCode.Unavailable"/></description></item>
         /// </list>
-        /// Default RPC expiration is 90000 milliseconds.
+        /// Default RPC expiration is 600000 milliseconds.
         /// </remarks>
         public gaxgrpc::CallSettings DeleteLogSettings { get; set; } = gaxgrpc::CallSettings.FromCallTiming(
             gaxgrpc::CallTiming.FromRetry(new gaxgrpc::RetrySettings(
                 retryBackoff: GetDefaultRetryBackoff(),
                 timeoutBackoff: GetDefaultTimeoutBackoff(),
-                totalExpiration: gax::Expiration.FromTimeout(sys::TimeSpan.FromMilliseconds(90000)),
+                totalExpiration: gax::Expiration.FromTimeout(sys::TimeSpan.FromMilliseconds(600000)),
                 retryFilter: IdempotentRetryFilter
             )));
 
@@ -205,23 +205,23 @@ namespace Google.Cloud.Logging.V2
         /// <c>LoggingServiceV2Client.WriteLogEntriesAsync</c> <see cref="gaxgrpc::RetrySettings"/> are:
         /// <list type="bullet">
         /// <item><description>Initial retry delay: 100 milliseconds</description></item>
-        /// <item><description>Retry delay multiplier: 1.2</description></item>
-        /// <item><description>Retry maximum delay: 1000 milliseconds</description></item>
+        /// <item><description>Retry delay multiplier: 1.3</description></item>
+        /// <item><description>Retry maximum delay: 60000 milliseconds</description></item>
         /// <item><description>Initial timeout: 20000 milliseconds</description></item>
-        /// <item><description>Timeout multiplier: 1.5</description></item>
-        /// <item><description>Timeout maximum delay: 60000 milliseconds</description></item>
+        /// <item><description>Timeout multiplier: 1.0</description></item>
+        /// <item><description>Timeout maximum delay: 20000 milliseconds</description></item>
         /// </list>
         /// Retry will be attempted on the following response status codes:
         /// <list>
         /// <item><description>No status codes</description></item>
         /// </list>
-        /// Default RPC expiration is 90000 milliseconds.
+        /// Default RPC expiration is 600000 milliseconds.
         /// </remarks>
         public gaxgrpc::CallSettings WriteLogEntriesSettings { get; set; } = gaxgrpc::CallSettings.FromCallTiming(
             gaxgrpc::CallTiming.FromRetry(new gaxgrpc::RetrySettings(
                 retryBackoff: GetDefaultRetryBackoff(),
                 timeoutBackoff: GetDefaultTimeoutBackoff(),
-                totalExpiration: gax::Expiration.FromTimeout(sys::TimeSpan.FromMilliseconds(90000)),
+                totalExpiration: gax::Expiration.FromTimeout(sys::TimeSpan.FromMilliseconds(600000)),
                 retryFilter: NonIdempotentRetryFilter
             )));
 
@@ -234,11 +234,11 @@ namespace Google.Cloud.Logging.V2
         /// <c>LoggingServiceV2Client.ListLogEntriesAsync</c> <see cref="gaxgrpc::RetrySettings"/> are:
         /// <list type="bullet">
         /// <item><description>Initial retry delay: 100 milliseconds</description></item>
-        /// <item><description>Retry delay multiplier: 1.2</description></item>
-        /// <item><description>Retry maximum delay: 1000 milliseconds</description></item>
-        /// <item><description>Initial timeout: 2000 milliseconds</description></item>
-        /// <item><description>Timeout multiplier: 1.5</description></item>
-        /// <item><description>Timeout maximum delay: 10000 milliseconds</description></item>
+        /// <item><description>Retry delay multiplier: 1.3</description></item>
+        /// <item><description>Retry maximum delay: 60000 milliseconds</description></item>
+        /// <item><description>Initial timeout: 20000 milliseconds</description></item>
+        /// <item><description>Timeout multiplier: 1.0</description></item>
+        /// <item><description>Timeout maximum delay: 20000 milliseconds</description></item>
         /// </list>
         /// Retry will be attempted on the following response status codes:
         /// <list>
@@ -246,13 +246,13 @@ namespace Google.Cloud.Logging.V2
         /// <item><description><see cref="grpccore::StatusCode.Internal"/></description></item>
         /// <item><description><see cref="grpccore::StatusCode.Unavailable"/></description></item>
         /// </list>
-        /// Default RPC expiration is 20000 milliseconds.
+        /// Default RPC expiration is 600000 milliseconds.
         /// </remarks>
         public gaxgrpc::CallSettings ListLogEntriesSettings { get; set; } = gaxgrpc::CallSettings.FromCallTiming(
             gaxgrpc::CallTiming.FromRetry(new gaxgrpc::RetrySettings(
-                retryBackoff: GetListRetryBackoff(),
-                timeoutBackoff: GetListTimeoutBackoff(),
-                totalExpiration: gax::Expiration.FromTimeout(sys::TimeSpan.FromMilliseconds(20000)),
+                retryBackoff: GetDefaultRetryBackoff(),
+                timeoutBackoff: GetDefaultTimeoutBackoff(),
+                totalExpiration: gax::Expiration.FromTimeout(sys::TimeSpan.FromMilliseconds(600000)),
                 retryFilter: IdempotentRetryFilter
             )));
 
@@ -265,11 +265,11 @@ namespace Google.Cloud.Logging.V2
         /// <c>LoggingServiceV2Client.ListMonitoredResourceDescriptorsAsync</c> <see cref="gaxgrpc::RetrySettings"/> are:
         /// <list type="bullet">
         /// <item><description>Initial retry delay: 100 milliseconds</description></item>
-        /// <item><description>Retry delay multiplier: 1.2</description></item>
-        /// <item><description>Retry maximum delay: 1000 milliseconds</description></item>
+        /// <item><description>Retry delay multiplier: 1.3</description></item>
+        /// <item><description>Retry maximum delay: 60000 milliseconds</description></item>
         /// <item><description>Initial timeout: 20000 milliseconds</description></item>
-        /// <item><description>Timeout multiplier: 1.5</description></item>
-        /// <item><description>Timeout maximum delay: 60000 milliseconds</description></item>
+        /// <item><description>Timeout multiplier: 1.0</description></item>
+        /// <item><description>Timeout maximum delay: 20000 milliseconds</description></item>
         /// </list>
         /// Retry will be attempted on the following response status codes:
         /// <list>
@@ -277,13 +277,13 @@ namespace Google.Cloud.Logging.V2
         /// <item><description><see cref="grpccore::StatusCode.Internal"/></description></item>
         /// <item><description><see cref="grpccore::StatusCode.Unavailable"/></description></item>
         /// </list>
-        /// Default RPC expiration is 90000 milliseconds.
+        /// Default RPC expiration is 600000 milliseconds.
         /// </remarks>
         public gaxgrpc::CallSettings ListMonitoredResourceDescriptorsSettings { get; set; } = gaxgrpc::CallSettings.FromCallTiming(
             gaxgrpc::CallTiming.FromRetry(new gaxgrpc::RetrySettings(
                 retryBackoff: GetDefaultRetryBackoff(),
                 timeoutBackoff: GetDefaultTimeoutBackoff(),
-                totalExpiration: gax::Expiration.FromTimeout(sys::TimeSpan.FromMilliseconds(90000)),
+                totalExpiration: gax::Expiration.FromTimeout(sys::TimeSpan.FromMilliseconds(600000)),
                 retryFilter: IdempotentRetryFilter
             )));
 
@@ -296,11 +296,11 @@ namespace Google.Cloud.Logging.V2
         /// <c>LoggingServiceV2Client.ListLogsAsync</c> <see cref="gaxgrpc::RetrySettings"/> are:
         /// <list type="bullet">
         /// <item><description>Initial retry delay: 100 milliseconds</description></item>
-        /// <item><description>Retry delay multiplier: 1.2</description></item>
-        /// <item><description>Retry maximum delay: 1000 milliseconds</description></item>
+        /// <item><description>Retry delay multiplier: 1.3</description></item>
+        /// <item><description>Retry maximum delay: 60000 milliseconds</description></item>
         /// <item><description>Initial timeout: 20000 milliseconds</description></item>
-        /// <item><description>Timeout multiplier: 1.5</description></item>
-        /// <item><description>Timeout maximum delay: 60000 milliseconds</description></item>
+        /// <item><description>Timeout multiplier: 1.0</description></item>
+        /// <item><description>Timeout maximum delay: 20000 milliseconds</description></item>
         /// </list>
         /// Retry will be attempted on the following response status codes:
         /// <list>
@@ -308,13 +308,13 @@ namespace Google.Cloud.Logging.V2
         /// <item><description><see cref="grpccore::StatusCode.Internal"/></description></item>
         /// <item><description><see cref="grpccore::StatusCode.Unavailable"/></description></item>
         /// </list>
-        /// Default RPC expiration is 90000 milliseconds.
+        /// Default RPC expiration is 600000 milliseconds.
         /// </remarks>
         public gaxgrpc::CallSettings ListLogsSettings { get; set; } = gaxgrpc::CallSettings.FromCallTiming(
             gaxgrpc::CallTiming.FromRetry(new gaxgrpc::RetrySettings(
                 retryBackoff: GetDefaultRetryBackoff(),
                 timeoutBackoff: GetDefaultTimeoutBackoff(),
-                totalExpiration: gax::Expiration.FromTimeout(sys::TimeSpan.FromMilliseconds(90000)),
+                totalExpiration: gax::Expiration.FromTimeout(sys::TimeSpan.FromMilliseconds(600000)),
                 retryFilter: IdempotentRetryFilter
             )));
 
@@ -632,13 +632,14 @@ namespace Google.Cloud.Logging.V2
         }
 
         /// <summary>
-        /// ## Log entry resources
-        ///
         /// Writes log entries to Stackdriver Logging. This API method is the
         /// only way to send log entries to Stackdriver Logging. This method
         /// is used, directly or indirectly, by the Stackdriver Logging agent
         /// (fluentd) and all logging libraries configured to use Stackdriver
         /// Logging.
+        /// A single request may contain log entries for a maximum of 1000
+        /// different resources (projects, organizations, billing accounts or
+        /// folders)
         /// </summary>
         /// <param name="logName">
         /// Optional. A default log resource name that is assigned to all log entries
@@ -676,7 +677,8 @@ namespace Google.Cloud.Logging.V2
         /// entries in this list does not matter. Values supplied in this method's
         /// `log_name`, `resource`, and `labels` fields are copied into those log
         /// entries in this list that do not include values for their corresponding
-        /// fields. For more information, see the [LogEntry][google.logging.v2.LogEntry] type.
+        /// fields. For more information, see the
+        /// [LogEntry][google.logging.v2.LogEntry] type.
         ///
         /// If the `timestamp` or `insert_id` fields are missing in log entries, then
         /// this method supplies the current time or a unique identifier, respectively.
@@ -686,8 +688,9 @@ namespace Google.Cloud.Logging.V2
         ///
         /// Log entries with timestamps that are more than the
         /// [logs retention period](/logging/quota-policy) in the past or more than
-        /// 24 hours in the future might be discarded. Discarding does not return
-        /// an error.
+        /// 24 hours in the future will not be available when calling `entries.list`.
+        /// However, those log entries can still be exported with
+        /// [LogSinks](/logging/docs/api/tasks/exporting-logs).
         ///
         /// To improve throughput and to avoid exceeding the
         /// [quota limit](/logging/quota-policy) for calls to `entries.write`,
@@ -716,13 +719,14 @@ namespace Google.Cloud.Logging.V2
                 callSettings);
 
         /// <summary>
-        /// ## Log entry resources
-        ///
         /// Writes log entries to Stackdriver Logging. This API method is the
         /// only way to send log entries to Stackdriver Logging. This method
         /// is used, directly or indirectly, by the Stackdriver Logging agent
         /// (fluentd) and all logging libraries configured to use Stackdriver
         /// Logging.
+        /// A single request may contain log entries for a maximum of 1000
+        /// different resources (projects, organizations, billing accounts or
+        /// folders)
         /// </summary>
         /// <param name="logName">
         /// Optional. A default log resource name that is assigned to all log entries
@@ -760,7 +764,8 @@ namespace Google.Cloud.Logging.V2
         /// entries in this list does not matter. Values supplied in this method's
         /// `log_name`, `resource`, and `labels` fields are copied into those log
         /// entries in this list that do not include values for their corresponding
-        /// fields. For more information, see the [LogEntry][google.logging.v2.LogEntry] type.
+        /// fields. For more information, see the
+        /// [LogEntry][google.logging.v2.LogEntry] type.
         ///
         /// If the `timestamp` or `insert_id` fields are missing in log entries, then
         /// this method supplies the current time or a unique identifier, respectively.
@@ -770,8 +775,9 @@ namespace Google.Cloud.Logging.V2
         ///
         /// Log entries with timestamps that are more than the
         /// [logs retention period](/logging/quota-policy) in the past or more than
-        /// 24 hours in the future might be discarded. Discarding does not return
-        /// an error.
+        /// 24 hours in the future will not be available when calling `entries.list`.
+        /// However, those log entries can still be exported with
+        /// [LogSinks](/logging/docs/api/tasks/exporting-logs).
         ///
         /// To improve throughput and to avoid exceeding the
         /// [quota limit](/logging/quota-policy) for calls to `entries.write`,
@@ -797,13 +803,14 @@ namespace Google.Cloud.Logging.V2
                 gaxgrpc::CallSettings.FromCancellationToken(cancellationToken));
 
         /// <summary>
-        /// ## Log entry resources
-        ///
         /// Writes log entries to Stackdriver Logging. This API method is the
         /// only way to send log entries to Stackdriver Logging. This method
         /// is used, directly or indirectly, by the Stackdriver Logging agent
         /// (fluentd) and all logging libraries configured to use Stackdriver
         /// Logging.
+        /// A single request may contain log entries for a maximum of 1000
+        /// different resources (projects, organizations, billing accounts or
+        /// folders)
         /// </summary>
         /// <param name="logName">
         /// Optional. A default log resource name that is assigned to all log entries
@@ -841,7 +848,8 @@ namespace Google.Cloud.Logging.V2
         /// entries in this list does not matter. Values supplied in this method's
         /// `log_name`, `resource`, and `labels` fields are copied into those log
         /// entries in this list that do not include values for their corresponding
-        /// fields. For more information, see the [LogEntry][google.logging.v2.LogEntry] type.
+        /// fields. For more information, see the
+        /// [LogEntry][google.logging.v2.LogEntry] type.
         ///
         /// If the `timestamp` or `insert_id` fields are missing in log entries, then
         /// this method supplies the current time or a unique identifier, respectively.
@@ -851,8 +859,9 @@ namespace Google.Cloud.Logging.V2
         ///
         /// Log entries with timestamps that are more than the
         /// [logs retention period](/logging/quota-policy) in the past or more than
-        /// 24 hours in the future might be discarded. Discarding does not return
-        /// an error.
+        /// 24 hours in the future will not be available when calling `entries.list`.
+        /// However, those log entries can still be exported with
+        /// [LogSinks](/logging/docs/api/tasks/exporting-logs).
         ///
         /// To improve throughput and to avoid exceeding the
         /// [quota limit](/logging/quota-policy) for calls to `entries.write`,
@@ -881,13 +890,14 @@ namespace Google.Cloud.Logging.V2
                 callSettings);
 
         /// <summary>
-        /// ## Log entry resources
-        ///
         /// Writes log entries to Stackdriver Logging. This API method is the
         /// only way to send log entries to Stackdriver Logging. This method
         /// is used, directly or indirectly, by the Stackdriver Logging agent
         /// (fluentd) and all logging libraries configured to use Stackdriver
         /// Logging.
+        /// A single request may contain log entries for a maximum of 1000
+        /// different resources (projects, organizations, billing accounts or
+        /// folders)
         /// </summary>
         /// <param name="request">
         /// The request object containing all of the parameters for the API call.
@@ -906,13 +916,14 @@ namespace Google.Cloud.Logging.V2
         }
 
         /// <summary>
-        /// ## Log entry resources
-        ///
         /// Writes log entries to Stackdriver Logging. This API method is the
         /// only way to send log entries to Stackdriver Logging. This method
         /// is used, directly or indirectly, by the Stackdriver Logging agent
         /// (fluentd) and all logging libraries configured to use Stackdriver
         /// Logging.
+        /// A single request may contain log entries for a maximum of 1000
+        /// different resources (projects, organizations, billing accounts or
+        /// folders)
         /// </summary>
         /// <param name="request">
         /// The request object containing all of the parameters for the API call.
@@ -930,13 +941,14 @@ namespace Google.Cloud.Logging.V2
                 gaxgrpc::CallSettings.FromCancellationToken(cancellationToken));
 
         /// <summary>
-        /// ## Log entry resources
-        ///
         /// Writes log entries to Stackdriver Logging. This API method is the
         /// only way to send log entries to Stackdriver Logging. This method
         /// is used, directly or indirectly, by the Stackdriver Logging agent
         /// (fluentd) and all logging libraries configured to use Stackdriver
         /// Logging.
+        /// A single request may contain log entries for a maximum of 1000
+        /// different resources (projects, organizations, billing accounts or
+        /// folders)
         /// </summary>
         /// <param name="request">
         /// The request object containing all of the parameters for the API call.
@@ -1002,7 +1014,7 @@ namespace Google.Cloud.Logging.V2
         /// A pageable asynchronous sequence of <see cref="LogEntry"/> resources.
         /// </returns>
         public virtual gax::PagedAsyncEnumerable<ListLogEntriesResponse, LogEntry> ListLogEntriesAsync(
-            scg::IEnumerable<string> resourceNames,
+            scg::IEnumerable<ParentNameOneof> resourceNames,
             string filter,
             string orderBy,
             string pageToken = null,
@@ -1010,7 +1022,7 @@ namespace Google.Cloud.Logging.V2
             gaxgrpc::CallSettings callSettings = null) => ListLogEntriesAsync(
                 new ListLogEntriesRequest
                 {
-                    ResourceNames = { gax::GaxPreconditions.CheckNotNull(resourceNames, nameof(resourceNames)) },
+                    ResourceNamesAsParentNameOneofs = { gax::GaxPreconditions.CheckNotNull(resourceNames, nameof(resourceNames)) },
                     Filter = filter ?? "", // Optional
                     OrderBy = orderBy ?? "", // Optional
                     PageToken = pageToken ?? "",
@@ -1066,7 +1078,7 @@ namespace Google.Cloud.Logging.V2
         /// A pageable sequence of <see cref="LogEntry"/> resources.
         /// </returns>
         public virtual gax::PagedEnumerable<ListLogEntriesResponse, LogEntry> ListLogEntries(
-            scg::IEnumerable<string> resourceNames,
+            scg::IEnumerable<ParentNameOneof> resourceNames,
             string filter,
             string orderBy,
             string pageToken = null,
@@ -1074,7 +1086,7 @@ namespace Google.Cloud.Logging.V2
             gaxgrpc::CallSettings callSettings = null) => ListLogEntries(
                 new ListLogEntriesRequest
                 {
-                    ResourceNames = { gax::GaxPreconditions.CheckNotNull(resourceNames, nameof(resourceNames)) },
+                    ResourceNamesAsParentNameOneofs = { gax::GaxPreconditions.CheckNotNull(resourceNames, nameof(resourceNames)) },
                     Filter = filter ?? "", // Optional
                     OrderBy = orderBy ?? "", // Optional
                     PageToken = pageToken ?? "",
@@ -1403,13 +1415,14 @@ namespace Google.Cloud.Logging.V2
         }
 
         /// <summary>
-        /// ## Log entry resources
-        ///
         /// Writes log entries to Stackdriver Logging. This API method is the
         /// only way to send log entries to Stackdriver Logging. This method
         /// is used, directly or indirectly, by the Stackdriver Logging agent
         /// (fluentd) and all logging libraries configured to use Stackdriver
         /// Logging.
+        /// A single request may contain log entries for a maximum of 1000
+        /// different resources (projects, organizations, billing accounts or
+        /// folders)
         /// </summary>
         /// <param name="request">
         /// The request object containing all of the parameters for the API call.
@@ -1429,13 +1442,14 @@ namespace Google.Cloud.Logging.V2
         }
 
         /// <summary>
-        /// ## Log entry resources
-        ///
         /// Writes log entries to Stackdriver Logging. This API method is the
         /// only way to send log entries to Stackdriver Logging. This method
         /// is used, directly or indirectly, by the Stackdriver Logging agent
         /// (fluentd) and all logging libraries configured to use Stackdriver
         /// Logging.
+        /// A single request may contain log entries for a maximum of 1000
+        /// different resources (projects, organizations, billing accounts or
+        /// folders)
         /// </summary>
         /// <param name="request">
         /// The request object containing all of the parameters for the API call.

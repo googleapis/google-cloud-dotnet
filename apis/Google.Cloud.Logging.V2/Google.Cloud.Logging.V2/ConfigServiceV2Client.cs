@@ -99,14 +99,14 @@ namespace Google.Cloud.Logging.V2
         /// The "Default" retry backoff for <see cref="ConfigServiceV2Client"/> RPC methods is defined as:
         /// <list type="bullet">
         /// <item><description>Initial delay: 100 milliseconds</description></item>
-        /// <item><description>Maximum delay: 1000 milliseconds</description></item>
-        /// <item><description>Delay multiplier: 1.2</description></item>
+        /// <item><description>Maximum delay: 60000 milliseconds</description></item>
+        /// <item><description>Delay multiplier: 1.3</description></item>
         /// </list>
         /// </remarks>
         public static gaxgrpc::BackoffSettings GetDefaultRetryBackoff() => new gaxgrpc::BackoffSettings(
             delay: sys::TimeSpan.FromMilliseconds(100),
-            maxDelay: sys::TimeSpan.FromMilliseconds(1000),
-            delayMultiplier: 1.2
+            maxDelay: sys::TimeSpan.FromMilliseconds(60000),
+            delayMultiplier: 1.3
         );
 
         /// <summary>
@@ -118,15 +118,15 @@ namespace Google.Cloud.Logging.V2
         /// <remarks>
         /// The "Default" timeout backoff for <see cref="ConfigServiceV2Client"/> RPC methods is defined as:
         /// <list type="bullet">
-        /// <item><description>Initial timeout: 30000 milliseconds</description></item>
-        /// <item><description>Timeout multiplier: 1.5</description></item>
-        /// <item><description>Maximum timeout: 60000 milliseconds</description></item>
+        /// <item><description>Initial timeout: 20000 milliseconds</description></item>
+        /// <item><description>Timeout multiplier: 1.0</description></item>
+        /// <item><description>Maximum timeout: 20000 milliseconds</description></item>
         /// </list>
         /// </remarks>
         public static gaxgrpc::BackoffSettings GetDefaultTimeoutBackoff() => new gaxgrpc::BackoffSettings(
-            delay: sys::TimeSpan.FromMilliseconds(30000),
-            maxDelay: sys::TimeSpan.FromMilliseconds(60000),
-            delayMultiplier: 1.5
+            delay: sys::TimeSpan.FromMilliseconds(20000),
+            maxDelay: sys::TimeSpan.FromMilliseconds(20000),
+            delayMultiplier: 1.0
         );
 
         /// <summary>
@@ -139,14 +139,14 @@ namespace Google.Cloud.Logging.V2
         /// The "WriteSink" retry backoff for <see cref="ConfigServiceV2Client"/> RPC methods is defined as:
         /// <list type="bullet">
         /// <item><description>Initial delay: 100 milliseconds</description></item>
-        /// <item><description>Maximum delay: 1000 milliseconds</description></item>
-        /// <item><description>Delay multiplier: 1.2</description></item>
+        /// <item><description>Maximum delay: 60000 milliseconds</description></item>
+        /// <item><description>Delay multiplier: 1.3</description></item>
         /// </list>
         /// </remarks>
         public static gaxgrpc::BackoffSettings GetWriteSinkRetryBackoff() => new gaxgrpc::BackoffSettings(
             delay: sys::TimeSpan.FromMilliseconds(100),
-            maxDelay: sys::TimeSpan.FromMilliseconds(1000),
-            delayMultiplier: 1.2
+            maxDelay: sys::TimeSpan.FromMilliseconds(60000),
+            delayMultiplier: 1.3
         );
 
         /// <summary>
@@ -158,15 +158,15 @@ namespace Google.Cloud.Logging.V2
         /// <remarks>
         /// The "WriteSink" timeout backoff for <see cref="ConfigServiceV2Client"/> RPC methods is defined as:
         /// <list type="bullet">
-        /// <item><description>Initial timeout: 30000 milliseconds</description></item>
-        /// <item><description>Timeout multiplier: 1.5</description></item>
-        /// <item><description>Maximum timeout: 60000 milliseconds</description></item>
+        /// <item><description>Initial timeout: 20000 milliseconds</description></item>
+        /// <item><description>Timeout multiplier: 1.0</description></item>
+        /// <item><description>Maximum timeout: 20000 milliseconds</description></item>
         /// </list>
         /// </remarks>
         public static gaxgrpc::BackoffSettings GetWriteSinkTimeoutBackoff() => new gaxgrpc::BackoffSettings(
-            delay: sys::TimeSpan.FromMilliseconds(30000),
-            maxDelay: sys::TimeSpan.FromMilliseconds(60000),
-            delayMultiplier: 1.5
+            delay: sys::TimeSpan.FromMilliseconds(20000),
+            maxDelay: sys::TimeSpan.FromMilliseconds(20000),
+            delayMultiplier: 1.0
         );
 
         /// <summary>
@@ -178,11 +178,11 @@ namespace Google.Cloud.Logging.V2
         /// <c>ConfigServiceV2Client.ListSinksAsync</c> <see cref="gaxgrpc::RetrySettings"/> are:
         /// <list type="bullet">
         /// <item><description>Initial retry delay: 100 milliseconds</description></item>
-        /// <item><description>Retry delay multiplier: 1.2</description></item>
-        /// <item><description>Retry maximum delay: 1000 milliseconds</description></item>
-        /// <item><description>Initial timeout: 30000 milliseconds</description></item>
-        /// <item><description>Timeout multiplier: 1.5</description></item>
-        /// <item><description>Timeout maximum delay: 60000 milliseconds</description></item>
+        /// <item><description>Retry delay multiplier: 1.3</description></item>
+        /// <item><description>Retry maximum delay: 60000 milliseconds</description></item>
+        /// <item><description>Initial timeout: 20000 milliseconds</description></item>
+        /// <item><description>Timeout multiplier: 1.0</description></item>
+        /// <item><description>Timeout maximum delay: 20000 milliseconds</description></item>
         /// </list>
         /// Retry will be attempted on the following response status codes:
         /// <list>
@@ -190,13 +190,13 @@ namespace Google.Cloud.Logging.V2
         /// <item><description><see cref="grpccore::StatusCode.Internal"/></description></item>
         /// <item><description><see cref="grpccore::StatusCode.Unavailable"/></description></item>
         /// </list>
-        /// Default RPC expiration is 90000 milliseconds.
+        /// Default RPC expiration is 600000 milliseconds.
         /// </remarks>
         public gaxgrpc::CallSettings ListSinksSettings { get; set; } = gaxgrpc::CallSettings.FromCallTiming(
             gaxgrpc::CallTiming.FromRetry(new gaxgrpc::RetrySettings(
                 retryBackoff: GetDefaultRetryBackoff(),
                 timeoutBackoff: GetDefaultTimeoutBackoff(),
-                totalExpiration: gax::Expiration.FromTimeout(sys::TimeSpan.FromMilliseconds(90000)),
+                totalExpiration: gax::Expiration.FromTimeout(sys::TimeSpan.FromMilliseconds(600000)),
                 retryFilter: IdempotentRetryFilter
             )));
 
@@ -209,11 +209,11 @@ namespace Google.Cloud.Logging.V2
         /// <c>ConfigServiceV2Client.GetSinkAsync</c> <see cref="gaxgrpc::RetrySettings"/> are:
         /// <list type="bullet">
         /// <item><description>Initial retry delay: 100 milliseconds</description></item>
-        /// <item><description>Retry delay multiplier: 1.2</description></item>
-        /// <item><description>Retry maximum delay: 1000 milliseconds</description></item>
-        /// <item><description>Initial timeout: 30000 milliseconds</description></item>
-        /// <item><description>Timeout multiplier: 1.5</description></item>
-        /// <item><description>Timeout maximum delay: 60000 milliseconds</description></item>
+        /// <item><description>Retry delay multiplier: 1.3</description></item>
+        /// <item><description>Retry maximum delay: 60000 milliseconds</description></item>
+        /// <item><description>Initial timeout: 20000 milliseconds</description></item>
+        /// <item><description>Timeout multiplier: 1.0</description></item>
+        /// <item><description>Timeout maximum delay: 20000 milliseconds</description></item>
         /// </list>
         /// Retry will be attempted on the following response status codes:
         /// <list>
@@ -221,13 +221,13 @@ namespace Google.Cloud.Logging.V2
         /// <item><description><see cref="grpccore::StatusCode.Internal"/></description></item>
         /// <item><description><see cref="grpccore::StatusCode.Unavailable"/></description></item>
         /// </list>
-        /// Default RPC expiration is 90000 milliseconds.
+        /// Default RPC expiration is 600000 milliseconds.
         /// </remarks>
         public gaxgrpc::CallSettings GetSinkSettings { get; set; } = gaxgrpc::CallSettings.FromCallTiming(
             gaxgrpc::CallTiming.FromRetry(new gaxgrpc::RetrySettings(
                 retryBackoff: GetDefaultRetryBackoff(),
                 timeoutBackoff: GetDefaultTimeoutBackoff(),
-                totalExpiration: gax::Expiration.FromTimeout(sys::TimeSpan.FromMilliseconds(90000)),
+                totalExpiration: gax::Expiration.FromTimeout(sys::TimeSpan.FromMilliseconds(600000)),
                 retryFilter: IdempotentRetryFilter
             )));
 
@@ -240,23 +240,23 @@ namespace Google.Cloud.Logging.V2
         /// <c>ConfigServiceV2Client.CreateSinkAsync</c> <see cref="gaxgrpc::RetrySettings"/> are:
         /// <list type="bullet">
         /// <item><description>Initial retry delay: 100 milliseconds</description></item>
-        /// <item><description>Retry delay multiplier: 1.2</description></item>
-        /// <item><description>Retry maximum delay: 1000 milliseconds</description></item>
-        /// <item><description>Initial timeout: 30000 milliseconds</description></item>
-        /// <item><description>Timeout multiplier: 1.5</description></item>
-        /// <item><description>Timeout maximum delay: 60000 milliseconds</description></item>
+        /// <item><description>Retry delay multiplier: 1.3</description></item>
+        /// <item><description>Retry maximum delay: 60000 milliseconds</description></item>
+        /// <item><description>Initial timeout: 20000 milliseconds</description></item>
+        /// <item><description>Timeout multiplier: 1.0</description></item>
+        /// <item><description>Timeout maximum delay: 20000 milliseconds</description></item>
         /// </list>
         /// Retry will be attempted on the following response status codes:
         /// <list>
         /// <item><description>No status codes</description></item>
         /// </list>
-        /// Default RPC expiration is 90000 milliseconds.
+        /// Default RPC expiration is 600000 milliseconds.
         /// </remarks>
         public gaxgrpc::CallSettings CreateSinkSettings { get; set; } = gaxgrpc::CallSettings.FromCallTiming(
             gaxgrpc::CallTiming.FromRetry(new gaxgrpc::RetrySettings(
                 retryBackoff: GetDefaultRetryBackoff(),
                 timeoutBackoff: GetDefaultTimeoutBackoff(),
-                totalExpiration: gax::Expiration.FromTimeout(sys::TimeSpan.FromMilliseconds(90000)),
+                totalExpiration: gax::Expiration.FromTimeout(sys::TimeSpan.FromMilliseconds(600000)),
                 retryFilter: NonIdempotentRetryFilter
             )));
 
@@ -269,24 +269,26 @@ namespace Google.Cloud.Logging.V2
         /// <c>ConfigServiceV2Client.UpdateSinkAsync</c> <see cref="gaxgrpc::RetrySettings"/> are:
         /// <list type="bullet">
         /// <item><description>Initial retry delay: 100 milliseconds</description></item>
-        /// <item><description>Retry delay multiplier: 1.2</description></item>
-        /// <item><description>Retry maximum delay: 1000 milliseconds</description></item>
-        /// <item><description>Initial timeout: 30000 milliseconds</description></item>
-        /// <item><description>Timeout multiplier: 1.5</description></item>
-        /// <item><description>Timeout maximum delay: 60000 milliseconds</description></item>
+        /// <item><description>Retry delay multiplier: 1.3</description></item>
+        /// <item><description>Retry maximum delay: 60000 milliseconds</description></item>
+        /// <item><description>Initial timeout: 20000 milliseconds</description></item>
+        /// <item><description>Timeout multiplier: 1.0</description></item>
+        /// <item><description>Timeout maximum delay: 20000 milliseconds</description></item>
         /// </list>
         /// Retry will be attempted on the following response status codes:
         /// <list>
-        /// <item><description>No status codes</description></item>
+        /// <item><description><see cref="grpccore::StatusCode.DeadlineExceeded"/></description></item>
+        /// <item><description><see cref="grpccore::StatusCode.Internal"/></description></item>
+        /// <item><description><see cref="grpccore::StatusCode.Unavailable"/></description></item>
         /// </list>
-        /// Default RPC expiration is 90000 milliseconds.
+        /// Default RPC expiration is 600000 milliseconds.
         /// </remarks>
         public gaxgrpc::CallSettings UpdateSinkSettings { get; set; } = gaxgrpc::CallSettings.FromCallTiming(
             gaxgrpc::CallTiming.FromRetry(new gaxgrpc::RetrySettings(
                 retryBackoff: GetDefaultRetryBackoff(),
                 timeoutBackoff: GetDefaultTimeoutBackoff(),
-                totalExpiration: gax::Expiration.FromTimeout(sys::TimeSpan.FromMilliseconds(90000)),
-                retryFilter: NonIdempotentRetryFilter
+                totalExpiration: gax::Expiration.FromTimeout(sys::TimeSpan.FromMilliseconds(600000)),
+                retryFilter: IdempotentRetryFilter
             )));
 
         /// <summary>
@@ -298,11 +300,11 @@ namespace Google.Cloud.Logging.V2
         /// <c>ConfigServiceV2Client.DeleteSinkAsync</c> <see cref="gaxgrpc::RetrySettings"/> are:
         /// <list type="bullet">
         /// <item><description>Initial retry delay: 100 milliseconds</description></item>
-        /// <item><description>Retry delay multiplier: 1.2</description></item>
-        /// <item><description>Retry maximum delay: 1000 milliseconds</description></item>
-        /// <item><description>Initial timeout: 30000 milliseconds</description></item>
-        /// <item><description>Timeout multiplier: 1.5</description></item>
-        /// <item><description>Timeout maximum delay: 60000 milliseconds</description></item>
+        /// <item><description>Retry delay multiplier: 1.3</description></item>
+        /// <item><description>Retry maximum delay: 60000 milliseconds</description></item>
+        /// <item><description>Initial timeout: 20000 milliseconds</description></item>
+        /// <item><description>Timeout multiplier: 1.0</description></item>
+        /// <item><description>Timeout maximum delay: 20000 milliseconds</description></item>
         /// </list>
         /// Retry will be attempted on the following response status codes:
         /// <list>
@@ -310,13 +312,13 @@ namespace Google.Cloud.Logging.V2
         /// <item><description><see cref="grpccore::StatusCode.Internal"/></description></item>
         /// <item><description><see cref="grpccore::StatusCode.Unavailable"/></description></item>
         /// </list>
-        /// Default RPC expiration is 90000 milliseconds.
+        /// Default RPC expiration is 600000 milliseconds.
         /// </remarks>
         public gaxgrpc::CallSettings DeleteSinkSettings { get; set; } = gaxgrpc::CallSettings.FromCallTiming(
             gaxgrpc::CallTiming.FromRetry(new gaxgrpc::RetrySettings(
                 retryBackoff: GetDefaultRetryBackoff(),
                 timeoutBackoff: GetDefaultTimeoutBackoff(),
-                totalExpiration: gax::Expiration.FromTimeout(sys::TimeSpan.FromMilliseconds(90000)),
+                totalExpiration: gax::Expiration.FromTimeout(sys::TimeSpan.FromMilliseconds(600000)),
                 retryFilter: IdempotentRetryFilter
             )));
 
@@ -329,11 +331,11 @@ namespace Google.Cloud.Logging.V2
         /// <c>ConfigServiceV2Client.ListExclusionsAsync</c> <see cref="gaxgrpc::RetrySettings"/> are:
         /// <list type="bullet">
         /// <item><description>Initial retry delay: 100 milliseconds</description></item>
-        /// <item><description>Retry delay multiplier: 1.2</description></item>
-        /// <item><description>Retry maximum delay: 1000 milliseconds</description></item>
-        /// <item><description>Initial timeout: 30000 milliseconds</description></item>
-        /// <item><description>Timeout multiplier: 1.5</description></item>
-        /// <item><description>Timeout maximum delay: 60000 milliseconds</description></item>
+        /// <item><description>Retry delay multiplier: 1.3</description></item>
+        /// <item><description>Retry maximum delay: 60000 milliseconds</description></item>
+        /// <item><description>Initial timeout: 20000 milliseconds</description></item>
+        /// <item><description>Timeout multiplier: 1.0</description></item>
+        /// <item><description>Timeout maximum delay: 20000 milliseconds</description></item>
         /// </list>
         /// Retry will be attempted on the following response status codes:
         /// <list>
@@ -341,13 +343,13 @@ namespace Google.Cloud.Logging.V2
         /// <item><description><see cref="grpccore::StatusCode.Internal"/></description></item>
         /// <item><description><see cref="grpccore::StatusCode.Unavailable"/></description></item>
         /// </list>
-        /// Default RPC expiration is 90000 milliseconds.
+        /// Default RPC expiration is 600000 milliseconds.
         /// </remarks>
         public gaxgrpc::CallSettings ListExclusionsSettings { get; set; } = gaxgrpc::CallSettings.FromCallTiming(
             gaxgrpc::CallTiming.FromRetry(new gaxgrpc::RetrySettings(
                 retryBackoff: GetDefaultRetryBackoff(),
                 timeoutBackoff: GetDefaultTimeoutBackoff(),
-                totalExpiration: gax::Expiration.FromTimeout(sys::TimeSpan.FromMilliseconds(90000)),
+                totalExpiration: gax::Expiration.FromTimeout(sys::TimeSpan.FromMilliseconds(600000)),
                 retryFilter: IdempotentRetryFilter
             )));
 
@@ -360,11 +362,11 @@ namespace Google.Cloud.Logging.V2
         /// <c>ConfigServiceV2Client.GetExclusionAsync</c> <see cref="gaxgrpc::RetrySettings"/> are:
         /// <list type="bullet">
         /// <item><description>Initial retry delay: 100 milliseconds</description></item>
-        /// <item><description>Retry delay multiplier: 1.2</description></item>
-        /// <item><description>Retry maximum delay: 1000 milliseconds</description></item>
-        /// <item><description>Initial timeout: 30000 milliseconds</description></item>
-        /// <item><description>Timeout multiplier: 1.5</description></item>
-        /// <item><description>Timeout maximum delay: 60000 milliseconds</description></item>
+        /// <item><description>Retry delay multiplier: 1.3</description></item>
+        /// <item><description>Retry maximum delay: 60000 milliseconds</description></item>
+        /// <item><description>Initial timeout: 20000 milliseconds</description></item>
+        /// <item><description>Timeout multiplier: 1.0</description></item>
+        /// <item><description>Timeout maximum delay: 20000 milliseconds</description></item>
         /// </list>
         /// Retry will be attempted on the following response status codes:
         /// <list>
@@ -372,13 +374,13 @@ namespace Google.Cloud.Logging.V2
         /// <item><description><see cref="grpccore::StatusCode.Internal"/></description></item>
         /// <item><description><see cref="grpccore::StatusCode.Unavailable"/></description></item>
         /// </list>
-        /// Default RPC expiration is 90000 milliseconds.
+        /// Default RPC expiration is 600000 milliseconds.
         /// </remarks>
         public gaxgrpc::CallSettings GetExclusionSettings { get; set; } = gaxgrpc::CallSettings.FromCallTiming(
             gaxgrpc::CallTiming.FromRetry(new gaxgrpc::RetrySettings(
                 retryBackoff: GetDefaultRetryBackoff(),
                 timeoutBackoff: GetDefaultTimeoutBackoff(),
-                totalExpiration: gax::Expiration.FromTimeout(sys::TimeSpan.FromMilliseconds(90000)),
+                totalExpiration: gax::Expiration.FromTimeout(sys::TimeSpan.FromMilliseconds(600000)),
                 retryFilter: IdempotentRetryFilter
             )));
 
@@ -391,23 +393,23 @@ namespace Google.Cloud.Logging.V2
         /// <c>ConfigServiceV2Client.CreateExclusionAsync</c> <see cref="gaxgrpc::RetrySettings"/> are:
         /// <list type="bullet">
         /// <item><description>Initial retry delay: 100 milliseconds</description></item>
-        /// <item><description>Retry delay multiplier: 1.2</description></item>
-        /// <item><description>Retry maximum delay: 1000 milliseconds</description></item>
-        /// <item><description>Initial timeout: 30000 milliseconds</description></item>
-        /// <item><description>Timeout multiplier: 1.5</description></item>
-        /// <item><description>Timeout maximum delay: 60000 milliseconds</description></item>
+        /// <item><description>Retry delay multiplier: 1.3</description></item>
+        /// <item><description>Retry maximum delay: 60000 milliseconds</description></item>
+        /// <item><description>Initial timeout: 20000 milliseconds</description></item>
+        /// <item><description>Timeout multiplier: 1.0</description></item>
+        /// <item><description>Timeout maximum delay: 20000 milliseconds</description></item>
         /// </list>
         /// Retry will be attempted on the following response status codes:
         /// <list>
         /// <item><description>No status codes</description></item>
         /// </list>
-        /// Default RPC expiration is 90000 milliseconds.
+        /// Default RPC expiration is 600000 milliseconds.
         /// </remarks>
         public gaxgrpc::CallSettings CreateExclusionSettings { get; set; } = gaxgrpc::CallSettings.FromCallTiming(
             gaxgrpc::CallTiming.FromRetry(new gaxgrpc::RetrySettings(
                 retryBackoff: GetDefaultRetryBackoff(),
                 timeoutBackoff: GetDefaultTimeoutBackoff(),
-                totalExpiration: gax::Expiration.FromTimeout(sys::TimeSpan.FromMilliseconds(90000)),
+                totalExpiration: gax::Expiration.FromTimeout(sys::TimeSpan.FromMilliseconds(600000)),
                 retryFilter: NonIdempotentRetryFilter
             )));
 
@@ -420,23 +422,23 @@ namespace Google.Cloud.Logging.V2
         /// <c>ConfigServiceV2Client.UpdateExclusionAsync</c> <see cref="gaxgrpc::RetrySettings"/> are:
         /// <list type="bullet">
         /// <item><description>Initial retry delay: 100 milliseconds</description></item>
-        /// <item><description>Retry delay multiplier: 1.2</description></item>
-        /// <item><description>Retry maximum delay: 1000 milliseconds</description></item>
-        /// <item><description>Initial timeout: 30000 milliseconds</description></item>
-        /// <item><description>Timeout multiplier: 1.5</description></item>
-        /// <item><description>Timeout maximum delay: 60000 milliseconds</description></item>
+        /// <item><description>Retry delay multiplier: 1.3</description></item>
+        /// <item><description>Retry maximum delay: 60000 milliseconds</description></item>
+        /// <item><description>Initial timeout: 20000 milliseconds</description></item>
+        /// <item><description>Timeout multiplier: 1.0</description></item>
+        /// <item><description>Timeout maximum delay: 20000 milliseconds</description></item>
         /// </list>
         /// Retry will be attempted on the following response status codes:
         /// <list>
         /// <item><description>No status codes</description></item>
         /// </list>
-        /// Default RPC expiration is 90000 milliseconds.
+        /// Default RPC expiration is 600000 milliseconds.
         /// </remarks>
         public gaxgrpc::CallSettings UpdateExclusionSettings { get; set; } = gaxgrpc::CallSettings.FromCallTiming(
             gaxgrpc::CallTiming.FromRetry(new gaxgrpc::RetrySettings(
                 retryBackoff: GetDefaultRetryBackoff(),
                 timeoutBackoff: GetDefaultTimeoutBackoff(),
-                totalExpiration: gax::Expiration.FromTimeout(sys::TimeSpan.FromMilliseconds(90000)),
+                totalExpiration: gax::Expiration.FromTimeout(sys::TimeSpan.FromMilliseconds(600000)),
                 retryFilter: NonIdempotentRetryFilter
             )));
 
@@ -449,11 +451,11 @@ namespace Google.Cloud.Logging.V2
         /// <c>ConfigServiceV2Client.DeleteExclusionAsync</c> <see cref="gaxgrpc::RetrySettings"/> are:
         /// <list type="bullet">
         /// <item><description>Initial retry delay: 100 milliseconds</description></item>
-        /// <item><description>Retry delay multiplier: 1.2</description></item>
-        /// <item><description>Retry maximum delay: 1000 milliseconds</description></item>
-        /// <item><description>Initial timeout: 30000 milliseconds</description></item>
-        /// <item><description>Timeout multiplier: 1.5</description></item>
-        /// <item><description>Timeout maximum delay: 60000 milliseconds</description></item>
+        /// <item><description>Retry delay multiplier: 1.3</description></item>
+        /// <item><description>Retry maximum delay: 60000 milliseconds</description></item>
+        /// <item><description>Initial timeout: 20000 milliseconds</description></item>
+        /// <item><description>Timeout multiplier: 1.0</description></item>
+        /// <item><description>Timeout maximum delay: 20000 milliseconds</description></item>
         /// </list>
         /// Retry will be attempted on the following response status codes:
         /// <list>
@@ -461,13 +463,13 @@ namespace Google.Cloud.Logging.V2
         /// <item><description><see cref="grpccore::StatusCode.Internal"/></description></item>
         /// <item><description><see cref="grpccore::StatusCode.Unavailable"/></description></item>
         /// </list>
-        /// Default RPC expiration is 90000 milliseconds.
+        /// Default RPC expiration is 600000 milliseconds.
         /// </remarks>
         public gaxgrpc::CallSettings DeleteExclusionSettings { get; set; } = gaxgrpc::CallSettings.FromCallTiming(
             gaxgrpc::CallTiming.FromRetry(new gaxgrpc::RetrySettings(
                 retryBackoff: GetDefaultRetryBackoff(),
                 timeoutBackoff: GetDefaultTimeoutBackoff(),
-                totalExpiration: gax::Expiration.FromTimeout(sys::TimeSpan.FromMilliseconds(90000)),
+                totalExpiration: gax::Expiration.FromTimeout(sys::TimeSpan.FromMilliseconds(600000)),
                 retryFilter: IdempotentRetryFilter
             )));
 
@@ -1046,6 +1048,171 @@ namespace Google.Cloud.Logging.V2
         {
             throw new sys::NotImplementedException();
         }
+
+        /// <summary>
+        /// Updates a sink.  This method replaces the following fields in the existing
+        /// sink with values from the new sink: `destination`, and `filter`.
+        /// The updated sink might also have a new `writer_identity`; see the
+        /// `unique_writer_identity` field.
+        /// </summary>
+        /// <param name="sinkName">
+        /// Required. The full resource name of the sink to update, including the
+        /// parent resource and the sink identifier:
+        ///
+        ///     "projects/[PROJECT_ID]/sinks/[SINK_ID]"
+        ///     "organizations/[ORGANIZATION_ID]/sinks/[SINK_ID]"
+        ///     "billingAccounts/[BILLING_ACCOUNT_ID]/sinks/[SINK_ID]"
+        ///     "folders/[FOLDER_ID]/sinks/[SINK_ID]"
+        ///
+        /// Example: `"projects/my-project-id/sinks/my-sink-id"`.
+        /// </param>
+        /// <param name="sink">
+        /// Required. The updated sink, whose name is the same identifier that appears
+        /// as part of `sink_name`.
+        /// </param>
+        /// <param name="updateMask">
+        /// Optional. Field mask that specifies the fields in `sink` that need
+        /// an update. A sink field will be overwritten if, and only if, it is
+        /// in the update mask.  `name` and output only fields cannot be updated.
+        ///
+        /// An empty updateMask is temporarily treated as using the following mask
+        /// for backwards compatibility purposes:
+        ///   destination,filter,includeChildren
+        /// At some point in the future, behavior will be removed and specifying an
+        /// empty updateMask will be an error.
+        ///
+        /// For a detailed `FieldMask` definition, see
+        /// https://developers.google.com/protocol-buffers/docs/reference/google.protobuf#fieldmask
+        ///
+        /// Example: `updateMask=filter`.
+        /// </param>
+        /// <param name="callSettings">
+        /// If not null, applies overrides to this RPC call.
+        /// </param>
+        /// <returns>
+        /// A Task containing the RPC response.
+        /// </returns>
+        public virtual stt::Task<LogSink> UpdateSinkAsync(
+            SinkNameOneof sinkName,
+            LogSink sink,
+            pbwkt::FieldMask updateMask,
+            gaxgrpc::CallSettings callSettings = null) => UpdateSinkAsync(
+                new UpdateSinkRequest
+                {
+                    SinkNameAsSinkNameOneof = gax::GaxPreconditions.CheckNotNull(sinkName, nameof(sinkName)),
+                    Sink = gax::GaxPreconditions.CheckNotNull(sink, nameof(sink)),
+                    UpdateMask = updateMask, // Optional
+                },
+                callSettings);
+
+        /// <summary>
+        /// Updates a sink.  This method replaces the following fields in the existing
+        /// sink with values from the new sink: `destination`, and `filter`.
+        /// The updated sink might also have a new `writer_identity`; see the
+        /// `unique_writer_identity` field.
+        /// </summary>
+        /// <param name="sinkName">
+        /// Required. The full resource name of the sink to update, including the
+        /// parent resource and the sink identifier:
+        ///
+        ///     "projects/[PROJECT_ID]/sinks/[SINK_ID]"
+        ///     "organizations/[ORGANIZATION_ID]/sinks/[SINK_ID]"
+        ///     "billingAccounts/[BILLING_ACCOUNT_ID]/sinks/[SINK_ID]"
+        ///     "folders/[FOLDER_ID]/sinks/[SINK_ID]"
+        ///
+        /// Example: `"projects/my-project-id/sinks/my-sink-id"`.
+        /// </param>
+        /// <param name="sink">
+        /// Required. The updated sink, whose name is the same identifier that appears
+        /// as part of `sink_name`.
+        /// </param>
+        /// <param name="updateMask">
+        /// Optional. Field mask that specifies the fields in `sink` that need
+        /// an update. A sink field will be overwritten if, and only if, it is
+        /// in the update mask.  `name` and output only fields cannot be updated.
+        ///
+        /// An empty updateMask is temporarily treated as using the following mask
+        /// for backwards compatibility purposes:
+        ///   destination,filter,includeChildren
+        /// At some point in the future, behavior will be removed and specifying an
+        /// empty updateMask will be an error.
+        ///
+        /// For a detailed `FieldMask` definition, see
+        /// https://developers.google.com/protocol-buffers/docs/reference/google.protobuf#fieldmask
+        ///
+        /// Example: `updateMask=filter`.
+        /// </param>
+        /// <param name="cancellationToken">
+        /// A <see cref="st::CancellationToken"/> to use for this RPC.
+        /// </param>
+        /// <returns>
+        /// A Task containing the RPC response.
+        /// </returns>
+        public virtual stt::Task<LogSink> UpdateSinkAsync(
+            SinkNameOneof sinkName,
+            LogSink sink,
+            pbwkt::FieldMask updateMask,
+            st::CancellationToken cancellationToken) => UpdateSinkAsync(
+                sinkName,
+                sink,
+                updateMask,
+                gaxgrpc::CallSettings.FromCancellationToken(cancellationToken));
+
+        /// <summary>
+        /// Updates a sink.  This method replaces the following fields in the existing
+        /// sink with values from the new sink: `destination`, and `filter`.
+        /// The updated sink might also have a new `writer_identity`; see the
+        /// `unique_writer_identity` field.
+        /// </summary>
+        /// <param name="sinkName">
+        /// Required. The full resource name of the sink to update, including the
+        /// parent resource and the sink identifier:
+        ///
+        ///     "projects/[PROJECT_ID]/sinks/[SINK_ID]"
+        ///     "organizations/[ORGANIZATION_ID]/sinks/[SINK_ID]"
+        ///     "billingAccounts/[BILLING_ACCOUNT_ID]/sinks/[SINK_ID]"
+        ///     "folders/[FOLDER_ID]/sinks/[SINK_ID]"
+        ///
+        /// Example: `"projects/my-project-id/sinks/my-sink-id"`.
+        /// </param>
+        /// <param name="sink">
+        /// Required. The updated sink, whose name is the same identifier that appears
+        /// as part of `sink_name`.
+        /// </param>
+        /// <param name="updateMask">
+        /// Optional. Field mask that specifies the fields in `sink` that need
+        /// an update. A sink field will be overwritten if, and only if, it is
+        /// in the update mask.  `name` and output only fields cannot be updated.
+        ///
+        /// An empty updateMask is temporarily treated as using the following mask
+        /// for backwards compatibility purposes:
+        ///   destination,filter,includeChildren
+        /// At some point in the future, behavior will be removed and specifying an
+        /// empty updateMask will be an error.
+        ///
+        /// For a detailed `FieldMask` definition, see
+        /// https://developers.google.com/protocol-buffers/docs/reference/google.protobuf#fieldmask
+        ///
+        /// Example: `updateMask=filter`.
+        /// </param>
+        /// <param name="callSettings">
+        /// If not null, applies overrides to this RPC call.
+        /// </param>
+        /// <returns>
+        /// The RPC response.
+        /// </returns>
+        public virtual LogSink UpdateSink(
+            SinkNameOneof sinkName,
+            LogSink sink,
+            pbwkt::FieldMask updateMask,
+            gaxgrpc::CallSettings callSettings = null) => UpdateSink(
+                new UpdateSinkRequest
+                {
+                    SinkNameAsSinkNameOneof = gax::GaxPreconditions.CheckNotNull(sinkName, nameof(sinkName)),
+                    Sink = gax::GaxPreconditions.CheckNotNull(sink, nameof(sink)),
+                    UpdateMask = updateMask, // Optional
+                },
+                callSettings);
 
         /// <summary>
         /// Updates a sink.  This method replaces the following fields in the existing
