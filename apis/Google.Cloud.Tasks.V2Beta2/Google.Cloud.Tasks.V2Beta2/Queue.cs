@@ -119,6 +119,9 @@ namespace Google.Cloud.Tasks.V2Beta2 {
     public const int NameFieldNumber = 1;
     private string name_ = "";
     /// <summary>
+    /// Caller-specified and required in [CreateQueue][google.cloud.tasks.v2beta2.CloudTasks.CreateQueue],
+    /// after which it becomes output only.
+    ///
     /// The queue name.
     ///
     /// The queue name must have the following format:
@@ -134,9 +137,6 @@ namespace Google.Cloud.Tasks.V2Beta2 {
     ///    For more information, see https://cloud.google.com/about/locations/.
     /// * `QUEUE_ID` can contain letters ([A-Za-z]), numbers ([0-9]), or
     ///   hyphens (-). The maximum length is 100 characters.
-    ///
-    /// Caller-specified and required in [CreateQueue][google.cloud.tasks.v2beta2.CloudTasks.CreateQueue],
-    /// after which it becomes output only.
     /// </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     public string Name {
