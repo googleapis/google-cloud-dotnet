@@ -654,7 +654,7 @@
     "description": "Recommended Google client library to access the Google Cloud Tasks API, which manages the execution of large numbers of distributed requests.",
     "tags": [ "Tasks" ],
     "dependencies": {
-      "Google.Cloud.Iam.V1": "1.0.0"
+      "Google.Cloud.Iam.V1": "1.1.0"
     }
   },
 
