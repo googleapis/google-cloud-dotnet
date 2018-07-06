@@ -75,6 +75,16 @@ namespace Google.Cloud.Spanner.Data
             return referenceCountTotal;
         }
 
+        /// <summary>
+        /// Returns a diagnostic summary of the state of the pool.
+        /// </summary>
+        internal string ToDiagnosticSummary()
+        {
+            var pools = _clientPoolByCredential.Values.ToList();
+            string perPool = string.Join(", ", pools.Select(p => p.ToDiagnosticSummary()));
+            return $"Pools count: {pools.Count}; Size/RefCount per pool: {perPool}";
+        }
+
         internal void ReleaseClient(SpannerClient spannerClient, SpannerConnectionStringBuilder connectionStringBuilder)
         {
             if (spannerClient != null)
@@ -152,6 +162,16 @@ namespace Google.Cloud.Spanner.Data
                     }
                     return referenceCountTotal;
                 }
+            }
+
+            /// <summary>
+            /// Returns a diagnostic summary of the state of this pool - the number
+            /// of clients in it, and the total reference count.
+            /// </summary>
+            internal string ToDiagnosticSummary()
+            {
+                var snapshot = _clientPriorityList.GetSnapshot();
+                return $"({snapshot.Count()} / {snapshot.Sum(p => p.RefCount)})";
             }
 
             public Task<SpannerClient> AcquireClientAsync(ISpannerClientFactory clientFactory, Logger logger)

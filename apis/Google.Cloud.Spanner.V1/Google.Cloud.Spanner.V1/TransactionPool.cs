@@ -147,6 +147,12 @@ namespace Google.Cloud.Spanner.V1
         }
 
         /// <summary>
+        /// Returns a diagnostic summary of the state of the pool.
+        /// </summary>
+        internal static string ToDiagnosticSummary() =>
+            $"Session count: {s_sessionInfoTable.Count}; Active transactions: {s_activeTransactionTable.Count}";
+
+        /// <summary>
         /// Commits a transaction and internally marks the transaction as used.
         /// </summary>
         /// <param name="transaction">The transaction to commit. Must not be null.</param>

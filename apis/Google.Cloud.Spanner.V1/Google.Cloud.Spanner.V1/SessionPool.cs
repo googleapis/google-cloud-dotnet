@@ -107,6 +107,16 @@ namespace Google.Cloud.Spanner.V1
             return maxSize - minSize;
         }
 
+        /// <summary>
+        /// Returns a diagnostic summary of the state of the pool.
+        /// </summary>
+        internal string ToDiagnosticSummary()
+        {
+            var pools = _poolByClientAndDatabase.Values.ToList();
+            var poolSizes = string.Join(", ", pools.Select(p => p.GetPoolSize()));
+            return $"Active sessions: {CurrentActiveSessions}; Pools: {pools.Count}; Pool sizes: {poolSizes}";
+        }
+
         private Task WhenCanceled(CancellationToken cancellationToken)
         {
             var tcs = new TaskCompletionSource<bool>();
