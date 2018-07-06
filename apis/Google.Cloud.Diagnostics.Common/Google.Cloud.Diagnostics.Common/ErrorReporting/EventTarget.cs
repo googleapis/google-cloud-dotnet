@@ -66,7 +66,7 @@ namespace Google.Cloud.Diagnostics.Common
         /// <param name="projectId">Optional if running on Google App Engine or Google Compute Engine.
         ///     The Google Cloud Platform project ID. If running on GAE or GCE the project ID will be
         ///     detected from the platform.</param>
-        /// <param name="logName">The log name.  Cannot be null.</param>
+        /// <param name="logName">The log name.  Must not be null.</param>
         /// <param name="loggingClient">The logging client.</param>
         /// <param name="monitoredResource">Optional, the monitored resource.  The monitored resource will
         ///     be automatically detected if it is not set and will default to the global resource if the detection fails.
@@ -88,8 +88,8 @@ namespace Google.Cloud.Diagnostics.Common
         /// For more information see "Formatting Log Error Messages"
         /// (https://cloud.google.com/error-reporting/docs/formatting-error-messages).
         /// </remarks>
-        /// <param name="logTarget">Where to log to, such as a project or organization. Cannot be null.</param>
-        /// <param name="logName">The log name.  Cannot be null.</param>
+        /// <param name="logTarget">Where to log to, such as a project or organization. Must not be null.</param>
+        /// <param name="logName">The log name.  Must not be null.</param>
         /// <param name="loggingClient">The logging client.</param>
         /// <param name="monitoredResource">Optional, the monitored resource.  The monitored resource will
         ///     be automatically detected if it is not set and will default to the global resource if the detection fails.

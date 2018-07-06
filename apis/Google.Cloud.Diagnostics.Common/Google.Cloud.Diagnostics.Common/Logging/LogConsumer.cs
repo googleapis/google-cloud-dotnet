@@ -25,9 +25,9 @@ namespace Google.Cloud.Diagnostics.Common
         /// <summary>
         /// Creates an <see cref="IConsumer{LogEntry}"/> based on the client and options.
         /// </summary>
-        /// <param name="client">A client to send log entries with. Cannot be null.</param>
-        /// <param name="bufferOptions">The buffering options. Cannot be null.</param>
-        /// <param name="retryOptions">The retry options. Cannot be null.</param>
+        /// <param name="client">A client to send log entries with. Must not be null.</param>
+        /// <param name="bufferOptions">The buffering options. Must not be null.</param>
+        /// <param name="retryOptions">The retry options. Must not be null.</param>
         public static IConsumer<LogEntry> Create(LoggingServiceV2Client client,
             BufferOptions bufferOptions, RetryOptions retryOptions)
         {

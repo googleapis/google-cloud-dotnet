@@ -40,9 +40,9 @@ namespace Google.Cloud.Diagnostics.AspNetCore
         /// <summary>
         /// <see cref="ILoggerProvider"/> for Google Stackdriver Logging.
         /// </summary>
-        /// <param name="consumer">The consumer to push logs to. Cannot be null.</param>
-        /// <param name="logTarget">Where to log to. Cannot be null.</param>
-        /// <param name="loggerOptions">The logger options. Cannot be null.</param>
+        /// <param name="consumer">The consumer to push logs to. Must not be null.</param>
+        /// <param name="logTarget">Where to log to. Must not be null.</param>
+        /// <param name="loggerOptions">The logger options. Must not be null.</param>
         /// <param name="serviceProvider">The service provider to resolve additional services from.</param>
         internal GoogleLoggerProvider(IConsumer<LogEntry> consumer, LogTarget logTarget, LoggerOptions loggerOptions,  IServiceProvider serviceProvider)
         {
@@ -72,7 +72,7 @@ namespace Google.Cloud.Diagnostics.AspNetCore
         /// <summary>
         /// Create an <see cref="ILoggerProvider"/> for Google Stackdriver Logging.
         /// </summary>
-        /// <param name="logTarget">Where to log to. Cannot be null.</param>
+        /// <param name="logTarget">Where to log to. Must not be null.</param>
         /// <param name="serviceProvider">The service provider to resolve additional services from.</param>
         /// <param name="options">Optional, options for the logger.</param>
         /// <param name="client">Optional, logging client.</param>

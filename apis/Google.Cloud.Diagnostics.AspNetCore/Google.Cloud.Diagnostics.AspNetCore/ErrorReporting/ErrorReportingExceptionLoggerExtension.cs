@@ -62,7 +62,7 @@ namespace Google.Cloud.Diagnostics.AspNetCore
         /// Uses middleware that will report all uncaught exceptions to the Stackdriver
         /// Error Reporting API.
         /// </summary>
-        /// <param name="app">The application builder. Cannot be null.</param>   
+        /// <param name="app">The application builder. Must not be null.</param>   
         public static IApplicationBuilder UseGoogleExceptionLogging(this IApplicationBuilder app)
         {
             GaxPreconditions.CheckNotNull(app, nameof(app));
@@ -78,8 +78,8 @@ namespace Google.Cloud.Diagnostics.AspNetCore
         /// current platform.
         /// </para>
         /// </summary>
-        /// <param name="services">The service collection. Cannot be null.</param>
-        /// <param name="setupAction">Action to set up options. Cannot be null.</param>
+        /// <param name="services">The service collection. Must not be null.</param>
+        /// <param name="setupAction">Action to set up options. Must not be null.</param>
         /// <remarks>
         /// If <see cref="RetryOptions.ExceptionHandling"/> is set to <see cref="ExceptionHandling.Propagate"/>
         /// and the <see cref="RequestDelegate"/> executed by this middleware throws an exception and this

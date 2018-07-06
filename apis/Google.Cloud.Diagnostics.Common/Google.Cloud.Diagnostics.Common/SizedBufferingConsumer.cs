@@ -59,7 +59,7 @@ namespace Google.Cloud.Diagnostics.Common
         /// Creates a new <see cref="SizedBufferingConsumer{T}"/> that will flush to the
         /// given <see cref="IConsumer{T}"/>. 
         /// </summary>
-        /// <param name="consumer">The consumer to flush to, cannot be null.</param>
+        /// <param name="consumer">The consumer to flush to. Must not be null.</param>
         /// <param name="bufferSize">The buffer size in bytes.</param>
         /// <param name="sizer">A function to obtain the size of an item in bytes.</param>
         public static SizedBufferingConsumer<T> Create(IConsumer<T> consumer, Func<T, int> sizer, int bufferSize)

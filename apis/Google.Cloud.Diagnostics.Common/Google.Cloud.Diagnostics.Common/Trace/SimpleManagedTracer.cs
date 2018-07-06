@@ -148,9 +148,9 @@ namespace Google.Cloud.Diagnostics.Common
         /// <summary>
         /// Creates a <see cref="SimpleManagedTracer"/>>
         /// </summary>
-        /// <param name="consumer">The consumer to push finished traces to. Cannot be null.</param>
-        /// <param name="projectId">The Google Cloud Platform project ID. Cannot be null.</param>
-        /// <param name="traceId">The id of the current trace. Cannot be null.</param>
+        /// <param name="consumer">The consumer to push finished traces to. Must not be null.</param>
+        /// <param name="projectId">The Google Cloud Platform project ID. Must not be null.</param>
+        /// <param name="traceId">The id of the current trace. Must not be null.</param>
         /// <param name="rootSpanParentId">Optional, the parent span id of the root span of the passed in trace.</param>
         public static SimpleManagedTracer Create(IConsumer<TraceProto> consumer, string projectId,
             string traceId, ulong? rootSpanParentId = null)

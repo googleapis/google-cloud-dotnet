@@ -60,7 +60,7 @@ namespace Google.Cloud.Diagnostics.Common
         /// Creates a new <see cref="TimedBufferingConsumer{T}"/> that will automatically flush the 
         /// buffer to the <see cref="IConsumer{T}"/> after the given wait time.
         /// </summary>
-        /// <param name="consumer">The consumer to flush to, cannot be null.</param>
+        /// <param name="consumer">The consumer to flush to. Must not be null.</param>
         /// <param name="waitTime">The amount of time between automatic flushes.</param>
         public static TimedBufferingConsumer<T> Create(IConsumer<T> consumer, TimeSpan waitTime)
             => new TimedBufferingConsumer<T>(consumer, waitTime, new SimpleThreadingTimer());

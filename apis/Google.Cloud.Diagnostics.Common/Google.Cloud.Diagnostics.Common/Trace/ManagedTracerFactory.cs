@@ -34,11 +34,11 @@ namespace Google.Cloud.Diagnostics.Common
         /// <summary>
         /// Creates a new <see cref="ManagedTracerFactory"/>.
         /// </summary>
-        /// <param name="projectId">The Google Cloud Platform project ID. Cannot be null.</param>
-        /// <param name="consumer">A trace consumer for the tracer. Cannot be null.</param>
+        /// <param name="projectId">The Google Cloud Platform project ID. Must not be null.</param>
+        /// <param name="consumer">A trace consumer for the tracer. Must not be null.</param>
         /// <param name="optionsFactory">An options factory to fall back to if the 
-        ///     <see cref="TraceHeaderContext"/> does not provide enough context. Cannot be null.</param>
-        /// <param name="traceIdFactory">A trace Id factory. Cannot be null.</param>
+        ///     <see cref="TraceHeaderContext"/> does not provide enough context. Must not be null.</param>
+        /// <param name="traceIdFactory">A trace Id factory. Must not be null.</param>
         internal ManagedTracerFactory(
             string projectId,
             IConsumer<TraceProto> consumer,

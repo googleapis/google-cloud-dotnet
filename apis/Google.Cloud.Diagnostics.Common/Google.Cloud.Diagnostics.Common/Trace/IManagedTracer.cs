@@ -27,7 +27,7 @@ namespace Google.Cloud.Diagnostics.Common
         /// <summary>
         /// Starts a new span using the most recent (if any) unfinished span as the parent.
         /// </summary>
-        /// <param name="name">The name of the span, cannot be null.</param>
+        /// <param name="name">The name of the span. Must not be null.</param>
         /// <param name="options">The span options to override default values.</param>
         /// <returns>
         /// An <see cref="ISpan"/> that will end the current span when disposed.
@@ -39,7 +39,7 @@ namespace Google.Cloud.Diagnostics.Common
         /// exception (the exception will be re-thrown) to the span.
         /// </summary>
         /// <param name="action">The action to run in a span.</param>
-        /// <param name="name">The name of the span, cannot be null.</param>
+        /// <param name="name">The name of the span. Must not be null.</param>
         /// <param name="options">The span options to override default values.</param>
         void RunInSpan(Action action, string name, StartSpanOptions options = null);
 
@@ -48,7 +48,7 @@ namespace Google.Cloud.Diagnostics.Common
         /// exception (the exception will be re-thrown) to the span.
         /// </summary>
         /// <param name="func">The function to run in a span.</param>
-        /// <param name="name">The name of the span, cannot be null.</param>
+        /// <param name="name">The name of the span. Must not be null.</param>
         /// <param name="options">The span options to override default values.</param>
         /// <returns>The result from the call to <paramref name="func"/></returns>
         T RunInSpan<T>(Func<T> func, string name, StartSpanOptions options = null);
@@ -58,7 +58,7 @@ namespace Google.Cloud.Diagnostics.Common
         /// from a thrown exception (the exception will be re-thrown) to the span.
         /// </summary>
         /// <param name="func">The function to run in a span.</param>
-        /// <param name="name">The name of the span, cannot be null.</param>
+        /// <param name="name">The name of the span. Must not be null.</param>
         /// <param name="options">The span options to override default values.</param>
         /// <returns>The result from the call to <paramref name="func"/></returns>
         Task<T> RunInSpanAsync<T>(Func<Task<T>> func, string name, StartSpanOptions options = null);

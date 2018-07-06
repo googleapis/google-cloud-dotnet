@@ -56,11 +56,11 @@ namespace Google.Cloud.Diagnostics.AspNet
         /// <summary>
         /// Creates an instance of <see cref="GoogleWebApiExceptionLogger"/>.
         /// </summary>
-        /// <param name="projectId">The Google Cloud Platform project ID. Cannot be null.</param>
+        /// <param name="projectId">The Google Cloud Platform project ID. Must not be null.</param>
         /// <param name="serviceName">An identifier of the service, such as the name of the executable or job.
-        ///     Cannot be null.</param>
+        ///     Must not be null.</param>
         /// <param name="version">Represents the source code version that the developer provided. 
-        ///     Cannot be null.</param>
+        ///     Must not be null.</param>
         /// <param name="options">Optional, error reporting options.</param>
         public static GoogleWebApiExceptionLogger Create(string projectId, string serviceName, string version,
             ErrorReportingOptions options = null)
@@ -79,9 +79,9 @@ namespace Google.Cloud.Diagnostics.AspNet
         /// </para>
         /// </summary>
         /// <param name="serviceName">An identifier of the service, such as the name of the executable or job.
-        ///     Cannot be null.</param>
+        ///     Must not be null.</param>
         /// <param name="version">Represents the source code version that the developer provided. 
-        ///     Cannot be null.</param>
+        ///     Must not be null.</param>
         /// <param name="options">Optional, error reporting options.</param>
         public static GoogleWebApiExceptionLogger Create(string serviceName, string version,
             ErrorReportingOptions options = null)
