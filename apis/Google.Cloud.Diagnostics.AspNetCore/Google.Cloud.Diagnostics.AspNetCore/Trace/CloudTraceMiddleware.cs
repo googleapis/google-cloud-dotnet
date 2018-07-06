@@ -34,8 +34,8 @@ namespace Google.Cloud.Diagnostics.AspNetCore
         /// <summary>
         /// Create a new instance of <see cref="CloudTraceMiddleware"/>.
         /// </summary>
-        /// <param name="next">The next request delegate. Cannot be null.</param>
-        /// <param name="tracerFactory">A factory to create <see cref="IManagedTracer"/>s. Cannot be null.</param>
+        /// <param name="next">The next request delegate. Must not be null.</param>
+        /// <param name="tracerFactory">A factory to create <see cref="IManagedTracer"/>s. Must not be null.</param>
         public CloudTraceMiddleware(
             RequestDelegate next, Func<TraceHeaderContext, IManagedTracer> tracerFactory)
         {
@@ -49,7 +49,7 @@ namespace Google.Cloud.Diagnostics.AspNetCore
         /// Stackdriver Trace API.
         /// </summary>
         /// <param name="httpContext">The current HTTP context.</param>
-        /// <param name="traceHeaderContext">Information from the current request header. Cannot be null.</param>
+        /// <param name="traceHeaderContext">Information from the current request header. Must not be null.</param>
         public async Task Invoke(HttpContext httpContext, TraceHeaderContext traceHeaderContext)
         {
             GaxPreconditions.CheckNotNull(traceHeaderContext, nameof(traceHeaderContext));

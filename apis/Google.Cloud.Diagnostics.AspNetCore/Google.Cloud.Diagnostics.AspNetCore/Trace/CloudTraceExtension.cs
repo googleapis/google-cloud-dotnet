@@ -87,8 +87,8 @@ namespace Google.Cloud.Diagnostics.AspNetCore
         /// <summary>
         /// Adds the needed services for Google Cloud Tracing. Used with <see cref="UseGoogleTrace"/>.
         /// </summary>
-        /// <param name="services">The service collection. Cannot be null.</param>
-        /// <param name="setupAction">Action to set up options. Cannot be null.</param>
+        /// <param name="services">The service collection. Must not be null.</param>
+        /// <param name="setupAction">Action to set up options. Must not be null.</param>
         /// <remarks>
         /// If <see cref="RetryOptions.ExceptionHandling"/> is set to <see cref="ExceptionHandling.Propagate"/>
         /// and the <see cref="RequestDelegate"/> executed by this middleware throws ad exception and this

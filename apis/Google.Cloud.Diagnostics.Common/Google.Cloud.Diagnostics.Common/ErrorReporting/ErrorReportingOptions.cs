@@ -44,7 +44,7 @@ namespace Google.Cloud.Diagnostics.Common
         /// <summary>
         /// Creates an <see cref="ErrorReportingOptions"/>.
         /// </summary>
-        /// <param name="eventTarget">Where the error events should be sent. Cannot be null.</param>
+        /// <param name="eventTarget">Where the error events should be sent. Must not be null.</param>
         /// <param name="bufferOptions">The buffer options for the error reporter. Defaults to no buffer.</param>
         /// <param name="retryOptions">The retry options for the error reporter. Defaults to no retry.</param>
         public static ErrorReportingOptions Create(

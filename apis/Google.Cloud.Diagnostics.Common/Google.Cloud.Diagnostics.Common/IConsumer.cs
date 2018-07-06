@@ -27,13 +27,13 @@ namespace Google.Cloud.Diagnostics.Common
         /// <summary>
         /// Accepts an enumerable of items.
         /// </summary>
-        /// <param name="items">The items to receive. Cannot be null.</param>
+        /// <param name="items">The items to receive. Must not be null.</param>
         void Receive(IEnumerable<T> items);
 
         /// <summary>
         /// Accepts an enumerable of items asynchronously.
         /// </summary>
-        /// <param name="items">The items to receive. Cannot be null.</param>
+        /// <param name="items">The items to receive. Must not be null.</param>
         /// <param name="cancellationToken">The token to monitor for cancellation requests.</param>
         /// <returns>A task representing the asynchronous operation.</returns>
         Task ReceiveAsync(IEnumerable<T> items, CancellationToken cancellationToken = default);

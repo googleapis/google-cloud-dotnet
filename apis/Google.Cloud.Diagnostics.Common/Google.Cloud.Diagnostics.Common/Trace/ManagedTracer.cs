@@ -27,8 +27,8 @@ namespace Google.Cloud.Diagnostics.Common
         /// <summary>
         /// Creates a trace consumer for a <see cref="TraceServiceClient"/> and options.
         /// </summary>
-        /// <param name="client">The trace client. Cannot be null.</param>
-        /// <param name="options">Trace options. Cannot be null.</param>
+        /// <param name="client">The trace client. Must not be null.</param>
+        /// <param name="options">Trace options. Must not be null.</param>
         public static IConsumer<TraceProto> CreateConsumer(TraceServiceClient client, TraceOptions options)
         {
             GaxPreconditions.CheckNotNull(client, nameof(client));
@@ -42,9 +42,9 @@ namespace Google.Cloud.Diagnostics.Common
         /// <summary>
         /// Create a factory to generate an <see cref="IManagedTracer"/> from a <see cref="TraceHeaderContext"/>.
         /// </summary>
-        /// <param name="projectId">The Google Cloud Platform project ID. Cannot be null</param>
-        /// <param name="consumer">The trace consumer.  Cannot be null.</param>
-        /// <param name="options">Trace options. Cannot be null.</param>
+        /// <param name="projectId">The Google Cloud Platform project ID. Must not be null</param>
+        /// <param name="consumer">The trace consumer.  Must not be null.</param>
+        /// <param name="options">Trace options. Must not be null.</param>
         public static Func<TraceHeaderContext, IManagedTracer> CreateTracerFactory(string projectId, IConsumer<TraceProto> consumer, TraceOptions options)
         {
             GaxPreconditions.CheckNotNull(projectId, nameof(projectId));

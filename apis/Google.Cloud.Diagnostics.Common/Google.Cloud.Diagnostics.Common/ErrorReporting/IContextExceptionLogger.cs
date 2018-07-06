@@ -26,15 +26,15 @@ namespace Google.Cloud.Diagnostics.Common
         /// <summary>
         /// Logs an exception that occurred.
         /// </summary>
-        /// <param name="exception">The exception to log. Cannot be null.</param>
-        /// <param name="context">The current context. Cannot be null.</param>
+        /// <param name="exception">The exception to log. Must not be null.</param>
+        /// <param name="context">The current context. Must not be null.</param>
         void Log(Exception exception, IContextWrapper context);
 
         /// <summary>
         /// Asynchronously logs an exception that occurred.
         /// </summary>
-        /// <param name="exception">The exception to log. Cannot be null.</param>
-        /// <param name="context">The current context. Cannot be null.</param>
+        /// <param name="exception">The exception to log. Must not be null.</param>
+        /// <param name="context">The current context. Must not be null.</param>
         /// <param name="cancellationToken">Optional, The token to monitor for cancellation requests.</param>
         /// <returns>A task representing the asynchronous operation.</returns>
         Task LogAsync(Exception exception, IContextWrapper context, CancellationToken cancellationToken = default);

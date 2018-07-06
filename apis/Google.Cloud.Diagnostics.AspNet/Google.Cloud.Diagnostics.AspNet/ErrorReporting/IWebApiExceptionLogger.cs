@@ -27,7 +27,7 @@ namespace Google.Cloud.Diagnostics.AspNet
         /// <summary>
         /// Logs an exception that occurred.
         /// </summary>
-        /// <param name="exception">The exception to log. Cannot be null.</param>
+        /// <param name="exception">The exception to log. Must not be null.</param>
         /// <param name="context">Optional, the current HTTP action context from which to get HTTP context information.
         /// If it is not set, no HTTP context information will be logged alongside exception information.</param>
         void Log(Exception exception, HttpActionContext context = null);
@@ -35,7 +35,7 @@ namespace Google.Cloud.Diagnostics.AspNet
         /// <summary>
         /// Asynchronously logs an exception that occurred.
         /// </summary>
-        /// <param name="exception">The exception to log. Cannot be null.</param>
+        /// <param name="exception">The exception to log. Must not be null.</param>
         /// <param name="context">Optional, the current HTTP action context from which to get HTTP context information.
         /// If it is not set, no HTTP context information will be logged alongside exception information.</param>
         /// <param name="cancellationToken">Optional, the token to monitor for cancellation requests.</param>

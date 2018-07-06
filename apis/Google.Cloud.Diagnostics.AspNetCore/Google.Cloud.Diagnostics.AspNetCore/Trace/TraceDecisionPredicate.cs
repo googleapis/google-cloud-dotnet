@@ -58,7 +58,7 @@ namespace Google.Cloud.Diagnostics.AspNetCore
         /// <param name="traceDecisionPredicate">Used to determine if a request should be traced.
         /// Takes an <see cref="HttpRequest"/>.  It should return true if the request should be traced,
         /// false if the request should not be traced and null if the decision should be left to other
-        /// sampling mechanisms. Cannot be null.</param>
+        /// sampling mechanisms. Must not be null.</param>
         /// <param name="ignoreHealthChecks">Optional. True if Google App Engine health check requests should
         /// not be traced. Defaults to true.</param>
         public static TraceDecisionPredicate Create(
