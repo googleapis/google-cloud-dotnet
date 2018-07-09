@@ -3512,43 +3512,62 @@ namespace Google.Cloud.Kms.V1
             gaxgrpc::ClientHelper clientHelper = new gaxgrpc::ClientHelper(effectiveSettings);
             iam::IAMPolicy.IAMPolicyClient grpcIAMPolicyClient = grpcClient.CreateIAMPolicyClient();
             _callListKeyRings = clientHelper.BuildApiCall<ListKeyRingsRequest, ListKeyRingsResponse>(
-                GrpcClient.ListKeyRingsAsync, GrpcClient.ListKeyRings, effectiveSettings.ListKeyRingsSettings);
+                GrpcClient.ListKeyRingsAsync, GrpcClient.ListKeyRings, effectiveSettings.ListKeyRingsSettings)
+                .WithCallSettingsOverlay(request => gaxgrpc::CallSettings.FromHeader("x-goog-request-params", $"parent={request.Parent}"));
             _callListCryptoKeys = clientHelper.BuildApiCall<ListCryptoKeysRequest, ListCryptoKeysResponse>(
-                GrpcClient.ListCryptoKeysAsync, GrpcClient.ListCryptoKeys, effectiveSettings.ListCryptoKeysSettings);
+                GrpcClient.ListCryptoKeysAsync, GrpcClient.ListCryptoKeys, effectiveSettings.ListCryptoKeysSettings)
+                .WithCallSettingsOverlay(request => gaxgrpc::CallSettings.FromHeader("x-goog-request-params", $"parent={request.Parent}"));
             _callListCryptoKeyVersions = clientHelper.BuildApiCall<ListCryptoKeyVersionsRequest, ListCryptoKeyVersionsResponse>(
-                GrpcClient.ListCryptoKeyVersionsAsync, GrpcClient.ListCryptoKeyVersions, effectiveSettings.ListCryptoKeyVersionsSettings);
+                GrpcClient.ListCryptoKeyVersionsAsync, GrpcClient.ListCryptoKeyVersions, effectiveSettings.ListCryptoKeyVersionsSettings)
+                .WithCallSettingsOverlay(request => gaxgrpc::CallSettings.FromHeader("x-goog-request-params", $"parent={request.Parent}"));
             _callGetKeyRing = clientHelper.BuildApiCall<GetKeyRingRequest, KeyRing>(
-                GrpcClient.GetKeyRingAsync, GrpcClient.GetKeyRing, effectiveSettings.GetKeyRingSettings);
+                GrpcClient.GetKeyRingAsync, GrpcClient.GetKeyRing, effectiveSettings.GetKeyRingSettings)
+                .WithCallSettingsOverlay(request => gaxgrpc::CallSettings.FromHeader("x-goog-request-params", $"name={request.Name}"));
             _callGetCryptoKey = clientHelper.BuildApiCall<GetCryptoKeyRequest, CryptoKey>(
-                GrpcClient.GetCryptoKeyAsync, GrpcClient.GetCryptoKey, effectiveSettings.GetCryptoKeySettings);
+                GrpcClient.GetCryptoKeyAsync, GrpcClient.GetCryptoKey, effectiveSettings.GetCryptoKeySettings)
+                .WithCallSettingsOverlay(request => gaxgrpc::CallSettings.FromHeader("x-goog-request-params", $"name={request.Name}"));
             _callGetCryptoKeyVersion = clientHelper.BuildApiCall<GetCryptoKeyVersionRequest, CryptoKeyVersion>(
-                GrpcClient.GetCryptoKeyVersionAsync, GrpcClient.GetCryptoKeyVersion, effectiveSettings.GetCryptoKeyVersionSettings);
+                GrpcClient.GetCryptoKeyVersionAsync, GrpcClient.GetCryptoKeyVersion, effectiveSettings.GetCryptoKeyVersionSettings)
+                .WithCallSettingsOverlay(request => gaxgrpc::CallSettings.FromHeader("x-goog-request-params", $"name={request.Name}"));
             _callCreateKeyRing = clientHelper.BuildApiCall<CreateKeyRingRequest, KeyRing>(
-                GrpcClient.CreateKeyRingAsync, GrpcClient.CreateKeyRing, effectiveSettings.CreateKeyRingSettings);
+                GrpcClient.CreateKeyRingAsync, GrpcClient.CreateKeyRing, effectiveSettings.CreateKeyRingSettings)
+                .WithCallSettingsOverlay(request => gaxgrpc::CallSettings.FromHeader("x-goog-request-params", $"parent={request.Parent}"));
             _callCreateCryptoKey = clientHelper.BuildApiCall<CreateCryptoKeyRequest, CryptoKey>(
-                GrpcClient.CreateCryptoKeyAsync, GrpcClient.CreateCryptoKey, effectiveSettings.CreateCryptoKeySettings);
+                GrpcClient.CreateCryptoKeyAsync, GrpcClient.CreateCryptoKey, effectiveSettings.CreateCryptoKeySettings)
+                .WithCallSettingsOverlay(request => gaxgrpc::CallSettings.FromHeader("x-goog-request-params", $"parent={request.Parent}"));
             _callCreateCryptoKeyVersion = clientHelper.BuildApiCall<CreateCryptoKeyVersionRequest, CryptoKeyVersion>(
-                GrpcClient.CreateCryptoKeyVersionAsync, GrpcClient.CreateCryptoKeyVersion, effectiveSettings.CreateCryptoKeyVersionSettings);
+                GrpcClient.CreateCryptoKeyVersionAsync, GrpcClient.CreateCryptoKeyVersion, effectiveSettings.CreateCryptoKeyVersionSettings)
+                .WithCallSettingsOverlay(request => gaxgrpc::CallSettings.FromHeader("x-goog-request-params", $"parent={request.Parent}"));
             _callUpdateCryptoKey = clientHelper.BuildApiCall<UpdateCryptoKeyRequest, CryptoKey>(
-                GrpcClient.UpdateCryptoKeyAsync, GrpcClient.UpdateCryptoKey, effectiveSettings.UpdateCryptoKeySettings);
+                GrpcClient.UpdateCryptoKeyAsync, GrpcClient.UpdateCryptoKey, effectiveSettings.UpdateCryptoKeySettings)
+                .WithCallSettingsOverlay(request => gaxgrpc::CallSettings.FromHeader("x-goog-request-params", $"crypto_key.name={request.CryptoKey.Name}"));
             _callUpdateCryptoKeyVersion = clientHelper.BuildApiCall<UpdateCryptoKeyVersionRequest, CryptoKeyVersion>(
-                GrpcClient.UpdateCryptoKeyVersionAsync, GrpcClient.UpdateCryptoKeyVersion, effectiveSettings.UpdateCryptoKeyVersionSettings);
+                GrpcClient.UpdateCryptoKeyVersionAsync, GrpcClient.UpdateCryptoKeyVersion, effectiveSettings.UpdateCryptoKeyVersionSettings)
+                .WithCallSettingsOverlay(request => gaxgrpc::CallSettings.FromHeader("x-goog-request-params", $"crypto_key_version.name={request.CryptoKeyVersion.Name}"));
             _callEncrypt = clientHelper.BuildApiCall<EncryptRequest, EncryptResponse>(
-                GrpcClient.EncryptAsync, GrpcClient.Encrypt, effectiveSettings.EncryptSettings);
+                GrpcClient.EncryptAsync, GrpcClient.Encrypt, effectiveSettings.EncryptSettings)
+                .WithCallSettingsOverlay(request => gaxgrpc::CallSettings.FromHeader("x-goog-request-params", $"name={request.Name}"));
             _callDecrypt = clientHelper.BuildApiCall<DecryptRequest, DecryptResponse>(
-                GrpcClient.DecryptAsync, GrpcClient.Decrypt, effectiveSettings.DecryptSettings);
+                GrpcClient.DecryptAsync, GrpcClient.Decrypt, effectiveSettings.DecryptSettings)
+                .WithCallSettingsOverlay(request => gaxgrpc::CallSettings.FromHeader("x-goog-request-params", $"name={request.Name}"));
             _callUpdateCryptoKeyPrimaryVersion = clientHelper.BuildApiCall<UpdateCryptoKeyPrimaryVersionRequest, CryptoKey>(
-                GrpcClient.UpdateCryptoKeyPrimaryVersionAsync, GrpcClient.UpdateCryptoKeyPrimaryVersion, effectiveSettings.UpdateCryptoKeyPrimaryVersionSettings);
+                GrpcClient.UpdateCryptoKeyPrimaryVersionAsync, GrpcClient.UpdateCryptoKeyPrimaryVersion, effectiveSettings.UpdateCryptoKeyPrimaryVersionSettings)
+                .WithCallSettingsOverlay(request => gaxgrpc::CallSettings.FromHeader("x-goog-request-params", $"name={request.Name}"));
             _callDestroyCryptoKeyVersion = clientHelper.BuildApiCall<DestroyCryptoKeyVersionRequest, CryptoKeyVersion>(
-                GrpcClient.DestroyCryptoKeyVersionAsync, GrpcClient.DestroyCryptoKeyVersion, effectiveSettings.DestroyCryptoKeyVersionSettings);
+                GrpcClient.DestroyCryptoKeyVersionAsync, GrpcClient.DestroyCryptoKeyVersion, effectiveSettings.DestroyCryptoKeyVersionSettings)
+                .WithCallSettingsOverlay(request => gaxgrpc::CallSettings.FromHeader("x-goog-request-params", $"name={request.Name}"));
             _callRestoreCryptoKeyVersion = clientHelper.BuildApiCall<RestoreCryptoKeyVersionRequest, CryptoKeyVersion>(
-                GrpcClient.RestoreCryptoKeyVersionAsync, GrpcClient.RestoreCryptoKeyVersion, effectiveSettings.RestoreCryptoKeyVersionSettings);
+                GrpcClient.RestoreCryptoKeyVersionAsync, GrpcClient.RestoreCryptoKeyVersion, effectiveSettings.RestoreCryptoKeyVersionSettings)
+                .WithCallSettingsOverlay(request => gaxgrpc::CallSettings.FromHeader("x-goog-request-params", $"name={request.Name}"));
             _callSetIamPolicy = clientHelper.BuildApiCall<iam::SetIamPolicyRequest, iam::Policy>(
-                grpcIAMPolicyClient.SetIamPolicyAsync, grpcIAMPolicyClient.SetIamPolicy, effectiveSettings.SetIamPolicySettings);
+                grpcIAMPolicyClient.SetIamPolicyAsync, grpcIAMPolicyClient.SetIamPolicy, effectiveSettings.SetIamPolicySettings)
+                .WithCallSettingsOverlay(request => gaxgrpc::CallSettings.FromHeader("x-goog-request-params", $"resource={request.Resource}"));
             _callGetIamPolicy = clientHelper.BuildApiCall<iam::GetIamPolicyRequest, iam::Policy>(
-                grpcIAMPolicyClient.GetIamPolicyAsync, grpcIAMPolicyClient.GetIamPolicy, effectiveSettings.GetIamPolicySettings);
+                grpcIAMPolicyClient.GetIamPolicyAsync, grpcIAMPolicyClient.GetIamPolicy, effectiveSettings.GetIamPolicySettings)
+                .WithCallSettingsOverlay(request => gaxgrpc::CallSettings.FromHeader("x-goog-request-params", $"resource={request.Resource}"));
             _callTestIamPermissions = clientHelper.BuildApiCall<iam::TestIamPermissionsRequest, iam::TestIamPermissionsResponse>(
-                grpcIAMPolicyClient.TestIamPermissionsAsync, grpcIAMPolicyClient.TestIamPermissions, effectiveSettings.TestIamPermissionsSettings);
+                grpcIAMPolicyClient.TestIamPermissionsAsync, grpcIAMPolicyClient.TestIamPermissions, effectiveSettings.TestIamPermissionsSettings)
+                .WithCallSettingsOverlay(request => gaxgrpc::CallSettings.FromHeader("x-goog-request-params", $"resource={request.Resource}"));
             Modify_ApiCall(ref _callListKeyRings);
             Modify_ListKeyRingsApiCall(ref _callListKeyRings);
             Modify_ApiCall(ref _callListCryptoKeys);
