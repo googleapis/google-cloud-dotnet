@@ -36,6 +36,8 @@ The following libraries are available at a [GA](#versioning) quality level:
 The following libraries are available at a [beta](#versioning) quality level:
 
 * [Google BigQuery Data Transfer](https://cloud.google.com/bigquery/transfer/) - [API docs](http://googlecloudplatform.github.io/google-cloud-dotnet/docs/Google.Cloud.BigQuery.DataTransfer.V1/) (beta)
+* [Google Cloud Bigtable](https://cloud.google.com/bigtable/) - [API docs](http://googlecloudplatform.github.io/google-cloud-dotnet/docs/Google.Cloud.Bigtable.V2/) (beta)
+  * Also the Bigtable admin API - [API docs](http://googlecloudplatform.github.io/google-cloud-dotnet/docs/Google.Cloud.Bigtable.Admin.V2/) (beta)
 * [Google Kubernetes Engine](https://cloud.google.com/kubernetes-engine/) - [API docs](http://googlecloudplatform.github.io/google-cloud-dotnet/docs/Google.Cloud.Container.V1) (beta)
 * [Google Cloud Dataproc](https://cloud.google.com/dataproc/) - [API docs](https://googlecloudplatform.github.io/google-cloud-dotnet/docs/Google.Cloud.Dataproc.V1/) (beta)
 * [Google Cloud Debugger](https://cloud.google.com/debugger/) - [API docs](http://googlecloudplatform.github.io/google-cloud-dotnet/docs/Google.Cloud.Debugger.V2) (beta)
@@ -60,8 +62,6 @@ The following libraries are available at a [beta](#versioning) quality level:
 
 The following libraries are available at an [alpha](#versioning) quality level:
 
-* [Google Cloud Bigtable](https://cloud.google.com/bigtable/) - [API docs](http://googlecloudplatform.github.io/google-cloud-dotnet/docs/Google.Cloud.Bigtable.V2/) (alpha)
-  * Also the Bigtable admin API - [API docs](http://googlecloudplatform.github.io/google-cloud-dotnet/docs/Google.Cloud.Bigtable.Admin.V2/) (alpha)
 * Google Cloud Metadata - [API docs](http://googlecloudplatform.github.io/google-cloud-dotnet/docs/Google.Cloud.Metadata.V1) (alpha)
 
 See the [API documentation](http://googlecloudplatform.github.io/google-cloud-dotnet/docs/) for details of the status

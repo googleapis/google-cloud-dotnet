@@ -42,6 +42,8 @@ GA:
 Beta:
 
 - [Google.Cloud.BigQuery.DataTransfer.V1](Google.Cloud.BigQuery.DataTransfer.V1/index.html)
+- [Google.Cloud.Bigtable.V2](Google.Cloud.Bigtable.V2/index.html)
+- [Google.Cloud.Bigtable.Admin.V2](Google.Cloud.Bigtable.Admin.V2/index.html)
 - [Google.Cloud.Container.V1](Google.Cloud.Container.V1/index.html)
 - [Google.Cloud.Dataproc.V1](Google.Cloud.Dataproc.V1/index.html)
 - [Google.Cloud.Debugger.V2](Google.Cloud.Debugger.V2/index.html)
@@ -65,8 +67,6 @@ Beta:
 
 Alpha:
 
-- [Google.Cloud.Bigtable.V2](Google.Cloud.Bigtable.V2/index.html)
-- [Google.Cloud.Bigtable.Admin.V2](Google.Cloud.Bigtable.Admin.V2/index.html)
 - [Google.Cloud.Metadata.V1](Google.Cloud.Metadata.V1/index.html)
 - [Google.Cloud.EntityFrameworkCore.Spanner](Google.Cloud.EntityFrameworkCore.Spanner/index.html)
 
