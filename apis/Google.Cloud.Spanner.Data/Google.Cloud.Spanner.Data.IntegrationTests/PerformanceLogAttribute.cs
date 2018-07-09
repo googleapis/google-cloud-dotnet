@@ -12,25 +12,18 @@
 // See the License for the specific language governing permissions and
 // limitations under the License.
 
-using System.Reflection;
 using Google.Cloud.Spanner.V1.Internal.Logging;
+using System.Reflection;
 using Xunit.Sdk;
 
-namespace Google.Cloud.Spanner.Data.IntegrationTests {
+namespace Google.Cloud.Spanner.Data.IntegrationTests
+{
     internal class PerformanceLogAttribute : BeforeAfterTestAttribute
     {
-        /// <inheritdoc />
-        public override void Before(MethodInfo methodUnderTest)
-        {
+        public override void Before(MethodInfo methodUnderTest) =>
             Logger.DefaultLogger.LogPerformanceData();
-            base.Before(methodUnderTest);
-        }
 
-        /// <inheritdoc />
-        public override void After(MethodInfo methodUnderTest)
-        {
+        public override void After(MethodInfo methodUnderTest) =>
             Logger.DefaultLogger.LogPerformanceData();
-            base.After(methodUnderTest);
-        }
     }
 }
