@@ -12,7 +12,6 @@
 // See the License for the specific language governing permissions and
 // limitations under the License.
 
-using Google.Cloud.ClientTesting;
 using Google.Cloud.Spanner.Data.CommonTesting;
 using System;
 using System.Threading.Tasks;
@@ -24,6 +23,7 @@ namespace Google.Cloud.Spanner.Data.IntegrationTests
     // We don't need a database at all in fact - we just need connection strings. This is the
     // easiest way of doing that though (and we can use the database name as a prefix, handily)
     [Collection(nameof(SpannerDatabaseFixture))]
+    [CommonTestDiagnostics]
     public class AdminTests
     {
         private readonly SpannerDatabaseFixture _fixture;

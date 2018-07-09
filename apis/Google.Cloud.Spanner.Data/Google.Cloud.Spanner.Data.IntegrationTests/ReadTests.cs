@@ -13,7 +13,6 @@
 // limitations under the License.
 
 using Google.Apis.Auth.OAuth2;
-using Google.Cloud.ClientTesting;
 using Google.Cloud.Spanner.Data.CommonTesting;
 using Google.Cloud.Spanner.V1;
 using Grpc.Auth;
@@ -28,6 +27,7 @@ using Xunit.Abstractions;
 namespace Google.Cloud.Spanner.Data.IntegrationTests
 {
     [Collection(nameof(ReadTableFixture))]
+    [CommonTestDiagnostics]
     public class ReadTests
     {
         private readonly ReadTableFixture _fixture;

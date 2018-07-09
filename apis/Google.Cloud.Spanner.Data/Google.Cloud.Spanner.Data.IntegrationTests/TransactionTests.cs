@@ -13,7 +13,6 @@
 // limitations under the License.
 
 using Google.Api.Gax.Grpc;
-using Google.Cloud.ClientTesting;
 using Google.Cloud.Spanner.Data.CommonTesting;
 using System;
 using System.Threading.Tasks;
@@ -22,9 +21,9 @@ using Xunit.Abstractions;
 
 namespace Google.Cloud.Spanner.Data.IntegrationTests
 {
-    [ValidatePoolBeforeAfterTest]
     [PerformanceLog]
     [Collection(nameof(TransactionTableFixture))]
+    [CommonTestDiagnostics]
     public class TransactionTests : TransactionTestBase
     {
         public TransactionTests(TransactionTableFixture fixture, ITestOutputHelper outputHelper)
