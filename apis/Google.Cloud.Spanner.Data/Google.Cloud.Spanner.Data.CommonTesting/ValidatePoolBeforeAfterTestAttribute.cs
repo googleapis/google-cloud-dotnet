@@ -12,14 +12,13 @@
 // See the License for the specific language governing permissions and
 // limitations under the License.
 
-using Google.Cloud.Spanner.Data;
 using Google.Cloud.Spanner.V1;
 using System.Reflection;
 using System.Text;
 using Xunit;
 using Xunit.Sdk;
 
-namespace Google.Cloud.ClientTesting
+namespace Google.Cloud.Spanner.Data.CommonTesting
 {
     /// <summary>
     /// When applied to a class or method, each test has the state of the client and session pools checked
