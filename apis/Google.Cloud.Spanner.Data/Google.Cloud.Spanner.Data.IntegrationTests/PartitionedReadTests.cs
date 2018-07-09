@@ -31,10 +31,6 @@ namespace Google.Cloud.Spanner.Data.IntegrationTests
         public PartitionedReadTests(PartitionedReadTableFixture fixture, ITestOutputHelper outputHelper)
         {
             _fixture = fixture;
-#if LoggingOn
-            SpannerConnection.ConnectionPoolOptions.LogLevel = LogLevel.Debug;
-            SpannerConnection.ConnectionPoolOptions.LogPerformanceTraces = true;
-#endif
             TestLogger.TestOutputHelper = outputHelper;
         }
 

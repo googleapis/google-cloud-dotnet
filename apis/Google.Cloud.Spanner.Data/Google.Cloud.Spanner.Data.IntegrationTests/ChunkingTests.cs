@@ -43,11 +43,6 @@ namespace Google.Cloud.Spanner.Data.IntegrationTests
         public ChunkingTests(ChunkingTableFixture fixture, ITestOutputHelper outputHelper)
         {
             _fixture = fixture;
-#if LoggingOn
-            SpannerConnection.ConnectionPoolOptions.LogLevel = LogLevel.Debug;
-            SpannerConnection.ConnectionPoolOptions.LogPerformanceTraces = true;
-            SpannerConnection.ConnectionPoolOptions.PerformanceTraceLogInterval = 1000;
-#endif
             TestLogger.TestOutputHelper = outputHelper;
             _seed = Environment.TickCount;
             _random = new Random(_seed);
