@@ -35,10 +35,6 @@ namespace Google.Cloud.Spanner.Data.IntegrationTests
         public ReadTests(ReadTableFixture fixture, ITestOutputHelper outputHelper)
         {
             _fixture = fixture;
-#if LoggingOn
-            SpannerConnection.ConnectionPoolOptions.LogLevel = LogLevel.Debug;
-            SpannerConnection.ConnectionPoolOptions.LogPerformanceTraces = true;
-#endif
             TestLogger.TestOutputHelper = outputHelper;
         }
 
