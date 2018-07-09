@@ -12,20 +12,20 @@
 // See the License for the specific language governing permissions and
 // limitations under the License.
 
+using Google.Cloud.Spanner.Data.CommonTesting;
+using Google.Cloud.Spanner.V1.Internal.Logging;
 using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
-using Google.Cloud.ClientTesting;
-using Google.Cloud.Spanner.Data.CommonTesting;
-using Google.Cloud.Spanner.V1.Internal.Logging;
 using Xunit;
 using Xunit.Abstractions;
 
 namespace Google.Cloud.Spanner.Data.IntegrationTests
 {
     [Collection(nameof(ChunkingTableFixture))]
+    [CommonTestDiagnostics]
     public class ChunkingTests
     {
         private readonly ChunkingTableFixture _fixture;

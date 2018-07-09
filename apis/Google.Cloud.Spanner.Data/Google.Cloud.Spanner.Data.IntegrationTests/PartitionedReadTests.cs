@@ -12,7 +12,6 @@
 // See the License for the specific language governing permissions and
 // limitations under the License.
 
-using Google.Cloud.ClientTesting;
 using Google.Cloud.Spanner.Data.CommonTesting;
 using System.Linq;
 using System.Threading;
@@ -23,6 +22,7 @@ using Xunit.Abstractions;
 namespace Google.Cloud.Spanner.Data.IntegrationTests
 {
     [Collection(nameof(PartitionedReadTableFixture))]
+    [CommonTestDiagnostics]
     public class PartitionedReadTests
     {
         private readonly PartitionedReadTableFixture _fixture;

@@ -12,7 +12,6 @@
 // See the License for the specific language governing permissions and
 // limitations under the License.
 
-using Google.Cloud.ClientTesting;
 using Google.Cloud.Spanner.Data.CommonTesting;
 using System;
 using System.Collections.Generic;
@@ -23,6 +22,7 @@ using Xunit.Abstractions;
 namespace Google.Cloud.Spanner.Data.IntegrationTests
 {
     [Collection(nameof(SpannerDatabaseFixture))]
+    [CommonTestDiagnostics]
     public class BindingTests
     {
         private readonly SpannerDatabaseFixture _fixture;

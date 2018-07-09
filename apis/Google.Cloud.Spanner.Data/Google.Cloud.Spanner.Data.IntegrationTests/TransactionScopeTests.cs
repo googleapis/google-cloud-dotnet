@@ -13,7 +13,6 @@
 // limitations under the License.
 
 #if !NETCOREAPP1_0
-using Google.Cloud.ClientTesting;
 using System.Threading.Tasks;
 using System.Transactions;
 using Xunit;
@@ -24,9 +23,9 @@ namespace Google.Cloud.Spanner.Data.IntegrationTests
     /// <summary>
     /// Tests for the .NET ambient transaction management implementation.
     /// </summary>
-    [ValidatePoolBeforeAfterTest]
     [PerformanceLog]
     [Collection(nameof(TransactionTableFixture))]
+    [CommonTestDiagnostics]
     public class TransactionScopeTests : TransactionTestBase
     {
         public TransactionScopeTests(TransactionTableFixture fixture, ITestOutputHelper outputHelper)

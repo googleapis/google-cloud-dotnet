@@ -26,6 +26,7 @@ namespace Google.Cloud.Spanner.Data.IntegrationTests
     /// Integration tests to ensure that <see cref="SpannerDataAdapter"/> works properly.
     /// </summary>
     [Collection(nameof(DataAdapterTableFixture))]
+    [CommonTestDiagnostics]
     public class DataAdapterTests
     {
         private DataAdapterTableFixture _fixture;

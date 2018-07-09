@@ -13,6 +13,7 @@
 // limitations under the License.
 
 #if !NETCOREAPP1_0
+using Google.Cloud.Spanner.Data.CommonTesting;
 using System.Collections.Generic;
 using System.Threading.Tasks;
 using Xunit;
@@ -20,6 +21,7 @@ using Xunit;
 namespace Google.Cloud.Spanner.Data.IntegrationTests
 {
     [Collection(nameof(AllTypesTableFixture))]
+    [CommonTestDiagnostics]
     public class GetSchemaTableTests
     {
         private readonly AllTypesTableFixture _fixture;

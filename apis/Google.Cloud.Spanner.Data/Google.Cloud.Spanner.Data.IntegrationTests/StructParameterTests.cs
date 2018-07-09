@@ -12,12 +12,14 @@
 // See the License for the specific language governing permissions and
 // limitations under the License.
 
+using Google.Cloud.Spanner.Data.CommonTesting;
 using System.Threading.Tasks;
 using Xunit;
 
 namespace Google.Cloud.Spanner.Data.IntegrationTests
 {
     [Collection(nameof(SpannerDatabaseFixture))]
+    [CommonTestDiagnostics]
     public class StructParameterTests
     {
         private readonly SpannerDatabaseFixture _fixture;
