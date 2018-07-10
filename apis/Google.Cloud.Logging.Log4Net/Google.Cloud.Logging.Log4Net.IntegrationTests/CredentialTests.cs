@@ -25,7 +25,7 @@ namespace Google.Cloud.Logging.Log4Net.IntegrationTests
     {
         public CredentialTests(Log4NetFixture fixture) => _fixture = fixture;
 
-        private Log4NetFixture _fixture;
+        private readonly Log4NetFixture _fixture;
 
         [Fact]
         public void LoadCredentialFromFile()
