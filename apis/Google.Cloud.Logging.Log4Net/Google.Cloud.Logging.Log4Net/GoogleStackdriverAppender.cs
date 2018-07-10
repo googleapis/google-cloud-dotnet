@@ -138,6 +138,13 @@ namespace Google.Cloud.Logging.Log4Net
         /// <inheritdoc/>
         public override void ActivateOptions()
         {
+            // Validate configuration
+            GaxPreconditions.CheckState(string.IsNullOrWhiteSpace(CredentialFile) || string.IsNullOrWhiteSpace(CredentialJson),
+                $"{nameof(CredentialFile)} and {nameof(CredentialJson)} must not both be set.");
+            GaxPreconditions.CheckState(LogId != null, $"{nameof(LogId)} must be set.");
+            GaxPreconditions.CheckState(MaxUploadBatchSize > 0, $"{nameof(MaxUploadBatchSize)} must be > 0");
+            GaxPreconditions.CheckEnumValue<LocalQueueType>(LocalQueueType, nameof(LocalQueueType));
+
             base.ActivateOptions();
 
             // Initialise services if not already initialised for testing
@@ -151,10 +158,6 @@ namespace Google.Cloud.Logging.Log4Net
             ProjectId = string.IsNullOrWhiteSpace(ProjectId) ? null : ProjectId;
             LogId = string.IsNullOrWhiteSpace(LogId) ? null : LogId;
 
-            // Validate configuration
-            GaxPreconditions.CheckState(LogId != null, $"{nameof(LogId)} must be set.");
-            GaxPreconditions.CheckState(MaxUploadBatchSize > 0, $"{nameof(MaxUploadBatchSize)} must be > 0");
-            GaxPreconditions.CheckEnumValue<LocalQueueType>(LocalQueueType, nameof(LocalQueueType));
             switch (LocalQueueType)
             {
                 case LocalQueueType.Memory:
@@ -203,7 +206,7 @@ namespace Google.Cloud.Logging.Log4Net
 
         private LoggingServiceV2Client BuildLoggingServiceClient()
         {
-            GoogleCredential credential = GetCredentialFromFile();
+            GoogleCredential credential = GetCredentialFromConfiguration();
             if(credential == null)
             {
                 return LoggingServiceV2Client.Create();
@@ -218,20 +221,20 @@ namespace Google.Cloud.Logging.Log4Net
             return LoggingServiceV2Client.Create(channel);
         }
 
-        private GoogleCredential GetCredentialFromFile()
+        private GoogleCredential GetCredentialFromConfiguration()
         {
-            if(string.IsNullOrWhiteSpace(CredentialFile))
+            var credential =
+                !string.IsNullOrWhiteSpace(CredentialFile) ? GoogleCredential.FromFile(CredentialFile) :
+                !string.IsNullOrWhiteSpace(CredentialJson) ? GoogleCredential.FromJson(CredentialJson) :
+                null;
+            if (credential == null)
             {
                 return null;
             }
-
-            GoogleCredential credential = GoogleCredential.FromFile(CredentialFile);
-            
             if (credential.IsCreateScopedRequired)
             {
                 credential = credential.CreateScoped(s_oAuthScopes);
             }
-
             return credential;
         }
 

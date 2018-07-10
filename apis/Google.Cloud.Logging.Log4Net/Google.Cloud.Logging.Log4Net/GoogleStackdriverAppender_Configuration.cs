@@ -13,10 +13,6 @@
 // limitations under the License.
 
 using Google.Api.Gax;
-using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Threading.Tasks;
 
 namespace Google.Cloud.Logging.Log4Net
 {
@@ -233,13 +229,26 @@ namespace Google.Cloud.Logging.Log4Net
 
         private string _credentialFile;
         /// <summary>
-        /// The file path of a service account JSON file to use for authenitication.
+        /// The file path of a service account JSON file to use for authentication.
         /// Not necessary if running on GCE or GAE or if the GOOGLE_APPLICATION_CREDENTIALS environment variable has been set.
+        /// Must not be set if <see cref="CredentialJson"/> is set.
         /// </summary>
         public string CredentialFile
         {
             get => _credentialFile;
             set => _credentialFile = ThrowIfActivated(value, nameof(CredentialFile));
+        }
+
+        private string _credentialJson;
+        /// <summary>
+        /// JSON credential for authentication.
+        /// Not necessary if running on GCE or GAE or if the GOOGLE_APPLICATION_CREDENTIALS environment variable has been set.
+        /// Must not be set if <see cref="CredentialFile"/> is set.
+        /// </summary>
+        public string CredentialJson
+        {
+            get => _credentialJson;
+            set => _credentialJson = ThrowIfActivated(value, nameof(CredentialJson));
         }
 
         /// <summary>

@@ -179,6 +179,17 @@ namespace Google.Cloud.Logging.Log4Net.Tests
             .ToString(GoogleStackdriverAppender.s_lostDateTimeFmt);
 
         [Fact]
+        public void InvalidOptions_MultipleCredentials()
+        {
+            var appender = new GoogleStackdriverAppender
+            {
+                CredentialFile = "not_empty",
+                CredentialJson = "not_empty"
+            };
+            Assert.Throws<InvalidOperationException>(() => appender.ActivateOptions());
+        }
+
+        [Fact]
         public async Task PostActivationChangeThrow()
         {
             await RunTestWorkingServer(appender =>
@@ -189,6 +200,7 @@ namespace Google.Cloud.Logging.Log4Net.Tests
                 Assert.Throws<InvalidOperationException>(() => appender.ProjectId = "");
                 Assert.Throws<InvalidOperationException>(() => appender.LogId = "");
                 Assert.Throws<InvalidOperationException>(() => appender.CredentialFile = "");
+                Assert.Throws<InvalidOperationException>(() => appender.CredentialJson = "");
                 Assert.Throws<InvalidOperationException>(() => appender.MaxUploadBatchSize = 0);
                 Assert.Throws<InvalidOperationException>(() => appender.LocalQueueType = LocalQueueType.Memory);
                 Assert.Throws<InvalidOperationException>(() => appender.MaxMemorySize = 0);
@@ -214,6 +226,7 @@ namespace Google.Cloud.Logging.Log4Net.Tests
             appender.ProjectId = "";
             appender.LogId = "";
             appender.CredentialFile = "";
+            appender.CredentialJson = "";
             appender.MaxUploadBatchSize = 0;
             appender.LocalQueueType = LocalQueueType.Memory;
             appender.MaxMemorySize = 0;
