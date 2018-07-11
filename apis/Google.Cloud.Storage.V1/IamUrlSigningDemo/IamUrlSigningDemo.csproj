@@ -1,0 +1,13 @@
+﻿<Project Sdk="Microsoft.NET.Sdk">
+
+  <PropertyGroup>
+    <OutputType>Exe</OutputType>
+    <TargetFramework>netcoreapp2.0</TargetFramework>
+  </PropertyGroup>
+
+  <ItemGroup>
+    <ProjectReference Include="../Google.Cloud.Storage.V1/Google.Cloud.Storage.V1.csproj" />
+    <PackageReference Include="Google.Apis.Iam.v1" Version="1.34.0.1240" />
+  </ItemGroup>
+
+</Project>

@@ -50,12 +50,9 @@ namespace Google.Cloud.Storage.V1
 
         private static readonly DateTimeOffset UnixEpoch = new DateTimeOffset(new DateTime(1970, 1, 1, 0, 0, 0, DateTimeKind.Utc), TimeSpan.Zero);
 
-        private readonly ServiceAccountCredential _credentials;
+        private readonly IBlobSigner _blobSigner;
 
-        private UrlSigner(ServiceAccountCredential credentials)
-        {
-            _credentials = credentials;
-        }
+        private UrlSigner(IBlobSigner blobSigner) => _blobSigner = blobSigner;
 
         /// <summary>
         /// Creates a new <see cref="UrlSigner"/> instance for a service account.
@@ -93,7 +90,18 @@ namespace Google.Cloud.Storage.V1
         public static UrlSigner FromServiceAccountCredential(ServiceAccountCredential credential)
         {
             GaxPreconditions.CheckNotNull(credential, nameof(credential));
-            return new UrlSigner(credential);
+            return new UrlSigner(new ServiceAccountCredentialBlobSigner(credential));
+        }
+
+        /// <summary>
+        /// 
+        /// </summary>
+        /// <param name="signer"></param>
+        /// <returns></returns>
+        public static UrlSigner FromBlobSigner(IBlobSigner signer)
+        {
+            GaxPreconditions.CheckNotNull(signer, nameof(signer));
+            return new UrlSigner(signer);
         }
 
         /// <summary>
@@ -334,9 +342,9 @@ namespace Google.Cloud.Storage.V1
                 header => $"{header.Key}:{string.Join(", ", header.Value)}"));
             signatureLines.Add(resourcePath);
 
-            var signature = _credentials.CreateSignature(Encoding.UTF8.GetBytes(string.Join("\n", signatureLines)));
+            var signature = _blobSigner.CreateSignature(Encoding.UTF8.GetBytes(string.Join("\n", signatureLines)));
 
-            var queryParameters = new List<string> { $"GoogleAccessId={_credentials.Id}" };
+            var queryParameters = new List<string> { $"GoogleAccessId={_blobSigner.Id}" };
             if (expiryUnixSeconds != null)
             {
                 queryParameters.Add($"Expires={expiryUnixSeconds}");
@@ -415,6 +423,36 @@ namespace Google.Cloud.Storage.V1
                 return values.FirstOrDefault();
             }
             return null;
+        }
+
+        /// <summary>
+        /// 
+        /// </summary>
+        public interface IBlobSigner
+        {
+            /// <summary>
+            /// 
+            /// </summary>
+            /// <param name="data"></param>
+            /// <returns></returns>
+            string CreateSignature(byte[] data);
+
+            /// <summary>
+            /// 
+            /// </summary>
+            string Id { get; }
+        }
+
+        private class ServiceAccountCredentialBlobSigner : IBlobSigner
+        {
+            private readonly ServiceAccountCredential _credential;
+
+            internal ServiceAccountCredentialBlobSigner(ServiceAccountCredential credential) =>
+                _credential = credential;
+
+            public string Id => _credential.Id;
+
+            public string CreateSignature(byte[] data) => _credential.CreateSignature(data);
         }
     }
 }
