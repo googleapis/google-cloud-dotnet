@@ -18,6 +18,8 @@ using System.Collections.Generic;
 using System.IO;
 using System.Net.Http;
 using System.Security.Cryptography;
+using System.Threading;
+using System.Threading.Tasks;
 using Xunit;
 
 #if NETCOREAPP1_0
@@ -73,6 +75,10 @@ namespace Google.Cloud.Storage.V1.Tests
             signer.Sign("bucketname", null, TimeSpan.FromDays(1), null);
             signer.Sign("bucketname", null, null, null, null, null);
             signer.Sign("bucketname", "OBJECTNAME", null, null, null, null);
+            // Our UrlSigner is entirely synchronous - it's fine to just wait
+            signer.SignAsync("bucketname", null, TimeSpan.FromDays(1), request: null).Wait();
+            signer.SignAsync("bucketname", null, null, null, null, null).Wait();
+            signer.SignAsync("bucketname", "OBJECTNAME", null, null, null, null).Wait();
         }
 
         [Fact]
@@ -122,10 +128,45 @@ namespace Google.Cloud.Storage.V1.Tests
             Assert.Equal(url1, url2);
         }
 
+        [Fact]
+        public void BlobSignerSync()
+        {
+            var signer = UrlSigner.FromBlobSigner(new FakeBlobSigner());
+            var bucketName = "bucket-name";
+            var objectName = "object-name";
+            var expiration = new DateTime(1970, 1, 1, 0, 0, 30, DateTimeKind.Utc);
+            var url = signer.Sign(bucketName, objectName, expiration);
+            Assert.Equal("https://storage.googleapis.com/bucket-name/object-name?GoogleAccessId=FakeId&Expires=30&Signature=AAA%3D", url);
+        }
+
+        [Fact]
+        public async Task BlobSignerAsync()
+        {
+            var signer = UrlSigner.FromBlobSigner(new FakeBlobSigner());
+            var bucketName = "bucket-name";
+            var objectName = "object-name";
+            var expiration = new DateTime(1970, 1, 1, 0, 0, 30, DateTimeKind.Utc);
+            var url = await signer.SignAsync(bucketName, objectName, expiration);
+            Assert.Equal("https://storage.googleapis.com/bucket-name/object-name?GoogleAccessId=FakeId&Expires=30&Signature=BBB%3D", url);
+        }
+
         private static UrlSigner CreateSigner() =>
             UrlSigner.FromServiceAccountCredential(new ServiceAccountCredential(new ServiceAccountCredential.Initializer("test")
             {
                 Key = (RsaKey)RSA.Create()
             }));
+
+        private class FakeBlobSigner : UrlSigner.IBlobSigner
+        {
+            public string Id => "FakeId";
+
+            public string CreateSignature(byte[] data) => "AAA=";
+
+            public async Task<string> CreateSignatureAsync(byte[] data, CancellationToken cancellationToken)
+            {
+                await Task.Yield();
+                return "BBB=";
+            }
+        }
     }
 }

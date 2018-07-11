@@ -44,6 +44,34 @@ Or write-only access to put specific object content into a bucket:
 
 [!code-cs[](obj/snippets/Google.Cloud.Storage.V1.UrlSigner.txt#SignedURLPut)]
 
+### Signing URLs without a service account credential file
+
+If you need to sign URLs but don't have a full service account
+credential file (with private keys) available, you can create a
+`UrlSigner.IBlobSigner` implementation to perform the signing part.
+The most common implementation of this is likely to be to use the
+IAM service to perform the signing, with the
+[Google.Apis.Iam.v1](https://www.nuget.org/packages/Google.Apis.Iam.v1/)
+package. Here's a sample implementation:
+
+[!code-cs[](obj/snippets/Google.Cloud.Storage.V1.UrlSigner.txt#IamServiceBlobSigner)]
+
+(We may make this available in its own package at some point in the
+future.)
+
+To make use of this, the account making the request needs the
+`iam.serviceAccounts.signBlob` permission, which is usually granted
+via the "Service Account Token Creator" role.
+
+Here's an example showing how you could use this to sign a
+URL on behalf of the default Compute Engine credential on an
+instance. (This example will only work when running on Google Cloud
+Platform, as it relies on information from the metadata server.) If
+you want to use a different service account, you could include the
+account ID as part of your application configuration.
+
+[!code-cs[](obj/snippets/Google.Cloud.Storage.V1.UrlSigner.txt#IamServiceBlobSignerUsage)]
+
 ## Upload URIs
 
 In some cases, it may not make sense for client applications to have permissions
