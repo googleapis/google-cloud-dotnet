@@ -16,7 +16,9 @@
 
 using gax = Google.Api.Gax;
 using gaxgrpc = Google.Api.Gax.Grpc;
+using gaxres = Google.Api.Gax.ResourceNames;
 using iam = Google.Cloud.Iam.V1;
+using gcl = Google.Cloud.Location;
 using pb = Google.Protobuf;
 using pbwkt = Google.Protobuf.WellKnownTypes;
 using grpccore = Grpc.Core;
@@ -70,6 +72,8 @@ namespace Google.Cloud.Tasks.V2Beta2
             RenewLeaseSettings = existing.RenewLeaseSettings;
             CancelLeaseSettings = existing.CancelLeaseSettings;
             RunTaskSettings = existing.RunTaskSettings;
+            ListLocationsSettings = existing.ListLocationsSettings;
+            GetLocationSettings = existing.GetLocationSettings;
             OnCopy(existing);
         }
 
@@ -725,6 +729,66 @@ namespace Google.Cloud.Tasks.V2Beta2
                 timeoutBackoff: GetDefaultTimeoutBackoff(),
                 totalExpiration: gax::Expiration.FromTimeout(sys::TimeSpan.FromMilliseconds(600000)),
                 retryFilter: NonIdempotentRetryFilter
+            )));
+
+        /// <summary>
+        /// <see cref="gaxgrpc::CallSettings"/> for synchronous and asynchronous calls to
+        /// <c>CloudTasksClient.ListLocations</c> and <c>CloudTasksClient.ListLocationsAsync</c>.
+        /// </summary>
+        /// <remarks>
+        /// The default <c>CloudTasksClient.ListLocations</c> and
+        /// <c>CloudTasksClient.ListLocationsAsync</c> <see cref="gaxgrpc::RetrySettings"/> are:
+        /// <list type="bullet">
+        /// <item><description>Initial retry delay: 100 milliseconds</description></item>
+        /// <item><description>Retry delay multiplier: 1.3</description></item>
+        /// <item><description>Retry maximum delay: 60000 milliseconds</description></item>
+        /// <item><description>Initial timeout: 20000 milliseconds</description></item>
+        /// <item><description>Timeout multiplier: 1.0</description></item>
+        /// <item><description>Timeout maximum delay: 20000 milliseconds</description></item>
+        /// </list>
+        /// Retry will be attempted on the following response status codes:
+        /// <list>
+        /// <item><description><see cref="grpccore::StatusCode.DeadlineExceeded"/></description></item>
+        /// <item><description><see cref="grpccore::StatusCode.Unavailable"/></description></item>
+        /// </list>
+        /// Default RPC expiration is 600000 milliseconds.
+        /// </remarks>
+        public gaxgrpc::CallSettings ListLocationsSettings { get; set; } = gaxgrpc::CallSettings.FromCallTiming(
+            gaxgrpc::CallTiming.FromRetry(new gaxgrpc::RetrySettings(
+                retryBackoff: GetDefaultRetryBackoff(),
+                timeoutBackoff: GetDefaultTimeoutBackoff(),
+                totalExpiration: gax::Expiration.FromTimeout(sys::TimeSpan.FromMilliseconds(600000)),
+                retryFilter: IdempotentRetryFilter
+            )));
+
+        /// <summary>
+        /// <see cref="gaxgrpc::CallSettings"/> for synchronous and asynchronous calls to
+        /// <c>CloudTasksClient.GetLocation</c> and <c>CloudTasksClient.GetLocationAsync</c>.
+        /// </summary>
+        /// <remarks>
+        /// The default <c>CloudTasksClient.GetLocation</c> and
+        /// <c>CloudTasksClient.GetLocationAsync</c> <see cref="gaxgrpc::RetrySettings"/> are:
+        /// <list type="bullet">
+        /// <item><description>Initial retry delay: 100 milliseconds</description></item>
+        /// <item><description>Retry delay multiplier: 1.3</description></item>
+        /// <item><description>Retry maximum delay: 60000 milliseconds</description></item>
+        /// <item><description>Initial timeout: 20000 milliseconds</description></item>
+        /// <item><description>Timeout multiplier: 1.0</description></item>
+        /// <item><description>Timeout maximum delay: 20000 milliseconds</description></item>
+        /// </list>
+        /// Retry will be attempted on the following response status codes:
+        /// <list>
+        /// <item><description><see cref="grpccore::StatusCode.DeadlineExceeded"/></description></item>
+        /// <item><description><see cref="grpccore::StatusCode.Unavailable"/></description></item>
+        /// </list>
+        /// Default RPC expiration is 600000 milliseconds.
+        /// </remarks>
+        public gaxgrpc::CallSettings GetLocationSettings { get; set; } = gaxgrpc::CallSettings.FromCallTiming(
+            gaxgrpc::CallTiming.FromRetry(new gaxgrpc::RetrySettings(
+                retryBackoff: GetDefaultRetryBackoff(),
+                timeoutBackoff: GetDefaultTimeoutBackoff(),
+                totalExpiration: gax::Expiration.FromTimeout(sys::TimeSpan.FromMilliseconds(600000)),
+                retryFilter: IdempotentRetryFilter
             )));
 
         /// <summary>
@@ -4530,6 +4594,226 @@ namespace Google.Cloud.Tasks.V2Beta2
             throw new sys::NotImplementedException();
         }
 
+        /// <summary>
+        /// Lists information about the supported locations for this service.
+        /// </summary>
+        /// <param name="name">
+        /// The resource that owns the locations collection, if applicable.
+        /// </param>
+        /// <param name="pageToken">
+        /// The token returned from the previous request.
+        /// A value of <c>null</c> or an empty string retrieves the first page.
+        /// </param>
+        /// <param name="pageSize">
+        /// The size of page to request. The response will not be larger than this, but may be smaller.
+        /// A value of <c>null</c> or 0 uses a server-defined page size.
+        /// </param>
+        /// <param name="callSettings">
+        /// If not null, applies overrides to this RPC call.
+        /// </param>
+        /// <returns>
+        /// A pageable asynchronous sequence of <see cref="gcl::Location"/> resources.
+        /// </returns>
+        public virtual gax::PagedAsyncEnumerable<gcl::ListLocationsResponse, gcl::Location> ListLocationsAsync(
+            gaxres::ProjectName name,
+            string pageToken = null,
+            int? pageSize = null,
+            gaxgrpc::CallSettings callSettings = null) => ListLocationsAsync(
+                new gcl::ListLocationsRequest
+                {
+                    NameAsResourceName = gax::GaxPreconditions.CheckNotNull(name, nameof(name)),
+                    PageToken = pageToken ?? "",
+                    PageSize = pageSize ?? 0,
+                },
+                callSettings);
+
+        /// <summary>
+        /// Lists information about the supported locations for this service.
+        /// </summary>
+        /// <param name="name">
+        /// The resource that owns the locations collection, if applicable.
+        /// </param>
+        /// <param name="pageToken">
+        /// The token returned from the previous request.
+        /// A value of <c>null</c> or an empty string retrieves the first page.
+        /// </param>
+        /// <param name="pageSize">
+        /// The size of page to request. The response will not be larger than this, but may be smaller.
+        /// A value of <c>null</c> or 0 uses a server-defined page size.
+        /// </param>
+        /// <param name="callSettings">
+        /// If not null, applies overrides to this RPC call.
+        /// </param>
+        /// <returns>
+        /// A pageable sequence of <see cref="gcl::Location"/> resources.
+        /// </returns>
+        public virtual gax::PagedEnumerable<gcl::ListLocationsResponse, gcl::Location> ListLocations(
+            gaxres::ProjectName name,
+            string pageToken = null,
+            int? pageSize = null,
+            gaxgrpc::CallSettings callSettings = null) => ListLocations(
+                new gcl::ListLocationsRequest
+                {
+                    NameAsResourceName = gax::GaxPreconditions.CheckNotNull(name, nameof(name)),
+                    PageToken = pageToken ?? "",
+                    PageSize = pageSize ?? 0,
+                },
+                callSettings);
+
+        /// <summary>
+        /// Lists information about the supported locations for this service.
+        /// </summary>
+        /// <param name="request">
+        /// The request object containing all of the parameters for the API call.
+        /// </param>
+        /// <param name="callSettings">
+        /// If not null, applies overrides to this RPC call.
+        /// </param>
+        /// <returns>
+        /// A pageable asynchronous sequence of <see cref="gcl::Location"/> resources.
+        /// </returns>
+        public virtual gax::PagedAsyncEnumerable<gcl::ListLocationsResponse, gcl::Location> ListLocationsAsync(
+            gcl::ListLocationsRequest request,
+            gaxgrpc::CallSettings callSettings = null)
+        {
+            throw new sys::NotImplementedException();
+        }
+
+        /// <summary>
+        /// Lists information about the supported locations for this service.
+        /// </summary>
+        /// <param name="request">
+        /// The request object containing all of the parameters for the API call.
+        /// </param>
+        /// <param name="callSettings">
+        /// If not null, applies overrides to this RPC call.
+        /// </param>
+        /// <returns>
+        /// A pageable sequence of <see cref="gcl::Location"/> resources.
+        /// </returns>
+        public virtual gax::PagedEnumerable<gcl::ListLocationsResponse, gcl::Location> ListLocations(
+            gcl::ListLocationsRequest request,
+            gaxgrpc::CallSettings callSettings = null)
+        {
+            throw new sys::NotImplementedException();
+        }
+
+        /// <summary>
+        /// Gets information about a location.
+        /// </summary>
+        /// <param name="name">
+        /// Resource name for the location.
+        /// </param>
+        /// <param name="callSettings">
+        /// If not null, applies overrides to this RPC call.
+        /// </param>
+        /// <returns>
+        /// A Task containing the RPC response.
+        /// </returns>
+        public virtual stt::Task<gcl::Location> GetLocationAsync(
+            gax::IResourceName name,
+            gaxgrpc::CallSettings callSettings = null) => GetLocationAsync(
+                new gcl::GetLocationRequest
+                {
+                    NameAsResourceName = gax::GaxPreconditions.CheckNotNull(name, nameof(name)),
+                },
+                callSettings);
+
+        /// <summary>
+        /// Gets information about a location.
+        /// </summary>
+        /// <param name="name">
+        /// Resource name for the location.
+        /// </param>
+        /// <param name="cancellationToken">
+        /// A <see cref="st::CancellationToken"/> to use for this RPC.
+        /// </param>
+        /// <returns>
+        /// A Task containing the RPC response.
+        /// </returns>
+        public virtual stt::Task<gcl::Location> GetLocationAsync(
+            gax::IResourceName name,
+            st::CancellationToken cancellationToken) => GetLocationAsync(
+                name,
+                gaxgrpc::CallSettings.FromCancellationToken(cancellationToken));
+
+        /// <summary>
+        /// Gets information about a location.
+        /// </summary>
+        /// <param name="name">
+        /// Resource name for the location.
+        /// </param>
+        /// <param name="callSettings">
+        /// If not null, applies overrides to this RPC call.
+        /// </param>
+        /// <returns>
+        /// The RPC response.
+        /// </returns>
+        public virtual gcl::Location GetLocation(
+            gax::IResourceName name,
+            gaxgrpc::CallSettings callSettings = null) => GetLocation(
+                new gcl::GetLocationRequest
+                {
+                    NameAsResourceName = gax::GaxPreconditions.CheckNotNull(name, nameof(name)),
+                },
+                callSettings);
+
+        /// <summary>
+        /// Gets information about a location.
+        /// </summary>
+        /// <param name="request">
+        /// The request object containing all of the parameters for the API call.
+        /// </param>
+        /// <param name="callSettings">
+        /// If not null, applies overrides to this RPC call.
+        /// </param>
+        /// <returns>
+        /// A Task containing the RPC response.
+        /// </returns>
+        public virtual stt::Task<gcl::Location> GetLocationAsync(
+            gcl::GetLocationRequest request,
+            gaxgrpc::CallSettings callSettings = null)
+        {
+            throw new sys::NotImplementedException();
+        }
+
+        /// <summary>
+        /// Gets information about a location.
+        /// </summary>
+        /// <param name="request">
+        /// The request object containing all of the parameters for the API call.
+        /// </param>
+        /// <param name="cancellationToken">
+        /// A <see cref="st::CancellationToken"/> to use for this RPC.
+        /// </param>
+        /// <returns>
+        /// A Task containing the RPC response.
+        /// </returns>
+        public virtual stt::Task<gcl::Location> GetLocationAsync(
+            gcl::GetLocationRequest request,
+            st::CancellationToken cancellationToken) => GetLocationAsync(
+                request,
+                gaxgrpc::CallSettings.FromCancellationToken(cancellationToken));
+
+        /// <summary>
+        /// Gets information about a location.
+        /// </summary>
+        /// <param name="request">
+        /// The request object containing all of the parameters for the API call.
+        /// </param>
+        /// <param name="callSettings">
+        /// If not null, applies overrides to this RPC call.
+        /// </param>
+        /// <returns>
+        /// The RPC response.
+        /// </returns>
+        public virtual gcl::Location GetLocation(
+            gcl::GetLocationRequest request,
+            gaxgrpc::CallSettings callSettings = null)
+        {
+            throw new sys::NotImplementedException();
+        }
+
     }
 
     /// <summary>
@@ -4557,6 +4841,8 @@ namespace Google.Cloud.Tasks.V2Beta2
         private readonly gaxgrpc::ApiCall<RenewLeaseRequest, Task> _callRenewLease;
         private readonly gaxgrpc::ApiCall<CancelLeaseRequest, Task> _callCancelLease;
         private readonly gaxgrpc::ApiCall<RunTaskRequest, Task> _callRunTask;
+        private readonly gaxgrpc::ApiCall<gcl::ListLocationsRequest, gcl::ListLocationsResponse> _callListLocations;
+        private readonly gaxgrpc::ApiCall<gcl::GetLocationRequest, gcl::Location> _callGetLocation;
 
         /// <summary>
         /// Constructs a client wrapper for the CloudTasks service, with the specified gRPC client and settings.
@@ -4568,6 +4854,7 @@ namespace Google.Cloud.Tasks.V2Beta2
             GrpcClient = grpcClient;
             CloudTasksSettings effectiveSettings = settings ?? CloudTasksSettings.GetDefault();
             gaxgrpc::ClientHelper clientHelper = new gaxgrpc::ClientHelper(effectiveSettings);
+            gcl::Locations.LocationsClient grpcLocationsClient = grpcClient.CreateLocationsClient();
             _callListQueues = clientHelper.BuildApiCall<ListQueuesRequest, ListQueuesResponse>(
                 GrpcClient.ListQueuesAsync, GrpcClient.ListQueues, effectiveSettings.ListQueuesSettings)
                 .WithCallSettingsOverlay(request => gaxgrpc::CallSettings.FromHeader("x-goog-request-params", $"parent={request.Parent}"));
@@ -4628,6 +4915,12 @@ namespace Google.Cloud.Tasks.V2Beta2
             _callRunTask = clientHelper.BuildApiCall<RunTaskRequest, Task>(
                 GrpcClient.RunTaskAsync, GrpcClient.RunTask, effectiveSettings.RunTaskSettings)
                 .WithCallSettingsOverlay(request => gaxgrpc::CallSettings.FromHeader("x-goog-request-params", $"name={request.Name}"));
+            _callListLocations = clientHelper.BuildApiCall<gcl::ListLocationsRequest, gcl::ListLocationsResponse>(
+                grpcLocationsClient.ListLocationsAsync, grpcLocationsClient.ListLocations, effectiveSettings.ListLocationsSettings)
+                .WithCallSettingsOverlay(request => gaxgrpc::CallSettings.FromHeader("x-goog-request-params", $"name={request.Name}"));
+            _callGetLocation = clientHelper.BuildApiCall<gcl::GetLocationRequest, gcl::Location>(
+                grpcLocationsClient.GetLocationAsync, grpcLocationsClient.GetLocation, effectiveSettings.GetLocationSettings)
+                .WithCallSettingsOverlay(request => gaxgrpc::CallSettings.FromHeader("x-goog-request-params", $"name={request.Name}"));
             Modify_ApiCall(ref _callListQueues);
             Modify_ListQueuesApiCall(ref _callListQueues);
             Modify_ApiCall(ref _callGetQueue);
@@ -4668,6 +4961,10 @@ namespace Google.Cloud.Tasks.V2Beta2
             Modify_CancelLeaseApiCall(ref _callCancelLease);
             Modify_ApiCall(ref _callRunTask);
             Modify_RunTaskApiCall(ref _callRunTask);
+            Modify_ApiCall(ref _callListLocations);
+            Modify_ListLocationsApiCall(ref _callListLocations);
+            Modify_ApiCall(ref _callGetLocation);
+            Modify_GetLocationApiCall(ref _callGetLocation);
             OnConstruction(grpcClient, effectiveSettings, clientHelper);
         }
 
@@ -4701,6 +4998,8 @@ namespace Google.Cloud.Tasks.V2Beta2
         partial void Modify_RenewLeaseApiCall(ref gaxgrpc::ApiCall<RenewLeaseRequest, Task> call);
         partial void Modify_CancelLeaseApiCall(ref gaxgrpc::ApiCall<CancelLeaseRequest, Task> call);
         partial void Modify_RunTaskApiCall(ref gaxgrpc::ApiCall<RunTaskRequest, Task> call);
+        partial void Modify_ListLocationsApiCall(ref gaxgrpc::ApiCall<gcl::ListLocationsRequest, gcl::ListLocationsResponse> call);
+        partial void Modify_GetLocationApiCall(ref gaxgrpc::ApiCall<gcl::GetLocationRequest, gcl::Location> call);
         partial void OnConstruction(CloudTasks.CloudTasksClient grpcClient, CloudTasksSettings effectiveSettings, gaxgrpc::ClientHelper clientHelper);
 
         /// <summary>
@@ -4731,6 +5030,8 @@ namespace Google.Cloud.Tasks.V2Beta2
         partial void Modify_RenewLeaseRequest(ref RenewLeaseRequest request, ref gaxgrpc::CallSettings settings);
         partial void Modify_CancelLeaseRequest(ref CancelLeaseRequest request, ref gaxgrpc::CallSettings settings);
         partial void Modify_RunTaskRequest(ref RunTaskRequest request, ref gaxgrpc::CallSettings settings);
+        partial void Modify_ListLocationsRequest(ref gcl::ListLocationsRequest request, ref gaxgrpc::CallSettings settings);
+        partial void Modify_GetLocationRequest(ref gcl::GetLocationRequest request, ref gaxgrpc::CallSettings settings);
 
         /// <summary>
         /// Lists queues.
@@ -5851,6 +6152,86 @@ namespace Google.Cloud.Tasks.V2Beta2
             return _callRunTask.Sync(request, callSettings);
         }
 
+        /// <summary>
+        /// Lists information about the supported locations for this service.
+        /// </summary>
+        /// <param name="request">
+        /// The request object containing all of the parameters for the API call.
+        /// </param>
+        /// <param name="callSettings">
+        /// If not null, applies overrides to this RPC call.
+        /// </param>
+        /// <returns>
+        /// A pageable asynchronous sequence of <see cref="gcl::Location"/> resources.
+        /// </returns>
+        public override gax::PagedAsyncEnumerable<gcl::ListLocationsResponse, gcl::Location> ListLocationsAsync(
+            gcl::ListLocationsRequest request,
+            gaxgrpc::CallSettings callSettings = null)
+        {
+            Modify_ListLocationsRequest(ref request, ref callSettings);
+            return new gaxgrpc::GrpcPagedAsyncEnumerable<gcl::ListLocationsRequest, gcl::ListLocationsResponse, gcl::Location>(_callListLocations, request, callSettings);
+        }
+
+        /// <summary>
+        /// Lists information about the supported locations for this service.
+        /// </summary>
+        /// <param name="request">
+        /// The request object containing all of the parameters for the API call.
+        /// </param>
+        /// <param name="callSettings">
+        /// If not null, applies overrides to this RPC call.
+        /// </param>
+        /// <returns>
+        /// A pageable sequence of <see cref="gcl::Location"/> resources.
+        /// </returns>
+        public override gax::PagedEnumerable<gcl::ListLocationsResponse, gcl::Location> ListLocations(
+            gcl::ListLocationsRequest request,
+            gaxgrpc::CallSettings callSettings = null)
+        {
+            Modify_ListLocationsRequest(ref request, ref callSettings);
+            return new gaxgrpc::GrpcPagedEnumerable<gcl::ListLocationsRequest, gcl::ListLocationsResponse, gcl::Location>(_callListLocations, request, callSettings);
+        }
+
+        /// <summary>
+        /// Gets information about a location.
+        /// </summary>
+        /// <param name="request">
+        /// The request object containing all of the parameters for the API call.
+        /// </param>
+        /// <param name="callSettings">
+        /// If not null, applies overrides to this RPC call.
+        /// </param>
+        /// <returns>
+        /// A Task containing the RPC response.
+        /// </returns>
+        public override stt::Task<gcl::Location> GetLocationAsync(
+            gcl::GetLocationRequest request,
+            gaxgrpc::CallSettings callSettings = null)
+        {
+            Modify_GetLocationRequest(ref request, ref callSettings);
+            return _callGetLocation.Async(request, callSettings);
+        }
+
+        /// <summary>
+        /// Gets information about a location.
+        /// </summary>
+        /// <param name="request">
+        /// The request object containing all of the parameters for the API call.
+        /// </param>
+        /// <param name="callSettings">
+        /// If not null, applies overrides to this RPC call.
+        /// </param>
+        /// <returns>
+        /// The RPC response.
+        /// </returns>
+        public override gcl::Location GetLocation(
+            gcl::GetLocationRequest request,
+            gaxgrpc::CallSettings callSettings = null)
+        {
+            Modify_GetLocationRequest(ref request, ref callSettings);
+            return _callGetLocation.Sync(request, callSettings);
+        }
+
     }
 
     // Partial classes to enable page-streaming
@@ -5877,6 +6258,19 @@ namespace Google.Cloud.Tasks.V2Beta2
 
         /// <inheritdoc/>
         sc::IEnumerator sc::IEnumerable.GetEnumerator() => GetEnumerator();
+    }
+
+    // Partial Grpc class to enable gcl::Locations.LocationsClient client creation
+    public static partial class CloudTasks
+    {
+        public partial class CloudTasksClient
+        {
+            /// <summary>
+            /// Creates a new instance of <see cref="gcl::Locations.LocationsClient"/> using the same call invoker as this client.
+            /// </summary>
+            /// <returns>A new gcl::Locations.LocationsClient for the same target as this client.</returns>
+            public virtual gcl::Locations.LocationsClient CreateLocationsClient() => new gcl::Locations.LocationsClient(CallInvoker);
+        }
     }
 
 
