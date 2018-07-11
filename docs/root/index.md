@@ -62,7 +62,7 @@ Beta:
 - [Google.Cloud.PubSub.V1](Google.Cloud.PubSub.V1/index.html)
 - [Google.Cloud.Redis.V1Beta1](Google.Cloud.Redis.V1Beta1/index.html)
 - [Google.Cloud.Tasks.V2Beta2](Google.Cloud.Tasks.V2Beta2/index.html)
-- [Google.Cloud.TextToSpeech.V2](Google.Cloud.TextToSpeech.V1/index.html)
+- [Google.Cloud.TextToSpeech.V1](Google.Cloud.TextToSpeech.V1/index.html)
 - [Google.Cloud.Trace.V2](Google.Cloud.Trace.V2/index.html)
 
 Alpha:
