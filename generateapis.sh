@@ -126,7 +126,7 @@ sed -i s/license-header-bsd-3-clause.txt/license-header-apache-2.0.txt/g googlea
 generate_api Google.LongRunning google/longrunning longrunning/longrunning.yaml
 git -C googleapis checkout google/longrunning/longrunning_gapic.yaml
 
-# IAM (just proto and grpc)
+# IAM and Location (just proto and grpc)
 $PROTOC \
   --csharp_out=apis/Google.Cloud.Iam.V1/Google.Cloud.Iam.V1 \
   --grpc_out=apis/Google.Cloud.Iam.V1/Google.Cloud.Iam.V1 \
@@ -134,6 +134,14 @@ $PROTOC \
   -I $CORE_PROTOS_ROOT \
   --plugin=protoc-gen-grpc=$GRPC_PLUGIN \
   googleapis/google/iam/v1/*.proto
+
+$PROTOC \
+  --csharp_out=apis/Google.Cloud.Location/Google.Cloud.Location \
+  --grpc_out=apis/Google.Cloud.Location/Google.Cloud.Location \
+  -I googleapis \
+  -I $CORE_PROTOS_ROOT \
+  --plugin=protoc-gen-grpc=$GRPC_PLUGIN \
+  googleapis/google/cloud/location/*.proto
 
 # Logging version-agnostic types
 $PROTOC \
