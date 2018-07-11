@@ -9,6 +9,7 @@
     <PackageId>Google.Cloud.Tools.ProjectGenerator</PackageId>
     <RuntimeFrameworkVersion>1.0.4</RuntimeFrameworkVersion>
     <TreatWarningsAsErrors>True</TreatWarningsAsErrors>
+    <LangVersion>latest</LangVersion>
   </PropertyGroup>
 
   <ItemGroup>
