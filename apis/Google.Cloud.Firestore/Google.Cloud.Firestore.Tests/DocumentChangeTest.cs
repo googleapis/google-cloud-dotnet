@@ -17,6 +17,7 @@ using Xunit;
 
 namespace Google.Cloud.Firestore.Tests
 {
+    using Google.Cloud.ClientTesting;
     using static ProtoHelpers;
 
     public class DocumentChangeTest

@@ -17,11 +17,14 @@ using System.Linq;
 using System.Reflection;
 using Xunit;
 
-namespace Google.Cloud.Firestore.Tests
+namespace Google.Cloud.ClientTesting
 {
-    internal static class EqualityTester
+    /// <summary>
+    /// Helpers for testing types that implement equality methods/operators.
+    /// </summary>
+    public static class EqualityTester
     {
-        internal static void AssertEqual<T>(T control, T[] equal, T[] unequal) where T : IEquatable<T>
+        public static void AssertEqual<T>(T control, T[] equal, T[] unequal) where T : IEquatable<T>
         {
             for (int i = -1; i < equal.Length; i++)
             {
@@ -54,7 +57,7 @@ namespace Google.Cloud.Firestore.Tests
             }
         }
 
-        internal static void AssertEqualityOperators<T>(T control, T[] equal, T[] unequal)
+        public static void AssertEqualityOperators<T>(T control, T[] equal, T[] unequal)
         {
             var typeInfo = typeof(T).GetTypeInfo();
             var equalityMethodInfo = typeInfo.GetMethod("op_Equality", new[] { typeof(T), typeof(T) });
