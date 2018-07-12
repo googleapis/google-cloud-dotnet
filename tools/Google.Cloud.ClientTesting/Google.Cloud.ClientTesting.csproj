@@ -2,8 +2,8 @@
 
   <PropertyGroup>
     <IsPackable>false</IsPackable>
-    <TargetFrameworks>netstandard1.3;net451</TargetFrameworks>
-    <TargetFrameworks Condition=" '$(OS)' != 'Windows_NT' ">netstandard1.3</TargetFrameworks>
+    <TargetFrameworks>netstandard1.6;net451</TargetFrameworks>
+    <TargetFrameworks Condition=" '$(OS)' != 'Windows_NT' ">netstandard1.6</TargetFrameworks>
     <AssemblyOriginatorKeyFile>../GoogleApiTools.snk</AssemblyOriginatorKeyFile>
     <SignAssembly>true</SignAssembly>
     <TreatWarningsAsErrors>True</TreatWarningsAsErrors>
