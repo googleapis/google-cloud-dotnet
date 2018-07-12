@@ -21,7 +21,6 @@ using System.Text.RegularExpressions;
 
 namespace Google.Cloud.BigQuery.V2
 {
-    // TODO: Just call this Numeric? Probably too broad.
     // TODO: Implement IFormattable?
 
     /// <summary>
@@ -39,19 +38,42 @@ namespace Google.Cloud.BigQuery.V2
         // TODO: Don't require a 0 before the decimal point.
         private static readonly Regex s_validation = new Regex(@"^-?[0-9]+\.?[0-9]*$");
 
+        // Note: the following properties must be declared *after* s_maxValue and s_minValue. Initialization order matters.
+
+        /// <summary>
+        /// Zero represented as a <see cref="BigQueryNumeric"/>. This is the default value for the type.
+        /// </summary>
+        public static BigQueryNumeric Zero { get; } = default;
+
+        /// <summary>
+        /// The maximum valid value for <see cref="BigQueryNumeric"/>, equal to 99999999999999999999999999999.999999999.
+        /// </summary>
+        public static BigQueryNumeric MaxValue { get; } = new BigQueryNumeric(s_maxValue);
+
+        /// <summary>
+        /// The minimum valid value for <see cref="BigQueryNumeric"/>, equal to -99999999999999999999999999999.999999999.
+        /// </summary>
+        public static BigQueryNumeric MinValue { get; } = new BigQueryNumeric(s_minValue);
+
+        /// <summary>
+        /// The smallest positive value for <see cref="BigQueryNumeric"/>, equal to 0.000000001.
+        /// </summary>
+        public static BigQueryNumeric Epsilon { get; } = new BigQueryNumeric(1);
+
         // Integer representation, always scaled by 9 decimal places - so a value of 1 here represents
         // a numeric value of 0.000000001 for example.
         private readonly BigInteger _integer;
 
         private BigQueryNumeric(BigInteger integer)
         {
-            // TODO: Is OverflowException always appropriate?
-            if (integer < s_minValue || integer > s_maxValue)
+            if (!IsRawValueInRange(integer))
             {
                 throw new OverflowException("Numeric value out of range");
             }
             _integer = integer;
         }
+
+        private static bool IsRawValueInRange(BigInteger integer) => integer >= s_minValue && integer <= s_maxValue;
 
         /// <summary>
         /// Compares this value with <paramref name="other"/>.
@@ -154,6 +176,9 @@ namespace Google.Cloud.BigQuery.V2
                 return "Text representation must be digits, containing an optional decimal point, and an optional leading '-' sign.";
             }
             int pointIndex = text.IndexOf('.');
+
+            // The raw value which will end up in the result, on success.
+            BigInteger rawValue;
             if (pointIndex != -1)
             {
                 int decimalPlaces = text.Length - pointIndex - 1;
@@ -169,15 +194,20 @@ namespace Google.Cloud.BigQuery.V2
                 {
                     integer = integer * s_powersOf10[9 - decimalPlaces];
                 }
-                value = new BigQueryNumeric(integer);
-                return null;
+                rawValue = integer;
             }
             else
             {
                 BigInteger integer = BigInteger.Parse(text, CultureInfo.InvariantCulture);
-                value = new BigQueryNumeric(integer * s_integerScalingFactor);
-                return null;
+                rawValue = integer * s_integerScalingFactor;
             }
+            if (!IsRawValueInRange(rawValue))
+            {
+                value = default;
+                return "Parsed value would overflow the range of the type.";
+            }
+            value = new BigQueryNumeric(rawValue);
+            return null;
         }
 
         /// <summary>
@@ -265,6 +295,7 @@ namespace Google.Cloud.BigQuery.V2
         /// <returns>The converted value.</returns>
         public static BigQueryNumeric FromDecimal(decimal value, LossOfPrecisionHandling lossOfPrecisionHandling)
         {
+            GaxPreconditions.CheckEnumValue(lossOfPrecisionHandling, nameof(lossOfPrecisionHandling));
             int[] bits = decimal.GetBits(value);
 
             BigInteger lowBits = new BigInteger((uint) bits[0]);
@@ -278,11 +309,30 @@ namespace Google.Cloud.BigQuery.V2
                 rawInteger = -rawInteger;
             }
 
-            // TODO: All kinds of validation
-
             int scale = 9 - exponent;
-            return scale < 0 ? new BigQueryNumeric(rawInteger / s_powersOf10[-scale])
-                : new BigQueryNumeric(rawInteger * s_powersOf10[scale]);
+            if (scale < 0)
+            {
+                BigInteger scaledInteger;
+                if (lossOfPrecisionHandling == LossOfPrecisionHandling.Throw)
+                {
+                    scaledInteger = BigInteger.DivRem(rawInteger, s_powersOf10[-scale], out var remainder);
+                    if (!remainder.IsZero)
+                    {
+                        throw new ArgumentException($"Conversion would lose precision, and {nameof(lossOfPrecisionHandling)} is set to {nameof(LossOfPrecisionHandling.Throw)}", nameof(value));
+                    }
+                }
+                else
+                {
+                    scaledInteger = rawInteger / s_powersOf10[-scale];
+                }
+
+                return new BigQueryNumeric(scaledInteger);
+            }
+            else
+            {
+                // No possibility of loss of precision.
+                return new BigQueryNumeric(rawInteger * s_powersOf10[scale]);
+            }
         }
 
         // Conversions from CLR types to BigQueryNumeric
