@@ -41,10 +41,16 @@ namespace Google.Cloud.Logging.NLog
     public class GoogleStackdriverTarget : TargetWithContext
     {
         /// <summary>
-        /// The file path of a service account JSON file to use for authenitication.
+        /// The file path of a service account JSON file to use for authentication.
         /// Not necessary if running on GCE, GAE or GKE, or if the GOOGLE_APPLICATION_CREDENTIALS environment variable has been set.
         /// </summary>
         public Layout CredentialFile { get; set; }
+
+        /// <summary>
+        /// JSON credential for authentication.
+        /// Not necessary if running on GCE or GAE or if the GOOGLE_APPLICATION_CREDENTIALS environment variable has been set.
+        /// </summary>
+        public Layout CredentialJson { get; set; }
 
         /// <summary>
         /// If set, disables resource-type detection based on platform,
@@ -207,10 +213,15 @@ namespace Google.Cloud.Logging.NLog
 
         private LoggingServiceV2Client BuildLoggingServiceClient()
         {
-            GoogleCredential credential = GetCredentialFromFile();
+            GoogleCredential credential = GetCredentialFromFile() ?? GetCredentialFromJson();
             if (credential == null)
             {
                 return LoggingServiceV2Client.Create();
+            }
+
+            if (credential.IsCreateScopedRequired)
+            {
+                credential = credential.CreateScoped(s_oAuthScopes);
             }
 
             Grpc.Core.Channel channel = new Grpc.Core.Channel(
@@ -231,12 +242,18 @@ namespace Google.Cloud.Logging.NLog
             }
 
             GoogleCredential credential = GoogleCredential.FromFile(credentialFile);
+            return credential;
+        }
 
-            if (credential.IsCreateScopedRequired)
+        private GoogleCredential GetCredentialFromJson()
+        {
+            var credentialJson = CredentialJson?.Render(LogEventInfo.CreateNullEvent());
+            if (string.IsNullOrWhiteSpace(credentialJson))
             {
-                credential = credential.CreateScoped(s_oAuthScopes);
+                return null;
             }
 
+            GoogleCredential credential = GoogleCredential.FromJson(credentialJson);
             return credential;
         }
 
