@@ -16,6 +16,7 @@ using Google.Cloud.ClientTesting;
 using System;
 using System.Globalization;
 using System.Linq;
+using System.Threading;
 using Xunit;
 
 namespace Google.Cloud.BigQuery.V2.Tests
@@ -148,7 +149,7 @@ namespace Google.Cloud.BigQuery.V2.Tests
             decimal actual = numeric.ToDecimal(LossOfPrecisionHandling.Truncate);
             Assert.Equal(expected, actual);
             // Conversion via the explicit conversion should do the same thing
-            decimal actual2 = (decimal) numeric;
+            decimal actual2 = (decimal)numeric;
             Assert.Equal(expected, actual2);
         }
 
@@ -219,14 +220,37 @@ namespace Google.Cloud.BigQuery.V2.Tests
         [InlineData("+.5")]
         [InlineData("1e6")]
         [InlineData("1e-6")]
-        // Other culture formatting
-        [InlineData("1234,567")]
-        [InlineData("1.234,567")]
         public void TryParse_Invalid(string text)
         {
             Assert.False(BigQueryNumeric.TryParse(text, out var value));
             Assert.Equal(BigQueryNumeric.Zero, value);
         }
+
+#if !NETCOREAPP1_0
+        [Theory]
+        [InlineData("1234,567", "es-ES")]
+        [InlineData("1.234,567", "es-ES")]
+        [InlineData("1234,567", "fr-FR")]
+        public void TryParse_UnsupportedCultures(string text, string culture)
+        {
+            CultureInfo oldCulture = Thread.CurrentThread.CurrentCulture;
+            try
+            {
+                Thread.CurrentThread.CurrentCulture = CultureInfo.CreateSpecificCulture(culture);
+
+                // Just to demonstrate that these numbers are properly parsed with the given culture.
+                // We don't parse them because we don't support the culture.
+                Assert.True(Decimal.TryParse(text, out decimal decimalValue));
+
+                Assert.False(BigQueryNumeric.TryParse(text, out var value));
+                Assert.Equal(BigQueryNumeric.Zero, value);
+            }
+            finally
+            {
+                Thread.CurrentThread.CurrentCulture = oldCulture;
+            }
+        }
+#endif
 
         [Fact]
         public void ZeroIsDefaultValue()
@@ -286,9 +310,9 @@ namespace Google.Cloud.BigQuery.V2.Tests
             // To compare with a different instance.
             var value1 = BigQueryNumeric.Parse(text);
             Assert.Equal(0, value.CompareTo(value));
-            Assert.Equal(0, (IComparable) value.CompareTo(value));
+            Assert.Equal(0, (IComparable)value.CompareTo(value));
             Assert.Equal(0, value1.CompareTo(value));
-            Assert.Equal(0, (IComparable) value1.CompareTo(value));
+            Assert.Equal(0, (IComparable)value1.CompareTo(value));
         }
 
         [Fact]
@@ -298,9 +322,9 @@ namespace Google.Cloud.BigQuery.V2.Tests
             var regularZero = BigQueryNumeric.Zero;
             var negativeZero = BigQueryNumeric.Parse("-0");
             Assert.Equal(0, regularZero.CompareTo(negativeZero));
-            Assert.Equal(0, (IComparable) regularZero.CompareTo(negativeZero));
+            Assert.Equal(0, (IComparable)regularZero.CompareTo(negativeZero));
             Assert.Equal(0, negativeZero.CompareTo(regularZero));
-            Assert.Equal(0, (IComparable) negativeZero.CompareTo(regularZero));
+            Assert.Equal(0, (IComparable)negativeZero.CompareTo(regularZero));
         }
 
         [Fact]
