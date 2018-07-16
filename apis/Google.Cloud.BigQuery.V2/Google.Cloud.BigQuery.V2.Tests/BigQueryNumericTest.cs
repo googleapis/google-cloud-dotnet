@@ -219,6 +219,9 @@ namespace Google.Cloud.BigQuery.V2.Tests
         [InlineData("+.5")]
         [InlineData("1e6")]
         [InlineData("1e-6")]
+        // Other culture formatting
+        [InlineData("1234,567")]
+        [InlineData("1.234,567")]
         public void TryParse_Invalid(string text)
         {
             Assert.False(BigQueryNumeric.TryParse(text, out var value));
@@ -280,8 +283,12 @@ namespace Google.Cloud.BigQuery.V2.Tests
         public void CompareTo_Equal(string text)
         {
             var value = BigQueryNumeric.Parse(text);
+            // To compare with a different instance.
+            var value1 = BigQueryNumeric.Parse(text);
             Assert.Equal(0, value.CompareTo(value));
             Assert.Equal(0, (IComparable) value.CompareTo(value));
+            Assert.Equal(0, value1.CompareTo(value));
+            Assert.Equal(0, (IComparable) value1.CompareTo(value));
         }
 
         [Fact]
