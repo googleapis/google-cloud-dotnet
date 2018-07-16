@@ -197,7 +197,7 @@ namespace Google.Cloud.Spanner.V1 {
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     public CreateSessionRequest(CreateSessionRequest other) : this() {
       database_ = other.database_;
-      Session = other.session_ != null ? other.Session.Clone() : null;
+      session_ = other.session_ != null ? other.session_.Clone() : null;
       _unknownFields = pb::UnknownFieldSet.Clone(other._unknownFields);
     }
 
@@ -370,8 +370,8 @@ namespace Google.Cloud.Spanner.V1 {
     public Session(Session other) : this() {
       name_ = other.name_;
       labels_ = other.labels_.Clone();
-      CreateTime = other.createTime_ != null ? other.CreateTime.Clone() : null;
-      ApproximateLastUseTime = other.approximateLastUseTime_ != null ? other.ApproximateLastUseTime.Clone() : null;
+      createTime_ = other.createTime_ != null ? other.createTime_.Clone() : null;
+      approximateLastUseTime_ = other.approximateLastUseTime_ != null ? other.approximateLastUseTime_.Clone() : null;
       _unknownFields = pb::UnknownFieldSet.Clone(other._unknownFields);
     }
 
@@ -1282,9 +1282,9 @@ namespace Google.Cloud.Spanner.V1 {
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     public ExecuteSqlRequest(ExecuteSqlRequest other) : this() {
       session_ = other.session_;
-      Transaction = other.transaction_ != null ? other.Transaction.Clone() : null;
+      transaction_ = other.transaction_ != null ? other.transaction_.Clone() : null;
       sql_ = other.sql_;
-      Params = other.params_ != null ? other.Params.Clone() : null;
+      params_ = other.params_ != null ? other.params_.Clone() : null;
       paramTypes_ = other.paramTypes_.Clone();
       resumeToken_ = other.resumeToken_;
       queryMode_ = other.queryMode_;
@@ -1876,11 +1876,11 @@ namespace Google.Cloud.Spanner.V1 {
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     public PartitionQueryRequest(PartitionQueryRequest other) : this() {
       session_ = other.session_;
-      Transaction = other.transaction_ != null ? other.Transaction.Clone() : null;
+      transaction_ = other.transaction_ != null ? other.transaction_.Clone() : null;
       sql_ = other.sql_;
-      Params = other.params_ != null ? other.Params.Clone() : null;
+      params_ = other.params_ != null ? other.params_.Clone() : null;
       paramTypes_ = other.paramTypes_.Clone();
-      PartitionOptions = other.partitionOptions_ != null ? other.PartitionOptions.Clone() : null;
+      partitionOptions_ = other.partitionOptions_ != null ? other.partitionOptions_.Clone() : null;
       _unknownFields = pb::UnknownFieldSet.Clone(other._unknownFields);
     }
 
@@ -2202,12 +2202,12 @@ namespace Google.Cloud.Spanner.V1 {
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     public PartitionReadRequest(PartitionReadRequest other) : this() {
       session_ = other.session_;
-      Transaction = other.transaction_ != null ? other.Transaction.Clone() : null;
+      transaction_ = other.transaction_ != null ? other.transaction_.Clone() : null;
       table_ = other.table_;
       index_ = other.index_;
       columns_ = other.columns_.Clone();
-      KeySet = other.keySet_ != null ? other.KeySet.Clone() : null;
-      PartitionOptions = other.partitionOptions_ != null ? other.PartitionOptions.Clone() : null;
+      keySet_ = other.keySet_ != null ? other.keySet_.Clone() : null;
+      partitionOptions_ = other.partitionOptions_ != null ? other.partitionOptions_.Clone() : null;
       _unknownFields = pb::UnknownFieldSet.Clone(other._unknownFields);
     }
 
@@ -2682,7 +2682,7 @@ namespace Google.Cloud.Spanner.V1 {
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     public PartitionResponse(PartitionResponse other) : this() {
       partitions_ = other.partitions_.Clone();
-      Transaction = other.transaction_ != null ? other.Transaction.Clone() : null;
+      transaction_ = other.transaction_ != null ? other.transaction_.Clone() : null;
       _unknownFields = pb::UnknownFieldSet.Clone(other._unknownFields);
     }
 
@@ -2847,11 +2847,11 @@ namespace Google.Cloud.Spanner.V1 {
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     public ReadRequest(ReadRequest other) : this() {
       session_ = other.session_;
-      Transaction = other.transaction_ != null ? other.Transaction.Clone() : null;
+      transaction_ = other.transaction_ != null ? other.transaction_.Clone() : null;
       table_ = other.table_;
       index_ = other.index_;
       columns_ = other.columns_.Clone();
-      KeySet = other.keySet_ != null ? other.KeySet.Clone() : null;
+      keySet_ = other.keySet_ != null ? other.keySet_.Clone() : null;
       limit_ = other.limit_;
       resumeToken_ = other.resumeToken_;
       partitionToken_ = other.partitionToken_;
@@ -3259,7 +3259,7 @@ namespace Google.Cloud.Spanner.V1 {
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     public BeginTransactionRequest(BeginTransactionRequest other) : this() {
       session_ = other.session_;
-      Options = other.options_ != null ? other.Options.Clone() : null;
+      options_ = other.options_ != null ? other.options_.Clone() : null;
       _unknownFields = pb::UnknownFieldSet.Clone(other._unknownFields);
     }
 
@@ -3699,7 +3699,7 @@ namespace Google.Cloud.Spanner.V1 {
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     public CommitResponse(CommitResponse other) : this() {
-      CommitTimestamp = other.commitTimestamp_ != null ? other.CommitTimestamp.Clone() : null;
+      commitTimestamp_ = other.commitTimestamp_ != null ? other.commitTimestamp_.Clone() : null;
       _unknownFields = pb::UnknownFieldSet.Clone(other._unknownFields);
     }
 

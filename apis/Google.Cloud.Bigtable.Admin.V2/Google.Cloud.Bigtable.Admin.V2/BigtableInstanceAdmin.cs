@@ -219,7 +219,7 @@ namespace Google.Cloud.Bigtable.Admin.V2 {
     public CreateInstanceRequest(CreateInstanceRequest other) : this() {
       parent_ = other.parent_;
       instanceId_ = other.instanceId_;
-      Instance = other.instance_ != null ? other.Instance.Clone() : null;
+      instance_ = other.instance_ != null ? other.instance_.Clone() : null;
       clusters_ = other.clusters_.Clone();
       _unknownFields = pb::UnknownFieldSet.Clone(other._unknownFields);
     }
@@ -941,8 +941,8 @@ namespace Google.Cloud.Bigtable.Admin.V2 {
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     public PartialUpdateInstanceRequest(PartialUpdateInstanceRequest other) : this() {
-      Instance = other.instance_ != null ? other.Instance.Clone() : null;
-      UpdateMask = other.updateMask_ != null ? other.UpdateMask.Clone() : null;
+      instance_ = other.instance_ != null ? other.instance_.Clone() : null;
+      updateMask_ = other.updateMask_ != null ? other.updateMask_.Clone() : null;
       _unknownFields = pb::UnknownFieldSet.Clone(other._unknownFields);
     }
 
@@ -1258,7 +1258,7 @@ namespace Google.Cloud.Bigtable.Admin.V2 {
     public CreateClusterRequest(CreateClusterRequest other) : this() {
       parent_ = other.parent_;
       clusterId_ = other.clusterId_;
-      Cluster = other.cluster_ != null ? other.Cluster.Clone() : null;
+      cluster_ = other.cluster_ != null ? other.cluster_.Clone() : null;
       _unknownFields = pb::UnknownFieldSet.Clone(other._unknownFields);
     }
 
@@ -2091,9 +2091,9 @@ namespace Google.Cloud.Bigtable.Admin.V2 {
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     public CreateInstanceMetadata(CreateInstanceMetadata other) : this() {
-      OriginalRequest = other.originalRequest_ != null ? other.OriginalRequest.Clone() : null;
-      RequestTime = other.requestTime_ != null ? other.RequestTime.Clone() : null;
-      FinishTime = other.finishTime_ != null ? other.FinishTime.Clone() : null;
+      originalRequest_ = other.originalRequest_ != null ? other.originalRequest_.Clone() : null;
+      requestTime_ = other.requestTime_ != null ? other.requestTime_.Clone() : null;
+      finishTime_ = other.finishTime_ != null ? other.finishTime_.Clone() : null;
       _unknownFields = pb::UnknownFieldSet.Clone(other._unknownFields);
     }
 
@@ -2306,9 +2306,9 @@ namespace Google.Cloud.Bigtable.Admin.V2 {
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     public UpdateInstanceMetadata(UpdateInstanceMetadata other) : this() {
-      OriginalRequest = other.originalRequest_ != null ? other.OriginalRequest.Clone() : null;
-      RequestTime = other.requestTime_ != null ? other.RequestTime.Clone() : null;
-      FinishTime = other.finishTime_ != null ? other.FinishTime.Clone() : null;
+      originalRequest_ = other.originalRequest_ != null ? other.originalRequest_.Clone() : null;
+      requestTime_ = other.requestTime_ != null ? other.requestTime_.Clone() : null;
+      finishTime_ = other.finishTime_ != null ? other.finishTime_.Clone() : null;
       _unknownFields = pb::UnknownFieldSet.Clone(other._unknownFields);
     }
 
@@ -2521,9 +2521,9 @@ namespace Google.Cloud.Bigtable.Admin.V2 {
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     public CreateClusterMetadata(CreateClusterMetadata other) : this() {
-      OriginalRequest = other.originalRequest_ != null ? other.OriginalRequest.Clone() : null;
-      RequestTime = other.requestTime_ != null ? other.RequestTime.Clone() : null;
-      FinishTime = other.finishTime_ != null ? other.FinishTime.Clone() : null;
+      originalRequest_ = other.originalRequest_ != null ? other.originalRequest_.Clone() : null;
+      requestTime_ = other.requestTime_ != null ? other.requestTime_.Clone() : null;
+      finishTime_ = other.finishTime_ != null ? other.finishTime_.Clone() : null;
       _unknownFields = pb::UnknownFieldSet.Clone(other._unknownFields);
     }
 
@@ -2736,9 +2736,9 @@ namespace Google.Cloud.Bigtable.Admin.V2 {
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     public UpdateClusterMetadata(UpdateClusterMetadata other) : this() {
-      OriginalRequest = other.originalRequest_ != null ? other.OriginalRequest.Clone() : null;
-      RequestTime = other.requestTime_ != null ? other.RequestTime.Clone() : null;
-      FinishTime = other.finishTime_ != null ? other.FinishTime.Clone() : null;
+      originalRequest_ = other.originalRequest_ != null ? other.originalRequest_.Clone() : null;
+      requestTime_ = other.requestTime_ != null ? other.requestTime_.Clone() : null;
+      finishTime_ = other.finishTime_ != null ? other.finishTime_.Clone() : null;
       _unknownFields = pb::UnknownFieldSet.Clone(other._unknownFields);
     }
 
@@ -2953,7 +2953,7 @@ namespace Google.Cloud.Bigtable.Admin.V2 {
     public CreateAppProfileRequest(CreateAppProfileRequest other) : this() {
       parent_ = other.parent_;
       appProfileId_ = other.appProfileId_;
-      AppProfile = other.appProfile_ != null ? other.AppProfile.Clone() : null;
+      appProfile_ = other.appProfile_ != null ? other.appProfile_.Clone() : null;
       ignoreWarnings_ = other.ignoreWarnings_;
       _unknownFields = pb::UnknownFieldSet.Clone(other._unknownFields);
     }
@@ -3654,8 +3654,8 @@ namespace Google.Cloud.Bigtable.Admin.V2 {
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     public UpdateAppProfileRequest(UpdateAppProfileRequest other) : this() {
-      AppProfile = other.appProfile_ != null ? other.AppProfile.Clone() : null;
-      UpdateMask = other.updateMask_ != null ? other.UpdateMask.Clone() : null;
+      appProfile_ = other.appProfile_ != null ? other.appProfile_.Clone() : null;
+      updateMask_ = other.updateMask_ != null ? other.updateMask_.Clone() : null;
       ignoreWarnings_ = other.ignoreWarnings_;
       _unknownFields = pb::UnknownFieldSet.Clone(other._unknownFields);
     }

@@ -195,12 +195,12 @@ namespace Google.Cloud.Dataproc.V1 {
     public Cluster(Cluster other) : this() {
       projectId_ = other.projectId_;
       clusterName_ = other.clusterName_;
-      Config = other.config_ != null ? other.Config.Clone() : null;
+      config_ = other.config_ != null ? other.config_.Clone() : null;
       labels_ = other.labels_.Clone();
-      Status = other.status_ != null ? other.Status.Clone() : null;
+      status_ = other.status_ != null ? other.status_.Clone() : null;
       statusHistory_ = other.statusHistory_.Clone();
       clusterUuid_ = other.clusterUuid_;
-      Metrics = other.metrics_ != null ? other.Metrics.Clone() : null;
+      metrics_ = other.metrics_ != null ? other.metrics_.Clone() : null;
       _unknownFields = pb::UnknownFieldSet.Clone(other._unknownFields);
     }
 
@@ -559,11 +559,11 @@ namespace Google.Cloud.Dataproc.V1 {
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     public ClusterConfig(ClusterConfig other) : this() {
       configBucket_ = other.configBucket_;
-      GceClusterConfig = other.gceClusterConfig_ != null ? other.GceClusterConfig.Clone() : null;
-      MasterConfig = other.masterConfig_ != null ? other.MasterConfig.Clone() : null;
-      WorkerConfig = other.workerConfig_ != null ? other.WorkerConfig.Clone() : null;
-      SecondaryWorkerConfig = other.secondaryWorkerConfig_ != null ? other.SecondaryWorkerConfig.Clone() : null;
-      SoftwareConfig = other.softwareConfig_ != null ? other.SoftwareConfig.Clone() : null;
+      gceClusterConfig_ = other.gceClusterConfig_ != null ? other.gceClusterConfig_.Clone() : null;
+      masterConfig_ = other.masterConfig_ != null ? other.masterConfig_.Clone() : null;
+      workerConfig_ = other.workerConfig_ != null ? other.workerConfig_.Clone() : null;
+      secondaryWorkerConfig_ = other.secondaryWorkerConfig_ != null ? other.secondaryWorkerConfig_.Clone() : null;
+      softwareConfig_ = other.softwareConfig_ != null ? other.softwareConfig_.Clone() : null;
       initializationActions_ = other.initializationActions_.Clone();
       _unknownFields = pb::UnknownFieldSet.Clone(other._unknownFields);
     }
@@ -1310,9 +1310,9 @@ namespace Google.Cloud.Dataproc.V1 {
       instanceNames_ = other.instanceNames_.Clone();
       imageUri_ = other.imageUri_;
       machineTypeUri_ = other.machineTypeUri_;
-      DiskConfig = other.diskConfig_ != null ? other.DiskConfig.Clone() : null;
+      diskConfig_ = other.diskConfig_ != null ? other.diskConfig_.Clone() : null;
       isPreemptible_ = other.isPreemptible_;
-      ManagedGroupConfig = other.managedGroupConfig_ != null ? other.ManagedGroupConfig.Clone() : null;
+      managedGroupConfig_ = other.managedGroupConfig_ != null ? other.managedGroupConfig_.Clone() : null;
       accelerators_ = other.accelerators_.Clone();
       _unknownFields = pb::UnknownFieldSet.Clone(other._unknownFields);
     }
@@ -2184,7 +2184,7 @@ namespace Google.Cloud.Dataproc.V1 {
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     public NodeInitializationAction(NodeInitializationAction other) : this() {
       executableFile_ = other.executableFile_;
-      ExecutionTimeout = other.executionTimeout_ != null ? other.ExecutionTimeout.Clone() : null;
+      executionTimeout_ = other.executionTimeout_ != null ? other.executionTimeout_.Clone() : null;
       _unknownFields = pb::UnknownFieldSet.Clone(other._unknownFields);
     }
 
@@ -2360,7 +2360,7 @@ namespace Google.Cloud.Dataproc.V1 {
     public ClusterStatus(ClusterStatus other) : this() {
       state_ = other.state_;
       detail_ = other.detail_;
-      StateStartTime = other.stateStartTime_ != null ? other.StateStartTime.Clone() : null;
+      stateStartTime_ = other.stateStartTime_ != null ? other.stateStartTime_.Clone() : null;
       substate_ = other.substate_;
       _unknownFields = pb::UnknownFieldSet.Clone(other._unknownFields);
     }
@@ -2981,7 +2981,7 @@ namespace Google.Cloud.Dataproc.V1 {
     public CreateClusterRequest(CreateClusterRequest other) : this() {
       projectId_ = other.projectId_;
       region_ = other.region_;
-      Cluster = other.cluster_ != null ? other.Cluster.Clone() : null;
+      cluster_ = other.cluster_ != null ? other.cluster_.Clone() : null;
       _unknownFields = pb::UnknownFieldSet.Clone(other._unknownFields);
     }
 
@@ -3186,8 +3186,8 @@ namespace Google.Cloud.Dataproc.V1 {
       projectId_ = other.projectId_;
       region_ = other.region_;
       clusterName_ = other.clusterName_;
-      Cluster = other.cluster_ != null ? other.Cluster.Clone() : null;
-      UpdateMask = other.updateMask_ != null ? other.UpdateMask.Clone() : null;
+      cluster_ = other.cluster_ != null ? other.cluster_.Clone() : null;
+      updateMask_ = other.updateMask_ != null ? other.updateMask_.Clone() : null;
       _unknownFields = pb::UnknownFieldSet.Clone(other._unknownFields);
     }
 

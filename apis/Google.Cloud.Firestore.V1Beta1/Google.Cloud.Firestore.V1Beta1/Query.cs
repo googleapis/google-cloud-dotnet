@@ -124,12 +124,12 @@ namespace Google.Cloud.Firestore.V1Beta1 {
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     public StructuredQuery(StructuredQuery other) : this() {
-      Select = other.select_ != null ? other.Select.Clone() : null;
+      select_ = other.select_ != null ? other.select_.Clone() : null;
       from_ = other.from_.Clone();
-      Where = other.where_ != null ? other.Where.Clone() : null;
+      where_ = other.where_ != null ? other.where_.Clone() : null;
       orderBy_ = other.orderBy_.Clone();
-      StartAt = other.startAt_ != null ? other.StartAt.Clone() : null;
-      EndAt = other.endAt_ != null ? other.EndAt.Clone() : null;
+      startAt_ = other.startAt_ != null ? other.startAt_.Clone() : null;
+      endAt_ = other.endAt_ != null ? other.endAt_.Clone() : null;
       offset_ = other.offset_;
       Limit = other.Limit;
       _unknownFields = pb::UnknownFieldSet.Clone(other._unknownFields);
@@ -1136,9 +1136,9 @@ namespace Google.Cloud.Firestore.V1Beta1 {
 
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
         public FieldFilter(FieldFilter other) : this() {
-          Field = other.field_ != null ? other.Field.Clone() : null;
+          field_ = other.field_ != null ? other.field_.Clone() : null;
           op_ = other.op_;
-          Value = other.value_ != null ? other.Value.Clone() : null;
+          value_ = other.value_ != null ? other.value_.Clone() : null;
           _unknownFields = pb::UnknownFieldSet.Clone(other._unknownFields);
         }
 
@@ -1610,7 +1610,7 @@ namespace Google.Cloud.Firestore.V1Beta1 {
 
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
         public Order(Order other) : this() {
-          Field = other.field_ != null ? other.Field.Clone() : null;
+          field_ = other.field_ != null ? other.field_.Clone() : null;
           direction_ = other.direction_;
           _unknownFields = pb::UnknownFieldSet.Clone(other._unknownFields);
         }

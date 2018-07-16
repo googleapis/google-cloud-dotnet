@@ -168,12 +168,12 @@ namespace Google.Cloud.BigQuery.DataTransfer.V1 {
       destinationDatasetId_ = other.destinationDatasetId_;
       displayName_ = other.displayName_;
       dataSourceId_ = other.dataSourceId_;
-      Params = other.params_ != null ? other.Params.Clone() : null;
+      params_ = other.params_ != null ? other.params_.Clone() : null;
       schedule_ = other.schedule_;
       dataRefreshWindowDays_ = other.dataRefreshWindowDays_;
       disabled_ = other.disabled_;
-      UpdateTime = other.updateTime_ != null ? other.UpdateTime.Clone() : null;
-      NextRunTime = other.nextRunTime_ != null ? other.NextRunTime.Clone() : null;
+      updateTime_ = other.updateTime_ != null ? other.updateTime_.Clone() : null;
+      nextRunTime_ = other.nextRunTime_ != null ? other.nextRunTime_.Clone() : null;
       state_ = other.state_;
       userId_ = other.userId_;
       datasetRegion_ = other.datasetRegion_;
@@ -716,13 +716,13 @@ namespace Google.Cloud.BigQuery.DataTransfer.V1 {
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     public TransferRun(TransferRun other) : this() {
       name_ = other.name_;
-      ScheduleTime = other.scheduleTime_ != null ? other.ScheduleTime.Clone() : null;
-      RunTime = other.runTime_ != null ? other.RunTime.Clone() : null;
-      ErrorStatus = other.errorStatus_ != null ? other.ErrorStatus.Clone() : null;
-      StartTime = other.startTime_ != null ? other.StartTime.Clone() : null;
-      EndTime = other.endTime_ != null ? other.EndTime.Clone() : null;
-      UpdateTime = other.updateTime_ != null ? other.UpdateTime.Clone() : null;
-      Params = other.params_ != null ? other.Params.Clone() : null;
+      scheduleTime_ = other.scheduleTime_ != null ? other.scheduleTime_.Clone() : null;
+      runTime_ = other.runTime_ != null ? other.runTime_.Clone() : null;
+      errorStatus_ = other.errorStatus_ != null ? other.errorStatus_.Clone() : null;
+      startTime_ = other.startTime_ != null ? other.startTime_.Clone() : null;
+      endTime_ = other.endTime_ != null ? other.endTime_.Clone() : null;
+      updateTime_ = other.updateTime_ != null ? other.updateTime_.Clone() : null;
+      params_ = other.params_ != null ? other.params_.Clone() : null;
       destinationDatasetId_ = other.destinationDatasetId_;
       dataSourceId_ = other.dataSourceId_;
       state_ = other.state_;
@@ -1278,7 +1278,7 @@ namespace Google.Cloud.BigQuery.DataTransfer.V1 {
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     public TransferMessage(TransferMessage other) : this() {
-      MessageTime = other.messageTime_ != null ? other.MessageTime.Clone() : null;
+      messageTime_ = other.messageTime_ != null ? other.messageTime_.Clone() : null;
       severity_ = other.severity_;
       messageText_ = other.messageText_;
       _unknownFields = pb::UnknownFieldSet.Clone(other._unknownFields);

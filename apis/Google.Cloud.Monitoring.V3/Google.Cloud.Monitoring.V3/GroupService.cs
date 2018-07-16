@@ -748,7 +748,7 @@ namespace Google.Cloud.Monitoring.V3 {
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     public CreateGroupRequest(CreateGroupRequest other) : this() {
       name_ = other.name_;
-      Group = other.group_ != null ? other.Group.Clone() : null;
+      group_ = other.group_ != null ? other.group_.Clone() : null;
       validateOnly_ = other.validateOnly_;
       _unknownFields = pb::UnknownFieldSet.Clone(other._unknownFields);
     }
@@ -952,7 +952,7 @@ namespace Google.Cloud.Monitoring.V3 {
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     public UpdateGroupRequest(UpdateGroupRequest other) : this() {
-      Group = other.group_ != null ? other.Group.Clone() : null;
+      group_ = other.group_ != null ? other.group_.Clone() : null;
       validateOnly_ = other.validateOnly_;
       _unknownFields = pb::UnknownFieldSet.Clone(other._unknownFields);
     }
@@ -1265,7 +1265,7 @@ namespace Google.Cloud.Monitoring.V3 {
       pageSize_ = other.pageSize_;
       pageToken_ = other.pageToken_;
       filter_ = other.filter_;
-      Interval = other.interval_ != null ? other.Interval.Clone() : null;
+      interval_ = other.interval_ != null ? other.interval_.Clone() : null;
       _unknownFields = pb::UnknownFieldSet.Clone(other._unknownFields);
     }
 

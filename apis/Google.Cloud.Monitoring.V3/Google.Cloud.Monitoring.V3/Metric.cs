@@ -79,8 +79,8 @@ namespace Google.Cloud.Monitoring.V3 {
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     public Point(Point other) : this() {
-      Interval = other.interval_ != null ? other.Interval.Clone() : null;
-      Value = other.value_ != null ? other.Value.Clone() : null;
+      interval_ = other.interval_ != null ? other.interval_.Clone() : null;
+      value_ = other.value_ != null ? other.value_.Clone() : null;
       _unknownFields = pb::UnknownFieldSet.Clone(other._unknownFields);
     }
 
@@ -267,8 +267,8 @@ namespace Google.Cloud.Monitoring.V3 {
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     public TimeSeries(TimeSeries other) : this() {
-      Metric = other.metric_ != null ? other.Metric.Clone() : null;
-      Resource = other.resource_ != null ? other.Resource.Clone() : null;
+      metric_ = other.metric_ != null ? other.metric_.Clone() : null;
+      resource_ = other.resource_ != null ? other.resource_.Clone() : null;
       metricKind_ = other.metricKind_;
       valueType_ = other.valueType_;
       points_ = other.points_.Clone();

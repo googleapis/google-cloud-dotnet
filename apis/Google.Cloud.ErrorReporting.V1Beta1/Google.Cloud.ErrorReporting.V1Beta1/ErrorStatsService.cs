@@ -212,11 +212,11 @@ namespace Google.Cloud.ErrorReporting.V1Beta1 {
     public ListGroupStatsRequest(ListGroupStatsRequest other) : this() {
       projectName_ = other.projectName_;
       groupId_ = other.groupId_.Clone();
-      ServiceFilter = other.serviceFilter_ != null ? other.ServiceFilter.Clone() : null;
-      TimeRange = other.timeRange_ != null ? other.TimeRange.Clone() : null;
-      TimedCountDuration = other.timedCountDuration_ != null ? other.TimedCountDuration.Clone() : null;
+      serviceFilter_ = other.serviceFilter_ != null ? other.serviceFilter_.Clone() : null;
+      timeRange_ = other.timeRange_ != null ? other.timeRange_.Clone() : null;
+      timedCountDuration_ = other.timedCountDuration_ != null ? other.timedCountDuration_.Clone() : null;
       alignment_ = other.alignment_;
-      AlignmentTime = other.alignmentTime_ != null ? other.AlignmentTime.Clone() : null;
+      alignmentTime_ = other.alignmentTime_ != null ? other.alignmentTime_.Clone() : null;
       order_ = other.order_;
       pageSize_ = other.pageSize_;
       pageToken_ = other.pageToken_;
@@ -662,7 +662,7 @@ namespace Google.Cloud.ErrorReporting.V1Beta1 {
     public ListGroupStatsResponse(ListGroupStatsResponse other) : this() {
       errorGroupStats_ = other.errorGroupStats_.Clone();
       nextPageToken_ = other.nextPageToken_;
-      TimeRangeBegin = other.timeRangeBegin_ != null ? other.TimeRangeBegin.Clone() : null;
+      timeRangeBegin_ = other.timeRangeBegin_ != null ? other.timeRangeBegin_.Clone() : null;
       _unknownFields = pb::UnknownFieldSet.Clone(other._unknownFields);
     }
 
@@ -861,15 +861,15 @@ namespace Google.Cloud.ErrorReporting.V1Beta1 {
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     public ErrorGroupStats(ErrorGroupStats other) : this() {
-      Group = other.group_ != null ? other.Group.Clone() : null;
+      group_ = other.group_ != null ? other.group_.Clone() : null;
       count_ = other.count_;
       affectedUsersCount_ = other.affectedUsersCount_;
       timedCounts_ = other.timedCounts_.Clone();
-      FirstSeenTime = other.firstSeenTime_ != null ? other.FirstSeenTime.Clone() : null;
-      LastSeenTime = other.lastSeenTime_ != null ? other.LastSeenTime.Clone() : null;
+      firstSeenTime_ = other.firstSeenTime_ != null ? other.firstSeenTime_.Clone() : null;
+      lastSeenTime_ = other.lastSeenTime_ != null ? other.lastSeenTime_.Clone() : null;
       affectedServices_ = other.affectedServices_.Clone();
       numAffectedServices_ = other.numAffectedServices_;
-      Representative = other.representative_ != null ? other.Representative.Clone() : null;
+      representative_ = other.representative_ != null ? other.representative_.Clone() : null;
       _unknownFields = pb::UnknownFieldSet.Clone(other._unknownFields);
     }
 
@@ -1283,8 +1283,8 @@ namespace Google.Cloud.ErrorReporting.V1Beta1 {
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     public TimedCount(TimedCount other) : this() {
       count_ = other.count_;
-      StartTime = other.startTime_ != null ? other.StartTime.Clone() : null;
-      EndTime = other.endTime_ != null ? other.EndTime.Clone() : null;
+      startTime_ = other.startTime_ != null ? other.startTime_.Clone() : null;
+      endTime_ = other.endTime_ != null ? other.endTime_.Clone() : null;
       _unknownFields = pb::UnknownFieldSet.Clone(other._unknownFields);
     }
 
@@ -1493,8 +1493,8 @@ namespace Google.Cloud.ErrorReporting.V1Beta1 {
     public ListEventsRequest(ListEventsRequest other) : this() {
       projectName_ = other.projectName_;
       groupId_ = other.groupId_;
-      ServiceFilter = other.serviceFilter_ != null ? other.ServiceFilter.Clone() : null;
-      TimeRange = other.timeRange_ != null ? other.TimeRange.Clone() : null;
+      serviceFilter_ = other.serviceFilter_ != null ? other.serviceFilter_.Clone() : null;
+      timeRange_ = other.timeRange_ != null ? other.timeRange_.Clone() : null;
       pageSize_ = other.pageSize_;
       pageToken_ = other.pageToken_;
       _unknownFields = pb::UnknownFieldSet.Clone(other._unknownFields);
@@ -1803,7 +1803,7 @@ namespace Google.Cloud.ErrorReporting.V1Beta1 {
     public ListEventsResponse(ListEventsResponse other) : this() {
       errorEvents_ = other.errorEvents_.Clone();
       nextPageToken_ = other.nextPageToken_;
-      TimeRangeBegin = other.timeRangeBegin_ != null ? other.TimeRangeBegin.Clone() : null;
+      timeRangeBegin_ = other.timeRangeBegin_ != null ? other.timeRangeBegin_.Clone() : null;
       _unknownFields = pb::UnknownFieldSet.Clone(other._unknownFields);
     }
 

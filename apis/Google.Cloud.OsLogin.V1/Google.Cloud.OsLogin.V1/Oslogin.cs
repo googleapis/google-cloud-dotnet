@@ -879,7 +879,7 @@ namespace Google.Cloud.OsLogin.V1 {
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     public ImportSshPublicKeyRequest(ImportSshPublicKeyRequest other) : this() {
       parent_ = other.parent_;
-      SshPublicKey = other.sshPublicKey_ != null ? other.SshPublicKey.Clone() : null;
+      sshPublicKey_ = other.sshPublicKey_ != null ? other.sshPublicKey_.Clone() : null;
       projectId_ = other.projectId_;
       _unknownFields = pb::UnknownFieldSet.Clone(other._unknownFields);
     }
@@ -1081,7 +1081,7 @@ namespace Google.Cloud.OsLogin.V1 {
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     public ImportSshPublicKeyResponse(ImportSshPublicKeyResponse other) : this() {
-      LoginProfile = other.loginProfile_ != null ? other.LoginProfile.Clone() : null;
+      loginProfile_ = other.loginProfile_ != null ? other.loginProfile_.Clone() : null;
       _unknownFields = pb::UnknownFieldSet.Clone(other._unknownFields);
     }
 
@@ -1223,8 +1223,8 @@ namespace Google.Cloud.OsLogin.V1 {
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     public UpdateSshPublicKeyRequest(UpdateSshPublicKeyRequest other) : this() {
       name_ = other.name_;
-      SshPublicKey = other.sshPublicKey_ != null ? other.SshPublicKey.Clone() : null;
-      UpdateMask = other.updateMask_ != null ? other.UpdateMask.Clone() : null;
+      sshPublicKey_ = other.sshPublicKey_ != null ? other.sshPublicKey_.Clone() : null;
+      updateMask_ = other.updateMask_ != null ? other.updateMask_.Clone() : null;
       _unknownFields = pb::UnknownFieldSet.Clone(other._unknownFields);
     }
 

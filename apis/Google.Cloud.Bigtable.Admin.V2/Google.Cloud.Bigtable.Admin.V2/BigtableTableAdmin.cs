@@ -190,7 +190,7 @@ namespace Google.Cloud.Bigtable.Admin.V2 {
     public CreateTableRequest(CreateTableRequest other) : this() {
       parent_ = other.parent_;
       tableId_ = other.tableId_;
-      Table = other.table_ != null ? other.Table.Clone() : null;
+      table_ = other.table_ != null ? other.table_.Clone() : null;
       initialSplits_ = other.initialSplits_.Clone();
       _unknownFields = pb::UnknownFieldSet.Clone(other._unknownFields);
     }
@@ -2723,7 +2723,7 @@ namespace Google.Cloud.Bigtable.Admin.V2 {
       name_ = other.name_;
       cluster_ = other.cluster_;
       snapshotId_ = other.snapshotId_;
-      Ttl = other.ttl_ != null ? other.Ttl.Clone() : null;
+      ttl_ = other.ttl_ != null ? other.ttl_.Clone() : null;
       description_ = other.description_;
       _unknownFields = pb::UnknownFieldSet.Clone(other._unknownFields);
     }
@@ -3659,9 +3659,9 @@ namespace Google.Cloud.Bigtable.Admin.V2 {
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     public SnapshotTableMetadata(SnapshotTableMetadata other) : this() {
-      OriginalRequest = other.originalRequest_ != null ? other.OriginalRequest.Clone() : null;
-      RequestTime = other.requestTime_ != null ? other.RequestTime.Clone() : null;
-      FinishTime = other.finishTime_ != null ? other.FinishTime.Clone() : null;
+      originalRequest_ = other.originalRequest_ != null ? other.originalRequest_.Clone() : null;
+      requestTime_ = other.requestTime_ != null ? other.requestTime_.Clone() : null;
+      finishTime_ = other.finishTime_ != null ? other.finishTime_.Clone() : null;
       _unknownFields = pb::UnknownFieldSet.Clone(other._unknownFields);
     }
 
@@ -3879,9 +3879,9 @@ namespace Google.Cloud.Bigtable.Admin.V2 {
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     public CreateTableFromSnapshotMetadata(CreateTableFromSnapshotMetadata other) : this() {
-      OriginalRequest = other.originalRequest_ != null ? other.OriginalRequest.Clone() : null;
-      RequestTime = other.requestTime_ != null ? other.RequestTime.Clone() : null;
-      FinishTime = other.finishTime_ != null ? other.FinishTime.Clone() : null;
+      originalRequest_ = other.originalRequest_ != null ? other.originalRequest_.Clone() : null;
+      requestTime_ = other.requestTime_ != null ? other.requestTime_.Clone() : null;
+      finishTime_ = other.finishTime_ != null ? other.finishTime_.Clone() : null;
       _unknownFields = pb::UnknownFieldSet.Clone(other._unknownFields);
     }
 

@@ -276,7 +276,7 @@ namespace Google.Cloud.Logging.V2 {
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     public WriteLogEntriesRequest(WriteLogEntriesRequest other) : this() {
       logName_ = other.logName_;
-      Resource = other.resource_ != null ? other.Resource.Clone() : null;
+      resource_ = other.resource_ != null ? other.resource_.Clone() : null;
       labels_ = other.labels_.Clone();
       entries_ = other.entries_.Clone();
       partialSuccess_ = other.partialSuccess_;

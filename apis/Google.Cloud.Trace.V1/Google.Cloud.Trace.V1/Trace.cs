@@ -439,8 +439,8 @@ namespace Google.Cloud.Trace.V1 {
       spanId_ = other.spanId_;
       kind_ = other.kind_;
       name_ = other.name_;
-      StartTime = other.startTime_ != null ? other.StartTime.Clone() : null;
-      EndTime = other.endTime_ != null ? other.EndTime.Clone() : null;
+      startTime_ = other.startTime_ != null ? other.startTime_.Clone() : null;
+      endTime_ = other.endTime_ != null ? other.endTime_.Clone() : null;
       parentSpanId_ = other.parentSpanId_;
       labels_ = other.labels_.Clone();
       _unknownFields = pb::UnknownFieldSet.Clone(other._unknownFields);
@@ -837,8 +837,8 @@ namespace Google.Cloud.Trace.V1 {
       view_ = other.view_;
       pageSize_ = other.pageSize_;
       pageToken_ = other.pageToken_;
-      StartTime = other.startTime_ != null ? other.StartTime.Clone() : null;
-      EndTime = other.endTime_ != null ? other.EndTime.Clone() : null;
+      startTime_ = other.startTime_ != null ? other.startTime_.Clone() : null;
+      endTime_ = other.endTime_ != null ? other.endTime_.Clone() : null;
       filter_ = other.filter_;
       orderBy_ = other.orderBy_;
       _unknownFields = pb::UnknownFieldSet.Clone(other._unknownFields);
@@ -1604,7 +1604,7 @@ namespace Google.Cloud.Trace.V1 {
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     public PatchTracesRequest(PatchTracesRequest other) : this() {
       projectId_ = other.projectId_;
-      Traces = other.traces_ != null ? other.Traces.Clone() : null;
+      traces_ = other.traces_ != null ? other.traces_.Clone() : null;
       _unknownFields = pb::UnknownFieldSet.Clone(other._unknownFields);
     }
 

@@ -94,7 +94,7 @@ namespace Google.Cloud.Kms.V1 {
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     public KeyRing(KeyRing other) : this() {
       name_ = other.name_;
-      CreateTime = other.createTime_ != null ? other.CreateTime.Clone() : null;
+      createTime_ = other.createTime_ != null ? other.createTime_.Clone() : null;
       _unknownFields = pb::UnknownFieldSet.Clone(other._unknownFields);
     }
 
@@ -271,10 +271,10 @@ namespace Google.Cloud.Kms.V1 {
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     public CryptoKey(CryptoKey other) : this() {
       name_ = other.name_;
-      Primary = other.primary_ != null ? other.Primary.Clone() : null;
+      primary_ = other.primary_ != null ? other.primary_.Clone() : null;
       purpose_ = other.purpose_;
-      CreateTime = other.createTime_ != null ? other.CreateTime.Clone() : null;
-      NextRotationTime = other.nextRotationTime_ != null ? other.NextRotationTime.Clone() : null;
+      createTime_ = other.createTime_ != null ? other.createTime_.Clone() : null;
+      nextRotationTime_ = other.nextRotationTime_ != null ? other.nextRotationTime_.Clone() : null;
       labels_ = other.labels_.Clone();
       switch (other.RotationScheduleCase) {
         case RotationScheduleOneofCase.RotationPeriod:
@@ -693,9 +693,9 @@ namespace Google.Cloud.Kms.V1 {
     public CryptoKeyVersion(CryptoKeyVersion other) : this() {
       name_ = other.name_;
       state_ = other.state_;
-      CreateTime = other.createTime_ != null ? other.CreateTime.Clone() : null;
-      DestroyTime = other.destroyTime_ != null ? other.DestroyTime.Clone() : null;
-      DestroyEventTime = other.destroyEventTime_ != null ? other.DestroyEventTime.Clone() : null;
+      createTime_ = other.createTime_ != null ? other.createTime_.Clone() : null;
+      destroyTime_ = other.destroyTime_ != null ? other.destroyTime_.Clone() : null;
+      destroyEventTime_ = other.destroyEventTime_ != null ? other.destroyEventTime_.Clone() : null;
       _unknownFields = pb::UnknownFieldSet.Clone(other._unknownFields);
     }
 

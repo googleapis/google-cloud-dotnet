@@ -88,7 +88,7 @@ namespace Google.Cloud.Logging.Type {
       remoteIp_ = other.remoteIp_;
       serverIp_ = other.serverIp_;
       referer_ = other.referer_;
-      Latency = other.latency_ != null ? other.Latency.Clone() : null;
+      latency_ = other.latency_ != null ? other.latency_.Clone() : null;
       cacheLookup_ = other.cacheLookup_;
       cacheHit_ = other.cacheHit_;
       cacheValidatedWithOriginServer_ = other.cacheValidatedWithOriginServer_;

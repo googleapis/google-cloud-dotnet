@@ -399,7 +399,7 @@ namespace Google.Cloud.PubSub.V1 {
     public Topic(Topic other) : this() {
       name_ = other.name_;
       labels_ = other.labels_.Clone();
-      MessageStoragePolicy = other.messageStoragePolicy_ != null ? other.MessageStoragePolicy.Clone() : null;
+      messageStoragePolicy_ = other.messageStoragePolicy_ != null ? other.messageStoragePolicy_.Clone() : null;
       _unknownFields = pb::UnknownFieldSet.Clone(other._unknownFields);
     }
 
@@ -606,7 +606,7 @@ namespace Google.Cloud.PubSub.V1 {
       data_ = other.data_;
       attributes_ = other.attributes_.Clone();
       messageId_ = other.messageId_;
-      PublishTime = other.publishTime_ != null ? other.PublishTime.Clone() : null;
+      publishTime_ = other.publishTime_ != null ? other.publishTime_.Clone() : null;
       _unknownFields = pb::UnknownFieldSet.Clone(other._unknownFields);
     }
 
@@ -970,8 +970,8 @@ namespace Google.Cloud.PubSub.V1 {
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     public UpdateTopicRequest(UpdateTopicRequest other) : this() {
-      Topic = other.topic_ != null ? other.Topic.Clone() : null;
-      UpdateMask = other.updateMask_ != null ? other.UpdateMask.Clone() : null;
+      topic_ = other.topic_ != null ? other.topic_.Clone() : null;
+      updateMask_ = other.updateMask_ != null ? other.updateMask_.Clone() : null;
       _unknownFields = pb::UnknownFieldSet.Clone(other._unknownFields);
     }
 
@@ -2663,10 +2663,10 @@ namespace Google.Cloud.PubSub.V1 {
     public Subscription(Subscription other) : this() {
       name_ = other.name_;
       topic_ = other.topic_;
-      PushConfig = other.pushConfig_ != null ? other.PushConfig.Clone() : null;
+      pushConfig_ = other.pushConfig_ != null ? other.pushConfig_.Clone() : null;
       ackDeadlineSeconds_ = other.ackDeadlineSeconds_;
       retainAckedMessages_ = other.retainAckedMessages_;
-      MessageRetentionDuration = other.messageRetentionDuration_ != null ? other.MessageRetentionDuration.Clone() : null;
+      messageRetentionDuration_ = other.messageRetentionDuration_ != null ? other.messageRetentionDuration_.Clone() : null;
       labels_ = other.labels_.Clone();
       _unknownFields = pb::UnknownFieldSet.Clone(other._unknownFields);
     }
@@ -3209,7 +3209,7 @@ namespace Google.Cloud.PubSub.V1 {
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     public ReceivedMessage(ReceivedMessage other) : this() {
       ackId_ = other.ackId_;
-      Message = other.message_ != null ? other.Message.Clone() : null;
+      message_ = other.message_ != null ? other.message_.Clone() : null;
       _unknownFields = pb::UnknownFieldSet.Clone(other._unknownFields);
     }
 
@@ -3516,8 +3516,8 @@ namespace Google.Cloud.PubSub.V1 {
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     public UpdateSubscriptionRequest(UpdateSubscriptionRequest other) : this() {
-      Subscription = other.subscription_ != null ? other.Subscription.Clone() : null;
-      UpdateMask = other.updateMask_ != null ? other.UpdateMask.Clone() : null;
+      subscription_ = other.subscription_ != null ? other.subscription_.Clone() : null;
+      updateMask_ = other.updateMask_ != null ? other.updateMask_.Clone() : null;
       _unknownFields = pb::UnknownFieldSet.Clone(other._unknownFields);
     }
 
@@ -4192,7 +4192,7 @@ namespace Google.Cloud.PubSub.V1 {
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     public ModifyPushConfigRequest(ModifyPushConfigRequest other) : this() {
       subscription_ = other.subscription_;
-      PushConfig = other.pushConfig_ != null ? other.PushConfig.Clone() : null;
+      pushConfig_ = other.pushConfig_ != null ? other.pushConfig_.Clone() : null;
       _unknownFields = pb::UnknownFieldSet.Clone(other._unknownFields);
     }
 
@@ -5656,8 +5656,8 @@ namespace Google.Cloud.PubSub.V1 {
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     public UpdateSnapshotRequest(UpdateSnapshotRequest other) : this() {
-      Snapshot = other.snapshot_ != null ? other.Snapshot.Clone() : null;
-      UpdateMask = other.updateMask_ != null ? other.UpdateMask.Clone() : null;
+      snapshot_ = other.snapshot_ != null ? other.snapshot_.Clone() : null;
+      updateMask_ = other.updateMask_ != null ? other.updateMask_.Clone() : null;
       _unknownFields = pb::UnknownFieldSet.Clone(other._unknownFields);
     }
 
@@ -5840,7 +5840,7 @@ namespace Google.Cloud.PubSub.V1 {
     public Snapshot(Snapshot other) : this() {
       name_ = other.name_;
       topic_ = other.topic_;
-      ExpireTime = other.expireTime_ != null ? other.ExpireTime.Clone() : null;
+      expireTime_ = other.expireTime_ != null ? other.expireTime_.Clone() : null;
       labels_ = other.labels_.Clone();
       _unknownFields = pb::UnknownFieldSet.Clone(other._unknownFields);
     }

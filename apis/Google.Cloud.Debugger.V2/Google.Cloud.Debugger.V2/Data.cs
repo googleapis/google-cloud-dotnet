@@ -301,7 +301,7 @@ namespace Google.Cloud.Debugger.V2 {
     public StatusMessage(StatusMessage other) : this() {
       isError_ = other.isError_;
       refersTo_ = other.refersTo_;
-      Description = other.description_ != null ? other.Description.Clone() : null;
+      description_ = other.description_ != null ? other.description_.Clone() : null;
       _unknownFields = pb::UnknownFieldSet.Clone(other._unknownFields);
     }
 
@@ -822,7 +822,7 @@ namespace Google.Cloud.Debugger.V2 {
       type_ = other.type_;
       members_ = other.members_.Clone();
       VarTableIndex = other.VarTableIndex;
-      Status = other.status_ != null ? other.Status.Clone() : null;
+      status_ = other.status_ != null ? other.status_.Clone() : null;
       _unknownFields = pb::UnknownFieldSet.Clone(other._unknownFields);
     }
 
@@ -1134,7 +1134,7 @@ namespace Google.Cloud.Debugger.V2 {
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     public StackFrame(StackFrame other) : this() {
       function_ = other.function_;
-      Location = other.location_ != null ? other.Location.Clone() : null;
+      location_ = other.location_ != null ? other.location_.Clone() : null;
       arguments_ = other.arguments_.Clone();
       locals_ = other.locals_.Clone();
       _unknownFields = pb::UnknownFieldSet.Clone(other._unknownFields);
@@ -1355,16 +1355,16 @@ namespace Google.Cloud.Debugger.V2 {
     public Breakpoint(Breakpoint other) : this() {
       id_ = other.id_;
       action_ = other.action_;
-      Location = other.location_ != null ? other.Location.Clone() : null;
+      location_ = other.location_ != null ? other.location_.Clone() : null;
       condition_ = other.condition_;
       expressions_ = other.expressions_.Clone();
       logMessageFormat_ = other.logMessageFormat_;
       logLevel_ = other.logLevel_;
       isFinalState_ = other.isFinalState_;
-      CreateTime = other.createTime_ != null ? other.CreateTime.Clone() : null;
-      FinalTime = other.finalTime_ != null ? other.FinalTime.Clone() : null;
+      createTime_ = other.createTime_ != null ? other.createTime_.Clone() : null;
+      finalTime_ = other.finalTime_ != null ? other.finalTime_.Clone() : null;
       userEmail_ = other.userEmail_;
-      Status = other.status_ != null ? other.Status.Clone() : null;
+      status_ = other.status_ != null ? other.status_.Clone() : null;
       stackFrames_ = other.stackFrames_.Clone();
       evaluatedExpressions_ = other.evaluatedExpressions_.Clone();
       variableTable_ = other.variableTable_.Clone();
@@ -2038,7 +2038,7 @@ namespace Google.Cloud.Debugger.V2 {
       isInactive_ = other.isInactive_;
       agentVersion_ = other.agentVersion_;
       isDisabled_ = other.isDisabled_;
-      Status = other.status_ != null ? other.Status.Clone() : null;
+      status_ = other.status_ != null ? other.status_.Clone() : null;
       sourceContexts_ = other.sourceContexts_.Clone();
       extSourceContexts_ = other.extSourceContexts_.Clone();
       labels_ = other.labels_.Clone();

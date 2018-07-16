@@ -146,8 +146,8 @@ namespace Google.Cloud.Spanner.V1 {
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     public Type(Type other) : this() {
       code_ = other.code_;
-      ArrayElementType = other.arrayElementType_ != null ? other.ArrayElementType.Clone() : null;
-      StructType = other.structType_ != null ? other.StructType.Clone() : null;
+      arrayElementType_ = other.arrayElementType_ != null ? other.arrayElementType_.Clone() : null;
+      structType_ = other.structType_ != null ? other.structType_.Clone() : null;
       _unknownFields = pb::UnknownFieldSet.Clone(other._unknownFields);
     }
 
@@ -491,7 +491,7 @@ namespace Google.Cloud.Spanner.V1 {
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
         public Field(Field other) : this() {
           name_ = other.name_;
-          Type = other.type_ != null ? other.Type.Clone() : null;
+          type_ = other.type_ != null ? other.type_.Clone() : null;
           _unknownFields = pb::UnknownFieldSet.Clone(other._unknownFields);
         }
 

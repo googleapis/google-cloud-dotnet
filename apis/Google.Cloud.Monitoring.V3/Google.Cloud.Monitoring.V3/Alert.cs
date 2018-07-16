@@ -117,14 +117,14 @@ namespace Google.Cloud.Monitoring.V3 {
     public AlertPolicy(AlertPolicy other) : this() {
       name_ = other.name_;
       displayName_ = other.displayName_;
-      Documentation = other.documentation_ != null ? other.Documentation.Clone() : null;
+      documentation_ = other.documentation_ != null ? other.documentation_.Clone() : null;
       userLabels_ = other.userLabels_.Clone();
       conditions_ = other.conditions_.Clone();
       combiner_ = other.combiner_;
       Enabled = other.Enabled;
       notificationChannels_ = other.notificationChannels_.Clone();
-      CreationRecord = other.creationRecord_ != null ? other.CreationRecord.Clone() : null;
-      MutationRecord = other.mutationRecord_ != null ? other.MutationRecord.Clone() : null;
+      creationRecord_ = other.creationRecord_ != null ? other.creationRecord_.Clone() : null;
+      mutationRecord_ = other.mutationRecord_ != null ? other.mutationRecord_.Clone() : null;
       _unknownFields = pb::UnknownFieldSet.Clone(other._unknownFields);
     }
 
@@ -1284,8 +1284,8 @@ namespace Google.Cloud.Monitoring.V3 {
               denominatorAggregations_ = other.denominatorAggregations_.Clone();
               comparison_ = other.comparison_;
               thresholdValue_ = other.thresholdValue_;
-              Duration = other.duration_ != null ? other.Duration.Clone() : null;
-              Trigger = other.trigger_ != null ? other.Trigger.Clone() : null;
+              duration_ = other.duration_ != null ? other.duration_.Clone() : null;
+              trigger_ = other.trigger_ != null ? other.trigger_.Clone() : null;
               _unknownFields = pb::UnknownFieldSet.Clone(other._unknownFields);
             }
 
@@ -1697,8 +1697,8 @@ namespace Google.Cloud.Monitoring.V3 {
             public MetricAbsence(MetricAbsence other) : this() {
               filter_ = other.filter_;
               aggregations_ = other.aggregations_.Clone();
-              Duration = other.duration_ != null ? other.Duration.Clone() : null;
-              Trigger = other.trigger_ != null ? other.Trigger.Clone() : null;
+              duration_ = other.duration_ != null ? other.duration_.Clone() : null;
+              trigger_ = other.trigger_ != null ? other.trigger_.Clone() : null;
               _unknownFields = pb::UnknownFieldSet.Clone(other._unknownFields);
             }
 

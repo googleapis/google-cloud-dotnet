@@ -589,8 +589,8 @@ namespace Google.Cloud.Language.V1 {
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     public Sentence(Sentence other) : this() {
-      Text = other.text_ != null ? other.Text.Clone() : null;
-      Sentiment = other.sentiment_ != null ? other.Sentiment.Clone() : null;
+      text_ = other.text_ != null ? other.text_.Clone() : null;
+      sentiment_ = other.sentiment_ != null ? other.sentiment_.Clone() : null;
       _unknownFields = pb::UnknownFieldSet.Clone(other._unknownFields);
     }
 
@@ -776,7 +776,7 @@ namespace Google.Cloud.Language.V1 {
       metadata_ = other.metadata_.Clone();
       salience_ = other.salience_;
       mentions_ = other.mentions_.Clone();
-      Sentiment = other.sentiment_ != null ? other.Sentiment.Clone() : null;
+      sentiment_ = other.sentiment_ != null ? other.sentiment_.Clone() : null;
       _unknownFields = pb::UnknownFieldSet.Clone(other._unknownFields);
     }
 
@@ -1108,9 +1108,9 @@ namespace Google.Cloud.Language.V1 {
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     public Token(Token other) : this() {
-      Text = other.text_ != null ? other.Text.Clone() : null;
-      PartOfSpeech = other.partOfSpeech_ != null ? other.PartOfSpeech.Clone() : null;
-      DependencyEdge = other.dependencyEdge_ != null ? other.DependencyEdge.Clone() : null;
+      text_ = other.text_ != null ? other.text_.Clone() : null;
+      partOfSpeech_ = other.partOfSpeech_ != null ? other.partOfSpeech_.Clone() : null;
+      dependencyEdge_ = other.dependencyEdge_ != null ? other.dependencyEdge_.Clone() : null;
       lemma_ = other.lemma_;
       _unknownFields = pb::UnknownFieldSet.Clone(other._unknownFields);
     }
@@ -2934,9 +2934,9 @@ namespace Google.Cloud.Language.V1 {
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     public EntityMention(EntityMention other) : this() {
-      Text = other.text_ != null ? other.Text.Clone() : null;
+      text_ = other.text_ != null ? other.text_.Clone() : null;
       type_ = other.type_;
-      Sentiment = other.sentiment_ != null ? other.Sentiment.Clone() : null;
+      sentiment_ = other.sentiment_ != null ? other.sentiment_.Clone() : null;
       _unknownFields = pb::UnknownFieldSet.Clone(other._unknownFields);
     }
 
@@ -3505,7 +3505,7 @@ namespace Google.Cloud.Language.V1 {
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     public AnalyzeSentimentRequest(AnalyzeSentimentRequest other) : this() {
-      Document = other.document_ != null ? other.Document.Clone() : null;
+      document_ = other.document_ != null ? other.document_.Clone() : null;
       encodingType_ = other.encodingType_;
       _unknownFields = pb::UnknownFieldSet.Clone(other._unknownFields);
     }
@@ -3677,7 +3677,7 @@ namespace Google.Cloud.Language.V1 {
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     public AnalyzeSentimentResponse(AnalyzeSentimentResponse other) : this() {
-      DocumentSentiment = other.documentSentiment_ != null ? other.DocumentSentiment.Clone() : null;
+      documentSentiment_ = other.documentSentiment_ != null ? other.documentSentiment_.Clone() : null;
       language_ = other.language_;
       sentences_ = other.sentences_.Clone();
       _unknownFields = pb::UnknownFieldSet.Clone(other._unknownFields);
@@ -3874,7 +3874,7 @@ namespace Google.Cloud.Language.V1 {
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     public AnalyzeEntitySentimentRequest(AnalyzeEntitySentimentRequest other) : this() {
-      Document = other.document_ != null ? other.Document.Clone() : null;
+      document_ = other.document_ != null ? other.document_.Clone() : null;
       encodingType_ = other.encodingType_;
       _unknownFields = pb::UnknownFieldSet.Clone(other._unknownFields);
     }
@@ -4206,7 +4206,7 @@ namespace Google.Cloud.Language.V1 {
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     public AnalyzeEntitiesRequest(AnalyzeEntitiesRequest other) : this() {
-      Document = other.document_ != null ? other.Document.Clone() : null;
+      document_ = other.document_ != null ? other.document_.Clone() : null;
       encodingType_ = other.encodingType_;
       _unknownFields = pb::UnknownFieldSet.Clone(other._unknownFields);
     }
@@ -4538,7 +4538,7 @@ namespace Google.Cloud.Language.V1 {
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     public AnalyzeSyntaxRequest(AnalyzeSyntaxRequest other) : this() {
-      Document = other.document_ != null ? other.Document.Clone() : null;
+      document_ = other.document_ != null ? other.document_.Clone() : null;
       encodingType_ = other.encodingType_;
       _unknownFields = pb::UnknownFieldSet.Clone(other._unknownFields);
     }
@@ -4893,7 +4893,7 @@ namespace Google.Cloud.Language.V1 {
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     public ClassifyTextRequest(ClassifyTextRequest other) : this() {
-      Document = other.document_ != null ? other.Document.Clone() : null;
+      document_ = other.document_ != null ? other.document_.Clone() : null;
       _unknownFields = pb::UnknownFieldSet.Clone(other._unknownFields);
     }
 
@@ -5162,8 +5162,8 @@ namespace Google.Cloud.Language.V1 {
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     public AnnotateTextRequest(AnnotateTextRequest other) : this() {
-      Document = other.document_ != null ? other.Document.Clone() : null;
-      Features = other.features_ != null ? other.Features.Clone() : null;
+      document_ = other.document_ != null ? other.document_.Clone() : null;
+      features_ = other.features_ != null ? other.features_.Clone() : null;
       encodingType_ = other.encodingType_;
       _unknownFields = pb::UnknownFieldSet.Clone(other._unknownFields);
     }
@@ -5641,7 +5641,7 @@ namespace Google.Cloud.Language.V1 {
       sentences_ = other.sentences_.Clone();
       tokens_ = other.tokens_.Clone();
       entities_ = other.entities_.Clone();
-      DocumentSentiment = other.documentSentiment_ != null ? other.DocumentSentiment.Clone() : null;
+      documentSentiment_ = other.documentSentiment_ != null ? other.documentSentiment_.Clone() : null;
       language_ = other.language_;
       categories_ = other.categories_.Clone();
       _unknownFields = pb::UnknownFieldSet.Clone(other._unknownFields);

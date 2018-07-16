@@ -418,7 +418,7 @@ namespace Google.Cloud.Dataproc.V1 {
       fileUris_ = other.fileUris_.Clone();
       archiveUris_ = other.archiveUris_.Clone();
       properties_ = other.properties_.Clone();
-      LoggingConfig = other.loggingConfig_ != null ? other.LoggingConfig.Clone() : null;
+      loggingConfig_ = other.loggingConfig_ != null ? other.loggingConfig_.Clone() : null;
       switch (other.DriverCase) {
         case DriverOneofCase.MainJarFileUri:
           MainJarFileUri = other.MainJarFileUri;
@@ -784,7 +784,7 @@ namespace Google.Cloud.Dataproc.V1 {
       fileUris_ = other.fileUris_.Clone();
       archiveUris_ = other.archiveUris_.Clone();
       properties_ = other.properties_.Clone();
-      LoggingConfig = other.loggingConfig_ != null ? other.LoggingConfig.Clone() : null;
+      loggingConfig_ = other.loggingConfig_ != null ? other.loggingConfig_.Clone() : null;
       switch (other.DriverCase) {
         case DriverOneofCase.MainJarFileUri:
           MainJarFileUri = other.MainJarFileUri;
@@ -1147,7 +1147,7 @@ namespace Google.Cloud.Dataproc.V1 {
       fileUris_ = other.fileUris_.Clone();
       archiveUris_ = other.archiveUris_.Clone();
       properties_ = other.properties_.Clone();
-      LoggingConfig = other.loggingConfig_ != null ? other.LoggingConfig.Clone() : null;
+      loggingConfig_ = other.loggingConfig_ != null ? other.loggingConfig_.Clone() : null;
       _unknownFields = pb::UnknownFieldSet.Clone(other._unknownFields);
     }
 
@@ -1918,7 +1918,7 @@ namespace Google.Cloud.Dataproc.V1 {
       scriptVariables_ = other.scriptVariables_.Clone();
       properties_ = other.properties_.Clone();
       jarFileUris_ = other.jarFileUris_.Clone();
-      LoggingConfig = other.loggingConfig_ != null ? other.LoggingConfig.Clone() : null;
+      loggingConfig_ = other.loggingConfig_ != null ? other.loggingConfig_.Clone() : null;
       switch (other.QueriesCase) {
         case QueriesOneofCase.QueryFileUri:
           QueryFileUri = other.QueryFileUri;
@@ -2234,7 +2234,7 @@ namespace Google.Cloud.Dataproc.V1 {
       scriptVariables_ = other.scriptVariables_.Clone();
       properties_ = other.properties_.Clone();
       jarFileUris_ = other.jarFileUris_.Clone();
-      LoggingConfig = other.loggingConfig_ != null ? other.LoggingConfig.Clone() : null;
+      loggingConfig_ = other.loggingConfig_ != null ? other.loggingConfig_.Clone() : null;
       switch (other.QueriesCase) {
         case QueriesOneofCase.QueryFileUri:
           QueryFileUri = other.QueryFileUri;
@@ -2748,7 +2748,7 @@ namespace Google.Cloud.Dataproc.V1 {
     public JobStatus(JobStatus other) : this() {
       state_ = other.state_;
       details_ = other.details_;
-      StateStartTime = other.stateStartTime_ != null ? other.StateStartTime.Clone() : null;
+      stateStartTime_ = other.stateStartTime_ != null ? other.stateStartTime_.Clone() : null;
       substate_ = other.substate_;
       _unknownFields = pb::UnknownFieldSet.Clone(other._unknownFields);
     }
@@ -3522,15 +3522,15 @@ namespace Google.Cloud.Dataproc.V1 {
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     public Job(Job other) : this() {
-      Reference = other.reference_ != null ? other.Reference.Clone() : null;
-      Placement = other.placement_ != null ? other.Placement.Clone() : null;
-      Status = other.status_ != null ? other.Status.Clone() : null;
+      reference_ = other.reference_ != null ? other.reference_.Clone() : null;
+      placement_ = other.placement_ != null ? other.placement_.Clone() : null;
+      status_ = other.status_ != null ? other.status_.Clone() : null;
       statusHistory_ = other.statusHistory_.Clone();
       yarnApplications_ = other.yarnApplications_.Clone();
       driverOutputResourceUri_ = other.driverOutputResourceUri_;
       driverControlFilesUri_ = other.driverControlFilesUri_;
       labels_ = other.labels_.Clone();
-      Scheduling = other.scheduling_ != null ? other.Scheduling.Clone() : null;
+      scheduling_ = other.scheduling_ != null ? other.scheduling_.Clone() : null;
       switch (other.TypeJobCase) {
         case TypeJobOneofCase.HadoopJob:
           HadoopJob = other.HadoopJob.Clone();
@@ -4346,7 +4346,7 @@ namespace Google.Cloud.Dataproc.V1 {
     public SubmitJobRequest(SubmitJobRequest other) : this() {
       projectId_ = other.projectId_;
       region_ = other.region_;
-      Job = other.job_ != null ? other.Job.Clone() : null;
+      job_ = other.job_ != null ? other.job_.Clone() : null;
       _unknownFields = pb::UnknownFieldSet.Clone(other._unknownFields);
     }
 
@@ -5115,8 +5115,8 @@ namespace Google.Cloud.Dataproc.V1 {
       projectId_ = other.projectId_;
       region_ = other.region_;
       jobId_ = other.jobId_;
-      Job = other.job_ != null ? other.Job.Clone() : null;
-      UpdateMask = other.updateMask_ != null ? other.UpdateMask.Clone() : null;
+      job_ = other.job_ != null ? other.job_.Clone() : null;
+      updateMask_ = other.updateMask_ != null ? other.updateMask_.Clone() : null;
       _unknownFields = pb::UnknownFieldSet.Clone(other._unknownFields);
     }
 

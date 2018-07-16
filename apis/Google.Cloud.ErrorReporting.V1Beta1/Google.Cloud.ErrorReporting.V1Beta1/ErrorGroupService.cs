@@ -228,7 +228,7 @@ namespace Google.Cloud.ErrorReporting.V1Beta1 {
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     public UpdateGroupRequest(UpdateGroupRequest other) : this() {
-      Group = other.group_ != null ? other.Group.Clone() : null;
+      group_ = other.group_ != null ? other.group_.Clone() : null;
       _unknownFields = pb::UnknownFieldSet.Clone(other._unknownFields);
     }
 

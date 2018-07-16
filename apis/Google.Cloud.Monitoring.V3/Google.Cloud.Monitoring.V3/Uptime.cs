@@ -167,8 +167,8 @@ namespace Google.Cloud.Monitoring.V3 {
     public UptimeCheckConfig(UptimeCheckConfig other) : this() {
       name_ = other.name_;
       displayName_ = other.displayName_;
-      Period = other.period_ != null ? other.Period.Clone() : null;
-      Timeout = other.timeout_ != null ? other.Timeout.Clone() : null;
+      period_ = other.period_ != null ? other.period_.Clone() : null;
+      timeout_ = other.timeout_ != null ? other.timeout_.Clone() : null;
       contentMatchers_ = other.contentMatchers_.Clone();
       selectedRegions_ = other.selectedRegions_.Clone();
       internalCheckers_ = other.internalCheckers_.Clone();
@@ -884,7 +884,7 @@ namespace Google.Cloud.Monitoring.V3 {
           useSsl_ = other.useSsl_;
           path_ = other.path_;
           port_ = other.port_;
-          AuthInfo = other.authInfo_ != null ? other.AuthInfo.Clone() : null;
+          authInfo_ = other.authInfo_ != null ? other.authInfo_.Clone() : null;
           maskHeaders_ = other.maskHeaders_;
           headers_ = other.headers_.Clone();
           _unknownFields = pb::UnknownFieldSet.Clone(other._unknownFields);

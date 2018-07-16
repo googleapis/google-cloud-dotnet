@@ -625,7 +625,7 @@ namespace Google.Cloud.Spanner.V1 {
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
         public Delete(Delete other) : this() {
           table_ = other.table_;
-          KeySet = other.keySet_ != null ? other.KeySet.Clone() : null;
+          keySet_ = other.keySet_ != null ? other.keySet_.Clone() : null;
           _unknownFields = pb::UnknownFieldSet.Clone(other._unknownFields);
         }
 

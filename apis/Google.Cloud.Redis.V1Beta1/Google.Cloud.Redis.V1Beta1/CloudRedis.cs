@@ -143,7 +143,7 @@ namespace Google.Cloud.Redis.V1Beta1 {
       host_ = other.host_;
       port_ = other.port_;
       currentLocationId_ = other.currentLocationId_;
-      CreateTime = other.createTime_ != null ? other.CreateTime.Clone() : null;
+      createTime_ = other.createTime_ != null ? other.createTime_.Clone() : null;
       state_ = other.state_;
       statusMessage_ = other.statusMessage_;
       redisConfigs_ = other.redisConfigs_.Clone();
@@ -1360,7 +1360,7 @@ namespace Google.Cloud.Redis.V1Beta1 {
     public CreateInstanceRequest(CreateInstanceRequest other) : this() {
       parent_ = other.parent_;
       instanceId_ = other.instanceId_;
-      Instance = other.instance_ != null ? other.Instance.Clone() : null;
+      instance_ = other.instance_ != null ? other.instance_.Clone() : null;
       _unknownFields = pb::UnknownFieldSet.Clone(other._unknownFields);
     }
 
@@ -1570,8 +1570,8 @@ namespace Google.Cloud.Redis.V1Beta1 {
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     public UpdateInstanceRequest(UpdateInstanceRequest other) : this() {
-      UpdateMask = other.updateMask_ != null ? other.UpdateMask.Clone() : null;
-      Instance = other.instance_ != null ? other.Instance.Clone() : null;
+      updateMask_ = other.updateMask_ != null ? other.updateMask_.Clone() : null;
+      instance_ = other.instance_ != null ? other.instance_.Clone() : null;
       _unknownFields = pb::UnknownFieldSet.Clone(other._unknownFields);
     }
 

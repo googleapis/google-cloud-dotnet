@@ -99,7 +99,7 @@ namespace Google.LongRunning {
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     public Operation(Operation other) : this() {
       name_ = other.name_;
-      Metadata = other.metadata_ != null ? other.Metadata.Clone() : null;
+      metadata_ = other.metadata_ != null ? other.metadata_.Clone() : null;
       done_ = other.done_;
       switch (other.ResultCase) {
         case ResultOneofCase.Error:

@@ -1219,7 +1219,7 @@ namespace Google.Cloud.Monitoring.V3 {
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     public CreateMetricDescriptorRequest(CreateMetricDescriptorRequest other) : this() {
       name_ = other.name_;
-      MetricDescriptor = other.metricDescriptor_ != null ? other.MetricDescriptor.Clone() : null;
+      metricDescriptor_ = other.metricDescriptor_ != null ? other.metricDescriptor_.Clone() : null;
       _unknownFields = pb::UnknownFieldSet.Clone(other._unknownFields);
     }
 
@@ -1532,8 +1532,8 @@ namespace Google.Cloud.Monitoring.V3 {
     public ListTimeSeriesRequest(ListTimeSeriesRequest other) : this() {
       name_ = other.name_;
       filter_ = other.filter_;
-      Interval = other.interval_ != null ? other.Interval.Clone() : null;
-      Aggregation = other.aggregation_ != null ? other.Aggregation.Clone() : null;
+      interval_ = other.interval_ != null ? other.interval_.Clone() : null;
+      aggregation_ = other.aggregation_ != null ? other.aggregation_.Clone() : null;
       orderBy_ = other.orderBy_;
       view_ = other.view_;
       pageSize_ = other.pageSize_;
@@ -2258,8 +2258,8 @@ namespace Google.Cloud.Monitoring.V3 {
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     public CreateTimeSeriesError(CreateTimeSeriesError other) : this() {
-      TimeSeries = other.timeSeries_ != null ? other.TimeSeries.Clone() : null;
-      Status = other.status_ != null ? other.Status.Clone() : null;
+      timeSeries_ = other.timeSeries_ != null ? other.timeSeries_.Clone() : null;
+      status_ = other.status_ != null ? other.status_.Clone() : null;
       _unknownFields = pb::UnknownFieldSet.Clone(other._unknownFields);
     }
 

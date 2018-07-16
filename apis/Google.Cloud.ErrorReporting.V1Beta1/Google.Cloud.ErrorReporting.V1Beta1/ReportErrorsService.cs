@@ -91,7 +91,7 @@ namespace Google.Cloud.ErrorReporting.V1Beta1 {
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     public ReportErrorEventRequest(ReportErrorEventRequest other) : this() {
       projectName_ = other.projectName_;
-      Event = other.event_ != null ? other.Event.Clone() : null;
+      event_ = other.event_ != null ? other.event_.Clone() : null;
       _unknownFields = pb::UnknownFieldSet.Clone(other._unknownFields);
     }
 
@@ -370,10 +370,10 @@ namespace Google.Cloud.ErrorReporting.V1Beta1 {
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     public ReportedErrorEvent(ReportedErrorEvent other) : this() {
-      EventTime = other.eventTime_ != null ? other.EventTime.Clone() : null;
-      ServiceContext = other.serviceContext_ != null ? other.ServiceContext.Clone() : null;
+      eventTime_ = other.eventTime_ != null ? other.eventTime_.Clone() : null;
+      serviceContext_ = other.serviceContext_ != null ? other.serviceContext_.Clone() : null;
       message_ = other.message_;
-      Context = other.context_ != null ? other.Context.Clone() : null;
+      context_ = other.context_ != null ? other.context_.Clone() : null;
       _unknownFields = pb::UnknownFieldSet.Clone(other._unknownFields);
     }
 

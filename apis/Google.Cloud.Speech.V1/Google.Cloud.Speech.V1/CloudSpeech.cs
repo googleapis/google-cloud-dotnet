@@ -144,8 +144,8 @@ namespace Google.Cloud.Speech.V1 {
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     public RecognizeRequest(RecognizeRequest other) : this() {
-      Config = other.config_ != null ? other.Config.Clone() : null;
-      Audio = other.audio_ != null ? other.Audio.Clone() : null;
+      config_ = other.config_ != null ? other.config_.Clone() : null;
+      audio_ = other.audio_ != null ? other.audio_.Clone() : null;
       _unknownFields = pb::UnknownFieldSet.Clone(other._unknownFields);
     }
 
@@ -324,8 +324,8 @@ namespace Google.Cloud.Speech.V1 {
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     public LongRunningRecognizeRequest(LongRunningRecognizeRequest other) : this() {
-      Config = other.config_ != null ? other.Config.Clone() : null;
-      Audio = other.audio_ != null ? other.Audio.Clone() : null;
+      config_ = other.config_ != null ? other.config_.Clone() : null;
+      audio_ = other.audio_ != null ? other.audio_.Clone() : null;
       _unknownFields = pb::UnknownFieldSet.Clone(other._unknownFields);
     }
 
@@ -722,7 +722,7 @@ namespace Google.Cloud.Speech.V1 {
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     public StreamingRecognitionConfig(StreamingRecognitionConfig other) : this() {
-      Config = other.config_ != null ? other.Config.Clone() : null;
+      config_ = other.config_ != null ? other.config_.Clone() : null;
       singleUtterance_ = other.singleUtterance_;
       interimResults_ = other.interimResults_;
       _unknownFields = pb::UnknownFieldSet.Clone(other._unknownFields);
@@ -1950,8 +1950,8 @@ namespace Google.Cloud.Speech.V1 {
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     public LongRunningRecognizeMetadata(LongRunningRecognizeMetadata other) : this() {
       progressPercent_ = other.progressPercent_;
-      StartTime = other.startTime_ != null ? other.StartTime.Clone() : null;
-      LastUpdateTime = other.lastUpdateTime_ != null ? other.LastUpdateTime.Clone() : null;
+      startTime_ = other.startTime_ != null ? other.startTime_.Clone() : null;
+      lastUpdateTime_ = other.lastUpdateTime_ != null ? other.lastUpdateTime_.Clone() : null;
       _unknownFields = pb::UnknownFieldSet.Clone(other._unknownFields);
     }
 
@@ -2207,7 +2207,7 @@ namespace Google.Cloud.Speech.V1 {
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     public StreamingRecognizeResponse(StreamingRecognizeResponse other) : this() {
-      Error = other.error_ != null ? other.Error.Clone() : null;
+      error_ = other.error_ != null ? other.error_.Clone() : null;
       results_ = other.results_.Clone();
       speechEventType_ = other.speechEventType_;
       _unknownFields = pb::UnknownFieldSet.Clone(other._unknownFields);
@@ -2958,8 +2958,8 @@ namespace Google.Cloud.Speech.V1 {
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     public WordInfo(WordInfo other) : this() {
-      StartTime = other.startTime_ != null ? other.StartTime.Clone() : null;
-      EndTime = other.endTime_ != null ? other.EndTime.Clone() : null;
+      startTime_ = other.startTime_ != null ? other.startTime_.Clone() : null;
+      endTime_ = other.endTime_ != null ? other.endTime_.Clone() : null;
       word_ = other.word_;
       _unknownFields = pb::UnknownFieldSet.Clone(other._unknownFields);
     }

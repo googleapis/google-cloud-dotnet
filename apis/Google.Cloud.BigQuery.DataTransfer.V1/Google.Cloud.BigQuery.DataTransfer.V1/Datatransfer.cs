@@ -884,7 +884,7 @@ namespace Google.Cloud.BigQuery.DataTransfer.V1 {
       dataRefreshType_ = other.dataRefreshType_;
       defaultDataRefreshWindowDays_ = other.defaultDataRefreshWindowDays_;
       manualRunsDisabled_ = other.manualRunsDisabled_;
-      MinimumScheduleInterval = other.minimumScheduleInterval_ != null ? other.MinimumScheduleInterval.Clone() : null;
+      minimumScheduleInterval_ = other.minimumScheduleInterval_ != null ? other.minimumScheduleInterval_.Clone() : null;
       _unknownFields = pb::UnknownFieldSet.Clone(other._unknownFields);
     }
 
@@ -2090,7 +2090,7 @@ namespace Google.Cloud.BigQuery.DataTransfer.V1 {
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     public CreateTransferConfigRequest(CreateTransferConfigRequest other) : this() {
       parent_ = other.parent_;
-      TransferConfig = other.transferConfig_ != null ? other.TransferConfig.Clone() : null;
+      transferConfig_ = other.transferConfig_ != null ? other.transferConfig_.Clone() : null;
       authorizationCode_ = other.authorizationCode_;
       _unknownFields = pb::UnknownFieldSet.Clone(other._unknownFields);
     }
@@ -2311,9 +2311,9 @@ namespace Google.Cloud.BigQuery.DataTransfer.V1 {
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     public UpdateTransferConfigRequest(UpdateTransferConfigRequest other) : this() {
-      TransferConfig = other.transferConfig_ != null ? other.TransferConfig.Clone() : null;
+      transferConfig_ = other.transferConfig_ != null ? other.transferConfig_.Clone() : null;
       authorizationCode_ = other.authorizationCode_;
-      UpdateMask = other.updateMask_ != null ? other.UpdateMask.Clone() : null;
+      updateMask_ = other.updateMask_ != null ? other.updateMask_.Clone() : null;
       _unknownFields = pb::UnknownFieldSet.Clone(other._unknownFields);
     }
 
@@ -4573,8 +4573,8 @@ namespace Google.Cloud.BigQuery.DataTransfer.V1 {
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     public ScheduleTransferRunsRequest(ScheduleTransferRunsRequest other) : this() {
       parent_ = other.parent_;
-      StartTime = other.startTime_ != null ? other.StartTime.Clone() : null;
-      EndTime = other.endTime_ != null ? other.EndTime.Clone() : null;
+      startTime_ = other.startTime_ != null ? other.startTime_.Clone() : null;
+      endTime_ = other.endTime_ != null ? other.endTime_.Clone() : null;
       _unknownFields = pb::UnknownFieldSet.Clone(other._unknownFields);
     }
 

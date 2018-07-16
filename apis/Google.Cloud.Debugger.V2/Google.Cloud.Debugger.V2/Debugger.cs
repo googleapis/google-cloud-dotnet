@@ -127,7 +127,7 @@ namespace Google.Cloud.Debugger.V2 {
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     public SetBreakpointRequest(SetBreakpointRequest other) : this() {
       debuggeeId_ = other.debuggeeId_;
-      Breakpoint = other.breakpoint_ != null ? other.Breakpoint.Clone() : null;
+      breakpoint_ = other.breakpoint_ != null ? other.breakpoint_.Clone() : null;
       clientVersion_ = other.clientVersion_;
       _unknownFields = pb::UnknownFieldSet.Clone(other._unknownFields);
     }
@@ -331,7 +331,7 @@ namespace Google.Cloud.Debugger.V2 {
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     public SetBreakpointResponse(SetBreakpointResponse other) : this() {
-      Breakpoint = other.breakpoint_ != null ? other.Breakpoint.Clone() : null;
+      breakpoint_ = other.breakpoint_ != null ? other.breakpoint_.Clone() : null;
       _unknownFields = pb::UnknownFieldSet.Clone(other._unknownFields);
     }
 
@@ -671,7 +671,7 @@ namespace Google.Cloud.Debugger.V2 {
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     public GetBreakpointResponse(GetBreakpointResponse other) : this() {
-      Breakpoint = other.breakpoint_ != null ? other.Breakpoint.Clone() : null;
+      breakpoint_ = other.breakpoint_ != null ? other.breakpoint_.Clone() : null;
       _unknownFields = pb::UnknownFieldSet.Clone(other._unknownFields);
     }
 
@@ -1014,7 +1014,7 @@ namespace Google.Cloud.Debugger.V2 {
       debuggeeId_ = other.debuggeeId_;
       includeAllUsers_ = other.includeAllUsers_;
       includeInactive_ = other.includeInactive_;
-      Action = other.action_ != null ? other.Action.Clone() : null;
+      action_ = other.action_ != null ? other.action_.Clone() : null;
       stripResults_ = other.stripResults_;
       waitToken_ = other.waitToken_;
       clientVersion_ = other.clientVersion_;

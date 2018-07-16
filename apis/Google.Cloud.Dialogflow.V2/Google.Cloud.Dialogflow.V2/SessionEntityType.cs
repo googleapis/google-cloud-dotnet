@@ -848,7 +848,7 @@ namespace Google.Cloud.Dialogflow.V2 {
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     public CreateSessionEntityTypeRequest(CreateSessionEntityTypeRequest other) : this() {
       parent_ = other.parent_;
-      SessionEntityType = other.sessionEntityType_ != null ? other.SessionEntityType.Clone() : null;
+      sessionEntityType_ = other.sessionEntityType_ != null ? other.sessionEntityType_.Clone() : null;
       _unknownFields = pb::UnknownFieldSet.Clone(other._unknownFields);
     }
 
@@ -1020,8 +1020,8 @@ namespace Google.Cloud.Dialogflow.V2 {
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     public UpdateSessionEntityTypeRequest(UpdateSessionEntityTypeRequest other) : this() {
-      SessionEntityType = other.sessionEntityType_ != null ? other.SessionEntityType.Clone() : null;
-      UpdateMask = other.updateMask_ != null ? other.UpdateMask.Clone() : null;
+      sessionEntityType_ = other.sessionEntityType_ != null ? other.sessionEntityType_.Clone() : null;
+      updateMask_ = other.updateMask_ != null ? other.updateMask_.Clone() : null;
       _unknownFields = pb::UnknownFieldSet.Clone(other._unknownFields);
     }
 

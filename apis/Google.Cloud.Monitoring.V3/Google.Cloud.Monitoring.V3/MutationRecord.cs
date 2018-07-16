@@ -71,7 +71,7 @@ namespace Google.Cloud.Monitoring.V3 {
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     public MutationRecord(MutationRecord other) : this() {
-      MutateTime = other.mutateTime_ != null ? other.MutateTime.Clone() : null;
+      mutateTime_ = other.mutateTime_ != null ? other.mutateTime_.Clone() : null;
       mutatedBy_ = other.mutatedBy_;
       _unknownFields = pb::UnknownFieldSet.Clone(other._unknownFields);
     }

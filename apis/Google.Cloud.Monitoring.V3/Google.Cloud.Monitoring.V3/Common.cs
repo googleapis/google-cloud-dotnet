@@ -481,8 +481,8 @@ namespace Google.Cloud.Monitoring.V3 {
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     public TimeInterval(TimeInterval other) : this() {
-      EndTime = other.endTime_ != null ? other.EndTime.Clone() : null;
-      StartTime = other.startTime_ != null ? other.StartTime.Clone() : null;
+      endTime_ = other.endTime_ != null ? other.endTime_.Clone() : null;
+      startTime_ = other.startTime_ != null ? other.startTime_.Clone() : null;
       _unknownFields = pb::UnknownFieldSet.Clone(other._unknownFields);
     }
 
@@ -666,7 +666,7 @@ namespace Google.Cloud.Monitoring.V3 {
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     public Aggregation(Aggregation other) : this() {
-      AlignmentPeriod = other.alignmentPeriod_ != null ? other.AlignmentPeriod.Clone() : null;
+      alignmentPeriod_ = other.alignmentPeriod_ != null ? other.alignmentPeriod_.Clone() : null;
       perSeriesAligner_ = other.perSeriesAligner_;
       crossSeriesReducer_ = other.crossSeriesReducer_;
       groupByFields_ = other.groupByFields_.Clone();

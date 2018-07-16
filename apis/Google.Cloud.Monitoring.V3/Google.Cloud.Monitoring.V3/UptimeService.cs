@@ -623,7 +623,7 @@ namespace Google.Cloud.Monitoring.V3 {
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     public CreateUptimeCheckConfigRequest(CreateUptimeCheckConfigRequest other) : this() {
       parent_ = other.parent_;
-      UptimeCheckConfig = other.uptimeCheckConfig_ != null ? other.UptimeCheckConfig.Clone() : null;
+      uptimeCheckConfig_ = other.uptimeCheckConfig_ != null ? other.uptimeCheckConfig_.Clone() : null;
       _unknownFields = pb::UnknownFieldSet.Clone(other._unknownFields);
     }
 
@@ -796,8 +796,8 @@ namespace Google.Cloud.Monitoring.V3 {
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     public UpdateUptimeCheckConfigRequest(UpdateUptimeCheckConfigRequest other) : this() {
-      UpdateMask = other.updateMask_ != null ? other.UpdateMask.Clone() : null;
-      UptimeCheckConfig = other.uptimeCheckConfig_ != null ? other.UptimeCheckConfig.Clone() : null;
+      updateMask_ = other.updateMask_ != null ? other.updateMask_.Clone() : null;
+      uptimeCheckConfig_ = other.uptimeCheckConfig_ != null ? other.uptimeCheckConfig_.Clone() : null;
       _unknownFields = pb::UnknownFieldSet.Clone(other._unknownFields);
     }
 

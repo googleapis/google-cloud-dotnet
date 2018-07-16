@@ -164,7 +164,7 @@ namespace Google.Cloud.Datastore.V1 {
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     public LookupRequest(LookupRequest other) : this() {
       projectId_ = other.projectId_;
-      ReadOptions = other.readOptions_ != null ? other.ReadOptions.Clone() : null;
+      readOptions_ = other.readOptions_ != null ? other.readOptions_.Clone() : null;
       keys_ = other.keys_.Clone();
       _unknownFields = pb::UnknownFieldSet.Clone(other._unknownFields);
     }
@@ -538,8 +538,8 @@ namespace Google.Cloud.Datastore.V1 {
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     public RunQueryRequest(RunQueryRequest other) : this() {
       projectId_ = other.projectId_;
-      PartitionId = other.partitionId_ != null ? other.PartitionId.Clone() : null;
-      ReadOptions = other.readOptions_ != null ? other.ReadOptions.Clone() : null;
+      partitionId_ = other.partitionId_ != null ? other.partitionId_.Clone() : null;
+      readOptions_ = other.readOptions_ != null ? other.readOptions_.Clone() : null;
       switch (other.QueryTypeCase) {
         case QueryTypeOneofCase.Query:
           Query = other.Query.Clone();
@@ -858,8 +858,8 @@ namespace Google.Cloud.Datastore.V1 {
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     public RunQueryResponse(RunQueryResponse other) : this() {
-      Batch = other.batch_ != null ? other.Batch.Clone() : null;
-      Query = other.query_ != null ? other.Query.Clone() : null;
+      batch_ = other.batch_ != null ? other.batch_.Clone() : null;
+      query_ = other.query_ != null ? other.query_.Clone() : null;
       _unknownFields = pb::UnknownFieldSet.Clone(other._unknownFields);
     }
 
@@ -1037,7 +1037,7 @@ namespace Google.Cloud.Datastore.V1 {
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     public BeginTransactionRequest(BeginTransactionRequest other) : this() {
       projectId_ = other.projectId_;
-      TransactionOptions = other.transactionOptions_ != null ? other.TransactionOptions.Clone() : null;
+      transactionOptions_ = other.transactionOptions_ != null ? other.transactionOptions_.Clone() : null;
       _unknownFields = pb::UnknownFieldSet.Clone(other._unknownFields);
     }
 
@@ -3005,7 +3005,7 @@ namespace Google.Cloud.Datastore.V1 {
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     public MutationResult(MutationResult other) : this() {
-      Key = other.key_ != null ? other.Key.Clone() : null;
+      key_ = other.key_ != null ? other.key_.Clone() : null;
       version_ = other.version_;
       conflictDetected_ = other.conflictDetected_;
       _unknownFields = pb::UnknownFieldSet.Clone(other._unknownFields);

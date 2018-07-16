@@ -90,9 +90,9 @@ namespace Google.Cloud.Spanner.V1 {
       kind_ = other.kind_;
       displayName_ = other.displayName_;
       childLinks_ = other.childLinks_.Clone();
-      ShortRepresentation = other.shortRepresentation_ != null ? other.ShortRepresentation.Clone() : null;
-      Metadata = other.metadata_ != null ? other.Metadata.Clone() : null;
-      ExecutionStats = other.executionStats_ != null ? other.ExecutionStats.Clone() : null;
+      shortRepresentation_ = other.shortRepresentation_ != null ? other.shortRepresentation_.Clone() : null;
+      metadata_ = other.metadata_ != null ? other.metadata_.Clone() : null;
+      executionStats_ = other.executionStats_ != null ? other.executionStats_.Clone() : null;
       _unknownFields = pb::UnknownFieldSet.Clone(other._unknownFields);
     }
 
