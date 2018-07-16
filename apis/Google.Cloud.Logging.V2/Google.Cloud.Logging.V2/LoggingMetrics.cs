@@ -122,10 +122,10 @@ namespace Google.Cloud.Logging.V2 {
       name_ = other.name_;
       description_ = other.description_;
       filter_ = other.filter_;
-      MetricDescriptor = other.metricDescriptor_ != null ? other.MetricDescriptor.Clone() : null;
+      metricDescriptor_ = other.metricDescriptor_ != null ? other.metricDescriptor_.Clone() : null;
       valueExtractor_ = other.valueExtractor_;
       labelExtractors_ = other.labelExtractors_.Clone();
-      BucketOptions = other.bucketOptions_ != null ? other.BucketOptions.Clone() : null;
+      bucketOptions_ = other.bucketOptions_ != null ? other.bucketOptions_.Clone() : null;
       version_ = other.version_;
       _unknownFields = pb::UnknownFieldSet.Clone(other._unknownFields);
     }
@@ -1073,7 +1073,7 @@ namespace Google.Cloud.Logging.V2 {
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     public CreateLogMetricRequest(CreateLogMetricRequest other) : this() {
       parent_ = other.parent_;
-      Metric = other.metric_ != null ? other.Metric.Clone() : null;
+      metric_ = other.metric_ != null ? other.metric_.Clone() : null;
       _unknownFields = pb::UnknownFieldSet.Clone(other._unknownFields);
     }
 
@@ -1250,7 +1250,7 @@ namespace Google.Cloud.Logging.V2 {
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     public UpdateLogMetricRequest(UpdateLogMetricRequest other) : this() {
       metricName_ = other.metricName_;
-      Metric = other.metric_ != null ? other.Metric.Clone() : null;
+      metric_ = other.metric_ != null ? other.metric_.Clone() : null;
       _unknownFields = pb::UnknownFieldSet.Clone(other._unknownFields);
     }
 

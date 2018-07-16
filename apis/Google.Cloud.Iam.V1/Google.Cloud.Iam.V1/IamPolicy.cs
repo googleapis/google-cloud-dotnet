@@ -86,7 +86,7 @@ namespace Google.Cloud.Iam.V1 {
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     public SetIamPolicyRequest(SetIamPolicyRequest other) : this() {
       resource_ = other.resource_;
-      Policy = other.policy_ != null ? other.Policy.Clone() : null;
+      policy_ = other.policy_ != null ? other.policy_.Clone() : null;
       _unknownFields = pb::UnknownFieldSet.Clone(other._unknownFields);
     }
 

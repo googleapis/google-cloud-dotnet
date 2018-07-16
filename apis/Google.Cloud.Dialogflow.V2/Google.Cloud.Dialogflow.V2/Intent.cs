@@ -3662,7 +3662,7 @@ namespace Google.Cloud.Dialogflow.V2 {
               title_ = other.title_;
               subtitle_ = other.subtitle_;
               formattedText_ = other.formattedText_;
-              Image = other.image_ != null ? other.Image.Clone() : null;
+              image_ = other.image_ != null ? other.image_.Clone() : null;
               buttons_ = other.buttons_.Clone();
               _unknownFields = pb::UnknownFieldSet.Clone(other._unknownFields);
             }
@@ -3919,7 +3919,7 @@ namespace Google.Cloud.Dialogflow.V2 {
                 [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
                 public Button(Button other) : this() {
                   title_ = other.title_;
-                  OpenUriAction = other.openUriAction_ != null ? other.OpenUriAction.Clone() : null;
+                  openUriAction_ = other.openUriAction_ != null ? other.openUriAction_.Clone() : null;
                   _unknownFields = pb::UnknownFieldSet.Clone(other._unknownFields);
                 }
 
@@ -4828,10 +4828,10 @@ namespace Google.Cloud.Dialogflow.V2 {
 
                 [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
                 public Item(Item other) : this() {
-                  Info = other.info_ != null ? other.Info.Clone() : null;
+                  info_ = other.info_ != null ? other.info_.Clone() : null;
                   title_ = other.title_;
                   description_ = other.description_;
-                  Image = other.image_ != null ? other.Image.Clone() : null;
+                  image_ = other.image_ != null ? other.image_.Clone() : null;
                   _unknownFields = pb::UnknownFieldSet.Clone(other._unknownFields);
                 }
 
@@ -5202,10 +5202,10 @@ namespace Google.Cloud.Dialogflow.V2 {
 
                 [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
                 public Item(Item other) : this() {
-                  Info = other.info_ != null ? other.Info.Clone() : null;
+                  info_ = other.info_ != null ? other.info_.Clone() : null;
                   title_ = other.title_;
                   description_ = other.description_;
-                  Image = other.image_ != null ? other.Image.Clone() : null;
+                  image_ = other.image_ != null ? other.image_.Clone() : null;
                   _unknownFields = pb::UnknownFieldSet.Clone(other._unknownFields);
                 }
 
@@ -6414,7 +6414,7 @@ namespace Google.Cloud.Dialogflow.V2 {
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     public CreateIntentRequest(CreateIntentRequest other) : this() {
       parent_ = other.parent_;
-      Intent = other.intent_ != null ? other.Intent.Clone() : null;
+      intent_ = other.intent_ != null ? other.intent_.Clone() : null;
       languageCode_ = other.languageCode_;
       intentView_ = other.intentView_;
       _unknownFields = pb::UnknownFieldSet.Clone(other._unknownFields);
@@ -6652,9 +6652,9 @@ namespace Google.Cloud.Dialogflow.V2 {
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     public UpdateIntentRequest(UpdateIntentRequest other) : this() {
-      Intent = other.intent_ != null ? other.Intent.Clone() : null;
+      intent_ = other.intent_ != null ? other.intent_.Clone() : null;
       languageCode_ = other.languageCode_;
-      UpdateMask = other.updateMask_ != null ? other.UpdateMask.Clone() : null;
+      updateMask_ = other.updateMask_ != null ? other.updateMask_.Clone() : null;
       intentView_ = other.intentView_;
       _unknownFields = pb::UnknownFieldSet.Clone(other._unknownFields);
     }
@@ -7035,7 +7035,7 @@ namespace Google.Cloud.Dialogflow.V2 {
     public BatchUpdateIntentsRequest(BatchUpdateIntentsRequest other) : this() {
       parent_ = other.parent_;
       languageCode_ = other.languageCode_;
-      UpdateMask = other.updateMask_ != null ? other.UpdateMask.Clone() : null;
+      updateMask_ = other.updateMask_ != null ? other.updateMask_.Clone() : null;
       intentView_ = other.intentView_;
       switch (other.IntentBatchCase) {
         case IntentBatchOneofCase.IntentBatchUri:

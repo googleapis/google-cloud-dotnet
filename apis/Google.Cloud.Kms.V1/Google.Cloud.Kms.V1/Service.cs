@@ -1785,7 +1785,7 @@ namespace Google.Cloud.Kms.V1 {
     public CreateKeyRingRequest(CreateKeyRingRequest other) : this() {
       parent_ = other.parent_;
       keyRingId_ = other.keyRingId_;
-      KeyRing = other.keyRing_ != null ? other.KeyRing.Clone() : null;
+      keyRing_ = other.keyRing_ != null ? other.keyRing_.Clone() : null;
       _unknownFields = pb::UnknownFieldSet.Clone(other._unknownFields);
     }
 
@@ -1990,7 +1990,7 @@ namespace Google.Cloud.Kms.V1 {
     public CreateCryptoKeyRequest(CreateCryptoKeyRequest other) : this() {
       parent_ = other.parent_;
       cryptoKeyId_ = other.cryptoKeyId_;
-      CryptoKey = other.cryptoKey_ != null ? other.CryptoKey.Clone() : null;
+      cryptoKey_ = other.cryptoKey_ != null ? other.cryptoKey_.Clone() : null;
       _unknownFields = pb::UnknownFieldSet.Clone(other._unknownFields);
     }
 
@@ -2194,7 +2194,7 @@ namespace Google.Cloud.Kms.V1 {
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     public CreateCryptoKeyVersionRequest(CreateCryptoKeyVersionRequest other) : this() {
       parent_ = other.parent_;
-      CryptoKeyVersion = other.cryptoKeyVersion_ != null ? other.CryptoKeyVersion.Clone() : null;
+      cryptoKeyVersion_ = other.cryptoKeyVersion_ != null ? other.cryptoKeyVersion_.Clone() : null;
       _unknownFields = pb::UnknownFieldSet.Clone(other._unknownFields);
     }
 
@@ -2366,8 +2366,8 @@ namespace Google.Cloud.Kms.V1 {
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     public UpdateCryptoKeyRequest(UpdateCryptoKeyRequest other) : this() {
-      CryptoKey = other.cryptoKey_ != null ? other.CryptoKey.Clone() : null;
-      UpdateMask = other.updateMask_ != null ? other.UpdateMask.Clone() : null;
+      cryptoKey_ = other.cryptoKey_ != null ? other.cryptoKey_.Clone() : null;
+      updateMask_ = other.updateMask_ != null ? other.updateMask_.Clone() : null;
       _unknownFields = pb::UnknownFieldSet.Clone(other._unknownFields);
     }
 
@@ -2544,8 +2544,8 @@ namespace Google.Cloud.Kms.V1 {
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     public UpdateCryptoKeyVersionRequest(UpdateCryptoKeyVersionRequest other) : this() {
-      CryptoKeyVersion = other.cryptoKeyVersion_ != null ? other.CryptoKeyVersion.Clone() : null;
-      UpdateMask = other.updateMask_ != null ? other.UpdateMask.Clone() : null;
+      cryptoKeyVersion_ = other.cryptoKeyVersion_ != null ? other.cryptoKeyVersion_.Clone() : null;
+      updateMask_ = other.updateMask_ != null ? other.updateMask_.Clone() : null;
       _unknownFields = pb::UnknownFieldSet.Clone(other._unknownFields);
     }
 

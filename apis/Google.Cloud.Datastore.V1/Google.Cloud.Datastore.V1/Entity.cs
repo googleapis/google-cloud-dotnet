@@ -283,7 +283,7 @@ namespace Google.Cloud.Datastore.V1 {
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     public Key(Key other) : this() {
-      PartitionId = other.partitionId_ != null ? other.PartitionId.Clone() : null;
+      partitionId_ = other.partitionId_ != null ? other.partitionId_.Clone() : null;
       path_ = other.path_.Clone();
       _unknownFields = pb::UnknownFieldSet.Clone(other._unknownFields);
     }
@@ -1465,7 +1465,7 @@ namespace Google.Cloud.Datastore.V1 {
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     public Entity(Entity other) : this() {
-      Key = other.key_ != null ? other.Key.Clone() : null;
+      key_ = other.key_ != null ? other.key_.Clone() : null;
       properties_ = other.properties_.Clone();
       _unknownFields = pb::UnknownFieldSet.Clone(other._unknownFields);
     }

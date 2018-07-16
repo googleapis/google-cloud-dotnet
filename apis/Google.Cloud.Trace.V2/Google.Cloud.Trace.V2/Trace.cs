@@ -155,14 +155,14 @@ namespace Google.Cloud.Trace.V2 {
       name_ = other.name_;
       spanId_ = other.spanId_;
       parentSpanId_ = other.parentSpanId_;
-      DisplayName = other.displayName_ != null ? other.DisplayName.Clone() : null;
-      StartTime = other.startTime_ != null ? other.StartTime.Clone() : null;
-      EndTime = other.endTime_ != null ? other.EndTime.Clone() : null;
-      Attributes = other.attributes_ != null ? other.Attributes.Clone() : null;
-      StackTrace = other.stackTrace_ != null ? other.StackTrace.Clone() : null;
-      TimeEvents = other.timeEvents_ != null ? other.TimeEvents.Clone() : null;
-      Links = other.links_ != null ? other.Links.Clone() : null;
-      Status = other.status_ != null ? other.Status.Clone() : null;
+      displayName_ = other.displayName_ != null ? other.displayName_.Clone() : null;
+      startTime_ = other.startTime_ != null ? other.startTime_.Clone() : null;
+      endTime_ = other.endTime_ != null ? other.endTime_.Clone() : null;
+      attributes_ = other.attributes_ != null ? other.attributes_.Clone() : null;
+      stackTrace_ = other.stackTrace_ != null ? other.stackTrace_.Clone() : null;
+      timeEvents_ = other.timeEvents_ != null ? other.timeEvents_.Clone() : null;
+      links_ = other.links_ != null ? other.links_.Clone() : null;
+      status_ = other.status_ != null ? other.status_.Clone() : null;
       SameProcessAsParentSpan = other.SameProcessAsParentSpan;
       ChildSpanCount = other.ChildSpanCount;
       _unknownFields = pb::UnknownFieldSet.Clone(other._unknownFields);
@@ -911,7 +911,7 @@ namespace Google.Cloud.Trace.V2 {
 
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
         public TimeEvent(TimeEvent other) : this() {
-          Time = other.time_ != null ? other.Time.Clone() : null;
+          time_ = other.time_ != null ? other.time_.Clone() : null;
           switch (other.ValueCase) {
             case ValueOneofCase.Annotation:
               Annotation = other.Annotation.Clone();
@@ -1163,8 +1163,8 @@ namespace Google.Cloud.Trace.V2 {
 
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
             public Annotation(Annotation other) : this() {
-              Description = other.description_ != null ? other.Description.Clone() : null;
-              Attributes = other.attributes_ != null ? other.Attributes.Clone() : null;
+              description_ = other.description_ != null ? other.description_.Clone() : null;
+              attributes_ = other.attributes_ != null ? other.attributes_.Clone() : null;
               _unknownFields = pb::UnknownFieldSet.Clone(other._unknownFields);
             }
 
@@ -1804,7 +1804,7 @@ namespace Google.Cloud.Trace.V2 {
           traceId_ = other.traceId_;
           spanId_ = other.spanId_;
           type_ = other.type_;
-          Attributes = other.attributes_ != null ? other.Attributes.Clone() : null;
+          attributes_ = other.attributes_ != null ? other.attributes_.Clone() : null;
           _unknownFields = pb::UnknownFieldSet.Clone(other._unknownFields);
         }
 
@@ -2466,7 +2466,7 @@ namespace Google.Cloud.Trace.V2 {
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     public StackTrace(StackTrace other) : this() {
-      StackFrames = other.stackFrames_ != null ? other.StackFrames.Clone() : null;
+      stackFrames_ = other.stackFrames_ != null ? other.stackFrames_.Clone() : null;
       stackTraceHashId_ = other.stackTraceHashId_;
       _unknownFields = pb::UnknownFieldSet.Clone(other._unknownFields);
     }
@@ -2648,13 +2648,13 @@ namespace Google.Cloud.Trace.V2 {
 
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
         public StackFrame(StackFrame other) : this() {
-          FunctionName = other.functionName_ != null ? other.FunctionName.Clone() : null;
-          OriginalFunctionName = other.originalFunctionName_ != null ? other.OriginalFunctionName.Clone() : null;
-          FileName = other.fileName_ != null ? other.FileName.Clone() : null;
+          functionName_ = other.functionName_ != null ? other.functionName_.Clone() : null;
+          originalFunctionName_ = other.originalFunctionName_ != null ? other.originalFunctionName_.Clone() : null;
+          fileName_ = other.fileName_ != null ? other.fileName_.Clone() : null;
           lineNumber_ = other.lineNumber_;
           columnNumber_ = other.columnNumber_;
-          LoadModule = other.loadModule_ != null ? other.LoadModule.Clone() : null;
-          SourceVersion = other.sourceVersion_ != null ? other.SourceVersion.Clone() : null;
+          loadModule_ = other.loadModule_ != null ? other.loadModule_.Clone() : null;
+          sourceVersion_ = other.sourceVersion_ != null ? other.sourceVersion_.Clone() : null;
           _unknownFields = pb::UnknownFieldSet.Clone(other._unknownFields);
         }
 
@@ -3169,8 +3169,8 @@ namespace Google.Cloud.Trace.V2 {
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     public Module(Module other) : this() {
-      Module_ = other.module_ != null ? other.Module_.Clone() : null;
-      BuildId = other.buildId_ != null ? other.BuildId.Clone() : null;
+      module_ = other.module_ != null ? other.module_.Clone() : null;
+      buildId_ = other.buildId_ != null ? other.buildId_.Clone() : null;
       _unknownFields = pb::UnknownFieldSet.Clone(other._unknownFields);
     }
 

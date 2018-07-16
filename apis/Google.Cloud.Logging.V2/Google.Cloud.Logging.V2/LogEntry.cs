@@ -96,18 +96,18 @@ namespace Google.Cloud.Logging.V2 {
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     public LogEntry(LogEntry other) : this() {
       logName_ = other.logName_;
-      Resource = other.resource_ != null ? other.Resource.Clone() : null;
-      Timestamp = other.timestamp_ != null ? other.Timestamp.Clone() : null;
-      ReceiveTimestamp = other.receiveTimestamp_ != null ? other.ReceiveTimestamp.Clone() : null;
+      resource_ = other.resource_ != null ? other.resource_.Clone() : null;
+      timestamp_ = other.timestamp_ != null ? other.timestamp_.Clone() : null;
+      receiveTimestamp_ = other.receiveTimestamp_ != null ? other.receiveTimestamp_.Clone() : null;
       severity_ = other.severity_;
       insertId_ = other.insertId_;
-      HttpRequest = other.httpRequest_ != null ? other.HttpRequest.Clone() : null;
+      httpRequest_ = other.httpRequest_ != null ? other.httpRequest_.Clone() : null;
       labels_ = other.labels_.Clone();
-      Metadata = other.metadata_ != null ? other.Metadata.Clone() : null;
-      Operation = other.operation_ != null ? other.Operation.Clone() : null;
+      metadata_ = other.metadata_ != null ? other.metadata_.Clone() : null;
+      operation_ = other.operation_ != null ? other.operation_.Clone() : null;
       trace_ = other.trace_;
       spanId_ = other.spanId_;
-      SourceLocation = other.sourceLocation_ != null ? other.SourceLocation.Clone() : null;
+      sourceLocation_ = other.sourceLocation_ != null ? other.sourceLocation_.Clone() : null;
       switch (other.PayloadCase) {
         case PayloadOneofCase.ProtoPayload:
           ProtoPayload = other.ProtoPayload.Clone();

@@ -197,8 +197,8 @@ namespace Google.Cloud.Logging.V2 {
       outputVersionFormat_ = other.outputVersionFormat_;
       writerIdentity_ = other.writerIdentity_;
       includeChildren_ = other.includeChildren_;
-      StartTime = other.startTime_ != null ? other.StartTime.Clone() : null;
-      EndTime = other.endTime_ != null ? other.EndTime.Clone() : null;
+      startTime_ = other.startTime_ != null ? other.startTime_.Clone() : null;
+      endTime_ = other.endTime_ != null ? other.endTime_.Clone() : null;
       _unknownFields = pb::UnknownFieldSet.Clone(other._unknownFields);
     }
 
@@ -1139,7 +1139,7 @@ namespace Google.Cloud.Logging.V2 {
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     public CreateSinkRequest(CreateSinkRequest other) : this() {
       parent_ = other.parent_;
-      Sink = other.sink_ != null ? other.Sink.Clone() : null;
+      sink_ = other.sink_ != null ? other.sink_.Clone() : null;
       uniqueWriterIdentity_ = other.uniqueWriterIdentity_;
       _unknownFields = pb::UnknownFieldSet.Clone(other._unknownFields);
     }
@@ -1360,9 +1360,9 @@ namespace Google.Cloud.Logging.V2 {
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     public UpdateSinkRequest(UpdateSinkRequest other) : this() {
       sinkName_ = other.sinkName_;
-      Sink = other.sink_ != null ? other.Sink.Clone() : null;
+      sink_ = other.sink_ != null ? other.sink_.Clone() : null;
       uniqueWriterIdentity_ = other.uniqueWriterIdentity_;
-      UpdateMask = other.updateMask_ != null ? other.UpdateMask.Clone() : null;
+      updateMask_ = other.updateMask_ != null ? other.updateMask_.Clone() : null;
       _unknownFields = pb::UnknownFieldSet.Clone(other._unknownFields);
     }
 
@@ -2531,7 +2531,7 @@ namespace Google.Cloud.Logging.V2 {
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     public CreateExclusionRequest(CreateExclusionRequest other) : this() {
       parent_ = other.parent_;
-      Exclusion = other.exclusion_ != null ? other.Exclusion.Clone() : null;
+      exclusion_ = other.exclusion_ != null ? other.exclusion_.Clone() : null;
       _unknownFields = pb::UnknownFieldSet.Clone(other._unknownFields);
     }
 
@@ -2711,8 +2711,8 @@ namespace Google.Cloud.Logging.V2 {
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     public UpdateExclusionRequest(UpdateExclusionRequest other) : this() {
       name_ = other.name_;
-      Exclusion = other.exclusion_ != null ? other.Exclusion.Clone() : null;
-      UpdateMask = other.updateMask_ != null ? other.UpdateMask.Clone() : null;
+      exclusion_ = other.exclusion_ != null ? other.exclusion_.Clone() : null;
+      updateMask_ = other.updateMask_ != null ? other.updateMask_.Clone() : null;
       _unknownFields = pb::UnknownFieldSet.Clone(other._unknownFields);
     }
 

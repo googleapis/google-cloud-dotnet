@@ -960,7 +960,7 @@ namespace Google.Cloud.Container.V1 {
     public MasterAuth(MasterAuth other) : this() {
       username_ = other.username_;
       password_ = other.password_;
-      ClientCertificateConfig = other.clientCertificateConfig_ != null ? other.ClientCertificateConfig.Clone() : null;
+      clientCertificateConfig_ = other.clientCertificateConfig_ != null ? other.clientCertificateConfig_.Clone() : null;
       clusterCaCertificate_ = other.clusterCaCertificate_;
       clientCertificate_ = other.clientCertificate_;
       clientKey_ = other.clientKey_;
@@ -1399,10 +1399,10 @@ namespace Google.Cloud.Container.V1 {
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     public AddonsConfig(AddonsConfig other) : this() {
-      HttpLoadBalancing = other.httpLoadBalancing_ != null ? other.HttpLoadBalancing.Clone() : null;
-      HorizontalPodAutoscaling = other.horizontalPodAutoscaling_ != null ? other.HorizontalPodAutoscaling.Clone() : null;
-      KubernetesDashboard = other.kubernetesDashboard_ != null ? other.KubernetesDashboard.Clone() : null;
-      NetworkPolicyConfig = other.networkPolicyConfig_ != null ? other.NetworkPolicyConfig.Clone() : null;
+      httpLoadBalancing_ = other.httpLoadBalancing_ != null ? other.httpLoadBalancing_.Clone() : null;
+      horizontalPodAutoscaling_ = other.horizontalPodAutoscaling_ != null ? other.horizontalPodAutoscaling_.Clone() : null;
+      kubernetesDashboard_ = other.kubernetesDashboard_ != null ? other.kubernetesDashboard_.Clone() : null;
+      networkPolicyConfig_ = other.networkPolicyConfig_ != null ? other.networkPolicyConfig_.Clone() : null;
       _unknownFields = pb::UnknownFieldSet.Clone(other._unknownFields);
     }
 
@@ -3373,24 +3373,24 @@ namespace Google.Cloud.Container.V1 {
       name_ = other.name_;
       description_ = other.description_;
       initialNodeCount_ = other.initialNodeCount_;
-      NodeConfig = other.nodeConfig_ != null ? other.NodeConfig.Clone() : null;
-      MasterAuth = other.masterAuth_ != null ? other.MasterAuth.Clone() : null;
+      nodeConfig_ = other.nodeConfig_ != null ? other.nodeConfig_.Clone() : null;
+      masterAuth_ = other.masterAuth_ != null ? other.masterAuth_.Clone() : null;
       loggingService_ = other.loggingService_;
       monitoringService_ = other.monitoringService_;
       network_ = other.network_;
       clusterIpv4Cidr_ = other.clusterIpv4Cidr_;
-      AddonsConfig = other.addonsConfig_ != null ? other.AddonsConfig.Clone() : null;
+      addonsConfig_ = other.addonsConfig_ != null ? other.addonsConfig_.Clone() : null;
       subnetwork_ = other.subnetwork_;
       nodePools_ = other.nodePools_.Clone();
       locations_ = other.locations_.Clone();
       enableKubernetesAlpha_ = other.enableKubernetesAlpha_;
       resourceLabels_ = other.resourceLabels_.Clone();
       labelFingerprint_ = other.labelFingerprint_;
-      LegacyAbac = other.legacyAbac_ != null ? other.LegacyAbac.Clone() : null;
-      NetworkPolicy = other.networkPolicy_ != null ? other.NetworkPolicy.Clone() : null;
-      IpAllocationPolicy = other.ipAllocationPolicy_ != null ? other.IpAllocationPolicy.Clone() : null;
-      MasterAuthorizedNetworksConfig = other.masterAuthorizedNetworksConfig_ != null ? other.MasterAuthorizedNetworksConfig.Clone() : null;
-      MaintenancePolicy = other.maintenancePolicy_ != null ? other.MaintenancePolicy.Clone() : null;
+      legacyAbac_ = other.legacyAbac_ != null ? other.legacyAbac_.Clone() : null;
+      networkPolicy_ = other.networkPolicy_ != null ? other.networkPolicy_.Clone() : null;
+      ipAllocationPolicy_ = other.ipAllocationPolicy_ != null ? other.ipAllocationPolicy_.Clone() : null;
+      masterAuthorizedNetworksConfig_ = other.masterAuthorizedNetworksConfig_ != null ? other.masterAuthorizedNetworksConfig_.Clone() : null;
+      maintenancePolicy_ = other.maintenancePolicy_ != null ? other.maintenancePolicy_.Clone() : null;
       selfLink_ = other.selfLink_;
       zone_ = other.zone_;
       endpoint_ = other.endpoint_;
@@ -4691,12 +4691,12 @@ namespace Google.Cloud.Container.V1 {
     public ClusterUpdate(ClusterUpdate other) : this() {
       desiredNodeVersion_ = other.desiredNodeVersion_;
       desiredMonitoringService_ = other.desiredMonitoringService_;
-      DesiredAddonsConfig = other.desiredAddonsConfig_ != null ? other.DesiredAddonsConfig.Clone() : null;
+      desiredAddonsConfig_ = other.desiredAddonsConfig_ != null ? other.desiredAddonsConfig_.Clone() : null;
       desiredNodePoolId_ = other.desiredNodePoolId_;
       desiredImageType_ = other.desiredImageType_;
-      DesiredNodePoolAutoscaling = other.desiredNodePoolAutoscaling_ != null ? other.DesiredNodePoolAutoscaling.Clone() : null;
+      desiredNodePoolAutoscaling_ = other.desiredNodePoolAutoscaling_ != null ? other.desiredNodePoolAutoscaling_.Clone() : null;
       desiredLocations_ = other.desiredLocations_.Clone();
-      DesiredMasterAuthorizedNetworksConfig = other.desiredMasterAuthorizedNetworksConfig_ != null ? other.DesiredMasterAuthorizedNetworksConfig.Clone() : null;
+      desiredMasterAuthorizedNetworksConfig_ = other.desiredMasterAuthorizedNetworksConfig_ != null ? other.desiredMasterAuthorizedNetworksConfig_.Clone() : null;
       desiredMasterVersion_ = other.desiredMasterVersion_;
       _unknownFields = pb::UnknownFieldSet.Clone(other._unknownFields);
     }
@@ -5632,7 +5632,7 @@ namespace Google.Cloud.Container.V1 {
     public CreateClusterRequest(CreateClusterRequest other) : this() {
       projectId_ = other.projectId_;
       zone_ = other.zone_;
-      Cluster = other.cluster_ != null ? other.Cluster.Clone() : null;
+      cluster_ = other.cluster_ != null ? other.cluster_.Clone() : null;
       _unknownFields = pb::UnknownFieldSet.Clone(other._unknownFields);
     }
 
@@ -6040,7 +6040,7 @@ namespace Google.Cloud.Container.V1 {
       projectId_ = other.projectId_;
       zone_ = other.zone_;
       clusterId_ = other.clusterId_;
-      Update = other.update_ != null ? other.Update.Clone() : null;
+      update_ = other.update_ != null ? other.update_.Clone() : null;
       _unknownFields = pb::UnknownFieldSet.Clone(other._unknownFields);
     }
 
@@ -6573,7 +6573,7 @@ namespace Google.Cloud.Container.V1 {
       zone_ = other.zone_;
       clusterId_ = other.clusterId_;
       nodePoolId_ = other.nodePoolId_;
-      Autoscaling = other.autoscaling_ != null ? other.Autoscaling.Clone() : null;
+      autoscaling_ = other.autoscaling_ != null ? other.autoscaling_.Clone() : null;
       _unknownFields = pb::UnknownFieldSet.Clone(other._unknownFields);
     }
 
@@ -7310,7 +7310,7 @@ namespace Google.Cloud.Container.V1 {
       projectId_ = other.projectId_;
       zone_ = other.zone_;
       clusterId_ = other.clusterId_;
-      AddonsConfig = other.addonsConfig_ != null ? other.AddonsConfig.Clone() : null;
+      addonsConfig_ = other.addonsConfig_ != null ? other.addonsConfig_.Clone() : null;
       _unknownFields = pb::UnknownFieldSet.Clone(other._unknownFields);
     }
 
@@ -8011,7 +8011,7 @@ namespace Google.Cloud.Container.V1 {
       zone_ = other.zone_;
       clusterId_ = other.clusterId_;
       action_ = other.action_;
-      Update = other.update_ != null ? other.Update.Clone() : null;
+      update_ = other.update_ != null ? other.update_.Clone() : null;
       _unknownFields = pb::UnknownFieldSet.Clone(other._unknownFields);
     }
 
@@ -9952,7 +9952,7 @@ namespace Google.Cloud.Container.V1 {
       projectId_ = other.projectId_;
       zone_ = other.zone_;
       clusterId_ = other.clusterId_;
-      NodePool = other.nodePool_ != null ? other.NodePool.Clone() : null;
+      nodePool_ = other.nodePool_ != null ? other.nodePool_.Clone() : null;
       _unknownFields = pb::UnknownFieldSet.Clone(other._unknownFields);
     }
 
@@ -10854,15 +10854,15 @@ namespace Google.Cloud.Container.V1 {
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     public NodePool(NodePool other) : this() {
       name_ = other.name_;
-      Config = other.config_ != null ? other.Config.Clone() : null;
+      config_ = other.config_ != null ? other.config_.Clone() : null;
       initialNodeCount_ = other.initialNodeCount_;
       selfLink_ = other.selfLink_;
       version_ = other.version_;
       instanceGroupUrls_ = other.instanceGroupUrls_.Clone();
       status_ = other.status_;
       statusMessage_ = other.statusMessage_;
-      Autoscaling = other.autoscaling_ != null ? other.Autoscaling.Clone() : null;
-      Management = other.management_ != null ? other.Management.Clone() : null;
+      autoscaling_ = other.autoscaling_ != null ? other.autoscaling_.Clone() : null;
+      management_ = other.management_ != null ? other.management_.Clone() : null;
       _unknownFields = pb::UnknownFieldSet.Clone(other._unknownFields);
     }
 
@@ -11335,7 +11335,7 @@ namespace Google.Cloud.Container.V1 {
     public NodeManagement(NodeManagement other) : this() {
       autoUpgrade_ = other.autoUpgrade_;
       autoRepair_ = other.autoRepair_;
-      UpgradeOptions = other.upgradeOptions_ != null ? other.UpgradeOptions.Clone() : null;
+      upgradeOptions_ = other.upgradeOptions_ != null ? other.upgradeOptions_.Clone() : null;
       _unknownFields = pb::UnknownFieldSet.Clone(other._unknownFields);
     }
 
@@ -11711,7 +11711,7 @@ namespace Google.Cloud.Container.V1 {
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     public MaintenancePolicy(MaintenancePolicy other) : this() {
-      Window = other.window_ != null ? other.Window.Clone() : null;
+      window_ = other.window_ != null ? other.window_.Clone() : null;
       _unknownFields = pb::UnknownFieldSet.Clone(other._unknownFields);
     }
 
@@ -12199,7 +12199,7 @@ namespace Google.Cloud.Container.V1 {
       zone_ = other.zone_;
       clusterId_ = other.clusterId_;
       nodePoolId_ = other.nodePoolId_;
-      Management = other.management_ != null ? other.Management.Clone() : null;
+      management_ = other.management_ != null ? other.management_.Clone() : null;
       _unknownFields = pb::UnknownFieldSet.Clone(other._unknownFields);
     }
 
@@ -14350,7 +14350,7 @@ namespace Google.Cloud.Container.V1 {
       projectId_ = other.projectId_;
       zone_ = other.zone_;
       clusterId_ = other.clusterId_;
-      NetworkPolicy = other.networkPolicy_ != null ? other.NetworkPolicy.Clone() : null;
+      networkPolicy_ = other.networkPolicy_ != null ? other.networkPolicy_.Clone() : null;
       _unknownFields = pb::UnknownFieldSet.Clone(other._unknownFields);
     }
 
@@ -14587,7 +14587,7 @@ namespace Google.Cloud.Container.V1 {
       projectId_ = other.projectId_;
       zone_ = other.zone_;
       clusterId_ = other.clusterId_;
-      MaintenancePolicy = other.maintenancePolicy_ != null ? other.MaintenancePolicy.Clone() : null;
+      maintenancePolicy_ = other.maintenancePolicy_ != null ? other.maintenancePolicy_.Clone() : null;
       _unknownFields = pb::UnknownFieldSet.Clone(other._unknownFields);
     }
 

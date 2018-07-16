@@ -90,8 +90,8 @@ namespace Google.Cloud.Dialogflow.V2 {
     public WebhookRequest(WebhookRequest other) : this() {
       session_ = other.session_;
       responseId_ = other.responseId_;
-      QueryResult = other.queryResult_ != null ? other.QueryResult.Clone() : null;
-      OriginalDetectIntentRequest = other.originalDetectIntentRequest_ != null ? other.OriginalDetectIntentRequest.Clone() : null;
+      queryResult_ = other.queryResult_ != null ? other.queryResult_.Clone() : null;
+      originalDetectIntentRequest_ = other.originalDetectIntentRequest_ != null ? other.originalDetectIntentRequest_.Clone() : null;
       _unknownFields = pb::UnknownFieldSet.Clone(other._unknownFields);
     }
 
@@ -336,9 +336,9 @@ namespace Google.Cloud.Dialogflow.V2 {
       fulfillmentText_ = other.fulfillmentText_;
       fulfillmentMessages_ = other.fulfillmentMessages_.Clone();
       source_ = other.source_;
-      Payload = other.payload_ != null ? other.Payload.Clone() : null;
+      payload_ = other.payload_ != null ? other.payload_.Clone() : null;
       outputContexts_ = other.outputContexts_.Clone();
-      FollowupEventInput = other.followupEventInput_ != null ? other.FollowupEventInput.Clone() : null;
+      followupEventInput_ = other.followupEventInput_ != null ? other.followupEventInput_.Clone() : null;
       _unknownFields = pb::UnknownFieldSet.Clone(other._unknownFields);
     }
 
@@ -647,7 +647,7 @@ namespace Google.Cloud.Dialogflow.V2 {
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     public OriginalDetectIntentRequest(OriginalDetectIntentRequest other) : this() {
       source_ = other.source_;
-      Payload = other.payload_ != null ? other.Payload.Clone() : null;
+      payload_ = other.payload_ != null ? other.payload_.Clone() : null;
       _unknownFields = pb::UnknownFieldSet.Clone(other._unknownFields);
     }
 

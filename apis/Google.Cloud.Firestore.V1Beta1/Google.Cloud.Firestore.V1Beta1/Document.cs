@@ -99,8 +99,8 @@ namespace Google.Cloud.Firestore.V1Beta1 {
     public Document(Document other) : this() {
       name_ = other.name_;
       fields_ = other.fields_.Clone();
-      CreateTime = other.createTime_ != null ? other.CreateTime.Clone() : null;
-      UpdateTime = other.updateTime_ != null ? other.UpdateTime.Clone() : null;
+      createTime_ = other.createTime_ != null ? other.createTime_.Clone() : null;
+      updateTime_ = other.updateTime_ != null ? other.updateTime_.Clone() : null;
       _unknownFields = pb::UnknownFieldSet.Clone(other._unknownFields);
     }
 

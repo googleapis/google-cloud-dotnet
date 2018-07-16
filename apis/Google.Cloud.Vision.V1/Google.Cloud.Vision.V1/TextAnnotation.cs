@@ -652,7 +652,7 @@ namespace Google.Cloud.Vision.V1 {
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
         public TextProperty(TextProperty other) : this() {
           detectedLanguages_ = other.detectedLanguages_.Clone();
-          DetectedBreak = other.detectedBreak_ != null ? other.DetectedBreak.Clone() : null;
+          detectedBreak_ = other.detectedBreak_ != null ? other.detectedBreak_.Clone() : null;
           _unknownFields = pb::UnknownFieldSet.Clone(other._unknownFields);
         }
 
@@ -820,7 +820,7 @@ namespace Google.Cloud.Vision.V1 {
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     public Page(Page other) : this() {
-      Property = other.property_ != null ? other.Property.Clone() : null;
+      property_ = other.property_ != null ? other.property_.Clone() : null;
       width_ = other.width_;
       height_ = other.height_;
       blocks_ = other.blocks_.Clone();
@@ -1079,8 +1079,8 @@ namespace Google.Cloud.Vision.V1 {
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     public Block(Block other) : this() {
-      Property = other.property_ != null ? other.Property.Clone() : null;
-      BoundingBox = other.boundingBox_ != null ? other.BoundingBox.Clone() : null;
+      property_ = other.property_ != null ? other.property_.Clone() : null;
+      boundingBox_ = other.boundingBox_ != null ? other.boundingBox_.Clone() : null;
       paragraphs_ = other.paragraphs_.Clone();
       blockType_ = other.blockType_;
       confidence_ = other.confidence_;
@@ -1398,8 +1398,8 @@ namespace Google.Cloud.Vision.V1 {
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     public Paragraph(Paragraph other) : this() {
-      Property = other.property_ != null ? other.Property.Clone() : null;
-      BoundingBox = other.boundingBox_ != null ? other.BoundingBox.Clone() : null;
+      property_ = other.property_ != null ? other.property_.Clone() : null;
+      boundingBox_ = other.boundingBox_ != null ? other.boundingBox_.Clone() : null;
       words_ = other.words_.Clone();
       confidence_ = other.confidence_;
       _unknownFields = pb::UnknownFieldSet.Clone(other._unknownFields);
@@ -1644,8 +1644,8 @@ namespace Google.Cloud.Vision.V1 {
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     public Word(Word other) : this() {
-      Property = other.property_ != null ? other.Property.Clone() : null;
-      BoundingBox = other.boundingBox_ != null ? other.BoundingBox.Clone() : null;
+      property_ = other.property_ != null ? other.property_.Clone() : null;
+      boundingBox_ = other.boundingBox_ != null ? other.boundingBox_.Clone() : null;
       symbols_ = other.symbols_.Clone();
       confidence_ = other.confidence_;
       _unknownFields = pb::UnknownFieldSet.Clone(other._unknownFields);
@@ -1891,8 +1891,8 @@ namespace Google.Cloud.Vision.V1 {
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     public Symbol(Symbol other) : this() {
-      Property = other.property_ != null ? other.Property.Clone() : null;
-      BoundingBox = other.boundingBox_ != null ? other.BoundingBox.Clone() : null;
+      property_ = other.property_ != null ? other.property_.Clone() : null;
+      boundingBox_ = other.boundingBox_ != null ? other.boundingBox_.Clone() : null;
       text_ = other.text_;
       confidence_ = other.confidence_;
       _unknownFields = pb::UnknownFieldSet.Clone(other._unknownFields);

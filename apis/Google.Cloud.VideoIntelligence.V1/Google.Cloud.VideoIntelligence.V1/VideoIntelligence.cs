@@ -265,7 +265,7 @@ namespace Google.Cloud.VideoIntelligence.V1 {
       inputUri_ = other.inputUri_;
       inputContent_ = other.inputContent_;
       features_ = other.features_.Clone();
-      VideoContext = other.videoContext_ != null ? other.VideoContext.Clone() : null;
+      videoContext_ = other.videoContext_ != null ? other.videoContext_.Clone() : null;
       outputUri_ = other.outputUri_;
       locationId_ = other.locationId_;
       _unknownFields = pb::UnknownFieldSet.Clone(other._unknownFields);
@@ -570,10 +570,10 @@ namespace Google.Cloud.VideoIntelligence.V1 {
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     public VideoContext(VideoContext other) : this() {
       segments_ = other.segments_.Clone();
-      LabelDetectionConfig = other.labelDetectionConfig_ != null ? other.LabelDetectionConfig.Clone() : null;
-      ShotChangeDetectionConfig = other.shotChangeDetectionConfig_ != null ? other.ShotChangeDetectionConfig.Clone() : null;
-      ExplicitContentDetectionConfig = other.explicitContentDetectionConfig_ != null ? other.ExplicitContentDetectionConfig.Clone() : null;
-      FaceDetectionConfig = other.faceDetectionConfig_ != null ? other.FaceDetectionConfig.Clone() : null;
+      labelDetectionConfig_ = other.labelDetectionConfig_ != null ? other.labelDetectionConfig_.Clone() : null;
+      shotChangeDetectionConfig_ = other.shotChangeDetectionConfig_ != null ? other.shotChangeDetectionConfig_.Clone() : null;
+      explicitContentDetectionConfig_ = other.explicitContentDetectionConfig_ != null ? other.explicitContentDetectionConfig_.Clone() : null;
+      faceDetectionConfig_ = other.faceDetectionConfig_ != null ? other.faceDetectionConfig_.Clone() : null;
       _unknownFields = pb::UnknownFieldSet.Clone(other._unknownFields);
     }
 
@@ -1491,8 +1491,8 @@ namespace Google.Cloud.VideoIntelligence.V1 {
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     public VideoSegment(VideoSegment other) : this() {
-      StartTimeOffset = other.startTimeOffset_ != null ? other.StartTimeOffset.Clone() : null;
-      EndTimeOffset = other.endTimeOffset_ != null ? other.EndTimeOffset.Clone() : null;
+      startTimeOffset_ = other.startTimeOffset_ != null ? other.startTimeOffset_.Clone() : null;
+      endTimeOffset_ = other.endTimeOffset_ != null ? other.endTimeOffset_.Clone() : null;
       _unknownFields = pb::UnknownFieldSet.Clone(other._unknownFields);
     }
 
@@ -1671,7 +1671,7 @@ namespace Google.Cloud.VideoIntelligence.V1 {
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     public LabelSegment(LabelSegment other) : this() {
-      Segment = other.segment_ != null ? other.Segment.Clone() : null;
+      segment_ = other.segment_ != null ? other.segment_.Clone() : null;
       confidence_ = other.confidence_;
       _unknownFields = pb::UnknownFieldSet.Clone(other._unknownFields);
     }
@@ -1843,7 +1843,7 @@ namespace Google.Cloud.VideoIntelligence.V1 {
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     public LabelFrame(LabelFrame other) : this() {
-      TimeOffset = other.timeOffset_ != null ? other.TimeOffset.Clone() : null;
+      timeOffset_ = other.timeOffset_ != null ? other.timeOffset_.Clone() : null;
       confidence_ = other.confidence_;
       _unknownFields = pb::UnknownFieldSet.Clone(other._unknownFields);
     }
@@ -2215,7 +2215,7 @@ namespace Google.Cloud.VideoIntelligence.V1 {
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     public LabelAnnotation(LabelAnnotation other) : this() {
-      Entity = other.entity_ != null ? other.Entity.Clone() : null;
+      entity_ = other.entity_ != null ? other.entity_.Clone() : null;
       categoryEntities_ = other.categoryEntities_.Clone();
       segments_ = other.segments_.Clone();
       frames_ = other.frames_.Clone();
@@ -2428,7 +2428,7 @@ namespace Google.Cloud.VideoIntelligence.V1 {
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     public ExplicitContentFrame(ExplicitContentFrame other) : this() {
-      TimeOffset = other.timeOffset_ != null ? other.TimeOffset.Clone() : null;
+      timeOffset_ = other.timeOffset_ != null ? other.timeOffset_.Clone() : null;
       pornographyLikelihood_ = other.pornographyLikelihood_;
       _unknownFields = pb::UnknownFieldSet.Clone(other._unknownFields);
     }
@@ -2960,7 +2960,7 @@ namespace Google.Cloud.VideoIntelligence.V1 {
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     public FaceSegment(FaceSegment other) : this() {
-      Segment = other.segment_ != null ? other.Segment.Clone() : null;
+      segment_ = other.segment_ != null ? other.segment_.Clone() : null;
       _unknownFields = pb::UnknownFieldSet.Clone(other._unknownFields);
     }
 
@@ -3102,7 +3102,7 @@ namespace Google.Cloud.VideoIntelligence.V1 {
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     public FaceFrame(FaceFrame other) : this() {
       normalizedBoundingBoxes_ = other.normalizedBoundingBoxes_.Clone();
-      TimeOffset = other.timeOffset_ != null ? other.TimeOffset.Clone() : null;
+      timeOffset_ = other.timeOffset_ != null ? other.timeOffset_.Clone() : null;
       _unknownFields = pb::UnknownFieldSet.Clone(other._unknownFields);
     }
 
@@ -3455,8 +3455,8 @@ namespace Google.Cloud.VideoIntelligence.V1 {
       frameLabelAnnotations_ = other.frameLabelAnnotations_.Clone();
       faceAnnotations_ = other.faceAnnotations_.Clone();
       shotAnnotations_ = other.shotAnnotations_.Clone();
-      ExplicitAnnotation = other.explicitAnnotation_ != null ? other.ExplicitAnnotation.Clone() : null;
-      Error = other.error_ != null ? other.Error.Clone() : null;
+      explicitAnnotation_ = other.explicitAnnotation_ != null ? other.explicitAnnotation_.Clone() : null;
+      error_ = other.error_ != null ? other.error_.Clone() : null;
       _unknownFields = pb::UnknownFieldSet.Clone(other._unknownFields);
     }
 
@@ -3909,8 +3909,8 @@ namespace Google.Cloud.VideoIntelligence.V1 {
     public VideoAnnotationProgress(VideoAnnotationProgress other) : this() {
       inputUri_ = other.inputUri_;
       progressPercent_ = other.progressPercent_;
-      StartTime = other.startTime_ != null ? other.StartTime.Clone() : null;
-      UpdateTime = other.updateTime_ != null ? other.UpdateTime.Clone() : null;
+      startTime_ = other.startTime_ != null ? other.startTime_.Clone() : null;
+      updateTime_ = other.updateTime_ != null ? other.updateTime_.Clone() : null;
       _unknownFields = pb::UnknownFieldSet.Clone(other._unknownFields);
     }
 

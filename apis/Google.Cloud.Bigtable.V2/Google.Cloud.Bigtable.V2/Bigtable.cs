@@ -145,8 +145,8 @@ namespace Google.Cloud.Bigtable.V2 {
     public ReadRowsRequest(ReadRowsRequest other) : this() {
       tableName_ = other.tableName_;
       appProfileId_ = other.appProfileId_;
-      Rows = other.rows_ != null ? other.Rows.Clone() : null;
-      Filter = other.filter_ != null ? other.Filter.Clone() : null;
+      rows_ = other.rows_ != null ? other.rows_.Clone() : null;
+      filter_ = other.filter_ != null ? other.filter_.Clone() : null;
       rowsLimit_ = other.rowsLimit_;
       _unknownFields = pb::UnknownFieldSet.Clone(other._unknownFields);
     }
@@ -2193,7 +2193,7 @@ namespace Google.Cloud.Bigtable.V2 {
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
         public Entry(Entry other) : this() {
           index_ = other.index_;
-          Status = other.status_ != null ? other.Status.Clone() : null;
+          status_ = other.status_ != null ? other.status_.Clone() : null;
           _unknownFields = pb::UnknownFieldSet.Clone(other._unknownFields);
         }
 
@@ -2376,7 +2376,7 @@ namespace Google.Cloud.Bigtable.V2 {
       tableName_ = other.tableName_;
       appProfileId_ = other.appProfileId_;
       rowKey_ = other.rowKey_;
-      PredicateFilter = other.predicateFilter_ != null ? other.PredicateFilter.Clone() : null;
+      predicateFilter_ = other.predicateFilter_ != null ? other.predicateFilter_.Clone() : null;
       trueMutations_ = other.trueMutations_.Clone();
       falseMutations_ = other.falseMutations_.Clone();
       _unknownFields = pb::UnknownFieldSet.Clone(other._unknownFields);
@@ -3030,7 +3030,7 @@ namespace Google.Cloud.Bigtable.V2 {
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     public ReadModifyWriteRowResponse(ReadModifyWriteRowResponse other) : this() {
-      Row = other.row_ != null ? other.Row.Clone() : null;
+      row_ = other.row_ != null ? other.row_.Clone() : null;
       _unknownFields = pb::UnknownFieldSet.Clone(other._unknownFields);
     }
 

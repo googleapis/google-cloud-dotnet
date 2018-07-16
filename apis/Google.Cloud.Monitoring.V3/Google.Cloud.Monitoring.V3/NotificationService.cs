@@ -668,7 +668,7 @@ namespace Google.Cloud.Monitoring.V3 {
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     public CreateNotificationChannelRequest(CreateNotificationChannelRequest other) : this() {
       name_ = other.name_;
-      NotificationChannel = other.notificationChannel_ != null ? other.NotificationChannel.Clone() : null;
+      notificationChannel_ = other.notificationChannel_ != null ? other.notificationChannel_.Clone() : null;
       _unknownFields = pb::UnknownFieldSet.Clone(other._unknownFields);
     }
 
@@ -1420,8 +1420,8 @@ namespace Google.Cloud.Monitoring.V3 {
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     public UpdateNotificationChannelRequest(UpdateNotificationChannelRequest other) : this() {
-      UpdateMask = other.updateMask_ != null ? other.UpdateMask.Clone() : null;
-      NotificationChannel = other.notificationChannel_ != null ? other.NotificationChannel.Clone() : null;
+      updateMask_ = other.updateMask_ != null ? other.updateMask_.Clone() : null;
+      notificationChannel_ = other.notificationChannel_ != null ? other.notificationChannel_.Clone() : null;
       _unknownFields = pb::UnknownFieldSet.Clone(other._unknownFields);
     }
 
@@ -1907,7 +1907,7 @@ namespace Google.Cloud.Monitoring.V3 {
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     public GetNotificationChannelVerificationCodeRequest(GetNotificationChannelVerificationCodeRequest other) : this() {
       name_ = other.name_;
-      ExpireTime = other.expireTime_ != null ? other.ExpireTime.Clone() : null;
+      expireTime_ = other.expireTime_ != null ? other.expireTime_.Clone() : null;
       _unknownFields = pb::UnknownFieldSet.Clone(other._unknownFields);
     }
 
@@ -2089,7 +2089,7 @@ namespace Google.Cloud.Monitoring.V3 {
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     public GetNotificationChannelVerificationCodeResponse(GetNotificationChannelVerificationCodeResponse other) : this() {
       code_ = other.code_;
-      ExpireTime = other.expireTime_ != null ? other.ExpireTime.Clone() : null;
+      expireTime_ = other.expireTime_ != null ? other.expireTime_.Clone() : null;
       _unknownFields = pb::UnknownFieldSet.Clone(other._unknownFields);
     }
 

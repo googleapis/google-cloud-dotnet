@@ -213,8 +213,8 @@ namespace Google.Cloud.Dialogflow.V2 {
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     public DetectIntentRequest(DetectIntentRequest other) : this() {
       session_ = other.session_;
-      QueryParams = other.queryParams_ != null ? other.QueryParams.Clone() : null;
-      QueryInput = other.queryInput_ != null ? other.QueryInput.Clone() : null;
+      queryParams_ = other.queryParams_ != null ? other.queryParams_.Clone() : null;
+      queryInput_ = other.queryInput_ != null ? other.queryInput_.Clone() : null;
       inputAudio_ = other.inputAudio_;
       _unknownFields = pb::UnknownFieldSet.Clone(other._unknownFields);
     }
@@ -466,8 +466,8 @@ namespace Google.Cloud.Dialogflow.V2 {
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     public DetectIntentResponse(DetectIntentResponse other) : this() {
       responseId_ = other.responseId_;
-      QueryResult = other.queryResult_ != null ? other.QueryResult.Clone() : null;
-      WebhookStatus = other.webhookStatus_ != null ? other.WebhookStatus.Clone() : null;
+      queryResult_ = other.queryResult_ != null ? other.queryResult_.Clone() : null;
+      webhookStatus_ = other.webhookStatus_ != null ? other.webhookStatus_.Clone() : null;
       _unknownFields = pb::UnknownFieldSet.Clone(other._unknownFields);
     }
 
@@ -677,11 +677,11 @@ namespace Google.Cloud.Dialogflow.V2 {
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     public QueryParameters(QueryParameters other) : this() {
       timeZone_ = other.timeZone_;
-      GeoLocation = other.geoLocation_ != null ? other.GeoLocation.Clone() : null;
+      geoLocation_ = other.geoLocation_ != null ? other.geoLocation_.Clone() : null;
       contexts_ = other.contexts_.Clone();
       resetContexts_ = other.resetContexts_;
       sessionEntityTypes_ = other.sessionEntityTypes_.Clone();
-      Payload = other.payload_ != null ? other.Payload.Clone() : null;
+      payload_ = other.payload_ != null ? other.payload_.Clone() : null;
       _unknownFields = pb::UnknownFieldSet.Clone(other._unknownFields);
     }
 
@@ -1236,16 +1236,16 @@ namespace Google.Cloud.Dialogflow.V2 {
       languageCode_ = other.languageCode_;
       speechRecognitionConfidence_ = other.speechRecognitionConfidence_;
       action_ = other.action_;
-      Parameters = other.parameters_ != null ? other.Parameters.Clone() : null;
+      parameters_ = other.parameters_ != null ? other.parameters_.Clone() : null;
       allRequiredParamsPresent_ = other.allRequiredParamsPresent_;
       fulfillmentText_ = other.fulfillmentText_;
       fulfillmentMessages_ = other.fulfillmentMessages_.Clone();
       webhookSource_ = other.webhookSource_;
-      WebhookPayload = other.webhookPayload_ != null ? other.WebhookPayload.Clone() : null;
+      webhookPayload_ = other.webhookPayload_ != null ? other.webhookPayload_.Clone() : null;
       outputContexts_ = other.outputContexts_.Clone();
-      Intent = other.intent_ != null ? other.Intent.Clone() : null;
+      intent_ = other.intent_ != null ? other.intent_.Clone() : null;
       intentDetectionConfidence_ = other.intentDetectionConfidence_;
-      DiagnosticInfo = other.diagnosticInfo_ != null ? other.DiagnosticInfo.Clone() : null;
+      diagnosticInfo_ = other.diagnosticInfo_ != null ? other.diagnosticInfo_.Clone() : null;
       _unknownFields = pb::UnknownFieldSet.Clone(other._unknownFields);
     }
 
@@ -1818,8 +1818,8 @@ namespace Google.Cloud.Dialogflow.V2 {
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     public StreamingDetectIntentRequest(StreamingDetectIntentRequest other) : this() {
       session_ = other.session_;
-      QueryParams = other.queryParams_ != null ? other.QueryParams.Clone() : null;
-      QueryInput = other.queryInput_ != null ? other.QueryInput.Clone() : null;
+      queryParams_ = other.queryParams_ != null ? other.queryParams_.Clone() : null;
+      queryInput_ = other.queryInput_ != null ? other.queryInput_.Clone() : null;
       singleUtterance_ = other.singleUtterance_;
       inputAudio_ = other.inputAudio_;
       _unknownFields = pb::UnknownFieldSet.Clone(other._unknownFields);
@@ -2121,9 +2121,9 @@ namespace Google.Cloud.Dialogflow.V2 {
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     public StreamingDetectIntentResponse(StreamingDetectIntentResponse other) : this() {
       responseId_ = other.responseId_;
-      RecognitionResult = other.recognitionResult_ != null ? other.RecognitionResult.Clone() : null;
-      QueryResult = other.queryResult_ != null ? other.QueryResult.Clone() : null;
-      WebhookStatus = other.webhookStatus_ != null ? other.WebhookStatus.Clone() : null;
+      recognitionResult_ = other.recognitionResult_ != null ? other.recognitionResult_.Clone() : null;
+      queryResult_ = other.queryResult_ != null ? other.queryResult_.Clone() : null;
+      webhookStatus_ = other.webhookStatus_ != null ? other.webhookStatus_.Clone() : null;
       _unknownFields = pb::UnknownFieldSet.Clone(other._unknownFields);
     }
 
@@ -3073,7 +3073,7 @@ namespace Google.Cloud.Dialogflow.V2 {
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     public EventInput(EventInput other) : this() {
       name_ = other.name_;
-      Parameters = other.parameters_ != null ? other.Parameters.Clone() : null;
+      parameters_ = other.parameters_ != null ? other.parameters_.Clone() : null;
       languageCode_ = other.languageCode_;
       _unknownFields = pb::UnknownFieldSet.Clone(other._unknownFields);
     }

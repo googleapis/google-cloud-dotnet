@@ -104,7 +104,7 @@ namespace Google.Cloud.Debugger.V2 {
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     public RegisterDebuggeeRequest(RegisterDebuggeeRequest other) : this() {
-      Debuggee = other.debuggee_ != null ? other.Debuggee.Clone() : null;
+      debuggee_ = other.debuggee_ != null ? other.debuggee_.Clone() : null;
       _unknownFields = pb::UnknownFieldSet.Clone(other._unknownFields);
     }
 
@@ -247,7 +247,7 @@ namespace Google.Cloud.Debugger.V2 {
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     public RegisterDebuggeeResponse(RegisterDebuggeeResponse other) : this() {
-      Debuggee = other.debuggee_ != null ? other.Debuggee.Clone() : null;
+      debuggee_ = other.debuggee_ != null ? other.debuggee_.Clone() : null;
       _unknownFields = pb::UnknownFieldSet.Clone(other._unknownFields);
     }
 
@@ -791,7 +791,7 @@ namespace Google.Cloud.Debugger.V2 {
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     public UpdateActiveBreakpointRequest(UpdateActiveBreakpointRequest other) : this() {
       debuggeeId_ = other.debuggeeId_;
-      Breakpoint = other.breakpoint_ != null ? other.Breakpoint.Clone() : null;
+      breakpoint_ = other.breakpoint_ != null ? other.breakpoint_.Clone() : null;
       _unknownFields = pb::UnknownFieldSet.Clone(other._unknownFields);
     }
 

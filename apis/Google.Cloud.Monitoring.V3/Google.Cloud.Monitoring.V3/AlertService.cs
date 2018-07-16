@@ -107,7 +107,7 @@ namespace Google.Cloud.Monitoring.V3 {
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     public CreateAlertPolicyRequest(CreateAlertPolicyRequest other) : this() {
       name_ = other.name_;
-      AlertPolicy = other.alertPolicy_ != null ? other.AlertPolicy.Clone() : null;
+      alertPolicy_ = other.alertPolicy_ != null ? other.alertPolicy_.Clone() : null;
       _unknownFields = pb::UnknownFieldSet.Clone(other._unknownFields);
     }
 
@@ -862,8 +862,8 @@ namespace Google.Cloud.Monitoring.V3 {
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     public UpdateAlertPolicyRequest(UpdateAlertPolicyRequest other) : this() {
-      UpdateMask = other.updateMask_ != null ? other.UpdateMask.Clone() : null;
-      AlertPolicy = other.alertPolicy_ != null ? other.AlertPolicy.Clone() : null;
+      updateMask_ = other.updateMask_ != null ? other.updateMask_.Clone() : null;
+      alertPolicy_ = other.alertPolicy_ != null ? other.alertPolicy_.Clone() : null;
       _unknownFields = pb::UnknownFieldSet.Clone(other._unknownFields);
     }
 

@@ -563,7 +563,7 @@ namespace Google.Cloud.Bigtable.Admin.V2 {
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     public ColumnFamily(ColumnFamily other) : this() {
-      GcRule = other.gcRule_ != null ? other.GcRule.Clone() : null;
+      gcRule_ = other.gcRule_ != null ? other.gcRule_.Clone() : null;
       _unknownFields = pb::UnknownFieldSet.Clone(other._unknownFields);
     }
 
@@ -1268,10 +1268,10 @@ namespace Google.Cloud.Bigtable.Admin.V2 {
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     public Snapshot(Snapshot other) : this() {
       name_ = other.name_;
-      SourceTable = other.sourceTable_ != null ? other.SourceTable.Clone() : null;
+      sourceTable_ = other.sourceTable_ != null ? other.sourceTable_.Clone() : null;
       dataSizeBytes_ = other.dataSizeBytes_;
-      CreateTime = other.createTime_ != null ? other.CreateTime.Clone() : null;
-      DeleteTime = other.deleteTime_ != null ? other.DeleteTime.Clone() : null;
+      createTime_ = other.createTime_ != null ? other.createTime_.Clone() : null;
+      deleteTime_ = other.deleteTime_ != null ? other.deleteTime_.Clone() : null;
       state_ = other.state_;
       description_ = other.description_;
       _unknownFields = pb::UnknownFieldSet.Clone(other._unknownFields);

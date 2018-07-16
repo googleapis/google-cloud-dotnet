@@ -250,7 +250,7 @@ namespace Google.Cloud.Firestore.V1Beta1 {
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     public GetDocumentRequest(GetDocumentRequest other) : this() {
       name_ = other.name_;
-      Mask = other.mask_ != null ? other.Mask.Clone() : null;
+      mask_ = other.mask_ != null ? other.mask_.Clone() : null;
       switch (other.ConsistencySelectorCase) {
         case ConsistencySelectorOneofCase.Transaction:
           Transaction = other.Transaction;
@@ -532,7 +532,7 @@ namespace Google.Cloud.Firestore.V1Beta1 {
       pageSize_ = other.pageSize_;
       pageToken_ = other.pageToken_;
       orderBy_ = other.orderBy_;
-      Mask = other.mask_ != null ? other.Mask.Clone() : null;
+      mask_ = other.mask_ != null ? other.mask_.Clone() : null;
       showMissing_ = other.showMissing_;
       switch (other.ConsistencySelectorCase) {
         case ConsistencySelectorOneofCase.Transaction:
@@ -1132,8 +1132,8 @@ namespace Google.Cloud.Firestore.V1Beta1 {
       parent_ = other.parent_;
       collectionId_ = other.collectionId_;
       documentId_ = other.documentId_;
-      Document = other.document_ != null ? other.Document.Clone() : null;
-      Mask = other.mask_ != null ? other.Mask.Clone() : null;
+      document_ = other.document_ != null ? other.document_.Clone() : null;
+      mask_ = other.mask_ != null ? other.mask_.Clone() : null;
       _unknownFields = pb::UnknownFieldSet.Clone(other._unknownFields);
     }
 
@@ -1407,10 +1407,10 @@ namespace Google.Cloud.Firestore.V1Beta1 {
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     public UpdateDocumentRequest(UpdateDocumentRequest other) : this() {
-      Document = other.document_ != null ? other.Document.Clone() : null;
-      UpdateMask = other.updateMask_ != null ? other.UpdateMask.Clone() : null;
-      Mask = other.mask_ != null ? other.Mask.Clone() : null;
-      CurrentDocument = other.currentDocument_ != null ? other.CurrentDocument.Clone() : null;
+      document_ = other.document_ != null ? other.document_.Clone() : null;
+      updateMask_ = other.updateMask_ != null ? other.updateMask_.Clone() : null;
+      mask_ = other.mask_ != null ? other.mask_.Clone() : null;
+      currentDocument_ = other.currentDocument_ != null ? other.currentDocument_.Clone() : null;
       _unknownFields = pb::UnknownFieldSet.Clone(other._unknownFields);
     }
 
@@ -1671,7 +1671,7 @@ namespace Google.Cloud.Firestore.V1Beta1 {
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     public DeleteDocumentRequest(DeleteDocumentRequest other) : this() {
       name_ = other.name_;
-      CurrentDocument = other.currentDocument_ != null ? other.CurrentDocument.Clone() : null;
+      currentDocument_ = other.currentDocument_ != null ? other.currentDocument_.Clone() : null;
       _unknownFields = pb::UnknownFieldSet.Clone(other._unknownFields);
     }
 
@@ -1846,7 +1846,7 @@ namespace Google.Cloud.Firestore.V1Beta1 {
     public BatchGetDocumentsRequest(BatchGetDocumentsRequest other) : this() {
       database_ = other.database_;
       documents_ = other.documents_.Clone();
-      Mask = other.mask_ != null ? other.Mask.Clone() : null;
+      mask_ = other.mask_ != null ? other.mask_.Clone() : null;
       switch (other.ConsistencySelectorCase) {
         case ConsistencySelectorOneofCase.Transaction:
           Transaction = other.Transaction;
@@ -2194,7 +2194,7 @@ namespace Google.Cloud.Firestore.V1Beta1 {
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     public BatchGetDocumentsResponse(BatchGetDocumentsResponse other) : this() {
       transaction_ = other.transaction_;
-      ReadTime = other.readTime_ != null ? other.ReadTime.Clone() : null;
+      readTime_ = other.readTime_ != null ? other.readTime_.Clone() : null;
       switch (other.ResultCase) {
         case ResultOneofCase.Found:
           Found = other.Found.Clone();
@@ -2473,7 +2473,7 @@ namespace Google.Cloud.Firestore.V1Beta1 {
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     public BeginTransactionRequest(BeginTransactionRequest other) : this() {
       database_ = other.database_;
-      Options = other.options_ != null ? other.Options.Clone() : null;
+      options_ = other.options_ != null ? other.options_.Clone() : null;
       _unknownFields = pb::UnknownFieldSet.Clone(other._unknownFields);
     }
 
@@ -2974,7 +2974,7 @@ namespace Google.Cloud.Firestore.V1Beta1 {
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     public CommitResponse(CommitResponse other) : this() {
       writeResults_ = other.writeResults_.Clone();
-      CommitTime = other.commitTime_ != null ? other.CommitTime.Clone() : null;
+      commitTime_ = other.commitTime_ != null ? other.commitTime_.Clone() : null;
       _unknownFields = pb::UnknownFieldSet.Clone(other._unknownFields);
     }
 
@@ -3662,8 +3662,8 @@ namespace Google.Cloud.Firestore.V1Beta1 {
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     public RunQueryResponse(RunQueryResponse other) : this() {
       transaction_ = other.transaction_;
-      Document = other.document_ != null ? other.Document.Clone() : null;
-      ReadTime = other.readTime_ != null ? other.ReadTime.Clone() : null;
+      document_ = other.document_ != null ? other.document_.Clone() : null;
+      readTime_ = other.readTime_ != null ? other.readTime_.Clone() : null;
       skippedResults_ = other.skippedResults_;
       _unknownFields = pb::UnknownFieldSet.Clone(other._unknownFields);
     }
@@ -4189,7 +4189,7 @@ namespace Google.Cloud.Firestore.V1Beta1 {
       streamId_ = other.streamId_;
       streamToken_ = other.streamToken_;
       writeResults_ = other.writeResults_.Clone();
-      CommitTime = other.commitTime_ != null ? other.CommitTime.Clone() : null;
+      commitTime_ = other.commitTime_ != null ? other.commitTime_.Clone() : null;
       _unknownFields = pb::UnknownFieldSet.Clone(other._unknownFields);
     }
 
@@ -5756,9 +5756,9 @@ namespace Google.Cloud.Firestore.V1Beta1 {
     public TargetChange(TargetChange other) : this() {
       targetChangeType_ = other.targetChangeType_;
       targetIds_ = other.targetIds_.Clone();
-      Cause = other.cause_ != null ? other.Cause.Clone() : null;
+      cause_ = other.cause_ != null ? other.cause_.Clone() : null;
       resumeToken_ = other.resumeToken_;
-      ReadTime = other.readTime_ != null ? other.ReadTime.Clone() : null;
+      readTime_ = other.readTime_ != null ? other.readTime_.Clone() : null;
       _unknownFields = pb::UnknownFieldSet.Clone(other._unknownFields);
     }
 

@@ -135,7 +135,7 @@ namespace Google.Cloud.Datastore.V1 {
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     public EntityResult(EntityResult other) : this() {
-      Entity = other.entity_ != null ? other.Entity.Clone() : null;
+      entity_ = other.entity_ != null ? other.entity_.Clone() : null;
       version_ = other.version_;
       cursor_ = other.cursor_;
       _unknownFields = pb::UnknownFieldSet.Clone(other._unknownFields);
@@ -382,7 +382,7 @@ namespace Google.Cloud.Datastore.V1 {
     public Query(Query other) : this() {
       projection_ = other.projection_.Clone();
       kind_ = other.kind_.Clone();
-      Filter = other.filter_ != null ? other.Filter.Clone() : null;
+      filter_ = other.filter_ != null ? other.filter_.Clone() : null;
       order_ = other.order_.Clone();
       distinctOn_ = other.distinctOn_.Clone();
       startCursor_ = other.startCursor_;
@@ -1024,7 +1024,7 @@ namespace Google.Cloud.Datastore.V1 {
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     public Projection(Projection other) : this() {
-      Property = other.property_ != null ? other.Property.Clone() : null;
+      property_ = other.property_ != null ? other.property_.Clone() : null;
       _unknownFields = pb::UnknownFieldSet.Clone(other._unknownFields);
     }
 
@@ -1165,7 +1165,7 @@ namespace Google.Cloud.Datastore.V1 {
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     public PropertyOrder(PropertyOrder other) : this() {
-      Property = other.property_ != null ? other.Property.Clone() : null;
+      property_ = other.property_ != null ? other.property_.Clone() : null;
       direction_ = other.direction_;
       _unknownFields = pb::UnknownFieldSet.Clone(other._unknownFields);
     }
@@ -1755,9 +1755,9 @@ namespace Google.Cloud.Datastore.V1 {
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     public PropertyFilter(PropertyFilter other) : this() {
-      Property = other.property_ != null ? other.Property.Clone() : null;
+      property_ = other.property_ != null ? other.property_.Clone() : null;
       op_ = other.op_;
-      Value = other.value_ != null ? other.Value.Clone() : null;
+      value_ = other.value_ != null ? other.value_.Clone() : null;
       _unknownFields = pb::UnknownFieldSet.Clone(other._unknownFields);
     }
 

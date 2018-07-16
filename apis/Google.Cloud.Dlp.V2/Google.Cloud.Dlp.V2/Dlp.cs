@@ -897,7 +897,7 @@ namespace Google.Cloud.Dlp.V2 {
     public InspectConfig(InspectConfig other) : this() {
       infoTypes_ = other.infoTypes_.Clone();
       minLikelihood_ = other.minLikelihood_;
-      Limits = other.limits_ != null ? other.Limits.Clone() : null;
+      limits_ = other.limits_ != null ? other.limits_.Clone() : null;
       includeQuote_ = other.includeQuote_;
       excludeInfoTypes_ = other.excludeInfoTypes_;
       customInfoTypes_ = other.customInfoTypes_.Clone();
@@ -1403,7 +1403,7 @@ namespace Google.Cloud.Dlp.V2 {
 
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
             public InfoTypeLimit(InfoTypeLimit other) : this() {
-              InfoType = other.infoType_ != null ? other.InfoType.Clone() : null;
+              infoType_ = other.infoType_ != null ? other.infoType_.Clone() : null;
               maxFindings_ = other.maxFindings_;
               _unknownFields = pb::UnknownFieldSet.Clone(other._unknownFields);
             }
@@ -2458,11 +2458,11 @@ namespace Google.Cloud.Dlp.V2 {
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     public Finding(Finding other) : this() {
       quote_ = other.quote_;
-      InfoType = other.infoType_ != null ? other.InfoType.Clone() : null;
+      infoType_ = other.infoType_ != null ? other.infoType_.Clone() : null;
       likelihood_ = other.likelihood_;
-      Location = other.location_ != null ? other.Location.Clone() : null;
-      CreateTime = other.createTime_ != null ? other.CreateTime.Clone() : null;
-      QuoteInfo = other.quoteInfo_ != null ? other.QuoteInfo.Clone() : null;
+      location_ = other.location_ != null ? other.location_.Clone() : null;
+      createTime_ = other.createTime_ != null ? other.createTime_.Clone() : null;
+      quoteInfo_ = other.quoteInfo_ != null ? other.quoteInfo_.Clone() : null;
       _unknownFields = pb::UnknownFieldSet.Clone(other._unknownFields);
     }
 
@@ -2778,8 +2778,8 @@ namespace Google.Cloud.Dlp.V2 {
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     public Location(Location other) : this() {
-      ByteRange = other.byteRange_ != null ? other.ByteRange.Clone() : null;
-      CodepointRange = other.codepointRange_ != null ? other.CodepointRange.Clone() : null;
+      byteRange_ = other.byteRange_ != null ? other.byteRange_.Clone() : null;
+      codepointRange_ = other.codepointRange_ != null ? other.codepointRange_.Clone() : null;
       contentLocations_ = other.contentLocations_.Clone();
       _unknownFields = pb::UnknownFieldSet.Clone(other._unknownFields);
     }
@@ -2987,7 +2987,7 @@ namespace Google.Cloud.Dlp.V2 {
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     public ContentLocation(ContentLocation other) : this() {
       containerName_ = other.containerName_;
-      ContainerTimestamp = other.containerTimestamp_ != null ? other.ContainerTimestamp.Clone() : null;
+      containerTimestamp_ = other.containerTimestamp_ != null ? other.containerTimestamp_.Clone() : null;
       containerVersion_ = other.containerVersion_;
       switch (other.LocationCase) {
         case LocationOneofCase.RecordLocation:
@@ -3483,9 +3483,9 @@ namespace Google.Cloud.Dlp.V2 {
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     public RecordLocation(RecordLocation other) : this() {
-      RecordKey = other.recordKey_ != null ? other.RecordKey.Clone() : null;
-      FieldId = other.fieldId_ != null ? other.FieldId.Clone() : null;
-      TableLocation = other.tableLocation_ != null ? other.TableLocation.Clone() : null;
+      recordKey_ = other.recordKey_ != null ? other.recordKey_.Clone() : null;
+      fieldId_ = other.fieldId_ != null ? other.fieldId_.Clone() : null;
+      tableLocation_ = other.tableLocation_ != null ? other.tableLocation_.Clone() : null;
       _unknownFields = pb::UnknownFieldSet.Clone(other._unknownFields);
     }
 
@@ -4356,10 +4356,10 @@ namespace Google.Cloud.Dlp.V2 {
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     public RedactImageRequest(RedactImageRequest other) : this() {
       parent_ = other.parent_;
-      InspectConfig = other.inspectConfig_ != null ? other.InspectConfig.Clone() : null;
+      inspectConfig_ = other.inspectConfig_ != null ? other.inspectConfig_.Clone() : null;
       imageRedactionConfigs_ = other.imageRedactionConfigs_.Clone();
       includeFindings_ = other.includeFindings_;
-      ByteItem = other.byteItem_ != null ? other.ByteItem.Clone() : null;
+      byteItem_ = other.byteItem_ != null ? other.byteItem_.Clone() : null;
       _unknownFields = pb::UnknownFieldSet.Clone(other._unknownFields);
     }
 
@@ -4621,7 +4621,7 @@ namespace Google.Cloud.Dlp.V2 {
 
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
         public ImageRedactionConfig(ImageRedactionConfig other) : this() {
-          RedactionColor = other.redactionColor_ != null ? other.RedactionColor.Clone() : null;
+          redactionColor_ = other.redactionColor_ != null ? other.redactionColor_.Clone() : null;
           switch (other.TargetCase) {
             case TargetOneofCase.InfoType:
               InfoType = other.InfoType.Clone();
@@ -5072,7 +5072,7 @@ namespace Google.Cloud.Dlp.V2 {
     public RedactImageResponse(RedactImageResponse other) : this() {
       redactedImage_ = other.redactedImage_;
       extractedText_ = other.extractedText_;
-      InspectResult = other.inspectResult_ != null ? other.InspectResult.Clone() : null;
+      inspectResult_ = other.inspectResult_ != null ? other.inspectResult_.Clone() : null;
       _unknownFields = pb::UnknownFieldSet.Clone(other._unknownFields);
     }
 
@@ -5276,9 +5276,9 @@ namespace Google.Cloud.Dlp.V2 {
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     public DeidentifyContentRequest(DeidentifyContentRequest other) : this() {
       parent_ = other.parent_;
-      DeidentifyConfig = other.deidentifyConfig_ != null ? other.DeidentifyConfig.Clone() : null;
-      InspectConfig = other.inspectConfig_ != null ? other.InspectConfig.Clone() : null;
-      Item = other.item_ != null ? other.Item.Clone() : null;
+      deidentifyConfig_ = other.deidentifyConfig_ != null ? other.deidentifyConfig_.Clone() : null;
+      inspectConfig_ = other.inspectConfig_ != null ? other.inspectConfig_.Clone() : null;
+      item_ = other.item_ != null ? other.item_.Clone() : null;
       inspectTemplateName_ = other.inspectTemplateName_;
       deidentifyTemplateName_ = other.deidentifyTemplateName_;
       _unknownFields = pb::UnknownFieldSet.Clone(other._unknownFields);
@@ -5595,8 +5595,8 @@ namespace Google.Cloud.Dlp.V2 {
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     public DeidentifyContentResponse(DeidentifyContentResponse other) : this() {
-      Item = other.item_ != null ? other.Item.Clone() : null;
-      Overview = other.overview_ != null ? other.Overview.Clone() : null;
+      item_ = other.item_ != null ? other.item_.Clone() : null;
+      overview_ = other.overview_ != null ? other.overview_.Clone() : null;
       _unknownFields = pb::UnknownFieldSet.Clone(other._unknownFields);
     }
 
@@ -5774,9 +5774,9 @@ namespace Google.Cloud.Dlp.V2 {
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     public ReidentifyContentRequest(ReidentifyContentRequest other) : this() {
       parent_ = other.parent_;
-      ReidentifyConfig = other.reidentifyConfig_ != null ? other.ReidentifyConfig.Clone() : null;
-      InspectConfig = other.inspectConfig_ != null ? other.InspectConfig.Clone() : null;
-      Item = other.item_ != null ? other.Item.Clone() : null;
+      reidentifyConfig_ = other.reidentifyConfig_ != null ? other.reidentifyConfig_.Clone() : null;
+      inspectConfig_ = other.inspectConfig_ != null ? other.inspectConfig_.Clone() : null;
+      item_ = other.item_ != null ? other.item_.Clone() : null;
       inspectTemplateName_ = other.inspectTemplateName_;
       reidentifyTemplateName_ = other.reidentifyTemplateName_;
       _unknownFields = pb::UnknownFieldSet.Clone(other._unknownFields);
@@ -6098,8 +6098,8 @@ namespace Google.Cloud.Dlp.V2 {
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     public ReidentifyContentResponse(ReidentifyContentResponse other) : this() {
-      Item = other.item_ != null ? other.Item.Clone() : null;
-      Overview = other.overview_ != null ? other.Overview.Clone() : null;
+      item_ = other.item_ != null ? other.item_.Clone() : null;
+      overview_ = other.overview_ != null ? other.overview_.Clone() : null;
       _unknownFields = pb::UnknownFieldSet.Clone(other._unknownFields);
     }
 
@@ -6277,8 +6277,8 @@ namespace Google.Cloud.Dlp.V2 {
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     public InspectContentRequest(InspectContentRequest other) : this() {
       parent_ = other.parent_;
-      InspectConfig = other.inspectConfig_ != null ? other.InspectConfig.Clone() : null;
-      Item = other.item_ != null ? other.Item.Clone() : null;
+      inspectConfig_ = other.inspectConfig_ != null ? other.inspectConfig_.Clone() : null;
+      item_ = other.item_ != null ? other.item_.Clone() : null;
       inspectTemplateName_ = other.inspectTemplateName_;
       _unknownFields = pb::UnknownFieldSet.Clone(other._unknownFields);
     }
@@ -6521,7 +6521,7 @@ namespace Google.Cloud.Dlp.V2 {
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     public InspectContentResponse(InspectContentResponse other) : this() {
-      Result = other.result_ != null ? other.Result.Clone() : null;
+      result_ = other.result_ != null ? other.result_.Clone() : null;
       _unknownFields = pb::UnknownFieldSet.Clone(other._unknownFields);
     }
 
@@ -6919,7 +6919,7 @@ namespace Google.Cloud.Dlp.V2 {
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     public InfoTypeStats(InfoTypeStats other) : this() {
-      InfoType = other.infoType_ != null ? other.InfoType.Clone() : null;
+      infoType_ = other.infoType_ != null ? other.infoType_.Clone() : null;
       count_ = other.count_;
       _unknownFields = pb::UnknownFieldSet.Clone(other._unknownFields);
     }
@@ -7091,8 +7091,8 @@ namespace Google.Cloud.Dlp.V2 {
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     public InspectDataSourceDetails(InspectDataSourceDetails other) : this() {
-      RequestedOptions = other.requestedOptions_ != null ? other.RequestedOptions.Clone() : null;
-      Result = other.result_ != null ? other.Result.Clone() : null;
+      requestedOptions_ = other.requestedOptions_ != null ? other.requestedOptions_.Clone() : null;
+      result_ = other.result_ != null ? other.result_.Clone() : null;
       _unknownFields = pb::UnknownFieldSet.Clone(other._unknownFields);
     }
 
@@ -7268,8 +7268,8 @@ namespace Google.Cloud.Dlp.V2 {
 
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
         public RequestedOptions(RequestedOptions other) : this() {
-          SnapshotInspectTemplate = other.snapshotInspectTemplate_ != null ? other.SnapshotInspectTemplate.Clone() : null;
-          JobConfig = other.jobConfig_ != null ? other.JobConfig.Clone() : null;
+          snapshotInspectTemplate_ = other.snapshotInspectTemplate_ != null ? other.snapshotInspectTemplate_.Clone() : null;
+          jobConfig_ = other.jobConfig_ != null ? other.jobConfig_.Clone() : null;
           _unknownFields = pb::UnknownFieldSet.Clone(other._unknownFields);
         }
 
@@ -8123,8 +8123,8 @@ namespace Google.Cloud.Dlp.V2 {
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     public RiskAnalysisJobConfig(RiskAnalysisJobConfig other) : this() {
-      PrivacyMetric = other.privacyMetric_ != null ? other.PrivacyMetric.Clone() : null;
-      SourceTable = other.sourceTable_ != null ? other.SourceTable.Clone() : null;
+      privacyMetric_ = other.privacyMetric_ != null ? other.privacyMetric_.Clone() : null;
+      sourceTable_ = other.sourceTable_ != null ? other.sourceTable_.Clone() : null;
       actions_ = other.actions_.Clone();
       _unknownFields = pb::UnknownFieldSet.Clone(other._unknownFields);
     }
@@ -8325,7 +8325,7 @@ namespace Google.Cloud.Dlp.V2 {
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     public QuasiId(QuasiId other) : this() {
-      Field = other.field_ != null ? other.Field.Clone() : null;
+      field_ = other.field_ != null ? other.field_.Clone() : null;
       switch (other.TagCase) {
         case TagOneofCase.InfoType:
           InfoType = other.InfoType.Clone();
@@ -8622,9 +8622,9 @@ namespace Google.Cloud.Dlp.V2 {
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     public StatisticalTable(StatisticalTable other) : this() {
-      Table = other.table_ != null ? other.Table.Clone() : null;
+      table_ = other.table_ != null ? other.table_.Clone() : null;
       quasiIds_ = other.quasiIds_.Clone();
-      RelativeFrequency = other.relativeFrequency_ != null ? other.RelativeFrequency.Clone() : null;
+      relativeFrequency_ = other.relativeFrequency_ != null ? other.relativeFrequency_.Clone() : null;
       _unknownFields = pb::UnknownFieldSet.Clone(other._unknownFields);
     }
 
@@ -8828,7 +8828,7 @@ namespace Google.Cloud.Dlp.V2 {
 
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
         public QuasiIdentifierField(QuasiIdentifierField other) : this() {
-          Field = other.field_ != null ? other.Field.Clone() : null;
+          field_ = other.field_ != null ? other.field_.Clone() : null;
           customTag_ = other.customTag_;
           _unknownFields = pb::UnknownFieldSet.Clone(other._unknownFields);
         }
@@ -9365,7 +9365,7 @@ namespace Google.Cloud.Dlp.V2 {
 
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
         public NumericalStatsConfig(NumericalStatsConfig other) : this() {
-          Field = other.field_ != null ? other.Field.Clone() : null;
+          field_ = other.field_ != null ? other.field_.Clone() : null;
           _unknownFields = pb::UnknownFieldSet.Clone(other._unknownFields);
         }
 
@@ -9508,7 +9508,7 @@ namespace Google.Cloud.Dlp.V2 {
 
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
         public CategoricalStatsConfig(CategoricalStatsConfig other) : this() {
-          Field = other.field_ != null ? other.Field.Clone() : null;
+          field_ = other.field_ != null ? other.field_.Clone() : null;
           _unknownFields = pb::UnknownFieldSet.Clone(other._unknownFields);
         }
 
@@ -9653,7 +9653,7 @@ namespace Google.Cloud.Dlp.V2 {
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
         public KAnonymityConfig(KAnonymityConfig other) : this() {
           quasiIds_ = other.quasiIds_.Clone();
-          EntityId = other.entityId_ != null ? other.EntityId.Clone() : null;
+          entityId_ = other.entityId_ != null ? other.entityId_.Clone() : null;
           _unknownFields = pb::UnknownFieldSet.Clone(other._unknownFields);
         }
 
@@ -9830,7 +9830,7 @@ namespace Google.Cloud.Dlp.V2 {
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
         public LDiversityConfig(LDiversityConfig other) : this() {
           quasiIds_ = other.quasiIds_.Clone();
-          SensitiveAttribute = other.sensitiveAttribute_ != null ? other.SensitiveAttribute.Clone() : null;
+          sensitiveAttribute_ = other.sensitiveAttribute_ != null ? other.sensitiveAttribute_.Clone() : null;
           _unknownFields = pb::UnknownFieldSet.Clone(other._unknownFields);
         }
 
@@ -10186,7 +10186,7 @@ namespace Google.Cloud.Dlp.V2 {
 
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
             public TaggedField(TaggedField other) : this() {
-              Field = other.field_ != null ? other.Field.Clone() : null;
+              field_ = other.field_ != null ? other.field_.Clone() : null;
               switch (other.TagCase) {
                 case TagOneofCase.InfoType:
                   InfoType = other.InfoType.Clone();
@@ -10483,9 +10483,9 @@ namespace Google.Cloud.Dlp.V2 {
 
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
             public AuxiliaryTable(AuxiliaryTable other) : this() {
-              Table = other.table_ != null ? other.Table.Clone() : null;
+              table_ = other.table_ != null ? other.table_.Clone() : null;
               quasiIds_ = other.quasiIds_.Clone();
-              RelativeFrequency = other.relativeFrequency_ != null ? other.RelativeFrequency.Clone() : null;
+              relativeFrequency_ = other.relativeFrequency_ != null ? other.relativeFrequency_.Clone() : null;
               _unknownFields = pb::UnknownFieldSet.Clone(other._unknownFields);
             }
 
@@ -10689,7 +10689,7 @@ namespace Google.Cloud.Dlp.V2 {
 
                 [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
                 public QuasiIdField(QuasiIdField other) : this() {
-                  Field = other.field_ != null ? other.Field.Clone() : null;
+                  field_ = other.field_ != null ? other.field_.Clone() : null;
                   customTag_ = other.customTag_;
                   _unknownFields = pb::UnknownFieldSet.Clone(other._unknownFields);
                 }
@@ -11059,8 +11059,8 @@ namespace Google.Cloud.Dlp.V2 {
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     public AnalyzeDataSourceRiskDetails(AnalyzeDataSourceRiskDetails other) : this() {
-      RequestedPrivacyMetric = other.requestedPrivacyMetric_ != null ? other.RequestedPrivacyMetric.Clone() : null;
-      RequestedSourceTable = other.requestedSourceTable_ != null ? other.RequestedSourceTable.Clone() : null;
+      requestedPrivacyMetric_ = other.requestedPrivacyMetric_ != null ? other.requestedPrivacyMetric_.Clone() : null;
+      requestedSourceTable_ = other.requestedSourceTable_ != null ? other.requestedSourceTable_.Clone() : null;
       switch (other.ResultCase) {
         case ResultOneofCase.NumericalStatsResult:
           NumericalStatsResult = other.NumericalStatsResult.Clone();
@@ -11498,8 +11498,8 @@ namespace Google.Cloud.Dlp.V2 {
 
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
         public NumericalStatsResult(NumericalStatsResult other) : this() {
-          MinValue = other.minValue_ != null ? other.MinValue.Clone() : null;
-          MaxValue = other.maxValue_ != null ? other.MaxValue.Clone() : null;
+          minValue_ = other.minValue_ != null ? other.minValue_.Clone() : null;
+          maxValue_ = other.maxValue_ != null ? other.maxValue_.Clone() : null;
           quantileValues_ = other.quantileValues_.Clone();
           _unknownFields = pb::UnknownFieldSet.Clone(other._unknownFields);
         }
@@ -14356,7 +14356,7 @@ namespace Google.Cloud.Dlp.V2 {
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     public ValueFrequency(ValueFrequency other) : this() {
-      Value = other.value_ != null ? other.Value.Clone() : null;
+      value_ = other.value_ != null ? other.value_.Clone() : null;
       count_ = other.count_;
       _unknownFields = pb::UnknownFieldSet.Clone(other._unknownFields);
     }
@@ -15103,10 +15103,10 @@ namespace Google.Cloud.Dlp.V2 {
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     public DateTime(DateTime other) : this() {
-      Date = other.date_ != null ? other.Date.Clone() : null;
+      date_ = other.date_ != null ? other.date_.Clone() : null;
       dayOfWeek_ = other.dayOfWeek_;
-      Time = other.time_ != null ? other.Time.Clone() : null;
-      TimeZone = other.timeZone_ != null ? other.TimeZone.Clone() : null;
+      time_ = other.time_ != null ? other.time_.Clone() : null;
+      timeZone_ = other.timeZone_ != null ? other.timeZone_.Clone() : null;
       _unknownFields = pb::UnknownFieldSet.Clone(other._unknownFields);
     }
 
@@ -16389,7 +16389,7 @@ namespace Google.Cloud.Dlp.V2 {
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     public CryptoHashConfig(CryptoHashConfig other) : this() {
-      CryptoKey = other.cryptoKey_ != null ? other.CryptoKey.Clone() : null;
+      cryptoKey_ = other.cryptoKey_ != null ? other.cryptoKey_.Clone() : null;
       _unknownFields = pb::UnknownFieldSet.Clone(other._unknownFields);
     }
 
@@ -16530,7 +16530,7 @@ namespace Google.Cloud.Dlp.V2 {
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     public ReplaceValueConfig(ReplaceValueConfig other) : this() {
-      NewValue = other.newValue_ != null ? other.NewValue.Clone() : null;
+      newValue_ = other.newValue_ != null ? other.newValue_.Clone() : null;
       _unknownFields = pb::UnknownFieldSet.Clone(other._unknownFields);
     }
 
@@ -17355,8 +17355,8 @@ namespace Google.Cloud.Dlp.V2 {
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     public FixedSizeBucketingConfig(FixedSizeBucketingConfig other) : this() {
-      LowerBound = other.lowerBound_ != null ? other.LowerBound.Clone() : null;
-      UpperBound = other.upperBound_ != null ? other.UpperBound.Clone() : null;
+      lowerBound_ = other.lowerBound_ != null ? other.lowerBound_.Clone() : null;
+      upperBound_ = other.upperBound_ != null ? other.upperBound_.Clone() : null;
       bucketSize_ = other.bucketSize_;
       _unknownFields = pb::UnknownFieldSet.Clone(other._unknownFields);
     }
@@ -17709,9 +17709,9 @@ namespace Google.Cloud.Dlp.V2 {
 
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
         public Bucket(Bucket other) : this() {
-          Min = other.min_ != null ? other.Min.Clone() : null;
-          Max = other.max_ != null ? other.Max.Clone() : null;
-          ReplacementValue = other.replacementValue_ != null ? other.ReplacementValue.Clone() : null;
+          min_ = other.min_ != null ? other.min_.Clone() : null;
+          max_ = other.max_ != null ? other.max_.Clone() : null;
+          replacementValue_ = other.replacementValue_ != null ? other.replacementValue_.Clone() : null;
           _unknownFields = pb::UnknownFieldSet.Clone(other._unknownFields);
         }
 
@@ -17940,9 +17940,9 @@ namespace Google.Cloud.Dlp.V2 {
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     public CryptoReplaceFfxFpeConfig(CryptoReplaceFfxFpeConfig other) : this() {
-      CryptoKey = other.cryptoKey_ != null ? other.CryptoKey.Clone() : null;
-      Context = other.context_ != null ? other.Context.Clone() : null;
-      SurrogateInfoType = other.surrogateInfoType_ != null ? other.SurrogateInfoType.Clone() : null;
+      cryptoKey_ = other.cryptoKey_ != null ? other.cryptoKey_.Clone() : null;
+      context_ = other.context_ != null ? other.context_.Clone() : null;
+      surrogateInfoType_ = other.surrogateInfoType_ != null ? other.surrogateInfoType_.Clone() : null;
       switch (other.AlphabetCase) {
         case AlphabetOneofCase.CommonAlphabet:
           CommonAlphabet = other.CommonAlphabet;
@@ -19061,7 +19061,7 @@ namespace Google.Cloud.Dlp.V2 {
     public DateShiftConfig(DateShiftConfig other) : this() {
       upperBoundDays_ = other.upperBoundDays_;
       lowerBoundDays_ = other.lowerBoundDays_;
-      Context = other.context_ != null ? other.Context.Clone() : null;
+      context_ = other.context_ != null ? other.context_.Clone() : null;
       switch (other.MethodCase) {
         case MethodOneofCase.CryptoKey:
           CryptoKey = other.CryptoKey.Clone();
@@ -19473,7 +19473,7 @@ namespace Google.Cloud.Dlp.V2 {
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
         public InfoTypeTransformation(InfoTypeTransformation other) : this() {
           infoTypes_ = other.infoTypes_.Clone();
-          PrimitiveTransformation = other.primitiveTransformation_ != null ? other.PrimitiveTransformation.Clone() : null;
+          primitiveTransformation_ = other.primitiveTransformation_ != null ? other.primitiveTransformation_.Clone() : null;
           _unknownFields = pb::UnknownFieldSet.Clone(other._unknownFields);
         }
 
@@ -19644,7 +19644,7 @@ namespace Google.Cloud.Dlp.V2 {
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     public FieldTransformation(FieldTransformation other) : this() {
       fields_ = other.fields_.Clone();
-      Condition = other.condition_ != null ? other.Condition.Clone() : null;
+      condition_ = other.condition_ != null ? other.condition_.Clone() : null;
       switch (other.TransformationCase) {
         case TransformationOneofCase.PrimitiveTransformation:
           PrimitiveTransformation = other.PrimitiveTransformation.Clone();
@@ -20078,7 +20078,7 @@ namespace Google.Cloud.Dlp.V2 {
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     public RecordSuppression(RecordSuppression other) : this() {
-      Condition = other.condition_ != null ? other.Condition.Clone() : null;
+      condition_ = other.condition_ != null ? other.condition_.Clone() : null;
       _unknownFields = pb::UnknownFieldSet.Clone(other._unknownFields);
     }
 
@@ -20221,7 +20221,7 @@ namespace Google.Cloud.Dlp.V2 {
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     public RecordCondition(RecordCondition other) : this() {
-      Expressions = other.expressions_ != null ? other.Expressions.Clone() : null;
+      expressions_ = other.expressions_ != null ? other.expressions_.Clone() : null;
       _unknownFields = pb::UnknownFieldSet.Clone(other._unknownFields);
     }
 
@@ -20381,9 +20381,9 @@ namespace Google.Cloud.Dlp.V2 {
 
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
         public Condition(Condition other) : this() {
-          Field = other.field_ != null ? other.Field.Clone() : null;
+          field_ = other.field_ != null ? other.field_.Clone() : null;
           operator_ = other.operator_;
-          Value = other.value_ != null ? other.Value.Clone() : null;
+          value_ = other.value_ != null ? other.value_.Clone() : null;
           _unknownFields = pb::UnknownFieldSet.Clone(other._unknownFields);
         }
 
@@ -21091,11 +21091,11 @@ namespace Google.Cloud.Dlp.V2 {
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     public TransformationSummary(TransformationSummary other) : this() {
-      InfoType = other.infoType_ != null ? other.InfoType.Clone() : null;
-      Field = other.field_ != null ? other.Field.Clone() : null;
-      Transformation = other.transformation_ != null ? other.Transformation.Clone() : null;
+      infoType_ = other.infoType_ != null ? other.infoType_.Clone() : null;
+      field_ = other.field_ != null ? other.field_.Clone() : null;
+      transformation_ = other.transformation_ != null ? other.transformation_.Clone() : null;
       fieldTransformations_ = other.fieldTransformations_.Clone();
-      RecordSuppress = other.recordSuppress_ != null ? other.RecordSuppress.Clone() : null;
+      recordSuppress_ = other.recordSuppress_ != null ? other.recordSuppress_.Clone() : null;
       results_ = other.results_.Clone();
       transformedBytes_ = other.transformedBytes_;
       _unknownFields = pb::UnknownFieldSet.Clone(other._unknownFields);
@@ -21812,9 +21812,9 @@ namespace Google.Cloud.Dlp.V2 {
       name_ = other.name_;
       displayName_ = other.displayName_;
       description_ = other.description_;
-      CreateTime = other.createTime_ != null ? other.CreateTime.Clone() : null;
-      UpdateTime = other.updateTime_ != null ? other.UpdateTime.Clone() : null;
-      InspectConfig = other.inspectConfig_ != null ? other.InspectConfig.Clone() : null;
+      createTime_ = other.createTime_ != null ? other.createTime_.Clone() : null;
+      updateTime_ = other.updateTime_ != null ? other.updateTime_.Clone() : null;
+      inspectConfig_ = other.inspectConfig_ != null ? other.inspectConfig_.Clone() : null;
       _unknownFields = pb::UnknownFieldSet.Clone(other._unknownFields);
     }
 
@@ -22125,9 +22125,9 @@ namespace Google.Cloud.Dlp.V2 {
       name_ = other.name_;
       displayName_ = other.displayName_;
       description_ = other.description_;
-      CreateTime = other.createTime_ != null ? other.CreateTime.Clone() : null;
-      UpdateTime = other.updateTime_ != null ? other.UpdateTime.Clone() : null;
-      DeidentifyConfig = other.deidentifyConfig_ != null ? other.DeidentifyConfig.Clone() : null;
+      createTime_ = other.createTime_ != null ? other.createTime_.Clone() : null;
+      updateTime_ = other.updateTime_ != null ? other.updateTime_.Clone() : null;
+      deidentifyConfig_ = other.deidentifyConfig_ != null ? other.deidentifyConfig_.Clone() : null;
       _unknownFields = pb::UnknownFieldSet.Clone(other._unknownFields);
     }
 
@@ -22436,7 +22436,7 @@ namespace Google.Cloud.Dlp.V2 {
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     public Error(Error other) : this() {
-      Details = other.details_ != null ? other.Details.Clone() : null;
+      details_ = other.details_ != null ? other.details_.Clone() : null;
       timestamps_ = other.timestamps_.Clone();
       _unknownFields = pb::UnknownFieldSet.Clone(other._unknownFields);
     }
@@ -22603,9 +22603,9 @@ namespace Google.Cloud.Dlp.V2 {
       description_ = other.description_;
       triggers_ = other.triggers_.Clone();
       errors_ = other.errors_.Clone();
-      CreateTime = other.createTime_ != null ? other.CreateTime.Clone() : null;
-      UpdateTime = other.updateTime_ != null ? other.UpdateTime.Clone() : null;
-      LastRunTime = other.lastRunTime_ != null ? other.LastRunTime.Clone() : null;
+      createTime_ = other.createTime_ != null ? other.createTime_.Clone() : null;
+      updateTime_ = other.updateTime_ != null ? other.updateTime_.Clone() : null;
+      lastRunTime_ = other.lastRunTime_ != null ? other.lastRunTime_.Clone() : null;
       status_ = other.status_;
       switch (other.JobCase) {
         case JobOneofCase.InspectJob:
@@ -23515,7 +23515,7 @@ namespace Google.Cloud.Dlp.V2 {
 
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
         public SaveFindings(SaveFindings other) : this() {
-          OutputConfig = other.outputConfig_ != null ? other.OutputConfig.Clone() : null;
+          outputConfig_ = other.outputConfig_ != null ? other.outputConfig_.Clone() : null;
           _unknownFields = pb::UnknownFieldSet.Clone(other._unknownFields);
         }
 
@@ -23911,7 +23911,7 @@ namespace Google.Cloud.Dlp.V2 {
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     public CreateInspectTemplateRequest(CreateInspectTemplateRequest other) : this() {
       parent_ = other.parent_;
-      InspectTemplate = other.inspectTemplate_ != null ? other.InspectTemplate.Clone() : null;
+      inspectTemplate_ = other.inspectTemplate_ != null ? other.inspectTemplate_.Clone() : null;
       templateId_ = other.templateId_;
       _unknownFields = pb::UnknownFieldSet.Clone(other._unknownFields);
     }
@@ -24118,8 +24118,8 @@ namespace Google.Cloud.Dlp.V2 {
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     public UpdateInspectTemplateRequest(UpdateInspectTemplateRequest other) : this() {
       name_ = other.name_;
-      InspectTemplate = other.inspectTemplate_ != null ? other.InspectTemplate.Clone() : null;
-      UpdateMask = other.updateMask_ != null ? other.UpdateMask.Clone() : null;
+      inspectTemplate_ = other.inspectTemplate_ != null ? other.inspectTemplate_.Clone() : null;
+      updateMask_ = other.updateMask_ != null ? other.updateMask_.Clone() : null;
       _unknownFields = pb::UnknownFieldSet.Clone(other._unknownFields);
     }
 
@@ -24962,7 +24962,7 @@ namespace Google.Cloud.Dlp.V2 {
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     public CreateJobTriggerRequest(CreateJobTriggerRequest other) : this() {
       parent_ = other.parent_;
-      JobTrigger = other.jobTrigger_ != null ? other.JobTrigger.Clone() : null;
+      jobTrigger_ = other.jobTrigger_ != null ? other.jobTrigger_.Clone() : null;
       triggerId_ = other.triggerId_;
       _unknownFields = pb::UnknownFieldSet.Clone(other._unknownFields);
     }
@@ -25168,8 +25168,8 @@ namespace Google.Cloud.Dlp.V2 {
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     public UpdateJobTriggerRequest(UpdateJobTriggerRequest other) : this() {
       name_ = other.name_;
-      JobTrigger = other.jobTrigger_ != null ? other.JobTrigger.Clone() : null;
-      UpdateMask = other.updateMask_ != null ? other.UpdateMask.Clone() : null;
+      jobTrigger_ = other.jobTrigger_ != null ? other.jobTrigger_.Clone() : null;
+      updateMask_ = other.updateMask_ != null ? other.updateMask_.Clone() : null;
       _unknownFields = pb::UnknownFieldSet.Clone(other._unknownFields);
     }
 
@@ -26320,8 +26320,8 @@ namespace Google.Cloud.Dlp.V2 {
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     public InspectJobConfig(InspectJobConfig other) : this() {
-      StorageConfig = other.storageConfig_ != null ? other.StorageConfig.Clone() : null;
-      InspectConfig = other.inspectConfig_ != null ? other.InspectConfig.Clone() : null;
+      storageConfig_ = other.storageConfig_ != null ? other.storageConfig_.Clone() : null;
+      inspectConfig_ = other.inspectConfig_ != null ? other.inspectConfig_.Clone() : null;
       inspectTemplateName_ = other.inspectTemplateName_;
       actions_ = other.actions_.Clone();
       _unknownFields = pb::UnknownFieldSet.Clone(other._unknownFields);
@@ -26558,9 +26558,9 @@ namespace Google.Cloud.Dlp.V2 {
       name_ = other.name_;
       type_ = other.type_;
       state_ = other.state_;
-      CreateTime = other.createTime_ != null ? other.CreateTime.Clone() : null;
-      StartTime = other.startTime_ != null ? other.StartTime.Clone() : null;
-      EndTime = other.endTime_ != null ? other.EndTime.Clone() : null;
+      createTime_ = other.createTime_ != null ? other.createTime_.Clone() : null;
+      startTime_ = other.startTime_ != null ? other.startTime_.Clone() : null;
+      endTime_ = other.endTime_ != null ? other.endTime_.Clone() : null;
       jobTriggerName_ = other.jobTriggerName_;
       errors_ = other.errors_.Clone();
       switch (other.DetailsCase) {
@@ -27903,7 +27903,7 @@ namespace Google.Cloud.Dlp.V2 {
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     public CreateDeidentifyTemplateRequest(CreateDeidentifyTemplateRequest other) : this() {
       parent_ = other.parent_;
-      DeidentifyTemplate = other.deidentifyTemplate_ != null ? other.DeidentifyTemplate.Clone() : null;
+      deidentifyTemplate_ = other.deidentifyTemplate_ != null ? other.deidentifyTemplate_.Clone() : null;
       templateId_ = other.templateId_;
       _unknownFields = pb::UnknownFieldSet.Clone(other._unknownFields);
     }
@@ -28110,8 +28110,8 @@ namespace Google.Cloud.Dlp.V2 {
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     public UpdateDeidentifyTemplateRequest(UpdateDeidentifyTemplateRequest other) : this() {
       name_ = other.name_;
-      DeidentifyTemplate = other.deidentifyTemplate_ != null ? other.DeidentifyTemplate.Clone() : null;
-      UpdateMask = other.updateMask_ != null ? other.UpdateMask.Clone() : null;
+      deidentifyTemplate_ = other.deidentifyTemplate_ != null ? other.deidentifyTemplate_.Clone() : null;
+      updateMask_ = other.updateMask_ != null ? other.updateMask_.Clone() : null;
       _unknownFields = pb::UnknownFieldSet.Clone(other._unknownFields);
     }
 

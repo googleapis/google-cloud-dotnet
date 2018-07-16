@@ -656,9 +656,9 @@ namespace Google.Cloud.TextToSpeech.V1 {
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     public SynthesizeSpeechRequest(SynthesizeSpeechRequest other) : this() {
-      Input = other.input_ != null ? other.Input.Clone() : null;
-      Voice = other.voice_ != null ? other.Voice.Clone() : null;
-      AudioConfig = other.audioConfig_ != null ? other.AudioConfig.Clone() : null;
+      input_ = other.input_ != null ? other.input_.Clone() : null;
+      voice_ = other.voice_ != null ? other.voice_.Clone() : null;
+      audioConfig_ = other.audioConfig_ != null ? other.audioConfig_.Clone() : null;
       _unknownFields = pb::UnknownFieldSet.Clone(other._unknownFields);
     }
 

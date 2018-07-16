@@ -1200,7 +1200,7 @@ namespace Google.Cloud.Dialogflow.V2 {
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     public CreateEntityTypeRequest(CreateEntityTypeRequest other) : this() {
       parent_ = other.parent_;
-      EntityType = other.entityType_ != null ? other.EntityType.Clone() : null;
+      entityType_ = other.entityType_ != null ? other.entityType_.Clone() : null;
       languageCode_ = other.languageCode_;
       _unknownFields = pb::UnknownFieldSet.Clone(other._unknownFields);
     }
@@ -1407,9 +1407,9 @@ namespace Google.Cloud.Dialogflow.V2 {
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     public UpdateEntityTypeRequest(UpdateEntityTypeRequest other) : this() {
-      EntityType = other.entityType_ != null ? other.EntityType.Clone() : null;
+      entityType_ = other.entityType_ != null ? other.entityType_.Clone() : null;
       languageCode_ = other.languageCode_;
-      UpdateMask = other.updateMask_ != null ? other.UpdateMask.Clone() : null;
+      updateMask_ = other.updateMask_ != null ? other.updateMask_.Clone() : null;
       _unknownFields = pb::UnknownFieldSet.Clone(other._unknownFields);
     }
 
@@ -1759,7 +1759,7 @@ namespace Google.Cloud.Dialogflow.V2 {
     public BatchUpdateEntityTypesRequest(BatchUpdateEntityTypesRequest other) : this() {
       parent_ = other.parent_;
       languageCode_ = other.languageCode_;
-      UpdateMask = other.updateMask_ != null ? other.UpdateMask.Clone() : null;
+      updateMask_ = other.updateMask_ != null ? other.updateMask_.Clone() : null;
       switch (other.EntityTypeBatchCase) {
         case EntityTypeBatchOneofCase.EntityTypeBatchUri:
           EntityTypeBatchUri = other.EntityTypeBatchUri;
@@ -2553,7 +2553,7 @@ namespace Google.Cloud.Dialogflow.V2 {
       parent_ = other.parent_;
       entities_ = other.entities_.Clone();
       languageCode_ = other.languageCode_;
-      UpdateMask = other.updateMask_ != null ? other.UpdateMask.Clone() : null;
+      updateMask_ = other.updateMask_ != null ? other.updateMask_.Clone() : null;
       _unknownFields = pb::UnknownFieldSet.Clone(other._unknownFields);
     }
 

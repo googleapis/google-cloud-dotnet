@@ -89,9 +89,9 @@ namespace Google.Cloud.Spanner.V1 {
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     public ResultSet(ResultSet other) : this() {
-      Metadata = other.metadata_ != null ? other.Metadata.Clone() : null;
+      metadata_ = other.metadata_ != null ? other.metadata_.Clone() : null;
       rows_ = other.rows_.Clone();
-      Stats = other.stats_ != null ? other.Stats.Clone() : null;
+      stats_ = other.stats_ != null ? other.stats_.Clone() : null;
       _unknownFields = pb::UnknownFieldSet.Clone(other._unknownFields);
     }
 
@@ -299,11 +299,11 @@ namespace Google.Cloud.Spanner.V1 {
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     public PartialResultSet(PartialResultSet other) : this() {
-      Metadata = other.metadata_ != null ? other.Metadata.Clone() : null;
+      metadata_ = other.metadata_ != null ? other.metadata_.Clone() : null;
       values_ = other.values_.Clone();
       chunkedValue_ = other.chunkedValue_;
       resumeToken_ = other.resumeToken_;
-      Stats = other.stats_ != null ? other.Stats.Clone() : null;
+      stats_ = other.stats_ != null ? other.stats_.Clone() : null;
       _unknownFields = pb::UnknownFieldSet.Clone(other._unknownFields);
     }
 
@@ -644,8 +644,8 @@ namespace Google.Cloud.Spanner.V1 {
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     public ResultSetMetadata(ResultSetMetadata other) : this() {
-      RowType = other.rowType_ != null ? other.RowType.Clone() : null;
-      Transaction = other.transaction_ != null ? other.Transaction.Clone() : null;
+      rowType_ = other.rowType_ != null ? other.rowType_.Clone() : null;
+      transaction_ = other.transaction_ != null ? other.transaction_.Clone() : null;
       _unknownFields = pb::UnknownFieldSet.Clone(other._unknownFields);
     }
 
@@ -830,8 +830,8 @@ namespace Google.Cloud.Spanner.V1 {
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     public ResultSetStats(ResultSetStats other) : this() {
-      QueryPlan = other.queryPlan_ != null ? other.QueryPlan.Clone() : null;
-      QueryStats = other.queryStats_ != null ? other.QueryStats.Clone() : null;
+      queryPlan_ = other.queryPlan_ != null ? other.queryPlan_.Clone() : null;
+      queryStats_ = other.queryStats_ != null ? other.queryStats_.Clone() : null;
       _unknownFields = pb::UnknownFieldSet.Clone(other._unknownFields);
     }
 

@@ -1044,7 +1044,7 @@ namespace Google.Cloud.Spanner.V1 {
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     public Transaction(Transaction other) : this() {
       id_ = other.id_;
-      ReadTimestamp = other.readTimestamp_ != null ? other.ReadTimestamp.Clone() : null;
+      readTimestamp_ = other.readTimestamp_ != null ? other.readTimestamp_.Clone() : null;
       _unknownFields = pb::UnknownFieldSet.Clone(other._unknownFields);
     }
 

@@ -692,7 +692,7 @@ namespace Google.Cloud.Vision.V1P1Beta1 {
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     public Image(Image other) : this() {
       content_ = other.content_;
-      Source = other.source_ != null ? other.Source.Clone() : null;
+      source_ = other.source_ != null ? other.source_.Clone() : null;
       _unknownFields = pb::UnknownFieldSet.Clone(other._unknownFields);
     }
 
@@ -867,8 +867,8 @@ namespace Google.Cloud.Vision.V1P1Beta1 {
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     public FaceAnnotation(FaceAnnotation other) : this() {
-      BoundingPoly = other.boundingPoly_ != null ? other.BoundingPoly.Clone() : null;
-      FdBoundingPoly = other.fdBoundingPoly_ != null ? other.FdBoundingPoly.Clone() : null;
+      boundingPoly_ = other.boundingPoly_ != null ? other.boundingPoly_.Clone() : null;
+      fdBoundingPoly_ = other.fdBoundingPoly_ != null ? other.fdBoundingPoly_.Clone() : null;
       landmarks_ = other.landmarks_.Clone();
       rollAngle_ = other.rollAngle_;
       panAngle_ = other.panAngle_;
@@ -1459,7 +1459,7 @@ namespace Google.Cloud.Vision.V1P1Beta1 {
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
         public Landmark(Landmark other) : this() {
           type_ = other.type_;
-          Position = other.position_ != null ? other.Position.Clone() : null;
+          position_ = other.position_ != null ? other.position_.Clone() : null;
           _unknownFields = pb::UnknownFieldSet.Clone(other._unknownFields);
         }
 
@@ -1791,7 +1791,7 @@ namespace Google.Cloud.Vision.V1P1Beta1 {
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     public LocationInfo(LocationInfo other) : this() {
-      LatLng = other.latLng_ != null ? other.LatLng.Clone() : null;
+      latLng_ = other.latLng_ != null ? other.latLng_.Clone() : null;
       _unknownFields = pb::UnknownFieldSet.Clone(other._unknownFields);
     }
 
@@ -2135,7 +2135,7 @@ namespace Google.Cloud.Vision.V1P1Beta1 {
       score_ = other.score_;
       confidence_ = other.confidence_;
       topicality_ = other.topicality_;
-      BoundingPoly = other.boundingPoly_ != null ? other.BoundingPoly.Clone() : null;
+      boundingPoly_ = other.boundingPoly_ != null ? other.boundingPoly_.Clone() : null;
       locations_ = other.locations_.Clone();
       properties_ = other.properties_.Clone();
       _unknownFields = pb::UnknownFieldSet.Clone(other._unknownFields);
@@ -2785,8 +2785,8 @@ namespace Google.Cloud.Vision.V1P1Beta1 {
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     public LatLongRect(LatLongRect other) : this() {
-      MinLatLng = other.minLatLng_ != null ? other.MinLatLng.Clone() : null;
-      MaxLatLng = other.maxLatLng_ != null ? other.MaxLatLng.Clone() : null;
+      minLatLng_ = other.minLatLng_ != null ? other.minLatLng_.Clone() : null;
+      maxLatLng_ = other.maxLatLng_ != null ? other.maxLatLng_.Clone() : null;
       _unknownFields = pb::UnknownFieldSet.Clone(other._unknownFields);
     }
 
@@ -2964,7 +2964,7 @@ namespace Google.Cloud.Vision.V1P1Beta1 {
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     public ColorInfo(ColorInfo other) : this() {
-      Color = other.color_ != null ? other.Color.Clone() : null;
+      color_ = other.color_ != null ? other.color_.Clone() : null;
       score_ = other.score_;
       pixelFraction_ = other.pixelFraction_;
       _unknownFields = pb::UnknownFieldSet.Clone(other._unknownFields);
@@ -3295,7 +3295,7 @@ namespace Google.Cloud.Vision.V1P1Beta1 {
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     public ImageProperties(ImageProperties other) : this() {
-      DominantColors = other.dominantColors_ != null ? other.DominantColors.Clone() : null;
+      dominantColors_ = other.dominantColors_ != null ? other.dominantColors_.Clone() : null;
       _unknownFields = pb::UnknownFieldSet.Clone(other._unknownFields);
     }
 
@@ -3436,7 +3436,7 @@ namespace Google.Cloud.Vision.V1P1Beta1 {
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     public CropHint(CropHint other) : this() {
-      BoundingPoly = other.boundingPoly_ != null ? other.BoundingPoly.Clone() : null;
+      boundingPoly_ = other.boundingPoly_ != null ? other.boundingPoly_.Clone() : null;
       confidence_ = other.confidence_;
       importanceFraction_ = other.importanceFraction_;
       _unknownFields = pb::UnknownFieldSet.Clone(other._unknownFields);
@@ -4036,10 +4036,10 @@ namespace Google.Cloud.Vision.V1P1Beta1 {
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     public ImageContext(ImageContext other) : this() {
-      LatLongRect = other.latLongRect_ != null ? other.LatLongRect.Clone() : null;
+      latLongRect_ = other.latLongRect_ != null ? other.latLongRect_.Clone() : null;
       languageHints_ = other.languageHints_.Clone();
-      CropHintsParams = other.cropHintsParams_ != null ? other.CropHintsParams.Clone() : null;
-      WebDetectionParams = other.webDetectionParams_ != null ? other.WebDetectionParams.Clone() : null;
+      cropHintsParams_ = other.cropHintsParams_ != null ? other.cropHintsParams_.Clone() : null;
+      webDetectionParams_ = other.webDetectionParams_ != null ? other.webDetectionParams_.Clone() : null;
       _unknownFields = pb::UnknownFieldSet.Clone(other._unknownFields);
     }
 
@@ -4282,9 +4282,9 @@ namespace Google.Cloud.Vision.V1P1Beta1 {
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     public AnnotateImageRequest(AnnotateImageRequest other) : this() {
-      Image = other.image_ != null ? other.Image.Clone() : null;
+      image_ = other.image_ != null ? other.image_.Clone() : null;
       features_ = other.features_.Clone();
-      ImageContext = other.imageContext_ != null ? other.ImageContext.Clone() : null;
+      imageContext_ = other.imageContext_ != null ? other.imageContext_.Clone() : null;
       _unknownFields = pb::UnknownFieldSet.Clone(other._unknownFields);
     }
 
@@ -4488,12 +4488,12 @@ namespace Google.Cloud.Vision.V1P1Beta1 {
       logoAnnotations_ = other.logoAnnotations_.Clone();
       labelAnnotations_ = other.labelAnnotations_.Clone();
       textAnnotations_ = other.textAnnotations_.Clone();
-      FullTextAnnotation = other.fullTextAnnotation_ != null ? other.FullTextAnnotation.Clone() : null;
-      SafeSearchAnnotation = other.safeSearchAnnotation_ != null ? other.SafeSearchAnnotation.Clone() : null;
-      ImagePropertiesAnnotation = other.imagePropertiesAnnotation_ != null ? other.ImagePropertiesAnnotation.Clone() : null;
-      CropHintsAnnotation = other.cropHintsAnnotation_ != null ? other.CropHintsAnnotation.Clone() : null;
-      WebDetection = other.webDetection_ != null ? other.WebDetection.Clone() : null;
-      Error = other.error_ != null ? other.Error.Clone() : null;
+      fullTextAnnotation_ = other.fullTextAnnotation_ != null ? other.fullTextAnnotation_.Clone() : null;
+      safeSearchAnnotation_ = other.safeSearchAnnotation_ != null ? other.safeSearchAnnotation_.Clone() : null;
+      imagePropertiesAnnotation_ = other.imagePropertiesAnnotation_ != null ? other.imagePropertiesAnnotation_.Clone() : null;
+      cropHintsAnnotation_ = other.cropHintsAnnotation_ != null ? other.cropHintsAnnotation_.Clone() : null;
+      webDetection_ = other.webDetection_ != null ? other.webDetection_.Clone() : null;
+      error_ = other.error_ != null ? other.error_.Clone() : null;
       _unknownFields = pb::UnknownFieldSet.Clone(other._unknownFields);
     }
 

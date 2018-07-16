@@ -116,7 +116,7 @@ namespace Google.Cloud.Dialogflow.V2 {
     public Context(Context other) : this() {
       name_ = other.name_;
       lifespanCount_ = other.lifespanCount_;
-      Parameters = other.parameters_ != null ? other.Parameters.Clone() : null;
+      parameters_ = other.parameters_ != null ? other.parameters_.Clone() : null;
       _unknownFields = pb::UnknownFieldSet.Clone(other._unknownFields);
     }
 
@@ -819,7 +819,7 @@ namespace Google.Cloud.Dialogflow.V2 {
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     public CreateContextRequest(CreateContextRequest other) : this() {
       parent_ = other.parent_;
-      Context = other.context_ != null ? other.Context.Clone() : null;
+      context_ = other.context_ != null ? other.context_.Clone() : null;
       _unknownFields = pb::UnknownFieldSet.Clone(other._unknownFields);
     }
 
@@ -991,8 +991,8 @@ namespace Google.Cloud.Dialogflow.V2 {
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     public UpdateContextRequest(UpdateContextRequest other) : this() {
-      Context = other.context_ != null ? other.Context.Clone() : null;
-      UpdateMask = other.updateMask_ != null ? other.UpdateMask.Clone() : null;
+      context_ = other.context_ != null ? other.context_.Clone() : null;
+      updateMask_ = other.updateMask_ != null ? other.updateMask_.Clone() : null;
       _unknownFields = pb::UnknownFieldSet.Clone(other._unknownFields);
     }
 

@@ -359,7 +359,7 @@ namespace Google.Cloud.Dlp.V2 {
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     public CustomInfoType(CustomInfoType other) : this() {
-      InfoType = other.infoType_ != null ? other.InfoType.Clone() : null;
+      infoType_ = other.infoType_ != null ? other.infoType_.Clone() : null;
       likelihood_ = other.likelihood_;
       detectionRules_ = other.detectionRules_.Clone();
       switch (other.TypeCase) {
@@ -1876,9 +1876,9 @@ namespace Google.Cloud.Dlp.V2 {
 
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
             public HotwordRule(HotwordRule other) : this() {
-              HotwordRegex = other.hotwordRegex_ != null ? other.HotwordRegex.Clone() : null;
-              Proximity = other.proximity_ != null ? other.Proximity.Clone() : null;
-              LikelihoodAdjustment = other.likelihoodAdjustment_ != null ? other.LikelihoodAdjustment.Clone() : null;
+              hotwordRegex_ = other.hotwordRegex_ != null ? other.hotwordRegex_.Clone() : null;
+              proximity_ = other.proximity_ != null ? other.proximity_.Clone() : null;
+              likelihoodAdjustment_ = other.likelihoodAdjustment_ != null ? other.likelihoodAdjustment_.Clone() : null;
               _unknownFields = pb::UnknownFieldSet.Clone(other._unknownFields);
             }
 
@@ -2549,8 +2549,8 @@ namespace Google.Cloud.Dlp.V2 {
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     public DatastoreOptions(DatastoreOptions other) : this() {
-      PartitionId = other.partitionId_ != null ? other.PartitionId.Clone() : null;
-      Kind = other.kind_ != null ? other.Kind.Clone() : null;
+      partitionId_ = other.partitionId_ != null ? other.partitionId_.Clone() : null;
+      kind_ = other.kind_ != null ? other.kind_.Clone() : null;
       _unknownFields = pb::UnknownFieldSet.Clone(other._unknownFields);
     }
 
@@ -2729,7 +2729,7 @@ namespace Google.Cloud.Dlp.V2 {
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     public CloudStorageOptions(CloudStorageOptions other) : this() {
-      FileSet = other.fileSet_ != null ? other.FileSet.Clone() : null;
+      fileSet_ = other.fileSet_ != null ? other.fileSet_.Clone() : null;
       bytesLimitPerFile_ = other.bytesLimitPerFile_;
       fileTypes_ = other.fileTypes_.Clone();
       sampleMethod_ = other.sampleMethod_;
@@ -3283,7 +3283,7 @@ namespace Google.Cloud.Dlp.V2 {
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     public BigQueryOptions(BigQueryOptions other) : this() {
-      TableReference = other.tableReference_ != null ? other.TableReference.Clone() : null;
+      tableReference_ = other.tableReference_ != null ? other.tableReference_.Clone() : null;
       identifyingFields_ = other.identifyingFields_.Clone();
       rowsLimit_ = other.rowsLimit_;
       sampleMethod_ = other.sampleMethod_;
@@ -3533,7 +3533,7 @@ namespace Google.Cloud.Dlp.V2 {
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     public StorageConfig(StorageConfig other) : this() {
-      TimespanConfig = other.timespanConfig_ != null ? other.TimespanConfig.Clone() : null;
+      timespanConfig_ = other.timespanConfig_ != null ? other.timespanConfig_.Clone() : null;
       switch (other.TypeCase) {
         case TypeOneofCase.DatastoreOptions:
           DatastoreOptions = other.DatastoreOptions.Clone();
@@ -3825,9 +3825,9 @@ namespace Google.Cloud.Dlp.V2 {
 
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
         public TimespanConfig(TimespanConfig other) : this() {
-          StartTime = other.startTime_ != null ? other.StartTime.Clone() : null;
-          EndTime = other.endTime_ != null ? other.EndTime.Clone() : null;
-          TimestampField = other.timestampField_ != null ? other.TimestampField.Clone() : null;
+          startTime_ = other.startTime_ != null ? other.startTime_.Clone() : null;
+          endTime_ = other.endTime_ != null ? other.endTime_.Clone() : null;
+          timestampField_ = other.timestampField_ != null ? other.timestampField_.Clone() : null;
           enableAutoPopulationOfTimespanConfig_ = other.enableAutoPopulationOfTimespanConfig_;
           _unknownFields = pb::UnknownFieldSet.Clone(other._unknownFields);
         }
@@ -4086,7 +4086,7 @@ namespace Google.Cloud.Dlp.V2 {
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     public BigQueryKey(BigQueryKey other) : this() {
-      TableReference = other.tableReference_ != null ? other.TableReference.Clone() : null;
+      tableReference_ = other.tableReference_ != null ? other.tableReference_.Clone() : null;
       rowNumber_ = other.rowNumber_;
       _unknownFields = pb::UnknownFieldSet.Clone(other._unknownFields);
     }
@@ -4259,7 +4259,7 @@ namespace Google.Cloud.Dlp.V2 {
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     public DatastoreKey(DatastoreKey other) : this() {
-      EntityKey = other.entityKey_ != null ? other.EntityKey.Clone() : null;
+      entityKey_ = other.entityKey_ != null ? other.entityKey_.Clone() : null;
       _unknownFields = pb::UnknownFieldSet.Clone(other._unknownFields);
     }
 
@@ -4403,7 +4403,7 @@ namespace Google.Cloud.Dlp.V2 {
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     public Key(Key other) : this() {
-      PartitionId = other.partitionId_ != null ? other.PartitionId.Clone() : null;
+      partitionId_ = other.partitionId_ != null ? other.partitionId_.Clone() : null;
       path_ = other.path_.Clone();
       _unknownFields = pb::UnknownFieldSet.Clone(other._unknownFields);
     }
@@ -5236,7 +5236,7 @@ namespace Google.Cloud.Dlp.V2 {
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     public EntityId(EntityId other) : this() {
-      Field = other.field_ != null ? other.Field.Clone() : null;
+      field_ = other.field_ != null ? other.field_.Clone() : null;
       _unknownFields = pb::UnknownFieldSet.Clone(other._unknownFields);
     }
 

@@ -103,8 +103,8 @@ namespace Google.Cloud.Firestore.V1Beta1 {
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     public Write(Write other) : this() {
-      UpdateMask = other.updateMask_ != null ? other.UpdateMask.Clone() : null;
-      CurrentDocument = other.currentDocument_ != null ? other.CurrentDocument.Clone() : null;
+      updateMask_ = other.updateMask_ != null ? other.updateMask_.Clone() : null;
+      currentDocument_ = other.currentDocument_ != null ? other.currentDocument_.Clone() : null;
       switch (other.OperationCase) {
         case OperationOneofCase.Update:
           Update = other.Update.Clone();
@@ -823,7 +823,7 @@ namespace Google.Cloud.Firestore.V1Beta1 {
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     public WriteResult(WriteResult other) : this() {
-      UpdateTime = other.updateTime_ != null ? other.UpdateTime.Clone() : null;
+      updateTime_ = other.updateTime_ != null ? other.updateTime_.Clone() : null;
       transformResults_ = other.transformResults_.Clone();
       _unknownFields = pb::UnknownFieldSet.Clone(other._unknownFields);
     }
@@ -998,7 +998,7 @@ namespace Google.Cloud.Firestore.V1Beta1 {
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     public DocumentChange(DocumentChange other) : this() {
-      Document = other.document_ != null ? other.Document.Clone() : null;
+      document_ = other.document_ != null ? other.document_.Clone() : null;
       targetIds_ = other.targetIds_.Clone();
       removedTargetIds_ = other.removedTargetIds_.Clone();
       _unknownFields = pb::UnknownFieldSet.Clone(other._unknownFields);
@@ -1197,7 +1197,7 @@ namespace Google.Cloud.Firestore.V1Beta1 {
     public DocumentDelete(DocumentDelete other) : this() {
       document_ = other.document_;
       removedTargetIds_ = other.removedTargetIds_.Clone();
-      ReadTime = other.readTime_ != null ? other.ReadTime.Clone() : null;
+      readTime_ = other.readTime_ != null ? other.readTime_.Clone() : null;
       _unknownFields = pb::UnknownFieldSet.Clone(other._unknownFields);
     }
 
@@ -1402,7 +1402,7 @@ namespace Google.Cloud.Firestore.V1Beta1 {
     public DocumentRemove(DocumentRemove other) : this() {
       document_ = other.document_;
       removedTargetIds_ = other.removedTargetIds_.Clone();
-      ReadTime = other.readTime_ != null ? other.ReadTime.Clone() : null;
+      readTime_ = other.readTime_ != null ? other.readTime_.Clone() : null;
       _unknownFields = pb::UnknownFieldSet.Clone(other._unknownFields);
     }
 

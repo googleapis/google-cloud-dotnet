@@ -88,7 +88,7 @@ namespace Google.Cloud.Dataproc.V1 {
       state_ = other.state_;
       innerState_ = other.innerState_;
       details_ = other.details_;
-      StateStartTime = other.stateStartTime_ != null ? other.StateStartTime.Clone() : null;
+      stateStartTime_ = other.stateStartTime_ != null ? other.stateStartTime_.Clone() : null;
       _unknownFields = pb::UnknownFieldSet.Clone(other._unknownFields);
     }
 
@@ -350,7 +350,7 @@ namespace Google.Cloud.Dataproc.V1 {
     public ClusterOperationMetadata(ClusterOperationMetadata other) : this() {
       clusterName_ = other.clusterName_;
       clusterUuid_ = other.clusterUuid_;
-      Status = other.status_ != null ? other.Status.Clone() : null;
+      status_ = other.status_ != null ? other.status_.Clone() : null;
       statusHistory_ = other.statusHistory_.Clone();
       operationType_ = other.operationType_;
       description_ = other.description_;

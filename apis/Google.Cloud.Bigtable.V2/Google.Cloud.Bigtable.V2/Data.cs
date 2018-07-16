@@ -3299,9 +3299,9 @@ namespace Google.Cloud.Bigtable.V2 {
 
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
         public Condition(Condition other) : this() {
-          PredicateFilter = other.predicateFilter_ != null ? other.PredicateFilter.Clone() : null;
-          TrueFilter = other.trueFilter_ != null ? other.TrueFilter.Clone() : null;
-          FalseFilter = other.falseFilter_ != null ? other.FalseFilter.Clone() : null;
+          predicateFilter_ = other.predicateFilter_ != null ? other.predicateFilter_.Clone() : null;
+          trueFilter_ = other.trueFilter_ != null ? other.trueFilter_.Clone() : null;
+          falseFilter_ = other.falseFilter_ != null ? other.falseFilter_.Clone() : null;
           _unknownFields = pb::UnknownFieldSet.Clone(other._unknownFields);
         }
 
@@ -4059,7 +4059,7 @@ namespace Google.Cloud.Bigtable.V2 {
         public DeleteFromColumn(DeleteFromColumn other) : this() {
           familyName_ = other.familyName_;
           columnQualifier_ = other.columnQualifier_;
-          TimeRange = other.timeRange_ != null ? other.TimeRange.Clone() : null;
+          timeRange_ = other.timeRange_ != null ? other.timeRange_.Clone() : null;
           _unknownFields = pb::UnknownFieldSet.Clone(other._unknownFields);
         }
 

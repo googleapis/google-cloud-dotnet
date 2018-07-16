@@ -1311,7 +1311,7 @@ namespace Google.Cloud.Spanner.Admin.Instance.V1 {
     public CreateInstanceRequest(CreateInstanceRequest other) : this() {
       parent_ = other.parent_;
       instanceId_ = other.instanceId_;
-      Instance = other.instance_ != null ? other.Instance.Clone() : null;
+      instance_ = other.instance_ != null ? other.instance_.Clone() : null;
       _unknownFields = pb::UnknownFieldSet.Clone(other._unknownFields);
     }
 
@@ -1926,8 +1926,8 @@ namespace Google.Cloud.Spanner.Admin.Instance.V1 {
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     public UpdateInstanceRequest(UpdateInstanceRequest other) : this() {
-      Instance = other.instance_ != null ? other.Instance.Clone() : null;
-      FieldMask = other.fieldMask_ != null ? other.FieldMask.Clone() : null;
+      instance_ = other.instance_ != null ? other.instance_.Clone() : null;
+      fieldMask_ = other.fieldMask_ != null ? other.fieldMask_.Clone() : null;
       _unknownFields = pb::UnknownFieldSet.Clone(other._unknownFields);
     }
 
@@ -2245,10 +2245,10 @@ namespace Google.Cloud.Spanner.Admin.Instance.V1 {
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     public CreateInstanceMetadata(CreateInstanceMetadata other) : this() {
-      Instance = other.instance_ != null ? other.Instance.Clone() : null;
-      StartTime = other.startTime_ != null ? other.StartTime.Clone() : null;
-      CancelTime = other.cancelTime_ != null ? other.CancelTime.Clone() : null;
-      EndTime = other.endTime_ != null ? other.EndTime.Clone() : null;
+      instance_ = other.instance_ != null ? other.instance_.Clone() : null;
+      startTime_ = other.startTime_ != null ? other.startTime_.Clone() : null;
+      cancelTime_ = other.cancelTime_ != null ? other.cancelTime_.Clone() : null;
+      endTime_ = other.endTime_ != null ? other.endTime_.Clone() : null;
       _unknownFields = pb::UnknownFieldSet.Clone(other._unknownFields);
     }
 
@@ -2502,10 +2502,10 @@ namespace Google.Cloud.Spanner.Admin.Instance.V1 {
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     public UpdateInstanceMetadata(UpdateInstanceMetadata other) : this() {
-      Instance = other.instance_ != null ? other.Instance.Clone() : null;
-      StartTime = other.startTime_ != null ? other.StartTime.Clone() : null;
-      CancelTime = other.cancelTime_ != null ? other.CancelTime.Clone() : null;
-      EndTime = other.endTime_ != null ? other.EndTime.Clone() : null;
+      instance_ = other.instance_ != null ? other.instance_.Clone() : null;
+      startTime_ = other.startTime_ != null ? other.startTime_.Clone() : null;
+      cancelTime_ = other.cancelTime_ != null ? other.cancelTime_.Clone() : null;
+      endTime_ = other.endTime_ != null ? other.endTime_.Clone() : null;
       _unknownFields = pb::UnknownFieldSet.Clone(other._unknownFields);
     }
 
