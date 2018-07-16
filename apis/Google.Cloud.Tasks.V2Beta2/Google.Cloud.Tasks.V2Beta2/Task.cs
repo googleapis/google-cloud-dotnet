@@ -92,9 +92,9 @@ namespace Google.Cloud.Tasks.V2Beta2 {
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     public Task(Task other) : this() {
       name_ = other.name_;
-      ScheduleTime = other.scheduleTime_ != null ? other.ScheduleTime.Clone() : null;
-      CreateTime = other.createTime_ != null ? other.CreateTime.Clone() : null;
-      Status = other.status_ != null ? other.Status.Clone() : null;
+      scheduleTime_ = other.scheduleTime_ != null ? other.scheduleTime_.Clone() : null;
+      createTime_ = other.createTime_ != null ? other.createTime_.Clone() : null;
+      status_ = other.status_ != null ? other.status_.Clone() : null;
       view_ = other.view_;
       switch (other.PayloadTypeCase) {
         case PayloadTypeOneofCase.AppEngineHttpRequest:
@@ -127,7 +127,7 @@ namespace Google.Cloud.Tasks.V2Beta2 {
     /// * `PROJECT_ID` can contain letters ([A-Za-z]), numbers ([0-9]),
     ///    hyphens (-), colons (:), or periods (.).
     ///    For more information, see
-    ///    [Identifying projects](/resource-manager/docs/creating-managing-projects#identifying_projects)
+    ///    [Identifying projects](https://cloud.google.com/resource-manager/docs/creating-managing-projects#identifying_projects)
     /// * `LOCATION_ID` is the canonical ID for the task's location.
     ///    The list of available locations can be obtained by calling
     ///    [ListLocations][google.cloud.location.Locations.ListLocations].
@@ -560,8 +560,8 @@ namespace Google.Cloud.Tasks.V2Beta2 {
     public TaskStatus(TaskStatus other) : this() {
       attemptDispatchCount_ = other.attemptDispatchCount_;
       attemptResponseCount_ = other.attemptResponseCount_;
-      FirstAttemptStatus = other.firstAttemptStatus_ != null ? other.FirstAttemptStatus.Clone() : null;
-      LastAttemptStatus = other.lastAttemptStatus_ != null ? other.LastAttemptStatus.Clone() : null;
+      firstAttemptStatus_ = other.firstAttemptStatus_ != null ? other.firstAttemptStatus_.Clone() : null;
+      lastAttemptStatus_ = other.lastAttemptStatus_ != null ? other.lastAttemptStatus_.Clone() : null;
       _unknownFields = pb::UnknownFieldSet.Clone(other._unknownFields);
     }
 
@@ -593,8 +593,7 @@ namespace Google.Cloud.Tasks.V2Beta2 {
     /// <summary>
     /// Output only. The number of attempts which have received a response.
     ///
-    /// This field is not calculated for
-    /// [pull tasks](google.cloud.tasks.v2beta2.PullTaskTarget).
+    /// This field is not calculated for [pull tasks][google.cloud.tasks.v2beta2.PullMessage].
     /// </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     public int AttemptResponseCount {
@@ -613,8 +612,7 @@ namespace Google.Cloud.Tasks.V2Beta2 {
     /// Only [dispatch_time][google.cloud.tasks.v2beta2.AttemptStatus.dispatch_time] will be set.
     /// The other [AttemptStatus][google.cloud.tasks.v2beta2.AttemptStatus] information is not retained by Cloud Tasks.
     ///
-    /// This field is not calculated for
-    /// [pull tasks](google.cloud.tasks.v2beta2.PullTaskTarget).
+    /// This field is not calculated for [pull tasks][google.cloud.tasks.v2beta2.PullMessage].
     /// </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     public global::Google.Cloud.Tasks.V2Beta2.AttemptStatus FirstAttemptStatus {
@@ -630,8 +628,7 @@ namespace Google.Cloud.Tasks.V2Beta2 {
     /// <summary>
     /// Output only. The status of the task's last attempt.
     ///
-    /// This field is not calculated for
-    /// [pull tasks](google.cloud.tasks.v2beta2.PullTaskTarget).
+    /// This field is not calculated for [pull tasks][google.cloud.tasks.v2beta2.PullMessage].
     /// </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     public global::Google.Cloud.Tasks.V2Beta2.AttemptStatus LastAttemptStatus {
@@ -813,10 +810,10 @@ namespace Google.Cloud.Tasks.V2Beta2 {
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     public AttemptStatus(AttemptStatus other) : this() {
-      ScheduleTime = other.scheduleTime_ != null ? other.ScheduleTime.Clone() : null;
-      DispatchTime = other.dispatchTime_ != null ? other.DispatchTime.Clone() : null;
-      ResponseTime = other.responseTime_ != null ? other.ResponseTime.Clone() : null;
-      ResponseStatus = other.responseStatus_ != null ? other.ResponseStatus.Clone() : null;
+      scheduleTime_ = other.scheduleTime_ != null ? other.scheduleTime_.Clone() : null;
+      dispatchTime_ = other.dispatchTime_ != null ? other.dispatchTime_.Clone() : null;
+      responseTime_ = other.responseTime_ != null ? other.responseTime_.Clone() : null;
+      responseStatus_ = other.responseStatus_ != null ? other.responseStatus_.Clone() : null;
       _unknownFields = pb::UnknownFieldSet.Clone(other._unknownFields);
     }
 
