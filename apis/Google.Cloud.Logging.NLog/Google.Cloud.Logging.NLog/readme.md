@@ -28,7 +28,8 @@ When using default options, logs will appear under these filter settings in the 
 * **DisableResourceTypeDetection** - Defaults to false. Setting this to true disables automatic resourceType setting based on platform detection.
 * **ResourceLabel** - If resourceType has been manually set, then resourceLabel is used to specify extra labels as shown in the [Monitoring Resource Types](https://cloud.google.com/logging/docs/api/v2/resource-list) list.
 * **ContextProperty** - Allows custom labels to be added to the log entries as extra metadata.
-* **CredentialFile** - Credentials using a JSON file instead of using the default credentials (GOOGLE_APPLICATION_CREDENTIALS)
+* **CredentialFile** - Credentials using a JSON file, instead of using the default credentials (GOOGLE_APPLICATION_CREDENTIALS)
+* **CredentialJson** - Credentials using raw JSON input, instead of using the default credentials (GOOGLE_APPLICATION_CREDENTIALS)
 * **IncludeCallSite** - Include LogEntrySourceLocation extracted from NLog callsite (Only include function name)
 * **IncludeCallSiteStackTrace** - Include LogEntrySourceLocation extracted from NLog callsite (Also include filename and linenumber)
 * **IncludeEventProperties** - Includes structured logging properties from NLog LogEventInfo.Properties
@@ -42,11 +43,11 @@ When using default options, logs will appear under these filter settings in the 
 <targets>
   <target type="GoogleStackdriver"
           name="String"
-		  projectId="your project ID"
-		  logId="your log ID"
+          projectId="your project ID"
+          logId="your log ID"
           layout="Layout">
     <resourcelabel name="String" layout="Layout" /><!-- repeated -->
-	<contextproperty name="String" layout="Layout" /><!-- repeated -->
+    <contextproperty name="String" layout="Layout" /><!-- repeated -->
   </target>
 </targets>
 ```

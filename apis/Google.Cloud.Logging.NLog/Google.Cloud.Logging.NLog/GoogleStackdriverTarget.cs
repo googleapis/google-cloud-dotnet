@@ -41,10 +41,18 @@ namespace Google.Cloud.Logging.NLog
     public class GoogleStackdriverTarget : TargetWithContext
     {
         /// <summary>
-        /// The file path of a service account JSON file to use for authenitication.
+        /// The file path of a service account JSON file to use for authentication.
         /// Not necessary if running on GCE, GAE or GKE, or if the GOOGLE_APPLICATION_CREDENTIALS environment variable has been set.
+        /// Must not be set if <see cref="CredentialJson"/> is set.
         /// </summary>
         public Layout CredentialFile { get; set; }
+
+        /// <summary>
+        /// JSON credential for authentication.
+        /// Not necessary if running on GCE or GAE or if the GOOGLE_APPLICATION_CREDENTIALS environment variable has been set.
+        /// Must not be set if <see cref="CredentialFile"/> is set.
+        /// </summary>
+        public Layout CredentialJson { get; set; }
 
         /// <summary>
         /// If set, disables resource-type detection based on platform,
@@ -207,10 +215,15 @@ namespace Google.Cloud.Logging.NLog
 
         private LoggingServiceV2Client BuildLoggingServiceClient()
         {
-            GoogleCredential credential = GetCredentialFromFile();
+            GoogleCredential credential = GetCredentialFromConfiguration();
             if (credential == null)
             {
                 return LoggingServiceV2Client.Create();
+            }
+
+            if (credential.IsCreateScopedRequired)
+            {
+                credential = credential.CreateScoped(s_oAuthScopes);
             }
 
             Grpc.Core.Channel channel = new Grpc.Core.Channel(
@@ -222,21 +235,25 @@ namespace Google.Cloud.Logging.NLog
             return LoggingServiceV2Client.Create(channel);
         }
 
-        private GoogleCredential GetCredentialFromFile()
+        private GoogleCredential GetCredentialFromConfiguration()
         {
-            var credentialFile = CredentialFile?.Render(LogEventInfo.CreateNullEvent());
-            if (string.IsNullOrWhiteSpace(credentialFile))
+            var nullLogEvent = LogEventInfo.CreateNullEvent();
+            var credentialFile = CredentialFile?.Render(nullLogEvent);
+            var credentialJson = CredentialJson?.Render(nullLogEvent);
+            GaxPreconditions.CheckState(string.IsNullOrWhiteSpace(credentialFile) || string.IsNullOrWhiteSpace(credentialJson),
+                $"{nameof(CredentialFile)} and {nameof(CredentialJson)} must not both be set.");
+            var credential =
+                !string.IsNullOrWhiteSpace(credentialFile) ? GoogleCredential.FromFile(credentialFile) :
+                !string.IsNullOrWhiteSpace(credentialJson) ? GoogleCredential.FromJson(credentialJson) :
+                null;
+            if (credential == null)
             {
                 return null;
             }
-
-            GoogleCredential credential = GoogleCredential.FromFile(credentialFile);
-
             if (credential.IsCreateScopedRequired)
             {
                 credential = credential.CreateScoped(s_oAuthScopes);
             }
-
             return credential;
         }
 

@@ -17,7 +17,9 @@ using Google.Api.Gax;
 using Google.Cloud.Logging.V2;
 using Moq;
 using NLog;
+using NLog.Common;
 using NLog.Config;
+using NLog.Layouts;
 using NLog.Targets;
 using NLog.Targets.Wrappers;
 using System;
@@ -109,6 +111,37 @@ namespace Google.Cloud.Logging.NLog.Tests
         private LogEventInfo CreateLog(LogLevel level, string msg)
         {
             return new LogEventInfo { Level = level, Message = msg };
+        }
+
+        private AsyncContinuation MakeContinuation(TaskCompletionSource<int> tcs) => ex =>
+        {
+            if (ex != null)
+            {
+                tcs.SetException(ex);
+            }
+            else
+            {
+                tcs.SetResult(0);
+            }
+        };
+
+        [Fact]
+        public async Task InvalidOptions_MultipleCredentials()
+        {
+            var target = new GoogleStackdriverTarget
+            {
+                ProjectId = "a_project_id",
+                CredentialFile = Layout.FromString("not_empty"),
+                CredentialJson = Layout.FromString("not_empty"),
+            };
+            // ConfigureForTargetLogging() and a write are both required to trigger target initialization.
+            SimpleConfigurator.ConfigureForTargetLogging(target);
+            var tcs = new TaskCompletionSource<int>();
+            target.WriteAsyncLogEvent(new AsyncLogEventInfo(LogEventInfo.CreateNullEvent(), MakeContinuation(tcs)));
+            var nlogEx = await Assert.ThrowsAsync<NLogRuntimeException>(() => tcs.Task);
+            var innerEx = nlogEx.InnerException;
+            Assert.IsType<InvalidOperationException>(innerEx);
+            Assert.True(innerEx.Message.Contains("CredentialFile") && innerEx.Message.Contains("CredentialJson"));
         }
 
         [Fact]
