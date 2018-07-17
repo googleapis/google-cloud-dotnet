@@ -180,8 +180,7 @@ namespace Google.Cloud.BigQuery.V2.Tests
                 "50.01",
                 "0.1",
                 "0.123",
-                "0.00123",
-                "0.000000001"
+                "0.00123"
             )]
             string text, bool negate)
         {
