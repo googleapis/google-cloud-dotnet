@@ -351,6 +351,43 @@ namespace Google.Cloud.Spanner.Data.Tests
                 (int)SpannerSettings.GetDefault().CommitSettings.Timing.Retry.TotalExpiration.Timeout.Value.TotalSeconds);
         }
 
+        [Fact]
+        public async Task TransactionOptionsAreMatched()
+        {
+            using (var pool = new SessionPool())
+            {
+                var client = new FakeClient();
+
+                var readWriteOptions = new TransactionOptions { ReadWrite = new TransactionOptions.Types.ReadWrite() };
+
+                // First acquire and use a session with a read/write transaction
+                var rwSession = await CreateSessionAsync(pool, client, readWriteOptions);
+                var transaction = await TransactionPool.BeginPooledTransactionAsync(client, rwSession, readWriteOptions);
+
+                // Acquire a second session using the default transaction options
+                var readOnlySession = await CreateSessionAsync(pool, client, s_defaultTransactionOptions);
+                Assert.NotSame(rwSession, readOnlySession);
+
+                // Finish with the read-only session
+                pool.ReleaseToPool(client, readOnlySession);
+
+                // Finish with the read/write session
+                await TransactionPool.CommitAsync(transaction, rwSession, new Mutation[0], SpannerOptions.Instance.Timeout, CancellationToken.None);
+                pool.ReleaseToPool(client, rwSession);
+
+                // At this point, our MRU list has:
+                // - The r/w session
+                // - The read-only session
+                // If we ask for another read-only session, we should skip the r/w one, and get back the read-only one.
+                // This test needs the r/w session to be there, as if the match attempt doesn't find anything, we just return
+                // the most recently used session.
+
+                var readOnlySession2 = await CreateSessionAsync(pool, client, s_defaultTransactionOptions);
+                Assert.Same(readOnlySession, readOnlySession2);
+            }
+
+        }
+
         /// <summary>
         /// Helper to create a session with default project/instance/database arguments.
         /// (Most tests use these.)
