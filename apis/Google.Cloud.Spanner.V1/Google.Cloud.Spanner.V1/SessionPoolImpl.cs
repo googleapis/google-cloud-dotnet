@@ -28,6 +28,8 @@ namespace Google.Cloud.Spanner.V1
 {
     internal class SessionPoolImpl : IPriorityListItem<SessionPoolImpl>
     {
+        private static readonly TransactionOptions s_defaultTransactionOptions = new TransactionOptions();
+
         private readonly SessionPoolOptions _options;
 
         //This is the maximum we will search for a matching transaction option session.
@@ -157,12 +159,14 @@ namespace Google.Cloud.Spanner.V1
                     {
                         Logger.Debug(() => "Searching for a session with matching transaction semantics.");
                         int indexToUse = -1;
-                        for (int i = 0;
-                            i < _sessionMruStack.Count && i < MaximumLinearSearchDepth;
-                            i++)
+                        for (int i = 0; i < _sessionMruStack.Count && i < MaximumLinearSearchDepth; i++)
                         {
                             entry = _sessionMruStack[i];
-                            if (Equals(TransactionPool.GetLastUsedTransactionOptions(entry.Session), transactionOptions))
+                            // GetLastUsedTransactionOptions returns null if the transaction pool doesn't know about the session.
+                            // Our transactionOptions parameter is never null, but may be the default options. It's fine to treat
+                            // those as equivalent; they'd never be used for a "real" transaction.
+                            var lastUsedOptions = TransactionPool.GetLastUsedTransactionOptions(entry.Session) ?? s_defaultTransactionOptions;
+                            if (Equals(lastUsedOptions, transactionOptions))
                             {
                                 Logger.Debug(() => "found a session with matching transaction semantics.");
                                 indexToUse = i;
