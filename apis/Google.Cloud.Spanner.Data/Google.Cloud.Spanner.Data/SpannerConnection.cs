@@ -686,9 +686,7 @@ namespace Google.Cloud.Spanner.Data
                         bool isSharedReadonlyTx = Equals(options, s_defaultTransactionOptions);
                         if (isSharedReadonlyTx && _sharedSession != null)
                         {
-                            var taskSource = new TaskCompletionSource<Session>();
-                            taskSource.SetResult(_sharedSession);
-                            result = taskSource.Task;
+                            result = Task.FromResult(_sharedSession);
                             Interlocked.Increment(ref _sessionRefCount);
                         }
                         else if (isSharedReadonlyTx && _sharedSession == null)
@@ -735,9 +733,7 @@ namespace Google.Cloud.Spanner.Data
                             // this connection for a single transaction.
                             // So, we'll steal the shared precreated session and re-allocate it to the transaction.
                             // If the user later does reads outside of a transaction, it will force create a new session.
-                            var taskSource = new TaskCompletionSource<Session>();
-                            taskSource.SetResult(_sharedSession);
-                            result = taskSource.Task;
+                            result = Task.FromResult(_sharedSession);
                             _sessionRefCount = 0;
                             _sharedSession = null;
                             _sharedSessionAllocator = null;
