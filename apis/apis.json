@@ -643,6 +643,21 @@
   },
 
   {
+    "id": "Google.Cloud.Speech.V1P1Beta1",
+    "productName": "Google Cloud Speech",
+    "productUrl": "https://cloud.google.com/speech",
+    "version": "1.0.0-beta00",
+    "type": "grpc",
+    "description": "Google client library to access the Google Cloud Speech API version v1p1beta1 with upcoming features.",
+    "tags": [ "Speech" ],
+    "dependencies": {
+      "Google.Api.Gax.Grpc": "2.4.0",
+      "Google.LongRunning": "1.0.0",
+      "Grpc.Core": "1.12.0"
+    },
+  },
+
+  {
     "id": "Google.Cloud.Storage.V1",
     "productName": "Google Cloud Storage",
     "productUrl": "https://cloud.google.com/storage/",
