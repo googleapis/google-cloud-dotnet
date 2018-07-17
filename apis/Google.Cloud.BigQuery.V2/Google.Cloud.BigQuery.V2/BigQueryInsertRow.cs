@@ -195,53 +195,42 @@ namespace Google.Cloud.BigQuery.V2
 
         private static object ConvertRowValue(object value)
         {
-            if (value == null)
+            // Types that require special handling
+            switch (value)
             {
-                return null;
-            }
-            if (value is DateTime)
-            {
-                DateTime dt = (DateTime) value;
-                switch (dt.Kind)
-                {
-                    // Civil datetime
-                    case DateTimeKind.Unspecified:
-                        return dt.ToString("yyyy-MM-dd'T'HH:mm:ss.FFFFFF", CultureInfo.InvariantCulture);
+                case null:
+                    return null;
+                case DateTime dt:
+                    // TODO: three patterns in C# 8 with property matching?
+                    switch (dt.Kind)
+                    {
+                        // Civil datetime
+                        case DateTimeKind.Unspecified:
+                            return dt.ToString("yyyy-MM-dd'T'HH:mm:ss.FFFFFF", CultureInfo.InvariantCulture);
+                        // Timestamp
+                        case DateTimeKind.Utc:
+                            return dt.ToString("yyyy-MM-dd'T'HH:mm:ss.FFFFFF'Z'", CultureInfo.InvariantCulture);
+                        // We can get into this situation if we accept a list of DateTime values. We can't
+                        // validate when we're given the list, as it can change.
+                        default:
+                            throw new InvalidOperationException("Local DateTime values are not supported");
+                    }
+                case DateTimeOffset dto:
                     // Timestamp
-                    case DateTimeKind.Utc:
-                        return dt.ToString("yyyy-MM-dd'T'HH:mm:ss.FFFFFF'Z'", CultureInfo.InvariantCulture);
-                    // We can get into this situation if we accept a list of DateTime values. We can't
-                    // validate when we're given the list, as it can change.
-                    default:
-                        throw new InvalidOperationException("Local DateTime values are not supported");
-                }
+                    return dto.ToUniversalTime().ToString("yyyy-MM-dd'T'HH:mm:ss.FFFFFF'Z'", CultureInfo.InvariantCulture);
+                case TimeSpan ts:
+                    if (ts < TimeSpan.Zero || ts >= TimeSpan.FromHours(24))
+                    {
+                        throw new InvalidOperationException("TimeSpan values must be non-negative and less than 24 hours");
+                    }
+                    // This is ugly, but it avoids a trailing . when there are no fractional seconds.
+                    return (new DateTime(1970, 1, 1) + ts).ToString("HH:mm:ss.FFFFFF", CultureInfo.InvariantCulture);
+                case BigQueryNumeric numeric:
+                    return numeric.ToString();
+                case BigQueryInsertRow row:
+                    return row.GetJsonValues();
             }
-            else if (value is DateTimeOffset)
-            {
-                DateTimeOffset dto = (DateTimeOffset) value;
-                // Timestamp
-                return dto.ToUniversalTime().ToString("yyyy-MM-dd'T'HH:mm:ss.FFFFFF'Z'", CultureInfo.InvariantCulture);
-            }
-            else if (value is TimeSpan)
-            {
-                TimeSpan ts = (TimeSpan) value;
-                if (ts < TimeSpan.Zero || ts >= TimeSpan.FromHours(24))
-                {
-                    throw new InvalidOperationException("TimeSpan values must be non-negative and less than 24 hours");
-                }
-                // This is ugly, but it avoids a trailing . when there are no fractional seconds.
-                return (new DateTime(1970, 1, 1) + ts).ToString("HH:mm:ss.FFFFFF", CultureInfo.InvariantCulture);
-            }
-            else if (value is BigQueryNumeric)
-            {
-                BigQueryNumeric numeric = (BigQueryNumeric) value;
-                return numeric.ToString();
-            }
-            else if (value is BigQueryInsertRow)
-            {
-                return ((BigQueryInsertRow) value).GetJsonValues();
-            }
-            else if (ValidSingleTypes.Contains(value.GetType()))
+            if (ValidSingleTypes.Contains(value.GetType()))
             {
                 // Anything single value should be fine as it is. We've already validated that it's a known type.
                 return value;
