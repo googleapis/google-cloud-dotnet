@@ -8,7 +8,7 @@ cd ..
 ./buildrelease.sh --ssh $(git rev-parse HEAD)
 
 
-# Add any docs cahnges if they exist.
+# Add any docs changes if they exist.
 cd ./releasebuild/releasedocs
 git add --all
 if ! git diff --quiet --cached; then git commit -m 'Regenerate docs'; git push; fi
