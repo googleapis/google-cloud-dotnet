@@ -136,7 +136,7 @@
     },
     "testDependencies": {
       "Google.Api.Gax.Grpc.Testing": "2.4.0"
-    },
+    }
   },
 
   {
@@ -187,7 +187,7 @@
       "Google.Cloud.Diagnostics.Common.Tests": "project",
       "Google.Cloud.Diagnostics.Common.IntegrationTests": "project",
       "Microsoft.AspNet.Http": "1.0.0-rc1-final"
-    },
+    }
   },
 
   {
@@ -268,7 +268,7 @@
     "version": "1.0.0-beta05",
     "type": "grpc",
     "description": "Recommended Google client library to access the Google Data Loss Prevention API, provides methods for detection of privacy-sensitive fragments in text, images, and Google Cloud Platform storage repositories.",
-    "tags": [ "DLP", "data loss prevention", "privacy", "pii" ],
+    "tags": [ "DLP", "data loss prevention", "privacy", "pii" ]
   },
 
   {
@@ -278,7 +278,7 @@
     "version": "1.0.0-beta08",
     "type": "grpc",
     "description": "Recommended Google client library to access the Stackdriver Error Reporting API, which groups and counts similar errors from cloud services. The Stackdriver Error Reporting API provides a way to report new errors and read access to error groups and their associated errors.",
-    "tags": [ "ErrorReporting", "Stackdriver" ],
+    "tags": [ "ErrorReporting", "Stackdriver" ]
   },
 
   {
@@ -324,7 +324,7 @@
     "dependencies": {
       "Google.Api.Gax.Grpc": "2.4.0",
       "Grpc.Core": "1.12.0"
-    },
+    }
   },
 
   {
@@ -339,7 +339,7 @@
       "Google.Cloud.Iam.V1": "1.1.0",
       "Google.Api.Gax.Grpc": "2.4.0",
       "Grpc.Core": "1.12.0"
-    },
+    }
   },
 
   {
@@ -353,7 +353,7 @@
     "dependencies": {
       "Google.Api.Gax.Grpc": "2.4.0",
       "Grpc.Core": "1.12.0"
-    },
+    }
   },
 
   {
@@ -504,7 +504,7 @@
     "testDependencies": {
       "System.ValueTuple": "4.3.1"
     },
-    "tags": [ "PubSub" ],
+    "tags": [ "PubSub" ]
   },
 
   {
@@ -515,7 +515,7 @@
     "type": "grpc",
     "description": "Recommended Google client library to administer Cloud Memorystore for Redis.",
     "dependencies": {
-      "Google.LongRunning": "1.0.0",
+      "Google.LongRunning": "1.0.0"
     },
     "tags": [ "Redis", "Memorystore" ]
   },
@@ -595,7 +595,7 @@
       "Microsoft.Extensions.Configuration": "2.0.0",
       "Microsoft.Extensions.Configuration.FileExtensions": "2.0.0",
       "Microsoft.Extensions.Configuration.Json": "2.0.0",
-      "Microsoft.Extensions.Configuration.EnvironmentVariables": "2.0.0",
+      "Microsoft.Extensions.Configuration.EnvironmentVariables": "2.0.0"
     }
   },
 
@@ -640,7 +640,7 @@
       "Google.Api.Gax.Grpc": "2.4.0",
       "Google.LongRunning": "1.0.0",
       "Grpc.Core": "1.12.0"
-    },
+    }
   },
 
   {
@@ -655,7 +655,7 @@
       "Google.Api.Gax.Grpc": "2.4.0",
       "Google.LongRunning": "1.0.0",
       "Grpc.Core": "1.12.0"
-    },
+    }
   },
 
   {
@@ -696,7 +696,7 @@
     "version": "1.0.0-beta01",
     "type": "grpc",
     "description": "Recommended Google client library to access the Google Cloud Text-to-Speech API, synthesizes natural-sounding speech by applying powerful neural network models.",
-    "tags": [ "Speech", "Text-to-speech" ],
+    "tags": [ "Speech", "Text-to-speech" ]
   },
 
   {
@@ -748,7 +748,7 @@
       "Google.Api.Gax.Grpc": "2.4.0",
       "Google.LongRunning": "1.0.0",
       "Grpc.Core": "1.12.0"
-    },
+    }
   },
 
   {
@@ -763,7 +763,7 @@
       "Google.Api.Gax.Grpc": "2.3.0",
       "Google.LongRunning": "1.0.0",
       "Grpc.Core": "1.10.0"
-    },
+    }
   },
 
   {
