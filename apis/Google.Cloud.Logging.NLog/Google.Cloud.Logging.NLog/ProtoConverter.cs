@@ -44,14 +44,14 @@ namespace Google.Cloud.Logging.NLog
                     {
                         obj.Fields.Add(property.Key, Convert(property.Value));
                     }
-                    return new Value { StructValue = obj };
+                    return Value.ForStruct(obj);
                 case JTokenType.TimeSpan:
                     return Value.ForString(token.Value<TimeSpan>().ToString("c")); // Culture-insensitive
                 case JTokenType.Date:
                     return Value.ForString(token.Value<DateTime>().ToString("o")); // Culture-insensitive
                 case JTokenType.Bytes:
                     var bytes = token.Value<byte[]>();
-                    var str = string.Join(",", bytes.Take(32).Select(x => x.ToString("x02")));
+                    var str = string.Join(" ", bytes.Take(32).Select(x => x.ToString("x02")));
                     if (bytes.Length > 32)
                     {
                         str += $"...(length:{bytes.Length})";

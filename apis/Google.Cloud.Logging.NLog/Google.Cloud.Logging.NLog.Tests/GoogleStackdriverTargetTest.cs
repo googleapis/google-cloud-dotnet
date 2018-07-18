@@ -161,8 +161,8 @@ namespace Google.Cloud.Logging.NLog.Tests
             {
                 ProjectId = "a_project_id",
                 SendJsonPayload = true,
-                JsonConvertFunction = o => Value.ForNull(),
-                JsonConvertTypeName = "a_type_name",
+                JsonConverter = o => Value.ForNull(),
+                JsonConverterTypeName = "a_type_name",
             };
             var nlogEx = await Assert.ThrowsAsync<NLogRuntimeException>(() => ActivateTargetAsync(target));
             Assert.IsType<InvalidOperationException>(nlogEx.InnerException);
@@ -175,15 +175,14 @@ namespace Google.Cloud.Logging.NLog.Tests
             {
                 ProjectId = "a_project_id",
                 SendJsonPayload = true,
-                JsonConvertTypeName = "a_type_name",
-                JsonConvertMethodName = "a_method_name",
+                JsonConverterTypeName = "a_type_name",
+                JsonConverterMethodName = "a_method_name",
             };
             var nlogEx = await Assert.ThrowsAsync<NLogRuntimeException>(() => ActivateTargetAsync(target));
             Assert.IsType<InvalidOperationException>(nlogEx.InnerException);
             Assert.Contains("a_type_name", nlogEx.InnerException.Message);
         }
 
-        private const string ConverterMsg = "Converter called :)";
         private class TestJsonConverter
         {
             public static ConcurrentBag<string> SeenItems { get; } = new ConcurrentBag<string>();
@@ -219,8 +218,8 @@ namespace Google.Cloud.Logging.NLog.Tests
             {
                 ProjectId = "a_project_id",
                 SendJsonPayload = true,
-                JsonConvertTypeName = typeof(TestJsonConverter).AssemblyQualifiedName,
-                JsonConvertMethodName = "a_method_name",
+                JsonConverterTypeName = typeof(TestJsonConverter).AssemblyQualifiedName,
+                JsonConverterMethodName = "a_method_name",
             };
             var nlogEx = await Assert.ThrowsAsync<NLogRuntimeException>(() => ActivateTargetAsync(target));
             Assert.IsType<InvalidOperationException>(nlogEx.InnerException);
@@ -237,8 +236,8 @@ namespace Google.Cloud.Logging.NLog.Tests
                 {
                     target.IncludeEventProperties = true;
                     target.SendJsonPayload = true;
-                    target.JsonConvertTypeName = typeof(TestJsonConverter).AssemblyQualifiedName;
-                    target.JsonConvertMethodName = methodName;
+                    target.JsonConverterTypeName = typeof(TestJsonConverter).AssemblyQualifiedName;
+                    target.JsonConverterMethodName = methodName;
                 }, testFn: target =>
                 {
                     LogManager.GetLogger("testlogger").Info("Method:{Method}", methodName);
@@ -260,7 +259,7 @@ namespace Google.Cloud.Logging.NLog.Tests
             {
                 target.IncludeEventProperties = true;
                 target.SendJsonPayload = true;
-                target.JsonConvertFunction = _ => throw new Exception("CustomError");
+                target.JsonConverter = _ => throw new Exception("CustomError");
             }, testFn: target =>
             {
                 LogManager.GetLogger("testlogger").Info("{field}", "content (ignored in this test)");

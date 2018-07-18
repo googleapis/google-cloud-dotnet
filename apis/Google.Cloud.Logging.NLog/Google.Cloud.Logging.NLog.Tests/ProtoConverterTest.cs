@@ -85,10 +85,10 @@ namespace Google.Cloud.Logging.NLog.Tests
         {
             var bytesShort = new byte[] { 1, 2, 3 };
             var objShort = ProtoConverter.Convert(JToken.FromObject(bytesShort));
-            Assert.Equal("01,02,03", objShort.StringValue);
+            Assert.Equal("01 02 03", objShort.StringValue);
             var bytesLong = Enumerable.Repeat((byte)0xff, 1000).ToArray();
             var objLong = ProtoConverter.Convert(JToken.FromObject(bytesLong));
-            Assert.Equal(string.Join(",", Enumerable.Repeat("ff", 32)) + "...(length:1000)", objLong.StringValue);
+            Assert.Equal(string.Join(" ", Enumerable.Repeat("ff", 32)) + "...(length:1000)", objLong.StringValue);
         }
 
         [Fact]

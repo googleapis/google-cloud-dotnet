@@ -97,20 +97,20 @@ namespace Google.Cloud.Logging.NLog
 
             if (SendJsonPayload)
             {
-                if (JsonConvertFunction != null)
+                if (JsonConverter != null)
                 {
                     // Use the function provided directly.
                     GaxPreconditions.CheckState(
-                        string.IsNullOrWhiteSpace(JsonConvertTypeName) && string.IsNullOrWhiteSpace(JsonConvertMethodName),
-                        $"{nameof(JsonConvertTypeName)} and {nameof(JsonConvertMethodName)} must not be set along with {nameof(JsonConvertFunction)}.");
-                    _jsonConvertFunction = JsonConvertFunction;
+                        string.IsNullOrWhiteSpace(JsonConverterTypeName) && string.IsNullOrWhiteSpace(JsonConverterMethodName),
+                        $"{nameof(JsonConverterTypeName)} and {nameof(JsonConverterMethodName)} must not be set along with {nameof(JsonConverter)}.");
+                    _jsonConvertFunction = JsonConverter;
                 }
-                else if (!string.IsNullOrWhiteSpace(JsonConvertTypeName) || !string.IsNullOrWhiteSpace(JsonConvertMethodName))
+                else if (!string.IsNullOrWhiteSpace(JsonConverterTypeName) || !string.IsNullOrWhiteSpace(JsonConverterMethodName))
                 {
                     // Use the method refered to by type-name and method-name.
                     GaxPreconditions.CheckState(
-                        !string.IsNullOrWhiteSpace(JsonConvertTypeName) && !string.IsNullOrWhiteSpace(JsonConvertMethodName),
-                        $"Either both or neither of {nameof(JsonConvertTypeName)} and {nameof(JsonConvertMethodName)} must be specified.");
+                        !string.IsNullOrWhiteSpace(JsonConverterTypeName) && !string.IsNullOrWhiteSpace(JsonConverterMethodName),
+                        $"Either both or neither of {nameof(JsonConverterTypeName)} and {nameof(JsonConverterMethodName)} must be specified.");
                     _jsonConvertFunction = BuildAndVerifyJsonConverter();
                 }
                 else
@@ -129,18 +129,31 @@ namespace Google.Cloud.Logging.NLog
 
         private Func<object, Value> BuildAndVerifyJsonConverter()
         {
-            var type = System.Type.GetType(JsonConvertTypeName, throwOnError: false);
-            GaxPreconditions.CheckState(type != null, "A type with the specified name cannot be found: '{0}'", JsonConvertTypeName);
+            var type = System.Type.GetType(JsonConverterTypeName, throwOnError: false);
+            GaxPreconditions.CheckState(type != null, "A type with the specified name cannot be found: '{0}'", JsonConverterTypeName);
             var methodInfo = type.GetTypeInfo()
                 .GetMethods(BindingFlags.Public | BindingFlags.Static | BindingFlags.Instance)
-                .Where(m => m.Name == JsonConvertMethodName && !m.IsAbstract && !m.IsGenericMethod &&
+                .Where(m => m.Name == JsonConverterMethodName && !m.IsAbstract && !m.IsGenericMethod &&
                     m.GetParameters().Length == 1 && m.GetParameters()[0].ParameterType == typeof(object) &&
                     (m.ReturnType == typeof(Value) || typeof(JToken).IsAssignableFrom(m.ReturnType)))
                 .FirstOrDefault();
             GaxPreconditions.CheckState(methodInfo != null,
-                $"A suitable public method named '{JsonConvertMethodName}' cannot be found in type '{JsonConvertTypeName}'. " +
+                $"A suitable public method named '{JsonConverterMethodName}' cannot be found in type '{JsonConverterTypeName}'. " +
                 "The public method must have a single parameter of type 'object', and a return type of 'Value' or 'JToken'");
-            object instance = methodInfo.IsStatic ? null : Activator.CreateInstance(type);
+            object instance = null;
+            if (!methodInfo.IsStatic)
+            {
+                try
+                {
+                    instance = Activator.CreateInstance(type);
+                }
+                catch (Exception e)
+                {
+                    // Acticator.CreateInstance can throw many different exceptions, so catch them all.
+                    throw new InvalidOperationException(
+                        $"Type '{JsonConverterTypeName}' must have a parameterless constructor so it can be instantiated.", e);
+                }
+            }
             if (methodInfo.ReturnType == typeof(Value))
             {
                 return (Func<object, Value>)methodInfo.CreateDelegate(typeof(Func<object, Value>), instance);

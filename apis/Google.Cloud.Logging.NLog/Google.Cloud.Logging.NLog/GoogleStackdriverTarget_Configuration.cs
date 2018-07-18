@@ -22,6 +22,8 @@ using System.Collections.Generic;
 
 namespace Google.Cloud.Logging.NLog
 {
+    // Partial class to split out configuration options.
+    // Target implementation is in GoogleStackdriverTarget.cs
     public partial class GoogleStackdriverTarget
     {
         /// <summary>
@@ -105,31 +107,31 @@ namespace Google.Cloud.Logging.NLog
 
         /// <summary>
         /// Fills <see cref="LogEntry.JsonPayload"/> instead of <see cref="LogEntry.TextPayload"/>.
-        /// JSON serialization can be customed using <see cref="JsonConvertTypeName"/> and <see cref="JsonConvertMethodName"/>,
-        /// or <see cref="JsonConvertFunction"/>.
+        /// JSON serialization can be customed using <see cref="JsonConverterTypeName"/> and <see cref="JsonConverterMethodName"/>,
+        /// or <see cref="JsonConverter"/>.
         /// </summary>
         public bool SendJsonPayload { get; set; }
 
         /// <summary>
         /// When <see cref="SendJsonPayload"/> is <c>true</c>, a custom JSON serialization method may be specified by
-        /// type-name and method-name. Specify the type-name here, and the method-name in <see cref="JsonConvertMethodName"/>.
+        /// type-name and method-name. Specify the type-name here, and the method-name in <see cref="JsonConverterMethodName"/>.
         /// The instance or static method must have the signature <c>Value MyMethod(object obj)</c> or <c>JToken MyMethod(object o)</c>.
-        /// Must not be set if <see cref="JsonConvertFunction"/> is set.
+        /// Must not be set if <see cref="JsonConverter"/> is set.
         /// </summary>
-        public string JsonConvertTypeName { get; set; }
+        public string JsonConverterTypeName { get; set; }
 
         /// <summary>
         /// When <see cref="SendJsonPayload"/> is <c>true</c>, a custom JSON serialization method may be specified by
-        /// type-name and method-name. Specify the type-name in <see cref="JsonConvertTypeName"/>, and the method-name here.
+        /// type-name and method-name. Specify the type-name in <see cref="JsonConverterTypeName"/>, and the method-name here.
         /// The instance or static method must have the signature <c>Value MyMethod(object obj)</c> or <c>JToken MyMethod(object o)</c>.
-        /// Must not be set if <see cref="JsonConvertFunction"/> is set.
+        /// Must not be set if <see cref="JsonConverter"/> is set.
         /// </summary>
-        public string JsonConvertMethodName { get; set; }
+        public string JsonConverterMethodName { get; set; }
 
         /// <summary>
         /// When <see cref="SendJsonPayload"/> is <c>true</c>, a custom JSON serialization method may be programatically specified here.
-        /// Must not be set if <see cref="JsonConvertTypeName"/> and <see cref="JsonConvertMethodName"/> are set.
+        /// Must not be set if <see cref="JsonConverterTypeName"/> and <see cref="JsonConverterMethodName"/> are set.
         /// </summary>
-        public Func<object, Value> JsonConvertFunction { get; set; }
+        public Func<object, Value> JsonConverter { get; set; }
     }
 }
