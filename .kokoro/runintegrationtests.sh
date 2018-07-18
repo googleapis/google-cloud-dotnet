@@ -4,8 +4,8 @@ set -e
 
 cd ..
 
-# Build the libraries w/o running unit tests.
-./build.sh --notests
+# Build the libraries and run unit tests.
+./build.sh
 
 # Allow each integration test 3 chances to pass.
 ./runintegrationtests.sh || true

@@ -15,6 +15,6 @@ if ! git diff --quiet --cached; then git commit -m 'Regenerate docs'; git push; 
 
 cd ../..
 
-#Push the changes to nuget.
+# Push the changes to nuget.
 cd ./releasebuild/nuget
 for pkg in *.nupkg; do dotnet nuget push -s https://api.nuget.org/v3/index.json -k $NUGET_API_KEY $pkg; done
