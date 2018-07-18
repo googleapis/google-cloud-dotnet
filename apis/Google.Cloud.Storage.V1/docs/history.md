@@ -1,9 +1,11 @@
 # Version history
 
-# 2.2.0-beta01, 2018-05-14
+# 2.2.0-beta02, 2018-07-18
 
-New features:
+New features since 2.2.0:
 
+- New interface `UrlSigner.IBlobSigner` for more flexibility when
+  creating signed URLs
 - Option to delete objects automatically when deleting a bucket
 - Support for [customer-managed encryption
   keys](https://cloud.google.com/storage/docs/encryption/customer-managed-keys)
