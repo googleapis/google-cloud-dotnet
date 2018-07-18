@@ -31,6 +31,10 @@ namespace Google.Cloud.Diagnostics.AspNet.IntegrationTests
 {
     public class ErrorReportingTest
     {
+        public const string Service = "service-name";
+        public const string Version = "version-id";
+        public static readonly string ProjectId = Utils.GetProjectIdFromEnvironment();
+
         private readonly ErrorEventEntryPolling _polling = new ErrorEventEntryPolling();
 
         [Fact]
@@ -46,29 +50,6 @@ namespace Google.Cloud.Diagnostics.AspNet.IntegrationTests
 
                 var errorEvents = _polling.GetEvents(startTime, testId, 0);
                 Assert.Empty(errorEvents);
-            }
-        }
-
-        [Fact]
-        public async Task LogsException()
-        {
-            string testId = Utils.GetTestId();
-            DateTime startTime = DateTime.UtcNow;
-
-            using (TestServer server = TestServer.Create<ErrorReportingTestApplication>())
-            using (var client = server.HttpClient)
-            {
-                var response = await client.GetAsync($"api/ErrorReporting/{nameof(ErrorReportingController.ThrowsException)}/{testId}");
-                var contentTask = response.Content.ReadAsStringAsync();
-
-                Assert.Equal(HttpStatusCode.InternalServerError, response.StatusCode);
-
-                var errorEvent = _polling.GetEvents(startTime, testId, 1).Single();
-                VerifyFullLogging(errorEvent, testId, nameof(ErrorReportingController.ThrowsException));
-
-                var content = await contentTask;
-                Assert.Contains(nameof(ErrorReportingController.ThrowsException), content);
-                Assert.Contains(testId, content);
             }
         }
 
@@ -146,24 +127,7 @@ namespace Google.Cloud.Diagnostics.AspNet.IntegrationTests
             }
         }
 
-        [Fact]
-        public async Task ManualLog_GoogleWebApiLogger()
-        {
-            string testId = Utils.GetTestId();
-            DateTime startTime = DateTime.UtcNow;
-
-            using (TestServer server = TestServer.Create<ErrorReportingTestApplication>())
-            using (var client = server.HttpClient)
-            {
-                var response = await client.GetAsync($"api/ErrorReporting/{nameof(ErrorReportingController.ThrowCatchWithGoogleWebApiLogger)}/{testId}");
-                Assert.Equal(HttpStatusCode.OK, response.StatusCode);
-
-                var errorEvent = _polling.GetEvents(startTime, testId, 1).Single();
-                VerifyFullLogging(errorEvent, testId, nameof(ErrorReportingController.ThrowCatchWithGoogleWebApiLogger));
-            }
-        }
-
-        private void VerifyFullLogging(ErrorEvent errorEvent, string testId, string functionName)
+        internal static void VerifyFullLogging(ErrorEvent errorEvent, string testId, string functionName)
         {
             VerifyErrorLogging(errorEvent, testId, functionName);
             VerifyHttpContextLogging(errorEvent);
@@ -175,10 +139,10 @@ namespace Google.Cloud.Diagnostics.AspNet.IntegrationTests
         /// <param name="errorEvent">The event to check.</param>
         /// <param name="testId">The id of the test.</param>
         /// <param name="functionName">The name of the function the error occurred in.</param>
-        private void VerifyErrorLogging(ErrorEvent errorEvent, string testId, string functionName)
+        internal static void VerifyErrorLogging(ErrorEvent errorEvent, string testId, string functionName)
         {
-            Assert.Equal(ErrorReportingController.Service, errorEvent.ServiceContext.Service);
-            Assert.Equal(ErrorReportingController.Version, errorEvent.ServiceContext.Version);
+            Assert.Equal(Service, errorEvent.ServiceContext.Service);
+            Assert.Equal(Version, errorEvent.ServiceContext.Version);
 
             Assert.Contains(functionName, errorEvent.Message);
             Assert.Contains(testId, errorEvent.Message);
@@ -195,42 +159,42 @@ namespace Google.Cloud.Diagnostics.AspNet.IntegrationTests
         /// Only for automatic logging, in self hosted web apis <see cref="HttpContext.Current"/>
         /// is <code>null</code>.
         /// </summary>
-        private void VerifyHttpContextLogging(ErrorEvent errorEvent)
+        internal static void VerifyHttpContextLogging(ErrorEvent errorEvent)
         {
             Assert.Equal(HttpMethod.Get.Method, errorEvent.Context.HttpRequest.Method);
             Assert.False(string.IsNullOrWhiteSpace(errorEvent.Context.HttpRequest.Url));
         }
 
-        private class ErrorReportingTestApplication : HttpApplication
+        internal static string GetMessage(string message, string id) => $"{message} - {id}";
+    }
+
+    internal class ErrorReportingTestApplication : HttpApplication
+    {
+        public void Configuration(IAppBuilder app)
         {
-            public void Configuration(IAppBuilder app)
-            {
-                HttpConfiguration config = new HttpConfiguration();
-                Register(config);
-                app.UseWebApi(config);
-            }
+            HttpConfiguration config = new HttpConfiguration();
+            Register(config);
+            app.UseWebApi(config);
+        }
 
-            private static void Register(HttpConfiguration config)
-            {
-                config.Services.Add(typeof(System.Web.Http.ExceptionHandling.IExceptionLogger),
-                    ErrorReportingExceptionLogger.Create(ErrorReportingController.ProjectId, ErrorReportingController.Service, ErrorReportingController.Version));
+        private static void Register(HttpConfiguration config)
+        {
+            config.Services.Add(typeof(System.Web.Http.ExceptionHandling.IExceptionLogger),
+                ErrorReportingExceptionLogger.Create(ErrorReportingTest.ProjectId, ErrorReportingTest.Service, ErrorReportingTest.Version));
 
-                config.IncludeErrorDetailPolicy = IncludeErrorDetailPolicy.Always;
+            // Web API routes
+            config.MapHttpAttributeRoutes();
 
-                // Web API routes
-                config.MapHttpAttributeRoutes();
-
-                config.Routes.MapHttpRoute(
-                    name: "DefaultApi",
-                    routeTemplate: "api/{controller}/{action}/{id}",
-                    defaults: new { id = RouteParameter.Optional }
-                );
-                config.Routes.MapHttpRoute(
-                    name: "MessageHandler",
-                    routeTemplate: "handler/{id}",
-                    null, null,
-                    new ThrowErrorHandler());
-            }
+            config.Routes.MapHttpRoute(
+                name: "DefaultApi",
+                routeTemplate: "api/{controller}/{action}/{id}",
+                defaults: new { id = RouteParameter.Optional }
+            );
+            config.Routes.MapHttpRoute(
+                name: "MessageHandler",
+                routeTemplate: "handler/{id}",
+                null, null,
+                new ThrowErrorHandler());
         }
     }
 
@@ -244,7 +208,7 @@ namespace Google.Cloud.Diagnostics.AspNet.IntegrationTests
             HttpRequestMessage request, CancellationToken cancellationToken)
         {
             string id = request.GetRouteData().Values["id"].ToString();
-            string message = ErrorReportingController.GetMessage(nameof(SendAsync), id);
+            string message = ErrorReportingTest.GetMessage(nameof(SendAsync), id);
             throw new Exception(message);
         }
     };
@@ -254,15 +218,11 @@ namespace Google.Cloud.Diagnostics.AspNet.IntegrationTests
     /// </summary>
     public class ErrorReportingController : ApiController
     {
-        public const string Service = "service-name";
-        public const string Version = "version-id";
-        public static readonly string ProjectId = Utils.GetProjectIdFromEnvironment();
-
         /// <summary>Throws and catches exception.</summary>
         [HttpGet]
         public string Index(string id)
         {
-            var message = GetMessage(nameof(Index), id);
+            var message = ErrorReportingTest.GetMessage(nameof(Index), id);
             try
             {
                 throw new Exception(message);
@@ -278,7 +238,7 @@ namespace Google.Cloud.Diagnostics.AspNet.IntegrationTests
         [HttpGet]
         public string ThrowsException(string id)
         {
-            string message = GetMessage(nameof(ThrowsException), id);
+            string message = ErrorReportingTest.GetMessage(nameof(ThrowsException), id);
             throw new Exception(message);
         }
 
@@ -286,7 +246,7 @@ namespace Google.Cloud.Diagnostics.AspNet.IntegrationTests
         [HttpGet]
         public string ThrowsArgumentException(string id)
         {
-            string message = GetMessage(nameof(ThrowsArgumentException), id);
+            string message = ErrorReportingTest.GetMessage(nameof(ThrowsArgumentException), id);
             throw new ArgumentException(message);
         }
 
@@ -295,8 +255,8 @@ namespace Google.Cloud.Diagnostics.AspNet.IntegrationTests
         [HttpGet]
         public string ThrowCatchWithGoogleLogger(string id)
         {
-            var exceptionLogger = GoogleExceptionLogger.Create(ProjectId, Service, Version);
-            var message = GetMessage(nameof(ThrowCatchWithGoogleLogger), id);
+            var exceptionLogger = GoogleExceptionLogger.Create(ErrorReportingTest.ProjectId, ErrorReportingTest.Service, ErrorReportingTest.Version);
+            var message = ErrorReportingTest.GetMessage(nameof(ThrowCatchWithGoogleLogger), id);
             try
             {
                 throw new Exception(message);
@@ -313,8 +273,8 @@ namespace Google.Cloud.Diagnostics.AspNet.IntegrationTests
         [HttpGet]
         public string ThrowCatchWithGoogleWebApiLogger(string id)
         {
-            var exceptionLogger = GoogleWebApiExceptionLogger.Create(ProjectId, Service, Version);
-            var message = GetMessage(nameof(ThrowCatchWithGoogleWebApiLogger), id);
+            var exceptionLogger = GoogleWebApiExceptionLogger.Create(ErrorReportingTest.ProjectId, ErrorReportingTest.Service, ErrorReportingTest.Version);
+            var message = ErrorReportingTest.GetMessage(nameof(ThrowCatchWithGoogleWebApiLogger), id);
             try
             {
                 throw new Exception(message);
@@ -325,7 +285,5 @@ namespace Google.Cloud.Diagnostics.AspNet.IntegrationTests
             }
             return message;
         }
-
-        internal static string GetMessage(string message, string id) => $"{message} - {id}";
     }
 }
