@@ -12,13 +12,18 @@
 // See the License for the specific language governing permissions and
 // limitations under the License.
 
+using Google.Api.Gax;
 using Google.Apis.Auth.OAuth2;
+using Google.Apis.Iam.v1;
+using Google.Apis.Iam.v1.Data;
+using Google.Apis.Services;
 using Google.Cloud.ClientTesting;
 using System;
 using System.Collections.Generic;
 using System.IO;
 using System.Net.Http;
 using System.Net.Http.Headers;
+using System.Threading;
 using System.Threading.Tasks;
 using Xunit;
 
@@ -118,6 +123,90 @@ namespace Google.Cloud.Storage.V1.Snippets
             }
 
             await client.DeleteObjectAsync(bucketName, destination);
+        }
+
+        // Sample: IamServiceBlobSigner
+        internal sealed class IamServiceBlobSigner : UrlSigner.IBlobSigner
+        {
+            private readonly IamService _iamService;
+            public string Id { get; }
+
+            internal IamServiceBlobSigner(IamService service, string id)
+            {
+                _iamService = service;
+                Id = id;
+            }
+
+            public string CreateSignature(byte[] data) =>
+                CreateRequest(data).Execute().Signature;
+
+            public async Task<string> CreateSignatureAsync(byte[] data, CancellationToken cancellationToken)
+            {
+                ProjectsResource.ServiceAccountsResource.SignBlobRequest request = CreateRequest(data);
+                SignBlobResponse response = await request.ExecuteAsync(cancellationToken).ConfigureAwait(false);
+                return response.Signature;
+            }
+
+            private ProjectsResource.ServiceAccountsResource.SignBlobRequest CreateRequest(byte[] data)
+            {
+                SignBlobRequest body = new SignBlobRequest { BytesToSign = Convert.ToBase64String(data) };
+                string account = $"projects/-/serviceAccounts/{Id}";
+                ProjectsResource.ServiceAccountsResource.SignBlobRequest request =
+                    _iamService.Projects.ServiceAccounts.SignBlob(body, account);
+                return request;
+            }
+        }
+        // End sample
+
+        [SkippableFact]
+        public async Task SignedUrlWithIamServiceBlobSigner()
+        {
+            _fixture.SkipIf(Platform.Instance().Type == PlatformType.Unknown);
+
+            var bucketName = _fixture.BucketName;
+            var objectName = _fixture.HelloStorageObjectName;
+            var credential = (await GoogleCredential.GetApplicationDefaultAsync()).UnderlyingCredential as ServiceAccountCredential;
+            var httpClient = new HttpClient();
+
+            // Sample: IamServiceBlobSignerUsage        
+            // First obtain the email address of the default service account for this instance from the metadata server.
+            HttpRequestMessage serviceAccountRequest = new HttpRequestMessage
+            {
+                // Note: you could use 169.254.169.254 as the address to avoid a DNS lookup.
+                RequestUri = new Uri("http://metadata.google.internal/computeMetadata/v1/instance/service-accounts/default/email"),
+                Headers = { { "Metadata-Flavor", "Google" } }
+            };
+            HttpResponseMessage serviceAccountResponse = await httpClient.SendAsync(serviceAccountRequest).ConfigureAwait(false);
+            serviceAccountResponse.EnsureSuccessStatusCode();
+            string serviceAccountId = await serviceAccountResponse.Content.ReadAsStringAsync();
+
+            // Create an IAM service client object using the default application credentials.
+            GoogleCredential iamCredential = await GoogleCredential.GetApplicationDefaultAsync();
+            iamCredential = iamCredential.CreateScoped(IamService.Scope.CloudPlatform);
+            IamService iamService = new IamService(new BaseClientService.Initializer
+            {
+                HttpClientInitializer = iamCredential
+            });
+
+            // Create a URL signer that will use the IAM service for signing. This signer is thread-safe,
+            // and would typically occur as a dependency, e.g. in an ASP.NET Core controller, where the
+            // same instance can be reused for each request.
+            IamServiceBlobSigner blobSigner = new IamServiceBlobSigner(iamService, serviceAccountId);
+            UrlSigner urlSigner = UrlSigner.FromBlobSigner(blobSigner);
+
+            // Use the URL signer to sign a request for the test object for the next hour.
+            string url = await urlSigner.SignAsync(
+                bucketName,
+                objectName,
+                TimeSpan.FromHours(1),
+                HttpMethod.Get);
+
+            // Prove we can fetch the content of the test object with a simple unauthenticated GET request.
+            HttpResponseMessage response = await httpClient.GetAsync(url);
+            string content = await response.Content.ReadAsStringAsync();
+            // End sample
+
+            Assert.Equal(_fixture.HelloWorldContent, content);
         }
     }
 }

@@ -25,12 +25,12 @@ using Google.Cloud.Logging.V2;
 using Google.Protobuf;
 using Google.Protobuf.WellKnownTypes;
 using NLog;
-using NLog.Config;
 using NLog.Targets;
 using NLog.Common;
-using NLog.Layouts;
 using System.Threading.Tasks;
 using System.Threading;
+using System.Reflection;
+using Newtonsoft.Json.Linq;
 
 namespace Google.Cloud.Logging.NLog
 {
@@ -38,103 +38,8 @@ namespace Google.Cloud.Logging.NLog
     /// Appends logging events to Google Stackdriver Logging.
     /// </summary>
     [Target("GoogleStackdriver")]
-    public class GoogleStackdriverTarget : TargetWithContext
+    public partial class GoogleStackdriverTarget : TargetWithContext
     {
-        /// <summary>
-        /// The file path of a service account JSON file to use for authentication.
-        /// Not necessary if running on GCE, GAE or GKE, or if the GOOGLE_APPLICATION_CREDENTIALS environment variable has been set.
-        /// Must not be set if <see cref="CredentialJson"/> is set.
-        /// </summary>
-        public Layout CredentialFile { get; set; }
-
-        /// <summary>
-        /// JSON credential for authentication.
-        /// Not necessary if running on GCE or GAE or if the GOOGLE_APPLICATION_CREDENTIALS environment variable has been set.
-        /// Must not be set if <see cref="CredentialFile"/> is set.
-        /// </summary>
-        public Layout CredentialJson { get; set; }
-
-        /// <summary>
-        /// If set, disables resource-type detection based on platform,
-        /// so ResourceType will default to "global" if not manually set. 
-        /// </summary>
-        public bool DisableResourceTypeDetection { get; set; }
-
-        /// <summary>
-        /// Configures how many outstanding write tasks before starting to throttle. Defaults to 5.
-        /// </summary>
-        public int TaskPendingLimit { get; set; }
-
-        /// <summary>
-        /// The resource type of log entries.
-        /// Default value depends on the detected platform. See the remarks section for details.
-        /// </summary>
-        /// <remarks>
-        /// If this is not set, then Resource type is set depending on the detected execution platform:
-        /// <list type="bullet">
-        /// <item><description>
-        /// Google App Engine: ResourceType "gae_app", with project_id, module_id, and version_id set approprately.
-        /// </description></item>
-        /// <item><description>
-        /// Google Compute Engine: ResourceType "gce_instance", with project_id, instance_id, and zone set approprately.
-        /// </description></item>
-        /// <item><description>
-        /// Google Kubernetes Engine: ResourceType "container", with project_id and other labels set approprately.
-        /// </description></item>
-        /// <item><description>
-        /// Unknown: ResourceType "global", with project_id set from this configuration.
-        /// </description></item>
-        /// </list>
-        /// If <see cref="DisableResourceTypeDetection"/> is <c>true</c>, then this platform detection
-        /// is not performed, and this ResourceType defaults to "global" if not set.
-        /// </remarks>
-        public string ResourceType { get; set; }
-
-        /// <summary>
-        /// The project ID for all log entries.
-        /// Must be configured if not executing on Google Compute Engine, Google App Engine or Google Kubernetes Engine.
-        /// If running on GCE, GAE or GKE, the ProjectId will be automatically detected if not set.
-        /// </summary>
-        public Layout ProjectId { get; set; }
-
-        /// <summary>
-        /// LogID for all log entries. Defaults to "Default".
-        /// </summary>
-        public Layout LogId { get; set; }
-
-        /// <summary>
-        /// Fills <see cref="LogEntry.JsonPayload"/> instead of <see cref="LogEntry.TextPayload"/> 
-        /// </summary>
-        public bool SendJsonPayload { get; set; }
-
-        /// <summary>
-        /// Specify labels for the resource type;
-        /// only used if platform detection is disabled or detects an unknown platform.
-        /// </summary>
-        [ArrayParameter(typeof(TargetPropertyWithContext), "resourcelabel")]
-        public IList<TargetPropertyWithContext> ResourceLabels { get; }
-
-        /// <inheritdoc/>
-        [ArrayParameter(typeof(TargetPropertyWithContext), "contextproperty")]
-        public override IList<TargetPropertyWithContext> ContextProperties { get { return _contextProperties; } }
-        private readonly List<TargetPropertyWithContext> _contextProperties;
-
-        /// <summary>
-        /// How many seconds to wait for task completion before starting new task
-        /// </summary>
-        public int TimeoutSeconds { get; set; } = 2;
-
-        private LoggingServiceV2Client _client;
-        private Platform _platform;
-        private MonitoredResource _resource;
-        private string _logName;
-        private LogNameOneof _logNameToWrite;
-        private Task _prevTask;
-        private long _pendingTaskCount;
-        private CancellationTokenSource _cancelTokenSource;
-        private readonly Func<Task, object, Task> _writeLogEntriesBegin;
-        private readonly Action<Task, object> _writeLogEntriesCompleted;
-
         private static readonly string[] s_oAuthScopes = new string[] { "https://www.googleapis.com/auth/logging.write" };
         private static readonly Dictionary<string, string> s_emptyLabels = new Dictionary<string, string>();
         private static readonly Dictionary<LogLevel, LogSeverity> s_levelMap = new Dictionary<LogLevel, LogSeverity>
@@ -147,6 +52,18 @@ namespace Google.Cloud.Logging.NLog
             { LogLevel.Debug, LogSeverity.Debug },
             { LogLevel.Trace, LogSeverity.Debug },
         };
+
+        private LoggingServiceV2Client _client;
+        private Platform _platform;
+        private MonitoredResource _resource;
+        private string _logName;
+        private LogNameOneof _logNameToWrite;
+        private Task _prevTask;
+        private long _pendingTaskCount;
+        private CancellationTokenSource _cancelTokenSource;
+        private Func<object, Value> _jsonConvertFunction;
+        private readonly Func<Task, object, Task> _writeLogEntriesBegin;
+        private readonly Action<Task, object> _writeLogEntriesCompleted;
 
         /// <summary>
         /// Construct a Google Cloud loggin target.
@@ -163,8 +80,6 @@ namespace Google.Cloud.Logging.NLog
             _contextProperties = new List<TargetPropertyWithContext>();
             _client = client;
             _platform = platform;
-            LogId = "Default";
-            TaskPendingLimit = 5;
             _writeLogEntriesBegin = WriteLogEntriesBegin;
             _writeLogEntriesCompleted = WriteLogEntriesCompleted;
         }
@@ -180,11 +95,74 @@ namespace Google.Cloud.Logging.NLog
             string logId = LogId?.Render(LogEventInfo.CreateNullEvent());
             GaxPreconditions.CheckNotNullOrEmpty(logId, nameof(LogId));
 
+            if (SendJsonPayload)
+            {
+                if (JsonConverter != null)
+                {
+                    // Use the function provided directly.
+                    GaxPreconditions.CheckState(
+                        string.IsNullOrWhiteSpace(JsonConverterTypeName) && string.IsNullOrWhiteSpace(JsonConverterMethodName),
+                        $"{nameof(JsonConverterTypeName)} and {nameof(JsonConverterMethodName)} must not be set along with {nameof(JsonConverter)}.");
+                    _jsonConvertFunction = JsonConverter;
+                }
+                else if (!string.IsNullOrWhiteSpace(JsonConverterTypeName) || !string.IsNullOrWhiteSpace(JsonConverterMethodName))
+                {
+                    // Use the method refered to by type-name and method-name.
+                    GaxPreconditions.CheckState(
+                        !string.IsNullOrWhiteSpace(JsonConverterTypeName) && !string.IsNullOrWhiteSpace(JsonConverterMethodName),
+                        $"Either both or neither of {nameof(JsonConverterTypeName)} and {nameof(JsonConverterMethodName)} must be specified.");
+                    _jsonConvertFunction = BuildAndVerifyJsonConverter();
+                }
+                else
+                {
+                    // Use default json.net based converter.
+                    _jsonConvertFunction = o => ProtoConverter.Convert(o is null ? null : JToken.FromObject(o));
+                }
+            }
+
             ActivateLogIdAndResource(logId);
 
             _client = _client ?? BuildLoggingServiceClient();
 
             base.InitializeTarget();
+        }
+
+        private Func<object, Value> BuildAndVerifyJsonConverter()
+        {
+            var type = System.Type.GetType(JsonConverterTypeName, throwOnError: false);
+            GaxPreconditions.CheckState(type != null, "A type with the specified name cannot be found: '{0}'", JsonConverterTypeName);
+            var methodInfo = type.GetTypeInfo()
+                .GetMethods(BindingFlags.Public | BindingFlags.Static | BindingFlags.Instance)
+                .Where(m => m.Name == JsonConverterMethodName && !m.IsAbstract && !m.IsGenericMethod &&
+                    m.GetParameters().Length == 1 && m.GetParameters()[0].ParameterType == typeof(object) &&
+                    (m.ReturnType == typeof(Value) || typeof(JToken).IsAssignableFrom(m.ReturnType)))
+                .FirstOrDefault();
+            GaxPreconditions.CheckState(methodInfo != null,
+                $"A suitable public method named '{JsonConverterMethodName}' cannot be found in type '{JsonConverterTypeName}'. " +
+                "The public method must have a single parameter of type 'object', and a return type of 'Value' or 'JToken'");
+            object instance = null;
+            if (!methodInfo.IsStatic)
+            {
+                try
+                {
+                    instance = Activator.CreateInstance(type);
+                }
+                catch (Exception e)
+                {
+                    // Acticator.CreateInstance can throw many different exceptions, so catch them all.
+                    throw new InvalidOperationException(
+                        $"Type '{JsonConverterTypeName}' must have a parameterless constructor so it can be instantiated.", e);
+                }
+            }
+            if (methodInfo.ReturnType == typeof(Value))
+            {
+                return (Func<object, Value>)methodInfo.CreateDelegate(typeof(Func<object, Value>), instance);
+            }
+            else
+            {
+                var fn = (Func<object, JToken>)methodInfo.CreateDelegate(typeof(Func<object, JToken>), instance);
+                return o => ProtoConverter.Convert(fn(o));
+            }
         }
 
         /// <summary>
@@ -445,42 +423,32 @@ namespace Google.Cloud.Logging.NLog
             {
                 var jsonStruct = new Struct();
                 jsonStruct.Fields.Add("message", Value.ForString(RenderLogEvent(Layout, loggingEvent)));
-
                 var propertiesStruct = new Struct();
                 jsonStruct.Fields.Add("properties", Value.ForStruct(propertiesStruct));
 
-                foreach (var combinedProperty in GetAllProperties(loggingEvent))
+                foreach (var combinedProperty in GetAllProperties(loggingEvent).Where(x => !string.IsNullOrEmpty(x.Key)))
                 {
-                    if (string.IsNullOrEmpty(combinedProperty.Key))
-                    {
-                        continue;
-                    }
-
+                    Value jsonValue;
                     try
                     {
-                        var jsonValue = BuildJsonValue(combinedProperty.Value);
-                        propertiesStruct.Fields.Add(combinedProperty.Key, jsonValue);
+                        jsonValue = _jsonConvertFunction(combinedProperty.Value);
                     }
                     catch (Exception ex)
                     {
-                        InternalLogger.Warn(ex, "GoogleStackdriver(Name={0}): Exception at BuildLogEntry with Key={1}", Name, combinedProperty.Key);
-                        propertiesStruct.Fields.Add(combinedProperty.Key, Value.ForNull());
+                        InternalLogger.Warn(ex,
+                            "GoogleStackdriver(Name={0}): Exception at BuildLogEntry with Key={1}", Name, combinedProperty.Key);
+                        jsonValue = Value.ForString($"<Exception: '{ex.Message}'>");
                     }
+                    propertiesStruct.Fields.Add(combinedProperty.Key, jsonValue);
                 }
-
                 logEntry.JsonPayload = jsonStruct;
             }
             else
             {
                 logEntry.TextPayload = RenderLogEvent(Layout, loggingEvent);
 
-                foreach (var combinedProperty in GetAllProperties(loggingEvent))
+                foreach (var combinedProperty in GetAllProperties(loggingEvent).Where(x => !string.IsNullOrEmpty(x.Key)))
                 {
-                    if (string.IsNullOrEmpty(combinedProperty.Key))
-                    {
-                        continue;
-                    }
-
                     try
                     {
                         logEntry.Labels[combinedProperty.Key] = combinedProperty.Value?.ToString() ?? "null";
@@ -507,87 +475,6 @@ namespace Google.Cloud.Logging.NLog
             }
      
             return logEntry;
-        }
-
-        private static Value BuildJsonValue(object objectValue)
-        {
-            var typeCode = Convert.GetTypeCode(objectValue);
-            switch (typeCode)
-            {
-                case TypeCode.Object:
-                    if (objectValue is System.Collections.IDictionary dictionary)
-                    {
-                        // Using IDictionaryEnumerator from IDictionary.GetEnumerator() as it provides key/value-pair
-                        var dictionaryStruct = new Struct();
-                        var itemEnumerator = dictionary.GetEnumerator();
-                        while (itemEnumerator.MoveNext())
-                        {
-                            var dictionaryKey = itemEnumerator.Key?.ToString();
-                            if (string.IsNullOrEmpty(dictionaryKey))
-                            {
-                                continue;
-                            }
-
-                            var itemTypeCode = Convert.GetTypeCode(itemEnumerator.Value);
-                            dictionaryStruct.Fields.Add(dictionaryKey, BuildSimpleJsonValue(itemTypeCode, itemEnumerator.Value));
-                        }
-                        return Value.ForStruct(dictionaryStruct);
-                    }
-                    else if (objectValue is System.Collections.ICollection collection)
-                    {
-                        // Using foreach to optimize allocations, by only doing single Array-allocations
-                        int collectionIndex = 0;
-                        Value[] collectionStruct = new Value[collection.Count];
-                        foreach (var listItem in collection)
-                        {
-                            var itemTypeCode = Convert.GetTypeCode(listItem);
-                            collectionStruct[collectionIndex++] = BuildSimpleJsonValue(itemTypeCode, listItem);
-                        }
-                        return Value.ForList(collectionStruct);
-                    }
-                    else if (objectValue is System.Collections.IEnumerable enumerable)
-                    {
-                        // Using foreach because System.Linq only works on typed collections IEnumerable<T>
-                        List<Value> collectionStruct = new List<Value>();
-                        foreach (var listItem in enumerable)
-                        {
-                            var itemTypeCode = Convert.GetTypeCode(listItem);
-                            collectionStruct.Add(BuildSimpleJsonValue(itemTypeCode, listItem));
-                        }
-                        return Value.ForList(collectionStruct.ToArray());
-                    }
-                    else
-                    {
-                        return BuildSimpleJsonValue(typeCode, objectValue);
-                    }
-                default:
-                    return BuildSimpleJsonValue(typeCode, objectValue);
-            }
-        }
-
-        private static Value BuildSimpleJsonValue(TypeCode typeCode, object objectValue)
-        {
-            switch (typeCode)
-            {
-                case TypeCode.Empty:
-                    return Value.ForNull();
-                case TypeCode.Boolean:
-                    return Value.ForBool((bool)objectValue);
-                case TypeCode.Decimal:
-                case TypeCode.Double:
-                case TypeCode.Single:
-                case TypeCode.Byte:
-                case TypeCode.SByte:
-                case TypeCode.Int16:
-                case TypeCode.UInt16:
-                case TypeCode.Int32:
-                case TypeCode.UInt32:
-                case TypeCode.Int64:
-                case TypeCode.UInt64:
-                    return Value.ForNumber(Convert.ToDouble(objectValue));
-                default:
-                    return Value.ForString(objectValue?.ToString() ?? "null");
-            }
         }
 
         private static Timestamp ConvertToTimestamp(DateTime dt)

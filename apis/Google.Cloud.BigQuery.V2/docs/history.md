@@ -1,9 +1,10 @@
 # Version history
 
-# 1.3.0-beta01, 2018-06-18
+# 1.3.0-beta02, 2018-07-18
 
-New features:
+New features since 1.2.0:
 
+- Support for the `NUMERIC` type via `BigQueryNumeric`
 - Support for a projection to be specified when listing jobs
 - Support for time-based partitioning in load and query jobs
 - Support for time-based partitioning by a specific field
