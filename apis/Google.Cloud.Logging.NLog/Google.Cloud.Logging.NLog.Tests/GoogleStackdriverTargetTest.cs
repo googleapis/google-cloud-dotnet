@@ -15,7 +15,9 @@
 using Google.Api;
 using Google.Api.Gax;
 using Google.Cloud.Logging.V2;
+using Google.Protobuf.WellKnownTypes;
 using Moq;
+using Newtonsoft.Json.Linq;
 using NLog;
 using NLog.Common;
 using NLog.Config;
@@ -23,6 +25,7 @@ using NLog.Layouts;
 using NLog.Targets;
 using NLog.Targets.Wrappers;
 using System;
+using System.Collections.Concurrent;
 using System.Collections.Generic;
 using System.Linq;
 using System.Runtime.CompilerServices;
@@ -57,7 +60,8 @@ namespace Google.Cloud.Logging.NLog.Tests
             Platform platform = null,
             bool enableResourceTypeDetection = false,
             bool includeCallSiteStackTrace = false,
-            bool includeEventProperties = false)
+            bool includeEventProperties = false,
+            Action<GoogleStackdriverTarget> configFn = null)
         {
             try
             {
@@ -82,6 +86,7 @@ namespace Google.Cloud.Logging.NLog.Tests
                 {
                     googleTarget.ContextProperties.Add(new TargetPropertyWithContext() { Name = metadata.Key, Layout = metadata.Value });
                 }
+                configFn?.Invoke(googleTarget);
                 SimpleConfigurator.ConfigureForTargetLogging(googleTarget);
                 await testFn(googleTarget);
             }
@@ -97,14 +102,15 @@ namespace Google.Cloud.Logging.NLog.Tests
             Platform platform = null,
             bool enableResourceTypeDetection = false,
             bool includeCallSiteStackTrace = false,
-            bool includeEventProperties = false)
+            bool includeEventProperties = false,
+            Action<GoogleStackdriverTarget> configFn = null)
         {
             List<LogEntry> uploadedEntries = new List<LogEntry>();
             await RunTest(entries =>
             {
                 uploadedEntries.AddRange(entries);
                 return Task.FromResult(new WriteLogEntriesResponse());
-            }, testFn, withMetadata, platform, enableResourceTypeDetection, includeCallSiteStackTrace, includeEventProperties);
+            }, testFn, withMetadata, platform, enableResourceTypeDetection, includeCallSiteStackTrace, includeEventProperties, configFn);
             return uploadedEntries;
         }
 
@@ -113,17 +119,25 @@ namespace Google.Cloud.Logging.NLog.Tests
             return new LogEventInfo { Level = level, Message = msg };
         }
 
-        private AsyncContinuation MakeContinuation(TaskCompletionSource<int> tcs) => ex =>
+        private Task ActivateTargetAsync(Target target)
         {
-            if (ex != null)
+            // ConfigureForTargetLogging() and a write are both required to trigger target initialization.
+            SimpleConfigurator.ConfigureForTargetLogging(target);
+            var tcs = new TaskCompletionSource<int>();
+            void Continuation(Exception ex)
             {
-                tcs.SetException(ex);
-            }
-            else
-            {
-                tcs.SetResult(0);
-            }
-        };
+                if (ex != null)
+                {
+                    tcs.SetException(ex);
+                }
+                else
+                {
+                    tcs.SetResult(0);
+                }
+            };
+            target.WriteAsyncLogEvent(new AsyncLogEventInfo(LogEventInfo.CreateNullEvent(), Continuation));
+            return tcs.Task;
+        }
 
         [Fact]
         public async Task InvalidOptions_MultipleCredentials()
@@ -134,14 +148,125 @@ namespace Google.Cloud.Logging.NLog.Tests
                 CredentialFile = Layout.FromString("not_empty"),
                 CredentialJson = Layout.FromString("not_empty"),
             };
-            // ConfigureForTargetLogging() and a write are both required to trigger target initialization.
-            SimpleConfigurator.ConfigureForTargetLogging(target);
-            var tcs = new TaskCompletionSource<int>();
-            target.WriteAsyncLogEvent(new AsyncLogEventInfo(LogEventInfo.CreateNullEvent(), MakeContinuation(tcs)));
-            var nlogEx = await Assert.ThrowsAsync<NLogRuntimeException>(() => tcs.Task);
+            var nlogEx = await Assert.ThrowsAsync<NLogRuntimeException>(() => ActivateTargetAsync(target));
             var innerEx = nlogEx.InnerException;
             Assert.IsType<InvalidOperationException>(innerEx);
             Assert.True(innerEx.Message.Contains("CredentialFile") && innerEx.Message.Contains("CredentialJson"));
+        }
+
+        [Fact]
+        public async Task InvalidOptions_MultipleJsonConverters()
+        {
+            var target = new GoogleStackdriverTarget
+            {
+                ProjectId = "a_project_id",
+                SendJsonPayload = true,
+                JsonConverter = o => Value.ForNull(),
+                JsonConverterTypeName = "a_type_name",
+            };
+            var nlogEx = await Assert.ThrowsAsync<NLogRuntimeException>(() => ActivateTargetAsync(target));
+            Assert.IsType<InvalidOperationException>(nlogEx.InnerException);
+        }
+
+        [Fact]
+        public async Task InvalidOptions_BadJsonConverterType()
+        {
+            var target = new GoogleStackdriverTarget
+            {
+                ProjectId = "a_project_id",
+                SendJsonPayload = true,
+                JsonConverterTypeName = "a_type_name",
+                JsonConverterMethodName = "a_method_name",
+            };
+            var nlogEx = await Assert.ThrowsAsync<NLogRuntimeException>(() => ActivateTargetAsync(target));
+            Assert.IsType<InvalidOperationException>(nlogEx.InnerException);
+            Assert.Contains("a_type_name", nlogEx.InnerException.Message);
+        }
+
+        private class TestJsonConverter
+        {
+            public static ConcurrentBag<string> SeenItems { get; } = new ConcurrentBag<string>();
+
+            public static Value TestJsonConverterMethod_Value_Static(object o)
+            {
+                SeenItems.Add(JToken.FromObject(o).Value<string>());
+                return Value.ForNull();
+            }
+
+            public Value TestJsonConverterMethod_Value_Instance(object o)
+            {
+                SeenItems.Add(JToken.FromObject(o).Value<string>());
+                return Value.ForNull();
+            }
+            public static JToken TestJsonConverterMethod_JToken_Static(object o)
+            {
+                SeenItems.Add(JToken.FromObject(o).Value<string>());
+                return null;
+            }
+
+            public JObject TestJsonConverterMethod_JObject_Instance(object o)
+            {
+                SeenItems.Add(JToken.FromObject(o).Value<string>());
+                return null;
+            }
+        }
+
+        [Fact]
+        public async Task InvalidOptions_BadJsonConverterMethod()
+        {
+            var target = new GoogleStackdriverTarget
+            {
+                ProjectId = "a_project_id",
+                SendJsonPayload = true,
+                JsonConverterTypeName = typeof(TestJsonConverter).AssemblyQualifiedName,
+                JsonConverterMethodName = "a_method_name",
+            };
+            var nlogEx = await Assert.ThrowsAsync<NLogRuntimeException>(() => ActivateTargetAsync(target));
+            Assert.IsType<InvalidOperationException>(nlogEx.InnerException);
+            Assert.Contains("a_method_name", nlogEx.InnerException.Message);
+        }
+
+        [Fact]
+        public async Task CustomJsonConverter()
+        {
+            async Task TestTarget(string methodName)
+            {
+                Assert.DoesNotContain(methodName, TestJsonConverter.SeenItems);
+                await RunTestWorkingServer(configFn: target =>
+                {
+                    target.IncludeEventProperties = true;
+                    target.SendJsonPayload = true;
+                    target.JsonConverterTypeName = typeof(TestJsonConverter).AssemblyQualifiedName;
+                    target.JsonConverterMethodName = methodName;
+                }, testFn: target =>
+                {
+                    LogManager.GetLogger("testlogger").Info("Method:{Method}", methodName);
+                    return Task.FromResult(0);
+                });
+                Assert.Contains(methodName, TestJsonConverter.SeenItems);
+            }
+
+            await TestTarget(nameof(TestJsonConverter.TestJsonConverterMethod_Value_Static));
+            await TestTarget(nameof(TestJsonConverter.TestJsonConverterMethod_Value_Instance));
+            await TestTarget(nameof(TestJsonConverter.TestJsonConverterMethod_JToken_Static));
+            await TestTarget(nameof(TestJsonConverter.TestJsonConverterMethod_JObject_Instance));
+        }
+
+        [Fact]
+        public async Task CustomJsonConverter_Exception()
+        {
+            var uploadedEntries = await RunTestWorkingServer(configFn: target =>
+            {
+                target.IncludeEventProperties = true;
+                target.SendJsonPayload = true;
+                target.JsonConverter = _ => throw new Exception("CustomError");
+            }, testFn: target =>
+            {
+                LogManager.GetLogger("testlogger").Info("{field}", "content (ignored in this test)");
+                return Task.FromResult(0);
+            });
+            Assert.Single(uploadedEntries);
+            Assert.Contains("CustomError", uploadedEntries[0].JsonPayload.Fields["properties"].StructValue.Fields["field"].StringValue);
         }
 
         [Fact]
@@ -202,11 +327,10 @@ namespace Google.Cloud.Logging.NLog.Tests
             var uploadedEntries = await RunTestWorkingServer(
                 googleTarget =>
                 {
-                    googleTarget.SendJsonPayload = true;
                     googleTarget.ContextProperties.Add(new TargetPropertyWithContext() { Name = "Galaxy", Layout = "Milky way" });
                     LogManager.GetLogger("testlogger").Info("Hello {Planet}, width: {Radius} km, life: {Habitable}", "Earth", 6371, true);
                     return Task.FromResult(0);
-                }, includeEventProperties: true);
+                }, includeEventProperties: true, configFn: googleTarget => googleTarget.SendJsonPayload = true);
             Assert.Single(uploadedEntries);
             var entry0 = uploadedEntries[0];
             Assert.Equal("", entry0.TextPayload?.Trim() ?? "");
@@ -224,10 +348,12 @@ namespace Google.Cloud.Logging.NLog.Tests
             var uploadedEntries = await RunTestWorkingServer(
                 googleTarget =>
                 {
-                    googleTarget.SendJsonPayload = true;
-                    LogManager.GetLogger("testlogger").Info("Favorite {Colors} and {Devices}", new string[] { "Red", "Green", "Blue" }, new Dictionary<string,int>{ ["NTSC"] = 1953, ["PAL"] = 1962, ["SECAM"] = 1956 });
+                    LogManager.GetLogger("testlogger").Info(
+                        "Favorite {Colors} and {Devices}",
+                        new string[] { "Red", "Green", "Blue" },
+                        new Dictionary<string,int>{ ["NTSC"] = 1953, ["PAL"] = 1962, ["SECAM"] = 1956 });
                     return Task.FromResult(0);
-                }, includeEventProperties: true);
+                }, includeEventProperties: true, configFn: googleTarget => googleTarget.SendJsonPayload = true);
             Assert.Single(uploadedEntries);
             var entry0 = uploadedEntries[0];
             Assert.Equal("", entry0.TextPayload?.Trim() ?? "");
