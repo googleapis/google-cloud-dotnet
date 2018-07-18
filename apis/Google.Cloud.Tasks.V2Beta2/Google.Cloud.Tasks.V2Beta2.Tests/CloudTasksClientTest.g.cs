@@ -19,6 +19,7 @@ namespace Google.Cloud.Tasks.V2Beta2.Tests
     using Google.Api.Gax;
     using Google.Api.Gax.Grpc;
     using Google.Cloud.Iam.V1;
+    using Google.Cloud.Location;
     using apis = Google.Cloud.Tasks.V2Beta2;
     using Google.Protobuf;
     using Google.Protobuf.WellKnownTypes;
@@ -39,6 +40,8 @@ namespace Google.Cloud.Tasks.V2Beta2.Tests
         public void GetQueue()
         {
             Mock<CloudTasks.CloudTasksClient> mockGrpcClient = new Mock<CloudTasks.CloudTasksClient>(MockBehavior.Strict);
+            mockGrpcClient.Setup(x => x.CreateLocationsClient())
+                .Returns(new Mock<Locations.LocationsClient>().Object);
             GetQueueRequest expectedRequest = new GetQueueRequest
             {
                 QueueName = new QueueName("[PROJECT]", "[LOCATION]", "[QUEUE]"),
@@ -60,6 +63,8 @@ namespace Google.Cloud.Tasks.V2Beta2.Tests
         public async Task GetQueueAsync()
         {
             Mock<CloudTasks.CloudTasksClient> mockGrpcClient = new Mock<CloudTasks.CloudTasksClient>(MockBehavior.Strict);
+            mockGrpcClient.Setup(x => x.CreateLocationsClient())
+                .Returns(new Mock<Locations.LocationsClient>().Object);
             GetQueueRequest expectedRequest = new GetQueueRequest
             {
                 QueueName = new QueueName("[PROJECT]", "[LOCATION]", "[QUEUE]"),
@@ -81,6 +86,8 @@ namespace Google.Cloud.Tasks.V2Beta2.Tests
         public void GetQueue2()
         {
             Mock<CloudTasks.CloudTasksClient> mockGrpcClient = new Mock<CloudTasks.CloudTasksClient>(MockBehavior.Strict);
+            mockGrpcClient.Setup(x => x.CreateLocationsClient())
+                .Returns(new Mock<Locations.LocationsClient>().Object);
             GetQueueRequest request = new GetQueueRequest
             {
                 QueueName = new QueueName("[PROJECT]", "[LOCATION]", "[QUEUE]"),
@@ -101,6 +108,8 @@ namespace Google.Cloud.Tasks.V2Beta2.Tests
         public async Task GetQueueAsync2()
         {
             Mock<CloudTasks.CloudTasksClient> mockGrpcClient = new Mock<CloudTasks.CloudTasksClient>(MockBehavior.Strict);
+            mockGrpcClient.Setup(x => x.CreateLocationsClient())
+                .Returns(new Mock<Locations.LocationsClient>().Object);
             GetQueueRequest request = new GetQueueRequest
             {
                 QueueName = new QueueName("[PROJECT]", "[LOCATION]", "[QUEUE]"),
@@ -121,6 +130,8 @@ namespace Google.Cloud.Tasks.V2Beta2.Tests
         public void CreateQueue()
         {
             Mock<CloudTasks.CloudTasksClient> mockGrpcClient = new Mock<CloudTasks.CloudTasksClient>(MockBehavior.Strict);
+            mockGrpcClient.Setup(x => x.CreateLocationsClient())
+                .Returns(new Mock<Locations.LocationsClient>().Object);
             CreateQueueRequest expectedRequest = new CreateQueueRequest
             {
                 ParentAsLocationName = new LocationName("[PROJECT]", "[LOCATION]"),
@@ -144,6 +155,8 @@ namespace Google.Cloud.Tasks.V2Beta2.Tests
         public async Task CreateQueueAsync()
         {
             Mock<CloudTasks.CloudTasksClient> mockGrpcClient = new Mock<CloudTasks.CloudTasksClient>(MockBehavior.Strict);
+            mockGrpcClient.Setup(x => x.CreateLocationsClient())
+                .Returns(new Mock<Locations.LocationsClient>().Object);
             CreateQueueRequest expectedRequest = new CreateQueueRequest
             {
                 ParentAsLocationName = new LocationName("[PROJECT]", "[LOCATION]"),
@@ -167,6 +180,8 @@ namespace Google.Cloud.Tasks.V2Beta2.Tests
         public void CreateQueue2()
         {
             Mock<CloudTasks.CloudTasksClient> mockGrpcClient = new Mock<CloudTasks.CloudTasksClient>(MockBehavior.Strict);
+            mockGrpcClient.Setup(x => x.CreateLocationsClient())
+                .Returns(new Mock<Locations.LocationsClient>().Object);
             CreateQueueRequest request = new CreateQueueRequest
             {
                 ParentAsLocationName = new LocationName("[PROJECT]", "[LOCATION]"),
@@ -188,6 +203,8 @@ namespace Google.Cloud.Tasks.V2Beta2.Tests
         public async Task CreateQueueAsync2()
         {
             Mock<CloudTasks.CloudTasksClient> mockGrpcClient = new Mock<CloudTasks.CloudTasksClient>(MockBehavior.Strict);
+            mockGrpcClient.Setup(x => x.CreateLocationsClient())
+                .Returns(new Mock<Locations.LocationsClient>().Object);
             CreateQueueRequest request = new CreateQueueRequest
             {
                 ParentAsLocationName = new LocationName("[PROJECT]", "[LOCATION]"),
@@ -209,6 +226,8 @@ namespace Google.Cloud.Tasks.V2Beta2.Tests
         public void UpdateQueue()
         {
             Mock<CloudTasks.CloudTasksClient> mockGrpcClient = new Mock<CloudTasks.CloudTasksClient>(MockBehavior.Strict);
+            mockGrpcClient.Setup(x => x.CreateLocationsClient())
+                .Returns(new Mock<Locations.LocationsClient>().Object);
             UpdateQueueRequest expectedRequest = new UpdateQueueRequest
             {
                 Queue = new apis::Queue(),
@@ -232,6 +251,8 @@ namespace Google.Cloud.Tasks.V2Beta2.Tests
         public async Task UpdateQueueAsync()
         {
             Mock<CloudTasks.CloudTasksClient> mockGrpcClient = new Mock<CloudTasks.CloudTasksClient>(MockBehavior.Strict);
+            mockGrpcClient.Setup(x => x.CreateLocationsClient())
+                .Returns(new Mock<Locations.LocationsClient>().Object);
             UpdateQueueRequest expectedRequest = new UpdateQueueRequest
             {
                 Queue = new apis::Queue(),
@@ -255,6 +276,8 @@ namespace Google.Cloud.Tasks.V2Beta2.Tests
         public void UpdateQueue2()
         {
             Mock<CloudTasks.CloudTasksClient> mockGrpcClient = new Mock<CloudTasks.CloudTasksClient>(MockBehavior.Strict);
+            mockGrpcClient.Setup(x => x.CreateLocationsClient())
+                .Returns(new Mock<Locations.LocationsClient>().Object);
             UpdateQueueRequest request = new UpdateQueueRequest
             {
                 Queue = new apis::Queue(),
@@ -275,6 +298,8 @@ namespace Google.Cloud.Tasks.V2Beta2.Tests
         public async Task UpdateQueueAsync2()
         {
             Mock<CloudTasks.CloudTasksClient> mockGrpcClient = new Mock<CloudTasks.CloudTasksClient>(MockBehavior.Strict);
+            mockGrpcClient.Setup(x => x.CreateLocationsClient())
+                .Returns(new Mock<Locations.LocationsClient>().Object);
             UpdateQueueRequest request = new UpdateQueueRequest
             {
                 Queue = new apis::Queue(),
@@ -295,6 +320,8 @@ namespace Google.Cloud.Tasks.V2Beta2.Tests
         public void DeleteQueue()
         {
             Mock<CloudTasks.CloudTasksClient> mockGrpcClient = new Mock<CloudTasks.CloudTasksClient>(MockBehavior.Strict);
+            mockGrpcClient.Setup(x => x.CreateLocationsClient())
+                .Returns(new Mock<Locations.LocationsClient>().Object);
             DeleteQueueRequest expectedRequest = new DeleteQueueRequest
             {
                 QueueName = new QueueName("[PROJECT]", "[LOCATION]", "[QUEUE]"),
@@ -312,6 +339,8 @@ namespace Google.Cloud.Tasks.V2Beta2.Tests
         public async Task DeleteQueueAsync()
         {
             Mock<CloudTasks.CloudTasksClient> mockGrpcClient = new Mock<CloudTasks.CloudTasksClient>(MockBehavior.Strict);
+            mockGrpcClient.Setup(x => x.CreateLocationsClient())
+                .Returns(new Mock<Locations.LocationsClient>().Object);
             DeleteQueueRequest expectedRequest = new DeleteQueueRequest
             {
                 QueueName = new QueueName("[PROJECT]", "[LOCATION]", "[QUEUE]"),
@@ -329,6 +358,8 @@ namespace Google.Cloud.Tasks.V2Beta2.Tests
         public void DeleteQueue2()
         {
             Mock<CloudTasks.CloudTasksClient> mockGrpcClient = new Mock<CloudTasks.CloudTasksClient>(MockBehavior.Strict);
+            mockGrpcClient.Setup(x => x.CreateLocationsClient())
+                .Returns(new Mock<Locations.LocationsClient>().Object);
             DeleteQueueRequest request = new DeleteQueueRequest
             {
                 QueueName = new QueueName("[PROJECT]", "[LOCATION]", "[QUEUE]"),
@@ -345,6 +376,8 @@ namespace Google.Cloud.Tasks.V2Beta2.Tests
         public async Task DeleteQueueAsync2()
         {
             Mock<CloudTasks.CloudTasksClient> mockGrpcClient = new Mock<CloudTasks.CloudTasksClient>(MockBehavior.Strict);
+            mockGrpcClient.Setup(x => x.CreateLocationsClient())
+                .Returns(new Mock<Locations.LocationsClient>().Object);
             DeleteQueueRequest request = new DeleteQueueRequest
             {
                 QueueName = new QueueName("[PROJECT]", "[LOCATION]", "[QUEUE]"),
@@ -361,6 +394,8 @@ namespace Google.Cloud.Tasks.V2Beta2.Tests
         public void PurgeQueue()
         {
             Mock<CloudTasks.CloudTasksClient> mockGrpcClient = new Mock<CloudTasks.CloudTasksClient>(MockBehavior.Strict);
+            mockGrpcClient.Setup(x => x.CreateLocationsClient())
+                .Returns(new Mock<Locations.LocationsClient>().Object);
             PurgeQueueRequest expectedRequest = new PurgeQueueRequest
             {
                 QueueName = new QueueName("[PROJECT]", "[LOCATION]", "[QUEUE]"),
@@ -382,6 +417,8 @@ namespace Google.Cloud.Tasks.V2Beta2.Tests
         public async Task PurgeQueueAsync()
         {
             Mock<CloudTasks.CloudTasksClient> mockGrpcClient = new Mock<CloudTasks.CloudTasksClient>(MockBehavior.Strict);
+            mockGrpcClient.Setup(x => x.CreateLocationsClient())
+                .Returns(new Mock<Locations.LocationsClient>().Object);
             PurgeQueueRequest expectedRequest = new PurgeQueueRequest
             {
                 QueueName = new QueueName("[PROJECT]", "[LOCATION]", "[QUEUE]"),
@@ -403,6 +440,8 @@ namespace Google.Cloud.Tasks.V2Beta2.Tests
         public void PurgeQueue2()
         {
             Mock<CloudTasks.CloudTasksClient> mockGrpcClient = new Mock<CloudTasks.CloudTasksClient>(MockBehavior.Strict);
+            mockGrpcClient.Setup(x => x.CreateLocationsClient())
+                .Returns(new Mock<Locations.LocationsClient>().Object);
             PurgeQueueRequest request = new PurgeQueueRequest
             {
                 QueueName = new QueueName("[PROJECT]", "[LOCATION]", "[QUEUE]"),
@@ -423,6 +462,8 @@ namespace Google.Cloud.Tasks.V2Beta2.Tests
         public async Task PurgeQueueAsync2()
         {
             Mock<CloudTasks.CloudTasksClient> mockGrpcClient = new Mock<CloudTasks.CloudTasksClient>(MockBehavior.Strict);
+            mockGrpcClient.Setup(x => x.CreateLocationsClient())
+                .Returns(new Mock<Locations.LocationsClient>().Object);
             PurgeQueueRequest request = new PurgeQueueRequest
             {
                 QueueName = new QueueName("[PROJECT]", "[LOCATION]", "[QUEUE]"),
@@ -443,6 +484,8 @@ namespace Google.Cloud.Tasks.V2Beta2.Tests
         public void PauseQueue()
         {
             Mock<CloudTasks.CloudTasksClient> mockGrpcClient = new Mock<CloudTasks.CloudTasksClient>(MockBehavior.Strict);
+            mockGrpcClient.Setup(x => x.CreateLocationsClient())
+                .Returns(new Mock<Locations.LocationsClient>().Object);
             PauseQueueRequest expectedRequest = new PauseQueueRequest
             {
                 QueueName = new QueueName("[PROJECT]", "[LOCATION]", "[QUEUE]"),
@@ -464,6 +507,8 @@ namespace Google.Cloud.Tasks.V2Beta2.Tests
         public async Task PauseQueueAsync()
         {
             Mock<CloudTasks.CloudTasksClient> mockGrpcClient = new Mock<CloudTasks.CloudTasksClient>(MockBehavior.Strict);
+            mockGrpcClient.Setup(x => x.CreateLocationsClient())
+                .Returns(new Mock<Locations.LocationsClient>().Object);
             PauseQueueRequest expectedRequest = new PauseQueueRequest
             {
                 QueueName = new QueueName("[PROJECT]", "[LOCATION]", "[QUEUE]"),
@@ -485,6 +530,8 @@ namespace Google.Cloud.Tasks.V2Beta2.Tests
         public void PauseQueue2()
         {
             Mock<CloudTasks.CloudTasksClient> mockGrpcClient = new Mock<CloudTasks.CloudTasksClient>(MockBehavior.Strict);
+            mockGrpcClient.Setup(x => x.CreateLocationsClient())
+                .Returns(new Mock<Locations.LocationsClient>().Object);
             PauseQueueRequest request = new PauseQueueRequest
             {
                 QueueName = new QueueName("[PROJECT]", "[LOCATION]", "[QUEUE]"),
@@ -505,6 +552,8 @@ namespace Google.Cloud.Tasks.V2Beta2.Tests
         public async Task PauseQueueAsync2()
         {
             Mock<CloudTasks.CloudTasksClient> mockGrpcClient = new Mock<CloudTasks.CloudTasksClient>(MockBehavior.Strict);
+            mockGrpcClient.Setup(x => x.CreateLocationsClient())
+                .Returns(new Mock<Locations.LocationsClient>().Object);
             PauseQueueRequest request = new PauseQueueRequest
             {
                 QueueName = new QueueName("[PROJECT]", "[LOCATION]", "[QUEUE]"),
@@ -525,6 +574,8 @@ namespace Google.Cloud.Tasks.V2Beta2.Tests
         public void ResumeQueue()
         {
             Mock<CloudTasks.CloudTasksClient> mockGrpcClient = new Mock<CloudTasks.CloudTasksClient>(MockBehavior.Strict);
+            mockGrpcClient.Setup(x => x.CreateLocationsClient())
+                .Returns(new Mock<Locations.LocationsClient>().Object);
             ResumeQueueRequest expectedRequest = new ResumeQueueRequest
             {
                 QueueName = new QueueName("[PROJECT]", "[LOCATION]", "[QUEUE]"),
@@ -546,6 +597,8 @@ namespace Google.Cloud.Tasks.V2Beta2.Tests
         public async Task ResumeQueueAsync()
         {
             Mock<CloudTasks.CloudTasksClient> mockGrpcClient = new Mock<CloudTasks.CloudTasksClient>(MockBehavior.Strict);
+            mockGrpcClient.Setup(x => x.CreateLocationsClient())
+                .Returns(new Mock<Locations.LocationsClient>().Object);
             ResumeQueueRequest expectedRequest = new ResumeQueueRequest
             {
                 QueueName = new QueueName("[PROJECT]", "[LOCATION]", "[QUEUE]"),
@@ -567,6 +620,8 @@ namespace Google.Cloud.Tasks.V2Beta2.Tests
         public void ResumeQueue2()
         {
             Mock<CloudTasks.CloudTasksClient> mockGrpcClient = new Mock<CloudTasks.CloudTasksClient>(MockBehavior.Strict);
+            mockGrpcClient.Setup(x => x.CreateLocationsClient())
+                .Returns(new Mock<Locations.LocationsClient>().Object);
             ResumeQueueRequest request = new ResumeQueueRequest
             {
                 QueueName = new QueueName("[PROJECT]", "[LOCATION]", "[QUEUE]"),
@@ -587,6 +642,8 @@ namespace Google.Cloud.Tasks.V2Beta2.Tests
         public async Task ResumeQueueAsync2()
         {
             Mock<CloudTasks.CloudTasksClient> mockGrpcClient = new Mock<CloudTasks.CloudTasksClient>(MockBehavior.Strict);
+            mockGrpcClient.Setup(x => x.CreateLocationsClient())
+                .Returns(new Mock<Locations.LocationsClient>().Object);
             ResumeQueueRequest request = new ResumeQueueRequest
             {
                 QueueName = new QueueName("[PROJECT]", "[LOCATION]", "[QUEUE]"),
@@ -607,6 +664,8 @@ namespace Google.Cloud.Tasks.V2Beta2.Tests
         public void GetIamPolicy()
         {
             Mock<CloudTasks.CloudTasksClient> mockGrpcClient = new Mock<CloudTasks.CloudTasksClient>(MockBehavior.Strict);
+            mockGrpcClient.Setup(x => x.CreateLocationsClient())
+                .Returns(new Mock<Locations.LocationsClient>().Object);
             GetIamPolicyRequest expectedRequest = new GetIamPolicyRequest
             {
                 ResourceAsResourceName = new QueueName("[PROJECT]", "[LOCATION]", "[QUEUE]"),
@@ -629,6 +688,8 @@ namespace Google.Cloud.Tasks.V2Beta2.Tests
         public async Task GetIamPolicyAsync()
         {
             Mock<CloudTasks.CloudTasksClient> mockGrpcClient = new Mock<CloudTasks.CloudTasksClient>(MockBehavior.Strict);
+            mockGrpcClient.Setup(x => x.CreateLocationsClient())
+                .Returns(new Mock<Locations.LocationsClient>().Object);
             GetIamPolicyRequest expectedRequest = new GetIamPolicyRequest
             {
                 ResourceAsResourceName = new QueueName("[PROJECT]", "[LOCATION]", "[QUEUE]"),
@@ -651,6 +712,8 @@ namespace Google.Cloud.Tasks.V2Beta2.Tests
         public void GetIamPolicy2()
         {
             Mock<CloudTasks.CloudTasksClient> mockGrpcClient = new Mock<CloudTasks.CloudTasksClient>(MockBehavior.Strict);
+            mockGrpcClient.Setup(x => x.CreateLocationsClient())
+                .Returns(new Mock<Locations.LocationsClient>().Object);
             GetIamPolicyRequest request = new GetIamPolicyRequest
             {
                 ResourceAsResourceName = new QueueName("[PROJECT]", "[LOCATION]", "[QUEUE]"),
@@ -672,6 +735,8 @@ namespace Google.Cloud.Tasks.V2Beta2.Tests
         public async Task GetIamPolicyAsync2()
         {
             Mock<CloudTasks.CloudTasksClient> mockGrpcClient = new Mock<CloudTasks.CloudTasksClient>(MockBehavior.Strict);
+            mockGrpcClient.Setup(x => x.CreateLocationsClient())
+                .Returns(new Mock<Locations.LocationsClient>().Object);
             GetIamPolicyRequest request = new GetIamPolicyRequest
             {
                 ResourceAsResourceName = new QueueName("[PROJECT]", "[LOCATION]", "[QUEUE]"),
@@ -693,6 +758,8 @@ namespace Google.Cloud.Tasks.V2Beta2.Tests
         public void SetIamPolicy()
         {
             Mock<CloudTasks.CloudTasksClient> mockGrpcClient = new Mock<CloudTasks.CloudTasksClient>(MockBehavior.Strict);
+            mockGrpcClient.Setup(x => x.CreateLocationsClient())
+                .Returns(new Mock<Locations.LocationsClient>().Object);
             SetIamPolicyRequest expectedRequest = new SetIamPolicyRequest
             {
                 ResourceAsResourceName = new QueueName("[PROJECT]", "[LOCATION]", "[QUEUE]"),
@@ -717,6 +784,8 @@ namespace Google.Cloud.Tasks.V2Beta2.Tests
         public async Task SetIamPolicyAsync()
         {
             Mock<CloudTasks.CloudTasksClient> mockGrpcClient = new Mock<CloudTasks.CloudTasksClient>(MockBehavior.Strict);
+            mockGrpcClient.Setup(x => x.CreateLocationsClient())
+                .Returns(new Mock<Locations.LocationsClient>().Object);
             SetIamPolicyRequest expectedRequest = new SetIamPolicyRequest
             {
                 ResourceAsResourceName = new QueueName("[PROJECT]", "[LOCATION]", "[QUEUE]"),
@@ -741,6 +810,8 @@ namespace Google.Cloud.Tasks.V2Beta2.Tests
         public void SetIamPolicy2()
         {
             Mock<CloudTasks.CloudTasksClient> mockGrpcClient = new Mock<CloudTasks.CloudTasksClient>(MockBehavior.Strict);
+            mockGrpcClient.Setup(x => x.CreateLocationsClient())
+                .Returns(new Mock<Locations.LocationsClient>().Object);
             SetIamPolicyRequest request = new SetIamPolicyRequest
             {
                 ResourceAsResourceName = new QueueName("[PROJECT]", "[LOCATION]", "[QUEUE]"),
@@ -763,6 +834,8 @@ namespace Google.Cloud.Tasks.V2Beta2.Tests
         public async Task SetIamPolicyAsync2()
         {
             Mock<CloudTasks.CloudTasksClient> mockGrpcClient = new Mock<CloudTasks.CloudTasksClient>(MockBehavior.Strict);
+            mockGrpcClient.Setup(x => x.CreateLocationsClient())
+                .Returns(new Mock<Locations.LocationsClient>().Object);
             SetIamPolicyRequest request = new SetIamPolicyRequest
             {
                 ResourceAsResourceName = new QueueName("[PROJECT]", "[LOCATION]", "[QUEUE]"),
@@ -785,6 +858,8 @@ namespace Google.Cloud.Tasks.V2Beta2.Tests
         public void TestIamPermissions()
         {
             Mock<CloudTasks.CloudTasksClient> mockGrpcClient = new Mock<CloudTasks.CloudTasksClient>(MockBehavior.Strict);
+            mockGrpcClient.Setup(x => x.CreateLocationsClient())
+                .Returns(new Mock<Locations.LocationsClient>().Object);
             TestIamPermissionsRequest expectedRequest = new TestIamPermissionsRequest
             {
                 ResourceAsResourceName = new QueueName("[PROJECT]", "[LOCATION]", "[QUEUE]"),
@@ -805,6 +880,8 @@ namespace Google.Cloud.Tasks.V2Beta2.Tests
         public async Task TestIamPermissionsAsync()
         {
             Mock<CloudTasks.CloudTasksClient> mockGrpcClient = new Mock<CloudTasks.CloudTasksClient>(MockBehavior.Strict);
+            mockGrpcClient.Setup(x => x.CreateLocationsClient())
+                .Returns(new Mock<Locations.LocationsClient>().Object);
             TestIamPermissionsRequest expectedRequest = new TestIamPermissionsRequest
             {
                 ResourceAsResourceName = new QueueName("[PROJECT]", "[LOCATION]", "[QUEUE]"),
@@ -825,6 +902,8 @@ namespace Google.Cloud.Tasks.V2Beta2.Tests
         public void TestIamPermissions2()
         {
             Mock<CloudTasks.CloudTasksClient> mockGrpcClient = new Mock<CloudTasks.CloudTasksClient>(MockBehavior.Strict);
+            mockGrpcClient.Setup(x => x.CreateLocationsClient())
+                .Returns(new Mock<Locations.LocationsClient>().Object);
             TestIamPermissionsRequest request = new TestIamPermissionsRequest
             {
                 ResourceAsResourceName = new QueueName("[PROJECT]", "[LOCATION]", "[QUEUE]"),
@@ -843,6 +922,8 @@ namespace Google.Cloud.Tasks.V2Beta2.Tests
         public async Task TestIamPermissionsAsync2()
         {
             Mock<CloudTasks.CloudTasksClient> mockGrpcClient = new Mock<CloudTasks.CloudTasksClient>(MockBehavior.Strict);
+            mockGrpcClient.Setup(x => x.CreateLocationsClient())
+                .Returns(new Mock<Locations.LocationsClient>().Object);
             TestIamPermissionsRequest request = new TestIamPermissionsRequest
             {
                 ResourceAsResourceName = new QueueName("[PROJECT]", "[LOCATION]", "[QUEUE]"),
@@ -861,6 +942,8 @@ namespace Google.Cloud.Tasks.V2Beta2.Tests
         public void GetTask()
         {
             Mock<CloudTasks.CloudTasksClient> mockGrpcClient = new Mock<CloudTasks.CloudTasksClient>(MockBehavior.Strict);
+            mockGrpcClient.Setup(x => x.CreateLocationsClient())
+                .Returns(new Mock<Locations.LocationsClient>().Object);
             GetTaskRequest expectedRequest = new GetTaskRequest
             {
                 TaskName = new TaskName("[PROJECT]", "[LOCATION]", "[QUEUE]", "[TASK]"),
@@ -882,6 +965,8 @@ namespace Google.Cloud.Tasks.V2Beta2.Tests
         public async Task GetTaskAsync()
         {
             Mock<CloudTasks.CloudTasksClient> mockGrpcClient = new Mock<CloudTasks.CloudTasksClient>(MockBehavior.Strict);
+            mockGrpcClient.Setup(x => x.CreateLocationsClient())
+                .Returns(new Mock<Locations.LocationsClient>().Object);
             GetTaskRequest expectedRequest = new GetTaskRequest
             {
                 TaskName = new TaskName("[PROJECT]", "[LOCATION]", "[QUEUE]", "[TASK]"),
@@ -903,6 +988,8 @@ namespace Google.Cloud.Tasks.V2Beta2.Tests
         public void GetTask2()
         {
             Mock<CloudTasks.CloudTasksClient> mockGrpcClient = new Mock<CloudTasks.CloudTasksClient>(MockBehavior.Strict);
+            mockGrpcClient.Setup(x => x.CreateLocationsClient())
+                .Returns(new Mock<Locations.LocationsClient>().Object);
             GetTaskRequest request = new GetTaskRequest
             {
                 TaskName = new TaskName("[PROJECT]", "[LOCATION]", "[QUEUE]", "[TASK]"),
@@ -923,6 +1010,8 @@ namespace Google.Cloud.Tasks.V2Beta2.Tests
         public async Task GetTaskAsync2()
         {
             Mock<CloudTasks.CloudTasksClient> mockGrpcClient = new Mock<CloudTasks.CloudTasksClient>(MockBehavior.Strict);
+            mockGrpcClient.Setup(x => x.CreateLocationsClient())
+                .Returns(new Mock<Locations.LocationsClient>().Object);
             GetTaskRequest request = new GetTaskRequest
             {
                 TaskName = new TaskName("[PROJECT]", "[LOCATION]", "[QUEUE]", "[TASK]"),
@@ -943,6 +1032,8 @@ namespace Google.Cloud.Tasks.V2Beta2.Tests
         public void CreateTask()
         {
             Mock<CloudTasks.CloudTasksClient> mockGrpcClient = new Mock<CloudTasks.CloudTasksClient>(MockBehavior.Strict);
+            mockGrpcClient.Setup(x => x.CreateLocationsClient())
+                .Returns(new Mock<Locations.LocationsClient>().Object);
             CreateTaskRequest expectedRequest = new CreateTaskRequest
             {
                 ParentAsQueueName = new QueueName("[PROJECT]", "[LOCATION]", "[QUEUE]"),
@@ -966,6 +1057,8 @@ namespace Google.Cloud.Tasks.V2Beta2.Tests
         public async Task CreateTaskAsync()
         {
             Mock<CloudTasks.CloudTasksClient> mockGrpcClient = new Mock<CloudTasks.CloudTasksClient>(MockBehavior.Strict);
+            mockGrpcClient.Setup(x => x.CreateLocationsClient())
+                .Returns(new Mock<Locations.LocationsClient>().Object);
             CreateTaskRequest expectedRequest = new CreateTaskRequest
             {
                 ParentAsQueueName = new QueueName("[PROJECT]", "[LOCATION]", "[QUEUE]"),
@@ -989,6 +1082,8 @@ namespace Google.Cloud.Tasks.V2Beta2.Tests
         public void CreateTask2()
         {
             Mock<CloudTasks.CloudTasksClient> mockGrpcClient = new Mock<CloudTasks.CloudTasksClient>(MockBehavior.Strict);
+            mockGrpcClient.Setup(x => x.CreateLocationsClient())
+                .Returns(new Mock<Locations.LocationsClient>().Object);
             CreateTaskRequest request = new CreateTaskRequest
             {
                 ParentAsQueueName = new QueueName("[PROJECT]", "[LOCATION]", "[QUEUE]"),
@@ -1010,6 +1105,8 @@ namespace Google.Cloud.Tasks.V2Beta2.Tests
         public async Task CreateTaskAsync2()
         {
             Mock<CloudTasks.CloudTasksClient> mockGrpcClient = new Mock<CloudTasks.CloudTasksClient>(MockBehavior.Strict);
+            mockGrpcClient.Setup(x => x.CreateLocationsClient())
+                .Returns(new Mock<Locations.LocationsClient>().Object);
             CreateTaskRequest request = new CreateTaskRequest
             {
                 ParentAsQueueName = new QueueName("[PROJECT]", "[LOCATION]", "[QUEUE]"),
@@ -1031,6 +1128,8 @@ namespace Google.Cloud.Tasks.V2Beta2.Tests
         public void DeleteTask()
         {
             Mock<CloudTasks.CloudTasksClient> mockGrpcClient = new Mock<CloudTasks.CloudTasksClient>(MockBehavior.Strict);
+            mockGrpcClient.Setup(x => x.CreateLocationsClient())
+                .Returns(new Mock<Locations.LocationsClient>().Object);
             DeleteTaskRequest expectedRequest = new DeleteTaskRequest
             {
                 TaskName = new TaskName("[PROJECT]", "[LOCATION]", "[QUEUE]", "[TASK]"),
@@ -1048,6 +1147,8 @@ namespace Google.Cloud.Tasks.V2Beta2.Tests
         public async Task DeleteTaskAsync()
         {
             Mock<CloudTasks.CloudTasksClient> mockGrpcClient = new Mock<CloudTasks.CloudTasksClient>(MockBehavior.Strict);
+            mockGrpcClient.Setup(x => x.CreateLocationsClient())
+                .Returns(new Mock<Locations.LocationsClient>().Object);
             DeleteTaskRequest expectedRequest = new DeleteTaskRequest
             {
                 TaskName = new TaskName("[PROJECT]", "[LOCATION]", "[QUEUE]", "[TASK]"),
@@ -1065,6 +1166,8 @@ namespace Google.Cloud.Tasks.V2Beta2.Tests
         public void DeleteTask2()
         {
             Mock<CloudTasks.CloudTasksClient> mockGrpcClient = new Mock<CloudTasks.CloudTasksClient>(MockBehavior.Strict);
+            mockGrpcClient.Setup(x => x.CreateLocationsClient())
+                .Returns(new Mock<Locations.LocationsClient>().Object);
             DeleteTaskRequest request = new DeleteTaskRequest
             {
                 TaskName = new TaskName("[PROJECT]", "[LOCATION]", "[QUEUE]", "[TASK]"),
@@ -1081,6 +1184,8 @@ namespace Google.Cloud.Tasks.V2Beta2.Tests
         public async Task DeleteTaskAsync2()
         {
             Mock<CloudTasks.CloudTasksClient> mockGrpcClient = new Mock<CloudTasks.CloudTasksClient>(MockBehavior.Strict);
+            mockGrpcClient.Setup(x => x.CreateLocationsClient())
+                .Returns(new Mock<Locations.LocationsClient>().Object);
             DeleteTaskRequest request = new DeleteTaskRequest
             {
                 TaskName = new TaskName("[PROJECT]", "[LOCATION]", "[QUEUE]", "[TASK]"),
@@ -1097,6 +1202,8 @@ namespace Google.Cloud.Tasks.V2Beta2.Tests
         public void LeaseTasks()
         {
             Mock<CloudTasks.CloudTasksClient> mockGrpcClient = new Mock<CloudTasks.CloudTasksClient>(MockBehavior.Strict);
+            mockGrpcClient.Setup(x => x.CreateLocationsClient())
+                .Returns(new Mock<Locations.LocationsClient>().Object);
             LeaseTasksRequest request = new LeaseTasksRequest
             {
                 ParentAsQueueName = new QueueName("[PROJECT]", "[LOCATION]", "[QUEUE]"),
@@ -1115,6 +1222,8 @@ namespace Google.Cloud.Tasks.V2Beta2.Tests
         public async Task LeaseTasksAsync()
         {
             Mock<CloudTasks.CloudTasksClient> mockGrpcClient = new Mock<CloudTasks.CloudTasksClient>(MockBehavior.Strict);
+            mockGrpcClient.Setup(x => x.CreateLocationsClient())
+                .Returns(new Mock<Locations.LocationsClient>().Object);
             LeaseTasksRequest request = new LeaseTasksRequest
             {
                 ParentAsQueueName = new QueueName("[PROJECT]", "[LOCATION]", "[QUEUE]"),
@@ -1133,6 +1242,8 @@ namespace Google.Cloud.Tasks.V2Beta2.Tests
         public void AcknowledgeTask()
         {
             Mock<CloudTasks.CloudTasksClient> mockGrpcClient = new Mock<CloudTasks.CloudTasksClient>(MockBehavior.Strict);
+            mockGrpcClient.Setup(x => x.CreateLocationsClient())
+                .Returns(new Mock<Locations.LocationsClient>().Object);
             AcknowledgeTaskRequest expectedRequest = new AcknowledgeTaskRequest
             {
                 TaskName = new TaskName("[PROJECT]", "[LOCATION]", "[QUEUE]", "[TASK]"),
@@ -1152,6 +1263,8 @@ namespace Google.Cloud.Tasks.V2Beta2.Tests
         public async Task AcknowledgeTaskAsync()
         {
             Mock<CloudTasks.CloudTasksClient> mockGrpcClient = new Mock<CloudTasks.CloudTasksClient>(MockBehavior.Strict);
+            mockGrpcClient.Setup(x => x.CreateLocationsClient())
+                .Returns(new Mock<Locations.LocationsClient>().Object);
             AcknowledgeTaskRequest expectedRequest = new AcknowledgeTaskRequest
             {
                 TaskName = new TaskName("[PROJECT]", "[LOCATION]", "[QUEUE]", "[TASK]"),
@@ -1171,6 +1284,8 @@ namespace Google.Cloud.Tasks.V2Beta2.Tests
         public void AcknowledgeTask2()
         {
             Mock<CloudTasks.CloudTasksClient> mockGrpcClient = new Mock<CloudTasks.CloudTasksClient>(MockBehavior.Strict);
+            mockGrpcClient.Setup(x => x.CreateLocationsClient())
+                .Returns(new Mock<Locations.LocationsClient>().Object);
             AcknowledgeTaskRequest request = new AcknowledgeTaskRequest
             {
                 TaskName = new TaskName("[PROJECT]", "[LOCATION]", "[QUEUE]", "[TASK]"),
@@ -1188,6 +1303,8 @@ namespace Google.Cloud.Tasks.V2Beta2.Tests
         public async Task AcknowledgeTaskAsync2()
         {
             Mock<CloudTasks.CloudTasksClient> mockGrpcClient = new Mock<CloudTasks.CloudTasksClient>(MockBehavior.Strict);
+            mockGrpcClient.Setup(x => x.CreateLocationsClient())
+                .Returns(new Mock<Locations.LocationsClient>().Object);
             AcknowledgeTaskRequest request = new AcknowledgeTaskRequest
             {
                 TaskName = new TaskName("[PROJECT]", "[LOCATION]", "[QUEUE]", "[TASK]"),
@@ -1205,6 +1322,8 @@ namespace Google.Cloud.Tasks.V2Beta2.Tests
         public void RenewLease()
         {
             Mock<CloudTasks.CloudTasksClient> mockGrpcClient = new Mock<CloudTasks.CloudTasksClient>(MockBehavior.Strict);
+            mockGrpcClient.Setup(x => x.CreateLocationsClient())
+                .Returns(new Mock<Locations.LocationsClient>().Object);
             RenewLeaseRequest expectedRequest = new RenewLeaseRequest
             {
                 TaskName = new TaskName("[PROJECT]", "[LOCATION]", "[QUEUE]", "[TASK]"),
@@ -1230,6 +1349,8 @@ namespace Google.Cloud.Tasks.V2Beta2.Tests
         public async Task RenewLeaseAsync()
         {
             Mock<CloudTasks.CloudTasksClient> mockGrpcClient = new Mock<CloudTasks.CloudTasksClient>(MockBehavior.Strict);
+            mockGrpcClient.Setup(x => x.CreateLocationsClient())
+                .Returns(new Mock<Locations.LocationsClient>().Object);
             RenewLeaseRequest expectedRequest = new RenewLeaseRequest
             {
                 TaskName = new TaskName("[PROJECT]", "[LOCATION]", "[QUEUE]", "[TASK]"),
@@ -1255,6 +1376,8 @@ namespace Google.Cloud.Tasks.V2Beta2.Tests
         public void RenewLease2()
         {
             Mock<CloudTasks.CloudTasksClient> mockGrpcClient = new Mock<CloudTasks.CloudTasksClient>(MockBehavior.Strict);
+            mockGrpcClient.Setup(x => x.CreateLocationsClient())
+                .Returns(new Mock<Locations.LocationsClient>().Object);
             RenewLeaseRequest request = new RenewLeaseRequest
             {
                 TaskName = new TaskName("[PROJECT]", "[LOCATION]", "[QUEUE]", "[TASK]"),
@@ -1277,6 +1400,8 @@ namespace Google.Cloud.Tasks.V2Beta2.Tests
         public async Task RenewLeaseAsync2()
         {
             Mock<CloudTasks.CloudTasksClient> mockGrpcClient = new Mock<CloudTasks.CloudTasksClient>(MockBehavior.Strict);
+            mockGrpcClient.Setup(x => x.CreateLocationsClient())
+                .Returns(new Mock<Locations.LocationsClient>().Object);
             RenewLeaseRequest request = new RenewLeaseRequest
             {
                 TaskName = new TaskName("[PROJECT]", "[LOCATION]", "[QUEUE]", "[TASK]"),
@@ -1299,6 +1424,8 @@ namespace Google.Cloud.Tasks.V2Beta2.Tests
         public void CancelLease()
         {
             Mock<CloudTasks.CloudTasksClient> mockGrpcClient = new Mock<CloudTasks.CloudTasksClient>(MockBehavior.Strict);
+            mockGrpcClient.Setup(x => x.CreateLocationsClient())
+                .Returns(new Mock<Locations.LocationsClient>().Object);
             CancelLeaseRequest expectedRequest = new CancelLeaseRequest
             {
                 TaskName = new TaskName("[PROJECT]", "[LOCATION]", "[QUEUE]", "[TASK]"),
@@ -1322,6 +1449,8 @@ namespace Google.Cloud.Tasks.V2Beta2.Tests
         public async Task CancelLeaseAsync()
         {
             Mock<CloudTasks.CloudTasksClient> mockGrpcClient = new Mock<CloudTasks.CloudTasksClient>(MockBehavior.Strict);
+            mockGrpcClient.Setup(x => x.CreateLocationsClient())
+                .Returns(new Mock<Locations.LocationsClient>().Object);
             CancelLeaseRequest expectedRequest = new CancelLeaseRequest
             {
                 TaskName = new TaskName("[PROJECT]", "[LOCATION]", "[QUEUE]", "[TASK]"),
@@ -1345,6 +1474,8 @@ namespace Google.Cloud.Tasks.V2Beta2.Tests
         public void CancelLease2()
         {
             Mock<CloudTasks.CloudTasksClient> mockGrpcClient = new Mock<CloudTasks.CloudTasksClient>(MockBehavior.Strict);
+            mockGrpcClient.Setup(x => x.CreateLocationsClient())
+                .Returns(new Mock<Locations.LocationsClient>().Object);
             CancelLeaseRequest request = new CancelLeaseRequest
             {
                 TaskName = new TaskName("[PROJECT]", "[LOCATION]", "[QUEUE]", "[TASK]"),
@@ -1366,6 +1497,8 @@ namespace Google.Cloud.Tasks.V2Beta2.Tests
         public async Task CancelLeaseAsync2()
         {
             Mock<CloudTasks.CloudTasksClient> mockGrpcClient = new Mock<CloudTasks.CloudTasksClient>(MockBehavior.Strict);
+            mockGrpcClient.Setup(x => x.CreateLocationsClient())
+                .Returns(new Mock<Locations.LocationsClient>().Object);
             CancelLeaseRequest request = new CancelLeaseRequest
             {
                 TaskName = new TaskName("[PROJECT]", "[LOCATION]", "[QUEUE]", "[TASK]"),
@@ -1387,6 +1520,8 @@ namespace Google.Cloud.Tasks.V2Beta2.Tests
         public void RunTask()
         {
             Mock<CloudTasks.CloudTasksClient> mockGrpcClient = new Mock<CloudTasks.CloudTasksClient>(MockBehavior.Strict);
+            mockGrpcClient.Setup(x => x.CreateLocationsClient())
+                .Returns(new Mock<Locations.LocationsClient>().Object);
             RunTaskRequest expectedRequest = new RunTaskRequest
             {
                 TaskName = new TaskName("[PROJECT]", "[LOCATION]", "[QUEUE]", "[TASK]"),
@@ -1408,6 +1543,8 @@ namespace Google.Cloud.Tasks.V2Beta2.Tests
         public async Task RunTaskAsync()
         {
             Mock<CloudTasks.CloudTasksClient> mockGrpcClient = new Mock<CloudTasks.CloudTasksClient>(MockBehavior.Strict);
+            mockGrpcClient.Setup(x => x.CreateLocationsClient())
+                .Returns(new Mock<Locations.LocationsClient>().Object);
             RunTaskRequest expectedRequest = new RunTaskRequest
             {
                 TaskName = new TaskName("[PROJECT]", "[LOCATION]", "[QUEUE]", "[TASK]"),
@@ -1429,6 +1566,8 @@ namespace Google.Cloud.Tasks.V2Beta2.Tests
         public void RunTask2()
         {
             Mock<CloudTasks.CloudTasksClient> mockGrpcClient = new Mock<CloudTasks.CloudTasksClient>(MockBehavior.Strict);
+            mockGrpcClient.Setup(x => x.CreateLocationsClient())
+                .Returns(new Mock<Locations.LocationsClient>().Object);
             RunTaskRequest request = new RunTaskRequest
             {
                 TaskName = new TaskName("[PROJECT]", "[LOCATION]", "[QUEUE]", "[TASK]"),
@@ -1449,6 +1588,8 @@ namespace Google.Cloud.Tasks.V2Beta2.Tests
         public async Task RunTaskAsync2()
         {
             Mock<CloudTasks.CloudTasksClient> mockGrpcClient = new Mock<CloudTasks.CloudTasksClient>(MockBehavior.Strict);
+            mockGrpcClient.Setup(x => x.CreateLocationsClient())
+                .Returns(new Mock<Locations.LocationsClient>().Object);
             RunTaskRequest request = new RunTaskRequest
             {
                 TaskName = new TaskName("[PROJECT]", "[LOCATION]", "[QUEUE]", "[TASK]"),

@@ -18,7 +18,9 @@ namespace Google.Cloud.Tasks.V2Beta2.Snippets
 {
     using Google.Api.Gax;
     using Google.Api.Gax.Grpc;
+    using Google.Api.Gax.ResourceNames;
     using Google.Cloud.Iam.V1;
+    using Google.Cloud.Location;
     using apis = Google.Cloud.Tasks.V2Beta2;
     using Google.Protobuf;
     using Google.Protobuf.WellKnownTypes;
@@ -1484,6 +1486,248 @@ namespace Google.Cloud.Tasks.V2Beta2.Snippets
             };
             // Make the request
             apis::Task response = cloudTasksClient.RunTask(request);
+            // End snippet
+        }
+
+        /// <summary>Snippet for ListLocationsAsync</summary>
+        public async Task ListLocationsAsync()
+        {
+            // Snippet: ListLocationsAsync(ProjectName,string,int?,CallSettings)
+            // Create client
+            CloudTasksClient cloudTasksClient = await CloudTasksClient.CreateAsync();
+            // Initialize request argument(s)
+            ProjectName name = new ProjectName("[PROJECT]");
+            // Make the request
+            PagedAsyncEnumerable<ListLocationsResponse, Location> response =
+                cloudTasksClient.ListLocationsAsync(name);
+
+            // Iterate over all response items, lazily performing RPCs as required
+            await response.ForEachAsync((Location item) =>
+            {
+                // Do something with each item
+                Console.WriteLine(item);
+            });
+
+            // Or iterate over pages (of server-defined size), performing one RPC per page
+            await response.AsRawResponses().ForEachAsync((ListLocationsResponse page) =>
+            {
+                // Do something with each page of items
+                Console.WriteLine("A page of results:");
+                foreach (Location item in page)
+                {
+                    Console.WriteLine(item);
+                }
+            });
+
+            // Or retrieve a single page of known size (unless it's the final page), performing as many RPCs as required
+            int pageSize = 10;
+            Page<Location> singlePage = await response.ReadPageAsync(pageSize);
+            // Do something with the page of items
+            Console.WriteLine($"A page of {pageSize} results (unless it's the final page):");
+            foreach (Location item in singlePage)
+            {
+                Console.WriteLine(item);
+            }
+            // Store the pageToken, for when the next page is required.
+            string nextPageToken = singlePage.NextPageToken;
+            // End snippet
+        }
+
+        /// <summary>Snippet for ListLocations</summary>
+        public void ListLocations()
+        {
+            // Snippet: ListLocations(ProjectName,string,int?,CallSettings)
+            // Create client
+            CloudTasksClient cloudTasksClient = CloudTasksClient.Create();
+            // Initialize request argument(s)
+            ProjectName name = new ProjectName("[PROJECT]");
+            // Make the request
+            PagedEnumerable<ListLocationsResponse, Location> response =
+                cloudTasksClient.ListLocations(name);
+
+            // Iterate over all response items, lazily performing RPCs as required
+            foreach (Location item in response)
+            {
+                // Do something with each item
+                Console.WriteLine(item);
+            }
+
+            // Or iterate over pages (of server-defined size), performing one RPC per page
+            foreach (ListLocationsResponse page in response.AsRawResponses())
+            {
+                // Do something with each page of items
+                Console.WriteLine("A page of results:");
+                foreach (Location item in page)
+                {
+                    Console.WriteLine(item);
+                }
+            }
+
+            // Or retrieve a single page of known size (unless it's the final page), performing as many RPCs as required
+            int pageSize = 10;
+            Page<Location> singlePage = response.ReadPage(pageSize);
+            // Do something with the page of items
+            Console.WriteLine($"A page of {pageSize} results (unless it's the final page):");
+            foreach (Location item in singlePage)
+            {
+                Console.WriteLine(item);
+            }
+            // Store the pageToken, for when the next page is required.
+            string nextPageToken = singlePage.NextPageToken;
+            // End snippet
+        }
+
+        /// <summary>Snippet for ListLocationsAsync</summary>
+        public async Task ListLocationsAsync_RequestObject()
+        {
+            // Snippet: ListLocationsAsync(ListLocationsRequest,CallSettings)
+            // Create client
+            CloudTasksClient cloudTasksClient = await CloudTasksClient.CreateAsync();
+            // Initialize request argument(s)
+            ListLocationsRequest request = new ListLocationsRequest
+            {
+                NameAsResourceName = new ProjectName("[PROJECT]"),
+            };
+            // Make the request
+            PagedAsyncEnumerable<ListLocationsResponse, Location> response =
+                cloudTasksClient.ListLocationsAsync(request);
+
+            // Iterate over all response items, lazily performing RPCs as required
+            await response.ForEachAsync((Location item) =>
+            {
+                // Do something with each item
+                Console.WriteLine(item);
+            });
+
+            // Or iterate over pages (of server-defined size), performing one RPC per page
+            await response.AsRawResponses().ForEachAsync((ListLocationsResponse page) =>
+            {
+                // Do something with each page of items
+                Console.WriteLine("A page of results:");
+                foreach (Location item in page)
+                {
+                    Console.WriteLine(item);
+                }
+            });
+
+            // Or retrieve a single page of known size (unless it's the final page), performing as many RPCs as required
+            int pageSize = 10;
+            Page<Location> singlePage = await response.ReadPageAsync(pageSize);
+            // Do something with the page of items
+            Console.WriteLine($"A page of {pageSize} results (unless it's the final page):");
+            foreach (Location item in singlePage)
+            {
+                Console.WriteLine(item);
+            }
+            // Store the pageToken, for when the next page is required.
+            string nextPageToken = singlePage.NextPageToken;
+            // End snippet
+        }
+
+        /// <summary>Snippet for ListLocations</summary>
+        public void ListLocations_RequestObject()
+        {
+            // Snippet: ListLocations(ListLocationsRequest,CallSettings)
+            // Create client
+            CloudTasksClient cloudTasksClient = CloudTasksClient.Create();
+            // Initialize request argument(s)
+            ListLocationsRequest request = new ListLocationsRequest
+            {
+                NameAsResourceName = new ProjectName("[PROJECT]"),
+            };
+            // Make the request
+            PagedEnumerable<ListLocationsResponse, Location> response =
+                cloudTasksClient.ListLocations(request);
+
+            // Iterate over all response items, lazily performing RPCs as required
+            foreach (Location item in response)
+            {
+                // Do something with each item
+                Console.WriteLine(item);
+            }
+
+            // Or iterate over pages (of server-defined size), performing one RPC per page
+            foreach (ListLocationsResponse page in response.AsRawResponses())
+            {
+                // Do something with each page of items
+                Console.WriteLine("A page of results:");
+                foreach (Location item in page)
+                {
+                    Console.WriteLine(item);
+                }
+            }
+
+            // Or retrieve a single page of known size (unless it's the final page), performing as many RPCs as required
+            int pageSize = 10;
+            Page<Location> singlePage = response.ReadPage(pageSize);
+            // Do something with the page of items
+            Console.WriteLine($"A page of {pageSize} results (unless it's the final page):");
+            foreach (Location item in singlePage)
+            {
+                Console.WriteLine(item);
+            }
+            // Store the pageToken, for when the next page is required.
+            string nextPageToken = singlePage.NextPageToken;
+            // End snippet
+        }
+
+        /// <summary>Snippet for GetLocationAsync</summary>
+        public async Task GetLocationAsync()
+        {
+            // Snippet: GetLocationAsync(IResourceName,CallSettings)
+            // Additional: GetLocationAsync(IResourceName,CancellationToken)
+            // Create client
+            CloudTasksClient cloudTasksClient = await CloudTasksClient.CreateAsync();
+            // Initialize request argument(s)
+            IResourceName name = new ProjectName("[PROJECT]");
+            // Make the request
+            Location response = await cloudTasksClient.GetLocationAsync(name);
+            // End snippet
+        }
+
+        /// <summary>Snippet for GetLocation</summary>
+        public void GetLocation()
+        {
+            // Snippet: GetLocation(IResourceName,CallSettings)
+            // Create client
+            CloudTasksClient cloudTasksClient = CloudTasksClient.Create();
+            // Initialize request argument(s)
+            IResourceName name = new ProjectName("[PROJECT]");
+            // Make the request
+            Location response = cloudTasksClient.GetLocation(name);
+            // End snippet
+        }
+
+        /// <summary>Snippet for GetLocationAsync</summary>
+        public async Task GetLocationAsync_RequestObject()
+        {
+            // Snippet: GetLocationAsync(GetLocationRequest,CallSettings)
+            // Additional: GetLocationAsync(GetLocationRequest,CancellationToken)
+            // Create client
+            CloudTasksClient cloudTasksClient = await CloudTasksClient.CreateAsync();
+            // Initialize request argument(s)
+            GetLocationRequest request = new GetLocationRequest
+            {
+                NameAsResourceName = new ProjectName("[PROJECT]"),
+            };
+            // Make the request
+            Location response = await cloudTasksClient.GetLocationAsync(request);
+            // End snippet
+        }
+
+        /// <summary>Snippet for GetLocation</summary>
+        public void GetLocation_RequestObject()
+        {
+            // Snippet: GetLocation(GetLocationRequest,CallSettings)
+            // Create client
+            CloudTasksClient cloudTasksClient = CloudTasksClient.Create();
+            // Initialize request argument(s)
+            GetLocationRequest request = new GetLocationRequest
+            {
+                NameAsResourceName = new ProjectName("[PROJECT]"),
+            };
+            // Make the request
+            Location response = cloudTasksClient.GetLocation(request);
             // End snippet
         }
 
