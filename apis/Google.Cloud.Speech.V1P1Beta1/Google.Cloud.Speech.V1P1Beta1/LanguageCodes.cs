@@ -1,11 +1,11 @@
 ﻿// Copyright 2018 Google LLC
-// 
+//
 // Licensed under the Apache License, Version 2.0 (the "License");
 // you may not use this file except in compliance with the License.
 // You may obtain a copy of the License at
-// 
+//
 //     https://www.apache.org/licenses/LICENSE-2.0
-// 
+//
 // Unless required by applicable law or agreed to in writing, software
 // distributed under the License is distributed on an "AS IS" BASIS,
 // WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
@@ -29,13 +29,21 @@ namespace Google.Cloud.Speech.V1P1Beta1
         // (to just before the closing brace of this class) with the generated text in
         // language-codes.tmp.txt.
 
-        // Generated 2017-03-31; 89 entries.
+        // Generated 2018-07-18; 119 entries.
 
         /// <summary>Language codes for Afrikaans.</summary>
         public static class Afrikaans
         {
             /// <summary>Language code for Afrikaans (South Africa)</summary>
             public const string SouthAfrica = "af-ZA";
+
+        }
+
+        /// <summary>Language codes for Amharic.</summary>
+        public static class Amharic
+        {
+            /// <summary>Language code for Amharic (Ethiopia)</summary>
+            public const string Ethiopia = "am-ET";
 
         }
 
@@ -89,11 +97,38 @@ namespace Google.Cloud.Speech.V1P1Beta1
 
         }
 
+        /// <summary>Language codes for Armenian.</summary>
+        public static class Armenian
+        {
+            /// <summary>Language code for Armenian (Armenia)</summary>
+            public const string Armenia = "hy-AM";
+
+        }
+
+        /// <summary>Language codes for Azerbaijani.</summary>
+        public static class Azerbaijani
+        {
+            /// <summary>Language code for Azerbaijani (Azerbaijan)</summary>
+            public const string Azerbaijan = "az-AZ";
+
+        }
+
         /// <summary>Language codes for Basque.</summary>
         public static class Basque
         {
             /// <summary>Language code for Basque (Spain)</summary>
             public const string Spain = "eu-ES";
+
+        }
+
+        /// <summary>Language codes for Bengali.</summary>
+        public static class Bengali
+        {
+            /// <summary>Language code for Bengali (Bangladesh)</summary>
+            public const string Bangladesh = "bn-BD";
+
+            /// <summary>Language code for Bengali (India)</summary>
+            public const string India = "bn-IN";
 
         }
 
@@ -176,20 +211,32 @@ namespace Google.Cloud.Speech.V1P1Beta1
             /// <summary>Language code for English (Canada)</summary>
             public const string Canada = "en-CA";
 
+            /// <summary>Language code for English (Ghana)</summary>
+            public const string Ghana = "en-GH";
+
             /// <summary>Language code for English (India)</summary>
             public const string India = "en-IN";
 
             /// <summary>Language code for English (Ireland)</summary>
             public const string Ireland = "en-IE";
 
+            /// <summary>Language code for English (Kenya)</summary>
+            public const string Kenya = "en-KE";
+
             /// <summary>Language code for English (New Zealand)</summary>
             public const string NewZealand = "en-NZ";
+
+            /// <summary>Language code for English (Nigeria)</summary>
+            public const string Nigeria = "en-NG";
 
             /// <summary>Language code for English (Philippines)</summary>
             public const string Philippines = "en-PH";
 
             /// <summary>Language code for English (South Africa)</summary>
             public const string SouthAfrica = "en-ZA";
+
+            /// <summary>Language code for English (Tanzania)</summary>
+            public const string Tanzania = "en-TZ";
 
             /// <summary>Language code for English (United Kingdom)</summary>
             public const string UnitedKingdom = "en-GB";
@@ -234,6 +281,14 @@ namespace Google.Cloud.Speech.V1P1Beta1
 
         }
 
+        /// <summary>Language codes for Georgian.</summary>
+        public static class Georgian
+        {
+            /// <summary>Language code for Georgian (Georgia)</summary>
+            public const string Georgia = "ka-GE";
+
+        }
+
         /// <summary>Language codes for German.</summary>
         public static class German
         {
@@ -247,6 +302,14 @@ namespace Google.Cloud.Speech.V1P1Beta1
         {
             /// <summary>Language code for Greek (Greece)</summary>
             public const string Greece = "el-GR";
+
+        }
+
+        /// <summary>Language codes for Gujarati.</summary>
+        public static class Gujarati
+        {
+            /// <summary>Language code for Gujarati (India)</summary>
+            public const string India = "gu-IN";
 
         }
 
@@ -306,11 +369,51 @@ namespace Google.Cloud.Speech.V1P1Beta1
 
         }
 
+        /// <summary>Language codes for Javanese.</summary>
+        public static class Javanese
+        {
+            /// <summary>Language code for Javanese (Indonesia)</summary>
+            public const string Indonesia = "jv-ID";
+
+        }
+
+        /// <summary>Language codes for Kannada.</summary>
+        public static class Kannada
+        {
+            /// <summary>Language code for Kannada (India)</summary>
+            public const string India = "kn-IN";
+
+        }
+
+        /// <summary>Language codes for Khmer.</summary>
+        public static class Khmer
+        {
+            /// <summary>Language code for Khmer (Cambodia)</summary>
+            public const string Cambodia = "km-KH";
+
+        }
+
         /// <summary>Language codes for Korean.</summary>
         public static class Korean
         {
             /// <summary>Language code for Korean (South Korea)</summary>
             public const string SouthKorea = "ko-KR";
+
+        }
+
+        /// <summary>Language codes for Lao.</summary>
+        public static class Lao
+        {
+            /// <summary>Language code for Lao (Laos)</summary>
+            public const string Laos = "lo-LA";
+
+        }
+
+        /// <summary>Language codes for Latvian.</summary>
+        public static class Latvian
+        {
+            /// <summary>Language code for Latvian (Latvia)</summary>
+            public const string Latvia = "lv-LV";
 
         }
 
@@ -327,6 +430,30 @@ namespace Google.Cloud.Speech.V1P1Beta1
         {
             /// <summary>Language code for Malay (Malaysia)</summary>
             public const string Malaysia = "ms-MY";
+
+        }
+
+        /// <summary>Language codes for Malayalam.</summary>
+        public static class Malayalam
+        {
+            /// <summary>Language code for Malayalam (India)</summary>
+            public const string India = "ml-IN";
+
+        }
+
+        /// <summary>Language codes for Marathi.</summary>
+        public static class Marathi
+        {
+            /// <summary>Language code for Marathi (India)</summary>
+            public const string India = "mr-IN";
+
+        }
+
+        /// <summary>Language codes for Nepali.</summary>
+        public static class Nepali
+        {
+            /// <summary>Language code for Nepali (Nepal)</summary>
+            public const string Nepal = "ne-NP";
 
         }
 
@@ -386,6 +513,14 @@ namespace Google.Cloud.Speech.V1P1Beta1
         {
             /// <summary>Language code for Serbian (Serbia)</summary>
             public const string Serbia = "sr-RS";
+
+        }
+
+        /// <summary>Language codes for Sinhala.</summary>
+        public static class Sinhala
+        {
+            /// <summary>Language code for Sinhala (Sri Lanka)</summary>
+            public const string SriLanka = "si-LK";
 
         }
 
@@ -470,11 +605,55 @@ namespace Google.Cloud.Speech.V1P1Beta1
 
         }
 
+        /// <summary>Language codes for Sundanese.</summary>
+        public static class Sundanese
+        {
+            /// <summary>Language code for Sundanese (Indonesia)</summary>
+            public const string Indonesia = "su-ID";
+
+        }
+
+        /// <summary>Language codes for Swahili.</summary>
+        public static class Swahili
+        {
+            /// <summary>Language code for Swahili (Kenya)</summary>
+            public const string Kenya = "sw-KE";
+
+            /// <summary>Language code for Swahili (Tanzania)</summary>
+            public const string Tanzania = "sw-TZ";
+
+        }
+
         /// <summary>Language codes for Swedish.</summary>
         public static class Swedish
         {
             /// <summary>Language code for Swedish (Sweden)</summary>
             public const string Sweden = "sv-SE";
+
+        }
+
+        /// <summary>Language codes for Tamil.</summary>
+        public static class Tamil
+        {
+            /// <summary>Language code for Tamil (India)</summary>
+            public const string India = "ta-IN";
+
+            /// <summary>Language code for Tamil (Malaysia)</summary>
+            public const string Malaysia = "ta-MY";
+
+            /// <summary>Language code for Tamil (Singapore)</summary>
+            public const string Singapore = "ta-SG";
+
+            /// <summary>Language code for Tamil (Sri Lanka)</summary>
+            public const string SriLanka = "ta-LK";
+
+        }
+
+        /// <summary>Language codes for Telugu.</summary>
+        public static class Telugu
+        {
+            /// <summary>Language code for Telugu (India)</summary>
+            public const string India = "te-IN";
 
         }
 
@@ -499,6 +678,17 @@ namespace Google.Cloud.Speech.V1P1Beta1
         {
             /// <summary>Language code for Ukrainian (Ukraine)</summary>
             public const string Ukraine = "uk-UA";
+
+        }
+
+        /// <summary>Language codes for Urdu.</summary>
+        public static class Urdu
+        {
+            /// <summary>Language code for Urdu (India)</summary>
+            public const string India = "ur-IN";
+
+            /// <summary>Language code for Urdu (Pakistan)</summary>
+            public const string Pakistan = "ur-PK";
 
         }
 
