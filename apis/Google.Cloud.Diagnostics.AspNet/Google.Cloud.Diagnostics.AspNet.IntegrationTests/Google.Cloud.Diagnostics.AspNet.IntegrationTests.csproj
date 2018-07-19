@@ -34,4 +34,8 @@
     <PackageReference Include="Microsoft.Owin.Testing" Version="3.0.1" />
     <ProjectReference Include="..\Google.Cloud.Diagnostics.AspNet.Tests\Google.Cloud.Diagnostics.AspNet.Tests.csproj" />
   </ItemGroup>
+  <PropertyGroup>
+    <DebugType>pdbonly</DebugType>
+    <DebugSymbols>true</DebugSymbols>
+  </PropertyGroup>
 </Project>

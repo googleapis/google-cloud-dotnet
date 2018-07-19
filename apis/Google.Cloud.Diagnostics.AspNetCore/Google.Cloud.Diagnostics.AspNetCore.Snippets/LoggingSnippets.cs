@@ -14,7 +14,6 @@
 
 using Google.Cloud.ClientTesting;
 using Google.Cloud.Diagnostics.Common.IntegrationTests;
-using Google.Cloud.Diagnostics.Common.Tests;
 using Google.Cloud.Logging.Type;
 using Microsoft.AspNetCore.Builder;
 using Microsoft.AspNetCore.Hosting;
@@ -45,7 +44,7 @@ namespace Google.Cloud.Diagnostics.AspNetCore.Snippets
 
         public LoggingSnippetsTests()
         {
-            _testId = Utils.GetTestId();
+            _testId = IdGenerator.FromDateTime();
             IWebHostBuilder builder;
 #if NETCOREAPP2_0
             // Sample: RegisterGoogleLogger2

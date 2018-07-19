@@ -14,7 +14,6 @@
 
 using Google.Cloud.ClientTesting;
 using Google.Cloud.Diagnostics.Common.IntegrationTests;
-using Google.Cloud.Diagnostics.Common.Tests;
 using Google.Cloud.ErrorReporting.V1Beta1;
 using Microsoft.Owin.Testing;
 using Owin;
@@ -37,7 +36,7 @@ namespace Google.Cloud.Diagnostics.AspNet.IntegrationTests
         [Fact]
         public async Task NoExceptions()
         {
-            string testId = Utils.GetTestId();
+            string testId = IdGenerator.FromDateTime();
             DateTime startTime = DateTime.UtcNow;
 
             using (TestServer server = TestServer.Create<ErrorReportingTestApplication>())
@@ -53,7 +52,7 @@ namespace Google.Cloud.Diagnostics.AspNet.IntegrationTests
         [Fact]
         public async Task LogsException()
         {
-            string testId = Utils.GetTestId();
+            string testId = IdGenerator.FromDateTime();
             DateTime startTime = DateTime.UtcNow;
 
             using (TestServer server = TestServer.Create<ErrorReportingTestApplication>())
@@ -76,7 +75,7 @@ namespace Google.Cloud.Diagnostics.AspNet.IntegrationTests
         [Fact]
         public async Task LogsMultipleExceptions()
         {
-            string testId = Utils.GetTestId();
+            string testId = IdGenerator.FromDateTime();
             DateTime startTime = DateTime.UtcNow;
 
             using (TestServer server = TestServer.Create<ErrorReportingTestApplication>())
@@ -116,7 +115,7 @@ namespace Google.Cloud.Diagnostics.AspNet.IntegrationTests
         [Fact]
         public async Task LogsThrownInHttpMessageHandler()
         {
-            string testId = Utils.GetTestId();
+            string testId = IdGenerator.FromDateTime();
             DateTime startTime = DateTime.UtcNow;
 
             using (TestServer server = TestServer.Create<ErrorReportingTestApplication>())
@@ -133,7 +132,7 @@ namespace Google.Cloud.Diagnostics.AspNet.IntegrationTests
         [Fact]
         public async Task ManualLog_GoogleLogger()
         {
-            string testId = Utils.GetTestId();
+            string testId = IdGenerator.FromDateTime();
             DateTime startTime = DateTime.UtcNow;
 
             using (TestServer server = TestServer.Create<ErrorReportingTestApplication>())
@@ -150,7 +149,7 @@ namespace Google.Cloud.Diagnostics.AspNet.IntegrationTests
         [Fact]
         public async Task ManualLog_GoogleWebApiLogger()
         {
-            string testId = Utils.GetTestId();
+            string testId = IdGenerator.FromDateTime();
             DateTime startTime = DateTime.UtcNow;
 
             using (TestServer server = TestServer.Create<ErrorReportingTestApplication>())

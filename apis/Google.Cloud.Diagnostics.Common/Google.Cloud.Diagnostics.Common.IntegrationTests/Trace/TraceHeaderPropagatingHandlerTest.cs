@@ -13,7 +13,6 @@
 // limitations under the License.
 
 using Google.Cloud.ClientTesting;
-using Google.Cloud.Diagnostics.Common.Tests;
 using Google.Cloud.Trace.V1;
 using Google.Protobuf.WellKnownTypes;
 using System;
@@ -39,7 +38,7 @@ namespace Google.Cloud.Diagnostics.Common.IntegrationTests
         public async Task TraceOutGoing()
         {
             string googleUri = "https://google.com/";
-            string testId = Utils.GetTestId();
+            string testId = IdGenerator.FromDateTime();
             var spanName = $"{nameof(TraceOutGoing)}-{testId}";
 
             var trace = await TestTracingOutGoingRequest(googleUri, spanName, exceptionExpected: false);
@@ -53,7 +52,7 @@ namespace Google.Cloud.Diagnostics.Common.IntegrationTests
         public async Task TraceOutGoing_Exception()
         {
             string fakeUri = "http://www.thiscannotpossiblyexist934719238.com/";
-            string testId = Utils.GetTestId();
+            string testId = IdGenerator.FromDateTime();
             var spanName = $"{nameof(TraceOutGoing_Exception)}-{testId}";
 
             var trace = await TestTracingOutGoingRequest(fakeUri, spanName, exceptionExpected: true);
@@ -67,7 +66,7 @@ namespace Google.Cloud.Diagnostics.Common.IntegrationTests
         public async Task TraceOutGoing_HttpError()
         {
             string fakeUri = "https://google.com/404";
-            string testId = Utils.GetTestId();
+            string testId = IdGenerator.FromDateTime();
             var spanName = $"{nameof(TraceOutGoing_Exception)}-{testId}";
 
             var trace = await TestTracingOutGoingRequest(fakeUri, spanName, exceptionExpected: false);
