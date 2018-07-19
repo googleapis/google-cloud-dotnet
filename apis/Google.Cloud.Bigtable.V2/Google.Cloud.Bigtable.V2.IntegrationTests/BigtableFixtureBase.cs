@@ -30,7 +30,7 @@ namespace Google.Cloud.Bigtable.V2.IntegrationTests
     {
         private const string EmulatorEnvironmentVariable = "BIGTABLE_EMULATOR_HOST";
         private const string TestInstanceEnvironmentVariable = "BIGTABLE_TEST_INSTANCE";
-        private const string TestProjectEnvironmentVariable = CloudProjectFixtureBase.TestProjectEnvironmentVariable;
+        private const string TestProjectEnvironmentVariable = TestEnvironment.TestProjectEnvironmentVariable;
 
         public ProjectName ProjectName { get; private set; }
         public InstanceName InstanceName { get; private set; }
