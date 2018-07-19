@@ -34,12 +34,12 @@ namespace Google.Cloud.PubSub.V1.Snippets
         /// <summary>
         /// Create a topic ID with a prefix which is used to check which topics to delete at the end of the test.
         /// </summary>
-        internal string CreateTopicId() => TopicPrefix + Guid.NewGuid().ToString().ToLowerInvariant();
+        internal string CreateTopicId() => IdGenerator.FromGuid(prefix: TopicPrefix);
 
         /// <summary>
         /// Create a subscription ID with a prefix which is used to check which subscriptions to delete at the end of the test.
         /// </summary>
-        internal string CreateSubscriptionId() => SubscriptionPrefix + Guid.NewGuid().ToString().ToLowerInvariant();
+        internal string CreateSubscriptionId() => IdGenerator.FromGuid(prefix: SubscriptionPrefix);
 
         public override void Dispose()
         {

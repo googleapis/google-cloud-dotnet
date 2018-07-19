@@ -12,6 +12,7 @@
 // See the License for the specific language governing permissions and
 // limitations under the License.
 
+using Google.Cloud.ClientTesting;
 using System;
 using System.Diagnostics;
 using System.IO;
@@ -126,7 +127,7 @@ namespace Google.Cloud.Metadata.V1.IntegrationTests
             ThrowEmulatorError($"The metadata server emulator exited with code {emulatorProcess.ExitCode}");
         }
 
-        public string GenerateCustomKey() => Guid.NewGuid().ToString();
+        public string GenerateCustomKey() => IdGenerator.FromGuid();
 
         private void ThrowEmulatorError(string message)
         {

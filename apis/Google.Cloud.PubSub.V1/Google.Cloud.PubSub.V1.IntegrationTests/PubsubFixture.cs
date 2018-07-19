@@ -26,9 +26,9 @@ namespace Google.Cloud.PubSub.V1.IntegrationTests
         private const string TopicPrefix = "integration-topic-";
         private const string SubscriptionPrefix = "integration-sub-";
 
-        internal string CreateTopicId() => TopicPrefix + Guid.NewGuid().ToString().ToLowerInvariant();
+        internal string CreateTopicId() => IdGenerator.FromGuid(prefix: TopicPrefix);
 
-        internal string CreateSubscriptionId() => SubscriptionPrefix + Guid.NewGuid().ToString().ToLowerInvariant();
+        internal string CreateSubscriptionId() => IdGenerator.FromGuid(prefix: SubscriptionPrefix);
 
         public override void Dispose()
         {
