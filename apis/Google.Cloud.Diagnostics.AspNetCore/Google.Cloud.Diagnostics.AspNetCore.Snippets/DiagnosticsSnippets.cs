@@ -13,7 +13,6 @@
 // limitations under the License.
 
 using Google.Cloud.ClientTesting;
-using Google.Cloud.Diagnostics.Common.Tests;
 using Google.Protobuf.WellKnownTypes;
 using Microsoft.AspNetCore.Hosting;
 using Microsoft.AspNetCore.TestHost;
@@ -52,7 +51,7 @@ namespace Google.Cloud.Diagnostics.AspNetCore.Snippets
             _server = new TestServer(webHostBuilder);
             _client = _server.CreateClient();
 
-            _testId = Utils.GetTestId();
+            _testId = IdGenerator.FromDateTime();
             _startTime = DateTime.UtcNow;
         }
 

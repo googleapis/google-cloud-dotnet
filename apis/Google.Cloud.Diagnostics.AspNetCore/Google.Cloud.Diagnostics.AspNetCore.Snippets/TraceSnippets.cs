@@ -15,7 +15,6 @@
 using Google.Cloud.ClientTesting;
 using Google.Cloud.Diagnostics.Common;
 using Google.Cloud.Diagnostics.Common.IntegrationTests;
-using Google.Cloud.Diagnostics.Common.Tests;
 using Google.Protobuf.WellKnownTypes;
 using Microsoft.AspNetCore.Builder;
 using Microsoft.AspNetCore.Hosting;
@@ -46,7 +45,7 @@ namespace Google.Cloud.Diagnostics.AspNetCore.Snippets
 
         public TraceSnippetsTests()
         {
-            _testId = Utils.GetTestId();
+            _testId = IdGenerator.FromDateTime();
 
             var builder = new WebHostBuilder().UseStartup<TraceTestApplication>();
             _server = new TestServer(builder);

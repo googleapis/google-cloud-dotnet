@@ -12,16 +12,10 @@
 // See the License for the specific language governing permissions and
 // limitations under the License.
 
-using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Threading;
-using System.Threading.Tasks;
 using Google.Api;
 using Google.Cloud.ClientTesting;
 using Google.Cloud.Diagnostics.Common;
 using Google.Cloud.Diagnostics.Common.IntegrationTests;
-using Google.Cloud.Diagnostics.Common.Tests;
 using Google.Cloud.Logging.Type;
 using Microsoft.AspNetCore.Builder;
 using Microsoft.AspNetCore.Hosting;
@@ -31,6 +25,11 @@ using Microsoft.AspNetCore.TestHost;
 using Microsoft.Extensions.DependencyInjection;
 using Microsoft.Extensions.DependencyInjection.Extensions;
 using Microsoft.Extensions.Logging;
+using System;
+using System.Collections.Generic;
+using System.Linq;
+using System.Threading;
+using System.Threading.Tasks;
 using Xunit;
 
 namespace Google.Cloud.Diagnostics.AspNetCore.IntegrationTests
@@ -42,7 +41,7 @@ namespace Google.Cloud.Diagnostics.AspNetCore.IntegrationTests
         [Fact]
         public async Task Logging_SizedBufferNoLogs()
         {
-            string testId = Utils.GetTestId();
+            string testId = IdGenerator.FromDateTime();
             DateTime startTime = DateTime.UtcNow;
 
             var builder = new WebHostBuilder().UseStartup<SizedBufferErrorLoggerTestApplication>();
@@ -62,7 +61,7 @@ namespace Google.Cloud.Diagnostics.AspNetCore.IntegrationTests
         [Fact]
         public async Task Logging_DisposeFlush()
         {
-            string testId = Utils.GetTestId();
+            string testId = IdGenerator.FromDateTime();
             DateTime startTime = DateTime.UtcNow;
 
             var builder = new WebHostBuilder().UseStartup<SizedBufferErrorLoggerTestApplication>();
@@ -85,7 +84,7 @@ namespace Google.Cloud.Diagnostics.AspNetCore.IntegrationTests
         [Fact]
         public async Task Logging_NoBuffer()
         {
-            string testId = Utils.GetTestId();
+            string testId = IdGenerator.FromDateTime();
             DateTime startTime = DateTime.UtcNow;
 
             var builder = new WebHostBuilder().UseStartup<NoBufferWarningLoggerTestApplication>();
@@ -110,7 +109,7 @@ namespace Google.Cloud.Diagnostics.AspNetCore.IntegrationTests
         [Fact]
         public async Task Logging_SizedBuffer()
         {
-            string testId = Utils.GetTestId();
+            string testId = IdGenerator.FromDateTime();
             DateTime startTime = DateTime.UtcNow;
 
             var builder = new WebHostBuilder().UseStartup<SizedBufferErrorLoggerTestApplication>();
@@ -147,7 +146,7 @@ namespace Google.Cloud.Diagnostics.AspNetCore.IntegrationTests
             // flush itself we use custom polling to check for the initial check that no
             // entries exist.
             var quickPolling = new LogEntryPolling(TimeSpan.FromSeconds(10));
-            string testId = Utils.GetTestId();
+            string testId = IdGenerator.FromDateTime();
             DateTime startTime = DateTime.UtcNow;
 
             var builder = new WebHostBuilder().UseStartup<TimedBufferWarningLoggerTestApplication>();
@@ -175,7 +174,7 @@ namespace Google.Cloud.Diagnostics.AspNetCore.IntegrationTests
         [Fact]
         public async Task Logging_MonitoredResource()
         {
-            string testId = Utils.GetTestId();
+            string testId = IdGenerator.FromDateTime();
             DateTime startTime = DateTime.UtcNow;
 
             var builder = new WebHostBuilder().UseStartup<NoBufferResourceLoggerTestApplication>();
@@ -197,7 +196,7 @@ namespace Google.Cloud.Diagnostics.AspNetCore.IntegrationTests
         [Fact]
         public async Task Logging_Scope()
         {
-            string testId = Utils.GetTestId();
+            string testId = IdGenerator.FromDateTime();
             DateTime startTime = DateTime.UtcNow;
 
             var builder = new WebHostBuilder().UseStartup<NoBufferResourceLoggerTestApplication>();
@@ -215,7 +214,7 @@ namespace Google.Cloud.Diagnostics.AspNetCore.IntegrationTests
         [Fact]
         public async Task Logging_FormatParameter()
         {
-            string testId = Utils.GetTestId();
+            string testId = IdGenerator.FromDateTime();
             DateTime startTime = DateTime.UtcNow;
 
             var builder = new WebHostBuilder().UseStartup<NoBufferResourceLoggerTestApplication>();
@@ -240,7 +239,7 @@ namespace Google.Cloud.Diagnostics.AspNetCore.IntegrationTests
         public async Task Logging_Trace()
         {
             string traceId = "105445aa7843bc8bf206b12000100f00";
-            string testId = Utils.GetTestId();
+            string testId = IdGenerator.FromDateTime();
             DateTime startTime = DateTime.UtcNow;
 
             var builder = new WebHostBuilder().UseStartup<NoBufferWarningLoggerTestApplication>();
@@ -259,7 +258,7 @@ namespace Google.Cloud.Diagnostics.AspNetCore.IntegrationTests
         [Fact]
         public async Task Logging_Labels()
         {
-            string testId = Utils.GetTestId();
+            string testId = IdGenerator.FromDateTime();
             DateTime startTime = DateTime.UtcNow;
 
             var builder = new WebHostBuilder().UseStartup<WarningWithLabelsLoggerTestApplication>();

@@ -15,7 +15,6 @@
 using Google.Cloud.ClientTesting;
 using Google.Cloud.Diagnostics.Common;
 using Google.Cloud.Diagnostics.Common.IntegrationTests;
-using Google.Cloud.Diagnostics.Common.Tests;
 using Google.Protobuf.WellKnownTypes;
 using Microsoft.AspNetCore.Builder;
 using Microsoft.AspNetCore.Hosting;
@@ -47,7 +46,7 @@ namespace Google.Cloud.Diagnostics.AspNetCore.IntegrationTests
         [Fact]
         public async Task Trace()
         {
-            string testId = Utils.GetTestId();
+            string testId = IdGenerator.FromDateTime();
             var startTime = Timestamp.FromDateTime(DateTime.UtcNow);
 
             using (var server = new TestServer(new WebHostBuilder().UseStartup<TraceTestNoBufferHighQpsApplication>()))
@@ -72,7 +71,7 @@ namespace Google.Cloud.Diagnostics.AspNetCore.IntegrationTests
         [Fact]
         public async Task Trace_Label()
         {
-            string testId = Utils.GetTestId();
+            string testId = IdGenerator.FromDateTime();
             var startTime = Timestamp.FromDateTime(DateTime.UtcNow);
 
             using (var server = new TestServer(new WebHostBuilder().UseStartup<TraceTestNoBufferHighQpsApplication>()))
@@ -94,7 +93,7 @@ namespace Google.Cloud.Diagnostics.AspNetCore.IntegrationTests
         [Fact]
         public async Task Trace_StackTrace()
         {
-            string testId = Utils.GetTestId();
+            string testId = IdGenerator.FromDateTime();
             var startTime = Timestamp.FromDateTime(DateTime.UtcNow);
 
             using (var server = new TestServer(new WebHostBuilder().UseStartup<TraceTestNoBufferHighQpsApplication>()))
@@ -120,7 +119,7 @@ namespace Google.Cloud.Diagnostics.AspNetCore.IntegrationTests
             string traceId = TraceIdFactory.Create().NextId();
             ulong spanId = SpanIdFactory.Create().NextId();
 
-            string testId = Utils.GetTestId();           
+            string testId = IdGenerator.FromDateTime();
             var startTime = Timestamp.FromDateTime(DateTime.UtcNow);
 
             using (var server = new TestServer(new WebHostBuilder().UseStartup<TraceTestNoBufferLowQpsApplication>()))
@@ -151,7 +150,7 @@ namespace Google.Cloud.Diagnostics.AspNetCore.IntegrationTests
         [Fact]
         public void Trace_QPS()
         {
-            string testId = Utils.GetTestId();
+            string testId = IdGenerator.FromDateTime();
             var startTime = Timestamp.FromDateTime(DateTime.UtcNow);
 
             using (var server = new TestServer(new WebHostBuilder().UseStartup<TraceTestNoBufferApplication>()))
@@ -173,7 +172,7 @@ namespace Google.Cloud.Diagnostics.AspNetCore.IntegrationTests
         [Fact]
         public async Task Trace_Buffer()
         {
-            string testId = Utils.GetTestId();
+            string testId = IdGenerator.FromDateTime();
             var startTime = Timestamp.FromDateTime(DateTime.UtcNow);
 
             var spanName = TraceController.GetMessage(nameof(TraceController.Trace), testId);
@@ -197,7 +196,7 @@ namespace Google.Cloud.Diagnostics.AspNetCore.IntegrationTests
         [Fact]
         public async Task Trace_Exception()
         {
-            string testId = Utils.GetTestId();
+            string testId = IdGenerator.FromDateTime();
             var startTime = Timestamp.FromDateTime(DateTime.UtcNow);
 
             using (var server = new TestServer(new WebHostBuilder().UseStartup<TraceTestNoBufferHighQpsApplication>()))
@@ -227,7 +226,7 @@ namespace Google.Cloud.Diagnostics.AspNetCore.IntegrationTests
         [Fact]
         public async Task Trace_IgnoreHealthChecks()
         {
-            string testId = Utils.GetTestId();
+            string testId = IdGenerator.FromDateTime();
             var startTime = Timestamp.FromDateTime(DateTime.UtcNow);
 
             using (var server = new TestServer(new WebHostBuilder().UseStartup<TraceTestNoBufferHighQpsApplication>()))

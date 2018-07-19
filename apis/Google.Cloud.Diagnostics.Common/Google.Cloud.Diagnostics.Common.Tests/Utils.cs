@@ -21,12 +21,6 @@ namespace Google.Cloud.Diagnostics.Common.Tests
 {
     internal class Utils
     {
-        /// <summary>A unique test Id.</summary>
-        public static string GetTestId()
-        {
-            return Guid.NewGuid().ToString();
-        }
-
         public static class ConstantSizer<T>
         {
             /// <summary>Always returns 2.</summary>

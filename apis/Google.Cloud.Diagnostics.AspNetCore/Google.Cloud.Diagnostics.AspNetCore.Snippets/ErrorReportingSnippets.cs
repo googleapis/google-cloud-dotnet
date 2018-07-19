@@ -14,7 +14,6 @@
 
 using Google.Cloud.ClientTesting;
 using Google.Cloud.Diagnostics.Common.IntegrationTests;
-using Google.Cloud.Diagnostics.Common.Tests;
 using Microsoft.AspNetCore.Builder;
 using Microsoft.AspNetCore.Hosting;
 using Microsoft.AspNetCore.Mvc;
@@ -43,7 +42,7 @@ namespace Google.Cloud.Diagnostics.AspNetCore.Snippets
 
         public ErrorReportingSnippetsTests()
         {
-            _testId = Utils.GetTestId();
+            _testId = IdGenerator.FromDateTime();
 
             var builder = new WebHostBuilder().UseStartup<ErrorReportingTestApplication>();
             _server = new TestServer(builder);

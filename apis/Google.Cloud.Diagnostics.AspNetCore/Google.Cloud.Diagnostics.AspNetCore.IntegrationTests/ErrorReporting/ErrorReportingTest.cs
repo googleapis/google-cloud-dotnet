@@ -14,7 +14,6 @@
 
 using Google.Cloud.ClientTesting;
 using Google.Cloud.Diagnostics.Common.IntegrationTests;
-using Google.Cloud.Diagnostics.Common.Tests;
 using Google.Cloud.ErrorReporting.V1Beta1;
 using Microsoft.AspNetCore.Builder;
 using Microsoft.AspNetCore.Hosting;
@@ -39,7 +38,7 @@ namespace Google.Cloud.Diagnostics.AspNetCore.IntegrationTests
         [Fact]
         public async Task NoExceptions()
         {
-            string testId = Utils.GetTestId();
+            string testId = IdGenerator.FromDateTime();
             DateTime startTime = DateTime.UtcNow;
 
             var builder = new WebHostBuilder().UseStartup<ErrorReportingTestApplication>();
@@ -56,7 +55,7 @@ namespace Google.Cloud.Diagnostics.AspNetCore.IntegrationTests
         [Fact]
         public async Task ManualLog()
         {
-            string testId = Utils.GetTestId();
+            string testId = IdGenerator.FromDateTime();
             DateTime startTime = DateTime.UtcNow;
 
             var builder = new WebHostBuilder().UseStartup<ErrorReportingTestApplication>();
@@ -74,7 +73,7 @@ namespace Google.Cloud.Diagnostics.AspNetCore.IntegrationTests
         [Fact]
         public async Task LogsException()
         {
-            string testId = Utils.GetTestId();
+            string testId = IdGenerator.FromDateTime();
             DateTime startTime = DateTime.UtcNow;
 
             var builder = new WebHostBuilder().UseStartup<ErrorReportingTestApplication>();
@@ -93,7 +92,7 @@ namespace Google.Cloud.Diagnostics.AspNetCore.IntegrationTests
         [Fact]
         public async Task LogsMultipleExceptions()
         {
-            string testId = Utils.GetTestId();
+            string testId = IdGenerator.FromDateTime();
             DateTime startTime = DateTime.UtcNow;
 
             var builder = new WebHostBuilder().UseStartup<ErrorReportingTestApplication>();

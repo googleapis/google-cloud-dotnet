@@ -36,7 +36,7 @@ namespace Google.Cloud.Diagnostics.Common.IntegrationTests
         private readonly string _projectId = TestEnvironment.GetTestProjectId();
 
         /// <summary>Unique id of the test.</summary>
-        private readonly string _testId = Utils.GetTestId();
+        private readonly string _testId = IdGenerator.FromDateTime();
 
         /// <summary>Test start time to allow for easier querying of traces.</summary>
         private readonly Timestamp _startTime = Timestamp.FromDateTime(DateTime.UtcNow);

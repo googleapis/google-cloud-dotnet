@@ -15,7 +15,6 @@
 using Google.Cloud.ClientTesting;
 using Google.Cloud.Diagnostics.Common;
 using Google.Cloud.Diagnostics.Common.IntegrationTests;
-using Google.Cloud.Diagnostics.Common.Tests;
 using Google.Protobuf.WellKnownTypes;
 using System;
 using System.IO;
@@ -37,7 +36,7 @@ namespace Google.Cloud.Diagnostics.AspNet.IntegrationTests
         public CloudTraceTest()
         {
             _projectId = TestEnvironment.GetTestProjectId();
-            _testId = Utils.GetTestId();
+            _testId = IdGenerator.FromDateTime();
             _startTime = Timestamp.FromDateTime(DateTime.UtcNow);
 
             // Set up a fake HttpContext to trace with.

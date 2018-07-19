@@ -16,7 +16,6 @@ using Google.Api;
 using Google.Cloud.ClientTesting;
 using Google.Cloud.Diagnostics.Common;
 using Google.Cloud.Diagnostics.Common.IntegrationTests;
-using Google.Cloud.Diagnostics.Common.Tests;
 using Google.Cloud.Logging.Type;
 using Google.Protobuf.WellKnownTypes;
 using Microsoft.AspNetCore.Builder;
@@ -70,7 +69,7 @@ namespace Google.Cloud.Diagnostics.AspNetCore.IntegrationTests
         [Fact]
         public async Task UseGoogleDiagnostics_ConfiguresComponents()
         {
-            var testId = Utils.GetTestId();
+            var testId = IdGenerator.FromDateTime();
             var startTime = DateTime.UtcNow;
             var resource = new MonitoredResource
             {
