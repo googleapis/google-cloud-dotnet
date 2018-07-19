@@ -13,6 +13,7 @@
 // limitations under the License.
 
 
+using Google.Cloud.ClientTesting;
 using System;
 using System.Collections.Generic;
 using System.Linq;
@@ -39,7 +40,7 @@ namespace Google.Cloud.BigQuery.V2.IntegrationTests
             var client = BigQueryClient.Create(_fixture.ProjectId);
             var dataset = client.GetDataset(_fixture.DatasetId);
             var table = dataset.GetTable(_fixture.ComplexTypesTableId);
-            var guid = Guid.NewGuid().ToString();
+            var guid = IdGenerator.FromGuid();
             var insertRow = new BigQueryInsertRow
             {
                 ["guid"] = guid,

@@ -89,12 +89,12 @@ namespace Google.Cloud.BigQuery.V2.Snippets
         private string CreateHistoryRow(string player, int score, int level, string gameStartedIso) =>
             $"{player},{score},{level},{gameStartedIso}";
 
-        internal string GenerateDatasetId() => DatasetPrefix + Guid.NewGuid().ToString().Replace('-', '_');
+        internal string GenerateDatasetId() => IdGenerator.FromGuid(prefix: DatasetPrefix, separator: "_");
 
-        internal string GenerateTableId() => Guid.NewGuid().ToString().Replace("-", "_");
+        internal string GenerateTableId() => IdGenerator.FromGuid(separator: "_");
 
-        private string GenerateStorageBucketName() => "bigquerysnippets-" + Guid.NewGuid().ToString().ToLowerInvariant();
-        internal string GenerateStorageObjectName() => "file-" + Guid.NewGuid().ToString();
+        private string GenerateStorageBucketName() => IdGenerator.FromDateTime(prefix: "bigquerysnippets-");
+        internal string GenerateStorageObjectName() => IdGenerator.FromGuid(prefix: "file-");
 
         internal void RegisterDatasetToDelete(string id)
         {

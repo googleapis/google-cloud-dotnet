@@ -12,6 +12,7 @@
 // See the License for the specific language governing permissions and
 // limitations under the License.
 
+using Google.Cloud.ClientTesting;
 using Google.Cloud.Storage.V1;
 using System;
 using System.Collections.Generic;
@@ -103,7 +104,7 @@ namespace Google.Cloud.BigQuery.V2.IntegrationTests
             var dataset = client.GetDataset(_fixture.DatasetId);
             var table = dataset.GetTable(_fixture.ComplexTypesTableId);
 
-            var guid = Guid.NewGuid().ToString();
+            var guid = IdGenerator.FromGuid();
             var row = new BigQueryInsertRow
             {
                 ["guid"] = guid,
@@ -129,7 +130,7 @@ namespace Google.Cloud.BigQuery.V2.IntegrationTests
             var client = BigQueryClient.Create(_fixture.ProjectId);
             var dataset = client.GetDataset(_fixture.DatasetId);
             var table = dataset.GetTable(_fixture.ComplexTypesTableId);
-            var guid = Guid.NewGuid().ToString();
+            var guid = IdGenerator.FromGuid();
             var row = new BigQueryInsertRow
             {
                 ["guid"] = guid,
@@ -156,7 +157,7 @@ namespace Google.Cloud.BigQuery.V2.IntegrationTests
             var client = BigQueryClient.Create(_fixture.ProjectId);
             var dataset = client.GetDataset(_fixture.DatasetId);
             var table = dataset.GetTable(_fixture.ComplexTypesTableId);
-            var guid = Guid.NewGuid().ToString();
+            var guid = IdGenerator.FromGuid();
             var row = new BigQueryInsertRow
             {
                 ["guid"] = guid,
@@ -196,7 +197,7 @@ namespace Google.Cloud.BigQuery.V2.IntegrationTests
             var client = BigQueryClient.Create(_fixture.ProjectId);
             var dataset = client.GetDataset(_fixture.DatasetId);
             var table = dataset.GetTable(_fixture.ComplexTypesTableId);
-            var guid = Guid.NewGuid().ToString();
+            var guid = IdGenerator.FromGuid();
             var row = new BigQueryInsertRow
             {
                 ["guid"] = guid,
