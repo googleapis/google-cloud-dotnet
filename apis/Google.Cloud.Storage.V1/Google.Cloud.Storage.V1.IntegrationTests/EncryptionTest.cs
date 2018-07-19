@@ -12,6 +12,7 @@
 // See the License for the specific language governing permissions and
 // limitations under the License.
 
+using Google.Cloud.ClientTesting;
 using System;
 using System.IO;
 using Xunit;
@@ -43,7 +44,7 @@ namespace Google.Cloud.Storage.V1.IntegrationTests
             var contentType = "application/octet-stream";
             var client = StorageClient.Create(encryptionKey: key);
 
-            var name = GenerateName();
+            var name = IdGenerator.FromGuid();
             client.UploadObject(bucket, name, contentType, data);
             // Client default key
             ValidateData(bucket, name, data, client);
@@ -61,7 +62,7 @@ namespace Google.Cloud.Storage.V1.IntegrationTests
             var contentType = "application/octet-stream";
             var client = StorageClient.Create();
 
-            var name = GenerateName();
+            var name = IdGenerator.FromGuid();
             client.UploadObject(bucket, name, contentType, data, new UploadObjectOptions { EncryptionKey = key });
             Assert.Throws<GoogleApiException>(() => client.DownloadObject(bucket, name, new MemoryStream()));
         }
@@ -75,7 +76,7 @@ namespace Google.Cloud.Storage.V1.IntegrationTests
             var key2 = EncryptionKey.Generate();
             var contentType = "application/octet-stream";
 
-            var name = GenerateName();
+            var name = IdGenerator.FromGuid();
 
             var client1 = StorageClient.Create(encryptionKey: key1);
             client1.UploadObject(_fixture.SingleVersionBucket, name, contentType, data);
@@ -96,7 +97,7 @@ namespace Google.Cloud.Storage.V1.IntegrationTests
             var key = EncryptionKey.Generate();
             var contentType = "application/octet-stream";
             var client = StorageClient.Create();
-            var name = GenerateName();
+            var name = IdGenerator.FromGuid();
 
             var uploaded = client.UploadObject(bucket, name, contentType, data, new UploadObjectOptions { EncryptionKey = key });
             var fetchedWithoutKey = client.GetObject(bucket, name);

@@ -13,6 +13,7 @@
 // limitations under the License.
 
 using Google.Apis.Storage.v1.Data;
+using Google.Cloud.ClientTesting;
 using Xunit;
 using Object = Google.Apis.Storage.v1.Data.Object;
 
@@ -42,7 +43,7 @@ namespace Google.Cloud.Storage.V1.IntegrationTests
             string updatedBucketStorageClass = StorageClasses.Nearline;
 
             string bucketName = _fixture.BucketPrefix + "storage-classes";
-            string objectName = TestHelpers.GenerateName();
+            string objectName = IdGenerator.FromGuid();
             var client = _fixture.Client;
 
             client.CreateBucket(_fixture.ProjectId, new Bucket { Name = bucketName, StorageClass = initialBucketStorageClass });
@@ -68,7 +69,7 @@ namespace Google.Cloud.Storage.V1.IntegrationTests
 
             bucket.StorageClass = updatedBucketStorageClass;
             client.UpdateBucket(bucket);
-            string objectName2 = TestHelpers.GenerateName();
+            string objectName2 = IdGenerator.FromGuid();
 
             var obj2 = client.UploadObject(bucketName, objectName2, "application/octet-stream", TestHelpers.GenerateData(100));
             Assert.Equal(updatedBucketStorageClass, obj2.StorageClass);

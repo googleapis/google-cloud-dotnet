@@ -12,7 +12,7 @@
 // See the License for the specific language governing permissions and
 // limitations under the License.
 
-using System;
+using Google.Cloud.ClientTesting;
 using System.Linq;
 using Xunit;
 using Object = Google.Apis.Storage.v1.Data.Object;
@@ -38,8 +38,8 @@ namespace Google.Cloud.Storage.V1.IntegrationTests
             var sourceBucket = _fixture.ReadBucket;
             var sourceName = _fixture.SmallThenLargeObject;
             var destBucket = _fixture.SingleVersionBucket;
-            var firstGenName = GenerateName();
-            var secondGenName = GenerateName();
+            var firstGenName = IdGenerator.FromGuid();
+            var secondGenName = IdGenerator.FromGuid();
             var generations = client.ListObjects(sourceBucket, sourceName, new ListObjectsOptions { Versions = true })                
                 .Select(o => (long)o.Generation)
                 .OrderBy(o => o)
@@ -56,7 +56,7 @@ namespace Google.Cloud.Storage.V1.IntegrationTests
         [Fact]
         public void CopyLatestGeneration()
         {
-            var destName = GenerateName();
+            var destName = IdGenerator.FromGuid();
             _fixture.Client.CopyObject(
                 _fixture.ReadBucket, _fixture.SmallThenLargeObject,
                 _fixture.SingleVersionBucket, destName);
@@ -67,7 +67,7 @@ namespace Google.Cloud.Storage.V1.IntegrationTests
         [Fact]
         public void NoMetadataOverride()
         {
-            var destName = GenerateName();
+            var destName = IdGenerator.FromGuid();
             _fixture.Client.CopyObject(
                 _fixture.ReadBucket, _fixture.SmallThenLargeObject,
                 _fixture.SingleVersionBucket, destName);
@@ -78,7 +78,7 @@ namespace Google.Cloud.Storage.V1.IntegrationTests
         [Fact]
         public void MetadataOverride()
         {
-            var destName = GenerateName();
+            var destName = IdGenerator.FromGuid();
             _fixture.Client.CopyObject(
                 _fixture.ReadBucket, _fixture.SmallThenLargeObject,
                 _fixture.SingleVersionBucket, destName,

@@ -24,6 +24,7 @@ using System.Threading.Tasks;
 
 using Object = Google.Apis.Storage.v1.Data.Object;
 using Google.Cloud.Iam.V1;
+using Google.Cloud.ClientTesting;
 
 namespace Google.Cloud.Storage.V1.IntegrationTests
 {
@@ -59,8 +60,8 @@ namespace Google.Cloud.Storage.V1.IntegrationTests
             var publisherClient = PublisherServiceApiClient.Create();
             var subscriberClient = SubscriberServiceApiClient.Create();
             var bucket = _fixture.BucketPrefix + "notifications";
-            var topicName = new TopicName(_fixture.ProjectId, $"storage-topic-{Guid.NewGuid()}");
-            var subscriptionName = new SubscriptionName(_fixture.ProjectId, $"storage-sub-{Guid.NewGuid()}");
+            var topicName = new TopicName(_fixture.ProjectId, IdGenerator.FromGuid(prefix: "storage-topic-"));
+            var subscriptionName = new SubscriptionName(_fixture.ProjectId, IdGenerator.FromGuid(prefix: "storage-sub-"));
             publisherClient.CreateTopic(topicName);
 
             // Make sure the Storage service account has permission to publish to the topic.

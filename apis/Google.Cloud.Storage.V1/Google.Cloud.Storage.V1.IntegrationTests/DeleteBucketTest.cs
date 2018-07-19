@@ -14,11 +14,11 @@
 
 using Google.Apis.Storage.v1.Data;
 using System.Net;
+using System.Threading.Tasks;
 using Xunit;
 
 namespace Google.Cloud.Storage.V1.IntegrationTests
 {
-    using System.Threading.Tasks;
     using static TestHelpers;
 
     [Collection(nameof(StorageFixture))]

@@ -12,15 +12,14 @@
 // See the License for the specific language governing permissions and
 // limitations under the License.
 
+using Google.Cloud.ClientTesting;
 using System;
+using System.IO;
 using Xunit;
 using Object = Google.Apis.Storage.v1.Data.Object;
 
 namespace Google.Cloud.Storage.V1.IntegrationTests
 {
-    using System.IO;
-    using static TestHelpers;
-
     [Collection(nameof(StorageFixture))]
     public class PatchObjectTest
     {
@@ -35,7 +34,7 @@ namespace Google.Cloud.Storage.V1.IntegrationTests
         public void Success()
         {
             var client = _fixture.Client;
-            var name = GenerateName();
+            var name = IdGenerator.FromGuid();
             var bucket = _fixture.SingleVersionBucket;
             client.UploadObject(bucket, name, null, new MemoryStream(_fixture.SmallContent));
 
@@ -49,7 +48,7 @@ namespace Google.Cloud.Storage.V1.IntegrationTests
         {
             var client = _fixture.Client;
             Assert.Throws<ArgumentException>(() => client.PatchObject(new Object { Bucket = _fixture.SingleVersionBucket }));
-            Assert.Throws<ArgumentException>(() => client.PatchObject(new Object { Name = GenerateName() }));
+            Assert.Throws<ArgumentException>(() => client.PatchObject(new Object { Name = IdGenerator.FromGuid() }));
         }
     }
 }

@@ -14,6 +14,7 @@
 
 using Google.Apis.Http;
 using Google.Apis.Upload;
+using Google.Cloud.ClientTesting;
 using System;
 using System.Collections.Generic;
 using System.IO;
@@ -41,7 +42,7 @@ namespace Google.Cloud.Storage.V1.IntegrationTests
         [Fact]
         public void SimpleUpload()
         {
-            var name = GenerateName();
+            var name = IdGenerator.FromGuid();
             var contentType = "application/octet-stream";
             var source = GenerateData(100);
             var result = _fixture.Client.UploadObject(_fixture.MultiVersionBucket, name, contentType, source);
@@ -57,7 +58,7 @@ namespace Google.Cloud.Storage.V1.IntegrationTests
             var destination = new Object
             {
                 Bucket = _fixture.MultiVersionBucket,
-                Name = GenerateName(),
+                Name = IdGenerator.FromGuid(),
                 ContentType = "test/type",
                 ContentDisposition = "attachment",
                 Metadata = new Dictionary<string, string> { { "x", "y" } }
@@ -77,7 +78,7 @@ namespace Google.Cloud.Storage.V1.IntegrationTests
         public async Task UploadAsyncWithProgress()
         {
             var chunks = 2;
-            var name = GenerateName();
+            var name = IdGenerator.FromGuid();
             var contentType = "application/octet-stream";
             var source = GenerateData(UploadObjectOptions.MinimumChunkSize * chunks);
             int progressCount = 0;
@@ -95,7 +96,7 @@ namespace Google.Cloud.Storage.V1.IntegrationTests
         {
             var client = _fixture.Client;
             var bucket = _fixture.MultiVersionBucket;
-            var name = GenerateName();
+            var name = IdGenerator.FromGuid();
             var contentType = "application/octet-stream";
             var source1 = GenerateData(100);
             var firstVersion = client.UploadObject(bucket, name, contentType, source1);
@@ -122,7 +123,7 @@ namespace Google.Cloud.Storage.V1.IntegrationTests
         public void UploadObjectIfGenerationMatch_NewFile()
         {
             var stream = GenerateData(50);
-            var name = GenerateName();
+            var name = IdGenerator.FromGuid();
             var exception = Assert.Throws<GoogleApiException>(() => _fixture.Client.UploadObject(
                 _fixture.MultiVersionBucket, name, "", stream,
                 new UploadObjectOptions { IfGenerationMatch = 100 }, null));
@@ -169,7 +170,7 @@ namespace Google.Cloud.Storage.V1.IntegrationTests
         [Fact]
         public void UploadObject_IfGenerationMatchAndNotMatch()
         {
-            Assert.Throws<ArgumentException>(() => _fixture.Client.UploadObject(_fixture.MultiVersionBucket, GenerateName(), "", new MemoryStream(),
+            Assert.Throws<ArgumentException>(() => _fixture.Client.UploadObject(_fixture.MultiVersionBucket, IdGenerator.FromGuid(), "", new MemoryStream(),
                 new UploadObjectOptions { IfGenerationMatch = 1, IfGenerationNotMatch = 2 },
                 null));
         }
@@ -215,7 +216,7 @@ namespace Google.Cloud.Storage.V1.IntegrationTests
         [Fact]
         public void UploadObject_IfMetagenerationMatchAndNotMatch()
         {
-            Assert.Throws<ArgumentException>(() => _fixture.Client.UploadObject(_fixture.MultiVersionBucket, GenerateName(), "", new MemoryStream(),
+            Assert.Throws<ArgumentException>(() => _fixture.Client.UploadObject(_fixture.MultiVersionBucket, IdGenerator.FromGuid(), "", new MemoryStream(),
                 new UploadObjectOptions { IfMetagenerationMatch = 1, IfMetagenerationNotMatch = 2 },
                 null));
         }
@@ -223,7 +224,7 @@ namespace Google.Cloud.Storage.V1.IntegrationTests
         [Fact]
         public void UploadObject_NullContentType()
         {
-            _fixture.Client.UploadObject(_fixture.MultiVersionBucket, GenerateName(), null, new MemoryStream());
+            _fixture.Client.UploadObject(_fixture.MultiVersionBucket, IdGenerator.FromGuid(), null, new MemoryStream());
         }
 
         [Fact]
@@ -233,7 +234,7 @@ namespace Google.Cloud.Storage.V1.IntegrationTests
             var interceptor = new BreakUploadInterceptor();
             client.Service.HttpClient.MessageHandler.AddExecuteInterceptor(interceptor);
             var stream = GenerateData(50);
-            var name = GenerateName();
+            var name = IdGenerator.FromGuid();
             var bucket = _fixture.MultiVersionBucket;
             var options = new UploadObjectOptions { UploadValidationMode = UploadValidationMode.None };
             // Upload succeeds despite the data being broken.
@@ -249,7 +250,7 @@ namespace Google.Cloud.Storage.V1.IntegrationTests
             var interceptor = new BreakUploadInterceptor();
             client.Service.HttpClient.MessageHandler.AddExecuteInterceptor(interceptor);
             var stream = GenerateData(50);
-            var name = GenerateName();
+            var name = IdGenerator.FromGuid();
             var bucket = _fixture.MultiVersionBucket;
             var options = new UploadObjectOptions { UploadValidationMode = UploadValidationMode.ThrowOnly };
             Assert.Throws<UploadValidationException>(() => client.UploadObject(bucket, name, null, stream, options));
@@ -264,7 +265,7 @@ namespace Google.Cloud.Storage.V1.IntegrationTests
             var interceptor = new BreakUploadInterceptor();
             client.Service.HttpClient.MessageHandler.AddExecuteInterceptor(interceptor);
             var stream = GenerateData(50);
-            var name = GenerateName();
+            var name = IdGenerator.FromGuid();
             var bucket = _fixture.MultiVersionBucket;
             var options = new UploadObjectOptions { UploadValidationMode = UploadValidationMode.DeleteAndThrow };
             Assert.Throws<UploadValidationException>(() => client.UploadObject(bucket, name, null, stream, options));
@@ -280,7 +281,7 @@ namespace Google.Cloud.Storage.V1.IntegrationTests
             client.Service.HttpClient.MessageHandler.AddExecuteInterceptor(interceptor);
             client.Service.HttpClient.MessageHandler.AddExecuteInterceptor(new BreakDeleteInterceptor());
             var stream = GenerateData(50);
-            var name = GenerateName();
+            var name = IdGenerator.FromGuid();
             var bucket = _fixture.MultiVersionBucket;
             var options = new UploadObjectOptions { UploadValidationMode = UploadValidationMode.DeleteAndThrow };
             var ex = Assert.Throws<UploadValidationException>(() => client.UploadObject(bucket, name, null, stream, options));
@@ -296,7 +297,7 @@ namespace Google.Cloud.Storage.V1.IntegrationTests
             var interceptor = new BreakUploadInterceptor();
             client.Service.HttpClient.MessageHandler.AddExecuteInterceptor(interceptor);
             var stream = GenerateData(50);
-            var name = GenerateName();
+            var name = IdGenerator.FromGuid();
             var bucket = _fixture.MultiVersionBucket;
             var options = new UploadObjectOptions { UploadValidationMode = UploadValidationMode.None };
             // Upload succeeds despite the data being broken.
@@ -312,7 +313,7 @@ namespace Google.Cloud.Storage.V1.IntegrationTests
             var interceptor = new BreakUploadInterceptor();
             client.Service.HttpClient.MessageHandler.AddExecuteInterceptor(interceptor);
             var stream = GenerateData(50);
-            var name = GenerateName();
+            var name = IdGenerator.FromGuid();
             var bucket = _fixture.MultiVersionBucket;
             var options = new UploadObjectOptions { UploadValidationMode = UploadValidationMode.ThrowOnly };
             await Assert.ThrowsAsync<UploadValidationException>(() => client.UploadObjectAsync(bucket, name, null, stream, options));
@@ -328,7 +329,7 @@ namespace Google.Cloud.Storage.V1.IntegrationTests
             client.Service.HttpClient.MessageHandler.AddExecuteInterceptor(interceptor);
 
             var stream = GenerateData(50);
-            var name = GenerateName();
+            var name = IdGenerator.FromGuid();
             var bucket = _fixture.MultiVersionBucket;
             var options = new UploadObjectOptions { UploadValidationMode = UploadValidationMode.DeleteAndThrow };
             await Assert.ThrowsAsync<UploadValidationException>(() => client.UploadObjectAsync(bucket, name, null, stream, options));
@@ -344,7 +345,7 @@ namespace Google.Cloud.Storage.V1.IntegrationTests
             client.Service.HttpClient.MessageHandler.AddExecuteInterceptor(interceptor);
             client.Service.HttpClient.MessageHandler.AddExecuteInterceptor(new BreakDeleteInterceptor());
             var stream = GenerateData(50);
-            var name = GenerateName();
+            var name = IdGenerator.FromGuid();
             var bucket = _fixture.MultiVersionBucket;
             var options = new UploadObjectOptions { UploadValidationMode = UploadValidationMode.DeleteAndThrow };
             var ex = await Assert.ThrowsAsync<UploadValidationException>(() => client.UploadObjectAsync(bucket, name, null, stream, options));
@@ -398,7 +399,7 @@ namespace Google.Cloud.Storage.V1.IntegrationTests
 
         private Object GetExistingObject()
         {
-            var obj = _fixture.Client.UploadObject(_fixture.MultiVersionBucket, GenerateName(), "application/octet-stream", GenerateData(100));
+            var obj = _fixture.Client.UploadObject(_fixture.MultiVersionBucket, IdGenerator.FromGuid(), "application/octet-stream", GenerateData(100));
             // Clear hash and cache information, ready for a new version.
             obj.Crc32c = null;
             obj.ETag = null;

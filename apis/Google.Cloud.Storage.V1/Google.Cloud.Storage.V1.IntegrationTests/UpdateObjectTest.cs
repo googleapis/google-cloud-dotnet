@@ -12,14 +12,13 @@
 // See the License for the specific language governing permissions and
 // limitations under the License.
 
-using System;
+using Google.Cloud.ClientTesting;
 using System.Collections.Generic;
+using System.IO;
 using Xunit;
 
 namespace Google.Cloud.Storage.V1.IntegrationTests
 {
-    using System.IO;
-    using static TestHelpers;
 
     [Collection(nameof(StorageFixture))]
     public class UpdateObjectTest
@@ -35,7 +34,7 @@ namespace Google.Cloud.Storage.V1.IntegrationTests
         public void Success()
         {
             var client = _fixture.Client;
-            var obj = client.UploadObject(_fixture.SingleVersionBucket, GenerateName(), null,
+            var obj = client.UploadObject(_fixture.SingleVersionBucket, IdGenerator.FromGuid(), null,
                 new MemoryStream(_fixture.SmallContent));
             obj.Metadata = new Dictionary<string, string> { { "key", "value" } };
             var updated = client.UpdateObject(obj);

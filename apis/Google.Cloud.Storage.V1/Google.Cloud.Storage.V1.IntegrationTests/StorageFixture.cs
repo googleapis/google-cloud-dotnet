@@ -152,7 +152,7 @@ namespace Google.Cloud.Storage.V1.IntegrationTests
         public StorageFixture()
         {
             Client = StorageClient.Create();
-            BucketPrefix = "tests-" + Guid.NewGuid().ToString().ToLowerInvariant().Replace("-", "") + "-";
+            BucketPrefix = IdGenerator.FromDateTime(prefix: "tests-", suffix: "-");
             LargeContent = Encoding.UTF8.GetBytes(string.Join("\n", Enumerable.Repeat("All work and no play makes Jack a dull boy.", 500)));
             CreateBucket(SingleVersionBucket, false);
             CreateBucket(MultiVersionBucket, true);
@@ -190,7 +190,7 @@ namespace Google.Cloud.Storage.V1.IntegrationTests
 
         private string CreateRequesterPaysBucket()
         {
-            string name = "dotnet-requesterpays-" + Guid.NewGuid().ToString().ToLowerInvariant();
+            string name = IdGenerator.FromDateTime(prefix: "dotnet-requesterpays-");
             RequesterPaysClient.CreateBucket(RequesterPaysProjectId, new Bucket { Name = name, Billing = new Bucket.BillingData { RequesterPays = true } },
                 new CreateBucketOptions { PredefinedAcl = PredefinedBucketAcl.PublicReadWrite, PredefinedDefaultObjectAcl = PredefinedObjectAcl.PublicRead });
             SleepAfterBucketCreateDelete();
@@ -208,7 +208,7 @@ namespace Google.Cloud.Storage.V1.IntegrationTests
             return bucket;
         }
 
-        internal string GenerateBucketName() => (BucketPrefix + Guid.NewGuid().ToString().Replace("-", "")).Substring(0, 63);
+        internal string GenerateBucketName() => IdGenerator.FromGuid(prefix: BucketPrefix, separator: "", maxLength: 63);
 
         private void CreateAndPopulateReadBucket()
         {

@@ -52,8 +52,8 @@ namespace Google.Cloud.Storage.V1.Snippets
             // Sample: Overview
             var client = StorageClient.Create();
 
-            // Create a bucket
-            var bucketName = Guid.NewGuid().ToString(); // must be globally unique
+            // Create a bucket with a globally unique name
+            var bucketName = Guid.NewGuid().ToString();
             var bucket = client.CreateBucket(projectId, bucketName);
 
             // Upload some files
@@ -172,7 +172,7 @@ namespace Google.Cloud.Storage.V1.Snippets
             var setupClient = StorageClient.Create();
 
             // GCS bucket names must be globally unique
-            var bucketName = Guid.NewGuid().ToString();
+            var bucketName = IdGenerator.FromGuid();
             setupClient.CreateBucket(projectId, bucketName);
             StorageSnippetFixture.SleepAfterBucketCreateDelete();
             _fixture.RegisterBucketToDelete(bucketName);
@@ -206,7 +206,7 @@ namespace Google.Cloud.Storage.V1.Snippets
             var setupClient = StorageClient.Create();
 
             // GCS bucket names must be globally unique
-            var bucketName = Guid.NewGuid().ToString();
+            var bucketName = IdGenerator.FromGuid();
             setupClient.CreateBucket(projectId, bucketName);
             StorageSnippetFixture.SleepAfterBucketCreateDelete();
             _fixture.RegisterBucketToDelete(bucketName);
@@ -499,15 +499,15 @@ namespace Google.Cloud.Storage.V1.Snippets
         {
             var projectId = _fixture.ProjectId;
             var sourceBucket = _fixture.BucketName;
-            var destinationBucket = Guid.NewGuid().ToString();
+            var destinationBucket = IdGenerator.FromGuid();
             StorageClient.Create().CreateBucket(projectId, destinationBucket);
             StorageSnippetFixture.SleepAfterBucketCreateDelete();
             _fixture.RegisterBucketToDelete(destinationBucket);
 
             // Snippet: CopyObject
-            var client = StorageClient.Create();
-            var sourceName = "greetings/hello.txt";
-            var destinationName = "copy.txt";
+            StorageClient client = StorageClient.Create();
+            string sourceName = "greetings/hello.txt";
+            string destinationName = "copy.txt";
 
             // This method actually uses the "rewrite" API operation, for added reliability
             // when copying large objects across locations, storage classes or encryption keys.
@@ -588,7 +588,7 @@ namespace Google.Cloud.Storage.V1.Snippets
         [Fact]
         public void DeleteBucket()
         {
-            var bucketName = Guid.NewGuid().ToString();
+            var bucketName = IdGenerator.FromGuid();
             StorageClient.Create().CreateBucket(_fixture.ProjectId, bucketName);
             StorageSnippetFixture.SleepAfterBucketCreateDelete();
 
@@ -642,7 +642,7 @@ namespace Google.Cloud.Storage.V1.Snippets
         public async Task SetBucketIamPolicy()
         {
             var projectId = _fixture.ProjectId;
-            var bucketName = Guid.NewGuid().ToString();
+            var bucketName = IdGenerator.FromGuid();
             _fixture.RegisterBucketToDelete(bucketName);
 
             // Snippet: SetBucketIamPolicy(string, *, *)
@@ -930,7 +930,7 @@ namespace Google.Cloud.Storage.V1.Snippets
         {
             string projectId = _fixture.ProjectId;
             string bucket = _fixture.BucketName;
-            string topicId = "topic-" + Guid.NewGuid().ToString().ToLowerInvariant();
+            string topicId = IdGenerator.FromGuid(prefix: "topic-");
 
             // Sample: NotificationsOverview
             // First create a Pub/Sub topic.

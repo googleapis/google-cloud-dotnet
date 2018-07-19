@@ -13,6 +13,7 @@
 // limitations under the License.
 
 using Google.Apis.Storage.v1.Data;
+using Google.Cloud.ClientTesting;
 using System;
 using System.IO;
 using System.Linq;
@@ -56,7 +57,7 @@ namespace Google.Cloud.Storage.V1.IntegrationTests
             var client = _fixture.Client;
 
             string bucketName = CreateBucketWithDefaultKmsKeyName(FullUsKeyName1);
-            string objectName = TestHelpers.GenerateName();
+            string objectName = IdGenerator.FromGuid();
             var data = TestHelpers.GenerateData(1024);
 
             // Upload an object without specifying a key name; it should use the bucket default.
@@ -74,7 +75,7 @@ namespace Google.Cloud.Storage.V1.IntegrationTests
             var client = _fixture.Client;
 
             string bucketName = CreateBucketWithDefaultKmsKeyName(FullUsKeyName1);
-            string objectName = TestHelpers.GenerateName();
+            string objectName = IdGenerator.FromGuid();
             var data = TestHelpers.GenerateData(1024);
 
             // Upload an object with a different key name.
@@ -92,7 +93,7 @@ namespace Google.Cloud.Storage.V1.IntegrationTests
             var client = _fixture.Client;
 
             string bucketName = CreateBucketWithDefaultKmsKeyName(FullUsKeyName1);
-            string objectName = TestHelpers.GenerateName();
+            string objectName = IdGenerator.FromGuid();
             var data = TestHelpers.GenerateData(1024);
             EncryptionKey key = EncryptionKey.Generate();
 
@@ -115,7 +116,7 @@ namespace Google.Cloud.Storage.V1.IntegrationTests
             var client = _fixture.Client;
 
             string bucketName = _fixture.InitiallyEmptyBucket;
-            string objectName = TestHelpers.GenerateName();
+            string objectName = IdGenerator.FromGuid();
             var data = TestHelpers.GenerateData(1024);
             EncryptionKey key = EncryptionKey.Generate();
 
@@ -133,7 +134,7 @@ namespace Google.Cloud.Storage.V1.IntegrationTests
             _fixture.SkipIf(SkipTests);
 
             string bucketName = CreateBucketWithDefaultKmsKeyName(FullUsKeyName1);
-            string objectName = TestHelpers.GenerateName();
+            string objectName = IdGenerator.FromGuid();
             var data = TestHelpers.GenerateData(1024);
             EncryptionKey key = EncryptionKey.Generate();
             var client = StorageClient.Create(encryptionKey: key);
@@ -158,7 +159,7 @@ namespace Google.Cloud.Storage.V1.IntegrationTests
             _fixture.SkipIf(SkipTests);
 
             string bucketName = _fixture.InitiallyEmptyBucket;
-            string objectName = TestHelpers.GenerateName();
+            string objectName = IdGenerator.FromGuid();
             var data = TestHelpers.GenerateData(1024);
             EncryptionKey key = EncryptionKey.Generate();
             var client = StorageClient.Create(encryptionKey: key);
@@ -175,7 +176,7 @@ namespace Google.Cloud.Storage.V1.IntegrationTests
             _fixture.SkipIf(SkipTests);
 
             string bucketName = _fixture.InitiallyEmptyBucket;
-            string objectName = TestHelpers.GenerateName();
+            string objectName = IdGenerator.FromGuid();
             var data = TestHelpers.GenerateData(1024);
             EncryptionKey key = EncryptionKey.Generate();
             var client = StorageClient.Create(encryptionKey: key);
@@ -197,7 +198,7 @@ namespace Google.Cloud.Storage.V1.IntegrationTests
             var client = _fixture.Client;
 
             string bucketName = CreateBucketWithDefaultKmsKeyName(FullUsKeyName1);
-            string objectName = TestHelpers.GenerateName();
+            string objectName = IdGenerator.FromGuid();
             var data = TestHelpers.GenerateData(1024);
 
             // Upload an object without specifying anything, so it should be encrypted with key 1.
@@ -216,7 +217,7 @@ namespace Google.Cloud.Storage.V1.IntegrationTests
             _fixture.SkipIf(SkipTests);
             var client = _fixture.Client;
 
-            string objectName = TestHelpers.GenerateName();
+            string objectName = IdGenerator.FromGuid();
             var data = TestHelpers.GenerateData(1024);
 
             // It's invalid to specify both an EncryptionKey (that's non-None) and a key name
@@ -232,7 +233,7 @@ namespace Google.Cloud.Storage.V1.IntegrationTests
             _fixture.SkipIf(SkipTests);
             var client = _fixture.Client;
             string bucketName = _fixture.InitiallyEmptyBucket;
-            string objectName = TestHelpers.GenerateName();
+            string objectName = IdGenerator.FromGuid();
             var data = TestHelpers.GenerateData(1024);
 
             // Upload an object with a KMS key.
@@ -255,7 +256,7 @@ namespace Google.Cloud.Storage.V1.IntegrationTests
             _fixture.SkipIf(SkipTests);
             var client = _fixture.Client;
             string bucketName = _fixture.InitiallyEmptyBucket;
-            string objectName = TestHelpers.GenerateName();
+            string objectName = IdGenerator.FromGuid();
             var data = TestHelpers.GenerateData(1024);
 
             // Upload an object with a CSEK.
@@ -281,7 +282,7 @@ namespace Google.Cloud.Storage.V1.IntegrationTests
             _fixture.SkipIf(SkipTests);
             var client = _fixture.Client;
 
-            string objectName = TestHelpers.GenerateName();
+            string objectName = IdGenerator.FromGuid();
             var data = TestHelpers.GenerateData(1024);
 
             // It's invalid to specify both an EncryptionKey (that's non-None) and a key name
@@ -297,7 +298,7 @@ namespace Google.Cloud.Storage.V1.IntegrationTests
             _fixture.SkipIf(SkipTests);
             var client = _fixture.Client;
             string bucketName = _fixture.InitiallyEmptyBucket;
-            string objectName = TestHelpers.GenerateName();
+            string objectName = IdGenerator.FromGuid();
             var data = TestHelpers.GenerateData(1024);
 
             // Upload an object without any encryption.
@@ -314,7 +315,7 @@ namespace Google.Cloud.Storage.V1.IntegrationTests
             _fixture.SkipIf(SkipTests);
             var client = _fixture.Client;
             string bucketName = _fixture.InitiallyEmptyBucket;
-            string objectName = TestHelpers.GenerateName();
+            string objectName = IdGenerator.FromGuid();
             var data = TestHelpers.GenerateData(1024);
 
             // Upload an object without any encryption.
