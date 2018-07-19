@@ -14,7 +14,6 @@
 
 using System;
 using System.Collections.Generic;
-using System.Runtime.InteropServices;
 using System.Threading;
 using System.Threading.Tasks;
 
@@ -22,32 +21,6 @@ namespace Google.Cloud.Diagnostics.Common.Tests
 {
     internal class Utils
     {
-        private const string _projectEnvironmentVariable = "TEST_PROJECT";
-
-        /// <returns>The test project Id.</returns>
-        /// <exception cref="InvalidOperationException">If the 'TEST_PROJECT' environment
-        /// variable is not set or empty</exception>
-        public static string GetProjectIdFromEnvironment()
-        {
-            string projectId = Environment.GetEnvironmentVariable(_projectEnvironmentVariable);
-            if (string.IsNullOrEmpty(projectId))
-            {
-                throw new InvalidOperationException(
-                    $"Please set the {_projectEnvironmentVariable} environment variable before running tests");
-            }
-            return projectId;
-        }
-
-        public static bool IsWindows()
-        {
-#if NET452
-            return Environment.OSVersion.ToString().Contains("Windows");
-#else
-            return RuntimeInformation.IsOSPlatform(OSPlatform.Windows);
-#endif
-
-        }
-
         /// <summary>A unique test Id.</summary>
         public static string GetTestId()
         {

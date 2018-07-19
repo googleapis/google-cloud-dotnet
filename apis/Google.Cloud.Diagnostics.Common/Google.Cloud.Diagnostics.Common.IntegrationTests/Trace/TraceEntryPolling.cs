@@ -12,7 +12,7 @@
 // See the License for the specific language governing permissions and
 // limitations under the License.
 
-using Google.Cloud.Diagnostics.Common.Tests;
+using Google.Cloud.ClientTesting;
 using Google.Cloud.Trace.V1;
 using Google.Protobuf.WellKnownTypes;
 using System;
@@ -28,7 +28,7 @@ namespace Google.Cloud.Diagnostics.Common.IntegrationTests
     internal class TraceEntryPolling : BaseEntryPolling<TraceProto>
     {
         /// <summary>Project id to run the test on.</summary>
-        private readonly string _projectId = Utils.GetProjectIdFromEnvironment();
+        private readonly string _projectId = TestEnvironment.GetTestProjectId();
 
         /// <summary>Client to use to send RPCs.</summary>
         private readonly TraceServiceClient _client = TraceServiceClient.Create();

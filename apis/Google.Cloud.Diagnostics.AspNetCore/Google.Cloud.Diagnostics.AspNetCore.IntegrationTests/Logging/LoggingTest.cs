@@ -18,6 +18,7 @@ using System.Linq;
 using System.Threading;
 using System.Threading.Tasks;
 using Google.Api;
+using Google.Cloud.ClientTesting;
 using Google.Cloud.Diagnostics.Common;
 using Google.Cloud.Diagnostics.Common.IntegrationTests;
 using Google.Cloud.Diagnostics.Common.Tests;
@@ -250,7 +251,7 @@ namespace Google.Cloud.Diagnostics.AspNetCore.IntegrationTests
                     TraceHeaderContext.Create(traceId, 81237123, null).ToString());
                 await client.GetAsync($"/Main/Critical/{testId}");
                 var results = _polling.GetEntries(startTime, testId, 1, LogSeverity.Critical);
-                Assert.Contains(Utils.GetProjectIdFromEnvironment(), results.Single().Trace);
+                Assert.Contains(TestEnvironment.GetTestProjectId(), results.Single().Trace);
                 Assert.Contains(traceId, results.Single().Trace);
             }
         }
@@ -285,7 +286,7 @@ namespace Google.Cloud.Diagnostics.AspNetCore.IntegrationTests
 
         public LoggerTestApplication()
         {
-            ProjectId = Utils.GetProjectIdFromEnvironment();
+            ProjectId = TestEnvironment.GetTestProjectId();
         }
 
         public virtual void ConfigureServices(IServiceCollection services)

@@ -12,6 +12,7 @@
 // See the License for the specific language governing permissions and
 // limitations under the License.
 
+using Google.Cloud.ClientTesting;
 using Google.Cloud.Diagnostics.Common;
 using Google.Cloud.Diagnostics.Common.IntegrationTests;
 using Google.Cloud.Diagnostics.Common.Tests;
@@ -293,7 +294,7 @@ namespace Google.Cloud.Diagnostics.AspNetCore.IntegrationTests
 
         public AbstractTraceTestApplication()
         {
-            _projectId = Utils.GetProjectIdFromEnvironment();
+            _projectId = TestEnvironment.GetTestProjectId();
         }
 
         public abstract double GetSampleRate();

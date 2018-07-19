@@ -134,7 +134,7 @@ namespace Google.Cloud.Diagnostics.AspNetCore.Snippets
     /// </summary>
     internal class TraceTestApplication
     {
-        private static readonly string ProjectId = Utils.GetProjectIdFromEnvironment();
+        private static readonly string ProjectId = TestEnvironment.GetTestProjectId();
 
         // Sample: RegisterGoogleTracer
         public void ConfigureServices(IServiceCollection services)

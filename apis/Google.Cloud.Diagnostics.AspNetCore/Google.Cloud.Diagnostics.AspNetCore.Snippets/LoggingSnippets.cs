@@ -33,7 +33,7 @@ namespace Google.Cloud.Diagnostics.AspNetCore.Snippets
     [SnippetOutputCollector]
     public class LoggingSnippetsTests : IDisposable
     {
-        private static readonly string ProjectId = Utils.GetProjectIdFromEnvironment();
+        private static readonly string ProjectId = TestEnvironment.GetTestProjectId();
         private static readonly LogEntryPolling s_polling = new LogEntryPolling();
 
         private readonly string _testId;
@@ -105,7 +105,7 @@ namespace Google.Cloud.Diagnostics.AspNetCore.Snippets
     /// </summary>
     internal class LoggingTestApplication
     {
-        private static readonly string ProjectId = Utils.GetProjectIdFromEnvironment();
+        private static readonly string ProjectId = TestEnvironment.GetTestProjectId();
 
         // Sample: RegisterGoogleLogger
         public void ConfigureServices(IServiceCollection services)

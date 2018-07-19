@@ -12,7 +12,7 @@
 // See the License for the specific language governing permissions and
 // limitations under the License.
 
-using Google.Cloud.Diagnostics.Common;
+using Google.Cloud.ClientTesting;
 using Google.Cloud.Diagnostics.Common.IntegrationTests;
 using Google.Cloud.Diagnostics.Common.Tests;
 using Google.Cloud.ErrorReporting.V1Beta1;
@@ -159,7 +159,7 @@ namespace Google.Cloud.Diagnostics.AspNetCore.IntegrationTests
         {
             public const string Service = "service-name";
             public const string Version = "version-id";
-            protected readonly string ProjectId = Utils.GetProjectIdFromEnvironment();
+            protected readonly string ProjectId = TestEnvironment.GetTestProjectId();
 
             public void ConfigureServices(IServiceCollection services)
             {

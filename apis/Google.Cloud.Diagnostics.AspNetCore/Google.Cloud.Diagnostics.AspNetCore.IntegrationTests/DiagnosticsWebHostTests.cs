@@ -12,11 +12,8 @@
 // See the License for the specific language governing permissions and
 // limitations under the License.
 
-using System;
-using System.Linq;
-using System.Net.Http;
-using System.Threading.Tasks;
 using Google.Api;
+using Google.Cloud.ClientTesting;
 using Google.Cloud.Diagnostics.Common;
 using Google.Cloud.Diagnostics.Common.IntegrationTests;
 using Google.Cloud.Diagnostics.Common.Tests;
@@ -27,6 +24,10 @@ using Microsoft.AspNetCore.Hosting;
 using Microsoft.AspNetCore.Http;
 using Microsoft.AspNetCore.TestHost;
 using Microsoft.Extensions.DependencyInjection;
+using System;
+using System.Linq;
+using System.Net.Http;
+using System.Threading.Tasks;
 using Xunit;
 
 namespace Google.Cloud.Diagnostics.AspNetCore.IntegrationTests
@@ -76,7 +77,7 @@ namespace Google.Cloud.Diagnostics.AspNetCore.IntegrationTests
                 Type = "global",
                 Labels =
                 {
-                    { "project_id", Utils.GetProjectIdFromEnvironment() },
+                    { "project_id", TestEnvironment.GetTestProjectId() },
                     { "module_id", "some-service" },
                     { "version_id", "1.0.0" },
                     { "build_id", "some-build-id" }

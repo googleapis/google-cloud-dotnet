@@ -12,7 +12,7 @@
 // See the License for the specific language governing permissions and
 // limitations under the License.
 
-using Google.Cloud.Diagnostics.Common.Tests;
+using Google.Cloud.ClientTesting;
 using Google.Cloud.Logging.Type;
 using Google.Cloud.Logging.V2;
 using System;
@@ -40,7 +40,7 @@ namespace Google.Cloud.Diagnostics.Common.IntegrationTests
         private static readonly TimeSpan _defaultSleepInterval = TimeSpan.FromSeconds(40);
 
         /// <summary>Project id to run the test on.</summary>
-        private readonly string _projectId = Utils.GetProjectIdFromEnvironment();
+        private readonly string _projectId = TestEnvironment.GetTestProjectId();
 
         /// <summary>Client to use to send RPCs.</summary>
         private readonly LoggingServiceV2Client _client = LoggingServiceV2Client.Create();
