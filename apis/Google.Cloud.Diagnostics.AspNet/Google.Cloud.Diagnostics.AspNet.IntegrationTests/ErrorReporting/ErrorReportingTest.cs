@@ -12,6 +12,7 @@
 // See the License for the specific language governing permissions and
 // limitations under the License.
 
+using Google.Cloud.ClientTesting;
 using Google.Cloud.Diagnostics.Common.IntegrationTests;
 using Google.Cloud.Diagnostics.Common.Tests;
 using Google.Cloud.ErrorReporting.V1Beta1;
@@ -183,7 +184,7 @@ namespace Google.Cloud.Diagnostics.AspNet.IntegrationTests
             Assert.Contains(functionName, errorEvent.Message);
             Assert.Contains(testId, errorEvent.Message);
 
-            if (Utils.IsWindows())
+            if (TestEnvironment.IsWindows())
             {
                 Assert.False(string.IsNullOrWhiteSpace(errorEvent.Context.ReportLocation.FilePath));
                 Assert.True(errorEvent.Context.ReportLocation.LineNumber > 0);
@@ -256,7 +257,7 @@ namespace Google.Cloud.Diagnostics.AspNet.IntegrationTests
     {
         public const string Service = "service-name";
         public const string Version = "version-id";
-        public static readonly string ProjectId = Utils.GetProjectIdFromEnvironment();
+        public static readonly string ProjectId = TestEnvironment.GetTestProjectId();
 
         /// <summary>Throws and catches exception.</summary>
         [HttpGet]

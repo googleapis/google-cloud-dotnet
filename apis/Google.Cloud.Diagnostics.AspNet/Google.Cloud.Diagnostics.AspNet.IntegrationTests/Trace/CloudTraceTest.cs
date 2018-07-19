@@ -12,6 +12,7 @@
 // See the License for the specific language governing permissions and
 // limitations under the License.
 
+using Google.Cloud.ClientTesting;
 using Google.Cloud.Diagnostics.Common;
 using Google.Cloud.Diagnostics.Common.IntegrationTests;
 using Google.Cloud.Diagnostics.Common.Tests;
@@ -35,7 +36,7 @@ namespace Google.Cloud.Diagnostics.AspNet.IntegrationTests
 
         public CloudTraceTest()
         {
-            _projectId = Utils.GetProjectIdFromEnvironment();
+            _projectId = TestEnvironment.GetTestProjectId();
             _testId = Utils.GetTestId();
             _startTime = Timestamp.FromDateTime(DateTime.UtcNow);
 

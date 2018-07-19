@@ -31,7 +31,7 @@ namespace Google.Cloud.Diagnostics.AspNetCore.Snippets
     [SnippetOutputCollector]
     public class ErrorReportingSnippetsTests : IDisposable
     {
-        private static readonly bool s_isWindows = Utils.IsWindows();
+        private static readonly bool s_isWindows = TestEnvironment.IsWindows();
         private static readonly ErrorEventEntryPolling s_polling = new ErrorEventEntryPolling();
 
         private readonly string _testId;
@@ -120,7 +120,7 @@ namespace Google.Cloud.Diagnostics.AspNetCore.Snippets
     {
         public const string Service = "service-name";
         public const string Version = "version-id";
-        private static readonly string ProjectId = Utils.GetProjectIdFromEnvironment();
+        private static readonly string ProjectId = TestEnvironment.GetTestProjectId();
 
         // Sample: ReportUnhandledExceptions
         public void ConfigureServices(IServiceCollection services)

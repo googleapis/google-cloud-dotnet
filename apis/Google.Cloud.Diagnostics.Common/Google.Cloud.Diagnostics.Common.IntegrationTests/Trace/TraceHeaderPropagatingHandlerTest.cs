@@ -12,6 +12,7 @@
 // See the License for the specific language governing permissions and
 // limitations under the License.
 
+using Google.Cloud.ClientTesting;
 using Google.Cloud.Diagnostics.Common.Tests;
 using Google.Cloud.Trace.V1;
 using Google.Protobuf.WellKnownTypes;
@@ -28,7 +29,7 @@ namespace Google.Cloud.Diagnostics.Common.IntegrationTests
     public class TraceHeaderPropagatingHandlerTest
     {
         /// <summary>Project id to run the test on.</summary>
-        private readonly string _projectId = Utils.GetProjectIdFromEnvironment();
+        private readonly string _projectId = TestEnvironment.GetTestProjectId();
 
         private static readonly TraceIdFactory _traceIdFactory = TraceIdFactory.Create();
         private static readonly SpanIdFactory _spanIdFactory = SpanIdFactory.Create();

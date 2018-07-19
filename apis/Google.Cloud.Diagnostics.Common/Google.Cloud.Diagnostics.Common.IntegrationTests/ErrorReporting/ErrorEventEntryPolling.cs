@@ -13,6 +13,7 @@
 // limitations under the License.
 
 using Google.Api.Gax.ResourceNames;
+using Google.Cloud.ClientTesting;
 using Google.Cloud.Diagnostics.Common.Tests;
 using Google.Cloud.ErrorReporting.V1Beta1;
 using System;
@@ -34,7 +35,7 @@ namespace Google.Cloud.Diagnostics.Common.IntegrationTests
         private readonly ErrorStatsServiceClient _client = ErrorStatsServiceClient.Create();
 
         /// <summary>Project to run the test on.</summary>
-        private readonly ProjectName _projectName = new ProjectName(Utils.GetProjectIdFromEnvironment());
+        private readonly ProjectName _projectName = new ProjectName(TestEnvironment.GetTestProjectId());
 
         // Give the error reporting events a little extra time to be processed.
         internal ErrorEventEntryPolling() : base(TimeSpan.FromSeconds(120), TimeSpan.FromSeconds(30)) { }

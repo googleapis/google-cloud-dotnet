@@ -23,8 +23,6 @@ namespace Google.Cloud.ClientTesting
     /// </summary>
     public abstract class CloudProjectFixtureBase : IDisposable
     {
-        public const string TestProjectEnvironmentVariable = "TEST_PROJECT";
-
         // We don't care about the value beyond whether it's absent/empty or non-empty.
         private static bool s_allowedToSkip = string.IsNullOrEmpty(Environment.GetEnvironmentVariable("MUST_NOT_SKIP_TESTS"));
 
@@ -33,14 +31,9 @@ namespace Google.Cloud.ClientTesting
         /// </summary>
         public string ProjectId { get; }
 
-        protected CloudProjectFixtureBase(string testProjectEnvironmentVariable = TestProjectEnvironmentVariable)
+        protected CloudProjectFixtureBase(string testProjectEnvironmentVariable = TestEnvironment.TestProjectEnvironmentVariable)
         {
-            ProjectId = Environment.GetEnvironmentVariable(testProjectEnvironmentVariable);
-            if (string.IsNullOrEmpty(ProjectId))
-            {
-                throw new InvalidOperationException(
-                    $"Please set the {testProjectEnvironmentVariable} environment variable to your test project ID before running tests");
-            }
+            ProjectId = TestEnvironment.GetTestProjectId(testProjectEnvironmentVariable);
         }
 
         /// <summary>

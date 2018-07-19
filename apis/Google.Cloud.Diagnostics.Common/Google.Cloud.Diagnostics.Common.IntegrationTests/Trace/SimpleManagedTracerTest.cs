@@ -12,17 +12,16 @@
 // See the License for the specific language governing permissions and
 // limitations under the License.
 
-using Google.Cloud.Trace.V1;
+using Google.Cloud.ClientTesting;
 using Google.Cloud.Diagnostics.Common.Tests;
+using Google.Cloud.Trace.V1;
 using Google.Protobuf.WellKnownTypes;
 using System;
 using System.Collections.Generic;
 using System.Diagnostics;
 using System.Linq;
 using System.Threading;
-using System.Threading.Tasks;
 using Xunit;
-
 using TraceProto = Google.Cloud.Trace.V1.Trace;
 
 namespace Google.Cloud.Diagnostics.Common.IntegrationTests
@@ -34,7 +33,7 @@ namespace Google.Cloud.Diagnostics.Common.IntegrationTests
         private readonly TraceEntryPolling _polling = new TraceEntryPolling();
 
         /// <summary>Project id to run the test on.</summary>
-        private readonly string _projectId = Utils.GetProjectIdFromEnvironment();
+        private readonly string _projectId = TestEnvironment.GetTestProjectId();
 
         /// <summary>Unique id of the test.</summary>
         private readonly string _testId = Utils.GetTestId();

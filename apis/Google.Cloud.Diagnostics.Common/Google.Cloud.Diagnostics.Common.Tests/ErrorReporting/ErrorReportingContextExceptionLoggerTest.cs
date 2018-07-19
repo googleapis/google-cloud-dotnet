@@ -12,15 +12,16 @@
 // See the License for the specific language governing permissions and
 // limitations under the License.
 
-using System;
+using Google.Cloud.ClientTesting;
+using Google.Cloud.Logging.V2;
+using Google.Protobuf.WellKnownTypes;
 using Moq;
-using Xunit;
+using System;
 using System.Collections.Generic;
 using System.Linq;
-using Google.Protobuf.WellKnownTypes;
 using System.Threading;
 using System.Threading.Tasks;
-using Google.Cloud.Logging.V2;
+using Xunit;
 
 namespace Google.Cloud.Diagnostics.Common.Tests
 {
@@ -34,7 +35,7 @@ namespace Google.Cloud.Diagnostics.Common.Tests
         private const string _userAgent = "user-agent";
         private const int _statusCode = 409;
 
-        private static readonly bool _isWindows = Utils.IsWindows();
+        private static readonly bool _isWindows = TestEnvironment.IsWindows();
 
         [Fact]
         public void Log()

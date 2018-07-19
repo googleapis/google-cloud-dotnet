@@ -29,7 +29,7 @@ namespace Google.Cloud.Diagnostics.AspNetCore.Snippets
     {
         private const string Service = "service-name";
         private const string Version = "version-id";
-        private static readonly string ProjectId = Utils.GetProjectIdFromEnvironment();
+        private static readonly string ProjectId = TestEnvironment.GetTestProjectId();
 
         private readonly string _testId;
 
