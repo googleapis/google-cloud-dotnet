@@ -56,17 +56,16 @@ namespace Google.Cloud.BigQuery.V2.IntegrationTests
 
         public BigQueryFixture()
         {
-            var now = DateTime.UtcNow;
-            DatasetId = now.ToString("'test'_yyyyMMddTHHmmssfff", CultureInfo.InvariantCulture);
-            LabelsDatasetId = now.ToString("'testlabels'_yyyyMMddTHHmmssfff", CultureInfo.InvariantCulture);
+            DatasetId = IdGenerator.FromDateTime(prefix: "test_");
+            LabelsDatasetId = IdGenerator.FromDateTime(prefix: "testlabels_");
 
             CreateData();
             StorageBucketName = GenerateStorageBucketName();
             StorageClient.Create().CreateBucket(ProjectId, StorageBucketName);
         }
 
-        private string GenerateStorageBucketName() => "bigquerytests-" + Guid.NewGuid().ToString().ToLowerInvariant();
-        internal string GenerateStorageObjectName() => "file-" + Guid.NewGuid().ToString();
+        private string GenerateStorageBucketName() => IdGenerator.FromDateTime(prefix: "bigquerytests-");
+        internal string GenerateStorageObjectName() => IdGenerator.FromGuid(prefix: "file-");
 
         private void CreateData()
         {
@@ -260,7 +259,7 @@ namespace Google.Cloud.BigQuery.V2.IntegrationTests
             return ret;
         }
 
-        internal string CreateTableId() => "test_" + Guid.NewGuid().ToString().Replace("-", "_");
+        internal string CreateTableId() => IdGenerator.FromGuid(prefix: "test_", separator: "_");
         internal string CreateDatasetId() => $"{DatasetId}_{Interlocked.Increment(ref extraDatasetCounter)}";
 
         /// <summary>
