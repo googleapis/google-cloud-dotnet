@@ -27,18 +27,6 @@ namespace Google.Cloud.Diagnostics.AspNet.Snippets
     [SnippetOutputCollector]
     public class AspNetSnippets
     {
-        // Sample: RegisterExceptionLoggerWebApi
-        public static void Register(HttpConfiguration config)
-        {
-            string projectId = "[Google Cloud Platform project ID]";
-            string serviceName = "[Name of service]";
-            string version = "[Version of service]";
-            // Add a catch all for the uncaught exceptions.
-            config.Services.Add(typeof(System.Web.Http.ExceptionHandling.IExceptionLogger),
-                ErrorReportingExceptionLogger.Create(projectId, serviceName, version));
-        }
-        // End sample
-
         // Sample: RegisterExceptionLoggerMvc
         public static void RegisterGlobalFilters(GlobalFilterCollection filters)
         {
@@ -53,7 +41,7 @@ namespace Google.Cloud.Diagnostics.AspNet.Snippets
         
         public void ReadFile()
         {
-            // Sample: LogExceptions
+            // Sample: LogExceptionsMVC
             string projectId = "[Google Cloud Platform project ID]";
             string serviceName = "[Name of service]";
             string version = "[Version of service]";

@@ -20,15 +20,19 @@ the deployed code.
 
 ## Registering Error Reporting (Web Api)
 
-[!code-cs[](obj/snippets/Google.Cloud.Diagnostics.AspNet.AspNet.txt#RegisterExceptionLoggerWebApi)]
+[!code-cs[](obj/snippets/Google.Cloud.Diagnostics.AspNet.ErrorReporting.txt#RegisterExceptionLoggerWebApi)]
+
+## Log Exceptions (Web Api)
+
+[!code-cs[](obj/snippets/Google.Cloud.Diagnostics.AspNet.ErrorReporting.txt#LogExceptionsWebApi)]
 
 ## Registering Error Reporting (MVC)
 
 [!code-cs[](obj/snippets/Google.Cloud.Diagnostics.AspNet.AspNet.txt#RegisterExceptionLoggerMvc)]
 
-## Log Exceptions
+## Log Exceptions (MVC)
 
-[!code-cs[](obj/snippets/Google.Cloud.Diagnostics.AspNet.AspNet.txt#LogExceptions)]
+[!code-cs[](obj/snippets/Google.Cloud.Diagnostics.AspNet.AspNet.txt#LogExceptionsMVC)]
 
 ## Initializing Tracing
 
