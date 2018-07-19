@@ -12,6 +12,7 @@
 // See the License for the specific language governing permissions and
 // limitations under the License.
 
+using Google.Cloud.ClientTesting;
 using Google.Cloud.Spanner.Data.CommonTesting;
 using Google.Cloud.Spanner.V1;
 using Google.Cloud.Spanner.V1.Internal.Logging;
@@ -37,8 +38,6 @@ namespace Google.Cloud.Spanner.Data.IntegrationTests
             TestLogger.TestOutputHelper = outputHelper;
         }
 
-        private static string UniqueString() => Guid.NewGuid().ToString();
-
         private Task<int> InsertAsync(string name, SpannerDbType type, object value) =>
             InsertAsync(new SpannerParameterCollection { { name, type, value } });
 
@@ -46,7 +45,7 @@ namespace Google.Cloud.Spanner.Data.IntegrationTests
         {
             using (var connection = _fixture.GetConnection())
             {
-                values.Add("K", SpannerDbType.String, _lastKey = UniqueString());
+                values.Add("K", SpannerDbType.String, _lastKey = IdGenerator.FromGuid());
                 var cmd = connection.CreateInsertCommand(_fixture.TableName, values);
 
                 return await cmd.ExecuteNonQueryAsyncWithRetry();
@@ -182,7 +181,7 @@ namespace Google.Cloud.Spanner.Data.IntegrationTests
                     using (var connection = _fixture.GetConnection())
                     {
                         var cmd = connection.CreateInsertCommand(_fixture.TableName);
-                        cmd.Parameters.Add("badjuju", SpannerDbType.String, UniqueString());
+                        cmd.Parameters.Add("badjuju", SpannerDbType.String, IdGenerator.FromGuid());
                         rowsWritten = await cmd.ExecuteNonQueryAsyncWithRetry();
                     }
                 }).ConfigureAwait(false);
@@ -224,7 +223,7 @@ namespace Google.Cloud.Spanner.Data.IntegrationTests
                     using (var connection = _fixture.GetConnection())
                     {
                         var cmd = connection.CreateInsertCommand("badjuju");
-                        cmd.Parameters.Add("K", SpannerDbType.String, UniqueString());
+                        cmd.Parameters.Add("K", SpannerDbType.String, IdGenerator.FromGuid());
                         rowsWritten = await cmd.ExecuteNonQueryAsyncWithRetry();
                     }
                 }).ConfigureAwait(false);
@@ -427,7 +426,7 @@ namespace Google.Cloud.Spanner.Data.IntegrationTests
             var values = new SpannerParameterCollection
             {
                 {"StringValue", SpannerDbType.String, "abc"},
-                {"K", SpannerDbType.String, _lastKey = UniqueString()}
+                {"K", SpannerDbType.String, _lastKey = IdGenerator.FromGuid()}
             };
 
             var e = await Assert.ThrowsAsync<SpannerException>(

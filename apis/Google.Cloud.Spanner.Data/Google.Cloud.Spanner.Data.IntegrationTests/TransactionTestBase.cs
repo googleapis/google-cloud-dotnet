@@ -12,6 +12,7 @@
 // See the License for the specific language governing permissions and
 // limitations under the License.
 
+using Google.Cloud.ClientTesting;
 using Google.Cloud.Spanner.Data.CommonTesting;
 using System;
 using System.Collections.Generic;
@@ -39,7 +40,7 @@ namespace Google.Cloud.Spanner.Data.IntegrationTests
         {
             _fixture = fixture;
             TestLogger.TestOutputHelper = outputHelper;
-            _key = Guid.NewGuid().ToString();
+            _key = IdGenerator.FromGuid();
             (_oldestEntry, _newestEntry) = PopulateTableForTest(fixture, _key);
         }
 
@@ -65,7 +66,7 @@ namespace Google.Cloud.Spanner.Data.IntegrationTests
                     using (var tx = connection.BeginTransaction())
                     {
                         command.Transaction = tx;
-                        valueParameter.Value = Guid.NewGuid().ToString();
+                        valueParameter.Value = IdGenerator.FromGuid();
                         command.ExecuteNonQuery();
                         tx.Commit(out var timestamp);
                         oldest = new HistoryEntry((string)valueParameter.Value, timestamp.Value);
@@ -81,7 +82,7 @@ namespace Google.Cloud.Spanner.Data.IntegrationTests
                     {
                         command.Transaction = tx;
                         command.CommandText = $"UPDATE {fixture.TableName}";
-                        valueParameter.Value = Guid.NewGuid().ToString();
+                        valueParameter.Value = IdGenerator.FromGuid();
                         command.ExecuteNonQuery();
                         tx.Commit();
                     }
@@ -95,7 +96,7 @@ namespace Google.Cloud.Spanner.Data.IntegrationTests
                     using (var tx = connection.BeginTransaction())
                     {
                         command.Transaction = tx;
-                        valueParameter.Value = Guid.NewGuid().ToString();
+                        valueParameter.Value = IdGenerator.FromGuid();
                         command.ExecuteNonQuery();
                         tx.Commit(out var timestamp);
                         newest = new HistoryEntry((string)valueParameter.Value, timestamp.Value);

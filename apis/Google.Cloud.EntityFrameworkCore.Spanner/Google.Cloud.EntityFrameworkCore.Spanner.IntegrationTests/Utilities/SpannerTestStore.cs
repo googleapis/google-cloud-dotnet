@@ -24,6 +24,7 @@ using System.Text.RegularExpressions;
 using System.Threading.Tasks;
 using Google.Api.Gax;
 using Google.Cloud.Spanner.Data;
+using Google.Cloud.ClientTesting;
 
 namespace Microsoft.EntityFrameworkCore.Utilities
 {
@@ -87,7 +88,7 @@ namespace Microsoft.EntityFrameworkCore.Utilities
             string name;
             do
             {
-                name = "s" + Guid.NewGuid().ToString().Replace("-", "");
+                name = IdGenerator.FromGuid(prefix: "s", separator: "");
             } while (DatabaseExists(name));
 
             return name;

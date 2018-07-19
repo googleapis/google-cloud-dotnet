@@ -14,6 +14,7 @@
 
 using Google.Api.Gax;
 using Google.Api.Gax.Grpc;
+using Google.Cloud.ClientTesting;
 using Google.Cloud.Spanner.Common.V1;
 using Google.Cloud.Spanner.V1;
 using Google.Protobuf;
@@ -446,7 +447,7 @@ namespace Google.Cloud.Spanner.Data.Tests
                 SessionDatabases.Add(dbName);
                 var session = new Session
                 {
-                    SessionName = new SessionName(dbName.ProjectId, dbName.InstanceId, dbName.DatabaseId, Guid.NewGuid().ToString())
+                    SessionName = new SessionName(dbName.ProjectId, dbName.InstanceId, dbName.DatabaseId, IdGenerator.FromGuid())
                 };
                 Sessions.Add(session);
                 return session;
@@ -455,7 +456,7 @@ namespace Google.Cloud.Spanner.Data.Tests
             public override async Task<Transaction> BeginTransactionAsync(BeginTransactionRequest request, CallSettings callSettings = null)
             {
                 await Task.Yield();
-                var transaction = new Transaction { Id = ByteString.CopyFromUtf8(Guid.NewGuid().ToString()) };
+                var transaction = new Transaction { Id = ByteString.CopyFromUtf8(IdGenerator.FromGuid()) };
                 Transactions.Push(transaction);
                 return transaction;
             }

@@ -12,6 +12,7 @@
 // See the License for the specific language governing permissions and
 // limitations under the License.
 
+using Google.Cloud.ClientTesting;
 using System;
 
 namespace Google.Cloud.Spanner.Data.CommonTesting
@@ -46,7 +47,7 @@ namespace Google.Cloud.Spanner.Data.CommonTesting
             }
         }
 
-        private static readonly string s_generatedDatabaseName = $"testdb_{DateTime.UtcNow:yyyyMMdd't'HHmmss}";
+        private static readonly string s_generatedDatabaseName = IdGenerator.FromDateTime(prefix: "testdb_");
 
         public string SpannerHost { get; } = GetEnvironmentVariableOrDefault("TEST_SPANNER_HOST", null);
         public string SpannerPort { get; } = GetEnvironmentVariableOrDefault("TEST_SPANNER_PORT", null);

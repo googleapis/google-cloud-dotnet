@@ -12,6 +12,7 @@
 // See the License for the specific language governing permissions and
 // limitations under the License.
 
+using Google.Cloud.ClientTesting;
 using Google.Cloud.Spanner.Data.CommonTesting;
 using Google.Cloud.Spanner.V1.Internal.Logging;
 using System;
@@ -48,8 +49,6 @@ namespace Google.Cloud.Spanner.Data.IntegrationTests
             _random = new Random(_seed);
         }
 
-        private static string UniqueString() => Guid.NewGuid().ToString();
-
         private string GetLargeString(int minSize, int maxSize)
         {
             var builder = new StringBuilder();
@@ -77,7 +76,7 @@ namespace Google.Cloud.Spanner.Data.IntegrationTests
 
         private Task InsertRowAsync(SpannerCommand writeCommand)
         {
-            string k = UniqueString();
+            string k = IdGenerator.FromGuid();
             _addedKeys.Add(k);
             writeCommand.Parameters["K"].Value = k;
             _stringValues[k] = (string) (writeCommand.Parameters["StringValue"].Value =

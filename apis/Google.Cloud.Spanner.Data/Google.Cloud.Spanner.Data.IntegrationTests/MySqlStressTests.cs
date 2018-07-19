@@ -20,6 +20,7 @@ using System.Diagnostics;
 using System.Linq;
 using System.Threading;
 using System.Threading.Tasks;
+using Google.Cloud.ClientTesting;
 using Google.Cloud.Spanner.V1.Internal.Logging;
 using MySql.Data.MySqlClient;
 using Xunit;
@@ -32,7 +33,7 @@ namespace Google.Cloud.Spanner.Data.IntegrationTests
         private const string MySqlConnectionString =
             "Server=104.198.57.196;Database=books;Uid=root;Pwd=;Max Pool Size=400";
 
-        private static readonly string s_guid = Guid.NewGuid().ToString();
+        private static readonly string s_guid = IdGenerator.FromGuid();
         private static int s_myCounter = 1;
 
         private async Task<TimeSpan> TestWriteOneRow(Stopwatch sw)

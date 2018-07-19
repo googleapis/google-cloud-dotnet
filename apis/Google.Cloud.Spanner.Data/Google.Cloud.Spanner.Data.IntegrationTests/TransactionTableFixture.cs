@@ -12,6 +12,7 @@
 // See the License for the specific language governing permissions and
 // limitations under the License.
 
+using Google.Cloud.ClientTesting;
 using Google.Cloud.Spanner.Data.CommonTesting;
 using System;
 using System.Threading;
@@ -54,8 +55,8 @@ namespace Google.Cloud.Spanner.Data.IntegrationTests
                 connection.Open();
 
                 SpannerCommand command = connection.CreateInsertOrUpdateCommand(TableName);
-                var keyParameter = command.Parameters.Add("K", SpannerDbType.String, Guid.NewGuid().ToString());
-                var valueParameter = command.Parameters.Add("StringValue", SpannerDbType.String, Guid.NewGuid().ToString());
+                var keyParameter = command.Parameters.Add("K", SpannerDbType.String, IdGenerator.FromGuid());
+                var valueParameter = command.Parameters.Add("StringValue", SpannerDbType.String, IdGenerator.FromGuid());
 
                 // Create a lowest-bound timestamp which is definitely valid, but not
                 // associated with TestKey
