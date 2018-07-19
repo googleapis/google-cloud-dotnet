@@ -13,6 +13,7 @@
 // limitations under the License.
 
 using Google.Cloud.Bigtable.Common.V2;
+using Google.Cloud.ClientTesting;
 using Google.Protobuf;
 using Google.Rpc;
 using System;
@@ -153,7 +154,7 @@ namespace Google.Cloud.Bigtable.V2.IntegrationTests
         {
             var tableName = _fixture.TableName;
             var client = _fixture.TableClient;
-            BigtableByteString rowKey = Guid.NewGuid().ToString();
+            BigtableByteString rowKey = IdGenerator.FromGuid();
 
             await client.MutateRowAsync(
                 tableName,
@@ -184,7 +185,7 @@ namespace Google.Cloud.Bigtable.V2.IntegrationTests
         {
             var tableName = _fixture.TableName;
             var client = _fixture.TableClient;
-            BigtableByteString rowKey = Guid.NewGuid().ToString();
+            BigtableByteString rowKey = IdGenerator.FromGuid();
 
             await client.MutateRowAsync(
                 tableName,
@@ -348,7 +349,7 @@ namespace Google.Cloud.Bigtable.V2.IntegrationTests
         {
             var tableName = _fixture.TableName;
             var client = _fixture.TableClient;
-            string rowKeyPrefix = Guid.NewGuid().ToString();
+            string rowKeyPrefix = IdGenerator.FromGuid();
             int endRowIndex = 0xFF;
             var rowKeys =
                 Enumerable.Range(0, endRowIndex)
@@ -381,7 +382,7 @@ namespace Google.Cloud.Bigtable.V2.IntegrationTests
         {
             var tableName = _fixture.TableName;
             var client = _fixture.TableClient;
-            string rowKeyPrefix = Guid.NewGuid().ToString();
+            string rowKeyPrefix = IdGenerator.FromGuid();
             int endRowIndex = 0xFF;
             var rowKeys =
                 Enumerable.Range(0, endRowIndex)
@@ -416,7 +417,7 @@ namespace Google.Cloud.Bigtable.V2.IntegrationTests
         {
             var tableName = _fixture.TableName;
             var client = _fixture.TableClient;
-            string rowKeyPrefix = Guid.NewGuid().ToString();
+            string rowKeyPrefix = IdGenerator.FromGuid();
             int endRowIndex = 0xFF;
             var rowKeys =
                 Enumerable.Range(0, endRowIndex)

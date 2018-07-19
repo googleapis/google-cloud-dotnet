@@ -13,6 +13,7 @@
 // limitations under the License.
 
 using Google.Cloud.Bigtable.Common.V2;
+using Google.Cloud.ClientTesting;
 using System;
 using System.Linq;
 using System.Threading.Tasks;
@@ -92,7 +93,7 @@ namespace Google.Cloud.Bigtable.V2.IntegrationTests
         {
             var tableName = _fixture.TableName;
             var client = _fixture.TableClient;
-            BigtableByteString rowKey = Guid.NewGuid().ToString();
+            BigtableByteString rowKey = IdGenerator.FromGuid();
 
             client.ReadModifyWriteRow(
                 tableName,
@@ -116,7 +117,7 @@ namespace Google.Cloud.Bigtable.V2.IntegrationTests
         {
             var tableName = _fixture.TableName;
             var client = _fixture.TableClient;
-            BigtableByteString rowKey = Guid.NewGuid().ToString();
+            BigtableByteString rowKey = IdGenerator.FromGuid();
 
             await client.ReadModifyWriteRowAsync(
                 tableName,
@@ -200,7 +201,7 @@ namespace Google.Cloud.Bigtable.V2.IntegrationTests
         {
             var tableName = _fixture.TableName;
             var client = _fixture.TableClient;
-            BigtableByteString rowKey = Guid.NewGuid().ToString();
+            BigtableByteString rowKey = IdGenerator.FromGuid();
 
             client.ReadModifyWriteRow(
                 tableName,
@@ -224,7 +225,7 @@ namespace Google.Cloud.Bigtable.V2.IntegrationTests
         {
             var tableName = _fixture.TableName;
             var client = _fixture.TableClient;
-            BigtableByteString rowKey = Guid.NewGuid().ToString();
+            BigtableByteString rowKey = IdGenerator.FromGuid();
 
             await client.ReadModifyWriteRowAsync(
                 tableName,
@@ -248,7 +249,7 @@ namespace Google.Cloud.Bigtable.V2.IntegrationTests
         {
             var tableName = _fixture.TableName;
             var client = _fixture.TableClient;
-            BigtableByteString rowKey = Guid.NewGuid().ToString();
+            BigtableByteString rowKey = IdGenerator.FromGuid();
 
             await client.ReadModifyWriteRowAsync(
                 tableName,

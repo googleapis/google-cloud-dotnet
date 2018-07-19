@@ -13,6 +13,7 @@
 // limitations under the License.
 
 using Google.Cloud.Bigtable.Common.V2;
+using Google.Cloud.ClientTesting;
 using Google.Protobuf;
 using System;
 using System.Threading.Tasks;
@@ -32,7 +33,7 @@ namespace Google.Cloud.Bigtable.V2.IntegrationTests
         {
             var tableName = _fixture.TableName;
             var client = _fixture.TableClient;
-            BigtableByteString rowKey = Guid.NewGuid().ToString();
+            BigtableByteString rowKey = IdGenerator.FromGuid();
             client.MutateRow(
                 tableName,
                 rowKey,
@@ -57,7 +58,7 @@ namespace Google.Cloud.Bigtable.V2.IntegrationTests
         {
             var tableName = _fixture.TableName;
             var client = _fixture.TableClient;
-            BigtableByteString rowKey = Guid.NewGuid().ToString();
+            BigtableByteString rowKey = IdGenerator.FromGuid();
             await client.MutateRowAsync(
                 tableName,
                 rowKey,
@@ -290,7 +291,7 @@ namespace Google.Cloud.Bigtable.V2.IntegrationTests
         {
             var tableName = _fixture.TableName;
             var client = _fixture.TableClient;
-            BigtableByteString rowKey = Guid.NewGuid().ToString();
+            BigtableByteString rowKey = IdGenerator.FromGuid();
 
             Assert.Throws<InvalidOperationException>(() =>
                 client.MutateRow(

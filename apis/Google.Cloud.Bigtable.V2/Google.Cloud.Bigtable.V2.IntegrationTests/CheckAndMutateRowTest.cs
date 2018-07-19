@@ -13,6 +13,7 @@
 // limitations under the License.
 
 using Google.Cloud.Bigtable.Common.V2;
+using Google.Cloud.ClientTesting;
 using System;
 using System.Threading.Tasks;
 using Xunit;
@@ -103,7 +104,7 @@ namespace Google.Cloud.Bigtable.V2.IntegrationTests
         {
             var tableName = _fixture.TableName;
             var client = _fixture.TableClient;
-            BigtableByteString rowKey = Guid.NewGuid().ToString();
+            BigtableByteString rowKey = IdGenerator.FromGuid();
 
             var result = client.CheckAndMutateRow(
                 tableName,
@@ -139,7 +140,7 @@ namespace Google.Cloud.Bigtable.V2.IntegrationTests
         {
             var tableName = _fixture.TableName;
             var client = _fixture.TableClient;
-            BigtableByteString rowKey = Guid.NewGuid().ToString();
+            BigtableByteString rowKey = IdGenerator.FromGuid();
 
             var result = await client.CheckAndMutateRowAsync(
                 tableName,

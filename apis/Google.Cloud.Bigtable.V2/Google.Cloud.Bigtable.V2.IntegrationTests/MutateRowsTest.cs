@@ -13,6 +13,7 @@
 // limitations under the License.
 
 using Google.Cloud.Bigtable.Common.V2;
+using Google.Cloud.ClientTesting;
 using Google.Protobuf;
 using Google.Rpc;
 using System;
@@ -34,7 +35,7 @@ namespace Google.Cloud.Bigtable.V2.IntegrationTests
         {
             var tableName = _fixture.TableName;
             var client = _fixture.TableClient;
-            BigtableByteString rowKey = Guid.NewGuid().ToString();
+            BigtableByteString rowKey = IdGenerator.FromGuid();
             var response = await client.MutateRowsAsync(
                 tableName,
                 Mutations.CreateEntry(
@@ -184,7 +185,7 @@ namespace Google.Cloud.Bigtable.V2.IntegrationTests
             var tableName = _fixture.TableName;
             var client = _fixture.TableClient;
             var rowKey1 = await _fixture.InsertRowAsync(tableName);
-            BigtableByteString rowKey2 = Guid.NewGuid().ToString();
+            BigtableByteString rowKey2 = IdGenerator.FromGuid();
 
             var response = await client.MutateRowsAsync(
                 tableName,
@@ -249,7 +250,7 @@ namespace Google.Cloud.Bigtable.V2.IntegrationTests
         {
             var tableName = _fixture.TableName;
             var client = _fixture.TableClient;
-            BigtableByteString rowKey = Guid.NewGuid().ToString();
+            BigtableByteString rowKey = IdGenerator.FromGuid();
 
             await Assert.ThrowsAsync<InvalidOperationException>(() =>
                 client.MutateRowsAsync(
@@ -291,7 +292,7 @@ namespace Google.Cloud.Bigtable.V2.IntegrationTests
 
             var tableName = _fixture.TableName;
             var client = _fixture.TableClient;
-            BigtableByteString rowKey = Guid.NewGuid().ToString();
+            BigtableByteString rowKey = IdGenerator.FromGuid();
             var response = await client.MutateRowsAsync(
                 tableName,
                 Mutations.CreateEntry(

@@ -53,7 +53,7 @@ namespace Google.Cloud.Bigtable.V2.IntegrationTests
             BigtableByteString? value = null,
             BigtableVersion? version = null)
         {
-            BigtableByteString rowKey = Guid.NewGuid().ToString();
+            BigtableByteString rowKey = IdGenerator.FromGuid();
 
             familyName = familyName ?? DefaultColumnFamily;
             qualifierName = qualifierName ?? DefaultColumnQualifier;
@@ -88,7 +88,7 @@ namespace Google.Cloud.Bigtable.V2.IntegrationTests
             BigtableByteString? valuePrefix = null,
             BigtableVersion? version = null)
         {
-            BigtableByteString rowKey = Guid.NewGuid().ToString();
+            BigtableByteString rowKey = IdGenerator.FromGuid();
 
             familyName = familyName ?? DefaultColumnFamily;
             qualifierName = qualifierName ?? "row_index";
