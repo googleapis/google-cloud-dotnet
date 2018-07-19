@@ -30,7 +30,7 @@ namespace Google.Cloud.Datastore.V1.IntegrationTests
 
         public DatastoreFixture()
         {
-            NamespaceId = "test-" + Guid.NewGuid();
+            NamespaceId = IdGenerator.FromDateTime(prefix: "test-");
         }
 
         public override void Dispose()

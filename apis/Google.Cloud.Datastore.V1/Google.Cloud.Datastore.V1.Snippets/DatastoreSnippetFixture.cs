@@ -36,7 +36,7 @@ namespace Google.Cloud.Datastore.V1.Snippets
 
         public DatastoreSnippetFixture()
         {
-            NamespaceId = "test-" + Guid.NewGuid();
+            NamespaceId = IdGenerator.FromDateTime(prefix: "test-");
             AddSampleBooks();
             AddSampleTasks();
         }
