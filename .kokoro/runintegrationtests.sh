@@ -15,6 +15,6 @@ export REQUESTER_PAYS_CREDENTIALS="$KOKORO_KEYSTORE_DIR/73609_gcloud-devel-servi
 ./build.sh
 
 # Allow each integration test 3 chances to pass.
-#./runintegrationtests.sh || true
-#./runintegrationtests.sh --retry || true
-#./runintegrationtests.sh --retry
+./runintegrationtests.sh || true
+./runintegrationtests.sh --retry || true
+./runintegrationtests.sh --retry
