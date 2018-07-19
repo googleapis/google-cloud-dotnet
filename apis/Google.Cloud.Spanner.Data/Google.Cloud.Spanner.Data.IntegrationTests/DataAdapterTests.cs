@@ -13,6 +13,7 @@
 // limitations under the License.
 
 #if !NETCOREAPP1_0
+using Google.Cloud.ClientTesting;
 using Google.Cloud.Spanner.Data.CommonTesting;
 using System;
 using System.Data;
@@ -103,7 +104,7 @@ namespace Google.Cloud.Spanner.Data.IntegrationTests
                     adapter.Fill(testDataSet);
 
                     //update, reload
-                    var newValue = Guid.NewGuid().ToString();
+                    var newValue = IdGenerator.FromGuid();
                     var oldKey = testDataSet.Tables[0].Rows[1]["Key"];
                     testDataSet.Tables[0].Rows[1]["StringValue"] = newValue;
                     adapter.Update(testDataSet);
@@ -146,7 +147,7 @@ namespace Google.Cloud.Spanner.Data.IntegrationTests
                     Assert.Equal(1, testDataSet.Tables[0].Rows.Count);
 
                     //update, reload (update still works even with an overloaded selectcommand)
-                    string newValue = Guid.NewGuid().ToString();
+                    string newValue = IdGenerator.FromGuid();
                     testDataSet.Tables[0].Rows[0]["StringValue"] = newValue;
                     adapter.Update(testDataSet);
                     testDataSet.Clear();

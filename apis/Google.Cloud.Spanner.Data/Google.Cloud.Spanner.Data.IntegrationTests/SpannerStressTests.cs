@@ -12,6 +12,7 @@
 // See the License for the specific language governing permissions and
 // limitations under the License.
 
+using Google.Cloud.ClientTesting;
 using Google.Cloud.Spanner.Data.CommonTesting;
 using Google.Cloud.Spanner.V1;
 using Google.Cloud.Spanner.V1.Internal.Logging;
@@ -32,7 +33,7 @@ namespace Google.Cloud.Spanner.Data.IntegrationTests
     public class SpannerStressTests : StressTestBase
     {
         private static int s_rowCounter = 1;
-        private static readonly string s_guid = Guid.NewGuid().ToString();
+        private static readonly string s_guid = IdGenerator.FromGuid();
         private static ThreadLocal<Random> s_rnd = new ThreadLocal<Random>(() => new Random(Environment.TickCount));
         private SpannerStressTestTableFixture _fixture;
 

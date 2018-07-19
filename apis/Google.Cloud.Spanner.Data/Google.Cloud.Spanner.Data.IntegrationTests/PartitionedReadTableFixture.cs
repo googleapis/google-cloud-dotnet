@@ -12,6 +12,7 @@
 // See the License for the specific language governing permissions and
 // limitations under the License.
 
+using Google.Cloud.ClientTesting;
 using Google.Cloud.Spanner.Data.CommonTesting;
 using System;
 using Xunit;
@@ -63,7 +64,7 @@ namespace Google.Cloud.Spanner.Data.IntegrationTests
                                 DateTime now = DateTime.UtcNow;
                                 for (var x = 1; x < PartitionSize; x++)
                                 {
-                                    idParameter.Value = Guid.NewGuid().ToString();
+                                    idParameter.Value = IdGenerator.FromGuid();
                                     dateParameter.Value = now.AddDays(-x);
                                     productParameter.Value = $"Widget#{x}";
                                     cmd.ExecuteNonQuery();

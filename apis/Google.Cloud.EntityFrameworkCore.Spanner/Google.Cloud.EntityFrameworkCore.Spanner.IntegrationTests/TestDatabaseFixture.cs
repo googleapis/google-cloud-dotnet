@@ -42,7 +42,7 @@ namespace Google.Cloud.EntityFrameworkCore.Spanner.IntegrationTests
         // if you use a scratch database, be sure to comment out the database
         // creation and disposal methods.
         private string DatabaseName { get; } = // "scratch";
-            "t_" + Guid.NewGuid().ToString("N").Substring(0, 28);
+            IdGenerator.FromGuid(prefix: "t_", separator: "", maxLength: 30);
 
         public int TestTableRowCount { get; } = 15;
         public string TestTable { get; } = nameof(TestTableContext.StringTable);
