@@ -83,7 +83,7 @@ namespace Google.Cloud.Bigtable.V2.IntegrationTests
 
         public async Task<TableName> CreateTable()
         {
-            var tableName = new TableName(ProjectName.ProjectId, InstanceName.InstanceId, Guid.NewGuid().ToString());
+            var tableName = new TableName(ProjectName.ProjectId, InstanceName.InstanceId, IdGenerator.FromGuid());
             CreatedTables.Add(tableName);
             await TableAdminClient.CreateTableAsync(
                 new InstanceName(tableName.ProjectId, tableName.InstanceId),
