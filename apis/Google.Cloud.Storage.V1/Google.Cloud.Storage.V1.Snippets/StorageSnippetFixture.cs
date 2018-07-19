@@ -49,7 +49,7 @@ namespace Google.Cloud.Storage.V1.Snippets
         public StorageSnippetFixture()
         {
             NotificationUrl = Environment.GetEnvironmentVariable(NotificationUrlEnvironmentVariable);
-            BucketName = "snippets-" + Guid.NewGuid().ToString().ToLowerInvariant();
+            BucketName = IdGenerator.FromDateTime(prefix: "snippets-");
             CreateAndPopulateBucket();
             CreateNotificationsBucket();
         }
@@ -72,7 +72,7 @@ namespace Google.Cloud.Storage.V1.Snippets
 
         private void CreateNotificationsBucket()
         {
-            string bucket = "snippets-notifications-" + Guid.NewGuid().ToString().ToLowerInvariant();
+            string bucket = IdGenerator.FromDateTime(prefix: "snippets-notifications-");
             var topicName = new TopicName(ProjectId, bucket);
             var storageClient = StorageClient.Create();
             storageClient.CreateBucket(ProjectId, bucket);
@@ -87,7 +87,7 @@ namespace Google.Cloud.Storage.V1.Snippets
         internal Notification CreateNotification(string prefix)
         {
             var publisherClient = PublisherServiceApiClient.Create();
-            var topicName = new TopicName(ProjectId, "topic-" + Guid.NewGuid().ToString().ToLowerInvariant());
+            var topicName = new TopicName(ProjectId, IdGenerator.FromGuid(prefix: "topic-"));
             publisherClient.CreateTopic(topicName);
             RegisterTopicToDelete(topicName);
             var storageClient = StorageClient.Create();

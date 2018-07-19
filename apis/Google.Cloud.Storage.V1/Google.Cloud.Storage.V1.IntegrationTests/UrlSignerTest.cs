@@ -13,6 +13,7 @@
 // limitations under the License.
 
 using Google.Apis.Upload;
+using Google.Cloud.ClientTesting;
 using System;
 using System.Collections.Generic;
 using System.IO;
@@ -29,8 +30,6 @@ using Xunit;
 
 namespace Google.Cloud.Storage.V1.IntegrationTests
 {
-    using static TestHelpers;
-
     [Collection(nameof(StorageFixture))]
     public class UrlSignerTest
     {
@@ -54,7 +53,7 @@ namespace Google.Cloud.Storage.V1.IntegrationTests
         private void DeleteTest_InitDelayTest()
         {
             var bucket = _fixture.SingleVersionBucket;
-            var name = GenerateName();
+            var name = IdGenerator.FromGuid();
             string url = null;
 
             _fixture.RegisterDelayTest(_duration,
@@ -148,7 +147,7 @@ namespace Google.Cloud.Storage.V1.IntegrationTests
         private void GetObjectWithSpacesTest_InitDelayTest()
         {
             var bucket = _fixture.SingleVersionBucket;
-            var name = GenerateName() + " with spaces";
+            var name = IdGenerator.FromGuid() + " with spaces";
             var content = _fixture.SmallContent;
             string url = null;
 
@@ -178,7 +177,7 @@ namespace Google.Cloud.Storage.V1.IntegrationTests
         private void GetWithCustomerSuppliedEncryptionKeysTest_InitDelayTest()
         {
             var bucket = _fixture.SingleVersionBucket;
-            var name = GenerateName();
+            var name = IdGenerator.FromGuid();
             var content = _fixture.SmallContent;
             string url = null;
 
@@ -363,7 +362,7 @@ namespace Google.Cloud.Storage.V1.IntegrationTests
         private async Task<Func<Task>> PutTestHelper(TimeSpan duration, bool useContentMD5, bool useContentType)
         {
             var bucket = _fixture.SingleVersionBucket;
-            var name = GenerateName();
+            var name = IdGenerator.FromGuid();
             var data = _fixture.SmallContent;
 
             Func<ByteArrayContent> createPutContent = () =>
@@ -417,7 +416,7 @@ namespace Google.Cloud.Storage.V1.IntegrationTests
         private void PutWithCustomerSuppliedEncryptionKeysTest_InitDelayTest()
         {
             var bucket = _fixture.SingleVersionBucket;
-            var name = GenerateName();
+            var name = IdGenerator.FromGuid();
             var content = _fixture.SmallContent;
             string url = null;
 
@@ -472,7 +471,7 @@ namespace Google.Cloud.Storage.V1.IntegrationTests
         private void PutWithCustomHeadersTest_InitDelayTest()
         {
             var bucket = _fixture.SingleVersionBucket;
-            var name = GenerateName();
+            var name = IdGenerator.FromGuid();
             var content = _fixture.SmallContent;
             string url = null;
 
@@ -537,7 +536,7 @@ namespace Google.Cloud.Storage.V1.IntegrationTests
         private void ResumableUploadTest_InitDelayTest()
         {
             var bucket = _fixture.SingleVersionBucket;
-            var name = GenerateName();
+            var name = IdGenerator.FromGuid();
             var content = _fixture.SmallContent;
             string url = null;
 
@@ -578,7 +577,7 @@ namespace Google.Cloud.Storage.V1.IntegrationTests
         private void ResumableUploadResumeTest_InitDelayTest()
         {
             var bucket = _fixture.SingleVersionBucket;
-            var name = GenerateName();
+            var name = IdGenerator.FromGuid();
             var content = _fixture.SmallContent;
             string url = null;
 
@@ -617,7 +616,7 @@ namespace Google.Cloud.Storage.V1.IntegrationTests
         private void ResumableUploadWithCustomerSuppliedEncryptionKeysTest_InitDelayTest()
         {
             var bucket = _fixture.SingleVersionBucket;
-            var name = GenerateName();
+            var name = IdGenerator.FromGuid();
             var content = _fixture.SmallContent;
             string url = null;
 

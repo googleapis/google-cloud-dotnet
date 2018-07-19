@@ -12,6 +12,7 @@
 // See the License for the specific language governing permissions and
 // limitations under the License.
 
+using Google.Cloud.ClientTesting;
 using System.Collections.Generic;
 using System.Linq;
 using System.Net;
@@ -72,7 +73,7 @@ namespace Google.Cloud.Storage.V1.IntegrationTests
         public void NonExistentObject(bool multiVersionBucket)
         {
             string bucket = multiVersionBucket ? _fixture.MultiVersionBucket : _fixture.SingleVersionBucket;
-            var exception = Assert.Throws<GoogleApiException>(() => _fixture.Client.DeleteObject(bucket, GenerateName()));
+            var exception = Assert.Throws<GoogleApiException>(() => _fixture.Client.DeleteObject(bucket, IdGenerator.FromGuid()));
             Assert.Equal(HttpStatusCode.NotFound, exception.HttpStatusCode);
         }
 
@@ -146,7 +147,7 @@ namespace Google.Cloud.Storage.V1.IntegrationTests
 
         private List<Object> CreateObjects(string bucket, int versionCount)
         {
-            string name = GenerateName();
+            string name = IdGenerator.FromGuid();
             var objects = new List<Object>();
             for (int i = 0; i < versionCount; i++)
             {

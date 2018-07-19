@@ -12,10 +12,7 @@
 // See the License for the specific language governing permissions and
 // limitations under the License.
 
-using System;
-using System.Collections.Generic;
 using System.IO;
-using System.Linq;
 using System.Security.Cryptography;
 using Xunit;
 
@@ -23,11 +20,6 @@ namespace Google.Cloud.Storage.V1.IntegrationTests
 {
     internal static class TestHelpers
     {
-        /// <summary>
-        /// Generates an object name which can reasonably be expected to be unique.
-        /// </summary>
-        internal static string GenerateName() => Guid.NewGuid().ToString();
-
         /// <summary>
         /// Generates a read-only stream of random data of the given size. The
         /// returned stream is positioned at the start of the data.
