@@ -47,7 +47,7 @@ namespace Google.Cloud.Spanner.Data.CommonTesting
             }
         }
 
-        private static readonly string s_generatedDatabaseName = IdGenerator.FromDateTime(prefix: "testdb_");
+        private static readonly string s_generatedDatabaseName = IdGenerator.FromDateTime(prefix: "testdb_", pattern: "yyyyMMdd't'HHmmss");
 
         public string SpannerHost { get; } = GetEnvironmentVariableOrDefault("TEST_SPANNER_HOST", null);
         public string SpannerPort { get; } = GetEnvironmentVariableOrDefault("TEST_SPANNER_PORT", null);
