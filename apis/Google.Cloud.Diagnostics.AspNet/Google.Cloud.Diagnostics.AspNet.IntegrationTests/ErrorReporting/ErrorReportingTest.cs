@@ -29,138 +29,130 @@ using Xunit;
 
 namespace Google.Cloud.Diagnostics.AspNet.IntegrationTests
 {
-    public class ErrorReportingTest
+    public class ErrorReportingTest : IDisposable
     {
-        private readonly ErrorEventEntryPolling _polling = new ErrorEventEntryPolling();
+        // In self hosted Web Apis we don't have access to the response StatusCode at the time
+        // of logging.
+        private const int s_expectedStatusCode = 0;
+        private static readonly ErrorEventEntryPolling s_polling = new ErrorEventEntryPolling();
+
+        private readonly string _testId;
+
+        private readonly TestServer _server;
+        private readonly HttpClient _client;
+
+        private readonly DateTime _startTime;
+
+        public ErrorReportingTest()
+        {
+            _testId = IdGenerator.FromDateTime();
+
+            _server = TestServer.Create<ErrorReportingTestApplication>();
+            _client = _server.HttpClient;
+
+            _startTime = DateTime.UtcNow;
+        }
 
         [Fact]
         public async Task NoExceptions()
         {
-            string testId = IdGenerator.FromDateTime();
-            DateTime startTime = DateTime.UtcNow;
+            var response = await _client.GetAsync($"api/ErrorReporting/{nameof(ErrorReportingController.Index)}/{_testId}");
 
-            using (TestServer server = TestServer.Create<ErrorReportingTestApplication>())
-            using (var client = server.HttpClient)
-            {
-                await client.GetAsync($"api/ErrorReporting/{nameof(ErrorReportingController.Index)}/{testId}");
+            Assert.Equal(HttpStatusCode.OK, response.StatusCode);
 
-                var errorEvents = _polling.GetEvents(startTime, testId, 0);
-                Assert.Empty(errorEvents);
-            }
+            var errorEvents = s_polling.GetEvents(_startTime, _testId, 0);
+            Assert.Empty(errorEvents);
         }
 
         [Fact]
         public async Task LogsException()
         {
-            string testId = IdGenerator.FromDateTime();
-            DateTime startTime = DateTime.UtcNow;
+            var response = await _client.GetAsync($"api/ErrorReporting/{nameof(ErrorReportingController.ThrowsException)}/{_testId}");
+            var contentTask = response.Content.ReadAsStringAsync();
 
-            using (TestServer server = TestServer.Create<ErrorReportingTestApplication>())
-            using (var client = server.HttpClient)
-            {
-                var response = await client.GetAsync($"api/ErrorReporting/{nameof(ErrorReportingController.ThrowsException)}/{testId}");
-                var contentTask = response.Content.ReadAsStringAsync();
+            Assert.Equal(HttpStatusCode.InternalServerError, response.StatusCode);
 
-                Assert.Equal(HttpStatusCode.InternalServerError, response.StatusCode);
+            var errorEvent = s_polling.GetEvents(_startTime, _testId, 1).Single();
 
-                var errorEvent = _polling.GetEvents(startTime, testId, 1).Single();
-                ErrorEventEntryVerifiers.VerifyFullErrorEventLogged(errorEvent, testId, nameof(ErrorReportingController.ThrowsException));
+            ErrorEventEntryVerifiers.VerifyFullErrorEventLogged(errorEvent, _testId, nameof(ErrorReportingController.ThrowsException), s_expectedStatusCode);
 
-                var content = await contentTask;
-                Assert.Contains(nameof(ErrorReportingController.ThrowsException), content);
-                Assert.Contains(testId, content);
-            }
+            var content = await contentTask;
+            Assert.Contains(nameof(ErrorReportingController.ThrowsException), content);
+            Assert.Contains(_testId, content);
         }
 
         [Fact]
         public async Task LogsMultipleExceptions()
         {
-            string testId = IdGenerator.FromDateTime();
-            DateTime startTime = DateTime.UtcNow;
+            var requestTask1 = _client.GetAsync($"api/ErrorReporting/{nameof(ErrorReportingController.ThrowsException)}/{_testId}");
+            var requestTask2 = _client.GetAsync($"api/ErrorReporting/{nameof(ErrorReportingController.ThrowsArgumentException)}/{_testId}");
+            var requestTask3 = _client.GetAsync($"api/ErrorReporting/{nameof(ErrorReportingController.ThrowsException)}/{_testId}");
+            var requestTask4 = _client.GetAsync($"api/ErrorReporting/{nameof(ErrorReportingController.ThrowsException)}/{_testId}");
 
-            using (TestServer server = TestServer.Create<ErrorReportingTestApplication>())
-            using (var client = server.HttpClient)
+            var response = await requestTask1;
+            Assert.Equal(HttpStatusCode.InternalServerError, response.StatusCode);
+            response = await requestTask2;
+            Assert.Equal(HttpStatusCode.InternalServerError, response.StatusCode);
+            response = await requestTask3;
+            Assert.Equal(HttpStatusCode.InternalServerError, response.StatusCode);
+            response = await requestTask4;
+            Assert.Equal(HttpStatusCode.InternalServerError, response.StatusCode);
+
+            var errorEvents = s_polling.GetEvents(_startTime, _testId, 4);
+            Assert.Equal(4, errorEvents.Count());
+
+            var exceptionEvents = errorEvents
+                .Where(e => e.Message.Contains(nameof(ErrorReportingController.ThrowsException)));
+            Assert.Equal(3, exceptionEvents.Count());
+            foreach (var errorEvent in exceptionEvents)
             {
-                var requestTask1 = client.GetAsync($"api/ErrorReporting/{nameof(ErrorReportingController.ThrowsException)}/{testId}");
-                var requestTask2 = client.GetAsync($"api/ErrorReporting/{nameof(ErrorReportingController.ThrowsArgumentException)}/{testId}");
-                var requestTask3 = client.GetAsync($"api/ErrorReporting/{nameof(ErrorReportingController.ThrowsException)}/{testId}");
-                var requestTask4 = client.GetAsync($"api/ErrorReporting/{nameof(ErrorReportingController.ThrowsException)}/{testId}");
-
-                var response = await requestTask1;
-                Assert.Equal(HttpStatusCode.InternalServerError, response.StatusCode);
-                response = await requestTask2;
-                Assert.Equal(HttpStatusCode.InternalServerError, response.StatusCode);
-                response = await requestTask3;
-                Assert.Equal(HttpStatusCode.InternalServerError, response.StatusCode);
-                response = await requestTask4;
-                Assert.Equal(HttpStatusCode.InternalServerError, response.StatusCode);
-
-                var errorEvents = _polling.GetEvents(startTime, testId, 4);
-                Assert.Equal(4, errorEvents.Count());
-
-                var exceptionEvents = errorEvents.Where(e => e.Message.Contains(nameof(ErrorReportingController.ThrowsException)));
-                Assert.Equal(3, exceptionEvents.Count());
-                foreach (var errorEvent in exceptionEvents)
-                {
-                    ErrorEventEntryVerifiers.VerifyFullErrorEventLogged(errorEvent, testId, nameof(ErrorReportingController.ThrowsException));
-                }
-
-                var argumentExceptionEvent = errorEvents
-                    .Where(e => e.Message.Contains(nameof(ErrorReportingController.ThrowsArgumentException)))
-                    .Single();
-                ErrorEventEntryVerifiers.VerifyFullErrorEventLogged(argumentExceptionEvent, testId, nameof(ErrorReportingController.ThrowsArgumentException));
+                ErrorEventEntryVerifiers.VerifyFullErrorEventLogged(errorEvent, _testId, nameof(ErrorReportingController.ThrowsException), s_expectedStatusCode);
             }
+
+            var argumentExceptionEvent = errorEvents
+                .Where(e => e.Message.Contains(nameof(ErrorReportingController.ThrowsArgumentException)))
+                .Single();
+            ErrorEventEntryVerifiers.VerifyFullErrorEventLogged(argumentExceptionEvent, _testId, nameof(ErrorReportingController.ThrowsArgumentException), s_expectedStatusCode);
         }
 
         [Fact]
         public async Task LogsThrownInHttpMessageHandler()
         {
-            string testId = IdGenerator.FromDateTime();
-            DateTime startTime = DateTime.UtcNow;
+            var response = await _client.GetAsync($"handler/{_testId}");
 
-            using (TestServer server = TestServer.Create<ErrorReportingTestApplication>())
-            using (var client = server.HttpClient)
-            {
-                var response = await server.HttpClient.GetAsync($"handler/{testId}");
-                Assert.Equal(HttpStatusCode.InternalServerError, response.StatusCode);
+            Assert.Equal(HttpStatusCode.InternalServerError, response.StatusCode);
 
-                var errorEvent = _polling.GetEvents(startTime, testId, 1).Single();
-                ErrorEventEntryVerifiers.VerifyFullErrorEventLogged(errorEvent, testId, "SendAsync");
-            }
+            var errorEvent = s_polling.GetEvents(_startTime, _testId, 1).Single();
+
+            ErrorEventEntryVerifiers.VerifyFullErrorEventLogged(errorEvent, _testId, "SendAsync", s_expectedStatusCode);
         }
 
         [Fact]
         public async Task ManualLog_GoogleLogger()
         {
-            string testId = IdGenerator.FromDateTime();
-            DateTime startTime = DateTime.UtcNow;
+            var response = await _client.GetAsync($"api/ErrorReporting/{nameof(ErrorReportingController.ThrowCatchWithGoogleLogger)}/{_testId}");
 
-            using (TestServer server = TestServer.Create<ErrorReportingTestApplication>())
-            using (var client = server.HttpClient)
-            {
-                var response = await client.GetAsync($"api/ErrorReporting/{nameof(ErrorReportingController.ThrowCatchWithGoogleLogger)}/{testId}");
-                Assert.Equal(HttpStatusCode.OK, response.StatusCode);
+            Assert.Equal(HttpStatusCode.OK, response.StatusCode);
 
-                var errorEvent = _polling.GetEvents(startTime, testId, 1).Single();
-                ErrorEventEntryVerifiers.VerifyErrorEventLogged(errorEvent, testId, nameof(ErrorReportingController.ThrowCatchWithGoogleLogger));
-            }
+            var errorEvent = s_polling.GetEvents(_startTime, _testId, 1).Single();
+            ErrorEventEntryVerifiers.VerifyErrorEventLogged(errorEvent, _testId, nameof(ErrorReportingController.ThrowCatchWithGoogleLogger));
         }
 
         [Fact]
         public async Task ManualLog_GoogleWebApiLogger()
         {
-            string testId = IdGenerator.FromDateTime();
-            DateTime startTime = DateTime.UtcNow;
+            var response = await _client.GetAsync($"api/ErrorReporting/{nameof(ErrorReportingController.ThrowCatchWithGoogleWebApiLogger)}/{_testId}");
 
-            using (TestServer server = TestServer.Create<ErrorReportingTestApplication>())
-            using (var client = server.HttpClient)
-            {
-                var response = await client.GetAsync($"api/ErrorReporting/{nameof(ErrorReportingController.ThrowCatchWithGoogleWebApiLogger)}/{testId}");
-                Assert.Equal(HttpStatusCode.OK, response.StatusCode);
+            Assert.Equal(HttpStatusCode.OK, response.StatusCode);
 
-                var errorEvent = _polling.GetEvents(startTime, testId, 1).Single();
-                ErrorEventEntryVerifiers.VerifyFullErrorEventLogged(errorEvent, testId, nameof(ErrorReportingController.ThrowCatchWithGoogleWebApiLogger));
-            }
+            var errorEvent = s_polling.GetEvents(_startTime, _testId, 1).Single();
+            ErrorEventEntryVerifiers.VerifyFullErrorEventLogged(errorEvent, _testId, nameof(ErrorReportingController.ThrowCatchWithGoogleWebApiLogger), s_expectedStatusCode);
+        }
+
+        public void Dispose()
+        {
+            _client.Dispose();
+            _server.Dispose();
         }
 
         /// <summary>
@@ -179,7 +171,7 @@ namespace Google.Cloud.Diagnostics.AspNet.IntegrationTests
             private static void Register(HttpConfiguration config)
             {
                 config.Services.Add(typeof(System.Web.Http.ExceptionHandling.IExceptionLogger),
-                    ErrorReportingExceptionLogger.Create(TestEnvironment.GetTestProjectId(), ErrorEventEntryData.Service, ErrorEventEntryData.Version));
+                    ErrorReportingExceptionLogger.Create(TestEnvironment.GetTestProjectId(), EntryData.Service, EntryData.Version));
 
                 config.IncludeErrorDetailPolicy = IncludeErrorDetailPolicy.Always;
 
@@ -209,7 +201,7 @@ namespace Google.Cloud.Diagnostics.AspNet.IntegrationTests
             HttpRequestMessage request, CancellationToken cancellationToken)
         {
             string id = request.GetRouteData().Values["id"].ToString();
-            string message = ErrorEventEntryData.GetMessage(nameof(SendAsync), id);
+            string message = EntryData.GetMessage(nameof(SendAsync), id);
             throw new Exception(message);
         }
     };
@@ -223,7 +215,7 @@ namespace Google.Cloud.Diagnostics.AspNet.IntegrationTests
         [HttpGet]
         public string Index(string id)
         {
-            var message = ErrorEventEntryData.GetMessage(nameof(Index), id);
+            var message = EntryData.GetMessage(nameof(Index), id);
             try
             {
                 throw new Exception(message);
@@ -239,7 +231,7 @@ namespace Google.Cloud.Diagnostics.AspNet.IntegrationTests
         [HttpGet]
         public string ThrowsException(string id)
         {
-            string message = ErrorEventEntryData.GetMessage(nameof(ThrowsException), id);
+            string message = EntryData.GetMessage(nameof(ThrowsException), id);
             throw new Exception(message);
         }
 
@@ -247,7 +239,7 @@ namespace Google.Cloud.Diagnostics.AspNet.IntegrationTests
         [HttpGet]
         public string ThrowsArgumentException(string id)
         {
-            string message = ErrorEventEntryData.GetMessage(nameof(ThrowsArgumentException), id);
+            string message = EntryData.GetMessage(nameof(ThrowsArgumentException), id);
             throw new ArgumentException(message);
         }
 
@@ -256,8 +248,8 @@ namespace Google.Cloud.Diagnostics.AspNet.IntegrationTests
         [HttpGet]
         public string ThrowCatchWithGoogleLogger(string id)
         {
-            var exceptionLogger = GoogleExceptionLogger.Create(TestEnvironment.GetTestProjectId(), ErrorEventEntryData.Service, ErrorEventEntryData.Version);
-            var message = ErrorEventEntryData.GetMessage(nameof(ThrowCatchWithGoogleLogger), id);
+            var exceptionLogger = GoogleExceptionLogger.Create(TestEnvironment.GetTestProjectId(), EntryData.Service, EntryData.Version);
+            var message = EntryData.GetMessage(nameof(ThrowCatchWithGoogleLogger), id);
             try
             {
                 throw new Exception(message);
@@ -274,8 +266,8 @@ namespace Google.Cloud.Diagnostics.AspNet.IntegrationTests
         [HttpGet]
         public string ThrowCatchWithGoogleWebApiLogger(string id)
         {
-            var exceptionLogger = GoogleWebApiExceptionLogger.Create(TestEnvironment.GetTestProjectId(), ErrorEventEntryData.Service, ErrorEventEntryData.Version);
-            var message = ErrorEventEntryData.GetMessage(nameof(ThrowCatchWithGoogleWebApiLogger), id);
+            var exceptionLogger = GoogleWebApiExceptionLogger.Create(TestEnvironment.GetTestProjectId(), EntryData.Service, EntryData.Version);
+            var message = EntryData.GetMessage(nameof(ThrowCatchWithGoogleWebApiLogger), id);
             try
             {
                 throw new Exception(message);

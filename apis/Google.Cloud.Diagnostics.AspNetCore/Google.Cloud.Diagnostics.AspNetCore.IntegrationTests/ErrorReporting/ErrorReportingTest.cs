@@ -22,102 +22,97 @@ using Microsoft.AspNetCore.TestHost;
 using Microsoft.Extensions.DependencyInjection;
 using System;
 using System.Linq;
+using System.Net;
+using System.Net.Http;
 using System.Threading.Tasks;
 using Xunit;
 
 namespace Google.Cloud.Diagnostics.AspNetCore.IntegrationTests
 {
-    public class ErrorReportingTest
+    public class ErrorReportingTest : IDisposable
     {
-        private readonly ErrorEventEntryPolling _polling = new ErrorEventEntryPolling();
+        private static readonly ErrorEventEntryPolling s_polling = new ErrorEventEntryPolling();
+
+        private readonly string _testId;
+
+        private readonly TestServer _server;
+        private readonly HttpClient _client;
+
+        private readonly DateTime _startTime;
+
+        public ErrorReportingTest()
+        {
+            _testId = IdGenerator.FromDateTime();
+
+            var builder = new WebHostBuilder().UseStartup<ErrorReportingTestApplication>();
+            _server = new TestServer(builder);
+            _client = _server.CreateClient();
+
+            _startTime = DateTime.UtcNow;
+        }
 
         [Fact]
         public async Task NoExceptions()
         {
-            string testId = IdGenerator.FromDateTime();
-            DateTime startTime = DateTime.UtcNow;
+            var response = await _client.GetAsync($"/ErrorReporting/{nameof(ErrorReportingController.Index)}/{_testId}");
 
-            var builder = new WebHostBuilder().UseStartup<ErrorReportingTestApplication>();
-            using (TestServer server = new TestServer(builder))
-            using (var client = server.CreateClient())
-            {
-                await client.GetAsync($"/ErrorReporting/Index/{testId}");
+            Assert.Equal(HttpStatusCode.OK, response.StatusCode);
 
-                var errorEvents = _polling.GetEvents(startTime, testId, 0);
-                Assert.Empty(errorEvents);
-            }
+            var errorEvents = s_polling.GetEvents(_startTime, _testId, 0);
+            Assert.Empty(errorEvents);
         }
 
         [Fact]
         public async Task ManualLog()
         {
-            string testId = IdGenerator.FromDateTime();
-            DateTime startTime = DateTime.UtcNow;
+            var response = await _client.GetAsync($"/ErrorReporting/{nameof(ErrorReportingController.ThrowCatchLog)}/{_testId}");
 
-            var builder = new WebHostBuilder().UseStartup<ErrorReportingTestApplication>();
-            using (TestServer server = new TestServer(builder))
-            using (var client = server.CreateClient())
-            {
-                await client.GetAsync($"/ErrorReporting/ThrowCatchLog/{testId}");
+            Assert.Equal(HttpStatusCode.OK, response.StatusCode);
 
-                var errorEvents = _polling.GetEvents(startTime, testId, 1);
-                Assert.Single(errorEvents);
-                ErrorEventEntryVerifiers.VerifyFullErrorEventLogged(errorEvents.First(), testId, "ThrowCatchLog");
-            }
+            var errorEvent = s_polling.GetEvents(_startTime, _testId, 1).Single();
+            ErrorEventEntryVerifiers.VerifyFullErrorEventLogged(errorEvent, _testId, nameof(ErrorReportingController.ThrowCatchLog), (int)HttpStatusCode.OK);
         }
 
         [Fact]
         public async Task LogsException()
         {
-            string testId = IdGenerator.FromDateTime();
-            DateTime startTime = DateTime.UtcNow;
+            await Assert.ThrowsAsync<Exception>(() =>
+                _client.GetAsync($"/ErrorReporting/{nameof(ErrorReportingController.ThrowsException)}/{_testId}"));
 
-            var builder = new WebHostBuilder().UseStartup<ErrorReportingTestApplication>();
-            using (TestServer server = new TestServer(builder))
-            using (var client = server.CreateClient())
-            {
-                await Assert.ThrowsAsync<Exception>(() =>
-                    client.GetAsync($"/ErrorReporting/ThrowsException/{testId}"));
-
-                var errorEvents = _polling.GetEvents(startTime, testId, 1);
-                Assert.Single(errorEvents);
-                ErrorEventEntryVerifiers.VerifyFullErrorEventLogged(errorEvents.First(), testId, "ThrowsException");
-            }
+            var errorEvent = s_polling.GetEvents(_startTime, _testId, 1).Single();
+            ErrorEventEntryVerifiers.VerifyFullErrorEventLogged(errorEvent, _testId, nameof(ErrorReportingController.ThrowsException), (int)HttpStatusCode.OK);
         }
 
         [Fact]
         public async Task LogsMultipleExceptions()
         {
-            string testId = IdGenerator.FromDateTime();
-            DateTime startTime = DateTime.UtcNow;
+            await Assert.ThrowsAsync<Exception>(() =>
+                _client.GetAsync($"/ErrorReporting/{nameof(ErrorReportingController.ThrowsException)}/{_testId}"));
+            await Assert.ThrowsAsync<ArgumentException>(() =>
+                _client.GetAsync($"/ErrorReporting/{nameof(ErrorReportingController.ThrowsArgumentException)}/{_testId}"));
+            await Assert.ThrowsAsync<Exception>(() =>
+                _client.GetAsync($"/ErrorReporting/{nameof(ErrorReportingController.ThrowsException)}/{_testId}"));
+            await Assert.ThrowsAsync<Exception>(() =>
+                _client.GetAsync($"/ErrorReporting/{nameof(ErrorReportingController.ThrowsException)}/{_testId}"));
 
-            var builder = new WebHostBuilder().UseStartup<ErrorReportingTestApplication>();
-            using (TestServer server = new TestServer(builder))
-            using (var client = server.CreateClient())
+            var errorEvents = s_polling.GetEvents(_startTime, _testId, 4);
+            Assert.Equal(4, errorEvents.Count());
+
+            var exceptionEvents = errorEvents.Where(e => e.Message.Contains(nameof(ErrorReportingController.ThrowsException)));
+            Assert.Equal(3, exceptionEvents.Count());
+            foreach (var errorEvent in exceptionEvents)
             {
-                await Assert.ThrowsAsync<Exception>(() =>
-                    client.GetAsync($"/ErrorReporting/ThrowsException/{testId}"));
-                await Assert.ThrowsAsync<ArgumentException>(() =>
-                    client.GetAsync($"/ErrorReporting/ThrowsArgumentException/{testId}"));
-                await Assert.ThrowsAsync<Exception>(() =>
-                    client.GetAsync($"/ErrorReporting/ThrowsException/{testId}"));
-                await Assert.ThrowsAsync<Exception>(() =>
-                    client.GetAsync($"/ErrorReporting/ThrowsException/{testId}"));
-
-                var errorEvents = _polling.GetEvents(startTime, testId, 4);
-                Assert.Equal(4, errorEvents.Count());
-
-                var exceptionEvents = errorEvents.Where(e => e.Message.Contains("ThrowsException"));
-                Assert.Equal(3, exceptionEvents.Count());
-                foreach (var errorEvent in exceptionEvents)
-                {
-                    ErrorEventEntryVerifiers.VerifyFullErrorEventLogged(errorEvent, testId, "ThrowsException");
-                }
-
-                var argumentExceptionEvents = errorEvents.Where(e => e.Message.Contains("ThrowsArgumentException"));
-                Assert.Single(argumentExceptionEvents);
-                ErrorEventEntryVerifiers.VerifyFullErrorEventLogged(argumentExceptionEvents.First(), testId, "ThrowsArgumentException");
+                ErrorEventEntryVerifiers.VerifyFullErrorEventLogged(errorEvent, _testId, nameof(ErrorReportingController.ThrowsException), (int)HttpStatusCode.OK);
             }
+
+            var argumentExceptionEvent = errorEvents.Where(e => e.Message.Contains(nameof(ErrorReportingController.ThrowsArgumentException))).Single();
+            ErrorEventEntryVerifiers.VerifyFullErrorEventLogged(argumentExceptionEvent, _testId, nameof(ErrorReportingController.ThrowsArgumentException), (int)HttpStatusCode.OK);
+        }
+
+        public void Dispose()
+        {
+            _client.Dispose();
+            _server.Dispose();
         }
 
         /// <summary>
@@ -131,8 +126,8 @@ namespace Google.Cloud.Diagnostics.AspNetCore.IntegrationTests
                 services.AddGoogleExceptionLogging(options =>
                 {
                     options.ProjectId = TestEnvironment.GetTestProjectId();
-                    options.ServiceName = ErrorEventEntryData.Service;
-                    options.Version = ErrorEventEntryData.Version;
+                    options.ServiceName = EntryData.Service;
+                    options.Version = EntryData.Version;
                 })
                 .AddMvc();
             }
@@ -164,7 +159,7 @@ namespace Google.Cloud.Diagnostics.AspNetCore.IntegrationTests
         /// <summary>Catches and handles a thrown <see cref="Exception"/>.</summary>
         public string Index(string id)
         {
-            var message = ErrorEventEntryData.GetMessage(nameof(Index), id);
+            var message = EntryData.GetMessage(nameof(Index), id);
             try
             {
                 throw new Exception(message);
@@ -179,21 +174,21 @@ namespace Google.Cloud.Diagnostics.AspNetCore.IntegrationTests
         /// <summary>Throws an <see cref="Exception"/>.</summary>
         public string ThrowsException(string id)
         {
-            string message = ErrorEventEntryData.GetMessage(nameof(ThrowsException), id);
+            string message = EntryData.GetMessage(nameof(ThrowsException), id);
             throw new Exception(message);
         }
 
         /// <summary>Throws an <see cref="ArgumentException"/>.</summary>
         public string ThrowsArgumentException(string id)
         {
-            string message = ErrorEventEntryData.GetMessage(nameof(ThrowsArgumentException), id);
+            string message = EntryData.GetMessage(nameof(ThrowsArgumentException), id);
             throw new ArgumentException(message);
         }
 
         /// <summary>Catches and logs a thrown <see cref="Exception"/>.</summary>
         public string ThrowCatchLog(string id)
         {
-            var message = ErrorEventEntryData.GetMessage(nameof(Index), id);
+            var message = EntryData.GetMessage(nameof(Index), id);
             try
             {
                 throw new Exception(message);
