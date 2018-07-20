@@ -61,6 +61,7 @@ namespace Google.Cloud.Diagnostics.Common.IntegrationTests.ErrorReporting
         {
             Assert.Equal(HttpMethod.Get.Method, errorEvent.Context.HttpRequest.Method);
             Assert.False(string.IsNullOrWhiteSpace(errorEvent.Context.HttpRequest.Url));
+            Assert.True(errorEvent.Context.HttpRequest.ResponseStatusCode >= 200);
         }
     }
 }

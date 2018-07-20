@@ -14,7 +14,7 @@
 
 using Google.Cloud.ClientTesting;
 using Google.Cloud.Diagnostics.Common.IntegrationTests;
-using Google.Cloud.ErrorReporting.V1Beta1;
+using Google.Cloud.Diagnostics.Common.IntegrationTests.ErrorReporting;
 using Microsoft.AspNetCore.Builder;
 using Microsoft.AspNetCore.Hosting;
 using Microsoft.AspNetCore.Mvc;
@@ -22,8 +22,6 @@ using Microsoft.AspNetCore.TestHost;
 using Microsoft.Extensions.DependencyInjection;
 using System;
 using System.Linq;
-using System.Net.Http;
-using System.Runtime.InteropServices;
 using System.Threading.Tasks;
 using Xunit;
 
@@ -32,8 +30,6 @@ namespace Google.Cloud.Diagnostics.AspNetCore.IntegrationTests
     public class ErrorReportingTest
     {
         private readonly ErrorEventEntryPolling _polling = new ErrorEventEntryPolling();
-
-        private readonly bool _isWindows = RuntimeInformation.IsOSPlatform(OSPlatform.Windows);
 
         [Fact]
         public async Task NoExceptions()
@@ -66,7 +62,7 @@ namespace Google.Cloud.Diagnostics.AspNetCore.IntegrationTests
 
                 var errorEvents = _polling.GetEvents(startTime, testId, 1);
                 Assert.Single(errorEvents);
-                VerifyErrorEvent(errorEvents.First(), testId, "ThrowCatchLog");
+                ErrorEventEntryVerifiers.VerifyFullErrorEventLogged(errorEvents.First(), testId, "ThrowCatchLog");
             }
         }
 
@@ -85,7 +81,7 @@ namespace Google.Cloud.Diagnostics.AspNetCore.IntegrationTests
 
                 var errorEvents = _polling.GetEvents(startTime, testId, 1);
                 Assert.Single(errorEvents);
-                VerifyErrorEvent(errorEvents.First(), testId, "ThrowsException");
+                ErrorEventEntryVerifiers.VerifyFullErrorEventLogged(errorEvents.First(), testId, "ThrowsException");
             }
         }
 
@@ -115,39 +111,13 @@ namespace Google.Cloud.Diagnostics.AspNetCore.IntegrationTests
                 Assert.Equal(3, exceptionEvents.Count());
                 foreach (var errorEvent in exceptionEvents)
                 {
-                    VerifyErrorEvent(errorEvent, testId, "ThrowsException");
+                    ErrorEventEntryVerifiers.VerifyFullErrorEventLogged(errorEvent, testId, "ThrowsException");
                 }
 
                 var argumentExceptionEvents = errorEvents.Where(e => e.Message.Contains("ThrowsArgumentException"));
                 Assert.Single(argumentExceptionEvents);
-                VerifyErrorEvent(argumentExceptionEvents.First(), testId, "ThrowsArgumentException");
+                ErrorEventEntryVerifiers.VerifyFullErrorEventLogged(argumentExceptionEvents.First(), testId, "ThrowsArgumentException");
             }
-        }
-
-        /// <summary>
-        /// Checks that an <see cref="ErrorEvent"/> contains valid data.
-        /// </summary>
-        /// <param name="errorEvent">The event to check.</param>
-        /// <param name="testId">The id of the test.</param>
-        /// <param name="functionName">The name of the function the error occurred in.</param>
-        private void VerifyErrorEvent(ErrorEvent errorEvent, string testId, string functionName)
-        {
-            Assert.Equal(ErrorReportingTestApplication.Service, errorEvent.ServiceContext.Service);
-            Assert.Equal(ErrorReportingTestApplication.Version, errorEvent.ServiceContext.Version);
-
-            Assert.Contains(functionName, errorEvent.Message);
-            Assert.Contains(testId, errorEvent.Message);
-
-            Assert.Equal(HttpMethod.Get.Method, errorEvent.Context.HttpRequest.Method);
-            Assert.False(string.IsNullOrWhiteSpace(errorEvent.Context.HttpRequest.Url));
-            Assert.True(errorEvent.Context.HttpRequest.ResponseStatusCode >= 200);
-
-            if (_isWindows)
-            {
-                Assert.False(string.IsNullOrWhiteSpace(errorEvent.Context.ReportLocation.FilePath));
-                Assert.True(errorEvent.Context.ReportLocation.LineNumber > 0);
-            }
-            Assert.Equal(functionName, errorEvent.Context.ReportLocation.FunctionName);
         }
 
         /// <summary>
@@ -156,17 +126,13 @@ namespace Google.Cloud.Diagnostics.AspNetCore.IntegrationTests
         /// </summary>
         private class ErrorReportingTestApplication
         {
-            public const string Service = "service-name";
-            public const string Version = "version-id";
-            protected readonly string ProjectId = TestEnvironment.GetTestProjectId();
-
             public void ConfigureServices(IServiceCollection services)
             {
                 services.AddGoogleExceptionLogging(options =>
                 {
-                    options.ProjectId = ProjectId;
-                    options.ServiceName = Service;
-                    options.Version = Version;
+                    options.ProjectId = TestEnvironment.GetTestProjectId();
+                    options.ServiceName = ErrorEventEntryData.Service;
+                    options.Version = ErrorEventEntryData.Version;
                 })
                 .AddMvc();
             }
@@ -198,7 +164,7 @@ namespace Google.Cloud.Diagnostics.AspNetCore.IntegrationTests
         /// <summary>Catches and handles a thrown <see cref="Exception"/>.</summary>
         public string Index(string id)
         {
-            var message = GetMessage(nameof(Index), id);
+            var message = ErrorEventEntryData.GetMessage(nameof(Index), id);
             try
             {
                 throw new Exception(message);
@@ -213,21 +179,21 @@ namespace Google.Cloud.Diagnostics.AspNetCore.IntegrationTests
         /// <summary>Throws an <see cref="Exception"/>.</summary>
         public string ThrowsException(string id)
         {
-            string message = GetMessage(nameof(ThrowsException), id);
+            string message = ErrorEventEntryData.GetMessage(nameof(ThrowsException), id);
             throw new Exception(message);
         }
 
         /// <summary>Throws an <see cref="ArgumentException"/>.</summary>
         public string ThrowsArgumentException(string id)
         {
-            string message = GetMessage(nameof(ThrowsArgumentException), id);
+            string message = ErrorEventEntryData.GetMessage(nameof(ThrowsArgumentException), id);
             throw new ArgumentException(message);
         }
 
         /// <summary>Catches and logs a thrown <see cref="Exception"/>.</summary>
         public string ThrowCatchLog(string id)
         {
-            var message = GetMessage(nameof(Index), id);
+            var message = ErrorEventEntryData.GetMessage(nameof(Index), id);
             try
             {
                 throw new Exception(message);
@@ -238,7 +204,5 @@ namespace Google.Cloud.Diagnostics.AspNetCore.IntegrationTests
             }
             return message;
         }
-
-        private string GetMessage(string message, string id) => $"{message} - {id}";
     }
 }
