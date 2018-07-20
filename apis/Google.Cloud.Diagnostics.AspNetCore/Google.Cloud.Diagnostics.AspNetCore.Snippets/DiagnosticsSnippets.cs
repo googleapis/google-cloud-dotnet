@@ -13,10 +13,14 @@
 // limitations under the License.
 
 using Google.Cloud.ClientTesting;
+using Google.Cloud.Diagnostics.Common.IntegrationTests;
+using Google.Cloud.Diagnostics.Common.IntegrationTests.ErrorReporting;
 using Google.Protobuf.WellKnownTypes;
 using Microsoft.AspNetCore.Hosting;
 using Microsoft.AspNetCore.TestHost;
 using System;
+using System.Linq;
+using System.Net;
 using System.Net.Http;
 using System.Threading.Tasks;
 using Xunit;
@@ -26,8 +30,10 @@ namespace Google.Cloud.Diagnostics.AspNetCore.Snippets
     [SnippetOutputCollector]
     public class DiagnosticsSnippetsTests : IDisposable
     {
-        private const string Service = "service-name";
-        private const string Version = "version-id";
+        private static readonly ErrorEventEntryPolling s_polling = new ErrorEventEntryPolling();
+
+        private const string Service = EntryData.Service;
+        private const string Version = EntryData.Version;
         private static readonly string ProjectId = TestEnvironment.GetTestProjectId();
 
         private readonly string _testId;
@@ -62,9 +68,11 @@ namespace Google.Cloud.Diagnostics.AspNetCore.Snippets
         [Fact]
         public async Task Logs_UnhandledException()
         {
-            await Assert.ThrowsAsync<Exception>(() => _client.GetAsync($"/ErrorLoggingSamples/ThrowsException/{_testId}"));
+            await Assert.ThrowsAsync<Exception>(() => _client.GetAsync($"/ErrorLoggingSamples/{nameof(ErrorLoggingSamplesController.ThrowsException)}/{_testId}"));
 
-            ErrorReportingSnippetsTests.PollAndVerifyErrorEvent(_startTime, _testId, "ThrowsException");
+            var errorEvent = s_polling.GetEvents(_startTime, _testId, 1).Single();
+
+            ErrorEventEntryVerifiers.VerifyFullErrorEventLogged(errorEvent, _testId, nameof(ErrorLoggingSamplesController.ThrowsException), (int)HttpStatusCode.OK);
         }
 
         /// <summary>

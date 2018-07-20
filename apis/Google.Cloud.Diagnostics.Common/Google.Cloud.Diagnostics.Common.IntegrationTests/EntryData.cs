@@ -12,13 +12,13 @@
 // See the License for the specific language governing permissions and
 // limitations under the License.
 
-namespace Google.Cloud.Diagnostics.Common.IntegrationTests.ErrorReporting
+namespace Google.Cloud.Diagnostics.Common.IntegrationTests
 {
     /// <summary>
     /// Class that contains data and helper methods used to include data in
     /// <see cref="ErrorEvent"/> entries.
     /// </summary>
-    public static class ErrorEventEntryData
+    public static class EntryData
     {
         public const string Service = "service-name";
         public const string Version = "version-id";

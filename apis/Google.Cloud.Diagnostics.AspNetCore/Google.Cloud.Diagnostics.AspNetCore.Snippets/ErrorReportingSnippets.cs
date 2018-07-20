@@ -22,6 +22,7 @@ using Microsoft.AspNetCore.TestHost;
 using Microsoft.Extensions.DependencyInjection;
 using System;
 using System.Linq;
+using System.Net;
 using System.Net.Http;
 using System.Threading.Tasks;
 using Xunit;
@@ -59,9 +60,12 @@ namespace Google.Cloud.Diagnostics.AspNetCore.Snippets
         [Fact]
         public async Task Logs_UnhandledException()
         {
-            await Assert.ThrowsAsync<Exception>(() => _client.GetAsync($"/ErrorLoggingSamples/ThrowsException/{_testId}"));
+            await Assert.ThrowsAsync<Exception>(()
+                => _client.GetAsync($"/ErrorLoggingSamples/{nameof(ErrorLoggingSamplesController.ThrowsException)}/{_testId}"));
 
-            PollAndVerifyErrorEvent(_startTime, _testId, "ThrowsException");
+            var errorEvent = s_polling.GetEvents(_startTime, _testId, 1).Single();
+
+            ErrorEventEntryVerifiers.VerifyFullErrorEventLogged(errorEvent, _testId, nameof(ErrorLoggingSamplesController.ThrowsException), (int)HttpStatusCode.OK);
         }
 
         /// <summary>
@@ -73,20 +77,16 @@ namespace Google.Cloud.Diagnostics.AspNetCore.Snippets
         [Fact]
         public async Task Logs_Explicitly()
         {
-            await _client.GetAsync($"/ErrorLoggingSamples/CatchesAndLogsException/{_testId}");
+            var response = await _client.GetAsync($"/ErrorLoggingSamples/{nameof(ErrorLoggingSamplesController.CatchesAndLogsException)}/{_testId}");
+
+            Assert.Equal(HttpStatusCode.OK, response.StatusCode);
+
+            var errorEvent = s_polling.GetEvents(_startTime, _testId, 1).Single();
 
             // Verifying with function name ThrowsExceptions because that is the function
             // that actually throws the Exception so will be the one included as
             // ErrorEvent.Context.ReportLocation.FunctionName
-            PollAndVerifyErrorEvent(_startTime, _testId, "ThrowsException");
-        }
-
-        internal static void PollAndVerifyErrorEvent(DateTime startTime, string testId, string functionName)
-        {
-            var errorEvents = s_polling.GetEvents(startTime, testId, 1);
-            var errorEvent = errorEvents.Single();
-
-            ErrorEventEntryVerifiers.VerifyFullErrorEventLogged(errorEvent, testId, functionName);
+            ErrorEventEntryVerifiers.VerifyFullErrorEventLogged(errorEvent, _testId, nameof(ErrorLoggingSamplesController.ThrowsException), (int)HttpStatusCode.OK);
         }
 
         public void Dispose()
@@ -102,8 +102,8 @@ namespace Google.Cloud.Diagnostics.AspNetCore.Snippets
     /// </summary>
     internal class ErrorReportingTestApplication
     {
-        public const string Service = ErrorEventEntryData.Service;
-        public const string Version = ErrorEventEntryData.Version;
+        public const string Service = EntryData.Service;
+        public const string Version = EntryData.Version;
         private static readonly string ProjectId = TestEnvironment.GetTestProjectId();
 
         // Sample: ReportUnhandledExceptions

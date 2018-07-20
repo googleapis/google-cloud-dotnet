@@ -23,25 +23,25 @@ namespace Google.Cloud.Diagnostics.Common.IntegrationTests.ErrorReporting
     {
         /// <summary>
         /// Checks that an <see cref="ErrorEvent"/> contains valid data,
-        /// including HTPP Context data.
+        /// including HTTP Context data.
         /// </summary>
-        public static void VerifyFullErrorEventLogged(ErrorEvent errorEvent, string testId, string functionName)
+        public static void VerifyFullErrorEventLogged(ErrorEvent errorEvent, string testId, string functionName, int responseStatusCode)
         {
             VerifyErrorEventLogged(errorEvent, testId, functionName);
-            VerifyHttpContextLogged(errorEvent);
+            VerifyHttpContextLogged(errorEvent, responseStatusCode);
         }
 
         /// <summary>
         /// Checks that an <see cref="ErrorEvent"/> contains valid data.
         /// Doesn't check for HTTP Context data, which won't be logged 
-        /// when from withing a self hosted Web API application the
+        /// when from within a self hosted Web API application the
         /// Google.Cloud.Diagnostics.GoogleExceptionLogger is used instead of the
         /// Google.Cloud.Diagnostics.GoogleWebApiExceptionLogger.
         /// </summary>
         public static void VerifyErrorEventLogged(ErrorEvent errorEvent, string testId, string functionName)
         {
-            Assert.Equal(ErrorEventEntryData.Service, errorEvent.ServiceContext.Service);
-            Assert.Equal(ErrorEventEntryData.Version, errorEvent.ServiceContext.Version);
+            Assert.Equal(EntryData.Service, errorEvent.ServiceContext.Service);
+            Assert.Equal(EntryData.Version, errorEvent.ServiceContext.Version);
 
             Assert.Contains(functionName, errorEvent.Message);
             Assert.Contains(testId, errorEvent.Message);
@@ -57,11 +57,11 @@ namespace Google.Cloud.Diagnostics.Common.IntegrationTests.ErrorReporting
         /// <summary>
         /// Checks that an <see cref="ErrorEvent"/> contains valid HTTP Context data.
         /// </summary>
-        public static void VerifyHttpContextLogged(ErrorEvent errorEvent)
+        public static void VerifyHttpContextLogged(ErrorEvent errorEvent, int responseStatusCode)
         {
             Assert.Equal(HttpMethod.Get.Method, errorEvent.Context.HttpRequest.Method);
             Assert.False(string.IsNullOrWhiteSpace(errorEvent.Context.HttpRequest.Url));
-            Assert.True(errorEvent.Context.HttpRequest.ResponseStatusCode >= 200);
+            Assert.Equal(responseStatusCode, errorEvent.Context.HttpRequest.ResponseStatusCode);
         }
     }
 }
