@@ -3,9 +3,9 @@
 set -e
 
 SCRIPT=$(readlink -f "$0")
-ROOT_DIR=$(dirname "$SCRIPT")
+SCRIPT_DIR=$(dirname "$SCRIPT")
 
-cd $ROOT_DIR
+cd $SCRIPT_DIR
 cd ..
 
 # Build the libraries w/o running unit tests.

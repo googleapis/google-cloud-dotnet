@@ -3,9 +3,9 @@
 set -e
 
 SCRIPT=$(readlink -f "$0")
-ROOT_DIR=$(dirname "$SCRIPT")
+SCRIPT_DIR=$(dirname "$SCRIPT")
 
-cd $ROOT_DIR
+cd $SCRIPT_DIR
 cd ..
 
 export GOOGLE_APPLICATION_CREDENTIALS="$KOKORO_KEYSTORE_DIR/73609_cloud-sharp-jenkins-compute-service-account"
