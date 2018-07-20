@@ -14,7 +14,6 @@
 
 using Google.Api.Gax.ResourceNames;
 using Google.Cloud.ClientTesting;
-using Google.Cloud.Diagnostics.Common.Tests;
 using Google.Cloud.ErrorReporting.V1Beta1;
 using System;
 using System.Collections.Generic;
