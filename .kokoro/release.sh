@@ -2,11 +2,15 @@
 
 set -e
 
+SCRIPT=$(readlink -f "$0")
+SCRIPT_DIR=$(dirname "$SCRIPT")
+
+cd $SCRIPT_DIR
+cd ..
+
 export GOOGLE_APPLICATION_CREDENTIALS="$KOKORO_KEYSTORE_DIR/73609_cloud-sharp-jenkins-compute-service-account"
 export REQUESTER_PAYS_CREDENTIALS="$KOKORO_KEYSTORE_DIR/73609_gcloud-devel-service-account"
 export NUGET_API_KEY="$(cat "$KOKORO_KEYSTORE_DIR"/73609_google-cloud-nuget-api-key)"
-
-cd ..
 
 # Build the release and run the tests.
 ./buildrelease.sh --ssh $(git rev-parse HEAD)

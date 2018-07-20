@@ -2,6 +2,10 @@
 
 set -e
 
+SCRIPT=$(readlink -f "$0")
+SCRIPT_DIR=$(dirname "$SCRIPT")
+
+cd $SCRIPT_DIR
 cd ..
 
 # Build the libraries w/o running unit tests.
