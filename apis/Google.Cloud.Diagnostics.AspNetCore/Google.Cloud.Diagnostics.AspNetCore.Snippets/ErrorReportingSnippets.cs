@@ -14,6 +14,7 @@
 
 using Google.Cloud.ClientTesting;
 using Google.Cloud.Diagnostics.Common.IntegrationTests;
+using Google.Cloud.Diagnostics.Common.IntegrationTests.ErrorReporting;
 using Microsoft.AspNetCore.Builder;
 using Microsoft.AspNetCore.Hosting;
 using Microsoft.AspNetCore.Mvc;
@@ -30,7 +31,6 @@ namespace Google.Cloud.Diagnostics.AspNetCore.Snippets
     [SnippetOutputCollector]
     public class ErrorReportingSnippetsTests : IDisposable
     {
-        private static readonly bool s_isWindows = TestEnvironment.IsWindows();
         private static readonly ErrorEventEntryPolling s_polling = new ErrorEventEntryPolling();
 
         private readonly string _testId;
@@ -75,7 +75,6 @@ namespace Google.Cloud.Diagnostics.AspNetCore.Snippets
         {
             await _client.GetAsync($"/ErrorLoggingSamples/CatchesAndLogsException/{_testId}");
 
-
             // Verifying with function name ThrowsExceptions because that is the function
             // that actually throws the Exception so will be the one included as
             // ErrorEvent.Context.ReportLocation.FunctionName
@@ -87,21 +86,7 @@ namespace Google.Cloud.Diagnostics.AspNetCore.Snippets
             var errorEvents = s_polling.GetEvents(startTime, testId, 1);
             var errorEvent = errorEvents.Single();
 
-            Assert.Equal(ErrorReportingTestApplication.Service, errorEvent.ServiceContext.Service);
-            Assert.Equal(ErrorReportingTestApplication.Version, errorEvent.ServiceContext.Version);
-
-            Assert.Contains(testId, errorEvent.Message);
-
-            Assert.Equal(HttpMethod.Get.Method, errorEvent.Context.HttpRequest.Method);
-            Assert.False(string.IsNullOrWhiteSpace(errorEvent.Context.HttpRequest.Url));
-            Assert.True(errorEvent.Context.HttpRequest.ResponseStatusCode >= 200);
-
-            if (s_isWindows)
-            {
-                Assert.False(string.IsNullOrWhiteSpace(errorEvent.Context.ReportLocation.FilePath));
-                Assert.True(errorEvent.Context.ReportLocation.LineNumber > 0);
-            }
-            Assert.Equal(functionName, errorEvent.Context.ReportLocation.FunctionName);
+            ErrorEventEntryVerifiers.VerifyFullErrorEventLogged(errorEvent, testId, functionName);
         }
 
         public void Dispose()
@@ -117,8 +102,8 @@ namespace Google.Cloud.Diagnostics.AspNetCore.Snippets
     /// </summary>
     internal class ErrorReportingTestApplication
     {
-        public const string Service = "service-name";
-        public const string Version = "version-id";
+        public const string Service = ErrorEventEntryData.Service;
+        public const string Version = ErrorEventEntryData.Version;
         private static readonly string ProjectId = TestEnvironment.GetTestProjectId();
 
         // Sample: ReportUnhandledExceptions
