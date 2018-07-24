@@ -17,7 +17,7 @@ using Google.Cloud.ErrorReporting.V1Beta1;
 using System.Net.Http;
 using Xunit;
 
-namespace Google.Cloud.Diagnostics.Common.IntegrationTests.ErrorReporting
+namespace Google.Cloud.Diagnostics.Common.IntegrationTests
 {
     public static class ErrorEventEntryVerifiers
     {
