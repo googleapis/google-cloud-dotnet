@@ -247,9 +247,6 @@ namespace Google.Cloud.Diagnostics.Common.IntegrationTests
             }
         }
 
-        public void Dispose()
-        {
-            _grpcConsumer.Dispose();
-        }
+        public void Dispose() => _grpcConsumer.Dispose();
     }
 }

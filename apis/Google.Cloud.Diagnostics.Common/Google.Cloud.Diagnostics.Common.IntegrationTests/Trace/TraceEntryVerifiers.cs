@@ -80,7 +80,7 @@ namespace Google.Cloud.Diagnostics.Common.IntegrationTests
         /// The span can have other labels.
         /// </list>
         /// </summary>
-        /// <param name="span">The spna to check.</param>
+        /// <param name="span">The span to check.</param>
         /// <param name="expectedLabels">The set of labels expected to be present on the span.</param>
         public static void AssertSpanLabelsContains(TraceSpan span, IDictionary<string, string> expectedLabels)
         {

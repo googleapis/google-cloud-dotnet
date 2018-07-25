@@ -77,8 +77,8 @@ namespace Google.Cloud.Diagnostics.AspNetCore.IntegrationTests
                 Labels =
                 {
                     { "project_id", TestEnvironment.GetTestProjectId() },
-                    { "module_id", "some-service" },
-                    { "version_id", "1.0.0" },
+                    { "module_id", EntryData.Service },
+                    { "version_id", EntryData.Version },
                     { "build_id", "some-build-id" }
                 }
             };
@@ -135,8 +135,8 @@ namespace Google.Cloud.Diagnostics.AspNetCore.IntegrationTests
         {
             var polling = new ErrorEventEntryPolling();
             await Assert.ThrowsAsync<Exception>(() => client.GetAsync($"/ErrorReporting/{nameof(ErrorReportingController.ThrowsException)}/{testId}"));
-            var errorEvents = polling.GetEvents(startTime, testId, 1);
-            Assert.Single(errorEvents);
+            var errorEvent = polling.GetEvents(startTime, testId, 1).Single();
+            ErrorEventEntryVerifiers.VerifyFullErrorEventLogged(errorEvent, testId, nameof(ErrorReportingController.ThrowsException), 200);
         }
     }
 }
