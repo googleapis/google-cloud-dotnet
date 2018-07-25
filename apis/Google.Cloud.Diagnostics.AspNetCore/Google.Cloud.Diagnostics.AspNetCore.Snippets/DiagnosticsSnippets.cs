@@ -13,6 +13,7 @@
 // limitations under the License.
 
 using Google.Cloud.ClientTesting;
+using Google.Cloud.Diagnostics.Common;
 using Google.Cloud.Diagnostics.Common.IntegrationTests;
 using Google.Protobuf.WellKnownTypes;
 using Microsoft.AspNetCore.Hosting;
@@ -29,7 +30,8 @@ namespace Google.Cloud.Diagnostics.AspNetCore.Snippets
     [SnippetOutputCollector]
     public class DiagnosticsSnippetsTests : IDisposable
     {
-        private static readonly ErrorEventEntryPolling s_polling = new ErrorEventEntryPolling();
+        private static readonly ErrorEventEntryPolling s_errorPolling = new ErrorEventEntryPolling();
+        private static readonly TraceEntryPolling s_tracePolling = new TraceEntryPolling();
 
         private const string Service = EntryData.Service;
         private const string Version = EntryData.Version;
@@ -69,7 +71,7 @@ namespace Google.Cloud.Diagnostics.AspNetCore.Snippets
         {
             await Assert.ThrowsAsync<Exception>(() => _client.GetAsync($"/ErrorLoggingSamples/{nameof(ErrorLoggingSamplesController.ThrowsException)}/{_testId}"));
 
-            var errorEvent = s_polling.GetEvents(_startTime, _testId, 1).Single();
+            var errorEvent = s_errorPolling.GetEvents(_startTime, _testId, 1).Single();
 
             ErrorEventEntryVerifiers.VerifyFullErrorEventLogged(errorEvent, _testId, nameof(ErrorLoggingSamplesController.ThrowsException), (int)HttpStatusCode.OK);
         }
@@ -81,9 +83,15 @@ namespace Google.Cloud.Diagnostics.AspNetCore.Snippets
         [Fact]
         public async Task Traces_Block()
         {
-            HttpResponseMessage response = await _client.GetAsync($"/TraceSamples/TraceHelloWorld/{_testId}");
+            var uri = $"/TraceSamples/{nameof(TraceSamplesController.TraceHelloWorld)}/{_testId}";
+            var response = await _client.GetAsync(uri);
 
-            TraceSnippetsTests.PollAndVerifyTrace(Timestamp.FromDateTime(_startTime), "/TraceSamples/TraceHelloWorld/", _testId, response);
+            var trace = s_tracePolling.GetTrace(uri, Timestamp.FromDateTime(_startTime));
+
+            TraceEntryVerifiers.AssertParentChildSpan(trace, uri, _testId);
+            TraceEntryVerifiers.AssertSpanLabelsContains(
+                trace.Spans.First(s => s.Name == uri), TraceEntryData.HttpGetSuccessLabels);
+            Assert.False(response.Headers.Contains(TraceHeaderContext.TraceHeader));
         }
 
         /// <summary>

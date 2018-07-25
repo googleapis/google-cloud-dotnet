@@ -113,22 +113,20 @@ namespace Google.Cloud.Diagnostics.AspNetCore.IntegrationTests
 
         private static async Task TestTrace(string testId, DateTime startTime, HttpClient client)
         {
-            var response = await client.GetAsync($"/Trace/Trace/{testId}");
+            var uri = $"/Trace/{nameof(TraceController.Trace)}/{testId}";
+            var childSpanName = EntryData.GetMessage(nameof(TraceController.Trace), testId);
 
-            var spanName = TraceController.GetMessage(nameof(TraceController.Trace), testId);
+            var response = await client.GetAsync(uri);
 
             // Give the polling a little extra time to find the trace as
             // trace processing can sometimes take time and the default buffer is a
             // timed buffer.
             var polling = new TraceEntryPolling(TimeSpan.FromSeconds(20));
-            var trace = polling.GetTrace(spanName, Timestamp.FromDateTime(startTime));
+            var trace = polling.GetTrace(uri, Timestamp.FromDateTime(startTime));
 
-            Assert.NotNull(trace);
-            Assert.Equal(2, trace.Spans.Count);
-            var span = trace.Spans.First(s => s.Name.StartsWith("/Trace/Trace/"));
-            Assert.NotEmpty(span.Labels);
-            Assert.Equal("GET", span.Labels[TraceLabels.HttpMethod]);
-            Assert.Equal("200", span.Labels[TraceLabels.HttpStatusCode]);
+            TraceEntryVerifiers.AssertParentChildSpan(trace, uri, childSpanName);
+            TraceEntryVerifiers.AssertSpanLabelsContains(
+                trace.Spans.First(s => s.Name == uri), TraceEntryData.HttpGetSuccessLabels);
 
             Assert.False(response.Headers.Contains(TraceHeaderContext.TraceHeader));
         }
@@ -136,7 +134,7 @@ namespace Google.Cloud.Diagnostics.AspNetCore.IntegrationTests
         private static async Task TestErrorReporting(string testId, DateTime startTime, HttpClient client)
         {
             var polling = new ErrorEventEntryPolling();
-            await Assert.ThrowsAsync<Exception>(() => client.GetAsync($"/ErrorReporting/ThrowsException/{testId}"));
+            await Assert.ThrowsAsync<Exception>(() => client.GetAsync($"/ErrorReporting/{nameof(ErrorReportingController.ThrowsException)}/{testId}"));
             var errorEvents = polling.GetEvents(startTime, testId, 1);
             Assert.Single(errorEvents);
         }
