@@ -17,7 +17,6 @@ using Google.Cloud.ClientTesting;
 using Google.Cloud.Storage.V1;
 using System;
 using System.Collections.Generic;
-using System.Globalization;
 using System.IO;
 using System.Linq;
 using System.Reflection;
@@ -46,6 +45,7 @@ namespace Google.Cloud.BigQuery.V2.IntegrationTests
         public string DatasetId { get; }
         public string LabelsDatasetId { get; }
         public string HighScoreTableId { get; } = "highscores";
+        public string HighScoreExtendedTableId { get; } = "highscores_ext";
         public string PeopleTableId { get; } = "people";
         public string ComplexTypesTableId { get; } = "complex";
         public string ExhaustiveTypesTableId { get; } = "exhaustive";
@@ -73,6 +73,7 @@ namespace Google.Cloud.BigQuery.V2.IntegrationTests
             var dataset = client.CreateDataset(DatasetId);
             client.CreateDataset(LabelsDatasetId);
             CreateHighScoreTable(dataset);
+            CreateHighScoreExtendedTable(dataset);
             CreatePeopleTable(dataset);
             CreateComplexTypesTable(dataset);
             CreateExhaustiveTypesTable(dataset);
@@ -111,6 +112,34 @@ namespace Google.Cloud.BigQuery.V2.IntegrationTests
                 }
             };
             InsertAndWait(table, () => table.InsertRows(rows), 4);
+        }
+
+        private void CreateHighScoreExtendedTable(BigQueryDataset dataset)
+        {
+            var table = dataset.CreateTable(HighScoreExtendedTableId, new TableSchemaBuilder
+            {
+                { "player", BigQueryDbType.String },
+                { "gameStarted", BigQueryDbType.Timestamp },
+                { "score", BigQueryDbType.Int64 },
+                { "gameFinished", BigQueryDbType.Timestamp}
+            }.Build());
+
+            var rows = new[]
+            {
+                new BigQueryInsertRow {
+                    { "player", "Bob" },
+                    { "score", 75 },
+                    { "gameStarted", new DateTime(2003, 1, 1, 0, 0, 0, DateTimeKind.Utc) },
+                    { "gameFinished", new DateTime(2003, 1, 1, 1, 0, 0, DateTimeKind.Utc) }
+                },
+                new BigQueryInsertRow {
+                    { "player", "Angela" },
+                    { "score", 105 },
+                    { "gameStarted", new DateTime(2004, 1, 1, 0, 0, 0, DateTimeKind.Utc) },
+                    { "gameFinished", new DateTime(2004, 1, 1, 3, 0, 0, DateTimeKind.Utc) }
+                }
+            };
+            InsertAndWait(table, () => table.InsertRows(rows), 2);
         }
 
         private void CreatePeopleTable(BigQueryDataset dataset)

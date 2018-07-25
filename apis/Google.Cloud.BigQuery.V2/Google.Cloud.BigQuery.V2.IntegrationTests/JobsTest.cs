@@ -212,6 +212,48 @@ namespace Google.Cloud.BigQuery.V2.IntegrationTests
         }
 
         [Fact]
+        public void LoadJob_UpdateSchema()
+        {
+            var bqClient = BigQueryClient.Create(_fixture.ProjectId);
+            var originTable = bqClient.GetTable(_fixture.DatasetId, _fixture.HighScoreTableId);
+            var originTableExtended = bqClient.GetTable(_fixture.DatasetId, _fixture.HighScoreExtendedTableId);
+            var destinationBucket = _fixture.StorageBucketName;
+            var destinationObject = _fixture.GenerateStorageObjectName();
+            var destinationObjectExtended = _fixture.GenerateStorageObjectName();
+            var destinationUri = $"gs://{destinationBucket}/{destinationObject}";
+            var destinationUriExtended = $"gs://{destinationBucket}/{destinationObjectExtended}";
+            var destinationReference = bqClient.GetTableReference(_fixture.DatasetId, _fixture.CreateTableId());
+
+            // Just extracting the data into GCS so we can load it into BigQuery
+            var extractJob = originTable.CreateExtractJob(destinationUri);
+            var extractJobExtended = originTableExtended.CreateExtractJob(destinationUriExtended);
+            extractJob = extractJob.PollUntilCompleted().ThrowOnAnyError();
+            extractJobExtended = extractJobExtended.PollUntilCompleted().ThrowOnAnyError();
+
+            var loadJob = bqClient.CreateLoadJob(
+                destinationUri, destinationReference, originTable.Schema,
+                new CreateLoadJobOptions { SkipLeadingRows = 1});
+            loadJob = loadJob.PollUntilCompleted().ThrowOnAnyError();
+            var destinationTable = bqClient.GetTable(destinationReference);
+            Assert.Equal(3, destinationTable.Schema.Fields.Count);
+
+
+            var loadJobExtended = bqClient.CreateLoadJob(
+                destinationUriExtended, destinationReference, originTableExtended.Schema,
+                new CreateLoadJobOptions { SkipLeadingRows = 1, WriteDisposition = WriteDisposition.WriteAppend, DestinationSchemaUpdateOptions = SchemaUpdateOption.AllowFieldAddition});
+            loadJobExtended = loadJobExtended.PollUntilCompleted().ThrowOnAnyError();
+
+            destinationTable = bqClient.GetTable(destinationReference);
+            Assert.Equal(6, destinationTable.ListRows().Count());
+            Assert.Equal(4, destinationTable.Schema.Fields.Count);
+            var fields = destinationTable.Schema.Fields.Select(f => new { f.Name, f.Type, f.Mode }).OrderBy(f => f.Name).ToList();
+            Assert.Equal(new { Name = "gameFinished", Type = "TIMESTAMP", Mode = "NULLABLE" }, fields[0]);
+            Assert.Equal(new { Name = "gameStarted", Type = "TIMESTAMP", Mode = "NULLABLE" }, fields[1]);
+            Assert.Equal(new { Name = "player", Type = "STRING", Mode = "NULLABLE" }, fields[2]);
+            Assert.Equal(new { Name = "score", Type = "INTEGER", Mode = "NULLABLE" }, fields[3]);
+        }
+
+        [Fact]
         public void JobLabels_InvalidCharactersKey()
         {
             var client = BigQueryClient.Create(_fixture.ProjectId);
