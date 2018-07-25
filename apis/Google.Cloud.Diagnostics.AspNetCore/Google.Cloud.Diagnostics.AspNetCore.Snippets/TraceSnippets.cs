@@ -27,7 +27,6 @@ using System.Linq;
 using System.Net.Http;
 using System.Threading.Tasks;
 using Xunit;
-using GcpTrace = Google.Cloud.Trace.V1.Trace;
 
 namespace Google.Cloud.Diagnostics.AspNetCore.Snippets
 {
@@ -62,61 +61,70 @@ namespace Google.Cloud.Diagnostics.AspNetCore.Snippets
         [Fact]
         public async Task Traces_Block()
         {
-            HttpResponseMessage response = await _client.GetAsync($"/TraceSamples/TraceHelloWorld/{_testId}");
+            var uri = $"/TraceSamples/{nameof(TraceSamplesController.TraceHelloWorld)}/{_testId}";
+            var response = await _client.GetAsync(uri);
 
-            PollAndVerifyTrace(_startTime, "/TraceSamples/TraceHelloWorld/", _testId, response);
+            var trace = s_polling.GetTrace(uri, _startTime);
+
+            TraceEntryVerifiers.AssertParentChildSpan(trace, uri, _testId);
+            TraceEntryVerifiers.AssertSpanLabelsContains(
+                trace.Spans.First(s => s.Name == uri), TraceEntryData.HttpGetSuccessLabels);
+            Assert.False(response.Headers.Contains(TraceHeaderContext.TraceHeader));
         }
 
         [Fact]
         public async Task Traces_RunIn()
         {
-            HttpResponseMessage response = await _client.GetAsync($"/TraceSamples/TraceHelloWorldRunIn/{_testId}");
+            var uri = $"/TraceSamples/{nameof(TraceSamplesController.TraceHelloWorldRunIn)}/{_testId}";
+            var response = await _client.GetAsync(uri);
 
-            PollAndVerifyTrace(_startTime, "/TraceSamples/TraceHelloWorldRunIn/", _testId, response);
+            var trace = s_polling.GetTrace(uri, _startTime);
+
+            TraceEntryVerifiers.AssertParentChildSpan(trace, uri, _testId);
+            TraceEntryVerifiers.AssertSpanLabelsContains(
+                trace.Spans.First(s => s.Name == uri), TraceEntryData.HttpGetSuccessLabels);
+            Assert.False(response.Headers.Contains(TraceHeaderContext.TraceHeader));
         }
 
         [Fact]
         public async Task Traces_ConstructorInjection()
         {
-            HttpResponseMessage response = await _client.GetAsync($"/TraceSamplesConstructor/TraceHelloWorld/{_testId}");
+            var uri = $"/TraceSamplesConstructor/{nameof(TraceSamplesConstructorController.TraceHelloWorld)}/{_testId}";
+            var response = await _client.GetAsync(uri);
 
-            PollAndVerifyTrace(_startTime, "/TraceSamplesConstructor/TraceHelloWorld/", _testId, response);
+            var trace = s_polling.GetTrace(uri, _startTime);
+
+            TraceEntryVerifiers.AssertParentChildSpan(trace, uri, _testId);
+            TraceEntryVerifiers.AssertSpanLabelsContains(
+                trace.Spans.First(s => s.Name == uri), TraceEntryData.HttpGetSuccessLabels);
+            Assert.False(response.Headers.Contains(TraceHeaderContext.TraceHeader));
         }
 
         [Fact]
         public async Task Traces_MethodInjection()
         {
-            HttpResponseMessage response = await _client.GetAsync($"/TraceSamplesMethod/TraceHelloWorld/{_testId}");
+            var uri = $"/TraceSamplesMethod/{nameof(TraceSamplesMethodController.TraceHelloWorld)}/{_testId}";
+            var response = await _client.GetAsync(uri);
 
-            PollAndVerifyTrace(_startTime, "/TraceSamplesMethod/TraceHelloWorld/", _testId, response);
+            var trace = s_polling.GetTrace(uri, _startTime);
+
+            TraceEntryVerifiers.AssertParentChildSpan(trace, uri, _testId);
+            TraceEntryVerifiers.AssertSpanLabelsContains(
+                trace.Spans.First(s => s.Name == uri), TraceEntryData.HttpGetSuccessLabels);
+            Assert.False(response.Headers.Contains(TraceHeaderContext.TraceHeader));
         }
 
         [Fact]
         public async Task Traces_Outgoing()
         {
-            HttpResponseMessage response = await _client.GetAsync($"/TraceSamples/TraceOutgoing/{_testId}");
+            var uri = $"/TraceSamples/{nameof(TraceSamplesController.TraceOutgoing)}/{_testId}";
+            var response = await _client.GetAsync(uri);
 
-            PollAndVerifyTrace(_startTime, "/TraceSamples/TraceOutgoing/", "https://weather.com/", response);
-        }
+            var trace = s_polling.GetTrace(uri, _startTime);
 
-        internal static void PollAndVerifyTrace(Timestamp startTime, string automaticSpanName, string explicitSpanName, HttpResponseMessage response)
-        {
-            GcpTrace trace = s_polling.GetTrace(explicitSpanName, startTime);
-
-            Assert.NotNull(trace);
-            Assert.Equal(2, trace.Spans.Count);
-
-            var span = trace.Spans.FirstOrDefault(s => s.Name.StartsWith(automaticSpanName));
-
-            Assert.NotNull(span);
-            Assert.NotEmpty(span.Labels);
-            Assert.Equal("GET", span.Labels[TraceLabels.HttpMethod]);
-            Assert.Equal("200", span.Labels[TraceLabels.HttpStatusCode]);
-
-            span = trace.Spans.FirstOrDefault(s => s.Name.StartsWith(explicitSpanName));
-
-            Assert.NotNull(span);
-
+            TraceEntryVerifiers.AssertParentChildSpan(trace, uri, "https://weather.com/");
+            TraceEntryVerifiers.AssertSpanLabelsContains(
+                trace.Spans.First(s => s.Name == uri), TraceEntryData.HttpGetSuccessLabels);
             Assert.False(response.Headers.Contains(TraceHeaderContext.TraceHeader));
         }
 
