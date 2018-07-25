@@ -121,7 +121,7 @@ namespace Google.Cloud.BigQuery.V2
         /// when <see cref="WriteDisposition"/> is <see cref="WriteDisposition.WriteAppend"/>;
         /// when <see cref="WriteDisposition"/> is <see cref="WriteDisposition.WriteTruncate"/>
         /// and the destination table is a partition of a table, specified by partition decorators.
-        /// <see cref="SchemaUpdateOption" /> is marked with the <see cref="System.FlagsAttribute"/>
+        /// <see cref="SchemaUpdateOption"/> is marked with the <see cref="System.FlagsAttribute"/>
         /// so several flags can be specified.
         /// </summary>
         public SchemaUpdateOption? DestinationSchemaUpdateOptions { get; set; }

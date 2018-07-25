@@ -61,10 +61,10 @@ namespace Google.Cloud.BigQuery.V2
         /// Allows the schema of the destination table to be updated as a side effect 
         /// of the load job if a schema is autodetected or supplied in the job configuration.
         /// Schema update options are supported in two cases:
-        /// when<see cref="WriteDisposition"/> is <see cref = "WriteDisposition.WriteAppend" />;
+        /// when <see cref="WriteDisposition"/> is <see cref="WriteDisposition.WriteAppend"/>;
         /// when <see cref="WriteDisposition"/> is <see cref="WriteDisposition.WriteTruncate"/>
         /// and the destination table is a partition of a table, specified by partition decorators.
-        /// <see cref="SchemaUpdateOption" /> is marked with the <see cref="System.FlagsAttribute"/>
+        /// <see cref="SchemaUpdateOption"/> is marked with the <see cref="System.FlagsAttribute"/>
         /// so several flags can be specified.
         /// </summary>
         public SchemaUpdateOption? DestinationSchemaUpdateOptions { get; set; }
