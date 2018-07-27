@@ -225,7 +225,9 @@ namespace Google.Cloud.BigQuery.V2.IntegrationTests
             var destinationReference = bqClient.GetTableReference(_fixture.DatasetId, _fixture.CreateTableId());
 
             // Just extracting the data into GCS so we can load it into BigQuery
+            var originTableRows = originTable.ListRows().Count();
             var extractJob = originTable.CreateExtractJob(destinationUri);
+            var originTableExtendedRows = originTableExtended.ListRows().Count();
             var extractJobExtended = originTableExtended.CreateExtractJob(destinationUriExtended);
             extractJob = extractJob.PollUntilCompleted().ThrowOnAnyError();
             extractJobExtended = extractJobExtended.PollUntilCompleted().ThrowOnAnyError();
@@ -244,7 +246,7 @@ namespace Google.Cloud.BigQuery.V2.IntegrationTests
             loadJobExtended = loadJobExtended.PollUntilCompleted().ThrowOnAnyError();
 
             destinationTable = bqClient.GetTable(destinationReference);
-            Assert.Equal(6, destinationTable.ListRows().Count());
+            Assert.Equal(originTableRows + originTableExtendedRows, destinationTable.ListRows().Count());
             Assert.Equal(4, destinationTable.Schema.Fields.Count);
             var fields = destinationTable.Schema.Fields.Select(f => new { f.Name, f.Type, f.Mode }).OrderBy(f => f.Name).ToList();
             Assert.Equal(new { Name = "gameFinished", Type = "TIMESTAMP", Mode = "NULLABLE" }, fields[0]);
