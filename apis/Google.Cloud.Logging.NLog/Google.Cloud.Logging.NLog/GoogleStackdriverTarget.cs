@@ -116,7 +116,7 @@ namespace Google.Cloud.Logging.NLog
                 else
                 {
                     // Use default json.net based converter.
-                    _jsonConvertFunction = o => ProtoConverter.Convert(o is null ? null : JToken.FromObject(o));
+                    _jsonConvertFunction = BuildProtoConverter();
                 }
             }
 
@@ -125,6 +125,55 @@ namespace Google.Cloud.Logging.NLog
             _client = _client ?? BuildLoggingServiceClient();
 
             base.InitializeTarget();
+        }
+
+        private Func<object, Value> BuildProtoConverter()
+        {
+            // Create reusable JsonSerializer to reduce allocations
+            var jsonSettings = new Newtonsoft.Json.JsonSerializerSettings()
+            {
+                ReferenceLoopHandling = Newtonsoft.Json.ReferenceLoopHandling.Ignore
+            };
+            jsonSettings.Converters.Add(new Newtonsoft.Json.Converters.StringEnumConverter());
+            var jsonSerializer = Newtonsoft.Json.JsonSerializer.CreateDefault(jsonSettings);
+            return o => {
+                try
+                {
+                    switch (Convert.GetTypeCode(o))
+                    {
+                        case TypeCode.Empty: 
+                            return Value.ForNull();
+                        case TypeCode.Boolean:
+                            return Value.ForBool((bool)o);
+                        case TypeCode.Decimal:
+                        case TypeCode.Double:
+                        case TypeCode.Single:
+                            return Value.ForNumber(Convert.ToDouble(o));
+                        case TypeCode.Byte:
+                        case TypeCode.SByte:
+                        case TypeCode.Int16:
+                        case TypeCode.UInt16:
+                        case TypeCode.Int32:
+                        case TypeCode.UInt32:
+                        case TypeCode.Int64:
+                        case TypeCode.UInt64:
+                            if (o is System.Enum)
+                                break;  // Let StringEnumConverter handle formatting
+                            return Value.ForNumber(Convert.ToDouble(o));
+                        case TypeCode.String:
+                            return Value.ForString((string)o);
+                        case TypeCode.Char:
+                            return Value.ForString(o.ToString());
+                    }
+                    return ProtoConverter.Convert(JToken.FromObject(o, jsonSerializer));
+                }
+                catch
+                {
+                    // Reset the JsonSerializer as it now can be in a bad state
+                    jsonSerializer = Newtonsoft.Json.JsonSerializer.CreateDefault(jsonSettings);
+                    throw;
+                }
+            };
         }
 
         private Func<object, Value> BuildAndVerifyJsonConverter()
