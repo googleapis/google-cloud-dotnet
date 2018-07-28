@@ -62,11 +62,66 @@ namespace Google.Cloud.Diagnostics.AspNetCore.Tests
                 l.Single().JsonPayload.Fields["scope"].StringValue == "scope => ";
             var mockConsumer = new Mock<IConsumer<LogEntry>>();
             mockConsumer.Setup(c => c.Receive(Match.Create(matcher)));
-            var logger = GetLogger(mockConsumer.Object, logLevel:LogLevel.Information);
+            var logger = GetLogger(mockConsumer.Object, logLevel: LogLevel.Information);
             using (logger.BeginScope("scope"))
             {
                 logger.Log(LogLevel.Error, 0, _logMessage, null, Formatter);
             }
+            mockConsumer.VerifyAll();
+        }
+
+        [Fact]
+        public void BeginScope_WithFormattedScope()
+        {
+            Predicate<IEnumerable<LogEntry>> matcher = l =>
+            {
+                var json = l.Single().JsonPayload.Fields;
+                var formatParams = json["format_parameters"].StructValue.Fields;
+                return json["message"].StringValue == _logMessage &&
+                       json["scope"].StringValue == "scope 42 => " &&
+                       formatParams.Count == 2 &&
+                       formatParams["Foo"].StringValue == "42" &&
+                       formatParams["{ScopeOriginalFormat}"].StringValue == "scope {Foo}";
+            };
+
+            var mockConsumer = new Mock<IConsumer<LogEntry>>();
+            mockConsumer.Setup(c => c.Receive(Match.Create(matcher)));
+            var logger = GetLogger(mockConsumer.Object, logLevel: LogLevel.Information);
+            using (logger.BeginScope("scope {Foo}", 42))
+            {
+                logger.LogError(_logMessage);
+            }
+
+            mockConsumer.VerifyAll();
+        }
+
+        [Fact]
+        public void BeginScope_WithFormattedMessageAndScope()
+        {
+            var message = "a {things} message with stuff";
+            var logParam = "log";
+
+            Predicate<IEnumerable<LogEntry>> matcher = l =>
+            {
+                var json = l.Single().JsonPayload.Fields;
+                var formatParams = json["format_parameters"].StructValue.Fields;
+                return json["message"].StringValue == "a log message with stuff" &&
+                       json["scope"].StringValue == "scope 42 => " &&
+                       formatParams.Count == 4 &&
+                       formatParams["things"].StringValue == logParam &&
+                       formatParams["{OriginalFormat}"].StringValue == message &&
+                       formatParams["Foo"].StringValue == "42" &&
+                       formatParams["{ScopeOriginalFormat}"].StringValue == "scope {Foo}";
+            };
+
+            var mockConsumer = new Mock<IConsumer<LogEntry>>();
+            mockConsumer.Setup(c => c.Receive(Match.Create(matcher)));
+            var logger = GetLogger(mockConsumer.Object, logLevel: LogLevel.Information);
+            using (logger.BeginScope("scope {Foo}", 42))
+            {
+                logger.LogError(message, logParam);
+            }
+
             mockConsumer.VerifyAll();
         }
 

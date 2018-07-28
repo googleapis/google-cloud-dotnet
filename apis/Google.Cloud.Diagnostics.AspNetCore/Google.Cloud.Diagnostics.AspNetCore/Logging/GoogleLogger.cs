@@ -108,11 +108,6 @@ namespace Google.Cloud.Diagnostics.AspNetCore
             jsonStruct.Fields.Add("message", Value.ForString(message));
             jsonStruct.Fields.Add("log_name", Value.ForString(_logName));
 
-            if (GoogleLoggerScope.Current != null)
-            {
-                jsonStruct.Fields.Add("scope", Value.ForString(GoogleLoggerScope.Current.ToString()));
-            }
-
             if (eventId.Id != 0 || eventId.Name != null)
             {
                 var eventStruct = new Struct();
@@ -128,20 +123,43 @@ namespace Google.Cloud.Diagnostics.AspNetCore
             }
 
             // If we have format params and its more than just the original message add them.
+            Struct paramStruct = null;
             if (state is IEnumerable<KeyValuePair<string, object>> formatParams &&
                 !(formatParams.Count() == 1 && formatParams.Single().Key.Equals("{OriginalFormat}")))
             {
-                var paramStruct = new Struct();
+                paramStruct = new Struct();
                 foreach (var pair in formatParams)
                 {
                     // Consider adding formatting support for values that are IFormattable.
-                    paramStruct.Fields.Add(pair.Key, Value.ForString(pair.Value?.ToString() ?? ""));
+                    paramStruct.Fields[pair.Key] = Value.ForString(pair.Value?.ToString() ?? "");
                 }
+            }
 
-                if (paramStruct.Fields.Count > 0)
+            var currentLogScope = GoogleLoggerScope.Current;
+            if (currentLogScope != null)
+            {
+                jsonStruct.Fields.Add("scope", Value.ForString(currentLogScope.ToString()));
+
+                // Determine if the state of the scope are format params
+                if (currentLogScope.State is IEnumerable<KeyValuePair<string, object>> scopeFormatParams)
                 {
-                    jsonStruct.Fields.Add("format_parameters", Value.ForStruct(paramStruct));
+                    if (paramStruct == null)
+                    {
+                        paramStruct = new Struct();
+                    }
+
+                    foreach (var pair in scopeFormatParams)
+                    {
+                        // Prevent conflicts with the {OriginalFormat} parameter from the regular log message
+                        var key = pair.Key == "{OriginalFormat}" ? "{ScopeOriginalFormat}" : pair.Key;
+                        paramStruct.Fields[key] = Value.ForString(pair.Value?.ToString() ?? "");
+                    }
                 }
+            }
+
+            if (paramStruct?.Fields.Count > 0)
+            {
+                jsonStruct.Fields.Add("format_parameters", Value.ForStruct(paramStruct));
             }
 
             Dictionary<string, string> labels;
