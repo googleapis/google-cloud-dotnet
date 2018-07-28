@@ -139,7 +139,10 @@ namespace Google.Cloud.Diagnostics.AspNetCore
             if (currentLogScope != null)
             {
                 jsonStruct.Fields.Add("scope", Value.ForString(currentLogScope.ToString()));
+            }
 
+            while (currentLogScope != null)
+            {
                 // Determine if the state of the scope are format params
                 if (currentLogScope.State is IEnumerable<KeyValuePair<string, object>> scopeFormatParams)
                 {
@@ -150,11 +153,17 @@ namespace Google.Cloud.Diagnostics.AspNetCore
 
                     foreach (var pair in scopeFormatParams)
                     {
-                        // Prevent conflicts with the {OriginalFormat} parameter from the regular log message
-                        var key = pair.Key == "{OriginalFormat}" ? "{ScopeOriginalFormat}" : pair.Key;
-                        paramStruct.Fields[key] = Value.ForString(pair.Value?.ToString() ?? "");
+                        if (pair.Key == "{OriginalFormat}")
+                        {
+                            // Skip the {OriginalFormat} parameter for scopes
+                            continue;
+                        }
+
+                        paramStruct.Fields[pair.Key] = Value.ForString(pair.Value?.ToString() ?? "");
                     }
                 }
+
+                currentLogScope = currentLogScope.Parent;
             }
 
             if (paramStruct?.Fields.Count > 0)

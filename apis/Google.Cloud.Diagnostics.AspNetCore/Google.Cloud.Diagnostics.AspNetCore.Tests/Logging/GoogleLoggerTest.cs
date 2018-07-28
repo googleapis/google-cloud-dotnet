@@ -79,9 +79,8 @@ namespace Google.Cloud.Diagnostics.AspNetCore.Tests
                 var formatParams = json["format_parameters"].StructValue.Fields;
                 return json["message"].StringValue == _logMessage &&
                        json["scope"].StringValue == "scope 42 => " &&
-                       formatParams.Count == 2 &&
-                       formatParams["Foo"].StringValue == "42" &&
-                       formatParams["{ScopeOriginalFormat}"].StringValue == "scope {Foo}";
+                       formatParams.Count == 1 &&
+                       formatParams["Foo"].StringValue == "42";
             };
 
             var mockConsumer = new Mock<IConsumer<LogEntry>>();
@@ -90,6 +89,34 @@ namespace Google.Cloud.Diagnostics.AspNetCore.Tests
             using (logger.BeginScope("scope {Foo}", 42))
             {
                 logger.LogError(_logMessage);
+            }
+
+            mockConsumer.VerifyAll();
+        }
+
+        [Fact]
+        public void BeginScope_WithNestedFormattedScope()
+        {
+            Predicate<IEnumerable<LogEntry>> matcher = l =>
+            {
+                var json = l.Single().JsonPayload.Fields;
+                var formatParams = json["format_parameters"].StructValue.Fields;
+                return json["message"].StringValue == _logMessage &&
+                       json["scope"].StringValue == "first 42 => second Baz => " &&
+                       formatParams.Count == 2 &&
+                       formatParams["Foo"].StringValue == "42" &&
+                       formatParams["Bar"].StringValue == "Baz";
+            };
+
+            var mockConsumer = new Mock<IConsumer<LogEntry>>();
+            mockConsumer.Setup(c => c.Receive(Match.Create(matcher)));
+            var logger = GetLogger(mockConsumer.Object, logLevel: LogLevel.Information);
+            using (logger.BeginScope("first {Foo}", 42))
+            {
+                using (logger.BeginScope("second {Bar}", "Baz"))
+                {
+                    logger.LogError(_logMessage);
+                }
             }
 
             mockConsumer.VerifyAll();
@@ -107,11 +134,10 @@ namespace Google.Cloud.Diagnostics.AspNetCore.Tests
                 var formatParams = json["format_parameters"].StructValue.Fields;
                 return json["message"].StringValue == "a log message with stuff" &&
                        json["scope"].StringValue == "scope 42 => " &&
-                       formatParams.Count == 4 &&
+                       formatParams.Count == 3 &&
                        formatParams["things"].StringValue == logParam &&
                        formatParams["{OriginalFormat}"].StringValue == message &&
-                       formatParams["Foo"].StringValue == "42" &&
-                       formatParams["{ScopeOriginalFormat}"].StringValue == "scope {Foo}";
+                       formatParams["Foo"].StringValue == "42";
             };
 
             var mockConsumer = new Mock<IConsumer<LogEntry>>();
