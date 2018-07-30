@@ -127,13 +127,53 @@ namespace Google.Cloud.Bigtable.V2
         );
 
         /// <summary>
+        /// "Streaming" retry backoff for <see cref="BigtableServiceApiClient"/> RPC methods.
+        /// </summary>
+        /// <returns>
+        /// The "Streaming" retry backoff for <see cref="BigtableServiceApiClient"/> RPC methods.
+        /// </returns>
+        /// <remarks>
+        /// The "Streaming" retry backoff for <see cref="BigtableServiceApiClient"/> RPC methods is defined as:
+        /// <list type="bullet">
+        /// <item><description>Initial delay: 100 milliseconds</description></item>
+        /// <item><description>Maximum delay: 60000 milliseconds</description></item>
+        /// <item><description>Delay multiplier: 1.3</description></item>
+        /// </list>
+        /// </remarks>
+        public static gaxgrpc::BackoffSettings GetStreamingRetryBackoff() => new gaxgrpc::BackoffSettings(
+            delay: sys::TimeSpan.FromMilliseconds(100),
+            maxDelay: sys::TimeSpan.FromMilliseconds(60000),
+            delayMultiplier: 1.3
+        );
+
+        /// <summary>
+        /// "Streaming" timeout backoff for <see cref="BigtableServiceApiClient"/> RPC methods.
+        /// </summary>
+        /// <returns>
+        /// The "Streaming" timeout backoff for <see cref="BigtableServiceApiClient"/> RPC methods.
+        /// </returns>
+        /// <remarks>
+        /// The "Streaming" timeout backoff for <see cref="BigtableServiceApiClient"/> RPC methods is defined as:
+        /// <list type="bullet">
+        /// <item><description>Initial timeout: 20000 milliseconds</description></item>
+        /// <item><description>Timeout multiplier: 1.0</description></item>
+        /// <item><description>Maximum timeout: 20000 milliseconds</description></item>
+        /// </list>
+        /// </remarks>
+        public static gaxgrpc::BackoffSettings GetStreamingTimeoutBackoff() => new gaxgrpc::BackoffSettings(
+            delay: sys::TimeSpan.FromMilliseconds(20000),
+            maxDelay: sys::TimeSpan.FromMilliseconds(20000),
+            delayMultiplier: 1.0
+        );
+
+        /// <summary>
         /// <see cref="gaxgrpc::CallSettings"/> for calls to <c>BigtableServiceApiClient.ReadRows</c>.
         /// </summary>
         /// <remarks>
-        /// Default RPC expiration is 600000 milliseconds.
+        /// Default RPC expiration is 3600000 milliseconds.
         /// </remarks>
         public gaxgrpc::CallSettings ReadRowsSettings { get; set; } = gaxgrpc::CallSettings.FromCallTiming(
-            gaxgrpc::CallTiming.FromTimeout(sys::TimeSpan.FromMilliseconds(600000)));
+            gaxgrpc::CallTiming.FromTimeout(sys::TimeSpan.FromMilliseconds(3600000)));
 
         /// <summary>
         /// <see cref="gaxgrpc::CallSettings"/> for calls to <c>BigtableServiceApiClient.SampleRowKeys</c>.
