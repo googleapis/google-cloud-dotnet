@@ -423,7 +423,19 @@ namespace Google.Cloud.Dialogflow.V2
         public static ContextsClient Create(grpccore::Channel channel, ContextsSettings settings = null)
         {
             gax::GaxPreconditions.CheckNotNull(channel, nameof(channel));
-            Contexts.ContextsClient grpcClient = new Contexts.ContextsClient(channel);
+            return Create(new grpccore::DefaultCallInvoker(channel), settings);
+        }
+
+        /// <summary>
+        /// Creates a <see cref="ContextsClient"/> which uses the specified call invoker for remote operations.
+        /// </summary>
+        /// <param name="callInvoker">The <see cref="grpccore::CallInvoker"/> for remote operations. Must not be null.</param>
+        /// <param name="settings">Optional <see cref="ContextsSettings"/>.</param>
+        /// <returns>The created <see cref="ContextsClient"/>.</returns>
+        public static ContextsClient Create(grpccore::CallInvoker callInvoker, ContextsSettings settings = null)
+        {
+            gax::GaxPreconditions.CheckNotNull(callInvoker, nameof(callInvoker));
+            Contexts.ContextsClient grpcClient = new Contexts.ContextsClient(callInvoker);
             return new ContextsClientImpl(grpcClient, settings);
         }
 

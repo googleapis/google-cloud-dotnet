@@ -655,7 +655,19 @@ namespace Google.Cloud.Dialogflow.V2
         public static EntityTypesClient Create(grpccore::Channel channel, EntityTypesSettings settings = null)
         {
             gax::GaxPreconditions.CheckNotNull(channel, nameof(channel));
-            EntityTypes.EntityTypesClient grpcClient = new EntityTypes.EntityTypesClient(channel);
+            return Create(new grpccore::DefaultCallInvoker(channel), settings);
+        }
+
+        /// <summary>
+        /// Creates a <see cref="EntityTypesClient"/> which uses the specified call invoker for remote operations.
+        /// </summary>
+        /// <param name="callInvoker">The <see cref="grpccore::CallInvoker"/> for remote operations. Must not be null.</param>
+        /// <param name="settings">Optional <see cref="EntityTypesSettings"/>.</param>
+        /// <returns>The created <see cref="EntityTypesClient"/>.</returns>
+        public static EntityTypesClient Create(grpccore::CallInvoker callInvoker, EntityTypesSettings settings = null)
+        {
+            gax::GaxPreconditions.CheckNotNull(callInvoker, nameof(callInvoker));
+            EntityTypes.EntityTypesClient grpcClient = new EntityTypes.EntityTypesClient(callInvoker);
             return new EntityTypesClientImpl(grpcClient, settings);
         }
 

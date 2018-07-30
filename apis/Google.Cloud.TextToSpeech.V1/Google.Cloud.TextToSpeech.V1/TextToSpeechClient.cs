@@ -301,7 +301,19 @@ namespace Google.Cloud.TextToSpeech.V1
         public static TextToSpeechClient Create(grpccore::Channel channel, TextToSpeechSettings settings = null)
         {
             gax::GaxPreconditions.CheckNotNull(channel, nameof(channel));
-            TextToSpeech.TextToSpeechClient grpcClient = new TextToSpeech.TextToSpeechClient(channel);
+            return Create(new grpccore::DefaultCallInvoker(channel), settings);
+        }
+
+        /// <summary>
+        /// Creates a <see cref="TextToSpeechClient"/> which uses the specified call invoker for remote operations.
+        /// </summary>
+        /// <param name="callInvoker">The <see cref="grpccore::CallInvoker"/> for remote operations. Must not be null.</param>
+        /// <param name="settings">Optional <see cref="TextToSpeechSettings"/>.</param>
+        /// <returns>The created <see cref="TextToSpeechClient"/>.</returns>
+        public static TextToSpeechClient Create(grpccore::CallInvoker callInvoker, TextToSpeechSettings settings = null)
+        {
+            gax::GaxPreconditions.CheckNotNull(callInvoker, nameof(callInvoker));
+            TextToSpeech.TextToSpeechClient grpcClient = new TextToSpeech.TextToSpeechClient(callInvoker);
             return new TextToSpeechClientImpl(grpcClient, settings);
         }
 

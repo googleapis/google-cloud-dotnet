@@ -817,7 +817,19 @@ namespace Google.Cloud.Kms.V1
         public static KeyManagementServiceClient Create(grpccore::Channel channel, KeyManagementServiceSettings settings = null)
         {
             gax::GaxPreconditions.CheckNotNull(channel, nameof(channel));
-            KeyManagementService.KeyManagementServiceClient grpcClient = new KeyManagementService.KeyManagementServiceClient(channel);
+            return Create(new grpccore::DefaultCallInvoker(channel), settings);
+        }
+
+        /// <summary>
+        /// Creates a <see cref="KeyManagementServiceClient"/> which uses the specified call invoker for remote operations.
+        /// </summary>
+        /// <param name="callInvoker">The <see cref="grpccore::CallInvoker"/> for remote operations. Must not be null.</param>
+        /// <param name="settings">Optional <see cref="KeyManagementServiceSettings"/>.</param>
+        /// <returns>The created <see cref="KeyManagementServiceClient"/>.</returns>
+        public static KeyManagementServiceClient Create(grpccore::CallInvoker callInvoker, KeyManagementServiceSettings settings = null)
+        {
+            gax::GaxPreconditions.CheckNotNull(callInvoker, nameof(callInvoker));
+            KeyManagementService.KeyManagementServiceClient grpcClient = new KeyManagementService.KeyManagementServiceClient(callInvoker);
             return new KeyManagementServiceClientImpl(grpcClient, settings);
         }
 

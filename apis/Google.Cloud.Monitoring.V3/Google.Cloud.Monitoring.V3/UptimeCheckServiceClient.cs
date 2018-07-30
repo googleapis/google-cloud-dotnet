@@ -429,7 +429,19 @@ namespace Google.Cloud.Monitoring.V3
         public static UptimeCheckServiceClient Create(grpccore::Channel channel, UptimeCheckServiceSettings settings = null)
         {
             gax::GaxPreconditions.CheckNotNull(channel, nameof(channel));
-            UptimeCheckService.UptimeCheckServiceClient grpcClient = new UptimeCheckService.UptimeCheckServiceClient(channel);
+            return Create(new grpccore::DefaultCallInvoker(channel), settings);
+        }
+
+        /// <summary>
+        /// Creates a <see cref="UptimeCheckServiceClient"/> which uses the specified call invoker for remote operations.
+        /// </summary>
+        /// <param name="callInvoker">The <see cref="grpccore::CallInvoker"/> for remote operations. Must not be null.</param>
+        /// <param name="settings">Optional <see cref="UptimeCheckServiceSettings"/>.</param>
+        /// <returns>The created <see cref="UptimeCheckServiceClient"/>.</returns>
+        public static UptimeCheckServiceClient Create(grpccore::CallInvoker callInvoker, UptimeCheckServiceSettings settings = null)
+        {
+            gax::GaxPreconditions.CheckNotNull(callInvoker, nameof(callInvoker));
+            UptimeCheckService.UptimeCheckServiceClient grpcClient = new UptimeCheckService.UptimeCheckServiceClient(callInvoker);
             return new UptimeCheckServiceClientImpl(grpcClient, settings);
         }
 

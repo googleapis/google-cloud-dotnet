@@ -326,7 +326,19 @@ namespace Google.Cloud.Vision.V1P2Beta1
         public static ImageAnnotatorClient Create(grpccore::Channel channel, ImageAnnotatorSettings settings = null)
         {
             gax::GaxPreconditions.CheckNotNull(channel, nameof(channel));
-            ImageAnnotator.ImageAnnotatorClient grpcClient = new ImageAnnotator.ImageAnnotatorClient(channel);
+            return Create(new grpccore::DefaultCallInvoker(channel), settings);
+        }
+
+        /// <summary>
+        /// Creates a <see cref="ImageAnnotatorClient"/> which uses the specified call invoker for remote operations.
+        /// </summary>
+        /// <param name="callInvoker">The <see cref="grpccore::CallInvoker"/> for remote operations. Must not be null.</param>
+        /// <param name="settings">Optional <see cref="ImageAnnotatorSettings"/>.</param>
+        /// <returns>The created <see cref="ImageAnnotatorClient"/>.</returns>
+        public static ImageAnnotatorClient Create(grpccore::CallInvoker callInvoker, ImageAnnotatorSettings settings = null)
+        {
+            gax::GaxPreconditions.CheckNotNull(callInvoker, nameof(callInvoker));
+            ImageAnnotator.ImageAnnotatorClient grpcClient = new ImageAnnotator.ImageAnnotatorClient(callInvoker);
             return new ImageAnnotatorClientImpl(grpcClient, settings);
         }
 

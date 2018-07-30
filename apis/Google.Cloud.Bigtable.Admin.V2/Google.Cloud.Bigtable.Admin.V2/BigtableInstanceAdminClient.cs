@@ -924,7 +924,19 @@ namespace Google.Cloud.Bigtable.Admin.V2
         public static BigtableInstanceAdminClient Create(grpccore::Channel channel, BigtableInstanceAdminSettings settings = null)
         {
             gax::GaxPreconditions.CheckNotNull(channel, nameof(channel));
-            BigtableInstanceAdmin.BigtableInstanceAdminClient grpcClient = new BigtableInstanceAdmin.BigtableInstanceAdminClient(channel);
+            return Create(new grpccore::DefaultCallInvoker(channel), settings);
+        }
+
+        /// <summary>
+        /// Creates a <see cref="BigtableInstanceAdminClient"/> which uses the specified call invoker for remote operations.
+        /// </summary>
+        /// <param name="callInvoker">The <see cref="grpccore::CallInvoker"/> for remote operations. Must not be null.</param>
+        /// <param name="settings">Optional <see cref="BigtableInstanceAdminSettings"/>.</param>
+        /// <returns>The created <see cref="BigtableInstanceAdminClient"/>.</returns>
+        public static BigtableInstanceAdminClient Create(grpccore::CallInvoker callInvoker, BigtableInstanceAdminSettings settings = null)
+        {
+            gax::GaxPreconditions.CheckNotNull(callInvoker, nameof(callInvoker));
+            BigtableInstanceAdmin.BigtableInstanceAdminClient grpcClient = new BigtableInstanceAdmin.BigtableInstanceAdminClient(callInvoker);
             return new BigtableInstanceAdminClientImpl(grpcClient, settings);
         }
 

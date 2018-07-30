@@ -602,7 +602,19 @@ namespace Google.Cloud.Logging.V2
         public static ConfigServiceV2Client Create(grpccore::Channel channel, ConfigServiceV2Settings settings = null)
         {
             gax::GaxPreconditions.CheckNotNull(channel, nameof(channel));
-            ConfigServiceV2.ConfigServiceV2Client grpcClient = new ConfigServiceV2.ConfigServiceV2Client(channel);
+            return Create(new grpccore::DefaultCallInvoker(channel), settings);
+        }
+
+        /// <summary>
+        /// Creates a <see cref="ConfigServiceV2Client"/> which uses the specified call invoker for remote operations.
+        /// </summary>
+        /// <param name="callInvoker">The <see cref="grpccore::CallInvoker"/> for remote operations. Must not be null.</param>
+        /// <param name="settings">Optional <see cref="ConfigServiceV2Settings"/>.</param>
+        /// <returns>The created <see cref="ConfigServiceV2Client"/>.</returns>
+        public static ConfigServiceV2Client Create(grpccore::CallInvoker callInvoker, ConfigServiceV2Settings settings = null)
+        {
+            gax::GaxPreconditions.CheckNotNull(callInvoker, nameof(callInvoker));
+            ConfigServiceV2.ConfigServiceV2Client grpcClient = new ConfigServiceV2.ConfigServiceV2Client(callInvoker);
             return new ConfigServiceV2ClientImpl(grpcClient, settings);
         }
 

@@ -1006,7 +1006,19 @@ namespace Google.Cloud.Dlp.V2
         public static DlpServiceClient Create(grpccore::Channel channel, DlpServiceSettings settings = null)
         {
             gax::GaxPreconditions.CheckNotNull(channel, nameof(channel));
-            DlpService.DlpServiceClient grpcClient = new DlpService.DlpServiceClient(channel);
+            return Create(new grpccore::DefaultCallInvoker(channel), settings);
+        }
+
+        /// <summary>
+        /// Creates a <see cref="DlpServiceClient"/> which uses the specified call invoker for remote operations.
+        /// </summary>
+        /// <param name="callInvoker">The <see cref="grpccore::CallInvoker"/> for remote operations. Must not be null.</param>
+        /// <param name="settings">Optional <see cref="DlpServiceSettings"/>.</param>
+        /// <returns>The created <see cref="DlpServiceClient"/>.</returns>
+        public static DlpServiceClient Create(grpccore::CallInvoker callInvoker, DlpServiceSettings settings = null)
+        {
+            gax::GaxPreconditions.CheckNotNull(callInvoker, nameof(callInvoker));
+            DlpService.DlpServiceClient grpcClient = new DlpService.DlpServiceClient(callInvoker);
             return new DlpServiceClientImpl(grpcClient, settings);
         }
 

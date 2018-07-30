@@ -270,7 +270,19 @@ namespace Google.Cloud.ErrorReporting.V1Beta1
         public static ReportErrorsServiceClient Create(grpccore::Channel channel, ReportErrorsServiceSettings settings = null)
         {
             gax::GaxPreconditions.CheckNotNull(channel, nameof(channel));
-            ReportErrorsService.ReportErrorsServiceClient grpcClient = new ReportErrorsService.ReportErrorsServiceClient(channel);
+            return Create(new grpccore::DefaultCallInvoker(channel), settings);
+        }
+
+        /// <summary>
+        /// Creates a <see cref="ReportErrorsServiceClient"/> which uses the specified call invoker for remote operations.
+        /// </summary>
+        /// <param name="callInvoker">The <see cref="grpccore::CallInvoker"/> for remote operations. Must not be null.</param>
+        /// <param name="settings">Optional <see cref="ReportErrorsServiceSettings"/>.</param>
+        /// <returns>The created <see cref="ReportErrorsServiceClient"/>.</returns>
+        public static ReportErrorsServiceClient Create(grpccore::CallInvoker callInvoker, ReportErrorsServiceSettings settings = null)
+        {
+            gax::GaxPreconditions.CheckNotNull(callInvoker, nameof(callInvoker));
+            ReportErrorsService.ReportErrorsServiceClient grpcClient = new ReportErrorsService.ReportErrorsServiceClient(callInvoker);
             return new ReportErrorsServiceClientImpl(grpcClient, settings);
         }
 

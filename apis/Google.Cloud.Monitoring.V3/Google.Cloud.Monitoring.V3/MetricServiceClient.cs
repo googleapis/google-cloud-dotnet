@@ -492,7 +492,19 @@ namespace Google.Cloud.Monitoring.V3
         public static MetricServiceClient Create(grpccore::Channel channel, MetricServiceSettings settings = null)
         {
             gax::GaxPreconditions.CheckNotNull(channel, nameof(channel));
-            MetricService.MetricServiceClient grpcClient = new MetricService.MetricServiceClient(channel);
+            return Create(new grpccore::DefaultCallInvoker(channel), settings);
+        }
+
+        /// <summary>
+        /// Creates a <see cref="MetricServiceClient"/> which uses the specified call invoker for remote operations.
+        /// </summary>
+        /// <param name="callInvoker">The <see cref="grpccore::CallInvoker"/> for remote operations. Must not be null.</param>
+        /// <param name="settings">Optional <see cref="MetricServiceSettings"/>.</param>
+        /// <returns>The created <see cref="MetricServiceClient"/>.</returns>
+        public static MetricServiceClient Create(grpccore::CallInvoker callInvoker, MetricServiceSettings settings = null)
+        {
+            gax::GaxPreconditions.CheckNotNull(callInvoker, nameof(callInvoker));
+            MetricService.MetricServiceClient grpcClient = new MetricService.MetricServiceClient(callInvoker);
             return new MetricServiceClientImpl(grpcClient, settings);
         }
 

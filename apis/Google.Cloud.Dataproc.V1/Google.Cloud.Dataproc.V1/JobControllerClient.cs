@@ -422,7 +422,19 @@ namespace Google.Cloud.Dataproc.V1
         public static JobControllerClient Create(grpccore::Channel channel, JobControllerSettings settings = null)
         {
             gax::GaxPreconditions.CheckNotNull(channel, nameof(channel));
-            JobController.JobControllerClient grpcClient = new JobController.JobControllerClient(channel);
+            return Create(new grpccore::DefaultCallInvoker(channel), settings);
+        }
+
+        /// <summary>
+        /// Creates a <see cref="JobControllerClient"/> which uses the specified call invoker for remote operations.
+        /// </summary>
+        /// <param name="callInvoker">The <see cref="grpccore::CallInvoker"/> for remote operations. Must not be null.</param>
+        /// <param name="settings">Optional <see cref="JobControllerSettings"/>.</param>
+        /// <returns>The created <see cref="JobControllerClient"/>.</returns>
+        public static JobControllerClient Create(grpccore::CallInvoker callInvoker, JobControllerSettings settings = null)
+        {
+            gax::GaxPreconditions.CheckNotNull(callInvoker, nameof(callInvoker));
+            JobController.JobControllerClient grpcClient = new JobController.JobControllerClient(callInvoker);
             return new JobControllerClientImpl(grpcClient, settings);
         }
 

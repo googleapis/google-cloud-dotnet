@@ -498,7 +498,19 @@ namespace Google.Cloud.Dialogflow.V2
         public static IntentsClient Create(grpccore::Channel channel, IntentsSettings settings = null)
         {
             gax::GaxPreconditions.CheckNotNull(channel, nameof(channel));
-            Intents.IntentsClient grpcClient = new Intents.IntentsClient(channel);
+            return Create(new grpccore::DefaultCallInvoker(channel), settings);
+        }
+
+        /// <summary>
+        /// Creates a <see cref="IntentsClient"/> which uses the specified call invoker for remote operations.
+        /// </summary>
+        /// <param name="callInvoker">The <see cref="grpccore::CallInvoker"/> for remote operations. Must not be null.</param>
+        /// <param name="settings">Optional <see cref="IntentsSettings"/>.</param>
+        /// <returns>The created <see cref="IntentsClient"/>.</returns>
+        public static IntentsClient Create(grpccore::CallInvoker callInvoker, IntentsSettings settings = null)
+        {
+            gax::GaxPreconditions.CheckNotNull(callInvoker, nameof(callInvoker));
+            Intents.IntentsClient grpcClient = new Intents.IntentsClient(callInvoker);
             return new IntentsClientImpl(grpcClient, settings);
         }
 

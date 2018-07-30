@@ -454,7 +454,19 @@ namespace Google.Cloud.Datastore.V1
         public static DatastoreClient Create(grpccore::Channel channel, DatastoreSettings settings = null)
         {
             gax::GaxPreconditions.CheckNotNull(channel, nameof(channel));
-            Datastore.DatastoreClient grpcClient = new Datastore.DatastoreClient(channel);
+            return Create(new grpccore::DefaultCallInvoker(channel), settings);
+        }
+
+        /// <summary>
+        /// Creates a <see cref="DatastoreClient"/> which uses the specified call invoker for remote operations.
+        /// </summary>
+        /// <param name="callInvoker">The <see cref="grpccore::CallInvoker"/> for remote operations. Must not be null.</param>
+        /// <param name="settings">Optional <see cref="DatastoreSettings"/>.</param>
+        /// <returns>The created <see cref="DatastoreClient"/>.</returns>
+        public static DatastoreClient Create(grpccore::CallInvoker callInvoker, DatastoreSettings settings = null)
+        {
+            gax::GaxPreconditions.CheckNotNull(callInvoker, nameof(callInvoker));
+            Datastore.DatastoreClient grpcClient = new Datastore.DatastoreClient(callInvoker);
             return new DatastoreClientImpl(grpcClient, settings);
         }
 

@@ -564,7 +564,19 @@ namespace Google.Cloud.Spanner.Admin.Database.V1
         public static DatabaseAdminClient Create(grpccore::Channel channel, DatabaseAdminSettings settings = null)
         {
             gax::GaxPreconditions.CheckNotNull(channel, nameof(channel));
-            DatabaseAdmin.DatabaseAdminClient grpcClient = new DatabaseAdmin.DatabaseAdminClient(channel);
+            return Create(new grpccore::DefaultCallInvoker(channel), settings);
+        }
+
+        /// <summary>
+        /// Creates a <see cref="DatabaseAdminClient"/> which uses the specified call invoker for remote operations.
+        /// </summary>
+        /// <param name="callInvoker">The <see cref="grpccore::CallInvoker"/> for remote operations. Must not be null.</param>
+        /// <param name="settings">Optional <see cref="DatabaseAdminSettings"/>.</param>
+        /// <returns>The created <see cref="DatabaseAdminClient"/>.</returns>
+        public static DatabaseAdminClient Create(grpccore::CallInvoker callInvoker, DatabaseAdminSettings settings = null)
+        {
+            gax::GaxPreconditions.CheckNotNull(callInvoker, nameof(callInvoker));
+            DatabaseAdmin.DatabaseAdminClient grpcClient = new DatabaseAdmin.DatabaseAdminClient(callInvoker);
             return new DatabaseAdminClientImpl(grpcClient, settings);
         }
 

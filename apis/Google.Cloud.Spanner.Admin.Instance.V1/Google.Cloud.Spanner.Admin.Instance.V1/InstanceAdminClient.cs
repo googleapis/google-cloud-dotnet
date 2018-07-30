@@ -595,7 +595,19 @@ namespace Google.Cloud.Spanner.Admin.Instance.V1
         public static InstanceAdminClient Create(grpccore::Channel channel, InstanceAdminSettings settings = null)
         {
             gax::GaxPreconditions.CheckNotNull(channel, nameof(channel));
-            InstanceAdmin.InstanceAdminClient grpcClient = new InstanceAdmin.InstanceAdminClient(channel);
+            return Create(new grpccore::DefaultCallInvoker(channel), settings);
+        }
+
+        /// <summary>
+        /// Creates a <see cref="InstanceAdminClient"/> which uses the specified call invoker for remote operations.
+        /// </summary>
+        /// <param name="callInvoker">The <see cref="grpccore::CallInvoker"/> for remote operations. Must not be null.</param>
+        /// <param name="settings">Optional <see cref="InstanceAdminSettings"/>.</param>
+        /// <returns>The created <see cref="InstanceAdminClient"/>.</returns>
+        public static InstanceAdminClient Create(grpccore::CallInvoker callInvoker, InstanceAdminSettings settings = null)
+        {
+            gax::GaxPreconditions.CheckNotNull(callInvoker, nameof(callInvoker));
+            InstanceAdmin.InstanceAdminClient grpcClient = new InstanceAdmin.InstanceAdminClient(callInvoker);
             return new InstanceAdminClientImpl(grpcClient, settings);
         }
 

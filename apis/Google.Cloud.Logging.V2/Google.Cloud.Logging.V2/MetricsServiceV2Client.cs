@@ -406,7 +406,19 @@ namespace Google.Cloud.Logging.V2
         public static MetricsServiceV2Client Create(grpccore::Channel channel, MetricsServiceV2Settings settings = null)
         {
             gax::GaxPreconditions.CheckNotNull(channel, nameof(channel));
-            MetricsServiceV2.MetricsServiceV2Client grpcClient = new MetricsServiceV2.MetricsServiceV2Client(channel);
+            return Create(new grpccore::DefaultCallInvoker(channel), settings);
+        }
+
+        /// <summary>
+        /// Creates a <see cref="MetricsServiceV2Client"/> which uses the specified call invoker for remote operations.
+        /// </summary>
+        /// <param name="callInvoker">The <see cref="grpccore::CallInvoker"/> for remote operations. Must not be null.</param>
+        /// <param name="settings">Optional <see cref="MetricsServiceV2Settings"/>.</param>
+        /// <returns>The created <see cref="MetricsServiceV2Client"/>.</returns>
+        public static MetricsServiceV2Client Create(grpccore::CallInvoker callInvoker, MetricsServiceV2Settings settings = null)
+        {
+            gax::GaxPreconditions.CheckNotNull(callInvoker, nameof(callInvoker));
+            MetricsServiceV2.MetricsServiceV2Client grpcClient = new MetricsServiceV2.MetricsServiceV2Client(callInvoker);
             return new MetricsServiceV2ClientImpl(grpcClient, settings);
         }
 

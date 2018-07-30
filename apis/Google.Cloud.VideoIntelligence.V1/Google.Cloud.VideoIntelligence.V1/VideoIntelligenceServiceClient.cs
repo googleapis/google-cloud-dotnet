@@ -294,7 +294,19 @@ namespace Google.Cloud.VideoIntelligence.V1
         public static VideoIntelligenceServiceClient Create(grpccore::Channel channel, VideoIntelligenceServiceSettings settings = null)
         {
             gax::GaxPreconditions.CheckNotNull(channel, nameof(channel));
-            VideoIntelligenceService.VideoIntelligenceServiceClient grpcClient = new VideoIntelligenceService.VideoIntelligenceServiceClient(channel);
+            return Create(new grpccore::DefaultCallInvoker(channel), settings);
+        }
+
+        /// <summary>
+        /// Creates a <see cref="VideoIntelligenceServiceClient"/> which uses the specified call invoker for remote operations.
+        /// </summary>
+        /// <param name="callInvoker">The <see cref="grpccore::CallInvoker"/> for remote operations. Must not be null.</param>
+        /// <param name="settings">Optional <see cref="VideoIntelligenceServiceSettings"/>.</param>
+        /// <returns>The created <see cref="VideoIntelligenceServiceClient"/>.</returns>
+        public static VideoIntelligenceServiceClient Create(grpccore::CallInvoker callInvoker, VideoIntelligenceServiceSettings settings = null)
+        {
+            gax::GaxPreconditions.CheckNotNull(callInvoker, nameof(callInvoker));
+            VideoIntelligenceService.VideoIntelligenceServiceClient grpcClient = new VideoIntelligenceService.VideoIntelligenceServiceClient(callInvoker);
             return new VideoIntelligenceServiceClientImpl(grpcClient, settings);
         }
 

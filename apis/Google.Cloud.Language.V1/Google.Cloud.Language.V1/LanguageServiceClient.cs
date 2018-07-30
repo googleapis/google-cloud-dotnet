@@ -425,7 +425,19 @@ namespace Google.Cloud.Language.V1
         public static LanguageServiceClient Create(grpccore::Channel channel, LanguageServiceSettings settings = null)
         {
             gax::GaxPreconditions.CheckNotNull(channel, nameof(channel));
-            LanguageService.LanguageServiceClient grpcClient = new LanguageService.LanguageServiceClient(channel);
+            return Create(new grpccore::DefaultCallInvoker(channel), settings);
+        }
+
+        /// <summary>
+        /// Creates a <see cref="LanguageServiceClient"/> which uses the specified call invoker for remote operations.
+        /// </summary>
+        /// <param name="callInvoker">The <see cref="grpccore::CallInvoker"/> for remote operations. Must not be null.</param>
+        /// <param name="settings">Optional <see cref="LanguageServiceSettings"/>.</param>
+        /// <returns>The created <see cref="LanguageServiceClient"/>.</returns>
+        public static LanguageServiceClient Create(grpccore::CallInvoker callInvoker, LanguageServiceSettings settings = null)
+        {
+            gax::GaxPreconditions.CheckNotNull(callInvoker, nameof(callInvoker));
+            LanguageService.LanguageServiceClient grpcClient = new LanguageService.LanguageServiceClient(callInvoker);
             return new LanguageServiceClientImpl(grpcClient, settings);
         }
 
