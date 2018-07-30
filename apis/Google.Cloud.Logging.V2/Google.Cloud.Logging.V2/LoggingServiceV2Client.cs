@@ -447,7 +447,19 @@ namespace Google.Cloud.Logging.V2
         public static LoggingServiceV2Client Create(grpccore::Channel channel, LoggingServiceV2Settings settings = null)
         {
             gax::GaxPreconditions.CheckNotNull(channel, nameof(channel));
-            LoggingServiceV2.LoggingServiceV2Client grpcClient = new LoggingServiceV2.LoggingServiceV2Client(channel);
+            return Create(new grpccore::DefaultCallInvoker(channel), settings);
+        }
+
+        /// <summary>
+        /// Creates a <see cref="LoggingServiceV2Client"/> which uses the specified call invoker for remote operations.
+        /// </summary>
+        /// <param name="callInvoker">The <see cref="grpccore::CallInvoker"/> for remote operations. Must not be null.</param>
+        /// <param name="settings">Optional <see cref="LoggingServiceV2Settings"/>.</param>
+        /// <returns>The created <see cref="LoggingServiceV2Client"/>.</returns>
+        public static LoggingServiceV2Client Create(grpccore::CallInvoker callInvoker, LoggingServiceV2Settings settings = null)
+        {
+            gax::GaxPreconditions.CheckNotNull(callInvoker, nameof(callInvoker));
+            LoggingServiceV2.LoggingServiceV2Client grpcClient = new LoggingServiceV2.LoggingServiceV2Client(callInvoker);
             return new LoggingServiceV2ClientImpl(grpcClient, settings);
         }
 

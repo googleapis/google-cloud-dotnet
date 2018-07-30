@@ -361,7 +361,19 @@ namespace Google.LongRunning
         public static OperationsClient Create(grpccore::Channel channel, OperationsSettings settings = null)
         {
             gax::GaxPreconditions.CheckNotNull(channel, nameof(channel));
-            Operations.OperationsClient grpcClient = new Operations.OperationsClient(channel);
+            return Create(new grpccore::DefaultCallInvoker(channel), settings);
+        }
+
+        /// <summary>
+        /// Creates a <see cref="OperationsClient"/> which uses the specified call invoker for remote operations.
+        /// </summary>
+        /// <param name="callInvoker">The <see cref="grpccore::CallInvoker"/> for remote operations. Must not be null.</param>
+        /// <param name="settings">Optional <see cref="OperationsSettings"/>.</param>
+        /// <returns>The created <see cref="OperationsClient"/>.</returns>
+        public static OperationsClient Create(grpccore::CallInvoker callInvoker, OperationsSettings settings = null)
+        {
+            gax::GaxPreconditions.CheckNotNull(callInvoker, nameof(callInvoker));
+            Operations.OperationsClient grpcClient = new Operations.OperationsClient(callInvoker);
             return new OperationsClientImpl(grpcClient, settings);
         }
 

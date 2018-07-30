@@ -398,7 +398,19 @@ namespace Google.Cloud.Monitoring.V3
         public static AlertPolicyServiceClient Create(grpccore::Channel channel, AlertPolicyServiceSettings settings = null)
         {
             gax::GaxPreconditions.CheckNotNull(channel, nameof(channel));
-            AlertPolicyService.AlertPolicyServiceClient grpcClient = new AlertPolicyService.AlertPolicyServiceClient(channel);
+            return Create(new grpccore::DefaultCallInvoker(channel), settings);
+        }
+
+        /// <summary>
+        /// Creates a <see cref="AlertPolicyServiceClient"/> which uses the specified call invoker for remote operations.
+        /// </summary>
+        /// <param name="callInvoker">The <see cref="grpccore::CallInvoker"/> for remote operations. Must not be null.</param>
+        /// <param name="settings">Optional <see cref="AlertPolicyServiceSettings"/>.</param>
+        /// <returns>The created <see cref="AlertPolicyServiceClient"/>.</returns>
+        public static AlertPolicyServiceClient Create(grpccore::CallInvoker callInvoker, AlertPolicyServiceSettings settings = null)
+        {
+            gax::GaxPreconditions.CheckNotNull(callInvoker, nameof(callInvoker));
+            AlertPolicyService.AlertPolicyServiceClient grpcClient = new AlertPolicyService.AlertPolicyServiceClient(callInvoker);
             return new AlertPolicyServiceClientImpl(grpcClient, settings);
         }
 

@@ -336,7 +336,19 @@ namespace Google.Cloud.Trace.V1
         public static TraceServiceClient Create(grpccore::Channel channel, TraceServiceSettings settings = null)
         {
             gax::GaxPreconditions.CheckNotNull(channel, nameof(channel));
-            TraceService.TraceServiceClient grpcClient = new TraceService.TraceServiceClient(channel);
+            return Create(new grpccore::DefaultCallInvoker(channel), settings);
+        }
+
+        /// <summary>
+        /// Creates a <see cref="TraceServiceClient"/> which uses the specified call invoker for remote operations.
+        /// </summary>
+        /// <param name="callInvoker">The <see cref="grpccore::CallInvoker"/> for remote operations. Must not be null.</param>
+        /// <param name="settings">Optional <see cref="TraceServiceSettings"/>.</param>
+        /// <returns>The created <see cref="TraceServiceClient"/>.</returns>
+        public static TraceServiceClient Create(grpccore::CallInvoker callInvoker, TraceServiceSettings settings = null)
+        {
+            gax::GaxPreconditions.CheckNotNull(callInvoker, nameof(callInvoker));
+            TraceService.TraceServiceClient grpcClient = new TraceService.TraceServiceClient(callInvoker);
             return new TraceServiceClientImpl(grpcClient, settings);
         }
 

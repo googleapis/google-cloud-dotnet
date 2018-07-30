@@ -395,7 +395,19 @@ namespace Google.Cloud.Debugger.V2
         public static Debugger2Client Create(grpccore::Channel channel, Debugger2Settings settings = null)
         {
             gax::GaxPreconditions.CheckNotNull(channel, nameof(channel));
-            Debugger2.Debugger2Client grpcClient = new Debugger2.Debugger2Client(channel);
+            return Create(new grpccore::DefaultCallInvoker(channel), settings);
+        }
+
+        /// <summary>
+        /// Creates a <see cref="Debugger2Client"/> which uses the specified call invoker for remote operations.
+        /// </summary>
+        /// <param name="callInvoker">The <see cref="grpccore::CallInvoker"/> for remote operations. Must not be null.</param>
+        /// <param name="settings">Optional <see cref="Debugger2Settings"/>.</param>
+        /// <returns>The created <see cref="Debugger2Client"/>.</returns>
+        public static Debugger2Client Create(grpccore::CallInvoker callInvoker, Debugger2Settings settings = null)
+        {
+            gax::GaxPreconditions.CheckNotNull(callInvoker, nameof(callInvoker));
+            Debugger2.Debugger2Client grpcClient = new Debugger2.Debugger2Client(callInvoker);
             return new Debugger2ClientImpl(grpcClient, settings);
         }
 

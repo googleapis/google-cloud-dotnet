@@ -619,7 +619,19 @@ namespace Google.Cloud.Firestore.V1Beta1
         public static FirestoreClient Create(grpccore::Channel channel, FirestoreSettings settings = null)
         {
             gax::GaxPreconditions.CheckNotNull(channel, nameof(channel));
-            Firestore.FirestoreClient grpcClient = new Firestore.FirestoreClient(channel);
+            return Create(new grpccore::DefaultCallInvoker(channel), settings);
+        }
+
+        /// <summary>
+        /// Creates a <see cref="FirestoreClient"/> which uses the specified call invoker for remote operations.
+        /// </summary>
+        /// <param name="callInvoker">The <see cref="grpccore::CallInvoker"/> for remote operations. Must not be null.</param>
+        /// <param name="settings">Optional <see cref="FirestoreSettings"/>.</param>
+        /// <returns>The created <see cref="FirestoreClient"/>.</returns>
+        public static FirestoreClient Create(grpccore::CallInvoker callInvoker, FirestoreSettings settings = null)
+        {
+            gax::GaxPreconditions.CheckNotNull(callInvoker, nameof(callInvoker));
+            Firestore.FirestoreClient grpcClient = new Firestore.FirestoreClient(callInvoker);
             return new FirestoreClientImpl(grpcClient, settings);
         }
 

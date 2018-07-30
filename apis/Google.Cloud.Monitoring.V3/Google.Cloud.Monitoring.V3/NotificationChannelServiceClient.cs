@@ -460,7 +460,19 @@ namespace Google.Cloud.Monitoring.V3
         public static NotificationChannelServiceClient Create(grpccore::Channel channel, NotificationChannelServiceSettings settings = null)
         {
             gax::GaxPreconditions.CheckNotNull(channel, nameof(channel));
-            NotificationChannelService.NotificationChannelServiceClient grpcClient = new NotificationChannelService.NotificationChannelServiceClient(channel);
+            return Create(new grpccore::DefaultCallInvoker(channel), settings);
+        }
+
+        /// <summary>
+        /// Creates a <see cref="NotificationChannelServiceClient"/> which uses the specified call invoker for remote operations.
+        /// </summary>
+        /// <param name="callInvoker">The <see cref="grpccore::CallInvoker"/> for remote operations. Must not be null.</param>
+        /// <param name="settings">Optional <see cref="NotificationChannelServiceSettings"/>.</param>
+        /// <returns>The created <see cref="NotificationChannelServiceClient"/>.</returns>
+        public static NotificationChannelServiceClient Create(grpccore::CallInvoker callInvoker, NotificationChannelServiceSettings settings = null)
+        {
+            gax::GaxPreconditions.CheckNotNull(callInvoker, nameof(callInvoker));
+            NotificationChannelService.NotificationChannelServiceClient grpcClient = new NotificationChannelService.NotificationChannelServiceClient(callInvoker);
             return new NotificationChannelServiceClientImpl(grpcClient, settings);
         }
 

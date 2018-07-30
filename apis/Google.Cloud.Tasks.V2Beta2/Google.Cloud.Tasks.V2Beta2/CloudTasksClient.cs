@@ -848,7 +848,19 @@ namespace Google.Cloud.Tasks.V2Beta2
         public static CloudTasksClient Create(grpccore::Channel channel, CloudTasksSettings settings = null)
         {
             gax::GaxPreconditions.CheckNotNull(channel, nameof(channel));
-            CloudTasks.CloudTasksClient grpcClient = new CloudTasks.CloudTasksClient(channel);
+            return Create(new grpccore::DefaultCallInvoker(channel), settings);
+        }
+
+        /// <summary>
+        /// Creates a <see cref="CloudTasksClient"/> which uses the specified call invoker for remote operations.
+        /// </summary>
+        /// <param name="callInvoker">The <see cref="grpccore::CallInvoker"/> for remote operations. Must not be null.</param>
+        /// <param name="settings">Optional <see cref="CloudTasksSettings"/>.</param>
+        /// <returns>The created <see cref="CloudTasksClient"/>.</returns>
+        public static CloudTasksClient Create(grpccore::CallInvoker callInvoker, CloudTasksSettings settings = null)
+        {
+            gax::GaxPreconditions.CheckNotNull(callInvoker, nameof(callInvoker));
+            CloudTasks.CloudTasksClient grpcClient = new CloudTasks.CloudTasksClient(callInvoker);
             return new CloudTasksClientImpl(grpcClient, settings);
         }
 

@@ -372,7 +372,19 @@ namespace Google.Cloud.Bigtable.V2
         public static BigtableServiceApiClient Create(grpccore::Channel channel, BigtableServiceApiSettings settings = null)
         {
             gax::GaxPreconditions.CheckNotNull(channel, nameof(channel));
-            Bigtable.BigtableClient grpcClient = new Bigtable.BigtableClient(channel);
+            return Create(new grpccore::DefaultCallInvoker(channel), settings);
+        }
+
+        /// <summary>
+        /// Creates a <see cref="BigtableServiceApiClient"/> which uses the specified call invoker for remote operations.
+        /// </summary>
+        /// <param name="callInvoker">The <see cref="grpccore::CallInvoker"/> for remote operations. Must not be null.</param>
+        /// <param name="settings">Optional <see cref="BigtableServiceApiSettings"/>.</param>
+        /// <returns>The created <see cref="BigtableServiceApiClient"/>.</returns>
+        public static BigtableServiceApiClient Create(grpccore::CallInvoker callInvoker, BigtableServiceApiSettings settings = null)
+        {
+            gax::GaxPreconditions.CheckNotNull(callInvoker, nameof(callInvoker));
+            Bigtable.BigtableClient grpcClient = new Bigtable.BigtableClient(callInvoker);
             return new BigtableServiceApiClientImpl(grpcClient, settings);
         }
 

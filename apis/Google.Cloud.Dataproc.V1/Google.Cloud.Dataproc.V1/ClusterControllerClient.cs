@@ -511,7 +511,19 @@ namespace Google.Cloud.Dataproc.V1
         public static ClusterControllerClient Create(grpccore::Channel channel, ClusterControllerSettings settings = null)
         {
             gax::GaxPreconditions.CheckNotNull(channel, nameof(channel));
-            ClusterController.ClusterControllerClient grpcClient = new ClusterController.ClusterControllerClient(channel);
+            return Create(new grpccore::DefaultCallInvoker(channel), settings);
+        }
+
+        /// <summary>
+        /// Creates a <see cref="ClusterControllerClient"/> which uses the specified call invoker for remote operations.
+        /// </summary>
+        /// <param name="callInvoker">The <see cref="grpccore::CallInvoker"/> for remote operations. Must not be null.</param>
+        /// <param name="settings">Optional <see cref="ClusterControllerSettings"/>.</param>
+        /// <returns>The created <see cref="ClusterControllerClient"/>.</returns>
+        public static ClusterControllerClient Create(grpccore::CallInvoker callInvoker, ClusterControllerSettings settings = null)
+        {
+            gax::GaxPreconditions.CheckNotNull(callInvoker, nameof(callInvoker));
+            ClusterController.ClusterControllerClient grpcClient = new ClusterController.ClusterControllerClient(callInvoker);
             return new ClusterControllerClientImpl(grpcClient, settings);
         }
 

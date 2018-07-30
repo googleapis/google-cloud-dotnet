@@ -615,7 +615,19 @@ namespace Google.Cloud.PubSub.V1
         public static PublisherServiceApiClient Create(grpccore::Channel channel, PublisherServiceApiSettings settings = null)
         {
             gax::GaxPreconditions.CheckNotNull(channel, nameof(channel));
-            Publisher.PublisherClient grpcClient = new Publisher.PublisherClient(channel);
+            return Create(new grpccore::DefaultCallInvoker(channel), settings);
+        }
+
+        /// <summary>
+        /// Creates a <see cref="PublisherServiceApiClient"/> which uses the specified call invoker for remote operations.
+        /// </summary>
+        /// <param name="callInvoker">The <see cref="grpccore::CallInvoker"/> for remote operations. Must not be null.</param>
+        /// <param name="settings">Optional <see cref="PublisherServiceApiSettings"/>.</param>
+        /// <returns>The created <see cref="PublisherServiceApiClient"/>.</returns>
+        public static PublisherServiceApiClient Create(grpccore::CallInvoker callInvoker, PublisherServiceApiSettings settings = null)
+        {
+            gax::GaxPreconditions.CheckNotNull(callInvoker, nameof(callInvoker));
+            Publisher.PublisherClient grpcClient = new Publisher.PublisherClient(callInvoker);
             return new PublisherServiceApiClientImpl(grpcClient, settings);
         }
 

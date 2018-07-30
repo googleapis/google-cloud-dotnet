@@ -344,7 +344,19 @@ namespace Google.Cloud.Speech.V1P1Beta1
         public static SpeechClient Create(grpccore::Channel channel, SpeechSettings settings = null)
         {
             gax::GaxPreconditions.CheckNotNull(channel, nameof(channel));
-            Speech.SpeechClient grpcClient = new Speech.SpeechClient(channel);
+            return Create(new grpccore::DefaultCallInvoker(channel), settings);
+        }
+
+        /// <summary>
+        /// Creates a <see cref="SpeechClient"/> which uses the specified call invoker for remote operations.
+        /// </summary>
+        /// <param name="callInvoker">The <see cref="grpccore::CallInvoker"/> for remote operations. Must not be null.</param>
+        /// <param name="settings">Optional <see cref="SpeechSettings"/>.</param>
+        /// <returns>The created <see cref="SpeechClient"/>.</returns>
+        public static SpeechClient Create(grpccore::CallInvoker callInvoker, SpeechSettings settings = null)
+        {
+            gax::GaxPreconditions.CheckNotNull(callInvoker, nameof(callInvoker));
+            Speech.SpeechClient grpcClient = new Speech.SpeechClient(callInvoker);
             return new SpeechClientImpl(grpcClient, settings);
         }
 

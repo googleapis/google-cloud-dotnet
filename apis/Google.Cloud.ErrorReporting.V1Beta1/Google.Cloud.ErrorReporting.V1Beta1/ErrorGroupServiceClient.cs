@@ -301,7 +301,19 @@ namespace Google.Cloud.ErrorReporting.V1Beta1
         public static ErrorGroupServiceClient Create(grpccore::Channel channel, ErrorGroupServiceSettings settings = null)
         {
             gax::GaxPreconditions.CheckNotNull(channel, nameof(channel));
-            ErrorGroupService.ErrorGroupServiceClient grpcClient = new ErrorGroupService.ErrorGroupServiceClient(channel);
+            return Create(new grpccore::DefaultCallInvoker(channel), settings);
+        }
+
+        /// <summary>
+        /// Creates a <see cref="ErrorGroupServiceClient"/> which uses the specified call invoker for remote operations.
+        /// </summary>
+        /// <param name="callInvoker">The <see cref="grpccore::CallInvoker"/> for remote operations. Must not be null.</param>
+        /// <param name="settings">Optional <see cref="ErrorGroupServiceSettings"/>.</param>
+        /// <returns>The created <see cref="ErrorGroupServiceClient"/>.</returns>
+        public static ErrorGroupServiceClient Create(grpccore::CallInvoker callInvoker, ErrorGroupServiceSettings settings = null)
+        {
+            gax::GaxPreconditions.CheckNotNull(callInvoker, nameof(callInvoker));
+            ErrorGroupService.ErrorGroupServiceClient grpcClient = new ErrorGroupService.ErrorGroupServiceClient(callInvoker);
             return new ErrorGroupServiceClientImpl(grpcClient, settings);
         }
 

@@ -333,7 +333,19 @@ namespace Google.Cloud.Debugger.V2
         public static Controller2Client Create(grpccore::Channel channel, Controller2Settings settings = null)
         {
             gax::GaxPreconditions.CheckNotNull(channel, nameof(channel));
-            Controller2.Controller2Client grpcClient = new Controller2.Controller2Client(channel);
+            return Create(new grpccore::DefaultCallInvoker(channel), settings);
+        }
+
+        /// <summary>
+        /// Creates a <see cref="Controller2Client"/> which uses the specified call invoker for remote operations.
+        /// </summary>
+        /// <param name="callInvoker">The <see cref="grpccore::CallInvoker"/> for remote operations. Must not be null.</param>
+        /// <param name="settings">Optional <see cref="Controller2Settings"/>.</param>
+        /// <returns>The created <see cref="Controller2Client"/>.</returns>
+        public static Controller2Client Create(grpccore::CallInvoker callInvoker, Controller2Settings settings = null)
+        {
+            gax::GaxPreconditions.CheckNotNull(callInvoker, nameof(callInvoker));
+            Controller2.Controller2Client grpcClient = new Controller2.Controller2Client(callInvoker);
             return new Controller2ClientImpl(grpcClient, settings);
         }
 

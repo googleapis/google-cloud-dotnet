@@ -1148,7 +1148,19 @@ namespace Google.Cloud.Container.V1
         public static ClusterManagerClient Create(grpccore::Channel channel, ClusterManagerSettings settings = null)
         {
             gax::GaxPreconditions.CheckNotNull(channel, nameof(channel));
-            ClusterManager.ClusterManagerClient grpcClient = new ClusterManager.ClusterManagerClient(channel);
+            return Create(new grpccore::DefaultCallInvoker(channel), settings);
+        }
+
+        /// <summary>
+        /// Creates a <see cref="ClusterManagerClient"/> which uses the specified call invoker for remote operations.
+        /// </summary>
+        /// <param name="callInvoker">The <see cref="grpccore::CallInvoker"/> for remote operations. Must not be null.</param>
+        /// <param name="settings">Optional <see cref="ClusterManagerSettings"/>.</param>
+        /// <returns>The created <see cref="ClusterManagerClient"/>.</returns>
+        public static ClusterManagerClient Create(grpccore::CallInvoker callInvoker, ClusterManagerSettings settings = null)
+        {
+            gax::GaxPreconditions.CheckNotNull(callInvoker, nameof(callInvoker));
+            ClusterManager.ClusterManagerClient grpcClient = new ClusterManager.ClusterManagerClient(callInvoker);
             return new ClusterManagerClientImpl(grpcClient, settings);
         }
 
