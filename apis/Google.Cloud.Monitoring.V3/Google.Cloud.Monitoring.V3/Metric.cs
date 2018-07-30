@@ -25,26 +25,29 @@ namespace Google.Cloud.Monitoring.V3 {
       byte[] descriptorData = global::System.Convert.FromBase64String(
           string.Concat(
             "CiFnb29nbGUvbW9uaXRvcmluZy92My9tZXRyaWMucHJvdG8SFGdvb2dsZS5t",
-            "b25pdG9yaW5nLnYzGhdnb29nbGUvYXBpL21ldHJpYy5wcm90bxojZ29vZ2xl",
-            "L2FwaS9tb25pdG9yZWRfcmVzb3VyY2UucHJvdG8aIWdvb2dsZS9tb25pdG9y",
-            "aW5nL3YzL2NvbW1vbi5wcm90byJuCgVQb2ludBI0CghpbnRlcnZhbBgBIAEo",
-            "CzIiLmdvb2dsZS5tb25pdG9yaW5nLnYzLlRpbWVJbnRlcnZhbBIvCgV2YWx1",
-            "ZRgCIAEoCzIgLmdvb2dsZS5tb25pdG9yaW5nLnYzLlR5cGVkVmFsdWUiiAIK",
-            "ClRpbWVTZXJpZXMSIgoGbWV0cmljGAEgASgLMhIuZ29vZ2xlLmFwaS5NZXRy",
-            "aWMSLwoIcmVzb3VyY2UYAiABKAsyHS5nb29nbGUuYXBpLk1vbml0b3JlZFJl",
-            "c291cmNlEjwKC21ldHJpY19raW5kGAMgASgOMicuZ29vZ2xlLmFwaS5NZXRy",
-            "aWNEZXNjcmlwdG9yLk1ldHJpY0tpbmQSOgoKdmFsdWVfdHlwZRgEIAEoDjIm",
-            "Lmdvb2dsZS5hcGkuTWV0cmljRGVzY3JpcHRvci5WYWx1ZVR5cGUSKwoGcG9p",
-            "bnRzGAUgAygLMhsuZ29vZ2xlLm1vbml0b3JpbmcudjMuUG9pbnRCowEKGGNv",
-            "bS5nb29nbGUubW9uaXRvcmluZy52M0ILTWV0cmljUHJvdG9QAVo+Z29vZ2xl",
-            "LmdvbGFuZy5vcmcvZ2VucHJvdG8vZ29vZ2xlYXBpcy9tb25pdG9yaW5nL3Yz",
-            "O21vbml0b3JpbmeqAhpHb29nbGUuQ2xvdWQuTW9uaXRvcmluZy5WM8oCGkdv",
-            "b2dsZVxDbG91ZFxNb25pdG9yaW5nXFYzYgZwcm90bzM="));
+            "b25pdG9yaW5nLnYzGhxnb29nbGUvYXBpL2Fubm90YXRpb25zLnByb3RvGhZn",
+            "b29nbGUvYXBpL2xhYmVsLnByb3RvGhdnb29nbGUvYXBpL21ldHJpYy5wcm90",
+            "bxojZ29vZ2xlL2FwaS9tb25pdG9yZWRfcmVzb3VyY2UucHJvdG8aIWdvb2ds",
+            "ZS9tb25pdG9yaW5nL3YzL2NvbW1vbi5wcm90byJuCgVQb2ludBI0CghpbnRl",
+            "cnZhbBgBIAEoCzIiLmdvb2dsZS5tb25pdG9yaW5nLnYzLlRpbWVJbnRlcnZh",
+            "bBIvCgV2YWx1ZRgCIAEoCzIgLmdvb2dsZS5tb25pdG9yaW5nLnYzLlR5cGVk",
+            "VmFsdWUiwQIKClRpbWVTZXJpZXMSIgoGbWV0cmljGAEgASgLMhIuZ29vZ2xl",
+            "LmFwaS5NZXRyaWMSLwoIcmVzb3VyY2UYAiABKAsyHS5nb29nbGUuYXBpLk1v",
+            "bml0b3JlZFJlc291cmNlEjcKCG1ldGFkYXRhGAcgASgLMiUuZ29vZ2xlLmFw",
+            "aS5Nb25pdG9yZWRSZXNvdXJjZU1ldGFkYXRhEjwKC21ldHJpY19raW5kGAMg",
+            "ASgOMicuZ29vZ2xlLmFwaS5NZXRyaWNEZXNjcmlwdG9yLk1ldHJpY0tpbmQS",
+            "OgoKdmFsdWVfdHlwZRgEIAEoDjImLmdvb2dsZS5hcGkuTWV0cmljRGVzY3Jp",
+            "cHRvci5WYWx1ZVR5cGUSKwoGcG9pbnRzGAUgAygLMhsuZ29vZ2xlLm1vbml0",
+            "b3JpbmcudjMuUG9pbnRCowEKGGNvbS5nb29nbGUubW9uaXRvcmluZy52M0IL",
+            "TWV0cmljUHJvdG9QAVo+Z29vZ2xlLmdvbGFuZy5vcmcvZ2VucHJvdG8vZ29v",
+            "Z2xlYXBpcy9tb25pdG9yaW5nL3YzO21vbml0b3JpbmeqAhpHb29nbGUuQ2xv",
+            "dWQuTW9uaXRvcmluZy5WM8oCGkdvb2dsZVxDbG91ZFxNb25pdG9yaW5nXFYz",
+            "YgZwcm90bzM="));
       descriptor = pbr::FileDescriptor.FromGeneratedCode(descriptorData,
-          new pbr::FileDescriptor[] { global::Google.Api.MetricReflection.Descriptor, global::Google.Api.MonitoredResourceReflection.Descriptor, global::Google.Cloud.Monitoring.V3.CommonReflection.Descriptor, },
+          new pbr::FileDescriptor[] { global::Google.Api.AnnotationsReflection.Descriptor, global::Google.Api.LabelReflection.Descriptor, global::Google.Api.MetricReflection.Descriptor, global::Google.Api.MonitoredResourceReflection.Descriptor, global::Google.Cloud.Monitoring.V3.CommonReflection.Descriptor, },
           new pbr::GeneratedClrTypeInfo(null, new pbr::GeneratedClrTypeInfo[] {
             new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.Monitoring.V3.Point), global::Google.Cloud.Monitoring.V3.Point.Parser, new[]{ "Interval", "Value" }, null, null, null),
-            new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.Monitoring.V3.TimeSeries), global::Google.Cloud.Monitoring.V3.TimeSeries.Parser, new[]{ "Metric", "Resource", "MetricKind", "ValueType", "Points" }, null, null, null)
+            new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.Monitoring.V3.TimeSeries), global::Google.Cloud.Monitoring.V3.TimeSeries.Parser, new[]{ "Metric", "Resource", "Metadata", "MetricKind", "ValueType", "Points" }, null, null, null)
           }));
     }
     #endregion
@@ -93,14 +96,14 @@ namespace Google.Cloud.Monitoring.V3 {
     public const int IntervalFieldNumber = 1;
     private global::Google.Cloud.Monitoring.V3.TimeInterval interval_;
     /// <summary>
-    /// The time interval to which the data point applies.  For GAUGE metrics, only
-    /// the end time of the interval is used.  For DELTA metrics, the start and end
-    /// time should specify a non-zero interval, with subsequent points specifying
-    /// contiguous and non-overlapping intervals.  For CUMULATIVE metrics, the
-    /// start and end time should specify a non-zero interval, with subsequent
-    /// points specifying the same start time and increasing end times, until an
-    /// event resets the cumulative value to zero and sets a new start time for the
-    /// following points.
+    /// The time interval to which the data point applies.  For `GAUGE` metrics,
+    /// only the end time of the interval is used.  For `DELTA` metrics, the start
+    /// and end time should specify a non-zero interval, with subsequent points
+    /// specifying contiguous and non-overlapping intervals.  For `CUMULATIVE`
+    /// metrics, the start and end time should specify a non-zero interval, with
+    /// subsequent points specifying the same start time and increasing end times,
+    /// until an event resets the cumulative value to zero and sets a new start
+    /// time for the following points.
     /// </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     public global::Google.Cloud.Monitoring.V3.TimeInterval Interval {
@@ -269,6 +272,7 @@ namespace Google.Cloud.Monitoring.V3 {
     public TimeSeries(TimeSeries other) : this() {
       metric_ = other.metric_ != null ? other.metric_.Clone() : null;
       resource_ = other.resource_ != null ? other.resource_.Clone() : null;
+      metadata_ = other.metadata_ != null ? other.metadata_.Clone() : null;
       metricKind_ = other.metricKind_;
       valueType_ = other.valueType_;
       points_ = other.points_.Clone();
@@ -299,14 +303,30 @@ namespace Google.Cloud.Monitoring.V3 {
     public const int ResourceFieldNumber = 2;
     private global::Google.Api.MonitoredResource resource_;
     /// <summary>
-    /// The associated resource. A fully-specified monitored resource used to
-    /// identify the time series.
+    /// The associated monitored resource.  Custom metrics can use only certain
+    /// monitored resource types in their time series data.
     /// </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     public global::Google.Api.MonitoredResource Resource {
       get { return resource_; }
       set {
         resource_ = value;
+      }
+    }
+
+    /// <summary>Field number for the "metadata" field.</summary>
+    public const int MetadataFieldNumber = 7;
+    private global::Google.Api.MonitoredResourceMetadata metadata_;
+    /// <summary>
+    /// Output only. The associated monitored resource metadata. When reading a
+    /// a timeseries, this field will include metadata labels that are explicitly
+    /// named in the reduction. When creating a timeseries, this field is ignored.
+    /// </summary>
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    public global::Google.Api.MonitoredResourceMetadata Metadata {
+      get { return metadata_; }
+      set {
+        metadata_ = value;
       }
     }
 
@@ -357,8 +377,8 @@ namespace Google.Cloud.Monitoring.V3 {
         = pb::FieldCodec.ForMessage(42, global::Google.Cloud.Monitoring.V3.Point.Parser);
     private readonly pbc::RepeatedField<global::Google.Cloud.Monitoring.V3.Point> points_ = new pbc::RepeatedField<global::Google.Cloud.Monitoring.V3.Point>();
     /// <summary>
-    /// The data points of this time series. When listing time series, the order of
-    /// the points is specified by the list method.
+    /// The data points of this time series. When listing time series, points are
+    /// returned in reverse time order.
     ///
     /// When creating a time series, this field must contain exactly one point and
     /// the point's type must be the same as the value type of the associated
@@ -386,6 +406,7 @@ namespace Google.Cloud.Monitoring.V3 {
       }
       if (!object.Equals(Metric, other.Metric)) return false;
       if (!object.Equals(Resource, other.Resource)) return false;
+      if (!object.Equals(Metadata, other.Metadata)) return false;
       if (MetricKind != other.MetricKind) return false;
       if (ValueType != other.ValueType) return false;
       if(!points_.Equals(other.points_)) return false;
@@ -397,6 +418,7 @@ namespace Google.Cloud.Monitoring.V3 {
       int hash = 1;
       if (metric_ != null) hash ^= Metric.GetHashCode();
       if (resource_ != null) hash ^= Resource.GetHashCode();
+      if (metadata_ != null) hash ^= Metadata.GetHashCode();
       if (MetricKind != 0) hash ^= MetricKind.GetHashCode();
       if (ValueType != 0) hash ^= ValueType.GetHashCode();
       hash ^= points_.GetHashCode();
@@ -430,6 +452,10 @@ namespace Google.Cloud.Monitoring.V3 {
         output.WriteEnum((int) ValueType);
       }
       points_.WriteTo(output, _repeated_points_codec);
+      if (metadata_ != null) {
+        output.WriteRawTag(58);
+        output.WriteMessage(Metadata);
+      }
       if (_unknownFields != null) {
         _unknownFields.WriteTo(output);
       }
@@ -443,6 +469,9 @@ namespace Google.Cloud.Monitoring.V3 {
       }
       if (resource_ != null) {
         size += 1 + pb::CodedOutputStream.ComputeMessageSize(Resource);
+      }
+      if (metadata_ != null) {
+        size += 1 + pb::CodedOutputStream.ComputeMessageSize(Metadata);
       }
       if (MetricKind != 0) {
         size += 1 + pb::CodedOutputStream.ComputeEnumSize((int) MetricKind);
@@ -473,6 +502,12 @@ namespace Google.Cloud.Monitoring.V3 {
           resource_ = new global::Google.Api.MonitoredResource();
         }
         Resource.MergeFrom(other.Resource);
+      }
+      if (other.metadata_ != null) {
+        if (metadata_ == null) {
+          metadata_ = new global::Google.Api.MonitoredResourceMetadata();
+        }
+        Metadata.MergeFrom(other.Metadata);
       }
       if (other.MetricKind != 0) {
         MetricKind = other.MetricKind;
@@ -516,6 +551,13 @@ namespace Google.Cloud.Monitoring.V3 {
           }
           case 42: {
             points_.AddEntriesFrom(input, _repeated_points_codec);
+            break;
+          }
+          case 58: {
+            if (metadata_ == null) {
+              metadata_ = new global::Google.Api.MonitoredResourceMetadata();
+            }
+            input.ReadMessage(metadata_);
             break;
           }
         }
