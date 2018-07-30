@@ -30,55 +30,56 @@ namespace Google.Cloud.Monitoring.V3 {
             "Z2xlL3Byb3RvYnVmL2VtcHR5LnByb3RvGiBnb29nbGUvcHJvdG9idWYvZmll",
             "bGRfbWFzay5wcm90byJWCh1MaXN0VXB0aW1lQ2hlY2tDb25maWdzUmVxdWVz",
             "dBIOCgZwYXJlbnQYASABKAkSEQoJcGFnZV9zaXplGAMgASgFEhIKCnBhZ2Vf",
-            "dG9rZW4YBCABKAkigAEKHkxpc3RVcHRpbWVDaGVja0NvbmZpZ3NSZXNwb25z",
+            "dG9rZW4YBCABKAkilAEKHkxpc3RVcHRpbWVDaGVja0NvbmZpZ3NSZXNwb25z",
             "ZRJFChR1cHRpbWVfY2hlY2tfY29uZmlncxgBIAMoCzInLmdvb2dsZS5tb25p",
             "dG9yaW5nLnYzLlVwdGltZUNoZWNrQ29uZmlnEhcKD25leHRfcGFnZV90b2tl",
-            "bhgCIAEoCSIrChtHZXRVcHRpbWVDaGVja0NvbmZpZ1JlcXVlc3QSDAoEbmFt",
-            "ZRgBIAEoCSJ2Ch5DcmVhdGVVcHRpbWVDaGVja0NvbmZpZ1JlcXVlc3QSDgoG",
-            "cGFyZW50GAEgASgJEkQKE3VwdGltZV9jaGVja19jb25maWcYAiABKAsyJy5n",
-            "b29nbGUubW9uaXRvcmluZy52My5VcHRpbWVDaGVja0NvbmZpZyKXAQoeVXBk",
-            "YXRlVXB0aW1lQ2hlY2tDb25maWdSZXF1ZXN0Ei8KC3VwZGF0ZV9tYXNrGAIg",
-            "ASgLMhouZ29vZ2xlLnByb3RvYnVmLkZpZWxkTWFzaxJEChN1cHRpbWVfY2hl",
-            "Y2tfY29uZmlnGAMgASgLMicuZ29vZ2xlLm1vbml0b3JpbmcudjMuVXB0aW1l",
-            "Q2hlY2tDb25maWciLgoeRGVsZXRlVXB0aW1lQ2hlY2tDb25maWdSZXF1ZXN0",
-            "EgwKBG5hbWUYASABKAkiQgoZTGlzdFVwdGltZUNoZWNrSXBzUmVxdWVzdBIR",
-            "CglwYWdlX3NpemUYAiABKAUSEgoKcGFnZV90b2tlbhgDIAEoCSJ0ChpMaXN0",
-            "VXB0aW1lQ2hlY2tJcHNSZXNwb25zZRI9ChB1cHRpbWVfY2hlY2tfaXBzGAEg",
-            "AygLMiMuZ29vZ2xlLm1vbml0b3JpbmcudjMuVXB0aW1lQ2hlY2tJcBIXCg9u",
-            "ZXh0X3BhZ2VfdG9rZW4YAiABKAkyxwgKElVwdGltZUNoZWNrU2VydmljZRK3",
-            "AQoWTGlzdFVwdGltZUNoZWNrQ29uZmlncxIzLmdvb2dsZS5tb25pdG9yaW5n",
-            "LnYzLkxpc3RVcHRpbWVDaGVja0NvbmZpZ3NSZXF1ZXN0GjQuZ29vZ2xlLm1v",
-            "bml0b3JpbmcudjMuTGlzdFVwdGltZUNoZWNrQ29uZmlnc1Jlc3BvbnNlIjKC",
-            "0+STAiwSKi92My97cGFyZW50PXByb2plY3RzLyp9L3VwdGltZUNoZWNrQ29u",
-            "ZmlncxKmAQoUR2V0VXB0aW1lQ2hlY2tDb25maWcSMS5nb29nbGUubW9uaXRv",
-            "cmluZy52My5HZXRVcHRpbWVDaGVja0NvbmZpZ1JlcXVlc3QaJy5nb29nbGUu",
-            "bW9uaXRvcmluZy52My5VcHRpbWVDaGVja0NvbmZpZyIygtPkkwIsEiovdjMv",
-            "e25hbWU9cHJvamVjdHMvKi91cHRpbWVDaGVja0NvbmZpZ3MvKn0SwQEKF0Ny",
-            "ZWF0ZVVwdGltZUNoZWNrQ29uZmlnEjQuZ29vZ2xlLm1vbml0b3JpbmcudjMu",
-            "Q3JlYXRlVXB0aW1lQ2hlY2tDb25maWdSZXF1ZXN0GicuZ29vZ2xlLm1vbml0",
-            "b3JpbmcudjMuVXB0aW1lQ2hlY2tDb25maWciR4LT5JMCQSIqL3YzL3twYXJl",
-            "bnQ9cHJvamVjdHMvKn0vdXB0aW1lQ2hlY2tDb25maWdzOhN1cHRpbWVfY2hl",
-            "Y2tfY29uZmlnEtUBChdVcGRhdGVVcHRpbWVDaGVja0NvbmZpZxI0Lmdvb2ds",
-            "ZS5tb25pdG9yaW5nLnYzLlVwZGF0ZVVwdGltZUNoZWNrQ29uZmlnUmVxdWVz",
-            "dBonLmdvb2dsZS5tb25pdG9yaW5nLnYzLlVwdGltZUNoZWNrQ29uZmlnIluC",
-            "0+STAlUyPi92My97dXB0aW1lX2NoZWNrX2NvbmZpZy5uYW1lPXByb2plY3Rz",
-            "LyovdXB0aW1lQ2hlY2tDb25maWdzLyp9OhN1cHRpbWVfY2hlY2tfY29uZmln",
-            "EpsBChdEZWxldGVVcHRpbWVDaGVja0NvbmZpZxI0Lmdvb2dsZS5tb25pdG9y",
-            "aW5nLnYzLkRlbGV0ZVVwdGltZUNoZWNrQ29uZmlnUmVxdWVzdBoWLmdvb2ds",
-            "ZS5wcm90b2J1Zi5FbXB0eSIygtPkkwIsKiovdjMve25hbWU9cHJvamVjdHMv",
-            "Ki91cHRpbWVDaGVja0NvbmZpZ3MvKn0SkwEKEkxpc3RVcHRpbWVDaGVja0lw",
-            "cxIvLmdvb2dsZS5tb25pdG9yaW5nLnYzLkxpc3RVcHRpbWVDaGVja0lwc1Jl",
-            "cXVlc3QaMC5nb29nbGUubW9uaXRvcmluZy52My5MaXN0VXB0aW1lQ2hlY2tJ",
-            "cHNSZXNwb25zZSIagtPkkwIUEhIvdjMvdXB0aW1lQ2hlY2tJcHNCqgEKGGNv",
-            "bS5nb29nbGUubW9uaXRvcmluZy52M0ISVXB0aW1lU2VydmljZVByb3RvUAFa",
-            "Pmdvb2dsZS5nb2xhbmcub3JnL2dlbnByb3RvL2dvb2dsZWFwaXMvbW9uaXRv",
-            "cmluZy92Mzttb25pdG9yaW5nqgIaR29vZ2xlLkNsb3VkLk1vbml0b3Jpbmcu",
-            "VjPKAhpHb29nbGVcQ2xvdWRcTW9uaXRvcmluZ1xWM2IGcHJvdG8z"));
+            "bhgCIAEoCRISCgp0b3RhbF9zaXplGAMgASgFIisKG0dldFVwdGltZUNoZWNr",
+            "Q29uZmlnUmVxdWVzdBIMCgRuYW1lGAEgASgJInYKHkNyZWF0ZVVwdGltZUNo",
+            "ZWNrQ29uZmlnUmVxdWVzdBIOCgZwYXJlbnQYASABKAkSRAoTdXB0aW1lX2No",
+            "ZWNrX2NvbmZpZxgCIAEoCzInLmdvb2dsZS5tb25pdG9yaW5nLnYzLlVwdGlt",
+            "ZUNoZWNrQ29uZmlnIpcBCh5VcGRhdGVVcHRpbWVDaGVja0NvbmZpZ1JlcXVl",
+            "c3QSLwoLdXBkYXRlX21hc2sYAiABKAsyGi5nb29nbGUucHJvdG9idWYuRmll",
+            "bGRNYXNrEkQKE3VwdGltZV9jaGVja19jb25maWcYAyABKAsyJy5nb29nbGUu",
+            "bW9uaXRvcmluZy52My5VcHRpbWVDaGVja0NvbmZpZyIuCh5EZWxldGVVcHRp",
+            "bWVDaGVja0NvbmZpZ1JlcXVlc3QSDAoEbmFtZRgBIAEoCSJCChlMaXN0VXB0",
+            "aW1lQ2hlY2tJcHNSZXF1ZXN0EhEKCXBhZ2Vfc2l6ZRgCIAEoBRISCgpwYWdl",
+            "X3Rva2VuGAMgASgJInQKGkxpc3RVcHRpbWVDaGVja0lwc1Jlc3BvbnNlEj0K",
+            "EHVwdGltZV9jaGVja19pcHMYASADKAsyIy5nb29nbGUubW9uaXRvcmluZy52",
+            "My5VcHRpbWVDaGVja0lwEhcKD25leHRfcGFnZV90b2tlbhgCIAEoCTLHCAoS",
+            "VXB0aW1lQ2hlY2tTZXJ2aWNlErcBChZMaXN0VXB0aW1lQ2hlY2tDb25maWdz",
+            "EjMuZ29vZ2xlLm1vbml0b3JpbmcudjMuTGlzdFVwdGltZUNoZWNrQ29uZmln",
+            "c1JlcXVlc3QaNC5nb29nbGUubW9uaXRvcmluZy52My5MaXN0VXB0aW1lQ2hl",
+            "Y2tDb25maWdzUmVzcG9uc2UiMoLT5JMCLBIqL3YzL3twYXJlbnQ9cHJvamVj",
+            "dHMvKn0vdXB0aW1lQ2hlY2tDb25maWdzEqYBChRHZXRVcHRpbWVDaGVja0Nv",
+            "bmZpZxIxLmdvb2dsZS5tb25pdG9yaW5nLnYzLkdldFVwdGltZUNoZWNrQ29u",
+            "ZmlnUmVxdWVzdBonLmdvb2dsZS5tb25pdG9yaW5nLnYzLlVwdGltZUNoZWNr",
+            "Q29uZmlnIjKC0+STAiwSKi92My97bmFtZT1wcm9qZWN0cy8qL3VwdGltZUNo",
+            "ZWNrQ29uZmlncy8qfRLBAQoXQ3JlYXRlVXB0aW1lQ2hlY2tDb25maWcSNC5n",
+            "b29nbGUubW9uaXRvcmluZy52My5DcmVhdGVVcHRpbWVDaGVja0NvbmZpZ1Jl",
+            "cXVlc3QaJy5nb29nbGUubW9uaXRvcmluZy52My5VcHRpbWVDaGVja0NvbmZp",
+            "ZyJHgtPkkwJBIiovdjMve3BhcmVudD1wcm9qZWN0cy8qfS91cHRpbWVDaGVj",
+            "a0NvbmZpZ3M6E3VwdGltZV9jaGVja19jb25maWcS1QEKF1VwZGF0ZVVwdGlt",
+            "ZUNoZWNrQ29uZmlnEjQuZ29vZ2xlLm1vbml0b3JpbmcudjMuVXBkYXRlVXB0",
+            "aW1lQ2hlY2tDb25maWdSZXF1ZXN0GicuZ29vZ2xlLm1vbml0b3JpbmcudjMu",
+            "VXB0aW1lQ2hlY2tDb25maWciW4LT5JMCVTI+L3YzL3t1cHRpbWVfY2hlY2tf",
+            "Y29uZmlnLm5hbWU9cHJvamVjdHMvKi91cHRpbWVDaGVja0NvbmZpZ3MvKn06",
+            "E3VwdGltZV9jaGVja19jb25maWcSmwEKF0RlbGV0ZVVwdGltZUNoZWNrQ29u",
+            "ZmlnEjQuZ29vZ2xlLm1vbml0b3JpbmcudjMuRGVsZXRlVXB0aW1lQ2hlY2tD",
+            "b25maWdSZXF1ZXN0GhYuZ29vZ2xlLnByb3RvYnVmLkVtcHR5IjKC0+STAiwq",
+            "Ki92My97bmFtZT1wcm9qZWN0cy8qL3VwdGltZUNoZWNrQ29uZmlncy8qfRKT",
+            "AQoSTGlzdFVwdGltZUNoZWNrSXBzEi8uZ29vZ2xlLm1vbml0b3JpbmcudjMu",
+            "TGlzdFVwdGltZUNoZWNrSXBzUmVxdWVzdBowLmdvb2dsZS5tb25pdG9yaW5n",
+            "LnYzLkxpc3RVcHRpbWVDaGVja0lwc1Jlc3BvbnNlIhqC0+STAhQSEi92My91",
+            "cHRpbWVDaGVja0lwc0KqAQoYY29tLmdvb2dsZS5tb25pdG9yaW5nLnYzQhJV",
+            "cHRpbWVTZXJ2aWNlUHJvdG9QAVo+Z29vZ2xlLmdvbGFuZy5vcmcvZ2VucHJv",
+            "dG8vZ29vZ2xlYXBpcy9tb25pdG9yaW5nL3YzO21vbml0b3JpbmeqAhpHb29n",
+            "bGUuQ2xvdWQuTW9uaXRvcmluZy5WM8oCGkdvb2dsZVxDbG91ZFxNb25pdG9y",
+            "aW5nXFYzYgZwcm90bzM="));
       descriptor = pbr::FileDescriptor.FromGeneratedCode(descriptorData,
           new pbr::FileDescriptor[] { global::Google.Api.AnnotationsReflection.Descriptor, global::Google.Cloud.Monitoring.V3.UptimeReflection.Descriptor, global::Google.Protobuf.WellKnownTypes.EmptyReflection.Descriptor, global::Google.Protobuf.WellKnownTypes.FieldMaskReflection.Descriptor, },
           new pbr::GeneratedClrTypeInfo(null, new pbr::GeneratedClrTypeInfo[] {
             new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.Monitoring.V3.ListUptimeCheckConfigsRequest), global::Google.Cloud.Monitoring.V3.ListUptimeCheckConfigsRequest.Parser, new[]{ "Parent", "PageSize", "PageToken" }, null, null, null),
-            new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.Monitoring.V3.ListUptimeCheckConfigsResponse), global::Google.Cloud.Monitoring.V3.ListUptimeCheckConfigsResponse.Parser, new[]{ "UptimeCheckConfigs", "NextPageToken" }, null, null, null),
+            new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.Monitoring.V3.ListUptimeCheckConfigsResponse), global::Google.Cloud.Monitoring.V3.ListUptimeCheckConfigsResponse.Parser, new[]{ "UptimeCheckConfigs", "NextPageToken", "TotalSize" }, null, null, null),
             new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.Monitoring.V3.GetUptimeCheckConfigRequest), global::Google.Cloud.Monitoring.V3.GetUptimeCheckConfigRequest.Parser, new[]{ "Name" }, null, null, null),
             new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.Monitoring.V3.CreateUptimeCheckConfigRequest), global::Google.Cloud.Monitoring.V3.CreateUptimeCheckConfigRequest.Parser, new[]{ "Parent", "UptimeCheckConfig" }, null, null, null),
             new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.Monitoring.V3.UpdateUptimeCheckConfigRequest), global::Google.Cloud.Monitoring.V3.UpdateUptimeCheckConfigRequest.Parser, new[]{ "UpdateMask", "UptimeCheckConfig" }, null, null, null),
@@ -134,9 +135,8 @@ namespace Google.Cloud.Monitoring.V3 {
     public const int ParentFieldNumber = 1;
     private string parent_ = "";
     /// <summary>
-    /// The project whose uptime check configurations are listed. The format is
-    ///
-    ///   `projects/[PROJECT_ID]`.
+    /// The project whose uptime check configurations are listed. The format
+    ///   is `projects/[PROJECT_ID]`.
     /// </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     public string Parent {
@@ -325,6 +325,7 @@ namespace Google.Cloud.Monitoring.V3 {
     public ListUptimeCheckConfigsResponse(ListUptimeCheckConfigsResponse other) : this() {
       uptimeCheckConfigs_ = other.uptimeCheckConfigs_.Clone();
       nextPageToken_ = other.nextPageToken_;
+      totalSize_ = other.totalSize_;
       _unknownFields = pb::UnknownFieldSet.Clone(other._unknownFields);
     }
 
@@ -364,6 +365,21 @@ namespace Google.Cloud.Monitoring.V3 {
       }
     }
 
+    /// <summary>Field number for the "total_size" field.</summary>
+    public const int TotalSizeFieldNumber = 3;
+    private int totalSize_;
+    /// <summary>
+    /// The total number of uptime check configurations for the project,
+    /// irrespective of any pagination.
+    /// </summary>
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    public int TotalSize {
+      get { return totalSize_; }
+      set {
+        totalSize_ = value;
+      }
+    }
+
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     public override bool Equals(object other) {
       return Equals(other as ListUptimeCheckConfigsResponse);
@@ -379,6 +395,7 @@ namespace Google.Cloud.Monitoring.V3 {
       }
       if(!uptimeCheckConfigs_.Equals(other.uptimeCheckConfigs_)) return false;
       if (NextPageToken != other.NextPageToken) return false;
+      if (TotalSize != other.TotalSize) return false;
       return Equals(_unknownFields, other._unknownFields);
     }
 
@@ -387,6 +404,7 @@ namespace Google.Cloud.Monitoring.V3 {
       int hash = 1;
       hash ^= uptimeCheckConfigs_.GetHashCode();
       if (NextPageToken.Length != 0) hash ^= NextPageToken.GetHashCode();
+      if (TotalSize != 0) hash ^= TotalSize.GetHashCode();
       if (_unknownFields != null) {
         hash ^= _unknownFields.GetHashCode();
       }
@@ -405,6 +423,10 @@ namespace Google.Cloud.Monitoring.V3 {
         output.WriteRawTag(18);
         output.WriteString(NextPageToken);
       }
+      if (TotalSize != 0) {
+        output.WriteRawTag(24);
+        output.WriteInt32(TotalSize);
+      }
       if (_unknownFields != null) {
         _unknownFields.WriteTo(output);
       }
@@ -416,6 +438,9 @@ namespace Google.Cloud.Monitoring.V3 {
       size += uptimeCheckConfigs_.CalculateSize(_repeated_uptimeCheckConfigs_codec);
       if (NextPageToken.Length != 0) {
         size += 1 + pb::CodedOutputStream.ComputeStringSize(NextPageToken);
+      }
+      if (TotalSize != 0) {
+        size += 1 + pb::CodedOutputStream.ComputeInt32Size(TotalSize);
       }
       if (_unknownFields != null) {
         size += _unknownFields.CalculateSize();
@@ -431,6 +456,9 @@ namespace Google.Cloud.Monitoring.V3 {
       uptimeCheckConfigs_.Add(other.uptimeCheckConfigs_);
       if (other.NextPageToken.Length != 0) {
         NextPageToken = other.NextPageToken;
+      }
+      if (other.TotalSize != 0) {
+        TotalSize = other.TotalSize;
       }
       _unknownFields = pb::UnknownFieldSet.MergeFrom(_unknownFields, other._unknownFields);
     }
@@ -449,6 +477,10 @@ namespace Google.Cloud.Monitoring.V3 {
           }
           case 18: {
             NextPageToken = input.ReadString();
+            break;
+          }
+          case 24: {
+            TotalSize = input.ReadInt32();
             break;
           }
         }
@@ -498,9 +530,8 @@ namespace Google.Cloud.Monitoring.V3 {
     public const int NameFieldNumber = 1;
     private string name_ = "";
     /// <summary>
-    /// The uptime check configuration to retrieve. The format is
-    ///
-    ///   `projects/[PROJECT_ID]/uptimeCheckConfigs/[UPTIME_CHECK_ID]`.
+    /// The uptime check configuration to retrieve. The format
+    ///   is `projects/[PROJECT_ID]/uptimeCheckConfigs/[UPTIME_CHECK_ID]`.
     /// </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     public string Name {
@@ -636,9 +667,8 @@ namespace Google.Cloud.Monitoring.V3 {
     public const int ParentFieldNumber = 1;
     private string parent_ = "";
     /// <summary>
-    /// The project in which to create the uptime check. The format is:
-    ///
-    ///   `projects/[PROJECT_ID]`.
+    /// The project in which to create the uptime check. The format
+    ///   is `projects/[PROJECT_ID]`.
     /// </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     public string Parent {
@@ -830,10 +860,14 @@ namespace Google.Cloud.Monitoring.V3 {
     /// Required. If an `"updateMask"` has been specified, this field gives
     /// the values for the set of fields mentioned in the `"updateMask"`. If an
     /// `"updateMask"` has not been given, this uptime check configuration replaces
-    /// the current configuration. If a field is mentioned in `"updateMask`" but
+    /// the current configuration. If a field is mentioned in `"updateMask"` but
     /// the corresonding field is omitted in this partial uptime check
     /// configuration, it has the effect of deleting/clearing the field from the
     /// configuration on the server.
+    ///
+    /// The following fields can be updated: `display_name`,
+    /// `http_check`, `tcp_check`, `timeout`, `content_matchers`, and
+    /// `selected_regions`.
     /// </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     public global::Google.Cloud.Monitoring.V3.UptimeCheckConfig UptimeCheckConfig {
@@ -996,9 +1030,8 @@ namespace Google.Cloud.Monitoring.V3 {
     public const int NameFieldNumber = 1;
     private string name_ = "";
     /// <summary>
-    /// The uptime check configuration to delete. The format is
-    ///
-    ///   `projects/[PROJECT_ID]/uptimeCheckConfigs/[UPTIME_CHECK_ID]`.
+    /// The uptime check configuration to delete. The format
+    ///   is `projects/[PROJECT_ID]/uptimeCheckConfigs/[UPTIME_CHECK_ID]`.
     /// </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     public string Name {

@@ -28,28 +28,28 @@ namespace Google.Cloud.Monitoring.V3 {
             "b2dsZS5tb25pdG9yaW5nLnYzGhxnb29nbGUvYXBpL2Fubm90YXRpb25zLnBy",
             "b3RvGhZnb29nbGUvYXBpL2xhYmVsLnByb3RvGiFnb29nbGUvbW9uaXRvcmlu",
             "Zy92My9jb21tb24ucHJvdG8aHmdvb2dsZS9wcm90b2J1Zi93cmFwcGVycy5w",
-            "cm90byLPAQodTm90aWZpY2F0aW9uQ2hhbm5lbERlc2NyaXB0b3ISDAoEbmFt",
+            "cm90byLTAQodTm90aWZpY2F0aW9uQ2hhbm5lbERlc2NyaXB0b3ISDAoEbmFt",
             "ZRgGIAEoCRIMCgR0eXBlGAEgASgJEhQKDGRpc3BsYXlfbmFtZRgCIAEoCRIT",
             "CgtkZXNjcmlwdGlvbhgDIAEoCRIrCgZsYWJlbHMYBCADKAsyGy5nb29nbGUu",
-            "YXBpLkxhYmVsRGVzY3JpcHRvchI6Cg9zdXBwb3J0ZWRfdGllcnMYBSADKA4y",
-            "IS5nb29nbGUubW9uaXRvcmluZy52My5TZXJ2aWNlVGllciK2BAoTTm90aWZp",
-            "Y2F0aW9uQ2hhbm5lbBIMCgR0eXBlGAEgASgJEgwKBG5hbWUYBiABKAkSFAoM",
-            "ZGlzcGxheV9uYW1lGAMgASgJEhMKC2Rlc2NyaXB0aW9uGAQgASgJEkUKBmxh",
-            "YmVscxgFIAMoCzI1Lmdvb2dsZS5tb25pdG9yaW5nLnYzLk5vdGlmaWNhdGlv",
-            "bkNoYW5uZWwuTGFiZWxzRW50cnkSTgoLdXNlcl9sYWJlbHMYCCADKAsyOS5n",
-            "b29nbGUubW9uaXRvcmluZy52My5Ob3RpZmljYXRpb25DaGFubmVsLlVzZXJM",
-            "YWJlbHNFbnRyeRJZChN2ZXJpZmljYXRpb25fc3RhdHVzGAkgASgOMjwuZ29v",
-            "Z2xlLm1vbml0b3JpbmcudjMuTm90aWZpY2F0aW9uQ2hhbm5lbC5WZXJpZmlj",
-            "YXRpb25TdGF0dXMSKwoHZW5hYmxlZBgLIAEoCzIaLmdvb2dsZS5wcm90b2J1",
-            "Zi5Cb29sVmFsdWUaLQoLTGFiZWxzRW50cnkSCwoDa2V5GAEgASgJEg0KBXZh",
-            "bHVlGAIgASgJOgI4ARoxCg9Vc2VyTGFiZWxzRW50cnkSCwoDa2V5GAEgASgJ",
-            "Eg0KBXZhbHVlGAIgASgJOgI4ASJXChJWZXJpZmljYXRpb25TdGF0dXMSIwof",
-            "VkVSSUZJQ0FUSU9OX1NUQVRVU19VTlNQRUNJRklFRBAAEg4KClVOVkVSSUZJ",
-            "RUQQARIMCghWRVJJRklFRBACQqkBChhjb20uZ29vZ2xlLm1vbml0b3Jpbmcu",
-            "djNCEU5vdGlmaWNhdGlvblByb3RvUAFaPmdvb2dsZS5nb2xhbmcub3JnL2dl",
-            "bnByb3RvL2dvb2dsZWFwaXMvbW9uaXRvcmluZy92Mzttb25pdG9yaW5nqgIa",
-            "R29vZ2xlLkNsb3VkLk1vbml0b3JpbmcuVjPKAhpHb29nbGVcQ2xvdWRcTW9u",
-            "aXRvcmluZ1xWM2IGcHJvdG8z"));
+            "YXBpLkxhYmVsRGVzY3JpcHRvchI+Cg9zdXBwb3J0ZWRfdGllcnMYBSADKA4y",
+            "IS5nb29nbGUubW9uaXRvcmluZy52My5TZXJ2aWNlVGllckICGAEitgQKE05v",
+            "dGlmaWNhdGlvbkNoYW5uZWwSDAoEdHlwZRgBIAEoCRIMCgRuYW1lGAYgASgJ",
+            "EhQKDGRpc3BsYXlfbmFtZRgDIAEoCRITCgtkZXNjcmlwdGlvbhgEIAEoCRJF",
+            "CgZsYWJlbHMYBSADKAsyNS5nb29nbGUubW9uaXRvcmluZy52My5Ob3RpZmlj",
+            "YXRpb25DaGFubmVsLkxhYmVsc0VudHJ5Ek4KC3VzZXJfbGFiZWxzGAggAygL",
+            "MjkuZ29vZ2xlLm1vbml0b3JpbmcudjMuTm90aWZpY2F0aW9uQ2hhbm5lbC5V",
+            "c2VyTGFiZWxzRW50cnkSWQoTdmVyaWZpY2F0aW9uX3N0YXR1cxgJIAEoDjI8",
+            "Lmdvb2dsZS5tb25pdG9yaW5nLnYzLk5vdGlmaWNhdGlvbkNoYW5uZWwuVmVy",
+            "aWZpY2F0aW9uU3RhdHVzEisKB2VuYWJsZWQYCyABKAsyGi5nb29nbGUucHJv",
+            "dG9idWYuQm9vbFZhbHVlGi0KC0xhYmVsc0VudHJ5EgsKA2tleRgBIAEoCRIN",
+            "CgV2YWx1ZRgCIAEoCToCOAEaMQoPVXNlckxhYmVsc0VudHJ5EgsKA2tleRgB",
+            "IAEoCRINCgV2YWx1ZRgCIAEoCToCOAEiVwoSVmVyaWZpY2F0aW9uU3RhdHVz",
+            "EiMKH1ZFUklGSUNBVElPTl9TVEFUVVNfVU5TUEVDSUZJRUQQABIOCgpVTlZF",
+            "UklGSUVEEAESDAoIVkVSSUZJRUQQAkKpAQoYY29tLmdvb2dsZS5tb25pdG9y",
+            "aW5nLnYzQhFOb3RpZmljYXRpb25Qcm90b1ABWj5nb29nbGUuZ29sYW5nLm9y",
+            "Zy9nZW5wcm90by9nb29nbGVhcGlzL21vbml0b3JpbmcvdjM7bW9uaXRvcmlu",
+            "Z6oCGkdvb2dsZS5DbG91ZC5Nb25pdG9yaW5nLlYzygIaR29vZ2xlXENsb3Vk",
+            "XE1vbml0b3JpbmdcVjNiBnByb3RvMw=="));
       descriptor = pbr::FileDescriptor.FromGeneratedCode(descriptorData,
           new pbr::FileDescriptor[] { global::Google.Api.AnnotationsReflection.Descriptor, global::Google.Api.LabelReflection.Descriptor, global::Google.Cloud.Monitoring.V3.CommonReflection.Descriptor, global::Google.Protobuf.WellKnownTypes.WrappersReflection.Descriptor, },
           new pbr::GeneratedClrTypeInfo(null, new pbr::GeneratedClrTypeInfo[] {
@@ -193,6 +193,7 @@ namespace Google.Cloud.Monitoring.V3 {
     /// The tiers that support this notification channel; the project service tier
     /// must be one of the supported_tiers.
     /// </summary>
+    [global::System.ObsoleteAttribute]
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     public pbc::RepeatedField<global::Google.Cloud.Monitoring.V3.ServiceTier> SupportedTiers {
       get { return supportedTiers_; }

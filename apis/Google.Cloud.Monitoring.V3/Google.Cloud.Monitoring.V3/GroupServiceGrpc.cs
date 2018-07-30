@@ -3,7 +3,7 @@
 //     source: google/monitoring/v3/group_service.proto
 // </auto-generated>
 // Original file comments:
-// Copyright 2016 Google Inc.
+// Copyright 2018 Google LLC
 //
 // Licensed under the Apache License, Version 2.0 (the "License");
 // you may not use this file except in compliance with the License.
@@ -25,7 +25,7 @@ using grpc = global::Grpc.Core;
 namespace Google.Cloud.Monitoring.V3 {
   /// <summary>
   /// The Group API lets you inspect and manage your
-  /// [groups](google.monitoring.v3.Group).
+  /// [groups](#google.monitoring.v3.Group).
   ///
   /// A group is a named filter that is used to identify
   /// a collection of monitored resources. Groups are typically used to
