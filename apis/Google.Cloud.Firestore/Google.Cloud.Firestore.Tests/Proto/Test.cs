@@ -746,7 +746,7 @@ namespace Google.Cloud.Firestore.Tests.Proto {
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     public GetTest(GetTest other) : this() {
       docRefPath_ = other.docRefPath_;
-      Request = other.request_ != null ? other.Request.Clone() : null;
+      request_ = other.request_ != null ? other.request_.Clone() : null;
       _unknownFields = pb::UnknownFieldSet.Clone(other._unknownFields);
     }
 
@@ -919,7 +919,7 @@ namespace Google.Cloud.Firestore.Tests.Proto {
     public CreateTest(CreateTest other) : this() {
       docRefPath_ = other.docRefPath_;
       jsonData_ = other.jsonData_;
-      Request = other.request_ != null ? other.Request.Clone() : null;
+      request_ = other.request_ != null ? other.request_.Clone() : null;
       isError_ = other.isError_;
       _unknownFields = pb::UnknownFieldSet.Clone(other._unknownFields);
     }
@@ -1155,9 +1155,9 @@ namespace Google.Cloud.Firestore.Tests.Proto {
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     public SetTest(SetTest other) : this() {
       docRefPath_ = other.docRefPath_;
-      Option = other.option_ != null ? other.Option.Clone() : null;
+      option_ = other.option_ != null ? other.option_.Clone() : null;
       jsonData_ = other.jsonData_;
-      Request = other.request_ != null ? other.Request.Clone() : null;
+      request_ = other.request_ != null ? other.request_.Clone() : null;
       isError_ = other.isError_;
       _unknownFields = pb::UnknownFieldSet.Clone(other._unknownFields);
     }
@@ -1427,9 +1427,9 @@ namespace Google.Cloud.Firestore.Tests.Proto {
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     public UpdateTest(UpdateTest other) : this() {
       docRefPath_ = other.docRefPath_;
-      Precondition = other.precondition_ != null ? other.Precondition.Clone() : null;
+      precondition_ = other.precondition_ != null ? other.precondition_.Clone() : null;
       jsonData_ = other.jsonData_;
-      Request = other.request_ != null ? other.Request.Clone() : null;
+      request_ = other.request_ != null ? other.request_.Clone() : null;
       isError_ = other.isError_;
       _unknownFields = pb::UnknownFieldSet.Clone(other._unknownFields);
     }
@@ -1699,10 +1699,10 @@ namespace Google.Cloud.Firestore.Tests.Proto {
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     public UpdatePathsTest(UpdatePathsTest other) : this() {
       docRefPath_ = other.docRefPath_;
-      Precondition = other.precondition_ != null ? other.Precondition.Clone() : null;
+      precondition_ = other.precondition_ != null ? other.precondition_.Clone() : null;
       fieldPaths_ = other.fieldPaths_.Clone();
       jsonValues_ = other.jsonValues_.Clone();
-      Request = other.request_ != null ? other.Request.Clone() : null;
+      request_ = other.request_ != null ? other.request_.Clone() : null;
       isError_ = other.isError_;
       _unknownFields = pb::UnknownFieldSet.Clone(other._unknownFields);
     }
@@ -1985,8 +1985,8 @@ namespace Google.Cloud.Firestore.Tests.Proto {
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     public DeleteTest(DeleteTest other) : this() {
       docRefPath_ = other.docRefPath_;
-      Precondition = other.precondition_ != null ? other.Precondition.Clone() : null;
-      Request = other.request_ != null ? other.Request.Clone() : null;
+      precondition_ = other.precondition_ != null ? other.precondition_.Clone() : null;
+      request_ = other.request_ != null ? other.request_.Clone() : null;
       isError_ = other.isError_;
       _unknownFields = pb::UnknownFieldSet.Clone(other._unknownFields);
     }
@@ -2378,7 +2378,7 @@ namespace Google.Cloud.Firestore.Tests.Proto {
     public QueryTest(QueryTest other) : this() {
       collPath_ = other.collPath_;
       clauses_ = other.clauses_.Clone();
-      Query = other.query_ != null ? other.Query.Clone() : null;
+      query_ = other.query_ != null ? other.query_.Clone() : null;
       isError_ = other.isError_;
       _unknownFields = pb::UnknownFieldSet.Clone(other._unknownFields);
     }
@@ -3172,7 +3172,7 @@ namespace Google.Cloud.Firestore.Tests.Proto {
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     public Where(Where other) : this() {
-      Path = other.path_ != null ? other.Path.Clone() : null;
+      path_ = other.path_ != null ? other.path_.Clone() : null;
       op_ = other.op_;
       jsonValue_ = other.jsonValue_;
       _unknownFields = pb::UnknownFieldSet.Clone(other._unknownFields);
@@ -3363,7 +3363,7 @@ namespace Google.Cloud.Firestore.Tests.Proto {
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     public OrderBy(OrderBy other) : this() {
-      Path = other.path_ != null ? other.Path.Clone() : null;
+      path_ = other.path_ != null ? other.path_.Clone() : null;
       direction_ = other.direction_;
       _unknownFields = pb::UnknownFieldSet.Clone(other._unknownFields);
     }
@@ -3529,7 +3529,7 @@ namespace Google.Cloud.Firestore.Tests.Proto {
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     public Cursor(Cursor other) : this() {
-      DocSnapshot = other.docSnapshot_ != null ? other.DocSnapshot.Clone() : null;
+      docSnapshot_ = other.docSnapshot_ != null ? other.docSnapshot_.Clone() : null;
       jsonValues_ = other.jsonValues_.Clone();
       _unknownFields = pb::UnknownFieldSet.Clone(other._unknownFields);
     }
@@ -4149,7 +4149,7 @@ namespace Google.Cloud.Firestore.Tests.Proto {
     public Snapshot(Snapshot other) : this() {
       docs_ = other.docs_.Clone();
       changes_ = other.changes_.Clone();
-      ReadTime = other.readTime_ != null ? other.ReadTime.Clone() : null;
+      readTime_ = other.readTime_ != null ? other.readTime_.Clone() : null;
       _unknownFields = pb::UnknownFieldSet.Clone(other._unknownFields);
     }
 
@@ -4323,7 +4323,7 @@ namespace Google.Cloud.Firestore.Tests.Proto {
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     public DocChange(DocChange other) : this() {
       kind_ = other.kind_;
-      Doc = other.doc_ != null ? other.Doc.Clone() : null;
+      doc_ = other.doc_ != null ? other.doc_.Clone() : null;
       oldIndex_ = other.oldIndex_;
       newIndex_ = other.newIndex_;
       _unknownFields = pb::UnknownFieldSet.Clone(other._unknownFields);
