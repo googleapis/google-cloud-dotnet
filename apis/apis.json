@@ -447,7 +447,8 @@
     "tags": [ "Monitoring", "Stackdriver" ],
     "dependencies": {
       "Google.Api.Gax.Grpc": "2.4.0",
-      "Grpc.Core": "1.13.1"
+      "Grpc.Core": "1.13.1",
+      "Google.Api.CommonProtos": "1.3.0"
     }
   },
 
