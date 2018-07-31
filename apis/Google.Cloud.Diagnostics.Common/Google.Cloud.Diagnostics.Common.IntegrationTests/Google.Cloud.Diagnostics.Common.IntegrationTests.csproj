@@ -26,5 +26,6 @@
   </ItemGroup>
   <ItemGroup>
     <ProjectReference Include="../../Google.Cloud.Diagnostics.Common/Google.Cloud.Diagnostics.Common.Tests/Google.Cloud.Diagnostics.Common.Tests.csproj" />
+    <PackageReference Include="Google.Cloud.Spanner.Admin.Instance.V1" Version="2.0.0-beta02" />
   </ItemGroup>
 </Project>
