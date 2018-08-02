@@ -84,7 +84,7 @@ namespace Google.Cloud.Diagnostics.AspNet.Snippets
 
             var errorEvent = s_polling.GetEvents(_startTime, _testId, 1).Single();
             ErrorEventEntryVerifiers.VerifyFullErrorEventLogged(
-                errorEvent, _testId, "DoSomething", s_expectedStatusCode);
+                errorEvent, _testId, nameof(HomeController.CatchesAndLogsExceptions), s_expectedStatusCode);
         }
 
         public void Dispose()
