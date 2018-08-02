@@ -516,7 +516,7 @@ namespace Google.Cloud.Logging.Log4Net.Tests
   },
   'instance': {
     'id': 'FakeInstanceId',
-    'zone': 'FakeZone'
+    'zone': 'projects/12345/zones/FakeZone'
   }
 }
 ";
