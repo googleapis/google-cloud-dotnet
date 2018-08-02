@@ -24,6 +24,7 @@ using Microsoft.Extensions.DependencyInjection;
 using System;
 using System.Collections.Generic;
 using System.Linq;
+using System.Net.Http;
 using System.Threading;
 using System.Threading.Tasks;
 using Xunit;
@@ -146,6 +147,75 @@ namespace Google.Cloud.Diagnostics.AspNetCore.IntegrationTests
                 Assert.Equal(spanId, headerContext.SpanId);
                 Assert.True(headerContext.ShouldTrace);
             }
+        }
+
+        [Fact]
+        public async Task Trace_MultipleHeaderPropagation()
+        {
+            var createFirstSpanUri = $"/Propagation/{nameof(PropagationController.CreateFirstSpan)}/{_testId}";
+            var createFirstSpanSpanName = EntryData.GetMessage(nameof(PropagationController.CreateFirstSpan), _testId);
+
+            var createSecondSpanUri = $"/Propagation/{nameof(PropagationController.CreatesSecondSpan)}/{_testId}";
+            var createSecondSpanSpanName = EntryData.GetMessage(nameof(PropagationController.CreatesSecondSpan), _testId);
+
+            var createNoSpanUri = $"/Propagation/{nameof(PropagationController.CreateNoSpan)}/{_testId}";
+            var createNoSpanLabels = new Dictionary<string, string>
+            {
+                {"Message", EntryData.GetMessage(nameof(PropagationController.CreateNoSpan), _testId) }
+            };
+
+            // The clientSideServer is the server to which this method, i.e. the client, will post the request, which in turn will generate other requests to other servers.
+            using (var clientSideServer = new TestServer(new WebHostBuilder().UseStartup<TraceTestNoBufferHighQpsApplication>()))
+            // The firstCallServer is the server used from within the first request to make subsequent requests.
+            using (var firstCallServer = new TestServer(new WebHostBuilder().UseStartup<TraceTestNoBufferHighQpsApplication>()))
+            // The secondCallServer is the server used from within the second request to make subsequent requests.
+            using (var secondCallServer = new TestServer(new WebHostBuilder().UseStartup<TraceTestNoBufferHighQpsApplication>()))
+            using (var client = clientSideServer.CreateClient())
+            {
+                // Set the servers on the Controller so it can generate the subsequent requests.
+                // This is needed beacuse we are not making requests against published services but
+                // to services that are only available through the test servers.
+                // Whoever makes requests to those services (as PropagationController does) needs to do so 
+                // through an HttpClient generated from the test server.
+                PropagationController.FirstCallServer = firstCallServer;
+                PropagationController.SecondCallServer = secondCallServer;
+
+                // This request will in turn make other requests, always propagating a trace handler.
+                // This request first creates a span, and within that span:
+                // 1. Makes a request to a method that does not create a new span but annotates the existing span
+                // which is there because of the propagating header.
+                // 2. Makes a request that creates a second span and within that span calls the same method in 1.
+                var response = await client.GetAsync(createFirstSpanUri);
+
+                // Cleanup
+                PropagationController.FirstCallServer = null;
+                PropagationController.SecondCallServer = null;
+            }
+
+            var trace = _polling.GetTrace(createFirstSpanUri, _startTime);
+
+            // The structure of the spans on the trace should be
+            // + span with name createFirstSpanUri (automatically created)
+            // ---+ span with name createFirstSpanSpanName (explicitly created in CreateFirstSpan)
+            // -------- span with name createNoSpanUri (automatically created because of the trace header and explicitly annotated)
+            // -------+ span with name createSecondSpanUri (automatically created because of the trace header)
+            // -----------+ span with name createSecondSpanSpanName (explicitly created in CreateSecondSpan)
+            // ---------------- span with name createNoSpanUri (automatically created because of the trace header and explicitly annotated)
+
+            Assert.NotNull(trace);
+
+            var automaticFirst = trace.Spans.Single(s => s.Name == createFirstSpanUri);
+
+            var manualFirst = trace.Spans.Single(s => s.Name == createFirstSpanSpanName && s.ParentSpanId == automaticFirst.SpanId);
+
+            var automaticNoSpanInFirst = trace.Spans.Single(s => s.Name == createNoSpanUri && s.ParentSpanId == manualFirst.SpanId);
+            TraceEntryVerifiers.AssertSpanLabelsContains(automaticNoSpanInFirst, createNoSpanLabels);
+            var automaticSecond = trace.Spans.Single(s => s.Name == createSecondSpanUri && s.ParentSpanId == manualFirst.SpanId);
+
+            var manualSecond = trace.Spans.Single(s => s.Name == createSecondSpanSpanName && s.ParentSpanId == automaticSecond.SpanId);
+
+            var automaticNoSpanInSecond = trace.Spans.Single(s => s.Name == createNoSpanUri && s.ParentSpanId == manualSecond.SpanId);
+            TraceEntryVerifiers.AssertSpanLabelsContains(automaticNoSpanInSecond, createNoSpanLabels);
         }
 
         [Fact]
@@ -378,6 +448,68 @@ namespace Google.Cloud.Diagnostics.AspNetCore.IntegrationTests
                 Thread.Sleep(10);
                 throw new DivideByZeroException();
             }
+        }
+    }
+
+    public class PropagationController : Controller
+    {
+        public static TestServer FirstCallServer;
+        public static TestServer SecondCallServer;
+
+        private IManagedTracer _tracer;
+        private TraceHeaderPropagatingHandler _propagatingHandler;
+
+        public PropagationController([FromServices] IManagedTracer tracer, [FromServices] TraceHeaderPropagatingHandler propagatingHandler)
+        {
+            _tracer = tracer;
+            _propagatingHandler = propagatingHandler;
+        }
+
+        public async Task<string> CreateFirstSpan(string id)
+        {
+            string createNoSpanUri = $"/Propagation/{nameof(CreateNoSpan)}/{id}";
+            string createSecondSpanUri = $"/Propagation/{nameof(CreatesSecondSpan)}/{id}";
+            string message = EntryData.GetMessage(nameof(CreateFirstSpan), id);
+
+            // This will guarantee that our requests are to the first server instead
+            // of to a published app in localhost.
+            using (_propagatingHandler.InnerHandler = FirstCallServer.CreateHandler())
+            using (var client = new HttpClient(_propagatingHandler, false))
+            using (_tracer.StartSpan(message))
+            {
+                client.BaseAddress = new Uri("http://localhost");
+                await client.GetAsync(createNoSpanUri);
+                await client.GetAsync(createSecondSpanUri);
+            }
+            return message;
+        }
+
+        public async Task<string> CreatesSecondSpan(string id)
+        {
+            string uri = $"/Propagation/{nameof(CreateNoSpan)}/{id}";
+            string message = EntryData.GetMessage(nameof(CreatesSecondSpan), id);
+
+            // This will guarantee that our request is to the second server instead
+            // of to a published app in localhost.
+            using (_propagatingHandler.InnerHandler = SecondCallServer.CreateHandler())
+            using (var client = new HttpClient(_propagatingHandler, false))
+            using (_tracer.StartSpan(message))
+            {
+                client.BaseAddress = new Uri("http://localhost");
+                await client.GetAsync(uri);
+            }
+            return message;
+        }
+
+        public string CreateNoSpan(string id)
+        {
+            string message = EntryData.GetMessage(nameof(CreateNoSpan), id);
+            _tracer.AnnotateSpan(
+                new Dictionary<string, string>
+                {
+                    { "Message", message }
+                });
+            return message;
         }
     }
 }
