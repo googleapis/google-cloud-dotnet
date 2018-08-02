@@ -65,9 +65,11 @@ fi
 
 ./build.sh $projects
 
+# Retry integration tests up to 3 times as they can sometimes
+# be a little flakey.
 if [[ "$run_tests" = true ]]
 then
-  ./runintegrationtests.sh $projects
+  ./runintegrationtests.sh $projects || ./runintegrationtests.sh --retry || ./runintegrationtests.sh --retry
 fi
 
 if [[ "$rebuild_docs" = false ]]
