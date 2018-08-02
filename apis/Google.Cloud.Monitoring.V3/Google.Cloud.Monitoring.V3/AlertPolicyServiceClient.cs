@@ -410,6 +410,11 @@ namespace Google.Cloud.Monitoring.V3
         public static AlertPolicyServiceClient Create(grpccore::CallInvoker callInvoker, AlertPolicyServiceSettings settings = null)
         {
             gax::GaxPreconditions.CheckNotNull(callInvoker, nameof(callInvoker));
+            grpccore::Interceptors.Interceptor interceptor = settings?.Interceptor;
+            if (interceptor != null)
+            {
+                callInvoker = grpccore::Interceptors.CallInvokerExtensions.Intercept(callInvoker, interceptor);
+            }
             AlertPolicyService.AlertPolicyServiceClient grpcClient = new AlertPolicyService.AlertPolicyServiceClient(callInvoker);
             return new AlertPolicyServiceClientImpl(grpcClient, settings);
         }

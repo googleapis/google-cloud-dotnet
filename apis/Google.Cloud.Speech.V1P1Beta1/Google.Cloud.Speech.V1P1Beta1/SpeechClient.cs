@@ -356,6 +356,11 @@ namespace Google.Cloud.Speech.V1P1Beta1
         public static SpeechClient Create(grpccore::CallInvoker callInvoker, SpeechSettings settings = null)
         {
             gax::GaxPreconditions.CheckNotNull(callInvoker, nameof(callInvoker));
+            grpccore::Interceptors.Interceptor interceptor = settings?.Interceptor;
+            if (interceptor != null)
+            {
+                callInvoker = grpccore::Interceptors.CallInvokerExtensions.Intercept(callInvoker, interceptor);
+            }
             Speech.SpeechClient grpcClient = new Speech.SpeechClient(callInvoker);
             return new SpeechClientImpl(grpcClient, settings);
         }

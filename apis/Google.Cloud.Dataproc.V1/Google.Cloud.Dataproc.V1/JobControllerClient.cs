@@ -434,6 +434,11 @@ namespace Google.Cloud.Dataproc.V1
         public static JobControllerClient Create(grpccore::CallInvoker callInvoker, JobControllerSettings settings = null)
         {
             gax::GaxPreconditions.CheckNotNull(callInvoker, nameof(callInvoker));
+            grpccore::Interceptors.Interceptor interceptor = settings?.Interceptor;
+            if (interceptor != null)
+            {
+                callInvoker = grpccore::Interceptors.CallInvokerExtensions.Intercept(callInvoker, interceptor);
+            }
             JobController.JobControllerClient grpcClient = new JobController.JobControllerClient(callInvoker);
             return new JobControllerClientImpl(grpcClient, settings);
         }

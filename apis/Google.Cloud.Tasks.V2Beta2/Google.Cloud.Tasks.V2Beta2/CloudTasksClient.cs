@@ -860,6 +860,11 @@ namespace Google.Cloud.Tasks.V2Beta2
         public static CloudTasksClient Create(grpccore::CallInvoker callInvoker, CloudTasksSettings settings = null)
         {
             gax::GaxPreconditions.CheckNotNull(callInvoker, nameof(callInvoker));
+            grpccore::Interceptors.Interceptor interceptor = settings?.Interceptor;
+            if (interceptor != null)
+            {
+                callInvoker = grpccore::Interceptors.CallInvokerExtensions.Intercept(callInvoker, interceptor);
+            }
             CloudTasks.CloudTasksClient grpcClient = new CloudTasks.CloudTasksClient(callInvoker);
             return new CloudTasksClientImpl(grpcClient, settings);
         }

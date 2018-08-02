@@ -444,6 +444,11 @@ namespace Google.Cloud.OsLogin.V1
         public static OsLoginServiceClient Create(grpccore::CallInvoker callInvoker, OsLoginServiceSettings settings = null)
         {
             gax::GaxPreconditions.CheckNotNull(callInvoker, nameof(callInvoker));
+            grpccore::Interceptors.Interceptor interceptor = settings?.Interceptor;
+            if (interceptor != null)
+            {
+                callInvoker = grpccore::Interceptors.CallInvokerExtensions.Intercept(callInvoker, interceptor);
+            }
             OsLoginService.OsLoginServiceClient grpcClient = new OsLoginService.OsLoginServiceClient(callInvoker);
             return new OsLoginServiceClientImpl(grpcClient, settings);
         }

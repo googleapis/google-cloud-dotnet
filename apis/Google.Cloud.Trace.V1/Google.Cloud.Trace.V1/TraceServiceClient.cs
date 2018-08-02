@@ -348,6 +348,11 @@ namespace Google.Cloud.Trace.V1
         public static TraceServiceClient Create(grpccore::CallInvoker callInvoker, TraceServiceSettings settings = null)
         {
             gax::GaxPreconditions.CheckNotNull(callInvoker, nameof(callInvoker));
+            grpccore::Interceptors.Interceptor interceptor = settings?.Interceptor;
+            if (interceptor != null)
+            {
+                callInvoker = grpccore::Interceptors.CallInvokerExtensions.Intercept(callInvoker, interceptor);
+            }
             TraceService.TraceServiceClient grpcClient = new TraceService.TraceServiceClient(callInvoker);
             return new TraceServiceClientImpl(grpcClient, settings);
         }

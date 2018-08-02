@@ -313,6 +313,11 @@ namespace Google.Cloud.TextToSpeech.V1
         public static TextToSpeechClient Create(grpccore::CallInvoker callInvoker, TextToSpeechSettings settings = null)
         {
             gax::GaxPreconditions.CheckNotNull(callInvoker, nameof(callInvoker));
+            grpccore::Interceptors.Interceptor interceptor = settings?.Interceptor;
+            if (interceptor != null)
+            {
+                callInvoker = grpccore::Interceptors.CallInvokerExtensions.Intercept(callInvoker, interceptor);
+            }
             TextToSpeech.TextToSpeechClient grpcClient = new TextToSpeech.TextToSpeechClient(callInvoker);
             return new TextToSpeechClientImpl(grpcClient, settings);
         }

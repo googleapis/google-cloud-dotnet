@@ -510,6 +510,11 @@ namespace Google.Cloud.Dialogflow.V2
         public static IntentsClient Create(grpccore::CallInvoker callInvoker, IntentsSettings settings = null)
         {
             gax::GaxPreconditions.CheckNotNull(callInvoker, nameof(callInvoker));
+            grpccore::Interceptors.Interceptor interceptor = settings?.Interceptor;
+            if (interceptor != null)
+            {
+                callInvoker = grpccore::Interceptors.CallInvokerExtensions.Intercept(callInvoker, interceptor);
+            }
             Intents.IntentsClient grpcClient = new Intents.IntentsClient(callInvoker);
             return new IntentsClientImpl(grpcClient, settings);
         }

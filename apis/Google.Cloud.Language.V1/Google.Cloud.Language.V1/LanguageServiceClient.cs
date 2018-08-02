@@ -437,6 +437,11 @@ namespace Google.Cloud.Language.V1
         public static LanguageServiceClient Create(grpccore::CallInvoker callInvoker, LanguageServiceSettings settings = null)
         {
             gax::GaxPreconditions.CheckNotNull(callInvoker, nameof(callInvoker));
+            grpccore::Interceptors.Interceptor interceptor = settings?.Interceptor;
+            if (interceptor != null)
+            {
+                callInvoker = grpccore::Interceptors.CallInvokerExtensions.Intercept(callInvoker, interceptor);
+            }
             LanguageService.LanguageServiceClient grpcClient = new LanguageService.LanguageServiceClient(callInvoker);
             return new LanguageServiceClientImpl(grpcClient, settings);
         }

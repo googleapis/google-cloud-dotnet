@@ -504,6 +504,11 @@ namespace Google.Cloud.Monitoring.V3
         public static MetricServiceClient Create(grpccore::CallInvoker callInvoker, MetricServiceSettings settings = null)
         {
             gax::GaxPreconditions.CheckNotNull(callInvoker, nameof(callInvoker));
+            grpccore::Interceptors.Interceptor interceptor = settings?.Interceptor;
+            if (interceptor != null)
+            {
+                callInvoker = grpccore::Interceptors.CallInvokerExtensions.Intercept(callInvoker, interceptor);
+            }
             MetricService.MetricServiceClient grpcClient = new MetricService.MetricServiceClient(callInvoker);
             return new MetricServiceClientImpl(grpcClient, settings);
         }

@@ -441,6 +441,11 @@ namespace Google.Cloud.Monitoring.V3
         public static UptimeCheckServiceClient Create(grpccore::CallInvoker callInvoker, UptimeCheckServiceSettings settings = null)
         {
             gax::GaxPreconditions.CheckNotNull(callInvoker, nameof(callInvoker));
+            grpccore::Interceptors.Interceptor interceptor = settings?.Interceptor;
+            if (interceptor != null)
+            {
+                callInvoker = grpccore::Interceptors.CallInvokerExtensions.Intercept(callInvoker, interceptor);
+            }
             UptimeCheckService.UptimeCheckServiceClient grpcClient = new UptimeCheckService.UptimeCheckServiceClient(callInvoker);
             return new UptimeCheckServiceClientImpl(grpcClient, settings);
         }

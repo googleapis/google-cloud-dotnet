@@ -443,6 +443,11 @@ namespace Google.Cloud.Monitoring.V3
         public static GroupServiceClient Create(grpccore::CallInvoker callInvoker, GroupServiceSettings settings = null)
         {
             gax::GaxPreconditions.CheckNotNull(callInvoker, nameof(callInvoker));
+            grpccore::Interceptors.Interceptor interceptor = settings?.Interceptor;
+            if (interceptor != null)
+            {
+                callInvoker = grpccore::Interceptors.CallInvokerExtensions.Intercept(callInvoker, interceptor);
+            }
             GroupService.GroupServiceClient grpcClient = new GroupService.GroupServiceClient(callInvoker);
             return new GroupServiceClientImpl(grpcClient, settings);
         }

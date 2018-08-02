@@ -790,6 +790,11 @@ namespace Google.Cloud.Bigtable.Admin.V2
         public static BigtableTableAdminClient Create(grpccore::CallInvoker callInvoker, BigtableTableAdminSettings settings = null)
         {
             gax::GaxPreconditions.CheckNotNull(callInvoker, nameof(callInvoker));
+            grpccore::Interceptors.Interceptor interceptor = settings?.Interceptor;
+            if (interceptor != null)
+            {
+                callInvoker = grpccore::Interceptors.CallInvokerExtensions.Intercept(callInvoker, interceptor);
+            }
             BigtableTableAdmin.BigtableTableAdminClient grpcClient = new BigtableTableAdmin.BigtableTableAdminClient(callInvoker);
             return new BigtableTableAdminClientImpl(grpcClient, settings);
         }
