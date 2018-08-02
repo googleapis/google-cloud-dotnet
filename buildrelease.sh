@@ -69,9 +69,7 @@ fi
 # be a little flakey.
 if [[ "$run_tests" = true ]]
 then
-  ./runintegrationtests.sh $projects || true
-  ./runintegrationtests.sh --retry || true
-  ./runintegrationtests.sh --retry
+  ./runintegrationtests.sh $projects || ./runintegrationtests.sh --retry || ./runintegrationtests.sh --retry
 fi
 
 if [[ "$rebuild_docs" = false ]]
