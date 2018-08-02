@@ -89,7 +89,7 @@ namespace Google.Cloud.BigQuery.V2.Snippets
         private string CreateHistoryRow(string player, int score, int level, string gameStartedIso) =>
             $"{player},{score},{level},{gameStartedIso}";
 
-        internal string GenerateDatasetId() => IdGenerator.FromGuid(prefix: DatasetPrefix, separator: "_");
+        internal string GenerateDatasetId() => IdGenerator.FromDateTime(prefix: DatasetPrefix);
 
         internal string GenerateTableId() => IdGenerator.FromGuid(separator: "_");
 
