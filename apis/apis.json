@@ -25,7 +25,7 @@
     "id": "Google.Cloud.BigQuery.DataTransfer.V1",
     "productName": "Google BigQuery Data Transfer",
     "productUrl": "https://cloud.google.com/bigquery/transfer/",
-    "version": "1.0.0-beta03",
+    "version": "1.0.0-beta04",
     "type": "grpc",
     "description": "Recommended Google client library to access the BigQuery Data Transfer API, which transfers data from partner SaaS applications to Google BigQuery on a scheduled, managed basis.",
     "tags": [ "BigQuery", "DataTransfer" ]
@@ -52,7 +52,7 @@
     "id": "Google.Cloud.Bigtable.Admin.V2",
     "productName": "Google Cloud Bigtable Administration",
     "productUrl": "https://cloud.google.com/bigtable/",
-    "version": "1.0.0-beta01",
+    "version": "1.0.0-beta02",
     "type": "grpc",
     "description": "Recommended Google client library to access the Google Cloud Bigtable Instance and Table Admin APIs.",
     "tags": [ "Bigtable" ],
@@ -70,7 +70,7 @@
     "id": "Google.Cloud.Bigtable.Common.V2",
     "type": "other",
     "targetFrameworks": "netstandard1.5;net45",
-    "version": "1.0.0-beta01",
+    "version": "1.0.0-beta02",
     "description": "Common code used by Bigtable V2 APIs",
     "tags": [ "Bigtable" ],
     "dependencies": {
@@ -83,7 +83,7 @@
     "id": "Google.Cloud.Bigtable.V2",
     "productName": "Google Bigtable",
     "productUrl": "https://cloud.google.com/bigtable/",
-    "version": "1.0.0-beta01",
+    "version": "1.0.0-beta02",
     "type": "grpc",
     "description": "Recommended Google client library to access the Google Cloud Bigtable API.",
     "tags": [ "Bigtable" ],
@@ -100,7 +100,7 @@
     "id": "Google.Cloud.Container.V1",
     "productName": "Google Kubernetes Engine API",
     "productUrl": "https://cloud.google.com/kubernetes-engine/docs/reference/rest/",
-    "version": "1.0.0-beta01",
+    "version": "1.0.0-beta02",
     "type": "grpc",
     "description": "Recommended Google client library to access the Google Kubernetes Engine API, used for building and managing container based applications, powered by the open source Kubernetes technology.",
     "tags": [ "Kubernetes" ],
@@ -113,7 +113,7 @@
     "id": "Google.Cloud.Dataproc.V1",
     "productName": "Google Cloud Dataproc",
     "productUrl": "https://cloud.google.com/dataproc/docs/concepts/overview",
-    "version": "1.0.0-beta01",
+    "version": "1.0.0-beta02",
     "type": "grpc",
     "description": "Recommended Google client library to access the Google Cloud Dataproc API, which manages Hadoop-based clusters and jobs on Google Cloud Platform.",
     "tags": [ "Dataproc", "Hadoop" ],
@@ -126,7 +126,7 @@
     "id": "Google.Cloud.Datastore.V1",
     "productName": "Google Cloud Datastore",
     "productUrl": "https://cloud.google.com/datastore/docs/concepts/overview",
-    "version": "2.2.0-beta00",
+    "version": "2.2.0-beta01",
     "type": "grpc",
     "description": "Recommended Google client library to access the Google Cloud Datastore API, which accesses the schemaless NoSQL database to provide fully managed, robust, scalable storage for your application.",
     "tags": [ "Datastore" ],
@@ -143,7 +143,7 @@
     "id": "Google.Cloud.Debugger.V2",
     "productName": "Stackdriver Debugger",
     "productUrl": "https://cloud.google.com/debugger/",
-    "version": "1.0.0-beta02",
+    "version": "1.0.0-beta03",
     "type": "grpc",
     "description": "Recommended Google client library to access the Google Cloud Debugger API.",
     "tags": [ "Debug", "Debugger", "Debugging", "Stackdriver"],
@@ -170,7 +170,7 @@
 
   {
     "id": "Google.Cloud.Diagnostics.AspNet",
-    "version": "3.0.0-beta06",
+    "version": "3.0.0-beta07",
     "type": "other",
     "targetFrameworks": "net45",
     "testTargetFrameworks": "net452",
@@ -192,7 +192,7 @@
 
   {
     "id": "Google.Cloud.Diagnostics.AspNetCore",
-    "version": "3.0.0-beta06",
+    "version": "3.0.0-beta07",
     "type": "other",
     "targetFrameworks": "netstandard2.0;netstandard1.5;net46",
     "testTargetFrameworks": "netcoreapp1.0;netcoreapp2.0;net46",
@@ -230,7 +230,7 @@
 
   {
     "id": "Google.Cloud.Diagnostics.Common",
-    "version": "3.0.0-beta06",
+    "version": "3.0.0-beta07",
     "type": "other",
     "targetFrameworks": "netstandard2.0;netstandard1.5;net45",
     "testTargetFrameworks": "netcoreapp2.0;netcoreapp1.0;net452",
