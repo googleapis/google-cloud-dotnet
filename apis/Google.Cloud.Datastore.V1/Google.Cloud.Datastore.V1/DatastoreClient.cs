@@ -466,6 +466,11 @@ namespace Google.Cloud.Datastore.V1
         public static DatastoreClient Create(grpccore::CallInvoker callInvoker, DatastoreSettings settings = null)
         {
             gax::GaxPreconditions.CheckNotNull(callInvoker, nameof(callInvoker));
+            grpccore::Interceptors.Interceptor interceptor = settings?.Interceptor;
+            if (interceptor != null)
+            {
+                callInvoker = grpccore::Interceptors.CallInvokerExtensions.Intercept(callInvoker, interceptor);
+            }
             Datastore.DatastoreClient grpcClient = new Datastore.DatastoreClient(callInvoker);
             return new DatastoreClientImpl(grpcClient, settings);
         }

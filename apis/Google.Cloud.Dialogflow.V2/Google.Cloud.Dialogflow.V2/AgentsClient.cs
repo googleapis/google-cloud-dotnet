@@ -526,6 +526,11 @@ namespace Google.Cloud.Dialogflow.V2
         public static AgentsClient Create(grpccore::CallInvoker callInvoker, AgentsSettings settings = null)
         {
             gax::GaxPreconditions.CheckNotNull(callInvoker, nameof(callInvoker));
+            grpccore::Interceptors.Interceptor interceptor = settings?.Interceptor;
+            if (interceptor != null)
+            {
+                callInvoker = grpccore::Interceptors.CallInvokerExtensions.Intercept(callInvoker, interceptor);
+            }
             Agents.AgentsClient grpcClient = new Agents.AgentsClient(callInvoker);
             return new AgentsClientImpl(grpcClient, settings);
         }

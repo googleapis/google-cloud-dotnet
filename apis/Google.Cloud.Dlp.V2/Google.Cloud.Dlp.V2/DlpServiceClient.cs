@@ -1018,6 +1018,11 @@ namespace Google.Cloud.Dlp.V2
         public static DlpServiceClient Create(grpccore::CallInvoker callInvoker, DlpServiceSettings settings = null)
         {
             gax::GaxPreconditions.CheckNotNull(callInvoker, nameof(callInvoker));
+            grpccore::Interceptors.Interceptor interceptor = settings?.Interceptor;
+            if (interceptor != null)
+            {
+                callInvoker = grpccore::Interceptors.CallInvokerExtensions.Intercept(callInvoker, interceptor);
+            }
             DlpService.DlpServiceClient grpcClient = new DlpService.DlpServiceClient(callInvoker);
             return new DlpServiceClientImpl(grpcClient, settings);
         }

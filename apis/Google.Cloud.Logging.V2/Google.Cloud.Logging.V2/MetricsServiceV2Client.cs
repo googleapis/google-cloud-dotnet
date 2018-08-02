@@ -418,6 +418,11 @@ namespace Google.Cloud.Logging.V2
         public static MetricsServiceV2Client Create(grpccore::CallInvoker callInvoker, MetricsServiceV2Settings settings = null)
         {
             gax::GaxPreconditions.CheckNotNull(callInvoker, nameof(callInvoker));
+            grpccore::Interceptors.Interceptor interceptor = settings?.Interceptor;
+            if (interceptor != null)
+            {
+                callInvoker = grpccore::Interceptors.CallInvokerExtensions.Intercept(callInvoker, interceptor);
+            }
             MetricsServiceV2.MetricsServiceV2Client grpcClient = new MetricsServiceV2.MetricsServiceV2Client(callInvoker);
             return new MetricsServiceV2ClientImpl(grpcClient, settings);
         }

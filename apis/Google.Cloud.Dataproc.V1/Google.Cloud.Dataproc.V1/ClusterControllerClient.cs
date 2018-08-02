@@ -523,6 +523,11 @@ namespace Google.Cloud.Dataproc.V1
         public static ClusterControllerClient Create(grpccore::CallInvoker callInvoker, ClusterControllerSettings settings = null)
         {
             gax::GaxPreconditions.CheckNotNull(callInvoker, nameof(callInvoker));
+            grpccore::Interceptors.Interceptor interceptor = settings?.Interceptor;
+            if (interceptor != null)
+            {
+                callInvoker = grpccore::Interceptors.CallInvokerExtensions.Intercept(callInvoker, interceptor);
+            }
             ClusterController.ClusterControllerClient grpcClient = new ClusterController.ClusterControllerClient(callInvoker);
             return new ClusterControllerClientImpl(grpcClient, settings);
         }

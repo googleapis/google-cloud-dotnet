@@ -459,6 +459,11 @@ namespace Google.Cloud.Logging.V2
         public static LoggingServiceV2Client Create(grpccore::CallInvoker callInvoker, LoggingServiceV2Settings settings = null)
         {
             gax::GaxPreconditions.CheckNotNull(callInvoker, nameof(callInvoker));
+            grpccore::Interceptors.Interceptor interceptor = settings?.Interceptor;
+            if (interceptor != null)
+            {
+                callInvoker = grpccore::Interceptors.CallInvokerExtensions.Intercept(callInvoker, interceptor);
+            }
             LoggingServiceV2.LoggingServiceV2Client grpcClient = new LoggingServiceV2.LoggingServiceV2Client(callInvoker);
             return new LoggingServiceV2ClientImpl(grpcClient, settings);
         }

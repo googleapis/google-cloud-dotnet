@@ -345,6 +345,11 @@ namespace Google.Cloud.Debugger.V2
         public static Controller2Client Create(grpccore::CallInvoker callInvoker, Controller2Settings settings = null)
         {
             gax::GaxPreconditions.CheckNotNull(callInvoker, nameof(callInvoker));
+            grpccore::Interceptors.Interceptor interceptor = settings?.Interceptor;
+            if (interceptor != null)
+            {
+                callInvoker = grpccore::Interceptors.CallInvokerExtensions.Intercept(callInvoker, interceptor);
+            }
             Controller2.Controller2Client grpcClient = new Controller2.Controller2Client(callInvoker);
             return new Controller2ClientImpl(grpcClient, settings);
         }

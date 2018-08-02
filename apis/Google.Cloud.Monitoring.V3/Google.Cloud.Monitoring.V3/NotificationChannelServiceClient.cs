@@ -472,6 +472,11 @@ namespace Google.Cloud.Monitoring.V3
         public static NotificationChannelServiceClient Create(grpccore::CallInvoker callInvoker, NotificationChannelServiceSettings settings = null)
         {
             gax::GaxPreconditions.CheckNotNull(callInvoker, nameof(callInvoker));
+            grpccore::Interceptors.Interceptor interceptor = settings?.Interceptor;
+            if (interceptor != null)
+            {
+                callInvoker = grpccore::Interceptors.CallInvokerExtensions.Intercept(callInvoker, interceptor);
+            }
             NotificationChannelService.NotificationChannelServiceClient grpcClient = new NotificationChannelService.NotificationChannelServiceClient(callInvoker);
             return new NotificationChannelServiceClientImpl(grpcClient, settings);
         }

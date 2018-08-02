@@ -829,6 +829,11 @@ namespace Google.Cloud.Kms.V1
         public static KeyManagementServiceClient Create(grpccore::CallInvoker callInvoker, KeyManagementServiceSettings settings = null)
         {
             gax::GaxPreconditions.CheckNotNull(callInvoker, nameof(callInvoker));
+            grpccore::Interceptors.Interceptor interceptor = settings?.Interceptor;
+            if (interceptor != null)
+            {
+                callInvoker = grpccore::Interceptors.CallInvokerExtensions.Intercept(callInvoker, interceptor);
+            }
             KeyManagementService.KeyManagementServiceClient grpcClient = new KeyManagementService.KeyManagementServiceClient(callInvoker);
             return new KeyManagementServiceClientImpl(grpcClient, settings);
         }

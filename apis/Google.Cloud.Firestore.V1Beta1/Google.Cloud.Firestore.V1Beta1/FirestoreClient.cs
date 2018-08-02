@@ -631,6 +631,11 @@ namespace Google.Cloud.Firestore.V1Beta1
         public static FirestoreClient Create(grpccore::CallInvoker callInvoker, FirestoreSettings settings = null)
         {
             gax::GaxPreconditions.CheckNotNull(callInvoker, nameof(callInvoker));
+            grpccore::Interceptors.Interceptor interceptor = settings?.Interceptor;
+            if (interceptor != null)
+            {
+                callInvoker = grpccore::Interceptors.CallInvokerExtensions.Intercept(callInvoker, interceptor);
+            }
             Firestore.FirestoreClient grpcClient = new Firestore.FirestoreClient(callInvoker);
             return new FirestoreClientImpl(grpcClient, settings);
         }

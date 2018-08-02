@@ -627,6 +627,11 @@ namespace Google.Cloud.PubSub.V1
         public static PublisherServiceApiClient Create(grpccore::CallInvoker callInvoker, PublisherServiceApiSettings settings = null)
         {
             gax::GaxPreconditions.CheckNotNull(callInvoker, nameof(callInvoker));
+            grpccore::Interceptors.Interceptor interceptor = settings?.Interceptor;
+            if (interceptor != null)
+            {
+                callInvoker = grpccore::Interceptors.CallInvokerExtensions.Intercept(callInvoker, interceptor);
+            }
             Publisher.PublisherClient grpcClient = new Publisher.PublisherClient(callInvoker);
             return new PublisherServiceApiClientImpl(grpcClient, settings);
         }

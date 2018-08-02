@@ -424,6 +424,11 @@ namespace Google.Cloud.Bigtable.V2
         public static BigtableServiceApiClient Create(grpccore::CallInvoker callInvoker, BigtableServiceApiSettings settings = null)
         {
             gax::GaxPreconditions.CheckNotNull(callInvoker, nameof(callInvoker));
+            grpccore::Interceptors.Interceptor interceptor = settings?.Interceptor;
+            if (interceptor != null)
+            {
+                callInvoker = grpccore::Interceptors.CallInvokerExtensions.Intercept(callInvoker, interceptor);
+            }
             Bigtable.BigtableClient grpcClient = new Bigtable.BigtableClient(callInvoker);
             return new BigtableServiceApiClientImpl(grpcClient, settings);
         }

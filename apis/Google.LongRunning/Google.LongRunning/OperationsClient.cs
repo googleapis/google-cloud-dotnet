@@ -373,6 +373,11 @@ namespace Google.LongRunning
         public static OperationsClient Create(grpccore::CallInvoker callInvoker, OperationsSettings settings = null)
         {
             gax::GaxPreconditions.CheckNotNull(callInvoker, nameof(callInvoker));
+            grpccore::Interceptors.Interceptor interceptor = settings?.Interceptor;
+            if (interceptor != null)
+            {
+                callInvoker = grpccore::Interceptors.CallInvokerExtensions.Intercept(callInvoker, interceptor);
+            }
             Operations.OperationsClient grpcClient = new Operations.OperationsClient(callInvoker);
             return new OperationsClientImpl(grpcClient, settings);
         }

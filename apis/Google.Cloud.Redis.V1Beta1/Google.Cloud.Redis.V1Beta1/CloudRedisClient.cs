@@ -468,6 +468,11 @@ namespace Google.Cloud.Redis.V1Beta1
         public static CloudRedisClient Create(grpccore::CallInvoker callInvoker, CloudRedisSettings settings = null)
         {
             gax::GaxPreconditions.CheckNotNull(callInvoker, nameof(callInvoker));
+            grpccore::Interceptors.Interceptor interceptor = settings?.Interceptor;
+            if (interceptor != null)
+            {
+                callInvoker = grpccore::Interceptors.CallInvokerExtensions.Intercept(callInvoker, interceptor);
+            }
             CloudRedis.CloudRedisClient grpcClient = new CloudRedis.CloudRedisClient(callInvoker);
             return new CloudRedisClientImpl(grpcClient, settings);
         }
