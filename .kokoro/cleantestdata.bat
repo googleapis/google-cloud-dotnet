@@ -1,4 +1,4 @@
 :: See documentation in type-shell-output.bat
 
 cd /d %~dp0
-bash cleantestdata.sh
+"C:\Program Files\Git\bin\bash.exe" cleantestdata.sh
