@@ -20,6 +20,7 @@ using System;
 using System.Linq;
 using System.Net;
 using System.Net.Http;
+using System.Runtime.CompilerServices;
 using System.Threading.Tasks;
 using System.Web;
 using System.Web.Http;
@@ -178,6 +179,10 @@ namespace Google.Cloud.Diagnostics.AspNet.Snippets
                 return "Something done succesfully.";
             }
 
+            // This is normally not required, but ensures that "DoSomething" is in the stack
+            // trace. The method is otherwise inlined by the JIT compiler for release builds in
+            // some environments.
+            [MethodImpl(MethodImplOptions.NoInlining)]
             private void DoSomething(string id)
             {
                 throw new Exception(id);
