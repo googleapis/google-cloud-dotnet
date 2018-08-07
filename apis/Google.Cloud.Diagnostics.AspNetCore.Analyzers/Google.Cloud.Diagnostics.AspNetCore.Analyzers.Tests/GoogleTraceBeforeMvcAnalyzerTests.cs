@@ -934,18 +934,31 @@ namespace Google.Cloud.Diagnostics.AspNetCore
         public static IApplicationBuilder UseGoogleTrace(this IApplicationBuilder app) { return app; }
     }
 }";
-            var expected = CreateDiagnostic("UseMvc", 15, 13);
-            VerifyCSharpDiagnostic(test, expected);
-
-            // I believe this should never happen, but just to be sure, make sure anything from the value
-            // in the table doesn't root the key, preventing it (and the value) from being collected.
             var table = GoogleTraceBeforeMvcAnalyzer._applicationBuilderSymbolInfos;
-            Assert.NotEqual(0, table.Count());
 
+            GC.Collect();
+            bool inNoGCRegion = GC.TryStartNoGCRegion(16_000_000);
+            try
+            {
+                var expected = CreateDiagnostic("UseMvc", 15, 13);
+                VerifyCSharpDiagnostic(test, expected);
+
+                Assert.NotEqual(0, table.Count());
+            }
+            finally
+            {
+                if (inNoGCRegion)
+                {
+                    GC.EndNoGCRegion();
+                }
+            }
             GC.Collect();
             GC.WaitForPendingFinalizers();
             GC.Collect();
 
+
+            // I believe this should never happen, but just to be sure, make sure anything from the value
+            // in the table doesn't root the key, preventing it (and the value) from being collected.
             Assert.Equal(0, table.Count());
         }
 
