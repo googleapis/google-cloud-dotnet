@@ -76,17 +76,21 @@ namespace Google.Cloud.Diagnostics.AspNetCore.Tests
             Predicate<IEnumerable<LogEntry>> matcher = l =>
             {
                 var json = l.Single().JsonPayload.Fields;
-                var formatParams = json["format_parameters"].StructValue.Fields;
+                var parentScopes = json["parent_scopes"].StructValue.Fields;
+                var parentScope0 = parentScopes["0"].StructValue.Fields;
                 return json["message"].StringValue == _logMessage &&
-                       json["scope"].StringValue == "scope 42 => " &&
-                       formatParams.Count == 1 &&
-                       formatParams["Foo"].StringValue == "42";
+                       json["scope"].StringValue == "scope 42, Baz => " &&
+                       parentScopes.Count == 1 &&
+                       parentScope0.Count == 3 &&
+                       parentScope0["Foo"].StringValue == "42" &&
+                       parentScope0["Bar"].StringValue == "Baz" &&
+                       parentScope0["{OriginalFormat}"].StringValue == "scope {Foo}, {Bar}";
             };
 
             var mockConsumer = new Mock<IConsumer<LogEntry>>();
             mockConsumer.Setup(c => c.Receive(Match.Create(matcher)));
             var logger = GetLogger(mockConsumer.Object, logLevel: LogLevel.Information);
-            using (logger.BeginScope("scope {Foo}", 42))
+            using (logger.BeginScope("scope {Foo}, {Bar}", 42, "Baz"))
             {
                 logger.LogError(_logMessage);
             }
@@ -100,12 +104,19 @@ namespace Google.Cloud.Diagnostics.AspNetCore.Tests
             Predicate<IEnumerable<LogEntry>> matcher = l =>
             {
                 var json = l.Single().JsonPayload.Fields;
-                var formatParams = json["format_parameters"].StructValue.Fields;
+                var parentScopes = json["parent_scopes"].StructValue.Fields;
+                var scope0 = parentScopes["0"].StructValue.Fields;
+                var scope1 = parentScopes["1"].StructValue.Fields;
+
                 return json["message"].StringValue == _logMessage &&
                        json["scope"].StringValue == "first 42 => second Baz => " &&
-                       formatParams.Count == 2 &&
-                       formatParams["Foo"].StringValue == "42" &&
-                       formatParams["Bar"].StringValue == "Baz";
+                       parentScopes.Count == 2 &&
+                       scope0.Count == 2 &&
+                       scope0["{OriginalFormat}"].StringValue == "second {Bar}" &&
+                       scope0["Bar"].StringValue == "Baz" &&
+                       scope1.Count == 2 &&
+                       scope1["{OriginalFormat}"].StringValue == "first {Foo}" &&
+                       scope1["Foo"].StringValue == "42";
             };
 
             var mockConsumer = new Mock<IConsumer<LogEntry>>();
@@ -132,12 +143,17 @@ namespace Google.Cloud.Diagnostics.AspNetCore.Tests
             {
                 var json = l.Single().JsonPayload.Fields;
                 var formatParams = json["format_parameters"].StructValue.Fields;
+                var parentScopes = json["parent_scopes"].StructValue.Fields;
+                var parentScope0 = parentScopes["0"].StructValue.Fields;
                 return json["message"].StringValue == "a log message with stuff" &&
                        json["scope"].StringValue == "scope 42 => " &&
-                       formatParams.Count == 3 &&
+                       formatParams.Count == 2 &&
                        formatParams["things"].StringValue == logParam &&
                        formatParams["{OriginalFormat}"].StringValue == message &&
-                       formatParams["Foo"].StringValue == "42";
+                       parentScopes.Count == 1 &&
+                       parentScope0.Count == 2 &&
+                       parentScope0["Foo"].StringValue == "42" &&
+                       parentScope0["{OriginalFormat}"].StringValue == "scope {Foo}";
             };
 
             var mockConsumer = new Mock<IConsumer<LogEntry>>();
