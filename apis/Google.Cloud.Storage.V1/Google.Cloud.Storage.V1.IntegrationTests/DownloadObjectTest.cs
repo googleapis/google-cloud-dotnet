@@ -50,39 +50,29 @@ namespace Google.Cloud.Storage.V1.IntegrationTests
         }
 
         [Fact]
-        public void WrongObjectName()
-        {
-            using (var stream = new MemoryStream())
-            {
-                Assert.Throws<GoogleApiException>(() => _fixture.Client.DownloadObject(_fixture.ReadBucket, "doesntexist", stream));
-            }
-        }
+        public void WrongObjectName() => ValidateNotFound(_fixture.ReadBucket, "doesntexist");
 
         [Fact]
-        public async Task WrongObjectName_Async()
-        {
-            using (var stream = new MemoryStream())
-            {
-                await Assert.ThrowsAsync<GoogleApiException>(() => _fixture.Client.DownloadObjectAsync(_fixture.ReadBucket, "doesntexist", stream));
-            }
-        }
+        public Task WrongObjectName_Async() => ValidateNotFoundAsync(_fixture.ReadBucket, "doesntexist");
 
         [Fact]
-        public void WrongBucketName()
-        {
-            using (var stream = new MemoryStream())
-            {
-                Assert.Throws<GoogleApiException>(() => _fixture.Client.DownloadObject(_fixture.BucketPrefix + "doesntexist", "doesntexist", stream));
-            }
-        }
+        public void WrongBucketName() => ValidateNotFound(_fixture.BucketPrefix + "doesntexist", "doesntexist");
 
         [Fact]
-        public async Task WrongBucketName_Async()
+        public Task WrongBucketName_Async() => ValidateNotFoundAsync(_fixture.BucketPrefix + "doesntexist", "doesntexist");
+
+        private void ValidateNotFound(string bucket, string objectName)
         {
-            using (var stream = new MemoryStream())
-            {
-                await Assert.ThrowsAsync<GoogleApiException>(() => _fixture.Client.DownloadObjectAsync(_fixture.BucketPrefix + "doesntexist", "doesntexist", stream));
-            }
+            var stream = new MemoryStream();
+            var exception = Assert.Throws<GoogleApiException>(() => _fixture.Client.DownloadObject(bucket, objectName, stream));
+            Assert.Equal(HttpStatusCode.NotFound, exception.HttpStatusCode);
+        }
+
+        private async Task ValidateNotFoundAsync(string bucket, string objectName)
+        {
+            var stream = new MemoryStream();
+            var exception = await Assert.ThrowsAsync<GoogleApiException>(() => _fixture.Client.DownloadObjectAsync(bucket, objectName, stream));
+            Assert.Equal(HttpStatusCode.NotFound, exception.HttpStatusCode);
         }
 
         [Fact]
