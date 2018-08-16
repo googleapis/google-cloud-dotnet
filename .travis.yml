@@ -5,7 +5,7 @@ env:
 - API_REGEX='Google\.LongRunning'
 language: csharp
 mono: none
-dotnet: 2.1.101
+dotnet: 2.1.300
 dist: trusty
 
 # Install the .NET Core 1.0 runtime as that's what we test against
