@@ -135,7 +135,7 @@ namespace Google.Cloud.Firestore.V1Beta1 {
     /// The map keys represent field names.
     ///
     /// A simple field name contains only characters `a` to `z`, `A` to `Z`,
-    /// `0` to `9`, or `_`, and must not start with `0` to `9` or `_`. For example,
+    /// `0` to `9`, or `_`, and must not start with `0` to `9`. For example,
     /// `foo_bar_17`.
     ///
     /// Field names matching the regular expression `__.*__` are reserved. Reserved
@@ -184,7 +184,7 @@ namespace Google.Cloud.Firestore.V1Beta1 {
     /// <summary>
     /// Output only. The time at which the document was last changed.
     ///
-    /// This value is initally set to the `create_time` then increases
+    /// This value is initially set to the `create_time` then increases
     /// monotonically with each change to the document. It can also be
     /// compared to values from other documents and the `read_time` of a query.
     /// </summary>
@@ -547,7 +547,8 @@ namespace Google.Cloud.Firestore.V1Beta1 {
     /// <summary>
     /// An array value.
     ///
-    /// Cannot contain another array value.
+    /// Cannot directly contain another array value, though can contain an
+    /// map which contains another array.
     /// </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     public global::Google.Cloud.Firestore.V1Beta1.ArrayValue ArrayValue {

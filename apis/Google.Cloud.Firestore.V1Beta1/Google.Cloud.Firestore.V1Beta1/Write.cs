@@ -35,35 +35,38 @@ namespace Google.Cloud.Firestore.V1Beta1 {
             "cGRhdGVfbWFzaxgDIAEoCzImLmdvb2dsZS5maXJlc3RvcmUudjFiZXRhMS5E",
             "b2N1bWVudE1hc2sSQAoQY3VycmVudF9kb2N1bWVudBgEIAEoCzImLmdvb2ds",
             "ZS5maXJlc3RvcmUudjFiZXRhMS5QcmVjb25kaXRpb25CCwoJb3BlcmF0aW9u",
-            "ItoCChFEb2N1bWVudFRyYW5zZm9ybRIQCghkb2N1bWVudBgBIAEoCRJUChBm",
+            "IuoDChFEb2N1bWVudFRyYW5zZm9ybRIQCghkb2N1bWVudBgBIAEoCRJUChBm",
             "aWVsZF90cmFuc2Zvcm1zGAIgAygLMjouZ29vZ2xlLmZpcmVzdG9yZS52MWJl",
-            "dGExLkRvY3VtZW50VHJhbnNmb3JtLkZpZWxkVHJhbnNmb3JtGtwBCg5GaWVs",
+            "dGExLkRvY3VtZW50VHJhbnNmb3JtLkZpZWxkVHJhbnNmb3JtGuwCCg5GaWVs",
             "ZFRyYW5zZm9ybRISCgpmaWVsZF9wYXRoGAEgASgJEmUKE3NldF90b19zZXJ2",
             "ZXJfdmFsdWUYAiABKA4yRi5nb29nbGUuZmlyZXN0b3JlLnYxYmV0YTEuRG9j",
-            "dW1lbnRUcmFuc2Zvcm0uRmllbGRUcmFuc2Zvcm0uU2VydmVyVmFsdWVIACI9",
-            "CgtTZXJ2ZXJWYWx1ZRIcChhTRVJWRVJfVkFMVUVfVU5TUEVDSUZJRUQQABIQ",
-            "CgxSRVFVRVNUX1RJTUUQAUIQCg50cmFuc2Zvcm1fdHlwZSJ6CgtXcml0ZVJl",
-            "c3VsdBIvCgt1cGRhdGVfdGltZRgBIAEoCzIaLmdvb2dsZS5wcm90b2J1Zi5U",
-            "aW1lc3RhbXASOgoRdHJhbnNmb3JtX3Jlc3VsdHMYAiADKAsyHy5nb29nbGUu",
-            "ZmlyZXN0b3JlLnYxYmV0YTEuVmFsdWUidgoORG9jdW1lbnRDaGFuZ2USNAoI",
-            "ZG9jdW1lbnQYASABKAsyIi5nb29nbGUuZmlyZXN0b3JlLnYxYmV0YTEuRG9j",
-            "dW1lbnQSEgoKdGFyZ2V0X2lkcxgFIAMoBRIaChJyZW1vdmVkX3RhcmdldF9p",
-            "ZHMYBiADKAUibQoORG9jdW1lbnREZWxldGUSEAoIZG9jdW1lbnQYASABKAkS",
-            "GgoScmVtb3ZlZF90YXJnZXRfaWRzGAYgAygFEi0KCXJlYWRfdGltZRgEIAEo",
-            "CzIaLmdvb2dsZS5wcm90b2J1Zi5UaW1lc3RhbXAibQoORG9jdW1lbnRSZW1v",
-            "dmUSEAoIZG9jdW1lbnQYASABKAkSGgoScmVtb3ZlZF90YXJnZXRfaWRzGAIg",
-            "AygFEi0KCXJlYWRfdGltZRgEIAEoCzIaLmdvb2dsZS5wcm90b2J1Zi5UaW1l",
-            "c3RhbXAiMwoPRXhpc3RlbmNlRmlsdGVyEhEKCXRhcmdldF9pZBgBIAEoBRIN",
-            "CgVjb3VudBgCIAEoBUK4AQocY29tLmdvb2dsZS5maXJlc3RvcmUudjFiZXRh",
-            "MUIKV3JpdGVQcm90b1ABWkFnb29nbGUuZ29sYW5nLm9yZy9nZW5wcm90by9n",
-            "b29nbGVhcGlzL2ZpcmVzdG9yZS92MWJldGExO2ZpcmVzdG9yZaICBEdDRlOq",
-            "Ah5Hb29nbGUuQ2xvdWQuRmlyZXN0b3JlLlYxQmV0YTHKAh5Hb29nbGVcQ2xv",
-            "dWRcRmlyZXN0b3JlXFYxYmV0YTFiBnByb3RvMw=="));
+            "dW1lbnRUcmFuc2Zvcm0uRmllbGRUcmFuc2Zvcm0uU2VydmVyVmFsdWVIABJH",
+            "ChdhcHBlbmRfbWlzc2luZ19lbGVtZW50cxgGIAEoCzIkLmdvb2dsZS5maXJl",
+            "c3RvcmUudjFiZXRhMS5BcnJheVZhbHVlSAASRQoVcmVtb3ZlX2FsbF9mcm9t",
+            "X2FycmF5GAcgASgLMiQuZ29vZ2xlLmZpcmVzdG9yZS52MWJldGExLkFycmF5",
+            "VmFsdWVIACI9CgtTZXJ2ZXJWYWx1ZRIcChhTRVJWRVJfVkFMVUVfVU5TUEVD",
+            "SUZJRUQQABIQCgxSRVFVRVNUX1RJTUUQAUIQCg50cmFuc2Zvcm1fdHlwZSJ6",
+            "CgtXcml0ZVJlc3VsdBIvCgt1cGRhdGVfdGltZRgBIAEoCzIaLmdvb2dsZS5w",
+            "cm90b2J1Zi5UaW1lc3RhbXASOgoRdHJhbnNmb3JtX3Jlc3VsdHMYAiADKAsy",
+            "Hy5nb29nbGUuZmlyZXN0b3JlLnYxYmV0YTEuVmFsdWUidgoORG9jdW1lbnRD",
+            "aGFuZ2USNAoIZG9jdW1lbnQYASABKAsyIi5nb29nbGUuZmlyZXN0b3JlLnYx",
+            "YmV0YTEuRG9jdW1lbnQSEgoKdGFyZ2V0X2lkcxgFIAMoBRIaChJyZW1vdmVk",
+            "X3RhcmdldF9pZHMYBiADKAUibQoORG9jdW1lbnREZWxldGUSEAoIZG9jdW1l",
+            "bnQYASABKAkSGgoScmVtb3ZlZF90YXJnZXRfaWRzGAYgAygFEi0KCXJlYWRf",
+            "dGltZRgEIAEoCzIaLmdvb2dsZS5wcm90b2J1Zi5UaW1lc3RhbXAibQoORG9j",
+            "dW1lbnRSZW1vdmUSEAoIZG9jdW1lbnQYASABKAkSGgoScmVtb3ZlZF90YXJn",
+            "ZXRfaWRzGAIgAygFEi0KCXJlYWRfdGltZRgEIAEoCzIaLmdvb2dsZS5wcm90",
+            "b2J1Zi5UaW1lc3RhbXAiMwoPRXhpc3RlbmNlRmlsdGVyEhEKCXRhcmdldF9p",
+            "ZBgBIAEoBRINCgVjb3VudBgCIAEoBUK4AQocY29tLmdvb2dsZS5maXJlc3Rv",
+            "cmUudjFiZXRhMUIKV3JpdGVQcm90b1ABWkFnb29nbGUuZ29sYW5nLm9yZy9n",
+            "ZW5wcm90by9nb29nbGVhcGlzL2ZpcmVzdG9yZS92MWJldGExO2ZpcmVzdG9y",
+            "ZaICBEdDRlOqAh5Hb29nbGUuQ2xvdWQuRmlyZXN0b3JlLlYxQmV0YTHKAh5H",
+            "b29nbGVcQ2xvdWRcRmlyZXN0b3JlXFYxYmV0YTFiBnByb3RvMw=="));
       descriptor = pbr::FileDescriptor.FromGeneratedCode(descriptorData,
           new pbr::FileDescriptor[] { global::Google.Api.AnnotationsReflection.Descriptor, global::Google.Cloud.Firestore.V1Beta1.CommonReflection.Descriptor, global::Google.Cloud.Firestore.V1Beta1.DocumentReflection.Descriptor, global::Google.Protobuf.WellKnownTypes.TimestampReflection.Descriptor, },
           new pbr::GeneratedClrTypeInfo(null, new pbr::GeneratedClrTypeInfo[] {
             new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.Firestore.V1Beta1.Write), global::Google.Cloud.Firestore.V1Beta1.Write.Parser, new[]{ "Update", "Delete", "Transform", "UpdateMask", "CurrentDocument" }, new[]{ "Operation" }, null, null),
-            new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.Firestore.V1Beta1.DocumentTransform), global::Google.Cloud.Firestore.V1Beta1.DocumentTransform.Parser, new[]{ "Document", "FieldTransforms" }, null, null, new pbr::GeneratedClrTypeInfo[] { new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.Firestore.V1Beta1.DocumentTransform.Types.FieldTransform), global::Google.Cloud.Firestore.V1Beta1.DocumentTransform.Types.FieldTransform.Parser, new[]{ "FieldPath", "SetToServerValue" }, new[]{ "TransformType" }, new[]{ typeof(global::Google.Cloud.Firestore.V1Beta1.DocumentTransform.Types.FieldTransform.Types.ServerValue) }, null)}),
+            new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.Firestore.V1Beta1.DocumentTransform), global::Google.Cloud.Firestore.V1Beta1.DocumentTransform.Parser, new[]{ "Document", "FieldTransforms" }, null, null, new pbr::GeneratedClrTypeInfo[] { new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.Firestore.V1Beta1.DocumentTransform.Types.FieldTransform), global::Google.Cloud.Firestore.V1Beta1.DocumentTransform.Types.FieldTransform.Parser, new[]{ "FieldPath", "SetToServerValue", "AppendMissingElements", "RemoveAllFromArray" }, new[]{ "TransformType" }, new[]{ typeof(global::Google.Cloud.Firestore.V1Beta1.DocumentTransform.Types.FieldTransform.Types.ServerValue) }, null)}),
             new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.Firestore.V1Beta1.WriteResult), global::Google.Cloud.Firestore.V1Beta1.WriteResult.Parser, new[]{ "UpdateTime", "TransformResults" }, null, null, null),
             new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.Firestore.V1Beta1.DocumentChange), global::Google.Cloud.Firestore.V1Beta1.DocumentChange.Parser, new[]{ "Document", "TargetIds", "RemovedTargetIds" }, null, null, null),
             new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.Firestore.V1Beta1.DocumentDelete), global::Google.Cloud.Firestore.V1Beta1.DocumentDelete.Parser, new[]{ "Document", "RemovedTargetIds", "ReadTime" }, null, null, null),
@@ -178,9 +181,10 @@ namespace Google.Cloud.Firestore.V1Beta1 {
     /// The fields to update in this write.
     ///
     /// This field can be set only when the operation is `update`.
-    /// None of the field paths in the mask may contain a reserved name.
-    /// If the document exists on the server and has fields not referenced in the
-    /// mask, they are left unchanged.
+    /// If the mask is not set for an `update` and the document exists, any
+    /// existing data will be overwritten.
+    /// If the mask is set and the document on the server has fields not covered by
+    /// the mask, they are left unchanged.
     /// Fields referenced in the mask, but not present in the input document, are
     /// deleted from the document on the server.
     /// The field paths in this mask must not contain a reserved field name.
@@ -605,6 +609,12 @@ namespace Google.Cloud.Firestore.V1Beta1 {
             case TransformTypeOneofCase.SetToServerValue:
               SetToServerValue = other.SetToServerValue;
               break;
+            case TransformTypeOneofCase.AppendMissingElements:
+              AppendMissingElements = other.AppendMissingElements.Clone();
+              break;
+            case TransformTypeOneofCase.RemoveAllFromArray:
+              RemoveAllFromArray = other.RemoveAllFromArray.Clone();
+              break;
           }
 
           _unknownFields = pb::UnknownFieldSet.Clone(other._unknownFields);
@@ -644,11 +654,61 @@ namespace Google.Cloud.Firestore.V1Beta1 {
           }
         }
 
+        /// <summary>Field number for the "append_missing_elements" field.</summary>
+        public const int AppendMissingElementsFieldNumber = 6;
+        /// <summary>
+        /// Append the given elements in order if they are not already present in
+        /// the current field value.
+        /// If the field is not an array, or if the field does not yet exist, it is
+        /// first set to the empty array.
+        ///
+        /// Equivalent numbers of different types (e.g. 3L and 3.0) are
+        /// considered equal when checking if a value is missing.
+        /// NaN is equal to NaN, and Null is equal to Null.
+        /// If the input contains multiple equivalent values, only the first will
+        /// be considered.
+        ///
+        /// The corresponding transform_result will be the null value.
+        /// </summary>
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        public global::Google.Cloud.Firestore.V1Beta1.ArrayValue AppendMissingElements {
+          get { return transformTypeCase_ == TransformTypeOneofCase.AppendMissingElements ? (global::Google.Cloud.Firestore.V1Beta1.ArrayValue) transformType_ : null; }
+          set {
+            transformType_ = value;
+            transformTypeCase_ = value == null ? TransformTypeOneofCase.None : TransformTypeOneofCase.AppendMissingElements;
+          }
+        }
+
+        /// <summary>Field number for the "remove_all_from_array" field.</summary>
+        public const int RemoveAllFromArrayFieldNumber = 7;
+        /// <summary>
+        /// Remove all of the given elements from the array in the field.
+        /// If the field is not an array, or if the field does not yet exist, it is
+        /// set to the empty array.
+        ///
+        /// Equivalent numbers of the different types (e.g. 3L and 3.0) are
+        /// considered equal when deciding whether an element should be removed.
+        /// NaN is equal to NaN, and Null is equal to Null.
+        /// This will remove all equivalent values if there are duplicates.
+        ///
+        /// The corresponding transform_result will be the null value.
+        /// </summary>
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        public global::Google.Cloud.Firestore.V1Beta1.ArrayValue RemoveAllFromArray {
+          get { return transformTypeCase_ == TransformTypeOneofCase.RemoveAllFromArray ? (global::Google.Cloud.Firestore.V1Beta1.ArrayValue) transformType_ : null; }
+          set {
+            transformType_ = value;
+            transformTypeCase_ = value == null ? TransformTypeOneofCase.None : TransformTypeOneofCase.RemoveAllFromArray;
+          }
+        }
+
         private object transformType_;
         /// <summary>Enum of possible cases for the "transform_type" oneof.</summary>
         public enum TransformTypeOneofCase {
           None = 0,
           SetToServerValue = 2,
+          AppendMissingElements = 6,
+          RemoveAllFromArray = 7,
         }
         private TransformTypeOneofCase transformTypeCase_ = TransformTypeOneofCase.None;
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
@@ -677,6 +737,8 @@ namespace Google.Cloud.Firestore.V1Beta1 {
           }
           if (FieldPath != other.FieldPath) return false;
           if (SetToServerValue != other.SetToServerValue) return false;
+          if (!object.Equals(AppendMissingElements, other.AppendMissingElements)) return false;
+          if (!object.Equals(RemoveAllFromArray, other.RemoveAllFromArray)) return false;
           if (TransformTypeCase != other.TransformTypeCase) return false;
           return Equals(_unknownFields, other._unknownFields);
         }
@@ -686,6 +748,8 @@ namespace Google.Cloud.Firestore.V1Beta1 {
           int hash = 1;
           if (FieldPath.Length != 0) hash ^= FieldPath.GetHashCode();
           if (transformTypeCase_ == TransformTypeOneofCase.SetToServerValue) hash ^= SetToServerValue.GetHashCode();
+          if (transformTypeCase_ == TransformTypeOneofCase.AppendMissingElements) hash ^= AppendMissingElements.GetHashCode();
+          if (transformTypeCase_ == TransformTypeOneofCase.RemoveAllFromArray) hash ^= RemoveAllFromArray.GetHashCode();
           hash ^= (int) transformTypeCase_;
           if (_unknownFields != null) {
             hash ^= _unknownFields.GetHashCode();
@@ -708,6 +772,14 @@ namespace Google.Cloud.Firestore.V1Beta1 {
             output.WriteRawTag(16);
             output.WriteEnum((int) SetToServerValue);
           }
+          if (transformTypeCase_ == TransformTypeOneofCase.AppendMissingElements) {
+            output.WriteRawTag(50);
+            output.WriteMessage(AppendMissingElements);
+          }
+          if (transformTypeCase_ == TransformTypeOneofCase.RemoveAllFromArray) {
+            output.WriteRawTag(58);
+            output.WriteMessage(RemoveAllFromArray);
+          }
           if (_unknownFields != null) {
             _unknownFields.WriteTo(output);
           }
@@ -721,6 +793,12 @@ namespace Google.Cloud.Firestore.V1Beta1 {
           }
           if (transformTypeCase_ == TransformTypeOneofCase.SetToServerValue) {
             size += 1 + pb::CodedOutputStream.ComputeEnumSize((int) SetToServerValue);
+          }
+          if (transformTypeCase_ == TransformTypeOneofCase.AppendMissingElements) {
+            size += 1 + pb::CodedOutputStream.ComputeMessageSize(AppendMissingElements);
+          }
+          if (transformTypeCase_ == TransformTypeOneofCase.RemoveAllFromArray) {
+            size += 1 + pb::CodedOutputStream.ComputeMessageSize(RemoveAllFromArray);
           }
           if (_unknownFields != null) {
             size += _unknownFields.CalculateSize();
@@ -739,6 +817,18 @@ namespace Google.Cloud.Firestore.V1Beta1 {
           switch (other.TransformTypeCase) {
             case TransformTypeOneofCase.SetToServerValue:
               SetToServerValue = other.SetToServerValue;
+              break;
+            case TransformTypeOneofCase.AppendMissingElements:
+              if (AppendMissingElements == null) {
+                AppendMissingElements = new global::Google.Cloud.Firestore.V1Beta1.ArrayValue();
+              }
+              AppendMissingElements.MergeFrom(other.AppendMissingElements);
+              break;
+            case TransformTypeOneofCase.RemoveAllFromArray:
+              if (RemoveAllFromArray == null) {
+                RemoveAllFromArray = new global::Google.Cloud.Firestore.V1Beta1.ArrayValue();
+              }
+              RemoveAllFromArray.MergeFrom(other.RemoveAllFromArray);
               break;
           }
 
@@ -760,6 +850,24 @@ namespace Google.Cloud.Firestore.V1Beta1 {
               case 16: {
                 transformType_ = input.ReadEnum();
                 transformTypeCase_ = TransformTypeOneofCase.SetToServerValue;
+                break;
+              }
+              case 50: {
+                global::Google.Cloud.Firestore.V1Beta1.ArrayValue subBuilder = new global::Google.Cloud.Firestore.V1Beta1.ArrayValue();
+                if (transformTypeCase_ == TransformTypeOneofCase.AppendMissingElements) {
+                  subBuilder.MergeFrom(AppendMissingElements);
+                }
+                input.ReadMessage(subBuilder);
+                AppendMissingElements = subBuilder;
+                break;
+              }
+              case 58: {
+                global::Google.Cloud.Firestore.V1Beta1.ArrayValue subBuilder = new global::Google.Cloud.Firestore.V1Beta1.ArrayValue();
+                if (transformTypeCase_ == TransformTypeOneofCase.RemoveAllFromArray) {
+                  subBuilder.MergeFrom(RemoveAllFromArray);
+                }
+                input.ReadMessage(subBuilder);
+                RemoveAllFromArray = subBuilder;
                 break;
               }
             }
