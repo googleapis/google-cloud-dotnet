@@ -775,7 +775,6 @@ namespace Google.Cloud.Bigtable.Admin.V2.Snippets
             Cluster request = new Cluster
             {
                 ClusterName = new ClusterName("[PROJECT]", "[INSTANCE]", "[CLUSTER]"),
-                LocationAsLocationName = new LocationName("[PROJECT]", "[LOCATION]"),
                 ServeNodes = 0,
             };
             // Make the request
@@ -812,7 +811,6 @@ namespace Google.Cloud.Bigtable.Admin.V2.Snippets
             Cluster request = new Cluster
             {
                 ClusterName = new ClusterName("[PROJECT]", "[INSTANCE]", "[CLUSTER]"),
-                LocationAsLocationName = new LocationName("[PROJECT]", "[LOCATION]"),
                 ServeNodes = 0,
             };
             // Make the request
