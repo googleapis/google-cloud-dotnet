@@ -191,7 +191,7 @@ namespace Google.Cloud.Storage.V1.IntegrationTests
             TestHelpers.ValidateData(bucketName, objectName, data);
         }
 
-        [SkippableFact(Skip = "See https://github.com/GoogleCloudPlatform/google-cloud-dotnet/issues/2412")]
+        [SkippableFact]
         public void UploadObject_BucketHasDefaultKmsKey_UploadWithNoSpecifiedKey_DownloadWithClientWithCsek()
         {
             _fixture.SkipIf(SkipTests);
