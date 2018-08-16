@@ -3,7 +3,7 @@
 //     source: google/privacy/dlp/v2/dlp.proto
 // </auto-generated>
 // Original file comments:
-// Copyright 2018 Google Inc.
+// Copyright 2018 Google LLC
 //
 // Licensed under the Apache License, Version 2.0 (the "License");
 // you may not use this file except in compliance with the License.
@@ -77,6 +77,13 @@ namespace Google.Cloud.Dlp.V2 {
     static readonly grpc::Marshaller<global::Google.Cloud.Dlp.V2.GetDlpJobRequest> __Marshaller_GetDlpJobRequest = grpc::Marshallers.Create((arg) => global::Google.Protobuf.MessageExtensions.ToByteArray(arg), global::Google.Cloud.Dlp.V2.GetDlpJobRequest.Parser.ParseFrom);
     static readonly grpc::Marshaller<global::Google.Cloud.Dlp.V2.DeleteDlpJobRequest> __Marshaller_DeleteDlpJobRequest = grpc::Marshallers.Create((arg) => global::Google.Protobuf.MessageExtensions.ToByteArray(arg), global::Google.Cloud.Dlp.V2.DeleteDlpJobRequest.Parser.ParseFrom);
     static readonly grpc::Marshaller<global::Google.Cloud.Dlp.V2.CancelDlpJobRequest> __Marshaller_CancelDlpJobRequest = grpc::Marshallers.Create((arg) => global::Google.Protobuf.MessageExtensions.ToByteArray(arg), global::Google.Cloud.Dlp.V2.CancelDlpJobRequest.Parser.ParseFrom);
+    static readonly grpc::Marshaller<global::Google.Cloud.Dlp.V2.CreateStoredInfoTypeRequest> __Marshaller_CreateStoredInfoTypeRequest = grpc::Marshallers.Create((arg) => global::Google.Protobuf.MessageExtensions.ToByteArray(arg), global::Google.Cloud.Dlp.V2.CreateStoredInfoTypeRequest.Parser.ParseFrom);
+    static readonly grpc::Marshaller<global::Google.Cloud.Dlp.V2.StoredInfoType> __Marshaller_StoredInfoType = grpc::Marshallers.Create((arg) => global::Google.Protobuf.MessageExtensions.ToByteArray(arg), global::Google.Cloud.Dlp.V2.StoredInfoType.Parser.ParseFrom);
+    static readonly grpc::Marshaller<global::Google.Cloud.Dlp.V2.UpdateStoredInfoTypeRequest> __Marshaller_UpdateStoredInfoTypeRequest = grpc::Marshallers.Create((arg) => global::Google.Protobuf.MessageExtensions.ToByteArray(arg), global::Google.Cloud.Dlp.V2.UpdateStoredInfoTypeRequest.Parser.ParseFrom);
+    static readonly grpc::Marshaller<global::Google.Cloud.Dlp.V2.GetStoredInfoTypeRequest> __Marshaller_GetStoredInfoTypeRequest = grpc::Marshallers.Create((arg) => global::Google.Protobuf.MessageExtensions.ToByteArray(arg), global::Google.Cloud.Dlp.V2.GetStoredInfoTypeRequest.Parser.ParseFrom);
+    static readonly grpc::Marshaller<global::Google.Cloud.Dlp.V2.ListStoredInfoTypesRequest> __Marshaller_ListStoredInfoTypesRequest = grpc::Marshallers.Create((arg) => global::Google.Protobuf.MessageExtensions.ToByteArray(arg), global::Google.Cloud.Dlp.V2.ListStoredInfoTypesRequest.Parser.ParseFrom);
+    static readonly grpc::Marshaller<global::Google.Cloud.Dlp.V2.ListStoredInfoTypesResponse> __Marshaller_ListStoredInfoTypesResponse = grpc::Marshallers.Create((arg) => global::Google.Protobuf.MessageExtensions.ToByteArray(arg), global::Google.Cloud.Dlp.V2.ListStoredInfoTypesResponse.Parser.ParseFrom);
+    static readonly grpc::Marshaller<global::Google.Cloud.Dlp.V2.DeleteStoredInfoTypeRequest> __Marshaller_DeleteStoredInfoTypeRequest = grpc::Marshallers.Create((arg) => global::Google.Protobuf.MessageExtensions.ToByteArray(arg), global::Google.Cloud.Dlp.V2.DeleteStoredInfoTypeRequest.Parser.ParseFrom);
 
     static readonly grpc::Method<global::Google.Cloud.Dlp.V2.InspectContentRequest, global::Google.Cloud.Dlp.V2.InspectContentResponse> __Method_InspectContent = new grpc::Method<global::Google.Cloud.Dlp.V2.InspectContentRequest, global::Google.Cloud.Dlp.V2.InspectContentResponse>(
         grpc::MethodType.Unary,
@@ -251,6 +258,41 @@ namespace Google.Cloud.Dlp.V2 {
         __ServiceName,
         "CancelDlpJob",
         __Marshaller_CancelDlpJobRequest,
+        __Marshaller_Empty);
+
+    static readonly grpc::Method<global::Google.Cloud.Dlp.V2.CreateStoredInfoTypeRequest, global::Google.Cloud.Dlp.V2.StoredInfoType> __Method_CreateStoredInfoType = new grpc::Method<global::Google.Cloud.Dlp.V2.CreateStoredInfoTypeRequest, global::Google.Cloud.Dlp.V2.StoredInfoType>(
+        grpc::MethodType.Unary,
+        __ServiceName,
+        "CreateStoredInfoType",
+        __Marshaller_CreateStoredInfoTypeRequest,
+        __Marshaller_StoredInfoType);
+
+    static readonly grpc::Method<global::Google.Cloud.Dlp.V2.UpdateStoredInfoTypeRequest, global::Google.Cloud.Dlp.V2.StoredInfoType> __Method_UpdateStoredInfoType = new grpc::Method<global::Google.Cloud.Dlp.V2.UpdateStoredInfoTypeRequest, global::Google.Cloud.Dlp.V2.StoredInfoType>(
+        grpc::MethodType.Unary,
+        __ServiceName,
+        "UpdateStoredInfoType",
+        __Marshaller_UpdateStoredInfoTypeRequest,
+        __Marshaller_StoredInfoType);
+
+    static readonly grpc::Method<global::Google.Cloud.Dlp.V2.GetStoredInfoTypeRequest, global::Google.Cloud.Dlp.V2.StoredInfoType> __Method_GetStoredInfoType = new grpc::Method<global::Google.Cloud.Dlp.V2.GetStoredInfoTypeRequest, global::Google.Cloud.Dlp.V2.StoredInfoType>(
+        grpc::MethodType.Unary,
+        __ServiceName,
+        "GetStoredInfoType",
+        __Marshaller_GetStoredInfoTypeRequest,
+        __Marshaller_StoredInfoType);
+
+    static readonly grpc::Method<global::Google.Cloud.Dlp.V2.ListStoredInfoTypesRequest, global::Google.Cloud.Dlp.V2.ListStoredInfoTypesResponse> __Method_ListStoredInfoTypes = new grpc::Method<global::Google.Cloud.Dlp.V2.ListStoredInfoTypesRequest, global::Google.Cloud.Dlp.V2.ListStoredInfoTypesResponse>(
+        grpc::MethodType.Unary,
+        __ServiceName,
+        "ListStoredInfoTypes",
+        __Marshaller_ListStoredInfoTypesRequest,
+        __Marshaller_ListStoredInfoTypesResponse);
+
+    static readonly grpc::Method<global::Google.Cloud.Dlp.V2.DeleteStoredInfoTypeRequest, global::Google.Protobuf.WellKnownTypes.Empty> __Method_DeleteStoredInfoType = new grpc::Method<global::Google.Cloud.Dlp.V2.DeleteStoredInfoTypeRequest, global::Google.Protobuf.WellKnownTypes.Empty>(
+        grpc::MethodType.Unary,
+        __ServiceName,
+        "DeleteStoredInfoType",
+        __Marshaller_DeleteStoredInfoTypeRequest,
         __Marshaller_Empty);
 
     /// <summary>Service descriptor</summary>
@@ -601,6 +643,72 @@ namespace Google.Cloud.Dlp.V2 {
       /// <param name="context">The context of the server-side call handler being invoked.</param>
       /// <returns>The response to send back to the client (wrapped by a task).</returns>
       public virtual global::System.Threading.Tasks.Task<global::Google.Protobuf.WellKnownTypes.Empty> CancelDlpJob(global::Google.Cloud.Dlp.V2.CancelDlpJobRequest request, grpc::ServerCallContext context)
+      {
+        throw new grpc::RpcException(new grpc::Status(grpc::StatusCode.Unimplemented, ""));
+      }
+
+      /// <summary>
+      /// Creates a pre-built stored infoType to be used for inspection.
+      /// See https://cloud.google.com/dlp/docs/creating-stored-infotypes to
+      /// learn more.
+      /// </summary>
+      /// <param name="request">The request received from the client.</param>
+      /// <param name="context">The context of the server-side call handler being invoked.</param>
+      /// <returns>The response to send back to the client (wrapped by a task).</returns>
+      public virtual global::System.Threading.Tasks.Task<global::Google.Cloud.Dlp.V2.StoredInfoType> CreateStoredInfoType(global::Google.Cloud.Dlp.V2.CreateStoredInfoTypeRequest request, grpc::ServerCallContext context)
+      {
+        throw new grpc::RpcException(new grpc::Status(grpc::StatusCode.Unimplemented, ""));
+      }
+
+      /// <summary>
+      /// Updates the stored infoType by creating a new version. The existing version
+      /// will continue to be used until the new version is ready.
+      /// See https://cloud.google.com/dlp/docs/creating-stored-infotypes to
+      /// learn more.
+      /// </summary>
+      /// <param name="request">The request received from the client.</param>
+      /// <param name="context">The context of the server-side call handler being invoked.</param>
+      /// <returns>The response to send back to the client (wrapped by a task).</returns>
+      public virtual global::System.Threading.Tasks.Task<global::Google.Cloud.Dlp.V2.StoredInfoType> UpdateStoredInfoType(global::Google.Cloud.Dlp.V2.UpdateStoredInfoTypeRequest request, grpc::ServerCallContext context)
+      {
+        throw new grpc::RpcException(new grpc::Status(grpc::StatusCode.Unimplemented, ""));
+      }
+
+      /// <summary>
+      /// Gets a stored infoType.
+      /// See https://cloud.google.com/dlp/docs/creating-stored-infotypes to
+      /// learn more.
+      /// </summary>
+      /// <param name="request">The request received from the client.</param>
+      /// <param name="context">The context of the server-side call handler being invoked.</param>
+      /// <returns>The response to send back to the client (wrapped by a task).</returns>
+      public virtual global::System.Threading.Tasks.Task<global::Google.Cloud.Dlp.V2.StoredInfoType> GetStoredInfoType(global::Google.Cloud.Dlp.V2.GetStoredInfoTypeRequest request, grpc::ServerCallContext context)
+      {
+        throw new grpc::RpcException(new grpc::Status(grpc::StatusCode.Unimplemented, ""));
+      }
+
+      /// <summary>
+      /// Lists stored infoTypes.
+      /// See https://cloud.google.com/dlp/docs/creating-stored-infotypes to
+      /// learn more.
+      /// </summary>
+      /// <param name="request">The request received from the client.</param>
+      /// <param name="context">The context of the server-side call handler being invoked.</param>
+      /// <returns>The response to send back to the client (wrapped by a task).</returns>
+      public virtual global::System.Threading.Tasks.Task<global::Google.Cloud.Dlp.V2.ListStoredInfoTypesResponse> ListStoredInfoTypes(global::Google.Cloud.Dlp.V2.ListStoredInfoTypesRequest request, grpc::ServerCallContext context)
+      {
+        throw new grpc::RpcException(new grpc::Status(grpc::StatusCode.Unimplemented, ""));
+      }
+
+      /// <summary>
+      /// Deletes a stored infoType.
+      /// See https://cloud.google.com/dlp/docs/creating-stored-infotypes to
+      /// learn more.
+      /// </summary>
+      /// <param name="request">The request received from the client.</param>
+      /// <param name="context">The context of the server-side call handler being invoked.</param>
+      /// <returns>The response to send back to the client (wrapped by a task).</returns>
+      public virtual global::System.Threading.Tasks.Task<global::Google.Protobuf.WellKnownTypes.Empty> DeleteStoredInfoType(global::Google.Cloud.Dlp.V2.DeleteStoredInfoTypeRequest request, grpc::ServerCallContext context)
       {
         throw new grpc::RpcException(new grpc::Status(grpc::StatusCode.Unimplemented, ""));
       }
@@ -2002,6 +2110,270 @@ namespace Google.Cloud.Dlp.V2 {
       {
         return CallInvoker.AsyncUnaryCall(__Method_CancelDlpJob, null, options, request);
       }
+      /// <summary>
+      /// Creates a pre-built stored infoType to be used for inspection.
+      /// See https://cloud.google.com/dlp/docs/creating-stored-infotypes to
+      /// learn more.
+      /// </summary>
+      /// <param name="request">The request to send to the server.</param>
+      /// <param name="headers">The initial metadata to send with the call. This parameter is optional.</param>
+      /// <param name="deadline">An optional deadline for the call. The call will be cancelled if deadline is hit.</param>
+      /// <param name="cancellationToken">An optional token for canceling the call.</param>
+      /// <returns>The response received from the server.</returns>
+      public virtual global::Google.Cloud.Dlp.V2.StoredInfoType CreateStoredInfoType(global::Google.Cloud.Dlp.V2.CreateStoredInfoTypeRequest request, grpc::Metadata headers = null, global::System.DateTime? deadline = null, global::System.Threading.CancellationToken cancellationToken = default(global::System.Threading.CancellationToken))
+      {
+        return CreateStoredInfoType(request, new grpc::CallOptions(headers, deadline, cancellationToken));
+      }
+      /// <summary>
+      /// Creates a pre-built stored infoType to be used for inspection.
+      /// See https://cloud.google.com/dlp/docs/creating-stored-infotypes to
+      /// learn more.
+      /// </summary>
+      /// <param name="request">The request to send to the server.</param>
+      /// <param name="options">The options for the call.</param>
+      /// <returns>The response received from the server.</returns>
+      public virtual global::Google.Cloud.Dlp.V2.StoredInfoType CreateStoredInfoType(global::Google.Cloud.Dlp.V2.CreateStoredInfoTypeRequest request, grpc::CallOptions options)
+      {
+        return CallInvoker.BlockingUnaryCall(__Method_CreateStoredInfoType, null, options, request);
+      }
+      /// <summary>
+      /// Creates a pre-built stored infoType to be used for inspection.
+      /// See https://cloud.google.com/dlp/docs/creating-stored-infotypes to
+      /// learn more.
+      /// </summary>
+      /// <param name="request">The request to send to the server.</param>
+      /// <param name="headers">The initial metadata to send with the call. This parameter is optional.</param>
+      /// <param name="deadline">An optional deadline for the call. The call will be cancelled if deadline is hit.</param>
+      /// <param name="cancellationToken">An optional token for canceling the call.</param>
+      /// <returns>The call object.</returns>
+      public virtual grpc::AsyncUnaryCall<global::Google.Cloud.Dlp.V2.StoredInfoType> CreateStoredInfoTypeAsync(global::Google.Cloud.Dlp.V2.CreateStoredInfoTypeRequest request, grpc::Metadata headers = null, global::System.DateTime? deadline = null, global::System.Threading.CancellationToken cancellationToken = default(global::System.Threading.CancellationToken))
+      {
+        return CreateStoredInfoTypeAsync(request, new grpc::CallOptions(headers, deadline, cancellationToken));
+      }
+      /// <summary>
+      /// Creates a pre-built stored infoType to be used for inspection.
+      /// See https://cloud.google.com/dlp/docs/creating-stored-infotypes to
+      /// learn more.
+      /// </summary>
+      /// <param name="request">The request to send to the server.</param>
+      /// <param name="options">The options for the call.</param>
+      /// <returns>The call object.</returns>
+      public virtual grpc::AsyncUnaryCall<global::Google.Cloud.Dlp.V2.StoredInfoType> CreateStoredInfoTypeAsync(global::Google.Cloud.Dlp.V2.CreateStoredInfoTypeRequest request, grpc::CallOptions options)
+      {
+        return CallInvoker.AsyncUnaryCall(__Method_CreateStoredInfoType, null, options, request);
+      }
+      /// <summary>
+      /// Updates the stored infoType by creating a new version. The existing version
+      /// will continue to be used until the new version is ready.
+      /// See https://cloud.google.com/dlp/docs/creating-stored-infotypes to
+      /// learn more.
+      /// </summary>
+      /// <param name="request">The request to send to the server.</param>
+      /// <param name="headers">The initial metadata to send with the call. This parameter is optional.</param>
+      /// <param name="deadline">An optional deadline for the call. The call will be cancelled if deadline is hit.</param>
+      /// <param name="cancellationToken">An optional token for canceling the call.</param>
+      /// <returns>The response received from the server.</returns>
+      public virtual global::Google.Cloud.Dlp.V2.StoredInfoType UpdateStoredInfoType(global::Google.Cloud.Dlp.V2.UpdateStoredInfoTypeRequest request, grpc::Metadata headers = null, global::System.DateTime? deadline = null, global::System.Threading.CancellationToken cancellationToken = default(global::System.Threading.CancellationToken))
+      {
+        return UpdateStoredInfoType(request, new grpc::CallOptions(headers, deadline, cancellationToken));
+      }
+      /// <summary>
+      /// Updates the stored infoType by creating a new version. The existing version
+      /// will continue to be used until the new version is ready.
+      /// See https://cloud.google.com/dlp/docs/creating-stored-infotypes to
+      /// learn more.
+      /// </summary>
+      /// <param name="request">The request to send to the server.</param>
+      /// <param name="options">The options for the call.</param>
+      /// <returns>The response received from the server.</returns>
+      public virtual global::Google.Cloud.Dlp.V2.StoredInfoType UpdateStoredInfoType(global::Google.Cloud.Dlp.V2.UpdateStoredInfoTypeRequest request, grpc::CallOptions options)
+      {
+        return CallInvoker.BlockingUnaryCall(__Method_UpdateStoredInfoType, null, options, request);
+      }
+      /// <summary>
+      /// Updates the stored infoType by creating a new version. The existing version
+      /// will continue to be used until the new version is ready.
+      /// See https://cloud.google.com/dlp/docs/creating-stored-infotypes to
+      /// learn more.
+      /// </summary>
+      /// <param name="request">The request to send to the server.</param>
+      /// <param name="headers">The initial metadata to send with the call. This parameter is optional.</param>
+      /// <param name="deadline">An optional deadline for the call. The call will be cancelled if deadline is hit.</param>
+      /// <param name="cancellationToken">An optional token for canceling the call.</param>
+      /// <returns>The call object.</returns>
+      public virtual grpc::AsyncUnaryCall<global::Google.Cloud.Dlp.V2.StoredInfoType> UpdateStoredInfoTypeAsync(global::Google.Cloud.Dlp.V2.UpdateStoredInfoTypeRequest request, grpc::Metadata headers = null, global::System.DateTime? deadline = null, global::System.Threading.CancellationToken cancellationToken = default(global::System.Threading.CancellationToken))
+      {
+        return UpdateStoredInfoTypeAsync(request, new grpc::CallOptions(headers, deadline, cancellationToken));
+      }
+      /// <summary>
+      /// Updates the stored infoType by creating a new version. The existing version
+      /// will continue to be used until the new version is ready.
+      /// See https://cloud.google.com/dlp/docs/creating-stored-infotypes to
+      /// learn more.
+      /// </summary>
+      /// <param name="request">The request to send to the server.</param>
+      /// <param name="options">The options for the call.</param>
+      /// <returns>The call object.</returns>
+      public virtual grpc::AsyncUnaryCall<global::Google.Cloud.Dlp.V2.StoredInfoType> UpdateStoredInfoTypeAsync(global::Google.Cloud.Dlp.V2.UpdateStoredInfoTypeRequest request, grpc::CallOptions options)
+      {
+        return CallInvoker.AsyncUnaryCall(__Method_UpdateStoredInfoType, null, options, request);
+      }
+      /// <summary>
+      /// Gets a stored infoType.
+      /// See https://cloud.google.com/dlp/docs/creating-stored-infotypes to
+      /// learn more.
+      /// </summary>
+      /// <param name="request">The request to send to the server.</param>
+      /// <param name="headers">The initial metadata to send with the call. This parameter is optional.</param>
+      /// <param name="deadline">An optional deadline for the call. The call will be cancelled if deadline is hit.</param>
+      /// <param name="cancellationToken">An optional token for canceling the call.</param>
+      /// <returns>The response received from the server.</returns>
+      public virtual global::Google.Cloud.Dlp.V2.StoredInfoType GetStoredInfoType(global::Google.Cloud.Dlp.V2.GetStoredInfoTypeRequest request, grpc::Metadata headers = null, global::System.DateTime? deadline = null, global::System.Threading.CancellationToken cancellationToken = default(global::System.Threading.CancellationToken))
+      {
+        return GetStoredInfoType(request, new grpc::CallOptions(headers, deadline, cancellationToken));
+      }
+      /// <summary>
+      /// Gets a stored infoType.
+      /// See https://cloud.google.com/dlp/docs/creating-stored-infotypes to
+      /// learn more.
+      /// </summary>
+      /// <param name="request">The request to send to the server.</param>
+      /// <param name="options">The options for the call.</param>
+      /// <returns>The response received from the server.</returns>
+      public virtual global::Google.Cloud.Dlp.V2.StoredInfoType GetStoredInfoType(global::Google.Cloud.Dlp.V2.GetStoredInfoTypeRequest request, grpc::CallOptions options)
+      {
+        return CallInvoker.BlockingUnaryCall(__Method_GetStoredInfoType, null, options, request);
+      }
+      /// <summary>
+      /// Gets a stored infoType.
+      /// See https://cloud.google.com/dlp/docs/creating-stored-infotypes to
+      /// learn more.
+      /// </summary>
+      /// <param name="request">The request to send to the server.</param>
+      /// <param name="headers">The initial metadata to send with the call. This parameter is optional.</param>
+      /// <param name="deadline">An optional deadline for the call. The call will be cancelled if deadline is hit.</param>
+      /// <param name="cancellationToken">An optional token for canceling the call.</param>
+      /// <returns>The call object.</returns>
+      public virtual grpc::AsyncUnaryCall<global::Google.Cloud.Dlp.V2.StoredInfoType> GetStoredInfoTypeAsync(global::Google.Cloud.Dlp.V2.GetStoredInfoTypeRequest request, grpc::Metadata headers = null, global::System.DateTime? deadline = null, global::System.Threading.CancellationToken cancellationToken = default(global::System.Threading.CancellationToken))
+      {
+        return GetStoredInfoTypeAsync(request, new grpc::CallOptions(headers, deadline, cancellationToken));
+      }
+      /// <summary>
+      /// Gets a stored infoType.
+      /// See https://cloud.google.com/dlp/docs/creating-stored-infotypes to
+      /// learn more.
+      /// </summary>
+      /// <param name="request">The request to send to the server.</param>
+      /// <param name="options">The options for the call.</param>
+      /// <returns>The call object.</returns>
+      public virtual grpc::AsyncUnaryCall<global::Google.Cloud.Dlp.V2.StoredInfoType> GetStoredInfoTypeAsync(global::Google.Cloud.Dlp.V2.GetStoredInfoTypeRequest request, grpc::CallOptions options)
+      {
+        return CallInvoker.AsyncUnaryCall(__Method_GetStoredInfoType, null, options, request);
+      }
+      /// <summary>
+      /// Lists stored infoTypes.
+      /// See https://cloud.google.com/dlp/docs/creating-stored-infotypes to
+      /// learn more.
+      /// </summary>
+      /// <param name="request">The request to send to the server.</param>
+      /// <param name="headers">The initial metadata to send with the call. This parameter is optional.</param>
+      /// <param name="deadline">An optional deadline for the call. The call will be cancelled if deadline is hit.</param>
+      /// <param name="cancellationToken">An optional token for canceling the call.</param>
+      /// <returns>The response received from the server.</returns>
+      public virtual global::Google.Cloud.Dlp.V2.ListStoredInfoTypesResponse ListStoredInfoTypes(global::Google.Cloud.Dlp.V2.ListStoredInfoTypesRequest request, grpc::Metadata headers = null, global::System.DateTime? deadline = null, global::System.Threading.CancellationToken cancellationToken = default(global::System.Threading.CancellationToken))
+      {
+        return ListStoredInfoTypes(request, new grpc::CallOptions(headers, deadline, cancellationToken));
+      }
+      /// <summary>
+      /// Lists stored infoTypes.
+      /// See https://cloud.google.com/dlp/docs/creating-stored-infotypes to
+      /// learn more.
+      /// </summary>
+      /// <param name="request">The request to send to the server.</param>
+      /// <param name="options">The options for the call.</param>
+      /// <returns>The response received from the server.</returns>
+      public virtual global::Google.Cloud.Dlp.V2.ListStoredInfoTypesResponse ListStoredInfoTypes(global::Google.Cloud.Dlp.V2.ListStoredInfoTypesRequest request, grpc::CallOptions options)
+      {
+        return CallInvoker.BlockingUnaryCall(__Method_ListStoredInfoTypes, null, options, request);
+      }
+      /// <summary>
+      /// Lists stored infoTypes.
+      /// See https://cloud.google.com/dlp/docs/creating-stored-infotypes to
+      /// learn more.
+      /// </summary>
+      /// <param name="request">The request to send to the server.</param>
+      /// <param name="headers">The initial metadata to send with the call. This parameter is optional.</param>
+      /// <param name="deadline">An optional deadline for the call. The call will be cancelled if deadline is hit.</param>
+      /// <param name="cancellationToken">An optional token for canceling the call.</param>
+      /// <returns>The call object.</returns>
+      public virtual grpc::AsyncUnaryCall<global::Google.Cloud.Dlp.V2.ListStoredInfoTypesResponse> ListStoredInfoTypesAsync(global::Google.Cloud.Dlp.V2.ListStoredInfoTypesRequest request, grpc::Metadata headers = null, global::System.DateTime? deadline = null, global::System.Threading.CancellationToken cancellationToken = default(global::System.Threading.CancellationToken))
+      {
+        return ListStoredInfoTypesAsync(request, new grpc::CallOptions(headers, deadline, cancellationToken));
+      }
+      /// <summary>
+      /// Lists stored infoTypes.
+      /// See https://cloud.google.com/dlp/docs/creating-stored-infotypes to
+      /// learn more.
+      /// </summary>
+      /// <param name="request">The request to send to the server.</param>
+      /// <param name="options">The options for the call.</param>
+      /// <returns>The call object.</returns>
+      public virtual grpc::AsyncUnaryCall<global::Google.Cloud.Dlp.V2.ListStoredInfoTypesResponse> ListStoredInfoTypesAsync(global::Google.Cloud.Dlp.V2.ListStoredInfoTypesRequest request, grpc::CallOptions options)
+      {
+        return CallInvoker.AsyncUnaryCall(__Method_ListStoredInfoTypes, null, options, request);
+      }
+      /// <summary>
+      /// Deletes a stored infoType.
+      /// See https://cloud.google.com/dlp/docs/creating-stored-infotypes to
+      /// learn more.
+      /// </summary>
+      /// <param name="request">The request to send to the server.</param>
+      /// <param name="headers">The initial metadata to send with the call. This parameter is optional.</param>
+      /// <param name="deadline">An optional deadline for the call. The call will be cancelled if deadline is hit.</param>
+      /// <param name="cancellationToken">An optional token for canceling the call.</param>
+      /// <returns>The response received from the server.</returns>
+      public virtual global::Google.Protobuf.WellKnownTypes.Empty DeleteStoredInfoType(global::Google.Cloud.Dlp.V2.DeleteStoredInfoTypeRequest request, grpc::Metadata headers = null, global::System.DateTime? deadline = null, global::System.Threading.CancellationToken cancellationToken = default(global::System.Threading.CancellationToken))
+      {
+        return DeleteStoredInfoType(request, new grpc::CallOptions(headers, deadline, cancellationToken));
+      }
+      /// <summary>
+      /// Deletes a stored infoType.
+      /// See https://cloud.google.com/dlp/docs/creating-stored-infotypes to
+      /// learn more.
+      /// </summary>
+      /// <param name="request">The request to send to the server.</param>
+      /// <param name="options">The options for the call.</param>
+      /// <returns>The response received from the server.</returns>
+      public virtual global::Google.Protobuf.WellKnownTypes.Empty DeleteStoredInfoType(global::Google.Cloud.Dlp.V2.DeleteStoredInfoTypeRequest request, grpc::CallOptions options)
+      {
+        return CallInvoker.BlockingUnaryCall(__Method_DeleteStoredInfoType, null, options, request);
+      }
+      /// <summary>
+      /// Deletes a stored infoType.
+      /// See https://cloud.google.com/dlp/docs/creating-stored-infotypes to
+      /// learn more.
+      /// </summary>
+      /// <param name="request">The request to send to the server.</param>
+      /// <param name="headers">The initial metadata to send with the call. This parameter is optional.</param>
+      /// <param name="deadline">An optional deadline for the call. The call will be cancelled if deadline is hit.</param>
+      /// <param name="cancellationToken">An optional token for canceling the call.</param>
+      /// <returns>The call object.</returns>
+      public virtual grpc::AsyncUnaryCall<global::Google.Protobuf.WellKnownTypes.Empty> DeleteStoredInfoTypeAsync(global::Google.Cloud.Dlp.V2.DeleteStoredInfoTypeRequest request, grpc::Metadata headers = null, global::System.DateTime? deadline = null, global::System.Threading.CancellationToken cancellationToken = default(global::System.Threading.CancellationToken))
+      {
+        return DeleteStoredInfoTypeAsync(request, new grpc::CallOptions(headers, deadline, cancellationToken));
+      }
+      /// <summary>
+      /// Deletes a stored infoType.
+      /// See https://cloud.google.com/dlp/docs/creating-stored-infotypes to
+      /// learn more.
+      /// </summary>
+      /// <param name="request">The request to send to the server.</param>
+      /// <param name="options">The options for the call.</param>
+      /// <returns>The call object.</returns>
+      public virtual grpc::AsyncUnaryCall<global::Google.Protobuf.WellKnownTypes.Empty> DeleteStoredInfoTypeAsync(global::Google.Cloud.Dlp.V2.DeleteStoredInfoTypeRequest request, grpc::CallOptions options)
+      {
+        return CallInvoker.AsyncUnaryCall(__Method_DeleteStoredInfoType, null, options, request);
+      }
       /// <summary>Creates a new instance of client from given <c>ClientBaseConfiguration</c>.</summary>
       protected override DlpServiceClient NewInstance(ClientBaseConfiguration configuration)
       {
@@ -2038,7 +2410,12 @@ namespace Google.Cloud.Dlp.V2 {
           .AddMethod(__Method_ListDlpJobs, serviceImpl.ListDlpJobs)
           .AddMethod(__Method_GetDlpJob, serviceImpl.GetDlpJob)
           .AddMethod(__Method_DeleteDlpJob, serviceImpl.DeleteDlpJob)
-          .AddMethod(__Method_CancelDlpJob, serviceImpl.CancelDlpJob).Build();
+          .AddMethod(__Method_CancelDlpJob, serviceImpl.CancelDlpJob)
+          .AddMethod(__Method_CreateStoredInfoType, serviceImpl.CreateStoredInfoType)
+          .AddMethod(__Method_UpdateStoredInfoType, serviceImpl.UpdateStoredInfoType)
+          .AddMethod(__Method_GetStoredInfoType, serviceImpl.GetStoredInfoType)
+          .AddMethod(__Method_ListStoredInfoTypes, serviceImpl.ListStoredInfoTypes)
+          .AddMethod(__Method_DeleteStoredInfoType, serviceImpl.DeleteStoredInfoType).Build();
     }
 
   }
