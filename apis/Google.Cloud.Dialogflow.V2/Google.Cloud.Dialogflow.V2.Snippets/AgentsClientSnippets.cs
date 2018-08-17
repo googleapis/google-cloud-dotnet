@@ -15,8 +15,11 @@
 using Google.Api.Gax;
 using Google.Api.Gax.ResourceNames;
 using Google.Cloud.ClientTesting;
+using Google.Protobuf;
+using Microsoft.AspNetCore.Mvc;
 using System;
 using System.Collections.Generic;
+using System.IO;
 using System.Linq;
 using Xunit;
 
@@ -48,5 +51,40 @@ namespace Google.Cloud.Dialogflow.V2.Snippets
             }
             Console.WriteLine($"Total agents: {allAgents.Count}");
         }
+
+        // Sample: Webhook
+        public class DialogflowController : ControllerBase
+        {
+            // A Protobuf JSON parser configured to ignore unknown fields. This makes
+            // the action robust against new fields being introduced by Dialogflow.
+            private static readonly JsonParser jsonParser =
+                new JsonParser(JsonParser.Settings.Default.WithIgnoreUnknownFields(true));
+
+            public ContentResult DialogAction()
+            {
+                // Parse the body of the request using the Protobuf JSON parser,
+                // *not* Json.NET.
+                WebhookRequest request;
+                using (var reader = new StreamReader(Request.Body))
+                {
+                    request = jsonParser.Parse<WebhookRequest>(reader);
+                }
+
+                // Note: you should authenticate the request here.
+
+                // Populate the response
+                WebhookResponse response = new WebhookResponse
+                {
+                    // ...
+                };
+
+                // Ask Protobuf to format the JSON to return.
+                // Again, we don't want to use Json.NET - it doesn't know how to handle Struct
+                // values etc.
+                string responseJson = response.ToString();
+                return Content(responseJson, "application/json");
+            }
+        }
+        // End sample
     }
 }
