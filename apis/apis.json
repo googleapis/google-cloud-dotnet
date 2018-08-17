@@ -258,6 +258,9 @@
     "dependencies": {
       "Google.LongRunning": "1.0.0",
       "Grpc.Core": "1.13.1"
+    },
+    "testDependencies": {
+      "Microsoft.AspNetCore.Mvc.Core": "1.0.2"
     }
   },
 
