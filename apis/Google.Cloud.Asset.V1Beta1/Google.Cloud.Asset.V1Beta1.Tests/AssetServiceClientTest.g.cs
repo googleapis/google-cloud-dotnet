@@ -42,13 +42,13 @@ namespace Google.Cloud.Asset.V1Beta1.Tests
                 .Returns(new Mock<Operations.OperationsClient>().Object);
             BatchGetAssetsHistoryRequest expectedRequest = new BatchGetAssetsHistoryRequest
             {
-                Parent = new ProjectName("[PROJECT]").ToString(),
+                Parent = new Google.Api.Gax.ResourceNames.ProjectName("[PROJECT]").ToString(),
             };
             BatchGetAssetsHistoryResponse expectedResponse = new BatchGetAssetsHistoryResponse();
             mockGrpcClient.Setup(x => x.BatchGetAssetsHistory(expectedRequest, It.IsAny<CallOptions>()))
                 .Returns(expectedResponse);
             AssetServiceClient client = new AssetServiceClientImpl(mockGrpcClient.Object, null);
-            string formattedParent = new ProjectName("[PROJECT]").ToString();
+            string formattedParent = new Google.Api.Gax.ResourceNames.ProjectName("[PROJECT]").ToString();
             BatchGetAssetsHistoryResponse response = client.BatchGetAssetsHistory(formattedParent);
             Assert.Same(expectedResponse, response);
             mockGrpcClient.VerifyAll();
@@ -62,13 +62,13 @@ namespace Google.Cloud.Asset.V1Beta1.Tests
                 .Returns(new Mock<Operations.OperationsClient>().Object);
             BatchGetAssetsHistoryRequest expectedRequest = new BatchGetAssetsHistoryRequest
             {
-                Parent = new ProjectName("[PROJECT]").ToString(),
+                Parent = new Google.Api.Gax.ResourceNames.ProjectName("[PROJECT]").ToString(),
             };
             BatchGetAssetsHistoryResponse expectedResponse = new BatchGetAssetsHistoryResponse();
             mockGrpcClient.Setup(x => x.BatchGetAssetsHistoryAsync(expectedRequest, It.IsAny<CallOptions>()))
                 .Returns(new Grpc.Core.AsyncUnaryCall<BatchGetAssetsHistoryResponse>(Task.FromResult(expectedResponse), null, null, null, null));
             AssetServiceClient client = new AssetServiceClientImpl(mockGrpcClient.Object, null);
-            string formattedParent = new ProjectName("[PROJECT]").ToString();
+            string formattedParent = new Google.Api.Gax.ResourceNames.ProjectName("[PROJECT]").ToString();
             BatchGetAssetsHistoryResponse response = await client.BatchGetAssetsHistoryAsync(formattedParent);
             Assert.Same(expectedResponse, response);
             mockGrpcClient.VerifyAll();
@@ -82,7 +82,7 @@ namespace Google.Cloud.Asset.V1Beta1.Tests
                 .Returns(new Mock<Operations.OperationsClient>().Object);
             BatchGetAssetsHistoryRequest request = new BatchGetAssetsHistoryRequest
             {
-                Parent = new ProjectName("[PROJECT]").ToString(),
+                Parent = new Google.Api.Gax.ResourceNames.ProjectName("[PROJECT]").ToString(),
                 AssetNames = { },
                 ContentType = ContentType.Unspecified,
                 ReadTimeWindow = new TimeWindow(),
@@ -104,7 +104,7 @@ namespace Google.Cloud.Asset.V1Beta1.Tests
                 .Returns(new Mock<Operations.OperationsClient>().Object);
             BatchGetAssetsHistoryRequest request = new BatchGetAssetsHistoryRequest
             {
-                Parent = new ProjectName("[PROJECT]").ToString(),
+                Parent = new Google.Api.Gax.ResourceNames.ProjectName("[PROJECT]").ToString(),
                 AssetNames = { },
                 ContentType = ContentType.Unspecified,
                 ReadTimeWindow = new TimeWindow(),
