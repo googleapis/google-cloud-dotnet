@@ -18,6 +18,7 @@ using System;
 using System.Collections.Generic;
 using System.IO;
 using System.Linq;
+using System.Text.RegularExpressions;
 using YamlDotNet.Serialization;
 using YamlDotNet.Serialization.NamingConventions;
 
@@ -174,6 +175,8 @@ namespace Google.Cloud.Tools.GenerateDocfxSources
         /// {{description}}: Markdown for the API description
         /// {{installation}}: Markdown for the installation section
         /// {{auth}}: Markdown for authentication instructions
+        /// {{sample:sample ID}}: Include a sample. The sample ID is of the form "Source.Anchor",
+        ///   e.g. "Index.GettingStarted" or "StorageClient.Overview"
         /// </summary>
         private static string TransformDocTemplate(ApiMetadata api, string text)
         {
@@ -214,7 +217,7 @@ Authentication](https://cloud.google.com/docs/authentication/getting-started) gu
 @"Create a client instance by calling the static `Create` method, optionally
 specifying an end-point or channel and settings.";
 
-            return text
+            text = text
                 .Replace("{{title}}", title)
                 .Replace("{{description}}", description)
                 .Replace("{{version}}", version)
@@ -222,6 +225,8 @@ specifying an end-point or channel and settings.";
                 .Replace("{{auth}}", auth)
                 .Replace("{{client-classes}}", clientClasses)
                 .Replace("{{client-construction}}", clientConstruction);
+            text = Regex.Replace(text, @"\{\{sample:([^\.]+)\.([^}]+)\}\}", "[!code-cs[](obj/snippets/" + api.Id + ".$1.txt#$2)]");
+            return text;
         }
 
         private static string CreateClientClassesDocumentation(ApiMetadata api)
