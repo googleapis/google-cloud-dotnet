@@ -321,6 +321,14 @@ namespace Google.Cloud.Logging.NLog.Tests
             Assert.Equal("Milky way", entry0.Labels["Galaxy"]);
         }
 
+        public enum PlanetType
+        {
+            None,
+            Gas,
+            Ocean,
+            Ice,
+        }
+
         [Fact]
         public async Task SingleLogEntryWithJsonProperties()
         {
@@ -328,18 +336,22 @@ namespace Google.Cloud.Logging.NLog.Tests
                 googleTarget =>
                 {
                     googleTarget.ContextProperties.Add(new TargetPropertyWithContext() { Name = "Galaxy", Layout = "Milky way" });
-                    LogManager.GetLogger("testlogger").Info("Hello {Planet}, width: {Radius} km, life: {Habitable}", "Earth", 6371, true);
+                    LogManager.GetLogger("testlogger").Info("Hello {Planet}, width: {Radius} km, life: {Habitable}, type: {PlanetType}", "Earth", 6371, true, PlanetType.Ocean);
                     return Task.FromResult(0);
                 }, includeEventProperties: true, configFn: googleTarget => googleTarget.SendJsonPayload = true);
             Assert.Single(uploadedEntries);
             var entry0 = uploadedEntries[0];
             Assert.Equal("", entry0.TextPayload?.Trim() ?? "");
-            Assert.Equal("Hello \"Earth\", width: 6371 km, life: true", entry0.JsonPayload.Fields["message"].StringValue);
-            Assert.Equal(4, entry0.JsonPayload.Fields["properties"].StructValue.Fields.Count);
-            Assert.Equal("Milky way", entry0.JsonPayload.Fields["properties"].StructValue.Fields["Galaxy"].StringValue);
-            Assert.Equal("Earth", entry0.JsonPayload.Fields["properties"].StructValue.Fields["Planet"].StringValue);
-            Assert.Equal(true, entry0.JsonPayload.Fields["properties"].StructValue.Fields["Habitable"].BoolValue);
-            Assert.Equal(6371, entry0.JsonPayload.Fields["properties"].StructValue.Fields["Radius"].NumberValue);
+            Assert.Equal("Hello \"Earth\", width: 6371 km, life: true, type: Ocean", entry0.JsonPayload.Fields["message"].StringValue);
+
+            var properties = entry0.JsonPayload.Fields["properties"].StructValue;
+
+            Assert.Equal(5, properties.Fields.Count);
+            Assert.Equal("Milky way", properties.Fields["Galaxy"].StringValue);
+            Assert.Equal("Earth", properties.Fields["Planet"].StringValue);
+            Assert.Equal(true, properties.Fields["Habitable"].BoolValue);
+            Assert.Equal(6371, properties.Fields["Radius"].NumberValue);
+            Assert.Equal("Ocean", properties.Fields["PlanetType"].StringValue);
         }
 
         [Fact]
@@ -358,15 +370,51 @@ namespace Google.Cloud.Logging.NLog.Tests
             var entry0 = uploadedEntries[0];
             Assert.Equal("", entry0.TextPayload?.Trim() ?? "");
             Assert.Equal("Favorite \"Red\", \"Green\", \"Blue\" and \"NTSC\"=1953, \"PAL\"=1962, \"SECAM\"=1956", entry0.JsonPayload.Fields["message"].StringValue);
-            Assert.Equal(2, entry0.JsonPayload.Fields["properties"].StructValue.Fields.Count);
-            Assert.Equal(3, entry0.JsonPayload.Fields["properties"].StructValue.Fields["Colors"].ListValue.Values.Count);
-            Assert.Equal("Red", entry0.JsonPayload.Fields["properties"].StructValue.Fields["Colors"].ListValue.Values[0].StringValue);
-            Assert.Equal("Green", entry0.JsonPayload.Fields["properties"].StructValue.Fields["Colors"].ListValue.Values[1].StringValue);
-            Assert.Equal("Blue", entry0.JsonPayload.Fields["properties"].StructValue.Fields["Colors"].ListValue.Values[2].StringValue);
-            Assert.Equal(3, entry0.JsonPayload.Fields["properties"].StructValue.Fields["Devices"].StructValue.Fields.Count);
-            Assert.Equal(1953, entry0.JsonPayload.Fields["properties"].StructValue.Fields["Devices"].StructValue.Fields["NTSC"].NumberValue);
-            Assert.Equal(1962, entry0.JsonPayload.Fields["properties"].StructValue.Fields["Devices"].StructValue.Fields["PAL"].NumberValue);
-            Assert.Equal(1956, entry0.JsonPayload.Fields["properties"].StructValue.Fields["Devices"].StructValue.Fields["SECAM"].NumberValue);
+
+            var properties = entry0.JsonPayload.Fields["properties"].StructValue;
+            Assert.Equal(2, properties.Fields.Count);
+
+            var colorListValues = properties.Fields["Colors"].ListValue.Values;
+            Assert.Equal(3, colorListValues.Count);
+            Assert.Equal("Red", colorListValues[0].StringValue);
+            Assert.Equal("Green", colorListValues[1].StringValue);
+            Assert.Equal("Blue", colorListValues[2].StringValue);
+
+            var deviceDictionary = properties.Fields["Devices"].StructValue;
+            Assert.Equal(3, deviceDictionary.Fields.Count);
+            Assert.Equal(1953, deviceDictionary.Fields["NTSC"].NumberValue);
+            Assert.Equal(1962, deviceDictionary.Fields["PAL"].NumberValue);
+            Assert.Equal(1956, deviceDictionary.Fields["SECAM"].NumberValue);
+        }
+
+        [Fact]
+        public async Task SingleLogEntryWithJsonObjectProperties()
+        {
+            var uploadedEntries = await RunTestWorkingServer(
+                googleTarget =>
+                {
+                    googleTarget.SendJsonPayload = true;
+                    LogManager.GetLogger("testlogger").Info("Favorite {Planet}", new { Name = "Earth", Galaxy = "Milky way", Colors = new[] { "Red", "Green", "Blue" }, PlanetType = PlanetType.Ocean });
+                    return Task.FromResult(0);
+                }, includeEventProperties: true, configFn: googleTarget => googleTarget.SendJsonPayload = true);
+            Assert.Single(uploadedEntries);
+            var entry0 = uploadedEntries[0];
+            Assert.Equal("", entry0.TextPayload?.Trim() ?? "");
+
+            var properties = entry0.JsonPayload.Fields["properties"].StructValue;
+
+            Assert.Equal(1, properties.Fields.Count);
+            Assert.Equal(4, properties.Fields["Planet"].StructValue.Fields.Count);
+            Assert.Equal("Earth", properties.Fields["Planet"].StructValue.Fields["Name"].StringValue);
+            Assert.Equal("Milky way", properties.Fields["Planet"].StructValue.Fields["Galaxy"].StringValue);
+
+            var colorListValues = properties.Fields["Planet"].StructValue.Fields["Colors"].ListValue.Values;
+            Assert.Equal(3, colorListValues.Count);
+            Assert.Equal("Red", colorListValues[0].StringValue);
+            Assert.Equal("Green", colorListValues[1].StringValue);
+            Assert.Equal("Blue", colorListValues[2].StringValue);
+
+            Assert.Equal("Ocean", properties.Fields["Planet"].StructValue.Fields["PlanetType"].StringValue);
         }
 
         [Fact]
