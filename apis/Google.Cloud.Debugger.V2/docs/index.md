@@ -18,4 +18,4 @@
 
 ## Register Debuggee
 
-[!code-cs[](obj/snippets/Google.Cloud.Debugger.V2.Controller2Client.txt#RegisterDebuggee)]
+{{sample:Controller2Client.RegisterDebuggee}}

@@ -25,33 +25,33 @@ The preferred way to initialize Google Diagnostics services in ASP.NET Core 2.0 
 is using the `UseGoogleDiagnostics` extentension method on `IWebHostBuilder`. This configures
 Logging, Tracing and Error Reporting middleware.
 
-[!code-cs[](obj/snippets/Google.Cloud.Diagnostics.AspNetCore.Diagnostics.txt#UseGoogleDiagnostics)]
+{{sample:Diagnostics.UseGoogleDiagnostics}}
 
 You can still initialize the separate components using the extension methods below.
 
 ## Registering Error Reporting
 
-[!code-cs[](obj/snippets/Google.Cloud.Diagnostics.AspNetCore.ErrorReporting.txt#ReportUnhandledExceptions)]
+{{sample:ErrorReporting.ReportUnhandledExceptions}}
 
 ## Log Exceptions
 
-[!code-cs[](obj/snippets/Google.Cloud.Diagnostics.AspNetCore.ErrorReporting.txt#LogExceptions)]
+{{sample:ErrorReporting.LogExceptions}}
 
 ## Initializing Logging
 
-[!code-cs[](obj/snippets/Google.Cloud.Diagnostics.AspNetCore.Logging.txt#RegisterGoogleLogger)]
+{{sample:Logging.RegisterGoogleLogger}}
 
 ## Initializing Logging (ASP.NET Core 2.0+)
 
-[!code-cs[](obj/snippets/Google.Cloud.Diagnostics.AspNetCore.Logging.txt#RegisterGoogleLogger2)]
+{{sample:Logging.RegisterGoogleLogger2}}
 
 ## Log
 
-[!code-cs[](obj/snippets/Google.Cloud.Diagnostics.AspNetCore.Logging.txt#UseGoogleLogger)]
+{{sample:Logging.UseGoogleLogger}}
 
 ## Initializing Tracing
 
-[!code-cs[](obj/snippets/Google.Cloud.Diagnostics.AspNetCore.Trace.txt#RegisterGoogleTracer)]
+{{sample:Trace.RegisterGoogleTracer}}
 
 ## Tracing in MVC Controllers
 
@@ -60,16 +60,16 @@ To use the `IManagedTracer` in MVC controllers you can either inject the singlet
 can in inject the `IManagedTracer` into the action method using the `[FromServices]` attribute
 (see `TraceSamplesMethodController`).
 
-[!code-cs[](obj/snippets/Google.Cloud.Diagnostics.AspNetCore.Trace.txt#TraceMVCConstructor)]
+{{sample:Trace.TraceMVCConstructor}}
 
-[!code-cs[](obj/snippets/Google.Cloud.Diagnostics.AspNetCore.Trace.txt#TraceMVCMethod)]
+{{sample:Trace.TraceMVCMethod}}
 
 ## Manual Tracing
 
-[!code-cs[](obj/snippets/Google.Cloud.Diagnostics.AspNetCore.Trace.txt#UseTracer)]
+{{sample:Trace.UseTracer}}
 
-[!code-cs[](obj/snippets/Google.Cloud.Diagnostics.AspNetCore.Trace.txt#UseTracerRunIn)]
+{{sample:Trace.UseTracerRunIn}}
 
 ## Trace Outgoing HTTP Requests
 
-[!code-cs[](obj/snippets/Google.Cloud.Diagnostics.AspNetCore.Trace.txt#TraceOutgoing)]
+{{sample:Trace.TraceOutgoing}}

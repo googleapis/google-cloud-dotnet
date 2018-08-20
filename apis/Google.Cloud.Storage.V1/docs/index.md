@@ -27,7 +27,7 @@ details.
 
 # Sample code
 
-[!code-cs[](obj/snippets/Google.Cloud.Storage.V1.StorageClient.txt#Overview)]
+{{sample:StorageClient.Overview}}
 
 ## Signed URLs
 
@@ -38,11 +38,11 @@ a Google account.
 For example, Signed URLs can be created to provide read-only access to
 existing objects:
 
-[!code-cs[](obj/snippets/Google.Cloud.Storage.V1.UrlSigner.txt#SignedURLGet)]
+{{sample:UrlSigner.SignedURLGet}}
 
 Or write-only access to put specific object content into a bucket:
 
-[!code-cs[](obj/snippets/Google.Cloud.Storage.V1.UrlSigner.txt#SignedURLPut)]
+{{sample:UrlSigner.SignedURLPut}}
 
 ### Signing URLs without a service account credential file
 
@@ -54,7 +54,7 @@ IAM service to perform the signing, with the
 [Google.Apis.Iam.v1](https://www.nuget.org/packages/Google.Apis.Iam.v1/)
 package. Here's a sample implementation:
 
-[!code-cs[](obj/snippets/Google.Cloud.Storage.V1.UrlSigner.txt#IamServiceBlobSigner)]
+{{sample:UrlSigner.IamServiceBlobSigner}}
 
 (We may make this available in its own package at some point in the
 future.)
@@ -70,7 +70,7 @@ Platform, as it relies on information from the metadata server.) If
 you want to use a different service account, you could include the
 account ID as part of your application configuration.
 
-[!code-cs[](obj/snippets/Google.Cloud.Storage.V1.UrlSigner.txt#IamServiceBlobSignerUsage)]
+{{sample:UrlSigner.IamServiceBlobSignerUsage}}
 
 ## Upload URIs
 
@@ -84,7 +84,7 @@ a pre-initated upload session will force the client application to upload throug
 the region in which the session began, which will likely be close to the service,
 and not necessarily the client.
 
-[!code-cs[](obj/snippets/Google.Cloud.Storage.V1.StorageClient.txt#UploadObjectWithSessionUri)]
+{{sample:StorageClient.UploadObjectWithSessionUri}}
 
 ## Customer-supplied encryption keys
 
@@ -93,7 +93,7 @@ specify your own encryption key instead of using the server-supplied
 one, you can do so either for all operations with a particular
 `StorageClient` or on individual ones.
 
-[!code-cs[](obj/snippets/Google.Cloud.Storage.V1.StorageClient.txt#CustomerSuppliedEncryptionKeys)]
+{{sample:StorageClient.CustomerSuppliedEncryptionKeys}}
 
 ## Change notification via Google Cloud Pub/Sub
 
@@ -106,4 +106,4 @@ bucket. You'll need to add a dependency on the
 `Google.Cloud.PubSub.V1` NuGet package to create the topic and
 manage its permissions.
 
-[!code-cs[](obj/snippets/Google.Cloud.Storage.V1.StorageClient.txt#NotificationsOverview)]
+{{sample:StorageClient.NotificationsOverview}}

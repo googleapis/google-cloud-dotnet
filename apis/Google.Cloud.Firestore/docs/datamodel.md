@@ -123,14 +123,14 @@ and deserialization (when retrieving data). All public instance properties with 
 
 For example, to model a city as a document, you might have a class like this:
 
-[!code-cs[](obj/snippets/Google.Cloud.Firestore.DataModel.txt#AttributedClass)]
+{{sample:DataModel.AttributedClass}}
 
 Note how the `IsCapital` property specifies the name in the attribute; this is the field name that will be in the stored document.
 This allows you to use idiomatic names in your .NET code, but match whatever field name is used in your Firestore database.
 
 You might then use it to create a document and then fetch it like this:
 
-[!code-cs[](obj/snippets/Google.Cloud.Firestore.DataModel.txt#AttributedClassUsage)]
+{{sample:DataModel.AttributedClassUsage}}
 
 In order to deserialize a map as an attributed class, the class must have a public parameterless constructor. (The C# compiler provides
 one by default if no other constructors are specified.) The properties in the map must each have an attributed, public instance property with a public setter,

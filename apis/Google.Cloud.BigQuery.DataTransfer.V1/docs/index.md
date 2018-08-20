@@ -18,5 +18,5 @@
 
 ## List clusters
 
-[!code-cs[](obj/snippets/Google.Cloud.BigQuery.DataTransfer.V1.DataTransferServiceClient.txt#ListAllDataSources)]
+{{sample:DataTransferServiceClient.ListAllDataSources}}
 

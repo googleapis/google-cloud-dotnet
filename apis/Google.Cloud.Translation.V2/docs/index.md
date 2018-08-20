@@ -34,19 +34,19 @@ details.
 
 ## Translating a single item of text
 
-[!code-cs[](obj/snippets/Google.Cloud.Translation.V2.TranslationClient.txt#TranslateText)]
+{{sample:TranslationClient.TranslateText}}
 
 ## Translating a single item of HTML
 
-[!code-cs[](obj/snippets/Google.Cloud.Translation.V2.TranslationClient.txt#TranslateHtml)]
+{{sample:TranslationClient.TranslateHtml}}
 
 ## Translating multiple items of text
 
-[!code-cs[](obj/snippets/Google.Cloud.Translation.V2.TranslationClient.txt#TranslateTextMultiple)]
+{{sample:TranslationClient.TranslateTextMultiple}}
 
 ## Translating multiple items of HTML
 
-[!code-cs[](obj/snippets/Google.Cloud.Translation.V2.TranslationClient.txt#TranslateHtmlMultiple)]
+{{sample:TranslationClient.TranslateHtmlMultiple}}
 
 ## Specifying a translation model
 
@@ -62,16 +62,16 @@ enum, making it simple to specify commonly-used models, whereas `AdvancedTransla
 
 For example, using a `TranslationClient`-wide model:
 
-[!code-cs[](obj/snippets/Google.Cloud.Translation.V2.TranslationClient.txt#TranslateTextBaseDefaultModel)]
+{{sample:TranslationClient.TranslateTextBaseDefaultModel}}
 
 `TranslationClient` specifying a model for a single operation:
 
-[!code-cs[](obj/snippets/Google.Cloud.Translation.V2.TranslationClient.txt#TranslateTextBaseOverrideModel)]
+{{sample:TranslationClient.TranslateTextBaseOverrideModel}}
 
 Using an `AdvancedTranslationClient`-wide model:
 
-[!code-cs[](obj/snippets/Google.Cloud.Translation.V2.AdvancedTranslationClient.txt#TranslateTextBaseDefaultModel)]
+{{sample:AdvancedTranslationClient.TranslateTextBaseDefaultModel}}
 
 `AdvancedTranslationClient` specifying a model for a single operation:
 
-[!code-cs[](obj/snippets/Google.Cloud.Translation.V2.AdvancedTranslationClient.txt#TranslateTextBaseOverrideModel)]
+{{sample:AdvancedTranslationClient.TranslateTextBaseOverrideModel}}

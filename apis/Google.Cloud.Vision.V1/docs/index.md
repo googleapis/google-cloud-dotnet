@@ -28,57 +28,57 @@ There are various factory methods on the
 [Image](obj/api/Google.Cloud.Vision.V1.Image.yml) class to allow
 instances to be constructed from files, streams, byte arrays and URIs.
 
-[!code-cs[](obj/snippets/Google.Cloud.Vision.V1.Image.txt#FactoryMethods)]
+{{sample:Image.FactoryMethods}}
 
 All IO-related methods have async equivalents.
 
 ## Detect faces in a single image
 
-[!code-cs[](obj/snippets/Google.Cloud.Vision.V1.ImageAnnotatorClient.txt#DetectFaces)]
+{{sample:ImageAnnotatorClient.DetectFaces}}
 
 ## Detect text in a single image
 
-[!code-cs[](obj/snippets/Google.Cloud.Vision.V1.ImageAnnotatorClient.txt#DetectText)]
+{{sample:ImageAnnotatorClient.DetectText}}
 
 ## Detect document text in a single image
 
-[!code-cs[](obj/snippets/Google.Cloud.Vision.V1.ImageAnnotatorClient.txt#DetectDocumentText)]
+{{sample:ImageAnnotatorClient.DetectDocumentText}}
 
 ## Detect labels in a single image
 
-[!code-cs[](obj/snippets/Google.Cloud.Vision.V1.ImageAnnotatorClient.txt#DetectLabels)]
+{{sample:ImageAnnotatorClient.DetectLabels}}
 
 ## Detect landmarks in a single image
 
-[!code-cs[](obj/snippets/Google.Cloud.Vision.V1.ImageAnnotatorClient.txt#DetectLandmarks)]
+{{sample:ImageAnnotatorClient.DetectLandmarks}}
 
 ## Detect logos in a single image
 
-[!code-cs[](obj/snippets/Google.Cloud.Vision.V1.ImageAnnotatorClient.txt#DetectLogos)]
+{{sample:ImageAnnotatorClient.DetectLogos}}
 
 ## Perform "safe search" processing on a single image
 
-[!code-cs[](obj/snippets/Google.Cloud.Vision.V1.ImageAnnotatorClient.txt#DetectSafeSearch)]
+{{sample:ImageAnnotatorClient.DetectSafeSearch}}
 
 ## Perform image property processing on a single image
 
-[!code-cs[](obj/snippets/Google.Cloud.Vision.V1.ImageAnnotatorClient.txt#DetectImageProperties)]
+{{sample:ImageAnnotatorClient.DetectImageProperties}}
 
 ## Suggest crop hints for a single image
 
-[!code-cs[](obj/snippets/Google.Cloud.Vision.V1.ImageAnnotatorClient.txt#DetectCropHints)]
+{{sample:ImageAnnotatorClient.DetectCropHints}}
 
 ## Perform analysis for other web references on a single image
 
-[!code-cs[](obj/snippets/Google.Cloud.Vision.V1.ImageAnnotatorClient.txt#DetectWebInformation)]
+{{sample:ImageAnnotatorClient.DetectWebInformation}}
 
 ## Detect faces and landmarks in a single image
 
-[!code-cs[](obj/snippets/Google.Cloud.Vision.V1.ImageAnnotatorClient.txt#Annotate)]
+{{sample:ImageAnnotatorClient.Annotate}}
 
 ## Detect faces in one image and logos in another
 
-[!code-cs[](obj/snippets/Google.Cloud.Vision.V1.ImageAnnotatorClient.txt#BatchAnnotateImages)]
+{{sample:ImageAnnotatorClient.BatchAnnotateImages}}
 
 ## Error handling
 
@@ -86,11 +86,11 @@ All the methods which annotate a single image (and therefore have a single respo
 [AnnotateImageException](obj/api/Google.Cloud.Vision.V1.AnnotateImageException.yml) if the response
 contains an error.
 
-[!code-cs[](obj/snippets/Google.Cloud.Vision.V1.ImageAnnotatorClient.txt#ErrorHandling_SingleImage)]
+{{sample:ImageAnnotatorClient.ErrorHandling_SingleImage}}
 
 The [BatchAnnotateImages](obj/api/Google.Cloud.Vision.V1.ImageAnnotatorClient.yml#Google_Cloud_Vision_V1_ImageAnnotatorClient_BatchAnnotateImages_System_Collections_Generic_IEnumerable_Google_Cloud_Vision_V1_AnnotateImageRequest__Google_Api_Gax_Grpc_CallSettings_)
 method does not throw this exception, but [BatchAnnotateImagesResponse.ThrowOnAnyError()](obj/api/Google.Cloud.Vision.V1.BatchAnnotateImagesResponse.yml##Google_Cloud_Vision_V1_BatchAnnotateImagesResponse_ThrowOnAnyError) checks
 all responses are successful, throwing an AggregateException if there are any errors.
 The AggregateException contains one AnnotateImageException for each response that contains an error.
 
-[!code-cs[](obj/snippets/Google.Cloud.Vision.V1.BatchAnnotateImagesResponse.txt#ThrowOnAnyError)]
+{{sample:BatchAnnotateImagesResponse.ThrowOnAnyError}}

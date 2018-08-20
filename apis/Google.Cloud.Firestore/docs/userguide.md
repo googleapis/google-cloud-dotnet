@@ -7,21 +7,21 @@ their path from the database root. From a `DocumentReference` you can create a `
 for a child collection, and likewise from a `CollectionReference` you can create a `DocumentReference`
 for a child document.
 
-[!code-cs[](obj/snippets/Google.Cloud.Firestore.UserGuide.txt#References)]
+{{sample:UserGuide.References}}
 
 ## Writing documents
 
 See the [data model](datamodel.md) page for the different representations available. For the rest of
 this section, we will use the following attributed class:
 
-[!code-cs[](obj/snippets/Google.Cloud.Firestore.UserGuide.txt#AttributedClass)]
+{{sample:UserGuide.AttributedClass}}
 
 ### Creating a document
 
 A specific document can be created using `DocumentReference.CreateAsync`; alternatively,
 `CollectionReference.AddAsync` will generate a random document ID within the associated collection.
 
-[!code-cs[](obj/snippets/Google.Cloud.Firestore.UserGuide.txt#AddAsync)]
+{{sample:UserGuide.AddAsync}}
 
 Once created, a document can be modified in multiple ways.
 
@@ -33,33 +33,33 @@ See [further work items](furtherwork.md) for more discussion over improving this
 
 A precondition may be specified for the update.
 
-[!code-cs[](obj/snippets/Google.Cloud.Firestore.UserGuide.txt#UpdateAsync)]
+{{sample:UserGuide.UpdateAsync}}
 
 ### Setting document data with optional merging
 
 The `SetAsync` operation is versatile. By default it replaces all data in the document. For example, this code:
 
-[!code-cs[](obj/snippets/Google.Cloud.Firestore.UserGuide.txt#SetAsyncOverwrite)]
+{{sample:UserGuide.SetAsyncOverwrite}}
 
 ... would end up wiping out setting the `State` field in the document to a null value. (`Capital` would still be `false`,
 as that's the default value of the `bool` type.)
 
 To use our class model but specify which fields we want to merge, we can specify an appropriate `SetOptions`.
 
-[!code-cs[](obj/snippets/Google.Cloud.Firestore.UserGuide.txt#SetAsyncMergeSpecific)]
+{{sample:UserGuide.SetAsyncMergeSpecific}}
 
 A simpler option in many cases - particularly when your document doesn't deal with nested data - is to use an anonymous
 type to specify the fields you want to modify, and specify `SetOptions.MergeAll` so that all the fields you've specified
 in the anonymous type are merged, but no others.
 
-[!code-cs[](obj/snippets/Google.Cloud.Firestore.UserGuide.txt#SetAsyncMergeAll)]
+{{sample:UserGuide.SetAsyncMergeAll}}
 
 ### Deleting a document
 
 Deleting a document is simple via `DocumentReference.DeleteAsync`. A precondition can be specified (for example, to only
 delete the document if its last-update timestamp matches one you know); otherwise the delete operation is unconditional.
 
-[!code-cs[](obj/snippets/Google.Cloud.Firestore.UserGuide.txt#DeleteAsync)]
+{{sample:UserGuide.DeleteAsync}}
 
 All of these operations can also be performed in batches via `WriteBatch`, or within transactions.
 
@@ -71,14 +71,14 @@ Once your data is in Firestore, you probably want to read it at some point.
 
 `DocumentReference` allows you to fetch a snapshot of a document:
 
-[!code-cs[](obj/snippets/Google.Cloud.Firestore.UserGuide.txt#DocumentSnapshot)]
+{{sample:UserGuide.DocumentSnapshot}}
 
 ### Querying
 
 You can also query collections, either directly to retrieve all the data from all the documents in the collection,
 or with filtering, projections, ordering etc.
 
-[!code-cs[](obj/snippets/Google.Cloud.Firestore.UserGuide.txt#QuerySnapshot)]
+{{sample:UserGuide.QuerySnapshot}}
 
 ## Transactions
 
@@ -98,14 +98,14 @@ details of counters, see the [main Firestore user guide](https://firebase.google
 
 Once a day, we want to atomically fetch the current counter, and update the daily one.
 
-[!code-cs[](obj/snippets/Google.Cloud.Firestore.UserGuide.txt#TransactionAsyncCallbackNoResult)]
+{{sample:UserGuide.TransactionAsyncCallbackNoResult}}
 
 ### Updating the current counter
 
 When we update the current counter, we may well want to know the current value afterwards. That's easily done by
 returning it from the callback:
 
-[!code-cs[](obj/snippets/Google.Cloud.Firestore.UserGuide.txt#TransactionAsyncCallbackWithResult)]
+{{sample:UserGuide.TransactionAsyncCallbackWithResult}}
 
 ## Listening for changes
 
@@ -123,7 +123,7 @@ Each of these changes is logged by the callback.
 After stopping the listening operation, the document is updated one
 final time - which doesn't produce any output.
 
-[!code-cs[](obj/snippets/Google.Cloud.Firestore.UserGuide.txt#ListenDocument)]
+{{sample:UserGuide.ListenDocument}}
 
 ### Listening for changes in a query
 
@@ -140,7 +140,7 @@ When the listener is set up, the test makes the following data changes:
 - Update the score for James to 4 (no longer matches the query)
 - Delete the document for Sophie
 
-[!code-cs[](obj/snippets/Google.Cloud.Firestore.UserGuide.txt#ListenQuery)]
+{{sample:UserGuide.ListenQuery}}
 
 ### Listener threading
 

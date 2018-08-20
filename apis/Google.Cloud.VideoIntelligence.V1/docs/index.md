@@ -22,5 +22,5 @@ check for completion and the results.
 
 ## Annotate labels within a video
 
-[!code-cs[](obj/snippets/Google.Cloud.VideoIntelligence.V1.VideoIntelligenceServiceClient.txt#AnnotateVideo)]
+{{sample:VideoIntelligenceServiceClient.AnnotateVideo}}
 

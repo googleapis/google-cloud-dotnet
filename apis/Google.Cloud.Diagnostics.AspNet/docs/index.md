@@ -20,30 +20,30 @@ the deployed code.
 
 ## Registering Error Reporting (Web Api)
 
-[!code-cs[](obj/snippets/Google.Cloud.Diagnostics.AspNet.ErrorReporting.txt#RegisterExceptionLoggerWebApi)]
+{{sample:ErrorReporting.RegisterExceptionLoggerWebApi}}
 
 ## Log Exceptions (Web Api)
 
-[!code-cs[](obj/snippets/Google.Cloud.Diagnostics.AspNet.ErrorReporting.txt#LogExceptionsWebApi)]
+{{sample:ErrorReporting.LogExceptionsWebApi}}
 
 ## Registering Error Reporting (MVC)
 
-[!code-cs[](obj/snippets/Google.Cloud.Diagnostics.AspNet.AspNet.txt#RegisterExceptionLoggerMvc)]
+{{sample:AspNet.RegisterExceptionLoggerMvc}}
 
 ## Log Exceptions (MVC)
 
-[!code-cs[](obj/snippets/Google.Cloud.Diagnostics.AspNet.AspNet.txt#LogExceptionsMVC)]
+{{sample:AspNet.LogExceptionsMVC}}
 
 ## Initializing Tracing
 
-[!code-cs[](obj/snippets/Google.Cloud.Diagnostics.AspNet.AspNet.txt#InitializeTrace)]
+{{sample:AspNet.InitializeTrace}}
 
 ## Trace Outgoing HTTP Requests
 
-[!code-cs[](obj/snippets/Google.Cloud.Diagnostics.AspNet.AspNet.txt#TraceOutgoing)]
+{{sample:AspNet.TraceOutgoing}}
 
 ## Manual Tracing
 
-[!code-cs[](obj/snippets/Google.Cloud.Diagnostics.AspNet.AspNet.txt#UseTracer)]
+{{sample:AspNet.UseTracer}}
 
-[!code-cs[](obj/snippets/Google.Cloud.Diagnostics.AspNet.AspNet.txt#UseTracerRunIn)]
+{{sample:AspNet.UseTracerRunIn}}

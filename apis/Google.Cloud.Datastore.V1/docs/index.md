@@ -27,11 +27,11 @@ are provided to simplify working with the protobuf messages.
 
 Inserting data:
 
-[!code-cs[](obj/snippets/Google.Cloud.Datastore.V1.DatastoreDb.txt#InsertOverview)]
+{{sample:DatastoreDb.InsertOverview}}
 
 Querying data:
 
-[!code-cs[](obj/snippets/Google.Cloud.Datastore.V1.DatastoreDb.txt#QueryOverview)]
+{{sample:DatastoreDb.QueryOverview}}
 
 Lots more samples:
 [github.com/GoogleCloudPlatform/dotnet-docs-samples](https://github.com/GoogleCloudPlatform/dotnet-docs-samples/tree/master/datastore/api)

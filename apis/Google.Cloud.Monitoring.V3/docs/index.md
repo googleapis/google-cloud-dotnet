@@ -18,8 +18,8 @@
 
 ## List metric descriptors
 
-[!code-cs[](obj/snippets/Google.Cloud.Monitoring.V3.MetricServiceClient.txt#ListMetricDescriptors)]
+{{sample:MetricServiceClient.ListMetricDescriptors}}
 
 ## List groups
 
-[!code-cs[](obj/snippets/Google.Cloud.Monitoring.V3.GroupServiceClient.txt#ListGroups)]
+{{sample:GroupServiceClient.ListGroups}}
