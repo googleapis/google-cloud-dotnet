@@ -22,6 +22,20 @@
   // productUrl: Product home page URL to include when using doc templates
 
   {
+    "id": "Google.Cloud.Asset.V1Beta1",
+    "productName": "Google Cloud Asset Inventory",
+    "productUrl": "https://cloud.google.com/resource-manager/docs/cai/",
+    "version": "1.0.0-beta00",
+    "type": "grpc",
+    "description": "Recommended Google client library to access the Google Cloud Asset Inventory API.",
+    "dependencies": {
+      "Google.LongRunning": "1.1.0-beta01",
+      "Google.Cloud.Iam.V1": "1.2.0-beta01"
+    },
+    "tags": [ "asset", "inventory", "assets" ]
+  },
+
+  {
     "id": "Google.Cloud.BigQuery.DataTransfer.V1",
     "productName": "Google BigQuery Data Transfer",
     "productUrl": "https://cloud.google.com/bigquery/transfer/",
