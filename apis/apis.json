@@ -395,7 +395,7 @@
 
   {
     "id": "Google.Cloud.Logging.NLog",
-    "version": "2.0.0-beta04",
+    "version": "2.0.0-beta05",
     "type": "other",
     "targetFrameworks": "netstandard1.5;net45",
     "testTargetFrameworks": "netcoreapp1.0;net452",
