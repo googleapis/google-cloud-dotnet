@@ -43,7 +43,7 @@ namespace Google.Cloud.Asset.V1Beta1.Snippets
             // Initialize request argument(s)
             ExportAssetsRequest request = new ExportAssetsRequest
             {
-                Parent = new ProjectName("[PROJECT]").ToString(),
+                Parent = new Google.Api.Gax.ResourceNames.ProjectName("[PROJECT]").ToString(),
                 ContentTypes = { },
                 OutputConfig = new OutputConfig(),
             };
@@ -80,7 +80,7 @@ namespace Google.Cloud.Asset.V1Beta1.Snippets
             // Initialize request argument(s)
             ExportAssetsRequest request = new ExportAssetsRequest
             {
-                Parent = new ProjectName("[PROJECT]").ToString(),
+                Parent = new Google.Api.Gax.ResourceNames.ProjectName("[PROJECT]").ToString(),
                 ContentTypes = { },
                 OutputConfig = new OutputConfig(),
             };
@@ -116,7 +116,7 @@ namespace Google.Cloud.Asset.V1Beta1.Snippets
             // Create client
             AssetServiceClient assetServiceClient = await AssetServiceClient.CreateAsync();
             // Initialize request argument(s)
-            string formattedParent = new ProjectName("[PROJECT]").ToString();
+            string formattedParent = new Google.Api.Gax.ResourceNames.ProjectName("[PROJECT]").ToString();
             // Make the request
             BatchGetAssetsHistoryResponse response = await assetServiceClient.BatchGetAssetsHistoryAsync(formattedParent);
             // End snippet
@@ -129,7 +129,7 @@ namespace Google.Cloud.Asset.V1Beta1.Snippets
             // Create client
             AssetServiceClient assetServiceClient = AssetServiceClient.Create();
             // Initialize request argument(s)
-            string formattedParent = new ProjectName("[PROJECT]").ToString();
+            string formattedParent = new Google.Api.Gax.ResourceNames.ProjectName("[PROJECT]").ToString();
             // Make the request
             BatchGetAssetsHistoryResponse response = assetServiceClient.BatchGetAssetsHistory(formattedParent);
             // End snippet
@@ -145,7 +145,7 @@ namespace Google.Cloud.Asset.V1Beta1.Snippets
             // Initialize request argument(s)
             BatchGetAssetsHistoryRequest request = new BatchGetAssetsHistoryRequest
             {
-                Parent = new ProjectName("[PROJECT]").ToString(),
+                Parent = new Google.Api.Gax.ResourceNames.ProjectName("[PROJECT]").ToString(),
                 AssetNames = { },
                 ContentType = ContentType.Unspecified,
                 ReadTimeWindow = new TimeWindow(),
@@ -164,7 +164,7 @@ namespace Google.Cloud.Asset.V1Beta1.Snippets
             // Initialize request argument(s)
             BatchGetAssetsHistoryRequest request = new BatchGetAssetsHistoryRequest
             {
-                Parent = new ProjectName("[PROJECT]").ToString(),
+                Parent = new Google.Api.Gax.ResourceNames.ProjectName("[PROJECT]").ToString(),
                 AssetNames = { },
                 ContentType = ContentType.Unspecified,
                 ReadTimeWindow = new TimeWindow(),
