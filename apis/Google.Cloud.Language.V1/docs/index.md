@@ -29,16 +29,16 @@ you can specify a Google Cloud Storage URI.
 
 ## Analyze sentiment in a document
 
-[!code-cs[](obj/snippets/Google.Cloud.Language.V1.LanguageServiceClient.txt#AnalyzeSentiment)]
+{{sample:LanguageServiceClient.AnalyzeSentiment}}
 
 ## Analyze entities in a document
 
-[!code-cs[](obj/snippets/Google.Cloud.Language.V1.LanguageServiceClient.txt#AnalyzeEntities)]
+{{sample:LanguageServiceClient.AnalyzeEntities}}
 
 ## Analyze syntax in a document
 
-[!code-cs[](obj/snippets/Google.Cloud.Language.V1.LanguageServiceClient.txt#AnalyzeSyntax)]
+{{sample:LanguageServiceClient.AnalyzeSyntax}}
 
 ## Multiple operations: analyze syntax and entities
 
-[!code-cs[](obj/snippets/Google.Cloud.Language.V1.LanguageServiceClient.txt#AnnotateText)]
+{{sample:LanguageServiceClient.AnnotateText}}

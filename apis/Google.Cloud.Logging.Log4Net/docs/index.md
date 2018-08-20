@@ -23,7 +23,7 @@ Add the log4net section to the `Web.config` file:
 Edit the file replacing `PROJECT_ID` with your Google Cloud Project
 ID, and `LOG_ID` with an identifier for your application.
 
-[!code-cs[](obj/snippets/Google.Cloud.Logging.Log4Net.GoogleStackdriverAppender.txt#Overview_AspNet)]
+{{sample:GoogleStackdriverAppender.Overview_AspNet}}
 
 If executing on [Google App Engine (GAE)](https://cloud.google.com/appengine/),
 [Google Kubernetes Engine (GKE)](https://cloud.google.com/kubernetes-engine/),
@@ -42,7 +42,7 @@ ID, and `LOG_ID` with an identifier for your application.
 Use this
 file to configure `log4net` and then log as normal:
 
-[!code-cs[](obj/snippets/Google.Cloud.Logging.Log4Net.GoogleStackdriverAppender.txt#Overview)]
+{{sample:GoogleStackdriverAppender.Overview}}
 
 If executing on [Google App Engine (GAE)](https://cloud.google.com/appengine/),
 [Google Kubernetes Engine (GKE)](https://cloud.google.com/kubernetes-engine/),

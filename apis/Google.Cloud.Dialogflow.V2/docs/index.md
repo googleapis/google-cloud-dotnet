@@ -36,7 +36,7 @@ additional fields are added to `WebhookRequest` in the future.
 Here's a template for a Dialogflow webhook implemented in ASP.NET
 Core.
 
-[!code-cs[](obj/snippets/Google.Cloud.Dialogflow.V2.AgentsClient.txt#Webhook)]
+{{sample:AgentsClient.Webhook}}
 
 Please refer to the [fulfillment
 documentation](https://dialogflow.com/docs/fulfillment) for more

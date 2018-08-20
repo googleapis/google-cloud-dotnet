@@ -24,11 +24,11 @@ There are various factory methods on the
 [RecognitionAudio](obj/api/Google.Cloud.Speech.V1P1Beta1.RecognitionAudio.yml) class to allow
 instances to be constructed from files, streams, byte arrays and URIs.
 
-[!code-cs[](obj/snippets/Google.Cloud.Speech.V1P1Beta1.RecognitionAudio.txt#FactoryMethods)]
+{{sample:RecognitionAudio.FactoryMethods}}
 
 ## Detect speech in a single file
 
-[!code-cs[](obj/snippets/Google.Cloud.Speech.V1P1Beta1.SpeechClient.txt#Recognize)]
+{{sample:SpeechClient.Recognize}}
 
 # Immediate, long-running and streaming operations
 

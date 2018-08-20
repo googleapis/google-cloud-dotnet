@@ -31,18 +31,18 @@ details.
 
 ## Querying
 
-[!code-cs[](obj/snippets/Google.Cloud.BigQuery.V2.BigQueryClient.txt#QueryOverview)]
+{{sample:BigQueryClient.QueryOverview}}
 
 ## Parameterized queries
 
 Queries can be provided with parameters, either using names (the
 default):
 
-[!code-cs[](obj/snippets/Google.Cloud.BigQuery.V2.BigQueryClient.txt#ParameterizedQueryNamedParameters)]
+{{sample:BigQueryClient.ParameterizedQueryNamedParameters}}
 
 Or using positional parameters:
 
-[!code-cs[](obj/snippets/Google.Cloud.BigQuery.V2.BigQueryClient.txt#ParameterizedQueryPositionalParameters)]
+{{sample:BigQueryClient.ParameterizedQueryPositionalParameters}}
 
 ## Using legacy SQL
 
@@ -53,15 +53,15 @@ simply set `UseLegacySql` to true in the query options, and make
 sure that you use the legacy format for the table name, as shown
 below.
 
-[!code-cs[](obj/snippets/Google.Cloud.BigQuery.V2.BigQueryClient.txt#LegacySql)]
+{{sample:BigQueryClient.LegacySql}}
 
 ## Data insertion
 
-[!code-cs[](obj/snippets/Google.Cloud.BigQuery.V2.BigQueryClient.txt#InsertOverview)]
+{{sample:BigQueryClient.InsertOverview}}
 
 ## Creating a table partitioned by time
 
-[!code-cs[](obj/snippets/Google.Cloud.BigQuery.V2.BigQueryClient.txt#CreatePartitionedTable)]
+{{sample:BigQueryClient.CreatePartitionedTable}}
 
 ## Querying an external data source
 
@@ -70,4 +70,4 @@ documentation](https://cloud.google.com/bigquery/external-data-sources),
 BigQuery can query some external data sources. The sample code below
 demonstrates querying a CSV file stored in Google Cloud Storage.
 
-[!code-cs[](obj/snippets/Google.Cloud.BigQuery.V2.BigQueryClient.txt#ExternalCsv)]
+{{sample:BigQueryClient.ExternalCsv}}

@@ -28,20 +28,20 @@ or the [Google Cloud Console](https://console.cloud.google.com).
 
 # Getting instance metadata
 
-[!code-cs[](obj/snippets/Google.Cloud.Metadata.V1.MetadataClient.txt#GetInstanceMetadata)]
+{{sample:MetadataClient.GetInstanceMetadata}}
 
 # Getting a custom metadata value
 
-[!code-cs[](obj/snippets/Google.Cloud.Metadata.V1.MetadataClient.txt#GetCustomInstanceMetadata)]
+{{sample:MetadataClient.GetCustomInstanceMetadata}}
 
 # Getting the maintenance status
 
-[!code-cs[](obj/snippets/Google.Cloud.Metadata.V1.MetadataClient.txt#GetMaintenanceStatus)]
+{{sample:MetadataClient.GetMaintenanceStatus}}
 
 # Getting raw metadata values
 
-[!code-cs[](obj/snippets/Google.Cloud.Metadata.V1.MetadataClient.txt#GetMetadata)]
+{{sample:MetadataClient.GetMetadata}}
 
 # Waiting for changes
 
-[!code-cs[](obj/snippets/Google.Cloud.Metadata.V1.MetadataClient.txt#WaitForChange)]
+{{sample:MetadataClient.WaitForChange}}

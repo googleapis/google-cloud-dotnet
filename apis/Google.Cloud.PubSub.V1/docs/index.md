@@ -33,9 +33,9 @@ simpler.
 
 Using [PublisherClient](obj/api/Google.Cloud.PubSub.V1.PublisherClient.yml) and [SubscriberClient](obj/api/Google.Cloud.PubSub.V1.SubscriberClient.yml) for message publishing and subscribing:
 
-[!code-cs[](obj/snippets/Google.Cloud.PubSub.V1.SubscriberServiceApiClient.txt#SimpleOverview)]
+{{sample:SubscriberServiceApiClient.SimpleOverview}}
 
 Using [PublisherServiceApiClient](obj/api/Google.Cloud.PubSub.V1.PublisherServiceApiClient.yml) and
 [SubscriberServiceApiClient](obj/api/Google.Cloud.PubSub.V1.SubscriberServiceApiClient.yml) only:
 
-[!code-cs[](obj/snippets/Google.Cloud.PubSub.V1.SubscriberServiceApiClient.txt#Overview)]
+{{sample:SubscriberServiceApiClient.Overview}}

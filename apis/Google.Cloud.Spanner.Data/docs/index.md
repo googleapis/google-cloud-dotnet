@@ -27,7 +27,7 @@ you can start using the ADO.NET provider to create and modify a Cloud Spanner da
 
 ## Creating a Database and Table
 
-[!code-cs[](obj/snippets/Google.Cloud.Spanner.Data.SpannerConnection.txt#CreateDatabaseAsync)]
+{{sample:SpannerConnection.CreateDatabaseAsync}}
 
 ## DataAdapter support (.NET 4.5+ only)
 
@@ -35,15 +35,15 @@ Cloud Spanner supports a limited DataAdapter that provides basic CRUD operations
 Create a SpannerDataAdapter with the target table and its primary keys.  You may replace any
 commands provided by SpannerDataAdapter with your own custom commands.
 
-[!code-cs[](obj/snippets/Google.Cloud.Spanner.Data.SpannerConnection.txt#DataAdapter)]
+{{sample:SpannerConnection.DataAdapter}}
 
 ## Inserting Data
 
-[!code-cs[](obj/snippets/Google.Cloud.Spanner.Data.SpannerConnection.txt#InsertDataAsync)]
+{{sample:SpannerConnection.InsertDataAsync}}
 
 ## Reading, Updating and Deleting Data
 
-[!code-cs[](obj/snippets/Google.Cloud.Spanner.Data.SpannerConnection.txt#ReadUpdateDeleteAsync)]
+{{sample:SpannerConnection.ReadUpdateDeleteAsync}}
 
 ## Transactions and Fault Handling
 Cloud Spanner is fully ACID compliant.
@@ -56,12 +56,12 @@ retried and run on a new session.
 Use the extension method IsTransientSpannerFault() on Exception to create your detection
 strategy for the TransientFaultApplication Block.
 
-[!code-cs[](obj/snippets/Google.Cloud.Spanner.Data.SpannerConnection.txt#SpannerFaultDetectionStrategy)]
+{{sample:SpannerConnection.SpannerFaultDetectionStrategy}}
 
  You should execute the entire transaction within a RetryPolicy. Generally, we recommend
  using exponential backoff as shown below.
 
-[!code-cs[](obj/snippets/Google.Cloud.Spanner.Data.SpannerConnection.txt#TransactionAsync)]
+{{sample:SpannerConnection.TransactionAsync}}
 
 ## TransactionScope support (.NET 4.5+, Single resource only)
 In addition to supporting setting Transaction on individual commands, Spanner also supports
@@ -70,6 +70,6 @@ TransactionScope and implicit transactions given that only a single resource is 
 Spanner does not support public two phase commit to commit multiple resources in a
 single transaction.
 
-[!code-cs[](obj/snippets/Google.Cloud.Spanner.Data.SpannerConnection.txt#TransactionScopeAsync)]
+{{sample:SpannerConnection.TransactionScopeAsync}}
 
 

@@ -17,4 +17,4 @@ All operations are performed through
 
 ## List clusters
 
-[!code-cs[](obj/snippets/Google.Cloud.Container.V1.ClusterManagerClient.txt#ListAllClusters)]
+{{sample:ClusterManagerClient.ListAllClusters}}

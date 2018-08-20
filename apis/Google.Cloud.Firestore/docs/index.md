@@ -18,6 +18,6 @@ From there, you can create, fetch and modify documents, and run queries.
 
 # Sample code
 
-[!code-cs[](obj/snippets/Google.Cloud.Firestore.Index.txt#GettingStarted)]
+{{sample:Index.GettingStarted}}
 
 See the [user guide](userguide.md) for more samples.

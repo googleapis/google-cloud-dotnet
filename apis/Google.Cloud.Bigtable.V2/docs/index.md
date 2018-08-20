@@ -24,4 +24,4 @@ as needed.
 
 # Sample code
 
-[!code-cs[](obj/snippets/Google.Cloud.Bigtable.V2.BigtableClient.txt#Overview)]
+{{sample:BigtableClient.Overview}}

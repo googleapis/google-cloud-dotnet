@@ -18,4 +18,4 @@
 
 ## List traces
 
-[!code-cs[](obj/snippets/Google.Cloud.Trace.V1.TraceServiceClient.txt#ListTraces)]
+{{sample:TraceServiceClient.ListTraces}}
