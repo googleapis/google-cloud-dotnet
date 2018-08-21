@@ -57,7 +57,7 @@ namespace Google.Cloud.PubSub.V1.IntegrationTests
         private async Task RunBulkMessaging(
             int messageCount, int minMessageSize, int maxMessageSize, int maxMessagesInFlight, int initialNackCount,
             TimeSpan? timeouts = null, int? cancelAfterRecvCount = null, TimeSpan? interPublishDelay = null,
-            TimeSpan? debugOutputPeriod = null, int? clientCount = null, int? subscriberChannelCount = null)
+            TimeSpan? debugOutputPeriod = null, int? publisherChannelCount = null, int? clientCount = null)
         {
             // Force messages to be at least 4 bytes long, so an int ID can be used.
             minMessageSize = Math.Max(4, minMessageSize);
@@ -79,14 +79,14 @@ namespace Google.Cloud.PubSub.V1.IntegrationTests
             await CreateTopicAndSubscription(topicName, subscriptionName);
             await RunBulkMessagingImpl(topicName, subscriptionName, messageCount, minMessageSize, maxMessageSize,
                 maxMessagesInFlight, initialNackCount, timeouts, cancelAfterRecvCount, interPublishDelay,
-                debugOutputPeriod, publisherChannelCount, subscriberChannelCount);
+                debugOutputPeriod, publisherChannelCount, clientCount);
         }
 
         private async Task RunBulkMessagingImpl(
             TopicName topicName, SubscriptionName subscriptionName,
             int messageCount, int minMessageSize, int maxMessageSize, int maxMessagesInFlight, int initialNackCount,
             TimeSpan? timeouts = null, int? cancelAfterRecvCount = null, TimeSpan? interPublishDelay = null,
-            TimeSpan? debugOutputPeriod = null, int? publisherChannelCount = null, int? subscriberChannelCount = null)
+            TimeSpan? debugOutputPeriod = null, int? publisherChannelCount = null, int? clientCount = null)
         {
             // Force messages to be at least 4 bytes long, so an int ID can be used.
             minMessageSize = Math.Max(4, minMessageSize);
@@ -106,8 +106,7 @@ namespace Google.Cloud.PubSub.V1.IntegrationTests
                     }
                 )).ConfigureAwait(false);
             var subscriber = await SubscriberClient.CreateAsync(subscriptionName,
-                clientCreationSettings: new SubscriberClient.ClientCreationSettings(
-                    clientCount: subscriberChannelCount),
+                clientCreationSettings: new SubscriberClient.ClientCreationSettings(clientCount: clientCount),
                 settings: new SubscriberClient.Settings
                 {
                     StreamAckDeadline = timeouts,
@@ -456,7 +455,7 @@ namespace Google.Cloud.PubSub.V1.IntegrationTests
                 maxMessagesInFlight: 100,
                 initialNackCount: 0,
                 publisherChannelCount: 3,
-                subscriberChannelCount: 4);
+                clientCount: 4);
 
             int subchannelsCreated = GrpcInfo.SubchannelCount - originalSubchannelCount;
             Assert.Equal(7, subchannelsCreated);

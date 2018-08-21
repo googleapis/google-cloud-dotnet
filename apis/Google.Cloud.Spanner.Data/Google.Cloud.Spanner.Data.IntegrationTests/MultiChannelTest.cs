@@ -21,18 +21,16 @@ using Xunit;
 
 namespace Google.Cloud.Spanner.Data.IntegrationTests
 {
-    [Collection(nameof(TestDatabaseFixture))]
+    [Collection(nameof(SpannerDatabaseFixture))]
     public class MultiChannelTest
     {
-        private readonly TestDatabaseFixture _fixture;
+        private readonly SpannerDatabaseFixture _fixture;
 
-        public MultiChannelTest(TestDatabaseFixture fixture) => _fixture = fixture;
+        public MultiChannelTest(SpannerDatabaseFixture fixture) => _fixture = fixture;
 
         [Fact]
         public async Task SeparateSubchannels()
         {
-            await _fixture.EnsureTestDatabaseAsync();
-
             // Clear current session/client pools
             Task.Run(SessionPool.Default.ReleaseAllAsync).Wait(SessionPool.Default.ShutDownTimeout);
             ClientPool.Default.Reset();
@@ -43,7 +41,7 @@ namespace Google.Cloud.Spanner.Data.IntegrationTests
             var connections = new List<SpannerConnection>();
             for (int i = 0; i < maximumChannels + 1; i++)
             {
-                var connection = await _fixture.GetTestDatabaseConnectionAsync();
+                var connection = _fixture.GetConnection();
                 var cmd = connection.CreateInsertCommand("T", new SpannerParameterCollection
                     {
                         new SpannerParameter("k", SpannerDbType.String, Guid.NewGuid().ToString())

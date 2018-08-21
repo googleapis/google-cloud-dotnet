@@ -12,6 +12,7 @@
 // See the License for the specific language governing permissions and
 // limitations under the License.
 
+using Google.Cloud.ClientTesting;
 using Google.Cloud.Spanner.Data.CommonTesting;
 using Xunit;
 
@@ -25,5 +26,9 @@ namespace Google.Cloud.Spanner.Data.IntegrationTests
     [CollectionDefinition(nameof(SpannerDatabaseFixture))]
     public class SpannerDatabaseFixture : SpannerFixtureBase, ICollectionFixture<SpannerDatabaseFixture>
     {
+        public SpannerDatabaseFixture()
+        {
+            GrpcInfo.EnableSubchannelCounting();
+        }
     }
 }
