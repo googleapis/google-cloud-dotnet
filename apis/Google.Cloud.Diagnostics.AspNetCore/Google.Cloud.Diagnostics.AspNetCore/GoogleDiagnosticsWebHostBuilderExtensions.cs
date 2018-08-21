@@ -29,7 +29,7 @@ namespace Google.Cloud.Diagnostics.AspNetCore
         /// </summary>
         /// <param name="builder">The <see cref="IWebHostBuilder"/> instance.</param>
         /// <param name="projectId">
-        /// The Google Cloud Platform project ID. If unspecified and running on GAE or GCE
+        /// The Google Cloud Platform project ID. If unspecified and running on GAE/GCE/GKE
         /// the project ID will be detected from the platform.
         /// </param>
         /// <param name="serviceName">

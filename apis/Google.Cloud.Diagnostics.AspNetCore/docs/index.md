@@ -21,13 +21,28 @@ the deployed code.
 
 ## Initializing Google Diagnostics (ASP.NET Core 2.0+)
 
-The preferred way to initialize Google Diagnostics services in ASP.NET Core 2.0 or higher
+The easiest way to initialize Google Diagnostics services in ASP.NET Core 2.0 or higher
 is using the `UseGoogleDiagnostics` extentension method on `IWebHostBuilder`. This configures
 Logging, Tracing and Error Reporting middleware.
 
+If your application is runnng on GAE you don't need to provide a value for `ProjectID`, `Service`
+and `Version` since they can be automatically obtained by the `UseGoogleDiagnostics` method. The
+values used will be the ones associated with the running application.
+
+If your application is running on GKE or GCE you don't need to provide a value for `ProjectID`
+since it can be automatically determined by the `UseGoogleDiagnostics` method. It will be the
+`ProjectID` of the Google Cloud Project where the application is running. You do need to
+provide values for `Service` and `Version`, with which to identify the running application.
+
+If your application is running outside of GCP, including when it runs locally, then you'll need to
+provide the `ProjectID` of the Google Cloud Project in which to store the diagnostic information
+as well as the `Service` and `Version` with which to identify your application.
+
 {{sample:Diagnostics.UseGoogleDiagnostics}}
 
-You can still initialize the separate components using the extension methods below.
+You can still initialize the separate components using the extension methods below. This can be useful
+if you only need to use some of the components or, for instance, if you need to access the `Configuration`
+property on the `Startup` class to obtain values for `ProjectID`, `Service` or `Version`.
 
 ## Registering Error Reporting
 
