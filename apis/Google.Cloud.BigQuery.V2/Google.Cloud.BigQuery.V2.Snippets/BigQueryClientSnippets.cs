@@ -563,6 +563,40 @@ namespace Google.Cloud.BigQuery.V2.Snippets
         // End see-also
 
         [Fact]
+        public void UploadOrc()
+        {
+            string projectId = _fixture.ProjectId;
+            string datasetId = _fixture.GameDatasetId;
+            string tableId = _fixture.GenerateTableId();
+
+            var typeInfo = GetType().GetTypeInfo();
+            string resourceName = typeInfo.Namespace + ".us-states.orc";
+            var stream = typeInfo.Assembly.GetManifestResourceStream(resourceName);
+            // Snippet: UploadOrc(string, string, Stream, *)
+            BigQueryClient client = BigQueryClient.Create(projectId);
+            // This example creates a new table.
+            BigQueryJob job = client.UploadOrc(datasetId, tableId, stream);
+            // Use the job to find out when the data has finished being inserted into the table,
+            // report errors etc.
+            // End snippet
+
+            AssertJobCompletesSuccessfully(job);
+        }
+
+        // See-also: UploadOrc(string, string, Stream, *)
+        // Member: UploadOrc(TableReference, *, *)
+        // Member: UploadOrc(string, string, string, *, *)
+        // See [UploadOrc](ref) for an example using an alternative overload.
+        // End see-also
+
+        // See-also: UploadOrc(string, string, *, *)
+        // Member: UploadOrcAsync(TableReference, *, *, *)
+        // Member: UploadOrcAsync(string, string, string, *, *, *)
+        // Member: UploadOrcAsync(string, string, *, *, *)
+        // See [UploadOrc](ref) for a synchronous example.
+        // End see-also
+
+        [Fact]
         public void UploadJson_Stream()
         {
             string projectId = _fixture.ProjectId;

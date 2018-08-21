@@ -557,6 +557,24 @@ namespace Google.Cloud.BigQuery.V2.Tests
         }
 
         [Fact]
+        public void UploadOrc_Equivalents()
+        {
+            var datasetId = "dataset";
+            var tableId = "table";
+            var jobReference = GetJobReference("job");
+            var datasetReference = GetDatasetReference(datasetId);
+            var tableReference = GetTableReference(datasetId, tableId);
+            var options = new UploadOrcOptions();
+            var stream = new MemoryStream();
+            VerifyEquivalent(new BigQueryJob(new DerivedBigQueryClient(), new Job { JobReference = jobReference }),
+                client => client.UploadOrc(MatchesWhenSerialized(tableReference), stream, options),
+                client => client.UploadOrc(datasetId, tableId, stream, options),
+                client => client.UploadOrc(ProjectId, datasetId, tableId, stream, options),
+                client => new BigQueryTable(client, GetTable(tableReference)).UploadOrc(stream, options),
+                client => new BigQueryDataset(client, GetDataset(datasetReference)).UploadOrc(tableId, stream, options));
+        }
+
+        [Fact]
         public void InsertEquivalents_SingleRow()
         {
             var datasetId = "dataset";
@@ -1082,6 +1100,25 @@ namespace Google.Cloud.BigQuery.V2.Tests
                 client => client.UploadParquetAsync(ProjectId, datasetId, tableId, stream, options, token),
                 client => new BigQueryTable(client, GetTable(tableReference)).UploadParquetAsync(stream, options, token),
                 client => new BigQueryDataset(client, GetDataset(datasetReference)).UploadParquetAsync(tableId, stream, options, token));
+        }
+
+        [Fact]
+        public void UploadOrcAsyncEquivalents()
+        {
+            var datasetId = "dataset";
+            var tableId = "table";
+            var jobReference = GetJobReference("job");
+            var datasetReference = GetDatasetReference(datasetId);
+            var tableReference = GetTableReference(datasetId, tableId);
+            var options = new UploadOrcOptions();
+            var token = new CancellationTokenSource().Token;
+            var stream = new MemoryStream();
+            VerifyEquivalentAsync(new BigQueryJob(new DerivedBigQueryClient(), new Job { JobReference = jobReference }),
+                client => client.UploadOrcAsync(MatchesWhenSerialized(tableReference), stream, options, token),
+                client => client.UploadOrcAsync(datasetId, tableId, stream, options, token),
+                client => client.UploadOrcAsync(ProjectId, datasetId, tableId, stream, options, token),
+                client => new BigQueryTable(client, GetTable(tableReference)).UploadOrcAsync(stream, options, token),
+                client => new BigQueryDataset(client, GetDataset(datasetReference)).UploadOrcAsync(tableId, stream, options, token));
         }
 
         [Fact]

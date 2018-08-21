@@ -578,5 +578,95 @@ namespace Google.Cloud.BigQuery.V2.IntegrationTests
             Assert.Equal(new { Name = "name", Type = "STRING", Mode = "NULLABLE" }, fields[0]);
             Assert.Equal(new { Name = "post_abbr", Type = "STRING", Mode = "NULLABLE" }, fields[1]);
         }
+
+        [Fact]
+        public void UploadOrc()
+        {
+            var client = BigQueryClient.Create(_fixture.ProjectId);
+            var tableReference = client.GetTableReference(_fixture.DatasetId, _fixture.CreateTableId());
+            var typeInfo = typeof(UploadTest).GetTypeInfo();
+            string resourceName = typeInfo.Namespace + ".us-states.orc";
+            using (var stream = typeInfo.Assembly.GetManifestResourceStream(resourceName))
+            {
+                var job = client.UploadOrc(tableReference, stream);
+                job = job.PollUntilCompleted();
+                job.ThrowOnAnyError();
+            }
+            var table = client.GetTable(tableReference);
+            var rows = table.ListRows().ToList();
+            Assert.Equal(50, rows.Count);
+            var fields = table.Schema.Fields.Select(f => new { f.Name, f.Type, f.Mode }).OrderBy(f => f.Name).ToList();
+            Assert.Equal(new { Name = "name", Type = "STRING", Mode = "NULLABLE" }, fields[0]);
+            Assert.Equal(new { Name = "post_abbr", Type = "STRING", Mode = "NULLABLE" }, fields[1]);
+        }
+
+        [Fact]
+        public async Task UploadOrcAsync()
+        {
+            var client = BigQueryClient.Create(_fixture.ProjectId);
+            var tableReference = client.GetTableReference(_fixture.DatasetId, _fixture.CreateTableId());
+            var typeInfo = typeof(UploadTest).GetTypeInfo();
+            string resourceName = typeInfo.Namespace + ".us-states.orc";
+            using (var stream = typeInfo.Assembly.GetManifestResourceStream(resourceName))
+            {
+                var job = await client.UploadOrcAsync(tableReference, stream);
+                job = job.PollUntilCompleted();
+                job.ThrowOnAnyError();
+            }
+            var table = client.GetTable(tableReference);
+            var rows = table.ListRows().ToList();
+            Assert.Equal(50, rows.Count);
+            var fields = table.Schema.Fields.Select(f => new { f.Name, f.Type, f.Mode }).OrderBy(f => f.Name).ToList();
+            Assert.Equal(new { Name = "name", Type = "STRING", Mode = "NULLABLE" }, fields[0]);
+            Assert.Equal(new { Name = "post_abbr", Type = "STRING", Mode = "NULLABLE" }, fields[1]);
+        }
+
+        [Fact]
+        public void UploadOrc_UpdatesSchema()
+        {
+            var client = BigQueryClient.Create(_fixture.ProjectId);
+            var tableReference = client.GetTableReference(_fixture.DatasetId, _fixture.CreateTableId());
+
+            string[] csvRows =
+            {
+                "oneState",
+                "anotherState"
+            };
+
+            var schema = new TableSchemaBuilder
+            {
+                {"name", BigQueryDbType.String, BigQueryFieldMode.Nullable }
+            }.Build();
+
+            var bytes = Encoding.UTF8.GetBytes(string.Join("\n", csvRows));
+
+            var job = client.UploadCsv(tableReference, schema, new MemoryStream(bytes));
+            var result = job.PollUntilCompleted();
+            Assert.Null(result.Status.ErrorResult);
+
+            var table = client.GetTable(tableReference);
+            Assert.Equal(1, table.Schema.Fields.Count());
+
+            var typeInfo = typeof(UploadTest).GetTypeInfo();
+            string resourceName = typeInfo.Namespace + ".us-states.orc";
+            using (var stream = typeInfo.Assembly.GetManifestResourceStream(resourceName))
+            {
+                job = client.UploadOrc(tableReference, stream,
+                    new UploadOrcOptions
+                    {
+                        WriteDisposition = WriteDisposition.WriteAppend,
+                        DestinationSchemaUpdateOptions = SchemaUpdateOption.AllowFieldAddition
+                    });
+                job = job.PollUntilCompleted();
+                job.ThrowOnAnyError();
+            }
+            table = client.GetTable(tableReference);
+            var rows = table.ListRows().ToList();
+            Assert.Equal(52, rows.Count);
+            var fields = table.Schema.Fields.Select(f => new { f.Name, f.Type, f.Mode }).OrderBy(f => f.Name).ToList();
+            Assert.Equal(2, fields.Count);
+            Assert.Equal(new { Name = "name", Type = "STRING", Mode = "NULLABLE" }, fields[0]);
+            Assert.Equal(new { Name = "post_abbr", Type = "STRING", Mode = "NULLABLE" }, fields[1]);
+        }
     }
 }
