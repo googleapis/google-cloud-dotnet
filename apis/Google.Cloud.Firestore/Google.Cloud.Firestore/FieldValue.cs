@@ -12,6 +12,8 @@
 // See the License for the specific language governing permissions and
 // limitations under the License.
 
+using static Google.Cloud.Firestore.SentinelValue;
+
 namespace Google.Cloud.Firestore
 {
     /// <summary>
@@ -36,5 +38,21 @@ namespace Google.Cloud.Firestore
         /// Sentinel value indicating that the field should be deleted from the document.
         /// </summary>
         public static object Delete { get; } = SentinelValue.Delete;
+
+        /// <summary>
+        /// Creates a sentinel value to indicate the union of the given values with an array.
+        /// </summary>
+        /// <param name="values">The values to include in the resulting sentinel value. Must not be null.</param>
+        /// <returns>A sentinel value representing an array union.</returns>
+        public static object ArrayUnion(params object[] values) =>
+            SentinelValue.ForArrayValue(SentinelKind.ArrayUnion, values);
+
+        /// <summary>
+        /// Creates a sentinel value to indicate the removal of the given values with an array.
+        /// </summary>
+        /// <param name="values">The values to include in the resulting sentinel value. Must not be null.</param>
+        /// <returns>A sentinel value representing an array removal.</returns>
+        public static object ArrayRemove(params object[] values) =>
+            SentinelValue.ForArrayValue(SentinelKind.ArrayRemove, values);
     }
 }

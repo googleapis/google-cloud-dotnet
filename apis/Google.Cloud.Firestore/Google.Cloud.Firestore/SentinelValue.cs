@@ -12,15 +12,20 @@
 // See the License for the specific language governing permissions and
 // limitations under the License.
 
+using Google.Api.Gax;
 using Google.Cloud.Firestore.V1Beta1;
+using Google.Protobuf;
 using System;
+using System.IO;
 using System.Reflection;
 using wkt = Google.Protobuf.WellKnownTypes;
 
 namespace Google.Cloud.Firestore
 {
     /// <summary>
-    /// Internal representation of sentinel values. These are 
+    /// Internal representation of sentinel values such as "server timestamp", "delete this field"
+    /// and array operations. They are opaque to user code. A sentinel value can be converted to a protobuf Value,
+    /// using somewhat ugly means: the resulting Value should never be sent on the wire as-is.
     /// </summary>
     internal sealed class SentinelValue
     {
@@ -34,6 +39,8 @@ namespace Google.Cloud.Firestore
         // - The values are only ever in memory temporarily; they're not exposed to users or included in an RPC.
         private const wkt::NullValue ServerTimestampSentinelNullValue = (wkt::NullValue) SentinelKind.ServerTimestamp;
         private const wkt::NullValue DeleteSentinelNullValue = (wkt::NullValue) SentinelKind.Delete;
+        private const wkt::NullValue ArrayRemoveSentinelNullValue = (wkt::NullValue) SentinelKind.ArrayRemove;
+        private const wkt::NullValue ArrayUnionSentinelNullValue = (wkt::NullValue) SentinelKind.ArrayUnion;
 
         private readonly Func<Value> _protoFactory;
 
@@ -50,6 +57,13 @@ namespace Google.Cloud.Firestore
             _protoFactory = protoFactory;
         }
 
+        private SentinelValue(AugmentedValue augmentedValue)
+        {
+            Kind = augmentedValue.Kind;
+            var byteString = augmentedValue.ToByteString();
+            _protoFactory = () => Value.Parser.ParseFrom(byteString);
+        }
+
         internal Value ToProtoValue() => _protoFactory();
 
         internal SentinelKind Kind { get; }
@@ -61,14 +75,11 @@ namespace Google.Cloud.Firestore
         /// <returns>The kind of sentinel serialized in <paramref name="value"/> or None if it's not a sentinel value.</returns>
         internal static SentinelKind GetKind(Value value)
         {
-            if (value.ValueTypeCase != Value.ValueTypeOneofCase.NullValue)
-            {
-                return SentinelKind.None;
-            }
-            wkt::NullValue nullValue = value.NullValue;
-            return nullValue == ServerTimestampSentinelNullValue ? SentinelKind.ServerTimestamp
-                : nullValue == DeleteSentinelNullValue ? SentinelKind.Delete
-                : SentinelKind.None;
+            // If it's not a null value to start with, fetching NullValue returns NullValue.None
+            // so we'll drop out to the right place.
+            SentinelKind sentinelKind = (SentinelKind) value.NullValue;
+            return sentinelKind > SentinelKind.None && sentinelKind <= s_maxSentinelKind
+                ? sentinelKind : SentinelKind.None;
         }
 
         internal static SentinelValue FromPropertyAttributes(PropertyInfo property)
@@ -77,17 +88,47 @@ namespace Google.Cloud.Firestore
             {
                 return ServerTimestamp;
             }
-            // (No attribute for deleted fields)
+            // (No attribute for deleted fields or array remove/union)
 
             // No attribute detected.
             return null;
         }
 
-        internal enum SentinelKind
+        internal static SentinelValue ForArrayValue(SentinelKind sentinelKind, object[] values)
         {
-            None,
-            ServerTimestamp,
-            Delete
+            GaxPreconditions.CheckNotNull(values, nameof(values));
+            ArrayValue array = ValueSerializer.Serialize(values).ArrayValue;
+            // This is just checking that the simple approach we've taken in the previous line
+            // really did what we expect.
+            GaxPreconditions.CheckState(array != null, "Input wasn't serialized as an array");
+            AugmentedValue augmented = new AugmentedValue { Kind = sentinelKind, Array = array };
+            return new SentinelValue(augmented);
         }
+
+        internal static ArrayValue GetArrayValue(Value value)
+        {
+            var kind = GetKind(value);
+            GaxPreconditions.CheckArgument(kind == SentinelKind.ArrayRemove || kind == SentinelKind.ArrayUnion,
+                nameof(value),
+                "Value does not represent an array-oriented sentinel");
+            return ReserializeToAugmentedValue(value).Array;
+        }
+
+        // TODO: it would be nice to be able to avoid this, but it's unlikely to be a bottleneck
+        // in real code.
+        private static AugmentedValue ReserializeToAugmentedValue(Value value)
+        {
+            // Reusing a stream at least avoids copying the binary data.
+            using (var stream = new MemoryStream())
+            {
+                value.WriteTo(stream);
+                stream.Position = 0;
+                CodedInputStream inputStream = new CodedInputStream(stream);
+                return AugmentedValue.Parser.ParseFrom(inputStream);
+            }
+        }
+
+        // Sentinel kinds, which are represented using a corresponding wkt::NullValue
+        private const SentinelKind s_maxSentinelKind = SentinelKind.ArrayRemove;
     }
 }
