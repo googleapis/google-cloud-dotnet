@@ -64,8 +64,9 @@ namespace Google.Cloud.PubSub.V1
             public BatchingSettings BatchingSettings { get; set; }
 
             /// <summary>
-            /// <see cref="BatchingSettings"/> that control how messages are batched when a batch
-            /// cannot be immediately sent (because all clients are already busy sending batches).
+            /// <see cref="T:BatchingSettings"/> that specifies the maximum batch size allowed when a batch
+            /// matching <see cref="P:BatchingSettings"/> cannot be sent immediately because all underlying
+            /// clients are already busy publishing batches.
             /// <see cref="BatchingSettings.DelayThreshold"/> is not relevant in this context.
             /// If <c>null</c>, defaults to <see cref="ApiMaxBatchingSettings"/>.
             /// </summary>
@@ -288,7 +289,7 @@ namespace Google.Cloud.PubSub.V1
         /// <summary>
         /// Publish a message to the topic specified in <see cref="TopicName"/>.
         /// </summary>
-        /// <param name="message">The <see cref="PubsubMessage"/> to publish.</param>
+        /// <param name="message">The string to publish.</param>
         /// <param name="encoding">The encoding for string to byte conversion.
         /// If <c>null</c>, defaults to <see cref="Encoding.UTF8"/>.</param>
         /// <returns>A task which completes once the message has been published.
@@ -302,7 +303,7 @@ namespace Google.Cloud.PubSub.V1
         /// <summary>
         /// Publish a message to the topic specified in <see cref="TopicName"/>.
         /// </summary>
-        /// <param name="message">The <see cref="PubsubMessage"/> to publish.</param>
+        /// <param name="message">The message to publish.</param>
         /// <returns>A task which completes once the message has been published.
         /// The task <see cref="Task{String}.Result"/> contains the message ID.</returns>
         public virtual Task<string> PublishAsync(IMessage message) =>
@@ -314,7 +315,7 @@ namespace Google.Cloud.PubSub.V1
         /// <summary>
         /// Publish a message to the topic specified in <see cref="TopicName"/>.
         /// </summary>
-        /// <param name="message">The <see cref="PubsubMessage"/> to publish.</param>
+        /// <param name="message">The <see cref="ByteString"/> to publish.</param>
         /// <returns>A task which completes once the message has been published.
         /// The task <see cref="Task{String}.Result"/> contains the message ID.</returns>
         public virtual Task<string> PublishAsync(ByteString message) =>
@@ -326,7 +327,7 @@ namespace Google.Cloud.PubSub.V1
         /// <summary>
         /// Publish a message to the topic specified in <see cref="TopicName"/>.
         /// </summary>
-        /// <param name="message">The <see cref="PubsubMessage"/> to publish.</param>
+        /// <param name="message">The message to publish.</param>
         /// <returns>A task which completes once the message has been published.
         /// The task <see cref="Task{String}.Result"/> contains the message ID.</returns>
         public virtual Task<string> PublishAsync(byte[] message) =>
