@@ -76,6 +76,14 @@ namespace Google.Cloud.Spanner.Data
         }
 
         /// <summary>
+        /// For test purposes only. Removes all cached clients.
+        /// </summary>
+        internal void Reset()
+        {
+            _clientPoolByCredential.Clear();
+        }
+
+        /// <summary>
         /// Returns a diagnostic summary of the state of the pool.
         /// </summary>
         internal string ToDiagnosticSummary()

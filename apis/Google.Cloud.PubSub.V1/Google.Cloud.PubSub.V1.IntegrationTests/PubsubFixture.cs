@@ -26,6 +26,11 @@ namespace Google.Cloud.PubSub.V1.IntegrationTests
         private const string TopicPrefix = "integration-topic-";
         private const string SubscriptionPrefix = "integration-sub-";
 
+        public PubsubFixture()
+        {
+            GrpcInfo.EnableSubchannelCounting();
+        }
+
         internal string CreateTopicId() => IdGenerator.FromGuid(prefix: TopicPrefix);
 
         internal string CreateSubscriptionId() => IdGenerator.FromGuid(prefix: SubscriptionPrefix);

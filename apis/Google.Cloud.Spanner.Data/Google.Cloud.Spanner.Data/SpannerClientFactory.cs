@@ -60,7 +60,13 @@ namespace Google.Cloud.Spanner.Data
                 credentials = appDefaultCredentials.ToChannelCredentials();
             }
 
-            return new Channel(host, port, credentials);
+            var channelOptions = new[]
+            {
+                // Use a random arg to prevent sub-channel re-use in gRPC, so each channel uses its own connection.
+                new ChannelOption("sub-channel-separator", Guid.NewGuid().ToString())
+            };
+
+            return new Channel(host, port, credentials, channelOptions);
         }
 
         /// <inheritdoc />

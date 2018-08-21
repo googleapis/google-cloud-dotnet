@@ -75,7 +75,10 @@ namespace Google.Cloud.Bigtable.V2
                 new ChannelOption(ChannelOptions.MaxReceiveMessageLength, -1),
 
                 // TODO: Figure out if there's a good way to test this
-                new ChannelOption(ChannelOptions.PrimaryUserAgentString, UserAgent)
+                new ChannelOption(ChannelOptions.PrimaryUserAgentString, UserAgent),
+
+                // Use a random arg to prevent sub-channel re-use in gRPC, so each channel uses its own connection.
+                new ChannelOption("sub-channel-separator", Guid.NewGuid().ToString())
             };
             // Fill clients[] with BigtableServiceApiClient instances, each with specific channel
             for (int i = 0; i < clientCount; i++)

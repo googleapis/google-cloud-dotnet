@@ -45,6 +45,8 @@ namespace Google.Cloud.Bigtable.V2.IntegrationTests
 
         public BigtableFixtureBase()
         {
+            GrpcInfo.EnableSubchannelCounting();
+
             string emulatorHost = Environment.GetEnvironmentVariable(EmulatorEnvironmentVariable);
 
             string projectId;
