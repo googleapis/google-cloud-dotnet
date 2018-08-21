@@ -610,7 +610,7 @@ namespace Google.Cloud.Firestore
                     }
                 }
                 var convertedValue = ValueSerializer.Serialize(value);
-                if (SentinelValue.GetKind(convertedValue) != SentinelValue.SentinelKind.None)
+                if (SentinelValue.GetKind(convertedValue) != SentinelKind.None)
                 {
                     throw new ArgumentException("Snapshot ordering contained a sentinel value");
                 }
@@ -830,7 +830,7 @@ namespace Google.Cloud.Firestore
                 else
                 {
                     var convertedValue = ValueSerializer.Serialize(value);
-                    if (SentinelValue.GetKind(convertedValue) != SentinelValue.SentinelKind.None)
+                    if (SentinelValue.GetKind(convertedValue) != SentinelKind.None)
                     {
                         throw new ArgumentException(nameof(value), "Sentinel values cannot be specified in filters");
                     }
