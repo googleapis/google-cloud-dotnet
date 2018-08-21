@@ -109,6 +109,21 @@
     </Comments>
   </Method>
   
+  <Method Name="UploadOrc"
+      TargetType="Table"
+      ReturnType="BigQueryJob">
+    <AdditionalParameters>
+      <Parameter Name="input" Type="Stream" Comment="The stream of input data. Must not be null." />
+    </AdditionalParameters>
+
+    <Comments>
+      <summary>
+        Uploads a stream of ORC data to {target}.
+      </summary>
+      <returns>A data upload job.</returns>
+    </Comments>
+  </Method>
+
   <!-- 
     - InsertRow and InsertRows(array) can't be generated yet.
     - InsertRow delegates to InsertRows.
