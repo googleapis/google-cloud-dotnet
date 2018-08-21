@@ -79,6 +79,22 @@ namespace Google.Cloud.BigQuery.V2
         }
 
         /// <inheritdoc />
+        public override BigQueryJob UploadOrc(TableReference tableReference, Stream input, UploadOrcOptions options = null)
+        {
+            GaxPreconditions.CheckNotNull(tableReference, nameof(tableReference));
+            GaxPreconditions.CheckNotNull(input, nameof(input));
+
+            var configuration = new JobConfigurationLoad
+            {
+                DestinationTable = tableReference,
+                SourceFormat = "ORC"
+            };
+            options?.ModifyConfiguration(configuration);
+
+            return UploadData(configuration, input, "application/octet-stream", options);
+        }
+
+        /// <inheritdoc />
         public override BigQueryJob UploadJson(TableReference tableReference, TableSchema schema, IEnumerable<string> rows, UploadJsonOptions options = null)
             => UploadJson(tableReference, schema, CreateJsonStream(rows), options);
 
@@ -203,6 +219,22 @@ namespace Google.Cloud.BigQuery.V2
             options?.ModifyConfiguration(configuration);
 
             return await UploadDataAsync(configuration, input, "application/vnd.apache.parquet+binary", options, cancellationToken).ConfigureAwait(false);
+        }
+
+        /// <inheritdoc />
+        public override async Task<BigQueryJob> UploadOrcAsync(TableReference tableReference, Stream input, UploadOrcOptions options = null, CancellationToken cancellationToken = default)
+        {
+            GaxPreconditions.CheckNotNull(tableReference, nameof(tableReference));
+            GaxPreconditions.CheckNotNull(input, nameof(input));
+
+            var configuration = new JobConfigurationLoad
+            {
+                DestinationTable = tableReference,
+                SourceFormat = "ORC"
+            };
+            options?.ModifyConfiguration(configuration);
+
+            return await UploadDataAsync(configuration, input, "application/octet-stream", options, cancellationToken).ConfigureAwait(false);
         }
 
         /// <inheritdoc />

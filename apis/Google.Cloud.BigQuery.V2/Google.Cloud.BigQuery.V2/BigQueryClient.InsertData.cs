@@ -546,7 +546,7 @@ namespace Google.Cloud.BigQuery.V2
         /// <returns>A data upload job.</returns>
         public virtual BigQueryJob UploadParquet(string datasetId, string tableId, Stream input, UploadParquetOptions options = null) =>
             UploadParquet(GetTableReference(datasetId, tableId), input, options);
-        
+
         /// <summary>
         /// Uploads a stream of Parquet data to the specified table.
         /// This method just creates a <see cref="TableReference"/> and delegates to <see cref="UploadParquet(TableReference, Stream, UploadParquetOptions)"/>.
@@ -559,7 +559,7 @@ namespace Google.Cloud.BigQuery.V2
         /// <returns>A data upload job.</returns>
         public virtual BigQueryJob UploadParquet(string projectId, string datasetId, string tableId, Stream input, UploadParquetOptions options = null) =>
             UploadParquet(GetTableReference(projectId, datasetId, tableId), input, options);
-        
+
         /// <summary>
         /// Uploads a stream of Parquet data to the specified table.
         /// </summary>
@@ -569,7 +569,7 @@ namespace Google.Cloud.BigQuery.V2
         /// <returns>A data upload job.</returns>
         public virtual BigQueryJob UploadParquet(TableReference tableReference, Stream input, UploadParquetOptions options = null) =>
             throw new NotImplementedException();
-        
+
         /// <summary>
         /// Asynchronously uploads a stream of Parquet data to the specified table within this client's project.
         /// This method just creates a <see cref="TableReference"/> and delegates to <see cref="UploadParquetAsync(TableReference, Stream, UploadParquetOptions, CancellationToken)"/>.
@@ -583,7 +583,7 @@ namespace Google.Cloud.BigQuery.V2
         /// a data upload job.</returns>
         public virtual Task<BigQueryJob> UploadParquetAsync(string datasetId, string tableId, Stream input, UploadParquetOptions options = null, CancellationToken cancellationToken = default) =>
             UploadParquetAsync(GetTableReference(datasetId, tableId), input, options, cancellationToken);
-        
+
         /// <summary>
         /// Asynchronously uploads a stream of Parquet data to the specified table.
         /// This method just creates a <see cref="TableReference"/> and delegates to <see cref="UploadParquetAsync(TableReference, Stream, UploadParquetOptions, CancellationToken)"/>.
@@ -598,7 +598,7 @@ namespace Google.Cloud.BigQuery.V2
         /// a data upload job.</returns>
         public virtual Task<BigQueryJob> UploadParquetAsync(string projectId, string datasetId, string tableId, Stream input, UploadParquetOptions options = null, CancellationToken cancellationToken = default) =>
             UploadParquetAsync(GetTableReference(projectId, datasetId, tableId), input, options, cancellationToken);
-        
+
         /// <summary>
         /// Asynchronously uploads a stream of Parquet data to the specified table.
         /// </summary>

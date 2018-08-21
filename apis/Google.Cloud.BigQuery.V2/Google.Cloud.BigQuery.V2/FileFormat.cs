@@ -47,6 +47,12 @@ namespace Google.Cloud.BigQuery.V2
         /// A Parquet file.
         /// </summary>
         [ApiValue("PARQUET")]
-        Parquet
+        Parquet,
+
+        /// <summary>
+        /// An ORC file.
+        /// </summary>
+        [ApiValue("ORC")]
+        Orc
     }
 }
