@@ -1,6 +1,6 @@
 # Version history
 
-# 1.3.0-beta03, 2018-08-01
+# 1.3.0-beta04, 2018-08-22
 
 New features since 1.2.0:
 
@@ -10,6 +10,7 @@ New features since 1.2.0:
 - Support for time-based partitioning by a specific field
 - Support for SchemaUpdateOptions for load and query jobs
 - Support for Parquet load jobs
+- Support for ORC load jobs
 - Support for job labels
 - Public constructors for BigQueryTable etc, for improved testability
 
