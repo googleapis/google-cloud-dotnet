@@ -120,6 +120,30 @@ namespace Google.Cloud.Firestore.Tests
         }
 
         [Fact]
+        public void Where_ArrayContains_String()
+        {
+            var query = GetEmptyQuery().WhereArrayContains("a.b", "x");
+            var expected = new StructuredQuery
+            {
+                Where = Filter(new FieldFilter { Field = Field("a.b"), Op = FieldFilter.Types.Operator.ArrayContains, Value = CreateValue("x") }),
+                From = { new CollectionSelector { CollectionId = "col" } }
+            };
+            Assert.Equal(expected, query.ToStructuredQuery());
+        }
+
+        [Fact]
+        public void Where_ArrayContains_FieldPath()
+        {
+            var query = GetEmptyQuery().WhereArrayContains(new FieldPath("a", "b"), "x");
+            var expected = new StructuredQuery
+            {
+                Where = Filter(new FieldFilter { Field = Field("a.b"), Op = FieldFilter.Types.Operator.ArrayContains, Value = CreateValue("x") }),
+                From = { new CollectionSelector { CollectionId = "col" } }
+            };
+            Assert.Equal(expected, query.ToStructuredQuery());
+        }
+
+        [Fact]
         public void Where_GreaterThan_String()
         {
             var query = GetEmptyQuery().WhereGreaterThan("a.b", "x");
@@ -850,6 +874,26 @@ namespace Google.Cloud.Firestore.Tests
                         .StartAfter(20)
                 }
             );
+        }
+
+        [Fact]
+        public void ArrayContainsIsEquality()
+        {
+            var collection = s_db.Collection("col");
+            var document = new Document
+            {
+                CreateTime = CreateProtoTimestamp(0, 0),
+                UpdateTime = CreateProtoTimestamp(0, 0),
+                Name = collection.Document("doc").Path,
+                Fields = { { "field", CreateArray(CreateValue(1), CreateValue(2)) } }
+            };
+            var snapshot = DocumentSnapshot.ForDocument(s_db, document, Timestamp.FromProto(document.CreateTime));
+            // An inequality filter would create an implicit ordering here, but "array contains"
+            // is effectively an equality filter, so we should end up with document ID ordering instead.
+            var query = s_db.Collection("col").WhereArrayContains("field", 1).StartAt(snapshot);
+            var structured = query.ToStructuredQuery();
+            var documentIdOrder = new Order { Direction = Direction.Ascending, Field = FieldPath.DocumentId.ToFieldReference() };
+            Assert.Equal(new[] { documentIdOrder }, structured.OrderBy);
         }
 
         private static FieldReference Field(string path) => new FieldReference { FieldPath = path };

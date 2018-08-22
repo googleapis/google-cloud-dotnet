@@ -14,6 +14,7 @@
 
 using Google.Cloud.Firestore.IntegrationTests.Models;
 using System;
+using System.Collections.Generic;
 using System.Linq;
 using System.Threading.Tasks;
 using Xunit;
@@ -183,6 +184,34 @@ namespace Google.Cloud.Firestore.IntegrationTests
                 .OrderBy(x => x.Path, StringComparer.Ordinal)
                 .ToList();
             Assert.Equal(allDocs.Skip(1).Take(3), results);
+        }
+
+        public static TheoryData<string, object, string[]> ArrayContainsTheoryData = new TheoryData<string, object, string[]>
+        {
+            { "StringArray", "x", new[] { "string-x,y", "mixed" } },
+            { "StringArray", "y", new[] { "string-x,y" } },
+            { "Int64Array", 1, new[] { "int64-1,2" } },
+            { "DoubleArray", 1.5, new[] { "double-1.5,2.5" } },
+            { "DoubleArray", 3.5, new[] { "mixed" } },
+            { "HighScoreArray", new HighScore("bob", 3, 4), new[] { "highscore-alice,bob" } },
+            // Three variants which don't match bob
+            { "HighScoreArray", new HighScore("bill", 3, 4), new string[] { } },
+            { "HighScoreArray", new HighScore("bob", 1, 4), new string[] { } },
+            { "HighScoreArray", new HighScore("bob", 3, 2), new string[] { } },
+            { "TimestampArray", new DateTime(2000, 1, 1, 0, 0, 0, DateTimeKind.Utc), new[] { "timestamp-2000"} },
+            { "TimestampArray", new DateTime(2001, 1, 1, 0, 0, 0, DateTimeKind.Utc), new string[] { } }
+        };
+
+        [Theory]
+        [MemberData(nameof(ArrayContainsTheoryData))]
+        public async Task ArrayContains(string field, object value, string[] expectedNames)
+        {
+            var snapshot = await _fixture
+                .ArrayQueryCollection
+                .WhereArrayContains(field, value)
+                .GetSnapshotAsync();
+            var docs = snapshot.Documents.Select(doc => doc.ConvertTo<ArrayDocument>()).ToList();
+            Assert.Equal(expectedNames.OrderBy(x => x), docs.Select(doc => doc.Name).OrderBy(x => x));
         }
     }
 }
