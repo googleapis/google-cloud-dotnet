@@ -76,8 +76,8 @@ namespace Google.Cloud.Diagnostics.AspNetCore.Tests
             Predicate<IEnumerable<LogEntry>> matcher = l =>
             {
                 var json = l.Single().JsonPayload.Fields;
-                var parentScopes = json["parent_scopes"].StructValue.Fields;
-                var parentScope0 = parentScopes["0"].StructValue.Fields;
+                var parentScopes = json["parent_scopes"].ListValue.Values;
+                var parentScope0 = parentScopes[0].StructValue.Fields;
                 return json["message"].StringValue == _logMessage &&
                        json["scope"].StringValue == "scope 42, Baz => " &&
                        parentScopes.Count == 1 &&
@@ -104,9 +104,9 @@ namespace Google.Cloud.Diagnostics.AspNetCore.Tests
             Predicate<IEnumerable<LogEntry>> matcher = l =>
             {
                 var json = l.Single().JsonPayload.Fields;
-                var parentScopes = json["parent_scopes"].StructValue.Fields;
-                var scope0 = parentScopes["0"].StructValue.Fields;
-                var scope1 = parentScopes["1"].StructValue.Fields;
+                var parentScopes = json["parent_scopes"].ListValue.Values;
+                var scope0 = parentScopes[0].StructValue.Fields;
+                var scope1 = parentScopes[1].StructValue.Fields;
 
                 return json["message"].StringValue == _logMessage &&
                        json["scope"].StringValue == "first 42 => second Baz => " &&
@@ -143,8 +143,8 @@ namespace Google.Cloud.Diagnostics.AspNetCore.Tests
             {
                 var json = l.Single().JsonPayload.Fields;
                 var formatParams = json["format_parameters"].StructValue.Fields;
-                var parentScopes = json["parent_scopes"].StructValue.Fields;
-                var parentScope0 = parentScopes["0"].StructValue.Fields;
+                var parentScopes = json["parent_scopes"].ListValue.Values;
+                var parentScope0 = parentScopes[0].StructValue.Fields;
                 return json["message"].StringValue == "a log message with stuff" &&
                        json["scope"].StringValue == "scope 42 => " &&
                        formatParams.Count == 2 &&

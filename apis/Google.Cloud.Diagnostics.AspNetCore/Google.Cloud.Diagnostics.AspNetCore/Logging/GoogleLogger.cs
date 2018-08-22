@@ -147,8 +147,7 @@ namespace Google.Cloud.Diagnostics.AspNetCore
 
             // Create a map of format parameters of all the parent scopes,
             // starting from the most inner scope to the top-level scope.
-            var scopeIndex = 0;
-            var scopeParamArray = new Struct();
+            var scopeParamsList = new List<Value>();
             while (currentLogScope != null)
             {
                 // Determine if the state of the scope are format params
@@ -160,16 +159,15 @@ namespace Google.Cloud.Diagnostics.AspNetCore
                         scopeParams.Fields[pair.Key] = Value.ForString(pair.Value?.ToString() ?? "");
                     }
 
-                    scopeParamArray.Fields.Add(scopeIndex.ToString(), Value.ForStruct(scopeParams));
-                    scopeIndex++;
+                    scopeParamsList.Add(Value.ForStruct(scopeParams));
                 }
 
                 currentLogScope = currentLogScope.Parent;
             }
 
-            if (scopeParamArray.Fields.Count > 0)
+            if (scopeParamsList.Count > 0)
             {
-                jsonStruct.Fields.Add("parent_scopes", Value.ForStruct(scopeParamArray));
+                jsonStruct.Fields.Add("parent_scopes", Value.ForList(scopeParamsList.ToArray()));
             }
 
             Dictionary<string, string> labels;
