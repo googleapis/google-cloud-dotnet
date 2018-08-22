@@ -265,6 +265,32 @@ namespace Google.Cloud.Firestore
         public Query WhereGreaterThanOrEqualTo(FieldPath fieldPath, object value) =>
             Where(fieldPath, FieldOp.GreaterThanOrEqual, value);
 
+        /// <summary>
+        /// Returns a query with a filter specifying that the value in <paramref name="fieldPath"/> must be an array containing
+        /// <paramref name="value"/>.
+        /// </summary>
+        /// <remarks>
+        /// This call adds additional filters to any previously-specified ones.
+        /// </remarks>
+        /// <param name="fieldPath">The dot-separated field path to filter on. Must not be null or empty.</param>
+        /// <param name="value">The value to check in the filter.</param>
+        /// <returns>A new query based on the current one, but with the additional specified filter applied.</returns>
+        public Query WhereArrayContains(string fieldPath, object value) =>
+            Where(fieldPath, FieldOp.ArrayContains, value);
+
+        /// <summary>
+        /// Returns a query with a filter specifying that the value in <paramref name="fieldPath"/> must be an array containing
+        /// <paramref name="value"/>.
+        /// </summary>
+        /// <remarks>
+        /// This call adds additional filters to any previously-specified ones.
+        /// </remarks>
+        /// <param name="fieldPath">The field path to filter on. Must not be null.</param>
+        /// <param name="value">The value to check in the filter.</param>
+        /// <returns>A new query based on the current one, but with the additional specified filter applied.</returns>
+        public Query WhereArrayContains(FieldPath fieldPath, object value) =>
+            Where(fieldPath, FieldOp.ArrayContains, value);
+
         // Note: the two general Where methods were originally public, accepting a public QueryOperator enum.
         // If we ever want to make them public again, we should reinstate the QueryOperator enum to avoid an API
         // dependency on the proto enum.
@@ -609,6 +635,7 @@ namespace Google.Cloud.Firestore
                             throw new ArgumentException($"A cursor value for a document ID must be a string (relative path) or a DocumentReference", nameof(fieldValues));
                     }
                 }
+                // TODO: This should be checked recursively.
                 var convertedValue = ValueSerializer.Serialize(value);
                 if (SentinelValue.GetKind(convertedValue) != SentinelKind.None)
                 {
@@ -791,7 +818,9 @@ namespace Google.Cloud.Firestore
         private struct InternalFilter : IEquatable<InternalFilter>
         {
             internal FieldPath Field { get; }
+            // The integer value of either the UnaryOp or FieldOp, depending on whether _value is null.
             private readonly int _op;
+            // The value for a field (binary) operator, or null for a unary operator
             private readonly Value _value;
 
             internal Filter ToProto() =>
@@ -809,8 +838,7 @@ namespace Google.Cloud.Firestore
             /// <summary>
             /// Checks whether this is an equality operator. Unary filters are always equality operators, and field filters can be.
             /// </summary>
-            /// <returns></returns>
-            internal bool IsEqualityFilter() => _value == null || _op == (int) FieldOp.Equal;
+            internal bool IsEqualityFilter() => _value == null || _op == (int) FieldOp.Equal || _op == (int) FieldOp.ArrayContains;
 
             internal static InternalFilter Create(FieldPath fieldPath, FieldOp op, object value)
             {
@@ -829,6 +857,7 @@ namespace Google.Cloud.Firestore
                 }
                 else
                 {
+                    // TODO: For arrays and maps, we should check this recursively.
                     var convertedValue = ValueSerializer.Serialize(value);
                     if (SentinelValue.GetKind(convertedValue) != SentinelKind.None)
                     {

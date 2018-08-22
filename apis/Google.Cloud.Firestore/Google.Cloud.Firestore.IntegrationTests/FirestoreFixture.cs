@@ -41,6 +41,11 @@ namespace Google.Cloud.Firestore.IntegrationTests
         public CollectionReference HighScoreCollection { get; }
 
         /// <summary>
+        /// A collection with <see cref="HighScore"/> data in. Don't modify in tests!
+        /// </summary>
+        public CollectionReference ArrayQueryCollection { get; }
+
+        /// <summary>
         /// A collection intended for tests to create and fetch documents in. Don't query in tests!
         /// </summary>
         public CollectionReference NonQueryCollection { get; }
@@ -55,12 +60,14 @@ namespace Google.Cloud.Firestore.IntegrationTests
             FirestoreDb = FirestoreDb.Create(ProjectId);
             NonQueryCollection = FirestoreDb.Collection(CollectionPrefix + "-non-query");
             HighScoreCollection = FirestoreDb.Collection(CollectionPrefix + "-high-scores");
+            ArrayQueryCollection = FirestoreDb.Collection(CollectionPrefix + "-array-query");
             Task.Run(PopulateCollections).Wait();
         }
 
         private async Task PopulateCollections()
         {
             await PopulateCollection(HighScoreCollection, HighScore.Data);
+            await PopulateCollection(ArrayQueryCollection, ArrayDocument.Data);
         }
 
         private async Task PopulateCollection(CollectionReference collection, IEnumerable<object> documents)
