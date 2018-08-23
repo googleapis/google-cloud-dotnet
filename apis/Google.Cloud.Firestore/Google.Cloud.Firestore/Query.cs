@@ -635,12 +635,8 @@ namespace Google.Cloud.Firestore
                             throw new ArgumentException($"A cursor value for a document ID must be a string (relative path) or a DocumentReference", nameof(fieldValues));
                     }
                 }
-                // TODO: This should be checked recursively.
                 var convertedValue = ValueSerializer.Serialize(value);
-                if (SentinelValue.GetKind(convertedValue) != SentinelKind.None)
-                {
-                    throw new ArgumentException("Snapshot ordering contained a sentinel value");
-                }
+                ValidateNoSentinelsRecursively(convertedValue, "Snapshot ordering contained a sentinel value");
                 cursor.Values.Add(convertedValue);
             }
 
@@ -793,6 +789,32 @@ namespace Google.Cloud.Firestore
             return Listen((snapshot, _) => { callback(snapshot); return Task.FromResult(0); }, cancellationToken);
         }
 
+        /// <summary>
+        /// Convenience method to validate that a serialized value doesn't contain any sentinels.
+        /// Throws an ArgumentException with the given message if it does contain a sentinel.
+        /// </summary>
+        private static void ValidateNoSentinelsRecursively(Value value, string message)
+        {
+            if (SentinelValue.GetKind(value) != SentinelKind.None)
+            {
+                throw new ArgumentException(message);
+            }
+            if (value.MapValue != null)
+            {
+                foreach (var mapValue in value.MapValue.Fields.Values)
+                {
+                    ValidateNoSentinelsRecursively(mapValue, message);
+                }
+            }
+            else if (value.ArrayValue != null)
+            {
+                foreach (var arrayValue in value.ArrayValue.Values)
+                {
+                    ValidateNoSentinelsRecursively(arrayValue, message);
+                }
+            }
+        }
+
         // Structs representing orderings and filters but using FieldPath instead of FieldReference.
         // This allows us to use fields specified in the ordering/filter in this more convenient form.
 
@@ -859,10 +881,7 @@ namespace Google.Cloud.Firestore
                 {
                     // TODO: For arrays and maps, we should check this recursively.
                     var convertedValue = ValueSerializer.Serialize(value);
-                    if (SentinelValue.GetKind(convertedValue) != SentinelKind.None)
-                    {
-                        throw new ArgumentException(nameof(value), "Sentinel values cannot be specified in filters");
-                    }
+                    ValidateNoSentinelsRecursively(convertedValue, "Sentinel values cannot be specified in filters");
                     return new InternalFilter(fieldPath, (int) op, convertedValue);
                 }
             }
